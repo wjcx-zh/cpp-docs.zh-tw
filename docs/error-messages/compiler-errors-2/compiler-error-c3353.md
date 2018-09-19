@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3353 |Microsoft 文件
+title: 編譯器錯誤 C3353 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47c9d1dd8c21e56613b9da00fc2bf4f7fbeafcca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 63316a5a74c3981ec0f68d949eba654f8d6bbfef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253901"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110194"
 ---
 # <a name="compiler-error-c3353"></a>編譯器錯誤 C3353
-'delegate'：只能從全域函式或 Managed 或 WinRT 類型的成員函式建立委派  
-  
- 以宣告的委派，[委派](../../windows/delegate-cpp-component-extensions.md)關鍵字，只能在全域範圍宣告。  
-  
- 下列範例會產生 C3353：  
-  
-```  
-// C3353.cpp  
-// compile with: /clr  
-delegate int f;   // C3353  
+
+'delegate'：只能從全域函式或 Managed 或 WinRT 類型的成員函式建立委派
+
+使用宣告的委派[委派](../../windows/delegate-cpp-component-extensions.md)關鍵字，只能在全域範圍內宣告。
+
+下列範例會產生 C3353：
+
+```
+// C3353.cpp
+// compile with: /clr
+delegate int f;   // C3353
 ```

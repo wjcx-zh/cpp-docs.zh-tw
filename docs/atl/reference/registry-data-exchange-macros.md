@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1864fb953c53cba562856fed24a44b6157a03603
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a8a4ac19f9ead379b66d93a7be031bb53bc50fe5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764211"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109336"
 ---
 # <a name="registry-data-exchange-macros"></a>登錄資料交換巨集
 
@@ -89,19 +89,19 @@ RDX_BINARY(
 
 ### <a name="parameters"></a>參數
 
-*Rootkey*  
+*Rootkey*<br/>
 登錄機碼的根目錄中。
 
-*子機碼*  
+*子機碼*<br/>
 登錄子機碼。
 
-*valuename*  
+*valuename*<br/>
 登錄機碼。
 
-*成員*  
+*成員*<br/>
 要與指定的登錄項目產生關聯的成員變數。
 
-*member_size*  
+*member_size*<br/>
 大小，以位元組為單位的成員變數。
 
 ### <a name="remarks"></a>備註
@@ -123,19 +123,19 @@ RDX_CSTRING_TEXT(
 
 ### <a name="parameters"></a>參數
 
-*Rootkey*  
+*Rootkey*<br/>
 登錄機碼的根目錄中。
 
-*子機碼*  
+*子機碼*<br/>
 登錄子機碼。
 
-*valuename*  
+*valuename*<br/>
 登錄機碼。
 
-*成員*  
+*成員*<br/>
 要與指定的登錄項目產生關聯的成員變數。
 
-*member_size*  
+*member_size*<br/>
 大小，以位元組為單位的成員變數。
 
 ### <a name="remarks"></a>備註
@@ -157,19 +157,19 @@ RDX_DWORD(
 
 ### <a name="parameters"></a>參數
 
-*Rootkey*  
+*Rootkey*<br/>
 登錄機碼的根目錄中。
 
-*子機碼*  
+*子機碼*<br/>
 登錄子機碼。
 
-*valuename*  
+*valuename*<br/>
 登錄機碼。
 
-*成員*  
+*成員*<br/>
 要與指定的登錄項目產生關聯的成員變數。
 
-*member_size*  
+*member_size*<br/>
 大小，以位元組為單位的成員變數。
 
 ### <a name="remarks"></a>備註
@@ -191,19 +191,19 @@ RDX_TEXT(
 
 ### <a name="parameters"></a>參數
 
-*Rootkey*  
+*Rootkey*<br/>
 登錄機碼的根目錄中。
 
-*子機碼*  
+*子機碼*<br/>
 登錄子機碼。
 
-*valuename*  
+*valuename*<br/>
 登錄機碼。
 
-*成員*  
+*成員*<br/>
 要與指定的登錄項目產生關聯的成員變數。
 
-*member_size*  
+*member_size*<br/>
 大小，以位元組為單位的成員變數。
 
 ### <a name="remarks"></a>備註
@@ -212,6 +212,6 @@ RDX_TEXT(
 
 ## <a name="see-also"></a>另請參閱
 
-[巨集](../../atl/reference/atl-macros.md)   
+[巨集](../../atl/reference/atl-macros.md)<br/>
 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)
 

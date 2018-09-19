@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9d3db2a3d7f673c8e81b1077bcb45e9b8241d37
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c9185a71cc77cadb1ad7cdf577654730819147d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751857"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113132"
 ---
 # <a name="com-map-global-functions"></a>COM 對應全域函式
 
@@ -51,16 +51,16 @@ HRESULT AtlInternalQueryInterface(
 
 ### <a name="parameters"></a>參數
 
-*pThis*  
+*pThis*<br/>
 [in]包含的介面公開至 COM 對應物件的指標`QueryInterface`。
 
-*pEntries*  
+*pEntries*<br/>
 [in]陣列`_ATL_INTMAP_ENTRY`存取的可用的介面對應的結構。
 
-*iid*  
+*iid*<br/>
 [in]所要求介面的 GUID。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]在指定的介面指標的指標*iid*，或如果找不到介面則為 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -85,10 +85,10 @@ BOOL InlineIsEqualUnknown(REFGUID rguid1);
 
 ### <a name="parameters"></a>參數
 
-*rguid1*  
+*rguid1*<br/>
 [in]比較 GUID `IID_IUnknown`。
 
 ## <a name="see-also"></a>另請參閱
 
-[函式](../../atl/reference/atl-functions.md)   
+[函式](../../atl/reference/atl-functions.md)<br/>
 [COM 對應巨集](../../atl/reference/com-map-macros.md)

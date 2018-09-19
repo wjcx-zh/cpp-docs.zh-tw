@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3670 |Microsoft 文件
+title: 編譯器錯誤 C3670 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed70f364ad72160ddc3b9e875d8b1f3b6ee67e3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1129a25e628710121d667a44022eec5a0450b092
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266233"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115329"
 ---
 # <a name="compiler-error-c3670"></a>編譯器錯誤 C3670
-'override': 無法覆寫無法存取基底類別方法 'method'  
-  
- 覆寫只會在其存取層級讓衍生類型中的函式。 如需詳細資訊，請參閱[明確覆寫](../../windows/explicit-overrides-cpp-component-extensions.md)。  
-  
- 下列範例會產生 C3670:  
-  
-```  
-// C3670.cpp  
-// compile with: /clr /c  
-public ref class C {  
-// Uncomment the following line to resolve.  
-// public:  
-   virtual void g() { }  
-};  
-  
-public ref class D : public C {  
-public:  
-   virtual void f() new sealed = C::g {};   // C3670  
-};  
+
+'override': 無法覆寫無法存取的基底類別方法 'method'
+
+覆寫，才能進行其存取層級提供衍生類型中的函式。 如需詳細資訊，請參閱 <<c0> [ 明確覆寫](../../windows/explicit-overrides-cpp-component-extensions.md)。
+
+下列範例會產生 C3670:
+
+```
+// C3670.cpp
+// compile with: /clr /c
+public ref class C {
+// Uncomment the following line to resolve.
+// public:
+   virtual void g() { }
+};
+
+public ref class D : public C {
+public:
+   virtual void f() new sealed = C::g {};   // C3670
+};
 ```

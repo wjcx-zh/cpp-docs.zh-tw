@@ -1,5 +1,5 @@
 ---
-title: 資源編譯器警告 RC4093 |Microsoft 文件
+title: 資源編譯器警告 RC4093 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cca3c2a139e1109746f3a690cfb3f31509a9fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b1ca04b17ebdb9d48bc94032482caf48ad4aa00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322428"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111559"
 ---
 # <a name="resource-compiler-warning-rc4093"></a>資源編譯器警告 RC4093
-非現用程式碼中的字元常數中包含新行  
-  
- 常數運算式的`#if`， `#elif`， **#ifdef**，或 **#ifndef**評估為零，讓程式碼，前置處理器指示詞後面非使用中。 該非作用中的程式碼中新行字元會出現在一組單引號或雙引號。  
-  
- 直到下一個雙引號視為字元常數中的所有文字。
+
+在非使用中的程式碼中的字元常數中的未逸出新行
+
+常數運算式`#if`， `#elif`， **#ifdef**，或 **#ifndef**被評估為零，使程式碼的前置處理器指示詞會遵循非使用中。 在非使用中的程式碼中，新行字元會出現在一組單引號或雙引號的引號內。
+
+直到下一個雙引號視為要在字元常數中的所有文字。

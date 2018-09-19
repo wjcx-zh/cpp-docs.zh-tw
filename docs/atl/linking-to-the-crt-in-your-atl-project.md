@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d5548089f66a26f633e5692f1fe2199a8109904
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6d38b53d875db5f0ab5a3d096a57494791c027da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764575"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113080"
 ---
 # <a name="linking-to-the-crt-in-your-atl-project"></a>連結到 ATL 專案中的 CRT
 
@@ -47,6 +47,6 @@ ms.locfileid: "43764575"
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 ATL 和 C 執行階段程式碼進行程式設計](../atl/programming-with-atl-and-c-run-time-code.md)   
+[使用 ATL 和 C 執行階段程式碼進行程式設計](../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [DLL 和 Visual C++ 執行階段程式庫行為](../build/run-time-library-behavior.md)
 

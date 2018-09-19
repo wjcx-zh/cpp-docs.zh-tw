@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2733 |Microsoft 文件
+title: 編譯器錯誤 C2733 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc1857cd800dd2d395754b9ae95094d9f57aad27
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 42749c26f4a8a474f3dac076b80a1bfe71e89d58
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234185"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110441"
 ---
 # <a name="compiler-error-c2733"></a>編譯器錯誤 C2733
-多載函式 'function' 不允許第二個 C 連結  
-  
- 使用 C 連結宣告一個以上多載函式。 使用 C 連結時，只有一種指定的函式可以是外部。 多載函式有相同的未裝飾的名稱，因為它們不能與 C 程式。  
-  
- 下列範例會產生 C2733:  
-  
-```  
-// C2733.cpp  
-extern "C" {  
-   void F1(int);  
-}  
-  
-extern "C" {  
-   void F1();   // C2733  
-   // try the following line instead  
-   // void F2();  
-}  
+
+第二個 C 連結的多載函式 'function' 不允許
+
+使用 C 連結宣告多個多載函式。 使用 C 連結時，只有一種指定的函式可以是外部。 多載函式具有相同的未裝飾的名稱，因為它們無法搭配 C 程式。
+
+下列範例會產生 C2733:
+
+```
+// C2733.cpp
+extern "C" {
+   void F1(int);
+}
+
+extern "C" {
+   void F1();   // C2733
+   // try the following line instead
+   // void F2();
+}
 ```

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42aea64c0a6881dcc3ca9a3465a436b33f19ad6d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8f38fc3499ecc5956369a78c37f94358a1006cc2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761616"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108686"
 ---
 # <a name="ccomcontainedobject-class"></a>CComContainedObject 類別
 
@@ -41,13 +41,13 @@ ms.locfileid: "43761616"
 ## <a name="syntax"></a>語法
 
 ```
-template<class Base>  
+template<class Base>
 class CComContainedObject : public Base
 ```
 
 #### <a name="parameters"></a>參數
 
-*基底*  
+*基底*<br/>
 您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或是[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)。
 
 ## <a name="members"></a>成員
@@ -104,7 +104,7 @@ CComContainedObject(void* pv);
 
 ### <a name="parameters"></a>參數
 
-*pv*  
+*pv*<br/>
 [in]擁有者物件的`IUnknown`。
 
 ### <a name="remarks"></a>備註
@@ -151,13 +151,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>參數
 
-*iid*  
+*iid*<br/>
 [in]所要求的介面識別碼。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]所識別之介面指標的指標*iid*。 如果物件不支援這個介面， *ppvObject*設為 NULL。
 
-*前置處理*  
+*前置處理*<br/>
 [out]依類型識別之介面指標的指標`Q`。 如果物件不支援這個介面， *pp*設為 NULL。
 
 ### <a name="return-value"></a>傳回值

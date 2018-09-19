@@ -1,5 +1,5 @@
 ---
-title: OLE DB 消費者和提供者 |Microsoft 文件
+title: OLE DB 消費者和提供者 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 170f45a3581846dc588abf06aec170d66aa0d545
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b37a06ec89f0e2e21c4332a480e58c605f0d161f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111386"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110714"
 ---
 # <a name="ole-db-consumers-and-providers"></a>OLE DB 消費者和提供者
-OLE DB 架構使用模型的消費者和提供者。 取用者可讓資料的要求。 提供者回應這些要求將資料放在以表格式格式，並將其傳回給取用者。 任何呼叫，可讓取用者必須實作提供者中。  
+
+OLE DB 架構會使用取用者和提供者模型。 取用者提出資料要求。 提供者會將資料放在表格式的格式，並將它傳回給取用者回應這些要求。 在提供者必須實作任何取用者可以進行的呼叫。  
   
- 技術上定義，取用者是任何系統或應用程式程式碼 （不一定是 OLE DB 元件），可透過 OLE DB 介面的存取資料。 提供者會實作的介面。 因此，提供者是實作 OLE DB 介面，是爲資料的存取權，並將它公開至其他物件 （也就是取用者） 的任何軟體元件。  
+技術上的定義，取用者是任何系統或應用程式程式碼 （不一定是 OLE DB 元件），可透過 OLE DB 介面存取資料。 在提供者會實作的介面。 因此，提供者是實作封裝資料的存取權，並將它公開給其他物件 （也就是消費者） 的 OLE DB 介面的任何軟體元件。  
   
- 取用者角色，根據 OLE DB 介面; 上呼叫的方法OLE DB 提供者會實作所需的 OLE DB 介面。  
+根據角色，取用者，請呼叫 OLE DB 介面; 上的方法OLE DB 提供者會實作所需的 OLE DB 介面。  
   
- OLE DB 會避免條款用戶端和伺服器，因為這些角色不一定具意義，特別是在多層式架構的情況下。 取用者不能是另一個元件的層上的元件，因為它呼叫用戶端元件可能會造成混淆。 此外，提供者有時像是多資料庫驅動程式比伺服器。  
+因為這些角色不一律具意義，尤其是在多層式架構的情況下，OLE DB 會避免條款用戶端和伺服器。 因為取用者可能是另一個元件的層上的元件，呼叫這個方法的用戶端元件會造成混淆。 此外，提供者有時更像是伺服器以外的資料庫驅動程式。  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 程式設計](../../data/oledb/ole-db-programming.md)   
- [OLE DB 程式設計概觀](../../data/oledb/ole-db-programming-overview.md)
+
+[OLE DB 程式設計](../../data/oledb/ole-db-programming.md)<br/>
+[OLE DB 程式設計概觀](../../data/oledb/ole-db-programming-overview.md)

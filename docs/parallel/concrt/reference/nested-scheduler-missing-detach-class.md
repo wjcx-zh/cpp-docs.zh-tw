@@ -1,5 +1,5 @@
 ---
-title: nested_scheduler_missing_detach 類別 |Microsoft 文件
+title: nested_scheduler_missing_detach 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26027693209bc5b4687686efeae5d190ed374607
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f3887672f9d0934dbcc38d6db549e383f7976b10
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687357"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110974"
 ---
 # <a name="nestedschedulermissingdetach-class"></a>nested_scheduler_missing_detach 類別
 這個類別描述當並行執行階段偵測到您忘了使用 `Scheduler` 物件的 `Attach` 方法在附加到第二個排程器上呼叫 `CurrentScheduler::Detach` 方法時擲出的例外狀況。  
@@ -43,7 +43,7 @@ class nested_scheduler_missing_detach : public std::exception;
 |[nested_scheduler_missing_detach](#ctor)|多載。 建構 `nested_scheduler_missing_detach` 物件。|  
   
 ## <a name="remarks"></a>備註  
- 當您在已由其他排程器擁有或附加的內容上呼叫 `Attach` 物件的`Scheduler` 方法，將排程器巢狀排列在另一個排程器內時，才會擲回這個例外狀況。 並行執行階段會擲回這個例外狀況 」 時，它可以偵測案例來協助找出問題。 並非每個執行個體來呼叫忽略`CurrentScheduler::Detach`方法一定會擲回這個例外狀況。  
+ 當您在已由其他排程器擁有或附加的內容上呼叫 `Attach` 物件的`Scheduler` 方法，將排程器巢狀排列在另一個排程器內時，才會擲回這個例外狀況。 並行執行階段會擲回這個例外狀況都伺機它可以偵測案例來協助找出問題。 並非每個執行個體來呼叫疏`CurrentScheduler::Detach`方法一定會擲回這個例外狀況。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `exception`  
@@ -66,8 +66,8 @@ nested_scheduler_missing_detach() throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Message`  
- 錯誤的描述性訊息。  
+*訊息 （_m)*<br/>
+錯誤的描述性訊息。  
   
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   

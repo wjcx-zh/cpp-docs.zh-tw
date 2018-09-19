@@ -1,5 +1,5 @@
 ---
-title: 嚴重錯誤 C1088 |Microsoft 文件
+title: 嚴重錯誤 C1088 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1041bc87822e5347e519f73e039056355825da2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 570db0d6956be8345ef6ecae5a073bf28d2eee1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196957"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111494"
 ---
 # <a name="fatal-error-c1088"></a>嚴重錯誤 C1088
-無法排清 filetype 檔案：'file': 訊息  
-  
- 編譯器無法完成 I/O 作業。
+
+無法排清 filetype 檔案：'file': 訊息
+
+編譯器無法完成 I/O 作業。

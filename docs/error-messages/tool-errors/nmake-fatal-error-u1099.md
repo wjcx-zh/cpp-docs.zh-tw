@@ -1,5 +1,5 @@
 ---
-title: NMAKE 嚴重錯誤 U1099 |Microsoft 文件
+title: NMAKE 嚴重錯誤 U1099 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be09691de4212d07b1452ffe33725a3978fc053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3ef75a1435d8c922087fcdd21d1941961bc82cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322100"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113379"
 ---
 # <a name="nmake-fatal-error-u1099"></a>NMAKE 嚴重錯誤 U1099
-堆疊溢位  
-  
- 正在處理 makefile 太過複雜目前堆疊配置 NMAKE 中的項目。 NMAKE 具有 0x3000 (12 K) 的配置。  
-  
- 若要增加 NMAKE 的堆疊配置，請執行[editbin /stack](../../build/reference/stack.md)公用程式使用較大的堆疊選項：  
-  
- **editbin /STACK:reserve NMAKE。EXE**  
-  
- 其中*保留*是大於目前的堆疊配置 NMAKE 中的數字。
+
+堆疊溢位
+
+正在處理 makefile 太過複雜 NMAKE 中目前的堆疊配置的項目。 NMAKE 有 0x3000 （12 萬） 配置。
+
+若要增加 NMAKE 的堆疊配置，請執行[editbin /stack](../../build/reference/stack.md)公用程式使用較大的堆疊選項：
+
+**editbin /STACK:reserve NMAKE。EXE**
+
+何處*保留*是數字大於 NMAKE 中目前的堆疊配置。

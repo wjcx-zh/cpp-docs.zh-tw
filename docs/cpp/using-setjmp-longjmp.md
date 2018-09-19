@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a83253fb98506bb586af2b52ef3321bada7ca01f
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 711d829ea3393041c713fbb042318b680100a52a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572048"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111949"
 ---
 # <a name="using-setjmp-and-longjmp"></a>使用 setjmp 和 longjmp
 
@@ -48,4 +48,4 @@ ms.locfileid: "42572048"
 
 ## <a name="see-also"></a>另請參閱
 
-[混合 C (結構化) 和 C++ 例外狀況](../cpp/mixing-c-structured-and-cpp-exceptions.md)  
+[混合 C (結構化) 和 C++ 例外狀況](../cpp/mixing-c-structured-and-cpp-exceptions.md)

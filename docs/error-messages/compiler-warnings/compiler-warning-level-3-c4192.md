@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 3） C4192 |Microsoft 文件
+title: 編譯器警告 （層級 3） C4192 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bae9b7af95de94b8f667cb09710af21044f8b80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 671a8c83dcadcaa89372e53b6c3d677c5810b4a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291410"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114406"
 ---
 # <a name="compiler-warning-level-3-c4192"></a>編譯器警告 （層級 3） C4192
-會自動匯入類型程式庫 'library' 時排除 'name'  
-  
- A`#import`程式庫包含的項目，*名稱*，也就是也在 Win32 系統標頭中定義。 類型程式庫的限制，因為名稱例如**IUnknown**或 GUID 通常會定義在型別程式庫複製系統標頭的定義。 `#import` 會偵測到這些項目，並拒絕將它們併入.tlh 和.tli 標頭檔中。  
-  
- 若要覆寫此行為，請使用`#import`屬性[no_auto_exclude](../../preprocessor/no-auto-exclude.md)和[include （)](../../preprocessor/include-parens.md)。
+
+自動排除時匯入類型程式庫 'library' 的 'name'
+
+A`#import`程式庫包含的項目，*名稱*，也就是也在 Win32 系統標頭中定義。 由於型別程式庫的限制，之類的名稱**IUnknown**或 GUID 通常定義在型別程式庫中複製的系統標頭的定義。 `#import` 會偵測這些項目，並拒絕將它們併入.tlh 和.tli 標頭檔案中。
+
+若要覆寫此行為，請使用`#import`屬性[no_auto_exclude](../../preprocessor/no-auto-exclude.md)並[include （)](../../preprocessor/include-parens.md)。

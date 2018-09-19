@@ -1,5 +1,5 @@
 ---
-title: uninitialized_object 類別 |Microsoft 文件
+title: uninitialized_object 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b9b10af535b0739d480326d616ee7587318bb5a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 821f3c25d195a2c92ac04fdf5f9e5a59b493c257
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696171"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113834"
 ---
 # <a name="uninitializedobject-class"></a>uninitialized_object 類別
-使用未初始化的物件時就會擲回例外狀況。  
+使用未初始化的物件時擲回的例外狀況。  
   
 ## <a name="syntax"></a>語法  
   
@@ -68,8 +68,8 @@ unsupported_feature() throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Message`  
- 錯誤的描述。  
+*訊息 （_m)*<br/>
+錯誤的描述。  
   
 ### <a name="return-value"></a>傳回值  
  `unsupported_feature` 物件。 

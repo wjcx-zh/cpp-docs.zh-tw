@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aaf699f2130c94729b8db9cc21dd17b9699d66c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7b090875b9656fec52e50cb68caf9c2c047d055b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606454"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114250"
 ---
 # <a name="extern-c"></a>extern （c + +）
 
@@ -88,9 +88,9 @@ extern constexpr __declspec(selectany) int x = 10;
 
 ## <a name="extern-c-and-extern-c-function-declarations"></a>extern"C"和 extern"C + +"函式宣告
 
- C + + 中為字串，搭配使用時**extern**指定另一種語言的連接慣例用於宣告子使用。 只有在先前宣告為具有 C 連結時，才可以存取 C 函式和資料。 不過，您必須在另行編譯的轉譯單位中定義它們。
+C + + 中為字串，搭配使用時**extern**指定另一種語言的連接慣例用於宣告子使用。 只有在先前宣告為具有 C 連結時，才可以存取 C 函式和資料。 不過，您必須在另行編譯的轉譯單位中定義它們。
 
- Microsoft c + + 支援字串 **"C"** 並 **「 c + +"** 中*字串常值*欄位。 所有標準，包括檔案使用**extern** "C"語法，以允許使用 c + + 程式中的執行階段程式庫函式。
+Microsoft c + + 支援字串 **"C"** 並 **「 c + +"** 中*字串常值*欄位。 所有標準，包括檔案使用**extern** "C"語法，以允許使用 c + + 程式中的執行階段程式庫函式。
 
 ## <a name="example"></a>範例
 
@@ -114,7 +114,7 @@ extern "C" {
     char GetChar(void);
 }
 
-//  Define the two functions 
+//  Define the two functions
 //  ShowChar and GetChar with C linkage.
 extern "C" char ShowChar(char ch) {
     putchar(ch);
@@ -131,7 +131,7 @@ extern "C" char GetChar(void) {
 extern "C" int errno;
 ```
 
- 如果函式具有多個連結規格，這些規格必須一致；將函式宣告為同時具有 C 和 C++ 連結是錯誤的。 此外，如果程式中的一個函式發生兩次宣告 (一個使用連結規格，另一個沒有)，則使用連結規格的宣告必須是第一個。 第一個宣告會針對任何已經有連結規格的其餘函式宣告指定連結。 例如: 
+如果函式具有多個連結規格，這些規格必須一致；將函式宣告為同時具有 C 和 C++ 連結是錯誤的。 此外，如果程式中的一個函式發生兩次宣告 (一個使用連結規格，另一個沒有)，則使用連結規格的宣告必須是第一個。 第一個宣告會針對任何已經有連結規格的其餘函式宣告指定連結。 例如: 
 
 ```cpp
 extern "C" int CFunc1();
@@ -147,8 +147,9 @@ extern "C" int CFunc2(); // Error: not the first declaration of
 ```
 
 ## <a name="see-also"></a>另請參閱
- [關鍵字](../cpp/keywords-cpp.md)  
- [程式和連結](program-and-linkage-cpp.md)  
- [extern 儲存類別規範 c](../c-language/extern-storage-class-specifier.md)  
- [在 C 中的識別項的行為](../c-language/behavior-of-identifiers.md)  
- [在 C 中的連結](../c-language/linkage.md)
+
+[關鍵字](../cpp/keywords-cpp.md)<br/>
+[程式和連結](program-and-linkage-cpp.md)<br/>
+[extern 儲存類別規範 c](../c-language/extern-storage-class-specifier.md)<br/>
+[在 C 中的識別項的行為](../c-language/behavior-of-identifiers.md)<br/>
+[在 C 中的連結](../c-language/linkage.md)

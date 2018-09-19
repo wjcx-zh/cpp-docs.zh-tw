@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3ef47e3aeb8cfb18dd1eb6497c593d8cec26081b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 002093a6a9044c65e5780035ad6c19db35d6b648
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678446"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116743"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>從 Managed 程式碼呼叫原生函式
 Common language runtime 提供平台叫用服務或 PInvoke，可讓 managed 程式碼呼叫原生動態連結程式庫 (Dll) 中的 C 樣式函式。 相同封送處理的資料會用於 COM 互通性與執行階段以及"It Just Works"（IJW) 機制。  
@@ -105,7 +105,7 @@ int main() {
   
  在此範例中，Visual c + + 程式可互通的 MessageBox 函式，是 Win32 API 的一部分。  
   
-```  
+```cpp  
 // platform_invocation_services_4.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -132,16 +132,17 @@ int main() {
   
  如果我們在 Visual c + + 應用程式中使用 PInvoke，我們可能會撰寫類似下列內容：  
   
- `[DllImport("mylib")]`  
-  
- `extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);`  
+```cpp
+[DllImport("mylib")]
+extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);
+```
   
  困難之處在於，我們無法刪除 MakeSpecial 所傳回之 unmanaged 字串的記憶體。 其他透過 PInvoke 所呼叫的函式會傳回不需要由使用者解除配置的內部緩衝區的指標。 在此情況下，使用 IJW 功能是理所當然的選擇。  
   
 ## <a name="limitations-of-pinvoke"></a>PInvoke 的限制  
  您無法從先前做為參數的原生函式來傳回完全相同的指標。 如果原生函式會傳回它被封送處理的指標，由 PInvoke，可能會發生記憶體損毀和例外狀況。  
   
-```  
+```cpp  
 __declspec(dllexport)  
 char* fstringA(char* param) {  
    return param;  

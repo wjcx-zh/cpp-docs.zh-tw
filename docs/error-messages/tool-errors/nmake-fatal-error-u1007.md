@@ -1,5 +1,5 @@
 ---
-title: NMAKE 嚴重錯誤 U1007 |Microsoft 文件
+title: NMAKE 嚴重錯誤 U1007 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 988438b952aa1a06be3ec0da1d7337793c704133
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a1c74cdfe4113cf1fafd242993df27081eb1d28
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322376"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112300"
 ---
 # <a name="nmake-fatal-error-u1007"></a>NMAKE 嚴重錯誤 U1007
-雙引號名稱中不允許  
-  
- 指定的目標名稱或檔名包含雙引號 (**"**)。  
-  
- 雙引號可以圍繞檔名，但不能包含在它。
+
+雙引號名稱中不允許
+
+指定的目標名稱或檔名包含雙引號 (**"**)。
+
+雙引號可以括住檔案名稱，但不能包含在它。

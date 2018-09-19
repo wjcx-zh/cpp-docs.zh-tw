@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aac3952ff05e7b147418d4282b31e8a35572c9b0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3ee73a91c14d567754f336b1d71ad4d157781140
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756529"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114055"
 ---
 # <a name="atl-copy-policy-classes"></a>ATL 複製原則類別
 
@@ -90,6 +90,6 @@ VCUE_Copy.h 也包含此類別的下列特製化： `GenericCopy<BSTR>`， `Gene
 
 ## <a name="see-also"></a>另請參閱
 
-[實作與 c + + 標準程式庫為基礎的集合](../atl/implementing-an-stl-based-collection.md)   
+[實作 C++ 標準程式庫架構集合](../atl/implementing-an-stl-based-collection.md)<br/>
 [ATLCollections 範例](../visual-cpp-samples.md)
 

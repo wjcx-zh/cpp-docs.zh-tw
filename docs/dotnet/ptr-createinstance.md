@@ -1,5 +1,5 @@
 ---
-title: ptr::CreateInstance |Microsoft 文件
+title: ptr::CreateInstance |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dd4ba56b92150046b986f2b101f6a004c114bf28
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f03a4f0cfb2b231e9a453009155308f7bf407db
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161700"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112209"
 ---
 # <a name="ptrcreateinstance"></a>ptr::CreateInstance
 建立 COM 物件內的執行個體`com::ptr`。  
@@ -72,28 +72,28 @@ void CreateInstance(
 ```  
   
 #### <a name="parameters"></a>參數  
- `progid`  
- `ProgID` 字串。  
+*progid*<br/>
+`ProgID` 字串。  
   
- `pouter`  
- 彙總物件的 IUnknown 介面 (controlling IUnknown) 指標。 如果`pouter`未指定，`NULL`用。  
+*pouter*<br/>
+(Controlling IUnknown) 的彙總物件的 IUnknown 介面指標。 如果`pouter`未指定，`NULL`用。  
   
- `cls_context`  
- 管理新建立的物件的程式碼將在其中執行的內容。 值取自`CLSCTX`列舉型別。 如果`cls_context`未指定，則使用 CLSCTX_ALL 值。  
+*cls_context*<br/>
+管理新建立的物件的程式碼將在其中執行的內容。 值取自`CLSCTX`列舉型別。 如果`cls_context`未指定，則在使用 CLSCTX_ALL 的值。  
   
- `rclsid`  
- `CLSID` 相關聯的資料和將用來建立物件的程式碼。  
+*rclsid*<br/>
+`CLSID` 相關聯的資料和將用來建立物件的程式碼。  
   
 ## <a name="exceptions"></a>例外狀況  
- 如果`com::ptr`已經擁有的 COM 物件，參考`CreateInstance`會擲回<xref:System.InvalidOperationException>。  
+ 如果`com::ptr`已經擁有的 COM 物件的參考`CreateInstance`就會擲回<xref:System.InvalidOperationException>。  
   
- 此函數會呼叫`CoCreateInstance`並用<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>要轉換的任何錯誤`HRESULT`至適當的例外狀況。  
+ 此函式會呼叫`CoCreateInstance`並用<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>要轉換的任何錯誤`HRESULT`至適當的例外狀況。  
   
 ## <a name="remarks"></a>備註  
- `CreateInstance` 使用`CoCreateInstance`建立指定的物件，識別從 ProgID 或 CLSID 的新執行個體。 `com::ptr`參考剛建立的物件，就會自動釋放所有擁有的解構時的參考。  
+ `CreateInstance` 使用`CoCreateInstance`建立指定的物件，識別從 ProgID 或 CLSID 的新執行個體。 `com::ptr`參考新建立的物件，並會自動釋放所有已擁有在解構時的參考。  
   
 ## <a name="example"></a>範例  
- 這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 類別建構函式使用兩種不同形式的`CreateInstance`從 ProgID 或 CLSID 加上 CLSCTX 建立文件物件。  
+ 這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 類別建構函式使用兩種不同形式的`CreateInstance`ProgID 或 CLSID 加上 CLSCTX 建立文件物件。  
   
 ```  
 // comptr_createinstance.cpp  

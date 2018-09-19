@@ -1,5 +1,5 @@
 ---
-title: auto_handle::reset |Microsoft 文件
+title: auto_handle::reset |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0e63d93134d48b1f429b097562805c967911e608
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7596829cc89dcfa335b38d24a57666a430507e27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103700"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111715"
 ---
 # <a name="autohandlereset"></a>auto_handle::reset
-終結目前擁有的物件，並選擇性地採取擁有新的物件。  
+終結目前擁有的物件，並選擇性地採取 新物件的擁有權。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,8 +40,8 @@ void reset();
 ```  
   
 #### <a name="parameters"></a>參數  
- `_new_ptr`  
- （選擇性）新的物件。  
+*_new_ptr*<br/>
+（選擇性）新的物件。  
   
 ## <a name="example"></a>範例  
   

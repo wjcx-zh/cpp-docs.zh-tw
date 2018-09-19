@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72b27036ffe84ff915bfcda0205469ef79e00255
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 46e3926f31ec7d12da539d868cacb37e18134e96
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757084"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109678"
 ---
 # <a name="cwindow-class"></a>CWindow 類別
 
@@ -410,7 +410,7 @@ void Attach(HWND hWndNew) throw();
 
 ### <a name="parameters"></a>參數
 
-*hWndNew*  
+*hWndNew*<br/>
 [in]視窗控制代碼。
 
 ### <a name="example"></a>範例
@@ -459,7 +459,7 @@ BOOL CenterWindow(HWND hWndCenter = NULL) throw();
 
 ### <a name="parameters"></a>參數
 
-*hWndCenter*  
+*hWndCenter*<br/>
 [in]要置中視窗的控制代碼。 如果此參數為 NULL （預設值），方法會設定*hWndCenter*如果它是子視窗的視窗的父視窗。 否則，它會設定*hWndCenter*至視窗的 [擁有者] 視窗。
 
 ### <a name="return-value"></a>傳回值
@@ -566,28 +566,28 @@ HWND Create(
 
 ### <a name="parameters"></a>參數
 
-*lpstrWndClass*  
+*lpstrWndClass*<br/>
 [in]視窗的類別的指標。
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]父系或擁有者的視窗控制代碼。
 
-*rect*  
+*rect*<br/>
 [in]類型的變數[_U_RECT](../../atl/reference/u-rect-class.md)指定視窗的位置。 預設值是 NULL。 當此參數是 NULL，值`CWindow::rcDefault`用。
 
-*szWindowName*  
+*szWindowName*<br/>
 [in]指定視窗的名稱。 預設值是 NULL。
 
-*cheaderctrl:: Create*  
+*cheaderctrl:: Create*<br/>
 [in]視窗的樣式。 預設值為 0，這表示沒有樣式會指定。 如需可能值的清單，請參閱 < [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK 中。
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in]延伸的視窗樣式。 預設值為 0，這表示沒有延伸的樣式會指定。 如需可能值的清單，請參閱 < [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in]類型的變數[_U_MENUorID](../../atl/reference/u-menuorid-class.md)指定功能表或視窗識別項的控制代碼。 預設值是 0U。
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 中包含的視窗建立資料指標[CREATESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632603)結構。
 
 ### <a name="return-value"></a>傳回值
@@ -652,7 +652,7 @@ CWindow(HWND hWnd = NULL) throw();
 
 ### <a name="parameters"></a>參數
 
-*hWnd*  
+*hWnd*<br/>
 [in]視窗控制代碼。
 
 ### <a name="remarks"></a>備註
@@ -911,7 +911,7 @@ HWND GetDescendantWindow(int nID) const throw();
 
 ### <a name="parameters"></a>參數
 
-*nID*  
+*nID*<br/>
 [in]要擷取子系的視窗的識別碼。
 
 ### <a name="return-value"></a>傳回值
@@ -935,13 +935,13 @@ HRESULT GetDlgControl(
 
 ### <a name="parameters"></a>參數
 
-*nID*  
+*nID*<br/>
 [in]正在擷取控制項的資源 ID。
 
-*iid*  
+*iid*<br/>
 [in]您想要從控制項取得的介面識別碼。
 
-*ppCtrl*  
+*ppCtrl*<br/>
 [out]介面指標。
 
 ### <a name="return-value"></a>傳回值
@@ -977,13 +977,13 @@ HRESULT GetDlgHost(
 
 ### <a name="parameters"></a>參數
 
-*nID*  
+*nID*<br/>
 [in]正在擷取控制項的資源 ID。
 
-*iid*  
+*iid*<br/>
 [in]您想要從控制項取得的介面識別碼。
 
-*ppHost*  
+*ppHost*<br/>
 [out]介面指標。
 
 ### <a name="return-value"></a>傳回值
@@ -1098,7 +1098,7 @@ HICON GetIcon(BOOL bBigIcon = TRUE) const;
 
 ### <a name="parameters"></a>參數
 
-*bBigIcon*  
+*bBigIcon*<br/>
 [in]如果為 TRUE （預設值） 方法會傳回大型圖示。 否則，它會傳回之小圖示。
 
 ### <a name="return-value"></a>傳回值
@@ -1448,16 +1448,16 @@ int GetWindowText(CSimpleString& strText) const;
 
 ### <a name="parameters"></a>參數
 
-*lpszStringBuf*  
+*lpszStringBuf*<br/>
 要寫入視窗文字的緩衝區。
 
-*nMaxCount*  
+*nMaxCount*<br/>
 緩衝區大小以字元為單位，同時也是最大的寫入字元數。
 
-*bstrText*  
+*bstrText*<br/>
 用來儲存視窗文字 BSTR。
 
-*先把 strText*  
+*先把 strText*<br/>
 視窗文字儲存所在的 `CString`。
 
 ### <a name="return-value"></a>傳回值
@@ -1761,7 +1761,7 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 
 ### <a name="parameters"></a>參數
 
-*區塊*  
+*區塊*<br/>
 [in]如果為 TRUE （預設值），視窗將會遭到鎖定。 否則，它將會解除鎖定。
 
 ### <a name="return-value"></a>傳回值
@@ -1833,13 +1833,13 @@ BOOL ModifyStyle(
 
 ### <a name="parameters"></a>參數
 
-*dwRemove*  
+*dwRemove*<br/>
 [in]指定要移除樣式修改期間的視窗樣式。
 
-*dwAdd*  
+*dwAdd*<br/>
 [in]指定要加入樣式修改期間的視窗樣式。
 
-*nFlags*  
+*nFlags*<br/>
 [in]視窗定位旗標。 如需可能值的清單，請參閱 < [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 中的函式。
 
 ### <a name="return-value"></a>傳回值
@@ -1879,13 +1879,13 @@ BOOL ModifyStyleEx(
 
 ### <a name="parameters"></a>參數
 
-*dwRemove*  
+*dwRemove*<br/>
 [in]指定要移除樣式修改期間的延伸的樣式。
 
-*dwAdd*  
+*dwAdd*<br/>
 [in]指定要加入樣式修改期間的延伸的樣式。
 
-*nFlags*  
+*nFlags*<br/>
 [in]視窗定位旗標。 如需可能值的清單，請參閱 < [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 中的函式。
 
 ### <a name="return-value"></a>傳回值
@@ -1963,7 +1963,7 @@ BOOL OpenClipboard() throw();
 
 將轉換`CWindow`HWND 的物件。
 
-```  
+```
 operator HWND() const throw();
 ```
 
@@ -2018,10 +2018,10 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
 
 ### <a name="parameters"></a>參數
 
-*hDC*  
+*hDC*<br/>
 [in]裝置內容控制代碼。
 
-*dwFlags*  
+*dwFlags*<br/>
 [in]指定的繪圖選項。 您可以結合一或多個下列旗標：
 
 - PRF_CHECKVISIBLE 繪製視窗，才會顯示。
@@ -2046,10 +2046,10 @@ void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 
 ### <a name="parameters"></a>參數
 
-*hDC*  
+*hDC*<br/>
 [in]裝置內容控制代碼。
 
-*dwFlags*  
+*dwFlags*<br/>
 [in]指定繪圖選項。 您可以結合一或多個下列旗標：
 
 - PRF_CHECKVISIBLE 繪製視窗，才會顯示。
@@ -2122,13 +2122,13 @@ BOOL ResizeClient(
 
 ### <a name="parameters"></a>參數
 
-*nWidth*  
+*nWidth*<br/>
 新視窗寬度的像素為單位。
 
-*nHeight*  
+*nHeight*<br/>
 新視窗高度的像素為單位。
 
-*bRedraw*  
+*bRedraw*<br/>
 旗標，指出是否要重繪其變更。 預設值為 FALSE，指出視窗不會重新繪製的變更。
 
 ##  <a name="screentoclient"></a>  CWindow::ScreenToClient
@@ -2236,16 +2236,16 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>參數
 
-*message*  
+*message*<br/>
 [in]要傳送的訊息。
 
-*wParam*  
+*wParam*<br/>
 [in]其他特定訊息資訊。
 
-*lParam*  
+*lParam*<br/>
 [in]其他特定訊息資訊。
 
-*bDeep*  
+*bDeep*<br/>
 [in]如果為 TRUE （預設值），訊息會傳送至所有下階視窗;否則，它會只能傳送到的立即子視窗。
 
 ### <a name="remarks"></a>備註
@@ -2319,7 +2319,7 @@ int SetDlgCtrlID(int nID) throw();
 
 ### <a name="parameters"></a>參數
 
-*nID*  
+*nID*<br/>
 [in]要設定視窗的識別項的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -2379,10 +2379,10 @@ void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
 
 ### <a name="parameters"></a>參數
 
-*hFont*  
+*hFont*<br/>
 [in]新字型的控制代碼。
 
-*bRedraw*  
+*bRedraw*<br/>
 [in]如果 TRUE （預設值），則會重新繪製視窗。 否則，它不是。
 
 ##  <a name="sethotkey"></a>  CWindow::SetHotKey
@@ -2395,10 +2395,10 @@ int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
 
 ### <a name="parameters"></a>參數
 
-*wVirtualKeyCode*  
+*wVirtualKeyCode*<br/>
 [in]熱鍵虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h。
 
-*wModifiers*  
+*wModifiers*<br/>
 [in]熱鍵修飾詞。 如需可能值的清單，請參閱 WM_SETHOTKEY Windows SDK 中。
 
 ### <a name="return-value"></a>傳回值
@@ -2415,10 +2415,10 @@ HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
 
 ### <a name="parameters"></a>參數
 
-*hIcon*  
+*hIcon*<br/>
 [in]新圖示的控制代碼。
 
-*bBigIcon*  
+*bBigIcon*<br/>
 [in]如果 TRUE （預設值），則方法會設定大圖示。 否則，它會設定小圖示。
 
 ### <a name="return-value"></a>傳回值
@@ -2467,7 +2467,7 @@ void SetRedraw(BOOL bRedraw = TRUE) throw();
 
 ### <a name="parameters"></a>參數
 
-*bRedraw*  
+*bRedraw*<br/>
 [in]指定的重繪旗標的狀態。 如果為 TRUE （預設值）、 重繪旗標設定;如果為 FALSE，則會清除旗標。
 
 ### <a name="remarks"></a>備註

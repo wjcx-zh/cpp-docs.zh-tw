@@ -55,14 +55,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b7eaba589e729230c0392ac67eff2389d430f842
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2669f7ff0756c0450e64b1b37624bb95f2c1216e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571667"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111286"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo 類別
+
 支援使用 OLE DB 的 OLE DB 錯誤處理[IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\))介面。  
   
 ## <a name="syntax"></a>語法
@@ -72,7 +73,8 @@ class CDBErrorInfo
 ``` 
 
 ## <a name="requirements"></a>需求  
- **標題:** atldbcli.h 
+
+**標題:** atldbcli.h 
   
 ## <a name="members"></a>成員  
   
@@ -88,9 +90,11 @@ class CDBErrorInfo
 |[GetErrorRecords](#geterrorrecords)|取得指定的物件中的錯誤記錄。|  
   
 ## <a name="remarks"></a>備註  
- 這個介面會傳回給使用者的一或多個錯誤記錄。 呼叫[cdberrorinfo:: Geterrorrecords](../../data/oledb/cdberrorinfo-geterrorrecords.md)第一個，以取得錯誤記錄的計數。 然後呼叫其中一個存取權，這類函式[cdberrorinfo:: Getallerrorinfo](../../data/oledb/cdberrorinfo-getallerrorinfo.md)，擷取每一筆記錄的資訊時發生錯誤。  
+
+這個介面會傳回給使用者的一或多個錯誤記錄。 呼叫[cdberrorinfo:: Geterrorrecords](../../data/oledb/cdberrorinfo-geterrorrecords.md)第一個，以取得錯誤記錄的計數。 然後呼叫其中一個存取權，這類函式[cdberrorinfo:: Getallerrorinfo](../../data/oledb/cdberrorinfo-getallerrorinfo.md)，擷取每一筆記錄的資訊時發生錯誤。  
   
 ## <a name="getallerrorinfo"></a> Cdberrorinfo:: Getallerrorinfo
+
 傳回錯誤記錄中所包含的所有錯誤資訊類型。  
   
 ### <a name="syntax"></a>語法  
@@ -105,38 +109,42 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>參數  
- *ulRecordNum*  
- [in] 要傳回錯誤資訊之記錄的以零起始數字。  
+
+*ulRecordNum*<br/>
+[in] 要傳回錯誤資訊之記錄的以零起始數字。  
   
- *lcid*  
- [in] 要傳回之錯誤資訊的地區設定 ID。  
+*lcid*<br/>
+[in] 要傳回之錯誤資訊的地區設定 ID。  
   
- *pbstrDescription*  
- [out] 如果不支援地區設定，則傳回錯誤的文字描述指標或 NULL。 請參閱＜備註＞。  
+*pbstrDescription*<br/>
+[out] 如果不支援地區設定，則傳回錯誤的文字描述指標或 NULL。 請參閱＜備註＞。  
   
- *pbstrSource*  
- [out] 包含產生錯誤之元件名稱的字串指標。  
+*pbstrSource*<br/>
+[out] 包含產生錯誤之元件名稱的字串指標。  
   
- *pguid*  
- [out] 定義錯誤之介面的 GUID 指標。  
+*pguid*<br/>
+[out] 定義錯誤之介面的 GUID 指標。  
   
- *pdwHelpContext*  
- [out] 錯誤的說明主題內容識別碼指標。  
+*pdwHelpContext*<br/>
+[out] 錯誤的說明主題內容識別碼指標。  
   
- *pbstrHelpFile*  
- [out] 包含描述錯誤說明檔路徑之字串的指標。  
+*pbstrHelpFile*<br/>
+[out] 包含描述錯誤說明檔路徑之字串的指標。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功傳回 S_OK。 請參閱[ierrorrecords:: Geterrorinfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\))中*OLE DB 程式設計人員參考*其他傳回值。  
+
+如果成功傳回 S_OK。 請參閱[ierrorrecords:: Geterrorinfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\))中*OLE DB 程式設計人員參考*其他傳回值。  
   
 ### <a name="remarks"></a>備註  
- 輸出值*pbstrDescription*藉由呼叫從內部取得`IErrorInfo::GetDescription`，這將設定的值為 NULL，不支援的地區設定，則這兩個下列條件成立：  
+
+輸出值*pbstrDescription*藉由呼叫從內部取得`IErrorInfo::GetDescription`，這將設定的值為 NULL，不支援的地區設定，則這兩個下列條件成立：  
   
-1.  值*lcid*不是美國英文和  
+1. 值*lcid*不是美國英文和  
   
-2.  值*lcid*不是等於 GetUserDefaultLCID 所傳回的值。 
+1. 值*lcid*不是等於 GetUserDefaultLCID 所傳回的值。 
 
 ## <a name="getbasicerrorinfo"></a> Cdberrorinfo:: Getbasicerrorinfo
+
 呼叫[IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\))傳回錯誤，例如傳回碼和提供者特定錯誤號碼的相關基本資訊。  
   
 ### <a name="syntax"></a>語法  
@@ -147,12 +155,15 @@ HRESULT GetBasicErrorInfo(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+
+請參閱[IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ### <a name="return-value"></a>傳回值  
- 標準的 HRESULT。  
+
+標準的 HRESULT。  
 
 ## <a name="getcustomerrorobject"></a> Cdberrorinfo:: Getcustomerrorobject
+
 呼叫[IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\))介面的指標，傳回自訂錯誤物件。  
   
 ### <a name="syntax"></a>語法  
@@ -163,12 +174,15 @@ HRESULT GetCustomErrorObject(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+
+請參閱[IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ### <a name="return-value"></a>傳回值  
- 標準的 HRESULT。  
+
+標準的 HRESULT。  
 
 ## <a name="geterrorinfo"></a> Cdberrorinfo:: Geterrorinfo
+
 呼叫[ierrorrecords:: Geterrorinfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\))返回[IErrorInfo](/previous-versions/windows/desktop/ms718112\(v=vs.85\))介面指標，以指定的記錄。  
   
 ### <a name="syntax"></a>語法  
@@ -179,12 +193,15 @@ HRESULT GetErrorInfo(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[ierrorrecords:: Geterrorinfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+
+請參閱[ierrorrecords:: Geterrorinfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ### <a name="return-value"></a>傳回值  
- 標準的 HRESULT。  
+
+標準的 HRESULT。  
 
 ## <a name="geterrorparameters"></a> Cdberrorinfo:: Geterrorparameters
+
 呼叫[IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\))傳回錯誤的參數。  
   
 ### <a name="syntax"></a>語法  
@@ -195,12 +212,15 @@ HRESULT GetErrorParameters(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+
+請參閱[IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ### <a name="return-value"></a>傳回值  
- 標準的 HRESULT。  
+
+標準的 HRESULT。  
 
 ## <a name="geterrorrecords"></a> Cdberrorinfo:: Geterrorrecords
+
 取得指定的物件中的錯誤記錄。  
   
 ### <a name="syntax"></a>語法  
@@ -214,22 +234,26 @@ HRESULT GetErrorRecords(ULONG* pcRecords) throw();
 ```  
   
 #### <a name="parameters"></a>參數  
- *pUnk*  
- [in]要取得錯誤記錄物件的介面。  
+
+*pUnk*<br/>
+[in]要取得錯誤記錄物件的介面。  
   
- *iid*  
- [in]與錯誤相關聯之介面的 IID。  
+*iid*<br/>
+[in]與錯誤相關聯之介面的 IID。  
   
- *pcRecords*  
- [out]指標 （一個為基礎） 的錯誤記錄計數。  
+*pcRecords*<br/>
+[out]指標 （一個為基礎） 的錯誤記錄計數。  
   
 ### <a name="return-value"></a>傳回值  
- 標準的 HRESULT。  
+
+標準的 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 如果您想要檢查哪些介面，以取得錯誤資訊，請使用函式的第一種形式。 否則，請使用第二種形式。  
+
+如果您想要檢查哪些介面，以取得錯誤資訊，請使用函式的第一種形式。 否則，請使用第二種形式。  
   
 ## <a name="see-also"></a>另請參閱  
- [DBViewer](../../visual-cpp-samples.md)   
- [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[DBViewer](../../visual-cpp-samples.md)<br/>
+[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

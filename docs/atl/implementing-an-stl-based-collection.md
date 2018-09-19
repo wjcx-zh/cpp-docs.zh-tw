@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b6aa360229857e3c12322cb6579aa0dbbba53d9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d414df9d5e5f7d930497d42b5ec73d92a65ac3cc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753236"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116700"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>實作與 c + + 標準程式庫為基礎的集合
 
@@ -111,7 +111,7 @@ ATL 提供`ICollectionOnSTLImpl`介面，可讓您快速實作您的物件上的
 
 ## <a name="see-also"></a>另請參閱
 
-[集合和列舉程式](../atl/atl-collections-and-enumerators.md)   
-[ATLCollections 範例](../visual-cpp-samples.md)   
+[集合和列舉程式](../atl/atl-collections-and-enumerators.md)<br/>
+[ATLCollections 範例](../visual-cpp-samples.md)<br/>
 [ATL 複製原則類別](../atl/atl-copy-policy-classes.md)
 

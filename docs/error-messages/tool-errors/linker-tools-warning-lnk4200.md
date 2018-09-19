@@ -1,5 +1,5 @@
 ---
-title: 連結器工具警告 LNK4200 |Microsoft 文件
+title: 連結器工具警告 LNK4200 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72e0db3352bc124ab586b43fab278baf517b5a04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3d23d10440f4eba5082dff41544725fd6b77dbe3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298742"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111754"
 ---
 # <a name="linker-tools-warning-lnk4200"></a>連結器工具警告 LNK4200
-目的檔; 中的損毀的行號資訊忽略  
-  
- 目的檔中的行號資訊已損毀。 接著重新建置。
+
+目的檔; 中的損毀的行號資訊已忽略
+
+目的檔中的行號資訊已損毀。 接著重新建置。

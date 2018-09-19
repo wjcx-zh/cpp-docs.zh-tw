@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eda5fc385f094bd7a18bff521250453ebb66c84
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 39b376d6e65a5002487cbf51186fdab9ccb3fc46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757932"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110142"
 ---
 # <a name="caxwindow-class"></a>CAxWindow 類別
 
@@ -94,10 +94,10 @@ HRESULT AttachControl(
 
 ### <a name="parameters"></a>參數
 
-*pControl*  
+*pControl*<br/>
 [in]指標`IUnknown`的控制項。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out]指標`IUnknown`主控件的 (`AxWin`物件)。
 
 ### <a name="return-value"></a>傳回值
@@ -118,7 +118,7 @@ CAxWindow(HWND hWnd = NULL);
 
 ### <a name="parameters"></a>參數
 
-*hWnd*  
+*hWnd*<br/>
 現有的視窗物件的控制代碼。
 
 ##  <a name="createcontrol"></a>  CAxWindow::CreateControl
@@ -139,7 +139,7 @@ HRESULT CreateControl(
 
 ### <a name="parameters"></a>參數
 
-*lpszName*  
+*lpszName*<br/>
 若要建立控制項的字串指標。 格式必須如下的其中一個：
 
 - ProgID，例如"MSCAL。Calendar.7"
@@ -155,13 +155,13 @@ HRESULT CreateControl(
    > [!NOTE]
    > 「 MSHTML: 「 必須在前面的 HTML 片段，因此，它會指定為 MSHTML 資料流。 Windows Mobile 平台支援的 ProgID 和 CLSID。 Windows CE 內嵌平台，支援 CE IE 支援的 Windows Mobile 以外所有型別包括 ProgID，CLSID、 URL、 參考作用中的文件和片段的 HTML。
 
-*pStream*  
+*pStream*<br/>
 [in]用來初始化控制項的屬性資料流的指標。 可以是 NULL。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out]將會收到的指標位址`IUnknown`的容器。 可以是 NULL。
 
-*dwResID*  
+*dwResID*<br/>
 HTML 資源的資源識別碼。 將建立 WebBrowser 控制項，並將其載入指定的資源。
 
 ### <a name="return-value"></a>傳回值
@@ -206,7 +206,7 @@ HRESULT CreateControlEx(
 
 ### <a name="parameters"></a>參數
 
-*lpszName*  
+*lpszName*<br/>
 若要建立控制項的字串指標。 格式必須如下的其中一個：
 
 - ProgID，例如"MSCAL。Calendar.7"
@@ -222,22 +222,22 @@ HRESULT CreateControlEx(
    > [!NOTE]
    > 「 MSHTML: 「 必須在前面的 HTML 片段，因此，它會指定為 MSHTML 資料流。 Windows Mobile 平台支援的 ProgID 和 CLSID。 Windows CE 內嵌平台，支援 CE IE 支援的 Windows Mobile 以外所有型別包括 ProgID，CLSID、 URL、 參考作用中的文件和片段的 HTML。
 
-*pStream*  
+*pStream*<br/>
 [in]用來初始化控制項的屬性資料流的指標。 可以是 NULL。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out]將會收到的指標位址`IUnknown`的容器。 可以是 NULL。
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out]將會收到的指標位址`IUnknown`的控制項。 可以是 NULL。
 
-*iidSink*  
+*iidSink*<br/>
 [in]在所包含的物件上的輸出介面的介面識別項。 可以是 IID_NULL。
 
-*punkSink*  
+*punkSink*<br/>
 [in]指標`IUnknown`連接到包含的物件所指定的連接點的接收器物件的介面*iidSink*。
 
-*dwResID*  
+*dwResID*<br/>
 [in]HTML 資源的資源識別碼。 將建立 WebBrowser 控制項，並將其載入指定的資源。
 
 ### <a name="return-value"></a>傳回值
@@ -276,7 +276,7 @@ CAxWindow<TBase>& operator=(HWND hWnd);
 
 ### <a name="parameters"></a>參數
 
-*hWnd*  
+*hWnd*<br/>
 現有的視窗控制代碼。
 
 ### <a name="return-value"></a>傳回值
@@ -295,13 +295,13 @@ HRESULT QueryControl(Q** ppUnk);
 
 ### <a name="parameters"></a>參數
 
-*iid*  
+*iid*<br/>
 [in]指定控制項的介面的 IID。
 
-*ppUnk*  
+*ppUnk*<br/>
 [out]控制項的介面指標。 在這個方法的範本版本，則不需要參考識別碼只要在傳遞具類型的介面相關聯的 uuid。
 
-*Q*  
+*Q*<br/>
 [in]正在查詢的介面。
 
 ### <a name="return-value"></a>傳回值
@@ -320,13 +320,13 @@ HRESULT QueryHost(Q** ppUnk);
 
 ### <a name="parameters"></a>參數
 
-*iid*  
+*iid*<br/>
 [in]指定控制項的介面的 IID。
 
-*ppUnk*  
+*ppUnk*<br/>
 [out]在主機上介面的指標。 在這個方法的範本版本，則不需要參考識別碼只要在傳遞具類型的介面相關聯的 uuid。
 
-*Q*  
+*Q*<br/>
 [in]正在查詢的介面。
 
 ### <a name="return-value"></a>傳回值
@@ -347,7 +347,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 
 ### <a name="parameters"></a>參數
 
-*pDisp*  
+*pDisp*<br/>
 [in]指標`IDispatch`介面。
 
 ### <a name="return-value"></a>傳回值
@@ -364,7 +364,7 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 
 ### <a name="parameters"></a>參數
 
-*pUIHandler*  
+*pUIHandler*<br/>
 [in]指標`IDocHostUIHandlerDispatch`介面。
 
 ### <a name="return-value"></a>傳回值
@@ -377,9 +377,9 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 
 ## <a name="see-also"></a>另請參閱
 
-[ATLCON 範例](../../visual-cpp-samples.md)   
-[CWindow 類別](../../atl/reference/cwindow-class.md)   
-[複合控制項基本概念](../../atl/atl-composite-control-fundamentals.md)   
-[類別概觀](../../atl/atl-class-overview.md)   
+[ATLCON 範例](../../visual-cpp-samples.md)<br/>
+[CWindow 類別](../../atl/reference/cwindow-class.md)<br/>
+[複合控制項基本概念](../../atl/atl-composite-control-fundamentals.md)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
 [控制項內含項目常見問題集](../../atl/atl-control-containment-faq.md)
 

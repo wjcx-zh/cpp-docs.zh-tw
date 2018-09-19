@@ -1,5 +1,5 @@
 ---
-title: 資源編譯器錯誤 RC2151 |Microsoft 文件
+title: 資源編譯器錯誤 RC2151 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8349aa14de6aec96fa1b526cbcffbe79036f804d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a15f3f1237df9e4b706a2c2048dddd6d5db395d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323468"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109778"
 ---
 # <a name="resource-compiler-error-rc2151"></a>資源編譯器錯誤 RC2151
-無法重新使用字串常數  
-  
- 您要使用相同的值在兩次**STRINGTABLE**陳述式。 請確定您未混淆重疊的十進位和十六進位值。  
-  
- 在每個識別碼**STRINGTABLE**必須是唯一的。 最大效率使用連續的常數，以開始 16 的倍數。
+
+無法重新使用字串常數
+
+您要使用相同的值在兩次**STRINGTABLE**陳述式。 請確定您不會混淆重疊的十進位和十六進位值。
+
+在每個識別碼**STRINGTABLE**必須是唯一的。 最高效率使用連續的常數，著手 16 的倍數。

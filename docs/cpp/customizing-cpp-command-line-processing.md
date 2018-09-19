@@ -24,22 +24,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e847cff10c7e17185f76b5e790beda3745732312
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 855562b8b6eb5e577914fc6305668ee7305c86e1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406685"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110675"
 ---
 # <a name="customizing-c-command-line-processing"></a>自訂 C++ 命令列處理
-## <a name="microsoft-specific"></a>Microsoft 特定的  
- 如果您的程式不接受命令列引數，您可以隱藏執行命令列處理的程式庫常式用法，藉此稍微節省空間。 這個常式稱為`_setargv`述[萬用字元展開](../cpp/wildcard-expansion.md)。 若要隱藏其用途，定義 沒有任何作用中檔案包含的常式`main`函式，並將它命名`_setargv`。 在呼叫`_setargv`再經定義`_setargv`，且不會載入程式庫版本。  
-  
- 同樣地，如果您從未存取環境資料表，透過`envp`引數，您可以提供您自己空的常式以取代`_setenvp`，環境處理常式。 正如同`_setargv`函式`_setenvp`必須宣告為**extern"C"**。  
-  
- 您的程式可能會呼叫`spawn`或`exec`系列 C 執行階段程式庫中的常式。 如果是這種情況，您就不應該隱藏環境處理常式，因為這個常式會用來將環境從父處理序傳遞至子處理序。  
-  
-**結束 Microsoft 專屬**  
-  
-## <a name="see-also"></a>另請參閱  
- [main：程式啟動](../cpp/main-program-startup.md)
+
+## <a name="microsoft-specific"></a>Microsoft 特定的
+
+如果您的程式不接受命令列引數，您可以隱藏執行命令列處理的程式庫常式用法，藉此稍微節省空間。 這個常式稱為`_setargv`述[萬用字元展開](../cpp/wildcard-expansion.md)。 若要隱藏其用途，定義 沒有任何作用中檔案包含的常式`main`函式，並將它命名`_setargv`。 在呼叫`_setargv`再經定義`_setargv`，且不會載入程式庫版本。
+
+同樣地，如果您從未存取環境資料表，透過`envp`引數，您可以提供您自己空的常式以取代`_setenvp`，環境處理常式。 正如同`_setargv`函式`_setenvp`必須宣告為**extern"C"**。
+
+您的程式可能會呼叫`spawn`或`exec`系列 C 執行階段程式庫中的常式。 如果是這種情況，您就不應該隱藏環境處理常式，因為這個常式會用來將環境從父處理序傳遞至子處理序。
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>另請參閱
+
+[main：程式啟動](../cpp/main-program-startup.md)

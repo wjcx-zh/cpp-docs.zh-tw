@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2415 |Microsoft 文件
+title: 編譯器錯誤 C2415 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ad06cdf891c9b958f6cf08e724f4003a8507c2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd889880997828396521ddba638bb606552e7d92
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198543"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112573"
 ---
 # <a name="compiler-error-c2415"></a>編譯器錯誤 C2415
-不適當的運算元類型  
-  
- Opcode 不使用此類型的運算元。  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>透過檢查下列可能原因進行修正  
-  
-1.  Opcode 不支援使用的運算元數目。 檢查組件語言參考手冊，以判斷正確的運算元數目。  
-  
-2.  較新的處理器支援與其他類型的指示。 調整[/arch （最小 CPU 架構）](../../build/reference/arch-minimum-cpu-architecture.md)選項來使用更新版本的處理器。
+
+不適當的運算元類型
+
+Opcode 不會使用此類型的運算元。
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>透過檢查下列可能原因進行修正
+
+1. Opcode 不支援使用的運算元數目。 請檢查組件語言參考手冊，以判斷正確的運算元數目。
+
+1. 較新的處理器支援其他類型的指示。 調整[/arch （最小 CPU 架構）](../../build/reference/arch-minimum-cpu-architecture.md)選項可使用較新的處理器。

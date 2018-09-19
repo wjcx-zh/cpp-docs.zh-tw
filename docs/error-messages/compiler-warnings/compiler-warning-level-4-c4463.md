@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 4） C4463 |Microsoft 文件
+title: 編譯器警告 （層級 4） C4463 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c13e0a79c667ecedbf3fd065338892d3af9c2ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 388f18ce1bc2e3a4279510ad6dc1a6938ab6f0e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294436"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109427"
 ---
-# <a name="compiler-warning-level-4-c4463"></a>編譯器警告 （層級 4） C4463  
-  
-> 溢位。指派*值*只能保留值的位元欄位*low_value*至*high_value*  
-  
-受指派*值*超出範圍的位元欄位可以保存的值。 帶正負號的位元欄位類型使用高位位元正負號，因此如果*n*是帶正負號的位元欄位是-2 的位元欄位的大小，範圍<sup>n-1</sup> 2<sup>n-1</sup>-1，而不帶正負號位元欄位必須介於 0 到 2<sup>n</sup>-1。  
-  
-## <a name="example"></a>範例  
-  
-這個範例會產生 C4463，因為它會嘗試將 3 這個值指派給位元欄位的型別`int`大小為 2，擁有從-2 範圍為 1。  
-  
-若要修正此問題，您可以變更指派的值為允許的範圍中的項目。 如果位元欄位保存不帶正負號的值範圍從 0 到 3，您可以變更的宣告型別`unsigned`。 如果欄位為了儲存於範圍-4 到 3 的值，您可以將位元欄位大小變更為 3。  
-  
-```cpp  
+# <a name="compiler-warning-level-4-c4463"></a>編譯器警告 （層級 4） C4463
+
+> 溢位;指派*值*只能保留值的位元欄位*low_value*到*high_value*
+
+受指派*值*超出範圍的位元欄位可以保留的值。 帶正負號的位元欄位類型使用的高位位元表示正負號，因此，如果*n*是帶正負號的位元欄位是-2 位元欄位大小，範圍<sup>n-1</sup> 2<sup>n-1</sup>-1，而不帶正負號位元欄位必須介於 0 到 2<sup>n</sup>-1。
+
+## <a name="example"></a>範例
+
+此範例會產生 C4463，因為它會嘗試將值 3 指派給位元欄位的型別`int`緩衝區的大小為 2，其具有 1 的範圍從-2。
+
+若要修正此問題，您可以變更指派的值，以允許的範圍中的項目。 如果位元欄位是保存不帶正負號的值，範圍從 0 到 3 中，您可以變更的宣告型別`unsigned`。 如果欄位是儲存於範圍-4 到 3 的值，您可以將位元欄位大小變更為 3。
+
+```cpp
 // C4463_overflow.cpp
 // compile with: cl /W4 /EHsc C4463_overflow.cpp
-struct S { 
+struct S {
     int x : 2; // int type treats high-order bit as sign
-}; 
+};
 
-int main() { 
-    S s; 
-    s.x = 3; // warning C4463: overflow; assigning 3 
-    // to bit-field that can only hold values from -2 to 1 
+int main() {
+    S s;
+    s.x = 3; // warning C4463: overflow; assigning 3
+    // to bit-field that can only hold values from -2 to 1
     // To fix, change assigned value to fit in range,
-    // increase size of bitfield, and/or change base type 
+    // increase size of bitfield, and/or change base type
     // to unsigned.
-} 
-```  
+}
+```

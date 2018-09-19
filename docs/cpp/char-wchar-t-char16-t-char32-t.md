@@ -17,25 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d0c89df02c624d96c613f6241c9beefd466827e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 9855dc406c56f82eb3ed87248316103397e44007
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402610"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112651"
 ---
 # <a name="char-wchart-char16t-char32t"></a>char、wchar_t、char16_t、char32_t
+
 型別**char**， **wchar_t**， **char16_t**並**char32_t**代表英數字元的內建類型，以及非英數字符和非列印字元。
 
 ## <a name="syntax"></a>語法
 
-```cpp  
-char     ch1{ 'a' };  // or { u8'a' }   
-wchar_t  ch2{ L'a' };    
-char16_t ch3{ u'a' };    
-char32_t ch4{ U'a' };  
-```  
-  
+```cpp
+char     ch1{ 'a' };  // or { u8'a' }
+wchar_t  ch2{ L'a' };
+char16_t ch3{ u'a' };
+char32_t ch4{ U'a' };
+```
+
 ## <a name="remarks"></a>備註
 
 **Char**類型是在 C 和 c + + 中的原始字元類型。 型別**unsigned char**通常用來代表*位元組*，這不是 c + + 中的內建類型。 **Char**類型可以用來儲存來自 ASCII 字元集、 任何 ISO-8859 字元集，且個別的位元組的多位元組字元，例如 Shift JIS 或 Unicode 字元集的 utf-8 編碼的字元。 字串**char**型別指*縮小*字串，即使使用多位元組字元編碼。 在 Microsoft 編譯器**char**是 8 位元的型別。
@@ -44,4 +45,4 @@ char32_t ch4{ U'a' };
 
 **Char16_t**並**char32_t**類型分別代表 16 位元和 32 位元的寬字元。 Unicode 編碼為 utf-16 可以儲存在**char16_t**類型和 Unicode 編碼為 UTF-32 可以儲存在**char32_t**型別。 一種類型的字串和**wchar_t**是所有稱為*寬*字串，但一詞通常指的是專為字串**wchar_t**型別。
 
-在 c + + 標準程式庫，`basic_string`窄和寬字串特製化類型。 使用`std::string`字元都屬於型別**char**，`std::u16string`字元都屬於型別**char16_t**，`std::u32string`字元都屬於型別**char32_t**，並`std::wstring`字元都屬於型別**wchar_t**。 代表文字，其他類型包括`std::stringstream`和`std::cout`具有窄和寬字串特製化。  
+在 c + + 標準程式庫，`basic_string`窄和寬字串特製化類型。 使用`std::string`字元都屬於型別**char**，`std::u16string`字元都屬於型別**char16_t**，`std::u32string`字元都屬於型別**char32_t**，並`std::wstring`字元都屬於型別**wchar_t**。 代表文字，其他類型包括`std::stringstream`和`std::cout`具有窄和寬字串特製化。

@@ -1,5 +1,5 @@
 ---
-title: 專案建置錯誤 PRJ0015 |Microsoft 文件
+title: 專案建置錯誤 PRJ0015 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c2376ddd22490bf9ce61a8db9b857ce02551b15
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d70c8b4fe35519479056e25455914ac80fc00cb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316445"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111611"
 ---
 # <a name="project-build-error-prj0015"></a>專案建置錯誤 PRJ0015
-從您的系統遺漏 NULL 裝置。 我們目前無法啟動組建。  
-  
- 這個錯誤可能被因系統資源不足。 關閉部分應用程式或重新開機。  
-  
- 此外，它也可能造成如果電腦上沒有足夠的權限的 NULL 裝置。
+
+從您的系統遺漏 NULL 裝置。 我們目前無法啟動組建。
+
+此錯誤可能被因系統資源不足。 關閉一些應用程式，或重新開機。
+
+此外，它也可能造成如果電腦上沒有足夠的權限的 NULL 裝置。

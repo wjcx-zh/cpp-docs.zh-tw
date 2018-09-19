@@ -37,14 +37,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d07c0e64e969e599393a657d4c41a8dd544901c9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 542c97c1e13d5979290772668b6dccebe1ece9f9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572340"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113158"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl 類別
+
 提供實作[IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\))介面。  
   
 ## <a name="syntax"></a>語法
@@ -57,14 +58,16 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 ```  
   
 ### <a name="parameters"></a>參數  
- *T*  
- 您的類別，衍生自`IRowsetInfoImpl`。  
+
+*T*<br/>
+您的類別，衍生自`IRowsetInfoImpl`。  
   
- *PropClass*  
- 使用者可定義屬性類別，預設值為*T*。 
+*PropClass*<br/>
+使用者可定義屬性類別，預設值為*T*。 
 
 ## <a name="requirements"></a>需求  
- **標頭：** altdb.h   
+
+**標頭：** altdb.h   
   
 ## <a name="members"></a>成員  
   
@@ -77,9 +80,11 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 |[GetSpecification](#getspecification)|建立此資料列集物件 （命令或工作階段） 上傳回的介面指標。|  
   
 ## <a name="remarks"></a>備註  
- 在 資料列集上必要的介面。 這個類別會實作所使用的資料列集屬性[屬性集對應](../../data/oledb/begin-propset-map.md)命令類別中定義。 雖然所出現的資料列集類別，使用命令類別的屬性集，資料列集提供它自己的複本，執行階段內容中的命令或工作階段的物件建立時。  
+
+在 資料列集上必要的介面。 這個類別會實作所使用的資料列集屬性[屬性集對應](../../data/oledb/begin-propset-map.md)命令類別中定義。 雖然所出現的資料列集類別，使用命令類別的屬性集，資料列集提供它自己的複本，執行階段內容中的命令或工作階段的物件建立時。  
   
 ## <a name="getproperties"></a> Irowsetinfoimpl:: Getproperties
+
 傳回屬性的目前設定`DBPROPSET_ROWSET`群組。  
   
 ### <a name="syntax"></a>語法  
@@ -92,9 +97,11 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[irowsetinfo:: Getproperties](/previous-versions/windows/desktop/ms719611\(v=vs.85\))中*OLE DB 程式設計人員參考*。 
+
+請參閱[irowsetinfo:: Getproperties](/previous-versions/windows/desktop/ms719611\(v=vs.85\))中*OLE DB 程式設計人員參考*。 
 
 ## <a name="getreferencedrowset"></a> Irowsetinfoimpl:: Getreferencedrowset
+
 要套用書籤的資料列集傳回的介面指標。  
   
 ### <a name="syntax"></a>語法  
@@ -106,9 +113,11 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145\(v=vs.85\))中*OLE DB 程式設計人員參考*。 *IOrdinal*參數必須是書籤資料行。 
+
+請參閱[IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145\(v=vs.85\))中*OLE DB 程式設計人員參考*。 *IOrdinal*參數必須是書籤資料行。 
 
 ## <a name="getspecification"></a> Irowsetinfoimpl:: Getspecification
+
 建立此資料列集物件 （命令或工作階段） 上傳回的介面指標。  
   
 ### <a name="syntax"></a>語法  
@@ -119,11 +128,14 @@ STDMETHOD (GetSpecification )(REFIID riid,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+
+請參閱[IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ### <a name="remarks"></a>備註  
- 使用這個方法搭配[IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)來擷取從資料來源物件的屬性。  
+
+使用這個方法搭配[IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)來擷取從資料來源物件的屬性。  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

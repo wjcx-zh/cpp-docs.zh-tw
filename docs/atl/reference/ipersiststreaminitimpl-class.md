@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b31e8c712ef7c395570912224f75036e6249b431
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 85e772b9222f2066259042e551fa393758559ab2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761965"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115868"
 ---
 # <a name="ipersiststreaminitimpl-class"></a>IPersistStreamInitImpl 類別
 
@@ -42,14 +42,14 @@ ms.locfileid: "43761965"
 ## <a name="syntax"></a>語法
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE IPersistStreamInitImpl 
    : public IPersistStreamInit
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您的類別，衍生自`IPersistStreamInitImpl`。
 
 ## <a name="members"></a>成員
@@ -163,5 +163,5 @@ ATL 會使用物件的屬性對應來儲存這項資訊。
 
 ## <a name="see-also"></a>另請參閱
 
-[儲存體和資料流](/windows/desktop/Stg/storages-and-streams)   
+[儲存體和資料流](/windows/desktop/Stg/storages-and-streams)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

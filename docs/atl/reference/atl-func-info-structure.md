@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 392e9dc2997dc7f4f0f36b1d7d38cd8ecdc691bb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ac285921500107b85c30eba4d2f1940c93721d0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759528"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113054"
 ---
 # <a name="atlfuncinfo-structure"></a>_ATL_FUNC_INFO 結構
 
@@ -43,16 +43,16 @@ struct _ATL_FUNC_INFO {
 
 ## <a name="members"></a>成員
 
-`cc`  
+`cc`<br/>
 呼叫慣例。 使用這個結構時[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)類別，這個成員必須是 CC_STDCALL。 `CC_CDECL` 是唯一的選項，支援 Windows CE`CALLCONV`欄位`_ATL_FUNC_INFO`結構。 任何其他值都不支援因此其行為未定義。
 
-`vtReturn`  
+`vtReturn`<br/>
 Variant 類型函式的傳回值。
 
-`nParams`  
+`nParams`<br/>
 函式參數數目。
 
-`pVarTypes`  
+`pVarTypes`<br/>
 函式參數的 variant 類型的陣列。
 
 ## <a name="remarks"></a>備註
@@ -75,7 +75,7 @@ Variant 類型函式的傳回值。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別和結構](../../atl/reference/atl-classes.md)  
-[IDispEventSimpleImpl 類別](../../atl/reference/idispeventsimpleimpl-class.md)   
+[類別和結構](../../atl/reference/atl-classes.md)<br/>
+[IDispEventSimpleImpl 類別](../../atl/reference/idispeventsimpleimpl-class.md)<br/>
 [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)
 

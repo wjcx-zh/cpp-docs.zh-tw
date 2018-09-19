@@ -16,156 +16,157 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54444200b9a38c427a8192d1c16e6835712ff1f6
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 6de0d358c6ac587944977340e02b1ee6ed086f8c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467916"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111730"
 ---
 # <a name="virtual-functions"></a>虛擬函式
-虛擬函式是您必須在衍生類別中重新定義的成員函式。 當您使用基底類別的參考或指標參考衍生類別物件時，可以呼叫該物件的虛擬函式，並執行函式的衍生類別版本。  
-  
- 不論呼叫函式時使用的運算式為何，虛擬函式都可確保針對物件呼叫正確的函式。  
-  
- 假設基底類別包含宣告為函式[虛擬](../cpp/virtual-cpp.md)和衍生的類別中定義相同的函式。 針對衍生類別的物件會叫用來自衍生類別的函式 (即使是使用基底類別的指標或參考呼叫)。 下列範例將示範基底類別，它會提供 `PrintBalance` 函式和兩個衍生類別的實作  
-  
-```cpp 
-// deriv_VirtualFunctions.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-using namespace std;  
-  
-class Account {  
-public:  
-   Account( double d ) { _balance = d; }  
-   virtual double GetBalance() { return _balance; }  
-   virtual void PrintBalance() { cerr << "Error. Balance not available for base type." << endl; }  
-private:  
-    double _balance;  
-};  
-  
-class CheckingAccount : public Account {  
-public:  
-   CheckingAccount(double d) : Account(d) {}  
-   void PrintBalance() { cout << "Checking account balance: " << GetBalance() << endl; }  
-};  
-  
-class SavingsAccount : public Account {  
-public:  
-   SavingsAccount(double d) : Account(d) {}  
-   void PrintBalance() { cout << "Savings account balance: " << GetBalance(); }  
-};  
-  
-int main() {  
-   // Create objects of type CheckingAccount and SavingsAccount.  
-   CheckingAccount *pChecking = new CheckingAccount( 100.00 ) ;  
-   SavingsAccount  *pSavings  = new SavingsAccount( 1000.00 );  
-  
-   // Call PrintBalance using a pointer to Account.  
-   Account *pAccount = pChecking;  
-   pAccount->PrintBalance();  
-  
-   // Call PrintBalance using a pointer to Account.  
-   pAccount = pSavings;  
-   pAccount->PrintBalance();     
-}  
-```  
-  
- 在上述程式碼中，除了針對 `PrintBalance` 所指向的物件之外，`pAccount` 的呼叫都相同。 由於 `PrintBalance` 是虛擬的，因此會呼叫為每個物件定義的函式版本。 衍生類別 `PrintBalance` 和 `CheckingAccount` 中的 `SavingsAccount` 函式會「覆寫」基底類別 `Account` 中的函式。  
-  
- 如果宣告的類別未提供 `PrintBalance` 函式的覆寫實作，則會使用基底類別 `Account` 的預設實作。  
-  
- 衍生類別中的函式只有在類型相同時，才會覆寫基底類別中的虛擬函式。 衍生類別內的函式不能只使用傳回類型與基底類別內的虛擬函式作區別，引數清單也必須加以區別。  
-  
- 使用指標或參考呼叫函式時，適用下列規則：  
-  
--   對虛擬函式的呼叫會根據為其進行呼叫之物件的基礎類型進行解析。  
-  
--   對非虛擬函式的呼叫是根據指標或參考的類型進行解析。  
-  
- 下列範例將示範透過指標呼叫時，虛擬和非虛擬函式的行為：  
-  
-```cpp 
-// deriv_VirtualFunctions2.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-using namespace std;  
-  
-class Base {  
-public:  
-   virtual void NameOf();   // Virtual function.  
-   void InvokingClass();   // Nonvirtual function.  
-};  
-  
-// Implement the two functions.  
-void Base::NameOf() {  
-   cout << "Base::NameOf\n";  
-}  
-  
-void Base::InvokingClass() {  
-   cout << "Invoked by Base\n";  
-}  
-  
-class Derived : public Base {  
-public:  
-   void NameOf();   // Virtual function.  
-   void InvokingClass();   // Nonvirtual function.  
-};  
-  
-// Implement the two functions.  
-void Derived::NameOf() {  
-   cout << "Derived::NameOf\n";  
-}  
-  
-void Derived::InvokingClass() {  
-   cout << "Invoked by Derived\n";  
-}  
-  
-int main() {  
-   // Declare an object of type Derived.  
-   Derived aDerived;  
-  
-   // Declare two pointers, one of type Derived * and the other  
-   //  of type Base *, and initialize them to point to aDerived.  
-   Derived *pDerived = &aDerived;  
-   Base    *pBase    = &aDerived;  
-  
-   // Call the functions.  
-   pBase->NameOf();           // Call virtual function.  
-   pBase->InvokingClass();    // Call nonvirtual function.  
-   pDerived->NameOf();        // Call virtual function.  
-   pDerived->InvokingClass(); // Call nonvirtual function.  
-}  
-```  
-  
-### <a name="output"></a>輸出  
-  
-```Output  
-Derived::NameOf  
-Invoked by Base  
-Derived::NameOf  
-Invoked by Derived  
-```  
-  
- 請注意，無論 `NameOf` 函式是經由 `Base` 的指標或 `Derived` 的指標叫用，都會呼叫 `Derived` 的函式。 它會呼叫 `Derived` 的函式是因為 `NameOf` 是虛擬函式，而且 `pBase` 和 `pDerived` 都指向 `Derived` 類型的物件。  
-  
- 因為虛擬函式會呼叫只會針對類別類型的物件，您不能宣告為全域或靜態函式**虛擬**。  
-  
- **虛擬**宣告覆寫於衍生類別中，函式時，就可以使用關鍵字，但並非必要，因為覆寫虛擬函式一律是虛擬。  
-  
- 必須定義基底類別中的虛擬函式，除非它們使用宣告*純規範*。 (如需純虛擬函式的詳細資訊，請參閱[抽象類別](../cpp/abstract-classes-cpp.md)。)  
-  
- 使用範圍解析運算子 (`::`) 就可透過明確限定函式名稱的方式隱藏虛擬函式呼叫機制。 請參考先前包含 `Account` 類別的範例。 若要呼叫基底類別中的 `PrintBalance`，請使用下列範例程式碼：  
-  
-```cpp 
-CheckingAccount *pChecking = new CheckingAccount( 100.00 );  
-  
-pChecking->Account::PrintBalance();  //  Explicit qualification.  
-  
-Account *pAccount = pChecking;  // Call Account::PrintBalance  
-  
-pAccount->Account::PrintBalance();   //  Explicit qualification.  
-```  
-  
- 上述範例中對 `PrintBalance` 的兩個呼叫都會隱藏虛擬函式呼叫機制。  
+
+虛擬函式是您必須在衍生類別中重新定義的成員函式。 當您使用基底類別的參考或指標參考衍生類別物件時，可以呼叫該物件的虛擬函式，並執行函式的衍生類別版本。
+
+不論呼叫函式時使用的運算式為何，虛擬函式都可確保針對物件呼叫正確的函式。
+
+假設基底類別包含宣告為函式[虛擬](../cpp/virtual-cpp.md)和衍生的類別中定義相同的函式。 針對衍生類別的物件會叫用來自衍生類別的函式 (即使是使用基底類別的指標或參考呼叫)。 下列範例將示範基底類別，它會提供 `PrintBalance` 函式和兩個衍生類別的實作
+
+```cpp
+// deriv_VirtualFunctions.cpp
+// compile with: /EHsc
+#include <iostream>
+using namespace std;
+
+class Account {
+public:
+   Account( double d ) { _balance = d; }
+   virtual double GetBalance() { return _balance; }
+   virtual void PrintBalance() { cerr << "Error. Balance not available for base type." << endl; }
+private:
+    double _balance;
+};
+
+class CheckingAccount : public Account {
+public:
+   CheckingAccount(double d) : Account(d) {}
+   void PrintBalance() { cout << "Checking account balance: " << GetBalance() << endl; }
+};
+
+class SavingsAccount : public Account {
+public:
+   SavingsAccount(double d) : Account(d) {}
+   void PrintBalance() { cout << "Savings account balance: " << GetBalance(); }
+};
+
+int main() {
+   // Create objects of type CheckingAccount and SavingsAccount.
+   CheckingAccount *pChecking = new CheckingAccount( 100.00 ) ;
+   SavingsAccount  *pSavings  = new SavingsAccount( 1000.00 );
+
+   // Call PrintBalance using a pointer to Account.
+   Account *pAccount = pChecking;
+   pAccount->PrintBalance();
+
+   // Call PrintBalance using a pointer to Account.
+   pAccount = pSavings;
+   pAccount->PrintBalance();
+}
+```
+
+在上述程式碼中，除了針對 `PrintBalance` 所指向的物件之外，`pAccount` 的呼叫都相同。 由於 `PrintBalance` 是虛擬的，因此會呼叫為每個物件定義的函式版本。 衍生類別 `PrintBalance` 和 `CheckingAccount` 中的 `SavingsAccount` 函式會「覆寫」基底類別 `Account` 中的函式。
+
+如果宣告的類別未提供 `PrintBalance` 函式的覆寫實作，則會使用基底類別 `Account` 的預設實作。
+
+衍生類別中的函式只有在類型相同時，才會覆寫基底類別中的虛擬函式。 衍生類別內的函式不能只使用傳回類型與基底類別內的虛擬函式作區別，引數清單也必須加以區別。
+
+使用指標或參考呼叫函式時，適用下列規則：
+
+- 對虛擬函式的呼叫會根據為其進行呼叫之物件的基礎類型進行解析。
+
+- 對非虛擬函式的呼叫是根據指標或參考的類型進行解析。
+
+下列範例將示範透過指標呼叫時，虛擬和非虛擬函式的行為：
+
+```cpp
+// deriv_VirtualFunctions2.cpp
+// compile with: /EHsc
+#include <iostream>
+using namespace std;
+
+class Base {
+public:
+   virtual void NameOf();   // Virtual function.
+   void InvokingClass();   // Nonvirtual function.
+};
+
+// Implement the two functions.
+void Base::NameOf() {
+   cout << "Base::NameOf\n";
+}
+
+void Base::InvokingClass() {
+   cout << "Invoked by Base\n";
+}
+
+class Derived : public Base {
+public:
+   void NameOf();   // Virtual function.
+   void InvokingClass();   // Nonvirtual function.
+};
+
+// Implement the two functions.
+void Derived::NameOf() {
+   cout << "Derived::NameOf\n";
+}
+
+void Derived::InvokingClass() {
+   cout << "Invoked by Derived\n";
+}
+
+int main() {
+   // Declare an object of type Derived.
+   Derived aDerived;
+
+   // Declare two pointers, one of type Derived * and the other
+   //  of type Base *, and initialize them to point to aDerived.
+   Derived *pDerived = &aDerived;
+   Base    *pBase    = &aDerived;
+
+   // Call the functions.
+   pBase->NameOf();           // Call virtual function.
+   pBase->InvokingClass();    // Call nonvirtual function.
+   pDerived->NameOf();        // Call virtual function.
+   pDerived->InvokingClass(); // Call nonvirtual function.
+}
+```
+
+### <a name="output"></a>輸出
+
+```Output
+Derived::NameOf
+Invoked by Base
+Derived::NameOf
+Invoked by Derived
+```
+
+請注意，無論 `NameOf` 函式是經由 `Base` 的指標或 `Derived` 的指標叫用，都會呼叫 `Derived` 的函式。 它會呼叫 `Derived` 的函式是因為 `NameOf` 是虛擬函式，而且 `pBase` 和 `pDerived` 都指向 `Derived` 類型的物件。
+
+因為虛擬函式會呼叫只會針對類別類型的物件，您不能宣告為全域或靜態函式**虛擬**。
+
+**虛擬**宣告覆寫於衍生類別中，函式時，就可以使用關鍵字，但並非必要，因為覆寫虛擬函式一律是虛擬。
+
+必須定義基底類別中的虛擬函式，除非它們使用宣告*純規範*。 (如需純虛擬函式的詳細資訊，請參閱[抽象類別](../cpp/abstract-classes-cpp.md)。)
+
+使用範圍解析運算子 (`::`) 就可透過明確限定函式名稱的方式隱藏虛擬函式呼叫機制。 請參考先前包含 `Account` 類別的範例。 若要呼叫基底類別中的 `PrintBalance`，請使用下列範例程式碼：
+
+```cpp
+CheckingAccount *pChecking = new CheckingAccount( 100.00 );
+
+pChecking->Account::PrintBalance();  //  Explicit qualification.
+
+Account *pAccount = pChecking;  // Call Account::PrintBalance
+
+pAccount->Account::PrintBalance();   //  Explicit qualification.
+```
+
+上述範例中對 `PrintBalance` 的兩個呼叫都會隱藏虛擬函式呼叫機制。

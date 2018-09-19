@@ -44,14 +44,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1b94898cbe4a041ac1bb9a5d01c55380ee496106
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c6d62b8d4b033d1b90c753d5de1752f0cb737f0d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42575460"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114653"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet 類別
+
 繼承自`DBPROPSET`結構，並新增初始化索引鍵欄位的建構函式以及`AddProperty`存取方法。  
   
 ## <a name="syntax"></a>語法
@@ -61,7 +62,8 @@ class CDBPropSet : public tagDBPROPSET
 ```  
 
 ## <a name="requirements"></a>需求  
- **標題:** atldbcli.h  
+
+**標題:** atldbcli.h  
 
 ## <a name="members"></a>成員  
   
@@ -80,9 +82,11 @@ class CDBPropSet : public tagDBPROPSET
 |[operator =](#op_equal)|指派設定到另一個屬性的內容。|  
   
 ## <a name="remarks"></a>備註  
- OLE DB 提供者和取用者使用`DBPROPSET`結構，以傳遞的陣列`DBPROP`結構。 每個`DBPROP`結構代表可設定的單一屬性。  
+
+OLE DB 提供者和取用者使用`DBPROPSET`結構，以傳遞的陣列`DBPROP`結構。 每個`DBPROP`結構代表可設定的單一屬性。  
 
 ## <a name="addproperty"></a> Cdbpropset:: Addproperty
+
 將屬性加入至屬性集。  
   
 ### <a name="syntax"></a>語法  
@@ -103,34 +107,37 @@ bool AddProperty(DWORD dwPropertyID,
 ```  
   
 #### <a name="parameters"></a>參數  
- *dwPropertyID*  
- [in]要加入之屬性識別碼。 用來初始化`dwPropertyID`的`DBPROP`結構加入至屬性集。  
+
+*dwPropertyID*<br/>
+[in]要加入之屬性識別碼。 用來初始化`dwPropertyID`的`DBPROP`結構加入至屬性集。  
   
- *var*  
- [in]用來初始化的屬性值的 variant`DBPROP`結構加入至屬性集。  
+*var*<br/>
+[in]用來初始化的屬性值的 variant`DBPROP`結構加入至屬性集。  
   
- *szValue*  
- [in]用來初始化的屬性值的字串`DBPROP`結構加入至屬性集。  
+*szValue*<br/>
+[in]用來初始化的屬性值的字串`DBPROP`結構加入至屬性集。  
   
- *bValue*  
- [in]A`BYTE`或 布林值，用來初始化的屬性值`DBPROP`結構加入至屬性集。  
+*bValue*<br/>
+[in]A`BYTE`或 布林值，用來初始化的屬性值`DBPROP`結構加入至屬性集。  
   
- *n 值*  
- [in]用來初始化的屬性值的整數值`DBPROP`結構加入至屬性集。  
+*n 值*<br/>
+[in]用來初始化的屬性值的整數值`DBPROP`結構加入至屬性集。  
   
- *fltValue*  
- [in]用來初始化的屬性值的浮點值`DBPROP`結構加入至屬性集。  
+*fltValue*<br/>
+[in]用來初始化的屬性值的浮點值`DBPROP`結構加入至屬性集。  
   
- *dblValue*  
- [in]用來初始化的屬性值的雙精確度浮點值`DBPROP`結構加入至屬性集。  
+*dblValue*<br/>
+[in]用來初始化的屬性值的雙精確度浮點值`DBPROP`結構加入至屬性集。  
   
- *cyValue*  
- [in]CY 貨幣值，用來初始化的屬性值`DBPROP`結構加入至屬性集。  
+*cyValue*<br/>
+[in]CY 貨幣值，用來初始化的屬性值`DBPROP`結構加入至屬性集。  
   
 ### <a name="return-value"></a>傳回值  
- **true**如果已成功加入屬性。 否則，請**false**。 
+
+**true**如果已成功加入屬性。 否則，請**false**。 
 
 ## <a name="cdbpropset"></a> Cdbpropset:: Cdbpropset
+
 建構函式。 初始化`rgProperties`， `cProperties`，並`guidPropertySet`的欄位[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))結構。  
   
 ### <a name="syntax"></a>語法  
@@ -144,13 +151,15 @@ CDBPropSet();
 ```  
   
 #### <a name="parameters"></a>參數  
- *guid*  
- [in]GUID; 用來初始化`guidPropertySet`欄位。  
+
+*guid*<br/>
+[in]GUID; 用來初始化`guidPropertySet`欄位。  
   
- *propset*  
- [in] 複製建構的另一個 `CDBPropSet` 物件。  
+*propset*<br/>
+[in] 複製建構的另一個 `CDBPropSet` 物件。  
 
 ## <a name="setguid"></a> Cdbpropset:: Setguid
+
 設定組`guidPropertySet`欄位中`DBPROPSET`結構。  
   
 ### <a name="syntax"></a>語法  
@@ -160,13 +169,16 @@ void SetGUID(const GUID& guid) throw();
 ```  
   
 #### <a name="parameters"></a>參數  
- *guid*  
- [in]GUID; 用來設定`guidPropertySet`欄位[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))結構。  
+
+*guid*<br/>
+[in]GUID; 用來設定`guidPropertySet`欄位[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))結構。  
   
 ### <a name="remarks"></a>備註  
- 可以設定此欄位[建構函式](../../data/oledb/cdbpropset-cdbpropset.md)以及。  
+
+可以設定此欄位[建構函式](../../data/oledb/cdbpropset-cdbpropset.md)以及。  
 
 ## <a name="op_equal"></a> Cdbpropset:: Operator =
+
 將一個屬性集的內容指派給另一個屬性集。  
   
 ### <a name="syntax"></a>語法  
@@ -176,8 +188,9 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CDBPropIDSet 類別](../../data/oledb/cdbpropidset-class.md)   
- [DBPROPSET 結構](/previous-versions/windows/desktop/ms714367\(v=vs.85\))   
- [DBPROP 結構](/previous-versions/windows/desktop/ms717970\(v=vs.85\))
+
+[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CDBPropIDSet 類別](../../data/oledb/cdbpropidset-class.md)<br/>
+[DBPROPSET 結構](/previous-versions/windows/desktop/ms714367\(v=vs.85\))   
+[DBPROP 結構](/previous-versions/windows/desktop/ms717970\(v=vs.85\))

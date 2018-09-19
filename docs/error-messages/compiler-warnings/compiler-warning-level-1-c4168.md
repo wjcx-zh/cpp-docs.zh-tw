@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 1） C4168 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4168 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84f361dfd86cc32d246cb749da14d79543dd494e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8e76f5e59e91639514ccd05a71b1cefc4154040
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270365"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113405"
 ---
 # <a name="compiler-warning-level-1-c4168"></a>編譯器警告 (層級 1) C4168
-編譯器限制: 偵錯工具類型不足，必須刪除程式資料庫 'database' 並重新建置  
-  
- 您必須重建程式資料庫檔案，以容納程式中的所有類型。
+
+編譯器限制: 偵錯工具類型不足，必須刪除程式資料庫 'database' 並重新建置
+
+您必須重建程式資料庫檔案，以容納程式中的所有類型。

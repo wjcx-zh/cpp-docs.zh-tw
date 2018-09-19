@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 857fae2e9c38dfe2c5cd468c6d1b50c6fdd2f317
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 196f95ae134458f2eaf00ab037c3a560d1317515
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572823"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109681"
 ---
 # <a name="longjmp"></a>longjmp
 
@@ -53,10 +53,10 @@ void longjmp(
 
 ### <a name="parameters"></a>參數
 
-*env*  
+*env*<br/>
 儲存環境的變數。
 
-*值*  
+*值*<br/>
 要傳回至 `setjmp` 呼叫的值。
 
 ## <a name="remarks"></a>備註
@@ -83,7 +83,7 @@ Windows，Microsoft c + + 程式碼中**longjmp**例外狀況處理程式碼會�
 
 **結束 Microsoft 專屬**
 
-> [!NOTE]  
+> [!NOTE]
 > 在可攜式 c + + 程式碼，您不能假設`setjmp`和`longjmp`支援 c + + 物件語意。 具體而言， `setjmp` / `longjmp`組有未定義行為，如果取代的呼叫`setjmp`並`longjmp`由**攔截**和**擲回**會叫用任何自動物件的任何非 trivial 解構函式。 在 c + + 程式中，我們建議您在使用 c + + 例外狀況處理機制。
 
 如需詳細資訊，請參閱[使用 setjmp 和 longjmp](../../cpp/using-setjmp-longjmp.md)。
@@ -102,5 +102,5 @@ Windows，Microsoft c + + 程式碼中**longjmp**例外狀況處理程式碼會�
 
 ## <a name="see-also"></a>另請參閱
 
-[流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)  
-[setjmp](setjmp.md)  
+[流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
+[setjmp](setjmp.md)

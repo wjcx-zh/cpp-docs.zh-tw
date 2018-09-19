@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3714 |Microsoft 文件
+title: 編譯器錯誤 C3714 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0046463b7354d0b764e29701bddb117496858e14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7102378acc2fe12335f1f2b3579f93cf02161b16
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266395"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109648"
 ---
 # <a name="compiler-error-c3714"></a>編譯器錯誤 C3714
-'method': 事件處理常式方法必須有相同的呼叫慣例做為來源 'method'  
-  
- 您已定義未使用相同的呼叫慣例做為來源事件方法的事件處理常式方法。 若要修正這個錯誤，讓事件處理常式方法相同的來源事件方法的呼叫慣例。 例如，下列程式碼，進行的呼叫慣例`handler1`和`event1`比對 ([__cdecl](../../cpp/cdecl.md)或[__stdcall](../../cpp/stdcall.md)或其他人)。 移除從兩個宣告呼叫慣例關鍵字也會解決問題，並會導致`event1`和`handler1`預設為[thiscall](../../cpp/thiscall.md)呼叫慣例。 請參閱[呼叫慣例](../../cpp/calling-conventions.md)如需詳細資訊。  
-  
- 下列範例會產生 C3714:  
-  
-```  
-// C3714.cpp  
-// compile with: /c  
-// processor: x86  
-[event_source(native)]  
-class CEventSrc {  
-public:  
-   __event void __cdecl event1();  
-   // try the following line instead  
-   // __event void __stdcall event1();  
-};  
-  
-[event_receiver(native)]  
-class CEventRec {  
-public:  
-   void __stdcall handler1() {}  
-  
-   void HookEvents(CEventSrc* pSrc) {  
-      __hook(&CEventSrc::event1, pSrc, &CEventRec::handler1);   // C3714  
-   }  
-  
-   void UnhookEvents(CEventSrc* pSrc) {  
-      __unhook(&CEventSrc::event1, pSrc, &CEventRec::handler1); // C3714  
-   }  
-};  
+
+'method': 事件處理常式方法必須有相同的呼叫慣例做為來源 'method'
+
+您定義未使用相同的呼叫慣例與來源事件方法的事件處理常式方法。 若要修正這個錯誤，讓事件處理常式方法的來源事件方法相同的呼叫慣例。 例如，下列程式碼，進行的呼叫慣例`handler1`並`event1`比對 ([__cdecl](../../cpp/cdecl.md)或[__stdcall](../../cpp/stdcall.md)或其他人)。 移除從兩個宣告呼叫慣例關鍵字也會解決此問題，並會造成`event1`並`handler1`表示預設為[thiscall](../../cpp/thiscall.md)呼叫慣例。 請參閱[呼叫慣例](../../cpp/calling-conventions.md)如需詳細資訊。
+
+下列範例會產生 C3714:
+
+```
+// C3714.cpp
+// compile with: /c
+// processor: x86
+[event_source(native)]
+class CEventSrc {
+public:
+   __event void __cdecl event1();
+   // try the following line instead
+   // __event void __stdcall event1();
+};
+
+[event_receiver(native)]
+class CEventRec {
+public:
+   void __stdcall handler1() {}
+
+   void HookEvents(CEventSrc* pSrc) {
+      __hook(&CEventSrc::event1, pSrc, &CEventRec::handler1);   // C3714
+   }
+
+   void UnhookEvents(CEventSrc* pSrc) {
+      __unhook(&CEventSrc::event1, pSrc, &CEventRec::handler1); // C3714
+   }
+};
 ```

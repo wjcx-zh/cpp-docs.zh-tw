@@ -1,5 +1,5 @@
 ---
-title: NMAKE 嚴重錯誤 U1088 |Microsoft 文件
+title: NMAKE 嚴重錯誤 U1088 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3934e39cd87bd41432e90af1b7053815e5e44ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 72f09dec61cec9870627682e9413d98e0d623188
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318008"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109752"
 ---
 # <a name="nmake-fatal-error-u1088"></a>NMAKE 嚴重錯誤 U1088
-無效的分隔符號 ':: ' 的推斷規則  
-  
- 推斷規則後面必須接著一個冒號 (**:**)。
+
+無效的分隔符號 ':: ' 在推斷規則
+
+推斷規則後面必須接著一個冒號 (**:**)。

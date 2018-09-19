@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2413 |Microsoft 文件
+title: 編譯器錯誤 C2413 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0abc4ceb9468edd79adcde34a255f487763684c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1529b2b33e143c2df9eb56db9e7e79c3c5ce6baa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196084"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114185"
 ---
 # <a name="compiler-error-c2413"></a>編譯器錯誤 C2413
-'token': 不合法的 align 大小  
-  
- 搭配使用的大小`ALIGN`指示詞遺漏或超出有效範圍。
+
+'token': 不合法的 align 大小
+
+搭配使用的大小`ALIGN`指示詞遺漏或無效的範圍之外。

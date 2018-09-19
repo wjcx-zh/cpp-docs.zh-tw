@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2696 |Microsoft 文件
+title: 編譯器錯誤 C2696 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65ccdd6d2c8c34c360811b80d5a93abe76f5ef8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e6e76b0c11d329c734b0609c540aca4315c7ed9f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235035"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108738"
 ---
 # <a name="compiler-error-c2696"></a>編譯器錯誤 C2696
-無法建立暫存物件的 managed 型別 'type'  
-  
-若要參考`const`在未受管理的程式會導致編譯器呼叫建構函式，並在堆疊上建立暫存物件。 不過，managed 的類別永遠不會在堆疊上建立。  
-  
-C2696 才可使用過時的編譯器選項 **/clr:oldSyntax**。  
+
+無法建立受管理的類型 'type' 的暫存物件
+
+若要參考`const`在未受管理的程式會導致編譯器呼叫建構函式，並在堆疊上建立暫存物件。 不過，managed 的類別永遠不會在堆疊上建立。
+
+C2696 才可使用過時的編譯器選項 **/clr: oldsyntax**。

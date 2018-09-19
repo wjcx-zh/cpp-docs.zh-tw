@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 4） C4295 |Microsoft 文件
+title: 編譯器警告 （層級 4） C4295 |Microsoft Docs
 ms.custom: ''
 ms.date: 1/09/2018
 ms.technology:
@@ -16,24 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 815a669bc359121b13b1d636009cad81dc332304
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36c6ac4d8c3e2899b744d1c456ae3079ec031698
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296298"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053572"
 ---
 # <a name="compiler-warning-level-4-c4295"></a>編譯器警告 (層級 4) C4295
-  
-> '*陣列*': 陣列是太小無法包含結束的 null 字元  
-  
-初始化陣列，但陣列中的最後一個字元不是 null。存取陣列做為字串可能會產生非預期的結果。  
-  
-## <a name="example"></a>範例  
-  
-下列範例會產生 C4295。 若要修正此問題，您可以宣告陣列大小更大，以保存結束的 null 從初始設定式的字串，或您可以使用陣列初始設定式清單進行這是陣列的意圖清除`char`，不是以 null 結束的字串。  
-  
-```C  
+
+> '*陣列*': 陣列太小而無法包含結束的 null 字元
+
+初始化陣列，但在陣列中的最後一個字元不是 null;存取做為字串陣列，可能會產生非預期的結果。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C4295。 若要修正此問題，您可以宣告陣列的大小變大，來保留終止 null 初始設定式的字串，或您可以使用陣列初始設定式清單進行意圖純文字，這是陣列`char`，不是 null 結束的字串。
+
+```C
 // C4295.c
 // compile with: /W4
 

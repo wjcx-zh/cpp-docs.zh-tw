@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2779 |Microsoft 文件
+title: 編譯器錯誤 C2779 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce1f16bd0e756895b0da98fd43d0d6b2fdee6e8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43067c780accfea1d55f9fd9c9dbce69fe41a43a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233924"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046780"
 ---
 # <a name="compiler-error-c2779"></a>編譯器錯誤 C2779
-'declaration': 只能和非靜態資料成員相關聯的屬性方法  
-  
- `property`擴充的屬性不正確地套用至靜態資料成員。  
-  
- 下列範例會產生 C2779:  
-  
-```  
-// C2779.cpp  
-struct A {  
-   static __declspec(property(put=PutProp))  
-   // try the following line instead  
-   __declspec(property(put=PutProp))  
-      int prop;   // C2779  
-   int PutProp(void);  
-};  
+
+'declaration': 屬性方法只能和非靜態資料成員相關聯
+
+`property`擴充的屬性不正確地套用至靜態資料成員。
+
+下列範例會產生 C2779:
+
+```
+// C2779.cpp
+struct A {
+   static __declspec(property(put=PutProp))
+   // try the following line instead
+   __declspec(property(put=PutProp))
+      int prop;   // C2779
+   int PutProp(void);
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: NMAKE 嚴重錯誤 U1087 |Microsoft 文件
+title: NMAKE 嚴重錯誤 U1087 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f07309c64066b0a17aab110035c700c229c439df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f0e094c720222990ee90af7de900d8cf6ba4051
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319718"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036796"
 ---
 # <a name="nmake-fatal-error-u1087"></a>NMAKE 嚴重錯誤 U1087
-不能有： 和:: 同一個目標的相依性  
-  
- 目標不能指定兩個單冒號 (**:**) 和雙冒號 (`::`) 相依性。  
-  
- 若要在多個描述區塊中指定的目標，使用`::`每個相依性列中。
+
+不能有： 和:: 同一個目標的相依性
+
+不指定目標，在這兩個在單一冒號 (**:**) 和雙冒號 (`::`) 相依性。
+
+多重描述區塊中指定的目標，請使用`::`在一行的相依性。

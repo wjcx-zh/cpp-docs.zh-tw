@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bddb536fe50c9f9f7d1eb76d3dfa90c1c3488b8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 36d3289767d8c8e2eaa2f25889aaff073cf73fce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759326"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046247"
 ---
 # <a name="example-implementing-a-property-page"></a>範例： 實作屬性頁
 
@@ -153,25 +153,25 @@ ms.locfileid: "43759326"
 一旦建置專案，您可以測試屬性頁，並使用簡單的巨集，您可以建立並執行 Visual Studio 開發環境中的協助程式物件。 這個巨集將會建立協助程式物件，然後呼叫其`ShowPage`方法使用的 ProgID **DocProperties**  屬性頁和`IUnknown`目前使用 Visual Studio 編輯器中的文件的指標。 您需要為這個巨集的程式碼如下所示：
 
 ```vb
-Imports EnvDTE  
-Imports System.Diagnostics  
+Imports EnvDTE
+Imports System.Diagnostics
 
-Public Module AtlPages  
+Public Module AtlPages
 
-Public Sub Test()  
-    Dim Helper  
-    Helper = CreateObject("ATLPages7.Helper.1")  
+Public Sub Test()
+    Dim Helper
+    Helper = CreateObject("ATLPages7.Helper.1")
 
-    On Error Resume Next  
-    Helper.ShowPage( ActiveDocument.Name, "ATLPages7Lib.DocumentProperties.1", DTE.ActiveDocument )  
+    On Error Resume Next
+    Helper.ShowPage( ActiveDocument.Name, "ATLPages7Lib.DocumentProperties.1", DTE.ActiveDocument )
 End Sub
 
-End Module  
+End Module
 ```
 
 當您執行這個巨集時，會顯示檔案名稱和目前作用中的文字文件的唯讀狀態顯示 [屬性] 頁面。 文件的唯讀狀態只會反映文件在開發環境中，寫入的能力它不會影響磁碟上檔案的唯讀屬性。
 
 ## <a name="see-also"></a>另請參閱
 
-[屬性頁](../atl/atl-com-property-pages.md)   
+[屬性頁](../atl/atl-com-property-pages.md)<br/>
 [ATLPages 範例](../visual-cpp-samples.md)

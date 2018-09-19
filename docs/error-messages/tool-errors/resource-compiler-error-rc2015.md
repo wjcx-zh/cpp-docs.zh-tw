@@ -1,5 +1,5 @@
 ---
-title: 資源編譯器錯誤 RC2015 |Microsoft 文件
+title: 資源編譯器錯誤 RC2015 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9d9f0507f0e71e9417c6b0e577d8626c63c402e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 247282e7371ab79f40bfdb99031348100ee25d6d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320274"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037394"
 ---
 # <a name="resource-compiler-error-rc2015"></a>資源編譯器錯誤 RC2015
-常數中包含太多字元  
-  
- 字元常數中包含兩個以上的字元。  
-  
- 字元常數會限制為一個字元 （標準字元常數） 或兩個字元 （長的字元常數）。  
-  
- 請注意逸出序列 (例如，\t 索引標籤) 會轉換成單一字元。
+
+常數中包含太多字元
+
+字元常數中包含兩個以上的字元。
+
+字元常數會限制為一個字元 （標準字元常數） 或兩個字元 （長度的字元常數）。
+
+請注意逸出序列 (例如，\t 為定位字元) 會轉換成單一字元。

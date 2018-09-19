@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91de6c09128acd3ef1a008437ae418b96b45ef66
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 54e4ab00a0d0df90601d06d9e2ffa100d82d4c03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762888"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037355"
 ---
 # <a name="composite-control-global-functions"></a>複合控制項全域函式
 
@@ -77,19 +77,19 @@ ATLAPI_(int) AtlAxDialogBox(
 
 ### <a name="parameters"></a>參數
 
-*hInstance*  
+*hInstance*<br/>
 [in]識別的模組，其可執行檔包含對話方塊範本的執行個體。
 
-*lpTemplateName*  
+*lpTemplateName*<br/>
 [in]識別對話方塊範本。 此參數會指定名稱的對話方塊範本的 null 結束的字元字串的指標，或是指定的對話方塊範本的資源識別碼的整數值。 如果參數指定資源識別項，其高序位文字必須是零，其低序位字組必須包含識別項。 您可以使用[MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029)巨集來建立此值。
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]識別擁有對話方塊的視窗。
 
-*lpDialogProc*  
+*lpDialogProc*<br/>
 [in]指向對話方塊程序。 如需對話方塊程序的詳細資訊，請參閱[DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469)。
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in]指定要傳遞至對話方塊中的值*lParam* WM_INITDIALOG 訊息參數。
 
 ### <a name="return-value"></a>傳回值
@@ -100,9 +100,9 @@ ATLAPI_(int) AtlAxDialogBox(
 
 若要使用`AtlAxDialogBox`包含 ActiveX 控制項的對話方塊範本，請指定有效的 CLSID、 APPID 或 URL 字串做為*文字*欄位**控制**區段對話方塊資源，連同"AtlAxWin80"作為*類別名稱*欄位下相同的區段。 以下示範哪些有效**控制**區段看起來會像：
 
-```  
+```
 CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
-    "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
+    "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
 如需有關如何編輯資源指令碼的詳細資訊，請參閱 <<c0> [ 如何： 以文字格式開啟資源指令碼檔](../../windows/how-to-open-a-resource-script-file-in-text-format.md)。 如需有關控制資源定義陳述式的詳細資訊，請參閱[常見的控制參數](/windows/desktop/menurc/common-control-parameters)下方 Windows SDK *: SDK Tools*。
@@ -124,19 +124,19 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 
 ### <a name="parameters"></a>參數
 
-*hInstance*  
+*hInstance*<br/>
 [in]識別的模組，其可執行檔包含對話方塊範本的執行個體。
 
-*lpTemplateName*  
+*lpTemplateName*<br/>
 [in]識別對話方塊範本。 此參數會指定名稱的對話方塊範本的 null 結束的字元字串的指標，或是指定的對話方塊範本的資源識別碼的整數值。 如果參數指定資源識別項，其高序位文字必須是零，其低序位字組必須包含識別項。 您可以使用[MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029)巨集來建立此值。
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]識別擁有對話方塊的視窗。
 
-*lpDialogProc*  
+*lpDialogProc*<br/>
 [in]指向對話方塊程序。 如需對話方塊程序的詳細資訊，請參閱[DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469)。
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in]指定要傳遞至對話方塊中的值*lParam* WM_INITDIALOG 訊息參數。
 
 ### <a name="return-value"></a>傳回值
@@ -163,7 +163,7 @@ ATLAPI AtlAxCreateControl(
 
 ### <a name="parameters"></a>參數
 
-*lpszName*  
+*lpszName*<br/>
 要傳遞給控制項的字串指標。 格式必須如下的其中一個：
 
 - ProgID，例如"MSCAL。Calendar.7"
@@ -179,13 +179,13 @@ ATLAPI AtlAxCreateControl(
    > [!NOTE]
    > 「 MSHTML: 「 必須在前面的 HTML 片段，因此，它會指定為 MSHTML 資料流。
 
-*hWnd*  
+*hWnd*<br/>
 [in]控制項將會附加至視窗的控制代碼。
 
-*pStream*  
+*pStream*<br/>
 [in]用來初始化控制項的屬性資料流的指標。 可以是 NULL。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out]將會收到的指標位址`IUnknown`的容器。 可以是 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -215,7 +215,7 @@ ATLAPI AtlAxCreateControlEx(
 
 ### <a name="parameters"></a>參數
 
-*lpszName*  
+*lpszName*<br/>
 要傳遞給控制項的字串指標。 格式必須如下的其中一個：
 
 - ProgID，例如"MSCAL。Calendar.7"
@@ -231,22 +231,22 @@ ATLAPI AtlAxCreateControlEx(
    > [!NOTE]
    > 「 MSHTML: 「 必須在前面的 HTML 片段，因此，它會指定為 MSHTML 資料流。
 
-*hWnd*  
+*hWnd*<br/>
 [in]控制項將會附加至視窗的控制代碼。
 
-*pStream*  
+*pStream*<br/>
 [in]用來初始化控制項的屬性資料流的指標。 可以是 NULL。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out]將會收到的指標位址`IUnknown`的容器。 可以是 NULL。
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out]將會收到的指標位址`IUnknown`的建立的控制項。 可以是 NULL。
 
-*iidSink*  
+*iidSink*<br/>
 在所包含的物件上的輸出介面的介面識別項。
 
-*punkSink*  
+*punkSink*<br/>
 指標`IUnknown`連接到指定的連接點的接收器物件的介面*iidSink*上所包含的物件已成功建立後，所包含的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -274,7 +274,7 @@ ATLAPI AtlAxCreateControlLic(
 
 ### <a name="parameters"></a>參數
 
-*lpszName*  
+*lpszName*<br/>
 要傳遞給控制項的字串指標。 格式必須如下的其中一個：
 
 - ProgID，例如"MSCAL。Calendar.7"
@@ -290,16 +290,16 @@ ATLAPI AtlAxCreateControlLic(
    > [!NOTE]
    > 「 MSHTML: 「 必須在前面的 HTML 片段，因此，它會指定為 MSHTML 資料流。
 
-*hWnd*  
+*hWnd*<br/>
 控制項將會附加至視窗的控制代碼。
 
-*pStream*  
+*pStream*<br/>
 用來初始化控制項的屬性資料流的指標。 可以是 NULL。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 將會收到的指標位址`IUnknown`的容器。 可以是 NULL。
 
-*bstrLic*  
+*bstrLic*<br/>
 BSTR，其中包含控制項的授權。
 
 ### <a name="return-value"></a>傳回值
@@ -328,7 +328,7 @@ ATLAPI AtlAxCreateControlLicEx(
 
 ### <a name="parameters"></a>參數
 
-*lpszName*  
+*lpszName*<br/>
 要傳遞給控制項的字串指標。 格式必須如下的其中一個：
 
 - ProgID，例如"MSCAL。Calendar.7"
@@ -344,25 +344,25 @@ ATLAPI AtlAxCreateControlLicEx(
    > [!NOTE]
    > 「 MSHTML: 「 必須在前面的 HTML 片段，因此，它會指定為 MSHTML 資料流。
 
-*hWnd*  
+*hWnd*<br/>
 控制項將會附加至視窗的控制代碼。
 
-*pStream*  
+*pStream*<br/>
 用來初始化控制項的屬性資料流的指標。 可以是 NULL。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 將會收到的指標位址`IUnknown`的容器。 可以是 NULL。
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out]將會收到的指標位址`IUnknown`的建立的控制項。 可以是 NULL。
 
-*iidSink*  
+*iidSink*<br/>
 在所包含的物件上的輸出介面的介面識別項。
 
-*punkSink*  
+*punkSink*<br/>
 指標`IUnknown`連接到指定的連接點的接收器物件的介面*iidSink*上所包含的物件已成功建立後，所包含的物件。
 
-*bstrLic*  
+*bstrLic*<br/>
 BSTR，其中包含控制項的授權。
 
 ### <a name="return-value"></a>傳回值
@@ -390,13 +390,13 @@ ATLAPI AtlAxAttachControl(
 
 ### <a name="parameters"></a>參數
 
-*pControl*  
+*pControl*<br/>
 [in]指標`IUnknown`的控制項。
 
-*hWnd*  
+*hWnd*<br/>
 [in]將要裝載控制項的視窗控制代碼。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out]指標的指標`IUnknown`的容器物件。
 
 ### <a name="return-value"></a>傳回值
@@ -420,10 +420,10 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 
 ### <a name="parameters"></a>參數
 
-*h*  
+*h*<br/>
 [in]裝載控制項的視窗控制代碼。
 
-*前置處理*  
+*前置處理*<br/>
 [out]`IUnknown`容器的控制項。
 
 ### <a name="return-value"></a>傳回值
@@ -440,10 +440,10 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 
 ### <a name="parameters"></a>參數
 
-*h*  
+*h*<br/>
 [in]裝載控制項的視窗控制代碼。
 
-*前置處理*  
+*前置處理*<br/>
 [out]`IUnknown`所裝載之控制項。
 
 ### <a name="return-value"></a>傳回值
@@ -460,10 +460,10 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 
 ### <a name="parameters"></a>參數
 
-*punkChild*  
+*punkChild*<br/>
 [in]指標`IUnknown`介面之子系。
 
-*punkParent*  
+*punkParent*<br/>
 [in]指標`IUnknown`之父代的介面。
 
 ### <a name="return-value"></a>傳回值
@@ -519,19 +519,19 @@ ATLAPI AtlGetObjectSourceInterface(
 
 ### <a name="parameters"></a>參數
 
-*punkObj*  
+*punkObj*<br/>
 [in]要傳回資訊的物件的指標。
 
-*plibid*  
+*plibid*<br/>
 [out]指標，包含來源介面的定義之類型程式庫的 LIBID。
 
-*piid*  
+*piid*<br/>
 [out]物件的預設來源介面的介面識別碼指標。
 
-*pdwMajor*  
+*pdwMajor*<br/>
 [out]包含來源介面的定義之類型程式庫的主要版本號碼指標。
 
-*pdwMinor*  
+*pdwMinor*<br/>
 [out]包含來源介面的定義之類型程式庫的次要版本號碼指標。
 
 ### <a name="return-value"></a>傳回值
@@ -553,5 +553,5 @@ ATLAPI AtlGetObjectSourceInterface(
 
 ## <a name="see-also"></a>另請參閱
 
-[函式](../../atl/reference/atl-functions.md)   
+[函式](../../atl/reference/atl-functions.md)<br/>
 [複合控制項巨集](../../atl/reference/composite-control-macros.md)

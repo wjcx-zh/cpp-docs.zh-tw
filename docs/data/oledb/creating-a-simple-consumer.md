@@ -15,51 +15,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e9f7c5a51765e2ce29df503aeefa9f850b71b1d4
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 091a529bdd8eb80158fc093fd450e496bc4f18c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339850"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052344"
 ---
 # <a name="creating-a-simple-consumer"></a>建立簡單消費者
+
 使用 ATL 專案精靈] 和 [ATL OLE DB 消費者精靈產生的 OLE DB 範本取用者。  
   
 ### <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>若要建立的 OLE DB 取用者的主控台應用程式  
   
-1.  按一下 [ **檔案** ] 功能表上的 [ **新增**]，然後按一下 [ **專案**]。  
+1. 按一下 [ **檔案** ] 功能表上的 [ **新增**]，然後按一下 [ **專案**]。  
   
      [ **新增專案** ] 對話方塊隨即出現。  
   
-2.  在 專案類型 窗格中，按一下**Visual c + + 專案**資料夾，然後再按一下**Win32 專案**範本 窗格中的圖示。 在 **名稱**方塊中，輸入您的專案的名稱，例如**MyCons**。  
+1. 在 專案類型 窗格中，按一下**Visual c + + 專案**資料夾，然後再按一下**Win32 專案**範本 窗格中的圖示。 在 **名稱**方塊中，輸入您的專案的名稱，例如**MyCons**。  
   
-3.  按一下 [確定 **Deploying Office Solutions**]。  
+1. 按一下 [確定 **Deploying Office Solutions**]。  
   
      Win32 專案精靈 隨即出現。  
   
-4.  在 **應用程式設定**頁面上，選取**主控台應用程式**，然後選取**新增 ATL 支援**。  
+1. 在 **應用程式設定**頁面上，選取**主控台應用程式**，然後選取**新增 ATL 支援**。  
   
-5.  按一下 **完成**關閉精靈並產生專案。  
+1. 按一下 **完成**關閉精靈並產生專案。  
   
- 接下來，使用 [ATL OLE DB 消費者精靈] 來新增 OLE DB 取用者物件。  
+接下來，使用 [ATL OLE DB 消費者精靈] 來新增 OLE DB 取用者物件。  
   
 #### <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>若要使用 [ATL OLE DB 消費者精靈] 建立消費者  
   
-1.  在 [類別檢視] 中以滑鼠右鍵按一下 `MyCons` 專案。  
+1. 在 [類別檢視] 中以滑鼠右鍵按一下 `MyCons` 專案。  
   
-2.  在捷徑功能表，按一下 **新增**，然後按一下**加入類別**。  
+1. 在捷徑功能表，按一下 **新增**，然後按一下**加入類別**。  
   
      **加入類別** 對話方塊隨即出現。  
   
-3.  在 [分類] 窗格中，按一下**Visual c + +**，按一下**ATL OLE DB 消費者**圖示，在範本窗格中，然後按一下**開啟**。  
+1. 在 [分類] 窗格中，按一下**Visual c + +**，按一下**ATL OLE DB 消費者**圖示，在範本窗格中，然後按一下**開啟**。  
   
      ATL OLE DB 消費者精靈 隨即出現。  
   
-4.  按一下 [**資料來源**] 按鈕。  
+1. 按一下 [**資料來源**] 按鈕。  
   
      **資料連結屬性** 對話方塊隨即出現。  
   
-5.  在 **資料連結屬性**對話方塊方塊中，執行下列動作：  
+1. 在 **資料連結屬性**對話方塊方塊中，執行下列動作：  
   
     -   在 **提供者**索引標籤上，指定 OLE DB 提供者。  
   
@@ -78,11 +79,11 @@ ms.locfileid: "39339850"
   
      **選取資料庫物件** 對話方塊隨即出現。  
   
-6.  您可以使用樹狀結構控制項中，選取資料表、 檢視表或預存程序。 為了此程序中，選取從 Northwind 資料庫的 Products 資料表。  
+1. 您可以使用樹狀結構控制項中，選取資料表、 檢視表或預存程序。 為了此程序中，選取從 Northwind 資料庫的 Products 資料表。  
   
-7.  按一下 [確定 **Deploying Office Solutions**]。 這會讓您回到 ATL OLE DB 消費者精靈。  
+1. 按一下 [確定 **Deploying Office Solutions**]。 這會讓您回到 ATL OLE DB 消費者精靈。  
   
-8.  在精靈完成的名稱`Class`並 **.h 檔案**根據名稱的資料表、 檢視或預存程序，您已選取。 如果您想要您可以編輯這些名稱。  
+1. 在精靈完成的名稱`Class`並 **.h 檔案**根據名稱的資料表、 檢視或預存程序，您已選取。 如果您想要您可以編輯這些名稱。  
   
 9. 清除**屬性化**核取方塊，使精靈可讓您建立取用者程式碼使用[OLE DB 範本類別](../../data/oledb/ole-db-consumer-templates-reference.md)而非預設[OLE DB 消費者屬性](../../windows/ole-db-consumer-attributes.md)。  
   
@@ -96,7 +97,7 @@ ms.locfileid: "39339850"
   
 12. 按一下 **完成**建立取用者。  
   
- 在精靈產生的命令類別和使用者記錄類別，如中所示[消費者精靈產生的類別](../../data/oledb/consumer-wizard-generated-classes.md)。 命令類別會具有您在中輸入的名稱`Class`方塊中的精靈 (在此情況下， `CProducts`)，而使用者記錄類別將表單的名稱 」*ClassName*存取子 」 (在此情況下， `CProductsAccessor`)。  
+在精靈產生的命令類別和使用者記錄類別，如中所示[消費者精靈產生的類別](../../data/oledb/consumer-wizard-generated-classes.md)。 命令類別會具有您在中輸入的名稱`Class`方塊中的精靈 (在此情況下， `CProducts`)，而使用者記錄類別將表單的名稱 」*ClassName*存取子 」 (在此情況下， `CProductsAccessor`)。  
   
 > [!NOTE]
 >  精靈會將下面這一行放 Products.h:  
@@ -109,4 +110,5 @@ ms.locfileid: "39339850"
 >  這一行可防止消費者應用程式無法編譯，並提醒您檢查您的連接字串硬式編碼的密碼。 檢查您的連接字串之後, 您可以移除這行程式碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用精靈建立 OLE DB 消費者](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+
+[使用精靈建立 OLE DB 消費者](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

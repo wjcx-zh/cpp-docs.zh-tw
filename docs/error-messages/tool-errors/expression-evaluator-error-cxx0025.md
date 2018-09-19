@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0025 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0025 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 843de39120cee18b01d17d88fb2759bebb9d2dc9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd89faa4de7b296d6a6771f857f3d16dbe2f94f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302837"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043699"
 ---
 # <a name="expression-evaluator-error-cxx0025"></a>運算式評估工具錯誤 CXX0025
-運算子必須結構/等位  
-  
- 會使用運算式的運算子`struct`或**union**型別已套用至運算式不是`struct`或**union**。  
-  
- 元件的類別、 結構或等位變數必須完整限定的名稱。 元件無法輸入沒有完整規格。  
-  
- 這個錯誤是與 can0025 相同。
+
+操作人員必須在結構/等位
+
+會使用運算式的運算子`struct`或**union**型別已套用至運算式不是`struct`或**union**。
+
+元件的類別、 結構或等位變數必須完整限定的名稱。 元件無法輸入不含完整的規格。
+
+此錯誤是與 can0025 相同。

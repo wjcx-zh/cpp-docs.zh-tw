@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2447 |Microsoft 文件
+title: 編譯器錯誤 C2447 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2f0f72bc1278792853e1886e302f4410fdbe2d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9cc18c8e6ffb31de062957e16f6f3a6573379ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197035"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035132"
 ---
 # <a name="compiler-error-c2447"></a>編譯器錯誤 C2447
-'{' : 遺漏函式標頭 (舊樣式型式清單？)  
-  
- 編譯器在全域範圍遇到未預期的左大括號。 大部分情況下，這是由格式錯誤的函式標頭、錯置的宣告或分號分隔群組所造成。 若要解決這個問題，請確認左大括號後面的正確格式的函式標頭，而且之後沒有宣告或分號分隔群組。  
-  
- 這項錯誤也可能是因舊式 C 語言格式引數清單而造成。 若要解決此問題，請重構引數清單以使用現代樣式，也就是用括號括住。  
-  
- 下列範例會產生 C2447:  
-  
-```  
-// C2447.cpp  
-int c;  
-{}       // C2447  
+
+'{' : 遺漏函式標頭 (舊樣式型式清單？)
+
+編譯器在全域範圍遇到未預期的左大括號。 大部分情況下，這是由格式錯誤的函式標頭、錯置的宣告或分號分隔群組所造成。 若要解決這個問題，請確認左大括號後面的正確格式的函式標頭，而且之後沒有宣告或分號分隔群組。
+
+這項錯誤也可能是因舊式 C 語言格式引數清單而造成。 若要解決此問題，請重構引數清單以使用現代樣式，也就是用括號括住。
+
+下列範例會產生 C2447:
+
+```
+// C2447.cpp
+int c;
+{}       // C2447
 ```

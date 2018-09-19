@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2056 |Microsoft 文件
+title: 編譯器錯誤 C2056 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54ba1c5b161b4a708b73cd20bc6a4a730b8a1401
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7018beef36004e3bcd6f276236b17b7110585c29
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163612"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052994"
 ---
 # <a name="compiler-error-c2056"></a>編譯器錯誤 C2056
-不合法的運算式  
-  
- 運算式不正確的因為先前的錯誤。
+
+不合法的運算式
+
+運算式不正確的因為先前的錯誤。

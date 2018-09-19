@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1943895b8db663239ed1bfb27b8e97fc3c416e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1173633cd720ed6ee0e4aacdf75a8b305fdbfe4d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767900"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043361"
 ---
 # <a name="celementtraitsbase-class"></a>CElementTraitsBase 類別
 
@@ -35,13 +35,13 @@ ms.locfileid: "43767900"
 ## <a name="syntax"></a>語法
 
 ```
-template<typename T>  
+template<typename T>
 class CElementTraitsBase
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 若要在集合中儲存的資料型別。
 
 ## <a name="members"></a>成員
@@ -83,13 +83,13 @@ static void CopyElements(
 
 ### <a name="parameters"></a>參數
 
-*pDest*  
+*pDest*<br/>
 將接收複製的資料的第一個元素的指標。
 
-*pSrc*  
+*pSrc*<br/>
 若要複製的第一個元素的指標。
 
-*nElements*  
+*nElements*<br/>
 要複製的項目數目。
 
 ### <a name="remarks"></a>備註
@@ -125,13 +125,13 @@ static void RelocateElements(
 
 ### <a name="parameters"></a>參數
 
-*pDest*  
+*pDest*<br/>
 將會收到重新定位的資料的第一個元素的指標。
 
-*pSrc*  
+*pSrc*<br/>
 重新定位之第一個元素的指標。
 
-*nElements*  
+*nElements*<br/>
 若要重新配置的元素數目。
 
 ### <a name="remarks"></a>備註

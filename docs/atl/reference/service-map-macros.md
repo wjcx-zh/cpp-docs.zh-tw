@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0cab78f1f35ab003d8457c0e185aa031a112e09
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dc7b0ca9388de82d49927a7fe76694212b94246b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702594"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053709"
 ---
 # <a name="service-map-macros"></a>服務對應巨集
 
@@ -49,7 +49,7 @@ BEGIN_SERVICE_MAP(theClass)
 
 ### <a name="parameters"></a>參數
 
-*theClass*  
+*theClass*<br/>
 [in]指定包含服務對應的類別。
 
 ### <a name="remarks"></a>備註
@@ -86,7 +86,7 @@ SERVICE_ENTRY( SID )
 
 ### <a name="parameters"></a>參數
 
-*SID*  
+*SID*<br/>
 服務識別碼。
 
 ### <a name="example"></a>範例
@@ -103,7 +103,7 @@ SERVICE_ENTRY_CHAIN( punk )
 
 ### <a name="parameters"></a>參數
 
-*punk*  
+*punk*<br/>
 指標**IUnknown**鏈結的介面。
 
 ### <a name="example"></a>範例

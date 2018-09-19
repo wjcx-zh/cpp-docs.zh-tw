@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2893644dc4dbec2d1ebc25be42ba4b30fbd19cb1
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e96b9d70e48b63eafb8cb3c6f4938f962114fd39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540572"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059481"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler 類別
 代表與呼叫內容相關之目前排程器的抽象概念。  
@@ -80,8 +80,8 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Policy`  
- 排程器原則，告訴您新建立的排程器的行為。  
+*政策 （_p)*<br/>
+排程器原則，告訴您新建立的排程器的行為。  
   
 ### <a name="remarks"></a>備註  
  排程器的附件，以呼叫的內容會隱含地會排程器的參考計數。  
@@ -103,8 +103,8 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Placement`  
- 其中排程群組內的工作將會變成優先執行的位置參考。  
+*放置 （_p)*<br/>
+其中排程群組內的工作將會變成優先執行的位置參考。  
   
 ### <a name="return-value"></a>傳回值  
  新建立的排程群組指標。 這`ScheduleGroup`物件具有初始參考計數放在其上。  
@@ -198,8 +198,8 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Placement`  
- 要查詢目前排程器的位置參考。  
+*放置 （_p)*<br/>
+要查詢目前排程器的位置參考。  
   
 ### <a name="return-value"></a>傳回值  
  指出目前排程器上是否有提供 `_Placement` 引數所指定的位置。  
@@ -218,8 +218,8 @@ static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_ShutdownEvent`  
- 這個信號會在執行階段時與目前內容相關聯的排程器關閉並終結本身的 Windows 事件物件的控制代碼。  
+*_ShutdownEvent*<br/>
+這個信號會在執行階段時與目前內容相關聯的排程器關閉並終結本身的 Windows 事件物件的控制代碼。  
   
 ### <a name="remarks"></a>備註  
  如果沒有任何附加至呼叫內容的排程器，呼叫這個方法會導致[scheduler_not_attached](scheduler-not-attached-class.md)擲回例外狀況。  
@@ -240,14 +240,14 @@ static void __cdecl ScheduleTask(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Proc`  
- 若要執行的輕量工作主體執行該函式指標。  
+*_Proc*<br/>
+若要執行的輕量工作主體執行該函式指標。  
   
- `_Data`  
- 將做為參數傳遞至工作的主體資料的 void 指標。  
+*資料 （_d)*<br/>
+將做為參數傳遞至工作的主體資料的 void 指標。  
   
- `_Placement`  
- 輕量工作將會變成優先執行的位置參考。  
+*放置 （_p)*<br/>
+輕量工作將會變成優先執行的位置參考。  
   
 ### <a name="remarks"></a>備註  
  如果呼叫的內容目前沒有任何相關聯的排程器，則這個方法會將處理序的預設排程器建立及/或附加至呼叫的內容。  

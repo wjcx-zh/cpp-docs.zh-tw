@@ -1,5 +1,5 @@
 ---
-title: cancellation_token_registration 類別 |Microsoft 文件
+title: cancellation_token_registration 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe11e2697734d06988f4cbcfce48f38cf02c32b7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cf803fbd35071a7a7100e3267dcf1bfa8b91e9f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687136"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059588"
 ---
 # <a name="cancellationtokenregistration-class"></a>cancellation_token_registration 類別
 `cancellation_token_registration` 類別表示來自 `cancellation_token` 的回呼通知。 當 `register` 的 `cancellation_token` 方法用來接收發生取消的通知時，則會傳回 `cancellation_token_registration` 物件做為回呼的控制代碼，讓呼叫端可以要求不再透過使用 `deregister` 方法發出的特定回呼。  
@@ -76,8 +76,9 @@ cancellation_token_registration(cancellation_token_registration&& _Src);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Src`  
-  
+*_Src*<br/>
+`cancellation_token_registration`複製或移動。
+ 
 ##  <a name="operator_neq"></a> 運算子 ！ = 
 
 ```
@@ -85,8 +86,9 @@ bool operator!= (const cancellation_token_registration& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Rhs`  
-  
+*_Rhs*<br/>
+要比較的 `cancellation_token_registration`。
+ 
 ### <a name="return-value"></a>傳回值  
   
 ##  <a name="operator_eq"></a> 運算子 = 
@@ -98,8 +100,9 @@ cancellation_token_registration& operator= (cancellation_token_registration&& _S
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Src`  
-  
+*_Src*<br/>
+`cancellation_token_registration`指派。
+ 
 ### <a name="return-value"></a>傳回值  
   
 ##  <a name="operator_eq_eq"></a> 運算子 = = 
@@ -109,8 +112,9 @@ bool operator== (const cancellation_token_registration& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Rhs`  
-  
+*_Rhs*<br/>
+要比較的 `cancellation_token_registration`。
+ 
 ### <a name="return-value"></a>傳回值  
   
 ## <a name="see-also"></a>另請參閱  

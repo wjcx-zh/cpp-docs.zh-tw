@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bfa615af00535d899533f21abf933f35bcd5bbf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f26deca76ff887eff2cd0a2c33dad94fbdbff8ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767991"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052725"
 ---
 # <a name="csimplemapequalhelperfalse-class"></a>CSimpleMapEqualHelperFalse 類別
 
@@ -33,7 +33,7 @@ ms.locfileid: "43767991"
 ## <a name="syntax"></a>語法
 
 ```
-template <class TKey, class TVal>  
+template <class TKey, class TVal>
 class CSimpleMapEqualHelperFalse
 ```
 
@@ -66,10 +66,10 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 
 ### <a name="parameters"></a>參數
 
-*版 k1 的 powerapps*  
+*版 k1 的 powerapps*<br/>
 第一個索引鍵。
 
-*k2*  
+*k2*<br/>
 第二個索引鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -98,5 +98,5 @@ static bool IsEqualValue(const TVal&, const TVal&);
 
 ## <a name="see-also"></a>另請參閱
 
-[CSimpleMapEqualHelper 類別](../../atl/reference/csimplemapequalhelper-class.md)   
+[CSimpleMapEqualHelper 類別](../../atl/reference/csimplemapequalhelper-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

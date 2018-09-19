@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf6f830441482e17bd45c331f4281cb49312337
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ebf8112650cf1908225d0fc2c79d61d26dd606fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765095"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051005"
 ---
 # <a name="ccomclassfactory-class"></a>CComClassFactory 類別
 
@@ -79,13 +79,13 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="parameters"></a>參數
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in]如果物件過程中建立的彙總，然後*pUnkOuter*必須是外部未知。 否則，請*pUnkOuter*必須是 NULL。
 
-*riid*  
+*riid*<br/>
 [in]要求的介面 IID。 如果*pUnkOuter*為非 NULL *riid*必須是`IID_IUnknown`。
 
-*ppvObj*  
+*ppvObj*<br/>
 [out]所識別之介面指標的指標*riid*。 如果物件不支援這個介面， *ppvObj*設為 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -102,7 +102,7 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="parameters"></a>參數
 
-*fLock*  
+*fLock*<br/>
 [in]如果為 TRUE，就會遞增的鎖定計數;否則，鎖定計數會遞減。
 
 ### <a name="return-value"></a>傳回值
@@ -117,6 +117,6 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ## <a name="see-also"></a>另請參閱
 
-[CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)   
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+[CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

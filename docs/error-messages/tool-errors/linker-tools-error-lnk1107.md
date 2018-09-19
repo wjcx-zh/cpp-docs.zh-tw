@@ -1,5 +1,5 @@
 ---
-title: 連結器工具錯誤 LNK1107 |Microsoft 文件
+title: 連結器工具錯誤 LNK1107 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fee2105cb0c12287cd2b47636f0e47011854a608
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73a1643d10ea9adc6ac6979eb2de023593ba8d01
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298346"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060703"
 ---
 # <a name="linker-tools-error-lnk1107"></a>連結器工具錯誤 LNK1107
-檔案無效或損毀： 無法讀取位置  
-  
- 此工具無法讀取檔案。 重新建立檔案。  
-  
- 如果您嘗試將模組也會發生 LNK1107 (.dll 或.netmodule 延伸模組，以建立[/clr:noAssembly](../../build/reference/clr-common-language-runtime-compilation.md)或[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)) 至連結器; 傳遞的.obj 檔案改為。  
-  
- 如果您將編譯下列的範例：  
-  
-```  
-// LNK1107.cpp  
-// compile with: /clr /LD  
-public ref class MyClass {  
-public:  
-   void Test(){}  
-};  
-```  
-  
- 然後指定**連結 LNK1107.dll**命令列中，您會收到 LNK1107。  若要解決此錯誤，指定**連結 LNK1107.obj**改為。
+
+檔案無效或損毀： 無法讀取位置
+
+此工具無法讀取檔案。 重新建立檔案。
+
+如果您嘗試傳遞模組也會發生 LNK1107 (使用建立的.dll 或.netmodule 副檔名[/clr:noAssembly](../../build/reference/clr-common-language-runtime-compilation.md)或是[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)) 連結器傳遞.obj 檔改為。
+
+如果您編譯下列範例：
+
+```
+// LNK1107.cpp
+// compile with: /clr /LD
+public ref class MyClass {
+public:
+   void Test(){}
+};
+```
+
+然後指定**link> LNK1107.dll**命令列中，您會看到 LNK1107。  若要解決此錯誤，指定**link> LNK1107.obj**改。

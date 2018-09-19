@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b36f19cc6e3deddbd5984e63b70c61a0ca8ea8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e776fd88799999ce175ba2efc137fc0353cbe65a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762765"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068464"
 ---
 # <a name="ccomdynamicunkarray-class"></a>CComDynamicUnkArray 類別
 
@@ -93,7 +93,7 @@ DWORD Add(IUnknown* pUnk);
 
 ### <a name="parameters"></a>參數
 
-*pUnk*  
+*pUnk*<br/>
 `IUnknown`加入至陣列的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -174,7 +174,7 @@ IUnknown* GetAt(int nIndex);
 
 ### <a name="parameters"></a>參數
 
-*nIndex*  
+*nIndex*<br/>
 要擷取之項目的索引。
 
 ### <a name="return-value"></a>傳回值
@@ -191,7 +191,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 
 ### <a name="parameters"></a>參數
 
-*ppFind*  
+*ppFind*<br/>
 `IUnknown`相關聯的 cookie 是必要的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -224,7 +224,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 
 ### <a name="parameters"></a>參數
 
-*dwCookie*  
+*dwCookie*<br/>
 Cookie 的相關聯`IUnknown`指標是必要。
 
 ### <a name="return-value"></a>傳回值
@@ -241,7 +241,7 @@ BOOL Remove(DWORD dwCookie);
 
 ### <a name="parameters"></a>參數
 
-*dwCookie*  
+*dwCookie*<br/>
 Cookie 參考`IUnknown`移除從陣列的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -250,5 +250,5 @@ Cookie 參考`IUnknown`移除從陣列的指標。
 
 ## <a name="see-also"></a>另請參閱
 
-[CComUnkArray 類別](../../atl/reference/ccomunkarray-class.md)   
+[CComUnkArray 類別](../../atl/reference/ccomunkarray-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

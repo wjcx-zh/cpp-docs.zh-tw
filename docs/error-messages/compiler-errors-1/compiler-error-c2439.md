@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2439 |Microsoft 文件
+title: 編譯器錯誤 C2439 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33bfe8ebf00850a54020b2a3f21159daf28b7224
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 419bf7be45a1383135d0231cd059837e1fe62729
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225685"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058408"
 ---
 # <a name="compiler-error-c2439"></a>編譯器錯誤 C2439
-'identifier': 無法初始化成員  
-  
- 無法初始化類別、 結構或等位成員。  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>透過檢查下列可能原因進行修正  
-  
-1.  嘗試初始化間接基底類別或結構。  
-  
-2.  嘗試初始化繼承的類別或結構的成員。 繼承的成員必須初始化由類別或結構的建構函式。
+
+'identifier': 無法初始化成員
+
+無法初始化類別、 結構或等位成員。
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>透過檢查下列可能原因進行修正
+
+1. 嘗試初始化間接基底類別或結構。
+
+1. 嘗試初始化的類別或結構繼承的成員。 繼承的成員必須初始化類別或結構的建構函式。

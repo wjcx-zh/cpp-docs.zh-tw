@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75caf648b0c62827e9532fa3776def1a4e459a64
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4a502cbf61f3542c010a89b82131a95f94856cda
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764006"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042880"
 ---
 # <a name="cregkey-class"></a>CRegKey 類別
 
@@ -153,7 +153,7 @@ void Attach(HKEY hKey) throw();
 
 ### <a name="parameters"></a>參數
 
-*hKey*  
+*hKey*<br/>
 登錄機碼的控制代碼。
 
 ### <a name="remarks"></a>備註
@@ -189,25 +189,25 @@ LONG Create(
 
 ### <a name="parameters"></a>參數
 
-*hKeyParent*  
+*hKeyParent*<br/>
 開啟金鑰的控制代碼。
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 指定要建立或開啟金鑰的名稱。 此名稱必須是子機碼*hKeyParent*。
 
-*lpszClass*  
+*lpszClass*<br/>
 指定要建立或開啟的索引鍵類別。 REG_NONE 為預設值。
 
-*dwOptions*  
+*dwOptions*<br/>
 索引鍵的選項。 預設值是 REG_OPTION_NON_VOLATILE。 如需可能的值和描述的清單，請參閱 < [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) Windows SDK 中。
 
-*samDesired*  
+*samDesired*<br/>
 金鑰安全性存取權。 預設值是 KEY_READ &#124; KEY_WRITE。 如需可能的值和描述的清單，請參閱`RegCreateKeyEx`。
 
-*lpSecAttr*  
+*lpSecAttr*<br/>
 指標[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)結構，表示金鑰的控制代碼是否可以由子處理序繼承。 根據預設，此參數為 NULL （亦即無法繼承控制代碼）。
 
-*lpdwDisposition*  
+*lpdwDisposition*<br/>
 [out]如果不是 NULL，擷取 REG_CREATED_NEW_KEY （如果金鑰不存在，且已建立） 或 REG_OPENED_EXISTING_KEY （如果金鑰存在，且已開啟）。
 
 ### <a name="return-value"></a>傳回值
@@ -231,13 +231,13 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 對 `CRegKey` 物件的參考。
 
-*hKey*  
+*hKey*<br/>
 登錄機碼控制代碼。
 
-*pTM*  
+*pTM*<br/>
 CAtlTransactionManager 物件的指標
 
 ### <a name="remarks"></a>備註
@@ -266,7 +266,7 @@ LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
 
 ### <a name="parameters"></a>參數
 
-*lpszSubKey*  
+*lpszSubKey*<br/>
 指定要刪除之索引鍵的名稱。 此名稱必須是子機碼[m_hKey](#m_hkey)。
 
 ### <a name="return-value"></a>傳回值
@@ -287,7 +287,7 @@ LONG DeleteValue(LPCTSTR lpszValue) throw();
 
 ### <a name="parameters"></a>參數
 
-*lpszValue*  
+*lpszValue*<br/>
 指定要移除的值欄位。
 
 ### <a name="return-value"></a>傳回值
@@ -320,16 +320,16 @@ LONG EnumKey(
 
 ### <a name="parameters"></a>參數
 
-*iIndex*  
+*iIndex*<br/>
 子機碼的索引。 這個參數應為零的第一次呼叫，然後會遞增以在後續呼叫
 
-*pszName*  
+*pszName*<br/>
 接收子機碼，包括結束的 null 字元的名稱之緩衝區的指標。 只有名稱的子機碼會複製到緩衝區，而不是完整金鑰階層。
 
-*pnNameLength*  
+*pnNameLength*<br/>
 指標，TCHARs，所指定的緩衝區中指定的大小，而變數*pszName*參數。 這個大小應該包含結束的 null 字元。 此方法傳回時，所指向的變數*pnNameLength*包含儲存在緩衝區中的字元數。 傳回的計數不包含結束的 null 字元。
 
-*pftLastWriteTime*  
+*pftLastWriteTime*<br/>
 接收時間變數指標列舉子機碼上次被寫入。
 
 ### <a name="return-value"></a>傳回值
@@ -369,13 +369,13 @@ LONG GetKeySecurity(
 
 ### <a name="parameters"></a>參數
 
-*si*  
+*si*<br/>
 [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)值，指出要求的安全性資訊。
 
-*psd*  
+*psd*<br/>
 接收一份要求的安全性描述元的緩衝區指標。
 
-*pnBytes*  
+*pnBytes*<br/>
 大小，以位元組為單位所指向的緩衝區*psd*。
 
 ### <a name="return-value"></a>傳回值
@@ -418,10 +418,10 @@ LONG NotifyChangeKeyValue(
 
 ### <a name="parameters"></a>參數
 
-*bWatchSubtree*  
+*bWatchSubtree*<br/>
 指定旗標，指出是否要在報告中指定的機碼及其所有子機碼，或只在指定的索引鍵中的變更。 如果此參數為 TRUE，則方法會報告機碼和其子機碼中的變更。 如果參數為 FALSE，則方法會報告變更只存在於索引鍵。
 
-*dwNotifyFilter*  
+*dwNotifyFilter*<br/>
 指定應該報告一組旗標，以控制哪些變更。 這個參數可以是下列值的組合：
 
 |值|意義|
@@ -431,10 +431,10 @@ LONG NotifyChangeKeyValue(
 |REG_NOTIFY_CHANGE_LAST_SET|通知呼叫端的索引鍵的值變更。 這可以包括新增或刪除某個值，或變更現有的值。|
 |REG_NOTIFY_CHANGE_SECURITY|通知呼叫端的索引鍵的安全性描述元變更。|
 
-*hEvent*  
+*hEvent*<br/>
 事件的控制代碼。 如果*bAsync*參數為 TRUE，則方法會立即傳回，並藉由發出訊號此事件報告變更。 如果*bAsync*為 FALSE 時， *hEvent*會被忽略。
 
-*bAsync*  
+*bAsync*<br/>
 指定旗標，指出方法報告變更的方式。 如果此參數為 TRUE，此方法會立即傳回，並藉由發出訊號指定的事件會報告變更。 當此參數為 FALSE 時，已發生變更之前，不會傳回方法。 如果*hEvent*未指定有效的事件， *bAsync*參數不能是 TRUE。
 
 ### <a name="return-value"></a>傳回值
@@ -461,13 +461,13 @@ LONG Open(
 
 ### <a name="parameters"></a>參數
 
-*hKeyParent*  
+*hKeyParent*<br/>
 開啟金鑰的控制代碼。
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 指定要建立或開啟金鑰的名稱。 此名稱必須是子機碼*hKeyParent*。
 
-*samDesired*  
+*samDesired*<br/>
 金鑰安全性存取權。 預設值是 KEY_ALL_ACCESS。 如需可能的值和描述的清單，請參閱 < [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) Windows SDK 中。
 
 ### <a name="return-value"></a>傳回值
@@ -484,7 +484,7 @@ LONG Open(
 
 將轉換`CRegKey`HKEY 的物件。
 
-```  
+```
 operator HKEY() const throw();
 ```
 
@@ -498,7 +498,7 @@ CRegKey& operator= (CRegKey& key) throw();
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 要複製的索引鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -522,13 +522,13 @@ LONG QueryBinaryValue(
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*  
+*pszValueName*<br/>
 以 null 終止的字串，包含要查詢之值的名稱的指標。
 
-*pValue*  
+*pValue*<br/>
 接收值的資料緩衝區的指標。
 
-*pnBytes*  
+*pnBytes*<br/>
 變數所指定的大小，以位元組為單位的緩衝區指標所指向*pValue*參數。 方法傳回時，此變數包含資料複製到緩衝區的大小。
 
 ### <a name="return-value"></a>傳回值
@@ -554,10 +554,10 @@ LONG QueryDWORDValue(
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*  
+*pszValueName*<br/>
 以 null 終止的字串，包含要查詢之值的名稱的指標。
 
-*dwValue*  
+*dwValue*<br/>
 接收 DWORD 的緩衝區指標。
 
 ### <a name="return-value"></a>傳回值
@@ -583,10 +583,10 @@ LONG QueryGUIDValue(
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*  
+*pszValueName*<br/>
 以 null 終止的字串，包含要查詢之值的名稱的指標。
 
-*guidValue*  
+*guidValue*<br/>
 此變數會接收 GUID 的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -613,13 +613,13 @@ LONG QueryMultiStringValue(
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*  
+*pszValueName*<br/>
 以 null 終止的字串，包含要查詢之值的名稱的指標。
 
-*pszValue*  
+*pszValue*<br/>
 接收 multistring 資料緩衝區的指標。 Multistring 是以 null 結尾的字串，由兩個 null 字元結束的陣列。
 
-*pnChars*  
+*pnChars*<br/>
 大小，以 TCHARs，所指向的緩衝區*pszValue*。 方法傳回時， *pnChars*包含大小，以 TCHARs 的 multistring 擷取，包括結束的 null 字元。
 
 ### <a name="return-value"></a>傳回值
@@ -645,10 +645,10 @@ LONG QueryQWORDValue(
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*  
+*pszValueName*<br/>
 以 null 終止的字串，包含要查詢之值的名稱的指標。
 
-*qwValue*  
+*qwValue*<br/>
 接收 QWORD 的緩衝區指標。
 
 ### <a name="return-value"></a>傳回值
@@ -675,13 +675,13 @@ LONG QueryStringValue(
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*  
+*pszValueName*<br/>
 以 null 終止的字串，包含要查詢之值的名稱的指標。
 
-*pszValue*  
+*pszValue*<br/>
 接收的字串資料的緩衝區指標。
 
-*pnChars*  
+*pnChars*<br/>
 大小，以 TCHARs，所指向的緩衝區*pszValue*。 方法傳回時， *pnChars*包含大小，以 TCHARs，擷取，包括結束的 null 字元的字串。
 
 ### <a name="return-value"></a>傳回值
@@ -718,28 +718,28 @@ ATL_DEPRECATED LONG QueryValue(
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*  
+*pszValueName*<br/>
 以 null 終止的字串，包含要查詢之值的名稱的指標。 如果*pszValueName*為 NULL 或空字串，""、 方法擷取的型別和索引鍵資料的未具名或預設值，如果有的話。
 
-*pdwType*  
+*pdwType*<br/>
 此變數會接收代碼，表示指定的值中儲存的資料類型的指標。 *PdwType*參數可以是 NULL，如果不需要型別程式碼。
 
-*pData*  
+*pData*<br/>
 接收值的資料緩衝區的指標。 這個參數可以是 NULL，如果不需要的資料。
 
-*pnBytes*  
+*pnBytes*<br/>
 變數所指定的大小，以位元組為單位的緩衝區指標所指向*pData*參數。 方法傳回時，此變數包含要複製的資料大小*pData。*
 
-*dwValue*  
+*dwValue*<br/>
 [值] 欄位的數值資料。
 
-*lpszValueName*  
+*lpszValueName*<br/>
 指定要查詢的 [值] 欄位。
 
-*szValue*  
+*szValue*<br/>
 [值] 欄位的字串資料。
 
-*pdwCount*  
+*pdwCount*<br/>
 字串資料的大小。 它的值一開始設定的大小*szValue*緩衝區。
 
 ### <a name="return-value"></a>傳回值
@@ -765,7 +765,7 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
 
 ### <a name="parameters"></a>參數
 
-*lpszKey*  
+*lpszKey*<br/>
 指定要刪除之索引鍵的名稱。 此名稱必須是子機碼[m_hKey](#m_hkey)。
 
 ### <a name="return-value"></a>傳回值
@@ -789,13 +789,13 @@ LONG SetBinaryValue(
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*  
+*pszValueName*<br/>
 字串，包含要設定的值名稱的指標。 如果具有此名稱的值尚未存在，則方法會將它新增至機碼。
 
-*pValue*  
+*pValue*<br/>
 包含具有指定的值名稱儲存資料之緩衝區的指標。
 
-*nBytes*  
+*nBytes*<br/>
 指定的大小，以位元組為單位所指向的資訊*pValue*參數。
 
 ### <a name="return-value"></a>傳回值
@@ -816,10 +816,10 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*  
+*pszValueName*<br/>
 字串，包含要設定的值名稱的指標。 如果具有此名稱的值尚未存在，則方法會將它新增至機碼。
 
-*dwValue*  
+*dwValue*<br/>
 要儲存指定的值名稱的 DWORD 資料。
 
 ### <a name="return-value"></a>傳回值
@@ -840,10 +840,10 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*  
+*pszValueName*<br/>
 字串，包含要設定的值名稱的指標。 如果具有此名稱的值尚未存在，則方法會將它新增至機碼。
 
-*guidValue*  
+*guidValue*<br/>
 使用指定的值名稱儲存的 GUID 參考。
 
 ### <a name="return-value"></a>傳回值
@@ -867,13 +867,13 @@ LONG SetKeyValue(
 
 ### <a name="parameters"></a>參數
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 指定要建立或開啟的索引鍵名稱。 此名稱必須是子機碼[m_hKey](#m_hkey)。
 
-*lpszValue*  
+*lpszValue*<br/>
 指定要儲存的資料。 這個參數必須為非 NULL。
 
-*lpszValueName*  
+*lpszValueName*<br/>
 指定要設定的 [值] 欄位。 如果在索引鍵已經存在具有此名稱的值欄位，會將它加入。
 
 ### <a name="return-value"></a>傳回值
@@ -894,7 +894,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 
 ### <a name="parameters"></a>參數
 
-*si*  
+*si*<br/>
 指定的元件設定的安全性描述元。 值可以是下列值的組合：
 
 |值|意義|
@@ -904,7 +904,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 |OWNER_SECURITY_INFORMATION|設定金鑰的擁有者 SID。 此金鑰必須具備 WRITE_OWNER 存取，或呼叫的處理序必須是物件的擁有者或具有已啟用的 SE_TAKE_OWNERSHIP_NAME 權限。|
 |SACL_SECURITY_INFORMATION|設定索引鍵的系統存取控制清單 (SACL)。 此金鑰必須具備 ACCESS_SYSTEM_SECURITY 存取。 若要取得此存取權的正確方式是啟用 SE_SECURITY_NAME[權限](https://msdn.microsoft.com/library/windows/desktop/aa379306)中呼叫端的目前的存取權杖，請在開啟 ACCESS_SYSTEM_SECURITY 存取的控制代碼，然後再停用的權限。|
 
-*psd*  
+*psd*<br/>
 指標[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)結構，指定安全性屬性，設定指定之索引鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -925,10 +925,10 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*  
+*pszValueName*<br/>
 字串，包含要設定的值名稱的指標。 如果具有此名稱的值尚未存在，則方法會將它新增至機碼。
 
-*pszValue*  
+*pszValue*<br/>
 使用指定的值名稱儲存的 multistring 資料指標。 Multistring 是以 null 結尾的字串，由兩個 null 字元結束的陣列。
 
 ### <a name="return-value"></a>傳回值
@@ -949,10 +949,10 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*  
+*pszValueName*<br/>
 字串，包含要設定的值名稱的指標。 如果具有此名稱的值尚未存在，則方法會將它新增至機碼。
 
-*qwValue*  
+*qwValue*<br/>
 QWORD 来儲存的資料與指定之值名稱。
 
 ### <a name="return-value"></a>傳回值
@@ -976,13 +976,13 @@ LONG SetStringValue(
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*  
+*pszValueName*<br/>
 字串，包含要設定的值名稱的指標。 如果具有此名稱的值尚未存在，則方法會將它新增至機碼。
 
-*pszValue*  
+*pszValue*<br/>
 要儲存指定的值名稱的字串資料的指標。
 
-*dwType*  
+*dwType*<br/>
 要寫入登錄的字串類型： REG_SZ （預設值） 或 REG_EXPAND_SZ (multistring)。
 
 ### <a name="return-value"></a>傳回值
@@ -1023,37 +1023,37 @@ ATL_DEPRECATED LONG SetValue(
 
 ### <a name="parameters"></a>參數
 
-*pszValueName*  
+*pszValueName*<br/>
 字串，包含要設定的值名稱的指標。 如果尚未存在的索引鍵中具有此名稱的值，此方法會將其加入索引鍵。 如果*pszValueName*為 NULL 或空字串，""、 方法設定的型別和索引鍵資料的未具名或預設值。
 
-*dwType*  
+*dwType*<br/>
 指定表示所指向的資料類型的代碼*pValue*參數。
 
-*pValue*  
+*pValue*<br/>
 包含具有指定的值名稱儲存資料之緩衝區的指標。
 
-*nBytes*  
+*nBytes*<br/>
 指定的大小，以位元組為單位所指向的資訊*pValue*參數。 如果資料類型為 REG_SZ，REG_EXPAND_SZ 或 REG_MULTI_SZ， *nBytes*必須包含結束的 null 字元的大小。
 
-*hKeyParent*  
+*hKeyParent*<br/>
 開啟金鑰的控制代碼。
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 指定要建立或開啟金鑰的名稱。 此名稱必須是子機碼*hKeyParent*。
 
-*lpszValue*  
+*lpszValue*<br/>
 指定要儲存的資料。 這個參數必須為非 NULL。
 
-*lpszValueName*  
+*lpszValueName*<br/>
 指定要設定的 [值] 欄位。 如果在索引鍵已經存在具有此名稱的值欄位，會將它加入。
 
-*dwValue*  
+*dwValue*<br/>
 指定要儲存的資料。
 
-*bMulti*  
+*bMulti*<br/>
 如果為 false，指出字串型別的 REG_SZ。 如果為 true，指出字串型別的 REG_MULTI_SZ multistring。
 
-*nValueLen*  
+*nValueLen*<br/>
 如果*bMulti*為 true， *nValueLen*長度*lpszValue*以字元為單位的字串。 如果*bMulti*為 false，-1 值表示此方法會自動計算長度。
 
 ### <a name="return-value"></a>傳回值
@@ -1068,5 +1068,5 @@ ATL_DEPRECATED LONG SetValue(
 
 ## <a name="see-also"></a>另請參閱
 
-[DCOM 範例](../../visual-cpp-samples.md)   
+[DCOM 範例](../../visual-cpp-samples.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

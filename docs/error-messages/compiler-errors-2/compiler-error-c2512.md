@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2512 |Microsoft 文件
+title: 編譯器錯誤 C2512 |Microsoft Docs
 ms.custom: ''
 ms.date: 02/09/2018
 ms.technology:
@@ -16,24 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 286be19ca407039a77d51503a34c7a27da1c3d5b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba1fbba98237879927fd82d6535c0c2688c1c304
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230469"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036914"
 ---
 # <a name="compiler-error-c2512"></a>編譯器錯誤 C2512
 
-> '*識別碼*': 沒有適當的預設建構函式使用  
+> '*識別碼*': 沒有適當的預設建構函式
 
-A*預設建構函式*，需要任何引數的建構函式不適用於指定的類別、 結構或等位。 只有當沒有使用者定義建構函式所提供，則編譯器會提供預設建構函式。
+A*預設建構函式*，不需要引數，建構函式不適用於指定的類別、 結構或等位。 只有當沒有使用者定義的建構函式所提供，則編譯器會提供預設建構函式。
 
-如果您提供的建構函式採用非 void 參數，而且您想要允許您要建立不含任何參數 （例如，做為陣列的項目） 的類別，您也必須提供預設建構函式。 預設建構函式可為具備所有參數之預設值的建構函式。
+如果您提供的建構函式採用非 void 參數，而且您想要允許您建立不含任何參數 （例如，做為陣列的項目） 的類別，您也必須提供預設建構函式。 預設建構函式可為具備所有參數之預設值的建構函式。
 
 ## <a name="example"></a>範例
 
-錯誤 C2512 的常見原因是當您定義的類別或結構建構函式引數，然後嘗試宣告類別或結構沒有任何引數的執行個體。 例如，`struct B`下面會宣告建構函式需要`char *`引數，但並不採用任何引數。 在`main`，宣告 B 的執行個體，但沒有提供任何引數。 編譯器會產生 C2512，因為它找不到預設的建構函式 b。
+錯誤 C2512 的常見原因是當您定義的類別或結構建構函式引數，然後在您嘗試宣告類別或結構不含任何引數的執行個體。 例如，`struct B`以下宣告建構函式需要`char *`引數，但不是接受任何引數的一個。 在  `main`，B 的執行個體已宣告，但提供任何引數。 編譯器會產生 C2512，因為它找不到預設的建構函式 b
 
 ```cpp
 // C2512.cpp

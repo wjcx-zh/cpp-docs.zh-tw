@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2906 |Microsoft 文件
+title: 編譯器錯誤 C2906 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08884f8a9304a2849d9bcbe13170d0bd38402a62
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 608109d6a040345610a47ac2e43a51a813a3c6bf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243299"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059029"
 ---
 # <a name="compiler-error-c2906"></a>編譯器錯誤 C2906
-'specialization'：明確特製化必須有 'template <>'  
-  
- 您必須使用新語法的樣板的明確特製化。  
-  
- 下列範例會產生 C2906:  
-  
-```  
-// C2906.cpp  
-// compile with: /c  
-template<class T> class X{};   // primary template  
-class X<int> { }   // C2906  
-template<> class X<int> { };   // new syntax  
+
+'specialization'：明確特製化必須有 'template <>'
+
+您必須使用新語法的樣板的明確特製化。
+
+下列範例會產生 C2906:
+
+```
+// C2906.cpp
+// compile with: /c
+template<class T> class X{};   // primary template
+class X<int> { }   // C2906
+template<> class X<int> { };   // new syntax
 ```

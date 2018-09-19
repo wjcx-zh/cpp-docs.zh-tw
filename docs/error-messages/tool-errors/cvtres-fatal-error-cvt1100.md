@@ -1,5 +1,5 @@
 ---
-title: CVTRES 嚴重錯誤 CVT1100 |Microsoft 文件
+title: CVTRES 嚴重錯誤 CVT1100 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32085c4c37c82567eb78f46b52bcc4a6c41daae5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18a5508301c54637fb34a751c8f1c4e307e47d50
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302655"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068958"
 ---
 # <a name="cvtres-fatal-error-cvt1100"></a>CVTRES 嚴重錯誤 CVT1100
-重複的資源-類型： 類型名稱： 名稱、 語言:、 旗標： 旗標、 大小： 大小  
-  
- 指定的資源已指定一次以上。  
-  
- 如果連結器會建立類型程式庫，且您未指定，您可以取得這項錯誤[/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)和您的專案中的資源已使用 1。 在此情況下，指定 /TLBID，並指定另一個數字，最多 65535。
+
+重複的資源-類型： 類型、 名稱： 名稱、 語言:、 旗標： 旗標、 大小： 大小
+
+指定的資源已指定一次以上。
+
+您可以取得此錯誤，如果連結器會建立型別程式庫，而且您未指定[/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)和您的專案中的資源已使用 1。 在此情況下，指定 /TLBID，並指定另一個數字，最多 65535。

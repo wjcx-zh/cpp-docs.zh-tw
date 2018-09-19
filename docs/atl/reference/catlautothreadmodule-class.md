@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b534190a4e7243f5192e6d703b056d8bcb327ca
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 882a32b1a9f08f3fd07f1d53d508b101c5500f5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110639"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037051"
 ---
 # <a name="catlautothreadmodule-class"></a>CAtlAutoThreadModule 類別
 
@@ -62,7 +62,7 @@ class CAtlAutoThreadModule : public CAtlAutoThreadModuleT<CAtlAutoThreadModule>
 
 ## <a name="see-also"></a>另請參閱
 
-[CAtlAutoThreadModuleT 類別](../../atl/reference/catlautothreadmodulet-class.md)   
-[IAtlAutoThreadModule 類別](../../atl/reference/iatlautothreadmodule-class.md)   
-[類別概觀](../../atl/atl-class-overview.md)   
+[CAtlAutoThreadModuleT 類別](../../atl/reference/catlautothreadmodulet-class.md)<br/>
+[IAtlAutoThreadModule 類別](../../atl/reference/iatlautothreadmodule-class.md)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
 [模組類別](../../atl/atl-module-classes.md)

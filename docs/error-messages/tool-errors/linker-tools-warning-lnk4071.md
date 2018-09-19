@@ -1,5 +1,5 @@
 ---
-title: 連結器工具警告 LNK4071 |Microsoft 文件
+title: 連結器工具警告 LNK4071 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cb0d4b8d78eb8c7cf1812abb1a7981c605f2c4e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d11247c823a93604359b4cab6995b694bcf5a2f3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299896"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064662"
 ---
 # <a name="linker-tools-warning-lnk4071"></a>連結器工具警告 LNK4071
-無法以累加方式連結上後續連結  
-  
- 找到多個定義的一個或多個符號連結，但[/強制](../../build/reference/force-force-file-output.md)或 **/force: multiple 都會**用來建立輸出檔案，無論錯誤。 刪除累加狀態 (.ilk) 檔案的連結。
+
+無法以累加方式連結於在後續的連結
+
+連結中找到多個定義一或多個符號，但[/force](../../build/reference/force-force-file-output.md)或 **/force: multiple 都會**用來建立輸出檔，不論錯誤為何。 刪除連結的累加狀態 (.ilk) 檔案。

@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2349 |Microsoft 文件
+title: 編譯器錯誤 C2349 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92fa04f4ee943908d65e5cf6ac0b65cdad6bb62f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3677426b00b07ae7281657c5ada7d17cc4418f35
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222263"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070752"
 ---
 # <a name="compiler-error-c2349"></a>編譯器錯誤 C2349
-'function' 無法編譯為 managed: '原因';使用 unmanaged #pragma  
-  
- 如需詳細資訊，請參閱[編譯器警告 （層級 1 和 3） C4793](../../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md)。
+
+無法編譯為受控的 'function': 'reason';使用非受控的 #pragma
+
+如需詳細資訊，請參閱[編譯器警告 （層級 1 和 3） C4793](../../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md)。

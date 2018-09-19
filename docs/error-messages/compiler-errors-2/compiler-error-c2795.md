@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2795 |Microsoft 文件
+title: 編譯器錯誤 C2795 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2431319c6da69dcb144dbb47b4fbb0e01c1eaa78
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 628aa2c0465018b635d015c56a0b38f69365bd88
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236676"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060079"
 ---
 # <a name="compiler-error-c2795"></a>編譯器錯誤 C2795
-'super::function' 不是成員函式  
-  
- 每當您嘗試使用，會出現此錯誤訊息[super](../../cpp/super.md)存取成員函式以外的成員。
+
+'super::function' 不是成員函式
+
+每當您嘗試使用時，會出現此錯誤訊息[super](../../cpp/super.md)存取成員函式以外的成員。

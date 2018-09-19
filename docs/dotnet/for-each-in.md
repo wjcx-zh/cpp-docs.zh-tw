@@ -1,5 +1,5 @@
 ---
-title: 針對每個，在 |Microsoft 文件
+title: 針對每個，在 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6ab5f7309da1a037f7066d44815cafc934b162cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a55425c891999142fe32ae08125cce22728daffa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111939"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040686"
 ---
 # <a name="for-each-in"></a>for each, in
-逐一查看陣列或集合。 此非標準關鍵字在 C++/CLI 和原生 C++ 專案中皆可用。 但是，不建議使用。 請考慮使用標準[範圍架構 for 陳述式 （c + +）](../cpp/range-based-for-statement-cpp.md)改為。  
+逐一查看陣列或集合。 此非標準關鍵字在 C++/CLI 和原生 C++ 專案中皆可用。 但是，不建議使用。 請考慮使用標準[範圍架構 for 陳述式 （c + +）](../cpp/range-based-for-statement-cpp.md)改。  
   
 ## <a name="all-runtimes"></a>所有執行階段  
  **語法**  
@@ -43,25 +43,25 @@ ms.locfileid: "33111939"
   
  **參數**  
   
- `type`  
- `identifier` 的類型。  
+*type*<br/>
+`identifier` 的類型。  
   
- `identifier`  
- 表示集合項目的反覆項目變數。  當`identifier`是[追蹤參考運算子](../windows/tracking-reference-operator-cpp-component-extensions.md)，您可以修改的項目。  
+*identifier*<br/>
+表示集合項目的反覆項目變數。  當`identifier`已[追蹤參考運算子](../windows/tracking-reference-operator-cpp-component-extensions.md)，您可以修改項目。  
   
- `expression`  
- 陣列運算式或集合。 集合項目必須如此，編譯器才能將其轉換為 `identifier` 類型。  
+*運算式*<br/>
+陣列運算式或集合。 集合項目必須如此，編譯器才能將其轉換為 `identifier` 類型。  
   
- `statements`  
- 要執行的一個或多個陳述式。  
+*陳述式*<br/>
+要執行的一個或多個陳述式。  
   
  **備註**  
   
  `for each` 陳述式可用來逐一查看集合。 您可以修改集合中的項目，不過，您無法加入或刪除項目。  
   
- *陳述式*陣列或集合中每個元素會執行。 在完成集合中所有項目的反覆項目之後，程式控制權會轉移到 `for each` 區塊之後的下一個陳述式。  
+ *陳述式*會針對陣列或集合中的每個項目執行。 在完成集合中所有項目的反覆項目之後，程式控制權會轉移到 `for each` 區塊之後的下一個陳述式。  
   
- `for each` 和`in`是[內容相關性關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。  
+ `for each` 並`in`都[內容相關性關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。  
   
  如需詳細資訊：  
   
@@ -118,12 +118,12 @@ Testing
 ## <a name="common-language-runtime"></a>Common Language Runtime 
  **備註**  
   
- CLR 語法是相同**所有執行階段**語法，除非，如下所示。  
+ CLR 語法是相同**所有執行階段**語法中，除非，如下所示。  
   
  *運算式*  
- Managed 陣列運算式或集合。 集合項目必須如此，編譯器可以將它從轉換<xref:System.Object>至*識別碼*型別。  
+ Managed 陣列運算式或集合。 集合項目必須如此，編譯器可以將它從轉換<xref:System.Object>要*識別碼*型別。  
   
- *運算式*評估實作的類型為<xref:System.Collections.IEnumerable>， <xref:System.Collections.Generic.IEnumerable%601>，或定義的類型`GetEnumerator`其中一個傳回類型的方法實作<xref:System.Collections.IEnumerator>宣告所有中所定義的方法或`IEnumerator`.  
+ *運算式*評估為類型可實作<xref:System.Collections.IEnumerable>， <xref:System.Collections.Generic.IEnumerable%601>，或定義的類型`GetEnumerator`方法會傳回型別實作<xref:System.Collections.IEnumerator>宣告所有中所定義的方法或`IEnumerator`.  
   
 ### <a name="requirements"></a>需求  
  編譯器選項： **/clr**  

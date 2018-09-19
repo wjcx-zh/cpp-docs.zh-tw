@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2048 |Microsoft 文件
+title: 編譯器錯誤 C2048 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33d99b54300d3676039b2f2bda24b9bab302027e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dca0cf7e95f2a876760415d5c628287fab47227c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166087"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055828"
 ---
 # <a name="compiler-error-c2048"></a>編譯器錯誤 C2048
-有一個以上的 default  
-  
- `switch` 陳述式包含多個 `default` 標籤。 刪除其中一個 `default` 標籤，來解決這個錯誤。  
-  
- 下列範例會產生 C2048：  
-  
-```  
-// C2048.cpp  
-int main() {  
-   int a = 1;  
-   switch (a) {  
-      case 1:  
-         a = 0;  
-      default:  
-         a = 2;  
-      default:   // C2048  
-         a = 3;  
-   }  
-}  
-```  
-  
- 可能的解決方式：  
-  
-```  
-// C2048b.cpp  
-int main() {  
-   int a = 1;  
-   switch (a) {  
-      case 1:  
-         a = 0;  
-      default:  
-         a = 2;  
-   }  
-}  
+
+有一個以上的 default
+
+`switch` 陳述式包含多個 `default` 標籤。 刪除其中一個 `default` 標籤，來解決這個錯誤。
+
+下列範例會產生 C2048：
+
+```
+// C2048.cpp
+int main() {
+   int a = 1;
+   switch (a) {
+      case 1:
+         a = 0;
+      default:
+         a = 2;
+      default:   // C2048
+         a = 3;
+   }
+}
+```
+
+可能的解決方式：
+
+```
+// C2048b.cpp
+int main() {
+   int a = 1;
+   switch (a) {
+      case 1:
+         a = 0;
+      default:
+         a = 2;
+   }
+}
 ```

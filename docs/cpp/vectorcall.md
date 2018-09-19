@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 463f005388a066776d7db8b1701850e08888de76
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 335f81a204ec91361c51f7573e58b61fad91f97b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895093"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061704"
 ---
 # <a name="vectorcall"></a>__vectorcall
 
@@ -46,7 +46,7 @@ typedef struct {
    __m256 y;
    __m256 z;
 } hva3;    // 3 element HVA type on __m256
-```  
+```
 
 宣告您的函式，明確 **__vectorcall**關鍵字在標頭檔，以允許另行編譯的程式碼連結正確無誤。 函式必須是原型才能使用 **__vectorcall**，而且不能使用`vararg`可變長度引數清單。
 
@@ -60,25 +60,25 @@ typedef struct {
 struct MyClass {
    void __vectorcall mymethod();
 };
-```  
+```
 
 這個：
 
 ```cpp
 void MyClass::mymethod() { return; }
-```  
+```
 
 相當於這個：
 
 ```cpp
 void __vectorcall MyClass::mymethod() { return; }
-```  
+```
 
 **__Vectorcall**呼叫慣例修飾詞時，必須指定一個指向 **__vectorcall**建立函式。 下一個範例會建立**typedef**指標 **__vectorcall**接受四個函式**double**引數並傳回 **__m256**值：
 
 ```cpp
 typedef __m256 (__vectorcall * vcfnptr)(double, double, double, double);
-```  
+```
 
 ## <a name="vectorcall-convention-on-x64"></a>在 x64 上的 __vectorcall 慣例
 
@@ -167,7 +167,7 @@ hva4 __vectorcall example6(hva2 a, hva4 b, __m256 c, hva2 d) {
    return b;
 }
 
-int __cdecl main( void )  
+int __cdecl main( void )
 {
    hva4 h4;
    hva2 h2;
@@ -188,7 +188,7 @@ int __cdecl main( void )
    i = example5(1, h2, 3, h4, 5);
    h4 = example6(h2, h4, c, h2);
 }
-```  
+```
 
 ## <a name="vectorcall-convention-on-x86"></a>x86 上的 __vectorcall 慣例
 
@@ -273,7 +273,7 @@ hva4 __vectorcall example6(hva2 a, hva4 b, __m256 c, hva2 d) {
    return b;
 }
 
-int __cdecl main( void )  
+int __cdecl main( void )
 {
    hva4 h4;
    hva2 h2;
@@ -294,11 +294,11 @@ int __cdecl main( void )
    i = example5(1, h2, 3, h4, 5);
    h4 = example6(h2, h4, c, h2);
 }
-```  
+```
 
 **結束 Microsoft 專有**
 
 ## <a name="see-also"></a>另請參閱
 
-[引數傳遞和命名慣例](../cpp/argument-passing-and-naming-conventions.md)   
+[引數傳遞和命名慣例](../cpp/argument-passing-and-naming-conventions.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)

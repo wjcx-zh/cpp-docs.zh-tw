@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2275 |Microsoft 文件
+title: 編譯器錯誤 C2275 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45e5948be0544b0fd6854206aa1aeb9c2c23fee1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: deedbf10edd3d9fd870dfbb1a896e504bfe9d877
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33173427"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052358"
 ---
 # <a name="compiler-error-c2275"></a>編譯器錯誤 C2275
-'identifier': 不合法使用這個型別做為運算式  
-  
- 運算式使用`->`運算子搭配`typedef`識別項。  
-  
- 下列範例會產生 C2275:  
-  
-```  
-// C2275.cpp  
-typedef struct S {  
-    int mem;  
-} *S_t;  
-void func1( int *parm );  
-void func2() {  
-    func1( &S_t->mem );   // C2275, S_t is a typedef  
-}  
+
+'identifier': 不合法使用這個型別做為運算式
+
+運算式會使用`->`運算子搭配`typedef`識別項。
+
+下列範例會產生 C2275:
+
+```
+// C2275.cpp
+typedef struct S {
+    int mem;
+} *S_t;
+void func1( int *parm );
+void func2() {
+    func1( &S_t->mem );   // C2275, S_t is a typedef
+}
 ```

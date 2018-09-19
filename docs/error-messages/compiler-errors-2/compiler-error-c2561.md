@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2561 |Microsoft 文件
+title: 編譯器錯誤 C2561 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f8ece9a3d9347a5179844cbfca3425870c25e2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8611af23ab884a853fc751ae82c636753993495b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230899"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070700"
 ---
 # <a name="compiler-error-c2561"></a>編譯器錯誤 C2561
-'identifier': 函式必須傳回值  
-  
- 此函式宣告為傳回值，但未包含函式定義`return`陳述式。  
-  
- 這個錯誤可能被因不正確的函式原型：  
-  
-1.  如果函式不會傳回值，宣告函式傳回型別[void](../../cpp/void-cpp.md)。  
-  
-2.  檢查所有可能的分支，函式的傳回類型在原型中宣告的值。  
-  
-3.  包含儲存傳回值中的內嵌組件常式的 c + + 函式`AX`暫存器可能需要的 return 陳述式。 中的值複製`AX`到暫存變數，並從函式傳回該變數。  
-  
- 下列範例會產生 C2561:  
-  
-```  
-// C2561.cpp  
-int Test(int x) {  
-   if (x) {  
-      return;   // C2561  
-      // try the following line instead  
-      // return 1;  
-   }  
-   return 0;  
-}  
-  
-int main() {  
-   Test(1);  
-}  
+
+'identifier': 函式必須傳回值
+
+此函式宣告為傳回值，但函式定義不包含`return`陳述式。
+
+此錯誤可能被因不正確的函式原型：
+
+1. 如果函式不會傳回值，以傳回型別來宣告函式[void](../../cpp/void-cpp.md)。
+
+1. 請檢查所有可能的分支，函式的傳回類型在原型中宣告的值。
+
+1. 包含存放區中的傳回值的內嵌組件常式的 c + + 函式`AX`註冊可能需要的 return 陳述式。 中的值複製`AX`給暫存變數，並從函式會傳回該變數。
+
+下列範例會產生 C2561:
+
+```
+// C2561.cpp
+int Test(int x) {
+   if (x) {
+      return;   // C2561
+      // try the following line instead
+      // return 1;
+   }
+   return 0;
+}
+
+int main() {
+   Test(1);
+}
 ```

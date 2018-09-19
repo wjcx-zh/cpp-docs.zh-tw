@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 3） C4823 |Microsoft 文件
+title: 編譯器警告 （層級 3） C4823 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c29499a82601dcf653ff2f003441935f1d6841a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c3a6f24a32267f221dbc37e242bae48c0056af5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293227"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044648"
 ---
 # <a name="compiler-warning-level-3-c4823"></a>編譯器警告 (層級 3) C4823
-'function': 使用 pin 指標但回溯語意不會啟用。 請考慮使用 /EHa  
-  
-若要取消釘選在區塊範圍宣告 pin 指標所指向的 managed 堆積上的物件，編譯器會模擬"偽裝"pin 指標有 nullifies 指標解構函式的本機類別的解構函式的行為。 若要啟用的解構函式的呼叫擲回例外狀況後，您必須啟用回溯的物件，您可以使用[/EHsc](../../build/reference/eh-exception-handling-model.md)。  
-  
-您也可以手動可以取消固定物件，並忽略此警告。  
-  
-## <a name="example"></a>範例  
-下列範例會產生 C4823。  
-  
-```  
-// C4823.cpp  
-// compile with: /clr /W3 /EHa-  
-using namespace System;  
-  
-ref struct G {  
-   int m;  
-};  
-  
-void f(G ^ pG) {  
-   try {  
-      pin_ptr<int> p = &pG->m;  
-      // manually unpin, ignore warning  
-      // p = nullptr;  
-      throw gcnew Exception;  
-   }  
-   catch(Exception ^) {}  
-}   // C4823 warning  
-  
-int main() {  
-   f( gcnew G );  
-}  
-```  
+
+'function': 使用 pin 指標但回溯語意不會啟用。 請考慮使用 /EHa
+
+若要取消釘選在 managed 堆積在區塊範圍中宣告 pin 指標所指向的物件，編譯器會模擬 「 假裝 」 的釘選的指標含有 nullifies 指標解構函式的本機類別的解構函式的行為。 若要啟用解構函式呼叫之後擲回例外狀況，您必須啟用物件回溯，您可以使用來這麼做[/EHsc](../../build/reference/eh-exception-handling-model.md)。
+
+也以手動方式，您可以取消釘選的物件，並忽略此警告。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C4823。
+
+```
+// C4823.cpp
+// compile with: /clr /W3 /EHa-
+using namespace System;
+
+ref struct G {
+   int m;
+};
+
+void f(G ^ pG) {
+   try {
+      pin_ptr<int> p = &pG->m;
+      // manually unpin, ignore warning
+      // p = nullptr;
+      throw gcnew Exception;
+   }
+   catch(Exception ^) {}
+}   // C4823 warning
+
+int main() {
+   f( gcnew G );
+}
+```

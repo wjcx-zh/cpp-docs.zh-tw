@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 2） C4056 |Microsoft 文件
+title: 編譯器警告 （層級 2） C4056 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf5a5855d0b4291105826679e2ae81ed6d69e5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e069867d4aef749f9f6e42f46a34745d9e8aa62
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290562"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067503"
 ---
 # <a name="compiler-warning-level-2-c4056"></a>編譯器警告 （層級 2） C4056
-在浮點常數算術中溢位  
-  
- 浮點常數算術會產生超過允許的最大值的結果。  
-  
- 這個警告可能因常數算術期間執行的編譯器最佳化。 如果它消失時關閉最佳化，您可以放心忽略這個警告 ([/Od](../../build/reference/od-disable-debug.md))。  
-  
- 下列範例會產生 C4056:  
-  
-```  
-// C4056.cpp  
-// compile with: /W2 /LD  
-#pragma warning (default : 4056)  
-float fp_val = 1.0e300 * 1.0e300;   // C4056  
+
+在浮點常數算術中溢位
+
+浮點常數算術會產生超過允許的最大值的結果。
+
+這個警告可能因常數的算術運算期間執行的編譯器最佳化。 如果它就會消失時關閉最佳化，您可以放心忽略此警告 ([/Od](../../build/reference/od-disable-debug.md))。
+
+下列範例會產生 C4056:
+
+```
+// C4056.cpp
+// compile with: /W2 /LD
+#pragma warning (default : 4056)
+float fp_val = 1.0e300 * 1.0e300;   // C4056
 ```

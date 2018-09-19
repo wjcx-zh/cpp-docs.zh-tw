@@ -1,5 +1,5 @@
 ---
-title: 連結器工具警告 LNK4104 |Microsoft 文件
+title: 連結器工具警告 LNK4104 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9ea3e074cc0db9591cd0ffe9329ff7f1936563f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6304f3ea928c89f4756a4594270ebb7914324f85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300949"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057258"
 ---
 # <a name="linker-tools-warning-lnk4104"></a>連結器工具警告 LNK4104
-符號 'symbol' 的匯出應為 PRIVATE  
-  
- `symbol`可以是下列其中之一：  
-  
--   `DllCanUnloadNow`  
-  
--   `DllGetClassObject`  
-  
--   `DllGetClassFactoryFromClassString`  
-  
--   `DllGetDocumentation`  
-  
--   `DllInitialize`  
-  
--   `DllInstall`  
-  
--   `DllRegisterServer`  
-  
--   `DllRegisterServerEx`  
-  
--   `DllRegisterServerExW`  
-  
--   `DllUnload`  
-  
--   `DllUnregisterServer`  
-  
--   `RasCustomDeleteEntryNotify`  
-  
--   `RasCustomDial`  
-  
--   `RasCustomDialDlg`  
-  
--   `RasCustomEntryDlg`  
-  
- 當您在建立匯入程式庫 dll，就會發出這個警告，而且上述函式的其中一個匯出而不為私用模組定義檔中指定它。 一般情況下，這些函式會使用匯出只能由 OLE。 將它們放在匯入程式庫時可能會導致不尋常的行為不正確地連結至程式庫的程式會呼叫它們。 如需 PRIVATE 關鍵字的詳細資訊，請參閱[匯出](../../build/reference/exports.md)。
+
+符號 'symbol' 的匯出應為 PRIVATE
+
+`symbol`可以是下列其中之一：
+
+- `DllCanUnloadNow`
+
+- `DllGetClassObject`
+
+- `DllGetClassFactoryFromClassString`
+
+- `DllGetDocumentation`
+
+- `DllInitialize`
+
+- `DllInstall`
+
+- `DllRegisterServer`
+
+- `DllRegisterServerEx`
+
+- `DllRegisterServerExW`
+
+- `DllUnload`
+
+- `DllUnregisterServer`
+
+- `RasCustomDeleteEntryNotify`
+
+- `RasCustomDial`
+
+- `RasCustomDialDlg`
+
+- `RasCustomEntryDlg`
+
+當您在建立匯入程式庫的 dll，就會發出這個警告，而且匯出其中一個以上的函式而不指定它為私用模組定義檔中的。 一般情況下，這些函式會使用匯出只能由 OLE。 將它們放在匯入程式庫時可能會導致不尋常的行為不正確地連結至程式庫的程式會對其進行呼叫。 如需私用的關鍵字的詳細資訊，請參閱[匯出](../../build/reference/exports.md)。

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f87f5b9f8295b49b9c1c4bec45cad96e3dec0872
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f4c035fad1fd675fd36fef73d405c63aab3be739
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760054"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040800"
 ---
 # <a name="catlcommodule-class"></a>CAtlComModule 類別
 
@@ -107,10 +107,10 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 
 ### <a name="parameters"></a>參數
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 如果型別程式庫是要註冊，則為 TRUE。 預設值為 FALSE。
 
-*Createtable*  
+*Createtable*<br/>
 要註冊之物件的 clsid 點。 若要註冊 NULL （預設值），在物件對應中的所有物件。
 
 ### <a name="return-value"></a>傳回值
@@ -132,7 +132,7 @@ HRESULT RegisterTypeLib();
 
 ### <a name="parameters"></a>參數
 
-*lpszIndex*  
+*lpszIndex*<br/>
 格式字串"\\\N 」，其中 N 是型別程式庫資源的整數索引。
 
 ### <a name="return-value"></a>傳回值
@@ -155,10 +155,10 @@ HRESULT UnregisterServer(
 
 ### <a name="parameters"></a>參數
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 如果型別程式庫是要移除註冊，則為 TRUE。 預設值為 FALSE。
 
-*Createtable*  
+*Createtable*<br/>
 要移除註冊物件的 clsid 點。 如果 NULL （預設值），在物件對應中的所有物件就會取消註冊。
 
 ### <a name="return-value"></a>傳回值
@@ -180,7 +180,7 @@ HRESULT UnRegisterTypeLib();
 
 ### <a name="parameters"></a>參數
 
-*lpszIndex*  
+*lpszIndex*<br/>
 格式字串"\\\N 」，其中 N 是型別程式庫資源的整數索引。
 
 ### <a name="remarks"></a>備註
@@ -193,5 +193,5 @@ HRESULT UnRegisterTypeLib();
 
 ## <a name="see-also"></a>另請參閱
 
-[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)   
+[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

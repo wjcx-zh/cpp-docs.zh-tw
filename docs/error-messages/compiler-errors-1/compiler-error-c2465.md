@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2465 |Microsoft 文件
+title: 編譯器錯誤 C2465 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5318fd04a79de7e49a3218dbbef6100c4fbe3dba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f27ea349e4955bc78b2115d3de4622a09290eb22
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240801"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060547"
 ---
 # <a name="compiler-error-c2465"></a>編譯器錯誤 C2465
-不能在括號運算式內定義匿名類型  
-  
- 括號運算式內定義了匿名結構、等位或列舉類型。 這在 C++ 中無效，因為定義在函式範圍中沒有意義。
+
+不能在括號運算式內定義匿名類型
+
+括號運算式內定義了匿名結構、等位或列舉類型。 這在 C++ 中無效，因為定義在函式範圍中沒有意義。

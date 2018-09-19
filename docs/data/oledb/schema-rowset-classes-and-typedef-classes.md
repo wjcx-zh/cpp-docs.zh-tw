@@ -1083,21 +1083,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 25a68bb459122ea83d9be2491cb5fadaaf8a00c0
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1496fa844106b78e2a5dc735fad0cc33923aea53
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572047"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035756"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>結構描述資料列集類別和 Typedef 類別
+
 結構描述是資料庫物件所擁有，或由特定使用者已建立的集合。 目錄可以包含一或多個結構描述，但必須永遠包含稱為 INFORMATION_SCHEMA，其中包含檢視表和網域資訊結構描述的結構描述。 OLE DB 中的結構描述資訊使用預先定義的結構描述資料列集擷取，並包含型別、 資料表、 資料行、 索引、 檢視、 判斷提示和條件約束、 統計資料、 字元集，定序和網域。  
   
- 結構描述資料列集是預先定義的資料列集表示中繼資料。 結構描述資料列通常可在動態程式設計中，不在編譯時期已知的資料庫結構。 您可以使用這些結構描述資料列集，以取得在執行階段資料庫的相關資訊。  
+結構描述資料列集是預先定義的資料列集表示中繼資料。 結構描述資料列通常可在動態程式設計中，不在編譯時期已知的資料庫結構。 您可以使用這些結構描述資料列集，以取得在執行階段資料庫的相關資訊。  
   
- 您可以使用 typedef 類別來具現化結構描述資料列。 如下所示的相對應的 typedef 和結構描述資料列集類別。 您必須呼叫[crestrictions:: Open](../../data/oledb/crestrictions-open.md)建立結構描述資料列集的執行個體之後。 這個方法會傳回結果集，根據您指定的限制。 請參閱[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))如需有關與每個結構描述資料列相關聯的限制資料行資訊。  
+您可以使用 typedef 類別來具現化結構描述資料列。 如下所示的相對應的 typedef 和結構描述資料列集類別。 您必須呼叫[crestrictions:: Open](../../data/oledb/crestrictions-open.md)建立結構描述資料列集的執行個體之後。 這個方法會傳回結果集，根據您指定的限制。 請參閱[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))如需有關與每個結構描述資料列相關聯的限制資料行資訊。  
   
- 下表顯示每個 OLE DB 結構描述資料列和其對應的 OLE DB 樣板 typedef 類別和資訊的類別。  
+下表顯示每個 OLE DB 結構描述資料列和其對應的 OLE DB 樣板 typedef 類別和資訊的類別。  
   
 |OLE DB 結構描述資料列集|Typedef 類別|資訊類別|  
 |--------------------------|-------------------|----------------|  
@@ -1133,14 +1134,16 @@ ms.locfileid: "42572047"
 |[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727\(v=vs.85\))|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|  
   
 ## <a name="assertion"></a> CAssertions、 CAssertionInfo
+
 呼叫 typedef 類別`CAssertions`來實作其參數類別`CAssertionInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別由指定使用者所擁有的判斷提示在目錄中定義。  
+這個類別會識別由指定使用者所擁有的判斷提示在目錄中定義。  
   
- 下表列出的類別資料成員`CAssertionInfo`及其對應 OLE DB 資料行。 請參閱[判斷提示的資料列集](/previous-versions/windows/desktop/ms719776\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出的類別資料成員`CAssertionInfo`及其對應 OLE DB 資料行。 請參閱[判斷提示的資料列集](/previous-versions/windows/desktop/ms719776\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1152,14 +1155,16 @@ ms.locfileid: "42572047"
 |m_szDescription|DESCRIPTION|  
 
 ## <a name="catalog"></a> CCatalogs、 CCatalogInfo
+
 呼叫 typedef 類別`CCatalogs`來實作其參數類別`CCatalogInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別可從 DBMS 存取資料庫目錄相關聯的實體屬性。  
+這個類別會識別可從 DBMS 存取資料庫目錄相關聯的實體屬性。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[目錄的資料列集](/previous-versions/windows/desktop/ms721241\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[目錄的資料列集](/previous-versions/windows/desktop/ms721241\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1167,14 +1172,16 @@ ms.locfileid: "42572047"
 |m_szDescription|DESCRIPTION|  
 
 ## <a name="characterset"></a> CCharacterSets、 CCharacterSetInfo
+
 呼叫 typedef 類別`CCharacterSets`來實作其參數類別`CCharacterSetInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 此類別會識別出在指定的使用者可存取的目錄中所定義的字元集。  
+此類別會識別出在指定的使用者可存取的目錄中所定義的字元集。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[CHARACTER_SETS 資料列集](/previous-versions/windows/desktop/ms722638\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[CHARACTER_SETS 資料列集](/previous-versions/windows/desktop/ms722638\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1188,14 +1195,16 @@ ms.locfileid: "42572047"
 |m_szCollateName|DEFAULT_COLLATE_NAME|  
 
 ## <a name="checkconstraint"></a> CCheckConstraints、 CCheckConstraintInfo
+
 呼叫 typedef 類別`CCheckConstraints`來實作其參數類別`CCheckConstraintInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別定義檢查條件約束，在目錄中，指定使用者所擁有。 檢查條件約束指定的資料值或資料表中的一或多個資料行中可接受的格式。  
+這個類別會識別定義檢查條件約束，在目錄中，指定使用者所擁有。 檢查條件約束指定的資料值或資料表中的一或多個資料行中可接受的格式。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[CHECK_CONSTRAINTS 資料列集](/previous-versions/windows/desktop/ms712845\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[CHECK_CONSTRAINTS 資料列集](/previous-versions/windows/desktop/ms712845\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1206,14 +1215,16 @@ ms.locfileid: "42572047"
 |m_szDescription|DESCRIPTION|  
 
 ## <a name="collation"></a> CCollations、 CCollationInfo
+
 呼叫 typedef 類別`CCollations`來實作其參數類別`CCollationInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別字元定序，在目錄中，定義所指定的使用者進行存取。  
+這個類別會識別字元定序，在目錄中，定義所指定的使用者進行存取。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[定序的資料列集](/previous-versions/windows/desktop/ms715783\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[定序的資料列集](/previous-versions/windows/desktop/ms715783\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1226,14 +1237,16 @@ ms.locfileid: "42572047"
 |m_szPadAttribute|PAD_ATTRIBUTE|  
 
 ## <a name="columndomainusage"></a> CColumnDomainUsage、 CColumnDomainUsageInfo
+
 呼叫 typedef 類別`CColumnDomainUsage`來實作其參數類別`CColumnDomainUsageInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別定義的資料行，在目錄中，相依於目錄中所定義且由指定使用者擁有的網域。  
+這個類別會識別定義的資料行，在目錄中，相依於目錄中所定義且由指定使用者擁有的網域。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[COLUMN_DOMAIN_USAGE 資料列集](/previous-versions/windows/desktop/ms711240\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[COLUMN_DOMAIN_USAGE 資料列集](/previous-versions/windows/desktop/ms711240\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1248,14 +1261,16 @@ ms.locfileid: "42572047"
 |m_nColumnPropID|COLUMN_PROPID|  
 
 ## <a name="columnprivilege"></a> CColumnPrivileges、 CColumnPrivilegeInfo
+
 呼叫 typedef 類別`CColumnPrivileges`來實作其參數類別`CColumnPrivilegeInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別資料行的資料表，定義在目錄中，可以取得或授與的指定使用者的權限。  
+這個類別會識別資料行的資料表，定義在目錄中，可以取得或授與的指定使用者的權限。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[COLUMN_PRIVILEGES 資料列集](/previous-versions/windows/desktop/ms715800\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[COLUMN_PRIVILEGES 資料列集](/previous-versions/windows/desktop/ms715800\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1271,14 +1286,16 @@ ms.locfileid: "42572047"
 |m_bIsGrantable|IS_GRANTABLE|  
 
 ## <a name="columns"></a> CColumns、 CColumnsInfo
+
 呼叫 typedef 類別`CColumns`來實作其參數類別`CColumnsInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別在目錄中定義的資料表由指定使用者可存取的資料行。  
+這個類別會識別在目錄中定義的資料表由指定使用者可存取的資料行。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[COLUMNS 資料列集](/previous-versions/windows/desktop/ms723052\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[COLUMNS 資料列集](/previous-versions/windows/desktop/ms723052\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1312,14 +1329,16 @@ ms.locfileid: "42572047"
 |m_szDescription|DESCRIPTION|  
   
 ## <a name="constraintcolumnusage"></a> CConstraintColumnUsage、 CConstraintColumnUsageInfo
+
 呼叫 typedef 類別`CConstraintColumnUsage`來實作其參數類別`CConstraintColumnUsageInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別參考條件約束、 唯一條件約束、 check 條件約束和判斷提示所使用、 在目錄中定義及所指定的使用者擁有的資料行。  
+這個類別會識別參考條件約束、 唯一條件約束、 check 條件約束和判斷提示所使用、 在目錄中定義及所指定的使用者擁有的資料行。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[CONSTRAINT_COLUMN_USAGE 資料列集](/previous-versions/windows/desktop/ms724522\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[CONSTRAINT_COLUMN_USAGE 資料列集](/previous-versions/windows/desktop/ms724522\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1334,14 +1353,16 @@ ms.locfileid: "42572047"
 |m_szConstraintName|CONSTRAINT_NAME|  
 
 ## <a name="constrainttableusage"></a> CConstraintTableUsage、 CConstraintTableUsageInfo
+
 呼叫 typedef 類別`CConstraintTableUsage`來實作其參數類別`CConstraintTableUsageInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別參考條件約束、 唯一條件約束、 check 條件約束和判斷提示所使用、 在目錄中定義及所指定的使用者擁有的資料表。  
+這個類別會識別參考條件約束、 唯一條件約束、 check 條件約束和判斷提示所使用、 在目錄中定義及所指定的使用者擁有的資料表。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[CONSTRAINT_TABLE_USAGE 資料列集](/previous-versions/windows/desktop/ms724522\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[CONSTRAINT_TABLE_USAGE 資料列集](/previous-versions/windows/desktop/ms724522\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1353,14 +1374,16 @@ ms.locfileid: "42572047"
 |m_szConstraintName|CONSTRAINT_NAME|  
 
 ## <a name="foreignkeys"></a> CForeignKeys、 CForeignKeysInfo
+
 呼叫 typedef 類別`CForeignKeys`來實作其參數類別`CForeignKeysInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別在目錄中由指定使用者定義的外部索引鍵資料行。  
+這個類別會識別在目錄中由指定使用者定義的外部索引鍵資料行。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[FOREIGN_KEYS 資料列集](/previous-versions/windows/desktop/ms711276\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[FOREIGN_KEYS 資料列集](/previous-versions/windows/desktop/ms711276\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1381,14 +1404,16 @@ ms.locfileid: "42572047"
 |m_szDeleteRule|DELETE_RULE|  
 
 ## <a name="index"></a> CIndexes、 CIndexInfo
+
 呼叫 typedef 類別`CIndexes`來實作其參數類別`CIndexInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別定義的索引，在目錄中，指定使用者所擁有。  
+這個類別會識別定義的索引，在目錄中，指定使用者所擁有。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[INDEXES 資料列集](/previous-versions/windows/desktop/ms709712\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[INDEXES 資料列集](/previous-versions/windows/desktop/ms709712\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1418,14 +1443,16 @@ ms.locfileid: "42572047"
 |m_szFilterCondition|FILTER_CONDITION|  
   
 ## <a name="keycolumn"></a> CKeyColumns、 CKeyColumnInfo
+
 呼叫 typedef 類別`CKeyColumns`來實作其參數類別`CKeyColumnInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別資料行，定義在目錄中，會受限於做為索引鍵指定的使用者。  
+這個類別會識別資料行，定義在目錄中，會受限於做為索引鍵指定的使用者。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[KEY_COLUMN_USAGE 資料列集](/previous-versions/windows/desktop/ms712990\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[KEY_COLUMN_USAGE 資料列集](/previous-versions/windows/desktop/ms712990\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1441,14 +1468,16 @@ ms.locfileid: "42572047"
 |m_nOrdinalPosition|ORDINAL_POSITION|  
 
 ## <a name="primarykey"></a> CPrimaryKeys、 CPrimaryKeyInfo
+
 呼叫 typedef 類別`CPrimaryKeys`來實作其參數類別`CPrimaryKeyInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別在目錄中由指定使用者定義的主索引鍵資料行。  
+這個類別會識別在目錄中由指定使用者定義的主索引鍵資料行。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[PRIMARY_KEYS 資料列集](/previous-versions/windows/desktop/ms714362\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[PRIMARY_KEYS 資料列集](/previous-versions/windows/desktop/ms714362\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1461,14 +1490,16 @@ ms.locfileid: "42572047"
 |m_nOrdinal|序數|  
 
 ## <a name="procedurecolumn"></a> CProcedureColumns、 CProcedureColumnInfo
+
 呼叫 typedef 類別`CProcedureColumns`來實作其參數類別`CProcedureColumnInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會傳回有關的程序所傳回的資料列集資料行資訊。  
+這個類別會傳回有關的程序所傳回的資料列集資料行資訊。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[PROCEDURE_COLUMNS 資料列集](/previous-versions/windows/desktop/ms723092\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[PROCEDURE_COLUMNS 資料列集](/previous-versions/windows/desktop/ms723092\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1490,14 +1521,16 @@ ms.locfileid: "42572047"
 |m_szDescription|DESCRIPTION|  
 
 ## <a name="procedureparam"></a> CProcedureParameters、 CProcedureParamInfo
+
 呼叫 typedef 類別`CProcedureParameters`來實作其參數類別`CProcedureParamInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會傳回參數和傳回碼的程序的相關資訊。  
+這個類別會傳回參數和傳回碼的程序的相關資訊。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[PROCEDURE_PARAMETERS 資料列集](/previous-versions/windows/desktop/ms713623\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[PROCEDURE_PARAMETERS 資料列集](/previous-versions/windows/desktop/ms713623\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1518,14 +1551,16 @@ ms.locfileid: "42572047"
 |m_szDescription|DESCRIPTION|  
 
 ## <a name="procedure"></a> CProcedures、 CProcedureInfo
+
 呼叫 typedef 類別`CProcedures`來實作其參數類別`CProcedureInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別定義的程序，在目錄中，指定使用者所擁有。  
+這個類別會識別定義的程序，在目錄中，指定使用者所擁有。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[程序的資料列集](/previous-versions/windows/desktop/ms724021\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[程序的資料列集](/previous-versions/windows/desktop/ms724021\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1537,14 +1572,16 @@ ms.locfileid: "42572047"
 |m_szDescription|DESCRIPTION|  
 
 ## <a name="provider"></a> CProviderTypes、 CProviderInfo
+
 呼叫 typedef 類別`CProviderTypes`來實作其參數類別`CProviderInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別資料提供者所支援的 （基底） 的資料類型。  
+這個類別會識別資料提供者所支援的 （基底） 的資料類型。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[PROVIDER_TYPES 資料列集](/previous-versions/windows/desktop/ms709785\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[PROVIDER_TYPES 資料列集](/previous-versions/windows/desktop/ms709785\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1570,14 +1607,16 @@ ms.locfileid: "42572047"
 |m_bBestMatch|BEST_MATCH|  
 
 ## <a name="referentialconstraint"></a> CReferentialConstraints、 CReferentialConstraintInfo
+
 呼叫 typedef 類別`CReferentialConstraints`來實作其參數類別`CReferentialConstraintInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別參考條件約束，定義在目錄中，指定使用者所擁有。  
+這個類別會識別參考條件約束，定義在目錄中，指定使用者所擁有。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[REFERENTIAL_CONSTRAINTS 資料列集](/previous-versions/windows/desktop/ms719737\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[REFERENTIAL_CONSTRAINTS 資料列集](/previous-versions/windows/desktop/ms719737\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1593,14 +1632,16 @@ ms.locfileid: "42572047"
 |m_szDescription|DESCRIPTION|  
 
 ## <a name="schemata"></a> CSchemata、 CSchemataInfo
+
 呼叫 typedef 類別`CSchemata`來實作其參數類別`CSchemataInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別由指定使用者所擁有的結構描述。  
+這個類別會識別由指定使用者所擁有的結構描述。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[結構描述資料列集](/previous-versions/windows/desktop/ms716887\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[結構描述資料列集](/previous-versions/windows/desktop/ms716887\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1612,14 +1653,16 @@ ms.locfileid: "42572047"
 |m_szCharName|DEFAULT_CHARACTER_SET_NAME|  
 
 ## <a name="sqllanguage"></a> CSQLLanguages、 CSQLLanguageInfo
+
 呼叫 typedef 類別`CSQLLanguages`來實作其參數類別`CSQLLanguageInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別的一致性層級、 選項，以及定義在目錄中的 SQL 實作處理資料所支援的方言。  
+這個類別會識別的一致性層級、 選項，以及定義在目錄中的 SQL 實作處理資料所支援的方言。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[SQL_LANGUAGES 資料列集](/previous-versions/windows/desktop/ms714374\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[SQL_LANGUAGES 資料列集](/previous-versions/windows/desktop/ms714374\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1632,14 +1675,16 @@ ms.locfileid: "42572047"
 |m_szProgrammingLanguage|SQL_LANGUAGE_PROGRAMMING_LANGUAGE|  
 
 ## <a name="statistic"></a> CStatistics、 CStatisticInfo
+
 呼叫 typedef 類別`CStatistics`來實作其參數類別`CStatisticInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別定義的統計資料，在目錄中，指定使用者所擁有。  
+這個類別會識別定義的統計資料，在目錄中，指定使用者所擁有。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[統計資料資料列集](/previous-versions/windows/desktop/ms715957\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[統計資料資料列集](/previous-versions/windows/desktop/ms715957\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1649,14 +1694,16 @@ ms.locfileid: "42572047"
 |m_nCardinality|CARDINALITY|  
 
 ## <a name="tableconstraint"></a> CTableConstraints、 CTableConstraintInfo
+
 呼叫 typedef 類別`CTableConstraints`來實作其參數類別`CTableConstraintInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別資料表定義的條件約束，在目錄中，指定使用者所擁有。  
+這個類別會識別資料表定義的條件約束，在目錄中，指定使用者所擁有。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[TABLE_CONSTRAINTS 資料列集](/previous-versions/windows/desktop/ms715921\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[TABLE_CONSTRAINTS 資料列集](/previous-versions/windows/desktop/ms715921\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1672,14 +1719,16 @@ ms.locfileid: "42572047"
 |m_szDescription|DESCRIPTION|  
 
 ## <a name="tableprivilege"></a> CTablePrivileges、 CTablePrivilegeInfo
+
 呼叫 typedef 類別`CTablePrivileges`來實作其參數類別`CTablePrivilegeInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別定義在目錄中由指定使用者可存取的資料表。  
+這個類別會識別定義在目錄中由指定使用者可存取的資料表。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[TABLE_PRIVILEGES 資料列集](/previous-versions/windows/desktop/ms725428\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[TABLE_PRIVILEGES 資料列集](/previous-versions/windows/desktop/ms725428\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1692,14 +1741,16 @@ ms.locfileid: "42572047"
 |m_bIsGrantable|IS_GRANTABLE|  
 
 ## <a name="table"></a> CTables、 CTableInfo
+
 呼叫 typedef 類別`CTables`來實作其參數類別`CTableInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別在資料表上，定義在目錄中，以使用或所指定的使用者授與的權限。  
+這個類別會識別在資料表上，定義在目錄中，以使用或所指定的使用者授與的權限。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[TABLES 資料列集](/previous-versions/windows/desktop/ms716980\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[TABLES 資料列集](/previous-versions/windows/desktop/ms716980\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1711,14 +1762,16 @@ ms.locfileid: "42572047"
 |m_szDescription|DESCRIPTION|  
 
 ## <a name="translation"></a> CTranslations、 CTranslationInfo
+
 呼叫 typedef 類別`CTranslations`來實作其參數類別`CTranslationInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別由指定使用者可存取的字元轉譯在目錄中定義。  
+這個類別會識別由指定使用者可存取的字元轉譯在目錄中定義。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[翻譯的資料列集](/previous-versions/windows/desktop/ms725365\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[翻譯的資料列集](/previous-versions/windows/desktop/ms725365\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1733,14 +1786,16 @@ ms.locfileid: "42572047"
 |m_szTargetName|TARGET_CHARACTER_SET_NAME|  
 
 ## <a name="usageprivilege"></a> CUsagePrivileges、 CUsagePrivilegeInfo
+
 呼叫 typedef 類別`CUsagePrivileges`來實作其參數類別`CUsagePrivilegeInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別在目錄中所定義的物件，可用於或所指定的使用者授與的使用量權限。  
+這個類別會識別在目錄中所定義的物件，可用於或所指定的使用者授與的使用量權限。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[USAGE_PRIVILEGES 資料列集](/previous-versions/windows/desktop/ms722743\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[USAGE_PRIVILEGES 資料列集](/previous-versions/windows/desktop/ms722743\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1754,14 +1809,16 @@ ms.locfileid: "42572047"
 |m_bIsGrantable|IS_GRANTABLE|  
 
 ## <a name="viewcolumn"></a> CViewColumnUsage、 CViewColumnInfo
+
 呼叫 typedef 類別`CViewColumnUsage`來實作其參數類別`CViewColumnInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別資料行上檢視目錄中定義的資料表，而且所指定的使用者，擁有相依。  
+這個類別會識別資料行上檢視目錄中定義的資料表，而且所指定的使用者，擁有相依。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[VIEW_COLUMN_USAGE 資料列集](/previous-versions/windows/desktop/ms714896\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[VIEW_COLUMN_USAGE 資料列集](/previous-versions/windows/desktop/ms714896\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1776,14 +1833,16 @@ ms.locfileid: "42572047"
 |m_nColumnPropID|COLUMN_PROPID|  
 
 ## <a name="view"></a> CViews、 CViewInfo
+
 呼叫 typedef 類別`CViews`來實作其參數類別`CViewInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別資料表在檢視定義在目錄中的資料表而且所指定的使用者，擁有相依。  
+這個類別會識別資料表在檢視定義在目錄中的資料表而且所指定的使用者，擁有相依。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[檢視資料列集](/previous-versions/windows/desktop/ms723122\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[檢視資料列集](/previous-versions/windows/desktop/ms723122\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1796,14 +1855,16 @@ ms.locfileid: "42572047"
 |m_szDescription|DESCRIPTION|  
 
 ## <a name="viewtable"></a> CViewTableUsage、 CViewTableInfo
+
 呼叫 typedef 類別`CViewTableUsage`來實作其參數類別`CViewTableInfo`。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
+
+請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別檢視定義的資料表，在目錄中，由指定使用者可存取。  
+這個類別會識別檢視定義的資料表，在目錄中，由指定使用者可存取。  
   
- 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[VIEW_TABLE_USAGE 資料列集](/previous-versions/windows/desktop/ms719727\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[VIEW_TABLE_USAGE 資料列集](/previous-versions/windows/desktop/ms719727\(v=vs.85\))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
 |------------------|--------------------|  
@@ -1815,7 +1876,9 @@ ms.locfileid: "42572047"
 |m_szTableName|TABLE_NAME|  
 
 ## <a name="requirements"></a>需求  
- **標頭：** atldbsch.h  
+
+**標頭：** atldbsch.h  
   
 ## <a name="see-also"></a>另請參閱  
- [CRestrictions 類別](../../data/oledb/crestrictions-class.md)
+
+[CRestrictions 類別](../../data/oledb/crestrictions-class.md)

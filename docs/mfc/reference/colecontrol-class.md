@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e9e12409320bd82e25f94c02cba83b946252fff
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d3c5f68d35c4cf77073de3f8d2e6090f62a6dae2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196435"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050095"
 ---
 # <a name="colecontrol-class"></a>COleControl 類別
 開發 OLE 控制項的強大基底類別。
@@ -1692,17 +1692,14 @@ enum ControlFlags {
 
 根據預設，`GetControlFlags`傳回`fastBeginPaint | clipPaintDC`。
 
-`fastBeginPaint` 如果設定，請使用 begin 小畫家函式量身訂做的 OLE 控制項，而不是[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) API （預設設定）。
-
-`clipPaintDC` 如果未設定標題，會停用來呼叫`IntersectClipRect`所做的`COleControl`並獲得小型的速度上的優勢。 如果您使用無視窗啟用時，此旗標沒有任何作用。
-
-`pointerInactive` 如果設定，藉由啟用您的控制項為非作用中時提供滑鼠互動`COleControl`的實作`IPointerInactive`介面，預設會停用。
-
-`noFlickerActivate` 如果設定，可排除額外繪圖作業和視覺重繪。 當您的控制項繪製本身相同的非作用中和作用中狀態時使用。 如果您使用無視窗啟用時，此旗標沒有任何作用。
-
-`windowlessActivate` 如果設定，指出您的控制項使用無視窗啟用。
-
-`canOptimizeDraw` 如果設定，表示控制項，會執行最佳化的繪圖，如果容器支援它。
+|||
+|-|-|
+|`fastBeginPaint`|如果設定，請使用 begin 小畫家函式量身訂做的 OLE 控制項，而不是[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) API （預設設定）。|
+|`clipPaintDC`|如果未設定標題，會停用來呼叫`IntersectClipRect`所做的`COleControl`並獲得小型的速度上的優勢。 如果您使用無視窗啟用時，此旗標沒有任何作用。|
+|`pointerInactive`|如果設定，藉由啟用您的控制項為非作用中時提供滑鼠互動`COleControl`的實作`IPointerInactive`介面，預設會停用。|
+|`noFlickerActivate`|如果設定，可排除額外繪圖作業和視覺重繪。 當您的控制項繪製本身相同的非作用中和作用中狀態時使用。 如果您使用無視窗啟用時，此旗標沒有任何作用。|
+|`windowlessActivate`|如果設定，指出您的控制項使用無視窗啟用。|
+|`canOptimizeDraw`|如果設定，表示控制項，會執行最佳化的繪圖，如果容器支援它。|
 
 如需詳細資訊`GetControlFlags`和其他最佳化的 OLE 控制項，請參閱[ActiveX 控制項： 最佳化](../../mfc/mfc-activex-controls-optimization.md)。
 
@@ -2005,7 +2002,7 @@ virtual IDropTarget* GetWindowlessDropTarget();
 
 ### <a name="remarks"></a>備註
 
-通常這會需要將控制項的視窗登錄為置放目標。 但是，由於控制項沒有自己的視窗，容器會使用它自己的視窗做為置放目標。 控制項只需要提供的實作`IDropTarget`介面的容器可以在適當時委派呼叫。 例如:
+通常這會需要將控制項的視窗登錄為置放目標。 但是，由於控制項沒有自己的視窗，容器會使用它自己的視窗做為置放目標。 控制項只需要提供的實作`IDropTarget`介面的容器可以在適當時委派呼叫。 例如: 
 
 [!code-cpp[NVC_MFCAxCtl#2](../../mfc/reference/codesnippet/cpp/colecontrol-class_3.cpp)]
 
@@ -2466,7 +2463,7 @@ virtual BOOL OnEdit(
 
 這有相同的效果與叫用控制項的 OLEIVERB_UIACTIVATE 動詞命令。
 
-此函式通常用於和的處理常式函式 ON_OLEVERB 訊息對應項目。 這提供"Edit"動詞命令功能表中控制項的 「 物件 」。 例如:
+此函式通常用於和的處理常式函式 ON_OLEVERB 訊息對應項目。 這提供"Edit"動詞命令功能表中控制項的 「 物件 」。 例如: 
 
 [!code-cpp[NVC_MFCAxCtl#5](../../mfc/reference/codesnippet/cpp/colecontrol-class_6.cpp)]
 

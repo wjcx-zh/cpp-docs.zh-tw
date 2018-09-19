@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2656 |Microsoft 文件
+title: 編譯器錯誤 C2656 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e4dbae6232f50b9241f5542928311e8944501e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd4b0e4ee89bc2cd2c31e476bdc4ee19bfb8a3aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229117"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043764"
 ---
 # <a name="compiler-error-c2656"></a>編譯器錯誤 C2656
-'function': 函式不允許當做位元欄位  
-  
- 函式宣告為位元欄位的成員。  
-  
- 這個錯誤可能被因建構函式初始設定式清單中有語法錯誤。
+
+'function': 不允許為位元欄位的函式
+
+函式會宣告為位元欄位的成員。
+
+此錯誤可能被因建構函式初始設定式清單中有語法錯誤。

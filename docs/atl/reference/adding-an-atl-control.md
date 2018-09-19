@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 584a40e6fb2f733f675945e57cf6d06f330e19be
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 47bbd73efc13eb28ed177c39366ae58cd9c91adc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757051"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063186"
 ---
 # <a name="adding-an-atl-control"></a>新增 ATL 控制項
 
@@ -46,6 +46,6 @@ ms.locfileid: "43757051"
 
 ## <a name="see-also"></a>另請參閱
 
-[將功能加入至複合控制項](../../atl/adding-functionality-to-the-composite-control.md)   
+[將功能新增至複合控制項](../../atl/adding-functionality-to-the-composite-control.md)<br/>
 [ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)   
 

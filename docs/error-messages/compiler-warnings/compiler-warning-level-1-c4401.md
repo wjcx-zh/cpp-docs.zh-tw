@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 1） C4401 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4401 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8b8a7a2bced261bbff09422c3dfa6454061f636
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f9f7bfcf826b9bda4232a8f4068d8be45dc3ab5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277003"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043543"
 ---
 # <a name="compiler-warning-level-1-c4401"></a>編譯器警告 (層級 1) C4401
-'位元欄位': 成員是位元欄位  
-  
- 內嵌組譯程式碼嘗試存取的位元欄位成員。 內嵌組譯碼無法存取位元欄位成員，因此會使用位元欄位成員之前的最後一個封裝界限。  
-  
- 若要避免這個警告，轉換位元欄位，適當的型別之前在內嵌組譯碼的參考。 下列範例會產生 C4401:  
-  
-```  
-// C4401.cpp  
-// compile with: /W1  
-// processor: x86  
-typedef struct bitfield {  
-   signed bit : 1;  
-} mybitfield;  
-  
-int main() {  
-   mybitfield bf;  
-   bf.bit = 0;  
-   __asm {  
-      mov bf.bit,0;   // C4401  
-   }  
-  
-   /* use the following __asm block to resolve the warning  
-   int i = (int)bf.bit;  
-   __asm {  
-      mov i,0;  
-   }  
-   */  
-}  
+
+'位元欄位': 成員是位元欄位
+
+內嵌組譯程式碼會嘗試存取的位元欄位成員。 內嵌組譯碼無法存取位元欄位成員，所以會使用位元欄位成員之前的最後一個封裝界限。
+
+若要避免這個警告，請在內嵌組譯碼中進行參考之前，先轉換位元欄位，以適當的型別。 下列範例會產生 C4401:
+
+```
+// C4401.cpp
+// compile with: /W1
+// processor: x86
+typedef struct bitfield {
+   signed bit : 1;
+} mybitfield;
+
+int main() {
+   mybitfield bf;
+   bf.bit = 0;
+   __asm {
+      mov bf.bit,0;   // C4401
+   }
+
+   /* use the following __asm block to resolve the warning
+   int i = (int)bf.bit;
+   __asm {
+      mov i,0;
+   }
+   */
+}
 ```

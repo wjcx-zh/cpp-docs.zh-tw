@@ -1,5 +1,5 @@
 ---
-title: 嚴重錯誤 C1051 |Microsoft 文件
+title: 嚴重錯誤 C1051 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d83d399d8ceba495856045f0502cc0f08c21eb7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2bbd385d685f671d171ee5aaa967e92acab7fb38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198244"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057934"
 ---
 # <a name="fatal-error-c1051"></a>嚴重錯誤 C1051
-程式資料庫檔案 'pdbfile'，格式已過時，將其刪除並重新編譯  
-  
- 編譯器無法更新程式資料庫檔案，具有較舊的版本號碼。 刪除檔案，並重新編譯您的程式與 **/Zi**或 **/ZI**。 如需詳細資訊，請參閱[/Z7、 /Zi、 /ZI （偵錯資訊格式）](../../build/reference/z7-zi-zi-debug-information-format.md)
+
+程式資料庫檔案 'pdbfile'，已過時的格式，將它刪除並重新編譯
+
+編譯器無法更新程式資料庫檔案，其具有較舊的版本號碼。 刪除檔案，並重新編譯您的程式與 **/Zi**或是 **/ZI**。 如需詳細資訊，請參閱 [ /z7，/Zi，/ZI （偵錯資訊格式）](../../build/reference/z7-zi-zi-debug-information-format.md)

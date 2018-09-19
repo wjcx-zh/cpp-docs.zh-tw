@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3365 |Microsoft 文件
+title: 編譯器錯誤 C3365 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a41fc5b1eb5c93bf73685b5141bd91ab7a6058e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8cb585c2d1142651e5edd01085dd904be60bc86
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252516"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044713"
 ---
 # <a name="compiler-error-c3365"></a>編譯器錯誤 C3365
-運算子 'operator' : 類型 'type1' 和 'type2' 的不同運算元  
-  
-已嘗試撰寫不同類型的委派。  請參閱[如何： 定義和使用委派 (C + + /CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)如需委派的詳細資訊。  
-  
-## <a name="example"></a>範例  
-下列範例會產生 C3365：  
-  
-```cpp  
-// C3365.cpp  
-// compile with: /clr  
-delegate void D1();  
-delegate void D2(int);  
-  
-ref class R {  
-public:  
-   void f(){}  
-   void g(int){}  
-};  
-  
-int main() {  
-   D1^ d1 = gcnew D1(gcnew R, &R::f);  
-   D2^ d2 = gcnew D2(gcnew R, &R::g);  
-   D1^ d3 = gcnew D1(gcnew R, &R::f);  
-  
-   d1 += d2;   // C3365  
-   d1 += d3;   // OK  
-   d1();  
-}  
+
+運算子 'operator' : 類型 'type1' 和 'type2' 的不同運算元
+
+已嘗試撰寫不同類型的委派。  請參閱[如何： 定義和使用委派 (C + + /cli CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)如需委派的詳細資訊。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C3365：
+
+```cpp
+// C3365.cpp
+// compile with: /clr
+delegate void D1();
+delegate void D2(int);
+
+ref class R {
+public:
+   void f(){}
+   void g(int){}
+};
+
+int main() {
+   D1^ d1 = gcnew D1(gcnew R, &R::f);
+   D2^ d2 = gcnew D2(gcnew R, &R::g);
+   D1^ d3 = gcnew D1(gcnew R, &R::f);
+
+   d1 += d2;   // C3365
+   d1 += d3;   // OK
+   d1();
+}
 ```

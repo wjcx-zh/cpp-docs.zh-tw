@@ -1,5 +1,5 @@
 ---
-title: 專案建置錯誤 PRJ0003 |Microsoft 文件
+title: 專案建置錯誤 PRJ0003 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a44f272569741b1897caed1d1d64832d8b113eae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3d1a23b8171c916b05df1d715f803893ab0720e6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316432"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053813"
 ---
-# <a name="project-build-error-prj0003"></a>專案建置錯誤 PRJ0003  
-  
-> 錯誤繁衍 （spawn) '*命令列*'。  
-  
-*命令列*命令內輸入形成的**屬性頁**對話方塊傳回的錯誤碼，但會顯示任何資訊**輸出**視窗。  
+# <a name="project-build-error-prj0003"></a>專案建置錯誤 PRJ0003
 
-此錯誤的可能原因包括：  
-  
--   您的專案相依於 ATL Server。 從 Visual Studio 2008 中，ATL Server 已不再包含在 Visual Studio 中，但在 CodePlex 上的共用來源專案已發行。 若要下載的 ATL Server 的原始碼及工具，請移至[ATL 伺服器程式庫和工具](http://go.microsoft.com/fwlink/p/?linkid=81979)。  
-  
--   系統資源不足。 關閉一些應用程式，以解決此問題。  
-  
--   安全性權限不足。 請確認您有足夠的安全性權限。  
-  
--   中指定的可執行檔路徑**VC + + 目錄**不包含您嘗試執行此工具的路徑。 如需資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)  
-  
--   Makefile 專案遺漏上執行的命令**建置命令列**或**重建命令列**。  
-  
-## <a name="see-also"></a>另請參閱  
- [專案建置錯誤和警告 (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)
+> 錯誤繁衍 '*命令列*'。
+
+*命令列*格式，從輸入中的命令**屬性頁** 對話方塊中傳回的錯誤碼，但會顯示任何資訊**輸出**視窗。
+
+此錯誤的可能原因包括：
+
+- 您的專案相依於 ATL Server。 從 Visual Studio 2008 中，ATL Server 已不再屬於 Visual Studio 中，但已發行為 CodePlex 的共用原始碼專案。 若要下載 ATL Server 原始程式碼和工具，請前往[ATL 伺服器程式庫和工具](http://go.microsoft.com/fwlink/p/?linkid=81979)。
+
+- 系統資源不足。 關閉一些應用程式，以解決此問題。
+
+- 安全性權限不足。 請確認您有足夠的安全性權限。
+
+- 可執行檔中指定的路徑**VC + + 目錄**不包含您嘗試執行此工具的路徑。 如需資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)
+
+- Makefile 專案中，您沒有要在其中執行的命令**建置命令列**或是**重建命令列**。
+
+## <a name="see-also"></a>另請參閱
+
+[專案建置錯誤和警告 (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)

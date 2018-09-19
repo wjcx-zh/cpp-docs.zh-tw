@@ -1,5 +1,5 @@
 ---
-title: 專案建置錯誤 PRJ0027 |Microsoft 文件
+title: 專案建置錯誤 PRJ0027 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a1c25f87913de312ca766b05edbac39f7191ff0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c642c678c7db29b9826449731f07ad90bc865294
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318983"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062055"
 ---
 # <a name="project-build-error-prj0027"></a>專案建置錯誤 PRJ0027
-Unicode 記錄訊息 '內容' 包含無法轉譯為使用者 ANSI 字碼頁的內容。  
-  
- 您通常只會看到搭配這個警告，但發生錯誤，建立批次和/或回應檔案。  
-  
- 此錯誤的解決方法是，更新組建記錄檔來使用 ANSI，或是在電腦上安裝的字碼頁，並將它設為系統預設值的內容。
+
+Unicode 記錄訊息 '內容' 包含無法轉譯為使用者 ANSI 字碼頁的內容。
+
+您通常只會看到這個警告一起建立批次和/或回應檔案中發生錯誤。
+
+此錯誤的解決方法是更新組建記錄檔來使用 ANSI，或是在電腦上安裝的字碼頁，並將它設為系統預設值的內容。

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1684c8fa380a7d17c802ad404c38c59f2257c979
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eea09c8490bd2b34cc4c5cd99946d0d9dca7a44c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752023"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068206"
 ---
 # <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl 類別
 
@@ -42,7 +42,7 @@ template <class T>
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您的類別，衍生自`IObjectWithSiteImpl`。
 
 ## <a name="members"></a>成員
@@ -117,7 +117,7 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 
 ### <a name="parameters"></a>參數
 
-*pUnkSite*  
+*pUnkSite*<br/>
 [in]指標`IUnknown`管理此物件的站台的介面指標。 如果是 NULL，應呼叫物件`IUnknown::Release`上任何現有的站台，屆時物件不再知道其站台。
 
 ### <a name="return-value"></a>傳回值

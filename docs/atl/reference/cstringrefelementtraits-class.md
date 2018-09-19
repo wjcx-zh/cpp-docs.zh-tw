@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 223d781e879f2d1c3a35fce00e788a42247299eb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8369afbbf423f85df0e38f7f2979b3b7e48f8591
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760093"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067918"
 ---
 # <a name="cstringrefelementtraits-class"></a>CStringRefElementTraits 類別
 
@@ -34,13 +34,13 @@ ms.locfileid: "43760093"
 ## <a name="syntax"></a>語法
 
 ```
-template <typename T>  
+template <typename T>
 class CStringRefElementTraits : public CElementTraitsBase<T>
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 若要在集合中儲存的資料型別。
 
 ## <a name="members"></a>成員
@@ -79,10 +79,10 @@ static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
 
 ### <a name="parameters"></a>參數
 
-*element1*  
+*element1*<br/>
 第一個字串項目。
 
-*element2*  
+*element2*<br/>
 第二個字串項目。
 
 ### <a name="return-value"></a>傳回值
@@ -99,10 +99,10 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 
 ### <a name="parameters"></a>參數
 
-*str1*  
+*str1*<br/>
 第一個字串項目。
 
-*str2*  
+*str2*<br/>
 第二個字串項目。
 
 ### <a name="return-value"></a>傳回值
@@ -119,7 +119,7 @@ static ULONG Hash(INARGTYPE str) throw();
 
 ### <a name="parameters"></a>參數
 
-*str*  
+*str*<br/>
 字串項目中。
 
 ### <a name="return-value"></a>傳回值
@@ -128,5 +128,5 @@ static ULONG Hash(INARGTYPE str) throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[CElementTraitsBase 類別](../../atl/reference/celementtraitsbase-class.md)   
+[CElementTraitsBase 類別](../../atl/reference/celementtraitsbase-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

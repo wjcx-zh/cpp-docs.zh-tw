@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 1） C4807 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4807 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22710ee2b46a270e46aed7c043d4d988fcfaed62
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8eecbd1e7c9c88ec463224b9738cebbf9ff8f4d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282359"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039864"
 ---
 # <a name="compiler-warning-level-1-c4807"></a>編譯器警告 (層級 1) C4807
-'operation' : 不安全的混用類型 'type' 和類型 'type' 的已簽名位元欄位  
-  
- 比較一位元帶正負號位元欄位與 `bool` 變數時，會產生這個警告。 因為一位元帶正負號位元欄位只能包含值 -1 或 0，所以比較它與 `bool`十分危險。 不會產生有關混合使用 `bool` 與一位元未帶正負號位元欄位的警告，因為它們與 `bool` 相同，而且只能保留 0 或 1。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C4807：  
-  
-```  
-// C4807.cpp  
-// compile with: /W1  
-typedef struct bitfield {  
-   signed mybit : 1;  
-} mybitfield;  
-  
-int main() {  
-   mybitfield bf;  
-   bool b = true;  
-  
-   // try..  
-   // int b = true;  
-  
-   bf.mybit = -1;  
-   if (b == bf.mybit) {   // C4807  
-      b = false;  
-   }  
-}  
+
+'operation' : 不安全的混用類型 'type' 和類型 'type' 的已簽名位元欄位
+
+比較一位元帶正負號位元欄位與 `bool` 變數時，會產生這個警告。 因為一位元帶正負號位元欄位只能包含值 -1 或 0，所以比較它與 `bool`十分危險。 不會產生有關混合使用 `bool` 與一位元未帶正負號位元欄位的警告，因為它們與 `bool` 相同，而且只能保留 0 或 1。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C4807：
+
+```
+// C4807.cpp
+// compile with: /W1
+typedef struct bitfield {
+   signed mybit : 1;
+} mybitfield;
+
+int main() {
+   mybitfield bf;
+   bool b = true;
+
+   // try..
+   // int b = true;
+
+   bf.mybit = -1;
+   if (b == bf.mybit) {   // C4807
+      b = false;
+   }
+}
 ```

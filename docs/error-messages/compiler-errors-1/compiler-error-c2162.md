@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2162 |Microsoft 文件
+title: 編譯器錯誤 C2162 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc7cfebd4563e4d41f6ca50e2cdec667e82fb5f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48d59ed5f0bf85befac0f8c462620a23faa08f98
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167966"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053995"
 ---
 # <a name="compiler-error-c2162"></a>編譯器錯誤 C2162
-必須是巨集型式參數  
-  
- 下列字串化運算子 （#） 的語彙基元不是型式參數名稱。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C2162:  
-  
-```  
-// C2162.cpp  
-// compile with: /c  
-#include <stdio.h>  
-  
-#define print(a) printf_s(b)   // OK  
-#define print(a) printf_s(#b)    // C2162  
+
+必須是巨集型式參數
+
+字串化運算子 （#） 之後的語彙基元不是型式參數名稱。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C2162:
+
+```
+// C2162.cpp
+// compile with: /c
+#include <stdio.h>
+
+#define print(a) printf_s(b)   // OK
+#define print(a) printf_s(#b)    // C2162
 ```

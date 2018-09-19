@@ -16,56 +16,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1389635c3ef026e8b3a7dfe13976cca58a15a82
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 89377e33e56b0796fc850c050c8e79eac86ee07d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406714"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040462"
 ---
 # <a name="comerrorcomerror"></a>_com_error::_com_error
-**Microsoft 專屬**  
-  
- 建構 **_com_error**物件。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-_com_error(  
-   HRESULT hr,  
-   IErrorInfo* perrinfo = NULL,  
-   bool fAddRef=false) throw( );  
 
-_com_error( const _com_error& that ) throw( );  
-```  
-  
-#### <a name="parameters"></a>參數  
- *hr*  
- HRESULT 資訊。  
-  
- *perrinfo*  
- `IErrorInfo` 物件  
-  
- `bool fAddRef=false`  
- 會導致非 null 值上呼叫 AddRef 的建構函式`IErrorInfo`介面。 這會提供正確的參考計數介面的擁有權會傳遞至的常見案例 **_com_error**物件，例如：  
-  
-```cpp 
-throw _com_error(hr, perrinfo);  
-```  
-  
- 如果您不想要傳送擁有權轉移給您的程式碼 **_com_error**物件，而`AddRef`才能位移`Release`中 **_com_error**解構函式，建構的物件如下所示：  
-  
-```cpp 
-_com_error err(hr, perrinfo, true);  
-```  
-  
- *,*  
- 將現有 **_com_error**物件。  
-  
-## <a name="remarks"></a>備註  
- 第一個建構函式會建立新的物件，指定的 HRESULT 和選擇性`IErrorInfo`物件。 第二個建立的現有複本 **_com_error**物件。  
-  
- **結束 Microsoft 專屬**  
-  
-## <a name="see-also"></a>另請參閱  
- [_com_error 類別](../cpp/com-error-class.md)
+**Microsoft 專屬**
+
+建構 **_com_error**物件。
+
+## <a name="syntax"></a>語法
+
+```
+_com_error(
+   HRESULT hr,
+   IErrorInfo* perrinfo = NULL,
+   bool fAddRef=false) throw( );
+
+_com_error( const _com_error& that ) throw( );
+```
+
+#### <a name="parameters"></a>參數
+
+*hr*<br/>
+HRESULT 資訊。
+
+*perrinfo*<br/>
+`IErrorInfo` 物件
+
+*fAddRef*<br/>
+預設值會導致非 null 值上呼叫 AddRef 的建構函式`IErrorInfo`介面。 這會提供正確的參考計數介面的擁有權會傳遞至的常見案例 **_com_error**物件，例如：
+
+```cpp
+throw _com_error(hr, perrinfo);
+```
+
+如果您不想要傳送擁有權轉移給您的程式碼 **_com_error**物件，而`AddRef`才能位移`Release`中 **_com_error**解構函式，建構的物件如下所示：
+
+```cpp
+_com_error err(hr, perrinfo, true);
+```
+
+*,*<br/>
+將現有 **_com_error**物件。
+
+## <a name="remarks"></a>備註
+
+第一個建構函式會建立新的物件，指定的 HRESULT 和選擇性`IErrorInfo`物件。 第二個建立的現有複本 **_com_error**物件。
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>另請參閱
+
+[_com_error 類別](../cpp/com-error-class.md)

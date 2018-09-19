@@ -1,5 +1,5 @@
 ---
-title: context_unblock_unbalanced 類別 |Microsoft 文件
+title: context_unblock_unbalanced 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c964701f9a26c655bbb9529a112f036c7c9f0bf5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 54911e3e9c696cd2a390dc2f5b42e3917b08014f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685745"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037472"
 ---
 # <a name="contextunblockunbalanced-class"></a>context_unblock_unbalanced 類別
-這個類別描述時擲回的例外狀況呼叫`Block`和`Unblock`方法`Context`物件未正確配對。  
+這個類別描述時所擲回的例外狀況呼叫`Block`並`Unblock`方法`Context`物件未正確配對。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +43,7 @@ class context_unblock_unbalanced : public std::exception;
 |[context_unblock_unbalanced](#ctor)|多載。 建構 `context_unblock_unbalanced` 物件。|  
   
 ## <a name="remarks"></a>備註  
- 呼叫`Block`和`Unblock`方法`Context`物件必須一律正確配對。 並行執行階段可讓您按照任何順序，就可能發生的作業。 例如，呼叫 `Block` 之後可以呼叫 `Unblock`，反之亦然。 如果比方說，兩個呼叫會擲回這個例外狀況`Unblock`方法上，已進行資料列，`Context`物件已不會封鎖。  
+ 若要呼叫`Block`並`Unblock`方法`Context`物件必須永遠正確配對。 並行執行階段可讓任何一種順序進行的作業。 例如，呼叫 `Block` 之後可以呼叫 `Unblock`，反之亦然。 如果執行個體，兩個呼叫會擲回這個例外狀況`Unblock`方法進行了在資料列，`Context`物件已不會被封鎖。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `exception`  
@@ -67,8 +67,8 @@ context_unblock_unbalanced() throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Message`  
- 錯誤的描述性訊息。  
+*訊息 （_m)*<br/>
+錯誤的描述性訊息。  
   
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

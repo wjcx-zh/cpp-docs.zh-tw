@@ -1,5 +1,5 @@
 ---
-title: 嚴重錯誤 C1026 |Microsoft 文件
+title: 嚴重錯誤 C1026 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c034d45b7f8b222471094f4580902ae1b8dc66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db9167383df48dad274ef8941defaa53f51d3bfa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198101"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068984"
 ---
 # <a name="fatal-error-c1026"></a>嚴重錯誤 C1026
-剖析器堆疊溢位，程式太複雜  
-  
- 剖析程式所需的空間會造成編譯器堆疊溢位。  
-  
- 減少複雜度的運算式：  
-  
--   減少的巢狀`for`和`switch`陳述式。 更深的巢狀陳述式置於個別的函式中。  
-  
--   中斷長涉及逗號運算子或函數呼叫的運算式。
+
+剖析器堆疊溢位，程式太複雜
+
+剖析程式所需的空間會造成編譯器堆疊溢位。
+
+減少複雜度的運算式：
+
+- 減少在巢狀`for`和`switch`陳述式。 將更深的巢狀陳述式放在個別的函式。
+
+- 拆解長涉及逗號運算子或函式呼叫的運算式。

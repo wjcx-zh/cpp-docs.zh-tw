@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2831 |Microsoft 文件
+title: 編譯器錯誤 C2831 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73cd133d5dc355dc11c0128aea0ddb44dccafe80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a534fd379e8ec250f185370d7388171dc9ef3508
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242806"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047586"
 ---
 # <a name="compiler-error-c2831"></a>編譯器錯誤 C2831
-'operator operator' 不能有預設參數  
-  
- 只有三個運算子可以有預設參數：  
-  
--   [new](../../cpp/new-operator-cpp.md)  
-  
--   指派 =  
-  
--   左括號 (  
-  
- 下列範例會產生 C2831:  
-  
-```  
-// C2831.cpp  
-// compile with: /c  
-#define BINOP <=  
-class A {  
-public:  
-   int i;  
-   int operator BINOP(int x = 1) {   // C2831  
-   // try the following line instead  
-   // int operator BINOP(int x) {  
-      return i+x;  
-   }  
-};  
+
+'operator operator' 不能有預設參數
+
+只有三個運算子都可以有預設參數：
+
+- [new](../../cpp/new-operator-cpp.md)
+
+- 指派 =
+
+- 左括號 (
+
+下列範例會產生 C2831:
+
+```
+// C2831.cpp
+// compile with: /c
+#define BINOP <=
+class A {
+public:
+   int i;
+   int operator BINOP(int x = 1) {   // C2831
+   // try the following line instead
+   // int operator BINOP(int x) {
+      return i+x;
+   }
+};
 ```

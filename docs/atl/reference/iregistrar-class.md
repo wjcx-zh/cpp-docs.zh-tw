@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b445a0e1a2668047d34f18424f44b0dc7cc55f1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 10e5a6fda373c79b85dac5cfcf19739276a5c12f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760915"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039513"
 ---
 # <a name="iregistrar-interface"></a>IRegistrar 介面
 
@@ -147,7 +147,7 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
 
 ## <a name="see-also"></a>另請參閱
 
-[使用可置換的參數 （登錄器的前置處理器）](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)   
-[類別概觀](../../atl/atl-class-overview.md)   
-[模組類別](../../atl/atl-module-classes.md)   
+[使用可置換的參數 (登錄器的前置處理器)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
+[模組類別](../../atl/atl-module-classes.md)<br/>
 [登錄元件 （登錄器）](../../atl/atl-registry-component-registrar.md)

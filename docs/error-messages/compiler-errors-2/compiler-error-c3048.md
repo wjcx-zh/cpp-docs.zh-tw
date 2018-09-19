@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3048 |Microsoft 文件
+title: 編譯器錯誤 C3048 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 539172ed5956ac099b44af876aa1e4ebab6e47a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9d8a0862c0fff7e7ab3caacd7401f92d502c962f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245528"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061717"
 ---
 # <a name="compiler-error-c3048"></a>編譯器錯誤 C3048
-'#pragma omp atomic' 後面的運算式格式指定錯誤  
-  
- 不正確地指定不可部分完成的指示詞。  
-  
- 下列範例會產生 C3048：  
-  
-```  
-// C3048.cpp  
-// compile with: /openmp vcomps.lib  
-#include "omp.h"  
-#include <stdio.h>  
-  
-int main() {  
-   int a[10];  
-   omp_set_num_threads(4);  
-   #pragma omp parallel  
-   {  
-      #pragma omp atomic  
-      a[0] = 1;   // C3048  
-      // try the following line instead  
-      // a[0] += 1;  
-   }  
-}  
+
+'#pragma omp atomic' 後面的運算式格式指定錯誤
+
+不正確地指定不可部分完成的指示詞。
+
+下列範例會產生 C3048：
+
+```
+// C3048.cpp
+// compile with: /openmp vcomps.lib
+#include "omp.h"
+#include <stdio.h>
+
+int main() {
+   int a[10];
+   omp_set_num_threads(4);
+   #pragma omp parallel
+   {
+      #pragma omp atomic
+      a[0] = 1;   // C3048
+      // try the following line instead
+      // a[0] += 1;
+   }
+}
 ```

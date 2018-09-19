@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2420 |Microsoft 文件
+title: 編譯器錯誤 C2420 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e951c1007ccdd0885e19a6ef3b483128fcfc2a92
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a85e638edc5710c8db13b324d58a5485df31819
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33194901"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053072"
 ---
 # <a name="compiler-error-c2420"></a>編譯器錯誤 C2420
-'identifier' : 內容中的符號不合法  
-  
- 識別項不能用在此內容中。
+
+'identifier' : 內容中的符號不合法
+
+識別項不能用在此內容中。

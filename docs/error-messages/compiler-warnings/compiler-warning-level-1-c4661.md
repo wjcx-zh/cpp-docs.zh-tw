@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 1） C4661 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4661 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce88913a29dd9ec3f9d5d2e78c3e52ad3ead54fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1823e23f3afc432982d0d68eee3fe080fe52d719
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33280945"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045753"
 ---
 # <a name="compiler-warning-level-1-c4661"></a>編譯器警告 (層級 1) C4661
-'identifier': 未提供明確樣板具現化要求的合適定義  
-  
- 未定義樣板類別的成員。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// C4661.cpp  
-// compile with: /W1 /LD  
-template<class T> class MyClass {  
-public:  
-   void i();   // declaration but not definition  
-};  
-template MyClass< int >;  // C4661  
+
+'identifier': 不提供明確樣板具現化要求的合適定義
+
+未定義範本類別的成員。
+
+## <a name="example"></a>範例
+
+```
+// C4661.cpp
+// compile with: /W1 /LD
+template<class T> class MyClass {
+public:
+   void i();   // declaration but not definition
+};
+template MyClass< int >;  // C4661
 ```

@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0043 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0043 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b27c1fffca8c21a0fa3e3e79eedae0c17ae580
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 01deb34c2e490eb8a2d6529a426aedca40f98901
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295388"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070570"
 ---
 # <a name="expression-evaluator-error-cxx0043"></a>運算式評估工具錯誤 CXX0043
-此指標會使用成員函式之外  
-  
- **這**指標只可用為非靜態成員函式。  
-  
- 這個錯誤是與 can0043 相同。
+
+此指標會使用成員函式之外
+
+**這**指標僅適用於非靜態成員函式。
+
+此錯誤是與 can0043 相同。

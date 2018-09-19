@@ -1,5 +1,5 @@
 ---
-title: 連結器工具錯誤 LNK1314 |Microsoft 文件
+title: 連結器工具錯誤 LNK1314 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77a4afa4d5cd0be19163204d48e0a29b3b359a40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8863c22bea588417025164bf2d303d01cfe6d7b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301105"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042945"
 ---
 # <a name="linker-tools-error-lnk1314"></a>連結器工具錯誤 LNK1314
-損毀或無效 （未定義的靜態或標籤符號） 的 COFF 符號表  
-  
- 編譯器產生的內容 > 一節中指定的物件可能已損毀。  
-  
- 這個錯誤可能代表編譯器失敗。
+
+損毀或無效 COFF 符號表 （未定義的靜態或標籤符號）
+
+編譯器產生的內容 > 一節中指定的物件似乎已損毀。
+
+此錯誤可能表示編譯器失敗。

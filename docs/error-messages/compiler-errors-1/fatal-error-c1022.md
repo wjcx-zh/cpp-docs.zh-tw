@@ -1,5 +1,5 @@
 ---
-title: 嚴重錯誤 C1022 |Microsoft 文件
+title: 嚴重錯誤 C1022 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4a6ec241a9a8e175d542b1f3b9db9ea1cdc3ba0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ddeea660515ea0a71e4807a34d2172413796046
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198179"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036731"
 ---
 # <a name="fatal-error-c1022"></a>嚴重錯誤 C1022
-需要對應的 #endif  
-  
- `#if`、 `#ifdef`或 `#ifndef` 指示詞沒有相符的 `#endif` 指示詞。 每個 `#if`、 `#ifdef`或 `#ifndef` 務必要有相符的 `#endif`。  
-  
- 下列範例會產生 C1022：  
-  
-```  
-// C1022.cpp  
-#define true 1  
-  
-#if (true)  
-#else   
-#else    // C1022  
-```  
-  
- 可能的解決方式：  
-  
-```  
-// C1022b.cpp  
-// compile with: /c  
-#define true 1  
-  
-#if (true)  
-#else   
-#endif  
+
+需要對應的 #endif
+
+`#if`、 `#ifdef`或 `#ifndef` 指示詞沒有相符的 `#endif` 指示詞。 每個 `#if`、 `#ifdef`或 `#ifndef` 務必要有相符的 `#endif`。
+
+下列範例會產生 C1022：
+
+```
+// C1022.cpp
+#define true 1
+
+#if (true)
+#else
+#else    // C1022
+```
+
+可能的解決方式：
+
+```
+// C1022b.cpp
+// compile with: /c
+#define true 1
+
+#if (true)
+#else
+#endif
 ```

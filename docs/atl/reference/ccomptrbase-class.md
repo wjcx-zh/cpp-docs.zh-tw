@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1941f08d13fb8aef9b5b281ce4b2bc1c61bf98fe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 70ba26e5893b21393a3466ae7cf1c6cea43b81ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766583"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070154"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 類別
 
@@ -41,13 +41,13 @@ ms.locfileid: "43766583"
 ## <a name="syntax"></a>語法
 
 ```
-template <class T>  
+template <class T>
 class CComPtrBase
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 智慧型指標所要參考的物件型別。
 
 ## <a name="members"></a>成員
@@ -111,13 +111,13 @@ HRESULT Advise(
 
 ### <a name="parameters"></a>參數
 
-*pUnk*  
+*pUnk*<br/>
 指標，用戶端的`IUnknown`。
 
-*iid*  
+*iid*<br/>
 連接點的 GUID。 一般而言，這是連接點所管理之輸出介面相同。
 
-*pdw*  
+*pdw*<br/>
 指標，可唯一識別連接 cookie。
 
 ### <a name="return-value"></a>傳回值
@@ -138,7 +138,7 @@ void Attach(T* p2) throw();
 
 ### <a name="parameters"></a>參數
 
-*p2*  
+*p2*<br/>
 `CComPtrBase`物件會取得這個指標的擁有權。
 
 ### <a name="remarks"></a>備註
@@ -175,16 +175,16 @@ HRESULT CoCreateInstance(
 
 ### <a name="parameters"></a>參數
 
-*szProgID*  
+*szProgID*<br/>
 ProgID，用來復原的 CLSID 指標。
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 如果是 NULL，表示，該物件尚未建立為彙總的一部分。 不是 NULL，如果是彙總物件的指標`IUnknown`介面 (控制`IUnknown`)。
 
-*dwClsContext*  
+*dwClsContext*<br/>
 管理新建立的物件的程式碼將在其中執行的內容。
 
-*rclsid*  
+*rclsid*<br/>
 相關聯的資料和程式碼是用來建立物件的 CLSID。
 
 ### <a name="return-value"></a>傳回值
@@ -207,7 +207,7 @@ HRESULT CopyTo(T** ppT) throw();
 
 ### <a name="parameters"></a>參數
 
-*ppT*  
+*ppT*<br/>
 變數會接收位址`CComPtrBase`指標。
 
 ### <a name="return-value"></a>傳回值
@@ -246,7 +246,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
 
 ### <a name="parameters"></a>參數
 
-*其他*  
+*其他*<br/>
 要比較的 `IUnknown *`。
 
 ### <a name="return-value"></a>傳回值
@@ -301,7 +301,7 @@ bool operator== (T* pT) const throw();
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*  
+*太平洋時間*<br/>
 物件的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -334,7 +334,7 @@ bool operator<(T* pT) const throw();
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*  
+*太平洋時間*<br/>
 物件的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -345,7 +345,7 @@ bool operator<(T* pT) const throw();
 
 轉換運算子。
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -376,10 +376,10 @@ template <class Q> HRESULT QueryInterface(Q
 
 ### <a name="parameters"></a>參數
 
-*Q*  
+*Q*<br/>
 介面指標是必要的物件型別。
 
-*前置處理*  
+*前置處理*<br/>
 接收要求的介面指標的輸出變數位址。
 
 ### <a name="return-value"></a>傳回值
@@ -414,7 +414,7 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 
 ### <a name="parameters"></a>參數
 
-*punkParent*  
+*punkParent*<br/>
 指標`IUnknown`之父代的介面。
 
 ### <a name="return-value"></a>傳回值

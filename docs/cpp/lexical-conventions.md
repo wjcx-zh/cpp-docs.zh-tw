@@ -15,14 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a9011912b0c187d9aa9e75dd9e484c4688e3c0
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 9dd92d321f0452c24de04fb94427aa2499677155
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405905"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064815"
 ---
 # <a name="lexical-conventions"></a>語彙慣例
+
 本節將介紹 C++ 程式的基本項目。 您可以使用這些稱為「語彙項目」或「語彙基元」的項目，建構用來建構完整程式的陳述式、定義，宣告等等。 本節將討論下列語彙項目：
 
 - [檔案轉譯概觀](overview-of-file-translation.md)
@@ -45,5 +46,6 @@ ms.locfileid: "39405905"
 - [使用者定義常值](../cpp/user-defined-literals-cpp.md)
 
 ## <a name="see-also"></a>另請參閱
- [C++ 語言參考](../cpp/cpp-language-reference.md)  
- [程式和連結](program-and-linkage-cpp.md)
+
+[C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
+[程式和連結](program-and-linkage-cpp.md)

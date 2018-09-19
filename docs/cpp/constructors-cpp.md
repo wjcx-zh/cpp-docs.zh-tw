@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d90a3f4b2cbacb3071dcd552fd88f6cb11bb5d43
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 08200320e30816ac45e6c91a14dc41508430cfae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131838"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069114"
 ---
 # <a name="constructors-c"></a>建構函式 (C++)
 
@@ -88,7 +88,7 @@ int main()
     {}
 ```
 
-識別碼必須參考類別成員;它會使用引數的值進行初始化。 引數可以是其中一個建構函式參數，而函式呼叫或[std:: initializer_list\<T >](../standard-library/initializer-list-class.md)。 
+識別碼必須參考類別成員;它會使用引數的值進行初始化。 引數可以是其中一個建構函式參數，而函式呼叫或[std:: initializer_list\<T >](../standard-library/initializer-list-class.md)。
 
 **const**成員初始設定式清單中，則必須初始化成員和成員的參考型別。
 
@@ -96,7 +96,7 @@ int main()
 
 ## <a name="default_constructors"></a> 預設建構函式
 
- *預設建構函式*通常會有任何參數，但它們可以有預設值的參數。
+*預設建構函式*通常會有任何參數，但它們可以有預設值的參數。
 
 ```cpp
 class Box {
@@ -216,6 +216,7 @@ A*複製建構函式*從相同類型的物件複製的成員值來初始化物�
 嘗試複製該物件會產生錯誤*C2280： 嘗試參考已刪除的函式*。
 
 ## <a name="move_constructors"></a> 移動建構函式
+
 A*移動建構函式*是將現有的物件資料的擁有權移至新的變數，而不複製原始資料的特殊成員函式。 它接受右值參考做為其第一個參數，而且任何其他參數必須有預設值。 移動建構函式傳遞大型物件時，可能會大幅增加您的程式效率。 移動建構函式接受右值參考做為其第一個參數。 任何其他參數都必須有預設值。
 
 ```cpp

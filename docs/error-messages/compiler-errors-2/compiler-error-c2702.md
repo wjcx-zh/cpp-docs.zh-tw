@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2702 |Microsoft 文件
+title: 編譯器錯誤 C2702 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 813833b5c3aeb7da0651fecb879ac12ca0713d13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cbec8fe50c87cfc609cad5098779bc22ddae84cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234641"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061229"
 ---
 # <a name="compiler-error-c2702"></a>編譯器錯誤 C2702
-__except 不可以出現在終止區塊中  
-  
- 例外狀況處理常式 (`__try`/`__except`) 無法在巢狀`__finally`區塊。  
-  
- 下列範例會產生 C2702:  
-  
-```  
-// C2702.cpp  
-// processor: x86 IPF  
-int Counter;  
-int main() {  
-   __try {}  
-   __finally {  
-      __try {}   // C2702  
-      __except( Counter ) {}   // C2702  
-   }  
-}  
+
+__except 不可以出現在終止區塊中
+
+例外狀況處理常式 (`__try`/`__except`) nelze vnořit do`__finally`區塊。
+
+下列範例會產生 C2702:
+
+```
+// C2702.cpp
+// processor: x86 IPF
+int Counter;
+int main() {
+   __try {}
+   __finally {
+      __try {}   // C2702
+      __except( Counter ) {}   // C2702
+   }
+}
 ```

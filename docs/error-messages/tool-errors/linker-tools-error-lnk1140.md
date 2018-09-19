@@ -1,5 +1,5 @@
 ---
-title: 連結器工具錯誤 LNK1140 |Microsoft 文件
+title: 連結器工具錯誤 LNK1140 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc0d59589a1882aca4ef2deb419e1e4f1081e52b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f850360bc749a41e548cebae9f58f9fc7d3d420
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302733"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044700"
 ---
 # <a name="linker-tools-error-lnk1140"></a>連結器工具錯誤 LNK1140
-程式資料庫的模組太多連結，以 /PDB: NONE  
-  
- 專案包含超過 4096 個模組。  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>使用下列可能的解決方式來進行修正  
-  
-1.  重新連結使用[/PDB: NONE](../../build/reference/pdb-use-program-database.md)。  
-  
-2.  但不偵錯資訊編譯某些模組。  
-  
-3.  降低模組的數目。
+
+程式資料庫的模組太多連結，以 /PDB: NONE
+
+此專案包含超過 4096 個模組。
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>使用下列可能的解決方式來進行修正
+
+1. 使用重新連結[/PDB: NONE](../../build/reference/pdb-use-program-database.md)。
+
+1. 某些模組編譯但不偵錯資訊。
+
+1. 降低模組的數目。

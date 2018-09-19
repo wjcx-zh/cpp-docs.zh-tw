@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2375 |Microsoft 文件
+title: 編譯器錯誤 C2375 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b0d6d3ecda2bd996e7ef53ff5fd0eed6290e2b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ceb045c4001d6d2ab0cd5d1968abf453a85fab9d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195460"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047768"
 ---
 # <a name="compiler-error-c2375"></a>編譯器錯誤 C2375
-'function': 重複定義; 連結規範不相同  
-  
- 已使用不同的連結規範宣告的函式。  
-  
- 下列範例會產生 C2375：  
-  
-```  
-// C2375.cpp  
-// compile with: /Za /c  
-extern void func( void );  
-static void func( void );   // C2375  
-static void func2( void );   // OK  
+
+'function': 重複定義; 連結規範不相同
+
+已使用不同的連結規範宣告的函式。
+
+下列範例會產生 C2375：
+
+```
+// C2375.cpp
+// compile with: /Za /c
+extern void func( void );
+static void func( void );   // C2375
+static void func2( void );   // OK
 ```

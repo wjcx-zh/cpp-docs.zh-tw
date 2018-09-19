@@ -1,5 +1,5 @@
 ---
-title: lock::lock |Microsoft 文件
+title: lock::lock |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: df35eed8711e83174316ac9912f7ba535ef9ebf9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 128a86b59ebf43ab87b0f4f4bcb7e9c684e4ad07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33135023"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051813"
 ---
 # <a name="locklock"></a>lock::lock
-建構`lock`物件，並選擇性地等候一段指定的時間，或完全不用，取得鎖定。  
+建構`lock`物件，或者等候一段指定的時間，或者完全不要，取得鎖定。  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,26 +51,26 @@ template<class T> lock(
 ```  
   
 #### <a name="parameters"></a>參數  
- `_object`  
- 要鎖定的物件。  
+*（_o)*<br/>
+要鎖定的物件。  
   
- `_timeout`  
- 逾時值以毫秒為單位，或做為<xref:System.TimeSpan>。  
+*逾時 _t*<br/>
+逾時值以毫秒為單位，或為<xref:System.TimeSpan>。  
   
 ## <a name="exceptions"></a>例外狀況  
- 擲回<xref:System.ApplicationException>如果取得鎖定逾時前不會發生。  
+ 會擲回<xref:System.ApplicationException>如果取得鎖定逾時之前不會發生。  
   
 ## <a name="remarks"></a>備註  
- 前三個表單的建構函式嘗試取得的鎖定上`_object`在指定的逾時期限內 (或<xref:System.Threading.Timeout.Infinite>如果未指定)。  
+ 前三個表單的建構函式會嘗試取得的鎖定上`_object`指定的逾時期限內 (或<xref:System.Threading.Timeout.Infinite>如果未指定)。  
   
- 第四個表單的建構函式不會在取得鎖定`_object`。 `lock_later` 成員的[lock_when 列舉](../dotnet/lock-when-enum.md)。 使用[lock::acquire](../dotnet/lock-acquire.md)或[lock::try_acquire](../dotnet/lock-try-acquire.md)在此情況下取得的鎖定。  
+ 第四個表單的建構函式不會在取得鎖定`_object`。 `lock_later` 隸屬[lock_when 列舉](../dotnet/lock-when-enum.md)。 使用[lock::acquire](../dotnet/lock-acquire.md)或是[lock::try_acquire](../dotnet/lock-try-acquire.md)在此情況下取得的鎖定。  
   
- 解構函式呼叫時，會自動釋放鎖定。  
+ 呼叫解構函式時，會自動釋放鎖定。  
   
  `_object` 不可以是 <xref:System.Threading.ReaderWriterLock>。  如果是，編譯器會產生錯誤。  
   
 ## <a name="example"></a>範例  
- 這個範例會跨多個執行緒使用單一類別的執行個體。  類別本身會使用鎖定，以確保其內部資料存取都是一致的每個執行緒。  主應用程式執行緒會定期檢查以查看是否仍然存在任何背景工作執行緒，並等候結束，直到所有的工作者執行緒完成其工作使用相同類別的執行個體上的鎖定。  
+ 此範例會跨多個執行緒使用單一類別的執行個體。  類別會使用本身的鎖定，以確保一致的每個執行緒存取其內部的資料。  主應用程式執行緒的類別相同的執行個體上使用鎖定，來定期檢查以查看是否仍存在的任何背景工作執行緒，並等候直到所有的背景工作執行緒結束已完成其工作。  
   
 ```  
 // msl_lock_lock.cpp  
@@ -165,6 +165,6 @@ All threads completed.
   
 ## <a name="see-also"></a>另請參閱  
  [lock 成員](../dotnet/lock-members.md)   
- [lock:: ~ 鎖定](../dotnet/lock-tilde-lock.md)   
+ [鎖定:: ~ 鎖定](../dotnet/lock-tilde-lock.md)   
  [lock::acquire](../dotnet/lock-acquire.md)   
  [lock::try_acquire](../dotnet/lock-try-acquire.md)

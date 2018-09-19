@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3848 |Microsoft 文件
+title: 編譯器錯誤 C3848 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37354d30ab20820657fc048cac0f87aa1a958dfa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81af73813f1f9c6c388ec6946ef9131cad413747
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267169"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069582"
 ---
 # <a name="compiler-error-c3848"></a>編譯器錯誤 C3848
-具有類型 'type' 的運算式會失去某些 const-volatile 限定詞才能呼叫 'function'  
-  
- 指定的 const-volatile 限定類型的變數只可以呼叫成員函式定義使用相同或更高的 const-volatile 限定性條件。  
-  
- 下列範例會產生 C3848:  
-  
-```  
-// C3848.cpp  
-void glbFunc1()  
-{  
-}  
-  
-typedef void (* pFunc1)();  
-  
-struct S3  
-{  
-   operator pFunc1() // const  
-   {  
-      return &glbFunc1;  
-   }  
-};  
-  
-int main()  
-{  
-   const S3 s3;  
-   s3();   // C3848, uncomment const qualifier  
-}  
+
+具有類型 'type' 的運算式會失去某些 const-volatile 限定詞才能呼叫 'function'
+
+具有指定的常數 volatile 類型的變數只能呼叫成員函式定義包含大於或等於常數 volatile 限定性條件。
+
+下列範例會產生 C3848:
+
+```
+// C3848.cpp
+void glbFunc1()
+{
+}
+
+typedef void (* pFunc1)();
+
+struct S3
+{
+   operator pFunc1() // const
+   {
+      return &glbFunc1;
+   }
+};
+
+int main()
+{
+   const S3 s3;
+   s3();   // C3848, uncomment const qualifier
+}
 ```

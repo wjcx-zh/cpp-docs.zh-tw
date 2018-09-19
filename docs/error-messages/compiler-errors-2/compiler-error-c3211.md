@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3211 |Microsoft 文件
+title: 編譯器錯誤 C3211 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f7fdcfcb9a3ed3322d1263482b043d717bbcae8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ed045d1941db85bf0c1a8bbf8d94bf0c9c08ed6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249179"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043426"
 ---
 # <a name="compiler-error-c3211"></a>編譯器錯誤 C3211
-'explicit specialization' : 明確特製化使用的是部分特製化語法，請改用樣板 <>  
-  
- 明確特製化的格式不正確。  
-  
- 下列範例會產生 C3211：  
-  
-```  
-// C3211.cpp  
-// compile with: /LD  
-template<class T>  
-struct s;  
-  
-template<class T>  
-// use the following line instead  
-// template<>  
-struct s<int>{};   // C3211  
+
+'explicit specialization' : 明確特製化使用的是部分特製化語法，請改用樣板 <>
+
+明確特製化的格式不正確。
+
+下列範例會產生 C3211：
+
+```
+// C3211.cpp
+// compile with: /LD
+template<class T>
+struct s;
+
+template<class T>
+// use the following line instead
+// template<>
+struct s<int>{};   // C3211
 ```

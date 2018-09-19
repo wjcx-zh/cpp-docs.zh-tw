@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 1） C4272 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4272 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6de736c3226a9d3377769b65604a458c08e25df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00e30646c9fe56132da9cf87ba71cb54ae6a3e8f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277195"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052955"
 ---
 # <a name="compiler-warning-level-1-c4272"></a>編譯器警告 (層級 1) C4272
-'function': __declspec （dllimport）; 標示為匯入函式時，必須指定原生呼叫慣例。  
-  
- 它是匯出函式標記為錯誤[__clrcall](../../cpp/clrcall.md)呼叫慣例和編譯器發出這個警告，如果您嘗試匯入函式標示為`__clrcall`。  
-  
- 下列範例會產生 C4272:  
-  
-```  
-// C4272.cpp  
-// compile with: /c /W1 /clr  
-__declspec(dllimport) void __clrcall Test();   // C4272  
-__declspec(dllimport) void Test2();   // OK  
+
+'function': 標示為 __declspec （dllimport）;匯入函式時，必須指定原生呼叫慣例。
+
+它是匯出函式標示為錯誤[__clrcall](../../cpp/clrcall.md)呼叫慣例和編譯器發出這個警告，如果您嘗試匯入標記為函式`__clrcall`。
+
+下列範例會產生 C4272:
+
+```
+// C4272.cpp
+// compile with: /c /W1 /clr
+__declspec(dllimport) void __clrcall Test();   // C4272
+__declspec(dllimport) void Test2();   // OK
 ```

@@ -18,36 +18,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5687adfada8657ae26edd9001db8990ff08864e9
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: a8f09109aab5823f339de76a1337eea77a0794cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894690"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037745"
 ---
 # <a name="results-of-calling-example"></a>呼叫範例的結果
 
 **Microsoft 專屬**
 
 ## <a name="cdecl"></a>__cdecl
+
 C 裝飾函式名稱`_MyFunc`。
 
-![CDECL 呼叫慣例](../cpp/media/vc37i01.gif "vc37I01")  
-**__Cdecl**呼叫慣例
+![CDECL 呼叫慣例](../cpp/media/vc37i01.gif "vc37I01") **__cdecl**呼叫慣例
 
 ## <a name="stdcall-and-thiscall"></a>__stdcall 和 thiscall
 
 C 裝飾名稱 (**__stdcall**) 是`_MyFunc@20`。 C + + 裝飾名稱是實作而定。
 
-![&#95;&#95;stdcall 和 thiscall 呼叫慣例](../cpp/media/vc37i02.gif "vc37I02")  
-__stdcall 和 thiscall 呼叫慣例
+![&#95;&#95;stdcall 和 thiscall 呼叫慣例](../cpp/media/vc37i02.gif "vc37I02") __stdcall 和 thiscall 呼叫慣例
 
 ## <a name="fastcall"></a>__fastcall
 
 C 裝飾名稱 (**__fastcall**) 是`@MyFunc@20`。 C + + 裝飾名稱是實作而定。
 
-![呼叫慣例，如&#95; &#95;fastcall](../cpp/media/vc37i03.gif "vc37I03")  
-__fastcall 呼叫慣例
+![呼叫慣例，如&#95; &#95;fastcall](../cpp/media/vc37i03.gif "vc37I03") __fastcall 呼叫慣例
 
 **結束 Microsoft 專屬**
 

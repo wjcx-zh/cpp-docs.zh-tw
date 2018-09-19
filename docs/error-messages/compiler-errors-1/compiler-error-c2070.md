@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2070 |Microsoft 文件
+title: 編譯器錯誤 C2070 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8eaf9ee345543fe838358c345e68874eecadd72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b23daf8a8c25e132aa0717715a742352537010c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165174"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044076"
 ---
 # <a name="compiler-error-c2070"></a>編譯器錯誤 C2070
-'type': 不合法的 sizeof 的運算元  
-  
- [Sizeof](../../cpp/sizeof-operator.md)運算子需要運算式或類型的名稱。  
-  
- 下列範例會產生 C2070:  
-  
-```  
-// C2070.cpp  
-void func() {}  
-int main() {  
-   int a;  
-   a = sizeof(func);   // C2070  
-}  
-```  
-  
- 可能的解決方式：  
-  
-```  
-// C2070b.cpp  
-void func() {}  
-int main() {  
-   int a;  
-   a = sizeof(a);  
-}  
+
+'type': 不合法的 sizeof 運算元
+
+[Sizeof](../../cpp/sizeof-operator.md)運算子需要運算式或類型名稱。
+
+下列範例會產生 C2070:
+
+```
+// C2070.cpp
+void func() {}
+int main() {
+   int a;
+   a = sizeof(func);   // C2070
+}
+```
+
+可能的解決方式：
+
+```
+// C2070b.cpp
+void func() {}
+int main() {
+   int a;
+   a = sizeof(a);
+}
 ```

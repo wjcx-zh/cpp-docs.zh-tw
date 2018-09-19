@@ -1,5 +1,5 @@
 ---
-title: 資源編譯器嚴重錯誤 RW1016 |Microsoft 文件
+title: 資源編譯器嚴重錯誤 RW1016 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cff607f6b9e4b1bf74ff1c82c513737f0e20bba6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a2e2ac26b15529b86dc0e209b361feec6bf3d4a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318034"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046104"
 ---
 # <a name="resource-compiler-fatal-error-rw1016"></a>資源編譯器嚴重錯誤 RW1016
-前置處理器的錯誤後終止的 RC  
-  
- 資源編譯器根據其他錯誤而終止。 請修正其他錯誤，並重新編譯。
+
+前置處理器的錯誤後終止的 RC
+
+資源編譯器根據其他錯誤而終止。 修正其他錯誤，並重新編譯。

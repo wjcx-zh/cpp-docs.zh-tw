@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2b90ef2eeca60a305cd8836e09dc81940392d2c
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e004c129fb5482ed1bb50d091c8e4e53becbf20b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42545756"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059091"
 ---
 # <a name="reduction"></a>reduction
 指定一或多個變數為私用的每個執行緒減少作業在平行區域結尾處的主旨。  
@@ -32,14 +32,13 @@ ms.locfileid: "42545756"
 reduction(operation:var)  
 ```  
   
-## <a name="remarks"></a>備註  
- 其中：  
+### <a name="parameters"></a>參數
   
- `operation`  
- 在變數上執行作業的運算子 (`var`) 在平行區域結尾處。  
+*作業*<br/>
+在變數上執行作業的運算子 (`var`) 在平行區域結尾處。  
   
- `var`  
- 在其上執行純量減少一或多個變數。 如果指定多個變數，請以逗號分隔變數名稱。  
+*var*<br/>
+在其上執行純量減少一或多個變數。 如果指定多個變數，請以逗號分隔變數名稱。  
   
 ## <a name="remarks"></a>備註  
  `reduction` 適用於下列指示詞：  

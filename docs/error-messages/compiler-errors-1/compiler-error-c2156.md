@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2156 |Microsoft 文件
+title: 編譯器錯誤 C2156 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 288757f93e0cf7c478fae739f106482b5ba8a016
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 37e0810fa31e66b62553825892b53374b22e4263
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167303"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038631"
 ---
 # <a name="compiler-error-c2156"></a>編譯器錯誤 C2156
-Pragma 必須定義在函式之外  
-  
- 必須在全域層級 (函式主體外部) 指定的 pragma 出現在函式內。  
-  
- 下列範例會產生 C2156：  
-  
-```  
-// C2156.cpp  
-#pragma optimize( "l", on )   // OK  
-int main() {  
-   #pragma optimize( "l", on )   // C2156  
-}  
+
+Pragma 必須定義在函式之外
+
+必須在全域層級 (函式主體外部) 指定的 pragma 出現在函式內。
+
+下列範例會產生 C2156：
+
+```
+// C2156.cpp
+#pragma optimize( "l", on )   // OK
+int main() {
+   #pragma optimize( "l", on )   // C2156
+}
 ```

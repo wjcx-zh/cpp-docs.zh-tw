@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ffea5b097460dbed2b6d5dd4ea4e79f283cd412
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 22be3e9a2dcae3b1e69049158813658690bcce9d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693955"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052929"
 ---
 # <a name="concurrentunorderedset-class"></a>concurrent_unordered_set 類別
 `concurrent_unordered_set`類別是並行安全容器，可控制不同長度序列的項目型別 k。序列的表示方式啟用並行安全附加、 項目存取、 迭代器存取及迭代器周遊作業。  
@@ -51,17 +51,17 @@ template <typename K,
 ```   
   
 #### <a name="parameters"></a>參數  
- `K`  
- 索引鍵類型。  
+*K*<br/>
+索引鍵類型。  
   
- `_Hasher`  
- 雜湊函式物件類型。 這個引數是選擇性的，而且預設值是 `std::hash<K>`。  
+*_Hasher*<br/>
+雜湊函式物件類型。 這個引數是選擇性的，而且預設值是 `std::hash<K>`。  
   
- `key_equality`  
- 相等比較函式物件類型。 這個引數是選擇性的，而且預設值是 `std::equal_to<K>`。  
+*key_equality*<br/>
+相等比較函式物件類型。 這個引數是選擇性的，而且預設值是 `std::equal_to<K>`。  
   
- `_Allocator_type`  
- 代表預存配置器物件，封裝有關配置和解除配置的記憶體供並行的未排序集合的詳細資訊的型別。 這個引數是選擇性的，而且預設值是 `std::allocator<K>`。  
+*_Allocator_type*<br/>
+代表預存配置器物件，封裝有關配置和解除配置的記憶體供並行的未排序集合的詳細資訊的型別。 這個引數是選擇性的，而且預設值是 `std::allocator<K>`。  
   
 ## <a name="members"></a>成員  
   
@@ -199,25 +199,25 @@ concurrent_unordered_set(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Iterator`  
- 輸入迭代器的類型。  
+*_Iterator*<br/>
+輸入迭代器的類型。  
   
- `_Number_of_buckets`  
- 這個未排序集合的 Bucket 初始數量。  
+*_Number_of_buckets*<br/>
+這個未排序集合的 Bucket 初始數量。  
   
- `_Hasher`  
- 這個未排序集合的雜湊函式。  
+*_Hasher*<br/>
+這個未排序集合的雜湊函式。  
   
- `key_equality`  
- 這個未排序集合的相等比較函式。  
+*key_equality*<br/>
+這個未排序集合的相等比較函式。  
   
- `_Allocator`  
- 這個未排序集合的配置器。  
+*_Allocator*<br/>
+這個未排序集合的配置器。  
   
- `first`  
- `last`  
- `_Uset`  
- 要從中複製或移動項目的來源 `concurrent_unordered_set` 物件。  
+*first*<br/>
+*最後一個*<br/>
+*_Uset*<br/>
+要從中複製或移動項目的來源 `concurrent_unordered_set` 物件。  
   
 ### <a name="remarks"></a>備註  
  所有建構函式都會儲存配置器物件 `_Allocator` 並初始化未排序的集合。  
@@ -241,8 +241,8 @@ size_type count(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `KVal`  
- 要搜尋的索引鍵。  
+*KVal*<br/>
+要搜尋的索引鍵。  
   
 ### <a name="return-value"></a>傳回值  
  出現在容器中的機碼次數時次數。  
@@ -289,8 +289,8 @@ std::pair<const_iterator,
 ```  
   
 ### <a name="parameters"></a>參數  
- `KVal`  
- 要搜尋的索引鍵的值。  
+*KVal*<br/>
+要搜尋的索引鍵的值。  
   
 ### <a name="return-value"></a>傳回值  
  A[配對](../../../standard-library/pair-structure.md)其中的第一個元素是開頭的迭代器，而第二個元素是迭代器範圍的結尾。  
@@ -309,8 +309,8 @@ const_iterator find(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `KVal`  
- 要搜尋的索引鍵的值。  
+*KVal*<br/>
+要搜尋的索引鍵的值。  
   
 ### <a name="return-value"></a>傳回值  
  迭代器，指向 比對提供的索引鍵的第一個元素的位置或迭代器`end()`如果沒有這類項目。  
@@ -368,23 +368,23 @@ typename std::enable_if<!std::is_same<const_iterator,
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Iterator`  
- 用來插入的迭代器類型。  
+*_Iterator*<br/>
+用來插入的迭代器類型。  
   
- `V`  
- 插入至集合值的型別。  
+*V*<br/>
+插入至集合值的型別。  
   
- `value`  
- 要插入的值。  
+*值*<br/>
+要插入的值。  
   
- `_Where`  
- 要搜尋插入點的起始位置。  
+*_Where*<br/>
+要搜尋插入點的起始位置。  
   
- `first`  
- 要插入之範圍的開頭。  
+*first*<br/>
+要插入之範圍的開頭。  
   
- `last`  
- 要插入之範圍的結尾。  
+*最後一個*<br/>
+要插入之範圍的結尾。  
   
 ### <a name="return-value"></a>傳回值  
  迭代器和一個布林值包含一組。 請參閱 < 備註 > 一節，如需詳細資訊。  
@@ -461,8 +461,8 @@ concurrent_unordered_set& operator= (concurrent_unordered_set&& _Uset);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Uset`  
- 來源 `concurrent_unordered_set` 物件。  
+*_Uset*<br/>
+來源 `concurrent_unordered_set` 物件。  
   
 ### <a name="return-value"></a>傳回值  
  此參考`concurrent_unordered_set`物件。  
@@ -479,8 +479,8 @@ void rehash(size_type _Buckets);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Buckets`  
- 所需的貯體數目。  
+*_Buckets*<br/>
+所需的貯體數目。  
   
 ### <a name="remarks"></a>備註  
  此成員函式會將值區數目改變為至少 `_Buckets` ，並視需要重建雜湊資料表。 貯體數目必須是 2 的乘冪。 如果不 2 的乘冪，它會無條件進位到下一個最大 2 的乘冪。  
@@ -510,8 +510,8 @@ void swap(concurrent_unordered_set& _Uset);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Uset`  
- 要交換的 `concurrent_unordered_set` 物件。  
+*_Uset*<br/>
+要交換的 `concurrent_unordered_set` 物件。  
   
 ##  <a name="unsafe_begin"></a> unsafe_begin 
 
@@ -524,8 +524,8 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Bucket`  
- 貯體的索引。  
+*（_b)*<br/>
+貯體的索引。  
   
 ### <a name="return-value"></a>傳回值  
  迭代器，指向值區的開頭。  
@@ -539,8 +539,8 @@ size_type unsafe_bucket(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `KVal`  
- 要搜尋的項目索引鍵。  
+*KVal*<br/>
+要搜尋的項目索引鍵。  
   
 ### <a name="return-value"></a>傳回值  
  此容器中的索引鍵的貯體索引。  
@@ -565,8 +565,8 @@ size_type unsafe_bucket_size(size_type _Bucket);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Bucket`  
- 若要搜尋的貯體。  
+*（_b)*<br/>
+若要搜尋的貯體。  
   
 ### <a name="return-value"></a>傳回值  
  目前在此容器中的貯體數目。  
@@ -580,8 +580,8 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Bucket`  
- 貯體的索引。  
+*（_b)*<br/>
+貯體的索引。  
   
 ### <a name="return-value"></a>傳回值  
  迭代器，指向值區的開頭。  
@@ -595,8 +595,8 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Bucket`  
- 貯體的索引。  
+*（_b)*<br/>
+貯體的索引。  
   
 ### <a name="return-value"></a>傳回值  
  迭代器，指向值區的開頭。  
@@ -612,8 +612,8 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Bucket`  
- 貯體的索引。  
+*（_b)*<br/>
+貯體的索引。  
   
 ### <a name="return-value"></a>傳回值  
  指向值區結尾迭代器。  
@@ -635,14 +635,15 @@ iterator unsafe_erase(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Where`  
- 若要清除從迭代器位置。  
+*_Where*<br/>
+若要清除從迭代器位置。  
   
- `KVal`  
- 要清除的索引鍵的值。  
+*KVal*<br/>
+要清除的索引鍵的值。  
   
- `first`  
- `last`  
+*first*<br/>
+*最後一個*<br/>
+迭代器。
   
 ### <a name="return-value"></a>傳回值  
  前兩個成員函式會傳回迭代器，指定移除任何項目之外剩餘的第一個元素或[結束](#end)（)，如果沒有這類項目。 第三個成員函式會傳回它所移除的項目數目。  

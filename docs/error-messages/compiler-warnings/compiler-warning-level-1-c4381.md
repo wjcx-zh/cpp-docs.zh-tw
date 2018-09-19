@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 1） C4381 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4381 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5cb72c373b5c0808b4b1600871cd8148bcc9c9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81c61dcbf49beeb41780cdaeff669cf21bfffee9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277988"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037823"
 ---
 # <a name="compiler-warning-level-1-c4381"></a>編譯器警告 (層級 1) C4381
-'function1': 非公用方法 'function2' 將不會實作介面方法  
-  
- 類別必須實作介面中的所有函式。 如果其中一個基底類別實作的函式類別，能滿足此條件。 不過，此函式必須實作為公用函式。
+
+'function1': 非公用方法 'function2' 將不會實作介面方法
+
+類別必須實作介面中的所有函式。 類別可以符合此條件，如果其中一個基底類別實作的函式。 不過，此函式必須實作為公用函式。

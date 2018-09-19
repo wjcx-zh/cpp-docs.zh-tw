@@ -1,5 +1,5 @@
 ---
-title: 命令列錯誤 D8027 |Microsoft 文件
+title: 命令列錯誤 D8027 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc93edb939001a1e1bed5d3f7a4113e8483e81dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8234835d3bb0545c8a72bf35cfb55b2e18bc7da2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296116"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070375"
 ---
 # <a name="command-line-error-d8027"></a>命令列錯誤 D8027
-無法執行 '元件'  
-  
- 指定的編譯器元件或連結器，編譯器無法執行。  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>透過檢查下列可能原因進行修正  
-  
-1.  記憶體不足，無法載入元件。 如果 NMAKE 叫用編譯器執行外部 makefile 編譯器。  
-  
-2.  目前的作業系統無法執行此元件。 請確定路徑點的可執行檔的檔案適用於您的作業系統。  
-  
-3.  元件已損毀。 重新複製元件的安裝磁片，使用安裝程式。  
-  
-4.  選項指定不正確。 例如:   
-  
-    ```  
-    cl /B1 file1.c  
+
+無法執行 '元件'
+
+編譯器無法執行指定的編譯器元件或連結器。
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>透過檢查下列可能原因進行修正
+
+1. 記憶體不足，無法載入元件。 NMAKE 叫用編譯器才會執行外部 makefile 編譯器。
+
+1. 目前的作業系統無法執行的元件。 請確定路徑點到可執行檔適用於您的作業系統。
+
+1. 元件已損毀。 重新複製元件無法安裝磁片，使用安裝程式。
+
+1. 未正確指定的選項。 例如: 
+
+    ```
+    cl /B1 file1.c
     ```

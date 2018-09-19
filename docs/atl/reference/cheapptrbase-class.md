@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 849e7ced8889cb46195946cca68243c37e1299a2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f2a6ab9e03a44f48acca9b949193ceec85eb3ef6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760119"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063108"
 ---
 # <a name="cheapptrbase-class"></a>CHeapPtrBase 類別
 
@@ -40,16 +40,16 @@ ms.locfileid: "43760119"
 ## <a name="syntax"></a>語法
 
 ```
-template <class T, class Allocator = CCRTAllocator>  
+template <class T, class Allocator = CCRTAllocator>
 class CHeapPtrBase
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 要儲存在堆積上的物件類型。
 
-*配置器*  
+*配置器*<br/>
 要使用的記憶體配置類別。 根據預設 CRT 常式用來配置和釋放記憶體。
 
 ## <a name="members"></a>成員
@@ -102,7 +102,7 @@ bool AllocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>參數
 
-*nBytes*  
+*nBytes*<br/>
 要配置的記憶體的位元組數目。
 
 ### <a name="return-value"></a>傳回值
@@ -123,7 +123,7 @@ void Attach(T* pData) throw();
 
 ### <a name="parameters"></a>參數
 
-*pData*  
+*pData*<br/>
 `CHeapPtrBase`物件會取得這個指標的擁有權。
 
 ### <a name="remarks"></a>備註
@@ -216,7 +216,7 @@ T* operator->() const throw();
 
 轉換運算子。
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -234,7 +234,7 @@ bool ReallocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>參數
 
-*nBytes*  
+*nBytes*<br/>
 新的配置，以位元組為單位的記憶體量。
 
 ### <a name="return-value"></a>傳回值
@@ -243,6 +243,6 @@ bool ReallocateBytes(size_t nBytes) throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[CHeapPtr 類別](../../atl/reference/cheapptr-class.md)   
-[CComHeapPtr 類別](../../atl/reference/ccomheapptr-class.md)   
+[CHeapPtr 類別](../../atl/reference/cheapptr-class.md)<br/>
+[CComHeapPtr 類別](../../atl/reference/ccomheapptr-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

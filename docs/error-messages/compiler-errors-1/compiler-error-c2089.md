@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2089 |Microsoft 文件
+title: 編譯器錯誤 C2089 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84f76c5b5ae8212e463a7022680ffca5dd4ca498
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb64f1f0c2a8c5af2a8b8625cd1a05c530066185
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163657"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046145"
 ---
 # <a name="compiler-error-c2089"></a>編譯器錯誤 C2089
-'identifier': '類別索引鍵' 太大  
-  
- 指定的結構或等位超過 4 GB 的限制。
+
+'identifier': '類別索引鍵' 太大
+
+所指定的結構或等位超過 4 GB 的限制。

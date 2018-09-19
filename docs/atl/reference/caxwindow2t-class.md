@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d45add5f2133191bc046d72e797a7f8374976d63
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2cfb82cfa21d5cc69e66d7980c4878e1659a7a79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757916"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036224"
 ---
 # <a name="caxwindow2t-class"></a>CAxWindow2T 類別
 
@@ -46,7 +46,7 @@ template <class TBase = CWindow>
 
 #### <a name="parameters"></a>參數
 
-*TBase*  
+*TBase*<br/>
 從中的類別`CAxWindowT`衍生。
 
 ## <a name="members"></a>成員
@@ -107,7 +107,7 @@ CAxWindow2T(HWND  hWnd = NULL) : CAxWindowT<TBase>(hWnd)
 
 ### <a name="parameters"></a>參數
 
-*hWnd*  
+*hWnd*<br/>
 現有的視窗控制代碼。
 
 ##  <a name="create"></a>  CAxWindow2T::Create
@@ -157,7 +157,7 @@ HRESULT CreateControlLic(
 
 ### <a name="parameters"></a>參數
 
-*bstrLicKey*  
+*bstrLicKey*<br/>
 控制項中，授權金鑰如果建立要在未經授權的控制項，則為 NULL。
 
 ### <a name="remarks"></a>備註
@@ -194,7 +194,7 @@ HRESULT CreateControlLicEx(
 
 ### <a name="parameters"></a>參數
 
-*bstrLicKey*  
+*bstrLicKey*<br/>
 控制項中，授權金鑰如果建立要在未經授權的控制項，則為 NULL。
 
 ### <a name="remarks"></a>備註
@@ -227,10 +227,10 @@ CAxWindow2T<TBase>& operator= (HWND hWnd);
 
 ### <a name="parameters"></a>參數
 
-*hWnd*  
+*hWnd*<br/>
 現有的視窗控制代碼。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../../atl/atl-class-overview.md)   
+[類別概觀](../../atl/atl-class-overview.md)<br/>
 [控制項內含項目常見問題集](../../atl/atl-control-containment-faq.md)

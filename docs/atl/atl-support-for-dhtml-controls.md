@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5144a11f0b035822e6f729692569e5e861c44dcc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 281b767151726f695e23c4cf2b2df26f8690c5c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758306"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063992"
 ---
 # <a name="atl-support-for-dhtml-controls"></a>DHTML 控制項的 ATL 支援
 
@@ -41,26 +41,26 @@ DHTML 控制項是類似於其他 ATL 控制項，除了 DHTML 控制項包含�
 
 ## <a name="in-this-section"></a>本節內容
 
-[識別 DHTML 控制項專案的項目](../atl/identifying-the-elements-of-the-dhtml-control-project.md)  
+[識別 DHTML 控制項專案的項目](../atl/identifying-the-elements-of-the-dhtml-control-project.md)<br/>
 描述 DHTML 控制項專案的項目。
 
-[從 DHTML 呼叫 C++ 程式碼](../atl/calling-cpp-code-from-dhtml.md)  
+[從 DHTML 呼叫 C++ 程式碼](../atl/calling-cpp-code-from-dhtml.md)<br/>
 提供呼叫 DHTML 控制項的 c + + 程式碼範例。
 
-[建立 ATL DHTML 控制項](../atl/creating-an-atl-dhtml-control.md)  
+[建立 ATL DHTML 控制項](../atl/creating-an-atl-dhtml-control.md)<br/>
 列出用來建立 DHTML 控制項的步驟。
 
-[測試 ATL DHTML 控制項](../atl/testing-the-atl-dhtml-control.md)  
+[測試 ATL DHTML 控制項](../atl/testing-the-atl-dhtml-control.md)<br/>
 示範如何建置和測試初始的 DHTML 控制項專案。
 
-[修改 ATL DHTML 控制項](../atl/modifying-the-atl-dhtml-control.md)  
+[修改 ATL DHTML 控制項](../atl/modifying-the-atl-dhtml-control.md)<br/>
 示範如何加入控制項新功能。
 
-[測試已改變的 ATL DHTML 控制項](../atl/testing-the-modified-atl-dhtml-control.md)  
+[測試已改變的 ATL DHTML 控制項](../atl/testing-the-modified-atl-dhtml-control.md)<br/>
 示範如何建置和測試控制項的新增的功能。
 
 ## <a name="related-sections"></a>相關章節
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 提供有關如何使用 Active Template Library 進行程式設計的概念性主題連結。
 

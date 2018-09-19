@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 513fe618d32e3a3dcfadcf98134a927ddf629b86
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 866cedba73be1c7858415359dfd94cec9a55dccc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761790"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045246"
 ---
 # <a name="atl-typedefs"></a>ATL Typedef
 
@@ -67,15 +67,15 @@ Active Template Library 包含下列的 typedef。
 
 定義根據 _ATL_BASE_MODULE70 的 typedef。
 
-```   
-typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;   
+```
+typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;
 ```
 
 ### <a name="remarks"></a>備註
 
 每個 ATL 專案中使用。 根據[_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)。
 
-ATL 7.0 模組類別一部分的類別衍生自 _ATL_BASE_MODULE 結構。  如需有關 ATL 模組類別的詳細資訊，請參閱[COM 模組類別](../../atl/com-modules-classes.md)。  
+ATL 7.0 模組類別一部分的類別衍生自 _ATL_BASE_MODULE 結構。  如需有關 ATL 模組類別的詳細資訊，請參閱[COM 模組類別](../../atl/com-modules-classes.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -85,13 +85,13 @@ ATL 7.0 模組類別一部分的類別衍生自 _ATL_BASE_MODULE 結構。  如�
 
 定義根據 _ATL_COM_MODULE70 的 typedef。
 
-```   
-typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;   
+```
+typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;
 ```
 
 ### <a name="remarks"></a>備註
 
-使用 ATL 專案使用 COM 功能。 根據[_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)。  
+使用 ATL 專案使用 COM 功能。 根據[_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -101,9 +101,10 @@ typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;
 
 定義根據 _ATL_MODULE70 的 typedef。
 
-```   
-typedef ATL::_ATL_MODULE70 _ATL_MODULE;   
-```  
+```
+typedef ATL::_ATL_MODULE70 _ATL_MODULE;
+```
+
 ## <a name="requirements"></a>需求
 
 **標頭：**
@@ -116,13 +117,13 @@ typedef ATL::_ATL_MODULE70 _ATL_MODULE;
 
 定義根據 _ATL_WIN_MODULE70 的 typedef。
 
-```   
-typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE; 
+```
+typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
 ```
 
 ### <a name="remarks"></a>備註
 
-使用任何 ATL 專案使用時間範圍功能。 根據[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)。  
+使用任何 ATL 專案使用時間範圍功能。 根據[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -132,9 +133,9 @@ typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
 
 所使用的類型[CUrl](curl-class.md)來指定連接埠號碼。
 
-```  
+```
 typedef WORD ATL_URL_PORT;
-```  
+```
 
 ## <a name="requirements"></a>需求
 
@@ -144,9 +145,10 @@ typedef WORD ATL_URL_PORT;
 
 此類別會管理 COM 介面指標。
 
-```   
-typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;   
-```  
+```
+typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;
+```
+
 ## <a name="requirements"></a>需求
 
 **標頭：** atlbase.h
@@ -155,16 +157,16 @@ typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;
 
 呼叫適當的執行緒模型的方法，不論所使用的執行緒模型。
 
-```   
-#if defined(_ATL_SINGLE_THREADED)  
-typedef CComSingleThreadModel CComGlobalsThreadModel;  
-#elif defined(_ATL_APARTMENT_THREADED)  
-typedef CComMultiThreadModel CComGlobalsThreadModel;  
-#elif defined(_ATL_FREE_THREADED)  
-typedef CComMultiThreadModel CComGlobalsThreadModel;  
-#else  
-#pragma message ("No global threading model defined")  
-#endif   
+```
+#if defined(_ATL_SINGLE_THREADED)
+typedef CComSingleThreadModel CComGlobalsThreadModel;
+#elif defined(_ATL_APARTMENT_THREADED)
+typedef CComMultiThreadModel CComGlobalsThreadModel;
+#elif defined(_ATL_FREE_THREADED)
+typedef CComMultiThreadModel CComGlobalsThreadModel;
+#else
+#pragma message ("No global threading model defined")
+#endif
 ```
 
 ### <a name="remarks"></a>備註
@@ -185,7 +187,7 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
 
 S = `CComSingleThreadModel`;M = `CComMultiThreadModel`
 
-使用`CComObjectThreadModel`內的單一物件類別。 使用`CComGlobalsThreadModel`中物件的全域可用於您的程式，或想要保護多個執行緒上的模組資源時。  
+使用`CComObjectThreadModel`內的單一物件類別。 使用`CComGlobalsThreadModel`中物件的全域可用於您的程式，或想要保護多個執行緒上的模組資源時。
 
 ## <a name="requirements"></a>需求
 
@@ -195,16 +197,16 @@ S = `CComSingleThreadModel`;M = `CComMultiThreadModel`
 
 呼叫適當的執行緒模型的方法，不論所使用的執行緒模型。
 
-```   
-#if defined(_ATL_SINGLE_THREADED)  
-typedef CComSingleThreadModel CComObjectThreadModel;  
-#elif defined(_ATL_APARTMENT_THREADED)  
-typedef CComSingleThreadModel CComObjectThreadModel;  
-#elif defined(_ATL_FREE_THREADED)  
-typedef CComMultiThreadModel CComObjectThreadModel;  
-#else  
-#pragma message ("No global threading model defined")  
-#endif   
+```
+#if defined(_ATL_SINGLE_THREADED)
+typedef CComSingleThreadModel CComObjectThreadModel;
+#elif defined(_ATL_APARTMENT_THREADED)
+typedef CComSingleThreadModel CComObjectThreadModel;
+#elif defined(_ATL_FREE_THREADED)
+typedef CComMultiThreadModel CComObjectThreadModel;
+#else
+#pragma message ("No global threading model defined")
+#endif
 ```
 
 ### <a name="remarks"></a>備註
@@ -225,7 +227,7 @@ typedef CComMultiThreadModel CComObjectThreadModel;
 
 S = `CComSingleThreadModel`;M = `CComMultiThreadModel`
 
-使用`CComObjectThreadModel`內的單一物件類別。 使用`CComGlobalsThreadModel`物件，是在全球都可使用您的程式，或當您想要保護多個執行緒上的模組資源。  
+使用`CComObjectThreadModel`內的單一物件類別。 使用`CComGlobalsThreadModel`物件，是在全球都可使用您的程式，或當您想要保護多個執行緒上的模組資源。
 
 ## <a name="requirements"></a>需求
 
@@ -235,9 +237,9 @@ S = `CComSingleThreadModel`;M = `CComMultiThreadModel`
 
 這個類別是特製化的`CContainedWindowT`。
 
-```   
-typedef CContainedWindowT<CWindow> CContainedWindow;   
-```  
+```
+typedef CContainedWindowT<CWindow> CContainedWindow;
+```
 
 ## <a name="requirements"></a>需求
 
@@ -251,9 +253,9 @@ typedef CContainedWindowT<CWindow> CContainedWindow;
 
 特製化[CPathT](../../atl/reference/cpatht-class.md)使用`CString`。
 
-```   
-typedef CPathT<CString> CPath;   
-```  
+```
+typedef CPathT<CString> CPath;
+```
 
 ## <a name="requirements"></a>需求
 
@@ -263,8 +265,8 @@ typedef CPathT<CString> CPath;
 
 特製化[CPathT](../../atl/reference/cpatht-class.md)使用`CStringA`。
 
-```   
-typedef CPathT<CStringA> CPathA;   
+```
+typedef CPathT<CStringA> CPathA;
 ```
 
 ## <a name="requirements"></a>需求
@@ -275,9 +277,9 @@ typedef CPathT<CStringA> CPathA;
 
 特製化[CPathT](../../atl/reference/cpatht-class.md)使用`CStringW`。
 
-```   
-typedef ATL::CPathT<CStringW> CPathW;   
-```  
+```
+typedef ATL::CPathT<CStringW> CPathW;
+```
 ## <a name="requirements"></a>需求
 
 **標頭：** atlpath.h
@@ -286,13 +288,13 @@ typedef ATL::CPathT<CStringW> CPathW;
 
 表示陣列來儲存簡單類型。
 
-```   
-#define CSimpleValArray CSimpleArray   
-```  
+```
+#define CSimpleValArray CSimpleArray
+```
 
 ### <a name="remarks"></a>備註
 
-`CSimpleValArray` 提供用於建立和管理包含簡單的資料類型的陣列。 它是一項簡單 # 的 define [CSimpleArray](../../atl/reference/csimplearray-class.md)。  
+`CSimpleValArray` 提供用於建立和管理包含簡單的資料類型的陣列。 它是一項簡單 # 的 define [CSimpleArray](../../atl/reference/csimplearray-class.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -302,9 +304,9 @@ typedef ATL::CPathT<CStringW> CPathW;
 
 常數的指標[CUrl](../../atl/reference/curl-class.md)物件。
 
-```   
-typedef const CUrl* LPCURL;   
-```  
+```
+typedef const CUrl* LPCURL;
+```
 
 ## <a name="requirements"></a>需求
 
@@ -316,12 +318,12 @@ typedef const CUrl* LPCURL;
 
 ### <a name="syntax"></a>語法
 
-```  
-      #if defined(_MT)  
-   typedef CRTThreadTraits DefaultThreadTraits;  
-#else  
-   typedef Win32ThreadTraits DefaultThreadTraits;  
-#endif  
+```
+#if defined(_MT)
+   typedef CRTThreadTraits DefaultThreadTraits;
+#else
+   typedef Win32ThreadTraits DefaultThreadTraits;
+#endif
 ```
 
 ## <a name="remarks"></a>備註
@@ -336,9 +338,9 @@ typedef const CUrl* LPCURL;
 
 指標[CUrl](../../atl/reference/curl-class.md)物件。
 
-```   
-typedef CUrl* LPURL;   
-```  
+```
+typedef CUrl* LPURL;
+```
 
 ## <a name="requirements"></a>需求
 
@@ -346,8 +348,8 @@ typedef CUrl* LPURL;
 
 ## <a name="see-also"></a>另請參閱
 
-[ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)   
-[函式](../../atl/reference/atl-functions.md)   
-[全域變數](../../atl/reference/atl-global-variables.md)   
-[類別和結構](../../atl/reference/atl-classes.md)   
-[巨集](../../atl/reference/atl-macros.md)   
+[ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)<br/>
+[函式](../../atl/reference/atl-functions.md)<br/>
+[全域變數](../../atl/reference/atl-global-variables.md)<br/>
+[類別和結構](../../atl/reference/atl-classes.md)<br/>
+[巨集](../../atl/reference/atl-macros.md)

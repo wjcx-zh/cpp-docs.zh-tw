@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2163 |Microsoft 文件
+title: 編譯器錯誤 C2163 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14cbb110cf226a0a36a121ac9aa1901782357b04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 974488a2f587c2fde02dd74baf64a98a7590e9b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168083"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066555"
 ---
 # <a name="compiler-error-c2163"></a>編譯器錯誤 C2163
-'function': 無法當做內建函式的函式  
-  
- `intrinsic`或`function`pragma 列出無法使用內建形式的函式。 例如，某些內建函式無法使用。 當編譯使用 /clr 程式設計的程式
+
+'function': 無法當做內建函式的函式
+
+`intrinsic`或`function`pragma 列出無法使用內建形式的函式。 比方說，某些內建函式時，不可以使用編譯使用 /clr 程式設計的程式。

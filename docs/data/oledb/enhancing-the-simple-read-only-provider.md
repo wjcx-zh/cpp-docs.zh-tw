@@ -1,5 +1,5 @@
 ---
-title: 增強簡單唯讀提供者 |Microsoft 文件
+title: 增強簡單唯讀提供者 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,23 +18,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7c88714e4e1651839cdc5fd4b92d3c5222aa08d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28a92f6193053baca80ca078bddc0de862f50279
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33100014"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036445"
 ---
 # <a name="enhancing-the-simple-read-only-provider"></a>增強簡單唯讀提供者
+
 本節說明如何增強[簡單唯讀提供者](../../data/oledb/implementing-the-simple-read-only-provider.md)在上一節中建立。 `IRowsetLocateImpl` 建立實作`IRowsetLocate`介面，並加入您的書籤支援。  
   
- 當您有運作的提供者時，您可以增強，使更新提供者、 處理交易，或增強的資料列擷取演算法的效能。 大部分的提供者增強功能包括將介面加入至現有的 COM 物件。  
+當您有運作的提供者時，您可以增強程式碼進行更新提供者、 處理交易，或強化的資料列擷取的演算法效能。 大部分的提供者增強功能包括將介面加入至現有的 COM 物件。  
   
- 下列主題中的範例，以增強的資料列擷取機制加入`IRowsetLocate`介面`CAgentRowset`。 本主題說明如何以：  
+下列主題中的範例藉由新增增強的資料列擷取機制`IRowsetLocate`介面`CAgentRowset`。 本主題說明如何以：  
   
--   [請 RMyProviderRowset 的繼承自 IRowsetLocate](../../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md)。  
+- [請 RMyProviderRowset 的繼承自 IRowsetLocate](../../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md)。  
   
--   [動態決定傳回給取用者的資料行](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)。  
+- [動態決定傳回給消費者的資料行](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立簡單唯讀提供者](../../data/oledb/creating-a-simple-read-only-provider.md)
+
+[建立簡單唯讀提供者](../../data/oledb/creating-a-simple-read-only-provider.md)

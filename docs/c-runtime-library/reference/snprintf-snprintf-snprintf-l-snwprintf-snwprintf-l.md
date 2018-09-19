@@ -58,14 +58,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe100cbd38581b733c07b5d129d215f368e27aa7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fc8ca9c62204c1bb8debccf9253bb913f8d1fb10
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203514"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060560"
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l
+
 將格式化資料寫入字串。 這些函式已有更安全的版本可供使用，請參閱 [_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)。
 
 ## <a name="syntax"></a>語法
@@ -143,7 +144,7 @@ int _snwprintf_l(
 *count*<br/>
 要儲存的最大字元數。
 
-*<格式>*<br/>
+*格式*<br/>
 格式控制字串。
 
 *引數*<br/>
@@ -194,7 +195,7 @@ int _snwprintf_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**snprintf**， **_snprintf**， **_snprintf_l**|\<stdio.h>|
 |**_snwprintf**， **_snwprintf_l**|\<stdio.h> 或 \<wchar.h>|

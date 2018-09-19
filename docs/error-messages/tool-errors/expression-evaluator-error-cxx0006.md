@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0006 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0006 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 636708042b2291e4edd295baa0da1ffb57dde4ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c44f950955db71e2f81873513a9052e345799d4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300237"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070258"
 ---
 # <a name="expression-evaluator-error-cxx0006"></a>運算式評估工具錯誤 CXX0006
-遺漏左括號  
-  
- 找不到運算式中的不對稱的括號。 請重新輸入具有對稱的括號運算式。  
-  
- 這個錯誤是與 can0006 相同。
+
+遺漏左括號
+
+找不到運算式中的不對稱的括號。 重新輸入與對稱的括號運算式。
+
+此錯誤是與 can0006 相同。

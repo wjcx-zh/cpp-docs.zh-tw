@@ -1,5 +1,5 @@
 ---
-title: writeonly_texture_view 類別 |Microsoft 文件
+title: writeonly_texture_view 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6b1bc5c90fd837f56dbd98eddb37f624e78080b
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 65e4895af0903008e17b75a38981c169f07fc1c7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695401"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047748"
 ---
 # <a name="writeonlytextureview-class"></a>writeonly_texture_view 類別
-存取 writeonly 紋理。  
+提供 writeonly 存取材質。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,11 +45,11 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 ```  
   
 #### <a name="parameters"></a>參數  
- `value_type`  
- 紋理中的項目類型。  
+*value_type*<br/>
+材質中項目的類型。  
   
- `_Rank`  
- 紋理的陣序規範。  
+*_Rank*<br/>
+材質的順位。  
   
 ## <a name="members"></a>成員  
   
@@ -58,7 +58,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 |名稱|描述|  
 |----------|-----------------|  
 |`scalar_type`||  
-|`value_type`|紋理中的項目類型。|  
+|`value_type`|材質中項目的類型。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
@@ -71,13 +71,13 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 |名稱|描述|  
 |----------|-----------------|  
-|[set](#set)|設定指定索引處的元素的值。|  
+|[set](#set)|指定索引處設定項目的值。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|複製指定`writeonly_texture_view`給這一個物件。|  
+|[operator=](#operator_eq)|複製指定`writeonly_texture_view`如下的物件。|  
   
 ### <a name="public-constants"></a>公用常數  
   
@@ -105,7 +105,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 ##  <a name="operator_eq"></a> 運算子 = 
 
- 複製指定`writeonly_texture_view`給這一個物件。  
+ 複製指定`writeonly_texture_view`如下的物件。  
   
 ```  
 writeonly_texture_view<value_type, _Rank>& operator= (
@@ -113,13 +113,13 @@ writeonly_texture_view<value_type, _Rank>& operator= (
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Other`  
- `writeonly_texture_view` 若要從複製的物件。  
+*_Other*<br/>
+`writeonly_texture_view` 若要從複製的物件。  
   
 ### <a name="return-value"></a>傳回值  
  此參考`writeonly_texture_view`物件。  
   
-##  <a name="rank"></a> 順位 
+##  <a name="rank"></a> 陣序規範 
 
  取得的順位`writeonly_texture_view`物件。  
   
@@ -129,7 +129,7 @@ static const int rank = _Rank;
   
 ##  <a name="set"></a> 設定 
 
- 設定指定索引處的元素的值。  
+ 指定索引處設定項目的值。  
   
 ```  
 void set(
@@ -138,11 +138,11 @@ void set(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Index`  
- 項目的索引。  
+*_Index*<br/>
+項目的索引。  
   
- `value`  
- 項目的新值。  
+*值*<br/>
+項目的新值。  
   
 ##  <a name="ctor"></a> writeonly_texture_view 
 
@@ -160,14 +160,14 @@ writeonly_texture_view(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Rank`  
- 紋理的陣序規範。  
+*_Rank*<br/>
+材質的順位。  
   
- `value_type`  
- 紋理中的項目類型。  
+*value_type*<br/>
+材質中項目的類型。  
   
- `_Src`  
- 用來建立紋理`writeonly_texture_view`。  
+*_Src*<br/>
+用來建立紋理`writeonly_texture_view`。  
   
 ## <a name="see-also"></a>另請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)

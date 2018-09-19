@@ -1,5 +1,5 @@
 ---
-title: cancellation_token 類別 |Microsoft 文件
+title: cancellation_token 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d8741763295e96f3d0c221b687c8ef62fbfc55c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 125d08def4a1fb801cb1b6c911d8c8c9c154c296
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695937"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037958"
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token 類別
 `cancellation_token` 類別表示可判斷某個作業是否已要求取消的能力。 特定語彙基元可以與 `task_group`、`structured_task_group` 或 `task` 產生關聯，來提供隱含取消作業。 如果與相關聯的 `cancellation_token_source` 已取消，也可以向它輪詢取消，或為它註冊回呼。  
@@ -89,7 +89,8 @@ cancellation_token(cancellation_token&& _Src);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Src`  
+*_Src*<br/>
+要複製或移動 cancellation_token。
   
 ##  <a name="deregister_callback"></a> deregister_callback 
 
@@ -100,8 +101,8 @@ void deregister_callback(const cancellation_token_registration& _Registration) c
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Registration`  
- `cancellation_token_registration` 物件，對應於要取消註冊的回呼。 這個語彙基元必須已經由 `register` 方法呼叫所傳回。  
+*_Registration*<br/>
+`cancellation_token_registration` 物件，對應於要取消註冊的回呼。 這個語彙基元必須已經由 `register` 方法呼叫所傳回。  
   
 ##  <a name="is_cancelable"></a> is_cancelable 
 
@@ -125,7 +126,7 @@ bool is_canceled() const;
 ### <a name="return-value"></a>傳回值  
  如果語彙基元被取消，則為 `true` 值，否則為 `false` 值。  
   
-##  <a name="none"></a> 無 
+##  <a name="none"></a> None 
 
  傳回永不需取消的取消語彙基元。  
   
@@ -143,8 +144,9 @@ bool operator!= (const cancellation_token& _Src) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Src`  
-  
+*_Src*<br/>
+要比較的 `cancellation_token`。
+
 ### <a name="return-value"></a>傳回值  
   
 ##  <a name="operator_eq"></a> 運算子 = 
@@ -156,7 +158,8 @@ cancellation_token& operator= (cancellation_token&& _Src);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Src`  
+*_Src*<br/>
+`cancellation_token`指派。
   
 ### <a name="return-value"></a>傳回值  
   
@@ -167,7 +170,8 @@ bool operator== (const cancellation_token& _Src) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Src`  
+*_Src*<br/>
+要比較的 `cancellation_token`。
   
 ### <a name="return-value"></a>傳回值  
   
@@ -181,14 +185,14 @@ template<typename _Function>
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Function`  
- 當取消這個 `cancellation_token` 時，會被回呼的函式物件的類型。  
+*_Function*<br/>
+當取消這個 `cancellation_token` 時，會被回呼的函式物件的類型。  
   
- `_Func`  
- 當取消這個 `cancellation_token` 時，會被回呼的函式物件。  
+*_Func*<br/>
+當取消這個 `cancellation_token` 時，會被回呼的函式物件。  
   
 ### <a name="return-value"></a>傳回值  
- `cancellation_token_registration` 物件，可在 `deregister` 方法中用來取消註冊先前註冊的回呼，並防止進行此回呼。 方法會擲回[invalid_operation](invalid-operation-class.md)例外狀況，如果在上呼叫`cancellation_token`使用建立的物件[cancellation_token:: none](#none)方法。  
+ `cancellation_token_registration` 物件，可在 `deregister` 方法中用來取消註冊先前註冊的回呼，並防止進行此回呼。 方法會擲回[invalid_operation](invalid-operation-class.md)如果已呼叫方法的例外狀況`cancellation_token`使用所建立的物件[invalid_operation](#none)方法。  
   
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

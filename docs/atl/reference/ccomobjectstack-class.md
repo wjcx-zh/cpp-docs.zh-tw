@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c3e29c3eed99c95ee92841413ceaca6e17e8565
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 277951a5425a75c9769c5a2c4104421303f677c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755058"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065329"
 ---
 # <a name="ccomobjectstack-class"></a>CComObjectStack 類別
 
@@ -36,13 +36,13 @@ ms.locfileid: "43755058"
 ## <a name="syntax"></a>語法
 
 ```
-template <class  Base>  
+template <class  Base>
 class CComObjectStack : public Base
 ```
 
 #### <a name="parameters"></a>參數
 
-*基底*  
+*基底*<br/>
 您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或是[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，因為您想要在物件上支援從任何其他介面。
 
 ## <a name="members"></a>成員
@@ -170,7 +170,7 @@ STDMETHOD_(ULONG, Release)();
 
 ## <a name="see-also"></a>另請參閱
 
-[CComAggObject 類別](../../atl/reference/ccomaggobject-class.md)   
-[CComObject 類別](../../atl/reference/ccomobject-class.md)   
-[CComObjectGlobal 類別](../../atl/reference/ccomobjectglobal-class.md)   
+[CComAggObject 類別](../../atl/reference/ccomaggobject-class.md)<br/>
+[CComObject 類別](../../atl/reference/ccomobject-class.md)<br/>
+[CComObjectGlobal 類別](../../atl/reference/ccomobjectglobal-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

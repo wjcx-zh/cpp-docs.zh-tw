@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2861 |Microsoft 文件
+title: 編譯器錯誤 C2861 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e1f7010ca6d98c4c27f85ecc858cf7703a87e90
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94210350e0483b46eb86579b837501a5291bda4d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247096"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037251"
 ---
 # <a name="compiler-error-c2861"></a>編譯器錯誤 C2861
-'函式名稱': 無法定義介面成員函式  
-  
- 編譯器遇到介面關鍵字或推算為介面結構但然後找到成員函式定義。  介面不能包含的成員函式的定義。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C2861:  
-  
-```  
-// C2861.cpp  
-// compile with: /c  
-#include <objbase.h>   // required for IUnknown definition  
-[ object, uuid("00000000-0000-0000-0000-000000000001") ]  
-__interface IMyInterface : IUnknown {  
-   HRESULT mf(int a);  
-};  
-  
-HRESULT IMyInterface::mf(int a) {}   // C2861  
-  
+
+'函式名稱': 無法定義介面成員函式
+
+但編譯器發現介面關鍵字或推算為介面結構然後找到 成員函式定義。  介面不能包含一個成員函式的定義。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C2861:
+
+```
+// C2861.cpp
+// compile with: /c
+#include <objbase.h>   // required for IUnknown definition
+[ object, uuid("00000000-0000-0000-0000-000000000001") ]
+__interface IMyInterface : IUnknown {
+   HRESULT mf(int a);
+};
+
+HRESULT IMyInterface::mf(int a) {}   // C2861
+
 ```

@@ -63,14 +63,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6adec1a87463515f3fa87dfd4ca31fda650e902
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 41636a0ff93a247b33c3d7fb7c13a65c05e1aa1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573216"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041463"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl 類別
+
 提供實作[ICommand](/previous-versions/windows/desktop/ms709737\(v=vs.85\))介面。  
   
 ## <a name="syntax"></a>語法
@@ -81,14 +82,16 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 ```  
   
 ### <a name="parameters"></a>參數  
- *T*  
- 您的類別，衍生自`ICommandImpl`。  
+
+*T*<br/>
+您的類別，衍生自`ICommandImpl`。  
   
- *CommandBase*  
- 命令介面。 預設為 `ICommand`。  
+*CommandBase*<br/>
+命令介面。 預設為 `ICommand`。  
 
 ## <a name="requirements"></a>需求  
- **Header:** atldb.h  
+
+**Header:** atldb.h  
   
 ## <a name="members"></a>成員  
   
@@ -99,7 +102,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 |[取消](#cancel)|取消目前執行的命令。|  
 |[CancelExecution](#cancelexecution)|取消目前執行的命令。|  
 |[CreateRowset](#createrowset)|建立資料列集物件。|  
-|[執行](#execute)|執行命令。|  
+|[Execute](#execute)|執行命令。|  
 |[GetDBSession](#getdbsession)|傳回建立命令的工作階段的介面指標。|  
 |[ICommandImpl](#icommandimpl)|建構函式。|  
   
@@ -112,9 +115,11 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 |[m_bIsExecuting](#bisexecuting)|表示命令目前是否正在執行。|  
   
 ## <a name="remarks"></a>備註  
- Command 物件上的強制介面。  
+
+Command 物件上的強制介面。  
   
 ## <a name="cancel"></a> Icommandimpl:: Cancel
+
 取消目前執行的命令。  
   
 ### <a name="syntax"></a>語法  
@@ -124,9 +129,11 @@ STDMETHOD(Cancel)();
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[ICommand::Cancel](/previous-versions/windows/desktop/ms714402\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+
+請參閱[ICommand::Cancel](/previous-versions/windows/desktop/ms714402\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
 
 ## <a name="cancelexecution"></a> Icommandimpl:: Cancelexecution
+
 取消目前執行的命令。  
   
 ### <a name="syntax"></a>語法  
@@ -136,6 +143,7 @@ HRESULT CancelExecution();
 ```  
 
 ## <a name="createrowset"></a> Icommandimpl:: Createrowset
+
 由呼叫[Execute](../../data/oledb/icommandimpl-execute.md)建立單一資料列集。  
   
 ### <a name="syntax"></a>語法  
@@ -151,36 +159,40 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>參數  
- *RowsetClass*  
- 代表使用者的資料列集類別的樣板類別成員。 通常是由精靈產生。  
+
+*RowsetClass*<br/>
+代表使用者的資料列集類別的樣板類別成員。 通常是由精靈產生。  
   
- *pUnkOuter*  
- [in]指標，控制`IUnknown`介面資料列集建立為彙總的一部分，否則為 null。  
+*pUnkOuter*<br/>
+[in]指標，控制`IUnknown`介面資料列集建立為彙總的一部分，否則為 null。  
   
- *riid*  
- [in]對應至*riid*在`ICommand::Execute`。  
+*riid*<br/>
+[in]對應至*riid*在`ICommand::Execute`。  
   
- *pParams*  
- [輸入/輸出]對應至*pParams*在`ICommand::Execute`。  
+*pParams*<br/>
+[輸入/輸出]對應至*pParams*在`ICommand::Execute`。  
   
- *pcRowsAffected*  
- 對應至*pcRowsAffected*在`ICommand::Execute`。  
+*pcRowsAffected*<br/>
+對應至*pcRowsAffected*在`ICommand::Execute`。  
   
- *ppRowset*  
- [輸入/輸出]對應至*Pprowset&lt*在`ICommand::Execute`。  
+*ppRowset*<br/>
+[輸入/輸出]對應至*Pprowset&lt*在`ICommand::Execute`。  
   
- *pRowsetObj*  
- [out]資料列集物件的指標。 通常不會使用此參數，但如果您必須在資料列集上執行更多工作，再將它傳遞至 COM 物件可以使用它。 存留期*pRowsetObj*繫結*Pprowset&lt*。  
+*pRowsetObj*<br/>
+[out]資料列集物件的指標。 通常不會使用此參數，但如果您必須在資料列集上執行更多工作，再將它傳遞至 COM 物件可以使用它。 存留期*pRowsetObj*繫結*Pprowset&lt*。  
   
 ### <a name="return-value"></a>傳回值  
- 標準的 HRESULT 值。 請參閱`ICommand::Execute`如需一般值的清單。  
+
+標準的 HRESULT 值。 請參閱`ICommand::Execute`如需一般值的清單。  
   
 ### <a name="remarks"></a>備註  
- 若要建立多個資料列集，或提供您自己的建立不同的資料列集的條件，將不同的呼叫置於`CreateRowset`內在`Execute`。  
+
+若要建立多個資料列集，或提供您自己的建立不同的資料列集的條件，將不同的呼叫置於`CreateRowset`內在`Execute`。  
   
- 請參閱[icommand:: Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\))在*OLE DB 程式設計人員參考。*  
+請參閱[icommand:: Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\))在*OLE DB 程式設計人員參考。*  
 
 ## <a name="execute"></a> Icommandimpl:: Execute
+
 執行命令。  
   
 ### <a name="syntax"></a>語法  
@@ -194,14 +206,17 @@ HRESULT Execute(IUnknown* pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[icommand:: Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+
+請參閱[icommand:: Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ### <a name="remarks"></a>備註  
- 要求的連出介面將會取得從這個函式建立的資料列集物件介面。  
+
+要求的連出介面將會取得從這個函式建立的資料列集物件介面。  
   
- `Execute` 呼叫[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)。 若要建立多個資料列集，或提供您自己的條件，來建立不同的資料列集的預設實作會覆寫。  
+`Execute` 呼叫[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)。 若要建立多個資料列集，或提供您自己的條件，來建立不同的資料列集的預設實作會覆寫。  
 
 ## <a name="getdbsession"></a> Icommandimpl:: Getdbsession
+
 傳回建立命令的工作階段的介面指標。  
   
 ### <a name="syntax"></a>語法  
@@ -212,12 +227,15 @@ STDMETHOD (GetDBSession) (REFIID riid,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+
+請參閱[ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ### <a name="remarks"></a>備註  
- 適用於從工作階段中擷取屬性。  
+
+適用於從工作階段中擷取屬性。  
 
 ## <a name="icommandimpl"></a> Icommandimpl:: Icommandimpl
+
 建構函式。  
   
 ### <a name="syntax"></a>語法  
@@ -227,6 +245,7 @@ ICommandImpl();
 ```  
 
 ## <a name="bcancel"></a> Icommandimpl:: M_bcancel
+
 指出是否可以取消命令為止。  
   
 ### <a name="syntax"></a>語法  
@@ -236,9 +255,11 @@ unsigned m_bCancel:1;
 ```  
   
 ### <a name="remarks"></a>備註  
- 您可以擷取中的這個變數`Execute`命令類別和適當的取消方法。 
+
+您可以擷取中的這個變數`Execute`命令類別和適當的取消方法。 
 
 ## <a name="bcancelwhenexecuting"></a> Icommandimpl:: M_bcancelwhenexecuting
+
 指出執行時，是否可以取消命令。  
   
 ### <a name="syntax"></a>語法  
@@ -248,9 +269,11 @@ unsigned m_bCancelWhenExecuting:1;
 ```  
   
 ### <a name="remarks"></a>備註  
- 預設值為 **，則為 true** （可取消）。  
+
+預設值為 **，則為 true** （可取消）。  
 
 ## <a name="bisexecuting"></a> Icommandimpl:: M_bisexecuting
+
 表示命令目前是否正在執行。  
   
 ### <a name="syntax"></a>語法  
@@ -260,8 +283,10 @@ unsigned m_bIsExecuting:1;
 ```  
   
 ### <a name="remarks"></a>備註  
- `Execute`命令類別的方法可以將這個變數設 **，則為 true**。 
+
+`Execute`命令類別的方法可以將這個變數設 **，則為 true**。 
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

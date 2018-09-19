@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f77981bd922f73c99102c444a7c95f7240adbc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ef93476e669b923d642f79f480c602229d6a4322
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764616"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071155"
 ---
 # <a name="interfaces-atl"></a>介面 (ATL)
 
@@ -35,6 +35,6 @@ ms.locfileid: "43764616"
 
 ## <a name="see-also"></a>另請參閱
 
-[COM 簡介](../atl/introduction-to-com.md)   
+[COM 簡介](../atl/introduction-to-com.md)<br/>
 [COM 物件與介面](/windows/desktop/com/com-objects-and-interfaces)
 

@@ -17,17 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e1d6d3277f27c20f7b1c002590fd26e1e2f08eb7
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 3602711a880bbfe97c2fe357982bb60a55299044
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340026"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035535"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>覆寫動態存取子
+
 當您使用動態存取子這類`CDynamicAccessor`，此命令`Open`方法會建立存取子，會自動根據開啟的資料列集的資料行資訊。 您可以覆寫動態存取子，來控制確切方式的資料行繫結。  
   
- 若要覆寫動態存取子，請傳遞**假**做為最後一個參數`CCommand::Open`方法。 這可防止`Open`自動建立存取子。 您可以接著呼叫`GetColumnInfo`並呼叫`AddBindEntry`您想要繫結每個資料行。 下列程式碼顯示如何執行此動作：  
+若要覆寫動態存取子，請傳遞**假**做為最後一個參數`CCommand::Open`方法。 這可防止`Open`自動建立存取子。 您可以接著呼叫`GetColumnInfo`並呼叫`AddBindEntry`您想要繫結每個資料行。 下列程式碼顯示如何執行此動作：  
   
 ```cpp  
 USES_CONVERSION;  
@@ -80,4 +81,5 @@ while (product.MoveNext() == S_OK)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用存取子](../../data/oledb/using-accessors.md)
+
+[使用存取子](../../data/oledb/using-accessors.md)

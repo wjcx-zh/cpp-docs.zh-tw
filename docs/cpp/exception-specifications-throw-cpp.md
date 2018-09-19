@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dfc9c50503fcd277f34e8f5dfc4a630d888eebf
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4cc44672fe30af8b6521b617228fb70b88e61f83
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318267"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040932"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>例外狀況規格 （throw、 noexcept） （c + +）
 
-例外狀況規格是一項 c + + 語言功能，表示有關函式可以傳播例外狀況類型的程式設計人員的意圖。 您可以指定函式可能會或可能不會結束例外狀況使用*例外狀況規格*。 編譯器可以使用這項資訊來最佳化呼叫函式，並終止程式，如果預期的例外狀況逸出的函式。 
+例外狀況規格是一項 c + + 語言功能，表示有關函式可以傳播例外狀況類型的程式設計人員的意圖。 您可以指定函式可能會或可能不會結束例外狀況使用*例外狀況規格*。 編譯器可以使用這項資訊來最佳化呼叫函式，並終止程式，如果預期的例外狀況逸出的函式。
 
 在 c++17 之前發生兩種類型的例外狀況規格。 *Noexcept 規格*的新功能 C + + 11。 它會指定可能的例外狀況可以逸出的函式的集合是否為空白。 *動態例外狀況規格*，或`throw(optional_type_list)`規格，是在 c++11 中已被取代，而且在 c++17 中，移除，除了`throw()`，這是別名`noexcept(true)`。 此例外狀況規格已設計成提供從函式，可以擲回什麼例外狀況的摘要資訊，但實際上它找到有問題。 證明有些許用處的一個動態例外狀況規格是無條件`throw()`規格。 例如，函式宣告：
 
@@ -138,5 +138,6 @@ in handler
 ```
 
 ## <a name="see-also"></a>另請參閱
- [try、throw 和 catch 陳述式 (C++)](../cpp/try-throw-and-catch-statements-cpp.md)  
- [C++ 例外狀況處理](../cpp/cpp-exception-handling.md)
+
+[try、throw 和 catch 陳述式 (C++)](../cpp/try-throw-and-catch-statements-cpp.md)<br/>
+[C++ 例外狀況處理](../cpp/cpp-exception-handling.md)

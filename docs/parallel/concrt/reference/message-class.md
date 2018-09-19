@@ -1,5 +1,5 @@
 ---
-title: message 類別 |Microsoft 文件
+title: message 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14fe0fa284a56c45404d8b568acf3b0d360fa27a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b0828d1d8698cb696b257e6730e4aea3961dd159
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687939"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042217"
 ---
 # <a name="message-class"></a>message 類別
 基本訊息封套，其中包含在傳訊區塊之間傳遞的資料承載。  
@@ -40,8 +40,8 @@ class message : public ::Concurrency::details::_Runtime_object;
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
- 訊息內裝載的資料類型。  
+*T*<br/>
+訊息內裝載的資料型別。  
   
 ## <a name="members"></a>成員  
   
@@ -70,10 +70,10 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[裝載](#payload)|承載`message`物件。|  
+|[承載](#payload)|承載`message`物件。|  
   
 ## <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[非同步訊息區](../../../parallel/concrt/asynchronous-message-blocks.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 非同步訊息區](../../../parallel/concrt/asynchronous-message-blocks.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `message`  
@@ -114,17 +114,17 @@ message(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_P`  
- 此訊息的裝載。  
+*_P*<br/>
+此訊息的承載。  
   
- `_Id`  
- 這個訊息的唯一 ID。  
+*識別碼 （_i)*<br/>
+這個訊息的唯一 ID。  
   
- `_Msg`  
- 參考或指標`message`物件。  
+*_Msg*<br/>
+參考或指標`message`物件。  
   
 ### <a name="remarks"></a>備註  
- 建構函式的指標之`message`物件引數會擲回[invalid_argument](../../../standard-library/invalid-argument-class.md)例外狀況如果參數`_Msg`是`NULL`。  
+ 使用變數的指標，建構函式`message`物件的引數會擲回[invalid_argument](../../../standard-library/invalid-argument-class.md)例外狀況如果參數`_Msg`是`NULL`。  
   
 ##  <a name="dtor"></a> ~ 訊息 
 
@@ -145,7 +145,7 @@ runtime_object_identity msg_id() const;
 ### <a name="return-value"></a>傳回值  
  `runtime_object_identity`的`message`物件。  
   
-##  <a name="payload"></a> 裝載 
+##  <a name="payload"></a> 承載 
 
  承載`message`物件。  
   

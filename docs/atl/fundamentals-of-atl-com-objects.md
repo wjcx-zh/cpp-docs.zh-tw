@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7873b7006962449a40a8e67d118b6699ac61f263
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b90d8901a60b5945b2b29db2c378a0cd29939f63
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762089"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059266"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>ATL COM 物件的基本概念
 
@@ -57,30 +57,30 @@ ms.locfileid: "43762089"
 
 ## <a name="in-this-section"></a>本節內容
 
-[實作 CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)  
+[實作 CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)<br/>
 顯示的範例實作的 COM 對應項目`CComObjectRootEx`。
 
-[實作 CComObject、CComAggObject 和 CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)  
+[實作 CComObject、CComAggObject 和 CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)<br/>
 討論如何**DECLARE_\*_AGGREGATABLE**巨集，會影響使用`CComObject`， `CComAggObject`，和`CComPolyObject`。
 
-[支援 IDispatch 和 IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)  
+[支援 IDispatch 和 IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)<br/>
 列出用於支援的 ATL 實作類別`IDispatch`和`IErrorInfo`介面。
 
-[支援 IDispEventImpl](../atl/supporting-idispeventimpl.md)  
+[支援 IDispEventImpl](../atl/supporting-idispeventimpl.md)<br/>
 討論的步驟來實作您類別的連接點。
 
-[變更預設 Class Factory 和彙總模型](../atl/changing-the-default-class-factory-and-aggregation-model.md)  
+[變更預設 Class Factory 和彙總模型](../atl/changing-the-default-class-factory-and-aggregation-model.md)<br/>
 顯示用來變更預設的類別處理站和彙總模型哪些巨集。
 
-[建立彙總物件](../atl/creating-an-aggregated-object.md)  
+[建立彙總物件](../atl/creating-an-aggregated-object.md)<br/>
 列出用於建立彙總的物件的步驟。
 
 ## <a name="related-sections"></a>相關章節
 
-[建立 ATL 專案](../atl/reference/creating-an-atl-project.md)  
+[建立 ATL 專案](../atl/reference/creating-an-atl-project.md)<br/>
 提供建立 ATL COM 物件的相關資訊。
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 提供有關如何使用 Active Template Library 進行程式設計的概念性主題連結。
 
 ## <a name="see-also"></a>另請參閱

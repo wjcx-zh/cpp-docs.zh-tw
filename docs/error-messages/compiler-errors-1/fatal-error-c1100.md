@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89890fdaa5c2188aff279e22ff25dfa9868382c0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b5567f1aad0d74bd42059e3458f4655781f30d16
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220042"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054099"
 ---
 # <a name="fatal-error-c1100"></a>嚴重錯誤 C1100
-無法初始化 OLE： 系統錯誤訊息  
-  
- 編譯器無法初始化元件物件模型 (COM) 程式庫。 請參閱[CoInitialize](/windows/desktop/api/objbase/nf-objbase-coinitialize)。
+
+無法初始化 OLE： 系統錯誤訊息
+
+編譯器無法初始化元件物件模型 (COM) 程式庫。 請參閱[CoInitialize](/windows/desktop/api/objbase/nf-objbase-coinitialize)。

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 503ce18d5ffa966f6c216468b487851207313937
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9292c354b630ca5aea8bda7c88f5beab6691ba08
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105350"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052838"
 ---
 # <a name="cadapt-class"></a>CAdapt 類別
 
@@ -36,13 +36,13 @@ ms.locfileid: "44105350"
 ## <a name="syntax"></a>語法
 
 ```
-template <class T>  
+template <class T>
 class CAdapt
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 配接的類型。
 
 ## <a name="members"></a>成員
@@ -97,10 +97,10 @@ CAdapt(CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 
 ### <a name="parameters"></a>參數
 
-*rSrc*  
+*rSrc*<br/>
 要複製到新建構的配置器物件所調整類型的變數。
 
-*rSrCA*  
+*rSrCA*<br/>
 其包含的資料應該複製 （或移動） 到新建構的配置器物件配接器物件。
 
 ##  <a name="m_t"></a>  CAdapt::m_T
@@ -119,7 +119,7 @@ T m_T;
 
 傳回**const**參考[m_t&lt](#m_t)成員，可讓配接器物件，如同它是類型的物件視為*T*。
 
-```  
+```
 operator const T&() const;
 ```
 
@@ -131,7 +131,7 @@ A **const**參考`m_T`。
 
 傳回的參考[m_t&lt](#m_t)成員，可讓配接器物件，如同它是類型的物件視為*T*。
 
-```  
+```
 operator T&();
 ```
 
@@ -149,7 +149,7 @@ bool operator<(const T& rSrc) const;
 
 ### <a name="parameters"></a>參數
 
-*rSrc*  
+*rSrc*<br/>
 要比較的物件參考。
 
 ### <a name="return-value"></a>傳回值
@@ -168,10 +168,10 @@ CAdapt& operator= (CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 
 ### <a name="parameters"></a>參數
 
-*rSrc*  
+*rSrc*<br/>
 要複製所配接類型的物件參考。
 
-*rSrCA*  
+*rSrCA*<br/>
 要移動的物件參考。
 
 ### <a name="return-value"></a>傳回值
@@ -188,7 +188,7 @@ bool operator== (const T& rSrc) const;
 
 ### <a name="parameters"></a>參數
 
-*rSrc*  
+*rSrc*<br/>
 要比較的物件參考。
 
 ### <a name="return-value"></a>傳回值

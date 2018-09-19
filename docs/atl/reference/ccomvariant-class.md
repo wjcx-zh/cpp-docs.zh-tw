@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf9fbd4967bbd3091d734f9b70aed9350d63a25e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 89b1dbfe9dcf00582f5f8736a4706a18439b51c6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753190"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042542"
 ---
 # <a name="ccomvariant-class"></a>CComVariant 類別
 
@@ -43,9 +43,8 @@ ms.locfileid: "43753190"
 
 ## <a name="syntax"></a>語法
 
-```  
-cpp
-class CComVariant : public tagVARIANT  
+```cpp
+class CComVariant : public tagVARIANT
 ```
 
 ## <a name="members"></a>成員
@@ -108,7 +107,7 @@ HRESULT Attach(VARIANT* pSrc);
 
 ### <a name="parameters"></a>參數
 
-*pSrc*  
+*pSrc*<br/>
 [in]指向[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)附加至物件。
 
 ### <a name="return-value"></a>傳回值
@@ -151,39 +150,39 @@ CComVariant(const CComBSTR& bstrSrc);
 
 ### <a name="parameters"></a>參數
 
-*varSrc*  
+*varSrc*<br/>
 [in]`CComVariant`或用來初始化的 VARIANT`CComVariant`物件。 來源 variant 的內容複製到目的地，而無需轉換。
 
-*lpszSrc*  
+*lpszSrc*<br/>
 [in]字元字串用來初始化`CComVariant`物件。 您可以傳遞零結束寬 (Unicode) 字元字串的建構函式或 ANSI 字串 LPCSTR 版本 LPCOLESTR 版本。 在任一情況下，此字串會轉換成 BSTR 配置使用 Unicode `SysAllocString`。 型別`CComVariant`物件都會是 VT_BSTR。
 
-*bSrc*  
+*bSrc*<br/>
 [in]**Bool**用來初始化`CComVariant`物件。 **Bool**引數時，會轉換成 VARIANT_BOOL 上，然後再儲存。 型別`CComVariant`物件都會是 VT_BOOL。
 
-*nSrc*  
+*nSrc*<br/>
 [in]**Int**，**位元組**，**簡短**，**長**，LONGLONG、 ULONGLONG， **unsigned short**， **unsigned long**，或**不帶正負號的 int**用來初始化`CComVariant`物件。 型別`CComVariant`物件將會是 VT_I4、 VT_UI1、 VT_I2、 VT_I4、 VT_I8、 VT_UI8、 VT_UI2、 VT_UI4 或 VT_UI4，分別。
 
-*vtSrc*  
+*vtSrc*<br/>
 [in]Variant 類型。 當第一個參數是**int**，有效的類型為 VT_I4 和 VT_INT。 當第一個參數是**長**，有效的類型為 VT_I4 和 VT_ERROR。 當第一個參數是**double**，有效的類型為 VT_R8 和 VT_DATE。 當第一個參數是**不帶正負號的 int**，有效的類型為 VT_UI4 和 VT_UINT。
 
-*fltSrc*  
+*fltSrc*<br/>
 [in]**浮點數**用來初始化`CComVariant`物件。 型別`CComVariant`物件都會是 VT_R4。
 
-*dblSrc*  
+*dblSrc*<br/>
 [in]**雙**用來初始化`CComVariant`物件。 型別`CComVariant`物件都會是 VT_R8。
 
-*cySrc*  
+*cySrc*<br/>
 [in]`CY`用來初始化`CComVariant`物件。 型別`CComVariant`物件都會是 VT_CY。
 
-*pSrc*  
+*pSrc*<br/>
 [in]`IDispatch`或是`IUnknown`指標，用來初始化`CComVariant`物件。 `AddRef` 將介面指標上呼叫。 型別`CComVariant`物件都會是 VT_DISPATCH 或 VT_UNKNOWN，分別。
 
 或者，用來初始化 SAFERRAY 指標`CComVariant`物件。 SAFEARRAY 的複本儲存在`CComVariant`物件。 型別`CComVariant`物件將會原始的型別，以及與的 SAFEARRAY VT_ARRAY 組合。
 
-*cSrc*  
+*cSrc*<br/>
 [in]**Char**用來初始化`CComVariant`物件。 型別`CComVariant`物件都會是 VT_I1。
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in]BSTR 用來初始化`CComVariant`物件。 型別`CComVariant`物件都會是 VT_BSTR。
 
 ### <a name="remarks"></a>備註
@@ -212,10 +211,10 @@ HRESULT ChangeType(VARTYPE vtNew, const VARIANT* pSrc = NULL);
 
 ### <a name="parameters"></a>參數
 
-*vtNew*  
+*vtNew*<br/>
 [in]新類型`CComVariant`物件。
 
-*pSrc*  
+*pSrc*<br/>
 [in]其值會轉換成新類型的 variant 的指標。 預設值是 NULL，意義`CComVariant`物件會就地轉換。
 
 ### <a name="return-value"></a>傳回值
@@ -252,7 +251,7 @@ HRESULT Copy(const VARIANT* pSrc);
 
 ### <a name="parameters"></a>參數
 
-*pSrc*  
+*pSrc*<br/>
 [in]指標[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)複製。
 
 ### <a name="return-value"></a>傳回值
@@ -269,7 +268,7 @@ HRESULT CopyTo(BSTR* pstrDest);
 
 ### <a name="parameters"></a>參數
 
-*pstrDest*  
+*pstrDest*<br/>
 BSTR，其中將會收到一份內容會指向`CComVariant`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -290,7 +289,7 @@ HRESULT Detach(VARIANT* pDest);
 
 ### <a name="parameters"></a>參數
 
-*pDest*  
+*pDest*<br/>
 [out]傳回物件的基礎變數值。
 
 ### <a name="return-value"></a>傳回值
@@ -352,36 +351,36 @@ CComVariant& operator=(char cSrc) throw();
 
 ### <a name="parameters"></a>參數
 
-*varSrc*  
+*varSrc*<br/>
 [in]`CComVariant`或是[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)指派給`CComVariant`物件。 來源 variant 的內容複製到目的地，而無需轉換。
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in]若要指派給 BSTR`CComVariant`物件。 型別`CComVariant`物件都會是 VT_BSTR。
 
-*lpszSrc*  
+*lpszSrc*<br/>
 [in]若要指派給字元字串`CComVariant`物件。 您可以傳遞零結束寬 (Unicode) 字元字串至 LPCOLESTR 版本運算子或 LPCSTR 版本的 ANSI 字串。 在任一情況下，此字串會轉換成 BSTR 配置使用 Unicode `SysAllocString`。 型別`CComVariant`物件都會是 VT_BSTR。
 
-*bSrc*  
+*bSrc*<br/>
 [in]**Bool**指派給`CComVariant`物件。 **Bool**引數時，會轉換成 VARIANT_BOOL 上，然後再儲存。 型別`CComVariant`物件都會是 VT_BOOL。
 
-*nSrc*  
+*nSrc*<br/>
 [in]**Int**，位元組**簡短**，**長**，LONGLONG、 ULONGLONG， **unsigned short**，**不帶正負號長**，或是**不帶正負號的 int**指派給`CComVariant`物件。 型別`CComVariant`物件將會是 VT_I4、 VT_UI1、 VT_I2、 VT_I4、 VT_I8、 VT_UI8、 VT_UI2、 VT_UI4 或 VT_UI4，分別。
 
-*fltSrc*  
+*fltSrc*<br/>
 [in]**浮點數**指派給`CComVariant`物件。 型別`CComVariant`物件都會是 VT_R4。
 
-*dblSrc*  
+*dblSrc*<br/>
 [in]**雙**指派給`CComVariant`物件。 型別`CComVariant`物件都會是 VT_R8。
 
-*cySrc*  
+*cySrc*<br/>
 [in]`CY`指派給`CComVariant`物件。 型別`CComVariant`物件都會是 VT_CY。
 
-*pSrc*  
+*pSrc*<br/>
 [in]`IDispatch`或是`IUnknown`指派給指標`CComVariant`物件。 `AddRef` 將介面指標上呼叫。 型別`CComVariant`物件都會是 VT_DISPATCH 或 VT_UNKNOWN，分別。
 
 或者，若要指派給的 SAFEARRAY 指標`CComVariant`物件。 SAFEARRAY 的複本儲存在`CComVariant`物件。 型別`CComVariant`物件將會原始的型別，以及與的 SAFEARRAY VT_ARRAY 組合。
 
-*cSrc*  
+*cSrc*<br/>
 [in]若要指派給 char`CComVariant`物件。 型別`CComVariant`物件都會是 VT_I1。
 
 ##  <a name="operator_eq_eq"></a>  CComVariant::operator = =
@@ -446,7 +445,7 @@ HRESULT ReadFromStream(IStream* pStream);
 
 ### <a name="parameters"></a>參數
 
-*pStream*  
+*pStream*<br/>
 [in]指標[IStream](/windows/desktop/api/objidl/nn-objidl-istream)上包含資料的資料流介面。
 
 ### <a name="return-value"></a>傳回值
@@ -468,10 +467,10 @@ void SetByRef(T* pT) throw();
 
 ### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 VARIANT，例如 BSTR 類型**int**，或**char**。
 
-*太平洋時間*  
+*太平洋時間*<br/>
 用來初始化指標`CComVariant`物件。
 
 ### <a name="remarks"></a>備註
@@ -490,7 +489,7 @@ HRESULT WriteToStream(IStream* pStream);
 
 ### <a name="parameters"></a>參數
 
-*pStream*  
+*pStream*<br/>
 [in]指標[IStream](/windows/desktop/api/objidl/nn-objidl-istream)資料流上的介面。
 
 ### <a name="return-value"></a>傳回值

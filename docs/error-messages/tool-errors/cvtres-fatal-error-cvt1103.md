@@ -1,5 +1,5 @@
 ---
-title: CVTRES 嚴重錯誤 CVT1103 |Microsoft 文件
+title: CVTRES 嚴重錯誤 CVT1103 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c357714eb4118caa989fb86eb7d733518b7fd873
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a5c9f77d15b77ff55abf500b626ff23328639a0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294092"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050377"
 ---
 # <a name="cvtres-fatal-error-cvt1103"></a>CVTRES 嚴重錯誤 CVT1103
-無法讀取檔案  
-  
- CVTRES 嘗試讀取指定的檔案時，就會發生無法復原的錯誤。  
-  
- 這個錯誤可能被因檔案損毀。
+
+無法讀取的檔名
+
+CVTRES 嘗試讀取指定的檔案時，就會發生無法復原的錯誤。
+
+此錯誤的原因可能是檔案損毀。

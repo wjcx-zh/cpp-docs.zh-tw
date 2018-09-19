@@ -16,26 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38d022cb3b7f2672ffe7dba6a6d9d4952fa21616
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: 1c22a030ec0154f3a50d493e32e9bdeffdc05a2f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42572183"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058259"
 ---
 # <a name="goto-statement-c"></a>goto 陳述式 (C++)
-**Goto**陳述式無條件地將控制權傳輸至指定的識別項所標記的陳述式。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-goto identifier;  
-```  
-  
-## <a name="remarks"></a>備註  
- `identifier` 所指定之標記的陳述式必須位於目前的函式。 所有 `identifier` 名稱是內部命名空間的成員，因此不會干擾其他識別項。  
-  
- 陳述式標籤是僅有意義**goto**陳述式; 否則會忽略陳述式標籤。 標籤不能重新宣告。  
+
+**Goto**陳述式無條件地將控制權傳輸至指定的識別項所標記的陳述式。
+
+## <a name="syntax"></a>語法
+
+```
+goto identifier;
+```
+
+## <a name="remarks"></a>備註
+
+`identifier` 所指定之標記的陳述式必須位於目前的函式。 所有 `identifier` 名稱是內部命名空間的成員，因此不會干擾其他識別項。
+
+陳述式標籤是僅有意義**goto**陳述式; 否則會忽略陳述式標籤。 標籤不能重新宣告。
 
 A **goto**陳述式不允許將控制權移轉給略過該位置中的範圍內的任何變數的初始化的位置。 下列範例會引發 C2362:
 
@@ -55,55 +57,57 @@ exit:
     return error_code;
 }
 ```
-  
- 它是理想的程式設計風格，使用**中斷**，**繼續**，和**傳回**陳述式，而不是**goto**陳述式時可能的。 不過，因為**中斷**陳述式會結束迴圈的只有一個層級，您可能必須使用**goto**陳述式來結束深度巢狀的迴圈。  
-  
- 如需標籤和**goto**陳述式，請參閱[標記陳述式](../cpp/labeled-statements.md)。  
-  
-## <a name="example"></a>範例  
- 在此範例中， **goto**陳述式將控制權傳輸至標示的點`stop`當`i`等於 3。  
-  
-```cpp  
-// goto_statement.cpp  
-#include <stdio.h>  
-int main()  
-{  
-    int i, j;  
-  
-    for ( i = 0; i < 10; i++ )  
-    {  
-        printf_s( "Outer loop executing. i = %d\n", i );  
-        for ( j = 0; j < 2; j++ )  
-        {  
-            printf_s( " Inner loop executing. j = %d\n", j );  
-            if ( i == 3 )  
-                goto stop;  
-        }  
-    }  
-  
-    // This message does not print:   
-    printf_s( "Loop exited. i = %d\n", i );  
-  
-    stop:   
-    printf_s( "Jumped to stop. i = %d\n", i );  
-}  
-```  
-  
-```Output  
-Outer loop executing. i = 0  
- Inner loop executing. j = 0  
- Inner loop executing. j = 1  
-Outer loop executing. i = 1  
- Inner loop executing. j = 0  
- Inner loop executing. j = 1  
-Outer loop executing. i = 2  
- Inner loop executing. j = 0  
- Inner loop executing. j = 1  
-Outer loop executing. i = 3  
- Inner loop executing. j = 0  
-Jumped to stop. i = 3  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [跳躍陳述式](../cpp/jump-statements-cpp.md)   
- [關鍵字](../cpp/keywords-cpp.md)
+
+它是理想的程式設計風格，使用**中斷**，**繼續**，和**傳回**陳述式，而不是**goto**陳述式時可能的。 不過，因為**中斷**陳述式會結束迴圈的只有一個層級，您可能必須使用**goto**陳述式來結束深度巢狀的迴圈。
+
+如需標籤和**goto**陳述式，請參閱[標記陳述式](../cpp/labeled-statements.md)。
+
+## <a name="example"></a>範例
+
+在此範例中， **goto**陳述式將控制權傳輸至標示的點`stop`當`i`等於 3。
+
+```cpp
+// goto_statement.cpp
+#include <stdio.h>
+int main()
+{
+    int i, j;
+
+    for ( i = 0; i < 10; i++ )
+    {
+        printf_s( "Outer loop executing. i = %d\n", i );
+        for ( j = 0; j < 2; j++ )
+        {
+            printf_s( " Inner loop executing. j = %d\n", j );
+            if ( i == 3 )
+                goto stop;
+        }
+    }
+
+    // This message does not print:
+    printf_s( "Loop exited. i = %d\n", i );
+
+    stop:
+    printf_s( "Jumped to stop. i = %d\n", i );
+}
+```
+
+```Output
+Outer loop executing. i = 0
+Inner loop executing. j = 0
+Inner loop executing. j = 1
+Outer loop executing. i = 1
+Inner loop executing. j = 0
+Inner loop executing. j = 1
+Outer loop executing. i = 2
+Inner loop executing. j = 0
+Inner loop executing. j = 1
+Outer loop executing. i = 3
+Inner loop executing. j = 0
+Jumped to stop. i = 3
+```
+
+## <a name="see-also"></a>另請參閱
+
+[跳躍陳述式](../cpp/jump-statements-cpp.md)<br/>
+[關鍵字](../cpp/keywords-cpp.md)

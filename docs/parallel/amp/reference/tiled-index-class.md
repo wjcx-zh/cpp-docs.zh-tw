@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 715fcc37c41251b0a42fd6508f8a358758105a1f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 47cd4cc765459acc6270c64b6cc37fe328f36757
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680191"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069413"
 ---
 # <a name="tiledindex-class"></a>tiled_index 類別
 提供的索引[tiled_extent](tiled-extent-class.md)物件。 這個類別具有存取相對於本機磚原點和相對於全域原點的項目屬性。 如需劃分 tile 空間的詳細資訊，請參閱[使用的圖格](../../../parallel/amp/using-tiles.md)。  
@@ -62,14 +62,14 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 ```  
   
 #### <a name="parameters"></a>參數  
- `_Dim0`  
- 最高有效維度的長度。  
+*_Dim0*<br/>
+最高有效維度的長度。  
   
- `_Dim1`  
- 下一步 以最高有效維度的長度。  
+*_Dim1*<br/>
+下一步 以最高有效維度的長度。  
   
- `_Dim2`  
- 最小顯著性維度的長度。  
+*_Dim2*<br/>
+最小顯著性維度的長度。  
   
 ## <a name="members"></a>成員  
   
@@ -140,23 +140,23 @@ tiled_index(
 ```  
   
 #### <a name="parameters"></a>參數  
- `_Global`  
- 全域[index](index-class.md)建構`tiled_index`。  
+*_Global*<br/>
+全域[index](index-class.md)建構`tiled_index`。  
   
- `_Local`  
- 本機[index](index-class.md)建構 `tiled_index`  
+*（_l)*<br/>
+本機[index](index-class.md)建構 `tiled_index`  
   
- `_Tile`  
- [] 圖格[index](index-class.md)建構 `tiled_index`  
+*_Tile*<br/>
+[] 圖格[index](index-class.md)建構 `tiled_index`  
   
- `_Tile_origin`  
- 並排原點[index](index-class.md)建構 `tiled_index`  
+*_Tile_origin*<br/>
+並排原點[index](index-class.md)建構 `tiled_index`  
   
- `_Barrier`  
- [Tile_barrier](tile-barrier-class.md)物件的建構`tiled_index`。  
+*_Barrier*<br/>
+[Tile_barrier](tile-barrier-class.md)物件的建構`tiled_index`。  
   
- `_Other`  
- `tile_index`要複製的物件以建構`tiled_index`。  
+*_Other*<br/>
+`tile_index`要複製的物件以建構`tiled_index`。  
   
 ## <a name="overloads"></a>Overloads  
   

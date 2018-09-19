@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2152 |Microsoft 文件
+title: 編譯器錯誤 C2152 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e241f918191547812854de9734995b9f0b10770
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3a2215e43573b08a69501edfbd0c7c86897fdd3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169669"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064897"
 ---
 # <a name="compiler-error-c2152"></a>編譯器錯誤 C2152
-'identifier': 具有不同屬性的函式的指標  
-  
- 具有一個呼叫慣例的函式的指標 (`__cdecl`， `__stdcall`，或`__fastcall`) 指派給另一個呼叫慣例的函式的指標。
+
+'identifier': 具有不同屬性的函式的指標
+
+具有一個呼叫慣例的函式的指標 (`__cdecl`， `__stdcall`，或`__fastcall`) 指派給另一個呼叫慣例的函式的指標。

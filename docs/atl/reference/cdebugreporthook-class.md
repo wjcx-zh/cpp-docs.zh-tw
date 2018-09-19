@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00a7bfd149bb83dc31327e3ea235479532213e03
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fb0bf24657a47cbe1cf1129f0202d120fb1d017e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760828"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039057"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook 類別
 
@@ -84,13 +84,13 @@ CDebugReportHook(
 
 ### <a name="parameters"></a>參數
 
-*szMachineName*  
+*szMachineName*<br/>
 偵錯輸出應該傳送的機器名稱。 預設為本機電腦。
 
-*szPipeName*  
+*szPipeName*<br/>
 偵錯輸出應該傳送的具名管道的名稱。
 
-*dwTimeout*  
+*dwTimeout*<br/>
 時間 （毫秒），這個類別會等待變成可用的具名管道。
 
 ##  <a name="dtor"></a>  CDebugReportHook:: ~ CDebugReportHook
@@ -114,13 +114,13 @@ static int __cdecl CDebugReportHookProc(
 
 ### <a name="parameters"></a>參數
 
-*reportType*  
+*reportType*<br/>
 報表 （_CRT_WARN、 _CRT_ERROR 或 _CRT_ASSERT） 的型別。
 
-*message*  
+*message*<br/>
 訊息字串。
 
-*returnValue*  
+*returnValue*<br/>
 應該傳回的值[_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)。
 
 ### <a name="return-value"></a>傳回值
@@ -169,10 +169,10 @@ BOOL SetPipeName(
 
 ### <a name="parameters"></a>參數
 
-*szMachineName*  
+*szMachineName*<br/>
 偵錯輸出應該傳送的機器名稱。
 
-*szPipeName*  
+*szPipeName*<br/>
 偵錯輸出應該傳送的具名管道的名稱。
 
 ### <a name="return-value"></a>傳回值
@@ -189,7 +189,7 @@ void SetTimeout(DWORD dwTimeout);
 
 ### <a name="parameters"></a>參數
 
-*dwTimeout*  
+*dwTimeout*<br/>
 時間 （毫秒），這個類別會等待變成可用的具名管道。
 
 ## <a name="see-also"></a>另請參閱

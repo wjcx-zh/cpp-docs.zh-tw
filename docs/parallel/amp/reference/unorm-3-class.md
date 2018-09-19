@@ -1,5 +1,5 @@
 ---
-title: unorm_3 類別 |Microsoft 文件
+title: unorm_3 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b93fbce07aa50e9b0a9f01ec762690ce21b78c02
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7e10653eb4eb6ebb57215baceb1e3b67d7e1f8cf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688371"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042516"
 ---
 # <a name="unorm3-class"></a>unorm_3 類別
 表示短向量的三個不帶正負號的一般數字。  
@@ -110,7 +110,7 @@ class unorm_3;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[unorm_3 建構函式](#ctor)|多載。 預設建構函式，初始化為 0 的所有項目。|  
+|[unorm_3 建構函式](#ctor)|多載。 預設建構函式，初始化具有 0 的所有項目。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -169,7 +169,7 @@ class unorm_3;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[大小常數](#unorm_3__size)||  
+|[常數的大小](#unorm_3__size)||  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
@@ -216,7 +216,7 @@ class unorm_3;
   
 ##  <a name="ctor"></a> unorm_3 
 
- 預設建構函式，初始化為 0 的所有項目。  
+ 預設建構函式，初始化具有 0 的所有項目。  
   
 ```  
 unorm_3() restrict(amp,
@@ -278,20 +278,20 @@ explicit inline unorm_3(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_V0`  
- 要初始化項目 0 的值。  
+*_V0*<br/>
+要初始化項目 0 的值。  
   
- `_V1`  
- 要初始化項目 1 的值。  
+*_V1*<br/>
+要初始化項目 1 的值。  
   
- `_V2`  
- 要初始化項目 2 的值。  
+*並將 _V2*<br/>
+要初始化項目 2 的值。  
   
- `_V`  
- 初始設定的值。  
+*（_V)*<br/>
+初始設定的值。  
   
- `_Other`  
- 用來初始化物件。  
+*_Other*<br/>
+用來初始化的物件。  
   
 ##  <a name="unorm_3__size"></a> 大小 
 

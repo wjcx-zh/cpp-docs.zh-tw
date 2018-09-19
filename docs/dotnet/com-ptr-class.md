@@ -1,5 +1,5 @@
 ---
-title: 'com:: ptr 類別 |Microsoft 文件'
+title: 'com:: ptr 類別 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 27adaa2d91bac38c587ee7e4ec9c805c102d4883
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cd5b4115d50f9e2db9b1e3dc8a03818e2c8252f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33108267"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066723"
 ---
 # <a name="comptr-class"></a>com::ptr 類別
 可當做 CLR 類別成員使用之 COM 物件的包裝函式。  包裝函式也會將 COM 物件的存留期管理自動化，在呼叫其解構函式時，釋出物件上所有已擁有的參考。 類似於[CComPtr 類別](../atl/reference/ccomptr-class.md)。  
@@ -38,13 +38,13 @@ ref class ptr;
 ```  
   
 #### <a name="parameters"></a>參數  
- `_interface_type`  
- COM 介面。  
+*_interface_type*<br/>
+COM 介面。  
   
 ## <a name="remarks"></a>備註  
  `com::ptr` 也可以當做本機函式變數使用，以簡化各種 COM 工作並且將存留期管理自動化。  
   
- A`com::ptr`不能使用做為函式參數; 請使用[追蹤參考運算子](../windows/tracking-reference-operator-cpp-component-extensions.md)或[物件控制代碼運算子 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)改為。  
+ A`com::ptr`無法直接做為函式參數使用; 請使用[追蹤參考運算子](../windows/tracking-reference-operator-cpp-component-extensions.md)或是[物件控制代碼運算子 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)改。  
   
  `com::ptr` 無法從函式直接傳回；請改用控制代碼。  
   

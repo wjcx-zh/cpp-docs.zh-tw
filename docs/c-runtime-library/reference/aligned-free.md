@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e18c02909c247af4066033fc3e3633db74327f55
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 54700ad2a1eed391647a66a4c54a726b75e812f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102638"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069712"
 ---
 # <a name="alignedfree"></a>_aligned_free
 
@@ -54,7 +54,7 @@ void _aligned_free (
 
 ### <a name="parameters"></a>參數
 
-*memblock*  
+*memblock*<br/>
 傳回 `_aligned_malloc` 或 `_aligned_offset_malloc` 函式之記憶體區塊的指標。
 
 ## <a name="remarks"></a>備註
@@ -75,4 +75,4 @@ void _aligned_free (
 
 ## <a name="see-also"></a>另請參閱
 
-[資料對齊](../../c-runtime-library/data-alignment.md)  
+[資料對齊](../../c-runtime-library/data-alignment.md)

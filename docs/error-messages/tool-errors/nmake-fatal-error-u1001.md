@@ -1,5 +1,5 @@
 ---
-title: NMAKE 嚴重錯誤 U1001 |Microsoft 文件
+title: NMAKE 嚴重錯誤 U1001 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68699a235f461a0f5550802cc009d345ecdba7c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e4e465af5b4fa22c5f0ba5a9e01ebde0a7ee89e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316006"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068139"
 ---
 # <a name="nmake-fatal-error-u1001"></a>NMAKE 嚴重錯誤 U1001
-語法錯誤： 不合法的字元 'character' 巨集  
-  
- 指定的字元會出現在巨集中，但不是字母、 數字或底線。  
-  
- 這個錯誤可能被因巨集展開中遺漏冒號：  
-  
-```  
-syntax error : illegal character '=' in macro  
+
+語法錯誤： 不合法的字元 'character' 在巨集
+
+指定的字元會出現在巨集中，但不是字母、 數字或底線。
+
+此錯誤可能被因遺漏冒號巨集展開中：
+
+```
+syntax error : illegal character '=' in macro
 ```

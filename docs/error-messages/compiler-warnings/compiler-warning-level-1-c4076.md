@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928b0a78c09773e334c1a291877b74304dab66ec
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2f0a8066b8e79b75f3d5ede37f4e5ad6b61db168
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198474"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037875"
 ---
 # <a name="compiler-warning-level-1-c4076"></a>編譯器警告 (層級 1) C4076
 
@@ -30,13 +30,13 @@ ms.locfileid: "43198474"
 ## <a name="remarks"></a>備註
 
 型別修飾詞，它是否**簽署**或是**不帶正負號**，不能與非整數類型。 *類型修飾詞*會被忽略。
-  
-## <a name="example"></a>範例  
+
+## <a name="example"></a>範例
 
 下列範例會產生 C4076;若要修正此問題，請移除**不帶正負號**型別修飾詞：
 
 ```cpp
-// C4076.cpp  
-// compile with: /W1 /LD  
-unsigned double x;   // C4076  
+// C4076.cpp
+// compile with: /W1 /LD
+unsigned double x;   // C4076
 ```

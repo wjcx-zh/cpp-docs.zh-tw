@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17661f7497711449397ae2f64c9d6eff52d5f403
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 18666cc619796bc7ee0216eb9cdf020bd8d8a6f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766921"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035743"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase 類別
 
@@ -238,7 +238,7 @@ CComControlBase(HWND& h);
 
 ### <a name="parameters"></a>參數
 
-*h*  
+*h*<br/>
 與控制項關聯的視窗控制代碼。
 
 ### <a name="remarks"></a>備註
@@ -268,10 +268,10 @@ virtual HRESULT ControlQueryInterface(const IID& iid,
 
 ### <a name="parameters"></a>參數
 
-*iid*  
+*iid*<br/>
 所要求介面的 GUID。
 
-*ppv*  
+*ppv*<br/>
 所識別之介面指標的指標*iid*，或如果找不到介面則為 NULL。
 
 ### <a name="remarks"></a>備註
@@ -292,7 +292,7 @@ BOOL DoesVerbActivate(LONG iVerb);
 
 ### <a name="parameters"></a>參數
 
-*iVerb*  
+*iVerb*<br/>
 值，指出所要執行的動作`DoVerb`。
 
 ### <a name="return-value"></a>傳回值
@@ -313,7 +313,7 @@ BOOL DoesVerbUIActivate(LONG iVerb);
 
 ### <a name="parameters"></a>參數
 
-*iVerb*  
+*iVerb*<br/>
 值，指出所要執行的動作`DoVerb`。
 
 ### <a name="return-value"></a>傳回值
@@ -330,10 +330,10 @@ HRESULT DoVerbProperties(LPCRECT /* prcPosRect */, HWND hwndParent);
 
 ### <a name="parameters"></a>參數
 
-*prcPosRec*  
+*prcPosRec*<br/>
 保留的。
 
-*hwndParent*  
+*hwndParent*<br/>
 包含控制項的視窗控制代碼。
 
 ### <a name="return-value"></a>傳回值
@@ -376,7 +376,7 @@ HRESULT GetAmbientAppearance(short& nAppearance);
 
 ### <a name="parameters"></a>參數
 
-*nAppearance*  
+*nAppearance*<br/>
 DISPID_AMBIENT_APPEARANCE 屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -397,7 +397,7 @@ HRESULT GetAmbientAutoClip(BOOL& bAutoClip);
 
 ### <a name="parameters"></a>參數
 
-*bAutoClip*  
+*bAutoClip*<br/>
 DISPID_AMBIENT_AUTOCLIP 屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -414,7 +414,7 @@ HRESULT GetAmbientBackColor(OLE_COLOR& BackColor);
 
 ### <a name="parameters"></a>參數
 
-*背景色彩*  
+*背景色彩*<br/>
 DISPID_AMBIENT_BACKCOLOR 屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -431,7 +431,7 @@ HRESULT GetAmbientCharSet(BSTR& bstrCharSet);
 
 ### <a name="parameters"></a>參數
 
-*bstrCharSet*  
+*bstrCharSet*<br/>
 DISPID_AMBIENT_CHARSET 屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -448,7 +448,7 @@ HRESULT GetAmbientCodePage(ULONG& ulCodePage);
 
 ### <a name="parameters"></a>參數
 
-*ulCodePage*  
+*ulCodePage*<br/>
 DISPID_AMBIENT_CODEPAGE 屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -465,7 +465,7 @@ HRESULT GetAmbientDisplayAsDefault(BOOL& bDisplayAsDefault);
 
 ### <a name="parameters"></a>參數
 
-*bDisplayAsDefault*  
+*bDisplayAsDefault*<br/>
 DISPID_AMBIENT_DISPLAYASDEFAULT 屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -482,7 +482,7 @@ HRESULT GetAmbientDisplayName(BSTR& bstrDisplayName);
 
 ### <a name="parameters"></a>參數
 
-*bstrDisplayName*  
+*bstrDisplayName*<br/>
 DISPID_AMBIENT_DISPLAYNAME 屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -499,7 +499,7 @@ HRESULT GetAmbientFont(IFont** ppFont);
 
 ### <a name="parameters"></a>參數
 
-*ppFont*  
+*ppFont*<br/>
 指標，容器的環境[IFont](/windows/desktop/api/ocidl/nn-ocidl-ifont)介面。
 
 ### <a name="return-value"></a>傳回值
@@ -520,7 +520,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 
 ### <a name="parameters"></a>參數
 
-*ppFont*  
+*ppFont*<br/>
 指標，容器的環境[IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695)分派介面。
 
 ### <a name="return-value"></a>傳回值
@@ -541,7 +541,7 @@ HRESULT GetAmbientForeColor(OLE_COLOR& ForeColor);
 
 ### <a name="parameters"></a>參數
 
-*前景色彩*  
+*前景色彩*<br/>
 DISPID_AMBIENT_FORECOLOR 屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -558,7 +558,7 @@ HRESULT GetAmbientLocaleID(LCID& lcid);
 
 ### <a name="parameters"></a>參數
 
-*lcid*  
+*lcid*<br/>
 DISPID_AMBIENT_LOCALEID 屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -579,7 +579,7 @@ HRESULT GetAmbientMessageReflect(BOOL& bMessageReflect);
 
 ### <a name="parameters"></a>參數
 
-*bMessageReflect*  
+*bMessageReflect*<br/>
 DISPID_AMBIENT_MESSAGEREFLECT 屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -596,7 +596,7 @@ HRESULT GetAmbientPalette(HPALETTE& hPalette);
 
 ### <a name="parameters"></a>參數
 
-*hPalette*  
+*hPalette*<br/>
 DISPID_AMBIENT_PALETTE 屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -613,10 +613,10 @@ HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 
 ### <a name="parameters"></a>參數
 
-*dispid*  
+*dispid*<br/>
 要擷取之容器屬性識別項。
 
-*var*  
+*var*<br/>
 接收屬性的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -637,7 +637,7 @@ HRESULT GetAmbientRightToLeft(BOOL& bRightToLeft);
 
 ### <a name="parameters"></a>參數
 
-*bRightToLeft*  
+*bRightToLeft*<br/>
 DISPID_AMBIENT_RIGHTTOLEFT 屬性。 如果內容由右至左顯示，請設為 TRUE，為 FALSE 可以顯示左到右。
 
 ### <a name="return-value"></a>傳回值
@@ -654,7 +654,7 @@ HRESULT GetAmbientScaleUnits(BSTR& bstrScaleUnits);
 
 ### <a name="parameters"></a>參數
 
-*bstrScaleUnits*  
+*bstrScaleUnits*<br/>
 DISPID_AMBIENT_SCALEUNITS 屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -671,7 +671,7 @@ HRESULT GetAmbientShowGrabHandles(BOOL& bShowGrabHandles);
 
 ### <a name="parameters"></a>參數
 
-*bShowGrabHandles*  
+*bShowGrabHandles*<br/>
 DISPID_AMBIENT_SHOWGRABHANDLES 屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -688,7 +688,7 @@ HRESULT GetAmbientShowHatching(BOOL& bShowHatching);
 
 ### <a name="parameters"></a>參數
 
-*bShowHatching*  
+*bShowHatching*<br/>
 DISPID_AMBIENT_SHOWHATCHING 屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -705,7 +705,7 @@ HRESULT GetAmbientSupportsMnemonics(BOOL& bSupportsMnemonics);
 
 ### <a name="parameters"></a>參數
 
-*bSupportsMnemonics*  
+*bSupportsMnemonics*<br/>
 DISPID_AMBIENT_SUPPORTSMNEMONICS 屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -722,7 +722,7 @@ HRESULT GetAmbientTextAlign(short& nTextAlign);
 
 ### <a name="parameters"></a>參數
 
-*nTextAlign*  
+*nTextAlign*<br/>
 DISPID_AMBIENT_TEXTALIGN 屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -739,7 +739,7 @@ HRESULT GetAmbientTopToBottom(BOOL& bTopToBottom);
 
 ### <a name="parameters"></a>參數
 
-*bTopToBottom*  
+*bTopToBottom*<br/>
 DISPID_AMBIENT_TOPTOBOTTOM 屬性。 設定為 TRUE，如果文字會顯示從上到下，為 FALSE 顯示底部到頂端。
 
 ### <a name="return-value"></a>傳回值
@@ -756,7 +756,7 @@ HRESULT GetAmbientUIDead(BOOL& bUIDead);
 
 ### <a name="parameters"></a>參數
 
-*bUIDead*  
+*bUIDead*<br/>
 DISPID_AMBIENT_UIDEAD 屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -777,7 +777,7 @@ HRESULT GetAmbientUserMode(BOOL& bUserMode);
 
 ### <a name="parameters"></a>參數
 
-*bUserMode*  
+*bUserMode*<br/>
 DISPID_AMBIENT_USERMODE 屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -810,7 +810,7 @@ void GetZoomInfo(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>參數
 
-*di*  
+*di*<br/>
 結構，用以保存縮放因數的分子和分母。 如需詳細資訊，請參閱 < [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)。
 
 ### <a name="remarks"></a>備註
@@ -827,10 +827,10 @@ HRESULT InPlaceActivate(LONG iVerb, const RECT* prcPosRect = NULL);
 
 ### <a name="parameters"></a>參數
 
-*iVerb*  
+*iVerb*<br/>
 值，指出所要執行的動作[IOleObjectImpl::DoVerb](../../atl/reference/ioleobjectimpl-class.md#doverb)。
 
-*prcPosRect*  
+*prcPosRect*<br/>
 就地控制項的位置指標。
 
 ### <a name="return-value"></a>傳回值
@@ -853,10 +853,10 @@ HRESULT InternalGetSite(REFIID riid, void** ppUnkSite);
 
 ### <a name="parameters"></a>參數
 
-*riid*  
+*riid*<br/>
 應該傳回介面指標 IID *ppUnkSite*。
 
-*ppUnkSite*  
+*ppUnkSite*<br/>
 接收要求中的介面指標的指標變數的地址*riid*。
 
 ### <a name="return-value"></a>傳回值
@@ -1259,7 +1259,7 @@ virtual HRESULT OnDraw(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>參數
 
-*di*  
+*di*<br/>
 參考[ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)包含繪圖的資訊，例如繪製方面，而控制項界限內的結構和繪圖或未最佳化。
 
 ### <a name="return-value"></a>傳回值
@@ -1286,7 +1286,7 @@ virtual HRESULT OnDrawAdvanced(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>參數
 
-*di*  
+*di*<br/>
 參考[ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)包含繪圖的資訊，例如繪製方面，而控制項界限內的結構和繪圖或未最佳化。
 
 ### <a name="return-value"></a>傳回值
@@ -1312,16 +1312,16 @@ LRESULT OnKillFocus(UINT /* nMsg */,
 
 ### <a name="parameters"></a>參數
 
-*nMsg*  
+*nMsg*<br/>
 保留的。
 
-*wParam*  
+*wParam*<br/>
 保留的。
 
-*lParam*  
+*lParam*<br/>
 保留的。
 
-*bHandled*  
+*bHandled*<br/>
 旗標，指出是否已成功處理的視窗訊息。 預設值為 FALSE。
 
 ### <a name="return-value"></a>傳回值
@@ -1341,16 +1341,16 @@ LRESULT OnMouseActivate(UINT /* nMsg */,
 
 ### <a name="parameters"></a>參數
 
-*nMsg*  
+*nMsg*<br/>
 保留的。
 
-*wParam*  
+*wParam*<br/>
 保留的。
 
-*lParam*  
+*lParam*<br/>
 保留的。
 
-*bHandled*  
+*bHandled*<br/>
 旗標，指出是否已成功處理的視窗訊息。 預設值為 FALSE。
 
 ### <a name="return-value"></a>傳回值
@@ -1370,16 +1370,16 @@ LRESULT OnPaint(UINT /* nMsg */,
 
 ### <a name="parameters"></a>參數
 
-*nMsg*  
+*nMsg*<br/>
 保留的。
 
-*wParam*  
+*wParam*<br/>
 現有的 HDC。
 
-*lParam*  
+*lParam*<br/>
 保留的。
 
-*lResult*  
+*lResult*<br/>
 保留的。
 
 ### <a name="return-value"></a>傳回值
@@ -1403,16 +1403,16 @@ LRESULT OnSetFocus(UINT /* nMsg */,
 
 ### <a name="parameters"></a>參數
 
-*nMsg*  
+*nMsg*<br/>
 保留的。
 
-*wParam*  
+*wParam*<br/>
 保留的。
 
-*lParam*  
+*lParam*<br/>
 保留的。
 
-*bHandled*  
+*bHandled*<br/>
 旗標，指出是否已成功處理的視窗訊息。 預設值為 FALSE。
 
 ### <a name="return-value"></a>傳回值
@@ -1434,10 +1434,10 @@ BOOL PreTranslateAccelerator(LPMSG /* pMsg */,
 
 ### <a name="parameters"></a>參數
 
-*pMsg*  
+*pMsg*<br/>
 保留的。
 
-*hRet*  
+*hRet*<br/>
 保留的。
 
 ### <a name="return-value"></a>傳回值
@@ -1470,7 +1470,7 @@ HRESULT SendOnDataChange(DWORD advf = 0);
 
 ### <a name="parameters"></a>參數
 
-*advf*  
+*advf*<br/>
 通知旗標，指定如何在呼叫[IAdviseSink::OnDataChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-ondatachange)為止。 值是從[ADVF](/windows/desktop/api/objidl/ne-objidl-tagadvf)列舉型別。
 
 ### <a name="return-value"></a>傳回值
@@ -1487,7 +1487,7 @@ HRESULT SendOnRename(IMoniker* pmk);
 
 ### <a name="parameters"></a>參數
 
-*pmk*  
+*pmk*<br/>
 新的 moniker，控制項的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -1524,10 +1524,10 @@ HRESULT SendOnViewChange(DWORD dwAspect, LONG lindex = -1);
 
 ### <a name="parameters"></a>參數
 
-*dwAspect*  
+*dwAspect*<br/>
 外觀的控制項檢視。
 
-*lindex*  
+*lindex*<br/>
 檢視已變更的部分。 只有-1 是有效的。
 
 ### <a name="return-value"></a>傳回值
@@ -1548,7 +1548,7 @@ BOOL SetControlFocus(BOOL bGrab);
 
 ### <a name="parameters"></a>參數
 
-*bGrab*  
+*bGrab*<br/>
 如果為 TRUE，將鍵盤焦點設為呼叫控制項。 如果為 FALSE，移除鍵盤焦點從呼叫端的控制項，提供焦點。
 
 ### <a name="return-value"></a>傳回值
@@ -1569,7 +1569,7 @@ void SetDirty(BOOL bDirty);
 
 ### <a name="parameters"></a>參數
 
-*bDirty*  
+*bDirty*<br/>
 值的資料成員[CComControlBase::m_bRequiresSave](#m_brequiressave)。
 
 ### <a name="remarks"></a>備註
@@ -1578,5 +1578,5 @@ void SetDirty(BOOL bDirty);
 
 ## <a name="see-also"></a>另請參閱
 
-[CComControl 類別](../../atl/reference/ccomcontrol-class.md)   
+[CComControl 類別](../../atl/reference/ccomcontrol-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

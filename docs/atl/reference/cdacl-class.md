@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3ce384c2478359b3496aa2d816a30e9a240c998
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f96fe03288495eb109795e31c6dfd2bd3928d47c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760740"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036134"
 ---
 # <a name="cdacl-class"></a>CDacl 類別
 
@@ -108,19 +108,19 @@ bool AddAllowedAce(
 
 ### <a name="parameters"></a>參數
 
-*rSid*  
+*rSid*<br/>
 A [CSid](../../atl/reference/csid-class.md)物件。
 
-*AccessMask*  
+*AccessMask*<br/>
 指定允許的存取權限遮罩指定`CSid`物件。
 
-*AceFlags*  
+*AceFlags*<br/>
 一組控制 ACE 繼承的位元旗標。
 
-*pObjectType*  
+*pObjectType*<br/>
 物件類型。
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 繼承的物件型別。
 
 ### <a name="return-value"></a>傳回值
@@ -153,19 +153,19 @@ bool AddDeniedAce(
 
 ### <a name="parameters"></a>參數
 
-*rSid*  
+*rSid*<br/>
 `CSid` 物件。
 
-*AccessMask*  
+*AccessMask*<br/>
 指定要拒絕的存取權限遮罩指定`CSid`物件。
 
-*AceFlags*  
+*AceFlags*<br/>
 一組控制 ACE 繼承的位元旗標。 預設為 0，在第一種形式的方法。
 
-*pObjectType*  
+*pObjectType*<br/>
 物件類型。
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 繼承的物件型別。
 
 ### <a name="return-value"></a>傳回值
@@ -183,13 +183,13 @@ A`CDacl`物件包含零個或多個 Ace （存取控制項目） 所識別的使
 建構函式。
 
 ```
-CDacl (const ACL& rhs) throw(...);  
+CDacl (const ACL& rhs) throw(...);
 CDacl () throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*rhs*  
+*rhs*<br/>
 將現有`ACL`（存取控制清單） 結構。
 
 ### <a name="remarks"></a>備註
@@ -230,7 +230,7 @@ CDacl& operator= (const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>參數
 
-*rhs*  
+*rhs*<br/>
 指派給現有的物件 ACL （存取控制清單）。
 
 ### <a name="return-value"></a>傳回值
@@ -251,7 +251,7 @@ void RemoveAce(UINT nIndex) throw();
 
 ### <a name="parameters"></a>參數
 
-*nIndex*  
+*nIndex*<br/>
 若要移除的 ACE 項目索引。
 
 ### <a name="remarks"></a>備註
@@ -272,9 +272,9 @@ void RemoveAllAces() throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[安全性範例](../../visual-cpp-samples.md)   
-[CAcl 類別](../../atl/reference/cacl-class.md)   
-[Acl](/windows/desktop/SecAuthZ/access-control-lists)   
-[Ace](/windows/desktop/SecAuthZ/access-control-entries)   
-[類別概觀](../../atl/atl-class-overview.md)   
+[安全性範例](../../visual-cpp-samples.md)<br/>
+[CAcl 類別](../../atl/reference/cacl-class.md)<br/>
+[Acl](/windows/desktop/SecAuthZ/access-control-lists)<br/>
+[Ace](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
 [安全性全域函式](../../atl/reference/security-global-functions.md)

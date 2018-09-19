@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2911 |Microsoft 文件
+title: 編譯器錯誤 C2911 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 182d9ec130df7c5b8776d4dce0f185cb6b05ed59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c242e72ab4f13f56644b9ab73c2a168e0591012d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258094"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041177"
 ---
 # <a name="compiler-error-c2911"></a>編譯器錯誤 C2911
-'member' : 無法在目前的範圍中宣告或定義  
-  
- 您只能在命名空間、類別或函式之中，定義相同命名空間、類別或函式的成員，或者是由相同命名空間、類別或函式封入的成員。  
-  
- 下列範例會產生 C2911：  
-  
-```  
-// C2911.cpp  
-struct A;  
-  
-namespace M {  
-   struct D;  
-}  
-  
-namespace N {  
-   struct C;  
-  
-   namespace O {  
-      struct B;  
-   }  
-  
-   // in N  
-   struct ::A {};   // C2911  A is member of global NS  
-   struct O::B{};   // OK B is in O, O is inside of N  
-   struct C {};     // OK C is member of N  
-   struct M::D {};  // C2911 D is member of M, M not enclosed by N  
-}  
+
+'member' : 無法在目前的範圍中宣告或定義
+
+您只能在命名空間、類別或函式之中，定義相同命名空間、類別或函式的成員，或者是由相同命名空間、類別或函式封入的成員。
+
+下列範例會產生 C2911：
+
+```
+// C2911.cpp
+struct A;
+
+namespace M {
+   struct D;
+}
+
+namespace N {
+   struct C;
+
+   namespace O {
+      struct B;
+   }
+
+   // in N
+   struct ::A {};   // C2911  A is member of global NS
+   struct O::B{};   // OK B is in O, O is inside of N
+   struct C {};     // OK C is member of N
+   struct M::D {};  // C2911 D is member of M, M not enclosed by N
+}
 ```

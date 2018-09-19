@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c465e5da4d3822782bd9c7b81e497ea544e3bd1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 000e43926a83bdd7457c33c656383ae44dce6259
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759950"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046273"
 ---
 # <a name="ustringorid-class"></a>_U_STRINGorID 類別
 
@@ -76,16 +76,16 @@ LPCTSTR m_lpstr;
 UINT 建構函式會將其引數轉換成相容於 Windows 資源管理函式使用 MAKEINTRESOURCE 巨集的資源類型，並將結果儲存在該類別的單一資料成員中， [m_lpstr](#_u_stringorid__m_lpstr)。
 
 ```
-_U_STRINGorID(UINT nID);  
+_U_STRINGorID(UINT nID);
 _U_STRINGorID(LPCTSTR lpString);
 ```
 
 ### <a name="parameters"></a>參數
 
-*nID*  
+*nID*<br/>
 資源識別碼。
 
-*lpString*  
+*lpString*<br/>
 資源名稱。
 
 ### <a name="remarks"></a>備註

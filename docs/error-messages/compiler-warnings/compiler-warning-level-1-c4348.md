@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 1） C4348 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4348 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86367be7e44e0e50a7c1f8fa309dec50a8399313
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95d868f9e3a3cebf5b6374b1aa899d812a273b6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272451"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049705"
 ---
 # <a name="compiler-warning-level-1-c4348"></a>編譯器警告 (層級 1) C4348
-'type': 重複定義的預設參數： 參數號碼  
-  
- 已重新定義樣板參數。  
-  
- 下列範例會產生 C4348:  
-  
-```  
-// C4348.cpp  
-// compile with: /LD /W1  
-template <class T=int> struct A;   // forward declaration  
-  
-template <class T=int> struct A { };   
-// C4348, redefinition of default parameter  
-// try the following line instead  
-// template <class T> struct A { };  
+
+'type': 重複定義的預設參數： 參數號碼
+
+重新定義樣板參數。
+
+下列範例會產生 C4348:
+
+```
+// C4348.cpp
+// compile with: /LD /W1
+template <class T=int> struct A;   // forward declaration
+
+template <class T=int> struct A { };
+// C4348, redefinition of default parameter
+// try the following line instead
+// template <class T> struct A { };
 ```

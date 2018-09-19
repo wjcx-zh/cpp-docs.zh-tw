@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1780a4f77cce4812ebdb03ebc89936da0dc0d5d0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ba47b7f78e372f05a851d2180590bbc68a8c61ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767051"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068431"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl 類別
 
@@ -51,10 +51,10 @@ template <class T,
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您的類別，衍生自`CDialogImpl`。
 
-*TBase*  
+*TBase*<br/>
 您的新類別的基底類別。 預設的基底類別[CWindow](../../atl/reference/cwindow-class.md)。
 
 ## <a name="members"></a>成員
@@ -113,7 +113,7 @@ template <class T,
 
 建立非強制回應對話方塊。
 
-```  
+```
 HWND Create(
     HWND hWndParent,  
     LPARAM dwInitParam = NULL );  
@@ -121,18 +121,17 @@ HWND Create(
 HWND Create(
     HWND hWndParent,  
     RECT&, 
-    LPARAM dwInitParam = NULL); 
+    LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>參數
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]主控視窗控制代碼。
 
-**RECT &** *rect*  
-[in]A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定對話方塊的大小和位置。
+**RECT &** *rect* [in] [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定對話方塊的大小和位置。
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in]指定要傳遞至對話方塊中的值*lParam* WM_INITDIALOG 訊息參數。
 
 ### <a name="return-value"></a>傳回值
@@ -173,16 +172,16 @@ static LRESULT CALLBACK DialogProc(
 
 ### <a name="parameters"></a>參數
 
-*hWnd*  
+*hWnd*<br/>
 [in]對話方塊中的控制代碼。
 
-*uMsg*  
+*uMsg*<br/>
 [in]傳送到對話方塊中的訊息。
 
-*wParam*  
+*wParam*<br/>
 [in]其他特定訊息資訊。
 
-*lParam*  
+*lParam*<br/>
 [in]其他特定訊息資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -199,18 +198,18 @@ static LRESULT CALLBACK DialogProc(
 
 建立強制回應對話方塊。
 
-```   
+```
 INT_PTR DoModal(  
     HWND hWndParent = ::GetActiveWindow(),   
-    LPARAM dwInitParam = NULL); 
+    LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>參數
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]主控視窗控制代碼。 預設值是傳回值[GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) Win32 函式。
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in]指定要傳遞至對話方塊中的值*lParam* WM_INITDIALOG 訊息參數。
 
 ### <a name="return-value"></a>傳回值
@@ -227,13 +226,13 @@ INT_PTR DoModal(
 
 終結強制回應對話方塊。
 
-```   
-BOOL EndDialog(int nRetCode); 
+```
+BOOL EndDialog(int nRetCode);
 ```
 
 ### <a name="parameters"></a>參數
 
-*nRetCode*  
+*nRetCode*<br/>
 [in]要傳回的值[CDialogImpl::DoModal](#domodal)。
 
 ### <a name="return-value"></a>傳回值
@@ -251,8 +250,8 @@ BOOL EndDialog(int nRetCode);
 
 傳回`DialogProc`，目前對話方塊程序。
 
-```   
-virtual WNDPROC GetDialogProc(); 
+```
+virtual WNDPROC GetDialogProc();
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -267,13 +266,13 @@ virtual WNDPROC GetDialogProc();
 
 將轉換 (maps) 對話方塊單位畫面以指定之矩形的單位 （像素為單位）。
 
-```   
-BOOL MapDialogRect(LPRECT lpRect); 
+```
+BOOL MapDialogRect(LPRECT lpRect);
 ```
 
 ### <a name="parameters"></a>參數
 
-*lpRect*  
+*lpRect*<br/>
 指向`CRect`物件或[RECT](../../mfc/reference/rect-structure1.md)結構要接收的更新，包含更新區域的用戶端座標。
 
 ### <a name="return-value"></a>傳回值
@@ -288,13 +287,13 @@ BOOL MapDialogRect(LPRECT lpRect);
 
 接收到最後一則訊息後呼叫 (通常`WM_NCDESTROY`)。
 
-```   
-virtual void OnFinalMessage(HWND hWnd); 
+```
+virtual void OnFinalMessage(HWND hWnd);
 ```
 
 ### <a name="parameters"></a>參數
 
-*hWnd*  
+*hWnd*<br/>
 [in]終結視窗控制代碼。
 
 ### <a name="remarks"></a>備註
@@ -305,26 +304,26 @@ virtual void OnFinalMessage(HWND hWnd);
 
 只呼叫一次，當收到的第一個訊息時，處理傳送至對話方塊中的訊息。
 
-```   
+```
 static LRESULT CALLBACK StartDialogProc(
     HWND hWnd,  
     UINT uMsg,  
     WPARAM wParam,  
-    LPARAM lParam); 
+    LPARAM lParam);
 ```
 
 ### <a name="parameters"></a>參數
 
-*hWnd*  
+*hWnd*<br/>
 [in]對話方塊中的控制代碼。
 
-*uMsg*  
+*uMsg*<br/>
 [in]傳送到對話方塊中的訊息。
 
-*wParam*  
+*wParam*<br/>
 [in]其他特定訊息資訊。
 
-*lParam*  
+*lParam*<br/>
 [in]其他特定訊息資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -337,5 +336,5 @@ static LRESULT CALLBACK StartDialogProc(
 
 ## <a name="see-also"></a>另請參閱
 
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

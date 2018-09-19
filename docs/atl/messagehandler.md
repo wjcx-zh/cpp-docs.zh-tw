@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37564920e2ffb4c2526631cd04864db1971a6f02
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4a2434257290c673ca4e18be2e5ec70877e72e67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757207"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039084"
 ---
 # <a name="messagehandler"></a>MessageHandler
 
@@ -39,16 +39,16 @@ LRESULT MessageHandler(
 
 ### <a name="parameters"></a>參數
 
-*uMsg*  
+*uMsg*<br/>
 指定的訊息。
 
-*wParam*  
+*wParam*<br/>
 其他特定訊息資訊。
 
-*lParam*  
+*lParam*<br/>
 其他特定訊息資訊。
 
-*bHandled*  
+*bHandled*<br/>
 訊息對應集*bHandled*設為 TRUE 之前`MessageHandler`呼叫。 如果`MessageHandler`完全不會處理訊息，它應該設定*bHandled*為 FALSE，以指出需要進一步處理的訊息。
 
 ## <a name="return-value"></a>傳回值
@@ -61,6 +61,6 @@ LRESULT MessageHandler(
 
 ## <a name="see-also"></a>另請參閱
 
-[實作視窗](../atl/implementing-a-window.md)   
-[訊息對應](../atl/message-maps-atl.md)   
+[實作視窗](../atl/implementing-a-window.md)<br/>
+[訊息對應](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)

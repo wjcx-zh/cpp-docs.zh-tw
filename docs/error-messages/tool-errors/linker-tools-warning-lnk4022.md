@@ -1,5 +1,5 @@
 ---
-title: 連結器工具警告 LNK4022 |Microsoft 文件
+title: 連結器工具警告 LNK4022 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cffb9c4c67bc3003b8dcdda0ad3a2e8d55abe932
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 644e7a9ba26dab15e2bfa2a269f62c04f0510180
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300367"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040995"
 ---
 # <a name="linker-tools-warning-lnk4022"></a>連結器工具警告 LNK4022
-找不到符號 'symbol' 的唯一相符項目  
-  
- 連結或 LIB 找到多個比對指定的未裝飾符號，並無法解析模稜兩可。 會不產生任何輸出檔 （.exe、.dll、.exp 或.lib）。 這個警告後面其中一個警告[LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md)每個重複的符號時，最後接著嚴重錯誤[LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md)。  
-  
- 若要避免這個警告，指定以其裝飾形式的符號。 執行[DUMPBIN](../../build/reference/dumpbin-options.md)上物件，以檢視裝飾名稱。
+
+找不到符號 'symbol' 的唯一相符項目
+
+連結或 LIB 找到多個比對指定的未裝飾符號，並無法解析模稜兩可。 會不產生任何輸出檔案 （.exe、.dll、.exp 或.lib）。 這個警告後面接著一個警告[LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md)每個重複的符號，且最後後面嚴重錯誤[LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md)。
+
+若要避免這個警告，指定以其裝飾形式的符號。 執行[DUMPBIN](../../build/reference/dumpbin-options.md)上的物件，以檢視裝飾名稱。

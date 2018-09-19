@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f5e71fbf1a24a38b0a18e70ce7d0fa044ad4ec5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: db7903dccfd851bb4bf76f1990424f887686d344
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767874"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070102"
 ---
 # <a name="cacl-class"></a>CAcl 類別
 
@@ -161,7 +161,7 @@ CAcl(const CAcl& rhs) throw(...);
 
 ### <a name="parameters"></a>參數
 
-*rhs*  
+*rhs*<br/>
 現有的 `CAcl` 物件。
 
 ### <a name="remarks"></a>備註
@@ -206,16 +206,16 @@ void GetAclEntries(
 
 ### <a name="parameters"></a>參數
 
-*pSids*  
+*pSids*<br/>
 陣列的指標[CSid](../../atl/reference/csid-class.md)物件。
 
-*pAccessMasks*  
+*pAccessMasks*<br/>
 存取遮罩。
 
-*pAceTypes*  
+*pAceTypes*<br/>
 存取控制項目 (ACE) 型別。
 
-*pAceFlags*  
+*pAceFlags*<br/>
 ACE 的旗標。
 
 ### <a name="remarks"></a>備註
@@ -243,25 +243,25 @@ void GetAclEntry(
 
 ### <a name="parameters"></a>參數
 
-*nIndex*  
+*nIndex*<br/>
 若要擷取的 ACL 項目索引。
 
-*pSid*  
+*pSid*<br/>
 [CSid](../../atl/reference/csid-class.md) ACL 項目套用至物件。
 
-*pMask*  
+*pMask*<br/>
 指定權限授與或拒絕存取遮罩。
 
-*pType*  
+*pType*<br/>
 ACE 型別。
 
-*pFlags*  
+*pFlags*<br/>
 ACE 的旗標。
 
-*pObjectType*  
+*pObjectType*<br/>
 物件類型。 這會設定為 GUID_NULL，如果未指定的物件型別中的 ACE，或如果 ACE 不是物件 ACE。
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 繼承的物件型別。 這會設定為 GUID_NULL，如果未指定繼承的物件型別中的 ACE，或如果 ACE 不是物件 ACE。
 
 ### <a name="remarks"></a>備註
@@ -322,7 +322,7 @@ bool IsNull() const throw();
 
 轉型`CAcl`物件至`ACL`（存取控制清單） 結構。
 
-```  
+```
 operator const ACL *() const throw(...);
 ```
 
@@ -340,7 +340,7 @@ CAcl& operator= (const CAcl& rhs) throw(...);
 
 ### <a name="parameters"></a>參數
 
-*rhs*  
+*rhs*<br/>
 `CAcl`指派給現有的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -357,7 +357,7 @@ void RemoveAce(UINT nIndex) throw();
 
 ### <a name="parameters"></a>參數
 
-*nIndex*  
+*nIndex*<br/>
 若要移除的 ACE 項目索引。
 
 ### <a name="remarks"></a>備註
@@ -374,7 +374,7 @@ bool RemoveAces(const CSid& rSid) throw(...)
 
 ### <a name="parameters"></a>參數
 
-*rSid*  
+*rSid*<br/>
 對 `CSid` 物件的參考。
 
 ##  <a name="setempty"></a>  CAcl::SetEmpty
@@ -403,5 +403,5 @@ void SetNull() throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../../atl/atl-class-overview.md)   
+[類別概觀](../../atl/atl-class-overview.md)<br/>
 [安全性全域函式](../../atl/reference/security-global-functions.md)

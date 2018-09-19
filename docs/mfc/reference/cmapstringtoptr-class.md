@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43053702b18355c0422a9fc87ac77e0a4ad75b82
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ddcf0b266b9e305c209bd6b471d44e320f774851
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335538"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061951"
 ---
 # <a name="cmapstringtoptr-class"></a>CMapStringToPtr 類別
 支援以 `CString` 物件為索引鍵的 void 指標對應。  
@@ -63,15 +63,11 @@ class CMapStringToPtr : public CObject
 ## <a name="members"></a>成員  
  成員函式`CMapStringToPtr`類別的成員函式類似[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CMapStringToOb` 參考文件。 無論在何處看到`CObject`指標做為函式參數或傳回值，取代指標**void**。  
   
- `BOOL CMapStringToOb::Lookup( const char* <key>,`  
-  
- `CObject*& <rValue> ) const;`  
+ `BOOL CMapStringToOb::Lookup( const char* <key>, CObject*& <rValue> ) const;`  
   
  例如，轉換為  
   
- `BOOL CMapStringToPtr::Lookup( LPCTSTR <key>, void*& <rValue> )`  
-  
- `const;`  
+ `BOOL CMapStringToPtr::Lookup( LPCTSTR <key>, void*& <rValue> ) const;`  
   
 ### <a name="public-constructors"></a>公用建構函式  
   

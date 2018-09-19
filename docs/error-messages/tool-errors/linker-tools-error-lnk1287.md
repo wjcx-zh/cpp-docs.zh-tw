@@ -1,5 +1,5 @@
 ---
-title: 連結器工具錯誤 LNK1287 |Microsoft 文件
+title: 連結器工具錯誤 LNK1287 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 944702897021f50ff1e7fea2931a9aa16c9d080a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61f016c9fb8de12dd690dee7dbcd2aec1ecf3a97
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299288"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060768"
 ---
 # <a name="linker-tools-error-lnk1287"></a>連結器工具錯誤 LNK1287
-無效的 managed 的進入點函式  
-  
- 進入點的受管理的映像無效。 Managed 的進入點函式的傳回型別只能是`void`或`int`。 Managed 的進入點函式參數的型別只能是`void`或`String []`。
+
+無效的 managed 的進入點函式
+
+進入點的受管理的映像無效。 Managed 的進入點函式的傳回型別只能`void`或`int`。 Managed 的進入點函式參數的型別只能`void`或`String []`。

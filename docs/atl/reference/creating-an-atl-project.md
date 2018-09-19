@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b937212f49bd09f6498ebcda934e1aa362d959e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ea8d1dcb0d5d3a59eb5f2899baffed18e7d1663f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755529"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054749"
 ---
 # <a name="creating-an-atl-project"></a>建立 ATL 專案
 
@@ -47,6 +47,6 @@ ms.locfileid: "43755529"
 
 ## <a name="see-also"></a>另請參閱
 
-[使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+[使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [屬性頁](../../ide/property-pages-visual-cpp.md)   
 

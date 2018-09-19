@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2405 |Microsoft 文件
+title: 編譯器錯誤 C2405 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e864d4e85b3422431cdf14dabd7083fafe04c04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f4993b32839fbd1dcdb18522021da685b865ed8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195811"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058376"
 ---
 # <a name="compiler-error-c2405"></a>編譯器錯誤 C2405
-具有位移的 short 向前參考不合法  
-  
- Short 向前參考必須參考只的標籤。 無法使用額外的位移。
+
+具有位移的 short 向前參考不合法
+
+Short 向前參考必須參考只為標籤。 無法使用額外的位移。

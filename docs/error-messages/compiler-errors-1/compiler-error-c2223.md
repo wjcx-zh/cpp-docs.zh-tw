@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2223 |Microsoft 文件
+title: 編譯器錯誤 C2223 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 330786ca92becb5132194e5e25104bdaaa58c129
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0ca3cd091b349536046b0ead8e52805db3dff9b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168811"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067648"
 ---
 # <a name="compiler-error-c2223"></a>編譯器錯誤 C2223
-'->identifier' 的左邊必須指向結構/等位  
-  
- `->` 左邊的運算元不是類別、結構或等位的指標。  
-  
- 這個錯誤可能因的左運算元是未定義的變數 (因此輸入`int`)。
+
+'->identifier' 的左邊必須指向結構/等位
+
+`->` 左邊的運算元不是類別、結構或等位的指標。
+
+此錯誤可能因是未定義的變數的左運算元 (因此輸入`int`)。

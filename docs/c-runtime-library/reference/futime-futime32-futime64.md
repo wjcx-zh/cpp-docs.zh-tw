@@ -42,12 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 864bba5b88c7e52b55bd86a61edaaac2d22b0346
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cdd7b68ac9e3bf55f64b9a68f7b8075eab640faa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402305"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056816"
 ---
 # <a name="futime-futime32-futime64"></a>_futime、_futime32、_futime64
 
@@ -80,13 +80,13 @@ int _futime64(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，則傳回 0。 發生錯誤時，會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函數會傳回-1 和**errno**設**EBADF**，表示無效的檔案描述元，或**EINVAL**，指出無效參數。
+如果成功，則傳回 0。 發生錯誤時，會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函數會傳回-1 及**errno**設為**EBADF**，表示檔案描述項無效，或**EINVAL**，表示無效參數。
 
 ## <a name="remarks"></a>備註
 
-**_Futime**常式設定上開啟的檔案與相關聯的修改日期和存取時間*fd*。 **_futime**等同於[_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md)，不同之處在於其引數是開啟的檔案，檔案描述元，而不是檔案或檔案的路徑名稱。 **_Utimbuf**結構包含新的修改日期和時間存取的欄位。 這兩個欄位必須包含有效的值。 **_utimbuf32**和 **_utimbuf64**相同 **_utimbuf**分別用於 32 位元和 64 位元時間類型，除非。 **_futime**和 **_utimbuf**使用 64 位元時間類型和 **_futime**行為中都有相同 **_futime64**。 如果您要強制舊的行為，請定義 **_USE_32BIT_TIME_T**。 如此一來，這會導致 **_futime**相同的行為來 **_futime32** ，並造成 **_utimbuf**結構，以使用 32 位元時間類型，讓它相當於 **__utimbuf32**。
+**_Futime**常式相關聯的開啟檔案上設定的修改日期和存取時間*fd*。 **_futime**等同於[_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md)，不同之處在於其引數是開啟的檔案，檔案描述元，而不是檔案或檔案的路徑名稱。 **_Utimbuf**結構包含新修改日期和存取時間的欄位。 這兩個欄位必須包含有效的值。 **_utimbuf32**並 **_utimbuf64**等於 **_utimbuf**分別使用 32 位元和 64 位元時間類型，除非。 **_futime**並 **_utimbuf**使用 64 位元時間類型與 **_futime**完全相同的行為 **_futime64**。 如果您需要強制進行舊行為，定義 **_USE_32BIT_TIME_T**。 如此一來，這會導致 **_futime**相同的行為 **_futime32** ，並造成 **_utimbuf**結構使用 32 位元時間類型，使其相當於 **__utimbuf32**。
 
-**_futime64**，它會使用 **__utimbuf64**結構，可以讀取和修改 23:59:59，3000 年 12 月 31 日 UTC; 的檔案日期，而呼叫 **_futime32**失敗，則檔案的日期23:59:59 2038 年 1 月 18 日，UTC 較新版本。 1970 年 1 月 1 日午夜是這些函式的日期範圍下限。
+**_futime64**，它會使用 **__utimbuf64**結構，可以讀取和修改檔案日期至 23:59:59，3000 年 12 月 31 日 UTC; 而呼叫 **_futime32**如果檔案的日期會失敗晚於 23:59:59 2038 年 1 月 18 日 UTC。 1970 年 1 月 1 日午夜是這些函式的日期範圍下限。
 
 ## <a name="requirements"></a>需求
 
@@ -143,20 +143,20 @@ Arbitrary file contents.
 ### <a name="sample-output"></a>範例輸出
 
 ```Output
- Volume in drive Z has no label.
- Volume Serial Number is 5C68-57C1
+Volume in drive Z has no label.
+Volume Serial Number is 5C68-57C1
 
- Directory of Z:\crt
+Directory of Z:\crt
 
- 03/25/2004  10:40 AM                24 crt_futime.c_input
+03/25/2004  10:40 AM                24 crt_futime.c_input
                1 File(s)             24 bytes
                0 Dir(s)  24,268,476,416 bytes free
- Volume in drive Z has no label.
- Volume Serial Number is 5C68-57C1
+Volume in drive Z has no label.
+Volume Serial Number is 5C68-57C1
 
- Directory of Z:\crt
+Directory of Z:\crt
 
- 03/25/2004  10:41 AM                24 crt_futime.c_input
+03/25/2004  10:41 AM                24 crt_futime.c_input
                1 File(s)             24 bytes
                0 Dir(s)  24,268,476,416 bytes free
 File time modified

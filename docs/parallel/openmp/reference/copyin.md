@@ -1,5 +1,5 @@
 ---
-title: copyin |Microsoft 文件
+title: copyin |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32137534a43eeb0b038eae547f9bc19283412159
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 27afaee16a87ddf428570f7854212eed34634d38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688241"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059325"
 ---
 # <a name="copyin"></a>copyin
 可讓執行緒存取主執行緒的值，如[threadprivate](../../../parallel/openmp/reference/threadprivate.md)變數。  
@@ -32,11 +32,10 @@ ms.locfileid: "33688241"
 copyin(var)  
 ```  
   
-## <a name="remarks"></a>備註  
- 其中：  
+## <a name="parameters"></a>參數
   
- `var`  
- `threadprivate`存在於之前平行建構將主執行緒中的變數的值初始化的變數。  
+*var*<br/>
+`threadprivate`存在於平行建構之前將在主執行緒中，變數的值初始化的變數。  
   
 ## <a name="remarks"></a>備註  
  `copyin` 適用於下列指示詞：  
@@ -47,10 +46,10 @@ copyin(var)
   
 -   [區段](../../../parallel/openmp/reference/sections-openmp.md)  
   
- 如需詳細資訊，請參閱[2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md)。  
+ 如需詳細資訊，請參閱 < [2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md)。  
   
 ## <a name="example"></a>範例  
- 請參閱[threadprivate](../../../parallel/openmp/reference/threadprivate.md)的使用範例`copyin`。  
+ 請參閱[threadprivate](../../../parallel/openmp/reference/threadprivate.md)如需使用的範例`copyin`。  
   
 ## <a name="see-also"></a>另請參閱  
  [子句](../../../parallel/openmp/reference/openmp-clauses.md)

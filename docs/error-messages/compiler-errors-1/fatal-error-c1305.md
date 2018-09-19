@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90d73003d9f19eb41f9eb34cd47c7b90b1e6164f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4beb1140d161b8cbe54cab40dcc72899c976edc3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540976"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048743"
 ---
 # <a name="fatal-error-c1305"></a>嚴重錯誤 C1305
-分析資料庫 'pgd_file' 適用於不同的架構  
-  
- 針對其他平台已傳遞至 /ltcg: pginstrument 作業所產生的.pgd 檔[/ltcg: pgoptimize](../../build/reference/ltcg-link-time-code-generation.md) 。 [特性指引最佳化](../../build/reference/profile-guided-optimizations.md)適用於 x86 和 x64 平台。 不過，以一個平台的 /ltcg: pginstrument 作業產生的.pgd 檔無效，無法做為輸入至 /ltcg: pgoptimize，適用於不同平台。  
-  
- 若要解決這個錯誤，只傳遞使用 /ltcg: pginstrument 至 /ltcg: pgoptimize 相同的平台上建立的.pgd 檔。
+
+分析資料庫 'pgd_file' 適用於不同的架構
+
+針對其他平台已傳遞至 /ltcg: pginstrument 作業所產生的.pgd 檔[/ltcg: pgoptimize](../../build/reference/ltcg-link-time-code-generation.md) 。 [特性指引最佳化](../../build/reference/profile-guided-optimizations.md)適用於 x86 和 x64 平台。 不過，以一個平台的 /ltcg: pginstrument 作業產生的.pgd 檔無效，無法做為輸入至 /ltcg: pgoptimize，適用於不同平台。
+
+若要解決這個錯誤，只傳遞使用 /ltcg: pginstrument 至 /ltcg: pgoptimize 相同的平台上建立的.pgd 檔。

@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0047 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0047 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31597324c81675c268787915c4cb5ad2cfcb7db2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 42e40abb4b14bc821c043b79cf7ff7786c0dcc14
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296805"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040865"
 ---
 # <a name="expression-evaluator-error-cxx0047"></a>運算式評估工具錯誤 CXX0047
-引數清單不符合函式  
-  
- 具有相同名稱定義在程式中不符合任何函式的型式參數清單的實質參數清單的函式呼叫運算式。  
-  
- 沒有參數完全符合或不需要物件的建構的相符項目時，才可以呼叫多載函式。  
-  
- 這個錯誤是與 can0047 相同。
+
+引數清單不符合函式
+
+呼叫具有不符合任何函式的型式參數清單與程式中定義的相同名稱的實質參數清單的函式運算式。
+
+只有當參數完全符合或不需要在物件建構的相符項目時，才可以呼叫多載函式。
+
+此錯誤是與 can0047 相同。

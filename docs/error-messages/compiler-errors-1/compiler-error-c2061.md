@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2061 |Microsoft 文件
+title: 編譯器錯誤 C2061 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4d4b018dbab16e8e376a3331a85d0f1b1004f5d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 896fdb21c57e0f558b87ec23e2be309cf49f8095
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167375"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057960"
 ---
 # <a name="compiler-error-c2061"></a>編譯器錯誤 C2061
-語法錯誤： 識別項 'identifier'  
-  
- 編譯器會發現未預期的識別項。 請確定`identifier`宣告再使用它。  
-  
- 初始設定式可能會放在括弧之中。 若要避免這個問題，括號括住的宣告子，或讓它`typedef`。  
-  
- 當編譯器偵測到為類別樣板引數; 運算式時，可能也會造成這個錯誤使用[typename](../../cpp/typename.md)告知編譯器為型別。  
-  
- 下列範例會產生 C2061:  
-  
-```  
-// C2061.cpp  
-// compile with: /c  
-template < A a >   // C2061  
-// try the following line instead  
-// template < typename b >  
-class c{};  
-```  
-  
- 如果您傳遞至執行個體名稱，就會發生 C2061 [typeid](../../windows/typeid-cpp-component-extensions.md):  
-  
-```  
-// C2061b.cpp  
-// compile with: /clr  
-ref struct G {  
-   int i;  
-};  
-  
-int main() {  
-   G ^ pG = gcnew G;  
-   System::Type ^ pType = typeid<pG>;   // C2061  
-   System::Type ^ pType2 = typeid<G>;   // OK  
-}  
+
+語法錯誤： 識別項 'identifier'
+
+編譯器發現之識別項，它不預期的位置。 請確定`identifier`宣告才能使用它。
+
+初始設定式可能會以括號括住。 若要避免這個問題，括號括住宣告子，或使它`typedef`。
+
+當編譯器偵測到的運算式做為類別範本引數; 也會發生此錯誤使用  [typename](../../cpp/typename.md)告訴編譯器為型別。
+
+下列範例會產生 C2061:
+
+```
+// C2061.cpp
+// compile with: /c
+template < A a >   // C2061
+// try the following line instead
+// template < typename b >
+class c{};
+```
+
+如果您傳遞至執行個體名稱，就會發生 C2061 [typeid](../../windows/typeid-cpp-component-extensions.md):
+
+```
+// C2061b.cpp
+// compile with: /clr
+ref struct G {
+   int i;
+};
+
+int main() {
+   G ^ pG = gcnew G;
+   System::Type ^ pType = typeid<pG>;   // C2061
+   System::Type ^ pType2 = typeid<G>;   // OK
+}
 ```

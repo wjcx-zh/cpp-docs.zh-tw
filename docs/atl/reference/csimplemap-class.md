@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53a37083335c42d8042167e737b68ccad517fa00
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0fa2c3b421aa0aa60194f8ed949c023d78b70c2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756346"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070281"
 ---
 # <a name="csimplemap-class"></a>CSimpleMap 類別
 
@@ -47,19 +47,19 @@ ms.locfileid: "43756346"
 ## <a name="syntax"></a>語法
 
 ```
-template <class TKey, class TVal, class TEqual = CSimpleMapEqualHelper<TKey, TVal>>  
+template <class TKey, class TVal, class TEqual = CSimpleMapEqualHelper<TKey, TVal>>
 class CSimpleMap
 ```
 
 #### <a name="parameters"></a>參數
 
-*TKey*  
+*TKey*<br/>
 索引鍵的項目類型。
 
-*TVal*  
+*TVal*<br/>
 值的項目型別。
 
-*TEqual*  
+*TEqual*<br/>
 特性物件，並定義類型的項目等號比較測試`T`。
 
 ## <a name="members"></a>成員
@@ -124,10 +124,10 @@ BOOL Add(const TKey& key, const TVal& val);
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 索引鍵。
 
-*val*  
+*val*<br/>
 相關聯的值。
 
 ### <a name="return-value"></a>傳回值
@@ -188,7 +188,7 @@ int FindKey(const TKey& key) const;
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 要搜尋的索引鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -205,7 +205,7 @@ int FindVal(const TVal& val) const;
 
 ### <a name="parameters"></a>參數
 
-*val*  
+*val*<br/>
 要搜尋值。
 
 ### <a name="return-value"></a>傳回值
@@ -222,7 +222,7 @@ TKey& GetKeyAt(int nIndex) const;
 
 ### <a name="parameters"></a>參數
 
-*nIndex*  
+*nIndex*<br/>
 要傳回之索引鍵索引。
 
 ### <a name="return-value"></a>傳回值
@@ -255,7 +255,7 @@ TVal& GetValueAt(int nIndex) const;
 
 ### <a name="parameters"></a>參數
 
-*nIndex*  
+*nIndex*<br/>
 要傳回之值的索引。
 
 ### <a name="return-value"></a>傳回值
@@ -276,7 +276,7 @@ TVal Lookup(const TKey& key) const;
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 索引鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -293,7 +293,7 @@ BOOL Remove(const TKey& key);
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 索引鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -322,7 +322,7 @@ BOOL RemoveAt(int nIndex);
 
 ### <a name="parameters"></a>參數
 
-*nIndex*  
+*nIndex*<br/>
 金鑰和相關聯的值，若要移除的索引。
 
 ### <a name="return-value"></a>傳回值
@@ -339,7 +339,7 @@ TKey ReverseLookup(const TVal& val) const;
 
 ### <a name="parameters"></a>參數
 
-*val*  
+*val*<br/>
 數值。
 
 ### <a name="return-value"></a>傳回值
@@ -356,10 +356,10 @@ BOOL SetAt(const TKey& key, const TVal& val);
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 索引鍵。
 
-*val*  
+*val*<br/>
 要指派新的值。
 
 ### <a name="return-value"></a>傳回值
@@ -379,13 +379,13 @@ BOOL SetAtIndex(
 
 ### <a name="parameters"></a>參數
 
-*nIndex*  
+*nIndex*<br/>
 參考的索引鍵和值配對，以變更索引。
 
-*key*  
+*key*<br/>
 新的金鑰。
 
-*val*  
+*val*<br/>
 新值。
 
 ### <a name="return-value"></a>傳回值

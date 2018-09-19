@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3721 |Microsoft 文件
+title: 編譯器錯誤 C3721 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0bd4942dba3c49ecc06b015d6ed14b297d09ac2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df6c2ff97e44ab679e59b3377e80e78398f12211
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275193"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039552"
 ---
 # <a name="compiler-error-c3721"></a>編譯器錯誤 C3721
-「 簽章': 事件不相容的簽章  
-  
- 事件宣告不正確。 如需詳細資訊，請參閱[__event](../../cpp/event.md)。  
-  
- C3721 才可使用過時的編譯器選項 **/clr:oldSyntax**。  
+
+'signature': 不相容的簽章的事件
+
+事件宣告不正確。 如需詳細資訊，請參閱 < [__event](../../cpp/event.md)。
+
+C3721 才可使用過時的編譯器選項 **/clr: oldsyntax**。

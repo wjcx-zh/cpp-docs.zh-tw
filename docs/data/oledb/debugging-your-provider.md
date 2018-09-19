@@ -1,5 +1,5 @@
 ---
-title: 偵錯您的提供者 |Microsoft 文件
+title: 偵錯您的提供者 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,31 +18,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c6258ddd3fd4317c608cb20486c364918fb5c73a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5552b9c3d3d697b322b8c1d71eaf0e71630fac38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106386"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040193"
 ---
 # <a name="debugging-your-provider"></a>偵錯提供者
+
 有兩種方式可以偵錯您的提供者：  
   
--   因為提供者會建立程序中，您可以建立某些通常使用的 OLE DB 消費者樣板和逐步執行提供者的取用者程式碼。  
+- 因為提供者會建立程序中，您可以建立一些通常使用的 OLE DB 消費者範本和逐步執行提供者的取用者程式碼。  
   
--   您可以使用隨附於 Visual c + + ITEST 公用程式。  
+- 您可以使用隨附於 Visual c + + ITEST 公用程式。  
   
 ### <a name="to-use-the-itest-utility"></a>若要使用 ITEST 公用程式  
   
-1.  開啟提供者的專案。  
+1. 開啟提供者的專案。  
   
-2.  在**專案**功能表上，按一下 **設定**。  
+1. 在 **專案**功能表上，按一下**設定**。  
   
-3.  在**屬性頁**對話方塊中，按一下 [**偵錯**] 索引標籤。  
+1. 在 **屬性頁** 對話方塊中，按一下**偵錯** 索引標籤。  
   
-4.  在**偵錯工作階段的可執行檔**方塊中，選取 ITEST 應用程式。  
+1. 在 **偵錯工作階段的可執行檔**方塊中，選取 ITEST 應用程式。  
   
-5.  設定中斷點、，然後如常進行偵錯。  
+1. 設定中斷點，，然後如常進行偵錯。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 OLE DB 提供者範本](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+[使用 OLE DB 提供者範本](../../data/oledb/working-with-ole-db-provider-templates.md)

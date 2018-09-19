@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba2c1b96a1ce4db7c16695c51d946ecb98827271
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9a9cc4a142a0aefc4937df493fa87552464b4294
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752784"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043413"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>彙總與 Class Factory 巨集
 
@@ -67,7 +67,7 @@ DECLARE_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>參數
 
-*x*  
+*x*<br/>
 [in]您會定義為彙總的類別名稱。
 
 ### <a name="remarks"></a>備註
@@ -131,7 +131,7 @@ DECLARE_CLASSFACTORY_EX( cf )
 
 ### <a name="parameters"></a>參數
 
-*cf*  
+*cf*<br/>
 [in]實作您類別的 factory 物件的類別名稱。
 
 ### <a name="remarks"></a>備註
@@ -154,7 +154,7 @@ DECLARE_CLASSFACTORY2( lic )
 
 ### <a name="parameters"></a>參數
 
-*授權*  
+*授權*<br/>
 [in]類別若實作`VerifyLicenseKey`， `GetLicenseKey`，和`IsLicenseValid`。
 
 ### <a name="remarks"></a>備註
@@ -178,7 +178,7 @@ class  CComClassFactory2 : public IClassFactory2,
 
 ### <a name="parameters"></a>參數
 
-*授權*  
+*授權*<br/>
 類別若實作下列靜態函式：
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -249,7 +249,7 @@ DECLARE_CLASSFACTORY_SINGLETON( obj )
 
 ### <a name="parameters"></a>參數
 
-*obj*  
+*obj*<br/>
 [in]您的類別物件的名稱。
 
 ### <a name="remarks"></a>備註
@@ -274,7 +274,7 @@ class CComClassFactorySingleton : public CComClassFactory
 
 ### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您的類別。
 
 `CComClassFactorySingleton` 衍生自[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)並用[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)來建構單一物件。 每次呼叫`CreateInstance`方法只會查詢此物件的介面指標。
@@ -307,7 +307,7 @@ DECLARE_NOT_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>參數
 
-*x*  
+*x*<br/>
 [in]您會定義為不可彙總則類別物件的名稱。
 
 ### <a name="remarks"></a>備註
@@ -330,7 +330,7 @@ DECLARE_ONLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>參數
 
-*x*  
+*x*<br/>
 [in]您會定義為只可彙總的類別物件的名稱。
 
 ### <a name="remarks"></a>備註
@@ -353,7 +353,7 @@ DECLARE_POLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>參數
 
-*x*  
+*x*<br/>
 [in]您會定義為彙總或不可彙總則類別物件的名稱。
 
 ### <a name="remarks"></a>備註
@@ -382,7 +382,7 @@ DECLARE_VIEW_STATUS( statusFlags )
 
 ### <a name="parameters"></a>參數
 
-*statusFlags*  
+*statusFlags*<br/>
 [in]Forced VIEWSTATUS 旗標。 請參閱[forced VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus)旗標的清單。
 
 ### <a name="example"></a>範例

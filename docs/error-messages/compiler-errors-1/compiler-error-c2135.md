@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2135 |Microsoft 文件
+title: 編譯器錯誤 C2135 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8029738e18af87b8c6a9f3e6ee9d9d2e3f6a46f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4945753bec1ab8d315c8f8028bf10513dcb21c1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168473"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070063"
 ---
 # <a name="compiler-error-c2135"></a>編譯器錯誤 C2135
-'bit operator': 不合法的位元欄位運算  
-  
- 傳址運算子 (`&`) 無法套用至位元欄位。  
-  
- 下列範例會產生 C2135：  
-  
-```  
-// C2135.cpp  
-struct S {  
-   int i : 1;  
-};  
-  
-struct T {  
-   int j;  
-};  
-int main() {  
-   &S::i;   // C2135 address of a bit field  
-   &T::j;   // OK  
-}  
+
+'bit operator': 不合法的位元欄位運算
+
+傳址運算子 (`&`) 無法套用至位元欄位。
+
+下列範例會產生 C2135：
+
+```
+// C2135.cpp
+struct S {
+   int i : 1;
+};
+
+struct T {
+   int j;
+};
+int main() {
+   &S::i;   // C2135 address of a bit field
+   &T::j;   // OK
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2873 |Microsoft 文件
+title: 編譯器錯誤 C2873 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a04d650729bdda949754c5070a6c307d390929
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf0cc5663d81d6c1e7ad6a9f1a5f7ca167f12909
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244374"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049900"
 ---
 # <a name="compiler-error-c2873"></a>編譯器錯誤 C2873
-'symbol': 符號不能在 using 宣告  
-  
- A`using`指示詞遺漏[命名空間](../../cpp/namespaces-cpp.md)關鍵字。 這會導致編譯器錯誤程式碼做為解譯[using 宣告](../../cpp/using-declaration.md)而[using 指示詞](../../cpp/namespaces-cpp.md#using_directives)。
+
+'symbol': 符號不能在 using 宣告
+
+A`using`指示詞遺漏[命名空間](../../cpp/namespaces-cpp.md)關鍵字。 這會導致編譯器錯誤解譯為程式碼[using 宣告](../../cpp/using-declaration.md)而非[using 指示詞](../../cpp/namespaces-cpp.md#using_directives)。

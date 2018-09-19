@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2311 |Microsoft 文件
+title: 編譯器錯誤 C2311 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa68a79b8255b1e64884ec7da1d1847021b8bc2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f19e2a1b41c499605f22575f934b3d4872457011
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172988"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065097"
 ---
 # <a name="compiler-error-c2311"></a>編譯器錯誤 C2311
-'exception': 被 '...' 行號  
-  
- 省略符號 （...） 的 catch 處理常式必須是擲回的最後一個處理常式。  
-  
- 下列範例會產生 C2311:  
-  
-```  
-// C2311.cpp  
-// compile with: /EHsc  
-#include <eh.h>  
-int main() {  
-   try {  
-      throw "ooops!";  
-   }  
-   catch( ... ) {}  
-   catch( int ) {}   // C2311  ellipsis handler not last catch  
-}  
+
+'exception': 被 '...' 行號攔截
+
+省略符號 （...） 的 catch 處理常式必須擲回的最後一個處理常式。
+
+下列範例會產生 C2311:
+
+```
+// C2311.cpp
+// compile with: /EHsc
+#include <eh.h>
+int main() {
+   try {
+      throw "ooops!";
+   }
+   catch( ... ) {}
+   catch( int ) {}   // C2311  ellipsis handler not last catch
+}
 ```

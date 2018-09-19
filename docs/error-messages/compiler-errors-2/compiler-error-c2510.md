@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2510 |Microsoft 文件
+title: 編譯器錯誤 C2510 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 555d6d30f78c82e4c37e9fd5a047f62018b3d3d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f2a672b8329bc3167452ec5e3d1d76f19161bf6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226300"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055958"
 ---
 # <a name="compiler-error-c2510"></a>編譯器錯誤 C2510
-'identifier': '::' 的左邊必須是類別/結構/等位  
-  
- 類別、結構或等位名稱必須出現在範圍解析運算子 (`::`運算子) 左邊。
+
+'identifier': '::' 的左邊必須是類別/結構/等位
+
+類別、結構或等位名稱必須出現在範圍解析運算子 (`::`運算子) 左邊。

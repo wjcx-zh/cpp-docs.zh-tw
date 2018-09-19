@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0004 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0004 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8791159e4357b003da38f58a669400bfed7c290e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cafc9d1976ea7e68266e56ac8c58c37be422d70e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301404"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057115"
 ---
 # <a name="expression-evaluator-error-cxx0004"></a>運算式評估工具錯誤 CXX0004
-語法錯誤  
-  
- 運算式的語法不正確。  
-  
- 重新輸入運算式以正確的語法。  
-  
- 這個錯誤是與 can0004 相同。
+
+語法錯誤
+
+運算式的語法不正確。
+
+重新輸入具有正確語法的運算式。
+
+此錯誤是與 can0004 相同。

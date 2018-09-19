@@ -1,5 +1,5 @@
 ---
-title: 嚴重錯誤 C1079 |Microsoft 文件
+title: 嚴重錯誤 C1079 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 285994620225f5752ec9a32c510add71593c11f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b9ba2a0e7fb984468d0d6e9d75fc10cdbad3c80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225325"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062523"
 ---
 # <a name="fatal-error-c1079"></a>嚴重錯誤 C1079
-編譯器限制： 超過 PCH 檔案大小上限  
-  
- PCH 檔案超過 4 GB 大小限制。
+
+編譯器限制： 超過 PCH 檔案大小上限
+
+PCH 檔案超過 4 GB 大小限制。

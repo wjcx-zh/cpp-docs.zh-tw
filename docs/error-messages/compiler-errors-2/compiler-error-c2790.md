@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2790 |Microsoft 文件
+title: 編譯器錯誤 C2790 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11f1c90fed93666fad7513e2b4186a5baa2aa406
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc2c6b238fab7e42c0754e613b62756a86a5bb31
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232813"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069569"
 ---
 # <a name="compiler-error-c2790"></a>編譯器錯誤 C2790
-'super': 此關鍵字只用於類別成員函式主體內  
-  
- 如果使用者曾嘗試使用關鍵字出現下列錯誤訊息[super](../../cpp/super.md)成員函式的環境之外。  
-  
- 下列範例會產生 C2790:  
-  
-```  
-// C2790.cpp  
-void f() {  
-   __super::g();   // C2790  
-}  
+
+'super': 此關鍵字僅適用於類別成員函式主體內
+
+如果使用者試著使用關鍵字出現下列錯誤訊息[super](../../cpp/super.md)成員函式的內容之外。
+
+下列範例會產生 C2790:
+
+```
+// C2790.cpp
+void f() {
+   __super::g();   // C2790
+}
 ```

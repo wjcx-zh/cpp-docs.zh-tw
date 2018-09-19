@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2859 |Microsoft 文件
+title: 編譯器錯誤 C2859 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9fa80b858494ab2a89e82a40f2c295d05cb1294
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9d143624ae7312cfefc724471681d697394a1566
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245188"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037032"
 ---
 # <a name="compiler-error-c2859"></a>編譯器錯誤 C2859
-檔案名稱不是已建立此先行編譯標頭時所使用的類型檔案，請重新建立先行編譯標頭。  
-  
- 專案的資料庫和先行編譯標頭檔案必須一起建立，以確保一致的資訊。 重建專案來重新建立先行編譯標頭。  
-  
- 如需先行編譯標頭資訊，請參閱[/Y （先行編譯標頭）](../../build/reference/y-precompiled-headers.md)。
+
+檔案名稱不是已建立此先行編譯標頭時所使用的型別檔案，請重新建立先行編譯標頭。
+
+先行編譯標頭檔案與專案資料庫必須一起建立，以確保一致的資訊。 重建專案以重新建立先行編譯標頭。
+
+如需先行編譯標頭資訊，請參閱[/Y （先行編譯標頭）](../../build/reference/y-precompiled-headers.md)。

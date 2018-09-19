@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3106 |Microsoft 文件
+title: 編譯器錯誤 C3106 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 059eaf684995dab6bdcbd1a65bbdb75f70b1551b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4371b8d63a57ef791dad9f1e593c8009d5361852
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248143"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052604"
 ---
 # <a name="compiler-error-c3106"></a>編譯器錯誤 C3106
-'attribute': 未具名引數必須在具名引數之前  
-  
- 未具名引數必須傳遞給之前具名引數的屬性。  
-  
- 如需詳細資訊，請參閱 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C3106。  
-  
-```  
-// C3106.cpp  
-// compile with: /c  
-[module(name="MyLib", dll)];   // C3106  
-[module(dll, name="MyLib")];   // OK  
+
+'attribute': 未具名引數必須在具名引數的前面
+
+未具名引數必須傳遞至具名引數之前的屬性。
+
+如需詳細資訊，請參閱 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C3106。
+
+```
+// C3106.cpp
+// compile with: /c
+[module(name="MyLib", dll)];   // C3106
+[module(dll, name="MyLib")];   // OK
 ```

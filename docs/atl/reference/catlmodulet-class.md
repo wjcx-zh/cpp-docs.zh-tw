@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f468117cc4d3fad8f3eb1d94abc948c9a4a032b4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3a88ecf9c5fcffa07066c3ab988fde1f36adf8d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766824"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057479"
 ---
 # <a name="catlmodulet-class"></a>CAtlModuleT 類別
 
@@ -38,13 +38,13 @@ ms.locfileid: "43766824"
 ## <a name="syntax"></a>語法
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您的類別衍生自`CAtlModuleT`。
 
 ## <a name="members"></a>成員
@@ -74,7 +74,7 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
-[_ATL_MODULE](atl-typedefs.md#_atl_module)  
+[_ATL_MODULE](atl-typedefs.md#_atl_module)
 
 [CAtlModule](../../atl/reference/catlmodule-class.md)
 
@@ -132,10 +132,10 @@ HRESULT RegisterServer(
 
 ### <a name="parameters"></a>參數
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 如果型別程式庫是要註冊，則為 TRUE。 預設值為 FALSE。
 
-*Createtable*  
+*Createtable*<br/>
 要註冊之物件的 clsid 點。 若要註冊 NULL （預設值），在物件對應中的所有物件。
 
 ### <a name="return-value"></a>傳回值
@@ -166,10 +166,10 @@ HRESULT UnregisterServer(
 
 ### <a name="parameters"></a>參數
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 如果型別程式庫也要取消註冊，則為 TRUE。
 
-*Createtable*  
+*Createtable*<br/>
 要移除註冊物件的 clsid 點。 如果 NULL （預設值），在物件對應中的所有物件就會取消註冊。
 
 ### <a name="return-value"></a>傳回值
@@ -186,7 +186,7 @@ static HRESULT WINAPI UpdateRegistryAppId(BOOL /* bRegister*/) throw();
 
 ### <a name="parameters"></a>參數
 
-*bRegister*  
+*bRegister*<br/>
 保留的。
 
 ### <a name="return-value"></a>傳回值
@@ -195,6 +195,6 @@ static HRESULT WINAPI UpdateRegistryAppId(BOOL /* bRegister*/) throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[CAtlModule 類別](../../atl/reference/catlmodule-class.md)   
-[類別概觀](../../atl/atl-class-overview.md)   
+[CAtlModule 類別](../../atl/reference/catlmodule-class.md)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
 [模組類別](../../atl/atl-module-classes.md)

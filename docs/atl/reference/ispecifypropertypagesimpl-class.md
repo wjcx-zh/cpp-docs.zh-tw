@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d231f493fd2b2f2c492eec224a0ae041f175f53d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eb4611c52f65595eb84248507dfb3a85d1ab26fa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767346"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035954"
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>ISpecifyPropertyPagesImpl 類別
 
@@ -37,14 +37,14 @@ ms.locfileid: "43767346"
 ## <a name="syntax"></a>語法
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE ISpecifyPropertyPagesImpl 
    : public ISpecifyPropertyPages
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您的類別，衍生自`ISpecifyPropertyPagesImpl`。
 
 ## <a name="members"></a>成員
@@ -90,6 +90,6 @@ ATL 會使用物件的屬性對應，來擷取每個 CLSID。
 
 ## <a name="see-also"></a>另請參閱
 
-[IPropertyPageImpl 類別](../../atl/reference/ipropertypageimpl-class.md)   
-[IPerPropertyBrowsingImpl 類別](../../atl/reference/iperpropertybrowsingimpl-class.md)   
+[IPropertyPageImpl 類別](../../atl/reference/ipropertypageimpl-class.md)<br/>
+[IPerPropertyBrowsingImpl 類別](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

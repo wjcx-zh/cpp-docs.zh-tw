@@ -1,5 +1,5 @@
 ---
-title: 專案建置錯誤 PRJ0007 |Microsoft 文件
+title: 專案建置錯誤 PRJ0007 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 288c86797d481719a594b061d6942923fe2230ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d944f444eb424339b4c214de1bb160e0545a3e35
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317761"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068087"
 ---
 # <a name="project-build-error-prj0007"></a>專案建置錯誤 PRJ0007
-無法建立輸出目錄 'directory'。  
-  
- Visual c + + 無法建立輸出目錄。 可能的原因包括：  
-  
--   輸出目錄已建立所在的目錄是唯讀的。  
-  
--   電腦已用完磁碟空間。  
-  
--   您指定的目錄路徑無效。  
-  
--   找不到不足，無法建立目錄的使用者權限。
+
+無法建立輸出目錄 'directory'。
+
+Visual c + +，就無法建立輸出目錄。 可能的原因包括：
+
+- 在其中顯示已建立的輸出目錄的目錄是唯讀的。
+
+- 電腦已用完磁碟空間。
+
+- 您指定的目錄路徑無效。
+
+- 使用者權限並不足以建立目錄。

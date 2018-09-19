@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 4） C4208 |Microsoft 文件
+title: 編譯器警告 （層級 4） C4208 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b61f8b0a6a0ac61982bee79abb81f083d40a48f1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ee87ad1d43b20c4d0a72b877b05b1ba4c084a1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292359"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064616"
 ---
 # <a name="compiler-warning-level-4-c4208"></a>編譯器警告 (層級 4) C4208
-使用非標準擴充： delete [exp]-評估 exp 運算式但忽略  
-  
- 搭配 Microsoft 擴充功能 (/Ze)，您可以刪除使用括號與值的陣列[delete 運算子](../../cpp/delete-operator-cpp.md)。 會忽略的值。  
-  
-```  
-// C4208.cpp  
-// compile with: /W4  
-int main()  
-{  
-   int * MyArray = new int[18];  
-   delete [18] MyArray;      // C4208  
-   MyArray = new int[18];  
-   delete [] MyArray;        // ok  
-}  
-```  
-  
- 這類值都無效 ANSI 相容性 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+
+使用非標準擴充： delete [exp]-exp 予以評估但忽略
+
+搭配 Microsoft 擴充功能 (/Ze)，您可以刪除使用以括號括住值的陣列[delete 運算子](../../cpp/delete-operator-cpp.md)。 會忽略的值。
+
+```
+// C4208.cpp
+// compile with: /W4
+int main()
+{
+   int * MyArray = new int[18];
+   delete [18] MyArray;      // C4208
+   MyArray = new int[18];
+   delete [] MyArray;        // ok
+}
+```
+
+這類值都無效 ANSI 相容性 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。

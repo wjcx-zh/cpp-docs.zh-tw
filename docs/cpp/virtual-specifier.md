@@ -15,12 +15,13 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01b569bd4a752eed66f2af138a7136032b092f51
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 580952727023593da23fd2740da4be23406724b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464966"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053501"
 ---
 # <a name="virtual-specifier"></a>virtual 規範
-[虛擬](../cpp/virtual-cpp.md)關鍵字可以只會套用至非靜態類別成員函式。 它表示將函式呼叫的繫結延後到執行階段。 如需詳細資訊，請參閱 <<c0> [ 虛擬函式](../cpp/virtual-functions.md)。  
+
+[虛擬](../cpp/virtual-cpp.md)關鍵字可以只會套用至非靜態類別成員函式。 它表示將函式呼叫的繫結延後到執行階段。 如需詳細資訊，請參閱 <<c0> [ 虛擬函式](../cpp/virtual-functions.md)。

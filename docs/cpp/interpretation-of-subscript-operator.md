@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eeb8d4232fae16cfaa588341a54bf4318483b92
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6e1457744747ee3638d7f0b9485ac12af60e5cdd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213427"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058337"
 ---
 # <a name="interpretation-of-subscript-operator"></a>註標運算子的解譯
 
@@ -34,8 +34,8 @@ ms.locfileid: "43213427"
 
 同樣地，對於多維陣列而言，位址是使用下列方法衍生：
 
-((*subscript*) + (*註標*1 \* *max*2 \* *max*3 \* ...\* *max*n) + (*註標*2 \* *max*3 \* ...\* *max*n) +*註標*n))  
-  
+((*subscript*) + (*註標*1 \* *max*2 \* *max*3 \* ...\* *max*n) + (*註標*2 \* *max*3 \* ...\* *max*n) +*註標*n))
+
 ## <a name="see-also"></a>另請參閱
 
 [陣列](../cpp/arrays-cpp.md)<br/>

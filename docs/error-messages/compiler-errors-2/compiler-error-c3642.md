@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3642 |Microsoft 文件
+title: 編譯器錯誤 C3642 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9e841bcc4fbcb62d6a2d1e6f51f47a73bd2e06a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: febd6f1a9a3b4bac8bbee59cbf8c5bead93c3fb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33264513"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047716"
 ---
 # <a name="compiler-error-c3642"></a>編譯器錯誤 C3642
-' return_type/args ': 無法以 __clrcall 呼叫慣例，從機器碼呼叫的函式  
-  
- 函式標示為[__clrcall](../../cpp/clrcall.md)無法呼叫原生 (unmanaged) 程式碼的呼叫慣例。  
-  
- *return_type/args*是函式的名稱，或是類型`__clrcall`您嘗試呼叫的函式。  一種，透過函式指標呼叫時可用。  
-  
- 若要從原生內容呼叫 managed 函式，您可以加入的 「 包裝函式 」 函式會呼叫`__clrcall`函式。 或者，您可以使用 CLR 封送處理機制。請參閱[如何： 封送處理函式指標使用 PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md)如需詳細資訊。  
-  
- 下列範例會產生 C3642:  
-  
-```  
-// C3642.cpp  
-// compile with: /clr  
-using namespace System;  
-struct S {  
-   void Test(String ^ s) {   // CLR type in signature, implicitly __clrcall  
-      Console::WriteLine(s);  
-   }  
-   void Test2(char * s) {  
-      Test(gcnew String(s));  
-   }  
-};  
-  
-#pragma unmanaged  
-int main() {  
-   S s;  
-   s.Test("abc");   // C3642  
-   s.Test2("abc");   // OK  
-}  
+
+' return_type/args ': 無法以 __clrcall 呼叫慣例，原生程式碼呼叫的函式
+
+標記為函式[__clrcall](../../cpp/clrcall.md)無法呼叫原生 (unmanaged) 程式碼的呼叫慣例。
+
+*return_type/引數*是函式的名稱，或是類型`__clrcall`您嘗試呼叫的函式。  您透過函式指標呼叫時，會使用型別。
+
+若要從原生的內容中呼叫 managed 函式，您可以新增的 「 包裝函式 」 函式會呼叫`__clrcall`函式。 或者，您可以使用 CLR 封送處理機制;請參閱[如何： 封送處理函式指標使用 PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md)如需詳細資訊。
+
+下列範例會產生 C3642:
+
+```
+// C3642.cpp
+// compile with: /clr
+using namespace System;
+struct S {
+   void Test(String ^ s) {   // CLR type in signature, implicitly __clrcall
+      Console::WriteLine(s);
+   }
+   void Test2(char * s) {
+      Test(gcnew String(s));
+   }
+};
+
+#pragma unmanaged
+int main() {
+   S s;
+   s.Test("abc");   // C3642
+   s.Test2("abc");   // OK
+}
 ```

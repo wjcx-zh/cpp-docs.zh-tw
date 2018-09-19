@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0031 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0031 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c31fc8a619052fc3223b381bbbdd8b03790f0cff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c9a834736ce1c1e5b85035726437f51e5f93641
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298492"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037957"
 ---
 # <a name="expression-evaluator-error-cxx0031"></a>運算式評估工具錯誤 CXX0031
-無法評估運算式  
-  
- 運算式評估工具發生內部錯誤。  
-  
- 您可以撰寫可正確評估的對等運算式。  
-  
- 這個錯誤是與 can0031 相同。
+
+無法評估運算式
+
+運算式評估工具發生內部錯誤。
+
+您可以撰寫可正確評估的對等運算式。
+
+此錯誤是與 can0031 相同。

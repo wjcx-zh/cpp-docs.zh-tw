@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2897 |Microsoft 文件
+title: 編譯器錯誤 C2897 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c3de4c0d3e6a93a783dfb660bc26f07be6fcacf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d05663b913a3e310c091b62a81483f28bbf2c09
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245880"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049823"
 ---
 # <a name="compiler-error-c2897"></a>編譯器錯誤 C2897
-解構函式/完成項不可為函式樣板  
-  
- 解構函式或完成項無法多載，因此不允許解構函式宣告為樣板 （其會定義一組的解構函式）。  
-  
- 下列範例會產生 C2897:  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C2897。  
-  
-```  
-// C2897.cpp  
-// compile with: /c  
-class X {  
-public:  
-   template<typename T> ~X() {}   // C2897  
-};  
-```  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C2897。  
-  
-```  
-// C2897_b.cpp  
-// compile with: /c /clr  
-ref struct R2 {  
-protected:  
-   template<typename T> !R2(){}   // C2897 error  
-};  
+
+解構函式/完成項不可為函式樣板
+
+解構函式或完成項無法多載，因此不允許宣告解構函式做為範本 （這會定義一組的解構函式）。
+
+下列範例會產生 C2897:
+
+## <a name="example"></a>範例
+
+下列範例會產生 C2897。
+
+```
+// C2897.cpp
+// compile with: /c
+class X {
+public:
+   template<typename T> ~X() {}   // C2897
+};
+```
+
+## <a name="example"></a>範例
+
+下列範例會產生 C2897。
+
+```
+// C2897_b.cpp
+// compile with: /c /clr
+ref struct R2 {
+protected:
+   template<typename T> !R2(){}   // C2897 error
+};
 ```

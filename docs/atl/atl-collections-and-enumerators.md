@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e70e744ca4eb9cfa4b84ac0cca58be2452a8e25
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4da59a76ccc4d51e82fd43805daa73d513fcde17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756947"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044271"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL 集合和列舉程式
 
@@ -36,21 +36,21 @@ A`collection`是 COM 物件，提供的介面，可讓您存取一組資料的�
 
 ## <a name="in-this-section"></a>本節內容
 
-[ATL 集合和列舉程式類別](../atl/atl-collection-and-enumerator-classes.md)  
+[ATL 集合和列舉程式類別](../atl/atl-collection-and-enumerator-classes.md)<br/>
 簡短描述，並提供連結至 ATL 類別，可協助您實作集合和列舉程式。
 
-[集合和列舉程式介面的設計原則](../atl/design-principles-for-collection-and-enumerator-interfaces.md)  
+[集合和列舉程式介面的設計原則](../atl/design-principles-for-collection-and-enumerator-interfaces.md)<br/>
 討論每一種介面背後的不同的設計原則。
 
-[實作 C++ 標準程式庫架構集合](../atl/implementing-an-stl-based-collection.md)  
+[實作 C++ 標準程式庫架構集合](../atl/implementing-an-stl-based-collection.md)<br/>
 擴充的範例，逐步引導您實作的 c + + 標準程式庫為基礎的集合。
 
 ## <a name="related-sections"></a>相關章節
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 提供有關如何使用 Active Template Library 進行程式設計的概念性主題連結。
 
-[ATLCollections 範例](../visual-cpp-samples.md)  
+[ATLCollections 範例](../visual-cpp-samples.md)<br/>
 示範如何使用範例`ICollectionOnSTLImpl`和`CComEnumOnSTL`，以及自訂複製原則類別的實作。
 
 ## <a name="see-also"></a>另請參閱

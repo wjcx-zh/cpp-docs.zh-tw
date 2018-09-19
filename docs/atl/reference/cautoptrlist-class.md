@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d3463b9eaad5134f68fbe533e50431ef3a91cf5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c33c3524d0fb6b39208e2cb7be57805a3ff043f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761195"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046754"
 ---
 # <a name="cautoptrlist-class"></a>CAutoPtrList 類別
 
@@ -35,14 +35,14 @@ ms.locfileid: "43761195"
 ## <a name="syntax"></a>語法
 
 ```
-template<typename E>  
-class CAutoPtrList : 
+template<typename E>
+class CAutoPtrList :
    public CAtlList<ATL::CAutoPtr<E>, CAutoPtrElementTraits<E>>
 ```
 
 #### <a name="parameters"></a>參數
 
-*E*  
+*E*<br/>
 指標類型。
 
 ## <a name="members"></a>成員
@@ -79,7 +79,7 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>參數
 
-*nBlockSize*  
+*nBlockSize*<br/>
 區塊的大小，預設值是 10。
 
 ### <a name="remarks"></a>備註
@@ -88,6 +88,6 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[CAtlList 類別](../../atl/reference/catllist-class.md)   
-[CAutoPtrElementTraits 類別](../../atl/reference/cautoptrelementtraits-class.md)   
+[CAtlList 類別](../../atl/reference/catllist-class.md)<br/>
+[CAutoPtrElementTraits 類別](../../atl/reference/cautoptrelementtraits-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

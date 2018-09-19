@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b8b481c917292c672711c308ac39c052ed4ea1d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: baab04880c19cac1e0c291f2b4d8a274dea1c21b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752117"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044934"
 ---
 # <a name="win32threadtraits-class"></a>Win32ThreadTraits 類別
 
@@ -80,22 +80,22 @@ static HANDLE CreateThread(
 
 ### <a name="parameters"></a>參數
 
-*lpsa*  
+*lpsa*<br/>
 新的執行緒安全性屬性。
 
-*dwStackSize*  
+*dwStackSize*<br/>
 新的執行緒堆疊大小。
 
-*pfnThreadProc*  
+*pfnThreadProc*<br/>
 新執行緒的執行緒程序。
 
-*pvParam*  
+*pvParam*<br/>
 要傳遞至執行緒程序的參數。
 
-*dwCreationFlags*  
+*dwCreationFlags*<br/>
 建立旗標 （0 或 CREATE_SUSPENDED）。
 
-*pdwThreadId*  
+*pdwThreadId*<br/>
 [out]變數的位址 DWORD，成功時，接收新建立的執行緒的執行緒識別碼。
 
 ### <a name="return-value"></a>傳回值

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b6e62f90cfca34e92d76294e7deb5e79e8dbd12
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7d7bfd2690cf8f1ed692e6e21bf05b56e2280ce0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756005"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055659"
 ---
 # <a name="supporting-idispeventimpl"></a>支援 IDispEventImpl
 
@@ -70,13 +70,12 @@ ms.locfileid: "43756005"
 
 ATL 提供數個巨集， [BEGIN_SINK_MAP](reference/composite-control-macros.md#begin_sink_map)， [END_SINK_MAP](reference/composite-control-macros.md#end_sink_map)，並[SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex)，可讓此對應更容易。 標準的格式如下所示：
 
-`BEGIN_SINK_MAP(comClass)`
-
-`SINK_ENTRY_EX(id, iid, dispid, func)`
-
-`. . . //additional external event entries`
-
-`END_SINK_MAP()`
+```cpp
+BEGIN_SINK_MAP(comClass)
+  SINK_ENTRY_EX(id, iid, dispid, func)
+  . . . //additional external event entries
+END_SINK_MAP()
+```
 
 下列範例會宣告兩個事件處理常式與事件接收對應：
 

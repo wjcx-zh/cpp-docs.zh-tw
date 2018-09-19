@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3297 |Microsoft 文件
+title: 編譯器錯誤 C3297 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5afdf54e7a335dda86a4046a01b31875a0c91575
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7aa23cebc7ad7019c375c351f723b7ad1573ab86
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249362"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069829"
 ---
 # <a name="compiler-error-c3297"></a>編譯器錯誤 C3297
-'constraint_2': 因為 'constraint_1' 有值條件約束，所以 'constraint_1' 不能用做條件約束  
-  
- 值類別已密封。 如果條件約束是值類別，它絕對不會衍生其他的條件約束。  
-  
- 如需詳細資訊，請參閱[泛型型別參數的條件約束 (C + + /CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C3297。  
-  
-```  
-// C3297.cpp  
-// compile with: /clr /c  
-generic<class T, class U>  
-where T : value class  
-where U : T   // C3297  
-public ref struct R {};  
+
+'constraint_2': 因為 'constraint_1' 有值條件約束，所以 'constraint_1' 不能用做條件約束
+
+值類別已密封。 如果條件約束是值類別，它絕對不會衍生其他的條件約束。
+
+如需詳細資訊，請參閱 <<c0> [ 泛型類型參數的條件約束 (C + + /cli CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C3297。
+
+```
+// C3297.cpp
+// compile with: /clr /c
+generic<class T, class U>
+where T : value class
+where U : T   // C3297
+public ref struct R {};
 ```

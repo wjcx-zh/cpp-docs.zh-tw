@@ -1,7 +1,7 @@
 ---
 title: 逐步解說： 建立使用 WRL 和媒體基礎的 UWP 應用程式 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2775e0348f6bfe1e7fe960a105ebf0c31fcaae96
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3eb82c5c86411af63ea79a4dbcf2e54d2d3ce5f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214827"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038304"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>逐步解說： 建立使用 WRL 和媒體基礎的 UWP 應用程式
 
@@ -101,7 +101,7 @@ ms.locfileid: "43214827"
 
    1. 底下**輸入**，如**模組定義檔**，指定`GrayScaleTransform.def`。
 
-   2. 之下，而且**輸入**，新增`runtimeobject.lib`， `mfuuid.lib`，並`mfplatf.lib`來**其他相依性**屬性。
+   2. 之下，而且**輸入**，新增`runtimeobject.lib`， `mfuuid.lib`，並`mfplat.lib`來**其他相依性**屬性。
 
    3. 底下**Windows 中繼資料**，將**產生 Windows 中繼資料**來**是 (/ WINMD)**。
 

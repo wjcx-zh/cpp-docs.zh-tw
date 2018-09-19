@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae4b7cc2211462b097efbefca580b796d573c59
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: ff6be1e24371692c53621cf6583677cc97d631b4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408943"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059186"
 ---
 # <a name="operator-overloading"></a>運算子多載
 
@@ -187,5 +187,6 @@ int main() {
 - [成員存取](../cpp/member-access.md)
 
 ## <a name="see-also"></a>另請參閱
- [C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
- [關鍵字](../cpp/keywords-cpp.md)
+
+[C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[關鍵字](../cpp/keywords-cpp.md)

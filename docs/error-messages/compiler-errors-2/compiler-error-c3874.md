@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3874 |Microsoft 文件
+title: 編譯器錯誤 C3874 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb1224b1e5b14c0f34e10b7eff972d4014cccdff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 70f6773e65c167b980a4fd9967b910a3f760d58f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268251"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059262"
 ---
 # <a name="compiler-error-c3874"></a>編譯器錯誤 C3874
-'function' 傳回型別應該是 'int'，而不是 'type'  
-  
- 函式沒有編譯器預期的傳回型別。  
-  
- 下列範例會產生 C3874:  
-  
-```  
-// C3874b.cpp  
-double main()  
-{   // C3874  
-}  
+
+'function' 傳回型別應該是 'int'，而不是 'type'
+
+函式沒有編譯器所預期的傳回型別。
+
+下列範例會產生 C3874:
+
+```
+// C3874b.cpp
+double main()
+{   // C3874
+}
 ```

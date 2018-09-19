@@ -15,14 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 02ce5cbfdc6c5305ab356fc32993b6bdd34f1fac
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7fae3dafe056598dea5026d0639ce257af3cee87
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339532"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066774"
 ---
 # <a name="issuing-a-parameterized-query"></a>發出參數型查詢
+
 下列範例會發出簡單參數化的查詢來擷取從 Microsoft Access 資料庫中的資料表的時間欄位 （也就是大於 30） 的記錄。 若要支援此參數，使用者資料錄必須額外的對應。 下列程式碼，在 ATL 專案中，使用`CCommand`類別而非`CTable`在前一個範例中，使用類別[往返簡單資料列集](../../data/oledb/traversing-a-simple-rowset.md)。  
   
 ```cpp  
@@ -51,7 +52,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- 使用者資料錄`CArtists`，看起來像這樣：  
+使用者資料錄`CArtists`，看起來像這樣：  
   
 ```cpp  
 class CArtists  
@@ -78,4 +79,5 @@ END_PARAM_MAP()
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 OLE DB 消費者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[使用 OLE DB 消費者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)

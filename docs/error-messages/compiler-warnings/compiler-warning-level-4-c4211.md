@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 4） C4211 |Microsoft 文件
+title: 編譯器警告 （層級 4） C4211 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8112927940e5e2f17a4e74e2855a035bc7d5e5cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f2c92ef68768f4a9f8ac606716d5ae53c4aa72e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292343"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048210"
 ---
 # <a name="compiler-warning-level-4-c4211"></a>編譯器警告 (層級 4) C4211
-使用非標準擴充： extern 重新定義為靜態  
-  
- 具有預設的 Microsoft 擴充功能 (/Ze) 中，您可以重新定義`extern`識別碼，則為**靜態**。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// C4211.c  
-// compile with: /W4  
-extern int i;  
-static int i;   // C4211  
-  
-int main()  
-{  
-}  
-```  
-  
- 這類重新定義不正確 ANSI 相容性 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。  
-  
-## <a name="see-also"></a>另請參閱  
+
+使用非標準擴充： extern 重新定義為靜態
+
+使用預設的 Microsoft 擴充功能 (/Ze) 中，您可以重新定義`extern`識別碼作為**靜態**。
+
+## <a name="example"></a>範例
+
+```
+// C4211.c
+// compile with: /W4
+extern int i;
+static int i;   // C4211
+
+int main()
+{
+}
+```
+
+這類重新定義是 ANSI 相容性無效 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+
+## <a name="see-also"></a>另請參閱
 
 

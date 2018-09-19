@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e591ad979d6c995fd5559b22a826766b02d50dd
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 177fdb46971a0e932a41881cb9e6a08a800a60bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405866"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076290"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -34,7 +34,7 @@ ms.locfileid: "39405866"
 
 ## <a name="syntax"></a>語法
 
-> **__declspec( align(** *#* **) )** *declarator*  
+> **__declspec( align(** *#* **) )** *declarator*
 
 ## <a name="remarks"></a>備註
 
@@ -46,7 +46,7 @@ ms.locfileid: "39405866"
 
 您可以使用`__declspec(align(#))`當您定義**struct**， **union**，或**類別**，或當您宣告變數。
 
-編譯器不會在複製或資料轉換作業期間，保證或嘗試保留資料的對齊屬性。 例如， [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)可以複製與宣告結構`__declspec(align(#))`到的任何位置。 請注意，一般配置器 — 例如， [malloc](../c-runtime-library/reference/malloc.md)，c + + [new 運算子](new-operator-cpp.md)，和 Win32 配置器 — 通常未充分對齊的記憶體傳回`__declspec(align(#))`結構或陣列結構。 若要確保正確對齊 [複製] 或 資料轉換作業的目的地，請使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)，或撰寫您自己的配置器。
+編譯器不會在複製或資料轉換作業期間，保證或嘗試保留資料的對齊屬性。 例如， [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)可以複製與宣告結構`__declspec(align(#))`到的任何位置。 請注意，一般配置器 — 例如， [malloc](../c-runtime-library/reference/malloc.md)，c + + [new 運算子](new-operator-cpp.md)，和 Win32 配置器 — 通常未充分對齊的記憶體傳回`__declspec(align(#))`結構或陣列結構。 若要確保正確對齊 [複製] 或資料轉換作業的目的地，請使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)，或撰寫您自己的配置器。
 
 您無法為函式參數指定對齊。 有對齊屬性的資料，以值傳遞到堆疊上時，其對齊會由呼叫慣例控制。 如果資料對齊在呼叫的函式中很重要，請將參數複製到正確對齊的記憶體中，才使用該參數。
 
@@ -251,6 +251,7 @@ struct S {
 **結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
-[__declspec](../cpp/declspec.md)  
-[ARM ABI 慣例概觀](../build/overview-of-arm-abi-conventions.md)  
-[x64 呼叫慣例概觀](../build/overview-of-x64-calling-conventions.md)  
+
+[__declspec](../cpp/declspec.md)<br/>
+[ARM ABI 慣例概觀](../build/overview-of-arm-abi-conventions.md)<br/>
+[x64 呼叫慣例概觀](../build/overview-of-x64-calling-conventions.md)

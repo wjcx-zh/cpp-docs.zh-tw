@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2ccefbc435cac5b48cd2c9509831699dcec70af
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 68746d76c9c7842e9fc8c16addeca2cb44f31211
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849665"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701736"
 ---
 # <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox 類別
 `CMFCRibbonComboBox`類別會實作可以加入功能區列、 功能區面板或功能區快顯功能表的下拉式方塊控制項。  
@@ -127,11 +127,11 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszItem*  
- 要加入之項目的字串。  
+*lpszItem*<br/>
+[in]要加入之項目的字串。  
   
- [in]*dwData*  
- 要加入的項目相關聯的資料。  
+*dwData*<br/>
+[in]要加入的項目相關聯的資料。  
   
 ### <a name="return-value"></a>傳回值  
  附加的項目以零為起始的索引。  
@@ -153,20 +153,20 @@ CMFCRibbonComboBox();
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nID*  
- 下拉式方塊的識別碼。  
+*nID*<br/>
+[in]下拉式方塊的識別碼。  
   
- [in]*bHasEditBox*  
- 如果您想要編輯方塊內的控制項，則為 TRUEFALSE 否則。  
+*bHasEditBox*<br/>
+[in]如果您想要編輯方塊內的控制項，則為 TRUEFALSE 否則。  
   
- [in]*nWidth*  
- 像素為單位; 中的下拉式方塊的寬度-1 則代表的預設寬度。  
+*nWidth*<br/>
+[in]像素為單位; 中的下拉式方塊的寬度-1 則代表的預設寬度。  
   
- [in]*lpszLabel*  
- 下拉式方塊的顯示標籤。  
+*lpszLabel*<br/>
+[in]下拉式方塊的顯示標籤。  
   
- [in]*n*  
- 下拉式方塊的小型影像索引。  
+*n*<br/>
+[in]下拉式方塊的小型影像索引。  
   
 ### <a name="remarks"></a>備註  
  預設寬度是 108 像素為單位。  
@@ -182,14 +182,14 @@ BOOL DeleteItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iIndex*  
- 要刪除之項目的以零為起始的索引。  
+*iIndex*<br/>
+[in]要刪除之項目的以零為起始的索引。  
   
- [in]*dwData*  
- 要刪除的項目相關聯的資料。  
+*dwData*<br/>
+[in]要刪除的項目相關聯的資料。  
   
- [in]*lpszText*  
- 要刪除之項目的字串。 如果有多個相同的字串項目，則會刪除第一個項目。  
+*lpszText*<br/>
+[in]要刪除之項目的字串。 如果有多個相同的字串項目，則會刪除第一個項目。  
   
 ### <a name="return-value"></a>傳回值  
  如果已刪除指定的項目，則為 TRUE否則為 FALSE。  
@@ -204,8 +204,8 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bEnable*  
- True 表示啟用調整大小;若要停用 調整大小，則為 FALSE。  
+*bEnable*<br/>
+[in] True 表示啟用調整大小;若要停用調整大小，則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  啟用調整大小後，清單方塊會變更大小，以符合它所顯示的項目。  
@@ -218,8 +218,8 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszText*  
- 在清單方塊項目的字串。  
+*lpszText*<br/>
+[in]在清單方塊項目的字串。  
   
 ### <a name="return-value"></a>傳回值  
  項目的以零起始的索引或-1，如果找不到項目。  
@@ -268,8 +268,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 下拉式方塊的裝置內容指標。  
+*pDC*<br/>
+[in]下拉式方塊的裝置內容指標。  
   
 ### <a name="return-value"></a>傳回值  
  下拉式方塊的大小。  
@@ -285,8 +285,8 @@ LPCTSTR GetItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iIndex*  
- 清單方塊中的項目以零為起始的索引。  
+*iIndex*<br/>
+[in]清單方塊中的項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  項目; 相關聯的字串指標否則為 NULL 的索引參數無效，則索引參數是-1 且沒有在下拉式方塊中選取的項目。  
@@ -301,8 +301,8 @@ DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iIndex*  
- 清單方塊中的項目以零為起始的索引。  
+*iIndex*<br/>
+[in]清單方塊中的項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  與項目; 相關聯的資料則為 0 的項目不存在，則索引參數是-1，而且在清單方塊中沒有選取項目。  
@@ -340,8 +340,8 @@ virtual void OnSelectItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nItem*  
- 選取的項目索引。  
+*nItem*<br/>
+[in]選取的項目索引。  
   
 ### <a name="remarks"></a>備註  
  如果您想要處理使用者輸入選取範圍，請覆寫這個方法。  
@@ -366,14 +366,14 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iIndex*  
- 清單方塊中的項目以零為起始的索引。  
+*iIndex*<br/>
+[in]清單方塊中的項目以零為起始的索引。  
   
- [in]*dwData*  
- 使用清單方塊中的項目相關聯的資料。  
+*dwData*<br/>
+[in]使用清單方塊中的項目相關聯的資料。  
   
- [in]*lpszText*  
- 在清單方塊項目的字串。  
+*lpszText*<br/>
+[in]在清單方塊項目的字串。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為 TRUE否則為 FALSE。  
@@ -388,8 +388,8 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nHeight*  
- 像素為單位，清單方塊的高度。  
+*nHeight*<br/>
+[in]像素為單位，清單方塊的高度。  
   
 ### <a name="remarks"></a>備註  
  預設高度為 150 個像素。  

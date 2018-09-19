@@ -140,12 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e292ff062449fd53aba0c5f4775e1b2e0b8ff909
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
-ms.translationtype: MT
+ms.openlocfilehash: ee097dd95a1a88b8cf2cb3dc48c4406499001443
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852382"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721385"
 ---
 # <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory 類別
 `CMFCRibbonCategory`類別會實作功能區索引標籤，其中包含一群[功能區面板](../../mfc/reference/cmfcribbonpanel-class.md)。  
@@ -275,8 +275,8 @@ void AddHidden(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pElem*  
- 功能區項目的指標。  
+*pElem*<br/>
+[in]功能區項目的指標。  
   
 ### <a name="remarks"></a>備註  
  在 [自訂] 對話方塊上的功能區項目是您可以將它新增至快速存取工具列命令。  
@@ -292,14 +292,14 @@ CMFCRibbonPanel* AddPanel(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszPanelName*  
- 新的功能區面板名稱的指標。  
+*lpszPanelName*<br/>
+[in]新的功能區面板名稱的指標。  
   
- [in]*hIcon*  
- 新的功能區面板的預設圖示的控制代碼。  
+*hIcon*<br/>
+[in]新的功能區面板的預設圖示的控制代碼。  
   
- [in]*pRTI*  
- 自訂功能區面板的執行階段類別資訊指標。  
+*pRTI*<br/>
+[in]自訂功能區面板的執行階段類別資訊指標。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功; 的新功能區面板的指標如果不建立 [面板] 中，否則為 NULL。  
@@ -330,23 +330,23 @@ CMFCRibbonCategory(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pParenrRibbonBar*  
- 功能區分類的父功能區列的指標。  
+*pParenrRibbonBar*<br/>
+[in]功能區分類的父功能區列的指標。  
   
- [in]*lpszName*  
- 功能區分類的名稱。  
+*lpszName*<br/>
+[in]功能區分類的名稱。  
   
- [in]*uiSmallImagesResID*  
- 在 功能區類別的功能區項目所使用的小型影像的影像清單的資源識別碼。  
+*uiSmallImagesResID*<br/>
+[in]在 功能區類別的功能區項目所使用的小型影像的影像清單的資源識別碼。  
   
- [in]*uiLargeImagesResID*  
- 功能區類別中的功能區項目所使用的大型映像的映像清單的資源識別碼。  
+*uiLargeImagesResID*<br/>
+[in]功能區類別中的功能區項目所使用的大型映像的映像清單的資源識別碼。  
   
- [in]*sizeSmallImage*  
- 預設的功能區中的項目功能區分類的小型影像的大小。  
+*sizeSmallImage*<br/>
+[in]預設的功能區中的項目功能區分類的小型影像的大小。  
   
- [in]*sizeLargeImage*  
- 預設的功能區中的項目功能區分類的大型映像的大小。  
+*sizeLargeImage*<br/>
+[in]預設的功能區中的項目功能區分類的大型映像的大小。  
   
 ##  <a name="copyfrom"></a>  CMFCRibbonCategory::CopyFrom  
  複製指定的狀態[CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)目前[CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)物件。  
@@ -356,8 +356,8 @@ virtual void CopyFrom(CMFCRibbonCategory& src);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*src*  
- 來源 `CMFCRibbonCategory` 物件。  
+*src*<br/>
+[in]來源`CMFCRibbonCategory`物件。  
   
 ### <a name="remarks"></a>備註  
   
@@ -371,11 +371,11 @@ CMFCRibbonBaseElement* FindByData(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*dwData*  
- 使用功能區項目相關聯的資料。  
+*dwData*<br/>
+[in]使用功能區項目相關聯的資料。  
   
- [in]*bVisibleOnly*  
- 要搜尋中包含的快速存取功能區項目，則為 TRUE若要排除在搜尋中的 快速存取功能區項目，則為 FALSE。  
+*bVisibleOnly*<br/>
+[in]要搜尋中包含的快速存取功能區項目，則為 TRUE若要排除在搜尋中的快速存取功能區項目，則為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
  如果該方法成功則功能區元素的指標否則為 NULL。  
@@ -392,11 +392,11 @@ CMFCRibbonBaseElement* FindByID(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiCmdID*  
- 功能區項目相關聯的命令識別碼。  
+*uiCmdID*<br/>
+[in]功能區項目相關聯的命令識別碼。  
   
- [in]*bVisibleOnly*  
- 要搜尋中包含的快速存取功能區項目，則為 TRUE若要排除在搜尋中的 快速存取功能區項目，則為 FALSE。  
+*bVisibleOnly*<br/>
+[in]要搜尋中包含的快速存取功能區項目，則為 TRUE若要排除在搜尋中的快速存取功能區項目，則為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
  如果該方法成功則功能區元素的指標否則為 NULL。  
@@ -411,8 +411,8 @@ CMFCRibbonPanel* FindPanelWithElem(const CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pElement*  
- 功能區項目的指標。  
+*pElement*<br/>
+[in]功能區項目的指標。  
   
 ### <a name="return-value"></a>傳回值  
  如果該方法成功則功能區面板的指標否則為 NULL。  
@@ -463,8 +463,8 @@ void GetElements(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in、 out]*arElements*  
- 若要參考[CArray](../../mfc/reference/carray-class.md)的功能區項目。  
+*arElements*<br/>
+[in、 out]若要參考[CArray](../../mfc/reference/carray-class.md)的功能區項目。  
   
 ### <a name="remarks"></a>備註  
  專為快速存取工具列上的功能區項目會包含在陣列中。  
@@ -479,11 +479,11 @@ void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiCmdID*  
- 功能區項目相關聯的命令識別碼。  
+*uiCmdID*<br/>
+[in]功能區項目相關聯的命令識別碼。  
   
- [in、 out]*arElements*  
- 若要參考[CArray](../../mfc/reference/carray-class.md)的功能區項目。  
+*arElements*<br/>
+[in、 out]若要參考[CArray](../../mfc/reference/carray-class.md)的功能區項目。  
   
 ### <a name="remarks"></a>備註  
  專為快速存取工具列上的功能區項目會包含在陣列中。  
@@ -532,8 +532,8 @@ int GetImageCount(BOOL bIsLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bIsLargeImage*  
- 適用於大型影像清單中的映像數目小型影像清單中的映像數目，則為 FALSE。  
+*bIsLargeImage*<br/>
+[in]適用於大型影像清單中的映像數目小型影像清單中的映像數目，則為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
  在指定的影像清單中的映像數目。  
@@ -548,8 +548,8 @@ CSize GetImageSize(BOOL bIsLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bIsLargeImage*  
- 適用於大型影像; 的大小小型影像的大小，則為 FALSE。  
+*bIsLargeImage*<br/>
+[in]適用於大型影像; 的大小小型影像的大小，則為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
  指定的影像清單中的映像的大小。  
@@ -567,11 +567,11 @@ void GetItemIDsList(
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*lstItems*  
- 功能區中的項目功能區分類的命令 Id 的清單。  
+*lstItems*<br/>
+[out]功能區中的項目功能區分類的命令 Id 的清單。  
   
- [in]*bHiddenOnly*  
- 若要排除在功能區分類中; 在功能區面板上顯示的功能區項目，則為 TRUE如果為 false，則包含在功能區類別中所有的功能區項目。  
+*bHiddenOnly*<br/>
+[in]若要排除在功能區分類中; 在功能區面板上顯示的功能區項目，則為 TRUE如果為 false，則包含在功能區類別中所有的功能區項目。  
   
 ### <a name="remarks"></a>備註  
   
@@ -605,8 +605,8 @@ int GetMaxHeight(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 功能區面板的裝置內容指標。  
+*pDC*<br/>
+[in]功能區面板的裝置內容指標。  
   
 ### <a name="return-value"></a>傳回值  
  功能區面板中的功能區分類包含最大高度。  
@@ -634,8 +634,8 @@ CMFCRibbonPanel* GetPanel(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nIndex*  
- 功能區面板之以零起始的索引。  
+*nIndex*<br/>
+[in]功能區面板之以零起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  功能區面板位於指定索引處的指標。  
@@ -661,8 +661,8 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*點*  
- 指標，相對於視窗左上角的 x 和 y 座標。  
+*點*<br/>
+[in]指標，相對於視窗左上角的 x 和 y 座標。  
   
 ### <a name="return-value"></a>傳回值  
  如果該方法成功則功能區面板的指標否則為 NULL。  
@@ -678,8 +678,8 @@ int GetPanelIndex(const CMFCRibbonPanel* pPanel) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pPanel*  
- 功能區面板的指標。  
+*pPanel*<br/>
+[in]功能區面板的指標。  
   
 ### <a name="return-value"></a>傳回值  
  以零起始的索引，如果方法成功，在指定的功能區面板否則為-1。  
@@ -822,11 +822,11 @@ CMFCRibbonPanel* HighlightPanel(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pHLPanel*  
- 若要反白顯示功能區面板的指標。  
+*pHLPanel*<br/>
+[in]若要反白顯示功能區面板的指標。  
   
- [in]*點*  
- 指標，相對於視窗左上角的 x 和 y 座標。  
+*點*<br/>
+[in]指標，相對於視窗左上角的 x 和 y 座標。  
   
 ### <a name="return-value"></a>傳回值  
  指向先前反白顯示功能區面板;如果叫用此方法時，會反白不顯示任何功能區面板，否則為 NULL。  
@@ -844,11 +844,11 @@ CMFCRibbonBaseElement* HitTest(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*點*  
- 滑鼠指標，相對於視窗左上角的 x 和 y 座標。  
+*點*<br/>
+[in]滑鼠指標，相對於視窗左上角的 x 和 y 座標。  
   
- [in]*bCheckPanelCaption*  
- 若要測試功能區面板標題;，則為 TRUE若要排除的功能區面板的標題，則為 FALSE。  
+*bCheckPanelCaption*<br/>
+[in]若要測試功能區面板標題;，則為 TRUE若要排除的功能區面板的標題，則為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
  如果該方法成功則功能區元素的指標否則為 NULL。  
@@ -864,8 +864,8 @@ int HitTestEx(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*點*  
- 滑鼠指標，相對於視窗左上角的 x 和 y 座標。  
+*點*<br/>
+[in]滑鼠指標，相對於視窗左上角的 x 和 y 座標。  
   
 ### <a name="return-value"></a>傳回值  
  如果該方法成功則功能區項目的以零起始的索引否則為-1。  
@@ -881,8 +881,8 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*點*  
- 要測試的點。  
+*點*<br/>
+[in]要測試的點。  
   
 ### <a name="return-value"></a>傳回值  
  如果*點*之內的週框矩形左邊或向右捲動按鈕的功能區分類的、 讓指標回到該按鈕，或，否則會傳回 NULL。  
@@ -939,17 +939,17 @@ virtual BOOL NotifyControlCommand(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bAccelerator*  
- 否則源自加速器或 FALSE 的則為 TRUE，如果這個命令。  
+*bAccelerator*<br/>
+[in]否則源自加速器或 FALSE 的則為 TRUE，如果這個命令。  
   
- [in]*nNotifyCode*  
- 通知的程式碼。  
+*nNotifyCode*<br/>
+[in]通知的程式碼。  
   
- [in]*wParam*  
- 訊息的 WPARAM 欄位。  
+*wParam*<br/>
+[in]訊息的 WPARAM 欄位。  
   
- [in]*lParam*  
- 訊息的 LPARAM 欄位。  
+*lParam*<br/>
+[in]訊息的 LPARAM 欄位。  
   
 ### <a name="return-value"></a>傳回值  
  如果訊息已處理，則為 TRUE 或 FALSE，否則會傳回。  
@@ -973,8 +973,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 功能區分類的裝置內容指標。  
+*pDC*<br/>
+[in]功能區分類的裝置內容指標。  
   
 ### <a name="remarks"></a>備註  
   
@@ -992,23 +992,23 @@ virtual BOOL OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 映像的裝置內容指標。  
+*pDC*<br/>
+[in]映像的裝置內容指標。  
   
- [in]*rect*  
- 映像的顯示矩形。  
+*rect*<br/>
+[in]映像的顯示矩形。  
   
- [in]*pElement*  
- 包含影像的功能區項目指標。  
+*pElement*<br/>
+[in]包含影像的功能區項目指標。  
   
- [in]*bIsLargeImage*  
- 如果影像大小相當大;，則為 TRUE。如果影像是較小，則為 FALSE。  
+*bIsLargeImage*<br/>
+[in]如果影像大小相當大;，則為 TRUE。如果影像是較小，則為 FALSE。  
   
- [in]*nImageIndex*  
- 中的映像陣列中的功能區分類包含影像的以零起始的索引。  
+*nImageIndex*<br/>
+[in]中的映像陣列中的功能區分類包含影像的以零起始的索引。  
   
- [in]*bCenter*  
- TRUE 表示置中的顯示矩形; 中的映像要繪製影像的顯示矩形左上角，則為 FALSE。  
+*bCenter*<br/>
+[in]TRUE 表示置中的顯示矩形; 中的映像要繪製影像的顯示矩形左上角，則為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為 TRUE否則為 FALSE。  
@@ -1025,11 +1025,11 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 不使用這個參數。  
+*pDC*<br/>
+[in]未使用此參數。  
   
- [in]*pMenuBar*  
- 不使用這個參數。  
+*pMenuBar*<br/>
+[in]未使用此參數。  
   
 ### <a name="remarks"></a>備註  
  依預設這個方法沒有任何作用。 覆寫這個方法來繪製框線的快顯功能表。  
@@ -1055,8 +1055,8 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*點*  
- 滑鼠指標，相對於視窗左上角的 x 和 y 座標。  
+*點*<br/>
+[in]滑鼠指標，相對於視窗左上角的 x 和 y 座標。  
   
 ### <a name="return-value"></a>傳回值  
  如果該方法成功則功能區元素的指標否則為 NULL。  
@@ -1071,8 +1071,8 @@ virtual void OnLButtonUp(CPoint point);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*點*  
- 指標，相對於視窗左上角的 x 和 y 座標。  
+*點*<br/>
+[in]指標，相對於視窗左上角的 x 和 y 座標。  
   
 ### <a name="remarks"></a>備註  
   
@@ -1084,8 +1084,8 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*點*  
- 指標，相對於視窗左上角的 x 和 y 座標。  
+*點*<br/>
+[in]指標，相對於視窗左上角的 x 和 y 座標。  
   
 ### <a name="remarks"></a>備註  
   
@@ -1097,8 +1097,8 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bIsRTL*  
- 如果版面配置從右至左;，則為 TRUE。如果版面配置是由左到右，則為 FALSE。  
+*bIsRTL*<br/>
+[in]如果版面配置從右至左;，則為 TRUE。如果版面配置是由左到右，則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  這個方法會調整所有功能區面板並在功能區類別中所包含的功能區項目的版面的配置。  
@@ -1113,11 +1113,11 @@ virtual BOOL OnScrollHorz(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bScrollLeft*  
- 捲動至左，則為 TRUE向右捲動，則為 FALSE。  
+*bScrollLeft*<br/>
+[in]捲動至左，則為 TRUE向右捲動，則為 FALSE。  
   
- [in]*nScrollOffset*  
- 捲軸的距離，單位為像素。  
+*nScrollOffset*<br/>
+[in]捲軸的距離，單位為像素。  
   
 ### <a name="return-value"></a>傳回值  
  如果水平方向移動的功能區分類，則為 TRUE。否則為 FALSE。  
@@ -1135,14 +1135,14 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pCmdUI*  
- 指標`CMFCRibbonCmdUI`物件，指定使用者介面項目為啟用、 哪些是要停用。  
+*pCmdUI*<br/>
+[in]指標`CMFCRibbonCmdUI`物件，指定使用者介面項目為啟用、 哪些是要停用。  
   
- [in]*pTarget*  
- 啟用或停用的使用者介面項目會控制視窗的指標。  
+*pTarget*<br/>
+[in]啟用或停用的使用者介面項目會控制視窗的指標。  
   
- [in]*bDisableIfNoHndler*  
- 若要停用使用者介面項目，如果沒有處理常式定義在訊息對應; 中，則為 TRUE否則為 FALSE。  
+*bDisableIfNoHndler*<br/>
+[in]若要停用使用者介面項目，如果沒有處理常式定義在訊息對應; 中，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -1154,8 +1154,8 @@ virtual void RecalcLayout(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 功能區分類的裝置內容指標。  
+*pDC*<br/>
+[in]功能區分類的裝置內容指標。  
   
 ### <a name="remarks"></a>備註  
   
@@ -1169,11 +1169,11 @@ BOOL RemovePanel(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nIndex*  
- 要移除的面板的索引編號。 藉由呼叫取得[CMFCRibbonCategory::GetPanelIndex](#getpanelindex)方法。  
+*nIndex*<br/>
+[in]要移除的面板的索引編號。 藉由呼叫取得[CMFCRibbonCategory::GetPanelIndex](#getpanelindex)方法。  
   
- [in]*bDelete*  
- 若要刪除的面板物件從記憶體中; TRUE若要移除的面板物件而非加以刪除，則為 FALSE。  
+*bDelete*<br/>
+[in]若要刪除的面板物件從記憶體中; TRUE若要移除的面板物件而非加以刪除，則為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為 TRUE否則為 FALSE。  
@@ -1186,8 +1186,8 @@ virtual void ReposPanels(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 功能區面板的功能區分類中所包含的裝置內容指標。  
+*pDC*<br/>
+[in]功能區面板的功能區分類中所包含的裝置內容指標。  
   
 ### <a name="remarks"></a>備註  
   
@@ -1199,8 +1199,8 @@ void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*arCollapseOrder*  
- 指定的摺疊的順序。 陣列包含的功能區面板之以零起始的索引。  
+*arCollapseOrder*<br/>
+[in]指定的摺疊的順序。 陣列包含的功能區面板之以零起始的索引。  
   
 ### <a name="remarks"></a>備註  
  程式庫定義摺疊的順序。 不過，您可以自訂此行為，藉由提供類別，指定的摺疊順序清單中的索引。  
@@ -1222,8 +1222,8 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*dwData*  
- 使用者定義的資料。  
+*dwData*<br/>
+[in]使用者定義的資料。  
   
 ##  <a name="setkeys"></a>  CMFCRibbonCategory::SetKeys  
  指派 keytip 的功能區分類。  
@@ -1233,8 +1233,8 @@ void SetKeys(LPCTSTR lpszKeys);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszKeys*  
- Keytip 的文字。  
+*lpszKeys*<br/>
+[in]Keytip 的文字。  
   
 ### <a name="remarks"></a>備註  
  當使用者按下 Alt 鍵或 F10 鍵，則會顯示按鍵提示。  
@@ -1247,8 +1247,8 @@ void SetName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszName*  
- 名稱和 keytip 的功能區分類。  
+*lpszName*<br/>
+[in]名稱和 keytip 的功能區分類。  
   
 ### <a name="remarks"></a>備註  
  若要設定的功能區分類 keytip，附加的 keytip 字元後面接著新行逸出序列*lpszName*。  
@@ -1261,8 +1261,8 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*色彩*  
- 指定新的功能區分類的色彩。  
+*色彩*<br/>
+[in]指定新的功能區分類的色彩。  
   
 ### <a name="remarks"></a>備註  
  色彩可以是下列值之一：  

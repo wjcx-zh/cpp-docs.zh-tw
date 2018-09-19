@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62bb1ca2cc4ba07e3f3262f6babee3ed4c52caa2
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
-ms.translationtype: HT
+ms.openlocfilehash: db4e6a01fbf7384cfbc2e1ef2b3c5ed48991998d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708210"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095430"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx 類別
 實作 Windows 單一文件介面 (SDI) 重疊或快顯框架視窗的功能，並提供管理視窗的成員。 它會擴充[CFrameWnd](../../mfc/reference/cframewnd-class.md)類別。  
@@ -1198,17 +1198,12 @@ afx_msg LRESULT OnMenuChar(
   
 ### <a name="return-value"></a>傳回值  
  高序位文字必須是下列值之一。  
-  
- `0`  
- 此架構應該忽略按鍵輸入。  
-  
- `1`  
- 此架構應該關閉功能表。  
-  
- `2`  
- 此架構應該選取其中一個功能表中顯示的項目。 低序位文字包含用來選取命令的識別碼。  
-  
-### <a name="remarks"></a>備註  
+
+|||
+|-|-|
+ `0` | 此架構應該忽略按鍵輸入。  
+ `1`  | 此架構應該關閉功能表。  
+ `2`  | 此架構應該選取其中一個功能表中顯示的項目。 低序位文字包含用來選取命令的識別碼。  
   
 ##  <a name="onmousemove"></a>  CFrameWndEx::OnMouseMove  
  當滑鼠指標移動時，架構會呼叫這個方法。  

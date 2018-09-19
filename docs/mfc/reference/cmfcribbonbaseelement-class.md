@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db46ca389272674da215801c0da83f38e7a3ef2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
-ms.translationtype: HT
+ms.openlocfilehash: a0200f15ab7a5c97699165a34d52ec6ce1f239e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703881"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136331"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement 類別
 `CMFCRibbonBaseElement`類別是基底類別，您可以加入的所有項目的[功能區列](../../mfc/reference/cmfcribbonbar-class.md)。 功能區項目的範例包括功能區按鈕、功能區核取方塊和功能區下拉式方塊。  
@@ -568,12 +568,11 @@ virtual void DrawImage(
  依預設這個方法沒有任何作用。 覆寫這個方法在衍生的類別，用來繪製影像的功能區項目。  
   
  下表列出可能的值，如*型別*參數：  
-  
- `RibbonImageLarge`  
- 大型的 32 x 32 像素映像大小。  
-  
- `RibbonImageSmall`  
- 小型 16 x 16 像素的影像大小。  
+
+|||
+|-|-|
+| `RibbonImageLarge`  | 大型的 32 x 32 像素映像大小。  |
+| `RibbonImageSmall`  | 小型 16 x 16 像素的影像大小。  |
   
 ##  <a name="find"></a>  CMFCRibbonBaseElement::Find  
  傳回指定的指標，如果它指向目前的物件。  

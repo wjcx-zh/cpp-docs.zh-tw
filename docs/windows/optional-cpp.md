@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97bba578e2759d335c4ad51e541ef3fc336aa888
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 10bb2f3bf1c15683b770fd9db143153c5e3aa53c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205301"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436438"
 ---
 # <a name="optional-c"></a>optional (C++)
 
@@ -70,5 +70,5 @@ __interface IFireTabCtrl : IDispatch
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
 [參數屬性](../windows/parameter-attributes.md)  

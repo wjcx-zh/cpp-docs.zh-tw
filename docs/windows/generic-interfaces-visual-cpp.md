@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abad906c7fcc5c86a6901757ddfbb5dfeff2ec29
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2065b96875f2c441b24eb69f8ca51b06fe5717f0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704896"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444478"
 ---
 # <a name="generic-interfaces-visual-c"></a>泛型介面 (Visual C++)
 
@@ -42,31 +42,31 @@ ms.locfileid: "45704896"
 
 ## <a name="remarks"></a>備註
 
-*屬性*  
+*屬性*<br/>
 （選擇性）其他宣告資訊。 如需有關屬性和屬性類別的詳細資訊，請參閱**屬性**。
 
-*類別索引鍵*  
+*類別索引鍵*<br/>
 **類別**或**typename**
 
-*type-parameter-identifier(s)*  
+*type-parameter-identifier(s)*<br/>
 以逗號分隔的識別碼清單。
 
-*類型參數條件約束-子句*  
+*類型參數條件約束-子句*<br/>
 中指定的格式[泛型類型參數的條件約束 (C + + /cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*存取範圍修飾詞*  
+*存取範圍修飾詞*<br/>
 （選擇性）存取範圍修飾詞 (例如**公用、 私用**)。
 
-*identifier*  
+*identifier*<br/>
 介面名稱。
 
-*基底清單*  
+*基底清單*<br/>
 （選擇性）包含一或多個明確的基底介面並以逗號分隔的清單。
 
-*介面主體內*  
+*介面主體內*<br/>
 介面成員的宣告。
 
-*宣告子*  
+*宣告子*<br/>
 （選擇性）根據此類型的變數的宣告。
 
 ## <a name="example"></a>範例

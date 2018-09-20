@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3670924bace1d76f02da816dc061616a4c39e199
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e46bcd45040ffb50ec8bbd10d8d583211d0a3316
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719208"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400493"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -38,7 +38,7 @@ ms.locfileid: "45719208"
 
 ### <a name="parameters"></a>參數
 
-*值*  
+*值*<br/>
 （選擇性）表示 COM 物件可以彙總的參數：
 
 - `never` 無法彙總的 COM 物件。
@@ -94,7 +94,7 @@ class CMyClass {};
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
-[類別屬性](../windows/class-attributes.md)  
-[Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
+[類別屬性](../windows/class-attributes.md)<br/>
+[Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [彙總](/windows/desktop/com/aggregation)  

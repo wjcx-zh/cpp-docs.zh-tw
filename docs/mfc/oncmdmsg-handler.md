@@ -1,5 +1,5 @@
 ---
-title: OnCmdMsg 處理常式 |Microsoft 文件
+title: OnCmdMsg 處理常式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,20 +20,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0657b05619a966ed171630d00adcd9303af7e18b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6691e4935d46b32bc8f433823888bb7f53a36890
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347025"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398829"
 ---
 # <a name="oncmdmsg-handler"></a>OnCmdMsg 處理常式
-若要完成命令路由，每個命令目標會呼叫序列中下一個命令目標的 `OnCmdMsg` 成員函式。 命令目標會使用 `OnCmdMsg` 判斷是否可以處理命令，如果無法處理便傳送至另一個命令目標。  
-  
- 每個命令目標類別可能會覆寫 `OnCmdMsg` 成員函式。 覆寫會讓每個類別將命令路由傳送到下一個特定目標。 框架視窗中，例如，一律將命令路由傳送至其目前子視窗或檢視表，如下表所示[標準命令路由](../mfc/command-routing.md)。  
-  
- `CCmdTarget` 的預設 `OnCmdMsg` 實作會使用命令目標類別的訊息對應，搜尋每一個接收到的命令訊息的處理函式，其與搜尋標準訊息的方式相同。 如果找到符合的項目，便會呼叫處理常式。 搜尋訊息對應中會說明[如何架構搜尋訊息對應](../mfc/how-the-framework-searches-message-maps.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [架構如何呼叫處理常式](../mfc/how-the-framework-calls-a-handler.md)
+
+若要完成命令路由，每個命令目標會呼叫序列中下一個命令目標的 `OnCmdMsg` 成員函式。 命令目標會使用 `OnCmdMsg` 判斷是否可以處理命令，如果無法處理便傳送至另一個命令目標。
+
+每個命令目標類別可能會覆寫 `OnCmdMsg` 成員函式。 覆寫會讓每個類別將命令路由傳送到下一個特定目標。 框架視窗中，比方說，一律將命令路由至其目前的子視窗或 檢視表中所示[標準命令路由](../mfc/command-routing.md)。
+
+`CCmdTarget` 的預設 `OnCmdMsg` 實作會使用命令目標類別的訊息對應，搜尋每一個接收到的命令訊息的處理函式，其與搜尋標準訊息的方式相同。 如果找到符合的項目，便會呼叫處理常式。 搜尋訊息對應中會說明[如何架構搜尋訊息對應](../mfc/how-the-framework-searches-message-maps.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[架構如何呼叫處理常式](../mfc/how-the-framework-calls-a-handler.md)
 

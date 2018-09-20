@@ -82,222 +82,217 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e10653eb4eb6ebb57215baceb1e3b67d7e1f8cf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9bb22f2f627f66012b1ca435d0989cb031605dd1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042516"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407604"
 ---
 # <a name="unorm3-class"></a>unorm_3 類別
-表示短向量的三個不帶正負號的一般數字。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-class unorm_3;  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-typedefs"></a>公用 Typedefs  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|`value_type`||  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[unorm_3 建構函式](#ctor)|多載。 預設建構函式，初始化具有 0 的所有項目。|  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|unorm_3::get_x||  
-|unorm_3::get_xy||  
-|unorm_3::get_xyz||  
-|unorm_3::get_xz||  
-|unorm_3::get_xzy||  
-|unorm_3::get_y||  
-|unorm_3::get_yx||  
-|unorm_3::get_yxz||  
-|unorm_3::get_yz||  
-|unorm_3::get_yzx||  
-|unorm_3::get_z||  
-|unorm_3::get_zx||  
-|unorm_3::get_zxy||  
-|unorm_3::get_zy||  
-|unorm_3::get_zyx||  
-|Unorm_3::ref_b||  
-|Unorm_3::ref_g||  
-|Unorm_3::ref_r||  
-|Unorm_3::ref_x||  
-|Unorm_3::ref_y||  
-|Unorm_3::ref_z||  
-|unorm_3::set_x||  
-|unorm_3::set_xy||  
-|unorm_3::set_xyz||  
-|unorm_3::set_xz||  
-|unorm_3::set_xzy||  
-|unorm_3::set_y||  
-|unorm_3::set_yx||  
-|unorm_3::set_yxz||  
-|unorm_3::set_yz||  
-|unorm_3::set_yzx||  
-|unorm_3::set_z||  
-|unorm_3::set_zx||  
-|unorm_3::set_zxy||  
-|unorm_3::set_zy||  
-|unorm_3::set_zyx||  
-  
-### <a name="public-operators"></a>公用運算子  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|unorm_3::operator--||  
-|unorm_3::operator*=||  
-|unorm_3::operator/=||  
-|unorm_3::operator++||  
-|unorm_3::operator+=||  
-|unorm_3::operator=||  
-|unorm_3::operator-=||  
-  
-### <a name="public-constants"></a>公用常數  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[常數的大小](#unorm_3__size)||  
-  
-### <a name="public-data-members"></a>公用資料成員  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|unorm_3::b||  
-|unorm_3::bg||  
-|unorm_3::bgr||  
-|unorm_3::br||  
-|unorm_3::brg||  
-|unorm_3::g||  
-|unorm_3::gb||  
-|unorm_3::gbr||  
-|unorm_3::gr||  
-|unorm_3::grb||  
-|unorm_3::r||  
-|unorm_3::rb||  
-|unorm_3::rbg||  
-|unorm_3::rg||  
-|unorm_3::rgb||  
-|unorm_3::x||  
-|unorm_3::xy||  
-|unorm_3::xyz||  
-|unorm_3::xz||  
-|unorm_3::xzy||  
-|unorm_3::y||  
-|unorm_3::yx||  
-|unorm_3::yxz||  
-|unorm_3::yz||  
-|unorm_3::yzx||  
-|unorm_3::z||  
-|unorm_3::zx||  
-|unorm_3::zxy||  
-|unorm_3::zy||  
-|unorm_3::zyx||  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `unorm_3`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** amp_short_vectors.h  
-  
- **命名空間：** concurrency:: graphics  
-  
-##  <a name="ctor"></a> unorm_3 
 
- 預設建構函式，初始化具有 0 的所有項目。  
-  
-```  
+表示短向量的三個不帶正負號的一般數字。
+
+## <a name="syntax"></a>語法
+
+```
+class unorm_3;
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-typedefs"></a>公用 Typedefs
+
+|名稱|描述|
+|----------|-----------------|
+|`value_type`||
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[unorm_3 建構函式](#ctor)|多載。 預設建構函式，初始化具有 0 的所有項目。|
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|unorm_3::get_x||
+|unorm_3::get_xy||
+|unorm_3::get_xyz||
+|unorm_3::get_xz||
+|unorm_3::get_xzy||
+|unorm_3::get_y||
+|unorm_3::get_yx||
+|unorm_3::get_yxz||
+|unorm_3::get_yz||
+|unorm_3::get_yzx||
+|unorm_3::get_z||
+|unorm_3::get_zx||
+|unorm_3::get_zxy||
+|unorm_3::get_zy||
+|unorm_3::get_zyx||
+|Unorm_3::ref_b||
+|Unorm_3::ref_g||
+|Unorm_3::ref_r||
+|Unorm_3::ref_x||
+|Unorm_3::ref_y||
+|Unorm_3::ref_z||
+|unorm_3::set_x||
+|unorm_3::set_xy||
+|unorm_3::set_xyz||
+|unorm_3::set_xz||
+|unorm_3::set_xzy||
+|unorm_3::set_y||
+|unorm_3::set_yx||
+|unorm_3::set_yxz||
+|unorm_3::set_yz||
+|unorm_3::set_yzx||
+|unorm_3::set_z||
+|unorm_3::set_zx||
+|unorm_3::set_zxy||
+|unorm_3::set_zy||
+|unorm_3::set_zyx||
+
+### <a name="public-operators"></a>公用運算子
+
+|名稱|描述|
+|----------|-----------------|
+|unorm_3::operator--||
+|unorm_3::operator*=||
+|unorm_3::operator/=||
+|unorm_3::operator++||
+|unorm_3::operator+=||
+|unorm_3::operator=||
+|unorm_3::operator-=||
+
+### <a name="public-constants"></a>公用常數
+
+|名稱|描述|
+|----------|-----------------|
+|[常數的大小](#unorm_3__size)||
+
+### <a name="public-data-members"></a>公用資料成員
+
+|名稱|描述|
+|----------|-----------------|
+|unorm_3::b||
+|unorm_3::bg||
+|unorm_3::bgr||
+|unorm_3::br||
+|unorm_3::brg||
+|unorm_3::g||
+|unorm_3::gb||
+|unorm_3::gbr||
+|unorm_3::gr||
+|unorm_3::grb||
+|unorm_3::r||
+|unorm_3::rb||
+|unorm_3::rbg||
+|unorm_3::rg||
+|unorm_3::rgb||
+|unorm_3::x||
+|unorm_3::xy||
+|unorm_3::xyz||
+|unorm_3::xz||
+|unorm_3::xzy||
+|unorm_3::y||
+|unorm_3::yx||
+|unorm_3::yxz||
+|unorm_3::yz||
+|unorm_3::yzx||
+|unorm_3::z||
+|unorm_3::zx||
+|unorm_3::zxy||
+|unorm_3::zy||
+|unorm_3::zyx||
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`unorm_3`
+
+## <a name="requirements"></a>需求
+
+**標頭：** amp_short_vectors.h
+
+**命名空間：** concurrency:: graphics
+
+##  <a name="ctor"></a> unorm_3
+
+預設建構函式，初始化具有 0 的所有項目。
+
+```
 unorm_3() restrict(amp,
     cpu);
 
- 
 unorm_3(
-    unorm _V0,  
-    unorm _V1,  
+    unorm _V0,
+    unorm _V1,
     unorm _V2) restrict(amp,
     cpu);
 
- 
 unorm_3(
-    float _V0,  
-    float _V1,  
+    float _V0,
+    float _V1,
     float _V2) restrict(amp,
     cpu);
 
- 
 unorm_3(
     unorm _V) restrict(amp,
     cpu);
 
- 
 explicit unorm_3(
     float _V) restrict(amp,
     cpu);
 
- 
 unorm_3(
     const unorm_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline unorm_3(
     const uint_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline unorm_3(
     const int_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline unorm_3(
     const float_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline unorm_3(
     const norm_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline unorm_3(
     const double_3& _Other) restrict(amp,
     cpu);
-```  
-  
-### <a name="parameters"></a>參數  
-*_V0*<br/>
-要初始化項目 0 的值。  
-  
-*_V1*<br/>
-要初始化項目 1 的值。  
-  
-*並將 _V2*<br/>
-要初始化項目 2 的值。  
-  
-*（_V)*<br/>
-初始設定的值。  
-  
-*_Other*<br/>
-用來初始化的物件。  
-  
-##  <a name="unorm_3__size"></a> 大小 
+```
 
-```  
-static const int size = 3;  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)
+### <a name="parameters"></a>參數
+
+*_V0*<br/>
+要初始化項目 0 的值。
+
+*_V1*<br/>
+要初始化項目 1 的值。
+
+*並將 _V2*<br/>
+要初始化項目 2 的值。
+
+*（_V)*<br/>
+初始設定的值。
+
+*_Other*<br/>
+用來初始化的物件。
+
+##  <a name="unorm_3__size"></a> 大小
+
+```
+static const int size = 3;
+```
+
+## <a name="see-also"></a>另請參閱
+
+[Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)

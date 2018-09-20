@@ -18,47 +18,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c1e3d9d3d08ef0386a1ab85e0e5b6860f5d504cc
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f849d2d9c3fd4a2d50d652ad159e93442b4c7ff3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681277"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404640"
 ---
 # <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>如何：使用 PInvoke 從 Managed 程式碼呼叫原生 DLL
-從 managed 程式碼使用平台叫用 (P/Invoke) 的功能，可以呼叫 unmanaged Dll 中實作的函式。 如果無法使用 DLL 的原始程式碼，P/Invoke 是交互操作的唯一選項。 不過，不同於其他.NET 語言，Visual c + + 提供 P/Invoke 的替代方案。 如需詳細資訊，請參閱 <<c0> [ 使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
-  
-## <a name="example"></a>範例  
- 下列程式碼範例會使用 Win32 [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics)函式來擷取目前像素為單位的螢幕解析度。  
-  
- 對於使用內建的型別做為引數和傳回值的函式，不則需要任何額外的工作。 其他資料類型，例如函式指標、 陣列和結構，需要額外的屬性，以確保適當的資料封送處理。  
-  
- 雖然並非必要，它會是很好的做法是 P/Invoke 宣告靜態成員的實值類別，讓它們不存在於全域命名空間中，在此範例中所示。  
-  
-```  
-// pinvoke_basic.cpp  
-// compile with: /clr  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-  
-value class Win32 {  
-public:  
-   [DllImport("User32.dll")]  
-   static int GetSystemMetrics(int);  
-  
-   enum class SystemMetricIndex {  
-      // Same values as those defined in winuser.h.  
-      SM_CXSCREEN = 0,  
-      SM_CYSCREEN = 1  
-   };  
-};  
-  
-int main() {  
-   int hRes = Win32::GetSystemMetrics( safe_cast<int>(Win32::SystemMetricIndex::SM_CXSCREEN) );  
-   int vRes = Win32::GetSystemMetrics( safe_cast<int>(Win32::SystemMetricIndex::SM_CYSCREEN) );  
-   Console::WriteLine("screen resolution: {0},{1}", hRes, vRes);  
-}  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [在 C++ 中使用明確的 PInvoke (DllImport 屬性)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+
+從 managed 程式碼使用平台叫用 (P/Invoke) 的功能，可以呼叫 unmanaged Dll 中實作的函式。 如果無法使用 DLL 的原始程式碼，P/Invoke 是交互操作的唯一選項。 不過，不同於其他.NET 語言，Visual c + + 提供 P/Invoke 的替代方案。 如需詳細資訊，請參閱 <<c0> [ 使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。
+
+## <a name="example"></a>範例
+
+下列程式碼範例會使用 Win32 [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics)函式來擷取目前像素為單位的螢幕解析度。
+
+對於使用內建的型別做為引數和傳回值的函式，不則需要任何額外的工作。 其他資料類型，例如函式指標、 陣列和結構，需要額外的屬性，以確保適當的資料封送處理。
+
+雖然並非必要，它會是很好的做法是 P/Invoke 宣告靜態成員的實值類別，讓它們不存在於全域命名空間中，在此範例中所示。
+
+```
+// pinvoke_basic.cpp
+// compile with: /clr
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+value class Win32 {
+public:
+   [DllImport("User32.dll")]
+   static int GetSystemMetrics(int);
+
+   enum class SystemMetricIndex {
+      // Same values as those defined in winuser.h.
+      SM_CXSCREEN = 0,
+      SM_CYSCREEN = 1
+   };
+};
+
+int main() {
+   int hRes = Win32::GetSystemMetrics( safe_cast<int>(Win32::SystemMetricIndex::SM_CXSCREEN) );
+   int vRes = Win32::GetSystemMetrics( safe_cast<int>(Win32::SystemMetricIndex::SM_CYSCREEN) );
+   Console::WriteLine("screen resolution: {0},{1}", hRes, vRes);
+}
+```
+
+## <a name="see-also"></a>另請參閱
+
+[在 C++ 中使用明確的 PInvoke (DllImport 屬性)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

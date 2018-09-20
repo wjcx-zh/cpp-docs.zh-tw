@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adfa2e2feaf44f5f29c1a16b8e68642e438095fe
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1f0fa55b7ddfc97d1073211ad23c04d724aabe50
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703322"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404276"
 ---
 # <a name="od-disable-debug"></a>/Od (停用 (偵錯))
 
@@ -59,7 +59,7 @@ ms.locfileid: "45703322"
 
 ## <a name="see-also"></a>另請參閱
 
-[/O 選項 （最佳化程式碼）](../../build/reference/o-options-optimize-code.md)
+[/O 選項 (最佳化程式碼)](../../build/reference/o-options-optimize-code.md)<br/>
 [編譯器選項](../../build/reference/compiler-options.md)<br/>
 [設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
 [/Z7、/Zi、/ZI (偵錯資訊格式)](../../build/reference/z7-zi-zi-debug-information-format.md)

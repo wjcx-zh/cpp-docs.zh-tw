@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce8b3bd682c7d4a0b019bf339e1fb543553bfc03
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ad1e420aa1ffe33cffb9649fdfbaca398540b2a3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318048"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397531"
 ---
 # <a name="deleting-a-toolbar-button-c"></a>刪除工具列按鈕 （c + +）
 
@@ -37,5 +37,5 @@ MFC 或 ATL
 
 ## <a name="see-also"></a>另請參閱
 
-[建立、移動和編輯工具列按鈕](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[建立、移動和編輯工具列按鈕](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [工具列編輯器](../windows/toolbar-editor.md)

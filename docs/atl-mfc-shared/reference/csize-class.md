@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71a96e54c3182db3fa57798f962ae5565aeca812
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fa840b2fd6e143715c924d0f7ac67e78eb8306a4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752261"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417538"
 ---
 # <a name="csize-class"></a>CSize 類別
 
@@ -222,8 +222,8 @@ CSize operator-() const throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 MDI](../../visual-cpp-samples.md)   
-[階層架構圖表](../../mfc/hierarchy-chart.md)   
-[CRect 類別](../../atl-mfc-shared/reference/crect-class.md)   
+[MFC 範例 MDI](../../visual-cpp-samples.md)<br/>
+[階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
+[CRect 類別](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CPoint 類別](../../atl-mfc-shared/reference/cpoint-class.md)
 

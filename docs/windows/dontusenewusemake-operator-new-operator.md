@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c2de62df47e46183c1169956a18ddc10822b22a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 99e82de06f64816521c47c78648108a9ae815279
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611917"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443224"
 ---
 # <a name="dontusenewusemakeoperator-new-operator"></a>DontUseNewUseMake::operator new 運算子
 
@@ -39,10 +39,10 @@ void* operator new(
 
 ### <a name="parameters"></a>參數
 
-*__unnamed0*  
+*__unnamed0*<br/>
 未命名的參數，指定要配置的記憶體位元組數目。
 
-*放置*  
+*放置*<br/>
 要配置的類型。
 
 ## <a name="return-value"></a>傳回值
@@ -61,5 +61,5 @@ void* operator new(
 
 ## <a name="see-also"></a>另請參閱
 
-[DontUseNewUseMake 類別](../windows/dontusenewusemake-class.md)  
+[DontUseNewUseMake 類別](../windows/dontusenewusemake-class.md)<br/>
 [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

@@ -18,57 +18,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f28096fccae4f24b236631b3c27178bda7e22771
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5e73a33817ef39d8998173dacc282e6ee9477944
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46103980"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445604"
 ---
 # <a name="messagenotfound-class"></a>message_not_found 類別
-這個類別描述在傳訊區塊找不到所要求之訊息時擲回的例外狀況。  
-  
-## <a name="syntax"></a>語法  
-  
+
+這個類別描述在傳訊區塊找不到所要求之訊息時擲回的例外狀況。
+
+## <a name="syntax"></a>語法
+
 ```
 class message_not_found : public std::exception;
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[message_not_found](#ctor)|多載。 建構 `message_not_found` 物件。|  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `exception`  
-  
- `message_not_found`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** concrt.h  
-  
- **命名空間：** concurrency  
-  
-##  <a name="ctor"></a> message_not_found 
+```
 
- 建構 `message_not_found` 物件。  
-  
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[message_not_found](#ctor)|多載。 建構 `message_not_found` 物件。|
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`exception`
+
+`message_not_found`
+
+## <a name="requirements"></a>需求
+
+**標頭：** concrt.h
+
+**命名空間：** concurrency
+
+##  <a name="ctor"></a> message_not_found
+
+建構 `message_not_found` 物件。
+
 ```
 explicit _CRTIMP message_not_found(_In_z_ const char* _Message) throw();
 
 message_not_found() throw();
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *訊息 （_m)*<br/>
-錯誤的描述性訊息。  
-  
-## <a name="see-also"></a>另請參閱  
- [concurrency 命名空間](concurrency-namespace.md)   
- [非同步訊息區](../../../parallel/concrt/asynchronous-message-blocks.md)
+錯誤的描述性訊息。
 
+## <a name="see-also"></a>另請參閱
 
+[concurrency 命名空間](concurrency-namespace.md)<br/>
+[非同步訊息區](../../../parallel/concrt/asynchronous-message-blocks.md)
 

@@ -15,21 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01cdbc0f404c34a8c5ebc3ae09adf30e0cea0851
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 25642357e3dd9117ae2817307ed5fa3c4a0921d0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215038"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424532"
 ---
 # <a name="destroying-the-list-control"></a>終結清單控制項
-如果您在內嵌您[CListCtrl](../mfc/reference/clistctrl-class.md)做為資料成員，檢視或對話方塊類別的物件終結時終結其擁有者。 如果您使用[CListView](../mfc/reference/clistview-class.md)，架構會在終結檢視時終結控制項。  
-  
- 如果您對於要儲存在應用程式中的某些清單資料而非清單控制項進行配置，則必須為其解除配置進行安排。 如需詳細資訊，請參閱 <<c0> [ 回呼項目和回呼遮罩](/windows/desktop/Controls/using-list-view-controls)Windows SDK 中。  
-  
- 此外，您必須負責解除配置您所建立並與清單控制項關聯的所有影像清單。  
-  
-## <a name="see-also"></a>另請參閱  
- [使用 CListCtrl](../mfc/using-clistctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+
+如果您在內嵌您[CListCtrl](../mfc/reference/clistctrl-class.md)做為資料成員，檢視或對話方塊類別的物件終結時終結其擁有者。 如果您使用[CListView](../mfc/reference/clistview-class.md)，架構會在終結檢視時終結控制項。
+
+如果您對於要儲存在應用程式中的某些清單資料而非清單控制項進行配置，則必須為其解除配置進行安排。 如需詳細資訊，請參閱 <<c0> [ 回呼項目和回呼遮罩](/windows/desktop/Controls/using-list-view-controls)Windows SDK 中。
+
+此外，您必須負責解除配置您所建立並與清單控制項關聯的所有影像清單。
+
+## <a name="see-also"></a>另請參閱
+
+[使用 CListCtrl](../mfc/using-clistctrl.md)<br/>
+[控制項](../mfc/controls-mfc.md)
 

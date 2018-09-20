@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 003f2c9241a4ba81e370204ce2102b60e420df04
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c0eb1b8b37737d1c0c36af28da9b0c656e26de7d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700540"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396738"
 ---
 # <a name="safemultiply"></a>SafeMultiply
 
@@ -71,7 +71,7 @@ inline bool SafeMultiply (
 
 ## <a name="see-also"></a>另請參閱
 
-[SafeInt 函式](../windows/safeint-functions.md)  
-[SafeInt 程式庫](../windows/safeint-library.md)  
-[SafeInt 類別](../windows/safeint-class.md)  
+[SafeInt 函式](../windows/safeint-functions.md)<br/>
+[SafeInt 程式庫](../windows/safeint-library.md)<br/>
+[SafeInt 類別](../windows/safeint-class.md)<br/>
 [SafeDivide](../windows/safedivide.md)

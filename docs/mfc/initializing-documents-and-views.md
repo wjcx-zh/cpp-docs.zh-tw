@@ -1,5 +1,5 @@
 ---
-title: 初始化文件和檢視 |Microsoft 文件
+title: 初始化文件和檢視 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43610a08d5a3713cc40de0a2279286735a27d1da
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: d6a6f989b8c6b19c78cf9ad508d18e9592bb9305
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928178"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417393"
 ---
 # <a name="initializing-documents-and-views"></a>初始化文件和檢視
-文件是以兩種不同的方式建立，因此您的文件類別必須支援這兩種方式。 首先，使用者可以使用 [開新檔案] 命令建立新的空白文件。 在此情況下，初始化文件的覆寫中[OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument)類別成員函式[CDocument](../mfc/reference/cdocument-class.md)。 其次，使用者可以使用 [檔案] 功能表的 [開啟] 命令建立從某個檔案讀取內容的新文件。 在此情況下，初始化文件的覆寫中[OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument)類別成員函式`CDocument`。 如果兩種初始化方式相同，您可以從兩個覆寫中呼叫一個共同的成員函式，或者 `OnOpenDocument` 可以呼叫 `OnNewDocument` 以初始化全新的文件後再完成開啟作業。  
-  
- 在建立其文件後會建立檢視。 初始化檢視的最佳時機是在架構完成建立文件、框架視窗與檢視之後。 您可以藉由覆寫中初始化檢視[OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate)成員函式[CView](../mfc/reference/cview-class.md)。 如果您需要重新初始化或調整任何項目每次文件變更，您可以覆寫[OnUpdate](../mfc/reference/cview-class.md#onupdate)。  
-  
-## <a name="see-also"></a>另請參閱  
- [初始化及清除文件和檢視](../mfc/initializing-and-cleaning-up-documents-and-views.md)
+
+文件是以兩種不同的方式建立，因此您的文件類別必須支援這兩種方式。 首先，使用者可以使用 [開新檔案] 命令建立新的空白文件。 在此情況下，初始化文件中的覆寫[OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument)類別成員函式[CDocument](../mfc/reference/cdocument-class.md)。 其次，使用者可以使用 [檔案] 功能表的 [開啟] 命令建立從某個檔案讀取內容的新文件。 在此情況下，初始化文件中的覆寫[OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument)類別成員函式`CDocument`。 如果兩種初始化方式相同，您可以從兩個覆寫中呼叫一個共同的成員函式，或者 `OnOpenDocument` 可以呼叫 `OnNewDocument` 以初始化全新的文件後再完成開啟作業。
+
+在建立其文件後會建立檢視。 初始化檢視的最佳時機是在架構完成建立文件、框架視窗與檢視之後。 您可以藉由覆寫中初始化您的檢視[OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate)成員函式[CView](../mfc/reference/cview-class.md)。 如果您需要重新初始化或調整任何項目每次文件變更，您可以覆寫[OnUpdate](../mfc/reference/cview-class.md#onupdate)。
+
+## <a name="see-also"></a>另請參閱
+
+[初始化及清除文件和檢視](../mfc/initializing-and-cleaning-up-documents-and-views.md)
 

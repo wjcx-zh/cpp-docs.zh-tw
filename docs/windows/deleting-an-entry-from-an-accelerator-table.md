@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 747e0db32a73a277ef26e18e787e3e5a31f69578
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9543f33895e112634bf9c62b00652760313af97f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315115"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397191"
 ---
 # <a name="deleting-an-entry-from-an-accelerator-table-c"></a>刪除快速鍵對應表 （c + +） 中的項目
 
@@ -48,5 +48,5 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[編輯快速鍵對應表](../windows/editing-accelerator-tables.md)  
+[編輯快速鍵對應表](../windows/editing-accelerator-tables.md)<br/>
 [快速鍵編輯器](../windows/accelerator-editor.md)

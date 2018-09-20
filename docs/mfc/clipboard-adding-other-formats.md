@@ -1,5 +1,5 @@
 ---
-title: 剪貼簿： 加入其他格式 |Microsoft 文件
+title: 剪貼簿： 加入其他格式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,40 +19,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67004ac43193d47720626da241a8030ba396abdf
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 4f2a34228a6e6b0c0d4f1800142e657a462aa095
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36932014"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402001"
 ---
 # <a name="clipboard-adding-other-formats"></a>剪貼簿：加入其他格式
-本主題說明如何展開的清單支援的格式，特別是針對 OLE 支援。 本主題[剪貼簿： 複製和貼上資料](../mfc/clipboard-copying-and-pasting-data.md)說明支援複製及貼上剪貼簿中所需的最小實作。 如果這是所有您實作，就放在剪貼簿上只有格式**CF_METAFILEPICT**， **CF_EMBEDSOURCE**， **CF_OBJECTDESCRIPTOR**，且可能**CF_LINKSOURCE**。 大部分的應用程式需要比這三個剪貼簿格式。  
-  
-##  <a name="_core_registering_custom_formats"></a> 登錄自訂格式  
- 若要建立您自己的自訂格式，請遵循相同的程序登錄任何自訂剪貼簿格式時，您會使用： 傳遞至格式的名稱**RegisterClipboardFormat**函式，並使用它的傳回值為格式識別碼。  
-  
-##  <a name="_core_placing_formats_on_the_clipboard"></a> 放置在剪貼簿格式  
- 若要加入更多的格式與放在剪貼簿上，您必須覆寫`OnGetClipboardData`您從其中衍生的類別中的函式`COleClientItem`或`COleServerItem`（取決於要複製的資料是否使用原生）。 在這個函式，您應該使用下列程序。  
-  
-#### <a name="to-place-formats-on-the-clipboard"></a>將放在剪貼簿格式  
-  
-1.  建立 `COleDataSource` 物件。  
-  
-2.  若要加入的支援格式清單中的原生資料格式，藉由呼叫的函式傳遞此資料來源`COleDataSource::CacheGlobalData`。  
-  
-3.  新增標準格式，藉由呼叫`COleDataSource::CacheGlobalData`每一個您要支援的標準格式。  
-  
- 這項技術用於 MFC OLE 範例程式[HIERSVR](../visual-cpp-samples.md) (檢查`OnGetClipboardData`成員函式**CServerItem**類別)。 此範例中的唯一差異是 HIERSVR 支援其他標準格式，所以未實作步驟 3。  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
-  
--   [OLE 資料物件和資料來源和制式資料傳輸](../mfc/data-objects-and-data-sources-ole.md)  
-  
--   [OLE 拖放](../mfc/drag-and-drop-ole.md)  
-  
--   [OLE](../mfc/ole-background.md)  
-  
-## <a name="see-also"></a>另請參閱  
- [剪貼簿：使用 OLE 剪貼簿機制](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+
+本主題說明如何擴充支援的格式，特別是針對 OLE 支援的清單。 本主題[剪貼簿： 複製和貼上資料](../mfc/clipboard-copying-and-pasting-data.md)說明支援複製並貼上剪貼簿中所需的最小實作。 這是所有您所實作，放在剪貼簿上的唯一格式是否**CF_METAFILEPICT**， **CF_EMBEDSOURCE**， **CF_OBJECTDESCRIPTOR**，且可能**CF_LINKSOURCE**。 大部分的應用程式需要更多格式剪貼簿上的，於這三個。
+
+##  <a name="_core_registering_custom_formats"></a> 登錄自訂格式
+
+若要建立您自己自訂的格式，請遵循註冊任何自訂剪貼簿格式時，會使用相同的程序： 的格式名稱傳遞給**RegisterClipboardFormat**函式，並使用它的傳回值的格式識別碼。
+
+##  <a name="_core_placing_formats_on_the_clipboard"></a> 將格式放在剪貼簿
+
+若要新增更多格式所放在剪貼簿上，您必須覆寫`OnGetClipboardData`在您從其中衍生的類別中的函式`COleClientItem`或`COleServerItem`（取決於要複製的資料是否使用原生）。 在此函式中，您應該使用下列程序。
+
+#### <a name="to-place-formats-on-the-clipboard"></a>將剪貼簿上的格式
+
+1. 建立 `COleDataSource` 物件。
+
+1. 要加入的支援格式清單中的原生資料格式，藉由呼叫的函式中傳遞此資料來源`COleDataSource::CacheGlobalData`。
+
+1. 加入標準的格式，藉由呼叫`COleDataSource::CacheGlobalData`每一個您想要支援的標準格式。
+
+在 MFC OLE 範例程式會使用這項技術[HIERSVR](../visual-cpp-samples.md) (檢查`OnGetClipboardData`成員函式**CServerItem**類別)。 在此範例中唯一的差別在於並未實作該步驟三，因為 HIERSVR 不支援任何其他標準的格式。
+
+### <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+
+- [OLE 資料物件和資料來源以及一致的資料傳輸](../mfc/data-objects-and-data-sources-ole.md)
+
+- [OLE 拖放](../mfc/drag-and-drop-ole.md)
+
+- [OLE](../mfc/ole-background.md)
+
+## <a name="see-also"></a>另請參閱
+
+[剪貼簿：使用 OLE 剪貼簿機制](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
 

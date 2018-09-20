@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c758226935151bd11faec12aed459aeb2606ca9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8b220ecd69ce539c03339ac73048efb2750d2e32
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684820"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401794"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows Runtime C++ Template Library (WRL)
 
@@ -50,43 +50,43 @@ Windows 執行階段 c + + 樣板程式庫和 C + + /CX 提供不同的優點。
 
 以下是一些可協助您立即開始運用與 Windows 執行階段 c + + 樣板程式庫的資源。
 
-[Windows 執行階段程式庫 (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
+[Windows 執行階段程式庫 (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
 在這個 Channel 9 影片中，深入了解 Windows 執行階段 c + + 樣板程式庫如何協助您撰寫通用 Windows 平台 (UWP) 應用程式，以及如何撰寫和使用 Windows 執行階段元件。
 
-[如何： 啟動與使用 Windows 執行階段元件](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)  
+[如何： 啟動與使用 Windows 執行階段元件](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
 示範如何使用 Windows 執行階段 c + + 樣板程式庫初始化 Windows 執行階段以及啟用和使用 Windows 執行階段元件。
 
-[如何： 完成非同步作業](../windows/how-to-complete-asynchronous-operations-using-wrl.md)  
+[如何： 完成非同步作業](../windows/how-to-complete-asynchronous-operations-using-wrl.md)<br/>
 示範如何使用 Windows 執行階段 c + + 樣板程式庫來啟動非同步作業，並在作業完成時執行工作。
 
-[如何： 處理事件](../windows/how-to-handle-events-using-wrl.md)  
+[如何： 處理事件](../windows/how-to-handle-events-using-wrl.md)<br/>
 示範如何使用 Windows 執行階段 c + + 樣板程式庫來訂閱，以及處理 Windows 執行階段物件的事件。
 
-[逐步解說： 使用 WRL 與媒體基礎建立 UWP 應用程式](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+[逐步解說： 使用 WRL 與媒體基礎建立 UWP 應用程式](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)<br/>
 了解如何建立使用 UWP 應用程式[Microsoft 媒體基礎](/windows/desktop/medfound/microsoft-media-foundation-sdk)。
 
-[如何： 建立傳統 COM 元件](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
+[如何： 建立傳統 COM 元件](../windows/how-to-create-a-classic-com-component-using-wrl.md)<br/>
 示範如何使用 Windows 執行階段 c + + 樣板程式庫來建立基本的 COM 元件和註冊和使用桌面應用程式的 COM 元件的基本方法。
 
-[如何：直接具現化 WRL 元件](../windows/how-to-instantiate-wrl-components-directly.md)  
+[如何：直接具現化 WRL 元件](../windows/how-to-instantiate-wrl-components-directly.md)<br/>
 了解如何使用[Microsoft::WRL::Make](../windows/make-function.md)並[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)函式來具現化模組中定義的元件。
 
-[如何：使用 winmdidl.exe 和 midlrt.exe 根據 Windows 中繼資料建立 .h 檔案](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)  
+[如何：使用 winmdidl.exe 和 midlrt.exe 根據 Windows 中繼資料建立 .h 檔案](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
 顯示如何透過從 .winmd 中繼資料建立 IDL 檔案，使用 WRL 的自訂 Windows 執行階段元件。
 
-[逐步解說：使用工作和 XML HTTP 要求連接](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
+[逐步解說：使用工作和 XML HTTP 要求連接](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 示範如何使用[IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)並[IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback)介面，以及將 HTTP GET 和 POST 要求傳送至 UWP 應用程式中的 web 服務的工作。
 
-[Bing 地圖服務路線最佳化程式範例](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
+[Bing 地圖服務路線最佳化程式範例](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
 會使用`HttpRequest`中所定義的類別[逐步解說： 使用工作和 XML HTTP 要求](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)完成的 UWP 應用程式的內容中。
 
-[使用 c + + 範例建立 Windows 執行階段 DLL 元件](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)  
+[使用 c + + 範例建立 Windows 執行階段 DLL 元件](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 示範如何使用 Windows 執行階段 c + + 樣板程式庫來建立同處理序 DLL 元件，然後使用它從 C + + /CX、 JavaScript 和 C#。
 
-[DirectX 彈珠迷宮遊戲範例](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)  
+[DirectX 彈珠迷宮遊戲範例](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
 示範如何使用 Windows 執行階段 c + + 樣板程式庫來管理在完整 3d 遊戲的內容中，如 DirectX 和媒體基礎 COM 元件的存留期。
 
-[從桌面應用程式範例傳送快顯通知](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)  
+[從桌面應用程式範例傳送快顯通知](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
 示範如何使用 Windows 執行階段 c + + 樣板程式庫，來處理從傳統型應用程式的快顯通知。
 
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Windows 執行階段 c + + 樣板程式庫和 ATL 比較

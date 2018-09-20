@@ -1,5 +1,5 @@
 ---
-title: CResourceException 類別 |Microsoft 文件
+title: CResourceException 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,59 +18,66 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fdbfb29b00eaac40b4da2b78753df6a0596764f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 993b484c40386a60dd2da04d7198d692f5e16f97
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371526"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445070"
 ---
 # <a name="cresourceexception-class"></a>CResourceException 類別
-當 Windows 找不到或無法配置所要求的資源時產生的。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-class CResourceException : public CSimpleException  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CResourceException::CResourceException](#cresourceexception)|建構 `CResourceException` 物件。|  
-  
-## <a name="remarks"></a>備註  
- 沒有進一步限定性條件是必要或不可能。  
-  
- 如需有關使用`CResourceException`，請參閱文章[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)。  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CException](../../mfc/reference/cexception-class.md)  
-  
- [CSimpleException](../../mfc/reference/csimpleexception-class.md)  
-  
- `CResourceException`  
-  
-## <a name="requirements"></a>需求  
- **標題:** afxwin.h  
-  
-##  <a name="cresourceexception"></a>  CResourceException::CResourceException  
- 建構 `CResourceException` 物件。  
-  
-```  
+
+當 Windows 找不到或無法配置所要求的資源時產生的。
+
+## <a name="syntax"></a>語法
+
+```
+class CResourceException : public CSimpleException
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[CResourceException::CResourceException](#cresourceexception)|建構 `CResourceException` 物件。|
+
+## <a name="remarks"></a>備註
+
+沒有進一步限定性條件是必要或不可能。
+
+如需有關使用`CResourceException`，請參閱文章[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)。
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CException](../../mfc/reference/cexception-class.md)
+
+[CSimpleException](../../mfc/reference/csimpleexception-class.md)
+
+`CResourceException`
+
+## <a name="requirements"></a>需求
+
+**標題:** afxwin.h
+
+##  <a name="cresourceexception"></a>  CResourceException::CResourceException
+
+建構 `CResourceException` 物件。
+
+```
 CResourceException();
-```  
-  
-### <a name="remarks"></a>備註  
- 請勿直接使用這個建構函式，但是而不是呼叫全域函式[AfxThrowResourceException](exception-processing.md#afxthrowresourceexception)。 如需例外狀況的詳細資訊，請參閱文章[在 MFC 中處理例外狀況](../exception-handling-in-mfc.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [CException 類別](cexception-class.md)   
- [階層架構圖表](../hierarchy-chart.md)
+```
+
+### <a name="remarks"></a>備註
+
+請勿直接使用這個建構函式，但而不是呼叫全域函式[AfxThrowResourceException](exception-processing.md#afxthrowresourceexception)。 如需例外狀況的詳細資訊，請參閱文章[MFC 的例外狀況處理](../exception-handling-in-mfc.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[CException 類別](cexception-class.md)<br/>
+[階層架構圖表](../hierarchy-chart.md)
 
 

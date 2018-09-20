@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6734391e56f076f247bd8887a7fdb61142b3669
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: fa4d894fb3fc436abab84bfee11199f59bd66f78
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317858"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402391"
 ---
 # <a name="defining-member-variables-for-dialog-controls-c"></a>定義對話方塊控制項 （c + +） 的成員變數
 
@@ -55,11 +55,11 @@ MFC
 
 ## <a name="see-also"></a>另請參閱
 
-[將訊息對應到函式](../mfc/reference/mapping-messages-to-functions.md)  
-[使用程式碼精靈新增功能](../ide/adding-functionality-with-code-wizards-cpp.md)  
-[MFC 類別精靈](../mfc/reference/mfc-class-wizard.md)  
-[加入類別](../ide/adding-a-class-visual-cpp.md)  
-[新增成員函式](../ide/adding-a-member-function-visual-cpp.md)  
-[新增成員變數](../ide/adding-a-member-variable-visual-cpp.md)  
-[覆寫虛擬函式](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[將訊息對應到函式](../mfc/reference/mapping-messages-to-functions.md)<br/>
+[使用程式碼精靈新增功能](../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[MFC 類別精靈](../mfc/reference/mfc-class-wizard.md)<br/>
+[加入類別](../ide/adding-a-class-visual-cpp.md)<br/>
+[新增成員函式](../ide/adding-a-member-function-visual-cpp.md)<br/>
+[新增成員變數](../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[覆寫虛擬函式](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [MFC 訊息處理常式](../mfc/reference/adding-an-mfc-message-handler.md)

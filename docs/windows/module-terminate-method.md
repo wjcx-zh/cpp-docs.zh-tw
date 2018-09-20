@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f89922fb107c1454ec81dfd8a9ac213608da962
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 76f483c1c57c65c035bcbb0f8c82b4f72cbb06f2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610839"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398718"
 ---
 # <a name="moduleterminate-method"></a>Module::Terminate 方法
 
@@ -45,4 +45,5 @@ void Terminate();
 **命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
+
 [Module 類別](../windows/module-class.md)

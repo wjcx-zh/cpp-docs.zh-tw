@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47b8837cafaab2501e201a747fd9463e1e00639e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ff816e1cb6706847caceecebeffd13a210b3e94d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42580965"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403827"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>以色彩填滿影像的封閉區域 (圖示影像編輯器)
 
@@ -50,5 +50,5 @@ ms.locfileid: "42580965"
 
 ## <a name="see-also"></a>另請參閱
 
-[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)  
+[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [使用色彩](../windows/working-with-color-image-editor-for-icons.md)

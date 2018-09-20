@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a89054dd7ce105f059083f3bd5ebb8db685396f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fa4a10235f37a3ea174965ad56f63d078e3cbde2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591938"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403573"
 ---
 # <a name="hstringoperatorlt-operator"></a>Hstring:: Operator&lt;運算子
 
@@ -36,10 +36,10 @@ inline bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*lhs*  
+*lhs*<br/>
 要比較的第一個參數。 *lhs*可以是參考**HString**。
 
-*rhs*  
+*rhs*<br/>
 要比較的第二個參數。 *rhs*可以是參考**HString**。
 
 ## <a name="return-value"></a>傳回值

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0e87ea3b0e44732d4271385073c48fd92e1aa114
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 995594ee48e6ca408e88d9ab14968d88b536d309
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608923"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403503"
 ---
 # <a name="modulegetactivationfactory-method"></a>Module::GetActivationFactory 方法
 
@@ -40,13 +40,13 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>參數
 
-*pActivatibleClassId*  
+*pActivatibleClassId*<br/>
 執行階段類別的 IID。
 
-*ppIFactory*  
+*ppIFactory*<br/>
 指定的執行階段類別 IActivationFactory。
 
-*伺服器名稱*  
+*伺服器名稱*<br/>
 在目前模組的 class factory 子集的名稱。 指定用於的伺服器名稱[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)巨集，或指定**nullptr**取得預設的伺服器名稱。
 
 ## <a name="return-value"></a>傳回值
@@ -61,5 +61,5 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 
 ## <a name="see-also"></a>另請參閱
 
-[Module 類別](../windows/module-class.md)  
+[Module 類別](../windows/module-class.md)<br/>
 [ActivatableClass 巨集](../windows/activatableclass-macros.md)

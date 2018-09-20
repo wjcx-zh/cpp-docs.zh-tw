@@ -1,5 +1,5 @@
 ---
-title: 使用 nowait 子句 A.4 |Microsoft 文件
+title: A.4 使用 nowait 子句 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,24 +12,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d1de6b5e86d600ee1b3c2fa2c29fe014f9cb768
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: da4b69ed8ccf59fb90d17da2b85d7693d661785b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689801"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444484"
 ---
 # <a name="a4---using-the-nowait-clause"></a>A.4 使用 nowait 子句
-如果有多個獨立的迴圈的平行區域內，您可以使用`nowait`子句 ([區段 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) 11 頁面上) 若要避免隱含的屏障結尾`for`指示詞，如下所示：  
-  
-```  
-#pragma omp parallel  
-{  
-    #pragma omp for nowait  
-        for (i=1; i<n; i++)  
-             b[i] = (a[i] + a[i-1]) / 2.0;  
-    #pragma omp for nowait  
-        for (i=0; i<m; i++)  
-            y[i] = sqrt(z[i]);  
-}  
+
+如果有多個獨立的迴圈的平行區域內，您可以使用`nowait`子句 ([2.4.1 區段](../../parallel/openmp/2-4-1-for-construct.md)11 頁上) 以避免隱含的屏障結尾`for`指示詞，如下所示：
+
+```
+#pragma omp parallel
+{
+    #pragma omp for nowait
+        for (i=1; i<n; i++)
+             b[i] = (a[i] + a[i-1]) / 2.0;
+    #pragma omp for nowait
+        for (i=0; i<m; i++)
+            y[i] = sqrt(z[i]);
+}
 ```

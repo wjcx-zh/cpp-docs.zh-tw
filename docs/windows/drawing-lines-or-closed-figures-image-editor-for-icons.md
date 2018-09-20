@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c6c5652f61211ebd4d33de6f2dce07bd49b4f0a0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0ab40be4843b33e98daaf0f990e10544cb966a7d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313232"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404380"
 ---
 # <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>繪製線條或封閉圖形 (圖示影像編輯器)
 
@@ -63,7 +63,7 @@ ms.locfileid: "44313232"
 
 ## <a name="see-also"></a>另請參閱
 
-[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)  
-[編輯圖形資源](../windows/editing-graphical-resources-image-editor-for-icons.md)  
-[圖示影像編輯器](../windows/image-editor-for-icons.md)  
+[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[編輯圖形資源](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
+[圖示影像編輯器](../windows/image-editor-for-icons.md)<br/>
 [使用色彩](../windows/working-with-color-image-editor-for-icons.md)

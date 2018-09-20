@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eca04d185eaf31bb112741c1564e5fbe551c6b63
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 26ccca0c3a9ab3d54c1ffda5e25ed5602cc19ae2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599908"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402378"
 ---
 # <a name="interfacetraitsiidcount-constant"></a>InterfaceTraits::IidCount 常數
 
@@ -46,5 +46,5 @@ static const unsigned long IidCount = 1;
 
 ## <a name="see-also"></a>另請參閱
 
-[InterfaceTraits 結構](../windows/interfacetraits-structure.md)  
+[InterfaceTraits 結構](../windows/interfacetraits-structure.md)<br/>
 [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

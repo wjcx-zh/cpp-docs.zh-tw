@@ -1,5 +1,5 @@
 ---
-title: 視覺化管理員 |Microsoft 文件
+title: 視覺化管理員 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -14,40 +14,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 590c21c3a628af3d8e4c7fc3e5cb0330a0af439a
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: fce4b036c6a6ae3692353ae02e7d36eb5ddfd1e1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37123340"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398479"
 ---
 # <a name="visualization-manager"></a>視覺化管理員
 
-視覺化管理員是控制整個應用程式的外觀的物件。 其會成為單一類別您可以在其中放置您的應用程式的所有繪圖程式碼。 MFC 程式庫包含數個視覺管理員。 如果您想要建立您的應用程式的自訂檢視，您也可以建立您自己的視覺管理員。 下列影像顯示相同的應用程式，啟用不同的視覺管理員時：
+視覺管理員時的物件可控制整個應用程式的外觀。 它會將單一類別作為您可以在其中放置您的應用程式的所有繪圖程式碼。 MFC 程式庫包含數個視覺管理員。 如果您想要建立您的應用程式的自訂檢視，您也可以建立您自己的視覺管理員。 啟用不同的視覺管理員時下, 圖將顯示同一個應用程式：
 
- ![由 CMFCVisualManagerWindows 呈現的 MyApp](../mfc/media/vmwindows.png "vmwindows") CMFCVisualManagerWindows 視覺管理員會使用的 MyApp
+![由 CMFCVisualManagerWindows 呈現的 MyApp](../mfc/media/vmwindows.png "vmwindows") CMFCVisualManagerWindows 視覺管理員會使用的 MyApp
 
- ![由 CMFCVisualManagerVS2005 呈現的 MyApp](../mfc/media/vmvs2005.png "vmvs2005") CMFCVisualManagerVS2005 視覺管理員會使用的 MyApp
+![由 CMFCVisualManagerVS2005 呈現的 MyApp](../mfc/media/vmvs2005.png "vmvs2005") CMFCVisualManagerVS2005 視覺管理員會使用的 MyApp
 
- ![由 CMFCVisualManagerOfficeXP 呈現的 MyApp](../mfc/media/vmofficexp.png "vmofficexp") CMFCVisualManagerOfficeXP 視覺管理員會使用的 MyApp
+![由 CMFCVisualManagerOfficeXP 呈現的 MyApp](../mfc/media/vmofficexp.png "vmofficexp") CMFCVisualManagerOfficeXP 視覺管理員會使用的 MyApp
 
- ![由 CMFCVisualManagerOffice2003 呈現的 MyApp](../mfc/media/vmoffice2003.png "vmoffice2003") CMFCVisualManagerOffice2003 視覺管理員會使用的 MyApp
+![由 CMFCVisualManagerOffice2003 呈現的 MyApp](../mfc/media/vmoffice2003.png "vmoffice2003") CMFCVisualManagerOffice2003 視覺管理員會使用的 MyApp
 
- ![由 CMFCVisualManagerOffice2007 呈現的 MyApp](../mfc/media/msoffice2007.png "msoffice2007") CMFCVisualManagerOffice2007 視覺管理員會使用的 MyApp
+![由 CMFCVisualManagerOffice2007 呈現的 MyApp](../mfc/media/msoffice2007.png "msoffice2007") CMFCVisualManagerOffice2007 視覺管理員會使用的 MyApp
 
-依預設，視覺管理員會維持數個的 GUI 項目的繪圖程式碼。 若要提供自訂 UI 項目，您需要覆寫的視覺管理員相關的繪圖方法。 如需這些方法的清單，請參閱[CMFCVisualManager 類別](../mfc/reference/cmfcvisualmanager-class.md)。 您可以覆寫，以提供自訂的外觀的方法為開頭的所有方法`OnDraw`。
+根據預設，視覺管理員會維護 GUI 的幾個元素的繪製程式碼。 若要提供自訂的 UI 項目，您需要覆寫相關的繪圖方法的視覺管理員。 如需這些方法的清單，請參閱[CMFCVisualManager 類別](../mfc/reference/cmfcvisualmanager-class.md)。 您可以覆寫，以提供自訂外觀的方法為開頭的所有方法`OnDraw`。
 
-您的應用程式只能有一個`CMFCVisualManager`物件。 若要取得您的應用程式的視覺化管理員的指標，呼叫靜態函式[CMFCVisualManager::GetInstance](../mfc/reference/cmfcvisualmanager-class.md#getinstance)。 因為所有的視覺管理員是繼承自`CMFCVisualManager`、`CMFCVisualManager::GetInstance`方法會取得的指標適當的視覺管理員，即使您建立自訂的視覺管理員。
+您的應用程式只能有一個`CMFCVisualManager`物件。 若要取得 visual 的管理員，您的應用程式的指標，呼叫此靜態函式[CMFCVisualManager::GetInstance](../mfc/reference/cmfcvisualmanager-class.md#getinstance)。 因為所有的視覺管理員繼承自`CMFCVisualManager`，則`CMFCVisualManager::GetInstance`方法會取得的指標給適當的視覺管理員，即使您建立自訂的視覺管理員。
 
-如果您想要建立自訂的視覺管理員，必須先將它衍生自的視覺管理員已經存在。 若要從衍生的預設類別是`CMFCVisualManager`。 不過，您可以使用不同的視覺管理員，如果它更類似於您要為您的應用程式。 例如，如果您想要使用`CMFCVisualManagerOffice2007`視覺管理員，但想僅適用於變更分隔符號的外觀，您無法衍生自訂類別從`CMFCVisualManagerOffice2007`。 在此案例中，您應該覆寫的方法來繪製分隔符號。
+如果您想要建立自訂的視覺管理員時，必須先將它衍生自已經存在的視覺管理員。 若要從衍生的預設類別是`CMFCVisualManager`。 不過，您可以使用不同的視覺管理員，如果它更類似於您要為您的應用程式。 例如，如果您想要使用`CMFCVisualManagerOffice2007`視覺化管理員 中，但想要僅適用於變更分隔符號的外觀，您可以衍生自訂類別從`CMFCVisualManagerOffice2007`。 在此案例中，您應該覆寫的方法來繪製分隔符號。
 
-有兩種應用程式使用特定的視覺化管理員的可能方式。 一種方式是呼叫[CMFCVisualManager::SetDefaultManager](../mfc/reference/cmfcvisualmanager-class.md#setdefaultmanager)方法並傳遞適當的視覺化管理員做為參數。 下列程式碼範例示範如何使用`CMFCVisualManagerVS2005`視覺管理員，使用此方法：
+有兩種可能的方式，為您應用程式使用特定的視覺管理員。 其中一種方式是呼叫[cmfcvisualmanager:: Setdefaultmanager](../mfc/reference/cmfcvisualmanager-class.md#setdefaultmanager)方法並傳遞適當的視覺管理員做為參數。 下列程式碼範例示範如何使用`CMFCVisualManagerVS2005`視覺管理員使用這種方法：
 
 ```cpp
 CMFCVisualManager::SetDefaultManager (RUNTIME_CLASS (CMFCVisualManagerVS2005));
 ```
 
-其他應用程式中使用視覺化管理員是以手動方式建立它。 應用程式就會將這個新的視覺管理員，用於所有轉譯。 不過，由於可能只有一個`CMFCVisualManager`每個應用程式，您必須先刪除目前的視覺管理員，才能建立一個新物件。 在下列範例中，`CMyVisualManager`是衍生自的自訂視覺化管理員`CMFCVisualManager`。 下列方法將會變更何種視覺管理員用來顯示您的應用程式，根據索引：
+應用程式中使用的視覺管理員其他辦法是手動建立它。 應用程式再將這個新的視覺管理員用於所有的轉譯。 不過，因為可以只有一個`CMFCVisualManager`物件每個應用程式，您必須先建立一個新刪除目前的視覺管理員。 在下列範例中，`CMyVisualManager`是衍生自的自訂視覺管理員`CMFCVisualManager`。 哪些視覺管理員用來顯示您的應用程式，根據索引時，將下列方法：
 
 ```cpp
 void CMyApp::SetSkin (int index)
@@ -59,7 +59,7 @@ void CMyApp::SetSkin (int index)
 
     switch (index)
     {
-    case DEFAULT_STYLE: 
+    case DEFAULT_STYLE:
         // The following statement creates a new CMFCVisualManager
         CMFCVisualManager::GetInstance();
         break;
@@ -79,5 +79,5 @@ void CMyApp::SetSkin (int index)
 
 ## <a name="see-also"></a>另請參閱
 
-[使用者介面項目](../mfc/user-interface-elements-mfc.md)  
-[CMFCVisualManager 類別](../mfc/reference/cmfcvisualmanager-class.md)  
+[使用者介面項目](../mfc/user-interface-elements-mfc.md)<br/>
+[CMFCVisualManager 類別](../mfc/reference/cmfcvisualmanager-class.md)

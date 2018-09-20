@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebadd9e453e8a34e92acee363d0dd6b6ff765910
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 83f6bf58138a1e36e1c36131a448b456eb691c27
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538808"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407578"
 ---
 # <a name="include"></a>include()
 **C + + 特定**  
@@ -49,5 +49,5 @@ include("Name1"[,"Name2", ...])
   
 ## <a name="see-also"></a>另請參閱  
  
-[#import 屬性](../preprocessor/hash-import-attributes-cpp.md)   
+[#import 屬性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指示詞](../preprocessor/hash-import-directive-cpp.md)

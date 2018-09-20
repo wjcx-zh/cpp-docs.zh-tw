@@ -19,19 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57aa0dc35d2cc47eea4df072a9df7efde9812c23
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 6d85f98fd72567d2481e3a9f9e643b2d736eea92
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034698"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397698"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>設定對話方塊的背景色彩
+
 您可以藉由處理對話方塊視窗的 WM_CTLCOLOR 訊息設定您的對話方塊的背景色彩。 設定的色彩只會用於指定的對話方塊。
 
-請參閱[codexpert 部落格](http://codexpert.ro/blog/2013/03/13/painting-the-dialog-backround/)的範例。  
-  
-## <a name="see-also"></a>另請參閱  
- [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)   
- [處理對話方塊中的 Windows 訊息](../mfc/handling-windows-messages-in-your-dialog-box.md)
+請參閱[codexpert 部落格](http://codexpert.ro/blog/2013/03/13/painting-the-dialog-backround/)的範例。
+
+## <a name="see-also"></a>另請參閱
+
+[對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[處理對話方塊中的 Windows 訊息](../mfc/handling-windows-messages-in-your-dialog-box.md)
 

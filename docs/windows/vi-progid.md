@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c8924f7b22ed86adf7721018c4df3094a2069c1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4798cf5c283fc4a663da0e1af7110df63496a6c9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200691"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408241"
 ---
 # <a name="viprogid"></a>vi_progid
 
@@ -38,7 +38,7 @@ ms.locfileid: "43200691"
 
 ### <a name="parameters"></a>參數
 
-*name*  
+*name*<br/>
 版本無關的 ProgID，表示的物件。
 
 Progid 會提供人類看得懂的版本，用來識別的 COM/ActiveX 物件的類別識別項 (CLSID)。
@@ -72,7 +72,7 @@ Progid 會提供人類看得懂的版本，用來識別的 COM/ActiveX 物件的
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
-[Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)  
-[類別屬性](../windows/class-attributes.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
+[Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[類別屬性](../windows/class-attributes.md)<br/>
 [ProgID 的索引鍵](/windows/desktop/com/-progid--key)  

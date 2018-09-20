@@ -18,44 +18,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5184d925e5d6712dd547e34341d84919c50e0a43
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f1c2424b949b0276e500b46c34b943b0ef0eb597
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724707"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399115"
 ---
 # <a name="lidt"></a>__lidt
-**Microsoft 專屬**  
-  
- 載入中斷描述項表登錄 (IDTR) 中指定的記憶體位置的值。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-void __lidt(  
-     void *Source);  
-```  
-  
-#### <a name="parameters"></a>參數  
-  
-|參數|描述|  
-|---------------|-----------------|  
-|*Source*|[in]要複製到 IDTR 值指標。|  
-  
-## <a name="requirements"></a>需求  
-  
-|內建|架構|  
-|---------------|------------------|  
-|`__lidt`|x86、x64|  
-  
- **標頭檔** \<intrin.h >  
-  
-## <a name="remarks"></a>備註  
- `__lidt`函式相當於`LIDT`機器指令，且只適用於核心模式。 如需詳細資訊，搜尋文件中，「 Intel 架構軟體開發人員的手動、 磁碟區 2： 指令集參考，「 在[Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)站台。  
-  
-**結束 Microsoft 專屬**  
-  
-## <a name="see-also"></a>另請參閱  
- [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
- [__sidt](../intrinsics/sidt.md)
+
+**Microsoft 專屬**
+
+載入中斷描述項表登錄 (IDTR) 中指定的記憶體位置的值。
+
+## <a name="syntax"></a>語法
+
+```
+void __lidt(void * Source);
+```
+
+#### <a name="parameters"></a>參數
+
+|參數|描述|
+|---------------|-----------------|
+|*Source*|[in]要複製到 IDTR 值指標。|
+
+## <a name="requirements"></a>需求
+
+|內建|架構|
+|---------------|------------------|
+|`__lidt`|x86、x64|
+
+**標頭檔** \<intrin.h >
+
+## <a name="remarks"></a>備註
+
+`__lidt`函式相當於`LIDT`機器指令，且只適用於核心模式。 如需詳細資訊，搜尋文件中，「 Intel 架構軟體開發人員的手動、 磁碟區 2： 指令集參考，「 在[Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)站台。
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>另請參閱
+
+[編譯器內建](../intrinsics/compiler-intrinsics.md)<br/>
+[__sidt](../intrinsics/sidt.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae2d5121e17a9325ec45143e7e90e7d2a211f380
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2892f957cf8937b5b030e7624bf3e39f546a7103
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223094"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437601"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -38,7 +38,7 @@ ms.locfileid: "43223094"
 
 ### <a name="parameters"></a>參數
 
-*string*  
+*string*<br/>
 [說明] 字串文字。
 
 ## <a name="remarks"></a>備註
@@ -64,10 +64,10 @@ ms.locfileid: "43223094"
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
-[介面屬性](../windows/interface-attributes.md)  
-[類別屬性](../windows/class-attributes.md)  
-[方法屬性](../windows/method-attributes.md)  
-[Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)  
-[helpfile](../windows/helpfile.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
+[介面屬性](../windows/interface-attributes.md)<br/>
+[類別屬性](../windows/class-attributes.md)<br/>
+[方法屬性](../windows/method-attributes.md)<br/>
+[Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[helpfile](../windows/helpfile.md)<br/>
 [helpcontext](../windows/helpcontext.md)  

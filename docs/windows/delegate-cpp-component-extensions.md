@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46b09b5cbe74849c3dc08e8faee3ee4ca645a55b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 13ce7d2a35245716adc70b9e84532ea7d1a4a440
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602930"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432401"
 ---
 # <a name="delegate--c-component-extensions"></a>delegate (C++ 元件擴充功能)
 
@@ -57,16 +57,16 @@ delegate-type-identifier
 
 ### <a name="parameters"></a>參數
 
-*access*  
+*access*<br/>
 （選擇性）委派，可協助工具**公開金鑰**（預設值） 或**私人**。 函式原型也可以與限定**const**或是**volatile**關鍵字。
 
-*傳回型別*  
+*傳回型別*<br/>
 函式原型的傳回型別。
 
-*委派型別識別項*  
+*委派型別識別項*<br/>
 宣告的委派類型的名稱。
 
-*參數*  
+*參數*<br/>
 （選擇性）型別和函式原型的識別項。
 
 ### <a name="remarks"></a>備註
@@ -91,10 +91,10 @@ function_declaration
 
 ### <a name="parameters"></a>參數
 
-*access*  
+*access*<br/>
 （選擇性）外部組件的存取範圍可以是委派的公用或私用。  預設為私用。  在類別中，委派可以有任何存取範圍。
 
-*function_declaration*  
+*function_declaration*<br/>
 可以繫結至委派的函式簽章。 委派的傳回型別可以是任何 managed 型別。 基於互通性考量，建議您使用委派的傳回型別是 CLS 類型。
 
 若要定義繫結的委派中的第一個參數*function_declaration*的類型應要**這**物件的指標。

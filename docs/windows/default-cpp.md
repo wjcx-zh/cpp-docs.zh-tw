@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6baefb7ef0af5054cb46ed4ad74b6a6bf80fbb61
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 28b162b63ad1fbd2363b4519817d466055e96bc9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699917"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429275"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -41,7 +41,7 @@ ms.locfileid: "45699917"
 
 ### <a name="parameters"></a>參數
 
-*interface1*  
+*interface1*<br/>
 可讓指令碼環境使用的預設介面，會根據使用 **default** 屬性定義的類別來建立物件。
 
 如果未指定預設介面，預設會使用第一個出現的非來源介面。
@@ -125,6 +125,6 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
-[類別屬性](../windows/class-attributes.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
+[類別屬性](../windows/class-attributes.md)<br/>
 [coclass](../windows/coclass.md)  

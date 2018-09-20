@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e7b699f5b6aa023473416b822a94d9b3a91c2b07
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b565e6e37baba764ffc0bb970b9d7ebcac4e3db2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221115"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413727"
 ---
 # <a name="lastis"></a>last_is
 
@@ -38,7 +38,7 @@ ms.locfileid: "43221115"
 
 ### <a name="parameters"></a>參數
 
-*運算式*  
+*運算式*<br/>
 一或多個 C 語言的運算式。 允許空白的引數位置。
 
 ## <a name="remarks"></a>備註
@@ -64,10 +64,10 @@ ms.locfileid: "43221115"
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
-[Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)  
-[參數屬性](../windows/parameter-attributes.md)  
-[first_is](../windows/first-is.md)  
-[max_is](../windows/max-is.md)  
-[length_is](../windows/length-is.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
+[Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[參數屬性](../windows/parameter-attributes.md)<br/>
+[first_is](../windows/first-is.md)<br/>
+[max_is](../windows/max-is.md)<br/>
+[length_is](../windows/length-is.md)<br/>
 [size_is](../windows/size-is.md)  

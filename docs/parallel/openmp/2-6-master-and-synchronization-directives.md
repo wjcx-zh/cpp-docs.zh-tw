@@ -1,5 +1,5 @@
 ---
-title: 2.6 主執行緒和同步處理指示詞 |Microsoft 文件
+title: 2.6 主執行緒和同步處理指示詞 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,24 +12,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3ce31abf56dac70a2a55ae09866d6de1bfedbbf
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 408f9340ac71b0e57996cdc0d1c3f87ed5dcfa79
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695427"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415235"
 ---
 # <a name="26-master-and-synchronization-directives"></a>2.6 主執行緒和同步處理指示詞
-下列各節說明：  
-  
--   **主要**建構。  
-  
--   **重大**建構。  
-  
--   **屏障**指示詞。  
-  
--   **不可部分完成**建構。  
-  
--   **排清**指示詞。  
-  
--   **排序**建構。
+
+下列各節說明：
+
+- **主要**建構。
+
+- **重要**建構。
+
+- **屏障**指示詞。
+
+- **不可部分完成**建構。
+
+- **排清**指示詞。
+
+- **排序**建構。

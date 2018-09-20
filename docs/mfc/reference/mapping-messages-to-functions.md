@@ -17,46 +17,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 962a86139b7fdf8afac08e04e7b42240603b4374
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bb37637cbfc2ec0af96ed339da6e71cf349797e2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335522"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402870"
 ---
 # <a name="mapping-messages-to-functions"></a>將訊息對應到函式
-[屬性] 視窗可讓您將繫結的訊息處理常式 （MFC 使用者介面類別的成員函式） 應用程式的資源所產生的訊息。 它們會使用[MFC 訊息對應](../../mfc/messages-and-commands-in-the-framework.md)建立繫結。  
-  
- 當您使用類別檢視 中建立衍生自其中一個架構類別的新類別時，它會自動放置一個完整且運作正常類別標頭 (.h) 和實作 (.cpp) 中您指定的檔案。  
-  
+
+[屬性] 視窗可讓您將繫結的訊息處理常式 （MFC 使用者介面類別的成員函式） 應用程式的資源所產生的訊息。 它們會使用[MFC 訊息對應](../../mfc/messages-and-commands-in-the-framework.md)建立繫結。
+
+當您使用類別檢視 中建立衍生自其中一個架構類別的新類別時，它會自動放置一個完整且運作正常類別標頭 (.h) 和實作 (.cpp) 中您指定的檔案。
+
 > [!NOTE]
->  若要加入的新類別，不會處理訊息，請直接在文字編輯器中建立的類別。  
-  
-### <a name="to-define-or-remove-a-message-handler-using-the-properties-window"></a>若要定義或使用 [屬性] 視窗的訊息處理常式中移除  
-  
-1.  在 [類別檢視] 中，按一下類別。  
-  
-2.  在 屬性 視窗中，按一下**訊息** 按鈕。  
-  
+>  若要加入的新類別，不會處理訊息，請直接在文字編輯器中建立的類別。
+
+### <a name="to-define-or-remove-a-message-handler-using-the-properties-window"></a>若要定義或使用 [屬性] 視窗的訊息處理常式中移除
+
+1. 在 [類別檢視] 中，按一下類別。
+
+1. 在 屬性 視窗中，按一下**訊息** 按鈕。
+
     > [!NOTE]
-    >  **訊息**按鈕時，使用您在 類別檢視 或 當您按一下 來源 視窗內選取的類別名稱。  
-  
-     如果您的專案有一則訊息的處理常式，處理常式的名稱就會出現在右邊的資料行旁邊的訊息。  
-  
-3.  如果訊息沒有處理常式，然後按一下右側的資料行中顯示建議的處理常式做為名稱的 [屬性] 視窗中的資料格\<加入 >*HandlerName*。 (例如，WM_TIMER 訊息處理常式會建議\<新增 >`OnTimer`)。  
-  
-4.  按一下建議名稱，新增函式的 Stub 程式碼。  
-  
-5.  若要編輯訊息處理常式，按兩下 [類別檢視] 中的訊息，並編輯 [來源] 視窗中的程式碼。  
-  
- 若要移除的訊息處理常式，請按兩下右欄中的處理常式，然後選取\<刪除 >*HandlerName*。 這會將函式的程式碼標記為註解。  
-  
-## <a name="see-also"></a>另請參閱  
- [MFC 訊息處理常式](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [新增類別](../../ide/adding-a-class-visual-cpp.md)   
- [成員函式](../../ide/adding-a-member-function-visual-cpp.md)   
- [成員變數](../../ide/adding-a-member-variable-visual-cpp.md)   
- [覆寫虛擬函式](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [加入對話方塊控制項的事件處理常式](../../windows/adding-event-handlers-for-dialog-box-controls.md)   
- [巡覽類別結構](../../ide/navigating-the-class-structure-visual-cpp.md)
+    >  **訊息**按鈕時，使用您在 類別檢視 或 當您按一下 來源 視窗內選取的類別名稱。
+
+     如果您的專案有一則訊息的處理常式，處理常式的名稱就會出現在右邊的資料行旁邊的訊息。
+
+1. 如果訊息沒有處理常式，然後按一下右側的資料行中顯示建議的處理常式做為名稱的 [屬性] 視窗中的資料格\<加入 >*HandlerName*。 (例如，WM_TIMER 訊息處理常式會建議\<新增 >`OnTimer`)。
+
+1. 按一下建議名稱，新增函式的 Stub 程式碼。
+
+1. 若要編輯訊息處理常式，按兩下 [類別檢視] 中的訊息，並編輯 [來源] 視窗中的程式碼。
+
+若要移除的訊息處理常式，請按兩下右欄中的處理常式，然後選取\<刪除 >*HandlerName*。 這會將函式的程式碼標記為註解。
+
+## <a name="see-also"></a>另請參閱
+
+[MFC 訊息處理常式](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
+[使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[加入類別](../../ide/adding-a-class-visual-cpp.md)<br/>
+[新增成員函式](../../ide/adding-a-member-function-visual-cpp.md)<br/>
+[新增成員變數](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[覆寫虛擬函式](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[新增對話方塊控制項的事件處理常式](../../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
+[巡覽類別結構](../../ide/navigating-the-class-structure-visual-cpp.md)

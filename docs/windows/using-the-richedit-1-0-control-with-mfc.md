@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27e3ad32500d1b0ff0efa2dab40888f163744bb1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 63bda924a91bb1f86494d844af037386d6e30292
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318703"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406343"
 ---
 # <a name="using-the-richedit-10-control-with-mfc"></a>將 RichEdit 1.0 控制項與 MFC 一起使用
 
@@ -35,5 +35,5 @@ MFC
 
 ## <a name="see-also"></a>另請參閱
 
-[對話方塊編輯器的疑難排解](../windows/troubleshooting-the-dialog-editor.md)  
+[對話方塊編輯器的疑難排解](../windows/troubleshooting-the-dialog-editor.md)<br/>
 [對話方塊編輯器](../windows/dialog-editor.md)

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c99b5640d2ea855ade7f3f39ba233b3e5ff2ef04
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: f1fbe498c5c255ec95772c9e75b6ce588ae4a4c3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318859"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401975"
 ---
 # <a name="moving-a-string-from-one-resource-file-to-another-c"></a>將字串從一個資源檔移到另一個 （c + +）
 
@@ -51,6 +51,6 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[字串編輯器](../windows/string-editor.md)  
-[資源檔](../windows/resource-files-visual-studio.md)  
+[字串編輯器](../windows/string-editor.md)<br/>
+[資源檔](../windows/resource-files-visual-studio.md)<br/>
 [自訂視窗版面配置](/visualstudio/ide/customizing-window-layouts-in-visual-studio)  

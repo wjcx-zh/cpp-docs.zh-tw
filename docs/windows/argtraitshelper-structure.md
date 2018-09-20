@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb0377de88ef5e782e0e11bc563409b7094eecf5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 314853b103d74bd7907fb665b806f386ed7bd44e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598680"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397464"
 ---
 # <a name="argtraitshelper-structure"></a>ArgTraitsHelper 結構
 
@@ -37,7 +37,7 @@ struct ArgTraitsHelper;
 
 ### <a name="parameters"></a>參數
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 委派的介面。
 
 ## <a name="remarks"></a>備註

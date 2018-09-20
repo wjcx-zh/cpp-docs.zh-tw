@@ -1,5 +1,5 @@
 ---
-title: 工具提示 |Microsoft 文件
+title: 工具提示 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9eab52d09e9910cb4cce92d487c26fdb90d5647
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f9169f0548bb58ffa063f3b3e947f16e877758e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380574"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439987"
 ---
 # <a name="tool-tips"></a>工具提示
-將工具提示加入至 windows 中所包含的控制項衍生自 MFC 類別的程序是相異[CFrameWnd](../mfc/reference/cframewnd-class.md)和 windows 不是衍生自`CFrameWnd`。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
- 視窗控制項的工具提示為：  
-  
--   [工具列工具提示 （衍生自 CFrameWnd）](../mfc/toolbar-tool-tips.md)  
-  
--   [非衍生自 cframewnd 之視窗中的工具提示](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)  
-  
-## <a name="see-also"></a>另請參閱  
- [使用者介面項目](../mfc/user-interface-elements-mfc.md)
+
+將工具提示加入至 windows 中所包含的控制項衍生自 MFC 類別不同的程序，都[CFrameWnd](../mfc/reference/cframewnd-class.md)和 windows 不是衍生自`CFrameWnd`。
+
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+
+視窗控制項的工具提示為：
+
+- [工具列工具提示 （衍生自 CFrameWnd）](../mfc/toolbar-tool-tips.md)
+
+- [不是衍生自 cframewnd 之 Windows 中的工具提示](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+
+## <a name="see-also"></a>另請參閱
+
+[使用者介面項目](../mfc/user-interface-elements-mfc.md)

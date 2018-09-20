@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 551ae176504e3bbbca034ca91894ef793ea268fd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5f15fcefe1a18156e4cbe8180138d7b6c1d944e2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584338"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398582"
 ---
 # <a name="includelib-c"></a>includelib (C++)
 
@@ -38,7 +38,7 @@ ms.locfileid: "42584338"
 
 ### <a name="parameters"></a>參數
 
-*name.idl*  
+*name.idl*<br/>
 您想要產生的.idl 檔案的一部分的.idl 檔案的名稱。
 
 ## <a name="remarks"></a>備註
@@ -63,7 +63,7 @@ ms.locfileid: "42584338"
 |||
 |-|-|
 |**適用於**|任何位置|
-|**可重複**|[是]|
+|**可重複**|是|
 |**必要屬性**|無|
 |**無效屬性**|無|
 
@@ -71,9 +71,9 @@ ms.locfileid: "42584338"
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
-[獨立屬性](../windows/stand-alone-attributes.md)  
-[import](../windows/import.md)  
-[importidl](../windows/importidl.md)  
-[include](../windows/include-cpp.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
+[獨立屬性](../windows/stand-alone-attributes.md)<br/>
+[import](../windows/import.md)<br/>
+[importidl](../windows/importidl.md)<br/>
+[include](../windows/include-cpp.md)<br/>
 [importlib](../windows/importlib.md)  

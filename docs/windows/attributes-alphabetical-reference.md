@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2353b952964ffe6b8078f688b4ac8e129d891d7
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 258875f488dd0d3460513ba285b894f114093077
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314676"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448216"
 ---
 # <a name="attributes-alphabetical-reference"></a>依字母順序排列的屬性參考
 
@@ -138,7 +138,7 @@ ms.locfileid: "44314676"
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 屬性參考](../windows/cpp-attributes-reference.md)  
-[概念](../windows/attributed-programming-concepts.md)  
-[依群組分類的屬性](../windows/attributes-by-group.md)  
+[C++ 屬性參考](../windows/cpp-attributes-reference.md)<br/>
+[概念](../windows/attributed-programming-concepts.md)<br/>
+[依群組分類的屬性](../windows/attributes-by-group.md)<br/>
 [依使用方式分類的屬性](../windows/attributes-by-usage.md)

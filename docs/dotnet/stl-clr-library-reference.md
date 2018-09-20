@@ -1,5 +1,5 @@
 ---
-title: STL/CLR 程式庫參考 |Microsoft 文件
+title: STL/CLR 程式庫參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,57 +17,60 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8cab573b0c1de57ef2629f662108098095b722eb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 78dc5c57ca000dfa03dba640c46cec16aaca133f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171818"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429470"
 ---
 # <a name="stlclr-library-reference"></a>STL/CLR 程式庫參考
-STL/CLR 程式庫是子集的 c + + 標準程式庫與 c + + 和.NET Framework common language runtime (CLR) 搭配使用的封裝。 STL/CLR，您可以使用所有的容器、 迭代器和受管理的環境中的標準程式庫的演算法。  
-  
- 若要使用 STL/CLR:  
-  
--   包含標頭從**cliext**包含子目錄，而不是一般的 c + + 標準程式庫對等項目。  
-  
--   程式庫以限定名稱`cliext::`而不是`std::`。  
-  
- 它會使用跨組件的.NET 組件的案例中的泛型類型和介面，公開 STL/CLR **Microsoft.VisualC.STLCLR.dll**。 這個 DLL 隨附於.NET Framework 3.5。 如果您轉散發使用 STL/CLR 的應用程式，您必須在包含.NET Framework 3.5，以及使用您的專案，安裝專案的相依性區段中的任何其他 Visual c + + 程式庫。  
-  
-## <a name="in-this-section"></a>本節內容  
- [cliext 命名空間](../dotnet/cliext-namespace.md)  
- 討論包含所有類型的 STL/CLR 程式庫的命名空間。  
-  
- [STL/CLR 容器](../dotnet/stl-clr-containers.md)  
- 提供 c + + 標準程式庫，包括容器項目、 可以插入的項目類型和擁有權問題需求中找到的容器的概觀。  
-  
- [STL/CLR 容器項目的需求](../dotnet/requirements-for-stl-clr-container-elements.md)  
- 描述 c + + 標準程式庫容器所插入的所有參考類型的最低需求。  
-  
- [如何：從 .NET 集合轉換為 STL/CLR 容器](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)  
- 描述如何將.NET 集合轉換為 STL/CLR 容器。  
-  
- [如何：從 STL/CLR 容器轉換為 .NET 集合](../dotnet/how-to-convert-from-a-stl-clr-container-to-a-dotnet-collection.md)  
- 描述如何將 STL/CLR 容器轉換為.NET 集合。  
-  
- [如何：從組件公開 STL/CLR 容器](../dotnet/how-to-expose-an-stl-clr-container-from-an-assembly.md)  
- 示範如何顯示 c + + 組件中撰寫的數個 STL/CLR 容器項目。  
-  
- 此外，本節也說明 STL/CLR 的下列元件：  
-  
-|||  
-|-|-|  
-|[adapter (STL/CLR)](../dotnet/adapter-stl-clr.md)|[algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)|  
-|[deque (STL/CLR)](../dotnet/deque-stl-clr.md)|[for each, in](../dotnet/for-each-in.md)|  
-|[functional (STL/CLR)](../dotnet/functional-stl-clr.md)|[hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)|  
-|[hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)|[hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)|  
-|[hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)|[list (STL/CLR)](../dotnet/list-stl-clr.md)|  
-|[map (STL/CLR)](../dotnet/map-stl-clr.md)|[multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)|  
-|[multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)|[numeric (STL/CLR)](../dotnet/numeric-stl-clr.md)|  
-|[priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)|[queue (STL/CLR)](../dotnet/queue-stl-clr.md)|  
-|[set (STL/CLR)](../dotnet/set-stl-clr.md)|[stack (STL/CLR)](../dotnet/stack-stl-clr.md)|  
-|[utility (STL/CLR)](../dotnet/utility-stl-clr.md)|[vector (STL/CLR)](../dotnet/vector-stl-clr.md)|  
-  
-## <a name="see-also"></a>另請參閱  
- [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)
+
+STL/CLR 程式庫是子集的 c + + 標準程式庫適用於 c + + 和.NET Framework common language runtime (CLR) 的封裝。 使用 STL/CLR，您可以使用所有容器、 迭代器及在受管理的環境中的標準程式庫演算法。
+
+若要使用 STL/CLR:
+
+- 包含標頭**cliext**包含子目錄，而不是一般的 c + + 標準程式庫對等項目。
+
+- 程式庫以限定名稱`cliext::`而不是`std::`。
+
+它會使用.NET 組件中的組件交叉案例中的泛型型別和介面，公開 STL/CLR **Microsoft.VisualC.STLCLR.dll**。 此 DLL 會隨附於.NET Framework 3.5 中。 如果您轉散發使用 STL/CLR 的應用程式，您必須包含.NET Framework 3.5 中，以及您的專案使用，安裝專案的相依性區段中的任何其他 Visual c + + 程式庫。
+
+## <a name="in-this-section"></a>本節內容
+
+[cliext 命名空間](../dotnet/cliext-namespace.md)<br/>
+討論包含 STL/CLR 程式庫的所有類型的命名空間。
+
+[STL/CLR 容器](../dotnet/stl-clr-containers.md)<br/>
+提供的容器，可在 c + + 標準程式庫，包括容器項目、 可插入的項目類型和擁有權問題需求的概觀。
+
+[STL/CLR 容器項目的需求](../dotnet/requirements-for-stl-clr-container-elements.md)<br/>
+描述會插入到 c + + 標準程式庫容器的所有參考類型的最低需求。
+
+[如何：從 .NET 集合轉換為 STL/CLR 容器](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)<br/>
+描述如何將.NET 集合轉換為 STL/CLR 容器。
+
+[如何：從 STL/CLR 容器轉換為 .NET 集合](../dotnet/how-to-convert-from-a-stl-clr-container-to-a-dotnet-collection.md)<br/>
+描述如何將 STL/CLR 容器轉換為.NET 集合。
+
+[如何：從組件公開 STL/CLR 容器](../dotnet/how-to-expose-an-stl-clr-container-from-an-assembly.md)<br/>
+示範如何顯示數個撰寫 c + + 組件中的 STL/CLR 容器項目。
+
+此外，本節也會說明下列 STL/CLR 元件：
+
+|||
+|-|-|
+|[adapter (STL/CLR)](../dotnet/adapter-stl-clr.md)|[algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)|
+|[deque (STL/CLR)](../dotnet/deque-stl-clr.md)|[for each, in](../dotnet/for-each-in.md)|
+|[functional (STL/CLR)](../dotnet/functional-stl-clr.md)|[hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)|
+|[hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)|[hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)|
+|[hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)|[list (STL/CLR)](../dotnet/list-stl-clr.md)|
+|[map (STL/CLR)](../dotnet/map-stl-clr.md)|[multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)|
+|[multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)|[numeric (STL/CLR)](../dotnet/numeric-stl-clr.md)|
+|[priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)|[queue (STL/CLR)](../dotnet/queue-stl-clr.md)|
+|[set (STL/CLR)](../dotnet/set-stl-clr.md)|[stack (STL/CLR)](../dotnet/stack-stl-clr.md)|
+|[utility (STL/CLR)](../dotnet/utility-stl-clr.md)|[vector (STL/CLR)](../dotnet/vector-stl-clr.md)|
+
+## <a name="see-also"></a>另請參閱
+
+[C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)

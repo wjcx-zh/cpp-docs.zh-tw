@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de318ab79638f63fae98856987340ad62534f695
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 723dbb3cec2281815c5733b8f2f0fff8f636a3a5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721341"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402560"
 ---
 # <a name="safeintsafeint"></a>SafeInt::SafeInt
 
@@ -85,6 +85,6 @@ U 中儲存的資料型別**SafeInt**。 這可以是布林值、 字元或整�
 
 ## <a name="see-also"></a>另請參閱
 
-[SafeInt 程式庫](../windows/safeint-library.md)  
-[SafeInt 類別](../windows/safeint-class.md)  
+[SafeInt 程式庫](../windows/safeint-library.md)<br/>
+[SafeInt 類別](../windows/safeint-class.md)<br/>
 [SafeIntException 類別](../windows/safeintexception-class.md)

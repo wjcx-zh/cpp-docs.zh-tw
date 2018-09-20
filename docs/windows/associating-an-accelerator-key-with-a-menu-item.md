@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 096658359ba46744a233d73bba52823dd9997841
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2f63a29e416a0b3331cdc9e5a2153435d765aaa0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315726"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407721"
 ---
 # <a name="associating-an-accelerator-key-with-a-menu-item-c"></a>建立快速鍵與功能表項目 （c + +） 的關聯
 
@@ -33,5 +33,5 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[快速鍵編輯器](../windows/accelerator-editor.md)  
+[快速鍵編輯器](../windows/accelerator-editor.md)<br/>
 [資源編輯器](../windows/resource-editors.md)

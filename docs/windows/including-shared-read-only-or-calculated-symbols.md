@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63da1f6ffb684cd2971808f4a56167e19f7bd347
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 329f1d21489b57130531db20014e249588f101a6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313399"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400506"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>包含共用 (唯讀) 或計算符號
 
@@ -82,7 +82,7 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[符號名稱限制](../windows/symbol-name-restrictions.md)  
-[符號值限制](../windows/symbol-value-restrictions.md)  
-[預先定義的符號識別碼](../windows/predefined-symbol-ids.md)  
+[符號名稱限制](../windows/symbol-name-restrictions.md)<br/>
+[符號值限制](../windows/symbol-value-restrictions.md)<br/>
+[預先定義的符號識別碼](../windows/predefined-symbol-ids.md)<br/>
 [符號：資源識別項](../windows/symbols-resource-identifiers.md)

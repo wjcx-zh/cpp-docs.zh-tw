@@ -1,5 +1,5 @@
 ---
-title: CObject 類別： 常見問題集 |Microsoft 文件
+title: CObject 類別： 常見問題集 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7487d8fdc016642e56a469d45c8063e764823ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 987ae71b556abea1279605f42f5c633083221554
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343563"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433941"
 ---
 # <a name="cobject-class-frequently-asked-questions"></a>CObject 類別：常見問題集
-本章節包含 `CObject` 類別的相關問題。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
-  
--   [必須從 CObject 衍生新類別嗎](do-i-have-to-derive-new-classes-from-cobject-q.md)  
-  
--   [成本多高我從 CObject 衍生類別](what-does-it-cost-me-to-derive-a-class-from-cobject-q.md)  
-  
-## <a name="see-also"></a>另請參閱  
- [使用 CObject](../mfc/using-cobject.md)
+
+本章節包含 `CObject` 類別的相關問題。
+
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+
+- [我必須從 CObject 衍生新類別嗎](do-i-have-to-derive-new-classes-from-cobject-q.md)
+
+- [有哪些花費我從 CObject 衍生類別](what-does-it-cost-me-to-derive-a-class-from-cobject-q.md)
+
+## <a name="see-also"></a>另請參閱
+
+[使用 CObject](../mfc/using-cobject.md)

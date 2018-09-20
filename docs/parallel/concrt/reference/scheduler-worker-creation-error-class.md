@@ -18,49 +18,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c81b62cee3a8c26b0d4ace61b8104f6eaee9db6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3d050ee426817c04518a41b515f30ac348bf7d86
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114380"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400168"
 ---
 # <a name="schedulerworkercreationerror-class"></a>scheduler_worker_creation_error 類別
-這個類別描述因為無法建立並行執行階段中的背景工作執行內容而擲回的例外狀況。  
-  
-## <a name="syntax"></a>語法  
-  
+
+這個類別描述因為無法建立並行執行階段中的背景工作執行內容而擲回的例外狀況。
+
+## <a name="syntax"></a>語法
+
 ```
 class scheduler_worker_creation_error : public scheduler_resource_allocation_error;
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[scheduler_worker_creation_error](#ctor)|多載。 建構 `scheduler_worker_creation_error` 物件。|  
-  
-## <a name="remarks"></a>備註  
- 這個例外狀況通常是在從並行執行階段內呼叫作業系統建立執行內容失敗時擲回。 執行內容是指在並行執行階段的工作中執行的執行緒。 通常會從呼叫 Win32 方法 `GetLastError` 傳回的錯誤碼會轉換成 `HRESULT` 類型的值，並且可以使用基底類別方法 `get_error_code` 擷取。  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `exception`  
-  
- [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md)  
-  
- `scheduler_worker_creation_error`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** concrt.h  
-  
- **命名空間：** concurrency  
-  
-##  <a name="ctor"></a> scheduler_worker_creation_error 
+```
 
- 建構 `scheduler_worker_creation_error` 物件。  
-  
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[scheduler_worker_creation_error](#ctor)|多載。 建構 `scheduler_worker_creation_error` 物件。|
+
+## <a name="remarks"></a>備註
+
+這個例外狀況通常是在從並行執行階段內呼叫作業系統建立執行內容失敗時擲回。 執行內容是指在並行執行階段的工作中執行的執行緒。 通常會從呼叫 Win32 方法 `GetLastError` 傳回的錯誤碼會轉換成 `HRESULT` 類型的值，並且可以使用基底類別方法 `get_error_code` 擷取。
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`exception`
+
+[scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md)
+
+`scheduler_worker_creation_error`
+
+## <a name="requirements"></a>需求
+
+**標頭：** concrt.h
+
+**命名空間：** concurrency
+
+##  <a name="ctor"></a> scheduler_worker_creation_error
+
+建構 `scheduler_worker_creation_error` 物件。
+
 ```
 scheduler_worker_creation_error(
     _In_z_ const char* _Message,
@@ -68,14 +72,16 @@ scheduler_worker_creation_error(
 
 explicit _CRTIMP scheduler_worker_creation_error(
     HRESULT _Hresult) throw();
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *訊息 （_m)*<br/>
-錯誤的描述性訊息。  
-  
+錯誤的描述性訊息。
+
 *_Hresult*<br/>
-`HRESULT`錯誤造成例外狀況的值。  
-  
-## <a name="see-also"></a>另請參閱  
- [concurrency 命名空間](concurrency-namespace.md)
+`HRESULT`錯誤造成例外狀況的值。
+
+## <a name="see-also"></a>另請參閱
+
+[concurrency 命名空間](concurrency-namespace.md)

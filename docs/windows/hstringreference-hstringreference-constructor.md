@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c13635f4b73ee34de11b8c18b0cdd9943b261a29
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6123f87abb9922a9736ac56f64d28e78887a0fdd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591181"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403566"
 ---
 # <a name="hstringreferencehstringreference-constructor"></a>HStringReference::HStringReference 建構函式
 
@@ -41,16 +41,16 @@ HStringReference(HStringReference&& other) throw();
 
 ### <a name="parameters"></a>參數
 
-*sizeDest*  
+*sizeDest*<br/>
 樣板參數，指定目的地的大小**HStringReference**緩衝區。
 
-*str*  
+*str*<br/>
 寬字元字串的參考。
 
-*Len*  
+*Len*<br/>
 最大長度*str*来使用這項作業中的參數緩衝區。 如果*len*參數未指定，整個*str*參數使用。 如果*len*大於*sizeDest*， *len*設定為*sizeDest*-1。
 
-*other*  
+*other*<br/>
 另一個**HStringReference**物件。
 
 ## <a name="remarks"></a>備註

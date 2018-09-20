@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dab76460dcbbb70f55dac864292ad9a6f1fca99
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a8b02b51dca4ae3712274b2b011c1967e5006637
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607816"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422398"
 ---
 # <a name="make-function"></a>Make 函式
 
@@ -174,61 +174,61 @@ ComPtr<T> Make();
 
 ### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 使用者指定的類別繼承自`WRL::RuntimeClass`。
 
-*TArg1*  
+*TArg1*<br/>
 傳遞至指定的執行階段類別的引數 1 的型別。
 
-*TArg2*  
+*TArg2*<br/>
 傳遞至指定的執行階段類別的引數 2 的型別。
 
-*TArg3*  
+*TArg3*<br/>
 傳遞至指定的執行階段類別的引數 3 的型別。
 
-*TArg4*  
+*TArg4*<br/>
 傳遞至指定的執行階段類別的引數 4 類型。
 
-*TArg5*  
+*TArg5*<br/>
 引數 5 傳遞至指定的執行階段類別的型別。
 
-*TArg6*  
+*TArg6*<br/>
 傳遞至指定的執行階段類別的引數 6 的型別。
 
-*TArg7*  
+*TArg7*<br/>
 引數 7 傳遞至指定的執行階段類別的型別。
 
-*TArg8*  
+*TArg8*<br/>
 引數 8 傳遞至指定的執行階段類別的型別。
 
-*TArg9*  
+*TArg9*<br/>
 引數 9 的傳遞至指定的執行階段類別的型別。
 
-*arg1*  
+*arg1*<br/>
 傳遞至指定的執行階段類別的引數 1。
 
-*Arg2*  
+*Arg2*<br/>
 傳遞至指定的執行階段類別的引數 2。
 
-*arg3*  
+*arg3*<br/>
 傳遞至指定的執行階段類別的引數 3。
 
-*arg4*  
+*arg4*<br/>
 傳遞至指定的執行階段類別的引數 4。
 
-*arg5*  
+*arg5*<br/>
 傳遞至指定的執行階段類別的引數 5。
 
-*arg6*  
+*arg6*<br/>
 傳遞至指定的執行階段類別的引數 6。
 
-*arg7*  
+*arg7*<br/>
 傳遞至指定的執行階段類別的引數 7。
 
-*arg8*  
+*arg8*<br/>
 傳遞至指定的執行階段類別的引數 8。
 
-*arg9*  
+*arg9*<br/>
 傳遞至指定的執行階段類別的引數 9。
 
 ## <a name="return-value"></a>傳回值

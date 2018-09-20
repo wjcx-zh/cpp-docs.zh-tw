@@ -15,14 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3245c761ab998ff55ebe1c616542df79f937e9d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2d6b2ff0b9b23e8e3a540cf7bbcd6ae55ebab13d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604540"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435372"
 ---
 # <a name="agileactivationfactory-class"></a>AgileActivationFactory 類別
+
 表示 apartment 友善啟用 factory 可實作[FtmBase](../windows/ftmbase-class.md)。
   
 ## <a name="syntax"></a>語法
@@ -38,10 +39,12 @@ class AgileActivationFactory :
 ```
   
 ## <a name="requirements"></a>需求
- **標頭：** module.h
+
+**標頭：** module.h
   
- **命名空間：** Microsoft::WRL
+**命名空間：** Microsoft::WRL
   
 ## <a name="see-also"></a>另請參閱
- [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)  
- [ActivationFactory 類別](../windows/activationfactory-class.md)
+
+[Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)<br/>
+[ActivationFactory 類別](../windows/activationfactory-class.md)

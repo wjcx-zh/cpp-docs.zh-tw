@@ -15,14 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad982ee72e93a2779e4f3334984a325514248565
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 02dd1b2cbe4d1da2364d884a0326cdc394bc16af
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315102"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444875"
 ---
 # <a name="attributes-by-group"></a>依群組分類的屬性
+
 C + + 屬性會組織成下列功能群組中。
   
 |屬性|描述|
@@ -32,10 +33,11 @@ C + + 屬性會組織成下列功能群組中。
 |[OLE DB 消費者屬性](../windows/ole-db-consumer-attributes.md)|插入程式碼，根據[OLE DB 消費者樣板](../data/oledb/ole-db-consumer-templates-reference.md)— 若要建立的工作 OLE DB 取用者會執行工作，例如開啟資料表，執行命令，以及存取資料。|
 |[編譯器屬性](../windows/compiler-attributes.md)|Visual c + + 編譯器所提供。|
   
- 如需有關如何定義您的.NET Framework 應用程式的自訂屬性的資訊，請參閱[User-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md)。
+如需有關如何定義您的.NET Framework 應用程式的自訂屬性的資訊，請參閱[User-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md)。
   
 ## <a name="see-also"></a>另請參閱
- [C++ 屬性參考](../windows/cpp-attributes-reference.md)  
- [概念](../windows/attributed-programming-concepts.md)  
- [依使用方式分類的屬性](../windows/attributes-by-usage.md)  
- [依字母順序排列的屬性參考](../windows/attributes-alphabetical-reference.md)
+
+[C++ 屬性參考](../windows/cpp-attributes-reference.md)<br/>
+[概念](../windows/attributed-programming-concepts.md)<br/>
+[依使用方式分類的屬性](../windows/attributes-by-usage.md)<br/>
+[依字母順序排列的屬性參考](../windows/attributes-alphabetical-reference.md)

@@ -18,19 +18,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b43bd125c43a11703f020951464fdf97f0ab374c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 258a3ee579eca0262dace6d1e69a3b5daf9024f6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215020"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409034"
 ---
 # <a name="processing-tab-control-notification-messages"></a>處理索引標籤控制項通知訊息
-當使用者按一下索引標籤或按鈕，在索引標籤控制項 ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) 會傳送通知訊息至其父視窗。 如果您想要執行動作以作為回應，請處理這些訊息。 比方說，當使用者按一下索引標籤，您可能想要預設之前顯示此頁面上的控制項資料。  
-  
- 從您的檢視或對話方塊類別中的索引標籤控制項的處理 WM_NOTIFY 訊息。 使用 [屬性] 視窗來建立[OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify)一個 switch 陳述式的處理常式函式，根據正在處理的通知訊息。 如需索引標籤控制項可以傳送至其父視窗的通知，請參閱**通知**一節[索引標籤控制項參考](https://msdn.microsoft.com/library/windows/desktop/bb760548)Windows SDK 中。  
-  
-## <a name="see-also"></a>另請參閱  
- [使用 CTabCtrl](../mfc/using-ctabctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+
+當使用者按一下索引標籤或按鈕，在索引標籤控制項 ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) 會傳送通知訊息至其父視窗。 如果您想要執行動作以作為回應，請處理這些訊息。 比方說，當使用者按一下索引標籤，您可能想要預設之前顯示此頁面上的控制項資料。
+
+從您的檢視或對話方塊類別中的索引標籤控制項的處理 WM_NOTIFY 訊息。 使用 [屬性] 視窗來建立[OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify)一個 switch 陳述式的處理常式函式，根據正在處理的通知訊息。 如需索引標籤控制項可以傳送至其父視窗的通知，請參閱**通知**一節[索引標籤控制項參考](https://msdn.microsoft.com/library/windows/desktop/bb760548)Windows SDK 中。
+
+## <a name="see-also"></a>另請參閱
+
+[使用 CTabCtrl](../mfc/using-ctabctrl.md)<br/>
+[控制項](../mfc/controls-mfc.md)
 

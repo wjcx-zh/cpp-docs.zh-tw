@@ -16,46 +16,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39f45b9c81d5339b2b6afe4c77fdc9bac6b5d731
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9612eefaf2b5706a4034dc027c0fc43618fd048a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46091162"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436854"
 ---
 # <a name="ompnumthreads"></a>OMP_NUM_THREADS
-在平行區域中，設定執行緒數目上限，但覆寫[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)或是[num_threads](../../../parallel/openmp/reference/num-threads.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-set OMP_NUM_THREADS[=num]  
-```  
-  
+
+在平行區域中，設定執行緒數目上限，但覆寫[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)或是[num_threads](../../../parallel/openmp/reference/num-threads.md)。
+
+## <a name="syntax"></a>語法
+
+```
+set OMP_NUM_THREADS[=num]
+```
+
 ### <a name="parameters"></a>參數
-  
+
 *num*<br/>
-您想要在平行區域中，最多 64 Visual c + + 實作中的執行緒最大數目。  
-  
-## <a name="remarks"></a>備註  
- **OMP_NUM_THREADS**環境變數可以覆寫[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)函式或由[num_threads](../../../parallel/openmp/reference/num-threads.md)。  
-  
- 預設值`num`Visual c + + 中實作的 OpenMP 標準是虛擬處理器，包括超執行緒 Cpu 數目。  
-  
- 如需詳細資訊，請參閱 < [4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md)。  
-  
-## <a name="example"></a>範例  
- 下列命令**OMP_NUM_THREADS**為 16 的環境變數：  
-  
-```  
-set OMP_NUM_THREADS=16  
-```  
-  
- 下列命令會顯示目前的設定**OMP_NUM_THREADS**環境變數：  
-  
-```  
-set OMP_NUM_THREADS  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [環境變數](../../../parallel/openmp/reference/openmp-environment-variables.md)
+您想要在平行區域中，最多 64 Visual c + + 實作中的執行緒最大數目。
+
+## <a name="remarks"></a>備註
+
+**OMP_NUM_THREADS**環境變數可以覆寫[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)函式或由[num_threads](../../../parallel/openmp/reference/num-threads.md)。
+
+預設值`num`Visual c + + 中實作的 OpenMP 標準是虛擬處理器，包括超執行緒 Cpu 數目。
+
+如需詳細資訊，請參閱 < [4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md)。
+
+## <a name="example"></a>範例
+
+下列命令**OMP_NUM_THREADS**為 16 的環境變數：
+
+```
+set OMP_NUM_THREADS=16
+```
+
+下列命令會顯示目前的設定**OMP_NUM_THREADS**環境變數：
+
+```
+set OMP_NUM_THREADS
+```
+
+## <a name="see-also"></a>另請參閱
+
+[環境變數](../../../parallel/openmp/reference/openmp-environment-variables.md)

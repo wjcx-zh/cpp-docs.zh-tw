@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c12357acf3369192248784fc6593c9b5b91b863
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 61105469abc25de38d0d9ae9a59755e08fd298b6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316779"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438635"
 ---
 # <a name="how-to-create-a-resource"></a>如何：建立資源
 
@@ -68,6 +68,6 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[資源檔](../windows/resource-files-visual-studio.md)  
-[資源編輯器](../windows/resource-editors.md)  
+[資源檔](../windows/resource-files-visual-studio.md)<br/>
+[資源編輯器](../windows/resource-editors.md)<br/>
 [新增資源對話方塊](../windows/add-resource-dialog-box.md)

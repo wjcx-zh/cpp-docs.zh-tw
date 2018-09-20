@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99c5d961f3e25e17506e25148260b6966152af44
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f5afaa14d926cc7dde86cdbdb6b5ca8162f81d7c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596118"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402144"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory 函式
 
@@ -42,13 +42,13 @@ inline HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 樣板參數，指定啟用 factory 的類型。
 
-*activatableClassId*  
+*activatableClassId*<br/>
 啟用處理站可以產生的類別名稱。
 
-*處理站*  
+*處理站*<br/>
 這項作業完成時，參考型別的啟動處理站*T*。
 
 ## <a name="return-value"></a>傳回值

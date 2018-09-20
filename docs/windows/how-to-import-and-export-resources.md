@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a6b975b932545d62b62db0b44bad549a3570a602
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: e2fcbd51e472614104cd74df4bf5697512a2e0df
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318547"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419423"
 ---
 # <a name="how-to-import-and-export-resources"></a>如何：匯入和匯出資源
 
@@ -70,5 +70,5 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[資源檔](../windows/resource-files-visual-studio.md)  
+[資源檔](../windows/resource-files-visual-studio.md)<br/>
 [資源編輯器](../windows/resource-editors.md)

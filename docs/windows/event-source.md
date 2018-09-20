@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6fc8d8100786f78d516bb5f880e4238b7e3a2388
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d2dfcf61ced958519e7255bd241d3c0ea911824e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611860"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408917"
 ---
 # <a name="eventsource"></a>event_source
 
@@ -45,7 +45,7 @@ ms.locfileid: "42611860"
 
 ### <a name="parameters"></a>參數
 
-*type*  
+*type*<br/>
 下列其中一個值的列舉：
 
 - Unmanaged C/C++ 程式碼的`native` (Unmanaged 類別的預設值)。
@@ -58,10 +58,10 @@ ms.locfileid: "42611860"
     #include <atlcom.h>
     ```
 
-*optimize*  
+*optimize*<br/>
 當*型別*是`native`，您可以指定`optimize=size`，以表示有 4 個位元組的儲存體 （最小值） 的所有事件類別中或`optimize=speed`（預設值） 表示會有 4 * （事件的數目） 個位元組的儲存體。
 
-*裝飾*  
+*裝飾*<br/>
 當*型別*是`native`，您可以指定`decorate=false`，以表示合併 (.mrg) 檔案中的展開的名稱不應該包含封入類別名稱。 [/Fx](../build/reference/fx-merge-injected-code.md) 可讓您產生 .mrg 檔案。 `decorate=false`其中是預設值、 產生合併檔案中的完整類型名稱。
 
 ## <a name="remarks"></a>備註
@@ -88,9 +88,9 @@ ms.locfileid: "42611860"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器屬性](../windows/compiler-attributes.md)  
-[event_receiver](../windows/event-receiver.md)  
-[__event](../cpp/event.md)  
-[__hook](../cpp/hook.md)  
-[__unhook](../cpp/unhook.md)  
+[編譯器屬性](../windows/compiler-attributes.md)<br/>
+[event_receiver](../windows/event-receiver.md)<br/>
+[__event](../cpp/event.md)<br/>
+[__hook](../cpp/hook.md)<br/>
+[__unhook](../cpp/unhook.md)<br/>
 [類別屬性](../windows/class-attributes.md)  

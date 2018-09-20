@@ -16,42 +16,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 078d4b01d2c797fa11c3603c79a341f75e11f18c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 118fa1eb75e8b943b6b490c158e5e21522d57e6c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46115472"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441326"
 ---
 # <a name="shared-openmp"></a>shared (OpenMP)
-指定一或多個變數，應該在所有執行緒之間共用。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-shared(var)  
-```  
-  
+
+指定一或多個變數，應該在所有執行緒之間共用。
+
+## <a name="syntax"></a>語法
+
+```
+shared(var)
+```
+
 ### <a name="parameters"></a>參數
-  
+
 *var*<br/>
-若要共用的一或多個變數。 如果指定多個變數，請以逗號分隔變數名稱。  
-  
-## <a name="remarks"></a>備註  
- 共用變數，在執行緒之間的另一個方法是使用[copyprivate](../../../parallel/openmp/reference/copyprivate.md)子句。  
-  
- `shared` 適用於下列指示詞：  
-  
--   [for](../../../parallel/openmp/reference/for-openmp.md)  
-  
--   [parallel](../../../parallel/openmp/reference/parallel.md)  
-  
--   [區段](../../../parallel/openmp/reference/sections-openmp.md)  
-  
- 如需詳細資訊，請參閱 < [2.7.2.4 共用](../../../parallel/openmp/2-7-2-4-shared.md)。  
-  
-## <a name="example"></a>範例  
- 請參閱[私人](../../../parallel/openmp/reference/private-openmp.md)如需使用的範例`shared`。  
-  
-## <a name="see-also"></a>另請參閱  
- [子句](../../../parallel/openmp/reference/openmp-clauses.md)
+若要共用的一或多個變數。 如果指定多個變數，請以逗號分隔變數名稱。
+
+## <a name="remarks"></a>備註
+
+共用變數，在執行緒之間的另一個方法是使用[copyprivate](../../../parallel/openmp/reference/copyprivate.md)子句。
+
+`shared` 適用於下列指示詞：
+
+- [for](../../../parallel/openmp/reference/for-openmp.md)
+
+- [parallel](../../../parallel/openmp/reference/parallel.md)
+
+- [區段](../../../parallel/openmp/reference/sections-openmp.md)
+
+如需詳細資訊，請參閱 < [2.7.2.4 共用](../../../parallel/openmp/2-7-2-4-shared.md)。
+
+## <a name="example"></a>範例
+
+請參閱[私人](../../../parallel/openmp/reference/private-openmp.md)如需使用的範例`shared`。
+
+## <a name="see-also"></a>另請參閱
+
+[子句](../../../parallel/openmp/reference/openmp-clauses.md)

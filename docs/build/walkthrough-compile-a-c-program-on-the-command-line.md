@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f1390259838302a56e58397afa79fa8c458b939
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2da1b645e85542631ce3e656ccaebdfbccf01137
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710329"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397893"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>逐步解說： 編譯 C 程式中，在命令列上
 
@@ -169,7 +169,7 @@ Visual c + + C 編譯器是通常相容於 ISO C99 標準，但不是會完全�
 
 ## <a name="see-also"></a>另請參閱
 
-[逐步解說： 建立標準的 c + + 程式 （c + +）](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)
+[逐步解說：建立標準 C++ 程式 (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
 [C 語言參考](../c-language/c-language-reference.md)<br/>
 [建置 C/C++ 程式](../build/building-c-cpp-programs.md)<br/>
 [相容性](../c-runtime-library/compatibility.md)

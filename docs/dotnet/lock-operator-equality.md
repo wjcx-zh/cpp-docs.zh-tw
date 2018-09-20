@@ -20,60 +20,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 38cefb80b1c4c6969cba976c30383c1499a4968d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f60cf71305731391d03763810775eaf7f8e5fd7e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46048886"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411530"
 ---
 # <a name="lockoperator"></a>lock::operator==
-等號比較運算子。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-template<class T> bool operator==(  
-   T t  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
+
+等號比較運算子。
+
+## <a name="syntax"></a>語法
+
+```
+template<class T> bool operator==(
+   T t
+);
+```
+
+#### <a name="parameters"></a>參數
+
 *t*<br/>
-要比較相等的物件。  
-  
-## <a name="return-value"></a>傳回值  
- 傳回`true`如果`t`等同於鎖定的物件，`false`否則。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// msl_lock_op_eq.cpp  
-// compile with: /clr  
-#include <msclr/lock.h>  
-  
-using namespace System;  
-using namespace System::Threading;  
-using namespace msclr;  
-  
-int main () {  
-   Object^ o1 = gcnew Object;  
-   lock l1(o1);  
-   if (l1 == o1) {  
-      Console::WriteLine("Equal!");  
-   }  
-}  
-```  
-  
-```Output  
-Equal!  
-```  
-  
-## <a name="requirements"></a>需求  
- **標頭檔** \<msclr\lock.h >  
-  
- **命名空間**msclr  
-  
-## <a name="see-also"></a>另請參閱  
- [lock 成員](../dotnet/lock-members.md)   
- [lock::operator!=](../dotnet/lock-operator-inequality.md)
+要比較相等的物件。
+
+## <a name="return-value"></a>傳回值
+
+傳回`true`如果`t`等同於鎖定的物件，`false`否則。
+
+## <a name="example"></a>範例
+
+```
+// msl_lock_op_eq.cpp
+// compile with: /clr
+#include <msclr/lock.h>
+
+using namespace System;
+using namespace System::Threading;
+using namespace msclr;
+
+int main () {
+   Object^ o1 = gcnew Object;
+   lock l1(o1);
+   if (l1 == o1) {
+      Console::WriteLine("Equal!");
+   }
+}
+```
+
+```Output
+Equal!
+```
+
+## <a name="requirements"></a>需求
+
+**標頭檔** \<msclr\lock.h >
+
+**命名空間**msclr
+
+## <a name="see-also"></a>另請參閱
+
+[lock 成員](../dotnet/lock-members.md)<br/>
+[lock::operator!=](../dotnet/lock-operator-inequality.md)

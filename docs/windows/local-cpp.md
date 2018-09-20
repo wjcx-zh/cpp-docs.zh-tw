@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b910ce2416dc345e2a36c9858f260ef5b42c2cc8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d0b45106609c4bc93684e0d89737bb0753e36fb4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203318"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421085"
 ---
 # <a name="local-c"></a>local (C++)
 
@@ -57,7 +57,7 @@ ms.locfileid: "43203318"
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
-[介面屬性](../windows/interface-attributes.md)  
-[方法屬性](../windows/method-attributes.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
+[介面屬性](../windows/interface-attributes.md)<br/>
+[方法屬性](../windows/method-attributes.md)<br/>
 [call_as](../windows/call-as.md)  

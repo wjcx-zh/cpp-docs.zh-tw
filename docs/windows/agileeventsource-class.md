@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8efebf67d87decef1fb6e53f2efa42acc9ac487c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4f8ef724c78bdc61ef470199fbb5e956e374493f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068516"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405238"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource 類別
 
@@ -83,10 +83,10 @@ HRESULT Add(
 
 ### <a name="parameters"></a>參數
 
-*delegateInterface*  
+*delegateInterface*<br/>
 要委派物件，代表事件處理常式的介面。
 
-*語彙基元*  
+*語彙基元*<br/>
 這項作業完成時，代表事件的控制代碼。 使用此權杖做為參數`Remove()`捨棄的事件處理常式的方法。
 
 ### <a name="return-value"></a>傳回值

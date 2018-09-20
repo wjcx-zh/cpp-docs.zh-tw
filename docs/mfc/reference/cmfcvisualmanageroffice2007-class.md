@@ -240,2171 +240,2230 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ed2a1b24269adb197d9e13d5ae39f25128a414a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 68cee93835ccbd32ac017aec7b736d5d64807b00
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716588"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448492"
 ---
 # <a name="cmfcvisualmanageroffice2007-class"></a>CMFCVisualManagerOffice2007 類別
-`CMFCVisualManagerOffice2007` 為應用程式提供 Microsoft Office 2007 的外觀。 
 
-如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CMFCVisualManagerOffice2007::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)||  
-|[CMFCVisualManagerOffice2007::CleanStyle](#cleanstyle)||  
-|[CMFCVisualManagerOffice2007::GetCaptionBarTextColor](#getcaptionbartextcolor)||  
-|[CMFCVisualManagerOffice2007::GetHighlightedMenuItemTextColor](#gethighlightedmenuitemtextcolor)||  
-|[CMFCVisualManagerOffice2007::GetMenuItemTextColor](#getmenuitemtextcolor)||  
-|[CMFCVisualManagerOffice2007::GetNcBtnSize](#getncbtnsize)||  
-|[CMFCVisualManagerOffice2007::GetRibbonBar](#getribbonbar)||  
-|[CMFCVisualManagerOffice2007::GetRibbonHyperlinkTextColor](#getribbonhyperlinktextcolor)||  
-|[CMFCVisualManagerOffice2007::GetRibbonPopupBorderSize](#getribbonpopupbordersize)||  
-|[CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarChevronOffset](#getribbonquickaccesstoolbarchevronoffset)||  
-|[CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarRightMargin](#getribbonquickaccesstoolbarrightmargin)||  
-|[CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarTextColor](#getribbonquickaccesstoolbartextcolor)||  
-|[CMFCVisualManagerOffice2007::GetRibbonStatusBarTextColor](#getribbonstatusbartextcolor)||  
-|[CMFCVisualManagerOffice2007::GetShowAllMenuItemsHeight](#getshowallmenuitemsheight)||  
-|[CMFCVisualManagerOffice2007::GetStatusBarPaneTextColor](#getstatusbarpanetextcolor)||  
-|`CMFCVisualManagerOffice2007::GetStyle`|傳回目前的色彩配置的`CMFCVisualManagerOffice2007`可以依次，模擬 Microsoft Office 2007 GUI 的 GUI。|  
-|[CMFCVisualManagerOffice2007::GetTabFrameColors](#gettabframecolors)||  
-|[CMFCVisualManagerOffice2007::GetTabHorzMargin](#gettabhorzmargin)||  
-|[CMFCVisualManagerOffice2007::GetTabTextColor](#gettabtextcolor)||  
-|[CMFCVisualManagerOffice2007::GetToolbarButtonTextColor](#gettoolbarbuttontextcolor)||  
-|[CMFCVisualManagerOffice2007::GetToolbarDisabledTextColor](#gettoolbardisabledtextcolor)||  
-|[CMFCVisualManagerOffice2007::GetToolTipInfo](#gettooltipinfo)||  
-|[CMFCVisualManagerOffice2007::IsHighlightWholeMenuItem](#ishighlightwholemenuitem)||  
-|[CMFCVisualManagerOffice2007::IsLayeredRibbonKeyTip](#islayeredribbonkeytip)||  
-|[CMFCVisualManagerOffice2007::IsOwnerDrawCaption](#isownerdrawcaption)||  
-|[CMFCVisualManagerOffice2007::IsOwnerDrawMenuCheck](#isownerdrawmenucheck)||  
-|[CMFCVisualManagerOffice2007::IsRibbonPresent](#isribbonpresent)||  
-|[CMFCVisualManagerOffice2007::OnDrawBarGripper](#ondrawbargripper)||  
-|[CMFCVisualManagerOffice2007::OnDrawButtonBorder](#ondrawbuttonborder)||  
-|[CMFCVisualManagerOffice2007::OnDrawButtonSeparator](#ondrawbuttonseparator)||  
-|[CMFCVisualManagerOffice2007::OnDrawCaptionBarInfoArea](#ondrawcaptionbarinfoarea)||  
-|[CMFCVisualManagerOffice2007::OnDrawCheckBoxEx](#ondrawcheckboxex)||  
-|[CMFCVisualManagerOffice2007::OnDrawComboBorder](#ondrawcomboborder)||  
-|[CMFCVisualManagerOffice2007::OnDrawComboDropButton](#ondrawcombodropbutton)||  
-|[CMFCVisualManagerOffice2007::OnDrawDefaultRibbonImage](#ondrawdefaultribbonimage)||  
-|[CMFCVisualManagerOffice2007::OnDrawEditBorder](#ondraweditborder)||  
-|[CMFCVisualManagerOffice2007::OnDrawFloatingToolbarBorder](#ondrawfloatingtoolbarborder)||  
-|[CMFCVisualManagerOffice2007::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)||  
-|[CMFCVisualManagerOffice2007::OnDrawMenuBorder](#ondrawmenuborder)||  
-|[CMFCVisualManagerOffice2007::OnDrawMenuCheck](#ondrawmenucheck)||  
-|[CMFCVisualManagerOffice2007::OnDrawMenuItemButton](#ondrawmenuitembutton)||  
-|[CMFCVisualManagerOffice2007::OnDrawMenuLabel](#ondrawmenulabel)||  
-|[CMFCVisualManagerOffice2007::OnDrawMenuResizeBar](#ondrawmenuresizebar)||  
-|[CMFCVisualManagerOffice2007::OnDrawMenuScrollButton](#ondrawmenuscrollbutton)||  
-|[CMFCVisualManagerOffice2007::OnDrawMenuSystemButton](#ondrawmenusystembutton)||  
-|[CMFCVisualManagerOffice2007::OnDrawMiniFrameBorder](#ondrawminiframeborder)||  
-|[CMFCVisualManagerOffice2007::OnDrawOutlookBarSplitter](#ondrawoutlookbarsplitter)||  
-|[CMFCVisualManagerOffice2007::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)||  
-|[CMFCVisualManagerOffice2007::OnDrawPaneCaption](#ondrawpanecaption)||  
-|[CMFCVisualManagerOffice2007::OnDrawPopupWindowCaption](#ondrawpopupwindowcaption)||  
-|[CMFCVisualManagerOffice2007::OnDrawPropertySheetListItem](#ondrawpropertysheetlistitem)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonApplicationButton](#ondrawribbonapplicationbutton)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonButtonBorder](#ondrawribbonbuttonborder)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonButtonsGroup](#ondrawribbonbuttonsgroup)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonCaption](#ondrawribboncaption)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonCaptionButton](#ondrawribboncaptionbutton)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonCategory](#ondrawribboncategory)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonCategoryCaption](#ondrawribboncategorycaption)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonCategoryScroll](#ondrawribboncategoryscroll)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonCategoryTab](#ondrawribboncategorytab)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonCheckBoxOnList](#ondrawribboncheckboxonlist)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButton](#ondrawribbondefaultpanebutton)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButtonIndicator](#ondrawribbondefaultpanebuttonindicator)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonGalleryBorder](#ondrawribbongalleryborder)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonGalleryButton](#ondrawribbongallerybutton)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonKeyTip](#ondrawribbonkeytip)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelButtonBorder](#ondrawribbonmainpanelbuttonborder)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelFrame](#ondrawribbonmainpanelframe)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonMenuCheckFrame](#ondrawribbonmenucheckframe)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonPanel](#ondrawribbonpanel)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonPanelCaption](#ondrawribbonpanelcaption)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonProgressBar](#ondrawribbonprogressbar)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonRecentFilesFrame](#ondrawribbonrecentfilesframe)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonSliderChannel](#ondrawribbonsliderchannel)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonSliderThumb](#ondrawribbonsliderthumb)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonSliderZoomButton](#ondrawribbonsliderzoombutton)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonStatusBarPane](#ondrawribbonstatusbarpane)||  
-|[CMFCVisualManagerOffice2007::OnDrawRibbonTabsFrame](#ondrawribbontabsframe)||  
-|[CMFCVisualManagerOffice2007::OnDrawScrollButtons](#ondrawscrollbuttons)||  
-|[CMFCVisualManagerOffice2007::OnDrawSeparator](#ondrawseparator)||  
-|[CMFCVisualManagerOffice2007::OnDrawShowAllMenuItems](#ondrawshowallmenuitems)||  
-|[CMFCVisualManagerOffice2007::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)||  
-|[CMFCVisualManagerOffice2007::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)||  
-|[CMFCVisualManagerOffice2007::OnDrawTab](#ondrawtab)||  
-|[CMFCVisualManagerOffice2007::OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)||  
-|[CMFCVisualManagerOffice2007::OnDrawTask](#ondrawtask)||  
-|[CMFCVisualManagerOffice2007::OnDrawTasksGroupCaption](#ondrawtasksgroupcaption)||  
-|[CMFCVisualManagerOffice2007::OnDrawTearOffCaption](#ondrawtearoffcaption)||  
-|[CMFCVisualManagerOffice2007::OnEraseMDIClientArea](#onerasemdiclientarea)||  
-|[CMFCVisualManagerOffice2007::OnEraseTabsArea](#onerasetabsarea)||  
-|[CMFCVisualManagerOffice2007::OnEraseTabsButton](#onerasetabsbutton)||  
-|[CMFCVisualManagerOffice2007::OnEraseTabsFrame](#onerasetabsframe)||  
-|[CMFCVisualManagerOffice2007::OnFillBarBackground](#onfillbarbackground)||  
-|[CMFCVisualManagerOffice2007::OnFillButtonInterior](#onfillbuttoninterior)||  
-|[CMFCVisualManagerOffice2007::OnFillCaptionBarButton](#onfillcaptionbarbutton)||  
-|[CMFCVisualManagerOffice2007::OnFillHighlightedArea](#onfillhighlightedarea)||  
-|[CMFCVisualManagerOffice2007::OnFillMiniFrameCaption](#onfillminiframecaption)||  
-|[CMFCVisualManagerOffice2007::OnFillOutlookBarCaption](#onfilloutlookbarcaption)||  
-|[CMFCVisualManagerOffice2007::OnFillOutlookPageButton](#onfilloutlookpagebutton)||  
-|[CMFCVisualManagerOffice2007::OnFillPopupWindowBackground](#onfillpopupwindowbackground)||  
-|[CMFCVisualManagerOffice2007::OnFillRibbonButton](#onfillribbonbutton)||  
-|[CMFCVisualManagerOffice2007::OnFillRibbonEdit](#onfillribbonedit)||  
-|[CMFCVisualManagerOffice2007::OnFillRibbonMainPanelButton](#onfillribbonmainpanelbutton)||  
-|[CMFCVisualManagerOffice2007::OnFillRibbonMenuFrame](#onfillribbonmenuframe)||  
-|[CMFCVisualManagerOffice2007::OnFillRibbonQuickAccessToolBarPopup](#onfillribbonquickaccesstoolbarpopup)||  
-|[CMFCVisualManagerOffice2007::OnFillTab](#onfilltab)||  
-|[CMFCVisualManagerOffice2007::OnHighlightMenuItem](#onhighlightmenuitem)||  
-|[CMFCVisualManagerOffice2007::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)||  
-|[CMFCVisualManagerOffice2007::OnNcActivate](#onncactivate)||  
-|[CMFCVisualManagerOffice2007::OnNcPaint](#onncpaint)||  
-|[CMFCVisualManagerOffice2007::OnSetWindowRegion](#onsetwindowregion)||  
-|[CMFCVisualManagerOffice2007::OnUpdateSystemColors](#onupdatesystemcolors)||  
-|[CMFCVisualManagerOffice2007::SetResourceHandle](#setresourcehandle)||  
-|`CMFCVisualManagerOffice2007::SetStyle`|設定的色彩配置`CMFCVisualManagerOffice2007`GUI。|  
-  
-## <a name="remarks"></a>備註  
- 使用`CMFCVisualManagerOffice2007`若要變更您的應用程式類似，Microsoft Office 2007 的視覺外觀。 此視覺管理員會要求您設定樣式，才能使用它。 您傳遞到這個視覺管理員才能`CMFCVisualManager::SetDefaultManager`，您必須呼叫此靜態函式`CMFCVisualManagerOffice2007::SetStyle`。  
-  
-## <a name="example"></a>範例  
- 下列範例示範如何使用 Office 2007 的視覺管理員。 此程式碼片段是一部分[桌面警示示範範例](../../visual-cpp-samples.md)。  
-  
- [!code-cpp[NVC_MFC_DesktopAlertDemo#7](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2007-class_1.cpp)]  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)  
-  
- [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)  
-  
- [CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)  
-  
- [CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)  
-  
- [CMFCVisualManagerOffice2007](../../mfc/reference/cmfcvisualmanageroffice2007-class.md)  
-  
-## <a name="requirements"></a>需求  
- **標頭：** afxvisualmanageroffice2007.h  
-  
-##  <a name="alwayshighlight3dtabs"></a>  CMFCVisualManagerOffice2007::AlwaysHighlight3DTabs  
+`CMFCVisualManagerOffice2007` 為應用程式提供 Microsoft Office 2007 的外觀。
 
-  
-```  
-virtual BOOL AlwaysHighlight3DTabs() const;  
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="cleanstyle"></a>  CMFCVisualManagerOffice2007::CleanStyle  
+如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
 
-  
-```  
+## <a name="syntax"></a>語法
+
+```
+class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[CMFCVisualManagerOffice2007::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)||
+|[CMFCVisualManagerOffice2007::CleanStyle](#cleanstyle)||
+|[CMFCVisualManagerOffice2007::GetCaptionBarTextColor](#getcaptionbartextcolor)||
+|[CMFCVisualManagerOffice2007::GetHighlightedMenuItemTextColor](#gethighlightedmenuitemtextcolor)||
+|[CMFCVisualManagerOffice2007::GetMenuItemTextColor](#getmenuitemtextcolor)||
+|[CMFCVisualManagerOffice2007::GetNcBtnSize](#getncbtnsize)||
+|[CMFCVisualManagerOffice2007::GetRibbonBar](#getribbonbar)||
+|[CMFCVisualManagerOffice2007::GetRibbonHyperlinkTextColor](#getribbonhyperlinktextcolor)||
+|[CMFCVisualManagerOffice2007::GetRibbonPopupBorderSize](#getribbonpopupbordersize)||
+|[CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarChevronOffset](#getribbonquickaccesstoolbarchevronoffset)||
+|[CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarRightMargin](#getribbonquickaccesstoolbarrightmargin)||
+|[CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarTextColor](#getribbonquickaccesstoolbartextcolor)||
+|[CMFCVisualManagerOffice2007::GetRibbonStatusBarTextColor](#getribbonstatusbartextcolor)||
+|[CMFCVisualManagerOffice2007::GetShowAllMenuItemsHeight](#getshowallmenuitemsheight)||
+|[CMFCVisualManagerOffice2007::GetStatusBarPaneTextColor](#getstatusbarpanetextcolor)||
+|`CMFCVisualManagerOffice2007::GetStyle`|傳回目前的色彩配置的`CMFCVisualManagerOffice2007`可以依次，模擬 Microsoft Office 2007 GUI 的 GUI。|
+|[CMFCVisualManagerOffice2007::GetTabFrameColors](#gettabframecolors)||
+|[CMFCVisualManagerOffice2007::GetTabHorzMargin](#gettabhorzmargin)||
+|[CMFCVisualManagerOffice2007::GetTabTextColor](#gettabtextcolor)||
+|[CMFCVisualManagerOffice2007::GetToolbarButtonTextColor](#gettoolbarbuttontextcolor)||
+|[CMFCVisualManagerOffice2007::GetToolbarDisabledTextColor](#gettoolbardisabledtextcolor)||
+|[CMFCVisualManagerOffice2007::GetToolTipInfo](#gettooltipinfo)||
+|[CMFCVisualManagerOffice2007::IsHighlightWholeMenuItem](#ishighlightwholemenuitem)||
+|[CMFCVisualManagerOffice2007::IsLayeredRibbonKeyTip](#islayeredribbonkeytip)||
+|[CMFCVisualManagerOffice2007::IsOwnerDrawCaption](#isownerdrawcaption)||
+|[CMFCVisualManagerOffice2007::IsOwnerDrawMenuCheck](#isownerdrawmenucheck)||
+|[CMFCVisualManagerOffice2007::IsRibbonPresent](#isribbonpresent)||
+|[CMFCVisualManagerOffice2007::OnDrawBarGripper](#ondrawbargripper)||
+|[CMFCVisualManagerOffice2007::OnDrawButtonBorder](#ondrawbuttonborder)||
+|[CMFCVisualManagerOffice2007::OnDrawButtonSeparator](#ondrawbuttonseparator)||
+|[CMFCVisualManagerOffice2007::OnDrawCaptionBarInfoArea](#ondrawcaptionbarinfoarea)||
+|[CMFCVisualManagerOffice2007::OnDrawCheckBoxEx](#ondrawcheckboxex)||
+|[CMFCVisualManagerOffice2007::OnDrawComboBorder](#ondrawcomboborder)||
+|[CMFCVisualManagerOffice2007::OnDrawComboDropButton](#ondrawcombodropbutton)||
+|[CMFCVisualManagerOffice2007::OnDrawDefaultRibbonImage](#ondrawdefaultribbonimage)||
+|[CMFCVisualManagerOffice2007::OnDrawEditBorder](#ondraweditborder)||
+|[CMFCVisualManagerOffice2007::OnDrawFloatingToolbarBorder](#ondrawfloatingtoolbarborder)||
+|[CMFCVisualManagerOffice2007::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)||
+|[CMFCVisualManagerOffice2007::OnDrawMenuBorder](#ondrawmenuborder)||
+|[CMFCVisualManagerOffice2007::OnDrawMenuCheck](#ondrawmenucheck)||
+|[CMFCVisualManagerOffice2007::OnDrawMenuItemButton](#ondrawmenuitembutton)||
+|[CMFCVisualManagerOffice2007::OnDrawMenuLabel](#ondrawmenulabel)||
+|[CMFCVisualManagerOffice2007::OnDrawMenuResizeBar](#ondrawmenuresizebar)||
+|[CMFCVisualManagerOffice2007::OnDrawMenuScrollButton](#ondrawmenuscrollbutton)||
+|[CMFCVisualManagerOffice2007::OnDrawMenuSystemButton](#ondrawmenusystembutton)||
+|[CMFCVisualManagerOffice2007::OnDrawMiniFrameBorder](#ondrawminiframeborder)||
+|[CMFCVisualManagerOffice2007::OnDrawOutlookBarSplitter](#ondrawoutlookbarsplitter)||
+|[CMFCVisualManagerOffice2007::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)||
+|[CMFCVisualManagerOffice2007::OnDrawPaneCaption](#ondrawpanecaption)||
+|[CMFCVisualManagerOffice2007::OnDrawPopupWindowCaption](#ondrawpopupwindowcaption)||
+|[CMFCVisualManagerOffice2007::OnDrawPropertySheetListItem](#ondrawpropertysheetlistitem)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonApplicationButton](#ondrawribbonapplicationbutton)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonButtonBorder](#ondrawribbonbuttonborder)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonButtonsGroup](#ondrawribbonbuttonsgroup)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonCaption](#ondrawribboncaption)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonCaptionButton](#ondrawribboncaptionbutton)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonCategory](#ondrawribboncategory)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonCategoryCaption](#ondrawribboncategorycaption)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonCategoryScroll](#ondrawribboncategoryscroll)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonCategoryTab](#ondrawribboncategorytab)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonCheckBoxOnList](#ondrawribboncheckboxonlist)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButton](#ondrawribbondefaultpanebutton)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButtonIndicator](#ondrawribbondefaultpanebuttonindicator)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonGalleryBorder](#ondrawribbongalleryborder)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonGalleryButton](#ondrawribbongallerybutton)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonKeyTip](#ondrawribbonkeytip)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelButtonBorder](#ondrawribbonmainpanelbuttonborder)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelFrame](#ondrawribbonmainpanelframe)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonMenuCheckFrame](#ondrawribbonmenucheckframe)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonPanel](#ondrawribbonpanel)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonPanelCaption](#ondrawribbonpanelcaption)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonProgressBar](#ondrawribbonprogressbar)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonRecentFilesFrame](#ondrawribbonrecentfilesframe)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonSliderChannel](#ondrawribbonsliderchannel)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonSliderThumb](#ondrawribbonsliderthumb)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonSliderZoomButton](#ondrawribbonsliderzoombutton)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonStatusBarPane](#ondrawribbonstatusbarpane)||
+|[CMFCVisualManagerOffice2007::OnDrawRibbonTabsFrame](#ondrawribbontabsframe)||
+|[CMFCVisualManagerOffice2007::OnDrawScrollButtons](#ondrawscrollbuttons)||
+|[CMFCVisualManagerOffice2007::OnDrawSeparator](#ondrawseparator)||
+|[CMFCVisualManagerOffice2007::OnDrawShowAllMenuItems](#ondrawshowallmenuitems)||
+|[CMFCVisualManagerOffice2007::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)||
+|[CMFCVisualManagerOffice2007::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)||
+|[CMFCVisualManagerOffice2007::OnDrawTab](#ondrawtab)||
+|[CMFCVisualManagerOffice2007::OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)||
+|[CMFCVisualManagerOffice2007::OnDrawTask](#ondrawtask)||
+|[CMFCVisualManagerOffice2007::OnDrawTasksGroupCaption](#ondrawtasksgroupcaption)||
+|[CMFCVisualManagerOffice2007::OnDrawTearOffCaption](#ondrawtearoffcaption)||
+|[CMFCVisualManagerOffice2007::OnEraseMDIClientArea](#onerasemdiclientarea)||
+|[CMFCVisualManagerOffice2007::OnEraseTabsArea](#onerasetabsarea)||
+|[CMFCVisualManagerOffice2007::OnEraseTabsButton](#onerasetabsbutton)||
+|[CMFCVisualManagerOffice2007::OnEraseTabsFrame](#onerasetabsframe)||
+|[CMFCVisualManagerOffice2007::OnFillBarBackground](#onfillbarbackground)||
+|[CMFCVisualManagerOffice2007::OnFillButtonInterior](#onfillbuttoninterior)||
+|[CMFCVisualManagerOffice2007::OnFillCaptionBarButton](#onfillcaptionbarbutton)||
+|[CMFCVisualManagerOffice2007::OnFillHighlightedArea](#onfillhighlightedarea)||
+|[CMFCVisualManagerOffice2007::OnFillMiniFrameCaption](#onfillminiframecaption)||
+|[CMFCVisualManagerOffice2007::OnFillOutlookBarCaption](#onfilloutlookbarcaption)||
+|[CMFCVisualManagerOffice2007::OnFillOutlookPageButton](#onfilloutlookpagebutton)||
+|[CMFCVisualManagerOffice2007::OnFillPopupWindowBackground](#onfillpopupwindowbackground)||
+|[CMFCVisualManagerOffice2007::OnFillRibbonButton](#onfillribbonbutton)||
+|[CMFCVisualManagerOffice2007::OnFillRibbonEdit](#onfillribbonedit)||
+|[CMFCVisualManagerOffice2007::OnFillRibbonMainPanelButton](#onfillribbonmainpanelbutton)||
+|[CMFCVisualManagerOffice2007::OnFillRibbonMenuFrame](#onfillribbonmenuframe)||
+|[CMFCVisualManagerOffice2007::OnFillRibbonQuickAccessToolBarPopup](#onfillribbonquickaccesstoolbarpopup)||
+|[CMFCVisualManagerOffice2007::OnFillTab](#onfilltab)||
+|[CMFCVisualManagerOffice2007::OnHighlightMenuItem](#onhighlightmenuitem)||
+|[CMFCVisualManagerOffice2007::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)||
+|[CMFCVisualManagerOffice2007::OnNcActivate](#onncactivate)||
+|[CMFCVisualManagerOffice2007::OnNcPaint](#onncpaint)||
+|[CMFCVisualManagerOffice2007::OnSetWindowRegion](#onsetwindowregion)||
+|[CMFCVisualManagerOffice2007::OnUpdateSystemColors](#onupdatesystemcolors)||
+|[CMFCVisualManagerOffice2007::SetResourceHandle](#setresourcehandle)||
+|`CMFCVisualManagerOffice2007::SetStyle`|設定的色彩配置`CMFCVisualManagerOffice2007`GUI。|
+
+## <a name="remarks"></a>備註
+
+使用`CMFCVisualManagerOffice2007`若要變更您的應用程式類似，Microsoft Office 2007 的視覺外觀。 此視覺管理員會要求您設定樣式，才能使用它。 您傳遞到這個視覺管理員才能`CMFCVisualManager::SetDefaultManager`，您必須呼叫此靜態函式`CMFCVisualManagerOffice2007::SetStyle`。
+
+## <a name="example"></a>範例
+
+下列範例示範如何使用 Office 2007 的視覺管理員。 此程式碼片段是一部分[桌面警示示範範例](../../visual-cpp-samples.md)。
+
+[!code-cpp[NVC_MFC_DesktopAlertDemo#7](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2007-class_1.cpp)]
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
+
+[CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
+
+[CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
+
+[CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)
+
+[CMFCVisualManagerOffice2007](../../mfc/reference/cmfcvisualmanageroffice2007-class.md)
+
+## <a name="requirements"></a>需求
+
+**標頭：** afxvisualmanageroffice2007.h
+
+##  <a name="alwayshighlight3dtabs"></a>  CMFCVisualManagerOffice2007::AlwaysHighlight3DTabs
+
+
+```
+virtual BOOL AlwaysHighlight3DTabs() const;
+```
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="cleanstyle"></a>  CMFCVisualManagerOffice2007::CleanStyle
+
+
+```
 static void __stdcall CleanStyle();
-```  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getcaptionbartextcolor"></a>  CMFCVisualManagerOffice2007::GetCaptionBarTextColor  
+```
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="getcaptionbartextcolor"></a>  CMFCVisualManagerOffice2007::GetCaptionBarTextColor
+
+
+```
 virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*pBar*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="gethighlightedmenuitemtextcolor"></a>  CMFCVisualManagerOffice2007::GetHighlightedMenuItemTextColor  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+[in]*pBar*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="gethighlightedmenuitemtextcolor"></a>  CMFCVisualManagerOffice2007::GetHighlightedMenuItemTextColor
+
+
+```
 virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*pButton*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getmenuitemtextcolor"></a>  CMFCVisualManagerOffice2007::GetMenuItemTextColor  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+[in]*pButton*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getmenuitemtextcolor"></a>  CMFCVisualManagerOffice2007::GetMenuItemTextColor
+
+
+```
 virtual COLORREF GetMenuItemTextColor(
-    CMFCToolBarMenuButton* pButton,  
-    BOOL bHighlighted,  
+    CMFCToolBarMenuButton* pButton,
+    BOOL bHighlighted,
     BOOL bDisabled);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pButton*<br/>
-[in][in]*bHighlighted*  
- [in]*bDisabled*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getncbtnsize"></a>  CMFCVisualManagerOffice2007::GetNcBtnSize  
+[in][in]*bHighlighted* [in] *bDisabled*
 
-  
-```  
-virtual CSize GetNcBtnSize(BOOL bSmall) const;  
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*bSmall*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getribbonbar"></a>  CMFCVisualManagerOffice2007::GetRibbonBar  
+### <a name="return-value"></a>傳回值
 
-  
-```  
-CMFCRibbonBar* GetRibbonBar(CWnd* pWnd) const;  
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*pWnd*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getribbonhyperlinktextcolor"></a>  CMFCVisualManagerOffice2007::GetRibbonHyperlinkTextColor  
+### <a name="remarks"></a>備註
 
-  
-```  
+##  <a name="getncbtnsize"></a>  CMFCVisualManagerOffice2007::GetNcBtnSize
+
+
+```
+virtual CSize GetNcBtnSize(BOOL bSmall) const;
+```
+
+### <a name="parameters"></a>參數
+
+[in]*bSmall*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getribbonbar"></a>  CMFCVisualManagerOffice2007::GetRibbonBar
+
+
+```
+CMFCRibbonBar* GetRibbonBar(CWnd* pWnd) const;
+```
+
+### <a name="parameters"></a>參數
+
+[in]*pWnd*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getribbonhyperlinktextcolor"></a>  CMFCVisualManagerOffice2007::GetRibbonHyperlinkTextColor
+
+
+```
 virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*pHyperLink*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getribbonpopupbordersize"></a>  CMFCVisualManagerOffice2007::GetRibbonPopupBorderSize  
+```
 
-  
-```  
-virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu* pPopup) const;  
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*pPopup*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getribbonquickaccesstoolbarchevronoffset"></a>  CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarChevronOffset  
+### <a name="parameters"></a>參數
 
-  
-```  
+[in]*pHyperLink*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getribbonpopupbordersize"></a>  CMFCVisualManagerOffice2007::GetRibbonPopupBorderSize
+
+
+```
+virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu* pPopup) const;
+```
+
+### <a name="parameters"></a>參數
+
+[in]*pPopup*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getribbonquickaccesstoolbarchevronoffset"></a>  CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarChevronOffset
+
+
+```
 virtual int GetRibbonQuickAccessToolBarChevronOffset();
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getribbonquickaccesstoolbarrightmargin"></a>  CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarRightMargin  
+```
 
-  
-```  
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getribbonquickaccesstoolbarrightmargin"></a>  CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarRightMargin
+
+
+```
 virtual int GetRibbonQuickAccessToolBarRightMargin();
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getribbonquickaccesstoolbartextcolor"></a>  CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarTextColor  
+```
 
-  
-```  
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getribbonquickaccesstoolbartextcolor"></a>  CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarTextColor
+
+
+```
 virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*bDisabled*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getribbonstatusbartextcolor"></a>  CMFCVisualManagerOffice2007::GetRibbonStatusBarTextColor  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+[in]*bDisabled*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getribbonstatusbartextcolor"></a>  CMFCVisualManagerOffice2007::GetRibbonStatusBarTextColor
+
+
+```
 virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*pStatusBar*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getshowallmenuitemsheight"></a>  CMFCVisualManagerOffice2007::GetShowAllMenuItemsHeight  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+[in]*pStatusBar*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getshowallmenuitemsheight"></a>  CMFCVisualManagerOffice2007::GetShowAllMenuItemsHeight
+
+
+```
 virtual int GetShowAllMenuItemsHeight(
-    CDC* pDC,  
+    CDC* pDC,
     const CSize& sizeDefault);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*sizeDefault*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getstatusbarpanetextcolor"></a>  CMFCVisualManagerOffice2007::GetStatusBarPaneTextColor  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*sizeDefault*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getstatusbarpanetextcolor"></a>  CMFCVisualManagerOffice2007::GetStatusBarPaneTextColor
+
+
+```
 virtual COLORREF GetStatusBarPaneTextColor(
-    CMFCStatusBar* pStatusBar,  
+    CMFCStatusBar* pStatusBar,
     CMFCStatusBarPaneInfo* pPane);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pStatusBar*<br/>
-[in][in]*pPane*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="gettabframecolors"></a>  CMFCVisualManagerOffice2007::GetTabFrameColors  
+[in][in]*pPane*
 
-  
-```  
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="gettabframecolors"></a>  CMFCVisualManagerOffice2007::GetTabFrameColors
+
+
+```
 virtual void GetTabFrameColors(
-    const CMFCBaseTabCtrl* pTabWnd,  
-    COLORREF& clrDark,  
-    COLORREF& clrBlack,  
-    COLORREF& clrHighlight,  
-    COLORREF& clrFace,  
-    COLORREF& clrDarkShadow,  
-    COLORREF& clrLight,  
-    CBrush*& pbrFace,  
+    const CMFCBaseTabCtrl* pTabWnd,
+    COLORREF& clrDark,
+    COLORREF& clrBlack,
+    COLORREF& clrHighlight,
+    COLORREF& clrFace,
+    COLORREF& clrDarkShadow,
+    COLORREF& clrLight,
+    CBrush*& pbrFace,
     CBrush*& pbrBlack);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pTabWnd*<br/>
-[in][in]*clrDark*  
+[in][in]*clrDark*
 *clrBlack*<br/>
-[in][in]*clrHighlight*  
+[in][in]*clrHighlight*
 *clrFace*<br/>
-[in][in]*clrDarkShadow*  
+[in][in]*clrDarkShadow*
 *clrLight*<br/>
-[in][in]*pbrFace*  
- [in]*pbrBlack*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="gettabhorzmargin"></a>  CMFCVisualManagerOffice2007::GetTabHorzMargin  
+[in][in]*pbrFace* [in] *pbrBlack*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="gettabhorzmargin"></a>  CMFCVisualManagerOffice2007::GetTabHorzMargin
+
+
+```
 virtual int GetTabHorzMargin(const CMFCBaseTabCtrl* pTabWnd);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*pTabWnd*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="gettabtextcolor"></a>  CMFCVisualManagerOffice2007::GetTabTextColor  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+[in]*pTabWnd*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="gettabtextcolor"></a>  CMFCVisualManagerOffice2007::GetTabTextColor
+
+
+```
 virtual COLORREF GetTabTextColor(
-    const CMFCBaseTabCtrl* pTabWnd,  
-    int iTab,  
+    const CMFCBaseTabCtrl* pTabWnd,
+    int iTab,
     BOOL bIsActive);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pTabWnd*<br/>
-[in][in]*iTab*  
- [in]*bIsActive*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="gettoolbarbuttontextcolor"></a>  CMFCVisualManagerOffice2007::GetToolbarButtonTextColor  
+[in][in]*iTab* [in] *bIsActive*
 
-  
-```  
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="gettoolbarbuttontextcolor"></a>  CMFCVisualManagerOffice2007::GetToolbarButtonTextColor
+
+
+```
 virtual COLORREF GetToolbarButtonTextColor(
-    CMFCToolBarButton* pButton,  
+    CMFCToolBarButton* pButton,
     CMFCVisualManager::AFX_BUTTON_STATE state);
-```  
-  
-### <a name="parameters"></a>參數  
-*pButton*<br/>
-[in][in]*狀態*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="gettoolbardisabledtextcolor"></a>  CMFCVisualManagerOffice2007::GetToolbarDisabledTextColor  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pButton*<br/>
+[in][in]*狀態*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="gettoolbardisabledtextcolor"></a>  CMFCVisualManagerOffice2007::GetToolbarDisabledTextColor
+
+
+```
 virtual COLORREF GetToolbarDisabledTextColor();
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="gettooltipinfo"></a>  CMFCVisualManagerOffice2007::GetToolTipInfo  
+```
 
-  
-```  
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="gettooltipinfo"></a>  CMFCVisualManagerOffice2007::GetToolTipInfo
+
+
+```
 virtual BOOL GetToolTipInfo(
-    CMFCToolTipInfo& params,  
+    CMFCToolTipInfo& params,
     UINT nType = (UINT)(-1));
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *params*<br/>
-[in][in]*n*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ishighlightwholemenuitem"></a>  CMFCVisualManagerOffice2007::IsHighlightWholeMenuItem  
+[in][in]*n*
 
-  
-```  
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="ishighlightwholemenuitem"></a>  CMFCVisualManagerOffice2007::IsHighlightWholeMenuItem
+
+
+```
 virtual BOOL IsHighlightWholeMenuItem();
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="islayeredribbonkeytip"></a>  CMFCVisualManagerOffice2007::IsLayeredRibbonKeyTip  
+```
 
-  
-```  
-virtual BOOL IsLayeredRibbonKeyTip() const;  
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="isownerdrawcaption"></a>  CMFCVisualManagerOffice2007::IsOwnerDrawCaption  
+### <a name="return-value"></a>傳回值
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="islayeredribbonkeytip"></a>  CMFCVisualManagerOffice2007::IsLayeredRibbonKeyTip
+
+
+```
+virtual BOOL IsLayeredRibbonKeyTip() const;
+```
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="isownerdrawcaption"></a>  CMFCVisualManagerOffice2007::IsOwnerDrawCaption
+
+
+```
 virtual BOOL IsOwnerDrawCaption();
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="isownerdrawmenucheck"></a>  CMFCVisualManagerOffice2007::IsOwnerDrawMenuCheck  
+```
 
-  
-```  
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="isownerdrawmenucheck"></a>  CMFCVisualManagerOffice2007::IsOwnerDrawMenuCheck
+
+
+```
 virtual BOOL IsOwnerDrawMenuCheck();
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="isribbonpresent"></a>  CMFCVisualManagerOffice2007::IsRibbonPresent  
+```
 
-  
-```  
-BOOL IsRibbonPresent(CWnd* pWnd) const;  
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*pWnd*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawbargripper"></a>  CMFCVisualManagerOffice2007::OnDrawBarGripper  
+### <a name="return-value"></a>傳回值
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="isribbonpresent"></a>  CMFCVisualManagerOffice2007::IsRibbonPresent
+
+
+```
+BOOL IsRibbonPresent(CWnd* pWnd) const;
+```
+
+### <a name="parameters"></a>參數
+
+[in]*pWnd*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawbargripper"></a>  CMFCVisualManagerOffice2007::OnDrawBarGripper
+
+
+```
 virtual void OnDrawBarGripper(
-    CDC* pDC,  
-    CRect rectGripper,  
-    BOOL bHorz,  
+    CDC* pDC,
+    CRect rectGripper,
+    BOOL bHorz,
     CBasePane* pBar);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*rectGripper*  
+[in][in]*rectGripper*
 *bHorz*<br/>
-[in][in]*pBar*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawButtonBorder  
+[in][in]*pBar*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawButtonBorder
+
+
+```
 virtual void OnDrawButtonBorder(
-    CDC* pDC,  
-    CMFCToolBarButton* pButton,  
-    CRect rect,  
+    CDC* pDC,
+    CMFCToolBarButton* pButton,
+    CRect rect,
     CMFCVisualManager::AFX_BUTTON_STATE state);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pButton*  
-*rect*<br/>
-[in][in]*狀態*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawbuttonseparator"></a>  CMFCVisualManagerOffice2007::OnDrawButtonSeparator  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pButton*
+*rect*<br/>
+[in][in]*狀態*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawbuttonseparator"></a>  CMFCVisualManagerOffice2007::OnDrawButtonSeparator
+
+
+```
 virtual void OnDrawButtonSeparator(
-    CDC* pDC,  
-    CMFCToolBarButton* pButton,  
-    CRect rect,  
-    CMFCVisualManager::AFX_BUTTON_STATE state,  
+    CDC* pDC,
+    CMFCToolBarButton* pButton,
+    CRect rect,
+    CMFCVisualManager::AFX_BUTTON_STATE state,
     BOOL bHorz);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pButton*  
-*rect*<br/>
-[in][in]*狀態*  
- [in]*bHorz*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawcaptionbarinfoarea"></a>  CMFCVisualManagerOffice2007::OnDrawCaptionBarInfoArea  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pButton*
+*rect*<br/>
+[in][in]*狀態*[in] *bHorz*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawcaptionbarinfoarea"></a>  CMFCVisualManagerOffice2007::OnDrawCaptionBarInfoArea
+
+
+```
 virtual void OnDrawCaptionBarInfoArea(
-    CDC* pDC,  
-    CMFCCaptionBar* pBar,  
+    CDC* pDC,
+    CMFCCaptionBar* pBar,
     CRect rect);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pBar*  
- [in]*rect*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawcheckboxex"></a>  CMFCVisualManagerOffice2007::OnDrawCheckBoxEx  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pBar* [in] *rect*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawcheckboxex"></a>  CMFCVisualManagerOffice2007::OnDrawCheckBoxEx
+
+
+```
 virtual void OnDrawCheckBoxEx(
-    CDC* pDC,  
-    CRect rect,  
-    int nState,  
-    BOOL bHighlighted,  
-    BOOL bPressed,  
+    CDC* pDC,
+    CRect rect,
+    int nState,
+    BOOL bHighlighted,
+    BOOL bPressed,
     BOOL bEnabled);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*rect*  
+[in][in]*rect*
 *nState*<br/>
-[in][in]*bHighlighted*  
+[in][in]*bHighlighted*
 *bPressed*<br/>
-[in][in]*bEnabled*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawcomboborder"></a>  CMFCVisualManagerOffice2007::OnDrawComboBorder  
+[in][in]*bEnabled*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawcomboborder"></a>  CMFCVisualManagerOffice2007::OnDrawComboBorder
+
+
+```
 virtual void OnDrawComboBorder(
-    CDC* pDC,  
-    CRect rect,  
-    BOOL bDisabled,  
-    BOOL bIsDropped,  
-    BOOL bIsHighlighted,  
+    CDC* pDC,
+    CRect rect,
+    BOOL bDisabled,
+    BOOL bIsDropped,
+    BOOL bIsHighlighted,
     CMFCToolBarComboBoxButton* pButton);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*rect*  
-*bDisabled*<br/>
-[in][in]*bIsDropped*  
-*bIsHighlighted*<br/>
-[in][in]*pButton*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawcombodropbutton"></a>  CMFCVisualManagerOffice2007::OnDrawComboDropButton  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*rect*
+*bDisabled*<br/>
+[in][in]*bIsDropped*
+*bIsHighlighted*<br/>
+[in][in]*pButton*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawcombodropbutton"></a>  CMFCVisualManagerOffice2007::OnDrawComboDropButton
+
+
+```
 virtual void OnDrawComboDropButton(
-    CDC* pDC,  
-    CRect rect,  
-    BOOL bDisabled,  
-    BOOL bIsDropped,  
-    BOOL bIsHighlighted,  
+    CDC* pDC,
+    CRect rect,
+    BOOL bDisabled,
+    BOOL bIsDropped,
+    BOOL bIsHighlighted,
     CMFCToolBarComboBoxButton* pButton);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*rect*  
-*bDisabled*<br/>
-[in][in]*bIsDropped*  
-*bIsHighlighted*<br/>
-[in][in]*pButton*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawdefaultribbonimage"></a>  CMFCVisualManagerOffice2007::OnDrawDefaultRibbonImage  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*rect*
+*bDisabled*<br/>
+[in][in]*bIsDropped*
+*bIsHighlighted*<br/>
+[in][in]*pButton*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawdefaultribbonimage"></a>  CMFCVisualManagerOffice2007::OnDrawDefaultRibbonImage
+
+
+```
 virtual void OnDrawDefaultRibbonImage(
-    CDC* pDC,  
-    CRect rectImage,  
-    BOOL bIsDisabled = FALSE,  
-    BOOL bIsPressed = FALSE,  
+    CDC* pDC,
+    CRect rectImage,
+    BOOL bIsDisabled = FALSE,
+    BOOL bIsPressed = FALSE,
     BOOL bIsHighlighted = FALSE);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*rectImage*  
+[in][in]*rectImage*
 *bIsDisabled*<br/>
-[in][in]*bIsPressed*  
- [in]*bIsHighlighted*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondraweditborder"></a>  CMFCVisualManagerOffice2007::OnDrawEditBorder  
+[in][in]*bIsPressed* [in] *bIsHighlighted*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="ondraweditborder"></a>  CMFCVisualManagerOffice2007::OnDrawEditBorder
+
+
+```
 virtual void OnDrawEditBorder(
-    CDC* pDC,  
-    CRect rect,  
-    BOOL bDisabled,  
-    BOOL bIsHighlighted,  
+    CDC* pDC,
+    CRect rect,
+    BOOL bDisabled,
+    BOOL bIsHighlighted,
     CMFCToolBarEditBoxButton* pButton);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*rect*  
+[in][in]*rect*
 *bDisabled*<br/>
-[in][in]*bIsHighlighted*  
- [in]*pButton*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawfloatingtoolbarborder"></a>  CMFCVisualManagerOffice2007::OnDrawFloatingToolbarBorder  
+[in][in]*bIsHighlighted* [in] *pButton*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawfloatingtoolbarborder"></a>  CMFCVisualManagerOffice2007::OnDrawFloatingToolbarBorder
+
+
+```
 virtual void OnDrawFloatingToolbarBorder(
-    CDC* pDC,  
-    CMFCBaseToolBar* pToolBar,  
-    CRect rectBorder,  
+    CDC* pDC,
+    CMFCBaseToolBar* pToolBar,
+    CRect rectBorder,
     CRect rectBorderSize);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pToolBar*  
-*rectBorder*<br/>
-[in][in]*rectBorderSize*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawheaderctrlborder"></a>  CMFCVisualManagerOffice2007::OnDrawHeaderCtrlBorder  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pToolBar*
+*rectBorder*<br/>
+[in][in]*rectBorderSize*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawheaderctrlborder"></a>  CMFCVisualManagerOffice2007::OnDrawHeaderCtrlBorder
+
+
+```
 virtual void OnDrawHeaderCtrlBorder(
-    CMFCHeaderCtrl* pCtrl,  
-    CDC* pDC,  
-    CRect& rect,  
-    BOOL bIsPressed,  
+    CMFCHeaderCtrl* pCtrl,
+    CDC* pDC,
+    CRect& rect,
+    BOOL bIsPressed,
     BOOL bIsHighlighted);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pCtrl*<br/>
-[in][in]*pDC*  
+[in][in]*pDC*
 *rect*<br/>
-[in][in]*bIsPressed*  
- [in]*bIsHighlighted*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawmenuborder"></a>  CMFCVisualManagerOffice2007::OnDrawMenuBorder  
+[in][in]*bIsPressed* [in] *bIsHighlighted*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawmenuborder"></a>  CMFCVisualManagerOffice2007::OnDrawMenuBorder
+
+
+```
 virtual void OnDrawMenuBorder(
-    CDC* pDC,  
-    CMFCPopu* pMenu,  
+    CDC* pDC,
+    CMFCPopu* pMenu,
     CRect rect);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pMenu*  
- [in]*rect*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawmenucheck"></a>  CMFCVisualManagerOffice2007::OnDrawMenuCheck  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pMenu* [in] *rect*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawmenucheck"></a>  CMFCVisualManagerOffice2007::OnDrawMenuCheck
+
+
+```
 virtual void OnDrawMenuCheck(
-    CDC* pDC,  
-    CMFCToolBarMenuButton* pButton,  
-    CRect rect,  
-    BOOL bHighlight,  
+    CDC* pDC,
+    CMFCToolBarMenuButton* pButton,
+    CRect rect,
+    BOOL bHighlight,
     BOOL bIsRadio);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pButton*  
-*rect*<br/>
-[in][in]*bHighlight*  
- [in]*bIsRadio*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawmenuitembutton"></a>  CMFCVisualManagerOffice2007::OnDrawMenuItemButton  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pButton*
+*rect*<br/>
+[in][in]*bHighlight* [in] *bIsRadio*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawmenuitembutton"></a>  CMFCVisualManagerOffice2007::OnDrawMenuItemButton
+
+
+```
 virtual void OnDrawMenuItemButton(
-    CDC* pDC,  
-    CMFCToolBarMenuButton* pButton,  
-    CRect rectButton,  
-    BOOL bHighlight,  
+    CDC* pDC,
+    CMFCToolBarMenuButton* pButton,
+    CRect rectButton,
+    BOOL bHighlight,
     BOOL bDisabled);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*pButton*  
+[in][in]*pButton*
 *rectButton*<br/>
-[in][in]*bHighlight*  
- [in]*bDisabled*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawmenulabel"></a>  CMFCVisualManagerOffice2007::OnDrawMenuLabel  
+[in][in]*bHighlight* [in] *bDisabled*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawmenulabel"></a>  CMFCVisualManagerOffice2007::OnDrawMenuLabel
+
+
+```
 virtual COLORREF OnDrawMenuLabel(
-    CDC* pDC,  
+    CDC* pDC,
     CRect rect);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*rect*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawmenuresizebar"></a>  CMFCVisualManagerOffice2007::OnDrawMenuResizeBar  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*rect*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawmenuresizebar"></a>  CMFCVisualManagerOffice2007::OnDrawMenuResizeBar
+
+
+```
 virtual void OnDrawMenuResizeBar(
-    CDC* pDC,  
-    CRect rect,  
+    CDC* pDC,
+    CRect rect,
     int nResizeFlags);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*rect*  
- [in]*nResizeFlags*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawmenuscrollbutton"></a>  CMFCVisualManagerOffice2007::OnDrawMenuScrollButton  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*rect* [in] *nResizeFlags*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawmenuscrollbutton"></a>  CMFCVisualManagerOffice2007::OnDrawMenuScrollButton
+
+
+```
 virtual void OnDrawMenuScrollButton(
-    CDC* pDC,  
-    CRect rect,  
-    BOOL bIsScrollDown,  
-    BOOL bIsHighlited,  
-    BOOL bIsPressed,  
+    CDC* pDC,
+    CRect rect,
+    BOOL bIsScrollDown,
+    BOOL bIsHighlited,
+    BOOL bIsPressed,
     BOOL bIsDisabled);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*rect*  
+[in][in]*rect*
 *bIsScrollDown*<br/>
-[in][in]*bIsHighlited*  
+[in][in]*bIsHighlited*
 *bIsPressed*<br/>
-[in][in]*bIsDisabled*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawmenusystembutton"></a>  CMFCVisualManagerOffice2007::OnDrawMenuSystemButton  
+[in][in]*bIsDisabled*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawmenusystembutton"></a>  CMFCVisualManagerOffice2007::OnDrawMenuSystemButton
+
+
+```
 virtual void OnDrawMenuSystemButton(
-    CDC* pDC,  
-    CRect rect,  
-    UINT uiSystemCommand,  
-    UINT nStyle,  
+    CDC* pDC,
+    CRect rect,
+    UINT uiSystemCommand,
+    UINT nStyle,
     BOOL bHighlight);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*rect*  
+[in][in]*rect*
 *uiSystemCommand*<br/>
-[in][in]*nStyle*  
- [in]*bHighlight*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawminiframeborder"></a>  CMFCVisualManagerOffice2007::OnDrawMiniFrameBorder  
+[in][in]*nStyle* [in] *bHighlight*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawminiframeborder"></a>  CMFCVisualManagerOffice2007::OnDrawMiniFrameBorder
+
+
+```
 virtual void OnDrawMiniFrameBorder(
-    CDC* pDC,  
-    CPaneFrameWnd* pFrameWnd,  
-    CRect rectBorder,  
+    CDC* pDC,
+    CPaneFrameWnd* pFrameWnd,
+    CRect rectBorder,
     CRect rectBorderSize);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*pFrameWnd*  
+[in][in]*pFrameWnd*
 *rectBorder*<br/>
-[in][in]*rectBorderSize*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawoutlookbarsplitter"></a>  CMFCVisualManagerOffice2007::OnDrawOutlookBarSplitter  
+[in][in]*rectBorderSize*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawoutlookbarsplitter"></a>  CMFCVisualManagerOffice2007::OnDrawOutlookBarSplitter
+
+
+```
 virtual void OnDrawOutlookBarSplitter(
-    CDC* pDC,  
+    CDC* pDC,
     CRect rectSplitter);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*rectSplitter*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawoutlookpagebuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawOutlookPageButtonBorder  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*rectSplitter*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawoutlookpagebuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawOutlookPageButtonBorder
+
+
+```
 virtual void OnDrawOutlookPageButtonBorder(
-    CDC* pDC,  
-    CRect& rectBtn,  
-    BOOL bIsHighlighted,  
+    CDC* pDC,
+    CRect& rectBtn,
+    BOOL bIsHighlighted,
     BOOL bIsPressed);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*rectBtn*  
-*bIsHighlighted*<br/>
-[in][in]*bIsPressed*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawpanecaption"></a>  CMFCVisualManagerOffice2007::OnDrawPaneCaption  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*rectBtn*
+*bIsHighlighted*<br/>
+[in][in]*bIsPressed*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawpanecaption"></a>  CMFCVisualManagerOffice2007::OnDrawPaneCaption
+
+
+```
 virtual COLORREF OnDrawPaneCaption(
-    CDC* pDC,  
-    CDockablePane* pBar,  
-    BOOL bActive,  
-    CRect rectCaption,  
+    CDC* pDC,
+    CDockablePane* pBar,
+    BOOL bActive,
+    CRect rectCaption,
     CRect rectButtons);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*pBar*  
+[in][in]*pBar*
 *bActive*<br/>
-[in][in]*rectCaption*  
- [in]*rectButtons*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawpopupwindowcaption"></a>  CMFCVisualManagerOffice2007::OnDrawPopupWindowCaption  
+[in][in]*rectCaption* [in] *rectButtons*
 
-  
-```  
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawpopupwindowcaption"></a>  CMFCVisualManagerOffice2007::OnDrawPopupWindowCaption
+
+
+```
 virtual COLORREF OnDrawPopupWindowCaption(
-    CDC* pDC,  
-    CRect rectCaption,  
+    CDC* pDC,
+    CRect rectCaption,
     CMFCDesktopAlertWnd* pPopupWnd);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*rectCaption*  
- [in]*pPopupWnd*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawpropertysheetlistitem"></a>  CMFCVisualManagerOffice2007::OnDrawPropertySheetListItem  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*rectCaption* [in] *pPopupWnd*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawpropertysheetlistitem"></a>  CMFCVisualManagerOffice2007::OnDrawPropertySheetListItem
+
+
+```
 virtual COLORREF OnDrawPropertySheetListItem(
-    CDC* pDC,  
-    CMFCPropertySheet* pParent,  
-    CRect rect,  
-    BOOL bIsHighlihted,  
+    CDC* pDC,
+    CMFCPropertySheet* pParent,
+    CRect rect,
+    BOOL bIsHighlihted,
     BOOL bIsSelected);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pParent*  
-*rect*<br/>
-[in][in]*bIsHighlihted*  
- [in]*bIsSelected*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribbonapplicationbutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonApplicationButton  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pParent*
+*rect*<br/>
+[in][in]*bIsHighlihted* [in] *bIsSelected*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribbonapplicationbutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonApplicationButton
+
+
+```
 virtual void OnDrawRibbonApplicationButton(
-    CDC* pDC,  
+    CDC* pDC,
     CMFCRibbonButton* pButton);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pButton*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribbonbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonButtonBorder  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pButton*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribbonbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonButtonBorder
+
+
+```
 virtual void OnDrawRibbonButtonBorder(
-    CDC* pDC,  
+    CDC* pDC,
     CMFCRibbonButton* pButton);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pButton*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribbonbuttonsgroup"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonButtonsGroup  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pButton*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribbonbuttonsgroup"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonButtonsGroup
+
+
+```
 virtual COLORREF OnDrawRibbonButtonsGroup(
-    CDC* pDC,  
-    CMFCRibbonButtonsGroup* pGroup,  
+    CDC* pDC,
+    CMFCRibbonButtonsGroup* pGroup,
     CRect rectGroup);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pGroup*  
- [in]*rectGroup*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribboncaption"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCaption  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pGroup* [in] *rectGroup*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribboncaption"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCaption
+
+
+```
 virtual void OnDrawRibbonCaption(
-    CDC* pDC,  
-    CMFCRibbonBar* pBar,  
-    CRect rectCaption,  
+    CDC* pDC,
+    CMFCRibbonBar* pBar,
+    CRect rectCaption,
     CRect rectText);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*pBar*  
+[in][in]*pBar*
 *rectCaption*<br/>
-[in][in]*rectText*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribboncaptionbutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCaptionButton  
+[in][in]*rectText*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribboncaptionbutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCaptionButton
+
+
+```
 virtual void OnDrawRibbonCaptionButton(
-    CDC* pDC,  
+    CDC* pDC,
     CMFCRibbonCaptionButton* pButton);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pButton*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribboncategory"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategory  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pButton*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribboncategory"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategory
+
+
+```
 virtual void OnDrawRibbonCategory(
-    CDC* pDC,  
-    CMFCRibbonCategory* pCategory,  
+    CDC* pDC,
+    CMFCRibbonCategory* pCategory,
     CRect rectCategory);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pCategory*  
- [in]*rectCategory*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribboncategorycaption"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategoryCaption  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pCategory* [in] *rectCategory*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribboncategorycaption"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategoryCaption
+
+
+```
 virtual COLORREF OnDrawRibbonCategoryCaption(
-    CDC* pDC,  
+    CDC* pDC,
     CMFCRibbonContextCaption* pContextCaption);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pContextCaption*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribboncategoryscroll"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategoryScroll  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pContextCaption*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribboncategoryscroll"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategoryScroll
+
+
+```
 virtual void OnDrawRibbonCategoryScroll(
-    CDC* pDC,  
+    CDC* pDC,
     CRibbonCategoryScroll* pScroll);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pScroll*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribboncategorytab"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategoryTab  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pScroll*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribboncategorytab"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategoryTab
+
+
+```
 virtual COLORREF OnDrawRibbonCategoryTab(
-    CDC* pDC,  
-    CMFCRibbonTab* pTab,  
+    CDC* pDC,
+    CMFCRibbonTab* pTab,
     BOOL bIsActive);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pTab*  
- [in]*bIsActive*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribboncheckboxonlist"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCheckBoxOnList  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pTab* [in] *bIsActive*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribboncheckboxonlist"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCheckBoxOnList
+
+
+```
 virtual void OnDrawRibbonCheckBoxOnList(
-    CDC* pDC,  
-    CMFCRibbonCheckBox* pCheckBox,  
-    CRect rect,  
-    BOOL bIsSelected,  
+    CDC* pDC,
+    CMFCRibbonCheckBox* pCheckBox,
+    CRect rect,
+    BOOL bIsSelected,
     BOOL bHighlighted);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pCheckBox*  
-*rect*<br/>
-[in][in]*bIsSelected*  
- [in]*bHighlighted*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribbondefaultpanebutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButton  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pCheckBox*
+*rect*<br/>
+[in][in]*bIsSelected* [in] *bHighlighted*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribbondefaultpanebutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButton
+
+
+```
 virtual void OnDrawRibbonDefaultPaneButton(
-    CDC* pDC,  
+    CDC* pDC,
     CMFCRibbonButton* pButton);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pButton*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribbondefaultpanebuttonindicator"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButtonIndicator  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pButton*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribbondefaultpanebuttonindicator"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButtonIndicator
+
+
+```
 virtual void OnDrawRibbonDefaultPaneButtonIndicator(
-    CDC* pDC,  
-    CMFCRibbonButton* pButton,  
-    CRect rect,  
-    BOOL bIsSelected,  
+    CDC* pDC,
+    CMFCRibbonButton* pButton,
+    CRect rect,
+    BOOL bIsSelected,
     BOOL bHighlighted);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pButton*  
-*rect*<br/>
-[in][in]*bIsSelected*  
- [in]*bHighlighted*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribbongalleryborder"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonGalleryBorder  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pButton*
+*rect*<br/>
+[in][in]*bIsSelected* [in] *bHighlighted*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribbongalleryborder"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonGalleryBorder
+
+
+```
 virtual void OnDrawRibbonGalleryBorder(
-    CDC* pDC,  
-    CMFCRibbonGallery* pButton,  
+    CDC* pDC,
+    CMFCRibbonGallery* pButton,
     CRect rectBorder);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pButton*  
- [in]*rectBorder*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribbongallerybutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonGalleryButton  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pButton* [in] *rectBorder*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribbongallerybutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonGalleryButton
+
+
+```
 virtual void OnDrawRibbonGalleryButton(
-    CDC* pDC,  
+    CDC* pDC,
     CMFCRibbonGalleryIcon* pButton);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pButton*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribbonkeytip"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonKeyTip  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pButton*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribbonkeytip"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonKeyTip
+
+
+```
 virtual void OnDrawRibbonKeyTip(
-    CDC* pDC,  
-    CMFCRibbonBaseElement* pElement,  
-    CRect rect,  
+    CDC* pDC,
+    CMFCRibbonBaseElement* pElement,
+    CRect rect,
     CString str);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pElement*  
-*rect*<br/>
-[in][in]*str*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribbonmainpanelbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelButtonBorder  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pElement*
+*rect*<br/>
+[in][in]*str*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribbonmainpanelbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelButtonBorder
+
+
+```
 virtual void OnDrawRibbonMainPanelButtonBorder(
-    CDC* pDC,  
+    CDC* pDC,
     CMFCRibbonButton* pButton);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pButton*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribbonmainpanelframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelFrame  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pButton*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribbonmainpanelframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelFrame
+
+
+```
 virtual void OnDrawRibbonMainPanelFrame(
-    CDC* pDC,  
-    CMFCRibbonMainPanel* pPanel,  
+    CDC* pDC,
+    CMFCRibbonMainPanel* pPanel,
     CRect rect);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pPanel*  
- [in]*rect*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribbonmenucheckframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonMenuCheckFrame  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pPanel* [in] *rect*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribbonmenucheckframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonMenuCheckFrame
+
+
+```
 virtual void OnDrawRibbonMenuCheckFrame(
-    CDC* pDC,  
-    CMFCRibbonButton* pButton,  
+    CDC* pDC,
+    CMFCRibbonButton* pButton,
     CRect rect);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pButton*  
- [in]*rect*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribbonpanel"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonPanel  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pButton* [in] *rect*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribbonpanel"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonPanel
+
+
+```
 virtual COLORREF OnDrawRibbonPanel(
-    CDC* pDC,  
-    CMFCRibbonPanel* pPanel,  
-    CRect rectPanel,  
+    CDC* pDC,
+    CMFCRibbonPanel* pPanel,
+    CRect rectPanel,
     CRect rectCaption);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*pPanel*  
+[in][in]*pPanel*
 *rectPanel*<br/>
-[in][in]*rectCaption*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribbonpanelcaption"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonPanelCaption  
+[in][in]*rectCaption*
 
-  
-```  
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribbonpanelcaption"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonPanelCaption
+
+
+```
 virtual void OnDrawRibbonPanelCaption(
-    CDC* pDC,  
-    CMFCRibbonPanel* pPanel,  
+    CDC* pDC,
+    CMFCRibbonPanel* pPanel,
     CRect rectCaption);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pPanel*  
- [in]*rectCaption*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribbonprogressbar"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonProgressBar  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pPanel* [in] *rectCaption*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribbonprogressbar"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonProgressBar
+
+
+```
 virtual void OnDrawRibbonProgressBar(
-    CDC* pDC,  
-    CMFCRibbonProgressBar* pProgress,  
-    CRect rectProgress,  
-    CRect rectChunk,  
+    CDC* pDC,
+    CMFCRibbonProgressBar* pProgress,
+    CRect rectProgress,
+    CRect rectChunk,
     BOOL bInfiniteMode);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*pProgress*  
+[in][in]*pProgress*
 *rectProgress*<br/>
-[in][in]*rectChunk*  
- [in]*bInfiniteMode*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribbonrecentfilesframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonRecentFilesFrame  
+[in][in]*rectChunk* [in] *bInfiniteMode*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribbonrecentfilesframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonRecentFilesFrame
+
+
+```
 virtual void OnDrawRibbonRecentFilesFrame(
-    CDC* pDC,  
-    CMFCRibbonMainPanel* pPanel,  
+    CDC* pDC,
+    CMFCRibbonMainPanel* pPanel,
     CRect rect);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pPanel*  
- [in]*rect*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribbonsliderchannel"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonSliderChannel  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pPanel* [in] *rect*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribbonsliderchannel"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonSliderChannel
+
+
+```
 virtual void OnDrawRibbonSliderChannel(
-    CDC* pDC,  
-    CMFCRibbonSlider* pSlider,  
+    CDC* pDC,
+    CMFCRibbonSlider* pSlider,
     CRect rect);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pSlider*  
- [in]*rect*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribbonsliderthumb"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonSliderThumb  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pSlider* [in] *rect*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribbonsliderthumb"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonSliderThumb
+
+
+```
 virtual void OnDrawRibbonSliderThumb(
-    CDC* pDC,  
-    CMFCRibbonSlider* pSlider,  
-    CRect rect,  
-    BOOL bIsHighlighted,  
-    BOOL bIsPressed,  
+    CDC* pDC,
+    CMFCRibbonSlider* pSlider,
+    CRect rect,
+    BOOL bIsHighlighted,
+    BOOL bIsPressed,
     BOOL bIsDisabled);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*pSlider*  
+[in][in]*pSlider*
 *rect*<br/>
-[in][in]*bIsHighlighted*  
+[in][in]*bIsHighlighted*
 *bIsPressed*<br/>
-[in][in]*bIsDisabled*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribbonsliderzoombutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonSliderZoomButton  
+[in][in]*bIsDisabled*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribbonsliderzoombutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonSliderZoomButton
+
+
+```
 virtual void OnDrawRibbonSliderZoomButton(
-    CDC* pDC,  
-    CMFCRibbonSlider* pSlider,  
-    CRect rect,  
-    BOOL bIsZoomOut,  
-    BOOL bIsHighlighted,  
-    BOOL bIsPressed,  
+    CDC* pDC,
+    CMFCRibbonSlider* pSlider,
+    CRect rect,
+    BOOL bIsZoomOut,
+    BOOL bIsHighlighted,
+    BOOL bIsPressed,
     BOOL bIsDisabled);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pSlider*  
-*rect*<br/>
-[in][in]*bIsZoomOut*  
-*bIsHighlighted*<br/>
-[in][in]*bIsPressed*  
- [in]*bIsDisabled*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribbonstatusbarpane"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonStatusBarPane  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pSlider*
+*rect*<br/>
+[in][in]*bIsZoomOut*
+*bIsHighlighted*<br/>
+[in][in]*bIsPressed* [in] *bIsDisabled*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribbonstatusbarpane"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonStatusBarPane
+
+
+```
 virtual COLORREF OnDrawRibbonStatusBarPane(
-    CDC* pDC,  
-    CMFCRibbonStatusBar* pBar,  
+    CDC* pDC,
+    CMFCRibbonStatusBar* pBar,
     CMFCRibbonStatusBarPane* pPane);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pBar*  
- [in]*pPane*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawribbontabsframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonTabsFrame  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pBar* [in] *pPane*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawribbontabsframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonTabsFrame
+
+
+```
 virtual COLORREF OnDrawRibbonTabsFrame(
-    CDC* pDC,  
-    CMFCRibbonBar* pWndRibbonBar,  
+    CDC* pDC,
+    CMFCRibbonBar* pWndRibbonBar,
     CRect rectTab);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pWndRibbonBar*  
- [in]*rectTab*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawscrollbuttons"></a>  CMFCVisualManagerOffice2007::OnDrawScrollButtons  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pWndRibbonBar* [in] *rectTab*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawscrollbuttons"></a>  CMFCVisualManagerOffice2007::OnDrawScrollButtons
+
+
+```
 virtual void OnDrawScrollButtons(
-    CDC* pDC,  
-    const CRect& rect,  
-    const int nBorderSize,  
-    int iImage,  
+    CDC* pDC,
+    const CRect& rect,
+    const int nBorderSize,
+    int iImage,
     BOOL bHilited);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*rect*  
+[in][in]*rect*
 *nBorderSize*<br/>
-[in][in]*iImage*  
- [in]*bHilited*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawseparator"></a>  CMFCVisualManagerOffice2007::OnDrawSeparator  
+[in][in]*iImage* [in] *bHilited*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawseparator"></a>  CMFCVisualManagerOffice2007::OnDrawSeparator
+
+
+```
 virtual void OnDrawSeparator(
-    CDC* pDC,  
-    CBasePane* pBar,  
-    CRect rect,  
+    CDC* pDC,
+    CBasePane* pBar,
+    CRect rect,
     BOOL bIsHoriz);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pBar*  
-*rect*<br/>
-[in][in]*bIsHoriz*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawshowallmenuitems"></a>  CMFCVisualManagerOffice2007::OnDrawShowAllMenuItems  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pBar*
+*rect*<br/>
+[in][in]*bIsHoriz*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawshowallmenuitems"></a>  CMFCVisualManagerOffice2007::OnDrawShowAllMenuItems
+
+
+```
 virtual void OnDrawShowAllMenuItems(
-    CDC* pDC,  
-    CRect rect,  
+    CDC* pDC,
+    CRect rect,
     CMFCVisualManager::AFX_BUTTON_STATE state);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*rect*  
- [in]*狀態*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawstatusbarpaneborder"></a>  CMFCVisualManagerOffice2007::OnDrawStatusBarPaneBorder  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*rect* [in]*狀態*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawstatusbarpaneborder"></a>  CMFCVisualManagerOffice2007::OnDrawStatusBarPaneBorder
+
+
+```
 virtual void OnDrawStatusBarPaneBorder(
-    CDC* pDC,  
-    CMFCStatusBar* pBar,  
-    CRect rectPane,  
-    UINT uiID,  
+    CDC* pDC,
+    CMFCStatusBar* pBar,
+    CRect rectPane,
+    UINT uiID,
     UINT nStyle);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*pBar*  
+[in][in]*pBar*
 *rectPane*<br/>
-[in][in]*uiID*  
- [in]*nStyle*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawstatusbarsizebox"></a>  CMFCVisualManagerOffice2007::OnDrawStatusBarSizeBox  
+[in][in]*uiID* [in] *nStyle*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawstatusbarsizebox"></a>  CMFCVisualManagerOffice2007::OnDrawStatusBarSizeBox
+
+
+```
 virtual void OnDrawStatusBarSizeBox(
-    CDC* pDC,  
-    CMFCStatusBar* pStatBar,  
+    CDC* pDC,
+    CMFCStatusBar* pStatBar,
     CRect rectSizeBox);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pStatBar*  
- [in]*rectSizeBox*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawtab"></a>  CMFCVisualManagerOffice2007::OnDrawTab  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pStatBar* [in] *rectSizeBox*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawtab"></a>  CMFCVisualManagerOffice2007::OnDrawTab
+
+
+```
 virtual void OnDrawTab(
-    CDC* pDC,  
-    CRect rectTab,  
-    int iTab,  
-    BOOL bIsActive,  
+    CDC* pDC,
+    CRect rectTab,
+    int iTab,
+    BOOL bIsActive,
     const CMFCBaseTabCtrl* pTabWnd);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*rectTab*  
+[in][in]*rectTab*
 *iTab*<br/>
-[in][in]*bIsActive*  
- [in]*pTabWnd*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawtabsbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawTabsButtonBorder  
+[in][in]*bIsActive* [in] *pTabWnd*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawtabsbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawTabsButtonBorder
+
+
+```
 virtual void OnDrawTabsButtonBorder(
-    CDC* pDC,  
-    CRect& rect,  
-    CMFCButton* pButton,  
-    UINT uiState,  
+    CDC* pDC,
+    CRect& rect,
+    CMFCButton* pButton,
+    UINT uiState,
     CMFCBaseTabCtrl* pWndTab);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*rect*  
-*pButton*<br/>
-[in][in]*uiState*  
- [in]*pWndTab*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawtask"></a>  CMFCVisualManagerOffice2007::OnDrawTask  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*rect*
+*pButton*<br/>
+[in][in]*uiState* [in] *pWndTab*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawtask"></a>  CMFCVisualManagerOffice2007::OnDrawTask
+
+
+```
 virtual void OnDrawTask(
-    CDC* pDC,  
-    CMFCTasksPaneTask* pTask,  
-    CImageList* pIcons,  
-    BOOL bIsHighlighted = FALSE,  
+    CDC* pDC,
+    CMFCTasksPaneTask* pTask,
+    CImageList* pIcons,
+    BOOL bIsHighlighted = FALSE,
     BOOL bIsSelected = FALSE);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*pTask*  
+[in][in]*pTask*
 *pIcons*<br/>
-[in][in]*bIsHighlighted*  
- [in]*bIsSelected*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawtasksgroupcaption"></a>  CMFCVisualManagerOffice2007::OnDrawTasksGroupCaption  
+[in][in]*bIsHighlighted* [in] *bIsSelected*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawtasksgroupcaption"></a>  CMFCVisualManagerOffice2007::OnDrawTasksGroupCaption
+
+
+```
 virtual void OnDrawTasksGroupCaption(
-    CDC* pDC,  
-    CMFCTasksPaneTaskGroup* pGroup,  
-    BOOL bIsHighlighted = FALSE,  
-    BOOL bIsSelected = FALSE,  
+    CDC* pDC,
+    CMFCTasksPaneTaskGroup* pGroup,
+    BOOL bIsHighlighted = FALSE,
+    BOOL bIsSelected = FALSE,
     BOOL bCanCollapse = FALSE);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pGroup*  
-*bIsHighlighted*<br/>
-[in][in]*bIsSelected*  
- [in]*bCanCollapse*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ondrawtearoffcaption"></a>  CMFCVisualManagerOffice2007::OnDrawTearOffCaption  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pGroup*
+*bIsHighlighted*<br/>
+[in][in]*bIsSelected* [in] *bCanCollapse*
+
+### <a name="remarks"></a>備註
+
+##  <a name="ondrawtearoffcaption"></a>  CMFCVisualManagerOffice2007::OnDrawTearOffCaption
+
+
+```
 virtual void OnDrawTearOffCaption(
-    CDC* pDC,  
-    CRect rect,  
+    CDC* pDC,
+    CRect rect,
     BOOL bIsActive);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*rect*  
- [in]*bIsActive*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onerasemdiclientarea"></a>  CMFCVisualManagerOffice2007::OnEraseMDIClientArea  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*rect* [in] *bIsActive*
+
+### <a name="remarks"></a>備註
+
+##  <a name="onerasemdiclientarea"></a>  CMFCVisualManagerOffice2007::OnEraseMDIClientArea
+
+
+```
 virtual BOOL OnEraseMDIClientArea(
-    CDC* pDC,  
+    CDC* pDC,
     CRect rectClient);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*rectClient*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onerasetabsarea"></a>  CMFCVisualManagerOffice2007::OnEraseTabsArea  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*rectClient*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="onerasetabsarea"></a>  CMFCVisualManagerOffice2007::OnEraseTabsArea
+
+
+```
 virtual void OnEraseTabsArea(
-    CDC* pDC,  
-    CRect rect,  
+    CDC* pDC,
+    CRect rect,
     const CMFCBaseTabCtrl* pTabWnd);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*rect*  
- [in]*pTabWnd*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onerasetabsbutton"></a>  CMFCVisualManagerOffice2007::OnEraseTabsButton  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*rect* [in] *pTabWnd*
+
+### <a name="remarks"></a>備註
+
+##  <a name="onerasetabsbutton"></a>  CMFCVisualManagerOffice2007::OnEraseTabsButton
+
+
+```
 virtual void OnEraseTabsButton(
-    CDC* pDC,  
-    CRect rect,  
-    CMFCButton* pButton,  
+    CDC* pDC,
+    CRect rect,
+    CMFCButton* pButton,
     CMFCBaseTabCtrl* pWndTab);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*rect*  
+[in][in]*rect*
 *pButton*<br/>
-[in][in]*pWndTab*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onerasetabsframe"></a>  CMFCVisualManagerOffice2007::OnEraseTabsFrame  
+[in][in]*pWndTab*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="onerasetabsframe"></a>  CMFCVisualManagerOffice2007::OnEraseTabsFrame
+
+
+```
 virtual BOOL OnEraseTabsFrame(
-    CDC* pDC,  
-    CRect rect,  
+    CDC* pDC,
+    CRect rect,
     const CMFCBaseTabCtrl* pTabWnd);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*rect*  
- [in]*pTabWnd*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onfillbarbackground"></a>  CMFCVisualManagerOffice2007::OnFillBarBackground  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*rect* [in] *pTabWnd*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="onfillbarbackground"></a>  CMFCVisualManagerOffice2007::OnFillBarBackground
+
+
+```
 virtual void OnFillBarBackground(
-    CDC* pDC,  
-    CBasePane* pBar,  
-    CRect rectClient,  
-    CRect rectClip,  
+    CDC* pDC,
+    CBasePane* pBar,
+    CRect rectClient,
+    CRect rectClip,
     BOOL bNCArea = FALSE);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*pBar*  
+[in][in]*pBar*
 *rectClient*<br/>
-[in][in]*rectClip*  
- [in]*bNCArea*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onfillbuttoninterior"></a>  CMFCVisualManagerOffice2007::OnFillButtonInterior  
+[in][in]*rectClip* [in] *bNCArea*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="onfillbuttoninterior"></a>  CMFCVisualManagerOffice2007::OnFillButtonInterior
+
+
+```
 virtual void OnFillButtonInterior(
-    CDC* pDC,  
-    CMFCToolBarButton* pButton,  
-    CRect rect,  
+    CDC* pDC,
+    CMFCToolBarButton* pButton,
+    CRect rect,
     CMFCVisualManager::AFX_BUTTON_STATE state);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pButton*  
-*rect*<br/>
-[in][in]*狀態*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onfillcaptionbarbutton"></a>  CMFCVisualManagerOffice2007::OnFillCaptionBarButton  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pButton*
+*rect*<br/>
+[in][in]*狀態*
+
+### <a name="remarks"></a>備註
+
+##  <a name="onfillcaptionbarbutton"></a>  CMFCVisualManagerOffice2007::OnFillCaptionBarButton
+
+
+```
 virtual COLORREF OnFillCaptionBarButton(
-    CDC* pDC,  
-    CMFCCaptionBar* pBar,  
-    CRect rect,  
-    BOOL bIsPressed,  
-    BOOL bIsHighlighted,  
-    BOOL bIsDisabled,  
-    BOOL bHasDropDownArrow,  
+    CDC* pDC,
+    CMFCCaptionBar* pBar,
+    CRect rect,
+    BOOL bIsPressed,
+    BOOL bIsHighlighted,
+    BOOL bIsDisabled,
+    BOOL bHasDropDownArrow,
     BOOL bIsSysButton);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*pBar*  
+[in][in]*pBar*
 *rect*<br/>
-[in][in]*bIsPressed*  
+[in][in]*bIsPressed*
 *bIsHighlighted*<br/>
-[in][in]*bIsDisabled*  
+[in][in]*bIsDisabled*
 *bHasDropDownArrow*<br/>
-[in][in]*bIsSysButton*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onfillhighlightedarea"></a>  CMFCVisualManagerOffice2007::OnFillHighlightedArea  
+[in][in]*bIsSysButton*
 
-  
-```  
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="onfillhighlightedarea"></a>  CMFCVisualManagerOffice2007::OnFillHighlightedArea
+
+
+```
 virtual void OnFillHighlightedArea(
-    CDC* pDC,  
-    CRect rect,  
-    CBrush* pBrush,  
+    CDC* pDC,
+    CRect rect,
+    CBrush* pBrush,
     CMFCToolBarButton* pButton);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*rect*  
+[in][in]*rect*
 *pBrush*<br/>
-[in][in]*pButton*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onfillminiframecaption"></a>  CMFCVisualManagerOffice2007::OnFillMiniFrameCaption  
+[in][in]*pButton*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="onfillminiframecaption"></a>  CMFCVisualManagerOffice2007::OnFillMiniFrameCaption
+
+
+```
 virtual COLORREF OnFillMiniFrameCaption(
-    CDC* pDC,  
-    CRect rectCaption,  
-    CPaneFrameWnd* pFrameWnd,  
+    CDC* pDC,
+    CRect rectCaption,
+    CPaneFrameWnd* pFrameWnd,
     BOOL bActive);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*rectCaption*  
+[in][in]*rectCaption*
 *pFrameWnd*<br/>
-[in][in]*bActive*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onfilloutlookbarcaption"></a>  CMFCVisualManagerOffice2007::OnFillOutlookBarCaption  
+[in][in]*bActive*
 
-  
-```  
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="onfilloutlookbarcaption"></a>  CMFCVisualManagerOffice2007::OnFillOutlookBarCaption
+
+
+```
 virtual void OnFillOutlookBarCaption(
-    CDC* pDC,  
-    CRect rectCaption,  
+    CDC* pDC,
+    CRect rectCaption,
     COLORREF& clrText);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*rectCaption*  
- [in]*clrText*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onfilloutlookpagebutton"></a>  CMFCVisualManagerOffice2007::OnFillOutlookPageButton  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*rectCaption* [in] *clrText*
+
+### <a name="remarks"></a>備註
+
+##  <a name="onfilloutlookpagebutton"></a>  CMFCVisualManagerOffice2007::OnFillOutlookPageButton
+
+
+```
 virtual void OnFillOutlookPageButton(
-    CDC* pDC,  
-    const CRect& rect,  
-    BOOL bIsHighlighted,  
-    BOOL bIsPressed,  
+    CDC* pDC,
+    const CRect& rect,
+    BOOL bIsHighlighted,
+    BOOL bIsPressed,
     COLORREF& clrText);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*rect*  
+[in][in]*rect*
 *bIsHighlighted*<br/>
-[in][in]*bIsPressed*  
- [in]*clrText*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onfillpopupwindowbackground"></a>  CMFCVisualManagerOffice2007::OnFillPopupWindowBackground  
+[in][in]*bIsPressed* [in] *clrText*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="onfillpopupwindowbackground"></a>  CMFCVisualManagerOffice2007::OnFillPopupWindowBackground
+
+
+```
 virtual void OnFillPopupWindowBackground(
-    CDC* pDC,  
+    CDC* pDC,
     CRect rect);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*rect*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onfillribbonbutton"></a>  CMFCVisualManagerOffice2007::OnFillRibbonButton  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*rect*
+
+### <a name="remarks"></a>備註
+
+##  <a name="onfillribbonbutton"></a>  CMFCVisualManagerOffice2007::OnFillRibbonButton
+
+
+```
 virtual COLORREF OnFillRibbonButton(
-    CDC* pDC,  
+    CDC* pDC,
     CMFCRibbonButton* pButton);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pButton*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onfillribbonedit"></a>  CMFCVisualManagerOffice2007::OnFillRibbonEdit  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pButton*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="onfillribbonedit"></a>  CMFCVisualManagerOffice2007::OnFillRibbonEdit
+
+
+```
 virtual void OnFillRibbonEdit(
-    CDC* pDC,  
-    CMFCRibbonRichEditCtrl* pEdit,  
-    CRect rect,  
-    BOOL bIsHighlighted,  
-    BOOL bIsPaneHighlighted,  
-    BOOL bIsDisabled,  
-    COLORREF& clrText,  
-    COLORREF& clrSelBackground,  
+    CDC* pDC,
+    CMFCRibbonRichEditCtrl* pEdit,
+    CRect rect,
+    BOOL bIsHighlighted,
+    BOOL bIsPaneHighlighted,
+    BOOL bIsDisabled,
+    COLORREF& clrText,
+    COLORREF& clrSelBackground,
     COLORREF& clrSelText);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*pEdit*  
+[in][in]*pEdit*
 *rect*<br/>
-[in][in]*bIsHighlighted*  
+[in][in]*bIsHighlighted*
 *bIsPaneHighlighted*<br/>
-[in][in]*bIsDisabled*  
+[in][in]*bIsDisabled*
 *clrText*<br/>
-[in][in]*clrSelBackground*  
- [in]*clrSelText*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onfillribbonmainpanelbutton"></a>  CMFCVisualManagerOffice2007::OnFillRibbonMainPanelButton  
+[in][in]*clrSelBackground* [in] *clrSelText*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="onfillribbonmainpanelbutton"></a>  CMFCVisualManagerOffice2007::OnFillRibbonMainPanelButton
+
+
+```
 virtual COLORREF OnFillRibbonMainPanelButton(
-    CDC* pDC,  
+    CDC* pDC,
     CMFCRibbonButton* pButton);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pButton*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onfillribbonmenuframe"></a>  CMFCVisualManagerOffice2007::OnFillRibbonMenuFrame  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pButton*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="onfillribbonmenuframe"></a>  CMFCVisualManagerOffice2007::OnFillRibbonMenuFrame
+
+
+```
 virtual void OnFillRibbonMenuFrame(
-    CDC* pDC,  
-    CMFCRibbonMainPanel* pPanel,  
+    CDC* pDC,
+    CMFCRibbonMainPanel* pPanel,
     CRect rect);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pPanel*  
- [in]*rect*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onfillribbonquickaccesstoolbarpopup"></a>  CMFCVisualManagerOffice2007::OnFillRibbonQuickAccessToolBarPopup  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pPanel* [in] *rect*
+
+### <a name="remarks"></a>備註
+
+##  <a name="onfillribbonquickaccesstoolbarpopup"></a>  CMFCVisualManagerOffice2007::OnFillRibbonQuickAccessToolBarPopup
+
+
+```
 virtual void OnFillRibbonQuickAccessToolBarPopup(
-    CDC* pDC,  
-    CMFCRibbonPanelMenuBar* pMenuBar,  
+    CDC* pDC,
+    CMFCRibbonPanelMenuBar* pMenuBar,
     CRect rect);
-```  
-  
-### <a name="parameters"></a>參數  
-*pDC*<br/>
-[in][in]*pMenuBar*  
- [in]*rect*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onfilltab"></a>  CMFCVisualManagerOffice2007::OnFillTab  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pDC*<br/>
+[in][in]*pMenuBar* [in] *rect*
+
+### <a name="remarks"></a>備註
+
+##  <a name="onfilltab"></a>  CMFCVisualManagerOffice2007::OnFillTab
+
+
+```
 virtual void OnFillTab(
-    CDC* pDC,  
-    CRect rectFill,  
-    CBrush* pbrFill,  
-    int iTab,  
-    BOOL bIsActive,  
+    CDC* pDC,
+    CRect rectFill,
+    CBrush* pbrFill,
+    int iTab,
+    BOOL bIsActive,
     const CMFCBaseTabCtrl* pTabWnd);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*rectFill*  
+[in][in]*rectFill*
 *pbrFill*<br/>
-[in][in]*iTab*  
+[in][in]*iTab*
 *bIsActive*<br/>
-[in][in]*pTabWnd*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onhighlightmenuitem"></a>  CMFCVisualManagerOffice2007::OnHighlightMenuItem  
+[in][in]*pTabWnd*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="onhighlightmenuitem"></a>  CMFCVisualManagerOffice2007::OnHighlightMenuItem
+
+
+```
 virtual void OnHighlightMenuItem(
-    CDC* pDC,  
-    CMFCToolBarMenuButton* pButton,  
-    CRect rect,  
+    CDC* pDC,
+    CMFCToolBarMenuButton* pButton,
+    CRect rect,
     COLORREF& clrText);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*pButton*  
+[in][in]*pButton*
 *rect*<br/>
-[in][in]*clrText*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onhighlightrarelyusedmenuitems"></a>  CMFCVisualManagerOffice2007::OnHighlightRarelyUsedMenuItems  
+[in][in]*clrText*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="onhighlightrarelyusedmenuitems"></a>  CMFCVisualManagerOffice2007::OnHighlightRarelyUsedMenuItems
+
+
+```
 virtual void OnHighlightRarelyUsedMenuItems(
-    CDC* pDC,  
+    CDC* pDC,
     CRect rectRarelyUsed);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDC*<br/>
-[in][in]*rectRarelyUsed*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onncactivate"></a>  CMFCVisualManagerOffice2007::OnNcActivate  
+[in][in]*rectRarelyUsed*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="onncactivate"></a>  CMFCVisualManagerOffice2007::OnNcActivate
+
+
+```
 virtual BOOL OnNcActivate(
-    CWnd* pWnd,  
+    CWnd* pWnd,
     BOOL bActive);
-```  
-  
-### <a name="parameters"></a>參數  
-*pWnd*<br/>
-[in][in]*bActive*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onncpaint"></a>  CMFCVisualManagerOffice2007::OnNcPaint  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pWnd*<br/>
+[in][in]*bActive*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="onncpaint"></a>  CMFCVisualManagerOffice2007::OnNcPaint
+
+
+```
 virtual BOOL OnNcPaint(
-    CWnd* pWnd,  
-    const CObList& lstSysButtons,  
+    CWnd* pWnd,
+    const CObList& lstSysButtons,
     CRect rectRedraw);
-```  
-  
-### <a name="parameters"></a>參數  
-*pWnd*<br/>
-[in][in]*lstSysButtons*  
- [in]*rectRedraw*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onsetwindowregion"></a>  CMFCVisualManagerOffice2007::OnSetWindowRegion  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pWnd*<br/>
+[in][in]*lstSysButtons* [in] *rectRedraw*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="onsetwindowregion"></a>  CMFCVisualManagerOffice2007::OnSetWindowRegion
+
+
+```
 virtual BOOL OnSetWindowRegion(
-    CWnd* pWnd,  
+    CWnd* pWnd,
     CSize sizeWindow);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pWnd*<br/>
-[in][in]*sizeWindow*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onupdatesystemcolors"></a>  CMFCVisualManagerOffice2007::OnUpdateSystemColors  
+[in][in]*sizeWindow*
 
-  
-```  
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="onupdatesystemcolors"></a>  CMFCVisualManagerOffice2007::OnUpdateSystemColors
+
+
+```
 virtual void OnUpdateSystemColors();
-```  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="setresourcehandle"></a>  CMFCVisualManagerOffice2007::SetResourceHandle  
+```
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="setresourcehandle"></a>  CMFCVisualManagerOffice2007::SetResourceHandle
+
+
+```
 static void __stdcall SetResourceHandle(HINSTANCE hinstRes);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*hinstRes*  
-  
-### <a name="remarks"></a>備註  
-  
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CMFCVisualManager 類別](../../mfc/reference/cmfcvisualmanager-class.md)   
- [CMFCVisualManagerOfficeXP 類別](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   
- [CMFCVisualManagerWindows 類別](../../mfc/reference/cmfcvisualmanagerwindows-class.md)
+```
+
+### <a name="parameters"></a>參數
+
+[in]*hinstRes*
+
+### <a name="remarks"></a>備註
+
+## <a name="see-also"></a>另請參閱
+
+[階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
+[類別](../../mfc/reference/mfc-classes.md)<br/>
+[CMFCVisualManager 類別](../../mfc/reference/cmfcvisualmanager-class.md)<br/>
+[CMFCVisualManagerOfficeXP 類別](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)<br/>
+[CMFCVisualManagerWindows 類別](../../mfc/reference/cmfcvisualmanagerwindows-class.md)

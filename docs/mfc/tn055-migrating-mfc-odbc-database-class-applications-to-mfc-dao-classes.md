@@ -1,5 +1,5 @@
 ---
-title: TN055： 將移轉至 MFC DAO 類別的 MFC ODBC 資料庫類別應用程式 |Microsoft 文件
+title: TN055： 將移轉至 MFC DAO 類別的 MFC ODBC 資料庫類別應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/20/2018
 ms.technology:
@@ -24,23 +24,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d46150ee76219732d0895e818fa00c68dc588853
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 808f0f470e99b95502891552ade7b8c677dfdf17
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957386"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396827"
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055：將 MFC ODBC 資料庫類別應用程式移轉至 MFC DAO 類別
 
 > [!NOTE]
-> Visual c + + 環境和精靈不支援 DAO （雖然 DAO 類別都包含在內，而且您仍然可以使用它們）。 Microsoft 呤魽您畷樾[OLE DB 樣板](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)針對新的專案。 您只應該使用 DAO 中維護現有應用程式。
+> Visual c + + 環境和精靈不支援 DAO （雖然 DAO 類別都包含在內，而且您仍然可以使用它們）。 Microsoft 建議您改用[OLE DB 樣板](../data/oledb/ole-db-templates.md)或是[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)針對新的專案。 您只應該使用 DAO，在維護現有的應用程式。
 
 ## <a name="overview"></a>總覽
 
 在大部分情況下，可能需要將使用 MFC 的 ODBC 資料庫類別的應用程式移轉至 MFC 的 DAO 資料庫類別。 這個技術提示將詳細說明 MFC ODBC 與 DAO 類別之間的大多數差異。 在考慮差異的情況下，如有需要，將應用程式從 ODBC 類別移轉至 MFC 類別應該不困難。
 
-## <a name="why-migrate-from-odbc-to-dao"></a>為什麼要從 ODBC 移轉至 DAO
+## <a name="why-migrate-from-odbc-to-dao"></a>為什麼要移轉至 DAO 的 從 ODBC
 
 您想要將應用程式從 ODBC 資料庫類別移轉至 DAO 資料庫類別的原因有許多種，但是這項決定不見得簡單或淺顯易懂。 務必記住的是，DAO 所使用的 Microsoft Jet 資料庫引擎可以讀取您擁有其 ODBC 驅動程式的任何 ODBC 資料來源。 雖然使用 ODBC 資料庫類別或直接自行呼叫 ODBC 可能更有效率，不過 Microsoft Jet 資料庫引擎可以讀取 ODBC 資料。
 
@@ -91,7 +91,7 @@ DAO 類別包含較多物件和一組內容更豐富的方法，不過，本節�
 |`RFX_Binary`|`DFX_Binary`|
 |`RFX_LongBinary`|`DFX_LongBinary`|
 
-<sup>1</sup> `RFX_Date`函式根據`CTime`和`TIMESTAMP_STRUCT`。
+<sup>1</sup> `RFX_Date`函數會根據`CTime`和`TIMESTAMP_STRUCT`。
 
 以下列出功能上的主要變更，這些變更可能會影響您的應用程式，並且需要進行較複雜的名稱變更。
 
@@ -99,9 +99,9 @@ DAO 類別包含較多物件和一組內容更豐富的方法，不過，本節�
 
    若使用 ODBC 類別，MFC 需要透過巨集或列舉的類型定義這些選項。
 
-   若使用 DAO 類別，DAO 會在標頭檔 (DBDAOINT.H) 中提供這些選項的定義。 因此，資料錄集類型是 `CRecordset` 的列舉成員，不過在 DAO 中則是常數。 例如，您可以使用**快照**時指定的型別`CRecordset`ODBC 中，但**DB_OPEN_SNAPSHOT**時指定的型別`CDaoRecordset`。
+   若使用 DAO 類別，DAO 會在標頭檔 (DBDAOINT.H) 中提供這些選項的定義。 因此，資料錄集類型是 `CRecordset` 的列舉成員，不過在 DAO 中則是常數。 比方說，您可使用**快照集**時指定的型別`CRecordset`ODBC 中，但**DB_OPEN_SNAPSHOT**時指定的型別`CDaoRecordset`。
 
-- 預設資料錄集類型`CRecordset`是**快照**時的預設資料錄集類型`CDaoRecordset`是**動態**（請參閱下方的附註有關 ODBC 類別快照的其他問題）。
+- 預設資料錄集類型`CRecordset`已**快照集**時的預設資料錄集類型`CDaoRecordset`會**動態集**（請參閱下方的附註有關 ODBC 類別快照的其他問題）。
 
 - ODBC `CRecordset` 類別可以選擇建立順向資料錄集類型。 在 `CDaoRecordset` 類別中，順向並不是資料錄集類型，而是特定資料錄集類型的屬性 (或選項)。
 
@@ -111,12 +111,12 @@ DAO 類別包含較多物件和一組內容更豐富的方法，不過，本節�
 
 - 例外狀況類別已變更。 `CDBExceptions` ODBC 類別中擲回和`CDaoExceptions`在 DAO 類別中。
 
-- `RFX_Date` 使用`CTime`和`TIMESTAMP_STRUCT`物件，而`DFX_Date`使用`COleDateTime`。 `COleDateTime`幾乎完全相同`CTime`，但是為依據的 8 位元 OLE**日期**而不是 4 位元組**time_t**讓它能容納更大範圍的資料。
+- `RFX_Date` 會使用`CTime`並`TIMESTAMP_STRUCT`物件，而`DFX_Date`使用`COleDateTime`。 `COleDateTime`幾乎等同`CTime`，但是為依據的 8 位元 OLE**日期**而不是 4 位元組**time_t**因此能夠保存更大範圍的資料。
 
    > [!NOTE]
-   > DAO (`CDaoRecordset`) 快照是唯讀的，而 ODBC (`CRecordset`) 快照可能可以根據 ODBC 資料指標程式庫的驅動程式和用途更新。 如果您使用的是資料指標程式庫，`CRecordset` 快照就可以更新。 如果您使用的是 Desktop Driver Pack 3.0 中任何不含 ODBC 資料指標程式庫的 Microsoft 驅動程式，則 `CRecordset` 快照是唯讀的。 如果您使用其他驅動程式，請檢查驅動程式的文件，如果快照集 (`STATIC_CURSORS`) 處於唯讀狀態。
+   > DAO (`CDaoRecordset`) 快照是唯讀的，而 ODBC (`CRecordset`) 快照可能可以根據 ODBC 資料指標程式庫的驅動程式和用途更新。 如果您使用的是資料指標程式庫，`CRecordset` 快照就可以更新。 如果您使用的是 Desktop Driver Pack 3.0 中任何不含 ODBC 資料指標程式庫的 Microsoft 驅動程式，則 `CRecordset` 快照是唯讀的。 如果您使用其他驅動程式，請檢查驅動程式的文件，以查看快照集 (`STATIC_CURSORS`) 都是唯讀。
 
 ## <a name="see-also"></a>另請參閱
 
-[依編號顯示的技術提示](../mfc/technical-notes-by-number.md)  
-[依分類區分的技術提示](../mfc/technical-notes-by-category.md)  
+[依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
+[依分類區分的技術提示](../mfc/technical-notes-by-category.md)

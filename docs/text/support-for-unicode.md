@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b4f83d4d991b55ec7151db22a9b21424914bd04
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a4ed04c30eb71086f57cc9a782c320c06a301485
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590191"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405030"
 ---
 # <a name="support-for-unicode"></a>Unicode 的支援
 
@@ -67,5 +67,6 @@ MFC 架構完全啟用 Unicode，MFC 透過使用可移植巨集，完成啟用 
 - [了解位元組寬度可移植性的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)
 
 ## <a name="see-also"></a>另請參閱
- [文字和字串](../text/text-and-strings-in-visual-cpp.md)  
- [wmain 使用的支援](../text/support-for-using-wmain.md)  
+
+[文字和字串](../text/text-and-strings-in-visual-cpp.md)<br/>
+[wmain 使用的支援](../text/support-for-using-wmain.md)

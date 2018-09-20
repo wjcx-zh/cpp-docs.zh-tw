@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2e9e13f7b5838cb13497dd874f7f0cf42f34e98
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6ec12275291321751c539d095c60fa9dabffa2b7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200142"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445174"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet 類別
 
@@ -181,7 +181,7 @@ void AddPage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>參數
 
-*pPage*  
+*pPage*<br/>
 指向要加入至屬性工作表頁。 不可以是 NULL。
 
 ### <a name="remarks"></a>備註
@@ -237,25 +237,25 @@ void Construct(
 
 ### <a name="parameters"></a>參數
 
-*nIDCaption*  
+*nIDCaption*<br/>
 要用於屬性工作表的標題的識別碼。
 
-*pParentWnd*  
+*pParentWnd*<br/>
 屬性工作表的父視窗的指標。 如果是 NULL，則父視窗會是應用程式的主視窗。
 
-*iSelectPage*  
+*iSelectPage*<br/>
 一開始會在最上層是頁面的索引。 預設值為加入至工作表的第一頁。
 
-*pszCaption*  
+*pszCaption*<br/>
 包含要用於屬性工作表的標題字串的指標。 不可以是 NULL。
 
-*hbmWatermark*  
+*hbmWatermark*<br/>
 [屬性] 頁面的浮水印點陣圖的控制代碼。
 
-*hpalWatermark*  
+*hpalWatermark*<br/>
 浮水印點陣圖和/或標頭點陣圖的調色盤的控制代碼。
 
-*hbmHeader*  
+*hbmHeader*<br/>
 [屬性] 頁面的標頭點陣圖的控制代碼。
 
 ### <a name="remarks"></a>備註
@@ -312,25 +312,25 @@ CPropertySheet(
 
 ### <a name="parameters"></a>參數
 
-*nIDCaption*  
+*nIDCaption*<br/>
 要用於屬性工作表的標題的識別碼。
 
-*pParentWnd*  
+*pParentWnd*<br/>
 指向父視窗的屬性工作表。 如果是 NULL，則父視窗會是應用程式的主視窗。
 
-*iSelectPage*  
+*iSelectPage*<br/>
 一開始會在最上層是頁面的索引。 預設值為加入至工作表的第一頁。
 
-*pszCaption*  
+*pszCaption*<br/>
 指向字串，包含要用於屬性工作表的標題。 不可以是 NULL。
 
-*hbmWatermark*  
+*hbmWatermark*<br/>
 屬性工作表的背景點陣圖控制代碼。
 
-*hpalWatermark*  
+*hpalWatermark*<br/>
 浮水印點陣圖和/或標頭點陣圖的調色盤控制代碼。
 
-*hbmHeader*  
+*hbmHeader*<br/>
 [屬性] 頁面的標頭點陣圖控制代碼。
 
 ### <a name="remarks"></a>備註
@@ -357,13 +357,13 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 
 ### <a name="parameters"></a>參數
 
-*pParentWnd*  
+*pParentWnd*<br/>
 父視窗的點。 如果是 NULL，則父代是桌面。
 
-*cheaderctrl:: Create*  
+*cheaderctrl:: Create*<br/>
 屬性工作表的視窗樣式。 如需可用樣式的完整清單，請參閱[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。
 
-*dwExStyle*  
+*dwExStyle*<br/>
 屬性工作表的延伸的視窗樣式。 如需可用樣式的完整清單，請參閱[延伸視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
 
 ### <a name="return-value"></a>傳回值
@@ -445,7 +445,7 @@ void EnableStackedTabs(BOOL bStacked);
 
 ### <a name="parameters"></a>參數
 
-*bStacked*  
+*bStacked*<br/>
 表示屬性工作表中是否已啟用堆疊索引標籤。 設定停用堆疊的資料列的標籤*bStacked*為 FALSE。
 
 ### <a name="remarks"></a>備註
@@ -468,7 +468,7 @@ void EndDialog(int nEndID);
 
 ### <a name="parameters"></a>參數
 
-*nEndID*  
+*nEndID*<br/>
 要做為傳回值的屬性工作表的識別碼。
 
 ### <a name="remarks"></a>備註
@@ -527,7 +527,7 @@ CPropertyPage* GetPage(int nPage) const;
 
 ### <a name="parameters"></a>參數
 
-*n 版面*  
+*n 版面*<br/>
 所需的頁面上，索引從 0 開始。 必須介於 0 與小於屬性工作表，內含中的頁數。
 
 ### <a name="return-value"></a>傳回值
@@ -564,7 +564,7 @@ int GetPageIndex(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>參數
 
-*pPage*  
+*pPage*<br/>
 要尋找的索引頁面的點。 不可以是 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -623,7 +623,7 @@ void MapDialogRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>參數
 
-*lpRect*  
+*lpRect*<br/>
 指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)協調要轉換的物件，其中包含對話方塊。
 
 ### <a name="remarks"></a>備註
@@ -664,7 +664,7 @@ void PressButton(int nButton);
 
 ### <a name="parameters"></a>參數
 
-*n 按鈕*  
+*n 按鈕*<br/>
 n 按鈕： 識別被按下按鈕。 這個參數可以是下列值之一：
 
 - PSBTN_BACK 會選擇 [上一頁] 按鈕。
@@ -702,10 +702,10 @@ void RemovePage(int nPage);
 
 ### <a name="parameters"></a>參數
 
-*pPage*  
+*pPage*<br/>
 指向要從屬性工作表移除頁面。 不可以是 NULL。
 
-*n 版面*  
+*n 版面*<br/>
 要移除的頁面索引。 必須介於 0 與小於屬性工作表，內含中的頁數。
 
 ### <a name="remarks"></a>備註
@@ -723,10 +723,10 @@ BOOL SetActivePage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>參數
 
-*n 版面*  
+*n 版面*<br/>
 若要設定頁面的索引。 它必須介於 0 與小於屬性工作表，內含中的頁數。
 
-*pPage*  
+*pPage*<br/>
 若要設定在屬性工作表頁面的點。 它不能是 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -751,7 +751,7 @@ void SetFinishText(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>參數
 
-*lpszText*  
+*lpszText*<br/>
 指向要顯示在 [完成] 命令按鈕的文字。
 
 ### <a name="remarks"></a>備註
@@ -774,10 +774,10 @@ void SetTitle(
 
 ### <a name="parameters"></a>參數
 
-*nStyle*  
+*nStyle*<br/>
 指定的屬性工作表頁標題的樣式。 必須指定樣式，在 0 或 PSH_PROPTITLE。 如果樣式設定為 PSH_PROPTITLE，「 屬性 」 這個字出現指定為標題的文字後面。 例如，呼叫`SetTitle`（"Simple"，PSH_PROPTITLE），將會導致屬性工作表頁標題的 「 簡單的屬性。 」
 
-*lpszText*  
+*lpszText*<br/>
 指向要用作屬性工作表的標題列中的標題文字。
 
 ### <a name="remarks"></a>備註
@@ -798,7 +798,7 @@ void SetWizardButtons(DWORD dwFlags);
 
 ### <a name="parameters"></a>參數
 
-*dwFlags*  
+*dwFlags*<br/>
 一組自訂的精靈按鈕的外觀與函式的旗標。 這個參數可以是下列值的組合：
 
 - PSWIZB_BACK 上一步 按鈕
@@ -847,9 +847,9 @@ void SetWizardMode();
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 CMNCTRL1](../../visual-cpp-samples.md)  
-[MFC 範例 CMNCTRL2](../../visual-cpp-samples.md)  
-[MFC 範例 PROPDLG](../../visual-cpp-samples.md)  
-[MFC 範例 SNAPVW](../../visual-cpp-samples.md)  
-[CWnd 類別](../../mfc/reference/cwnd-class.md)  
-[階層架構圖表](../../mfc/hierarchy-chart.md)  
+[MFC 範例 CMNCTRL1](../../visual-cpp-samples.md)<br/>
+[MFC 範例 CMNCTRL2](../../visual-cpp-samples.md)<br/>
+[MFC 範例 PROPDLG](../../visual-cpp-samples.md)<br/>
+[MFC 範例 SNAPVW](../../visual-cpp-samples.md)<br/>
+[CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>
+[階層架構圖表](../../mfc/hierarchy-chart.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0800812e39d4d5240b87b24961585610814cd367
-ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
+ms.openlocfilehash: 28d1df72efcc1fa7408922876ad91bafcd2b005a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44384952"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422660"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>理論式執行端通道的 c + + 開發人員指引
 
@@ -31,7 +31,7 @@ ms.locfileid: "44384952"
 
 這篇文章所提供的指引與相關弱點所代表的類別：
 
-1. CVE-2017-5753，也稱為 Spectre 變異 1。 因為發生條件式分支 misprediction 的推測性執行而可能發生的側邊通道有關這個硬體的弱點可能會類別。 （從 15.5.5 版開始） 的 Visual Studio 2017 中 Visual c + + 編譯器支援`/Qspectre`CVE 2017-5753 的相關參數，可提供一組有限的可能有弱點的程式碼撰寫模式的編譯時期緩和措施。 `/Qspectre`參數也會適用於 Visual Studio 2015 Update 3，透過[KB 4338871](https://support.microsoft.com/help/4338871)。 文件[/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)旗標提供有關其效果與使用方式的詳細資訊。 
+1. CVE-2017-5753，也稱為 Spectre 變異 1。 因為發生條件式分支 misprediction 的推測性執行而可能發生的側邊通道有關這個硬體的弱點可能會類別。 （從 15.5.5 版開始） 的 Visual Studio 2017 中 Visual c + + 編譯器支援`/Qspectre`CVE 2017-5753 的相關參數，可提供一組有限的可能有弱點的程式碼撰寫模式的編譯時期緩和措施。 `/Qspectre`參數也會適用於 Visual Studio 2015 Update 3，透過[KB 4338871](https://support.microsoft.com/help/4338871)。 文件[/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)旗標提供有關其效果與使用方式的詳細資訊。
 
 2. CVE-2018年-3639，也稱為[推測性存放區略過 (SSB)](https://aka.ms/sescsrdssb)。 可能發生因為相依的存放區，因為記憶體存取 misprediction 預先載入的推測性執行的側邊通道被與這個硬體的弱點可能會類別。
 
@@ -55,9 +55,9 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 }
 ```
 
-在此範例中，`ReadByte`是提供該緩衝區的緩衝區、 緩衝區大小和索引。 索引參數，所指定`untrusted_index`，提供的無特殊權限的內容，例如非系統管理程序。 如果`untrusted_index`是小於`buffer_size`，則該索引處的字元讀取`buffer`到共用記憶體所參考的區域用來索引和`shared_buffer`。 
+在此範例中，`ReadByte`是提供該緩衝區的緩衝區、 緩衝區大小和索引。 索引參數，所指定`untrusted_index`，提供的無特殊權限的內容，例如非系統管理程序。 如果`untrusted_index`是小於`buffer_size`，則該索引處的字元讀取`buffer`到共用記憶體所參考的區域用來索引和`shared_buffer`。
 
-從架構的觀點而言，此程式碼序列是完全安全必定`untrusted_index`一定會小於`buffer_size`。 不過，有風險的理論式執行時，就可以在 CPU 會錯估的條件式分支和執行在 if 的主體陳述式，即使`untrusted_index`大於或等於`buffer_size`。 如此一來，CPU 可以推測讀取一個位元組，它的界限`buffer`（這可能是密碼），接著可以使用該位元組的值來計算透過後續載入位址`shared_buffer`。 
+從架構的觀點而言，此程式碼序列是完全安全必定`untrusted_index`一定會小於`buffer_size`。 不過，有風險的理論式執行時，就可以在 CPU 會錯估的條件式分支和執行在 if 的主體陳述式，即使`untrusted_index`大於或等於`buffer_size`。 如此一來，CPU 可以推測讀取一個位元組，它的界限`buffer`（這可能是密碼），接著可以使用該位元組的值來計算透過後續載入位址`shared_buffer`。
 
 雖然 CPU 最終將會偵測此 misprediction，剩餘的副作用可能會處於顯示資訊超出範圍，從已讀取的位元組值的 CPU 快取`buffer`。 這些副作用可以偵測到較低的系統上執行的方式快速探查的特殊權限的內容中的每個快取行`shared_buffer`存取。 若要這麼做可採取的步驟如下：
 
@@ -73,14 +73,14 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ## <a name="what-software-scenarios-can-be-impacted"></a>哪些軟體情況可能會受到影響？
 
-使用類似的程序的安全軟體開發[安全性開發生命週期](https://www.microsoft.com/en-us/sdl/)(SDL) 通常需要開發人員識別存在於其應用程式的信任界限。 信任界限存在於其中的應用程式可能會與低信任內容，例如在系統上的另一個處理序或在核心模式裝置驅動程式的情況下非系統管理使用者模式程序所提供的資料互動的地方。 涉及推測性執行端通道弱點的新類別是與許多現有的軟體安全性模型，找出程式碼，並且在裝置上的資料中的信任界限。 
+使用類似的程序的安全軟體開發[安全性開發生命週期](https://www.microsoft.com/en-us/sdl/)(SDL) 通常需要開發人員識別存在於其應用程式的信任界限。 信任界限存在於其中的應用程式可能會與低信任內容，例如在系統上的另一個處理序或在核心模式裝置驅動程式的情況下非系統管理使用者模式程序所提供的資料互動的地方。 涉及推測性執行端通道弱點的新類別是與許多現有的軟體安全性模型，找出程式碼，並且在裝置上的資料中的信任界限。
 
 下表提供開發人員可能要考慮發生這些弱點的軟體安全性模型的摘要：
 
 |信任界限|描述|
 |----------------|----------------|
-|虛擬機器的界限|隔離在個別的虛擬機器，接收來自另一部虛擬機器不受信任的資料中的工作負載的應用程式可能會有風險。| 
-|核心界限|接收來自非管理使用者模式程序不受信任的資料的核心模式裝置驅動程式可能會有風險。| 
+|虛擬機器的界限|隔離在個別的虛擬機器，接收來自另一部虛擬機器不受信任的資料中的工作負載的應用程式可能會有風險。|
+|核心界限|接收來自非管理使用者模式程序不受信任的資料的核心模式裝置驅動程式可能會有風險。|
 |處理序界限|接收來自本機系統上執行的另一個處理序的未受信任的資料，例如透過遠端程序呼叫 (RPC)、 共用的記憶體或其他處理序間通訊 (IPC) 機制可能會有風險的應用程式。|
 |Enclave 界限|接收從 enclave 之外的不受信任的資料的安全飛地 （例如 Intel SGX) 內執行的應用程式可能會有風險。|
 |語言界限|解譯的應用程式或 Just-In-Time (JIT) 編譯並執行不受信任的程式碼撰寫的較高層級的語言可能會有風險。|
@@ -133,7 +133,7 @@ unsigned char ReadBytes(unsigned char *buffer, unsigned int buffer_size) {
 
 ### <a name="array-out-of-bounds-load-feeding-an-indirect-branch"></a>超出範圍的陣列載入饋送間接的分支
 
-此程式碼撰寫模式牽涉到其中的條件式分支 misprediction 可能會導致案例然後因而間接分支至的目標位址的函式指標的陣列存取超出範圍讀取超出範圍。 下列程式碼片段提供範例，示範這項功能。 
+此程式碼撰寫模式牽涉到其中的條件式分支 misprediction 可能會導致案例然後因而間接分支至的目標位址的函式指標的陣列存取超出範圍讀取超出範圍。 下列程式碼片段提供範例，示範這項功能。
 
 在此範例中，不受信任的訊息識別項會提供透過 DispatchMessage`untrusted_message_id`參數。 如果`untrusted_message_id`是小於`MAX_MESSAGE_ID`，則它會使用對函式指標的陣列索引，以及分支到對應的分支目標。 此程式碼是在架構上，安全，但如果 CPU 錯估數的條件式分支，可能會造成`DispatchTable`檢索`untrusted_message_id`當其值為大於或等於`MAX_MESSAGE_ID`，而因此導致超出範圍的存取。 這可能會導致從衍生 překračuje meze 陣列，其中可能會導致資訊洩漏，根據推測執行的程式碼分支目標位址的推測性執行。
 
@@ -188,7 +188,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 
 ## <a name="speculative-type-confusion"></a>理論式的型別混淆
 
-此類別會處理程式碼可能會導致大量推測性的型別混淆的模式。 發生這種情況的風險的理論式執行期間使用非架構的路徑是正確類型來存取記憶體時。 條件式分支 misprediction 和推測性存放區略過可能會導致推測性的類型產生混淆。 
+此類別會處理程式碼可能會導致大量推測性的型別混淆的模式。 發生這種情況的風險的理論式執行期間使用非架構的路徑是正確類型來存取記憶體時。 條件式分支 misprediction 和推測性存放區略過可能會導致推測性的類型產生混淆。
 
 推測性存放區的許可，這可能會發生在案例中，編譯器會重複使用多個類型的變數的堆疊位置。 這是因為的架構類型的變數存放區`A`可能會略過，因此可允許的型別負載`A`推測執行之前已指派變數。 如果先前儲存的變數是不同的類型，這就可以建立理論式類型造成混淆的條件。
 
@@ -368,6 +368,5 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ## <a name="see-also"></a>另請參閱
 
-[減少推測性執行旁路攻擊漏洞的指導方針](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)
-
+[減少推測性執行旁路攻擊漏洞的指導方針](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)<br/>
 [減少推測性執行側邊通道攻擊硬體漏洞](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

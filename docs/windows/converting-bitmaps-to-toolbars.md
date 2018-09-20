@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed77f1df88bb3f3572c3ea819ffac5cb9a1f45b1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 03b12e22adafcbca37910ea556ab9c8a33f9e4d0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317222"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444862"
 ---
 # <a name="converting-bitmaps-to-toolbars-c"></a>轉換點陣圖為工具列 （c + +）
 
@@ -51,5 +51,5 @@ MFC 或 ATL
 
 ## <a name="see-also"></a>另請參閱
 
-[建立新的工具列](../windows/creating-new-toolbars.md)  
+[建立新的工具列](../windows/creating-new-toolbars.md)<br/>
 [工具列編輯器](../windows/toolbar-editor.md)

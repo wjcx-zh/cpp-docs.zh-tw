@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ef599c99cc46c2014ee2d72c538b55e59122848
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 837149397ec45ebd8b41808b170b9f5e25146d6a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209682"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387688"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065：OLE Automation 伺服程式的雙重介面支援
 
@@ -377,5 +377,5 @@ STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::InterfaceSupportsErrorInfo(
 
 ## <a name="see-also"></a>另請參閱
 
-[依編號顯示的技術提示](../mfc/technical-notes-by-number.md)  
-[依分類區分的技術提示](../mfc/technical-notes-by-category.md)  
+[依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
+[依分類區分的技術提示](../mfc/technical-notes-by-category.md)

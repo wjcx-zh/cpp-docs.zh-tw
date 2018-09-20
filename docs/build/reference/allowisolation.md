@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12ee07a0ea6dbe2c3bea21aaa6b394b4c3e6f156
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 07414c86663ea6143a471691b01e584cdc033258
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704082"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392823"
 ---
 # <a name="allowisolation"></a>/ALLOWISOLATION
 
@@ -49,5 +49,5 @@ ms.locfileid: "45704082"
 ## <a name="see-also"></a>另請參閱
 
 [EDITBIN 選項](../../build/reference/editbin-options.md)<br/>
-[/ALLOWISOLATION （資訊清單查閱）](../../build/reference/allowisolation-manifest-lookup.md)
+[/ALLOWISOLATION (資訊清單查閱)](../../build/reference/allowisolation-manifest-lookup.md)<br/>
 [資訊清單檔案參考](/windows/desktop/SbsCs/manifest-files-reference)

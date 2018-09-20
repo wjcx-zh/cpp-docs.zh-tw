@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9132df889f057696a08afe9a1ca6ad2277c46f10
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
-ms.translationtype: MT
+ms.openlocfilehash: d796908504d746baee7863a6c6735bca3572d02b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211048"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702813"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog 類別
 非強制回應對話方塊 ( [CPropertySheet 類別](../../mfc/reference/cpropertysheet-class.md))，可讓使用者自訂工具列、 功能表、 鍵盤快速鍵、 使用者定義的工具和應用程式中的視覺化樣式。 使用者通常會選取 [ **工具** ] 功能表中的 [ **自訂** ]，以存取這個對話方塊。  
@@ -137,17 +137,17 @@ void AddButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiCategoryId*  
- 指定要插入的按鈕的類別目錄識別碼。  
+*uiCategoryId*<br/>
+[in]指定要插入的按鈕的類別目錄識別碼。  
   
- [in]*按鈕*  
- 指定要插入的按鈕。  
+*按鈕*<br/>
+[in]指定要插入的按鈕。  
   
- [in]*iInsertBefore*  
- 指定以零為起始的索引之前插入按鈕的工具列按鈕。  
+*iInsertBefore*<br/>
+[in]指定以零為起始的索引之前插入按鈕的工具列按鈕。  
   
- [in]*lpszCategory*  
- 指定要插入按鈕的類別目錄字串。  
+*lpszCategory*<br/>
+[in]指定要插入按鈕的類別目錄字串。  
   
 ### <a name="remarks"></a>備註  
  `AddButton`方法會忽略有標準命令 Id （例如 ID_FILE_MRU_FILE1) 按鈕，不允許的命令 (請參閱 < [CMFCToolBar::IsCommandPermitted](../../mfc/reference/cmfctoolbar-class.md#iscommandpermitted)) 和虛擬按鈕。  
@@ -171,8 +171,8 @@ BOOL AddMenu(UINT uiMenuResId);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiMenuResId*  
- 指定要載入功能表資源識別碼。  
+*uiMenuResId*<br/>
+[in]指定要載入功能表資源識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果功能表已順利新增，則為 TRUE。否則為 FALSE。  
@@ -192,17 +192,17 @@ void AddMenuCommands(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pMenu*  
- 要加入的 CMenu 物件指標。  
+*pMenu*<br/>
+[in]要加入的 CMenu 物件指標。  
   
- [in]*bPopup*  
- 指定是否要插入的快顯功能表項目清單的命令。  
+*bPopup*<br/>
+[in]指定是否要插入的快顯功能表項目清單的命令。  
   
- [in]*lpszCategory*  
- 要插入的功能表的類別目錄名稱。  
+*lpszCategory*<br/>
+[in]要插入的功能表的類別目錄名稱。  
   
- [in]*lpszMenuPath*  
- 當命令所示，加入至名稱的前置詞**所有類別目錄**清單。  
+*lpszMenuPath*<br/>
+[in]當命令所示，加入至名稱的前置詞**所有類別目錄**清單。  
   
 ### <a name="remarks"></a>備註  
  `AddMenuCommands`的所有功能表項目的方法迴圈*pMenu*。 每個功能表項目不包含子功能表，這個方法會建立[CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)物件並呼叫[CMFCToolBarsCustomizeDialog::AddButton](#addbutton)方法，以將功能表項目新增為工具列按鈕的命令清單**命令**頁面。 分隔符號會忽略在此程序。  
@@ -223,14 +223,14 @@ BOOL AddToolBar(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiCategoryId*  
- 指定類別目錄的資源識別碼，加入至工具列。  
+*uiCategoryId*<br/>
+[in]指定類別目錄的資源識別碼，加入至工具列。  
   
- [in]*uiToolbarResId*  
- 指定的資源識別碼的工具列，其命令插入命令的清單。  
+*uiToolbarResId*<br/>
+[in]指定的資源識別碼的工具列，其命令插入命令的清單。  
   
- [in]*lpszCategory*  
- 指定要加入工具列，類別目錄的名稱。  
+*lpszCategory*<br/>
+[in]指定要加入工具列，類別目錄的名稱。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為 TRUE否則為 FALSE。  
@@ -251,8 +251,8 @@ virtual BOOL CheckToolsValidity(const CObList& lstTools);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lstTools*  
- 使用者定義的工具，來檢查清單。  
+*lstTools*<br/>
+[in]使用者定義的工具，來檢查清單。  
   
 ### <a name="return-value"></a>傳回值  
  如果使用者定義的工具清單無效，則為 true，則傳回否則為 FALSE。 預設實作永遠傳回 TRUE。  
@@ -274,14 +274,14 @@ CMFCToolBarsCustomizeDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWndParentFrame*  
- 父框架指標。 這個參數必須不是 NULL。  
+*pWndParentFrame*<br/>
+[in]父框架指標。 這個參數必須不是 NULL。  
   
- [in]*bAutoSetFromMenus*  
- 布林值，指定是否要從所有的功能表加入功能表命令的命令清單上**命令**頁面。 如果此參數為 TRUE，則會加入功能表命令。 否則，不會加入功能表命令。  
+*bAutoSetFromMenus*<br/>
+[in]布林值，指定是否要從所有的功能表加入功能表命令的命令清單上**命令**頁面。 如果此參數為 TRUE，則會加入功能表命令。 否則，不會加入功能表命令。  
   
- [in]*uiFlags*  
- 影響行為的對話方塊中的旗標的組合。 這個參數可以是下列一或多個下列值：  
+*uiFlags*<br/>
+[in]影響行為的對話方塊中的旗標的組合。 這個參數可以是下列一或多個下列值：  
   
 - AFX_CUSTOMIZE_MENU_SHADOWS  
   
@@ -299,8 +299,8 @@ CMFCToolBarsCustomizeDialog(
   
 - AFX_CUSTOMIZE_NO_LARGE_ICONS  
   
- [in]*plistCustomPages*  
- 清單的指標`CRuntimeClass`指定額外的自訂頁面的物件。  
+*plistCustomPages*<br/>
+[in]清單的指標`CRuntimeClass`指定額外的自訂頁面的物件。  
   
 ### <a name="remarks"></a>備註  
  *PlistCustomPages*參數的清單會參考`CRuntimeClass`指定額外的自訂頁面的物件。 建構函式使用的對話方塊中新增更多的分頁[CRuntimeClass::CreateObject](../../mfc/reference/cruntimeclass-structure.md#createobject)方法。 請參閱 CustomPages 範例的範例，加入更多的頁面**自訂** 對話方塊。  
@@ -333,8 +333,8 @@ void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bEnable*  
- 若要啟用的使用者定義的工具列，則為 TRUE若要停用工具列，則為 FALSE。  
+*bEnable*<br/>
+[in]若要啟用的使用者定義的工具列，則為 TRUE若要停用工具列，則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  如果*bEnable*為 TRUE 時，**新增**，**重新命名**並**刪除**按鈕會顯示在**工具列**頁面。  
@@ -349,8 +349,8 @@ virtual void FillAllCommandsList(CListBox& wndListOfCommands) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `wndListOfCommands`  
- 參考`CListBox`來填入的物件。  
+*wndListOfCommands*<br/>
+[out]參考`CListBox`來填入的物件。  
   
 ### <a name="remarks"></a>備註  
  **所有命令**類別目錄包含的所有類別目錄的命令。 [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)方法會將命令所提供的按鈕，以關聯**所有命令**為您的類別。  
@@ -369,11 +369,11 @@ void FillCategoriesComboBox(
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*wndCategory*  
- 參考`CComboBox`來填入的物件。  
+*wndCategory*<br/>
+[out]參考`CComboBox`來填入的物件。  
   
- [in]*bAddEmpty*  
- 布林值，指定是否要將類別新增至下拉式方塊，並沒有命令。 如果此參數為 TRUE，空的類別會新增至下拉式方塊中。 否則，不會新增空的類別。  
+*bAddEmpty*<br/>
+[in]布林值，指定是否要將類別新增至下拉式方塊，並沒有命令。 如果此參數為 TRUE，空的類別會新增至下拉式方塊中。 否則，不會新增空的類別。  
   
 ### <a name="remarks"></a>備註  
  這個方法就像是[CMFCToolBarsCustomizeDialog::FillCategoriesListBox](#fillcategorieslistbox)方法，但此方法適用於有`CComboBox`物件。  
@@ -394,11 +394,11 @@ void FillCategoriesListBox(
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*wndCategory*  
- 參考`CListBox`來填入的物件。  
+*wndCategory*<br/>
+[out]參考`CListBox`來填入的物件。  
   
- [in]*bAddEmpty*  
- 布林值，指定是否要將類別新增至清單方塊，並沒有命令。 如果此參數為 TRUE，空的類別會新增至清單方塊中。 否則，不會新增空的類別。  
+*bAddEmpty*<br/>
+[in]布林值，指定是否要將類別新增至清單方塊，並沒有命令。 如果此參數為 TRUE，空的類別會新增至清單方塊中。 否則，不會新增空的類別。  
   
 ### <a name="remarks"></a>備註  
  這個方法就像是[CMFCToolBarsCustomizeDialog::FillCategoriesComboBox](#fillcategoriescombobox)方法，但此方法適用於有`CListBox`物件。  
@@ -417,8 +417,8 @@ LPCTSTR GetCommandName(UINT uiCmd) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiCmd*  
- 若要擷取命令的識別碼。  
+*uiCmd*<br/>
+[in]若要擷取命令的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果命令沒有與指定的命令識別碼或 NULL 相關聯的名稱。  
@@ -433,11 +433,11 @@ int GetCountInCategory(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszItemName*  
- 要比對的文字標籤。  
+*lpszItemName*<br/>
+[in]要比對的文字標籤。  
   
- [in]*lstCommands*  
- 參考清單，其中包含`CMFCToolBarButton`物件。  
+*lstCommands*<br/>
+[in]參考清單，其中包含`CMFCToolBarButton`物件。  
   
 ### <a name="return-value"></a>傳回值  
  所提供的項目數清單的文字標籤 equals *lpszItemName*。  
@@ -492,8 +492,8 @@ virtual void OnAfterChangeTool(CUserTool* pSelTool);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in、 out]*pSelTool*  
- 已變更的使用者工具物件的指標。  
+*pSelTool*<br/>
+[in、 out]已變更的使用者工具物件的指標。  
   
 ### <a name="remarks"></a>備註  
  當使用者變更使用者定義的工具的屬性，這個方法是由架構呼叫。 預設實作不做任何動作。 衍生自的類別中置換此方法`CMFCToolBarsCustomizeDialog`執行處理的使用者工具的變更發生之後。  
@@ -506,8 +506,8 @@ virtual BOOL OnAssignKey(ACCEL* pAccel);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in、 out]*pAccel*  
- 指標會以建議的鍵盤指派[加速度](/windows/desktop/api/winuser/ns-winuser-tagaccel)結構。  
+*pAccel*<br/>
+[in、 out]指標會以建議的鍵盤指派[加速度](/windows/desktop/api/winuser/ns-winuser-tagaccel)結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果索引鍵可以是已指派或 FALSE，如果您無法指定索引鍵，則為 TRUE。 預設實作永遠傳回 TRUE。  
@@ -523,8 +523,8 @@ virtual void OnBeforeChangeTool(CUserTool* pSelTool);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in、 out]*pSelTool*  
- 即將被取代的使用者工具物件的指標。  
+*pSelTool*<br/>
+[in、 out]即將被取代的使用者工具物件的指標。  
   
 ### <a name="remarks"></a>備註  
  變更使用者定義的工具的屬性時，這個方法是由架構呼叫。 預設實作不做任何動作。 覆寫`OnBeforeChangeTool`之類別中衍生自`CMFCToolBarsCustomizeDialog`如果您想要執行處理的使用者工具的變更發生，例如釋放資源之前， *pSelTool*使用。  
@@ -540,14 +540,14 @@ virtual BOOL OnEditToolbarMenuImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWndParent*  
- 父視窗的指標。  
+*pWndParent*<br/>
+[in]父視窗的指標。  
   
- [in]*點陣圖*  
- 若要編輯點陣圖物件的參考。  
+*點陣圖*<br/>
+[in]若要編輯點陣圖物件的參考。  
   
- [in]*nBitsPerPixel*  
- 點陣圖的色彩解析度，以位元 / 像素。  
+*nBitsPerPixel*<br/>
+[in]點陣圖的色彩解析度，以位元 / 像素。  
   
 ### <a name="return-value"></a>傳回值  
  如果正在認可變更，則為 TRUE否則為 FALSE。 預設實作會顯示一個對話方塊，則傳回 TRUE，如果使用者按一下**確定**，或 FALSE，如果使用者按一下**取消**或**關閉** 按鈕。  
@@ -604,14 +604,14 @@ int RemoveButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiCategoryId*  
- 指定要從中移除 按鈕的類別目錄識別碼。  
+*uiCategoryId*<br/>
+[in]指定要從中移除 按鈕的類別目錄識別碼。  
   
- [in]*uiCmdId*  
- 指定按鈕的命令識別碼。  
+*uiCmdId*<br/>
+[in]指定按鈕的命令識別碼。  
   
- [in]*lpszCategory*  
- 指定要從中移除 按鈕的類別目錄的名稱。  
+*lpszCategory*<br/>
+[in]指定要從中移除 按鈕的類別目錄的名稱。  
   
 ### <a name="return-value"></a>傳回值  
  [移除] 按鈕，則為-1 指定的類別目錄中找不到指定的命令 ID 的以零為起始的索引。 如果*uiCategoryId*為-1，傳回的值為 0。  
@@ -629,11 +629,11 @@ BOOL RenameCategory(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszCategoryOld*  
- 若要變更類別名稱。  
+*lpszCategoryOld*<br/>
+[in]若要變更類別名稱。  
   
- [in]*lpszCategoryNew*  
- 新的類別名稱。  
+*lpszCategoryNew*<br/>
+[in]新的類別名稱。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為 TRUE否則為 FALSE。  
@@ -651,11 +651,11 @@ void ReplaceButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiCmd*  
- 指定按鈕的命令，來取代。  
+*uiCmd*<br/>
+[in]指定按鈕的命令，來取代。  
   
- [in]*按鈕*  
- A **const**取代舊的按鈕的工具列按鈕物件的參考。  
+*按鈕*<br/>
+[in]A **const**取代舊的按鈕的工具列按鈕物件的參考。  
   
 ### <a name="remarks"></a>備註  
  當[CMFCToolBarsCustomizeDialog::AddMenu](#addmenu)， [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands)，或[CMFCToolBarsCustomizeDialog::AddToolBar](#addtoolbar)新增命令**命令**頁面上，命令會採用[CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)物件 (或[CMFCToolBarMenuButton 類別](../../mfc/reference/cmfctoolbarmenubutton-class.md)功能表的物件包含新增的子功能表項目`AddMenuCommands`)。 架構也會呼叫這三種方法，會自動新增的命令。 如果您想要改為以衍生類型的命令時，呼叫`ReplaceButton`並傳入衍生類型的按鈕。  
@@ -673,8 +673,8 @@ BOOL SetUserCategory(LPCTSTR lpszCategory);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszCategory*  
- 分類的名稱。  
+*lpszCategory*<br/>
+[in]類別目錄的名稱。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為 TRUE否則為 FALSE。  

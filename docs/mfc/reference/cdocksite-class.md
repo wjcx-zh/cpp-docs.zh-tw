@@ -96,12 +96,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d3af5911cac27a0ac2bb65e9ee0cdb7b714b41d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
-ms.translationtype: MT
+ms.openlocfilehash: 4552fa0462332cacaa8abfd8c42b0de4871dc8d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540982"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720300"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
@@ -189,8 +189,8 @@ CDockingPanesRow* AddRow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pos*  
- [in]*nHeight*  
+*pos*<br/>
+[in][in]*nHeight*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -225,8 +225,8 @@ void AlignDockSite(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*rectToAlignBy*  
- [in]*rectResult*  
+*rectToAlignBy*<br/>
+[in][in]*rectResult*  
  [in]*bMoveImmediately*  
   
 ### <a name="remarks"></a>備註  
@@ -241,8 +241,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bStretch*  
- [in]*bHorz*  
+*bStretch*<br/>
+[in][in]*bHorz*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -276,12 +276,12 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*dwStyleEx*  
- [in]*cheaderctrl:: Create*  
- [in]*rect*  
- [in]*pParentWnd*  
- [in]*dwControlBarStyle*  
- [in]*pContext*  
+*dwStyleEx*<br/>
+[in][in]*cheaderctrl:: Create*  
+*rect*<br/>
+[in][in]*pParentWnd*  
+*dwControlBarStyle*<br/>
+[in][in]*pContext*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -298,8 +298,8 @@ virtual CDockingPanesRow* CreateRow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pParentDockBar*  
- [in]*nOffset*  
+*pParentDockBar*<br/>
+[in][in]*nOffset*  
  [in]*nRowHeight*  
   
 ### <a name="return-value"></a>傳回值  
@@ -317,8 +317,8 @@ virtual void DockPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWnd*  
- [in]*dockMethod*  
+*pWnd*<br/>
+[in][in]*dockMethod*  
  [in]*lpRect*  
   
 ### <a name="remarks"></a>備註  
@@ -363,8 +363,8 @@ CPane* FindPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nID*  
- 要尋找窗格的命令識別碼。  
+*nID*<br/>
+[in]要尋找窗格的命令識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  窗格中，使用指定的命令 ID 或如果找不到 [] 窗格中，則為 NULL 指標。  
@@ -472,8 +472,8 @@ BOOL IsRectWithinDockSite(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*rect*  
- [in]*ptDelta*  
+*rect*<br/>
+[in][in]*ptDelta*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -501,8 +501,8 @@ virtual BOOL MovePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWnd*  
- [in]*nFlags*  
+*pWnd*<br/>
+[in][in]*nFlags*  
  [in]*ptOffset*  
   
 ### <a name="return-value"></a>傳回值  
@@ -531,8 +531,8 @@ virtual void OnRemoveRow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pos*  
- [in]*bByShow*  
+*pos*<br/>
+[in][in]*bByShow*  
   
 ### <a name="remarks"></a>備註  
   
@@ -546,8 +546,8 @@ virtual int OnResizeRow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pRowToResize*  
- [in]*nOffset*  
+*pRowToResize*<br/>
+[in][in]*nOffset*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -565,10 +565,10 @@ virtual void OnSizeParent(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*rectAvailable*  
- [in]*nSide*  
- [in]*bExpand*  
- [in]*nOffset*  
+*rectAvailable*<br/>
+[in][in]*nSide*  
+*bExpand*<br/>
+[in][in]*nOffset*  
   
 ### <a name="remarks"></a>備註  
   
@@ -583,8 +583,8 @@ virtual BOOL OnSetWindowPos(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWndInsertAfter*  
- [in]*rectWnd*  
+*pWndInsertAfter*<br/>
+[in][in]*rectWnd*  
  [in]*nFlags*  
   
 ### <a name="return-value"></a>傳回值  
@@ -601,8 +601,8 @@ virtual void OnShowRow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pos*  
- [in]*bShow*  
+*pos*<br/>
+[in][in]*bShow*  
   
 ### <a name="remarks"></a>備註  
   
@@ -614,8 +614,8 @@ virtual CPane* PaneFromPoint(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pt*  
- 中的 [擷取] 窗格的螢幕座標的點。  
+*太平洋時間*<br/>
+[in]中的 [擷取] 窗格的螢幕座標的點。  
   
 ### <a name="return-value"></a>傳回值  
  指向 [] 窗格中位於指定的點，或如果沒有窗格已存在於指定的點，則為 NULL。  
@@ -632,8 +632,8 @@ static int __stdcall RectSideFromPoint(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*rect*  
- [in]*點*  
+*rect*<br/>
+[in][in]*點*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -649,8 +649,8 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWnd*  
- [in]*dockMethod*  
+*pWnd*<br/>
+[in][in]*dockMethod*  
   
 ### <a name="remarks"></a>備註  
   
@@ -676,8 +676,8 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pOldBar*  
- [in]*pNewBar*  
+*pOldBar*<br/>
+[in][in]*pNewBar*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -705,8 +705,8 @@ void ResizeDockSite(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nNewWidth*  
- [in]*nNewHeight*  
+*nNewWidth*<br/>
+[in][in]*nNewHeight*  
   
 ### <a name="remarks"></a>備註  
   
@@ -721,8 +721,8 @@ int ResizeRow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pRow*  
- [in]*nNewSize*  
+*pRow*<br/>
+[in][in]*nNewSize*  
  [in]*bAdjustLayout*  
   
 ### <a name="return-value"></a>傳回值  
@@ -744,14 +744,14 @@ virtual BOOL ShowPane(
  [in][out]*pBar*  
  指標，要顯示或隱藏窗格。  
   
- [in]*bShow*  
- TRUE 表示指定的窗格是顯示;如果為 false，則指定要隱藏窗格。  
+*bShow*<br/>
+[in]TRUE 表示指定的窗格是顯示;如果為 false，則指定要隱藏窗格。  
   
- [in]*bDelay*  
- 若要指定，版面配置 窗格應該會延遲到之後會顯示該窗格;，則為 TRUE否則為 FALSE。  
+*bDelay*<br/>
+[in]若要指定，版面配置 窗格應該會延遲到之後會顯示該窗格;，則為 TRUE否則為 FALSE。  
   
- [in]*bActivate*  
- 不使用這個參數。  
+*bActivate*<br/>
+[in]未使用此參數。  
   
 ### <a name="return-value"></a>傳回值  
  如果窗格已顯示或隱藏成功，則為 TRUE。 如果指定的窗格不屬於此停駐站台，則為 FALSE。  
@@ -770,8 +770,8 @@ void ShowRow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pRow*  
- [in]*bShow*  
+*pRow*<br/>
+[in][in]*bShow*  
  [in]*bAdjustLayout*  
   
 ### <a name="remarks"></a>備註  
@@ -786,8 +786,8 @@ void SwapRows(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pFirstRow*  
- [in]*pSecondRow*  
+*pFirstRow*<br/>
+[in][in]*pSecondRow*  
   
 ### <a name="remarks"></a>備註  
   

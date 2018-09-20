@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4321a082efa71ecc81963099317ad3600ce8b36f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
-ms.translationtype: MT
+ms.openlocfilehash: 9cefe61fc6fb651933a76cfc36b3039d48ea9de9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676194"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713397"
 ---
 # <a name="vmxon"></a>__vmx_on
 **Microsoft 專屬**  
@@ -38,8 +38,8 @@ unsigned char __vmx_on(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `VmsSupportPhysicalAddress`  
- 指標，指向 虛擬機器控制結構 (VMCS) 的 64 位元實體位址。  
+*VmsSupportPhysicalAddress*<br/>
+[in]指標，指向 虛擬機器控制結構 (VMCS) 的 64 位元實體位址。  
   
 ## <a name="return-value"></a>傳回值  
   

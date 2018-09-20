@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09f086673ba015b168211261bed68db479ef77a9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
-ms.translationtype: MT
+ms.openlocfilehash: efe15f53cda42089b35d620ae9965050595121c7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538246"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720222"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 `CMFCDesktopAlertWnd`類別會實作事件的相關通知使用者畫面上的非強制回應對話方塊中出現的功能。  
@@ -166,20 +166,20 @@ virtual BOOL Create(
  [in][out]*pWndOwner*  
  指定 [警示] 視窗的擁有者。 該擁有者將會接到桌面警示視窗的所有通知。 此值不能是 NULL。  
   
- [in]*uiDlgResID*  
- 指定 [警示] 視窗的資源識別碼。  
+*uiDlgResID*<br/>
+[in]指定 [警示] 視窗的資源識別碼。  
   
- [in]*hMenu*  
- 指定當使用者按一下 [功能表] 按鈕會顯示功能表。 如果是 NULL，不會顯示功能表按鈕。  
+*hMenu*<br/>
+[in]指定當使用者按一下 [功能表] 按鈕會顯示功能表。 如果是 NULL，不會顯示功能表按鈕。  
   
- [in]*ptPos*  
- 指定的初始位置，其中會顯示 [警示] 視窗中，使用螢幕座標。 如果這個參數是 （-1，-1），[警示] 視窗會顯示在螢幕的右下角。  
+*ptPos*<br/>
+[in]指定的初始位置，其中會顯示 [警示] 視窗中，使用螢幕座標。 如果這個參數是 （-1，-1），[警示] 視窗會顯示在螢幕的右下角。  
   
- [in]*pRTIDlgBar*  
- 涵蓋 [警示] 視窗的工作區的自訂對話方塊類別的執行階段類別資訊。  
+*pRTIDlgBar*<br/>
+[in]涵蓋 [警示] 視窗的工作區的自訂對話方塊類別的執行階段類別資訊。  
   
- [in]*params*  
- 指定用來建立警示的視窗的參數。  
+*params*<br/>
+[in]指定用來建立警示的視窗的參數。  
   
 ### <a name="return-value"></a>傳回值  
  如果建立成功，[警示] 視窗，則為 TRUE。否則為 FALSE。  
@@ -311,8 +311,8 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiCmdID*  
- 不使用這個參數。  
+*uiCmdID*<br/>
+[in]未使用此參數。  
   
 ### <a name="return-value"></a>傳回值  
  永遠為 FALSE。  
@@ -330,8 +330,8 @@ virtual BOOL OnCommand(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*wParam*  
- [in]*lParam*  
+*wParam*<br/>
+[in][in]*lParam*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -371,8 +371,8 @@ void SetAnimationSpeed(UINT nSpeed);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nSpeed*  
- 指定新動畫的速度，以毫秒為單位。  
+*nSpeed*<br/>
+[in]指定新動畫的速度，以毫秒為單位。  
   
 ### <a name="remarks"></a>備註  
  呼叫這個方法來設定警示的視窗動畫的速度。 預設動畫速度是 30 毫秒為單位。  
@@ -385,8 +385,8 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*類型*  
- 指定的動畫類型。  
+*type*<br/>
+[in]指定的動畫類型。  
   
 ### <a name="remarks"></a>備註  
  呼叫此方法以設定動畫類型。 您可以指定下列其中一個值：  
@@ -409,8 +409,8 @@ void SetAutoCloseTime(int nTime);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*n*  
- 時間 （毫秒），經過之前會自動關閉警示 視窗。  
+*n*<br/>
+[in]時間 （毫秒），經過之前會自動關閉警示 視窗。  
   
 ### <a name="remarks"></a>備註  
  如果使用者不會互動視窗與 [警示] 視窗會自動關閉指定的時間之後。  
@@ -423,8 +423,8 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bSmallCaption*  
- 若要指定 [警示] 視窗會顯示小標題;，則為 TRUE否則為 FALSE，以指定 [警示] 視窗會顯示一般大小的標題。  
+*bSmallCaption*<br/>
+[in]若要指定 [警示] 視窗會顯示小標題;，則為 TRUE否則為 FALSE，以指定 [警示] 視窗會顯示一般大小的標題。  
   
 ### <a name="remarks"></a>備註  
  呼叫這個方法來顯示小型或一般大小的標題。 根據預設，小型的標題會是 7 個像素高。 您可以藉由呼叫 Windows API 函式取得的一般標題大小`GetSystemMetrics(SM_CYCAPTION)`。  
@@ -437,8 +437,8 @@ void SetTransparency(BYTE nTransparency);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nTransparency*  
- 指定透明度層級。 此值必須是介於 0 到 255 之間。 值愈大、 更多的不透明視窗。  
+*nTransparency*<br/>
+[in]指定透明度層級。 此值必須是介於 0 到 255 之間。 值愈大、 更多的不透明視窗。  
   
 ### <a name="remarks"></a>備註  
  呼叫此函式可設定的快顯視窗的透明度層級。  

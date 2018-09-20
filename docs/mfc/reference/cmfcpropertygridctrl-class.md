@@ -160,12 +160,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25e1c3fdad045b17b83f7562256592114a5c6e72
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
-ms.translationtype: MT
+ms.openlocfilehash: a9b17c62c767b6665f70e91bfd04dc03379e08ab
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680649"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724668"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl 類別
 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
@@ -332,8 +332,8 @@ virtual HRESULT accSelect(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*flagsSelect*  
- [in]*varChild*  
+*flagsSelect*<br/>
+[in][in]*varChild*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -350,14 +350,14 @@ int AddProperty(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pProp*  
- 屬性的指標。  
+*pProp*<br/>
+[in]屬性的指標。  
   
- [in]*bRedraw*  
- 若要立即; 重繪屬性，則為 TRUE否則為 FALSE。 預設值為 TRUE。  
+*bRedraw*<br/>
+[in]若要立即; 重繪屬性，則為 TRUE否則為 FALSE。 預設值為 TRUE。  
   
- [in]*bAdjustLayout*  
- 若要重新計算如何繪製的文字和屬性的值，然後畫出屬性，則為 TRUE若要使用現有的計算繪製屬性，則為 FALSE。 預設值為 TRUE。  
+*bAdjustLayout*<br/>
+[in]若要重新計算如何繪製的文字和屬性的值，然後畫出屬性，則為 TRUE若要使用現有的計算繪製屬性，則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="return-value"></a>傳回值  
  如果這個方法成功，這個屬性加入其中; 在屬性方格控制項位置的以零起始的索引否則為-1。  
@@ -447,17 +447,17 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*cheaderctrl:: Create*  
- 位元組合 (OR)[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
+*cheaderctrl:: Create*<br/>
+[in]位元組合 (OR)[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [in]*rect*  
- 指定的大小和位置 視窗中，在用戶端的周框座標*pParentWnd*。  
+*rect*<br/>
+[in]指定的大小和位置 視窗中，在用戶端的周框座標*pParentWnd*。  
   
- [in]*pParentWnd*  
- 父視窗的指標。 必須不是 NULL。  
+*pParentWnd*<br/>
+[in]父視窗的指標。 必須不是 NULL。  
   
- [in]*nID*  
- 子視窗識別碼。  
+*nID*<br/>
+[in]子視窗識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果視窗已成功; 建立，則為 TRUE。否則為 FALSE。  
@@ -481,14 +481,14 @@ BOOL DeleteProperty(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pProp*  
- 屬性的指標。  
+*pProp*<br/>
+[in]屬性的指標。  
   
- [in]*bRedraw*  
- TRUE 表示重繪屬性方格控制項;否則為 FALSE。 預設值為 TRUE。  
+*bRedraw*<br/>
+[in]TRUE 表示重繪屬性方格控制項;否則為 FALSE。 預設值為 TRUE。  
   
- [in]*bAdjustLayout*  
- 若要重新計算如何在屬性方格控制項中，繪製所有文字、 影像和項目，然後都繪製控制項中，則為 TRUE否則為 FALSE。 預設值為 TRUE。  
+*bAdjustLayout*<br/>
+[in]若要重新計算如何在屬性方格控制項中，繪製所有文字、 影像和項目，然後都繪製控制項中，則為 TRUE否則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -517,11 +517,11 @@ virtual BOOL EditItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pProp*  
- 屬性的指標。  
+*pProp*<br/>
+[in]屬性的指標。  
   
- [in]*lptClick*  
- 若要開始編輯作業的使用者按一下屬性方格控制項上的點。 重點是在控制項的用戶端座標。 預設值是 NULL。  
+*lptClick*<br/>
+[in]若要開始編輯作業的使用者按一下屬性方格控制項上的點。 重點是在控制項的用戶端座標。 預設值是 NULL。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為 TRUE否則為 FALSE。  
@@ -536,8 +536,8 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bEnable*  
- 若要啟用 [描述] 區域中，則為 TRUE若要停用 [描述] 區域，則為 FALSE。 預設值為 TRUE。  
+*bEnable*<br/>
+[in]若要啟用 [描述] 區域中，則為 TRUE若要停用 [描述] 區域，則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
  描述區域會顯示在屬性方格控制項的底部。 根據預設，[描述] 區域會會停用，不可見。  
@@ -553,14 +553,14 @@ void EnableHeaderCtrl(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bEnable*  
- TRUE 表示啟用標頭的控制項;若要停用此標題控制項，則為 FALSE。 預設值為 TRUE。  
+*bEnable*<br/>
+[in]TRUE 表示啟用標頭的控制項;若要停用此標題控制項，則為 FALSE。 預設值為 TRUE。  
   
- [in]*lpszLeftColumn*  
- 標題控制項左側資料行標題。 預設值是**屬性**。  
+*lpszLeftColumn*<br/>
+[in]標題控制項左側資料行標題。 預設值是**屬性**。  
   
- [in]*lpszRightColumn*  
- 右側的資料行標題控制項的標題。 預設值是**值**。  
+*lpszRightColumn*<br/>
+[in]右側的資料行標題控制項的標題。 預設值是**值**。  
   
 ##  <a name="endedititem"></a>  CMFCPropertyGridCtrl::EndEditItem  
  當使用者完成修改屬性時，由架構呼叫。  
@@ -570,8 +570,8 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bUpdateData*  
- 若要指定完整; 編輯作業時，是否必須驗證的已修改的屬性資料，則為 TRUE否則為 FALSE。 預設值為 TRUE。  
+*bUpdateData*<br/>
+[in]若要指定完整; 編輯作業時，是否必須驗證的已修改的屬性資料，則為 TRUE否則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="return-value"></a>傳回值  
  如果順利結束編輯作業，則為 TRUE。如果已修改的屬性資料無效，或編輯作業應該繼續執行，則為 FALSE。  
@@ -588,11 +588,11 @@ void EnsureVisible(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pProp*  
- 屬性的指標。  
+*pProp*<br/>
+[in]屬性的指標。  
   
- [in]*bExpandParents*  
- 展開以顯示指定的屬性; 的父項目，則為 TRUE否則為 FALSE。 預設值為 FALSE。  
+*bExpandParents*<br/>
+[in]展開以顯示指定的屬性; 的父項目，則為 TRUE否則為 FALSE。 預設值為 FALSE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -604,8 +604,8 @@ void ExpandAll(BOOL bExpand=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bExpand*  
- 若要展開所有節點，則為 TRUE若要摺疊所有節點，則為 FALSE。 預設值為 TRUE。  
+*bExpand*<br/>
+[in]若要展開所有節點，則為 TRUE若要摺疊所有節點，則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -619,11 +619,11 @@ CMFCPropertyGridProperty* FindItemByData(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*dwData*  
- DWORD 值。  
+*dwData*<br/>
+[in]DWORD 值。  
   
- [in]*bSearchSubItems*  
- True 表示来搜尋屬性的子項目;否則為 FALSE。 預設值為 TRUE。  
+*bSearchSubItems*<br/>
+[in]True 表示来搜尋屬性的子項目;否則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="return-value"></a>傳回值  
  如果這個方法成功，則相關聯的屬性物件的指標否則為 NULL。  
@@ -669,8 +669,8 @@ virtual HRESULT get_accHelp(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*varChild*  
- [in]*pszHelp*  
+*varChild*<br/>
+[in][in]*pszHelp*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -687,8 +687,8 @@ virtual HRESULT get_accHelpTopic(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pszHelpFile*  
- [in]*varChild*  
+*pszHelpFile*<br/>
+[in][in]*varChild*  
  [in]*pidTopic*  
   
 ### <a name="return-value"></a>傳回值  
@@ -705,8 +705,8 @@ virtual HRESULT get_accKeyboardShortcut(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*varChild*  
- [in]*pszKeyboardShortcut*  
+*varChild*<br/>
+[in][in]*pszKeyboardShortcut*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -776,26 +776,26 @@ void GetCustomColors(
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*clrBackground*  
- 屬性值的背景色彩。  
+*clrBackground*<br/>
+[out]屬性值的背景色彩。  
   
- [out]*clrText*  
- 屬性名稱和屬性值的文字色彩。  
+*clrText*<br/>
+[out]屬性名稱和屬性值的文字色彩。  
   
- [out]*clrGroupBackground*  
- 屬性群組的背景色彩。  
+*clrGroupBackground*<br/>
+[out]屬性群組的背景色彩。  
   
- [out]*clrGroupText*  
- 屬性群組中的文字色彩。  
+*clrGroupText*<br/>
+[out]屬性群組中的文字色彩。  
   
- [out]*clrDescriptionBackground*  
- 描述區域背景色彩。  
+*clrDescriptionBackground*<br/>
+[out]描述區域背景色彩。  
   
- [out]*clrDescriptionText*  
- 在 [描述] 區域中的文字色彩。  
+*clrDescriptionText*<br/>
+[out]在 [描述] 區域中的文字色彩。  
   
- [out]*clrLine*  
- 繪製屬性之間的線條色彩。  
+*clrLine*<br/>
+[out]繪製屬性之間的線條色彩。  
   
 ### <a name="remarks"></a>備註  
  使用[CMFCPropertyGridCtrl::SetCustomColors](#setcustomcolors)方法來設定自訂色彩。  
@@ -883,8 +883,8 @@ CMFCPropertyGridProperty* GetProperty(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nIndex*  
- 屬性方格控制項項目以零為起始的索引。  
+*nIndex*<br/>
+[in]屬性方格控制項項目以零為起始的索引。  
   
  如果這個方法會判斷提示*nIndex*參數小於零或大於或等於屬性數目。  
   
@@ -939,8 +939,8 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nBar*  
- 捲軸，這必須是 SB_VERT 方向。  
+*nBar*<br/>
+[in]捲軸，這必須是 SB_VERT 方向。  
   
 ### <a name="return-value"></a>傳回值  
  捲軸的物件，則為 NULL，如果沒有任何捲軸或捲軸方向的指標是 SB_HORZ。  
@@ -972,14 +972,14 @@ CMFCPropertyGridProperty* HitTest(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pt*  
- 用戶端座標中的點。  
+*太平洋時間*<br/>
+[in]用戶端座標中的點。  
   
- [in、 out]*pnArea*  
- 指標`ClickArea`變數。 當這個方法傳回時，變數會指出*屬性的區域*，其中包含指定的點。 如需有關屬性區域的詳細資訊，請參閱 < 備註 >。  
+*pnArea*<br/>
+[in、 out]指標`ClickArea`變數。 當這個方法傳回時，變數會指出*屬性的區域*，其中包含指定的點。 如需有關屬性區域的詳細資訊，請參閱 < 備註 >。  
   
- [in]*bPropsOnly*  
- 若要測試只有屬性區域;，則為 TRUE若要測試，則為 FALSE*描述區域*如果指定的點不是在 [屬性] 區域。 預設值為 FALSE。 如需詳細說明區域的詳細資訊，請參閱 < 備註 >。  
+*bPropsOnly*<br/>
+[in]若要測試只有屬性區域;，則為 TRUE若要測試，則為 FALSE*描述區域*如果指定的點不是在 [屬性] 區域。 預設值為 FALSE。 如需詳細說明區域的詳細資訊，請參閱 < 備註 >。  
   
 ### <a name="return-value"></a>傳回值  
  如果*bPropsOnly*參數為 TRUE 和指定的點是在 [屬性] 區域，則傳回值是對應的屬性物件的指標。 颾魤 ㄛ *pnArea*參數設定為特定的區域，其中包含指定的點。 否則，傳回的值是 NULL， *pnArea*參數則不會修改。  
@@ -1127,11 +1127,11 @@ void MarkModifiedProperties(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bMark*  
- True 會顯示修改粗體樣式; 中的屬性顯示規則的樣式中的已修改的屬性，則為 FALSE。 預設值為 TRUE。  
+*bMark*<br/>
+[in]True 會顯示修改粗體樣式; 中的屬性顯示規則的樣式中的已修改的屬性，則為 FALSE。 預設值為 TRUE。  
   
- [in]*bRedraw*  
- True 會重繪立即; 屬性方格控制項否則為 FALSE。 預設值為 TRUE。  
+*bRedraw*<br/>
+[in]True 會重繪立即; 屬性方格控制項否則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -1148,8 +1148,8 @@ virtual void OnChangeSelection(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*pNewSel*|新選取的屬性的指標。|  
-|[in]*pOldSel*|之前選取的屬性的指標。|  
+|*pNewSel*|[in]新選取的屬性的指標。|  
+|*pOldSel*|[in]之前選取的屬性的指標。|  
   
 ### <a name="remarks"></a>備註  
  這個方法的預設實作會執行任何動作。  
@@ -1162,8 +1162,8 @@ virtual void OnClickButton(CPoint point);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*點*  
- 用戶端座標中的點。  
+*點*<br/>
+[in]用戶端座標中的點。  
   
 ### <a name="remarks"></a>備註  
  根據預設，這個方法會更新目前的屬性值。  
@@ -1176,8 +1176,8 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
 ### <a name="remarks"></a>備註  
   
@@ -1191,11 +1191,11 @@ virtual void OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 指定如何繪製說明區域的矩形。  
+*rect*<br/>
+[in]指定如何繪製說明區域的矩形。  
   
 ### <a name="remarks"></a>備註  
  使用[CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea)方法，以顯示 [描述] 區域。  
@@ -1208,8 +1208,8 @@ virtual void OnDrawList(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
 ### <a name="remarks"></a>備註  
   
@@ -1223,11 +1223,11 @@ virtual int OnDrawProperty(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*pProp*  
- 屬性物件的指標。  
+*pProp*<br/>
+[in]屬性物件的指標。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -1242,8 +1242,8 @@ virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pProp*  
- 已變更其值的屬性物件指標。  
+*pProp*<br/>
+[in]已變更其值的屬性物件指標。  
   
 ### <a name="remarks"></a>備註  
  根據預設，這個方法會傳送[AFX_WM_PROPERTY_CHANGED](../../mfc/reference/afx-messages.md)屬性方格控制項的擁有者的訊息。  
@@ -1274,8 +1274,8 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bRedraw*  
- 重繪屬性清單，則為 TRUE否則為 FALSE。 預設值為 TRUE。  
+*bRedraw*<br/>
+[in]重繪屬性清單，則為 TRUE否則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -1287,8 +1287,8 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bSet*  
- 若要設定是英文字母的模式，則為 TRUEFALSE 重設字母的模式。 預設值為 TRUE。  
+*bSet*<br/>
+[in]若要設定是英文字母的模式，則為 TRUEFALSE 重設字母的模式。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
  字母的模式在屬性方格控制項時，控制項將排序它所包含的屬性名稱的所有屬性。  
@@ -1303,11 +1303,11 @@ void SetBoolLabels(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszTrue*  
- 要顯示的布林值 true 的文字字串。  
+*lpszTrue*<br/>
+[in]要顯示的布林值 true 的文字字串。  
   
- [in]*lpszFalse*  
- 要顯示 false 的布林值的文字字串。  
+*lpszFalse*<br/>
+[in]要顯示 false 的布林值的文字字串。  
   
 ### <a name="remarks"></a>備註  
   
@@ -1321,11 +1321,11 @@ void SetCurSel(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pProp*  
- 屬性物件的指標。  
+*pProp*<br/>
+[in]屬性物件的指標。  
   
- [in]*bRedraw*  
- True 會重繪立即; 屬性方格控制項否則為 FALSE。 預設值為 TRUE。  
+*bRedraw*<br/>
+[in]True 會重繪立即; 屬性方格控制項否則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
  使用此方法來取消目前的項目，在屬性方格控制項中選取，然後選取 項目對應到指定的屬性。  
@@ -1345,26 +1345,26 @@ void SetCustomColors(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*clrBackground*  
- 屬性值的背景色彩。  
+*clrBackground*<br/>
+[in]屬性值的背景色彩。  
   
- [in]*clrText*  
- 屬性名稱和屬性值的文字色彩。  
+*clrText*<br/>
+[in]屬性名稱和屬性值的文字色彩。  
   
- [in]*clrGroupBackground*  
- 屬性群組的背景色彩。  
+*clrGroupBackground*<br/>
+[in]屬性群組的背景色彩。  
   
- [in]*clrGroupText*  
- 屬性群組的新的文字色彩。  
+*clrGroupText*<br/>
+[in]屬性群組的新的文字色彩。  
   
- [in]*clrDescriptionBackground*  
- 描述區域背景色彩。  
+*clrDescriptionBackground*<br/>
+[in]描述區域背景色彩。  
   
- [in]*clrDescriptionText*  
- 在 [描述] 區域中的文字色彩。  
+*clrDescriptionText*<br/>
+[in]在 [描述] 區域中的文字色彩。  
   
- [in]*clrLine*  
- 繪製屬性之間的線條色彩。  
+*clrLine*<br/>
+[in]繪製屬性之間的線條色彩。  
   
 ### <a name="remarks"></a>備註  
  針對任何參數，指定`((COLORREF)-1)`色彩使用的預設色彩，該元素的屬性方格控制項的值。  
@@ -1379,8 +1379,8 @@ void SetDescriptionRows(int nDescRows);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nDescRows*  
- 若要顯示的屬性描述中的資料列數目。  
+*nDescRows*<br/>
+[in]若要顯示的屬性描述中的資料列數目。  
   
 ##  <a name="setgroupnamefullwidth"></a>  CMFCPropertyGridCtrl::SetGroupNameFullWidth  
  指定是否要在目前的屬性方格控制項中顯示一組屬性的類別名稱的整個寬度。  
@@ -1392,11 +1392,11 @@ void SetGroupNameFullWidth(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bGroupNameFullWidth*  
- 顯示完整的寬度，類別目錄名稱，不論屬性名稱資料行的寬度，則為 TRUE。 如果為 false，則類別名稱為寬度的屬性名稱資料行的寬度限制。 預設值為 TRUE。  
+*bGroupNameFullWidth*<br/>
+[in]顯示完整的寬度，類別目錄名稱，不論屬性名稱資料行的寬度，則為 TRUE。 如果為 false，則類別名稱為寬度的屬性名稱資料行的寬度限制。 預設值為 TRUE。  
   
- [in]*bRedraw*  
- True 表示要更新立即; 屬性方格控制項為 FALSE，則下一步 重繪事件時更新控制項就會發生。 預設值為 TRUE。  
+*bRedraw*<br/>
+[in]True 表示要更新立即; 屬性方格控制項為 FALSE，則下一步 重繪事件時更新控制項就會發生。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
  屬性方格控制項包含可調整大小*屬性名稱*資料行和有*屬性值*資料行。 名稱資料行的結尾也是值資料行的開頭。 若要調整大小的資料行，拖曳資料行之間的框線。  
@@ -1411,8 +1411,8 @@ void SetListDelimiter(TCHAR c);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*c*  
- 要做為分隔符號的字元。  
+*C*<br/>
+[in]要做為分隔符號的字元。  
   
 ### <a name="remarks"></a>備註  
  使用這個方法來定義清單中的屬性值中所使用的分隔符號字元[CMFCPropertyGridProperty::CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#cmfcpropertygridproperty)建構函式。 在該建構函式，設定*bIsValueList*參數設為 TRUE。  
@@ -1427,8 +1427,8 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bShowDragContext*  
- 重新調整大小作業; 期間繪製的名稱和值的資料行，則為 TRUE拖放作業完成之後，重繪資料行，則為 FALSE。 預設值為 TRUE。  
+*bShowDragContext*<br/>
+[in]重新調整大小作業; 期間繪製的名稱和值的資料行，則為 TRUE拖放作業完成之後，重繪資料行，則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
  使用者可以拖曳資料行之間的分隔列調整大小屬性方格控制項的名稱和值資料行。 如果顯示拖曳內容，只要使用者拖曳分隔列，會調整大小的名稱和值的資料行。 否則，在分割列會移動，但在拖曳作業完成之前，不繪製資料行。  
@@ -1441,8 +1441,8 @@ void SetVSDotNetLook(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bSet*  
- True 會設定屬性方格控制項在 Visual Studio.NET 中使用的樣式否則為 FALSE。 預設值為 TRUE。  
+*bSet*<br/>
+[in]True 會設定屬性方格控制項在 Visual Studio.NET 中使用的樣式否則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -1454,8 +1454,8 @@ virtual void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*色彩*  
- RGB 色彩值。  
+*色彩*<br/>
+[in]RGB 色彩值。  
   
 ### <a name="remarks"></a>備註  
  如果目前選取之屬性的屬性方格控制項不是色彩屬性，這個方法判斷提示以偵錯模式。  
@@ -1471,7 +1471,7 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*pProp*|屬性的指標。 不使用這個參數。|  
+|*pProp*|[in]屬性的指標。 不使用這個參數。|  
   
 ### <a name="return-value"></a>傳回值  
  永遠為 TRUE。  

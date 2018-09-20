@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9dc88b6b4488115390f4e6be57fbba2caadcc01
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
-ms.translationtype: MT
+ms.openlocfilehash: 02806f26f623b2f4ad7f19cd67216018da984e42
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853630"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713696"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar 類別
 內嵌於快顯功能表的功能表列。  
@@ -140,8 +140,8 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bRecalcLayout*  
- 自動重新計算的快顯功能表列 窗格中，版面配置，則為 TRUE否則為 FALSE。  
+*bRecalcLayout*<br/>
+[in]自動重新計算的快顯功能表列 窗格中，版面配置，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -153,8 +153,8 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiMenuResID*  
- 指定要載入功能表資源的功能表識別碼。  
+*uiMenuResID*<br/>
+[in]指定要載入功能表資源的功能表識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為 TRUE 或 FALSE，否則會傳回。  
@@ -190,8 +190,8 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*點*  
- 在螢幕上的點。  
+*點*<br/>
+[in]在螢幕上的點。  
   
 ### <a name="return-value"></a>傳回值  
  傳回的控制代碼工具列點所在的位置，如果有的話，或如果不為 NULL。  
@@ -257,11 +257,11 @@ virtual BOOL ImportFromMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*hMenu*  
- 要從中匯入快顯功能表按鈕功能表。  
+*hMenu*<br/>
+[in]要從中匯入快顯功能表按鈕功能表。  
   
- [in]*bShowAllCommands*  
- 如果所有功能表命令會匯入，或如果很少使用的項目可能會隱藏則為 FALSE。  
+*bShowAllCommands*<br/>
+[in]如果所有功能表命令會匯入，或如果很少使用的項目可能會隱藏則為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
  如果功能表按鈕已成功匯入從功能表中或 false 不，傳回 TRUE。  
@@ -325,8 +325,8 @@ BOOL LoadFromHash(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*hMenu*  
- 若要載入 [封存] 功能表控制代碼。  
+*hMenu*<br/>
+[in]若要載入 [封存] 功能表控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果功能表是載入成功，或如果沒有，則為 FALSE，則傳回 TRUE。  
@@ -364,11 +364,11 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nIndex*  
- 工具列按鈕的樣式是設為起始的索引。  
+*nIndex*<br/>
+[in]工具列按鈕的樣式是設為起始的索引。  
   
- [in]*nStyle*  
- 按鈕的樣式。 請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)可用工具列按鈕樣式的清單。  
+*nStyle*<br/>
+[in]按鈕的樣式。 請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)可用工具列按鈕樣式的清單。  
   
 ### <a name="remarks"></a>備註  
   
@@ -380,8 +380,8 @@ void SetOffset(int iOffset);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iOffset*  
- 快顯功能表列應進行位移的資料列數目。  
+*iOffset*<br/>
+[in]快顯功能表列應進行位移的資料列數目。  
   
 ### <a name="remarks"></a>備註  
   
@@ -395,11 +395,11 @@ void StartPopupMenuTimer(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pMenuButton*  
- 要設定延遲計時器的 [功能表] 按鈕的指標。  
+*pMenuButton*<br/>
+[in]要設定延遲計時器的 [功能表] 按鈕的指標。  
   
- [in]*nDelayFactor*  
- 延遲因素，等於至少一個要乘以的標準功能表延遲時間 （通常在下半秒，且五秒）。  
+*nDelayFactor*<br/>
+[in]延遲因素，等於至少一個要乘以的標準功能表延遲時間 （通常在下半秒，且五秒）。  
   
 ### <a name="remarks"></a>備註  
   

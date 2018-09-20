@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e119251b4d7ebfbfc6dd0cd0414d72c431555e0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
-ms.translationtype: MT
+ms.openlocfilehash: a5b97912843f14c9bc73307145bd0e1542d2c01b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200650"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726579"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton 類別
 按一下時其行為像一般按鈕的工具列按鈕類型。 不過，它會開啟下拉式工具列 ( [CMFCDropDownToolBar 類別](../../mfc/reference/cmfcdropdowntoolbar-class.md)使用者是否按下並按住工具列按鈕。  
@@ -132,8 +132,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*src*  
- 要從中複製來源 按鈕參考。  
+*src*<br/>
+[in]要從中複製來源 按鈕參考。  
   
 ### <a name="remarks"></a>備註  
  呼叫這個方法，以將另一個工具列按鈕複製到此工具列按鈕。 *src*必須是型別`CMFCDropDownToolbarButton`。  
@@ -151,11 +151,11 @@ CMFCDropDownToolbarButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszName*  
- 預設按鈕的文字。  
+*lpszName*<br/>
+[in]預設按鈕的文字。  
   
- [in]*pToolBar*  
- 指標`CMFCDropDownToolBar`使用者按下按鈕時顯示的物件。  
+*pToolBar*<br/>
+[in]指標`CMFCDropDownToolBar`使用者按下按鈕時顯示的物件。  
   
 ### <a name="remarks"></a>備註  
  第二個多載的建構函式會將複製到下拉式按鈕的第一個按鈕從工具列的*pToolBar*指定。  
@@ -175,8 +175,8 @@ BOOL DropDownToolbar(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWnd*  
- 下拉式清單的範圍內，則為 NULL，若要使用的下拉工具列按鈕的父視窗的父視窗。  
+*pWnd*<br/>
+[in]下拉式清單的範圍內，則為 NULL，若要使用的下拉工具列按鈕的父視窗的父視窗。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功則為非零否則為 0。  
@@ -196,8 +196,8 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*menuButton*  
- [目標] 功能表按鈕的參考。  
+*MenuButton*<br/>
+[in][目標] 功能表按鈕的參考。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為非零，否則為零。  
@@ -267,14 +267,14 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容，顯示的按鈕。  
+*pDC*<br/>
+[in]裝置內容，顯示的按鈕。  
   
- [in]*sizeDefault*  
- 按鈕的預設大小。  
+*sizeDefault*<br/>
+[in]按鈕的預設大小。  
   
- [in]*bHorz*  
- 為父工具列停駐狀態。 如果工具列停駐垂直，這個參數會是如果工具列會以水平方式停駐或浮動，則為 TRUE 或 FALSE。  
+*bHorz*<br/>
+[in]為父工具列停駐狀態。 如果工具列停駐垂直，這個參數會是如果工具列會以水平方式停駐或浮動，則為 TRUE 或 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
  A`SIZE`結構，其中包含按鈕，像素為單位的大小。  
@@ -290,8 +290,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWndParent*  
- 新的父視窗。  
+*pWndParent*<br/>
+[in]新的父視窗。  
   
 ### <a name="remarks"></a>備註  
  這個方法會覆寫基底類別實作 ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) 藉由清除文字標籤 ( [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) 並設定[CMFCToolBarButton::m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext)並[CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton)資料成員設為 FALSE。  
@@ -306,11 +306,11 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWnd*  
- 工具列按鈕的父視窗。  
+*pWnd*<br/>
+[in]工具列按鈕的父視窗。  
   
- [in]*bDelay*  
- 如果應該處理訊息，且延遲時間，則為 TRUE。  
+*bDelay*<br/>
+[in]如果應該處理訊息，且延遲時間，則為 TRUE。  
   
 ### <a name="return-value"></a>傳回值  
  非零值，如果按鈕處理按一下訊息;否則為 0。  
@@ -345,8 +345,8 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWnd*  
- 工具列按鈕的父視窗。  
+*pWnd*<br/>
+[in]工具列按鈕的父視窗。  
   
 ### <a name="return-value"></a>傳回值  
  非零值，如果按鈕處理說明訊息;否則為 0。  
@@ -364,8 +364,8 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pMenu*  
- 若要自訂功能表。  
+*pMenu*<br/>
+[in]若要自訂功能表。  
   
 ### <a name="return-value"></a>傳回值  
  這個方法會傳回 TRUE。  
@@ -401,29 +401,29 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容，顯示的按鈕。  
+*pDC*<br/>
+[in]裝置內容，顯示的按鈕。  
   
- [in]*rect*  
- 按鈕的週框。  
+*rect*<br/>
+[in]按鈕的週框。  
   
- [in]*pImages*  
- 與按鈕關聯的工具列影像集合。  
+*pImages*<br/>
+[in]與按鈕關聯的工具列影像集合。  
   
- [in]*bHorz*  
- 為父工具列停駐狀態。 [] 按鈕停駐時以水平和 FALSE 以垂直方式停駐按鈕時，此參數為 TRUE。  
+*bHorz*<br/>
+[in]為父工具列停駐狀態。 [] 按鈕停駐時以水平和 FALSE 以垂直方式停駐按鈕時，此參數為 TRUE。  
   
- [in]*bCustomizeMode*  
- 指定工具列是否為自訂模式。 當工具列在自訂模式和 FALSE 無法自訂模式工具列時，此參數為 TRUE。  
+*bCustomizeMode*<br/>
+[in]指定工具列是否為自訂模式。 當工具列在自訂模式和 FALSE 無法自訂模式工具列時，此參數為 TRUE。  
   
- [in]*bHighlight*  
- 指定按鈕會反白顯示。 這個參數時，按鈕會反白顯示時的 TRUE 和 FALSE 按鈕不反白顯示。  
+*bHighlight*<br/>
+[in]指定按鈕會反白顯示。 這個參數時，按鈕會反白顯示時的 TRUE 和 FALSE 按鈕不反白顯示。  
   
- [in]*bDrawBorder*  
- 指定按鈕是否應該顯示框線。 此參數為 TRUE，當按鈕應該顯示其框線和 FALSE，當按鈕應該不會顯示其框線時。  
+*bDrawBorder*<br/>
+[in]指定按鈕是否應該顯示框線。 此參數為 TRUE，當按鈕應該顯示其框線和 FALSE，當按鈕應該不會顯示其框線時。  
   
- [in]*bGrayDisabledButtons*  
- 指定是否要加上陰影停用的按鈕，或使用已停用的映像集合。 此參數為 TRUE，當停用的按鈕應該是陰影則為 FALSE，當這個方法應該使用已停用的映像集合。  
+*bGrayDisabledButtons*<br/>
+[in]指定是否要加上陰影停用的按鈕，或使用已停用的映像集合。 此參數為 TRUE，當停用的按鈕應該是陰影則為 FALSE，當這個方法應該使用已停用的映像集合。  
   
 ### <a name="remarks"></a>備註  
  覆寫這個方法以自訂工具列按鈕繪製。  
@@ -439,14 +439,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容，顯示的按鈕。  
+*pDC*<br/>
+[in]裝置內容，顯示的按鈕。  
   
- [in]*rect*  
- 按鈕的週框。  
+*rect*<br/>
+[in]按鈕的週框。  
   
- [in]*bSelected*  
- 是否已選取 按鈕。 如果此參數為 TRUE 時，會選取 [] 按鈕。 如果此參數為 FALSE，未選取 按鈕。  
+*bSelected*<br/>
+[in]是否已選取 按鈕。 如果此參數為 TRUE 時，會選取 [] 按鈕。 如果此參數為 FALSE，未選取 按鈕。  
   
 ### <a name="return-value"></a>傳回值  
  寬度，單位為像素上指定的裝置內容的按鈕。  
@@ -464,8 +464,8 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*ar*  
- `CArchive`從中或要序列化的物件。  
+*ar*<br/>
+[in]`CArchive`從中或要序列化的物件。  
   
 ### <a name="remarks"></a>備註  
  此方法擴充的基底類別實作 ( [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) 透過序列化為父工具列的資源識別碼。 載入封存檔時 ( [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading)傳回非零值)，這個方法會設定`m_pToolBar`資料成員，至工具列，其中包含序列化的資源識別碼。  
@@ -478,8 +478,8 @@ void SetDefaultCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiCmd*  
- 預設命令的識別碼。  
+*uiCmd*<br/>
+[in]預設命令的識別碼。  
   
 ### <a name="remarks"></a>備註  
  呼叫這個方法，指定架構就會執行使用者按一下按鈕時的預設命令。 具有所指定的命令 ID 的項目*uiCmd*必須位在父下拉式工具列。  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9e90570e783b2c42081da4854d54a65d1bdb9b6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
-ms.translationtype: MT
+ms.openlocfilehash: 33c719ffcba207beb4a5f867192af2b98aef2797
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208862"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719936"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty 類別
 `CMFCPropertyGridFileProperty`類別支援開啟字型選取對話方塊的屬性清單控制項項目。  
@@ -83,23 +83,23 @@ CMFCPropertyGridFontProperty(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*strName*  
- 屬性的名稱。  
+*strName*<br/>
+[in]屬性的名稱。  
   
- [in]*lf*  
- 一種邏輯字型結構指定的字型屬性。  
+*lf*<br/>
+[in]一種邏輯字型結構指定的字型屬性。  
   
- [in]*dwFontDialogFlags*  
- 會套用至字型 對話方塊會顯示當您按一下屬性值的下拉式按鈕的樣式。 預設值是 CF_EFFECTS 和 CF_SCREENFONTS 合 (OR)。 如需詳細資訊，請參閱 <<c0>  *旗標*的參數[CHOOSEFONT 結構](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta)。  
+*dwFontDialogFlags*<br/>
+[in]會套用至字型 對話方塊會顯示當您按一下屬性值的下拉式按鈕的樣式。 預設值是 CF_EFFECTS 和 CF_SCREENFONTS 合 (OR)。 如需詳細資訊，請參閱 <<c0>  *旗標*的參數[CHOOSEFONT 結構](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta)。  
   
- [in]*lpszDescr*  
- [字型] 屬性的描述。 預設值是 NULL。  
+*lpszDescr*<br/>
+[in][字型] 屬性的描述。 預設值是 NULL。  
   
- [in]*dwData*  
- 應用程式特定資料，例如整數或其他與屬性相關聯的資料指標。 預設值為 0。  
+*dwData*<br/>
+[in]應用程式特定資料，例如整數或其他與屬性相關聯的資料指標。 預設值為 0。  
   
- [in]*色彩*  
- 字型的色彩。 預設值為預設色彩。  
+*色彩*<br/>
+[in]字型的色彩。 預設值為預設色彩。  
   
 ### <a name="remarks"></a>備註  
  A`CMFCPropertyGridFontProperty`物件都代表在屬性方格字型控制項的字型屬性。  

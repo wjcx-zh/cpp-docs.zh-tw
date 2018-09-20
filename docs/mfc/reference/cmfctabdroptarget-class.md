@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2991135d7cbb7e2e9df66e871b5d047e69b93d16
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
-ms.translationtype: MT
+ms.openlocfilehash: 717be77589e31292fe6adbb4920a704794979a57
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852964"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711629"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget 類別
 提供索引標籤控制項和 OLE 程式庫之間的通訊機制。  
@@ -100,10 +100,10 @@ virtual DROPEFFECT OnDragEnter(
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*pWnd*|未使用。|  
-|[in]*pDataObject*|在使用者拖曳物件的指標。|  
-|[in]*dwKeyState*|包含的輔助按鍵的狀態。 這是任意數目的下列組合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。|  
-|[in]*點*|工作區座標中的游標位置。|  
+|*pWnd*|[in]未使用。|  
+|*pDataObject*|[in]在使用者拖曳物件的指標。|  
+|*dwKeyState*|[in]包含的輔助按鍵的狀態。 這是任意數目的下列組合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。|  
+|*點*|[in]工作區座標中的游標位置。|  
   
 ### <a name="return-value"></a>傳回值  
  如果下拉式清單，就會發生在所指定的位置會造成的影響*點*。 它可以是下列其中一個或多個項目：  
@@ -135,7 +135,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*pWnd*|未使用。|  
+|*pWnd*|[in]未使用。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會呼叫`CMFCBaseTabCtrl::OnDragLeave`方法，以執行拖曳作業。  
@@ -156,10 +156,10 @@ virtual DROPEFFECT OnDragOver(
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*pWnd*|未使用。|  
-|[in]*pDataObject*|在使用者拖曳物件的指標。|  
-|[in]*dwKeyState*|包含的輔助按鍵的狀態。 這是任意數目的下列組合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。|  
-|[in]*點*|在 工作區座標中滑鼠指標的位置。|  
+|*pWnd*|[in]未使用。|  
+|*pDataObject*|[in]在使用者拖曳物件的指標。|  
+|*dwKeyState*|[in]包含的輔助按鍵的狀態。 這是任意數目的下列組合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。|  
+|*點*|[in]在 工作區座標中滑鼠指標的位置。|  
   
 ### <a name="return-value"></a>傳回值  
  如果下拉式清單，就會發生在所指定的位置會造成的影響*點*。 它可以是下列其中一個或多個項目：  
@@ -196,11 +196,11 @@ virtual DROPEFFECT OnDropEx(
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*pWnd*|未使用。|  
-|[in]*pDataObject*|在使用者拖曳物件的指標。|  
-|[in]*dropEffect*|預設的拖放作業。|  
-|[in]*下拉清單*|未使用。|  
-|[in]*點*|在 工作區座標中滑鼠指標的位置。|  
+|*pWnd*|[in]未使用。|  
+|*pDataObject*|[in]在使用者拖曳物件的指標。|  
+|*dropEffect*|[in]預設的拖放作業。|  
+|*下拉清單*|[in]未使用。|  
+|*點*|[in]在 工作區座標中滑鼠指標的位置。|  
   
 ### <a name="return-value"></a>傳回值  
  產生的拖放效果。 它可以是下列其中一個或多個項目：  
@@ -232,7 +232,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*pOwner*|要登錄為置放目標的索引標籤控制項。|  
+|*pOwner*|[in]要登錄為置放目標的索引標籤控制項。|  
   
 ### <a name="return-value"></a>傳回值  
  非零值，如果登錄成功;否則為 0。  

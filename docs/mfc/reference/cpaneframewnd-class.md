@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe0d8b5b0679e8770bda715d3d0da0eaa3b5cce3
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
-ms.translationtype: MT
+ms.openlocfilehash: a7a91920906d5693eafbbf79a4bdd00814c79108
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43682852"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703712"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd 類別
 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
@@ -271,8 +271,8 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWnd*  
- 將窗格。  
+*pWnd*<br/>
+[in]將窗格。  
   
 ##  <a name="addremovepanefromgloballist"></a>  CPaneFrameWnd::AddRemovePaneFromGlobalList  
  從全域清單中加入或移除窗格。  
@@ -284,11 +284,11 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWnd*  
- 若要新增或移除窗格。  
+*pWnd*<br/>
+[in]若要新增或移除窗格。  
   
- [in]*bAdd*  
- 如果不是零，新增 [] 窗格。 如果為 0，移除窗格。  
+*bAdd*<br/>
+[in]如果不是零，新增 [] 窗格。 如果為 0，移除窗格。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，為非零否則為 0。  
@@ -317,8 +317,8 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*rectBorderSize*  
- 包含大小，單位為像素的迷你框架的框線。  
+*rectBorderSize*<br/>
+[out]包含大小，單位為像素的迷你框架的框線。  
   
 ### <a name="remarks"></a>備註  
  呼叫這個方法是由架構計算迷你框架的框線大小。 傳回的大小取決於迷你框架包含工具列還是[CDockablePane](../../mfc/reference/cdockablepane-class.md)。  
@@ -336,20 +336,20 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWndToDock*  
- 若要停駐視窗的指標。  
+*pWndToDock*<br/>
+[in]若要停駐視窗的指標。  
   
- [in]*ptMouse*  
- 滑鼠位置。  
+*ptMouse*<br/>
+[in]滑鼠位置。  
   
- [out]*rectResult*  
- 導出的矩形。  
+*rectResult*<br/>
+[out]導出的矩形。  
   
- [out]*bDrawTab*  
- 如果為 TRUE，繪製索引標籤。如果為 FALSE，不繪製索引標籤。  
+*bDrawTab*<br/>
+[out]如果為 TRUE，繪製索引標籤。如果為 FALSE，不繪製索引標籤。  
   
- [out]*ppTargetBar*  
- 對 [目標] 窗格的指標。  
+*ppTargetBar*<br/>
+[out]對 [目標] 窗格的指標。  
   
 ### <a name="remarks"></a>備註  
  這個方法會計算如果使用者拖曳到所指定的點的視窗，視窗會佔據的矩形*ptMouse*而那里將它停駐。  
@@ -372,8 +372,8 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDockingBar*  
- 窗格中。  
+*pDockingBar*<br/>
+[in]窗格中。  
   
 ### <a name="return-value"></a>傳回值  
  如果可以停駐迷你框架為非零*pDockingBar*，否則為 0。  
@@ -407,14 +407,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszWindowName*  
- 指定要顯示在迷你框架上的文字。  
+*lpszWindowName*<br/>
+[in]指定要顯示在迷你框架上的文字。  
   
- [in]*cheaderctrl:: Create*  
- 指定的視窗樣式。 如需詳細資訊，請參閱 <<c0> [ 的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
+*cheaderctrl:: Create*<br/>
+[in]指定的視窗樣式。 如需詳細資訊，請參閱 <<c0> [ 的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [in]*rect*  
- 指定的初始大小和位置的迷你框架。  
+*rect*<br/>
+[in]指定的初始大小和位置的迷你框架。  
   
  [in][out]*pParentWnd*  
  指定父框架的迷你框架。 此值必須不是 NULL。  
@@ -442,17 +442,17 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*dwStyleEx*  
- 指定延伸的視窗樣式。 如需詳細資訊，請參閱[延伸視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
+*dwStyleEx*<br/>
+[in]指定延伸的視窗樣式。 如需詳細資訊，請參閱[延伸視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
- [in]*lpszWindowName*  
- 指定要顯示在迷你框架上的文字。  
+*lpszWindowName*<br/>
+[in]指定要顯示在迷你框架上的文字。  
   
- [in]*cheaderctrl:: Create*  
- 指定的視窗樣式。 如需詳細資訊，請參閱 <<c0> [ 的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
+*cheaderctrl:: Create*<br/>
+[in]指定的視窗樣式。 如需詳細資訊，請參閱 <<c0> [ 的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [in]*rect*  
- 指定的初始大小和位置的迷你框架。  
+*rect*<br/>
+[in]指定的初始大小和位置的迷你框架。  
   
  [in][out]*pParentWnd*  
  指定父框架的迷你框架。 此值必須不是 NULL。  
@@ -474,8 +474,8 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*bWasDocked*  
- 如果窗格已停駐;，則為 TRUE。否則為 FALSE。  
+*bWasDocked*<br/>
+[out]如果窗格已停駐;，則為 TRUE。否則為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
  如果作業成功，`CDockablePane`窗格已停駐於，否則為 NULL。  
@@ -488,8 +488,8 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nID*  
- 表示要尋找窗格的控制項 ID。  
+*nID*<br/>
+[in]表示要尋找窗格的控制項 ID。  
   
 ### <a name="return-value"></a>傳回值  
  使用指定的控制項 ID; 窗格否則為 NULL，如果沒有窗格就會有指定的控制項 id。  
@@ -506,17 +506,17 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pt*  
- 螢幕座標中的點。  
+*太平洋時間*<br/>
+[in]螢幕座標中的點。  
   
- [in]*nSensitivity*  
- 增加這個大小的迷你框架視窗的 [搜尋] 區域。 如果指定的點落在增加的區域，迷你框架視窗會符合搜尋準則。  
+*nSensitivity*<br/>
+[in]增加這個大小的迷你框架視窗的 [搜尋] 區域。 如果指定的點落在增加的區域，迷你框架視窗會符合搜尋準則。  
   
- [in]*pFrameToExclude*  
- 指定的迷你框架視窗，從搜尋結果中排除。  
+*pFrameToExclude*<br/>
+[in]指定的迷你框架視窗，從搜尋結果中排除。  
   
- [in]*bFloatMultiOnly*  
- 如果為 TRUE，只會搜尋具有 CBRS_FLOAT_MULTI 樣式的迷你框架視窗。 如果為 FALSE，搜尋所有的迷你框架視窗。  
+*bFloatMultiOnly*<br/>
+[in]如果為 TRUE，只會搜尋具有 CBRS_FLOAT_MULTI 樣式的迷你框架視窗。 如果為 FALSE，搜尋所有的迷你框架視窗。  
   
 ### <a name="return-value"></a>傳回值  
  包含的迷你框架視窗的指標*pt*，否則為 NULL。  
@@ -542,8 +542,8 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*rectCaption*  
- 包含的迷你框架視窗標題，螢幕座標中的位置與大小。  
+*rectCaption*<br/>
+[out]包含的迷你框架視窗標題，螢幕座標中的位置與大小。  
   
 ### <a name="remarks"></a>備註  
  計算迷你框架視窗標題的週框矩形的架構會呼叫這個方法。  
@@ -688,11 +688,11 @@ virtual LRESULT HitTest(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*點*  
- 要測試的點。  
+*點*<br/>
+[in]要測試的點。  
   
- [in]*bDetectCaption*  
- 如果為 TRUE，請檢查針對標題的點。 如果為 FALSE，會忽略的標題。  
+*bDetectCaption*<br/>
+[in]如果為 TRUE，請檢查針對標題的點。 如果為 FALSE，會忽略的標題。  
   
 ### <a name="return-value"></a>傳回值  
  下列其中一個值：  
@@ -780,11 +780,11 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszProfileName*  
- 設定檔名稱。  
+*lpszProfileName*<br/>
+[in]設定檔名稱。  
   
- [in]*uiID*  
- 窗格中的識別碼。  
+*uiID*<br/>
+[in]窗格中的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果窗格狀態載入成功，則為 TRUE否則為 FALSE。  
@@ -836,8 +836,8 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容，用來繪製框線。  
+*pDC*<br/>
+[in]裝置內容，用來繪製框線。  
   
 ### <a name="remarks"></a>備註  
  呼叫這個方法是由架構在繪製迷你框架視窗的框線。  
@@ -859,11 +859,11 @@ virtual void OnMovePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pBar*  
- 指標 （忽略） 窗格。  
+*pBar*<br/>
+[in]指標 （忽略） 窗格。  
   
- [in]*ptOffset*  
- 用來移動窗格位移。  
+*ptOffset*<br/>
+[in]用來移動窗格位移。  
   
 ##  <a name="onpanerecalclayout"></a>  CPaneFrameWnd::OnPaneRecalcLayout  
  調整迷你框架視窗中窗格的配置。  
@@ -894,11 +894,11 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pBar*  
- [] 窗格所顯示或隱藏。  
+*pBar*<br/>
+[in] 窗格所顯示或隱藏。  
   
- [in]*bShow*  
- 如果正在顯示 窗格;，則為 TRUE。如果隱藏的窗格中，則為 FALSE。  
+*bShow*<br/>
+[in]如果正在顯示 窗格;，則為 TRUE。如果隱藏的窗格中，則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  迷你框架視窗中的窗格會顯示或隱藏時由架構呼叫。 預設實作不做任何動作。  
@@ -926,14 +926,14 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*點*  
- 點使用者點選，以螢幕座標。  
+*點*<br/>
+[in]點使用者點選，以螢幕座標。  
   
- [in]*nSensitivity*  
- 不使用這個參數。  
+*nSensitivity*<br/>
+[in]未使用此參數。  
   
- [in]*bCheckVisibility*  
- TRUE 會指定代表不應傳回只有可見窗格;否則為 FALSE。  
+*bCheckVisibility*<br/>
+[in]TRUE 會指定代表不應傳回只有可見窗格;否則為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
  窗格中按一下使用者或如果該位置的任何窗格不則為 NULL。  
@@ -969,14 +969,14 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWnd*  
- 若要移除窗格指標。  
+*pWnd*<br/>
+[in]若要移除窗格指標。  
   
- [in]*bDestroy*  
- 指定迷你框架視窗會發生什麼事。 如果*bDestroy*為 TRUE 時，這個方法會立即終結迷你框架視窗。 如果是 FALSE，則這個方法會在特定的延遲之後終結迷你框架視窗。  
+*bDestroy*<br/>
+[in]指定迷你框架視窗會發生什麼事。 如果*bDestroy*為 TRUE 時，這個方法會立即終結迷你框架視窗。 如果是 FALSE，則這個方法會在特定的延遲之後終結迷你框架視窗。  
   
- [in]*bNoDelayedDestroy*  
- 如果為 TRUE，則會停用延遲的解構。 如果為 FALSE，則會啟用延遲的解構。  
+*bNoDelayedDestroy*<br/>
+[in]如果為 TRUE，則會停用延遲的解構。 如果為 FALSE，則會啟用延遲的解構。  
   
 ### <a name="remarks"></a>備註  
  立即或在特定的延遲之後，架構會損毀的迷你框架視窗。 如果您想要延遲解構的迷你框架視窗，則會傳遞 FALSE *bNoDelayedDestroy*參數。 當處理 AFX_WM_CHECKEMPTYMINIFRAME 訊息架構時，就會發生延遲的解構。  
@@ -991,11 +991,11 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pBarOrg*  
- 到 [原始] 窗格的指標。  
+*pBarOrg*<br/>
+[in]到 [原始] 窗格的指標。  
   
- [in]*pBarReplaceWith*  
- 指標，會取代原始的窗格的窗格。  
+*pBarReplaceWith*<br/>
+[in]指標，會取代原始的窗格的窗格。  
   
 ##  <a name="savestate"></a>  CPaneFrameWnd::SaveState  
  將窗格的狀態儲存至登錄。  
@@ -1007,11 +1007,11 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszProfileName*  
- 設定檔名稱。  
+*lpszProfileName*<br/>
+[in]設定檔名稱。  
   
- [in]*uiID*  
- 窗格中的識別碼。  
+*uiID*<br/>
+[in]窗格中的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果已成功; 儲存窗格狀態，則為 TRUE。否則為 FALSE。  
@@ -1024,8 +1024,8 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*dwButtons*  
- 下列值的位元 OR 組合：  
+*dwButtons*<br/>
+[in]下列值的位元 OR 組合：  
   
 - AFX_CAPTION_BTN_CLOSE  
   
@@ -1067,8 +1067,8 @@ void SetDockingTimer(UINT nTimeOut);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nTimeOut*  
- 以毫秒為單位的逾時值。  
+*nTimeOut*<br/>
+[in]以毫秒為單位的逾時值。  
   
 ##  <a name="setdockstate"></a>  CPaneFrameWnd::SetDockState  
  設定固定狀態。  
@@ -1078,8 +1078,8 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDockManager*  
- 停駐的管理員指標。  
+*pDockManager*<br/>
+[in]停駐的管理員指標。  
   
 ##  <a name="sethotpoint"></a>  CPaneFrameWnd::SetHotPoint  
 
@@ -1104,8 +1104,8 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*preDockState*  
- 可能的值：  
+*preDockState*<br/>
+[in]可能的值：  
   
 - PDS_NOTHING，  
   
@@ -1113,11 +1113,11 @@ virtual BOOL SetPreDockState(
   
 - PDS_DOCK_TO_TAB  
   
- [in]*pBarToDock*  
- 若要停駐窗格的指標。  
+*pBarToDock*<br/>
+[in]若要停駐窗格的指標。  
   
- [in]*dockMethod*  
- 停駐的方法。 （會忽略這個參數）。  
+*dockMethod*<br/>
+[in]停駐的方法。 （會忽略這個參數）。  
   
 ### <a name="return-value"></a>傳回值  
  如果未停駐; 迷你框架視窗，則為 TRUE。如果停駐，則為 FALSE。  
@@ -1140,8 +1140,8 @@ BOOL StartTearOff(CMFCPopu* pMenu);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pMenu*  
- 功能表指標。  
+*pMenu*<br/>
+[in]功能表指標。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為 TRUE否則為 FALSE。  
@@ -1168,8 +1168,8 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDockingBar*  
- [in]*pTabbedBar*  
+*pDockingBar*<br/>
+[in][in]*pTabbedBar*  
   
 ### <a name="remarks"></a>備註  
   

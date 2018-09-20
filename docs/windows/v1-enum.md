@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bbacec7644a05f0077c8d6ffbe3e7856c66dcc4f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a81162565edd72b83130b919babfb63e99b095fc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222971"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381266"
 ---
 # <a name="v1enum"></a>v1_enum
 
@@ -69,5 +69,5 @@ enum eList {
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)  

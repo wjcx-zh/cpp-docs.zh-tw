@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 356aa3448c3912c1842d5e04c697fc86fc9714c0
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
-ms.translationtype: MT
+ms.openlocfilehash: c3e9c9e5122e4bef7007a767fb3225483984e11d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338395"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711681"
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton 類別
 `CMFCCaptionButton`類別實作的停駐窗格或迷你框架視窗的標題列顯示的按鈕。 Framework 通常會自動建立標題按鈕。  
@@ -106,11 +106,11 @@ CMFCCaptionButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nHit*  
- 與按鈕關聯的命令。  
+*nHit*<br/>
+[in]與按鈕關聯的命令。  
   
- [in]*bLeftAlign*  
- 指定按鈕是否靠左對齊。  
+*bLeftAlign*<br/>
+[in]指定按鈕是否靠左對齊。  
   
  下表列出可能的值，如*nHit*參數。  
   
@@ -161,11 +161,11 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bHorz*  
- 適用於左或向右箭號映像識別碼;FALSE 表示向上或向下箭號映像識別碼。  
+*bHorz*<br/>
+[in]適用於左或向右箭號映像識別碼;FALSE 表示向上或向下箭號映像識別碼。  
   
- [in]*bMaximized*  
- 適用於最大化映像識別碼;FALSE 表示最小化映像識別碼。  
+*bMaximized*<br/>
+[in]適用於最大化映像識別碼;FALSE 表示最小化映像識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  映像識別碼。  
@@ -221,11 +221,11 @@ void Move(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*ptTo*  
- 新位置。  
+*ptTo*<br/>
+[in]新的位置。  
   
- [in]*bHide*  
- 是否要顯示的按鈕。  
+*bHide*<br/>
+[in]是否要顯示的按鈕。  
   
 ##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
  繪製標題按鈕。  
@@ -240,20 +240,20 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 按鈕的裝置內容指標。  
+*pDC*<br/>
+[in]按鈕的裝置內容指標。  
   
- [in]*bActive*  
- 是否要繪製作用中的按鈕影像。  
+*bActive*<br/>
+[in]是否要繪製作用中的按鈕影像。  
   
- [in]*bHorz*  
- 保留供衍生類別中使用。  
+*bHorz*<br/>
+[in]保留供衍生類別中使用。  
   
- [in]*bMaximized*  
- 是否要繪製最大化的按鈕影像。  
+*bMaximized*<br/>
+[in]是否要繪製最大化的按鈕影像。  
   
- [in]*bDisabled*  
- 是否要繪製已啟用 按鈕影像。  
+*bDisabled*<br/>
+[in]是否要繪製已啟用 按鈕影像。  
   
 ### <a name="remarks"></a>備註  
  *BMaximized*參數會使用最大化 按鈕時，或最小化按鈕。  
@@ -266,8 +266,8 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bSet*  
- 適用於小型的標題列的高度;預設標題列的高度，則為 FALSE。  
+*bSet*<br/>
+[in]適用於小型的標題列的高度;預設標題列的高度，則為 FALSE。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

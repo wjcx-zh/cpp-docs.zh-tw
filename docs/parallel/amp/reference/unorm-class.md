@@ -16,97 +16,96 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d0769697dfbb0c43be9fb7326a5ad4361a2aecd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 131a928c5943ab9bf4dcc327b044d76e5646ede7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071220"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377379"
 ---
 # <a name="unorm-class"></a>unorm 類別
-代表 unorm 數字。 每個項目是浮點數中的範圍 [0.0，1.0 f]。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-class unorm;  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[unorm 建構函式](#ctor)|多載。 預設建構函式。 將初始化為 0.0。|  
-  
-### <a name="public-operators"></a>公用運算子  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|unorm::operator--||  
-|unorm::operator float|轉換運算子。 將 unorm 號碼轉換為浮點值。|  
-|unorm::operator*=||  
-|unorm::operator/=||  
-|unorm::operator++||  
-|unorm::operator+=||  
-|unorm::operator=||  
-|unorm::operator-=||  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `unorm`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** amp_short_vectors.h  
-  
- **命名空間：** concurrency:: graphics  
-  
-##  <a name="ctor"></a> unorm 
 
- 預設建構函式。 將初始化為 0.0。  
-  
-```  
+代表 unorm 數字。 每個項目是浮點數中的範圍 [0.0，1.0 f]。
+
+## <a name="syntax"></a>語法
+
+```
+class unorm;
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[unorm 建構函式](#ctor)|多載。 預設建構函式。 將初始化為 0.0。|
+
+### <a name="public-operators"></a>公用運算子
+
+|名稱|描述|
+|----------|-----------------|
+|unorm::operator--||
+|unorm::operator float|轉換運算子。 將 unorm 號碼轉換為浮點值。|
+|unorm::operator*=||
+|unorm::operator/=||
+|unorm::operator++||
+|unorm::operator+=||
+|unorm::operator=||
+|unorm::operator-=||
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`unorm`
+
+## <a name="requirements"></a>需求
+
+**標頭：** amp_short_vectors.h
+
+**命名空間：** concurrency:: graphics
+
+##  <a name="ctor"></a> unorm
+
+預設建構函式。 將初始化為 0.0。
+
+```
 unorm(
     void) restrict(amp,
     cpu);
 
- 
 explicit unorm(
     float _V) restrict(amp,
     cpu);
 
- 
 explicit unorm(
     unsigned int _V) restrict(amp,
     cpu);
 
- 
 explicit unorm(
     int _V) restrict(amp,
     cpu);
 
- 
 explicit unorm(
     double _V) restrict(amp,
     cpu);
 
- 
 unorm(
     const unorm& _Other) restrict(amp,
     cpu);
 
- 
 inline explicit unorm(
     const norm& _Other) restrict(amp,
     cpu);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *（_V)*<br/>
-用來初始化的值。  
-  
+用來初始化的值。
+
 *_Other*<br/>
-Norm 物件，用來初始化。  
-  
-## <a name="see-also"></a>另請參閱  
- [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)
+Norm 物件，用來初始化。
+
+## <a name="see-also"></a>另請參閱
+
+[Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)

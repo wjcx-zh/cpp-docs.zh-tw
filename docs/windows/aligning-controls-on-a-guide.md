@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2790d9fc3bd4e0af6c86bdbd71be236d8980ab4a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 648d78466b912f5f1f8c6a83065a07861ab9a7f3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314985"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374414"
 ---
 # <a name="aligning-controls-on-a-guide"></a>對齊輔助線上的控制項
 
@@ -62,5 +62,5 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[對話方塊編輯器狀態 (輔助線和格線)](../windows/dialog-editor-states-guides-and-grids.md)  
+[對話方塊編輯器狀態 (輔助線和格線)](../windows/dialog-editor-states-guides-and-grids.md)<br/>
 [對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)

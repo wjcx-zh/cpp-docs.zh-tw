@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92fd30b0b420080d33f9938bec4891ac80ac660d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 340323d2b540c74e600b76129edd360b73d0db23
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597074"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372132"
 ---
 # <a name="partial--c-component-extensions"></a>partial (C++ 元件擴充功能)
 
@@ -53,10 +53,10 @@ class-key identifier {
 
 ### <a name="parameters"></a>參數
 
-*類別索引鍵*  
+*類別索引鍵*<br/>
 關鍵字會宣告類別或結構所支援的 Windows 執行階段。 任一**ref 類別**，**的實值類別**， **ref struct**，或**實值結構**。
 
-*identifier*  
+*identifier*<br/>
 定義型別的名稱。
 
 ### <a name="remarks"></a>備註

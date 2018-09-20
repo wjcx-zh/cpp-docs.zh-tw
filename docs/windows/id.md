@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9b5250a730b0ce80cbbe9698b4b5e636a85986b6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 13ddef5b6bb83de16c72438e2b9f2bb3d4e8d635
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223182"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386349"
 ---
 # <a name="id"></a>id
 
@@ -38,7 +38,7 @@ ms.locfileid: "43223182"
 
 ### <a name="parameters"></a>參數
 
-*dispid*  
+*dispid*<br/>
 介面方法的分派識別碼。
 
 ## <a name="remarks"></a>備註
@@ -64,9 +64,9 @@ ms.locfileid: "43223182"
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
-[方法屬性](../windows/method-attributes.md)  
-[資料成員屬性](../windows/data-member-attributes.md)  
-[defaultvalue](../windows/defaultvalue.md)  
-[in](../windows/in-cpp.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
+[方法屬性](../windows/method-attributes.md)<br/>
+[資料成員屬性](../windows/data-member-attributes.md)<br/>
+[defaultvalue](../windows/defaultvalue.md)<br/>
+[in](../windows/in-cpp.md)<br/>
 [out](../windows/out-cpp.md)  

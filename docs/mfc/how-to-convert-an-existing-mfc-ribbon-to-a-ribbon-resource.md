@@ -1,5 +1,5 @@
 ---
-title: 如何： 將現有的 MFC 功能區轉換為功能區資源 |Microsoft 文件
+title: 如何： 將現有的 MFC 功能區轉換為功能區資源 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,46 +15,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2551709652df0e0c65b1b0b6b5085550044e9966
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 07ed60edf2b83810616e2ed58a92510d1d973ff0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928993"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378107"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>如何：將現有的 MFC 功能區轉換為功能區資源
-功能區資源比手動撰寫功能區程式碼更容易視覺化、修改和維護。 本主題說明如何將 MFC 專案中手動撰寫的功能區程式碼轉換為功能區資源。  
-  
- 您必須使用 MFC 功能區類別中，例如，程式碼的現有 MFC 專案[CMFCRibbonBar 類別](../mfc/reference/cmfcribbonbar-class.md)。  
-  
-### <a name="to-convert-an-mfc-ribbon-to-a-ribbon-resource"></a>將 MFC 功能區轉換為功能區資源  
-  
-1.  在 Visual Studio 中，現有 MFC 專案中，開啟來源檔案位置`CMFCRibbonBar`物件初始化。 通常該檔案會是 mainfrm.cpp。 在功能區的初始化程式碼後面加入下列程式碼。  
-  
- ```  
+
+功能區資源比手動撰寫功能區程式碼更容易視覺化、修改和維護。 本主題說明如何將 MFC 專案中手動撰寫的功能區程式碼轉換為功能區資源。
+
+您必須擁有現有的 MFC 專案，例如使用 MFC 功能區類別的程式碼[CMFCRibbonBar 類別](../mfc/reference/cmfcribbonbar-class.md)。
+
+### <a name="to-convert-an-mfc-ribbon-to-a-ribbon-resource"></a>將 MFC 功能區轉換為功能區資源
+
+1. 在 Visual Studio 中，開啟 現有的 MFC 專案中的 原始程式檔位置`CMFCRibbonBar`物件初始化。 通常該檔案會是 mainfrm.cpp。 在功能區的初始化程式碼後面加入下列程式碼。
+
+```
     m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");
 
- ```  
-  
-     儲存並關閉檔案。  
-  
-2.  建置並執行 MFC 應用程式，然後在 [記事本] 中，開啟 RibbonOutput.txt 並複製其內容。  
-  
-3.  在 Visual Studio 中，在**專案**功能表上，按一下 **加入資源**。 在**加入資源**對話方塊中，選取**功能區**，然後按一下 **新增**。  
-  
-     Visual Studio 會建立功能區資源並在設計檢視中將它開啟。 功能區資源識別碼是 IDR_RIBBON1，它會顯示在**資源檢視**。 功能區會在 ribbon1.mfcribbon-ms XML 檔案中定義。  
-  
-4.  在 Visual Studio 中開啟 ribbon1.mfcribbon-ms，刪除其內容，然後貼上您先前複製之 RibbonOutput.txt 的內容。 儲存並關閉 ribbon1.mfcribbon-ms。  
-  
-5.  再次開啟初始化 CMFCRibbonBar 物件的原始程式檔 (通常為 mainfrm.cpp) 並將現有的功能區程式碼標記為註解。 在標記為註解的程式碼後面加入下列程式碼。  
-  
- ```  
+```
+
+     Save and close the file.
+
+1. 建置並執行 MFC 應用程式，然後在 [記事本] 中，開啟 RibbonOutput.txt 並複製其內容。
+
+1. 在 Visual Studio 中，在**專案**功能表上，按一下**加入資源**。 在 **加入資源**對話方塊中，選取**功能區**，然後按一下 **新增**。
+
+     Visual Studio 會建立功能區資源並在設計檢視中將它開啟。 功能區資源識別碼是 IDR_RIBBON1，這會顯示在**資源檢視**。 功能區會在 ribbon1.mfcribbon-ms XML 檔案中定義。
+
+1. 在 Visual Studio 中開啟 ribbon1.mfcribbon-ms，刪除其內容，然後貼上您先前複製之 RibbonOutput.txt 的內容。 儲存並關閉 ribbon1.mfcribbon-ms。
+
+1. 再次開啟初始化 CMFCRibbonBar 物件的原始程式檔 (通常為 mainfrm.cpp) 並將現有的功能區程式碼標記為註解。 在標記為註解的程式碼後面加入下列程式碼。
+
+```
     m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);
 
- ```  
-  
-6.  建置專案並執行程式。  
-  
-## <a name="see-also"></a>另請參閱  
- [功能區設計工具 (MFC)](../mfc/ribbon-designer-mfc.md)
+```
+
+1. 建置專案並執行程式。
+
+## <a name="see-also"></a>另請參閱
+
+[功能區設計工具 (MFC)](../mfc/ribbon-designer-mfc.md)
 

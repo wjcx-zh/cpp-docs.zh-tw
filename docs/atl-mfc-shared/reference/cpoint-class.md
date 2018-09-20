@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc0506d5b4f264a2bdbecf30a7732c93c927bf18
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 29f487f77fac6c3f6def51b69715d1d47257dd7c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767978"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374219"
 ---
 # <a name="cpoint-class"></a>CPoint 類別
 
@@ -352,9 +352,9 @@ A`CSize`也就是兩個點之間的差異`CPoint`的大小，負位移`CRect`位
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 MDI](../../visual-cpp-samples.md)   
-[階層架構圖表](../../mfc/hierarchy-chart.md)   
-[POINT 結構](../../mfc/reference/point-structure1.md)   
-[CRect 類別](../../atl-mfc-shared/reference/crect-class.md)   
+[MFC 範例 MDI](../../visual-cpp-samples.md)<br/>
+[階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
+[POINT 結構](../../mfc/reference/point-structure1.md)<br/>
+[CRect 類別](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CSize 類別](../../atl-mfc-shared/reference/csize-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 索引標籤控制項和屬性工作表 |Microsoft 文件
+title: 索引標籤控制項和屬性工作表 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 096c61a62ea382639356eca81483c9aacfe04b2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc03427847a64330d1ff2814d268997f63fac6bd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385868"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382540"
 ---
 # <a name="tab-controls-and-property-sheets"></a>索引標籤控制項和屬性工作表
-屬性工作表具有多頁對話方塊或 「 索引標籤對話方塊 」 可以顯示最多 24 對話方塊範本資源給使用者。 屬性工作表的範例，請參閱 Windows 顯示內容 對話方塊或下列 MFC 範例應用程式：  
-  
- [CMNCTRL1： 示範常見的控制項類別，第 1 部分](../visual-cpp-samples.md)  
-  
- [CMNCTRL2： 示範常見的控制項類別，第 2 部分](../visual-cpp-samples.md)  
-  
- 屬性工作表可以輕鬆地實作使用 MFC 類別[CPropertySheet](../mfc/reference/cpropertysheet-class.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [使用 CTabCtrl](../mfc/using-ctabctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+
+屬性工作表為多頁對話方塊或 「 索引標籤對話方塊 」 最多 24 的對話方塊範本資源，使用者可以顯示。 例如屬性工作表的詳細資訊，請參閱 Windows 顯示內容 對話方塊或以下的 MFC 範例應用程式：
+
+[CMNCTRL1： 示範常見的控制項類別，第 1 部分](../visual-cpp-samples.md)
+
+[CMNCTRL2： 示範常見的控制項類別，第 2 部分](../visual-cpp-samples.md)
+
+屬性工作表可以輕鬆地使用 MFC 類別實作[CPropertySheet](../mfc/reference/cpropertysheet-class.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[使用 CTabCtrl](../mfc/using-ctabctrl.md)<br/>
+[控制項](../mfc/controls-mfc.md)
 

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38e031ada2f7375607ddaf5bc298ee1b5d87680c
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 85f12cea7004ef8e2bbf46fcb3b3e76f463be3b9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316935"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378874"
 ---
 # <a name="module-attributes"></a>模組屬性
 下列屬性只能套用至[模組](../windows/module-cpp.md)屬性。
@@ -31,4 +31,5 @@ ms.locfileid: "44316935"
 |[helpstringdll](../windows/helpstringdll.md)|指定要用來執行文件字串查閱 （當地語系化） DLL 的名稱。|
   
 ## <a name="see-also"></a>另請參閱
- [依使用方式分類的屬性](../windows/attributes-by-usage.md)
+
+[依使用方式分類的屬性](../windows/attributes-by-usage.md)

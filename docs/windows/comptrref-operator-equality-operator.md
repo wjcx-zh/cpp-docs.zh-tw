@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abf78644f7cad90d25d365f6237407aeaeb6917b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 78daa0ad22ad3bb6a63900d4c2f69d5eafb5cb6b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42575699"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372119"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator== 運算子
 
@@ -57,10 +57,10 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*a*  
+*a*<br/>
 參考**ComPtrRef**物件。
 
-*b*  
+*b*<br/>
 另一個的參考**ComPtrRef**物件或匿名類型的指標 (`void*`)。
 
 ## <a name="return-value"></a>傳回值
@@ -83,5 +83,5 @@ bool operator==(
 
 ## <a name="see-also"></a>另請參閱
 
-[Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)  
+[Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)<br/>
 [ComPtrRef 類別](../windows/comptrref-class.md)

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e87a600192bbcd3c8c91dd3f400ed67e9fab7ea9
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1b388ebd797ff9633f95693be8efb876ea4edae9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316727"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379747"
 ---
 # <a name="arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box-c"></a>排列按鈕沿著的右方或底部的對話方塊 （c + +）
 
@@ -47,6 +47,6 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[對話方塊上控制項的排列方式](../windows/arrangement-of-controls-on-dialog-boxes.md)  
-[對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)  
+[對話方塊上控制項的排列方式](../windows/arrangement-of-controls-on-dialog-boxes.md)<br/>
+[對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)<br/>
 [控制項](../mfc/controls-mfc.md)

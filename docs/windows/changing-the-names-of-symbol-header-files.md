@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 587cc5315395a58e6fdeb01929f920f506031e58
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 626fb3a7421414355d98a680d5647a494de26594
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317390"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374395"
 ---
 # <a name="changing-the-names-of-symbol-header-files"></a>變更符號標頭檔的名稱
 
@@ -49,5 +49,5 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[檢視資源符號](../windows/viewing-resource-symbols.md)  
+[檢視資源符號](../windows/viewing-resource-symbols.md)<br/>
 [預先定義的符號識別碼](../windows/predefined-symbol-ids.md)

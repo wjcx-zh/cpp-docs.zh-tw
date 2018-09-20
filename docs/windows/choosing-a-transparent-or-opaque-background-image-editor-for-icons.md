@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c0c4c306191af519103c65b39e3bb89afdb47f9
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 7f4c3da16181dca4a3a0722f96f61ce02863d369
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313477"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378719"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>選擇透明或不透明背景 (圖示影像編輯器)
 
@@ -57,5 +57,5 @@ ms.locfileid: "44313477"
 
 ## <a name="see-also"></a>另請參閱
 
-[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)  
+[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [使用色彩](../windows/working-with-color-image-editor-for-icons.md)

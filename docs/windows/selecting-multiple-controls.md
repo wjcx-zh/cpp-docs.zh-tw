@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6789a378b163da9e3cefbabb506f84a3cb9a5d7f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: aec9785040f0a30150c8399b5059d6d733ad8be2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317773"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383827"
 ---
 # <a name="selecting-multiple-controls"></a>選取多個控制項
 
@@ -58,5 +58,5 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[選取控制項](../windows/selecting-controls.md)  
+[選取控制項](../windows/selecting-controls.md)<br/>
 [對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)

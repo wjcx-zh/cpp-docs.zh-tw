@@ -1,5 +1,5 @@
 ---
-title: 剪貼簿： 何時使用每個剪貼簿機制 |Microsoft 文件
+title: 剪貼簿： 何時使用每個剪貼簿機制 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2d7ab966eb0fcb5592f55a1b24f1558946dbd16
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18b8a772dd58cf9623d4076665e7859d191bb27e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341922"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379810"
 ---
 # <a name="clipboard-when-to-use-each-clipboard-mechanism"></a>剪貼簿：何時使用每個剪貼簿機制
-請遵循這些指導方針中使用剪貼簿：  
-  
--   使用 OLE 剪貼簿機制現在在未來啟用新功能。 將會維持標準的剪貼簿應用程式開發介面，OLE 機制是未來的資料傳輸。  
-  
--   如果您要撰寫 OLE 應用程式，或您想要的任何 OLE 功能，例如拖放，請使用 OLE 剪貼簿機制。  
-  
--   如果您要提供 OLE 格式，請使用 OLE 剪貼簿機制。  
-  
-## <a name="what-do-you-want-to-do"></a>您想要做什麼  
-  
--   [使用 OLE 剪貼簿機制](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
-  
--   [使用 Windows 剪貼簿機制](../mfc/clipboard-using-the-windows-clipboard.md)  
-  
-## <a name="see-also"></a>另請參閱  
- [剪貼簿](../mfc/clipboard.md)
+
+請遵循這些指導方針，在使用剪貼簿：
+
+- 使用 OLE 剪貼簿機制現在在未來啟用新功能。 雖然標準的剪貼簿 API 將會保留下來，OLE 機制會是未來的資料傳輸。
+
+- 如果您正在撰寫 OLE 應用程式，或您想要的任何 OLE 功能，例如拖放，請使用 OLE 剪貼簿機制。
+
+- 如果您要提供 OLE 格式，請使用 OLE 剪貼簿機制。
+
+## <a name="what-do-you-want-to-do"></a>您要做什麼
+
+- [使用 OLE 剪貼簿機制](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+
+- [使用 Windows 剪貼簿機制](../mfc/clipboard-using-the-windows-clipboard.md)
+
+## <a name="see-also"></a>另請參閱
+
+[剪貼簿](../mfc/clipboard.md)
 

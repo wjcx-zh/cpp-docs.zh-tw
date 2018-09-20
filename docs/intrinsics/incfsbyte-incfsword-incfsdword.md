@@ -23,51 +23,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a80dc66f9626c87cef78a79b1c46a62afd0957d3
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d72fc5c130f9e92cc4575510fe7565da5199a996
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719351"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380268"
 ---
 # <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte、__incfsword、__incfsdword
-**Microsoft 專屬**  
-  
- 相對於開頭的位移所指定的記憶體位置中加入一個值`FS`區段。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-void __incfsbyte(   
-   unsigned long Offset   
-);  
-void __incfsword(   
-   unsigned long Offset   
-);  
-void __incfsdword(   
-   unsigned long Offset  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
+
+**Microsoft 專屬**
+
+相對於開頭的位移所指定的記憶體位置中加入一個值`FS`區段。
+
+## <a name="syntax"></a>語法
+
+```
+void __incfsbyte(
+   unsigned long Offset
+);
+void __incfsword(
+   unsigned long Offset
+);
+void __incfsdword(
+   unsigned long Offset
+);
+```
+
+#### <a name="parameters"></a>參數
+
 *位移*<br/>
-[in]從開頭的位移`FS`。  
-  
-## <a name="requirements"></a>需求  
-  
-|內建|架構|  
-|---------------|------------------|  
-|`__incfsbyte`|x86|  
-|`__incfsword`|x86|  
-|`__incfsdword`|x86|  
-  
-## <a name="remarks"></a>備註  
- 這些內建函式僅適用於核心模式，常式僅可作為內建函式。  
-  
-**結束 Microsoft 專屬**  
-  
-## <a name="see-also"></a>另請參閱  
- [__addfsbyte、 \__addfsword， \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)   
- [__readfsbyte、 \__readfsdword， \__readfsqword， \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
- [__writefsbyte、 \__writefsdword， \__writefsqword， \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   
- [編譯器內建](../intrinsics/compiler-intrinsics.md)
+[in]從開頭的位移`FS`。
+
+## <a name="requirements"></a>需求
+
+|內建|架構|
+|---------------|------------------|
+|`__incfsbyte`|x86|
+|`__incfsword`|x86|
+|`__incfsdword`|x86|
+
+## <a name="remarks"></a>備註
+
+這些內建函式僅適用於核心模式，常式僅可作為內建函式。
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>另請參閱
+
+[__addfsbyte、 \__addfsword， \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)<br/>
+[__readfsbyte、 \__readfsdword， \__readfsqword， \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)<br/>
+[__writefsbyte、 \__writefsdword， \__writefsqword， \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)<br/>
+[編譯器內建](../intrinsics/compiler-intrinsics.md)

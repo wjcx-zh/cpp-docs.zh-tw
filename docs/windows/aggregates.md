@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf6ca06ffbd3912ac3545bc3c014224412c01bc1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4bbb5c62fb53d1246c1b8cc282b4ee36f0fcf58e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221166"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377314"
 ---
 # <a name="aggregates"></a>彙總
 
@@ -42,10 +42,10 @@ ms.locfileid: "43221166"
 
 ### <a name="parameters"></a>參數
 
-*clsid*  
+*clsid*<br/>
 指定可彙總物件的 CLSID。
 
-*variable_name*  
+*variable_name*<br/>
 要插入的變數名稱。 此變數包含`IUnknown`正在彙總物件。
 
 ## <a name="remarks"></a>備註
@@ -106,9 +106,9 @@ struct CObject : IObject
 
 ## <a name="see-also"></a>另請參閱
 
-[COM 屬性](../windows/com-attributes.md)  
-[類別屬性](../windows/class-attributes.md)  
-[Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)  
-[彙總](/windows/desktop/com/aggregation)  
-[彙總](/windows/desktop/Midl/aggregatable)  
+[COM 屬性](../windows/com-attributes.md)<br/>
+[類別屬性](../windows/class-attributes.md)<br/>
+[Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[彙總](/windows/desktop/com/aggregation)<br/>
+[彙總](/windows/desktop/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)  

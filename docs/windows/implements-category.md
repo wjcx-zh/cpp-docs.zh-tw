@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b11100ff054b9edd18fc0ba335b26fa4c1076d7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7e329f179a2a9c61fc3be6d351dc8baa97c1d4c6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204280"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377148"
 ---
 # <a name="implementscategory"></a>implements_category
 
@@ -38,7 +38,7 @@ ms.locfileid: "43204280"
 
 ### <a name="parameters"></a>參數
 
-*implements_category*  
+*implements_category*<br/>
 實作的類別目錄的識別碼。
 
 ## <a name="remarks"></a>備註
@@ -71,7 +71,7 @@ class CMyClass {};
 |||
 |-|-|
 |**適用於**|**類別**，**結構**|
-|**可重複**|[是]|
+|**可重複**|是|
 |**必要屬性**|下列其中之一： `coclass`， `progid`，或 `vi_progid`|
 |**無效屬性**|無|
 
@@ -79,6 +79,6 @@ class CMyClass {};
 
 ## <a name="see-also"></a>另請參閱
 
-[COM 屬性](../windows/com-attributes.md)  
-[類別屬性](../windows/class-attributes.md)  
+[COM 屬性](../windows/com-attributes.md)<br/>
+[類別屬性](../windows/class-attributes.md)<br/>
 [IMPLEMENTED_CATEGORY](../atl/reference/category-macros.md#implemented_category)  

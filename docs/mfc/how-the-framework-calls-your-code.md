@@ -1,5 +1,5 @@
 ---
-title: 架構如何呼叫您的程式碼 |Microsoft 文件
+title: 架構如何呼叫您的程式碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,24 +22,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f746ce3c3d658ab1dccc098939410b52d91b1188
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68db9107a8d2d113e9118c9cf125acb2798edcd4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348175"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373866"
 ---
 # <a name="how-the-framework-calls-your-code"></a>架構如何呼叫您的程式碼
-了解您的原始程式碼和 MFC 架構中程式碼之間的關聯性很重要。 當應用程式執行時，大部分的控制流程會位於架構的程式碼中。 當使用者選擇命令並編輯檢視中的資料時，架構會管理從 Windows 取得訊息的訊息迴圈。 架構可以自行處理的事件甚至不需要仰賴您的程式碼。 例如，架構知道如何回應使用者命令來關閉視窗並結束應用程式。 當它處理這些工作時，架構會使用訊息處理常式和 C++ 虛擬函式讓您有機會回應這些事件。 您的程式碼無法控制；但架構則可以。  
-  
- 架構會呼叫您的應用程式特定事件的程式碼。 例如，當使用者選擇某個功能表命令時，架構會沿著 C++ 物件序列的順序進行路由：目前檢視和框架視窗、與檢視相關聯的文件、文件的文件範本和應用程式物件。 如果其中一個物件可以處理命令，則它會呼叫適當的訊息處理函式。 對於任何指定的命令，所呼叫的程式碼可能是您的、也可能是架構的。  
-  
- 這個安排對於具有傳統 Windows 或事件驅動程式設計經驗的人來說，應該是有些熟悉的。  
-  
- 在相關主題中，您將閱讀架構在初始化和執行應用程式時會做什麼，接著會在應用程式結束時進行清除。 您也會了解要在需要調整的程式碼位置。  
-  
- 如需詳細資訊，請參閱[類別 CWinApp： 應用程式類別](../mfc/cwinapp-the-application-class.md)和[文件範本和文件/檢視建立流程](../mfc/document-templates-and-the-document-view-creation-process.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [在架構上建置](../mfc/building-on-the-framework.md)
+
+了解您的原始程式碼和 MFC 架構中程式碼之間的關聯性很重要。 當應用程式執行時，大部分的控制流程會位於架構的程式碼中。 當使用者選擇命令並編輯檢視中的資料時，架構會管理從 Windows 取得訊息的訊息迴圈。 架構可以自行處理的事件甚至不需要仰賴您的程式碼。 例如，架構知道如何回應使用者命令來關閉視窗並結束應用程式。 當它處理這些工作時，架構會使用訊息處理常式和 C++ 虛擬函式讓您有機會回應這些事件。 您的程式碼無法控制；但架構則可以。
+
+架構會呼叫您的應用程式特定事件的程式碼。 例如，當使用者選擇某個功能表命令時，架構會沿著 C++ 物件序列的順序進行路由：目前檢視和框架視窗、與檢視相關聯的文件、文件的文件範本和應用程式物件。 如果其中一個物件可以處理命令，則它會呼叫適當的訊息處理函式。 對於任何指定的命令，所呼叫的程式碼可能是您的、也可能是架構的。
+
+這個安排對於具有傳統 Windows 或事件驅動程式設計經驗的人來說，應該是有些熟悉的。
+
+在相關主題中，您將閱讀架構在初始化和執行應用程式時會做什麼，接著會在應用程式結束時進行清除。 您也會了解要在需要調整的程式碼位置。
+
+如需詳細資訊，請參閱 <<c0> [ 類別 CWinApp： 應用程式類別](../mfc/cwinapp-the-application-class.md)並[文件範本和文件/檢視建立流程](../mfc/document-templates-and-the-document-view-creation-process.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[在架構上建置](../mfc/building-on-the-framework.md)
 

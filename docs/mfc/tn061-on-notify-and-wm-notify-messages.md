@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d2f1259227fa8d27778dbf0e40b13f5460b7041
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2395cb7b1f3d719fd64494ee9b9c7c64ba222bac
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218781"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381825"
 ---
 # <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061：ON_NOTIFY 和 WM_NOTIFY 訊息
 
@@ -104,14 +104,14 @@ ON_NOTIFY(wNotifyCode, id, memberFxn)
 
 其中的參數：
 
-*wNotifyCode*  
- 通知訊息以進行處理，例如 LVN_KEYDOWN 程式碼。
+*wNotifyCode*<br/>
+通知訊息以進行處理，例如 LVN_KEYDOWN 程式碼。
 
-*id*  
- 傳送通知之控制項的子系識別碼。
+*id*<br/>
+傳送通知之控制項的子系識別碼。
 
-*memberFxn*  
- 此通知會傳送時要呼叫此成員函式。
+*memberFxn*<br/>
+此通知會傳送時要呼叫此成員函式。
 
 您的成員函式必須具有下列原型宣告：
 
@@ -121,11 +121,11 @@ afx_msg void memberFxn(NMHDR* pNotifyStruct, LRESULT* result);
 
 其中的參數：
 
-*pNotifyStruct*  
- 上一節中所述的通知結構指標。
+*pNotifyStruct*<br/>
+上一節中所述的通知結構指標。
 
-*結果*  
- 指標的結果碼，您會將傳回之前。
+*結果*<br/>
+指標的結果碼，您會將傳回之前。
 
 ## <a name="example"></a>範例
 
@@ -141,7 +141,7 @@ ON_NOTIFY(LVN_KEYDOWN, IDC_LIST1, OnKeydownList1)
 void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
 {
     LV_KEYDOWN* pLVKeyDow = (LV_KEYDOWN*)pNMHDR;
-    
+
     // TODO: Add your control notification handler
     //       code here
 
@@ -167,17 +167,17 @@ ON_NOTIFY_RANGE(wNotifyCode, id, idLast, memberFxn)
 
 其中的參數：
 
-*wNotifyCode*  
- 通知訊息以進行處理，例如 LVN_KEYDOWN 程式碼。
+*wNotifyCode*<br/>
+通知訊息以進行處理，例如 LVN_KEYDOWN 程式碼。
 
-*id*  
- 連續範圍的識別項中的第一個識別項。
+*id*<br/>
+連續範圍的識別項中的第一個識別項。
 
-*idLast*  
- 在連續的識別項的範圍中最後一個識別項。
+*idLast*<br/>
+在連續的識別項的範圍中最後一個識別項。
 
-*memberFxn*  
- 此通知會傳送時要呼叫此成員函式。
+*memberFxn*<br/>
+此通知會傳送時要呼叫此成員函式。
 
 您的成員函式必須具有下列原型宣告：
 
@@ -187,14 +187,14 @@ afx_msg void memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 
 其中的參數：
 
-*id*  
- 傳送通知之控制項的子系識別碼。
+*id*<br/>
+傳送通知之控制項的子系識別碼。
 
-*pNotifyStruct*  
- 若要通知的結構，如上面所述的指標。
+*pNotifyStruct*<br/>
+若要通知的結構，如上面所述的指標。
 
-*結果*  
- 指標的結果碼，您會將傳回之前。
+*結果*<br/>
+指標的結果碼，您會將傳回之前。
 
 ##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX ON_NOTIFY_EX_RANGE
 
@@ -221,5 +221,5 @@ afx_msg BOOL memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 
 ## <a name="see-also"></a>另請參閱
 
-[依編號顯示的技術提示](../mfc/technical-notes-by-number.md)  
-[依分類區分的技術提示](../mfc/technical-notes-by-category.md)  
+[依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
+[依分類區分的技術提示](../mfc/technical-notes-by-category.md)

@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fca1c097a01f34fb2cc708489338391dfced982f
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: b80c9c8ef371808fc98d0475afc00223b13194ea
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539183"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384035"
 ---
 # <a name="preprocessor-operators"></a>前置處理器運算子
 `#define` 指示詞的內容中使用四個前置處理器特定運算子 (請參閱下列清單以取得每一個運算子的摘要)。 字串化、字元化和語彙基元帶入運算子在下面三節中討論。 如需`defined`運算子，請參閱[#if、 #elif、 #else 和 #endif 指示詞](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)。  
@@ -34,6 +34,6 @@ ms.locfileid: "42539183"
   
 ## <a name="see-also"></a>另請參閱  
  
-[前置處理器指示詞](../preprocessor/preprocessor-directives.md)   
-[預先定義巨集](../preprocessor/predefined-macros.md)   
+[前置處理器指示詞](../preprocessor/preprocessor-directives.md)<br/>
+[預先定義的巨集](../preprocessor/predefined-macros.md)<br/>
 [C/C++ 前置處理器參考](../preprocessor/c-cpp-preprocessor-reference.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c43139dd1d927d9e6173d9e78765d0fcdbddae6a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8faad93ae57e42e0e28bcb697ed300c11e766136
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716010"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376911"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -40,13 +40,13 @@ ms.locfileid: "45716010"
 
 ### <a name="parameters"></a>參數
 
-*db_source*  
+*db_source*<br/>
 用來連接到資料來源連接字串。 如需連接字串的格式，請參閱[連接字串和資料連結](/previous-versions/windows/desktop/ms718376\(v=vs.85\))在 Microsoft Data Access Components (MDAC) SDK。
 
-*name*  
+*name*<br/>
 （選擇性）當您使用**db_source**類別中上,*名稱*是具有資料來源物件的執行個體**db_source**套用屬性 （請參閱範例 1）。 當您使用**db_source**在方法實作中，內嵌*名稱*是一個變數 （本機方法），可用來存取資料來源 （請參閱範例 2）。 您傳遞這*名稱*要*source_name*參數`db_command`命令相關聯的資料來源。
 
-*hresult*  
+*hresult*<br/>
 （選擇性）識別將會收到此資料庫命令的 HRESULT 的變數。 如果變數不存在，則屬性會自動予以插入。
 
 ## <a name="remarks"></a>備註

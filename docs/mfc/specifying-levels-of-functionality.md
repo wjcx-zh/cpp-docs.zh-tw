@@ -1,5 +1,5 @@
 ---
-title: 指定功能層級 |Microsoft 文件
+title: 指定功能層級 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,69 +20,71 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 425cbf2f9c769dbbb6cd054b9af6b7f6f5fc9d52
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: c4b5ed392850fac97e8671774dee0905bf3417eb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954461"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375886"
 ---
 # <a name="specifying-levels-of-functionality"></a>指定功能層級
-本文說明如何新增下列層級的功能以您[CObject](../mfc/reference/cobject-class.md)-衍生的類別：  
-  
--   [執行階段類別資訊](#_core_to_add_run.2d.time_class_information)  
-  
--   [動態建立支援](#_core_to_add_dynamic_creation_support)  
-  
--   [序列化支援](#_core_to_add_serialization_support)  
-  
- 如需一般的說明`CObject`功能，請參閱文章[從 CObject 衍生類別](../mfc/deriving-a-class-from-cobject.md)。  
-  
--   [執行階段類別資訊](#_core_to_add_run.2d.time_class_information)  
-#### <a name="_core_to_add_run.2d.time_class_information"></a> 若要加入執行階段類別資訊  
-  
-1.  衍生您的類別從`CObject`中所述，[從 CObject 衍生類別](../mfc/deriving-a-class-from-cobject.md)發行項。  
-  
-2.  在類別宣告中，使用 DECLARE_DYNAMIC 巨集，如下所示：  
-  
-     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/specifying-levels-of-functionality_1.h)]  
-  
-3.  使用 IMPLEMENT_DYNAMIC 巨集在實作檔 (。CPP) 您的類別。 這個巨集接受做為引數的類別和其基底類別名稱，如下所示：  
-  
-     [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/cpp/specifying-levels-of-functionality_2.cpp)]  
-  
+
+這篇文章說明如何加入下列的層級的功能，您[CObject](../mfc/reference/cobject-class.md)-衍生的類別：
+
+- [執行階段類別資訊](#_core_to_add_run.2d.time_class_information)
+
+- [動態建立支援](#_core_to_add_dynamic_creation_support)
+
+- [序列化支援](#_core_to_add_serialization_support)
+
+如需一般的描述`CObject`功能，請參閱文章[從 CObject 衍生類別](../mfc/deriving-a-class-from-cobject.md)。
+
+- [執行階段類別資訊](#_core_to_add_run.2d.time_class_information)
+#### <a name="_core_to_add_run.2d.time_class_information"></a> 若要新增執行階段類別資訊
+
+1. 衍生您的類別，從`CObject`中所述[從 CObject 衍生類別](../mfc/deriving-a-class-from-cobject.md)文章。
+
+1. 在類別宣告中，使用 DECLARE_DYNAMIC 巨集，如下所示：
+
+     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/specifying-levels-of-functionality_1.h)]
+
+1. 使用 IMPLEMENT_DYNAMIC 巨集在實作檔 (。CPP) 您的類別。 這個巨集接受做為引數類別和其基底類別的名稱，如下所示：
+
+     [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/cpp/specifying-levels-of-functionality_2.cpp)]
+
 > [!NOTE]
->  一律將您的類別放在實作檔 (。CPP) 為您的類別。 IMPLEMENT_DYNAMIC 巨集應該只評估一次在編譯期間，因此應該不用於介面檔中 (。H），可能無法包含在多個檔案。  
-  
-#### <a name="_core_to_add_dynamic_creation_support"></a> 若要加入動態建立支援  
-  
-1.  衍生您的類別從`CObject`。  
-  
-2.  在類別宣告中使用 DECLARE_DYNCREATE 巨集。  
-  
-3.  定義沒有引數 （預設建構函式） 的建構函式。  
-  
-4.  在類別實作檔使用 IMPLEMENT_DYNCREATE 巨集。  
-  
-#### <a name="_core_to_add_serialization_support"></a> 若要加入序列化支援  
-  
-1.  衍生您的類別從`CObject`。  
-  
-2.  覆寫`Serialize`成員函式。  
-  
+>  一律將您的類別放在實作檔 (。CPP) 為您的類別。 IMPLEMENT_DYNAMIC 巨集應該只評估一次在編譯期間，因此應該不用於介面檔案中 (。H），可能無法包含在多個檔案。
+
+#### <a name="_core_to_add_dynamic_creation_support"></a> 若要加入動態建立支援
+
+1. 衍生您的類別，從`CObject`。
+
+1. 在類別宣告中使用 DECLARE_DYNCREATE 巨集。
+
+1. 定義沒有引數 （預設建構函式） 的建構函式。
+
+1. 在類別實作檔使用 IMPLEMENT_DYNCREATE 巨集。
+
+#### <a name="_core_to_add_serialization_support"></a> 若要加入的序列化支援
+
+1. 衍生您的類別，從`CObject`。
+
+1. 覆寫`Serialize`成員函式。
+
     > [!NOTE]
-    >  如果您呼叫`Serialize`直接，也就是您不希望將序列化的物件，透過多型的指標，請略過步驟 3 到 5。  
-  
-3.  在類別宣告中使用 DECLARE_SERIAL 巨集。  
-  
-4.  定義沒有引數 （預設建構函式） 的建構函式。  
-  
-5.  在類別實作檔使用 IMPLEMENT_SERIAL 巨集。  
-  
+    >  如果您呼叫`Serialize`直接，也就是不想將序列化物件，可透過多型的指標，並略過步驟 3 到 5。
+
+1. 在類別宣告中使用 DECLARE_SERIAL 巨集。
+
+1. 定義沒有引數 （預設建構函式） 的建構函式。
+
+1. 在類別實作檔使用 IMPLEMENT_SERIAL 巨集。
+
 > [!NOTE]
->  「 多型的指標 」 指向類別的物件 (它呼叫的) 或衍生自 （比方說，B） 的任何類別的物件。 若要序列化多型的指標透過，架構必須判斷執行階段類別，它會序列化 (B)，因為它可能是衍生自一些基底類別 (A) 的任何類別物件的物件。  
-  
- 如需有關如何啟用序列化，當您衍生您的類別從`CObject`，請參閱文章[MFC 中的檔案](../mfc/files-in-mfc.md)和[序列化](../mfc/serialization-in-mfc.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [從 CObject 衍生類別](../mfc/deriving-a-class-from-cobject.md)
+>  「 多型的指標 」 指向類別的物件 (呼叫它的) 或衍生自 （例如，B） 任何類別的物件。 若要序列化透過多型的指標，framework 必須判斷執行階段類別，因為它可能是衍生自基底類別 (A) 任何類別的物件序列化 (B) 的物件。
+
+如需如何啟用序列化，當您衍生您的類別，從詳細`CObject`，請參閱文章[MFC 中的檔案](../mfc/files-in-mfc.md)並[序列化](../mfc/serialization-in-mfc.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[從 CObject 衍生類別](../mfc/deriving-a-class-from-cobject.md)

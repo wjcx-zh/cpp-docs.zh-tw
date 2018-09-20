@@ -1,5 +1,5 @@
 ---
-title: 'Concurrency:: graphics 命名空間列舉 |Microsoft 文件'
+title: 'Concurrency:: graphics 命名空間列舉 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,33 +13,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbb02becbcfebf935107acb85ae3991476b67796
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b5c66771c9b27d568e32f7d4a361586ff5a62da9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695443"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384971"
 ---
 # <a name="concurrencygraphics-namespace-enums"></a>Concurrency:: graphics 命名空間列舉
-|||  
-|-|-|  
-|[_mode 列舉](#address_mode)|[filter_mode 列舉](#filter_mode)|  
-  
-##  <a name="address_mode"></a>  address_mode 列舉  
- 代表地址模式支援紋理取樣用於列舉型別。  
-  
-```  
-enum address_mode;  
-```  
-  
-##  <a name="filter_mode"></a>  filter_mode 列舉  
- 列舉型別使用代表支援紋理取樣的篩選模式。  
-  
-```  
-enum filter_mode;  
-```  
+
+|||
+|-|-|
+|[列舉模式 （_m）](#address_mode)|[filter_mode 列舉](#filter_mode)|
+
+##  <a name="address_mode"></a>  address_mode 列舉
+
+列舉類型用來表示材質取樣支援的位址模式。
+
+```
+enum address_mode;
+```
+
+##  <a name="filter_mode"></a>  filter_mode 列舉
+
+列舉類型用來表示材質取樣支援的篩選模式。
+
+```
+enum filter_mode;
+```
 ## <a name="requirements"></a>需求
+
 **標頭：** amp_graphics.h**命名空間：** concurrency:: graphics
 
-## <a name="see-also"></a>另請參閱  
- [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)
+## <a name="see-also"></a>另請參閱
+
+[Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)

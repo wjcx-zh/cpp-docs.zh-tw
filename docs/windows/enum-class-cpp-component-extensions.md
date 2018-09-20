@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 72c312bdec9248cdc38150163d914b2ac7036ab8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 993f0e190d87b140fba0008872d57f2a34b6a5cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711083"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377262"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum class (C++ 元件擴充功能)
 
@@ -44,23 +44,23 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="parameters"></a>參數
 
-*access*  
+*access*<br/>
 列舉型別，可協助工具**公開金鑰**或是**私人**。
 
-*列舉識別項*  
+*列舉識別項*<br/>
 列舉名稱。
 
-*基礎類型*  
+*基礎類型*<br/>
 (選用) 列舉的基礎類型。
 
 (選用。 Windows 執行階段只） 之基礎類型的列舉型別，它可以是**bool**， **char**， `char16`， `int16`， `uint16`， **int**， `uint32`， `int64`，或`uint64`。
 
-*列舉程式清單*  
+*列舉程式清單*<br/>
 列舉程式名稱的逗號分隔清單。
 
 每個列舉程式都是常數運算式，不是透過編譯器隱含定義，就是藉由標記法 *列舉程式*`=`*常數運算式*。 如以隱含方式定義，第一個列舉程式的值預設為零。 後續每個以隱含方式定義的列舉程式值，都是前一個列舉程式的值 + 1。
 
-*var*  
+*var*<br/>
 (選用) 列舉類型的變數名稱。
 
 ### <a name="remarks"></a>備註
@@ -92,19 +92,19 @@ accessenum structname [:type] { enumerator-list } var;
 
 ### <a name="parameters"></a>參數
 
-*access*  
+*access*<br/>
 列舉的存取範圍。 可以是**公開金鑰**或是**私人**。
 
-*列舉程式清單*  
+*列舉程式清單*<br/>
 列舉的識別項 (列舉程式) 逗號分隔清單。
 
-*name*  
+*name*<br/>
 列舉名稱。 不允許匿名的 Managed 列舉。
 
-*type*  
+*type*<br/>
 （選擇性）基礎類型*識別碼*。 這可以是任何純量類型，例如帶正負號或不帶正負號的版本**int**，**簡短**，或**長**。  **bool**或是**char**也允許。
 
-*var*  
+*var*<br/>
 (選用) 列舉類型的變數名稱。
 
 ### <a name="remarks"></a>備註

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aea326149c9748ff480d523a1078f54ba733cb14
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 705b495e3f6d626a742fd1a63989c8cc658446a4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610416"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379656"
 ---
 # <a name="interfacetraitscancastto-method"></a>InterfaceTraits::CanCastTo 方法
 
@@ -41,13 +41,13 @@ static __forceinline bool CanCastTo(
 
 ### <a name="parameters"></a>參數
 
-*ptr*  
+*ptr*<br/>
 類型的指標的名稱。
 
-*riid*  
+*riid*<br/>
 介面 ID `Base`。
 
-*ppv*  
+*ppv*<br/>
 如果這項作業成功， *ppv*指向所指定之介面`Base`。 否則，請*ppv*設為**nullptr**。
 
 ## <a name="return-value"></a>傳回值
@@ -68,5 +68,5 @@ static __forceinline bool CanCastTo(
 
 ## <a name="see-also"></a>另請參閱
 
-[InterfaceTraits 結構](../windows/interfacetraits-structure.md)  
+[InterfaceTraits 結構](../windows/interfacetraits-structure.md)<br/>
 [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 052616134fa1d650bc49fbc9d56e30a27bc9ee96
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0a4748184ddf6281270da00572ffbd5374a6d2aa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318560"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386883"
 ---
 # <a name="changing-unassigned-symbols"></a>變更未指定的符號
 
@@ -47,7 +47,7 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[檢視資源符號](../windows/viewing-resource-symbols.md)  
-[符號名稱限制](../windows/symbol-name-restrictions.md)  
-[符號值限制](../windows/symbol-value-restrictions.md)  
+[檢視資源符號](../windows/viewing-resource-symbols.md)<br/>
+[符號名稱限制](../windows/symbol-name-restrictions.md)<br/>
+[符號值限制](../windows/symbol-value-restrictions.md)<br/>
 [預先定義的符號識別碼](../windows/predefined-symbol-ids.md)

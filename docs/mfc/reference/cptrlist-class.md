@@ -18,49 +18,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36746c7979511890bb450c9204c0c7a908bbace3
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 97eeeaaa2eea237eebda4f945f2c810268f406cd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853890"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384958"
 ---
 # <a name="cptrlist-class"></a>CPtrList 類別
-支援 void 指標的清單。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-class CPtrList : public CObject  
-```  
-  
-## <a name="members"></a>成員  
- 成員函式`CPtrList`類別的成員函式類似[CObList](../../mfc/reference/coblist-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CObList` 參考文件。 無論在何處看到`CObject`指標做為函式參數或傳回值，取代指標**void**。  
-  
- `CObject*& CObList::GetHead() const;`  
-  
- 例如，轉換為  
-  
- `void*& CPtrList::GetHead() const;`  
-  
-## <a name="remarks"></a>備註  
- `CPtrList` 併入 IMPLEMENT_DYNAMIC 巨集，以支援執行階段類型存取和傾印`CDumpContext`物件。 如果您需要個別指標清單項目傾印，您必須將傾印內容的深度設定為 1 (含) 以上。  
-  
- 指標清單不可序列化。  
-  
- 當 `CPtrList` 物件被刪除，或當它的項目被移除時，只會移除指標，而非它們參考的實體。  
-  
- 如需有關使用`CPtrList`，請參閱文章[集合](../../mfc/collections.md)。  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- `CPtrList`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** afxcoll.h  
-  
-## <a name="see-also"></a>另請參閱  
- [CObject 類別](../../mfc/reference/cobject-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CObList 類別](../../mfc/reference/coblist-class.md)
+
+支援 void 指標的清單。
+
+## <a name="syntax"></a>語法
+
+```
+class CPtrList : public CObject
+```
+
+## <a name="members"></a>成員
+
+成員函式`CPtrList`類別的成員函式類似[CObList](../../mfc/reference/coblist-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CObList` 參考文件。 無論在何處看到`CObject`指標做為函式參數或傳回值，取代指標**void**。
+
+`CObject*& CObList::GetHead() const;`
+
+例如，轉換為
+
+`void*& CPtrList::GetHead() const;`
+
+## <a name="remarks"></a>備註
+
+`CPtrList` 併入 IMPLEMENT_DYNAMIC 巨集，以支援執行階段類型存取和傾印`CDumpContext`物件。 如果您需要個別指標清單項目傾印，您必須將傾印內容的深度設定為 1 (含) 以上。
+
+指標清單不可序列化。
+
+當 `CPtrList` 物件被刪除，或當它的項目被移除時，只會移除指標，而非它們參考的實體。
+
+如需有關使用`CPtrList`，請參閱文章[集合](../../mfc/collections.md)。
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+`CPtrList`
+
+## <a name="requirements"></a>需求
+
+**標頭：** afxcoll.h
+
+## <a name="see-also"></a>另請參閱
+
+[CObject 類別](../../mfc/reference/cobject-class.md)<br/>
+[階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
+[CObList 類別](../../mfc/reference/coblist-class.md)

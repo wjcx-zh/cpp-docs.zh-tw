@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49024e903237160cc26a9c095cf9f313b43ccb6f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 12032318f898b2986b64d5cd8a1e611a31d1fc8c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600761"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372388"
 ---
 # <a name="raiseexception-function"></a>RaiseException 函式
 
@@ -38,10 +38,10 @@ inline void __declspec(noreturn)   RaiseException(
 
 ### <a name="parameters"></a>參數
 
-*hr*  
+*hr*<br/>
 引發; 例外狀況的例外狀況代碼也就是在作業失敗的 HRESULT。
 
-*dwExceptionFlags*  
+*dwExceptionFlags*<br/>
 表示具持續性例外狀況 （旗標值會是零） 或 noncontinuable （旗標值為非零值） 的例外狀況的旗標。 根據預設，例外狀況是無法繼續。
 
 ## <a name="remarks"></a>備註

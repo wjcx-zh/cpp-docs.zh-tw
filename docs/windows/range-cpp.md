@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4f84684c5d8f8feb8595da628976c90a2593c96
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 80b8546e461930ac184e0f5b3ed2b34499cc8d3c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201347"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384218"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -39,10 +39,10 @@ ms.locfileid: "43201347"
 
 ### <a name="parameters"></a>參數
 
-*low*  
+*low*<br/>
 下限範圍值。
 
-*high*  
+*high*<br/>
 高範圍的值。
 
 ## <a name="remarks"></a>備註
@@ -80,7 +80,7 @@ __interface ICustom {
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
-[方法屬性](../windows/method-attributes.md)  
-[參數屬性](../windows/parameter-attributes.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
+[方法屬性](../windows/method-attributes.md)<br/>
+[參數屬性](../windows/parameter-attributes.md)<br/>
 [資料成員屬性](../windows/data-member-attributes.md)  

@@ -39,12 +39,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8732b7da770625377c556f26e98c0a5f2e5073b6
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 7f9937d9f93af6179d890f1e9160dd8900cd9f14
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895236"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375611"
 ---
 # <a name="regular-expressions-ccli"></a>規則運算式 (C++/CLI)
 
@@ -66,7 +66,7 @@ ms.locfileid: "43895236"
 using namespace System;
 using namespace System::Text::RegularExpressions;
 
-int main( )  
+int main( )
 {
    int words = 0;
    String^ pattern = "[a-zA-Z]*";
@@ -78,7 +78,7 @@ int main( )
    for( Match^ match = regex->Match( line );
         match->Success; match = match->NextMatch( ) )
    {
-      if( match->Value->Length > 0 )  
+      if( match->Value->Length > 0 )
       {
          words++;
          Console::WriteLine( "{0}", match->Value );
@@ -88,7 +88,7 @@ int main( )
 
    return 0;
 }
-```  
+```
 
 ## <a name="parse_split"></a> 使用 Split 方法剖析字串
 
@@ -101,7 +101,7 @@ int main( )
 // compile with: /clr
 using namespace System;
 
-int main()  
+int main()
 {
    String^ delimStr = " ,.:\t";
    Console::WriteLine( "delimiter : '{0}'", delimStr );
@@ -112,12 +112,12 @@ int main()
    Console::WriteLine( "text : '{0}'", line );
    words = line->Split( delimiter );
    Console::WriteLine( "Number of Words : {0}", words->Length );
-   for (int word=0; word<words->Length; word++)  
+   for (int word=0; word<words->Length; word++)
       Console::WriteLine( "{0}", words[word] );
 
    return 0;
 }
-```  
+```
 
 ## <a name="regex_simple"></a> 使用規則運算式進行簡單對應
 
@@ -133,7 +133,7 @@ int main()
 using namespace System;
 using namespace System::Text::RegularExpressions;
 
-int main()  
+int main()
 {
    array<String^>^ sentence =
    {
@@ -144,18 +144,18 @@ int main()
    };
 
    String^ matchStr = "cow";
-   for (int i=0; i<sentence->Length; i++)  
+   for (int i=0; i<sentence->Length; i++)
    {
       Console::Write( "{0,24}", sentence[i] );
       if ( Regex::IsMatch( sentence[i], matchStr,
-                     RegexOptions::IgnoreCase ) )  
+                     RegexOptions::IgnoreCase ) )
          Console::WriteLine("  (match for '{0}' found)", matchStr);
       else
          Console::WriteLine("");
    }
    return 0;
 }
-```  
+```
 
 ## <a name="regex_extract"></a> 使用規則運算式來擷取資料欄位
 
@@ -171,7 +171,7 @@ int main()
 using namespace System;
 using namespace System::Text::RegularExpressions;
 
-int main()  
+int main()
 {
     array<String^>^ address=
     {
@@ -183,12 +183,12 @@ int main()
 
     Regex^ emailregex = gcnew Regex("(?<user>[^@]+)@(?<host>.+)");
 
-    for (int i=0; i<address->Length; i++)  
+    for (int i=0; i<address->Length; i++)
     {
         Match^ m = emailregex->Match( address[i] );
         Console::Write("\n{0,25}", address[i]);
 
-        if ( m->Success )   
+        if ( m->Success )
         {
             Console::Write("   User='{0}'",
             m->Groups["user"]->Value);
@@ -202,7 +202,7 @@ int main()
     Console::WriteLine("");
     return 0;
 }
-```  
+```
 
 ## <a name="regex_rearrange"></a> 使用規則運算式重新整理資料
 
@@ -219,7 +219,7 @@ int main()
 using namespace System;
 using namespace Text::RegularExpressions;
 
-int main()  
+int main()
 {
    array<String^>^ name =
    {
@@ -231,11 +231,11 @@ int main()
 
    Regex^ reg = gcnew Regex("(?<last>\\w*)\\s*,\\s*(?<first>\\w*)");
 
-   for ( int i=0; i < name->Length; i++ )  
+   for ( int i=0; i < name->Length; i++ )
    {
       Console::Write( "{0,-20}", name[i] );
       Match^ m = reg->Match( name[i] );
-      if ( m->Success )  
+      if ( m->Success )
       {
          String^ first = m->Groups["first"]->Value;
          String^ last = m->Groups["last"]->Value;
@@ -246,7 +246,7 @@ int main()
    }
    return 0;
 }
-```  
+```
 
 ## <a name="regex_search"></a> 使用規則運算式進行搜尋和取代
 
@@ -263,7 +263,7 @@ int main()
 using namespace System::Text::RegularExpressions;
 using namespace System;
 
-int main()  
+int main()
 {
    String^ before = "The q43uick bro254wn f0ox ju4mped";
    Console::WriteLine("original  : {0}", before);
@@ -278,7 +278,7 @@ int main()
 
    return 0;
 }
-```  
+```
 
 ## <a name="regex_validate"></a> 使用規則運算式驗證資料格式
 
@@ -294,7 +294,7 @@ int main()
 using namespace System;
 using namespace Text::RegularExpressions;
 
-int main()  
+int main()
 {
    array<String^>^ number =
    {
@@ -310,22 +310,22 @@ int main()
 
    String^ regStr = "^\\d{3}-\\d{3}-\\d{4}$";
 
-   for ( int i = 0; i < number->Length; i++ )  
+   for ( int i = 0; i < number->Length; i++ )
    {
       Console::Write( "{0,14}", number[i] );
 
-      if ( Regex::IsMatch( number[i], regStr ) )  
+      if ( Regex::IsMatch( number[i], regStr ) )
          Console::WriteLine(" - valid");
       else
          Console::WriteLine(" - invalid");
    }
    return 0;
 }
-```  
+```
 
 ## <a name="related-sections"></a>相關章節
 
-[.NET Framework 規則運算式](/dotnet/standard/base-types/regular-expressions)  
+[.NET Framework 規則運算式](/dotnet/standard/base-types/regular-expressions)
 
 ## <a name="see-also"></a>另請參閱
 

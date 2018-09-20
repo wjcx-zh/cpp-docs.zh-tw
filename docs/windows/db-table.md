@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e084a0f876d0b2598a5317e15057162c602474a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: aa64b7b4785f8865a372a256ecc5c9d3f8738dcb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717115"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385855"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -41,16 +41,16 @@ ms.locfileid: "45717115"
 
 #### <a name="parameters"></a>參數
 
-*db_table*  
+*db_table*<br/>
 字串，指定資料庫資料表 （例如 「 產品 」） 的名稱。
 
-*name*  
+*name*<br/>
 （選擇性）您用來處理與資料表的控制代碼的名稱。 如果您想要傳回一個以上的資料列的結果，您必須指定此參數。 **db_table**會產生具有指定的變數*名稱*，可用來周遊資料列集或執行多個動作查詢。
 
-*source_name*  
+*source_name*<br/>
 （選擇性）`CSession`變數或具有類別的執行個體`db_source`屬性套用至它在其上執行命令。 請參閱 [db_source](../windows/db-source.md)。
 
-*hresult*  
+*hresult*<br/>
 （選擇性）識別將會收到此資料庫命令的 HRESULT 的變數。 如果變數不存在，則屬性會自動予以插入。
 
 ## <a name="remarks"></a>備註

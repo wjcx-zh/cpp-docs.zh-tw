@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c375a10d1c8dadca643ac428422eb388c16cdae6
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2bda23b6847c08096b27516fcc955e4bf68c38ba
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313932"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385829"
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-c-image-editor-for-icons"></a>新&lt;裝置&gt;影像類型對話方塊 （c + +） （圖示影像編輯器）
 
@@ -54,6 +54,6 @@ ms.locfileid: "44313932"
 
 ## <a name="see-also"></a>另請參閱
 
-[圖示和游標： 顯示裝置的影像資源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
-[影像功能表](../windows/image-menu-image-editor-for-icons.md)  
+[圖示和游標： 顯示裝置的影像資源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)<br/>
+[影像功能表](../windows/image-menu-image-editor-for-icons.md)<br/>
 [圖示影像編輯器](../windows/image-editor-for-icons.md)

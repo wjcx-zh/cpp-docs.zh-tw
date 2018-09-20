@@ -1,5 +1,5 @@
 ---
-title: 列印和預覽列印 |Microsoft 文件
+title: 列印和預覽列印 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a26bac196dbddc6c05df5850225d05f432bc566
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9aad5c69f6466ea8803cb466c5e5529f3dce1340
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346252"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374447"
 ---
 # <a name="printing-and-print-preview"></a>列印和預覽列印
-MFC 透過類別的程式的文件支援列印和預覽列印[CView](../mfc/reference/cview-class.md)。 基本列印和預覽列印，只是覆寫檢視類別的[OnDraw](../mfc/reference/cview-class.md#ondraw)成員函式，您必須這麼做。 該函式可以繪製畫面上，印表機裝置內容中，實際的印表機上的檢視，或裝置內容，用於模擬您在螢幕上的印表機。  
-  
- 您也可以加入程式碼來管理多頁文件列印和預覽列印的文件重新編頁，並為其新增頁首和頁尾。  
-  
- 此系列文章說明如何實作列印在 Microsoft Foundation 類別庫 (MFC)，以及如何運用內建架構的列印架構。 文件也會說明 MFC 如何支援預覽列印功能的簡單實作，以及如何使用及修改該功能。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
-  
--   [列印](../mfc/printing.md)  
-  
--   [預覽列印架構](../mfc/print-preview-architecture.md)  
-  
--   [範例](../visual-cpp-samples.md)  
-  
-## <a name="see-also"></a>另請參閱  
- [使用者介面項目](../mfc/user-interface-elements-mfc.md)
+
+MFC 類別透過您的程式文件支援列印和預覽列印[CView](../mfc/reference/cview-class.md)。 基本列印和預覽列印，只是覆寫檢視類別的[OnDraw](../mfc/reference/cview-class.md#ondraw)成員函式，您必須做的動作罷了。 該函式可以繪製到螢幕，實際的印表機的印表機裝置內容的檢視，或模擬您在螢幕上的印表機裝置內容。
+
+您也可以加入程式碼來管理多頁文件列印和預覽，編頁列印的文件，並將頁首和頁尾加入至它們。
+
+此系列文章說明如何實作列印在 Microsoft Foundation Class 程式庫 (MFC)，以及如何善用列印已內建於 framework 的架構。 文章也會說明如何 MFC 支援的預覽列印功能的簡單實作，以及如何使用及修改該功能。
+
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+
+- [列印](../mfc/printing.md)
+
+- [預覽列印架構](../mfc/print-preview-architecture.md)
+
+- [範例](../visual-cpp-samples.md)
+
+## <a name="see-also"></a>另請參閱
+
+[使用者介面項目](../mfc/user-interface-elements-mfc.md)

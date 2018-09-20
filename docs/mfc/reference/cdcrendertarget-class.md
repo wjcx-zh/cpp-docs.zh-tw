@@ -1,5 +1,5 @@
 ---
-title: CDCRenderTarget 類別 |Microsoft 文件
+title: CDCRenderTarget 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,149 +30,169 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36f8a038cd282ddf233fe2cf15a134c52962ebff
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: fc5903f50136aaffcb0358e1a60c99a71e67540e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953697"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447124"
 ---
 # <a name="cdcrendertarget-class"></a>CDCRenderTarget 類別
-ID2D1DCRenderTarget 包裝函式。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-class CDCRenderTarget : public CRenderTarget;  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CDCRenderTarget::CDCRenderTarget](#cdcrendertarget)|建構 CDCRenderTarget 物件。|  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CDCRenderTarget::Attach](#attach)|將現有的轉譯目標物件的介面|  
-|[CDCRenderTarget::BindDC](#binddc)|將呈現目標，就會發出繪製命令之裝置內容繫結|  
-|[CDCRenderTarget::Create](#create)|建立 CDCRenderTarget。|  
-|[CDCRenderTarget::Detach](#detach)|中斷連結物件中的呈現目標介面|  
-|[CDCRenderTarget::GetDCRenderTarget](#getdcrendertarget)|傳回 ID2D1DCRenderTarget 介面|  
-  
-### <a name="public-operators"></a>公用運算子  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CDCRenderTarget::operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|傳回 ID2D1DCRenderTarget 介面|  
-  
-### <a name="protected-data-members"></a>受保護的資料成員  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|ID2D1DCRenderTarget 物件的指標。|  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CRenderTarget](../../mfc/reference/crendertarget-class.md)  
-  
- [CDCRenderTarget](../../mfc/reference/cdcrendertarget-class.md)  
-  
-## <a name="requirements"></a>需求  
- **標頭：** afxrendertarget.h  
-  
-##  <a name="attach"></a>  CDCRenderTarget::Attach  
- 將現有的轉譯目標物件的介面  
-  
-```  
+
+ID2D1DCRenderTarget 包裝函式。
+
+## <a name="syntax"></a>語法
+
+```
+class CDCRenderTarget : public CRenderTarget;
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[CDCRenderTarget::CDCRenderTarget](#cdcrendertarget)|建構 CDCRenderTarget 物件。|
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[CDCRenderTarget::Attach](#attach)|將現有的轉譯目標物件的介面|
+|[CDCRenderTarget::BindDC](#binddc)|繫結至它問題繪製命令的裝置內容的呈現目標|
+|[CDCRenderTarget::Create](#create)|建立 CDCRenderTarget。|
+|[CDCRenderTarget::Detach](#detach)|中斷連結物件的轉譯目標介面|
+|[CDCRenderTarget::GetDCRenderTarget](#getdcrendertarget)|傳回 ID2D1DCRenderTarget 介面|
+
+### <a name="public-operators"></a>公用運算子
+
+|名稱|描述|
+|----------|-----------------|
+|[CDCRenderTarget::operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|傳回 ID2D1DCRenderTarget 介面|
+
+### <a name="protected-data-members"></a>受保護的資料成員
+
+|名稱|描述|
+|----------|-----------------|
+|[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|ID2D1DCRenderTarget 物件的指標。|
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CRenderTarget](../../mfc/reference/crendertarget-class.md)
+
+[CDCRenderTarget](../../mfc/reference/cdcrendertarget-class.md)
+
+## <a name="requirements"></a>需求
+
+**標頭：** afxrendertarget.h
+
+##  <a name="attach"></a>  CDCRenderTarget::Attach
+
+將現有的轉譯目標物件的介面
+
+```
 void Attach(ID2D1DCRenderTarget* pTarget);
-```  
-  
-### <a name="parameters"></a>參數  
- *pTarget*  
- 現有的轉譯目標介面。 不能是 NULL  
-  
-##  <a name="binddc"></a>  CDCRenderTarget::BindDC  
- 將呈現目標，就會發出繪製命令之裝置內容繫結  
-  
-```  
+```
+
+### <a name="parameters"></a>參數
+
+*pTarget*<br/>
+現有的轉譯目標介面。 不能是 NULL
+
+##  <a name="binddc"></a>  CDCRenderTarget::BindDC
+
+繫結至它問題繪製命令的裝置內容的呈現目標
+
+```
 BOOL BindDC(
-    const CDC& dc,  
+    const CDC& dc,
     const CRect& rect);
-```  
-  
-### <a name="parameters"></a>參數  
- *dc*  
- 裝置內容的呈現目標發出繪製命令  
-  
- *rect*  
- 維度的裝置內容 (HDC) 呈現目標繫結至控制代碼  
-  
-### <a name="return-value"></a>傳回值  
- 如果此方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。  
-  
-##  <a name="cdcrendertarget"></a>  CDCRenderTarget::CDCRenderTarget  
- 建構 CDCRenderTarget 物件。  
-  
-```  
+```
+
+### <a name="parameters"></a>參數
+
+*dc*<br/>
+呈現目標問題繪製命令的裝置內容
+
+*rect*<br/>
+維度的轉譯目標繫結至裝置內容 (HDC) 的控制代碼
+
+### <a name="return-value"></a>傳回值
+
+如果方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。
+
+##  <a name="cdcrendertarget"></a>  CDCRenderTarget::CDCRenderTarget
+
+建構 CDCRenderTarget 物件。
+
+```
 CDCRenderTarget();
-```  
-  
-##  <a name="create"></a>  CDCRenderTarget::Create  
- 建立 CDCRenderTarget。  
-  
-```  
+```
+
+##  <a name="create"></a>  CDCRenderTarget::Create
+
+建立 CDCRenderTarget。
+
+```
 BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
-```  
-  
-### <a name="parameters"></a>參數  
- *屬性*  
- 轉譯模式、 像素格式、 遠端處理選項、 DPI 的詳細資訊，以及所需的硬體呈現的最小 DirectX 支援。  
-  
-### <a name="return-value"></a>傳回值  
- 如果此方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。  
-  
-##  <a name="detach"></a>  CDCRenderTarget::Detach  
- 中斷連結物件中的呈現目標介面  
-  
-```  
+```
+
+### <a name="parameters"></a>參數
+
+*屬性*<br/>
+轉譯模式、 像素格式，遠端選項、 DPI 的詳細資訊，以及硬體呈現所需的最小的 DirectX 支援。
+
+### <a name="return-value"></a>傳回值
+
+如果方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。
+
+##  <a name="detach"></a>  CDCRenderTarget::Detach
+
+中斷連結物件的轉譯目標介面
+
+```
 ID2D1DCRenderTarget* Detach();
-```  
-  
-### <a name="return-value"></a>傳回值  
- 中斷連結的指標會呈現目標的介面。  
-  
-##  <a name="getdcrendertarget"></a>  CDCRenderTarget::GetDCRenderTarget  
- 傳回 ID2D1DCRenderTarget 介面  
-  
-```  
+```
+
+### <a name="return-value"></a>傳回值
+
+卸離的指標轉譯目標的介面。
+
+##  <a name="getdcrendertarget"></a>  CDCRenderTarget::GetDCRenderTarget
+
+傳回 ID2D1DCRenderTarget 介面
+
+```
 ID2D1DCRenderTarget* GetDCRenderTarget();
-```  
-  
-### <a name="return-value"></a>傳回值  
- ID2D1DCRenderTarget 介面或如果尚未初始化物件為 NULL 指標。  
-  
-##  <a name="m_pdcrendertarget"></a>  CDCRenderTarget::m_pDCRenderTarget  
- ID2D1DCRenderTarget 物件的指標。  
-  
-```  
-ID2D1DCRenderTarget* m_pDCRenderTarget;  
-```  
-  
-##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget *  
- 傳回 ID2D1DCRenderTarget 介面  
-  
-```  
+```
+
+### <a name="return-value"></a>傳回值
+
+如果物件尚未初始化為 NULL 的 ID2D1DCRenderTarget 介面的指標。
+
+##  <a name="m_pdcrendertarget"></a>  CDCRenderTarget::m_pDCRenderTarget
+
+ID2D1DCRenderTarget 物件的指標。
+
+```
+ID2D1DCRenderTarget* m_pDCRenderTarget;
+```
+
+##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget *
+
+傳回 ID2D1DCRenderTarget 介面
+
+```
 operator ID2D1DCRenderTarget*();
-```   
-  
-### <a name="return-value"></a>傳回值  
- ID2D1DCRenderTarget 介面或如果尚未初始化物件為 NULL 指標。  
-  
-## <a name="see-also"></a>另請參閱  
- [類別](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="return-value"></a>傳回值
+
+如果物件尚未初始化為 NULL 的 ID2D1DCRenderTarget 介面的指標。
+
+## <a name="see-also"></a>另請參閱
+
+[類別](../../mfc/reference/mfc-classes.md)

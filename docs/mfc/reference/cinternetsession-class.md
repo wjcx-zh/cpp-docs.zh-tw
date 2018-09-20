@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83ff74a460c7cb34a50d0fbdf338eccc3da27f98
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a519d9b978f5b48377b1a85d52274cba35c9d075
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197435"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401799"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 類別
 
@@ -115,7 +115,7 @@ class CInternetSession : public CObject
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
-[CObject](../../mfc/reference/cobject-class.md)  
+[CObject](../../mfc/reference/cobject-class.md)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;`CInternetSession`
 
 ## <a name="requirements"></a>需求
@@ -138,13 +138,13 @@ CInternetSession(
 
 ### <a name="parameters"></a>參數
 
-*pstrAgent*  
+*pstrAgent*<br/>
 識別的應用程式或呼叫網際網路函式 （例如，「 Microsoft 網際網路瀏覽器 」） 的實體名稱的字串指標。 如果*pstrAgent*是 NULL （預設值），這個架構會呼叫全域函式[AfxGetAppName](application-information-and-management.md#afxgetappname)，它會傳回 null 終止的字串，包含應用程式的名稱。 某些通訊協定會使用此字串來識別您的應用程式到伺服器。
 
-*dwContext*  
+*dwContext*<br/>
 作業的內容識別碼。 *dwContext*識別傳回作業的狀態資訊[CInternetSession::OnStatusCallback](#onstatuscallback)。 預設值設為 1。不過，您可以明確指派作業的特定內容識別碼。 物件，而且它沒有任何工作將會與該內容識別碼相關聯
 
-*dwAccessType*  
+*dwAccessType*<br/>
 所需的存取類型。 以下是有效的值，可能會提供其中之一：
 
 - INTERNET_OPEN_TYPE_PRECONFIG 連接使用預先設定的登錄中的設定。 此存取類型設定為預設值。 若要透過 TIS proxy 連線，將*dwAccessType*為此值; 您再登錄適當地設定。
@@ -155,13 +155,13 @@ CInternetSession(
 
 如需使用不同類型 proxy 的連接資訊，請參閱[典型的 FTP 用戶端應用程式中的步驟](../../mfc/steps-in-a-typical-ftp-client-application.md)。
 
-*pstrProxyName*  
+*pstrProxyName*<br/>
 慣用的 CERN proxy 的名稱如果*dwAccessType*設成 INTERNET_OPEN_TYPE_PROXY。 預設值是 NULL。
 
-*pstrProxyBypass*  
+*pstrProxyBypass*<br/>
 包含選擇性的伺服器位址清單的字串指標。 使用 proxy 的存取時，可能會略過這些位址。 如果提供 NULL 值，則會從登錄讀取略過清單。 此參數才有意義才*dwAccessType*設 INTERNET_OPEN_TYPE_PROXY。
 
-*dwFlags*  
+*dwFlags*<br/>
 表示各種快取選項。 預設值是設定為 0。 可能值包括：
 
 - 在本機或在任何閘道伺服器，請 INTERNET_FLAG_DONT_CACHE 不要快取的資料。
@@ -200,7 +200,7 @@ BOOL EnableStatusCallback(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>參數
 
-*bEnable*  
+*bEnable*<br/>
 指定是否啟用或停用回撥。 預設值為 TRUE。
 
 ### <a name="return-value"></a>傳回值
@@ -255,16 +255,16 @@ static BOOL GetCookie(
 
 ### <a name="parameters"></a>參數
 
-*pstrUrl*  
+*pstrUrl*<br/>
 字串，包含 URL 的指標。
 
-*pstrCookieName*  
+*pstrCookieName*<br/>
 包含要取得指定之 url 的 cookie 名稱的字串指標。
 
-*pstrCookieData*  
+*pstrCookieData*<br/>
 在第一個多載中，字串，包含接收的 cookie 資料緩衝區的位址指標。 這個值可以是 NULL。 在第二個多載的參考[CString](../../atl-mfc-shared/reference/cstringt-class.md)接收的 cookie 資料的物件。
 
-*dwBufLen*  
+*dwBufLen*<br/>
 指定大小的變數*pstrCookieData*緩衝區。 如果函式成功時，緩衝區會接收複製到的資料量*pstrCookieData*緩衝區。 如果*pstrCookieData*是 NULL，此參數會接收值，指定要複製所有 cookie 資料所需的緩衝區大小。
 
 ### <a name="return-value"></a>傳回值
@@ -291,10 +291,10 @@ static DWORD GetCookieLength(
 
 ### <a name="parameters"></a>參數
 
-*pstrUrl*  
+*pstrUrl*<br/>
 字串，包含 URL 的指標
 
-*pstrCookieName*  
+*pstrCookieName*<br/>
 包含 cookie 名稱的字串指標。
 
 ### <a name="return-value"></a>傳回值
@@ -320,13 +320,13 @@ CFtpConnection* GetFtpConnection(
 
 ### <a name="parameters"></a>參數
 
-*pstrServer*  
+*pstrServer*<br/>
 包含 FTP 伺服器名稱的字串指標。
 
-*pstrUserName*  
+*pstrUserName*<br/>
 以 null 終止的字串，指定要登入的使用者名稱的指標。 如果是 NULL，則預設會為匿名。
 
-*pstrPassword*  
+*pstrPassword*<br/>
 以 null 終止的字串，指定要用來登入密碼的指標。 如果兩個*pstrPassword*並*pstrUserName*為 NULL 時，預設匿名密碼是使用者的電子郵件名稱。 如果*pstrPassword*是 NULL （或空字串），但*pstrUserName*不是 NULL，則使用空白密碼。 下表描述的四個可能的設定行為*pstrUserName*並*pstrPassword*:
 
 |*pstrUserName*|*pstrPassword*|傳送至 FTP 伺服器的使用者名稱|傳送至 FTP 伺服器的密碼|
@@ -336,10 +336,10 @@ CFtpConnection* GetFtpConnection(
 |NULL|非 NULL 字串|錯誤|錯誤||
 |非 NULL 字串|非 NULL 字串|*pstrUserName*|*pstrPassword*|
 
-*nPort*  
+*nPort*<br/>
 識別要使用的伺服器上的 TCP/IP 連接埠的數字。
 
-*bPassive*  
+*bPassive*<br/>
 指定此 FTP 工作階段的被動還是主動模式。 如果設為 TRUE，會將 Win32 API `dwFlag` INTERNET_FLAG_PASSIVE 到。
 
 ### <a name="return-value"></a>傳回值
@@ -368,16 +368,16 @@ CGopherConnection* GetGopherConnection(
 
 ### <a name="parameters"></a>參數
 
-*pstrServer*  
+*pstrServer*<br/>
 包含 gopher 伺服器名稱的字串指標。
 
-*pstrUserName*  
+*pstrUserName*<br/>
 包含使用者名稱的字串指標。
 
-*pstrPassword*  
+*pstrPassword*<br/>
 包含的存取密碼的字串指標。
 
-*nPort*  
+*nPort*<br/>
 識別要使用的伺服器上的 TCP/IP 連接埠的數字。
 
 ### <a name="return-value"></a>傳回值
@@ -409,19 +409,19 @@ CHttpConnection* GetHttpConnection(
 
 ### <a name="parameters"></a>參數
 
-*pstrServer*  
+*pstrServer*<br/>
 包含 HTTP 伺服器名稱的字串指標。
 
-*nPort*  
+*nPort*<br/>
 識別要使用的伺服器上的 TCP/IP 連接埠的數字。
 
-*pstrUserName*  
+*pstrUserName*<br/>
 包含使用者名稱的字串指標。
 
-*pstrPassword*  
+*pstrPassword*<br/>
 包含的存取密碼的字串指標。
 
-*dwflags*  
+*dwflags*<br/>
 任何組合`INTERNET_FLAG_*`旗標。 請參閱表格**備註**一節[chttpconnection::](../../mfc/reference/chttpconnection-class.md#openrequest)的說明*dwFlags*值。
 
 ### <a name="return-value"></a>傳回值
@@ -446,16 +446,16 @@ virtual void OnStatusCallback(
 
 ### <a name="parameters"></a>參數
 
-*dwContext*  
+*dwContext*<br/>
 提供應用程式的內容值。
 
-*dwInternetStatus*  
+*dwInternetStatus*<br/>
 狀態碼指出為什麼要進行回呼。 請參閱**備註**可能值的資料表。
 
-*lpvStatusInformation*  
+*lpvStatusInformation*<br/>
 包含有關此回呼之緩衝區的指標。
 
-*dwStatusInformationLength*  
+*dwStatusInformationLength*<br/>
 大小*lpvStatusInformation*。
 
 ### <a name="remarks"></a>備註
@@ -484,7 +484,7 @@ virtual void OnStatusCallback(
 > [!NOTE]
 > 狀態回呼需要執行緒狀態 」 保護。 如果您使用 MFC 的共用程式庫中，請覆寫的開頭新增下行：
 
- [!code-cpp[NVC_MFCHtmlHttp#8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]
+[!code-cpp[NVC_MFCHtmlHttp#8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]
 
 如需有關非同步作業的詳細資訊，請參閱文章[網際網路前幾個步驟： WinInet](../../mfc/wininet-basics.md)。
 
@@ -503,13 +503,13 @@ CStdioFile* OpenURL(
 
 ### <a name="parameters"></a>參數
 
-*pstrURL*  
+*pstrURL*<br/>
 若要開始讀取 URL 的名稱指標。 只有 Url 開頭為檔案:、 ftp:，gopher:，或 http： 支援。 如果判斷提示*pstrURL*是 NULL。
 
-*dwContext*  
+*dwContext*<br/>
 應用程式定義的值會隨在回呼中傳回的控制代碼。
 
-*dwFlags*  
+*dwFlags*<br/>
 描述如何處理此連線的旗標。 請參閱**備註**如需有效的旗標。 有效的旗標如下：
 
 - INTERNET_FLAG_TRANSFER_ASCII 預設值。 將檔案傳送為 ASCII 文字。
@@ -526,10 +526,10 @@ CStdioFile* OpenURL(
 
 - INTERNET_FLAG_PASSIVE 用於 FTP 站台。 使用被動 FTP 語意。 搭配[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)的`OpenURL`。
 
-*pstrHeaders*  
+*pstrHeaders*<br/>
 包含要傳送至 HTTP 伺服器的標頭的字串指標。
 
-*dwHeadersLength*  
+*dwHeadersLength*<br/>
 以字元為單位，其他的標頭的長度。 如果這是為-1l 並*pstrHeaders*是不是 NULL，則*pstrHeaders*會假設為零結束，而且長度會計算。
 
 ### <a name="return-value"></a>傳回值
@@ -538,7 +538,7 @@ CStdioFile* OpenURL(
 
 指標，`OpenURL`傳回而定*pstrURL*的服務類型。 下表說明可能的指標`OpenURL`可以傳回。
 
-|URL 類型|傳回|
+|URL 類型|Returns|
 |--------------|-------------|
 |file://|`CStdioFile*`|
 |http://|`CHttpFile*`|
@@ -574,13 +574,13 @@ static BOOL SetCookie(
 
 ### <a name="parameters"></a>參數
 
-*pstrUrl*  
+*pstrUrl*<br/>
 以 null 終止的字串，指定的 URL 應該設定 cookie 的指標。
 
-*pstrCookieName*  
+*pstrCookieName*<br/>
 包含 cookie 名稱的字串指標。
 
-*pstrCookieData*  
+*pstrCookieData*<br/>
 字串，包含 URL 相關聯的實際的字串資料指標。
 
 ### <a name="return-value"></a>傳回值
@@ -611,19 +611,19 @@ BOOL SetOption(
 
 ### <a name="parameters"></a>參數
 
-*dwOption*  
+*dwOption*<br/>
 若要設定的 [網際網路] 選項。 請參閱[選項旗標](/windows/desktop/WinInet/option-flags)Windows SDKfor 可能選項的清單中。
 
-*lpBuffer*  
+*lpBuffer*<br/>
 這種緩衝區包含選項的設定。
 
-*dwBufferLength*  
+*dwBufferLength*<br/>
 長度*lpBuffer*或大小*dwValue*。
 
-*dwValue*  
+*dwValue*<br/>
 DWORD，其中包含的選項設定。
 
-*dwFlags*  
+*dwFlags*<br/>
 表示各種快取選項。 預設值是設定為 0。 可能值包括：
 
 - 在本機或在任何閘道伺服器，請 INTERNET_FLAG_DONT_CACHE 不要快取的資料。
@@ -636,9 +636,9 @@ DWORD，其中包含的選項設定。
 
 ## <a name="see-also"></a>另請參閱
 
-[CObject 類別](../../mfc/reference/cobject-class.md)  
-[階層架構圖表](../../mfc/hierarchy-chart.md)  
-[CInternetConnection 類別](../../mfc/reference/cinternetconnection-class.md)  
-[CHttpConnection 類別](../../mfc/reference/chttpconnection-class.md)  
-[CFtpConnection 類別](../../mfc/reference/cftpconnection-class.md)  
-[CGopherConnection 類別](../../mfc/reference/cgopherconnection-class.md)  
+[CObject 類別](../../mfc/reference/cobject-class.md)<br/>
+[階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
+[CInternetConnection 類別](../../mfc/reference/cinternetconnection-class.md)<br/>
+[CHttpConnection 類別](../../mfc/reference/chttpconnection-class.md)<br/>
+[CFtpConnection 類別](../../mfc/reference/cftpconnection-class.md)<br/>
+[CGopherConnection 類別](../../mfc/reference/cgopherconnection-class.md)

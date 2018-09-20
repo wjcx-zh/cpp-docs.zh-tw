@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4691a3c3afd5b5dfeececc1244a0dc0d03b9b0d2
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 84000e25e9638699e5f2a521023c762b9c3c9a9e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313061"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411439"
 ---
 # <a name="adding-an-image-for-a-different-display-device-image-editor-for-icons"></a>加入不同顯示裝置的影像 (圖示影像編輯器)
 
@@ -41,6 +41,6 @@ ms.locfileid: "44313061"
 
 ## <a name="see-also"></a>另請參閱
 
-[圖示和游標： 顯示裝置的影像資源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
-[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)  
+[圖示和游標： 顯示裝置的影像資源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)<br/>
+[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [圖示和游標： 顯示裝置的影像資源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

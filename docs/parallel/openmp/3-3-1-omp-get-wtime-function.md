@@ -1,5 +1,5 @@
 ---
-title: 3.3.1 omp_get_wtime 函式 |Microsoft 文件
+title: 3.3.1 omp_get_wtime 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,30 +12,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d71296d23df72464ed730713566c95e2403760a1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8ec022e9c7e27c848ef535481993dd18dc45f695
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689489"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430761"
 ---
 # <a name="331-ompgetwtime-function"></a>3.3.1 omp_get_wtime 函式
-`omp_get_wtime`函式會傳回雙精確度浮點數值等於耗用的時鐘時間 （秒），因為某些 「 時間過去 」。  實際"過去的時間 」 是任意的但它保證不會在應用程式執行期間變更。 格式如下：  
-  
-```  
-#include <omp.h>  
-double omp_get_wtime(void);  
-```  
-  
- 它會預期函式，可用來測量已耗用時間，如下列範例所示：  
-  
-```  
-double start;  
-double end;  
-start = omp_get_wtime();  
-... work to be timed ...  
-end = omp_get_wtime();  
-printf_s("Work took %f sec. time.\n", end-start);  
-```  
-  
- 傳回的時間都不需要它們參與應用程式中的所有執行緒都是全域一致適 「 每個執行緒的時間 」。
+
+`omp_get_wtime`函式會傳回雙精度浮點數值等於 24 小時制的時鐘時間 （秒），因為某些 「 時間在過去 」。  實際 「 時間在過去 」，不過它保證不會在應用程式執行期間變更。 格式如下：
+
+```
+#include <omp.h>
+double omp_get_wtime(void);
+```
+
+預期的函式，將會用來測量已耗用時間，如下列範例所示：
+
+```
+double start;
+double end;
+start = omp_get_wtime();
+... work to be timed ...
+end = omp_get_wtime();
+printf_s("Work took %f sec. time.\n", end-start);
+```
+
+傳回的時間都 「 每個執行緒 times"這表示不需要是全域一致的多個參與的應用程式中的所有執行緒。

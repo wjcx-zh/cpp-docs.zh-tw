@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce50d2c70107b4c88f223e32fdd8cc083df38840
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e2a780719e106c6045d1f80227045ab40607b336
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685541"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426538"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>逐步解說： 更新 MFC Scribble 應用程式 （第 1 部分）
 
@@ -292,5 +292,5 @@ A*視覺化管理員*會控制所有活動，抽獎獲得應用程式的全域�
 
 ## <a name="see-also"></a>另請參閱
 
-[逐步解說](../mfc/walkthroughs-mfc.md)  
-[逐步解說： 更新 MFC Scribble 應用程式 （第 2 部分）](../ mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md）  
+[逐步解說](../mfc/walkthroughs-mfc.md)<br/>
+[逐步解說： 更新 MFC Scribble 應用程式 （第 2 部分）](../ mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md）

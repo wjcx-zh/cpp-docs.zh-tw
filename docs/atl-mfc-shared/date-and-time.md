@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9753578de006ed46719d94d5861035ab77dbca6c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 90317405f09695c57c907e94306623d5b3e2386d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752248"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419956"
 ---
 # <a name="date-and-time"></a>日期和時間
 
@@ -44,6 +44,6 @@ MFC 支援使用日期和時間的數個不同的方式。 它們包括：
 
 ## <a name="see-also"></a>另請參閱
 
-[概念](../mfc/mfc-concepts.md)   
+[概念](../mfc/mfc-concepts.md)<br/>
 [一般 MFC 主題](../mfc/general-mfc-topics.md)
 

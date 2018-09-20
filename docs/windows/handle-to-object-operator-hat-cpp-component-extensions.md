@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 569770b548d4bb076bdfac83942def5684ebdf5e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fa72b6ec2983c0d7b9850578e743d03b7e3946e3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597293"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410854"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>物件控制代碼運算子 (^) (C++ 元件擴充功能)
 
@@ -235,5 +235,5 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)  
+[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [追蹤參考運算子](../windows/tracking-reference-operator-cpp-component-extensions.md)

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6976669127dca79be59b85efbd15273b0f580a1
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 08fc6f6a5b93851468d412e34b3ee0a85ab534e5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132058"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413246"
 ---
 # <a name="dynamic-layout"></a>動態版面配置
 
@@ -153,8 +153,8 @@ Mfc 在 Visual Studio 2015 中，您可以建立對話方塊，使用者可以�
 
 ## <a name="see-also"></a>另請參閱
 
-[CMFCDynamicLayout 類別](../mfc/reference/cmfcdynamiclayout-class.md)  
-[控制項類別](../mfc/control-classes.md)  
-[對話方塊類別](../mfc/dialog-box-classes.md)  
-[對話方塊編輯器](../windows/dialog-editor.md)  
+[CMFCDynamicLayout 類別](../mfc/reference/cmfcdynamiclayout-class.md)<br/>
+[控制項類別](../mfc/control-classes.md)<br/>
+[對話方塊類別](../mfc/dialog-box-classes.md)<br/>
+[對話方塊編輯器](../windows/dialog-editor.md)<br/>
 [Mfc 在 Visual c + + 2015年中的動態對話方塊版面配置](https://mariusbancila.ro/blog/2015/07/27/dynamic-dialog-layout-for-mfc-in-visual-c-2015/)

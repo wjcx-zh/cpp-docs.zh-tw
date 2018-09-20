@@ -22,97 +22,106 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a91cbb816deb18d9c4cf7356faa879c09a9d276c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: eab8fbba799c84fdc9246659b5880cdc9f266084
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46025200"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406969"
 ---
 # <a name="tilebarrier-class"></a>tile_barrier 類別
-同步處理在執行緒群組 (tile) 中執行所使用的執行緒的執行`wait`方法。 只有在執行階段可以具現化這個類別。  
-  
-### <a name="syntax"></a>語法 
-  
-```  
-class tile_barrier;  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[tile_barrier 建構函式](#ctor)|初始化 `tile_barrier` 類別的新執行個體。|  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[等候](#wait)|指示要停止執行，直至 tile 中的所有執行緒均已都完成等待執行緒群組 (tile) 中的所有執行緒。|  
-|[wait_with_all_memory_fence](#wait_with_all_memory_fence)|封鎖執行，直到所有記憶體存取都已經都完成的所有執行緒和 tile 中的所有執行緒到達這個呼叫為止。|  
-|[wait_with_global_memory_fence](#wait_with_global_memory_fence)|封鎖直到所有全域記憶體存取的所有執行緒的執行已經完成，且 tile 中的所有執行緒都到達這個呼叫為止。|  
-|[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|封鎖 tile 中的所有執行緒的執行，直到所有`tile_static`記憶體存取已經完成，且 tile 中的所有執行緒都到達這個呼叫為止。|  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `tile_barrier`  
-  
-## <a name="requirements"></a>需求  
- **標頭︰** amp.h  
-  
- **命名空間：** 並行  
 
-## <a name="tile_barrier__ctor"></a>  tile_barrier 建構函式  
- 藉由複製現有初始化類別的新執行個體。  
-  
-### <a name="syntax"></a>語法 
-  
-```  
-tile_barrier(  
-    const tile_barrier& _Other ) restrict(amp,cpu);  
-```  
-  
-### <a name="parameters"></a>參數  
-*_Other*<br/>
-`tile_barrier`来複製的物件。  
+同步處理在執行緒群組 (tile) 中執行所使用的執行緒的執行`wait`方法。 只有在執行階段可以具現化這個類別。
 
-## <a name="wait"></a>  等候 
-指示來停止執行，直到磚中的所有執行緒均已都完成等待執行緒群組 (tile) 中的所有執行緒。  
-  
-### <a name="syntax"></a>語法 
-  
-```  
-void wait() const restrict(amp);  
-```    
+### <a name="syntax"></a>語法
 
-## <a name="wait_with_all_memory_fence"></a>  wait_with_all_memory_fence   
-封鎖執行的所有執行緒，直到 tile 中的所有執行緒都到達這個呼叫為止。 這可確保所有記憶體存取對執行緒 tile 中，在其他執行緒可見，而且依照程式順序執行。  
-  
-### <a name="syntax"></a>語法 
-  
-```  
-void wait_with_all_memory_fence() const restrict(amp);  
-```  
-  
-
-## <a name="wait_with_global_memory_fence"></a>  wait_with_global_memory_fence   
-封鎖執行的所有執行緒，直到 tile 中的所有執行緒都到達這個呼叫為止。 這可確保所有全域記憶體存取對執行緒 tile 中，在其他執行緒可見，並已依照程式順序執行。  
-  
-### <a name="syntax"></a>語法 
-  
-```  
-void wait_with_global_memory_fence() const  restrict(amp);  
+```
+class tile_barrier;
 ```
 
-## <a name="wait_with_tile_static_memory_fence"></a>  wait_with_tile_static_memory_fence   
-封鎖執行的所有執行緒，直到 tile 中的所有執行緒都到達這個呼叫為止。 這可確保`tile_static`記憶體存取對執行緒 tile 中，在其他執行緒可見，而且已依照程式順序執行。  
-  
-### <a name="syntax"></a>語法 
-  
-```  
-void wait_with_tile_static_memory_fence() const restrict(amp);  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[tile_barrier 建構函式](#ctor)|初始化 `tile_barrier` 類別的新執行個體。|
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[等候](#wait)|指示要停止執行，直至 tile 中的所有執行緒均已都完成等待執行緒群組 (tile) 中的所有執行緒。|
+|[wait_with_all_memory_fence](#wait_with_all_memory_fence)|封鎖執行，直到所有記憶體存取都已經都完成的所有執行緒和 tile 中的所有執行緒到達這個呼叫為止。|
+|[wait_with_global_memory_fence](#wait_with_global_memory_fence)|封鎖直到所有全域記憶體存取的所有執行緒的執行已經完成，且 tile 中的所有執行緒都到達這個呼叫為止。|
+|[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|封鎖 tile 中的所有執行緒的執行，直到所有`tile_static`記憶體存取已經完成，且 tile 中的所有執行緒都到達這個呼叫為止。|
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`tile_barrier`
+
+## <a name="requirements"></a>需求
+
+**標頭︰** amp.h
+
+**命名空間：** 並行
+
+## <a name="tile_barrier__ctor"></a>  tile_barrier 建構函式
+
+藉由複製現有初始化類別的新執行個體。
+
+### <a name="syntax"></a>語法
+
+```
+tile_barrier(
+    const tile_barrier& _Other ) restrict(amp,cpu);
+```
+
+### <a name="parameters"></a>參數
+
+*_Other*<br/>
+`tile_barrier`来複製的物件。
+
+## <a name="wait"></a>  等候
+
+指示來停止執行，直到磚中的所有執行緒均已都完成等待執行緒群組 (tile) 中的所有執行緒。
+
+### <a name="syntax"></a>語法
+
+```
+void wait() const restrict(amp);
+```
+
+## <a name="wait_with_all_memory_fence"></a>  wait_with_all_memory_fence
+
+封鎖執行的所有執行緒，直到 tile 中的所有執行緒都到達這個呼叫為止。 這可確保所有記憶體存取對執行緒 tile 中，在其他執行緒可見，而且依照程式順序執行。
+
+### <a name="syntax"></a>語法
+
+```
+void wait_with_all_memory_fence() const restrict(amp);
+```
+
+## <a name="wait_with_global_memory_fence"></a>  wait_with_global_memory_fence
+
+封鎖執行的所有執行緒，直到 tile 中的所有執行緒都到達這個呼叫為止。 這可確保所有全域記憶體存取對執行緒 tile 中，在其他執行緒可見，並已依照程式順序執行。
+
+### <a name="syntax"></a>語法
+
+```
+void wait_with_global_memory_fence() const  restrict(amp);
+```
+
+## <a name="wait_with_tile_static_memory_fence"></a>  wait_with_tile_static_memory_fence
+
+封鎖執行的所有執行緒，直到 tile 中的所有執行緒都到達這個呼叫為止。 這可確保`tile_static`記憶體存取對執行緒 tile 中，在其他執行緒可見，而且已依照程式順序執行。
+
+### <a name="syntax"></a>語法
+
+```
+void wait_with_tile_static_memory_fence() const restrict(amp);
+```
+
+## <a name="see-also"></a>另請參閱
+
+[Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

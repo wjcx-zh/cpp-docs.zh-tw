@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d395053231f54570e1bf86ba79f6237b89681fc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1c44223dad2ac4d6306bf3896cd8ec7be84a5a2b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315544"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407760"
 ---
 # <a name="stand-alone-attributes"></a>獨立屬性
 獨立屬性不能進行 c + + 關鍵字，但更像是程式碼行。 獨立屬性陳述式需要行尾的分號。
@@ -45,4 +45,5 @@ ms.locfileid: "44315544"
 |[pragma](../windows/pragma.md)|指定的字串，不能包含單引號字元，發出到產生的.idl 檔案。|
   
 ## <a name="see-also"></a>另請參閱
- [依使用方式分類的屬性](../windows/attributes-by-usage.md)
+
+[依使用方式分類的屬性](../windows/attributes-by-usage.md)

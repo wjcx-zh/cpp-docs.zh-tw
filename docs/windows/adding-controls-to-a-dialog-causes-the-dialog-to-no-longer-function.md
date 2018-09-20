@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88990595fdf1f6cbb88efd40ec6247b70d90c586
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 89e4a639ad953593195401fe2eadeb5d7877a160
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314894"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445856"
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function-c"></a>將控制項加入至對話方塊會造成對話方塊無法再函式 （c + +）
 
@@ -70,5 +70,5 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[對話方塊編輯器的疑難排解](../windows/troubleshooting-the-dialog-editor.md)  
+[對話方塊編輯器的疑難排解](../windows/troubleshooting-the-dialog-editor.md)<br/>
 [對話方塊編輯器](../windows/dialog-editor.md)

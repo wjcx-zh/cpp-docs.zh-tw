@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbfcedd2bc17e21b94de46c63edd95bf58f576a7
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 836017dcec969db85a0725a49193d7b8e8a88875
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714443"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402846"
 ---
 # <a name="arrays-c-component-extensions"></a>陣列 (C++ 元件擴充功能)
 
@@ -65,16 +65,16 @@ ms.locfileid: "45714443"
 *限定詞*<br/>
 （選擇性）一或多個這些儲存類別規範：[可變](../cpp/mutable-data-members-cpp.md)， [volatile](../cpp/volatile-cpp.md)， [const](../cpp/const-cpp.md)， [extern](../cpp/using-extern-to-specify-linkage.md)，[靜態](../cpp/static-members-cpp.md).
 
-*陣列類型*  
+*陣列類型*<br/>
 陣列變數的型別。 有效的類型為 Windows 執行階段類別和基本類型、 ref 類別和結構、 實值類別和結構和原生指標 (`type*`)。
 
 *rank*<br/>
 （選擇性）陣列維度的數目。 必須是 1。
 
-*identifier*  
+*identifier*<br/>
 陣列變數的名稱。
 
-*初始化型別*  
+*初始化型別*<br/>
 初始化陣列值型別。 通常*陣列型別*並*初始化型別*都是相同的型別。 不過，類型可以不同的轉換是否*初始化型別*要*陣列型別*— 比方說，如果*初始化型別*衍生自*陣列型別*。
 
 *初始設定式清單*<br/>
@@ -121,19 +121,19 @@ int main() {
 *限定詞*<br/>
 （選擇性）一或多個這些儲存類別規範：[可變](../cpp/mutable-data-members-cpp.md)， [volatile](../cpp/volatile-cpp.md)， [const](../cpp/const-cpp.md)， [extern](../cpp/using-extern-to-specify-linkage.md)，[靜態](../cpp/static-members-cpp.md).
 
-*陣列類型*  
+*陣列類型*<br/>
 陣列變數的型別。 有效的類型為 Windows 執行階段類別和基本類型、 ref 類別和結構、 實值類別與結構，原生指標 (`type*`)，和 POD （一般舊資料） 的原生類型。
 
 *rank*<br/>
 （選擇性）陣列維度的數目。 預設值為 1;最大值為 32。 每個維度本身是陣列的一個陣列。
 
-*identifier*  
+*identifier*<br/>
 陣列變數的名稱。
 
-*初始化型別*  
+*初始化型別*<br/>
 初始化陣列值型別。 通常*陣列型別*並*初始化型別*都是相同的型別。 不過，類型可以不同的轉換是否*初始化型別*要*陣列型別*— 比方說，如果*初始化型別*衍生自*陣列型別*。
 
-*陣序大小清單*  
+*陣序大小清單*<br/>
 陣列中每個維度的大小以逗號分隔清單。 或者，如果*初始設定式清單*參數指定，則編譯器可以推斷每個維度大小並*陣序大小清單*可以省略。
 
 *初始設定式清單*<br/>

@@ -463,14 +463,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d06bac8aef674472b817817fde4191f1d655365e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 575f21e03659f973a25b1ad2e7aae211f9dae187
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723225"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412102"
 ---
 # <a name="reference-concurrency-runtime"></a>參考 (並行執行階段)
+
 本節包含並行執行階段的參考資訊。
 
 > [!Note]
@@ -478,7 +479,8 @@ ms.locfileid: "45723225"
 
 ## <a name="in-this-section"></a>本節內容
 
-[concurrency 命名空間](concurrency-namespace.md)concurrency 命名空間提供類別和函式可讓您存取並行執行階段，而 c + + 的並行程式設計架構。 如需詳細資訊，請參閱[並行執行階段](../concurrency-runtime.md)。
+[concurrency 命名空間](concurrency-namespace.md)<br/>
+Concurrency 命名空間提供類別和函式可讓您存取並行執行階段，而 c + + 的並行程式設計架構。 如需詳細資訊，請參閱[並行執行階段](../concurrency-runtime.md)。
 
 [std 命名空間](std-namespace.md)
 

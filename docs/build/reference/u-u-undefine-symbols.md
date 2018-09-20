@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34030a8ef91e5a25bdb1a13981925c5ddf1f05df
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a32106dd9802643a827f8a3e97298f389d31d3b4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721548"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430666"
 ---
 # <a name="u-u-undefine-symbols"></a>/U、/u (取消定義符號)
 
@@ -83,7 +83,7 @@ ms.locfileid: "45721548"
 
 [編譯器選項](../../build/reference/compiler-options.md)<br/>
 [設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
-[/J (預設 char 類型為 unsigned)](../../build/reference/j-default-char-type-is-unsigned.md)
-[/GR （啟用執行階段類型資訊）](../../build/reference/gr-enable-run-time-type-information.md)
-[/EH （例外狀況處理模型）](../../build/reference/eh-exception-handling-model.md) 
- [/MD、 /MT、 /LD （使用執行階段程式庫）](../../build/reference/md-mt-ld-use-run-time-library.md)
+[/J (預設 char 類型為 unsigned)](../../build/reference/j-default-char-type-is-unsigned.md)<br/>
+[/GR (啟用執行階段類型資訊)](../../build/reference/gr-enable-run-time-type-information.md)<br/>
+[/EH (例外狀況處理模型)](../../build/reference/eh-exception-handling-model.md)<br/>
+[/MD、/MT、/LD (使用執行階段程式庫)](../../build/reference/md-mt-ld-use-run-time-library.md)

@@ -15,35 +15,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2c98ac16e9e5cb554d72a8880c5d4c45ff610d2
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2343a6eedc46d0b87419bae3ebbb93c5b153cfb2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315700"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446637"
 ---
 # <a name="c-attributes-reference"></a>C++ 屬性參考
 
 Microsoft 會定義一組簡化 COM 程式設計和.NET Framework 通用語言執行階段開發的屬性。 當您將屬性納入原始程式檔時，編譯器會搭配提供者來插入程式碼，或修改產生的物件檔案的程式碼的 Dll。
 
 > [!NOTE] 
- > 如果您要尋找 c + + 標準的屬性，請參閱[屬性](../cpp/attributes.md)。
+> 如果您要尋找 c + + 標準的屬性，請參閱[屬性](../cpp/attributes.md)。
 
 ## <a name="in-this-section"></a>本節內容
 
-[概念](../windows/attributed-programming-concepts.md)  
+[概念](../windows/attributed-programming-concepts.md)<br/>
 描述與屬性相關的各種概念。
 
-[依群組分類的屬性](../windows/attributes-by-group.md)  
+[依群組分類的屬性](../windows/attributes-by-group.md)<br/>
 提供連結屬性參考主題中，依功能分組。
 
-[依使用方式分類的屬性](../windows/attributes-by-usage.md)  
+[依使用方式分類的屬性](../windows/attributes-by-usage.md)<br/>
 提供連結屬性參考主題中，依使用方式。
 
-[依字母順序排列的屬性參考](../windows/attributes-alphabetical-reference.md)  
+[依字母順序排列的屬性參考](../windows/attributes-alphabetical-reference.md)<br/>
 提供所有的屬性參考主題的連結。
 
 ## <a name="related-sections"></a>相關章節
 
-[屬性化的程式設計](../windows/attributed-programming-concepts.md)  
+[屬性化的程式設計](../windows/attributed-programming-concepts.md)<br/>
 提供屬性的概念性概觀。

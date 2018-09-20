@@ -48,331 +48,349 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c594e86c0e0bcb74fe624743c863c70a1c7f9e6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 42436a885b194e0270bc9956514f4ff0de9c7461
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707807"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445889"
 ---
 # <a name="cglobalutils-class"></a>CGlobalUtils 類別
-如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-class CGlobalUtils  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CGlobalUtils::AdjustRectToWorkArea](#adjustrecttoworkarea)||  
-|[CGlobalUtils::CalcExpectedDockedRect](#calcexpecteddockedrect)||  
-|[CGlobalUtils::CanBeAttached](#canbeattached)||  
-|[CGlobalUtils::CanPaneBeInFloatingMultiPaneFrameWnd](#canpanebeinfloatingmultipaneframewnd)||  
-|[CGlobalUtils::CheckAlignment](#checkalignment)||  
-|[CGlobalUtils::CyFromString](#cyfromstring)||  
-|[CGlobalUtils::DecimalFromString](#decimalfromstring)||  
-|[CGlobalUtils::FlipRect](#fliprect)||  
-|[CGlobalUtils::ForceAdjustLayout](#forceadjustlayout)||  
-|[CGlobalUtils::GetDockingManager](#getdockingmanager)||  
-|[CGlobalUtils::GetOppositeAlignment](#getoppositealignment)||  
-|[CGlobalUtils::GetPaneAndAlignFromPoint](#getpaneandalignfrompoint)||  
-|[CGlobalUtils::GetWndIcon](#getwndicon)||  
-|[CGlobalUtils::SetNewParent](#setnewparent)||  
-|[CGlobalUtils::StringFromCy](#stringfromcy)||  
-|[CGlobalUtils::StringFromDecimal](#stringfromdecimal)||  
-  
-## <a name="remarks"></a>備註  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- [CGlobalUtils](../../mfc/reference/cglobalutils-class.md)  
-  
-## <a name="requirements"></a>需求  
- **標頭：** afxglobalutils.h  
-  
-##  <a name="adjustrecttoworkarea"></a>  CGlobalUtils::AdjustRectToWorkArea  
-  
-```  
+
+如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+
+## <a name="syntax"></a>語法
+
+```
+class CGlobalUtils
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[CGlobalUtils::AdjustRectToWorkArea](#adjustrecttoworkarea)||
+|[CGlobalUtils::CalcExpectedDockedRect](#calcexpecteddockedrect)||
+|[CGlobalUtils::CanBeAttached](#canbeattached)||
+|[CGlobalUtils::CanPaneBeInFloatingMultiPaneFrameWnd](#canpanebeinfloatingmultipaneframewnd)||
+|[CGlobalUtils::CheckAlignment](#checkalignment)||
+|[CGlobalUtils::CyFromString](#cyfromstring)||
+|[CGlobalUtils::DecimalFromString](#decimalfromstring)||
+|[CGlobalUtils::FlipRect](#fliprect)||
+|[CGlobalUtils::ForceAdjustLayout](#forceadjustlayout)||
+|[CGlobalUtils::GetDockingManager](#getdockingmanager)||
+|[CGlobalUtils::GetOppositeAlignment](#getoppositealignment)||
+|[CGlobalUtils::GetPaneAndAlignFromPoint](#getpaneandalignfrompoint)||
+|[CGlobalUtils::GetWndIcon](#getwndicon)||
+|[CGlobalUtils::SetNewParent](#setnewparent)||
+|[CGlobalUtils::StringFromCy](#stringfromcy)||
+|[CGlobalUtils::StringFromDecimal](#stringfromdecimal)||
+
+## <a name="remarks"></a>備註
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+[CGlobalUtils](../../mfc/reference/cglobalutils-class.md)
+
+## <a name="requirements"></a>需求
+
+**標頭：** afxglobalutils.h
+
+##  <a name="adjustrecttoworkarea"></a>  CGlobalUtils::AdjustRectToWorkArea
+
+```
 void AdjustRectToworkArea(
-    CRect& rect,  
+    CRect& rect,
     CRect* pRectDelta = NULL);
-```  
-  
-### <a name="parameters"></a>參數  
-*rect*<br/>
-[in、 out][in]*pRectDelta*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="calcexpecteddockedrect"></a>  CGlobalUtils::CalcExpectedDockedRect  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*rect*<br/>
+[in、 out][in]*pRectDelta*
+
+### <a name="remarks"></a>備註
+
+##  <a name="calcexpecteddockedrect"></a>  CGlobalUtils::CalcExpectedDockedRect
+
+
+```
 void CalcExpectedDockedRect(
-    CPaneContainerManager& barContainerManager,  
-    CWnd* pWndTodock,  
-    CPoint ptMouse,  
-    CRect& rectResult,  
-    BOOL& bDrawTab,  
+    CPaneContainerManager& barContainerManager,
+    CWnd* pWndTodock,
+    CPoint ptMouse,
+    CRect& rectResult,
+    BOOL& bDrawTab,
     CDockablePane** ppTargetBar);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *barContainerManager*<br/>
-[in][in]*pWndTodock*  
+[in][in]*pWndTodock*
 *ptMouse*<br/>
-[in][out]*rectResult*  
+[in][out]*rectResult*
 *bDrawTab*<br/>
-[out][out]*ppTargetBar*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="canbeattached"></a>  CGlobalUtils::CanBeAttached  
+[out][out]*ppTargetBar*
 
-  
-```  
-BOOL CanBeAttached(CWnd* pWnd) const;  
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*pWnd*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="canpanebeinfloatingmultipaneframewnd"></a>  CGlobalUtils::CanPaneBeInFloatingMultiPaneFrameWnd  
+### <a name="remarks"></a>備註
 
-  
-```  
-BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;  
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*pWnd*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="checkalignment"></a>  CGlobalUtils::CheckAlignment  
+##  <a name="canbeattached"></a>  CGlobalUtils::CanBeAttached
 
-  
-```  
+
+```
+BOOL CanBeAttached(CWnd* pWnd) const;
+```
+
+### <a name="parameters"></a>參數
+
+[in]*pWnd*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="canpanebeinfloatingmultipaneframewnd"></a>  CGlobalUtils::CanPaneBeInFloatingMultiPaneFrameWnd
+
+
+```
+BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
+```
+
+### <a name="parameters"></a>參數
+
+[in]*pWnd*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="checkalignment"></a>  CGlobalUtils::CheckAlignment
+
+
+```
 BOOL CheckAlignment(
-    CPoint point,  
-    CBasePane* pBar,  
-    int nSensitivity,  
-    const CDockingManager* pDockManager,  
-    BOOL bOuterEdge,  
-    DWORD& dwAlignment,  
-    DWORD dwEnabledDockBars = CBRS_ALIGN_ANY,  
-    LPCRECT lpRectBounds = NULL) const;  
-```  
-  
-### <a name="parameters"></a>參數  
+    CPoint point,
+    CBasePane* pBar,
+    int nSensitivity,
+    const CDockingManager* pDockManager,
+    BOOL bOuterEdge,
+    DWORD& dwAlignment,
+    DWORD dwEnabledDockBars = CBRS_ALIGN_ANY,
+    LPCRECT lpRectBounds = NULL) const;
+```
+
+### <a name="parameters"></a>參數
+
 *點*<br/>
-[in][in]*pBar*  
+[in][in]*pBar*
 *nSensitivity*<br/>
-[in][in]*pDockManager*  
+[in][in]*pDockManager*
 *bOuterEdge*<br/>
-[in][out]*dwAlignment*  
+[in][out]*dwAlignment*
 *dwEnabledDockBars*<br/>
-[in][in]*lpRectBounds*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="cyfromstring"></a>  CGlobalUtils::CyFromString  
+[in][in]*lpRectBounds*
 
-  
-```  
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="cyfromstring"></a>  CGlobalUtils::CyFromString
+
+
+```
 BOOL CyFromString(
-    CY& cy,  
+    CY& cy,
     LPCTSTR psz);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *cy*<br/>
-[out][in]*psz*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="decimalfromstring"></a>  CGlobalUtils::DecimalFromString  
+[out][in]*psz*
 
-  
-```  
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="decimalfromstring"></a>  CGlobalUtils::DecimalFromString
+
+
+```
 BOOL DecimalFromString(
-    DECIMAL& decimal,  
+    DECIMAL& decimal,
     LPCTSTR psz);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *decimal*<br/>
-[out][in]*psz*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="fliprect"></a>  CGlobalUtils::FlipRect  
+[out][in]*psz*
 
-  
-```  
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="fliprect"></a>  CGlobalUtils::FlipRect
+
+
+```
 void FlipRect(
-    CRect& rect,  
+    CRect& rect,
     int nDegrees);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *rect*<br/>
-[in、 out][in]*nDegrees*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="forceadjustlayout"></a>  CGlobalUtils::ForceAdjustLayout  
+[in、 out][in]*nDegrees*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="forceadjustlayout"></a>  CGlobalUtils::ForceAdjustLayout
+
+
+```
 void ForceAdjustLayout(
-    CDockingManager* pDockManager,  
-    BOOL bForce = FALSE,  
+    CDockingManager* pDockManager,
+    BOOL bForce = FALSE,
     BOOL bForceInvisible = FALSE);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pDockManager*<br/>
-[in、 out][in]*bForce*  
- [in]*bForceInvisible*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getdockingmanager"></a>  CGlobalUtils::GetDockingManager  
+[in、 out][in]*bForce* [in] *bForceInvisible*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="getdockingmanager"></a>  CGlobalUtils::GetDockingManager
+
+
+```
 CDockingManager* GetDockingManager(CWnd* pWnd);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*pWnd*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getoppositealignment"></a>  CGlobalUtils::GetOppositeAlignment  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+[in]*pWnd*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getoppositealignment"></a>  CGlobalUtils::GetOppositeAlignment
+
+
+```
 DWORD GetOppositeAlignment(DWORD dwAlign);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*dwAlign*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getpaneandalignfrompoint"></a>  CGlobalUtils::GetPaneAndAlignFromPoint  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+[in]*dwAlign*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getpaneandalignfrompoint"></a>  CGlobalUtils::GetPaneAndAlignFromPoint
+
+
+```
 BOOL GetPaneAndAlignFromPoint(
-    CPaneContainerManager& barContainerManager,  
-    CPoint pt,  
-    CDockablePane** ppTargetControlBar,  
-    DWORD& dwAlignment,  
-    BOOL& bTabArea,  
+    CPaneContainerManager& barContainerManager,
+    CPoint pt,
+    CDockablePane** ppTargetControlBar,
+    DWORD& dwAlignment,
+    BOOL& bTabArea,
     BOOL& bCaption);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *barContainerManager*<br/>
-[in][in]*pt*  
+[in][in]*pt*
 *ppTargetControlBar*<br/>
-[out][out]*dwAlignment*  
+[out][out]*dwAlignment*
 *bTabArea*<br/>
-[out][out]*bCaption*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getwndicon"></a>  CGlobalUtils::GetWndIcon  
+[out][out]*bCaption*
 
-  
-```  
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getwndicon"></a>  CGlobalUtils::GetWndIcon
+
+
+```
 HICON GetWndIcon(CWnd* pWnd);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*pWnd*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="setnewparent"></a>  CGlobalUtils::SetNewParent  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+[in]*pWnd*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="setnewparent"></a>  CGlobalUtils::SetNewParent
+
+
+```
 void SetNewParent(
-    CObList& lstControlBars,  
-    CWnd* pNewParent,  
+    CObList& lstControlBars,
+    CWnd* pNewParent,
     BOOL bCheckVisibility = TRUE);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *lstControlBars*<br/>
-[in][in]*pNewParent*  
- [in]*bCheckVisibility*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="stringfromcy"></a>  CGlobalUtils::StringFromCy  
+[in][in]*pNewParent* [in] *bCheckVisibility*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="stringfromcy"></a>  CGlobalUtils::StringFromCy
+
+
+```
 BOOL StringFromCy(
-    CString& str,  
+    CString& str,
     CY& cy);
-```  
-  
-### <a name="parameters"></a>參數  
-*str*<br/>
-[out][in]*cy*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="stringfromdecimal"></a>  CGlobalUtils::StringFromDecimal  
+```
 
-  
-```  
-BOOL StringFromDecimal(
-    CString& str,  
-    DECIMAL& decimal);
-```  
-  
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數
+
 *str*<br/>
-[out][in]*十進位*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)
+[out][in]*cy*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="stringfromdecimal"></a>  CGlobalUtils::StringFromDecimal
+
+
+```
+BOOL StringFromDecimal(
+    CString& str,
+    DECIMAL& decimal);
+```
+
+### <a name="parameters"></a>參數
+
+*str*<br/>
+[out][in]*十進位*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+## <a name="see-also"></a>另請參閱
+
+[階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
+[類別](../../mfc/reference/mfc-classes.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a790887f54e01cea835c6110e3d81e1c2d3afeaa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3df5a1893567b54337a5c3807fcace6a02154670
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206697"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416002"
 ---
 # <a name="importlib"></a>importlib
 
@@ -38,7 +38,7 @@ ms.locfileid: "43206697"
 
 ### <a name="parameters"></a>參數
 
-*tlb_file*  
+*tlb_file*<br/>
 您要匯入目前專案之類型程式庫中的 .tlb 檔案名稱 (加上引號)。
 
 ## <a name="remarks"></a>備註
@@ -71,9 +71,9 @@ ms.locfileid: "43206697"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器屬性](../windows/compiler-attributes.md)  
-[獨立屬性](../windows/stand-alone-attributes.md)  
-[import](../windows/import.md)  
-[importidl](../windows/importidl.md)  
-[include](../windows/include-cpp.md)  
+[編譯器屬性](../windows/compiler-attributes.md)<br/>
+[獨立屬性](../windows/stand-alone-attributes.md)<br/>
+[import](../windows/import.md)<br/>
+[importidl](../windows/importidl.md)<br/>
+[include](../windows/include-cpp.md)<br/>
 [includelib](../windows/includelib-cpp.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e0459c729368dc182de955f85afda514b2ff5071
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e96e6cf984196cbca3051eec397ae06e48e2f1c0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591858"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406655"
 ---
 # <a name="modulemodule-constructor"></a>Module::Module 建構函式
 
@@ -45,4 +45,5 @@ Module();
 **命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
+
 [Module 類別](../windows/module-class.md)

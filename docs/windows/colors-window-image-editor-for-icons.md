@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7e4976065d32a2f88550e5f89fc464da2dbc00e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ae58ae7cf09257b399fd21d7c34890b829394b98
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316701"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430588"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>色彩視窗 (圖示影像編輯器)
 
@@ -50,8 +50,8 @@ ms.locfileid: "44316701"
 
 ## <a name="see-also"></a>另請參閱
 
-[顯示或隱藏色彩視窗](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)  
-[在裝置影像中建立透明或反向區域](../windows/creating-transparent-or-inverse-regions-in-device-images.md)  
-[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)  
-[自訂色彩選取器對話方塊](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)  
+[顯示或隱藏色彩視窗](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)<br/>
+[在裝置影像中建立透明或反向區域](../windows/creating-transparent-or-inverse-regions-in-device-images.md)<br/>
+[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[自訂色彩選取器對話方塊](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)<br/>
 [圖示影像編輯器](../windows/image-editor-for-icons.md)

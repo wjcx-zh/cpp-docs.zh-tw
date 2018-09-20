@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f24c01c225cf971592083162fbebddd99700814
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2e6d5d832cd051c8e527b1d161158483d8fcaed1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209110"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428749"
 ---
 # <a name="pragma"></a>pragma
 
@@ -38,7 +38,7 @@ ms.locfileid: "43209110"
 
 ### <a name="parameters"></a>參數
 
-*pragma_statement*  
+*pragma_statement*<br/>
 Pragma，您想要移至所產生的.idl 檔案。
 
 ## <a name="remarks"></a>備註
@@ -76,6 +76,6 @@ __interface A
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
-[獨立屬性](../windows/stand-alone-attributes.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
+[獨立屬性](../windows/stand-alone-attributes.md)<br/>
 [pack](../preprocessor/pack.md)  

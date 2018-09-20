@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d578c820660d99e6fa217a14181330d258ab081b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 572767c2f85b07f201bef93578b14b731aa467e0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613318"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415014"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 
@@ -108,5 +108,5 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)  
+[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

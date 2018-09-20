@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c80372070589e1a5c57d2ea08f80fea0467b5dc7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: edb3210eddf8e1633f46713af5fbe5d97a4c4b26
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596715"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419174"
 ---
 # <a name="comptrrefbaseptr-data-member"></a>ComPtrRefBase::ptr_ 資料成員
 
@@ -50,5 +50,5 @@ T* ptr_;
 
 ## <a name="see-also"></a>另請參閱
 
-[ComPtrRefBase 類別](../windows/comptrrefbase-class.md)  
+[ComPtrRefBase 類別](../windows/comptrrefbase-class.md)<br/>
 [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

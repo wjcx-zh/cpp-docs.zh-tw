@@ -1,5 +1,5 @@
 ---
-title: ordered （OpenMP 子句） |Microsoft 文件
+title: 排序 （OpenMP 子句） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91cdc9b51eb548d6b918bd2b48f9de0795dcc0bd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: be8987cd889537eaa12ea3f548c4cc8cc9e589c8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691647"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419436"
 ---
 # <a name="ordered-openmp-clauses"></a>ordered (OpenMP 子句)
-平行上需要[如](../../../parallel/openmp/reference/for-openmp.md)陳述式如果[排序](../../../parallel/openmp/reference/ordered-openmp-directives.md)指示詞是用在迴圈中。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-ordered  
-```  
-  
-## <a name="remarks"></a>備註  
- `ordered` 適用於[如](../../../parallel/openmp/reference/for-openmp.md)指示詞。  
-  
- 如需詳細資訊，請參閱[2.4.1 for 建構](../../../parallel/openmp/2-4-1-for-construct.md)。  
-  
-## <a name="example"></a>範例  
- 請參閱[排序](../../../parallel/openmp/reference/ordered-openmp-directives.md)的使用範例`ordered`子句。  
-  
-## <a name="see-also"></a>另請參閱  
- [子句](../../../parallel/openmp/reference/openmp-clauses.md)
+
+需要平行[for](../../../parallel/openmp/reference/for-openmp.md)陳述式如果[排序](../../../parallel/openmp/reference/ordered-openmp-directives.md)指示詞是在迴圈中使用。
+
+## <a name="syntax"></a>語法
+
+```
+ordered
+```
+
+## <a name="remarks"></a>備註
+
+`ordered` 適用於[針對](../../../parallel/openmp/reference/for-openmp.md)指示詞。
+
+如需詳細資訊，請參閱 < [2.4.1 for 建構](../../../parallel/openmp/2-4-1-for-construct.md)。
+
+## <a name="example"></a>範例
+
+請參閱[排序](../../../parallel/openmp/reference/ordered-openmp-directives.md)如需使用的範例`ordered`子句。
+
+## <a name="see-also"></a>另請參閱
+
+[子句](../../../parallel/openmp/reference/openmp-clauses.md)

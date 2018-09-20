@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 08347b4ccfa44d8645acc2bd5e96775bab4e7740
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: cd9ab28ccce14c5ac0975b7050588ee6524cfcc9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601492"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408345"
 ---
 # <a name="eventsource-class"></a>EventSource 類別
 
@@ -53,7 +53,7 @@ class EventSource;
 
 ### <a name="parameters"></a>參數
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 要委派，表示事件處理常式的介面。
 
 ## <a name="members"></a>成員
@@ -104,10 +104,10 @@ HRESULT Add(
 
 ### <a name="parameters"></a>參數
 
-*delegateInterface*  
+*delegateInterface*<br/>
 要委派物件，代表事件處理常式的介面。
 
-*語彙基元*  
+*語彙基元*<br/>
 這項作業完成時，代表事件的控制代碼。 使用此權杖做為參數[remove （)](#remove)捨棄的事件處理常式的方法。
 
 ### <a name="return-value"></a>傳回值
@@ -302,64 +302,64 @@ void InvokeAll(
 
 ### <a name="parameters"></a>參數
 
-*T0*  
+*T0*<br/>
 第零個事件處理常式的引數的類型。
 
-*T1*  
+*T1*<br/>
 第一個事件處理常式引數型別。
 
-*T2*  
+*T2*<br/>
 第二個事件處理常式引數的型別。
 
-*T3*  
+*T3*<br/>
 第三個事件處理常式引數的型別。
 
-*T4*  
+*T4*<br/>
 第四個事件處理常式引數的型別。
 
-*T5*  
+*T5*<br/>
 第五個事件處理常式引數的型別。
 
-*T6*  
+*T6*<br/>
 第六個事件處理常式引數的型別。
 
-*T7*  
+*T7*<br/>
 第七個事件處理常式引數的型別。
 
-*T8*  
+*T8*<br/>
 第八個事件處理常式的引數的類型。
 
-*T9*  
+*T9*<br/>
 第九個事件處理常式引數的型別。
 
-*arg0*  
+*arg0*<br/>
 第零個事件處理常式引數。
 
-*arg1*  
+*arg1*<br/>
 第一個事件處理常式引數。
 
-*Arg2*  
+*Arg2*<br/>
 第二個事件處理常式引數。
 
-*arg3*  
+*arg3*<br/>
 第三個事件處理常式引數。
 
-*arg4*  
+*arg4*<br/>
 第四個事件處理常式引數。
 
-*arg5*  
+*arg5*<br/>
 第五個事件處理常式引數。
 
-*arg6*  
+*arg6*<br/>
 第六個事件處理常式引數。
 
-*arg7*  
+*arg7*<br/>
 第七個事件處理常式引數。
 
-*arg8*  
+*arg8*<br/>
 第八個事件處理常式引數。
 
-*arg9*  
+*arg9*<br/>
 第九個事件處理常式引數。
 
 ## <a name="remove"></a>Eventsource:: Remove
@@ -374,7 +374,7 @@ HRESULT Remove(
 
 ### <a name="parameters"></a>參數
 
-*語彙基元*  
+*語彙基元*<br/>
 代表事件處理常式的控制代碼。 註冊事件處理常式時，傳回這個語彙基元[add （)](#add)方法。
 
 ### <a name="return-value"></a>傳回值

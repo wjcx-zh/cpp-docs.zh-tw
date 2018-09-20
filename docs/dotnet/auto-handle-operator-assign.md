@@ -20,100 +20,105 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f41eff9659fd85b21b46560be4c1141152f748f1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9e6a2f117ae8ff365bea13a6c1cf4e55900752ab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46103616"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427897"
 ---
 # <a name="autohandleoperator"></a>auto_handle::operator=
-指派運算子。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-auto_handle<_element_type> % operator=(  
-   auto_handle<_element_type> % _right  
-);  
-template<typename _other_type>  
-auto_handle<_element_type> % operator=(  
-   auto_handle<_other_type> % _right  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
+
+指派運算子。
+
+## <a name="syntax"></a>語法
+
+```
+auto_handle<_element_type> % operator=(
+   auto_handle<_element_type> % _right
+);
+template<typename _other_type>
+auto_handle<_element_type> % operator=(
+   auto_handle<_other_type> % _right
+);
+```
+
+#### <a name="parameters"></a>參數
+
 *右方 （_r)*<br/>
-`auto_handle`指派給目前`auto_handle`。  
-  
-## <a name="return-value"></a>傳回值  
- 目前`auto_handle`，現在擁有`_right`。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// msl_auto_handle_op_assign.cpp  
-// compile with: /clr  
-#include <msclr\auto_handle.h>  
-  
-using namespace System;  
-using namespace msclr;  
-  
-ref class ClassA {  
-protected:  
-   String^ m_s;     
-public:  
-   ClassA(String^ s) : m_s(s) {  
-      Console::WriteLine( "in ClassA constructor: " + m_s );  
-   }  
-   ~ClassA() {  
-      Console::WriteLine( "in ClassA destructor: " + m_s );  
-   }  
-  
-   virtual void PrintHello() {  
-      Console::WriteLine( "Hello from {0} A!", m_s );  
-   }  
-};  
-  
-ref class ClassB : ClassA {  
-public:     
-   ClassB( String^ s ) : ClassA( s ) {}  
-   virtual void PrintHello() new {  
-      Console::WriteLine( "Hello from {0} B!", m_s );  
-   }  
-};  
-  
-int main()  
-{  
-   auto_handle<ClassA> a;  
-   auto_handle<ClassA> a2(gcnew ClassA( "first" ) );  
-   a = a2; // assign from same type  
-   a->PrintHello();  
-  
-   auto_handle<ClassB> b(gcnew ClassB( "second" ) );     
-   b->PrintHello();  
-   a = b; // assign from derived type     
-   a->PrintHello();  
-  
-   Console::WriteLine("done");  
-}  
-```  
-  
-```Output  
-in ClassA constructor: first  
-Hello from first A!  
-in ClassA constructor: second  
-Hello from second B!  
-in ClassA destructor: first  
-Hello from second A!  
-done  
-in ClassA destructor: second  
-```  
-  
-## <a name="requirements"></a>需求  
- **標頭檔** \<msclr\auto_handle.h >  
-  
- **命名空間**msclr  
-  
-## <a name="see-also"></a>另請參閱  
- [auto_handle 成員](../dotnet/auto-handle-members.md)
+`auto_handle`指派給目前`auto_handle`。
+
+## <a name="return-value"></a>傳回值
+
+目前`auto_handle`，現在擁有`_right`。
+
+## <a name="example"></a>範例
+
+```
+// msl_auto_handle_op_assign.cpp
+// compile with: /clr
+#include <msclr\auto_handle.h>
+
+using namespace System;
+using namespace msclr;
+
+ref class ClassA {
+protected:
+   String^ m_s;
+public:
+   ClassA(String^ s) : m_s(s) {
+      Console::WriteLine( "in ClassA constructor: " + m_s );
+   }
+   ~ClassA() {
+      Console::WriteLine( "in ClassA destructor: " + m_s );
+   }
+
+   virtual void PrintHello() {
+      Console::WriteLine( "Hello from {0} A!", m_s );
+   }
+};
+
+ref class ClassB : ClassA {
+public:
+   ClassB( String^ s ) : ClassA( s ) {}
+   virtual void PrintHello() new {
+      Console::WriteLine( "Hello from {0} B!", m_s );
+   }
+};
+
+int main()
+{
+   auto_handle<ClassA> a;
+   auto_handle<ClassA> a2(gcnew ClassA( "first" ) );
+   a = a2; // assign from same type
+   a->PrintHello();
+
+   auto_handle<ClassB> b(gcnew ClassB( "second" ) );
+   b->PrintHello();
+   a = b; // assign from derived type
+   a->PrintHello();
+
+   Console::WriteLine("done");
+}
+```
+
+```Output
+in ClassA constructor: first
+Hello from first A!
+in ClassA constructor: second
+Hello from second B!
+in ClassA destructor: first
+Hello from second A!
+done
+in ClassA destructor: second
+```
+
+## <a name="requirements"></a>需求
+
+**標頭檔** \<msclr\auto_handle.h >
+
+**命名空間**msclr
+
+## <a name="see-also"></a>另請參閱
+
+[auto_handle 成員](../dotnet/auto-handle-members.md)

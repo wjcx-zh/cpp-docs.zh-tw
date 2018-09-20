@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ecc04f0e8bda3045dcad141fa3fe467039c3f23
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8bd2a81c10855dfe1d409b34612956616018dab7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605556"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413447"
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>設定下拉式方塊和下拉式清單的大小
 
@@ -61,6 +61,6 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[將值新增至下拉式方塊控制項](../windows/adding-values-to-a-combo-box-control.md)  
-[對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)  
+[將值新增至下拉式方塊控制項](../windows/adding-values-to-a-combo-box-control.md)<br/>
+[對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)<br/>
 [控制項](../mfc/controls-mfc.md)

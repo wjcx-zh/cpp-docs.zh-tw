@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bb6c1bd23eaf705f6ceb57e5fc4ea3354c0ddfc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9406cc95804e4eb9fd76f53201118f13f0e422a4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42571354"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410503"
 ---
 # <a name="importidl"></a>importidl
 
@@ -38,7 +38,7 @@ ms.locfileid: "42571354"
 
 ### <a name="parameters"></a>參數
 
-*idl_file*  
+*idl_file*<br/>
 識別您想要與您的應用程式將會產生.idl 檔案合併的.idl 檔案的名稱。
 
 ## <a name="remarks"></a>備註
@@ -71,9 +71,9 @@ ms.locfileid: "42571354"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器屬性](../windows/compiler-attributes.md)  
-[獨立屬性](../windows/stand-alone-attributes.md)  
-[import](../windows/import.md)  
-[importlib](../windows/importlib.md)  
-[include](../windows/include-cpp.md)  
+[編譯器屬性](../windows/compiler-attributes.md)<br/>
+[獨立屬性](../windows/stand-alone-attributes.md)<br/>
+[import](../windows/import.md)<br/>
+[importlib](../windows/importlib.md)<br/>
+[include](../windows/include-cpp.md)<br/>
 [includelib](../windows/includelib-cpp.md)  

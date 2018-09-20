@@ -16,38 +16,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c87dfc47f7f2554e75567a1de4ea9cb2e06eaa00
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7124e51b604a55d049be13d3bbcccc4e5810ca67
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028190"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412830"
 ---
 # <a name="lastprivate"></a>lastprivate
-指定封入內容變數的版本，設定等於私用版本的任何執行緒執行的最後一個反覆項目 （for 迴圈建構） 或最後一節 （#pragma 區段）。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-lastprivate(var)  
-```  
-  
+
+指定封入內容變數的版本，設定等於私用版本的任何執行緒執行的最後一個反覆項目 （for 迴圈建構） 或最後一節 （#pragma 區段）。
+
+## <a name="syntax"></a>語法
+
+```
+lastprivate(var)
+```
+
 ### <a name="parameters"></a>參數
-  
+
 *var*<br/>
-此變數會設為等於執行緒私用版本執行的最後一個反覆項目 （for 迴圈建構） 或最後一節 （#pragma 區段）。  
-  
-## <a name="remarks"></a>備註  
- `lastprivate` 適用於下列指示詞：  
-  
--   [for](../../../parallel/openmp/reference/for-openmp.md)  
-  
--   [區段](../../../parallel/openmp/reference/sections-openmp.md)  
-  
- 如需詳細資訊，請參閱 < [2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md)。  
-  
-## <a name="example"></a>範例  
- 請參閱[排程](../../../parallel/openmp/reference/schedule.md)如需使用的範例`lastprivate`子句。  
-  
-## <a name="see-also"></a>另請參閱  
- [子句](../../../parallel/openmp/reference/openmp-clauses.md)
+此變數會設為等於執行緒私用版本執行的最後一個反覆項目 （for 迴圈建構） 或最後一節 （#pragma 區段）。
+
+## <a name="remarks"></a>備註
+
+`lastprivate` 適用於下列指示詞：
+
+- [for](../../../parallel/openmp/reference/for-openmp.md)
+
+- [區段](../../../parallel/openmp/reference/sections-openmp.md)
+
+如需詳細資訊，請參閱 < [2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md)。
+
+## <a name="example"></a>範例
+
+請參閱[排程](../../../parallel/openmp/reference/schedule.md)如需使用的範例`lastprivate`子句。
+
+## <a name="see-also"></a>另請參閱
+
+[子句](../../../parallel/openmp/reference/openmp-clauses.md)

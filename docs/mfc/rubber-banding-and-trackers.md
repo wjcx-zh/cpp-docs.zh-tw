@@ -1,5 +1,5 @@
 ---
-title: 橡皮框和追蹤器 |Microsoft 文件
+title: 橡皮框和追蹤器 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,26 +18,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4f36a634e4e5e6d4ee6c2618d0d43313c7c8094
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ed6e649309acf86e24c52bf8b50a859d0ac066ad
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931732"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428196"
 ---
 # <a name="rubber-banding-and-trackers"></a>拖放矩形和追蹤器
-另一個追蹤器隨附的功能是「拖放矩形」選取範圍，可讓使用者透過在要選取的項目附近拖曳縮放矩形來選取多個 OLE 項目。 當使用者放開滑鼠左鍵時，將會選取使用者在區域中選取的項目，並可供使用者操作。 例如，使用者可以將選取項目拖曳到另一個容器應用程式。  
-  
- 實作這項功能需要您的應用程式 WM_LBUTTONDOWN 處理常式函式中的某些其他程式碼。  
-  
- 下列程式碼範例實作拖放矩形選取範圍和其他功能。  
-  
- [!code-cpp[NVC_MFCOClient#6](../mfc/codesnippet/cpp/rubber-banding-and-trackers_1.cpp)]  
-  
- 如果您想要允許還原方向追蹤程式的拖放矩形期間，您應該呼叫[crecttracker:: Trackrubberband](../mfc/reference/crecttracker-class.md#trackrubberband)並第三個參數設定為**TRUE**。 請記住，允許還原方向有時候會使[crecttracker:: M_rect](../mfc/reference/crecttracker-class.md#m_rect)反轉。 這可由呼叫更正[Normalizerect](../atl-mfc-shared/reference/crect-class.md#normalizerect)。  
-  
- 如需詳細資訊，請參閱[容器用戶端項目](../mfc/containers-client-items.md)和[自訂拖放](../mfc/drag-and-drop-customizing.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [追蹤器： OLE 應用程式中實作追蹤器](../mfc/trackers-implementing-trackers-in-your-ole-application.md)   
- [CRectTracker 類別](../mfc/reference/crecttracker-class.md)
+
+另一個追蹤器隨附的功能是「拖放矩形」選取範圍，可讓使用者透過在要選取的項目附近拖曳縮放矩形來選取多個 OLE 項目。 當使用者放開滑鼠左鍵時，將會選取使用者在區域中選取的項目，並可供使用者操作。 例如，使用者可以將選取項目拖曳到另一個容器應用程式。
+
+實作這項功能需要一些額外的程式碼，在您的應用程式 WM_LBUTTONDOWN 處理常式函式。
+
+下列程式碼範例實作拖放矩形選取範圍和其他功能。
+
+[!code-cpp[NVC_MFCOClient#6](../mfc/codesnippet/cpp/rubber-banding-and-trackers_1.cpp)]
+
+如果您想要允許還原方向的追蹤程式，拖放矩形期間，您應該呼叫[crecttracker:: Trackrubberband](../mfc/reference/crecttracker-class.md#trackrubberband)第三個參數設定為 **，則為 TRUE**。 請記住，允許還原方向有時候會使[crecttracker:: M_rect](../mfc/reference/crecttracker-class.md#m_rect)反轉。 這可以藉由呼叫更正[Normalizerect](../atl-mfc-shared/reference/crect-class.md#normalizerect)。
+
+如需詳細資訊，請參閱 <<c0> [ 容器用戶端項目](../mfc/containers-client-items.md)並[自訂拖曳和置放](../mfc/drag-and-drop-customizing.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[追蹤器：在 OLE 應用程式中實作追蹤器](../mfc/trackers-implementing-trackers-in-your-ole-application.md)<br/>
+[CRectTracker 類別](../mfc/reference/crecttracker-class.md)

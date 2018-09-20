@@ -1,5 +1,5 @@
 ---
-title: Debug 類別 (C + + /CLI) |Microsoft 文件
+title: Debug 類別 (C + + /cli CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,86 +17,91 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fddf192b21b878c82ca663da657c55e32fd9173d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eecda10f2fd88b902a54fe9f4dc4de8edc4bc1b0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106202"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413558"
 ---
 # <a name="debug-class-ccli"></a>Debug 類別 (C++/CLI)
-當使用<xref:System.Diagnostics.Debug>Visual c + + 應用程式中的行為不會偵錯和發行組建之間變更。  
-  
-## <a name="remarks"></a>備註  
- 行為<xref:System.Diagnostics.Trace>偵錯類別的行為相同，但是相依於追蹤所定義的符號。 這表示，您必須使用`#ifdef`任何與追蹤相關的程式碼來避免在發行組建的偵錯行為。  
-  
-## <a name="example"></a>範例  
-  
-### <a name="description"></a>描述  
- 下列範例執行的速度輸出陳述式，不論您是否使用編譯 **/DDEBUG**或 **/DTRACE**。  
-  
-### <a name="code"></a>程式碼  
-  
-```  
-// mcpp_debug_class.cpp  
-// compile with: /clr  
-#using <system.dll>  
-using namespace System::Diagnostics;  
-using namespace System;  
-  
-int main() {  
-   Trace::Listeners->Add( gcnew TextWriterTraceListener( Console::Out ) );  
-   Trace::AutoFlush = true;  
-   Trace::Indent();  
-   Trace::WriteLine( "Entering Main" );  
-   Console::WriteLine( "Hello World." );  
-   Trace::WriteLine( "Exiting Main" );  
-   Trace::Unindent();  
-  
-   Debug::WriteLine("test");  
-}  
-```  
-  
-### <a name="output"></a>輸出  
-  
-```  
-    Entering Main  
-Hello World.  
-    Exiting Main  
-test  
-```  
-  
-## <a name="example"></a>範例  
-  
-### <a name="description"></a>描述  
- 若要取得預期的行為 （也就是沒有 「 測試 」 的輸出列印的發行組建），您必須使用`#ifdef`和`#endif`指示詞。 上述程式碼範例示範此修正修改如下：  
-  
-### <a name="code"></a>程式碼  
-  
-```  
-// mcpp_debug_class2.cpp  
-// compile with: /clr  
-#using <system.dll>  
-using namespace System::Diagnostics;  
-using namespace System;  
-  
-int main() {  
-   Trace::Listeners->Add( gcnew TextWriterTraceListener( Console::Out ) );  
-   Trace::AutoFlush = true;  
-   Trace::Indent();  
-  
-#ifdef TRACE   // checks for a debug build  
-   Trace::WriteLine( "Entering Main" );  
-   Console::WriteLine( "Hello World." );  
-   Trace::WriteLine( "Exiting Main" );  
-#endif  
-   Trace::Unindent();  
-  
-#ifdef DEBUG   // checks for a debug build  
-   Debug::WriteLine("test");  
-#endif   //ends the conditional block  
-}  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+
+當使用<xref:System.Diagnostics.Debug>Visual c + + 應用程式中，行為之間都沒有變更偵錯和發行組建。
+
+## <a name="remarks"></a>備註
+
+行為<xref:System.Diagnostics.Trace>等同於偵錯類別的行為，但取決於追蹤所定義的符號。 這表示，您必須使用`#ifdef`任何追蹤相關的程式碼，以避免在發行組建的偵錯行為。
+
+## <a name="example"></a>範例
+
+### <a name="description"></a>描述
+
+下列範例會永遠執行輸出陳述式，不論您是否使用編譯 **/DDEBUG**或是 **/DTRACE**。
+
+### <a name="code"></a>程式碼
+
+```cpp
+// mcpp_debug_class.cpp
+// compile with: /clr
+#using <system.dll>
+using namespace System::Diagnostics;
+using namespace System;
+
+int main() {
+   Trace::Listeners->Add( gcnew TextWriterTraceListener( Console::Out ) );
+   Trace::AutoFlush = true;
+   Trace::Indent();
+   Trace::WriteLine( "Entering Main" );
+   Console::WriteLine( "Hello World." );
+   Trace::WriteLine( "Exiting Main" );
+   Trace::Unindent();
+
+   Debug::WriteLine("test");
+}
+```
+
+### <a name="output"></a>輸出
+
+```Output
+    Entering Main
+Hello World.
+    Exiting Main
+test
+```
+
+## <a name="example"></a>範例
+
+### <a name="description"></a>描述
+
+若要取得預期的行為 （亦即，沒有 「 測試 」 的輸出列印的發行組建），您必須使用`#ifdef`和`#endif`指示詞。 為了示範此修正，上述的程式碼範例會修改如下：
+
+### <a name="code"></a>程式碼
+
+```cpp
+// mcpp_debug_class2.cpp
+// compile with: /clr
+#using <system.dll>
+using namespace System::Diagnostics;
+using namespace System;
+
+int main() {
+   Trace::Listeners->Add( gcnew TextWriterTraceListener( Console::Out ) );
+   Trace::AutoFlush = true;
+   Trace::Indent();
+
+#ifdef TRACE   // checks for a debug build
+   Trace::WriteLine( "Entering Main" );
+   Console::WriteLine( "Hello World." );
+   Trace::WriteLine( "Exiting Main" );
+#endif
+   Trace::Unindent();
+
+#ifdef DEBUG   // checks for a debug build
+   Debug::WriteLine("test");
+#endif   //ends the conditional block
+}
+```
+
+## <a name="see-also"></a>另請參閱
+
+[以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

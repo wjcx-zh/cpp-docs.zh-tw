@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e0c8996823de35bbfd85d595556db933f34238a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 90a1b527d12e581c42fc9519e56d453f845e0b63
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599218"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419712"
 ---
 # <a name="modulegetclassobject-method"></a>Module::GetClassObject 方法
 
@@ -31,7 +31,7 @@ ms.locfileid: "42599218"
 ## <a name="syntax"></a>語法
 
 ```cpp
- HRESULT GetClassObject(
+HRESULT GetClassObject(
    REFCLSID clsid,
    REFIID riid,
    _Deref_out_ void **ppv,
@@ -41,16 +41,16 @@ ms.locfileid: "42599218"
 
 ### <a name="parameters"></a>參數
 
-*clsid*  
+*clsid*<br/>
 類別識別碼。
 
-*riid*  
+*riid*<br/>
 您要求的介面識別碼。
 
-*ppv*  
+*ppv*<br/>
 傳回的物件指標。
 
-*伺服器名稱*  
+*伺服器名稱*<br/>
 中指定的伺服器名稱`ActivatableClassWithFactory`， `ActivatableClassWithFactoryEx`，或`ActivatableClass`巨集; 或是**nullptr**取得預設的伺服器名稱。
 
 ## <a name="return-value"></a>傳回值
@@ -66,4 +66,5 @@ ms.locfileid: "42599218"
 **命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
+
 [Module 類別](../windows/module-class.md)

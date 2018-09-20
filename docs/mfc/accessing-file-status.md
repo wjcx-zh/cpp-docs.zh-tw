@@ -1,5 +1,5 @@
 ---
-title: 存取檔案狀態 |Microsoft 文件
+title: 存取檔案狀態 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,26 +18,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d424502e991ea355a6e31bba8fedccb6d5ad2fcf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f7c2d5d76616ed78768b5e133029cf047ed4453
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334291"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416810"
 ---
 # <a name="accessing-file-status"></a>存取檔案狀態
-`CFile` 也支援取得檔案狀態，包括檔案是否存在、建立和修改日期和時間、邏輯大小和路徑。  
-  
-### <a name="to-get-file-status"></a>取得檔案狀態  
-  
-1.  使用[CFile](../mfc/reference/cfile-class.md)類別來取得和設定檔案的相關資訊。 一個實用的應用程式是使用`CFile`靜態成員函式**GetStatus**來判斷檔案是否存在。 **GetStatus**傳回 0，如果指定的檔案不存在。  
-  
- 因此，您可以使用的結果**GetStatus**來判斷是否要使用**cfile:: Modecreate**旗標時開啟的檔案，如下列範例所示：  
-  
- [!code-cpp[NVC_MFCFiles#3](../atl-mfc-shared/reference/codesnippet/cpp/accessing-file-status_1.cpp)]  
-  
- 如需相關資訊，請參閱[序列化](../mfc/serialization-in-mfc.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [檔案](../mfc/files-in-mfc.md)
+
+`CFile` 也支援取得檔案狀態，包括檔案是否存在、建立和修改日期和時間、邏輯大小和路徑。
+
+### <a name="to-get-file-status"></a>取得檔案狀態
+
+1. 使用[CFile](../mfc/reference/cfile-class.md)類別來取得和設定檔案的相關的資訊。 一個實用的應用程式是使用`CFile`靜態成員函式**GetStatus**來判斷檔案是否存在。 **GetStatus**會傳回 0，如果指定的檔案不存在。
+
+因此，您可以使用的結果**GetStatus**來判斷是否要使用**cfile:: Modecreate**旗標時開啟的檔案，如下列範例所示：
+
+[!code-cpp[NVC_MFCFiles#3](../atl-mfc-shared/reference/codesnippet/cpp/accessing-file-status_1.cpp)]
+
+如需相關資訊，請參閱[序列化](../mfc/serialization-in-mfc.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[檔案](../mfc/files-in-mfc.md)
 

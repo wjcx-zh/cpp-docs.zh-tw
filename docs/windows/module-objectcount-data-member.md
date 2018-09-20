@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7733b4f642db9cf281ac78aca7dc90ebcda35562
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 23382ff15a88e36e2015518f76df78be6fb85c09
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603904"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442678"
 ---
 # <a name="moduleobjectcount-data-member"></a>Module::objectCount_ 資料成員
 
@@ -39,4 +39,5 @@ volatile long objectCount_;
 **命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
+
 [Module 類別](../windows/module-class.md)

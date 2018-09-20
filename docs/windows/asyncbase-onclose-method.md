@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fd6bd03b1e5aa3f690d93a5c51cc6664e0547c2e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 866e4a285a92fb7d80d0fe0d8240ebdda107de23
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597345"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419386"
 ---
 # <a name="asyncbaseonclose-method"></a>AsyncBase::OnClose 方法
 
@@ -44,5 +44,5 @@ virtual void OnClose(
 
 ## <a name="see-also"></a>另請參閱
 
-[AsyncBase 類別](../windows/asyncbase-class.md)  
+[AsyncBase 類別](../windows/asyncbase-class.md)<br/>
 [AsyncBase::Close 方法](../windows/asyncbase-close-method.md)

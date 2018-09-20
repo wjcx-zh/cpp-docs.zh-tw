@@ -17,14 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50696d8f6ee0aa1c61374c0758905a5bb7063ab5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 732fab9e0f9f0233de6de7db6328c2e6736db5d0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606933"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437711"
 ---
 # <a name="mfc-database-programming-symbols"></a>MFC 資料庫程式開發符號
+
 此資料表中的符號只會在已經加入資料庫的支援時，出現在 MFC 專案中。 它們支援 MFC 連接到 SQL server 和資料庫程式設計。
   
 |||
@@ -45,8 +46,10 @@ ms.locfileid: "42606933"
 |AFX_IDP_SQL_SQL_NO_TOTAL|AFX_IDP_SQL_UPDATE_DELETE_FAILED|
   
 ## <a name="requirements"></a>需求
- MFC
+
+MFC
   
 ## <a name="see-also"></a>另請參閱
- [MFC 預先定義的符號](../windows/mfc-predefined-symbols.md)  
- [符號：資源識別項](../windows/symbols-resource-identifiers.md)
+
+[MFC 預先定義的符號](../windows/mfc-predefined-symbols.md)<br/>
+[符號：資源識別項](../windows/symbols-resource-identifiers.md)

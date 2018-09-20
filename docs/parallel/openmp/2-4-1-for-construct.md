@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac142c628f3c2bef0bc29a2ffd50df8a9efda400
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cb9a554d9141223be7a5f6bc741c86b8f03511e2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216533"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428536"
 ---
 # <a name="241-for-construct"></a>2.4.1 for 建構
 
@@ -115,28 +115,28 @@ OpenMP 相容的程式不應依賴正確執行的特定排程。 程式不應依
 
 若要限制**針對**指示詞如下所示：
 
--   **For**迴圈必須是結構化的區塊中，且，此外，其執行必須不結束**中斷**陳述式。
+- **For**迴圈必須是結構化的區塊中，且，此外，其執行必須不結束**中斷**陳述式。
 
--   值，迴圈的控制運算式**for**與相關聯的迴圈**如**指示詞必須是相同的小組中的所有執行緒。
+- 值，迴圈的控制運算式**for**與相關聯的迴圈**如**指示詞必須是相同的小組中的所有執行緒。
 
--   **針對**迴圈反覆項目變數必須具有帶正負號的整數類型。
+- **針對**迴圈反覆項目變數必須具有帶正負號的整數類型。
 
--   只有一個**排程**子句可能會出現在**如**指示詞。
+- 只有一個**排程**子句可能會出現在**如**指示詞。
 
--   只有一個**排序**子句可能會出現在**如**指示詞。
+- 只有一個**排序**子句可能會出現在**如**指示詞。
 
--   只有一個**nowait**子句可能會出現在**如**指示詞。
+- 只有一個**nowait**子句可能會出現在**如**指示詞。
 
--   如果未指定，或任何側邊效果內的頻率*chunk_size*， *lb*， *b*，或*incr*運算式就會發生。
+- 如果未指定，或任何側邊效果內的頻率*chunk_size*， *lb*， *b*，或*incr*運算式就會發生。
 
--   值*chunk_size*運算式必須是相同的小組中的所有執行緒。
+- 值*chunk_size*運算式必須是相同的小組中的所有執行緒。
 
 ## <a name="cross-references"></a>交叉參考：
 
--   **私用**， **firstprivate**， **lastprivate**，和**減少**子句，請參閱[區段 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) 25 頁上。
+- **私用**， **firstprivate**， **lastprivate**，和**減少**子句，請參閱[區段 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) 25 頁上。
 
--   **OMP_SCHEDULE**環境變數，請參閱[第 4.1 節](../../parallel/openmp/4-1-omp-schedule.md)48 頁上。
+- **OMP_SCHEDULE**環境變數，請參閱[第 4.1 節](../../parallel/openmp/4-1-omp-schedule.md)48 頁上。
 
--   **排序**建構，請參閱 <<c2> [ 一節 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) 22 頁面上。
+- **排序**建構，請參閱 <<c2> [ 一節 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) 22 頁面上。
 
--   [附錄 D](../../parallel/openmp/d-using-the-schedule-clause.md)，頁面 93，提供有關使用排程子句的詳細資訊。
+- [附錄 D](../../parallel/openmp/d-using-the-schedule-clause.md)，頁面 93，提供有關使用排程子句的詳細資訊。

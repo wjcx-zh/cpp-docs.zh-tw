@@ -1,5 +1,5 @@
 ---
-title: 下拉式方塊處理常式 |Microsoft 文件
+title: 下拉式方塊處理常式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -37,30 +37,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e1dcd48bfadcc4ed5a4b64fd0dcdee334c1f1b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5751fbdd4bff0cf3d42231ad00bef0c3483ccfb9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368068"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424257"
 ---
 # <a name="combo-box-handlers"></a>下拉式方塊處理常式
-下列的對應項目對應至函式原型。  
-  
-|對應項目|函式原型|  
-|---------------|------------------------|  
-|ON_CBN_CLOSEUP (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （)|  
-|ON_CBN_DBLCLK (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|  
-|ON_CBN_DROPDOWN (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|  
-|ON_CBN_EDITCHANGE (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|  
-|ON_CBN_EDITUPDATE (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|  
-|ON_CBN_ERRSPACE (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|  
-|ON_CBN_KILLFOCUS (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|  
-|ON_CBN_SELCHANGE (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|  
-|ON_CBN_SELENDCANCEL (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|  
-|ON_CBN_SELENDOK (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|  
-|ON_CBN_SETFOCUS (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|  
-  
-## <a name="see-also"></a>另請參閱  
- [訊息對應](../../mfc/reference/message-maps-mfc.md)
+
+下列的對應項目會對應至函式原型。
+
+|對應項目|函式原型|
+|---------------|------------------------|
+|ON_CBN_CLOSEUP (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （)|
+|ON_CBN_DBLCLK (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
+|ON_CBN_DROPDOWN (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
+|ON_CBN_EDITCHANGE (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
+|ON_CBN_EDITUPDATE (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
+|ON_CBN_ERRSPACE (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
+|ON_CBN_KILLFOCUS (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
+|ON_CBN_SELCHANGE (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
+|ON_CBN_SELENDCANCEL (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
+|ON_CBN_SELENDOK (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
+|ON_CBN_SETFOCUS (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
+
+## <a name="see-also"></a>另請參閱
+
+[訊息對應](../../mfc/reference/message-maps-mfc.md)
 

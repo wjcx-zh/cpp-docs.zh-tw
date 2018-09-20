@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3fd2fcc5fc8603f265fa2d213325227baecd7f5d
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 6c66f7074269e99b35785299800665be48cebef9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313764"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415716"
 ---
 # <a name="creating-pop-up-menus-c"></a>建立快顯功能表 （c + +）
 
@@ -52,5 +52,5 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[將快顯功能表連接至您的應用程式](../windows/connecting-a-pop-up-menu-to-your-application.md)  
+[將快顯功能表連接至您的應用程式](../windows/connecting-a-pop-up-menu-to-your-application.md)<br/>
 [功能表編輯器](../windows/menu-editor.md)

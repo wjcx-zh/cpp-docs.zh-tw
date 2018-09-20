@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c11beb3f8a5b9b189fff237012580765f8858fc0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f7ee7ed9fbbe48477aecb51ca489fe2ad9609e41
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717557"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408099"
 ---
 # <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-report (自動向量化工具報告層級)
 
@@ -53,7 +53,7 @@ ms.locfileid: "45717557"
 
 ## <a name="see-also"></a>另請參閱
 
-[/Q 選項 （低階運算）](../../build/reference/q-options-low-level-operations.md)
+[/Q 選項 (低階運算)](../../build/reference/q-options-low-level-operations.md)<br/>
 [編譯器選項](../../build/reference/compiler-options.md)<br/>
 [設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
 [以原生程式碼進行平行程式設計](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cee634ab62e699b4de6af54a57b0fe3d6b5e9a40
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5e223ce02fa8a50ac39298d1f45f1f531dbf1f97
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606604"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411322"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier 類別
 
@@ -37,7 +37,7 @@ class MethodReleaseNotifier : public ReleaseNotifier;
 
 ### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 成員函式是事件處理常式的物件類型。
 
 ## <a name="members"></a>成員
@@ -74,4 +74,5 @@ class MethodReleaseNotifier : public ReleaseNotifier;
 **命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
+
 [Module 類別](../windows/module-class.md)

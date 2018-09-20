@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3eade86404bcd4fef7ce3356d36a43ac6a59a8f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 047754338566d476fa8e832d58dd2d4cd0776a63
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597751"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418394"
 ---
 # <a name="argtraits-structure"></a>ArgTraits 結構
 
@@ -120,37 +120,37 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
 
 ### <a name="parameters"></a>參數
 
-*TMemberFunction*  
+*TMemberFunction*<br/>
 Typename 參數不符合任何 ArgTraits 結構`Invoke`方法簽章。
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 委派的介面。
 
-*TArg1*  
+*TArg1*<br/>
 第一個引數型別`Invoke`方法。
 
-*TArg2*  
+*TArg2*<br/>
 第二個引數型別`Invoke`方法。
 
-*TArg3*  
+*TArg3*<br/>
 第三個引數型別`Invoke`方法。
 
-*TArg4*  
+*TArg4*<br/>
 第四個引數型別`Invoke`方法。
 
-*TArg5*  
+*TArg5*<br/>
 第五個引數型別`Invoke`方法。
 
-*TArg6*  
+*TArg6*<br/>
 第六個引數型別`Invoke`方法。
 
-*TArg7*  
+*TArg7*<br/>
 第七個引數型別`Invoke`方法。
 
-*TArg8*  
+*TArg8*<br/>
 第八個引數型別`Invoke`方法。
 
-*TArg9*  
+*TArg9*<br/>
 第九個引數型別`Invoke`方法。
 
 ## <a name="remarks"></a>備註

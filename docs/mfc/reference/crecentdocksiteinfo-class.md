@@ -40,247 +40,262 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42fd0c5df1731ded5e48bda74cb280b282e6b0cb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a949a487f04a0aaac1ddf6eb3597dc6243cea548
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702607"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403069"
 ---
 # <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo 類別
-`CRecentDockSiteInfo`類別會儲存最新狀態資訊的 helper 類別[CPane 類別](../../mfc/reference/cpane-class.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-class CRecentDockSiteInfo : public CObject  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|`CRecentDockSiteInfo::CRecentDockSiteInfo`|預設建構函式。|  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CRecentDockSiteInfo::CleanUp](#cleanup)||  
-|[CRecentDockSiteInfo::GetRecentDefaultPaneDivider](#getrecentdefaultpanedivider)||  
-|[CRecentDockSiteInfo::GetRecentDockedPercent](#getrecentdockedpercent)||  
-|[CRecentDockSiteInfo::GetRecentDockedRect](#getrecentdockedrect)||  
-|[CRecentDockSiteInfo::GetRecentListOfPanes](#getrecentlistofpanes)||  
-|[CRecentDockSiteInfo::GetRecentPaneContainer](#getrecentpanecontainer)||  
-|[CRecentDockSiteInfo::GetRecentTabContainer](#getrecenttabcontainer)||  
-|[CRecentDockSiteInfo::Init](#init)||  
-|[CRecentDockSiteInfo::IsRecentLeftPane](#isrecentleftpane)||  
-|[CRecentDockSiteInfo::operator =](#operator_eq)||  
-|[CRecentDockSiteInfo::SaveListOfRecentPanes](#savelistofrecentpanes)||  
-|[CRecentDockSiteInfo::SetInfo](#setinfo)||  
-|[CRecentDockSiteInfo::StoreDockInfo](#storedockinfo)||  
-  
-## <a name="remarks"></a>備註  
- `CRecentDockSiteInfo` 類別是資料管理類別。 它會追蹤 `CPane` 在停駐和浮動之間轉換時的最後狀態。 當使用者按兩下浮動可停駐窗格時，它會變成停駐。 按兩下停駐窗格會使其返回至先前的位置、大小及狀態。 同樣地，重新停駐窗格時，它會返回至其先前的停駐位置。 這個資料類別可以使其成行。 由於此類別的成員會儲存停駐窗格的狀態資訊，所以它們不應該由您的應用程式直接修改。  
-  
- 每次建立窗格式就會建立 `CRecentDockSiteInfo` 物件。 每個`CPane`物件具有成員變數， [cpane:: M_recentdockinfo](../../mfc/reference/cpane-class.md#m_recentdockinfo)來儲存這項資訊。  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md)  
-  
-## <a name="requirements"></a>需求  
- **標頭：** afxrecentDockSiteInfo.h  
-  
-##  <a name="cleanup"></a>  CRecentDockSiteInfo::CleanUp  
 
-  
-```  
+`CRecentDockSiteInfo`類別會儲存最新狀態資訊的 helper 類別[CPane 類別](../../mfc/reference/cpane-class.md)。
+
+## <a name="syntax"></a>語法
+
+```
+class CRecentDockSiteInfo : public CObject
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|`CRecentDockSiteInfo::CRecentDockSiteInfo`|預設建構函式。|
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[CRecentDockSiteInfo::CleanUp](#cleanup)||
+|[CRecentDockSiteInfo::GetRecentDefaultPaneDivider](#getrecentdefaultpanedivider)||
+|[CRecentDockSiteInfo::GetRecentDockedPercent](#getrecentdockedpercent)||
+|[CRecentDockSiteInfo::GetRecentDockedRect](#getrecentdockedrect)||
+|[CRecentDockSiteInfo::GetRecentListOfPanes](#getrecentlistofpanes)||
+|[CRecentDockSiteInfo::GetRecentPaneContainer](#getrecentpanecontainer)||
+|[CRecentDockSiteInfo::GetRecentTabContainer](#getrecenttabcontainer)||
+|[CRecentDockSiteInfo::Init](#init)||
+|[CRecentDockSiteInfo::IsRecentLeftPane](#isrecentleftpane)||
+|[CRecentDockSiteInfo::operator =](#operator_eq)||
+|[CRecentDockSiteInfo::SaveListOfRecentPanes](#savelistofrecentpanes)||
+|[CRecentDockSiteInfo::SetInfo](#setinfo)||
+|[CRecentDockSiteInfo::StoreDockInfo](#storedockinfo)||
+
+## <a name="remarks"></a>備註
+
+`CRecentDockSiteInfo` 類別是資料管理類別。 它會追蹤 `CPane` 在停駐和浮動之間轉換時的最後狀態。 當使用者按兩下浮動可停駐窗格時，它會變成停駐。 按兩下停駐窗格會使其返回至先前的位置、大小及狀態。 同樣地，重新停駐窗格時，它會返回至其先前的停駐位置。 這個資料類別可以使其成行。 由於此類別的成員會儲存停駐窗格的狀態資訊，所以它們不應該由您的應用程式直接修改。
+
+每次建立窗格式就會建立 `CRecentDockSiteInfo` 物件。 每個`CPane`物件具有成員變數， [cpane:: M_recentdockinfo](../../mfc/reference/cpane-class.md#m_recentdockinfo)來儲存這項資訊。
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md)
+
+## <a name="requirements"></a>需求
+
+**標頭：** afxrecentDockSiteInfo.h
+
+##  <a name="cleanup"></a>  CRecentDockSiteInfo::CleanUp
+
+
+```
 void CleanUp();
-```  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="crecentdocksiteinfo"></a>  CRecentDockSiteInfo::CRecentDockSiteInfo  
+```
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="crecentdocksiteinfo"></a>  CRecentDockSiteInfo::CRecentDockSiteInfo
+
+
+```
 CRecentDockSiteInfo(CPane* pBar);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*pBar*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getrecentdefaultpanedivider"></a>  CRecentDockSiteInfo::GetRecentDefaultPaneDivider  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+[in]*pBar*
+
+### <a name="remarks"></a>備註
+
+##  <a name="getrecentdefaultpanedivider"></a>  CRecentDockSiteInfo::GetRecentDefaultPaneDivider
+
+
+```
 CPaneDivider* GetRecentDefaultPaneDivider();
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getrecentdockedpercent"></a>  CRecentDockSiteInfo::GetRecentDockedPercent  
+```
 
-  
-```  
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getrecentdockedpercent"></a>  CRecentDockSiteInfo::GetRecentDockedPercent
+
+
+```
 int GetRecentDockedPercent(BOOL bForSlider);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*bForSlider*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getrecentdockedrect"></a>  CRecentDockSiteInfo::GetRecentDockedRect  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+[in]*bForSlider*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getrecentdockedrect"></a>  CRecentDockSiteInfo::GetRecentDockedRect
+
+
+```
 CRect& GetRecentDockedRect(BOOL bForSlider);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*bForSlider*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getrecentlistofpanes"></a>  CRecentDockSiteInfo::GetRecentListOfPanes  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+[in]*bForSlider*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getrecentlistofpanes"></a>  CRecentDockSiteInfo::GetRecentListOfPanes
+
+
+```
 CList<HWND, HWND>& GetRecentListOfPanes(BOOL bForSlider);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*bForSlider*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getrecentpanecontainer"></a>  CRecentDockSiteInfo::GetRecentPaneContainer  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+[in]*bForSlider*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getrecentpanecontainer"></a>  CRecentDockSiteInfo::GetRecentPaneContainer
+
+
+```
 CPaneContainer* GetRecentPaneContainer(BOOL bForSlider);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*bForSlider*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getrecenttabcontainer"></a>  CRecentDockSiteInfo::GetRecentTabContainer  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+[in]*bForSlider*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getrecenttabcontainer"></a>  CRecentDockSiteInfo::GetRecentTabContainer
+
+
+```
 CPaneContainer* GetRecentTabContainer(BOOL bForSlider);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*bForSlider*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="init"></a>  CRecentDockSiteInfo::Init  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+[in]*bForSlider*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="init"></a>  CRecentDockSiteInfo::Init
+
+
+```
 void Init();
-```  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="isrecentleftpane"></a>  CRecentDockSiteInfo::IsRecentLeftPane  
+```
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="isrecentleftpane"></a>  CRecentDockSiteInfo::IsRecentLeftPane
+
+
+```
 BOOL IsRecentLeftPane(BOOL bForSlider);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*bForSlider*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="operator_eq"></a>  CRecentDockSiteInfo::operator =  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+[in]*bForSlider*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="operator_eq"></a>  CRecentDockSiteInfo::operator =
+
+
+```
 CRecentDockSiteInfo& operator=(CRecentDockSiteInfo& src);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*src*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="savelistofrecentpanes"></a>  CRecentDockSiteInfo::SaveListOfRecentPanes  
+```
 
-  
-```  
-void SaveListOfRecentPanes(CList<HWND,  
-    HWND>& lstOrg,  
+### <a name="parameters"></a>參數
+
+[in]*src*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="savelistofrecentpanes"></a>  CRecentDockSiteInfo::SaveListOfRecentPanes
+
+
+```
+void SaveListOfRecentPanes(CList<HWND,
+    HWND>& lstOrg,
     BOOL bForSlider);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *CList < HWND*<br/>
-[in][in]*lstOrg*  
- [in]*bForSlider*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="setinfo"></a>  CRecentDockSiteInfo::SetInfo  
+[in][in]*lstOrg* [in] *bForSlider*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="setinfo"></a>  CRecentDockSiteInfo::SetInfo
+
+
+```
 virtual void SetInfo(
-    BOOL bForSlider,  
+    BOOL bForSlider,
     CRecentDockSiteInfo& srcInfo);
-```  
-  
-### <a name="parameters"></a>參數  
-*bForSlider*<br/>
-[in][in]*srcInfo*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="storedockinfo"></a>  CRecentDockSiteInfo::StoreDockInfo  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*bForSlider*<br/>
+[in][in]*srcInfo*
+
+### <a name="remarks"></a>備註
+
+##  <a name="storedockinfo"></a>  CRecentDockSiteInfo::StoreDockInfo
+
+
+```
 virtual void StoreDockInfo(
-    CPaneContainer* pRecentContainer,  
+    CPaneContainer* pRecentContainer,
     CDockablePane* pTabbedBar = NULL);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pRecentContainer*<br/>
-[in][in]*pTabbedBar*  
-  
-### <a name="remarks"></a>備註  
-  
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CDockSite 類別](../../mfc/reference/cdocksite-class.md)
+[in][in]*pTabbedBar*
+
+### <a name="remarks"></a>備註
+
+## <a name="see-also"></a>另請參閱
+
+[階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
+[類別](../../mfc/reference/mfc-classes.md)<br/>
+[CDockSite 類別](../../mfc/reference/cdocksite-class.md)

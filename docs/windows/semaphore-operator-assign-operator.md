@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fbce88be7f7b83c22964438bc4ea7a783754fb63
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1b35268cd883245b125aa7c87919124b29451ff1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609004"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420318"
 ---
 # <a name="semaphoreoperator-operator"></a>Semaphore::operator= 運算子
 
@@ -38,7 +38,7 @@ Semaphore& operator=(
 
 ### <a name="parameters"></a>參數
 
-*h*  
+*h*<br/>
 以右值參考**號誌**物件。
 
 ## <a name="return-value"></a>傳回值
@@ -52,4 +52,5 @@ Semaphore& operator=(
 **命名空間：** Microsoft::WRL::Wrappers
 
 ## <a name="see-also"></a>另請參閱
+
 [Semaphore 類別](../windows/semaphore-class.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 876f2bde68c53a27c1c40e9206b6285b8562bd91
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d570eaf3872f5d281d769e77298f9186d35e5a26
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591135"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410425"
 ---
 # <a name="implementshelperfillarraywithiid-method"></a>ImplementsHelper::FillArrayWithIid 方法
 
@@ -38,10 +38,10 @@ void FillArrayWithIid(
 
 ### <a name="parameters"></a>參數
 
-*index*  
+*index*<br/>
 以零為起始的索引，指出起始的陣列項目，這項作業。 這項作業完成時， *index*都會遞增 1。
 
-*iid*  
+*iid*<br/>
 Iid 類型的陣列。
 
 ## <a name="remarks"></a>備註
@@ -56,5 +56,5 @@ Iid 類型的陣列。
 
 ## <a name="see-also"></a>另請參閱
 
-[ImplementsHelper 結構](../windows/implementshelper-structure.md)  
+[ImplementsHelper 結構](../windows/implementshelper-structure.md)<br/>
 [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

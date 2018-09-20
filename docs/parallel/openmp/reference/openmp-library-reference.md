@@ -1,5 +1,5 @@
 ---
-title: OpenMP 程式庫參考 |Microsoft 文件
+title: OpenMP 程式庫參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,24 +12,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45f6206960b023bac7b99b867966703a210d7b1e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f3812f698f034b5610f90c57b94b56f0b8648417
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694429"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403796"
 ---
 # <a name="openmp-library-reference"></a>OpenMP 程式庫參考
-提供建構 OpenMP API 中使用的連結。  
-  
- OpenMP 標準的 Visual c + + 實作會包含下列建構函式。  
-  
-|建構|描述|  
-|---------------|-----------------|  
-|[程式庫](../../../parallel/openmp/reference/openmp-libraries.md)|討論在 Visual c + + 中的 OpenMP 執行階段程式庫所組成的.lib 檔案。|  
-|[資料類型](../../../parallel/openmp/reference/openmp-data-types.md)|提供在 OpenMP API 中使用的資料類型的連結。|  
-|[環境變數](../../../parallel/openmp/reference/openmp-environment-variables.md)|提供連結 OpenMP API 中使用的環境變數。|  
-|[函式](../../../parallel/openmp/reference/openmp-functions.md)|提供用於 OpenMP API 函式的連結。|  
-  
-## <a name="see-also"></a>另請參閱  
- [OpenMP](../../../parallel/openmp/openmp-in-visual-cpp.md)
+
+提供建構 OpenMP API 中使用的連結。
+
+Visual c + + 實作的 OpenMP 標準包含下列建構。
+
+|建構|描述|
+|---------------|-----------------|
+|[程式庫](../../../parallel/openmp/reference/openmp-libraries.md)|討論組成 Visual c + + OpenMP 執行階段程式庫的.lib 檔案。|
+|[資料類型](../../../parallel/openmp/reference/openmp-data-types.md)|提供在 OpenMP API 中使用的資料類型的連結。|
+|[環境變數](../../../parallel/openmp/reference/openmp-environment-variables.md)|提供連結 OpenMP API 中使用的環境變數。|
+|[函式](../../../parallel/openmp/reference/openmp-functions.md)|提供在 OpenMP API 中使用的函式連結。|
+
+## <a name="see-also"></a>另請參閱
+
+[OpenMP](../../../parallel/openmp/openmp-in-visual-cpp.md)

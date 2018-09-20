@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd43102eb3a3b4e7bb14e65e0c710b814fc10cff
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: aed52e5ba209a826130b1a85aa866fe024174818
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593828"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424634"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory 函式
 
@@ -40,16 +40,16 @@ template<typename Factory>
 
 ### <a name="parameters"></a>參數
 
-*flags*  
+*flags*<br/>
 一或多個組合[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。
 
-*entry*  
+*entry*<br/>
 指標[CreatorMap](../windows/creatormap-structure.md) ，其中包含參數的初始設定和註冊資訊*riid*。
 
-*riid*  
+*riid*<br/>
 參考介面識別碼。
 
-*ppFactory*  
+*ppFactory*<br/>
 如果這項作業成功完成啟動處理站的指標。
 
 ## <a name="return-value"></a>傳回值

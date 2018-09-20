@@ -1,28 +1,38 @@
 ---
 title: ClassFactory 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/13/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::ClassFactory
+- module/Microsoft::WRL::ClassFactory::AddRef
+- module/Microsoft::WRL::ClassFactory::ClassFactory
+- module/Microsoft::WRL::ClassFactory::LockServer
+- module/Microsoft::WRL::ClassFactory::QueryInterface
+- module/Microsoft::WRL::ClassFactory::Release
 dev_langs:
 - C++
 helpviewer_keywords:
-- ClassFactory class
+- Microsoft::WRL::ClassFactory class
+- Microsoft::WRL::ClassFactory::AddRef method
+- Microsoft::WRL::ClassFactory::ClassFactory, constructor
+- Microsoft::WRL::ClassFactory::LockServer method
+- Microsoft::WRL::ClassFactory::QueryInterface method
+- Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f033fc20fac656e6b9fcfa9ac822099ea929d62
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bfaf95a477917fc417cfe3c296822233eca77c09
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611801"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413064"
 ---
 # <a name="classfactory-class"></a>ClassFactory 類別
 
@@ -48,18 +58,18 @@ class ClassFactory : public Details::RuntimeClass<
 
 ### <a name="parameters"></a>參數
 
-*I0*  
+*I0*<br/>
 第零個介面中。
 
-*I1*  
+*I1*<br/>
 第一個介面。
 
-*I2*  
+*I2*<br/>
 第二個介面中。
 
 ## <a name="remarks"></a>備註
 
-利用**ClassFactory**以提供使用者定義的 factory 實作。
+利用`ClassFactory`以提供使用者定義的 factory 實作。
 
 下列的程式設計模式將示範如何使用[實作](../windows/implements-structure.md)結構，以指定三個以上的介面上的 class factory。
 
@@ -69,18 +79,18 @@ class ClassFactory : public Details::RuntimeClass<
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
-|----------|-----------------|
-|[ClassFactory::ClassFactory 建構函式](../windows/classfactory-classfactory-constructor.md)||
+名稱                                        | 描述
+------------------------------------------- | -----------
+[Classfactory:: Classfactory](#classfactory) |
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
-|----------|-----------------|
-|[ClassFactory::AddRef 方法](../windows/classfactory-addref-method.md)|目前的參考計數會遞增**ClassFactory**物件。|
-|[ClassFactory::LockServer 方法](../windows/classfactory-lockserver-method.md)|遞增或遞減目前所追蹤物件的基礎數目**ClassFactory**物件。|
-|[ClassFactory::QueryInterface 方法](../windows/classfactory-queryinterface-method.md)|擷取指定參數的介面指標。|
-|[ClassFactory::Release 方法](../windows/classfactory-release-method.md)|遞減參考計數目前**ClassFactory**物件。|
+名稱                                            | 描述
+----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------
+[Classfactory:: Addref](#addref)                 | 遞增參考計數目前`ClassFactory`物件。
+[Classfactory:: Lockserver](#lockserver)         | 遞增或遞減目前所追蹤物件數量基礎`ClassFactory`物件。
+[Classfactory:: Queryinterface](#queryinterface) | 擷取指定參數的介面指標。
+[Classfactory:: Release](#release)               | 遞減參考計數目前`ClassFactory`物件。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -110,7 +120,83 @@ class ClassFactory : public Details::RuntimeClass<
 
 **命名空間：** Microsoft::WRL
 
-## <a name="see-also"></a>另請參閱
+## <a name="addref"></a>Classfactory:: Addref
 
-[Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)  
-[RuntimeClassType 列舉](../windows/runtimeclasstype-enumeration.md)
+遞增參考計數目前`ClassFactory`物件。
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   AddRef
+)();
+```
+
+### <a name="return-value"></a>傳回值
+
+若成功，則為 S_OK，否則會是 HRESULT 指出失敗。
+
+## <a name="classfactory"></a>Classfactory:: Classfactory
+
+```cpp
+WRL_NOTHROW ClassFactory();
+```
+
+## <a name="lockserver"></a>Classfactory:: Lockserver
+
+遞增或遞減目前所追蹤物件數量基礎`ClassFactory`物件。
+
+```cpp
+STDMETHOD(
+   LockServer
+)(BOOL fLock);
+```
+
+### <a name="parameters"></a>參數
+
+*fLock*<br/>
+`true` 若要追蹤的物件數目的增加。 `false` 若要減少追蹤的物件數目。
+
+### <a name="return-value"></a>傳回值
+
+如果成功則為 S_OK否則，E_FAIL。
+
+### <a name="remarks"></a>備註
+
+`ClassFactory` 追蹤的基礎執行個體中的物件[模組](../windows/module-class.md)類別。
+
+## <a name="queryinterface"></a>Classfactory:: Queryinterface
+
+擷取指定參數的介面指標。
+
+```cpp
+STDMETHOD(
+   QueryInterface
+)(REFIID riid, _Deref_out_ void **ppvObject);
+```
+
+### <a name="parameters"></a>參數
+
+*riid*<br/>
+介面識別碼。
+
+*ppvObject*<br/>
+這項作業完成時，參數所指定之介面指標*riid*。
+
+### <a name="return-value"></a>傳回值
+
+若成功，則為 S_OK，否則會是 HRESULT 指出失敗。
+
+## <a name="release"></a>Classfactory:: Release
+
+遞減參考計數目前`ClassFactory`物件。
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   Release
+)();
+```
+
+### <a name="return-value"></a>傳回值
+
+若成功，則為 S_OK，否則會是 HRESULT 指出失敗。

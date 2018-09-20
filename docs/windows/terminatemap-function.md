@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e56e3f48a3a58f25d03053867c195d11970893f9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f844d63bc04deb4294203f04aef30db48f195fd9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601403"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438063"
 ---
 # <a name="terminatemap-function"></a>TerminateMap 函式
 
@@ -39,13 +39,13 @@ inline bool TerminateMap(
 
 ### <a name="parameters"></a>參數
 
-*模組*  
+*模組*<br/>
 A[模組](../windows/module-class.md)。
 
-*伺服器名稱*  
+*伺服器名稱*<br/>
 名稱參數所指定的模組中的 class factory 的子集*模組*。
 
-*forceTerminate*  
+*forceTerminate*<br/>
 **true**終止類別處理站，不論它們是作用中;**false**未終止的 class factory，如果任何 factory 已啟用。
 
 ## <a name="return-value"></a>傳回值

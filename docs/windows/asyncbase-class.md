@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cba5aaaec3303d9cd3534ff86cb677219c9c81c7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 087ecf151b17c7c505b4b70d01913a44e113ad29
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586780"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428677"
 ---
 # <a name="asyncbase-class"></a>AsyncBase 類別
 
@@ -47,13 +47,13 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
 
 ### <a name="parameters"></a>參數
 
-*TComplete*  
+*TComplete*<br/>
 在非同步作業完成時，會呼叫事件處理常式。
 
-*Tprogress>*  
+*Tprogress>*<br/>
 在執行中的非同步作業報告目前進度的作業時，會呼叫事件處理常式。
 
-*resultType*  
+*resultType*<br/>
 其中一個[AsyncResultType](../windows/asyncresulttype-enumeration.md)列舉值。 根據預設， `SingleResult`。
 
 ## <a name="members"></a>成員

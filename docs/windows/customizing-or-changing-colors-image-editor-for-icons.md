@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6927ce218c862329e1669aaa1a42316cab68ec86
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: e507942bbb0e6f77ec6423a51e4260f3fdd647a3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317377"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405186"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>自訂或變更色彩 (圖示影像編輯器)
 
@@ -56,5 +56,5 @@ ms.locfileid: "44317377"
 
 ## <a name="see-also"></a>另請參閱
 
-[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)  
+[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [使用色彩](../windows/working-with-color-image-editor-for-icons.md)

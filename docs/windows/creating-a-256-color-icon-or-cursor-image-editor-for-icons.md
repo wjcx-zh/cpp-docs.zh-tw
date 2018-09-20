@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 930a73f478b02d5aa7a16f262f98131dccba9f76
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1d6e3af00bfe906a1954f7fc1d2b0af1ea52945e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315922"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415911"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>建立 256 色圖示或游標 (圖示影像編輯器)
 
@@ -51,6 +51,6 @@ ms.locfileid: "44315922"
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 256 色調色盤](../windows/using-the-256-color-palette-image-editor-for-icons.md)  
-[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)  
+[使用 256 色調色盤](../windows/using-the-256-color-palette-image-editor-for-icons.md)<br/>
+[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [圖示和游標： 顯示裝置的影像資源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

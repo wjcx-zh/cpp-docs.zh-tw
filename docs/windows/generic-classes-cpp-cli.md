@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 09390e25ffe06ce6702aef68d73c352e063a48ef
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3dbf6d861dd446745ba0cc3581c7e3e5511c01d3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716777"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409359"
 ---
 # <a name="generic-classes-ccli"></a>泛型類別 (C++/CLI)
 
@@ -47,38 +47,38 @@ class-body
 
 在上述語法中，使用下列詞彙：
 
-*屬性*  
+*屬性*<br/>
 （選擇性）其他宣告資訊。 如需關於屬性及屬性類別的詳細資訊，請參閱＜屬性＞。
 
-*類別索引鍵*  
+*類別索引鍵*<br/>
 任一**類別**或**typename**
 
 *類型-參數-識別碼*，識別項指定的型別參數名稱的逗號分隔的清單。
 
-*條件約束子句*  
+*條件約束子句*<br/>
 （不以逗號分隔） 的清單**其中**子句指定的型別參數條件約束。 採用下列格式：
 
 > **何處***型別參數識別項* **:** *條件約束清單***...** 
 
-*條件約束清單*  
+*條件約束清單*<br/>
 *類別或介面*[`,` *...*]
 
-*存取範圍修飾詞*  
+*存取範圍修飾詞*<br/>
 泛型類別的存取範圍修飾詞。 適用於 Windows 執行階段是唯一允許的修飾詞**私人**。 Common language runtime 中，是允許的修飾詞**私人**並**公用**。
 
-*identifier*  
+*identifier*<br/>
 泛型類別，也就是任何有效的 c + + 識別項的名稱。
 
-*修飾詞*  
+*修飾詞*<br/>
 （選擇性）允許的修飾詞包含**密封**並**抽象**。
 
-*基底清單*  
+*基底清單*<br/>
 清單，其中包含一個基底類別，以及任何實作介面，以逗號分隔。
 
-*在類別主體*  
+*在類別主體*<br/>
 包含欄位、 成員函式等的類別主體。
 
-*宣告子*  
+*宣告子*<br/>
 此類型的任何變數的宣告。 例如： `^`*識別項*[`,` ...]
 
 您可以宣告泛型類別，這類 (請注意，關鍵字**類別**可用而非**typename**)。 在此範例中， `ItemType`，`KeyType`和`ValueType`是未知的類型所指定的點位置類型。 `HashTable<int, int>` 為建構的類型的泛型型別`HashTable<KeyType, ValueType>`。 有多種不同的建構類型可以從單一泛型類型建構。 建構自泛型類別的建構的類型會視為任何其他 ref 類別類型。

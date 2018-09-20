@@ -152,12 +152,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c2419925896112eb235bcdfe77d9916373f0091
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: b9a1472cba13f477143c9b9ace27cb2555f41406
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539764"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408423"
 ---
 # <a name="predefined-macros"></a>預先定義的巨集
 
@@ -443,6 +443,6 @@ Microsoft Visual c + + 支援這些額外的預先定義巨集。
 
 ## <a name="see-also"></a>另請參閱
 
-[巨集 （C/c + +）](../preprocessor/macros-c-cpp.md)   
-[前置處理器運算子](../preprocessor/preprocessor-operators.md)   
+[巨集 (C/C++)](../preprocessor/macros-c-cpp.md)<br/>
+[前置處理器運算子](../preprocessor/preprocessor-operators.md)<br/>
 [前置處理器指示詞](../preprocessor/preprocessor-directives.md)

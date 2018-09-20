@@ -1,5 +1,5 @@
 ---
-title: CUserException 類別 |Microsoft 文件
+title: CUserException 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,45 +21,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1701f6894ba3b44205526c59bad7ef635c1bbbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71d2be1c00e518597a5d5121d7a53544bd29067f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369469"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419655"
 ---
 # <a name="cuserexception-class"></a>CUserException 類別
-擲回以停止使用者作業。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-class CUserException : public CSimpleException  
-```  
-  
-## <a name="remarks"></a>備註  
- 使用`CUserException`當您想要用於應用程式特定的例外狀況擲回/catch 例外狀況機制。 「 使用者 」 類別名稱中的可以解譯為 「 我的使用者沒有例外狀況，需要處理的項目。 」  
-  
- A`CUserException`通常會呼叫全域函式之後擲回`AfxMessageBox`通知作業失敗的使用者。 當您撰寫例外狀況處理常式時，請特別因為使用者通常已經已通知失敗的處理例外狀況。 架構會在某些情況下，擲回這個例外狀況。 擲回`CUserException`自己，警示使用者，然後呼叫全域函式`AfxThrowUserException`。  
-  
- 在下列範例中，包含可能會失敗的作業的函式會提醒使用者，並擲回`CUserException`。 呼叫的函式攔截例外狀況並加以處理，特別：  
-  
- [!code-cpp[NVC_MFCExceptions#24](../../mfc/codesnippet/cpp/cuserexception-class_1.cpp)]  
-  
- 如需有關使用`CUserException`，請參閱文章[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)。  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CException](../../mfc/reference/cexception-class.md)  
-  
- [CSimpleException](../../mfc/reference/csimpleexception-class.md)  
-  
- `CUserException`  
-  
-## <a name="requirements"></a>需求  
- **標題:** afxwin.h  
-  
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CException 類別](../../mfc/reference/cexception-class.md)
+
+擲回以停止使用者作業。
+
+## <a name="syntax"></a>語法
+
+```
+class CUserException : public CSimpleException
+```
+
+## <a name="remarks"></a>備註
+
+使用`CUserException`當您想要用於應用程式特定例外狀況的擲回/catch 例外狀況機制。 「 使用者 」 中的類別名稱可以解譯為 「 我的使用者做例外，需要處理的項目。 」
+
+A`CUserException`通常會呼叫全域函式之後擲回`AfxMessageBox`來通知使用者作業已失敗。 當您撰寫例外狀況處理常式時，請特別因為使用者通常已經已通知的失敗時，才處理例外狀況。 此架構會在某些情況下，擲回這個例外狀況。 擲回`CUserException`，警示使用者，並接著呼叫全域函式`AfxThrowUserException`。
+
+在下列範例中，包含可能會失敗的作業的函式會警示使用者，並擲回`CUserException`。 呼叫的函式攔截到例外狀況，並特別將加以處理：
+
+[!code-cpp[NVC_MFCExceptions#24](../../mfc/codesnippet/cpp/cuserexception-class_1.cpp)]
+
+如需有關使用`CUserException`，請參閱文章[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)。
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CException](../../mfc/reference/cexception-class.md)
+
+[CSimpleException](../../mfc/reference/csimpleexception-class.md)
+
+`CUserException`
+
+## <a name="requirements"></a>需求
+
+**標題:** afxwin.h
+
+## <a name="see-also"></a>另請參閱
+
+[階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
+[CException 類別](../../mfc/reference/cexception-class.md)

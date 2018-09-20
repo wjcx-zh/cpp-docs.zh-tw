@@ -1,5 +1,5 @@
 ---
-title: 文件樣板類別 |Microsoft 文件
+title: 文件範本類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9958484633dd736426fc91321d0964abf0ad7e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87984bf06d8ca178d2a21ac8ff475f828690668e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343537"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406057"
 ---
 # <a name="document-template-classes"></a>文件樣板類別
-文件範本物件的文件、 檢視和框架視窗物件的新文件時建立或建立檢視。  
-  
- [CDocTemplate](../mfc/reference/cdoctemplate-class.md)  
- 文件範本基底類別。 您永遠不會直接; 使用這個類別相反地，您會使用其中一個衍生自這個類別的其他文件範本類別。  
-  
- [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)  
- 在多重文件介面 (MDI) 的文件的範本。 MDI 應用程式可以有多個同時開啟的文件。  
-  
- [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md)  
- 在單一文件介面 (SDI) 的文件的範本。 SDI 應用程式有開啟一次只能有一個文件。  
-  
-## <a name="related-class"></a>相關的類別  
- [CCreateContext](../mfc/reference/ccreatecontext-structure.md)  
- 結構傳視窗建立函式，來協調建立文件、 檢視和框架視窗物件的文件範本。  
-  
-## <a name="see-also"></a>另請參閱  
- [類別概觀](../mfc/class-library-overview.md)
+
+文件範本物件的文件、 檢視和框架視窗物件的新文件時建立或建立檢視。
+
+[CDocTemplate](../mfc/reference/cdoctemplate-class.md)<br/>
+文件範本基底類別。 您永遠不會直接; 使用這個類別相反地，您會使用其中一個衍生自這個類別的其他文件範本類別。
+
+[CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)<br/>
+在多重文件介面 (MDI) 的文件的範本。 MDI 應用程式可以有多個文件開啟一次。
+
+[CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md)<br/>
+在單一文件介面 (SDI) 中的文件的範本。 SDI 應用程式已開啟一次只能有一個文件。
+
+## <a name="related-class"></a>相關的類別
+
+[CCreateContext](../mfc/reference/ccreatecontext-structure.md)<br/>
+結構傳遞至視窗建立函式，來協調建立文件、 檢視和框架視窗物件的文件範本。
+
+## <a name="see-also"></a>另請參閱
+
+[類別概觀](../mfc/class-library-overview.md)
 

@@ -22,28 +22,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59600343a06a2c3c0d4f5b55efadaa09c43452d9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 71a02b89e7b2098f8a125d1477cff2a0d1cda30a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067697"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429957"
 ---
 # <a name="extent-class-c-amp"></a>extent 類別 (C++ AMP)
+
 代表向量的位元*N*整數值，指定的界限*N*-維空間的 0 為原點。 向量中的值排序從最大顯著性到最不重要。
 
 ### <a name="syntax"></a>語法
 
-```  
+```
 template <int _Rank>
 class extent;
-```  
+```
 
 ### <a name="parameters"></a>參數
+
 *_Rank*<br/>
 陣序`extent`物件。
 
 ## <a name="requirements"></a>需求
+
 **標頭︰** amp.h
 
 **命名空間：** 並行
@@ -80,7 +83,6 @@ class extent;
 |[operator=](#operator_eq)|複製的另一個內容`extent`到這個物件。|
 |[operator-=](#operator_min_eq)|減去指定的每個元素的數值`extent`物件。|
 
-
 ### <a name="public-constants"></a>公用常數
 
 |名稱|描述|
@@ -88,8 +90,8 @@ class extent;
 |[rank 常數](#rank)|取得的順位`extent`物件。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
-`extent`  
 
+`extent`
 
 ## <a name="contains"></a> 包含
 
@@ -97,15 +99,17 @@ class extent;
 
 ### <a name="syntax"></a>語法
 
-```  
+```
 bool contains(const index<rank>& _Index) const restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>參數
+
 *_Index*<br/>
 `index`若要測試的值。
 
 ### <a name="return-value"></a>傳回值
+
 `true` 如果指定`index`值包含於`extent`物件; 否則`false`。
 
 ##  <a name="ctor"></a> 範圍
@@ -114,16 +118,17 @@ bool contains(const index<rank>& _Index) const restrict(amp,cpu);
 
 ### <a name="syntax"></a>語法
 
-```  
+```
 extent() restrict(amp,cpu);
 extent(const extent<_Rank>& _Other) restrict(amp,cpu);
 explicit extent(int _I) restrict(amp,cpu);
 extent(int _I0,  int _I1) restrict(amp,cpu);
 extent(int _I0,  int _I1, int _I2) restrict(amp,cpu);
 explicit extent(const int _Array[_Rank])restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>參數
+
 *_Array*<br/>
 陣列`_Rank`用來建立新的整數`extent`物件。
 
@@ -143,6 +148,7 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
 `extent`物件上的新`extent`物件為基礎。
 
 ## <a name="remarks"></a>備註
+
 無參數建構函式初始化`extent`具有三個等級的物件。
 
 如果陣列用來建構`extent`物件陣列的長度必須符合的陣序`extent`物件。
@@ -153,15 +159,17 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
 
 ### <a name="syntax"></a>語法
 
-```  
+```
 extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
-```  
+```
 
 ### <a name="parameters"></a>參數
+
 *_Rhs*<br/>
 要尋找的模數的數字。
 
 ### <a name="return-value"></a>傳回值
+
 `extent` 物件。
 
 ##  <a name="operator_star_eq"></a> 運算子 * =
@@ -170,15 +178,17 @@ extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 
 ### <a name="syntax"></a>語法
 
-```  
+```
 extent<_Rank>& operator*=(int _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>參數
+
 *_Rhs*<br/>
 要相乘的數字。
 
 ### <a name="return-value"></a>傳回值
+
 `extent` 物件。
 
 ## <a name="operator_add"></a> operator +
@@ -187,15 +197,17 @@ extent<_Rank>& operator*=(int _Rhs) restrict(amp,cpu);
 
 ### <a name="syntax"></a>語法
 
-```  
+```
 extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>參數
+
 *_Rhs*<br/>
 `index`物件，其中包含要加入的元素。
 
 ### <a name="return-value"></a>傳回值
+
 新的 `extent` 物件。
 
 ##  <a name="operator_add_add"></a> operator + +
@@ -204,12 +216,13 @@ extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
 
 ### <a name="syntax"></a>語法
 
-```  
+```
 extent<_Rank>& operator++() restrict(amp,cpu);
 extent<_Rank> operator++(int)restrict(amp,cpu);
-```  
+```
 
 ### <a name="return-value"></a>傳回值
+
 前置運算子，如`extent`物件 (`*this`)。 為後置運算子中，新`extent`物件。
 
 ##  <a name="operator_add_eq"></a> operator + =
@@ -218,17 +231,19 @@ extent<_Rank> operator++(int)restrict(amp,cpu);
 
 ### <a name="syntax"></a>語法
 
-```  
+```
 extent<_Rank>& operator+=(const extent<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator+=(const index<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>參數
+
 *_Rhs*<br/>
 數字、 索引或範圍加入。
 
 ### <a name="return-value"></a>傳回值
+
 產生 `extent` 物件。
 
 ##  <a name="operator_min"></a> 運算子-
@@ -237,15 +252,17 @@ extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
 
 ### <a name="syntax"></a>語法
 
-```  
+```
 extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>參數
+
 *_Rhs*<br/>
 `index`物件，其中包含要減去的項目。
 
 ### <a name="return-value"></a>傳回值
+
 新的 `extent` 物件。
 
 ##  <a name="operator_min_min"></a> operator-
@@ -254,12 +271,13 @@ extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
 
 ### <a name="syntax"></a>語法
 
-```  
+```
 extent<_Rank>& operator--() restrict(amp,cpu);
 extent<_Rank> operator--(int)restrict(amp,cpu);
-```  
+```
 
 ### <a name="return-value"></a>傳回值
+
 前置運算子，如`extent`物件 (`*this`)。 為後置運算子中，新`extent`物件。
 
 ##  <a name="operator_div_eq"></a> operator / =
@@ -268,15 +286,17 @@ extent<_Rank> operator--(int)restrict(amp,cpu);
 
 ### <a name="syntax"></a>語法
 
-```  
+```
 extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>參數
+
 *_Rhs*<br/>
 要除以的數字。
 
 ### <a name="return-value"></a>傳回值
+
 `extent` 物件。
 
 ##  <a name="operator_min_eq"></a> 運算子 =
@@ -285,17 +305,19 @@ extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
 
 ### <a name="syntax"></a>語法
 
-```  
+```
 extent<_Rank>& operator-=(const extent<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator-=(const index<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>參數
+
 *_Rhs*<br/>
 要減去的數字。
 
 ### <a name="return-value"></a>傳回值
+
 產生 `extent` 物件。
 
 ##  <a name="operator_eq"></a> 運算子 =
@@ -304,32 +326,37 @@ extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
 
 ### <a name="syntax"></a>語法
 
-```  
+```
 extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>參數
+
 *_Other*<br/>
 `extent`從複製的物件。
 
 ### <a name="return-value"></a>傳回值
+
 此參考`extent`物件。
 
 ##  <a name="operator_at"></a> extent:: operator \[\]
+
 傳回位於指定索引處的項目。
 
 ### <a name="syntax"></a>語法
 
-```  
+```
 int operator[](unsigned int _Index) const restrict(amp,cpu);
 int& operator[](unsigned int _Index) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>參數
+
 *_Index*<br/>
 從 0 到順位減 1 的整數。
 
 ### <a name="return-value"></a>傳回值
+
 位於指定索引處的項目。
 
 ##  <a name="rank_constant"></a> 陣序規範
@@ -338,9 +365,9 @@ int& operator[](unsigned int _Index) restrict(amp,cpu);
 
 ### <a name="syntax"></a>語法
 
-```  
+```
 static const int rank = _Rank;
-```  
+```
 
 ##  <a name="size"></a> 大小
 
@@ -348,9 +375,9 @@ static const int rank = _Rank;
 
 ### <a name="syntax"></a>語法
 
-```  
+```
 unsigned int size() const restrict(amp,cpu);
-```  
+```
 
 ## <a name="tile"></a> 圖格
 
@@ -365,8 +392,9 @@ tiled_extent<_Dim0, _Dim1> tile() const ;
 
 template <int _Dim0, int _Dim1, int _Dim2>
 tiled_extent<_Dim0, _Dim1, _Dim2> tile() const ;
-```  
+```
 ### <a name="parameters"></a>參數
+
 *_Dim0*<br/>
 並排範圍的最重要的元件。
 *_Dim1*<br/>

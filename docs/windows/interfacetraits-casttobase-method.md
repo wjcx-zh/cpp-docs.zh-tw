@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 55a4d7487be5b3565ba3945630cab4388f287a68
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 473656f25c4ba08e011bef8f938cea54bdc51d6d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611820"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424896"
 ---
 # <a name="interfacetraitscasttobase-method"></a>InterfaceTraits::CastToBase 方法
 
@@ -39,10 +39,10 @@ static __forceinline Base* CastToBase(
 
 ### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 參數的型別*ptr*。
 
-*ptr*  
+*ptr*<br/>
 類型指標*T*。
 
 ## <a name="return-value"></a>傳回值
@@ -63,5 +63,5 @@ static __forceinline Base* CastToBase(
 
 ## <a name="see-also"></a>另請參閱
 
-[InterfaceTraits 結構](../windows/interfacetraits-structure.md)  
+[InterfaceTraits 結構](../windows/interfacetraits-structure.md)<br/>
 [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

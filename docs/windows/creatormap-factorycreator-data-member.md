@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90367a21d76fe7fe735d1174bc9b9d40900dec78
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 12d4fdd415ab37c9af0b0b34651e7cd2f00cf31b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600826"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405277"
 ---
 # <a name="creatormapfactorycreator-data-member"></a>CreatorMap::factoryCreator 資料成員
 
@@ -35,21 +35,21 @@ HRESULT (*factoryCreator)(
    unsigned int* currentflags,
    const CreatorMap* entry,
    REFIID iidClassFactory,
- IUnknown** factory);
+IUnknown** factory);
 ```
 
 ### <a name="parameters"></a>參數
 
-*currentflags*  
+*currentflags*<br/>
 其中一個[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。
 
-*entry*  
+*entry*<br/>
 CreatorMap。
 
-*iidClassFactory*  
+*iidClassFactory*<br/>
 Class factory 介面識別碼。
 
-*處理站*  
+*處理站*<br/>
 作業完成時，class factory 的位址。
 
 ## <a name="return-value"></a>傳回值
@@ -68,5 +68,5 @@ Class factory 介面識別碼。
 
 ## <a name="see-also"></a>另請參閱
 
-[CreatorMap 結構](../windows/creatormap-structure.md)  
+[CreatorMap 結構](../windows/creatormap-structure.md)<br/>
 [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

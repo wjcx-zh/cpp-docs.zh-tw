@@ -1,5 +1,5 @@
 ---
-title: 'com:: ptr |Microsoft 文件'
+title: 'com:: ptr |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f3c4e3bb91e161f9176bcf6964fc843d4e4bd707
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5e6a3f7936e21d22282fe37a29b5d91f2e50caa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104519"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434488"
 ---
 # <a name="comptr"></a>com::ptr
-可當做 CLR 類別成員使用之 COM 物件的包裝函式。 包裝函式也會自動執行 COM 物件，其解構函式呼叫時釋放物件上的擁有的參考的存留期管理。 類似於[CComPtr 類別](../atl/reference/ccomptr-class.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-#include <msclr\com\ptr.h>  
-```  
-  
-## <a name="remarks"></a>備註  
- [com:: ptr 類別](../dotnet/com-ptr-class.md)中定義\<msclr\com\ptr.h > 檔案。  
-  
-## <a name="see-also"></a>另請參閱  
- [C++ 支援程式庫](../dotnet/cpp-support-library.md)
+
+可當做 CLR 類別成員使用之 COM 物件的包裝函式。 包裝函式也會自動執行 COM 物件，呼叫其解構函式時，釋出已擁有的參考，在物件上的存留期管理。 類似於[CComPtr 類別](../atl/reference/ccomptr-class.md)。
+
+## <a name="syntax"></a>語法
+
+```
+#include <msclr\com\ptr.h>
+```
+
+## <a name="remarks"></a>備註
+
+[com:: ptr 類別](../dotnet/com-ptr-class.md)定義於\<msclr\com\ptr.h > 檔案。
+
+## <a name="see-also"></a>另請參閱
+
+[C++ 支援程式庫](../dotnet/cpp-support-library.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da9e378ff75ec67660b0c29a5765be88a2c06496
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 00dd1042195bd7593676021cc4f2f1153ec47844
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205662"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432850"
 ---
 # <a name="cppquote"></a>cpp_quote
 
@@ -38,7 +38,7 @@ ms.locfileid: "43205662"
 
 ### <a name="parameters"></a>參數
 
-*statement*  
+*statement*<br/>
 C 的指令。
 
 ## <a name="remarks"></a>備註
@@ -68,5 +68,5 @@ C 的指令。
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
 [獨立屬性](../windows/stand-alone-attributes.md)  

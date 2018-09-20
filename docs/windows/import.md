@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 78bfc20bd88aa9691c80483c8c315cd5305d7b96
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a9e2ee577c3285a7e4c3db2fb19d934417bbe26d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216587"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411556"
 ---
 # <a name="import"></a>import
 
@@ -38,7 +38,7 @@ ms.locfileid: "43216587"
 
 ### <a name="parameters"></a>參數
 
-*idl_file*  
+*idl_file*<br/>
 您要匯入類型程式庫目前專案的.idl 檔案的名稱。
 
 ## <a name="remarks"></a>備註
@@ -86,9 +86,9 @@ library MyLib {
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
-[獨立屬性](../windows/stand-alone-attributes.md)  
-[importidl](../windows/importidl.md)  
-[importlib](../windows/importlib.md)  
-[include](../windows/include-cpp.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
+[獨立屬性](../windows/stand-alone-attributes.md)<br/>
+[importidl](../windows/importidl.md)<br/>
+[importlib](../windows/importlib.md)<br/>
+[include](../windows/include-cpp.md)<br/>
 [includelib](../windows/includelib-cpp.md)  

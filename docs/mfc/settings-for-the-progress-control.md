@@ -1,5 +1,5 @@
 ---
-title: 進度控制項的設定 |Microsoft 文件
+title: 進度控制項的設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26afdcb58a64f2d2042596349acc4496aa530468
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6b11189e3e0a8381ade372841e6c7b25a5a9fa0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380005"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434631"
 ---
 # <a name="settings-for-the-progress-control"></a>進度控制項的設定
-進度控制項的基本設定 ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)) 的範圍和目前的位置。 範圍代表整個作業的持續時間。 目前的位置表示您的應用程式已完成此作業的進度。 範圍或位置的任何變更會導致重繪其本身的進度控制項。  
-  
- 根據預設，範圍設定為 0-100，而初始位置設定為 0。 若要擷取目前的範圍設定進度控制項，請使用[GetRange](../mfc/reference/cprogressctrl-class.md#getrange)成員函式。 若要變更的範圍，請使用[SetRange](../mfc/reference/cprogressctrl-class.md#setrange)成員函式。  
-  
- 若要設定的位置，使用[SetPos](../mfc/reference/cprogressctrl-class.md#setpos)。 若要擷取目前的位置，而不指定新的值，使用[GetPos](../mfc/reference/cprogressctrl-class.md#getpos)。 例如，您可以直接查詢目前作業的狀態。  
-  
- 若要逐步進行控制項的目前位置，使用[StepIt](../mfc/reference/cprogressctrl-class.md#stepit)。 若要設定的每個步驟，使用[SetStep](../mfc/reference/cprogressctrl-class.md#setstep)  
-  
-## <a name="see-also"></a>另請參閱  
- [使用 CProgressCtrl](../mfc/using-cprogressctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+
+進度控制項的基本設定 ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)) 的範圍和目前的位置。 範圍表示作業的整個持續期間。 目前的位置表示您的應用程式已完成此作業的進度。 範圍或位置的任何變更會讓進度控制項重繪其本身。
+
+根據預設，範圍會設定為 0-100，而初始位置設定為 0。 若要擷取進度控制項的目前的範圍設定，請使用[GetRange](../mfc/reference/cprogressctrl-class.md#getrange)成員函式。 若要變更的範圍，請使用[SetRange](../mfc/reference/cprogressctrl-class.md#setrange)成員函式。
+
+若要設定的位置，使用[SetPos](../mfc/reference/cprogressctrl-class.md#setpos)。 若要擷取目前的位置而不需要指定新的值，請使用[GetPos](../mfc/reference/cprogressctrl-class.md#getpos)。 比方說，您可以直接查詢目前作業的狀態。
+
+若要逐步進度控制項的目前位置，使用[StepIt](../mfc/reference/cprogressctrl-class.md#stepit)。 若要設定的每個步驟，使用[SetStep](../mfc/reference/cprogressctrl-class.md#setstep)
+
+## <a name="see-also"></a>另請參閱
+
+[使用 CProgressCtrl](../mfc/using-cprogressctrl.md)<br/>
+[控制項](../mfc/controls-mfc.md)
 

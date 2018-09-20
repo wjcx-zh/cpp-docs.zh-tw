@@ -1,5 +1,5 @@
 ---
-title: 配置和解除配置視窗記憶體 |Microsoft 文件
+title: 配置和解除配置視窗記憶體 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1364b4d29e2ccd2c9563359716eba6880df5436
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 149a8e860913515551fc85be9b49675856d7e129
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341455"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415185"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>配置和解除配置視窗記憶體
-不使用 c + +**刪除**終結框架視窗或檢視表的運算子。 請改為呼叫`CWnd`成員函式`DestroyWindow`。 框架視窗，因此，應該會在堆積上配置運算子**新**。 配置框架視窗上的堆疊框架或全域時務必謹慎。 其他視窗應該盡可能在堆疊框架上配置。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
-  
--   [建立視窗](../mfc/creating-windows.md)  
-  
--   [視窗解構序列](../mfc/window-destruction-sequence.md)  
-  
--   [中斷連結從 HWND CWnd](../mfc/detaching-a-cwnd-from-its-hwnd.md)  
-  
-## <a name="see-also"></a>另請參閱  
- [終結視窗物件](../mfc/destroying-window-objects.md)
+
+不使用 c + +**刪除**終結框架視窗或檢視表的運算子。 請改為呼叫`CWnd`成員函式`DestroyWindow`。 框架視窗，因此，應該會在堆積上配置與運算子**新**。 配置框架視窗的堆疊框架或全域時要小心。 其他視窗應該盡可能的堆疊框架上配置。
+
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+
+- [建立視窗](../mfc/creating-windows.md)
+
+- [視窗解構序列](../mfc/window-destruction-sequence.md)
+
+- [中斷連結從 HWND CWnd](../mfc/detaching-a-cwnd-from-its-hwnd.md)
+
+## <a name="see-also"></a>另請參閱
+
+[終結視窗物件](../mfc/destroying-window-objects.md)
 

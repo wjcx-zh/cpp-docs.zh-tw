@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: efca93e2e9b52ce646ef07465682815978550414
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 61c20647d96a66cf4b50e6f0b031cc04353553e5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607773"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410646"
 ---
 # <a name="dbaccessor"></a>db_accessor
 
@@ -39,10 +39,10 @@ ms.locfileid: "42607773"
 
 #### <a name="parameters"></a>參數
 
-*num*  
+*num*<br/>
 指定存取子數目 （以零為起始的整數索引）。 您必須指定存取子以遞增的數字順序，使用整數，或定義值。
 
-*auto*  
+*auto*<br/>
 布林值，指定是否自動擷取 (TRUE) 或未擷取 (FALSE) 的存取子。
 
 ## <a name="remarks"></a>備註

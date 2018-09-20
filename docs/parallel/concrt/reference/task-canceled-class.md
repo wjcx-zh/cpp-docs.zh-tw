@@ -18,53 +18,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e3351700d9e7e7ea466b667e47b105a7229f3d8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: da18db2f2dde145c565b6309d9b27cdbcc0744cf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082998"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437660"
 ---
 # <a name="taskcanceled-class"></a>task_canceled 類別
-這個類別描述 PPL 工作分層為了強制目前工作取消，而擲回的例外狀況。 它也會藉由擲回`get()`方法[工作](/visualstudio/extensibility/debugger/task-class-internal-members)，已取消的工作。  
-  
-## <a name="syntax"></a>語法  
-  
+
+這個類別描述 PPL 工作分層為了強制目前工作取消，而擲回的例外狀況。 它也會藉由擲回`get()`方法[工作](/visualstudio/extensibility/debugger/task-class-internal-members)，已取消的工作。
+
+## <a name="syntax"></a>語法
+
 ```
 class task_canceled : public std::exception;
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[task_canceled](#ctor)|多載。 建構 `task_canceled` 物件。|  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `exception`  
-  
- `task_canceled`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** concrt.h  
-  
- **命名空間：** concurrency  
-  
-##  <a name="ctor"></a> task_canceled 
+```
 
- 建構 `task_canceled` 物件。  
-  
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[task_canceled](#ctor)|多載。 建構 `task_canceled` 物件。|
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`exception`
+
+`task_canceled`
+
+## <a name="requirements"></a>需求
+
+**標頭：** concrt.h
+
+**命名空間：** concurrency
+
+##  <a name="ctor"></a> task_canceled
+
+建構 `task_canceled` 物件。
+
 ```
 explicit _CRTIMP task_canceled(_In_z_ const char* _Message) throw();
 
 task_canceled() throw();
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *訊息 （_m)*<br/>
-錯誤的描述性訊息。  
-  
-## <a name="see-also"></a>另請參閱  
- [concurrency 命名空間](concurrency-namespace.md)
+錯誤的描述性訊息。
+
+## <a name="see-also"></a>另請參閱
+
+[concurrency 命名空間](concurrency-namespace.md)

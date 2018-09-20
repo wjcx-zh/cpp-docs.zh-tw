@@ -1,5 +1,5 @@
 ---
-title: 建立索引標籤控制項 |Microsoft 文件
+title: 建立索引標籤控制項 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,54 +20,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3945d441130d723bbda3d137f2adae637d56c2b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dc1acd65aed84321e1f32c3114223899e17f2ad
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344087"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430874"
 ---
 # <a name="creating-the-tab-control"></a>建立索引標籤控制項
-建立索引標籤控制項的方式取決於您是使用控制項在對話方塊中還是非對話方塊視窗中建立。  
-  
-### <a name="to-use-ctabctrl-directly-in-a-dialog-box"></a>在對話方塊中直接使用 CTabCtrl  
-  
-1.  在對話方塊編輯器中，將索引標籤控制項加入至對話方塊範本資源。 指定其控制項 ID.  
-  
-2.  使用[加入成員變數精靈](../ide/adding-a-member-variable-visual-cpp.md)新增類型的成員變數[CTabCtrl](../mfc/reference/ctabctrl-class.md)與控制項屬性。 您可以使用這個成員呼叫 `CTabCtrl` 成員函式。  
-  
-3.  對應處理常式函式，您需要處理的任何索引標籤控制項通知訊息的對話方塊類別中。 如需詳細資訊，請參閱[訊息對應到函式](../mfc/reference/mapping-messages-to-functions.md)。  
-  
-4.  在[OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)，設定的樣式`CTabCtrl`。  
-  
-### <a name="to-use-ctabctrl-in-a-nondialog-window"></a>若要在非對話方塊視窗中使用 CTabCtrl  
-  
-1.  在檢視或視窗類別中定義控制項。  
-  
-2.  呼叫控制項的[建立](../mfc/reference/ctabctrl-class.md#create)成員函式，可能在[OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate)，方式與父視窗[OnCreate](../mfc/reference/cwnd-class.md#oncreate) （如果您目前的處理常式函式子類別化控制項）。 設定控制項的樣式。  
-  
- 之後`CTabCtrl`已建立物件，您可以設定或清除下列擴充樣式：  
-  
--   **TCS_EX_FLATSEPARATORS**索引標籤控制項時，會在索引標籤項目之間繪製分隔符號。 這會擴充樣式，只會影響索引標籤控制項具有**TCS_BUTTONS**和**TCS_FLATBUTTONS**樣式。 根據預設，建立與此索引標籤控制項**TCS_FLATBUTTONS**樣式設定這個項目延伸樣式。  
-  
--   **TCS_EX_REGISTERDROP**  索引標籤控制項產生**TCN_GETOBJECT**通知訊息以要求置放目標物件時將物件拖曳在控制項中的索引標籤項目。  
-  
+
+建立索引標籤控制項的方式取決於您是在使用對話方塊中的控制項或建立在非對話方塊視窗中。
+
+### <a name="to-use-ctabctrl-directly-in-a-dialog-box"></a>在對話方塊中直接使用 CTabCtrl
+
+1. 在對話方塊編輯器中，加入您的對話方塊範本資源中的索引標籤控制項。 指定其控制項 ID.
+
+1. 使用[加入成員變數精靈](../ide/adding-a-member-variable-visual-cpp.md)若要加入成員變數的型別[CTabCtrl](../mfc/reference/ctabctrl-class.md)與控制項屬性。 您可以使用這個成員呼叫 `CTabCtrl` 成員函式。
+
+1. 對應您要處理的任何索引標籤控制項通知訊息的對話方塊類別中的處理常式函式。 如需詳細資訊，請參閱 <<c0> [ 將訊息對應至函式](../mfc/reference/mapping-messages-to-functions.md)。
+
+1. 在  [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)，設定樣式的`CTabCtrl`。
+
+### <a name="to-use-ctabctrl-in-a-nondialog-window"></a>若要在非對話方塊視窗使用 CTabCtrl
+
+1. 在檢視或視窗類別中定義控制項。
+
+1. 呼叫控制項的[Create](../mfc/reference/ctabctrl-class.md#create)成員函式，可能是在[OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate)，可能是與父視窗的為早期[OnCreate](../mfc/reference/cwnd-class.md#oncreate) （如果您目前的處理常式函式子類別化控制項）。 設定控制項的樣式。
+
+之後`CTabCtrl`已建立物件，您可以設定或清除下列延伸樣式：
+
+- **TCS_EX_FLATSEPARATORS**索引標籤控制項將會繪製索引標籤項目之間的分隔符號。 此延伸樣式，只會影響索引標籤控制項具有**TCS_BUTTONS**並**TCS_FLATBUTTONS**樣式。 根據預設，建立具有索引標籤控制項**TCS_FLATBUTTONS**樣式設定這個項目延伸樣式。
+
+- **TCS_EX_REGISTERDROP**  索引標籤控制項產生**TCN_GETOBJECT**物件拖曳至索引標籤中的項目控制項上時，通知訊息，以要求置放目標物件。
+
     > [!NOTE]
-    >  若要接收**TCN_GETOBJECT**通知，您必須先初始化 OLE 程式庫呼叫[AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit)。  
-  
- 擷取也已經建立控制項，個別呼叫之後設定這些樣式[GetExtendedStyle](../mfc/reference/ctabctrl-class.md#getextendedstyle)和[SetExtendedStyle](../mfc/reference/ctabctrl-class.md#setextendedstyle)成員函式。  
-  
- 例如，設定**TCS_EX_FLATSEPARATORS**樣式與下列程式碼：  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#33](../mfc/codesnippet/cpp/creating-the-tab-control_1.cpp)]  
-  
- 清除**TCS_EX_FLATSEPARATORS**樣式從`CTabCtrl`與下列程式碼的物件：  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#34](../mfc/codesnippet/cpp/creating-the-tab-control_2.cpp)]  
-  
- 這將會移除顯示的按鈕之間的分隔符號您`CTabCtrl`物件。  
-  
-## <a name="see-also"></a>另請參閱  
- [使用 CTabCtrl](../mfc/using-ctabctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+    >  若要接收**TCN_GETOBJECT**通知，您必須初始化 OLE 程式庫，呼叫[AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit)。
+
+這些樣式就可以擷取和設定，控制建立之後，個別呼叫[GetExtendedStyle](../mfc/reference/ctabctrl-class.md#getextendedstyle)並[SetExtendedStyle](../mfc/reference/ctabctrl-class.md#setextendedstyle)成員函式。
+
+例如，設定**TCS_EX_FLATSEPARATORS**樣式與下列程式碼行：
+
+[!code-cpp[NVC_MFCControlLadenDialog#33](../mfc/codesnippet/cpp/creating-the-tab-control_1.cpp)]
+
+清除**TCS_EX_FLATSEPARATORS**樣式從`CTabCtrl`下列幾行程式碼的物件：
+
+[!code-cpp[NVC_MFCControlLadenDialog#34](../mfc/codesnippet/cpp/creating-the-tab-control_2.cpp)]
+
+這會移除出現的按鈕之間的分隔符號您`CTabCtrl`物件。
+
+## <a name="see-also"></a>另請參閱
+
+[使用 CTabCtrl](../mfc/using-ctabctrl.md)<br/>
+[控制項](../mfc/controls-mfc.md)
 

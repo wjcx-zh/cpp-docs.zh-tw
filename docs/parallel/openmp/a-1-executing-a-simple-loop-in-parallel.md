@@ -1,5 +1,5 @@
 ---
-title: 以平行方式執行簡單的迴圈 A.1 |Microsoft 文件
+title: A.1 平行執行簡單迴圈 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98b2fbac6ce31d2dbc56a4ef6d9fe87c14d5ee16
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b5446f72cc5ee0577385527be24bc912297aec0d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686122"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418940"
 ---
 # <a name="a1---executing-a-simple-loop-in-parallel"></a>A.1 平行執行簡單迴圈
-下列範例示範如何平行處理簡單迴圈使用`parallel for`指示詞 ([區段 2.5.1](../../parallel/openmp/2-5-1-parallel-for-construct.md)在頁面上 16)。 迴圈反覆運算變數是根據預設，私用，因此不需要明確指定 private 子句中。  
-  
-```  
-#pragma omp parallel for  
-    for (i=1; i<n; i++)  
-        b[i] = (a[i] + a[i-1]) / 2.0;  
+
+下列範例示範如何平行處理簡單的迴圈，使用`parallel for`指示詞 ([一節 2.5.1](../../parallel/openmp/2-5-1-parallel-for-construct.md)上 16)。 迴圈反覆項目變數是預設的情況下，私人的因此不需要明確指定 private 子句中。
+
+```
+#pragma omp parallel for
+    for (i=1; i<n; i++)
+        b[i] = (a[i] + a[i-1]) / 2.0;
 ```

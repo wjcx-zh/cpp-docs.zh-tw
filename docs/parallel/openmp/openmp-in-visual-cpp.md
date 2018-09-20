@@ -1,5 +1,5 @@
 ---
-title: Visual c + + 中的 OpenMP |Microsoft 文件
+title: Visual c + + OpenMP |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bfcf0d83aeffbb4f40e5786b867afcf87aa84cb
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6905fd7db56fce26dee01ad5e1c69e89d439b436
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691140"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428287"
 ---
 # <a name="openmp-in-visual-c"></a>Visual C++ 中的 OpenMP
-OpenMP C 和 c + + 應用程式開發介面可讓您撰寫的應用程式，有效率地使用多個處理器。 Visual c + + 支援 OpenMP 2.0 標準。  
-  
-## <a name="in-this-section"></a>本節內容  
- [指示詞](../../parallel/openmp/reference/openmp-directives.md)  
- 提供使用 OpenMP API 中的指示詞連結。  
-  
- [子句](../../parallel/openmp/reference/openmp-clauses.md)  
- 提供子句在 OpenMP API 中使用的連結。  
-  
- [程式庫參考](../../parallel/openmp/reference/openmp-library-reference.md)  
- 提供建構 OpenMP API 中使用的連結。  
-  
- [C 和 c + + 應用程式開發介面](../../parallel/openmp/openmp-c-and-cpp-application-program-interface.md)  
- 討論 OpenMP C 和 c + + API，從 OpenMP 架構 Review Board 版本 2.0 規格中所述。  
-  
-## <a name="related-sections"></a>相關章節  
- [/openmp (啟用 OpenMP 2.0 支援)](../../build/reference/openmp-enable-openmp-2-0-support.md)  
- 可讓編譯器處理`#pragma omp`。  
-  
- [預先定義的巨集](../../preprocessor/predefined-macros.md)  
- 預先定義的 ANSI C 和 Microsoft c + + 實作巨集的名稱。 _OPENMP 巨集，請參閱。
+
+OpenMP C 和 c + + 應用程式開發介面可讓您撰寫有效率地使用多個處理器的應用程式。 Visual c + + 支援 OpenMP 2.0 標準。
+
+## <a name="in-this-section"></a>本節內容
+
+[指示詞](../../parallel/openmp/reference/openmp-directives.md)<br/>
+提供用於 OpenMP API 中的指示詞的連結。
+
+[子句](../../parallel/openmp/reference/openmp-clauses.md)<br/>
+提供給子句在 OpenMP API 中使用的連結。
+
+[程式庫參考](../../parallel/openmp/reference/openmp-library-reference.md)<br/>
+提供建構 OpenMP API 中使用的連結。
+
+[C 和 c + + 應用程式開發介面](../../parallel/openmp/openmp-c-and-cpp-application-program-interface.md)<br/>
+討論 OpenMP C 和 c + + API，從 OpenMP 架構 Review Board 版本 2.0 規格中所述。
+
+## <a name="related-sections"></a>相關章節
+
+[/openmp (啟用 OpenMP 2.0 支援)](../../build/reference/openmp-enable-openmp-2-0-support.md)<br/>
+可讓編譯器處理`#pragma omp`。
+
+[預先定義的巨集](../../preprocessor/predefined-macros.md)<br/>
+預先定義的 ANSI C 和 Microsoft c + + 實作巨集的名稱。 已新增 _OPENMP 巨集，請參閱。

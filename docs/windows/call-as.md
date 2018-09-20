@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a5e5d5ddb831c5d4025e729cb27dd3a9e11b3688
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 072c5b34d539e695f534dbafdf4afcd69a2272ab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194749"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415677"
 ---
 # <a name="callas"></a>call_as
 
@@ -38,7 +38,7 @@ ms.locfileid: "43194749"
 
 ### <a name="parameters"></a>參數
 
-*function*  
+*function*<br/>
 您想要遠端函式會叫用時呼叫區域函式。
 
 ## <a name="remarks"></a>備註
@@ -76,6 +76,6 @@ __interface IMInterface {
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
-[方法屬性](../windows/method-attributes.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
+[方法屬性](../windows/method-attributes.md)<br/>
 [local](../windows/local-cpp.md)  

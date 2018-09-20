@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0876aed966db79b23d506bffd9247dd68d4a3935
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 7608255b5369443ce1045f896b776cb283fdb1cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539002"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411855"
 ---
 # <a name="renamenamespace"></a>rename_namespace
 **C + + 特定**  
@@ -48,5 +48,5 @@ rename_namespace("NewName")
   
 ## <a name="see-also"></a>另請參閱  
  
-[#import 屬性](../preprocessor/hash-import-attributes-cpp.md)   
+[#import 屬性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指示詞](../preprocessor/hash-import-directive-cpp.md)

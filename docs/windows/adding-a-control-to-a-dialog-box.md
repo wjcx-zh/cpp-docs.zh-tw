@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e60c64777ea4b5726721a267bcdd700cd71b4214
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9ad87e80d3301eaeda7a0599c3e484046092ed60
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317897"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446461"
 ---
 # <a name="adding-a-control-to-a-dialog-box-c"></a>將控制項加入對話方塊 （c + +）
 
@@ -52,6 +52,6 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)  
-[加入對話方塊控制項的事件處理常式](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+[對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)<br/>
+[加入對話方塊控制項的事件處理常式](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [對話方塊控制項和變數類型](../ide/dialog-box-controls-and-variable-types.md)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21b9efe8fc1ce5cb7ab90edd30b38253d44dabc0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2f937c2cdaa4bb7f31b39b8a28c657274830fc36
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106804"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446604"
 ---
 # <a name="event-maps"></a>事件對應
 
@@ -89,10 +89,10 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 ### <a name="parameters"></a>參數
 
-*theClass*  
+*theClass*<br/>
 指定其事件對應的控制項類別的名稱。
 
-*baseClass*  
+*baseClass*<br/>
 指定的基底類別的名稱*theClass*。
 
 ### <a name="remarks"></a>備註
@@ -127,13 +127,13 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 ### <a name="parameters"></a>參數
 
-*pszName*  
+*pszName*<br/>
 事件的名稱。
 
-*pfnFire*  
+*pfnFire*<br/>
 事件引發函式的名稱。
 
-*vtsParams*  
+*vtsParams*<br/>
 指定函式的參數清單的一或多個常數以空格分隔清單。
 
 ### <a name="remarks"></a>備註
@@ -197,16 +197,16 @@ EVENT_CUSTOM_ID(
 
 ### <a name="parameters"></a>參數
 
-*pszName*  
+*pszName*<br/>
 事件的名稱。
 
-*dispid*  
+*dispid*<br/>
 引發事件時，控制項所使用的分派識別碼。
 
-*pfnFire*  
+*pfnFire*<br/>
 事件引發函式的名稱。
 
-*vtsParams*  
+*vtsParams*<br/>
 引發事件時，參數的變數清單會傳遞至控制項容器。
 
 ### <a name="remarks"></a>備註
@@ -268,10 +268,10 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 ### <a name="parameters"></a>參數
 
-*iVerb*  
+*iVerb*<br/>
 被覆寫之動詞的標準動詞索引。
 
-*memberFxn*  
+*memberFxn*<br/>
 當叫用動詞時，由框架呼叫的函式。
 
 ### <a name="remarks"></a>備註

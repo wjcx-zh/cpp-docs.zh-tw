@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e18f64d48b357ed691f42fc900f68c8e8054776
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 71ff4e3fdb80b48e306e543bdb683c3dd2b26ec3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317247"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443328"
 ---
 # <a name="com-attributes"></a>COM 屬性
 COM 屬性插入程式碼，以支援 COM 開發和.NET Framework 通用語言執行階段開發的多個區域。 這些區域範圍從自訂的介面實作和支援的現有介面來支援內建屬性、 方法和事件。 此外，可在支援複合和 ActiveX 控制項的實作。
@@ -44,4 +44,5 @@ COM 屬性插入程式碼，以支援 COM 開發和.NET Framework 通用語言�
 |[vi_progid](../windows/vi-progid.md)|定義控制項與版本無關的 ProgID。|
   
 ## <a name="see-also"></a>另請參閱
- [依群組分類的屬性](../windows/attributes-by-group.md)
+
+[依群組分類的屬性](../windows/attributes-by-group.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bfec8bfa6940fd4a702334f0d3068c6d936ea8c1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: eba02bea09784e3431b3697eb9ac9a47de978348
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607310"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424556"
 ---
 # <a name="activationfactorygettrustlevel-method"></a>ActivationFactory::GetTrustLevel 方法
 
@@ -38,7 +38,7 @@ STDMETHOD(
 
 ### <a name="parameters"></a>參數
 
-*trustLvl*  
+*trustLvl*<br/>
 這項作業完成時，執行階段的信任層級類別**ActivationFactory**具現化。
 
 ## <a name="return-value"></a>傳回值

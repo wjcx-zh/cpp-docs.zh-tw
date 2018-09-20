@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2ac6d8722bcdfed06ae97508b0ca7e5bb8ea00a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ebebe0bbceafe82c41ec99b2532c965670776127
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601448"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426389"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance 函式
 
@@ -41,13 +41,13 @@ inline HRESULT ActivateInstance(
 
 ### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 若要啟用一種類型。
 
-*activatableClassId*  
+*activatableClassId*<br/>
 參數定義的類別識別碼的名稱*T*。
 
-*執行個體*  
+*執行個體*<br/>
 這項作業完成時，執行個體的參考*T*。
 
 ## <a name="return-value"></a>傳回值

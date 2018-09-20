@@ -1,5 +1,5 @@
 ---
-title: 私用子句的 A.24 範例 |Microsoft 文件
+title: A.24 private 子句範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,35 +12,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f8d07f2d95b565077f5dfd78fdc4ff6edf30216
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: df2efc9fe111fa6e8d0b0507eceb20f07f48b02d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691384"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416236"
 ---
 # <a name="a24---example-of-the-private-clause"></a>A.24 private 指示詞範例
-`private`子句 ([區段 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md)頁面 25 上) 的平行區域才會生效的語彙範圍的區域，而不在區域的動態範圍。  因此，在下列範例中，使用任何變數內`for`常式中的迴圈*f*指的是私用複本的，而在中的使用方式常式*g*參考到全域。  
-  
-```  
-int a;  
-  
-void f(int n)   
-{  
-    a = 0;  
-  
-    #pragma omp parallel for private(a)  
-    for (int i=1; i<n; i++)   
-    {  
-        a = i;  
-        g(i, n);  
-        d(a);     // Private copy of "a"  
-        ...  
-    }  
-    ...  
-  
-void g(int k, int n)   
-{  
-    h(k,a); // The global "a", not the private "a" in f  
-}  
+
+`private`子句 ([一節 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md)上 25 頁) 的平行區域才會生效的語彙範圍的區域，而非區域的動態範圍。  因此，在範例中，變數的任何用法內`for`常式中的迴圈*f*指的私用複本，而中的使用方式常式*g*參考到全域。
+
+```
+int a;
+
+void f(int n)
+{
+    a = 0;
+
+    #pragma omp parallel for private(a)
+    for (int i=1; i<n; i++)
+    {
+        a = i;
+        g(i, n);
+        d(a);     // Private copy of "a"
+        ...
+    }
+    ...
+
+void g(int k, int n)
+{
+    h(k,a); // The global "a", not the private "a" in f
+}
 ```

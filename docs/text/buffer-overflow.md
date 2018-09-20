@@ -16,51 +16,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11a3da883dae4d292a55eb2537fd98609404b5a9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 109719b437716e31fc5ebdcd43c02c55bfea997d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609508"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413480"
 ---
 # <a name="buffer-overflow"></a>緩衝區溢位
-當您將字元放入緩衝區，不同的字元大小會造成問題。 請考慮下列程式碼，從字串中複製的字元， `sz`，到緩衝區， `rgch`:  
-  
-```  
-cb = 0;  
-while( cb < sizeof( rgch ) )  
-    rgch[ cb++ ] = *sz++;  
-```  
-  
- 但問題是： 是的最後一個位元組會複製一個前導位元組嗎？ 下列無法解決問題因為它會溢位的緩衝區：  
-  
-```  
-cb = 0;  
-while( cb < sizeof( rgch ) )  
-{  
-    _mbccpy( rgch + cb, sz );  
-    cb += _mbclen( sz );  
-    sz = _mbsinc( sz );  
-}  
-```  
-  
- `_mbccpy`呼叫會嘗試執行正確的動作 — 複製完整的字元，不論它是 1 或 2 個位元組。 但它不會考慮複製的最後一個字元可能不符合緩衝區如果字元是 2 個位元組寬。 正確的解決方法是：  
-  
-```  
-cb = 0;  
-while( (cb + _mbclen( sz )) <= sizeof( rgch ) )  
-{  
-    _mbccpy( rgch + cb, sz );  
-    cb += _mbclen( sz );  
-    sz = _mbsinc( sz );  
-}  
-```  
-  
- 此程式碼測試可能會發生緩衝區溢位，迴圈中測試，請使用`_mbclen`若要測試的目前所指向的字元大小`sz`。 藉由呼叫`_mbsnbcpy`函式，您可以取代中的程式碼**雖然**迴圈使用一行程式碼。 例如:   
-  
-```  
-_mbsnbcpy( rgch, sz, sizeof( rgch ) );  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [MBCS 程式設計提示](../text/mbcs-programming-tips.md)
+
+當您將字元放入緩衝區，不同的字元大小會造成問題。 請考慮下列程式碼，從字串中複製的字元， `sz`，到緩衝區， `rgch`:
+
+```cpp
+cb = 0;
+while( cb < sizeof( rgch ) )
+    rgch[ cb++ ] = *sz++;
+```
+
+但問題是： 是的最後一個位元組會複製一個前導位元組嗎？ 下列無法解決問題因為它會溢位的緩衝區：
+
+```cpp
+cb = 0;
+while( cb < sizeof( rgch ) )
+{
+    _mbccpy( rgch + cb, sz );
+    cb += _mbclen( sz );
+    sz = _mbsinc( sz );
+}
+```
+
+`_mbccpy`呼叫會嘗試執行正確的動作 — 複製完整的字元，不論它是 1 或 2 個位元組。 但它不會考慮複製的最後一個字元可能不符合緩衝區如果字元是 2 個位元組寬。 正確的解決方法是：
+
+```cpp
+cb = 0;
+while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
+{
+    _mbccpy( rgch + cb, sz );
+    cb += _mbclen( sz );
+    sz = _mbsinc( sz );
+}
+```
+
+此程式碼測試可能會發生緩衝區溢位，迴圈中測試，請使用`_mbclen`若要測試的目前所指向的字元大小`sz`。 藉由呼叫`_mbsnbcpy`函式，您可以取代中的程式碼**雖然**迴圈使用一行程式碼。 例如: 
+
+```cpp
+_mbsnbcpy( rgch, sz, sizeof( rgch ) );
+```
+
+## <a name="see-also"></a>另請參閱
+
+[MBCS 程式設計提示](../text/mbcs-programming-tips.md)

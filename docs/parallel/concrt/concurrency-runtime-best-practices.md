@@ -1,5 +1,5 @@
 ---
-title: 並行執行階段最佳作法 |Microsoft 文件
+title: 並行執行階段最佳做法 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 422abd1c4c60b0094165587d25b7ebe825fabc38
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 55787ef1f1e3daeb8c85783958f000a2166e4e18
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695638"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447982"
 ---
 # <a name="concurrency-runtime-best-practices"></a>並行執行階段最佳作法
-本節描述可協助您有效運用並行執行階段的最佳作法。 這些最佳作法適用於[平行模式程式庫](../../parallel/concrt/parallel-patterns-library-ppl.md)(PPL)、[非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)，而[工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。  
-  
-## <a name="in-this-section"></a>本節內容  
- [平行模式程式庫中的最佳做法](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)  
- 描述使用平行模式程式庫 (PPL) 時要遵循的最佳作法。  
-  
- [非同步代理程式程式庫中的最佳做法](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)  
- 描述使用非同步代理程式程式庫時要遵循的最佳作法。  
-  
- [並行執行階段中的一般最佳做法](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)  
- 描述適用於並行執行階段之多個區域的最佳作法。  
-  
-## <a name="related-sections"></a>相關章節  
- [並行執行階段](../../parallel/concrt/concurrency-runtime.md)  
- 介紹並行執行階段 (C++ 的並行處理架構)。  
-  
- [平行模式程式庫 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)  
- 描述如何在您的應用程式中使用不同的平行模式，例如平行演算法。  
-  
- [非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)  
- 描述如何在您的應用程式中使用非同步代理程式。  
-  
- [同步處理資料結構](../../parallel/concrt/synchronization-data-structures.md)  
- 說明並行執行階段提供的各種同步處理原始物件。  
-  
- [工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)  
- 描述如何使用工作排程器來調整應用程式的效能。
+
+本節描述可協助您有效運用並行執行階段的最佳作法。 這些最佳做法適用於[平行模式程式庫](../../parallel/concrt/parallel-patterns-library-ppl.md)(PPL)、 [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)，而[工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。
+
+## <a name="in-this-section"></a>本節內容
+
+[平行模式程式庫中的最佳做法](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
+描述使用平行模式程式庫 (PPL) 時要遵循的最佳作法。
+
+[非同步代理程式程式庫中的最佳做法](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)<br/>
+描述使用非同步代理程式程式庫時要遵循的最佳作法。
+
+[並行執行階段中的一般最佳做法](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)<br/>
+描述適用於並行執行階段之多個區域的最佳作法。
+
+## <a name="related-sections"></a>相關章節
+
+[並行執行階段](../../parallel/concrt/concurrency-runtime.md)<br/>
+介紹並行執行階段 (C++ 的並行處理架構)。
+
+[平行模式程式庫 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
+描述如何在您的應用程式中使用不同的平行模式，例如平行演算法。
+
+[非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)<br/>
+描述如何在您的應用程式中使用非同步代理程式。
+
+[同步處理資料結構](../../parallel/concrt/synchronization-data-structures.md)<br/>
+說明並行執行階段提供的各種同步處理原始物件。
+
+[工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
+描述如何使用工作排程器來調整應用程式的效能。
 

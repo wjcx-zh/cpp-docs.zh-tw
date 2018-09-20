@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8e029b1ffc4e17e55f2cb69405bb272b92e94e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6d8d4b0f740e69b57944cb35f2213ae0fd54b511
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221390"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386284"
 ---
 # <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071：MFC IOleCommandTarget 實作
 
@@ -59,11 +59,11 @@ DECLARE_OLECMD_MAP ()
 BEGIN_OLECMD_MAP(theClass, baseClass)
 ```
 
-*theClass*  
- 包含命令對應的類別名稱。
+*theClass*<br/>
+包含命令對應的類別名稱。
 
-*baseClass*  
- 包含命令對應之類別的基底類別的名稱。
+*baseClass*<br/>
+包含命令對應之類別的基底類別的名稱。
 
 這個巨集標記命令對應的開頭。 包含命令對應之類別的實作檔中使用這個巨集。
 
@@ -77,14 +77,14 @@ END_OLECMD_MAP()
 ON_OLECMD(pguid, olecmdid, id)
 ```
 
-*pguid*  
- OLE 命令的命令群組 GUID 的指標。 這個參數是**NULL**標準 OLE 命令群組。
+*pguid*<br/>
+OLE 命令的命令群組 GUID 的指標。 這個參數是**NULL**標準 OLE 命令群組。
 
-*olecmdid*  
- 要叫用命令 OLE 命令識別碼。
+*olecmdid*<br/>
+要叫用命令 OLE 命令識別碼。
 
-*id*  
- WM_COMMAND 訊息傳送到叫用這個 OLE 命令時，包含命令對應的應用程式的識別碼。
+*id*<br/>
+WM_COMMAND 訊息傳送到叫用這個 OLE 命令時，包含命令對應的應用程式的識別碼。
 
 使用命令對應中的 ON_OLECMD 巨集，來新增您想要處理的 OLE 命令的項目。 OLE 命令收到時，它們會轉換成指定的 WM_COMMAND 訊息並透過使用標準的 MFC 命令路由架構的應用程式的訊息對應路由傳送。
 
@@ -158,5 +158,5 @@ void CContainerCntrItem::DoOleCmd()
 
 ## <a name="see-also"></a>另請參閱
 
-[依編號顯示的技術提示](../mfc/technical-notes-by-number.md)  
-[依分類區分的技術提示](../mfc/technical-notes-by-category.md)  
+[依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
+[依分類區分的技術提示](../mfc/technical-notes-by-category.md)

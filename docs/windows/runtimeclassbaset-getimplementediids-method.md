@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 907a249090ec58d6379cb58f3d63e15826c1f6ad
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 15db0be600d61992d48c2f1cf90d6543057b5090
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610356"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376068"
 ---
 # <a name="runtimeclassbasetgetimplementediids-method"></a>RuntimeClassBaseT::GetImplementedIIDS 方法
 
@@ -41,16 +41,16 @@ __forceinline static HRESULT GetImplementedIIDS(
 
 ### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 型別*實作*參數。
 
-*實作*  
+*實作*<br/>
 參數所指定的類型指標*T*。
 
-*iidCount*  
+*iidCount*<br/>
 若要擷取的介面識別碼的數目上限。
 
-*iid*  
+*iid*<br/>
 如果這項作業已順利完成，介面型別實作的 Id 陣列*T*。
 
 ## <a name="return-value"></a>傳回值

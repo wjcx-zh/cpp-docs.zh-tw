@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdcd101759b35490451bf46bd6e222db469a3fba
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 26282ef73f6a979cd564bd7597f8418c6535179a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42581238"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390511"
 ---
 # <a name="win32-application-wizard"></a>Win32 應用程式精靈
 
@@ -31,11 +31,11 @@ Visual C++ Win32 應用程式精靈可讓您建立四種類型的專案 (請見�
 
 |支援類型|主控台應用程式|可執行檔 (Windows) 應用程式|動態連結程式庫|靜態程式庫|
 |---------------------|-------------------------|----------------------------------------|---------------------------|--------------------|
-|**空專案**|[是]|是|是|否|
+|**空專案**|是|是|是|否|
 |**匯出符號**|否|否|是|否|
-|**先行編譯標頭**|否|否|否|[是]|
-|**ATL 支援**|[是]|否|否|否|
-|**MFC 支援**|[是]|否|否|[是]|
+|**先行編譯標頭**|否|否|否|是|
+|**ATL 支援**|是|否|否|否|
+|**MFC 支援**|是|否|否|是|
 
 ## <a name="overview"></a>總覽
 
@@ -62,5 +62,5 @@ Visual C++ Win32 應用程式精靈可讓您建立四種類型的專案 (請見�
 
 ## <a name="see-also"></a>另請參閱
 
-[建立空的 Windows 傳統型應用程式](../windows/creating-an-empty-windows-desktop-application.md)  
+[建立空的 Windows 傳統型應用程式](../windows/creating-an-empty-windows-desktop-application.md)<br/>
 [Visual C++ 專案類型](../ide/visual-cpp-project-types.md)

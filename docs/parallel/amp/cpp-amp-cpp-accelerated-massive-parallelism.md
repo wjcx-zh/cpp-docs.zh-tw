@@ -15,37 +15,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 340a21a3bbcb1853d66de01bddf9425fed0c8183
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0aeaf79ba847474c1a474d53b7d1281421fa23a9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689840"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381656"
 ---
 # <a name="c-amp-c-accelerated-massive-parallelism"></a>C++ AMP (C++ Accelerated Massive Parallelism)
-C + + AMP (c + + Accelerated Massive Parallelism) 利用通常是獨立圖形顯示卡上的圖形處理單元 (GPU) 的資料平行硬體來加速您的 c + + 程式碼的執行。 C + + AMP 程式撰寫模型包含多維陣列時，編製索引、 記憶體傳輸和並排顯示的支援。 它也包含數學函式庫。 您可以使用 c + + AMP 語言擴充功能來控制資料如何從 CPU 移至 GPU 和。  
-  
-## <a name="related-topics"></a>相關主題  
-  
-|標題|描述|  
-|-----------|-----------------|  
-|[C++ AMP 概觀](../../parallel/amp/cpp-amp-overview.md)|描述 c + + AMP 和數學程式庫的主要功能。|  
-|[使用 Lambda、函式物件和限制函式](../../parallel/amp/using-lambdas-function-objects-and-restricted-functions.md)|描述如何使用 lambda 運算式、 函式物件和限制函式在呼叫[parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)方法。|  
-|[使用磚](../../parallel/amp/using-tiles.md)|描述如何使用 tile 來加速您的 c + + AMP 程式碼。|  
-|[使用 accelerator 和 accelerator_view 物件](../../parallel/amp/using-accelerator-and-accelerator-view-objects.md)|描述如何使用加速器來自訂您的程式碼在 GPU 上執行。|  
-|[在 UWP 應用程式中使用 C++ AMP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)|描述如何使用 Windows 執行階段類型的通用 Windows 平台 (UWP) 應用程式中使用 c + + AMP。|  
-|[圖形 (C++ AMP)](../../parallel/amp/graphics-cpp-amp.md)|描述如何使用 c + + AMP 圖形程式庫。|  
-|[逐步解說：矩陣乘法](../../parallel/amp/walkthrough-matrix-multiplication.md)|示範如何使用 c + + AMP 程式碼和 tile 劃分的矩陣相乘。|  
-|[逐步解說：偵錯 C++ AMP 應用程式](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)|說明如何建立和偵錯使用平行約化來加總大型整數陣列的應用程式。|  
-  
-## <a name="reference"></a>參考資料  
 
-[參考 (c + + AMP)](../../parallel/amp/reference/reference-cpp-amp.md)    
-[tile_static 關鍵字](../../cpp/tile-static-keyword.md)    
-[restrict (C++ AMP)](../../cpp/restrict-cpp-amp.md)  
-  
-## <a name="other-resources"></a>其他資源  
- 
-[機器碼部落格中的平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=238472)  
-[C + + AMP 範例專案下載](http://go.microsoft.com/fwlink/p/?linkid=248508)  
+C + + AMP (c + + Accelerated Massive Parallelism) 利用通常是獨立圖形顯示卡上的圖形處理單元 (GPU) 的資料平行硬體來加速您的 c + + 程式碼的執行。 C + + AMP 程式撰寫模型包含多維陣列時，編製索引、 記憶體傳輸和並排顯示的支援。 它也包含數學函式庫。 您可以使用 c + + AMP 語言擴充功能來控制資料如何從 CPU 移至 GPU 和。
+
+## <a name="related-topics"></a>相關主題
+
+|標題|描述|
+|-----------|-----------------|
+|[C++ AMP 概觀](../../parallel/amp/cpp-amp-overview.md)|描述 c + + AMP 和數學程式庫的主要功能。|
+|[使用 Lambda、函式物件和限制函式](../../parallel/amp/using-lambdas-function-objects-and-restricted-functions.md)|描述如何使用 lambda 運算式、 函式物件和限制函式在呼叫[parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)方法。|
+|[使用磚](../../parallel/amp/using-tiles.md)|描述如何使用 tile 來加速您的 c + + AMP 程式碼。|
+|[使用 accelerator 和 accelerator_view 物件](../../parallel/amp/using-accelerator-and-accelerator-view-objects.md)|描述如何使用加速器來自訂您的程式碼在 GPU 上執行。|
+|[在 UWP 應用程式中使用 C++ AMP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)|描述如何使用 Windows 執行階段類型的通用 Windows 平台 (UWP) 應用程式中使用 c + + AMP。|
+|[圖形 (C++ AMP)](../../parallel/amp/graphics-cpp-amp.md)|描述如何使用 c + + AMP 圖形程式庫。|
+|[逐步解說：矩陣乘法](../../parallel/amp/walkthrough-matrix-multiplication.md)|示範如何使用 c + + AMP 程式碼和 tile 劃分的矩陣相乘。|
+|[逐步解說：偵錯 C++ AMP 應用程式](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)|說明如何建立和偵錯使用平行約化來加總大型整數陣列的應用程式。|
+
+## <a name="reference"></a>參考資料
+
+[參考 (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)<br/>
+[tile_static 關鍵字](../../cpp/tile-static-keyword.md)<br/>
+[restrict (C++ AMP)](../../cpp/restrict-cpp-amp.md)
+
+## <a name="other-resources"></a>其他資源
+
+[機器碼部落格中的平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=238472)<br/>
+[C + + AMP 範例專案下載](http://go.microsoft.com/fwlink/p/?linkid=248508)<br/>
 [使用並行視覺化檢視分析 c + + AMP 程式碼](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

@@ -17,46 +17,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd5abaccb4adc9e642458669535cff369d963cfd
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: eac50ba9c4c1b4bc14ebb847b283b5c2da11605e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712572"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388794"
 ---
 # <a name="outword"></a>__outword
-**Microsoft 專屬**  
-  
- 會產生`out`的指示，將 word`Data`出所指定的 I/O 連接埠`Port`。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-void __outword(   
-   unsigned short Port,   
-   unsigned short Data   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
+
+**Microsoft 專屬**
+
+會產生`out`的指示，將 word`Data`出所指定的 I/O 連接埠`Port`。
+
+## <a name="syntax"></a>語法
+
+```
+void __outword( 
+   unsigned short Port, 
+   unsigned short Data 
+);
+```
+
+#### <a name="parameters"></a>參數
+
 *連接埠*<br/>
-[in]若要將資料傳送至連接埠。  
-  
+[in]若要將資料傳送至連接埠。
+
 *Data*<br/>
-[in]要傳送的資料。  
-  
-## <a name="requirements"></a>需求  
-  
-|內建|架構|  
-|---------------|------------------|  
-|`__outword`|x86、x64|  
-  
- **標頭檔** \<intrin.h >  
-  
-## <a name="remarks"></a>備註  
- 此常式僅可作為內建常式使用。  
-  
-**結束 Microsoft 專屬**  
-  
-## <a name="see-also"></a>另請參閱  
- [編譯器內建](../intrinsics/compiler-intrinsics.md)
+[in]要傳送的資料。
+
+## <a name="requirements"></a>需求
+
+|內建|架構|
+|---------------|------------------|
+|`__outword`|x86、x64|
+
+**標頭檔** \<intrin.h >
+
+## <a name="remarks"></a>備註
+
+此常式僅可作為內建常式使用。
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>另請參閱
+
+[編譯器內建](../intrinsics/compiler-intrinsics.md)

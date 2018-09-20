@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f91474ec4c435b6fb2a005b47c67210a54d0804
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: abe76a4153ecfb0e4db4ce9e92eb63f5b00067ff
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317260"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394643"
 ---
 # <a name="attributed-programming-concepts"></a>屬性化程式設計概念
 
@@ -32,27 +32,27 @@ Visual c + + 包含各種不同的內容，以協助您在程式中使用屬性�
 
 ## <a name="in-this-section"></a>本節內容
 
-[屬性用途](../windows/purpose-of-attributes.md)  
+[屬性用途](../windows/purpose-of-attributes.md)<br/>
 顯示屬性化程式設計的概觀。
 
-[屬性的基本機制](../windows/basic-mechanics-of-attributes.md)  
+[屬性的基本機制](../windows/basic-mechanics-of-attributes.md)<br/>
 描述屬性在專案中的運作方式。
 
-[建置屬性化程式](../windows/building-an-attributed-program.md)  
+[建置屬性化程式](../windows/building-an-attributed-program.md)<br/>
 提供有關您的專案中使用 c + + 編譯器選項。
 
-[屬性分類](../windows/attribute-categories.md)  
+[屬性分類](../windows/attribute-categories.md)<br/>
 提供 Visual c + + 中使用屬性的類別目錄的連結。
 
-[屬性 Programmming 常見問題集](../windows/attribute-programming-faq.md)  
+[屬性 Programmming 常見問題集](../windows/attribute-programming-faq.md)<br/>
 解答有關屬性化程式設計的常見問題。
 
 ## <a name="related-sections"></a>相關章節
 
-[屬性參考](../windows/cpp-attributes-reference.md)  
+[屬性參考](../windows/cpp-attributes-reference.md)<br/>
 提供描述個別的屬性和其用法的參考主題的連結。
 
-[偵錯插入程式碼](/visualstudio/debugger/how-to-debug-injected-code)  
+[偵錯插入程式碼](/visualstudio/debugger/how-to-debug-injected-code)<br/>
 描述偵錯屬性化的程式。
 
 [__super](../cpp/super.md)和[__interface](../cpp/interface.md)  

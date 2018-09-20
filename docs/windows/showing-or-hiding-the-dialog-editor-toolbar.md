@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9b7b6c8b01665da1effb1b3bd056c99bd82163c0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 02deeeed3eecf717cff380e43317e5a75c1fddf7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316012"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381240"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar-c"></a>顯示或隱藏對話方塊編輯器工具列 （c + +）
 
@@ -60,7 +60,7 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[對話方塊上控制項的排列方式](../windows/arrangement-of-controls-on-dialog-boxes.md)  
-[如何：建立資源](../windows/how-to-create-a-resource.md)  
-[資源檔](../windows/resource-files-visual-studio.md)  
+[對話方塊上控制項的排列方式](../windows/arrangement-of-controls-on-dialog-boxes.md)<br/>
+[如何：建立資源](../windows/how-to-create-a-resource.md)<br/>
+[資源檔](../windows/resource-files-visual-studio.md)<br/>
 [對話方塊編輯器](../windows/dialog-editor.md)

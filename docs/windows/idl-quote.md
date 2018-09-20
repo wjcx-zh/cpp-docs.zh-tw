@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a79f731ef0080e38e2c1b60d8e4924a5bf75089e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fdea60808118ecd7caa04fab3421c481d908e833
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600291"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391809"
 ---
 # <a name="idlquote"></a>idl_quote
 
@@ -38,7 +38,7 @@ ms.locfileid: "42600291"
 
 ### <a name="parameters"></a>參數
 
-*文字*  
+*文字*<br/>
 您想要傳遞至所產生的.idl 檔案而不會傳回編譯器錯誤 Visual c + + 編譯器的屬性名稱。
 
 ## <a name="remarks"></a>備註
@@ -99,5 +99,5 @@ __interface IStatic{
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
 [獨立屬性](../windows/stand-alone-attributes.md)  

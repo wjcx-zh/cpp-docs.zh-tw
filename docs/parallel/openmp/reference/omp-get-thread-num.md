@@ -1,5 +1,5 @@
 ---
-title: omp_get_thread_num |Microsoft 文件
+title: omp_get_thread_num |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79d28b64b56ed501b47881fd9e3ba2bd2e8817e9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 42b95941e7853ec9bba830f5f5b37c0ed73b3548
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690734"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384691"
 ---
 # <a name="ompgetthreadnum"></a>omp_get_thread_num
-傳回其執行緒小組內的執行緒執行的執行緒數目。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int omp_get_thread_num( );  
-```  
-  
-## <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[3.1.4 omp_get_thread_num 函式](../../../parallel/openmp/3-1-4-omp-get-thread-num-function.md)。  
-  
-## <a name="example"></a>範例  
- 請參閱[平行](../../../parallel/openmp/reference/parallel.md)的使用範例`omp_get_thread_num`。  
-  
-## <a name="see-also"></a>另請參閱  
- [函式](../../../parallel/openmp/reference/openmp-functions.md)
+
+傳回其執行緒小組內的執行緒執行執行緒的數目。
+
+## <a name="syntax"></a>語法
+
+```
+int omp_get_thread_num( );
+```
+
+## <a name="remarks"></a>備註
+
+如需詳細資訊，請參閱 < [3.1.4 omp_get_thread_num 函式](../../../parallel/openmp/3-1-4-omp-get-thread-num-function.md)。
+
+## <a name="example"></a>範例
+
+請參閱[平行](../../../parallel/openmp/reference/parallel.md)如需使用的範例`omp_get_thread_num`。
+
+## <a name="see-also"></a>另請參閱
+
+[函式](../../../parallel/openmp/reference/openmp-functions.md)

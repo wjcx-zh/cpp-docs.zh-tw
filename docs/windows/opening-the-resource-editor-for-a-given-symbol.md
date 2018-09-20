@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b4b2c6f37a1e496310b1520754a90feb2facb163
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 6d8c478765a53c3884b736e798ffb51a46e73912
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313178"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385478"
 ---
 # <a name="opening-the-resource-editor-for-a-given-symbol-c"></a>開啟指定符號 （c + +） 的資源編輯器
 
@@ -48,5 +48,5 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[檢視資源符號](../windows/viewing-resource-symbols.md)  
+[檢視資源符號](../windows/viewing-resource-symbols.md)<br/>
 [預先定義的符號識別碼](../windows/predefined-symbol-ids.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc66a63478c07ee47ae32f536ebad6f9ee6f20e2
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 38b425a6c755d136284ba59a05bbadea91e3b0da
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194329"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395215"
 ---
 # <a name="uidefault"></a>uidefault
 
@@ -74,5 +74,5 @@ __interface ICustom{
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
 [方法屬性](../windows/method-attributes.md)  

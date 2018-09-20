@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d21348d9c252fbcd3024ca6531671979d8834eb
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 138921cfb635125210e5f5bf9305c91243c4489c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605814"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387220"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -39,10 +39,10 @@ ms.locfileid: "42605814"
 
 ### <a name="parameters"></a>參數
 
-*interfaces*  
+*interfaces*<br/>
 以逗號分隔清單中會是成員的 IDL coclass 的介面。 指定單一介面的簡略方法是**實作 (** *interface_name* **)**。
 
-*dispinterfaces*  
+*dispinterfaces*<br/>
 以逗號分隔會是成員的 IDL coclass dispinterface 的清單。 速記方法來指定單一 dispinterface**實作 (分配介面 =** *dispinterface_name* **)**。
 
 ## <a name="remarks"></a>備註
@@ -56,7 +56,7 @@ ms.locfileid: "42605814"
 |||
 |-|-|
 |**適用於**|**類別**，**結構**|
-|**可重複**|[是]|
+|**可重複**|是|
 |**必要屬性**|無|
 |**無效屬性**|無|
 
@@ -558,5 +558,5 @@ public:
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器屬性](../windows/compiler-attributes.md)  
+[編譯器屬性](../windows/compiler-attributes.md)<br/>
 [類別屬性](../windows/class-attributes.md)  

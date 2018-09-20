@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 775fbe39edc9478b1fce3afb39ee2bf1f6d5ed36
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0c7ebdf83730b661cbd855ba730da1abeee936c5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714307"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377067"
 ---
 # <a name="interface-class--c-component-extensions"></a>interface class (C++ 元件擴充功能)
 
@@ -36,21 +36,21 @@ ms.locfileid: "45714307"
 ```cpp
 interface_access
 interface class
- name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
+name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
 ```
 
 ### <a name="parameters"></a>參數
 
-*interface_access*  
+*interface_access*<br/>
 組件外部介面的存取範圍。  可能的值為**公開金鑰**並**私人**。  **私用**是預設值。 巢狀的介面不能有*interface_access*規範。
 
-*name*  
+*name*<br/>
 介面的名稱。
 
-*inherit_access*  
+*inherit_access*<br/>
 存取範圍*base_interface*。  唯一允許協助工具的基底介面是**公開**（預設值）。
 
-*base_interface*  
+*base_interface*<br/>
 （選擇性）介面的基底介面*名稱*。
 
 ### <a name="remarks"></a>備註

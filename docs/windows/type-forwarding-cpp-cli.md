@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d10c025c22523e6329f051fcfbe76988337992a2
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 806003e33e60b5146bdd722fa5248011cd4939c0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318144"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396543"
 ---
 # <a name="type-forwarding-ccli"></a>類型轉送 (C++/CLI)
 
@@ -51,10 +51,10 @@ ms.locfileid: "44318144"
 
 ### <a name="parameters"></a>參數
 
-*new*  
+*new*<br/>
 組件，其中您要移動的類型定義。
 
-*type*  
+*type*<br/>
 型別定義您要移動到另一個組件。
 
 ### <a name="remarks"></a>備註

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 360884c27e834f31badce0b02119203ee7877e4e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: d11fdea6e85bf542a00b497b311494ba6133e1d3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318924"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376586"
 ---
 # <a name="displaying-or-hiding-the-toolbar-c-image-editor-for-icons"></a>顯示或隱藏工具列 （c + + 圖示影像編輯器）
 
@@ -43,6 +43,6 @@ ms.locfileid: "44318924"
 
 ## <a name="see-also"></a>另請參閱
 
-[色彩視窗](../windows/colors-window-image-editor-for-icons.md)  
-[工具列](../windows/toolbar-image-editor-for-icons.md)  
+[色彩視窗](../windows/colors-window-image-editor-for-icons.md)<br/>
+[工具列](../windows/toolbar-image-editor-for-icons.md)<br/>
 [圖示影像編輯器](../windows/image-editor-for-icons.md)

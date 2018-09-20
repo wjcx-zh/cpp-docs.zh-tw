@@ -1,5 +1,5 @@
 ---
-title: lock 類別 |Microsoft 文件
+title: lock 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,32 +19,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a860f79b740e0f34eef33b7a96e0236835f1f6b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ef0887ca3eec7510717aab21ba4c6c7aba98d25
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33129693"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380291"
 ---
 # <a name="lock-class"></a>lock 類別
-這個類別會自動進行同步處理從多個執行緒存取物件的鎖定。  當建構它取得的鎖定和終結該版本時鎖定。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-ref class lock;  
-```  
-  
-## <a name="remarks"></a>備註  
- `lock` 僅適用於 CLR 物件，只用於 CLR 程式碼中。  
-  
- 就內部而言，鎖定類別會使用<xref:System.Threading.Monitor>以同步存取。 在同步處理，請參閱這個主題更詳細的資訊。  
-  
-## <a name="requirements"></a>需求  
- **標頭檔** \<msclr\lock.h >  
-  
- **命名空間**msclr  
-  
-## <a name="see-also"></a>另請參閱  
- [lock](../dotnet/lock.md)   
- [lock 成員](../dotnet/lock-members.md)
+
+這個類別會自動採用同步存取的物件處理從多個執行緒的鎖定。  在建構時它會取得鎖定時終結該版本和鎖定。
+
+## <a name="syntax"></a>語法
+
+```
+ref class lock;
+```
+
+## <a name="remarks"></a>備註
+
+`lock` 只適用於 CLR 物件，且僅用於 CLR 程式碼中。
+
+就內部而言，此鎖定類別會使用<xref:System.Threading.Monitor>來同步存取。 在同步處理，請參閱這個主題更詳細的資訊。
+
+## <a name="requirements"></a>需求
+
+**標頭檔** \<msclr\lock.h >
+
+**命名空間**msclr
+
+## <a name="see-also"></a>另請參閱
+
+[lock](../dotnet/lock.md)<br/>
+[lock 成員](../dotnet/lock-members.md)

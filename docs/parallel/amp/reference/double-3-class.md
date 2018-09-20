@@ -82,211 +82,208 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ecc1939faab978c84f786d90c8693b036d2e938
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fb0e6c20969fd4a810fbad5135127b2171fda9d9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46027748"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391393"
 ---
 # <a name="double3-class"></a>double_3 類別
-表示短向量的三個雙精度浮點數。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-class double_3;  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-typedefs"></a>公用 Typedefs  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|value_type||  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[double_3 建構函式](#ctor)|多載。 預設建構函式，初始化具有 0 的所有項目。|  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|double_3::get_x||  
-|double_3::get_xy||  
-|double_3::get_xyz||  
-|double_3::get_xz||  
-|double_3::get_xzy||  
-|double_3::get_y||  
-|double_3::get_yx||  
-|double_3::get_yxz||  
-|double_3::get_yz||  
-|double_3::get_yzx||  
-|double_3::get_z||  
-|double_3::get_zx||  
-|double_3::get_zxy||  
-|double_3::get_zy||  
-|double_3::get_zyx||  
-|double_3::ref_b||  
-|double_3::ref_g||  
-|double_3::ref_r||  
-|double_3::ref_x||  
-|double_3::ref_y||  
-|double_3::ref_z||  
-|double_3::set_x||  
-|double_3::set_xy||  
-|double_3::set_xyz||  
-|double_3::set_xz||  
-|double_3::set_xzy||  
-|double_3::set_y||  
-|double_3::set_yx||  
-|double_3::set_yxz||  
-|double_3::set_yz||  
-|double_3::set_yzx||  
-|double_3::set_z||  
-|double_3::set_zx||  
-|double_3::set_zxy||  
-|double_3::set_zy||  
-|double_3::set_zyx||  
-  
-### <a name="public-operators"></a>公用運算子  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|double_3::operator-||  
-|double_3::operator--||  
-|double_3::operator*=||  
-|double_3::operator/=||  
-|double_3::operator++||  
-|double_3::operator+=||  
-|double_3::operator=||  
-|double_3::operator-=||  
-  
-### <a name="public-constants"></a>公用常數  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[常數的大小](#double_3__size)||  
-  
-### <a name="public-data-members"></a>公用資料成員  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|double_3::b||  
-|double_3::bg||  
-|double_3::bgr||  
-|double_3::br||  
-|double_3::brg||  
-|double_3::g||  
-|double_3::gb||  
-|double_3::gbr||  
-|double_3::gr||  
-|double_3::grb||  
-|double_3::r||  
-|double_3::rb||  
-|double_3::rbg||  
-|double_3::rg||  
-|double_3::rgb||  
-|double_3::x||  
-|double_3::xy||  
-|double_3::xyz||  
-|double_3::xz||  
-|double_3::xzy||  
-|double_3::y||  
-|double_3::yx||  
-|double_3::yxz||  
-|double_3::yz||  
-|double_3::yzx||  
-|double_3::z||  
-|double_3::zx||  
-|double_3::zxy||  
-|double_3::zy||  
-|double_3::zyx||  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `double_3`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** amp_short_vectors.h  
-  
- **命名空間：** concurrency:: graphics  
-  
-##  <a name="ctor"></a> double_3 
 
- 預設建構函式，初始化具有 0 的所有項目。  
-  
-```  
+表示短向量的三個雙精度浮點數。
+
+## <a name="syntax"></a>語法
+
+```
+class double_3;
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-typedefs"></a>公用 Typedefs
+
+|名稱|描述|
+|----------|-----------------|
+|value_type||
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[double_3 建構函式](#ctor)|多載。 預設建構函式，初始化具有 0 的所有項目。|
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|double_3::get_x||
+|double_3::get_xy||
+|double_3::get_xyz||
+|double_3::get_xz||
+|double_3::get_xzy||
+|double_3::get_y||
+|double_3::get_yx||
+|double_3::get_yxz||
+|double_3::get_yz||
+|double_3::get_yzx||
+|double_3::get_z||
+|double_3::get_zx||
+|double_3::get_zxy||
+|double_3::get_zy||
+|double_3::get_zyx||
+|double_3::ref_b||
+|double_3::ref_g||
+|double_3::ref_r||
+|double_3::ref_x||
+|double_3::ref_y||
+|double_3::ref_z||
+|double_3::set_x||
+|double_3::set_xy||
+|double_3::set_xyz||
+|double_3::set_xz||
+|double_3::set_xzy||
+|double_3::set_y||
+|double_3::set_yx||
+|double_3::set_yxz||
+|double_3::set_yz||
+|double_3::set_yzx||
+|double_3::set_z||
+|double_3::set_zx||
+|double_3::set_zxy||
+|double_3::set_zy||
+|double_3::set_zyx||
+
+### <a name="public-operators"></a>公用運算子
+
+|名稱|描述|
+|----------|-----------------|
+|double_3::operator-||
+|double_3::operator--||
+|double_3::operator*=||
+|double_3::operator/=||
+|double_3::operator++||
+|double_3::operator+=||
+|double_3::operator=||
+|double_3::operator-=||
+
+### <a name="public-constants"></a>公用常數
+
+|名稱|描述|
+|----------|-----------------|
+|[常數的大小](#double_3__size)||
+
+### <a name="public-data-members"></a>公用資料成員
+
+|名稱|描述|
+|----------|-----------------|
+|double_3::b||
+|double_3::bg||
+|double_3::bgr||
+|double_3::br||
+|double_3::brg||
+|double_3::g||
+|double_3::gb||
+|double_3::gbr||
+|double_3::gr||
+|double_3::grb||
+|double_3::r||
+|double_3::rb||
+|double_3::rbg||
+|double_3::rg||
+|double_3::rgb||
+|double_3::x||
+|double_3::xy||
+|double_3::xyz||
+|double_3::xz||
+|double_3::xzy||
+|double_3::y||
+|double_3::yx||
+|double_3::yxz||
+|double_3::yz||
+|double_3::yzx||
+|double_3::z||
+|double_3::zx||
+|double_3::zxy||
+|double_3::zy||
+|double_3::zyx||
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`double_3`
+
+## <a name="requirements"></a>需求
+
+**標頭：** amp_short_vectors.h
+
+**命名空間：** concurrency:: graphics
+
+##  <a name="ctor"></a> double_3
+
+預設建構函式，初始化具有 0 的所有項目。
+
+```
 double_3() restrict(amp,
     cpu);
 
- 
 double_3(
-    double _V0,  
-    double _V1,  
+    double _V0,
+    double _V1,
     double _V2) restrict(amp,
     cpu);
 
- 
 double_3(
     double _V) restrict(amp,
     cpu);
 
- 
 double_3(
     const double_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline double_3(
     const uint_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline double_3(
     const int_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline double_3(
     const float_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline double_3(
     const unorm_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline double_3(
     const norm_3& _Other) restrict(amp,
     cpu);
-```  
-  
-### <a name="parameters"></a>參數  
-*_V0*<br/>
-要初始化項目 0 的值。  
-  
-*_V1*<br/>
-要初始化項目 1 的值。  
-  
-*並將 _V2*<br/>
-要初始化項目 2 的值。  
-  
-*（_V)*<br/>
-初始設定的值。  
-  
-*_Other*<br/>
-用來初始化的物件。  
-  
-##  <a name="double_3__size"></a> 大小 
+```
 
-```  
-static const int size = 3;  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)
+### <a name="parameters"></a>參數
+
+*_V0*<br/>
+要初始化項目 0 的值。
+
+*_V1*<br/>
+要初始化項目 1 的值。
+
+*並將 _V2*<br/>
+要初始化項目 2 的值。
+
+*（_V)*<br/>
+初始設定的值。
+
+*_Other*<br/>
+用來初始化的物件。
+
+##  <a name="double_3__size"></a> 大小
+
+```
+static const int size = 3;
+```
+
+## <a name="see-also"></a>另請參閱
+
+[Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)

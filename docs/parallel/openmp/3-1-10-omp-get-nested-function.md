@@ -1,5 +1,5 @@
 ---
-title: 3.1.10 omp_get_nested 函式 |Microsoft 文件
+title: 3.1.10 omp_get_nested 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,19 +12,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f447da6957cb385ace918120eb7ed7a5420e9f0
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d019dd757080bbc87ff7aaab1a8745b2a3156b39
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686717"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392277"
 ---
 # <a name="3110-ompgetnested-function"></a>3.1.10 omp_get_nested 函式
-`omp_get_nested`函式會傳回非零值，如果已啟用巢狀平行處理原則和 0 已停用。 如需有關巢狀平行處理原則的詳細資訊，請參閱節 3.1.9 在 40 頁面上。 格式如下：  
-  
-```  
-#include <omp.h>  
-int omp_get_nested(void);  
-```  
-  
- 如果實作沒有實作巢狀平行處理原則，此函式一律傳回 0。
+
+`omp_get_nested`函式會傳回非零值，如果巢狀平行處理原則已啟用而 0 會停用。 如需有關巢狀平行處理原則的詳細資訊，請參閱節 3.1.9 在 40 頁面上。 格式如下：
+
+```
+#include <omp.h>
+int omp_get_nested(void);
+```
+
+如果實作不會實作巢狀平行處理原則，則此函式一律會傳回 0。

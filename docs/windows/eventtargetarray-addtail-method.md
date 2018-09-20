@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6609bba6d7adbddda152007e4db45c82f8039bc0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ab0219c8893ff7ad35e29f9dd8b18be18caf8eb9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603674"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378120"
 ---
 # <a name="eventtargetarrayaddtail-method"></a>EventTargetArray::AddTail 方法
 
@@ -38,7 +38,7 @@ void AddTail(
 
 ### <a name="parameters"></a>參數
 
-*項目*  
+*項目*<br/>
 要附加的事件處理常式的指標。
 
 ## <a name="remarks"></a>備註
@@ -55,5 +55,5 @@ void AddTail(
 
 ## <a name="see-also"></a>另請參閱
 
-[EventTargetArray 類別](../windows/eventtargetarray-class.md)  
+[EventTargetArray 類別](../windows/eventtargetarray-class.md)<br/>
 [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

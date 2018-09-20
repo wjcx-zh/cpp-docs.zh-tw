@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: be23f0f053c6f78225a323abf4c52f15d2ebbe21
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 29788fe7d2bd58d0ffc3bd058aa79966364fecdc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42580934"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375292"
 ---
 # <a name="verifyinterfacehelperverify-method"></a>VerifyInterfaceHelper::Verify 方法
 
@@ -46,5 +46,5 @@ static void Verify();
 
 ## <a name="see-also"></a>另請參閱
 
-[VerifyInterfaceHelper 結構](../windows/verifyinterfacehelper-structure.md)  
+[VerifyInterfaceHelper 結構](../windows/verifyinterfacehelper-structure.md)<br/>
 [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

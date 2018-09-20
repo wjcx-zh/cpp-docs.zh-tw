@@ -18,50 +18,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ff43920400028e0fb13fc17615fb58cc551726b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9f81b423838d2daa9915dc5330d23e4ef69273bc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704219"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395059"
 ---
 # <a name="outdwordstring"></a>__outdwordstring
-**Microsoft 專屬**  
-  
- 會產生`rep outsd`指示，會傳送`Count`雙字組開頭`Buffer`出所指定的 I/O 連接埠`Port`。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-void __outdwordstring(   
-   unsigned short Port,   
-   unsigned long* Buffer,   
-   unsigned long Count   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
+
+**Microsoft 專屬**
+
+會產生`rep outsd`指示，會傳送`Count`雙字組開頭`Buffer`出所指定的 I/O 連接埠`Port`。
+
+## <a name="syntax"></a>語法
+
+```
+void __outdwordstring( 
+   unsigned short Port, 
+   unsigned long* Buffer, 
+   unsigned long Count 
+);
+```
+
+#### <a name="parameters"></a>參數
+
 *連接埠*<br/>
-[in]若要將資料傳送至連接埠。  
-  
+[in]若要將資料傳送至連接埠。
+
 *Buffer*<br/>
-[in]指定的連接埠傳送資料的指標。  
-  
+[in]指定的連接埠傳送資料的指標。
+
 *計數*<br/>
-[in]若要傳送的雙字組數目。  
-  
-## <a name="requirements"></a>需求  
-  
-|內建|架構|  
-|---------------|------------------|  
-|`__outdwordstring`|x86、x64|  
-  
- **標頭檔** \<intrin.h >  
-  
-## <a name="remarks"></a>備註  
- 此常式僅可作為內建常式使用。  
-  
-**結束 Microsoft 專屬**  
-  
-## <a name="see-also"></a>另請參閱  
- [編譯器內建](../intrinsics/compiler-intrinsics.md)
+[in]若要傳送的雙字組數目。
+
+## <a name="requirements"></a>需求
+
+|內建|架構|
+|---------------|------------------|
+|`__outdwordstring`|x86、x64|
+
+**標頭檔** \<intrin.h >
+
+## <a name="remarks"></a>備註
+
+此常式僅可作為內建常式使用。
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>另請參閱
+
+[編譯器內建](../intrinsics/compiler-intrinsics.md)

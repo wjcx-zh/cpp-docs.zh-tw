@@ -20,93 +20,103 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7c25f55263270ad797b231a21e60fe4b0e552c4
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 3610f5c8fa11aabcc3de81ddf0cb23060b9e77a1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336109"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390925"
 ---
 # <a name="cd2dsizef-class"></a>CD2DSizeF 類別
-D2D1_SIZE_F 包裝函式。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-class CD2DSizeF : public D2D1_SIZE_F;  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CD2DSizeF::CD2DSizeF](#cd2dsizef)|多載。 建構`CD2DSizeF`物件從`D2D1_SIZE_F`物件。|  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CD2DSizeF::IsNull](#isnull)|傳回**布林**值，指出運算式是否包含任何有效的資料 (NULL)。|  
-  
-### <a name="public-operators"></a>公用運算子  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CD2DSizeF::operator CSize](#operator_csize)|將轉換`CD2DSizeF`至`CSize`物件。|  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `D2D1_SIZE_F`  
-  
- [CD2DSizeF](../../mfc/reference/cd2dsizef-class.md)  
-  
-## <a name="requirements"></a>需求  
- **標頭：** afxrendertarget.h  
-  
-##  <a name="cd2dsizef"></a>  CD2DSizeF::CD2DSizeF  
- 建構 CD2DSizeF 物件從 CSize 物件。  
-  
-```  
-CD2DSizeF(const CSize& size);  
-CD2DSizeF(const D2D1_SIZE_F& size);  
+
+D2D1_SIZE_F 包裝函式。
+
+## <a name="syntax"></a>語法
+
+```
+class CD2DSizeF : public D2D1_SIZE_F;
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[CD2DSizeF::CD2DSizeF](#cd2dsizef)|多載。 建構`CD2DSizeF`物件從`D2D1_SIZE_F`物件。|
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[CD2DSizeF::IsNull](#isnull)|傳回**布林**值，指出運算式是否包含任何有效的資料 (NULL)。|
+
+### <a name="public-operators"></a>公用運算子
+
+|名稱|描述|
+|----------|-----------------|
+|[CD2DSizeF::operator CSize](#operator_csize)|將轉換`CD2DSizeF`至`CSize`物件。|
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`D2D1_SIZE_F`
+
+[CD2DSizeF](../../mfc/reference/cd2dsizef-class.md)
+
+## <a name="requirements"></a>需求
+
+**標頭：** afxrendertarget.h
+
+##  <a name="cd2dsizef"></a>  CD2DSizeF::CD2DSizeF
+
+建構 CD2DSizeF 物件從 CSize 物件。
+
+```
+CD2DSizeF(const CSize& size);
+CD2DSizeF(const D2D1_SIZE_F& size);
   CD2DSizeF(const D2D1_SIZE_F* size);
 
- 
+
 CD2DSizeF(
-    FLOAT cx = 0.,  
+    FLOAT cx = 0.,
     FLOAT cy = 0.);
-```  
-  
-### <a name="parameters"></a>參數  
- *size*  
- 來源大小  
-  
- *cx*  
- 來源寬度  
-  
- *cy*  
- 來源高度  
-  
-##  <a name="isnull"></a>  CD2DSizeF::IsNull  
- 傳回布林值，指出運算式是否包含任何有效的資料 (Null)。  
-  
-```  
-BOOL IsNull() const;  
-```  
-  
-### <a name="return-value"></a>傳回值  
- 如果是空的; 的寬度和高度，則為 TRUE。否則為 FALSE。  
-  
-##  <a name="operator_csize"></a>  CD2DSizeF::operator CSize  
- 將 CD2DSizeF 轉換 CSize 物件。  
-  
-```  
+```
+
+### <a name="parameters"></a>參數
+
+*size*<br/>
+來源大小
+
+*cx*<br/>
+來源寬度
+
+*cy*<br/>
+來源高度
+
+##  <a name="isnull"></a>  CD2DSizeF::IsNull
+
+傳回布林值，指出運算式是否包含任何有效的資料 (Null)。
+
+```
+BOOL IsNull() const;
+```
+
+### <a name="return-value"></a>傳回值
+
+如果是空的; 的寬度和高度，則為 TRUE。否則為 FALSE。
+
+##  <a name="operator_csize"></a>  CD2DSizeF::operator CSize
+
+將 CD2DSizeF 轉換 CSize 物件。
+
+```
 operator CSize();
-```   
-  
-### <a name="return-value"></a>傳回值  
- 目前的 D2D 大小值。  
-  
-## <a name="see-also"></a>另請參閱  
- [類別](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="return-value"></a>傳回值
+
+目前的 D2D 大小值。
+
+## <a name="see-also"></a>另請參閱
+
+[類別](../../mfc/reference/mfc-classes.md)

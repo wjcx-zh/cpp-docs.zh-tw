@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aac6e0456bf8a63712c498114d403c05af5ccddb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 54b02ab188ddd122bd3751f73a3edb33d87266f9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212204"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388208"
 ---
 # <a name="pointerdefault"></a>pointer_default
 
@@ -38,7 +38,7 @@ ms.locfileid: "43212204"
 
 ### <a name="parameters"></a>參數
 
-*值*  
+*值*<br/>
 描述此指標類型的值： **ptr**， **ref**，或**唯一**。
 
 ## <a name="remarks"></a>備註
@@ -64,5 +64,5 @@ ms.locfileid: "43212204"
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
 [介面屬性](../windows/interface-attributes.md)  

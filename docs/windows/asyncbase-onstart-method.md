@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 810ed8d285d0e169fef3352d57a6911082033381
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 168f677a0b2743e60e73cb82fd7f55470fbf9b85
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600698"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393837"
 ---
 # <a name="asyncbaseonstart-method"></a>AsyncBase::OnStart 方法
 
@@ -44,5 +44,5 @@ virtual void OnStart(
 
 ## <a name="see-also"></a>另請參閱
 
-[AsyncBase 類別](../windows/asyncbase-class.md)  
+[AsyncBase 類別](../windows/asyncbase-class.md)<br/>
 [AsyncBase::OnStart 方法](../windows/asyncbase-onstart-method.md)

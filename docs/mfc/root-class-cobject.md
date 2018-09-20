@@ -1,5 +1,5 @@
 ---
-title: 根類別： CObject |Microsoft 文件
+title: 根類別： CObject |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2398f1e775dfa8b9331a4abc0137207c85531aff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0804397888d64ac5b6cab9a60f9912b27358bc43
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385066"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373317"
 ---
 # <a name="root-class-cobject"></a>根類別：CObject
-大部分的 Microsoft Foundation Class (MFC) 程式庫中的類別被衍生自類別階層架構的根目錄中單一基底類別。 `CObject` 提供數個實用的功能，以從其衍生的負荷極低的所有類別。 如需有關`CObject`和其功能，請參閱[使用 CObject](../mfc/using-cobject.md)。  
-  
- [CObject](../mfc/reference/cobject-class.md)  
- 大部分的 MFC 類別的超基底類別。 支援序列化的資料，以及取得有關某一類別的執行階段資訊。  
-  
- [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)  
- 用來在執行階段決定物件的確切類別結構。  
-  
-## <a name="see-also"></a>另請參閱  
- [類別概觀](../mfc/class-library-overview.md)
+
+大部分的 Microsoft Foundation Class (MFC) 程式庫中的類別被衍生自類別階層的根目錄單一基底類別。 `CObject` 提供一些有用的功能，可從其衍生的負荷極低的所有類別。 如需詳細資訊`CObject`和其功能，請參閱[使用 CObject](../mfc/using-cobject.md)。
+
+[CObject](../mfc/reference/cobject-class.md)<br/>
+大部分的 MFC 類別的 ultimate 基底類別。 支援將資料序列化，以及取得類別的執行階段資訊。
+
+[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)<br/>
+用來在執行階段判斷物件的確切類別結構。
+
+## <a name="see-also"></a>另請參閱
+
+[類別概觀](../mfc/class-library-overview.md)
 

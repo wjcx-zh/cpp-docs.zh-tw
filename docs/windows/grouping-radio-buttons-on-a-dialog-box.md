@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad05e9448af9148965ca2f0137d3e0d666d48871
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 5615756f8716ae1f4c73ccf98e2754b57f674216
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315388"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392955"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box-c"></a>群組對話方塊 （c + +） 上的選項按鈕
 
@@ -69,6 +69,6 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[對話方塊上控制項的排列方式](../windows/arrangement-of-controls-on-dialog-boxes.md)  
-[對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)  
+[對話方塊上控制項的排列方式](../windows/arrangement-of-controls-on-dialog-boxes.md)<br/>
+[對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)<br/>
 [控制項](../mfc/controls-mfc.md)

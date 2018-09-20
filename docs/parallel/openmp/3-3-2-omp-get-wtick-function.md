@@ -1,5 +1,5 @@
 ---
-title: 3.3.2 omp_get_wtick 函式 |Microsoft 文件
+title: 3.3.2 omp_get_wtick 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,17 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9119a2226fc67058f8d1848b45e6902bae0b361c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0111e7ee1d4eba0a7ca9edf50d99cef8d052f6a1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688709"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380306"
 ---
 # <a name="332-ompgetwtick-function"></a>3.3.2 omp_get_wtick 函式
-`omp_get_wtick`函式會傳回雙精確度浮點值的秒數等於後續時鐘刻度之間。 格式如下：  
-  
-```  
-#include <omp.h>  
-double omp_get_wtick(void);  
+
+`omp_get_wtick`函式會傳回雙精度浮點數值的秒數為後續的時鐘刻度之間。 格式如下：
+
+```
+#include <omp.h>
+double omp_get_wtick(void);
 ```

@@ -1,5 +1,5 @@
 ---
-title: 初始化 CWnd 物件的時機 |Microsoft 文件
+title: 初始化 CWnd 物件的時機 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee10a4632809a224028bfa482f80ed9e8a9334a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6445190ab3da6ed84dbdd83cd0acab0ba98691f3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382869"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388429"
 ---
 # <a name="when-to-initialize-cwnd-objects"></a>初始化 CWnd 物件的時機
-您無法建立您自己的子視窗或任何 Windows API 函式呼叫的建構函式中`CWnd`-衍生物件。 這是因為`HWND`如`CWnd`物件尚未建立。 必須以進行最特定的 Windows 初始設定，例如新增子視窗[OnCreate](../mfc/reference/cwnd-class.md#oncreate)訊息處理常式。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
-  
--   [建立文件框架視窗](../mfc/creating-document-frame-windows.md)  
-  
--   [文件/檢視建立](../mfc/document-view-creation.md)  
-  
-## <a name="see-also"></a>另請參閱  
- [使用框架視窗](../mfc/using-frame-windows.md)
+
+您無法建立您自己的子視窗或呼叫 Windows API 中的任何函式中的建構函式`CWnd`-衍生物件。 這是因為`HWND`針對`CWnd`物件尚未建立。 中，必須完成最 Windows 特定的初始化，例如新增子視窗[OnCreate](../mfc/reference/cwnd-class.md#oncreate)訊息處理常式。
+
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+
+- [建立文件框架視窗](../mfc/creating-document-frame-windows.md)
+
+- [文件/檢視建立](../mfc/document-view-creation.md)
+
+## <a name="see-also"></a>另請參閱
+
+[使用框架視窗](../mfc/using-frame-windows.md)
 

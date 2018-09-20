@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 213bfd9dc5c07ad1b3ef811b9333cb12bf9c2b7a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b6ac44a9a27b5c3ad62279dc3065aa9e0aac5236
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755591"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378217"
 ---
 # <a name="cfixedstringt-class"></a>CFixedStringT 類別
 
@@ -141,7 +141,7 @@ CFixedStringT<StringType, t_nChars>& operator=(const StringType& str);
 
 ## <a name="see-also"></a>另請參閱
 
-[CStringT 類別](../../atl-mfc-shared/reference/cstringt-class.md)   
-[階層架構圖表](../../mfc/hierarchy-chart.md)   
+[CStringT 類別](../../atl-mfc-shared/reference/cstringt-class.md)<br/>
+[階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

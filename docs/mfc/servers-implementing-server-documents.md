@@ -1,5 +1,5 @@
 ---
-title: 伺服器： 實作伺服器文件 |Microsoft 文件
+title: 伺服器： 實作伺服器文件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 273fd1e5afefb8a10b3e1ae8e3c2f81ccec05e7f
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: b62de2a1e6cba6ecbb29521518f5442ab002ddf3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950824"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381942"
 ---
 # <a name="servers-implementing-server-documents"></a>伺服器：實作伺服器文件
-本文說明如果您未指定應用程式精靈中的 OLE 伺服器選項，成功實作伺服器文件時，必須採取的步驟。  
-  
-#### <a name="to-define-a-server-document-class"></a>若要定義伺服器文件類別  
-  
-1.  從 `COleServerDoc` 衍生您的文件類別，而不要從 `CDocument` 衍生。  
-  
-2.  建立伺服器項目類別衍生自`COleServerItem`。  
-  
-3.  實作`OnGetEmbeddedItem`伺服器文件類別的成員函式。  
-  
-     `OnGetEmbeddedItem` 容器應用程式的使用者建立或編輯內嵌項目時呼叫。 它應該會傳回代表整個文件的項目。 這應該是物件的程式`COleServerItem`-衍生的類別。  
-  
-4.  覆寫`Serialize`序列化文件內容的成員函式。 您不需要序列化的伺服器項目清單，除非您正在使用它們來代表文件中的原生資料。 如需詳細資訊，請參閱*實作伺服器項目*本文[伺服器： 伺服器項目](../mfc/servers-server-items.md)。  
-  
- 建立伺服器文件時，架構會自動註冊文件與 OLE 系統 Dll。 這可讓 Dll 識別伺服器文件。  
-  
- 如需詳細資訊，請參閱[COleServerItem](../mfc/reference/coleserveritem-class.md)和[COleServerDoc](../mfc/reference/coleserverdoc-class.md)中*類別庫參考*。  
-  
-## <a name="see-also"></a>另請參閱  
- [伺服器](../mfc/servers.md)   
- [伺服器： 伺服器項目](../mfc/servers-server-items.md)   
- [伺服器： 實作伺服器](../mfc/servers-implementing-a-server.md)   
- [伺服器：實作就地編輯框架視窗](../mfc/servers-implementing-in-place-frame-windows.md)
+
+這篇文章說明如果您未指定應用程式精靈中的 OLE 伺服器 選項，成功實作伺服器文件時，必須採取的步驟。
+
+#### <a name="to-define-a-server-document-class"></a>若要定義伺服器文件類別
+
+1. 從 `COleServerDoc` 衍生您的文件類別，而不要從 `CDocument` 衍生。
+
+1. 建立伺服器項目類別衍生自`COleServerItem`。
+
+1. 實作`OnGetEmbeddedItem`伺服器文件類別的成員函式。
+
+     `OnGetEmbeddedItem` 容器應用程式的使用者建立或編輯內嵌項目時呼叫。 它應該會傳回代表整個文件的項目。 這應該是物件您`COleServerItem`-衍生的類別。
+
+1. 覆寫`Serialize`来序列化的文件內容的成員函式。 您不需要序列化的伺服器項目清單，除非您使用它們來代表文件中的原生的資料。 如需詳細資訊，請參閱 <<c0>  *實作伺服器項目*一文中[伺服器： 伺服器項目](../mfc/servers-server-items.md)。
+
+建立伺服器文件時，架構會自動註冊文件與 OLE 系統 Dll。 這可讓識別伺服器的文件的 Dll。
+
+如需詳細資訊，請參閱 < [COleServerItem](../mfc/reference/coleserveritem-class.md)並[COleServerDoc](../mfc/reference/coleserverdoc-class.md)中*類別庫參考*。
+
+## <a name="see-also"></a>另請參閱
+
+[伺服器](../mfc/servers.md)<br/>
+[伺服器：伺服器項目](../mfc/servers-server-items.md)<br/>
+[伺服器：實作伺服器](../mfc/servers-implementing-a-server.md)<br/>
+[伺服器：實作就地編輯框架視窗](../mfc/servers-implementing-in-place-frame-windows.md)
 

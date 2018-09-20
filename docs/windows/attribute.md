@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 54699888fc2988dd9b4ccec2a57b6d9df0d4e79e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 335b22b015bf244e39d67781eae21b3c43328256
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314769"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379784"
 ---
 # <a name="attribute"></a>屬性
 
@@ -43,13 +43,13 @@ ms.locfileid: "44314769"
 
 ### <a name="parameters"></a>參數
 
-*AllowOn*  
+*AllowOn*<br/>
 指定可以套用自訂屬性的語言項目。 預設值是`System::AttributeTargets::All`(請參閱 < [System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx))。
 
-*AllowMultiple*  
+*AllowMultiple*<br/>
 指定是否將自訂屬性可以套用重複建構。 預設值為 FALSE。
 
-*繼承*  
+*繼承*<br/>
 指出屬性是否會繼承由子類別。 編譯器不提供特殊支援這項功能;它是屬性取用者的工作 (`Reflection`，例如) 遵從這項資訊。 如果*繼承*為 TRUE，繼承屬性。 如果*AllowMultiple*為 TRUE 時，屬性將會累積在衍生的成員; 如果*AllowMultiple*為 FALSE 時，此屬性會覆寫 （或取代） 在繼承。 如果*繼承*為 FALSE 時，將不會繼承屬性。 預設值為 TRUE。
 
 ## <a name="remarks"></a>備註

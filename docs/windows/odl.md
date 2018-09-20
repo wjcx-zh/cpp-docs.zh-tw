@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f376c2294dde0cc2fe538d3896aa28a9d136627
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 59ca2f8135ead802e0486cdffc7b3e3a64140f6c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221039"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375977"
 ---
 # <a name="odl"></a>odl
 
@@ -75,5 +75,5 @@ public:
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
 [介面屬性](../windows/interface-attributes.md)  

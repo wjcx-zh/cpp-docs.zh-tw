@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6eb2261ab973245c78ec8f5e0269663e5181a0ab
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 391af2939d4fc46f386299241f009ab2249200da
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590037"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372210"
 ---
 # <a name="hstringset-method"></a>HString::Set 方法
 
@@ -42,13 +42,13 @@ HRESULT Set(
 
 ### <a name="parameters"></a>參數
 
-*str*  
+*str*<br/>
 寬字元字串。
 
-*Len*  
+*Len*<br/>
 最大長度*str*指派給目前的參數**HString**物件。
 
-*hstr*  
+*hstr*<br/>
 將現有**HString**物件。
 
 ## <a name="requirements"></a>需求

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af0cfe6f3a94aa1bc2afc4e4857864f81099567e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: de7f4c94ec0d9cb5a9a57315ebda015b7737132c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591727"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392758"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 
@@ -51,16 +51,16 @@ A *pin 指標*可防止物件的內部指標指向的記憶體回收堆積上移
 
 ### <a name="parameters"></a>參數
 
-*cv_qualifier*  
+*cv_qualifier*<br/>
 **const**或是**volatile**限定詞。 根據預設，pin 指標是**volatile**。 它是多餘，但不是錯誤來宣告 pin 指標**volatile**。
 
-*type*  
+*type*<br/>
 型別*初始設定式*。
 
-*var*  
+*var*<br/>
 名稱**pin_ptr**變數。
 
-*initializer*  
+*initializer*<br/>
 參考類型的成員，Managed 陣列的元素，或是其他任何可以指派至原生指標的物件。
 
 ### <a name="remarks"></a>備註

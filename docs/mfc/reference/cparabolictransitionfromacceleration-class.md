@@ -1,5 +1,5 @@
 ---
-title: CParabolicTransitionFromAcceleration 類別 |Microsoft 文件
+title: CParabolicTransitionFromAcceleration 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,113 +26,126 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f54f600e9a98304f1113c6e9e22389f6c974a80
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 3e4db0932b2a2171e47c1b8e6c42a84fa100c9e9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078891"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389352"
 ---
 # <a name="cparabolictransitionfromacceleration-class"></a>CParabolicTransitionFromAcceleration 類別
-封裝拋物線加速轉換。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-class CParabolicTransitionFromAcceleration : public CBaseTransition;  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration](#cparabolictransitionfromacceleration)|建構拋物線加速轉換，並將它初始化以指定的參數。|  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CParabolicTransitionFromAcceleration::Create](#create)|呼叫轉換程式庫來建立封裝的轉換 COM 物件。 (覆寫[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|  
-  
-### <a name="public-data-members"></a>公用資料成員  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CParabolicTransitionFromAcceleration::m_dblAcceleration](#m_dblacceleration)|在轉換期間動畫變數的加速。|  
-|[CParabolicTransitionFromAcceleration::m_dblFinalValue](#m_dblfinalvalue)|結尾的轉換動畫變數的值。|  
-|[CParabolicTransitionFromAcceleration::m_dblFinalVelocity](#m_dblfinalvelocity)|結尾的轉換動畫變數的速度。|  
-  
-## <a name="remarks"></a>備註  
- 拋物線加速轉換，期間動畫變數的值變更的起始值的結束時間指定速度的最終值。 您可以控制變數速度藉由指定的加速速率達到最後的值。 由於所有轉換會自動都清除，建議來配置它們使用新的運算子。 封裝的 IUIAnimationTransition COM 物件會建立 CAnimationController::AnimateGroup，直到然後它便是 NULL。 變更成員變數之後這個 COM 物件建立沒有任何作用。  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
-  
- [CParabolicTransitionFromAcceleration](../../mfc/reference/cparabolictransitionfromacceleration-class.md)  
-  
-## <a name="requirements"></a>需求  
- **標頭：** afxanimationcontroller.h  
-  
-##  <a name="cparabolictransitionfromacceleration"></a>  CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration  
- 建構拋物線加速轉換，並將它初始化以指定的參數。  
-  
-```  
+
+封裝拋物線加速轉換。
+
+## <a name="syntax"></a>語法
+
+```
+class CParabolicTransitionFromAcceleration : public CBaseTransition;
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration](#cparabolictransitionfromacceleration)|建構的拋物線加速轉換，並使用指定的參數將它初始化。|
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[CParabolicTransitionFromAcceleration::Create](#create)|呼叫轉換程式庫來建立封裝的轉換 COM 物件。 (覆寫[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|
+
+### <a name="public-data-members"></a>公用資料成員
+
+|名稱|描述|
+|----------|-----------------|
+|[CParabolicTransitionFromAcceleration::m_dblAcceleration](#m_dblacceleration)|在轉換期間加速動畫變數。|
+|[CParabolicTransitionFromAcceleration::m_dblFinalValue](#m_dblfinalvalue)|結尾的轉換動畫變數的值。|
+|[CParabolicTransitionFromAcceleration::m_dblFinalVelocity](#m_dblfinalvelocity)|結尾的轉換動畫變數的速度。|
+
+## <a name="remarks"></a>備註
+
+拋物線加速轉換期間動畫變數的值變更的起始值的結束時間指定速度的最終值。 您可以控制變數達到最終的值指定加速射的速度。 因為所有的轉換會自動清除，所以建議配置它們使用新的運算子。 封裝的 IUIAnimationTransition COM 物件會建立 CAnimationController::AnimateGroup 之前, 則是 NULL。 不會影響這個 COM 物件建立後，請變更成員變數。
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+
+[CParabolicTransitionFromAcceleration](../../mfc/reference/cparabolictransitionfromacceleration-class.md)
+
+## <a name="requirements"></a>需求
+
+**標頭：** afxanimationcontroller.h
+
+##  <a name="cparabolictransitionfromacceleration"></a>  CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration
+
+建構的拋物線加速轉換，並使用指定的參數將它初始化。
+
+```
 CParabolicTransitionFromAcceleration(
-    DOUBLE dblFinalValue,  
-    DOUBLE dblFinalVelocity,  
+    DOUBLE dblFinalValue,
+    DOUBLE dblFinalVelocity,
     DOUBLE dblAcceleration);
-```  
-  
-### <a name="parameters"></a>參數  
- *dblFinalValue*  
- 結尾的轉換動畫變數的值。  
-  
- *dblFinalVelocity*  
- 結尾的轉換動畫變數的速度。  
-  
- *dblAcceleration*  
- 在轉換期間動畫變數的加速。  
-  
-##  <a name="create"></a>  CParabolicTransitionFromAcceleration::Create  
- 呼叫轉換程式庫來建立封裝的轉換 COM 物件。  
-  
-```  
+```
+
+### <a name="parameters"></a>參數
+
+*dblFinalValue*<br/>
+結尾的轉換動畫變數的值。
+
+*dblFinalVelocity*<br/>
+結尾的轉換動畫變數的速度。
+
+*dblAcceleration*<br/>
+在轉換期間加速動畫變數。
+
+##  <a name="create"></a>  CParabolicTransitionFromAcceleration::Create
+
+呼叫轉換程式庫來建立封裝的轉換 COM 物件。
+
+```
 virtual BOOL Create(
-    IUIAnimationTransitionLibrary* pLibrary,  
+    IUIAnimationTransitionLibrary* pLibrary,
     IUIAnimationTransitionFactory* /* not used */);
-```  
-  
-### <a name="parameters"></a>參數  
- *pLibrary*  
- 這是負責建立的標準轉換轉換程式庫指標。  
-  
-### <a name="return-value"></a>傳回值  
- 如果轉換成功; 建立，則為 TRUE。否則為 FALSE。  
-  
-##  <a name="m_dblacceleration"></a>  CParabolicTransitionFromAcceleration::m_dblAcceleration  
- 在轉換期間動畫變數的加速。  
-  
-```  
-DOUBLE m_dblAcceleration;  
-```  
-  
-##  <a name="m_dblfinalvalue"></a>  CParabolicTransitionFromAcceleration::m_dblFinalValue  
- 結尾的轉換動畫變數的值。  
-  
-```  
-DOUBLE m_dblFinalValue;  
-```  
-  
-##  <a name="m_dblfinalvelocity"></a>  CParabolicTransitionFromAcceleration::m_dblFinalVelocity  
- 結尾的轉換動畫變數的速度。  
-  
-```  
-DOUBLE m_dblFinalVelocity;  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [類別](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>參數
+
+*pLibrary*<br/>
+轉換程式庫，也就是負責建立的標準轉換指標。
+
+### <a name="return-value"></a>傳回值
+
+如果轉換成功; 建立，則為 TRUE。否則為 FALSE。
+
+##  <a name="m_dblacceleration"></a>  CParabolicTransitionFromAcceleration::m_dblAcceleration
+
+在轉換期間加速動畫變數。
+
+```
+DOUBLE m_dblAcceleration;
+```
+
+##  <a name="m_dblfinalvalue"></a>  CParabolicTransitionFromAcceleration::m_dblFinalValue
+
+結尾的轉換動畫變數的值。
+
+```
+DOUBLE m_dblFinalValue;
+```
+
+##  <a name="m_dblfinalvelocity"></a>  CParabolicTransitionFromAcceleration::m_dblFinalVelocity
+
+結尾的轉換動畫變數的速度。
+
+```
+DOUBLE m_dblFinalVelocity;
+```
+
+## <a name="see-also"></a>另請參閱
+
+[類別](../../mfc/reference/mfc-classes.md)

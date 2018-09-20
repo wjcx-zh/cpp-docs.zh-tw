@@ -15,38 +15,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c5783fcdb1bccbfe7e2a316fa1ea4285519bb1b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e207ec1d5489a629b765d398e26ac7c07771d0da
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593554"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384984"
 ---
 # <a name="last-character-in-a-string"></a>字串中的最後一個字元
-使用下列秘訣：  
-  
--   後隨位元組範圍重疊在許多情況下設定的 ASCII 字元。 您可以安全地將任何控制字元 (小於 32) 類掃瞄來用於。  
-  
--   請考慮下列一行程式碼，它可能會檢查在字串中的最後一個字元是反斜線字元：  
-  
-    ```  
-    if ( sz[ strlen( sz ) - 1 ] == '\\' )    // Is last character a '\'?  
-        // . . .  
-    ```  
-  
-     因為`strlen`不是 MBCS 感知，它會傳回多位元組字串中的位元組數目，不是字元的數目。 另外，請注意，在某些字碼頁 (932，例如)，'\\' (0x5c) 是有效的後隨位元組 (`sz`是 C 字串)。  
-  
-     一個可行的解決方案是這種方式重新撰寫程式碼：  
-  
-    ```  
-    char *pLast;  
-    pLast = _mbsrchr( sz, '\\' );    // find last occurrence of '\' in sz  
-    if ( pLast && ( *_mbsinc( pLast ) == '\0' ) )  
-        // . . .  
-    ```  
-  
-     此程式碼使用 MBCS 函式`_mbsrchr`和`_mbsinc`。 因為這些函式是 MBCS 感知，他們可以區別 '\\'字元和後隨位元組'\\'。 如果字串中的最後一個字元是 null ('\0')，程式碼會執行某些動作。  
-  
-## <a name="see-also"></a>另請參閱  
- [MBCS 程式設計提示](../text/mbcs-programming-tips.md)   
- [字元指派](../text/character-assignment.md)
+
+使用下列秘訣：
+
+- 後隨位元組範圍重疊在許多情況下設定的 ASCII 字元。 您可以安全地將任何控制字元 (小於 32) 類掃瞄來用於。
+
+- 請考慮下列一行程式碼，它可能會檢查在字串中的最後一個字元是反斜線字元：
+
+    ```cpp
+    if ( sz[ strlen( sz ) - 1 ] == '\\' )    // Is last character a '\'?
+        // . . .
+    ```
+
+   因為`strlen`不是 MBCS 感知，它會傳回多位元組字串中的位元組數目，不是字元的數目。 另外，請注意，在某些字碼頁 (932，例如)，'\\' (0x5c) 是有效的後隨位元組 (`sz`是 C 字串)。
+
+   一個可行的解決方案是這種方式重新撰寫程式碼：
+
+    ```cpp
+    char *pLast;
+    pLast = _mbsrchr( sz, '\\' );    // find last occurrence of '\' in sz
+    if ( pLast && ( *_mbsinc( pLast ) == '\0' ) )
+        // . . .
+    ```
+
+   此程式碼使用 MBCS 函式`_mbsrchr`和`_mbsinc`。 因為這些函式是 MBCS 感知，他們可以區別 '\\'字元和後隨位元組'\\'。 如果字串中的最後一個字元是 null ('\0')，程式碼會執行某些動作。
+
+## <a name="see-also"></a>另請參閱
+
+[MBCS 程式設計提示](../text/mbcs-programming-tips.md)<br/>
+[字元指派](../text/character-assignment.md)

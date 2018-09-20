@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7055c21a2b9e7d0e32f3dac56641513b19953e18
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0e0017e0c4d5462ef985b70b44120ff20066f626
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315575"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391796"
 ---
 # <a name="adding-an-entry-to-an-accelerator-table-c"></a>將項目新增至快速鍵對應表 （c + +）
 
@@ -51,5 +51,5 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[編輯快速鍵對應表](../windows/editing-accelerator-tables.md)  
+[編輯快速鍵對應表](../windows/editing-accelerator-tables.md)<br/>
 [快速鍵編輯器](../windows/accelerator-editor.md)

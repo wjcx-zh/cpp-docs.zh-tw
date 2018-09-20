@@ -1,5 +1,5 @@
 ---
-title: 使用標題控制項 |Microsoft 文件
+title: 使用標題控制項 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,27 +15,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df916cddacd5a435ef5cb130f9f6f5b6a25d2d4c
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6da3ffd669ebd3d9cc02fc56a13acfa1fe804e7b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952719"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381734"
 ---
 # <a name="working-with-a-header-control"></a>使用標題控制項
-若要使用的標頭控制項的簡易方式 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) 是搭配清單控制項，請參閱 <<c4> [ 使用 CListCtrl](../mfc/using-clistctrl.md)稍後在本主題系列中。 您也可以單獨使用時，使用標題控制項。 MFC 呼叫`InitCommonControls`您。 主要工作如下：  
-  
--   [建立標題控制項](../mfc/creating-the-header-control.md)  
-  
--   [將項目加入至標題控制項](../mfc/adding-items-to-the-header-control.md)  
-  
--   [排序標題控制項中的項目](../mfc/ordering-items-in-the-header-control.md)  
-  
--   [處理標題控制項告知](../mfc/processing-header-control-notifications.md)  
-  
- 標頭控制項物件嵌入父檢視或對話方塊類別中，如果父代終結時終結控制項。  
-  
-## <a name="see-also"></a>另請參閱  
- [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+
+簡單的方式，來使用標題控制項 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) 是搭配清單控制項，請參閱[使用 CListCtrl](../mfc/using-clistctrl.md)稍後在本主題系列中。 您也可以使用標題控制項本身。 MFC 呼叫`InitCommonControls`您。 主要工作如下：
+
+- [建立標題控制項](../mfc/creating-the-header-control.md)
+
+- [將項目加入至標題控制項](../mfc/adding-items-to-the-header-control.md)
+
+- [排序標題控制項中的項目](../mfc/ordering-items-in-the-header-control.md)
+
+- [處理標題控制項告知](../mfc/processing-header-control-notifications.md)
+
+如果標頭控制項物件嵌入父檢視或對話方塊類別，父代終結時終結控制項。
+
+## <a name="see-also"></a>另請參閱
+
+[使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
+[控制項](../mfc/controls-mfc.md)
 

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bbd42d3d51921ccab01dfdcaed9ad988e22ae9a8
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 2bb4adbb960f9d062cc8573c7ca0f7cd5dcd0426
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894701"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382215"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>使用可驗證的組件搭配 SQL Server (C++/CLI)
 
@@ -42,19 +42,20 @@ SQL Server transact-sql (T-SQL) 可讓您可驗證的組件安裝到 SQL Server 
 CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
   PERMISSION_SET <permissions>
 DROP ASSEMBLY <assemblyName>
-```  
+```
 
 PERMISSION_SET 命令指定的安全性內容中，並可以有不受限制、 保險箱或擴充的值。
 
 此外，您可以使用 CREATE FUNCTION 命令繫結至類別中的方法名稱：
 
 ```sql
-CREATE FUNCTION <FunctionName>(<FunctionParams>)  
+CREATE FUNCTION <FunctionName>(<FunctionParams>)
 RETURNS returnType
 [EXTERNAL NAME <AssemblyName>:<ClassName>::<StaticMethodName>]
-```  
+```
 
 ## <a name="example"></a>範例
+
 下列 SQL 指令碼 (比方說，具名"MyScript.sql 」) 將組件載入至 SQL Server，並提供類別的方法：
 
 ```sql
@@ -69,23 +70,23 @@ with permission_set safe
 -- Create function on assembly with no external access
 drop function GetQuoteNoEA
 go
-create function GetQuoteNoEA(@sym nvarchar(10))  
+create function GetQuoteNoEA(@sym nvarchar(10))
 returns real
 external name stockNoEA:StockQuotes::GetQuote
 go
 
 -- To call the function
-select dbo.GetQuoteNoEA('MSFT')  
+select dbo.GetQuoteNoEA('MSFT')
 go
-```  
+```
 
 可以以互動方式執行 SQL 指令碼，在 SQL Query Analyzer 或 sqlcmd.exe 公用程式命令列。 下列命令列連接到 MyServer，使用預設的資料庫、 使用信任的連接，輸入 MyScript.sql 及輸出 MyResult.txt。
 
 ```cmd
 sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
-```  
+```
 
 ## <a name="see-also"></a>另請參閱
 
-[如何： 移轉至 /clr: safe (C + + /cli CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
+[如何： 移轉至 /clr: safe (C + + /cli CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)<br/>
 [類別和結構](../cpp/classes-and-structs-cpp.md)

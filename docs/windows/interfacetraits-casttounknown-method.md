@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: df27ec7ca4cccb278fee524aab9d0d2dc5a25134
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c75e02136c626d72215a2af79d1391863e9f494c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589755"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382658"
 ---
 # <a name="interfacetraitscasttounknown-method"></a>InterfaceTraits::CastToUnknown 方法
 
@@ -39,10 +39,10 @@ static __forceinline IUnknown* CastToUnknown(
 
 ### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 參數的型別*ptr*。
 
-*ptr*  
+*ptr*<br/>
 類型指標*T*。
 
 ## <a name="return-value"></a>傳回值
@@ -63,5 +63,5 @@ IUnknown 指標從中`Base`衍生。
 
 ## <a name="see-also"></a>另請參閱
 
-[InterfaceTraits 結構](../windows/interfacetraits-structure.md)  
+[InterfaceTraits 結構](../windows/interfacetraits-structure.md)<br/>
 [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

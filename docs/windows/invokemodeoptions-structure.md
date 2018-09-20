@@ -1,5 +1,5 @@
 ---
-title: InvokeModeOptions 結構 |Microsoft 文件
+title: InvokeModeOptions 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2018
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b1eb0e7f6cf49a7c6ac12a4810ae1622e263e2f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ea549db29f7fcb67e4d59e341bf7d5ad085b6d7f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882833"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392706"
 ---
 # <a name="invokemodeoptions-structure"></a>InvokeModeOptions 結構
 
-指定要委派佇列中的所有事件的都引發還是停止引發之後會引發錯誤。 允許的值中指定`InvokeMode`列舉。
+指定要委派佇列中的所有事件的都引發還是停止引發之後會引發錯誤。 允許的值會指定在`InvokeMode`列舉。
 
 ## <a name="syntax"></a>語法
 
@@ -51,5 +51,5 @@ struct InvokeModeOptions
 
 ## <a name="see-also"></a>另請參閱
 
-[Microsoft:: wrl 命名空間](../windows/microsoft-wrl-namespace.md)
+[Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)<br/>
 [Microsoft::WRL::AgileEventSource 類別](../windows/agileeventsource-class.md)

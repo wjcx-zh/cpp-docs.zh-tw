@@ -1,5 +1,5 @@
 ---
-title: msclr 命名空間 |Microsoft 文件
+title: msclr 命名空間 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0ff10b12d9c77c1e17e278276d0ab7f334f2f9ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8177029bb114dfa0a2dc826d45ec948599902f55
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33132904"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390821"
 ---
 # <a name="msclr-namespace"></a>msclr 命名空間
-`msclr` 命名空間包含 C++ 支援程式庫的所有類別。 如需有關這些類別的詳細資訊，請參閱[c + + 支援程式庫](../dotnet/cpp-support-library.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [C++ 支援程式庫](../dotnet/cpp-support-library.md)
+
+`msclr` 命名空間包含 C++ 支援程式庫的所有類別。 如需有關這些類別的詳細資訊，請參閱 < [c + + 支援程式庫](../dotnet/cpp-support-library.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[C++ 支援程式庫](../dotnet/cpp-support-library.md)

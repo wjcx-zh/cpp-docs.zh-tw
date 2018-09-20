@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d775e9c42ceb8a564e2cc7992cb95ac9717a966d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 71dc4a3a1f2c08d3bac2fcf5c474768f438feccd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707677"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394981"
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD (啟用防護檢查)
 
@@ -47,6 +47,6 @@ ms.locfileid: "45707677"
 
 ## <a name="see-also"></a>另請參閱
 
-[/guard （啟用控制流程防護）](../../build/reference/guard-enable-control-flow-guard.md)
+[/guard (啟用控制流程防護)](../../build/reference/guard-enable-control-flow-guard.md)<br/>
 [設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
 [連結器選項](../../build/reference/linker-options.md)

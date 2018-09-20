@@ -39,12 +39,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3bc016367495be8cc10c09605e8018811bde5ca9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5dfe6622edcd8446b844b5d3d7c03d1fd5d0197c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118904"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379407"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass 類別
 
@@ -61,10 +61,10 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 
 ### <a name="parameters"></a>參數
 
-*classFlags*  
+*classFlags*<br/>
 選擇性參數。 一或多個組合[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。 `__WRL_CONFIGURATION_LEGACY__`巨集可以定義變更 classFlags 專案中的所有執行階段類別的預設值。 如果定義，RuntimeClass 執行個體是非 agile 預設。 未定義，RuntimeClass 執行個體皆為敏捷式預設。 若要避免模稜兩可一律指定`Microsoft::WRL::FtmBase`中`TInterfaces`或`RuntimeClassType::InhibitFtmBase`。 請注意，如果 InhibitFtmBase 和 FtmBase 兩者都用物件將會是敏捷式軟體開發。
 
-*TInterfaces*  
+*TInterfaces*<br/>
 介面清單物件會實作超越`IUnknown`，`IInspectable`或其他介面受到[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)。 它也可能會列出其他類別以值得注意的是衍生自`Microsoft::WRL::FtmBase`使敏捷式軟體開發的物件，並將它實作`IMarshal`。
 
 ## <a name="members"></a>成員
@@ -152,10 +152,10 @@ STDMETHOD(
 
 ### <a name="parameters"></a>參數
 
-*iidCount*  
+*iidCount*<br/>
 這項作業完成時，陣列中的元素總數*iid*。
 
-*iid*  
+*iid*<br/>
 這項作業完成時，介面識別碼的陣列的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -174,7 +174,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 ### <a name="parameters"></a>參數
 
-*runtimeName*  
+*runtimeName*<br/>
 這項作業完成時，執行階段類別名稱。
 
 ### <a name="return-value"></a>傳回值
@@ -197,7 +197,7 @@ STDMETHOD(GetTrustLevel)(
 
 ### <a name="parameters"></a>參數
 
-*trustLvl*  
+*trustLvl*<br/>
 這項作業完成時，目前的信任層級`RuntimeClass`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -220,7 +220,7 @@ STDMETHOD(
 
 ### <a name="parameters"></a>參數
 
-*weakReference*  
+*weakReference*<br/>
 這項作業完成時，弱式參考物件的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -253,10 +253,10 @@ STDMETHOD(
 
 ### <a name="parameters"></a>參數
 
-*riid*  
+*riid*<br/>
 介面識別碼。
 
-*ppvObject*  
+*ppvObject*<br/>
 此 opereation 完成時，所指定之介面的指標*riid*參數。
 
 ### <a name="return-value"></a>傳回值

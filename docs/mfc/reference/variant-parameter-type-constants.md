@@ -45,53 +45,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d61930bda4560baaf628ce018cc0161527d9d07e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 64b68fb930c6de732e009a251c5e8363bace80ec
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885945"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374733"
 ---
 # <a name="variant-parameter-type-constants"></a>變異參數類型常數
-本主題會列出新的常數，表示設計為搭配 Microsoft Foundation 類別庫的 OLE 控制項類別的 variant 參數類型。  
-  
- 以下是類別的常數清單：  
-  
-##  <a name="_mfc_variant_data_constants"></a> 變異資料常數  
-  
--   VTS_COLOR 的 32 位元整數，用來表示的 RGB 色彩值。  
-  
--   VTS_FONT A 指標`IFontDisp`OLE 字型物件介面。  
-  
--   VTS_HANDLE Windows 控制代碼值。  
-  
--   VTS_PICTURE A 指標`IPictureDisp`OLE 圖片物件的介面。  
-  
--   VTS_OPTEXCLUSIVE 的 16 位元值用於要使用的控制項，例如選項按鈕群組中的控制項。 此類型會告訴容器，是否群組中的一個控制項，則為 TRUE 的值，所有其他項目必須是 FALSE。  
-  
--   VTS_TRISTATE 的 16 位元帶正負號可以是下列三個可能的值 （選取、 清除、 無法使用），例如，核取方塊的內容所使用的整數。  
-  
--   VTS_XPOS_HIMETRIC 的 32 位元不帶正負號的整數來代表沿著 x 軸的位置以 himetric 為單位。  
-  
--   VTS_YPOS_HIMETRIC 的 32 位元不帶正負號的整數來代表沿著 y 軸的位置以 himetric 為單位。  
-  
--   VTS_XPOS_PIXELS 的 32 位元不帶正負號的整數來代表沿著 x 軸單位為像素的位置。  
-  
--   VTS_YPOS_PIXELS 的 32 位元不帶正負號的整數來表示像素為單位沿著 y 軸位置。  
-  
--   VTS_XSIZE_PIXELS 的 32 位元不帶正負號的整數來表示像素為單位的畫面物件的寬度。  
-  
--   VTS_YSIZE_PIXELS 的 32 位元不帶正負號的整數來代表像素為單位的畫面物件的高度。  
-  
--   VTS_XSIZE_HIMETRIC 的 32 位元不帶正負號的整數來代表以 himetric 為單位的畫面物件的寬度。  
-  
--   VTS_YSIZE_HIMETRIC 的 32 位元不帶正負號的整數來代表以 himetric 為單位的畫面物件的高度。  
-  
+
+本主題會列出新的常數，表示設計為搭配 Microsoft Foundation 類別庫的 OLE 控制項類別的 variant 參數類型。
+
+以下是類別的常數清單：
+
+##  <a name="_mfc_variant_data_constants"></a> 變異資料常數
+
+- VTS_COLOR 的 32 位元整數，用來表示的 RGB 色彩值。
+
+- VTS_FONT A 指標`IFontDisp`OLE 字型物件介面。
+
+- VTS_HANDLE Windows 控制代碼值。
+
+- VTS_PICTURE A 指標`IPictureDisp`OLE 圖片物件的介面。
+
+- VTS_OPTEXCLUSIVE 的 16 位元值用於要使用的控制項，例如選項按鈕群組中的控制項。 此類型會告訴容器，是否群組中的一個控制項，則為 TRUE 的值，所有其他項目必須是 FALSE。
+
+- VTS_TRISTATE 的 16 位元帶正負號可以是下列三個可能的值 （選取、 清除、 無法使用），例如，核取方塊的內容所使用的整數。
+
+- VTS_XPOS_HIMETRIC 的 32 位元不帶正負號的整數來代表沿著 x 軸的位置以 himetric 為單位。
+
+- VTS_YPOS_HIMETRIC 的 32 位元不帶正負號的整數來代表沿著 y 軸的位置以 himetric 為單位。
+
+- VTS_XPOS_PIXELS 的 32 位元不帶正負號的整數來代表沿著 x 軸單位為像素的位置。
+
+- VTS_YPOS_PIXELS 的 32 位元不帶正負號的整數來表示像素為單位沿著 y 軸位置。
+
+- VTS_XSIZE_PIXELS 的 32 位元不帶正負號的整數來表示像素為單位的畫面物件的寬度。
+
+- VTS_YSIZE_PIXELS 的 32 位元不帶正負號的整數來代表像素為單位的畫面物件的高度。
+
+- VTS_XSIZE_HIMETRIC 的 32 位元不帶正負號的整數來代表以 himetric 為單位的畫面物件的寬度。
+
+- VTS_YSIZE_HIMETRIC 的 32 位元不帶正負號的整數來代表以 himetric 為單位的畫面物件的高度。
+
     > [!NOTE]
-    >  對於所有 variant 類型，除了 VTS_FONT 和 VTS_PICTURE，提供變異資料常數的指標，定義其他變數的常數。 這些常數會命名為使用 VTS_P`constantname`慣例。 比方說，VTS_PCOLOR 是 VTS_COLOR 常數的指標。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** afxdisp.h  
-  
-## <a name="see-also"></a>另請參閱  
- [巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)
+    >  對於所有 variant 類型，除了 VTS_FONT 和 VTS_PICTURE，提供變異資料常數的指標，定義其他變數的常數。 這些常數會命名為使用 VTS_P`constantname`慣例。 比方說，VTS_PCOLOR 是 VTS_COLOR 常數的指標。
+
+## <a name="requirements"></a>需求
+
+**標頭：** afxdisp.h
+
+## <a name="see-also"></a>另請參閱
+
+[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)

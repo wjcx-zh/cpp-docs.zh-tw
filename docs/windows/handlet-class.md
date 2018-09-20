@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6da9451d6f009bad6163efec23bb6f920a56df49
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6622e92112d9f73e673e2fb44598a393843bf0fa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590526"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396333"
 ---
 # <a name="handlet-class"></a>HandleT 類別
 
@@ -39,7 +39,7 @@ class HandleT;
 
 ### <a name="parameters"></a>參數
 
-*HandleTraits*  
+*HandleTraits*<br/>
 執行個體[HandleTraits](../windows/handletraits-structure.md)結構定義的控制代碼的一般特性。
 
 ## <a name="members"></a>成員

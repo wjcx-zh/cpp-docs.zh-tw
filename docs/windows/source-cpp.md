@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ccd5f5220a49ddb63554b4c3b96533a3066d4d4b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d3f4cacd380a86138095b0f8b3bf67f860d45cda
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214589"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390535"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -38,7 +38,7 @@ ms.locfileid: "43214589"
 
 ### <a name="parameters"></a>參數
 
-*interfaces*  
+*interfaces*<br/>
 一或多個介面，指定當您將套用的來源屬性的類別。 未在來源套用至屬性或方法時，會使用此參數。
 
 ## <a name="remarks"></a>備註
@@ -96,7 +96,7 @@ class NN : public b
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
-[類別屬性](../windows/class-attributes.md)  
-[方法屬性](../windows/method-attributes.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
+[類別屬性](../windows/class-attributes.md)<br/>
+[方法屬性](../windows/method-attributes.md)<br/>
 [coclass](../windows/coclass.md)  

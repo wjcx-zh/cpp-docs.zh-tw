@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 980058c588e02751113b889d44cf0bb5f69066f1
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: b693d83872ca1c918c97e47f75c89f788748353c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538999"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375899"
 ---
 # <a name="preprocessor"></a>前置處理器
 前置處理器是文字處理器，會在轉譯的第一個階段操作原始程式檔的文字。 前置處理器不會剖析原始程式文字，但會將原始程式文字分解為用於尋找巨集呼叫的語彙基元。 雖然編譯器通常在第一次傳遞時叫用前置處理器，但也可以分別叫用前置處理器，在不進行編譯的情況下處理文字。  
@@ -48,5 +48,5 @@ ms.locfileid: "42538999"
   
 ## <a name="see-also"></a>另請參閱  
  
-[C/c + + 前置處理器參考](../preprocessor/c-cpp-preprocessor-reference.md)   
+[C/C++ 前置處理器參考](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
 [轉譯階段](../preprocessor/phases-of-translation.md)

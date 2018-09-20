@@ -44,172 +44,177 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b88c9a57b359c6cef7dc8587a4695b5590e69d5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8aa28b46aa7796a6055788c53accb389cb66ed70
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721873"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389495"
 ---
 # <a name="interlockedxor-intrinsic-functions"></a>_InterlockedXor 內建函式
-**Microsoft 專屬**  
-  
- 在多個執行緒共用的變數上，執行不可部分完成的位元專有或 (XOR) 運算。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-long _InterlockedXor(  
-   long volatile * Value,  
-   long Mask  
-);  
-long _InterlockedXor_acq(  
-   long volatile * Value,  
-   long Mask  
-);  
-long _InterlockedXor_HLEAcquire(  
-   long volatile * Value,  
-   long Mask  
-);  
-long _InterlockedXor_HLERelease(  
-   long volatile * Value,  
-   long Mask  
-);  
-long _InterlockedXor_nf(  
-   long volatile * Value,  
-   long Mask  
-);  
-long _InterlockedXor_np(  
-   long volatile * Value,  
-   long Mask  
-);  
-long _InterlockedXor_rel(  
-   long volatile * Value,  
-   long Mask  
-);  
-char _InterlockedXor8(  
-   char volatile * Value,  
-   char Mask  
-);  
-char _InterlockedXor8_acq(  
-   char volatile * Value,  
-   char Mask  
-);  
-char _InterlockedXor8_nf(  
-   char volatile * Value,  
-   char Mask  
-);  
-char _InterlockedXor8_np(  
-   char volatile * Value,  
-   char Mask  
-);  
-char _InterlockedXor8_rel(  
-   char volatile * Value,  
-   char Mask  
-);  
-short _InterlockedXor16(  
-   short volatile * Value,  
-   short Mask  
-);  
-short _InterlockedXor16_acq(  
-   short volatile * Value,  
-   short Mask  
-);  
-short _InterlockedXor16_nf (  
-   short volatile * Value,  
-   short Mask  
-);  
-short _InterlockedXor16_np (  
-   short volatile * Value,  
-   short Mask  
-);  
-short _InterlockedXor16_rel(  
-   short volatile * Value,  
-   short Mask  
-);  
-__int64 _InterlockedXor64(  
-   __int64 volatile * Value,  
-   __int64 Mask  
-);  
-__int64 _InterlockedXor64_acq(  
-   __int64 volatile * Value,  
-   __int64 Mask  
-);   
-__int64 _InterlockedXor64_HLEAcquire(  
-   __int64 volatile * Value,  
-   __int64 Mask  
-);  
-__int64 _InterlockedXor64_HLERelease(  
-   __int64 volatile * Value,  
-   __int64 Mask  
-);   
-__int64 _InterlockedXor64_nf(  
-   __int64 volatile * Value,  
-   __int64 Mask  
-);  
-__int64 _InterlockedXor64_np(  
-   __int64 volatile * Value,  
-   __int64 Mask  
-);  
-__int64 _InterlockedXor64_rel(  
-   __int64 volatile * Value,  
-   __int64 Mask  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
+
+**Microsoft 專屬**
+
+在多個執行緒共用的變數上，執行不可部分完成的位元專有或 (XOR) 運算。
+
+## <a name="syntax"></a>語法
+
+```
+long _InterlockedXor(
+   long volatile * Value,
+   long Mask
+);
+long _InterlockedXor_acq(
+   long volatile * Value,
+   long Mask
+);
+long _InterlockedXor_HLEAcquire(
+   long volatile * Value,
+   long Mask
+);
+long _InterlockedXor_HLERelease(
+   long volatile * Value,
+   long Mask
+);
+long _InterlockedXor_nf(
+   long volatile * Value,
+   long Mask
+);
+long _InterlockedXor_np(
+   long volatile * Value,
+   long Mask
+);
+long _InterlockedXor_rel(
+   long volatile * Value,
+   long Mask
+);
+char _InterlockedXor8(
+   char volatile * Value,
+   char Mask
+);
+char _InterlockedXor8_acq(
+   char volatile * Value,
+   char Mask
+);
+char _InterlockedXor8_nf(
+   char volatile * Value,
+   char Mask
+);
+char _InterlockedXor8_np(
+   char volatile * Value,
+   char Mask
+);
+char _InterlockedXor8_rel(
+   char volatile * Value,
+   char Mask
+);
+short _InterlockedXor16(
+   short volatile * Value,
+   short Mask
+);
+short _InterlockedXor16_acq(
+   short volatile * Value,
+   short Mask
+);
+short _InterlockedXor16_nf (
+   short volatile * Value,
+   short Mask
+);
+short _InterlockedXor16_np (
+   short volatile * Value,
+   short Mask
+);
+short _InterlockedXor16_rel(
+   short volatile * Value,
+   short Mask
+);
+__int64 _InterlockedXor64(
+   __int64 volatile * Value,
+   __int64 Mask
+);
+__int64 _InterlockedXor64_acq(
+   __int64 volatile * Value,
+   __int64 Mask
+);
+__int64 _InterlockedXor64_HLEAcquire(
+   __int64 volatile * Value,
+   __int64 Mask
+);
+__int64 _InterlockedXor64_HLERelease(
+   __int64 volatile * Value,
+   __int64 Mask
+);
+__int64 _InterlockedXor64_nf(
+   __int64 volatile * Value,
+   __int64 Mask
+);
+__int64 _InterlockedXor64_np(
+   __int64 volatile * Value,
+   __int64 Mask
+);
+__int64 _InterlockedXor64_rel(
+   __int64 volatile * Value,
+   __int64 Mask
+);
+```
+
+#### <a name="parameters"></a>參數
+
 *值*<br/>
-[in、 out]要被結果取代的第一個運算元指標。  
-  
+[in、 out]要被結果取代的第一個運算元指標。
+
 *遮罩*<br/>
-[in]第二個運算元。  
-  
-## <a name="return-value"></a>傳回值  
- 第一個運算元的原始值。  
-  
-## <a name="requirements"></a>需求  
-  
-|內建|架構|標頭|  
-|---------------|------------------|------------|  
-|`_InterlockedXor`, `_InterlockedXor8`, `_InterlockedXor16`, `_InterlockedXor64`|x86、 x64、 ARM|\<intrin.h>|  
-|`_InterlockedXor_acq`, `_InterlockedXor_nf`, `_InterlockedXor_rel`, `_InterlockedXor8_acq`, `_InterlockedXor8_nf`, `_InterlockedXor8_rel`, `_InterlockedXor16_acq`, `_InterlockedXor16_nf`, `_InterlockedXor16_rel`, `_InterlockedXor64_acq`, `_InterlockedXor64_nf`, `_InterlockedXor64_rel`,|ARM|\<intrin.h>|  
-|`_InterlockedXor_np`, `_InterlockedXor8_np`, `_InterlockedXor16_np`, `_InterlockedXor64_np`|X64|\<intrin.h>|  
-|`_InterlockedXor_HLEAcquire`, `_InterlockedXor_HLERelease`, `_InterlockedXor64_HLEAcquire`, `_InterlockedXor64_HLERelease`|x86、x64|\<immintrin.h>|  
-  
-## <a name="remarks"></a>備註  
- 每個函式名稱的數字會指定引數的位元大小。  
-  
- 在 ARM 平台上，如果您需要取得並發行語意 (例如在關鍵區段的開頭和結尾)，請使用具有 `_acq` 和 `_rel` 後置字元的內建函式。 搭配 `_nf` (「無範圍」) 字尾的 ARM 內建函式不會當做記憶體屏障。  
-  
- 搭配 `_np` (「不預先擷取」) 字尾使用內建函式，可避免編譯器插入可能的預先提取作業。  
-  
- 在支援 Hardware Lock Elision (HLE) 指令的 Intel 平台上，搭配 `_HLEAcquire` 和 `_HLERelease` 字尾的內建函式會包含對處理器的提示，提示其可以藉由消除硬體中鎖定寫入 (lock write) 的階段以加速效能。 如果在不支援 HLE 的平台上呼叫這些內建函式，會忽略該提示。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// _InterLockedXor.cpp  
-#include <stdio.h>  
-#include <intrin.h>  
-  
-#pragma intrinsic(_InterlockedXor)  
-  
-int main()  
-{  
-        long data1 = 0xFF00FF00;  
-        long data2 = 0x00FFFF00;  
-        long retval;  
-        retval = _InterlockedXor(&data1, data2);  
-        printf_s("0x%x 0x%x 0x%x", data1, data2, retval);   
-}  
-```  
-  
-```Output  
-0xffff0000 0xffff00 0xff00ff00  
-```  
-  
-**結束 Microsoft 專屬**  
-  
-## <a name="see-also"></a>另請參閱  
- [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
- [與 x86 編譯器衝突](../build/conflicts-with-the-x86-compiler.md)
+[in]第二個運算元。
+
+## <a name="return-value"></a>傳回值
+
+第一個運算元的原始值。
+
+## <a name="requirements"></a>需求
+
+|內建|架構|標頭|
+|---------------|------------------|------------|
+|`_InterlockedXor`, `_InterlockedXor8`, `_InterlockedXor16`, `_InterlockedXor64`|x86、 x64、 ARM|\<intrin.h>|
+|`_InterlockedXor_acq`, `_InterlockedXor_nf`, `_InterlockedXor_rel`, `_InterlockedXor8_acq`, `_InterlockedXor8_nf`, `_InterlockedXor8_rel`, `_InterlockedXor16_acq`, `_InterlockedXor16_nf`, `_InterlockedXor16_rel`, `_InterlockedXor64_acq`, `_InterlockedXor64_nf`, `_InterlockedXor64_rel`,|ARM|\<intrin.h>|
+|`_InterlockedXor_np`, `_InterlockedXor8_np`, `_InterlockedXor16_np`, `_InterlockedXor64_np`|X64|\<intrin.h>|
+|`_InterlockedXor_HLEAcquire`, `_InterlockedXor_HLERelease`, `_InterlockedXor64_HLEAcquire`, `_InterlockedXor64_HLERelease`|x86、x64|\<immintrin.h>|
+
+## <a name="remarks"></a>備註
+
+每個函式名稱的數字會指定引數的位元大小。
+
+在 ARM 平台上，如果您需要取得並發行語意 (例如在關鍵區段的開頭和結尾)，請使用具有 `_acq` 和 `_rel` 後置字元的內建函式。 搭配 `_nf` (「無範圍」) 字尾的 ARM 內建函式不會當做記憶體屏障。
+
+搭配 `_np` (「不預先擷取」) 字尾使用內建函式，可避免編譯器插入可能的預先提取作業。
+
+在支援 Hardware Lock Elision (HLE) 指令的 Intel 平台上，搭配 `_HLEAcquire` 和 `_HLERelease` 字尾的內建函式會包含對處理器的提示，提示其可以藉由消除硬體中鎖定寫入 (lock write) 的階段以加速效能。 如果在不支援 HLE 的平台上呼叫這些內建函式，會忽略該提示。
+
+## <a name="example"></a>範例
+
+```
+// _InterLockedXor.cpp
+#include <stdio.h>
+#include <intrin.h>
+
+#pragma intrinsic(_InterlockedXor)
+
+int main()
+{
+        long data1 = 0xFF00FF00;
+        long data2 = 0x00FFFF00;
+        long retval;
+        retval = _InterlockedXor(&data1, data2);
+        printf_s("0x%x 0x%x 0x%x", data1, data2, retval);
+}
+```
+
+```Output
+0xffff0000 0xffff00 0xff00ff00
+```
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>另請參閱
+
+[編譯器內建](../intrinsics/compiler-intrinsics.md)<br/>
+[與 x86 編譯器衝突](../build/conflicts-with-the-x86-compiler.md)

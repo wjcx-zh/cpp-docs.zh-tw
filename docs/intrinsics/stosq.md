@@ -18,78 +18,82 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03c38c5328500394871bee937cbc05395eb44cd5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8f8aa8c1fd1a5dad6fd70c566cb59bf8dddc4cc3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715503"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380128"
 ---
 # <a name="stosq"></a>__stosq
-**Microsoft 專屬**  
-  
- 產生的存放區的字串指示 (`rep stosq`)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-void __stosb(   
-   unsigned __int64* Dest,   
-   unsigned __int64 Data,   
-   size_t Count   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
+
+**Microsoft 專屬**
+
+產生的存放區的字串指示 (`rep stosq`)。
+
+## <a name="syntax"></a>語法
+
+```
+void __stosb( 
+   unsigned __int64* Dest, 
+   unsigned __int64 Data, 
+   size_t Count 
+);
+```
+
+#### <a name="parameters"></a>參數
+
 *目的地*<br/>
-[out]作業的目的地。  
-  
+[out]作業的目的地。
+
 *Data*<br/>
-[in]要儲存的資料。  
-  
+[in]要儲存的資料。
+
 *計數*<br/>
-[in]要寫入的 quadwords 區塊的長度。  
-  
-## <a name="requirements"></a>需求  
-  
-|內建|架構|  
-|---------------|------------------|  
-|`__stosq`|AMD64|  
-  
- **標頭檔** \<intrin.h >  
-  
-## <a name="remarks"></a>備註  
- 結果是 quadword`Data`寫入至區塊`Count`quadwords 中的`Dest`字串。  
-  
- 此常式僅可作為內建常式使用。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// stosq.c  
-// processor: x64  
-#include <stdio.h>  
-#include <intrin.h>  
-  
-#pragma intrinsic(__stosq)  
-  
-int main()  
-{  
-   unsigned __int64 val = 0xFFFFFFFFFFFFI64;  
-   unsigned __int64 a[10];  
-   memset(a, 0, sizeof(a));  
-   __stosq(a+1, val, 2);  
-   printf("%I64x %I64x %I64x %I64x", a[0], a[1], a[2], a[3]);   
-}  
-```  
-  
-## <a name="output"></a>輸出  
-  
-```  
-0 ffffffffffff ffffffffffff 0  
-```  
-  
-**結束 Microsoft 專屬**  
-  
-## <a name="see-also"></a>另請參閱  
- [編譯器內建](../intrinsics/compiler-intrinsics.md)
+[in]要寫入的 quadwords 區塊的長度。
+
+## <a name="requirements"></a>需求
+
+|內建|架構|
+|---------------|------------------|
+|`__stosq`|AMD64|
+
+**標頭檔** \<intrin.h >
+
+## <a name="remarks"></a>備註
+
+結果是 quadword`Data`寫入至區塊`Count`quadwords 中的`Dest`字串。
+
+此常式僅可作為內建常式使用。
+
+## <a name="example"></a>範例
+
+```
+// stosq.c
+// processor: x64
+#include <stdio.h>
+#include <intrin.h>
+
+#pragma intrinsic(__stosq)
+
+int main()
+{
+   unsigned __int64 val = 0xFFFFFFFFFFFFI64;
+   unsigned __int64 a[10];
+   memset(a, 0, sizeof(a));
+   __stosq(a+1, val, 2);
+   printf("%I64x %I64x %I64x %I64x", a[0], a[1], a[2], a[3]);
+}
+```
+
+## <a name="output"></a>輸出
+
+```
+0 ffffffffffff ffffffffffff 0
+```
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>另請參閱
+
+[編譯器內建](../intrinsics/compiler-intrinsics.md)

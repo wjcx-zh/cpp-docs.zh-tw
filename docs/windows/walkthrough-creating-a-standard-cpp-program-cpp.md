@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18b1f059ce6825e132c6fff0a52029a005442f53
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ff4a2078bef03127507d1da35599ea391904bee7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598371"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382631"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>逐步解說： 建立標準的 c + + 程式 （c + +）
 
@@ -81,5 +81,5 @@ Visual c + + 符合 2003 c + + 標準，但有下列主要例外狀況： 兩階
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 語言參考](../cpp/cpp-language-reference.md)  
+[C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)

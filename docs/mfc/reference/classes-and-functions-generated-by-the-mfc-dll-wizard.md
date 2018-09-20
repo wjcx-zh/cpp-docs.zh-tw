@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd1b1d65148a951ba78e0408ab590a2c979648f7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 76aa828727ccfcf93c7b9b0242e60b747c1873f8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339575"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390847"
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>MFC DLL 精靈產生的類別和函式
-MFC DLL 精靈產生的程式碼取決於您所建立的 DLL 和您所選取的選項的種類。 MFC DLL 精靈產生兩種形式的標準 MFC Dll 相同的程式碼。  
-  
-|一種 DLL|選項|類別|函式|  
-|-----------------|------------|-------------|---------------|  
-|[擴充功能](../../build/extension-dlls-overview.md)|無|無|`DllMain`|  
-|[規則](../../build/regular-dlls-dynamically-linked-to-mfc.md)|無|應用程式類別衍生自 `CWinApp`|無|  
-|[規則](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Automation|應用程式類別衍生自 `CWinApp`|`DllGetClassObjectDllCanUnloadNowDllRegisterServer`|  
-|[擴充功能](../../build/extension-dlls-overview.md)|視窗通訊端|無|`DllMain`|  
-|[規則](../../build/regular-dlls-dynamically-linked-to-mfc.md)|視窗通訊端|應用程式類別衍生自 `CWinApp`|`InitInstance` 包含呼叫 `AfxSocketInit`|  
-  
-## <a name="see-also"></a>另請參閱  
- [MFC DLL 精靈](../../mfc/reference/mfc-dll-wizard.md)
+
+MFC DLL 精靈產生的程式碼取決於您所建立的 DLL 和您所選取的選項的種類。 MFC DLL 精靈產生兩種形式的標準 MFC Dll 相同的程式碼。
+
+|一種 DLL|選項|類別|函式|
+|-----------------|------------|-------------|---------------|
+|[擴充功能](../../build/extension-dlls-overview.md)|無|無|`DllMain`|
+|[規則](../../build/regular-dlls-dynamically-linked-to-mfc.md)|無|應用程式類別衍生自 `CWinApp`|無|
+|[規則](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Automation|應用程式類別衍生自 `CWinApp`|`DllGetClassObjectDllCanUnloadNowDllRegisterServer`|
+|[擴充功能](../../build/extension-dlls-overview.md)|視窗通訊端|無|`DllMain`|
+|[規則](../../build/regular-dlls-dynamically-linked-to-mfc.md)|視窗通訊端|應用程式類別衍生自 `CWinApp`|`InitInstance` 包含呼叫 `AfxSocketInit`|
+
+## <a name="see-also"></a>另請參閱
+
+[MFC DLL 精靈](../../mfc/reference/mfc-dll-wizard.md)
 

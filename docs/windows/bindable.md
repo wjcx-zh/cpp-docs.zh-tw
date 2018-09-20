@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ace2b62197b652baeb7e287a582b521252270f6d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: aedfde2559e79d400b3fc16dd998f3f282c282bf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691232"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388143"
 ---
 # <a name="bindable"></a>bindable
 
@@ -86,9 +86,9 @@ __interface IPropDemo : IDispatch {
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
-[方法屬性](../windows/method-attributes.md)  
-[defaultbind](../windows/defaultbind.md)  
-[displaybind](../windows/displaybind.md)  
-[immediatebind](../windows/immediatebind.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
+[方法屬性](../windows/method-attributes.md)<br/>
+[defaultbind](../windows/defaultbind.md)<br/>
+[displaybind](../windows/displaybind.md)<br/>
+[immediatebind](../windows/immediatebind.md)<br/>
 [requestedit](../windows/requestedit.md)  

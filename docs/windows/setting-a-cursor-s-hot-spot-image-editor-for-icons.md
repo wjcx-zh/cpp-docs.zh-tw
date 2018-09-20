@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe80ae0d4045514c22c40af38deeeecbbfecc363
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9246d7a26c9764e31cca9c861ec0a15d4792c115
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316376"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389092"
 ---
 # <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>設定資料指標&#39;s 作用點 （圖示影像編輯器）
 
@@ -48,5 +48,5 @@ ms.locfileid: "44316376"
 
 ## <a name="see-also"></a>另請參閱
 
-[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)  
+[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [圖示和游標： 顯示裝置的影像資源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

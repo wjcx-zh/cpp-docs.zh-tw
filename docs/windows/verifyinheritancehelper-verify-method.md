@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cfcbb57694fc18944d199c1d4c74d8c74a335783
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8a337dcce390f8dc3b634018af602bc3e62e719b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599111"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396086"
 ---
 # <a name="verifyinheritancehelperverify-method"></a>VerifyInheritanceHelper::Verify 方法
 
@@ -48,5 +48,5 @@ static void Verify();
 
 ## <a name="see-also"></a>另請參閱
 
-[VerifyInheritanceHelper 結構](../windows/verifyinheritancehelper-structure.md)  
+[VerifyInheritanceHelper 結構](../windows/verifyinheritancehelper-structure.md)<br/>
 [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

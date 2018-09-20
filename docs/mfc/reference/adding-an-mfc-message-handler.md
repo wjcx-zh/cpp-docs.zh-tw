@@ -1,5 +1,5 @@
 ---
-title: 加入 MFC 訊息處理常式 |Microsoft 文件
+title: 加入 MFC 訊息處理常式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53566752a662db27e0da5cec3ce2316e26c8366b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9980a367c0272fe35e2135c1fb5a7df1c19a314
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353722"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377292"
 ---
 # <a name="adding-an-mfc-message-handler"></a>加入 MFC 訊息處理常式
-您可以[加入訊息處理常式中使用 [屬性] 視窗](../../mfc/reference/mapping-messages-to-functions.md)（成員函式會處理 Windows 訊息） 類別和對應的 Windows 訊息至訊息處理常式。 您也可以加入[任何對話方塊控制項的事件處理常式](../../windows/adding-event-handlers-for-dialog-box-controls.md)。  
-  
- 藉由使用 [屬性] 視窗來定義訊息和事件處理函式，您可以自動更新訊息分派資料表 （或） 訊息對應和類別標頭檔。  
-  
+
+您可以[使用 [屬性] 視窗中加入訊息處理常式](../../mfc/reference/mapping-messages-to-functions.md)（的成員函式會處理 Windows 訊息） 類別和對應的 Windows 訊息，訊息處理常式。 您也可以加入[任何對話方塊控制項的事件處理常式](../../windows/adding-event-handlers-for-dialog-box-controls.md)。
+
+您可以使用 [屬性] 視窗，定義訊息和事件處理函式，您可以自動更新的訊息分派資料表 （或訊息對應） 和類別標頭檔。
+
 > [!NOTE]
->  您可以將訊息處理常式加入 ATL 類別使用 [屬性] 視窗中。不過，某些結果會有所不同。 如需詳細資訊，請參閱 ATL 主題[加入 ATL 訊息處理常式](../../atl/adding-an-atl-message-handler.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [加入類別](../../ide/adding-a-class-visual-cpp.md)   
- [加入成員函式](../../ide/adding-a-member-function-visual-cpp.md)   
- [加入成員變數](../../ide/adding-a-member-variable-visual-cpp.md)   
- [覆寫虛擬函式](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [巡覽類別結構](../../ide/navigating-the-class-structure-visual-cpp.md)   
- [對話方塊編輯器](../../windows/dialog-editor.md)
+>  您可以將訊息處理常式加入 ATL 類別，使用 [屬性] 視窗中;不過，某些結果可能會有所不同。 如需詳細資訊，請參閱 [ATL] 主題[新增 ATL 訊息處理常式](../../atl/adding-an-atl-message-handler.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[加入類別](../../ide/adding-a-class-visual-cpp.md)<br/>
+[新增成員函式](../../ide/adding-a-member-function-visual-cpp.md)<br/>
+[新增成員變數](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[覆寫虛擬函式](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[巡覽類別結構](../../ide/navigating-the-class-structure-visual-cpp.md)<br/>
+[對話方塊編輯器](../../windows/dialog-editor.md)
 

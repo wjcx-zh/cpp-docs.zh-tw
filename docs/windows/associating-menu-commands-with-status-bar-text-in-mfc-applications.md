@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16de276478485cb52b11b3f1bbb869c5b75d05a4
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 718766a8fc475f20bcbcc328973b38e486769d9c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316753"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389072"
 ---
 # <a name="associating-menu-commands-with-status-bar-text-in-mfc-applications"></a>將功能表命令和 MFC 應用程式內的狀態列文字建立關聯
 
@@ -39,6 +39,6 @@ MFC
 
 ## <a name="see-also"></a>另請參閱
 
-[字串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
-[將命令新增至功能表](../windows/adding-commands-to-a-menu.md)  
+[字串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[將命令新增至功能表](../windows/adding-commands-to-a-menu.md)<br/>
 [功能表編輯器](../windows/menu-editor.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8128859f2b136fb945376eeea8afa0d1ef8e6e1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: f00fd37f41461933221996c8940c333bd71620ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317104"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388683"
 ---
 # <a name="controls-in-dialog-box-ces"></a>Es 控制項對話方塊 （c + +）
 
@@ -64,6 +64,6 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[加入對話方塊控制項的事件處理常式](../windows/adding-event-handlers-for-dialog-box-controls.md)  
-[對話方塊控制項和變數類型](../ide/dialog-box-controls-and-variable-types.md)  
+[加入對話方塊控制項的事件處理常式](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
+[對話方塊控制項和變數類型](../ide/dialog-box-controls-and-variable-types.md)<br/>
 [對話方塊編輯器](../windows/dialog-editor.md)

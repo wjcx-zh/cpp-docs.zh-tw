@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 398149d0d65b0dcf4c914d8f35e4c6faf209173f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5c97d69bbca685ca64245d5d784452029c14f73f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606983"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393619"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass 巨集
 
@@ -53,13 +53,13 @@ ActivatableClassWithFactoryEx(
 
 ### <a name="parameters"></a>參數
 
-*類別名稱*  
+*類別名稱*<br/>
 要建立之類別的名稱。
 
-*處理站*  
+*處理站*<br/>
 將會建立指定類別的執行個體的 factory。
 
-*伺服器名稱*  
+*伺服器名稱*<br/>
 指定模組中的處理站的子集的名稱。
 
 ## <a name="remarks"></a>備註

@@ -55,12 +55,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98ceeff060436701efb60aeb59987ae087c191b1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6def4845356c542b0bdd5d0de14dc3402640dc05
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960277"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391328"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
@@ -244,5 +244,5 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)
-[&lt;mutex >](../standard-library/mutex.md)
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
+[&lt;mutex>](../standard-library/mutex.md)

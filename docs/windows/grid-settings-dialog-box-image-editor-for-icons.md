@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 17f44f972482aefda0c65c7599fa6a83b49c36fb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 90caa3234cd5a8c271d11e964f725447ad0517a1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723239"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391731"
 ---
 # <a name="grid-settings-dialog-box-c-image-editor-for-icons"></a>格線設定對話方塊 （c + +） （圖示影像編輯器）
 
@@ -51,5 +51,5 @@ ms.locfileid: "45723239"
 
 ## <a name="see-also"></a>另請參閱
 
-[調整影像大小](../windows/resizing-an-image-image-editor-for-icons.md)  
+[調整影像大小](../windows/resizing-an-image-image-editor-for-icons.md)<br/>
 [圖示影像編輯器](../windows/image-editor-for-icons.md)

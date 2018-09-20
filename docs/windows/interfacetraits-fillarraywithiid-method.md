@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fc4679d9e6d3a4fdfc112d8a8b471ceb2646ecc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c5163ea5922141faf0c4b28deb147672938997a1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583724"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375421"
 ---
 # <a name="interfacetraitsfillarraywithiid-method"></a>InterfaceTraits::FillArrayWithIid 方法
 
@@ -39,10 +39,10 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>參數
 
-*index*  
+*index*<br/>
 指標，包含以零為起始的索引值的欄位。
 
-*iid*  
+*iid*<br/>
 介面識別碼的陣列。
 
 ## <a name="remarks"></a>備註
@@ -61,5 +61,5 @@ __forceinline static void FillArrayWithIid(
 
 ## <a name="see-also"></a>另請參閱
 
-[InterfaceTraits 結構](../windows/interfacetraits-structure.md)  
+[InterfaceTraits 結構](../windows/interfacetraits-structure.md)<br/>
 [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

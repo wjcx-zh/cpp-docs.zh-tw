@@ -1,5 +1,5 @@
 ---
-title: 使用未裁剪的裝置內容 |Microsoft 文件
+title: 使用未裁剪的裝置內容 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,24 +14,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d4fcfbe8e8e7eb174f85ced03bec822b4968bde
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 479009865fe9fd226466059382456f403e90c18a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954331"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389586"
 ---
 # <a name="using-an-unclipped-device-context"></a>使用未裁剪的裝置內容
-如果您完全確定您的控制項不會繪製到其用戶端矩形之外，您也可以停用 `IntersectClipRect` 所進行的 `COleControl` 呼叫，以獲得小而可偵測的速度增益。 若要這樣做，請移除*colecontrol:: Getcontrolflags*集中所傳回的旗標的旗標[Clippaintdc](../mfc/reference/colecontrol-class.md#getcontrolflags)。 例如:   
-  
- [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/using-an-unclipped-device-context_1.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#14](../mfc/codesnippet/cpp/using-an-unclipped-device-context_2.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/using-an-unclipped-device-context_3.cpp)]  
-  
- 如果您選取要移除這個旗標的程式碼會自動產生**未裁剪的裝置內容**選項[控制設定](../mfc/reference/control-settings-mfc-activex-control-wizard.md)頁面上，使用 [MFC ActiveX 控制項精靈] 建立控制項時。  
-  
- 如果您使用無視窗啟用，這個最佳化不會有作用。  
-  
-## <a name="see-also"></a>另請參閱  
- [MFC ActiveX 控制項：最佳化](../mfc/mfc-activex-controls-optimization.md)
+
+如果您完全確定您的控制項不會繪製到其用戶端矩形之外，您也可以停用 `IntersectClipRect` 所進行的 `COleControl` 呼叫，以獲得小而可偵測的速度增益。 若要這樣做，請移除*colecontrol:: Getcontrolflags*旗標所傳回的旗標集中[Clippaintdc](../mfc/reference/colecontrol-class.md#getcontrolflags)。 例如: 
+
+[!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/using-an-unclipped-device-context_1.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#14](../mfc/codesnippet/cpp/using-an-unclipped-device-context_2.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/using-an-unclipped-device-context_3.cpp)]
+
+如果您選取要移除這個旗標的程式碼會自動產生**未裁剪的裝置內容**選項[控制設定](../mfc/reference/control-settings-mfc-activex-control-wizard.md)頁面上，使用 [MFC ActiveX 控制項精靈] 建立您的控制項時。
+
+如果您使用無視窗啟用，這個最佳化不會有作用。
+
+## <a name="see-also"></a>另請參閱
+
+[MFC ActiveX 控制項：最佳化](../mfc/mfc-activex-controls-optimization.md)
 

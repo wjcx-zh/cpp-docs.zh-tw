@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b50466fc2c357c1d57fca272ff343cd56f3689c5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7092153e49fdb40fc32fb1cbee5bc2376080ff4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604262"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391874"
 ---
 # <a name="runtimeclassbasetasiid-method"></a>RuntimeClassBaseT::AsIID 方法
 
@@ -41,16 +41,16 @@ __forceinline static HRESULT AsIID(
 
 ### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 實作介面識別碼參數所指定的型別*riid*。
 
-*實作*  
+*實作*<br/>
 範本參數所指定類型的變數*T*。
 
-*riid*  
+*riid*<br/>
 要擷取的介面識別碼。
 
-*ppvObject*  
+*ppvObject*<br/>
 如果這項作業成功時，參數所指定的指標-至-a-介面的指標*riid*。
 
 ## <a name="return-value"></a>傳回值
@@ -69,5 +69,5 @@ __forceinline static HRESULT AsIID(
 
 ## <a name="see-also"></a>另請參閱
 
-[RuntimeClassBaseT 結構](../windows/runtimeclassbaset-structure.md)  
+[RuntimeClassBaseT 結構](../windows/runtimeclassbaset-structure.md)<br/>
 [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

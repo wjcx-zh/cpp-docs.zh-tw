@@ -1,5 +1,5 @@
 ---
-title: std 命名空間 |Microsoft 文件
+title: std 命名空間 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,35 +14,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 910b2d73d04f44282ed0106092844307aed3ba67
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 534bb31e08194c8f78c0bd28f711c2e173731c35
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695703"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395267"
 ---
 # <a name="std-namespace"></a>std 命名空間
-## <a name="syntax"></a>語法  
-  
+
+## <a name="syntax"></a>語法
+
 ```
 namespace std;
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="functions"></a>函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[make_exception_ptr 函式](make-exception-ptr-function.md)||  
-  
-## <a name="requirements"></a>需求  
- **標頭：** ppltasks.h  
-  
-## <a name="see-also"></a>另請參閱  
- [參考資料](reference-concurrency-runtime.md)
+```
 
+## <a name="members"></a>成員
 
+### <a name="functions"></a>函式
 
+|名稱|描述|
+|----------|-----------------|
+|[make_exception_ptr 函式](make-exception-ptr-function.md)||
 
+## <a name="requirements"></a>需求
+
+**標頭：** ppltasks.h
+
+## <a name="see-also"></a>另請參閱
+
+[參考資料](reference-concurrency-runtime.md)
 

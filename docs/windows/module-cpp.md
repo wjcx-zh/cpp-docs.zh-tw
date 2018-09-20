@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac443927c2dcbb00cc01dd3cd63a95441a4a1bf0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ea891ce5ee5c3570577edf7c2122b2cd39b5c64d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711797"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378554"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -52,7 +52,7 @@ ms.locfileid: "45711797"
 
 ### <a name="parameters"></a>參數
 
-*type*  
+*type*<br/>
 （選擇性）可以是下列其中一項：
 
 - `dll` 新增函式和類別，可讓產生的 DLL 當成同處理序 COM 伺服器。 這是預設值。
@@ -63,50 +63,50 @@ ms.locfileid: "45711797"
 
 - `unspecified` 停止插入與模組屬性相關的 ATL 程式碼： 插入 「 ATL 模組類別、 全域執行個體 _AtlModule 和輸入點函式。 因為專案中有其他屬性，所以請不要停止插入 ATL 程式碼。
 
-*name*  
+*name*<br/>
 （選擇性）程式庫區塊的名稱。
 
-*version*  
+*version*<br/>
 （選擇性）您想要指派給程式庫區塊的版本號碼。 預設值為 1.0。
 
-*uuid*  
+*uuid*<br/>
 程式庫的唯一識別碼。 如果您省略此參數，將會自動產生程式庫的識別碼。 您可能需要擷取*uuid*程式庫區塊，您可以使用識別碼來這麼做 **__uuidof (** *libraryname* **)**。
 
-*lcid*  
+*lcid*<br/>
 當地語系化參數。 請參閱[lcid](/windows/desktop/Midl/lcid)如需詳細資訊。
 
-*control*  
+*control*<br/>
 （選擇性）指定媒體櫃中的所有 coclass 的控制項。
 
-*helpstring*  
+*helpstring*<br/>
 指定類型程式庫。
 
-*helpstringdll*  
+*helpstringdll*<br/>
 （選擇性）設定用來執行文件字串查閱之.dll 檔案的名稱。 請參閱[helpstringdll](/windows/desktop/Midl/helpstringdll)如需詳細資訊。
 
-*helpfile*  
+*helpfile*<br/>
 （選擇性）名稱**協助**型別程式庫的檔案。
 
-*helpcontext*  
+*helpcontext*<br/>
 （選擇性）**說明 ID**這個類型程式庫。
 
-*helpstringcontext*  
+*helpstringcontext*<br/>
 （選擇性）請參閱[helpstringcontext](../windows/helpstringcontext.md)如需詳細資訊。
 
-*hidden*  
+*hidden*<br/>
 （選擇性）避免顯示整個媒體櫃。 此用法是與控制項搭配使用。 主機需要建立新的類型程式庫，以包裝控制項與擴充屬性。 請參閱[隱藏](/windows/desktop/Midl/hidden)MIDL 屬性，如需詳細資訊。
 
-*restricted*  
+*restricted*<br/>
 （選擇性）程式庫成員不能任意呼叫。 請參閱[限制](/windows/desktop/Midl/restricted)MIDL 屬性，如需詳細資訊。
 
-*custom*  
+*custom*<br/>
 （選擇性）一或多個屬性;這是類似[自訂](../windows/custom-cpp.md)屬性。 第一個參數*自訂*是屬性的 GUID。 例如: 
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]
 ```
 
-*resource_name*  
+*resource_name*<br/>
 .rgs 檔案的字串資源識別碼，用來註冊 DLL、可執行檔或服務的應用程式識別碼。 模組是類型服務時，也可以使用這個引數來取得包含服務名稱之字串的識別碼。
 
 > [!NOTE]
@@ -188,13 +188,13 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
-[類別屬性](../windows/class-attributes.md)  
-[獨立屬性](../windows/stand-alone-attributes.md)  
-[Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)  
-[usesgetlasterror](../windows/usesgetlasterror.md)  
-[程式庫](/windows/desktop/Midl/library)  
-[helpcontext](../windows/helpcontext.md)  
-[helpstring](../windows/helpstring.md)  
-[helpfile](../windows/helpfile.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
+[類別屬性](../windows/class-attributes.md)<br/>
+[獨立屬性](../windows/stand-alone-attributes.md)<br/>
+[Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[usesgetlasterror](../windows/usesgetlasterror.md)<br/>
+[程式庫](/windows/desktop/Midl/library)<br/>
+[helpcontext](../windows/helpcontext.md)<br/>
+[helpstring](../windows/helpstring.md)<br/>
+[helpfile](../windows/helpfile.md)<br/>
 [version](../windows/version-cpp.md)  

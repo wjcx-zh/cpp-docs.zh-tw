@@ -1,5 +1,5 @@
 ---
-title: Boxing (C + + /CLI) |Microsoft 文件
+title: Boxing (C + + /cli CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,22 +13,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3b9898b4a640d2f3aa4e38ceb621521ffb301fed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c513b0148e2553440e02f9b0d255a0d5750e2d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105887"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372508"
 ---
 # <a name="boxing-ccli"></a>Boxing (C++/CLI)
-Boxing 是實值類型轉換成類型的程序`object`或實值型別所實作的任何介面類型。 當 common language runtime (CLR) box 實值類型時，它會將值包裝在`System.Object`並將它儲存在 managed 堆積上。 Unbox 處理則會從物件中擷取實值類型。 Boxing 是隱含處理，unboxing 則是明確處理。  
-  
-## <a name="related-articles"></a>相關文章  
-  
-|標題|描述|  
-|-----------|-----------------|  
-|[如何：明確要求 Boxing](../dotnet/how-to-explicitly-request-boxing.md)|描述如何明確要求 boxing 的變數上。|  
-|[如何：使用 gcnew 建立實值型別及使用隱含 Boxing](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)|示範如何使用`gcnew`建立 boxed 實的值類型，可放置在受管理、 記憶體回收堆積上。|  
-|[如何：Unbox](../dotnet/how-to-unbox.md)|顯示如何進行 Unbox 處理和修改值。|  
-|[標準轉換和隱含 Boxing](../dotnet/standard-conversions-and-implicit-boxing.md)|顯示標準轉換選擇編譯器，需要進行 boxing 的轉換。|  
+
+Boxing 是實值型別轉換為類型的程序`object`或實值型別會實作任何介面類型。 當 common language runtime (CLR) 方塊實值型別時，它會包裝中的值`System.Object`並將它儲存在 managed 堆積上。 Unbox 處理則會從物件中擷取實值類型。 Boxing 是隱含處理，unboxing 則是明確處理。
+
+## <a name="related-articles"></a>相關文章
+
+|標題|描述|
+|-----------|-----------------|
+|[如何：明確要求 Boxing](../dotnet/how-to-explicitly-request-boxing.md)|描述如何明確要求 boxing 的變數上。|
+|[如何：使用 gcnew 建立實值型別及使用隱含 Boxing](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)|示範如何使用`gcnew`建立可以放在受管理、 記憶體回收堆積的 boxed 實的值類型。|
+|[如何：Unbox](../dotnet/how-to-unbox.md)|顯示如何進行 Unbox 處理和修改值。|
+|[標準轉換和隱含 Boxing](../dotnet/standard-conversions-and-implicit-boxing.md)|顯示標準的轉換選擇由編譯器在需要進行 boxing 的轉換。|
 |[以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|在 Visual C++ 文件中關於 .NET 程式設計的最上層文件。|

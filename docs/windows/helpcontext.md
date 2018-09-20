@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5644f99e15685f8f1784cc40886709b05a9a06bd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d9c2efecf34e5d58f633bc21e62801157b1b8955
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221280"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388585"
 ---
 # <a name="helpcontext"></a>helpcontext
 
@@ -38,7 +38,7 @@ ms.locfileid: "43221280"
 
 ### <a name="parameters"></a>參數
 
-*id*  
+*id*<br/>
 說明主題的內容識別碼。 請參閱[HTML 說明： 程式的即時線上說明](../mfc/html-help-context-sensitive-help-for-your-programs.md)如需有關內容識別碼。
 
 ## <a name="remarks"></a>備註
@@ -64,10 +64,10 @@ ms.locfileid: "43221280"
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
-[介面屬性](../windows/interface-attributes.md)  
-[類別屬性](../windows/class-attributes.md)  
-[方法屬性](../windows/method-attributes.md)  
-[Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)  
-[helpfile](../windows/helpfile.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
+[介面屬性](../windows/interface-attributes.md)<br/>
+[類別屬性](../windows/class-attributes.md)<br/>
+[方法屬性](../windows/method-attributes.md)<br/>
+[Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[helpfile](../windows/helpfile.md)<br/>
 [helpstring](../windows/helpstring.md)  

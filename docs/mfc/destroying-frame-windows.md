@@ -1,5 +1,5 @@
 ---
-title: 終結框架視窗 |Microsoft 文件
+title: 終結框架 Windows |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,24 +25,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81182c0e5633e19126d3036b5793de7658ad3d2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 742ea2fedff2e4f044e46242a4152c12855ab15e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343472"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396151"
 ---
 # <a name="destroying-frame-windows"></a>終結框架視窗
-MFC 架構會管理視窗解構，以及建立這些 framework 文件和檢視相關聯的視窗。 如果您建立其他視窗，您必須負責終結它們。  
-  
- 在架構中，當使用者關閉框架視窗時，視窗的預設[OnClose](../mfc/reference/cwnd-class.md#onclose)處理常式呼叫[DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow)。 當 Windows 視窗終結時呼叫之最後一個成員函式[OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy)，其會進行一些清除，呼叫[預設](../mfc/reference/cwnd-class.md#default)成員函式以執行 Windows 清除，最後再呼叫虛擬成員函式[PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy)。 [CFrameWnd](../mfc/reference/cframewnd-class.md)實作`PostNcDestroy`刪除 c + + 視窗物件。 您絕對不應該使用 c + +**刪除**框架視窗上的運算子。 請改用 `DestroyWindow`。  
-  
- 當主視窗關閉時，會關閉應用程式。 如果那里修改未儲存的文件，架構會顯示訊息方塊詢問如果應該儲存文件，並可確保適當的文件會儲存必要。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
-  
--   [建立文件框架視窗](../mfc/creating-document-frame-windows.md)  
-  
-## <a name="see-also"></a>另請參閱  
- [使用框架視窗](../mfc/using-frame-windows.md)
+
+MFC 架構會處理視窗解構，以及建立這些 framework 文件和檢視表相關聯的視窗。 如果您建立其他的 windows 時，您必須負責破壞它們。
+
+在架構中，當使用者關閉框架視窗時，視窗的預設[OnClose](../mfc/reference/cwnd-class.md#onclose)處理常式會呼叫[DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow)。 當 Windows 視窗終結時呼叫之最後一個成員函式[OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy)，它會執行某些清除工作，會呼叫[預設](../mfc/reference/cwnd-class.md#default)成員函式以執行 Windows 清除，最後再呼叫虛擬成員函式[PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy)。 [CFrameWnd](../mfc/reference/cframewnd-class.md)實作`PostNcDestroy`刪除 c + + 視窗物件。 您應該永遠不會使用 c + +**刪除**框架視窗上的運算子。 請改用 `DestroyWindow`。
+
+當主視窗關閉時，應用程式就會關閉。 如果那里修改過但未儲存的文件，架構會顯示訊息方塊，詢問是否應該儲存文件，並可確保必要時，會儲存適當的文件。
+
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+
+- [建立文件框架視窗](../mfc/creating-document-frame-windows.md)
+
+## <a name="see-also"></a>另請參閱
+
+[使用框架視窗](../mfc/using-frame-windows.md)
 

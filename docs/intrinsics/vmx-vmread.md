@@ -17,55 +17,58 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0c8b5a22cfef8ebde74fbe6d1f6920a969e7bc6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b0029513b111143cc665a51cefd3c3e8e1a786aa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706377"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380343"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
-**Microsoft 專屬**  
-  
- 從目前的虛擬機器控制結構 (VMCS) 讀取指定的欄位，並將它放在指定的位置。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-unsigned char __vmx_vmread(  
-   size_t Field,  
-   size_t *FieldValue  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
-  
-|參數|描述|  
-|---------------|-----------------|  
-|*欄位*|[in]要讀取的 VMCS 欄位。|  
-|*FieldValue*|[in]指標的位置來儲存值讀取所指定的 VMCS 欄位`Field`參數。|  
-  
-## <a name="return-value"></a>傳回值  
-  
-|值|意義|  
-|-----------|-------------|  
-|0|作業成功。|  
-|1|作業失敗，在目前 VMCS的 `VM-instruction error field` 中有擴充狀態。|  
-|2|作業失敗，無可用的狀態。|  
-  
-## <a name="remarks"></a>備註  
- `__vmx_vmread`函式相當於`VMREAD`機器指令。 值`Field`參數是 Intel 文件中所述的編碼的欄位索引。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)網站的 url，然後參閱該文件的附錄 C.  
-  
-## <a name="requirements"></a>需求  
-  
-|內建|架構|  
-|---------------|------------------|  
-|`__vmx_vmread`|X64|  
-  
- **標頭檔** \<intrin.h >  
-  
-**結束 Microsoft 專屬**  
-  
-## <a name="see-also"></a>另請參閱  
- [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
- [__vmx_vmwrite](../intrinsics/vmx-vmwrite.md)
+
+**Microsoft 專屬**
+
+從目前的虛擬機器控制結構 (VMCS) 讀取指定的欄位，並將它放在指定的位置。
+
+## <a name="syntax"></a>語法
+
+```
+unsigned char __vmx_vmread(
+   size_t Field,
+   size_t *FieldValue
+);
+```
+
+#### <a name="parameters"></a>參數
+
+|參數|描述|
+|---------------|-----------------|
+|*欄位*|[in]要讀取的 VMCS 欄位。|
+|*FieldValue*|[in]指標的位置來儲存值讀取所指定的 VMCS 欄位`Field`參數。|
+
+## <a name="return-value"></a>傳回值
+
+|值|意義|
+|-----------|-------------|
+|0|作業成功。|
+|1|作業失敗，在目前 VMCS的 `VM-instruction error field` 中有擴充狀態。|
+|2|作業失敗，無可用的狀態。|
+
+## <a name="remarks"></a>備註
+
+`__vmx_vmread`函式相當於`VMREAD`機器指令。 值`Field`參數是 Intel 文件中所述的編碼的欄位索引。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)網站的 url，然後參閱該文件的附錄 C.
+
+## <a name="requirements"></a>需求
+
+|內建|架構|
+|---------------|------------------|
+|`__vmx_vmread`|X64|
+
+**標頭檔** \<intrin.h >
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>另請參閱
+
+[編譯器內建](../intrinsics/compiler-intrinsics.md)<br/>
+[__vmx_vmwrite](../intrinsics/vmx-vmwrite.md)

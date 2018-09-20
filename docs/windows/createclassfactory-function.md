@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cecffa8505aaead738007e2a0872c3f1bc5a6d6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c1d7c3741af7f5a0ea3a66d491f4aecc2afc8cb9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593644"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392186"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory 函式
 
@@ -42,16 +42,16 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 
 ### <a name="parameters"></a>參數
 
-*flags*  
+*flags*<br/>
 一或多個組合[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。
 
-*entry*  
+*entry*<br/>
 指標[CreatorMap](../windows/creatormap-structure.md) ，其中包含參數的初始設定和註冊資訊*riid*。
 
-*riid*  
+*riid*<br/>
 參考介面識別碼。
 
-*ppFactory*  
+*ppFactory*<br/>
 如果這項作業成功完成，class factory 的指標。
 
 ## <a name="return-value"></a>傳回值

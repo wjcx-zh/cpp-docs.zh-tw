@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7369fdb37dbef474dafea2ba2a9a7e28f5eface9
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: a9ebc7828916b0c5809563a8f1e153d5e59a1ad7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318885"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382021"
 ---
 # <a name="guide-settings-dialog-box-c"></a>輔助線設定對話方塊 （c + +）
 
@@ -68,5 +68,5 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[修改配置格線](../windows/modifying-the-layout-grid.md)  
+[修改配置格線](../windows/modifying-the-layout-grid.md)<br/>
 [對話方塊編輯器狀態 (輔助線和格線)](../windows/dialog-editor-states-guides-and-grids.md)

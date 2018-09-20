@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49fada071661bd647e012bfdfac2aeedabba68fa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 47afe841a2a8e4a1c41baf68dfd139a70b320c7d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206598"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394461"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -38,7 +38,7 @@ ms.locfileid: "43206598"
 
 ### <a name="parameters"></a>參數
 
-*contextID*  
+*contextID*<br/>
 在 32 位元說明內容識別碼**協助**檔案。
 
 ## <a name="remarks"></a>備註
@@ -79,8 +79,8 @@ __interface IMyI
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
-[介面屬性](../windows/interface-attributes.md)  
-[類別屬性](../windows/class-attributes.md)  
-[方法屬性](../windows/method-attributes.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
+[介面屬性](../windows/interface-attributes.md)<br/>
+[類別屬性](../windows/class-attributes.md)<br/>
+[方法屬性](../windows/method-attributes.md)<br/>
 [模組](../windows/module-cpp.md)  

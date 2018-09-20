@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df624c04b1fd5a80b6e54928adb8f3ca7424920a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c6bf8f299ef46166c5b09a716e5bed21fd3b9b01
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215172"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387096"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038：MFC/OLE IUnknown 實作
 
@@ -414,7 +414,7 @@ CAggrExample::CAggrExample()
 }
 
 BOOL CAggrExample::OnCreateAggregates()
-{ 
+{
     // wire up aggregate with correct controlling unknown
     m_lpAggrInner = CoCreateInstance(CLSID_Example,
         GetControllingUnknown(), CLSCTX_INPROC_SERVER,
@@ -471,10 +471,10 @@ DWORD ExternalQueryInterface(
 
 #### <a name="parameters"></a>參數
 
-*lpIID*  
+*lpIID*<br/>
 指向 IID 的遠端指標 (QueryInterface 的第一個引數)
 
-*ppvObj*  
+*ppvObj*<br/>
 指向 IUnknown* 的指標 (QueryInterface 的第二個引數)
 
 #### <a name="remarks"></a>備註
@@ -520,10 +520,10 @@ END_INTERFACE_PART(localClass)
 
 #### <a name="parameters"></a>參數
 
-*localClass*  
+*localClass*<br/>
 實作介面的類別名稱。
 
-*iface*  
+*iface*<br/>
 這個類別實作的介面名稱。
 
 #### <a name="remarks"></a>備註
@@ -560,10 +560,10 @@ END_INTERFACE_MAP
 
 #### <a name="parameters"></a>參數
 
-*theClass*  
+*theClass*<br/>
 在其中定義介面對應的類別
 
-*baseClass*  
+*baseClass*<br/>
 從中的類別*theClass*衍生自。
 
 #### <a name="remarks"></a>備註
@@ -578,13 +578,13 @@ INTERFACE_PART(theClass, iid, localClass)
 
 #### <a name="parameters"></a>參數
 
-*theClass*  
+*theClass*<br/>
 包含介面對應的類別名稱。
 
-*iid*  
+*iid*<br/>
 要對應到內嵌類別的 `IID`。
 
-*localClass*  
+*localClass*<br/>
 本機類別的名稱 (減去 'X')。
 
 #### <a name="remarks"></a>備註
@@ -626,10 +626,10 @@ INTERFACE_AGGREGATE(theClass, theAggr)
 
 #### <a name="parameters"></a>參數
 
-*theClass*  
+*theClass*<br/>
 包含介面對應的類別名稱，
 
-*theAggr*  
+*theAggr*<br/>
 要彙總的成員變數名稱。
 
 #### <a name="remarks"></a>備註
@@ -638,5 +638,5 @@ INTERFACE_AGGREGATE(theClass, theAggr)
 
 ## <a name="see-also"></a>另請參閱
 
-[依編號顯示的技術提示](../mfc/technical-notes-by-number.md)  
-[依分類區分的技術提示](../mfc/technical-notes-by-category.md)  
+[依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
+[依分類區分的技術提示](../mfc/technical-notes-by-category.md)

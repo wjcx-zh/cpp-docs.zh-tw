@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a377967ff2fe469f73f993d779b48037d462e6d7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8bd9f02935d0d88976fd3b62c7276f106519fa74
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42575881"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381006"
 ---
 # <a name="eventevent-constructor-windows-runtime-c-template-library"></a>Event::Event 建構函式 (Windows 執行階段 C++ 樣板程式庫)
 
@@ -39,7 +39,7 @@ WRL_NOTHROW Event(
 
 ### <a name="parameters"></a>參數
 
-*h*  
+*h*<br/>
 事件的控制代碼。 根據預設， *h*初始化為**nullptr**。
 
 ## <a name="requirements"></a>需求

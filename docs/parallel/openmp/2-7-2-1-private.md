@@ -1,5 +1,5 @@
 ---
-title: 2.7.2.1 私用 |Microsoft 文件
+title: 2.7.2.1 私用 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,30 +12,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25ada9c89243ccc23201eb1939337068e77263c7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d06650a784b5b59405f446f4701918393b21fa3b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687461"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387233"
 ---
 # <a name="2721-private"></a>2.7.2.1 private
-`private`子句宣告為私用小組的每個執行緒的變數清單中的變數。 語法`private`子句如下所示：  
-  
-```  
-private(variable-list)  
-```  
-  
- 在指定之變數的行為`private`子句如下所示。 具有自動儲存期的新物件配置建構。 大小和對齊新物件是由變數的類型決定。 這項配置時發生一次在小組中，每個執行緒和預設建構函式會叫用類別物件，如有必要的。否則的起始值皆不明確。  變數所參考的原始物件到建構函式進入時的不定值、 動態建構的範圍內，不得修改並具有從建構在結束時的不定值。  
-  
- 在指示詞的建構的語彙範圍內，變數會參照新的私用物件配置的執行緒。  
-  
- 若要限制`private`子句如下：  
-  
--   中指定的類別類型的變數`private`子句必須具有可存取且明確預設建構函式。  
-  
--   中指定的變數`private`子句不能有**const**-限定型別，除非它有類別類型與`mutable`成員。  
-  
--   中指定的變數`private`子句必須沒有不完整的類型或參考類型。  
-  
--   變數出現在`reduction`子句**平行**指示詞中不能指定`private`繫結至平行建構工作共用指示詞上的子句。
+
+`private`子句宣告為私用小組的每個執行緒的變數清單中的變數。 語法`private`子句如下所示：
+
+```
+private(variable-list)
+```
+
+中指定的變數的行為`private`子句如下所示。 具有自動儲存期的新物件配置的建構。 大小和新物件的對齊會取決於變數的類型。 此配置發生一次在小組中，每個執行緒和預設建構函式會叫用類別物件，如有必要，否則的初始值為未定。  原始變數所參考的物件具有不定值的建構的項目、 動態建構的範圍內，不得修改和不定值從建構在結束時。
+
+中的指示詞的建構之語彙範圍內，變數會參考新的私用物件配置的執行緒。
+
+若要限制`private`子句如下所示：
+
+- 中指定的類別類型的變數`private`子句必須具有可存取且明確的預設建構函式。
+
+- 中指定的變數`private`子句不能有**const**-限定型別，除非它具有類型的類別`mutable`成員。
+
+- 中指定的變數`private`子句不能是不完整的類型或參考型別。
+
+- 在出現的變數`reduction`子句**平行**指示詞中不能指定`private`繫結至平行建構之工作共用指示詞子句。

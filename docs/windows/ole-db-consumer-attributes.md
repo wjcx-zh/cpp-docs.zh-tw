@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aebe1a48e037d2780f9b0c6443cbcba3e158677f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 07b129e2810b7b1310eb8988ca60fbd6e5dcad5a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318014"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391919"
 ---
 # <a name="ole-db-consumer-attributes"></a>OLE DB 消費者屬性
 OLE DB 消費者屬性插入程式碼，根據[OLE DB 消費者樣板](../data/oledb/ole-db-consumer-templates-reference.md)，以建立使用 OLE DB 取用者會執行工作，例如開啟資料表，執行命令，以及存取資料。
@@ -40,4 +40,5 @@ OLE DB 消費者屬性插入程式碼，根據[OLE DB 消費者樣板](../data/o
 |[db_table](../windows/db-table.md)|開啟 OLE DB 資料表。|
   
 ## <a name="see-also"></a>另請參閱
- [依群組分類的屬性](../windows/attributes-by-group.md)
+
+[依群組分類的屬性](../windows/attributes-by-group.md)

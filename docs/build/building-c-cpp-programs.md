@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2792b49d7d3d3f107e39931ff62e6c4137c9c5ca
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3fd4bdeb73a2b2979a93a051c3ee490659b5248b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723264"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392502"
 ---
 # <a name="building-cc-programs"></a>建置 C/C++ 程式
 
@@ -34,20 +34,28 @@ ms.locfileid: "45723264"
 
 ## <a name="in-this-section"></a>本節內容
 
-[建置 Visual Studio 中的 c + + 專案](../ide/building-cpp-projects-in-visual-studio.md)討論如何使用 Visual Studio IDE 來建置 C/c + + 專案。
+[在 Visual Studio 中建置 C++ 專案](../ide/building-cpp-projects-in-visual-studio.md)<br/>
+討論如何使用 Visual Studio IDE，來建置 C/C++ 專案。
 
-[在命令列上建置 C/c + + 程式碼](../build/building-on-the-command-line.md)討論如何使用 C/c + + 命令列編譯器和建置工具隨附於 Visual Studio。
+[在命令列上建置 C/C++ 程式碼](../build/building-on-the-command-line.md)<br/>
+討論如何使用 Visual Studio 中包含的 C/C++ 命令列編譯器及建置工具。
 
-[建置 C/c + + 隔離應用程式和並排顯示組件](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)描述 Windows 桌面應用程式，隔離的應用程式和並排顯示組件的概念為基礎的部署模型。
+[建置 C/C++ 隔離應用程式和並存組件](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)<br/>
+描述 Windows 桌面應用程式的部署模型，其基於隔離應用程式及並存組件的想法。
 
-[C/c + + 建置參考](../build/reference/c-cpp-building-reference.md)提供連結至 c + +、 編譯器和連結器選項建置程式的參考文件，以及各種建置工具。
+[C/C++ 建置參考](../build/reference/c-cpp-building-reference.md)<br/>
+提供參考文章連結，包含以 C++ 建置程式，和編譯器及連結器選項，以及各種建置工具的連結。
 
-[設定 Visual c + + 64 位元 x64 目標](../build/configuring-programs-for-64-bit-visual-cpp.md)說明如何設定 Visual Studio 及命令列使用 64 位元工具組，以及如何以 64 位元架構為目標，並討論常見的移轉問題，當程式碼移到 64 位元架構。
+[針對 64 位元 x64 目標設定 Visual C++](../build/configuring-programs-for-64-bit-visual-cpp.md)<br/>
+說明如何設定 Visual Studio 及命令列以使用 64 位元工具組，及如何將 64 位元架構做為目標，以及討論當程式碼移至 64 位元架構時常見的移轉問題。
 
-[適用於 ARM 處理器設定 Visual c + +](../build/configuring-programs-for-arm-processors-visual-cpp.md)描述 ARM 處理器所使用的慣例，並討論常見的移轉問題，當程式碼移至 ARM 架構。
+[針對 ARM 處理器設定 Visual C++](../build/configuring-programs-for-arm-processors-visual-cpp.md)<br/>
+描述 ARM 處理器所使用的慣例，以及討論當程式碼移至 ARM 架構時常見的移轉問題。
 
-[設定 Windows XP 程式](../build/configuring-programs-for-windows-xp.md)描述如何設定目標 Windows XP 開發的平台工具組。
+[為 Windows XP 設定程式](../build/configuring-programs-for-windows-xp.md)<br/>
+描述如何設定平台工具組，以將 Windows XP 開發做為目標。
 
 ## <a name="related-sections"></a>相關章節
 
-[編譯和建置](/visualstudio/ide/compiling-and-building-in-visual-studio)說明 Visual Studio 會建置系統和工具。
+[編譯和建置](/visualstudio/ide/compiling-and-building-in-visual-studio)<br/>
+說明 Visual Studio 建置系統和工具。

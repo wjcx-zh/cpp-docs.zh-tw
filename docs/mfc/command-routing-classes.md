@@ -1,5 +1,5 @@
 ---
-title: 命令路由類別 |Microsoft 文件
+title: 命令路由類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3e05046ac6754dd585bb1fbf51420ef862af7be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b467a85aca4bb1d0405f9bbddee5cb5e4f5b790
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341958"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391528"
 ---
 # <a name="command-routing-classes"></a>命令路由類別
-當使用者透過使用滑鼠選擇功能表或控制列按鈕來與應用程式互動時，應用程式會從受影響的使用者介面物件傳送訊息至適當的命令目標物件。 命令目標類別衍生自`CCmdTarget`包含[CWinApp](../mfc/reference/cwinapp-class.md)， [CWnd](../mfc/reference/cwnd-class.md)， [CDocTemplate](../mfc/reference/cdoctemplate-class.md)， [CDocument](../mfc/reference/cdocument-class.md)， [CView](../mfc/reference/cview-class.md)，並從它們衍生的類別。 架構支援自動的命令路由，以便可以由目前在應用程式中作用中的最適當物件來處理命令。  
-  
- 類別的物件`CCmdUI`傳遞至命令目標的更新命令 UI ([ON_UPDATE_COMMAND_UI](reference/message-map-macros-mfc.md#on_update_command_ui)) 處理常式，讓您更新特定命令的使用者介面的狀態 （例如，用來檢查或移除從功能表項目檢查）。 您呼叫 `CCmdUI` 物件的成員函式來更新 UI 物件的狀態。 這個程序與 UI 物件與特定命令關聯的是功能表項目或按鈕 (或者二者都關聯) 相同。  
-  
- [CCmdTarget](../mfc/reference/ccmdtarget-class.md)  
- 做為可以接收和回應訊息之物件的所有類別的基底類別。  
-  
- [CCmdUI](../mfc/reference/ccmdui-class.md)  
- 提供程式設計介面，以更新使用者介面物件 (例如功能表項目或控制列按鈕)。 命令目標物件會使用此物件啟用、停用、檢查和/或清除使用者介面物件。  
-  
-## <a name="see-also"></a>另請參閱  
- [類別概觀](../mfc/class-library-overview.md)
+
+當使用者透過使用滑鼠選擇功能表或控制列按鈕來與應用程式互動時，應用程式會從受影響的使用者介面物件傳送訊息至適當的命令目標物件。 命令目標類別衍生自`CCmdTarget`包括[CWinApp](../mfc/reference/cwinapp-class.md)， [CWnd](../mfc/reference/cwnd-class.md)， [CDocTemplate](../mfc/reference/cdoctemplate-class.md)， [CDocument](../mfc/reference/cdocument-class.md)， [CView](../mfc/reference/cview-class.md)，以及從它們衍生的類別。 架構支援自動的命令路由，以便可以由目前在應用程式中作用中的最適當物件來處理命令。
+
+類別的物件`CCmdUI`傳遞至命令目標的更新命令 UI ([ON_UPDATE_COMMAND_UI](reference/message-map-macros-mfc.md#on_update_command_ui)) 處理常式，讓您更新的特定命令的使用者介面的狀態 （例如，若要檢查或移除檢查與功能表項目）。 您呼叫 `CCmdUI` 物件的成員函式來更新 UI 物件的狀態。 這個程序與 UI 物件與特定命令關聯的是功能表項目或按鈕 (或者二者都關聯) 相同。
+
+[CCmdTarget](../mfc/reference/ccmdtarget-class.md)<br/>
+做為可以接收和回應訊息之物件的所有類別的基底類別。
+
+[CCmdUI](../mfc/reference/ccmdui-class.md)<br/>
+提供程式設計介面，以更新使用者介面物件 (例如功能表項目或控制列按鈕)。 命令目標物件會使用此物件啟用、停用、檢查和/或清除使用者介面物件。
+
+## <a name="see-also"></a>另請參閱
+
+[類別概觀](../mfc/class-library-overview.md)
 

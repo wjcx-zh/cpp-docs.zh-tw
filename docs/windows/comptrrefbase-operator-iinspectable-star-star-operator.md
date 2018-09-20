@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f711a9d1f5fe92e5f35bf333fc0b3473fc0eebf4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c27a1957ff6198ea68893dd9bb92f4e60b70e4f9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604402"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372336"
 ---
 # <a name="comptrrefbaseoperator-iinspectable-operator"></a>Comptrrefbase:: Operator IInspectable\* \*運算子
 
@@ -50,5 +50,5 @@ operator IInspectable**() const;
 
 ## <a name="see-also"></a>另請參閱
 
-[ComPtrRefBase 類別](../windows/comptrrefbase-class.md)  
+[ComPtrRefBase 類別](../windows/comptrrefbase-class.md)<br/>
 [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

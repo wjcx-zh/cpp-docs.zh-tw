@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2bbf6cb67973d7538aa7aea0d846cbadf030d585
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dc59b9c93cebb622f40881d961709079abcd9166
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590648"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388624"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>EventTargetArray::EventTargetArray 建構函式
 
@@ -39,7 +39,7 @@ EventTargetArray(
 
 ### <a name="parameters"></a>參數
 
-*hr*  
+*hr*<br/>
 這個建構函式作業之後，參數*hr*表示配置陣列的成功或失敗。 下表列出可能的值為*hr*。
 
 S_OK 作業成功。
@@ -48,7 +48,7 @@ E_OUTOFMEMORY 記憶體無法配置陣列。
 
 S_FALSE 參數*項目*小於或等於零。
 
-*項目*  
+*項目*<br/>
 若要配置的陣列元素數目。
 
 ## <a name="remarks"></a>備註
@@ -65,5 +65,5 @@ S_FALSE 參數*項目*小於或等於零。
 
 ## <a name="see-also"></a>另請參閱
 
-[EventTargetArray 類別](../windows/eventtargetarray-class.md)  
+[EventTargetArray 類別](../windows/eventtargetarray-class.md)<br/>
 [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

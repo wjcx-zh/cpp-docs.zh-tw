@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6faa29858e94c7d80d6039e35278b6a7ae263a85
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 69aecab15ffb1914dbc8a6a6ae15fca307bc77ef
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213973"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386245"
 ---
 # <a name="tn006-message-maps"></a>TN006：訊息對應
 
@@ -87,7 +87,7 @@ protected:
 > [!NOTE]
 > ClassWizard 會要求您使用**afx_msg**您訊息對應處理常式宣告中的關鍵字。
 
- 這些函式簽章是使用簡單的慣例衍生而來。 函式的名稱一律以開頭`"On`"。 接著移除"WM_ 」 的 Windows 訊息的名稱和每個字大寫的第一個字母。 參數的順序不具*wParam*後面`LOWORD`(*lParam*) 然後`HIWORD`(*lParam*)。 未使用的參數不會傳遞。 任何 MFC 類別所包裝的控制代碼會轉換成適當的 MFC 物件的指標。 下列範例示範如何處理 WM_PAINT 訊息及造成`CMyWnd::OnPaint`呼叫函式：
+這些函式簽章是使用簡單的慣例衍生而來。 函式的名稱一律以開頭`"On`"。 接著移除"WM_ 」 的 Windows 訊息的名稱和每個字大寫的第一個字母。 參數的順序不具*wParam*後面`LOWORD`(*lParam*) 然後`HIWORD`(*lParam*)。 未使用的參數不會傳遞。 任何 MFC 類別所包裝的控制代碼會轉換成適當的 MFC 物件的指標。 下列範例示範如何處理 WM_PAINT 訊息及造成`CMyWnd::OnPaint`呼叫函式：
 
 ```cpp
 BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
@@ -97,7 +97,7 @@ BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()
 ```
 
- 訊息對應表格必須定義範圍以外的任何函式或類別定義。 它不應該放置在外部"C"區塊中。
+訊息對應表格必須定義範圍以外的任何函式或類別定義。 它不應該放置在外部"C"區塊中。
 
 > [!NOTE]
 > ClassWizard 會修改訊息對應項目之間發生的 / / {{和 / /}} 註解括號。
@@ -223,7 +223,7 @@ ON_UPDATE_COMMAND_UI(id, memberFxn)
     }
     ```
 
- 進階的使用者可以使用單一命令處理常式處理一組命令： [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)或 ON_COMMAND_RANGE_EX。 請參閱產品文件，如需這些巨集的詳細資訊。
+進階的使用者可以使用單一命令處理常式處理一組命令： [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)或 ON_COMMAND_RANGE_EX。 請參閱產品文件，如需這些巨集的詳細資訊。
 
 > [!NOTE]
 > ClassWizard 支援建立的 ON_COMMAND 和 ON_UPDATE_COMMAND_UI 處理常式，但它不支援建立 ON_COMMAND_EX 或 ON_COMMAND_RANGE 處理常式。 不過，類別精靈會剖析，並可讓您瀏覽所有四個命令處理常式的變體。
@@ -251,5 +251,5 @@ Windows 通用控制項使用功能更強大[WM_NOTIFY](https://msdn.microsoft.c
 
 ## <a name="see-also"></a>另請參閱
 
-[依編號顯示的技術提示](../mfc/technical-notes-by-number.md)  
-[依分類區分的技術提示](../mfc/technical-notes-by-category.md)  
+[依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
+[依分類區分的技術提示](../mfc/technical-notes-by-category.md)

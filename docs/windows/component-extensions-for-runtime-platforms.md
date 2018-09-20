@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 160ae864218304fbc94324ecfd9d6229729ca379
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0619585a0a5b59ffb6b8cfbe22e7930909369b23
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318339"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386745"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>執行階段平台的元件擴充功能
 
@@ -141,5 +141,5 @@ C + + /cli CLI 延伸 ISO/ANSI c + + 標準，並定義在 Ecma C + + /cli CLI �
 
 ## <a name="see-also"></a>另請參閱
 
-[以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
+[以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 [原生和 .NET 互通性](../dotnet/native-and-dotnet-interoperability.md)

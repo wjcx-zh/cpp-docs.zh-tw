@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 597d4c2e6fa9904906c2971c3c442a9f26779834
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3f1616168829d488a0b0a899f1dd09f9b02700ee
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215074"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389339"
 ---
 # <a name="iidis"></a>iid_is
 
@@ -38,7 +38,7 @@ ms.locfileid: "43215074"
 
 ### <a name="parameters"></a>參數
 
-*運算式*  
+*運算式*<br/>
 介面指標所指向的 C 語言運算式，指定 COM 介面的 IID。
 
 ## <a name="remarks"></a>備註
@@ -79,5 +79,5 @@ __interface IFireTabCtrl : IDispatch
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
 [參數屬性](../windows/parameter-attributes.md)  

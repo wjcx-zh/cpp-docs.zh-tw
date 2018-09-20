@@ -1,5 +1,5 @@
 ---
-title: TN063： 偵錯網際網路 MFC 擴充 Dll |Microsoft 文件
+title: TN063： 偵錯網際網路 MFC 延伸模組 Dll |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68bb9ad7a16d35f7a5529bd82bb4d6547eec2e0b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb432bf77e9095473d25c3ffc686660567c034bf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380461"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395371"
 ---
-# <a name="tn063-debugging-internet-mfc-extension-dlls"></a>TN063： 偵錯網際網路 MFC 擴充 Dll
-這項資訊已過期且已移除。  
-  
-## <a name="see-also"></a>另請參閱  
- [依數字的技術提示](../mfc/technical-notes-by-number.md)   
- [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
+# <a name="tn063-debugging-internet-mfc-extension-dlls"></a>TN063： 偵錯網際網路 MFC 延伸模組 Dll
+
+這項資訊已過期且已移除。
+
+## <a name="see-also"></a>另請參閱
+
+[依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
+[依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

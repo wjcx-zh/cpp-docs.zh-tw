@@ -1,5 +1,5 @@
 ---
-title: 序列化： 序列化 vs。資料庫輸入輸出 |Microsoft 文件
+title: 序列化︰ 序列化和。資料庫輸入-輸出 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d43c0259dd394a7dbbe7ef5b2ed558c9351e73a8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67621d44766e6f4b726c8553024933fd0e904a17
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379573"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381539"
 ---
-# <a name="serialization-serialization-vs-database-inputoutput"></a>序列化： 序列化 vs。資料庫輸入/輸出
-這篇文章說明何時以檔案為基礎的輸入/輸出 (I/O) 和其他技術的適當使用文件物件和序列化，因為應用程式讀取，並將資料寫入針對每個交易，與資料庫應用程式。 如果您不使用序列化，您也不需要開啟檔案、 儲存，而且將儲存為命令。 涵蓋的主題包括：  
-  
--   [處理輸入/輸出的建議](../mfc/recommendations-for-handling-input-output.md)  
-  
--   [處理資料庫應用程式中的 [檔案] 功能表](../mfc/file-menu-in-an-mfc-database-application.md)  
-  
-## <a name="see-also"></a>另請參閱  
- [序列化](../mfc/serialization-in-mfc.md)
+# <a name="serialization-serialization-vs-database-inputoutput"></a>序列化︰ 序列化和。資料庫輸入/輸出
+
+本文說明使用文件物件和序列化的檔案為基礎的輸入/輸出 (I/O) 和其他技術的適當時機，因為應用程式的讀取和寫入資料，以每筆交易為基礎，例如資料庫的應用程式。 如果您未使用的序列化，您也不會儲存需要開啟檔案，並儲存為命令。 涵蓋的主題包括：
+
+- [處理輸入/輸出的建議](../mfc/recommendations-for-handling-input-output.md)
+
+- [處理資料庫應用程式中的 [檔案] 功能表](../mfc/file-menu-in-an-mfc-database-application.md)
+
+## <a name="see-also"></a>另請參閱
+
+[序列化](../mfc/serialization-in-mfc.md)
 

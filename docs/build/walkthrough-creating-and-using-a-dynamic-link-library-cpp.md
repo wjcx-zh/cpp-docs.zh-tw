@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb47b64277aea568cf3cad8e2c4b6203e43f1b2f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5175d89925ddc09fdcd552aa57d2967071e750f7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723244"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376963"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>逐步解說： 建立和使用您自己動態連結程式庫 （c + +）
 
@@ -411,5 +411,5 @@ int main()
 
 [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)<br/>
 [部署傳統型應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
-[逐步解說： 部署程式 （c + +）](../ide/walkthrough-deploying-your-program-cpp.md)
+[逐步解說：部署程式 (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
 [從 Visual Basic 應用程式呼叫 DLL 函式](../build/calling-dll-functions-from-visual-basic-applications.md)

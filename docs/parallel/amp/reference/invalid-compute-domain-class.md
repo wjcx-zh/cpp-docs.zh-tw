@@ -18,63 +18,67 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: def102ecb8063f82d90d41b2b678ff22638b1f8b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 17d0556a349d66f4c70d730108d9cd843b736dfd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116005"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387025"
 ---
 # <a name="invalidcomputedomain-class"></a>invalid_compute_domain 類別
-執行階段無法使用在指定的計算網域啟動核心時，會擲回的例外狀況[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)呼叫站台。  
 
-  
-## <a name="syntax"></a>語法  
-  
-```  
-class invalid_compute_domain : public runtime_exception;  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[invalid_compute_domain 建構函式](#ctor)|初始化 `invalid_compute_domain` 類別的新執行個體。|  
+執行階段無法使用在指定的計算網域啟動核心時，會擲回的例外狀況[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)呼叫站台。
 
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `exception`  
-  
- `runtime_exception`  
-  
- `invalid_compute_domain`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** amprt.h  
-  
- **命名空間：** 並行  
+## <a name="syntax"></a>語法
 
-## <a name="ctor"></a> invalid_compute_domain 
+```
+class invalid_compute_domain : public runtime_exception;
+```
 
-初始化類別的新執行個體。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-explicit invalid_compute_domain(  
-    const char * _Message ) throw();  
-  
-invalid_compute_domain() throw();  
-```  
-  
-### <a name="parameters"></a>參數  
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[invalid_compute_domain 建構函式](#ctor)|初始化 `invalid_compute_domain` 類別的新執行個體。|
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`exception`
+
+`runtime_exception`
+
+`invalid_compute_domain`
+
+## <a name="requirements"></a>需求
+
+**標頭：** amprt.h
+
+**命名空間：** 並行
+
+## <a name="ctor"></a> invalid_compute_domain
+
+初始化類別的新執行個體。
+
+## <a name="syntax"></a>語法
+
+```
+explicit invalid_compute_domain(
+    const char * _Message ) throw();
+
+invalid_compute_domain() throw();
+```
+
+### <a name="parameters"></a>參數
+
 *訊息 （_m)*<br/>
-錯誤的描述。  
-  
-### <a name="return-value"></a>傳回值  
- 執行個體`invalid_compute_domain`類別  
-    
-## <a name="see-also"></a>另請參閱  
- [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+錯誤的描述。
+
+### <a name="return-value"></a>傳回值
+
+執行個體`invalid_compute_domain`類別
+
+## <a name="see-also"></a>另請參閱
+
+[Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f6951a5e8ceb56d366f8f9024aef479c83a5925f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 631a6eb1ea2f992fe33183b5e8d997afb1d8fa40
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317351"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372414"
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files-c"></a>如何： 將 MFC 支援新增至資源指令碼檔案 （c + +）
 
@@ -61,5 +61,5 @@ MFC
 
 ## <a name="see-also"></a>另請參閱
 
-[資源檔](../windows/resource-files-visual-studio.md)  
+[資源檔](../windows/resource-files-visual-studio.md)<br/>
 [資源編輯器](../windows/resource-editors.md)

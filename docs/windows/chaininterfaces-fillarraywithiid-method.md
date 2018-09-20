@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 09e0dc3b9caf059bb8ecdce0468dfc118ce9ebfa
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 17e1f47c2dfaf53b63e6bc672cb7822f9bf2b391
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594940"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375342"
 ---
 # <a name="chaininterfacesfillarraywithiid-method"></a>ChainInterfaces::FillArrayWithIid 方法
 
@@ -39,10 +39,10 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>參數
 
-*index*  
+*index*<br/>
 到索引值的指標*iid*陣列。
 
-*iid*  
+*iid*<br/>
 介面識別碼的陣列。
 
 ## <a name="requirements"></a>需求

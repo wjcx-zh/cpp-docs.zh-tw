@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b174e46df7822ddf5ffbc747d0a7eb3cd71245e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c0f6939cfb9cd1dc72026441d946431097a5c3d7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315401"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375277"
 ---
 # <a name="symbol-value-restrictions"></a>符號值限制
 
@@ -68,6 +68,6 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[變更符號的數值](../windows/changing-a-symbol-s-numeric-value.md)  
-[符號名稱限制](../windows/symbol-name-restrictions.md)  
+[變更符號的數值](../windows/changing-a-symbol-s-numeric-value.md)<br/>
+[符號名稱限制](../windows/symbol-name-restrictions.md)<br/>
 [預先定義的符號識別碼](../windows/predefined-symbol-ids.md)

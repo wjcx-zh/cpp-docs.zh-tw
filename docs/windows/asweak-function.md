@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dea10165e920c6b0bbd3856fc04e9ec9661e60c4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dfd626a3e0ca1866f6db046554220c6e631c18b4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42571330"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394305"
 ---
 # <a name="asweak-function"></a>AsWeak 函式
 
@@ -40,13 +40,13 @@ HRESULT AsWeak(
 
 ### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 參數的類型指標*p*。
 
-*p*  
+*p*<br/>
 型別的執行個體。
 
-*pWeak*  
+*pWeak*<br/>
 這項作業完成時，參數的弱式參考的指標*p*。
 
 ## <a name="return-value"></a>傳回值

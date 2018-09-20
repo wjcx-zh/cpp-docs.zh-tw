@@ -1,5 +1,5 @@
 ---
-title: 功能表 (MFC) |Microsoft 文件
+title: 功能表 (MFC) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 839b38a135f9f7ada413de757035370e009cfa57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04b6aa92937ce2c7a0b94c5e5b796b0bf8581626
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346967"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385127"
 ---
 # <a name="menus-mfc"></a>功能表 (MFC)
-MFC 提供兩個可協助您使用功能表的項目：  
-  
--   類別[CMenu](../mfc/reference/cmenu-class.md)為了在執行階段操作程式的功能表。 使用 `CMenu` 的文件和範例了解如何有效使用 `CMenu`。  
-  
--   更新的功能表和工具列按鈕的機制：即時啟用或停用它們以符合目前程式的狀況。  
-  
- Visual c + + 也提供[功能表編輯器](../windows/menu-editor.md)建立和編輯程式的功能表資源。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
-  
--   [程式執行期間管理功能表物件](../mfc/manipulating-menus-during-program-execution.md)  
-  
--   [如何更新使用者介面物件](../mfc/how-to-update-user-interface-objects.md)  
-  
--   [範例](../mfc/menu-sample-list.md)  
-  
-## <a name="see-also"></a>另請參閱  
- [使用者介面項目](../mfc/user-interface-elements-mfc.md)
+
+MFC 提供兩個可協助您使用功能表的項目：
+
+- 類別[CMenu](../mfc/reference/cmenu-class.md)針對在執行階段操作程式的功能表。 使用 `CMenu` 的文件和範例了解如何有效使用 `CMenu`。
+
+- 更新的功能表和工具列按鈕的機制：即時啟用或停用它們以符合目前程式的狀況。
+
+Visual c + + 也提供[功能表編輯器](../windows/menu-editor.md)建立和編輯您的程式功能表資源。
+
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+
+- [程式執行期間管理功能表物件](../mfc/manipulating-menus-during-program-execution.md)
+
+- [如何更新使用者介面物件](../mfc/how-to-update-user-interface-objects.md)
+
+- [範例](../mfc/menu-sample-list.md)
+
+## <a name="see-also"></a>另請參閱
+
+[使用者介面項目](../mfc/user-interface-elements-mfc.md)

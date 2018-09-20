@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f1ed792407160c1d025dabb3b8cc01a2ebc7330
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 8de12d1b421fd78fb9ed2a45cc14826541f72757
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314322"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441690"
 ---
 # <a name="creating-a-new-toolbar-button-c"></a>建立新的工具列按鈕 （c + +）
 
@@ -71,6 +71,6 @@ MFC 或 ATL
 
 ## <a name="see-also"></a>另請參閱
 
-[工具列按鈕屬性](../windows/toolbar-button-properties.md)  
-[建立、移動和編輯工具列按鈕](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[工具列按鈕屬性](../windows/toolbar-button-properties.md)<br/>
+[建立、移動和編輯工具列按鈕](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [工具列編輯器](../windows/toolbar-editor.md)

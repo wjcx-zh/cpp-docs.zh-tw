@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 23607eb9d59a5c860d89444205c675c95e2b907e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d30ac0d2e1d18b22c6130212503576f5fe343a8d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594065"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407529"
 ---
 # <a name="eventreceiver"></a>event_receiver
 
@@ -45,7 +45,7 @@ ms.locfileid: "42594065"
 
 ### <a name="parameters"></a>參數
 
-*type*  
+*type*<br/>
 下列其中一個值的列舉：
 
 - `native` unmanaged C/c + + 程式碼 （原生類別的預設值）。
@@ -58,7 +58,7 @@ ms.locfileid: "42594065"
     #include <atlcom.h>
     ```
 
-*layout_dependent*  
+*layout_dependent*<br/>
 指定*event_receiver*只有當`type` = **com**。 *layout_dependent*是布林值：
 
 - **true**表示委派的簽章的事件接收者必須完全符合的所要攔截在事件來源中。 接收器事件處理常式的名稱必須符合相關的事件來源介面中指定的名稱。 您必須使用`coclass`時*layout_dependent*是**true**。 會指定稍微更有效率 **，則為 true**。
@@ -91,9 +91,9 @@ ms.locfileid: "42594065"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器屬性](../windows/compiler-attributes.md)  
-[event_source](../windows/event-source.md)  
-[__event](../cpp/event.md)  
-[__hook](../cpp/hook.md)  
-[__unhook](../cpp/unhook.md)  
+[編譯器屬性](../windows/compiler-attributes.md)<br/>
+[event_source](../windows/event-source.md)<br/>
+[__event](../cpp/event.md)<br/>
+[__hook](../cpp/hook.md)<br/>
+[__unhook](../cpp/unhook.md)<br/>
 [類別屬性](../windows/class-attributes.md)  

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf70622dc901842a74cf8718d9447f899defb57d
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 56deca345915c5736cb15e7ce5d8d0e0ee0b7062
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313516"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400781"
 ---
 # <a name="changing-the-properties-of-multiple-accelerator-keys-c"></a>變更屬性的多個快速鍵 （c + +）
 
@@ -47,5 +47,5 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[編輯快速鍵對應表](../windows/editing-accelerator-tables.md)  
+[編輯快速鍵對應表](../windows/editing-accelerator-tables.md)<br/>
 [快速鍵編輯器](../windows/accelerator-editor.md)

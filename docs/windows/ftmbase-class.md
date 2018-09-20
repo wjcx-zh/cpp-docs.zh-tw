@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 687fd4f4bd77043bd0b74c7bcc39fb6a496b60be
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: e8a1dcd96ab42f48c91bbed2057475fa412c8925
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601453"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432798"
 ---
 # <a name="ftmbase-class"></a>FtmBase 類別
 
@@ -106,7 +106,7 @@ static HRESULT CreateGlobalInterfaceTable(
 
 ### <a name="parameters"></a>參數
 
-*Git*  
+*Git*<br/>
 這項作業完成時，全域介面表的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -129,7 +129,7 @@ STDMETHODIMP DisconnectObject(
 
 ### <a name="parameters"></a>參數
 
-*dwReserved*  
+*dwReserved*<br/>
 保留以備將來之用；必須為零。
 
 ### <a name="return-value"></a>傳回值
@@ -161,26 +161,26 @@ STDMETHODIMP GetMarshalSizeMax(
 
 ### <a name="parameters"></a>參數
 
-*riid*  
+*riid*<br/>
 要封送處理介面識別項參考。
 
-*pv*  
+*pv*<br/>
 要封送處理; 介面指標可以是 NULL。
 
-*dwDestContext*  
+*dwDestContext*<br/>
 指定的介面所在解除封送處理的目的端內容。
 
 指定一或多個 MSHCTX 列舉值。
 
 目前，解封送處理可能會發生在另一個 apartment，目前的處理序 (MSHCTX_INPROC) 或在目前的處理序 (MSHCTX_LOCAL) 的同一部電腦上的另一個處理序中。
 
-*pvDestContext*  
+*pvDestContext*<br/>
 保留供未來使用;必須是 NULL。
 
-*mshlflags*  
+*mshlflags*<br/>
 旗標，指出要封送處理的資料是否要傳送回用戶端程序 — 一般的情況下，或寫入全域的資料表，其中要擷取多個用戶端。 指定一或多個 MSHLFLAGS 列舉值。
 
-*pSize*  
+*pSize*<br/>
 這項作業完成時，指標要封送處理的資料流寫入的資料量上限。
 
 ### <a name="return-value"></a>傳回值
@@ -204,23 +204,23 @@ STDMETHODIMP GetUnmarshalClass(
 
 ### <a name="parameters"></a>參數
 
-*riid*  
+*riid*<br/>
 要封送處理介面識別項參考。
 
-*pv*  
+*pv*<br/>
 要封送處理; 介面指標如果呼叫端所需的介面沒有指標，則可以是 NULL。
 
-*dwDestContext*  
+*dwDestContext*<br/>
 指定的介面所在解除封送處理的目的端內容。
 
 指定一或多個 MSHCTX 列舉值。
 
 解封送處理，可能會發生在目前的處理序 (MSHCTX_INPROC) 的另一個 apartment，或在目前的處理序 (MSHCTX_LOCAL) 的同一部電腦上的另一個處理序。
 
-*pvDestContext*  
+*pvDestContext*<br/>
 保留供未來使用;必須是 NULL。
 
-*mshlflags*  
+*mshlflags*<br/>
 這項作業完成時，用來在用戶端處理序中建立 proxy 的 CLSID 指標。
 
 *pCid*
@@ -246,26 +246,26 @@ STDMETHODIMP MarshalInterface(
 
 ### <a name="parameters"></a>參數
 
-*pStm*  
+*pStm*<br/>
 要封送處理期間使用的資料流的指標。
 
-*riid*  
+*riid*<br/>
 要封送處理介面識別項參考。 此介面必須衍生自`IUnknown`介面。
 
-*pv*  
+*pv*<br/>
 要封送處理; 之介面指標的指標如果呼叫端所需的介面沒有指標，則可以是 NULL。
 
-*dwDestContext*  
+*dwDestContext*<br/>
 指定的介面所在解除封送處理的目的端內容。
 
 指定一或多個 MSHCTX 列舉值。
 
 解封送處理，可能會發生在目前的處理序 (MSHCTX_LOCAL) 的同一部電腦上的另一個處理序或目前的處理序 (MSHCTX_INPROC) 的另一個 apartment 中。
 
-*pvDestContext*  
+*pvDestContext*<br/>
 保留以備將來之用；必須為零。
 
-*mshlflags*  
+*mshlflags*<br/>
 指定要封送處理的資料是否要傳送回用戶端程序 — 一般的情況下，或寫入全域的資料表，其中要擷取多個用戶端。
 
 ### <a name="return-value"></a>傳回值
@@ -298,7 +298,7 @@ STDMETHODIMP ReleaseMarshalData(
 
 ### <a name="parameters"></a>參數
 
-*pStm*  
+*pStm*<br/>
 包含資料封包，也將被銷毀的資料流的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -319,13 +319,13 @@ STDMETHODIMP UnmarshalInterface(
 
 ### <a name="parameters"></a>參數
 
-*pStm*  
+*pStm*<br/>
 從中的介面指標是解除封送處理的資料流的指標。
 
-*riid*  
+*riid*<br/>
 要解除封送處理介面識別項參考。
 
-*ppv*  
+*ppv*<br/>
 這項作業完成時，接收所要求的介面指標的指標變數的位址*riid*。 如果這項作業成功，**ppv*包含要解除封送處理介面的要求的介面指標。
 
 ### <a name="return-value"></a>傳回值

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7abdc8f2deee962dc6ee5bcfa9857efb6f0bd847
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e0c6e860fa5d7633bd334d0c0a35d25936104636
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593900"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427702"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>泛型型別參數的條件約束 (C++/CLI)
 
@@ -39,10 +39,10 @@ where type-parameter: constraint list
 
 ### <a name="parameters"></a>參數
 
-*型別參數*  
+*型別參數*<br/>
 其中一個要限制的型別參數。
 
-*條件約束清單*  
+*條件約束清單*<br/>
 *條件約束清單*是以逗號分隔的條件約束規格清單。 清單可以包括型別參數要實作的介面。
 
 清單也可以包括類別。 為了讓型別引數符合基底類別條件約束，它必須與條件約束的類別相同，或是衍生自條件約束。

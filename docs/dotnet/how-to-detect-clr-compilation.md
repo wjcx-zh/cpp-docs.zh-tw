@@ -1,5 +1,5 @@
 ---
-title: 如何： 偵測 clr 編譯 |Microsoft 文件
+title: 如何： 偵測-clr 編譯 |Microsoft Docs
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 01cabb9d9288a1e9da28c779e7cf663fe7ae6a43
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ea3c18a06e993e67106955f48d7fe1caec101ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33130761"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436971"
 ---
 # <a name="how-to-detect-clr-compilation"></a>如何：偵測 /clr 編譯
-使用`_MANAGED`或`_M_CEE`巨集，請參閱模組會使用編譯 **/clr**。 如需詳細資訊，請參閱 [/clr (Common Language Runtime 編譯)](../build/reference/clr-common-language-runtime-compilation.md)。  
-  
- 如需巨集的詳細資訊，請參閱[預先定義的巨集](../preprocessor/predefined-macros.md)。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// detect_CLR_compilation.cpp  
-// compile with: /clr  
-#include <stdio.h>  
-  
-int main() {  
-   #if (_MANAGED == 1) || (_M_CEE == 1)  
-      printf_s("compiling with /clr\n");  
-   #else  
-      printf_s("compiling without /clr\n");  
-   #endif  
-}  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+
+使用`_MANAGED`或是`_M_CEE`巨集，以查看模組會使用編譯 **/clr**。 如需詳細資訊，請參閱 [/clr (Common Language Runtime 編譯)](../build/reference/clr-common-language-runtime-compilation.md)。
+
+如需有關巨集的詳細資訊，請參閱[Predefined Macros](../preprocessor/predefined-macros.md)。
+
+## <a name="example"></a>範例
+
+```
+// detect_CLR_compilation.cpp
+// compile with: /clr
+#include <stdio.h>
+
+int main() {
+   #if (_MANAGED == 1) || (_M_CEE == 1)
+      printf_s("compiling with /clr\n");
+   #else
+      printf_s("compiling without /clr\n");
+   #endif
+}
+```
+
+## <a name="see-also"></a>另請參閱
+
+[使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

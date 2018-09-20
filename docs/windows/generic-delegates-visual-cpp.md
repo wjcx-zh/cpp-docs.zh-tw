@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a9613dbc28b3e1f263133c15ae88d20294962e9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 94b6d94b59e1088501a22f44a219177b926dd02e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702529"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440871"
 ---
 # <a name="generic-delegates-visual-c"></a>泛型委派 (Visual C++)
 
@@ -39,25 +39,25 @@ generic < [class | typename] type-parameter-identifiers>
 
 ### <a name="parameters"></a>參數
 
-*屬性*  
+*屬性*<br/>
 （選擇性）其他宣告資訊。 如需關於屬性及屬性類別的詳細資訊，請參閱＜屬性＞。
 
-*type-parameter-identifier(s)*  
+*type-parameter-identifier(s)*<br/>
 以逗號分隔的型別參數識別項清單。
 
-*類型參數條件約束-子句*  
+*類型參數條件約束-子句*<br/>
 中指定的格式[泛型類型參數的條件約束 (C + + /cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*存取範圍修飾詞*  
+*存取範圍修飾詞*<br/>
 （選擇性）存取範圍修飾詞 (例如**公開金鑰**，**私人**)。
 
-*result-type*  
+*result-type*<br/>
 委派的傳回類型。
 
-*identifier*  
+*identifier*<br/>
 委派的名稱。
 
-*型式參數*  
+*型式參數*<br/>
 （選擇性）委派的參數清單。
 
 ## <a name="example"></a>範例

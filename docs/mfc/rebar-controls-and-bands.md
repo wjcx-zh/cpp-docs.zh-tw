@@ -1,5 +1,5 @@
 ---
-title: Rebar 控制項和群組列 |Microsoft 文件
+title: Rebar 控制項和群組列 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,39 +15,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ae83c3e41ebabf62ad98211f3943af2b535c806
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 988b16bb58462b42b8d4412a821cfc3fac5b4878
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929503"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443978"
 ---
 # <a name="rebar-controls-and-bands"></a>Rebar 控制項和群組列
-Rebar 控制項的主要用途是做為子視窗、 通用對話方塊控制項、 功能表、 工具列和等等的容器。 這個內含項目會受到概念的 「 矩形 」。 每個 rebar 群組列可以包含移駐夾列、 點陣圖、 文字標籤和子視窗的任何組合。  
-  
- 類別`CReBarCtrl`具有許多成員函數，您可以用來擷取，並管理特定 rebar 群組列的資訊：  
-  
--   [GetBandCount](../mfc/reference/crebarctrl-class.md#getbandcount)擷取 rebar 控制項中目前的群組列的數目。  
-  
--   [GetBandInfo](../mfc/reference/crebarctrl-class.md#getbandinfo)初始化**REBARBANDINFO**結構指定的頻外的資訊。 沒有相對應[SetBandInfo](../mfc/reference/crebarctrl-class.md#setbandinfo)成員函式。  
-  
--   [GetRect](../mfc/reference/crebarctrl-class.md#getrect)擷取指定的頻外框。  
-  
--   [GetRowCount](../mfc/reference/crebarctrl-class.md#getrowcount)擷取 rebar 控制項中的頻外資料列數目。  
-  
--   [IDToIndex](../mfc/reference/crebarctrl-class.md#idtoindex)擷取指定的群組列的索引。  
-  
--   [GetBandBorders](../mfc/reference/crebarctrl-class.md#getbandborders)擷取的頻外框線。  
-  
- 除了操作，數個成員函式會提供可讓您在特定 rebar 群組列一起運作。  
-  
- [InsertBand](../mfc/reference/crebarctrl-class.md#insertband)和[DeleteBand](../mfc/reference/crebarctrl-class.md#deleteband)加入和移除 rebar 群組列。 [MinimizeBand](../mfc/reference/crebarctrl-class.md#minimizeband)和[MaximizeBand](../mfc/reference/crebarctrl-class.md#maximizeband)會影響特定 rebar 群組列的目前大小。 [MoveBand](../mfc/reference/crebarctrl-class.md#moveband)變更特定 rebar 群組列的索引。 [ShowBand](../mfc/reference/crebarctrl-class.md#showband)顯示或隱藏使用者 rebar 群組列。  
-  
- 下列範例示範如何將工具列頻外 (*m_wndToolBar*) 至現有的 rebar 控制項 (*m_wndReBar*)。 初始化所描述的頻外`rbi`結構，然後再呼叫`InsertBand`成員函式：  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#27](../mfc/codesnippet/cpp/rebar-controls-and-bands_1.cpp)]  
-  
-## <a name="see-also"></a>另請參閱  
- [使用 CReBarCtrl](../mfc/using-crebarctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+
+Rebar 控制項的主要目的是做為子視窗、 通用對話方塊控制項、 功能表、 工具列和等等的容器。 此內含項目受到概念的 「 矩形 」。 每個 rebar 群組列可包含移駐夾列、 點陣圖、 文字標籤和子視窗的任何的組合。
+
+類別`CReBarCtrl`具有許多成員函數，您可以用來擷取，並管理，針對特定 rebar 群組列的資訊：
+
+- [GetBandCount](../mfc/reference/crebarctrl-class.md#getbandcount)擷取 rebar 控制項中目前的寬線數目。
+
+- [GetBandInfo](../mfc/reference/crebarctrl-class.md#getbandinfo)初始化**REBARBANDINFO**結構從指定的群組列的資訊。 具有對應[SetBandInfo](../mfc/reference/crebarctrl-class.md#setbandinfo)成員函式。
+
+- [GetRect](../mfc/reference/crebarctrl-class.md#getrect)擷取指定的頻外的週框矩形。
+
+- [GetRowCount](../mfc/reference/crebarctrl-class.md#getrowcount)擷取 rebar 控制項中的頻外資料列數目。
+
+- [IDToIndex](../mfc/reference/crebarctrl-class.md#idtoindex)擷取指定的群組列的索引。
+
+- [GetBandBorders](../mfc/reference/crebarctrl-class.md#getbandborders)擷取的頻外框線。
+
+除了操作，數個成員函式會提供可讓您對特定 rebar 群組列。
+
+[InsertBand](../mfc/reference/crebarctrl-class.md#insertband)並[DeleteBand](../mfc/reference/crebarctrl-class.md#deleteband)新增和移除 rebar 群組列。 [MinimizeBand](../mfc/reference/crebarctrl-class.md#minimizeband)並[MaximizeBand](../mfc/reference/crebarctrl-class.md#maximizeband)會影響特定 rebar 群組列的目前大小。 [MoveBand](../mfc/reference/crebarctrl-class.md#moveband)變更特定 rebar 群組列的索引。 [ShowBand](../mfc/reference/crebarctrl-class.md#showband)顯示或隱藏使用者 rebar 群組列。
+
+下列範例示範如何將工具列頻外 (*m_wndToolBar*) 與現有 rebar 控制項 (*m_wndReBar*)。 初始化所描述的頻外`rbi`結構，然後呼叫`InsertBand`成員函式：
+
+[!code-cpp[NVC_MFCControlLadenDialog#27](../mfc/codesnippet/cpp/rebar-controls-and-bands_1.cpp)]
+
+## <a name="see-also"></a>另請參閱
+
+[使用 CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
+[控制項](../mfc/controls-mfc.md)
 

@@ -24,161 +24,178 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93d13e7d74a499091a8ad0c592b3cee45a9bbb5e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 26144fe1098e932512344550864c0949e5306238
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46029584"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401702"
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry 類別
-`multi_link_registry` 物件是管理多個來源區塊或多個目標區塊的 `network_link_registry`。  
-  
-## <a name="syntax"></a>語法  
-  
+
+`multi_link_registry` 物件是管理多個來源區塊或多個目標區塊的 `network_link_registry`。
+
+## <a name="syntax"></a>語法
+
 ```
 template<class _Block>
 class multi_link_registry : public network_link_registry<_Block>;
-```  
-  
-#### <a name="parameters"></a>參數  
-*區塊 （_b)*<br/>
-區塊資料類型儲存在`multi_link_registry`物件。  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[multi_link_registry](#ctor)|建構 `multi_link_registry` 物件。|  
-|[~ multi_link_registry 解構函式](#dtor)|終結`multi_link_registry`物件。|  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[add](#add)|新增連結`multi_link_registry`物件。 (覆寫[network_link_registry:: add](network-link-registry-class.md#add)。)|  
-|[begin](#begin)|傳回迭代器中的第一個項目`multi_link_registry`物件。 (覆寫[network_link_registry:: begin](network-link-registry-class.md#begin)。)|  
-|[包含](#contains)|搜尋`multi_link_registry`物件指定的區塊。 (覆寫[network_link_registry:: contains](network-link-registry-class.md#contains)。)|  
-|[count](#count)|計算中的項目數`multi_link_registry`物件。 (覆寫[network_link_registry:: count](network-link-registry-class.md#count)。)|  
-|[remove](#remove)|移除連結，以從`multi_link_registry`物件。 (覆寫[network_link_registry:: remove](network-link-registry-class.md#remove)。)|  
-|[set_bound](#set_bound)|連結的數目設定上限`multi_link_registry`物件可以保存。|  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- [network_link_registry](network-link-registry-class.md)  
-  
- `multi_link_registry`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** agents.h  
-  
- **命名空間：** concurrency  
-  
-##  <a name="add"></a> 新增 
+```
 
- 新增連結`multi_link_registry`物件。  
-  
+#### <a name="parameters"></a>參數
+
+*區塊 （_b)*<br/>
+區塊資料類型儲存在`multi_link_registry`物件。
+
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[multi_link_registry](#ctor)|建構 `multi_link_registry` 物件。|
+|[~ multi_link_registry 解構函式](#dtor)|終結`multi_link_registry`物件。|
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[add](#add)|新增連結`multi_link_registry`物件。 (覆寫[network_link_registry:: add](network-link-registry-class.md#add)。)|
+|[begin](#begin)|傳回迭代器中的第一個項目`multi_link_registry`物件。 (覆寫[network_link_registry:: begin](network-link-registry-class.md#begin)。)|
+|[包含](#contains)|搜尋`multi_link_registry`物件指定的區塊。 (覆寫[network_link_registry:: contains](network-link-registry-class.md#contains)。)|
+|[count](#count)|計算中的項目數`multi_link_registry`物件。 (覆寫[network_link_registry:: count](network-link-registry-class.md#count)。)|
+|[remove](#remove)|移除連結，以從`multi_link_registry`物件。 (覆寫[network_link_registry:: remove](network-link-registry-class.md#remove)。)|
+|[set_bound](#set_bound)|連結的數目設定上限`multi_link_registry`物件可以保存。|
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+[network_link_registry](network-link-registry-class.md)
+
+`multi_link_registry`
+
+## <a name="requirements"></a>需求
+
+**標頭：** agents.h
+
+**命名空間：** concurrency
+
+##  <a name="add"></a> 新增
+
+新增連結`multi_link_registry`物件。
+
 ```
 virtual void add(_EType _Link);
-```  
-  
-### <a name="parameters"></a>參數  
-*連結 （_l)*<br/>
-要加入的區塊的指標。  
-  
-### <a name="remarks"></a>備註  
- 方法會擲回[invalid_link_target](invalid-link-target-class.md)例外狀況的連結是否已經存在於登錄中，或如果已繫結已設定使用`set_bound`函式，並連結已被移除。  
-  
-##  <a name="begin"></a> 開始 
+```
 
- 傳回迭代器中的第一個項目`multi_link_registry`物件。  
-  
+### <a name="parameters"></a>參數
+
+*連結 （_l)*<br/>
+要加入的區塊的指標。
+
+### <a name="remarks"></a>備註
+
+方法會擲回[invalid_link_target](invalid-link-target-class.md)例外狀況的連結是否已經存在於登錄中，或如果已繫結已設定使用`set_bound`函式，並連結已被移除。
+
+##  <a name="begin"></a> 開始
+
+傳回迭代器中的第一個項目`multi_link_registry`物件。
+
 ```
 virtual iterator begin();
-```  
-  
-### <a name="return-value"></a>傳回值  
- 迭代器中的第一個項目定址`multi_link_registry`物件。  
-  
-### <a name="remarks"></a>備註  
- 結束狀態會表示`NULL`連結。  
-  
-##  <a name="contains"></a> 包含 
+```
 
- 搜尋`multi_link_registry`物件指定的區塊。  
-  
+### <a name="return-value"></a>傳回值
+
+迭代器中的第一個項目定址`multi_link_registry`物件。
+
+### <a name="remarks"></a>備註
+
+結束狀態會表示`NULL`連結。
+
+##  <a name="contains"></a> 包含
+
+搜尋`multi_link_registry`物件指定的區塊。
+
 ```
 virtual bool contains(_EType _Link);
-```  
-  
-### <a name="parameters"></a>參數  
-*連結 （_l)*<br/>
-要搜尋中的區塊的指標`multi_link_registry`物件。  
-  
-### <a name="return-value"></a>傳回值  
- `true` 如果找不到指定的區塊，`false`否則。  
-  
-##  <a name="count"></a> 計數 
+```
 
- 計算中的項目數`multi_link_registry`物件。  
-  
+### <a name="parameters"></a>參數
+
+*連結 （_l)*<br/>
+要搜尋中的區塊的指標`multi_link_registry`物件。
+
+### <a name="return-value"></a>傳回值
+
+`true` 如果找不到指定的區塊，`false`否則。
+
+##  <a name="count"></a> 計數
+
+計算中的項目數`multi_link_registry`物件。
+
 ```
 virtual size_t count();
-```  
-  
-### <a name="return-value"></a>傳回值  
- 中的項目數`multi_link_registry`物件。  
-  
-##  <a name="ctor"></a> multi_link_registry 
+```
 
- 建構 `multi_link_registry` 物件。  
-  
+### <a name="return-value"></a>傳回值
+
+中的項目數`multi_link_registry`物件。
+
+##  <a name="ctor"></a> multi_link_registry
+
+建構 `multi_link_registry` 物件。
+
 ```
 multi_link_registry();
-```  
-  
-##  <a name="dtor"></a> ~ multi_link_registry 
+```
 
- 終結`multi_link_registry`物件。  
-  
+##  <a name="dtor"></a> ~ multi_link_registry
+
+終結`multi_link_registry`物件。
+
 ```
 virtual ~multi_link_registry();
-```  
-  
-### <a name="remarks"></a>備註  
- 方法會擲回[invalid_operation](invalid-operation-class.md)例外狀況，如果呼叫前會移除所有的連結。  
-  
-##  <a name="remove"></a> 移除 
+```
 
- 移除連結，以從`multi_link_registry`物件。  
-  
+### <a name="remarks"></a>備註
+
+方法會擲回[invalid_operation](invalid-operation-class.md)例外狀況，如果呼叫前會移除所有的連結。
+
+##  <a name="remove"></a> 移除
+
+移除連結，以從`multi_link_registry`物件。
+
 ```
 virtual bool remove(_EType _Link);
-```  
-  
-### <a name="parameters"></a>參數  
-*連結 （_l)*<br/>
-要移除，如果區塊的指標找到。  
-  
-### <a name="return-value"></a>傳回值  
- `true` 如果連結已找到並移除，`false`否則。  
-  
-##  <a name="set_bound"></a> set_bound 
+```
 
- 連結的數目設定上限`multi_link_registry`物件可以保存。  
-  
+### <a name="parameters"></a>參數
+
+*連結 （_l)*<br/>
+要移除，如果區塊的指標找到。
+
+### <a name="return-value"></a>傳回值
+
+`true` 如果連結已找到並移除，`false`否則。
+
+##  <a name="set_bound"></a> set_bound
+
+連結的數目設定上限`multi_link_registry`物件可以保存。
+
 ```
 void set_bound(size_t _MaxLinks);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *_MaxLinks*<br/>
-最大數目的連結，`multi_link_registry`物件可以保存。  
-  
-### <a name="remarks"></a>備註  
- 繫結設定後，取消連結項目將導致 `multi_link_registry` 物件進入不可變的狀態，後續在這種狀態下呼叫 `add` 將會擲回 `invalid_link_target` 例外狀況。  
-  
-## <a name="see-also"></a>另請參閱  
- [concurrency 命名空間](concurrency-namespace.md)   
- [single_link_registry 類別](single-link-registry-class.md)
+最大數目的連結，`multi_link_registry`物件可以保存。
+
+### <a name="remarks"></a>備註
+
+繫結設定後，取消連結項目將導致 `multi_link_registry` 物件進入不可變的狀態，後續在這種狀態下呼叫 `add` 將會擲回 `invalid_link_target` 例外狀況。
+
+## <a name="see-also"></a>另請參閱
+
+[concurrency 命名空間](concurrency-namespace.md)<br/>
+[single_link_registry 類別](single-link-registry-class.md)

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28be2caa3477eabc8b717b387c99d65585a9ef19
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4ea5026100239f00f03147e435ddd9555617f1dd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718051"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432707"
 ---
 # <a name="dlls-in-visual-c"></a>Visual C++ 中的 DLL
 
@@ -71,46 +71,67 @@ ms.locfileid: "45718051"
 
 下列主題提供有關的詳細的資訊，Visual c + + dll 的程式設計。
 
-[逐步解說： 建立和使用動態連結程式庫 （c + +）](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)說明如何建立和使用 DLL，使用 Visual Studio。
+[逐步解說：建立和使用動態連結程式庫 (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
+描述如何使用 Visual Studio 來建立並使用 DLL。
 
-[Dll 的種類](../build/kinds-of-dlls.md)提供不同種類的可建置的 Dll 的相關資訊。
+[DLL 的種類](../build/kinds-of-dlls.md)<br/>
+提供關於各種不同可建置 DLL 的資訊。
 
-[DLL 常見問題集](../build/dll-frequently-asked-questions.md)提供 Dll 常見問題的解答。
+[DLL 常見問題集](../build/dll-frequently-asked-questions.md)<br/>
+提供 DLL 常見問題的解答。
 
-[連結至 DLL 的可執行檔](../build/linking-an-executable-to-a-dll.md)描述明確和隱含連結至 DLL。
+[將可執行檔連結至 DLL](../build/linking-an-executable-to-a-dll.md)<br/>
+說明 DLL 的明確和隱含連結方式。
 
-[初始化 DLL](../build/run-time-library-behavior.md#initializing-a-dll)討論 DLL 初始化程式碼必須載入 DLL 時執行。
+[初始化 DLL](../build/run-time-library-behavior.md#initializing-a-dll)<br/>
+討論您的 DLL 載入時必須執行的 DLL 初始化程式碼。
 
-[Dll 和 Visual c + + 執行階段程式庫行為](../build/run-time-library-behavior.md)說明如何在執行階段程式庫執行 DLL 啟動程序。
+[DLL 和 Visual C++ 執行階段程式庫行為](../build/run-time-library-behavior.md)<br/>
+說明執行階段程式庫如何執行 DLL 啟動程序。
 
-[LoadLibrary 和 AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)討論如何使用**LoadLibrary**和`AfxLoadLibrary`明確地連結至 DLL，以在執行階段。
+[LoadLibrary 和 AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)<br/>
+討論如何使用**LoadLibrary**和`AfxLoadLibrary`明確地連結至 DLL，以在執行階段。
 
-[GetProcAddress](../build/getprocaddress.md)討論如何使用**GetProcAddress**取得 DLL 中匯出的函式的位址。
+[GetProcAddress](../build/getprocaddress.md)<br/>
+討論如何使用**GetProcAddress**取得 DLL 中匯出的函式的位址。
 
-[FreeLibrary 和 AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)討論如何使用**FreeLibrary**和`AfxFreeLibrary`不再需要 DLL 模組時。
+[FreeLibrary 和 AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)<br/>
+討論如何使用**FreeLibrary**和`AfxFreeLibrary`不再需要 DLL 模組時。
 
-[動態連結程式庫搜尋順序](/windows/desktop/Dlls/dynamic-link-library-search-order)說明 Windows 作業系統用來在系統上找出 DLL 的搜尋路徑。
+[動態連結程式庫搜尋順序](/windows/desktop/Dlls/dynamic-link-library-search-order)<br/>
+說明 Windows 作業系統在系統上找出 DLL 時所用的搜尋路徑。
 
-[一般 MFC DLL 動態連結至 MFC 的模組狀態](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)說明的一般 MFC DLL 動態連結至 MFC 的模組狀態。
+[動態連結至 MFC 之 MFC DLL 的模組狀態](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>
+描述的一般 MFC DLL 動態連結至 MFC 的模組狀態。
 
-[MFC 擴充 Dll](../build/extension-dlls-overview.md)通常會實作衍生自現有 Mfc 程式庫類別的可重複使用類別的說明 Dll。
+[MFC 延伸模組 DLL](../build/extension-dlls-overview.md)<br/>
+說明實作衍生自現有 MFC 程式庫類別的重複使用類別的 DLL。
 
-[建立 Resource-Only DLL](../build/creating-a-resource-only-dll.md)討論資源專用 DLL，其中包含只一項資源，例如圖示、 點陣圖、 字串和對話方塊。
+[建立僅含資源的 DLL](../build/creating-a-resource-only-dll.md)<br/>
+說明僅含資源 DLL，這種 DLL 只會包含資源，例如，圖示、點陣圖、字串和對話方塊。
 
-[MFC 應用程式中的當地語系化資源： 附屬 Dll](../build/localized-resources-in-mfc-applications-satellite-dlls.md)提供增強的附屬 Dll，此功能可協助建立應用程式當地語系化為多種語言支援。
+[MFC 應用程式中的當地語系化資源：附屬 DLL](../build/localized-resources-in-mfc-applications-satellite-dlls.md)<br/>
+提供對附屬 DLL 的增強支援，這項功能可協助建立當地語系化成多國語言的應用程式。
 
-[匯入和匯出](../build/importing-and-exporting.md)描述公用符號匯入應用程式，或從 DLL 匯出函式
+[匯入和匯出](../build/importing-and-exporting.md)<br/>
+說明將公用 (Public) 符號匯入應用程式，或是從 DLL 匯出函式的方法。
 
-[Active 技術和 Dll](../build/active-technology-and-dlls.md)讓物件伺服程式可以於 DLL 內實作。
+[Active 技術和 DLL](../build/active-technology-and-dlls.md)<br/>
+讓物件伺服程式可以於 DLL 內實作。
 
-[DLL 中的 automation](../build/automation-in-a-dll.md)說明 MFC DLL 精靈中的 [自動化] 選項所提供。
+[DLL 中的 Automation](../build/automation-in-a-dll.md)<br/>
+說明 MFC DLL 精靈提供的 Automation 選項。
 
-[MFC Dll 命名慣例](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)討論的 Dll 和包含在 MFC 程式庫如何遵守結構化的命名慣例。
+[MFC DLL 命名慣例](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)<br/>
+討論包含在 MFC 的 DLL 和程式庫如何遵守結構化的命名慣例。
 
-[從 Visual Basic 應用程式呼叫 DLL 函式](../build/calling-dll-functions-from-visual-basic-applications.md)說明如何從 Visual Basic 應用程式呼叫 DLL 函式。
+[從 Visual Basic 應用程式呼叫 DLL 函式](../build/calling-dll-functions-from-visual-basic-applications.md)<br/>
+說明從 Visual Basic 應用程式呼叫 DLL 函式的方式。
 
 ## <a name="related-sections"></a>相關章節
 
-[將 MFC 當成 DLL 的一部分使用](../mfc/tn011-using-mfc-as-part-of-a-dll.md)說明標準 MFC Dll，可讓您使用 MFC 程式庫當成 Windows 動態連結程式庫。
+[將 MFC 當成 DLL 的一部分使用](../mfc/tn011-using-mfc-as-part-of-a-dll.md)<br/>
+說明標準 MFC Dll，可讓您使用 MFC 程式庫當成 Windows 動態連結程式庫。
 
-[MFC 的 DLL 版本](../mfc/tn033-dll-version-of-mfc.md)描述如何使用 MFCxx.dll 和 MFCxxD.dll （其中 x 是 MFC 版本號碼） 共用動態連結程式庫與 MFC 應用程式和 MFC 擴充 Dll。
+[MFC 的 DLL 版本](../mfc/tn033-dll-version-of-mfc.md)<br/>
+描述如何使用 MFCxx.dll 和 MFCxxD.dll （其中 x 是 MFC 版本號碼） 共用動態連結程式庫與 MFC 應用程式和 MFC 擴充 Dll。

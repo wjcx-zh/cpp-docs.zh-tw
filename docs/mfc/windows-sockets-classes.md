@@ -1,5 +1,5 @@
 ---
-title: Windows Sockets 類別 |Microsoft 文件
+title: Windows Sockets 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e370c8a5f9cb2fb42c3199dbc0d56b69d93dc35
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 893fa525b04376cde0e96f280c95e6bfd1243946
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382124"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439974"
 ---
 # <a name="windows-sockets-classes"></a>Windows Sockets 類別
-Windows Sockets 提供一個與網路通訊協定無關的方法，可在兩部電腦之間溝通。 這些通訊端可以是同步 (您的程式會等待直到完成通訊) 或非同步 (您的程式在通訊進行時會繼續執行)。  
-  
- [CAsyncSocket](../mfc/reference/casyncsocket-class.md)  
- 在精簡型包裝函式中封裝 Windows Sockets API。  
-  
- [CSocket](../mfc/reference/csocket-class.md)  
- 從 `CAsyncSocket` 衍生的較高層級抽象。 它會以同步方式進行作業。  
-  
- [CSocketFile](../mfc/reference/csocketfile-class.md)  
- 提供 `CFile` 介面給 Windows Socket。  
-  
-## <a name="see-also"></a>另請參閱  
- [類別概觀](../mfc/class-library-overview.md)
+
+Windows Sockets 提供一個與網路通訊協定無關的方法，可在兩部電腦之間溝通。 這些通訊端可以是同步 (您的程式會等待直到完成通訊) 或非同步 (您的程式在通訊進行時會繼續執行)。
+
+[CAsyncSocket](../mfc/reference/casyncsocket-class.md)<br/>
+在精簡型包裝函式中封裝 Windows Sockets API。
+
+[CSocket](../mfc/reference/csocket-class.md)<br/>
+從 `CAsyncSocket` 衍生的較高層級抽象。 它會以同步方式進行作業。
+
+[CSocketFile](../mfc/reference/csocketfile-class.md)<br/>
+提供 `CFile` 介面給 Windows Socket。
+
+## <a name="see-also"></a>另請參閱
+
+[類別概觀](../mfc/class-library-overview.md)
 

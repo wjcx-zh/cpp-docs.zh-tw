@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a701183becc7a561ca778dea383fdb57181d8da4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9e69bc999721bf833f100418442315fc8bb69e6c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710771"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413896"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar (自動平行化工具)
 
@@ -53,9 +53,9 @@ ms.locfileid: "45710771"
 
 ## <a name="see-also"></a>另請參閱
 
-[/Q 選項 （低階運算）](../../build/reference/q-options-low-level-operations.md)
-[/Qpar-report （自動平行化工具報告層級）](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)
+[/Q 選項 (低階運算)](../../build/reference/q-options-low-level-operations.md)<br/>
+[/Qpar-report (自動平行化工具報告層級)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
 [編譯器選項](../../build/reference/compiler-options.md)<br/>
 [設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
-[#pragma loop （)](../../preprocessor/loop.md)
-[原生程式碼的平行程式設計](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)
+[#pragma loop （)](../../preprocessor/loop.md)<br/>
+[以原生程式碼進行平行程式設計](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

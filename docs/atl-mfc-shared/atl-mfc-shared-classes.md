@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2080aae34a69b18286953bfa48a269b81a5a5e65
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1d6feb80c93298d5fe3d2cb23f9b34727bced57d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761809"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442223"
 ---
 # <a name="atlmfc-shared-classes"></a>ATL/MFC 共用類別
 
@@ -44,16 +44,16 @@ ms.locfileid: "43761809"
 
 ## <a name="in-this-section"></a>本節內容
 
-[MFC 和 ATL 之間共用的類別](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)  
+[MFC 和 ATL 之間共用的類別](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)<br/>
 提供 MFC 和 ATL 之間共用的類別的連結
 
 ## <a name="related-sections"></a>相關章節
 
-[Active Template Library (ATL) 參考](../atl/atl-com-desktop-components.md)  
+[Active Template Library (ATL) 參考](../atl/atl-com-desktop-components.md)<br/>
 提供 ATL 程式庫的參考資料，ATL 程式庫是簡化 COM 物件程式設計之樣板架構 C++ 類別的集合。
 
-[Microsoft Foundation 類別庫 (MFC) 參考](../mfc/mfc-desktop-applications.md)  
+[Microsoft Foundation 類別庫 (MFC) 參考](../mfc/mfc-desktop-applications.md)<br/>
 提供 MFC 程式庫、 一組類別中，構成應用程式架構，也就是撰寫 Windows api 的應用程式的架構的參考資料。
 
-[偵錯](/visualstudio/debugger/debugging-in-visual-studio)  
+[偵錯](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 提供使用 Visual Studio 偵錯工具來更正應用程式或預存程序 (Stored Procedure) 中邏輯錯誤的連結。

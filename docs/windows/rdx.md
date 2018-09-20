@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00ef28954a686dac72c8b7f55b86c88313e74643
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 566b21c911ba99d19fb16b564d0748cfcfd1eb71
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719716"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435970"
 ---
 # <a name="rdx"></a>rdx
 
@@ -40,13 +40,13 @@ ms.locfileid: "45719716"
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 若要建立或開啟金鑰的名稱。
 
-*valuename*  
+*valuename*<br/>
 （選擇性）指定要設定的 [值] 欄位。 如果在索引鍵已經存在具有此名稱的值欄位，會將它加入。
 
-*regtype*  
+*regtype*<br/>
 要加入的登錄機碼的類型。 可以是下列其中之一： `text`， `dword`， `binary`，或`CString`。
 
 ## <a name="remarks"></a>備註
@@ -93,5 +93,5 @@ public:
 
 ## <a name="see-also"></a>另請參閱
 
-[COM 屬性](../windows/com-attributes.md)  
+[COM 屬性](../windows/com-attributes.md)<br/>
 [registration_script](../windows/registration-script.md)  

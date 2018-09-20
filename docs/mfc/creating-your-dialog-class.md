@@ -1,5 +1,5 @@
 ---
-title: 建立對話方塊類別 |Microsoft 文件
+title: 建立您的對話方塊類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,31 +18,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d70f27639344fd00a2e99ad79bf2db166f3270a8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9cec6ac40834e8cd3ccc9e0eadb18630ee507b92
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341906"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442041"
 ---
 # <a name="creating-your-dialog-class"></a>建立您的對話方塊類別
-在程式中每個對話方塊，建立新的對話方塊類別，才能使用對話方塊資源。  
-  
- [將類別加入](../ide/adding-a-class-visual-cpp.md)說明如何建立新的對話方塊類別。 當您使用 加入類別精靈建立對話方塊類別時，它會寫入下列項目。H 和。您指定的 CPP 檔案：  
-  
- 在中。H 檔案：  
-  
--   對話方塊類別的類別宣告。 類別衍生自[CDialog](../mfc/reference/cdialog-class.md)。  
-  
- 在中。CPP 檔案：  
-  
--   此類別的訊息對應。  
-  
--   對話方塊中標準建構函式。  
-  
--   覆寫[DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)成員函式。 編輯這個函式。 它用於對話方塊資料交換和驗證功能中稍後所述[對話方塊資料交換和驗證](../mfc/dialog-data-exchange-and-validation.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [使用程式碼精靈建立對話方塊類別](../mfc/creating-a-dialog-class-with-code-wizards.md)   
- [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)
+
+在程式中每個對話方塊中，建立新的對話方塊類別，才能使用對話方塊資源。
+
+[將類別加入](../ide/adding-a-class-visual-cpp.md)說明如何建立新的對話方塊類別。 當您使用 加入類別精靈建立對話方塊類別時，它會寫入下列項目。H 和。您指定的 CPP 檔案：
+
+在中。H 檔案：
+
+- 在對話方塊類別的類別宣告。 類別衍生自[CDialog](../mfc/reference/cdialog-class.md)。
+
+在中。CPP 檔案：
+
+- 此類別的訊息對應。
+
+- 標準建構函式 對話方塊。
+
+- 覆寫[DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)成員函式。 編輯此函式。 它用於對話方塊資料交換和驗證功能稍後所述[ 對話方塊資料交換和驗證](../mfc/dialog-data-exchange-and-validation.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[使用程式碼精靈建立對話方塊類別](../mfc/creating-a-dialog-class-with-code-wizards.md)<br/>
+[對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)
 

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d301f2bc7464d52be643d252e4febf7049657c2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f001f61a9425a064d3b899beb6cbb689471da5bf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724752"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442587"
 ---
 # <a name="event--c-component-extensions"></a>event (C++ 元件擴充功能)
 
@@ -50,19 +50,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>參數
 
-*修飾詞*  
+*修飾詞*<br/>
 事件宣告或事件存取子方法上可使用的修飾詞。  可能的值為**靜態**並**虛擬**。
 
-*delegate*  
+*delegate*<br/>
 [委派](../windows/delegate-cpp-component-extensions.md)，事件處理常式必須符合其簽章。
 
-*event_name*  
+*event_name*<br/>
 事件的名稱。
 
-*return_value*  
+*return_value*<br/>
 事件存取子方法的傳回值。  若要進行驗證，必須是傳回的型別**void**。
 
-*參數*  
+*參數*<br/>
 （選擇性）參數`raise`方法，以比對的簽章*委派*參數。
 
 ### <a name="remarks"></a>備註
@@ -71,10 +71,10 @@ modifiereventdelegate^ event_name
 
 有兩種類型的事件宣告：
 
-*事件資料成員*  
+*事件資料成員*<br/>
 編譯器會自動以委派類型成員的形式建立事件的儲存體，並建立內部 `add()`、`remove()` 和 `raise()` 成員函式。 事件資料成員必須在類別內宣告。 委派的傳回型別必須符合處理常式的事件的傳回型別。
 
-*事件區塊*  
+*事件區塊*<br/>
 事件區塊可讓您明確宣告和自訂 `add()`、`remove()` 和 `raise()` 方法的行為。
 
 您可以使用**運算子 + =** 並**運算子-=** 新增和移除事件處理常式或呼叫`add()`和`remove()`方法明確。
@@ -114,19 +114,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>參數
 
-*修飾詞*  
+*修飾詞*<br/>
 事件宣告或事件存取子方法上可使用的修飾詞。  可能的值為**靜態**並**虛擬**。
 
-*delegate*  
+*delegate*<br/>
 [委派](../windows/delegate-cpp-component-extensions.md)，事件處理常式必須符合其簽章。
 
-*event_name*  
+*event_name*<br/>
 事件的名稱。
 
-*return_value*  
+*return_value*<br/>
 事件存取子方法的傳回值。  若要進行驗證，必須是傳回的型別**void**。
 
-*參數*  
+*參數*<br/>
 （選擇性）參數`raise`方法，以比對的簽章*委派*參數。
 
 ### <a name="remarks"></a>備註
@@ -137,10 +137,10 @@ modifiereventdelegate^ event_name
 
 有兩種類型的事件宣告：
 
-*事件資料成員*  
+*事件資料成員*<br/>
 以委派類型成員形式的事件儲存體，是由資料成員事件的編譯器建立。  事件資料成員必須在類別內宣告。 這也稱為 trivial 事件 (請參閱以下程式碼範例)。
 
-*事件區塊*  
+*事件區塊*<br/>
 事件區塊可讓您藉由實作 add、remove 和 raise 方法來自訂 add、remove 和 raise 方法的行為。 add、remove 和 raise 方法的簽章必須符合委派的簽章。  事件區塊事件不是資料成員，且用做資料成員的任何使用方式將產生編譯器錯誤。
 
 事件處理常式的傳回型別必須符合委派的傳回型別。

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33febb69db2a8f3bd67205de2e6e5cf019016471
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 39067dd242fece7abb284448104115ac9a5ce4fd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598489"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404367"
 ---
 # <a name="libraryblock"></a>library_block
 
@@ -68,5 +68,5 @@ __interface IMyInterface {
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器屬性](../windows/compiler-attributes.md)  
+[編譯器屬性](../windows/compiler-attributes.md)<br/>
 [獨立屬性](../windows/stand-alone-attributes.md)  

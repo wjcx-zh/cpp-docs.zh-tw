@@ -20,101 +20,111 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e054c23d2137f5802c17731fac86dd64080389e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: dd6a9bdc5539b2e6d4faf35c47b208ec0d83ea92
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336465"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444158"
 ---
 # <a name="cd2drectu-class"></a>CD2DRectU 類別
-`D2D1_RECT_U`的包裝函式。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-class CD2DRectU : public D2D1_RECT_U;  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CD2DRectU::CD2DRectU](#cd2drectu)|多載。 建構`CD2DRectU`物件從`D2D1_RECT_U`物件。|  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CD2DRectU::IsNull](#isnull)|傳回**布林**值，指出運算式是否包含任何有效的資料 (NULL)。|  
-  
-### <a name="public-operators"></a>公用運算子  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CD2DRectU::operator CRect](#operator_crect)|將轉換`CD2DRectU`至`CRect`物件。|  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `D2D1_RECT_U`  
-  
- `CD2DRectU`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** afxrendertarget.h  
-  
-##  <a name="cd2drectu"></a>  CD2DRectU::CD2DRectU  
- 建構 CD2DRectU 物件從 CRect 物件。  
-  
-```  
-CD2DRectU(const CRect& rect);  
-CD2DRectU(const D2D1_RECT_U& rect);  
+
+`D2D1_RECT_U`的包裝函式。
+
+## <a name="syntax"></a>語法
+
+```
+class CD2DRectU : public D2D1_RECT_U;
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[CD2DRectU::CD2DRectU](#cd2drectu)|多載。 建構`CD2DRectU`物件從`D2D1_RECT_U`物件。|
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[CD2DRectU::IsNull](#isnull)|傳回**布林**值，指出運算式是否包含任何有效的資料 (NULL)。|
+
+### <a name="public-operators"></a>公用運算子
+
+|名稱|描述|
+|----------|-----------------|
+|[CD2DRectU::operator CRect](#operator_crect)|將轉換`CD2DRectU`至`CRect`物件。|
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`D2D1_RECT_U`
+
+`CD2DRectU`
+
+## <a name="requirements"></a>需求
+
+**標頭：** afxrendertarget.h
+
+##  <a name="cd2drectu"></a>  CD2DRectU::CD2DRectU
+
+建構 CD2DRectU 物件從 CRect 物件。
+
+```
+CD2DRectU(const CRect& rect);
+CD2DRectU(const D2D1_RECT_U& rect);
   CD2DRectU(const D2D1_RECT_U* rect);
 
- 
+
 CD2DRectU(
-    UINT32 uLeft = 0,  
-    UINT32 uTop = 0,  
-    UINT32 uRight = 0,  
+    UINT32 uLeft = 0,
+    UINT32 uTop = 0,
+    UINT32 uRight = 0,
     UINT32 uBottom = 0);
-```  
-  
-### <a name="parameters"></a>參數  
- *rect*  
- 來源矩形  
-  
- *uLeft*  
- 來源左方的座標  
-  
- *uTop*  
- 來源上方座標  
-  
- *uRight*  
- 來源座標  
-  
- *uBottom*  
- 來源下方座標  
-  
-##  <a name="isnull"></a>  CD2DRectU::IsNull  
- 傳回布林值，指出運算式是否包含任何有效的資料 (Null)。  
-  
-```  
-BOOL IsNull() const;  
-```  
-  
-### <a name="return-value"></a>傳回值  
- 如果矩形的頂端、 左邊、 底部、 與正確的值設為 0，所有相等，則為 TRUE。否則為 FALSE。  
-  
-##  <a name="operator_crect"></a>  CD2DRectU::operator CRect  
- CD2DRectU 將 CRect 物件。  
-  
-```  
+```
+
+### <a name="parameters"></a>參數
+
+*rect*<br/>
+來源矩形
+
+*uLeft*<br/>
+來源左方的座標
+
+*uTop*<br/>
+來源上方座標
+
+*uRight*<br/>
+來源座標
+
+*uBottom*<br/>
+來源下方座標
+
+##  <a name="isnull"></a>  CD2DRectU::IsNull
+
+傳回布林值，指出運算式是否包含任何有效的資料 (Null)。
+
+```
+BOOL IsNull() const;
+```
+
+### <a name="return-value"></a>傳回值
+
+如果矩形的頂端、 左邊、 底部、 與正確的值設為 0，所有相等，則為 TRUE。否則為 FALSE。
+
+##  <a name="operator_crect"></a>  CD2DRectU::operator CRect
+
+CD2DRectU 將 CRect 物件。
+
+```
 operator CRect();
-```   
-  
-### <a name="return-value"></a>傳回值  
- D2D 矩形的目前值。  
-  
-## <a name="see-also"></a>另請參閱  
- [類別](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="return-value"></a>傳回值
+
+D2D 矩形的目前值。
+
+## <a name="see-also"></a>另請參閱
+
+[類別](../../mfc/reference/mfc-classes.md)

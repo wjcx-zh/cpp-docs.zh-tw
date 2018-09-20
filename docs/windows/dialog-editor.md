@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6226b583b60bb458d75ba82ac1fd0b758028dca8
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c1fc2d9f816e5487f5d89f9c429db85f2592731f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315492"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439532"
 ---
 # <a name="dialog-editor-c"></a>對話方塊編輯器 （c + +）
 
@@ -71,8 +71,8 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[資源編輯器](../windows/resource-editors.md)  
-[控制項](../mfc/controls-mfc.md)  
-[控制項類別](../mfc/control-classes.md)  
-[對話方塊類別](../mfc/dialog-box-classes.md)  
+[資源編輯器](../windows/resource-editors.md)<br/>
+[控制項](../mfc/controls-mfc.md)<br/>
+[控制項類別](../mfc/control-classes.md)<br/>
+[對話方塊類別](../mfc/dialog-box-classes.md)<br/>
 [對話方塊控制項和變數類型](../ide/dialog-box-controls-and-variable-types.md)

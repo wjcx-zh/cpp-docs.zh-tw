@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ce2f65fd740fd2bf133d65b25cbb52838c53dd2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ba6ed66359ee833b51154e47f8f6c26c0de8994c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601208"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408943"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>明確覆寫 (C++ 元件擴充功能)
 
@@ -37,16 +37,16 @@ overriding-function-declarator = function { overriding-function-definition }
 
 ### <a name="parameters"></a>參數
 
-*覆寫函式宣告子*  
+*覆寫函式宣告子*<br/>
 覆寫的函式的傳回型別、 名稱和引數清單。  請注意，覆寫的函式沒有覆寫的函式相同的名稱。
 
-*type*  
+*type*<br/>
 包含函式來覆寫基底型別。
 
-*function*  
+*function*<br/>
 若要覆寫的一或多個函式名稱的逗號分隔清單。
 
-*覆寫函式定義*  
+*覆寫函式定義*<br/>
 定義覆寫的函式的函式主體陳述式。
 
 ### <a name="remarks"></a>備註

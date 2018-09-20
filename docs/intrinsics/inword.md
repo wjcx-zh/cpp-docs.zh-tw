@@ -18,45 +18,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5895f8e4efd56ddcc9ab16a91a6242db443f0821
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8cbb942a2a78a60e1cab4720c71628e043a255e1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722913"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430071"
 ---
 # <a name="inword"></a>__inword
-**Microsoft 專屬**  
-  
- 使用指定的連接埠時，讀取資料`in`指令。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-unsigned short __inword(  
-   unsigned short Port  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
+
+**Microsoft 專屬**
+
+使用指定的連接埠時，讀取資料`in`指令。
+
+## <a name="syntax"></a>語法
+
+```
+unsigned short __inword(
+   unsigned short Port
+);
+```
+
+#### <a name="parameters"></a>參數
+
 *連接埠*<br/>
-[in]要讀取的連接埠。  
-  
-## <a name="return-value"></a>傳回值  
- 讀取資料的文字。  
-  
-## <a name="requirements"></a>需求  
-  
-|內建|架構|  
-|---------------|------------------|  
-|`__inword`|x86、x64|  
-  
- **標頭檔** \<intrin.h >  
-  
-## <a name="remarks"></a>備註  
- 此常式僅可作為內建常式使用。  
-  
-**結束 Microsoft 專屬**  
-  
-## <a name="see-also"></a>另請參閱  
- [編譯器內建](../intrinsics/compiler-intrinsics.md)
+[in]要讀取的連接埠。
+
+## <a name="return-value"></a>傳回值
+
+讀取資料的文字。
+
+## <a name="requirements"></a>需求
+
+|內建|架構|
+|---------------|------------------|
+|`__inword`|x86、x64|
+
+**標頭檔** \<intrin.h >
+
+## <a name="remarks"></a>備註
+
+此常式僅可作為內建常式使用。
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>另請參閱
+
+[編譯器內建](../intrinsics/compiler-intrinsics.md)

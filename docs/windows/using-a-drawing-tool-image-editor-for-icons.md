@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e7f1c678cc2f5c3595f1782f1bb3561ae90b86a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0a95d246170776bab20f45e503ba01ca506ce670
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609945"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431523"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>使用繪圖工具 (圖示影像編輯器)
 
@@ -76,7 +76,7 @@ ms.locfileid: "42609945"
 
 ## <a name="see-also"></a>另請參閱
 
-[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)  
-[編輯圖形資源](../windows/editing-graphical-resources-image-editor-for-icons.md)  
-[圖示影像編輯器](../windows/image-editor-for-icons.md)  
+[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[編輯圖形資源](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
+[圖示影像編輯器](../windows/image-editor-for-icons.md)<br/>
 [使用色彩](../windows/working-with-color-image-editor-for-icons.md)

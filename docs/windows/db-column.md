@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d89fef6c2ed3f8ff1a4211cdf8da59d8406e7031
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bde6909716b55298a515aac32580a24f26c823fc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715399"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406642"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -43,7 +43,7 @@ ms.locfileid: "45715399"
 
 #### <a name="parameters"></a>參數
 
-*序數*  
+*序數*<br/>
 序數資料行編號 (`DBCOLUMNINFO`序數) 或要將資料繫結至資料列集中的欄位相對應的資料行名稱 （ANSI 或 Unicode 字串）。 如果您使用數字時，您可以略過連續的序數 (例如： 1、 2、 3、 5)。 如果您使用的 OLE DB 提供者支援它的名稱包含空格。 例如，您可以使用下列格式之一：
 
 ```cpp
@@ -51,19 +51,19 @@ ms.locfileid: "45715399"
 [db_column(L"city_name")] TCHAR szCity[30];
 ```
 
-*dbtype*  
+*dbtype*<br/>
 （選擇性）OLE DB[型別指示器](/previous-versions/windows/desktop/ms711251\(v=vs.85\))的資料行項目。
 
-*precision*  
+*precision*<br/>
 （選擇性）要用於資料行項目有效位數。 如需詳細資訊，請參閱說明`bPrecision`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*小數位數*  
+*小數位數*<br/>
 （選擇性）要用於資料行項目小數位數。 如需詳細資訊，請參閱說明`bScale`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*status*  
+*status*<br/>
 （選擇性）成員變數，用來保存此資料行的狀態。 狀態會指出資料行的值是資料值或其他值，例如 NULL。 如需可能的值，請參閱[狀態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程式設計人員參考*。
 
-*length*  
+*length*<br/>
 （選擇性）成員變數，用來保存資料行的大小，以位元組為單位。
 
 ## <a name="remarks"></a>備註
@@ -131,5 +131,5 @@ class CProducts {
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 消費者屬性](../windows/ole-db-consumer-attributes.md)  
+[OLE DB 消費者屬性](../windows/ole-db-consumer-attributes.md)<br/>
 [類別屬性](../windows/class-attributes.md)  

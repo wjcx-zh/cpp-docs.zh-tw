@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc75cc0e58f86e8de87e3fb29c8ea02e624a73a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4d875836cbfe9506d41a979a63d941d1ee5b467a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700696"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444329"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>如何：在 MSBuild 專案中使用建置事件
 
@@ -82,5 +82,5 @@ ms.locfileid: "45700696"
 
 ## <a name="see-also"></a>另請參閱
 
-[MSBuild （Visual c + +）](../build/msbuild-visual-cpp.md)
-[逐步解說： 使用 MSBuild 來建立 Visual c + + 專案](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
+[逐步解說：使用 MSBuild 來建立 Visual C++ 專案](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

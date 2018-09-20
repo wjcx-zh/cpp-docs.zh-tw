@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8d226f508f5f5e8c717bd671413f21377c0ae01
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7b8de310f8abb3b417abbe96576d910513e25717
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202286"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398673"
 ---
 # <a name="restricted"></a>restricted
 
@@ -38,7 +38,7 @@ ms.locfileid: "43202286"
 
 ### <a name="parameters"></a>參數
 
-*interfaces*  
+*interfaces*<br/>
 Metodu nelze volat 任意 COM 物件的一或多個介面。 此參數才有效時套用至類別。
 
 ## <a name="remarks"></a>備註
@@ -87,6 +87,6 @@ class c : public a, public b
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
-[介面屬性](../windows/interface-attributes.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
+[介面屬性](../windows/interface-attributes.md)<br/>
 [方法屬性](../windows/method-attributes.md)  

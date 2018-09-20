@@ -1,5 +1,5 @@
 ---
-title: 動態物件建立 |Microsoft 文件
+title: 動態物件建立 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5763e3f0f3ee5a0e58ac20fe9f637e4f7e097999
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 19f6a895eb48b3ae1816edc45747c865e7e03b96
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346642"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420149"
 ---
 # <a name="dynamic-object-creation"></a>動態物件建立
-本文說明如何在執行階段動態建立物件。 程序會使用執行階段類別資訊，如本文所述[存取執行階段類別資訊](../mfc/accessing-run-time-class-information.md)。  
-  
-#### <a name="to-dynamically-create-an-object-given-its-run-time-class"></a>動態建立指定其為執行階段類別的物件  
-  
-1.  使用下列程式碼，透過 `CreateObject` 的 `CRuntimeClass` 函式動態建立物件。 請注意，如果失敗，`CreateObject`傳回**NULL**而非引發例外狀況：  
-  
-     [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]  
-  
-## <a name="see-also"></a>另請參閱  
- [使用 CObject](../mfc/using-cobject.md)
+
+本文說明如何在執行階段動態建立物件。 程序會使用執行階段類別資訊，如本文所述[存取執行階段類別資訊](../mfc/accessing-run-time-class-information.md)。
+
+#### <a name="to-dynamically-create-an-object-given-its-run-time-class"></a>動態建立指定其為執行階段類別的物件
+
+1. 使用下列程式碼，透過 `CreateObject` 的 `CRuntimeClass` 函式動態建立物件。 請注意，在失敗時，`CreateObject`會傳回**NULL**而非引發例外狀況：
+
+     [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]
+
+## <a name="see-also"></a>另請參閱
+
+[使用 CObject](../mfc/using-cobject.md)
 

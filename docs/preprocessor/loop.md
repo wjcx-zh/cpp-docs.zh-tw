@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e4881dfdcb92e778501982482abc13cc91836b0
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 0850a30c0e0e85cd1d90ba5b2399a295a482a3ce
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538597"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444667"
 ---
 # <a name="loop"></a>迴圈
 控制 auto-parallelizer 考量迴圈程式碼的方式，及/或從 auto-vectorizer 排除迴圈的考量。  
@@ -57,5 +57,5 @@ ms.locfileid: "42538597"
   
 ## <a name="see-also"></a>另請參閱  
  
-[自動平行處理和自動向量化](../parallel/auto-parallelization-and-auto-vectorization.md)   
+[自動平行處理和自訂向量化](../parallel/auto-parallelization-and-auto-vectorization.md)<br/>
 [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

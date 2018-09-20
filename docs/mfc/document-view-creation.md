@@ -1,5 +1,5 @@
 ---
-title: 建立文件檢視 |Microsoft 文件
+title: 文件-檢視建立 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,28 +22,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894bb5a0b3a4c86d764fc6f4a0e4b9ae18422669
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 0deb187a6540af71a1dc72b730347374bc25f963
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931849"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423053"
 ---
 # <a name="documentview-creation"></a>文件/檢視建立
-架構會提供實作**新增**和**開啟**命令 （和其他項目） 上**檔案**功能表。 建立新文件及其相關聯的檢視和框架視窗是應用程式物件、 文件範本，新建立的文件和框架視窗之間的合作式投入時間。 下表摘要說明哪些物件建立什麼。  
-  
-### <a name="object-creators"></a>物件建立者  
-  
-|建立者|建立|  
-|-------------|-------------|  
-|Application 物件|文件範本|  
-|文件範本|文件|  
-|文件範本|框架視窗|  
-|框架視窗|檢視|  
-  
-## <a name="see-also"></a>另請參閱  
- [文件範本和文件/檢視建立程序](../mfc/document-templates-and-the-document-view-creation-process.md)   
- [建立文件範本](../mfc/document-template-creation.md)   
- [MFC 物件關聯性](../mfc/relationships-among-mfc-objects.md)   
- [建立新文件、視窗和檢視](../mfc/creating-new-documents-windows-and-views.md)
+
+此架構提供的實作**新增**並**開啟**（還有其他） 上的命令**檔案**功能表。 建立新的文件及其相關聯的檢視和框架視窗會是應用程式物件、 文件範本，新建立的文件，與新建立的框架視窗之間的協同努力。 下表摘要說明哪些物件建立項目。
+
+### <a name="object-creators"></a>物件的建立者
+
+|建立者|建立|
+|-------------|-------------|
+|Application 物件|文件範本|
+|文件範本|文件|
+|文件範本|框架視窗|
+|框架視窗|檢視|
+
+## <a name="see-also"></a>另請參閱
+
+[文件範本和文件/檢視建立程序](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
+[文件樣板建立](../mfc/document-template-creation.md)<br/>
+[MFC 物件關聯性](../mfc/relationships-among-mfc-objects.md)<br/>
+[建立新文件、視窗和檢視](../mfc/creating-new-documents-windows-and-views.md)
 

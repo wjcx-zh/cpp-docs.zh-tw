@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c90367a1db313de1935e119c2efb8e9713b3d282
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 73a773a5633ceb38173a4181e5e3effe2329fce0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603599"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419577"
 ---
 # <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>選取影像的範圍 (圖示影像編輯器)
 
@@ -58,6 +58,6 @@ ms.locfileid: "42603599"
 
 ## <a name="see-also"></a>另請參閱
 
-[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)  
-[編輯圖形資源](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[編輯圖形資源](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [圖示影像編輯器](../windows/image-editor-for-icons.md)

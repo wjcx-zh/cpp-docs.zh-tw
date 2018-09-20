@@ -21,19 +21,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9004d62caa5368294a5a53e4e2587da05d1d495c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ba9f3143fb110b25f384e462e7dfcd69c0140802
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204538"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439571"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>混合組件的初始化
 
 Windows 開發人員必須一律小心的載入器鎖定時執行程式碼期間`DllMain`。 不過，有一些其他考量，派上用場時處理 C + + /cli clr 混合模式組件。
 
 內的程式碼[DllMain](/windows/desktop/Dlls/dllmain)不得存取 CLR。 這表示 `DllMain` 不應該直接或間接呼叫 Managed 函式；Managed 程式碼不應該在 `DllMain`中宣告或實作；而且 `DllMain`內不應該發生記憶體回收或自動程式庫載入。
-  
+
 ## <a name="causes-of-loader-lock"></a>載入器鎖定的原因
 
 採用 .NET 平台後，會有兩種不同的載入執行模組 (EXE 或 DLL) 機制：一種適用於 Windows，可用於 Unmanaged 模組；另一種適用 .NET Common Language Runtime (CLR)，可載入 .NET 組件。 混合 DLL 載入問題主要與 Microsoft Windows 作業系統載入器相關。
@@ -130,7 +130,7 @@ CObject* op = new CObject(arg1, arg2);
 為方便使用者處理載入器鎖定，若原生實作和 Managed 實作同時存在，連結器會優先選擇原生實作。 這可避免上述問題。 不過在這個版本中，因為編譯器有兩個尚未解決的問題，所以這項規則有兩個例外：
 
 - 內嵌函式是透過全域靜態函式指標呼叫。 此案例特別值得注意，因為虛擬函式是透過全域函式指標呼叫。 例如，套用至物件的
-  
+
 ```cpp
 #include "definesmyObject.h"
 #include "definesclassC.h"
@@ -170,15 +170,15 @@ void DuringLoaderlock(C & c)
    若要這樣做，請開啟**屬性**啟始專案方案中的方格。 選取 **組態屬性** > **偵錯**。 設定**偵錯工具類型**要**僅限原生**。
 
 1. 開始偵錯工具 (F5)。
-  
+
 1. 當 **/clr**會產生診斷中，選擇**重試一次**，然後選擇**中斷**。
-  
+
 1. 開啟呼叫堆疊視窗 (在功能表列上選擇 **偵錯** > **Windows** > **呼叫堆疊**。)違反`DllMain`或靜態初始設定式會以綠色箭頭識別。 如果有未識別的違規函式，則必須採取下列步驟找到此函式。
 
 1. 開啟**Immediate** ] 視窗 (在功能表列上選擇 [**偵錯** > **Windows** > **即時運算**。)
 
 1. 輸入到.load sos.dll**即時運算**視窗以載入 SOS 偵錯服務。
-  
+
 1. 輸入 ！ dumpstack **Immediate**視窗來取得內部的完整清單 **/clr**堆疊。
 
 1. 尋找第一個執行個體 （最接近堆疊底部） _CorDllMain (如果`DllMain`造成的問題)、 _VTableBootstrapThunkInitHelperStub 或 GetTargetForVTableEntry （如果有靜態初始設定式會造成問題）。 此呼叫正下方的堆疊項目，會是在載入器鎖定下嘗試執行之 MSIL 實作函式的引動過程。

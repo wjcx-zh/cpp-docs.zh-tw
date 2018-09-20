@@ -1,5 +1,5 @@
 ---
-title: Copyprivate Data 屬性子句 A.25 範例 |Microsoft 文件
+title: A.25 copyprivate 資料屬性子句範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,82 +12,83 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c92d9ce6f22c2d53a2e65d7b67c22e4f080f162c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 95d68c445c1c20e97725d869061027a9712c2462
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691686"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413629"
 ---
 # <a name="a25---examples-of-the-copyprivate-data-attribute-clause"></a>A.25 copyprivate 資料屬性子句範例
-**範例 1:** `copyprivate`子句 ([區段 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md)在頁面上 32) 可用來廣播由單一執行緒直接私用變數中的其他執行緒的所有執行個體所取得的值。  
-  
-```  
-float x, y;  
-#pragma omp threadprivate(x, y)  
-  
-void init( )   
-{  
-    float a;  
-    float b;  
-  
-    #pragma omp single copyprivate(a,b,x,y)  
-    {  
-        get_values(a,b,x,y);  
-    }  
-  
-    use_values(a, b, x, y);  
-}  
-```  
-  
- 如果常式*init*稱為序列的區域，其行為不會受到指示詞是否存在。 若要在呼叫之後*get_values*常式由一個執行緒已執行、 沒有執行緒保留之前所指定的私用物件建構， *b*， *x*，和*y*中所有執行緒變成定義讀取的值。  
-  
- **範例 2:** 相較於上述範例中，假設讀取必須由特定的執行緒，假設主要執行緒執行。 在此情況下，`copyprivate`子句不能直接執行廣播，但是它可以用來提供存取權是共用的暫存物件。  
-  
-```  
-float read_next( )   
-{  
-    float * tmp;  
-    float return_val;  
-  
-    #pragma omp single copyprivate(tmp)  
-    {  
-        tmp = (float *) malloc(sizeof(float));  
-    }  
-  
-    #pragma omp master  
-    {  
-        get_float( tmp );  
-    }  
-  
-    #pragma omp barrier  
-    return_val = *tmp;  
-    #pragma omp barrier  
-  
-    #pragma omp single  
-    {  
-       free(tmp);  
-    }  
-  
-    return return_val;  
-}  
-```  
-  
- **範例 3:** 假設在平行區域內所需的鎖定物件的數目不容易判斷之前輸入它。 `copyprivate`子句可以用來提供共用的鎖定物件所配置的平行區域內的存取權。  
-  
-```  
-#include <omp.h>  
-  
-omp_lock_t *new_lock()  
-{  
-    omp_lock_t *lock_ptr;  
-  
-    #pragma omp single copyprivate(lock_ptr)  
-    {  
-        lock_ptr = (omp_lock_t *) malloc(sizeof(omp_lock_t));  
-        omp_init_lock( lock_ptr );  
-    }  
-  
-    return lock_ptr;  
-}  
+
+**範例 1︰** `copyprivate`子句 ([一節 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md)上 32) 可用來廣播由單一執行緒直接在其他執行緒的私用變數的所有執行個體所取得的值。
+
+```
+float x, y;
+#pragma omp threadprivate(x, y)
+
+void init( )
+{
+    float a;
+    float b;
+
+    #pragma omp single copyprivate(a,b,x,y)
+    {
+        get_values(a,b,x,y);
+    }
+
+    use_values(a, b, x, y);
+}
+```
+
+如果是例行*init*稱為從序列的區域，其行為不會影響是否存在指示詞。 若要在呼叫之後*get_values*常式已執行一個執行緒，沒有任何執行緒所指定的私用物件之前離開建構， *b*， *x*，並*y*所有執行緒中變成以定義讀取的值。
+
+**範例 2:** 相較於先前的範例，假設讀取只能由特定的執行緒，假設主要執行緒。 在此情況下，`copyprivate`子句不能直接進行廣播，但它可以用來提供暫時的共用物件的存取權。
+
+```
+float read_next( )
+{
+    float * tmp;
+    float return_val;
+
+    #pragma omp single copyprivate(tmp)
+    {
+        tmp = (float *) malloc(sizeof(float));
+    }
+
+    #pragma omp master
+    {
+        get_float( tmp );
+    }
+
+    #pragma omp barrier
+    return_val = *tmp;
+    #pragma omp barrier
+
+    #pragma omp single
+    {
+       free(tmp);
+    }
+
+    return return_val;
+}
+```
+
+**範例 3︰** 假設在平行區域內所需的鎖定物件的數目不容易判斷之前輸入它。 `copyprivate`子句可以用來提供配置該平行區域內的共用的鎖定物件的存取權。
+
+```
+#include <omp.h>
+
+omp_lock_t *new_lock()
+{
+    omp_lock_t *lock_ptr;
+
+    #pragma omp single copyprivate(lock_ptr)
+    {
+        lock_ptr = (omp_lock_t *) malloc(sizeof(omp_lock_t));
+        omp_init_lock( lock_ptr );
+    }
+
+    return lock_ptr;
+}
 ```

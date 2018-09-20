@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14f9e82e87d395341dc1f05f1de49a20d58fec52
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1b67650932f846c25edb0bc017ede9a49d59f038
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314881"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423451"
 ---
 # <a name="editing-accelerator-tables-c"></a>編輯快速鍵對應表 （c + +）
 
@@ -51,5 +51,5 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[快速鍵編輯器](../windows/accelerator-editor.md)  
+[快速鍵編輯器](../windows/accelerator-editor.md)<br/>
 [資源編輯器](../windows/resource-editors.md)

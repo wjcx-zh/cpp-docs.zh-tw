@@ -16,75 +16,79 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6884face758cd7f7b9b507405f41f4fcbac8f188
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f6ca4db1103494c8c55d792391ac714311a3a7cd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721301"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444071"
 ---
 # <a name="umul128"></a>_umul128
-**Microsoft 專屬**  
-  
- 將兩個作為前兩個引數傳入的 64 位元不帶正負號整數相乘，並將乘積的 64 高位元置於 `HighProduct` 所指向的 64 位元不帶正負號整數中，然後傳回乘積的 64 低位元。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-unsigned __int64 _umul128(   
-   unsigned __int64 Multiplier,   
-   unsigned __int64 Multiplicand,   
-   unsigned __int64 *HighProduct   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
+
+**Microsoft 專屬**
+
+將兩個作為前兩個引數傳入的 64 位元不帶正負號整數相乘，並將乘積的 64 高位元置於 `HighProduct` 所指向的 64 位元不帶正負號整數中，然後傳回乘積的 64 低位元。
+
+## <a name="syntax"></a>語法
+
+```
+unsigned __int64 _umul128( 
+   unsigned __int64 Multiplier, 
+   unsigned __int64 Multiplicand, 
+   unsigned __int64 *HighProduct 
+);
+```
+
+#### <a name="parameters"></a>參數
+
 *乘數*<br/>
-[in]要相乘的第一個 64 位元整數。  
-  
+[in]要相乘的第一個 64 位元整數。
+
 *被乘數*<br/>
-[in]要相乘的第二個 64 位元整數。  
-  
+[in]要相乘的第二個 64 位元整數。
+
 *HighProduct*<br/>
-[out]高 64 個位元的產品。  
-  
-## <a name="return-value"></a>傳回值  
- 乘積的 64 低位元。  
-  
-## <a name="requirements"></a>需求  
-  
-|內建|架構|頁首|  
-|---------------|------------------|------------|  
-|`_umul128`|ARM、 x64|\<intrin.h>|  
-  
-## <a name="example"></a>範例  
-  
-```  
-// umul128.c  
-// processor: IPF, x64  
-  
-#include <stdio.h>  
-#include <intrin.h>  
-  
-#pragma intrinsic(_umul128)  
-  
-int main()  
-{  
-    unsigned __int64 a = 0x0fffffffffffffffI64;  
-    unsigned __int64 b = 0xf0000000I64;  
-    unsigned __int64 c, d;  
-  
-    d = _umul128(a, b, &c);  
-  
-    printf_s("%#I64x * %#I64x = %#I64x%I64x\n", a, b, c, d);  
-}  
-```  
-  
-```Output  
-0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000  
-```  
-  
-**結束 Microsoft 專屬**  
-  
-## <a name="see-also"></a>另請參閱  
- [編譯器內建](../intrinsics/compiler-intrinsics.md)
+[out]高 64 個位元的產品。
+
+## <a name="return-value"></a>傳回值
+
+乘積的 64 低位元。
+
+## <a name="requirements"></a>需求
+
+|內建|架構|頁首|
+|---------------|------------------|------------|
+|`_umul128`|ARM、 x64|\<intrin.h>|
+
+## <a name="example"></a>範例
+
+```
+// umul128.c
+// processor: IPF, x64
+
+#include <stdio.h>
+#include <intrin.h>
+
+#pragma intrinsic(_umul128)
+
+int main()
+{
+    unsigned __int64 a = 0x0fffffffffffffffI64;
+    unsigned __int64 b = 0xf0000000I64;
+    unsigned __int64 c, d;
+
+    d = _umul128(a, b, &c);
+
+    printf_s("%#I64x * %#I64x = %#I64x%I64x\n", a, b, c, d);
+}
+```
+
+```Output
+0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000
+```
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>另請參閱
+
+[編譯器內建](../intrinsics/compiler-intrinsics.md)

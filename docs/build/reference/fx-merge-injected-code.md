@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bd95ea00a63f28f04874f873cf0a4e991fac0fc
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ca8522f85a8ce10bc694ab1144e7f24ed3fca6fa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710517"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425745"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx (合併插入的程式碼)
 
@@ -86,6 +86,6 @@ ms.locfileid: "45710517"
 
 ## <a name="see-also"></a>另請參閱
 
-[輸出檔 (/ F) 選項](../../build/reference/output-file-f-options.md)
+[輸出檔 (/F) 選項](../../build/reference/output-file-f-options.md)<br/>
 [編譯器選項](../../build/reference/compiler-options.md)<br/>
 [設定編譯器選項](../../build/reference/setting-compiler-options.md)

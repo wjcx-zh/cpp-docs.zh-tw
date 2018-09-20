@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 749ef965520732c37457613f44e0a23e213023db
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 24138db5ab772990f050fc8fcb6e5dad640a662d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700969"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396775"
 ---
 # <a name="safeintexceptionsafeintexception"></a>SafeIntException::SafeIntException
 
@@ -63,6 +63,6 @@ SafeIntException(
 
 ## <a name="see-also"></a>另請參閱
 
-[SafeInt 程式庫](../windows/safeint-library.md)  
-[SafeIntException 類別](../windows/safeintexception-class.md)  
+[SafeInt 程式庫](../windows/safeint-library.md)<br/>
+[SafeIntException 類別](../windows/safeintexception-class.md)<br/>
 [SafeInt 類別](../windows/safeint-class.md)

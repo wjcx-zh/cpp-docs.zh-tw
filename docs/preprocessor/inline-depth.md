@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a6c8d05d326e11ecfef4df8d22cbf2b8d92bd77
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: cbb90d36ea3da8e443eede8a3d74a35246077d52
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539187"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410258"
 ---
 # <a name="inlinedepth"></a>inline_depth
 指定內嵌啟發式搜尋深度，使得它是否在深度 （在呼叫歷程圖中） 大於任何函式將予以內嵌*n*。  
@@ -53,5 +53,5 @@ ms.locfileid: "42539187"
   
 ## <a name="see-also"></a>另請參閱  
  
-[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 [inline_recursion](../preprocessor/inline-recursion.md)

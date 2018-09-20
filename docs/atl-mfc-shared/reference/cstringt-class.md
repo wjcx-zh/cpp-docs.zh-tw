@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca2f1e907864e096acfb385d8c340ab40fb82346
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 253282092bb71b6d4a5c520355ab4f8b51015c9f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059221"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445135"
 ---
 # <a name="cstringt-class"></a>CStringT 類別
 
@@ -1744,7 +1744,7 @@ CStringT& TrimRight();
 
 ## <a name="see-also"></a>另請參閱
 
-[階層架構圖表](../../mfc/hierarchy-chart.md)   
-[ATL/MFC 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)   
+[階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
+[ATL/MFC 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 [CSimpleStringT 類別](../../atl-mfc-shared/reference/csimplestringt-class.md)
 

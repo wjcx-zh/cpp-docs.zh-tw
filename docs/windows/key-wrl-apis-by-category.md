@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6d6bd580faf8c242ca5ac5e9b4b29ded9a7750a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d79888a58e5fc6d6911c4cc123877c1537f22cf1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612206"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441924"
 ---
 # <a name="key-wrl-apis-by-category"></a>依分類區分的重要 WRL 應用程式開發介面
 下表列出主要 Windows 執行階段 c + + 樣板程式庫類別、 結構、 函式和巨集。 協助程式的命名空間和類別的建構會省略。 這些清單會增加命名空間所排列的 API 文件。
@@ -76,4 +76,5 @@ ms.locfileid: "42612206"
 |[InspectableClass 巨集](../windows/inspectableclass-macro.md)|設定執行階段類別名稱和信任層級。|
   
 ## <a name="see-also"></a>另請參閱
- [Windows 執行階段 C++ 範本庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)
+
+[Windows 執行階段 C++ 範本庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 62a1fc796188c38dfbd3aff004eba15b7e30ea89
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b7436aeb470804bd47dcc647ff0fe9a13faaae95
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600501"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444277"
 ---
 # <a name="mutexmutex-constructor"></a>Mutex::Mutex 建構函式
 
@@ -42,7 +42,7 @@ Mutex(
 
 ### <a name="parameters"></a>參數
 
-*h*  
+*h*<br/>
 控制代碼或右值參考控制代碼，來**Mutex**物件。
 
 ## <a name="remarks"></a>備註
@@ -56,4 +56,5 @@ Mutex(
 **命名空間：** Microsoft::WRL::Wrappers
 
 ## <a name="see-also"></a>另請參閱
+
 [Mutex 類別](../windows/mutex-class1.md)

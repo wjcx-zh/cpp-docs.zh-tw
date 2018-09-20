@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5da3f03500ccaadb4cff3be0226592e36ed3160
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 97197779170c90d64ceb749e6cd1ec0ea30563a7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200885"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422125"
 ---
 # <a name="export"></a>匯出
 
@@ -74,5 +74,5 @@ struct MyStruct {
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器屬性](../windows/compiler-attributes.md)  
+[編譯器屬性](../windows/compiler-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)  

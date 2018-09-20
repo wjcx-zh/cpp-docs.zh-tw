@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e1cb0a77c04a1bfea03f742686e1b28a6e2f04c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0c1704bf6ea5d8eaa2fc76db61fe0143c06b46ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43687846"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429639"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -36,7 +36,7 @@ ms.locfileid: "43687846"
 
 ### <a name="parameters"></a>參數
 
-*state*  
+*state*<br/>
 其中一個可能的值： `true`， `false`， `forced`， `restricted`， `push`，或`pop`。
 
 - 如果`true`，在原始程式碼檔案中遇到的任何 IDL 類別目錄屬性會放在所產生的.idl 檔案。 這是預設設定，如**emitidl**。
@@ -77,5 +77,5 @@ ms.locfileid: "43687846"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器屬性](../windows/compiler-attributes.md)  
+[編譯器屬性](../windows/compiler-attributes.md)<br/>
 [獨立屬性](../windows/stand-alone-attributes.md)  

@@ -344,14 +344,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3c5f68d35c4cf77073de3f8d2e6090f62a6dae2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 292121e95b20061e95e85b49c60d4758bd18a568
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050095"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435528"
 ---
 # <a name="colecontrol-class"></a>COleControl 類別
+
 開發 OLE 控制項的強大基底類別。
 
 ## <a name="syntax"></a>語法
@@ -1440,15 +1441,13 @@ void FireReadyStateChange();
 
 [就緒] 狀態可以是下列值之一：
 
-READYSTATE_UNINITIALIZED 預設初始設定狀態
-
-READYSTATE_LOADING 控制項目前正在載入其屬性
-
-已初始化 READYSTATE_LOADED 控制項
-
-READYSTATE_INTERACTIVE 控制項有足夠的資料來進行互動式作業，但不是所有非同步資料尚未載入
-
-READYSTATE_COMPLETE 控制項具有其所有資料
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|預設的初始化狀態|
+|READYSTATE_LOADING|控制項目前正在載入其屬性|
+|READYSTATE_LOADED|已初始化控制項|
+|READYSTATE_INTERACTIVE|控制項有足夠的資料來進行互動式作業，但不是所有非同步資料尚未載入|
+|READYSTATE_COMPLETE|控制項具有其所有資料|
 
 使用[GetReadyState](#getreadystate)來判斷控制項的目前的整備程度。
 
@@ -1466,11 +1465,11 @@ virtual DWORD GetActivationPolicy();
 
 POINTERINACTIVE 列舉中的旗標組合。 可能的旗標如下：
 
-POINTERINACTIVE_ACTIVATEONENTRY 物件應該就地啟動當滑鼠進入它在滑鼠移動作業期間。
-
-當滑鼠在滑鼠離開物件時，應該停用物件的 POINTERINACTIVE_DEACTIVATEONLEAVE 移動作業。
-
-POINTERINACTIVE_ACTIVATEONDRAG 物件應該是就地啟用滑鼠拖曳至它在拖曳期間時，並卸除作業。
+|||
+|-|-|
+|POINTERINACTIVE_ACTIVATEONENTRY|物件應該是就地啟用當滑鼠進入它在滑鼠移動作業期間。|
+|POINTERINACTIVE_DEACTIVATEONLEAVE|當滑鼠離開該物件在滑鼠移動作業期間，應該停用物件。|
+|POINTERINACTIVE_ACTIVATEONDRAG|物件應該是就地啟用滑鼠拖曳至它在拖曳期間時，卸除作業。|
 
 ### <a name="remarks"></a>備註
 
@@ -1915,15 +1914,13 @@ long GetReadyState();
 
 整備狀態為 控制項，下列值之一：
 
-READYSTATE_UNINITIALIZED 預設初始設定狀態
-
-READYSTATE_LOADING 控制項目前正在載入其屬性
-
-已初始化 READYSTATE_LOADED 控制項
-
-READYSTATE_INTERACTIVE 控制項有足夠的資料來進行互動式作業，但不是所有非同步資料尚未載入
-
-READYSTATE_COMPLETE 控制項具有其所有資料
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|預設的初始化狀態|
+|READYSTATE_LOADING|控制項目前正在載入其屬性|
+|READYSTATE_LOADED|已初始化控制項|
+|READYSTATE_INTERACTIVE|控制項有足夠的資料來進行互動式作業，但不是所有非同步資料尚未載入|
+|READYSTATE_COMPLETE|控制項具有其所有資料|
 
 ### <a name="remarks"></a>備註
 
@@ -2065,15 +2062,13 @@ void InternalSetReadyState(long lNewReadyState);
 *lNewReadyState*<br/>
 整備狀態，若要設定的控制項，下列值之一：
 
-READYSTATE_UNINITIALIZED 預設初始設定狀態
-
-READYSTATE_LOADING 控制項目前正在載入其屬性
-
-已初始化 READYSTATE_LOADED 控制項
-
-READYSTATE_INTERACTIVE 控制項有足夠的資料來進行互動式作業，但不是所有非同步資料尚未載入
-
-READYSTATE_COMPLETE 控制項具有其所有資料
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|預設的初始化狀態|
+|READYSTATE_LOADING|控制項目前正在載入其屬性|
+|READYSTATE_LOADED|已初始化控制項|
+|READYSTATE_INTERACTIVE|控制項有足夠的資料來進行互動式作業，但不是所有非同步資料尚未載入|
+|READYSTATE_COMPLETE|控制項具有其所有資料|
 
 ### <a name="remarks"></a>備註
 
@@ -2848,13 +2843,12 @@ virtual DWORD OnGetViewStatus();
 
 如果成功則 forced VIEWSTATUS 列舉之值的其中一項否則為 0。 可能的值是以下的任何組合：
 
-VIEWSTATUS_OPAQUE 物件是完全不透明的。 如果未設定此位元，則物件會包含透明的組件。 僅給與內容相關的層面，而非 DVASPECT_ICON 或 DVASPECT_DOCPRINT，適用於此位元。
-
-VIEWSTATUS_SOLIDBKGND 物件都有單純的背景 （包含純色，不是筆刷樣式）。 VIEWSTATUS_OPAQUE 設定，而且只適用於內容方面和不適用於 DVASPECT_ICON 或 DVASPECT_DOCPRINT 時，才有意義此位元。
-
-VIEWSTATUS_DVASPECTOPAQUE 物件支援 DVASPECT_OPAQUE。 所有 IViewObjectEx 方法採取參數也可以呼叫這方面的繪圖的外觀。
-
-VIEWSTATUS_DVASPECTTRANSPARENT 物件支援 DVASPECT_TRANSPARENT。 所有`IViewObjectEx`採用繪圖的外觀，如這方面也可以呼叫參數的方法。
+|||
+|-|-|
+|VIEWSTATUS_OPAQUE|物件是完全不透明的。 如果未設定此位元，則物件會包含透明的組件。 僅給與內容相關的層面，而非 DVASPECT_ICON 或 DVASPECT_DOCPRINT，適用於此位元。|
+|VIEWSTATUS_SOLIDBKGND|物件都有單純的背景 （包含純色，不是筆刷樣式）。 VIEWSTATUS_OPAQUE 設定，而且只適用於內容方面和不適用於 DVASPECT_ICON 或 DVASPECT_DOCPRINT 時，才有意義此位元。|
+|VIEWSTATUS_DVASPECTOPAQUE|物件支援 DVASPECT_OPAQUE。 所有 IViewObjectEx 方法採取參數也可以呼叫這方面的繪圖的外觀。|
+|VIEWSTATUS_DVASPECTTRANSPARENT|物件支援 DVASPECT_TRANSPARENT。 所有`IViewObjectEx`採用繪圖的外觀，如這方面也可以呼叫參數的方法。|
 
 ### <a name="remarks"></a>備註
 

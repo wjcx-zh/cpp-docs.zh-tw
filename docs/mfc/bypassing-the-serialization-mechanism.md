@@ -1,5 +1,5 @@
 ---
-title: 略過序列化機制 |Microsoft 文件
+title: 略過序列化機制 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,24 +20,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9252e08fe672f111dcf2b289b1b12891022a318d
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 25fc281e35fc07151fa609d07be540430a6a1da6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931083"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399806"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>略過序列化機制
-如您所見，架構提供了預設的方式從檔案讀取和寫入資料。 將封存物件序列化符合許許多多應用程式的需求。 這類應用程式會將檔案完全讀入記憶體，讓使用者更新檔案，然後再將更新的版本寫入磁碟。  
-  
- 不過，部分應用程式是以非常不同的方式處理資料，而對這些應用程式將封存序列化就不適當。 範例包含資料庫程式、僅編輯大型檔案的一部分的程式、僅寫入純文字檔的程式以及共用資料檔的程式。  
-  
- 在這些情況下，您可以覆寫[序列化](../mfc/reference/cobject-class.md#serialize)函式，以不同方式來斡旋檔案動作透過[CFile](../mfc/reference/cfile-class.md)物件而非[CArchive](../mfc/reference/carchive-class.md)物件。  
-  
- 您可以使用`Open`， `Read`， `Write`， `Close`，和`Seek`類別成員函式`CFile`開啟檔案，檔案指標移到 （搜尋） 檔案中的特定點讀取記錄 （指定的位元組數目) 的同時，讓使用者更新記錄，然後再次搜尋相同的點，並寫回至檔案記錄。 架構會為您開啟檔案，所以您可以使用類別 `GetFile` 的 `CArchive` 成員函式取得 `CFile` 物件的指標。 用於更精密且更有彈性，您可以覆寫[OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument)和[OnSaveDocument](../mfc/reference/cdocument-class.md#onsavedocument)類別成員函式`CWinApp`。 如需詳細資訊，請參閱類別[CFile](../mfc/reference/cfile-class.md)中*MFC 參考*。  
-  
- 在此案例中，您的 `Serialize` 覆寫不會執行任何動作，除非例如您在文件關閉時要其讀取和寫入檔案標頭以使其保持最新。  
-  
-## <a name="see-also"></a>另請參閱  
- [使用文件](../mfc/using-documents.md)
+
+如您所見，架構提供了預設的方式從檔案讀取和寫入資料。 將封存物件序列化符合許許多多應用程式的需求。 這類應用程式會將檔案完全讀入記憶體，讓使用者更新檔案，然後再將更新的版本寫入磁碟。
+
+不過，部分應用程式是以非常不同的方式處理資料，而對這些應用程式將封存序列化就不適當。 範例包含資料庫程式、僅編輯大型檔案的一部分的程式、僅寫入純文字檔的程式以及共用資料檔的程式。
+
+在這些情況下，您可以覆寫[Serialize](../mfc/reference/cobject-class.md#serialize)函式，以不同方式來斡旋檔案動作，透過[CFile](../mfc/reference/cfile-class.md)物件而非[CArchive](../mfc/reference/carchive-class.md)物件。
+
+您可以使用`Open`， `Read`， `Write`， `Close`，並`Seek`類別成員函式`CFile`開啟檔案，檔案指標移到 （搜尋） 至檔案中的特定點讀取資料錄 （指定的位元組數目)，可讓使用者更新記錄，然後再次搜尋到相同的點，並寫回至檔案記錄。 架構會為您開啟檔案，所以您可以使用類別 `GetFile` 的 `CArchive` 成員函式取得 `CFile` 物件的指標。 對於更複雜且彈性的用途，您可以覆寫[OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument)並[OnSaveDocument](../mfc/reference/cdocument-class.md#onsavedocument)類別成員函式`CWinApp`。 如需詳細資訊，請參閱類別[CFile](../mfc/reference/cfile-class.md)中*MFC 參考 》*。
+
+在此案例中，您的 `Serialize` 覆寫不會執行任何動作，除非例如您在文件關閉時要其讀取和寫入檔案標頭以使其保持最新。
+
+## <a name="see-also"></a>另請參閱
+
+[使用文件](../mfc/using-documents.md)
 

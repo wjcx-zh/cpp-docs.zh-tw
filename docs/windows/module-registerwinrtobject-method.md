@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a7f5879a3a76e9af795a5dfc808423b43515662a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 496b1ccac5b998ba08f4e2eccfe31ffd18f2c37d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609297"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431784"
 ---
 # <a name="moduleregisterwinrtobject-method"></a>Module::RegisterWinRTObject 方法
 
@@ -39,16 +39,16 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
 
 ### <a name="parameters"></a>參數
 
-*伺服器名稱*  
+*伺服器名稱*<br/>
 指定此作業所影響的物件子集的名稱。
 
-*activatableClassIds*  
+*activatableClassIds*<br/>
 若要註冊的可啟動 Clsid 的陣列。
 
-*Cookie*  
+*Cookie*<br/>
 識別已註冊的類別物件的值。 此值稍後用來撤銷註冊。
 
-*count*  
+*count*<br/>
 若要註冊的物件數目。
 
 ## <a name="return-value"></a>傳回值
@@ -62,4 +62,5 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
 **命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
+
 [Module 類別](../windows/module-class.md)

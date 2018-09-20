@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da35e2c257fef72ea75e05768960098111727359
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 80b04600f1f464220b00749903f27826855f6000
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611621"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400259"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier 類別
 
@@ -37,7 +37,7 @@ class GenericReleaseNotifier : public ReleaseNotifier;
 
 ### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 包含事件處理常式的位置資料成員的型別。
 
 ## <a name="members"></a>成員
@@ -73,4 +73,5 @@ class GenericReleaseNotifier : public ReleaseNotifier;
 **命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
+
 [Module 類別](../windows/module-class.md)

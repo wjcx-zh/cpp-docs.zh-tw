@@ -1,5 +1,5 @@
 ---
-title: 將拖放： 實作置放來源 |Microsoft 文件
+title: 將拖放： 實作置放來源 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,35 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e77119ac5b662165fd965047ae60fc2d5818cc1
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 71f82bbd975f5ff24f3b254abc46e5e6ffa3a34a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928976"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427650"
 ---
 # <a name="drag-and-drop-implementing-a-drop-source"></a>拖放：實作置放來源
-本文說明如何取得您的應用程式提供資料給拖放作業。  
-  
- 基本實作置放來源是相當簡單。 第一個步驟是判斷哪些事件開始拖曳作業。 建議的使用者介面指導方針定義拖曳作業開始時，為選取的資料和**WM_LBUTTONDOWN**內選取的資料點上所發生的事件。 MFC OLE 範例[OCLIENT](../visual-cpp-samples.md)和[HIERSVR](../visual-cpp-samples.md)遵循這些指導方針。  
-  
- 如果您的應用程式是一個容器，而且選取的資料連結或內嵌的物件的型別`COleClientItem`，呼叫其`DoDragDrop`成員函式。 否則，便建構`COleDataSource`物件、 選取項目，以將其初始化，並且呼叫資料來源物件`DoDragDrop`成員函式。 如果您的應用程式伺服器，請使用`COleServerItem::DoDragDrop`。 如需自訂標準拖放行為的資訊，請參閱文章[將拖放： 自訂](../mfc/drag-and-drop-customizing.md)。  
-  
- 如果`DoDragDrop`傳回**DROPEFFECT_MOVE**，立即刪除來源文件的來源資料。 從任何其他傳回值`DoDragDrop`置放來源上的任何作用。  
-  
- 如需詳細資訊，請參閱:  
-  
--   [實作置放目標](../mfc/drag-and-drop-implementing-a-drop-target.md)  
-  
--   [自訂儲存拖放](../mfc/drag-and-drop-customizing.md)  
-  
--   [建立和終結 OLE 資料物件和資料來源](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
-  
--   [管理 OLE 資料物件和資料來源](../mfc/data-objects-and-data-sources-manipulation.md)  
-  
-## <a name="see-also"></a>另請參閱  
- [拖放 (OLE)](../mfc/drag-and-drop-ole.md)   
- [Coledatasource:: Dodragdrop](../mfc/reference/coledatasource-class.md#dodragdrop)   
- [COleClientItem::DoDragDrop](../mfc/reference/coleclientitem-class.md#dodragdrop)   
- [CView::OnDragLeave](../mfc/reference/cview-class.md#ondragleave)
+
+這篇文章說明如何取得您的應用程式提供資料給拖放作業。
+
+基本實作置放來源也相當簡單。 第一個步驟是判斷哪些事件開始拖曳作業。 建議使用者介面指導方針定義為資料的選取範圍的拖曳作業開始時， **WM_LBUTTONDOWN**內選取的資料點上發生的事件。 MFC OLE 範例[OCLIENT](../visual-cpp-samples.md)並[HIERSVR](../visual-cpp-samples.md)遵循這些指導方針。
+
+如果您的應用程式是一個容器，而且選取的資料連結或內嵌的物件的型別`COleClientItem`，呼叫其`DoDragDrop`成員函式。 否則，建構`COleDataSource`物件，將它初始化選取項目，然後呼叫資料來源物件的`DoDragDrop`成員函式。 如果您的應用程式伺服器，請使用`COleServerItem::DoDragDrop`。 如需自訂標準的拖放行為的資訊，請參閱文章[拖放： 自訂](../mfc/drag-and-drop-customizing.md)。
+
+如果`DoDragDrop`會傳回**DROPEFFECT_MOVE**，立即刪除來源資料從來源文件。 從任何其他傳回值`DoDragDrop`置放來源上的任何作用。
+
+如需詳細資訊，請參閱:
+
+- [實作置放目標](../mfc/drag-and-drop-implementing-a-drop-target.md)
+
+- [自訂拖曳和置放](../mfc/drag-and-drop-customizing.md)
+
+- [建立和終結 OLE 資料物件和資料來源](../mfc/data-objects-and-data-sources-creation-and-destruction.md)
+
+- [管理 OLE 資料物件和資料來源](../mfc/data-objects-and-data-sources-manipulation.md)
+
+## <a name="see-also"></a>另請參閱
+
+[拖放 (OLE)](../mfc/drag-and-drop-ole.md)<br/>
+[Coledatasource:: Dodragdrop](../mfc/reference/coledatasource-class.md#dodragdrop)<br/>
+[COleClientItem::DoDragDrop](../mfc/reference/coleclientitem-class.md#dodragdrop)<br/>
+[CView::OnDragLeave](../mfc/reference/cview-class.md#ondragleave)
 

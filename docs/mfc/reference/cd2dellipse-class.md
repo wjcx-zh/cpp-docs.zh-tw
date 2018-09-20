@@ -1,5 +1,5 @@
 ---
-title: CD2DEllipse 類別 |Microsoft 文件
+title: CD2DEllipse 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,64 +18,70 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44da620750fd9fcb241da3a195e294e24143acaa
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6acec41bcae08f5585eb521dc90ff12d082fd5ad
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953579"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418680"
 ---
 # <a name="cd2dellipse-class"></a>CD2DEllipse 類別
-`D2D1_ELLIPSE` 的包裝函式。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-class CD2DEllipse : public D2D1_ELLIPSE;  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|多載。 建構`CD2DEllipse`物件從`D2D1_ELLIPSE`物件。|  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `D2D1_ELLIPSE`  
-  
- `CD2DEllipse`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** afxrendertarget.h  
-  
-##  <a name="cd2dellipse"></a>  CD2DEllipse::CD2DEllipse  
- 建構來自 CD2DRectF 物件 CD2DEllipse 物件。  
-  
-```  
-CD2DEllipse(const CD2DRectF& rect);  
-CD2DEllipse(const D2D1_ELLIPSE& ellipse);  
+
+`D2D1_ELLIPSE` 的包裝函式。
+
+## <a name="syntax"></a>語法
+
+```
+class CD2DEllipse : public D2D1_ELLIPSE;
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|多載。 建構`CD2DEllipse`物件從`D2D1_ELLIPSE`物件。|
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`D2D1_ELLIPSE`
+
+`CD2DEllipse`
+
+## <a name="requirements"></a>需求
+
+**標頭：** afxrendertarget.h
+
+##  <a name="cd2dellipse"></a>  CD2DEllipse::CD2DEllipse
+
+建構 CD2DEllipse 物件從 CD2DRectF 物件。
+
+```
+CD2DEllipse(const CD2DRectF& rect);
+CD2DEllipse(const D2D1_ELLIPSE& ellipse);
   CD2DEllipse(const D2D1_ELLIPSE* ellipse);
 
- 
+
 CD2DEllipse(
-    const CD2DPointF& ptCenter,  
+    const CD2DPointF& ptCenter,
     const CD2DSizeF& sizeRadius);
-```  
-  
-### <a name="parameters"></a>參數  
- *rect*  
- 來源矩形  
-  
- *橢圓形*  
- 來源橢圓形  
-  
- *ptCenter*  
- 橢圓形的中心點。  
-  
- *sizeRadius*  
- X 半徑和橢圓形的 Y 半徑。  
-  
-## <a name="see-also"></a>另請參閱  
- [類別](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>參數
+
+*rect*<br/>
+來源矩形
+
+*橢圓形*<br/>
+來源橢圓形
+
+*ptCenter*<br/>
+橢圓形的中心點。
+
+*sizeRadius*<br/>
+X 半徑和橢圓形 Y 半徑。
+
+## <a name="see-also"></a>另請參閱
+
+[類別](../../mfc/reference/mfc-classes.md)

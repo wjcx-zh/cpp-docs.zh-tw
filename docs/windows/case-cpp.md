@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 109ca7b833791aa982e17335801e8fe1fc538987
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e6b610ce888e91ed8029c4166fa79a847d700dba
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606632"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436516"
 ---
 # <a name="case-c"></a>case (C++)
 
@@ -38,7 +38,7 @@ ms.locfileid: "42606632"
 
 #### <a name="parameters"></a>參數
 
-*值*  
+*值*<br/>
 可能的輸入的值，您要提供處理。 型別**值**可以是下列類型之一：
 
 - `int`
@@ -91,6 +91,6 @@ struct SizedValue2 {
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
-[Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
+[Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [類別屬性](../windows/class-attributes.md)  

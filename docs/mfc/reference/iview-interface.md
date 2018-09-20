@@ -22,66 +22,75 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acf1ba02e9bbf6afd14e41be7dda406d257cb681
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6ec1e6215cd085ed948e4b0554bca12a678563d6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339757"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434007"
 ---
 # <a name="iview-interface"></a>IView 介面
-會實作數個方法， [CWinFormsView](../../mfc/reference/cwinformsview-class.md)使用將檢視通知傳送至受管理的控制項。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-interface class IView  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[IView::OnActivateView](#onactivateview)|啟用或停用檢視時，由 MFC 呼叫。|  
-|[IView::OnInitialUpdate](#oninitialupdate)|檢視第一次附加至文件之後，但一開始顯示檢視之前，由架構呼叫。|  
-|[IView::OnUpdate](#onupdate)|修改檢視的文件; 之後，由 MFC 呼叫此函式可讓更新以反映修改其顯示的檢視。|  
-  
-## <a name="remarks"></a>備註  
- `IView` 會實作數個方法，`CWinFormsView`使用轉送至裝載 managed 控制項的一般檢視通知。 這些是[OnInitialUpdate](#oninitialupdate)， [OnUpdate](#onupdate)並[OnActivateView](#onactivateview)。  
-  
- `IView` 類似於[CView](../../mfc/reference/cview-class.md)，但僅適用於受管理的檢視和控制。  
-  
- 如需有關如何使用 Windows Form 的詳細資訊，請參閱 <<c0> [ 在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
-  
 
-## <a name="requirements"></a>需求  
- 標頭： afxwinforms.h （定義於組件 atlmfc\lib\mfcmifc80.dll）  
+會實作數個方法， [CWinFormsView](../../mfc/reference/cwinformsview-class.md)使用將檢視通知傳送至受管理的控制項。
 
-## <a name="onactivateview"></a> IView::OnActivateView  
+## <a name="syntax"></a>語法
+
+```
+interface class IView
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[IView::OnActivateView](#onactivateview)|啟用或停用檢視時，由 MFC 呼叫。|
+|[IView::OnInitialUpdate](#oninitialupdate)|檢視第一次附加至文件之後，但一開始顯示檢視之前，由架構呼叫。|
+|[IView::OnUpdate](#onupdate)|修改檢視的文件; 之後，由 MFC 呼叫此函式可讓更新以反映修改其顯示的檢視。|
+
+## <a name="remarks"></a>備註
+
+`IView` 會實作數個方法，`CWinFormsView`使用轉送至裝載 managed 控制項的一般檢視通知。 這些是[OnInitialUpdate](#oninitialupdate)， [OnUpdate](#onupdate)並[OnActivateView](#onactivateview)。
+
+`IView` 類似於[CView](../../mfc/reference/cview-class.md)，但僅適用於受管理的檢視和控制。
+
+如需有關如何使用 Windows Form 的詳細資訊，請參閱 <<c0> [ 在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
+
+
+## <a name="requirements"></a>需求
+
+標頭： afxwinforms.h （定義於組件 atlmfc\lib\mfcmifc80.dll）
+
+## <a name="onactivateview"></a> IView::OnActivateView
+
 啟用或停用檢視時，由 MFC 呼叫。
 ```
 void OnActivateView(bool activate);
 ```
 ## <a name="parameters"></a>參數
-*啟用*  
-表示正在檢視是否啟用或停用。  
+
+*啟用*<br/>
+表示正在檢視是否啟用或停用。
 
 ## <a name="oninitialupdate"></a> IView::OnInitialUpdate
+
 檢視第一次附加至文件之後，但一開始顯示檢視之前，由架構呼叫。
 ```
 void OnInitialUpdate();
 ```
 
-## <a name="onupdate"></a> IView::OnUpdate 
-修改檢視的文件之後，由 MFC 呼叫。  
+## <a name="onupdate"></a> IView::OnUpdate
+
+修改檢視的文件之後，由 MFC 呼叫。
 ```
 void OnUpdate();
 ```
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>備註
+
 此函式可讓更新以反映修改其顯示的檢視。
 
-## <a name="see-also"></a>另請參閱  
- [CWinFormsView 類別](../../mfc/reference/cwinformsview-class.md)   
- [CView 類別](../../mfc/reference/cview-class.md)
+## <a name="see-also"></a>另請參閱
+
+[CWinFormsView 類別](../../mfc/reference/cwinformsview-class.md)<br/>
+[CView 類別](../../mfc/reference/cview-class.md)

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04a632e657b57519d02c013d9c03e558b9aec8e1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 60e388e18e6d3607dac1946c3fd9a511e948afd4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726618"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448372"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>類別和結構 (C++ 元件擴充功能)
 
@@ -46,19 +46,19 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ### <a name="parameters"></a>參數
 
-*class_access*  
+*class_access*<br/>
 （選擇性）類別或結構外部組件的存取範圍。 可能的值為**公開金鑰**並**私人**(**私用**是預設值)。 巢狀的類別或結構不能有*class_access*規範。
 
-*name*  
+*name*<br/>
 類別或結構的名稱。
 
-*修飾詞*  
+*修飾詞*<br/>
 （選擇性）[抽象](../windows/abstract-cpp-component-extensions.md)並[密封](../windows/sealed-cpp-component-extensions.md)為有效的修飾詞。
 
-*inherit_access*  
+*inherit_access*<br/>
 （選擇性）存取範圍*base_type*。 唯一允許的存取範圍是**公開金鑰**(**公用**是預設值)。
 
-*base_type*  
+*base_type*<br/>
 （選擇性）基底類型。 不過，值類型無法做為基底類型。
 
 如需詳細資訊，請參閱特定語言描述中的 Windows 執行階段和通用語言 Runtimesections 此參數。
@@ -97,7 +97,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ### <a name="parameters"></a>參數
 
-*base_type*  
+*base_type*<br/>
 （選擇性）基底類型。 A **ref 類別**或是**ref struct**可以繼承自零或多個介面以及零或一個**ref**型別。 A**實值類別**或是**實值結構**只可以繼承自零或多個介面。
 
 當您使用宣告物件時**ref 類別**或是**ref 結構**關鍵字，物件由存取物件的控制代碼，也就是物件的參考計數器指標。 當宣告的變數超出範圍時，編譯器會自動刪除基礎物件。 當物件做為呼叫中的參數使用，或是儲存在變數中時，實際上是傳遞或儲存該物件的控制代碼。
@@ -116,7 +116,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ### <a name="parameters"></a>參數
 
-*base_type*  
+*base_type*<br/>
 （選擇性）基底類型。 A **ref 類別**或是**ref struct**可以繼承自零或多個 managed 介面及零或一個 ref 型別。 A**實值類別**或是**實值結構**只可以繼承自零或多個受管理的介面。
 
 **Ref 類別**並**ref struct**關鍵字告訴編譯器： 類別或結構會配置在堆積上。 當物件做為呼叫中的參數使用，或是儲存在變數中時，實際上是傳遞或儲存該物件的參考。

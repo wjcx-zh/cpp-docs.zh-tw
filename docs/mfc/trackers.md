@@ -1,5 +1,5 @@
 ---
-title: 追蹤器 |Microsoft 文件
+title: 追蹤器 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,20 +21,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f0a0cc52e3a5150702af4acd293def38df758fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 414a7c19292e154af0b6365b766d865dca0a7dd3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381533"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439862"
 ---
 # <a name="trackers"></a>追蹤器
-[CRectTracker](../mfc/reference/crecttracker-class.md)類別會提供您的應用程式和您的使用者，藉由提供各種不同的顯示樣式中的矩形項目之間的使用者介面。 這些樣式包含實線、 影線，或虛線框線;包含陰影的模式，它涵蓋了項目;可位於外部或內部框線的調整大小控點。 追蹤器通常用於搭配 OLE 項目，也就是物件衍生自`COleClientItem`。 追蹤程式矩形提供項目的目前狀態的視覺提示。  
-  
- MFC OLE 範例[OCLIENT](../visual-cpp-samples.md)示範如何使用追蹤器與 OLE 用戶端項目的觀點來看從容器應用程式的通用介面。 如需示範不同的樣式和追蹤器物件的能力，請參閱 MFC 一般範例[TRACKER](../visual-cpp-samples.md)。  
-  
- 如需有關 OLE 應用程式中實作追蹤器的詳細資訊，請參閱[追蹤器： 實作 OLE 應用程式中的追蹤器](../mfc/trackers-implementing-trackers-in-your-ole-application.md)  
-  
-## <a name="see-also"></a>另請參閱  
- [OLE](../mfc/ole-in-mfc.md)   
- [COleClientItem 類別](../mfc/reference/coleclientitem-class.md)
+
+[CRectTracker](../mfc/reference/crecttracker-class.md)類別會提供您的應用程式和您的使用者，藉由提供各種不同的顯示樣式中的矩形項目之間的使用者介面。 這些樣式包含純色、 規劃、 或虛線框線;規劃的模式，它涵蓋了項目;可以是位於外部或內部框線的調整大小控點。 追蹤器通常用於搭配 OLE 項目，也就是物件衍生自`COleClientItem`。 追蹤器矩形的目前狀態的項目提供視覺提示。
+
+MFC OLE 範例[OCLIENT](../visual-cpp-samples.md)示範使用追蹤器與 OLE 用戶端項目從觀點來看的容器應用程式的通用介面。 如需示範不同的樣式以及追蹤器物件的能力，請參閱 MFC 一般範例[TRACKER](../visual-cpp-samples.md)。
+
+如需有關在 OLE 應用程式中實作追蹤器的詳細資訊，請參閱[追蹤器： 在 OLE 應用程式中實作的追蹤器](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
+
+## <a name="see-also"></a>另請參閱
+
+[OLE](../mfc/ole-in-mfc.md)<br/>
+[COleClientItem 類別](../mfc/reference/coleclientitem-class.md)

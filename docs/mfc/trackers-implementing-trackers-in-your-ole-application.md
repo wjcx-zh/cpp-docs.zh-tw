@@ -1,5 +1,5 @@
 ---
-title: 追蹤器： OLE 應用程式中實作追蹤器 |Microsoft 文件
+title: 追蹤器： 在 OLE 應用程式中實作追蹤器 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0936c760c9528e5ed4220c2a4c46a170b84041a8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26fe49a9932ded22dbc1f0d4600f57b1f0eb6f14
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381546"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441397"
 ---
 # <a name="trackers-implementing-trackers-in-your-ole-application"></a>追蹤器：在 OLE 應用程式中實作追蹤器
-追蹤器提供圖形介面，可讓使用者與 OLE 用戶端項目互動。 藉由使用不同的追蹤器樣式，OLE 用戶端項目的顯示可以包含陰影的框線，調整控點大小，或是各種其他視覺效果。 本文說明：  
-  
--   [如何在您的程式碼中實作追蹤](../mfc/how-to-implement-tracking-in-your-code.md)。  
-  
--   [橡皮框和追蹤器](../mfc/rubber-banding-and-trackers.md)。  
-  
- 本文亦涵蓋追蹤器樣式的使用。 此外，它可讓數個 MFC OLE 範例參考[OCLIENT](../visual-cpp-samples.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [追蹤器](../mfc/trackers.md)
+
+追蹤器提供圖形介面，可讓使用者與 OLE 用戶端項目互動。 藉由使用不同的追蹤器樣式，OLE 用戶端項目的顯示可以包含陰影的框線，調整控點大小，或是各種其他視覺效果。 本文說明：
+
+- [如何在您的程式碼中實作追蹤](../mfc/how-to-implement-tracking-in-your-code.md)。
+
+- [橡皮框和追蹤器](../mfc/rubber-banding-and-trackers.md)。
+
+本文亦涵蓋追蹤器樣式的使用。 此外，它會使得數個 MFC OLE 範例參考[OCLIENT](../visual-cpp-samples.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[追蹤器](../mfc/trackers.md)
 

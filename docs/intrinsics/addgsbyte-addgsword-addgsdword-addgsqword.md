@@ -26,62 +26,66 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd5341dc4d47740410df01feadbd9e6aa3926a23
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bdfcd0db1486e5ba6e4c08dee0c19e3b98282df9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721381"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439688"
 ---
 # <a name="addgsbyte-addgsword-addgsdword-addgsqword"></a>__addgsbyte、__addgsword、__addgsdword、__addgsqword
-**Microsoft 專屬**  
-  
- 將值新增至相對於開頭的位移所指定的記憶體位置`GS`區段。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-void __addgsbyte(   
-   unsigned long Offset,   
-   unsigned char Data   
-);  
-void __addgsword(   
-   unsigned long Offset,   
-   unsigned short Data   
-);  
-void __addgsdword(   
-   unsigned long Offset,   
-   unsigned long Data   
-);  
-void __addgsqword(   
-   unsigned long Offset,   
-   unsigned __int64 Data   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
+
+**Microsoft 專屬**
+
+將值新增至相對於開頭的位移所指定的記憶體位置`GS`區段。
+
+## <a name="syntax"></a>語法
+
+```
+void __addgsbyte( 
+   unsigned long Offset, 
+   unsigned char Data 
+);
+void __addgsword( 
+   unsigned long Offset, 
+   unsigned short Data 
+);
+void __addgsdword( 
+   unsigned long Offset, 
+   unsigned long Data 
+);
+void __addgsqword( 
+   unsigned long Offset, 
+   unsigned __int64 Data 
+);
+```
+
+#### <a name="parameters"></a>參數
+
 *位移*<br/>
-[in]從開頭的位移`GS`。  
-  
+[in]從開頭的位移`GS`。
+
 *Data*<br/>
-[in]要加入之記憶體位置的值。  
-  
-## <a name="requirements"></a>需求  
-  
-|內建|架構|  
-|---------------|------------------|  
-|`__addgsbyte`|X64|  
-|`__addgsword`|X64|  
-|`__addgsdword`|X64|  
-|`__addgsqword`|X64|  
-  
-## <a name="remarks"></a>備註  
- 這些內建函式僅適用於核心模式，而這些常式僅可作為內建函式。  
-  
-**結束 Microsoft 專屬**  
-  
-## <a name="see-also"></a>另請參閱  
- [__incgsbyte、 \__incgsword， \__incgsdword， \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)   
- [__readgsbyte、 \__readgsdword， \__readgsqword， \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)   
- [__writegsbyte、 \__writegsdword， \__writegsqword， \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)   
- [編譯器內建](../intrinsics/compiler-intrinsics.md)
+[in]要加入之記憶體位置的值。
+
+## <a name="requirements"></a>需求
+
+|內建|架構|
+|---------------|------------------|
+|`__addgsbyte`|X64|
+|`__addgsword`|X64|
+|`__addgsdword`|X64|
+|`__addgsqword`|X64|
+
+## <a name="remarks"></a>備註
+
+這些內建函式僅適用於核心模式，而這些常式僅可作為內建函式。
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>另請參閱
+
+[__incgsbyte、 \__incgsword， \__incgsdword， \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)<br/>
+[__readgsbyte、 \__readgsdword， \__readgsqword， \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)<br/>
+[__writegsbyte、 \__writegsdword， \__writegsqword， \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)<br/>
+[編譯器內建](../intrinsics/compiler-intrinsics.md)

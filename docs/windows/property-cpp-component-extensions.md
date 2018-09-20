@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6db0aa5801a8eca896282b65e4d9f156e9b38318
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6f9c444861587e21724fe5f6aff545935fed6086
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212808"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420500"
 ---
 # <a name="property--c-component-extensions"></a>property (C++ 元件擴充功能)
 
@@ -33,15 +33,15 @@ ms.locfileid: "43212808"
 
 您可以宣告下列其中一個類型的屬性。
 
-*簡單屬性*  
+*簡單屬性*<br/>
 根據預設，會建立*set 存取子*，將屬性的值，指派*get 存取子*，它會擷取屬性值，以及編譯器所產生的私用資料成員包含屬性值。
 
-*屬性區塊*  
+*屬性區塊*<br/>
 使用此選項可建立使用者定義的 get 和/或 set 存取子。 如果同時定義了 get 和 set 存取子，屬性為讀取/寫入；如果只定義 get 存取子，屬性為唯讀，而如果只定義 set 存取子，屬性為唯寫。
 
 您必須明確宣告資料成員，才能包含屬性值。
 
-*索引的屬性*  
+*索引的屬性*<br/>
 您可以用來取得和設定由一個或多個索引所指定之屬性值的屬性區塊。
 
 您可以建立索引的屬性具有使用者定義的屬性名稱或*預設*屬性名稱。 預設索引屬性的名稱是定義屬性所在的類別的名稱。 若要宣告預設屬性，指定**預設**關鍵字，而不是屬性名稱。
@@ -71,27 +71,27 @@ property type default[index_list] {
 
 ### <a name="parameters"></a>參數
 
-*type*  
+*type*<br/>
 屬性值的資料類型，所以是屬性本身。
 
-*property_name*  
+*property_name*<br/>
 屬性的名稱。
 
-*存取修飾詞*  
+*存取修飾詞*<br/>
 存取限定詞。 有效的限定詞都**靜態**並**虛擬**。
 
 Get 或 set 存取子不需要同意**虛擬**，但是它們必須同意**靜態**限定詞。
 
-*繼承修飾詞*  
+*繼承修飾詞*<br/>
 繼承限定詞。 有效的限定詞都**抽象**並**密封**。
 
-*index_list*  
+*index_list*<br/>
 一或多個索引的逗號分隔清單。 每個索引的組成為索引類型以及可在屬性方法主體中使用的選擇性識別碼。
 
-*值*  
+*值*<br/>
 要指派給 set 作業或在 get 作業中擷取的屬性的值。
 
-*property_body*  
+*property_body*<br/>
 set 或 get 存取子的屬性方法主體。 *Property_body*可用*index_list*存取基礎屬性資料成員，或使用者定義的處理中的參數。
 
 ## <a name="windows-runtime"></a>Windows 執行階段
@@ -123,16 +123,16 @@ modifier property type default[index];
 
 ### <a name="parameters"></a>參數
 
-*修飾詞*  
+*修飾詞*<br/>
 可以在屬性宣告或 get/set 存取子方法上使用修飾詞。 可能的值為**靜態**並**虛擬**。
 
-*type*  
+*type*<br/>
 屬性表示之值的類型。
 
-*property_name*  
+*property_name*<br/>
 raise 方法的參數；必須符合委派的簽章。
 
-*index_list*  
+*index_list*<br/>
 一個或多個索引的逗號分隔清單，在方括號(下標運算子 []) 內指定。 針對每個索引，指定類型以及可以用在屬性方法主體中的選擇性識別碼。
 
 ### <a name="remarks"></a>備註

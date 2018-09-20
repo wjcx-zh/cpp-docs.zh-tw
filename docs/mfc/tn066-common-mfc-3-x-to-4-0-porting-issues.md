@@ -1,5 +1,5 @@
 ---
-title: TN066： 常見 MFC 3.x 至 4.0 移植問題 |Microsoft 文件
+title: TN066： 常見 MFC 3.x 至 4.0 移植問題 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d7e439224357f5c352fa96c06cfde639c413655
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a25bb22dcd809c199bf00f57137208141627a434
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381782"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421865"
 ---
 # <a name="tn066-common-mfc-3x-to-40-porting-issues"></a>TN066：常見 MFC 3.x 至 4.0 移植問題
-本技術提示說明當嘗試將 MFC 3.x (隨附於 Visual C++ 2.x 的 MFC) 所寫成的應用程式移植到 MFC 4.0 時最常見的問題。  
-  
-## <a name="see-also"></a>另請參閱  
- [依數字的技術提示](../mfc/technical-notes-by-number.md)   
- [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
+
+本技術提示說明當嘗試將 MFC 3.x (隨附於 Visual C++ 2.x 的 MFC) 所寫成的應用程式移植到 MFC 4.0 時最常見的問題。
+
+## <a name="see-also"></a>另請參閱
+
+[依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
+[依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

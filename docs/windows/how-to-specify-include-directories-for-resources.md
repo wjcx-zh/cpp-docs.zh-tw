@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 257ca11dcc44b22d6ddbb5043315d29a70377148
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ebebd8d0b6dc53ef5d83374c329ebe35d23f7fe8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313945"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443536"
 ---
 # <a name="how-to-specify-include-directories-for-resources-c"></a>如何： 指定資源 （c + +） 的 Include 目錄
 
@@ -40,8 +40,8 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[資源包含對話方塊](../windows/resource-includes-dialog-box.md)  
-[TN035：在 Visual C++ 中使用多個資源檔和標頭檔](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)  
-[符號：資源識別項](../windows/symbols-resource-identifiers.md)  
-[資源檔](../windows/resource-files-visual-studio.md)  
+[資源包含對話方塊](../windows/resource-includes-dialog-box.md)<br/>
+[TN035：在 Visual C++ 中使用多個資源檔和標頭檔](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)<br/>
+[符號：資源識別項](../windows/symbols-resource-identifiers.md)<br/>
+[資源檔](../windows/resource-files-visual-studio.md)<br/>
 [資源編輯器](../windows/resource-editors.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ae4f50e6d2d614e444766babf8e55f5c9f83932
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a8b84bcaec7dbadfb7b735264df12f7e958dcd20
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609540"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444693"
 ---
 # <a name="modulecreate-method"></a>Module::Create 方法
 
@@ -45,16 +45,16 @@ WRL_NOTHROW static Module& Create(
 
 ### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 模組類型。
 
-*回呼*  
+*回呼*<br/>
 當您釋放最後一個執行個體物件的模組時呼叫。
 
-*object*  
+*object*<br/>
 *物件*並*方法*參數搭配使用的。 點的最後一個執行個體物件，當使用者放開模組中的最後一個執行個體物件。
 
-*方法*  
+*方法*<br/>
 *物件*並*方法*參數搭配使用的。 方法的最後一個執行個體物件時釋放最後一個執行個體物件模組中的點。
 
 ## <a name="return-value"></a>傳回值

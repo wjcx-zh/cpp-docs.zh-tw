@@ -1,5 +1,5 @@
 ---
-title: 衍生檢視類別 MFC 中的可用 |Microsoft 文件
+title: 衍生的 MFC 中的可用的檢視類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b166e64c57482586e145cecc9e79317eea282b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f8d058891b361b3747caafd9c4bd279c7626856
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345660"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426911"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>MFC 中的可用衍生檢視類別
-下表顯示在 MFC 的檢視類別和其彼此的關聯性。 檢視類別的功能取決於從它衍生的 MFC 檢視類別。  
-  
-### <a name="view-classes"></a>檢視類別  
-  
-|類別|描述|  
-|-----------|-----------------|  
-|[CView](../mfc/reference/cview-class.md)|所有檢視的基底類別。|  
-|[CCtrlView](../mfc/reference/cctrlview-class.md)|基底類別的`CTreeView`， `CListView`， `CEditView`，和`CRichEditView`。 這些類別可讓您指定的 Windows 通用控制項搭配使用文件/檢視架構。|  
-|[CEditView](../mfc/reference/ceditview-class.md)|在 Windows 基礎的簡單檢視編輯方塊控制項。 允許輸入和編輯文字，而且可以用於做為基礎的簡單的文字編輯器應用程式。 請參閱`CRichEditView`。|  
-|[CRichEditView](../mfc/reference/cricheditview-class.md)|檢視包含[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)物件。 這個類別是類似於`CEditView`，但不同的是`CEditView`，`CRichEditView`控點格式化的文字。|  
-|[CListView](../mfc/reference/clistview-class.md)|檢視包含[CListCtrl](../mfc/reference/clistctrl-class.md)物件。|  
-|[CTreeView](../mfc/reference/ctreeview-class.md)|檢視包含[CTreeCtrl](../mfc/reference/ctreectrl-class.md)物件，類似於 Visual c + + 中的 [方案總管] 視窗的檢視。|  
-|[CScrollView](../mfc/reference/cscrollview-class.md)|基底類別的`CFormView`， `CRecordView`，和`CDaoRecordView`。 實作捲動檢視的內容。|  
-|[CFormView](../mfc/reference/cformview-class.md)|表單檢視中，包含控制項的檢視。 表單架構應用程式提供一個或多個這類形式介面。|  
-|[CHtmlView](../mfc/reference/chtmlview-class.md)|與應用程式的使用者可以瀏覽全球資訊網的網站，以及資料夾中的本機檔案系統和網路上的 Web 瀏覽器檢視。 Web 瀏覽器檢視，也可做為作用中的文件容器。|  
-|[CRecordView](../mfc/reference/crecordview-class.md)|表單檢視顯示在控制項中的 ODBC 資料庫記錄。 如果您選取 ODBC 支援您的專案中，檢視的基底類別是`CRecordView`。 檢視已連線到`CRowset`物件。|  
-|[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)|表單檢視顯示在控制項中的 DAO 資料庫記錄。 如果您選取 DAO 支援您的專案中，檢視的基底類別是`CDaoRecordView`。 檢視已連線到`CDaoRecordset`物件。|  
-|[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)|在控制項中顯示 OLE DB 資料錄 [表單] 檢視中。 如果您選取 OLE DB 支援您的專案中，檢視的基底類別是`COleDBRecordView`。 檢視已連線到`CRowset`物件。|  
-  
+
+下表顯示 MFC 檢視類別和其之間的關聯性。 您的檢視類別的功能取決於從它衍生的 MFC 檢視類別。
+
+### <a name="view-classes"></a>檢視類別
+
+|類別|描述|
+|-----------|-----------------|
+|[CView](../mfc/reference/cview-class.md)|所有檢視的基底類別。|
+|[CCtrlView](../mfc/reference/cctrlview-class.md)|基底類別`CTreeView`， `CListView`， `CEditView`，和`CRichEditView`。 這些類別可讓您使用與指定的 Windows 通用控制項的文件/檢視架構。|
+|[CEditView](../mfc/reference/ceditview-class.md)|Windows 為基礎的簡單檢視編輯方塊控制項。 允許輸入和編輯文字，並可以用於做為基礎的簡單文字編輯器應用程式。 請參閱`CRichEditView`。|
+|[CRichEditView](../mfc/reference/cricheditview-class.md)|檢視包含[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)物件。 這個類別是類似`CEditView`，但不同於`CEditView`，`CRichEditView`控點格式化的文字。|
+|[CListView](../mfc/reference/clistview-class.md)|檢視包含[CListCtrl](../mfc/reference/clistctrl-class.md)物件。|
+|[Ctreeview 比較](../mfc/reference/ctreeview-class.md)|檢視包含[CTreeCtrl](../mfc/reference/ctreectrl-class.md)物件，類似於在 Visual c + + 中的 [方案總管] 視窗的檢視。|
+|[CScrollView](../mfc/reference/cscrollview-class.md)|基底類別`CFormView`， `CRecordView`，和`CDaoRecordView`。 實作捲動檢視的內容。|
+|[CFormView](../mfc/reference/cformview-class.md)|表單檢視中，包含控制項的檢視。 表單架構應用程式提供一或多個這類表單介面。|
+|[CHtmlView](../mfc/reference/chtmlview-class.md)|與應用程式的使用者可以瀏覽網站上全球資訊網上，以及資料夾中的本機檔案系統與網路上的網頁瀏覽器檢視。 Web 瀏覽器檢視也可為使用中的文件容器。|
+|[CRecordView](../mfc/reference/crecordview-class.md)|表單檢視顯示在控制項中的 ODBC 資料庫記錄。 如果您選取您的專案中的 ODBC 支援，該檢視的基底類別是`CRecordView`。 檢視已連線到`CRowset`物件。|
+|[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)|表單檢視顯示在控制項中的 DAO 資料庫記錄。 如果您選取 DAO 支援在您的專案時，該檢視的基底類別是`CDaoRecordView`。 檢視已連線到`CDaoRecordset`物件。|
+|[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)|控制項中顯示 OLE DB 資料錄 [表單] 檢視中。 如果您選取 OLE DB 支援在您的專案時，該檢視的基底類別是`COleDBRecordView`。 檢視已連線到`CRowset`物件。|
+
 > [!NOTE]
->  根據 MFC 4.0 版，`CEditView`衍生自`CCtrlView`。  
-  
- 若要在應用程式中使用這些類別，請從它們衍生的應用程式檢視類別。 如需相關資訊，請參閱[捲動和縮放檢視](../mfc/scrolling-and-scaling-views.md)。 如需有關資料庫類別的詳細資訊，請參閱[概觀： 資料庫程式設計](../data/data-access-programming-mfc-atl.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [使用檢視](../mfc/using-views.md)
+>  根據 MFC 4.0 版，`CEditView`衍生自`CCtrlView`。
+
+若要在您的應用程式中使用這些類別，請從它們衍生的應用程式檢視類別。 如需相關資訊，請參閱[捲動和縮放檢視](../mfc/scrolling-and-scaling-views.md)。 如需有關資料庫類別的詳細資訊，請參閱 <<c0> [ 概觀： 資料庫程式設計](../data/data-access-programming-mfc-atl.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[使用檢視](../mfc/using-views.md)
 

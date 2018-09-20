@@ -1,5 +1,5 @@
 ---
-title: 2.4 工作共用建構 |Microsoft 文件
+title: 2.4 工作共用建構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,22 +12,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c00eb94055f26954a283a6172f69228804832ac4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 719b33698b708761f0cd56e65a70a6ea8fa3b053
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689632"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411114"
 ---
 # <a name="24-work-sharing-constructs"></a>2.4 工作共用的建構
-工作共用建構會發生這個情形的團隊成員之間相關聯的陳述式執行。 工作共用指示詞不會啟動新的執行緒，並在項目到工作共用建構函式沒有隱含的屏障。  
-  
- 序列工作共用建構和**屏障**遇到指示詞必須是相同的小組中每個執行緒。  
-  
- OpenMP 定義下列的工作共用建構，以及這些詳述於以下各節：  
-  
--   **如**指示詞  
-  
--   **區段**指示詞  
-  
--   **單一**指示詞
+
+工作共用建構會將執行相關聯的陳述式，會遇到相同的小組成員之間。 工作共用指示詞不會啟動新的執行緒，並在工作共用建構的項目上沒有任何隱含的障礙。
+
+將一連串工作共用建構並**屏障**遇到的指示詞必須是相同的小組中的每個執行緒。
+
+OpenMP 定義下列的工作共用建構，並說明下列各節：
+
+- **針對**指示詞
+
+- **區段**指示詞
+
+- **單一**指示詞

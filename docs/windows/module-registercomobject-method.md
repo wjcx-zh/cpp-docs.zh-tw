@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abbe93f5359171c88134ff61759e9edc63db2451
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7cccebf6e1c6004a2416f4fdeb254369f9aa7b72
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610429"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410308"
 ---
 # <a name="moduleregistercomobject-method"></a>Module::RegisterCOMObject 方法
 
@@ -42,19 +42,19 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 ### <a name="parameters"></a>參數
 
-*伺服器名稱*  
+*伺服器名稱*<br/>
 完整伺服器名稱。
 
-*clsid*  
+*clsid*<br/>
 若要註冊的 Clsid 的陣列。
 
-*處理站*  
+*處理站*<br/>
 正在發行其可用性的類別物件的 IUnknown 介面的陣列。
 
-*Cookie*  
+*Cookie*<br/>
 作業完成後，物件的陣列的指標識別類別的值，已註冊。 稍後會使用這些值，撤銷。
 
-*count*  
+*count*<br/>
 若要註冊的 Clsid 數目。
 
 ## <a name="return-value"></a>傳回值
@@ -74,4 +74,5 @@ COM 物件會向 CLSCTX 列舉型別的 CLSCTX_LOCAL_SERVER 列舉值。
 **命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
+
 [Module 類別](../windows/module-class.md)

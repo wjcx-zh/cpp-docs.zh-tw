@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 85a27fceabcac9c5fa3b36fae4990da7dcd65deb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8d5a4f92e16c2d758fa5e2b88575b12d5710dd08
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222922"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404203"
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (C++ 元件擴充功能)
 
@@ -60,10 +60,10 @@ expression
 
 ### <a name="parameters"></a>參數
 
-*類型識別碼*  
+*類型識別碼*<br/>
 要轉換的型別*運算式*到。 一個控制代碼，可用來參考或值類型、值類型，或參考或值類型的追蹤參考。
 
-*運算式*  
+*運算式*<br/>
 一個運算式，可針對用來參考或值類型、值類型，或參考或值類型的追蹤參考之控制代碼進行評估。
 
 ### <a name="remarks"></a>備註
@@ -124,10 +124,10 @@ expression
 
 ### <a name="parameters"></a>參數
 
-*類型識別碼*  
+*類型識別碼*<br/>
 一個控制代碼，可用來參考或值類型、值類型，或參考或值類型的追蹤參考。
 
-*運算式*  
+*運算式*<br/>
 一個運算式，可針對用來參考或值類型、值類型，或參考或值類型的追蹤參考之控制代碼進行評估。
 
 ### <a name="remarks"></a>備註

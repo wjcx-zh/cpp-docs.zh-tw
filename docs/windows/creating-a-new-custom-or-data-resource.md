@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a92e7904b3b42422bebf5a80e0f1b03dd818f86
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2e2939c7f0a68401b4c1a8c43b5c6335a0acfcb3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314572"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403938"
 ---
 # <a name="creating-a-new-custom-or-data-resource-c"></a>建立新的自訂或資料資源 （c + +）
 
@@ -40,9 +40,9 @@ ms.locfileid: "44314572"
 
 3. 在 **編譯時間指示詞**方塊中，輸入`#include`陳述式，為包含您的自訂資源檔案的名稱。 例如: 
 
-```cpp
+    ```cpp
     #include mydata.rc
- ```
+    ```
 
    請確定您輸入的語法和拼字正確。 [編譯時期指示詞]  方塊的內容會完全依照您的輸入插入資源指令碼檔。
 

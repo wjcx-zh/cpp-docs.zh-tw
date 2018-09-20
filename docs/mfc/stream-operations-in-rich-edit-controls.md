@@ -19,21 +19,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f418156fb5be4837bc0dbe9b05b3ad26d7ac02dd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f34417d765151adbd7a6c02b7a76ef9d5732994f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196854"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441985"
 ---
 # <a name="stream-operations-in-rich-edit-controls"></a>Rich Edit 控制項中的資料流作業
-您可以使用資料流將資料送入或送出 rich edit 控制項 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))。 所定義的資料流[EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-_editstream)結構，指定緩衝區和應用程式定義的回呼函式。  
-  
- 若要讀取資料讀入 rich edit 控制項 （也就是資料流中的資料）、 使用[StreamIn](../mfc/reference/cricheditctrl-class.md#streamin)成員函式。 控制項會重複呼叫應用程式定義的回呼函式，每一次呼叫都會將一部分的資料傳送至緩衝區。  
-  
- 若要儲存內容豐富的編輯控制項 （也就是串流處理資料輸出），您可以使用[StreamOut](../mfc/reference/cricheditctrl-class.md#streamout)成員函式。 此控制項會將資料重複寫入緩衝區，然後再呼叫應用程式定義的回呼函式。 回呼函式會在每次呼叫時儲存緩衝區的內容。  
-  
-## <a name="see-also"></a>另請參閱  
- [使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+
+您可以使用資料流將資料送入或送出 rich edit 控制項 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))。 所定義的資料流[EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-_editstream)結構，指定緩衝區和應用程式定義的回呼函式。
+
+若要讀取資料讀入 rich edit 控制項 （也就是資料流中的資料）、 使用[StreamIn](../mfc/reference/cricheditctrl-class.md#streamin)成員函式。 控制項會重複呼叫應用程式定義的回呼函式，每一次呼叫都會將一部分的資料傳送至緩衝區。
+
+若要儲存內容豐富的編輯控制項 （也就是串流處理資料輸出），您可以使用[StreamOut](../mfc/reference/cricheditctrl-class.md#streamout)成員函式。 此控制項會將資料重複寫入緩衝區，然後再呼叫應用程式定義的回呼函式。 回呼函式會在每次呼叫時儲存緩衝區的內容。
+
+## <a name="see-also"></a>另請參閱
+
+[使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
+[控制項](../mfc/controls-mfc.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a39b4147bd997659f264b60fb1fc88956784bbaf
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: d72e37b8625480779620025dfd1e1eda1101b824
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318183"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430549"
 ---
 # <a name="working-with-resource-files"></a>使用資源檔
 
@@ -39,24 +39,24 @@ ms.locfileid: "44318183"
 
 ## <a name="in-this-section"></a>本節內容
 
-[資源檔](../windows/resource-files-visual-studio.md)  
+[資源檔](../windows/resource-files-visual-studio.md)<br/>
 描述資源檔及其在 Windows 桌面應用程式中的使用方式。 同時會提供描述如何使用資源檔之主題的連結。
 
-[符號：資源識別項](../windows/symbols-resource-identifiers.md)  
+[符號：資源識別項](../windows/symbols-resource-identifiers.md)<br/>
 描述符號，並提供如何使用 **資源符號** 對話方塊，來管理專案中符號的相關資訊。
 
-[資源編輯器](../windows/resource-editors.md)  
+[資源編輯器](../windows/resource-editors.md)<br/>
 描述 Visual Studio 中提供的資源編輯器，您可以使用每一個編輯器修改的資源類型，並提供如何使用每一個編輯器之詳細資訊的連結。
 
 ## <a name="related-sections"></a>相關章節
 
-[Visual C++](../visual-cpp-in-visual-studio.md)  
+[Visual C++](../visual-cpp-in-visual-studio.md)<br/>
 提供 Visual C++ 文件的連結。
 
-[告訴我們](/visualstudio/ide/talk-to-us)  
+[告訴我們](/visualstudio/ide/talk-to-us)<br/>
 提供如何使用文件集、連絡產品支援，以及採用協助工具功能之資訊的連結。
 
 ## <a name="see-also"></a>另請參閱
 
-[Windows 桌面應用程式](../windows/windows-desktop-applications-cpp.md)  
+[Windows 桌面應用程式](../windows/windows-desktop-applications-cpp.md)<br/>
 [功能表和其他資源](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

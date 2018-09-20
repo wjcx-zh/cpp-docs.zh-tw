@@ -1,5 +1,5 @@
 ---
-title: OpenMP 資料類型 |Microsoft 文件
+title: OpenMP 資料類型 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,22 +12,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f33666b35f45bb668ab135941a0d15297442408a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b41eaf7012c1d119071281f98177e4a4d841890b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690942"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410067"
 ---
 # <a name="openmp-data-types"></a>OpenMP 資料類型
-提供在 OpenMP API 中使用的資料類型的連結。  
-  
- OpenMP 標準的 Visual c + + 實作會包含下列資料類型。  
-  
-|資料類型|描述|  
-|---------------|-----------------|  
-|[omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md)|保存的狀態、 是否可供使用鎖定或鎖定如果執行緒擁有鎖定的類型。|  
-|[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)|保留鎖定的相關資訊的下列項目之一的類型： 是否鎖定，而且執行緒的識別擁有鎖定和巢狀的計數。|  
-  
-## <a name="see-also"></a>另請參閱  
- [程式庫參考](../../../parallel/openmp/reference/openmp-library-reference.md)
+
+提供在 OpenMP API 中使用的資料類型的連結。
+
+Visual c + + 實作的 openmp 標準包含下列資料類型。
+
+|資料類型|描述|
+|---------------|-----------------|
+|[omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md)|保留鎖定，鎖定是否可供使用，或如果執行緒擁有鎖定的狀態類型。|
+|[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)|保留鎖定的相關資訊的下列項目之一的類型： 是否鎖定可供使用，以及執行緒的識別擁有鎖定，並將巢狀的計數。|
+
+## <a name="see-also"></a>另請參閱
+
+[程式庫參考](../../../parallel/openmp/reference/openmp-library-reference.md)

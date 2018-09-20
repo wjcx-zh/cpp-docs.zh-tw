@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0586b5073e8d97c882f33bb118d62b0c1bb04c07
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0ffef0c6a55116bf3a228d7d5da4bd698607d7fa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611547"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431030"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper 結構
 
@@ -91,11 +91,11 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
 
 ### <a name="parameters"></a>參數
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 *TCallback*  
 事件處理常式函式的類型。
 
-*argCount*  
+*argCount*<br/>
 中的引數的數目**InvokeHelper**特製化。
 
 ## <a name="remarks"></a>備註

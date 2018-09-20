@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07c37dbf1629461141d592eb1987ce071324e22c
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 111015fdd8887ae779aeb8fecc8274cfcf7c6c68
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691467"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441274"
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory 類別
 
@@ -43,7 +43,7 @@ class SimpleActivationFactory : public ActivationFactory<>;
 
 ### <a name="parameters"></a>參數
 
-*基底*  
+*基底*<br/>
 基底類別。
 
 ## <a name="remarks"></a>備註
@@ -106,7 +106,7 @@ STDMETHOD( ActivateInstance )(
 
 #### <a name="parameters"></a>參數
 
-*ppvObject*  
+*ppvObject*<br/>
 這項作業完成時，所指定的物件執行個體的指標`Base`類別範本參數。
 
 ### <a name="return-value"></a>傳回值
@@ -129,7 +129,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 #### <a name="parameters"></a>參數
 
-*runtimeName*  
+*runtimeName*<br/>
 這項作業完成時，執行階段類別名稱。
 
 ### <a name="return-value"></a>傳回值
@@ -152,7 +152,7 @@ STDMETHOD(
 
 #### <a name="parameters"></a>參數
 
-*trustLvl*  
+*trustLvl*<br/>
 這項作業完成時，目前類別物件的信任層級。
 
 ### <a name="return-value"></a>傳回值

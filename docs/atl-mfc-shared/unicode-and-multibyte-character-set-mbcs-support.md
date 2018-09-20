@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74f1f0f88828b5d6355c692aa8eaeecd5869bf57
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 708825ddda9becc51d9009d0d6a03a22c48f8007
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202930"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432473"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Unicode 及多位元組字元集 (MBCS) 支援
 
@@ -35,7 +35,7 @@ ms.locfileid: "43202930"
 
 - [多位元組字元組 (MBCS)](#mfc-support-for-mbcs-strings)， **char**基礎的單一或雙位元組字元和字串中的地區設定特定字元編碼。
 
-Microsoft 建議所有新的開發，MFC Unicode 程式庫，並在 Visual Studio 2013 和 Visual Studio 2015 中已被取代的 MBCS 程式庫。 然而現在的情況已經有所改變。 Visual Studio 2017 中已移除 MBCS 已被取代警告。
+Microsoft 建議所有新的開發，MFC Unicode 程式庫，並在 Visual Studio 2013 和 Visual Studio 2015 中已被取代的 MBCS 程式庫。 不過，此情況以已不再適用。 Visual Studio 2017 中已移除 MBCS 已被取代警告。
 
 ## <a name="mfc-support-for-unicode-strings"></a>MFC 支援的 Unicode 字串
 
@@ -105,5 +105,5 @@ Microsoft 建議所有新的開發，MFC Unicode 程式庫，並在 Visual Studi
 
 ## <a name="see-also"></a>另請參閱
 
-[字串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
+[字串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [字串操作](../c-runtime-library/string-manipulation-crt.md)  

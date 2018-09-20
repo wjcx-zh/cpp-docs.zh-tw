@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bcacfb8d5cd6d15cf9ca5f9f5bb8e937119dc863
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4ff40e03bf464d4c6f434b491c8b48d2b797d72b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691570"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440526"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper 結構
 
@@ -41,13 +41,13 @@ friend struct Details::ImplementsHelper;
 
 ### <a name="parameters"></a>參數
 
-*RuntimeClassFlagsT*  
+*RuntimeClassFlagsT*<br/>
 指定一或多個旗標欄位[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。
 
-*ILst*  
+*ILst*<br/>
 介面識別碼的清單。
 
-*IsDelegateToClass*  
+*IsDelegateToClass*<br/>
 指定 **，則為 true**如果目前的執行個體`Implements`的基底類別中的第一個介面識別碼*ILst*; 否則**false**。
 
 ## <a name="remarks"></a>備註

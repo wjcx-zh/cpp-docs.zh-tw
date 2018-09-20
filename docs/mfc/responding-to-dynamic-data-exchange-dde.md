@@ -1,5 +1,5 @@
 ---
-title: 回應動態資料交換 (DDE) |Microsoft 文件
+title: 回應動態資料交換 (DDE) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,16 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 327a719de5cdd3eef7c0eb769b0abf7cfe03ca49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f55836f013ffb85bb1d490190dc5c0d196cffcf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379199"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423464"
 ---
 # <a name="responding-to-dynamic-data-exchange-dde"></a>回應動態資料交換 (DDE)
-(如果副檔名已向應用程式註冊或關聯)，框架視窗可以回應動態資料交換 (DDE) 要求，從檔案管理員開啟檔案。 請參閱[殼層註冊](../mfc/special-cwinapp-services.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [使用框架視窗](../mfc/using-frame-windows.md)
+
+(如果副檔名已向應用程式註冊或關聯)，框架視窗可以回應動態資料交換 (DDE) 要求，從檔案管理員開啟檔案。 請參閱[殼層註冊](../mfc/special-cwinapp-services.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[使用框架視窗](../mfc/using-frame-windows.md)
 

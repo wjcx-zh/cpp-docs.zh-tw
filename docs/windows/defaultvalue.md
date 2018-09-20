@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4df3f6f72ec7a83186cc3d96b2dda837bdd1cfff
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a27120869c464a9009f8d19cf0f84bfde7a02e96
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207992"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446049"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
@@ -36,7 +36,7 @@ ms.locfileid: "43207992"
 
 ### <a name="parameters"></a>參數
 
-*值*  
+*值*<br/>
 參數的預設值。
 
 ## <a name="remarks"></a>備註
@@ -84,10 +84,10 @@ __interface IFireTabCtrl : IDispatch {
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](../windows/idl-attributes.md)  
-[參數屬性](../windows/parameter-attributes.md)  
-[out](../windows/out-cpp.md)  
-[retval](../windows/retval.md)  
-[in](../windows/in-cpp.md)  
-[pointer_default](../windows/pointer-default.md)  
+[IDL 屬性](../windows/idl-attributes.md)<br/>
+[參數屬性](../windows/parameter-attributes.md)<br/>
+[out](../windows/out-cpp.md)<br/>
+[retval](../windows/retval.md)<br/>
+[in](../windows/in-cpp.md)<br/>
+[pointer_default](../windows/pointer-default.md)<br/>
 [unique](../windows/unique-cpp.md)  

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 180586f55ea57100286c3c598ac62eb83107d7c9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b715f3cc6bc505d9698484ad7c47b8262f2bc728
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714372"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444407"
 ---
 # <a name="optimizing-your-code"></a>最佳化您的程式碼
 
@@ -33,11 +33,14 @@ ms.locfileid: "45714372"
 
 下列主題會描述一些在 C/c + + 語言中的最佳化功能。
 
-[最佳化 Pragma 和關鍵字](../../build/reference/optimization-pragmas-and-keywords.md)關鍵字和 pragma 可用於您的程式碼以提升效能的清單。
+[最佳化 Pragma 和關鍵字](../../build/reference/optimization-pragmas-and-keywords.md)<br/>
+關鍵字和 pragma 可用於您的程式碼以提升效能的清單。
 
-[依分類排列的編譯器選項](../../build/reference/compiler-options-listed-by-category.md)一連串 **/O**編譯器選項會明確影響執行速度或程式碼大小。
+[依分類排列的編譯器選項](../../build/reference/compiler-options-listed-by-category.md)<br/>
+一份 **/O**編譯器選項會明確影響執行速度或程式碼大小。
 
-[右值參考宣告子： & &](../../cpp/rvalue-reference-declarator-amp-amp.md)右值參考支援實作*移動語意*。 如果移動語意用來實作樣板程式庫，使用這些範本的應用程式的效能可大幅提升。
+[右值參考宣告子：&&](../../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
+右值參考支援實作*移動語意*。 如果移動語意用來實作樣板程式庫，使用這些範本的應用程式的效能可大幅提升。
 
 ### <a name="the-optimize-pragma"></a>最佳化 pragma
 
@@ -59,9 +62,11 @@ ms.locfileid: "45714372"
 
 下列主題討論的良好程式設計作法。
 
-[改善時間關鍵程式碼的秘訣](../../build/reference/tips-for-improving-time-critical-code.md)深入程式碼撰寫技術，可產生較佳的效能。 本主題建議程式碼撰寫技術，可協助您確保您的程式碼的時間關鍵部分令人滿意。
+[改善時間關鍵程式碼的秘訣](../../build/reference/tips-for-improving-time-critical-code.md)<br/>
+更好程式碼撰寫技術，可以產生較佳的效能。 本主題建議程式碼撰寫技術，可協助您確保您的程式碼的時間關鍵部分令人滿意。
 
-[最佳化的最佳做法](../../build/reference/optimization-best-practices.md)提供有關如何最佳化您的應用程式的一般指導方針。
+[最佳化最佳做法](../../build/reference/optimization-best-practices.md)<br/>
+提供有關如何最佳化您的應用程式的一般指導方針。
 
 ## <a name="debugging-optimized-code"></a>偵錯最佳化程式碼
 

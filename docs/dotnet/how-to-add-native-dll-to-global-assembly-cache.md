@@ -1,5 +1,5 @@
 ---
-title: 如何： 將原生 DLL 加入全域組件快取 |Microsoft 文件
+title: 如何： 將原生 DLL 加入全域組件快取 |Microsoft Docs
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b7363de172eabc664bcde1e3bf42f8cc499e4251
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74b24b96b28d8c5805a075a5ac1eee41173fc427
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33129534"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431992"
 ---
 # <a name="how-to-add-native-dll-to-global-assembly-cache"></a>如何：將原生 DLL 加入至全域組件快取
-您可以將原生 DLL (非 COM) 放入全域組件快取。  
-  
-## <a name="example"></a>範例  
- **/ASSEMBLYLINKRESOURCE**可讓您嵌入組件的原生 DLL。  
-  
- 如需詳細資訊，請參閱 [/ASSEMBLYLINKRESOURCE (連結到 .NET Framework 資源)](../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)。  
-  
-```  
-/ASSEMBLYLINKRESOURCE:MyComponent.dll  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+
+您可以將原生 DLL (而非 COM) 放入全域組件快取。
+
+## <a name="example"></a>範例
+
+**/ASSEMBLYLINKRESOURCE**可讓您的組件中嵌入原生 DLL。
+
+如需詳細資訊，請參閱 [/ASSEMBLYLINKRESOURCE (連結到 .NET Framework 資源)](../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)。
+
+```
+/ASSEMBLYLINKRESOURCE:MyComponent.dll
+```
+
+## <a name="see-also"></a>另請參閱
+
+[使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

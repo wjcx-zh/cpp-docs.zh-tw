@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: adaf5f28bd115602c51d20e34d593ce42644c5d4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a4ede6b0fa9f53865defb5dbe5f7eb164589c5bd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613625"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413779"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>選取前景或背景色彩 (圖示影像編輯器)
 
@@ -45,5 +45,5 @@ ms.locfileid: "42613625"
 
 ## <a name="see-also"></a>另請參閱
 
-[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)  
+[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [使用色彩](../windows/working-with-color-image-editor-for-icons.md)

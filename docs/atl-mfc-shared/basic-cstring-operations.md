@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 156191d09c88d8f19b3fe73108bcbca390b23f6e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ab2c857451e399e56e69d79240d4ace023a8b301
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760199"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424076"
 ---
 # <a name="basic-cstring-operations"></a>基本 CString 運算
 
@@ -112,8 +112,8 @@ CString cs("meow");
 
 ## <a name="see-also"></a>另請參閱
 
-[字串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
-[CStringT 類別](../atl-mfc-shared/reference/cstringt-class.md)   
-[樣板特製化](../cpp/template-specialization-cpp.md)   
+[字串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[CStringT 類別](../atl-mfc-shared/reference/cstringt-class.md)<br/>
+[範本特製化](../cpp/template-specialization-cpp.md)<br/>
 [如何：在各種字串類型之間轉換](../text/how-to-convert-between-various-string-types.md)
 

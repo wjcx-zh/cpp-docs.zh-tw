@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d73c9f99eec3fd3ec01d4ae5d41418c67cb472f9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f6ab085e1bed3909090990cfa8e265bea792a483
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597461"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447020"
 ---
 # <a name="removereference-structure"></a>RemoveReference 結構
 
@@ -41,7 +41,7 @@ struct RemoveReference<T&&>;
 
 ### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 類別中。
 
 ## <a name="remarks"></a>備註

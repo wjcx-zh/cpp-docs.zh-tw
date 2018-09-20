@@ -1,5 +1,5 @@
 ---
-title: Windows Sockets |Microsoft 文件
+title: Windows Sockets |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9a438c2bbdae64e17715aa398685e6600d9886a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da8c1e6e524771c3176b17a26bd639f36a9e867e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382537"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423243"
 ---
 # <a name="windows-sockets"></a>Windows Sockets
-此系列文章涵蓋 MFC Windows Sockets 實作。 MFC 提供兩個類別，來支援 Windows Sockets API 以程式設計的網路應用程式。 類別[CAsyncSocket](../mfc/reference/casyncsocket-class.md)封裝 Windows Sockets API 一一，提供進階的網路程式設計人員，最多的功能及彈性。 類別[CSocket](../mfc/reference/csocket-class.md)提供簡化的介面，用於序列化的資料與[CArchive](../mfc/reference/carchive-class.md)物件。  
-  
-## <a name="in-this-section"></a>本節內容  
- [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)
+
+這一系列的文章涵蓋 Windows Sockets 的 MFC 實作。 MFC 提供兩個類別，以支援 Windows Sockets API 以程式設計的網路應用程式。 類別[CAsyncSocket](../mfc/reference/casyncsocket-class.md)封裝第一，其中一個 Windows 通訊端 API，提供進階的網路程式設計人員最強大功能與彈性。 類別[CSocket](../mfc/reference/csocket-class.md)提供簡化的介面來序列化資料，來回[CArchive](../mfc/reference/carchive-class.md)物件。
+
+## <a name="in-this-section"></a>本節內容
+
+[MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)
 

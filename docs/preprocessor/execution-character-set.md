@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f6851813172c39cd3c8c5dfe19b4d12ba81d090
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: a387b051bbecedd1c6c4dba8fc3881a3c1f3a4b9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539762"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446812"
 ---
 # <a name="executioncharacterset"></a>execution_character_set
 指定執行字元集，用於字串和字元常值。 常值標記為 u8 前置詞，就不需要此指示詞。  
@@ -50,6 +50,6 @@ ms.locfileid: "42539762"
   
 ## <a name="see-also"></a>另請參閱  
  
-[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
-[/execution-charset （設定執行字元集）](../build/reference/execution-charset-set-execution-character-set.md)   
+[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
+[/execution-charset （設定執行字元集）](../build/reference/execution-charset-set-execution-character-set.md)<br/>
 [/utf-8 (將來源和可執行檔字元集設定為 UTF-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

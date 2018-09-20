@@ -19,38 +19,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ca265bc8a6adc3da747e94ca67cd57749687f21
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ce3b59bc6665c4622078285a0c3b4b5011bc7d9b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539192"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433372"
 ---
 # <a name="enable"></a>_enable
-**Microsoft 專屬**  
-  
- 啟用中斷。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-void _enable(void);  
-```  
-  
-## <a name="requirements"></a>需求  
-  
-|內建|架構|  
-|---------------|------------------|  
-|`_enable`|x86、 x64、 ARM|  
-  
- **標頭檔** \<intrin.h >  
-  
-## <a name="remarks"></a>備註  
- `_enable` 指示處理器設定中斷旗標。 在 x86 系統中，這個函式會產生設定中斷旗標 (`sti`) 指令。  
-  
- 這個函式只適用於核心模式。 如果在使用者模式中使用，會擲回有權限指令例外狀況。  
-  
-**結束 Microsoft 專屬**  
-  
-## <a name="see-also"></a>另請參閱  
- [編譯器內建](../intrinsics/compiler-intrinsics.md)
+
+**Microsoft 專屬**
+
+啟用中斷。
+
+## <a name="syntax"></a>語法
+
+```
+void _enable(void);
+```
+
+## <a name="requirements"></a>需求
+
+|內建|架構|
+|---------------|------------------|
+|`_enable`|x86、 x64、 ARM|
+
+**標頭檔** \<intrin.h >
+
+## <a name="remarks"></a>備註
+
+`_enable` 指示處理器設定中斷旗標。 在 x86 系統中，這個函式會產生設定中斷旗標 (`sti`) 指令。
+
+這個函式只適用於核心模式。 如果在使用者模式中使用，會擲回有權限指令例外狀況。
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>另請參閱
+
+[編譯器內建](../intrinsics/compiler-intrinsics.md)

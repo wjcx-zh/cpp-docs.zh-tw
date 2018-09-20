@@ -17,45 +17,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e879726f9ef3ad65dabd00056ddb859c72dd039e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ccd691edb9ee799c8585fb33cb6b837e2871fc36
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679563"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413963"
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
-**Microsoft 專屬**  
-  
- 儲存目前的虛擬機器控制結構 (VMCS) 在指定的位址指標。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-void __vmx_vmptrst(   
-   unsigned __int64 *VmcsPhysicalAddress   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- [in] *`VmcsPhysicalAddress`  
- 儲存目前 VMCS 指標位址。  
-  
-## <a name="remarks"></a>備註  
- VMCS 指標是 64 位元的實體位址。  
-  
- `__vmx_vmptrst`函式相當於`VMPTRST`機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)站台。  
-  
-## <a name="requirements"></a>需求  
-  
-|內建|架構|  
-|---------------|------------------|  
-|`__vmx_vmptrst`|x86、x64|  
-  
- **標頭檔** \<intrin.h >  
-  
-**結束 Microsoft 專屬**  
-  
-## <a name="see-also"></a>另請參閱  
- [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
- [__vmx_vmptrld](../intrinsics/vmx-vmptrld.md)
+
+**Microsoft 專屬**
+
+儲存目前的虛擬機器控制結構 (VMCS) 在指定的位址指標。
+
+## <a name="syntax"></a>語法
+
+```
+void __vmx_vmptrst( 
+   unsigned __int64 *VmcsPhysicalAddress 
+);
+```
+
+#### <a name="parameters"></a>參數
+
+[in] *`VmcsPhysicalAddress`儲存目前 VMCS 指標的位址。
+
+## <a name="remarks"></a>備註
+
+VMCS 指標是 64 位元的實體位址。
+
+`__vmx_vmptrst`函式相當於`VMPTRST`機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)站台。
+
+## <a name="requirements"></a>需求
+
+|內建|架構|
+|---------------|------------------|
+|`__vmx_vmptrst`|x86、x64|
+
+**標頭檔** \<intrin.h >
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>另請參閱
+
+[編譯器內建](../intrinsics/compiler-intrinsics.md)<br/>
+[__vmx_vmptrld](../intrinsics/vmx-vmptrld.md)

@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18616b1010dfe6a23861c512b1113c30fe5251ce
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 27a2cfaaf4ddb5ae58cdcd212b5fdcb7ded73bb0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535349"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434722"
 ---
 # <a name="implements-structure"></a>Implements 結構
 
@@ -69,37 +69,37 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 
 ### <a name="parameters"></a>參數
 
-*I0*  
+*I0*<br/>
 第零個介面 id。 （必要）
 
-*I1*  
+*I1*<br/>
 第一個介面 id。 (選擇項)
 
-*I2*  
+*I2*<br/>
 第二個介面 id。 (選擇項)
 
-*I3*  
+*I3*<br/>
 第三個介面 id。 (選擇項)
 
-*I4*  
+*I4*<br/>
 第四個介面 id。 (選擇項)
 
-*I5 中*  
+*I5 中*<br/>
 第五個介面 id。 (選擇項)
 
-*I6*  
+*I6*<br/>
 第六個介面 id。 (選擇項)
 
-*I7*  
+*I7*<br/>
 第七個介面 id。 (選擇項)
 
-*I8*  
+*I8*<br/>
 第八個介面 id。 (選擇項)
 
-*I9*  
+*I9*<br/>
 第九個介面 id。 (選擇項)
 
-*flags*  
+*flags*<br/>
 此類別的組態旗標。 一或多個[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)中所指定的列舉型別[RuntimeClassFlags](../windows/runtimeclassflags-structure.md)結構。
 
 ## <a name="remarks"></a>備註
@@ -163,10 +163,10 @@ __forceinline HRESULT CanCastTo(
 
 ### <a name="parameters"></a>參數
 
-*riid*  
+*riid*<br/>
 參考介面識別碼。
 
-*ppv*  
+*ppv*<br/>
 如果成功，介面的指標所指定*riid*。
 
 ### <a name="return-value"></a>傳回值
@@ -206,10 +206,10 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>參數
 
-*index*  
+*index*<br/>
 以零為起始的索引，指出起始的陣列項目，這項作業。 這項作業完成時， *index*都會遞增 1。
 
-*iid*  
+*iid*<br/>
 IID 類型的陣列。
 
 ### <a name="remarks"></a>備註

@@ -16,42 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7369261efb43cdf9cd92f0924d1043cde50ac440
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a06b34ee7d38e5c0e99181c4af81d925b681ce75
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704011"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417302"
 ---
 # <a name="writecr8"></a>__writecr8
-**Microsoft 專屬**  
-  
- 將值寫入`Data`CR8 註冊。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-void writecr8(   
-   unsigned __int64 Data   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
+
+**Microsoft 專屬**
+
+將值寫入`Data`CR8 註冊。
+
+## <a name="syntax"></a>語法
+
+```
+void writecr8( 
+   unsigned __int64 Data 
+);
+```
+
+#### <a name="parameters"></a>參數
+
 *Data*<br/>
-[in]要寫入的 CR8 暫存器的值。  
-  
-## <a name="requirements"></a>需求  
-  
-|內建|架構|  
-|---------------|------------------|  
-|`__writecr8`|X64|  
-  
- **標頭檔** \<intrin.h >  
-  
-## <a name="remarks"></a>備註  
- 此內建只適用於核心模式，且此常式僅可作為內建常式使用。  
-  
-**結束 Microsoft 專屬**  
-  
-## <a name="see-also"></a>另請參閱  
- [編譯器內建](../intrinsics/compiler-intrinsics.md)
+[in]要寫入的 CR8 暫存器的值。
+
+## <a name="requirements"></a>需求
+
+|內建|架構|
+|---------------|------------------|
+|`__writecr8`|X64|
+
+**標頭檔** \<intrin.h >
+
+## <a name="remarks"></a>備註
+
+此內建只適用於核心模式，且此常式僅可作為內建常式使用。
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>另請參閱
+
+[編譯器內建](../intrinsics/compiler-intrinsics.md)

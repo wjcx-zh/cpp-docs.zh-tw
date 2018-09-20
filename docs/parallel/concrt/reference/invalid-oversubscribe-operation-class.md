@@ -18,54 +18,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b4e1eaf4bfca27ef22af103a5696ca2a34265d6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e62dc4ad1600b2e5cc7f955c4a419d27482bb557
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069180"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433214"
 ---
 # <a name="invalidoversubscribeoperation-class"></a>invalid_oversubscribe_operation 類別
-這個類別描述將 `_BeginOversubscription` 參數設為 `false` 來呼叫 `Context::Oversubscribe` 方法，而不先將 `_BeginOversubscription` 參數設為 `true` 來呼叫 `Context::Oversubscribe` 方法時擲回的例外狀況。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-class invalid_oversubscribe_operation : public std::exception;  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[invalid_oversubscribe_operation](#ctor)|多載。 建構 `invalid_oversubscribe_operation` 物件。|  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `exception`  
-  
- `invalid_oversubscribe_operation`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** concrt.h  
-  
- **命名空間：** concurrency  
-  
-##  <a name="ctor"></a> invalid_oversubscribe_operation 
 
- 建構 `invalid_oversubscribe_operation` 物件。  
-  
-```  
+這個類別描述將 `_BeginOversubscription` 參數設為 `false` 來呼叫 `Context::Oversubscribe` 方法，而不先將 `_BeginOversubscription` 參數設為 `true` 來呼叫 `Context::Oversubscribe` 方法時擲回的例外狀況。
+
+## <a name="syntax"></a>語法
+
+```
+class invalid_oversubscribe_operation : public std::exception;
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[invalid_oversubscribe_operation](#ctor)|多載。 建構 `invalid_oversubscribe_operation` 物件。|
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`exception`
+
+`invalid_oversubscribe_operation`
+
+## <a name="requirements"></a>需求
+
+**標頭：** concrt.h
+
+**命名空間：** concurrency
+
+##  <a name="ctor"></a> invalid_oversubscribe_operation
+
+建構 `invalid_oversubscribe_operation` 物件。
+
+```
 explicit _CRTIMP invalid_oversubscribe_operation(_In_z_ const char* _Message) throw();
 
- 
 invalid_oversubscribe_operation() throw();
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *訊息 （_m)*<br/>
-錯誤的描述性訊息。  
-  
-## <a name="see-also"></a>另請參閱  
- [concurrency 命名空間](concurrency-namespace.md)
+錯誤的描述性訊息。
+
+## <a name="see-also"></a>另請參閱
+
+[concurrency 命名空間](concurrency-namespace.md)

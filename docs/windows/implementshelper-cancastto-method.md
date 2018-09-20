@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab1f2c16f7329f455fbd1fea525b17c9cc433a36
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9487ba4e05a0094d852b0db0c9c39009c027dc9e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593151"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423737"
 ---
 # <a name="implementshelpercancastto-method"></a>ImplementsHelper::CanCastTo 方法
 
@@ -44,13 +44,13 @@ HRESULT CanCastTo(
 
 ### <a name="parameters"></a>參數
 
-*riid*  
+*riid*<br/>
 參考介面識別碼。
 
-*ppv*  
+*ppv*<br/>
 如果這項作業成功時，所指定之介面指標*riid*或是*iid*。
 
-*iid*  
+*iid*<br/>
 參考介面識別碼。
 
 ## <a name="return-value"></a>傳回值
@@ -69,5 +69,5 @@ HRESULT CanCastTo(
 
 ## <a name="see-also"></a>另請參閱
 
-[ImplementsHelper 結構](../windows/implementshelper-structure.md)  
+[ImplementsHelper 結構](../windows/implementshelper-structure.md)<br/>
 [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

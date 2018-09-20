@@ -1,5 +1,5 @@
 ---
-title: CCustomInterpolator 類別 |Microsoft 文件
+title: CCustomInterpolator 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -46,257 +46,294 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7ab45ad47ad0120fa4e04937e180841bdb5f981
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 175af6d9fdd02e24aaa9caae663db51c7dd4167a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955085"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432817"
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator 類別
-實作基本 Interpolator。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-class CCustomInterpolator;  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CCustomInterpolator::CCustomInterpolator](#ccustominterpolator)|多載。 建構自訂 interpolator 物件，並初始化持續時間和指定的值的速度。|  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CCustomInterpolator::GetDependencies](#getdependencies)|取得 interpolator 的相依性。|  
-|[CCustomInterpolator::GetDuration](#getduration)|取得 interpolator 的持續時間。|  
-|[CCustomInterpolator::GetFinalValue](#getfinalvalue)|取得 interpolator 會導致的最終值。|  
-|[CCustomInterpolator::Init](#init)|初始化持續時間和最後一個值。|  
-|[CCustomInterpolator::InterpolateValue](#interpolatevalue)|進行插補在指定位移的值。|  
-|[CCustomInterpolator::InterpolateVelocity](#interpolatevelocity)|插補在指定位移的速度|  
-|[CCustomInterpolator::SetDuration](#setduration)|Interpolator 的持續時間設定。|  
-|[CCustomInterpolator::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Interpolator 的起始值和速度設定。|  
-  
-### <a name="protected-data-members"></a>受保護的資料成員  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CCustomInterpolator::m_currentValue](#m_currentvalue)|插補的值。|  
-|[CCustomInterpolator::m_currentVelocity](#m_currentvelocity)|插補的速度。|  
-|[CCustomInterpolator::m_duration](#m_duration)|轉換的持續時間。|  
-|[CCustomInterpolator::m_finalValue](#m_finalvalue)|變數在轉換結束最後的值。|  
-|[CCustomInterpolator::m_initialValue](#m_initialvalue)|在開始轉換的變數的值。|  
-|[CCustomInterpolator::m_initialVelocity](#m_initialvelocity)|在開始轉換的變數的速度。|  
-  
-## <a name="remarks"></a>備註  
- CCustomInterpolator 從衍生類別並覆寫所有必要的方法，以便實作自訂的插補演算法。 這個類別的指標應該當做參數傳遞給 CCustomTransition。  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `CCustomInterpolator`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** afxanimationcontroller.h  
-  
-##  <a name="ccustominterpolator"></a>  CCustomInterpolator::CCustomInterpolator  
- 建構自訂 interpolator 物件，並設定所有預設值為 0 的值。  
-  
-```  
+
+實作基本 Interpolator。
+
+## <a name="syntax"></a>語法
+
+```
+class CCustomInterpolator;
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[CCustomInterpolator::CCustomInterpolator](#ccustominterpolator)|多載。 建構自訂 interpolator 物件並初始化期間以及指定的值的速度。|
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[CCustomInterpolator::GetDependencies](#getdependencies)|取得 interpolator 的相依性。|
+|[CCustomInterpolator::GetDuration](#getduration)|取得 interpolator 的持續時間。|
+|[CCustomInterpolator::GetFinalValue](#getfinalvalue)|取得 interpolator 潛在客戶的最後一個值。|
+|[CCustomInterpolator::Init](#init)|初始化期間以及最終的值。|
+|[CCustomInterpolator::InterpolateValue](#interpolatevalue)|進行插補在指定的位移值。|
+|[CCustomInterpolator::InterpolateVelocity](#interpolatevelocity)|指定位移處的速度進行插補|
+|[CCustomInterpolator::SetDuration](#setduration)|設定 interpolator 的持續時間。|
+|[CCustomInterpolator::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Interpolator 的起始值和速度設定。|
+
+### <a name="protected-data-members"></a>受保護的資料成員
+
+|名稱|描述|
+|----------|-----------------|
+|[CCustomInterpolator::m_currentValue](#m_currentvalue)|插補的值。|
+|[CCustomInterpolator::m_currentVelocity](#m_currentvelocity)|內插補點的速度。|
+|[CCustomInterpolator::m_duration](#m_duration)|轉換的持續時間。|
+|[CCustomInterpolator::m_finalValue](#m_finalvalue)|在轉換結束變數最終的值。|
+|[CCustomInterpolator::m_initialValue](#m_initialvalue)|在轉換開始變數的值。|
+|[CCustomInterpolator::m_initialVelocity](#m_initialvelocity)|在轉換開始變數的速度。|
+
+## <a name="remarks"></a>備註
+
+CCustomInterpolator 從衍生類別並覆寫所有必要的方法，以便實作自訂內插補點演算法。 這個類別的指標應該做為參數傳遞至 CCustomTransition。
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`CCustomInterpolator`
+
+## <a name="requirements"></a>需求
+
+**標頭：** afxanimationcontroller.h
+
+##  <a name="ccustominterpolator"></a>  CCustomInterpolator::CCustomInterpolator
+
+建構自訂 interpolator 物件，並設定所有預設值為 0 的值。
+
+```
 CCustomInterpolator();
 
- 
+
 CCustomInterpolator(
-    UI_ANIMATION_SECONDS duration,  
+    UI_ANIMATION_SECONDS duration,
     DOUBLE finalValue);
-```  
-  
-### <a name="parameters"></a>參數  
- *持續時間*  
- 轉換的持續時間。  
-  
- *finalValue*  
-  
-### <a name="remarks"></a>備註  
- 您可以使用 CCustomInterpolator::Init 初始化持續時間和更新版本中的程式碼的最終值。  
-  
-##  <a name="getdependencies"></a>  CCustomInterpolator::GetDependencies  
- 取得 interpolator 的相依性。  
-  
-```  
+```
+
+### <a name="parameters"></a>參數
+
+*持續時間*<br/>
+轉換的持續時間。
+
+*finalValue*
+
+### <a name="remarks"></a>備註
+
+您可以使用 CCustomInterpolator::Init 初始化期間以及最終的值，稍後在程式碼。
+
+##  <a name="getdependencies"></a>  CCustomInterpolator::GetDependencies
+
+取得 interpolator 的相依性。
+
+```
 virtual BOOL GetDependencies(
-    UI_ANIMATION_DEPENDENCIES* initialValueDependencies,  
-    UI_ANIMATION_DEPENDENCIES* initialVelocityDependencies,  
+    UI_ANIMATION_DEPENDENCIES* initialValueDependencies,
+    UI_ANIMATION_DEPENDENCIES* initialVelocityDependencies,
     UI_ANIMATION_DEPENDENCIES* durationDependencies);
-```  
-  
-### <a name="parameters"></a>參數  
- *initialValueDependencies*  
- 輸出。 Interpolator 的起始值而定的各個層面傳遞給 SetInitialValueAndVelocity。  
-  
- *initialVelocityDependencies*  
- 輸出。 Interpolator 的初始速度而定的部分傳遞至 SetInitialValueAndVelocity。  
-  
- *durationDependencies*  
- 輸出。 Interpolator 的持續時間而定的部分傳遞至 SetDuration。  
-  
-### <a name="return-value"></a>傳回值  
- 基本的實作一律會傳回 TRUE。 會傳回 FALSE 覆寫的實作如果您想要失敗事件。  
-  
-##  <a name="getduration"></a>  CCustomInterpolator::GetDuration  
- 取得 interpolator 的持續時間。  
-  
-```  
+```
+
+### <a name="parameters"></a>參數
+
+*initialValueDependencies*<br/>
+輸出。 層面 interpolator 相依於的初始值會傳遞至 SetInitialValueAndVelocity。
+
+*initialVelocityDependencies*<br/>
+輸出。 Interpolator 的初始速度而定的各個層面會傳遞至 SetInitialValueAndVelocity。
+
+*durationDependencies*<br/>
+輸出。 Interpolator 的持續時間而定的層面會傳遞至 SetDuration。
+
+### <a name="return-value"></a>傳回值
+
+基本的實作一定會傳回 TRUE。 傳回 FALSE 的覆寫實作如果您想要失敗事件。
+
+##  <a name="getduration"></a>  CCustomInterpolator::GetDuration
+
+取得 interpolator 的持續時間。
+
+```
 virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
-```  
-  
-### <a name="parameters"></a>參數  
- *持續時間*  
- 輸出。 轉換，以秒為單位的持續時間。  
-  
-### <a name="return-value"></a>傳回值  
- 基本的實作一律會傳回 TRUE。 會傳回 FALSE 覆寫的實作如果您想要失敗事件。  
-  
-##  <a name="getfinalvalue"></a>  CCustomInterpolator::GetFinalValue  
- 取得 interpolator 會導致的最終值。  
-  
-```  
+```
+
+### <a name="parameters"></a>參數
+
+*持續時間*<br/>
+輸出。 轉換，以秒為單位的持續時間。
+
+### <a name="return-value"></a>傳回值
+
+基本的實作一定會傳回 TRUE。 傳回 FALSE 的覆寫實作如果您想要失敗事件。
+
+##  <a name="getfinalvalue"></a>  CCustomInterpolator::GetFinalValue
+
+取得 interpolator 潛在客戶的最後一個值。
+
+```
 virtual BOOL GetFinalValue(DOUBLE* value);
-```  
-  
-### <a name="parameters"></a>參數  
- *值*  
- 輸出。 變數在轉換結束最後的值。  
-  
-### <a name="return-value"></a>傳回值  
- 基本的實作一律會傳回 TRUE。 會傳回 FALSE 覆寫的實作如果您想要失敗事件。  
-  
-##  <a name="init"></a>  CCustomInterpolator::Init  
- 初始化持續時間和最後一個值。  
-  
-```  
+```
+
+### <a name="parameters"></a>參數
+
+*值*<br/>
+輸出。 在轉換結束變數最終的值。
+
+### <a name="return-value"></a>傳回值
+
+基本的實作一定會傳回 TRUE。 傳回 FALSE 的覆寫實作如果您想要失敗事件。
+
+##  <a name="init"></a>  CCustomInterpolator::Init
+
+初始化期間以及最終的值。
+
+```
 void Init(
-    UI_ANIMATION_SECONDS duration,  
+    UI_ANIMATION_SECONDS duration,
     DOUBLE finalValue);
-```  
-  
-### <a name="parameters"></a>參數  
- *持續時間*  
- 轉換的持續時間。  
-  
- *finalValue*  
- 變數在轉換結束最後的值。  
-  
-##  <a name="interpolatevalue"></a>  CCustomInterpolator::InterpolateValue  
- 進行插補在指定位移的值。  
-  
-```  
+```
+
+### <a name="parameters"></a>參數
+
+*持續時間*<br/>
+轉換的持續時間。
+
+*finalValue*<br/>
+在轉換結束變數最終的值。
+
+##  <a name="interpolatevalue"></a>  CCustomInterpolator::InterpolateValue
+
+進行插補在指定的位移值。
+
+```
 virtual BOOL InterpolateValue(
-    UI_ANIMATION_SECONDS */,  
+    UI_ANIMATION_SECONDS */,
     DOUBLE* value);
-```  
-  
-### <a name="parameters"></a>參數  
- *值*  
- 輸出。 插補的值。  
-  
-### <a name="return-value"></a>傳回值  
- 基本的實作一律會傳回 TRUE。 會傳回 FALSE 覆寫的實作如果您想要失敗事件。  
-  
-##  <a name="interpolatevelocity"></a>  CCustomInterpolator::InterpolateVelocity  
- 插補在指定位移的速度  
-  
-```  
+```
+
+### <a name="parameters"></a>參數
+
+*值*<br/>
+輸出。 插補的值。
+
+### <a name="return-value"></a>傳回值
+
+基本的實作一定會傳回 TRUE。 傳回 FALSE 的覆寫實作如果您想要失敗事件。
+
+##  <a name="interpolatevelocity"></a>  CCustomInterpolator::InterpolateVelocity
+
+指定位移處的速度進行插補
+
+```
 virtual BOOL InterpolateVelocity(
-    UI_ANIMATION_SECONDS */,  
+    UI_ANIMATION_SECONDS */,
     DOUBLE* velocity);
-```  
-  
-### <a name="parameters"></a>參數  
- *速度*  
- 輸出。 在位移變數的速度。  
-  
-### <a name="return-value"></a>傳回值  
- 基本的實作一律會傳回 TRUE。 會傳回 FALSE 覆寫的實作如果您想要失敗事件。  
-  
-##  <a name="m_currentvalue"></a>  CCustomInterpolator::m_currentValue  
- 插補的值。  
-  
-```  
-DOUBLE m_currentValue;  
-```  
-  
-##  <a name="m_currentvelocity"></a>  CCustomInterpolator::m_currentVelocity  
- 插補的速度。  
-  
-```  
-DOUBLE m_currentVelocity;  
-```  
-  
-##  <a name="m_duration"></a>  CCustomInterpolator::m_duration  
- 轉換的持續時間。  
-  
-```  
-UI_ANIMATION_SECONDS m_duration;  
-```  
-  
-##  <a name="m_finalvalue"></a>  CCustomInterpolator::m_finalValue  
- 變數在轉換結束最後的值。  
-  
-```  
-DOUBLE m_finalValue;  
-```  
-  
-##  <a name="m_initialvalue"></a>  CCustomInterpolator::m_initialValue  
- 在開始轉換的變數的值。  
-  
-```  
-DOUBLE m_initialValue;  
-```  
-  
-##  <a name="m_initialvelocity"></a>  CCustomInterpolator::m_initialVelocity  
- 在開始轉換的變數的速度。  
-  
-```  
-DOUBLE m_initialVelocity;  
-```  
-  
-##  <a name="setduration"></a>  CCustomInterpolator::SetDuration  
- Interpolator 的持續時間設定。  
-  
-```  
+```
+
+### <a name="parameters"></a>參數
+
+*速度*<br/>
+輸出。 在位移變數的速度。
+
+### <a name="return-value"></a>傳回值
+
+基本的實作一定會傳回 TRUE。 傳回 FALSE 的覆寫實作如果您想要失敗事件。
+
+##  <a name="m_currentvalue"></a>  CCustomInterpolator::m_currentValue
+
+插補的值。
+
+```
+DOUBLE m_currentValue;
+```
+
+##  <a name="m_currentvelocity"></a>  CCustomInterpolator::m_currentVelocity
+
+內插補點的速度。
+
+```
+DOUBLE m_currentVelocity;
+```
+
+##  <a name="m_duration"></a>  CCustomInterpolator::m_duration
+
+轉換的持續時間。
+
+```
+UI_ANIMATION_SECONDS m_duration;
+```
+
+##  <a name="m_finalvalue"></a>  CCustomInterpolator::m_finalValue
+
+在轉換結束變數最終的值。
+
+```
+DOUBLE m_finalValue;
+```
+
+##  <a name="m_initialvalue"></a>  CCustomInterpolator::m_initialValue
+
+在轉換開始變數的值。
+
+```
+DOUBLE m_initialValue;
+```
+
+##  <a name="m_initialvelocity"></a>  CCustomInterpolator::m_initialVelocity
+
+在轉換開始變數的速度。
+
+```
+DOUBLE m_initialVelocity;
+```
+
+##  <a name="setduration"></a>  CCustomInterpolator::SetDuration
+
+設定 interpolator 的持續時間。
+
+```
 virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
-```  
-  
-### <a name="parameters"></a>參數  
- *持續時間*  
- 轉換的持續時間。  
-  
-### <a name="return-value"></a>傳回值  
- 基本的實作一律會傳回 TRUE。 會傳回 FALSE 覆寫的實作如果您想要失敗事件。  
-  
-##  <a name="setinitialvalueandvelocity"></a>  CCustomInterpolator::SetInitialValueAndVelocity  
- Interpolator 的起始值和速度設定。  
-  
-```  
+```
+
+### <a name="parameters"></a>參數
+
+*持續時間*<br/>
+轉換的持續時間。
+
+### <a name="return-value"></a>傳回值
+
+基本的實作一定會傳回 TRUE。 傳回 FALSE 的覆寫實作如果您想要失敗事件。
+
+##  <a name="setinitialvalueandvelocity"></a>  CCustomInterpolator::SetInitialValueAndVelocity
+
+Interpolator 的起始值和速度設定。
+
+```
 virtual BOOL SetInitialValueAndVelocity(
-    DOUBLE initialValue,  
+    DOUBLE initialValue,
     DOUBLE initialVelocity);
-```  
-  
-### <a name="parameters"></a>參數  
- *initialValue*  
- 在開始轉換的變數的值。  
-  
- *initialVelocity*  
- 在開始轉換的變數的速度。  
-  
-### <a name="return-value"></a>傳回值  
- 基本的實作一律會傳回 TRUE。 會傳回 FALSE 覆寫的實作如果您想要失敗事件。  
-  
-## <a name="see-also"></a>另請參閱  
- [類別](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>參數
+
+*initialValue*<br/>
+在轉換開始變數的值。
+
+*initialVelocity*<br/>
+在轉換開始變數的速度。
+
+### <a name="return-value"></a>傳回值
+
+基本的實作一定會傳回 TRUE。 傳回 FALSE 的覆寫實作如果您想要失敗事件。
+
+## <a name="see-also"></a>另請參閱
+
+[類別](../../mfc/reference/mfc-classes.md)

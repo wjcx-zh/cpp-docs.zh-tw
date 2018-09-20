@@ -19,122 +19,131 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f0cd5e025e8f8b442c47cb5e115766478ff1d4f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c014da0707d2e4fdd1ec218107a628d0c2f91e24
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019888"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428484"
 ---
 # <a name="runtimeexception-class"></a>runtime_exception 類別
-C + + Accelerated Massive Parallelism (AMP) 文件庫中的例外狀況的基底型別。  
-  
-### <a name="syntax"></a>語法  
-  
-```  
-class runtime_exception : public std::exception;  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[runtime_exception 建構函式](#ctor)|初始化 `runtime_exception` 類別的新執行個體。|  
-|[~ runtime_exception 解構函式](#dtor)|終結`runtime_exception`物件。|  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[get_error_code](#runtime_exception__get_error_code)|傳回造成例外狀況的錯誤碼。|  
 
-  
-### <a name="public-operators"></a>公用運算子  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[operator=](#operator_eq)|將指定的內容複製`runtime_exception`到這個物件。|  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `exception`  
-  
- `runtime_exception`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** amprt.h  
-  
- **命名空間：** 並行  
+C + + Accelerated Massive Parallelism (AMP) 文件庫中的例外狀況的基底型別。
 
-## <a name="runtime_exception__ctor"></a>  runtime_exception 建構函式  
-初始化類別的新執行個體。  
-  
-### <a name="syntax"></a>語法  
-  
-```  
-runtime_exception(  
-    const char * _Message,  
-    HRESULT _Hresult ) throw();  
-  
-explicit runtime_exception(  
-    HRESULT _Hresult ) throw();  
-  
-runtime_exception(  
-    const runtime_exception & _Other ) throw();  
-```  
-  
-### <a name="parameters"></a>參數  
+### <a name="syntax"></a>語法
+
+```
+class runtime_exception : public std::exception;
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[runtime_exception 建構函式](#ctor)|初始化 `runtime_exception` 類別的新執行個體。|
+|[~ runtime_exception 解構函式](#dtor)|終結`runtime_exception`物件。|
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[get_error_code](#runtime_exception__get_error_code)|傳回造成例外狀況的錯誤碼。|
+
+### <a name="public-operators"></a>公用運算子
+
+|名稱|描述|
+|----------|-----------------|
+|[operator=](#operator_eq)|將指定的內容複製`runtime_exception`到這個物件。|
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`exception`
+
+`runtime_exception`
+
+## <a name="requirements"></a>需求
+
+**標頭：** amprt.h
+
+**命名空間：** 並行
+
+## <a name="runtime_exception__ctor"></a>  runtime_exception 建構函式
+
+初始化類別的新執行個體。
+
+### <a name="syntax"></a>語法
+
+```
+runtime_exception(
+    const char * _Message,
+    HRESULT _Hresult ) throw();
+
+explicit runtime_exception(
+    HRESULT _Hresult ) throw();
+
+runtime_exception(
+    const runtime_exception & _Other ) throw();
+```
+
+### <a name="parameters"></a>參數
+
 *訊息 （_m)*<br/>
-造成例外狀況之錯誤的描述。  
-  
+造成例外狀況之錯誤的描述。
+
 *_Hresult*<br/>
-造成例外狀況的錯誤的 HRESULT。  
-  
-*_Other*<br/>
-`runtime_exception`来複製的物件。  
-  
-### <a name="return-value"></a>傳回值  
- `runtime_exception` 物件。  
+造成例外狀況的錯誤的 HRESULT。
 
-## <a name="dtor"></a>  ~ runtime_exception 解構函式  
-終結物件。  
-  
-### <a name="syntax"></a>語法  
-  
-```  
-virtual ~runtime_exception() throw();  
-```  
-  
-## <a name="runtime_exception__get_error_code"></a>  get_error_code   
-傳回造成例外狀況的錯誤碼。  
-  
-### <a name="syntax"></a>語法  
-  
-```  
-HRESULT get_error_code() const throw();  
-```  
-  
-### <a name="return-value"></a>傳回值  
- 造成例外狀況的錯誤的 HRESULT。  
-  
-## <a name="runtime_exception__operator_eq"></a>  operator=   
-  將指定的內容複製`runtime_exception`到這個物件。  
-  
-### <a name="syntax"></a>語法  
-  
-```  
-runtime_exception & operator= (    const runtime_exception & _Other ) throw();  
-```  
-  
-### <a name="parameters"></a>參數  
 *_Other*<br/>
-`runtime_exception`来複製的物件。  
-  
-### <a name="return-value"></a>傳回值  
- 此參考`runtime_exception`物件。  
-  
+`runtime_exception`来複製的物件。
 
-  
-## <a name="see-also"></a>另請參閱  
- [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+### <a name="return-value"></a>傳回值
+
+`runtime_exception` 物件。
+
+## <a name="dtor"></a>  ~ runtime_exception 解構函式
+
+終結物件。
+
+### <a name="syntax"></a>語法
+
+```
+virtual ~runtime_exception() throw();
+```
+
+## <a name="runtime_exception__get_error_code"></a>  get_error_code
+
+傳回造成例外狀況的錯誤碼。
+
+### <a name="syntax"></a>語法
+
+```
+HRESULT get_error_code() const throw();
+```
+
+### <a name="return-value"></a>傳回值
+
+造成例外狀況的錯誤的 HRESULT。
+
+## <a name="runtime_exception__operator_eq"></a>  operator=
+  將指定的內容複製`runtime_exception`到這個物件。
+
+### <a name="syntax"></a>語法
+
+```
+runtime_exception & operator= (    const runtime_exception & _Other ) throw();
+```
+
+### <a name="parameters"></a>參數
+
+*_Other*<br/>
+`runtime_exception`来複製的物件。
+
+### <a name="return-value"></a>傳回值
+
+此參考`runtime_exception`物件。
+
+## <a name="see-also"></a>另請參閱
+
+[Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

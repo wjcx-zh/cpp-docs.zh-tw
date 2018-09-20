@@ -1,5 +1,5 @@
 ---
-title: 使用框架視窗 |Microsoft 文件
+title: 使用框架 Windows |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 636762ae7e1b1d1a5dd109bb71b98c81b51fe50b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cb895c50d7265c0fd1478ba421f2da860d49a19
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381913"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400437"
 ---
 # <a name="using-frame-windows"></a>使用框架視窗
-MFC 架構會建立文件框架視窗，和其檢視與文件 — 實作的新功能和開啟檔案 功能表命令的一部分。 架構會為您執行大部分的框架視窗的工作，因為您播放的小型角色建立、 使用和終結這些視窗中。 您可以不過，明確地建立自己的框架視窗和子視窗的特殊用途。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
-  
--   [建立文件框架視窗](../mfc/creating-document-frame-windows.md)  
-  
--   [初始化 CWnd 物件的時機](../mfc/when-to-initialize-cwnd-objects.md)  
-  
--   [終結框架視窗](../mfc/destroying-frame-windows.md)  
-  
--   [管理 MDI 子視窗](../mfc/managing-mdi-child-windows.md)  
-  
--   [管理目前的檢視](../mfc/managing-the-current-view.md)  
-  
--   [管理功能表、 控制列和快速鍵](../mfc/managing-menus-control-bars-and-accelerators.md)  
-  
--   [拖放在框架視窗中的檔案](../mfc/dragging-and-dropping-files-in-a-frame-window.md)  
-  
--   [回應動態資料交換 (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)  
-  
--   [協調其他視窗動作](../mfc/orchestrating-other-window-actions.md)  
-  
--   [管理即時線上說明](../mfc/orchestrating-other-window-actions.md)  
-  
--   [列印和預覽列印中框架視窗的角色](../mfc/orchestrating-other-window-actions.md)  
-  
-## <a name="see-also"></a>另請參閱  
- [框架視窗](../mfc/frame-windows.md)
+
+MFC 架構會建立文件框架視窗，及其檢視表和文件，做為其實作的 [新增] 和 [檔案] 功能表開啟命令的一部分。 架構會為您的大部分的框架視窗的工作，因為您播放的小型角色中建立、 使用和終結這些視窗。 您可以不過，明確地建立您自己的框架視窗和子視窗的特殊用途。
+
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+
+- [建立文件框架視窗](../mfc/creating-document-frame-windows.md)
+
+- [初始化 CWnd 物件的時機](../mfc/when-to-initialize-cwnd-objects.md)
+
+- [終結框架視窗](../mfc/destroying-frame-windows.md)
+
+- [管理 MDI 子視窗](../mfc/managing-mdi-child-windows.md)
+
+- [管理目前的檢視](../mfc/managing-the-current-view.md)
+
+- [管理功能表、 控制列和快速鍵](../mfc/managing-menus-control-bars-and-accelerators.md)
+
+- [拖放在框架視窗中的檔案](../mfc/dragging-and-dropping-files-in-a-frame-window.md)
+
+- [回應動態資料交換 (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)
+
+- [協調其他視窗動作](../mfc/orchestrating-other-window-actions.md)
+
+- [管理的即時線上說明](../mfc/orchestrating-other-window-actions.md)
+
+- [列印和預覽列印中框架視窗的角色](../mfc/orchestrating-other-window-actions.md)
+
+## <a name="see-also"></a>另請參閱
+
+[框架視窗](../mfc/frame-windows.md)
 

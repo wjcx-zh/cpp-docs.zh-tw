@@ -64,12 +64,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e98bfb2922f95e75ef54f45c153f9ea80eb7d80e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cd0858763d31e1f46e1cb366154871f06ae7a910
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758257"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400402"
 ---
 # <a name="cimage-class"></a>CImage 類別
 
@@ -1669,11 +1669,11 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 
 ## <a name="see-also"></a>另請參閱
 
-[MMXSwarm 範例](../../visual-cpp-samples.md)   
-[SimpleImage 範例](../../visual-cpp-samples.md)   
-[裝置獨立點陣圖](/windows/desktop/gdi/device-independent-bitmaps)   
-[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
-[ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)
-[與裝置無關的點陣圖](/windows/desktop/gdi/device-independent-bitmaps)   
+[MMXSwarm 範例](../../visual-cpp-samples.md)<br/>
+[SimpleImage 範例](../../visual-cpp-samples.md)<br/>
+[裝置獨立點陣圖](/windows/desktop/gdi/device-independent-bitmaps)<br/>
+[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)<br/>
+[ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)<br/>
+[裝置獨立點陣圖](/windows/desktop/gdi/device-independent-bitmaps)<br/>
 [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
 

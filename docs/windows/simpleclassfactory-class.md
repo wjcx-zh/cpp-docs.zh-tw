@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b20cbb906676705113bd1a84884cc5719b8272bf
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 4a3e262567927b818072c1e05acd18aa64cbaa6c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691441"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446506"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory 類別
 
@@ -39,7 +39,7 @@ class SimpleClassFactory : public ClassFactory<>;
 
 ### <a name="parameters"></a>參數
 
-*基底*  
+*基底*<br/>
 基底類別。
 
 ## <a name="remarks"></a>備註
@@ -102,15 +102,15 @@ STDMETHOD( CreateInstance )(
 
 #### <a name="parameters"></a>參數
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 必須是`nullptr`; 否則傳回的值是 CLASS_E_NOAGGREGATION。
 
 SimpleClassFactory 不支援彙總。 如果已支援彙總，但所建立的物件已是在彙總的一部分*pUnkOuter*會是指標，以控制`IUnknown`彙總的介面。
 
-*riid*  
+*riid*<br/>
 介面若要建立之物件的識別碼。
 
-*ppvObject*  
+*ppvObject*<br/>
 這項作業完成時，所指定的物件執行個體的指標*riid*參數。
 
 ### <a name="return-value"></a>傳回值

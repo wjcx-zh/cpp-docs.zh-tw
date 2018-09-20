@@ -26,19 +26,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c157dee9e1c8b604822d81fb87e2aef25ef97c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0831c59f9ea5c5068dc8cf70ca203c240bdcacc7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43682280"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424991"
 ---
 # <a name="tn056-installation-of-localized-mfc-components"></a>TN056：當地語系化 MFC 元件的安裝
-這個技術提示討論的是當地語系化 MFC 元件的安裝，現在已經過時。  
-  
- **請參閱** [TechNote 57](../mfc/tn057-localization-of-mfc-components.md)如需詳細資訊，關於當地語系化 MFC 應用程式。  
-  
-## <a name="see-also"></a>另請參閱  
- [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)   
- [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
+
+這個技術提示討論的是當地語系化 MFC 元件的安裝，現在已經過時。
+
+**請參閱** [TechNote 57](../mfc/tn057-localization-of-mfc-components.md)如需詳細資訊，關於當地語系化 MFC 應用程式。
+
+## <a name="see-also"></a>另請參閱
+
+[依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
+[依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

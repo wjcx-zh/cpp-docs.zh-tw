@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f1324fdef8e63f202536f46c4b164905a9130cd
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: a925ad172e5cf146d830207383d4bad0da57ff9e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44312675"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417564"
 ---
 # <a name="removing-space-between-buttons-on-a-toolbar-c"></a>移除 （c + +） 工具列按鈕之間的空間
 
@@ -41,5 +41,5 @@ MFC 或 ATL
 
 ## <a name="see-also"></a>另請參閱
 
-[建立、移動和編輯工具列按鈕](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[建立、移動和編輯工具列按鈕](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [工具列編輯器](../windows/toolbar-editor.md)

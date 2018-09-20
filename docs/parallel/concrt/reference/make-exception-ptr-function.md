@@ -14,34 +14,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3f483d266b8150dfd4aaa5299ffec280d447157
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 401bc3cd9933f44b92f5f361b1a1aaad24bc79ce
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037615"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436945"
 ---
 # <a name="makeexceptionptr-function"></a>make_exception_ptr 函式
-## <a name="syntax"></a>語法  
-  
+
+## <a name="syntax"></a>語法
+
 ```
 template<class _E>
 exception_ptr make_exception_ptr(_E _Except);
-```  
-  
-#### <a name="parameters"></a>參數  
+```
+
+#### <a name="parameters"></a>參數
+
 *_E*<br/>
 例外狀況類型。
 
 *_Except*<br/>
 例外狀況值。
-  
-## <a name="return-value"></a>傳回值  
-  
-## <a name="requirements"></a>需求  
- **標頭：** ppltasks.h  
-  
- **命名空間：** std  
-  
-## <a name="see-also"></a>另請參閱  
- [std 命名空間](std-namespace.md)
+
+## <a name="return-value"></a>傳回值
+
+## <a name="requirements"></a>需求
+
+**標頭：** ppltasks.h
+
+**命名空間：** std
+
+## <a name="see-also"></a>另請參閱
+
+[std 命名空間](std-namespace.md)

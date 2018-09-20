@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33054190e94ca7d136e319b2afc9e28c9080de05
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
-ms.translationtype: MT
+ms.openlocfilehash: 1756339fcf039cc7d1beabf257ba32cc1352d382
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677972"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711603"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 類別
 `CMFCVisualManagerOffice2003` 為應用程式提供 Microsoft Office 2003 的外觀。  
@@ -245,20 +245,20 @@ virtual BOOL DrawComboBorderWinXP(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 下拉式方塊框線的週框。  
+*rect*<br/>
+[in]下拉式方塊框線的週框。  
   
- [in]*bDisabled*  
- 指定是否要停用下拉式方塊框線。  
+*bDisabled*<br/>
+[in]指定是否要停用下拉式方塊框線。  
   
- [in]*bIsDropped*  
- 指定是否要向下卸除下拉式方塊框線。  
+*bIsDropped*<br/>
+[in]指定是否要向下卸除下拉式方塊框線。  
   
- [in]*bIsHighlighted*  
- 指定下拉式方塊框線會反白顯示。  
+*bIsHighlighted*<br/>
+[in]指定下拉式方塊框線會反白顯示。  
   
 ### <a name="return-value"></a>傳回值  
  佈景主題的 API 是否已啟用，或如果沒有，則為 FALSE，則傳回 TRUE。  
@@ -278,20 +278,20 @@ virtual BOOL DrawComboDropButtonWinXP(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 下拉式方塊下拉式按鈕的週框。  
+*rect*<br/>
+[in]下拉式方塊下拉式按鈕的週框。  
   
- [in]*bDisabled*  
- 指定是否要停用下拉式方塊下拉式按鈕。  
+*bDisabled*<br/>
+[in]指定是否要停用下拉式方塊下拉式按鈕。  
   
- [in]*bIsDropped*  
- 指定是否要向下卸除下拉式方塊下拉式按鈕。  
+*bIsDropped*<br/>
+[in]指定是否要向下卸除下拉式方塊下拉式按鈕。  
   
- [in]*bIsHighlighted*  
- 指定下拉式方塊下拉式按鈕已反白顯示。  
+*bIsHighlighted*<br/>
+[in]指定下拉式方塊下拉式按鈕已反白顯示。  
   
 ### <a name="return-value"></a>傳回值  
  佈景主題的 API 是否已啟用，或如果沒有，則為 FALSE，則傳回 TRUE。  
@@ -312,23 +312,23 @@ virtual void DrawCustomizeButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 顯示內容的指標。  
+*pDC*<br/>
+[in]顯示內容的指標。  
   
- [in]*rect*  
- 週框的按鈕  
+*rect*<br/>
+[in]週框的按鈕  
   
- [in]*bIsHorz*  
- 如果按鈕是水平或 FALSE 是否垂直，則為 TRUE。  
+*bIsHorz*<br/>
+[in]如果按鈕是水平或 FALSE 是否垂直，則為 TRUE。  
   
- [in]*狀態*  
- 要繪製 （一般、 已按下或反白顯示） 是與按鈕的狀態。  
+*state*<br/>
+[in]要繪製 （一般、 已按下或反白顯示） 是與按鈕的狀態。  
   
- [in]*bIsCustomize*  
- 如果自訂箭號向下] 或 [向左映像應該繪製在按鈕矩形中或 FALSE，如果沒有，則為 TRUE。  
+*bIsCustomize*<br/>
+[in]如果自訂箭號向下] 或 [向左映像應該繪製在按鈕矩形中或 FALSE，如果沒有，則為 TRUE。  
   
- [in]*bIsMoreButtons*  
- 如果水平或垂直自訂，則為 TRUE。 更多按鈕影像應該繪製在按鈕矩形中或 FALSE 如果不是。  
+*bIsMoreButtons*<br/>
+[in]如果水平或垂直自訂，則為 TRUE。 更多按鈕影像應該繪製在按鈕矩形中或 FALSE 如果不是。  
   
 ### <a name="remarks"></a>備註  
   
@@ -344,17 +344,17 @@ virtual BOOL DrawPushButtonWinXP(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 週框的按鈕。  
+*rect*<br/>
+[in]週框的按鈕。  
   
- [in]*pButton*  
- 指標[CMFCButton 類別](../../mfc/reference/cmfcbutton-class.md)来繪製物件。  
+*pButton*<br/>
+[in]指標[CMFCButton 類別](../../mfc/reference/cmfcbutton-class.md)来繪製物件。  
   
- [in]*uiState*  
- 忽略。 狀態取自*pButton*。  
+*uiState*<br/>
+[in]略過。 狀態取自*pButton*。  
   
 ### <a name="return-value"></a>傳回值  
  如果已啟用佈景主題的 API，則為 TRUE。否則為 FALSE。  
@@ -393,8 +393,8 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pPropList*  
- 此架構繪製屬性清單的指標。  
+*pPropList*<br/>
+[in]此架構繪製屬性清單的指標。  
   
 ### <a name="return-value"></a>傳回值  
  傳回背景色彩*pPropList*。  
@@ -410,8 +410,8 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pPropList*  
- 屬性清單的指標。  
+*pPropList*<br/>
+[in]屬性清單的指標。  
   
 ### <a name="return-value"></a>傳回值  
  傳回指定的屬性清單的文字色彩。  
@@ -429,11 +429,11 @@ virtual int GetShowAllMenuItemsHeight(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*sizeDefault*  
- 預設功能表大小。  
+*sizeDefault*<br/>
+[in]預設功能表大小。  
   
 ### <a name="return-value"></a>傳回值  
  根據預設，會傳回所有的功能表影像再加上邊界的高度。  
@@ -450,11 +450,11 @@ virtual void GetSmartDockingBaseGuideColors(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*clrBaseGroupBackground*  
- 若要參考[COLORREF](/windows/desktop/gdi/colorref)來設定背景色彩。  
+*clrBaseGroupBackground*<br/>
+[in]若要參考[COLORREF](/windows/desktop/gdi/colorref)來設定背景色彩。  
   
- [in]*clrBaseGroupBorder*  
- 若要參考[COLORREF](/windows/desktop/gdi/colorref)設的框線色彩。  
+*clrBaseGroupBorder*<br/>
+[in]若要參考[COLORREF](/windows/desktop/gdi/colorref)設的框線色彩。  
   
 ### <a name="remarks"></a>備註  
   
@@ -487,32 +487,32 @@ virtual void GetTabFrameColors(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pTabWnd*  
- 在畫面格繪製索引標籤索引標籤式視窗的指標。  
+*pTabWnd*<br/>
+[in]在畫面格繪製索引標籤索引標籤式視窗的指標。  
   
- [out]*clrDark*  
- 參考[COLORREF](/windows/desktop/gdi/colorref)參數，這個方法儲存的色彩之深色框線的索引標籤的位置。  
+*clrDark*<br/>
+[out]參考[COLORREF](/windows/desktop/gdi/colorref)參數，這個方法儲存的色彩之深色框線的索引標籤的位置。  
   
- [out]*clrBlack*  
- 這個方法儲存的索引標籤視窗框線的色彩 COLORREF 參數的參考。 框線的預設色彩為黑色。  
+*clrBlack*<br/>
+[out]這個方法儲存的索引標籤視窗框線的色彩 COLORREF 參數的參考。 框線的預設色彩為黑色。  
   
- [out]*clrHighlight*  
- 這個方法儲存的色彩反白顯示視窗的狀態 索引標籤的位置 COLORREF 參數的參考。  
+*clrHighlight*<br/>
+[out]這個方法儲存的色彩反白顯示視窗的狀態] 索引標籤的位置 COLORREF 參數的參考。  
   
- [out]*clrFace*  
- 這個方法儲存的索引標籤視窗的色彩 COLORREF 參數的參考。  
+*clrFace*<br/>
+[out]這個方法儲存的索引標籤視窗的色彩 COLORREF 參數的參考。  
   
- [out]*clrDarkShadow*  
- 這個方法儲存的索引標籤視窗陰影的色彩 COLORREF 參數的參考。  
+*clrDarkShadow*<br/>
+[out]這個方法儲存的索引標籤視窗陰影的色彩 COLORREF 參數的參考。  
   
- [out]*clrLight*  
- 這個方法儲存淺視窗邊緣的索引標籤的色彩 COLORREF 參數的參考。  
+*clrLight*<br/>
+[out]這個方法儲存淺視窗邊緣的索引標籤的色彩 COLORREF 參數的參考。  
   
- [out]*pbrFace*  
- 筆刷的參考指標。 這個方法會將儲存的筆刷，用來填滿 索引標籤 視窗，此參數中的臉部。  
+*pbrFace*<br/>
+[out]筆刷的參考指標。 這個方法會將儲存的筆刷，用來填滿 索引標籤 視窗，此參數中的臉部。  
   
- [out]*pbrBlack*  
- 筆刷的參考指標。 這個方法會儲存它以填滿黑色視窗邊緣的索引標籤在這個參數中使用的筆刷。  
+*pbrBlack*<br/>
+[out]筆刷的參考指標。 這個方法會儲存它以填滿黑色視窗邊緣的索引標籤在這個參數中使用的筆刷。  
   
 ### <a name="remarks"></a>備註  
   
@@ -550,11 +550,11 @@ virtual BOOL GetToolTipInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*params*  
- 參考[CMFCToolTipInfo 類別](../../mfc/reference/cmfctooltipinfo-class.md)其中這個方法會傳回工具提示資訊的物件。  
+*params*<br/>
+[out]參考[CMFCToolTipInfo 類別](../../mfc/reference/cmfctooltipinfo-class.md)其中這個方法會傳回工具提示資訊的物件。  
   
- [in]*n*  
- 輸入要傳回的工具提示資訊的資訊。  
+*n*<br/>
+[in]輸入要傳回的工具提示資訊的資訊。  
   
 ### <a name="return-value"></a>傳回值  
  否則傳回 TRUE，如果未傳回工具提示資訊和 FALSE。  
@@ -630,8 +630,8 @@ virtual BOOL IsToolbarRoundShape(CMFCToolBar* pToolBar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pToolBar*  
- 工具列有問題的指標。  
+*pToolBar*<br/>
+[in]工具列有問題的指標。  
   
 ### <a name="return-value"></a>傳回值  
  如果工具列為回合中或 FALSE 的功能表列後，才會傳回 TRUE。  
@@ -675,17 +675,17 @@ virtual void OnDrawAutoHideButtonBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rectBounds*  
- 大小和自動隱藏 按鈕的位置。  
+*rectBounds*<br/>
+[in]大小和自動隱藏] 按鈕的位置。  
   
- [in]*rectBorderSize*  
- 框線的大小。  
+*rectBorderSize*<br/>
+[in]框線的大小。  
   
- [in]*pButton*  
- 自動隱藏按鈕指標。 此架構繪製此按鈕的框線。  
+*pButton*<br/>
+[in]自動隱藏按鈕指標。 此架構繪製此按鈕的框線。  
   
 ### <a name="remarks"></a>備註  
  覆寫這個方法在衍生類別中的，如果您想要自訂的自動隱藏按鈕的框線外觀。 根據預設，這個方法會填入您的應用程式的預設陰影色彩的一般框線。  
@@ -704,17 +704,17 @@ virtual void OnDrawBarGripper(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 一種控制列的裝置內容指標。  
+*pDC*<br/>
+[in]一種控制列的裝置內容指標。  
   
- [in]*rectGripper*  
- 控制列周框。  
+*rectGripper*<br/>
+[in]控制列周框。  
   
- [in]*bHorz*  
- 布林值參數，指定是否水平或垂直將停駐控制列。  
+*bHorz*<br/>
+[in]布林值參數，指定是否水平或垂直將停駐控制列。  
   
- [in]*pBar*  
- 控制列指標。 Visual manager 繪製此控制列的移駐夾。  
+*pBar*<br/>
+[in]控制列指標。 Visual manager 繪製此控制列的移駐夾。  
   
 ### <a name="remarks"></a>備註  
  這個方法的預設實作會顯示標準的移駐夾。 若要自訂的移駐夾的外觀，覆寫此方法，自訂的類別衍生自[CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)類別。  
@@ -732,10 +732,10 @@ virtual BOOL OnDrawBrowseButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- [in]*rect*  
- [in]*pEdit*  
- [in]*狀態*  
+*pDC*<br/>
+[in][in]*rect*  
+*pEdit*<br/>
+[in][in]*狀態*  
  [in]*clrText*  
   
 ### <a name="return-value"></a>傳回值  
@@ -754,17 +754,17 @@ virtual void OnDrawButtonBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 工具列按鈕的裝置內容指標。  
+*pDC*<br/>
+[in]工具列按鈕的裝置內容指標。  
   
- [in]*pButton*  
- 在工具列按鈕的指標。 Framework 繪製這個按鈕的框線。  
+*pButton*<br/>
+[in]在工具列按鈕的指標。 Framework 繪製這個按鈕的框線。  
   
- [in]*rect*  
- 指定工具列按鈕的界限的矩形。  
+*rect*<br/>
+[in]指定工具列按鈕的界限的矩形。  
   
- [in]*狀態*  
- 列舉的資料型別指定工具列按鈕的目前狀態。  
+*state*<br/>
+[in]列舉的資料型別指定工具列按鈕的目前狀態。  
   
 ### <a name="remarks"></a>備註  
  這個方法的預設實作會顯示標準的框線。 覆寫此方法在衍生的視覺管理員，若要自訂工具列按鈕的框線外觀。  
@@ -784,20 +784,20 @@ virtual void OnDrawCaptionBarBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*pBar*  
- 指標[CMFCCaptionBar 類別](../../mfc/reference/cmfccaptionbar-class.md)物件。 Framework 繪製此標題列。  
+*pBar*<br/>
+[in]指標[CMFCCaptionBar 類別](../../mfc/reference/cmfccaptionbar-class.md)物件。 Framework 繪製此標題列。  
   
- [in]*rect*  
- 指定的標題列的界限的矩形。  
+*rect*<br/>
+[in]指定的標題列的界限的矩形。  
   
- [in]*clrBarBorder*  
- 框線的色彩。  
+*clrBarBorder*<br/>
+[in]框線的色彩。  
   
- [in]*bFlatBorder*  
- 如果框線應該有一般、 2D 的外觀或 FALSE，如果沒有，則為 TRUE。  
+*bFlatBorder*<br/>
+[in]如果框線應該有一般、 2D 的外觀或 FALSE，如果沒有，則為 TRUE。  
   
 ### <a name="remarks"></a>備註  
  若要自訂的標題列的框線外觀的衍生類別中，這個方法會覆寫。  
@@ -816,23 +816,23 @@ virtual void OnDrawCheckBoxEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 週框的核取方塊。  
+*rect*<br/>
+[in]週框的核取方塊。  
   
- [in]*nState*  
- 核取方塊的狀態： 0，如果未選取，1，若選取此選項，2 如果已核取 混合。  
+*nState*<br/>
+[in]核取方塊的狀態： 0，如果未選取，1，若選取此選項，2 如果已核取 [混合。  
   
- [in]*bHighlighted*  
- 如果核取方塊反白顯示，或如果沒有，則為 FALSE，則為 TRUE。  
+*bHighlighted*<br/>
+[in]如果核取方塊反白顯示，或如果沒有，則為 FALSE，則為 TRUE。  
   
- [in]*bPressed*  
- 如果核取方塊已按下，或如果沒有，則為 FALSE，則為 TRUE。  
+*bPressed*<br/>
+[in]如果核取方塊已按下，或如果沒有，則為 FALSE，則為 TRUE。  
   
- [in]*bEnabled*  
- 如果核取方塊為已啟用，或如果沒有，則為 FALSE，則為 TRUE。  
+*bEnabled*<br/>
+[in]如果核取方塊為已啟用，或如果沒有，則為 FALSE，則為 TRUE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -850,23 +850,23 @@ virtual void OnDrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 下拉式方塊按鈕的裝置內容指標。  
+*pDC*<br/>
+[in]下拉式方塊按鈕的裝置內容指標。  
   
- [in]*rect*  
- 指定下拉式方塊按鈕的界限的矩形。  
+*rect*<br/>
+[in]指定下拉式方塊按鈕的界限的矩形。  
   
- [in]*bDisabled*  
- 布林值參數，指出下拉式方塊按鈕是否為無法使用。  
+*bDisabled*<br/>
+[in]布林值參數，指出下拉式方塊按鈕是否為無法使用。  
   
- [in]*bIsDropped*  
- 布林值參數，指出是否要將下拉式方塊已下拉。  
+*bIsDropped*<br/>
+[in]布林值參數，指出是否要將下拉式方塊已下拉。  
   
- [in]*bIsHighlighted*  
- 布林值參數，指出下拉式方塊按鈕會反白顯示。  
+*bIsHighlighted*<br/>
+[in]布林值參數，指出下拉式方塊按鈕會反白顯示。  
   
- [in]*pButton*  
- `CMFCToolBarComboBoxButton` 物件的指標。 Framework 繪製此下拉式方塊按鈕。  
+*pButton*<br/>
+[in]指標`CMFCToolBarComboBoxButton`物件。 Framework 繪製此下拉式方塊按鈕。  
   
 ### <a name="remarks"></a>備註  
  覆寫此方法中您衍生的視覺管理員，以自訂下拉式方塊的框線外觀。  
@@ -885,23 +885,23 @@ virtual void OnDrawComboDropButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 指定下拉式按鈕的界限的矩形。  
+*rect*<br/>
+[in]指定下拉式按鈕的界限的矩形。  
   
- [in]*bDisabled*  
- 布林值參數，指出下拉式按鈕是否為無法使用。  
+*bDisabled*<br/>
+[in]布林值參數，指出下拉式按鈕是否為無法使用。  
   
- [in]*bIsDropped*  
- 布林值參數，指出是否要將下拉式方塊已下拉。  
+*bIsDropped*<br/>
+[in]布林值參數，指出是否要將下拉式方塊已下拉。  
   
- [in]*bIsHighlighted*  
- 布林值參數，表示下拉式按鈕已反白顯示。  
+*bIsHighlighted*<br/>
+[in]布林值參數，表示下拉式按鈕已反白顯示。  
   
- [in]*pButton*  
- `CMFCToolBarComboBoxButton` 物件的指標。 Framework 繪製此下拉式方塊按鈕的下拉式按鈕  
+*pButton*<br/>
+[in]指標`CMFCToolBarComboBoxButton`物件。 Framework 繪製此下拉式方塊按鈕的下拉式按鈕  
   
 ### <a name="remarks"></a>備註  
  覆寫此方法中您衍生的視覺管理員，為自訂下拉式方塊按鈕的下拉式按鈕的外觀。  
@@ -914,8 +914,8 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWndCtrl*  
- 指標[CWnd 類別](../../mfc/reference/cwnd-class.md)物件，表示要繪製之框線的控制項。  
+*pWndCtrl*<br/>
+[in]指標[CWnd 類別](../../mfc/reference/cwnd-class.md)物件，表示要繪製之框線的控制項。  
   
 ### <a name="remarks"></a>備註  
   
@@ -931,17 +931,17 @@ virtual void OnDrawExpandingBox(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 要繪製展開的方塊顯示內容的指標。  
+*pDC*<br/>
+[in]要繪製展開的方塊顯示內容的指標。  
   
- [in]*rect*  
- 展開要繪製的方塊周框。  
+*rect*<br/>
+[in]展開要繪製的方塊周框。  
   
- [in]*bIsOpened*  
- 要繪製的方塊是否開啟，或如果沒有，則為 FALSE，則為 TRUE。  
+*bIsOpened*<br/>
+[in]要繪製的方塊是否開啟，或如果沒有，則為 FALSE，則為 TRUE。  
   
- [in]*colorBox*  
- 要繪製的方塊的外框色彩。  
+*colorBox*<br/>
+[in]要繪製的方塊的外框色彩。  
   
 ### <a name="remarks"></a>備註  
   
@@ -958,17 +958,17 @@ virtual void OnDrawHeaderCtrlBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pCtrl*  
- 指標[CMFCHeaderCtrl 類別](../../mfc/reference/cmfcheaderctrl-class.md)物件。 Framework 繪製此標頭控制項的框線。  
+*pCtrl*<br/>
+[in]指標[CMFCHeaderCtrl 類別](../../mfc/reference/cmfcheaderctrl-class.md)物件。 Framework 繪製此標頭控制項的框線。  
   
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 指定的標頭控制項界限的矩形。  
+*rect*<br/>
+[in]指定的標頭控制項界限的矩形。  
   
- [in]*bIsPressed*  
- [in]*bIsHighlighted*  
+*bIsPressed*<br/>
+[in][in]*bIsHighlighted*  
  布林值參數，指出是否按下標題控制項。  
   
 ### <a name="remarks"></a>備註  
@@ -985,14 +985,14 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容指標[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)物件。  
+*pDC*<br/>
+[in]裝置內容指標[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)物件。  
   
- [in]*pMenu*  
- 指標[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)物件。 Framework 繪製框線這個快顯功能表。  
+*pMenu*<br/>
+[in]指標[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)物件。 Framework 繪製框線這個快顯功能表。  
   
- [in]*rect*  
- 指定的快顯功能表界限的矩形。  
+*rect*<br/>
+[in]指定的快顯功能表界限的矩形。  
   
 ### <a name="remarks"></a>備註  
  這個方法的預設實作會顯示標準功能表的邊框。 覆寫此方法在衍生的視覺管理員，若要自訂功能表框線的外觀。  
@@ -1007,11 +1007,11 @@ virtual void OnDrawOutlookBarSplitter(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rectSplitter*  
- 指定的分隔器界限的矩形。  
+*rectSplitter*<br/>
+[in]指定的分隔器界限的矩形。  
   
 ### <a name="remarks"></a>備註  
  覆寫此方法在衍生的視覺管理員，以自訂 Outlook 功能區上的分隔器的外觀。  
@@ -1028,17 +1028,17 @@ virtual void OnDrawOutlookPageButtonBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rectBtn*  
- 指定 Outlook 的 [頁面] 按鈕的界限的矩形。  
+*rectBtn*<br/>
+[in]指定 Outlook 的 [頁面] 按鈕的界限的矩形。  
   
- [in]*bIsHighlighted*  
- 布林值，指定按鈕會反白顯示。  
+*bIsHighlighted*<br/>
+[in]布林值，指定按鈕會反白顯示。  
   
- [in]*bIsPressed*  
- 布林值，指定是否要按下按鈕。  
+*bIsPressed*<br/>
+[in]布林值，指定是否要按下按鈕。  
   
 ### <a name="remarks"></a>備註  
  若要變更的 Outlook 的 [頁面] 按鈕外觀的自訂視覺管理員中，這個方法會覆寫。  
@@ -1054,14 +1054,14 @@ virtual void OnDrawPaneBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的控制列指標。  
+*pDC*<br/>
+[in]裝置內容的控制列指標。  
   
- [in]*pBar*  
- 窗格的指標。 Visual manager 繪製此窗格的框線。  
+*pBar*<br/>
+[in]窗格的指標。 Visual manager 繪製此窗格的框線。  
   
- [in]*rect*  
- 指出窗格的界限的矩形。  
+*rect*<br/>
+[in]指出窗格的界限的矩形。  
   
 ### <a name="remarks"></a>備註  
  這個方法的預設實作會顯示標準的框線。 若要自訂的框線外觀的衍生類別中，這個方法會覆寫。  
@@ -1079,20 +1079,20 @@ virtual COLORREF OnDrawPaneCaption(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*pBar*  
- 指標[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)物件。 Framework 繪製此窗格的標題。  
+*pBar*<br/>
+[in]指標[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)物件。 Framework 繪製此窗格的標題。  
   
- [in]*bActive*  
- 布林值參數，指示控制列是否為作用中。  
+*bActive*<br/>
+[in]布林值參數，指示控制列是否為作用中。  
   
- [in]*rectCaption*  
- 指定標題的界限的矩形。  
+*rectCaption*<br/>
+[in]指定標題的界限的矩形。  
   
- [in]*rectButtons*  
- 指定標題按鈕的界限的矩形。  
+*rectButtons*<br/>
+[in]指定標題按鈕的界限的矩形。  
   
 ### <a name="return-value"></a>傳回值  
  A [COLORREF](/windows/desktop/gdi/colorref)參數，表示標題的文字色彩。  
@@ -1109,11 +1109,11 @@ virtual void OnDrawPopupWindowBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的快顯視窗的指標。  
+*pDC*<br/>
+[in]裝置內容的快顯視窗的指標。  
   
- [in]*rect*  
- 週框的快顯視窗。  
+*rect*<br/>
+[in]週框的快顯視窗。  
   
 ### <a name="remarks"></a>備註  
   
@@ -1128,14 +1128,14 @@ virtual void OnDrawPopupWindowButtonBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 按鈕的裝置內容指標。  
+*pDC*<br/>
+[in]按鈕的裝置內容指標。  
   
- [in]*rectClient*  
- 週框矩形的按鈕。  
+*rectClient*<br/>
+[in]週框矩形的按鈕。  
   
- [in]*pButton*  
- 按鈕的指標 ( [CMFCDesktopAlertWndButton 類別](../../mfc/reference/cmfcdesktopalertwndbutton-class.md)物件)。  
+*pButton*<br/>
+[in]按鈕的指標 ( [CMFCDesktopAlertWndButton 類別](../../mfc/reference/cmfcdesktopalertwndbutton-class.md)物件)。  
   
 ### <a name="remarks"></a>備註  
   
@@ -1150,14 +1150,14 @@ virtual COLORREF OnDrawPopupWindowCaption(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 標題的裝置內容指標。  
+*pDC*<br/>
+[in]標題的裝置內容指標。  
   
- [in]*rectCaption*  
- 週框的標題。  
+*rectCaption*<br/>
+[in]週框的標題。  
   
- [in]*pPopupWnd*  
- 要繪製標題的快顯視窗的指標。  
+*pPopupWnd*<br/>
+[in]要繪製標題的快顯視窗的指標。  
   
 ### <a name="return-value"></a>傳回值  
  標題的文字色彩。  
@@ -1176,14 +1176,14 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*pGroup*  
- 指標，一組功能區上的按鈕。 Framework 繪製按鈕的此群組。  
+*pGroup*<br/>
+[in]指標，一組功能區上的按鈕。 Framework 繪製按鈕的此群組。  
   
- [in]*rectGroup*  
- 指定群組的界限的矩形。  
+*rectGroup*<br/>
+[in]指定群組的界限的矩形。  
   
 ### <a name="return-value"></a>傳回值  
  保留的值。 預設的實作會傳回 -1。  
@@ -1201,11 +1201,11 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的功能區分類的指標。  
+*pDC*<br/>
+[in]裝置內容的功能區分類的指標。  
   
- [in]*pContextCaption*  
- 標題列的指標。 Visual manager 繪製這[CMFCRibbonContextCaption 類別](../../mfc/reference/cmfcribboncontextcaption-class.md)。  
+*pContextCaption*<br/>
+[in]標題列的指標。 Visual manager 繪製這[CMFCRibbonContextCaption 類別](../../mfc/reference/cmfcribboncontextcaption-class.md)。  
   
 ### <a name="return-value"></a>傳回值  
  A [COLORREF](/windows/desktop/gdi/colorref)參數，指出在標題列文字的色彩。  
@@ -1224,14 +1224,14 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*pTab*  
- 功能區 索引標籤物件指標。 Framework 繪製此索引標籤。  
+*pTab*<br/>
+[in]功能區] 索引標籤物件指標。 Framework 繪製此索引標籤。  
   
- [in]*bIsActive*  
- 如果索引標籤作用中或 FALSE 如果沒有，則為 TRUE。  
+*bIsActive*<br/>
+[in]如果索引標籤作用中或 FALSE 如果沒有，則為 TRUE。  
   
 ### <a name="return-value"></a>傳回值  
  使用的功能區類別目錄 索引標籤上的文字色彩。  
@@ -1252,20 +1252,20 @@ virtual void OnDrawRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*pProgress*  
- 指標[CMFCRibbonProgressBar 類別](../../mfc/reference/cmfcribbonprogressbar-class.md)物件。 Framework 繪製此進度列。  
+*pProgress*<br/>
+[in]指標[CMFCRibbonProgressBar 類別](../../mfc/reference/cmfcribbonprogressbar-class.md)物件。 Framework 繪製此進度列。  
   
- [in]*rectProgress*  
- 指定進度列的界限的矩形。  
+*rectProgress*<br/>
+[in]指定進度列的界限的矩形。  
   
- [in]*rectChunk*  
- 指定進度列的周圍區域的界限的矩形。  
+*rectChunk*<br/>
+[in]指定進度列的周圍區域的界限的矩形。  
   
- [in]*bInfiniteMode*  
- 如果列不是無限的模式或 false，則為 TRUE。 預設實作不會使用此參數。  
+*bInfiniteMode*<br/>
+[in]如果列不是無限的模式或 false，則為 TRUE。 預設實作不會使用此參數。  
   
 ### <a name="remarks"></a>備註  
  自訂外觀，進度列的衍生類別中置換此方法  
@@ -1281,14 +1281,14 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*pSeparator*  
- 指標[CMFCRibbonSeparator 類別](../../mfc/reference/cmfcribbonseparator-class.md)物件。 Framework 繪製這個功能區分隔符號。  
+*pSeparator*<br/>
+[in]指標[CMFCRibbonSeparator 類別](../../mfc/reference/cmfcribbonseparator-class.md)物件。 Framework 繪製這個功能區分隔符號。  
   
- [in]*rect*  
- 指定分隔符號的界限的矩形。  
+*rect*<br/>
+[in]指定分隔符號的界限的矩形。  
   
 ### <a name="remarks"></a>備註  
  覆寫這個方法來自訂外觀的快速存取工具列上的功能區分隔符號在衍生類別中。  
@@ -1304,14 +1304,14 @@ virtual void OnDrawRibbonSliderChannel(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*pSlider*  
- 指標[CMFCRibbonSlider 類別](../../mfc/reference/cmfcribbonslider-class.md)物件。 Framework 繪製這個功能區滑桿的通道。  
+*pSlider*<br/>
+[in]指標[CMFCRibbonSlider 類別](../../mfc/reference/cmfcribbonslider-class.md)物件。 Framework 繪製這個功能區滑桿的通道。  
   
- [in]*rect*  
- 指定功能區滑桿的通道界限的矩形。  
+*rect*<br/>
+[in]指定功能區滑桿的通道界限的矩形。  
   
 ### <a name="remarks"></a>備註  
  覆寫這個方法來自訂外觀的功能區滑桿的通道在衍生類別中。  
@@ -1330,23 +1330,23 @@ virtual void OnDrawRibbonSliderThumb(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*pSlider*  
- 指標[CMFCRibbonSlider 類別](../../mfc/reference/cmfcribbonslider-class.md)。 Framework 繪製軸的這個功能區滑桿。  
+*pSlider*<br/>
+[in]指標[CMFCRibbonSlider 類別](../../mfc/reference/cmfcribbonslider-class.md)。 Framework 繪製軸的這個功能區滑桿。  
   
- [in]*rect*  
- 指定功能區滑桿捲動方塊的界限的矩形。  
+*rect*<br/>
+[in]指定功能區滑桿捲動方塊的界限的矩形。  
   
- [in]*bIsHighlighted*  
- 表示縮圖會反白顯示的布林參數。  
+*bIsHighlighted*<br/>
+[in]表示縮圖會反白顯示的布林參數。  
   
- [in]*bIsPressed*  
- 布林值參數，指出是否按下 thumb。  
+*bIsPressed*<br/>
+[in]布林值參數，指出是否按下 thumb。  
   
- [in]*bIsDisabled*  
- 布林值參數，指出是否無法使用捲動方塊。  
+*bIsDisabled*<br/>
+[in]布林值參數，指出是否無法使用捲動方塊。  
   
 ### <a name="remarks"></a>備註  
  覆寫此方法在衍生的視覺管理員，以自訂功能區滑桿捲動方塊的外觀。  
@@ -1366,26 +1366,26 @@ virtual void OnDrawRibbonSliderZoomButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*pSlider*  
- 指標[CMFCRibbonSlider 類別](../../mfc/reference/cmfcribbonslider-class.md)物件。 Framework 繪製這個功能區滑桿。  
+*pSlider*<br/>
+[in]指標[CMFCRibbonSlider 類別](../../mfc/reference/cmfcribbonslider-class.md)物件。 Framework 繪製這個功能區滑桿。  
   
- [in]*rect*  
- 在功能區滑桿指定的顯示比例按鈕界限的矩形。  
+*rect*<br/>
+[in]在功能區滑桿指定的顯示比例按鈕界限的矩形。  
   
- [in]*bIsZoomOut*  
- 如果架構應該繪製的左側的按鈕則為 TRUE 」 **-**"zoom 放大，或如果架構應繪製與右邊的按鈕則為 FALSE 」 **+**"zoom 中。  
+*bIsZoomOut*<br/>
+[in]如果架構應該繪製的左側的按鈕則為 TRUE 」 **-**"zoom 放大，或如果架構應繪製與右邊的按鈕則為 FALSE 」 **+**"zoom 中。  
   
- [in]*bIsHighlighted*  
- 布林值參數，指出按鈕會反白顯示。  
+*bIsHighlighted*<br/>
+[in]布林值參數，指出按鈕會反白顯示。  
   
- [in]*bIsPressed*  
- 布林值參數，指出是否按下按鈕。  
+*bIsPressed*<br/>
+[in]布林值參數，指出是否按下按鈕。  
   
- [in]*bIsDisabled*  
- 布林值參數，指出是否無法使用 按鈕。  
+*bIsDisabled*<br/>
+[in]布林值參數，指出是否無法使用] 按鈕。  
   
 ### <a name="remarks"></a>備註  
  根據預設，在功能區滑桿上的顯示比例按鈕會以圓形**+** 或是**-** 登入的中心。 若要自訂顯示比例按鈕的外觀，覆寫這個方法在衍生的視覺管理員。  
@@ -1401,14 +1401,14 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*pBar*  
- 包含窗格的 [狀態] 列指標。  
+*pBar*<br/>
+[in]包含窗格的 [狀態] 列指標。  
   
- [in]*pPane*  
- 指向的狀態列窗格。 Framework 繪製這[CMFCRibbonStatusBarPane 類別](../../mfc/reference/cmfcribbonstatusbarpane-class.md)物件。  
+*pPane*<br/>
+[in]指向的狀態列窗格。 Framework 繪製這[CMFCRibbonStatusBarPane 類別](../../mfc/reference/cmfcribbonstatusbarpane-class.md)物件。  
   
 ### <a name="return-value"></a>傳回值  
  保留的值。 預設的實作會傳回 -1。  
@@ -1429,20 +1429,20 @@ virtual void OnDrawScrollButtons(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 捲軸按鈕的週框。  
+*rect*<br/>
+[in]捲軸按鈕的週框。  
   
- [in]*nBorderSize*  
- 繪製捲動按鈕周圍的框線大小。  
+*nBorderSize*<br/>
+[in]繪製捲動按鈕周圍的框線大小。  
   
- [in]*iImage*  
- 要繪製在捲軸按鈕之影像的識別項。  
+*iImage*<br/>
+[in]要繪製在捲軸按鈕之影像的識別項。  
   
- [in]*bHilited*  
- 如果捲動按鈕會反白顯示，或如果沒有，則為 FALSE，則為 TRUE。  
+*bHilited*<br/>
+[in]如果捲動按鈕會反白顯示，或如果沒有，則為 FALSE，則為 TRUE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -1458,17 +1458,17 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 一種控制列的裝置內容指標。  
+*pDC*<br/>
+[in]一種控制列的裝置內容指標。  
   
- [in]*pBar*  
- 指標，包含分隔符號的窗格。  
+*pBar*<br/>
+[in]指標，包含分隔符號的窗格。  
   
- [in]*rect*  
- 指定分隔符號的界限的矩形。  
+*rect*<br/>
+[in]指定分隔符號的界限的矩形。  
   
- [in]*bIsHoriz*  
- 如果窗格停駐的水平或 FALSE 如果垂直停駐窗格中，則為 TRUE。  
+*bIsHoriz*<br/>
+[in]如果窗格停駐的水平或 FALSE 如果垂直停駐窗格中，則為 TRUE。  
   
 ### <a name="remarks"></a>備註  
  控制列上使用分隔符號來分隔群組相關的圖示。 這個方法的預設實作會顯示標準的分隔符號。 覆寫此方法在衍生的視覺管理員，以自訂分隔符號的外觀。  
@@ -1484,14 +1484,14 @@ virtual void OnDrawShowAllMenuItems(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 要繪製功能表的週框。  
+*rect*<br/>
+[in]要繪製功能表的週框。  
   
- [in]*狀態*  
- 按鈕的狀態。  
+*state*<br/>
+[in]按鈕的狀態。  
   
 ### <a name="remarks"></a>備註  
   
@@ -1508,20 +1508,20 @@ virtual void OnDrawStatusBarPaneBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*pBar*  
- 指標[CMFCStatusBar 類別](../../mfc/reference/cmfcstatusbar-class.md)物件。 Framework 繪製此狀態列物件。  
+*pBar*<br/>
+[in]指標[CMFCStatusBar 類別](../../mfc/reference/cmfcstatusbar-class.md)物件。 Framework 繪製此狀態列物件。  
   
- [in]*rectPane*  
- 指定狀態列的界限的矩形。  
+*rectPane*<br/>
+[in]指定狀態列的界限的矩形。  
   
- [in]*uiID*  
- [狀態] 列的識別碼。  
+*uiID*<br/>
+[in][狀態] 列的識別碼。  
   
- [in]*nStyle*  
- [狀態] 列的樣式。  
+*nStyle*<br/>
+[in][狀態] 列的樣式。  
   
 ### <a name="remarks"></a>備註  
  覆寫這個方法在衍生的視覺管理員，以自訂的框線外觀`CMFCStatusBar`物件。  
@@ -1543,26 +1543,26 @@ virtual void OnDrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- [狀態] 列的裝置內容指標  
+*pDC*<br/>
+[in][狀態] 列的裝置內容指標  
   
- [in]*pStatusBar*  
- [CMFCStatusBar 類別](../../mfc/reference/cmfcstatusbar-class.md)物件，其中包含進度列。  
+*pStatusBar*<br/>
+[in][CMFCStatusBar 類別](../../mfc/reference/cmfcstatusbar-class.md)物件，其中包含進度列。  
   
- [in]*rectProgress*  
- 指定進度列的界限的矩形。  
+*rectProgress*<br/>
+[in]指定進度列的界限的矩形。  
   
- [in]*nProgressTotal*  
- 進度列的總數。  
+*nProgressTotal*<br/>
+[in]進度列的總數。  
   
- [in]*nProgressCurr*  
- 進度列目前的進度。  
+*nProgressCurr*<br/>
+[in]進度列目前的進度。  
   
- [in]*clrBar*  
- 進度列的初始色彩。 值是色彩漸層的開始或完成的進度列的色彩。  
+*clrBar*<br/>
+[in]進度列的初始色彩。 值是色彩漸層的開始或完成的進度列的色彩。  
   
- [in]*clrProgressBarDest*  
- [in]*clrProgressText*  
+*clrProgressBarDest*<br/>
+[in][in]*clrProgressText*  
  [in]*bProgressText*  
   
 ### <a name="remarks"></a>備註  
@@ -1579,14 +1579,14 @@ virtual void OnDrawStatusBarSizeBox(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*pStatBar*  
- [狀態] 列指標。 Framework 繪製此狀態列上的 [大小] 方塊。  
+*pStatBar*<br/>
+[in][狀態] 列指標。 Framework 繪製此狀態列上的 [大小] 方塊。  
   
- [in]*rectSizeBox*  
- 指定 [大小] 中的界限的矩形。  
+*rectSizeBox*<br/>
+[in]指定 [大小] 中的界限的矩形。  
   
 ### <a name="remarks"></a>備註  
  覆寫此方法在衍生的視覺管理員，以自訂狀態列中的 [大小] 方塊的外觀。  
@@ -1604,20 +1604,20 @@ virtual void OnDrawTab(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rectTab*  
- 指定的索引標籤控制項界限的矩形。  
+*rectTab*<br/>
+[in]指定的索引標籤控制項界限的矩形。  
   
- [in]*iTab*  
- Framework 繪製索引標籤的索引。  
+*iTab*<br/>
+[in]Framework 繪製索引標籤的索引。  
   
- [in]*bIsActive*  
- 布林值參數，指定是否使用中 索引標籤。  
+*bIsActive*<br/>
+[in]布林值參數，指定是否使用中] 索引標籤。  
   
- [in]*pTabWnd*  
- 指標[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)物件。 Framework 繪製這個索引標籤控制項。  
+*pTabWnd*<br/>
+[in]指標[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)物件。 Framework 繪製這個索引標籤控制項。  
   
 ### <a name="remarks"></a>備註  
  A`CMFCBaseTabCtrl`物件處理 WM_PAINT 訊息時，請呼叫這個方法。覆寫這個方法在衍生的類別，以自訂索引標籤的外觀。  
@@ -1635,20 +1635,20 @@ virtual void OnDrawTabsButtonBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 指定的索引標籤按鈕界限的矩形。  
+*rect*<br/>
+[in]指定的索引標籤按鈕界限的矩形。  
   
- [in]*pButton*  
- 指標[CMFCButton 類別](../../mfc/reference/cmfcbutton-class.md)架構，會繪製框線。  
+*pButton*<br/>
+[in]指標[CMFCButton 類別](../../mfc/reference/cmfcbutton-class.md)架構，會繪製框線。  
   
- [in]*uiState*  
- 按鈕的狀態 (請參閱[CButton::GetState](../../mfc/reference/cbutton-class.md#getstate))。  
+*uiState*<br/>
+[in]按鈕的狀態 (請參閱[CButton::GetState](../../mfc/reference/cbutton-class.md#getstate))。  
   
- [in]*pWndTab*  
- 父代 索引標籤視窗的指標。  
+*pWndTab*<br/>
+[in]父代] 索引標籤視窗的指標。  
   
 ### <a name="remarks"></a>備註  
  覆寫此方法在衍生的視覺管理員，以自訂索引標籤按鈕的框線外觀。  
@@ -1666,20 +1666,20 @@ virtual void OnDrawTask(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*pTask*  
- 指標[CMFCTasksPaneTask 類別](../../mfc/reference/cmfctaskspanetask-class.md)物件。 Framework 繪製這項工作。  
+*pTask*<br/>
+[in]指標[CMFCTasksPaneTask 類別](../../mfc/reference/cmfctaskspanetask-class.md)物件。 Framework 繪製這項工作。  
   
- [in]*pIcons*  
- 工作窗格與相關聯的映像清單的指標。 每個工作包含這份清單中的映像的索引。  
+*pIcons*<br/>
+[in]工作窗格與相關聯的映像清單的指標。 每個工作包含這份清單中的映像的索引。  
   
- [in]*bIsHighlighted*  
- 布林值參數，指定是否要反白顯示的工作。  
+*bIsHighlighted*<br/>
+[in]布林值參數，指定是否要反白顯示的工作。  
   
- [in]*bIsSelected*  
- 布林值參數，指定是否已選取顯示的工作。  
+*bIsSelected*<br/>
+[in]布林值參數，指定是否已選取顯示的工作。  
   
 ### <a name="remarks"></a>備註  
  架構會在工作列中做為圖示和文字顯示工作。 *PIcons*參數會包含所指定的工作圖示*pTask*。 自訂外觀，請在工作列上的工作在衍生類別中，這個方法會覆寫。  
@@ -1696,17 +1696,17 @@ virtual void OnDrawTasksGroupAreaBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 在 [工作] 窗格指定的群組區域的界限的矩形。  
+*rect*<br/>
+[in]在 [工作] 窗格指定的群組區域的界限的矩形。  
   
- [in]*bSpecial*  
- 布林值參數，指定框線會反白顯示。 TRUE 值會指出框線會反白顯示。  
+*bSpecial*<br/>
+[in]布林值參數，指定框線會反白顯示。 TRUE 值會指出框線會反白顯示。  
   
- [in]*bNoTitle*  
- 布林值參數，指定 [群組] 區域是否有標題。 TRUE 值表示的群組區域沒有標題。  
+*bNoTitle*<br/>
+[in]布林值參數，指定 [群組] 區域是否有標題。 TRUE 值表示的群組區域沒有標題。  
   
 ### <a name="remarks"></a>備註  
  若要自訂工作窗格上的群組區域周圍的框線在衍生類別中此函式會覆寫。  
@@ -1724,20 +1724,20 @@ virtual void OnDrawTasksGroupCaption(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*pGroup*  
- 指標[CMFCTasksPaneTaskGroup 類別](../../mfc/reference/cmfctaskspanetaskgroup-class.md)物件。 Framework 繪製此群組的標題。  
+*pGroup*<br/>
+[in]指標[CMFCTasksPaneTaskGroup 類別](../../mfc/reference/cmfctaskspanetaskgroup-class.md)物件。 Framework 繪製此群組的標題。  
   
- [in]*bIsHighlighted*  
- 布林值參數，指出群組是否反白顯示。  
+*bIsHighlighted*<br/>
+[in]布林值參數，指出群組是否反白顯示。  
   
- [in]*bIsSelected*  
- 布林值參數，指出目前是否已選取的群組。  
+*bIsSelected*<br/>
+[in]布林值參數，指出目前是否已選取的群組。  
   
- [in]*bCanCollapse*  
- 布林值參數，指出是否可以摺疊的群組。  
+*bCanCollapse*<br/>
+[in]布林值參數，指出是否可以摺疊的群組。  
   
 ### <a name="remarks"></a>備註  
  若要自訂的標題在衍生類別中置換此方法`CMFCTasksPaneTaskGroup`。  
@@ -1753,14 +1753,14 @@ virtual void OnDrawTearOffCaption(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 指定標題的界限的矩形。  
+*rect*<br/>
+[in]指定標題的界限的矩形。  
   
- [in]*bIsActive*  
- 如果標題為作用中;，則為 TRUE。FALSE 否則。  
+*bIsActive*<br/>
+[in]如果標題為作用中;，則為 TRUE。FALSE 否則。  
   
 ### <a name="remarks"></a>備註  
  由架構呼叫此函式時[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)物件處理 WM_PAINT 訊息，並必須繪製分割標題。  
@@ -1778,14 +1778,14 @@ virtual void OnErasePopupWindowButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rectClient*  
- 所指定的快顯視窗工作區的矩形。  
+*rectClient*<br/>
+[in]所指定的快顯視窗工作區的矩形。  
   
- [in]*pButton*  
- 指向要清除的按鈕。  
+*pButton*<br/>
+[in]指向要清除的按鈕。  
   
 ### <a name="remarks"></a>備註  
   
@@ -1800,14 +1800,14 @@ virtual void OnEraseTabsArea(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 指定的索引標籤區域界限的矩形。  
+*rect*<br/>
+[in]指定的索引標籤區域界限的矩形。  
   
- [in]*pTabWnd*  
- 索引標籤視窗的指標。 此架構會清除指定的索引標籤視窗索引標籤區域。  
+*pTabWnd*<br/>
+[in]索引標籤視窗的指標。 此架構會清除指定的索引標籤視窗索引標籤區域。  
   
 ### <a name="remarks"></a>備註  
  由架構呼叫此函式時[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)物件處理 WM_PAINT 訊息，並清除索引標籤區域。  
@@ -1826,17 +1826,17 @@ virtual void OnEraseTabsButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 指定的索引標籤按鈕界限的矩形。  
+*rect*<br/>
+[in]指定的索引標籤按鈕界限的矩形。  
   
- [in]*pButton*  
- 指向的索引標籤 按鈕。 架構會清除文字和圖示，此按鈕。  
+*pButton*<br/>
+[in]指向的索引標籤] 按鈕。 架構會清除文字和圖示，此按鈕。  
   
- [in]*pWndTab*  
- 索引標籤控制項之索引標籤按鈕的指標。  
+*pWndTab*<br/>
+[in]索引標籤控制項之索引標籤按鈕的指標。  
   
 ### <a name="remarks"></a>備註  
  此架構會清除文字與按鈕的圖示時[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)物件處理 WM_ERASEBKGND 訊息  
@@ -1854,14 +1854,14 @@ virtual BOOL OnEraseTabsFrame(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 指定的索引標籤視窗界限的矩形。  
+*rect*<br/>
+[in]指定的索引標籤視窗界限的矩形。  
   
- [in]*pTabWnd*  
- 索引標籤視窗的指標。 此架構會清除的框架[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)。  
+*pTabWnd*<br/>
+[in]索引標籤視窗的指標。 此架構會清除的框架[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，或如果沒有，則為 FALSE，則為 TRUE。  
@@ -1880,14 +1880,14 @@ virtual void OnFillAutoHideButtonBackground(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 指定自動隱藏按鈕的界限的矩形。  
+*rect*<br/>
+[in]指定自動隱藏按鈕的界限的矩形。  
   
- [in]*pButton*  
- 指標[CMFCAutoHideButton 類別](../../mfc/reference/cmfcautohidebutton-class.md)物件。 此架構會填滿此自動隱藏按鈕的背景。  
+*pButton*<br/>
+[in]指標[CMFCAutoHideButton 類別](../../mfc/reference/cmfcautohidebutton-class.md)物件。 此架構會填滿此自動隱藏按鈕的背景。  
   
 ### <a name="remarks"></a>備註  
  覆寫此方法在衍生的視覺管理員，若要自訂自動隱藏按鈕的外觀。  
@@ -1905,20 +1905,20 @@ virtual void OnFillBarBackground(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 一種控制列的裝置內容指標。  
+*pDC*<br/>
+[in]一種控制列的裝置內容指標。  
   
- [in]*pBar*  
- 指標[CBasePane 類別](../../mfc/reference/cbasepane-class.md)物件。 此架構會填滿此窗格的背景。  
+*pBar*<br/>
+[in]指標[CBasePane 類別](../../mfc/reference/cbasepane-class.md)物件。 此架構會填滿此窗格的背景。  
   
- [in]*rectClient*  
- 指定在窗格的界限的矩形。  
+*rectClient*<br/>
+[in]指定在窗格的界限的矩形。  
   
- [in]*rectClip*  
- 指定在窗格的裁剪區域的矩形。  
+*rectClip*<br/>
+[in]指定在窗格的裁剪區域的矩形。  
   
- [in]*bNCArea*  
- 保留的值。  
+*bNCArea*<br/>
+[in]保留的值。  
   
 ### <a name="remarks"></a>備註  
  這個方法的預設實作會與全域變數中的 3d 背景色彩列的背景填滿`afxGlobalData`。  
@@ -1937,17 +1937,17 @@ virtual void OnFillButtonInterior(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 工具列按鈕的裝置內容指標。  
+*pDC*<br/>
+[in]工具列按鈕的裝置內容指標。  
   
- [in]*pButton*  
- 指標的填滿 framework 背景的按鈕。  
+*pButton*<br/>
+[in]指標的填滿 framework 背景的按鈕。  
   
- [in]*rect*  
- 指定工具列按鈕的界限的矩形。  
+*rect*<br/>
+[in]指定工具列按鈕的界限的矩形。  
   
- [in]*狀態*  
- 工具列按鈕的狀態 (工具列按鈕的可能的狀態為`ButtonsIsRegular`， `ButtonsIsPressed`，或`ButtonsIsHighlighted`)。  
+*state*<br/>
+[in]工具列按鈕的狀態 (工具列按鈕的可能的狀態為`ButtonsIsRegular`， `ButtonsIsPressed`，或`ButtonsIsHighlighted`)。  
   
 ### <a name="remarks"></a>備註  
  這個方法的預設實作會使用預設色彩背景填滿。 覆寫此方法在衍生的視覺管理員，若要自訂工具列按鈕的背景。  
@@ -1963,14 +1963,14 @@ virtual COLORREF OnFillCommandsListBackground(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 指定按鈕的界限的矩形。  
+*rect*<br/>
+[in]指定按鈕的界限的矩形。  
   
- [in]*bIsSelected*  
- 布林值參數，指出是否已選取 按鈕。  
+*bIsSelected*<br/>
+[in]布林值參數，指出是否已選取] 按鈕。  
   
 ### <a name="return-value"></a>傳回值  
  工具列按鈕的文字色彩。  
@@ -1989,14 +1989,14 @@ virtual void OnFillHeaderCtrlBackground(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pCtrl*  
- 指標[CMFCHeaderCtrl 類別](../../mfc/reference/cmfcheaderctrl-class.md)物件。 此架構會填滿此標題控制項的背景。  
+*pCtrl*<br/>
+[in]指標[CMFCHeaderCtrl 類別](../../mfc/reference/cmfcheaderctrl-class.md)物件。 此架構會填滿此標題控制項的背景。  
   
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 指定的標頭控制項界限的矩形。  
+*rect*<br/>
+[in]指定的標頭控制項界限的矩形。  
   
 ### <a name="remarks"></a>備註  
  覆寫此方法在衍生的視覺管理員，以自訂標頭控制項的外觀。  
@@ -2013,17 +2013,17 @@ virtual void OnFillHighlightedArea(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 反白顯示以填滿區域的周框。  
+*rect*<br/>
+[in]反白顯示以填滿區域的周框。  
   
- [in]*pBrush*  
- 在填滿反白顯示的區域中使用筆刷。  
+*pBrush*<br/>
+[in]在填滿反白顯示的區域中使用筆刷。  
   
- [in]*pButton*  
- 指標[CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)物件，要填滿反白顯示的區域。  
+*pButton*<br/>
+[in]指標[CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)物件，要填滿反白顯示的區域。  
   
 ### <a name="remarks"></a>備註  
   
@@ -2038,14 +2038,14 @@ virtual void OnFillOutlookBarCaption(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rectCaption*  
- 指定的標題列的界限的矩形。  
+*rectCaption*<br/>
+[in]指定的標題列的界限的矩形。  
   
- [out]*clrText*  
- 這個方法會寫入的文字色彩在標題列 COLORREF 物件的參考。  
+*clrText*<br/>
+[out]這個方法會寫入的文字色彩在標題列 COLORREF 物件的參考。  
   
 ### <a name="remarks"></a>備註  
  這個方法的預設實作會填滿的標題列，以根據目前的面板的陰影的色彩。  
@@ -2065,20 +2065,20 @@ virtual void OnFillOutlookPageButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 指定 Outlook 的 [頁面] 按鈕的界限的矩形。  
+*rect*<br/>
+[in]指定 Outlook 的 [頁面] 按鈕的界限的矩形。  
   
- [in]*bIsHighlighted*  
- 布林值參數，指定按鈕會反白顯示。  
+*bIsHighlighted*<br/>
+[in]布林值參數，指定按鈕會反白顯示。  
   
- [in]*bIsPressed*  
- 布林值參數，指定是否要按下按鈕。  
+*bIsPressed*<br/>
+[in]布林值參數，指定是否要按下按鈕。  
   
- [out]*clrText*  
- 這個方法將儲存在 outlook 的 [頁面] 按鈕的文字色彩其中 COLORREF 物件的參考。  
+*clrText*<br/>
+[out]這個方法將儲存在 outlook 的 [頁面] 按鈕的文字色彩其中 COLORREF 物件的參考。  
   
 ### <a name="remarks"></a>備註  
  覆寫衍生的視覺管理員，以自訂 Outlook 的頁面按鈕的外觀中此函式。  
@@ -2093,11 +2093,11 @@ virtual void OnFillPopupWindowBackground(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 指定的快顯視窗界限的矩形。  
+*rect*<br/>
+[in]指定的快顯視窗界限的矩形。  
   
 ### <a name="remarks"></a>備註  
  覆寫此方法在衍生的視覺管理員，若要自訂快顯視窗的外觀。  
@@ -2116,23 +2116,23 @@ virtual void OnFillTab(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rectFill*  
- 指定的索引標籤視窗界限的矩形。  
+*rectFill*<br/>
+[in]指定的索引標籤視窗界限的矩形。  
   
- [in]*pbrFill*  
- 指標，此架構用來填滿 索引標籤視窗的筆刷。  
+*pbrFill*<br/>
+[in]指標，此架構用來填滿] 索引標籤視窗的筆刷。  
   
- [in]*iTab*  
- 此架構，填滿背景索引標籤的以零為起始的索引標籤索引。  
+*iTab*<br/>
+[in]此架構，填滿背景索引標籤的以零為起始的索引標籤索引。  
   
- [in]*bIsActive*  
- 如果 [] 索引標籤為作用中或如果沒有，則為 FALSE，則為 TRUE。  
+*bIsActive*<br/>
+[in]如果 [] 索引標籤為作用中或如果沒有，則為 FALSE，則為 TRUE。  
   
- [in]*pTabWnd*  
- 在父索引標籤控制項的指標。  
+*pTabWnd*<br/>
+[in]在父索引標籤控制項的指標。  
   
 ### <a name="remarks"></a>備註  
  覆寫此方法在衍生的視覺管理員，以自訂索引標籤的外觀。  
@@ -2148,14 +2148,14 @@ virtual void OnFillTasksGroupInterior(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 指定的工作群組界限的矩形。  
+*rect*<br/>
+[in]指定的工作群組界限的矩形。  
   
- [in]*bSpecial*  
- 布林值，指出內部的特殊色彩會填入。  
+*bSpecial*<br/>
+[in]布林值，指出內部的特殊色彩會填入。  
   
 ### <a name="remarks"></a>備註  
  覆寫此方法在衍生的視覺管理員，以自訂工作群組的外觀。  
@@ -2170,11 +2170,11 @@ virtual void OnFillTasksPaneBackground(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rectWorkArea*  
- 指定 [工作] 窗格的界限的矩形。  
+*rectWorkArea*<br/>
+[in]指定 [工作] 窗格的界限的矩形。  
   
 ### <a name="remarks"></a>備註  
  覆寫這個方法在衍生的視覺管理員，若要自訂的外觀[CMFCTasksPane 類別](../../mfc/reference/cmfctaskspane-class.md)物件。  
@@ -2190,14 +2190,14 @@ virtual void OnHighlightQuickCustomizeMenuButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 按鈕的裝置內容指標。  
+*pDC*<br/>
+[in]按鈕的裝置內容指標。  
   
- [in]*pButton*  
- 按鈕的指標。  
+*pButton*<br/>
+[in]按鈕的指標。  
   
- [in]*rect*  
- 按鈕的週框。  
+*rect*<br/>
+[in]按鈕的週框。  
   
 ### <a name="remarks"></a>備註  
   
@@ -2211,11 +2211,11 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rectRarelyUsed*  
- 指定的反白顯示的命令界限的矩形。  
+*rectRarelyUsed*<br/>
+[in]指定的反白顯示的命令界限的矩形。  
   
 ### <a name="remarks"></a>備註  
  覆寫此方法在衍生的視覺管理員，若要自訂的反白顯示的功能表命令的外觀。  
@@ -2238,8 +2238,8 @@ static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bDefaultWinXPColors*  
- 指定是否視覺化管理員會使用原生的 Windows XP 色彩。  
+*bDefaultWinXPColors*<br/>
+[in]指定是否視覺化管理員會使用原生的 Windows XP 色彩。  
   
 ### <a name="remarks"></a>備註  
  如果*bDefaultWinXPColors*為 TRUE 時，視覺管理員會使用原生的 Windows XP 色彩，例如 藍色、 橄欖色或 銀級。 否則，視覺管理員會使用取自的色彩`GetSysColor`。 視覺管理員會使用 COLOR_3DFACE 」、 「 COLOR_3DSHADOW 」、 「 COLOR_3DHIGHLIGHT 」、 「 COLOR_3DDKSHADOW 和 「 COLOR_3DLIGHT 視覺元素。  
@@ -2254,8 +2254,8 @@ static void __stdcall SetStatusBarOfficeXPLook(BOOL bStatusBarOfficeXPLook = TRU
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bStatusBarOfficeXPLook*  
- 如果應該使用 Windows XP 全域佈景主題，則為 TRUE。 使用 （預設值），或如果不是 FALSE。  
+*bStatusBarOfficeXPLook*<br/>
+[in]如果應該使用 Windows XP 全域佈景主題，則為 TRUE。 使用 （預設值），或如果不是 FALSE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -2267,8 +2267,8 @@ static void SetUseGlobalTheme(BOOL bUseGlobalTheme = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bUseGlobalTheme*  
- 如果您想要使用全域佈景主題的視覺化管理員，則為 TRUE。FALSE 否則。  
+*bUseGlobalTheme*<br/>
+[in]如果您想要使用全域佈景主題的視覺化管理員，則為 TRUE。FALSE 否則。  
   
 ### <a name="remarks"></a>備註  
  如果`CMFCVisualManagerOffice2003`物件使用通用的佈景主題，它使用繪製的 GUI 項目[CMFCVisualManagerWindows 類別](../../mfc/reference/cmfcvisualmanagerwindows-class.md)。  

@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09b7f38926ad3e76de7e5e9bc36425ef77c42d4f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
-ms.translationtype: MT
+ms.openlocfilehash: 5131479af7f34f1cc43cf91adfd0bd3ac52a594b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338459"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722978"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar 類別
 A`CMFCCaptionBar`物件是一種控制列，可以顯示三個項目： 按鈕、 文字標籤和點陣圖。 它一次只能每個類型各顯示一個項目。 您可以將每個項目對齊控制項的左緣或右緣，或對齊中央。 您也可以將平面或 3D 樣式套用至標題列的上框線和下框線。  
@@ -230,8 +230,8 @@ void EnableButton(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bEnable*  
- True 以啟用按鈕，FALSE 以停用按鈕。  
+*bEnable*<br/>
+[in]True 以啟用按鈕，FALSE 以停用按鈕。  
   
 ##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment  
  傳回指定之項目的對齊方式。  
@@ -241,8 +241,8 @@ BarElementAlignment GetAlignment(BarElement elem);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*elem*  
- 要擷取對齊標題列項目。  
+*Elem*<br/>
+[in]要擷取對齊標題列項目。  
   
 ### <a name="return-value"></a>傳回值  
  項目，例如按鈕、 點陣圖、 文字或圖示的對齊方式。  
@@ -332,11 +332,11 @@ virtual void OnDrawBackground(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的標題列的指標。  
+*pDC*<br/>
+[in]裝置內容的標題列的指標。  
   
- [in]*rect*  
- 要填滿的週框矩形。  
+*rect*<br/>
+[in]要填滿的週框矩形。  
   
 ### <a name="remarks"></a>備註  
  `OnDrawBackground`填滿的標題列的背景時，會呼叫方法。 使用的預設實作填滿的背景[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)色彩。  
@@ -353,11 +353,11 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容，用來顯示框線。  
+*pDC*<br/>
+[in]裝置內容，用來顯示框線。  
   
- [in]*rect*  
- 週框。  
+*rect*<br/>
+[in]週框的矩形。  
   
 ### <a name="remarks"></a>備註  
  根據預設，框線會有一般的樣式。  
@@ -376,17 +376,17 @@ virtual void OnDrawButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 用來顯示按鈕的裝置內容指標。  
+*pDC*<br/>
+[in]用來顯示按鈕的裝置內容指標。  
   
- [in]*rect*  
- 按鈕的週框。  
+*rect*<br/>
+[in]按鈕的週框。  
   
- [in]*strButton*  
- 按鈕的文字標籤。  
+*strButton*<br/>
+[in]按鈕的文字標籤。  
   
- [in]*bEnabled*  
- 如果已啟用 按鈕，則為 TRUE。FALSE 否則。  
+*bEnabled*<br/>
+[in]如果已啟用] 按鈕，則為 TRUE。FALSE 否則。  
   
 ### <a name="remarks"></a>備註  
  覆寫這個方法在`CMFCCaptionBar`衍生類別，來自訂標題列按鈕的外觀。  
@@ -401,11 +401,11 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 用來顯示影像的裝置內容指標。  
+*pDC*<br/>
+[in]用來顯示影像的裝置內容指標。  
   
- [in]*rect*  
- 指定影像的週框矩形。  
+*rect*<br/>
+[in]指定影像的週框矩形。  
   
 ### <a name="remarks"></a>備註  
  覆寫這個方法在`CMFCCaptionBar`衍生類別，以自訂映像的外觀。  
@@ -421,14 +421,14 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 用來顯示按鈕的裝置內容指標。  
+*pDC*<br/>
+[in]用來顯示按鈕的裝置內容指標。  
   
- [in]*rect*  
- 文字的週框。  
+*rect*<br/>
+[in]文字的週框。  
   
- [in]*先把 strText*  
- 要顯示的文字字串。  
+*先把 strText*<br/>
+[in]要顯示的文字字串。  
   
 ### <a name="remarks"></a>備註  
  使用的預設實作會顯示的文字`CDC::DrawText`並[CMFCCaptionBar::m_clrBarText](#m_clrbartext)色彩。  
@@ -485,17 +485,17 @@ void SetBitmap(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*hBitmap*  
- 若要設定點陣圖控制代碼。  
+*hBitmap*<br/>
+[in]若要設定點陣圖控制代碼。  
   
- [in]*clrTransparent*  
- 指定點陣圖的透明色彩的 RGB 值。  
+*clrTransparent*<br/>
+[in]指定點陣圖的透明色彩的 RGB 值。  
   
- [in]*bStretch*  
- 如果為 TRUE，如果它不符合影像週框矩形，會自動縮放點陣圖。 否則點陣圖不會自動縮放。  
+*bStretch*<br/>
+[in]如果為 TRUE，如果它不符合影像週框矩形，會自動縮放點陣圖。 否則點陣圖不會自動縮放。  
   
- [in]*bmpAlignment*  
- 點陣圖的對齊方式。  
+*bmpAlignment*<br/>
+[in]點陣圖的對齊方式。  
   
 ### <a name="remarks"></a>備註  
  這個方法可用於設定在標題列上的點陣圖。  
@@ -520,8 +520,8 @@ void SetBorderSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nSize*  
- 新的大小，單位為像素的標題列框線。  
+*nSize*<br/>
+[in]新的大小，單位為像素的標題列框線。  
   
 ##  <a name="setbutton"></a>  CMFCCaptionBar::SetButton  
  設定標題列按鈕。  
@@ -568,11 +568,11 @@ void SetButtonToolTip(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszToolTip*  
- 工具提示的標題。  
+*lpszToolTip*<br/>
+[in]工具提示的標題。  
   
- [in]*lpszDescription*  
- 工具提示描述。  
+*lpszDescription*<br/>
+[in]工具提示描述。  
   
 ##  <a name="setflatborder"></a>  CMFCCaptionBar::SetFlatBorder  
  設定標題列的框線樣式。  
@@ -582,8 +582,8 @@ void SetFlatBorder(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bFlat*  
- 標題列的框線是平面的其值為 TRUE。 如果框線是 3D，則為 FALSE。  
+*bFlat*<br/>
+[in]標題列的框線是平面的其值為 TRUE。 如果框線是 3D，則為 FALSE。  
   
 ##  <a name="seticon"></a>  CMFCCaptionBar::SetIcon  
  設定標題列的圖示。  
@@ -595,11 +595,11 @@ void SetIcon(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*hIcon*  
- 若要設定圖示的控制代碼。  
+*hIcon*<br/>
+[in]若要設定圖示的控制代碼。  
   
- [in]*iconAlignment*  
- 圖示的對齊方式。  
+*iconAlignment*<br/>
+[in]圖示的對齊方式。  
   
 ### <a name="remarks"></a>備註  
  標題列可以顯示圖示或點陣圖。 請參閱[CMFCCaptionBar::SetBitmap](#setbitmap)若要了解如何顯示點陣圖。 如果您設定圖示和點陣圖，一律會顯示圖示。 呼叫[CMFCCaptionBar::RemoveIcon](#removeicon)若要移除的標題列中的圖示。  
@@ -624,11 +624,11 @@ void SetImageToolTip(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszToolTip*  
- 工具提示文字。  
+*lpszToolTip*<br/>
+[in]工具提示文字。  
   
- [in]*lpszDescription*  
- 工具提示描述。  
+*lpszDescription*<br/>
+[in]工具提示描述。  
   
 ##  <a name="setmargin"></a>  CMFCCaptionBar::SetMargin  
  設定標題列項目的邊緣和標題列控制項的邊緣之間的距離。  
@@ -638,8 +638,8 @@ void SetMargin(int nMargin);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nMargin*  
- 距離，單位為像素的標題列項目邊緣的標題列控制項邊緣之間。  
+*nMargin*<br/>
+[in]距離，單位為像素的標題列項目邊緣的標題列控制項邊緣之間。  
   
 ##  <a name="settext"></a>  CMFCCaptionBar::SetText  
  設定標題列的文字標籤。  
@@ -651,11 +651,11 @@ void SetText(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*先把 strText*  
- 若要設定文字字串。  
+*先把 strText*<br/>
+[in]若要設定文字字串。  
   
- [in]*textAlignment*  
- 文字的對齊方式。  
+*textAlignment*<br/>
+[in]文字的對齊方式。  
   
 ### <a name="remarks"></a>備註  
  對齊的文字標籤所指定*textAlignment*參數。 它可以是下列其中一種`BarElementAlignment`值：  

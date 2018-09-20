@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 709992c42cf7fd489fbe8fe8d4ebf40bf92a989e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
-ms.translationtype: MT
+ms.openlocfilehash: 0ea0bf6ed8361419af3519a41edbe6bb3c4b4a77
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849961"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725656"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl 類別
 `CMFCColorPickerCtrl`類別會提供用來選取色彩的控制項的功能。  
@@ -158,11 +158,11 @@ virtual void DrawCursor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 指定的矩形區域四周選取的色彩。  
+*rect*<br/>
+[in]指定的矩形區域四周選取的色彩。  
   
 ### <a name="remarks"></a>備註  
  當您需要將資料指標，指向 所選取之色彩的圖案變更時，請覆寫這個方法。  
@@ -190,14 +190,14 @@ void GetHLS(
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*hue*  
- Double，接收 hue 資訊類型的變數的指標。  
+*Hue*<br/>
+[out]Double，接收 hue 資訊類型的變數的指標。  
   
- [out]*明亮度*  
- Double，接收明亮度資訊類型的變數的指標。  
+*亮度*<br/>
+[out]Double，接收明亮度資訊類型的變數的指標。  
   
- [out]*飽和度*  
- Double，接收到的飽和度資訊類型的變數的指標。  
+*飽和度*<br/>
+[out]Double，接收到的飽和度資訊類型的變數的指標。  
   
 ### <a name="remarks"></a>備註  
   
@@ -253,20 +253,20 @@ BOOL SelectCellHexagon(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*R*  
- 紅色元件。  
+*R*<br/>
+[in]紅色元件。  
   
- [in]*G*  
- 綠色元件。  
+*G*<br/>
+[in]綠色元件。  
   
- [in]*B*  
- 藍色元件。  
+*B*<br/>
+[in]藍色元件。  
   
- [in]*x*  
- 資料指標，指向 儲存格六邊形 x 座標。  
+*x*<br/>
+[in]資料指標，指向 [儲存格六邊形 x 座標。  
   
- [in]*y*  
- 資料指標，指向 儲存格六邊形 y 座標。  
+*y*<br/>
+[in]資料指標，指向 [儲存格六邊形 y 座標。  
   
 ### <a name="return-value"></a>傳回值  
  第二個多載，這個方法一律會傳回 FALSE。  
@@ -284,8 +284,8 @@ void SetColor(COLORREF Color);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*色彩*  
- RGB 色彩值。  
+*色彩*<br/>
+[in]RGB 色彩值。  
   
 ### <a name="remarks"></a>備註  
   
@@ -301,17 +301,17 @@ void SetHLS(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*hue*  
- 色調值。  
+*Hue*<br/>
+[in]色調值。  
   
- [in]*明亮度*  
- 亮度值。  
+*亮度*<br/>
+[in]亮度值。  
   
- [in]*飽和度*  
- 飽和度值。  
+*飽和度*<br/>
+[in]飽和度值。  
   
- [in]*bInvalidate*  
- 若要強制立即更新至新的色彩; 視窗，則為 TRUE否則為 FALSE。 預設值為 TRUE。  
+*bInvalidate*<br/>
+[in]若要強制立即更新至新的色彩; 視窗，則為 TRUE否則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -323,8 +323,8 @@ void SetHue(double Hue);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*Hue*  
- 色調值。  
+*Hue*<br/>
+[in]色調值。  
   
 ### <a name="remarks"></a>備註  
   
@@ -336,8 +336,8 @@ void SetLuminance(double Luminance);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*明亮度*  
- 亮度值。  
+*明亮度*<br/>
+[in]亮度值。  
   
 ### <a name="remarks"></a>備註  
   
@@ -349,8 +349,8 @@ void SetLuminanceBarWidth(int w);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*w*  
- 亮度列的寬度，以像素表示。  
+*w*<br/>
+[in]亮度列的寬度，以像素表示。  
   
 ### <a name="remarks"></a>備註  
  使用這個方法來調整大小的亮度列中，這位於**自訂** 索引標籤的色彩選擇器控制項。 *w*參數指定 [亮度] 列的新寬度。 如果它超過工作區寬度的四分之三，則會忽略寬度值。  
@@ -363,8 +363,8 @@ void SetOriginalColor(COLORREF ref);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*ref*  
- RGB 色彩值。  
+*ref*<br/>
+[in]RGB 色彩值。  
   
 ### <a name="remarks"></a>備註  
  初始化色彩選擇器控制項時，請呼叫這個方法。  
@@ -377,8 +377,8 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pPalette*  
- 色彩調色盤的指標。  
+*pPalette*<br/>
+[in]色彩調色盤的指標。  
   
 ### <a name="remarks"></a>備註  
  色彩調色盤定義色彩的陣列，會顯示色彩選擇器控制項中。  
@@ -391,8 +391,8 @@ void SetSaturation(double Saturation);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*飽和度*  
- 飽和度值。  
+*飽和度*<br/>
+[in]飽和度值。  
   
 ### <a name="remarks"></a>備註  
   
@@ -404,8 +404,8 @@ void SetType(COLORTYPE colorType);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*colorType*  
- 色彩選擇器控制項型別。  
+*colorType*<br/>
+[in]色彩選擇器控制項型別。  
   
  類型由定義`CMFCColorPickerCtrl::COLORTYPE`列舉型別。 可能的類型會是明亮度、 選擇器、 十六進位和 HEX_GREYSCALE。 選擇器預設類型。  
   

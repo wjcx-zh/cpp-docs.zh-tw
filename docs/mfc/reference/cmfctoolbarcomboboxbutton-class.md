@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4555de3e42efd298cc7a6f67949a8b474f76064
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
-ms.translationtype: MT
+ms.openlocfilehash: ffb17f8f38e83399ec32b792338f818cc06215dc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540168"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703757"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton 類別
 包含下拉式方塊控制項的工具列按鈕 ( [CComboBox 類別](../../mfc/reference/ccombobox-class.md))。  
@@ -168,11 +168,11 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszItem*  
- 要加入至清單方塊項目的文字。  
+*lpszItem*<br/>
+[in]要加入至清單方塊項目的文字。  
   
- [in]*dwData*  
- 要加入至清單方塊項目相關聯的資料。  
+*dwData*<br/>
+[in]要加入至清單方塊項目相關聯的資料。  
   
 ### <a name="return-value"></a>傳回值  
  在清單方塊中的最後一個項目索引。  
@@ -192,11 +192,11 @@ virtual INT_PTR AddSortedItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszItem*  
- 要加入至清單方塊項目的文字。  
+*lpszItem*<br/>
+[in]要加入至清單方塊項目的文字。  
   
- [in]*dwData*  
- 要加入至清單方塊項目相關聯的資料。  
+*dwData*<br/>
+[in]要加入至清單方塊項目相關聯的資料。  
   
 ### <a name="return-value"></a>傳回值  
  已新增至清單方塊項目的索引。  
@@ -226,17 +226,17 @@ CMFCToolBarComboBoxButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiID*  
- [新增] 按鈕的命令識別碼。  
+*uiID*<br/>
+[in][新增] 按鈕的命令識別碼。  
   
- [in]*iImage*  
- [新增] 按鈕相關聯的映像的映像索引。  
+*iImage*<br/>
+[in][新增] 按鈕相關聯的映像的映像索引。  
   
- [in]*cheaderctrl:: Create*  
- [新增] 按鈕的樣式。  
+*cheaderctrl:: Create*<br/>
+[in][新增] 按鈕的樣式。  
   
- [in]*iWidth*  
- 寬度，單位為像素的 [新增] 按鈕。  
+*iWidth*<br/>
+[in]寬度，單位為像素的 [新增] 按鈕。  
   
 ### <a name="remarks"></a>備註  
  預設寬度是 150 個像素。  
@@ -263,11 +263,11 @@ virtual int Compare(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszItem1*  
- 要比較的第一個字串。  
+*lpszItem1*<br/>
+[in]要比較的第一個字串。  
   
- [in]*lpszItem2*  
- 要比較的第二個字串。  
+*lpszItem2*<br/>
+[in]要比較的第二個字串。  
   
 ### <a name="return-value"></a>傳回值  
  值，指出字串之間的區分大小寫字母關聯性。 下表列出可能的值：  
@@ -293,8 +293,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*src*  
- 來源 `CMFCToolBarComboBoxButton` 物件。  
+*src*<br/>
+[in]來源`CMFCToolBarComboBoxButton`物件。  
   
 ##  <a name="createcombo"></a>  CMFCToolBarComboBoxButton::CreateCombo  
  建立新的下拉式方塊的下拉式方塊按鈕。  
@@ -306,11 +306,11 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWndParent*  
- 按鈕的父視窗指標。  
+*pWndParent*<br/>
+[in]按鈕的父視窗指標。  
   
- [in]*rect*  
- 在下拉式方塊的周框。  
+*rect*<br/>
+[in]在下拉式方塊的周框。  
   
 ### <a name="return-value"></a>傳回值  
  變數的指標，如果方法成功，新下拉式方塊否則為 NULL。  
@@ -326,14 +326,14 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWndParent*  
- 按鈕的父視窗指標。  
+*pWndParent*<br/>
+[in]按鈕的父視窗指標。  
   
- [in]*rect*  
- 新的編輯方塊的週框。  
+*rect*<br/>
+[in]新的編輯方塊的週框。  
   
- [in]*dwEditStyle*  
- 新的編輯方塊控制項樣式。  
+*dwEditStyle*<br/>
+[in]新的編輯方塊控制項樣式。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，新的指標 編輯方塊否則為 NULL。  
@@ -351,14 +351,14 @@ BOOL DeleteItem(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iIndex*  
- 要刪除之項目的以零為起始的索引。  
+*iIndex*<br/>
+[in]要刪除之項目的以零為起始的索引。  
   
- [in]*dwData*  
- 要刪除的項目相關聯的資料。  
+*dwData*<br/>
+[in]要刪除的項目相關聯的資料。  
   
- [in]*lpszText*  
- 要刪除之項目的文字。 如果有多個相同的文字項目，則會刪除第一個項目。  
+*lpszText*<br/>
+[in]要刪除之項目的文字。 如果有多個相同的文字項目，則會刪除第一個項目。  
   
 ### <a name="return-value"></a>傳回值  
  如果已找到項目，並將其已成功刪除;，則為 TRUE。否則為 FALSE。  
@@ -383,8 +383,8 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bEnable*  
- 若要啟用編輯和下拉式方塊中，則為 TRUE若要停用編輯] 和 [下拉式方塊，則為 FALSE。  
+*bEnable*<br/>
+[in]若要啟用編輯和下拉式方塊中，則為 TRUE若要停用編輯] 和 [下拉式方塊，則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  停用時，這些控制項不能成為使用中，而且不能接受使用者輸入。  
@@ -397,8 +397,8 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*menuButton*  
- 功能表按鈕的參考。  
+*MenuButton*<br/>
+[out]功能表按鈕的參考。  
   
 ### <a name="return-value"></a>傳回值  
  永遠為 TRUE。  
@@ -411,8 +411,8 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszText*  
- 要在清單方塊中搜尋文字。  
+*lpszText*<br/>
+[in]要在清單方塊中搜尋文字。  
   
 ### <a name="return-value"></a>傳回值  
  項目的索引或 CB_ERR 如果找不到項目。  
@@ -429,11 +429,11 @@ static CMFCToolBarComboBoxButton* GetByCmd(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiCmd*  
- 下拉式方塊按鈕的命令識別碼。  
+*uiCmd*<br/>
+[in]下拉式方塊按鈕的命令識別碼。  
   
- [in]*bIsFocus*  
- 若為 true，則只搜尋已取得焦點按鈕;搜尋所有按鈕，則為 FALSE。  
+*bIsFocus*<br/>
+[in]若為 true，則只搜尋已取得焦點按鈕;搜尋所有按鈕，則為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
  下拉式方塊按鈕; 指標或者，如果找不到按鈕，則為 NULL。  
@@ -482,8 +482,8 @@ static int GetCountAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiCmd*  
- 下拉式方塊按鈕的命令識別碼。  
+*uiCmd*<br/>
+[in]下拉式方塊按鈕的命令識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  在清單方塊中的項目數否則，如果下拉式方塊按鈕的 CB_ERR 找不到。  
@@ -511,8 +511,8 @@ static int GetCurSelAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiCmd*  
- 下拉式方塊按鈕的命令識別碼。  
+*uiCmd*<br/>
+[in]下拉式方塊按鈕的命令識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  在清單方塊中目前選取項目的索引否則，CB_ERR 如果在不選取任何項目或下拉式方塊按鈕找不到。  
@@ -550,8 +550,8 @@ LPCTSTR GetItem(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iIndex*  
- 清單方塊中的項目以零為起始的索引。  
+*iIndex*<br/>
+[in]清單方塊中的項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  項目; 相關聯的字串指標否則，如果索引參數無效，或者索引參數是-1，下拉式方塊中沒有選取項目可為 NULL。  
@@ -569,11 +569,11 @@ static LPCTSTR GetItemAll(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiCmd*  
- 下拉式方塊按鈕的命令識別碼。  
+*uiCmd*<br/>
+[in]下拉式方塊按鈕的命令識別碼。  
   
- [in]*iIndex*  
- 清單方塊中的項目以零為起始的索引。  
+*iIndex*<br/>
+[in]清單方塊中的項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功; 的項目的字串的指標否則，如果索引是無效的 NULL，下拉式方塊按鈕找不到，或者索引是-1，下拉式方塊中沒有選取項目。  
@@ -589,8 +589,8 @@ DWORD_PTR GetItemData(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iIndex*  
- 清單方塊中的項目以零為起始的索引。  
+*iIndex*<br/>
+[in]清單方塊中的項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  與項目; 相關聯的資料或 0，如果項目不存在。  
@@ -608,11 +608,11 @@ static DWORD_PTR GetItemDataAll(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiCmd*  
- 下拉式方塊按鈕的命令識別碼。  
+*uiCmd*<br/>
+[in]下拉式方塊按鈕的命令識別碼。  
   
- [in]*iIndex*  
- 清單方塊中的項目以零為起始的索引。  
+*iIndex*<br/>
+[in]清單方塊中的項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功; 與項目相關聯的資料如果指定的索引無效，或找不到 CB_ERR 如果下拉式方塊按鈕，否則為 0。  
@@ -630,11 +630,11 @@ static void* GetItemDataPtrAll(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiCmd*  
- 下拉式方塊按鈕的命令識別碼。  
+*uiCmd*<br/>
+[in]下拉式方塊按鈕的命令識別碼。  
   
- [in]*iIndex*  
- 清單方塊中的項目以零為起始的索引。  
+*iIndex*<br/>
+[in]清單方塊中的項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功; 相關聯的項目指標否則，-1，如果錯誤發生時，或找不到如果下拉式方塊按鈕則為 NULL。  
@@ -674,8 +674,8 @@ static LPCTSTR GetTextAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiCmd*  
- 特定的下拉式方塊按鈕的命令識別碼。  
+*uiCmd*<br/>
+[in]特定的下拉式方塊按鈕的命令識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功; 中的 [編輯] 方塊中的文字否則為 NULL。  
@@ -728,8 +728,8 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*hwnd*  
- 視窗控制代碼。  
+*hwnd*<br/>
+[in]視窗控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果控制代碼與下拉式方塊按鈕，或其中一個子系; 相關聯，則為 TRUE。否則為 FALSE。  
@@ -765,8 +765,8 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iNotifyCode*  
- 與命令相關聯的通知訊息。  
+*iNotifyCode*<br/>
+[in]與命令相關聯的通知訊息。  
   
 ### <a name="return-value"></a>傳回值  
  下拉式方塊按鈕是否會處理訊息。  
@@ -789,14 +789,14 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容會顯示下拉式方塊按鈕。  
+*pDC*<br/>
+[in]裝置內容會顯示下拉式方塊按鈕。  
   
- [in]*sizeDefault*  
- 下拉式方塊按鈕的預設大小。  
+*sizeDefault*<br/>
+[in]下拉式方塊按鈕的預設大小。  
   
- [in]*bHorz*  
- 為父工具列停駐狀態。 工具列停駐時以水平和 FALSE 以垂直方式停駐工具列時，則為 TRUE。  
+*bHorz*<br/>
+[in]為父工具列停駐狀態。 工具列停駐時以水平和 FALSE 以垂直方式停駐工具列時，則為 TRUE。  
   
 ### <a name="return-value"></a>傳回值  
  A`SIZE`結構，其中包含下拉式方塊按鈕，像素為單位的維度。  
@@ -809,8 +809,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWndParent*  
- 在新的父工具列的指標。  
+*pWndParent*<br/>
+[in]在新的父工具列的指標。  
   
 ##  <a name="onclick"></a>  CMFCToolBarComboBoxButton::OnClick  
  當使用者按下下拉式方塊按鈕時由架構呼叫。  
@@ -822,11 +822,11 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWnd*  
- 下拉式方塊按鈕的父視窗的指標。  
+*pWnd*<br/>
+[in]下拉式方塊按鈕的父視窗的指標。  
   
- [in]*bDelay*  
- 保留供衍生類別中使用。  
+*bDelay*<br/>
+[in]保留供衍生類別中使用。  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法會處理事件，則為 TRUE否則為 FALSE。  
@@ -841,11 +841,11 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容會顯示下拉式方塊按鈕。  
+*pDC*<br/>
+[in]裝置內容會顯示下拉式方塊按鈕。  
   
- [in]*nCtlColor*  
- 未使用。  
+*nCtlColor*<br/>
+[in]未使用。  
   
 ### <a name="return-value"></a>傳回值  
  架構會使用來繪製下拉式方塊按鈕背景的筆刷的控制代碼。  
@@ -869,29 +869,29 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*Pdc*  
- 裝置內容，顯示的按鈕。  
+*Pdc*<br/>
+[in]裝置內容，顯示的按鈕。  
   
- [in]*rect*  
- 按鈕的週框。  
+*rect*<br/>
+[in]按鈕的週框。  
   
- [in]*pImages*  
- 與按鈕關聯的映像集合。  
+*pImages*<br/>
+[in]與按鈕關聯的映像集合。  
   
- [in]*bHorz*  
- 為父工具列停駐狀態。 工具列停駐時以水平和 FALSE 以垂直方式停駐工具列時，則為 TRUE。  
+*bHorz*<br/>
+[in]為父工具列停駐狀態。 工具列停駐時以水平和 FALSE 以垂直方式停駐工具列時，則為 TRUE。  
   
- [in]*bCustomizeMode*  
- 應用程式是否以自訂模式。  
+*bCustomizeMode*<br/>
+[in]應用程式是否以自訂模式。  
   
- [in]*bHighlight*  
- 是否要繪製反白顯示下拉式方塊按鈕。  
+*bHighlight*<br/>
+[in]是否要繪製反白顯示下拉式方塊按鈕。  
   
- [in]*bDrawBorder*  
- 是否要繪製框線的下拉式方塊按鈕。  
+*bDrawBorder*<br/>
+[in]是否要繪製框線的下拉式方塊按鈕。  
   
- [in]*bGrayDisabledButtons*  
- 若為 true，則繪製陰影表示停用的按鈕;如果為 false，則使用已停用的映像集合。  
+*bGrayDisabledButtons*<br/>
+[in]若為 true，則繪製陰影表示停用的按鈕;如果為 false，則使用已停用的映像集合。  
   
 ##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
  由架構呼叫以繪製下拉式方塊按鈕**命令**窗格**自訂** 對話方塊。  
@@ -904,14 +904,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容會顯示下拉式方塊按鈕。  
+*pDC*<br/>
+[in]裝置內容會顯示下拉式方塊按鈕。  
   
- [in]*rect*  
- 下拉式方塊按鈕的週框。  
+*rect*<br/>
+[in]下拉式方塊按鈕的週框。  
   
- [in]*bSelected*  
- 如果已選取下拉式方塊按鈕;，則為 TRUE。否則為 FALSE。  
+*bSelected*<br/>
+[in]如果已選取下拉式方塊按鈕;，則為 TRUE。否則為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
  寬度，單位為像素下拉式方塊按鈕。  
@@ -938,8 +938,8 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bShow*  
- 是否要隱藏或顯示下拉式方塊按鈕。  
+*bShow*<br/>
+[in]是否要隱藏或顯示下拉式方塊按鈕。  
   
 ##  <a name="onsize"></a>  CMFCToolBarComboBoxButton::OnSize  
  由架構呼叫以變更下拉式方塊按鈕的大小，為父工具列大小變更時。  
@@ -949,8 +949,8 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iSize*  
- 下拉式方塊按鈕的新寬度。  
+*iSize*<br/>
+[in]下拉式方塊按鈕的新寬度。  
   
 ##  <a name="onupdatetooltip"></a>  CMFCToolBarComboBoxButton::OnUpdateToolTip  
  當使用者變更下拉式方塊按鈕的工具提示時，由架構呼叫。  
@@ -964,17 +964,17 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWndParent*  
- 下拉式方塊按鈕的父視窗的指標。  
+*pWndParent*<br/>
+[in]下拉式方塊按鈕的父視窗的指標。  
   
- [in]*iButtonIndex*  
- 下拉式方塊按鈕的識別碼。  
+*iButtonIndex*<br/>
+[in]下拉式方塊按鈕的識別碼。  
   
- [in]*wndToolTip*  
- 下拉式方塊按鈕相關聯的工具提示。  
+*wndToolTip*<br/>
+[in]下拉式方塊按鈕相關聯的工具提示。  
   
- [in]*str*  
- 工具提示文字。  
+*str*<br/>
+[in]工具提示文字。  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法會處理事件，則為 TRUE否則為 FALSE。  
@@ -1002,17 +1002,17 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iIndex*  
- 清單方塊中的項目以零為起始的索引。  
+*iIndex*<br/>
+[in]清單方塊中的項目以零為起始的索引。  
   
- [in]*bNotify*  
- TRUE 表示通知下拉式方塊按鈕的選取項目;否則為 FALSE。  
+*bNotify*<br/>
+[in]TRUE 表示通知下拉式方塊按鈕的選取項目;否則為 FALSE。  
   
- [in]*dwData*  
- 使用清單方塊中的項目相關聯的資料。  
+*dwData*<br/>
+[in]使用清單方塊中的項目相關聯的資料。  
   
- [in]*lpszText*  
- 在清單方塊項目的文字。  
+*lpszText*<br/>
+[in]在清單方塊項目的文字。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為 TRUE否則為 FALSE。  
@@ -1039,17 +1039,17 @@ static BOOL SelectItemAll(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiCmd*  
- 包含在清單方塊的下拉式方塊按鈕的命令識別碼。  
+*uiCmd*<br/>
+[in]包含在清單方塊的下拉式方塊按鈕的命令識別碼。  
   
- [in]*iIndex*  
- 在清單方塊中的項目以零為起始的索引。 -1 值的清單方塊中移除任何目前的選取範圍，並清除 [編輯] 方塊。  
+*iIndex*<br/>
+[in]在清單方塊中的項目以零為起始的索引。 -1 值的清單方塊中移除任何目前的選取範圍，並清除 [編輯] 方塊。  
   
- [in]*dwData*  
- 清單方塊中的項目資料。  
+*dwData*<br/>
+[in]清單方塊中的項目資料。  
   
- [in]*lpszText*  
- 在清單方塊項目的文字。  
+*lpszText*<br/>
+[in]在清單方塊項目的文字。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為 TRUE否則為 FALSE。  
@@ -1064,8 +1064,8 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in、 out]*ar*  
- `CArchive`来序列化的物件。  
+*ar*<br/>
+[in、 out]`CArchive`来序列化的物件。  
   
 ### <a name="remarks"></a>備註  
  在 設定`CArchive`物件決定這個方法會讀取或寫入封存。  
@@ -1080,11 +1080,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pParent*  
- 下拉式方塊按鈕的父視窗。  
+*pParent*<br/>
+[in]下拉式方塊按鈕的父視窗。  
   
- [out]*資料*  
- A`CAccessibilityData`收到下拉式方塊按鈕的協助工具資料的物件。  
+*data*<br/>
+[out]A`CAccessibilityData`收到下拉式方塊按鈕的協助工具資料的物件。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為 TRUE否則為 FALSE。  
@@ -1097,8 +1097,8 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bCenterVert*  
- TRUE 表示置中下拉式方塊按鈕的工具列，如果為 false，則對齊下拉式方塊按鈕加入工具列頂端。  
+*bCenterVert*<br/>
+[in]TRUE 表示置中下拉式方塊按鈕的工具列，如果為 false，則對齊下拉式方塊按鈕加入工具列頂端。  
   
 ### <a name="remarks"></a>備註  
  根據預設，頂端對齊下拉式方塊按鈕。  
@@ -1111,8 +1111,8 @@ void SetContextMenuID(UINT uiResID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiResID*  
- 快顯功能表資源識別碼。  
+*uiResID*<br/>
+[in]快顯功能表資源識別碼。  
   
 ##  <a name="setdropdownheight"></a>  CMFCToolBarComboBoxButton::SetDropDownHeight  
  向下拖曳時，請設定清單方塊的高度。  
@@ -1122,8 +1122,8 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nHeight*  
- 像素為單位，清單方塊的高度。  
+*nHeight*<br/>
+[in]像素為單位，清單方塊的高度。  
   
 ### <a name="remarks"></a>備註  
  預設高度為 150 個像素。  
@@ -1136,8 +1136,8 @@ static void SetFlatMode(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bFlat*  
- 平面樣式外觀;，則為 TRUE否則為 FALSE。  
+*bFlat*<br/>
+[in]平面樣式外觀;，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  下拉式方塊按鈕的預設一般樣式為 FALSE。  
@@ -1150,8 +1150,8 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nStyle*  
- 位元組合 (OR) 工具列的樣式。  
+*nStyle*<br/>
+[in]位元組合 (OR) 工具列的樣式。  
   
 ### <a name="remarks"></a>備註  
  如需工具列按鈕樣式的清單，請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)  
@@ -1164,8 +1164,8 @@ void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszText*  
- 字串，包含編輯方塊的文字指標。  
+*lpszText*<br/>
+[in]字串，包含編輯方塊的文字指標。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

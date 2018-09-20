@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 758b2039168825ec95a14b84b1c4c589618e7c24
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
-ms.translationtype: MT
+ms.openlocfilehash: ad50deb1cb500abb532acac8c3c0d035c37b87ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680100"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726436"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 `CMFCTabCtrl`類別會提供索引標籤控制項的功能。 索引標籤控制項會顯示頂端或底部有一般或 3D 索引標籤的可停駐視窗。 索引標籤可以顯示文字和影像，當在使用中狀態時，也可變更色彩。  
@@ -265,8 +265,8 @@ void ActivateMDITab(int nTab = -1);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nTab*  
- 索引標籤，以顯示，或是-1，指定目前使用中的索引標籤的以零為起始的索引。  
+*nTab*<br/>
+[in]索引標籤，以顯示，或是-1，指定目前使用中的索引標籤的以零為起始的索引。  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
  如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
@@ -288,8 +288,8 @@ void AutoSizeWindow(BOOL bAutoSize = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bAutoSize*  
- 自動調整 索引標籤上控制 windows; 的大小，則為 TRUE否則為 FALSE。 預設值為 TRUE。  
+*bAutoSize*<br/>
+[in]自動調整 索引標籤上控制 windows; 的大小，則為 TRUE否則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -307,23 +307,23 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*樣式*  
- 索引標籤控制項的樣式。 如需詳細資訊，請參閱＜備註＞。  
+*style*<br/>
+[in]索引標籤控制項的樣式。 如需詳細資訊，請參閱＜備註＞。  
   
- [in]*rect*  
- 之界限的索引標籤控制項的矩形。  
+*rect*<br/>
+[in]之界限的索引標籤控制項的矩形。  
   
- [in]*pParentWnd*  
- 父視窗的指標。 必須不是 NULL。  
+*pParentWnd*<br/>
+[in]父視窗的指標。 必須不是 NULL。  
   
- [in]*nID*  
- 索引標籤控制項的 ID。  
+*nID*<br/>
+[in]索引標籤控制項的 ID。  
   
- [in]*位置*  
- 索引標籤的位置。 預設值是 LOCATION_BOTTOM。 如需詳細資訊，請參閱＜備註＞。  
+*location*<br/>
+[in]索引標籤的位置。 預設值是 LOCATION_BOTTOM。 如需詳細資訊，請參閱＜備註＞。  
   
- [in]*bCloseBtn*  
- True 會顯示在索引標籤; [關閉] 按鈕否則為 FALSE。 預設值為 FALSE。  
+*bCloseBtn*<br/>
+[in]True 會顯示在索引標籤; [關閉] 按鈕否則為 FALSE。 預設值為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則為 TRUE否則為 FALSE。  
@@ -362,8 +362,8 @@ virtual void CalcRectEdit(CRect& rectEdit);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*rectEdit*  
- 指定的索引標籤區域的矩形。  
+*rectEdit*<br/>
+[in]指定的索引標籤區域的矩形。  
   
 ### <a name="remarks"></a>備註  
  當您變更索引標籤的標籤時，會呼叫這個方法。這個方法 1/2 目前的索引標籤高度，來 「 左邊和右邊指定矩形的洩氣 」 和 「 洩氣 」 的上方和下方一個單位。  
@@ -376,8 +376,8 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bEnable*  
- True 會顯示 [作用中] 索引標籤; [關閉] 按鈕如果為 false，則顯示索引標籤區域右上角的 [關閉] 按鈕。 預設值為 TRUE。  
+*bEnable*<br/>
+[in]True 會顯示 [作用中] 索引標籤; [關閉] 按鈕如果為 false，則顯示索引標籤區域右上角的 [關閉] 按鈕。 預設值為 TRUE。  
   
 ##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit  
  啟用或停用可編輯的索引標籤。  
@@ -387,8 +387,8 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bEnable*  
- 若要啟用可編輯的索引標籤;，則為 TRUE若要停用可編輯的索引標籤，則為 FALSE。  
+*bEnable*<br/>
+[in]若要啟用可編輯的索引標籤;，則為 TRUE若要停用可編輯的索引標籤，則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -400,8 +400,8 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bEnable*  
- True 會顯示索引標籤式的視窗標籤; 快顯功能表如果為 false，則顯示向前及向後捲動按鈕。 預設值為 TRUE。  
+*bEnable*<br/>
+[in]True 會顯示索引標籤式的視窗標籤; 快顯功能表如果為 false，則顯示向前及向後捲動按鈕。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
  當使用者按一下的索引標籤時，架構就會顯示對應的索引標籤式的視窗。 如果索引標籤的標籤是可見的而不需要變更其位置開啟索引標籤式的視窗。 如果使用者從快顯功能表中選取文件和對應的索引標籤式的視窗已關閉螢幕，索引標籤式的視窗就會變成第一個索引標籤。  
@@ -414,8 +414,8 @@ virtual BOOL EnsureVisible(int iTab);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iTab*  
- 索引標籤的以零為起始的索引。  
+*iTab*<br/>
+[in]索引標籤的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則為 TRUEFalse *iTab*參數索引無效。  
@@ -431,8 +431,8 @@ static HICON __stdcall GetDocumentIcon(UINT nCmdID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nCmdID*  
- 索引標籤式視窗的快顯功能表中的索引標籤的命令識別碼。  
+*nCmdID*<br/>
+[in]索引標籤式視窗的快顯功能表中的索引標籤的命令識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  點陣圖影像的控制代碼。  
@@ -483,11 +483,11 @@ void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*rectTabAreaTop*  
- 當這個方法傳回時，此參考會包含之界限頂端索引標籤的 [標籤] 區域的矩形。 矩形是在用戶端座標。 此參考是不含索引標籤的標籤區域頂端的索引標籤控制項有空白的。  
+*rectTabAreaTop*<br/>
+[out]當這個方法傳回時，此參考會包含之界限頂端索引標籤的 [標籤] 區域的矩形。 矩形是在用戶端座標。 此參考是不含索引標籤的標籤區域頂端的索引標籤控制項有空白的。  
   
- [out]*rectTabAreaBottom*  
- 當這個方法傳回時，此參考會包含之界限下面的索引標籤的標籤區域的矩形。 矩形是在用戶端座標。 此參考是不含索引標籤的標籤區域底部的索引標籤控制項有空白的。  
+*rectTabAreaBottom*<br/>
+[out]當這個方法傳回時，此參考會包含之界限下面的索引標籤的標籤區域的矩形。 矩形是在用戶端座標。 此參考是不含索引標籤的標籤區域底部的索引標籤控制項有空白的。  
   
 ### <a name="remarks"></a>備註  
  使用這個方法來決定的大小和位置的索引標籤區域中的索引標籤式視窗。  
@@ -523,8 +523,8 @@ virtual void GetTabsRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*rect*  
- 當這個方法傳回時， *rect*參數包含之界限的索引標籤區域的矩形。  
+*rect*<br/>
+[out]當這個方法傳回時， *rect*參數包含之界限的索引標籤區域的矩形。  
   
 ##  <a name="getwndarea"></a>  CMFCTabCtrl::GetWndArea  
  擷取目前的索引標籤控制項的用戶端區域的界限。  
@@ -534,8 +534,8 @@ void GetWndArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in、 out]*rect*  
- 當這個方法傳回時，此參數會包含之界限的目前的索引標籤控制項的矩形。  
+*rect*<br/>
+[in、 out]當這個方法傳回時，此參數會包含之界限的目前的索引標籤控制項的矩形。  
   
 ### <a name="remarks"></a>備註  
   
@@ -557,8 +557,8 @@ void HideInactiveWindow(BOOL bHide = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bHide*  
- 不想再顯示非現用視窗;，則為 TRUE若要顯示非作用中的視窗，則為 FALSE。 預設值為 TRUE。  
+*bHide*<br/>
+[in]不想再顯示非現用視窗;，則為 TRUE若要顯示非作用中的視窗，則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -570,8 +570,8 @@ void HideNoTabs(BOOL bHide=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bHide*  
- TRUE 表示啟用繪製索引標籤的區域。若要停用的繪圖，則為 FALSE。 預設值為 TRUE。  
+*bHide*<br/>
+[in]TRUE 表示啟用繪製索引標籤的區域。若要停用的繪圖，則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -583,8 +583,8 @@ virtual void HideSingleTab(BOOL bHide=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bHide*  
- TRUE 表示不繪製單一索引標籤式視窗中，索引標籤若要繪製單一索引標籤，則為 FALSE。預設值為 TRUE。  
+*bHide*<br/>
+[in]TRUE 表示不繪製單一索引標籤式視窗中，索引標籤若要繪製單一索引標籤，則為 FALSE。預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -749,8 +749,8 @@ BOOL ModifyTabStyle(Style style);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*樣式*  
- 其中一個列舉值，指定索引標籤控制項的外觀。 如需詳細資訊，請參閱 < 備註 > 中的資料表。  
+*style*<br/>
+[in]其中一個列舉值，指定索引標籤控制項的外觀。 如需詳細資訊，請參閱 < 備註 > 中的資料表。  
   
 ### <a name="return-value"></a>傳回值  
  永遠為 TRUE。  
@@ -780,14 +780,14 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDataObject*  
- 資料物件，其中包含使用者拖曳的資料點。  
+*pDataObject*<br/>
+[in]資料物件，其中包含使用者拖曳的資料點。  
   
- [in]*dwKeyState*  
- 包含的輔助按鍵的狀態。 這個參數是的位元組合 (OR) 的下列值： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。 如需詳細資訊，請參閱 <<c0>  **訊息參數**一節[有關滑鼠輸入](/windows/desktop/inputdev/about-mouse-input)。  
+*dwKeyState*<br/>
+[in]包含的輔助按鍵的狀態。 這個參數是的位元組合 (OR) 的下列值： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。 如需詳細資訊，請參閱 <<c0>  **訊息參數**一節[有關滑鼠輸入](/windows/desktop/inputdev/about-mouse-input)。  
   
- [in]*點*  
- 包含工作區座標中的資料指標的目前的位置。  
+*點*<br/>
+[in]包含工作區座標中的資料指標的目前的位置。  
   
 ### <a name="return-value"></a>傳回值  
  一律 DROPEFFECT_NONE，這表示置放目標無法接受資料。  
@@ -808,14 +808,14 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDataObject*  
- 指標[COleDataObject](../../mfc/reference/coledataobject-class.md)被拖曳到置放目標的物件。  
+*pDataObject*<br/>
+[in]指標[COleDataObject](../../mfc/reference/coledataobject-class.md)被拖曳到置放目標的物件。  
   
- [in]*dwKeyState*  
- 這是的位元組合 (OR) MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON 輔助按鍵，狀態。 如需詳細資訊，請參閱 < 訊息參數 」 中[有關滑鼠輸入](/windows/desktop/inputdev/about-mouse-input)。  
+*dwKeyState*<br/>
+[in]這是的位元組合 (OR) MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON 輔助按鍵，狀態。 如需詳細資訊，請參閱 < 訊息參數 」 中[有關滑鼠輸入](/windows/desktop/inputdev/about-mouse-input)。  
   
- [in]*點*  
- 目前的滑鼠位置。  
+*點*<br/>
+[in]目前的滑鼠位置。  
   
 ### <a name="return-value"></a>傳回值  
  一律 DROPEFFECT_NONE。  
@@ -831,8 +831,8 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*點*  
- 如何顯示快顯功能表的座標。  
+*點*<br/>
+[in]如何顯示快顯功能表的座標。  
   
 ### <a name="remarks"></a>備註  
   
@@ -844,8 +844,8 @@ void SetActiveInMDITabGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bActive*  
- 若要讓目前的索引標籤作用中的索引標籤;，則為 TRUE若要讓非作用中的 [目前] 索引標籤，則為 FALSE。  
+*bActive*<br/>
+[in]若要讓目前的索引標籤作用中的索引標籤;，則為 TRUE若要讓非作用中的 [目前] 索引標籤，則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  您可以分組多個文件視窗是垂直或水平索引標籤，並輕鬆地從一個索引標籤群組到另一個隨機文件。  
@@ -858,8 +858,8 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iTab*  
- 指定要啟動之索引標籤的以零為起始索引。  
+*iTab*<br/>
+[in]指定要啟動之索引標籤的以零為起始索引。  
   
 ### <a name="return-value"></a>傳回值  
  如果指定的索引標籤已啟用，則為 TRUEFalse 指定*iTab*參數值無效。  
@@ -877,8 +877,8 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bIsBold*  
- 若要使用以粗體字顯示的 [作用中] 索引標籤; 標籤，則為 TRUE如果為 false，則使用標準字型顯示標籤。 預設值為 TRUE。  
+*bIsBold*<br/>
+[in]若要使用以粗體字顯示的 [作用中] 索引標籤; 標籤，則為 TRUE如果為 false，則使用標準字型顯示標籤。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -890,8 +890,8 @@ void SetDrawFrame(BOOL bDraw=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bDraw*  
- True 會顯示框架矩形以圍繞內嵌的列;否則為 FALSE。 預設值為 TRUE。  
+*bDraw*<br/>
+[in]True 會顯示框架矩形以圍繞內嵌的列;否則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -905,11 +905,11 @@ void SetFlatFrame(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bFlat*  
- 索引標籤區域; 周圍繪製平面 (2D) 框架，則為 TRUE繪製三維 (3D) 框架，則為 FALSE。 預設值為 TRUE。  
+*bFlat*<br/>
+[in]索引標籤區域; 周圍繪製平面 (2D) 框架，則為 TRUE繪製三維 (3D) 框架，則為 FALSE。 預設值為 TRUE。  
   
- [in]*bRepaint*  
- 若要立即; 重繪視窗，則為 TRUE否則為 FALSE。 預設值為 TRUE。  
+*bRepaint*<br/>
+[in]若要立即; 重繪視窗，則為 TRUE否則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -926,17 +926,17 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiID*  
- 包含影像清單的點陣圖資源的識別碼。  
+*uiID*<br/>
+[in]包含影像清單的點陣圖資源的識別碼。  
   
- [in]*cx*  
- 每個映像，單位為像素寬度。 預設值為 15。  
+*cx*<br/>
+[in]每個映像，單位為像素寬度。 預設值為 15。  
   
- [in]*clrTransp*  
- 透明影像色彩。 這個色彩影像部分會是透明的。 洋紅色，RGB(255,0,255) 為預設值。  
+*clrTransp*<br/>
+[in]透明影像色彩。 這個色彩影像部分會是透明的。 洋紅色，RGB(255,0,255) 為預設值。  
   
- [in]*hImageList*  
- 預先載入的影像清單控制代碼。  
+*hImageList*<br/>
+[in]預先載入的影像清單控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果這個方法成功，則為 TRUE。 如果使用平面的樣式建立的索引標籤控制項，或如果第一個方法多載無法載入所指定的點陣圖，則為 FALSE。 *uiID*參數。  
@@ -954,8 +954,8 @@ void SetResizeMode(ResizeMode resizeMode);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*resizeMode*  
- 其中一個`CMFCTabCtrl::ResizeMode`列舉值，指定如何在索引標籤控制項可以調整大小。 如需可能值的清單，請參閱 < 備註 > 中的資料表。  
+*resizeMode*<br/>
+[in]其中一個`CMFCTabCtrl::ResizeMode`列舉值，指定如何在索引標籤控制項可以調整大小。 如需可能值的清單，請參閱 < 備註 > 中的資料表。  
   
 ### <a name="remarks"></a>備註  
  *ResizeMode*參數可以是下列其中一種`ResizeMode`列舉值。  
@@ -974,8 +974,8 @@ void SetTabMaxWidth(int nTabMaxWidth);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nTabMaxWidth*  
- 最大的索引標籤的寬度，單位為像素。  
+*nTabMaxWidth*<br/>
+[in]最大的索引標籤的寬度，單位為像素。  
   
 ### <a name="remarks"></a>備註  
  您可以使用這個方法，在索引標籤式視窗中的每個索引標籤的寬度限制。 此方法相當實用的索引標籤有很長的標籤。 [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md)類別建構函式會初始化為 0，表示實際寬度不受任何限制的最大的索引標籤寬度。  
@@ -988,8 +988,8 @@ void StopResize(BOOL bCancel);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bCancel*  
- TRUE 表示放棄目前的調整大小作業;FALSE 表示完成目前的調整大小作業。 在任一情況下，架構會停止繪製調整大小的矩形。  
+*bCancel*<br/>
+[in]TRUE 表示放棄目前的調整大小作業;FALSE 表示完成目前的調整大小作業。 在任一情況下，架構會停止繪製調整大小的矩形。  
   
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar  
  水平捲軸控制項上繪製索引標籤會顯示一般索引標籤。  
@@ -999,8 +999,8 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*pScrollInfo*  
- 指標[SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)結構或 NULL。 當這個方法傳回時，且此參數不是 NULL，此結構包含捲軸上的所有參數。 預設值是 NULL。  
+*pScrollInfo*<br/>
+[out]指標[SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)結構或 NULL。 當這個方法傳回時，且此參數不是 NULL，此結構包含捲軸上的所有參數。 預設值是 NULL。  
   
 ### <a name="return-value"></a>傳回值  
  如果這個方法成功，則為 TRUE。否則為 FALSE。  

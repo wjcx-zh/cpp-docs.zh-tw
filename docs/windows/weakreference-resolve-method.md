@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59e748ef68d78f9cb77eb335f5c5cd44e058f0d4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1e0873b366c84e89b23ddbaa6c64f6b484f921e0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601152"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446331"
 ---
 # <a name="weakreferenceresolve-method"></a>WeakReference::Resolve 方法
 
@@ -39,10 +39,10 @@ STDMETHOD(Resolve)
 
 ### <a name="parameters"></a>參數
 
-*riid*  
+*riid*<br/>
 介面識別碼。
 
-*ppvObject*  
+*ppvObject*<br/>
 這項作業完成時，一份目前的強式參考，如果強式參考計數為非零值。
 
 ## <a name="return-value"></a>傳回值
@@ -65,5 +65,5 @@ STDMETHOD(Resolve)
 
 ## <a name="see-also"></a>另請參閱
 
-[WeakReference 類別1](../windows/weakreference-class1.md)  
+[WeakReference 類別1](../windows/weakreference-class1.md)<br/>
 [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

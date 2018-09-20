@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a40b76075678fb91cc3c4dfde579d08ef0e6e538
-ms.sourcegitcommit: 6e479e33e8fd8e30ea32801edbff2e3415f31bf7
+ms.openlocfilehash: 6d4aefbc64486b665b35e0771091ceb3a24642c9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "33344993"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429652"
 ---
 # <a name="hierarchy-chart-categories"></a>階層架構圖表分類
-![MFC 階層架構圖表分類](../mfc/media/vc369r1.png "vc369r1")  
-  
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../mfc/hierarchy-chart.md)   
- [MFC 傳統型應用程式](../mfc/mfc-desktop-applications.md)
+
+![MFC 階層架構圖表分類](../mfc/media/vc369r1.png "vc369r1")
+
+## <a name="see-also"></a>另請參閱
+
+[階層架構圖表](../mfc/hierarchy-chart.md)<br/>
+[MFC 傳統型應用程式](../mfc/mfc-desktop-applications.md)
 

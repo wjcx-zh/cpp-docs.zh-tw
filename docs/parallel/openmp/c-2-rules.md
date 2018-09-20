@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb83b35a03608e272e9af67159b61e5dbf4e1ec6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c5845a9125bb32254fc0c03b03e9b6076a086d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755017"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404770"
 ---
 # <a name="c2-rules"></a>C.2 規則
+
 標記法是由 C 標準的 6.1 一節所述。 此文法附錄說明 OpenMP C 和 c + + 的指示詞的基底語言文法的延伸模組。
 
 **/\* 在 c + + (ISO/IEC 14882:1998) \*/**
@@ -194,7 +195,7 @@ ms.locfileid: "43755017"
 
 **/\* 標準的宣告 \*/**
 
-*宣告*:<br/>
+*宣告*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*threadprivate 指示詞*
 
 *threadprivate 指示詞*:<br/>
@@ -217,7 +218,7 @@ ms.locfileid: "43755017"
 **/\* 在 C 中 \*/**
 
 *變數清單*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*識別項*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*識別碼*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*變數清單* **，** *識別碼*
 
 **/\* 在 c + + \*/**

@@ -1,5 +1,5 @@
 ---
-title: CD2DRoundedRect 類別 |Microsoft 文件
+title: CD2DRoundedRect 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,56 +18,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab5a43747d258f7482f7de4d61b9da8201c0729b
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 2037a00eb00fac1a14eca50031d213a5827ac425
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952881"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448021"
 ---
 # <a name="cd2droundedrect-class"></a>CD2DRoundedRect 類別
-`D2D1_ROUNDED_RECT`的包裝函式。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-class CD2DRoundedRect : public D2D1_ROUNDED_RECT;  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CD2DRoundedRect::CD2DRoundedRect](#cd2droundedrect)|多載。 建構`CD2DRoundedRect`物件從`D2D1_ROUNDED_RECT`物件。|  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `D2D1_ROUNDED_RECT`  
-  
- [CD2DRoundedRect](../../mfc/reference/cd2droundedrect-class.md)  
-  
-## <a name="requirements"></a>需求  
- **標頭：** afxrendertarget.h  
-  
-##  <a name="cd2droundedrect"></a>  CD2DRoundedRect::CD2DRoundedRect  
- 建構來自 CD2DRectF 物件 CD2DRoundedRect 物件。  
-  
-```  
+
+`D2D1_ROUNDED_RECT`的包裝函式。
+
+## <a name="syntax"></a>語法
+
+```
+class CD2DRoundedRect : public D2D1_ROUNDED_RECT;
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[CD2DRoundedRect::CD2DRoundedRect](#cd2droundedrect)|多載。 建構`CD2DRoundedRect`物件從`D2D1_ROUNDED_RECT`物件。|
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`D2D1_ROUNDED_RECT`
+
+[CD2DRoundedRect](../../mfc/reference/cd2droundedrect-class.md)
+
+## <a name="requirements"></a>需求
+
+**標頭：** afxrendertarget.h
+
+##  <a name="cd2droundedrect"></a>  CD2DRoundedRect::CD2DRoundedRect
+
+建構 CD2DRoundedRect 物件從 CD2DRectF 物件。
+
+```
 CD2DRoundedRect(
-    const CD2DRectF& rectIn,  
-    const CD2DSizeF& sizeRadius);  
-  
-CD2DRoundedRect(const D2D1_ROUNDED_RECT& rectIn);  
+    const CD2DRectF& rectIn,
+    const CD2DSizeF& sizeRadius);
+
+CD2DRoundedRect(const D2D1_ROUNDED_RECT& rectIn);
 CD2DRoundedRect(const D2D1_ROUNDED_RECT* rectIn);
-```  
-  
-### <a name="parameters"></a>參數  
- *rectIn*  
- 來源矩形  
-  
- *sizeRadius*  
- radius 大小  
-  
-## <a name="see-also"></a>另請參閱  
- [類別](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>參數
+
+*rectIn*<br/>
+來源矩形
+
+*sizeRadius*<br/>
+半徑大小
+
+## <a name="see-also"></a>另請參閱
+
+[類別](../../mfc/reference/mfc-classes.md)

@@ -1,5 +1,5 @@
 ---
-title: 網際網路安全性 （c + +） |Microsoft 文件
+title: 網際網路安全性 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,22 +23,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4454eceae2cc5f2e6b46510fe95889c664a568a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1f5beba4f9a33a5bd9ee93baae6176d3ea592d2e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348846"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445811"
 ---
 # <a name="internet-security-c"></a>網際網路安全性 (C++)
-程式碼的安全性是開發人員和使用者的網際網路應用程式的主要問題。 會有危險： 惡意程式碼、 已遭竄改的程式碼和程式碼從未知的站台或多位作者。  
-  
- 開發網際網路時，有兩種基本安全性作法。 第一個稱為 「 沙箱 」。 這種方法，應用程式限制為一組特定的應用程式開發介面，並排除潛在危險的例如檔案 I/O 程式可能損毀使用者的電腦上的資料。 第二個被實作使用數位簽章。 這種方法稱為 「 shrinkwrap 」 的網際網路功能。 程式碼會驗證，而且使用私密/公開金鑰的主要技術簽章。 此程式碼執行之前，以確保程式碼是來自已知的已驗證來源和，程式碼未被改變已簽署之後驗證其數位簽章。  
-  
- 在第一個案例中，您信任應用程式將不會進行任何不良影響，以及您信任來源的應用程式。 第二、 數位簽章可用來確認真實性。 數位簽章是業界標準來識別，並提供有關程式碼的 「 發行者 」 的詳細資料。 它的技術根據標準，包括 RSA 和 X.509。 瀏覽器通常會允許使用者選擇是否要下載及執行未知來源的程式碼。  
-  
-  
-## <a name="see-also"></a>另請參閱  
- [MFC 網際網路程式設計工作](../mfc/mfc-internet-programming-tasks.md)   
- [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)
+
+程式碼安全性是開發人員和使用者的網際網路應用程式的主要問題。 有風險： 惡意程式碼、 程式碼已遭竄改，以及從不明的網站] 或 [作者的程式碼。
+
+開發網際網路時，有兩種安全性的基本方法。 第一個部分稱為 「 沙箱 」。 這種方法，是限制為一組特定的 Api，應用程式，並將其排除等檔案 I/O，程式無法終結使用者的電腦上的資料有潛在危險的項目中。 第二個是使用數位簽章來實作。 這種方法稱為 「 shrinkwrap 」 的網際網路功能。 程式碼會驗證，並使用私密金鑰/公開金鑰的關鍵技術簽章。 在執行的程式碼之前，以確保程式碼是從已知的驗證來源，而且，程式碼未被改變已簽署之後驗證其數位簽章。
+
+在第一個案例中，您可以信任應用程式將不會做任何傷害，以及您信任來源的應用程式。 在第二個，數位簽章來確認真實性。 數位簽章是一項工業標準，其用來識別，並提供程式碼的 「 發行者 」 的詳細資料。 其技術是以標準，包括 RSA 和 X.509 為基礎。 瀏覽器通常會允許使用者選擇是否要下載及執行未知來源的程式碼。
+
+
+## <a name="see-also"></a>另請參閱
+
+[MFC 網際網路程式設計工作](../mfc/mfc-internet-programming-tasks.md)<br/>
+[MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)
 

@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c2cb19908b177ea1e07e0178023e868b96a4560
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 39329f4895060ff950f36c3d10dd5e4020f3b98a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754774"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448424"
 ---
 # <a name="coledatetime-class"></a>COleDateTime 類別
 
@@ -1236,9 +1236,9 @@ int nSec) throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[COleVariant 類別](../../mfc/reference/colevariant-class.md)   
-[CTime 類別](../../atl-mfc-shared/reference/ctime-class.md)   
-[CTimeSpan 類別](../../atl-mfc-shared/reference/ctimespan-class.md)   
-[階層架構圖表](../../mfc/hierarchy-chart.md)   
+[COleVariant 類別](../../mfc/reference/colevariant-class.md)<br/>
+[CTime 類別](../../atl-mfc-shared/reference/ctime-class.md)<br/>
+[CTimeSpan 類別](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
+[階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

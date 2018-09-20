@@ -1,5 +1,5 @@
 ---
-title: 逐步解說： 將 ctaskdialog 加入至應用程式 |Microsoft 文件
+title: 逐步解說： 將 CTaskDialog 加入至應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0a3d93815a740be59960e6d3e0f9e9ed690923
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 0f803af896c1bb2a0e5f58e45f4ef9f588f4e66d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122950"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420476"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>逐步解說：將 CTaskDialog 加入至應用程式
 
@@ -29,7 +29,7 @@ ms.locfileid: "37122950"
 `CTaskDialog`是工作的對話方塊，它會取代 Windows 訊息方塊，在 Windows Vista 或更新版本。 `CTaskDialog` 改進原始訊息方塊並加入功能。 在 Visual Studio 中仍然支援 Windows 訊息方塊。
 
 > [!NOTE]
-> Windows 版本的 Windows vista 不支援`CTaskDialog`。 如果您想要向在舊版 Windows 上執行您的應用程式的使用者顯示訊息，您必須編寫替代對話方塊選項。 您可以使用靜態方法 [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) ，在執行階段判斷使用者的電腦是否可以顯示 `CTaskDialog`中的 Windows 訊息方塊。 此外，只有使用 Unicode 程式庫建置應用程式時，才能使用 `CTaskDialog` 。
+> 之前的 Windows 版本比 Windows Vista 不支援`CTaskDialog`。 如果您想要向在舊版 Windows 上執行您的應用程式的使用者顯示訊息，您必須編寫替代對話方塊選項。 您可以使用靜態方法 [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) ，在執行階段判斷使用者的電腦是否可以顯示 `CTaskDialog`中的 Windows 訊息方塊。 此外，只有使用 Unicode 程式庫建置應用程式時，才能使用 `CTaskDialog` 。
 
 `CTaskDialog` 支援幾個可收集及顯示資訊的選擇性項目。 例如， `CTaskDialog` 可以顯示命令連結、自訂按鈕、自訂圖示和頁尾。 `CTaskDialog` 也包含幾種方法，可讓您查詢工作對話方塊的狀態，以判斷使用者選取了哪些選擇性項目。
 
@@ -47,13 +47,13 @@ ms.locfileid: "37122950"
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>以 CTaskDialog 取代 Windows 訊息方塊
 
-1. 以預設值建立新的 MFC 應用程式專案。 呼叫它*MyProject*。
+1. 以預設值建立新的 MFC 應用程式專案。 稱之為*MyProject*。
 
 2. 使用 **方案總管** 開啟 MyProject.cpp 檔案。
 
 3. 將 `#include "afxtaskdialog.h"` 加入包含清單後面。
 
-4. 尋找 `CMyProjectApp::InitInstance`方法。 在 `return TRUE;` 陳述式前面插入下列幾行程式碼。 此程式碼會建立用於 Windows 訊息方塊或 `CTaskDialog`中的字串。  
+4. 尋找 `CMyProjectApp::InitInstance`方法。 在 `return TRUE;` 陳述式前面插入下列幾行程式碼。 此程式碼會建立用於 Windows 訊息方塊或 `CTaskDialog`中的字串。
 
     ```cpp
     CString message("My message to the user");
@@ -201,6 +201,6 @@ ms.locfileid: "37122950"
 
 ## <a name="see-also"></a>另請參閱
 
-[對話方塊](../mfc/dialog-boxes.md)  
-[CTaskDialog 類別](../mfc/reference/ctaskdialog-class.md)  
-[CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)  
+[對話方塊](../mfc/dialog-boxes.md)<br/>
+[CTaskDialog 類別](../mfc/reference/ctaskdialog-class.md)<br/>
+[CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)

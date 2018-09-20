@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 615138b44ab9fdbbf94d4130428ba708697c2aee
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d583bbbfeb4cd426684d1091a165335f7cbb6e64
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601844"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441393"
 ---
 # <a name="modifying-the-layout-grid"></a>修改配置格線
 
@@ -52,5 +52,5 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[對話方塊編輯器狀態 (輔助線和格線)](../windows/dialog-editor-states-guides-and-grids.md)  
+[對話方塊編輯器狀態 (輔助線和格線)](../windows/dialog-editor-states-guides-and-grids.md)<br/>
 [對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2710609cbf20861c77dae1cb0aea327983efef6e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9142ba85a78259c0a6e5ae06f3745d414e62e908
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098169"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425622"
 ---
 # <a name="smart-pointers-modern-c"></a>智慧型指標 (現代 C++)
 
@@ -86,29 +86,39 @@ C++ 智慧型指標慣用語與在 C# 等語言中建立物件的情形類似：
 
 當您使用 COM 物件時，請將介面指標包裝在適當的智慧型指標類型中。 Active Template Library (ATL) 會定義數個各種用途的智慧型指標。 您也可以使用 `_com_ptr_t` 智慧型指標類型，編譯器會在從 .tlb 檔案建立包裝函式類別時使用這個類型。 當您不想要包含 ATL 標頭檔時，這是最佳選擇。
 
-[CComPtr 類別](../atl/reference/ccomptr-class.md)使用如此，除非您不能使用 ATL 使用 `AddRef` 和 `Release` 方法執行參考計數。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立和使用 CComPtr 和 CComQIPtr 執行個體](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)。
+[CComPtr 類別](../atl/reference/ccomptr-class.md)<br/>
+除非無法使用 ATL，否則請使用這種方式。 使用 `AddRef` 和 `Release` 方法執行參考計數。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立和使用 CComPtr 和 CComQIPtr 執行個體](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)。
 
-[CComQIPtr 類別](../atl/reference/ccomqiptr-class.md)Resembles`CComPtr`還提供簡化的語法呼叫`QueryInterface`COM 物件上。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立和使用 CComPtr 和 CComQIPtr 執行個體](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)。
+[CComQIPtr 類別](../atl/reference/ccomqiptr-class.md)<br/>
+與`CComPtr` 類似，但是有提供在 COM 物件上呼叫 `QueryInterface` 的簡化語法。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立和使用 CComPtr 和 CComQIPtr 執行個體](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)。
 
-[CComHeapPtr 類別](../atl/reference/ccomheapptr-class.md)智慧型指標物件的`CoTaskMemFree`來釋放記憶體。
+[CComHeapPtr 類別](../atl/reference/ccomheapptr-class.md)<br/>
+使用 `CoTaskMemFree` 釋放記憶體之物件的智慧型指標。
 
-[CComGITPtr 類別](../atl/reference/ccomgitptr-class.md)智慧型指標從全域介面表 (GIT) 取得的介面。
+[CComGITPtr 類別](../atl/reference/ccomgitptr-class.md)<br/>
+由全域介面資料表 (GIT) 取得之介面的智慧型指標。
 
-[_com_ptr_t 類別](../cpp/com-ptr-t-class.md)Resembles`CComQIPtr`的功能，但不相依於 ATL 標頭。
+[_com_ptr_t 類別](../cpp/com-ptr-t-class.md)<br/>
+在功能上與 `CComQIPtr` 類似，但是不相依於 ATL 標頭。
 
 ### <a name="atl-smart-pointers-for-poco-objects"></a>POCO 物件的 ATL 智慧型指標
 
 除了 COM 物件的智慧型指標之外，ATL 還定義了純舊 C++ 物件的智慧標籤指標 (及智慧型指標集合)。 在傳統 Windows 程式設計中，這些型別是有用的替代項目至 c + + 標準程式庫集合時，尤其是當程式碼可攜性就不需要或不想混合的 c + + 標準程式庫和 ATL 的程式設計模型時
 
-[CAutoPtr 類別](../atl/reference/cautoptr-class.md)藉由在複本上傳送擁有權強制唯一擁有權的智慧型指標。 類似已被取代的 `std::auto_ptr` 類別。
+[CAutoPtr 類別](../atl/reference/cautoptr-class.md)<br/>
+藉由傳送複本上的擁有權以強制唯一擁有權的智慧型指標。 類似已被取代的 `std::auto_ptr` 類別。
 
-[CHeapPtr 類別](../atl/reference/cheapptr-class.md)智慧型指標物件所配置的使用 C [malloc](../c-runtime-library/reference/malloc.md)函式。
+[CHeapPtr 類別](../atl/reference/cheapptr-class.md)<br/>
+使用 C 所配置物件的智慧型指標[malloc](../c-runtime-library/reference/malloc.md)函式。
 
-[CAutoVectorPtr 類別](../atl/reference/cautovectorptr-class.md)智慧型指標，會使用配置的陣列`new[]`。
+[CAutoVectorPtr 類別](../atl/reference/cautovectorptr-class.md)<br/>
+用於以 `new[]` 所配置之陣列的智慧型指標。
 
-[CAutoPtrArray 類別](../atl/reference/cautoptrarray-class.md)類別，將封裝的陣列`CAutoPtr`項目。
+[CAutoPtrArray 類別](../atl/reference/cautoptrarray-class.md)<br/>
+將 `CAutoPtr` 項目陣列封裝的類別。
 
-[CAutoPtrList 類別](../atl/reference/cautoptrlist-class.md)類別的方法封裝以操作一份`CAutoPtr`節點。
+[CAutoPtrList 類別](../atl/reference/cautoptrlist-class.md)<br/>
+將方法封裝以操作 `CAutoPtr` 節點清單的類別。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57d1a3adc160323726bcdd31808cf82bc8da2e7f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 19bb77128eee9cc8af514e60730c3a39115695cc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609250"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426533"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>Callback 函式 (Windows 執行階段 C++ 樣板程式庫)
 
@@ -201,49 +201,49 @@ ComPtr<TDelegateInterface> Callback(
 
 ### <a name="parameters"></a>參數
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 樣板參數，指定當事件發生時要呼叫之委派的介面。
 
-*TCallback*  
+*TCallback*<br/>
 樣板參數，指定代表物件及其回呼成員函式的物件型別。
 
-*TCallbackObject*  
+*TCallbackObject*<br/>
 樣板參數，指定事件發生時成員函式為呼叫之方法的物件。
 
-*TArg1*  
+*TArg1*<br/>
 樣板參數，指定第一個回呼方法引數的型別。
 
-*TArg2*  
+*TArg2*<br/>
 樣板參數，指定第二個回呼方法引數的型別。
 
-*TArg3*  
+*TArg3*<br/>
 樣板參數，指定第三個回呼方法引數的型別。
 
-*TArg4*  
+*TArg4*<br/>
 樣板參數，指定第四個回呼方法引數的型別。
 
-*TArg5*  
+*TArg5*<br/>
 樣板參數，指定第五個回呼方法引數的型別。
 
-*TArg6*  
+*TArg6*<br/>
 樣板參數，指定第六個回呼方法引數的型別。
 
-*TArg7*  
+*TArg7*<br/>
 樣板參數，指定第七個回呼方法引數的型別。
 
-*TArg8*  
+*TArg8*<br/>
 樣板參數，指定第八個回呼方法引數的型別。
 
-*TArg9*  
+*TArg9*<br/>
 樣板參數，指定第九個回呼方法引數的型別。
 
-*回呼*  
+*回呼*<br/>
 表示回呼物件及其成員函式的物件。
 
-*object*  
+*object*<br/>
 當事件發生時呼叫之成員函式的物件。
 
-*方法*  
+*方法*<br/>
 當事件發生時呼叫的成員函式。
 
 ## <a name="return-value"></a>傳回值

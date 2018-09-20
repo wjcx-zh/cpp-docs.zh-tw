@@ -100,689 +100,721 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d98940ffbd1c6ff021712ee50721908d7760abee
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a06fafc1c2aee472b7a2fa4701802ee8a53956ca
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712123"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446266"
 ---
 # <a name="cdockingpanesrow-class"></a>CDockingPanesRow 類別
-管理與停駐位置位於相同水平或垂直列 (欄) 之窗格的清單。  
 
- 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-class CDockingPanesRow : public CObject  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|`CDockingPanesRow::CDockingPanesRow`|預設建構函式。|  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CDockingPanesRow::AddPane](#addpane)||  
-|[CDockingPanesRow::AddPaneFromRow](#addpanefromrow)||  
-|[CDockingPanesRow::ArrangePanes](#arrangepanes)|根據指定的邊界和間距參數排列資料列中的窗格。|  
-|[CDockingPanesRow::CalcFixedLayout](#calcfixedlayout)||  
-|[CDockingPanesRow::Create](#create)||  
-|[CDockingPanesRow::ExpandStretchedPanes](#expandstretchedpanes)||  
-|[CDockingPanesRow::ExpandStretchedPanesRect](#expandstretchedpanesrect)||  
-|[CDockingPanesRow::FixupVirtualRects](#fixupvirtualrects)||  
-|[CDockingPanesRow::GetAvailableLength](#getavailablelength)||  
-|[CDockingPanesRow::GetAvailableSpace](#getavailablespace)||  
-|[CDockingPanesRow::GetClientRect](#getclientrect)||  
-|[CDockingPanesRow::GetDockSite](#getdocksite)||  
-|[CDockingPanesRow::GetExtraSpace](#getextraspace)||  
-|[CDockingPanesRow::GetGroupFromPane](#getgroupfrompane)||  
-|[CDockingPanesRow::GetID](#getid)||  
-|[CDockingPanesRow::GetMaxPaneSize](#getmaxpanesize)||  
-|[CDockingPanesRow::GetPaneCount](#getpanecount)||  
-|[CDockingPanesRow::GetPaneList](#getpanelist)||  
-|[CDockingPanesRow::GetRowAlignment](#getrowalignment)||  
-|[CDockingPanesRow::GetRowHeight](#getrowheight)||  
-|[CDockingPanesRow::GetRowOffset](#getrowoffset)||  
-|[CDockingPanesRow::GetVisibleCount](#getvisiblecount)||  
-|[CDockingPanesRow::GetWindowRect](#getwindowrect)||  
-|[CDockingPanesRow::HasPane](#haspane)||  
-|[CDockingPanesRow::IsEmpty](#isempty)||  
-|[CDockingPanesRow::IsExclusiveRow](#isexclusiverow)||  
-|[CDockingPanesRow::IsHorizontal](#ishorizontal)||  
-|[CDockingPanesRow::IsVisible](#isvisible)||  
-|[CDockingPanesRow::Move](#move)||  
-|[CDockingPanesRow::MovePane](#movepane)||  
-|[CDockingPanesRow::OnResizePane](#onresizepane)||  
-|[CDockingPanesRow::RedrawAll](#redrawall)||  
-|[CDockingPanesRow::RemovePane](#removepane)||  
-|[CDockingPanesRow::ReplacePane](#replacepane)||  
-|[CDockingPanesRow::RepositionPanes](#repositionpanes)||  
-|[CDockingPanesRow::Resize](#resize)||  
-|[CDockingPanesRow::ResizeByPaneDivider](#resizebypanedivider)||  
-|[CDockingPanesRow::ScreenToClient](#screentoclient)||  
-|[CDockingPanesRow::SetExtra](#setextra)||  
-|[CDockingPanesRow::ShowDockSiteRow](#showdocksiterow)||  
-|[CDockingPanesRow::ShowPane](#showpane)||  
-|[CDockingPanesRow::UpdateVisibleState](#updatevisiblestate)||  
-  
-## <a name="remarks"></a>備註  
- `CDockingPanesRow` 物件會由固定站台物件在內部建立。  
-  
-## <a name="example"></a>範例  
- 下列範例示範如何從 `CMFCAutoHideBar` 物件取得 `CDockingPanesRow` 物件。  
-  
- [!code-cpp[NVC_MFC_RibbonApp#26](../../mfc/reference/codesnippet/cpp/cdockingpanesrow-class_1.cpp)]  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)  
-  
-## <a name="requirements"></a>需求  
- **標頭：** afxDockingPanesRow.h  
-  
-##  <a name="addpane"></a>  CDockingPanesRow::AddPane  
+管理與停駐位置位於相同水平或垂直列 (欄) 之窗格的清單。
 
-  
-```  
+如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+
+## <a name="syntax"></a>語法
+
+```
+class CDockingPanesRow : public CObject
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|`CDockingPanesRow::CDockingPanesRow`|預設建構函式。|
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[CDockingPanesRow::AddPane](#addpane)||
+|[CDockingPanesRow::AddPaneFromRow](#addpanefromrow)||
+|[CDockingPanesRow::ArrangePanes](#arrangepanes)|根據指定的邊界和間距參數排列資料列中的窗格。|
+|[CDockingPanesRow::CalcFixedLayout](#calcfixedlayout)||
+|[CDockingPanesRow::Create](#create)||
+|[CDockingPanesRow::ExpandStretchedPanes](#expandstretchedpanes)||
+|[CDockingPanesRow::ExpandStretchedPanesRect](#expandstretchedpanesrect)||
+|[CDockingPanesRow::FixupVirtualRects](#fixupvirtualrects)||
+|[CDockingPanesRow::GetAvailableLength](#getavailablelength)||
+|[CDockingPanesRow::GetAvailableSpace](#getavailablespace)||
+|[CDockingPanesRow::GetClientRect](#getclientrect)||
+|[CDockingPanesRow::GetDockSite](#getdocksite)||
+|[CDockingPanesRow::GetExtraSpace](#getextraspace)||
+|[CDockingPanesRow::GetGroupFromPane](#getgroupfrompane)||
+|[CDockingPanesRow::GetID](#getid)||
+|[CDockingPanesRow::GetMaxPaneSize](#getmaxpanesize)||
+|[CDockingPanesRow::GetPaneCount](#getpanecount)||
+|[CDockingPanesRow::GetPaneList](#getpanelist)||
+|[CDockingPanesRow::GetRowAlignment](#getrowalignment)||
+|[CDockingPanesRow::GetRowHeight](#getrowheight)||
+|[CDockingPanesRow::GetRowOffset](#getrowoffset)||
+|[CDockingPanesRow::GetVisibleCount](#getvisiblecount)||
+|[CDockingPanesRow::GetWindowRect](#getwindowrect)||
+|[CDockingPanesRow::HasPane](#haspane)||
+|[CDockingPanesRow::IsEmpty](#isempty)||
+|[CDockingPanesRow::IsExclusiveRow](#isexclusiverow)||
+|[CDockingPanesRow::IsHorizontal](#ishorizontal)||
+|[CDockingPanesRow::IsVisible](#isvisible)||
+|[CDockingPanesRow::Move](#move)||
+|[CDockingPanesRow::MovePane](#movepane)||
+|[CDockingPanesRow::OnResizePane](#onresizepane)||
+|[CDockingPanesRow::RedrawAll](#redrawall)||
+|[CDockingPanesRow::RemovePane](#removepane)||
+|[CDockingPanesRow::ReplacePane](#replacepane)||
+|[CDockingPanesRow::RepositionPanes](#repositionpanes)||
+|[CDockingPanesRow::Resize](#resize)||
+|[CDockingPanesRow::ResizeByPaneDivider](#resizebypanedivider)||
+|[CDockingPanesRow::ScreenToClient](#screentoclient)||
+|[CDockingPanesRow::SetExtra](#setextra)||
+|[CDockingPanesRow::ShowDockSiteRow](#showdocksiterow)||
+|[CDockingPanesRow::ShowPane](#showpane)||
+|[CDockingPanesRow::UpdateVisibleState](#updatevisiblestate)||
+
+## <a name="remarks"></a>備註
+
+`CDockingPanesRow` 物件會由固定站台物件在內部建立。
+
+## <a name="example"></a>範例
+
+下列範例示範如何從 `CMFCAutoHideBar` 物件取得 `CDockingPanesRow` 物件。
+
+[!code-cpp[NVC_MFC_RibbonApp#26](../../mfc/reference/codesnippet/cpp/cdockingpanesrow-class_1.cpp)]
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)
+
+## <a name="requirements"></a>需求
+
+**標頭：** afxDockingPanesRow.h
+
+##  <a name="addpane"></a>  CDockingPanesRow::AddPane
+
+
+```
 virtual void AddPane(
-    CPane* pControlBar,  
-    AFX_DOCK_METHOD dockMethod,  
-    LPCRECT lpRect = NULL,  
+    CPane* pControlBar,
+    AFX_DOCK_METHOD dockMethod,
+    LPCRECT lpRect = NULL,
     BOOL bAddLast = FALSE);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pControlBar*<br/>
-[in][in]*dockMethod*  
+[in][in]*dockMethod*
 *lpRect*<br/>
-[in][in]*bAddLast*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="addpanefromrow"></a>  CDockingPanesRow::AddPaneFromRow  
+[in][in]*bAddLast*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="addpanefromrow"></a>  CDockingPanesRow::AddPaneFromRow
+
+
+```
 virtual void AddPaneFromRow(
-    CPane* pControlBar,  
+    CPane* pControlBar,
     AFX_DOCK_METHOD dockMethod);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pControlBar*<br/>
-[in][in]*dockMethod*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="arrangepanes"></a>  CDockingPanesRow::ArrangePanes  
- 停駐窗格中的資料列，根據指定的邊界和間距參數排列。  
-  
-```  
+[in][in]*dockMethod*
+
+### <a name="remarks"></a>備註
+
+##  <a name="arrangepanes"></a>  CDockingPanesRow::ArrangePanes
+
+停駐窗格中的資料列，根據指定的邊界和間距參數排列。
+
+```
 virtual void ArrangePanes(
-    int nMargin,  
+    int nMargin,
     int nSpacing);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *nMargin*<br/>
-[in]指定的位移，單位為像素的第一個資料列的左上角的窗格。  
-  
+[in]指定的位移，單位為像素的第一個資料列的左上角的窗格。
+
 *nSpacing*<br/>
-[in]指定間距，單位為像素的窗格間。  
-  
-### <a name="remarks"></a>備註  
- 呼叫這個方法來排列窗格中，它們將會停駐的資料列。 之後呼叫這個方法，您必須呼叫`CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`。  
-  
-##  <a name="calcfixedlayout"></a>  CDockingPanesRow::CalcFixedLayout  
+[in]指定間距，單位為像素的窗格間。
 
-  
-```  
+### <a name="remarks"></a>備註
+
+呼叫這個方法來排列窗格中，它們將會停駐的資料列。 之後呼叫這個方法，您必須呼叫`CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`。
+
+##  <a name="calcfixedlayout"></a>  CDockingPanesRow::CalcFixedLayout
+
+
+```
 virtual CSize CalcFixedLayout(
-    BOOL bStretch,  
+    BOOL bStretch,
     BOOL bHorz);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *bStretch*<br/>
-[in][in]*bHorz*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="cdockingpanesrow"></a>  CDockingPanesRow::CDockingPanesRow  
+[in][in]*bHorz*
 
-  
-```  
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="cdockingpanesrow"></a>  CDockingPanesRow::CDockingPanesRow
+
+
+```
 CDockingPanesRow(
-    CDockSite* pParentDockBar,  
-    int nOffset,  
+    CDockSite* pParentDockBar,
+    int nOffset,
     int nHeight);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pParentDockBar*<br/>
-[in][in]*nOffset*  
- [in]*nHeight*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="create"></a>  CDockingPanesRow::Create  
+[in][in]*nOffset* [in] *nHeight*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="create"></a>  CDockingPanesRow::Create
+
+
+```
 virtual BOOL Create();
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="expandstretchedpanes"></a>  CDockingPanesRow::ExpandStretchedPanes  
+```
 
-  
-```  
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="expandstretchedpanes"></a>  CDockingPanesRow::ExpandStretchedPanes
+
+
+```
 void ExpandStretchedPanes();
-```  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="expandstretchedpanesrect"></a>  CDockingPanesRow::ExpandStretchedPanesRect  
+```
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="expandstretchedpanesrect"></a>  CDockingPanesRow::ExpandStretchedPanesRect
+
+
+```
 void ExpandStretchedPanesRect();
-```  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="fixupvirtualrects"></a>  CDockingPanesRow::FixupVirtualRects  
+```
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="fixupvirtualrects"></a>  CDockingPanesRow::FixupVirtualRects
+
+
+```
 void FixupVirtualRects(
-    bool bMoveBackToVirtualRect,  
+    bool bMoveBackToVirtualRect,
     CPane* pBarToExclude = NULL);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *bMoveBackToVirtualRect*<br/>
-[in][in]*pBarToExclude*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getavailablelength"></a>  CDockingPanesRow::GetAvailableLength  
+[in][in]*pBarToExclude*
 
-  
-```  
-virtual int GetAvailableLength(BOOL bUseVirtualRect = FALSE) const;  
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*bUseVirtualRect*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getavailablespace"></a>  CDockingPanesRow::GetAvailableSpace  
+### <a name="remarks"></a>備註
 
-  
-```  
+##  <a name="getavailablelength"></a>  CDockingPanesRow::GetAvailableLength
+
+
+```
+virtual int GetAvailableLength(BOOL bUseVirtualRect = FALSE) const;
+```
+
+### <a name="parameters"></a>參數
+
+[in]*bUseVirtualRect*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getavailablespace"></a>  CDockingPanesRow::GetAvailableSpace
+
+
+```
 virtual void GetAvailableSpace(CRect& rect);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*rect*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getclientrect"></a>  CDockingPanesRow::GetClientRect  
+```
 
-  
-```  
-void GetClientRect(CRect& rect) const;  
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*rect*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getdocksite"></a>  CDockingPanesRow::GetDockSite  
+### <a name="parameters"></a>參數
 
-  
-```  
-CDockSite* GetDockSite() const;  
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getextraspace"></a>  CDockingPanesRow::GetExtraSpace  
+[in]*rect*
 
-  
-```  
-int GetExtraSpace() const;  
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getgroupfrompane"></a>  CDockingPanesRow::GetGroupFromPane  
+### <a name="remarks"></a>備註
 
-  
-```  
+##  <a name="getclientrect"></a>  CDockingPanesRow::GetClientRect
+
+
+```
+void GetClientRect(CRect& rect) const;
+```
+
+### <a name="parameters"></a>參數
+
+[in]*rect*
+
+### <a name="remarks"></a>備註
+
+##  <a name="getdocksite"></a>  CDockingPanesRow::GetDockSite
+
+
+```
+CDockSite* GetDockSite() const;
+```
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getextraspace"></a>  CDockingPanesRow::GetExtraSpace
+
+
+```
+int GetExtraSpace() const;
+```
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getgroupfrompane"></a>  CDockingPanesRow::GetGroupFromPane
+
+
+```
 void GetGroupFromPane(
-    CPane* pBar,  
+    CPane* pBar,
     CObList& lst);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pBar*<br/>
-[in][in]*lst*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getid"></a>  CDockingPanesRow::GetID  
+[in][in]*lst*
 
-  
-```  
-int GetID() const;  
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getmaxpanesize"></a>  CDockingPanesRow::GetMaxPaneSize  
+### <a name="remarks"></a>備註
 
-  
-```  
-int GetMaxPaneSize(BOOL bSkipHiddenBars = TRUE) const;  
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*bSkipHiddenBars*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getpanecount"></a>  CDockingPanesRow::GetPaneCount  
+##  <a name="getid"></a>  CDockingPanesRow::GetID
 
-  
-```  
-int GetPaneCount() const;  
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getpanelist"></a>  CDockingPanesRow::GetPaneList  
 
-  
-```  
-const CObList& GetPaneList() const;  
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getrowalignment"></a>  CDockingPanesRow::GetRowAlignment  
+```
+int GetID() const;
+```
 
-  
-```  
-DWORD GetRowAlignment() const;  
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getrowheight"></a>  CDockingPanesRow::GetRowHeight  
+### <a name="return-value"></a>傳回值
 
-  
-```  
-int GetRowHeight() const;  
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getrowoffset"></a>  CDockingPanesRow::GetRowOffset  
+### <a name="remarks"></a>備註
 
-  
-```  
-int GetRowOffset() const;  
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getvisiblecount"></a>  CDockingPanesRow::GetVisibleCount  
+##  <a name="getmaxpanesize"></a>  CDockingPanesRow::GetMaxPaneSize
 
-  
-```  
+
+```
+int GetMaxPaneSize(BOOL bSkipHiddenBars = TRUE) const;
+```
+
+### <a name="parameters"></a>參數
+
+[in]*bSkipHiddenBars*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getpanecount"></a>  CDockingPanesRow::GetPaneCount
+
+
+```
+int GetPaneCount() const;
+```
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getpanelist"></a>  CDockingPanesRow::GetPaneList
+
+
+```
+const CObList& GetPaneList() const;
+```
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getrowalignment"></a>  CDockingPanesRow::GetRowAlignment
+
+
+```
+DWORD GetRowAlignment() const;
+```
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getrowheight"></a>  CDockingPanesRow::GetRowHeight
+
+
+```
+int GetRowHeight() const;
+```
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getrowoffset"></a>  CDockingPanesRow::GetRowOffset
+
+
+```
+int GetRowOffset() const;
+```
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="getvisiblecount"></a>  CDockingPanesRow::GetVisibleCount
+
+
+```
 virtual int GetVisibleCount();
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="getwindowrect"></a>  CDockingPanesRow::GetWindowRect  
+```
 
-  
-```  
-void GetWindowRect(CRect& rect) const;  
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*rect*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="haspane"></a>  CDockingPanesRow::HasPane  
+### <a name="return-value"></a>傳回值
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="getwindowrect"></a>  CDockingPanesRow::GetWindowRect
+
+
+```
+void GetWindowRect(CRect& rect) const;
+```
+
+### <a name="parameters"></a>參數
+
+[in]*rect*
+
+### <a name="remarks"></a>備註
+
+##  <a name="haspane"></a>  CDockingPanesRow::HasPane
+
+
+```
 BOOL HasPane(CBasePane* pControlBar);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*pControlBar*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="isempty"></a>  CDockingPanesRow::IsEmpty  
+```
 
-  
-```  
-virtual BOOL IsEmpty() const;  
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="isexclusiverow"></a>  CDockingPanesRow::IsExclusiveRow  
+### <a name="parameters"></a>參數
 
-  
-```  
-virtual BOOL IsExclusiveRow() const;  
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="ishorizontal"></a>  CDockingPanesRow::IsHorizontal  
+[in]*pControlBar*
 
-  
-```  
-bool IsHorizontal() const;  
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="isvisible"></a>  CDockingPanesRow::IsVisible  
+### <a name="return-value"></a>傳回值
 
-  
-```  
-virtual BOOL IsVisible() const;  
-```  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="move"></a>  CDockingPanesRow::Move  
+### <a name="remarks"></a>備註
 
-  
-```  
+##  <a name="isempty"></a>  CDockingPanesRow::IsEmpty
+
+
+```
+virtual BOOL IsEmpty() const;
+```
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="isexclusiverow"></a>  CDockingPanesRow::IsExclusiveRow
+
+
+```
+virtual BOOL IsExclusiveRow() const;
+```
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="ishorizontal"></a>  CDockingPanesRow::IsHorizontal
+
+
+```
+bool IsHorizontal() const;
+```
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="isvisible"></a>  CDockingPanesRow::IsVisible
+
+
+```
+virtual BOOL IsVisible() const;
+```
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="move"></a>  CDockingPanesRow::Move
+
+
+```
 virtual void Move(int nOffset);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*nOffset*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="movepane"></a>  CDockingPanesRow::MovePane  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+[in]*nOffset*
+
+### <a name="remarks"></a>備註
+
+##  <a name="movepane"></a>  CDockingPanesRow::MovePane
+
+
+```
 void MovePane(
-    CPane* pControlBar,  
-    CPoint ptOffset,  
-    BOOL bSwapControlBars,  
+    CPane* pControlBar,
+    CPoint ptOffset,
+    BOOL bSwapControlBars,
     HDWP& hdwp);
 
- 
+
 void MovePane(
-    CPane* pControlBar,  
-    CRect rectTarget,  
+    CPane* pControlBar,
+    CRect rectTarget,
     HDWP& hdwp);
 
- 
+
 void MovePane(
-    CPane* pControlBar,  
-    int nOffset,  
-    bool bForward,  
+    CPane* pControlBar,
+    int nOffset,
+    bool bForward,
     HDWP& hdwp);
 
- 
+
 void MovePane(
-    CPane* pControlBar,  
-    int nAbsolutOffset,  
+    CPane* pControlBar,
+    int nAbsolutOffset,
     HDWP& hdwp);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pControlBar*<br/>
-[in][in]*ptOffset*  
+[in][in]*ptOffset*
 *bSwapControlBars*<br/>
-[in][in]*hdwp*  
+[in][in]*hdwp*
 *rectTarget*<br/>
-[in][in]*nOffset*  
+[in][in]*nOffset*
 *bForward*<br/>
-[in][in]*nAbsolutOffset*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="onresizepane"></a>  CDockingPanesRow::OnResizePane  
+[in][in]*nAbsolutOffset*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="onresizepane"></a>  CDockingPanesRow::OnResizePane
+
+
+```
 virtual void OnResizePane(CBasePane* pControlBar);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*pControlBar*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="redrawall"></a>  CDockingPanesRow::RedrawAll  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+[in]*pControlBar*
+
+### <a name="remarks"></a>備註
+
+##  <a name="redrawall"></a>  CDockingPanesRow::RedrawAll
+
+
+```
 void RedrawAll();
-```  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="removepane"></a>  CDockingPanesRow::RemovePane  
+```
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="removepane"></a>  CDockingPanesRow::RemovePane
+
+
+```
 virtual void RemovePane(CPane* pControlBar);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*pControlBar*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="replacepane"></a>  CDockingPanesRow::ReplacePane  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+[in]*pControlBar*
+
+### <a name="remarks"></a>備註
+
+##  <a name="replacepane"></a>  CDockingPanesRow::ReplacePane
+
+
+```
 virtual BOOL ReplacePane(
-    CPane* pBarOld,  
+    CPane* pBarOld,
     CPane* pBarNew);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *pBarOld*<br/>
-[in][in]*pBarNew*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="repositionpanes"></a>  CDockingPanesRow::RepositionPanes  
+[in][in]*pBarNew*
 
-  
-```  
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="repositionpanes"></a>  CDockingPanesRow::RepositionPanes
+
+
+```
 virtual void RepositionPanes(
-    CRect& rectNewParentBarArea,  
-    UINT nSide = (UINT)-1,  
-    BOOL bExpand = FALSE,  
+    CRect& rectNewParentBarArea,
+    UINT nSide = (UINT)-1,
+    BOOL bExpand = FALSE,
     int nOffset = 0);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *rectNewParentBarArea*<br/>
-[in][in]*nSide*  
+[in][in]*nSide*
 *bExpand*<br/>
-[in][in]*nOffset*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="resize"></a>  CDockingPanesRow::Resize  
+[in][in]*nOffset*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="resize"></a>  CDockingPanesRow::Resize
+
+
+```
 virtual int Resize(int nOffset);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*nOffset*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="resizebypanedivider"></a>  CDockingPanesRow::ResizeByPaneDivider  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+[in]*nOffset*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="resizebypanedivider"></a>  CDockingPanesRow::ResizeByPaneDivider
+
+
+```
 virtual int ResizeByPaneDivider(int);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*int*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="screentoclient"></a>  CDockingPanesRow::ScreenToClient  
+```
 
-  
-```  
-void ScreenToClient(CRect& rect) const;  
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*rect*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="setextra"></a>  CDockingPanesRow::SetExtra  
+### <a name="parameters"></a>參數
 
-  
-```  
+[in]*int*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="screentoclient"></a>  CDockingPanesRow::ScreenToClient
+
+
+```
+void ScreenToClient(CRect& rect) const;
+```
+
+### <a name="parameters"></a>參數
+
+[in]*rect*
+
+### <a name="remarks"></a>備註
+
+##  <a name="setextra"></a>  CDockingPanesRow::SetExtra
+
+
+```
 void SetExtra(
-    int nExtraSpace,  
+    int nExtraSpace,
     AFX_ROW_ALIGNMENT rowExtraAlign);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *nExtraSpace*<br/>
-[in][in]*rowExtraAlign*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="showdocksiterow"></a>  CDockingPanesRow::ShowDockSiteRow  
+[in][in]*rowExtraAlign*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="showdocksiterow"></a>  CDockingPanesRow::ShowDockSiteRow
+
+
+```
 virtual void ShowDockSiteRow(
-    BOOL bShow,  
+    BOOL bShow,
     BOOL bDelay);
-```  
-  
-### <a name="parameters"></a>參數  
+```
+
+### <a name="parameters"></a>參數
+
 *bShow*<br/>
-[in][in]*bDelay*  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="showpane"></a>  CDockingPanesRow::ShowPane  
+[in][in]*bDelay*
 
-  
-```  
+### <a name="remarks"></a>備註
+
+##  <a name="showpane"></a>  CDockingPanesRow::ShowPane
+
+
+```
 virtual BOOL ShowPane(
-    CPane* pControlBar,  
-    BOOL bShow,  
+    CPane* pControlBar,
+    BOOL bShow,
     BOOL bDelay = FALSE);
-```  
-  
-### <a name="parameters"></a>參數  
-*pControlBar*<br/>
-[in][in]*bShow*  
- [in]*bDelay*  
-  
-### <a name="return-value"></a>傳回值  
-  
-### <a name="remarks"></a>備註  
-  
-##  <a name="updatevisiblestate"></a>  CDockingPanesRow::UpdateVisibleState  
+```
 
-  
-```  
+### <a name="parameters"></a>參數
+
+*pControlBar*<br/>
+[in][in]*bShow* [in] *bDelay*
+
+### <a name="return-value"></a>傳回值
+
+### <a name="remarks"></a>備註
+
+##  <a name="updatevisiblestate"></a>  CDockingPanesRow::UpdateVisibleState
+
+
+```
 virtual void UpdateVisibleState(BOOL bDelay);
-```  
-  
-### <a name="parameters"></a>參數  
- [in]*bDelay*  
-  
-### <a name="remarks"></a>備註  
-  
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CObject 類別](../../mfc/reference/cobject-class.md)   
- [CDockSite 類別](../../mfc/reference/cdocksite-class.md)   
- [CPane 類別](../../mfc/reference/cpane-class.md)
+```
+
+### <a name="parameters"></a>參數
+
+[in]*bDelay*
+
+### <a name="remarks"></a>備註
+
+## <a name="see-also"></a>另請參閱
+
+[階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
+[類別](../../mfc/reference/mfc-classes.md)<br/>
+[CObject 類別](../../mfc/reference/cobject-class.md)<br/>
+[CDockSite 類別](../../mfc/reference/cdocksite-class.md)<br/>
+[CPane 類別](../../mfc/reference/cpane-class.md)

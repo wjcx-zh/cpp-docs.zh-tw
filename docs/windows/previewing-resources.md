@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80d4256057cb268baf2c8750f6d781e7d7aba4db
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: bd5e273a07ed09f54b84d064011874533b55fb88
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314297"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445824"
 ---
 # <a name="previewing-resources"></a>預覽資源
 
@@ -68,5 +68,5 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[如何：在專案外開啟資源指令碼檔 (獨立式)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)  
+[如何：在專案外開啟資源指令碼檔 (獨立式)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)<br/>
 [資源編輯器](../windows/resource-editors.md)

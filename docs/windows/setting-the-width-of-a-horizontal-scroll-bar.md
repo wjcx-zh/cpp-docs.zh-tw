@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 671da02bd1b836cd482c057c09ab31d27b42843f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 74e9e24fdd3b46a8abe021b6c0ea3bbc2f860a2c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314650"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438869"
 ---
 # <a name="setting-the-width-of-a-horizontal-scroll-bar"></a>設定水平捲軸的寬度
 
@@ -46,5 +46,5 @@ MFC
 
 ## <a name="see-also"></a>另請參閱
 
-[對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)  
+[對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)<br/>
 [控制項](../mfc/controls-mfc.md)

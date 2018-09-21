@@ -1,7 +1,7 @@
 ---
 title: -clr （Common Language Runtime 編譯） |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b46f61ef727c1b283137bb3d537d2dbad416c1d8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dcd5739f2fb0663609ce7bcabc920cc3aa20d8e1
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703816"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494409"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Common Language Runtime 編譯)
 
@@ -45,15 +45,15 @@ ms.locfileid: "45703816"
 
 - 無
 
-   不含選項中， **/clr**建立應用程式的中繼資料。 中繼資料可供其他 CLR 應用程式使用，並且讓您的應用程式使用其他 CLR 元件之中繼資料內的類型和資料。 如需詳細資訊，請參閱 <<c0> [ 混合 （原生和 Managed） 組件](../../dotnet/mixed-native-and-managed-assemblies.md)並[如何： 移轉至 /clr](../../dotnet/how-to-migrate-to-clr.md)。
+   不含選項中， **/clr**建立應用程式的中繼資料。 中繼資料可供其他 CLR 應用程式使用，並且讓您的應用程式使用其他 CLR 元件之中繼資料內的類型和資料。 如需詳細資訊，請參閱 <<c0> [ 混合 （原生和 Managed） 組件](../../dotnet/mixed-native-and-managed-assemblies.md)。
 
 - **純虛擬**
 
-   **/clr: pure 已被取代**。 編譯器的未來版本可能不支援此選項。 建議您將必須是純 MSIL 的程式碼移植到 C#。
+   **/clr: pure 已被取代**。 Visual Studio 2017 中已移除的選項。 建議您將必須是純 MSIL 的程式碼移植到 C#。
 
 - **Safe.GetTimeOfDay**
 
-   **/clr: safe 已被取代**。 編譯器的未來版本可能不支援此選項。 我們建議您必須是安全的 MSIL，C# 的程式碼移植。
+   **/clr: safe 已被取代**。 Visual Studio 2017 中已移除的選項。 我們建議您必須是安全的 MSIL，C# 的程式碼移植。
 
 - **noAssembly**
 
@@ -112,31 +112,6 @@ class {} x;
 ```
 
 使用 ildasm.exe 可檢視中繼資料。
-
-## <a name="managed-extensions-for-c"></a>Managed Extensions for C++
-
-Visual C++ 已不再支援 **/clr:oldsyntax** 選項。 此選項在 Visual Studio 2005 中已被取代。 以 C++ 撰寫 Managed 程式碼的支援語法是 C++/CLI。 如需詳細資訊，請參閱 [Component Extensions for Runtime Platforms](../../windows/component-extensions-for-runtime-platforms.md)。
-
-如果您有使用 Managed Extensions for C++ 的程式碼，建議您將其移植以使用 C++/CLI 語法。 如需如何移植程式碼的相關資訊，請參閱 [C++/CLI Migration Primer](../../dotnet/cpp-cli-migration-primer.md)。
-
-#### <a name="to-set-this-compiler-option-in-visual-studio"></a>在 Visual Studio 中設定這個編譯器選項
-
-1. 在 [ **方案總管**] 中，以滑鼠右鍵按一下專案名稱，然後按一下 [ **屬性** ]，以開啟 [ **屬性頁面** ] 對話方塊。
-
-1. 選取 **組態屬性** > **一般**屬性頁。
-
-1. 修改**Common Language Runtime 支援**屬性。
-
-   > [!NOTE]
-   > 如果在 [ **屬性頁面** ] 對話方塊中啟用 **/clr** ，將也會視需要調整與 **/clr** 不相容的編譯器選項屬性。 例如，如果設定了 **/RTC** ，然後啟用 **/clr** ， **/RTC** 將會關閉。
-   >
-   >  此外，當您偵錯 **/clr** 應用程式時，請將 [ **偵錯工具類型** ] 屬性設為 [ **混合** ] 或 [ **僅限 Managed**]。 如需詳細資訊，請參閱 < [c + + 偵錯組態的專案設定](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)。
-
-   如需如何建立模組，請參閱[/NOASSEMBLY （建立 MSIL 模組）](../../build/reference/noassembly-create-a-msil-module.md)。
-
-#### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
-
-- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAsManaged%2A>。
 
 ## <a name="see-also"></a>另請參閱
 

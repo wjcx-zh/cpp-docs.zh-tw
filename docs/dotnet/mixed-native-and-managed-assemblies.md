@@ -1,7 +1,7 @@
 ---
 title: 混合 （原生和 Managed） 組件 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -23,18 +23,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2a48f34edec8a9f24f22d35be482d3b297215dbe
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4ee94905bc4c40f6d080e34098e24bd71d495141
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210621"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494487"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>混合 （原生和 managed） 組件
 
-混合的組件會包含未受管理的機器指令和 MSIL 指令。 這可讓他們能夠呼叫，並呼叫.NET 元件，同時保留未完全受管理的元件與相容性。 使用混合的組件，開發人員可以撰寫使用混合的 managed 和 unmanaged 功能的應用程式。 這可讓混合的組件適用於移轉現有的 Visual c + + 應用程式，以.NET 平台。
+混合的組件會包含未受管理的機器指令和 MSIL 指令。 這可讓他們能夠呼叫，並呼叫.NET 元件，同時保留與原生 c + + 程式庫的相容性。 開發人員可以使用混合的組件，來撰寫應用程式使用.NET 和原生 c + + 程式碼的混合。
 
-例如，現有的應用程式，其中包含完全 unmanaged 函式可以帶至.NET 平台編譯一個模組 **/clr**編譯器參數。 此模組就能夠使用.NET 功能，但保持相容應用程式的其餘步驟。 如此一來，應用程式被可轉換成漸進式、-循序漸進的方式在.NET 平台。 甚至可以在相同的檔案以函式的函式為基礎的 managed 和 unmanaged 編譯之間做決定 (請參閱[managed、 unmanaged](../preprocessor/managed-unmanaged.md))。
+例如，現有的程式庫包含整個原生 c + + 程式碼可以帶至.NET 平台編譯一個模組 **/clr**編譯器參數。 此模組就能夠使用.NET 功能，但保持相容應用程式的其餘步驟。 甚至可以在相同的檔案以函式的函式為基礎的 managed 和原生編譯之間做決定 (請參閱[managed、 unmanaged](../preprocessor/managed-unmanaged.md))。
 
 Visual c + + 只支援使用混合的 managed 組件產生 **/clr**編譯器選項。 **/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。 如果您需要純或可驗證的 managed 組件時，我們建議使用 C# 建立它們。
 

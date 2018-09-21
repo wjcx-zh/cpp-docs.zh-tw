@@ -1,7 +1,7 @@
 ---
 title: 如何： 移轉至-clr |Microsoft Docs
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -20,16 +20,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 818b6e102d9da759aa8889779515917b96e22c89
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cf55b6f5dc422bb01babe0bdf8d8c27ce50371da
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412960"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494461"
 ---
 # <a name="how-to-migrate-to-clr"></a>如何：移轉至 /clr
 
-本主題討論編譯原生程式碼時所發生的問題 **/clr** (請參閱[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)如需詳細資訊)。 **/clr**可讓 Visual c + + 模組，來叫用，並叫用.NET 組件的同時保留與未受管理模組的相容性。 請參閱[混合 （原生和 Managed） 組件](../dotnet/mixed-native-and-managed-assemblies.md)並[原生和.NET 互通性](../dotnet/native-and-dotnet-interoperability.md)的優點與編譯的詳細資訊 **/clr**。
+本主題討論編譯原生程式碼時所發生的問題 **/clr** (請參閱[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)如需詳細資訊)。 **/clr**允許原生 c + + 程式碼來叫用，並從.NET 組件，除了其他原生 c + + 程式碼叫用。 請參閱[混合 （原生和 Managed） 組件](../dotnet/mixed-native-and-managed-assemblies.md)並[原生和.NET 互通性](../dotnet/native-and-dotnet-interoperability.md)的優點與編譯的詳細資訊 **/clr**。
 
 ## <a name="known-issues-compiling-library-projects-with-clr"></a>已知的問題編譯程式庫專案以 /clr
 
@@ -132,7 +132,7 @@ COMObj2->Method(args);  // C++ equivalent
 
 ### <a name="loader-lock-deadlock"></a>載入器鎖定的死結
 
-在 Visual Studio 2010 和更新版本，「 載入器鎖定死結 」 仍會發生在舊版中，但具決定性，且也偵測和回報在執行階段。 請參閱[初始化混合組件](../dotnet/initialization-of-mixed-assemblies.md)的詳細的背景、 指南和解決方案。
+「 載入器鎖定死結 」 可能會發生，但具決定性偵測到且在執行階段回報。 請參閱[初始化混合組件](../dotnet/initialization-of-mixed-assemblies.md)的詳細的背景、 指南和解決方案。
 
 ### <a name="data-exports"></a>資料匯出
 

@@ -1,7 +1,7 @@
 ---
 title: STL/CLR 程式庫參考 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018"
 ms.technology:
 - cpp-cli
 ms.topic: reference
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 78dc5c57ca000dfa03dba640c46cec16aaca133f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 14217396801731505753be121e98f0aebf5b5f22
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429470"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494383"
 ---
 # <a name="stlclr-library-reference"></a>STL/CLR 程式庫參考
 
-STL/CLR 程式庫是子集的 c + + 標準程式庫適用於 c + + 和.NET Framework common language runtime (CLR) 的封裝。 使用 STL/CLR，您可以使用所有容器、 迭代器及在受管理的環境中的標準程式庫演算法。
+STL/CLR 程式庫會提供類似於 c + + 標準程式庫容器的介面，可搭配 c + + 和.NET Framework common language runtime (CLR)。 STL/CLR 是從 Microsoft 實作的 c + + 標準 Libary 完全分開的。 STL/CLR 維護舊版支援，但不是會保持在最新的 c + + 標準。 我們強烈建議使用原生[c + + 標準程式庫](../standard-library/cpp-standard-library-reference.md)而不是 STL/CLR，盡可能的容器。
 
 若要使用 STL/CLR:
 
@@ -34,7 +34,7 @@ STL/CLR 程式庫是子集的 c + + 標準程式庫適用於 c + + 和.NET Frame
 
 - 程式庫以限定名稱`cliext::`而不是`std::`。
 
-它會使用.NET 組件中的組件交叉案例中的泛型型別和介面，公開 STL/CLR **Microsoft.VisualC.STLCLR.dll**。 此 DLL 會隨附於.NET Framework 3.5 中。 如果您轉散發使用 STL/CLR 的應用程式，您必須包含.NET Framework 3.5 中，以及您的專案使用，安裝專案的相依性區段中的任何其他 Visual c + + 程式庫。
+STL/CLR 程式庫會提供類似 STL 的介面，可搭配 c + + 和.NET Framework common language runtime (CLR)。 此程式庫會保留舊的支援，但不是會保持在最新的 c + + 標準。 我們強烈建議使用原生[c + + 標準程式庫](../standard-library/cpp-standard-library-reference.md)而不是 STL/CLR 容器。
 
 ## <a name="in-this-section"></a>本節內容
 

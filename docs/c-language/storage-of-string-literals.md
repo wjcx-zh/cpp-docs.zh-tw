@@ -14,22 +14,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d87998f7e9d579c012f5db2f38f20886c1e74c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 111acab00783de67dcb3ecc8b9d45fe112332158
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387030"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019520"
 ---
 # <a name="storage-of-string-literals"></a>字串常值的儲存
-常值字串的字元是依順序儲存在連續記憶體位置中。 字串常值內的逸出序列 (例如 **\\\\** 或 **\\"**) 會算是單一字元。 null 字元 (以 **\0** 逸出序列表示) 會自動附加至每個字串常值，而且做為字串常值結尾的標記。 (這會發生在[轉譯階段](../preprocessor/phases-of-translation.md) 7)。請注意，編譯器可能不會將兩個相同的字串儲存在兩個不同的位址。 [/GF](../build/reference/gf-eliminate-duplicate-strings.md) 會強制編譯器將一份相同的字串放入可執行檔中。  
-  
-## <a name="remarks"></a>備註  
- **Microsoft 特定的**  
-  
- 字串具有靜態儲存期。 如需儲存期的詳細資訊，請參閱[儲存類別](../c-language/c-storage-classes.md)。  
-  
- **結束 Microsoft 特定的**  
-  
-## <a name="see-also"></a>請參閱  
- [C 字串常值](../c-language/c-string-literals.md)
+
+常值字串的字元是依順序儲存在連續記憶體位置中。 字串常值內的逸出序列 (例如 **\\\\** 或 **\\"**) 會算是單一字元。 null 字元 (以 **\0** 逸出序列表示) 會自動附加至每個字串常值，而且做為字串常值結尾的標記。 (這會發生在[轉譯階段](../preprocessor/phases-of-translation.md) 7)。請注意，編譯器可能不會將兩個相同的字串儲存在兩個不同的位址。 [/GF](../build/reference/gf-eliminate-duplicate-strings.md) 會強制編譯器將一份相同的字串放入可執行檔中。
+
+## <a name="remarks"></a>備註
+
+**Microsoft 專屬**
+
+字串具有靜態儲存期。 如需儲存期的詳細資訊，請參閱[儲存類別](../c-language/c-storage-classes.md)。
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>請參閱
+
+[C 字串常值](../c-language/c-string-literals.md)

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fba53f16fad9321701e641020ed01349b13a5c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ab13141c573ad302528a09b74cb3a5e2aaa0382
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418093"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035212"
 ---
 # <a name="stream-io"></a>資料流 I/O
 
@@ -89,23 +89,23 @@ ms.locfileid: "32418093"
 |[_vsnprintf、_vsnwprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)、[vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)|將所指定長度的格式化資料寫入緩衝區|
 |[vsprintf、vswprintf](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)、[vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)|將格式化資料寫入緩衝區|
 
- 程式開始執行時，啟動程式碼會自動開啟數個資料流：標準輸入 (由 **stdin** 指向)、標準輸出 (由 **stdout** 指向) 和標準誤差 (由 **stderr** 指向)。 預設會將這些資料流導向主控台 (鍵盤和螢幕)。 使用 **freopen** 將 **stdin**、**stdout** 或 **stderr** 重新導向至磁碟檔案或裝置。
+程式開始執行時，啟動程式碼會自動開啟數個資料流：標準輸入 (由 **stdin** 指向)、標準輸出 (由 **stdout** 指向) 和標準誤差 (由 **stderr** 指向)。 預設會將這些資料流導向主控台 (鍵盤和螢幕)。 使用 **freopen** 將 **stdin**、**stdout** 或 **stderr** 重新導向至磁碟檔案或裝置。
 
- 預設會緩衝處理使用資料流常式所開啟的檔案。 在每次程式庫呼叫之後，**stdout** 和 **stderr** 函式只有在填滿或您撰寫至字元裝置時才會予以清除。 如果程式異常終止，則可能未清除輸出緩衝區，導致資料遺失。 使用 **fflush** 或 **_flushall** 確保與所指定檔案建立關聯的緩衝區或是所有開啟的緩衝區都已清除至作業系統，這樣可以在寫入磁碟之前快取資料。 認可至磁碟功能確保清除的緩衝區內容不會在系統失敗時遺失。
+預設會緩衝處理使用資料流常式所開啟的檔案。 在每次程式庫呼叫之後，**stdout** 和 **stderr** 函式只有在填滿或您撰寫至字元裝置時才會予以清除。 如果程式異常終止，則可能未清除輸出緩衝區，導致資料遺失。 使用 **fflush** 或 **_flushall** 確保與所指定檔案建立關聯的緩衝區或是所有開啟的緩衝區都已清除至作業系統，這樣可以在寫入磁碟之前快取資料。 認可至磁碟功能確保清除的緩衝區內容不會在系統失敗時遺失。
 
- 有兩種方式可以將緩衝區內容認可至磁碟：
+有兩種方式可以將緩衝區內容認可至磁碟：
 
--   使用檔案 COMMODE.OBJ 進行連結，以設定全域認可旗標。 全域旗標的預設設定是 **n** (表示「不認可」)。
+- 使用檔案 COMMODE.OBJ 進行連結，以設定全域認可旗標。 全域旗標的預設設定是 **n** (表示「不認可」)。
 
--   將模式旗標設為具有 **fopen** 或 **_fdopen** 的 **c**。
+- 將模式旗標設為具有 **fopen** 或 **_fdopen** 的 **c**。
 
- 不論全域認可/不認可旗標的狀態為何，特別使用 **c** 或 **n** 旗標所開啟的任何檔案都是根據旗標來運作。
+不論全域認可/不認可旗標的狀態為何，特別使用 **c** 或 **n** 旗標所開啟的任何檔案都是根據旗標來運作。
 
- 如果您的程式未明確地關閉資料流，則會在程式終止時自動關閉資料流。 不過，您應該在程式完成資料流的處理時關閉資料流，因為一次可以開啟的資料流數目有限。 如需這項限制的相關資訊，請參閱 [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) 。
+如果您的程式未明確地關閉資料流，則會在程式終止時自動關閉資料流。 不過，您應該在程式完成資料流的處理時關閉資料流，因為一次可以開啟的資料流數目有限。 如需這項限制的相關資訊，請參閱 [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) 。
 
- 只有在具有 **fflush** 或是檔案定位函式 (**fseek**、**fsetpos** 或 **rewind**) 的介入呼叫時，輸入才能直接遵循輸出。 如果輸入作業遇到檔案結尾，則輸出可以遵循輸入，而沒有檔案定位函式的中間呼叫。
+只有在具有 **fflush** 或是檔案定位函式 (**fseek**、**fsetpos** 或 **rewind**) 的介入呼叫時，輸入才能直接遵循輸出。 如果輸入作業遇到檔案結尾，則輸出可以遵循輸入，而沒有檔案定位函式的中間呼叫。
 
 ## <a name="see-also"></a>請參閱
 
 [輸入和輸出](../c-runtime-library/input-and-output.md)<br/>
- [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -14,16 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a87a6518eec495961d1f8d40c625e589db01bd3b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a31d32ce7bdf89cd0216926c6628b4fa7bdd27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382110"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027345"
 ---
 # <a name="c-pragmas"></a>C Pragma
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 *pragma* 會在編譯時期指示編譯器執行特定動作。 不同編譯器的 pragma 也會不同。 例如，您可以使用 **optimize** pragma 設定，在您的程式上執行最佳化。 Microsoft C pragma 包括：
 
@@ -37,8 +37,8 @@ ms.locfileid: "32382110"
 
 如需 Microsoft C 編譯器 pragma 的描述，請參閱 [Pragma 指示詞與 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)。
 
- **結束 Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 
-[原始程式檔和來源程式](../c-language/source-files-and-source-programs.md)  
+[原始程式檔和來源程式](../c-language/source-files-and-source-programs.md)

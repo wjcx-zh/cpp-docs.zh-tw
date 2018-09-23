@@ -15,19 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0cbaa5d71b0867ff355e194ad6c82c120148d76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd80fd88a5924cbedf9a07ee700f16c65b66672f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385282"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020143"
 ---
 # <a name="pointer-arithmetic"></a>指標運算
-加法類運算與指標相關，並且只有當指標運算元定址陣列成員且整數值在同一個陣列的界限內產生位移時，整數才會提供有意義的結果。 將整數值轉換為位址位移時，編譯器會假設原始位址和位址加上位移之間只有相同大小的記憶體位置。  
-  
- 這個假設對陣列成員有效。 根據定義，陣列是一系列相同類型的值；其元素位於連續的記憶體位置。 不過，除了陣列元素外，不保證相同類型的識別項會填滿任何類型的儲存區。 也就是說，即使是相同類型的位置，記憶體位置之間也可能會出現空白。 因此，在陣列元素以外的任何位址加入或減去入值，都會出現未定義的結果。  
-  
- 同樣地，減去兩個指標值時，轉換會假設運算元指定的位址之間只有相同類型的值，而沒有空白。  
-  
-## <a name="see-also"></a>請參閱  
- [C 加法類運算子](../c-language/c-additive-operators.md)
+
+加法類運算與指標相關，並且只有當指標運算元定址陣列成員且整數值在同一個陣列的界限內產生位移時，整數才會提供有意義的結果。 將整數值轉換為位址位移時，編譯器會假設原始位址和位址加上位移之間只有相同大小的記憶體位置。
+
+這個假設對陣列成員有效。 根據定義，陣列是一系列相同類型的值；其元素位於連續的記憶體位置。 不過，除了陣列元素外，不保證相同類型的識別項會填滿任何類型的儲存區。 也就是說，即使是相同類型的位置，記憶體位置之間也可能會出現空白。 因此，在陣列元素以外的任何位址加入或減去入值，都會出現未定義的結果。
+
+同樣地，減去兩個指標值時，轉換會假設運算元指定的位址之間只有相同類型的值，而沒有空白。
+
+## <a name="see-also"></a>請參閱
+
+[C 加法類運算子](../c-language/c-additive-operators.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b9956299370b4a41ce725cf903ff2aefe55bf53
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ed871ee2148b6b731ab9354cd45c2e178b4d85a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33336732"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056075"
 ---
 # <a name="ltreturnsgt-visual-c"></a>&lt;returns&gt; (Visual C++)
 \<returns> 標記應該用於方法宣告的註解中，以描述傳回值。  
@@ -35,8 +35,8 @@ ms.locfileid: "33336732"
 ```  
   
 #### <a name="parameters"></a>參數  
- `description`  
- 傳回值的描述。  
+*description*<br/>
+傳回值的描述。  
   
 ## <a name="remarks"></a>備註  
  編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。  

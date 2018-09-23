@@ -18,39 +18,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 365f4cf424ee51c493859e1d79f733b2cfcf331c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 24f25116a955c83f8f3685b9646c3086238d306e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964180"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020845"
 ---
 # <a name="extern-storage-class-specifier"></a>extern 儲存類別指定名稱
 
-使用 **extern** 儲存類別指定名詞宣告的變數，會參考其他來源檔案中使用相同名稱定義的變數。 它可用來公開外部層級的變數定義。 宣告為 **extern** 的變數並沒有自己的配置儲存體，而只是一個名稱。 
-  
-## <a name="example"></a>範例  
- 下列範例說明內部和外部層級宣告：  
-  
-```c  
+使用 **extern** 儲存類別指定名詞宣告的變數，會參考其他來源檔案中使用相同名稱定義的變數。 它可用來公開外部層級的變數定義。 宣告為 **extern** 的變數並沒有自己的配置儲存體，而只是一個名稱。
 
-// Source1.c  
+## <a name="example"></a>範例
+
+下列範例說明內部和外部層級宣告：
+
+```c
+
+// Source1.c
 
 int i = 1;
 
-
 // Source2. c
 
-#include <stdio.h>  
+#include <stdio.h>
 
-// Refers to the i that is defined in Source1.c:   
+// Refers to the i that is defined in Source1.c:
 extern int i;
 
 void func(void);
 
 int main()
 {
-    // Prints 1:   
+    // Prints 1:
     printf_s("%d\n", i);
     func();
     return;
@@ -58,20 +58,21 @@ int main()
 
 void func(void)
 {
-    // Address of global i assigned to pointer variable:  
+    // Address of global i assigned to pointer variable:
     static int *external_i = &i;
 
-    // This definition of i hides the global i in Source.c:   
+    // This definition of i hides the global i in Source.c:
     int i = 16;
 
-    // Prints 16, 1:  
+    // Prints 16, 1:
     printf_s("%d\n%d\n", i, *external_i);
 }
-```  
-  
- 在此範例中，變數 `i` 定義在 Source1.c 中且初始值為 1。 在 Source2.c 中的 **extern** 宣告使 'i' 公開於該檔案中。 
+```
 
- 在 `func` 函式中，全域變數 `i` 的位址會用來初始化 **static** 指標變數 `external_i`。 因為全域變數具有 **static** 存留期，也就是說它的位址不會在程式執行期間變更，所以才能這樣運作。 接下來，變數 `i` 是定義在 `func` 範圍內的區域變數，且初始值為 16。 這個定義不會影響外部層級 `i` 的值，將其名稱用於區域變數會將之隱藏。 全域 `i` 的值現在只能透過指標 `external_i` 來存取。   
-  
-## <a name="see-also"></a>請參閱  
- [內部層級宣告的儲存類別規範](../c-language/storage-class-specifiers-for-internal-level-declarations.md)
+在此範例中，變數 `i` 定義在 Source1.c 中且初始值為 1。 在 Source2.c 中的 **extern** 宣告使 'i' 公開於該檔案中。
+
+在 `func` 函式中，全域變數 `i` 的位址會用來初始化 **static** 指標變數 `external_i`。 因為全域變數具有 **static** 存留期，也就是說它的位址不會在程式執行期間變更，所以才能這樣運作。 接下來，變數 `i` 是定義在 `func` 範圍內的區域變數，且初始值為 16。 這個定義不會影響外部層級 `i` 的值，將其名稱用於區域變數會將之隱藏。 全域 `i` 的值現在只能透過指標 `external_i` 來存取。
+
+## <a name="see-also"></a>請參閱
+
+[內部層級宣告的儲存類別規範](../c-language/storage-class-specifiers-for-internal-level-declarations.md)

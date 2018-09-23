@@ -45,39 +45,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f603757706bfdeeaaefe5b6d33cd94bb2624c389
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd7278d017002ff0d5aa716db61fdcdb54e24018
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410131"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051134"
 ---
 # <a name="stat-structure-stmode-field-constants"></a>_stat 結構 st_mode 欄位常數
-## <a name="syntax"></a>語法  
-  
-```  
-  
-#include <sys/stat.h>  
-  
-```  
-  
-## <a name="remarks"></a>備註  
- 這些常數是用來表示 [_stat 結構](../c-runtime-library/standard-types.md)的 **st_mode** 欄位中的檔案類型。  
-  
- 位元遮罩常數如下所示：  
-  
-|常數|意義|  
-|--------------|-------------|  
-|`_S_IFMT`|檔案類型遮罩|  
-|`_S_IFDIR`|Directory|  
-|`_S_IFCHR`|字元特殊 (設定時表示裝置)|  
-|`_S_IFREG`|Regular|  
-|`_S_IREAD`|讀取權限，擁有者|  
-|`_S_IWRITE`|寫入權限，擁有者|  
-|`_S_IEXEC`|執行/搜尋權限，擁有者|  
-  
-## <a name="see-also"></a>請參閱  
- [_stat、_wstat 函式](../c-runtime-library/reference/stat-functions.md)   
- [_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
- [標準類型](../c-runtime-library/standard-types.md)   
- [全域常數](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>語法
+
+```
+
+#include <sys/stat.h>
+
+```
+
+## <a name="remarks"></a>備註
+
+這些常數是用來表示 [_stat 結構](../c-runtime-library/standard-types.md)的 **st_mode** 欄位中的檔案類型。
+
+位元遮罩常數如下所示：
+
+|常數|意義|
+|--------------|-------------|
+|`_S_IFMT`|檔案類型遮罩|
+|`_S_IFDIR`|Directory|
+|`_S_IFCHR`|字元特殊 (設定時表示裝置)|
+|`_S_IFREG`|Regular|
+|`_S_IREAD`|讀取權限，擁有者|
+|`_S_IWRITE`|寫入權限，擁有者|
+|`_S_IEXEC`|執行/搜尋權限，擁有者|
+
+## <a name="see-also"></a>請參閱
+
+[_stat、_wstat 函式](../c-runtime-library/reference/stat-functions.md)<br/>
+[_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
+[標準類型](../c-runtime-library/standard-types.md)<br/>
+[全域常數](../c-runtime-library/global-constants.md)

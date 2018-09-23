@@ -12,19 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7b1eb1b8a9bf04260a317d21df558e6f49fd78b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 48b9491db4e535966de946fb0285bbd72782dea4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213929"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051956"
 ---
 # <a name="filenames"></a>檔案名稱
-**ANSI 4.9.3**：組成有效檔案名稱的規則  
-  
- 檔案規格可以包含選擇性的磁碟機代號 (後面一律需加冒號)、一連串的選擇性目錄名稱 (以反斜線分隔)，以及檔案名稱。  
-  
- 如需詳細資訊，請參閱[命名檔案](/windows/desktop/FileIO/naming-a-file)。  
-  
-## <a name="see-also"></a>請參閱  
- [程式庫函式](../c-language/library-functions.md)
+
+**ANSI 4.9.3**：組成有效檔案名稱的規則
+
+檔案規格可以包含選擇性的磁碟機代號 (後面一律需加冒號)、一連串的選擇性目錄名稱 (以反斜線分隔)，以及檔案名稱。
+
+如需詳細資訊，請參閱[命名檔案](/windows/desktop/FileIO/naming-a-file)。
+
+## <a name="see-also"></a>請參閱
+
+[程式庫函式](../c-language/library-functions.md)

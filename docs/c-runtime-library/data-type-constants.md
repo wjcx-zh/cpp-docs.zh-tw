@@ -149,12 +149,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55690bc06ae838ad44e1d0d6f0527974b7859b94
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 0ef742989b4af7a3698f6047098110ee58e29bf4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952462"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035665"
 ---
 # <a name="data-type-constants"></a>資料類型常數
 
@@ -262,4 +262,4 @@ ms.locfileid: "36952462"
 
 ## <a name="see-also"></a>另請參閱
 
-[全域常數](../c-runtime-library/global-constants.md)  
+[全域常數](../c-runtime-library/global-constants.md)

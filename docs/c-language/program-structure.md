@@ -16,27 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe41175895f99ff97c6e2171e2cdfc0cbcc82689
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5007deecce9adcaf03ab3d367539eac58c79498f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385952"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059691"
 ---
 # <a name="program-structure"></a>程式結構
-本節提供 C 程式和程式執行的概觀。 另外也會介紹對於了解 C 程式和元件來說很重要的詞彙和功能。 討論的主題包括：  
-  
--   [原始程式檔和來源程式](../c-language/source-files-and-source-programs.md)  
-  
--   [main 函式和程式執行](../c-language/main-function-and-program-execution.md)  
-  
--   [剖析命令列引數](../c-language/parsing-c-command-line-arguments.md)  
-  
--   [存留期、範圍、可見度和連結](../c-language/lifetime-scope-visibility-and-linkage.md)  
-  
--   [命名空間](../c-language/name-spaces.md)  
-  
- 由於本結僅為概觀，因此討論的主題僅包含簡介資料。 如需詳細說明，請參閱交互參考資訊。  
-  
-## <a name="see-also"></a>請參閱  
- [C 語言參考](../c-language/c-language-reference.md)
+
+本節提供 C 程式和程式執行的概觀。 另外也會介紹對於了解 C 程式和元件來說很重要的詞彙和功能。 討論的主題包括：
+
+- [原始程式檔和來源程式](../c-language/source-files-and-source-programs.md)
+
+- [main 函式和程式執行](../c-language/main-function-and-program-execution.md)
+
+- [剖析命令列引數](../c-language/parsing-c-command-line-arguments.md)
+
+- [存留期、範圍、可見度和連結](../c-language/lifetime-scope-visibility-and-linkage.md)
+
+- [命名空間](../c-language/name-spaces.md)
+
+由於本結僅為概觀，因此討論的主題僅包含簡介資料。 如需詳細說明，請參閱交互參考資訊。
+
+## <a name="see-also"></a>請參閱
+
+[C 語言參考](../c-language/c-language-reference.md)

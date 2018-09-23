@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54e0ba354e76996d03503e116008aa200b0905b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a471d6743da0cf803de72a9f257dfa67bc0dcbd1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199353"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036354"
 ---
 # <a name="file-handling"></a>檔案處理
 
@@ -86,7 +86,7 @@ C 執行階段程式庫同時開啟檔案數目的上限為 512。 嘗試開啟�
 |[_get_osfhandle](../c-runtime-library/reference/get-osfhandle.md)|傳回與現有 C 執行階段檔案描述項相關聯的作業系統檔案控制代碼|
 |[_open_osfhandle](../c-runtime-library/reference/open-osfhandle.md)|將現有作業系統檔案控制代碼與 C 執行階段檔案描述項建立關聯。|
 
- 下列的 Win32 函式也會開啟檔案和管道：
+下列的 Win32 函式也會開啟檔案和管道：
 
 - [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) (CreateFile 函式)
 

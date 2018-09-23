@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aaa6595fa9d7e87c7021368125af7a3bc53128e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a2b8221976dc00666a24cfc2627dad35e73f3ce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382649"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076017"
 ---
 # <a name="file-buffering"></a>檔案緩衝
-**ANSI 4.9.3**：檔案緩衝的特性  
-  
- 透過標準 I/O 函式存取的磁碟檔案會進行完整的緩衝。 根據預設，緩衝區會保存 512 個位元組。  
-  
-## <a name="see-also"></a>請參閱  
- [程式庫函式](../c-language/library-functions.md)
+
+**ANSI 4.9.3**：檔案緩衝的特性
+
+透過標準 I/O 函式存取的磁碟檔案會進行完整的緩衝。 根據預設，緩衝區會保存 512 個位元組。
+
+## <a name="see-also"></a>請參閱
+
+[程式庫函式](../c-language/library-functions.md)

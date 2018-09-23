@@ -19,24 +19,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2403eb0fbe19f83df3909c9d8b765f00fed82c8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6d0343a7a508e09e3bd7779308cb40972965a716
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409315"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032948"
 ---
 # <a name="unix"></a>UNIX
-若計畫將您的程式移植到 UNIX，請依照這些指導方針執行：  
-  
--   不要從 SYS 子目錄移除標頭檔。 只有當您不打算將程式傳輸到 UNIX 時，才可以將 SYS 標頭檔放在其他位置。  
-  
--   在接受使用代表路徑與檔案名稱的字串作為引數的常式中使用 UNIX 相容路徑分隔符號。 之對此用途，UNIX 只支援使用斜線 (/)，而 Win32 作業系統同時支援反斜線 (\\) 與斜線 (/)。 因此，此文件使用 UNIX 相容斜線作為 `#include` 陳述式中的路徑分隔符號 (然而，Windows 作業系統命令殼層 (CMD.EXE) 不支援在命令提示字元中輸入命令時使用斜線)。  
-  
--   使用可在 UNIX 中正確運作的路徑與檔案名稱 (區分大小寫)。 Win32 作業系統中的檔案配置表 (FAT) 檔案系統不區分大小寫；NTFS 檔案系統會維持目錄清單的大小寫，但在檔案搜尋與其他系統作業中會忽略大小寫。  
-  
+
+若計畫將您的程式移植到 UNIX，請依照這些指導方針執行：
+
+- 不要從 SYS 子目錄移除標頭檔。 只有當您不打算將程式傳輸到 UNIX 時，才可以將 SYS 標頭檔放在其他位置。
+
+- 在接受使用代表路徑與檔案名稱的字串作為引數的常式中使用 UNIX 相容路徑分隔符號。 之對此用途，UNIX 只支援使用斜線 (/)，而 Win32 作業系統同時支援反斜線 (\\) 與斜線 (/)。 因此，此文件使用 UNIX 相容斜線作為 `#include` 陳述式中的路徑分隔符號 (然而，Windows 作業系統命令殼層 (CMD.EXE) 不支援在命令提示字元中輸入命令時使用斜線)。
+
+- 使用可在 UNIX 中正確運作的路徑與檔案名稱 (區分大小寫)。 Win32 作業系統中的檔案配置表 (FAT) 檔案系統不區分大小寫；NTFS 檔案系統會維持目錄清單的大小寫，但在檔案搜尋與其他系統作業中會忽略大小寫。
+
     > [!NOTE]
-    >  在此版本的 Visual C++ 中，我們已從函式描述中移除 UNIX 相容性資訊。  
-  
-## <a name="see-also"></a>請參閱  
- [相容性](../c-runtime-library/compatibility.md)
+    >  在此版本的 Visual C++ 中，我們已從函式描述中移除 UNIX 相容性資訊。
+
+## <a name="see-also"></a>請參閱
+
+[相容性](../c-runtime-library/compatibility.md)

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce86a9ceffaa5d9dacfe56e6b89b677b3abb1517
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eefbbde88704ffd53f8bcf1445186bb7e6cdd6af
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392480"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017627"
 ---
 # <a name="conversions-from-floating-point-types"></a>從浮點數類型的轉換
 
@@ -28,11 +28,11 @@ ms.locfileid: "32392480"
 
 浮點值轉換成整數值的過程，是先轉換成 **long**，然後從 **long** 值轉換成特定整數值。 浮點值的小數部分會在轉換成 **long** 的過程中捨棄。 如果結果仍然太大而無法適用 **long**，則轉換的結果會是未定義。
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 將 **double** 或 **long double** 浮點數轉換成較小的浮點數時，浮點數變數的值會在發生反向溢位時從小數點以下截斷。 溢位會造成執行階段錯誤。 請注意，Microsoft C 編譯器會將 **long double** 對應至 **double** 類型。
 
-**結束 Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 下表摘要說明從浮點類型進行轉換。
 
@@ -65,4 +65,4 @@ ms.locfileid: "32392480"
 
 ## <a name="see-also"></a>另請參閱
 
-[指派轉換](../c-language/assignment-conversions.md)  
+[指派轉換](../c-language/assignment-conversions.md)

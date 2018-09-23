@@ -27,34 +27,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f70520b60ccfaf1af5b223bcb4ea1a90639aa484
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e311c27d61eca82019f8069b0984557af02c74a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385549"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028203"
 ---
 # <a name="abnormaltermination"></a>_abnormal_termination
-指出當系統正在執行終止處理常式的內部清單時，是否輸入 [try-finally 陳述式](../cpp/try-finally-statement.md)的 `__finally` 區塊。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-int   _abnormal_termination(  
-   );  
-```  
-  
-## <a name="return-value"></a>傳回值  
- 如果系統「回溯」堆疊則為 `true`，否則為 `false`。  
-  
-## <a name="remarks"></a>備註  
- 這是用來管理回溯例外狀況的內部函式，不是從使用者程式碼呼叫。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|_abnormal_termination|excpt.h|  
-  
-## <a name="see-also"></a>請參閱  
- [try-finally 陳述式](../cpp/try-finally-statement.md)
+
+指出當系統正在執行終止處理常式的內部清單時，是否輸入 [try-finally 陳述式](../cpp/try-finally-statement.md)的 `__finally` 區塊。
+
+## <a name="syntax"></a>語法
+
+```cpp
+int   _abnormal_termination(
+   );
+```
+
+## <a name="return-value"></a>傳回值
+
+如果系統「回溯」堆疊則為 `true`，否則為 `false`。
+
+## <a name="remarks"></a>備註
+
+這是用來管理回溯例外狀況的內部函式，不是從使用者程式碼呼叫。
+
+## <a name="requirements"></a>需求
+
+|常式傳回的值|必要的標頭|
+|-------------|---------------------|
+|_abnormal_termination|excpt.h|
+
+## <a name="see-also"></a>請參閱
+
+[try-finally 陳述式](../cpp/try-finally-statement.md)

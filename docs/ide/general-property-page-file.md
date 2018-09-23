@@ -15,26 +15,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523ac16a647116f4d18da7e516adb4f0e6bb7fc4
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 8ad4689c15e14ba0bbac61c8c3b28148536b9057
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33324031"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715464"
 ---
 # <a name="general-property-page-file"></a>一般屬性頁 (檔案)
 
 在 [方案總管] 中選取檔案時，[組態屬性] 節點下的 [一般] 屬性頁會包含下列屬性：
 
-**從組建排除**  
-指定檔案是否應該在目前組態的組建中。
+- **從組建排除**
 
-若要以程式設計方式存取此屬性，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>。
+   指定檔案是否應該在目前組態的組建中。
 
-**工具**  
-將用來建置此檔案的工具。 請參閱[指定自訂建置工具](../ide/specifying-custom-build-tools.md)以取得詳細資訊。
+   若要以程式設計方式存取此屬性，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>。
 
-若要以程式設計方式存取此屬性，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>。
+- **工具**
+
+   將用來建置此檔案的工具。 請參閱[指定自訂建置工具](../ide/specifying-custom-build-tools.md)以取得詳細資訊。
+
+   若要以程式設計方式存取此屬性，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>。
 
 如需如何存取 [組態屬性] 節點下的 [一般] 屬性頁的詳細資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。
 

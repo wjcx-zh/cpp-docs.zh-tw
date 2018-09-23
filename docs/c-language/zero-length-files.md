@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a78a71ab42f466e16868ccb25f8082a27366b199
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6352723cc65ba1ed87d867fd1a9938269cc84832
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384963"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033585"
 ---
 # <a name="zero-length-files"></a>零長度檔案
-**ANSI 4.9.3** 長度為零的檔案是否確實存在  
-  
- 允許長度為零的檔案。  
-  
-## <a name="see-also"></a>請參閱  
- [程式庫函式](../c-language/library-functions.md)
+
+**ANSI 4.9.3** 長度為零的檔案是否確實存在
+
+允許長度為零的檔案。
+
+## <a name="see-also"></a>請參閱
+
+[程式庫函式](../c-language/library-functions.md)

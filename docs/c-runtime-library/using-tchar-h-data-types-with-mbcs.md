@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 066459593be4970fde141333a6f22f0846f8bbc4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc14f5831904e2fea9bfa7ef7607f2085d1f0e58
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412647"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061262"
 ---
 # <a name="using-tcharh-data-types-with-mbcs"></a>搭配 _MBCS 使用 TCHAR.H 資料類型
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 如泛型文字常式對應表格 (請參閱[泛型文字對應](../c-runtime-library/generic-text-mappings.md)) 所表示，當已定義資訊清單常數 **_MBCS** 時，指定的泛型文字常式會對應到下列一種常式：
 
@@ -35,7 +35,7 @@ ms.locfileid: "32412647"
 
 - MBCS 特定常式。 在此案例中，字串引數類型必須是 __unsigned char&#42;__。 例如， **_tcsrev** 對應至 **_mbsrev**，這預期會傳回 __unsigned char&#42;__ 類型的字串。 再強調一次，若您為字串類型使用 **_TCHAR** 泛型文字資料類型，可能會發生類型衝突，因為 **_TCHAR** 對應到類型 **char**。
 
- 下面是防止此類型衝突 (以及可能會產生的 C 編譯器警告或 C++ 編譯器錯誤) 的三種解決方式：
+下面是防止此類型衝突 (以及可能會產生的 C 編譯器警告或 C++ 編譯器錯誤) 的三種解決方式：
 
 - 使用預設行為。 TCHAR.H 為執行階段程式庫中的常式提供泛型文字常式原型，如下列範例所示。
 
@@ -74,7 +74,7 @@ ms.locfileid: "32412647"
 
 當您使用此方法時，務必確保為字串引數與字串傳回值使用適當的資料類型。 您可以使用類型轉換來確保適當的類型相符，或者可以使用 **_TXCHAR** 泛型文字資料類型。 **_TXCHAR** 在 SBCS 程式碼中對應至 **char** 類型，但在 MBCS 程式碼中對應至 **unsigned char** 類型。 如需有關泛型文字巨集的詳細資訊，請參閱[泛型文字對應](../c-runtime-library/generic-text-mappings.md)。
 
-**結束 Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>請參閱
 

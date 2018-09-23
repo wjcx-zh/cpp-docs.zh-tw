@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 409f10dffdf6816f3ff0ab4e71060c9bcb6eaf9f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 5bf60222b276050af5296d678985eda8fd12948b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684208"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027559"
 ---
 # <a name="ltremarksgt-visual-c"></a>&lt;remarks&gt; (Visual C++)
 \<remarks> 標記是用來新增類型的資訊，以補充使用 [\<summary>](../ide/summary-visual-cpp.md) 所指定的資訊。 這項資訊會顯示在[物件瀏覽器](/visualstudio/ide/viewing-the-structure-of-code)和程式碼結構 Web 報告中。  
@@ -35,8 +35,8 @@ ms.locfileid: "43684208"
 ```  
   
 #### <a name="parameters"></a>參數  
- `description`  
- 成員的描述。  
+*description*<br/>
+成員的描述。  
   
 ## <a name="remarks"></a>備註  
  編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。  

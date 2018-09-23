@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bfd0715acd7eb18c4ccc83d496a1e9a98084fdf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a58338d980db5acd8f41c71e23c37c1700a0761
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757945"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055113"
 ---
 # <a name="initializing-aggregate-types"></a>初始化彙總類型
 
@@ -109,13 +109,13 @@ triplet nlist[2][3] =
 
 在這個範例中，`nlist` 會宣告為 2 x 3 結構陣列，每個結構擁有三個成員。 第 1 列初始化會將值指派給 `nlist` 的第一列，如下所示：
 
-1.  第 1 列上的第一個左大括號會通知編譯器 `nlist` 第一個彙總成員 (也就是 `nlist[0]`) 的初始化開始。
+1. 第 1 列上的第一個左大括號會通知編譯器 `nlist` 第一個彙總成員 (也就是 `nlist[0]`) 的初始化開始。
 
-2.  第二個左大括號表示 `nlist[0]` 第一個彙總成員 (也就是位於 `nlist[0][0]` 的結構) 的初始化開始。
+1. 第二個左大括號表示 `nlist[0]` 第一個彙總成員 (也就是位於 `nlist[0][0]` 的結構) 的初始化開始。
 
-3.  第一個右大括號表示結構 `nlist[0][0]` 的初始化結束，下一個左大括號表示 `nlist[0][1]` 的初始化開始。
+1. 第一個右大括號表示結構 `nlist[0][0]` 的初始化結束，下一個左大括號表示 `nlist[0][1]` 的初始化開始。
 
-4.  這個程序會繼續進行到行尾，該處的右大括號表示 `nlist[0]` 的初始化結束。
+1. 這個程序會繼續進行到行尾，該處的右大括號表示 `nlist[0]` 的初始化結束。
 
 第 2 列會以類似的方式將值指派給 `nlist` 的第二列。 請注意，第 1 和第 2 列上括住初始設定式外側的大括號為必要。 下列建構省略了外側大括號，這樣會產生錯誤：
 
@@ -160,6 +160,6 @@ union
 
 這個範例中的等位變數 `y` 會初始化。 等位的第一個項目是陣列，因此初始設定式是彙總初始設定式。 初始設定式清單 `{'1'}` 會將值指派給陣列的第一列。 由於清單中只有一個值，因此第一行中的元素會初始化為 `1` 字元，而根據預設，該列中的其餘兩個元素會初始化為 0 值。 同樣地，`x` 中第二列的第一個元素會初始化為 `4` 字元，該列中的其餘兩個元素則會初始化為 0 值。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [初始化](../c-language/initialization.md)

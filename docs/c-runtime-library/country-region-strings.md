@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f227feec25e3b487772f8e469651f08be825419f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 4e5cd978c5774a4deb8b5bb79fc2b8e59c198e45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605626"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028385"
 ---
 # <a name="countryregion-strings"></a>Country/Region Strings
 
@@ -33,7 +33,7 @@ Microsoft C 執行階段程式庫實作也支援下列其他國家/地區字串�
 
 |國家/地區字串|縮寫|對等的地區設定名稱|
 |----------------------------|------------------|----------------------------|
-|美洲|USA|en-US|
+|美洲|USA|zh-TW|
 |英國|GBR|en-GB|
 |中國|CHN|zh-CN|
 |捷克|CZE|cs-CZ|
@@ -54,12 +54,12 @@ Microsoft C 執行階段程式庫實作也支援下列其他國家/地區字串�
 |千里達及托巴哥|TTO|en-TT|
 |uk|GBR|en-GB|
 |英國|GBR|en-GB|
-|美國|USA|en-US|
-|us|USA|en-US|
+|美國|USA|zh-TW|
+|us|USA|zh-TW|
 
 ## <a name="see-also"></a>另請參閱
 
-[地區設定名稱、語言和國家/地區字串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)  
-[語言字串](../c-runtime-library/language-strings.md)  
-[setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)  
-[_create_locale、_wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)  
+[地區設定名稱、語言和國家/地區字串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[語言字串](../c-runtime-library/language-strings.md)<br/>
+[setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[_create_locale、_wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)

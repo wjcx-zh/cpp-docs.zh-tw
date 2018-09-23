@@ -15,15 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 338e518d1939cb6ea32aaf200c54b6c352287561
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3d8d3a762cb3eed3b0182185561c33b073b571b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760259"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036055"
 ---
 # <a name="postfix-operators"></a>後置運算子
-後置運算子在運算式評估時具有最高優先順序 (具有更緊密的繫結)。  
+
+後置運算子在運算式評估時具有最高優先順序 (具有更緊密的繫結)。
 
 ## <a name="syntax"></a>語法
 
@@ -38,6 +39,6 @@ ms.locfileid: "43760259"
 
 此優先順序層級的運算子為陣列註標、函式呼叫、結構和等位成員，以及後置遞增和遞減運算子。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C 運算子](../c-language/c-operators.md)

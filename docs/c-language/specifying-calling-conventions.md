@@ -12,19 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27e92a5caf620bdd0b2f6379021b1fd4d5e0ba07
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8d76d81687ed143e1e834b706012b68b6f1f52a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387949"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023445"
 ---
 # <a name="specifying-calling-conventions"></a>指定呼叫慣例
-**Microsoft 特定的**  
-  
- 如需呼叫慣例的資訊，請參閱[呼叫慣例主題](../cpp/calling-conventions.md)。  
-  
- **結束 Microsoft 特定的**  
-  
-## <a name="see-also"></a>請參閱  
- [函式屬性](../c-language/function-attributes.md)
+
+**Microsoft 專屬**
+
+如需呼叫慣例的資訊，請參閱[呼叫慣例主題](../cpp/calling-conventions.md)。
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>請參閱
+
+[函式屬性](../c-language/function-attributes.md)

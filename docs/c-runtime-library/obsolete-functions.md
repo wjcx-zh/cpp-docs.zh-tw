@@ -36,46 +36,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ae341a6e3c997870f81381cbe68f13b2384ee7e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 259bd5f5fd458d11c104aa3b9c141d049ad3fa96
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686068"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016594"
 ---
 # <a name="obsolete-functions"></a>過時的函式
-某些程式庫函式已經過時，而且有較新的對等用法。 建議您將這些函式變更為更新版本。 其他過時的函式則已從 CRT 移除。 本主題列出因過時而被取代的函式，以及特定版本的 Visual Studio 中已移除的函式。  
-  
-## <a name="deprecated-as-obsolete-in-visual-studio-2015"></a>Visual Studio 2015 中因過時而被取代的函式  
-  
-|已過時的函式|替代函式|  
-|-----------------------|-----------------|  
-|`is_wctype`|[iswctype](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|  
-|`_loaddll`|[LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175\(v=vs.85\).aspx)、[LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) 或 [LoadPackagedLibrary](/windows/desktop/api/winbase/nf-winbase-loadpackagedlibrary)|  
-|`_unloaddll`|[FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152\(v=vs.85\).aspx)|  
-|`_getdllprocaddr`|[GetProcAddress](../build/getprocaddress.md)|  
-|`_seterrormode`|[SetErrorMode](https://msdn.microsoft.com/en-us/library/windows/desktop/ms680621\(v=vs.85\).aspx)|  
-|`_beep`|[Beep](https://msdn.microsoft.com/library/windows/desktop/ms679277\(v=vs.85\).aspx)|  
-|`_sleep`|[Sleep](/windows/desktop/api/synchapi/nf-synchapi-sleep)|  
-|`_getsystime`|[GetLocalTime](https://msdn.microsoft.com/library/windows/desktop/ms724338\(v=vs.85\).aspx)|  
-|`_setsystime`|[SetLocalTime](https://msdn.microsoft.com/library/windows/desktop/ms724936\(v=vs.85\).aspx)|  
-  
-## <a name="removed-from-the-crt-in-visual-studio-2015"></a>Visual Studio 2015 中已從 CRT 移除的函式  
-  
-|已過時的函式|替代函式|  
-|-----------------------|-----------------|  
-|[_cgets、_cgetws](../c-runtime-library/cgets-cgetws.md)|[_cgets_s、_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|  
-|[gets、_getws](../c-runtime-library/gets-getws.md)|[gets_s、_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|  
-|[_get_output_format](../c-runtime-library/get-output-format.md)|無|  
-|[_heapadd](../c-runtime-library/heapadd.md)|無|  
-|[_heapset](../c-runtime-library/heapset.md)|無|  
-|[inp、inpw](../c-runtime-library/inp-inpw.md)|無|  
-|[_inp、_inpw、_inpd](../c-runtime-library/inp-inpw-inpd.md)|無|  
-|[outp、outpw](../c-runtime-library/outp-outpw.md)|無|  
-|[_outp、_outpw、_outpd](../c-runtime-library/outp-outpw-outpd.md)|無|  
-|[_set_output_format](../c-runtime-library/set-output-format.md)|無|  
-  
-## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>舊版 Visual Studio 中已從 CRT 移除的函式  
- [_lock](../c-runtime-library/lock.md)  
-  
- [_unlock](../c-runtime-library/unlock.md)
+
+某些程式庫函式已經過時，而且有較新的對等用法。 建議您將這些函式變更為更新版本。 其他過時的函式則已從 CRT 移除。 本主題列出因過時而被取代的函式，以及特定版本的 Visual Studio 中已移除的函式。
+
+## <a name="deprecated-as-obsolete-in-visual-studio-2015"></a>Visual Studio 2015 中因過時而被取代的函式
+
+|已過時的函式|替代函式|
+|-----------------------|-----------------|
+|`is_wctype`|[iswctype](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|
+|`_loaddll`|[LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175\(v=vs.85\).aspx)、[LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) 或 [LoadPackagedLibrary](/windows/desktop/api/winbase/nf-winbase-loadpackagedlibrary)|
+|`_unloaddll`|[FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152\(v=vs.85\).aspx)|
+|`_getdllprocaddr`|[GetProcAddress](../build/getprocaddress.md)|
+|`_seterrormode`|[SetErrorMode](https://msdn.microsoft.com/en-us/library/windows/desktop/ms680621\(v=vs.85\).aspx)|
+|`_beep`|[Beep](https://msdn.microsoft.com/library/windows/desktop/ms679277\(v=vs.85\).aspx)|
+|`_sleep`|[Sleep](/windows/desktop/api/synchapi/nf-synchapi-sleep)|
+|`_getsystime`|[GetLocalTime](https://msdn.microsoft.com/library/windows/desktop/ms724338\(v=vs.85\).aspx)|
+|`_setsystime`|[SetLocalTime](https://msdn.microsoft.com/library/windows/desktop/ms724936\(v=vs.85\).aspx)|
+
+## <a name="removed-from-the-crt-in-visual-studio-2015"></a>Visual Studio 2015 中已從 CRT 移除的函式
+
+|已過時的函式|替代函式|
+|-----------------------|-----------------|
+|[_cgets、_cgetws](../c-runtime-library/cgets-cgetws.md)|[_cgets_s、_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|
+|[gets、_getws](../c-runtime-library/gets-getws.md)|[gets_s、_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|
+|[_get_output_format](../c-runtime-library/get-output-format.md)|無|
+|[_heapadd](../c-runtime-library/heapadd.md)|無|
+|[_heapset](../c-runtime-library/heapset.md)|無|
+|[inp、inpw](../c-runtime-library/inp-inpw.md)|無|
+|[_inp、_inpw、_inpd](../c-runtime-library/inp-inpw-inpd.md)|無|
+|[outp、outpw](../c-runtime-library/outp-outpw.md)|無|
+|[_outp、_outpw、_outpd](../c-runtime-library/outp-outpw-outpd.md)|無|
+|[_set_output_format](../c-runtime-library/set-output-format.md)|無|
+
+## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>舊版 Visual Studio 中已從 CRT 移除的函式
+
+[_lock](../c-runtime-library/lock.md)
+
+[_unlock](../c-runtime-library/unlock.md)

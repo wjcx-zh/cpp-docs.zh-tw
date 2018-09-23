@@ -22,14 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 265dfe599d4c3586b350787baab5977562326991
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cbfc7e7bd6a3f2ef727a0cc259f222afad0ab555
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757678"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055230"
 ---
 # <a name="c-function-definitions"></a>C 函式定義
+
 函式定義會指定函式的名稱、預期收到的參數類型及數目，以及其傳回型別。 函式定義也包括函式主體與其區域變數的宣告，以及決定該函式之行為的陳述式。
 
 ## <a name="syntax"></a>語法
@@ -102,5 +103,6 @@ ms.locfileid: "43757678"
 
 [函式屬性](../c-language/function-attributes.md)、[儲存類別](../c-language/storage-class.md)、[傳回類型](../c-language/return-type.md)、[參數](../c-language/parameters.md)和[函式主體](../c-language/function-body.md)等節會詳細說明函式定義的元件。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
+
 [函式](../c-language/functions-c.md)

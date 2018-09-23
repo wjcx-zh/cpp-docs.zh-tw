@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 772e9dc6a296873ef27171676ebca0c185c1771c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1ee18e32d1aaf2a9035b425cb3c3ef5e2db15145
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339072"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718805"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>XML 文件產生器工具屬性頁
 XML 文件產生器工具屬性頁會公開 xdcmake.exe 的功能。 當您的原始程式碼包含文件註解並指定 [/doc (處理文件註解) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md) 時，xdcmake.exe 會將多個 .xdc 檔案合併成一個 .xml 檔案。 如需將文件註解新增至原始程式碼的資訊，請參閱[建議使用的文件註解標籤](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)。  
@@ -32,17 +32,21 @@ XML 文件產生器工具屬性頁會公開 xdcmake.exe 的功能。 當您的�
 >  開發環境 (屬性頁) 中的 xdcmake.exe 選項與用於命令列中的 xdcmake.exe 選項不同。 如需在命令列使用 xdcmake.exe 的資訊，請參閱 [XDCMake 參考](../ide/xdcmake-reference.md)。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
- **隱藏啟動橫幅**  
- 隱藏著作權訊息。  
+- **隱藏啟動橫幅**
+
+   隱藏著作權訊息。  
   
- **其他文件檔**  
- 您想要專案系統在其中尋找 .xdc 檔案的其他目錄。 xdcmake 一律會尋找專案所產生的 .xdc 檔案。 您可以指定多個目錄。  
+- **其他文件檔**
+
+   您想要專案系統在其中尋找 .xdc 檔案的其他目錄。 xdcmake 一律會尋找專案所產生的 .xdc 檔案。 您可以指定多個目錄。  
   
- **輸出文件檔**  
- .xml 輸出檔的名稱和目錄位置。 如需使用巨集指定目錄位置的資訊，請參閱[建置命令和屬性的一般巨集](../ide/common-macros-for-build-commands-and-properties.md)。  
+- **輸出文件檔**
+
+   .xml 輸出檔的名稱和目錄位置。 如需使用巨集指定目錄位置的資訊，請參閱[建置命令和屬性的一般巨集](../ide/common-macros-for-build-commands-and-properties.md)。  
   
- **文件庫相依性**  
- 如果您的專案相依於方案中的 .lib 專案，您可以將 .lib 專案中的 .xdc 檔案處理到目前專案中的 .xml 檔案。  
+- **文件庫相依性**
+
+   如果您的專案相依於方案中的 .lib 專案，您可以將 .lib 專案中的 .xdc 檔案處理到目前專案中的 .xml 檔案。  
   
 ## <a name="see-also"></a>請參閱  
  [屬性頁](../ide/property-pages-visual-cpp.md)   

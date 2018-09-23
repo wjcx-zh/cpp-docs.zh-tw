@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea2cac91af5c6a999fc75aa01470b06da110bda1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: def974e39760fffacaa2147fade785e3f4b9dfa6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380871"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016568"
 ---
 # <a name="arrays-and-pointers"></a>陣列和指標
--   [陣列大小上限](../c-language/largest-array-size.md)  
-  
--   [指標減法](../c-language/pointer-subtraction.md)  
-  
-## <a name="see-also"></a>請參閱  
- [實作定義的行為](../c-language/implementation-defined-behavior.md)
+
+- [陣列大小上限](../c-language/largest-array-size.md)
+
+- [指標減法](../c-language/pointer-subtraction.md)
+
+## <a name="see-also"></a>請參閱
+
+[實作定義的行為](../c-language/implementation-defined-behavior.md)

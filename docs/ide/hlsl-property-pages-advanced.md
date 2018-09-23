@@ -15,22 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58dca91d5ab3bf0cf28d30a04d33ae8bf5819401
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: edcc84e8c12fab7149bbf6db2baf1f86e8635eb5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33321190"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725488"
 ---
 # <a name="hlsl-property-pages-advanced"></a>HLSL 屬性頁：進階
 若要設定 HLSL 編譯器 (fxc.exe) 的下列屬性，請使用其 [進階] 屬性頁。 如需如何存取 HLSL 資料夾中 [進階] 屬性頁的詳細資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。  
   
-## <a name="uielement-list"></a>UIElement 清單  
- **隱藏啟動橫幅**  
- [是 (/nologo)] 隱藏程式啟始資訊及資訊訊息；否則為 [否]。 根據預設，值為 [是 (/nologo)]。  
+## <a name="uielement-list"></a>UIElement 清單
+
+- **隱藏啟動橫幅**
+
+   [是 (/nologo)] 隱藏程式啟始資訊及資訊訊息；否則為 [否]。 根據預設，值為 [是 (/nologo)]。  
   
- **將警告視為錯誤**  
- [是 (/WX)] 將所有的編譯器警告當成錯誤；否則為 [否]。  
+- **將警告視為錯誤**
+
+   [是 (/WX)] 將所有的編譯器警告當成錯誤；否則為 [否]。  
   
 ## <a name="see-also"></a>請參閱  
  [HLSL 屬性頁](../ide/hlsl-property-pages.md)   

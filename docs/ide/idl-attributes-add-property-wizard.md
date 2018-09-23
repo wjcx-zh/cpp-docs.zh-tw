@@ -14,27 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12fee7eadecbd81e3c4e410d254de50bcf3a9ac0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7da654321dfae520f458374654a21a9e8ebb98f5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208822"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706645"
 ---
 # <a name="idl-attributes-add-property-wizard"></a>加入屬性精靈、IDL 屬性
 [新增屬性精靈] 的這個頁面可用來指定屬性的任何介面定義語言 (IDL) 設定。  
   
- **id**  
- 設定識別屬性的數值識別碼。 此選項不適用於自訂介面的屬性。 請參閱＜MIDL 參考＞中的 [id](/windows/desktop/Midl/id)。  
+- **id**
+
+   設定識別屬性的數值識別碼。 此選項不適用於自訂介面的屬性。 請參閱＜MIDL 參考＞中的 [id](/windows/desktop/Midl/id)。  
   
- **helpcontext**  
- 指定內容識別碼，讓使用者可在說明檔中檢視此屬性的相關資訊。 請參閱＜MIDL 參考＞中的 [helpcontext](/windows/desktop/Midl/helpcontext)。  
+- **helpcontext**
+
+   指定內容識別碼，讓使用者可在說明檔中檢視此屬性的相關資訊。 請參閱＜MIDL 參考＞中的 [helpcontext](/windows/desktop/Midl/helpcontext)。  
   
- **helpstring**  
- 指定用來描述所套用之項目的字元字串。 根據預設，它會設定為 "property *Property name*"。 請參閱＜MIDL 參考＞中的 [helpstring](/windows/desktop/Midl/helpstring)。  
+- **helpstring**
+
+   指定用來描述所套用之項目的字元字串。 根據預設，它會設定為 "property *Property name*"。 請參閱＜MIDL 參考＞中的 [helpstring](/windows/desktop/Midl/helpstring)。  
   
 ## <a name="other-options"></a>其他選項  
- 並非所有選項都適用於所有屬性類型。  
+
+並非所有選項都適用於所有屬性類型。  
   
 |選項|描述|  
 |------------|-----------------|  

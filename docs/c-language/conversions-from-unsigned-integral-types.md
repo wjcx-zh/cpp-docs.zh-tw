@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a8a77e898feb6676487c557b8e96d54dc793ace
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 38ef2c16c92322ae54dcc6dd7d577268daf74831
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391518"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058272"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>從不帶正負號整數類型的轉換
 
@@ -74,12 +74,12 @@ printf_s( "%hd\n", j );   // Prints -3
 |**unsigned long**|**double**|直接轉換為 **double**|
 |**unsigned long**|**long double**|轉換為 **long**，將 **long** 轉換為 **double**|
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 對 Microsoft C 編譯器而言，**unsigned int** 類型等同 **unsigned long** 類型。 **unsigned int** 值的轉換與 **unsigned long** 轉換的方式相同。 如果轉換的值大於最大的帶正號 **long** 值，則從 **unsigned long** 值轉換成 **float** 就會不精確。
 
-**結束 Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 
-[指派轉換](../c-language/assignment-conversions.md)  
+[指派轉換](../c-language/assignment-conversions.md)

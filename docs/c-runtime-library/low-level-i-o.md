@@ -20,18 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ce75fa9670f28079774f4ba564657d0b4614ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d263d1d61a6dcc6921d6918db2b89386e918551
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391278"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018310"
 ---
 # <a name="low-level-io"></a>低層級 I/O
 
 這些函式會針對比資料流 I/O 所提供還要更低層級的作業，直接叫用作業系統。 低層級輸入和輸出呼叫不會對資料進行緩衝或格式化。
 
- 低層級常數可以使用下列預先定義的檔案描述項，來存取於程式啟動時開啟的標準資料流。
+低層級常數可以使用下列預先定義的檔案描述項，來存取於程式啟動時開啟的標準資料流。
 
 |資料流|檔案描述項|
 |------------|---------------------|
@@ -39,7 +39,7 @@ ms.locfileid: "32391278"
 |**stdout**|1|
 |**stderr**|2|
 
- 低層級 I/O 常式會在發生錯誤時設定 [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 全域變數。 當您使用低層級函式時，只有在程式需要於 STDIO.H 中定義之常數 (例如檔案結尾指標 **EOF**) 的情況下，才必須包含 STDIO.H。
+低層級 I/O 常式會在發生錯誤時設定 [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 全域變數。 當您使用低層級函式時，只有在程式需要於 STDIO.H 中定義之常數 (例如檔案結尾指標 **EOF**) 的情況下，才必須包含 STDIO.H。
 
 ## <a name="low-level-io-functions"></a>低層級 I/O 函式
 
@@ -64,5 +64,5 @@ ms.locfileid: "32391278"
 ## <a name="see-also"></a>請參閱
 
 [輸入和輸出](../c-runtime-library/input-and-output.md)<br/>
- [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>
- [系統呼叫](../c-runtime-library/system-calls.md)<br/>
+[依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[系統呼叫](../c-runtime-library/system-calls.md)<br/>

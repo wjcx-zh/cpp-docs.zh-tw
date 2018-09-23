@@ -15,21 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d892aac81efa8c2628c8662558b52cc1eb2e21c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5fe77d3775c489399bb8b9032e645eee17d70b0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386507"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076589"
 ---
 # <a name="storage-of-addresses"></a>位址的儲存
-位址所需的儲存數量和位址的意義取決於編譯器的實作。 不同類型的指標不一定會具有相同長度。 因此，**sizeof(char \*)** 不一定等於 **sizeof(int \*)**。  
-  
- **Microsoft 特定的**  
-  
- 對於 Microsoft C 編譯器，**sizeof(char \*)** 等於 **sizeof(int \*)**。  
-  
- **結束 Microsoft 特定的**  
-  
-## <a name="see-also"></a>請參閱  
- [指標宣告](../c-language/pointer-declarations.md)
+
+位址所需的儲存數量和位址的意義取決於編譯器的實作。 不同類型的指標不一定會具有相同長度。 因此，**sizeof(char \*)** 不一定等於 **sizeof(int \*)**。
+
+**Microsoft 專屬**
+
+對於 Microsoft C 編譯器，**sizeof(char \*)** 等於 **sizeof(int \*)**。
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>請參閱
+
+[指標宣告](../c-language/pointer-declarations.md)

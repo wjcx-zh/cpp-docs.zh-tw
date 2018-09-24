@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bff8e3588e31414f50cb6d150c0e8c9f2603586b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 15133673a33930222d5bf4c621c9ec9361e31f24
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33323975"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046403"
 ---
 # <a name="ltlistgt-visual-c"></a>&lt;list&gt; (Visual C++)
 \<listheader> 區塊用來定義資料表或定義清單的標題資料列。 定義資料表時，您只需要提供標題中詞彙的項目。  
@@ -44,11 +44,11 @@ ms.locfileid: "33323975"
 ```  
   
 #### <a name="parameters"></a>參數  
- `term`  
- 要定義的詞彙，可定義於 `description` 中。  
+*term*<br/>
+要定義的詞彙，可定義於 `description` 中。  
   
- `description`  
- 項目符號或編號清單中的項目或者 `term` 的定義。  
+*description*<br/>
+項目符號或編號清單中的項目或者 `term` 的定義。  
   
 ## <a name="remarks"></a>備註  
  清單中的每個項目都是使用 \<item> 區塊所指定。 建立定義清單時，您需要同時指定 `term` 和 `description`。 不過，針對資料表、項目符號清單或編號清單，您只需要提供 `description` 的項目。  
@@ -59,7 +59,7 @@ ms.locfileid: "33323975"
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // xml_list_tag.cpp  
 // compile with: /doc /LD  
 // post-build command: xdcmake xml_list_tag.dll  

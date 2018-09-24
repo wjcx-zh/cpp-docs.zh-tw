@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 383347dc5cd1ce0dcadff6bdee802b90fd52e85d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: caf28f01778bea31bc84a57fa74fed3221673dec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33333901"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039955"
 ---
 # <a name="xdcmake-reference"></a>XDCMake 參考
 xdcmake.exe 是一種程式，可將.xdc 檔案編譯成.xml 檔案。 Visual C++ 會在下列情況下為每個原始程式碼檔建立 .xdc 檔案：當原始程式碼以 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 編譯時，以及當原始程式碼檔包含以 XML 標籤標記的文件註解時。  
@@ -41,13 +41,12 @@ xdcmake.exe 是一種程式，可將.xdc 檔案編譯成.xml 檔案。 Visual C+
  xdcmake `input_filename options`  
   
 ## <a name="parameters"></a>參數  
- 其中：  
   
- `input_filename`  
- 用作 xdcmake.exe 輸入之 .xdc 檔案的檔案名稱。 指定一或多個 .xdc 檔案，或使用 *.xdc 以使用目前目錄中的所有 .xdc 檔案。  
+*input_filename*<br/>
+用作 xdcmake.exe 輸入之 .xdc 檔案的檔案名稱。 指定一或多個 .xdc 檔案，或使用 *.xdc 以使用目前目錄中的所有 .xdc 檔案。  
   
- `options`  
- 下列零或多項：  
+*options*<br/>
+下列零或多項：  
   
 |選項|描述|  
 |------------|-----------------|  

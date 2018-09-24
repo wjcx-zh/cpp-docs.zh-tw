@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e78c8ace8b482baa29fbabaf102a8a1bccadd06
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 0a194e45fd79ae59dc91abb21a9fb038d3ec4008
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325392"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041684"
 ---
 # <a name="ltvaluegt-visual-c"></a>&lt;value&gt; (Visual C++)
 \<value> 標記可讓您描述屬性和屬性存取子方法。 請注意，當您在 Visual Studio 整合式開發環境中使用程式碼精靈新增屬性時，會新增新屬性的 [\<summary>](../ide/summary-visual-cpp.md) 標記。 您接著應該手動新增 \<value> 標記，來描述屬性所代表的值。  
@@ -35,8 +35,8 @@ ms.locfileid: "33325392"
 ```  
   
 #### <a name="parameters"></a>參數  
- `property-description`  
- 屬性的描述。  
+*property-description*<br/>
+屬性的描述。  
   
 ## <a name="remarks"></a>備註  
  編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。  

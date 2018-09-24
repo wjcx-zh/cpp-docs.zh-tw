@@ -21,72 +21,75 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b497745177bce165277e3a6e4ece2a3c47f20a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c244a55b4e0ebdfadf13e5ee0a3120f024d318af
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194871"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099664"
 ---
 # <a name="structure-and-union-members"></a>結構和等位成員
-「成員選取運算式」(Member-selection Expression) 會參考結構和等位的成員。 這類運算式具有所選取成員的值和類型。  
-  
-> *postfix-expression* **.** *identifier*  
+
+「成員選取運算式」(Member-selection Expression) 會參考結構和等位的成員。 這類運算式具有所選取成員的值和類型。
+
+> *postfix-expression* **.** *identifier*
 > *postfix-expression* **->** *identifier*
-  
-這個清單將描述兩種形式的成員選取運算式：  
-  
-1.  在第一種形式中，*postfix-expression* 代表 **struct** 或 **union** 類型的值，而 *identifier* 會為指定結構或等位的成員命名。 運算的值會是 *identifier* 的值，而且如果 *postfix-expression* 為左值，運算的值也會是左值。 如需詳細資訊，請參閱[左值和右值運算式](../c-language/l-value-and-r-value-expressions.md)。  
-  
-2.  在第二種形式中，*postfix-expression* 代表結構或等位的指標，而 *identifier* 會為所指定結構或等位的成員命名。 值會是 *identifier* 的值，而且是左值。  
-  
- 這兩種形式的成員選取運算式會產生類似的效果。  
-  
- 實際上，如果句號前的運算式是由套用至指標值的間接取值運算子 (<strong>\*</strong>) 所組成，則包含成員選取運算子 (**->**) 的運算式會是使用句號 (**.**) 之運算式的簡短版。 因此，  
+
+這個清單將描述兩種形式的成員選取運算式：
+
+1. 在第一種形式中，*postfix-expression* 代表 **struct** 或 **union** 類型的值，而 *identifier* 會為指定結構或等位的成員命名。 運算的值會是 *identifier* 的值，而且如果 *postfix-expression* 為左值，運算的值也會是左值。 如需詳細資訊，請參閱[左值和右值運算式](../c-language/l-value-and-r-value-expressions.md)。
+
+1. 在第二種形式中，*postfix-expression* 代表結構或等位的指標，而 *identifier* 會為所指定結構或等位的成員命名。 值會是 *identifier* 的值，而且是左值。
+
+這兩種形式的成員選取運算式會產生類似的效果。
+
+實際上，如果句號前的運算式是由套用至指標值的間接取值運算子 (<strong>\*</strong>) 所組成，則包含成員選取運算子 (**->**) 的運算式會是使用句號 (**.**) 之運算式的簡短版。 因此，
 
 ```cpp
-expression->identifier  
+expression->identifier
 ```
 
-相當於  
+相當於
 
 ```cpp
 (*expression).identifier
 ```
 
- (*expression* 為指標值時)。  
-  
-## <a name="examples"></a>範例  
- 下列範例會參考這個結構宣告。 如需這些範例中所使用間接取值運算子 (<strong>\*</strong>) 的詳細資訊，請參閱[間接取值和傳址運算子](../c-language/indirection-and-address-of-operators.md)。  
-  
-```  
-struct pair   
-{  
-    int a;  
-    int b;  
-    struct pair *sp;  
-} item, list[10];  
-```  
-  
- `item` 結構的成員選取運算式如下所示：  
-  
-```  
-item.sp = &item;  
-```  
-  
- 在上面的範例中，`item` 結構的位址會指派給結構的 `sp` 成員。 這表示，`item` 包含本身的指標。  
-  
-```  
-(item.sp)->a = 24;  
-```  
-  
- 在這個範例中，指標運算式 `item.sp` 會搭配成員選取運算子 (**->**) 用來將值指派給 `a` 成員。  
-  
-```  
-list[8].b = 12;  
-```  
-  
- 這個陳述式將說明如何從結構陣列選取個別結構成員。  
-  
-## <a name="see-also"></a>請參閱  
- [成員存取運算子：. 和 ->](../cpp/member-access-operators-dot-and.md)
+(*expression* 為指標值時)。
+
+## <a name="examples"></a>範例
+
+下列範例會參考這個結構宣告。 如需這些範例中所使用間接取值運算子 (<strong>\*</strong>) 的詳細資訊，請參閱[間接取值和傳址運算子](../c-language/indirection-and-address-of-operators.md)。
+
+```
+struct pair
+{
+    int a;
+    int b;
+    struct pair *sp;
+} item, list[10];
+```
+
+`item` 結構的成員選取運算式如下所示：
+
+```
+item.sp = &item;
+```
+
+在上面的範例中，`item` 結構的位址會指派給結構的 `sp` 成員。 這表示，`item` 包含本身的指標。
+
+```
+(item.sp)->a = 24;
+```
+
+在這個範例中，指標運算式 `item.sp` 會搭配成員選取運算子 (**->**) 用來將值指派給 `a` 成員。
+
+```
+list[8].b = 12;
+```
+
+這個陳述式將說明如何從結構陣列選取個別結構成員。
+
+## <a name="see-also"></a>請參閱
+
+[成員存取運算子：. 和 ->](../cpp/member-access-operators-dot-and.md)

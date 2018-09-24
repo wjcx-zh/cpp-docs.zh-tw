@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3cb07824ad5212f4174a6f19e3efa4549432455
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: cd68e4488857708d119399df8bbc0da467983115
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894444"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100743"
 ---
 # <a name="ltincludegt-visual-c"></a>&lt;include&gt; (Visual C++)
 
@@ -37,16 +37,16 @@ ms.locfileid: "43894444"
 
 #### <a name="parameters"></a>參數
 
-`filename`  
+*filename*<br/>
 包含文件的檔案名稱。 檔案名稱可以使用路徑進行限定。  以單引號或雙引號將名稱括起來。  如果編譯器找不到 `filename`，它會發出警告。
 
-`tagpath`  
+*tagpath*<br/>
 有效的 XPath 運算式，選取檔案中包含所需的節點集。
 
-`name`  
+*name*<br/>
 標記中位在註解前面的名稱規範；`name` 會有 `id`。
 
-`id`  
+*id*<br/>
 位在註解前面的標記識別碼。  以單引號或雙引號將名稱括起來。
 
 ## <a name="remarks"></a>備註

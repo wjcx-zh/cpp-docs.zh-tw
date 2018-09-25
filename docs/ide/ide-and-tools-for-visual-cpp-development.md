@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df30bdea71a890eed25f546a53e7f329fa330762
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: d4e7742afd3fecc4dd115624da0c1650dc662004
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132016"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412518"
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>開發 Visual C++ 的 IDE 和工具
 
@@ -29,7 +29,7 @@ Microsoft Visual C++ (MSVC) 是 Visual Studio 整合式開發環境 (IDE) 的一
 
 ## <a name="creating-a-solution-and-projects"></a>建立方案和專案
 
-「專案」基本上是一組原始程式碼檔和資源，例如內建於可執行檔的影像或資料檔案。 
+「專案」基本上是一組原始程式碼檔和資源，例如內建於可執行檔的影像或資料檔案。
 
 Visual Studio 2015 提供 MSBuild 專案的支援。 您可以下載其他組建系統 (例如 Qt 或 CMake) 的 Visual Studio 延伸模組。
 
@@ -119,7 +119,7 @@ Visual Studio 包含 C++ 的靜態程式碼分析工具，包括實作 [C++ Core
 
 ## <a name="deploy-completed-applications"></a>部署完成的應用程式
 
-您可以使用 [專案] > [市集] 功能表選項，透過 Windows 市集將 UWP App 部署給客戶。 CRT 的部署會在背景自動處理。 如需詳細資訊，請參閱[發行 Windows 應用程式與遊戲](/windows/uwp/publish/)。 
+您可以使用 [專案] > [市集] 功能表選項，透過 Windows 市集將 UWP App 部署給客戶。 CRT 的部署會在背景自動處理。 如需詳細資訊，請參閱[發行 Windows 應用程式與遊戲](/windows/uwp/publish/)。
 
 當您將原生 C++ 桌面應用程式部署至另一部電腦時，您必須安裝該應用程式本身及其相依的所有程式庫檔案。 隨應用程式一起部署通用 C++ 執行階段 (UCRT) 的方式有三種：集中部署、本機部署或靜態連結。 如需詳細資訊，請參閱[部署傳統型應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)。
 

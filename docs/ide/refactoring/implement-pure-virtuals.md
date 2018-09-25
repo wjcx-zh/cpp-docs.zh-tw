@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afce516f2718a76658846ed4f992aeabff75330b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 234ae9a67bcbc60ea156fbacb5169d0bd1573a91
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328022"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442756"
 ---
 # <a name="implement-pure-virtuals"></a>實作純虛擬函式
-**功能：** 讓您立即產生在類別中實作所有純虛擬方法所需的程式碼。 
+**功能：** 讓您立即產生在類別中實作所有純虛擬方法所需的程式碼。
 
-**時機：** 您想要繼承自具有純虛擬函式的類別。  
+**時機：** 您想要繼承自具有純虛擬函式的類別。
 
 **原因：** 您可以手動逐一實作所有純虛擬函式；不過，此功能將可自動產生所有方法簽章。
 

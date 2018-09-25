@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80ac3479338dcb7f6be9e7e5f3f150cc8e15a9a9
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 45b62d5ce8f49b023721cf7323dc42e1c65c2109
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339978"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396684"
 ---
 # <a name="visual-c-project-types"></a>Visual C++ 專案類型
 
 您可以使用專案範本，來建立適用於您要建立之專案類型的基本程式結構、功能表、工具列、圖示、參考及 `#include` 陳述式。 Visual Studio 包括各種類型的 Visual C++ 專案範本，並為它們中的許多提供精靈，以便您可以在建立專案時，自訂專案。 在您建立專案之後，您就可以立即對其進行建置，並執行應用程式；在您開發應用程式時，間歇地進行建置是一個很好的做法。
 
-您無需使用範例來建立專案，但在大部分情況下，使用範本會更有效率，因為與從頭建立專案相比，使用範本可以更輕鬆地修改所提供的專案檔及結構。  
-  
+您無需使用範例來建立專案，但在大部分情況下，使用範本會更有效率，因為與從頭建立專案相比，使用範本可以更輕鬆地修改所提供的專案檔及結構。
+
 > [!NOTE]
 > 您可以使用 C++ 專案範本，來建立 C 語言專案。 在所產生的專案中，尋找副檔名為 .cpp 的檔案，並將其變更為 .c。 然後，在專案 (不適用於方案) 的 [專案屬性]  頁面上，展開 [組態屬性] 、[C/C++]  ，然後選取 [進階] 。 將 [編譯為]  設定變更為 [編譯為 C 程式碼 (/TC)] 。
 
@@ -42,8 +42,8 @@ Visual Studio 中包含的專案範本取決於您已安裝的產品版本和工
 
 ### <a name="windows-desktop"></a>Windows 桌面
 
-|專案範本|描述|  
-|----------------------|-----------------------------| 
+|專案範本|描述|
+|----------------------|-----------------------------|
 |[Windows 主控台應用程式](../windows/creating-a-console-application.md)|用於建立 Windows 主控台應用程式的專案。|
 |[Windows 傳統型應用程式](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|用於建立 Windows 傳統型 (Win32) 應用程式的專案。|
 |[動態連結程式庫](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)|用於建立動態連結程式庫 (DLL) 的專案。|
@@ -104,4 +104,4 @@ Visual Studio 中包含的專案範本取決於您已安裝的產品版本和工
 
 ## <a name="see-also"></a>請參閱
 
-[使用應用程式精靈建立桌面專案](../ide/creating-desktop-projects-by-using-application-wizards.md)   
+[使用應用程式精靈建立桌面專案](../ide/creating-desktop-projects-by-using-application-wizards.md)

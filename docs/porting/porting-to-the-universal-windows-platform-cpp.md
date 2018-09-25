@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eefb2347cfe3a46dabbf72a46fd46fcb16f57d38
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 01efc61d08204598cbce6d875bfe2c2293d8e711
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578421"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404263"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>移植到通用 Windows 平台 (C++)
 
@@ -118,5 +118,5 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual C++ 移植指南](../porting/porting-to-the-universal-windows-platform-cpp.md)  
+[Visual C++ 移植指南](../porting/porting-to-the-universal-windows-platform-cpp.md)<br/>
 [開發適用於通用 Windows 平台 (UWP) 的應用程式](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)  

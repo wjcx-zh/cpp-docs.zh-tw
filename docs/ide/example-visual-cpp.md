@@ -18,55 +18,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c6be247c6c756557e7173c4b295197d9e4267cb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e596d38b52e36c20c28eaab66e24805696865b17
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46110961"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421657"
 ---
 # <a name="ltexamplegt-visual-c"></a>&lt;範例&gt; (Visual C++)
-\<example> 標記可讓您指定如何使用方法或其他程式庫成員的範例。 通常，這也會涉及使用 [\<程式碼>](../ide/code-visual-cpp.md) 標記。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-<example>description</example>  
-```  
-  
-#### <a name="parameters"></a>參數  
+
+\<example> 標記可讓您指定如何使用方法或其他程式庫成員的範例。 通常，這也會涉及使用 [\<程式碼>](../ide/code-visual-cpp.md) 標記。
+
+## <a name="syntax"></a>語法
+
+```
+<example>description</example>
+```
+
+#### <a name="parameters"></a>參數
+
 *description*<br/>
-程式碼範例的描述。  
-  
-## <a name="remarks"></a>備註  
- 編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// xml_example_tag.cpp  
-// compile with: /clr /doc /LD  
-// post-build command: xdcmake xml_example_tag.dll  
-  
-/// Text for class MyClass.  
-public ref class MyClass {  
-public:  
-   /// <summary>  
-   /// GetZero method  
-   /// </summary>  
-   /// <example> This sample shows how to call the GetZero method.  
-   /// <code>  
-   /// int main()   
-   /// {  
-   ///    return GetZero();  
-   /// }  
-   /// </code>  
-   /// </example>  
-   static int GetZero() {  
-      return 0;  
-   }  
-};  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [XML 文件](../ide/xml-documentation-visual-cpp.md)
+程式碼範例的描述。
+
+## <a name="remarks"></a>備註
+
+編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。
+
+## <a name="example"></a>範例
+
+```
+// xml_example_tag.cpp
+// compile with: /clr /doc /LD
+// post-build command: xdcmake xml_example_tag.dll
+
+/// Text for class MyClass.
+public ref class MyClass {
+public:
+   /// <summary>
+   /// GetZero method
+   /// </summary>
+   /// <example> This sample shows how to call the GetZero method.
+   /// <code>
+   /// int main()
+   /// {
+   ///    return GetZero();
+   /// }
+   /// </code>
+   /// </example>
+   static int GetZero() {
+      return 0;
+   }
+};
+```
+
+## <a name="see-also"></a>請參閱
+
+[XML 文件](../ide/xml-documentation-visual-cpp.md)

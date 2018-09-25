@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70fc4705b6e150978812563fcde9e0f4d6b3cea1
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 4a40738b5a360e521ff890ef53240609a9afde32
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34246231"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388965"
 ---
 # <a name="visual-c-language-conformance"></a>Visual C++ 語言一致性
 
@@ -308,10 +308,10 @@ __VS 2017 15.7__ 表示 Visual Studio 2017 15.7 版所支援的功能。
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 語言參考](cpp/cpp-language-reference.md)  
-[C++ 標準程式庫](standard-library/cpp-standard-library-reference.md)  
-[Visual Studio 2017 中的 C++ 一致性改善](cpp-conformance-improvements-2017.md)  
-[Visual Studio 2017 中 Visual C++ 的新功能](what-s-new-for-visual-cpp-in-visual-studio.md)  
-[從 2003 到 2015 的 Visual C++ 變更歷程記錄](porting/visual-cpp-change-history-2003-2015.md)  
-[從 2003 到 2015 的 Visual C++ 新功能](porting/visual-cpp-what-s-new-2003-through-2015.md)  
+[C++ 語言參考](cpp/cpp-language-reference.md)<br/>
+[C++ 標準程式庫](standard-library/cpp-standard-library-reference.md)<br/>
+[Visual Studio 2017 中的 C++ 一致性改善](cpp-conformance-improvements-2017.md)<br/>
+[Visual Studio 2017 中 Visual C++ 的新功能](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[從 2003 到 2015 的 Visual C++ 變更歷程記錄](porting/visual-cpp-change-history-2003-2015.md)<br/>
+[從 2003 到 2015 的 Visual C++ 新功能](porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 [Visual C++ Team Blog](https://blogs.msdn.microsoft.com/vcblog/) (Visual C++ 小組部落格)  

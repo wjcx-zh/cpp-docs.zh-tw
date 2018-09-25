@@ -21,19 +21,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b5160061233f9d0a474385bccd324333ed9549a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 132b2e069c42d1835d6736024fc4c609d313e544
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686283"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440702"
 ---
 # <a name="resources-property-pages"></a>資源屬性頁面
-如需使用資源編譯器的詳細資訊，請參閱[使用 RC (RC 命令列)](/windows/desktop/menurc/using-rc-the-rc-command-line-)。  
-  
- 如需如何存取 [資源] 屬性頁的詳細資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。  
-  
- 若要以程式設計方式存取這些屬性，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>。  
-  
-## <a name="see-also"></a>請參閱  
- [屬性頁](../ide/property-pages-visual-cpp.md)
+
+如需使用資源編譯器的詳細資訊，請參閱[使用 RC (RC 命令列)](/windows/desktop/menurc/using-rc-the-rc-command-line-)。
+
+如需如何存取 [資源] 屬性頁的詳細資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。
+
+若要以程式設計方式存取這些屬性，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>。
+
+## <a name="see-also"></a>請參閱
+
+[屬性頁](../ide/property-pages-visual-cpp.md)

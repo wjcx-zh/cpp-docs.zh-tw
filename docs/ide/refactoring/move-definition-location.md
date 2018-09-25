@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44211105429e33c136999a7877ac6ee42af29f17
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 5058e0b3bab1fb5fb5e8d52b55e3fa7c37fd8a4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327836"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430041"
 ---
 # <a name="move-definition-location"></a>移動定義位置
 **功能：** 讓您立即將函式定義移至對應的標頭檔。
 
-**時機：** 您有想要移動至標頭檔的函式。  
+**時機：** 您有想要移動至標頭檔的函式。
 
 **原因：** 您可以手動移動函式，但這項功能會自動移動它，並建立必要的標頭檔。
 

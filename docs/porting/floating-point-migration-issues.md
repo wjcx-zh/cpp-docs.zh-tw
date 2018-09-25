@@ -12,14 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb8f7d4835fe50dba2cb7eb6d4e7cb6a54efdbba
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e204e8dcc0d846294393edf9bf73b86360b40de2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578274"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421982"
 ---
 # <a name="floating-point-migration-issues"></a>浮點數的移轉問題  
+
   
 有時候，當您將專案升級至較新版本的 Visual Studio 時，可能會發現某些浮點運算的結果已變更。 這通常是因下列兩個原因之一所導致：由於產生程式碼的變更充分利用可用的處理器，以及 C 執行階段程式庫 (CRT) 中用於數學函式的演算法有 Bug 修正或變更。 一般來說，新的結果會在語言標準所指定的限制範圍內，因此是正確的。 請繼續閱讀以了解變更的項目，以及如何取得之前函式所得的相同結果 (若有必要的話)。  
 
@@ -41,6 +42,6 @@ ms.locfileid: "42578274"
   
 ## <a name="see-also"></a>另請參閱  
   
-[從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[潛在升級問題概觀 (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
+[從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[潛在升級問題概觀 (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Visual C++ 變更歷程記錄 2003 - 2015](visual-cpp-change-history-2003-2015.md)  

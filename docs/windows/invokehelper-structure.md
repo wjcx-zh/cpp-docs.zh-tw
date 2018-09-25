@@ -1,28 +1,34 @@
 ---
 title: InvokeHelper 結構 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Details::InvokeHelper
+- event/Microsoft::WRL::Details::InvokeHelper::callback_
+- event/Microsoft::WRL::Details::InvokeHelper::Invoke
+- event/Microsoft::WRL::Details::InvokeHelper::InvokeHelper
 dev_langs:
 - C++
 helpviewer_keywords:
-- InvokeHelper structure
+- Microsoft::WRL::Details::InvokeHelper structure
+- Microsoft::WRL::Details::callback_ data member
+- Microsoft::WRL::Details::Invoke method
+- Microsoft::WRL::Details::InvokeHelper, constructor
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ffef0c6a55116bf3a228d7d5da4bd698607d7fa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6eccc9a7eacf9cdd3b98796f575d966b7b566864
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431030"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169533"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper 結構
 
@@ -96,7 +102,7 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
 事件處理常式函式的類型。
 
 *argCount*<br/>
-中的引數的數目**InvokeHelper**特製化。
+中的引數數目`InvokeHelper`特製化。
 
 ## <a name="remarks"></a>備註
 
@@ -106,27 +112,27 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
 
 ### <a name="public-typedefs"></a>公用 Typedefs
 
-|名稱|描述|
-|----------|-----------------|
-|`Traits`|類別定義的每個事件處理常式的引數類型同義。|
+名稱     | 描述
+-------- | -----------------------------------------------------------------------------
+`Traits` | 類別定義的每個事件處理常式的引數類型同義。
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
-|----------|-----------------|
-|[InvokeHelper::InvokeHelper 建構函式](../windows/invokehelper-invokehelper-constructor.md)|初始化的新執行個體**InvokeHelper**類別。|
+名稱                                        | 描述
+------------------------------------------- | -------------------------------------------------------
+[Invokehelper:: Invokehelper](#invokehelper) | 初始化 `InvokeHelper` 類別的新執行個體。
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
-|----------|-----------------|
-|[InvokeHelper::Invoke 方法](../windows/invokehelper-invoke-method.md)|會呼叫其簽章包含指定的引數的事件處理常式。|
+名稱                            | 描述
+------------------------------- | -----------------------------------------------------------------------------------
+[Invokehelper:: Invoke](#invoke) | 會呼叫其簽章包含指定的引數的事件處理常式。
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|描述|
-|----------|-----------------|
-|[InvokeHelper::callback_ 資料成員](../windows/invokehelper-callback-data-member.md)|表示事件發生時要呼叫的事件處理常式。|
+名稱                                 | 描述
+------------------------------------ | ----------------------------------------------------------
+[Invokehelper:: Callback_](#callback) | 表示事件發生時要呼叫的事件處理常式。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -138,6 +144,111 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
 
 **命名空間：** Microsoft::WRL::Details
 
-## <a name="see-also"></a>另請參閱
+## <a name="callback"></a>Invokehelper:: Callback_
 
-[Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+```cpp
+TCallback callback_;
+```
+
+### <a name="remarks"></a>備註
+
+表示事件發生時要呼叫的事件處理常式。
+
+`TCallback`範本參數會指定事件處理常式的類型。
+
+## <a name="invoke"></a>Invokehelper:: Invoke
+
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+```cpp
+STDMETHOD(
+   Invoke
+)();
+STDMETHOD(
+   Invoke
+)(typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+```
+
+### <a name="parameters"></a>參數
+
+*arg1*<br/>
+引數 1。
+
+*Arg2*<br/>
+引數 2。
+
+*arg3*<br/>
+引數 3。
+
+*arg4*<br/>
+引數 4。
+
+*arg5*<br/>
+引數 5。
+
+*arg6*<br/>
+引數 6。
+
+*arg7*<br/>
+引數 7。
+
+*arg8*<br/>
+引數 8。
+
+*arg9*<br/>
+引數 9。
+
+### <a name="return-value"></a>傳回值
+
+如果成功則為 S_OK否則，會描述錯誤的 HRESULT。
+
+### <a name="remarks"></a>備註
+
+會呼叫其簽章包含指定的引數的事件處理常式。
+
+## <a name="invokehelper"></a>Invokehelper:: Invokehelper
+
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+```cpp
+explicit InvokeHelper(
+   TCallback callback
+);
+```
+
+### <a name="parameters"></a>參數
+
+*回呼*<br/>
+事件處理常式。
+
+### <a name="remarks"></a>備註
+
+初始化 `InvokeHelper` 類別的新執行個體。
+
+`TCallback`範本參數會指定事件處理常式的類型。

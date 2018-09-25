@@ -17,39 +17,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2e0309c420754c0da8f09bb38e088e473362de0
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6db7e553d2f9e268b39bb9c02e70bb59815aef3a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676745"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405929"
 ---
 # <a name="redistributing-an-atl-application"></a>轉散發 ATL 應用程式
-從 Visual Studio 2012 開始，Active Template Library (ATL) 是僅限標頭的程式庫。 ATL 專案不會動態連結至 ATL 選項。 可轉散發 ATL 程式庫不是必要的。  
-  
- 如果您轉散發 ATL 可執行的應用程式，即必須發出下列命令來註冊 .exe 檔案 (和其中所有控制項)：  
-  
-```  
-filename /regserver  
-```  
-  
- 其中 `filename` 是可執行檔案的名稱。  
-  
- 在 Visual Studio 2010 中，ATL 專案可以建置成 MinDependency 或 MinSize 組態。 當您在 [一般] 屬性頁上將 [ATL 用法] 屬性設為 [靜態連結 ATL]，且在 [程式碼產生] 屬性頁 (C/C++ 資料夾) 上將 [執行階段程式庫] 屬性設為 [多執行緒 (/MT)] 時，就會得到 MinDependency 組態。  
-  
- 當您在 [一般] 屬性頁上將 [ATL 用法] 屬性設為 [動態連結 ATL]，或在 [程式碼產生] 屬性頁 (C/C++ 資料夾) 上將 [執行階段程式庫] 屬性設為 [多執行緒 DLL (/MD)] 時，就會得到 MinSize 組態。  
-  
- MinSize 會讓輸出檔案盡可能的小，但目標電腦上需要有 ATL100.dll 和 Msvcr100.dll (如果您選取 [多執行緒 DLL (/MD)] 選項)。 ATL100.dll 應該在目標電腦上註冊，以確保所有 ATL 的功能都會出現。 ATL100.dll 包含 ANSI 和 Unicode 匯出。  
-  
- 如果為 MinDependency 目標建置 ATL 或 OLE DB 範本專案，目標電腦上不必安裝和註冊 ATL100.dll，雖然您可能會得到較大的程式映像。  
-  
- 如果您轉散發 ATL 可執行的應用程式，即必須發出下列命令來註冊 .exe 檔案 (和其中所有控制項)：  
-  
-```  
-filename /regserver  
-```  
-  
- 其中 `filename` 是可執行檔案的名稱。  
-  
-## <a name="see-also"></a>請參閱  
- [轉散發 Visual C++ 檔案](../ide/redistributing-visual-cpp-files.md)
+
+從 Visual Studio 2012 開始，Active Template Library (ATL) 是僅限標頭的程式庫。 ATL 專案不會動態連結至 ATL 選項。 可轉散發 ATL 程式庫不是必要的。
+
+如果您轉散發 ATL 可執行的應用程式，即必須發出下列命令來註冊 .exe 檔案 (和其中所有控制項)：
+
+```
+filename /regserver
+```
+
+其中 `filename` 是可執行檔案的名稱。
+
+在 Visual Studio 2010 中，ATL 專案可以建置成 MinDependency 或 MinSize 組態。 當您在 [一般] 屬性頁上將 [ATL 用法] 屬性設為 [靜態連結 ATL]，且在 [程式碼產生] 屬性頁 (C/C++ 資料夾) 上將 [執行階段程式庫] 屬性設為 [多執行緒 (/MT)] 時，就會得到 MinDependency 組態。
+
+當您在 [一般] 屬性頁上將 [ATL 用法] 屬性設為 [動態連結 ATL]，或在 [程式碼產生] 屬性頁 (C/C++ 資料夾) 上將 [執行階段程式庫] 屬性設為 [多執行緒 DLL (/MD)] 時，就會得到 MinSize 組態。
+
+MinSize 會讓輸出檔案盡可能的小，但目標電腦上需要有 ATL100.dll 和 Msvcr100.dll (如果您選取 [多執行緒 DLL (/MD)] 選項)。 ATL100.dll 應該在目標電腦上註冊，以確保所有 ATL 的功能都會出現。 ATL100.dll 包含 ANSI 和 Unicode 匯出。
+
+如果為 MinDependency 目標建置 ATL 或 OLE DB 範本專案，目標電腦上不必安裝和註冊 ATL100.dll，雖然您可能會得到較大的程式映像。
+
+如果您轉散發 ATL 可執行的應用程式，即必須發出下列命令來註冊 .exe 檔案 (和其中所有控制項)：
+
+```
+filename /regserver
+```
+
+其中 `filename` 是可執行檔案的名稱。
+
+## <a name="see-also"></a>請參閱
+
+[轉散發 Visual C++ 檔案](../ide/redistributing-visual-cpp-files.md)

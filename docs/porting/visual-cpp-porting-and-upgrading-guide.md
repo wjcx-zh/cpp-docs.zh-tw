@@ -1,7 +1,7 @@
 ---
 title: Visual C++ 移植和升級指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06350e851501cfa26d1ea4d326c26d7a37270889
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 1b573a22b9502548cc84f2bd459cda72d071cf68
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578273"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494394"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 移植和升級指南
+
 本主題提供升級 Visual C++ 程式碼的指南。 其中包括如何讓程式碼能夠在新版工具上正確編譯和執行，以及利用新語言和 Visual Studio 功能。 本主題也包含將舊版應用程式移轉至更新式平台的相關資訊。  
   
 ## <a name="reasons-to-upgrade-visual-c-code"></a>升級 Visual C++ 程式碼的原因  
@@ -92,7 +93,6 @@ Visual Studio 中的建置系統和專案檔格式，已從 Visual Studio 2008 �
 |[移植到通用 Windows 平台](porting-to-the-universal-windows-platform-cpp.md)|包含將程式碼移植到 Windows 10 的相關資訊。|  
 |[針對 UNIX 使用者的 Visual C++ 簡介](introduction-to-visual-cpp-for-unix-users.md)|提供資訊給剛開始使用 Visual C++，並想更有效率使用它的 UNIX 使用者。|  
 |[從 UNIX 移植到 Win32](porting-from-unix-to-win32.md)|討論將 UNIX 應用程式移轉至 Windows 的選擇。|  
-|[C++/CLI 移轉入門](../dotnet/cpp-cli-migration-primer.md)|詳細說明如何升級 Managed Extensions for C++ 語法，以使用新語法。 如需詳細資訊，請參閱[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)。|  
   
 ## <a name="see-also"></a>請參閱  
 

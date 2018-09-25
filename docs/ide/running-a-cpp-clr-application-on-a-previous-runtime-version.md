@@ -21,21 +21,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6510f7f3bd9a88f4b938d2646bad6750fe310def
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ee823d7b37428ea335d5d789a4fcfb4caa673dda
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688743"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378047"
 ---
 # <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>在舊版執行階段版本上執行 C++ /clr 應用程式
-除非另行指定，否則 C++ .NET Framework 應用程式已建置為在編譯器用來建置應用程式的 Common Language Runtime (CLR) 版本上執行。 不過，針對一個版本的執行階段所建置的 .exe 應用程式，可以在提供必要功能的任何其他版本上執行。  
-  
- 若要完成這項作業，請提供在 `supportedRuntime` 標記中包含執行階段版本資訊的 app.config 檔案。  
-  
- 在執行階段，app.config 檔案的名稱必須具有格式 *filename.ext*.config，其中 *filename.ext* 是啟動應用程式的可執行檔名稱，而且必須在與可執行檔相同的目錄中。 例如，如果您的應用程式名為 TestApp.exe，app.config 檔案會命名為 TestApp.exe.config。  
-  
- 如果您指定多個執行階段版本，而且應用程式在具有多個已安裝執行階段版本的電腦上執行，則應用程式會使用 config 檔中所指定且已安裝的第一個版本。  
-  
-## <a name="see-also"></a>請參閱  
- [部署傳統型應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)
+
+除非另行指定，否則 C++ .NET Framework 應用程式已建置為在編譯器用來建置應用程式的 Common Language Runtime (CLR) 版本上執行。 不過，針對一個版本的執行階段所建置的 .exe 應用程式，可以在提供必要功能的任何其他版本上執行。
+
+若要完成這項作業，請提供在 `supportedRuntime` 標記中包含執行階段版本資訊的 app.config 檔案。
+
+在執行階段，app.config 檔案的名稱必須具有格式 *filename.ext*.config，其中 *filename.ext* 是啟動應用程式的可執行檔名稱，而且必須在與可執行檔相同的目錄中。 例如，如果您的應用程式名為 TestApp.exe，app.config 檔案會命名為 TestApp.exe.config。
+
+如果您指定多個執行階段版本，而且應用程式在具有多個已安裝執行階段版本的電腦上執行，則應用程式會使用 config 檔中所指定且已安裝的第一個版本。
+
+## <a name="see-also"></a>請參閱
+
+[部署傳統型應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)

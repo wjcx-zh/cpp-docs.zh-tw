@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fc4d48c972bca9352f326085574e4cf4df83aea
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 8ca75ca3b69fb175bea160d7f2a35d36416ea2f5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33333153"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441365"
 ---
 # <a name="extract-function"></a>擷取函式
 **功能：** 讓您將程式碼片段轉換成它自己的函式。
 
-**時機：** 您在某個函式中有現有的程式碼片段，且必須從另一個函式呼叫。  
+**時機：** 您在某個函式中有現有的程式碼片段，且必須從另一個函式呼叫。
 
 **原因：** 您可以複製/貼上該程式碼，但那樣會造成重複。  較的解決方案是將該片段重構成它自己的函式，以便由任何其他函式自由呼叫。
 
@@ -39,7 +39,7 @@ ms.locfileid: "33333153"
      * 以滑鼠右鍵按一下程式碼，選取 [快速動作與重構] 功能表，然後從操作功能表選取 [擷取函式 (實驗)]。
      * 按一下出現在左邊界的![燈泡](images/bulb.png)圖示，然後從操作功能表選取 [擷取函式 (實驗)]。
 
-1. 在 [擷取函式/方法 (實驗)] 視窗中，輸入新的函式名稱、選取您想執行程式碼的放置，並按一下 [確定] 按鈕。  
+1. 在 [擷取函式/方法 (實驗)] 視窗中，輸入新的函式名稱、選取您想執行程式碼的放置，並按一下 [確定] 按鈕。
 
    ![擷取函式功能](images/extractfunction_dialog.png)
 

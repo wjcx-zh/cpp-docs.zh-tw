@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b98825719e7b3c0d8eb760a2ec50644b5eddd54e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 75037ea542a5bd2160d9a89138b12f82867002a5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328405"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388442"
 ---
 # <a name="convert-to-raw-string-literal"></a>轉換為原始字串常值
 **功能：** 可讓您將任何字串轉換成 C++ 原始字串常值。
@@ -37,6 +37,6 @@ ms.locfileid: "33328405"
      * 以滑鼠右鍵按一下程式碼，選取 [快速動作與重構] 功能表，然後從操作功能表選取 [轉換為原始字串常值]。
      * 按一下出現在左邊界的![燈泡](images/bulb.png)圖示，然後從操作功能表選取 [轉換為原始字串常值]。
 
-1. 字串將會立即轉換為原始字串常值。  
+1. 字串將會立即轉換為原始字串常值。
 
    ![原始字串常值結果](images/stringliteral_result.png)

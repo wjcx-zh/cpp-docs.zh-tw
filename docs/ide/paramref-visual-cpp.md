@@ -18,43 +18,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a63caea7186114244927b9ede4c63ed97871d6e9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b3ebf0ba9c3f6e0cf2718e4c38406e6b866773e4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46111260"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372184"
 ---
 # <a name="ltparamrefgt-visual-c"></a>&lt;paramref&gt; (Visual C++)
-\<paramref> 標記可讓您指出某個單字是參數。 可以處理 .xml 檔案，以醒目的方式格式化此參數。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-<paramref name="name"/>  
-```  
-  
-#### <a name="parameters"></a>參數  
+
+\<paramref> 標記可讓您指出某個單字是參數。 可以處理 .xml 檔案，以醒目的方式格式化此參數。
+
+## <a name="syntax"></a>語法
+
+```
+<paramref name="name"/>
+```
+
+#### <a name="parameters"></a>參數
+
 *name*<br/>
-要參考的參數名稱。  以單引號或雙引號將名稱括起來。  如果編譯器找不到 `name`，它會發出警告。  
-  
-## <a name="remarks"></a>備註  
- 編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// xml_paramref_tag.cpp  
-// compile with: /clr /doc /LD  
-// post-build command: xdcmake xml_paramref_tag.dll  
-/// Text for class MyClass.  
-public ref class MyClass {  
-   /// <summary>MyMethod is a method in the MyClass class.  
-   /// The <paramref name="Int1"/> parameter takes a number.  
-   /// </summary>  
-   void MyMethod(int Int1) {}  
-};  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [XML 文件](../ide/xml-documentation-visual-cpp.md)
+要參考的參數名稱。  以單引號或雙引號將名稱括起來。  如果編譯器找不到 `name`，它會發出警告。
+
+## <a name="remarks"></a>備註
+
+編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。
+
+## <a name="example"></a>範例
+
+```
+// xml_paramref_tag.cpp
+// compile with: /clr /doc /LD
+// post-build command: xdcmake xml_paramref_tag.dll
+/// Text for class MyClass.
+public ref class MyClass {
+   /// <summary>MyMethod is a method in the MyClass class.
+   /// The <paramref name="Int1"/> parameter takes a number.
+   /// </summary>
+   void MyMethod(int Int1) {}
+};
+```
+
+## <a name="see-also"></a>請參閱
+
+[XML 文件](../ide/xml-documentation-visual-cpp.md)

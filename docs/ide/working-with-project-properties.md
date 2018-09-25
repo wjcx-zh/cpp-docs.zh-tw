@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9961eaa6529773e8d21d9c953242d1656a6a443
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 85439e191ac8676603c9d7fab8a41bb126e97b9e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211659"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398660"
 ---
 # <a name="working-with-project-properties"></a>使用專案屬性
 
@@ -141,11 +141,11 @@ v:<br/>
 
 ##### <a name="to-create-a-user-defined-macro"></a>建立使用者定義巨集
 
-1.  在 [屬性管理員] 視窗 (在功能表列上，選擇 [檢視]、[屬性管理員])，開啟屬性工作表 (其名稱以 .user 結尾) 的捷徑功能表，然後選擇 [屬性]。 該屬性工作表的 [屬性頁] 對話方塊隨即開啟。
+1. 在 [屬性管理員] 視窗 (在功能表列上，選擇 [檢視]、[屬性管理員])，開啟屬性工作表 (其名稱以 .user 結尾) 的捷徑功能表，然後選擇 [屬性]。 該屬性工作表的 [屬性頁] 對話方塊隨即開啟。
 
-2.  在對話方塊的左窗格中，選取 [使用者巨集]。 在右窗格中，選擇 [新增巨集] 按鈕以開啟 [新增使用者巨集] 對話方塊。
+1. 在對話方塊的左窗格中，選取 [使用者巨集]。 在右窗格中，選擇 [新增巨集] 按鈕以開啟 [新增使用者巨集] 對話方塊。
 
-3.  在對話方塊中，指定巨集的名稱和值。 或者，選取 [設定此巨集作為建置環境中的環境變數] 核取方塊。
+1. 在對話方塊中，指定巨集的名稱和值。 或者，選取 [設定此巨集作為建置環境中的環境變數] 核取方塊。
 
 ## <a name="property-editor"></a>屬性編輯器
 

@@ -1,7 +1,7 @@
 ---
 title: 逐步解說： 將動畫加入至 MFC 專案 |Microsoft Docs
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 09/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfcab237070b401d78c3fc52fc765930272832da
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 326535395599a76f521100475cfc80b014ba6cd9
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439272"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169433"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>逐步解說：將動畫加入至 MFC 專案
 
@@ -50,27 +50,27 @@ ms.locfileid: "46439272"
 
 1. 在 [ **檔案** ] 功能表上，指向 [ **新增** ]，然後按一下 [ **專案**]。
 
-2. 在 **新的專案**對話方塊中，在左窗格中的**已安裝的範本**，展開**Visual c + +** ，然後選取**MFC**。 在中間窗格中，選取**MFC 應用程式**。 在 **名稱**方塊中，輸入*MFCAnimationWalkthrough*。 按一下 [確定 **Deploying Office Solutions**]。
+1. 在 **新的專案**對話方塊中，在左窗格中的**已安裝的範本**，展開**Visual c + +** ，然後選取**MFC**。 在中間窗格中，選取**MFC 應用程式**。 在 **名稱**方塊中，輸入*MFCAnimationWalkthrough*。 按一下 [確定 **Deploying Office Solutions**]。
 
-3. 在  **MFC 應用程式精靈**對話方塊方塊中，確認**應用程式類型**會**多份文件**，**專案樣式**是**Visual Studio**，而**文件/檢視架構支援**選項。 按一下 [ **完成**]。
+1. 在  **MFC 應用程式精靈**對話方塊方塊中，確認**應用程式類型**會**多份文件**，**專案樣式**是**Visual Studio**，而**文件/檢視架構支援**選項。 按一下 [ **完成**]。
 
 ### <a name="to-add-a-menu-and-then-add-commands-to-start-and-stop-an-animation"></a>若要新增的功能表，然後新增命令來啟動和停止的動畫
 
 1. 在 **檢視**功能表上，指向**其他 Windows** ，然後按一下 **資源檢視**。
 
-2. 在 **資源檢視**，瀏覽至**功能表**資料夾並將它開啟。 按兩下`IDR_MFCAnimationWalTYPE`以開啟它進行修改的資源。
+1. 在 **資源檢視**，瀏覽至**功能表**資料夾並將它開啟。 按兩下**IDR_MFCAnimationWalkthroughTYPE**以開啟它進行修改的資源。
 
-3. 在功能表列上，在**在這裡輸入**方塊中，輸入*a&nimation*建立 [動畫] 功能表。
+1. 在功能表列上，在**在這裡輸入**方塊中，輸入*a&nimation*建立 [動畫] 功能表。
 
-4. 底下**動畫**，請在**這裡輸入**方塊中，輸入*開始，& 轉送*建立 Start Forward 命令。
+1. 底下**動畫**，請在**這裡輸入**方塊中，輸入*開始，& 轉送*建立 Start Forward 命令。
 
-5. 底下**Start Forward**，請在**這裡輸入**方塊中，輸入*開始] 與 [向後*。
+1. 底下**Start Forward**，請在**這裡輸入**方塊中，輸入*開始] 與 [向後*。
 
-6. 底下**Start Backward**，請在**這裡輸入**方塊中，輸入*s&top*建立停止命令。
+1. 底下**Start Backward**，請在**這裡輸入**方塊中，輸入*s&top*建立停止命令。
 
-7. 儲存 MFCAnimationWalkthrough.rc 並關閉它。
+1. 儲存 MFCAnimationWalkthrough.rc 並關閉它。
 
-8. 在 [**方案總管] 中**，連按兩下以開啟它進行修改的 MainFrm.cpp。 在 `CMainFrame::OnCreate`方法中，找出具有數個呼叫的區段`lstBasicCommands.AddTail`。 只在該區段中之後, 新增下列程式碼。
+1. 在 [**方案總管] 中**，連按兩下以開啟它進行修改的 MainFrm.cpp。 在 `CMainFrame::OnCreate`方法中，找出具有數個呼叫的區段`lstBasicCommands.AddTail`。 只在該區段中之後, 新增下列程式碼。
 
     ```cpp
     lstBasicCommands.AddTail(ID_ANIMATION_STARTFORWARD);
@@ -78,29 +78,29 @@ ms.locfileid: "46439272"
     lstBasicCommands.AddTail(ID_ANIMATION_STOP);
     ```
 
-9. 儲存檔案，並將它關閉。
+1. 儲存檔案，並將它關閉。
 
 ### <a name="to-create-handlers-for-the-start-and-stop-commands"></a>建立處理常式的開始和停止命令
 
 1. 在 **專案**功能表上，按一下**類別精靈**。
 
-2. 在  **MFC 類別精靈**下方**類別名稱**，選取`CMFCAnimationWalkthroughView`。
+1. 在  **MFC 類別精靈**下方**類別名稱**，選取**CMFCAnimationWalkthroughView**。
 
-3. 在上**命令**索引標籤中，於**物件識別碼**方塊中，選取`ID_ANIMATION_STARTFORWARD`，然後在**訊息**方塊中，選取`COMMAND`。 按一下 **加入處理常式**。
+1. 在上**命令**索引標籤**物件識別碼**方塊中，選取**ID_ANIMATION_STARTFORWARD**，然後在**訊息**方塊中，選取**命令**。 按一下 **加入處理常式**。
 
-4. 在 [**加入成員函式**] 對話方塊中，按一下**確定**。
+1. 在 [**加入成員函式**] 對話方塊中，按一下**確定**。
 
-5. 在 **的物件識別碼**方塊中，選取`ID_ANIMATION_STARTBACKWARD`，然後在**訊息**方塊中，選取`COMMAND`。 按一下 **加入處理常式**。
+1. 在 **的物件識別碼**方塊中，選取**ID_ANIMATION_STARTBACKWARD**，然後在**訊息**方塊中，選取**命令**。 按一下 **加入處理常式**。
 
-6. 在 [**加入成員函式**] 對話方塊中，按一下**確定**。
+1. 在 [**加入成員函式**] 對話方塊中，按一下**確定**。
 
-7. 在 **的物件識別碼**方塊中，選取`ID_ANIMATION_STOP`，然後在**訊息**方塊中，選取`COMMAND`。 按一下 **加入處理常式**，然後按一下**確定**。
+1. 在 **的物件識別碼**方塊中，選取**ID_ANIMATION_STOP**，然後在**訊息**方塊中，選取**命令**。 按一下 **加入處理常式**，然後按一下**確定**。
 
-8. 在 [**加入成員函式**] 對話方塊中，按一下**確定**。
+1. 在 [**加入成員函式**] 對話方塊中，按一下**確定**。
 
-9. 在  **MFC 類別精靈**，按一下**確定**。
+1. 在  **MFC 類別精靈**，按一下**確定**。
 
-10. 儲存 MFCAnimationWalkthroughView.cpp，也就是在編輯器中開啟，但不是會將它關閉。
+1. 儲存 MFCAnimationWalkthroughView.cpp，也就是在編輯器中開啟，但不是會將它關閉。
 
 ### <a name="to-add-an-animated-object-to-the-project"></a>將動畫的物件加入至專案
 
@@ -123,7 +123,7 @@ ms.locfileid: "46439272"
     };
     ```
 
-2. 在結尾`CMFCAnimationWalkthroughView`類別中，新增下列程式碼。
+1. 在結尾`CMFCAnimationWalkthroughView`類別中，新增下列程式碼。
 
     ```cpp
     CCustomAnimationController m_animationController;
@@ -131,22 +131,22 @@ ms.locfileid: "46439272"
     CAnimationRect m_animationRect;
     ```
 
-3. 之後`DECLARE_MESSAGE_MAP()`行，加入下列程式碼。
+1. 之後`DECLARE_MESSAGE_MAP()`行，加入下列程式碼。
 
     ```cpp
     void Animate(BOOL bDirection);
     ```
 
-4. 儲存檔案，並將它關閉。
+1. 儲存檔案，並將它關閉。
 
-5. 在 MFCAnimationWalkthroughView.cpp，在後檔案的頂端`#include`陳述式但任何類別方法，才會加入下列程式碼。
+1. 在 MFCAnimationWalkthroughView.cpp，在後檔案的頂端`#include`陳述式但任何類別方法，才會加入下列程式碼。
 
     ```cpp
     static int nAnimationGroup = 0;
     static int nInfoAreaHeight = 40;
     ```
 
-6. 建構函式的結尾`CMFCAnimationWalkthroughView`，新增下列程式碼。
+1. 建構函式的結尾`CMFCAnimationWalkthroughView`，新增下列程式碼。
 
     ```cpp
     m_animationController.EnableAnimationTimerEventHandler();
@@ -159,7 +159,7 @@ ms.locfileid: "46439272"
     m_animationController.AddAnimationObject(&m_animationRect);
     ```
 
-7. 找出`CAnimationWalthroughView::PreCreateWindow`方法，然後將其取代為下列程式碼。
+1. 找出`CAnimationWalthroughView::PreCreateWindow`方法，然後將其取代為下列程式碼。
 
     ```cpp
     BOOL CMFCAnimationWalkthroughView::PreCreateWindow(CREATESTRUCT& cs)
@@ -172,7 +172,7 @@ ms.locfileid: "46439272"
     }
     ```
 
-8. 找出`CAnimationWalkthroughView::OnDraw`方法，然後將其取代為下列程式碼。
+1. 找出`CAnimationWalkthroughView::OnDraw`方法，然後將其取代為下列程式碼。
 
     ```cpp
     void CMFCAnimationWalkthroughView::OnDraw(CDC* pDC)
@@ -209,7 +209,7 @@ ms.locfileid: "46439272"
     }
     ```
 
-9. 在檔案結尾，加入下列程式碼。
+1. 在檔案結尾，加入下列程式碼。
 
     ```cpp
     void CMFCAnimationWalkthroughView::Animate(BOOL bDirection)
@@ -219,9 +219,9 @@ ms.locfileid: "46439272"
         static BYTE nStartColor = 50;
         static BYTE nEndColor = 255;
 
-        BYTE nRedColorFinal = bDirection  nStartColor : nEndColor;
-        BYTE nGreenColorFinal = bDirection  nStartColor : nEndColor;
-        BYTE nBlueColorFinal = bDirection  nStartColor : nEndColor;
+        BYTE nRedColorFinal = bDirection ? nStartColor : nEndColor;
+        BYTE nGreenColorFinal = bDirection ? nStartColor : nEndColor;
+        BYTE nBlueColorFinal = bDirection ? nStartColor : nEndColor;
 
         CLinearTransition* pRedTransition =
             new CLinearTransition(duration, (DOUBLE)nRedColorFinal);
@@ -278,13 +278,13 @@ ms.locfileid: "46439272"
     }
     ```
 
-10. 在 **專案**功能表上，按一下**類別精靈**。
+1. 在 **專案**功能表上，按一下**類別精靈**。
 
-11. 在  **MFC 類別精靈**下方**類別名稱**，選取`CMFCAnimationWalkthroughView`。
+1. 在  **MFC 類別精靈**下方**類別名稱**，選取**CMFCAnimationWalkthroughView**。
 
-12. 上**訊息**索引標籤**訊息**方塊中，選取`WM_ERASEBKGND`，按一下**加入處理常式**，然後按一下**確定**。
+1. 在上**訊息**索引標籤**訊息**方塊中，選取**WM_ERASEBKGND**，按一下 **加入處理常式**，然後按一下  **確定**.
 
-13. 在 MFCAnimationWalkthroughView.cpp，取代的實作`OnEraseBkgnd`下列的程式碼，以減少閃爍動畫的物件中，會重繪時。
+1. 在 MFCAnimationWalkthroughView.cpp，取代的實作`OnEraseBkgnd`下列的程式碼，以減少閃爍動畫的物件中，會重繪時。
 
     ```cpp
     BOOL CMFCAnimationWalkthroughView::OnEraseBkgnd(CDC* /*pDC*/)
@@ -293,7 +293,7 @@ ms.locfileid: "46439272"
     }
     ```
 
-14. 取代的實作`CMFCAnimationWalkthroughView::OnAnimationStartforward`， `CMFCAnimationWalkthroughView::OnAnimationStartbackward`，和`CMFCAnimationWalkthroughView::OnAnimationStop`為下列程式碼。
+1. 取代的實作`CMFCAnimationWalkthroughView::OnAnimationStartforward`， `CMFCAnimationWalkthroughView::OnAnimationStartbackward`，和`CMFCAnimationWalkthroughView::OnAnimationStop`為下列程式碼。
 
     ```cpp
     void CMFCAnimationWalkthroughView::OnAnimationStartforward()
@@ -317,7 +317,7 @@ ms.locfileid: "46439272"
     }
     ```
 
-15. 儲存檔案，並將它關閉。
+1. 儲存檔案，並將它關閉。
 
 ### <a name="to-center-the-animated-object-in-the-window"></a>若要置 視窗中動畫的物件
 
@@ -327,15 +327,15 @@ ms.locfileid: "46439272"
     BOOL m_bCurrentDirection;
     ```
 
-2. 儲存檔案，並將它關閉。
+1. 儲存檔案，並將它關閉。
 
-3. 在 **專案**功能表上，按一下**類別精靈**。
+1. 在 **專案**功能表上，按一下**類別精靈**。
 
-4. 在  **MFC 類別精靈**下方**類別名稱**，選取`CMFCAnimationWalkthroughView`。
+1. 在  **MFC 類別精靈**下方**類別名稱**，選取**CMFCAnimationWalkthroughView**。
 
-5. 上**訊息**索引標籤**訊息**方塊中，選取`WM_SIZE`，按一下**加入處理常式**，然後按一下**確定**。
+1. 在上**訊息**索引標籤**訊息**方塊中，選取**WM_SIZE**，按一下 **加入處理常式**，然後按一下  **確定**.
 
-6. 在 MFCAnimationWalkthroughView.cpp，取代的程式碼`CMFCAnimationWalkthroughView::OnSize`為下列程式碼。
+1. 在 MFCAnimationWalkthroughView.cpp，取代的程式碼`CMFCAnimationWalkthroughView::OnSize`為下列程式碼。
 
     ```cpp
     void CMFCAnimationWalkthroughView::OnSize(UINT nType, int cx, int cy)
@@ -358,19 +358,19 @@ ms.locfileid: "46439272"
     }
     ```
 
-7. 建構函式的開頭`CMFCAnimationWalkthroughView`，新增下列程式碼。
+1. 建構函式的開頭`CMFCAnimationWalkthroughView`，新增下列程式碼。
 
     ```cpp
     m_bCurrentDirection = TRUE;
     ```
 
-8. 在開頭`CMFCAnimationWalkthroughView::Animate`方法中，新增下列程式碼。
+1. 在開頭`CMFCAnimationWalkthroughView::Animate`方法中，新增下列程式碼。
 
     ```cpp
     m_bCurrentDirection = bDirection;
     ```
 
-9. 儲存檔案，並將它關閉。
+1. 儲存檔案，並將它關閉。
 
 ### <a name="to-verify-the-results"></a>若要確認結果
 

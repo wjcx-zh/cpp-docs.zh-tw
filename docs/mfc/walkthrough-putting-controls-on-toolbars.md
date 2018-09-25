@@ -1,7 +1,7 @@
 ---
 title: 逐步解說： 將放在工具列上的控制項 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c50be81cbddb30752f401ca7a1784cfe428c379b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a8267704e6bb1b43a13cc05d21d0572695365fd6
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384555"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169745"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>逐步解說：將控制項放在工具列上
 
@@ -30,11 +30,11 @@ ms.locfileid: "46384555"
 
 若要將控制項加入至工具列，請依照下列步驟執行：
 
-1. 為父工具列資源的按鈕保留假的資源 ID。 如需如何在 Visual Studio 中使用工具列編輯器建立按鈕的詳細資訊，請參閱[工具列編輯器](../windows/toolbar-editor.md)主題。
+1. 為父工具列資源的按鈕保留假的資源 ID。 如需有關如何建立按鈕，使用**工具列編輯器**在 Visual Studio 中，請參閱[工具列編輯器](../windows/toolbar-editor.md)主題。
 
 1. 為父工具列的所有點陣圖中的按鈕保留工具列按鈕影像 (按鈕圖示)。
 
-1. 訊息處理常式處理 AFX_WM_RESETTOOLBAR 訊息中，執行下列作業：
+1. 在處理 `AFX_WM_RESETTOOLBAR` 訊息的訊息處理常式中，執行下列步驟：
 
    1. 使用 `CMFCToolbarButton` 衍生類別建構按鈕控制項。
 
@@ -55,22 +55,22 @@ ms.locfileid: "46384555"
 
 ### <a name="creating-the-find-control"></a>建立尋找控制項
 
-首先，建立 `Find` 下拉式方塊控制項：
+首先，建立**尋找**下拉式方塊控制項：
 
 1. 將按鈕和其命令加入至應用程式資源：
 
    1. 在應用程式資源中，將具有 `ID_EDIT_FIND` 命令 ID 的新按鈕加入至應用程式的工具列，以及任何與工具列相關的點陣圖。
 
-   1. 建立一個具有 ID_EDIT_FIND 命令 ID 的新功能表項目。
+   1. 建立新的功能表項目與`ID_EDIT_FIND`命令 id。
 
-   1. 將新字串「Find the text\nFind」加入至字串資料表，並將`ID_EDIT_FIND_COMBO` 命令 ID 指派給它。 這個 ID 將會用做 `Find` 下拉式方塊按鈕的命令 ID。
+   1. 將新字串「Find the text\nFind」加入至字串資料表，並將`ID_EDIT_FIND_COMBO` 命令 ID 指派給它。 此識別碼將用於為命令 ID 的**尋找**下拉式方塊按鈕。
 
         > [!NOTE]
-        >  由於 `ID_EDIT_FIND` 是由 `CEditView` 處理的標準命令，因此您不需要實作這個命令的特殊處理常式。  不過，您必須實作新命令 `ID_EDIT_FIND_COMBO` 的處理常式。
+        > 由於 `ID_EDIT_FIND` 是由 `CEditView` 處理的標準命令，因此您不需要實作這個命令的特殊處理常式。  不過，您必須實作新命令 `ID_EDIT_FIND_COMBO` 的處理常式。
 
 1. 建立新的類別，`CFindComboBox`衍生自[CComboBox 類別](../mfc/reference/ccombobox-class.md)。
 
-1. 在 `CFindComboBox`類別中，覆寫 `PreTranslateMessage` 虛擬方法。 這個方法會啟用下拉式方塊處理[WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)訊息。 如果使用者點閱 Esc 鍵 (`VK_ESCAPE`)，便會將焦點移回主框架視窗。 如果使用者點閱 Enter 鍵 (`VK_ENTER`)，張貼到主框架視窗包含的 WM_COMMAND 訊息`ID_EDIT_FIND_COMBO`命令 id。
+1. 在 `CFindComboBox`類別中，覆寫 `PreTranslateMessage` 虛擬方法。 這個方法會啟用下拉式方塊處理[WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)訊息。 如果使用者點閱 Esc 鍵 (`VK_ESCAPE`)，便會將焦點移回主框架視窗。 如果使用者點閱 ENTER 鍵 (`VK_ENTER`)，便會將包含 `WM_COMMAND` 命令 ID 的 `ID_EDIT_FIND_COMBO` 訊息張貼到主框架視窗內。
 
 1. 建立的類別**尋找**下拉式方塊按鈕，衍生自[CMFCToolBarComboBoxButton 類別](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)。 在此範例中，它的名稱是 `CFindComboButton`。
 
@@ -88,7 +88,7 @@ ms.locfileid: "46384555"
 
 1. 實作您文件檢視中的 `ID_EDIT_FIND_COMBO` 處理常式。 使用[CMFCToolBar::GetCommandButtons](../mfc/reference/cmfctoolbar-class.md#getcommandbuttons)具有`ID_EDIT_FIND_COMBO`來擷取所有**尋找**下拉式方塊按鈕。 有了自訂功能，即可用相同命令 ID 建立數個按鈕複本。
 
-9. 在 ID_EDIT_FIND 訊息處理常式`OnFind`，使用[CMFCToolBar::IsLastCommandFromButton](../mfc/reference/cmfctoolbar-class.md#islastcommandfrombutton)判斷尋找命令從傳送**尋找**下拉式方塊按鈕。 如果是，請尋找文字並將搜尋字串加入至下拉式方塊。
+1. 在 `ID_EDIT_FIND`訊息處理常式`OnFind`，使用[CMFCToolBar::IsLastCommandFromButton](../mfc/reference/cmfctoolbar-class.md#islastcommandfrombutton)若要判斷尋找命令從傳送**尋找**下拉式方塊按鈕。 如果是，請尋找文字並將搜尋字串加入至下拉式方塊。
 
 ### <a name="adding-the-find-control-to-the-main-toolbar"></a>將尋找控制項加入至主要工具列
 
@@ -97,16 +97,16 @@ ms.locfileid: "46384555"
 1. 實作主框架視窗的 `AFX_WM_RESETTOOLBAR` 訊息處理常式 `OnToolbarReset`。
 
     > [!NOTE]
-    >  在應用程式啟動期間工具列初始化時，或當工具列在自訂期間重設時，架構會傳送訊息至主框架視窗。 在任一情況下，您必須取代標準工具列按鈕，以自訂**尋找**下拉式方塊按鈕。
+    > 在應用程式啟動期間工具列初始化時，或當工具列在自訂期間重設時，架構會傳送訊息至主框架視窗。 在任一情況下，您必須取代標準工具列按鈕，以自訂**尋找**下拉式方塊按鈕。
 
 1. 在 `AFX_WM_RESETTOOLBAR`處理常式中，檢查工具列 ID，也就是，則*WPARAM* AFX_WM_RESETTOOLBAR 訊息。 如果工具列 ID 等於包含的工具列**尋找**下拉式方塊按鈕中，呼叫[CMFCToolBar::ReplaceButton](../mfc/reference/cmfctoolbar-class.md#replacebutton)來取代**尋找**按鈕 (也就是命令 id 的按鈕`ID_EDIT_FIND)`與`CFindComboButton`物件。
 
     > [!NOTE]
-    >  由於 `CFindComboBox` 會複製按鈕物件並維護複本，因此您可以在堆疊上建構 `ReplaceButton` 物件。
+    > 由於 `CFindComboBox` 會複製按鈕物件並維護複本，因此您可以在堆疊上建構 `ReplaceButton` 物件。
 
 ### <a name="adding-the-find-control-to-the-customize-dialog-box"></a>將尋找控制項加入至自訂對話方塊
 
-在自訂處理常式`OnViewCustomize`，呼叫[CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton)來取代**尋找** 按鈕 (也就是具有命令 ID 的按鈕`ID_EDIT_FIND)`與`CFindComboButton`物件。
+在自訂處理常式`OnViewCustomize`，呼叫[CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton)來取代**尋找** 按鈕 (也就是具有命令 ID 的按鈕`ID_EDIT_FIND`) 與`CFindComboButton`物件。
 
 ## <a name="see-also"></a>另請參閱
 

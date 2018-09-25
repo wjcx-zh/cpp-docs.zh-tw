@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 019e63009706fd5d0ab22044642449c5bce3c3a6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 84aded46176c1c286ce5270254a0455dfce39d5d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222377"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427868"
 ---
 # <a name="porting-guide-spy"></a>移植指南：Spy++
+
 本移植案例研究的設計，是為了讓您了解什麼是典型移植專案、您可能遇到的問題類型，並提供一些可用於解決移植問題的一般秘訣和訣竅。 這不是最終移植指南，因為移植專案的體驗主要取決於程式碼的細節。  
   
 ## <a name="spy"></a>Spy++  
@@ -74,7 +75,7 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h
   
 Microsoft 不再支援 Windows XP，因此即使可在 Visual Studio 2015 中將其設為目標，您也應該逐步淘汰應用程式對該版的支援，並建議使用者採用新版 Windows。  
   
- 若要解決這個錯誤，請定義 WINVER，並將 [專案屬性] 設定更新為目前要設為目標的 Windows 最低版本。 在[這裡](/windows/desktop/WinProg/using-the-windows-headers)尋找各種 Windows 版本之值的表格。  
+若要解決這個錯誤，請定義 WINVER，並將 [專案屬性] 設定更新為目前要設為目標的 Windows 最低版本。 在[這裡](/windows/desktop/WinProg/using-the-windows-headers)尋找各種 Windows 版本之值的表格。  
   
 stdafx.h 檔案包含其中一些巨集定義。  
   
@@ -551,7 +552,7 @@ wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
   
 _T 巨集的效果是根據 MBCS 或 UNICODE 的設定，將字串常值編譯為 **char** 字串或 **wchar_t** 字串。 若要在 Visual Studio 中以 _T 取代所有字串，請先開啟 [快速取代] (快速鍵：**Ctrl**+**F**) 方塊或 [檔案中取代] (快速鍵：**Ctrl**+**Shift**+**H**)，然後選擇 [使用規則運算式] 核取方塊。 輸入 `((\".*?\")|('.+?'))` 做為搜尋文字，以及 `_T($1)` 做為取代文字。 如果某些字串周圍已經有 _T 巨集，這個程序會再加入巨集一次；您也可能發現不需要 _T 的情況 (例如使用 `#include` 時)，因此最好使用 [取代下一個]，而不是 [全部取代]。  
   
- 這個特定函式 [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa) 實際上是定義於 Windows 標頭中，其文件建議不要使用它，因為可能會發生緩衝區滿溢的情況。 `szTmp` 緩衝區未指定大小，因此該函式無法檢查緩衝區是否可以保留寫入的所有資料。 請參閱下一節有關移植到安全 CRT 的資訊，我們在該節中會修正其他類似問題。 我們最後會以 [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) 來取代它。  
+這個特定函式 [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa) 實際上是定義於 Windows 標頭中，其文件建議不要使用它，因為可能會發生緩衝區滿溢的情況。 `szTmp` 緩衝區未指定大小，因此該函式無法檢查緩衝區是否可以保留寫入的所有資料。 請參閱下一節有關移植到安全 CRT 的資訊，我們在該節中會修正其他類似問題。 我們最後會以 [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) 來取代它。  
   
 轉換成 Unicode 的另一個常見錯誤如下。  
   
@@ -680,5 +681,5 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
   
 ## <a name="see-also"></a>請參閱  
 
-[移植和升級：範例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)   
+[移植和升級：範例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [上一個案例研究：COM Spy](../porting/porting-guide-com-spy.md)

@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f913f0b3065b136f626ef15cc2a77dce8d0254f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 0007cf50eafa7b61e48b550172eb2d316270c61f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33335087"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448316"
 ---
 # <a name="change-signature"></a>變更簽章
 **目的：** 讓您修改函式的參數。
 
-**時機：** 您想要重新排序、新增、移除或修改目前在各種位置中使用之函式的參數。  
+**時機：** 您想要重新排序、新增、移除或修改目前在各種位置中使用之函式的參數。
 
 **原因：** 您可以自行手動變更這些參數，然後尋找對該函式的所有呼叫並逐一變更這些呼叫，但這樣可能會造成錯誤。  這個重構工具將可自動執行此工作。
 

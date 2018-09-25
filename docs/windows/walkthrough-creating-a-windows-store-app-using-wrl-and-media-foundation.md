@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aba3fc80e13504485cc5a4f93fb3ad35031d4ef7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9858ebe9affb47d61114bde072645f7002849ec7
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440039"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169459"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>逐步解說： 建立使用 WRL 和媒體基礎的 UWP 應用程式
 
@@ -29,7 +29,7 @@ ms.locfileid: "46440039"
 > [!NOTE]
 > 如果不使用 C#，您也可以改用 JavaScript、Visual Basic 或 C++ 使用自訂轉換元件。
 
-在大部分情況下，您可以使用 C + + /CX，以建立 Windows 執行階段)。 不過，有時候您必須使用 WRL。 例如，當您建立 Microsoft 媒體基礎的媒體延伸模組，您必須建立實作 COM 和 Windows 執行階段介面的元件。 因為 C + + /CX 只能建立 Windows 執行階段物件，以建立媒體延伸，您必須使用 WRL 因為它可讓 COM 和 Windows 執行階段介面的實作。
+在大部分情況下，您可以使用 C + + /CX，以建立 Windows 執行階段。 不過，有時候您必須使用 WRL。 例如，當您建立 Microsoft 媒體基礎的媒體延伸模組，您必須建立實作 COM 和 Windows 執行階段介面的元件。 因為 C + + /CX 只能建立 Windows 執行階段物件，以建立媒體延伸，您必須使用 WRL 因為它可讓 COM 和 Windows 執行階段介面的實作。
 
 > [!NOTE]
 > 雖然這個程式碼範例很長，它會示範建立有用的媒體基礎轉換所需的最小值。 您可以將之做為您自訂轉換的起點。 這個範例是來自[媒體延伸範例](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)、 哪些使用媒體延伸將效果套用到視訊、 解碼視訊，以及建立產生媒體資料流的配置處理常式。
@@ -52,7 +52,7 @@ ms.locfileid: "46440039"
 
 - [InspectableClass](../windows/inspectableclass-macro.md)巨集會實作基本的 COM 功能，例如參考計數和`QueryInterface`方法，並設定執行階段類別名稱和信任層級。
 
-- 使用 microsoft:: wrl::[模組類別](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/b4acf5de-2f4c-4c8b-b5ff-9140d023ecbe/locales/en-US)實作的 DLL 進入點函式，例如[DllGetActivationFactory](https://msdn.microsoft.com/library/br205771.aspx)， [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)，和[DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject)。
+- 使用 microsoft:: wrl::[模組類別](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/b4acf5de-2f4c-4c8b-b5ff-9140d023ecbe)實作的 DLL 進入點函式，例如[DllGetActivationFactory](https://msdn.microsoft.com/library/br205771.aspx)， [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)，和[DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject)。
 
 - 將您的元件 DLL 連結至 runtimeobject.lib。 也指定[/WINMD](../cppcx/compiler-and-linker-options-c-cx.md)連結器列來產生 Windows 中繼資料。
 
@@ -62,29 +62,29 @@ ms.locfileid: "46440039"
 
 1. 在 Visual Studio 中建立**空白方案**專案。 為專案命名，例如*MediaCapture*。
 
-2. 新增**DLL (通用 Windows)** 專案加入方案。 為專案命名，例如*GrayscaleTransform*。
+1. 新增**DLL (通用 Windows)** 專案加入方案。 為專案命名，例如*GrayscaleTransform*。
 
-3. 新增**Midl 檔 (.idl)** 檔案加入專案。 將檔案命名為，比方說， *GrayscaleTransform.idl*。
+1. 新增**Midl 檔 (.idl)** 檔案加入專案。 將檔案命名為，比方說， *GrayscaleTransform.idl*。
 
-4. 將此程式碼新增至 GrayscaleTransform.idl。
+1. 將此程式碼新增至 GrayscaleTransform.idl 中：
 
    [!code-cpp[wrl-media-capture#1](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_1.idl)]
 
-5. 使用下列程式碼的內容取代`pch.h`。
+1. 使用下列程式碼的內容取代`pch.h`:
 
    [!code-cpp[wrl-media-capture#2](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_2.h)]
 
-6. 將新的標頭檔新增至專案，將其命名`BufferLock.h`，然後新增此程式碼：
+1. 將新的標頭檔新增至專案，將其命名`BufferLock.h`，然後將內容取代此程式碼：
 
    [!code-cpp[wrl-media-capture#3](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_3.h)]
 
-7. `GrayscaleTransform.h` 不會在此範例中使用。 您可以選擇將之從專案移除。
+1. `GrayscaleTransform.h` 不會在此範例中使用。 您可以選擇將之從專案移除。
 
-8. 使用下列程式碼的內容取代`GrayscaleTransform.cpp`。
+1. 使用下列程式碼的內容取代`GrayscaleTransform.cpp`:
 
    [!code-cpp[wrl-media-capture#4](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_4.cpp)]
 
-9. 將新的模組定義檔加入至專案，將其命名`GrayscaleTransform.def`，然後新增此程式碼：
+1. 將新的模組定義檔加入至專案，將其命名`GrayscaleTransform.def`，然後新增此程式碼：
 
    ```
    EXPORTS
@@ -93,31 +93,31 @@ ms.locfileid: "46440039"
        DllGetClassObject                   PRIVATE
    ```
 
-10. 使用下列程式碼的內容取代`dllmain.cpp`。
+1. 使用下列程式碼的內容取代`dllmain.cpp`:
 
    [!code-cpp[wrl-media-capture#6](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_6.cpp)]
 
-11. 在專案的**屬性頁**對話方塊方塊中，設定下列**連結器**屬性。
+1. 在專案的**屬性頁**對話方塊方塊中，設定下列**連結器**屬性。
 
    1. 底下**輸入**，如**模組定義檔**，指定`GrayScaleTransform.def`。
 
-   2. 之下，而且**輸入**，新增`runtimeobject.lib`， `mfuuid.lib`，並`mfplat.lib`來**其他相依性**屬性。
+   1. 之下，而且**輸入**，新增`runtimeobject.lib`， `mfuuid.lib`，並`mfplat.lib`來**其他相依性**屬性。
 
-   3. 底下**Windows 中繼資料**，將**產生 Windows 中繼資料**來**是 (/ WINMD)**。
+   1. 底下**Windows 中繼資料**，將**產生 Windows 中繼資料**來**是 (/ WINMD)**。
 
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>若要使用 WRL 自訂媒體基礎元件從 C# 應用程式
 
-1. 加入新**C# 空白應用程式 (XAML)** 專案加入`MediaCapture`解決方案。 為專案命名，例如*MediaCapture*。
+1. 加入新**C# 空白應用程式 (通用 Windows)** 專案加入`MediaCapture`解決方案。 為專案命名，例如*MediaCapture*。
 
-2. 在  **MediaCapture**專案中，將參考加入`GrayscaleTransform`專案。 若要深入了解，請參閱[如何： 加入或移除參考，可以使用 參考管理員](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)。
+1. 在  **MediaCapture**專案中，將參考加入`GrayscaleTransform`專案。 若要深入了解，請參閱[如何： 加入或移除參考，可以使用 參考管理員](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)。
 
-3. 在  `Package.appxmanifest`，請在**功能**索引標籤上，選取**麥克風**並**網路攝影機**。 這兩種功能是從網路攝影機擷取相片的必要項。
+1. 在  `Package.appxmanifest`，請在**功能**索引標籤上，選取**麥克風**並**網路攝影機**。 這兩種功能是從網路攝影機擷取相片的必要項。
 
-4. 在  `MainPage.xaml`，將此程式碼新增至根[格線](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)項目：
+1. 在  `MainPage.xaml`，將此程式碼新增至根[格線](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)項目：
 
    [!code-xml[wrl-media-capture#7](../windows/codesnippet/Xaml/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_7.xaml)]
 
-5. 使用下列程式碼的內容取代`MainPage.xaml.cs`。
+1. 使用下列程式碼的內容取代`MainPage.xaml.cs`:
 
    [!code-cs[wrl-media-capture#8](../windows/codesnippet/CSharp/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_8.cs)]
 

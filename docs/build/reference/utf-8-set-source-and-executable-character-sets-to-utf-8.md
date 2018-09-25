@@ -3,8 +3,7 @@ title: -utf-8 （將來源和可執行檔字元集為 utf-8） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
-- cpp
-- devlang-cpp
+- cpp-tools
 ms.topic: reference
 f1_keywords:
 - /utf-8
@@ -17,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 409d56699334d6e62294768f3c6b5f4890ea503c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 218ea7986e37ce9cfa98aeeb1da3c209bef73f8f
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379485"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029680"
 ---
 # <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/utf-8 （將來源和可執行檔字元集設定為 utf-8）
 

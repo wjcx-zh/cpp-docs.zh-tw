@@ -3,8 +3,7 @@ title: -來源-字元集 （設定來源字元集） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
-- cpp
-- devlang-cpp
+- cpp-tools
 ms.topic: reference
 f1_keywords:
 - source-charset
@@ -18,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3154f2db3c95154c425b116e05ec1b47096e33ff
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 14c8d40f508096822a741bac65f4d553a6804120
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383554"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029641"
 ---
 # <a name="source-charset-set-source-character-set"></a>/source-charset （設定來源字元集）
 

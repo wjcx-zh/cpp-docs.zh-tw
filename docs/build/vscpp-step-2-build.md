@@ -5,7 +5,7 @@ ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: tutorial
 ms.technology:
-- devlang-C++
+- cpp-tools
 ms.devlang: C++
 dev_langs:
 - C++
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05a5204234eb127da676e3b4a12ef875baecdad0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c9c32f6811a18fae00cb2943a9ca97a89cf159a1
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705779"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029589"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>建置並執行 c + + 主控台應用程式專案
 
@@ -45,7 +45,7 @@ ms.locfileid: "45705779"
 
    ![啟動專案](../build/media/vscpp-start-without-debugging.gif "啟動專案")
 
-    主控台視窗隨即開啟，然後再執行您的應用程式。 當您在 Visual Studio 啟動主控台應用程式時，它會執行您的程式碼，則會列印 「 按任意鍵繼續。 。 ." 若要讓您以查看輸出的機率。
+   主控台視窗隨即開啟，然後再執行您的應用程式。 當您在 Visual Studio 啟動主控台應用程式時，它會執行您的程式碼，則會列印 「 按任意鍵繼續。 。 ." 若要讓您以查看輸出的機率。
 
 恭喜您！ 您已建立您的第一個"Hello，world ！" 在 Visual Studio 中的主控台應用程式 ！ 按任一鍵關閉主控台視窗並返回 Visual Studio。
 

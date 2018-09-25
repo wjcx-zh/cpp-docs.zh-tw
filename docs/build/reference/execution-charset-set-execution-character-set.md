@@ -3,8 +3,7 @@ title: -執行-字元集 （設定執行字元集） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
-- cpp
-- devlang-cpp
+- cpp-tools
 ms.topic: reference
 f1_keywords:
 - execution-charset
@@ -19,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5a2e2c690b9e827992ca79f861e40452c071d42
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ca6681fde6ae4e46dea62e0258138f567ef8ebc5
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420981"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029602"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/execution-charset （設定執行字元集）
 
@@ -38,10 +37,10 @@ ms.locfileid: "46420981"
 
 ## <a name="arguments"></a>引數
 
-**IANA_name**<br/>
+*IANA_name*<br/>
 IANA 定義字元集名稱。
 
-**CPID**<br/>
+*CPID*<br/>
 字碼頁識別項。
 
 ## <a name="remarks"></a>備註

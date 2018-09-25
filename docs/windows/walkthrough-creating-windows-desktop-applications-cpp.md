@@ -1,7 +1,7 @@
 ---
 title: 逐步解說： 建立傳統 Windows 桌面應用程式 （c + +） |Microsoft Docs
 ms.custom: get-started-article
-ms.date: 06/12/2018
+ms.date: 09/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 34342fbca00a127d1fdee13d29626bc2a3dfe53f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 7e9541517852696073a3dbbff560bb6c44fd3264
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679201"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029667"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>逐步解說： 建立傳統 Windows 桌面應用程式 （c + +）
 
@@ -120,7 +120,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
    參數和傳回值，這個函式的相關資訊，請參閱[WinMain 進入點](https://msdn.microsoft.com/library/windows/desktop/ms633559)。
 
    > [!NOTE]
-   > 什麼是所有這些額外字詞，例如`CALLBACK`，或`HINSTANCE`，或`_In_`？ 傳統的 Windows API 所使用的 typedef 和廣泛地抽離前置處理器巨集的一些詳細資料類型和特定平台程式碼，呼叫慣例，例如 **__declspec**宣告和編譯器的 pragma。 在 Visual Studio 中，您可以使用 IntelliSense[快速諮詢](/visualstudio/ide/using-intellisense#quick-info)功能，請參閱什麼這些 typedef 和巨集定義。 將滑鼠停留的感興趣，word 或選取它，然後按 ctrl-K、 ctrl-我的小型的快顯視窗，其中包含定義。 如需詳細資訊，請參閱[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 參數和傳回型別通常會使用*SAL 註釋*可協助您捕捉程式設計錯誤。 如需詳細資訊，請參閱 <<c0> [ 使用 SAL 註釋減少 C/c + + 程式碼缺失](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
+   > 什麼是所有這些額外字詞，例如`CALLBACK`，或`HINSTANCE`，或`_In_`？ 傳統的 Windows API 所使用的 typedef 和廣泛地抽離前置處理器巨集的一些詳細資料類型和特定平台程式碼，呼叫慣例，例如 **__declspec**宣告和編譯器的 pragma。 在 Visual Studio 中，您可以使用 IntelliSense[快速諮詢](/visualstudio/ide/using-intellisense#quick-info)功能，請參閱什麼這些 typedef 和巨集定義。 停留在感興趣的文字或選取它，然後按**Ctrl**+**K**， **Ctrl**+**我**的包含定義的小型快顯視窗。 如需詳細資訊，請參閱[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 參數和傳回型別通常會使用*SAL 註釋*可協助您捕捉程式設計錯誤。 如需詳細資訊，請參閱 <<c0> [ 使用 SAL 註釋減少 C/c + + 程式碼缺失](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
 
 1. Windows 桌面程式需要&lt;windows.h >。 &lt;tchar.h > 定義`TCHAR`最終會解析巨集來**wchar_t**如果您的專案中定義的 UNICODE 符號，否則它會解析成**char**。  如果您一律使用來建置啟用 UNICODE，您不需要 TCHAR，並可以是直接使用**wchar_t**直接。
 

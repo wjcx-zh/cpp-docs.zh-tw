@@ -1,28 +1,30 @@
 ---
 title: IsSame 結構 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::IsSame
+- internal/Microsoft::WRL::Details::IsSame::value
 dev_langs:
 - C++
 helpviewer_keywords:
-- IsSame structure
+- Microsoft::WRL::Details::IsSame structure
+- Microsoft::WRL::Details::IsSame::value constant
 ms.assetid: 1eddbc3f-3cc5-434f-8495-e4477e1f868e
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7d1879217ac43e2d7d3714f491f44b8245f4f27
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a6d1e22d52a2e618357357555a549437ae453abe
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390515"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169693"
 ---
 # <a name="issame-structure"></a>IsSame 結構
 
@@ -58,9 +60,9 @@ struct IsSame<T1, T1>;
 
 ### <a name="public-constants"></a>公用常數
 
-|名稱|描述|
-|----------|-----------------|
-|[IsSame::value 常數](../windows/issame-value-constant.md)|表示一種型別是否與另一個相同。|
+名稱                    | 描述
+----------------------- | --------------------------------------------------
+[Issame:: Value](#value) | 表示一種型別是否與另一個相同。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -72,6 +74,26 @@ struct IsSame<T1, T1>;
 
 **命名空間：** Microsoft::WRL::Details
 
-## <a name="see-also"></a>另請參閱
+## <a name="value"></a>Issame:: Value
 
-[Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+```cpp
+template <typename T1, typename T2>
+struct IsSame
+{
+    static const bool value = false;
+};
+
+template <typename T1>
+struct IsSame<T1, T1>
+{
+    static const bool value = true;
+};
+```
+
+### <a name="remarks"></a>備註
+
+表示一種型別是否與另一個相同。
+
+`value` 已`true`範本參數都相同的如果和`false`範本參數是否不同。

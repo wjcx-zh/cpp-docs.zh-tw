@@ -1,7 +1,7 @@
 ---
 title: 逐步解說： 將 CTaskDialog 加入至應用程式 |Microsoft Docs
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 09/19/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f803af896c1bb2a0e5f58e45f4ef9f588f4e66d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 48efa5d85ac6c7ba7e989cc55196f12fb391fa6d
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420476"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169719"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>逐步解說：將 CTaskDialog 加入至應用程式
 
@@ -49,11 +49,11 @@ ms.locfileid: "46420476"
 
 1. 以預設值建立新的 MFC 應用程式專案。 稱之為*MyProject*。
 
-2. 使用 **方案總管** 開啟 MyProject.cpp 檔案。
+1. 使用 **方案總管** 開啟 MyProject.cpp 檔案。
 
-3. 將 `#include "afxtaskdialog.h"` 加入包含清單後面。
+1. 將 `#include "afxtaskdialog.h"` 加入包含清單後面。
 
-4. 尋找 `CMyProjectApp::InitInstance`方法。 在 `return TRUE;` 陳述式前面插入下列幾行程式碼。 此程式碼會建立用於 Windows 訊息方塊或 `CTaskDialog`中的字串。
+1. 尋找 `CMyProjectApp::InitInstance`方法。 在 `return TRUE;` 陳述式前面插入下列幾行程式碼。 此程式碼會建立用於 Windows 訊息方塊或 `CTaskDialog`中的字串。
 
     ```cpp
     CString message("My message to the user");
@@ -61,7 +61,7 @@ ms.locfileid: "46420476"
     CString emptyString;
     ```
 
-5. 將下列程式碼加入步驟 4 的程式碼後面。 此程式碼可確保使用者的電腦支援 `CTaskDialog`。 如果不支援對話方塊，應用程式會改為顯示 Windows 訊息方塊。
+1. 將下列程式碼加入步驟 4 的程式碼後面。 此程式碼可確保使用者的電腦支援 `CTaskDialog`。 如果不支援對話方塊，應用程式會改為顯示 Windows 訊息方塊。
 
     ```cpp
     if (CTaskDialog::IsSupported())
@@ -74,19 +74,19 @@ ms.locfileid: "46420476"
     }
     ```
 
-6. 將下列程式碼插入步驟 5 之 `if` 陳述式後面的括號之間。 此程式碼會建立 `CTaskDialog`。
+1. 將下列程式碼插入步驟 5 之 `if` 陳述式後面的括號之間。 此程式碼會建立 `CTaskDialog`。
 
     ```cpp
     CTaskDialog taskDialog(message, emptyString, dialogTitle, TDCBF_OK_BUTTON);
     ```
 
-7. 在下一行，加入下列程式碼。 此程式碼會設定警告圖示。
+1. 在下一行，加入下列程式碼。 此程式碼會設定警告圖示。
 
     ```cpp
     taskDialog.SetMainIcon(TD_WARNING_ICON);
     ```
 
-8. 在下一行，加入下列程式碼。 此程式碼會顯示工作對話方塊。
+1. 在下一行，加入下列程式碼。 此程式碼會顯示工作對話方塊。
 
     ```cpp
     taskDialog.DoModal();
@@ -104,15 +104,15 @@ ms.locfileid: "46420476"
 
 1. 巡覽至 [資源檢視] 。 如果看不到 [資源檢視] ，您可以從 [檢視]  功能表將它開啟。
 
-2. 展開 [資源檢視]  ，直到您可以選取 [字串資料表]  資料夾。 將它展開，然後按兩下 [字串資料表]  項目。
+1. 展開 [資源檢視]  ，直到您可以選取 [字串資料表]  資料夾。 將它展開，然後按兩下 [字串資料表]  項目。
 
-3. 捲動至字串資料表底部，然後加入新項目。 將識別碼變更為 `TEMP_LINE1`。 將選項設定為 **[命令列 1]**。
+1. 捲動至字串資料表底部，然後加入新項目。 將識別碼變更為 `TEMP_LINE1`。 將選項設定為 **[命令列 1]**。
 
-4. 加入另一個新項目。 將識別碼變更為 `TEMP_LINE2`。 將選項設定為 **[命令列 2]**。
+1. 加入另一個新項目。 將識別碼變更為 `TEMP_LINE2`。 將選項設定為 **[命令列 2]**。
 
-5. 巡覽回到 MyProject.cpp。
+1. 巡覽回到 MyProject.cpp。
 
-6. 在 `CString emptyString;`後面，加入下列程式碼：
+1. 在 `CString emptyString;`後面，加入下列程式碼：
 
     ```cpp
     CString expandedLabel("Hide extra information");
@@ -120,7 +120,7 @@ ms.locfileid: "46420476"
     CString expansionInfo("This is the additional information to the user,\nextended over two lines.");
     ```
 
-7. 尋找 `taskDialog.DoModal()` 陳述式，然後將該陳述式取代為下列程式碼。 此程式碼會更新工作對話方塊並加入新的控制項︰
+1. 尋找 `taskDialog.DoModal()` 陳述式，然後將該陳述式取代為下列程式碼。 此程式碼會更新工作對話方塊並加入新的控制項︰
 
     ```cpp
     taskDialog.SetMainInstruction(L"Warning");
@@ -133,13 +133,13 @@ ms.locfileid: "46420476"
     taskDialog.SetVerificationCheckboxText(L"Remember your selection");
     ```
 
-8. 加入下列這行程式碼，以向使用者顯示工作對話方塊並擷取使用者的選取項目︰
+1. 加入下列這行程式碼，以向使用者顯示工作對話方塊並擷取使用者的選取項目︰
 
     ```cpp
     INT_PTR result = taskDialog.DoModal();
     ```
 
-9. 將下列程式碼插入 `taskDialog.DoModal()`的呼叫後方： 這段程式碼會處理使用者的輸入︰
+1. 將下列程式碼插入 `taskDialog.DoModal()`的呼叫後方： 這段程式碼會處理使用者的輸入︰
 
     ```cpp
     if (taskDialog.GetVerificationCheckboxState())
@@ -171,7 +171,7 @@ ms.locfileid: "46420476"
     }
     ```
 
-在步驟 9 的程式碼中，以您要在指定情況下執行的程式碼取代開頭為 PROCESS IF 的註解。
+在 步驟 9 中的程式碼，取代開頭的註解`PROCESS IF`與您想要在指定的條件下執行的程式碼。
 
 編譯並執行應用程式。 應用程式會顯示使用新控制項和其他資訊的工作對話方塊。
 
@@ -183,9 +183,9 @@ ms.locfileid: "46420476"
 
 1. 如果尚未開啟 MyProject.cpp 檔案，請加以開啟。
 
-2. 巡覽至 `if (CTaskDialog::IsSupported())` 陳述式的右中括號。
+1. 巡覽至 `if (CTaskDialog::IsSupported())` 陳述式的右中括號。
 
-3. 緊接在 `if` 陳述式的右中括號前面 ( `else` 區塊前面) 插入下列程式碼：
+1. 緊接在 `if` 陳述式的右中括號前面 ( `else` 區塊前面) 插入下列程式碼：
 
     ```cpp
     HRESULT result2 = CTaskDialog::ShowDialog(L"My error message",
@@ -195,7 +195,7 @@ ms.locfileid: "46420476"
         TEMP_LINE2);
     ```
 
-編譯並執行應用程式。 應用程式會顯示兩個對話方塊。 第一個對話方塊是來自將功能加入 CTaskDialog程序；第二個對話方塊是來自上一個程序。
+編譯並執行應用程式。 應用程式會顯示兩個對話方塊。 第一個對話方塊是來自**將功能加入 CTaskDialog**程序; 第二個對話方塊是來自上一個程序。
 
 這些範例不會示範 `CTaskDialog`的所有可用選項，但應該可以協助您開始使用。 如需此類別的完整說明，請參閱 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) 。
 

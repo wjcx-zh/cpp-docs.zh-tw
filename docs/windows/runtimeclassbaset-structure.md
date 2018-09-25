@@ -1,26 +1,32 @@
 ---
 title: RuntimeClassBaseT 結構 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/24/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::RuntimeClassBaseT
+- implements/Microsoft::WRL::Details::RuntimeClassBaseT::AsIID
+- implements/Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS
 dev_langs:
 - C++
+helpviewer_keywords:
+- Microsoft::WRL::Details::RuntimeClassBaseT structure
+- Microsoft::WRL::Details::RuntimeClassBaseT::AsIID method
+- Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS method
 ms.assetid: a62775fb-3359-4f45-9ff1-c07fa8da464b
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bcfce810dff7862c60fca853b216eeb05d09dd0f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c9e7f5b38d3434e8753646db4733218978e7e766
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414897"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169706"
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT 結構
 
@@ -46,6 +52,13 @@ friend struct Details::RuntimeClassBaseT;
 
 ## <a name="members"></a>成員
 
+### <a name="protected-methods"></a>保護方法
+
+名稱                                                         | 描述
+------------------------------------------------------------ | -----------------------------------------------------------------------------
+[Runtimeclassbaset:: Asiid](#asiid)                           | 擷取指定的介面 ID 的指標
+[Runtimeclassbaset:: Getimplementediids](#getimplementediids) | 擷取介面 Id 所指定的型別實作的陣列。
+
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
 `RuntimeClassBaseT`
@@ -56,6 +69,72 @@ friend struct Details::RuntimeClassBaseT;
 
 **命名空間：** Microsoft::WRL::Details
 
-## <a name="see-also"></a>另請參閱
+## <a name="asiid"></a>Runtimeclassbaset:: Asiid
 
-[Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+```cpp
+template<typename T>
+__forceinline static HRESULT AsIID(
+   _In_ T* implements,
+   REFIID riid,
+   _Deref_out_ void **ppvObject
+);
+```
+
+### <a name="parameters"></a>參數
+
+*T*<br/>
+實作介面識別碼參數所指定的型別*riid*。
+
+*實作*<br/>
+範本參數所指定類型的變數*T*。
+
+*riid*<br/>
+要擷取的介面識別碼。
+
+*ppvObject*<br/>
+如果這項作業成功時，參數所指定的指標-至-a-介面的指標*riid*。
+
+### <a name="return-value"></a>傳回值
+
+如果成功則為 S_OK否則，會描述錯誤的 HRESULT。
+
+### <a name="remarks"></a>備註
+
+擷取指定的介面 ID 的指標
+
+## <a name="getimplementediids"></a>Runtimeclassbaset:: Getimplementediids
+
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+```cpp
+template<typename T>
+__forceinline static HRESULT GetImplementedIIDS(
+   _In_ T* implements,
+   _Out_ ULONG *iidCount,
+   _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids
+);
+```
+
+### <a name="parameters"></a>參數
+
+*T*<br/>
+型別*實作*參數。
+
+*實作*<br/>
+參數所指定的類型指標*T*。
+
+*iidCount*<br/>
+若要擷取的介面識別碼的數目上限。
+
+*iid*<br/>
+如果這項作業已順利完成，介面型別實作的 Id 陣列*T*。
+
+### <a name="return-value"></a>傳回值
+
+如果成功則為 S_OK否則，會描述錯誤的 HRESULT。
+
+### <a name="remarks"></a>備註
+
+擷取介面 Id 所指定的型別實作的陣列。

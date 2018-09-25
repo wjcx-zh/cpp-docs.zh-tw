@@ -1,7 +1,7 @@
 ---
 title: 逐步解說： 更新 MFC Scribble 應用程式 （第 2 部分） |Microsoft Docs
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 09/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 351aea09376d6cba7f091828225fd337fa3f68e1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 208ae27e694396a21b76bc482c87084e03a21975
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423149"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169680"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>逐步解說：更新 MFC Scribble 應用程式 (第 2 部分)
 
@@ -55,31 +55,29 @@ ms.locfileid: "46423149"
 
    1. 從**工具箱**，拖曳**面板**來**首頁**類別目錄。 然後將兩個**核取方塊**面板。
 
-   2. 按一下要修改其內容的面板。 變更**Caption**至`View`。
+   1. 按一下要修改其內容的面板。 變更**Caption**至`View`。
 
-   3. 按一下第一個核取方塊，若要修改其屬性。 變更**識別碼**要`ID_VIEW_TOOLBAR`並**標題**至`Toolbar`。
+   1. 按一下第一個核取方塊，若要修改其屬性。 變更**識別碼**要`ID_VIEW_TOOLBAR`並**標題**至`Toolbar`。
 
-   4. 按一下第二個核取方塊，若要修改其屬性。 變更**識別碼**要`ID_VIEW_STATUS_BAR`並**標題**至`Status Bar`。
+   1. 按一下第二個核取方塊，若要修改其屬性。 變更**識別碼**要`ID_VIEW_STATUS_BAR`並**標題**至`Status Bar`。
 
-2. 建立名為面板`Window`具有的分隔按鈕。 當使用者按一下 [分割] 按鈕時，快顯功能表會顯示 Scribble 應用程式中，已定義的三個命令。
+1. 建立名為面板`Window`具有的分隔按鈕。 當使用者按一下 [分割] 按鈕時，快顯功能表會顯示 Scribble 應用程式中，已定義的三個命令。
 
    1. 從**工具箱**，拖曳**面板**來**首頁**類別目錄。 然後將拖曳** 按鈕**面板。
 
-   2. 按一下要修改其內容的面板。 變更**Caption**至`Window`。
+   1. 按一下要修改其內容的面板。 變更**Caption**至`Window`。
 
-   3. 按一下按鈕。 變更**標題**要`Windows`，**金鑰**來`w`，**大型映像索引**到`1`，和**Split Mode**若要`False`。 然後按一下省略符號 (**...**) 旁**功能表項目**以開啟**項目編輯器** 對話方塊。
+   1. 按一下按鈕。 變更**標題**要`Windows`，**金鑰**來`w`，**大型映像索引**到`1`，和**Split Mode**若要`False`。 然後按一下省略符號 (**...**) 旁**功能表項目**以開啟**項目編輯器** 對話方塊。
 
-   4. 按一下 **新增**三次，以新增三個按鈕。
+   1. 按一下 **新增**三次，以新增三個按鈕。
 
-   5. 按一下第一個按鈕，然後變更**標題**要`New Window`，以及**識別碼**到`ID_WINDOW_NEW`。
+   1. 按一下第一個按鈕，然後變更**標題**要`New Window`，以及**識別碼**到`ID_WINDOW_NEW`。
 
-   6. 按一下第二個按鈕，然後變更**標題**要`Cascade`，以及**識別碼**到`ID_WINDOW_CASCADE`。
+   1. 按一下第二個按鈕，然後變更**標題**要`Cascade`，以及**識別碼**到`ID_WINDOW_CASCADE`。
 
-   7. 按一下第三個按鈕，然後變更**標題**要`Tile`，以及**識別碼**至`ID_WINDOW_TILE_HORZ`。
+   1. 按一下第三個按鈕，然後變更**標題**要`Tile`，以及**識別碼**至`ID_WINDOW_TILE_HORZ`。
 
-3. 儲存變更，然後建置並執行應用程式。 **檢視**並**視窗**應該顯示面板。 按一下按鈕，以確認它們正常運作。
-
-[[各節](#top)]
+1. 儲存變更，然後建置並執行應用程式。 **檢視**並**視窗**應該顯示面板。 按一下按鈕，以確認它們正常運作。
 
 ##  <a name="addhelppanel"></a> 在功能區中加入說明面板
 
@@ -89,18 +87,16 @@ ms.locfileid: "46423149"
 
 1. 從**工具箱**，拖曳**面板**來**首頁**類別目錄。 然後將兩個**按鈕**面板。
 
-2. 按一下要修改其內容的面板。 變更**Caption**至`Help`。
+1. 按一下要修改其內容的面板。 變更**Caption**至`Help`。
 
-3. 按一下第一個按鈕。 變更**標題**要`Help Topics`，以及**識別碼**至`ID_HELP_FINDER`。
+1. 按一下第一個按鈕。 變更**標題**要`Help Topics`，以及**識別碼**至`ID_HELP_FINDER`。
 
-4. 按一下第二個按鈕。 變更**標題**要`About Scribble...`，以及**識別碼**至`ID_APP_ABOUT`。
+1. 按一下第二個按鈕。 變更**標題**要`About Scribble...`，以及**識別碼**至`ID_APP_ABOUT`。
 
-5. 儲存變更，然後建置並執行應用程式。 A**協助**應該會顯示包含兩個功能區按鈕的面板。
+1. 儲存變更，然後建置並執行應用程式。 A**協助**應該會顯示包含兩個功能區按鈕的面板。
 
    > [!IMPORTANT]
    > 當您按一下 [**說明主題**] 按鈕，Scribble 應用程式會開啟壓縮的 (.chm) 的 HTML 說明檔，名為*your_project_name*。 有 因此，如果您的專案名稱不是 Scribble，您必須重新命名的說明檔為您的專案名稱。
-
-[[各節](#top)]
 
 ##  <a name="addpenpanel"></a> 在功能區中加入 [畫筆] 面板
 
@@ -112,27 +108,27 @@ ms.locfileid: "46423149"
 
 1. 從**工具箱**，拖曳**面板**來**首頁**類別目錄。 然後將拖曳** 核取方塊**並將兩個**下拉式方塊**面板。
 
-2. 按一下要修改其內容的面板。 變更**Caption**至`Pen`。
+1. 按一下要修改其內容的面板。 變更**Caption**至`Pen`。
 
-3. 按一下核取方塊。 變更**標題**要`Use Thick`，以及**識別碼**至`ID_PEN_THICK_OR_THIN`。
+1. 按一下核取方塊。 變更**標題**要`Use Thick`，以及**識別碼**至`ID_PEN_THICK_OR_THIN`。
 
-4. 按一下第一個下拉式方塊。 變更**標題**要`Thin Pen`，**識別碼**來`ID_PEN_THIN_WIDTH`，**文字**來`2`，**類型**至`Drop List`，並**資料**至`1;2;3;4;5;6;7;8;9;`。
+1. 按一下第一個下拉式方塊。 變更**標題**要`Thin Pen`，**識別碼**來`ID_PEN_THIN_WIDTH`，**類型**來`Drop List`，**資料**至`1;2;3;4;5;6;7;8;9;`，並**文字**至`2`。
 
-5. 按一下第二個下拉式方塊。 變更**標題**要`Thick Pen`，**識別碼**來`ID_PEN_THICK_WIDTH`，**文字**來`5`，**類型**至`Drop List`，並**資料**至`5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`。
+1. 按一下第二個下拉式方塊。 變更**標題**要`Thick Pen`，**識別碼**來`ID_PEN_THICK_WIDTH`，**類型**來`Drop List`，**資料**至`5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`，並**文字**至`5`。
 
-6. 新的下拉式方塊未對應到任何現有的功能表項目。 因此，您必須建立每個 [畫筆] 選項的功能表項目。
+1. 新的下拉式方塊未對應到任何現有的功能表項目。 因此，您必須建立每個 [畫筆] 選項的功能表項目。
 
-   1. 在 [**資源檢視**] 視窗中，開啟 IDR_SCRIBBTYPE 功能表資源。
+   1. 在 **資源檢視**視窗中，開啟**IDR_SCRIBBTYPE**功能表資源。
 
-   2. 按一下 **畫筆**以開啟 p**en**功能表。 然後按一下**在這裡輸入**並輸入`Thi&n Pen`。
+   1. 按一下 **畫筆**以開啟 畫筆 功能表。 然後按一下**在這裡輸入**並輸入`Thi&n Pen`。
 
-   3. 以滑鼠右鍵按一下您剛才輸入開啟的文字**屬性**視窗，然後再變更識別碼屬性`ID_PEN_THIN_WIDTH`。
+   1. 以滑鼠右鍵按一下您剛才輸入開啟的文字**屬性**視窗，然後再變更識別碼屬性`ID_PEN_THIN_WIDTH`。
 
-   4. 您也必須建立每個 [畫筆] 功能表項目的事件處理常式。 以滑鼠右鍵按一下**這個 & n 畫筆**功能表項目，您剛剛建立，然後按一下**加入事件處理常式**。 **事件處理常式精靈**隨即出現。
+   1. 您也必須建立每個 [畫筆] 功能表項目的事件處理常式。 以滑鼠右鍵按一下**這個 & n 畫筆**功能表項目，您剛剛建立，然後按一下**加入事件處理常式**。 **事件處理常式精靈**隨即出現。
 
-   5. 在 **類別清單**在精靈中，選取方塊**CScribbleDoc** ，然後按一下 **新增和編輯**。 這會建立名為事件處理常式`CScribbleDoc::OnPenThinWidth`。
+   1. 在 **類別清單**在精靈中，選取方塊**CScribbleDoc** ，然後按一下 **新增和編輯**。 這會建立名為事件處理常式`CScribbleDoc::OnPenThinWidth`。
 
-   6. 將下列程式碼加入至 `CScribbleDoc::OnPenThinWidth`。
+   1. 將下列程式碼加入至 `CScribbleDoc::OnPenThinWidth`。
 
     ```cpp
     // Get a pointer to the ribbon bar
@@ -147,26 +143,26 @@ ms.locfileid: "46423149"
     int nCurSel = pThinComboBox->GetCurSel();
     if (nCurSel>= 0)
     {
-        m_nThinWidth = atoi(pThinComboBox->GetItem(nCurSel));
+        m_nThinWidth = atoi(CStringA(pThinComboBox->GetItem(nCurSel)));
     }
 
     // Create a new pen using the selected width
     ReplacePen();
     ```
 
-7. 接下來，建立功能表項目和事件的處理常式，如粗的畫筆。
+1. 接下來，建立功能表項目和事件的處理常式，如粗的畫筆。
 
-   1. 在 [**資源檢視**] 視窗中，開啟 IDR_SCRIBBTYPE 功能表資源。
+   1. 在 **資源檢視**視窗中，開啟**IDR_SCRIBBTYPE**功能表資源。
 
-   2. 按一下 **畫筆**以開啟 畫筆 功能表。 然後按一下**在這裡輸入**並輸入`Thic&k Pen`。
+   1. 按一下 **畫筆**以開啟 畫筆 功能表。 然後按一下**在這裡輸入**並輸入`Thic&k Pen`。
 
-   3. 以滑鼠右鍵按一下您剛才輸入顯示的文字**屬性**視窗。 將識別碼屬性來變更`ID_PEN_THICK_WIDTH`。
+   1. 以滑鼠右鍵按一下您剛才輸入顯示的文字**屬性**視窗。 將識別碼屬性來變更`ID_PEN_THICK_WIDTH`。
 
-   4. 以滑鼠右鍵按一下**粗的畫筆**功能表項目，您剛剛建立，然後按一下**加入事件處理常式**。 **事件處理常式精靈**隨即出現。
+   1. 以滑鼠右鍵按一下**粗的畫筆**功能表項目，您剛剛建立，然後按一下**加入事件處理常式**。 **事件處理常式精靈**隨即出現。
 
-   5. 在 **類別清單** 方塊中的精靈中，選取**CScribbleDoc** ，然後按一下 **新增和編輯**。 這會建立名為事件處理常式`CScribbleDoc::OnPenThickWidth`。
+   1. 在 **類別清單** 方塊中的精靈中，選取**CScribbleDoc** ，然後按一下 **新增和編輯**。 這會建立名為事件處理常式`CScribbleDoc::OnPenThickWidth`。
 
-   6. 將下列程式碼加入至 `CScribbleDoc::OnPenThickWidth`。
+   1. 將下列程式碼加入至 `CScribbleDoc::OnPenThickWidth`。
 
       ```cpp
       // Get a pointer to the ribbon bar
@@ -179,16 +175,14 @@ ms.locfileid: "46423149"
       int nCurSel = pThickComboBox->GetCurSel();
       if (nCurSel>= 0)
       {
-          m_nThickWidth = atoi(pThickComboBox->GetItem(nCurSel));
+          m_nThickWidth = atoi(CStringA(pThickComboBox->GetItem(nCurSel)));
       }
 
       // Create a new pen using the selected width
       ReplacePen();
       ```
 
-8. 儲存變更，然後建置並執行應用程式。 新的按鈕和下拉式方塊應該會顯示。 請嘗試使用不同的畫筆寬度 scribble。
-
-[[各節](#top)]
+1. 儲存變更，然後建置並執行應用程式。 新的按鈕和下拉式方塊應該會顯示。 請嘗試使用不同的畫筆寬度 scribble。
 
 ##  <a name="addcolorbutton"></a> 加入 [畫筆] 面板中的色彩按鈕
 
@@ -196,19 +190,17 @@ ms.locfileid: "46423149"
 
 ### <a name="to-add-a-color-button-to-the-pen-panel"></a>若要加入 [畫筆] 面板中的色彩按鈕
 
-1. 新增色彩按鈕之前，請為其建立的功能表項目。 在 [**資源檢視**] 視窗中，開啟 IDR_SCRIBBTYPE 功能表資源。 按一下 **畫筆**以開啟 畫筆 功能表的功能表項目。 然後按一下**在這裡輸入**並輸入`&Color`。 以滑鼠右鍵按一下您剛才輸入顯示的文字**屬性**視窗。 變更要 ID `ID_PEN_COLOR`。
+1. 新增色彩按鈕之前，請為其建立的功能表項目。 在 **資源檢視**視窗中，開啟**IDR_SCRIBBTYPE**功能表資源。 按一下 **畫筆**以開啟 畫筆 功能表的功能表項目。 然後按一下**在這裡輸入**並輸入`&Color`。 以滑鼠右鍵按一下您剛才輸入顯示的文字**屬性**視窗。 變更要 ID `ID_PEN_COLOR`。
 
-2. 現在加入色彩按鈕。 從**工具箱**，拖曳**色彩按鈕**來**畫筆**面板。
+1. 現在加入色彩按鈕。 從**工具箱**，拖曳**色彩按鈕**來**畫筆**面板。
 
-3. 按一下色彩按鈕。 變更**標題**要`Color`，**識別碼**來`ID_PEN_COLOR`， **SimpleLook**到`True`，**大型映像索引**到`1`，並**Split Mode**至`False`。
+1. 按一下色彩按鈕。 變更**標題**要`Color`，**識別碼**來`ID_PEN_COLOR`， **Simple Look**到`True`，**大型映像索引**到`1`，並**Split Mode**至`False`。
 
-4. 儲存變更，然後建置並執行應用程式。 新的 [色彩] 按鈕應該顯示在**畫筆**面板。 不過，它不能因為它還沒有事件處理常式。 接下來的步驟示範如何加入 [色彩] 按鈕的事件處理常式。
-
-[[各節](#top)]
+1. 儲存變更，然後建置並執行應用程式。 新的 [色彩] 按鈕應該顯示在**畫筆**面板。 不過，它不能因為它還沒有事件處理常式。 接下來的步驟示範如何加入 [色彩] 按鈕的事件處理常式。
 
 ##  <a name="addcolormember"></a> 將色彩成員加入至文件類別
 
-因為原始的 Scribble 應用程式並沒有色彩的畫筆，您必須撰寫實作它們。 若要儲存文件的畫筆顏色，將新成員新增至文件類別中， `CscribbleDoc.`
+因為原始的 Scribble 應用程式並沒有色彩的畫筆，您必須撰寫實作它們。 若要儲存文件中的畫筆顏色將新成員新增至文件類別， `CscribbleDoc`。
 
 ### <a name="to-add-a-color-member-to-the-document-class"></a>若要將色彩成員新增至文件類別
 
@@ -219,20 +211,20 @@ ms.locfileid: "46423149"
    COLORREF m_penColor;
    ```
 
-2. 每個文件包含一份 stokes，使用者已繪製。 每個筆劃由定義`CStroke`物件。 `CStroke`類別不包含畫筆顏色的相關資訊。 因此，您必須修改該類別。 在 scribdoc.h，在`CStroke`類別中，新增下列程式碼行的定義之後`m_nPenWidth`資料成員。
+1. 每個文件包含一份 stokes，使用者已繪製。 每個筆劃由定義`CStroke`物件。 `CStroke`類別不包含畫筆顏色的相關資訊。 因此，您必須修改該類別。 在 scribdoc.h，在`CStroke`類別中，新增下列程式碼行的定義之後`m_nPenWidth`資料成員。
 
    ```cpp
    // Pen color for the stroke
    COLORREF m_penColor;
    ```
 
-3. 在 scribdoc.h，加入新`CStroke`建構函式的參數會指定寬度和色彩。 將下行程式碼之後新增`CStroke(UINT nPenWidth);`陳述式。
+1. 在 scribdoc.h，加入新`CStroke`建構函式的參數會指定寬度和色彩。 將下行程式碼之後新增`CStroke(UINT nPenWidth);`陳述式。
 
    ```cpp
    CStroke(UINT nPenWidth, COLORREF penColor);
    ```
 
-4. 在 scribdoc.cpp，加入新的實作`CStroke`建構函式。 實作之後新增下列程式碼`CStroke::CStroke(UINT nPenWidth)`建構函式。
+1. 在 scribdoc.cpp，加入新的實作`CStroke`建構函式。 實作之後新增下列程式碼`CStroke::CStroke(UINT nPenWidth)`建構函式。
 
    ```cpp
    // Constructor that uses the document's current width and color
@@ -244,40 +236,40 @@ ms.locfileid: "46423149"
    }
    ```
 
-5. 變更的第二行`CStroke::DrawStroke`方法，如下所示。
+1. 變更的第二行`CStroke::DrawStroke`方法，如下所示。
 
    ```cpp
    if (!penStroke.CreatePen(PS_SOLID, m_nPenWidth, m_penColor))
    ```
 
-6. 設定預設的畫筆色彩的文件類別。 在 scribdoc.cpp，新增下列行以`CScribbleDoc::InitDocument`之後，`m_nThickWidth = 5;`陳述式。
+1. 設定預設的畫筆色彩的文件類別。 在 scribdoc.cpp，新增下列行以`CScribbleDoc::InitDocument`之後，`m_nThickWidth = 5;`陳述式。
 
    ```cpp
    // default pen color is black
    m_penColor = RGB(0, 0, 0);
    ```
 
-7. 在 scribdoc.cpp，變更的第一行`CScribbleDoc::NewStroke`如下的方法。
+1. 在 scribdoc.cpp，變更的第一行`CScribbleDoc::NewStroke`如下的方法。
 
    ```cpp
    CStroke* pStrokeItem = new CStroke(m_nPenWidth, m_penColor);
    ```
 
-8. 變更的最後一行`CScribbleDoc::ReplacePen`如下的方法。
+1. 變更的最後一行`CScribbleDoc::ReplacePen`如下的方法。
 
    ```cpp
    m_penCur.CreatePen(PS_SOLID, m_nPenWidth, m_penColor);
    ```
 
-9. 您加入`m_penColor`上一個步驟中的成員。 現在，建立事件處理常式來設定成員的色彩按鈕。
+1. 您加入`m_penColor`上一個步驟中的成員。 現在，建立事件處理常式來設定成員的色彩按鈕。
 
    1. 在 [**資源檢視**] 視窗中，開啟 IDR_SCRIBBTYPE 功能表資源。
 
-   2. 以滑鼠右鍵按一下**色彩**功能表項目，然後按一下**加入事件處理常式**。 **事件處理常式精靈**隨即出現。
+   1. 以滑鼠右鍵按一下**色彩**功能表項目，然後按一下**加入事件處理常式**。 **事件處理常式精靈**隨即出現。
 
-   3. 在 **類別清單**在精靈中，選取方塊**CScribbleDoc** ，然後按一下 **新增和編輯** 按鈕。 這會建立`CScribbleDoc::OnPenColor`事件處理常式 stub。
+   1. 在 **類別清單**在精靈中，選取方塊**CScribbleDoc** ，然後按一下 **新增和編輯** 按鈕。 這會建立`CScribbleDoc::OnPenColor`事件處理常式 stub。
 
-10. 取代為虛設常式`CScribbleDoc::OnPenColor`為下列程式碼的事件處理常式。
+1. 取代為虛設常式`CScribbleDoc::OnPenColor`為下列程式碼的事件處理常式。
 
    ```cpp
    void CScribbleDoc::OnPenColor()
@@ -295,9 +287,7 @@ ms.locfileid: "46423149"
    }
    ```
 
-11. 儲存變更然後建置並執行應用程式。 您應該能夠按下 [色彩] 按鈕，並將手寫筆的色彩變更。
-
-[[各節](#top)]
+1. 儲存變更然後建置並執行應用程式。 您應該能夠按下 [色彩] 按鈕，並將手寫筆的色彩變更。
 
 ##  <a name="initpensave"></a> 初始化畫筆及儲存喜好設定
 
@@ -337,21 +327,19 @@ ms.locfileid: "46423149"
    pThickComboBox->SelectItem(0);
    ```
 
-2. 儲存檔案所繪製的色彩。 在新增 scribdoc.cpp，下列陳述式`CStroke::Serialize`方法之後，`ar << (WORD)m_nPenWidth;`陳述式。
+1. 儲存檔案所繪製的色彩。 在新增 scribdoc.cpp，下列陳述式`CStroke::Serialize`方法之後，`ar << (WORD)m_nPenWidth;`陳述式。
 
    ```cpp
    ar << (COLORREF)m_penColor;
-    ```
+   ```
 
-3. 最後，載入從檔案中繪製的色彩。 在中新增下列程式碼，行`CStroke::Serialize`方法之後，`m_nPenWidth = w;`陳述式。
+1. 最後，載入從檔案中繪製的色彩。 在中新增下列程式碼，行`CStroke::Serialize`方法之後，`m_nPenWidth = w;`陳述式。
 
    ```cpp
    ar >> m_penColor;
    ```
 
-4. 現在手繪多邊形的色彩，並將您的繪圖儲存至檔案。
-
-[[各節](#top)]
+1. 現在手繪多邊形的色彩，並將您的繪圖儲存至檔案。
 
 ## <a name="conclusion"></a>結論
 

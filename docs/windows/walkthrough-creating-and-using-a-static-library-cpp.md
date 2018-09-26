@@ -16,12 +16,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d495843d7979ace1d23710eb50c910e9089cf9c
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: a85789123b1dd9129916683c08484bf6607a0687
+ms.sourcegitcommit: 9799816278ffa3e6b64199862ec57143c1b1ea56
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029693"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47188115"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>逐步解說：建立和使用靜態程式庫 (C++)
 
@@ -60,7 +60,7 @@ ms.locfileid: "47029693"
 
         1. 底下**應用程式類型**，選取**靜態程式庫 (.lib)**。
 
-        1. 底下**Additioal 選項**，取消核取**先行編譯標頭**核取方塊。
+        1. 底下**其他選項**，取消核取**先行編譯標頭**核取方塊。
 
         1. 選擇**確定**建立專案。
 
@@ -108,7 +108,7 @@ ms.locfileid: "47029693"
 
         1. 底下**應用程式類型**，選取**主控台應用程式 (.exe)**。
 
-        1. 底下**Additioal 選項**，取消核取**先行編譯標頭**核取方塊。
+        1. 底下**其他選項**，取消核取**先行編譯標頭**核取方塊。
 
         1. 選擇**確定**建立專案。
 

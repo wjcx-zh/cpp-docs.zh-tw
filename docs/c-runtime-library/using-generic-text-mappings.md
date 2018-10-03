@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9435076bdc02f9f0b8a909ffdbc60dd06e1a388
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4aeee73cb065e40d345dcbfe35ac2d6a7be03d90
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097519"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234654"
 ---
 # <a name="using-generic-text-mappings"></a>使用泛型文字對應
 
@@ -105,7 +105,7 @@ RetVal = strrev(szString);
 
 因此，您可以撰寫、維護及編譯單一原始程式碼檔案，以搭配專屬於三種字元集其中一種的常式執行。
 
- **結束 Microsoft 專屬**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>請參閱
 

@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b65ceb18eb6b8f24db0a85ba2ed13277b13f657
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 45428f1642b428640509978f29c0a36b60696cb0
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117493"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235057"
 ---
 # <a name="string-to-numeric-value-functions"></a>字串轉換為數值函式
 
@@ -94,7 +94,7 @@ ms.locfileid: "46117493"
 |`_strtoui64`|溢位|**_UI64_MAX**|
 |`_strtoui64`|未轉換|0|
 
- **_I64_MAX**、_**I64_MIN** 和 **_UI64_MAX** 定義於 LIMITS.H 內。
+**_I64_MAX**、_**I64_MIN** 和 **_UI64_MAX** 定義於 LIMITS.H 內。
 
 `wcstod`、`wcstol`、`wcstoul`、`_wcstoi64` 和 `_wcstoui64` 分別是寬字元版本的 `strtod`、`strtol`、`strtoul`、`_strtoi64` 和 `_strtoui64`；所有這些寬字元函式之轉換結束引數的指標是寬字元字串。 否則，所有這些寬字元函式與其單一位元組字元對應項目的行為完全相同。
 

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbb02f426e839eff20a1dcd37ab41d4a08640599
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3adde04ba8fe259c25f3439cef247192eea175f2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081529"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48233669"
 ---
 # <a name="a-sample-generic-text-program"></a>泛型文字程式範例
 
@@ -31,7 +31,7 @@ ms.locfileid: "46081529"
 
 以下的程式 GENTEXT.C 會提供更詳盡的圖例，說明如何使用 TCHAR.H 中定義的泛用文字對應：
 
-```
+```C
 // GENTEXT.C
 // use of generic-text mappings defined in TCHAR.H
 
@@ -67,12 +67,11 @@ int __cdecl _tmain(int argc, _TCHAR **argv, _TCHAR **envp)
    _tprintf(_T("'%s'\n"), _tcsrev(_tcsdup(str)));
    return 0;
 }
-
 ```
 
 `_MBCS` 如已定義，GENTEXT.C 就會對應至以下的 MBCS 程式︰
 
-```
+```C
 // crt_mbcsgtxt.c
 
 /*
@@ -110,7 +109,7 @@ int __cdecl main(int argc, char **argv, char **envp)
 
 `_UNICODE` 如已定義，GENTEXT.C 就會對應至以下程式的 Unicode 版本。 如需使用 Unicode 程式的 `wmain` 取代 `main` 的詳細資訊，請參閱在 *C 語言參考*中[使用 wmain](../c-language/using-wmain.md)。
 
-```
+```C
 // crt_unicgtxt.c
 
 /*
@@ -148,7 +147,7 @@ int __cdecl wmain(int argc, wchar_t **argv, wchar_t **envp)
 
 如果 `_MBCS` 和 `_UNICODE` 皆未定義，GENTEXT.C 就會對應至單一位元組的 ASCII 碼，如下所示︰
 
-```
+```C
 // crt_sbcsgtxt.c
 /*
  * Use of generic-text mappings defined in TCHAR.H
@@ -183,7 +182,7 @@ int __cdecl main(int argc, char **argv, char **envp)
 }
 ```
 
- **結束 Microsoft 專屬**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>請參閱
 

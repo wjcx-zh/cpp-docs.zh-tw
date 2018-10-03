@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b656af864f8a0dd7c5a69866976b4c1e624b87b9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 30e843c6df70548257de1bf1af8c5f0e83555652
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764289"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234055"
 ---
 # <a name="implementing-a-dialog-box"></a>實作對話方塊
 
@@ -30,7 +30,7 @@ ms.locfileid: "43764289"
 
 ## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>新增 ATL 對話方塊精靈對話方塊
 
-在 [加入類別對話方塊](../ide/add-class-dialog-box.md)，選取 ATL 專案中加入對話方塊中的 ATL 對話方塊物件。 在 ATL 對話方塊精靈 中，適當地填入，然後按一下**完成**。 精靈會新增一個衍生自類別[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)至您的專案。 開啟 資源 檢視，從**檢視** 功能表中，找出您的對話方塊，然後按兩下以在資源編輯器中開啟它。
+在 [加入類別對話方塊](../ide/add-class-dialog-box.md)，選取 ATL 專案中加入對話方塊中的 ATL 對話方塊物件。 在 ATL 對話方塊精靈 中，適當地填入，然後按一下**完成**。 精靈會新增一個衍生自類別[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)至您的專案。 開啟**資源檢視**從**檢視** 功能表中，找出您的對話方塊，然後按兩下以在資源編輯器中開啟它。
 
 > [!NOTE]
 >  如果您的對話方塊中衍生自`CAxDialogImpl`，它可以裝載這兩個 ActiveX 和 Windows 控制項。 如果您不想 ActiveX 控制項支援的額外負荷，在您的對話方塊類別中，使用[CSimpleDialog](../atl/reference/csimpledialog-class.md)或是[CDialogImpl](../atl/reference/cdialogimpl-class.md)改。

@@ -1,7 +1,7 @@
 ---
 title: path 類別 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/10/2018
+ms.date: 09/27/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd8fa524d0c41d437575a61ff4e4456fd9933404
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7674f07c92f8a0c9d8a9070f3f99e00dfde39140
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725305"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235460"
 ---
 # <a name="path-class"></a>path 類別
 
-**路徑**類別會儲存類型的物件`string_type`，稱為`myname`這裡基於的說明，適合用為路徑名稱。 `string_type` 是的同義字`basic_string<value_type>`，其中`value_type`同義**char**在 Windows 或**wchar_t** Posix 下。
+**路徑**類別會儲存類型的物件`string_type`，稱為`myname`這裡基於的說明，適合用為路徑名稱。 `string_type` 是的同義字`basic_string<value_type>`，其中`value_type`同義**wchar_t**上 Windows 或**char** POSIX 上。
 
 如需詳細資訊與程式碼範例，請參閱[檔案系統巡覽 (C++)](../standard-library/file-system-navigation.md)。
 

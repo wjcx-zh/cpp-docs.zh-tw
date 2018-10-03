@@ -152,12 +152,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a1472cba13f477143c9b9ace27cb2555f41406
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a95141aa97d7272970adaaa69f3f63de2a622780
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408423"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235642"
 ---
 # <a name="predefined-macros"></a>預先定義的巨集
 
@@ -435,7 +435,7 @@ Microsoft Visual c + + 支援這些額外的預先定義巨集。
 
 - **&#95;WINRT&#95;DLL**定義為 1 時，編譯為 c + + 和兩者[/ZW （Windows 執行階段編譯）](../build/reference/zw-windows-runtime-compilation.md)並[/LD 或 /LDd](../build/reference/md-mt-ld-use-run-time-library.md)編譯器選項設定。 否則，未定義。
 
- 編譯器不預先定義前置處理器巨集，用來判斷 ATL 或 MFC 程式庫版本。 這些巨集是在程式庫、 標頭中定義的所以並未在前置處理器指示詞中定義，才會包含所需的標頭。
+編譯器不預先定義前置處理器巨集，用來判斷 ATL 或 MFC 程式庫版本。 這些巨集是在程式庫、 標頭中定義的所以並未在前置處理器指示詞中定義，才會包含所需的標頭。
 
 - **&#95;ATL&#95;VER**中定義\<atldef.h > 編碼 ATL 版本號碼的整數常值。
 

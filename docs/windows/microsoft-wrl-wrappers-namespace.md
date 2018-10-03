@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 51964bb2d4cb13394f9efb0e36d572cf9309637d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2b1a63494e06ce3117e7e8fccd1d0cbca8cdb4d0
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605663"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250337"
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Microsoft::WRL::Wrappers 命名空間
 
@@ -47,11 +47,11 @@ namespace Microsoft::WRL::Wrappers;
 |名稱|描述|
 |----------|-----------------|
 |[CriticalSection 類別](../windows/criticalsection-class.md)|表示重要區段物件。|
-|[Event 類別 (Windows 執行階段 C++ 範本庫)](../windows/event-class-windows-runtime-cpp-template-library.md)|表示事件。|
+|[事件類別 (WRL)](../windows/event-class-wrl.md)|表示事件。|
 |[HandleT 類別](../windows/handlet-class.md)|物件表示的控制代碼。|
 |[HString 類別](../windows/hstring-class.md)|提供對管理 HSTRING 控制代碼支援。|
 |[HStringReference 類別](../windows/hstringreference-class.md)|表示從現有字串建立的 HSTRING。|
-|[Mutex 類別](../windows/mutex-class1.md)|表示以獨佔方式控制共用的資源的同步處理物件。|
+|[Mutex 類別](../windows/mutex-class.md)|表示以獨佔方式控制共用的資源的同步處理物件。|
 |[RoInitializeWrapper 類別](../windows/roinitializewrapper-class.md)|初始化 Windows 執行階段。|
 |[Semaphore 類別](../windows/semaphore-class.md)|表示控制項可以支援有限的數目的使用者共用的資源的同步處理物件。|
 |[SRWLock 類別](../windows/srwlock-class.md)|表示輕型讀取器/寫入器鎖定。|

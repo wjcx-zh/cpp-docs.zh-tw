@@ -1,28 +1,30 @@
 ---
 title: BoolStruct 結構 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::BoolStruct
+- internal/Microsoft::WRL::Details::BoolStruct::Member
 dev_langs:
 - C++
 helpviewer_keywords:
-- BoolStruct structure
+- Microsoft::WRL::Details::BoolStruct structure
+- Microsoft::WRL::Details::BoolStruct::Member data member
 ms.assetid: 666eae78-e81d-4fb7-a9e4-1ba617d6d4cd
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 13c1e57ec0b2f7459bdab447a6f7fe98ac8eb1d1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 74a292f2253d29730e8ee9104ea81308081c0496
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416653"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234264"
 ---
 # <a name="boolstruct-structure"></a>BoolStruct 結構
 
@@ -36,15 +38,15 @@ struct BoolStruct;
 
 ## <a name="remarks"></a>備註
 
-**BoolStruct**結構會定義是否`ComPtr`管理介面的物件存留期。 **BoolStruct**會在內部使用[BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)運算子。
+`BoolStruct`結構會定義是否`ComPtr`管理介面的物件存留期。 `BoolStruct` 會在內部使用[BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)運算子。
 
 ## <a name="members"></a>成員
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|描述|
-|----------|-----------------|
-|[BoolStruct::Member 資料成員](../windows/boolstruct-member-data-member.md)|指定[ComPtr](../windows/comptr-class.md) ，或不是，管理介面的物件存留期。|
+名稱                          | 描述
+----------------------------- | ------------------------------------------------------------------------------------------------------------------
+[Boolstruct:: Member](#member) | 指定[ComPtr](../windows/comptr-class.md) ，或不是，管理介面的物件存留期。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -56,7 +58,14 @@ struct BoolStruct;
 
 **命名空間：** Microsoft::WRL::Details
 
-## <a name="see-also"></a>另請參閱
+## <a name="member"></a>Boolstruct:: Member
 
-[Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)<br/>
-[ComPtr::operator Microsoft::WRL::Details::BoolType 運算子](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+```cpp
+int Member;
+```
+
+### <a name="remarks"></a>備註
+
+指定[ComPtr](../windows/comptr-class.md) ，或不是，管理介面的物件存留期。

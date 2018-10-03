@@ -1,28 +1,32 @@
 ---
 title: CriticalSectionTraits 結構 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/26/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::GetInvalidValue
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
-- CriticalSectionTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::GetInvalidValue method
+- Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::Unlock method
 ms.assetid: c515a1b5-4eb0-40bc-9035-c4d9352c9de7
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d15f65ecc2253556a6812cfb90ef78f90c7fb29
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 420ab1019dfa2e95e00e366c64509178ad20e685
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594730"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234335"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits 結構
 
@@ -38,16 +42,16 @@ struct CriticalSectionTraits;
 
 ### <a name="public-typedefs"></a>公用 Typedefs
 
-|名稱|描述|
-|----------|-----------------|
-|`Type`|A **typedef**重要區段定義的指標。 `Type` 定義為`typedef CRITICAL_SECTION* Type;`。|
+名稱   | 描述
+------ | -----------------------------------------------------------------------------------------------------------------
+`Type` | A`typedef`重要區段定義的指標。 `Type` 定義為`typedef CRITICAL_SECTION* Type;`。
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
-|----------|-----------------|
-|[CriticalSectionTraits::GetInvalidValue 方法](../windows/criticalsectiontraits-getinvalidvalue-method.md)|特製化`CriticalSection`範本，讓範本不一定正確。|
-|[CriticalSectionTraits::Unlock 方法](../windows/criticalsectiontraits-unlock-method.md)|特製化`CriticalSection`範本，因此它支援指定的重要區段物件釋放擁有權。|
+名稱                                                       | 描述
+---------------------------------------------------------- | -----------------
+[Criticalsectiontraits:: Getinvalidvalue](#getinvalidvalue) | 特製化`CriticalSection`範本，讓範本不一定正確。
+[Criticalsectiontraits:: Unlock](#unlock)                   | 特製化`CriticalSection`範本，因此它支援指定的重要區段物件釋放擁有權。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -59,6 +63,39 @@ struct CriticalSectionTraits;
 
 **命名空間：** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="see-also"></a>另請參閱
+## <a name="getinvalidvalue"></a>Criticalsectiontraits:: Getinvalidvalue
 
-[Microsoft::WRL::Wrappers::HandleTraits 命名空間](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+特製化`CriticalSection`範本，讓範本不一定正確。
+
+```cpp
+inline static Type GetInvalidValue();
+```
+
+### <a name="return-value"></a>傳回值
+
+一律傳回無效的重要區段的指標。
+
+### <a name="remarks"></a>備註
+
+`Type`修飾詞指`typedef CRITICAL_SECTION* Type;`。
+
+## <a name="unlock"></a>Criticalsectiontraits:: Unlock
+
+特製化`CriticalSection`範本，因此它支援指定的重要區段物件釋放擁有權。
+
+```cpp
+inline static void Unlock(
+   _In_ Type cs
+);
+```
+
+### <a name="parameters"></a>參數
+
+*cs*<br/>
+重要區段物件的指標。
+
+### <a name="remarks"></a>備註
+
+`Type`修飾詞指`typedef CRITICAL_SECTION* Type;`。
+
+如需詳細資訊，請參閱 < **LeaveCriticalSection 函式**中**同步處理函式**Windows API 文件的章節。

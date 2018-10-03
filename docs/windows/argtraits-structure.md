@@ -1,28 +1,30 @@
 ---
 title: ArgTraits 結構 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Details::ArgTraits
+- event/Microsoft::WRL::Details::ArgTraits::args
 dev_langs:
 - C++
 helpviewer_keywords:
-- ArgTraits structure
+- Microsoft::WRL::Details::ArgTraits structure
+- Microsoft::WRL::Details::ArgTraits::args constant
 ms.assetid: 58ae4115-c1bc-48c8-b01b-e60554841c30
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 047754338566d476fa8e832d58dd2d4cd0776a63
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b84658271793b5f8c48ad54df44aec27022ea5a1
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418394"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48236071"
 ---
 # <a name="argtraits-structure"></a>ArgTraits 結構
 
@@ -155,29 +157,29 @@ Typename 參數不符合任何 ArgTraits 結構`Invoke`方法簽章。
 
 ## <a name="remarks"></a>備註
 
-**ArgTraits**結構宣告指定的委派，介面和匿名的成員函式具有指定的參數數目。
+`ArgTraits`結構宣告指定的委派，介面和匿名的成員函式具有指定的參數數目。
 
 ## <a name="members"></a>成員
 
 ### <a name="public-typedefs"></a>公用 Typedefs
 
-|名稱|描述|
-|----------|-----------------|
-|`Arg1Type`|TArg1 typedef。|
-|`Arg2Type`|TArg2 typedef。|
-|`Arg3Type`|TArg3 typedef。|
-|`Arg4Type`|TArg4 typedef。|
-|`Arg5Type`|TArg5 typedef。|
-|`Arg6Type`|TArg6 typedef。|
-|`Arg7Type`|TArg7 typedef。|
-|`Arg8Type`|TArg8 typedef。|
-|`Arg9Type`|TArg9 typedef。|
+名稱       | 描述
+---------- | ----------------------
+`Arg1Type` | TArg1 typedef。
+`Arg2Type` | TArg2 typedef。
+`Arg3Type` | TArg3 typedef。
+`Arg4Type` | TArg4 typedef。
+`Arg5Type` | TArg5 typedef。
+`Arg6Type` | TArg6 typedef。
+`Arg7Type` | TArg7 typedef。
+`Arg8Type` | TArg8 typedef。
+`Arg9Type` | TArg9 typedef。
 
 ### <a name="public-constants"></a>公用常數
 
-|名稱|描述|
-|----------|-----------------|
-|[ArgTraits::args 常數](../windows/argtraits-args-constant.md)|將保存的參數數目的計數`Invoke`委派介面的方法。|
+名稱                     | 描述
+------------------------ | ---------------------------------------------------------------------------------------
+[Argtraits:: Args](#args) | 將保存的參數數目的計數`Invoke`委派介面的方法。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -189,6 +191,14 @@ Typename 參數不符合任何 ArgTraits 結構`Invoke`方法簽章。
 
 **命名空間：** Microsoft::WRL::Details
 
-## <a name="see-also"></a>另請參閱
+## <a name="args"></a>Argtraits:: Args
 
-[Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+```cpp
+static const int args = -1;
+```
+
+### <a name="remarks"></a>備註
+
+將保存的參數數目的計數`Invoke`委派介面的方法。 當`args`等於-1，可針對沒有相符項目`Invoke`方法簽章。

@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e9541517852696073a3dbbff560bb6c44fd3264
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 0b50234efa193adda081520667658f57e42de1b4
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029667"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235410"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>逐步解說： 建立傳統 Windows 桌面應用程式 （c + +）
 
 本逐步解說示範如何在 Visual Studio 中建立傳統 Windows 桌面應用程式。 您將建立範例應用程式使用 Windows API 來顯示"Hello，Windows desktop"！ 視窗中顯示 "Hello, World!" 的基本 Windows 傳統型應用程式。 您可以使用在這個逐步解說中開發的程式碼作為模式，來建立其他 Windows 傳統型應用程式。
 
-Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 API） 是建立 Windows 應用程式的 C 語言的基礎架構。 它已從 1980 年代，並已用來建立 Windows 應用程式數十年。 已在此 API，例如 MFC、 ATL 和.NET framework 之上建置更進階且更容易程式的架構。 即使是最新式的程式碼，UWP 和存放區撰寫之應用程式在 C + + /cli WinRT 使用下面這個 API。 如需有關 Windows API 的詳細資訊，請參閱 < [Windows API 索引](/windows/desktop/apiindex/windows-api-list)。 有許多方式可建立 Windows 應用程式，但這是第一個。
+Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 API） 是 C 語言為基礎的架構，用於建立 Windows 應用程式。 它已從 1980 年代，並已用來建立 Windows 應用程式數十年。 更進階且更容易程式的架構已建置的 Windows API，例如 MFC、 ATL 和.NET framework 之上。 即使是最新式的程式碼，UWP 和存放區撰寫之應用程式在 C + + /cli WinRT 使用 Windows API 底下。 如需有關 Windows API 的詳細資訊，請參閱 < [Windows API 索引](/windows/desktop/apiindex/windows-api-list)。 有許多方式可建立 Windows 應用程式，但上述程序是第一個。
 
 > [!IMPORTANT]
 > 為了保持簡潔，省略某些程式碼陳述式文字中。 [建置程式碼](#build-the-code)這份文件結尾的區段會顯示完整的程式碼。
@@ -140,13 +140,13 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
    );
    ```
 
-   在此函式中，您撰寫程式碼來處理*訊息*接收從 Windows 的應用程式時*事件*發生。 比方說，如果使用者選擇 [確定] 按鈕，在您的應用程式中，Windows 會將訊息傳送給您，而您可以撰寫程式碼內您`WndProc`會執行任何工作適當的函式。 這就叫做*處理*事件。 您只需要處理您的應用程式相關的事件。
+   在此函式中，您可以撰寫程式碼來處理*訊息*接收從 Windows 的應用程式時*事件*發生。 比方說，如果使用者選擇 [確定] 按鈕，在您的應用程式中，Windows 會將訊息傳送給您，而您可以撰寫程式碼內您`WndProc`會執行任何工作適當的函式。 它會呼叫*處理*事件。 您只需要處理您的應用程式相關的事件。
 
    如需詳細資訊，請參閱 < [Window 程序](https://msdn.microsoft.com/library/windows/desktop/ms632593)。
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>將功能加入 WinMain 函式中
 
-1. 在 `WinMain`函式中，填入類型的結構[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)。 此結構包含視窗中，例如，應用程式圖示、 背景色彩 視窗中，要顯示在標題列中，而非常重要的是，您的視窗程序的函式指標的名稱的相關資訊。 下列範例會顯示一個典型的 `WNDCLASSEX` 結構。
+1. 在 `WinMain`函式中，填入類型的結構[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)。 此結構包含視窗，例如，應用程式圖示、 視窗中，要顯示在標題列中，和重要的是，您的視窗程序的函式指標的名稱的背景色彩的相關資訊。 下列範例會顯示一個典型的 `WNDCLASSEX` 結構。
 
    ```cpp
    WNDCLASSEX wcex;
@@ -165,9 +165,9 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
    wcex.hIconSm        = LoadIcon(wcex.hInstance, IDI_APPLICATION);
    ```
 
-   此結構欄位的詳細資訊，請參閱[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)。
+   上述的結構欄位的詳細資訊，請參閱[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)。
 
-1. 您必須註冊`WNDCLASSEX`與 Windows，讓它知道有關您的視窗，以及如何將訊息傳送給它。 使用[RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587)函式，並將視窗類別結構當做引數。 `_T`巨集，因為我們使用`TCHAR`型別。
+1. 註冊`WNDCLASSEX`與 Windows，讓它知道有關您的視窗，以及如何將訊息傳送給它。 使用[RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587)函式，並將視窗類別結構當做引數。 `_T`巨集，因為我們使用`TCHAR`型別。
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -221,7 +221,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
 
    此函數會傳回`HWND`，這是視窗的控制代碼。 控制代碼會有些許類似 Windows 會使用要追蹤開啟的視窗的指標。 如需詳細資訊，請參閱 < [Windows 資料類型](/windows/desktop/WinProg/windows-data-types)。
 
-1. 此時已建立的視窗，但我們仍需要告知要顯示的 Windows。 這就是此程式碼的:
+1. 此時，已建立的視窗，但我們仍需要告知要顯示的 Windows。 這就是此程式碼的:
 
    ```cpp
    // The parameters to ShowWindow explained:
@@ -232,7 +232,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
    UpdateWindow(hWnd);
    ```
 
-   顯示的視窗不具有太多內容，因為尚未實作`WndProc`函式。 換句話說，應用程式，並不會尚未處理的訊息，Windows 現在會將傳送給它。
+   顯示的視窗沒有太多內容，因為您還未實作`WndProc`函式。 換句話說，應用程式還不處理 Windows 現在會將傳送給它的訊息。
 
 1. 若要處理訊息，我們會先新增訊息迴圈，以接聽訊息，Windows 會傳送。 當應用程式收到訊息時，這個迴圈會分派到您`WndProc`函式來處理。 此訊息迴圈會類似下列程式碼。
 
@@ -340,9 +340,9 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
 
 1. 若要讓 `WndProc` 函式處理應用程式所接收的訊息，請實作 switch 陳述式。
 
-   是一個重要的訊息，以處理[WM_PAINT](/windows/desktop/gdi/wm-paint)訊息。 當應用程式所顯示的視窗有某部分必須更新時，應用程式就會收到這個訊息 當使用者移動程式視窗中，前面的視窗，然後將它移開一次，就會發生此事件。 您的應用程式不知道何時會發生這類的事件;只有 Windows 知道，因此它會通知您`WM_PAINT`。 當第一次顯示視窗時，全都必須更新。
+   是一個重要的訊息，以處理[WM_PAINT](/windows/desktop/gdi/wm-paint)訊息。 應用程式收到`WM_PAINT`必須更新時顯示的視窗部分的訊息。 當使用者移動程式視窗中，前面的視窗，然後將它移開一次，並不知道您的應用程式，這些事件發生時，就會發生的事件。 只有 Windows 知道，因此它會通知您`WM_PAINT`。 當第一次顯示視窗時，全都必須更新。
 
-   若要處理`WM_PAINT`訊息，第一次呼叫[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint)，然後處理用以配置文字、 按鈕和其他控制項在視窗中，所有邏輯，然後呼叫[EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint)。 此應用程式，在開頭呼叫與結尾呼叫之間的邏輯是顯示字串"Hello，Windows desktop"！ 在視窗中顯示 "Hello, World!" 字串。 在下列程式碼中，注意[TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta)函數用來顯示字串。
+   若要處理`WM_PAINT`訊息，第一次呼叫[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint)，然後處理用以配置文字、 按鈕和其他控制項在視窗中，所有邏輯，然後呼叫[EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint)。 應用程式，在開頭呼叫與結尾呼叫之間的邏輯是顯示字串"Hello，Windows desktop"！ 在視窗中顯示 "Hello, World!" 字串。 在下列程式碼中，注意[TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta)函數用來顯示字串。
 
    ```cpp
    PAINTSTRUCT ps;
@@ -367,7 +367,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
    }
    ```
 
-   `HDC` 在這段程式碼是裝置內容，也就是 Windows 使用，讓您與圖形子系統進行通訊的應用程式的資料結構的控制代碼。 `BeginPaint`和`EndPaint`函式可確保您的應用程式行為就像個模範生，並不會使用長比所需的裝置內容。 這有助於確保圖形子系統是可供其他應用程式。
+   `HDC` 在程式碼是裝置內容，也就是 Windows 使用，讓您與圖形子系統進行通訊的應用程式的資料結構的控制代碼。 `BeginPaint`和`EndPaint`函式讓應用程式表現良好的公民，但未使用的裝置內容，還要長。 函式有助於讓圖形子系統可供其他應用程式使用。
 
 1. 應用程式通常會處理許多其他訊息，例如[WM_CREATE](/windows/desktop/winmsg/wm-create)時第一次建立視窗，並[WM_DESTROY](/windows/desktop/winmsg/wm-destroy)視窗關閉時。 下列程式碼會顯示基本但完整的 `WndProc` 函式。
 

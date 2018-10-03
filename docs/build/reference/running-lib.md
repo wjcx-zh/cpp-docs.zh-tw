@@ -1,7 +1,7 @@
 ---
 title: 執行 LIB |Microsoft Docs
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/28/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff75c149ff3cfff5a360314386cc4828d00f4e8d
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 5d8a221a829d3cded8d974c608bdd27edab07f60
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894599"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235411"
 ---
 # <a name="running-lib"></a>執行 LIB
 
@@ -62,25 +62,29 @@ ms.locfileid: "43894599"
 
 檔案*commandfile&lt*是文字檔案。 允許之間沒有空格或定位字元 at 符號 (**\@**) 和檔案名稱。 沒有任何預設的延伸模組;您必須指定完整的檔名，包括任何副檔名。 無法使用萬用字元。 您可以指定絕對或相對路徑與檔案名稱。
 
-在命令檔中，引數可以如同他們可以在命令列; 上的空格或定位點，以分隔它們也可以以新行字元分隔。 您可以使用分號 （;） 來標記註解。 LIB 會忽略從分號到行結尾的所有文字。
+在命令檔中，引數可以如同他們可以在命令列; 上的空格或定位點，以分隔它們也可以以新行字元分隔。 請使用分號 (**;**) 來標記註解。 LIB 會忽略從分號到行結尾的所有文字。
 
 您可以在命令檔中，指定所有或部分命令列，而且您可以使用 LIB 命令中的多個命令檔。 LIB 接受命令檔案輸入，如同它已指定命令列上該位置中。 不可為巢狀命令檔。 LIB 會回應命令檔案的內容，除非使用 /NOLOGO 選項。
 
 ## <a name="using-lib-options"></a>使用 LIB 選項
 
-選項選項規範組成，這是一個破折號 （-） 或斜線 （/），後面加上選項的名稱。 選項名稱不能被縮寫。 有些選項需要引數，指定在冒號 （:） 之後。 內的選項規格允許沒有空格或定位字元。 使用一個或多個空間索引標籤來分隔命令列上的選項規格。 選項名稱和其關鍵字或檔名引數不區分大小寫，但做為引數的識別碼會區分大小寫。 LIB 處理命令列上指定的順序和命令檔中的選項。 如果選項會重複使用不同的引數，則最後一個来處理的優先順序較高。
+選項所組成的選項指定名稱，也就是其中一個以連字號 (**-**) 或斜線 (**/**)，後面接著選項的名稱。 選項名稱不能被縮寫。 某些選項可接受引數，指定在冒號之後 (**:**)。 內的選項規格允許沒有空格或定位字元。 使用一個或多個空間索引標籤來分隔命令列上的選項規格。 選項名稱和其關鍵字或檔名引數不區分大小寫，但做為引數的識別碼會區分大小寫。 LIB 處理命令列上指定的順序和命令檔中的選項。 如果選項會重複使用不同的引數，則最後一個来處理的優先順序較高。
 
 下列選項適用於所有模式的程式庫：
 
 > **/ERRORREPORT** [**NONE** &AMP;#124; **提示** &AMP;#124; **佇列** &AMP;#124; **傳送**]
 
-如果 lib.exe 在執行階段失敗，您可以使用 /ERRORREPORT 有關這些內部錯誤，傳送給 Microsoft 的資訊。
+如果 lib.exe 在執行階段失敗，您可以使用 **/ERRORREPORT**有關這些內部錯誤，傳送給 Microsoft 的資訊。
 
-如需 /ERRORREPORT 的詳細資訊，請參閱[/errorReport （回報編譯器內部錯誤）](../../build/reference/errorreport-report-internal-compiler-errors.md)。
+如需詳細資訊 **/ERRORREPORT**，請參閱[/errorReport （回報編譯器內部錯誤）](../../build/reference/errorreport-report-internal-compiler-errors.md)。
 
 > **/LTCG**
 
-會導致要建置使用連結時產生程式碼程式庫。  如需詳細資訊，請參閱 < [/LTCG](../../build/reference/ltcg-link-time-code-generation.md)。
+「 LTCG"代表*連結時產生程式碼*。 這項功能需要編譯器之間的合作 ([cl.exe](compiler-options.md))，LIB 和連結器 ([連結](linker-options.md)) 以獲得最佳的超出任何元件能達到本身的程式碼。
+
+為 LIB **/LTCG**選項會指定 cl.exe 的輸入，包括使用所產生的目的檔[/GL](gl-whole-program-optimization.md)編譯器選項。 如果 LIB 遇到這類輸入並 **/LTCG**未指定，就會重新啟動與 /LTCG 顯示告知性訊息之後啟用。 換句話說，不需要明確地設定這個選項，但它能加速建置效能，若要這樣做，因為程式庫並沒有自行重新啟動。
+
+在建置過程中，LIB 的輸出會傳送至連結。 連結都有它自己的個別 **/LTCG**用來執行各種最佳化，包括整個程式最佳化 」 和 「 特性指引最佳化 (PGO) 檢測選項。 如需 [連結] 選項的詳細資訊，請參閱[/LTCG](ltcg-link-time-code-generation.md)。
 
 > **/ 電腦**
 

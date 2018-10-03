@@ -1,28 +1,40 @@
 ---
 title: CriticalSection 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/24/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::CriticalSection
+- corewrappers/Microsoft::WRL::Wrappers::CriticalSection::cs_
+- corewrappers/Microsoft::WRL::Wrappers::CriticalSection::IsValid
+- corewrappers/Microsoft::WRL::Wrappers::CriticalSection::Lock
+- corewrappers/Microsoft::WRL::Wrappers::CriticalSection::~CriticalSection
+- corewrappers/Microsoft::WRL::Wrappers::CriticalSection::CriticalSection
+- corewrappers/Microsoft::WRL::Wrappers::CriticalSection::TryLock
 dev_langs:
 - C++
 helpviewer_keywords:
-- CriticalSection class
+- Microsoft::WRL::Wrappers::CriticalSection class
+- Microsoft::WRL::Wrappers::CriticalSection::cs_ data member
+- Microsoft::WRL::Wrappers::CriticalSection::IsValid method
+- Microsoft::WRL::Wrappers::CriticalSection::Lock method
+- Microsoft::WRL::Wrappers::CriticalSection::~CriticalSection, destructor
+- Microsoft::WRL::Wrappers::CriticalSection::CriticalSection, constructor
+- Microsoft::WRL::Wrappers::CriticalSection::TryLock method
 ms.assetid: f2e0a024-71a3-4f6b-99ea-d93a4a608ac4
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cab1beeaa3ce54899d1a052e4972bd7e7f52bb57
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 67ca6e8eab90e1e97a3ab8aacd46616dbcbf2d0e
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592445"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234705"
 ---
 # <a name="criticalsection-class"></a>CriticalSection 類別
 
@@ -38,24 +50,24 @@ class CriticalSection;
 
 ### <a name="constructor"></a>建構函式
 
-|名稱|描述|
-|----------|-----------------|
-|[CriticalSection::CriticalSection 建構函式](../windows/criticalsection-criticalsection-constructor.md)|初始化同步處理物件，類似於 mutex 物件，但可由單一的程序的執行緒。|
-|[CriticalSection::~CriticalSection 解構函式](../windows/criticalsection-tilde-criticalsection-destructor.md)|取消初始化並終結目前**CriticalSection**物件。|
+名稱                                                        | 描述
+----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------
+[Criticalsection:: Criticalsection](#criticalsection)        | 初始化同步處理物件，類似於 mutex 物件，但可由單一的程序的執行緒。
+[CriticalSection:: ~ CriticalSection](#tilde-criticalsection) | 取消初始化並終結目前`CriticalSection`物件。
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
-|----------|-----------------|
-|[CriticalSection::TryLock 方法](../windows/criticalsection-trylock-method.md)|嘗試進入重要區段，而不會封鎖。 如果呼叫成功，呼叫執行緒會取得重要區段的擁有權。|
-|[CriticalSection::Lock 方法](../windows/criticalsection-lock-method.md)|等候指定的重要區段物件的擁有權。 此函數會傳回呼叫的執行緒授與擁有權時。|
-|[CriticalSection::IsValid 方法](../windows/criticalsection-isvalid-method.md)|指出目前的重要區段是否有效。|
+名稱                                 | 描述
+------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------
+[Criticalsection:: Isvalid](#isvalid) | 指出目前的重要區段是否有效。
+[Criticalsection:: Lock](#lock)       | 等候指定的重要區段物件的擁有權。 此函數會傳回呼叫的執行緒授與擁有權時。
+[Criticalsection:: Trylock](#trylock) | 嘗試進入重要區段，而不會封鎖。 如果呼叫成功，呼叫執行緒會取得重要區段的擁有權。
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
-|名稱|描述|
-|----------|-----------------|
-|[CriticalSection::cs_ 資料成員](../windows/criticalsection-cs-data-member.md)|宣告重要區段的資料成員。|
+名稱                        | 描述
+--------------------------- | ----------------------------------------
+[Criticalsection:: Cs_](#cs) | 宣告重要區段的資料成員。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -67,6 +79,103 @@ class CriticalSection;
 
 **命名空間：** Microsoft::WRL::Wrappers
 
-## <a name="see-also"></a>另請參閱
+## <a name="tilde-criticalsection"></a>CriticalSection:: ~ CriticalSection
 
-[Microsoft::WRL::Wrappers 命名空間](../windows/microsoft-wrl-wrappers-namespace.md)
+取消初始化並終結目前`CriticalSection`物件。
+
+```cpp
+WRL_NOTHROW ~CriticalSection();
+```
+
+## <a name="criticalsection"></a>Criticalsection:: Criticalsection
+
+初始化同步處理物件，類似於 mutex 物件，但可由單一的程序的執行緒。
+
+```cpp
+explicit CriticalSection(
+   ULONG spincount = 0
+);
+```
+
+### <a name="parameters"></a>參數
+
+*spincount*<br/>
+重要區段物件旋轉計數。 預設值為 0。
+
+### <a name="remarks"></a>備註
+
+如需關鍵區段和 spincounts 的詳細資訊，請參閱`InitializeCriticalSectionAndSpinCount`函式中`Synchronization`Windows API 文件的區段。
+
+## <a name="cs"></a>Criticalsection:: Cs_
+
+宣告重要區段的資料成員。
+
+```cpp
+CRITICAL_SECTION cs_;
+```
+
+### <a name="remarks"></a>備註
+
+此資料成員會受到保護。
+
+## <a name="isvalid"></a>Criticalsection:: Isvalid
+
+指出目前的重要區段是否有效。
+
+```cpp
+bool IsValid() const;
+```
+
+### <a name="return-value"></a>傳回值
+
+根據預設，一律會傳回`true`。
+
+## <a name="lock"></a>Criticalsection:: Lock
+
+等候指定的重要區段物件的擁有權。 此函數會傳回呼叫的執行緒授與擁有權時。
+
+```cpp
+SyncLock Lock();
+
+   static SyncLock Lock(
+   _In_ CRITICAL_SECTION* cs
+);
+```
+
+### <a name="parameters"></a>參數
+
+*cs*<br/>
+使用者指定的重要區段物件。
+
+### <a name="return-value"></a>傳回值
+
+鎖定物件，可用來解除鎖定目前的重要區段。
+
+### <a name="remarks"></a>備註
+
+第一個`Lock`函式會影響目前的重要區段物件。 第二個`Lock`函式會影響使用者指定的重要區段。
+
+## <a name="trylock"></a>Criticalsection:: Trylock
+
+嘗試進入重要區段，而不會封鎖。 如果呼叫成功，呼叫執行緒會取得重要區段的擁有權。
+
+```cpp
+SyncLock TryLock();
+
+static SyncLock TryLock(
+   _In_ CRITICAL_SECTION* cs
+);
+```
+
+### <a name="parameters"></a>參數
+
+*cs*<br/>
+使用者指定的重要區段物件。
+
+### <a name="return-value"></a>傳回值
+
+如果成功進入重要區段，為非零值或目前的執行緒已經擁有重要區段。 如果另一個執行緒已經擁有重要區段，則為零。
+
+### <a name="remarks"></a>備註
+
+第一個`TryLock`函式會影響目前的重要區段物件。 第二個`TryLock`函式會影響使用者指定的重要區段。

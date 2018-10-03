@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dd07ead0608657597a81b239732347f67455273
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f95eaa49db5e09bceaefafc16312250d823e5d5c
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436880"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250389"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details 命名空間
 
@@ -43,7 +43,7 @@ namespace Microsoft::WRL::Details;
 |[MakeAllocator 類別](../windows/makeallocator-class.md)|配置記憶體可啟動類別，包含或不含弱式參考支援。|
 |[ModuleBase 類別](../windows/modulebase-class.md)|表示基底類別[模組](../windows/module-class.md)類別。|
 |[RemoveIUnknown 類別](../windows/removeiunknown-class.md)|建立類型，相當於`IUnknown`為基礎的類型，但有非虛擬`QueryInterface`， `AddRef`，和`Release`方法。|
-|[WeakReference 類別](../windows/weakreference-class1.md)|代表*弱式參考*可用於使用 Windows 執行階段或傳統 com 使用。 弱式參考代表不一定可存取的物件。|
+|[WeakReference 類別](../windows/weakreference-class.md)|代表*弱式參考*可用於使用 Windows 執行階段或傳統 com 使用。 弱式參考代表不一定可存取的物件。|
 
 ### <a name="structures"></a>結構
 
@@ -84,7 +84,7 @@ namespace Microsoft::WRL::Details;
 |[ActivationFactoryCallback 函式](../windows/activationfactorycallback-function.md)|取得啟用 factory 做為指定的啟用識別碼。|
 |[Move 函式](../windows/move-function.md)|將指定的引數從一個位置移到另一個。|
 |[RaiseException 函式](../windows/raiseexception-function.md)|引發的例外狀況，在呼叫的執行緒。|
-|[Swap 函式 (Windows 執行階段 C++ 範本庫)](../windows/swap-function-windows-runtime-cpp-template-library.md)|交換兩個指定的引數的值。|
+|[Swap 函式 (WRL)](../windows/swap-function-wrl.md)|交換兩個指定的引數的值。|
 |[TerminateMap 函式](../windows/terminatemap-function.md)|關閉指定的模組中的 class factory。|
 
 ## <a name="requirements"></a>需求

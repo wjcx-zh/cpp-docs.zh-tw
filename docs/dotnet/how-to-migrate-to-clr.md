@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 210cf8d3183e9fcd94cfa51d875a0b26e4a8fa07
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 165ea5b42ea4e293eb60b7a798778e3a461e0385
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029654"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235447"
 ---
 # <a name="how-to-migrate-to-clr"></a>如何：移轉至 /clr
 
@@ -118,7 +118,7 @@ COMObj2->Method(args);  // C++ equivalent
 
 最簡單的方式來編譯的專案，其中某些模組會編譯 **/clr**是完全停用先行編譯標頭。 （在 [專案屬性頁] 對話方塊中，開啟 [C/c + +] 節點，然後選取先行編譯標頭。 然後建立/使用先行編譯標頭屬性變更為 [不使用先行編譯標頭]。）
 
-不過，特別是針對大型專案，先行編譯標頭提供更好的編譯速度，因此停用此功能並不理想。 在此情況下最好是設定 **/clr**和非 **/clr**使用個別的先行編譯標頭的檔案。 這可以在一個步驟中所選取多種要編譯的模組 **/clr**使用 [方案總管]，以滑鼠右鍵按一下群組，並選取屬性。 然後變更建立/使用 PCH 透過檔案和先行編譯標頭檔的屬性，以便分別使用不同的標頭檔名稱和 PCH 檔案。
+不過，特別是針對大型專案，先行編譯標頭提供更好的編譯速度，因此停用此功能並不理想。 在此情況下最好是設定 **/clr**和非 **/clr**使用個別的先行編譯標頭的檔案。 這可以在一個步驟中所選取多個要編譯的模組 **/clr**使用**方案總管 中**、 以滑鼠右鍵按一下群組，並選取內容。 然後變更建立/使用 PCH 透過檔案和先行編譯標頭檔的屬性，以便分別使用不同的標頭檔名稱和 PCH 檔案。
 
 ## <a name="fixing-errors"></a>修正錯誤
 

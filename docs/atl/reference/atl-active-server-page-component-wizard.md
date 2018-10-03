@@ -17,18 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 017dac5f9cba676980629109b53f4b2aec4af940
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 57f6e24ec664128a47813c29ce07a4272ce4a771
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713215"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250363"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>ATL Active Server Page 元件精靈
 
 此精靈可將 Active Server Pages (ASP) 的元件插入至專案。 Microsoft 網際網路資訊服務 (IIS) 會使用 ASP 元件，其增強的網頁程式開發架構的一部分。
 
 使用此精靈，您可以指定元件的執行緒模型，並彙總支援。 您也可以指定錯誤的資訊介面、 連接點和無限制執行緒封送處理的支援。
+
+> [!WARNING]
+> 在 Visual Studio 2017 版本 15.9 這個程式碼精靈已被取代，並將 Visual Studio 的未來版本中移除。 此精靈很少使用。 ATL 和 MFC 的一般支援不會受到此精靈的移除。 如果您想要分享您對這個已被取代的意見，請完成[這份問卷](https://www.surveymonkey.com/r/QDWKKCN)。 我們重視您的意見反應。
 
 ## <a name="remarks"></a>備註
 

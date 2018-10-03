@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5481b9391d47887d85ca43746f1a6aff5f6eb92
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 342716f3197713a584e2f0a1d20e4de75ece474b
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029615"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234306"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>逐步解說： 建立標準的 c + + 程式 （c + +）
 
@@ -32,7 +32,7 @@ ms.locfileid: "47029615"
 
 您可以輸入自己的 c + + 程式，或使用其中一個範例程式。 在本逐步解說的範例程式是主控台應用程式。 此應用程式使用`set`c + + 標準程式庫中的容器。
 
-Visual c + + 符合 2003 c + + 標準，但有下列主要例外狀況： 兩階段名稱查閱、 例外狀況規格和匯出。 此外，Visual c + + 支援數種 c++0x 功能，比方說，lambda、 auto、 static_assert、 rvalue 參考和 extern 範本。
+Visual c + + 會遵循 2003 c + + 標準，但有下列主要例外狀況： 兩階段名稱查閱、 例外狀況規格和匯出。 此外，Visual c + + 支援數種 c++0x 功能，比方說，lambda、 auto、 static_assert、 rvalue 參考和 extern 範本。
 
 > [!NOTE]
 > 如果需要合規性標準，使用`/Za`編譯器選項來停用標準的 Microsoft 擴充功能。 如需詳細資訊，請參閱 < [/Za，/Ze （停用語言擴充功能）](../build/reference/za-ze-disable-language-extensions.md)。
@@ -59,7 +59,7 @@ Visual c + + 符合 2003 c + + 標準，但有下列主要例外狀況： 兩階
    > [!NOTE]
    > 如需 Visual Studio 2017 以前的版本，完成**Win32 應用程式精靈**。 按一下 [**下一步**，然後確定**主控台應用程式**已選取，並取消核取**先行編譯標頭**] 方塊中。 按一下 [ **完成**]。
 
-1. 如果**方案總管**未顯示，在**檢視**功能表上，按一下 [**方案總管] 中**。
+1. 如果**方案總管**未顯示，請在**檢視**功能表上，按一下 [**方案總管] 中**。
 
 1. 將新的原始程式檔，如下所示新增至專案。
 

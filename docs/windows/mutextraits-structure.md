@@ -1,28 +1,30 @@
 ---
 title: MutexTraits 結構 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::MutexTraits
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::MutexTraits::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
-- MutexTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::MutexTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::MutexTraits::Unlock method
 ms.assetid: 6582df80-b9ba-4892-948f-d572a3b23d54
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 529265c4b1e5f510a92295a1ceff6d0a012163fe
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 15ed7d9dc3a1b97e05712e003fa61f662901fc18
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584167"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234981"
 ---
 # <a name="mutextraits-structure"></a>MutexTraits 結構
 
@@ -38,9 +40,9 @@ struct MutexTraits : HANDLENullTraits;
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
-|----------|-----------------|
-|[MutexTraits::Unlock 方法](../windows/mutextraits-unlock-method.md)|版本的共用資源的獨佔控制。|
+名稱                           | 描述
+------------------------------ | ------------------------------------------------
+[Mutextraits:: Unlock](#unlock) | 版本的共用資源的獨佔控制。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -54,6 +56,17 @@ struct MutexTraits : HANDLENullTraits;
 
 **命名空間：** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="see-also"></a>另請參閱
+## <a name="unlock"></a>Mutextraits:: Unlock 方法
 
-[Microsoft::WRL::Wrappers::HandleTraits 命名空間](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+版本的共用資源的獨佔控制。
+
+```cpp
+inline static void Unlock(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>參數
+
+*h*<br/>
+Mutex 物件的控制代碼。

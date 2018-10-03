@@ -1,32 +1,34 @@
 ---
 title: SemaphoreTraits 結構 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
-- SemaphoreTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits::Unlock method
 ms.assetid: eddb8576-d063-409b-9201-cc87ca5d111e
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5919b84a8b7b0b24588958198da89271d2a20119
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 553d0cbb69bcf3167974cb42abb26f4aae04bfb3
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601816"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234134"
 ---
 # <a name="semaphoretraits-structure"></a>SemaphoreTraits 結構
 
-定義通用特性**號誌**物件。
+定義通用特性`Semaphore`物件。
 
 ## <a name="syntax"></a>語法
 
@@ -38,9 +40,9 @@ struct SemaphoreTraits : HANDLENullTraits;
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
-|----------|-----------------|
-|[SemaphoreTraits::Unlock 方法](../windows/semaphoretraits-unlock-method.md)|版本控制共用資源。|
+名稱                               | 描述
+---------------------------------- | --------------------------------------
+[Semaphoretraits:: Unlock](#unlock) | 版本控制共用資源。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -54,6 +56,21 @@ struct SemaphoreTraits : HANDLENullTraits;
 
 **命名空間：** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="see-also"></a>另請參閱
+## <a name="unlock"></a>Semaphoretraits:: Unlock
 
-[Microsoft::WRL::Wrappers::HandleTraits 命名空間](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+版本控制共用資源。
+
+```cpp
+inline static void Unlock(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>參數
+
+*h*<br/>
+若要處理`Semaphore`物件。
+
+### <a name="remarks"></a>備註
+
+如果在解除鎖定作業不成功，`Unlock()`會發出錯誤，指出失敗的原因。

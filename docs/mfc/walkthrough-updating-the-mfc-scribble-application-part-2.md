@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 208ae27e694396a21b76bc482c87084e03a21975
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: d3623eb594ff82660e97809eef609a33e74e74dc
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169680"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235434"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>逐步解說：更新 MFC Scribble 應用程式 (第 2 部分)
 
@@ -116,17 +116,17 @@ ms.locfileid: "47169680"
 
 1. 按一下第二個下拉式方塊。 變更**標題**要`Thick Pen`，**識別碼**來`ID_PEN_THICK_WIDTH`，**類型**來`Drop List`，**資料**至`5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`，並**文字**至`5`。
 
-1. 新的下拉式方塊未對應到任何現有的功能表項目。 因此，您必須建立每個 [畫筆] 選項的功能表項目。
+1. 新的下拉式方塊不對應至任何現有的功能表項目，因此您必須建立每個 [畫筆] 選項的功能表項目。
 
    1. 在 **資源檢視**視窗中，開啟**IDR_SCRIBBTYPE**功能表資源。
 
    1. 按一下 **畫筆**以開啟 畫筆 功能表。 然後按一下**在這裡輸入**並輸入`Thi&n Pen`。
 
-   1. 以滑鼠右鍵按一下您剛才輸入開啟的文字**屬性**視窗，然後再變更識別碼屬性`ID_PEN_THIN_WIDTH`。
+   1. 以滑鼠右鍵按一下以開啟您所輸入的文字**屬性**視窗，然後再變更識別碼屬性`ID_PEN_THIN_WIDTH`。
 
-   1. 您也必須建立每個 [畫筆] 功能表項目的事件處理常式。 以滑鼠右鍵按一下**這個 & n 畫筆**功能表項目，您剛剛建立，然後按一下**加入事件處理常式**。 **事件處理常式精靈**隨即出現。
+   1. 建立每個 [畫筆] 功能表項目的事件處理常式。 以滑鼠右鍵按一下**這個 & n 畫筆**功能表項目，您建立，然後按一下**加入事件處理常式**。 **事件處理常式精靈**隨即出現。
 
-   1. 在 **類別清單**在精靈中，選取方塊**CScribbleDoc** ，然後按一下 **新增和編輯**。 這會建立名為事件處理常式`CScribbleDoc::OnPenThinWidth`。
+   1. 在 **類別清單**在精靈中，選取方塊**CScribbleDoc** ，然後按一下 **新增和編輯**。 此命令會建立名為事件處理常式`CScribbleDoc::OnPenThinWidth`。
 
    1. 將下列程式碼加入至 `CScribbleDoc::OnPenThinWidth`。
 
@@ -156,11 +156,11 @@ ms.locfileid: "47169680"
 
    1. 按一下 **畫筆**以開啟 畫筆 功能表。 然後按一下**在這裡輸入**並輸入`Thic&k Pen`。
 
-   1. 以滑鼠右鍵按一下您剛才輸入顯示的文字**屬性**視窗。 將識別碼屬性來變更`ID_PEN_THICK_WIDTH`。
+   1. 以滑鼠右鍵按一下您要顯示您輸入的文字**屬性**視窗。 將識別碼屬性來變更`ID_PEN_THICK_WIDTH`。
 
-   1. 以滑鼠右鍵按一下**粗的畫筆**功能表項目，您剛剛建立，然後按一下**加入事件處理常式**。 **事件處理常式精靈**隨即出現。
+   1. 以滑鼠右鍵按一下**粗的畫筆**功能表項目，您建立，然後按一下**加入事件處理常式**。 **事件處理常式精靈**隨即出現。
 
-   1. 在 **類別清單** 方塊中的精靈中，選取**CScribbleDoc** ，然後按一下 **新增和編輯**。 這會建立名為事件處理常式`CScribbleDoc::OnPenThickWidth`。
+   1. 在 **類別清單** 方塊中的精靈中，選取**CScribbleDoc** ，然後按一下 **新增和編輯**。 此命令會建立名為事件處理常式`CScribbleDoc::OnPenThickWidth`。
 
    1. 將下列程式碼加入至 `CScribbleDoc::OnPenThickWidth`。
 
@@ -190,7 +190,7 @@ ms.locfileid: "47169680"
 
 ### <a name="to-add-a-color-button-to-the-pen-panel"></a>若要加入 [畫筆] 面板中的色彩按鈕
 
-1. 新增色彩按鈕之前，請為其建立的功能表項目。 在 **資源檢視**視窗中，開啟**IDR_SCRIBBTYPE**功能表資源。 按一下 **畫筆**以開啟 畫筆 功能表的功能表項目。 然後按一下**在這裡輸入**並輸入`&Color`。 以滑鼠右鍵按一下您剛才輸入顯示的文字**屬性**視窗。 變更要 ID `ID_PEN_COLOR`。
+1. 新增色彩按鈕之前，請為其建立的功能表項目。 在 **資源檢視**視窗中，開啟**IDR_SCRIBBTYPE**功能表資源。 按一下 **畫筆**以開啟 畫筆 功能表的功能表項目。 然後按一下**在這裡輸入**並輸入`&Color`。 以滑鼠右鍵按一下您要顯示您輸入的文字**屬性**視窗。 變更要 ID `ID_PEN_COLOR`。
 
 1. 現在加入色彩按鈕。 從**工具箱**，拖曳**色彩按鈕**來**畫筆**面板。
 
@@ -200,7 +200,7 @@ ms.locfileid: "47169680"
 
 ##  <a name="addcolormember"></a> 將色彩成員加入至文件類別
 
-因為原始的 Scribble 應用程式並沒有色彩的畫筆，您必須撰寫實作它們。 若要儲存文件中的畫筆顏色將新成員新增至文件類別， `CscribbleDoc`。
+因為原始的 Scribble 應用程式沒有色彩的畫筆，您必須撰寫實作它們。 若要儲存文件中的畫筆顏色將新成員新增至文件類別， `CscribbleDoc`。
 
 ### <a name="to-add-a-color-member-to-the-document-class"></a>若要將色彩成員新增至文件類別
 
@@ -211,7 +211,7 @@ ms.locfileid: "47169680"
    COLORREF m_penColor;
    ```
 
-1. 每個文件包含一份 stokes，使用者已繪製。 每個筆劃由定義`CStroke`物件。 `CStroke`類別不包含畫筆顏色的相關資訊。 因此，您必須修改該類別。 在 scribdoc.h，在`CStroke`類別中，新增下列程式碼行的定義之後`m_nPenWidth`資料成員。
+1. 每個文件包含一份 stokes，使用者已繪製。 每個筆劃由定義`CStroke`物件。 `CStroke`類別不包含畫筆顏色的相關資訊，因此您必須修改類別。 在 scribdoc.h，在`CStroke`類別中，新增下列程式碼行的定義之後`m_nPenWidth`資料成員。
 
    ```cpp
    // Pen color for the stroke
@@ -267,7 +267,7 @@ ms.locfileid: "47169680"
 
    1. 以滑鼠右鍵按一下**色彩**功能表項目，然後按一下**加入事件處理常式**。 **事件處理常式精靈**隨即出現。
 
-   1. 在 **類別清單**在精靈中，選取方塊**CScribbleDoc** ，然後按一下 **新增和編輯** 按鈕。 這會建立`CScribbleDoc::OnPenColor`事件處理常式 stub。
+   1. 在 **類別清單**在精靈中，選取方塊**CScribbleDoc** ，然後按一下 **新增和編輯** 按鈕。 此命令會建立`CScribbleDoc::OnPenColor`事件處理常式 stub。
 
 1. 取代為虛設常式`CScribbleDoc::OnPenColor`為下列程式碼的事件處理常式。
 
@@ -287,7 +287,7 @@ ms.locfileid: "47169680"
    }
    ```
 
-1. 儲存變更然後建置並執行應用程式。 您應該能夠按下 [色彩] 按鈕，並將手寫筆的色彩變更。
+1. 儲存變更然後建置並執行應用程式。 您現在可以按下 [色彩] 按鈕，並變更畫筆的顏色。
 
 ##  <a name="initpensave"></a> 初始化畫筆及儲存喜好設定
 

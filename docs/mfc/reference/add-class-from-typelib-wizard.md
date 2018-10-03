@@ -1,7 +1,7 @@
 ---
 title: 從 Typelib 精靈加入類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -17,16 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d60d8558758ba67afaa03eef5fbfbd83d8ebea70
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0a54948fd98b5a5445aa1fdfafcf0fcd015bbf08
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415508"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250376"
 ---
 # <a name="add-class-from-typelib-wizard"></a>從 Typelib 加入類別精靈
 
 您可以使用此精靈，從可用的型別程式庫加入 MFC 類別。 精靈會建立從所選的型別程式庫加入每個介面的類別。
+
+> [!WARNING]
+> 在 Visual Studio 2017 版本 15.9 這個程式碼精靈已被取代，並將 Visual Studio 的未來版本中移除。 此精靈很少使用。 ATL 和 MFC 的一般支援不會受到此精靈的移除。 如果您想要分享您對這個已被取代的意見，請完成[這份問卷](https://www.surveymonkey.com/r/QDWKKCN)。 我們重視您的意見反應。
 
 - **加入類別來源**
 

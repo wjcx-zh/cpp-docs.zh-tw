@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05255f71f304b32de95faf96eaa23f5ce3da9f96
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 9d96ce9ade06c849716a680bd3c0c8bb6feeccc6
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169407"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235655"
 ---
 # <a name="walkthroughs-mfc"></a>逐步解說 (MFC)
 
@@ -28,7 +28,7 @@ ms.locfileid: "47169407"
 ## <a name="in-this-section"></a>本節內容
 
 [逐步解說：使用新的 MFC Shell 控制項](../mfc/walkthrough-using-the-new-mfc-shell-controls.md)<br/>
-在此逐步解說中，您會建立類似檔案總管的應用程式。 您將建立包含兩個窗格的視窗。 左的窗格會包含[CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md)會顯示您的桌面的階層式檢視的物件。 右窗格會包含[CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) ，將會顯示在左窗格中選取的資料夾中的檔案。
+在本逐步解說中，您將建立類似檔案總管的應用程式。 您將建立包含兩個窗格的視窗。 左的窗格就會有[CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md)會顯示您的桌面的階層式檢視的物件。 右窗格就會有[CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) ，將會顯示在左窗格中選取的資料夾中的檔案。
 
 [逐步解說：將控制項放在工具列上](../mfc/walkthrough-putting-controls-on-toolbars.md)<br/>
 現代的 MFC 工具列可以裝載控制項而非簡單的按鈕。 這篇文章說明如何執行此動作。

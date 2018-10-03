@@ -15,26 +15,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8267704e6bb1b43a13cc05d21d0572695365fd6
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 1995d3472f175872e084e2654531a2e72a90f950
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169745"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235505"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>逐步解說：將控制項放在工具列上
 
-本主題說明如何將包含 Windows 控制項的工具列按鈕加入至工具列。 在 MFC 中，必須是工具列按鈕[CMFCToolBarButton 類別](../mfc/reference/cmfctoolbarbutton-class.md)-衍生類別，例如[CMFCToolBarComboBoxButton 類別](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)， [CMFCToolBarEditBoxButton 類別](../mfc/reference/cmfctoolbareditboxbutton-class.md)，[CMFCDropDownToolbarButton 類別](../mfc/reference/cmfcdropdowntoolbarbutton-class.md)，或[CMFCToolBarMenuButton 類別](../mfc/reference/cmfctoolbarmenubutton-class.md)。
+本文說明如何新增包含 Windows 控制項工具列的工具列按鈕。 在 MFC 中，必須是工具列按鈕[CMFCToolBarButton 類別](../mfc/reference/cmfctoolbarbutton-class.md)-衍生類別，例如[CMFCToolBarComboBoxButton 類別](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)， [CMFCToolBarEditBoxButton 類別](../mfc/reference/cmfctoolbareditboxbutton-class.md)，[CMFCDropDownToolbarButton 類別](../mfc/reference/cmfcdropdowntoolbarbutton-class.md)，或[CMFCToolBarMenuButton 類別](../mfc/reference/cmfctoolbarmenubutton-class.md)。
 
 ## <a name="adding-controls-to-toolbars"></a>將控制項加入至工具列
 
 若要將控制項加入至工具列，請依照下列步驟執行：
 
-1. 為父工具列資源的按鈕保留假的資源 ID。 如需有關如何建立按鈕，使用**工具列編輯器**在 Visual Studio 中，請參閱[工具列編輯器](../windows/toolbar-editor.md)主題。
+1. 為父工具列資源的按鈕保留假的資源 ID。 如需有關如何建立按鈕，使用**工具列編輯器**在 Visual Studio 中，請參閱[工具列編輯器](../windows/toolbar-editor.md)文章。
 
 1. 為父工具列的所有點陣圖中的按鈕保留工具列按鈕影像 (按鈕圖示)。
 
-1. 在處理 `AFX_WM_RESETTOOLBAR` 訊息的訊息處理常式中，執行下列步驟：
+1. 訊息處理常式中處理`AFX_WM_RESETTOOLBAR`訊息，請執行下列步驟：
 
    1. 使用 `CMFCToolbarButton` 衍生類別建構按鈕控制項。
 
@@ -51,7 +51,7 @@ ms.locfileid: "47169745"
 
 ## <a name="example-creating-a-find-combo-box"></a>範例：建立搜尋下拉式方塊
 
-本節說明如何建立**尋找**下拉式方塊控制項，會出現在工具列上，而包含最近使用過的搜尋字串。 使用者可以在控制項中輸入字串，然後按 ENTER 鍵搜尋文件，或按 Esc 鍵將焦點移回主框架。 這個範例假設文件會顯示在[CEditView 類別](../mfc/reference/ceditview-class.md)-衍生檢視。
+本節說明如何建立**尋找**下拉式方塊控制項，在工具列上顯示並包含最近使用之搜尋字串。 使用者可以在控制項中輸入字串，然後按 ENTER 鍵搜尋文件，或按 Esc 鍵將焦點移回主框架。 這個範例假設文件會顯示在[CEditView 類別](../mfc/reference/ceditview-class.md)-衍生檢視。
 
 ### <a name="creating-the-find-control"></a>建立尋找控制項
 
@@ -72,13 +72,13 @@ ms.locfileid: "47169745"
 
 1. 在 `CFindComboBox`類別中，覆寫 `PreTranslateMessage` 虛擬方法。 這個方法會啟用下拉式方塊處理[WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)訊息。 如果使用者點閱 Esc 鍵 (`VK_ESCAPE`)，便會將焦點移回主框架視窗。 如果使用者點閱 ENTER 鍵 (`VK_ENTER`)，便會將包含 `WM_COMMAND` 命令 ID 的 `ID_EDIT_FIND_COMBO` 訊息張貼到主框架視窗內。
 
-1. 建立的類別**尋找**下拉式方塊按鈕，衍生自[CMFCToolBarComboBoxButton 類別](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)。 在此範例中，它的名稱是 `CFindComboButton`。
+1. 建立的類別**尋找**下拉式方塊按鈕，衍生自[CMFCToolBarComboBoxButton 類別](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)。 在此範例中，它會命名為`CFindComboButton`。
 
 1. `CMFCToolbarComboBoxButton` 的建構函式接受三個參數：按鈕的命令 ID、按鈕影像索引和下拉式方塊樣式。 設定這些參數，如下所示：
 
    1. 傳遞 `ID_EDIT_FIND_COMBO` 做為命令 ID。
 
-   1. 使用[CCommandManager::GetCmdImage](reference/internal-classes.md)使用`ID_EDIT_FIND`取得的映像索引。
+   1. 使用[CCommandManager::GetCmdImage](reference/internal-classes.md)使用`ID_EDIT_FIND`取得映像索引。
 
    1. 如需可用下拉式方塊樣式的清單，請參閱 <<c0> [ 下拉式方塊樣式](../mfc/reference/styles-used-by-mfc.md#combo-box-styles)。
 

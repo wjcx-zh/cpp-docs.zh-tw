@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d028d1cb3a42a68aab67d2b6fa90165a7d6264b
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 48cbc29685660f00665fbbb08be76779272d0fcf
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169771"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235500"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>逐步解說： 更新 MFC Scribble 應用程式 （第 1 部分）
 
@@ -54,7 +54,7 @@ ms.locfileid: "47169771"
 
 ##  <a name="replaceclass"></a> 取代的基底類別
 
-若要轉換的應用程式，支援的應用程式，支援的功能區功能表，您必須從更新基底類別衍生應用程式、 框架視窗和工具列類別。 （我們建議您不要不修改原始的 Scribble 範例; 相反地，清除 Scribble 專案、 將它複製到另一個目錄，然後修改複本）。
+若要轉換的應用程式，支援的應用程式，支援的功能區功能表，您必須從更新基底類別衍生應用程式、 框架視窗和工具列類別。 （我們建議您不要修改原始的 Scribble 範例。 相反地，清除 Scribble 專案、 將它複製到另一個目錄，，然後修改複本。）
 
 ### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>若要取代 Scribble 應用程式中的基底類別
 
@@ -115,9 +115,9 @@ ms.locfileid: "47169771"
 
 ##  <a name="addbitmap"></a> 將點陣圖新增至專案
 
-本逐步解說的接下來四個步驟需要點陣圖的資源。 您可以取得適當的點陣圖，以各種方式：
+本逐步解說的接下來四個步驟需要點陣圖的資源。 您可以在各種不同的方式取得適當的點陣圖：
 
-- 使用[資源編輯器](../windows/resource-editors.md)發明自己的點陣圖。 或使用資源編輯器來組合從可攜式網路圖形 (.png) 映像隨附於 Visual Studio，可以從下載的點陣圖[Visual Studio 影像庫](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library)。
+- 使用[資源編輯器](../windows/resource-editors.md)發明自己的點陣圖。 或使用資源編輯器來組合從可攜式網路圖形 (.png) 映像隨附於 Visual Studio，您可以從下載的點陣圖[Visual Studio 影像庫](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library)。
 
     不過，**功能區**使用者介面會需要某些點陣圖支援透明的映像。 透明的點陣圖使用 32 位元像素為單位，其中 24 位元指定色彩的紅色、 綠色和藍色元件，以及 8 位元定義*alpha 色頻*指定色彩的透明度。 目前的資源編輯器可以檢視，但無法修改 使用 32 位元的像素的點陣圖。 因此，使用外部影像編輯器而不是資源編輯器來操作透明的點陣圖。
 
@@ -165,7 +165,7 @@ ms.locfileid: "47169771"
 
 ##  <a name="addribbon"></a> 專案中加入功能區資源
 
-當您轉換使用功能表來使用功能區的應用程式的應用程式時，您不必移除或停用現有的功能表。 相反地，您建立功能區資源加入功能區按鈕，然後將新的按鈕與現有的功能表項目產生關聯。 雖然不會再顯示功能表，從功能區列的訊息會路由傳送透過功能表。 此外，功能表捷徑繼續運作。
+當您轉換使用功能表來使用功能區的應用程式的應用程式時，您不需要移除或停用現有的功能表。 只要建立功能區資源、 新增功能區按鈕，並將關聯的新按鈕現有的功能表項目。 雖然不會再顯示功能表，從功能區列的訊息會路由傳送透過功能表和功能表的捷徑繼續運作。
 
 功能區所組成**應用程式**按鈕，也就是功能區的左上方的 [大型] 按鈕，然後一或多個類別索引標籤。 每個類別目錄 索引標籤包含一或多個做為容器的功能區按鈕與控制項的面板。 下列程序示範如何建立功能區資源，然後自訂**應用程式** 按鈕。
 
@@ -221,14 +221,14 @@ ms.locfileid: "47169771"
 
 ### <a name="to-create-an-instance-of-the-ribbon-bar"></a>若要建立功能區列的執行個體
 
-1. 在稱為 mainfrm.h 檔案中，將資料成員新增到受保護的區段`CMainFrame`，主要畫面格的類別定義。 這個成員表示功能區列。
+1. 在稱為 mainfrm.h 檔案中，將資料成員新增到受保護的區段`CMainFrame`，主要畫面格的類別定義。 這個成員是功能區列。
 
     ```cpp
     // Ribbon bar for the application
     CMFCRibbonBar m_wndRibbonBar;
     ```
 
-2. 在 mainfrm.cpp 檔案中，加入下列的程式碼，最後再`return`陳述式的結尾`CMainFrame::OnCreate`函式。 這會建立功能區列的執行個體。
+2. 在 mainfrm.cpp 檔案中，加入下列的程式碼，最後再`return`陳述式的結尾`CMainFrame::OnCreate`函式。 它會建立功能區列的執行個體。
 
     ```cpp
     // Create the ribbon bar
@@ -250,9 +250,9 @@ ms.locfileid: "47169771"
 
 1. Scribble 程式需要一種類別。 在 [設計] 檢視中，在**工具箱**，按兩下**分類**加入一個，並顯示其屬性。 變更屬性值，如下所示：**標題**要`&Home`，**大型影像**來`IDB_RIBBON_HOMELARGE`，**小型影像**到`IDB_RIBBON_HOMESMALL`。
 
-1. 每個功能區分類會組織成具名的面板。 每個面板包含一組執行作業相關的控制項。 此類別目錄具有一個面板。 按一下 **面板**，然後變更**標題**到`Edit`。
+1. 每個功能區分類會組織成具名的面板。 每個面板包含一組控制項，完整的相關的作業。 此類別目錄具有一個面板。 按一下 **面板**，然後變更**標題**到`Edit`。
 
-1. 若要**編輯** 面板中，新增一個按鈕，負責清除文件的內容。 中的這個按鈕的訊息識別碼已定義`IDR_SCRIBBTYPE`功能表資源。 指定`Clear All`做為按鈕文字和裝飾按鈕點陣圖的索引。 開啟**工具箱**，然後將拖曳** 按鈕**來**編輯**面板。 按一下按鈕，然後變更**標題**要`Clear All`，**識別碼**來`ID_EDIT_CLEAR_ALL`，**映像索引**到`0`， **Large Image Index**至`0`。
+1. 若要**編輯** 面板中，新增按鈕負責清除文件的內容。 中的這個按鈕的訊息識別碼已定義`IDR_SCRIBBTYPE`功能表資源。 指定`Clear All`做為按鈕文字和裝飾按鈕點陣圖的索引。 開啟**工具箱**，然後將拖曳** 按鈕**來**編輯**面板。 按一下按鈕，然後變更**標題**要`Clear All`，**識別碼**來`ID_EDIT_CLEAR_ALL`，**映像索引**到`0`， **Large Image Index**至`0`。
 
 1. 儲存變更，然後建置並執行應用程式。 Scribble 應用程式應該會顯示，，而且它應該在視窗中，而不是功能表列頂端功能區列。 功能區列應該有一個類別，**首頁**，並**Home**應該有一個面板，**編輯**。 您新增的功能區按鈕應該與現有的事件處理常式，而**開放**，**關閉**，**儲存**，**列印**，並**全部清除**按鈕應該會如預期般運作。
 
@@ -274,7 +274,7 @@ A*視覺化管理員*會控制所有活動，抽獎獲得應用程式的全域�
 
 ## <a name="next-steps"></a>後續步驟
 
-您已修改傳統的 Scribble 1.0 MFC 範例，以使用**功能區設計工具**。 現在請移至[第 2 部分](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)。
+您修改了傳統的 Scribble 1.0 MFC 範例，以使用**功能區設計工具**。 現在請移至[第 2 部分](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)。
 
 ## <a name="see-also"></a>另請參閱
 

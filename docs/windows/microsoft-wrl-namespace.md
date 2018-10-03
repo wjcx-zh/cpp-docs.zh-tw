@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ffea6dede3bc6bcc7c28b2326299362e78ed2b9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8c9aebeb2216bf8248b3182159a0f0aef1482c3b
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599297"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250441"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL 命名空間
 
@@ -89,7 +89,7 @@ namespace Microsoft::WRL;
 |名稱|描述|
 |----------|-----------------|
 |[AsWeak 函式](../windows/asweak-function.md)|擷取指定執行個體的弱式參考。|
-|[回呼函式](../windows/callback-function-windows-runtime-cpp-template-library.md)|建立成員函式是回呼方法的物件。|
+|[回呼函式 (WRL)](../windows/callback-function-wrl.md)|建立成員函式是回呼方法的物件。|
 |[CreateActivationFactory 函式](../windows/createactivationfactory-function.md)|建立會產生指定類別之執行個體 (由 Windows 執行階段啟動) 的處理站。|
 |[CreateClassFactory 函式](../windows/createclassfactory-function.md)|建立會產生指定類別之執行個體的處理站。|
 |[Make 函式](../windows/make-function.md)|初始化指定的 Windows 執行階段類別。|

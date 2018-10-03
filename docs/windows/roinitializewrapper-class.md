@@ -1,26 +1,34 @@
 ---
 title: RoInitializeWrapper 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 05/20/2018
+ms.date: 09/24/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::RoInitializeWrapper
+- corewrappers/Microsoft::WRL::Wrappers::RoInitializeWrapper::HRESULT
+- corewrappers/Microsoft::WRL::Wrappers::RoInitializeWrapper::RoInitializeWrapper
+- corewrappers/Microsoft::WRL::Wrappers::RoInitializeWrapper::~RoInitializeWrapper
 dev_langs:
 - C++
+helpviewer_keywords:
+- Microsoft::WRL::Wrappers::RoInitializeWrapper class
+- Microsoft::WRL::Wrappers::RoInitializeWrapper::operator HRESULT operator
+- Microsoft::WRL::Wrappers::RoInitializeWrapper::RoInitializeWrapper, constructor
+- Microsoft::WRL::Wrappers::RoInitializeWrapper::~RoInitializeWrapper, destructor
 ms.assetid: 4055fbe0-63a7-4c06-b5a0-414fda5640e5
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f5c47ac34d8b159e75acf672ba57ca8c1ebac1e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 22271435db3a66095da5b6065a6b9cc9463b3de2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592825"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48233745"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper 類別
 
@@ -34,22 +42,22 @@ class RoInitializeWrapper
 
 ## <a name="remarks"></a>備註
 
-**RoInitializeWrapper**是為了方便起見，會初始化 Windows 執行階段，並會傳回 HRESULT，指出作業是否成功。 因為類別的解構函式會呼叫`::Windows::Foundation::Uninitialize`，執行個體**RoInitializeWrapper**必須在全域或最上層範圍中宣告。
+`RoInitializeWrapper` 是為了方便起見，會初始化 Windows 執行階段，並會傳回 HRESULT，指出作業是否成功。 因為類別的解構函式會呼叫`::Windows::Foundation::Uninitialize`，執行個體`RoInitializeWrapper`必須在全域或最上層範圍中宣告。
 
 ## <a name="members"></a>成員
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
-|----------|-----------------|
-|[RoInitializeWrapper::RoInitializeWrapper 建構函式](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|初始化的新執行個體**RoInitializeWrapper**類別。|
-|[RoInitializeWrapper::~RoInitializeWrapper 解構函式](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|終結的目前執行個體**RoInitializeWrapper**類別。|
+名稱                                                                    | 描述
+----------------------------------------------------------------------- | -----------------------------------------------------------------
+[Roinitializewrapper:: Roinitializewrapper](#roinitializewrapper)        | 初始化 `RoInitializeWrapper` 類別的新執行個體。
+[RoInitializeWrapper:: ~ RoInitializeWrapper](#tilde-roinitializewrapper) | 終結的目前執行個體`RoInitializeWrapper`類別。
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|描述|
-|----------|-----------------|
-|[RoInitializeWrapper::HRESULT() 運算子](../windows/roinitializewrapper-hresult-parens-operator.md)|擷取所產生的 HRESULT **RoInitializeWrapper**建構函式。|
+名稱                                       | 描述
+------------------------------------------ | ------------------------------------------------------------------------
+[RoInitializeWrapper::HRESULT()](#hresult) | 擷取所產生的 HRESULT`RoInitializeWrapper`建構函式。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -61,6 +69,39 @@ class RoInitializeWrapper
 
 **命名空間：** Microsoft::WRL::Wrappers
 
-## <a name="see-also"></a>另請參閱
+## <a name="hresult"></a>RoInitializeWrapper::HRESULT()
 
-[Microsoft::WRL::Wrappers 命名空間](../windows/microsoft-wrl-wrappers-namespace.md)
+HRESULT 值所產生的最後一個擷取`RoInitializeWrapper`建構函式。
+
+```cpp
+operator HRESULT()  
+```
+
+## <a name="roinitializewrapper"></a>Roinitializewrapper:: Roinitializewrapper
+
+初始化 `RoInitializeWrapper` 類別的新執行個體。
+
+```cpp
+RoInitializeWrapper(   RO_INIT_TYPE flags)  
+```
+
+### <a name="parameters"></a>參數
+
+*flags*<br/>
+其中一個的 RO_INIT_TYPE 列舉型別，指定 Windows 執行階段所提供的支援。
+
+### <a name="remarks"></a>備註
+
+`RoInitializeWrapper`類別叫用`Windows::Foundation::Initialize(flags)`。
+
+## <a name="tilde-roinitializewrapper"></a>RoInitializeWrapper:: ~ RoInitializeWrapper
+
+取消初始化 Windows 執行階段。
+
+```cpp
+~RoInitializeWrapper()  
+```
+
+### <a name="remarks"></a>備註
+
+`RoInitializeWrapper`類別叫用`Windows::Foundation::Uninitialize()`。

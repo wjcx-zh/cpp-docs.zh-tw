@@ -1,7 +1,7 @@
 ---
 title: ATL COM + 1.0 元件精靈 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -17,18 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcf97c08680583dde686c68fb7e26f323e22716e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 102ec4f85c8915cf6afb70f03d470cec4e9e807f
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717900"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250402"
 ---
 # <a name="atl-com-10-component-wizard"></a>ATL COM+ 1.0 元件精靈
 
 您可以使用此精靈，將物件加入至您的專案，支援 COM + 1.0 服務，包括交易。
 
 您可以指定物件是否支援雙重介面和自動化。 您也可以指定錯誤的資訊介面、 增強的物件控制、 交易和非同步的訊息佇列的支援。
+
+> [!WARNING]
+> 在 Visual Studio 2017 版本 15.9 這個程式碼精靈已被取代，並將 Visual Studio 的未來版本中移除。 此精靈很少使用。 ATL 和 MFC 的一般支援不會受到此精靈的移除。 如果您想要分享您對這個已被取代的意見，請完成[這份問卷](https://www.surveymonkey.com/r/QDWKKCN)。 我們重視您的意見反應。
 
 ## <a name="remarks"></a>備註
 

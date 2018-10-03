@@ -1,30 +1,56 @@
 ---
 title: SafeInt 函式 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/28/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
+f1_keywords:
+- SafeInt functions
+- SafeAdd
+- SafeCast
+- SafeDivide
+- SafeEquals
+- SafeGreaterThan
+- SafeGreaterThanEquals
+- SafeLessThan
+- SafeLessThanEquals
+- SafeModulus
+- SafeMultiply
+- SafeNotEquals
+- SafeSubtract
 dev_langs:
 - C++
 helpviewer_keywords:
 - functions, SafeInt
+- SafeAdd function
+- SafeCast function
+- SafeDivide function
+- SafeEquals function
+- SafeGreaterThan function
+- SafeGreaterThanEquals function
+- SafeLessThan function
+- SafeLessThanEquals function
+- SafeModulus function
+- SafeMultiply function
+- SafeNotEquals function
+- SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf9a35d2198c78290bb6e60adef40fc88fdf4879
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 504cfe0780cfb0116f59ae67937ea5f0370dc8b2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604424"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235564"
 ---
 # <a name="safeint-functions"></a>SafeInt 函式
 
-SafeInt 程式庫提供數個您可以使用而建立的執行個體的函數[SafeInt 類別](../windows/safeint-class.md)。 如果您想要保護單一數學作業從整數的溢位時，您可以使用這些函式。 如果您想要保護多個數學運算，您應該建立**SafeInt**物件。 若要建立更有效率**SafeInt**比使用這些函式多次的物件。
+SafeInt 程式庫提供數個您可以使用而建立的執行個體的函數[SafeInt 類別](../windows/safeint-class.md)。 如果您想要保護單一數學作業從整數的溢位時，您可以使用這些函式。 如果您想要保護多個數學運算，您應該建立`SafeInt`物件。 若要建立更有效率`SafeInt`比使用這些函式多次的物件。
 
 這些功能可讓您比較，或執行而不需要先將它們轉換成相同類型的兩個不同類型的參數上的數學運算。
 
@@ -32,19 +58,351 @@ SafeInt 程式庫提供數個您可以使用而建立的執行個體的函數[Sa
 
 ## <a name="in-this-section"></a>本節內容
 
-|功能|描述|
-|--------------|-----------------|
-|[SafeAdd](../windows/safeadd.md)|兩個數字相加，並防止溢位。|
-|[SafeCast](../windows/safecast.md)|將轉換成另一個類型參數的一種。|
-|[SafeDivide](../windows/safedivide.md)|兩數相除並防止除以零。|
-|[SafeEquals](../windows/safeequals.md)， [SafeGreaterThan](../windows/safegreaterthan.md)， [SafeGreaterThanEquals](../windows/safegreaterthanequals.md)， [SafeLessThan](../windows/safelessthan.md)， [SafeLessThanEquals](../windows/safelessthanequals.md)， [SafeNotEquals](../windows/safenotequals.md)|比較兩個數字。 這些功能可讓您比較兩種不同的數字，而不需要變更其類型。|
-|[SafeModulus](../windows/safemodulus.md)|執行模數作業上兩個數字。|
-|[SafeMultiply](../windows/safemultiply.md)|在一起的兩個數目相乘，並防止溢位。|
-|[SafeSubtract](../windows/safesubtract.md)|兩個數字相減，並防止溢位。|
+功能                      | 描述
+----------------------------- | --------------------------------------------------------------
+[SafeAdd](#safeadd)           | 兩個數字相加，並防止溢位。
+[SafeCast](#safecast)         | 將轉換成另一個類型參數的一種。
+[SafeDivide](#safedivide)     | 兩數相除並防止除以零。
+[SafeEquals](#safeequals)， [SafeGreaterThan](#safegreaterthan)， [SafeGreaterThanEquals](#safegreaterthanequals)， [SafeLessThan](#safelessthan)， [SafeLessThanEquals](#safelessthanequals)， [SafeNotEquals](#safenotequals) | 比較兩個數字。 這些功能可讓您比較兩種不同的數字，而不需要變更其類型。
+[SafeModulus](#safemodulus)   | 執行模數作業上兩個數字。
+[SafeMultiply](#safemultiply) | 在一起的兩個數目相乘，並防止溢位。
+[SafeSubtract](#safesubtract) | 兩個數字相減，並防止溢位。
 
 ## <a name="related-sections"></a>相關章節
 
-|區段|描述|
-|-------------|-----------------|
-|[SafeInt 類別](../windows/safeint-class.md)|**SafeInt**類別。|
-|[SafeIntException 類別](../windows/safeintexception-class.md)|SafeInt 程式庫的特定例外狀況類別。|
+區段                                                  | 描述
+-------------------------------------------------------- | ----------------------------------------------------
+[SafeInt](../windows/safeint-class.md)                   | `SafeInt` 類別。
+[SafeIntException](../windows/safeintexception-class.md) | SafeInt 程式庫的特定例外狀況類別。
+
+## <a name="safeadd"></a>SafeAdd
+
+兩個數字相加來防止溢位。
+
+```cpp
+template<typename T, typename U>
+inline bool SafeAdd (
+   T t,
+   U u,
+   T& result
+) throw ();
+```
+
+### <a name="parameters"></a>參數
+
+*t*<br/>
+[in]要新增的第一個數字。 這必須為類型 T。
+
+*u*<br/>
+[in]若要新增第二個數字。 這必須為類型 U。
+
+*結果*<br/>
+[out]參數位置`SafeAdd`儲存結果。
+
+### <a name="return-value"></a>傳回值
+
+`true` 如果沒有發生錯誤;`false`發生錯誤。
+
+## <a name="safecast"></a>SafeCast
+
+將一種類型的編號，另一種類型的轉換。
+
+```cpp
+template<typename T, typename U>
+inline bool SafeCast (
+   const T From,
+   U& To
+);
+```
+
+### <a name="parameters"></a>參數
+
+*From*<br/>
+[in]要轉換的來源點數。 這必須是型別`T`。
+
+*若要*<br/>
+[out]新的數字類型的參考。 這必須是型別`U`。
+
+### <a name="return-value"></a>傳回值
+
+`true` 如果沒有發生錯誤;`false`發生錯誤。
+
+## <a name="safedivide"></a>SafeDivide
+
+兩數相除防止除以零的方式。
+
+```cpp
+template<typename T, typename U>
+inline bool SafeDivide (
+   T t,
+   U u,
+   T& result
+) throw ();
+```
+
+### <a name="parameters"></a>參數
+
+*t*<br/>
+[in]除數。 這必須為類型 T。
+
+*u*<br/>
+[in]被除數。 這必須為類型 U。
+
+*結果*<br/>
+[out]參數位置`SafeDivide`儲存結果。
+
+### <a name="return-value"></a>傳回值
+
+`true` 如果沒有發生錯誤;`false`發生錯誤。
+
+## <a name="safeequals"></a>SafeEquals
+
+比較兩個數字，以判斷它們是否相等。
+
+```cpp
+template<typename T, typename U>
+inline bool SafeEquals (
+   const T t,
+   const U u
+) throw ();
+```
+
+### <a name="parameters"></a>參數
+
+*t*<br/>
+[in]要比較的第一個數字。 這必須為類型 T。
+
+*u*<br/>
+[in]要比較的第二個點數。 這必須為類型 U。
+
+### <a name="return-value"></a>傳回值
+
+`true` 如果*t*並*u*相等，否則為`false`。
+
+### <a name="remarks"></a>備註
+
+因為 `==` 可讓您比較兩種不同類型的數字，所以此方法會增強 `SafeEquals`。
+
+## <a name="safegreaterthan"></a>SafeGreaterThan
+
+比較兩個數字。
+
+```cpp
+template<typename T, typename U>
+inline bool SafeGreaterThan (
+   const T t,
+   const U u
+) throw ();
+```
+
+### <a name="parameters"></a>參數
+
+*t*<br/>
+[in]要比較的第一個數字。 這必須是型別`T`。
+
+*u*<br/>
+[in]要比較的第二個點數。 這必須是型別`U`。
+
+### <a name="return-value"></a>傳回值
+
+`true` 如果*t*大於*u*否則`false`。
+
+### <a name="remarks"></a>備註
+
+`SafeGreaterThan` 延伸一般比較運算子，可讓您比較兩種不同的數字。
+
+## <a name="safegreaterthanequals"></a>SafeGreaterThanEquals
+
+比較兩個數字。
+
+```cpp
+template <typename T, typename U>
+inline bool SafeGreaterThanEquals (
+   const T t,
+   const U u
+) throw ();
+```
+
+### <a name="parameters"></a>參數
+
+*t*<br/>
+[in]要比較的第一個數字。 這必須是型別`T`。
+
+*u*<br/>
+[in]要比較的第二個點數。 這必須是型別`U`。
+
+### <a name="return-value"></a>傳回值
+
+`true` 如果*t*大於或等於*u*否則`false`。
+
+### <a name="remarks"></a>備註
+
+`SafeGreaterThanEquals` 增強的標準的比較運算子，因為它可讓您比較兩種不同的數字。
+
+## <a name="safelessthan"></a>SafeLessThan
+
+判斷一個數字是否小於另一個。
+
+```cpp
+template<typename T, typename U>
+inline bool SafeLessThan (
+   const T t,
+   const U u
+) throw ();
+```
+
+### <a name="parameters"></a>參數
+
+*t*<br/>
+[in]第一個數字。 這必須是型別`T`。
+
+*u*<br/>
+[in]第二個的號碼。 這必須是型別`U`。
+
+### <a name="return-value"></a>傳回值
+
+`true` 如果*t*是小於*u*否則`false`。
+
+### <a name="remarks"></a>備註
+
+這個方法會增強標準的比較運算子，因為`SafeLessThan`可讓您比較兩種不同的數字。
+
+## <a name="safelessthanequals"></a>SafeLessThanEquals
+
+比較兩個數字。
+
+```cpp
+template <typename T, typename U>
+inline bool SafeLessThanEquals (
+   const T t,
+   const U u
+) throw ();
+```
+
+### <a name="parameters"></a>參數
+
+*t*<br/>
+[in]要比較的第一個數字。 這必須是型別`T`。
+
+*u*<br/>
+[in]要比較的第二個點數。 這必須是型別`U`。
+
+### <a name="return-value"></a>傳回值
+
+`true` 如果*t*小於或等於*u*否則`false`。
+
+### <a name="remarks"></a>備註
+
+`SafeLessThanEquals` 延伸一般比較運算子，可讓您比較兩種不同的數字。
+
+## <a name="safemodulus"></a>SafeModulus
+
+執行模數作業上兩個數字。
+
+```cpp
+template<typename T, typename U>
+inline bool SafeModulus (
+   const T t,
+   const U u,
+   T& result
+) throw ();
+```
+
+### <a name="parameters"></a>參數
+
+*t*<br/>
+[in]除數。 這必須是型別`T`。
+
+*u*<br/>
+[in]被除數。 這必須是型別`U`。
+
+*結果*<br/>
+[out]參數位置`SafeModulus`儲存結果。
+
+### <a name="return-value"></a>傳回值
+
+`true` 如果沒有發生錯誤;`false`發生錯誤。
+
+## <a name="safemultiply"></a>SafeMultiply
+
+兩個數目相乘，可防止溢位在一起。
+
+```cpp
+template<typename T, typename U>
+inline bool SafeMultiply (
+   T t,
+   U u,
+   T& result
+) throw ();
+```
+
+### <a name="parameters"></a>參數
+
+*t*<br/>
+[in]要相乘的第一個數字。 這必須是型別`T`。
+
+*u*<br/>
+[in]要相乘的第二個數字。 這必須是型別`U`。
+
+*結果*<br/>
+[out]參數位置`SafeMultiply`儲存結果。
+
+### <a name="return-value"></a>傳回值
+
+`true` 如果沒有發生錯誤;`false`發生錯誤。
+
+## <a name="safenotequals"></a>SafeNotEquals
+
+判斷兩個數字是否不相等。
+
+```cpp
+template<typename T, typename U>
+inline bool SafeNotEquals (
+   const T t,
+   const U u
+) throw ();
+```
+
+### <a name="parameters"></a>參數
+
+*t*<br/>
+[in]要比較的第一個數字。 這必須是型別`T`。
+
+*u*<br/>
+[in]要比較的第二個點數。 這必須是型別`U`。
+
+### <a name="return-value"></a>傳回值
+
+`true` 如果*t*並*u*不相等，否則為`false`。
+
+### <a name="remarks"></a>備註
+
+因為 `!=` 可讓您比較兩種不同類型的數字，所以此方法會增強 `SafeNotEquals`。
+
+## <a name="safesubtract"></a>SafeSubtract
+
+兩個數字的方式防止溢位。
+
+```cpp
+template<typename T, typename U>
+inline bool SafeSubtract (
+   T t,
+   U u,
+   T& result
+) throw ();
+```
+
+### <a name="parameters"></a>參數
+
+*t*<br/>
+[in]減法運算中的第一個數字。 這必須是型別`T`。
+
+*u*<br/>
+[in]要減去的數字*t*。 這必須是型別`U`。
+
+*結果*<br/>
+[out]參數位置`SafeSubtract`儲存結果。
+
+### <a name="return-value"></a>傳回值
+
+`true` 如果沒有發生錯誤;`false`發生錯誤。

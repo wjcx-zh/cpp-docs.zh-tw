@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48efa5d85ac6c7ba7e989cc55196f12fb391fa6d
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 899ddba8ee72039702f05b0d369b79e347f7db7e
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169719"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235603"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>逐步解說：將 CTaskDialog 加入至應用程式
 
@@ -43,7 +43,7 @@ ms.locfileid: "47169719"
 
 ## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>以 CTaskDialog 取代 Windows 訊息方塊
 
-下列程序示範 `CTaskDialog`的最基本用法，也就是取代 Windows 訊息方塊。 此範例也會變更已與工作對話方塊建立關聯的圖示。 變更圖示可使 `CTaskDialog` 看起來與 Windows 訊息方塊完全相同。
+下列程序示範 `CTaskDialog`的最基本用法，也就是取代 Windows 訊息方塊。 此範例也會變更已與工作對話方塊建立關聯的圖示。 變更圖示可讓`CTaskDialog`出現相同的 Windows 訊息方塊。
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>以 CTaskDialog 取代 Windows 訊息方塊
 
@@ -61,7 +61,7 @@ ms.locfileid: "47169719"
     CString emptyString;
     ```
 
-1. 將下列程式碼加入步驟 4 的程式碼後面。 此程式碼可確保使用者的電腦支援 `CTaskDialog`。 如果不支援對話方塊，應用程式會改為顯示 Windows 訊息方塊。
+1. 將下列程式碼加入步驟 4 的程式碼後面。 此程式碼可確保使用者的電腦支援 `CTaskDialog`。 如果對話方塊不支援，應用程式會改為顯示 Windows 訊息方塊。
 
     ```cpp
     if (CTaskDialog::IsSupported())
@@ -92,7 +92,7 @@ ms.locfileid: "47169719"
     taskDialog.DoModal();
     ```
 
-如果您不想要讓 `CTaskDialog` 與 Windows 訊息方塊顯示相同的圖示，您可以省略步驟 7。 如果您省略該步驟，當應用程式顯示 `CTaskDialog` 時將不會有圖示。
+如果您不想，您可以避免步驟 7`CTaskDialog`若要以 Windows 訊息方塊顯示相同的圖示。 如果您有避免該步驟，`CTaskDialog`不會有圖示時的應用程式會顯示它。
 
 編譯並執行應用程式。 應用程式啟動後，會顯示工作對話方塊。
 
@@ -102,7 +102,7 @@ ms.locfileid: "47169719"
 
 ### <a name="to-add-functionality-to-the-ctaskdialog"></a>將功能加入 CTaskDialog
 
-1. 巡覽至 [資源檢視] 。 如果看不到 [資源檢視] ，您可以從 [檢視]  功能表將它開啟。
+1. 巡覽至 [資源檢視] 。 如果您看**資源檢視**，您可以開啟它從**檢視**功能表。
 
 1. 展開 [資源檢視]  ，直到您可以選取 [字串資料表]  資料夾。 將它展開，然後按兩下 [字串資料表]  項目。
 
@@ -181,7 +181,7 @@ ms.locfileid: "47169719"
 
 ### <a name="to-display-a-ctaskdialog-without-creating-a-ctaskdialog-object"></a>顯示 CTaskDialog 而不需要建立 CTaskDialog 物件
 
-1. 如果尚未開啟 MyProject.cpp 檔案，請加以開啟。
+1. 如果尚未開啟，請開啟 MyProject.cpp 檔案。
 
 1. 巡覽至 `if (CTaskDialog::IsSupported())` 陳述式的右中括號。
 
@@ -197,7 +197,7 @@ ms.locfileid: "47169719"
 
 編譯並執行應用程式。 應用程式會顯示兩個對話方塊。 第一個對話方塊是來自**將功能加入 CTaskDialog**程序; 第二個對話方塊是來自上一個程序。
 
-這些範例不會示範 `CTaskDialog`的所有可用選項，但應該可以協助您開始使用。 如需此類別的完整說明，請參閱 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) 。
+這些範例不示範所有可用的選項，如`CTaskDialog`，但應該可以協助您開始著手。 如需此類別的完整說明，請參閱 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) 。
 
 ## <a name="see-also"></a>另請參閱
 

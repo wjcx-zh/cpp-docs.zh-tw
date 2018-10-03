@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2355a5341259978e402ecc6f8de5c684c9435e3a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5867f9524d897657641ab9db392d77585117a465
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433058"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234982"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>將 Windows Form 使用者控制項裝載成 MFC 對話方塊
 
@@ -56,7 +56,7 @@ MFC 提供樣板類別[CWinFormsDialog](../mfc/reference/cwinformsdialog-class.m
 
 1. 加入新的類別子類別化`CDialog`。
 
-     以滑鼠右鍵按一下專案名稱，並新增 MFC 類別 (稱為 CHostForWinForm) 子類別化`CDialog`。 因為您不需要此對話方塊資源，您可以刪除的資源識別碼 （選取資源檢視，展開 [對話方塊] 資料夾，然後刪除 IDD_HOSTFORWINFORM 資源。  然後，移除任何參照的識別碼在程式碼中。）。
+     以滑鼠右鍵按一下專案名稱，並新增 MFC 類別 (稱為 CHostForWinForm) 子類別化`CDialog`。 因為您不需要此對話方塊資源，您可以刪除的資源識別碼 (選取**資源檢視**，展開**對話方塊**資料夾，然後刪除`IDD_HOSTFORWINFORM`資源。  然後，移除任何參照的識別碼在程式碼中。）。
 
 1. 取代`CDialog`CHostForWinForm.h 和 CHostForWinForm.cpp 檔案中`CWinFormsDialog<WindowsControlLibrary1::UserControl1>`。
 

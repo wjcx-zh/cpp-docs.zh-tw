@@ -1,7 +1,7 @@
 ---
 title: AgileEventSource 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 03/22/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f8ef724c78bdc61ef470199fbb5e956e374493f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c5d94b7a3949f0f547c9809d75e22eefbe9f5708
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405238"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789068"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource 類別
 
@@ -31,9 +31,13 @@ ms.locfileid: "46405238"
 ## <a name="syntax"></a>語法
 
 ```cpp
-template<typename TDelegateInterface, typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>>
-class AgileEventSource
-    : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
+template<
+    typename TDelegateInterface,
+    typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>
+>
+class AgileEventSource :
+    public Microsoft::WRL::EventSource<
+        TDelegateInterface, TEventSourceOptions>;
 ```
 
 ## <a name="parameters"></a>參數

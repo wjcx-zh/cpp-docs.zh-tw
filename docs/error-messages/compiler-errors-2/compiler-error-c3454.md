@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f85ff8c33cc43bdc1af9a3bf02d9240a0fd5e09c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e469f6715775288720c61ad8a61e16956e4c63d1
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098767"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789159"
 ---
 # <a name="compiler-error-c3454"></a>編譯器錯誤 C3454
 
@@ -29,7 +29,7 @@ ms.locfileid: "46098767"
 
 必須定義類別，它才能是屬性。
 
-如需詳細資訊，請參閱 [attribute](../../windows/attribute.md)。
+如需詳細資訊，請參閱 <<c0> [ 屬性](../../windows/attributes/attribute.md)。
 
 ## <a name="example"></a>範例
 

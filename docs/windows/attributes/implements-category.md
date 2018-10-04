@@ -1,0 +1,82 @@
+---
+title: implements_category （c + + COM 屬性） |Microsoft Docs
+ms.custom: ''
+ms.date: 10/02/2018
+ms.technology:
+- cpp-windows
+ms.topic: reference
+f1_keywords:
+- vc-attr.implements_category
+dev_langs:
+- C++
+helpviewer_keywords:
+- implements_category attribute
+ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
+author: mikeblome
+ms.author: mblome
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f8c7e521d4a79ad1743e87c540e984c43cad7d39
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48791030"
+---
+# <a name="implementscategory"></a>implements_category
+
+指定目標類別所實作的元件類別。
+
+## <a name="syntax"></a>語法
+
+```cpp
+[ implements_category(implements_category="uuid") ]
+```
+
+### <a name="parameters"></a>參數
+
+*implements_category*<br/>
+實作的類別目錄的識別碼。
+
+## <a name="remarks"></a>備註
+
+**Implements_category** c + + 屬性會指定目標類別所實作的元件類別。 這是藉由建立類別目錄的對應，並加入所指定的個別項目**implements_category**屬性。 如需詳細資訊，請參閱 <<c0> [ 元件類別和執行它們的運作方式為何？](https://msdn.microsoft.com/library/windows/desktop/ms694322)。
+
+此屬性需要[coclass](coclass.md)， [progid](progid.md)，或[vi_progid](vi-progid.md)屬性 （或其中一種表示另一個屬性） 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果`progid`會套用`vi_progid`和`coclass`也會套用。
+
+## <a name="example"></a>範例
+
+下列程式碼可讓您指定下列物件會實作`Control`類別目錄。
+
+```cpp
+// cpp_attr_ref_implements_category.cpp
+// compile with: /LD
+#define _ATL_ATTRIBUTES
+#include "atlbase.h"
+#include "atlcom.h"
+
+[module (name="MyLib")];
+[ coclass, implements_category("CATID_Control"),
+  uuid("20a0d0cc-5172-40f5-99ae-5e032f3205ae")]
+class CMyClass {};
+```
+
+## <a name="requirements"></a>需求
+
+### <a name="attribute-context"></a>屬性內容
+
+|||
+|-|-|
+|**適用於**|**類別**，**結構**|
+|**可重複**|是|
+|**必要屬性**|下列其中之一： `coclass`， `progid`，或 `vi_progid`|
+|**無效屬性**|無|
+
+如需詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+
+## <a name="see-also"></a>另請參閱
+
+[COM 屬性](com-attributes.md)<br/>
+[類別屬性](class-attributes.md)<br/>
+[IMPLEMENTED_CATEGORY](../../atl/reference/category-macros.md#implemented_category)  

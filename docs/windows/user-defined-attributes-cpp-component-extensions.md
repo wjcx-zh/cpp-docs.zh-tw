@@ -1,7 +1,7 @@
 ---
 title: 使用者定義的屬性 （c + + 元件延伸模組） |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/02/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 605759e241498e83174f4d6b16435c3119c56671
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3c2f5568b067c119bfa65744290c39d7ca577072
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600377"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789224"
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>使用者定義屬性 (C++ 元件擴充功能)
 
@@ -47,7 +47,7 @@ C + + /CX 屬性支援只有屬性，但不是屬性建構函式或方法。
 
 ### <a name="remarks"></a>備註
 
-本主題所述的語法與資訊要取代所顯示的資訊[屬性](../windows/attribute.md)。
+本主題所述的語法與資訊要取代所顯示的資訊[屬性](attributes/attribute.md)。
 
 您可以定義自訂屬性型別定義，並讓<xref:System.Attribute>基底類別類型，並選擇性地套用<xref:System.AttributeUsageAttribute>屬性。
 
@@ -55,9 +55,9 @@ C + + /CX 屬性支援只有屬性，但不是屬性建構函式或方法。
 
 如需詳細資訊，請參閱：
 
-- [屬性目標](../windows/attribute-targets-cpp-component-extensions.md)
+- [屬性目標](attribute-targets-cpp-component-extensions.md)
 
-- [屬性參數類型](../windows/attribute-parameter-types-cpp-component-extensions.md)
+- [屬性參數類型](attribute-parameter-types-cpp-component-extensions.md)
 
 如需 Visual c + + 中簽署組件資訊，請參閱[強式名稱組件 （組件簽署） (C + + /cli CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。
 
@@ -177,7 +177,7 @@ Service Access = Read
 
 屬性引數必須是編譯時期常數;在大部分情況下，它們應該是常數常值。
 
-請參閱[typeid](../windows/typeid-cpp-component-extensions.md)如需有關如何從自訂屬性區塊中傳回值為 system:: type 資訊。
+請參閱[typeid](typeid-cpp-component-extensions.md)如需有關如何從自訂屬性區塊中傳回值為 system:: type 資訊。
 
 ```cpp
 // extending_metadata_e.cpp
@@ -216,4 +216,4 @@ ref struct B {};
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+[執行階段平台的元件延伸模組](component-extensions-for-runtime-platforms.md)

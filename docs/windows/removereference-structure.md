@@ -1,7 +1,7 @@
 ---
 title: RemoveReference 結構 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f6ab085e1bed3909090990cfa8e265bea792a483
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d4c07a8f948895db098008f5efb90353912a13dd
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447020"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789055"
 ---
 # <a name="removereference-structure"></a>RemoveReference 結構
 
@@ -33,8 +33,10 @@ ms.locfileid: "46447020"
 ```cpp
 template<class T>
 struct RemoveReference;
+
 template<class T>
 struct RemoveReference<T&>;
+
 template<class T>
 struct RemoveReference<T&&>;
 ```

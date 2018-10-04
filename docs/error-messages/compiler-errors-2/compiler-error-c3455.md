@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d26a8f3e404eaa19a102be4cb3f11350c4fe674
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a10c91f34cd00b8524a047131e9a39b901c83fce
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46089355"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788587"
 ---
 # <a name="compiler-error-c3455"></a>編譯器錯誤 C3455
 
 'attribute': 沒有任何屬性建構函式與引數相符
 
-用來宣告屬性的值無效。  如需詳細資訊，請參閱 [attribute](../../windows/attribute.md) 。
+用來宣告屬性的值無效。  請參閱[屬性](../../windows/attributes/attribute.md)如需詳細資訊。
 
 ## <a name="example"></a>範例
 

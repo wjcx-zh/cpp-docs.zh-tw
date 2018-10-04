@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef2aaf3f37e9699547c3a85c55a2f72d4baab7a6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 86387103d4d8257a109928a665579621468a3cf3
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46047690"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788687"
 ---
 # <a name="compiler-warning-level-1-c4096"></a>編譯器警告 （層級 1） C4096
 
@@ -29,7 +29,7 @@ ms.locfileid: "46047690"
 
 您可能想為 COM 介面的介面定義未定義為 COM 介面，並因此將不會被發出到 IDL 檔案。
 
-請參閱[介面屬性](../../windows/interface-attributes.md)的屬性清單，表示介面的 COM 介面。
+請參閱[介面屬性](../../windows/attributes/interface-attributes.md)的屬性清單，表示介面的 COM 介面。
 
 下列範例會產生 C4096:
 

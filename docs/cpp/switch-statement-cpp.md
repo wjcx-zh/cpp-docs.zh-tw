@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbcc791d4e39f58146ed13bb41c8ec43941d3527
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 32fcf4f8f99f80e44758c107a8941c51bd8a767f
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087808"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821162"
 ---
 # <a name="switch-statement-c"></a>switch 陳述式 (C++)
 
@@ -119,14 +119,14 @@ int main()
 **Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): switch 陳述式可能會引進並初始化的變數，其範圍僅限於在 switch 陳述式區塊：
 
 ```cpp
-switch (Gadget gadget(args); auto s = gadget.get_status())
-        {
-        case status::good:
-            gadget.zip();
-            break;
-        case status::bad:
-            throw BadGadget();
-        };
+    switch (Gadget gadget(args); auto s = gadget.get_status())
+    {
+    case status::good:
+        gadget.zip();
+        break;
+    case status::bad:
+        throw BadGadget();
+    };
 ```
 
 內部區塊**切換**陳述式可以包含有初始化的定義，只要它們是連線到 — 也就是不可能執行的所有路徑程式略過。 使用這些宣告引入的名稱有區域範圍。 例如: 
@@ -138,35 +138,35 @@ switch (Gadget gadget(args); auto s = gadget.get_status())
 using namespace std;
 int main(int argc, char *argv[])
 {
-   switch( tolower( *argv[1] ) )
-   {
-       // Error. Unreachable declaration.
-       char szChEntered[] = "Character entered was: ";
+    switch( tolower( *argv[1] ) )
+    {
+        // Error. Unreachable declaration.
+        char szChEntered[] = "Character entered was: ";
 
-   case 'a' :
-       {
-       // Declaration of szChEntered OK. Local scope.
-       char szChEntered[] = "Character entered was: ";
-       cout << szChEntered << "a\n";
-       }
-       break;
+    case 'a' :
+        {
+        // Declaration of szChEntered OK. Local scope.
+        char szChEntered[] = "Character entered was: ";
+        cout << szChEntered << "a\n";
+        }
+        break;
 
-   case 'b' :
-       // Value of szChEntered undefined.
-       cout << szChEntered << "b\n";
-       break;
+    case 'b' :
+        // Value of szChEntered undefined.
+        cout << szChEntered << "b\n";
+        break;
 
-   default:
-       // Value of szChEntered undefined.
-       cout << szChEntered << "neither a nor b\n";
-       break;
-   }
+    default:
+        // Value of szChEntered undefined.
+        cout << szChEntered << "neither a nor b\n";
+        break;
+    }
 }
 ```
 
 A**切換**陳述式可以巢狀。 在此情況下，**案例**或是**預設**標籤相關聯的最接近**切換**含括它們的陳述式。
 
-## <a name="microsoft-specific"></a>Microsoft 特定的
+**Microsoft 專屬**
 
 Microsoft C 不會限制中的 case 值的數目**切換**陳述式。 此數目會受到可用記憶體的限制。 ANSI C 要求在至少 257 個 case 標籤中允許**切換**陳述式。
 

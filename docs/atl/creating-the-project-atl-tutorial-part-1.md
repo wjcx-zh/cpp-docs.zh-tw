@@ -1,7 +1,7 @@
 ---
 title: 建立專案 (ATL 教學課程，第 1 部分) |Microsoft Docs
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/26/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,42 +12,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54b45ff8c7af8c8aaf7232cefa2bb4f002fc37be
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bd53bc778b3229522d34993c72833500732323b3
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755614"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821097"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>建立專案 (ATL 教學課程，第 1 部分)
 
 本教學課程將逐步引導您逐步完成建立 ActiveX 物件顯示多邊形的非屬性化 ATL 專案。 物件包含的選項可讓使用者變更重新整理顯示組成的 polygon 和程式碼的邊數。
 
 > [!NOTE]
->  ATL 和 MFC 不正式支援 Visual Studio 的 Express 版本中。
+> ATL 和 MFC 不正式支援 Visual Studio 的 Express 版本中。
 
 > [!NOTE]
->  本教學課程會建立相同的原始程式碼，多邊形的範例。 如果您想要避免以手動方式輸入的原始程式碼，您可以下載從[Polygon 範例摘要](../visual-cpp-samples.md)。 當您逐步進行教學課程中，或使用它來查看您自己的專案中的錯誤，您接著可以參考多邊形的原始程式碼。
+> 本教學課程會建立相同的原始程式碼，多邊形的範例。 如果您想要避免以手動方式輸入的原始程式碼，您可以下載從[Polygon 範例摘要](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon)。 當您逐步進行教學課程中，或使用它來查看您自己的專案中的錯誤，您接著可以參考多邊形的原始程式碼。
+> 若要編譯，請開啟 stdafx.h 並取代：
+> ```
+> #ifndef WINVER  
+> #define WINVER 0x0400   
+> #endif
+> ```
+> 取代為
+> ```
+> #ifndef WINVER  
+> #define WINVER 0x0500
+> #define _WIN32_WINNT 0x0500
+> #endif
+> ```
+> 編譯器仍會抱怨`regsvr32`未正確地結束，但您仍應該有內建且可供使用的控制項之 DLL。
 
 ### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>若要建立初始的 ATL 專案使用 ATL 專案精靈
 
 1. 在 Visual Studio 開發環境中，按一下**的新**上**檔案**功能表，然後再按一下**專案**。
 
-2. 按一下  **Visual c + + 專案**資料夾，然後選取**ATL 專案**。
+1. 開啟**Visual c + +** 索引標籤，然後選取**MFC/ATL**。 選取  **ATL 專案**。
 
-3. 型別*多邊形*做為專案名稱。
+1. 型別*多邊形*做為專案名稱。
 
-     原始碼的位置通常會預設為 My Documents\Visual Studio 專案，並會自動建立新的資料夾。
+    原始碼的位置通常會預設為 \Users\\\<使用者名稱 > 將會自動建立 \source\repos 和新的資料夾。
 
-4. 按一下 [**確定**和 ATL 專案精靈] 隨即開啟。
+1. 按一下 [ **[確定]** 並**ATL 專案**精靈] 隨即開啟。
 
-5. 按一下 **應用程式設定**若要查看可用的選項。
+1. 按一下 **應用程式設定**若要查看可用的選項。
 
-6. 如您所建立控制項，控制項必須是同處理序伺服器，讓**應用程式類型**做為 DLL。
+1. 如您所建立控制項，控制項必須是同處理序伺服器，讓**應用程式類型**做為 DLL。
 
-7. 其他選項保留其預設值，然後按**完成**。
+1. 其他選項保留其預設值，然後按**確定**。
 
-[ATL 專案精靈] 會產生數個檔案來建立專案。 您可以展開多邊形物件，在 [方案總管] 中檢視這些檔案。 以下列出的檔案。
+**ATL 專案精靈**會產生數個檔案來建立專案。 您可以檢視中的這些檔案**方案總管**藉由展開`Polygon`物件。 以下列出的檔案。
 
 |檔案|描述|
 |----------|-----------------|
@@ -61,13 +75,13 @@ ms.locfileid: "43755614"
 |stdafx.cpp|將檔案`#include`ATL 實作檔案。|
 |stdafx.h|將檔案`#include`ATL 標頭檔。|
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下`Polygon`專案。
+1. 在 **方案總管**，以滑鼠右鍵按一下`Polygon`專案。
 
-2. 在捷徑功能表，按一下 **屬性**。
+1. 在捷徑功能表，按一下 **屬性**。
 
-3. 按一下 **連結器**。 變更**每個 UserRedirection**選項設定為**是**。
+1. 按一下 **連結器**。 變更**每個 UserRedirection**選項設定為**是**。
 
-4. 按一下 [確定 **Deploying Office Solutions**]。
+1. 按一下 [確定 **Deploying Office Solutions**]。
 
 在下一個步驟中，您會將控制項加入您的專案。
 

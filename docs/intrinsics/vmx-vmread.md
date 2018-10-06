@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0029513b111143cc665a51cefd3c3e8e1a786aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0d9483dafd763112f31f5299a5e0e7e54c224459
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380343"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821019"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 
@@ -56,7 +56,7 @@ unsigned char __vmx_vmread(
 
 ## <a name="remarks"></a>備註
 
-`__vmx_vmread`函式相當於`VMREAD`機器指令。 值`Field`參數是 Intel 文件中所述的編碼的欄位索引。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)網站的 url，然後參閱該文件的附錄 C.
+`__vmx_vmread`函式相當於`VMREAD`機器指令。 值`Field`參數是 Intel 文件中所述的編碼的欄位索引。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](https://software.intel.com/articles/intel-sdm)網站的 url，然後參閱該文件的附錄 C.
 
 ## <a name="requirements"></a>需求
 

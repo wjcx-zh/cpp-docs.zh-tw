@@ -1,7 +1,7 @@
 ---
-title: /CLRUNMANAGEDCODECHECK （新增 SuppressUnmanagedCodeSecurityAttribute） |Microsoft Docs
+title: /CLRUNMANAGEDCODECHECK (移除 SuppressUnmanagedCodeSecurityAttribute) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 679adc527cc70056e1292eb7e639499bd814bca6
-ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
+ms.openlocfilehash: 9868f0c35f4a988ac8e0aee8076f232f86c04afd
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47429757"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820916"
 ---
-# <a name="clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK （新增 SuppressUnmanagedCodeSecurityAttribute）
+# <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (移除 SuppressUnmanagedCodeSecurityAttribute)
 
-**/CLRUNMANAGEDCODECHECK**指定連結器是否會套用<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>至連結器產生`PInvoke`從 managed 程式碼呼叫原生 Dll。
+**/CLRUNMANAGEDCODECHECK**指定連結器不會套用<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>至連結器產生`PInvoke`從 managed 程式碼呼叫原生 Dll。
 
 ## <a name="syntax"></a>語法
 
@@ -34,13 +34,13 @@ ms.locfileid: "47429757"
 
 ## <a name="remarks"></a>備註
 
-根據預設，連結器適用於**SuppressUnmanagedCodeSecurityAttribute**至連結器產生`PInvoke`呼叫。 當 **/CLRUNMANAGEDCODECHECK**生效時， **SuppressUnmanagedCodeSecurityAttribute**不會套用。
+根據預設，連結器適用於**SuppressUnmanagedCodeSecurityAttribute**至連結器產生`PInvoke`呼叫。 當 **/CLRUNMANAGEDCODECHECK**生效時， **SuppressUnmanagedCodeSecurityAttribute**已移除。 若要明確套用**SuppressUnmanagedCodeSecurityAttribute**至連結器產生`PInvoke`呼叫，您可以使用 **/CLRUNMANAGEDCODECHECK:NO**。
 
-連結器只會將屬性加入至編譯的物件 **/clr**或是 **/clr: pure**。 不過， **/clr: pure**編譯器選項是在 Visual Studio 2015 中已被取代，不支援的 Visual Studio 2017 中。
+連結器只會將屬性加入至使用編譯的物件 **/clr**或是 **/clr: pure**。 不過， **/clr: pure**編譯器選項是在 Visual Studio 2015 中已被取代，不支援的 Visual Studio 2017 中。
 
 A`PInvoke`呼叫時，所產生連結器連結器找不到受管理的符號，以滿足 managed 呼叫端的參考，但是可以找到原生的符號，來滿足該參考。 如需詳細資訊`PInvoke`，請參閱 <<c2> [ 從 Managed 程式碼呼叫原生函數](../../dotnet/calling-native-functions-from-managed-code.md)。
 
-請注意，如果您使用<xref:System.Security.AllowPartiallyTrustedCallersAttribute>在您的程式碼中，您應該明確設定 **/CLRUNMANAGEDCODECHECK**。 如果映像包含 SuppressUnmanagedCodeSecurity 和 AllowPartiallyTrustedCallers 屬性，它就會是潛在的安全性弱點。
+請注意，如果您使用<xref:System.Security.AllowPartiallyTrustedCallersAttribute>在您的程式碼中，您應該明確設定 **/CLRUNMANAGEDCODECHECK**移除**SuppressUnmanagedCodeSecurity**屬性。 如果映像同時包含是潛在的安全性弱點**SuppressUnmanagedCodeSecurity**並**AllowPartiallyTrustedCallers**屬性。
 
 請參閱[Unmanaged 程式碼的安全程式碼撰寫指導方針](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code)如需有關使用的含意**SuppressUnmanagedCodeSecurityAttribute**。
 

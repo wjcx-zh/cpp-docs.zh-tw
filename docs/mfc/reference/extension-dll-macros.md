@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 426e23aa935cd0b0add664c1eeb3885181cb4e6b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 320bbc9fde5888f75149d6f3f9fad60deb869924
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383749"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821413"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>巨集和管理 Dll 函式
 
@@ -34,7 +34,6 @@ ms.locfileid: "46383749"
 |[AfxInitExtensionModule]()#afxinitextensionmodule|初始化 DLL。|
 |[AfxSetAmbientActCtx](#afxsetambientactctx)|設定每個模組狀態旗標，會影響 MFC 的 WinSxS 行為。|
 |[AfxTermExtensionModule]()#afxtermextensionmodule)|可讓 MFC 清理 MFC 擴充 DLL 時每個處理序中斷連結的 DLL。|
-
 
 ## <a name="afx_ext_class"></a>  AFX_EXT_CLASS
 
@@ -68,6 +67,7 @@ class AFX_EXT_CLASS CMyClass : public CDocument
 ```
 AFX_MANAGE_STATE(AFX_MODULE_STATE* pModuleState )
 ```
+
 ### <a name="parameters"></a>參數
 
 *pModuleState*<br/>
@@ -77,15 +77,20 @@ AFX_MANAGE_STATE(AFX_MODULE_STATE* pModuleState )
 
 叫用此巨集時， *pModuleState*有效的模組狀態的其餘部分的立即包含範圍。 離開範圍時，將會自動還原先前的有效模組狀態。
 `AFX_MODULE_STATE`結構包含全域模組，也就是推送入或快顯的模組狀態的部分資料。
+
 根據預設，MFC 會使用主應用程式的資源控制代碼來載入資源範本。 如果您有匯出函式在 DLL 中，例如會啟動一個對話方塊，在 DLL 時，此範本是實際上會儲存在 DLL 模組。 您需要切換模組狀態，要使用正確的控制代碼。 您可以將下列程式碼新增至函式開頭：
+
 ```cpp
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
-
 ```
+
 這會從傳回的狀態與目前的模組狀態[AfxGetStaticModuleState](#afxgetstaticmodulestate)直到目前的範圍結束為止。
+
 如需有關電子郵件地址 和 MFC 模組狀態的詳細資訊，請參閱 「 管理資料的 MFC 模組狀態 」 中[建立新的文件中，Windows，並檢視](../creating-new-documents-windows-and-views.md)並[技術提示 58](../tn058-mfc-module-state-implementation.md)。
+
 > [!NOTE]
 >  當 MFC 啟用內容建立組件時，它會使用[AfxWinInit](#afxwininit)來建立內容和`AFX_MANAGE_STATE`啟用和停用它。 也請注意，`AFX_MANAGE_STATE`可供靜態 MFC 程式庫，以及 MFC Dll，才能讓 MFC 使用者 dll 選取適當啟用內容中執行的程式碼。 如需詳細資訊，請參閱 < [MFC 模組狀態的啟用內容支援](../support-for-activation-contexts-in-the-mfc-module-state.md)。
+
 ### <a name="requirements"></a>需求
 
 **標頭：** afxstat_.h
@@ -197,7 +202,6 @@ AFX_MODULE_STATE* AFXAPI AfxGetStaticModuleState( );
 
 ```cpp
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
-
 ```
 
 這會從傳回的狀態與目前的模組狀態`AfxGetStaticModuleState`直到目前的範圍結束為止。
@@ -207,7 +211,6 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
 ### <a name="requirements"></a>需求
 
 **標頭：** afxstat_.h
-
 
 ## <a name="afxinitextensionmodule"></a> AfxInitExtensionModule
 
@@ -249,13 +252,16 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
         // MFC extension DLL one-time initialization
         if (!AfxInitExtensionModule(NVC_MFC_DLLDLL, hInstance))
             return 0;
-
+...
 ```
 
 `AfxInitExtensionModule` 會建立一份 DLL 的 HMODULE，並擷取 DLL 的執行階段類別 (`CRuntimeClass`結構) 以及其物件處理站 (`COleObjectFactory`物件) 使用更新版本時`CDynLinkLibrary`建立物件。
 MFC 擴充 Dll 需要做兩件事，在其`DllMain`函式：
+
 - 呼叫[AfxInitExtensionModule](#_mfc_afxinitextensionmodule)並檢查傳回的值。
+
 - 建立`CDynLinkLibrary`物件如果將匯出的 DLL [CRuntimeClass 結構](cruntimeclass-structure.md)物件，或有它自己的自訂資源。
+
 您可以呼叫`AfxTermExtensionModule`每個處理序中斷連結 MFC 擴充 DLL 時清除 MFC 擴充 DLL (恰好當處理序結束，或卸載 DLL 的`AfxFreeLibrary`呼叫)。
 
 ### <a name="requirements"></a>需求
@@ -273,9 +279,8 @@ MFC 擴充 Dll 需要做兩件事，在其`DllMain`函式：
 
 ### <a name="syntax"></a>語法
 
-  ```
-   void AFXAPI AfxSetAmbientActCtx( BOOL bSet
-);
+```
+void AFXAPI AfxSetAmbientActCtx(BOOL bSet);
 ```
 ### <a name="parameters"></a>參數
 
@@ -295,6 +300,7 @@ BOOL CMFCListViewApp::InitInstance()
 {
    AfxSetAmbientActCtx(FALSE);
    // Remainder of function definition omitted.
+}
 ```
 
 ### <a name="requirements"></a>需求
@@ -314,9 +320,10 @@ BOOL CMFCListViewApp::InitInstance()
 
 ### <a name="syntax"></a>語法
 
-  ```
+```
 void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = FALSE );
 ```
+
 ### <a name="parameters"></a>參數
 
 *state*<br/>
@@ -357,7 +364,6 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
     }
     return 1;   // ok
 }
-
 ```
 
 如果您的應用程式載入，並動態釋放 MFC 擴充 Dll，務必呼叫`AfxTermExtensionModule`。 因為大部分的 MFC 擴充 Dll 不會以動態方式載入 （通常，他們所連結透過其匯入程式庫），呼叫`AfxTermExtensionModule`通常並不需要。
@@ -372,8 +378,3 @@ MFC 擴充 Dll 需要呼叫[AfxInitExtensionModule](#afxinitextensionmodule)在�
 
 [巨集和全域](mfc-macros-and-globals.md)<br/>
 [AfxInitExtensionModule](#afxinitextensionmodule)
-
-
-
-
-

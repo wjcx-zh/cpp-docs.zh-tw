@@ -48,18 +48,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae293007250fb051339b42b1a09d50806b36b8e9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 78582039e172be92f397c898163ec62c6041f32f
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407903"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821451"
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar 類別
 
 `CMFCAutoHideBar` 類別是實作自動隱藏功能的特殊工具列類別。
 
 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+
 ## <a name="syntax"></a>語法
 
 ```
@@ -131,7 +132,7 @@ class CMFCAutoHideBar : public CPane
 
 **標頭：** afxautohidebar.h
 
-##  <a name="addautohidewindow"></a>  CMFCAutoHideBar::AddAutoHideWindow
+## <a name="addautohidewindow"></a>  CMFCAutoHideBar::AddAutoHideWindow
 
 將功能加入 `CDockablePane` 視窗以自動隱藏該功能。
 
@@ -163,8 +164,7 @@ CMFCAutoHideButton* AddAutoHideWindow(
 
 - CBRS_ALIGN_BOTTOM
 
-##  <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu
-
+## <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu
 
 ```
 virtual BOOL AllowShowOnPaneMenu() const;
@@ -174,8 +174,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="calcfixedlayout"></a>  CMFCAutoHideBar::CalcFixedLayout
-
+## <a name="calcfixedlayout"></a>  CMFCAutoHideBar::CalcFixedLayout
 
 ```
 virtual CSize CalcFixedLayout(
@@ -192,7 +191,7 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="remarks"></a>備註
 
-##  <a name="cmfcautohidebar"></a>  CMFCAutoHideBar::CMFCAutoHideBar
+## <a name="cmfcautohidebar"></a>  CMFCAutoHideBar::CMFCAutoHideBar
 
 建構 CMFCAutoHideBar 物件。
 
@@ -202,8 +201,7 @@ CMFCAutoHideBar();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="create"></a>  CMFCAutoHideBar::Create
-
+## <a name="create"></a>  CMFCAutoHideBar::Create
 
 ```
 virtual BOOL Create(
@@ -219,17 +217,24 @@ virtual BOOL Create(
 ### <a name="parameters"></a>參數
 
 *lpszClassName*<br/>
-[in][in]*cheaderctrl:: Create*
+
+*cheaderctrl:: Create*<br/>
+
 *rect*<br/>
-[in][in]*pParentWnd*
+
+*pParentWnd*<br/>
+
 *nID*<br/>
-[in][in]*dwControlBarStyle* [in] *pContext*
+
+*dwControlBarStyle*<br/>
+
+*pContext*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getfirstahwindow"></a>  CMFCAutoHideBar::GetFirstAHWindow
+## <a name="getfirstahwindow"></a>  CMFCAutoHideBar::GetFirstAHWindow
 
 傳回應用程式中第一個自動隱藏視窗的指標。
 
@@ -243,7 +248,7 @@ CDockablePane* GetFirstAHWindow();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getvisiblecount"></a>  CMFCAutoHideBar::GetVisibleCount
+## <a name="getvisiblecount"></a>  CMFCAutoHideBar::GetVisibleCount
 
 取得可見的自動隱藏按鈕數目。
 
@@ -257,7 +262,7 @@ int GetVisibleCount();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="m_nshowahwnddelay"></a>  CMFCAutoHideBar::m_nShowAHWndDelay
+## <a name="m_nshowahwnddelay"></a>  CMFCAutoHideBar::m_nShowAHWndDelay
 
 當使用者將滑鼠游標置於上方之間的時間延遲[CMFCAutoHideButton 類別](../../mfc/reference/cmfcautohidebutton-class.md)和目前在架構顯示相關聯的視窗。
 
@@ -269,8 +274,7 @@ int CMFCAutoHideBar::m_nShowAHWndDelay = 400;
 
 當使用者將滑鼠游標置於`CMFCAutoHideButton`，架構會顯示相關聯的視窗之前，會稍微延遲。 這個參數會決定該延遲，以毫秒為單位的長度。
 
-##  <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu
-
+## <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu
 
 ```
 virtual BOOL OnShowControlBarMenu(CPoint);
@@ -284,7 +288,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="removeautohidewindow"></a>  CMFCAutoHideBar::RemoveAutoHideWindow
+## <a name="removeautohidewindow"></a>  CMFCAutoHideBar::RemoveAutoHideWindow
 
 移除和終結自動隱藏視窗。
 
@@ -302,7 +306,7 @@ CDockablePane * *pAutoHideWnd*自動隱藏視窗，以移除。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setactiveingroup"></a>  CMFCAutoHideBar::SetActiveInGroup
+## <a name="setactiveingroup"></a>  CMFCAutoHideBar::SetActiveInGroup
 
 將自動隱藏列標幟為作用中。
 
@@ -318,8 +322,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 
 請參閱[cpane:: Setactiveingroup](../../mfc/reference/cpane-class.md#setactiveingroup)。
 
-##  <a name="setrecentvisiblestate"></a>  CMFCAutoHideBar::SetRecentVisibleState
-
+## <a name="setrecentvisiblestate"></a>  CMFCAutoHideBar::SetRecentVisibleState
 
 ```
 void SetRecentVisibleState(BOOL bState);
@@ -327,26 +330,32 @@ void SetRecentVisibleState(BOOL bState);
 
 ### <a name="parameters"></a>參數
 
-[in]*bState*
+*bState*<br/>
+[in]若要設定的狀態。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="showautohidewindow"></a>  CMFCAutoHideBar::ShowAutoHideWindow
+## <a name="showautohidewindow"></a>  CMFCAutoHideBar::ShowAutoHideWindow
 
 顯示自動隱藏視窗。
 
 ```
 BOOL ShowAutoHideWindow(
-        CDockablePane* pAutoHideWnd,
-        BOOL bShow,
-        BOOL bDelay);
+    CDockablePane* pAutoHideWnd,
+    BOOL bShow,
+    BOOL bDelay);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]CDockablePane * *pAutoHideWnd* [in] BOOL *bShow* true 表示要顯示的視窗。
+*pAutoHideWnd*<br/>
+[in]若要顯示的視窗。
 
-[in]BOOL *bDelay*會忽略這個參數。
+*bShow*<br/>
+[in]如果為 true，則顯示視窗。
+
+*bDelay*<br/>
+[in]會忽略這個參數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -354,7 +363,7 @@ BOOL ShowAutoHideWindow(
 
 ### <a name="remarks"></a>備註
 
-##  <a name="stretchpane"></a>  CMFCAutoHideBar::StretchPane
+## <a name="stretchpane"></a>  CMFCAutoHideBar::StretchPane
 
 將摺疊狀態的自動隱藏列調整成適合 `CMFCAutoHideButton` 物件的大小。
 
@@ -380,7 +389,7 @@ virtual CSize StretchPane(
 
 衍生類別可以覆寫這個方法以自訂行為。
 
-##  <a name="unsetautohidemode"></a>  CMFCAutoHideBar::UnSetAutoHideMode
+## <a name="unsetautohidemode"></a>  CMFCAutoHideBar::UnSetAutoHideMode
 
 停用自動隱藏列群組的自動隱藏模式。
 
@@ -394,7 +403,7 @@ void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup)
 
 ### <a name="remarks"></a>備註
 
-##  <a name="updatevisiblestate"></a>  CMFCAutoHideBar::UpdateVisibleState
+## <a name="updatevisiblestate"></a>  CMFCAutoHideBar::UpdateVisibleState
 
 架構會在需要重新繪製自動隱藏列時呼叫。
 

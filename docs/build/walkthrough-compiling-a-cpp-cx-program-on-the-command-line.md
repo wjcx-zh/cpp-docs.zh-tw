@@ -1,7 +1,7 @@
 ---
 title: 逐步解說： 編譯 C + + /CX 程式，在命令列 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/24/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -12,25 +12,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdde74f1612986fab8f88f4659b006bbcfbd3901
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9d9e6fa7cb30a14a3c5914e1cb80e22db118df9e
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703751"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821201"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>逐步解說：在命令列上編譯 C++/CX 程式
 
 您可以建立以 Windows 執行階段為目標的 Visual C++ 程式，並在命令列上建置它們。 Visual C++ 支援 Visual C++ 元件擴充功能 (C++/CX)，其具有以 WinRT 執行階段程式設計模型為目標的其他類型及運算子。 您可以使用 C + + /CX 來建置適用於通用 Windows 平台 (UWP)、 Windows Phone 8.1 和 Windows 桌面應用程式。 如需詳細資訊，請參閱 <<c0> [ 教學課程的 c + + /CX](https://msdn.microsoft.com/magazine/dn166929.aspx)並[執行階段平台的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)。
 
-在此逐步解說中，您可以使用文字編輯器來建立基本的 C++/CX 程式，然後在命令列上進行編譯。 (您可以使用自己的 C++/CX 程式，而不是輸入所顯示的程式，或者您可以使用其他說明文章中的 C++/CX 程式碼範例。 這項技術對於建置和測試不包含 UI 項目的小模組非常有用)。
+在此逐步解說中，您可以使用文字編輯器來建立基本的 C++/CX 程式，然後在命令列上進行編譯。 (您可以使用自己的 C++/CX 程式，而不是輸入所顯示的程式，或者您可以使用其他說明文章中的 C++/CX 程式碼範例。 這項技術可用於建置和測試沒有任何 UI 元素的小模組。）
 
 > [!NOTE]
 > 您還可以使用 Visual Studio IDE，來編譯 C++/CX 程式。 因為這個 IDE 包括設計、 偵錯、 模擬，以及部署支援，但無法使用命令列上，我們建議您使用 IDE 建置通用 Windows 平台 (UWP) 應用程式。 如需詳細資訊，請參閱 < [c + + 建立 UWP 應用程式](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)。
 
 ## <a name="prerequisites"></a>必要條件
 
-您必須了解 C++ 語言的基本概念。
+您了解 c + + 語言的基本概念。
 
 ## <a name="compiling-a-ccx-program"></a>編譯 C++/CX 程式
 
@@ -44,7 +44,7 @@ ms.locfileid: "45703751"
 
 1. 在命令提示字元中，輸入**notepad basiccx.cpp**。
 
-   選擇**是**時系統會提示您建立的檔案。
+   選擇**是**當系統提示您建立的檔案。
 
 1. 在 [記事本] 中，輸入下列行：
 
@@ -55,10 +55,9 @@ ms.locfileid: "45703751"
     {
         Platform::Details::Console::WriteLine("This is a C++/CX program.");
     }
-
     ```
 
-1. 在功能表列上選擇 **檔案**，**儲存**。
+1. 在功能表列上選擇 **檔案** > **儲存**。
 
    您已建立 Visual c + + 原始程式檔使用 Windows 執行階段[Platform 命名空間](../cppcx/platform-namespace-c-cx.md)命名空間。
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6604bc0bf27b3d0192f602c4df88e5f01e4a161
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 01610f888d8afe275b0e52b86e4f4c678f896c9f
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46135954"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820464"
 ---
 # <a name="project-build-error-prj0016"></a>專案建置錯誤 PRJ0016
 
@@ -39,6 +39,6 @@ ms.locfileid: "46135954"
 
 如需詳細資訊，請參閱：
 
-- 眭妎踱恅 324153，其位於[ http://support.microsoft.com/default.aspx?scid=kb; en-us-我們; 324153](http://support.microsoft.com/default.aspx?scid=kb;en-us;324153)。
+- 眭妎踱恅 324153，其位於[ http://support.microsoft.com/default.aspx?scid=kb; 324153](http://support.microsoft.com/default.aspx?scid=kb;324153)。
 
 - [遵守系統原則設定](https://msdn.microsoft.com/library/aa372139)，「 執行只允許 Windows 應用程式 」 一節。

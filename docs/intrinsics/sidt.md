@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbfb0b50e31cc51c7ea860fbd7b78c89a652ac64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9e185b04c5a23d7ee476c2cd1954c15df795cb57
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429368"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820317"
 ---
 # <a name="sidt"></a>__sidt
 
@@ -52,7 +52,7 @@ void __sidt(void * Destination);
 
 ## <a name="remarks"></a>備註
 
-`__sidt`函式相當於`SIDT`機器指令。 如需詳細資訊，搜尋文件中，「 Intel 架構軟體開發人員的手動、 磁碟區 2： 指令集參考，「 在[Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)站台。
+`__sidt`函式相當於`SIDT`機器指令。 如需詳細資訊，搜尋文件中，「 Intel 架構軟體開發人員的手動、 磁碟區 2： 指令集參考，「 在[Intel Corporation](https://software.intel.com/articles/intel-sdm)站台。
 
 **結束 Microsoft 專屬**
 

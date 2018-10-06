@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc08e0807f1af6859587271ec48d2508b9d4bd6e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d7a9915c7ca6b9d2c3f01cea12e2979ef256f904
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46048665"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821175"
 ---
 # <a name="lambda-expressions-in-c"></a>C++ 中的 Lambda 運算式
 
@@ -349,7 +349,9 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
         return [n] { return n + 1; }();
     }
 ```
+
 Lambda 會以隱含方式`constexpr`如果結果符合需求的`constexpr`函式：
+
 ```cpp
     auto answer = [](int n)
     {
@@ -358,6 +360,7 @@ Lambda 會以隱含方式`constexpr`如果結果符合需求的`constexpr`函式
 
     constexpr int response = answer(10);
 ```
+
 如果 lambda 是隱含或明確`constexpr`，轉換成函式指標會產生`constexpr`函式：
 
 ```cpp

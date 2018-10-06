@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5288400b5c7303840dfef98c7e1a48e7cf5d06f8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1961784efc61c3c31f87c76cd2bdfe00fe954c5d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46032564"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820695"
 ---
 # <a name="fatal-error-c1060"></a>嚴重錯誤 C1060
 
@@ -37,7 +37,7 @@ ms.locfileid: "46032564"
 
 1. 如果您是在 64 位元平台上編譯，請使用 64 位元編譯器工具組。 如需資訊，請參閱[如何： 啟用在命令列上的 64 位元 Visual c + + 工具組](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)。
 
-1. 在 32 位元 Windows，請嘗試使用[3GB](https://support.microsoft.com/en-us/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) boot.ini 參數。
+1. 在 32 位元 Windows，請嘗試使用[3GB](https://support.microsoft.com/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) boot.ini 參數。
 
 1. 增加 Windows 交換檔的大小。
 

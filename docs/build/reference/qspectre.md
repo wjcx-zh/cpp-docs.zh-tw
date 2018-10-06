@@ -1,7 +1,7 @@
 ---
 title: /Qspectre |Microsoft Docs
 ms.custom: ''
-ms.date: 1/23/2018
+ms.date: 09/24/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaf77e1856f535dba81d4b61e2ce19d363f48038
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9ed4b84ab761653dde4da6adcd14ec8e77334688
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386949"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821643"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -32,11 +32,13 @@ ms.locfileid: "46386949"
 
 ## <a name="remarks"></a>備註
 
-**/Qspectre**選項是可在 Visual Studio 2017 15.7 版及更新版本。 它可讓編譯器插入減輕特定的指示[Spectre 安全性弱點](https://spectreattack.com/spectre.pdf)。 這些弱點，稱為*推測性執行旁路攻擊*、 會影響許多作業系統和現代處理器，包括 intel、 AMD 處理器和 ARM。
+**/Qspectre**選項是用於 Visual Studio 2017 15.5.5 版和更新版本，以及透過 Visual Studio 2015 Update 3 [KB 4338871](https://support.microsoft.com/en-us/help/4338871/visual-studio-2015-update-3-spectre-variant-1-toolset-qspectre)。 它可讓編譯器插入減輕特定的指示[Spectre 安全性弱點](https://spectreattack.com/spectre.pdf)。 這些弱點，稱為*推測性執行旁路攻擊*、 會影響許多作業系統和現代處理器，包括 intel、 AMD 處理器和 ARM。
 
 **/Qspectre**選項預設為關閉。
 
-在其初始版本中， **/Qspectre**選項僅適用於最佳化程式碼。 您應該確定編譯的最佳化選項的任何程式碼 (例如[/o2 或/o1](o1-o2-minimize-size-maximize-speed.md)而非[/Od](od-disable-debug.md)) 藉此確定套用緩和措施。 同樣地，檢查 使用任何程式碼[#pragma 最佳化 (「 stg"，off)](../../preprocessor/optimize.md)。
+在其初始版本中， **/Qspectre**選項只適用於在最佳化程式碼。 在 Visual Studio 2017 15.7 版及更新版本 **/Qspectre**選項支援所有的最佳化層級。 
+
+Microsoft Visual c + + 程式庫也可用於與 Spectre 風險降低的版本。 Visual Studio 安裝程式中，您可以下載 Visual Studio 2017 的 Spectre 降低程式庫。 中找到**個別元件**索引標籤下**編譯器、 建置工具和執行階段**，並在名稱中有 「 程式庫的 Spectre"。 DLL 和靜態執行階段程式庫，啟用的風險降低與可供 Visual c + + 執行階段的子集： VC + + 啟動程式碼、 vcruntime140、 msvcp140、 concrt140 和 vcamp140。 Dll 支援; 應用程式本機部署Visual c + + 2017年執行階段程式庫可轉散發套件的內容有不修改。 您也可以安裝 Spectre 降低程式庫的 MFC 和 ATL，位於**個別元件**索引標籤下**Sdk、 程式庫和架構**。
 
 ### <a name="applicability"></a>適用性
 
@@ -44,9 +46,9 @@ ms.locfileid: "46386949"
 
 ### <a name="availability"></a>可用性
 
-**/Qspectre**選項可用於 Visual Studio 2017 15.5.5 版和所有更新 Microsoft Visual c + + 編譯器 (MSVC) 或在 2018 年 1 月 23 日之後。 若要更新編譯器，並作為個別的元件安裝 Spectre 降低程式庫，請使用 Visual Studio 安裝程式。 **/Qspectre**選項也會適用於 Visual Studio 2015 Update 3 透過修補程式。 如需詳細資訊，請參閱 < [KB 4338871](https://support.microsoft.com/help/4338871)。
+**/Qspectre**選項是適用於 Visual Studio 2017 15.5.5 版中，以及在 2018 年 1 月 23 日之後或 Microsoft Visual c + + 編譯器 (MSVC) 的所有更新。 若要更新編譯器，並作為個別的元件安裝 Spectre 降低程式庫，請使用 Visual Studio 安裝程式。 **/Qspectre**選項也會適用於 Visual Studio 2015 Update 3 透過修補程式。 如需詳細資訊，請參閱 < [KB 4338871](https://support.microsoft.com/help/4338871)。
 
-所有版本的 Visual Studio 2017 版本 15.5 版及所有預覽的 Visual Studio 15.6 版已經包含了未記載的選項， **/d2guardspecload**，它就相當於初始行為 **/Qspectre**. 您可以使用 **/d2guardspecload**到您的程式碼，在這些版本的編譯器中套用相同的緩和措施。 請更新您要使用的組建 **/Qspectre**中的支援選項，編譯器 **/Qspectre**選項也可在更新版本的編譯器支援新的緩和措施。
+所有版本的 Visual Studio 2017 版本 15.5 版及所有預覽的 Visual Studio 2017 15.6 版包含了未記載的選項， **/d2guardspecload**，它就相當於初始行為 **/Qspectre**. 您可以使用 **/d2guardspecload**到您的程式碼，在這些版本的編譯器中套用相同的緩和措施。 請更新您要使用的組建 **/Qspectre**中的支援選項，編譯器 **/Qspectre**選項也可在更新版本的編譯器支援新的緩和措施。
 
 ### <a name="effect"></a>作用
 
@@ -62,9 +64,9 @@ ms.locfileid: "46386949"
 
 **/Qspectre**編譯器選項會產生隱含連結版本提供 Spectre 風險降低已建置的執行階段程式庫的程式碼。 這些程式庫都必須使用 Visual Studio 安裝程式安裝的選用元件：
 
-- VC + + 2017年版本*version_number*用於 Spectre （x86 和 x64） 程式庫
-- Visual C++ ATL (x86/x64) 與 Spectre 風險降低
-- 適用於 x86/x64 的 Visual C++ MFC 與 Spectre 風險降低
+- VC + + 2017年版本*version_numbers*程式庫用於 Spectre \[（x86 和 x64） |(ARM) |(ARM64)]
+- 適用於 visual c + + ATL \[(x86 x64) |ARM |ARM64] 與 Spectre 風險降低
+- 適用於 visual c + + MFC \[x86 x64 |ARM |ARM64] 與 Spectre 風險降低
 
 如果您使用建置您的程式碼 **/Qspectre**並不是這些程式庫安裝，建置系統報告**警告 MSB8038： 已啟用 Spectre 風險降低，但找不到 spectre 風險降低程式庫**。 MFC 或 ATL 程式碼無法建置，而這類連結器回報的錯誤**嚴重錯誤 LNK1104： 無法開啟檔案 'oldnames.lib'**，這些遺漏的程式庫的可能原因。
 

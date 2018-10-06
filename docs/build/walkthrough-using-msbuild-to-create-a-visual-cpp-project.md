@@ -1,7 +1,7 @@
 ---
 title: 逐步解說： 使用 MSBuild 建立 Visual c + + 專案 |Microsoft Docs
 ms.custom: ''
-ms.date: 06/25/2018
+ms.date: 09/24/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8bb957f0ab1dd2ea7d05151257aee0e15561e8a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e8a1c45342cf1f5eb178764d6fd723950f52e7e0
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609695"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821230"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>逐步解說：使用 MSBuild 來建立 Visual C++ 專案
 
-本逐步解說示範如何使用 MSBuild 來建置 Visual c + + 專案，在命令提示字元。 您將學習如何建立 c + + 原始程式檔和 Visual c + + 主控台應用程式的 XML 專案檔。 建置專案之後, 您將學習如何自訂建置流程。
+本逐步解說示範如何使用 MSBuild 來建置 Visual c + + 專案，在命令提示字元。 您將了解如何建立 c + + 原始程式檔和 Visual c + + 主控台應用程式的 XML 專案檔。 建置專案之後, 您將了解如何自訂建置流程。
 
 這個逐步解說將說明下列工作：
 
@@ -59,7 +59,7 @@ ms.locfileid: "42609695"
 
 1. 建立您的專案目錄。
 
-2. 建立名為 main.cpp 的檔案，並將下列程式碼新增至此檔案：
+1. 建立名為 main.cpp 的檔案，並將下列程式碼新增至此檔案：
 
     ```cpp
     // main.cpp : the application source code.
@@ -72,7 +72,7 @@ ms.locfileid: "42609695"
     }
     ```
 
-3. 建立名為 main.h 的檔案，並將下列程式碼新增至此檔案：
+1. 建立名為 main.h 的檔案，並將下列程式碼新增至此檔案：
 
     ```cpp
     // main.h: the application header code.
@@ -81,24 +81,24 @@ ms.locfileid: "42609695"
 
 ## <a name="creating-the-xml-msbuild-project-file"></a>建立 XML MSBuild 專案檔
 
-MSBuild 專案檔是 XML 檔案，其中包含專案根項目 (\<專案 >)。 在下列範例專案中，\<專案 > 項目包含七個子項目：
+MSBuild 專案檔是 XML 檔案，其中包含專案根項目 (`<Project>`)。 在下列範例專案中，`<Project>`項目包含七個子項目：
 
-- 三個項目群組標記 (\<ItemGroup >)，以指定專案組態與平台、 原始程式檔名稱及標頭檔名稱。
+- 三個項目群組標記 (`<ItemGroup>`)，以指定專案組態與平台、 原始程式檔名稱及標頭檔名稱。
 
-- 三個匯入標記 (\<匯入 >)，指定 Microsoft Visual c + + 設定的位置。
+- 三個匯入標記 (`<Import>`)，指定 Microsoft Visual c + + 設定的位置。
 
-- 屬性群組標記 (\<PropertyGroup >)，指定專案設定。
+- 屬性群組標記 (`<PropertyGroup>`)，指定專案設定。
 
 ### <a name="to-create-the-msbuild-project-file"></a>若要建立 MSBuild 專案檔
 
-1. 使用文字編輯器來建立專案檔案，稱為`myproject.vcxproj`，然後加入下列根\<專案 > 項目。 在下列程序步驟中的根之間插入元素\<專案 > 標記：
+1. 使用文字編輯器來建立專案檔案，稱為`myproject.vcxproj`，然後加入下列根`<Project>`項目。 在下列程序步驟中的根之間插入元素`<Project>`標記：
 
     ```xml
     <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     </Project>
     ```
 
-2. 新增下列兩個\<ProjectConfiguration > 中的子項目\<ItemGroup > 項目。 子項目指定偵錯和發行適用於 32 位元 Windows 作業系統的組態：
+1. 新增下列兩個`<ProjectConfiguration>`中的子項目`<ItemGroup>`項目。 子項目指定偵錯和發行適用於 32 位元 Windows 作業系統的組態：
 
     ```xml
     <ItemGroup>
@@ -113,13 +113,13 @@ MSBuild 專案檔是 XML 檔案，其中包含專案根項目 (\<專案 >)。 �
     </ItemGroup>
     ```
 
-3. 新增下列\<匯入 / > 項目，指定這個專案的預設 c + + 設定的路徑：
+1. 新增下列`<Import>`項目，指定這個專案的預設 c + + 設定的路徑：
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
     ```
 
-4. 新增下列屬性群組項目 (\<PropertyGroup >)，指定兩個專案屬性：
+1. 新增下列屬性群組項目 (`<PropertyGroup>`)，指定兩個專案屬性：
 
     ```xml
     <PropertyGroup>
@@ -128,13 +128,13 @@ MSBuild 專案檔是 XML 檔案，其中包含專案根項目 (\<專案 >)。 �
     </PropertyGroup>
     ```
 
-5. 新增下列\<匯入 / > 項目，指定目前 c + + 設定此專案的路徑：
+1. 新增下列`<Import>`項目，指定目前 c + + 設定此專案的路徑：
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
     ```
 
-6. 新增下列\<ClCompile > 中的子項目\<ItemGroup > 項目。 子元素會指定要編譯的 C/c + + 來源檔案的名稱：
+1. 新增下列`<ClCompile>`中的子項目`<ItemGroup>`項目。 子元素會指定要編譯的 C/c + + 來源檔案的名稱：
 
     ```xml
     <ItemGroup>
@@ -143,9 +143,9 @@ MSBuild 專案檔是 XML 檔案，其中包含專案根項目 (\<專案 >)。 �
     ```
 
    > [!NOTE]
-   > \<ClCompile > 已*建置目標*且定義在**VCTargets**目錄。
+   > `<ClCompile>` 已*建置目標*且定義在**VCTargets**目錄。
 
-7. 新增下列\<ClInclude > 中的子項目\<ItemGroup > 項目。 子元素會指定 C/c + + 原始程式檔的標頭檔的名稱：
+1. 新增下列`<ClInclude>`中的子項目`<ItemGroup>`項目。 子元素會指定 C/c + + 原始程式檔的標頭檔的名稱：
 
     ```xml
     <ItemGroup>
@@ -153,7 +153,7 @@ MSBuild 專案檔是 XML 檔案，其中包含專案根項目 (\<專案 >)。 �
     </ItemGroup>
     ```
 
-8. 新增下列\<匯入 > 項目，指定定義此專案的目標檔案的路徑：
+1. 新增下列`<Import>`項目，指定定義此專案的目標檔案的路徑：
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Targets" />
@@ -197,7 +197,7 @@ MSBuild 專案檔是 XML 檔案，其中包含專案根項目 (\<專案 >)。 �
 
 `msbuild myproject.vcxproj /p:configuration=debug`
 
-MSBuild 會建立輸出檔目錄，然後編譯並連結專案，以產生 Myproject.exe 程式。 建置程序完成之後，請執行應用程式中使用下列命令：
+MSBuild 會建立輸出檔目錄，然後編譯並連結專案，以產生 Myproject.exe 程式。 建置程序完成之後，請從 [偵錯] 資料夾中執行應用程式中使用下列命令：
 
 `myproject`
 
@@ -219,7 +219,7 @@ MSBuild 可讓您執行預先定義的建置目標、 套用使用者定義的�
 
 ### <a name="using-msbuild-with-build-targets"></a>使用 MSBuild 與建置目標
 
-A*建置目標*是一組具名的預先定義或使用者定義可以在建置期間執行的命令。 使用目標命令列選項 (**/t**) 來指定組建的目標。 若是`myproject`範例專案中，預先定義**全新**目標會刪除偵錯資料夾中的所有檔案，並建立新的記錄檔。
+A*建置目標*是一組具名的預先定義或使用者定義可以在建置期間執行的命令。 使用目標命令列選項 (`/t`) 來指定組建的目標。 針對`myproject`範例專案中，預先定義**全新**目標會刪除偵錯資料夾中的所有檔案，並建立新的記錄檔。
 
 在命令提示字元中，輸入下列命令，以清除`myproject`。
 
@@ -227,7 +227,7 @@ A*建置目標*是一組具名的預先定義或使用者定義可以在建置�
 
 ### <a name="using-msbuild-with-build-properties"></a>使用 MSBuild 與建置屬性
 
-屬性的命令列選項 (**/p**) 可讓您覆寫專案建置檔中的屬性。 在 `myproject`範例專案、 發行或偵錯組建組態由`Configuration`屬性。 指定要執行建置的應用程式的作業系統和`Platform`屬性。
+屬性的命令列選項 (`/p`) 可讓您覆寫專案建置檔中的屬性。 在 `myproject`範例專案、 發行或偵錯組建組態由`Configuration`屬性。 指定要執行建置的應用程式的作業系統和`Platform`屬性。
 
 在命令提示字元中，輸入下列命令以建立偵錯組建`myproject`要在 32 位元 Windows 上執行的應用程式。
 
@@ -259,7 +259,7 @@ A*建置目標*是一組具名的預先定義或使用者定義可以在建置�
 
 ### <a name="using-msbuild-with-a-different-toolset"></a>使用 MSBuild 與不同 toolset
 
-如果您有針對其他版本的安裝的 Visual c + + 程式庫與工具組，MSBuild 就可以建置應用程式的目前 Visual c + + 版本或其他已安裝的版本。 比方說，如果您已安裝 Visual Studio 2012，指定 Visual c + + 11.0 工具組適用於 Windows XP 中，新增下列屬性群組項目至 Myproject.vcxproj 專案檔之後 Microsoft.Cpp.props`<Import />`項目：
+如果您有針對其他版本的安裝的 Visual c + + 程式庫與工具組，MSBuild 就可以建置應用程式的目前 Visual c + + 版本或其他已安裝的版本。 比方說，如果您已安裝 Visual Studio 2012，指定 Visual c + + 11.0 工具組適用於 Windows XP，再將下列屬性群組項目加入至 Myproject.vcxproj 專案檔之後`Microsoft.Cpp.props`\<匯入 / > 項目：
 
 ```xml
 <PropertyGroup>
@@ -267,11 +267,9 @@ A*建置目標*是一組具名的預先定義或使用者定義可以在建置�
 </PropertyGroup>
 ```
 
-若要重建您的 Visual c + + 11.0 的 Windows XP 工具組的專案，輸入下列命令：
+若要重建您的專案與 Visual c + + 11.0 的 Windows XP 工具組，請輸入下列命令：
 
 `msbuild myproject.vcxproj /p:PlatformToolset=v110_xp /t:rebuild`
-
-`msbuild myproject.vcxproj /t:rebuild`
 
 ### <a name="adding-msbuild-customizations"></a>加入 MSBuild 自訂項目
 

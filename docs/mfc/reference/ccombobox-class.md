@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c9ad08977e6b24886060c49b74c66697113cdf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03d418fc45d3947248c78d70af5d036bd93b204d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447423"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821500"
 ---
 # <a name="ccombobox-class"></a>CComboBox 類別
 
@@ -256,7 +256,7 @@ class CComboBox : public CWnd
 
 如果您在內嵌`CComboBox`物件在另一個視窗中的物件，您不需要它終結。 如果您建立`CComboBox`物件在堆疊上，它會自動終結。 如果您建立`CComboBox`物件上使用堆積**新**函式，您必須呼叫**刪除**Windows 下拉式方塊終結時終結它在物件上。
 
-**附註**如果您想要處理 WM_KEYDOWN 和 WM_CHAR 訊息時，您有子類別化下拉式方塊的編輯和清單方塊控制項中，衍生類別，從`CEdit`和`CListBox`，並將這些訊息的處理常式新增至衍生的類別。 如需詳細資訊，請參閱 < [ http://support.microsoft.com/default.aspxscid=kb; en-us-我們;Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667)並[CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)。
+**附註**如果您想要處理 WM_KEYDOWN 和 WM_CHAR 訊息時，您有子類別化下拉式方塊的編輯和清單方塊控制項中，衍生類別，從`CEdit`和`CListBox`，並將這些訊息的處理常式新增至衍生的類別。 如需詳細資訊，請參閱 < [ http://support.microsoft.com/default.aspxscid=kb;Q174667](http://support.microsoft.com/default.aspxscid=kb;q174667)並[CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

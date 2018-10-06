@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 705f4f0d41b98c46e2cd61962d84fe8412b9e296
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: aa5cf1be80b22d3577347dbf7de9ee262125aa86
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414052"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821357"
 ---
 # <a name="message-map-macros-mfc"></a>訊息對應巨集 (MFC)
 
@@ -81,7 +81,6 @@ ms.locfileid: "46414052"
 |[ON_CONTROL_RANGE](#on_control_range)|指出哪些函式會處理來自在巨集的第二和第三個參數中指定之控制項 ID 範圍的通知。 控制項通知訊息，例如 BN_CLICKED 為第一個參數。|
 
 如需有關訊息對應、 訊息對應宣告和分界巨集和訊息對應巨集的詳細資訊，請參閱[訊息對應](../../mfc/reference/message-maps-mfc.md)並[訊息處理和對應的主題](../../mfc/message-handling-and-mapping.md)。 如需訊息對應範圍的詳細資訊，請參閱[訊息對應範圍的處理常式](../../mfc/handlers-for-message-map-ranges.md)。
-
 
 ## <a name="begin_message_map"></a> BEGIN_MESSAGE_MAP
 
@@ -125,15 +124,18 @@ END_MESSAGE_MAP()
 
 ### <a name="syntax"></a>語法
 
-  ```
+```
 BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )
 ```
+
 ### <a name="parameters"></a>參數
 
 *theClass*<br/>
 指定的訊息對應的類別名稱。
+
 *type_name*<br/>
 指定類別的範本參數的名稱。
+
 *baseClass*<br/>
 指定的基底類別的名稱*theClass*。
 
@@ -181,7 +183,6 @@ class CMainFrame : public CMDIFrameWnd
 ### <a name="requirements"></a>需求
 
 **標題:** afxwin.h
-
 
 ## <a name="end_message_map"></a>  END_MESSAGE_MAP
 
@@ -245,9 +246,10 @@ END_MESSAGE_MAP()
 
 ### <a name="syntax"></a>語法
 
-  ```
+```
 ON_COMMAND_EX(id, memberFxn);
 ```
+
 ### <a name="parameters"></a>參數
 
 *id*<br/>
@@ -267,6 +269,7 @@ ON_COMMAND_EX(id, memberFxn);
 ```
 ON_COMMAND_EX(id,  memberFxn);
 ```
+
 ### <a name="parameters"></a>參數
 
 *id*<br/>
@@ -287,8 +290,7 @@ ON_COMMAND_EX(id,  memberFxn);
 ### <a name="see-also"></a>另請參閱
 
 [ON_COMMAND](message-map-macros-mfc.md#on_command)<br/>
-[TN006： 訊息對應] tm006-訊息-maps.md)
-
+[TN006：訊息對應](../tn006-message-maps.md)
 
 ## <a name="on_control"></a>  ON_CONTROL
 
@@ -322,7 +324,6 @@ ON_CONTROL( wNotifyCode, id, memberFxn )
 ### <a name="requirements"></a>需求
 
 **標頭：** afxmsg_.h
-
 
 ## <a name="on_message"></a>  ON_MESSAGE
 
@@ -382,7 +383,7 @@ LRESULT CMyWnd2::OnMyMessage(WPARAM wParam, LPARAM lParam)
 
 **標頭：** afxmsg_.h
 
-## <a name="on_olecmd"></a>  ON_OLECMD  
+## <a name="on_olecmd"></a>  ON_OLECMD
 
 將命令路由傳送命令分派介面透過`IOleCommandTarget`。
 
@@ -545,7 +546,6 @@ ON_REGISTERED_MESSAGE( nMessageVariable, memberFxn )
 ```cpp
 static UINT NEAR WM_FIND = RegisterWindowMessage(_T("COMMDLG_FIND"));
 
-
 BEGIN_MESSAGE_MAP(CMyWnd3, CWnd)
    ON_REGISTERED_MESSAGE(WM_FIND, OnFind)
 END_MESSAGE_MAP()
@@ -560,7 +560,7 @@ END_MESSAGE_MAP()
 [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)<br/>
 [使用者定義的處理常式](user-defined-handlers.md)
 
-## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE    
+## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE
 
 指出哪些函式會處理 Windows RegisterWindowMessage 函式所註冊的訊息。
 
@@ -586,7 +586,7 @@ RegisterWindowMessage 用來定義新的視窗訊息，保證是唯一在整個�
 
 **標頭：** afxmsg_.h
 
-## <a name="on_thread_message"></a>  ON_THREAD_MESSAGE  
+## <a name="on_thread_message"></a>  ON_THREAD_MESSAGE
 
 指出哪些函式會處理使用者定義的訊息。
 
@@ -612,7 +612,7 @@ ON_THREAD_MESSAGE 必須使用而不是 ON_MESSAGE，當您有`CWinThread`類別
 
 **標頭：** afxole.h
 
-## <a name="on_update_command_ui"></a>  ON_UPDATE_COMMAND_UI    
+## <a name="on_update_command_ui"></a>  ON_UPDATE_COMMAND_UI
 
 這個巨集指出哪些函式會處理使用者介面更新命令訊息。
 
@@ -699,7 +699,7 @@ void CChildFrame::OnRangeCmds(UINT nID)
 
 **標頭：** afxmsg_.h
 
-## <a name="on_update_command_ui_range"></a>  ON_UPDATE_COMMAND_UI_RANGE    
+## <a name="on_update_command_ui_range"></a>  ON_UPDATE_COMMAND_UI_RANGE
 
 將連續範圍的命令 Id 對應至單一更新訊息處理常式函式中。
 
@@ -730,7 +730,7 @@ ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )
 
 **標頭：** afxmsg_.h
 
-## <a name="on_control_range"></a>  ON_CONTROL_RANGE    
+## <a name="on_control_range"></a>  ON_CONTROL_RANGE
 
 您可以使用這個巨集，將控制項 Id 的連續範圍對應至指定的 Windows 通知訊息，例如 BN_CLICKED 的單一訊息處理常式函式。
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ceb0d29a5e49efa4f387f2949a0aa670082a62ab
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 64a42a65e112930767aa27f94612d06b7fb2d34a
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021937"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821630"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>右值參考宣告子： &amp;&amp;
 
@@ -63,7 +63,7 @@ int main()
 
 之前的 Visual c + + 2010 中，每個呼叫**operator +** 配置，並傳回新的暫存`string`物件 （右值）。 **operator +** 無法與其他附加一個字串，因為它不知道原始字串是左值或右值。 如果原始字串都是左值，程式中其他位置可能會參考它們，因此不得加以修改。 使用右值參考**operator +** 可以修改，以採用右值，不能在程式中其他位置參考。 因此， **operator +** 現在可以附加到另一個字串。 這可以大幅減少 `string` 類別必須執行的動態記憶體配置數目。 如需詳細資訊`string`類別，請參閱[basic_string 類別](../standard-library/basic-string-class.md)。
 
-當編譯器無法使用傳回值最佳化 (RVO) 或具名傳回值最佳化 (NRVO) 時，移動語意也能有所幫助。 在這些情況下，如果類型定義了移動建構函式，則編譯器會加以呼叫。 如需具名傳回值最佳化的詳細資訊，請參閱[具名傳回值最佳化 Visual c + + 2005](https://msdn.microsoft.com/en-us/library/ms364057.aspx)。
+當編譯器無法使用傳回值最佳化 (RVO) 或具名傳回值最佳化 (NRVO) 時，移動語意也能有所幫助。 在這些情況下，如果類型定義了移動建構函式，則編譯器會加以呼叫。 如需具名傳回值最佳化的詳細資訊，請參閱[具名傳回值最佳化 Visual c + + 2005](https://msdn.microsoft.com/library/ms364057.aspx)。
 
 若要進一步了解移動語意，請參考將項目插入至 `vector` 物件的範例。 如果超出 `vector` 物件的容量，`vector` 物件必須重新配置其項目的記憶體，然後將每個項目複製到另一個記憶體位置，以便為插入的項目騰出空間。 當插入作業複製項目時，會建立新的項目，呼叫複製建構函式複製上一個項目的資料到新項目，然後終結上一個項目。 移動語意可讓您直接移動物件，而不必執行耗費大量資源的記憶體配置和複製作業。
 

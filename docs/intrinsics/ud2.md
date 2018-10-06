@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 078fcbfd42c64a0ec5d90a41e8ec3e4ae392f57d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b001bb4d8ad9f1b4895147e0507ea3b6fda97ee5
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433935"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820700"
 ---
 # <a name="ud2"></a>__ud2
 
@@ -40,7 +40,7 @@ void __ud2();
 
 如果您執行未定義的指令，處理器就會產生無效的 opcode 例外狀況。
 
-`__ud2`函式相當於`UD2`機器指令，且只適用於核心模式。 如需詳細資訊，搜尋文件中，「 Intel 架構軟體開發人員的手動、 磁碟區 2： 指令集參考，「 在[Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)站台。
+`__ud2`函式相當於`UD2`機器指令，且只適用於核心模式。 如需詳細資訊，搜尋文件中，「 Intel 架構軟體開發人員的手動、 磁碟區 2： 指令集參考，「 在[Intel Corporation](https://software.intel.com/articles/intel-sdm)站台。
 
 ## <a name="requirements"></a>需求
 

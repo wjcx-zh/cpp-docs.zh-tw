@@ -1,7 +1,7 @@
 ---
 title: 將屬性加入至控制項 (ATL 教學課程，第 3 部分) |Microsoft Docs
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/26/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,52 +12,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e90da3fe44613b0c530e801d963eaddd9d783e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2373d2d703f18824274df158b31023669d8df945
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756900"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820462"
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>將屬性加入至控制項 (ATL 教學課程，第 3 部分)
 
 `IPolyCtl` 是包含控制項的自訂方法和屬性的介面，您會將屬性加入它。
 
-### <a name="to-add-a-property-using-the-add-property-wizard"></a>若要加入屬性，使用 加入屬性精靈
+### <a name="to-add-the-property-definitions-to-your-project"></a>若要將屬性定義加入至專案
 
-1. 在類別檢視中，展開 「 多邊形 」 分支。
+1. 在 **類別檢視**，展開 `Polygon`分支。
 
-2. 以滑鼠右鍵按一下 IPolyCtl。
+1. 以滑鼠右鍵按一下`IPolyCtl`。
 
-3. 在捷徑功能表，按一下 **新增**，然後按一下**加入屬性**。
+1. 在捷徑功能表，按一下 **新增**，然後按一下**加入屬性**。 **加入屬性**精靈 隨即出現。
 
-     加入屬性精靈 會出現。
+1. 型別`Sides`作為**的屬性名稱**。
 
-4. 在下拉式清單中的屬性類型，選取  `SHORT`。
+1. 在下拉式清單中**屬性的型別**，選取`short`。
 
-5. 型別*邊*做為**屬性名稱。**
+1. 按一下 **確定**以完成新增屬性。
 
-6. 按一下 **完成**以完成新增屬性。
+1. 從**方案總管**，開啟 Polygon.idl，並取代下列幾行的結尾`IPolyCtl : IDispatch`介面：
 
-當您將屬性新增至介面時，MIDL （編譯的.idl 檔案的程式） 會定義`Get`擷取其值的方法和`Put`設定新值的方法。 方法的前面加上命名`put_`和`get_`屬性名稱。
+    ```cpp
+    short get_Sides();
+    void set_Sides(short value);
+    ```
 
-加入屬性精靈 會將必要的程式行加入至.idl 檔案。 它也會新增`Get`和`Put`函式至 PolyCtl.h 中的類別定義的原型，並將 PolyCtl.cpp 的空白實作。 您可以透過開啟 PolyCtl.cpp 尋找函式檢查這`get_Sides`和`put_Sides`。
+    取代為
 
-雖然您現在有基本架構的函式，來設定和擷取屬性，它會需要儲存的位置。 您將建立一個變數來儲存此屬性，並據以更新函式。
+    ```cpp
+    [propget, id(1), helpstring("property Sides")] HRESULT Sides([out, retval] short *pVal);
+    [propput, id(1), helpstring("property Sides")] HRESULT Sides([in] short newVal);
+    ```
 
-#### <a name="to-create-a-variable-to-store-the-property-and-update-the-put-and-get-methods"></a>若要建立一個變數來儲存此屬性，並更新 put 和 get 方法
+1. 從**方案總管**，開啟 PolyCtl.h，並新增下列幾行的定義之後`m_clrFillColor`:
 
-1. 從 方案總管 中，開啟 PolyCtl.h 和之後的定義中加入下面這一行`m_clrFillColor`:
+    [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]
 
-     [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]
+雖然您現在有基本架構的函式，來設定和擷取屬性和變數來儲存此屬性，您必須據此實作的函式。
 
-2. 設定的預設值`m_nSides`。 請將這一行新增至 PolyCtl.h 中建構函式圖形三角形的預設值：
+### <a name="to-update-the-get-and-put-methods"></a>若要更新的 get 和 put 方法
 
-     [!code-cpp[NVC_ATL_Windowing#45](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_2.h)]
+1. 設定的預設值`m_nSides`。 請將這一行新增至 PolyCtl.h 中建構函式圖形三角形的預設值：
 
-3. 實作`Get`和`Put`方法。 `get_Sides`和`put_Sides`函式宣告已加入至 PolyCtl.h。 取代程式碼中的 PolyCtl.cpp`get_Sides`和`put_Sides`為下列程式碼：
+    [!code-cpp[NVC_ATL_Windowing#45](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_2.h)]
 
-     [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]
+1. 實作`Get`和`Put`方法。 `get_Sides`和`put_Sides`函式宣告已加入至 PolyCtl.h。 現在將新增的程式碼`get_Sides`和`put_Sides`至 PolyCtl.cpp 取代下列項目：
+
+    [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]
 
 `get_Sides`方法會傳回目前的值`Sides`透過屬性`pVal`指標。 在 `put_Sides`方法，將程式碼可確保在設定使用者`Sides`屬性設為可接受的值。 最小值必須是 3，而且因為資料點的陣列將會用於每一端，100 合理的限制，最大值。
 
@@ -68,4 +76,3 @@ ms.locfileid: "43756900"
 ## <a name="see-also"></a>另請參閱
 
 [教學課程](../atl/active-template-library-atl-tutorial.md)
-

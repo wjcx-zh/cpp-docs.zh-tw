@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e078b38dd90fcda7a6973ac1b0aee13c301823d4
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 9bfbcbe990effa20fc91494e5586d3c34d47a0d5
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691428"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821229"
 ---
 # <a name="spaceinfo-structure"></a>space_info 結構
 
@@ -28,11 +28,12 @@ ms.locfileid: "44691428"
 ## <a name="syntax"></a>語法
 
 ```cpp
-struct space_info   {
+struct space_info
+{
     uintmax_t capacity;
     uintmax_t free;
     uintmax_t available;
-    };
+};
 ```
 
 ## <a name="members"></a>成員
@@ -41,9 +42,9 @@ struct space_info   {
 
 |名稱|描述|
 |----------|-----------------|
-|`unsigned long long available`|表示可用來代表磁碟區資料的位元組數目。|
 |`unsigned long long capacity`|表示磁碟區可以表示的總位元組數目。|
 |`unsigned long long free`|表示不用來代表磁碟區資料的位元組數目。|
+|`unsigned long long available`|表示可用來代表磁碟區資料的位元組數目。|
 
 ## <a name="requirements"></a>需求
 

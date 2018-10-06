@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28d1df72efcc1fa7408922876ad91bafcd2b005a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2ba89aadc8e1c617ed8e101a226560b80cb9e431
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422660"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821396"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>理論式執行端通道的 c + + 開發人員指引
 
@@ -73,7 +73,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ## <a name="what-software-scenarios-can-be-impacted"></a>哪些軟體情況可能會受到影響？
 
-使用類似的程序的安全軟體開發[安全性開發生命週期](https://www.microsoft.com/en-us/sdl/)(SDL) 通常需要開發人員識別存在於其應用程式的信任界限。 信任界限存在於其中的應用程式可能會與低信任內容，例如在系統上的另一個處理序或在核心模式裝置驅動程式的情況下非系統管理使用者模式程序所提供的資料互動的地方。 涉及推測性執行端通道弱點的新類別是與許多現有的軟體安全性模型，找出程式碼，並且在裝置上的資料中的信任界限。
+使用類似的程序的安全軟體開發[安全性開發生命週期](https://www.microsoft.com/sdl/)(SDL) 通常需要開發人員識別存在於其應用程式的信任界限。 信任界限存在於其中的應用程式可能會與低信任內容，例如在系統上的另一個處理序或在核心模式裝置驅動程式的情況下非系統管理使用者模式程序所提供的資料互動的地方。 涉及推測性執行端通道弱點的新類別是與許多現有的軟體安全性模型，找出程式碼，並且在裝置上的資料中的信任界限。
 
 下表提供開發人員可能要考慮發生這些弱點的軟體安全性模型的摘要：
 
@@ -341,7 +341,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>透過編譯器階段檢測投機屏障
 
-（從 15.5.5 版開始） 的 Visual Studio 2017 中 Visual c + + 編譯器支援`/Qspectre`CVE 2017-5753 的相關參數，可自動插入投機屏障的一組有限的可能有弱點的程式碼撰寫模式。 文件[/Qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre)旗標提供有關其效果與使用方式的詳細資訊。 請務必請注意，這個旗標未涵蓋所有可能有弱點的程式碼撰寫模式，因此開發人員不應依賴它完整緩和這種弱點類別。
+（從 15.5.5 版開始） 的 Visual Studio 2017 中 Visual c + + 編譯器支援`/Qspectre`CVE 2017-5753 的相關參數，可自動插入投機屏障的一組有限的可能有弱點的程式碼撰寫模式。 文件[/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)旗標提供有關其效果與使用方式的詳細資訊。 請務必請注意，這個旗標未涵蓋所有可能有弱點的程式碼撰寫模式，因此開發人員不應依賴它完整緩和這種弱點類別。
 
 ### <a name="masking-array-indices"></a>遮罩陣列索引
 

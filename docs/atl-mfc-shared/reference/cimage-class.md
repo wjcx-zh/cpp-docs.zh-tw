@@ -64,19 +64,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd0858763d31e1f46e1cb366154871f06ae7a910
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7053c72536c0ab91420f1bbc068f39843eb99c1b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400402"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861807"
 ---
 # <a name="cimage-class"></a>CImage 類別
 
 `CImage` 提供增強的點陣圖支援，包括載入和儲存 JPEG、 GIF、 BMP、 和可攜式網路圖形 (PNG) 格式的映像的能力。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+> 此類別和其成員不能在 Windows 執行階段中執行的應用程式。
 
 ## <a name="syntax"></a>語法
 
@@ -163,10 +163,10 @@ class CImage
 若要判斷是否將附加的點陣圖之 DIB 區段，請呼叫[IsDibSection](#isdibsection)。
 
 > [!NOTE]
-> **附註**在 Visual Studio.NET 2003 中，這個類別會保留的數目計數`CImage`所建立的物件。 每當計數變成 0，此函式`GdiplusShutdown`釋放 GDI + 所使用的資源時，會自動呼叫。 這可確保任何`CImage`一律會正確地終結物件直接或間接由 Dll 和可`GdiplusShutdown`不會從呼叫`DllMain`。
+> 在 Visual Studio.NET 2003，此類別會保留的數目計數`CImage`所建立的物件。 每當計數變成 0，此函式`GdiplusShutdown`釋放 GDI + 所使用的資源時，會自動呼叫。 這可確保任何`CImage`一律會正確地終結物件直接或間接由 Dll 和可`GdiplusShutdown`不會從呼叫`DllMain`。
 
 > [!NOTE]
->  使用全域`CImage`不建議在 DLL 中的物件。 如果您需要使用全域`CImage`物件在 DLL 中，呼叫[CImage::ReleaseGDIPlus](#releasegdiplus)明確釋放 GDI + 所使用的資源。
+> 使用全域`CImage`不建議在 DLL 中的物件。 如果您需要使用全域`CImage`物件在 DLL 中，呼叫[CImage::ReleaseGDIPlus](#releasegdiplus)明確釋放 GDI + 所使用的資源。
 
 `CImage` 無法選取至新[CDC](../../mfc/reference/cdc-class.md)。 `CImage` 建立自己的 HDC 映像。 HBITMAP HBITMAP 一次只能選取一個 HDC 到，因為相關聯`CImage`到另一個 HDC 無法選取。 如果您需要在 CDC 時，擷取從 HDC `CImage` ，並提供給 [CDC::FromHandle] (../../mfc/reference/cdc-class.md#cdc__fromhandle。
 
@@ -183,7 +183,6 @@ m_myImage.ReleaseDC();
 
 當您使用`CImage`在 MFC 專案中，請注意在您的專案中的成員函式預期的指標[CBitmap](../../mfc/reference/cbitmap-class.md)物件。 如果您想要使用`CImage`這類函式，例如[CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)，使用[CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle)，將它傳遞您`CImage`HBITMAP，並使用傳回`CBitmap*`。  
 
-
 ## <a name="example"></a>範例
 
 ```cpp  
@@ -199,15 +198,14 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 }
 ```
 
-
 透過`CImage`，您可以存取之 DIB 區段的實際位元。 您可以使用`CImage`您先前使用的 Win32 HBITMAP 或 DIB 區段的任何位置物件。
 
 您可以使用`CImage`從 MFC 或 atl。
 
 > [!NOTE]
->  當您建立專案，使用`CImage`，您必須定義`CString`您加入之前`atlimage.h`。 如果您的專案使用 ATL 不以 MFC，包括`atlstr.h`您加入之前`atlimage.h`。 如果您的專案使用 MFC （或如果它是 MFC 支援的 ATL 專案），包括`afxstr.h`您加入之前`atlimage.h`。  
+> 當您建立專案，使用`CImage`，您必須定義`CString`您加入之前`atlimage.h`。 如果您的專案使用 ATL 不以 MFC，包括`atlstr.h`您加入之前`atlimage.h`。 如果您的專案使用 MFC （或如果它是 MFC 支援的 ATL 專案），包括`afxstr.h`您加入之前`atlimage.h`。  
 >   
->  同樣地，您必須包含`atlimage.h`您加入之前`atlimpl.cpp`。 若要完成這項作業輕鬆，包括`atlimage.h`在您`stdafx.h`。
+> 同樣地，您必須包含`atlimage.h`您加入之前`atlimpl.cpp`。 若要完成這項作業輕鬆，包括`atlimage.h`在您`stdafx.h`。
 
 ## <a name="requirements"></a>需求
 
@@ -219,81 +217,81 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 
 ```
 BOOL AlphaBlend(
-HDC hDestDC,
-int xDest,
-int yDest,
-BYTE bSrcAlpha = 0xff,
-BYTE bBlendOp = AC_SRC_OVER) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    BYTE bSrcAlpha = 0xff,
+    BYTE bBlendOp = AC_SRC_OVER) const throw();
 
 BOOL AlphaBlend(
-HDC hDestDC,
-const POINT& pointDest,
-BYTE bSrcAlpha = 0xff,
-BYTE bBlendOp = AC_SRC_OVER) const throw();
+    HDC hDestDC,
+    const POINT& pointDest,
+    BYTE bSrcAlpha = 0xff,
+    BYTE bBlendOp = AC_SRC_OVER) const throw();
 
 BOOL AlphaBlend(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-int xSrc,
-int ySrc,
-int nSrcWidth,
-int nSrcHeight,
-BYTE bSrcAlpha = 0xff,
-BYTE bBlendOp = AC_SRC_OVER);
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    int xSrc,
+    int ySrc,
+    int nSrcWidth,
+    int nSrcHeight,
+    BYTE bSrcAlpha = 0xff,
+    BYTE bBlendOp = AC_SRC_OVER);
 
 BOOL AlphaBlend(
-HDC hDestDC,
-const RECT& rectDest,
-const RECT& rectSrc,
-BYTE bSrcAlpha = 0xff,
-BYTE bBlendOp = AC_SRC_OVER);
+    HDC hDestDC,
+    const RECT& rectDest,
+    const RECT& rectSrc,
+    BYTE bSrcAlpha = 0xff,
+    BYTE bBlendOp = AC_SRC_OVER);
 ```
 
 ### <a name="parameters"></a>參數
 
-*hDestDC*  
+*hDestDC*<br/>
 目的地裝置內容的控制代碼。
 
-*xDest*  
+*xDest*<br/>
 X 軸座標，以邏輯單位，目的地矩形左上角。
 
-*yDest*  
+*yDest*<br/>
 Y 軸座標，以邏輯單位，目的地矩形左上角。
 
-*bSrcAlpha*  
+*bSrcAlpha*<br/>
 用於整個來源點陣圖的 alpha 透明度值。 預設值 0xff (255) 假設您的映像，是不透明，和您想要使用僅限每一像素 alpha 值。
 
-*bBlendOp*  
+*bBlendOp*<br/>
 Alpha 透明混色函式的來源和目的地點陣圖、 全域的 alpha 值，要套用至整個來源點陣圖和來源點陣圖的格式資訊。 來源和目的地 blend 函式是目前僅限於 AC_SRC_OVER。
 
-*pointDest*  
+*pointDest*<br/>
 參考[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)識別目的地矩形，以邏輯單位表示的左上的角的結構。
 
-*nDestWidth*  
+*nDestWidth*<br/>
 以邏輯單位，目的地矩形的寬度。
 
-*nDestHeight*  
+*nDestHeight*<br/>
 以邏輯單位，目的地矩形的高度。
 
-*xSrc*  
+*xSrc*<br/>
 邏輯 x 座標的來源矩形左上角。
 
-*ySrc*  
+*ySrc*<br/>
 邏輯 y 座標的來源矩形左上角。
 
-*nSrcWidth*  
+*nSrcWidth*<br/>
 以邏輯單位，來源矩形的寬度。
 
-*nSrcHeight*  
+*nSrcHeight*<br/>
 以邏輯單位，來源矩形的高度。
 
-*rectDest*  
+*rectDest*<br/>
 參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，用來識別目的地。
 
-*rectSrc*  
+*rectSrc*<br/>
 參考`RECT`結構，來識別來源。
 
 ### <a name="return-value"></a>傳回值
@@ -316,10 +314,10 @@ void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw(
 
 ### <a name="parameters"></a>參數
 
-*hBitmap*  
+*hBitmap*<br/>
 HBITMAP 控制代碼。
 
-*eOrientation*  
+*eOrientation*<br/>
 指定點陣圖的方向。 可以是下列其中一項：
 
 - DIBOR_DEFAULT 點陣圖的方向是由作業系統決定。 不過，這可能永遠沒有預期的結果在所有作業系統上。 如需詳細資訊，請參閱下列知識庫文件 (**Q186586**): PRB: getobject （） 一律會傳回正數高度的 DIB 區段。
@@ -338,66 +336,66 @@ HBITMAP 控制代碼。
 
 ```
 BOOL BitBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL BitBlt(
-HDC hDestDC,
-const POINT& pointDest,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    const POINT& pointDest,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL BitBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-int xSrc,
-int ySrc,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    int xSrc,
+    int ySrc,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL BitBlt(
-HDC hDestDC,
-const RECT& rectDest,
-const POINT& pointSrc,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    const RECT& rectDest,
+    const POINT& pointSrc,
+    DWORD dwROP = SRCCOPY) const throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*hDestDC*  
+*hDestDC*<br/>
 目的地 HDC。
 
-*xDest*  
+*xDest*<br/>
 邏輯 x 座標的目的矩形左上角。
 
-*yDest*  
+*yDest*<br/>
 邏輯 y 座標的目的矩形左上角。
 
-*dwROP*  
+*dwROP*<br/>
 要執行的點陣作業。 點陣作業程式碼會定義如何結合以形成目的地的來源、 目的地和模式的位元 （如目前選取的筆刷所定義）。 請參閱[BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) Windows SDK 中針對其他的點陣作業程式碼及其描述的清單。
 
-*pointDest*  
+*pointDest*<br/>
 A[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)指出目的地矩形左上的角的結構。
 
-*nDestWidth*  
+*nDestWidth*<br/>
 以邏輯單位，目的地矩形的寬度。
 
-*nDestHeight*  
+*nDestHeight*<br/>
 以邏輯單位，目的地矩形的高度。
 
-*xSrc*  
+*xSrc*<br/>
 邏輯 x 座標的來源矩形左上角。
 
-*ySrc*  
+*ySrc*<br/>
 邏輯 y 座標的來源矩形左上角。
 
-*rectDest*  
+*rectDest*<br/>
 A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)指出目的地矩形的結構。
 
-*pointSrc*  
+*pointSrc*<br/>
 A`POINT`指出來源矩形左上的角的結構。
 
 ### <a name="return-value"></a>傳回值
@@ -430,30 +428,30 @@ CImage() throw();
 
 ```
 BOOL Create(
-int nWidth,
-int nHeight,
-int nBPP,
-DWORD dwFlags = 0) throw();
+    int nWidth,
+    int nHeight,
+    int nBPP,
+    DWORD dwFlags = 0) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*nWidth*  
+*nWidth*<br/>
 寬度`CImage`點陣圖、 像素為單位。
 
-*nHeight*  
+*nHeight*<br/>
 高度`CImage`點陣圖、 像素為單位。 如果*nHeight*是正數，點陣圖是由下往上 DIB 和其來源是左下的角。 如果*nHeight*是負數，點陣圖是由上而下 DIB 和其來源是左上的角。
 
-*nBPP*  
+*nBPP*<br/>
 每個點陣圖中像素的位元數字。 通常是 4、 8、 16、 24、 或 32。 可以是 1，單色點陣圖或遮罩。
 
-*dwFlags*  
+*dwFlags*<br/>
 指定點陣圖物件是否具有 alpha 色頻。 可以是零或多個下列值的組合：
 
 - *createAlphaChannel*僅適用於如果*nBPP*為 32，和*eCompression*是 BI_RGB。 如果指定，建立的映像會有每個像素，儲存在每個像素 （未使用非英數 32 位元映像中） 的第 4 個位元組的 alpha （投影片） 值。 呼叫時，會自動使用此 alpha 色板[cimage:: Alphablend](#alphablend)。
 
 > [!NOTE]
->  在呼叫[Cimage](#draw)，含 alpha 色板的映像會自動 alpha 混合到目的地。
+> 在呼叫[Cimage](#draw)，含 alpha 色板的映像會自動 alpha 混合到目的地。
 
 ### <a name="return-value"></a>傳回值
 
@@ -465,36 +463,36 @@ DWORD dwFlags = 0) throw();
 
 ```
 BOOL CreateEx(
-int nWidth,
-int nHeight,
-int nBPP,
-DWORD eCompression,
-const DWORD* pdwBitmasks = NULL,
-DWORD dwFlags = 0) throw();
+    int nWidth,
+    int nHeight,
+    int nBPP,
+    DWORD eCompression,
+    const DWORD* pdwBitmasks = NULL,
+    DWORD dwFlags = 0) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*nWidth*  
+*nWidth*<br/>
 寬度`CImage`點陣圖、 像素為單位。
 
-*nHeight*  
+*nHeight*<br/>
 高度`CImage`點陣圖、 像素為單位。 如果*nHeight*是正數，點陣圖是由下往上 DIB 和其來源是左下的角。 如果*nHeight*是負數，點陣圖是由上而下 DIB 和其來源是左上的角。
 
-*nBPP*  
+*nBPP*<br/>
 每個點陣圖中像素的位元數字。 通常是 4、 8、 16、 24、 或 32。 可以是 1，單色點陣圖或遮罩。
 
-*eCompression*  
+*eCompression*<br/>
 指定壓縮由下往上點陣圖 （Dib 由上而下不能壓縮） 的壓縮的類型。 可為下列其中一個值：
 
 - BI_RGB 格式未壓縮。 指定這個值時呼叫`CImage::CreateEx`相當於呼叫`CImage::Create`。
 
 - BI_BITFIELDS 格式未壓縮和 color 資料表包含三個的 DWORD 色彩遮罩，分別指定每個像素的紅色、 綠色和藍色元件。 這是在 16 及 32 bpp 點陣圖搭配使用時才有效。
 
-*pdwBitfields*  
+*pdwBitfields*<br/>
 只有在使用*eCompression*設定至 BI_BITFIELDS，否則它必須是 NULL。 三個 DWORD 位元遮罩，指定每個像素的位元會分別使用紅色、 綠色和藍色色彩元件的陣列指標。 如需位元欄位的限制資訊，請參閱[BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) Windows SDK 中。
 
-*dwFlags*  
+*dwFlags*<br/>
 指定點陣圖物件是否具有 alpha 色頻。 可以是零或多個下列值的組合：
 
 - *createAlphaChannel*僅適用於如果*nBPP*為 32，和*eCompression*是 BI_RGB。 如果指定，建立的映像會有每個像素，儲存在每個像素 （未使用非英數 32 位元映像中） 的第 4 個位元組的 alpha （投影片） 值。 呼叫時，會自動使用此 alpha 色板[cimage:: Alphablend](#alphablend)。
@@ -541,78 +539,78 @@ HBITMAP Detach() throw();
 
 ```
 BOOL Draw(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-int xSrc,
-int ySrc,
-int nSrcWidth,
-int nSrcHeight) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    int xSrc,
+    int ySrc,
+    int nSrcWidth,
+    int nSrcHeight) const throw();
 
 BOOL Draw(
-HDC hDestDC,
-const RECT& rectDest,
-const RECT& rectSrc) const throw();
+    HDC hDestDC,
+    const RECT& rectDest,
+    const RECT& rectSrc) const throw();
 
 BOOL Draw(
-HDC hDestDC,
-int xDest,
-int yDest) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest) const throw();
 
 BOOL Draw(
-HDC hDestDC,
-const POINT& pointDest) const throw();
+    HDC hDestDC,
+    const POINT& pointDest) const throw();
 
 BOOL Draw(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight) const throw();
 
 BOOL Draw(
-HDC hDestDC,
-const RECT& rectDest) const throw();
+    HDC hDestDC,
+    const RECT& rectDest) const throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*hDestDC*  
+*hDestDC*<br/>
 目的地裝置內容控制代碼。
 
-*xDest*  
+*xDest*<br/>
 X 軸座標，以邏輯單位，目的地矩形左上角。
 
-*yDest*  
+*yDest*<br/>
 Y 軸座標，以邏輯單位，目的地矩形左上角。
 
-*nDestWidth*  
+*nDestWidth*<br/>
 以邏輯單位，目的地矩形的寬度。
 
-*nDestHeight*  
+*nDestHeight*<br/>
 以邏輯單位，目的地矩形的高度。
 
-*xSrc*  
+*xSrc*<br/>
 X 軸座標，以邏輯單位，來源矩形左上角。
 
-*ySrc*  
+*ySrc*<br/>
 Y 軸座標，以邏輯單位，來源矩形左上角。
 
-*nSrcWidth*  
+*nSrcWidth*<br/>
 以邏輯單位，來源矩形的寬度。
 
-*nSrcHeight*  
+*nSrcHeight*<br/>
 以邏輯單位，來源矩形的高度。
 
-*rectDest*  
+*rectDest*<br/>
 參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，用來識別目的地。
 
-*rectSrc*  
+*rectSrc*<br/>
 參考`RECT`結構，來識別來源。
 
-*pointDest*  
+*pointDest*<br/>
 參考[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)識別目的地矩形，以邏輯單位表示的左上的角的結構。
 
 ### <a name="return-value"></a>傳回值
@@ -642,7 +640,7 @@ void* GetBits() throw();
 使用這個指標，以及所傳回的值[GetPitch](#getpitch)，您可以找出並變更影像中的個別像素。
 
 > [!NOTE]
->  這個方法支援只有 DIB 區段的點陣圖;因此，您可以存取的像素`CImage`物件相同的方式，就像素 DIB 區段。 傳回的指標會指向的位置 （0，0） 像素。
+> 這個方法支援只有 DIB 區段的點陣圖;因此，您可以存取的像素`CImage`物件相同的方式，就像素 DIB 區段。 傳回的指標會指向的位置 （0，0） 像素。
 
 ##  <a name="getbpp"></a>  CImage::GetBPP
 
@@ -667,20 +665,21 @@ int GetBPP() const throw();
 擷取 DIB 區段的調色盤中的項目範圍中的紅、 綠、 藍 (RGB) 色彩值。
 
 ```
-void GetColorTable(UINT iFirstColor,
-UINT nColors,
-RGBQUAD* prgbColors) const throw();
+void GetColorTable(
+    UINT iFirstColor,
+    UINT nColors,
+    RGBQUAD* prgbColors) const throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*iFirstColor*  
+*iFirstColor*<br/>
 要擷取之第一個項目的色彩表索引。
 
-*nColors*  
+*nColors*<br/>
 若要擷取的色彩表項目數目。
 
-*prgbColors*  
+*prgbColors*<br/>
 陣列的指標[RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad)結構，以擷取色彩表項目。
 
 ##  <a name="getdc"></a>  CImage::GetDC
@@ -704,25 +703,26 @@ HDC GetDC() const throw();
 尋找可用的映像格式來儲存映像。
 
 ```
-static HRESULT GetExporterFilterString(CSimpleString& strExporters,
-CSimpleArray<GUID>& aguidFileTypes,
-LPCTSTR pszAllFilesDescription = NULL,
-DWORD dwExclude = excludeDefaultSave,
-TCHAR chSeparator = _T('|'));
+static HRESULT GetExporterFilterString(
+    CSimpleString& strExporters,
+    CSimpleArray<GUID>& aguidFileTypes,
+    LPCTSTR pszAllFilesDescription = NULL,
+    DWORD dwExclude = excludeDefaultSave,
+    TCHAR chSeparator = _T('|'));
 ```
 
 ### <a name="parameters"></a>參數
 
-*strExporters*  
+*strExporters*<br/>
 對 `CSimpleString` 物件的參考。 請參閱**備註**如需詳細資訊。
 
-*aguidFileTypes*  
+*aguidFileTypes*<br/>
 每個項目對應到其中一個字串中的檔案類型的 Guid，陣列。 在範例中，在*pszAllFilesDescription*下方， *aguidFileTypes*[0] 是 GUID_NULL 而其餘的陣列值是目前的作業系統所支援的影像檔案格式。
 
 > [!NOTE]
->  常數的完整清單，請參閱 <<c0>  **映像檔案格式常數**Windows SDK 中。
+> 常數的完整清單，請參閱 <<c0>  **映像檔案格式常數**Windows SDK 中。
 
-*pszAllFilesDescription*  
+*pszAllFilesDescription*<br/>
 如果這個參數不是 NULL，篩選條件字串就會有一個額外的篩選器清單的開頭。 此篩選器的目前值*pszAllFilesDescription*針對其描述，並接受檔案清單中的任何其他匯出工具所支援的任何延伸模組。
 
 例如:   
@@ -736,7 +736,7 @@ _T("All Image Files"));
 ```
 
 
-*dwExclude*  
+*dwExclude*<br/>
 指定要從清單中排除哪些檔案類型的位元旗標集。 允許的旗標如下：
 
 - `excludeGIF` = 0x01 排除 GIF 檔案。
@@ -761,7 +761,7 @@ _T("All Image Files"));
 
 - `excludeDefaultSave` = `excludeIcon &#124; excludeEMF &#124; excludeWMF` 儲存，這些檔案會排除預設情況下，因為它們通常會有特殊需求。
 
-*chSeparator*  
+*chSeparator*<br/>
 使用映像格式之間的分隔符號。 請參閱**備註**如需詳細資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -799,25 +799,26 @@ int GetHeight() const throw();
 尋找可用的映像格式載入影像。
 
 ```
-static HRESULT GetImporterFilterString(CSimpleString& strImporters,
-CSimpleArray<GUID>& aguidFileTypes,
-LPCTSTR pszAllFilesDescription = NULL,
-DWORD dwExclude = excludeDefaultLoad,
-TCHAR chSeparator = _T('|'));
+static HRESULT GetImporterFilterString(
+    CSimpleString& strImporters,
+    CSimpleArray<GUID>& aguidFileTypes,
+    LPCTSTR pszAllFilesDescription = NULL,
+    DWORD dwExclude = excludeDefaultLoad,
+    TCHAR chSeparator = _T('|'));
 ```
 
 ### <a name="parameters"></a>參數
 
-*strImporters*  
+*strImporters*<br/>
 對 `CSimpleString` 物件的參考。 請參閱**備註**如需詳細資訊。
 
-*aguidFileTypes*  
+*aguidFileTypes*<br/>
 每個項目對應到其中一個字串中的檔案類型的 Guid，陣列。 在範例中，在*pszAllFilesDescription*下方， *aguidFileTypes*[0] GUID_NULL 剩餘的陣列值為目前的作業系統所支援的影像檔案格式。
 
 > [!NOTE]
->  常數的完整清單，請參閱 <<c0>  **映像檔案格式常數**Windows SDK 中。
+> 常數的完整清單，請參閱 <<c0>  **映像檔案格式常數**Windows SDK 中。
 
-*pszAllFilesDescription*  
+*pszAllFilesDescription*<br/>
 如果這個參數不是 NULL，篩選條件字串就會有一個額外的篩選器清單的開頭。 此篩選器的目前值*pszAllFilesDescription*針對其描述，並接受檔案清單中的任何其他匯出工具所支援的任何延伸模組。
 
 例如:   
@@ -831,7 +832,7 @@ _T("All Image Files"));
 ```
 
 
-*dwExclude*  
+*dwExclude*<br/>
 指定要從清單中排除哪些檔案類型的位元旗標集。 允許的旗標如下：
 
 - `excludeGIF` = 0x01 排除 GIF 檔案。
@@ -856,7 +857,7 @@ _T("All Image Files"));
 
 - `excludeDefaultSave` = `excludeIcon &#124; excludeEMF &#124; excludeWMF` 儲存，這些檔案會排除預設情況下，因為它們通常會有特殊需求。
 
-*chSeparator*  
+*chSeparator*<br/>
 使用映像格式之間的分隔符號。 請參閱**備註**如需詳細資訊。
 
 ### <a name="remarks"></a>備註
@@ -908,22 +909,22 @@ int GetPitch() const throw();
 使用`GetPitch`具有[GetBits](#getbits)若要尋找的映像的個別像素。
 
 > [!NOTE]
->  這個方法支援 DIB 區段點陣圖。
+> 這個方法支援 DIB 區段點陣圖。
 
 ##  <a name="getpixel"></a>  CImage::GetPixel
 
 擷取所指定位置的像素的色彩*x*並*y*。
 
 ```
-COLORREF GetPixel(int x,int y) const throw();
+COLORREF GetPixel(int x, int y) const throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*x*  
+*x*<br/>
 像素的 x 座標。
 
-*y*  
+*y*<br/>
 像素的 y 座標。
 
 ### <a name="return-value"></a>傳回值
@@ -935,15 +936,15 @@ COLORREF GetPixel(int x,int y) const throw();
 擷取實際的地址，像素。
 
 ```
-void* GetPixelAddress(int x,int y) throw();
+void* GetPixelAddress(int x, int y) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*x*  
+*x*<br/>
 像素的 x 座標。
 
-*y*  
+*y*<br/>
 像素的 y 座標。
 
 ### <a name="remarks"></a>備註
@@ -953,7 +954,7 @@ void* GetPixelAddress(int x,int y) throw();
 對於具有少於每個像素 8 位元的格式，這個方法會傳回包含像素的位元組的位址。 例如，如果您的映像格式有每像素 4 個位元`GetPixelAddress`傳回位元組，和您的第一個像素的位址必須計算每個位元組的 2 個像素。
 
 > [!NOTE]
->  這個方法支援 DIB 區段點陣圖。
+> 這個方法支援 DIB 區段點陣圖。
 
 ##  <a name="gettransparentcolor"></a>  CImage::GetTransparentColor
 
@@ -1026,7 +1027,7 @@ bool IsIndexed() const throw();
 這個方法會傳回 TRUE，只有當點陣圖是 8 位元 （256 色） 或更少。
 
 > [!NOTE]
->  這個方法支援 DIB 區段點陣圖。
+> 這個方法支援 DIB 區段點陣圖。
 
 ##  <a name="isnull"></a>  CImage::IsNull
 
@@ -1067,10 +1068,10 @@ HRESULT Load(IStream* pStream) throw();
 
 ### <a name="parameters"></a>參數
 
-*pszFileName*  
+*pszFileName*<br/>
 包含要載入的映像檔案名稱的字串指標。
 
-*pStream*  
+*pStream*<br/>
 包含要載入的映像檔案名稱的資料流指標。
 
 ### <a name="return-value"></a>傳回值
@@ -1089,23 +1090,23 @@ HRESULT Load(IStream* pStream) throw();
 
 ```
 void LoadFromResource(
-HINSTANCE hInstance,
-LPCTSTR pszResourceName) throw();
+    HINSTANCE hInstance,
+    LPCTSTR pszResourceName) throw();
 
 void LoadFromResource(
-HINSTANCE hInstance,
-UINT nIDResource) throw();
+    HINSTANCE hInstance,
+    UINT nIDResource) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*hInstance*  
+*hInstance*<br/>
 包含要載入的映像的模組的執行個體的控制代碼。
 
-*pszResourceName*  
+*pszResourceName*<br/>
 包含的資源，包含要載入的影像名稱的字串指標。
 
-*nIDResource*  
+*nIDResource*<br/>
 若要載入之資源識別碼。
 
 ### <a name="remarks"></a>備註
@@ -1118,85 +1119,85 @@ UINT nIDResource) throw();
 
 ```
 BOOL MaskBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-int xSrc,
-int ySrc,
-HBITMAP hbmMask,
-int xMask,
-int yMask,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    int xSrc,
+    int ySrc,
+    HBITMAP hbmMask,
+    int xMask,
+    int yMask,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL MaskBlt(
-HDC hDestDC,
-const RECT& rectDest,
-const POINT& pointSrc,
-HBITMAP hbmMask,
-const POINT& pointMask,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    const RECT& rectDest,
+    const POINT& pointSrc,
+    HBITMAP hbmMask,
+    const POINT& pointMask,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL MaskBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-HBITMAP hbmMask,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    HBITMAP hbmMask,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL MaskBlt(
-HDC hDestDC,
-const POINT& pointDest,
-HBITMAP hbmMask,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    const POINT& pointDest,
+    HBITMAP hbmMask,
+    DWORD dwROP = SRCCOPY) const throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*hDestDC*  
+*hDestDC*<br/>
 其可執行檔包含資源的模組控制代碼。
 
-*xDest*  
+*xDest*<br/>
 X 軸座標，以邏輯單位，目的地矩形左上角。
 
-*yDest*  
+*yDest*<br/>
 Y 軸座標，以邏輯單位，目的地矩形左上角。
 
-*nDestWidth*  
+*nDestWidth*<br/>
 以邏輯單位，目的地的 rectangle 和來源點陣圖的寬度。
 
-*nDestHeight*  
+*nDestHeight*<br/>
 以邏輯單位，目的地的 rectangle 和來源點陣圖的高度。
 
-*xSrc*  
+*xSrc*<br/>
 邏輯 x 座標的來源點陣圖左上角。
 
-*ySrc*  
+*ySrc*<br/>
 邏輯 y 座標的來源點陣圖左上角。
 
-*hbmMask*  
+*hbmMask*<br/>
 結合色彩的點陣圖來源裝置內容中的單色遮罩點陣圖的控制代碼。
 
-*xMask*  
+*xMask*<br/>
 所指定的遮罩點陣圖的像素水平位移*hbmMask*參數。
 
-*yMask*  
+*yMask*<br/>
 所指定的遮罩點陣圖的像素垂直位移*hbmMask*參數。
 
-*dwROP*  
+*dwROP*<br/>
 指定前景和背景三元點陣作業程式碼，此方法會使用來控制來源和目的地資料的組合。 背景的點陣作業程式碼會儲存在這個值; 高序位字組的高序位位元組前景點陣作業程式碼會儲存在這個值; 高序位字組的低序位位元組低序位字組，這個值會被忽略，而且必須為零。 如需前景和背景，這個方法的內容中的討論，請參閱`MaskBlt`Windows SDK 中。 如需常見的點陣作業程式碼的清單，請參閱`BitBlt`Windows SDK 中。
 
-*rectDest*  
+*rectDest*<br/>
 參考`RECT`結構，用來識別目的地。
 
-*pointSrc*  
+*pointSrc*<br/>
 A`POINT`指出來源矩形左上的角的結構。
 
-*pointMask*  
+*pointMask*<br/>
 A`POINT`表示遮罩點陣圖左上的角的結構。
 
-*pointDest*  
+*pointDest*<br/>
 參考`POINT`識別目的地矩形，以邏輯單位表示的左上的角的結構。
 
 ### <a name="return-value"></a>傳回值
@@ -1217,62 +1218,62 @@ A`POINT`表示遮罩點陣圖左上的角的結構。
 
 ```
 BOOL PlgBlt(
-HDC hDestDC,
-const POINT* pPoints,
-HBITMAP hbmMask = NULL) const throw();
+    HDC hDestDC,
+    const POINT* pPoints,
+    HBITMAP hbmMask = NULL) const throw();
 
 BOOL PlgBlt(
-HDC hDestDC,
-const POINT* pPoints,
-int xSrc,
-int ySrc,
-int nSrcWidth,
-int nSrcHeight,
-HBITMAP hbmMask = NULL,
-int xMask = 0,
-int yMask = 0) const throw();
+    HDC hDestDC,
+    const POINT* pPoints,
+    int xSrc,
+    int ySrc,
+    int nSrcWidth,
+    int nSrcHeight,
+    HBITMAP hbmMask = NULL,
+    int xMask = 0,
+    int yMask = 0) const throw();
 
 BOOL PlgBlt(
-HDC hDestDC,
-const POINT* pPoints,
-const RECT& rectSrc,
-HBITMAP hbmMask = NULL,
-const POINT& pointMask = CPoint(0, 0)) const throw();
+    HDC hDestDC,
+    const POINT* pPoints,
+    const RECT& rectSrc,
+    HBITMAP hbmMask = NULL,
+    const POINT& pointMask = CPoint(0, 0)) const throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*hDestDC*  
+*hDestDC*<br/>
 目的地裝置內容控制代碼。
 
-*pPoints*  
+*pPoints*<br/>
 在邏輯空間中識別目的地平行四邊形的三個角落的三個點的陣列指標。 來源矩形左上的角會對應至這個陣列、 在此陣列中，第二個點的右上角和左下的角的第三個點的第一個點。 來源矩形的右下角會對應至隱含的平行四邊形中第四個點。
 
-*hbmMask*  
+*hbmMask*<br/>
 用來遮罩來源矩形的色彩選擇性單色點陣圖控制代碼。
 
-*xSrc*  
+*xSrc*<br/>
 X 軸座標，以邏輯單位，來源矩形左上角。
 
-*ySrc*  
+*ySrc*<br/>
 Y 軸座標，以邏輯單位，來源矩形左上角。
 
-*nSrcWidth*  
+*nSrcWidth*<br/>
 以邏輯單位，來源矩形的寬度。
 
-*nSrcHeight*  
+*nSrcHeight*<br/>
 以邏輯單位，來源矩形的高度。
 
-*xMask*  
+*xMask*<br/>
 單色點陣圖左上角的 x 座標。
 
-*yMask*  
+*yMask*<br/>
 單色點陣圖左上角的 y 座標。
 
-*rectSrc*  
+*rectSrc*<br/>
 參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定來源矩形的座標。
 
-*pointMask*  
+*pointMask*<br/>
 A[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)表示遮罩點陣圖左上的角的結構。
 
 ### <a name="return-value"></a>傳回值
@@ -1314,22 +1315,24 @@ void ReleaseGDIPlus() throw();
 將影像儲存至指定的資料流或檔案在磁碟上。
 
 ```
-HRESULT Save(IStream* pStream,
-REFGUID guidFileType) const throw();
+HRESULT Save(
+    IStream* pStream,
+    REFGUID guidFileType) const throw();
 
-HRESULT Save(LPCTSTR pszFileName,
-REFGUID guidFileType= GUID_NULL) const throw();
+HRESULT Save(
+    LPCTSTR pszFileName,
+    REFGUID guidFileType = GUID_NULL) const throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*pStream*  
+*pStream*<br/>
 COM IStream 物件，包含檔案的影像資料指標。
 
-*pszFileName*  
+*pszFileName*<br/>
 映像的檔案名稱指標。
 
-*guidFileType*  
+*guidFileType*<br/>
 要儲存映像的檔案類型。 可以是下列其中一項：
 
 - `ImageFormatBMP` 未壓縮的點陣圖影像。
@@ -1341,7 +1344,7 @@ COM IStream 物件，包含檔案的影像資料指標。
 - `ImageFormatGIF` GIF 的壓縮映像。
 
 > [!NOTE]
->  常數的完整清單，請參閱 <<c0>  **映像檔案格式常數**Windows SDK 中。
+> 常數的完整清單，請參閱 <<c0>  **映像檔案格式常數**Windows SDK 中。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1364,13 +1367,13 @@ void SetColorTable(
 
 ### <a name="parameters"></a>參數
 
-*iFirstColor*  
+*iFirstColor*<br/>
 若要設定的第一個項目色彩表索引。
 
-*nColors*  
+*nColors*<br/>
 若要設定的色彩表項目數目。
 
-*prgbColors*  
+*prgbColors*<br/>
 陣列的指標[RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad)結構，以設定色彩表項目。
 
 ### <a name="remarks"></a>備註
@@ -1387,13 +1390,13 @@ void SetPixel(int x, int y, COLORREF color) throw();
 
 ### <a name="parameters"></a>參數
 
-*x*  
+*x*<br/>
 要設定之像素水平位置。
 
-*y*  
+*y*<br/>
 要設定之像素垂直位置。
 
-*色彩*  
+*色彩*<br/>
 要設定像素的色彩。
 
 ### <a name="remarks"></a>備註
@@ -1410,13 +1413,13 @@ void SetPixelIndexed(int x, int y, int iIndex) throw();
 
 ### <a name="parameters"></a>參數
 
-*x*  
+*x*<br/>
 要設定之像素水平位置。
 
-*y*  
+*y*<br/>
 要設定之像素垂直位置。
 
-*iIndex*  
+*iIndex*<br/>
 色彩調色盤中的索引。
 
 ##  <a name="setpixelrgb"></a>  CImage::SetPixelRGB
@@ -1425,28 +1428,28 @@ void SetPixelIndexed(int x, int y, int iIndex) throw();
 
 ```
 void SetPixelRGB(  
-int x,
-int y,
-BYTE r,
-BYTE g,
-BYTE b) throw();
+    int x,
+    int y,
+    BYTE r,
+    BYTE g,
+    BYTE b) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*x*  
+*x*<br/>
 要設定之像素水平位置。
 
-*y*  
+*y*<br/>
 要設定之像素垂直位置。
 
-*r*  
+*r*<br/>
 紅色的色彩的濃度。
 
-*g*  
+*g*<br/>
 綠色的色彩的濃度。
 
-*b*  
+*b*<br/>
 藍色的色彩的濃度。
 
 ### <a name="remarks"></a>備註
@@ -1463,7 +1466,7 @@ LONG SetTransparentColor(LONG iTransparentColor) throw();
 
 ### <a name="parameters"></a>參數
 
-*iTransparentColor*  
+*iTransparentColor*<br/>
 若要設定為透明色彩的調色盤中的索引。 -1，如果沒有色彩設為透明。
 
 ### <a name="return-value"></a>傳回值
@@ -1476,73 +1479,73 @@ LONG SetTransparentColor(LONG iTransparentColor) throw();
 
 ```
 BOOL StretchBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL StretchBlt(
-HDC hDestDC,
-const RECT& rectDest,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    const RECT& rectDest,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL StretchBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-int xSrc,
-int ySrc,
-int nSrcWidth,
-int nSrcHeight,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    int xSrc,
+    int ySrc,
+    int nSrcWidth,
+    int nSrcHeight,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL StretchBlt(
-HDC hDestDC,
-const RECT& rectDest,
-const RECT& rectSrc,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    const RECT& rectDest,
+    const RECT& rectSrc,
+    DWORD dwROP = SRCCOPY) const throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*hDestDC*  
+*hDestDC*<br/>
 目的地裝置內容控制代碼。
 
-*xDest*  
+*xDest*<br/>
 X 軸座標，以邏輯單位，目的地矩形左上角。
 
-*yDest*  
+*yDest*<br/>
 Y 軸座標，以邏輯單位，目的地矩形左上角。
 
-*nDestWidth*  
+*nDestWidth*<br/>
 以邏輯單位，目的地矩形的寬度。
 
-*nDestHeight*  
+*nDestHeight*<br/>
 以邏輯單位，目的地矩形的高度。
 
-*dwROP*  
+*dwROP*<br/>
 要執行的點陣作業。 點陣作業程式碼會定義如何結合以形成目的地的來源、 目的地和模式的位元 （如目前選取的筆刷所定義）。 請參閱[BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) Windows SDK 中針對其他的點陣作業程式碼及其描述的清單。
 
-*rectDest*  
+*rectDest*<br/>
 參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，用來識別目的地。
 
-*xSrc*  
+*xSrc*<br/>
 X 軸座標，以邏輯單位，來源矩形左上角。
 
-*ySrc*  
+*ySrc*<br/>
 Y 軸座標，以邏輯單位，來源矩形左上角。
 
-*nSrcWidth*  
+*nSrcWidth*<br/>
 以邏輯單位，來源矩形的寬度。
 
-*nSrcHeight*  
+*nSrcHeight*<br/>
 以邏輯單位，來源矩形的高度。
 
-*rectSrc*  
+*rectSrc*<br/>
 參考`RECT`結構，來識別來源。
 
 ### <a name="return-value"></a>傳回值
@@ -1559,73 +1562,73 @@ Y 軸座標，以邏輯單位，來源矩形左上角。
 
 ```
 BOOL TransparentBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-UINT crTransparent = CLR_INVALID) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    UINT crTransparent = CLR_INVALID) const throw();
 
 BOOL TransparentBlt(
-HDC hDestDC,
-const RECT& rectDest,
-UINT crTransparent = CLR_INVALID) const throw();
+    HDC hDestDC,
+    const RECT& rectDest,
+    UINT crTransparent = CLR_INVALID) const throw();
 
 BOOL TransparentBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-int xSrc,
-int ySrc,
-int nSrcWidth,
-int nSrcHeight,
-UINT crTransparent = CLR_INVALID) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    int xSrc,
+    int ySrc,
+    int nSrcWidth,
+    int nSrcHeight,
+    UINT crTransparent = CLR_INVALID) const throw();
 
 BOOL TransparentBlt(
-HDC hDestDC,
-const RECT& rectDest,
-const RECT& rectSrc,
-UINT crTransparent = CLR_INVALID) const throw();
+    HDC hDestDC,
+    const RECT& rectDest,
+    const RECT& rectSrc,
+    UINT crTransparent = CLR_INVALID) const throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*hDestDC*  
+*hDestDC*<br/>
 目的地裝置內容控制代碼。
 
-*xDest*  
+*xDest*<br/>
 X 軸座標，以邏輯單位，目的地矩形左上角。
 
-*yDest*  
+*yDest*<br/>
 Y 軸座標，以邏輯單位，目的地矩形左上角。
 
-*nDestWidth*  
+*nDestWidth*<br/>
 以邏輯單位，目的地矩形的寬度。
 
-*nDestHeight*  
+*nDestHeight*<br/>
 以邏輯單位，目的地矩形的高度。
 
-*crTransparent*  
+*crTransparent*<br/>
 中要視為透明的來源點陣圖的色彩。 依預設，CLR_INVALID，表示應該使用目前設定為影像的透明色彩的色彩。
 
-*rectDest*  
+*rectDest*<br/>
 參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，用來識別目的地。
 
-*xSrc*  
+*xSrc*<br/>
 X 軸座標，以邏輯單位，來源矩形左上角。
 
-*ySrc*  
+*ySrc*<br/>
 Y 軸座標，以邏輯單位，來源矩形左上角。
 
-*nSrcWidth*  
+*nSrcWidth*<br/>
 以邏輯單位，來源矩形的寬度。
 
-*nSrcHeight*  
+*nSrcHeight*<br/>
 以邏輯單位，來源矩形的高度。
 
-*rectSrc*  
+*rectSrc*<br/>
 參考`RECT`結構，來識別來源。
 
 ### <a name="return-value"></a>傳回值
@@ -1635,7 +1638,6 @@ Y 軸座標，以邏輯單位，來源矩形左上角。
 ### <a name="remarks"></a>備註
 
 `TransparentBlt` 支援的 4 個位元，每像素，每像素 8 位元的來源點陣圖。 使用[cimage:: Alphablend](#alphablend)透明度指定 32 位元每一像素的點陣圖。
-
 
 ### <a name="example"></a>範例  
 
@@ -1666,7 +1668,6 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 }
 ```
 
-
 ## <a name="see-also"></a>另請參閱
 
 [MMXSwarm 範例](../../visual-cpp-samples.md)<br/>
@@ -1676,4 +1677,3 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)<br/>
 [裝置獨立點陣圖](/windows/desktop/gdi/device-independent-bitmaps)<br/>
 [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
-

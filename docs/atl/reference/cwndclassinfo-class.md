@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d674b2e3049d27f0e79eb082a44640f67a395dea
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0d0b9da19ca3d1500e4e25822e8b10d5967a45cc
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097876"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861677"
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo 類別
 
@@ -81,7 +81,7 @@ class CWndClassInfo
 
 [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]
 
-如需視窗類別的詳細資訊，請參閱[視窗類別](https://msdn.microsoft.com/library/windows/desktop/ms632596)Windows SDK 中。
+如需視窗類別的詳細資訊，請參閱[視窗類別](/windows/desktop/winmsg/window-classes)Windows SDK 中。
 
 如需有關如何使用 ATL 中的 windows 的詳細資訊，請參閱[ATL 視窗類別](../../atl/atl-window-classes.md)。
 

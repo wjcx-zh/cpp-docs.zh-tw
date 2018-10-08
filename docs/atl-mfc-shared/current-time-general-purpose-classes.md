@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fff4c581b91ed789b501d3866eb9b3b259a662b3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9edf381864121d4e3f6c5a2b6cf7c01198368e1e
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755459"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860520"
 ---
 # <a name="current-time-general-purpose-classes"></a>目前時間： 一般用途類別
 
 下列程序示範如何建立`CTime`物件，並將它初始化與目前的時間。
 
-#### <a name="to-get-the-current-time"></a>若要取得目前的時間
+### <a name="to-get-the-current-time"></a>若要取得目前的時間
 
 1. 配置`CTime`物件，如下所示：
 
@@ -38,7 +38,7 @@ ms.locfileid: "43755459"
    > [!NOTE]
    > 未初始化`CTime`物件不會初始化為正確的時間。
 
-2. 呼叫`CTime::GetCurrentTime`函式可從作業系統取得目前的時間。 此函數會傳回`CTime`物件，可用來設定的值`CTime`、，如下所示：
+1. 呼叫`CTime::GetCurrentTime`函式可從作業系統取得目前的時間。 此函數會傳回`CTime`物件，可用來設定的值`CTime`、，如下所示：
 
    [!code-cpp[NVC_ATLMFC_Utilities#172](../atl-mfc-shared/codesnippet/cpp/current-time-general-purpose-classes_2.cpp)]
 

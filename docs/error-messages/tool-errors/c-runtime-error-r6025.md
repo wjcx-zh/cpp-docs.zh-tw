@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c176e77a1704e3311d8c814d1c1b530b9f94f1ec
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 420fd702aa97d07e8aadb16a90c0a6a6636f6aa9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070050"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860260"
 ---
 # <a name="c-runtime-error-r6025"></a>C 執行階段錯誤 R6025
 
 純虛擬函式呼叫
 
 > [!NOTE]
->  如果您遇到這個錯誤訊息時執行應用程式時，應用程式已關閉發生內部問題。 此錯誤最常見的原因是應用程式或已損毀的安裝中的 bug。
+> 如果您遇到這個錯誤訊息時執行應用程式時，應用程式已關閉發生內部問題。 此錯誤最常見的原因是應用程式或已損毀的安裝中的 bug。
 >
->  您可以嘗試進行下列步驟來修正這個錯誤：
+> 您可以嘗試進行下列步驟來修正這個錯誤：
 >
->  -   使用**應用程式和功能**或是**程式和功能**頁面**控制台**修復或重新安裝程式。
-> -   請檢查**Windows Update**中**控制台**軟體更新。
-> -   檢查應用程式的更新版本。 如果問題持續發生，請連絡應用程式廠商。
+> - 使用**應用程式和功能**或是**程式和功能**頁面**控制台**修復或重新安裝程式。
+> - 請檢查**Windows Update**中**控制台**軟體更新。
+> - 檢查應用程式的更新版本。 如果問題持續發生，請連絡應用程式廠商。
 
 **適用於程式設計人員的資訊**
 

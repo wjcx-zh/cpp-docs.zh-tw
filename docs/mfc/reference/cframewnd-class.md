@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12982c212cf8ff4fe502638a5c466306bfe15eb1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 32456b15cc00d296354016f8769e020f8133b609
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374284"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861729"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 類別
 
@@ -1103,7 +1103,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
 
 |參數|描述|
 |---------------|-----------------|
-|*nState*|[in]指定是否要顯示或隱藏功能表。 *NState*參數可以是下列值：<br /><br /> -如果它隱藏的但是沒有任何作用，如果顯示，AFX_MBS_VISIBLE (0x01)-會顯示功能表。<br />-如果它是可見的但是沒有任何作用，如果它隱藏 AFX_MBS_HIDDEN (0x02-) 會隱藏功能表。|
+|*nState*|[in]指定是否要顯示或隱藏功能表。 *NState*參數可以是下列值：<br /><br />-如果它隱藏的但是沒有任何作用，如果顯示，AFX_MBS_VISIBLE (0x01)-會顯示功能表。<br />-如果它是可見的但是沒有任何作用，如果它隱藏 AFX_MBS_HIDDEN (0x02-) 會隱藏功能表。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -1125,7 +1125,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 |參數|描述|
 |---------------|-----------------|
-|*nStyle*|[in]指定功能表預設隱藏此項目，或為可見和具有焦點。 *NStyle*參數可以是下列值：<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01)-<br />     功能表會顯示任何時間，而且依預設未取得焦點。<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     預設為隱藏功能表。 如果功能表隱藏的請按 ALT 鍵以顯示功能表，並給予焦點。 如果會顯示功能表，請按 alt 鍵或 ESC 鍵以隱藏功能表。<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     （合 (OR)）-預設為隱藏功能表。 如果功能表隱藏的請按 F10 鍵，可顯示功能表，並給予焦點。 如果會顯示功能表，請按 F10 鍵來切換開啟或關閉功能表的焦點。 直到您按 alt 鍵或 ESC 鍵以將其隱藏，則會顯示功能表。|
+|*nStyle*|[in]指定功能表預設隱藏此項目，或為可見和具有焦點。 *NStyle*參數可以是下列值：<br /><br />-AFX_MBV_KEEPVISIBLE (0X01)-<br />     功能表會顯示任何時間，而且依預設未取得焦點。<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     預設為隱藏功能表。 如果功能表隱藏的請按 ALT 鍵以顯示功能表，並給予焦點。 如果會顯示功能表，請按 alt 鍵或 ESC 鍵以隱藏功能表。<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     （合 (OR)）-預設為隱藏功能表。 如果功能表隱藏的請按 F10 鍵，可顯示功能表，並給予焦點。 如果會顯示功能表，請按 F10 鍵來切換開啟或關閉功能表的焦點。 直到您按 alt 鍵或 ESC 鍵以將其隱藏，則會顯示功能表。|
 
 ### <a name="remarks"></a>備註
 

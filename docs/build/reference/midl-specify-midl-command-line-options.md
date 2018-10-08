@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d9ecfada513e16ce10bab37bb38b6ce6d67f907
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d2fa03920f60d7da4730bc46b23605ccfa13f6d7
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397620"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860378"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (指定 MIDL 命令列引數的選項)
 
@@ -51,9 +51,9 @@ ms.locfileid: "46397620"
 
 1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
 
-2. 選取 **組態屬性** > **連結器** > **內嵌 IDL**屬性頁。
+1. 選取 **組態屬性** > **連結器** > **內嵌 IDL**屬性頁。
 
-3. 修改**MIDL 命令**屬性。
+1. 修改**MIDL 命令**屬性。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 

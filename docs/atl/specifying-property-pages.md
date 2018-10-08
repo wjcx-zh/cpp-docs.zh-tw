@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db0445e83bbcae6baa45d4a482489e6761fa945a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f80abd3b6270f105fecd7ef8b9988a379901b541
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069426"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860208"
 ---
 # <a name="specifying-property-pages"></a>指定屬性頁
 
@@ -32,12 +32,12 @@ ms.locfileid: "46069426"
 
 1. 衍生您的類別，從[ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md)。
 
-2. 新增項目`ISpecifyPropertyPages`類別的 COM 對應。
+1. 新增項目`ISpecifyPropertyPages`類別的 COM 對應。
 
-3. 新增[PROP_PAGE](reference/property-map-macros.md#prop_page)每個頁面與您的控制項相關聯的屬性對應的項目。
+1. 新增[PROP_PAGE](reference/property-map-macros.md#prop_page)每個頁面與您的控制項相關聯的屬性對應的項目。
 
 > [!NOTE]
->  產生標準控制項使用時[ATL 控制項精靈](../atl/reference/atl-control-wizard.md)，您只需要將 PROP_PAGE 項目加入至屬性對應。 精靈會產生必要的程式碼，如需其他步驟。
+> 產生標準控制項使用時[ATL 控制項精靈](../atl/reference/atl-control-wizard.md)，您只需要將 PROP_PAGE 項目加入至屬性對應。 精靈會產生必要的程式碼，如需其他步驟。
 
 正常運作的容器會顯示指定的屬性頁中 PROP_PAGE 中的項目屬性對應的順序相同。 一般而言，您應該放置標準屬性頁面項目之後的項目屬性對應，在自訂頁面，讓使用者看到專屬於您控制的頁面第一次。
 
@@ -51,4 +51,3 @@ ms.locfileid: "46069426"
 
 [屬性頁](../atl/atl-com-property-pages.md)<br/>
 [ATLPages 範例](../visual-cpp-samples.md)
-

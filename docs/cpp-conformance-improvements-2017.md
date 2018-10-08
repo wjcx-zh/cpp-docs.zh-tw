@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e12c8eeb162d93a41c2bad85fda3570f3ffc1127
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ebcb2e52f67cfe37c4954e530fd2b2393ae23b68
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220212"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861690"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Visual Studio 2017 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157)、[15.8](#update_158) 版本中的 C++ 一致性改善
 
@@ -1263,7 +1263,8 @@ extern "C" __declspec(noinline) HRESULT __stdcall
 Visual Studio 2017 15.3 或舊版隨附的一些 Windows SDK 標頭 (例如：10.0.15063.0 版，也稱為 RS2 SDK) 會提供這項新警告 C4768。 不過，較新版的 Windows SDK 標頭 (特別是 ShlObj.h 和 ShlObj_core.h) 已經過修正，因此不會產生這個警告。 當您看到 Windows SDK 標頭中出現這個警告時，您可以採取下列動作：
 
 1. 切換至 Visual Studio 2017 15.5 版隨附的最新 Windows SDK。
-2. 關閉 Windows SDK 標頭陳述式之 #include 前後的警告：
+
+1. 關閉 Windows SDK 標頭陳述式之 #include 前後的警告：
 
 ```cpp
    #pragma warning (push)

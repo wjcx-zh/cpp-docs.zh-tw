@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae9ab3c2e8f077d943b69b419694fbf686ffdf38
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 22b79454b71f4908d71e683d8bebe4611da7cb14
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703855"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861849"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (匯出函式)
 
@@ -70,9 +70,9 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
 
-2. 選取 **組態屬性** > **連結器** > **命令列**屬性頁。
+1. 選取 **組態屬性** > **連結器** > **命令列**屬性頁。
 
-3. 輸入到選項**其他選項** 方塊中。
+1. 輸入到選項**其他選項** 方塊中。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 

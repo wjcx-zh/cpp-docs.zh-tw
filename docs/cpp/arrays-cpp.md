@@ -16,44 +16,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7c88c1d0f4096017b8ffc48a92143a63d229c5e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b2423355aa53abe52fffcd81ec847b41337efcbf
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017907"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861027"
 ---
 # <a name="arrays-c"></a>陣列 (C++)
 
 陣列是同類物件的集合。 最簡單的陣列案例就是向量，可以依照下列順序宣告：
 
-```
-decl-specifier identifier [ constant-expression ]
-decl-specifier identifier []
-decl-specifier identifer [][ constant-expression] . . .
-decl-specifier identifier [ constant-expression ]
-[ constant-expression ] . . .
-```
+> *宣告規範**識別項* **\[** *常數運算式* **]**<br/>
+> *宣告規範**識別項*  **\[]**<br/>
+> *宣告規範**識別碼* **\[]\[** *常數運算式* **]** 。 。 。<br/>
+> *宣告規範**識別項* **\[** *常數運算式* **]**  **\[** *常數運算式* **]** 。 。 。
 
 1. 宣告規範：
 
-- 選擇性的儲存類別規範。
+   - 選擇性的儲存類別規範。
 
-- 選擇性**const**及/或**volatile**規範。
+   - 選擇性**const**及/或**volatile**規範。
 
-- 陣列元素的類型名稱。
+   - 陣列元素的類型名稱。
 
-2. 宣告子：
+1. 宣告子：
 
-- 識別碼。
+   - 識別碼。
 
-- 方括號括住的整數類資料類型常數運算式 **[]**。 如果使用額外的括號宣告多個維度，第一組括號可省略的常數運算式。
+   - 方括號括住的整數類資料類型常數運算式 **\[]**。 如果使用額外的括號宣告多個維度，第一組括號可省略的常數運算式。
 
-- 括住常數運算式的選擇性額外括號。
+   - 括住常數運算式的選擇性額外括號。
 
-3. 選擇性的初始設定式。  請參閱[初始設定式](../cpp/initializers.md)。
+1. 選擇性的初始設定式。 如需詳細資訊，請參閱 <<c0> [ 初始設定式](../cpp/initializers.md)。
 
-陣列中元素的數目是由常數運算式提供。 陣列中的第一個項目是第 0 個元素，和最後一個元素是 (*n*-1) 項目，其中*n*是陣列可以包含的項目數目。 *常數運算式*必須是整數類資料類型，且必須大於 0。 大小為零的陣列是合法的只有當陣列中的最後一個欄位**struct**或是**聯集**和啟用 Microsoft 擴充功能 (/Ze) 時。
+陣列中的項目數由所提供*常數運算式*。 陣列中的第一個項目是第 0 個元素，和最後一個元素是 (*n*-1) 項目，其中*n*是陣列可以包含的項目數目。 *常數運算式*必須是整數類資料類型，且必須大於 0。 大小為零的陣列是合法的只有當陣列中的最後一個欄位**struct**或是**聯集**和啟用 Microsoft 擴充功能 (/Ze) 時。
 
 下列範例將示範如何在執行階段定義陣列：
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 512f791b3db513c2a143bda84a8dc2677b341544
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1b8074ad511544dcc6638ca804a26745e3da317b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106036"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860338"
 ---
 # <a name="adding-an-atl-dialog-box"></a>新增 ATL 對話方塊
 
@@ -30,15 +30,15 @@ ms.locfileid: "46106036"
 根據預設，ATL 對話方塊精靈會實作衍生自的對話方塊[CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md)。 這個類別包含用於裝載 ActiveX 和 Windows 控制項的支援。 如果精靈已產生程式碼之後，您不會想的 ActiveX 控制項支援，額外負荷，取代的所有執行個體`CAxDialogImpl`加[CSimpleDialog](../../atl/reference/csimpledialog-class.md)或[CDialogImpl](../../atl/reference/cdialogimpl-class.md)作為基底類別.
 
 > [!NOTE]
->  `CSimpleDialog` 建立支援 Windows 通用控制項的強制回應對話方塊方塊。 `CDialogImpl` 建立其中一個強制回應或非強制回應對話方塊。
+> `CSimpleDialog` 建立支援 Windows 通用控制項的強制回應對話方塊方塊。 `CDialogImpl` 建立其中一個強制回應或非強制回應對話方塊。
 
-### <a name="to-add-an-atl-dialog-resource-to-your-project"></a>將 ATL 對話方塊資源新增至您的專案
+## <a name="to-add-an-atl-dialog-resource-to-your-project"></a>將 ATL 對話方塊資源新增至您的專案
 
 1. 建立 ATL 專案使用[ATL 專案精靈](../../atl/reference/atl-project-wizard.md)。
 
-2. 從[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)，以滑鼠右鍵按一下專案名稱，然後按一下**新增**從捷徑功能表。 按一下 **加入類別**。
+1. 從[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)，以滑鼠右鍵按一下專案名稱，然後按一下**新增**從捷徑功能表。 按一下 **加入類別**。
 
-3. 在 [範本] 窗格中的[加入類別](../../ide/add-class-dialog-box.md) 對話方塊中，按一下**ATL 對話方塊**。 按一下 **開放**顯示[ATL 對話方塊精靈](../../atl/reference/atl-dialog-wizard.md)。
+1. 在 **範本**窗格[加入類別](../../ide/add-class-dialog-box.md)] 對話方塊中，按一下 [ **ATL 對話方塊**。 按一下 **開放**顯示[ATL 對話方塊精靈](../../atl/reference/atl-dialog-wizard.md)。
 
 如需詳細資訊，請參閱 <<c0> [ 實作對話方塊](../../atl/implementing-a-dialog-box.md)。
 
@@ -47,4 +47,3 @@ ms.locfileid: "46106036"
 [加入類別](../../ide/adding-a-class-visual-cpp.md)<br/>
 [視窗類別](../../atl/atl-window-classes.md)<br/>
 [訊息對應](../../atl/message-maps-atl.md)
-

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b57e2c4e6631683afdabec983f155941b8cd2da
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 29e5b2783dda3c66736a7e668186d0645cdd4b84
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107455"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861313"
 ---
 # <a name="storage-classes-c"></a>儲存類別 (C++)
 
@@ -220,13 +220,13 @@ void DoSomething()
 
 - 以動態方式初始化的執行緒區域變數 Dll 中可能無法正確初始化所有的呼叫執行緒上。 如需詳細資訊，請參閱[執行緒](thread.md)。
 
--  `thread_local`規範也可以結合**靜態**或是**extern**。
+- `thread_local`規範也可以結合**靜態**或是**extern**。
 
--  您可以套用`thread_local`至資料宣告和定義;`thread_local`不能在函式宣告或定義。
+- 您可以套用`thread_local`至資料宣告和定義;`thread_local`不能在函式宣告或定義。
 
--  您只能在具有靜態儲存持續時間的資料項目上指定 `thread_local`。 這包括全域資料物件 (兩者**靜態**並**extern**)、 區域靜態物件和類別的靜態資料成員。 宣告的任何區域變數`thread_local`是以隱含方式靜態，如果沒有其他的儲存體類別會提供; 換句話說，在區塊範圍`thread_local`相當於`thread_local static`。
+- 您只能在具有靜態儲存持續時間的資料項目上指定 `thread_local`。 這包括全域資料物件 (兩者**靜態**並**extern**)、 區域靜態物件和類別的靜態資料成員。 宣告的任何區域變數`thread_local`是以隱含方式靜態，如果沒有其他的儲存體類別會提供; 換句話說，在區塊範圍`thread_local`相當於`thread_local static`。
 
--  不論是在相同的檔案還是不同的檔案進行宣告和定義，您都必須指定執行緒區域物件之宣告和定義的 `thread_local`。
+- 不論是在相同的檔案還是不同的檔案進行宣告和定義，您都必須指定執行緒區域物件之宣告和定義的 `thread_local`。
 
 在 Windows 中，`thread_local`相當於[__declspec （thread)](../cpp/thread.md)不同之處在於 **__declspec （thread)** 可以套用至類型定義，並在 C 程式碼中有效。 只要可能，都請使用 `thread_local`，因為它是 C++ 標準的一部分，因此更具可攜性。
 

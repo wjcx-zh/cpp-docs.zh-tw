@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5da401f940a39c135ba0b64571b6330a42fed796
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 09cab9f0c7d94c3c51eb63008ec6b7cfb1292f89
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725496"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860572"
 ---
 # <a name="await-enable-coroutine-support"></a>/sdl （啟用協同程式支援）
 
@@ -44,9 +44,9 @@ ms.locfileid: "45725496"
 
 1. 開啟您的專案**屬性頁** 對話方塊。
 
-2. 底下**組態屬性**，展開**C/c + +** 資料夾，然後選擇 **命令列**屬性頁。
+1. 底下**組態屬性**，展開**C/c + +** 資料夾，然後選擇 **命令列**屬性頁。
 
-3. 請輸入 **/await**中的編譯器選項**其他選項** 方塊中。 選擇 **[確定]** 或是**套用**以儲存變更。
+1. 請輸入 **/await**中的編譯器選項**其他選項** 方塊中。 選擇 **[確定]** 或是**套用**以儲存變更。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 

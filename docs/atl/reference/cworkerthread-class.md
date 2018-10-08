@@ -25,19 +25,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2c3e0eb625c492cb9f0e9a1234d33149ac201a1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 79855860b4d2d6bfee328f8fa07f2a3ba6cfd69c
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040228"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861456"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread 類別
 
 這個類別會建立背景工作執行緒或使用現有工作區、 等候一或多個核心物件控制代碼，而且其中一個控點而收到信號時，執行指定的用戶端函式。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+> 此類別和其成員不能在 Windows 執行階段中執行的應用程式。
 
 ## <a name="syntax"></a>語法
 
@@ -46,7 +46,7 @@ template <class ThreadTraits = DefaultThreadTraits>
 class CWorkerThread
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
 *ThreadTraits*<br/>
 類別提供執行緒建立函式，例如[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md)或是[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)。
@@ -84,19 +84,19 @@ class CWorkerThread
 
 1. 建立這個類別的執行個體。
 
-2. 呼叫[CWorkerThread::Initialize](#initialize)。
+1. 呼叫[CWorkerThread::Initialize](#initialize)。
 
-3. 呼叫[CWorkerThread::AddHandle](#addhandle)與核心物件和實作之指標的控制代碼[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)。
+1. 呼叫[CWorkerThread::AddHandle](#addhandle)與核心物件和實作之指標的控制代碼[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)。
 
-     - 或 -
+   \-或-
 
-     呼叫[CWorkerThread::AddTimer](#addtimer)實作之指標[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)。
+   呼叫[CWorkerThread::AddTimer](#addtimer)實作之指標[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)。
 
-4. 實作[IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)控制代碼或計時器而收到信號時採取某些動作。
+1. 實作[IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)控制代碼或計時器而收到信號時採取某些動作。
 
-5. 若要移除的可等候物件清單中的物件，請呼叫[CWorkerThread::RemoveHandle](#removehandle)。
+1. 若要移除的可等候物件清單中的物件，請呼叫[CWorkerThread::RemoveHandle](#removehandle)。
 
-6. 若要終止執行緒，呼叫[CWorkerThread::Shutdown](#shutdown)。
+1. 若要終止執行緒，呼叫[CWorkerThread::Shutdown](#shutdown)。
 
 ## <a name="requirements"></a>需求
 

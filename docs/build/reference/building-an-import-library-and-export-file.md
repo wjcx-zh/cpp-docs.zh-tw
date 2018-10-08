@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6a980a96198db80f0956895292d37f123d0351c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 75f629c8a9c8a06f02024e9d52ab13b2d12b234c
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723303"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860383"
 ---
 # <a name="building-an-import-library-and-export-file"></a>建置匯入程式庫和匯出檔案
 
@@ -52,9 +52,9 @@ ms.locfileid: "45723303"
 
 1. A **__declspec （dllexport)** 其中一種定義*objfiles*或*程式庫*
 
-2. /EXPORT 規格：*名稱*LIB 命令列上
+1. /EXPORT 規格：*名稱*LIB 命令列上
 
-3. 中的定義**匯出**中的陳述式*deffile*
+1. 中的定義**匯出**中的陳述式*deffile*
 
 這些是您用來連結匯出的程式時，指定匯出的相同方法。 程式可以使用一個以上的方法。 您可以指定組件的 LIB 命令 (例如多個*objfiles*或 /EXPORT 規格) 在 LIB 命令中的命令檔，就如同您可以在 [連結] 命令。
 

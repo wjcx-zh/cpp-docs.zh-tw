@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 800b3d7d588d1038ac61cb7c9c4b9f1913bec9d4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 509464ba78a6b7693a849d9f753b13328ab868f9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722367"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860741"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD (延遲載入匯入)
 
@@ -46,9 +46,9 @@ ms.locfileid: "45722367"
 
 1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
 
-2. 在 **連結器**資料夾中，選取**輸入**屬性頁。
+1. 在 **連結器**資料夾中，選取**輸入**屬性頁。
 
-3. 修改**延遲載入 Dll**屬性。
+1. 修改**延遲載入 Dll**屬性。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 

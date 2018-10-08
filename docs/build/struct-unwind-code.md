@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da6f078741c598099e71da9164f54b56da3f355
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f5bccddd2ddd5c0f9dfbc828a7da3a66fa13339d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726644"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861716"
 ---
 # <a name="struct-unwindcode"></a>struct UNWIND_CODE
 
@@ -112,17 +112,17 @@ ms.locfileid: "45726644"
 
 1. 快顯至堆疊的頂端 RIP 傳回位址*Temp*
 
-2. 推播 SS
+1. 推播 SS
 
-3. 推入舊 RSP
+1. 推入舊 RSP
 
-4. 推播 EFLAGS
+1. 推播 EFLAGS
 
-5. 推播 CS
+1. 推播 CS
 
-6. 推播*Temp*
+1. 推播*Temp*
 
-7. 推入錯誤碼 （如果 op 資訊等於 1）
+1. 推入錯誤碼 （如果 op 資訊等於 1）
 
 模擬`UWOP_PUSH_MACHFRAME`40 的作業遞減 RSP （作業資訊會等於 0） 或 48 （作業資訊會等於 1）。
 

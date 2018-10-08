@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d337d31150b6da1a1556589d63fd60d63842efce
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7a337ceffbbfb1577b58fea2f60213cd79052b00
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098780"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861365"
 ---
 # <a name="options-atl-simple-object-wizard"></a>選項, ATL 簡單物件精靈
 
@@ -60,7 +60,7 @@ ms.locfileid: "46098780"
    |選項|描述|
    |------------|-----------------|
    |**雙重**|指定物件是否支援雙重介面 (其 vtable 具有自訂介面函式，再加上晚期繫結`IDispatch`方法)。 可讓兩個 COM 用戶端和[Automation 控制器](../../mfc/automation-clients.md)來存取物件。 預設值。|
-   |**自訂**|指定物件支援自訂介面 （其 vtable 有自訂介面函式）。 自訂介面可以是較快，雙重介面，尤其是跨處理序界限。<br /><br /> -   **Automation 相容**可讓 Automation 控制器，若要存取具有自訂介面支援的物件。|
+   |**自訂**|指定物件支援自訂介面 （其 vtable 有自訂介面函式）。 自訂介面可以是較快，雙重介面，尤其是跨處理序界限。<br /><br /> - **Automation 相容**可讓 Automation 控制器，若要存取具有自訂介面支援的物件。|
 
 - **支援**
 

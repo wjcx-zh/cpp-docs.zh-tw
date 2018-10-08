@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08200320e30816ac45e6c91a14dc41508430cfae
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ae2a08431a29e4140e3a9af86e68ccfc9bff388a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069114"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861385"
 ---
 # <a name="constructors-c"></a>建構函式 (C++)
 
@@ -388,11 +388,11 @@ explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 
 1. 它會依宣告順序呼叫基底類別和成員建構函式。
 
-2. 如果類別是從虛擬基底類別衍生，它會初始化物件的虛擬基底指標。
+1. 如果類別是從虛擬基底類別衍生，它會初始化物件的虛擬基底指標。
 
-3. 如果類別具有或繼承虛擬函式，它會初始化物件的虛擬函式指標。 虛擬函式指標指向類別的虛擬函式表，以便讓虛擬函式呼叫正確繫結至程式碼。
+1. 如果類別具有或繼承虛擬函式，它會初始化物件的虛擬函式指標。 虛擬函式指標指向類別的虛擬函式表，以便讓虛擬函式呼叫正確繫結至程式碼。
 
-4. 它會執行其函式主體內的任何程式碼。
+1. 它會執行其函式主體內的任何程式碼。
 
 下列範例顯示在衍生類別的建構函式中呼叫基底類別和成員建構函式的順序。 首先會呼叫基底建構函式，然後依其出現在類別宣告中的順序初始化基底類別成員，最後會呼叫衍生的建構函式。
 
@@ -593,7 +593,6 @@ public:
     //... rest of class as before
 };
 ```
-
 
 在任何建構函式完成時，建構函式建立的物件會立即完全初始化。 如需詳細資訊，請參閱 <<c0> [ 統一初始設定和委派建構函式](../cpp/uniform-initialization-and-delegating-constructors.md)。
 

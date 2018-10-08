@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69058c00757cea466683246c1aee2e89f806c931
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7c199f687f5004066bf67d087daa1bd7a5b27d01
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058603"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861157"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>明確的預設和被刪除的函式
 
@@ -48,8 +48,8 @@ ms.locfileid: "46058603"
 > [!NOTE]
 >  此外，C++11 標準指定下列額外規則：
 >
->  -   如果已明確宣告複製建構函式或解構函式，則複製指派運算子自動產生為已被取代。
-> -   如果已明確宣告複製指派運算子或解構函式，則複製建構函式自動產生為已被取代。
+> - 如果已明確宣告複製建構函式或解構函式，則複製指派運算子自動產生為已被取代。
+> - 如果已明確宣告複製指派運算子或解構函式，則複製建構函式自動產生為已被取代。
 >
 >  在這兩種情況下，Visual Studio 會繼續自動隱含產生必要函式，且不會發出警告。
 

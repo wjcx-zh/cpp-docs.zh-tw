@@ -1,7 +1,7 @@
 ---
 title: 請嘗試-try-except 陳述式 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/05/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 107b759345e221ad8100f11d97b79c5bd9fd2b65
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6e938f5b7e5f25461ae921fbfa3c49920eca86eb
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031432"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861924"
 ---
 # <a name="try-except-statement"></a>try-except 陳述式
 
@@ -50,7 +50,14 @@ ms.locfileid: "46031432"
 
 ## <a name="syntax"></a>語法
 
-> **__try** {/ / 受防護的程式碼} **__except** (*運算式*) {/ / 例外狀況處理常式程式碼}
+> **__try** <br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;受防護的程式碼<br/>
+> }<br/>
+> **__except** (*運算式*)<br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;例外狀況處理常式程式碼<br/>
+> }<br/>
 
 ## <a name="remarks"></a>備註
 
@@ -67,15 +74,15 @@ ms.locfileid: "46031432"
 
 1. 執行保護的區段。
 
-2. 如果沒有發生例外狀況執行保護區段期間，在之後的陳述式會繼續執行 **__except**子句。
+1. 如果沒有發生例外狀況執行保護區段期間，在之後的陳述式會繼續執行 **__except**子句。
 
-3. 如果執行保護區段期間發生的例外狀況，或在任何受保護的區段所呼叫常式， **__except** *運算式*(稱為*篩選*運算式)評估和值會決定如何處理例外狀況。 共有三個值：
+1. 如果執行保護區段期間發生的例外狀況，或在任何受保護的區段所呼叫常式， **__except** *運算式*(稱為*篩選*運算式)評估和值會決定如何處理例外狀況。 可能的值有三個：
 
-   EXCEPTION_CONTINUE_EXECUTION (-1) 例外狀況已解除。 在例外狀況發生的位置繼續執行。
+   - EXCEPTION_CONTINUE_EXECUTION (-1) 例外狀況已解除。 在例外狀況發生的位置繼續執行。
 
-   無法辨識 EXCEPTION_CONTINUE_SEARCH (0) 的例外狀況。 繼續搜尋堆疊中的處理常式，首先搜尋包含 **try-except** 陳述式，然後是具有次高優先順序的處理常式。
+   - 無法辨識 EXCEPTION_CONTINUE_SEARCH (0) 的例外狀況。 繼續搜尋堆疊中的處理常式，首先搜尋包含 **try-except** 陳述式，然後是具有次高優先順序的處理常式。
 
-   辨識 EXCEPTION_EXECUTE_HANDLER (1) 例外狀況。 藉由執行將控制權轉移到例外狀況處理常式 **__except**複合陳述式，則之後繼續執行 **__except**區塊。
+   - 辨識 EXCEPTION_EXECUTE_HANDLER (1) 例外狀況。 藉由執行將控制權轉移到例外狀況處理常式 **__except**複合陳述式，則之後繼續執行 **__except**區塊。
 
 因為 **__except**運算式以 C 運算式求值，長度限制為單一值、 條件運算式運算子或逗號運算子。 如果需要更廣泛的處理，運算式可以呼叫常式，傳回上面所列三個值的其中一個。
 
@@ -83,9 +90,7 @@ ms.locfileid: "46031432"
 
 不是有效一頭栽進 **__try**陳述式，但是可以跳出一個。 如果執行中期終止處理程序，不會呼叫例外狀況處理常式**嘗試-除了**陳述式。
 
-如需詳細資訊，請參閱知識庫文件 Q315937：＜如何：對 Visual C++ 應用程式中的堆疊溢位設陷＞(機器譯文)。
-
-## <a name="the-leave-keyword"></a>__leave 關鍵字
+### <a name="the-leave-keyword"></a>__leave 關鍵字
 
 **__Leave**關鍵字只在中是有效的保護區段**嘗試-除了**陳述式，而其作用是跳至保護區段的結尾。 然後在例外狀況處理常式之後的第一個陳述式繼續執行。
 
@@ -170,7 +175,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>輸出
+### <a name="output"></a>輸出
 
 ```Output
 hello

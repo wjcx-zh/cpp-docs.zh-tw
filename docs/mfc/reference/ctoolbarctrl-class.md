@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486e7ba1b91f1e5b8a7f99f27b89183ed32608a1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c5a71e6f358a682adad2d12f7b567dc0bad3d0f3
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409645"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861878"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl 類別
 
@@ -440,11 +440,11 @@ typedef struct _TBBUTTON {
 
    按鈕影像，-1，如果沒有此按鈕的影像之以零起始索引。
 
--  `idCommand`
+- `idCommand`
 
    命令與按鈕關聯的識別項。 此識別碼會傳送 WM_COMMAND 訊息中，則選擇該按鈕時。 如果`fsStyle`成員具有 TBSTYLE_SEP 值，這個成員必須是零。
 
--  `fsState`
+- `fsState`
 
    按鈕狀態旗標。 它可以是下列值的組合：
 

@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8361890c264e11fbd5817331e07ba9005da17240
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: d8b48093641982f171a5d8b43fa70d7694122263
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821370"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861261"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>逐步解說： 編譯 C 程式中，在命令列上
 
@@ -49,7 +49,7 @@ Build Tools for Visual Studio 版本的 Visual Studio 只會安裝命令列工�
 
    如果您使用不同版本的 Visual Studio，或執行不同版本的 Windows，在 開始 功能表中尋找，或啟動 Visual Studio 工具 資料夾，其中包含開發人員命令提示字元捷徑的頁面。 您也可以使用 Windows 搜尋函式來搜尋 「 開發人員命令提示字元 並選擇符合您已安裝的 Visual Studio 版本的其中一個。 使用捷徑來開啟 [命令提示字元] 視窗。
 
-1. 接下來，確認 Visual c + + 開發人員命令提示字元已正確設定。 在 [命令提示字元] 視窗中，輸入`cl`並確認輸出會類似：
+1. 接下來，確認 Visual c + + 開發人員命令提示字元已正確設定。 在 [命令提示字元] 視窗中，輸入`cl`並確認，輸出看起來像這樣：
 
    ```Output
    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl

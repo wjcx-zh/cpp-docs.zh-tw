@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7047161a059432b43d4ff1a92e9c4d10dc01d51
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3a2567182f0e2622a72ceb9b98988c4d122a3561
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387012"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860559"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>與 C 樣式字串相關的 CString
 
@@ -67,7 +67,7 @@ strcpy(myString, (LPCTSTR)aCString);
 [!code-cpp[NVC_ATLMFC_Utilities#189](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_1.cpp)]
 
 > [!NOTE]
->  第三個引數`strcpy_s`(或 Unicode/MBCS 可攜式`_tcscpy_s`) 是`const wchar_t*`(Unicode) 或`const char*`(ANSI)。 上述範例會為這個引數傳遞一個 `CString`。 C++ 編譯器自動套用為 `CString` 類別定義的轉換函式，它會將 `CString` 轉換成 `LPCTSTR`。 定義從一個類型到另一個類型的轉型作業功能，是 C++ 最實用的功能之一。
+> 第三個引數`strcpy_s`(或 Unicode/MBCS 可攜式`_tcscpy_s`) 是`const wchar_t*`(Unicode) 或`const char*`(ANSI)。 上述範例會為這個引數傳遞一個 `CString`。 C++ 編譯器自動套用為 `CString` 類別定義的轉換函式，它會將 `CString` 轉換成 `LPCTSTR`。 定義從一個類型到另一個類型的轉型作業功能，是 C++ 最實用的功能之一。
 
 ##  <a name="_core_working_with_standard_run.2d.time_library_string_functions"></a> 使用標準的執行階段程式庫字串函式
 
@@ -83,13 +83,13 @@ strcpy(myString, (LPCTSTR)aCString);
 
 `GetBuffer` 和 `ReleaseBuffer` 方法提供對 `CString` 物件內部字元緩衝區的存取，並讓您直接修改它。 下列步驟顯示如何使用這些函式來達成此目的。
 
-#### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>使用 GetBuffer 和 ReleaseBuffer 存取 CString 物件的內部字元緩衝區
+### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>使用 GetBuffer 和 ReleaseBuffer 存取 CString 物件的內部字元緩衝區
 
 1. 針對 `GetBuffer` 物件呼叫 `CString` 並指定您需要的緩衝區長度。
 
-2. 使用 `GetBuffer` 傳回的指標直接將字元寫入 `CString` 物件。
+1. 使用 `GetBuffer` 傳回的指標直接將字元寫入 `CString` 物件。
 
-3. 針對 `ReleaseBuffer` 物件呼叫 `CString`，更新所有內部 `CString` 狀態資訊，例如字串的長度。 直接修改 `CString` 物件的內容之後，您必須先呼叫 `ReleaseBuffer` 然後才呼叫任何其他 `CString` 成員函式。
+1. 針對 `ReleaseBuffer` 物件呼叫 `CString`，更新所有內部 `CString` 狀態資訊，例如字串的長度。 直接修改 `CString` 物件的內容之後，您必須先呼叫 `ReleaseBuffer` 然後才呼叫任何其他 `CString` 成員函式。
 
 ##  <a name="_core_using_cstring_objects_with_variable_argument_functions"></a> 使用 CString 物件搭配變數引數的函式
 
@@ -113,4 +113,3 @@ strcpy(myString, (LPCTSTR)aCString);
 
 [字串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [CString 引數傳遞](../atl-mfc-shared/cstring-argument-passing.md)
-

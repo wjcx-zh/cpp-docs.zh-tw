@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46e3926f31ec7d12da539d868cacb37e18134e96
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bd4f5ac780b36e51be63aef7ce87884284542cbb
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109678"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861937"
 ---
 # <a name="cwindow-class"></a>CWindow 類別
 
@@ -382,7 +382,7 @@ class CWindow
 
 [CDialogImpl](../../atl/reference/cdialogimpl-class.md)可讓您建立強制回應或非強制回應對話方塊。
 
-如需 windows 的詳細資訊，請參閱[Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595)和後續 Windows SDK 中的主題。 如需有關如何使用 ATL 中的 windows 的詳細資訊，請參閱[ATL 視窗類別](../../atl/atl-window-classes.md)。
+如需 windows 的詳細資訊，請參閱[Windows](/windows/desktop/winmsg/windows)和後續 Windows SDK 中的主題。 如需有關如何使用 ATL 中的 windows 的詳細資訊，請參閱[ATL 視窗類別](../../atl/atl-window-classes.md)。
 
 ## <a name="requirements"></a>需求
 

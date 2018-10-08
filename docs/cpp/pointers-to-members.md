@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 509181abc0d9b3e2f2c2d4c76275e635ba3a4477
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 971f3df56f049b919ebb1f3fb8f517c97b2829e7
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076069"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861274"
 ---
 # <a name="pointers-to-members"></a>成員的指標
 
@@ -56,7 +56,7 @@ ms.locfileid: "46076069"
   - 類別的限定名稱。
   - `::` 運算子。
   - 適當類型類別之非靜態成員的名稱
-  -  一如往常，單一宣告允許使用多個宣告子 (和任何關聯的初始設定式)。
+  - 一如往常，單一宣告允許使用多個宣告子 (和任何關聯的初始設定式)。
 
 類別成員指標不同於一般指標，因為這類指標包含成員類型及成員所屬類別的類型資訊。 一般指標只能識別記憶體中的單一物件 (能取得其位址)。 類別的成員指標可以在類別的任何執行個體中識別該成員。 下列範例宣告類別、`Window` 和某些成員資料指標。
 

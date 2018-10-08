@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9f1d205eff155b628081c5bc615570c44a88f08
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: eea3159bff6f2c69c94ef31d01b1d6a85104ef13
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412804"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861848"
 ---
 # <a name="fa-fa-listing-file"></a>/FA、/Fa (清單檔)
 
@@ -87,9 +87,9 @@ ms.locfileid: "46412804"
 
 1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
 
-2. 選取 **組態屬性** > **C/c + +** > **輸出檔**屬性頁。
+1. 選取 **組態屬性** > **C/c + +** > **輸出檔**屬性頁。
 
-3. 修改**組合語言輸出**屬性來設定 **/FAc**並 **/FAs**組譯工具、 機器和原始碼的選項。 修改**使用 Unicode 的組譯工具清單**屬性來設定 **/FAu** ANSI 或 utf-8 輸出的選項。 修改**ASM 清單位置**來設定 **/Fa**以列出檔案名稱和位置的選項。
+1. 修改**組合語言輸出**屬性來設定 **/FAc**並 **/FAs**組譯工具、 機器和原始碼的選項。 修改**使用 Unicode 的組譯工具清單**屬性來設定 **/FAu** ANSI 或 utf-8 輸出的選項。 修改**ASM 清單位置**來設定 **/Fa**以列出檔案名稱和位置的選項。
 
 請注意，將兩者**組合語言輸出**並**使用 Unicode 的組譯工具清單**屬性可能會導致[命令列警告 D9025](../../error-messages/tool-errors/command-line-warning-d9025.md)。 若要結合這些選項在 IDE 中的，使用**其他選項**欄位中**命令列**屬性改為頁面。
 

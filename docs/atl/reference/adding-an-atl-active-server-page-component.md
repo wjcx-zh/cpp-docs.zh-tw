@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a326b72ac5594d7ef5f0b9ad26f9bdf4e8472bd4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a9410ac275ecd321184153d45fd5b044deb80e5b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112989"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861508"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>新增 ATL Active Server Page 元件
 
@@ -36,13 +36,13 @@ Active Server Pages 元件是 Internet Information Services 架構，可提供�
 
 - 您可以使用 ASP 錯誤處理功能，為您 web 應用程式。
 
-### <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>將 ATL Active Server Pages 元件新增至您的專案
+## <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>將 ATL Active Server Pages 元件新增至您的專案
 
 1. 在 [**方案總管] 中**以滑鼠右鍵按一下您要新增 ATL Active Server Pages 元件專案的名稱。
 
-2. 從捷徑功能表按一下 [新增]，然後按一下 [新增類別]。
+1. 從捷徑功能表按一下 [新增]，然後按一下 [新增類別]。
 
-3. 在[加入類別](../../ide/add-class-dialog-box.md)對話方塊，在 [範本] 窗格中，按一下**ATL Active Server Page 元件**，然後按一下**開啟**以顯示[ATL Active ServerPage 元件精靈](../../atl/reference/atl-active-server-page-component-wizard.md)。
+1. 中[加入類別](../../ide/add-class-dialog-box.md)對話方塊中，於**範本**窗格中，按一下**ATL Active Server Page 元件**，然後按一下**開啟**顯示[ATL Active Server Page 元件精靈](../../atl/reference/atl-active-server-page-component-wizard.md)。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -52,4 +52,3 @@ Active Server Pages 元件是 Internet Information Services 架構，可提供�
 [加入方法](../../ide/adding-a-method-visual-cpp.md)<br/>
 [MFC 類別](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [新增泛型 C++ 類別](../../ide/adding-a-generic-cpp-class.md)
-

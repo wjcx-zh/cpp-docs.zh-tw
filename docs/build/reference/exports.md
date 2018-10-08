@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62b49c20248ca4825bcf2c95b6c7adc956a39025
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6bf350b0a129c642678fc6af1bac7d35633fe909
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714517"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860975"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -82,11 +82,11 @@ EXPORTS
 
 1. [__Declspec （dllexport)](../../cpp/dllexport-dllimport.md)原始程式碼中的關鍵字
 
-2. .DEF 檔中的 `EXPORTS` 陳述式
+1. .DEF 檔中的 `EXPORTS` 陳述式
 
-3. [/匯出](../../build/reference/export-exports-a-function.md)LINK 命令中的規格
+1. [/匯出](../../build/reference/export-exports-a-function.md)LINK 命令中的規格
 
-4. A[註解](../../preprocessor/comment-c-cpp.md)指示詞中的原始程式碼，表單的`#pragma comment(linker, "/export: definition ")`。 下列範例示範 #pragma comment 指示詞之前函式宣告，其中`PlainFuncName`是未裝飾的名稱，和`_PlainFuncName@4`是函式的裝飾的名稱：
+1. A[註解](../../preprocessor/comment-c-cpp.md)指示詞中的原始程式碼，表單的`#pragma comment(linker, "/export: definition ")`。 下列範例示範 #pragma comment 指示詞之前函式宣告，其中`PlainFuncName`是未裝飾的名稱，和`_PlainFuncName@4`是函式的裝飾的名稱：
 
     ```cpp
     #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")

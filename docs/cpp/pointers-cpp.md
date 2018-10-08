@@ -17,62 +17,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a39ee9c45084d03198157f427ca3edca13767e6c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e896c1a00e45e5e7503837409903651ed2bdc3a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024108"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861235"
 ---
 # <a name="pointers-c"></a>指標 （c + +）
 
 指標是使用下列序列宣告。
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers 
-[ms-modifier] declarator ;
-```
+> \[*儲存類別規範*] \[ *cv 限定詞*]*型別規範* \[ *ms 修飾詞*] *宣告子* **;**
 
-其中可能會使用 `declarator` 的任何有效的指標宣告子。 簡單指標宣告子的語法如下：
+其中任何有效的指標宣告子可能會用於*宣告子*。 簡單指標宣告子的語法如下：
 
-```
-* [cv-qualifiers] identifier [= expression]
-```
+> __\*__ \[*cv 限定詞*]*識別項* \[ **=** *運算式*]
 
 1. 宣告指定名稱：
 
-    - 選擇性的儲存類別規範。 如需詳細資訊，請參閱 <<c0> [ 規範](../cpp/specifiers.md)。
+   - 選擇性的儲存類別規範。 如需詳細資訊，請參閱 <<c0> [ 規範](../cpp/specifiers.md)。
 
-    - 選擇性**const**或是**volatile**關鍵字套用至將指向的物件型別。
+   - 選擇性**const**或是**volatile**關鍵字套用至將指向的物件型別。
 
-    - 類型指定名稱：表示將指向之物件類型的類型名稱。
+   - 類型指定名稱：表示將指向之物件類型的類型名稱。
 
-2. 宣告子：
+1. 宣告子：
 
-    - 選擇性的 Microsoft 專有修飾詞。 如需詳細資訊，請參閱 < [Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)。
+   - 選擇性的 Microsoft 專有修飾詞。 如需詳細資訊，請參閱 < [Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)。
 
-    - `*` 運算子。
+   - __\*__ 運算子。
 
-    - 選擇性**const**或是**volatile**關鍵字套用至指標本身。
+   - 選擇性**const**或是**volatile**關鍵字套用至指標本身。
 
-    - 識別碼。
+   - 識別碼。
 
-    - 選擇性的初始設定式。
+   - 選擇性的初始設定式。
 
-     函式指標的宣告子如下所示：
+函式指標的宣告子如下所示：
 
-```
-(* [cv-qualifiers] identifier )( argument-list ) [cv-qualifers]
-[exception specification] [= expression];
-```
+> __(\*__  \[ *cv 限定詞*]*識別碼* **) (** *引數清單* **)** \[ *cv 限定詞*] \[*例外狀況規格*] \[ **=***運算式*] **;**
 
-- 對於指標陣列，其語法如下所示：
+對於指標陣列，其語法如下所示：
 
-```
-* identifier [ [ constant-expression ] ]
-```
+> __\*__ *識別項* **\[** \[*常數運算式*] **]**
 
-- 多個宣告子及其初始設定式可以一起出現在逗號分隔清單的單一宣告中，其後為宣告指定名稱。
+多個宣告子及其初始設定式可以一起出現在逗號分隔清單的單一宣告中，其後為宣告指定名稱。
 
 指標宣告的簡單範例如下：
 

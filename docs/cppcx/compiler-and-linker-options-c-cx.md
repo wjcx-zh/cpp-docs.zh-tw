@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 086de927a6927087b8cbf3d1501ba6420e1027ed
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 61b9943488a9d6a720e8d86750b14ad044677112
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110801"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861833"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>編譯器和連結器選項 (C++/CX)
 
@@ -28,7 +28,7 @@ ms.locfileid: "44110801"
 
 |選項|描述|
 |------------|-----------------|
-|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|啟用 Windows 執行階段語言擴充功能。<br /><br /> `nostdlib` 參數可防止編譯器使用標準、預先定義的搜尋路徑來尋找組件和 .winmd 檔案。<br /><br /> **/ZW** 編譯器選項會隱含指定下列編譯器選項：<br /><br /> -   **/FI** vccorlib.h，強制包含 vccorlib.h 標頭檔，此檔案定義編譯器所需的許多類型。<br />-   [/FU](../build/reference/fu-name-forced-hash-using-file.md) Windows.winmd，強制包含 Windows.winmd 中繼資料檔，此檔案由作業系統提供，並在 Windows 執行階段中定義許多類型。<br />-   **/FU** Platform.winmd，強制包含 Platform.winmd 中繼資料檔，此檔案由編譯器提供，且定義 Platform 命名空間系列中的大部分類型。|
+|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|啟用 Windows 執行階段語言擴充功能。<br /><br /> `nostdlib` 參數可防止編譯器使用標準、預先定義的搜尋路徑來尋找組件和 .winmd 檔案。<br /><br /> **/ZW** 編譯器選項會隱含指定下列編譯器選項：<br /><br />- **/FI** vccorlib.h，強制包含 vccorlib.h 標頭檔，此檔案定義編譯器所需的許多類型。<br />- [/FU](../build/reference/fu-name-forced-hash-using-file.md) Windows.winmd，強制包含 Windows.winmd 中繼資料檔，此檔案由作業系統提供，並在 Windows 執行階段中定義許多類型。<br />- **/FU** Platform.winmd，強制包含 Platform.winmd 中繼資料檔，此檔案由編譯器提供，並定義平台系列的命名空間中的大部分類型。|
 |[/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|將以 *dir* 參數指定的目錄加入搜尋路徑中，供編譯器用來尋找組件和 .winmd 檔案。|
 |**/FU**  *檔案*|強制包含指定的模組或 .winmd 檔案。 也就是說，您不需要在原始程式碼中指定 `#using`*檔案* 。 編譯器會自動強制包含其本身的 Windows 中繼資料檔 Platform.winmd。|
 |/D "WINAPI_FAMILY=2"|建立可讓您與 Windows 執行階段相容的 Win32 sdk 子集使用的定義。|

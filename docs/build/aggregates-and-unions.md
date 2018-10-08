@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f0ac55dce5d00f8931ee263be0fc5ab8a8a3a08
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: aac6da94a0786e5cdc2eee4d16f5927f66e0a8d5
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710017"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861183"
 ---
 # <a name="aggregates-and-unions"></a>彙總和等位
 
@@ -29,7 +29,7 @@ ms.locfileid: "45710017"
 
    包含已排序的一整組相鄰的資料物件。 每個物件稱為項目。 在陣列中的所有元素都有相同的大小和資料類型。
 
--  結構
+- 結構
 
    包含已排序的一整組資料物件。 不同於陣列的元素，在結構中的資料物件可以有不同的資料類型和大小。 在結構中的每個資料物件稱為 「 成員 」。
 

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36f8233d7d3683a885fc0f38468ad5a7b9b59c57
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6c9b9cb66e64f85ad8800faf11011e351a3f3539
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030764"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861352"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>資料來源：以程式設計方式設定 ODBC 資料來源
 
@@ -85,7 +85,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
 *lpszAttributes*<br/>
 在表單中的屬性清單"keyname = value"。 這些字串是以與兩個連續的 null 結束字元，在清單結尾的 null 結束字元分隔。 這些屬性是主要預設驅動程式專屬的項目，其將會成為新的資料來源的登錄。 此函式的 ODBC API 參考中未提及的一個重要關鍵是"DSN"（「 資料來源名稱 」），這會指定新的資料來源的名稱。 其餘項目是新的資料來源的驅動程式特有的。 通常不需要提供所有的項目，因為驅動程式可以將新值的對話方塊使用者提示。 (設定*hwndParent*為 NULL，會造成這。)您可能想要明確地提供預設值，因此不會提示使用者。  
   
-###### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>若要決定使用 ODBC 管理員的 lpszDriver 參數驅動程式  
+#### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>若要決定使用 ODBC 管理員的 lpszDriver 參數驅動程式  
   
 1. 執行 ODBC 管理員。  
   
@@ -97,23 +97,23 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
 若要尋找的關鍵名稱和值單向*lpszAttributes*參數是要檢查已設定的資料來源 （可能是由 ODBC 管理員已設定） 的 Odbc.ini 檔案。  
   
-###### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>若要尋找 lpszAttributes 參數的關鍵名稱和值  
+#### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>若要尋找 lpszAttributes 參數的關鍵名稱和值  
   
 1. 執行 Windows 登錄編輯程式 （或者，為 16 位元，請開啟 Odbc.ini 檔案）。  
   
 1. 尋找 ODBC 資料來源資訊使用下列其中一項：  
   
-    -   32 位元，尋找 金鑰**HKEY_CURRENT_USER\Software\ODBC\ODBC。Zdroje dat INI\ODBC**的左窗格中。  
+   - 32 位元，尋找 金鑰**HKEY_CURRENT_USER\Software\ODBC\ODBC。Zdroje dat INI\ODBC**的左窗格中。  
   
-         右窗格會列出格式項目: 「 pub: REG_SZ:*<data source name>*"，其中*<data source name>* 是已設定您想要的驅動程式所需的設定與資料來源若要使用。 選取您想，資料來源，例如 SQL Server。 字串後的項目"pub:"都是，順序、 關鍵名稱和值將用於在您*lpszAttributes*參數。  
+      右窗格會列出格式項目: 「 pub: REG_SZ:*<data source name>*"，其中*<data source name>* 是已設定您想要的驅動程式所需的設定與資料來源若要使用。 選取您想，資料來源，例如 SQL Server。 字串後的項目"pub:"都是，順序、 關鍵名稱和值將用於在您*lpszAttributes*參數。  
   
-    -   16 位元，找到一節所標記的 Odbc.ini 檔案中 [*\<資料來源名稱 >*]。  
+   - 16 位元，找到一節所標記的 Odbc.ini 檔案中 [*\<資料來源名稱 >*]。  
   
-         下列這一行的行屬於表單"keyname = value"。 這些都是完全的項目中要用於您*lpszAttributes*參數。  
+      下列這一行的行屬於表單"keyname = value"。 這些都是完全的項目中要用於您*lpszAttributes*參數。  
   
 您也可以檢查您要使用的特定驅動程式的文件。 您可以在驅動程式，您可以執行 ODBC 管理員來存取線上說明中找到有用的資訊。 這些說明檔是通常用來放置在 WINDOWS\SYSTEM 目錄中的 Windows NT、 Windows 3.1 或 Windows 95。  
   
-###### <a name="to-obtain-online-help-for-your-odbc-driver"></a>若要取得 ODBC 驅動程式的線上說明  
+#### <a name="to-obtain-online-help-for-your-odbc-driver"></a>若要取得 ODBC 驅動程式的線上說明  
   
 1. 執行 ODBC 管理員。  
   

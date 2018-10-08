@@ -105,12 +105,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0f8e2c5e3feea1c7607b8303bc42cef5b2f21e0
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: deee159c9da6fce9001d010a1a6b1db9b3b1d666
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601609"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861417"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>編譯器警告 C4800 到 C5999
 
@@ -153,6 +153,7 @@ ms.locfileid: "45601609"
 |編譯器警告 （層級 4） C4842|'offsetof' 套用至使用多重繼承類型的結果不保證編譯器版本之間保持一致|
 |編譯器警告 C4843|'*type1*': 陣列或函式類型參考的例外狀況處理常式無法連線，請使用'*type2*' 改為|
 |編譯器警告 C4844|' 匯出模組*module_name*;' 已宣告模組介面的慣用語的法|
+|[編譯器警告 （層級 4） C4866](c4866.md)| 編譯器不會強制執行呼叫的左到右評估順序*operator_name*|
 |[編譯器警告 （錯誤） C4867](compiler-warning-c4867.md)|'*函式*': 函式呼叫遺漏引數清單，請使用'*呼叫*' 建立成員的指標|
 |[編譯器警告 （層級 4） C4868](compiler-warning-c4868.md)|'_檔案_(*line_number*)' 編譯器可能不會強制執行大括號的初始化清單中的左到右評估順序|
 |編譯器警告 （層級 2） C4872|零編譯呼叫圖表 parallel_for_each 時偵測到浮點除數: '*位置*'|

@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b5e3ef2e5c14ae93d4fcc3b016f4dbc955edbd
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f2d0e6567f8666df4ec170ad7911ef08f5a1d335
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709159"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861625"
 ---
 # <a name="diagnostics-compiler-diagnostic-options"></a>/diagnostics （編譯器診斷選項）
 
@@ -56,9 +56,9 @@ ms.locfileid: "45709159"
 
 1. 開啟您的專案**屬性頁** 對話方塊。
 
-2. 底下**組態屬性**，展開**C/c + +** 資料夾，然後選擇 **一般**屬性頁。
+1. 底下**組態屬性**，展開**C/c + +** 資料夾，然後選擇 **一般**屬性頁。
 
-3. 使用中的下拉式清單控制項**診斷格式**欄位來選取診斷顯示選項。 選擇 **[確定]** 或是**套用**以儲存變更。
+1. 使用中的下拉式清單控制項**診斷格式**欄位來選取診斷顯示選項。 選擇 **[確定]** 或是**套用**以儲存變更。
 
 ## <a name="see-also"></a>另請參閱
 

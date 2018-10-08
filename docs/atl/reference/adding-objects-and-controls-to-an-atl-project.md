@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5cb510bb02f71f71b35191d3ba9c4fee6b7059d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5758dff128cd213442ec3738967ccd78e20e75af
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093957"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861131"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>將物件和控制項新增至 ATL 專案
 
@@ -41,16 +41,16 @@ ms.locfileid: "46093957"
 > [!NOTE]
 > 然後再將 ATL 物件新增至您的專案，您應該檢閱的詳細資訊和需求的相關說明主題中的物件。
 
-### <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>若要加入物件或控制項，使用 ATL 控制項精靈
+## <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>若要加入物件或控制項，使用 ATL 控制項精靈
 
-1. 在 方案總管 中，以滑鼠右鍵按一下專案節點，然後按一下 **新增**從捷徑功能表。 按一下 **加入類別**。
+1. 在 [**方案總管] 中**，以滑鼠右鍵按一下專案節點，然後按一下**新增**從捷徑功能表。 按一下 **加入類別**。
 
    [加入類別](../../ide/add-class-dialog-box.md) 對話方塊隨即出現。
 
-2. 在 [分類] 窗格中選取 [ATL] 資料夾的狀況下，選取要從 [範本] 窗格中插入的物件。 按一下 **開啟**。 在所選物件的程式碼精靈隨即出現。
+1. 具有**ATL**中所選取的資料夾**類別**窗格中，選取要從 插入物件**範本**窗格。 按一下 **開啟**。 在所選物件的程式碼精靈隨即出現。
 
    > [!NOTE]
-   >  如果您想要將 ATL 物件加入至 MFC 專案，您必須加入 ATL 支援加入現有的專案。 您可以依照下列中的指示[將 ATL 支援加入至 MFC 專案](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)。
+   > 如果您想要將 ATL 物件加入至 MFC 專案，您必須加入 ATL 支援加入現有的專案。 您可以依照下列中的指示[將 ATL 支援加入至 MFC 專案](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)。
 
    或者，如果您嘗試加入 MFC 專案中的 ATL 物件，而不需先前新增 ATL 支援時，Visual Studio 會提示您指定是否要讓 ATL 支援加入至專案。 按一下 **是**將 ATL 支援加入至專案，並開啟所選的 ATL 精靈。
 
@@ -62,4 +62,3 @@ ms.locfileid: "46093957"
 [ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [使用 ATL 和 C 執行階段程式碼進行程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)
-

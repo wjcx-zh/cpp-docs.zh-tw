@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb107dcd2bd044ad6fb933869319bb7afd5aab72
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 64ff3069064b981ca1f4dd7b5c2d9a792cac8f26
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46049796"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861869"
 ---
 # <a name="c-runtime-error-r6033"></a>C 執行階段錯誤 R6033
 
 嘗試使用從原生程式碼初始化期間的這個組件的 MSIL 程式碼。 這表示您的應用程式中的 bug。 它很可能是呼叫 MSIL 編譯的結果 (/ clr) 從原生的建構函式，或從 DllMain 的函式。
 
 > [!NOTE]
->  如果您遇到這個錯誤訊息時執行應用程式時，應用程式已關閉發生內部問題。 可能造成此錯誤，應用程式中的 bug 或增益集或延伸模組，它會使用中的 bug。
+> 如果您遇到這個錯誤訊息時執行應用程式時，應用程式已關閉發生內部問題。 可能造成此錯誤，應用程式中的 bug 或增益集或延伸模組，它會使用中的 bug。
 >
->  您可以嘗試進行下列步驟來修正這個錯誤：
+> 您可以嘗試進行下列步驟來修正這個錯誤：
 >
->  -   使用**應用程式和功能**或是**程式和功能**頁面**控制台**修復或重新安裝程式。
-> -   使用**應用程式和功能**或是**程式和功能**頁面**控制台**移除，請修復或重新安裝任何延伸模組或增益集。
-> -   請檢查**Windows Update**中**控制台**軟體更新。
-> -   檢查應用程式的更新版本。 如果問題持續發生，請連絡應用程式廠商。
+> - 使用**應用程式和功能**或是**程式和功能**頁面**控制台**修復或重新安裝程式。
+> - 使用**應用程式和功能**或是**程式和功能**頁面**控制台**移除，請修復或重新安裝任何延伸模組或增益集。
+> - 請檢查**Windows Update**中**控制台**軟體更新。
+> - 檢查應用程式的更新版本。 如果問題持續發生，請連絡應用程式廠商。
 
 **適用於程式設計人員的資訊**
 

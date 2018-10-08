@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2be9b63ddf6e93c6e0db2645634a4f7bd7ecf3b8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d0c8e2294c7aee3634409a01c613d7e31729230a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591657"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861820"
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Win 32 應用程式精靈、應用程式設定
 
@@ -38,7 +38,7 @@ ms.locfileid: "42591657"
 |**主控台應用程式**|建立主控台應用程式 (Console Application)。 以開發主控台程式[主控台函式](https://msdn.microsoft.com/library/ms813137.aspx)，提供在主控台視窗中的字元模式支援。 Visual c + +[執行階段程式庫](../c-runtime-library/c-run-time-library-reference.md)也提供輸出，並從主控台視窗，使用標準 I/O 函式，這類輸入`printf_s()`和`scanf_s()`。 主控台應用程式有沒有圖形化使用者介面。 它會編譯為.exe 檔案，並可當做獨立的應用程式，從命令列來執行。<br /><br /> 您可以新增 MFC 與 ATL 支援新增至主控台應用程式。|
 |**Windows 應用程式**|建立 Win32 程式。 Win32 程式是在 C 或 c + +，來建立圖形化使用者介面中使用 Win32 API 的呼叫中所撰寫的可執行檔應用程式 (EXE)。<br /><br /> 您無法新增 MFC 或 ATL 支援加入至 Windows 應用程式。|
 |**DLL**|建立 Win32 動態連結程式庫 (DLL)。 Win32 DLL 是二進位檔案，C 或 c + +，使用呼叫 Win32 API，而不是 MFC 類別和做為多個應用程式可以同時使用的函式的共用程式庫撰寫的。<br /><br /> 您無法新增 MFC 或 ATL 支援加入至 DLL 的應用程式。 您可以指定由 DLL 匯出的符號。|
-|**靜態程式庫**|建立靜態程式庫。 靜態程式庫是包含物件和其功能與資料，用來建置可執行檔時，連結到您的程式檔案。 本主題說明如何建立初學者檔案和[專案屬性](../ide/property-pages-visual-cpp.md)靜態程式庫。 靜態程式庫檔案提供下列優點：<br /><br /> -如果您正在使用的應用程式呼叫 Win32 API，而不是 MFC 類別非常有用 Win32 靜態程式庫。<br />-無論您的 Windows 應用程式的其餘部分撰寫以 C 或 c + + 連結的程序都是一樣的。<br />-您可以在以 MFC 為基礎的程式或非 MFC 程式連結的靜態程式庫。|
+|**靜態程式庫**|建立靜態程式庫。 靜態程式庫是包含物件和其功能與資料，用來建置可執行檔時，連結到您的程式檔案。 本主題說明如何建立初學者檔案和[專案屬性](../ide/property-pages-visual-cpp.md)靜態程式庫。 靜態程式庫檔案提供下列優點：<br /><br />-如果您正在使用的應用程式呼叫 Win32 API，而不是 MFC 類別非常有用 Win32 靜態程式庫。<br />-無論您的 Windows 應用程式的其餘部分撰寫以 C 或 c + + 連結的程序都是一樣的。<br />-您可以在以 MFC 為基礎的程式或非 MFC 程式連結的靜態程式庫。|
 
 ## <a name="additional-options"></a>其他選項
 

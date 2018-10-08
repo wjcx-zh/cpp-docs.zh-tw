@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f6f287f98b542a3d8eb24f9cc2b5e725e27dceb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 28e4e2ea0118d79e2746db93ba30478ed2563434
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725968"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860533"
 ---
 # <a name="base-base-address"></a>/BASE (基底位址)
 
@@ -78,9 +78,9 @@ link dlltwo.obj /dll /base:@dlls.txt,two
 
 1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
 
-2. 選取 **組態屬性** > **連結器** > **進階**屬性頁。
+1. 選取 **組態屬性** > **連結器** > **進階**屬性頁。
 
-3. 修改**基底位址**屬性。
+1. 修改**基底位址**屬性。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 

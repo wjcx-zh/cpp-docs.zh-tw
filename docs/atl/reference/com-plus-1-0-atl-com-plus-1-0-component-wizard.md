@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 471d6a273bfb4a446dbf5aba1c3b1bb31d988b24
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e167d1a8d6b7faa161edb332f1041659c176b323
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116096"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861781"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, ATL COM+ 1.0 元件精靈
 
@@ -34,7 +34,7 @@ ms.locfileid: "46116096"
    |選項|描述|
    |------------|-----------------|
    |**雙重**|指定物件是否支援雙重介面 (其 vtable 具有自訂介面函式和晚期繫結`IDispatch`方法)。 可讓 COM 用戶端和 Automation 控制器存取的物件。|
-   |**自訂**|指定物件支援自訂介面 （其 vtable 有自訂介面函式）。 自訂介面可以是較快，雙重介面，尤其是跨處理序界限。<br /><br /> -   **Automation 相容**自動化支援加入自訂的介面。 針對屬性化專案，設定**oleautomation**中 coclass 的屬性。|
+   |**自訂**|指定物件支援自訂介面 （其 vtable 有自訂介面函式）。 自訂介面可以是較快，雙重介面，尤其是跨處理序界限。<br /><br /> - **Automation 相容**自動化支援加入自訂的介面。 針對屬性化專案，設定**oleautomation**中 coclass 的屬性。|
 
 - **Queueable**
 

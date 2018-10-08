@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d414df9d5e5f7d930497d42b5ec73d92a65ac3cc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cc7df3233b5605c4b19269571d1afa0f5a6215ae
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116700"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861092"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>實作與 c + + 標準程式庫為基礎的集合
 
@@ -57,15 +57,15 @@ ATL 提供`ICollectionOnSTLImpl`介面，可讓您快速實作您的物件上的
 
 1. 因為自動化用戶端存取，集合介面是通常雙重`_NewEnum`屬性，透過`IDispatch::Invoke`。 不過，自動化用戶端可以存取透過 vtable，其餘的方法，因此最好分配介面是使用雙重介面。
 
-2. 如果雙重介面或 dispinterface 將不會擴充在執行階段 (也就是您將不會提供額外的方法或屬性，透過`IDispatch::Invoke`)，您應該套用**nonextensible**屬性設定為您的定義。 這個屬性可讓自動化用戶端執行完整的程式碼在編譯時期的驗證。 在此情況下，不應該擴充介面。
+1. 如果雙重介面或 dispinterface 將不會擴充在執行階段 (也就是您將不會提供額外的方法或屬性，透過`IDispatch::Invoke`)，您應該套用**nonextensible**屬性設定為您的定義。 這個屬性可讓自動化用戶端執行完整的程式碼在編譯時期的驗證。 在此情況下，不應該擴充介面。
 
-3. 正確的 DISPID 是很重要，如果您想要能夠使用這個屬性的 Automation 用戶端。 （請注意在 DISPID_NEWENUM 是只有一個底線）。
+1. 正確的 DISPID 是很重要，如果您想要能夠使用這個屬性的 Automation 用戶端。 （請注意在 DISPID_NEWENUM 是只有一個底線）。
 
-4. 您可以提供任何值的 DISPID 作為`Item`屬性。 不過，`Item`通常會使用 DISPID_VALUE 讓集合的預設屬性。 這可讓自動化用戶端，而不需要明確地將它命名為參考屬性。
+1. 您可以提供任何值的 DISPID 作為`Item`屬性。 不過，`Item`通常會使用 DISPID_VALUE 讓集合的預設屬性。 這可讓自動化用戶端，而不需要明確地將它命名為參考屬性。
 
-5. 使用傳回值的資料類型`Item`屬性是儲存在集合中，只要 COM 用戶端所關注的項目類型。 此介面會傳回字串，因此您應該使用標準 COM 字串的型別，BSTR。 您可以將資料儲存在不同的格式在內部短時間內，您會看到。
+1. 使用傳回值的資料類型`Item`屬性是儲存在集合中，只要 COM 用戶端所關注的項目類型。 此介面會傳回字串，因此您應該使用標準 COM 字串的型別，BSTR。 您可以將資料儲存在不同的格式在內部短時間內，您會看到。
 
-6. 做為的 DISPID 值`Count`是完全任意的屬性。 沒有任何標準的 DISPID，這個屬性。
+1. 做為的 DISPID 值`Count`是完全任意的屬性。 沒有任何標準的 DISPID，這個屬性。
 
 ##  <a name="vcconstorage_and_exposure_typedefs"></a> 建立儲存體和暴露的 Typedef
 
@@ -114,4 +114,3 @@ ATL 提供`ICollectionOnSTLImpl`介面，可讓您快速實作您的物件上的
 [集合和列舉程式](../atl/atl-collections-and-enumerators.md)<br/>
 [ATLCollections 範例](../visual-cpp-samples.md)<br/>
 [ATL 複製原則類別](../atl/atl-copy-policy-classes.md)
-

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 829afe53d5fde976b7877475cf577b6204be8aed
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1d0aa647f6f94d31f1a06bb09b143554dba51b68
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46051083"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861742"
 ---
 # <a name="overview-of-file-translation"></a>檔案轉譯概觀
 
@@ -32,9 +32,9 @@ C++ 程式 (類似 C 程式) 包含一個或多個檔案。 這些檔案都按�
 
 1. 語彙 Token 化。 此轉譯階段中會執行字元對應和三併詞處理、行接合，以及 Token 化。
 
-2. 前置處理。 這個轉譯階段會在所參考的附屬原始程式檔`#include`指示詞，處理 「 字串化 」 和 「 字元化 」 指示詞，並執行語彙基元的基元帶入和巨集展開 (請參閱 <<c2> [ 前置處理器指示詞](../preprocessor/preprocessor-directives.md)在 *前置處理器參考 》* 如需詳細資訊)。 前置處理階段產生的結果是一個結合起來，定義一個「轉譯單位」的語彙基元序列。
+1. 前置處理。 這個轉譯階段會在所參考的附屬原始程式檔`#include`指示詞，處理 「 字串化 」 和 「 字元化 」 指示詞，並執行語彙基元的基元帶入和巨集展開 (請參閱 <<c2> [ 前置處理器指示詞](../preprocessor/preprocessor-directives.md)在 *前置處理器參考 》* 如需詳細資訊)。 前置處理階段產生的結果是一個結合起來，定義一個「轉譯單位」的語彙基元序列。
 
-     前置處理器指示詞一律開頭數字符號 (**#**) 字元 （也就是該行的第一個非泛空白字元字元必須是數字的符號）。 指定行上只能有一個前置處理器指示詞。 例如: 
+   前置處理器指示詞一律開頭數字符號 (**#**) 字元 （也就是該行的第一個非泛空白字元字元必須是數字的符號）。 指定行上只能有一個前置處理器指示詞。 例如: 
 
     ```cpp
     #include <iostream>  // Include text of iostream in
@@ -43,9 +43,9 @@ C++ 程式 (類似 C 程式) 包含一個或多個檔案。 這些檔案都按�
                          //  text string).
     ```
 
-3. 程式碼產生。 這個轉譯階段會使用前置處理階段中產生的語彙基元來產生物件程式碼。
+1. 程式碼產生。 這個轉譯階段會使用前置處理階段中產生的語彙基元來產生物件程式碼。
 
-     在這個階段中會執行原始程式碼的語法和語意檢查。
+   在這個階段中會執行原始程式碼的語法和語意檢查。
 
 請參閱[轉譯階段](../preprocessor/phases-of-translation.md)中*前置處理器參考 》* 如需詳細資訊。
 

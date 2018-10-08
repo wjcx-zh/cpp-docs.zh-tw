@@ -15,29 +15,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9eb69e05ead437ed5f6c1fe2bb19b07c31daf15
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f9e11db0a9752ae7f88c5b1b21b81f0bb4c8a20f
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760272"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861222"
 ---
 # <a name="creating-an-aggregated-object"></a>建立彙總的物件
 
 彙總委派`IUnknown`呼叫中，提供外部物件的指標`IUnknown`內部物件。
 
-### <a name="to-create-an-aggregated-object"></a>若要建立彙總的物件
+## <a name="to-create-an-aggregated-object"></a>若要建立彙總的物件
 
 1. 新增`IUnknown`指向您的類別物件，並將它初始化為 NULL 的建構函式。
 
-2. 覆寫[跖](../atl/reference/ccomobjectrootex-class.md#finalconstruct)來建立彙總。
+1. 覆寫[跖](../atl/reference/ccomobjectrootex-class.md#finalconstruct)來建立彙總。
 
-3. 使用`IUnknown`指標，在步驟 1 中定義為第二個參數，如[COM_INTERFACE_ENTRY_AGGREGATE](reference/com-interface-entry-macros.md#com_interface_entry_aggregate)巨集。
+1. 使用`IUnknown`指標，在步驟 1 中定義為第二個參數，如[COM_INTERFACE_ENTRY_AGGREGATE](reference/com-interface-entry-macros.md#com_interface_entry_aggregate)巨集。
 
-4. 覆寫[FinalRelease](../atl/reference/ccomobjectrootex-class.md#finalrelease)釋放`IUnknown`指標。
+1. 覆寫[FinalRelease](../atl/reference/ccomobjectrootex-class.md#finalrelease)釋放`IUnknown`指標。
 
 > [!NOTE]
->  如果您使用，並發行期間的彙總物件的介面`FinalConstruct`，您應該加入[DECLARE_PROTECT_FINAL_CONSTRUCT](reference/aggregation-and-class-factory-macros.md#declare_protect_final_construct)類別物件定義的巨集。
+> 如果您使用，並發行期間的彙總物件的介面`FinalConstruct`，您應該加入[DECLARE_PROTECT_FINAL_CONSTRUCT](reference/aggregation-and-class-factory-macros.md#declare_protect_final_construct)類別物件定義的巨集。
 
 ## <a name="see-also"></a>另請參閱
 

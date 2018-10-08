@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e95ad940aac14892ac14e8d56ba64f49d0bbf7c0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 66cbf25324b71c3fd28bdd344c7a217348cdb5d9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423828"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861612"
 ---
 # <a name="12-definition-of-terms"></a>1.2 詞彙定義
 
@@ -43,7 +43,7 @@ ms.locfileid: "46423828"
 
    陳述式內含語彙*結構化的區塊*。
 
--  主要執行緒
+- 主要執行緒
 
    建立小組的執行緒時*平行區域*輸入。
 
@@ -75,7 +75,7 @@ ms.locfileid: "46423828"
 
    結構化的區塊是具有單一項目和單一結束陳述式 （單一或複合）。 沒有陳述式是結構化的區塊，如果沒有跳入或移出該陳述式 (包括呼叫**longjmp**(3 C) 或使用**擲回**，但呼叫**結束**允許)。 複合陳述式是結構化的區塊，如果其執行一定開始於開頭 **{** 一律結束結尾 **}**。 運算式陳述式、 選取範圍陳述式、 反覆項目陳述式，或是**嘗試**區塊是結構化的區塊，如果對應的複合陳述式取得住在 **{** 和 **}** 會結構化的區塊。 跳躍陳述式，加上標籤的陳述式或宣告陳述式不是結構化的區塊。
 
--  小組
+- 小組
 
    一或多個執行緒執行中的一種建構合作。
 

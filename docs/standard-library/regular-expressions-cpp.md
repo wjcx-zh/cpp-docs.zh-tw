@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86c64ff0eda298ba330f3f1e1ff6d953fd859234
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: ca3d636b1dffdb3237fb94fade41c90057543b9d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209015"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861560"
 ---
 # <a name="regular-expressions-c"></a>規則運算式 (C++)
 
@@ -58,17 +58,17 @@ C + + 標準程式庫支援多個規則運算式文法。 使用規則運算式�
 
 - 格式為 "[`expr`]" 的「括號運算式」，其符合目標序列中且在運算式 `expr` 所定義集合中的字元或定序項目，或者，若格式為 "[^`expr`]"，則符合目標序列中但不在運算式 `expr` 所定義集合中的字元或定序項目。
 
-     `expr` 運算式可能包含下列項目的任何組合：
+   `expr` 運算式可能包含下列項目的任何組合：
 
-    -   個別字元。 會將該字元加入到 `expr` 定義的這個集合。
+   - 個別字元。 會將該字元加入到 `expr` 定義的這個集合。
 
-    -   格式為 "`ch1`-`ch2`" 的「字元範圍」。 會將封閉範圍 [`ch1`, `ch2`] 中的值所代表的字元加入到 `expr` 定義的這個集合。
+   - 格式為 "`ch1`-`ch2`" 的「字元範圍」。 會將封閉範圍 [`ch1`, `ch2`] 中的值所代表的字元加入到 `expr` 定義的這個集合。
 
-    -   格式為 "[:`name`:]" 的「字元類別」。 會將具名類別的字元加入至 `expr` 定義的這個集合。
+   - 格式為 "[:`name`:]" 的「字元類別」。 會將具名類別的字元加入至 `expr` 定義的這個集合。
 
-    -   格式為 "[=`elt`=]" 的「等價類別」(Equivalence Class)。 會將相當於 `elt` 的定序項目加入至 `expr` 定義的這個集合。
+   - 格式為 "[=`elt`=]" 的「等價類別」(Equivalence Class)。 會將相當於 `elt` 的定序項目加入至 `expr` 定義的這個集合。
 
-    -   格式為 "[.`elt`.]" 的「定序符號」。 會將定序項目 `elt` 加入到 `expr` 定義的這個集合。
+   - 格式為 "[.`elt`.]" 的「定序符號」。 會將定序項目 `elt` 加入到 `expr` 定義的這個集合。
 
 - 「錨點」。 錨點 '^' 符合目標序列開頭，錨點 '$' 符合目標序列結尾。
 
@@ -403,11 +403,11 @@ DSW 逸出字元是字元類別的簡短名稱，如下表所示。
 
 在 `ECMAScript` 中，下列字元有特殊意義：
 
-- ^  $  \  .  \*  +  ?  (  )  [  ]  {  }  &#124;
+- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }&#124;
 
 在 `basic` 和 `grep` 中，下列字元有特殊意義：
 
-- 。   [   \
+- 。   \[   \
 
 此外，在 `basic` 和 `grep`，下列字元於特定內容中使用時有特殊意義：
 
@@ -419,7 +419,7 @@ DSW 逸出字元是字元類別的簡短名稱，如下表所示。
 
 在 `extended`、`egrep` 和 `awk` 中，下列字元有特殊意義：
 
-- 。   [   \   (   \*   +   ?   {   &#124;
+- 。   \[   \   (   \*   +   ?   {   &#124;
 
 此外，在 `extended`、`egrep` 和 `awk`，下列字元於特定內容中使用時有特殊意義。
 

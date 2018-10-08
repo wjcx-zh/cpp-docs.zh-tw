@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0deafa72a427543c0d885401a1d4192d61a6db65
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 42a5aed9f823b5d2c5425c4d7baae129c08e76e7
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069036"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860923"
 ---
 # <a name="c-runtime-error-r6009"></a>C 執行階段錯誤 R6009
 
 針對環境空間不足
 
 > [!NOTE]
->  如果您遇到這個錯誤訊息時執行應用程式時，應用程式已關閉因為它有內部記憶體問題。 有幾個可能的原因，這個錯誤，但通常極低的記憶體不足，太多記憶體，由環境變數或在程式中的 bug 所造成。
+> 如果您遇到這個錯誤訊息時執行應用程式時，應用程式已關閉因為它有內部記憶體問題。 有幾個可能的原因，這個錯誤，但通常極低的記憶體不足，太多記憶體，由環境變數或在程式中的 bug 所造成。
 >
->  您可以嘗試進行下列步驟來修正這個錯誤：
+> 您可以嘗試進行下列步驟來修正這個錯誤：
 >
->  -   關閉其他正在執行的應用程式或重新啟動電腦以釋出記憶體。
-> -   使用**應用程式和功能**或是**程式和功能**頁面**控制台**修復或重新安裝程式。
-> -   請檢查**Windows Update**中**控制台**軟體更新。
-> -   檢查應用程式的更新版本。 如果問題持續發生，請連絡應用程式廠商。
+> - 關閉其他正在執行的應用程式或重新啟動電腦以釋出記憶體。
+> - 使用**應用程式和功能**或是**程式和功能**頁面**控制台**修復或重新安裝程式。
+> - 請檢查**Windows Update**中**控制台**軟體更新。
+> - 檢查應用程式的更新版本。 如果問題持續發生，請連絡應用程式廠商。
 
 **適用於程式設計人員的資訊**
 

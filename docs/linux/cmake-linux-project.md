@@ -15,12 +15,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 88f5ef5379d597a81456dab7f3dd28a73a4df84b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82134d48853896ccb70c2620cd70c803fcc74bc8
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394916"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821045"
 ---
 # <a name="configure-a-linux-cmake-project"></a>設定 Linux CMake 專案
 
@@ -72,7 +72,7 @@ add_executable(hello-cmake hello.cpp)
 
 若要在遠端系統上偵錯您的程式碼，請設定中斷點、在專案設定旁的工具列功能表中選取 CMake 目標作為啟動項目，然後選擇工具列上的 [&#x23f5; 開始] 或按 F5。
 
-若要自訂您程式的命令列引數，請在 [方案總管] 中以滑鼠右鍵按一下該可執行檔，然後選取 [偵錯並啟動設定]。 這會開啟或建立包含您應用程式資訊的 launch.vs.json 設定檔。 若要指定其他引數，請新增在 `args` JSON 陣列中。 如需詳細資訊，請參閱 [Visual C++ 中的「開啟資料夾」專案](https://docs.microsoft.com/en-us/cpp/ide/non-msbuild-projects)。
+若要自訂您程式的命令列引數，請在 [方案總管] 中以滑鼠右鍵按一下該可執行檔，然後選取 [偵錯並啟動設定]。 這會開啟或建立包含您應用程式資訊的 launch.vs.json 設定檔。 若要指定其他引數，請新增在 `args` JSON 陣列中。 如需詳細資訊，請參閱 [Visual C++ 中的「開啟資料夾」專案](../ide/non-msbuild-projects.md)。
 
 ## <a name="configure-cmake-settings-for-linux"></a>設定適用於 Linux 的 CMake 設定
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85439e191ac8676603c9d7fab8a41bb126e97b9e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4420bdac9e788f80142546d8b09781a8aa3ce06d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398660"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821383"
 ---
 # <a name="working-with-project-properties"></a>使用專案屬性
 
@@ -250,7 +250,7 @@ Visual C++ 編譯器 (cl.exe) 會辨識某些環境變數，特別是 LIB、LIBP
 
 ## <a name="modifying-properties-and-targets-without-changing-the-project-file"></a>修改屬性和目標而不變更專案檔
 
-您可以從 MSBuild 命令提示字元覆寫專案屬性和目標，而不需變更專案檔。 當您想要暫時或偶爾套用某些屬性時，這非常有用。 它會假設需要一些 MSBuild 知識。 如需詳細資訊，請參閱 [MSBUild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild)。
+您可以從 MSBuild 命令提示字元覆寫專案屬性和目標，而不需變更專案檔。 當您想要暫時或偶爾套用某些屬性時，這非常有用。 它會假設需要一些 MSBuild 知識。 如需詳細資訊，請參閱 [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild)。
 
 > [!IMPORTANT]
 > 您可以使用 Visual Studio 的 XML 編輯器或任何文字編輯器來建立 .props 或 .targets 檔案。 請勿使用此案例中的 [屬性管理員]，因為它會將屬性新增至專案檔。

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e318687dfa3cc8e841643e5caf6fe1fbcc00d051
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 953473102a42792dc3ae3afa3b1a8caf507e5648
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080762"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861495"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>優先順序和評估順序
 
@@ -53,7 +53,7 @@ C 運算子的優先順序和順序關聯性會影響運算式中運算元的群
 
 1. 運算子是依遞減的優先順序列出。 如果多個運算子出現在同一行或某個群組中，表示它們具有相同的優先順序。
 
-2. 所有簡單和複合指派運算子都具有相同的優先順序。
+1. 所有簡單和複合指派運算子都具有相同的優先順序。
 
 運算式可以包含數個具有相同優先順序的運算子。 若有數個這類運算子出現在運算式中的相同層級上，則會根據運算子的順序關聯性由右至左或由左至右求值。 求值的方向不會影響相同層級上包含多個乘法 (<strong>\*</strong>)、加法 (**+**) 或二進位位元 (**&**、**&#124;** 或 **^**) 運算子的運算式結果。 運算的順序不是由語言所定義。 如果編譯器能夠保證結果一致，則可以依任意順序求出這類運算式的值。
 

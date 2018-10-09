@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 172ead8aa67f042512a73b8c0d1ecdaa0723c5d1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1e74ed975cce0ac3a87716d9f7ad00da2d75d509
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676541"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820670"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ 說明和社群
 
@@ -34,7 +34,7 @@ ms.locfileid: "43676541"
 |標題|描述|
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|包含有關 Visual C++ 的參考及概念文件。 MSDN Library 的一部分。|
-|[Windows 開發人員中心](https://developer.microsoft.com/en-us/windows/)|包含如何使用 C++ 和其他語言開發 Windows 8 應用程式的資訊。 Windows 開發人員中心的一部分，C++ 內容位於 [文件] > [語言參考] 節點下。|
+|[Windows 開發人員中心](https://developer.microsoft.com/windows/)|包含如何使用 C++ 和其他語言開發 Windows 8 應用程式的資訊。 Windows 開發人員中心的一部分，C++ 內容位於 [文件] > [語言參考] 節點下。|
 
 ### <a name="online-and-offline-documentation"></a>線上和離線文件
 

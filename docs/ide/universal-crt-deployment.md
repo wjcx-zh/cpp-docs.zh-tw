@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20006118d4bf27c379b78b84dc8807a4fd6c5e6c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: b7fe21753dc4310752c1081d17ddff942bcbd89f
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34256269"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820993"
 ---
 # <a name="universal-crt-deployment"></a>通用 CRT 部署
 
@@ -29,7 +29,7 @@ ms.locfileid: "34256269"
 
 ## <a name="central-deployment"></a>集中部署
 
-集中安裝通用 CRT 的慣用方法是使用 Microsoft Windows Update。 通用 CRT 是所有支援的 Microsoft Windows 作業系統的建議更新 ；因此根據預設，大部分的電腦都會在定期更新程序期間安裝它。 通用 CRT 的初始版本是 [KB2999226](https://support.microsoft.com/en-us/kb/2999226)；在 [KB3118401](https://support.microsoft.com/en-us/kb/3118401) 進行了包含各種 Bug 修正的後續更新，而且還有包含其他 Bug 修正和新功能的其他更新。 如需較新的更新，請在 [support.microsoft.com](https://support.microsoft.com) 中搜尋通用 C 執行階段或通用 CRT。
+集中安裝通用 CRT 的慣用方法是使用 Microsoft Windows Update。 通用 CRT 是所有支援的 Microsoft Windows 作業系統的建議更新 ；因此根據預設，大部分的電腦都會在定期更新程序期間安裝它。 通用 CRT 的初始版本是 [KB2999226](https://support.microsoft.com/kb/2999226)；在 [KB3118401](https://support.microsoft.com/kb/3118401) 進行了包含各種 Bug 修正的後續更新，而且還有包含其他 Bug 修正和新功能的其他更新。 如需較新的更新，請在 [support.microsoft.com](https://support.microsoft.com) 中搜尋通用 C 執行階段或通用 CRT。
 
 並非所有的 Microsoft Windows 電腦都會使用 Windows Update 定期安裝更新，而且某些電腦可能不會安裝所有建議的更新。 為了支援使用透過 Visual Studio 2015 和更新版本的 C++ 工具組在這些機器上所建置的應用程式，有適用於離線散發的通用 CRT 可轉散發套件。 這些可轉散發套件可以從上述其中一個 KB 連結下載。 請注意，通用 CRT 可轉散發套件需要電腦已更新為最新的 Service Pack。 因此，比方說，Windows 7 的可轉散發套件只能安裝到 Windows 7 SP1，而不是 Windows 7 RTM。
 

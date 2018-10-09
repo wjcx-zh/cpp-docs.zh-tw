@@ -14,12 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 043ad3a0767cc6769be1d20fe6e6d31cc5c119fb
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: ed44479f6e6d1569a9b27a059e837cbbb924b803
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42583909"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821415"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：適用於 Windows、Linux 和 MacOS 的 C++ 套件管理員
 
@@ -138,7 +138,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 ## <a name="target-linux-from-windows-via-wsl"></a>透過 WSL 從 Windows 將 Linux 設為目標
 
-您可以透過適用於 Linux 的 Windows 子系統 (WSL) 從 Windows 電腦產生 Linux 二進位檔。 請遵循指示[在 Windows 10 上安裝 WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10)，並使用[適用於 Linux 的 Visual Studio 延伸模組](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/)進行設定。 您可以將 Windows 及 Linux 這兩者的所有建置程式庫放入相同的資料夾，並同時從 Windows 和 WSL 進行存取。
+您可以透過適用於 Linux 的 Windows 子系統 (WSL) 從 Windows 電腦產生 Linux 二進位檔。 請遵循指示[在 Windows 10 上安裝 WSL](/windows/wsl/install-win10)，並使用[適用於 Linux 的 Visual Studio 延伸模組](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/)進行設定。 您可以將 Windows 及 Linux 這兩者的所有建置程式庫放入相同的資料夾，並同時從 Windows 和 WSL 進行存取。
 
 
 ## <a name="export_binaries_per_project"></a> 匯出編譯的二進位檔和標頭
@@ -243,4 +243,3 @@ vcpkg 執行個體的內容如下：
 |---------|---------|
 |**--triplet \<t>**|指定目標架構 triplet。 (預設：`%VCPKG_DEFAULT_TRIPLET%`，另請參閱 **vcpkg help triplet**)|
 |**--vcpkg-root \<path>**|指定 vcpkg 根目錄 (預設：`%VCPKG_ROOT%`)|
-

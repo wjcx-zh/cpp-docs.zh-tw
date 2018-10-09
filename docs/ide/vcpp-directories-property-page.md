@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 238f26e8955d4be676c3bf37f7cc8b2d842b3de9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82aaa2dc43177963b9b38c398e74aaa0ffff11dd
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394434"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821214"
 ---
 # <a name="vc-directories-property-page-windows"></a>VC++ 目錄屬性頁 (Windows)
 
@@ -76,11 +76,13 @@ VC++ 目錄屬性會套用至專案，而不是最上層方案節點。 如果�
 
 如需巨集以及為何應該盡可能使用巨集而非硬式編碼路徑的詳細資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros)。
 
-如需常用巨集清單，請參閱[建置命令和屬性的一般巨集](https://docs.microsoft.com/en-us/cpp/ide/common-macros-for-build-commands-and-properties)。
+如需常用巨集清單，請參閱[建置命令和屬性的一般巨集](https://docs.microsoft.com/cpp/ide/common-macros-for-build-commands-and-properties)。
 
 您可以透過兩種方式來定義自己的巨集：
--   在開發人員命令提示字元中設定環境變數。 所有環境變數會視為 MSBuild 屬性/巨集。
--   在 .props 檔案中定義使用者巨集。 如需詳細資訊，請參閱[屬性頁巨集](working-with-project-properties.md#bkmkPropertiesVersusMacros)。
+
+- 在開發人員命令提示字元中設定環境變數。 所有環境變數會視為 MSBuild 屬性/巨集。
+
+- 在 .props 檔案中定義使用者巨集。 如需詳細資訊，請參閱[屬性頁巨集](working-with-project-properties.md#bkmkPropertiesVersusMacros)。
 
 如需詳細資訊，請參閱下列部落格文章：[VC++ Directories](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx) (VC++ 目錄)、[Inherited Properties and Property Sheets](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx) (繼承的屬性和屬性工作表) 和 [Visual Studio 2010 C++ Project Upgrade Guide](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx) (Visual Studio 2010 C++ 專案升級指南)。
 

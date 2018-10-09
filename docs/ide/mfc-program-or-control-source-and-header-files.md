@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cb9518f60db98bd590cecdffa09ee7d814241ac
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7ec05f200d81a9753563a654257d9df3dd50a19f
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447904"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861105"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>MFC 程式或控制項原始程式檔和標頭檔
 
@@ -36,7 +36,7 @@ ms.locfileid: "46447904"
 |Dlgproxy.cpp、Dlgproxy.h|在對話方塊架構程式中，為主要對話方塊之專案的自動化 Proxy 類別的實作和標頭檔。 只有在您已選擇自動化支援時，才會使用此項目。|
 |*Projname*doc.cpp、*Projname*doc.h|衍生和實作名為 `CProjnameDoc` 的文件類別，並包含基本結構成員函式來初始化文件、序列化 (儲存和載入) 文件，以及實作偵錯診斷。|
 |*Projname*set.h/.cpp|當您建立支援資料庫且包含資料錄集類別的程式時建立。|
-|*Projname*view.cpp、*Projname*view.h|衍生和實作名為 `CProjnameView` 的檢視類別，用來顯示和列印文件資料。 `CProjnameView` 類別衍生自下列其中一個 MFC 類別：<br /><br /> -   [CEditView](../mfc/reference/ceditview-class.md)<br />-   [CFormView](../mfc/reference/cformview-class.md)<br />-   [CRecordView](../mfc/reference/crecordview-class.md)<br />-   [COleDBRecordView](../mfc/reference/coledbrecordview-class.md)<br />-   [CTreeView](../mfc/reference/ctreeview-class.md)<br />-   [CListView](../mfc/reference/clistview-class.md)<br />-   [CRichEditView](../mfc/reference/cricheditview-class.md)<br />-   [CScrollView](../mfc/reference/cscrollview-class.md)<br />-   [CView](../mfc/reference/cview-class.md)<br />-   [CHTMLView](../mfc/reference/chtmlview-class.md)<br />-   [CHTMLEditView](../mfc/reference/chtmleditview-class.md)<br /><br /> 專案的檢視類別包含要繪製檢視並實作偵錯診斷的基本結構成員函式。 如果您已啟用列印支援，則會針對列印、列印設定以及列印預覽命令訊息新增訊息對應項目。 這些項目會在基底檢視類別中呼叫對應的成員函式。|
+|*Projname*view.cpp、*Projname*view.h|衍生和實作名為 `CProjnameView` 的檢視類別，用來顯示和列印文件資料。 `CProjnameView` 類別衍生自下列其中一個 MFC 類別：<br /><br />- [CEditView](../mfc/reference/ceditview-class.md)<br />- [CFormView](../mfc/reference/cformview-class.md)<br />- [CRecordView](../mfc/reference/crecordview-class.md)<br />- [COleDBRecordView](../mfc/reference/coledbrecordview-class.md)<br />- [CTreeView](../mfc/reference/ctreeview-class.md)<br />- [CListView](../mfc/reference/clistview-class.md)<br />- [CRichEditView](../mfc/reference/cricheditview-class.md)<br />- [CScrollView](../mfc/reference/cscrollview-class.md)<br />- [CView](../mfc/reference/cview-class.md)<br />- [CHTMLView](../mfc/reference/chtmlview-class.md)<br />- [CHTMLEditView](../mfc/reference/chtmleditview-class.md)<br /><br /> 專案的檢視類別包含要繪製檢視並實作偵錯診斷的基本結構成員函式。 如果您已啟用列印支援，則會針對列印、列印設定以及列印預覽命令訊息新增訊息對應項目。 這些項目會在基底檢視類別中呼叫對應的成員函式。|
 |*Projname*PropPage.h、*Projname*PropPage.cpp|宣告和實作 `CProjnamePropPage` 類別。 `CProjnamePropPage` 衍生自 `COlePropertyPage`，而且提供基本結構成員函式 `DoDataExchange` 來實作資料交換和驗證。|
 |IPframe.cpp、IPframe.h|當在應用程式精靈的 [自動化選項] 頁面 (步驟 6 之 3) 中選取 [迷你伺服器] 或 [完整伺服器] 選項時建立。 這些檔案會衍生和實作名為 **CInPlaceFrame** 的就地框架視窗類別，容器程式就地啟用伺服器時會使用此類別。|
 |Mainfrm.cpp、Mainfrm.h|從 [CFrameWnd](../mfc/reference/cframewnd-class.md) (適用於 SDI 應用程式) 或 [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) (適用於 MDI 應用程式) 衍生 **CMainFrame** 類別。 如果在應用程式精靈的 [應用程式選項] 頁面 (步驟 6 之 4) 中選取對應的選項，**CMainFrame** 類別就會負責建立工具列按鈕和狀態列。 如需使用 **CMainFrame** 的資訊，請參閱[應用程式精靈所建立的框架視窗類別](../mfc/frame-window-classes-created-by-the-application-wizard.md)。|

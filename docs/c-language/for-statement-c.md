@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f0090195506e26cab165e3ddadca0342c0b35b6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a6ad4b23e6caef15b5dabaaa3102d72e3ff84fbc
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46084051"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860585"
 ---
 # <a name="for-statement-c"></a>for 陳述式 (C)
 
@@ -34,7 +34,7 @@ ms.locfileid: "46084051"
 
 1. 會對 *init-expression* 進行評估 (如果有的話)。 這會指定迴圈的初始化。 *init-expression* 的類型沒有限制。
 
-2. 會對 *cond-expression* 進行評估 (如果有的話)。 此運算式必須是算術或指標類型。 在每個反覆項目之前進行評估。 有三個可能的結果：
+1. 會對 *cond-expression* 進行評估 (如果有的話)。 此運算式必須是算術或指標類型。 在每個反覆項目之前進行評估。 有三個可能的結果：
 
    - 如果 *cond-expression* 為 **true** (非零值)，則會執行 *statement*，接著執行 *loop-expression* (如果有的話)。 在每次反覆運算之後，都會評估 *loop-expression*。 其類型沒有限制。 副作用將會依順序執行。 接著會從 *cond-expression* 的評估重新開始此程序。
 

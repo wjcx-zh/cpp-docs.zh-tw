@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985ff4eb96b904dc9c5b4377b336109b00e06b40
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ba4cb1411bca452de0f146626421315fa7dc177e
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716584"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48859857"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (指定中繼資料目錄)
 
@@ -49,9 +49,9 @@ ms.locfileid: "45716584"
 
 1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
 
-2. 選取 **組態屬性** > **C/c + +** > **一般**屬性頁。
+1. 選取 **組態屬性** > **C/c + +** > **一般**屬性頁。
 
-3. 修改**其他 #using 目錄**屬性。
+1. 修改**其他 #using 目錄**屬性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 

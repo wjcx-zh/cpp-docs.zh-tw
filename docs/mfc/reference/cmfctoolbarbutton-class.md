@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58bc8b4e8e857ff78a8231112d7478b23c168381
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 08f4c2e5497994cfcd7bf4aa4a0976f7dd3e0a3f
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387444"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861664"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton 類別
 
@@ -435,7 +435,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ### <a name="parameters"></a>參數
 
 *src*<br/>
-[in]要從中複製來源] 按鈕參考。
+[in]要從中複製來源按鈕參考。
 
 ### <a name="remarks"></a>備註
 
@@ -1349,7 +1349,7 @@ virtual int OnDrawOnCustomizeList(
 [in]按鈕的週框。
 
 *bSelected*<br/>
-[in]指定是否已選取] 按鈕。 如果此參數為 TRUE 時，會選取 [] 按鈕。 如果此參數為 FALSE，未選取 按鈕。
+[in]指定是否已選取按鈕。 如果此參數為 TRUE 時，會選取 [] 按鈕。 如果此參數為 FALSE，未選取 按鈕。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1734,7 +1734,7 @@ void SetVisible(BOOL bShow=TRUE);
 ### <a name="parameters"></a>參數
 
 *bShow*<br/>
-[in]布林值，指定是否要顯示或隱藏] 按鈕。 如果此參數為 TRUE 時，會顯示 [] 按鈕。 如果參數為 FALSE，則會隱藏按鈕。
+[in]布林值，指定是否要顯示或隱藏按鈕。 如果此參數為 TRUE 時，會顯示 [] 按鈕。 如果參數為 FALSE，則會隱藏按鈕。
 
 ### <a name="remarks"></a>備註
 
@@ -1751,7 +1751,7 @@ void Show(BOOL bShow);
 ### <a name="parameters"></a>參數
 
 *bShow*<br/>
-[in]布林值，指定是否要顯示或隱藏] 按鈕。 如果此參數為 TRUE 時，會顯示 [] 按鈕。 如果參數為 FALSE，則會隱藏按鈕。
+[in]布林值，指定是否要顯示或隱藏按鈕。 如果此參數為 TRUE 時，會顯示 [] 按鈕。 如果參數為 FALSE，則會隱藏按鈕。
 
 ### <a name="remarks"></a>備註
 

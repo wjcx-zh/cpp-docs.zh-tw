@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c01336094077cc1f451f2e7b479ca4acf9fb77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 412d9150836511c88b85326d2ce59181a0566c57
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441352"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890591"
 ---
 # <a name="cwinthread-class"></a>CWinThread 類別
 
@@ -455,7 +455,7 @@ BOOL PostThreadMessage(
 已發佈的訊息是由訊息對應巨集 ON_THREAD_MESSAGE 對應至適當的訊息處理常式。
 
 > [!NOTE]
->  當呼叫 Windows [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946)內 MFC 應用程式時，MFC 訊息處理常式不會呼叫的函式。 如需詳細資訊，請參閱 「 知識庫 」 文件 」 PRB:: MFC 訊息處理常式不呼叫與 PostThreadMessage() 」 (Q142415)。
+> 當您呼叫[PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946)，訊息會放在執行緒之訊息佇列。 不過，因為張貼這種方式的訊息不是與視窗相關聯的 MFC 就不發送到訊息或命令處理常式。 為了處理這些訊息，覆寫`PreTranslateMessage()`函式的程式 CWinApp 衍生類別，並以手動方式處理的訊息。
 
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage
 

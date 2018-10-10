@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e56ab939cd6b3cfcb0601eaec1e450835069705f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 549669841a4b10468679795ca045f5626f5e9101
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389531"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890669"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd 類別
 
@@ -181,11 +181,7 @@ A`CSplitterWnd`物件通常內嵌在父代[CFrameWnd](../../mfc/reference/cframe
 
 當您建立分隔器視窗時，您會建立這些特殊的捲軸。 比方說，`CSplitterWnd`具有一個資料列、 兩個資料行，且 WS_VSCROLL 樣式會顯示垂直捲軸所共用的兩個窗格。 當使用者移動捲軸時，WM_VSCROLL 訊息會傳送至這兩個窗格。 當窗格設定捲軸位置時，會設定共用的捲軸。
 
-如需分隔視窗的詳細資訊，請參閱：
-
-- [技術提示 29](../../mfc/tn029-splitter-windows.md)
-
-- 眭妎踱恅 Q262024： 如何： 使用 CPropertySheet 為 CSplitterWnd 子系
+如需分隔視窗的詳細資訊，請參閱[技術的附註 29](../../mfc/tn029-splitter-windows.md)。
 
 如需有關如何建立動態分隔視窗的詳細資訊，請參閱：
 

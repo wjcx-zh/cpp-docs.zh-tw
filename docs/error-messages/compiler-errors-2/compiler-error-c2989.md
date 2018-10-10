@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df67a24fa9bae63bbaf1bba344aa7f684ec91123
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 79da071b592a31ea3fe7ca486a7e02abc770f08e
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081906"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890084"
 ---
 # <a name="compiler-error-c2989"></a>編譯器錯誤 C2989
 
@@ -29,11 +29,9 @@ ms.locfileid: "46081906"
 
 泛型類別或範本來重新定義非泛型或非樣板類別。 請檢查衝突的標頭檔。
 
-如果您使用的類別樣板的部分特製化，請參閱知識庫文件 Q240866。
-
 下列範例會產生 C2989:
 
-```
+```cpp
 // C2989.cpp
 // compile with: /c
 class C{};
@@ -45,7 +43,7 @@ class C2{};
 
 使用泛型時，也會發生 C2989:
 
-```
+```cpp
 // C2989b.cpp
 // compile with: /clr /c
 ref class GC1;

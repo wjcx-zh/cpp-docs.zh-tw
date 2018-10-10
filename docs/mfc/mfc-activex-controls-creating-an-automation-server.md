@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fa8370bb02e71c457f7967d5cb6b508e743333e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: abc9af657e790fcedf949719776581b5c1877e89
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373931"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889983"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC ActiveX 控制項：建立 Automation 伺服程式
 
@@ -33,7 +33,7 @@ ms.locfileid: "46373931"
 
 1. [將方法加入](../mfc/mfc-activex-controls-methods.md)。
 
-1. 覆寫[IsInvokeAllowed](../mfc/reference/colecontrol-class.md#isinvokeallowed)。 如需詳細資訊，請參閱知識庫文章 Q146120。
+1. 覆寫[IsInvokeAllowed](../mfc/reference/colecontrol-class.md#isinvokeallowed)。
 
 1. 建置控制項。
 

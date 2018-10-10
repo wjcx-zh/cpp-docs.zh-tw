@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a72cba53ebe9a286ac2e7cbbf2c41b78f4e4e08
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0456845152fb2879d2f58c9c40af2562c7207535
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46100758"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890240"
 ---
 # <a name="resource-compiler-fatal-error-rc1015"></a>資源編譯器嚴重錯誤 RC1015
 
@@ -32,5 +32,3 @@ ms.locfileid: "46100758"
 請確定環境設定有效，而且指定的檔案路徑正確。 請確定足夠的檔案控制代碼可用於資源編譯器。 如果檔案位於網路磁碟機，請確定您有開啟檔案的權限。
 
 即使 Include 檔存在於指定的其他 Include 目錄中 ([組態屬性] -> [資源] -> [一般] 屬性頁)，也可能發生 RC1015；請指定 Include 檔的完整路徑。
-
-如需詳細資訊，請參閱知識庫文章 Q326987: RC1015 錯誤時使用資源檢視的 Include 路徑是否太長。

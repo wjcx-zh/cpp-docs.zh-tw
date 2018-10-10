@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 575ba3786e6639e5d6801ec9555c4a85f9732b20
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 13b71838bb4db152fb76fa1115a426e2711422ea
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415729"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890578"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 類別
 
@@ -223,7 +223,7 @@ void EnableTypeLib();
 
 ### <a name="remarks"></a>備註
 
-建構函式中呼叫此成員函式程式`CCmdTarget`-衍生物件，如果它會提供類型資訊。 如需詳細資訊，請參閱知識庫文章 Q185720，「 如何： 從 MFC Automation 伺服器提供類型資訊。 」 知識庫文件位於[ http://support.microsoft.com ](http://support.microsoft.com/)。
+建構函式中呼叫此成員函式程式`CCmdTarget`-衍生物件，如果它會提供類型資訊。
 
 ##  <a name="endwaitcursor"></a>  CCmdTarget::EndWaitCursor
 
@@ -303,8 +303,6 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="remarks"></a>備註
 
 在衍生的類別應該覆寫此成員函式 (如果未覆寫，`GetDispatchIID`會傳回 FALSE)。 請參閱[COleControl](../../mfc/reference/colecontrol-class.md)。
-
-如需詳細資訊，請參閱知識庫文章 Q185720，「 如何： 從 MFC Automation 伺服器提供類型資訊。 」 知識庫文件位於[ http://support.microsoft.com ](http://support.microsoft.com/)。
 
 ##  <a name="getidispatch"></a>  CCmdTarget::GetIDispatch
 

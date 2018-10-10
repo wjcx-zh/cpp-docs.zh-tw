@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcd7e0a1b2786a92d7a0e64b85417ddb82c82871
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7fd8738c0dec9771a94ba94aefdcaf2af87fdb09
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437790"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890540"
 ---
 # <a name="toolbars"></a>工具列
 
@@ -38,10 +38,7 @@ ms.locfileid: "46437790"
 
 - [範例](../mfc/toolbar-sample-list.md)
 
-如需 MFC 工具列的詳細資訊，請參閱文件 Q232017，"如何:: 新增文字至工具列按鈕，「 Microsoft 知識庫中在 http://support.microsoft.com 。
-
 ## <a name="see-also"></a>另請參閱
 
 [使用者介面項目](../mfc/user-interface-elements-mfc.md)<br/>
 [工具列編輯器](../windows/toolbar-editor.md)
-

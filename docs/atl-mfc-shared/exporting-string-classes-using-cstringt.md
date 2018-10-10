@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5355b6e81354ef04b7cc4d2c3495289c9d1d029d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f2d77516ae53b0ee1c4f39e4d8f095848aa00acc
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444199"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889967"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>使用 CStringT 匯出字串類別
 
@@ -29,7 +29,7 @@ ms.locfileid: "46444199"
 
 - 與新`CStringT`樣板類別，您可以自訂`CString`使用指定的字元特性，類似於 c + + 標準程式庫中範本的範本參數的行為。
 
-- 當您將自己的字串類別匯出從 DLL，使用`CStringT`，編譯器也會自動匯出`CString`基底類別。 由於`CString`本身是樣板類別，它可能會具現化編譯器使用時，除非編譯器知道，`CString`從 DLL 匯入。 如果您有移轉專案從 Visual c + + 6.0 到 Visual c + +.NET，您可能會看到如多重定義的連結器的符號錯誤`CString`因為衝突而`CString`匯入從 DLL，並在本機上具現化的版本。 若要這樣做的正確方式如下所述。 如需有關此問題的詳細資訊，請參閱知識庫文件中，"連結錯誤，當您匯入 CString 衍生類別 」 (Q309801) 在[ http://support.microsoft.com/default.aspx ](http://support.microsoft.com/default.aspx)。
+- 當您將自己的字串類別匯出從 DLL，使用`CStringT`，編譯器也會自動匯出`CString`基底類別。 由於`CString`本身是樣板類別，它可能會具現化編譯器使用時，除非編譯器知道，`CString`從 DLL 匯入。 如果您有移轉專案從 Visual c + + 6.0 到 Visual c + +.NET，您可能會看到如多重定義的連結器的符號錯誤`CString`因為衝突而`CString`匯入從 DLL，並在本機上具現化的版本。 若要這樣做的正確方式如下所述。
 
 下列案例會導致連結器產生的符號錯誤多次定義的類別。 假設您要匯出`CString`-衍生的類別 (`CMyString`) 從 MFC 擴充 DLL:
 

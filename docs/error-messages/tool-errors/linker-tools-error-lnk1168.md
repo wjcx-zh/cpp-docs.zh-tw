@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0910c23202b975999e10ef2effaebc470c62fb9d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: e8b9f8614feb98f7e21392565aa610b7d42cd512
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821071"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890162"
 ---
 # <a name="linker-tools-error-lnk1168"></a>連結器工具錯誤 LNK1168
 
@@ -38,7 +38,3 @@ ms.locfileid: "48821071"
 如果檔案已由搜尋索引服務鎖定，您可以將組建輸出目錄從自動索引範圍中排除，藉以修正這個問題。 如需詳細資訊，請參閱索引服務相關文件。 若要變更 Windows 搜尋索引服務，請使用**編製索引的選項**在 Windows 中**控制台**。 如需詳細資訊，請參閱 <<c0> [ 使用索引會改善 Windows 搜尋： 常見問題集](http://windows.microsoft.com/windows/improve-windows-searches-using-index-faq#1TC=windows-7)。
 
 如果您的可執行檔無法由建置流程覆寫，則可能是被 [檔案總管] 鎖定。 如果**應用程式體驗**服務已停用，檔案總管可能要抓緊頭上的可執行檔的檔案控制代碼鎖定時間較長。 若要修正此問題，請執行**services.msc** ，然後開啟**屬性**對話方塊**應用程式體驗**服務。 變更**啟動類型**從**停用**來**手動**。
-
-## <a name="see-also"></a>另請參閱
-
-[您當您嘗試建置方案或 ActiveX 專案在 Visual c + + 時可能會收到 「 錯誤 PRJ0008 」 或 「 嚴重錯誤 LNK1168 」 錯誤訊息](http://support.microsoft.com/kb/308358)

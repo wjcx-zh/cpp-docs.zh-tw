@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa5cf1be80b22d3577347dbf7de9ee262125aa86
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c2d5a0f2f5f7515e36997b876373dcf25bb6fc03
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821357"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890630"
 ---
 # <a name="message-map-macros-mfc"></a>訊息對應巨集 (MFC)
 
@@ -352,7 +352,7 @@ ON_MESSAGE( message, memberFxn )
 應該只有一個 ON_MESSAGE 巨集陳述式，在您的每一個都必須對應至訊息處理常式函式的使用者定義訊息的訊息對應中。
 
 > [!NOTE]
->  使用者定義的訊息，除了 ON_MESSAGE 會處理較不常見的 Windows 訊息。 如需詳細資訊，請參閱知識庫文件[99848： 資訊： 使用 ON_MESSAGE() 巨集對應較不常見訊息](http://go.microsoft.com/fwlink/p/?linkid=192022)。
+>  使用者定義的訊息，除了 ON_MESSAGE 會處理較不常見的 Windows 訊息。 如需詳細資訊，請參閱 <<c0> [ 訊息對應](../../mfc/tn006-message-maps.md)。
 
 如需詳細資訊和範例，請參閱 <<c0> [ 訊息處理和對應的主題](../../mfc/message-handling-and-mapping.md)和[使用者定義的處理常式](user-defined-handlers.md)
 

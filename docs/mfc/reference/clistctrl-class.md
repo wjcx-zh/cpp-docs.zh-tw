@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a93294e955dcdc04b320302c573dcbbb827670d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c530a9853aad3e16e5e4094f4d90e30c2643c0d8
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821565"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890890"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 類別
 
@@ -457,12 +457,6 @@ class CListCtrl : public CWnd
 - 報表檢視
 
      排列在右邊的資料行中的其他資訊的那一行中，會顯示每個項目。 最左邊的資料行包含的小圖示和標籤，而且後續的資料行包含應用程式所指定的子項目。 為內嵌的標題控制項 (類別[CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) 會實作這些資料行。 如需有關標題控制項和報表檢視中的資料行的詳細資訊，請參閱[使用 CListCtrl： 新增資料行加入至控制項 （報表檢視）](../../mfc/adding-columns-to-the-control-report-view.md)。
-
-另請參閱：
-
-- 眭妎踱恅 Q250614： 如何： 排序項目在報表檢視中的 CListCtrl
-
-- 眭妎踱恅 Q200054: PRB: OnTimer() 是不呼叫重複清單控制項
 
 目前清單檢視控制項的樣式會判斷目前的檢視。 如需有關這些樣式和其使用方式的詳細資訊，請參閱 <<c0> [ 使用 CListCtrl： 變更清單控制項樣式](../../mfc/changing-list-control-styles.md)。
 

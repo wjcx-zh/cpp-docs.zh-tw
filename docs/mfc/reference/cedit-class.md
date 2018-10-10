@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2935ac160f5d778faf119390d1f023d00d6d322b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d4ae42373ddf70cf4945c540e781397d7d67bd21
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448541"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890747"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -225,11 +225,7 @@ class CEdit : public CWnd
 
 若要修改特定樣式的編輯控制項 （例如 ES_READONLY) 必須將特定訊息傳送至控制項而不是使用[ModifyStyle](cwnd-class.md#modifystyle)。 請參閱[編輯控制項的樣式](/windows/desktop/Controls/edit-control-styles)Windows SDK 中。
 
-如需有關`CEdit`，請參閱：
-
-- [控制項](../../mfc/controls-mfc.md)
-
-- 眭妎踱恅 Q259949： 資訊： SetCaretPos() 是不適合與 CEdit 或 CRichEditCtrl 控制項
+如需詳細資訊`CEdit`，請參閱 <<c2> [ 控制項](../../mfc/controls-mfc.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

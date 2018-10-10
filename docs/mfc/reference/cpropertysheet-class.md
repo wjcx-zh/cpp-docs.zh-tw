@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec12275291321751c539d095c60fa9dabffa2b7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 50b1816320521f8ad20ee64fc4a051f938e902ec
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445174"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890773"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet 類別
 
@@ -155,7 +155,7 @@ class CPropertySheet : public CWnd
 
 若要建立精靈類型的對話方塊，請遵循與建立標準的屬性工作表，但呼叫時，會遵循相同的步驟[SetWizardMode](#setwizardmode)再呼叫[DoModal](#domodal)。 若要啟用精靈按鈕，請呼叫[SetWizardButtons](#setwizardbuttons)，若要自訂其功能與外觀上使用旗標。 若要啟用**完成**按鈕，呼叫[SetFinishText](#setfinishtext)使用者已在精靈的最後一頁上採取的動作之後。
 
-如需有關如何使用`CPropertySheet`物件，請參閱文章[屬性工作表和屬性頁](../../mfc/property-sheets-and-property-pages-in-mfc.md)。 此外，請參閱知識庫文章 Q146916： 如何： 建立非強制回應 CPropertySheet 與標準按鈕，且發行項 Q300606： 作法： 設計可調整大小的 MFC 屬性工作表。
+如需有關如何使用`CPropertySheet`物件，請參閱文章[屬性工作表和屬性頁](../../mfc/property-sheets-and-property-pages-in-mfc.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

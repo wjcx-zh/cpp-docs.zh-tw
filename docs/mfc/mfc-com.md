@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23a9be38ebb870adf098b34fac79afff6345cd8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 660b2fc2f6ece6f60ff7bd1868b3a65bc8f045c1
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394736"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890032"
 ---
 # <a name="mfc-com"></a>MFC COM
 
@@ -57,8 +57,6 @@ Active 技術包括用戶端和伺服器技術，包括下列：
 - 本章節也提供有關如何撰寫使用 MFC，例如，在 COM 元件的資訊[連接點](../mfc/connection-points.md)。
 
 如功能仍會呼叫 OLE 與現在所謂 active 技術的討論，請參閱主題[OLE](../mfc/ole-in-mfc.md)。
-
-此外，請參閱知識庫文章 Q248019： 如何： 防止伺服器忙線中對話方塊方塊從出現在長時間 COM 作業。
 
 ## <a name="in-this-section"></a>本節內容
 

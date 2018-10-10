@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc42cd1eab4f19c8184ad500b4a4a1871747d6aa
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9a68a0ae6392c2a9a64c9ff6c567451c2672c861
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713085"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890188"
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL 常見問題集
 
@@ -39,7 +39,7 @@ ms.locfileid: "45713085"
 
 ## <a name="mfc_multithreaded_1"></a> MFC DLL 可以建立多個執行緒嗎？
 
-但是在初始化期間，MFC DLL 可以安全地建立多個執行緒，只要它會使用 Win32 執行緒區域儲存區 (TLS) 這類函式**TlsAlloc**配置執行緒區域儲存區。 不過，如果使用 MFC DLL **__declspec （thread)** 配置執行緒區域儲存區，用戶端應用程式必須以隱含方式連結至 DLL。 如果用戶端應用程式明確地連結至 DLL 時，呼叫**LoadLibrary**將無法成功載入的 DLL。 如需建立 MFC Dll 內的多個執行緒的詳細資訊，請參閱 「 知識庫 」 文件"PRB:: 呼叫 LoadLibrary() 要載入 DLL，已靜態 TLS"(Q118816)。 如需 Dll 中的執行緒本機變數的詳細資訊，請參閱 <<c0> [ 執行緒](../cpp/thread.md)。
+但是在初始化期間，MFC DLL 可以安全地建立多個執行緒，只要它會使用 Win32 執行緒區域儲存區 (TLS) 這類函式**TlsAlloc**配置執行緒區域儲存區。 不過，如果使用 MFC DLL **__declspec （thread)** 配置執行緒區域儲存區，用戶端應用程式必須以隱含方式連結至 DLL。 如果用戶端應用程式明確地連結至 DLL 時，呼叫**LoadLibrary**將無法成功載入的 DLL。 如需 Dll 中的執行緒本機變數的詳細資訊，請參閱 <<c0> [ 執行緒](../cpp/thread.md)。
 
 MFC DLL 會在啟動期間建立新的 MFC 執行緒將會停止回應的應用程式載入時。 這包括每當呼叫建立的執行緒`AfxBeginThread`或`CWinThread::CreateThread`內：
 
@@ -49,13 +49,11 @@ MFC DLL 會在啟動期間建立新的 MFC 執行緒將會停止回應的應用�
 
 - 提供`DllMain`或是**RawDllMain** MFC 擴充 DLL 中的函式。
 
-如需建立執行緒在初始化期間的詳細資訊，請參閱 「 知識庫 」 文件 」 PRB:: 無法建立 MFC 執行緒 DLL 在啟動期間 」 (Q142243)。
-
 ## <a name="mfc_multithreaded_2"></a> 多執行緒應用程式可以存取不同的執行緒中的 MFC DLL 嗎？
 
 多執行緒應用程式可以從不同的執行緒存取的動態連結至 MFC 的標準 MFC Dll 和 MFC 擴充 Dll。 和 Visual c + + 4.2 版，從應用程式可以存取從應用程式中建立的多個執行緒以靜態方式連結至 MFC 的標準 MFC Dll。
 
-4.2 之前的版本，只有一個外部執行緒，可以將附加到靜態連結至 MFC 之標準 MFC DLL。 如需限制存取從多個執行緒 （在 Visual c + + 4.2 版） 之前以靜態方式連結至 MFC 的標準 MFC Dll 的詳細資訊，請參閱知識庫文件中，「 多個執行緒和 MFC _USRDLLs 」 (Q122676)。
+4.2 之前的版本，只有一個外部執行緒，可以將附加到靜態連結至 MFC 之標準 MFC DLL。
 
 請注意，詞彙 USRDLL 不再使用 Visual c + + 文件中。 靜態連結至 MFC 之標準 MFC DLL 有相同的特性，與之前的 usrdll。
 

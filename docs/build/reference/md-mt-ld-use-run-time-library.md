@@ -45,12 +45,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee8e59fbc88e63343d4da75a4cbf95d4f83bf815
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1aefd61d724f7716392b5fd2d15ef3a2f9ff0006
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701359"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890227"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD、/MT、/LD (使用執行階段程式庫)
 
@@ -80,8 +80,6 @@ ms.locfileid: "45701359"
 傳遞至連結器中的指定引動過程的所有模組必須有使用相同的執行階段程式庫編譯器選項都編譯 (**/MD**， **/MT**， **/LD**)。
 
 如需如何使用執行階段程式庫的偵錯版本的詳細資訊，請參閱[C 執行階段程式庫參考](../../c-runtime-library/c-run-time-library-reference.md)。
-
-知識庫文件 Q140584 中也有關於如何選擇適當 C 執行階段程式庫的討論。
 
 如需詳細資訊的 Dll，請參閱 < [Visual c + + Dll](../../build/dlls-in-visual-cpp.md)。
 

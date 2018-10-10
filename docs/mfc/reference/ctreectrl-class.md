@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f1294517a49687a2fc94b1bb696a111a9f55da7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 98dfdc792341d215830d46d078d9ece69419efed
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403964"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890838"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -292,8 +292,6 @@ class CTreeCtrl : public CWnd
 - [使用 CTreeCtrl](../../mfc/using-ctreectrl.md)
 
 - [樹狀檢視控制項參考](/windows/desktop/Controls/tree-view-control-reference)Windows SDK 中。
-
-- 眭妎踱恅 Q222905： 如何： 顯示快顯功能表 CTreeCtrl
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

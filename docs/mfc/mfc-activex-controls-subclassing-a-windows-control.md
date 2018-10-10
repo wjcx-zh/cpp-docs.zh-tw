@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94b989594316f2eac3e65fad2cb5bf419e7ee2eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03fc15cc2d2a73c0e8a1a016a2a477a5c65cdc15
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407530"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890553"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC ActiveX 控制項：子類別化 Windows 控制項
 
@@ -48,10 +48,8 @@ ms.locfileid: "46407530"
 
 - [處理任何的 ActiveX 控制項訊息 (OCM) 反映至控制項](#_core_handling_reflected_window_messages)
 
-    > [!NOTE]
-    >  這會為您完成 「 ActiveX 控制項精靈 」 如果您選取 使用要衍生子類別控制項**選取父視窗類別**上的下拉式清單**控制設定**頁面。
-
-如需子類別化控制項的詳細資訊，請參閱知識庫文章 Q243454。
+   > [!NOTE]
+   > 這會為您完成 「 ActiveX 控制項精靈 」 如果您選取 使用要衍生子類別控制項**選取父視窗類別**上的下拉式清單**控制設定**頁面。
 
 ##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> 覆寫 IsSubclassedControl 和 PreCreateWindow
 

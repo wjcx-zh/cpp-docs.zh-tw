@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 292121e95b20061e95e85b49c60d4758bd18a568
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 160d9857097c4cac1912d2ca44b0433905c238f5
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435528"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890864"
 ---
 # <a name="colecontrol-class"></a>COleControl 類別
 
@@ -2158,7 +2158,7 @@ BOOL IsInvokeAllowed(DISPID dispid);
 
 ### <a name="remarks"></a>備註
 
-架構的實作`IDispatch::Invoke`呼叫`IsInvokeAllowed`以判斷指定的函式 (由`dispid`) 可能會叫用。 OLE 控制項的預設行為是允許自動化的方法，來初始化的控制項; 時，才會叫用不過，`IsInvokeAllowed`是虛擬函式，而且可能會覆寫必要時 （例如，當控制項用做 automation 伺服程式）。 如需詳細資訊，請參閱知識庫文章 Q166472，"如何： 使用 OLE 控制項為 Automation 伺服器。 」 知識庫文件位於[ http://support.microsoft.com ](http://support.microsoft.com/)。
+架構的實作`IDispatch::Invoke`呼叫`IsInvokeAllowed`以判斷指定的函式 (由`dispid`) 可能會叫用。 OLE 控制項的預設行為是允許自動化的方法，來初始化的控制項; 時，才會叫用不過，`IsInvokeAllowed`是虛擬函式，而且可能會覆寫必要時 （例如，當控制項用做 automation 伺服程式）。
 
 ##  <a name="ismodified"></a>  COleControl::IsModified
 

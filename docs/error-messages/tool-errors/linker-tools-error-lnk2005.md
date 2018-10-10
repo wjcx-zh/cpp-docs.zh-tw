@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a800fb8065fd3c613a2bc05975c15decb0145891
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8a3dbb1d63e7d7c6f5e036fc0cde967277c91a40
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028307"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890121"
 ---
 # <a name="linker-tools-error-lnk2005"></a>連結器工具錯誤 LNK2005
 
@@ -121,14 +121,3 @@ ms.locfileid: "46028307"
     ```
 
    若要修正此問題，請新增[/force: multiple 都會](../../build/reference/force-force-file-output.md)連結器命令列選項，並確定 uuid.lib 是第一個參考的程式庫。
-
-## <a name="additional-information"></a>其他資訊
-
-如果您使用較舊版本的工具組，請參閱下列知識庫文章的特定原因造成此錯誤的詳細資訊：
-
-- [在 Visual c + + 中正確的順序連結的 CRT 程式庫和 MFC 程式庫時，就會發生 LNK2005 錯誤](https://support.microsoft.com/kb/148652)
-
-- [修正程式： 多載的全域 Delete 運算子原因 LNK2005](https://support.microsoft.com/kb/140440)
-
-- [當您編譯 Visual c + + ATL 可執行檔 (.exe) 專案，您會收到錯誤 LNK2005](https://support.microsoft.com/kb/184235)。
-

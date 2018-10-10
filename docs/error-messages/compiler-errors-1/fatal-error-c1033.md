@@ -16,18 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0b096e5cacc64359887d7cf74f94f4febea70e6
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 48816aa801e5085d1646efdeff2af40e233cbf3f
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820544"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889859"
 ---
 # <a name="fatal-error-c1033"></a>嚴重錯誤 C1033
 
 無法開啟程式資料庫的 pdb
 
-此錯誤可能被因磁碟錯誤。
-
-
-如需詳細資訊，請參閱 < [ http://support.microsoft.com/default.aspx?scid=kb; 246007](http://support.microsoft.com/default.aspx?scid=kb;246007)。
+此錯誤可能因磁碟錯誤，防毒程式，已完全關機的情況下，前一個偵錯工具執行個體所建立的暫時鎖定，或者平行建置 mspdbsrv.exe 程序嘗試存取相同的檔案，在其他可能的原因。

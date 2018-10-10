@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 253282092bb71b6d4a5c520355ab4f8b51015c9f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6d6a6afeca0bcf0d08a0a206983d3db33b61a041
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445135"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890695"
 ---
 # <a name="cstringt-class"></a>CStringT 類別
 
@@ -224,7 +224,7 @@ A`CStringT`物件包含一連串可變長度的字元。 `CStringT` 提供函式
 `CString``CStringA`，和`CStringW`從 MFC DLL (MFC90 匯出。DLL)，絕不會從使用者 Dll。 這為了防止`CStringT`從 multiply 所定義。
 
 > [!NOTE]
->  如果您的程式碼會包含連結器錯誤中所述的因應措施[Linking Errors When You Import CString-Derived 類別 」 (Q309801)](https://support.microsoft.com/help/309801/you-may-receive-an-lnk2019-error-message-when-you-build-a-visual-c-200)，您應該移除該程式碼。 不再需要。
+>  如果您的程式碼會包含連結器錯誤中所述的因應措施[使用 CStringT 匯出字串類別](../../atl-mfc-shared/exporting-string-classes-using-cstringt.md)，您應該移除該程式碼。 不再需要。
 
 下列字串所提供的類型以 MFC 為基礎的應用程式中：
 

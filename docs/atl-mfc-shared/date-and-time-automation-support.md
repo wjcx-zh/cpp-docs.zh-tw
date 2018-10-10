@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38933847065544f97d60dfc109436f059a025f7a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1ce0acc7eb90e534e1e66882f5a4a6a88b1eb782
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763850"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890175"
 ---
 # <a name="date-and-time-automation-support"></a>日期和時間： Automation 支援
 
@@ -57,11 +57,8 @@ ms.locfileid: "43763850"
 
 CRT 正確計算 23 個小時的差異。 `COleDateTimeSpan` 計算差異的 24 小時。
 
-請注意，因應措施用於範例的結尾附近顯示正確使用日期`COleDateTime::Format`。 請參閱知識庫文章 「 BUG: Format("%D") 失敗`COleDateTime`和`COleDateTimeSpan`」 (Q167338)。
-
 [!code-cpp[NVC_ATLMFC_Utilities#176](../atl-mfc-shared/codesnippet/cpp/date-and-time-automation-support_1.cpp)]
 
 ## <a name="see-also"></a>另請參閱
 
 [日期和時間](../atl-mfc-shared/date-and-time.md)
-

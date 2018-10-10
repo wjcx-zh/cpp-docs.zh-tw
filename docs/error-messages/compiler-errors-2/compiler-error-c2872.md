@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 038c3475a6041dfb719bb2270a87ac2898f8b958
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e4bdc67e13db11949371e2f9e3d8a205b146d701
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036750"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890110"
 ---
 # <a name="compiler-error-c2872"></a>編譯器錯誤 C2872
 
@@ -31,7 +31,11 @@ ms.locfileid: "46036750"
 
 如果包含的標頭檔，就會發生 C2872 [using 指示詞](../../cpp/namespaces-cpp.md#using_directives)，和後續的標頭檔會包含在所包含的類型，也是在指定的命名空間中`using`指示詞。 指定`using`指示詞只是在所有標頭檔案由指定之後`#include`。
 
-如需 C2872 的詳細資訊，請參閱知識庫文件[PRB： 編譯器錯誤當您使用 #import Visual c + +.NET 中的 XML](http://support.microsoft.com/kb/316317)和["錯誤 C2872: 'Platform': 模稜兩可的符號 」 使用時，會產生錯誤訊息。在 Visual Studio 2013 的 Windows::Foundation::Metadata 命名空間](https://support.microsoft.com/kb/2890859)。
+C2872 之間發生衝突，因此，可以發生在 Visual Studio 2013`Windows::Foundation::Metadata::Platform`列舉型別和 C + + /CX 定義`Platform`命名空間。 若要解決此問題，請遵循下列步驟：
+
+- 移除專案檔中的"using 命名空間 Windows::Foundation::Metadata"子句。
+
+- 指定包含此命名空間中的任何類型的完整的名稱。
 
 ## <a name="example"></a>範例
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01610f888d8afe275b0e52b86e4f4c678f896c9f
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: ceb004cba243d6e2e9c44aadcaa40670ef7a0bbb
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820464"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890253"
 ---
 # <a name="project-build-error-prj0016"></a>專案建置錯誤 PRJ0016
 
@@ -37,8 +37,4 @@ ms.locfileid: "48820464"
 
 此錯誤的另一個原因是，您的原則設定不包含 VCSpawn.exe 登錄機碼 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun 下做為此使用者帳戶允許的視窗程式。
 
-如需詳細資訊，請參閱：
-
-- 眭妎踱恅 324153，其位於[ http://support.microsoft.com/default.aspx?scid=kb; 324153](http://support.microsoft.com/default.aspx?scid=kb;324153)。
-
-- [遵守系統原則設定](https://msdn.microsoft.com/library/aa372139)，「 執行只允許 Windows 應用程式 」 一節。
+如需詳細資訊，請參閱[遵守系統原則設定](https://msdn.microsoft.com/library/aa372139)，在 「 執行只允許 Windows 應用程式 」 一節。

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067f31d837b4b83a477d6b919f2d5bbd5efa00f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 552252c8826e167b4aaa21aa41e489bbc8179ec3
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381071"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890371"
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer 類別
 
@@ -74,10 +74,6 @@ DocObject 伺服器文件可以包含[CDocObjectServerItem](../../mfc/reference/
 若要自訂您的 DocObject 伺服器，衍生您自己的類別，從`CDocObjectServer`，並覆寫其檢視設定函式中， [OnActivateView](#onactivateview)， [OnApplyViewState](#onapplyviewstate)，和[OnSaveViewState](#onsaveviewstate). 您必須提供來回架構會呼叫您類別的新執行個體。
 
 如需 DocObjects 的詳細資訊，請參閱[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)並[COleCmdUI](../../mfc/reference/colecmdui-class.md)中*MFC 參考 》*。
-
-另請參閱下列知識庫文件：
-
-- Q247382: PRB： 在 ActiveX 文件伺服器控制項的工具提示隱藏 ActiveX 文件容器
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

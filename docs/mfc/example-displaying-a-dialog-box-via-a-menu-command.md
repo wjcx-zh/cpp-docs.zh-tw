@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2869e936115317ff34183b55ba16fe8e9cdc4d2d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1abb923a52ccce181782d5387636c45491c342cd
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378185"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890201"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>範例：透過功能表命令顯示對話方塊
 
@@ -98,12 +98,7 @@ ms.locfileid: "46378185"
 
          [!code-cpp[NVC_MFCControlLadenDialog#48](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_7.cpp)]
 
-此外，請參閱下列知識庫文件：
-
-- Q251059： 如何： 提供您自己的 MFC 對話方塊的視窗類別名稱
-
 ## <a name="see-also"></a>另請參閱
 
 [對話方塊](../mfc/dialog-boxes.md)<br/>
 [強制回應和非強制回應對話方塊](../mfc/modal-and-modeless-dialog-boxes.md)
-

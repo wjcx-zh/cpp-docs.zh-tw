@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a6ac97eaa55dde337068e450c0223b4ec4409f8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1394c3c614d80a07bfea7f411576d5b303d67da8
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393304"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890603"
 ---
 # <a name="crecentfilelist-class"></a>CRecentFileList 類別
 
@@ -78,10 +78,6 @@ class CRecentFileList
 ## <a name="remarks"></a>備註
 
 檔案可以加入或刪除從最近使用的檔案清單，可讀取或寫入登錄的檔案清單或。可以更新 INI 檔，並顯示最近使用的檔案清單的功能表。
-
-MRU 功能表項目的相關的詳細資訊，請參閱
-
-- 眭妎踱恅 Q243751： 如何： 新增 MRU 功能表項目，在 MFC 應用程式的命令處理常式
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

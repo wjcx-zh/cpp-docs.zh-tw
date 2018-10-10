@@ -64,12 +64,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7053c72536c0ab91420f1bbc068f39843eb99c1b
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: df61ebeea72a7cf860237b760288cc47ff353bf2
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861807"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890656"
 ---
 # <a name="cimage-class"></a>CImage 類別
 
@@ -320,7 +320,7 @@ HBITMAP 控制代碼。
 *eOrientation*<br/>
 指定點陣圖的方向。 可以是下列其中一項：
 
-- DIBOR_DEFAULT 點陣圖的方向是由作業系統決定。 不過，這可能永遠沒有預期的結果在所有作業系統上。 如需詳細資訊，請參閱下列知識庫文件 (**Q186586**): PRB: getobject （） 一律會傳回正數高度的 DIB 區段。
+- DIBOR_DEFAULT 點陣圖的方向是由作業系統決定。
 
 - DIBOR_BOTTOMUP 點陣圖的線是以反向順序。 這會導致[CImage::GetBits](#getbits)附近點陣圖緩衝區結尾的指標傳回並[CImage::GetPitch](#getpitch)傳回負數。
 

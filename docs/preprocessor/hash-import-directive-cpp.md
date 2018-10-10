@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb62a61762c2c4e042777376f4d2b9f3ffc747e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 60397fea85e3fd121469ae4568dac18fa6b9ddb1
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429743"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890318"
 ---
 # <a name="import-directive-c"></a>#import 指示詞 (C++)
 **C + + 特定**  
@@ -185,11 +185,9 @@ using namespace MyLib;
 在實際的檔名 **#import**註解是交互參考的類型程式庫的完整路徑，儲存在登錄中。 如果因為遺漏類型定義而發生錯誤，請檢查 .TLH 頂端的註解，以查看哪個相依類型程式庫可能需要先匯入。 編譯 .TLI 檔案時，可能發生的錯誤為語法錯誤 (例如，C2143、C2146、C2321)、C2501 (遺漏 decl 指定名稱) 或 C2433 (資料宣告不允許「內嵌」)。  
   
 您必須判斷哪些相依性的註解都不提供的系統標頭，然後提供 **#import**指示詞之前的某個位置 **#import**相依的指示詞若要解決錯誤的型別程式庫。  
-  
-如需詳細資訊，請參閱知識庫文件＜#import 包裝函式方法可能造成存取違規＞(Q242527) 或＜當您使用 XML 與 #import 時發生編譯器錯誤＞(Q269194)。 您可以在 MSDN Library 媒體或是在找到知識庫文件[Microsoft 支援服務](https://support.microsoft.com/)。  
-  
-##  <a name="_predir_the_23import_directive_import_attributes"></a> #import 屬性  
- 
+
+##  <a name="_predir_the_23import_directive_import_attributes"></a> #import 屬性
+
 **#import**可以選擇性地包含一個或多個屬性。 這些屬性會指示編譯器修改類型程式庫標頭的內容。 反斜線 (**\\**) 符號可用來包含其他行，在單一 **#import**陳述式。 例如:   
   
 ```  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddf4b505689521fbdfd702eb1944ac0779f16bf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc5bca0f7ff1b2fdb2650eadbcdca4778d9b53ef
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409567"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890356"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>升級現有的 ActiveX 控制項
 
@@ -56,7 +56,7 @@ ms.locfileid: "46409567"
 
 ##  <a name="_core_packaging_code_for_downloading"></a> 下載的程式碼封裝
 
-如需有關這個主題的詳細資訊，請參閱知識庫文章 < 封裝 MFC 控制項的使用透過網際網路 > (Q167158)。 您可以找到知識庫文件[ http://support.microsoft.com/support ](http://support.microsoft.com/support)。
+如需有關這個主題的詳細資訊，請參閱 <<c0> [ 封裝 ActiveX 控制項](https://docs.microsoft.com//previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751974%28v%3dvs.85%29)。
 
 ### <a name="the-codebase-tag"></a>程式碼基底標記
 
@@ -94,7 +94,7 @@ CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
 
 ### <a name="creating-cab-files"></a>建立 CAB 檔
 
-您可以從知識庫文件中的封包開發套件[310618: Microsoft 封包的軟體開發套件](http://go.microsoft.com/fwlink/p/?linkid=148204)。 此套件中，您會發現必要的工具，來建構封包檔。
+工具來建立封包檔屬於現在[Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)。
 
 封包檔所指的`CODEBASE`應包含您的 ActiveX 控制項的.ocx 檔案及控制其安裝.inf 檔案。 您建立封包檔，藉由指定控制檔案的名稱和.inf 檔案。 不包含此封包檔中的系統可能已存在的相依 Dll。 例如，MFC Dll 是封裝在個別的封包檔，而所控制的.inf 檔案參考。
 

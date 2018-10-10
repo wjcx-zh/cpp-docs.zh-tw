@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03d418fc45d3947248c78d70af5d036bd93b204d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 912bbd37d4d9afcb60158d41b82b7fa829eeb4ec
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821500"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890643"
 ---
 # <a name="ccombobox-class"></a>CComboBox 類別
 
@@ -147,7 +147,7 @@ class CComboBox : public CWnd
 
 |名稱|描述|
 |----------|-----------------|
-|[Ccombobox:: Addstring](#addstring)|將字串加入至清單方塊的下拉式方塊，或使用 CBS_SORT 樣式的清單方塊已排序資料的位置中的清單結尾。|
+|[CComboBox::AddString](#addstring)|將字串加入至清單方塊的下拉式方塊，或使用 CBS_SORT 樣式的清單方塊已排序資料的位置中的清單結尾。|
 |[CComboBox::Clear](#clear)|刪除 （清除） 目前的選取範圍，如果有的話，在編輯控制項中。|
 |[CComboBox::CompareItem](#compareitem)|由架構呼叫以判斷新的清單項目已排序的主控描繪下拉式方塊中的相對位置。|
 |[CComboBox::Copy](#copy)|如果有的話，到剪貼簿 CF_TEXT 格式，請將複製目前的選取範圍。|
@@ -256,7 +256,7 @@ class CComboBox : public CWnd
 
 如果您在內嵌`CComboBox`物件在另一個視窗中的物件，您不需要它終結。 如果您建立`CComboBox`物件在堆疊上，它會自動終結。 如果您建立`CComboBox`物件上使用堆積**新**函式，您必須呼叫**刪除**Windows 下拉式方塊終結時終結它在物件上。
 
-**附註**如果您想要處理 WM_KEYDOWN 和 WM_CHAR 訊息時，您有子類別化下拉式方塊的編輯和清單方塊控制項中，衍生類別，從`CEdit`和`CListBox`，並將這些訊息的處理常式新增至衍生的類別。 如需詳細資訊，請參閱 < [ http://support.microsoft.com/default.aspxscid=kb;Q174667](http://support.microsoft.com/default.aspxscid=kb;q174667)並[CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)。
+**附註**如果您想要處理 WM_KEYDOWN 和 WM_CHAR 訊息時，您有子類別化下拉式方塊的編輯和清單方塊控制項中，衍生類別，從`CEdit`和`CListBox`，並將這些訊息的處理常式新增至衍生的類別。 如需詳細資訊，請參閱 < [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -1070,7 +1070,7 @@ int InsertString(
 
 ### <a name="remarks"></a>備註
 
-不同於[AddString](#addstring)成員函式`InsertString`成員函式不會造成與清單[CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)排序樣式。
+不像 [AddString](#addstring) 成員函式， `InsertString` 成員函式不會排序 [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 樣式的清單。
 
 > [!NOTE]
 >  Windows 不支援這個函式`ComboBoxEx`控制項。 如需有關此控制項的詳細資訊，請參閱 < [ComboBoxEx 控制項](/windows/desktop/Controls/comboboxex-controls)Windows SDK 中。

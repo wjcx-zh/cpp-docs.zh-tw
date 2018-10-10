@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86adc1e2337b32ced77cafda92229ed9724ba548
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: a6c7d961119d4fe25652601ebe5e423be898f49e
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821513"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890734"
 ---
 # <a name="cwinapp-class"></a>CWinApp 類別
 
@@ -367,7 +367,7 @@ class CWinApp : public CWinThread
 
 - `CWinApp`索引鍵可覆寫。
 
-`m_hPrevInstance`資料成員不存在。 如需偵測的上一個例`CWinApp`，請參閱知識庫文件 「 如何識別前一個執行個體的應用程式 」 (KB106385)，網址[ http://support.microsoft.com/default.aspxscid=kb; 106385](http://support.microsoft.com/default.aspxscid=kb;106385)。
+`m_hPrevInstance`資料成員不存在。 若要判斷是否正在執行的應用程式的另一個執行個體，請使用具名的 mutex。 如果開啟 mutex 失敗，然後沒有其他執行個體執行的應用程式。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -1073,7 +1073,7 @@ virtual BOOL InitInstance();
 覆寫`InitInstance`來初始化每個 Windows 底下執行的應用程式的新執行個體。 通常，您會覆寫`InitInstance`來建構您的主視窗物件和設定`CWinThread::m_pMainWnd`指向該視窗的資料成員。 如需有關如何覆寫此成員函式的詳細資訊，請參閱 < [CWinApp： 應用程式類別](../../mfc/cwinapp-the-application-class.md)。
 
 > [!NOTE]
-> MFC 應用程式必須初始化為單一執行緒 apartment (STA)。 如果您呼叫[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)中您`InitInstance`覆寫，請指定 COINIT_APARTMENTTHREADED （而不是 COINIT_MULTITHREADED）。 如需詳細資訊，請參閱 < PRB: MFC 應用程式停止回應時初始化為多執行緒 Apartment （828643） 在應用程式[ http://support.microsoft.com/default.aspxscid=kb; 828643](http://support.microsoft.com/default.aspxscid=kb;828643)。
+> MFC 應用程式必須初始化為單一執行緒 apartment (STA)。 如果您呼叫[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)中您`InitInstance`覆寫，請指定 COINIT_APARTMENTTHREADED （而不是 COINIT_MULTITHREADED）。
 
 ### <a name="example"></a>範例
 

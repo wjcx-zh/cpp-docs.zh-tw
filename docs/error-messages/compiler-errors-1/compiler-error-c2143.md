@@ -16,20 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c6352c87748bafa635d8d6dae29bf37b78ac6c1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5c729ecbdea13c36cf5df71efa16d12853fc4433
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46041983"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890490"
 ---
 # <a name="compiler-error-c2143"></a>編譯器錯誤 C2143
 
 語法錯誤： 遺漏 'token1'，'token2' 之前
 
 編譯器會預期特定的權杖 （也就是空白字元以外的語言元素），卻找到另一個權杖。
-
-如需有關此錯誤的資訊時使用函式 try 區塊時，它就會發生，請參閱[知識庫文件 241706](http://support.microsoft.com/kb/241706)。
 
 請檢查[c + + 語言參考](../../cpp/cpp-language-reference.md)來判斷程式碼語法不正確的位置。 因為遇到造成問題的那一行之後，編譯器可能會報告此錯誤，請檢查幾行程式碼錯誤之前。
 

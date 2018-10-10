@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47d1a5308b379d8bd1923bb9ad1ad805cb6bded3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6004c3acd052d1424004017941a5e4aa110c602c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432813"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890332"
 ---
 # <a name="activex-controls-on-the-internet"></a>網際網路上的 ActiveX 控制項
 
@@ -170,10 +170,6 @@ ActiveX 控制項不限於網際網路。 只要控制項支援容器所需的�
 例如，如果只有 10 個位元組可用且在 1K 檔案上非同步呼叫「讀取」，則不會封鎖讀取，但會傳回目前可用的 10 個位元組。
 
 您實作[非同步 moniker](../mfc/asynchronous-monikers-on-the-internet.md)使用`CAsyncMonikerFile`類別。 不過，ActiveX 控制項可以使用 `CDataPathProperty` 類別 (衍生自 `CAsyncMonikerFile`)，來協助實作非同步控制項屬性。
-
-ASYNDOWN 範例示範如何使用計時器設定非同步迴圈以讀取資料。 可從 Microsoft 下載中心下載在知識庫文件「如何：AsyncDown 示範非同步資料下載」(Q177244) 中說明的 ASYNDOWN  (如需從 Microsoft 下載中心下載檔案的詳細資訊，請參閱 Microsoft 知識庫「如何從線上服務取得 Microsoft 支援檔案 (Q119591)」一文)。您可以找到知識庫文件[ http://support.microsoft.com/support ](http://support.microsoft.com/support)。
-
-ASYNDOWN 中所使用的基本技巧是在中設定計時器**cdatapathproperty:: Ondataavailable**表示當資料可供使用。 當計時器收到訊息時，應用程式會讀入 128 位元組區塊的資料，並填入編輯控制項中。 如果資料在處理計時器訊息時無法使用，計時器就會關閉。 如果有更多資料延遲抵達，則 `OnDataAvailable` 會開啟計時器。
 
 ## <a name="displaying-a-control-on-a-web-page"></a>在網頁上顯示控制項
 

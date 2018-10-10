@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad47d769dbfd09cc741be18598355dc34486bd54
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d964c375adf80caef3bb5a6eb06c67ef8e3e7200
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46045688"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890045"
 ---
 # <a name="compiler-warning-level-1-c4251"></a>編譯器警告 (層級 1) C4251
 
@@ -39,11 +39,9 @@ ms.locfileid: "46045688"
 
 您可以避免匯出類別所定義的 DLL，定義具有虛擬函式，類別和函式您可以呼叫來具現化和刪除的物件類型。  然後，您就可以再呼叫虛擬函式類型。
 
-如需有關匯出範本的詳細資訊，請參閱 < [ http://support.microsoft.com/default.aspx?scid=KB;EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958)。
-
 如果您從 c + + 標準程式庫中，編譯的偵錯版本的型別衍生，就可以忽略 C4251 (**/MTd**) 和其中的編譯器錯誤訊息指的是 _Container_base。
 
-```
+```cpp
 // C4251.cpp
 // compile with: /EHsc /MTd /W2 /c
 #include <vector>

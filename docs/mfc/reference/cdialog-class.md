@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda3bcbd8686d985406842a4b7a64536616ae8ac
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fdbbda6956e3265e7b17aa63ea26ac760b1fda5a
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419544"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890617"
 ---
 # <a name="cdialog-class"></a>CDialog 類別
 
@@ -133,11 +133,7 @@ A`CDialog`物件是對話方塊範本的組合和`CDialog`-衍生的類別。 �
 
 當您實作非強制回應對話方塊時，一律會覆寫`OnCancel`成員函式和呼叫`DestroyWindow`從在其中。 請不要呼叫基底類別`CDialog::OnCancel`，因為它會呼叫`EndDialog`，會隱藏對話方塊中，但是會終結。 您也應該覆寫`PostNcDestroy`若要刪除的非強制回應對話方塊**這**，因為非強制回應對話方塊通常被配置**新**。 強制回應對話方塊通常建構在框架上，而不需要`PostNcDestroy`清除。
 
-如需有關`CDialog`，請參閱：
-
-- [對話方塊](../../mfc/dialog-boxes.md)
-
-- 眭妎踱恅 Q262954： 如何： 建立含捲軸的都對話方塊
+如需詳細資訊`CDialog`，請參閱 < [Dialog Boxes](../../mfc/dialog-boxes.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -281,7 +277,7 @@ virtual BOOL CreateIndirect(
 
 使用`CWnd::DestroyWindow`終結對話方塊中所建立的函式`CreateIndirect`函式。
 
-包含 ActiveX 控制項的對話方塊需要 DLGINIT 資源中提供的其他資訊。 如需詳細資訊，請參閱知識庫文章 Q231591，「 如何： 建立 ActiveX 控制項的 MFC 對話方塊中使用的對話方塊範本。 」 知識庫文件位於[ http://support.microsoft.com ](http://support.microsoft.com/)。
+包含 ActiveX 控制項的對話方塊需要 DLGINIT 資源中提供的其他資訊。
 
 ##  <a name="domodal"></a>  CDialog::DoModal
 
@@ -410,7 +406,7 @@ BOOL InitModalIndirect(
 
 若要間接建立強制回應對話方塊中，第一次配置全域記憶體區塊，並填入對話方塊範本。 然後呼叫空`CDialog`建構對話方塊物件的建構函式。 接下來，呼叫`InitModalIndirect`來儲存您的控制代碼至記憶體內部對話方塊範本。 建立並顯示 [Windows] 對話方塊中更新版本，當[DoModal](#domodal)呼叫成員函式。
 
-包含 ActiveX 控制項的對話方塊需要 DLGINIT 資源中提供的其他資訊。 如需詳細資訊，請參閱知識庫文章 Q231591，「 如何： 建立 ActiveX 控制項的 MFC 對話方塊中使用的對話方塊範本。 」 知識庫文件位於[ http://support.microsoft.com ](http://support.microsoft.com/)。
+包含 ActiveX 控制項的對話方塊需要 DLGINIT 資源中提供的其他資訊。
 
 ##  <a name="mapdialogrect"></a>  CDialog::MapDialogRect
 

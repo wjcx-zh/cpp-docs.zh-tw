@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cb8f397243bb6531f33ac5e444914cfa36e5fe1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 55b93d1ebd81850982b4f6ceac1ceb008ed1fa49
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022628"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890279"
 ---
 # <a name="compiler-warning-level-2-c4275"></a>編譯器警告 (層級 2) C4275
 
@@ -42,8 +42,6 @@ ms.locfileid: "46022628"
 - 您的類別沒有任何方法 (不管內嵌) 可以用來使用 EXE 和 DLL 中的具現化其中有靜態資料差異的類型。
 
 您可以避免匯出類別所定義的 DLL，定義具有虛擬函式，類別和函式您可以呼叫來具現化和刪除的物件類型。  然後，您就可以再呼叫虛擬函式類型。
-
-如需有關匯出範本的詳細資訊，請參閱 < [ http://support.microsoft.com/default.aspx?scid=KB;EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958)。
 
 如果您從 c + + 標準程式庫中，編譯的偵錯版本的型別衍生，可以在 Visual c + + 中忽略 C4275 (**/MTd**) 和其中的編譯器錯誤訊息指的是 _Container_base。
 

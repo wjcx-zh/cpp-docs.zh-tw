@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0e9c86cbe93fe5eb10145a322a19a26be149b4c
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 65d02bdd5f00e5ffc5d64381b04da38ec0d57d15
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820486"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890093"
 ---
 # <a name="ole-initialization"></a>OLE 初始化
 
@@ -79,7 +79,7 @@ BOOL AFXAPI AfxOleInit();
 >  如果**AfxOleInit**稱為從 MFC DLL，則呼叫會失敗。 函式會假設，如果從 DLL 呼叫它時，OLE 系統先前已初始化所呼叫的應用程式，就會發生失敗。
 
 > [!NOTE]
->  MFC 應用程式必須初始化為單一執行緒 apartment (STA)。 如果您呼叫[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)中您`InitInstance`覆寫，請指定 COINIT_APARTMENTTHREADED （而不是 COINIT_MULTITHREADED）。 如需詳細資訊，請參閱 < PRB: MFC 應用程式停止回應時初始化為多執行緒 Apartment （828643） 在應用程式[ http://support.microsoft.com/default.aspxscid=kb; 828643](http://support.microsoft.com/default.aspxscid=kb;828643)。
+>  MFC 應用程式必須初始化為單一執行緒 apartment (STA)。 如果您呼叫[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)中您`InitInstance`覆寫，請指定 COINIT_APARTMENTTHREADED （而不是 COINIT_MULTITHREADED）。
 
 ### <a name="requirements"></a>需求
 

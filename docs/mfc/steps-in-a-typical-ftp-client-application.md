@@ -18,24 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d87682d9110aa37fbb806f7d1dcd70009cf2ad63
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4ac1eef12a3f782f3ad9ba8a9bb526989876251e
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406954"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890214"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>一般 FTP 用戶端應用程式中的步驟
 
 一般 FTP 用戶端應用程式會建立[CInternetSession](../mfc/reference/cinternetsession-class.md)並[CFtpConnection](../mfc/reference/cftpconnection-class.md)物件。 請注意，這些 MFC WinInet 類別實際上並控制 proxy 型別設定;IIS 負責。
-
-此外，請參閱下列知識庫文章：
-
-- 如何： FTP 與 CERN 型 Proxy 使用 WinInet API (發行項識別碼： Q166961)
-
-- 範例： FTP 與 CERN 密碼保護的 Proxy (發行項識別碼： Q216214)
-
-- 網際網路服務管理員就會失敗，以顯示已安裝的 Proxy 服務 (發行項識別碼： Q216802)
 
 下表顯示的步驟，您可能會在一般 FTP 用戶端應用程式中執行。
 

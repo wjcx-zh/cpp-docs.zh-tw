@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e1f22b0206499b227b8b7812e004e46f565d803a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 87ef1c3f3867b7cd5890a29db3a8c45300ebdd58
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105410"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083394"
 ---
 # <a name="cutlprops-class"></a>CUtlProps 類別
 
@@ -132,7 +132,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 陣列中的索引屬性集;如果只有一個屬性組，則為零。  
   
 *pDBProp*<br/>
-中的新值與屬性 ID [DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\))結構。  
+中的新值與屬性 ID [DBPROP](/previous-versions/windows/desktop/ms717970)結構。  
   
 ### <a name="return-value"></a>傳回值  
 
@@ -194,7 +194,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 陣列中的索引屬性集;如果只有一個屬性組，則為零。  
   
 *pDBProp*<br/>
-中的新值與屬性 ID [DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\))結構。  
+中的新值與屬性 ID [DBPROP](/previous-versions/windows/desktop/ms717970)結構。  
   
 ### <a name="return-value"></a>傳回值  
 

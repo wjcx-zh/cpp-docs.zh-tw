@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f421624f16a11f02dc260ce95a9d2cf11fcd9fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 734f9f66a37828b1fed04fc5366dd545e6c5e370
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399128"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082185"
 ---
 # <a name="using-cobject"></a>使用 CObject
 
@@ -41,7 +41,7 @@ ms.locfileid: "46399128"
 
 - [動態建立物件](../mfc/dynamic-object-creation.md)
 
-- [傾印物件的資料，供診斷之用](/previous-versions/visualstudio/visual-studio-2010/sc15kz85\(v=vs.100\))
+- [傾印物件的資料，供診斷之用](/previous-versions/visualstudio/visual-studio-2010/sc15kz85)
 
 - 驗證物件的內部狀態 (請參閱[MFC ASSERT_VALID 和 CObject::AssertValid](reference/diagnostic-services.md#assert_valid))
 

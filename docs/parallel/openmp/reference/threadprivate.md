@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9313934744f6eae66736f25b0d0b8592743cf12
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b769b5aa5f46b9a4b815424a0c4178cf4504ab5
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376976"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082432"
 ---
 # <a name="threadprivate"></a>threadprivate
 
@@ -46,7 +46,7 @@ ms.locfileid: "46376976"
 
 `threadprivate`指示詞根據[執行緒](../../../cpp/thread.md)`__declspec`屬性，限制 **__declspec （thread)** 套用至`threadprivate`。
 
-您無法使用`threadprivate`中將會透過載入的任何 DLL [LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175)。  這包括已用載入的 Dll [/DELAYLOAD （延遲載入匯入）](../../../build/reference/delayload-delay-load-import.md)，這也會使用**LoadLibrary**。
+您無法使用`threadprivate`中將會透過載入的任何 DLL [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)。  這包括已用載入的 Dll [/DELAYLOAD （延遲載入匯入）](../../../build/reference/delayload-delay-load-import.md)，這也會使用**LoadLibrary**。
 
 您可以使用`threadprivate`在程序啟動時以靜態方式載入的 DLL 中。
 

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca2d98898c232cdb65d3ac5d1288b06aca403772
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1138a675d64561a2e8399accd93c4ebb5eff382d
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398114"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083855"
 ---
 # <a name="memory-management-frame-allocation"></a>記憶體管理：框架配置
 
@@ -47,7 +47,7 @@ ms.locfileid: "46398114"
 
 當物件定義為框架變數時，會自動在遇到這個定義的點叫用其建構函式。 當物件超出範圍時，會在回收物件的記憶體之前自動叫用其解構函式。 此自動建構和解構非常方便使用，不過您必須留意自動呼叫，尤其是對解構函式。
 
-在框架上配置物件的主要優點是會自動刪除。 當您在框架上配置物件時，您不必擔心流失的物件會導致記憶體流失  (如需記憶體流失的詳細資訊，請參閱文章[在 MFC 偵測記憶體流失](/previous-versions/visualstudio/visual-studio-2010/c99kz476\(v=vs.100\))。)框架配置的缺點是框架變數無法在其範圍之外使用。 在選擇框架配置或堆積配置時需要考量的另一個因素是，對於大型結構和物件而言，使用堆積通常比儲存體堆疊更為適合，因為堆疊空間通常是有限的。
+在框架上配置物件的主要優點是會自動刪除。 當您在框架上配置物件時，您不必擔心流失的物件會導致記憶體流失  (如需記憶體流失的詳細資訊，請參閱文章[在 MFC 偵測記憶體流失](/previous-versions/visualstudio/visual-studio-2010/c99kz476)。)框架配置的缺點是框架變數無法在其範圍之外使用。 在選擇框架配置或堆積配置時需要考量的另一個因素是，對於大型結構和物件而言，使用堆積通常比儲存體堆疊更為適合，因為堆疊空間通常是有限的。
 
 ## <a name="see-also"></a>另請參閱
 

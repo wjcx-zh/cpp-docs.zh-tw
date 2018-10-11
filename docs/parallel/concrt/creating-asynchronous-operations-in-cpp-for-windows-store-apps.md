@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3461c4965dd40d0aecc7515185592a13f30c08c9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4014d0d7cea999c105a5ee513d9dd1be410546f4
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422998"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084070"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>為 UWP 應用程式，建立 c + + 中的非同步作業
 
@@ -61,7 +61,7 @@ Windows 執行階段是可用來建立只在特殊作業系統環境中執行的
 
 藉由使用 Windows 執行階段，您可以使用各種程式設計語言的最佳功能，並將它們結合到單一應用程式。 例如，您可能在 JavaScript 中建立 UI，並且在 C++ 元件中執行密集運算的應用程式邏輯。 在背景執行這些密集運算作業的能力，就是讓 UI 保持回應的主要因素。 因為`task`類別是 c + + 專屬，您必須使用 Windows 執行階段介面進行通訊 （這可能以 c + + 以外的語言撰寫） 的其他元件的非同步作業。 Windows 執行階段會提供您可用來表示非同步作業的四個介面：
 
-[Iasyncaction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)<br/>
+[Windows::Foundation::IAsyncAction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)<br/>
 表示非同步動作。
 
 [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)<br/>
@@ -113,7 +113,7 @@ Windows 執行階段是可用來建立只在特殊作業系統環境中執行的
 
 [!code-cpp[concrt-windowsstore-primes#2](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_3.cpp)]
 
-每個方法會先執行驗證，以確保輸入的參數為非負數。 如果輸入的值為負數，方法會擲回[platform:: invalidargumentexception](https://msdn.microsoft.com/library/windows/apps/hh755794\(v=vs.110\).aspx)。 本結稍後將說明錯誤處理。
+每個方法會先執行驗證，以確保輸入的參數為非負數。 如果輸入的值為負數，方法會擲回 [Platform::InvalidArgumentException](https://msdn.microsoft.com/library/windows/apps/hh755794.aspx)。 本結稍後將說明錯誤處理。
 
 若要使用這些方法，從 UWP 應用程式，請使用 Visual C#**空白應用程式 (XAML)** 範本將另一個專案加入至 Visual Studio 方案。 這個範例會將專案命名為 `Primes`。 然後從 `Primes` 專案中，新增 `PrimesLibrary` 專案的參考。
 
@@ -136,7 +136,7 @@ Windows 執行階段是可用來建立只在特殊作業系統環境中執行的
 
 ![Windows 執行階段 Primes 應用程式](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")
 
-如需範例，使用`create_async`若要建立可供其他語言的非同步工作，請參閱[使用 c + + 在 Bing 地圖服務路線最佳化程式範例](https://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx)和[c + +，PPL與Windows8非同步作業](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
+如需使用 `create_async` 建立可供其他語言使用之非同步工作的範例，請參閱 [在 Bing 地圖服務路線最佳化程式範例中使用 C++](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) 和 [Windows 8 Asynchronous Operations in C++ with PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d)(使用 C++ 和 PPL 的 Windows 8 非同步作業)。
 
 ##  <a name="exethread"></a> 控制執行緒
 
@@ -166,7 +166,7 @@ Windows 執行階段會使用 COM 執行緒模型。 在這個模型中，物件
 
 ##  <a name="example-app"></a> 範例： 控制使用 c + + 和 XAML 的 Windows 執行階段應用程式中執行
 
-假設有一個 C++ XAML 應用程式，它會從硬碟讀取檔案、尋找該檔案中最常見的字詞，然後在 UI 中顯示結果。 若要建立此應用程式，首先，在 Visual Studio 中，建立**空白應用程式 (通用 Windows)** 專案，然後將它命名為`CommonWords`。 在您的應用程式資訊清單中指定 [ **文件庫** ] 功能，讓應用程式能夠存取 [我的文件] 資料夾。 另外在應用程式資訊清單的宣告區段中加入 [文字 (.txt)] 檔案類型。 如需有關應用程式功能和宣告的詳細資訊，請參閱 <<c0> [ 應用程式套件與部署](https://msdn.microsoft.com/library/windows/apps/hh464929.aspx)。
+假設有一個 C++ XAML 應用程式，它會從硬碟讀取檔案、尋找該檔案中最常見的字詞，然後在 UI 中顯示結果。 若要建立此應用程式，首先，在 Visual Studio 中，建立**空白應用程式 (通用 Windows)** 專案，然後將它命名為`CommonWords`。 在您的應用程式資訊清單中指定 [ **文件庫** ] 功能，讓應用程式能夠存取 [我的文件] 資料夾。 另外在應用程式資訊清單的宣告區段中加入 [文字 (.txt)] 檔案類型。 如需應用程式功能和宣告的詳細資訊，請參閱 [應用程式套件與部署 (Windows 執行階段應用程式)](https://msdn.microsoft.com/library/windows/apps/hh464929.aspx)。
 
 將 MainPage.xaml 中的 `Grid` 項目更新，以包含 `ProgressRing` 項目和 `TextBlock` 項目。 `ProgressRing` 會指出作業正在進行，而 `TextBlock` 會顯示計算的結果。
 

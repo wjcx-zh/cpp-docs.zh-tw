@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6fb948efd63a8392661cc38a80393bc90d5e694
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 163ef22563141b9365bc2c086870877c7ad2bf00
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396444"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083589"
 ---
 # <a name="run-time-object-model-services"></a>執行階段物件模型服務
 
@@ -92,7 +92,7 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 
 ### <a name="remarks"></a>備註
 
-使用這個巨集來判斷是否通用控制項程式庫函式所指定*proc* (而不是呼叫[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212)。
+使用這個巨集來判斷是否通用控制項程式庫函式所指定*proc* (而不是呼叫[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)。
 
 ### <a name="requirements"></a>需求
 
@@ -119,7 +119,7 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 
 ### <a name="remarks"></a>備註
 
-使用這個巨集來判斷是否通用控制項程式庫函式所指定*proc* (而不是呼叫[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212)。 這個巨集就 AFX_COMCTL32_IF_EXISTS 的 Unicode 版本。
+使用這個巨集來判斷是否通用控制項程式庫函式所指定*proc* (而不是呼叫[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)。 這個巨集就 AFX_COMCTL32_IF_EXISTS 的 Unicode 版本。
 
 ### <a name="requirements"></a>需求
 

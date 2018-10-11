@@ -63,16 +63,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 41636a0ff93a247b33c3d7fb7c13a65c05e1aa1d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5f04104aadc2897118a402a06d93db27a5a16079
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46041463"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082809"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl 類別
 
-提供實作[ICommand](/previous-versions/windows/desktop/ms709737\(v=vs.85\))介面。  
+提供實作[ICommand](/previous-versions/windows/desktop/ms709737)介面。  
   
 ## <a name="syntax"></a>語法
 
@@ -130,7 +130,7 @@ STDMETHOD(Cancel)();
   
 ### <a name="remarks"></a>備註  
 
-請參閱[ICommand::Cancel](/previous-versions/windows/desktop/ms714402\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+請參閱[ICommand::Cancel](/previous-versions/windows/desktop/ms714402)中*OLE DB 程式設計人員參考*。  
 
 ## <a name="cancelexecution"></a> Icommandimpl:: Cancelexecution
 
@@ -189,7 +189,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 
 若要建立多個資料列集，或提供您自己的建立不同的資料列集的條件，將不同的呼叫置於`CreateRowset`內在`Execute`。  
   
-請參閱[icommand:: Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\))在*OLE DB 程式設計人員參考。*  
+請參閱[icommand:: Execute](/previous-versions/windows/desktop/ms718095)在*OLE DB 程式設計人員參考。*  
 
 ## <a name="execute"></a> Icommandimpl:: Execute
 
@@ -207,7 +207,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
   
 #### <a name="parameters"></a>參數  
 
-請參閱[icommand:: Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+請參閱[icommand:: Execute](/previous-versions/windows/desktop/ms718095)中*OLE DB 程式設計人員參考*。  
   
 ### <a name="remarks"></a>備註  
 
@@ -228,7 +228,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
   
 #### <a name="parameters"></a>參數  
 
-請參閱[ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+請參閱[ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622)中*OLE DB 程式設計人員參考*。  
   
 ### <a name="remarks"></a>備註  
 

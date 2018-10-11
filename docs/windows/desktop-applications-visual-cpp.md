@@ -13,18 +13,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d4f44e3587e9b274bbe89e2fa4f91accadb08ab
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 991e3e74ba280b615d951c12472de46833b7de72
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688255"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083342"
 ---
 # <a name="desktop-applications-visual-c"></a>桌面應用程式 （Visual c + +）
 
 A*桌面應用程式*c + + 中是可以存取 Windows Api 和系統主控台或視窗中的任一個執行一組完整的原生應用程式。 （雖然不會再正式支援的 Windows XP，而且有許多從那時起已引進的 Windows Api），可以在 Windows XP 到 Windows 10 上執行 c + + 的桌面應用程式。
 
-桌面應用程式有所區別的通用 Windows 平台 (UWP) 應用程式，可在執行 Windows 10 電腦上以及 XBox、 Windows Phone、 Surface Hub 和其他裝置上執行。 如需桌面的 vs 的詳細資訊。UWP 應用程式，請參閱[選擇您的技術](https://msdn.microsoft.com/library/windows/desktop/dn614993\(v=vs.85\).aspx)。
+桌面應用程式有所區別的通用 Windows 平台 (UWP) 應用程式，可在執行 Windows 10 電腦上以及 XBox、 Windows Phone、 Surface Hub 和其他裝置上執行。 如需桌面的 vs 的詳細資訊。UWP 應用程式，請參閱[選擇您的技術](https://msdn.microsoft.com/library/windows/desktop/dn614993)。
 
 
 ### <a name="desktop-bridge"></a>傳統型橋接器
@@ -35,7 +35,7 @@ A*桌面應用程式*c + + 中是可以存取 Windows Api 和系統主控台或�
 
 ### <a name="terminology"></a>用語
 
-- A *Win32*應用程式是 Windows 桌面應用程式，可讓 c + + 中的使用原生[Windows C Api 及/或 COM Api](https://msdn.microsoft.com/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT 和標準程式庫 Api，以及第 3 個廠商程式庫。 在視窗中執行的 Win32 應用程式會要求開發人員明確地使用 Windows 程序函式內的 Windows 訊息。 名稱，即使 Win32 應用程式可以編譯為 32 位元 (x86) 或 64 位元 (x64) 二進位。 在 Visual Studio IDE 中，Win32 與條款 x86 的意義相同。
+- A *Win32*應用程式是 Windows 桌面應用程式，可讓 c + + 中的使用原生[Windows C Api 及/或 COM Api](https://msdn.microsoft.com/library/windows/desktop/ff818516) CRT 和標準程式庫 Api，以及第 3 個廠商程式庫。 在視窗中執行的 Win32 應用程式會要求開發人員明確地使用 Windows 程序函式內的 Windows 訊息。 名稱，即使 Win32 應用程式可以編譯為 32 位元 (x86) 或 64 位元 (x64) 二進位。 在 Visual Studio IDE 中，Win32 與條款 x86 的意義相同。
 
 - [元件物件模型 (COM)](/windows/desktop/com/the-component-object-model)是一種規格，可讓以與彼此進行通訊的不同語言撰寫的程式。 許多 Windows 元件會實作為 COM 物件，並遵循標準的 COM 規則，以便建立物件，探索和物件解構的介面。  使用來自 c + + 的桌面應用程式的 COM 物件方法很簡單，但更進階撰寫您自己的 COM 物件。 [Active Template Library (ATL)](../atl/atl-com-desktop-components.md)提供巨集和簡化 COM 開發的協助程式函式。
 

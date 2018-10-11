@@ -50,16 +50,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4f44d43d48f862ca2ca5465d5ea9ee44d0e9040e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b799b0383316c212ff2d2cd12ccac9b2b14dce0b
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46072416"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082588"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl 類別
 
-提供實作[IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\))介面。  
+提供實作[IDBInitialize](/previous-versions/windows/desktop/ms713706)介面。  
   
 ## <a name="syntax"></a>語法
 
@@ -129,7 +129,7 @@ STDMETHOD(Initialize)(void);
   
 ### <a name="remarks"></a>備註  
 
-請參閱[idbinitialize:: Initialize](/previous-versions/windows/desktop/ms718026\(v=vs.85\))中*OLE DB 程式設計人員參考*。 
+請參閱[idbinitialize:: Initialize](/previous-versions/windows/desktop/ms718026)中*OLE DB 程式設計人員參考*。 
 
 ## <a name="uninitialize"></a> Idbinitializeimpl:: Uninitialize
 
@@ -143,7 +143,7 @@ STDMETHOD(Uninitialize)(void);
   
 ### <a name="remarks"></a>備註  
 
-請參閱[Uninitialize](/previous-versions/windows/desktop/ms719648\(v=vs.85\))中*OLE DB 程式設計人員參考*。
+請參閱[Uninitialize](/previous-versions/windows/desktop/ms719648)中*OLE DB 程式設計人員參考*。
 
 ## <a name="dwstatus"></a> Idbinitializeimpl:: M_dwstatus
 

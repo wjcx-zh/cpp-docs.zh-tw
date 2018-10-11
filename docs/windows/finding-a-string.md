@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1e331401a3a2a789b13bc21b76c9b1cbfcb30e33
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 308e84a84c39399c93d270ba4662b3b0f593e42d
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318496"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082484"
 ---
 # <a name="finding-a-string-resource-c"></a>尋找字串資源 （c + +）
 
@@ -47,7 +47,7 @@ ms.locfileid: "44318496"
    > [!TIP]
    > 若要搜尋檔案時，請使用規則運算式，使用**檔案中尋找**命令。 輸入的規則運算式比對模式，或按一下右邊的按鈕**Find What**方塊，以顯示規則搜尋運算式的清單。 當您從這份清單中選取運算式時，它會替換成索引中的搜尋文字**Find What**  方塊中。 如果您使用規則運算式，請務必**使用： 規則運算式**選取核取方塊。
 
-如需將資源加入 managed 專案 （其為目標的通用語言執行平台） 的資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[逐步解說： 當地語系化 Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3\(v=vs.100\))。
+如需將資源加入 managed 專案 （其為目標的通用語言執行平台） 的資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[逐步解說： 當地語系化 Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3)。
 
 ## <a name="requirements"></a>需求
 

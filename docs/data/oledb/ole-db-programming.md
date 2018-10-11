@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 99d647e2e5a98c7e4c4433baaface66d1f987b32
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3ed6610f71561a62d3ff99a794bb166bdcabd3d3
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46073665"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083511"
 ---
 # <a name="ole-db-programming"></a>OLE DB 程式設計
 
@@ -40,7 +40,7 @@ Visual C++ 也支援精靈建立 OLE DB 起始應用程式。
 |使用 OLE DB 提供者範本 (概念性主題)|[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)|  
 |OLE DB 範本類別和巨集|[OLE DB 範本參考](../../data/oledb/ole-db-templates.md)（Visual c + +）|  
 |OLE DB 取用者屬性|[OLE DB 消費者屬性](../../windows/ole-db-consumer-attributes.md)|  
-|OLE DB 介面|[OLE DB 程式設計人員參考](/previous-versions/windows/desktop/ms713643\(v=vs.85\))（在 Windows SDK)|  
+|OLE DB 介面|[OLE DB 程式設計人員參考](/previous-versions/windows/desktop/ms713643)（在 Windows SDK)|  
 |OLE DB 範本範例|[OLE DB 範本範例](https://github.com/Microsoft/VCSamples)| 
 |資料存取程式設計概觀 (Visual C++)|[資料存取程式設計](../../data/data-access-programming-mfc-atl.md)|  
 |ODBC 概念性主題|[開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|  

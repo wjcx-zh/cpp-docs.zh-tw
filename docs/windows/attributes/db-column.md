@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42545b24bff14daf66f719a78ba414f1ae86c5c0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 52b5c5bea282e4ebb4106d8e9c2fede40f375ae3
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790934"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083604"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -45,23 +45,23 @@ ms.locfileid: "48790934"
 ```
 
 *dbtype*<br/>
-（選擇性）OLE DB[型別指示器](/previous-versions/windows/desktop/ms711251\(v=vs.85\))的資料行項目。
+（選擇性）OLE DB[型別指示器](/previous-versions/windows/desktop/ms711251)的資料行項目。
 
 *precision*<br/>
-（選擇性）要用於資料行項目有效位數。 如需詳細資訊，請參閱說明`bPrecision`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+（選擇性）要用於資料行項目有效位數。 如需詳細資訊，請參閱說明`bPrecision`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845)
 
 *小數位數*<br/>
-（選擇性）要用於資料行項目小數位數。 如需詳細資訊，請參閱說明`bScale`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+（選擇性）要用於資料行項目小數位數。 如需詳細資訊，請參閱說明`bScale`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845)
 
 *status*<br/>
-（選擇性）成員變數，用來保存此資料行的狀態。 狀態會指出資料行的值是資料值或其他值，例如 NULL。 如需可能的值，請參閱[狀態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程式設計人員參考*。
+（選擇性）成員變數，用來保存此資料行的狀態。 狀態會指出資料行的值是資料值或其他值，例如 NULL。 如需可能的值，請參閱[狀態](/previous-versions/windows/desktop/ms722617)中*OLE DB 程式設計人員參考*。
 
 *length*<br/>
 （選擇性）成員變數，用來保存資料行的大小，以位元組為單位。
 
 ## <a name="remarks"></a>備註
 
-**db_column**將指定的資料表資料行繫結至資料列中的變數。 它會分隔可以參與 OLE DB 中的成員資料`IAccessor`為基礎的繫結。 這個屬性會設定通常使用的 OLE DB 取用者巨集來定義資料行對應[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)， [END_COLUMN_MAP](../../data/oledb/end-column-map.md)，並[COLUMN_ENTRY](../../data/oledb/column-entry.md)。 這些操作 OLE DB [DBBINDING 結構](/previous-versions/windows/desktop/ms716845\(v=vs.85\))繫結指定的資料行。 您將標記與每個成員**db_column**屬性會佔用的資料行項目表單中的資料行對應中的一個項目。 因此，您呼叫這個屬性會放置資料行對應，也就是命令或資料表類別中。
+**db_column**將指定的資料表資料行繫結至資料列中的變數。 它會分隔可以參與 OLE DB 中的成員資料`IAccessor`為基礎的繫結。 這個屬性會設定通常使用的 OLE DB 取用者巨集來定義資料行對應[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)， [END_COLUMN_MAP](../../data/oledb/end-column-map.md)，並[COLUMN_ENTRY](../../data/oledb/column-entry.md)。 這些操作 OLE DB [DBBINDING 結構](/previous-versions/windows/desktop/ms716845)繫結指定的資料行。 您將標記與每個成員**db_column**屬性會佔用的資料行項目表單中的資料行對應中的一個項目。 因此，您呼叫這個屬性會放置資料行對應，也就是命令或資料表類別中。
 
 使用**db_column**是搭配[db_table](db-table.md)或是[db_command](db-command.md)屬性。
 
@@ -120,7 +120,7 @@ class CProducts {
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 

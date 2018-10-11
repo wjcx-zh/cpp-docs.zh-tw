@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ddfd6de46d6d0700265f5308f06458b3cdd984a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: b2870aa742806671e39728c3b73604dcf4e810e9
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677823"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083082"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>使用 C++ 設計 Windows 應用程式概觀
 
@@ -54,11 +54,11 @@ UWP 應用程式就能夠執行所有的 Windows 10 裝置如平板電腦和行�
 
 如需 UWP 的詳細資訊在一般情況下，請參閱[通用 Windows 平台 (UWP) 應用程式是什麼？](/windows/uwp/get-started/whats-a-uwp)。
 
-如需所有這些概念的詳細資訊，請參閱[Windows 通用應用程式指南](http://go.microsoft.com/fwlink/p/?linkid=534605)。
+如需所有這些概念的詳細資訊，請參閱 [Windows 通用應用程式指南](http://go.microsoft.com/fwlink/p/?linkid=534605)。
 
 ##  <a name="BK_Native"></a> 桌面和伺服器應用程式
 
-若要了解撰寫適用於桌上型電腦的 Windows 用戶端應用程式的基本概念，請參閱[c + + 開發 Windows 應用程式](https://msdn.microsoft.com/vstudio//hh304489)並[簡介 c + + Windows 程式設計](https://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx)。
+若要了解為桌上型電腦撰寫 Windows 用戶端應用程式的基本概念，請參閱 [Developing Windows Applications in C++](https://msdn.microsoft.com/vstudio//hh304489) (使用 C++ 開發 Windows 應用程式) 和 [Introduction to Windows Programming in C++](https://msdn.microsoft.com/library/windows/desktop/ff381398)(使用 C++ 進行 Windows 程式設計的簡介)。
 
 在 Windows 10 中，您可以使用 Visual c + + 建立各式各樣的桌面程式：
 
@@ -68,7 +68,7 @@ UWP 應用程式就能夠執行所有的 Windows 10 裝置如平板電腦和行�
 
 - 企業和營運的.NET Framework 上執行的應用程式。 大部分的.NET Framework 應用程式是以 C# 或 Visual Basic 撰寫的。 您可以使用 C + + /cli CLI 來建立可讓.NET 程式碼使用原生 c + + 程式庫的 interop 圖層。 如需詳細資訊，請參閱 < [.NET 程式設計使用 C + + /cli （Visual c + +）](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)。
 
-- 以機器碼執行的 SQL 資料庫用戶端。 如需詳細資訊，請參閱 < [SQL Server Native Client](/sql/relational-databases/native-client/odbc/sql-server-native-client-odbc)。
+- 以機器碼執行的 SQL 資料庫用戶端。 如需詳細資訊，請參閱 [SQL Server Native Client](/sql/relational-databases/native-client/odbc/sql-server-native-client-odbc)。
 
 - Microsoft Office 應用程式的增益集。 如需詳細資訊，請參閱 [Building a C++ Add-in for Outlook 2010](http://go.microsoft.com/fwlink/p/?LinkId=256420)(建置 Outlook 2010 的 C++ 增益集)
 
@@ -76,7 +76,7 @@ UWP 應用程式就能夠執行所有的 Windows 10 裝置如平板電腦和行�
 
 - Windows 服務 如需詳細資訊，請參閱 [Introduction to Windows Service Applications](/dotnet/framework/windows-services/introduction-to-windows-service-applications)。
 
-您可以使用 Visual C++ 將幾乎任何類型的自訂高效能功能包裝成 Win32 DLL，或可由 C++ 應用程式或以其他語言 (例如 C# 或 Visual Basic) 所撰寫的應用程式使用的 COM DLL。 如需 WIn32 DLL 的詳細資訊，請參閱 [DLLs in Visual C++](../build/dlls-in-visual-cpp.md)。 如需開發 COM 的詳細資訊，請參閱[元件物件模型 (COM)](/windows/desktop/com/component-object-model--com--portal)。
+您可以使用 Visual C++ 將幾乎任何類型的自訂高效能功能包裝成 Win32 DLL，或可由 C++ 應用程式或以其他語言 (例如 C# 或 Visual Basic) 所撰寫的應用程式使用的 COM DLL。 如需 WIn32 DLL 的詳細資訊，請參閱 [DLLs in Visual C++](../build/dlls-in-visual-cpp.md)。 如需開發 COM 的詳細資訊，請參閱 [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal)。
 
 ## <a name="games"></a>遊戲
 

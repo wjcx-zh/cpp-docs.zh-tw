@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc8fbe595259b0f5e59d3ac844710222042540c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 68211c3807893d28adb5e90e8863967b7f60318f
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206064"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083563"
 ---
 # <a name="mktime-mktime32-mktime64"></a>mktime、_mktime32、_mktime64
 
@@ -93,7 +93,7 @@ __time64_t _mktime64(
 
 - 小於 0 的值，使 C 執行階段程式庫程式碼計算標準時間或日光節約時間是否生效。
 
-C 執行階段程式庫會從 [TZ](tzset.md) 環境變數判斷日光節約時間行為。 如果**TZ**未設定，Win32 API 呼叫[GetTimeZoneInformation](https://msdn.microsoft.com/library/windows/desktop/ms724421.aspx)用來從作業系統取得日光節約時間資訊。 若此作業失敗，程式庫會在實作日光節約時間的計算時，假定使用美國的規則。 **tm_isdst**  是必要的欄位。 若無設定，該值會是未定義，而且這些函式的傳回值會無法預期。 如果*timeptr*指向**tm**先前呼叫所傳回的結構[asctime](asctime-wasctime.md)， [gmtime](gmtime-gmtime32-gmtime64.md)，或[localtime](localtime-localtime32-localtime64.md)（或這些函式的變體）， **tm_isdst**欄位包含正確的值。
+C 執行階段程式庫會從 [TZ](tzset.md) 環境變數判斷日光節約時間行為。 如果**TZ**未設定，Win32 API 呼叫[GetTimeZoneInformation](/windows/desktop/api/timezoneapi/nf-timezoneapi-gettimezoneinformation)用來從作業系統取得日光節約時間資訊。 若此作業失敗，程式庫會在實作日光節約時間的計算時，假定使用美國的規則。 **tm_isdst**  是必要的欄位。 若無設定，該值會是未定義，而且這些函式的傳回值會無法預期。 如果*timeptr*指向**tm**先前呼叫所傳回的結構[asctime](asctime-wasctime.md)， [gmtime](gmtime-gmtime32-gmtime64.md)，或[localtime](localtime-localtime32-localtime64.md)（或這些函式的變體）， **tm_isdst**欄位包含正確的值。
 
 請注意， **gmtime**並**localtime** (並 **_gmtime32**， **_gmtime64**， **_localtime32**，及 **_localtime64**) 使用單一的緩衝區，每個執行緒來進行轉換。 如果您提供此緩衝區**mktime**， **_mktime32**或是 **_mktime64**，先前的內容會遭到銷毀。
 

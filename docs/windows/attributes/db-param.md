@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dda702a9c9df9662dc6ca3c38143853e8a407f43
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 153e1bba37b10da64b394c48ee1cf8c059ae86e9
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790655"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083018"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -49,16 +49,16 @@ ms.locfileid: "48790655"
 - DBPARAMIO_NOTPARAM 存取子沒有任何參數。 設定`eParamIO`為此值在資料列存取子會提醒使用者參數被忽略。
 
 *dbtype*<br/>
-（選擇性）OLE DB[型別指示器](/previous-versions/windows/desktop/ms711251\(v=vs.85\))的資料行項目。
+（選擇性）OLE DB[型別指示器](/previous-versions/windows/desktop/ms711251)的資料行項目。
 
 *precision*<br/>
-（選擇性）要用於資料行項目有效位數。 如需詳細資訊，請參閱說明`bPrecision`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+（選擇性）要用於資料行項目有效位數。 如需詳細資訊，請參閱說明`bPrecision`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845)
 
 *小數位數*<br/>
-（選擇性）要用於資料行項目小數位數。 如需詳細資訊，請參閱說明`bScale`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+（選擇性）要用於資料行項目小數位數。 如需詳細資訊，請參閱說明`bScale`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845)
 
 *status*<br/>
-（選擇性）成員變數，用來保存此資料行的狀態。 狀態會指出資料行的值是資料值或其他值，例如 NULL。 如需可能的值，請參閱[狀態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程式設計人員參考*。
+（選擇性）成員變數，用來保存此資料行的狀態。 狀態會指出資料行的值是資料值或其他值，例如 NULL。 如需可能的值，請參閱[狀態](/previous-versions/windows/desktop/ms722617)中*OLE DB 程式設計人員參考*。
 
 *length*<br/>
 （選擇性）成員變數，用來保存資料行的大小，以位元組為單位。
@@ -124,7 +124,7 @@ struct CSalesbyYear {
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 

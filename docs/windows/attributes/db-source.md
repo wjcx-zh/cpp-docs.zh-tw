@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0fa55ba0193f24acdf308888c3ec505c33003292
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 11a58511684a58ebb0b8ec13138bfbdb7afa4729
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790643"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081899"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -37,7 +37,7 @@ ms.locfileid: "48790643"
 ### <a name="parameters"></a>參數
 
 *db_source*<br/>
-用來連接到資料來源連接字串。 如需連接字串的格式，請參閱[連接字串和資料連結](/previous-versions/windows/desktop/ms718376\(v=vs.85\))在 Microsoft Data Access Components (MDAC) SDK。
+用來連接到資料來源連接字串。 如需連接字串的格式，請參閱[連接字串和資料連結](/previous-versions/windows/desktop/ms718376)在 Microsoft Data Access Components (MDAC) SDK。
 
 *name*<br/>
 （選擇性）當您使用**db_source**類別中上,*名稱*是具有資料來源物件的執行個體**db_source**套用屬性 （請參閱範例 1）。 當您使用**db_source**在方法實作中，內嵌*名稱*是一個變數 （本機方法），可用來存取資料來源 （請參閱範例 2）。 您傳遞這*名稱*要*source_name*參數`db_command`命令相關聯的資料來源。
@@ -88,7 +88,7 @@ class CMyCommand {};
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 

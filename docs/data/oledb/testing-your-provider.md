@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d175216fedb2e6a9139d970fc7696672576f7423
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 04687ed080013d9ae96a11eda32e060c02c61dec
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042893"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081977"
 ---
 # <a name="testing-your-provider"></a>測試提供者
 
@@ -32,7 +32,7 @@ ms.locfileid: "46042893"
   
 1. 測試使用與 ADO 撰寫的取用者應用程式的提供者。 大部分的開發人員 （特別是 Microsoft Visual Basic 和 Microsoft C# 開發人員） 會使用 ADO 或 ADO.NET 取用者應用程式。 測試取用者應該涵蓋您的提供者的所有功能區域。 如需 ADO 取用者應用程式的範例，請參閱 < [Microsoft Visual Basic 中的 ADO 程式碼範例](https://msdn.microsoft.com/library/ms807514.aspx)。  
   
-1. 執行 OLE DB 一致性測試 （包括 ADO 一致性測試），以確保您的提供者符合 OLE DB 提供者層級 0 的標準。 (如需層級 0 的說明，搜尋 「 OLE DB 層級 0 一致性測試 」 在[OLE DB 程式設計人員指南](/previous-versions/windows/desktop/ms713643\(v=vs.85\))。 這些測試與相關聯的文件會包含使用 Data Access SDK 中的 Visual c + +。 這些測試也有助於確保您的提供者執行其他彙總時，也[服務提供者](../../data/oledb/ole-db-resource-pooling-and-services.md)時特別有用，如果您修改或新增屬性。 如需有關一致性測試的詳細資訊，請參閱 Data Access SDK，位於其中一個 Visual Studio Cd 上讀我檔案。  
+1. 執行 OLE DB 一致性測試 （包括 ADO 一致性測試），以確保您的提供者符合 OLE DB 提供者層級 0 的標準。 (如需層級 0 的說明，搜尋 「 OLE DB 層級 0 一致性測試 」 在[OLE DB 程式設計人員指南](/previous-versions/windows/desktop/ms713643)。 這些測試與相關聯的文件會包含使用 Data Access SDK 中的 Visual c + +。 這些測試也有助於確保您的提供者執行其他彙總時，也[服務提供者](../../data/oledb/ole-db-resource-pooling-and-services.md)時特別有用，如果您修改或新增屬性。 如需有關一致性測試的詳細資訊，請參閱 Data Access SDK，位於其中一個 Visual Studio Cd 上讀我檔案。  
   
 ## <a name="see-also"></a>另請參閱  
 

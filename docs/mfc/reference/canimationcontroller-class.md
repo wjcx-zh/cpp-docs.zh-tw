@@ -113,12 +113,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f64fce16201a15936cb97b1961827865c7b917b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2ce23acf1988e88954279f3b8cdbc8fc3c9001af
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446344"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083641"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController 類別
 
@@ -882,7 +882,7 @@ virtual BOOL OnHasPriorityCancel(
 
 ### <a name="remarks"></a>備註
 
-如果您使用 CAnimationController::EnablePriorityComparisonHandler 和指定 UI_ANIMATION_PHT_CANCEL 來啟用優先順序比較事件，則會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。 如需有關衝突管理的閱讀 Windows 動畫 API 文件 (https://msdn.microsoft.com/library/dd371759(VS.85).aspx)。
+如果您使用 CAnimationController::EnablePriorityComparisonHandler 和指定 UI_ANIMATION_PHT_CANCEL 來啟用優先順序比較事件，則會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。 閱讀 Windows 動畫 API 文件，如需詳細資訊[衝突管理](https://msdn.microsoft.com/library/dd371759)。
 
 ##  <a name="onhasprioritycompress"></a>  CAnimationController::OnHasPriorityCompress
 
@@ -912,7 +912,7 @@ virtual BOOL OnHasPriorityCompress(
 
 ### <a name="remarks"></a>備註
 
-如果您使用 CAnimationController::EnablePriorityComparisonHandler 和指定 UI_ANIMATION_PHT_COMPRESS 來啟用優先順序比較事件，則會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。 如需有關衝突管理的閱讀 Windows 動畫 API 文件 (https://msdn.microsoft.com/library/dd371759(VS.85).aspx)。
+如果您使用 CAnimationController::EnablePriorityComparisonHandler 和指定 UI_ANIMATION_PHT_COMPRESS 來啟用優先順序比較事件，則會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。 閱讀 Windows 動畫 API 文件，如需詳細資訊[衝突管理](https://msdn.microsoft.com/library/dd371759)。
 
 ##  <a name="onhaspriorityconclude"></a>  CAnimationController::OnHasPriorityConclude
 
@@ -942,7 +942,7 @@ virtual BOOL OnHasPriorityConclude(
 
 ### <a name="remarks"></a>備註
 
-如果您使用 CAnimationController::EnablePriorityComparisonHandler 和指定 UI_ANIMATION_PHT_CONCLUDE 來啟用優先順序比較事件，則會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。 如需有關衝突管理的閱讀 Windows 動畫 API 文件 (https://msdn.microsoft.com/library/dd371759(VS.85).aspx)。
+如果您使用 CAnimationController::EnablePriorityComparisonHandler 和指定 UI_ANIMATION_PHT_CONCLUDE 來啟用優先順序比較事件，則會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。 閱讀 Windows 動畫 API 文件，如需詳細資訊[衝突管理](https://msdn.microsoft.com/library/dd371759)。
 
 ##  <a name="onhasprioritytrim"></a>  CAnimationController::OnHasPriorityTrim
 
@@ -972,7 +972,7 @@ virtual BOOL OnHasPriorityTrim(
 
 ### <a name="remarks"></a>備註
 
-如果您使用 CAnimationController::EnablePriorityComparisonHandler 和指定 UI_ANIMATION_PHT_TRIM 來啟用優先順序比較事件，則會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。 如需有關衝突管理的閱讀 Windows 動畫 API 文件 (https://msdn.microsoft.com/library/dd371759(VS.85).aspx)。
+如果您使用 CAnimationController::EnablePriorityComparisonHandler 和指定 UI_ANIMATION_PHT_TRIM 來啟用優先順序比較事件，則會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。 閱讀 Windows 動畫 API 文件，如需詳細資訊[衝突管理](https://msdn.microsoft.com/library/dd371759)。
 
 ##  <a name="onstoryboardstatuschanged"></a>  CAnimationController::OnStoryboardStatusChanged
 

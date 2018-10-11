@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 591465ed9c16485498174a710d2d37ff68425058
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3df63cbed5fcb17b01450435aa2d991ca3e0c5a8
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116863"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083914"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc 類別
 
@@ -563,7 +563,7 @@ bool SetControl(
 ### <a name="parameters"></a>參數
 
 *ControlBitsOfInterest*<br/>
-SECURITY_DESCRIPTOR_CONTROL 遮罩，指出若要設定的控制位元。 如需可設定之旗標的清單，請參閱 < [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx)。
+SECURITY_DESCRIPTOR_CONTROL 遮罩，指出若要設定的控制位元。 如需可設定之旗標的清單，請參閱 < [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582)。
 
 *ControlBitsToSet*<br/>
 SECURITY_DESCRIPTOR_CONTROL 遮罩，表示新的值，指定控制位元*ControlBitsOfInterest*遮罩。 這個參數可以是針對列出的旗標的組合*ControlBitsOfInterest*參數。
@@ -574,7 +574,7 @@ SECURITY_DESCRIPTOR_CONTROL 遮罩，表示新的值，指定控制位元*Contro
 
 ### <a name="remarks"></a>備註
 
-這個方法會呼叫[SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx)。
+這個方法會呼叫[SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582)。
 
 ##  <a name="setdacl"></a>  CSecurityDesc::SetDacl
 

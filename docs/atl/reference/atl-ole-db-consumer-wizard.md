@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 163949c4421cca8e4d5e414a18bda4ed98f32d3d
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 2555bdd9c1de130cd692131c12b7b2afc37537be
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861638"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083043"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB 消費者精靈
 
@@ -36,7 +36,7 @@ ms.locfileid: "48861638"
 
 - **資料來源**
 
-   **資料來源**按鈕可讓您設定使用指定的 OLE DB 提供者的指定的資料來源。 當您按一下此按鈕時，**資料連結屬性** 對話方塊隨即出現。 如需有關建置連接字串和**資料連結屬性** 對話方塊中，請參閱[資料連結 API 概觀](/previous-versions/windows/desktop/ms718102\(v=vs.85\))Windows SDK 文件。
+   **資料來源**按鈕可讓您設定使用指定的 OLE DB 提供者的指定的資料來源。 當您按一下此按鈕時，**資料連結屬性** 對話方塊隨即出現。 如需有關建置連接字串和**資料連結屬性** 對話方塊中，請參閱[資料連結 API 概觀](/previous-versions/windows/desktop/ms718102)Windows SDK 文件。
 
    下列的其他資訊將說明中的索引標籤**資料連結屬性** 對話方塊。
 
@@ -177,7 +177,7 @@ ms.locfileid: "48861638"
 
 - **支援**
 
-   選取核取方塊，以指定的取用者 （預設值為 none） 支援的更新類型。 下列各項將會設定[DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892\(v=vs.85\))和適當的項目，如[DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676\(v=vs.85\))屬性中設定對應。
+   選取核取方塊，以指定的取用者 （預設值為 none） 支援的更新類型。 下列各項將會設定[DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892)和適當的項目，如[DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676)屬性中設定對應。
 
    - **變更**
 
@@ -195,4 +195,4 @@ ms.locfileid: "48861638"
 
 [ATL OLE DB 消費者](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
 [使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[連接字串和資料連結 (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))
+[連接字串和資料連結 (OLE DB)](/previous-versions/windows/desktop/ms718376)

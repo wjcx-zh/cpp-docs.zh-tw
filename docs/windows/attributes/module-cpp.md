@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 71ada4927d1a29c2f4d9a95ed93554b0cbffc92d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: e999928e2080796c013107e3bc862d19426dbf88
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790735"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083524"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -57,7 +57,7 @@ ms.locfileid: "48790735"
 程式庫的唯一識別碼。 如果您省略此參數，將會自動產生程式庫的識別碼。 您可能需要擷取*uuid*程式庫區塊，您可以使用識別碼來這麼做 **__uuidof (** *libraryname* **)**。
 
 *lcid*<br/>
-當地語系化參數。 請參閱[lcid](/windows/desktop/Midl/lcid)如需詳細資訊。
+當地語系化參數。 如需詳細資訊，請參閱 [lcid](/windows/desktop/Midl/lcid) 。
 
 *control*<br/>
 （選擇性）指定媒體櫃中的所有 coclass 的控制項。
@@ -66,7 +66,7 @@ ms.locfileid: "48790735"
 指定類型程式庫。
 
 *helpstringdll*<br/>
-（選擇性）設定用來執行文件字串查閱之.dll 檔案的名稱。 請參閱[helpstringdll](/windows/desktop/Midl/helpstringdll)如需詳細資訊。
+（選擇性）設定用來執行文件字串查閱之.dll 檔案的名稱。 如需詳細資訊，請參閱 [helpstringdll](/windows/desktop/Midl/helpstringdll) 。
 
 *helpfile*<br/>
 （選擇性）名稱**協助**型別程式庫的檔案。
@@ -78,10 +78,10 @@ ms.locfileid: "48790735"
 （選擇性）請參閱[helpstringcontext](helpstringcontext.md)如需詳細資訊。
 
 *hidden*<br/>
-（選擇性）避免顯示整個媒體櫃。 此用法是與控制項搭配使用。 主機需要建立新的類型程式庫，以包裝控制項與擴充屬性。 請參閱[隱藏](/windows/desktop/Midl/hidden)MIDL 屬性，如需詳細資訊。
+（選擇性）避免顯示整個媒體櫃。 此用法是與控制項搭配使用。 主機需要建立新的類型程式庫，以包裝控制項與擴充屬性。 如需詳細資訊，請參閱 [hidden](/windows/desktop/Midl/hidden) MIDL 屬性。
 
 *restricted*<br/>
-（選擇性）程式庫成員不能任意呼叫。 請參閱[限制](/windows/desktop/Midl/restricted)MIDL 屬性，如需詳細資訊。
+（選擇性）程式庫成員不能任意呼叫。 如需詳細資訊，請參閱 [restricted](/windows/desktop/Midl/restricted) MIDL 屬性。
 
 *custom*<br/>
 （選擇性）一或多個屬性;這是類似[自訂](custom-cpp.md)屬性。 第一個參數*自訂*是屬性的 GUID。 例如: 
@@ -98,9 +98,9 @@ ms.locfileid: "48790735"
 
 ## <a name="remarks"></a>備註
 
-除非您指定*受限*參數來[emitidl](emitidl.md)，**模組**需要使用 c + + 屬性的任何程式中。
+除非您將 *restricted* 參數指定給 [emitidl](emitidl.md)，否則任何使用 C++ 屬性的程式中都需要 **module** 。
 
-如果，則會建立程式庫區塊除了**模組**屬性，也使用原始程式碼[dispinterface](dispinterface.md)，[雙重](dual.md)，[物件](object-cpp.md)，表示屬性或[coclass](coclass.md)。
+除了 **module** 屬性之外，如果原始程式碼同時使用 [dispinterface](dispinterface.md)、 [dual](dual.md)、 [object](object-cpp.md)或表示 [coclass](coclass.md)的屬性，則會建立程式庫區塊。
 
 一個 .idl 檔案中只允許一個程式庫區塊。 將會合併原始程式碼中的多個模組項目，並實作最新的參數值。
 
@@ -108,15 +108,15 @@ ms.locfileid: "48790735"
 
 - `type` = **dll**
 
-   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md)當成基底類別和標準 DLL 進入點所需的 COM 伺服器。 這些進入點是[DllMain](/windows/desktop/Dlls/dllmain)， [DllRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms682162)， [DllUnRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms691457)， [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)，和[DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891)。
+   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) 是當成基底類別和 COM 伺服器所需的標準 DLL 進入點使用。 這些進入點是 [DllMain](/windows/desktop/Dlls/dllmain)、 [DllRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllregisterserver)、 [DllUnRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver)、 [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)和 [DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891)。
 
 - `type` = **exe**
 
-   [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)當成基底類別和標準可執行檔進入點[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)。
+   [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) 是當成基底類別和標準可執行檔進入點 [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)使用。
 
 - `type` = **service**
 
-   [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md)當成基底類別和標準可執行檔進入點[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)。
+   [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) 是當成基底類別和標準可執行檔進入點 [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)使用。
 
 - `type` = **unspecified**
 
@@ -132,7 +132,7 @@ ms.locfileid: "48790735"
 [module(name="MyLibrary", version="1.2", helpfile="MyHelpFile")];
 ```
 
-下列程式碼示範您可以提供自己的函式實作，而函式會出現在因使用 **module**而插入的程式碼中。 請參閱[/Fx](../../build/reference/fx-merge-injected-code.md)如需檢視插入程式碼的詳細資訊。 若要覆寫 **module** 屬性所插入的其中一個函式，請建立將包含函式實作的類別，並將 **module** 屬性套用至該類別。
+下列程式碼示範您可以提供自己的函式實作，而函式會出現在因使用 **module**而插入的程式碼中。 如需檢視插入程式碼的詳細資訊，請參閱 [/Fx](../../build/reference/fx-merge-injected-code.md) 。 若要覆寫 **module** 屬性所插入的其中一個函式，請建立將包含函式實作的類別，並將 **module** 屬性套用至該類別。
 
 ```cpp
 // cpp_attr_ref_module2.cpp
@@ -168,7 +168,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 

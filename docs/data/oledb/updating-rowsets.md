@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c662099f3e7c42b75dc0cf197117144790f9df1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: be82fb1c1f77ae3204bed54257062f362d286844
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46108348"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083823"
 ---
 # <a name="updating-rowsets"></a>更新資料列集
 
 更新或將資料寫入資料存放區是一種基本資料庫作業。 OLE DB 的更新機制很簡單：您的消費者應用程式會設定繫結資料成員值，接著將這些值寫入資料列集；消費者即可要求提供者更新該資料存放區。  
   
-消費者可以在資料列集資料上執行下列更新類型：設定資料列的資料行值、插入資料列和刪除資料列。 若要執行這些作業，OLE DB 範本類別[CRowset](../../data/oledb/crowset-class.md)實作[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))介面，並覆寫下列介面方法：  
+消費者可以在資料列集資料上執行下列更新類型：設定資料列的資料行值、插入資料列和刪除資料列。 若要執行這些作業，OLE DB 範本類別 [CRowset](../../data/oledb/crowset-class.md) 會實作 [IRowsetChange](/previous-versions/windows/desktop/ms715790) 介面來執行這些動作，並覆寫下列介面方法：  
   
 - [SetData](../../data/oledb/crowset-setdata.md) 可以變更在資料列集中的資料列資料行值；它的作用相當於 SQL UPDATE 命令。  
   
@@ -223,4 +223,4 @@ product.Update();                 // Update row 101 now
 
 [使用 OLE DB 消費者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [CRowset 類別](../../data/oledb/crowset-class.md)<br/>
-[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))
+[IRowsetChange](/previous-versions/windows/desktop/ms715790)

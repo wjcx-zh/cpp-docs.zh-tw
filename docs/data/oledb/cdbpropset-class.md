@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c6d62b8d4b033d1b90c753d5de1752f0cb737f0d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e998f0bed867356218e4a1b1c772d396c53afecb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114653"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082978"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet 類別
 
@@ -138,7 +138,7 @@ bool AddProperty(DWORD dwPropertyID,
 
 ## <a name="cdbpropset"></a> Cdbpropset:: Cdbpropset
 
-建構函式。 初始化`rgProperties`， `cProperties`，並`guidPropertySet`的欄位[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))結構。  
+建構函式。 初始化`rgProperties`， `cProperties`，並`guidPropertySet`的欄位[DBPROPSET](/previous-versions/windows/desktop/ms714367)結構。  
   
 ### <a name="syntax"></a>語法  
   
@@ -171,7 +171,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>參數  
 
 *guid*<br/>
-[in]GUID; 用來設定`guidPropertySet`欄位[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))結構。  
+[in]GUID; 用來設定`guidPropertySet`欄位[DBPROPSET](/previous-versions/windows/desktop/ms714367)結構。  
   
 ### <a name="remarks"></a>備註  
 
@@ -192,5 +192,5 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CDBPropIDSet 類別](../../data/oledb/cdbpropidset-class.md)<br/>
-[DBPROPSET 結構](/previous-versions/windows/desktop/ms714367\(v=vs.85\))   
-[DBPROP 結構](/previous-versions/windows/desktop/ms717970\(v=vs.85\))
+[DBPROPSET 結構](/previous-versions/windows/desktop/ms714367)   
+[DBPROP 結構](/previous-versions/windows/desktop/ms717970)

@@ -46,12 +46,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aa4953c5ba879f5fa0fe8c5b892f91dfa8d15dc9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fb27c7fc401fb27b3677659f4f1b5539c19fda2c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095207"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082692"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow 類別
 
@@ -116,7 +116,7 @@ HRESULT Compare(CSimpleRow* pRow);
   
 ### <a name="return-value"></a>傳回值  
 
-HRESULT 值，通常是 s_ok 時，指出兩個資料列有相同的資料列執行個體，或不同 S_FALSE，指出兩個資料列。 請參閱[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\))中*OLE DB 程式設計人員參考*如需其他可能的傳回值。 
+HRESULT 值，通常是 s_ok 時，指出兩個資料列有相同的資料列執行個體，或不同 S_FALSE，指出兩個資料列。 請參閱[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629)中*OLE DB 程式設計人員參考*如需其他可能的傳回值。 
 
 ## <a name="csimplerow"></a> Csimplerow:: Csimplerow
 

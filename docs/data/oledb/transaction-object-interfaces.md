@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 88b6884ff8543b3aa6ec329330563fbe1ad27b8e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: caf57ab85b7a37b8e43230dc9bcf1caf031f7a78
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071584"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083784"
 ---
 # <a name="transaction-object-interfaces"></a>異動物件介面
 
@@ -36,8 +36,8 @@ ms.locfileid: "46071584"
 |介面|是否為必要項？|實作 OLE DB 範本嗎？|  
 |---------------|---------------|--------------------------------------|  
 |[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|強制|否|  
-|[ITransaction](/previous-versions/windows/desktop/ms723053\(v=vs.85\))|強制|否|  
-|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Optional|否|  
+|[ITransaction](/previous-versions/windows/desktop/ms723053)|強制|否|  
+|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816)|Optional|否|  
   
 ## <a name="see-also"></a>另請參閱  
 

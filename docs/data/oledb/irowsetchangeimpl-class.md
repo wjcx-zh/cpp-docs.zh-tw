@@ -43,16 +43,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3cac23621959fb71247b649171309ec9d12cf35b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0ee351771d56b417396583ef41a96c62ff6bafd
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038731"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082523"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl 類別
 
-OLE DB 樣板實作[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) OLE DB 規格中的介面。  
+OLE DB 樣板實作[IRowsetChange](/previous-versions/windows/desktop/ms715790) OLE DB 規格中的介面。  
   
 ## <a name="syntax"></a>語法
 
@@ -152,7 +152,7 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
   
 #### <a name="parameters"></a>參數  
 
-請參閱[irowsetchange:: Insertrow](/previous-versions/windows/desktop/ms716921\(v=vs.85\))中*OLE DB 程式設計人員參考*。 
+請參閱[irowsetchange:: Insertrow](/previous-versions/windows/desktop/ms716921)中*OLE DB 程式設計人員參考*。 
 
 ## <a name="setdata"></a> Irowsetchangeimpl:: Setdata
 
@@ -168,7 +168,7 @@ STDMETHOD (SetData )(HROW hRow,
   
 #### <a name="parameters"></a>參數  
 
-請參閱[irowsetchange:: Setdata](/previous-versions/windows/desktop/ms721232\(v=vs.85\))中*OLE DB 程式設計人員參考*。 
+請參閱[irowsetchange:: Setdata](/previous-versions/windows/desktop/ms721232)中*OLE DB 程式設計人員參考*。 
 
 ## <a name="flushdata"></a> Irowsetchangeimpl:: Flushdata
 

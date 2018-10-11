@@ -102,12 +102,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 17e353f044a3b003736589f52c538101e18fd7ea
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b495a756cbccc88f00c42dc8de78bf80a39f4b7a
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085546"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083356"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl 類別
 
@@ -173,7 +173,7 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
   
 ## <a name="remarks"></a>備註  
 
-[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\))是基底的資料列集介面。  
+[IRowset](/previous-versions/windows/desktop/ms720986)是基底的資料列集介面。  
 
 ## <a name="addrefrows"></a> Irowsetimpl:: Addrefrows
 
@@ -190,7 +190,7 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>參數  
 
-請參閱[irowset:: Addrefrows](/previous-versions/windows/desktop/ms719619\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+請參閱[irowset:: Addrefrows](/previous-versions/windows/desktop/ms719619)中*OLE DB 程式設計人員參考*。  
 
 ## <a name="createrow"></a> Irowsetimpl:: Createrow
 
@@ -233,7 +233,7 @@ STDMETHOD(GetData )(HROW hRow,
   
 #### <a name="parameters"></a>參數  
 
-請參閱[irowset:: Getdata](/previous-versions/windows/desktop/ms716988\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+請參閱[irowset:: Getdata](/previous-versions/windows/desktop/ms716988)中*OLE DB 程式設計人員參考*。  
   
 某些參數會對應至*OLE DB 程式設計人員參考*參數中所述的不同名稱的`IRowset::GetData`:  
   
@@ -266,7 +266,7 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
   
 ### <a name="return-value"></a>傳回值  
 
-[DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\))旗標資料行。 
+[DBSTATUS](/previous-versions/windows/desktop/ms722617)旗標資料行。 
 
 ## <a name="getnextrows"></a> Irowsetimpl:: Getnextrows
 
@@ -284,7 +284,7 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
   
 #### <a name="parameters"></a>參數  
 
-請參閱[irowset:: Getnextrows](/previous-versions/windows/desktop/ms709827\(v=vs.85\))中*OLE DB 程式設計人員參考*。 
+請參閱[irowset:: Getnextrows](/previous-versions/windows/desktop/ms709827)中*OLE DB 程式設計人員參考*。 
 
 ## <a name="irowsetimpl"></a> Irowsetimpl:: Irowsetimpl
 
@@ -316,7 +316,7 @@ HRESULT RefRows(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>參數  
 
-請參閱[irowset:: Addrefrows](/previous-versions/windows/desktop/ms719619\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+請參閱[irowset:: Addrefrows](/previous-versions/windows/desktop/ms719619)中*OLE DB 程式設計人員參考*。  
   
 ### <a name="return-value"></a>傳回值  
 
@@ -338,7 +338,7 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>參數  
 
-請參閱[irowset:: Releaserows](/previous-versions/windows/desktop/ms719771\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+請參閱[irowset:: Releaserows](/previous-versions/windows/desktop/ms719771)中*OLE DB 程式設計人員參考*。  
 
 ## <a name="restartposition"></a> Irowsetimpl:: Restartposition
 
@@ -352,7 +352,7 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
   
 #### <a name="parameters"></a>參數  
 
-請參閱[irowset:: Restartposition](/previous-versions/windows/desktop/ms712877\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+請參閱[irowset:: Restartposition](/previous-versions/windows/desktop/ms712877)中*OLE DB 程式設計人員參考*。  
   
 ### <a name="remarks"></a>備註  
 
@@ -373,7 +373,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 #### <a name="parameters"></a>參數  
 
 *statusFlags*<br/>
-[DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\))設定資料行的旗標。  
+[DBSTATUS](/previous-versions/windows/desktop/ms722617)設定資料行的旗標。  
   
 *currentRow*<br/>
 目前的資料列。  

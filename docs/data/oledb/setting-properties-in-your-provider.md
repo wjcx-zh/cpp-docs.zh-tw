@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aef8b069e9f77b61ee0c6c26d8d9232ee139867d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a7d8f7a55379707282fd5ea9ad2063d00392d7eb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098910"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082614"
 ---
 # <a name="setting-properties-in-your-provider"></a>在提供者內設定屬性
 
-尋找您想要的屬性的屬性群組和屬性識別碼。 如需詳細資訊，請參閱 < [OLE DB 屬性](/previous-versions/windows/desktop/ms722734\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+尋找您想要的屬性的屬性群組和屬性識別碼。 如需詳細資訊，請參閱 < [OLE DB 屬性](/previous-versions/windows/desktop/ms722734)中*OLE DB 程式設計人員參考*。  
   
 在精靈產生的提供者程式碼的情況下，找到對應至屬性群組的屬性對應。 屬性群組的名稱通常會對應到物件的名稱。 命令和資料列集屬性可在命令或資料列集;資料來源物件中可以找到資料來源初始化屬性。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "46098910"
   
 - 屬性 ID 對應至您的屬性。 您必須從屬性名稱的前面移除的前七個字元 ("DBPROP_ 」)。 例如，如果您想要新增`DBPROP_MAXROWS`，傳遞`MAXROWS`的第一個元素。 如果這是自訂的屬性，傳遞完整的 GUID 名稱 (例如`DBMYPROP_MYPROPERTY`)。  
   
-- 屬性的 variant 型別 (在[OLE DB 屬性](/previous-versions/windows/desktop/ms722734\(v=vs.85\))中*OLE DB 程式設計人員參考*)。 輸入 VT_ 類型 （例如 VT_BOOL 或 VT_I2） 對應到資料類型。  
+- 屬性的 variant 型別 (在[OLE DB 屬性](/previous-versions/windows/desktop/ms722734)中*OLE DB 程式設計人員參考*)。 輸入 VT_ 類型 （例如 VT_BOOL 或 VT_I2） 對應到資料類型。  
   
 - 加上旗標以指出屬性是否可讀取和寫入，且其所屬的群組。 例如，下列程式碼表示屬於資料列群組的讀取/寫入屬性：  
   

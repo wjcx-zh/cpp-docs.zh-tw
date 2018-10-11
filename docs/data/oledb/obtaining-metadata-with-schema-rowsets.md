@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 60bed04015060bd65f4d4c771a228e3b50c3486e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8c4e3003beb0e50887f6b765904095c65dd8f1b6
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057095"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083654"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>使用結構描述資料列集取得中繼資料
 
@@ -63,7 +63,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
 [CRestrictions](../../data/oledb/crestrictions-class.md)類別提供限制支援。 您建立結構描述資料列集的執行個體之後，請呼叫[crestrictions:: Open](../../data/oledb/crestrictions-open.md)。 這個方法會根據您指定的限制傳回結果集。  
   
-若要指定限制，請參閱[附錄 b： 結構描述資料列集](/previous-versions/windows/desktop/ms712921\(v=vs.85\))並尋找您所使用的資料列集。 例如，`CColumns`對應至[COLUMNS 資料列集](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); 該主題列出 COLUMNS 資料列集的限制資料行： table_catalog 排列、 TABLE_SCHEMA、 TABLE_NAME、 COLUMN_NAME。 您必須依照該順序指定您的限制。  
+若要指定限制，請參閱[附錄 b： 結構描述資料列集](/previous-versions/windows/desktop/ms712921)並尋找您所使用的資料列集。 例如，`CColumns`對應至[COLUMNS 資料列集](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); 該主題列出 COLUMNS 資料列集的限制資料行： table_catalog 排列、 TABLE_SCHEMA、 TABLE_NAME、 COLUMN_NAME。 您必須依照該順序指定您的限制。  
   
 因此，比方說，如果您想要依資料表名稱限制，請注意 TABLE_NAME 是第三個的限制資料行，並接著呼叫`Open`，做為第三個限制參數，指定所需的資料表名稱，如下列範例所示。  
   
@@ -93,7 +93,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
 如需結構描述資料列集的參考，typedef 類別提供於 OLE DB 樣板 (請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md))。  
   
-如需有關 OLE DB 結構描述資料列集，包括限制資料行，請參閱[附錄 b： 結構描述資料列集](/previous-versions/windows/desktop/ms712921\(v=vs.85\))OLE DB 程式設計人員參考中。  
+如需有關 OLE DB 結構描述資料列集，包括限制資料行，請參閱[附錄 b： 結構描述資料列集](/previous-versions/windows/desktop/ms712921)OLE DB 程式設計人員參考中。  
   
 如需如何使用結構描述資料列集類別的更複雜範例，請參閱[CatDB](https://github.com/Microsoft/VCSamples)並[DBViewer](https://github.com/Microsoft/VCSamples)範例。  
   

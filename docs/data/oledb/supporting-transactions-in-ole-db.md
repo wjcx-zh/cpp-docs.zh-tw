@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 76dc4cb86601be714e7ca1d442eb904d016e877b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 47b869ffc6ad3dd1492ab052d648bcb8acde7e52
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46102775"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083693"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>支援 OLE DB 中的異動
 
@@ -33,11 +33,11 @@ A[交易](../../data/transactions-mfc-data-access.md)可以群組或批次，一
   
 OLE DB 支援使用下列三個方法的交易：  
   
-- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\))  
+- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786)  
   
-- [ITransaction::Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\))  
+- [ITransaction::Commit](/previous-versions/windows/desktop/ms713008)  
   
-- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\))  
+- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833)  
   
 ## <a name="relationship-of-sessions-and-transactions"></a>工作階段和交易的關聯性  
 
@@ -59,7 +59,7 @@ OLE DB 支援使用下列三個方法的交易：
   
 ## <a name="nested-transactions"></a>巢狀的交易  
 
-A[巢狀交易](/previous-versions/windows/desktop/ms716985\(v=vs.85\))發生於當使用中交易已經存在於工作階段啟動新的本機交易。 做為巢狀交易，在目前交易下啟動新的交易。 如果提供者不支援巢狀的交易，則呼叫`StartTransaction`時已經有使用中交易的工作階段上傳回 XACT_E_XTIONEXISTS。  
+A[巢狀交易](/previous-versions/windows/desktop/ms716985)發生於當使用中交易已經存在於工作階段啟動新的本機交易。 做為巢狀交易，在目前交易下啟動新的交易。 如果提供者不支援巢狀的交易，則呼叫`StartTransaction`時已經有使用中交易的工作階段上傳回 XACT_E_XTIONEXISTS。  
   
 ## <a name="distributed-transactions"></a>分散式異動  
 

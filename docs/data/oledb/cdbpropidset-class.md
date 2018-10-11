@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9619ffdf9fd24bd73548fb3992084eb0a5d437a7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 514a013cf3f327c0c73ca8469900693d6a4e5e21
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114471"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084031"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet 類別
 
@@ -83,7 +83,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
   
 ## <a name="remarks"></a>備註  
 
-OLE DB 取用者使用`DBPROPIDSET`結構，以傳遞的取用者想要取得屬性資訊的屬性識別碼的陣列。 識別在單一的屬性[DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\))結構屬於一個屬性集。  
+OLE DB 取用者使用`DBPROPIDSET`結構，以傳遞的取用者想要取得屬性資訊的屬性識別碼的陣列。 識別在單一的屬性[DBPROPIDSET](/previous-versions/windows/desktop/ms717981)結構屬於一個屬性集。  
 
 ## <a name="addpropertyid"></a> Cdbpropidset:: Addpropertyid
 
@@ -102,7 +102,7 @@ bool AddPropertyID(DBPROPID propid) throw();
 
 ## <a name="cdbpropidset"></a> Cdbpropidset:: Cdbpropidset
 
-建構函式。 初始化`rgProperties`， `cProperties`，以及 （選擇性）`guidPropertySet`的欄位[DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\))結構。  
+建構函式。 初始化`rgProperties`， `cProperties`，以及 （選擇性）`guidPropertySet`的欄位[DBPROPIDSET](/previous-versions/windows/desktop/ms717981)結構。  
   
 ### <a name="syntax"></a>語法  
   
@@ -135,7 +135,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>參數  
 
 *guid*<br/>
-[in]GUID; 用來設定`guidPropertySet`欄位[DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\))結構。  
+[in]GUID; 用來設定`guidPropertySet`欄位[DBPROPIDSET](/previous-versions/windows/desktop/ms717981)結構。  
   
 ### <a name="remarks"></a>備註  
 

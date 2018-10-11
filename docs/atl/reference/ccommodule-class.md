@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faf3080c6363ef0227b71e550ff658b1790d37b9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 519837379369f08108d3d5b5b300fe0bcb9ac5e7
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090694"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083810"
 ---
 # <a name="ccommodule-class"></a>CComModule 類別
 
@@ -386,7 +386,7 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ### <a name="parameters"></a>參數
 
 *dwClsContext*<br/>
-[in]指定要執行的類別物件的內容。 可能的值為 CLSCTX_INPROC_SERVER、 CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。 如需這些值的說明，請參閱 < [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) Windows SDK 中。
+[in]指定要執行的類別物件的內容。 可能的值為 CLSCTX_INPROC_SERVER、 CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。 如需這些值的說明，請參閱 < [CLSCTX](/windows/desktop/api/wtypesbase/ne-wtypesbase-tagclsctx) Windows SDK 中。
 
 *dwFlags*<br/>
 [in]決定類別物件的連接類型。 可能的值為 REGCLS_SINGLEUSE、 REGCLS_MULTIPLEUSE 或 REGCLS_MULTI_SEPARATE。 如需這些值的說明，請參閱 < [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) Windows SDK 中。

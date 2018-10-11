@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e115cf74eaac194c9e5b7154898cc23e10b220eb
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b09fe303cb69cb36d04d696af2b83b30b8378f70
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100427"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083446"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 實值類別
 
-代表[GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) Windows 執行階段型別系統中的型別。
+代表 Windows 執行階段類型系統中的 [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) 類型。
 
 ## <a name="syntax"></a>語法
 
@@ -45,7 +45,7 @@ GUID 具有 Equals()、GetHashCode() 和 ToString() 方法 (衍生自 [Platform:
 
 ### <a name="remarks"></a>備註
 
-如需如何產生新 platform:: guid 使用 Windows 函式的範例[CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid)，請參閱[WinRT 元件： 如何產生 GUID？](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)
+如需如何使用 Windows 函式 [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid)產生新 Platform::Guid 的範例，請參閱 [WinRT 元件：如何產生 GUID？](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)(英文)
 
 ### <a name="requirements"></a>需求
 
@@ -157,7 +157,7 @@ Platform::Guid::operator!=
 
 ## <a name="operator-call"></a> Guid::operator() 運算子
 
-將隱含轉換[GUID 結構](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)platform:: GUID。
+將隱含轉換[GUID 結構](https://msdn.microsoft.com/library/windows/desktop/aa373931)platform:: GUID。
 
 ### <a name="syntax"></a>語法
 

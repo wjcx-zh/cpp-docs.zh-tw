@@ -68,12 +68,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: df5a93ae8b646eb0b4f012484ef8c13d07d328da
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 50917bcdca5e355f20194b9333a247d7a0a49728
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106307"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083848"
 ---
 # <a name="cdatasource-class"></a>CDataSource 類別
 
@@ -163,7 +163,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
   
 #### <a name="parameters"></a>參數  
 
-請參閱[idbproperties:: Getproperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\))中*OLE DB 程式設計人員參考*Windows SDK 中。  
+請參閱[idbproperties:: Getproperties](/previous-versions/windows/desktop/ms714344)中*OLE DB 程式設計人員參考*Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
 
@@ -256,10 +256,10 @@ HRESULT Open(LPCSTR szProgID,
 [in]`CLSID`的資料提供者。  
   
 *pPropSet*<br/>
-[in]陣列的指標[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](/previous-versions/windows/desktop/ms713696\(v=vs.85\))中*OLE DB 程式設計人員參考*Windows SDK 中。  
+[in]陣列的指標[DBPROPSET](/previous-versions/windows/desktop/ms714367)結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](/previous-versions/windows/desktop/ms713696)中*OLE DB 程式設計人員參考*Windows SDK 中。  
   
 *nPropertySets*<br/>
-[in]數目[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))結構傳入*Dbpropset*引數。  
+[in]數目[DBPROPSET](/previous-versions/windows/desktop/ms714367)結構傳入*Dbpropset*引數。  
   
 *pName*<br/>
 [in] 要連接的資料庫名稱。  
@@ -271,7 +271,7 @@ HRESULT Open(LPCSTR szProgID,
 [in] 使用者的密碼。  
   
 *nInitMode*<br/>
-[in] 資料庫初始化模式。 請參閱[初始化屬性](/previous-versions/windows/desktop/ms723127\(v=vs.85\))中*OLE DB 程式設計人員參考*Windows SDK，如需有效初始化模式的清單中。 如果*nInitMode*是零、 任何初始化模式會包含用來開啟連接的屬性集。  
+[in] 資料庫初始化模式。 請參閱[初始化屬性](/previous-versions/windows/desktop/ms723127)中*OLE DB 程式設計人員參考*Windows SDK，如需有效初始化模式的清單中。 如果*nInitMode*是零、 任何初始化模式會包含用來開啟連接的屬性集。  
   
 *szProgID*<br/>
 [in] 程式識別碼。  
@@ -316,7 +316,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 *szFileName*<br/>
 [in] 檔案的名稱，通常是資料來源連接 (.UDL) 檔案。  
   
-如需詳細資料連結檔案 （.udl 檔案） 的詳細資訊，請參閱[資料連結 API 概觀](/previous-versions/windows/desktop/ms718102\(v=vs.85\))Windows SDK 中。  
+如需詳細資料連結檔案 （.udl 檔案） 的詳細資訊，請參閱[資料連結 API 概觀](/previous-versions/windows/desktop/ms718102)Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
 
@@ -411,10 +411,10 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 [in] 資料提供者的程式識別碼。  
   
 *Dbpropset*<br/>
-[in]陣列的指標[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](/previous-versions/windows/desktop/ms713696\(v=vs.85\))中*OLE DB 程式設計人員參考*Windows SDK 中。 如果資料來源物件已初始化，屬性必須屬於資料來源屬性群組。 如果相同的屬性中指定了一次以上*Dbpropset*，則會使用哪些值是特定提供者。 如果*ulPropSets*為零，會忽略這個參數。  
+[in]陣列的指標[DBPROPSET](/previous-versions/windows/desktop/ms714367)結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](/previous-versions/windows/desktop/ms713696)中*OLE DB 程式設計人員參考*Windows SDK 中。 如果資料來源物件已初始化，屬性必須屬於資料來源屬性群組。 如果相同的屬性中指定了一次以上*Dbpropset*，則會使用哪些值是特定提供者。 如果*ulPropSets*為零，會忽略這個參數。  
   
 *ulPropSets*<br/>
-[in]數目[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))結構傳入*Dbpropset*引數。 如果這是零，提供者會忽略*Dbpropset*。  
+[in]數目[DBPROPSET](/previous-versions/windows/desktop/ms714367)結構傳入*Dbpropset*引數。 如果這是零，提供者會忽略*Dbpropset*。  
   
 ### <a name="return-value"></a>傳回值  
 

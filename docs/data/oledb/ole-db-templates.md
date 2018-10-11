@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 60c7e33a0a486bf0880b06a2eb159ba02300dec7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5f828f21ebdb841d4eca1bb168f908543f990e94
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118241"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082666"
 ---
 # <a name="ole-db-templates"></a>OLE DB 樣板
 
@@ -41,7 +41,7 @@ OLE DB 範本可讓 OLE DB 資料存取更為容易。 Visual c + + 提供實作
 [OLE DB 程式設計概觀](../../data/oledb/ole-db-programming-overview.md)<br/>
 說明 OLE DB 的功能，並討論 OLE DB 中的通用資料存取。  
   
-[OLE DB 程式設計人員參考](/previous-versions/windows/desktop/ms713643\(v=vs.85\))  
+[OLE DB 設計人員參考](/previous-versions/windows/desktop/ms713643)  
 OLE DB 提供的 Windows SDK 文件的連結。  
   
 [OLE DB 範本範例](../../visual-cpp-samples.md)<br/>

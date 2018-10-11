@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb101179cff40d79ab142e55b4fc46cc8941d126
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d1e050baf87374b98d5490ef8a760ca13620e240
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399544"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083927"
 ---
 # <a name="cdatabase-class"></a>CDatabase 類別
 
@@ -202,7 +202,7 @@ void Cancel();
 
 ### <a name="remarks"></a>備註
 
-請注意，MFC ODBC 類別不會再使用非同步處理;若要執行的非同步作業，您必須直接呼叫 ODBC API 函式[SQLSetConnectOption](/previous-versions/windows/desktop/ms713564\(v=vs.85\))。 如需詳細資訊，請參閱 <<c0> [ 非同步執行](/previous-versions/windows/desktop/ms713563\(v=vs.85\))Windows SDK 中。
+請注意，MFC ODBC 類別不會再使用非同步處理;若要執行的非同步作業，您必須直接呼叫 ODBC API 函式[SQLSetConnectOption](/previous-versions/windows/desktop/ms713564)。 如需詳細資訊，請參閱 <<c0> [ 非同步執行](/previous-versions/windows/desktop/ms713563)Windows SDK 中。
 
 ##  <a name="cantransact"></a>  CDatabase::CanTransact
 

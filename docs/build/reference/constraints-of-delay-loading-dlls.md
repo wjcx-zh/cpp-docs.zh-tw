@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69e985b81072de306c818218e19bbb660e3e04a4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 497de9695e75810f2fe68101627f2ba3606aa048
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719729"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082005"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>延遲載入 DLL 的條件約束
 
@@ -44,9 +44,9 @@ ms.locfileid: "45719729"
 ## <a name="see-also"></a>另請參閱
 
 [延遲載入 DLL 的連結器支援](../../build/reference/linker-support-for-delay-loaded-dlls.md)<br/>
-[LoadLibrary 函式](https://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)<br/>
-[GetModuleHandle 函式](https://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)<br/>
-[GetProcAddress 函式](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)<br/>
+[LoadLibrary 函式](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)<br/>
+[GetModuleHandle 函式](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)<br/>
+[GetProcAddress 函式](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>
 [TlsAlloc 函式](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)<br/>
 [TlsFree 函式](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsfree)<br/>
 [TlsGetValue 函式](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)<br/>

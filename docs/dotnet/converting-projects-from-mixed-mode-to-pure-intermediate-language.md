@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 263a90710d2103c4ea97e6c56da67d676ba7366b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7f9cbfce7e04040f0e1618148a3c258f21bb84b8
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222076"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083459"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>將專案從混合模式轉換為純中繼語言
 
@@ -84,26 +84,26 @@ ms.locfileid: "43222076"
 
 3. 移除所有的非受控型別：
 
-   只要適當地取代未受管理的類型結構的參考[系統](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)命名空間。 下表列出常見 managed 型別：
+   只要適當地取代未受管理的類型結構的參考[系統](/dotnet/api/system)命名空間。 下表列出常見 managed 型別：
 
    |結構|描述|
    |---------------|-----------------|
-   |[布林值](https://msdn.microsoft.com/library/system.boolean\(v=vs.140\).aspx)|表示布林值。|
-   |[Byte](https://msdn.microsoft.com/library/system.byte\(v=vs.140\).aspx)|代表 8 位元不帶正負號的整數。|
-   |[Char](https://msdn.microsoft.com/library/system.char\(v=vs.140\).aspx)|代表 Unicode 字元。|
-   |[DateTime](https://msdn.microsoft.com/library/system.datetime.datetime.aspx)|表示時間的瞬間，通常以一天的日期和時間表示。|
-   |[Decimal](https://msdn.microsoft.com/library/system.decimal\(v=vs.140\).aspx)|代表十進位數值。|
-   |[Double](https://msdn.microsoft.com/library/system.double\(v=vs.140\).aspx)|表示雙精度浮點數。|
-   |[Guid](https://msdn.microsoft.com/library/system.guid\(v=vs.140\).aspx)|表示全域唯一識別項 (GUID)。|
-   |[Int16](https://msdn.microsoft.com/library/system.int16\(v=vs.140\).aspx)|表示 16 位元帶正負號的整數。|
-   |[Int32](https://msdn.microsoft.com/library/system.int32\(v=vs.140\).aspx)|表示 32 位元帶正負號的整數。|
-   |[Int64](https://msdn.microsoft.com/library/system.int64\(v=vs.140\).aspx)|表示 64 位元帶正負號的整數。|
-   |[IntPtr](https://msdn.microsoft.com/library/system.intptr\(v=vs.140\).aspx)|平台專用的類型，用以代表指標或控點。|
-   |[SByte](https://msdn.microsoft.com/library/system.byte.aspx)|代表 8 位元帶正負號的整數。|
-   |[Single](https://msdn.microsoft.com/library/system.single.aspx)|表示單精確度浮點數。|
-   |[TimeSpan](https://msdn.microsoft.com/library/system.timespan\(v=vs.140\).aspx)|表示時間間隔。|
-   |[UInt16](https://msdn.microsoft.com/library/system.uint16\(v=vs.140\).aspx)|表示 16 位元不帶正負號的整數 (Unsigned Integer)。|
-   |[UInt32](https://msdn.microsoft.com/library/system.uint32\(v=vs.140\).aspx)|表示 32 位元不帶正負號的整數 (Unsigned Integer)。|
-   |[UInt64](https://msdn.microsoft.com/library/system.uint64\(v=vs.140\).aspx)|表示 64 位元不帶正負號的整數 (Unsigned Integer)。|
-   |[UIntPtr](https://msdn.microsoft.com/library/system.uintptr\(v=vs.140\).aspx)|平台專用的類型，用以代表指標或控點。|
-   |[Void](https://msdn.microsoft.com/library/system.void\(v=vs.140\).aspx)|表示不會傳回值的方法也就是方法具有 void 傳回型別。|
+   |[布林值](/dotnet/api/system.boolean)|表示布林值。|
+   |[Byte](/dotnet/api/system.byte)|代表 8 位元不帶正負號的整數。|
+   |[Char](/dotnet/api/system.char)|代表 Unicode 字元。|
+   |[DateTime](/dotnet/api/system.datetime.datetime.aspx)|表示時間的瞬間，通常以一天的日期和時間表示。|
+   |[Decimal](/dotnet/api/system.decimal)|代表十進位數值。|
+   |[Double](/dotnet/api/system.double)|表示雙精度浮點數。|
+   |[Guid](/dotnet/api/system.guid)|表示全域唯一識別項 (GUID)。|
+   |[Int16](/dotnet/api/system.int16)|表示 16 位元帶正負號的整數。|
+   |[Int32](/dotnet/api/system.int32)|表示 32 位元帶正負號的整數。|
+   |[Int64](/dotnet/api/system.int64)|表示 64 位元帶正負號的整數。|
+   |[IntPtr](/dotnet/api/system.intptr)|平台專用的類型，用以代表指標或控點。|
+   |[SByte](/dotnet/api/system.byte.aspx)|代表 8 位元帶正負號的整數。|
+   |[Single](/dotnet/api/system.single.aspx)|表示單精確度浮點數。|
+   |[TimeSpan](/dotnet/api/system.timespan)|表示時間間隔。|
+   |[UInt16](/dotnet/api/system.uint16)|表示 16 位元不帶正負號的整數 (Unsigned Integer)。|
+   |[UInt32](/dotnet/api/system.uint32)|表示 32 位元不帶正負號的整數 (Unsigned Integer)。|
+   |[UInt64](/dotnet/api/system.uint64)|表示 64 位元不帶正負號的整數 (Unsigned Integer)。|
+   |[UIntPtr](/dotnet/api/system.uintptr)|平台專用的類型，用以代表指標或控點。|
+   |[Void](/dotnet/api/system.void)|表示不會傳回值的方法也就是方法具有 void 傳回型別。|

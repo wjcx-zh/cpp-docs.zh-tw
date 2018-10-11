@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c94152a9322b64acafe91e1fb0eb34ab82aa2902
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4548e319d7a85c547b0e750d040bdc6b6d7bbba5
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081295"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083901"
 ---
 # <a name="ctable-class"></a>CTable 類別
 
@@ -106,10 +106,10 @@ HRESULT Open(const CSession& session,
 [in]`DBID`来開啟的資料表。  
   
 *pPropSet*<br/>
-[in]陣列的指標[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](/previous-versions/windows/desktop/ms713696\(v=vs.85\))中*OLE DB 程式設計人員參考*Windows SDK 中。 預設值是 NULL 指定任何屬性。  
+[in]陣列的指標[DBPROPSET](/previous-versions/windows/desktop/ms714367)結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](/previous-versions/windows/desktop/ms713696)中*OLE DB 程式設計人員參考*Windows SDK 中。 預設值是 NULL 指定任何屬性。  
   
 *ulPropSets*<br/>
-[in]數目[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))結構傳入*Dbpropset*引數。  
+[in]數目[DBPROPSET](/previous-versions/windows/desktop/ms714367)結構傳入*Dbpropset*引數。  
   
 ### <a name="return-value"></a>傳回值  
 
@@ -117,7 +117,7 @@ HRESULT Open(const CSession& session,
   
 ### <a name="remarks"></a>備註  
 
-如需詳細資訊，請參閱 < [iopenrowset:: Openrowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+如需詳細資訊，請參閱 < [iopenrowset:: Openrowset](/previous-versions/windows/desktop/ms716724)中*OLE DB 程式設計人員參考*。  
   
 ## <a name="see-also"></a>另請參閱  
 

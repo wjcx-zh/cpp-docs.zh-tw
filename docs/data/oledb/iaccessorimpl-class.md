@@ -48,16 +48,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0fd40d4cac87302a6a636693e0da4480720a2cf3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a5de49679652b04afa4df08ce9d4ea015ebd031d
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098114"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082719"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl 類別
 
-提供實作[IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\))介面。  
+提供實作[IAccessor](/previous-versions/windows/desktop/ms719672)介面。  
   
 ## <a name="syntax"></a>語法
 
@@ -102,7 +102,7 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
   
 ## <a name="remarks"></a>備註  
 
-這是資料列集和命令的必要參數。 OLE DB 會要求提供者實作 HACCESSOR，這是標記的陣列[DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))結構。 所提供的 HACCESSORs`IAccessorImpl`是位址`BindType`結構。 根據預設，`BindType`指`ATLBINDINGS`在`IAccessorImpl`的範本定義。 `BindType` 提供所使用的機制`IAccessorImpl`追蹤中的項目數其`DBBINDING`陣列以及參考計數和存取子旗標。  
+這是資料列集和命令的必要參數。 OLE DB 會要求提供者實作 HACCESSOR，這是標記的陣列[DBBINDING](/previous-versions/windows/desktop/ms716845)結構。 所提供的 HACCESSORs`IAccessorImpl`是位址`BindType`結構。 根據預設，`BindType`指`ATLBINDINGS`在`IAccessorImpl`的範本定義。 `BindType` 提供所使用的機制`IAccessorImpl`追蹤中的項目數其`DBBINDING`陣列以及參考計數和存取子旗標。  
 
 ## <a name="iaccessorimpl"></a> Iaccessorimpl:: Iaccessorimpl
 
@@ -127,7 +127,7 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
   
 #### <a name="parameters"></a>參數  
 
-請參閱[IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978\(v=vs.85\))中*OLE DB 程式設計人員參考*。
+請參閱[IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978)中*OLE DB 程式設計人員參考*。
 
 ## <a name="createaccessor"></a> Iaccessorimpl:: Createaccessor
 
@@ -146,7 +146,7 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
   
 #### <a name="parameters"></a>參數  
 
-請參閱[iaccessor:: Createaccessor](/previous-versions/windows/desktop/ms720969\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+請參閱[iaccessor:: Createaccessor](/previous-versions/windows/desktop/ms720969)中*OLE DB 程式設計人員參考*。  
 
 ## <a name="getbindings"></a> Iaccessorimpl:: Getbindings
 
@@ -163,7 +163,7 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
   
 #### <a name="parameters"></a>參數  
 
-請參閱[IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253\(v=vs.85\))中*OLE DB 程式設計人員參考*。 
+請參閱[IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253)中*OLE DB 程式設計人員參考*。 
 
 ## <a name="releaseaccessor"></a> Iaccessorimpl:: Releaseaccessor
 
@@ -178,7 +178,7 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
   
 #### <a name="parameters"></a>參數  
 
-請參閱[iaccessor:: Releaseaccessor](/previous-versions/windows/desktop/ms719717\(v=vs.85\))中*OLE DB 程式設計人員參考*。
+請參閱[iaccessor:: Releaseaccessor](/previous-versions/windows/desktop/ms719717)中*OLE DB 程式設計人員參考*。
   
 ## <a name="see-also"></a>另請參閱  
 

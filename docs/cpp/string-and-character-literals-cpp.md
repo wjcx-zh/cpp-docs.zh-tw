@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f34bd3f1594a49737f4298316b5eb3fe08b866a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fb88721c64666cc5b74bb51c1f92bd612b66fc4c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038551"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083316"
 ---
 # <a name="string-and-character-literals--c"></a>字串和字元常值 （c + +）
 
@@ -80,7 +80,7 @@ int main()
 }
 ```
 
-字串常值可以沒有前置詞，或者以 `u8`、 `L`、 `u`和  `U` 前置詞分別表示半形字元 (單一位元組或多位元組)、UTF-8、全形字元 (UCS-2 或 UTF-16)、UTF-16 和 UTF-32 編碼。 原始字串常值可以有 `R`、 `u8R`、 `LR`、 `uR` 和 `UR` 前置詞，相當於這些編碼方式的原始版本。  若要建立暫存或靜態的 std::string 值，字串常值或原始字串常值可以搭配使用 `s` 後置詞。 如需詳細資訊，請參閱下節的＜字串常值＞。 如需基本原始程式碼字元集的詳細資訊，通用字元名稱，以及使用擴充的字碼頁字元的在原始程式碼中，請參閱[字元集](../cpp/character-sets.md)。
+字串常值可以沒有前置詞，或者以 `u8`、 `L`、 `u`和  `U` 前置詞分別表示半形字元 (單一位元組或多位元組)、UTF-8、全形字元 (UCS-2 或 UTF-16)、UTF-16 和 UTF-32 編碼。 原始字串常值可以有 `R`、 `u8R`、 `LR`、 `uR` 和 `UR` 前置詞，相當於這些編碼方式的原始版本。  若要建立暫存或靜態的 std::string 值，字串常值或原始字串常值可以搭配使用 `s` 後置詞。 如需詳細資訊，請參閱下節的＜字串常值＞。 如需基本原始程式碼字元集、通用字元名稱，以及使用原始程式碼擴充字碼頁字元的詳細資訊，請參閱 [Character Sets](../cpp/character-sets.md)。
 
 ## <a name="character-literals"></a>字元常值
 
@@ -211,7 +211,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
 
 通用字元名稱無法編碼在 surrogate 字碼指標範圍 D800-DFFF 內的值。 至於 Unicode surrogate 字組，請使用 `\UNNNNNNNN`指定通用字元名稱，這裡的 NNNNNNNN 為字元的八位數字碼指標。 如有需要，編譯器會產生 surrogate 字組。
 
-過去在 C++03 中，語言只允許由其通用字元名稱所代表的字元子集，以及未實際代表任何有效 Unicode 字元的一些通用字元名稱。 這已在 C++11 標準中修正。 在 C++11 中，字元和字串常值及識別項可以使用通用字元名稱。  如需通用字元名稱的詳細資訊，請參閱[字元集](../cpp/character-sets.md)。 如需有關 Unicode 的詳細資訊，請參閱 < [Unicode](https://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx)。 如需 surrogate 字組的詳細資訊，請參閱[surrogate 字組和補充字元](/windows/desktop/Intl/surrogates-and-supplementary-characters)。
+過去在 C++03 中，語言只允許由其通用字元名稱所代表的字元子集，以及未實際代表任何有效 Unicode 字元的一些通用字元名稱。 這已在 C++11 標準中修正。 在 C++11 中，字元和字串常值及識別項可以使用通用字元名稱。  如需通用字元名稱的詳細資訊，請參閱 [Character Sets](../cpp/character-sets.md)。 如需 Unicode 的詳細資訊，請參閱 [Unicode](https://msdn.microsoft.com/library/dd374081)。 如需 Surrogate 字組的詳細資訊，請參閱 [Surrogate 字組和補充字元](/windows/desktop/Intl/surrogates-and-supplementary-characters)。
 
 ## <a name="string-literals"></a>字串常值
 
@@ -257,7 +257,7 @@ auto s4 = U"hello"; // const char32_t*
 
 ### <a name="raw-string-literals-c11"></a>原始字串常值 (C++11)
 
-原始字串常值是 null 結束陣列 — 的任何字元類型，其中包含任何圖形字元，包括雙引號 （"）、 反斜線 (\\)，或新行字元。 原始字串常值通常用於使用字元類別的規則運算式，以及 HTML 字串和 XML 字串。 如需範例，請參閱下列文章： [Bjarne Stroustrup 的 c++11 常見問題集](http://www.stroustrup.com/C++11FAQ.html)。
+原始字串常值是 null 結束陣列 — 的任何字元類型，其中包含任何圖形字元，包括雙引號 （"）、 反斜線 (\\)，或新行字元。 原始字串常值通常用於使用字元類別的規則運算式，以及 HTML 字串和 XML 字串。 如需範例，請參閱下列文章： [Bjarne Stroustrup 的 C++11 常見問題集](http://www.stroustrup.com/C++11FAQ.html)。
 
 ```cpp
 // represents the string: An unescaped \ character

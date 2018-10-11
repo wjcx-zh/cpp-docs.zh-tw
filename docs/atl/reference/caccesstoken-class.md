@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3157db05d183ab9ada2ad53443ca5b20bcfbcba
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ee8080c8e2caacb882f43425ab528a08dd2f8ea0
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136318"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083745"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 類別
 
@@ -671,7 +671,7 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 
 ### <a name="remarks"></a>備註
 
-呼叫[OpenProcessToken](https://msdn.microsoft.com/library/aa379295\(vs.85\).aspx) Win32 函式。
+呼叫[OpenProcessToken](https://msdn.microsoft.com/library/aa379295) Win32 函式。
 
 ##  <a name="getprofile"></a>  CAccessToken::GetProfile
 

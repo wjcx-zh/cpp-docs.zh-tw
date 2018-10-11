@@ -101,16 +101,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a92f52f7d97e3c89de3d147c2c1b798d4af6d3a4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d0db07c8419db53d30612e6edbbe134634e37a74
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019454"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083940"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor 類別
 
-類似於[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)取得設藉由呼叫的參數資訊，但[ICommandWithParameters](/sql/relational-databases/native-client-ole-db-interfaces/icommandwithparameters)介面。
+類似於 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) ，但藉由呼叫 [ICommandWithParameters](/sql/relational-databases/native-client-ole-db-interfaces/icommandwithparameters) 介面取得要設定的參數資訊。
 
 ## <a name="syntax"></a>語法
 
@@ -323,7 +323,7 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 [in] 參數編號 (從 1 開始位移)。 參數 0 保留作為傳回值。 參數編號是根據參數在 SQL 或預存程序呼叫中的順序編制的索引。 請參閱[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)的範例。  
   
 *pStatus*<br/>
-[out]包含指定的參數 DBSTATUS 狀態變數的指標。 如需 DBSTATUS 值的資訊，請參閱[狀態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。  
+[out]包含指定的參數 DBSTATUS 狀態變數的指標。 如需 DBSTATUS 值的資訊，請參閱[狀態](/previous-versions/windows/desktop/ms722617)中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。  
   
 ### <a name="remarks"></a>備註  
 
@@ -435,7 +435,7 @@ bool SetParam(TCHAR* pParamName,
 [in]要包含的資料寫入緩衝區記憶體的指標。  
   
 *status*<br/>
-[in] DBSTATUS 資料行狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。  
+[in] DBSTATUS 資料行狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](/previous-versions/windows/desktop/ms722617)中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。  
   
 ### <a name="return-value"></a>傳回值  
 
@@ -483,7 +483,7 @@ bool SetParamStatus(DBORDINAL nParam,
 [in] 參數編號 (從 1 開始位移)。 參數 0 保留作為傳回值。 參數編號是根據參數在 SQL 或預存程序呼叫中的順序編制的索引。 請參閱[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)的範例。  
   
 *status*<br/>
-[in]指定的參數 DBSTATUS 狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。  
+[in]指定的參數 DBSTATUS 狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](/previous-versions/windows/desktop/ms722617)中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。  
   
 ### <a name="remarks"></a>備註  
 
@@ -512,7 +512,7 @@ bool SetParamString(DBORDINAL nParam,
 [in]ANSI 的指標 (**CHAR**) 或 Unicode (**WCHAR**) 字串的指定參數的資料。 請參閱 oledb.h DBSTATUS。  
   
 *status*<br/>
-[in]指定的參數 DBSTATUS 狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。  
+[in]指定的參數 DBSTATUS 狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](/previous-versions/windows/desktop/ms722617)中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。  
   
 ### <a name="remarks"></a>備註  
 

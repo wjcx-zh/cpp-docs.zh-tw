@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f6730746cbb3da08e52b5a4d9936aa48a8484886
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b250e29acc964e1fb1273d02a3b1ea93c087e5c4
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052554"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082737"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>在提供者內參考屬性
 
-尋找您想要的屬性的屬性群組和屬性識別碼。 如需詳細資訊，請參閱 < [OLE DB 屬性](/previous-versions/windows/desktop/ms722734\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+尋找您想要的屬性的屬性群組和屬性識別碼。 如需詳細資訊，請參閱 < [OLE DB 屬性](/previous-versions/windows/desktop/ms722734)中*OLE DB 程式設計人員參考*。  
   
 下列範例假設您嘗試從資料列集取得的屬性。 使用工作階段或命令的程式碼很類似，但使用不同的介面。  
   

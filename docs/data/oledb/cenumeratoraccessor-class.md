@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d87bcf20957b69577e709c8fcbd2c6a5f3c9b770
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 896c1dd1f1d3a43a3678a086d80e0f95b60b6126
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075910"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083329"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor 類別
 
@@ -97,7 +97,7 @@ VARIANT_BOOL m_bIsParent;
   
 ### <a name="remarks"></a>備註  
 
-請參閱[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程式設計人員參考*如需詳細資訊。 
+請參閱[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200)中*OLE DB 程式設計人員參考*如需詳細資訊。 
 
 ## <a name="ntype"></a> Cenumeratoraccessor:: M_ntype
 
@@ -111,7 +111,7 @@ USHORT m_nType;
   
 ### <a name="remarks"></a>備註  
 
-請參閱[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程式設計人員參考*如需詳細資訊。
+請參閱[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200)中*OLE DB 程式設計人員參考*如需詳細資訊。
 
 ## <a name="szdescription"></a> Cenumeratoraccessor:: M_szdescription
 
@@ -125,7 +125,7 @@ WCHAR m_szDescription[129];
   
 ### <a name="remarks"></a>備註  
 
-請參閱[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程式設計人員參考*如需詳細資訊。
+請參閱[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200)中*OLE DB 程式設計人員參考*如需詳細資訊。
 
 ## <a name="szname"></a> Cenumeratoraccessor:: M_szname
 
@@ -139,7 +139,7 @@ WCHAR m_szName[129];
   
 ### <a name="remarks"></a>備註  
 
-請參閱[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程式設計人員參考*如需詳細資訊。  
+請參閱[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200)中*OLE DB 程式設計人員參考*如需詳細資訊。  
 
 ## <a name="szparsename"></a> Cenumeratoraccessor:: M_szparsename
 
@@ -153,7 +153,7 @@ WCHAR m_szParseName[129];
   
 ### <a name="remarks"></a>備註  
 
-請參閱[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程式設計人員參考*如需詳細資訊。  
+請參閱[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200)中*OLE DB 程式設計人員參考*如需詳細資訊。  
   
 ## <a name="see-also"></a>另請參閱  
 

@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce1a287a9fa608881a39f82a2b86cfc541674218
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ef48157d1f4efb467fd33270ff05271bedd1a563
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713714"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081886"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
-明確連結至 DLL 呼叫的程序[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212)取得 DLL 中匯出的函式的位址。 您可以使用傳回的函式指標來呼叫 DLL 函式。 **GetProcAddress**接受做為參數的 DLL 模組控制代碼 (由其中一個**LoadLibrary**， `AfxLoadLibrary`，或**GetModuleHandle**)，並採用您想要的函式名稱若要呼叫或函式的匯出序數。
+明確連結至 DLL 呼叫的程序[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)取得 DLL 中匯出的函式的位址。 您可以使用傳回的函式指標來呼叫 DLL 函式。 **GetProcAddress**接受做為參數的 DLL 模組控制代碼 (由其中一個**LoadLibrary**， `AfxLoadLibrary`，或**GetModuleHandle**)，並採用您想要的函式名稱若要呼叫或函式的匯出序數。
 
 因為您呼叫 DLL 函式透過指標，而且沒有編譯時期類型檢查，請確定函式的參數正確無誤，讓您不逾越堆疊上配置的記憶體而造成存取違規。 幫助提供類型安全的方法之一，就是查看匯出的函式的函式原型，並建立相符的函式指標的 typedef。 例如: 
 
@@ -73,7 +73,7 @@ if (hDLL != NULL)
 
 - [LoadLibrary 和 AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)
 
-- [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152)
+- [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
 
 - [使用 DEF 檔從 DLL 匯出](../build/exporting-from-a-dll-using-def-files.md)
 

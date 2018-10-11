@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fb3febbbaffc7c3a0de945fc9d30b544fd22188
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c43e28e035691b04181bef2162de828f3271a600
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46023302"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082750"
 ---
 # <a name="server-registration-global-functions"></a>伺服器註冊全域函式
 
@@ -125,7 +125,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 COM 模組指標。
 
 *dwClsContext*<br/>
-指定要執行的類別物件的內容。 可能的值為 CLSCTX_INPROC_SERVER、 CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。 請參閱[CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716)如需詳細資訊。
+指定要執行的類別物件的內容。 可能的值為 CLSCTX_INPROC_SERVER、 CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。 請參閱[CLSCTX](/windows/desktop/api/wtypesbase/ne-wtypesbase-tagclsctx)如需詳細資訊。
 
 *dwFlags*<br/>
 決定類別物件的連接類型。 可能的值為 REGCLS_SINGLEUSE、 REGCLS_MULTIPLEUSE 或 REGCLS_MULTI_SEPARATE。 請參閱[REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls)如需詳細資訊。

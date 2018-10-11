@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2d3c66fdb15a27b027be656ab07152e74d848526
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5194d205dc29df9c73e3ca44637f23ca16f72e6b
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086898"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083771"
 ---
 # <a name="retrieving-a-blob"></a>擷取 BLOB
 
-您可以擷取各種方式二進位大型物件 (BLOB)。 您可以使用`DBTYPE_BYTES`擷取成位元組序列的 BLOB，或使用像介面`ISequentialStream`。 如需詳細資訊，請參閱 < [BLOB 與 OLE 物件](/previous-versions/windows/desktop/ms711511\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+您可以擷取各種方式二進位大型物件 (BLOB)。 您可以使用`DBTYPE_BYTES`擷取成位元組序列的 BLOB，或使用像介面`ISequentialStream`。 如需詳細資訊，請參閱 < [BLOB 與 OLE 物件](/previous-versions/windows/desktop/ms711511)中*OLE DB 程式設計人員參考*。  
   
 下列程式碼示範如何擷取 BLOB 使用`ISequentialStream`。 巨集會[BLOB_ENTRY](../../data/oledb/blob-entry.md)可讓您指定的介面和介面使用的旗標。 開啟資料表之後, 程式碼會呼叫`Read`重複在`ISequentialStream`從 BLOB 讀取位元組。 程式碼會呼叫`Release`來進行處置的介面指標，然後再呼叫`MoveNext`來取得下一筆記錄。  
   

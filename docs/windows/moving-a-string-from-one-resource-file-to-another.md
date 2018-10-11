@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1fbe498c5c255ec95772c9e75b6ce588ae4a4c3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0d8ebfc8f1111049368a76a9b153fcf8079a4edd
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401975"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081854"
 ---
 # <a name="moving-a-string-from-one-resource-file-to-another-c"></a>將字串從一個資源檔移到另一個 （c + +）
 
@@ -43,7 +43,7 @@ ms.locfileid: "46401975"
    > [!NOTE]
    > 如果**識別碼**或**值**移動的字串衝突與現有的**識別碼**或是**值**在目的地檔案中，任一**識別碼**或**值**移動的字串的變更。 如果字串已存在具有相同**識別碼**，則**識別碼**移動的字串的變更。 如果字串已存在具有相同**值**，則**值**移動的字串的變更。
 
-如需將資源加入 managed 專案 （其為目標的通用語言執行平台） 的資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[逐步解說： 當地語系化 Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3\(v=vs.100\))。
+如需將資源加入 managed 專案 （其為目標的通用語言執行平台） 的資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[逐步解說： 當地語系化 Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3)。
 
 ## <a name="requirements"></a>需求
 

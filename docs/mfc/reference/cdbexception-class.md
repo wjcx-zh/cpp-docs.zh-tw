@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b860084b12f285effff7cf3c8fc74409a9baf4a3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c34c70f1bca3091ba078846b7b94ad947d5f31cb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389545"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083108"
 ---
 # <a name="cdbexception-class"></a>CDBException 類別
 
@@ -142,7 +142,7 @@ ODBC 所定義的 SQL 前置碼。 AFX 前面的程式碼會定義在 AFXDB。H�
 
 字串為形式 」 狀態: %s，原生: %ld，來源: %s"，其中的格式化程式碼，依序會取代的值，描述：
 
-- 在傳回的 SQLSTATE、 null 結束的字串，包含五個字元的錯誤碼*szSqlState*參數的 ODBC 函數`SQLError`。 SQLSTATE 值會列在附錄 A [ODBC 錯誤碼](/previous-versions/windows/desktop/ms714687\(v=vs.85\))，請在*ODBC 程式設計人員參考*。 範例:"S0022 」。
+- 在傳回的 SQLSTATE、 null 結束的字串，包含五個字元的錯誤碼*szSqlState*參數的 ODBC 函數`SQLError`。 SQLSTATE 值會列在附錄 A [ODBC 錯誤碼](/previous-versions/windows/desktop/ms714687)，請在*ODBC 程式設計人員參考*。 範例:"S0022 」。
 
 - 中的原生錯誤特有的程式碼，資料來源，傳回*pfNativeError*參數`SQLError`函式。 範例： 207。
 
@@ -150,7 +150,7 @@ ODBC 所定義的 SQL 前置碼。 AFX 前面的程式碼會定義在 AFXDB。H�
 
 架構會將錯誤字串解譯，並將其元件`m_strStateNativeOrigin`; 如果`m_strStateNativeOrigin`包含資訊的多個錯誤，錯誤會以換行符號分隔。 架構對英數字元的錯誤文字`m_strError`。
 
-如需用來構成這個字串的程式碼的詳細資訊，請參閱[SQLError](/previous-versions/windows/desktop/ms716312\(v=vs.85\))函式中*ODBC 程式設計人員參考*。
+如需用來構成這個字串的程式碼的詳細資訊，請參閱[SQLError](/previous-versions/windows/desktop/ms716312)函式中*ODBC 程式設計人員參考*。
 
 ### <a name="example"></a>範例
 

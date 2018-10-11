@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64e92eaca38743f0bc9de31f9be7684271c4674
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9783da47a22260f0edbe5ddf6d8f5021aae31e5c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374347"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083797"
 ---
 # <a name="application-information-and-management"></a>應用程式資訊和管理
 
@@ -591,7 +591,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 
 ### <a name="remarks"></a>備註
 
-它會傳回可用於控制代碼[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212)取得 DLL 函式的位址。 `AfxLoadLibrary` 也可以用來對應其他可執行檔的模組。
+它會傳回可用於控制代碼[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)取得 DLL 函式的位址。 `AfxLoadLibrary` 也可以用來對應其他可執行檔的模組。
 
 每個處理序會維護每個載入的程式庫模組的參考計數。 此參考計數會遞增每次`AfxLoadLibrary`呼叫，以及每次都會遞減`AfxFreeLibrary`呼叫。 在參考計數達到零時，模組就從呼叫處理序的位址空間取消對應，且控制代碼不再有效。
 
@@ -752,7 +752,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 在 Windows Vista，存取通常會用來登錄應用程式之前**HKEY_CLASSES_ROOT**節點。 不過，Windows Vista 或更新版本的作業系統，您必須執行應用程式將寫入 HKCR 提升權限模式。
 
-這個方法可讓您的應用程式來讀取和寫入登錄，而不需要提高權限模式執行的重新導向從 HKCR HKCU 登錄存取。 如需詳細資訊，請參閱 <<c0> [ 連結器屬性頁](../../ide/linker-property-pages.md)。
+這個方法可讓您的應用程式來讀取和寫入登錄，而不需要提高權限模式執行的重新導向從 HKCR HKCU 登錄存取。 如需詳細資訊，請參閱 [Linker Property Pages](../../ide/linker-property-pages.md)。
 
 如果您啟用登錄重新導向時，架構會將重新導向從 HKCR 來存取**HKEY_CURRENT_USER\Software\Classes**。 只有 MFC 和 ATL 架構會受到重新導向。
 

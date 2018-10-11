@@ -23,16 +23,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e6c7e498100a60a3d4c592c343cc86b5ee0a0ea
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a86300b4814c8712f3cf88f91421dc1d0842e8a7
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713358"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081515"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary 和 AfxFreeLibrary
 
-明確連結至 DLL 呼叫的程序[FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152(v=vs.85).aspx)函式時不再需要 DLL 模組。 這個函式模組的參考計數會遞減，並參考計數為零，如果取消從處理序位址空間。
+明確連結至 DLL 呼叫的程序[FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)函式時不再需要 DLL 模組。 這個函式模組的參考計數會遞減，並參考計數為零，如果取消從處理序位址空間。
 
 在 MFC 應用程式中，使用[AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)而不是`FreeLibrary`卸載 MFC 擴充 DLL。 介面 （函式原型），如`AfxFreeLibrary`等同於`FreeLibrary`。
 
@@ -51,5 +51,5 @@ ms.locfileid: "45713358"
 ## <a name="see-also"></a>另請參閱
 
 [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)<br/>
-[FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152(v=vs.85).aspx)
+[FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
 [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

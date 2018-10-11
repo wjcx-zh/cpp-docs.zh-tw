@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54e4ab00a0d0df90601d06d9e2ffa100d82d4c03
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dee59f5e86cddeec47da47c648b0cf12789cc85a
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037355"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084096"
 ---
 # <a name="composite-control-global-functions"></a>複合控制項全域函式
 
@@ -81,7 +81,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in]識別的模組，其可執行檔包含對話方塊範本的執行個體。
 
 *lpTemplateName*<br/>
-[in]識別對話方塊範本。 此參數會指定名稱的對話方塊範本的 null 結束的字元字串的指標，或是指定的對話方塊範本的資源識別碼的整數值。 如果參數指定資源識別項，其高序位文字必須是零，其低序位字組必須包含識別項。 您可以使用[MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029)巨集來建立此值。
+[in]識別對話方塊範本。 此參數會指定名稱的對話方塊範本的 null 結束的字元字串的指標，或是指定的對話方塊範本的資源識別碼的整數值。 如果參數指定資源識別項，其高序位文字必須是零，其低序位字組必須包含識別項。 您可以使用[MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea)巨集來建立此值。
 
 *hWndParent*<br/>
 [in]識別擁有對話方塊的視窗。
@@ -128,7 +128,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in]識別的模組，其可執行檔包含對話方塊範本的執行個體。
 
 *lpTemplateName*<br/>
-[in]識別對話方塊範本。 此參數會指定名稱的對話方塊範本的 null 結束的字元字串的指標，或是指定的對話方塊範本的資源識別碼的整數值。 如果參數指定資源識別項，其高序位文字必須是零，其低序位字組必須包含識別項。 您可以使用[MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029)巨集來建立此值。
+[in]識別對話方塊範本。 此參數會指定名稱的對話方塊範本的 null 結束的字元字串的指標，或是指定的對話方塊範本的資源識別碼的整數值。 如果參數指定資源識別項，其高序位文字必須是零，其低序位字組必須包含識別項。 您可以使用[MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea)巨集來建立此值。
 
 *hWndParent*<br/>
 [in]識別擁有對話方塊的視窗。

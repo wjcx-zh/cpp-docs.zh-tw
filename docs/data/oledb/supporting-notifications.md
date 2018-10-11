@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7ab24f981e90342a679b1a0a542b540192fee06e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a98848799163fd31037dc137b92b94878a1ee675
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107840"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082458"
 ---
 # <a name="supporting-notifications"></a>支援告知
 
@@ -33,7 +33,7 @@ ms.locfileid: "46107840"
 
 若要實作通知，提供者類別必須繼承自[IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)並[IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md)。  
   
-`IRowsetNotifyCP` 實作連接點介面的提供者站台[IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\))。 `IRowsetNotifyCP` 實作廣播通知接聽程式連接點上的函式`IID_IRowsetNotify`的資料列集的內容變更。  
+`IRowsetNotifyCP` 實作連接點介面的提供者站台[IRowsetNotify](/previous-versions/windows/desktop/ms712959)。 `IRowsetNotifyCP` 實作廣播通知接聽程式連接點上的函式`IID_IRowsetNotify`的資料列集的內容變更。  
   
 請注意，您也必須實作並註冊`IRowsetNotify`在取用者 （也稱為接收） 使用[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) ，好讓取用者可以處理通知。 在取用者實作連接點介面的詳細資訊，請參閱[接收通知](../../data/oledb/receiving-notifications.md)。  
   

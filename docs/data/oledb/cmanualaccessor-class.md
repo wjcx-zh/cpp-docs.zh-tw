@@ -43,12 +43,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 223b00f49a04cbc4305bdd14b26cd47bd8afb114
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 63bf2b36477ddc0c4088698c552b8ef734e16986
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46104879"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083725"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor 類別
 
@@ -95,7 +95,7 @@ void AddBindEntry(DBORDINAL nOrdinal,
   
 #### <a name="parameters"></a>參數  
 
-請參閱[DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+請參閱[DBBINDING](/previous-versions/windows/desktop/ms716845)中*OLE DB 程式設計人員參考*。  
   
 *nOrdinal*<br/>
 [in]資料行編號。  
@@ -136,7 +136,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
   
 #### <a name="parameters"></a>參數  
 
-請參閱[DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+請參閱[DBBINDING](/previous-versions/windows/desktop/ms716845)中*OLE DB 程式設計人員參考*。  
   
 *nOrdinal*<br/>
 [in]參數編號。  

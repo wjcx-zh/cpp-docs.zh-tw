@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 71e693c09d59643a272a0b2736a5a229ef444aa9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ebea06a70f82c8014b52bc8f8db081ca2f0264c7
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46078890"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082991"
 ---
 # <a name="ole-db-provider-template-architecture"></a>OLE DB 提供者樣板架構
 
@@ -50,7 +50,7 @@ OLE DB 提供者範本可讓您預先封裝實作所有必要的介面。 必要
   
 請注意，OLE DB 提供者範本不會實作資料列和儲存體物件。  
   
-下表列出必要和選用的介面，如上面所列的物件根據[OLE DB 2.6 SDK 文件](/previous-versions/windows/desktop/ms722784\(v=vs.85\))。  
+下表列出必要和選用的介面，如上面所列的物件根據[OLE DB 2.6 SDK 文件](/previous-versions/windows/desktop/ms722784)。  
   
 |元件|介面|註解|  
 |---------------|---------------|-------------|  
@@ -69,4 +69,4 @@ OLE DB 提供者範本可讓您預先封裝實作所有必要的介面。 必要
 ## <a name="see-also"></a>另請參閱  
 
 [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 介面](/previous-versions/windows/desktop/ms709709\(v=vs.85\))
+[OLE DB 介面](/previous-versions/windows/desktop/ms709709)

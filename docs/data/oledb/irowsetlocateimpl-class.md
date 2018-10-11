@@ -43,16 +43,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6a8e41561057250f4936e8e72a14f0324cfcdac1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c73d954adca5d242438ac79df50b29428fa1e15c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46065307"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082030"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl 類別
 
-實作 OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\))介面，它會從資料列集提取任意的資料列。  
+實作 OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190)介面，它會從資料列集提取任意的資料列。  
   
 ## <a name="syntax"></a>語法
 
@@ -87,7 +87,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 提供者所持有的所有資料列控制代碼儲存體單位。  
   
 *BookmarkKeyType*<br/>
-書籤，例如長時間或字串的型別。 一般的書籤必須具有至少兩個位元組的長度。 (單位元組長度保留供 OLE DB[標準的書籤](/previous-versions/windows/desktop/ms712954\(v=vs.85\))`DBBMK_FIRST`， `DBBMK_LAST`，和`DBBMK_INVALID`。)  
+書籤，例如長時間或字串的型別。 一般的書籤必須具有至少兩個位元組的長度。 (單位元組長度保留供 OLE DB[標準的書籤](/previous-versions/windows/desktop/ms712954)`DBBMK_FIRST`， `DBBMK_LAST`，和`DBBMK_INVALID`。)  
   
 *BookmarkType*<br/>
 維護書籤的資料關聯性的對應機制。  
@@ -118,13 +118,13 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
   
 ## <a name="remarks"></a>備註  
 
-`IRowsetLocateImpl` 是 OLE DB 樣板實作[IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\))介面。 `IRowsetLocate` 用來從資料列集擷取任意資料列。 未實作此介面的資料列集是`sequential`資料列集。 當`IRowsetLocate`存在於資料列集，資料行 0 是資料列的書籤，閱讀這篇專欄，就會取得可用來重新定位到相同的資料列的書籤值。  
+`IRowsetLocateImpl` 是 OLE DB 樣板實作[IRowsetLocate](/previous-versions/windows/desktop/ms721190)介面。 `IRowsetLocate` 用來從資料列集擷取任意資料列。 未實作此介面的資料列集是`sequential`資料列集。 當`IRowsetLocate`存在於資料列集，資料行 0 是資料列的書籤，閱讀這篇專欄，就會取得可用來重新定位到相同的資料列的書籤值。  
   
 `IRowsetLocateImpl` 用來實作提供者中的書籤的支援。 書籤是預留位置 （索引資料列集） 可讓取用者快速地返回資料列，讓高速資料的存取權。 提供者會決定哪些書籤可以唯一識別資料列。 使用`IRowsetLocateImpl`方法，您可以比較的書籤，提取資料列的位移依書籤，提取資料列，並傳回書籤的雜湊值。  
   
 若要支援 OLE DB 的書籤中的資料列集，請繼承自這個類別的資料列集。  
   
-如需實作的書籤支援的詳細資訊，請參閱[提供者支援書籤](../../data/oledb/provider-support-for-bookmarks.md)中*Visual c + + 程式設計人員指南*並[書籤](/previous-versions/windows/desktop/ms709728\(v=vs.85\))中*OLE DB 程式設計人員參考*平台 SDK 中。  
+如需實作的書籤支援的詳細資訊，請參閱[提供者支援書籤](../../data/oledb/provider-support-for-bookmarks.md)中*Visual c + + 程式設計人員指南*並[書籤](/previous-versions/windows/desktop/ms709728)中*OLE DB 程式設計人員參考*平台 SDK 中。  
 
 ## <a name="compare"></a> Irowsetlocateimpl:: Compare
 
@@ -143,11 +143,11 @@ STDMETHOD (Compare )(HCHAPTER /* hReserved */,
   
 #### <a name="parameters"></a>參數  
 
-請參閱[IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+請參閱[IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539)中*OLE DB 程式設計人員參考*。  
   
 ### <a name="remarks"></a>備註  
 
-其中一個書籤可以是一種標準 OLE DB 定義[標準的書籤](/previous-versions/windows/desktop/ms712954\(v=vs.85\))(`DBBMK_FIRST`， `DBBMK_LAST`，或`DBBMK_INVALID`)。 中傳回的值`pComparison`表示兩個書籤之間的關聯性：  
+其中一個書籤可以是一種標準 OLE DB 定義[標準的書籤](/previous-versions/windows/desktop/ms712954)(`DBBMK_FIRST`， `DBBMK_LAST`，或`DBBMK_INVALID`)。 中傳回的值`pComparison`表示兩個書籤之間的關聯性：  
   
 - DBCOMPARE_LT (`cbBookmark1`之前`cbBookmark2`。)  
   
@@ -178,11 +178,11 @@ STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,
   
 #### <a name="parameters"></a>參數  
 
-請參閱[irowsetlocate:: Getrowsat](/previous-versions/windows/desktop/ms723031\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+請參閱[irowsetlocate:: Getrowsat](/previous-versions/windows/desktop/ms723031)中*OLE DB 程式設計人員參考*。  
   
 ### <a name="remarks"></a>備註  
 
-若要改為擷取資料指標位置，使用[IRowset::GetRowsAt](/previous-versions/windows/desktop/ms723031\(v=vs.85\))。  
+若要改為擷取資料指標位置，使用[IRowset::GetRowsAt](/previous-versions/windows/desktop/ms723031)。  
   
 `IRowsetLocateImpl::GetRowsAt` 不會變更資料指標位置。 
 
@@ -204,13 +204,13 @@ STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>參數  
 
 *hReserved*<br/>
-[in]對應至*hChapter*參數來[irowsetlocate:: Getrowsbybookmark](/previous-versions/windows/desktop/ms725420\(v=vs.85\))。  
+[in]對應至*hChapter*參數來[irowsetlocate:: Getrowsbybookmark](/previous-versions/windows/desktop/ms725420)。  
   
-其他參數，請參閱[irowsetlocate:: Getrowsbybookmark](/previous-versions/windows/desktop/ms725420\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+其他參數，請參閱[irowsetlocate:: Getrowsbybookmark](/previous-versions/windows/desktop/ms725420)中*OLE DB 程式設計人員參考*。  
   
 ### <a name="remarks"></a>備註  
 
-書籤可以是您定義的值或 OLE DB[標準的書籤](/previous-versions/windows/desktop/ms712954\(v=vs.85\))(`DBBMK_FIRST`或`DBBMK_LAST`)。 不會變更資料指標位置。  
+書籤可以是您定義的值或 OLE DB[標準的書籤](/previous-versions/windows/desktop/ms712954)(`DBBMK_FIRST`或`DBBMK_LAST`)。 不會變更資料指標位置。  
 
 ## <a name="hash"></a> Irowsetlocateimpl:: Hash
 
@@ -230,9 +230,9 @@ STDMETHOD (Hash )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>參數  
 
 *hReserved*<br/>
-[in]對應至*hChapter*參數來[IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697\(v=vs.85\))。  
+[in]對應至*hChapter*參數來[IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697)。  
   
-其他參數，請參閱[IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+其他參數，請參閱[IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697)中*OLE DB 程式設計人員參考*。  
 
 ## <a name="rgbookmarks"></a> Irowsetlocateimpl:: M_rgbookmarks
 
@@ -248,6 +248,6 @@ CAtlArray<DBROWCOUNT> m_rgBookmarks;
 
 [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
-[IRowsetLocate:IRowset](/previous-versions/windows/desktop/ms721190\(v=vs.85\))   
+[IRowsetLocate:IRowset](/previous-versions/windows/desktop/ms721190)   
 [提供者書籤支援](../../data/oledb/provider-support-for-bookmarks.md)<br/>
-[書籤](/previous-versions/windows/desktop/ms709728\(v=vs.85\))
+[書籤](/previous-versions/windows/desktop/ms709728)

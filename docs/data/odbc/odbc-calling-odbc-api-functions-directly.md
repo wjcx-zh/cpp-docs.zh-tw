@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 24701e2bab154f0815408f4e2e3e37e56ad6d823
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5e5972eab67e19752700ac5f8a027288eb6fc43c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092523"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083680"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC：直接呼叫 ODBC API 函式
 
@@ -49,7 +49,7 @@ ms.locfileid: "46092523"
   
 - 當您完成時，取消配置儲存區。  
   
-如需有關這些步驟的詳細資訊，請參閱 <<c0> [ 開放式資料庫連接 (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) MSDN 文件中的 SDK。  
+如需有關這些步驟的詳細資訊，請參閱 <<c0> [ 開放式資料庫連接 (ODBC)](/previous-versions/windows/desktop/ms710252) MSDN 文件中的 SDK。  
   
 除了這些步驟中，您需要採取額外步驟以檢查函式傳回值，請確定您的程式不等候非同步呼叫完成，然後依此類推。 您可以使用 AFX_SQL_ASYNC 和 AFX_SQL_SYNC 巨集，以簡化最後一個步驟執行。 如需詳細資訊，請參閱 <<c0> [ 巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)中*MFC 參考 》*。  
 

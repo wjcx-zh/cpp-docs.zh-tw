@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ce585f9dc8439a02a2883229e8d9ec006c29c24
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 086fab7d1d50f96ab05c38f2e6d524d7ff344e02
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717687"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081912"
 ---
 # <a name="delay-delay-load-import-settings"></a>/DELAY (延遲載入匯入設定)
 
@@ -46,7 +46,7 @@ ms.locfileid: "45717687"
 
 - NOBIND 限定詞會告知連結器不在最終映像檔中包含可繫結 IAT。 預設會是針對延遲載入 DLL 建立可繫結 IAT。 所產生的映像檔無法靜態繫結  (具有可繫結 IAT 的映像檔在執行之前，可能是靜態繫結的)。請參閱[繫結/](../../build/reference/bind.md)。
 
-   如果已繫結 DLL，helper 函式會嘗試使用的繫結的資訊，而不是呼叫[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)上每個參考匯入。 如果時間戳記或慣用位址與那些已載入 DLL 的時間戳記或慣用位址不相符，則 Helper 函式會假設已繫結 IAT 已過期，且會像已繫結 IAT 不存在那樣來進行處理。
+   如果已繫結 DLL，helper 函式會嘗試使用的繫結的資訊，而不是呼叫[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)上每個參考匯入。 如果時間戳記或慣用位址與那些已載入 DLL 的時間戳記或慣用位址不相符，則 Helper 函式會假設已繫結 IAT 已過期，且會像已繫結 IAT 不存在那樣來進行處理。
 
    NOBIND 會導致您的程式映像檔變大，但可加速 DLL 的載入。 如果您從未繫結 DLL，則 NOBIND 會防止產生已繫結 IAT。
 

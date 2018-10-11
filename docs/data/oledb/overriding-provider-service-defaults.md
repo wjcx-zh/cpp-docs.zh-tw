@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 561617628e79513434d498d4c5e5af8ff2c189be
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 77ea251b91e55d3a3f01b6591828beffaaa9272d
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46104903"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083381"
 ---
 # <a name="overriding-provider-service-defaults"></a>覆寫提供者服務預設值
 
-OLEDB_SERVICES 的提供者的登錄值會傳回的預設值[DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898\(v=vs.85\))初始化資料來源物件的屬性。  
+OLEDB_SERVICES 的提供者的登錄值會傳回的預設值[DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898)初始化資料來源物件的屬性。  
   
 只要登錄項目存在，提供者的物件會彙總，而且使用者可以覆寫提供者的預設設定為已啟用的服務，藉由設定`DBPROP_INIT_OLEDBSERVICES`之前初始化的屬性。 若要啟用或停用特定的服務，使用者通常取得的目前值`DBPROP_INIT_OLEDBSERVICES`屬性，設定或清除的位元為特定的屬性來啟用或停用，以及重設屬性。 `DBPROP_INIT_OLEDBSERVICES` 可以直接在 OLE DB 或 ado 傳遞的連接字串中設定或`IDataInitialize::GetDatasource`。 啟用/停用個別的服務對應的值詳列於下表。  
   
@@ -41,7 +41,7 @@ OLEDB_SERVICES 的提供者的登錄值會傳回的預設值[DBPROP_INIT_OLEDBSE
   
 ## <a name="see-also"></a>另請參閱  
 
-[資源集區](/previous-versions/windows/desktop/ms713655\(v=vs.85\))   
-[如何取用者會使用資源集區](/previous-versions/windows/desktop/ms715907\(v=vs.85\))   
-[提供者如何有效地使用資源集區](/previous-versions/windows/desktop/ms714906\(v=vs.85\))   
+[資源集區](/previous-versions/windows/desktop/ms713655)   
+[如何取用者會使用資源集區](/previous-versions/windows/desktop/ms715907)   
+[提供者如何有效地使用資源集區](/previous-versions/windows/desktop/ms714906)   
 [啟用和停用 OLE DB 服務](../../data/oledb/enabling-and-disabling-ole-db-services.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8dcefa3068cb27514671094194ba590e99402b05
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6defe70a018fe954a0daa2d1a4b49142a9a37884
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021093"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081931"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>ATL 資料庫類別 (OLE DB 樣板)
 
@@ -40,7 +40,7 @@ OLE DB 範本是 ATL 中的 c + + 範本，讓您更輕鬆地提供實作許多�
   
 請注意，MFC 程式庫包含一個類別， [COleDBRecordView](../mfc/reference/coledbrecordview-class.md)，會顯示在控制項中的資料庫記錄。 檢視是表單檢視，直接連接到`CRowset`物件，並會顯示的欄位`CRowset`對話方塊範本的控制項中的物件。  
   
-如需詳細資訊，請參閱 < [OLE DB 程式設計](../data/oledb/ole-db-programming.md)並[OLE DB 程式設計人員指南](/previous-versions/windows/desktop/ms713643\(v=vs.85\))。  
+如需詳細資訊，請參閱 < [OLE DB 程式設計](../data/oledb/ole-db-programming.md)並[OLE DB 程式設計人員指南](/previous-versions/windows/desktop/ms713643)。  
   
 ## <a name="see-also"></a>另請參閱  
 

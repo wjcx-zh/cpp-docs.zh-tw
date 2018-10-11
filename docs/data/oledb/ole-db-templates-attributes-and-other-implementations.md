@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6e5fa63a0da718b80c2b0d61e5215a947e21d496
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8b2cbe36a933580edc09e8139dca0ed6ec090f90
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101707"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082653"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>OLE DB 樣板、屬性和其他實作
 
@@ -36,7 +36,7 @@ OLE DB 樣板，也就是 ATL (Active Template Library) 的一部分，進行高
   
 - **OLE DB 提供者樣板**用來實作 OLE DB 伺服器 （提供者） 應用程式。  
   
-若要使用此 OLE DB 樣板，必須熟悉 C++ 樣板、COM 和 OLE DB 介面。 如果您不熟悉如何使用 OLE DB，請參閱[OLE DB 程式設計人員參考](/previous-versions/windows/desktop/ms713643\(v=vs.85\))。  
+若要使用此 OLE DB 樣板，必須熟悉 C++ 樣板、COM 和 OLE DB 介面。 如果您還不熟悉如何使用 OLE DB，請參閱 [OLE DB 設計人員參考](/previous-versions/windows/desktop/ms713643)。  
   
 如需詳細資訊，您可以：  
   
@@ -48,7 +48,7 @@ OLE DB 樣板，也就是 ATL (Active Template Library) 的一部分，進行高
   
 - 請參閱清單[OLE DB 範本範例](https://github.com/Microsoft/VCSamples)。  
   
-- 請參閱[OLE DB 程式設計人員參考](/previous-versions/windows/desktop/ms713643\(v=vs.85\))（在 Windows SDK 中)。  
+- 請參閱[OLE DB 程式設計人員參考](/previous-versions/windows/desktop/ms713643)（在 Windows SDK 中)。  
   
 ## <a name="ole-db-attributes"></a>OLE DB 屬性  
 
@@ -60,7 +60,7 @@ MFC 程式庫有一個類別， [COleDBRecordView](../../mfc/reference/coledbrec
   
 ## <a name="ole-db-sdk-interfaces"></a>OLE DB SDK 介面  
 
-在 OLE DB 範本不支援 OLE DB 功能的情況下，您需要使用自己的 OLE DB 介面。 如需詳細資訊，請參閱 < [OLE DB 程式設計人員參考](/previous-versions/windows/desktop/ms713643\(v=vs.85\))Windows SDK 中。  
+在 OLE DB 範本不支援 OLE DB 功能的情況下，您需要使用自己的 OLE DB 介面。 如需詳細資訊，請參閱 < [OLE DB 程式設計人員參考](/previous-versions/windows/desktop/ms713643)Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
 

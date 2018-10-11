@@ -33,16 +33,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 22f4aee2ac7cbefee19a33d929ec80b319b537d4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6f85fafe213fa7e53f67fb6a3035f415235c8794
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117474"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082445"
 ---
 # <a name="cenumerator-class"></a>CEnumerator 類別
 
-使用 OLE DB 列舉值物件，它會公開[ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\))介面，以傳回描述所有的資料來源和列舉值的資料列集。  
+使用 OLE DB 列舉值物件，它會公開[ISourcesRowset](/previous-versions/windows/desktop/ms715969)介面，以傳回描述所有的資料來源和列舉值的資料列集。  
   
 ## <a name="syntax"></a>語法
 
@@ -61,7 +61,7 @@ class CEnumerator :
   
 |||  
 |-|-|  
-|[尋找](#find)|可用的提供者 （資料來源） 搜尋尋找具有指定名稱的其中一個。|  
+|[Find](#find)|可用的提供者 （資料來源） 搜尋尋找具有指定名稱的其中一個。|  
 |[GetMoniker](#getmoniker)|擷取`IMoniker`目前記錄的介面。|  
 |[開啟](#open)|開啟 列舉值。|  
   
@@ -90,7 +90,7 @@ bool Find(TCHAR* szSearchName) throw();
   
 ### <a name="remarks"></a>備註  
 
-此名稱會對應到`SOURCES_NAME`隸屬[ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\))介面。  
+此名稱會對應到`SOURCES_NAME`隸屬[ISourcesRowset](/previous-versions/windows/desktop/ms715969)介面。  
   
 ## <a name="getmoniker"></a> Cenumerator:: Getmoniker
 
@@ -119,7 +119,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 
 ## <a name="open"></a> Cenumerator:: Open
 
-會將繫結之 moniker 的列舉值，如果其中一個指定，則擷取資料列集列舉值，藉由呼叫[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))。  
+會將繫結之 moniker 的列舉值，如果其中一個指定，則擷取資料列集列舉值，藉由呼叫[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200)。  
   
 ### <a name="syntax"></a>語法  
   

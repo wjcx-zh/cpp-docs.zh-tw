@@ -23,16 +23,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7f148176b8d5d0c85f3e899cfd117bbb381794b0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2e4427eede8efcd492e90597efe9488a89e6d4de
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46047391"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082367"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl 類別
 
-提供實作[IDBCreateSession](/previous-versions/windows/desktop/ms724076\(v=vs.85\))介面。  
+提供實作[IDBCreateSession](/previous-versions/windows/desktop/ms724076)介面。  
   
 ## <a name="syntax"></a>語法
 
@@ -80,7 +80,7 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
   
 #### <a name="parameters"></a>參數  
 
-請參閱[idbcreatesession:: Createsession](/previous-versions/windows/desktop/ms714942\(v=vs.85\))中*OLE DB 程式設計人員參考*。   
+請參閱[idbcreatesession:: Createsession](/previous-versions/windows/desktop/ms714942)中*OLE DB 程式設計人員參考*。   
   
 ## <a name="see-also"></a>另請參閱  
 

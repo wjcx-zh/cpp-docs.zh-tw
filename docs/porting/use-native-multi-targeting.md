@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb9d7b950e4c38ea53db6e459edfa1a179eb971d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 62404de4012bcd49888da527ae93ed1b2137a48a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578258"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374141"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>在 Visual Studio 中使用原生多目標來建置舊專案
 
@@ -70,19 +70,11 @@ Visual Studio 2008 有自己適用於 C++ 的專屬建置系統，稱為 **VCBui
 
 您可能有無法升級或不想要升級的舊 Visual C++ 專案，而且平台工具組版本與專案不符。 在此情況下，若要取得工具組，您可以安裝所需版本的免費 Visual Studio Community 或 Express 版本。 從 Visual Studio 2008 開始的每個 Visual Studio 版本，都可以安裝從目前 Visual Studio 將目標設為該版本所需的編譯器、工具和程式庫。 搜尋 Microsoft 下載中心以尋找並下載特定 Visual Studio 版本。 請確定您在安裝期間選擇 C++ 安裝選項。 安裝完成之後，請執行該 Visual Studio 版本來安裝任何更新。 同時檢查可能需要的任何 Windows Update 變更。 這項更新檢查程序可能需要重複進行多次，才能取得每個更新。
 
-以下是一些您可能需要的 Visual Studio 下載︰
-
-  - [Microsoft Visual Studio Community 2015](https://www.microsoft.com/download/details.aspx?id=48146)  
-  - [Microsoft Visual Studio Express 2013 for Windows Desktop 含 Update 5](https://www.microsoft.com/download/details.aspx?id=48131)  
-  - [Microsoft Visual Studio Express 2012 for Windows Desktop](https://www.microsoft.com/download/details.aspx?id=34673)  
-  - [Visual Studio 2012 Update 5](https://www.microsoft.com/download/details.aspx?id=34673)  
-  - [Microsoft Visual C++ 2010 Express (Web 安裝程式)](https://download.microsoft.com/download/1/D/9/1D9A6C0E-FC89-43EE-9658-B9F0E3A76983/vc_web.exe)  
-  - [Microsoft Visual Studio 2010 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=23691)  
-  - [Microsoft Visual C++ 2008 Express 含 SP1 (Web 安裝程式)](https://go.microsoft.com/?linkid=7729279)  
+如需目前可用的下載，請參閱[下載舊版 Visual Studio 軟體](https://visualstudio.microsoft.com/vs/older-downloads/)。
 
 安裝這些產品之後，[屬性頁] 對話方塊的 [平台工具組] 屬性下拉式清單會自動更新，以顯示可用的工具組。 您現在可以使用最新版的 Visual Studio 來建置適用於這些舊版工具組的專案，而不需要轉換或升級這些專案。
 
 ## <a name="see-also"></a>請參閱
 
-[從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
+[從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visual Studio 2017 中的 C++ 一致性改善](../cpp-conformance-improvements-2017.md)  

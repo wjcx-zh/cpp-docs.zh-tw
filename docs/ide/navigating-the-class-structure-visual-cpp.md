@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b926ab618a631ca1334e89da983f169b6a38e49b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9c602717829db0b076add24b0db29b464068c68c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204647"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409125"
 ---
 # <a name="navigating-the-class-structure-visual-c"></a>巡覽類別結構 (Visual C++)
-您可以使用**類別檢視**或**物件瀏覽器**來瀏覽專案類別結構，包括函式、繼承和介面。 如需詳細資訊，請參閱[檢視程式碼的結構](/visualstudio/ide/viewing-the-structure-of-code)。  
-  
- 您可以在 [類別檢視] 中的函式名稱上按兩下，就可移至函式宣告。 您可以在 [類別檢視] 中的類別名稱上按兩下，就可移至類別定義。  
-  
-## <a name="see-also"></a>請參閱  
- [使用程式碼精靈新增功能](../ide/adding-functionality-with-code-wizards-cpp.md)   
- [新增類別](../ide/adding-a-class-visual-cpp.md)   
- [成員函式](../ide/adding-a-member-function-visual-cpp.md)   
- [成員變數](../ide/adding-a-member-variable-visual-cpp.md)   
- [覆寫虛擬函式](../ide/overriding-a-virtual-function-visual-cpp.md)   
- [MFC 訊息處理常式](../mfc/reference/adding-an-mfc-message-handler.md)
+
+您可以使用**類別檢視**或**物件瀏覽器**來瀏覽專案類別結構，包括函式、繼承和介面。 如需詳細資訊，請參閱[檢視程式碼的結構](/visualstudio/ide/viewing-the-structure-of-code)。
+
+您可以在 [類別檢視] 中的函式名稱上按兩下，就可移至函式宣告。 您可以在 [類別檢視] 中的類別名稱上按兩下，就可移至類別定義。
+
+## <a name="see-also"></a>請參閱
+
+[使用程式碼精靈新增功能](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
+[新增類別](../ide/adding-a-class-visual-cpp.md)<br>
+[新增成員函式](../ide/adding-a-member-function-visual-cpp.md)<br>
+[新增成員變數](../ide/adding-a-member-variable-visual-cpp.md)<br>
+[覆寫虛擬函式](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
+[MFC 訊息處理常式](../mfc/reference/adding-an-mfc-message-handler.md)

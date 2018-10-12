@@ -18,33 +18,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58d2b1eaee54ac33e687d457830372f2bef06230
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 687203787bdab69751aabf0672fe1269974b3014
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718506"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399599"
 ---
 # <a name="managed-resources-property-page"></a>Managed 資源屬性頁
-啟用資源編譯器的設定。  
-  
- [受控資源] 屬性頁包含下列屬性：  
-  
+
+啟用資源編譯器的設定。
+
+[受控資源] 屬性頁包含下列屬性：
+
 - **資源邏輯名稱**
 
-   指定所產生之中繼 .resources 檔案的「邏輯名稱」。 邏輯名稱是用來載入資源的名稱。 如果未指定任何邏輯名稱，則會使用資源檔 (.resx) 名稱作為邏輯名稱。  
-  
+   指定所產生之中繼 .resources 檔案的「邏輯名稱」。 邏輯名稱是用來載入資源的名稱。 如果未指定任何邏輯名稱，則會使用資源檔 (.resx) 名稱作為邏輯名稱。
+
 - **輸出檔名稱**
 
-   指定資源檔 (.resx) 所提供的最後輸出檔的名稱。  
-  
+   指定資源檔 (.resx) 所提供的最後輸出檔的名稱。
+
 - **預設的當地語系化資源**
 
-   指定給定的 .resx 檔案是提供預設的資源或附屬 .dll。  
-  
-如需如何存取 [受控資源] 屬性頁的詳細資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。  
-  
-## <a name="see-also"></a>請參閱  
- [使用 RC (RC 命令列)](/windows/desktop/menurc/using-rc-the-rc-command-line-)   
- [屬性頁](../ide/property-pages-visual-cpp.md)   
- [/ASSEMBLYRESOURCE (內嵌 Managed 資源)](../build/reference/assemblyresource-embed-a-managed-resource.md)
+   指定給定的 .resx 檔案是提供預設的資源或附屬 .dll。
+
+如需如何存取 [受控資源] 屬性頁的詳細資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。
+
+## <a name="see-also"></a>請參閱
+
+[使用 RC (RC 命令列)](/windows/desktop/menurc/using-rc-the-rc-command-line-)<br>
+[屬性頁](../ide/property-pages-visual-cpp.md)<br>
+[/ASSEMBLYRESOURCE (內嵌 Managed 資源)](../build/reference/assemblyresource-embed-a-managed-resource.md)

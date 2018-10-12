@@ -16,28 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c295b9a3aa4996cdcd2afb17b5a4ff4c90c1159
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d9ba28a426c439454d8b0723f8d2997bbefa5759
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33334993"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417224"
 ---
 # <a name="resource-files-c"></a>資源檔 (C++)
-資源是提供資訊給使用者的介面項目。 點陣圖、圖示、工具列和資料指標都是資源。 您可以操作某些資源來執行動作，例如從功能表選取，或在對話方塊中輸入資料。  
-  
- 如需詳細資訊，請參閱[使用資源](../windows/working-with-resource-files.md)。  
-  
-|檔案名稱|目錄位置|方案總管位置|描述|  
-|---------------|------------------------|--------------------------------|-----------------|  
-|*Projname*.rc|*Projname*|原始程式檔|專案的資源指令檔。 根據專案類型，以及針對專案選取的支援 (例如工具列、對話方塊或 HTML)，資源指令檔會包含下列項目：<br /><br /> -   預設功能表定義。<br />-   快速鍵和字串資料表。<br />-   預設的 [關於] 對話方塊。<br />-   其他對話方塊。<br />-   圖示檔 (res\\*Projname*.ico)。<br />-   版本資訊。<br />-   點陣圖。<br />-   工具列。<br />-   HTML 檔案。<br /><br /> 資源檔包含標準 MFC 資源的 Afxres.rc 檔案。|  
-|偵錯工具|*Projname*|標頭檔|資源標頭檔，其中包含專案所使用之資源的定義。|  
-|*Projname*.rc2|*Projname*\res|原始程式檔|指令檔，其中包含專案所使用的其他資源。 您可以在專案的 .rc 檔案頂端包含 .rc2 檔案。<br /><br /> .rc2 檔案可用於包含數個不同專案所使用的資源。 您不必為不同的專案多次建立相同的資源，您可以將它們放在 .rc2 檔案中，再將 .rc2 檔案包含在主要 .rc 檔案中。|  
-|*Projname*.def|*Projname*|原始程式檔|DLL 專案的模組定義檔。 若是控制項，它會提供控制項的名稱和描述，以及執行階段堆積的大小。|  
-|*Projname*.ico|*Projname*\res|資源檔|專案或控制項的圖示檔。 當應用程式最小化時，就會出現此圖示。 您也可以在應用程式的 [關於] 方塊中使用此圖示。 根據預設，MFC 會提供 MFC 圖示，而 ATL 會提供 ATL 圖示。|  
-|*Projname*Doc.ico|*Projname*\res|資源檔|MFC 專案的圖示檔，其中包含文件/檢視架構的支援。|  
-|Toolbar.bmp|*Projname*\res|資源檔|點陣圖檔，代表工具列或選擇區中的應用程式或控制項。 此點陣圖會包含在專案的資源檔中。 初始工具列和狀態列是在 **CMainFrame** 類別中建構。|  
-|ribbon.mfcribbon-ms|*Projname*\res|資源檔|資源檔，其中包含定義功能區按鈕、控制項和屬性的 XML 程式碼。 如需詳細資訊，請參閱 [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)。|  
-  
-## <a name="see-also"></a>請參閱  
- [為 Visual C++ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)
+
+資源是提供資訊給使用者的介面項目。 點陣圖、圖示、工具列和資料指標都是資源。 您可以操作某些資源來執行動作，例如從功能表選取，或在對話方塊中輸入資料。
+
+如需詳細資訊，請參閱[使用資源](../windows/working-with-resource-files.md)。
+
+|檔案名稱|目錄位置|方案總管位置|描述|
+|---------------|------------------------|--------------------------------|-----------------|
+|*Projname*.rc|*Projname*|原始程式檔|專案的資源指令檔。 根據專案類型，以及針對專案選取的支援 (例如工具列、對話方塊或 HTML)，資源指令檔會包含下列項目：<br /><br /> -   預設功能表定義。<br />-   快速鍵和字串資料表。<br />-   預設的 [關於] 對話方塊。<br />-   其他對話方塊。<br />-   圖示檔 (res\\*Projname*.ico)。<br />-   版本資訊。<br />-   點陣圖。<br />-   工具列。<br />-   HTML 檔案。<br /><br /> 資源檔包含標準 MFC 資源的 Afxres.rc 檔案。|
+|偵錯工具|*Projname*|標頭檔|資源標頭檔，其中包含專案所使用之資源的定義。|
+|*Projname*.rc2|*Projname*\res|原始程式檔|指令檔，其中包含專案所使用的其他資源。 您可以在專案的 .rc 檔案下包含 .rc2 檔案。<br /><br /> .rc2 檔案可用於包含數個不同專案所使用的資源。 您不必為不同的專案多次建立相同的資源，您可以將它們放在 .rc2 檔案中，再將 .rc2 檔案包含在主要 .rc 檔案中。|
+|*Projname*.def|*Projname*|原始程式檔|DLL 專案的模組定義檔。 若是控制項，它會提供控制項的名稱和描述，以及執行階段堆積的大小。|
+|*Projname*.ico|*Projname*\res|資源檔|專案或控制項的圖示檔。 當應用程式最小化時，就會出現此圖示。 您也可以在應用程式的 [關於] 方塊中使用此圖示。 根據預設，MFC 會提供 MFC 圖示，而 ATL 會提供 ATL 圖示。|
+|*Projname*Doc.ico|*Projname*\res|資源檔|MFC 專案的圖示檔，其中包含文件/檢視架構的支援。|
+|Toolbar.bmp|*Projname*\res|資源檔|點陣圖檔，代表工具列或選擇區中的應用程式或控制項。 此點陣圖會包含在專案的資源檔中。 初始工具列和狀態列是在 **CMainFrame** 類別中建構。|
+|ribbon.mfcribbon-ms|*Projname*\res|資源檔|資源檔，其中包含定義功能區按鈕、控制項和屬性的 XML 程式碼。 如需詳細資訊，請參閱 [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)。|
+
+## <a name="see-also"></a>請參閱
+
+[為 Visual C++ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)

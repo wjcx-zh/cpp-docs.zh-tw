@@ -507,6 +507,7 @@
 ## [編譯器警告 (層級 1) C4835](compiler-warning-level-1-c4835.md)
 ## [編譯器警告 (層級 1) C4838](compiler-warning-level-1-c4838.md)
 ## [編譯器警告 (層級 3) C4839](compiler-warning-level-3-c4839.md)
+## [編譯器警告 (層級 4) C4840](compiler-warning-level-4-c4840.md)
 ## [編譯器警告 C4867](compiler-warning-c4867.md)
 ## [編譯器警告 C4868](compiler-warning-c4868.md)
 ## [編譯器警告 (層級 1) C4900](compiler-warning-level-1-c4900.md)

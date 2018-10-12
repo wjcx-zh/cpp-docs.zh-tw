@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dca97238310c42b9a537baa4056563b25c20c617
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 98734522410b867d735d0af25f440d5b45874563
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895223"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393278"
 ---
 # <a name="hint-files"></a>提示檔案
 
@@ -52,9 +52,9 @@ STDMETHOD(myMethod)(int parameter1);
 
 ```cpp
 // Header file.
-#define STDMETHOD(method) HRESULT (STDMETHODCALLTYPE * method)  
+#define STDMETHOD(method) HRESULT (STDMETHODCALLTYPE * method)
 #define STDMETHODCALLTYPE __stdcall
-#define HRESULT void*  
+#define HRESULT void*
 ```
 
 剖析系統無法解譯原始程式碼，因為似乎宣告了名為 `STDMETHOD` 的函式，由於該宣告具有兩個參數清單，因此語法不正確。 剖析系統不會開啟標頭檔來探索 `STDMETHOD`、`STDMETHODCALLTYPE` 和 `HRESULT` 巨集的定義。 由於剖析系統無法解譯 `STDMETHOD` 巨集，因此會忽略整個陳述式，然後繼續剖析。
@@ -127,21 +127,21 @@ STDMETHOD(myMethod)(int parameter1);
 
 在下列原始程式碼中，`FormatWindowClassName()` 函式的參數類型為 `PXSTR`，而參數名稱為 `szBuffer`。 不過，剖析系統將 `_Pre_notnull_` 和 `_Post_z_` SAL 註釋誤認為參數類型或參數名稱。
 
-**原始程式碼：**  
+**原始程式碼：**
 
-```  
-static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)  
-```  
+```cpp
+static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
+```
 
 **策略：** Null 定義
 
-此情況的策略是將 SAL 註釋視為不存在。 若要這樣做，請指定取代字串為 Null 的提示。 如此一來，剖析系統就會忽略註釋，而且 [類別檢視] 瀏覽器不會顯示這些註釋 (Visual C++ 包含隱藏 SAL 註釋的內建提示檔案)。  
+此情況的策略是將 SAL 註釋視為不存在。 若要這樣做，請指定取代字串為 Null 的提示。 如此一來，剖析系統就會忽略註釋，而且 [類別檢視] 瀏覽器不會顯示這些註釋 (Visual C++ 包含隱藏 SAL 註釋的內建提示檔案)。
 
-**提示檔案：**  
+**提示檔案：**
 
-```  
+```cpp.hint
 #define _Pre_notnull_
-```  
+```
 
 ### <a name="concealed-cc-language-elements"></a>隱藏的 C/C++ 語言項目
 
@@ -149,11 +149,11 @@ static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 
 在下列原始程式碼中，`START_NAMESPACE` 巨集會隱藏不成對的左大括弧 (`{`)。
 
-**原始程式碼：**  
+**原始程式碼：**
 
-```  
+```cpp
 #define START_NAMESPACE namespace MyProject {
-```  
+```
 
 **策略：** 直接複製
 
@@ -161,11 +161,11 @@ static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 
 請注意，如果原始程式檔中的巨集包含其他巨集，這些巨集只有在已位於一組有效提示時才會解譯。
 
-**提示檔案：**  
+**提示檔案：**
 
-```  
+```cpp.hint
 #define START_NAMESPACE namespace MyProject {
-```  
+```
 
 ### <a name="maps"></a>地圖
 
@@ -173,9 +173,9 @@ static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 
 下列原始程式碼會定義 `BEGIN_CATEGORY_MAP`、`IMPLEMENTED_CATEGORY` 和 `END_CATEGORY_MAP` 巨集。
 
-**原始程式碼：**  
+**原始程式碼：**
 
-```  
+```cpp
 #define BEGIN_CATEGORY_MAP(x)\
 static const struct ATL::_ATL_CATMAP_ENTRY* GetCategoryMap() throw() {\
 static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
@@ -183,15 +183,15 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 #define END_CATEGORY_MAP()\
    { _ATL_CATMAP_ENTRY_END, NULL } };\
    return( pMap ); }
-```  
+```
 
 **策略：** 識別對應項目
 
 為對應的開始、中間 (如果有) 和結束項目指定提示。 使用特殊對應取代字串 `@<`、`@=` 和 `@>`。 如需詳細資訊，請參閱本主題中的`Syntax`一節。
 
-**提示檔案：**  
+**提示檔案：**
 
-```  
+```cpp.hint
 // Start of the map.
 #define BEGIN_CATEGORY_MAP(x) @<
 // Intermediate map element.
@@ -200,7 +200,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 #define REQUIRED_CATEGORY( catid ) @=
 // End of the map.
 #define END_CATEGORY_MAP() @>
-```  
+```
 
 ### <a name="composite-macros"></a>複合巨集
 
@@ -208,11 +208,11 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 下列原始程式碼包含指定命名空間範圍開頭的 `START_NAMESPACE` 巨集，以及指定對應開頭的 `BEGIN_CATEGORY_MAP` 巨集。
 
-**原始程式碼：**  
+**原始程式碼：**
 
-```  
+```cpp
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
-```  
+```
 
 **策略：** 直接複製
 
@@ -220,31 +220,31 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 在此範例中，假設 `START_NAMESPACE` 已有提示，如本主題中的 `Concealed C/C++ Language Elements`子標題所述。 另外假設 `BEGIN_CATEGORY_MAP` 具有 `Maps`中稍早所述的提示。
 
-**提示檔案：**  
+**提示檔案：**
 
-```  
+```cpp.hint
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
-```  
+```
 
 ### <a name="inconvenient-macros"></a>不便的巨集
 
 某些巨集可以透過剖析系統解譯，但由於巨集很長或很複雜，因此原始程式碼難以閱讀。 為了可讀性，您可以提供簡化巨集顯示的提示。
 
-**原始程式碼：**  
+**原始程式碼：**
 
-```  
-#define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)  
-```  
+```cpp
+#define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)
+```
 
 **策略：** 簡化
 
 建立顯示更簡單巨集定義的提示。
 
-**提示檔案：**  
+**提示檔案：**
 
-```  
+```cpp.hint
 #define STDMETHOD(methodName) void* methodName
-```  
+```
 
 ## <a name="example"></a>範例
 
@@ -254,7 +254,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 ### <a name="hint-file-directories"></a>提示檔案目錄
 
-![一般和專案專屬提示檔案目錄。](../ide/media/hintfile.png "HintFile")  
+![一般和專案專屬提示檔案目錄。](../ide/media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>目錄和提示檔案內容
 
@@ -262,41 +262,41 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 - vcpackages
 
-    ```  
-    // vcpackages (partial list)  
+    ```cpp.hint
+    // vcpackages (partial list)
     #define _In_
     #define _In_opt_
     #define _In_z_
     #define _In_opt_z_
-    #define _In_count_(size)  
-    ```  
+    #define _In_count_(size)
+    ```
 
 - 偵錯
 
-    ```  
+    ```cpp.hint
     // Debug
     #undef _In_
     #define OBRACE {
     #define CBRACE }
-    #define RAISE_EXCEPTION(x) throw (x)  
+    #define RAISE_EXCEPTION(x) throw (x)
     #define START_NAMESPACE namespace MyProject {
     #define END_NAMESPACE }
-    ```  
+    ```
 
 - A1
 
-    ```  
+    ```cpp.hint
     // A1
     #define START_NAMESPACE namespace A1Namespace {
-    ```  
+    ```
 
 - A2
 
-    ```  
+    ```cpp.hint
     // A2
     #undef OBRACE
     #undef CBRACE
-    ```  
+    ```
 
 ### <a name="effective-hints"></a>有效提示
 
@@ -306,19 +306,19 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 - 有效提示：
 
-    ```  
-    // vcpackages (partial list)  
+    ```cpp.hint
+    // vcpackages (partial list)
     #define _In_opt_
     #define _In_z_
     #define _In_opt_z_
-    #define _In_count_(size)  
+    #define _In_count_(size)
     // Debug...
-    #define RAISE_EXCEPTION(x) throw (x)  
+    #define RAISE_EXCEPTION(x) throw (x)
     // A1
     #define START_NAMESPACE namespace A1Namespace {
     // ...Debug
     #define END_NAMESPACE }
-    ```  
+    ```
 
 下列注意事項適用於上述清單。
 
@@ -330,12 +330,12 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 - `A2` 目錄中的 `#undef` 提示已移除 `Debug` 目錄提示檔案中的 `OBRACE` 和 `CBRACE` 提示。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[為 Visual C++ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)    
-[#define 指示詞 (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)   
-[#undef 指示詞 (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)   
-[SAL 註釋](../c-runtime-library/sal-annotations.md)   
-[訊息對應](../mfc/reference/message-maps-mfc.md)   
-[訊息對應巨集](../atl/reference/message-map-macros-atl.md)   
+[為 Visual C++ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)<br>
+[#define 指示詞 (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)<br>
+[#undef 指示詞 (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)<br>
+[SAL 註釋](../c-runtime-library/sal-annotations.md)<br>
+[訊息對應](../mfc/reference/message-maps-mfc.md)<br>
+[訊息對應巨集](../atl/reference/message-map-macros-atl.md)<br>
 [物件對應巨集](../atl/reference/object-map-macros.md)

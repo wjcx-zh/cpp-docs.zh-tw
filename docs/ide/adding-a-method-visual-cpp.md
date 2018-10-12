@@ -15,33 +15,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b247b0e21112d6a2be2384fafbf43fc295b22c71
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1b0082ef7df5ddcc698741ebd4f3fb5455b6614d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33324430"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390704"
 ---
 # <a name="adding-a-method--visual-c"></a>加入方法 (Visual C++)
-您可以使用[新增方法精靈](../ide/add-method-wizard.md)將方法新增至專案中的介面。 如果專案包含與介面建立關聯的類別，精靈也會修改類別。  
-  
-### <a name="to-add-a-method-to-your-object"></a>將方法新增至您的物件  
-  
-1.  在 [類別檢視] 中，展開專案節點，以顯示您要新增方法的介面。  
-  
-    > [!NOTE]
-    >  您也可以將方法新增至分配介面，除非專案有屬性，否則它位於程式庫節點內。  
-  
-2.  以滑鼠右鍵按一下介面的名稱。  
-  
-3.  在捷徑功能表上，按一下 [新增]，然後按一下 [新增方法]。  
-  
-4.  在 [新增方法精靈] 中，提供建立方法用的資訊。  
-  
-5.  在精靈的 [IDL 屬性](../ide/idl-attributes-add-method-wizard.md)頁面，指定此方法的任何介面定義語言設定。  
-  
-6.  按一下 [完成] 以新增方法。  
-  
-## <a name="see-also"></a>請參閱  
- [建立 COM 介面](../ide/creating-a-com-interface-visual-cpp.md)   
- [編輯 COM 介面](../ide/editing-a-com-interface.md)
+
+您可以使用[新增方法精靈](../ide/add-method-wizard.md)將方法新增至專案中的介面。 如果專案包含與介面建立關聯的類別，精靈也會修改類別。
+
+### <a name="to-add-a-method-to-your-object"></a>將方法新增至您的物件
+
+1. 在 [類別檢視] 中，展開專案節點，以顯示您要新增方法的介面。
+
+   > [!NOTE]
+   > 您也可以將方法新增至分配介面，除非專案有屬性，否則它位於程式庫節點內。
+
+1. 以滑鼠右鍵按一下介面的名稱。
+
+1. 在捷徑功能表上，按一下 [新增]，然後按一下 [新增方法]。
+
+1. 在 [新增方法精靈] 中，提供建立方法用的資訊。
+
+1. 在精靈的 [IDL 屬性](../ide/idl-attributes-add-method-wizard.md)頁面，指定此方法的任何介面定義語言設定。
+
+1. 按一下 [完成] 以新增方法。
+
+## <a name="see-also"></a>請參閱
+
+[建立 COM 介面](../ide/creating-a-com-interface-visual-cpp.md)<br>
+[編輯 COM 介面](../ide/editing-a-com-interface.md)

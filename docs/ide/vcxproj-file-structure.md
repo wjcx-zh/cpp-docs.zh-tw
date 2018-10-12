@@ -1,7 +1,7 @@
 ---
 title: .vcxproj 和.props 檔案結構 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/27/2017
+ms.date: 09/18/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,16 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe466ff9250543a61fde8da41900b152a9874e09
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 957d9e1063c71e342339eb4e6a6c913eeb5a8f64
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337346"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374084"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>.vcxproj 和.props 檔案結構
 
-MSBuild 是 Visual Studio 中的預設專案系統；當您在 Visual Studio 中選擇 [檔案] | [新增專案] 時，您會建立 MSBuild 專案，並將其設定儲存在副檔名為 `.vcxproj` 的 XML 專案檔中。 專案檔也可能會匯入可儲存設定的 .props 檔案和 .targets 檔案。 在大部分情況下，您永遠不需要手動編輯專案檔；事實上，除非您充分了解 MSBuild，否則不應該手動編輯它。 您應該盡可能使用 Visual Studio 屬性頁來修改專案設定 (請參閱[使用專案屬性](working-with-project-properties.md))。 不過，在某些情況下，您可能需要手動修改專案檔或屬性工作表。 為了進行這些情況，本文包含檔案結構的基本資訊。
+[MSBuild](../build/msbuild-visual-cpp.md) 是 Visual Studio 中的預設專案系統；當您在 Visual C++ 中選擇 [檔案] > [新增專案] 時，您會建立 MSBuild 專案，並將其設定儲存在副檔名為 `.vcxproj` 的 XML 專案檔中。 專案檔也可能會匯入可儲存設定的 .props 檔案和 .targets 檔案。 在大部分情況下，您永遠不需要手動編輯專案檔；事實上，除非您充分了解 MSBuild，否則不應該手動編輯它。 您應該盡可能使用 Visual Studio 屬性頁來修改專案設定 (請參閱[使用專案屬性](working-with-project-properties.md))。 不過，在某些情況下，您可能需要手動修改專案檔或屬性工作表。 為了進行這些情況，本文包含檔案結構的基本資訊。
 
 **重要：**
 
@@ -43,6 +43,8 @@ MSBuild 是 Visual Studio 中的預設專案系統；當您在 Visual Studio 中
    <ClCompile Include="$(IntDir)\generated.cpp"/>
    ```
 
+   「不支援」表示不保證巨集適用於 IDE 中的所有作業。 不會在不同的組態中變更其值的巨集應可運作，但若有某個項目移至不同的篩選條件或專案，則可能不會保留。 會在不同的組態中變更其值的巨集將會造成問題，因為 IDE 不預期專案項目路徑會隨著專案組態的不同而改變。
+
 1. 為了在 [專案屬性] 對話方塊中編輯時，能夠正確地新增、移除或修改專案屬性，檔案必須針對每個專案組態包含不同的群組，而且條件的格式必須如下：
 
    ```xml
@@ -58,7 +60,9 @@ MSBuild 是 Visual Studio 中的預設專案系統；當您在 Visual Studio 中
 首先需要注意的是，最上層項目會依特定順序顯示。 例如: 
 
 - 大多數屬性群組和和項目定義群組會在匯入 Microsoft.Cpp.Default.props 之後出現。
+
 - 所有目標都會匯入檔案結尾。
+
 - 有多個屬性群組，各有唯一的標籤，而且會依特定順序出現。
 
 專案檔中的項目順序很重要，因為 MSBuild 是以循序評估模型為基礎。  如果您的專案檔 (包括所有匯入的 .props 和 .targets 檔案) 是由屬性的多個定義所組成，最後一個定義會覆寫之前的定義。 在下列範例中，由於 MSBuild 引擎在其評估期間最後遇到值 "xyz"，因此會在編譯期間設定此值。
@@ -72,20 +76,20 @@ MSBuild 是 Visual Studio 中的預設專案系統；當您在 Visual Studio 中
 
 ```xml
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns='http://schemas.microsoft.com/developer/msbuild/2003'>
-   <ItemGroup Label="ProjectConfigurations" />
-   <PropertyGroup Label="Globals" />
-   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
-   <PropertyGroup Label="Configuration" />
-   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-   <ImportGroup Label="ExtensionSettings" />
-   <ImportGroup Label="PropertySheets" />
-   <PropertyGroup Label="UserMacros" />
-   <PropertyGroup />
-   <ItemDefinitionGroup />
-   <ItemGroup />
-   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-   <ImportGroup Label="ExtensionTargets" />
- </Project>
+  <ItemGroup Label="ProjectConfigurations" />
+  <PropertyGroup Label="Globals" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
+  <PropertyGroup Label="Configuration" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup />
+  <ItemGroup />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
 ```
 
 下列各節描述每個項目的用途，以及依此方式排序的原因：
@@ -112,23 +116,27 @@ MSBuild 是 Visual Studio 中的預設專案系統；當您在 Visual Studio 中
 
 下列程式碼片段顯示專案組態。 在此範例中，'Debug|x64' 是組態名稱。 專案組態名稱的格式必須是 $(Configuration)|$(Platform)。 一個 ProjectConfiguration 節點可以有兩個屬性：Configuration 和 Platform。 當組態為使用中時，即會自動使用此處指定的值設定這些屬性。
 
-   ```xml
-   <ProjectConfiguration Include="Debug|x64">
-     <Configuration>Debug</Configuration>
-     <Platform>x64</Platform>
-   </ProjectConfiguration>
-   ```
+```xml
+<ProjectConfiguration Include="Debug|x64">
+  <Configuration>Debug</Configuration>
+  <Platform>x64</Platform>
+</ProjectConfiguration>
+```
 
 IDE 預期會針對用於所有 ProjectConfiguration 項目的任何 Configuration 和 Platform 值組合，尋找專案組態。 這通常表示專案可能會有符合此需求的無意義專案組態。 例如，如果專案具有下列組態：
 
 - Debug|Win32
+
 - Retail|Win32
+
 - Special 32-bit Optimization|Win32
 
 則必須同時具有下列組態，即使 "Special 32-bit Optimization" 對 x64 無意義也一樣：
 
 - Debug|x64
+
 - Retail|x64
+
 - Special 32-bit Optimization|x64
 
 您可以在 [方案組態管理員] 中，停用任何組態的建置和部署命令。
@@ -136,7 +144,7 @@ IDE 預期會針對用於所有 ProjectConfiguration 項目的任何 Configurati
 ### <a name="globals-propertygroup-element"></a>Globals PropertyGroup 項目
 
 ```xml
- <PropertyGroup Label="Globals" />
+<PropertyGroup Label="Globals" />
 ```
 
 `Globals` 包含專案層級設定，例如 ProjectGuid、RootNamespace 和 ApplicationType/ ApplicationTypeRevision。 最後兩項通常會定義目標 OS。 一個專案只能以單一 OS 為目標，因為參考和專案項目目前不能有條件。 這些屬性通常不會在專案檔中的其他位置覆寫。 此群組與組態無關，因此專案檔中通常只有一個 Globals 群組。
@@ -202,7 +210,7 @@ IDE 預期會針對用於所有 ProjectConfiguration 項目的任何 Configurati
 ### <a name="per-configuration-itemdefinitiongroup-elements"></a>各個組態的 ItemDefinitionGroup 項目
 
 ```xml
- <ItemDefinitionGroup />
+<ItemDefinitionGroup />
 ```
 
 包含項目定義。 這些定義必須與各個組態的無標籤 PropertyGroup 項目遵循相同的條件規則。
@@ -217,34 +225,35 @@ IDE 預期會針對用於所有 ProjectConfiguration 項目的任何 Configurati
 
 中繼資料應該包含每個組態的組態條件，即使完全相同也一樣。 例如: 
 
-   ```xml
-   <ItemGroup>
-     <ClCompile Include="stdafx.cpp">
-       <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
-       <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|x64’">true</TreatWarningAsError>
-     </ClCompile>
-   </ItemGroup>
-   ```
+```xml
+<ItemGroup>
+  <ClCompile Include="stdafx.cpp">
+    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
+    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|x64’">true</TreatWarningAsError>
+  </ClCompile>
+</ItemGroup>
+```
 
 Visual C++ 專案系統目前不支援專案項目中有萬用字元。
 
-   ```xml
-   <ItemGroup>
-     <ClCompile Include="*.cpp"> <!--Error-->
-   </ItemGroup>
-   ```
+```xml
+<ItemGroup>
+  <ClCompile Include="*.cpp"> <!--Error-->
+</ItemGroup>
+```
 
 Visual C++ 專案系統目前不支援專案項目中有巨集。
 
-   ```xml
-   <ItemGroup>
-     <ClCompile Include="$(IntDir)\generated.cpp"> <!--not guaranteed to work in all scenarios-->
-   </ItemGroup>
-   ```
+```xml
+<ItemGroup>
+  <ClCompile Include="$(IntDir)\generated.cpp"> <!--not guaranteed to work in all scenarios-->
+</ItemGroup>
+```
 
 ItemGroup 中會指定參考，而且具有下列限制：
 
 - 參考不支援條件。
+
 - 參考中繼資料不支援條件。
 
 ### <a name="microsoftcpptargets-import-element"></a>Microsoft.Cpp.targets Import 項目
@@ -293,5 +302,5 @@ Visual Studio IDE 的專案檔必須如上所述排序。 例如，當您定義�
 
 ## <a name="see-also"></a>另請參閱
 
-[使用專案屬性](working-with-project-properties.md)  
-[屬性頁面 XML 檔案](property-page-xml-files.md)  
+[使用專案屬性](working-with-project-properties.md)<br/>
+[屬性頁面 XML 檔案](property-page-xml-files.md)

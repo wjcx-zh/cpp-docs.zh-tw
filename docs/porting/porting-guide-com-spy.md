@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 434acbaa23826636a221deb77f1930283e43e9de
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d8a4278d89727f47e85d20809060fc8cef421998
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578297"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427208"
 ---
 # <a name="porting-guide-com-spy"></a>移植指南：COM Spy
+
 本主題是系列文章中的第二個主題，示範將舊版 Visual C++ 專案升級至最新版 Visual Studio 的程序。 本主題中的範例程式碼最後是使用 Visual Studio 2005 所編譯。  
   
 ## <a name="comspy"></a>COMSpy  
@@ -175,6 +176,6 @@ private void button1_Click(object sender, EventArgs e)
   
 ## <a name="see-also"></a>請參閱  
 
-[移植和升級：範例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)   
-[下一個範例：Spy++](../porting/porting-guide-spy-increment.md)   
+[移植和升級：範例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[下一個範例：Spy++](../porting/porting-guide-spy-increment.md)<br/>
 [上一個範例︰MFC Scribble](../porting/porting-guide-mfc-scribble.md)

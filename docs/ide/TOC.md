@@ -144,7 +144,7 @@
 ### [為組建自訂進行疑難排解](troubleshooting-build-customizations.md)
 ### [格式化自訂建置步驟或建置事件的輸出](formatting-the-output-of-a-custom-build-step-or-build-event.md)
 ## [建置命令和屬性的一般巨集](common-macros-for-build-commands-and-properties.md)
-## [專案檔](project-files.md)
+## [範例專案檔](project-files.md)
 ## [逐步解說：編譯針對 Visual Studio 中 CLR 的 C++ 程式](walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)
 # [使用 Visual Studio IDE 進行 C++ 桌面程式開發](using-the-visual-studio-ide-for-cpp-desktop-development.md)
 ## [逐步解說：使用專案和方案 (C++)](walkthrough-working-with-projects-and-solutions-cpp.md)

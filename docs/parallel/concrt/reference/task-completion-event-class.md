@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16778adeb898759a9c15d08175d9482f8411b44c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 867f94cd290e6b8ee5f9e50b266b0e4c9df63adf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413766"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163253"
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event 類別
 
@@ -96,11 +96,11 @@ bool set() const ;
 
 ### <a name="return-value"></a>傳回值
 
-此方法會傳回`true`如果它已成功地設定該事件。 它會傳回`false`如果已設定的事件。
+此方法會傳回 **，則為 true**如果它已成功地設定該事件。 它會傳回**false**如果已設定的事件。
 
 ### <a name="remarks"></a>備註
 
-如果多個存在或並行呼叫`set`，只有第一次呼叫會成功，且其結果 （如果有的話） 會儲存在工作完成事件。 剩餘集合會被忽略，則方法會傳回 false。 當您設定工作完成事件時，所有工作都建立，事件將會立即完成，而且其，如果有的話，都會排定接續。 工作完成物件具有`_ResultType`以外的其他`void`會將值傳遞至其接續。
+如果多個存在或並行呼叫`set`，只有第一次呼叫會成功，且其結果 （如果有的話） 會儲存在工作完成事件。 剩餘集合會被忽略，則方法會傳回 false。 當您設定工作完成事件時，所有工作都建立，事件將會立即完成，而且其，如果有的話，都會排定接續。 工作完成物件具有`_ResultType`以外**void**會將值傳遞至其接續。
 
 ##  <a name="set_exception"></a> set_exception
 

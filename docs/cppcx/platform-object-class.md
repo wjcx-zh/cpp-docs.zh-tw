@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82f9cf473a1b38e3a77b43bc5fde30057c7b1a8a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0c2bc732453edb66f70fde88da8fb7230f66cd13
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106535"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162304"
 ---
 # <a name="platformobject-class"></a>Platform::Object 類別
 
@@ -86,7 +86,7 @@ bool Equals(
 
 ### <a name="return-value"></a>傳回值
 
-如果物件相等則為`true` ，否則為 `false`。
+**真**如果物件相等，否則為**false**。
 
 ## <a name="gethashcode"></a>  Object:: gethashcode 方法
 
@@ -168,7 +168,7 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2);
 
 ### <a name="return-value"></a>傳回值
 
-如果這兩個物件相同則為 `true`，否則為 `false`。
+**true**兩個物件是否相同，否則**false**。
 
 ## <a name="tostring"></a>  Object:: tostring 方法 (C + + /CX)
 

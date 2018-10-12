@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f39b9fff9d5fad930123fc930afe1600cd259e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e53f8999b4559a221b335528ec20b6034de269d3
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396471"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162200"
 ---
 # <a name="isource-class"></a>ISource 類別
 
@@ -158,7 +158,7 @@ virtual message<T>* consume(
 
 ### <a name="remarks"></a>備註
 
-`consume`方法是類似`accept`，但必須一律加上呼叫`reserve`傳回`true`。
+`consume`方法是類似`accept`，但必須一律加上呼叫`reserve`傳回**true**。
 
 ##  <a name="dtor"></a> ~ ISource
 
@@ -236,7 +236,7 @@ virtual bool reserve(
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果已成功保留訊息，`false`否則。 保留失敗可能有許多原因，包括：訊息已經保留或已由另一個目標接受、來源拒絕保留等等。
+**真**已成功保留訊息，如果**false**否則。 保留失敗可能有許多原因，包括：訊息已經保留或已由另一個目標接受、來源拒絕保留等等。
 
 ### <a name="remarks"></a>備註
 

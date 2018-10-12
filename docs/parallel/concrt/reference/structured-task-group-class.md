@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aa6df9afddc43980818439ee2c7bbd29ca2f848
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a9e87ebd4523b5211c94955b5bec7905ed848946
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446071"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161680"
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group 類別
 
@@ -54,7 +54,7 @@ class structured_task_group;
 |名稱|描述|
 |----------|-----------------|
 |[[取消]](#cancel)|會盡力嘗試取消子樹狀結構的根目錄位於此工作群組的工作。 排定的工作群組上的每項工作將會取消間接的話。|
-|[is_canceling](#is_canceling)|通知呼叫端工作群組是目前在取消作業。 這不一定表示所`cancel`上呼叫方法`structured_task_group`物件 (雖然這類當然限定此方法以傳回`true`)。 它可能會發生情況的`structured_task_group`物件以內嵌方式執行及工作群組的進一步設定工作樹狀目錄中已取消。 在這些位置等的情況下，執行階段可以判斷事先取消將會流經這`structured_task_group`物件，`true`會一併傳回。|
+|[is_canceling](#is_canceling)|通知呼叫端工作群組是目前在取消作業。 這不一定表示所`cancel`上呼叫方法`structured_task_group`物件 (雖然這類當然限定此方法以傳回 **，則為 true**)。 它可能會發生情況的`structured_task_group`物件以內嵌方式執行及工作群組的進一步設定工作樹狀目錄中已取消。 在這些位置等的情況下，執行階段可以判斷事先取消將會流經這`structured_task_group`物件， **，則為 true**會一併傳回。|
 |[run](#run)|多載。 排程工作上`structured_task_group`物件。 呼叫端管理的存留期`task_handle`傳入物件`_Task_handle`參數。 採用 `_Placement` 參數的版本會造成工作在該參數指定的位置變成優先執行。|
 |[run_and_wait](#run_and_wait)|多載。 排程工作將內嵌在環境中執行呼叫的協助`structured_task_group`完整的取消支援的物件。 如果`task_handle`物件會傳遞做為參數`run_and_wait`，呼叫端會負責管理的存留期`task_handle`物件。 函式，然後等待直到所有處理`structured_task_group`物件已完成或已取消。|
 |[等候](#wait)|等待所有工作`structured_task_group`已完成或取消。|
@@ -97,7 +97,7 @@ void cancel();
 
 ##  <a name="is_canceling"></a> is_canceling
 
-通知呼叫端工作群組是目前在取消作業。 這不一定表示所`cancel`上呼叫方法`structured_task_group`物件 (雖然這類當然限定此方法以傳回`true`)。 它可能會發生情況的`structured_task_group`物件以內嵌方式執行及工作群組的進一步設定工作樹狀目錄中已取消。 在這些位置等的情況下，執行階段可以判斷事先取消將會流經這`structured_task_group`物件，`true`會一併傳回。
+通知呼叫端工作群組是目前在取消作業。 這不一定表示所`cancel`上呼叫方法`structured_task_group`物件 (雖然這類當然限定此方法以傳回 **，則為 true**)。 它可能會發生情況的`structured_task_group`物件以內嵌方式執行及工作群組的進一步設定工作樹狀目錄中已取消。 在這些位置等的情況下，執行階段可以判斷事先取消將會流經這`structured_task_group`物件， **，則為 true**會一併傳回。
 
 ```
 bool is_canceling();

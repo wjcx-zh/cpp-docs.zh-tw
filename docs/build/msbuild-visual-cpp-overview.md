@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad6feef707d991d07fa4e086bc8535f32b991825
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9c337ec94f863e6c19851bcf962db61f277491cf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716850"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163240"
 ---
 # <a name="msbuild-visual-c-overview"></a>MSBuild (Visual C++) 概觀
 
@@ -111,7 +111,7 @@ MSBuild 系統可以有條件地目標之前或之後執行另一個目標。 �
 
 ### <a name="useenv-property"></a>UseEnv 屬性
 
-根據預設，目前專案的平台特定設定覆寫的路徑、 INCLUDE、 LIB、 LIBPATH、 組態及平台的環境變數。 設定`UseEnv`屬性設`true`保證不會覆寫環境變數。
+根據預設，目前專案的平台特定設定覆寫的路徑、 INCLUDE、 LIB、 LIBPATH、 組態及平台的環境變數。 設定`UseEnv`屬性，以 **，則為 true**保證不會覆寫環境變數。
 
 `msbuild myProject.vcxproj /p:UseEnv=true`
 

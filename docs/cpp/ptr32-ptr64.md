@@ -1,13 +1,17 @@
 ---
 title: __ptr32，__ptr64 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __ptr32_cpp
 - __ptr64_cpp
+- __ptr32
+- __ptr64
+- _ptr32
+- _ptr64
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 573af4088e288403edaa8e5c34fb84817442c8f5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 50360ab6a163f70f4f950e44d963b9aa67dc04f4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46115992"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161641"
 ---
 # <a name="ptr32-ptr64"></a>__ptr32、__ptr64
 
@@ -46,6 +50,8 @@ int * __ptr64 p64;
 
 > [!NOTE]
 > 您無法使用 **__ptr32**或是 **__ptr64**進行編譯時 **/clr: pure**。 否則，會產生編譯器錯誤 C2472。 **/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
+
+為了與舊版中，相容性 **_ptr32**並 **_ptr64**同義 **__ptr32**並 **__ptr64**除非編譯器選項[/Za\(停用語言擴充功能)](../build/reference/za-ze-disable-language-extensions.md)指定。
 
 ## <a name="example"></a>範例
 

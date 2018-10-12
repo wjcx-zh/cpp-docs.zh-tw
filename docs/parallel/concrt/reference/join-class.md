@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c960e73604a915dbb15c0efac958dc229c16b3b1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 045cdeab321e9e3f88ee9bd50d337101e8512718
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379521"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163812"
 ---
 # <a name="join-class"></a>join 類別
 
@@ -60,7 +60,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
 
 |名稱|描述|
 |----------|-----------------|
-|[join](#ctor)|多載。 建構`join`傳訊區塊。|
+|[join](#ctor)|多載。 建構 `join` 傳訊區塊。|
 |[~ join 解構函式](#dtor)|終結`join`區塊。|
 
 ### <a name="protected-methods"></a>保護方法
@@ -138,7 +138,7 @@ virtual message<_OutputType>* consume_message(runtime_object_identity _MsgId);
 
 ##  <a name="ctor"></a> 聯結
 
-建構`join`傳訊區塊。
+建構 `join` 傳訊區塊。
 
 ```
 join(
@@ -176,10 +176,10 @@ join(
 判斷是否應該接受所提供的訊息篩選器函式。
 
 *_PScheduler*<br/>
-`Scheduler`物件的傳播工作在其中`join`傳訊區塊已排程。
+`Scheduler` 物件，在其內會排定 `join` 傳訊區塊的傳播工作。
 
 *_PScheduleGroup*<br/>
-`ScheduleGroup`物件的傳播工作在其中`join`傳訊區塊已排程。 所使用的 `Scheduler` 物件由排程群組所隱含。
+`ScheduleGroup` 物件，在其內會排定 `join` 傳訊區塊的傳播工作。 所使用的 `Scheduler` 物件由排程群組所隱含。
 
 ### <a name="remarks"></a>備註
 
@@ -261,11 +261,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果已成功保留訊息，`false`否則。
+**真**已成功保留訊息，如果**false**否則。
 
 ### <a name="remarks"></a>備註
 
-在後`reserve`呼叫時，如果它傳回`true`，可以是`consume`或`release`採取，或釋放訊息的擁有權必須先呼叫。
+之後`reserve`呼叫時，如果它傳回 **，則為 true**可以`consume`或`release`必須呼叫採取，或釋放訊息的擁有權。
 
 ##  <a name="resume_propagation"></a> resume_propagation
 

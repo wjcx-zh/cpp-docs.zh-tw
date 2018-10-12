@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1d9536b6260df68d07390707efcef90117e8538c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dcccfd23151d2e09f1fcafeb255dd7261ae2c12a
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386927"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163786"
 ---
 # <a name="ptroperator-bool"></a>ptr::operator bool
 
@@ -40,7 +40,7 @@ operator bool();
 
 ## <a name="return-value"></a>傳回值
 
-`true` 如果擁有的 COM 物件無效，則`false`否則。
+**true**自有的 COM 物件是否有效。**false**否則。
 
 ## <a name="remarks"></a>備註
 

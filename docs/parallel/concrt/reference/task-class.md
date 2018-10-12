@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40a98bd546f29cd42629ad991866a85a86852c9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bac539fc2826b5628769126d9802688c01f01c7b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399297"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163201"
 ---
 # <a name="task-class-concurrency-runtime"></a>task 類別 (並行執行階段)
 
@@ -134,7 +134,7 @@ bool is_apartment_aware() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果工作解除包裝 `true` 介面或是從這類工作繼承而來，則為 `IAsyncInfo`，否則為 `false`。
+**真**如果工作解除包裝`IAsyncInfo`介面，或從這類工作繼承而來**false**否則。
 
 ##  <a name="is_done"></a>  task:: is_done 方法 （並行執行階段）
 
@@ -169,7 +169,7 @@ bool operator!= (const task<void>& _Rhs) const;
 
 ### <a name="return-value"></a>傳回值
 
-如果這些物件參考不同的基礎工作則為 `true`，否則為 `false`。
+**true**如果物件參考不同的基礎工作，並**false**否則。
 
 ##  <a name="operator_eq"></a> 運算子 =
 
@@ -209,7 +209,7 @@ bool operator== (const task<void>& _Rhs) const;
 
 ### <a name="return-value"></a>傳回值
 
-如果這些物件參考相同的基礎工作則為 `true`，否則為 `false`。
+**true**如果物件參考相同的基礎工作，並**false**否則。
 
 ##  <a name="scheduler"></a>  task:: scheduler 方法 （並行執行階段）
 
@@ -354,7 +354,7 @@ task_status wait() const;
 ### <a name="remarks"></a>備註
 
 > [!IMPORTANT]
->  在通用 Windows 平台 (UWP) 應用程式中，請勿呼叫`wait`在 STA 上執行之程式碼 否則，執行階段會擲回[concurrency:: invalid_operation](invalid-operation-class.md)因為這個方法會封鎖目前的執行緒，而且可能會導致應用程式變成沒有回應。 不過，您可以呼叫[concurrency](#get)方法，以接收以工作為基礎的接續的前項工作的結果。
+>  在通用 Windows 平台 (UWP) 應用程式中，請勿呼叫`wait`在 STA 上執行之程式碼 否則，因為這個方法會封鎖目前的執行緒，而且可能會導致應用程式沒有回應，所以執行階段會擲回 [concurrency::invalid_operation](invalid-operation-class.md) 。 不過，您可以呼叫 [concurrency::task::get](#get) 方法來以工作為基礎連續的形式接收前項工作的結果。
 
 ## <a name="see-also"></a>另請參閱
 

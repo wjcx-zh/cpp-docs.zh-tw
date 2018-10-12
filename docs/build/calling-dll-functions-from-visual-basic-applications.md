@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1cedafaea33ac642e3a5593468b996f2442bd50
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 47504b7a471dc38f30e4ceb59b5feeffcc53db6d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894560"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161826"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>從 Visual Basic 應用程式中呼叫 DLL 函式
 
@@ -33,7 +33,7 @@ Visual Basic 應用程式 （或應用程式以其他語言，例如 Pascal 或 
 
 `__stdcall` 建立函式的正確呼叫慣例 （呼叫的函式會清除堆疊和由右至左傳遞參數），但以不同的方式來修飾函式名稱。 因此，當 **__declspec （dllexport)** 用在 DLL 中的匯出函式，會匯出裝飾的名稱。
 
-`__stdcall`名稱裝飾前置詞符號名稱以底線 (_)，並將附加的符號寬度 at 符號 (**\@**) 字元後面跟著的引數清單 （所需的堆疊空間） 中的位元組數目。 如此一來，當宣告為函式：
+`__stdcall`名稱裝飾前置詞符號名稱以底線 ( **\_** )，並將附加的符號寬度 at 符號 (**\@**) 字元後面的數目引數清單 （所需的堆疊空間） 中的位元組。 如此一來，當宣告為函式：
 
 ```C
 int __stdcall func (int a, double b)
@@ -45,7 +45,7 @@ C 呼叫慣例 (`__cdecl`) 將做為名稱裝飾`_func`。
 
 若要取得裝飾的名稱，請使用[/typedefs/ 對應](../build/reference/map-generate-mapfile.md)。 利用 **__declspec （dllexport)** 會進行下列作業：
 
-- 如果以 C 呼叫慣例匯出函式 (**_cdecl**)，會匯出名稱時，它會移除前置底線 (_)。
+- 如果以 C 呼叫慣例匯出函式 (`__cdecl`)，它會移除前置底線 ( **\_** ) 會匯出名稱。
 
 - 如果要匯出的函式不使用 C 呼叫慣例 (例如`__stdcall`)，它會匯出裝飾的名稱。
 

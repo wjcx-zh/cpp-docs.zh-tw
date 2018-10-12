@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71a02b89e7b2098f8a125d1477cff2a0d1cda30a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ca17d81aa1712bcf6222b0ec0888f3a987269f03
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429957"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163116"
 ---
 # <a name="extent-class-c-amp"></a>extent 類別 (C++ AMP)
 
@@ -110,7 +110,7 @@ bool contains(const index<rank>& _Index) const restrict(amp,cpu);
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果指定`index`值包含於`extent`物件; 否則`false`。
+**true**如果指定*索引*值包含在`extent`物件; 否則**false**。
 
 ##  <a name="ctor"></a> 範圍
 

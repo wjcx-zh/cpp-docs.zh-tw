@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46789b74d0b7b8d882a1e2ea90103c4c2f1e934b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ffc1ea1f512e049f3a6af15170429a3618323dc5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396344"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162993"
 ---
 `unbounded_buffer` 傳訊區塊是多目標、多來源的排序 `propagator_block`，能夠存放無限個訊息。
 
@@ -175,7 +175,7 @@ bool enqueue(
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果項目已接受，`false`否則。
+**真**如果已接受的項目， **false**否則。
 
 ##  <a name="link_target_notification"></a> link_target_notification
 
@@ -274,11 +274,11 @@ virtual bool reserve_message(
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果已成功保留訊息，`false`否則。
+**真**已成功保留訊息，如果**false**否則。
 
 ### <a name="remarks"></a>備註
 
-在後`reserve`呼叫時，如果它傳回`true`，可以是`consume`或`release`採取，或釋放訊息的擁有權必須先呼叫。
+之後`reserve`呼叫時，如果它傳回 **，則為 true**可以`consume`或`release`必須呼叫採取，或釋放訊息的擁有權。
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -321,7 +321,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>傳回值
 
-`true`，因為區塊不會延後提供的訊息。
+**true**因為區塊不會延後提供的訊息。
 
 ##  <a name="ctor"></a> unbounded_buffer
 
@@ -359,10 +359,10 @@ unbounded_buffer(
 判斷是否應該接受所提供的訊息篩選器函式。
 
 *_PScheduler*<br/>
-`Scheduler`物件的傳播工作在其中`unbounded_buffer`傳訊區塊已排程。
+`Scheduler` 物件，在其內會排定 `unbounded_buffer` 傳訊區塊的傳播工作。
 
 *_PScheduleGroup*<br/>
-`ScheduleGroup`物件的傳播工作在其中`unbounded_buffer`傳訊區塊已排程。 所使用的 `Scheduler` 物件由排程群組所隱含。
+`ScheduleGroup` 物件，在其內會排定 `unbounded_buffer` 傳訊區塊的傳播工作。 所使用的 `Scheduler` 物件由排程群組所隱含。
 
 ### <a name="remarks"></a>備註
 

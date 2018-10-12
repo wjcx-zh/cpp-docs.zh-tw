@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18aeac7767fbd4c1688b202670a812e5738ef62f
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: ad7081e22762409682250da0330575885378e8ab
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494422"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161875"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier 類別
 
@@ -99,11 +99,11 @@ GenericReleaseNotifier(
 
 ### <a name="parameters"></a>參數
 
-*回呼*  
+*回呼*<br/>
 Lambda、 函式或可以使用括號函式運算子叫用的函式指標事件處理常式 (`()`)。
 
-*release*  
-指定`true`若要啟用呼叫基礎[模組:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md)方法; 否則指定`false`。
+*release*<br/>
+指定 **，則為 true**若要啟用呼叫基礎[模組:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md)方法; 否則指定**false**。
 
 ## <a name="genericreleasenotifier-invoke"></a>Module:: genericreleasenotifier:: 叫用
 

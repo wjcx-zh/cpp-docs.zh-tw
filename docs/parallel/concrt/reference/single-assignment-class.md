@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13ddf5a303096d3244f6b8b59e58bcb41bafe91f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ee06d9a30339a72bd7137db6f277a1eb41028d50
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374258"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163084"
 ---
 # <a name="singleassignment-class"></a>single_assignment 類別
 
@@ -58,7 +58,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 
 |名稱|描述|
 |----------|-----------------|
-|[single_assignment](#ctor)|多載。 建構`single_assignment`傳訊區塊。|
+|[single_assignment](#ctor)|多載。 建構 `single_assignment` 傳訊區塊。|
 |[~ single_assignment 解構函式](#dtor)|終結`single_assignment`傳訊區塊。|
 
 ### <a name="public-methods"></a>公用方法
@@ -66,7 +66,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 |名稱|描述|
 |----------|-----------------|
 |[has_value](#has_value)|檢查是否這`single_assignment`傳訊區塊已使用值尚未初始化。|
-|[value](#value)|取得儲存在訊息的目前內容的參考`single_assignment`傳訊區塊。|
+|[值](#value)|取得儲存在訊息的目前內容的參考`single_assignment`傳訊區塊。|
 
 ### <a name="protected-methods"></a>保護方法
 
@@ -158,7 +158,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果區塊已收到的值，`false`否則。
+**真**區塊已收到的值，如果**false**否則。
 
 ##  <a name="link_target_notification"></a> link_target_notification
 
@@ -236,11 +236,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果已成功保留訊息，`false`否則。
+**真**已成功保留訊息，如果**false**否則。
 
 ### <a name="remarks"></a>備註
 
-在後`reserve`呼叫時，如果它傳回`true`，可以是`consume`或`release`採取，或釋放訊息的擁有權必須先呼叫。
+之後`reserve`呼叫時，如果它傳回 **，則為 true**可以`consume`或`release`必須呼叫採取，或釋放訊息的擁有權。
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -274,7 +274,7 @@ A [message_status](concurrency-namespace-enums.md)表示決定之訊息的目標
 
 ##  <a name="ctor"></a> single_assignment
 
-建構`single_assignment`傳訊區塊。
+建構 `single_assignment` 傳訊區塊。
 
 ```
 single_assignment();
@@ -303,10 +303,10 @@ single_assignment(
 判斷是否應該接受所提供的訊息篩選器函式。
 
 *_PScheduler*<br/>
-`Scheduler`物件的傳播工作在其中`single_assignment`傳訊區塊已排程。
+`Scheduler` 物件，在其內會排定 `single_assignment` 傳訊區塊的傳播工作。
 
 *_PScheduleGroup*<br/>
-`ScheduleGroup`物件的傳播工作在其中`single_assignment`傳訊區塊已排程。 所使用的 `Scheduler` 物件由排程群組所隱含。
+`ScheduleGroup` 物件，在其內會排定 `single_assignment` 傳訊區塊的傳播工作。 所使用的 `Scheduler` 物件由排程群組所隱含。
 
 ### <a name="remarks"></a>備註
 

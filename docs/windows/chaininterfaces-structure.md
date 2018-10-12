@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: df483f08e96f2bd479504028ce4ce17513bb7d41
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 28683d8c69a800cb6f9a365beda26c75b3a69d15
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789017"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161810"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces 結構
 
@@ -117,7 +117,7 @@ struct ChainInterfaces<
 衍生型別的基底型別。
 
 *hasImplements*<br/>
-布林值，如果`true`，表示您無法使用[MixIn](../windows/mixin-structure.md)不是衍生自的類別結構[實作](../windows/implements-structure.md)結構。
+布林值，如果 **，則為 true**，表示您無法使用[MixIn](../windows/mixin-structure.md)不是衍生自的類別結構[實作](../windows/implements-structure.md)結構。
 
 ## <a name="members"></a>成員
 
@@ -169,7 +169,7 @@ __forceinline bool CanCastTo(
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果成功轉換的所有作業，否則， `false`。
+**true**如果所有的 cast 作業成功，否則**false**。
 
 ## <a name="casttounknown"></a>Chaininterfaces:: Casttounknown
 
@@ -216,7 +216,7 @@ static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + D
 
 ### <a name="remarks"></a>備註
 
-範本參數*I0*並*I1*是必要的以及參數*I2*透過*I9*是選擇性的。每個介面的 IID 計數通常是 1。
+範本參數*I0*並*I1*是必要的以及參數*I2*透過*I9*是選擇性的。 每個介面的 IID 計數通常是 1。
 
 ## <a name="verify"></a>Chaininterfaces:: Verify
 

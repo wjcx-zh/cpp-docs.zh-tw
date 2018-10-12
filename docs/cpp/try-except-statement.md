@@ -1,7 +1,7 @@
 ---
 title: 請嘗試-try-except 陳述式 |Microsoft Docs
 ms.custom: ''
-ms.date: 10/05/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -11,6 +11,7 @@ f1_keywords:
 - EXCEPTION_CONTINUE_SEARCH
 - _exception_info
 - __except
+- _except
 - EXCEPTION_CONTINUE_EXECUTION
 - _exception_code
 - __except_cpp
@@ -35,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e938f5b7e5f25461ae921fbfa3c49920eca86eb
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: af4d14eb3fad691a5ff10665a83879ae4319a3d9
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861924"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162031"
 ---
 # <a name="try-except-statement"></a>try-except 陳述式
 
@@ -89,6 +90,8 @@ ms.locfileid: "48861924"
 每個應用程式都有自己的例外狀況處理常式。
 
 不是有效一頭栽進 **__try**陳述式，但是可以跳出一個。 如果執行中期終止處理程序，不會呼叫例外狀況處理常式**嘗試-除了**陳述式。
+
+為了與舊版中，相容性 **_finally**， **_except**，並 **_leave**同義 **__try**， **__except**，並 **__leave**除非編譯器選項[/Za\(停用語言擴充功能)](../build/reference/za-ze-disable-language-extensions.md)指定。
 
 ### <a name="the-leave-keyword"></a>__leave 關鍵字
 

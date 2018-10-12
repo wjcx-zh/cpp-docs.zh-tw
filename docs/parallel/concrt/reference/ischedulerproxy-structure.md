@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8adba73274fbc9821eb8096e82268b24b41718f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 72fa49d763159385607330231994d15952f0c771
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430037"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163136"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy 結構
 
@@ -124,7 +124,7 @@ virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurr
 
 ### <a name="return-value"></a>傳回值
 
-`IExecutionResource`介面目前的執行緒，如果參數`doSubscribeCurrentThread`具有值`true`。 如果值為`false`，則方法會傳回`NULL`。
+`IExecutionResource`介面目前的執行緒，如果參數`doSubscribeCurrentThread`具有值 **，則為 true**。 如果值為**false**，此方法會傳回 NULL。
 
 ### <a name="remarks"></a>備註
 
@@ -132,7 +132,7 @@ virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurr
 
 資源管理員授與資源排程器透過呼叫方法[ischeduler:: Addvirtualprocessors](ischeduler-structure.md#addvirtualprocessors)一份虛擬處理器根。 方法會叫用作為回呼至排程器之前，這個方法會傳回。
 
-如果排程器會藉由設定參數要求訂用帳戶目前的執行緒`doSubscribeCurrentThread`要`true`，則方法會傳回`IExecutionResource`介面。 訂用帳戶必須結束於稍後使用[iexecutionresource:: Remove](iexecutionresource-structure.md#remove)方法。
+如果排程器會藉由設定參數要求訂用帳戶目前的執行緒`doSubscribeCurrentThread`要 **，則為 true**，則方法會傳回`IExecutionResource`介面。 訂用帳戶必須結束於稍後使用[iexecutionresource:: Remove](iexecutionresource-structure.md#remove)方法。
 
 在決定選取哪一個硬體執行緒時，Resource Manager 會嘗試針對處理器節點親和性進行最佳化。 如果目前執行緒要求的訂用帳戶時，就表示目前執行緒想要參與 指派給這個排程器的工作。 在此情況下，配置的虛擬處理器根憑證位於目前的執行緒執行，盡可能在處理器節點上。
 

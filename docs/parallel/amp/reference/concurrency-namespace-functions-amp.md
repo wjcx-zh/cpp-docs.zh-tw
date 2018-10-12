@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78cbd53baf9e9ade8c20f3b9f5fa419eeb2d1c80
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 211005f273500992440c0e95d2c3c4e3adcef581
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441911"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163409"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Concurrency 命名空間函式 (AMP)
 
@@ -92,7 +92,7 @@ inline bool atomic_compare_exchange(
 
 ### <a name="return-value"></a>傳回值
 
-如果作業成功，則為 `true`，否則為 `false`。
+**真**如果作業成功，否則**false**。
 
 ##  <a name="atomic_exchange"></a>  atomic_exchange 函式 (c + + AMP)
 
@@ -554,7 +554,7 @@ A`future<void>`可以等候。
 
 ##  <a name="direct3d_abort"></a>  direct3d_abort
 
-使用 `restrict(amp)` 限制子句中止函式執行。 當 AMP 執行階段偵測到呼叫時，會引發[runtime_exception](runtime-exception-class.md)例外狀況，並出現錯誤訊息"Reference Rasterizer: Shader abort 指令叫用 」。
+使用 `restrict(amp)` 限制子句中止函式執行。 當 AMP 執行階段偵測到呼叫時，會引發 [runtime_exception](runtime-exception-class.md) 例外狀況，並顯示錯誤訊息 "Reference Rasterizer: Shader abort instruction hit"。
 
 ```
 void direct3d_abort() restrict(amp);

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 845addc73d0dd542b7bb6a4abccbf915005ddd41
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 4dab192b2d5d4210461bd791e3f4d9996363c953
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235811"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163292"
 ---
 # <a name="safeint-class"></a>SafeInt 類別
 
@@ -194,7 +194,7 @@ wchar_t          | `operator wchar_t() const`
 
 - `((uint)~0) > -1`
 
-第一個陳述式會解析成`true`，但第二個陳述式會解析成`false`。 0 位元否定是 0xFFFFFFFF。 在第二個陳述式中，預設的比較運算子比較 0xFFFFFFFF 以 0xFFFFFFFF，並且會考慮它們會相等。 比較運算子`SafeInt`類別體認到第二個參數是負的而第一個參數是不帶正負號。 因此，位元表示完全相同，不過`SafeInt`邏輯運算子可讓您發現的不帶正負號的整數大於-1。
+第一個陳述式會解析成**真**，但第二個陳述式會解析成`false`。 0 位元否定是 0xFFFFFFFF。 在第二個陳述式中，預設的比較運算子比較 0xFFFFFFFF 以 0xFFFFFFFF，並且會考慮它們會相等。 比較運算子`SafeInt`類別體認到第二個參數是負的而第一個參數是不帶正負號。 因此，位元表示完全相同，不過`SafeInt`邏輯運算子可讓您發現的不帶正負號的整數大於-1。
 
 當您使用時要小心`SafeInt`類別搭配`?:`三元運算子。 請考慮下列程式碼行。
 

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e84c8df1748e68f2364400fd4725ce6bffd232f1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 854f5935a66d845aa3c63b9f15857732fdfe6b8a
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379699"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163864"
 ---
 # <a name="context-class"></a>Context 類別
 
@@ -64,7 +64,7 @@ class Context;
 |[GetId](#getid)|傳回之內容的內容所屬的排程器中的唯一識別碼。|
 |[GetScheduleGroupId](#getschedulegroupid)|傳回內容目前正在使用排程群組的識別碼。|
 |[GetVirtualProcessorId](#getvirtualprocessorid)|傳回虛擬處理器上目前執行內容識別碼。|
-|[Id](#id)|傳回目前內容中目前的內容所屬的排程器的唯一識別碼。|
+|[ID](#id)|傳回目前內容中目前的內容所屬的排程器的唯一識別碼。|
 |[IsCurrentTaskCollectionCanceling](#iscurrenttaskcollectioncanceling)|指出是否會傳回工作集合目前正在執行內嵌於目前的內容正使用中的取消 （或會短時間內）。|
 |[IsSynchronouslyBlocked](#issynchronouslyblocked)|決定以同步方式封鎖的內容。 內容會被視為是如果它已明確地執行動作，導致封鎖，以同步方式會封鎖。|
 |[過度訂閱](#oversubscribe)|插入的排程器的額外的虛擬處理器的其中一個虛擬處理器，在該排程器上執行的內容上叫用時的程式碼區塊的持續時間。|
@@ -241,7 +241,7 @@ static void __cdecl Oversubscribe(bool _BeginOversubscription);
 ### <a name="parameters"></a>參數
 
 *_BeginOversubscription*<br/>
-如果`true`，過度訂閱期間，應新增的額外虛擬處理器的指示。 如果`false`，表示過度訂閱應該結束，而且應該移除先前加入的虛擬處理器。
+如果 **，則為 true**，過度訂閱期間，應新增的額外虛擬處理器的指示。 如果**false**，表示過度訂閱應該結束，而且應該移除先前加入的虛擬處理器。
 
 ##  <a name="schedulegroupid"></a> ScheduleGroupId
 

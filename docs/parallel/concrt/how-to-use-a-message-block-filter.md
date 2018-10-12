@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b16dee4d0a3c5a6d09c1fd19006c832be400d5a4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 93578f9d798e0c0bab0fe58a3211c20507dd99d4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411066"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162057"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>如何：使用訊息區篩選條件
 
@@ -48,7 +48,7 @@ ms.locfileid: "46411066"
 
 [!code-cpp[concrt-primes-filter#2](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_2.cpp)]
 
-`transformer`物件現在會處理只是質數的值。 在上述範例中，`transformer`物件處理的所有訊息。 因此，上述範例必須收到它所傳送的訊息數目相同。 此範例中使用的結果[concurrency:: send](reference/concurrency-namespace-functions.md#send)函式來判斷多少訊息，以接收來自`transformer`物件。 `send`函式會傳回`true`訊息緩衝區時接受訊息和`false`當訊息緩衝區會拒絕訊息。 因此，訊息緩衝區會接受訊息的次數比對的質數的計數。
+`transformer`物件現在會處理只是質數的值。 在上述範例中，`transformer`物件處理的所有訊息。 因此，上述範例必須收到它所傳送的訊息數目相同。 此範例中使用的結果[concurrency:: send](reference/concurrency-namespace-functions.md#send)函式來判斷多少訊息，以接收來自`transformer`物件。 `send`函式會傳回 **，則為 true**訊息緩衝區時接受訊息並**false**當訊息緩衝區會拒絕訊息。 因此，訊息緩衝區會接受訊息的次數比對的質數的計數。
 
 ## <a name="example"></a>範例
 

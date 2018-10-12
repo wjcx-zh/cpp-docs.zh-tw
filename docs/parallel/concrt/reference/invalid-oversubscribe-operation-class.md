@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e62dc4ad1600b2e5cc7f955c4a419d27482bb557
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a1728053c7b42afedb4cda9b2dc96a089750a866
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433214"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161693"
 ---
 # <a name="invalidoversubscribeoperation-class"></a>invalid_oversubscribe_operation 類別
 
-這個類別描述將 `_BeginOversubscription` 參數設為 `false` 來呼叫 `Context::Oversubscribe` 方法，而不先將 `_BeginOversubscription` 參數設為 `true` 來呼叫 `Context::Oversubscribe` 方法時擲回的例外狀況。
+這個類別描述時所擲回的例外狀況`Context::Oversubscribe`方法呼叫`_BeginOversubscription`參數設為**false**卻沒有先前呼叫`Context::Oversubscribe`方法`_BeginOversubscription`參數設定為 **，則為 true**。
 
 ## <a name="syntax"></a>語法
 

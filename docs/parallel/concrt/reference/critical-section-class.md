@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c35a75f7401c436e14ccb4a7eff6fc88348a7412
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b6be352c936401ddae6dc3dd825280096e06a7be
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429042"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163916"
 ---
 # <a name="criticalsection-class"></a>critical_section 類別
 
@@ -175,7 +175,7 @@ bool try_lock();
 
 ### <a name="return-value"></a>傳回值
 
-如果已取得鎖定，該值`true`; 否則值`false`。
+如果已取得鎖定，值 **，則為 true**; 否則值**false**。
 
 ##  <a name="try_lock_for"></a> try_lock_for
 
@@ -192,7 +192,7 @@ bool try_lock_for(unsigned int _Timeout);
 
 ### <a name="return-value"></a>傳回值
 
-如果已取得鎖定，該值`true`; 否則值`false`。
+如果已取得鎖定，值 **，則為 true**; 否則值**false**。
 
 ##  <a name="unlock"></a> 解除鎖定
 

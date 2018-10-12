@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 681aa3ef5a1434ab191854f23a9e7bc908b65728
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ce6f57846a0dcad79eead500286525e94c66a8e6
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082413"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162291"
 ---
 # <a name="implementing-a-simple-consumer"></a>實作簡單消費者
 
@@ -34,17 +34,17 @@ ms.locfileid: "46082413"
 - 「 將 XML 支援新增至取用者 」，說明如何修改輸出為 XML 資料的擷取資料列集資料的取用者程式碼。  
   
 > [!NOTE]
->  若要測試 MyProv 和提供者範例提供者，您可以使用這一節所述的取用者應用程式。  
+> 若要測試 MyProv 和提供者範例提供者，您可以使用這一節所述的取用者應用程式。  
   
 > [!NOTE]
->  若要建立取用者應用程式來測試 MyProv (相同的提供者中所述[增強簡單唯讀提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md))，「 加入書籤支援至取用者。 」 中所述，您必須包含書籤支援  
+> 若要建立取用者應用程式來測試 MyProv (相同的提供者中所述[增強簡單唯讀提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md))，「 加入書籤支援至取用者。 」 中所述，您必須包含書籤支援  
   
 > [!NOTE]
->  若要建置的消費者應用程式，來測試提供者上，保留 「 加入書籤支援至消費者 」 中所述的書籤支援，請跳至 < 加入 XML 給取用者的支援 >。  
+> 若要建置的消費者應用程式，來測試提供者上，保留 「 加入書籤支援至消費者 」 中所述的書籤支援，請跳至 < 加入 XML 給取用者的支援 >。  
   
 ## <a name="retrieving-data-with-the-consumer"></a>使用取用者擷取資料  
   
-#### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>若要修改的主控台應用程式，以使用 OLE DB 取用者  
+### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>若要修改的主控台應用程式，以使用 OLE DB 取用者  
   
 1. 在 MyCons.cpp，變更主要的程式碼插入粗體文字，如下所示：  
   
@@ -94,9 +94,9 @@ ms.locfileid: "46082413"
 - 輸出已標記書籤的資料列，並將它附加到檔案結尾。  
   
 > [!NOTE]
->  如果您使用此取用者應用程式來測試提供者範例提供者應用程式時，將這一節所述的書籤支援。  
+> 如果您使用此取用者應用程式來測試提供者範例提供者應用程式時，將這一節所述的書籤支援。  
   
-#### <a name="to-instantiate-the-bookmark"></a>若要具現化的書籤  
+### <a name="to-instantiate-the-bookmark"></a>若要具現化的書籤  
   
 1. 存取子必須包含類型的物件[CBookmark](../../data/oledb/cbookmark-class.md)。 *NSize*參數會指定書籤緩衝區的大小，以位元組為單位 (通常適用於 32 位元平台的 4) 和 64 位元平台為 8。 將下列宣告新增至使用者記錄類別中的資料行的資料成員中：  
   
@@ -111,7 +111,7 @@ ms.locfileid: "46082413"
        ...  
     ```  
   
-#### <a name="to-request-a-bookmark-column-from-the-provider"></a>若要從提供者要求的書籤資料行  
+### <a name="to-request-a-bookmark-column-from-the-provider"></a>若要從提供者要求的書籤資料行  
   
 1. 新增下列程式碼中的`GetRowsetProperties`在使用者記錄類別的方法：  
   
@@ -125,7 +125,7 @@ ms.locfileid: "46082413"
     }  
     ```  
   
-#### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>將書籤項目新增至資料行對應  
+### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>將書籤項目新增至資料行對應  
   
 1. 將下列項目新增至 資料行中對應的使用者記錄類別：  
   
@@ -139,7 +139,7 @@ ms.locfileid: "46082413"
     END_COLUMN_MAP()  
     ```  
   
-#### <a name="to-use-a-bookmark-in-your-main-code"></a>若要在您主要的程式碼中使用書籤  
+### <a name="to-use-a-bookmark-in-your-main-code"></a>若要在您主要的程式碼中使用書籤  
   
 1. 在您先前建立的主控台應用程式 MyCons.cpp 檔案中，變更主要的程式碼，來讀取，如下所示。 若要使用書籤，主要的程式碼需要它自己的書籤物件具現化 (`myBookmark`); 這是不同的書籤，則存取子 (`m_bookmark`)。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "46082413"
        {  
           nCounter++;  
           if(nCounter == 5 )  
-             myBookmark = rs.bookmark;  
+             myBookmark = rs.m_bookmark;  
           // Output the column information for each row:  
           outfile << rs.m_ProductID << rs.m_ProductName << lPrice << rs.m_QuantityPerUnit << rs.m_UnitsInStock << rs.m_ReorderLevel << endl;  
           hr = rs.MoveNext();  
@@ -216,7 +216,7 @@ ms.locfileid: "46082413"
 
 中所述[存取 XML 資料](../../data/oledb/accessing-xml-data.md)，以從資料來源擷取 XML 資料的兩種方式： 使用[CStreamRowset](../../data/oledb/cstreamrowset-class.md) ，或使用[CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)。 這個範例會使用`CStreamRowset`，更有效率，但您需要有執行此範例應用程式的電腦上執行的 SQL Server 2000。  
   
-#### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>若要修改繼承 CStreamRowset 命令類別  
+### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>若要修改繼承 CStreamRowset 命令類別  
   
 1. 在您先前建立取用者應用程式的情況下，變更您`CCommand`宣告，以指定`CStreamRowset`作為資料列集類別，如下所示：  
   
@@ -224,7 +224,7 @@ ms.locfileid: "46082413"
     class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
     ```  
   
-#### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>若要修改主要的程式碼，擷取並輸出 XML 資料  
+### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>若要修改主要的程式碼，擷取並輸出 XML 資料  
   
 1. 在您先前建立的主控台應用程式 MyCons.cpp 檔案中，變更主要的程式碼，來讀取，如下所示：  
   

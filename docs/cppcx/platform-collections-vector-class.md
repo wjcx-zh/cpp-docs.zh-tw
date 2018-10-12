@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36fe82bc5d17cd3c4951b008af28ba89b171c78f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: acf3ae2fd16eb3aacbc0a2e681ae39aece1b4dd4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103928"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163214"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 類別
 
@@ -71,7 +71,7 @@ Vector 物件中包含的元素型別。
 
 **向量**類別是 c + + 具象實作[ivector&lt](/uwp/api/Windows.Foundation.Collections.IVector_T_)介面。
 
-如果您嘗試使用**向量**類型在公用傳回值或參數，編譯器會引發的錯誤 C3986。 您可以修正錯誤，變更參數或傳回實值型別[ivector&lt](/uwp/api/Windows.Foundation.Collections.IVector_T_)。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
+如果您嘗試使用**向量**類型在公用傳回值或參數，編譯器會引發的錯誤 C3986。 您可以將參數或傳回值類型變更為 [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)來修正錯誤。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
 
 ### <a name="members"></a>成員
 
@@ -240,11 +240,11 @@ virtual bool IndexOf(T value, unsigned int* index);
 *index*<br/>
 項目的以零為起始的索引若參數*值*找到; 否則即為 0。
 
-*Index*參數為 0，如果項目是第一個向量的元素，或找不到項目。 如果傳回值為 `true`，表示找到符合項目，並且是第一個項目，否則表示找不到項目。
+*Index*參數為 0，如果項目是第一個向量的元素，或找不到項目。 如果傳回的值是 **，則為 true**，找不到項目，而且它的第一個元素; 否則項目找不到。
 
 ### <a name="return-value"></a>傳回值
 
-如果找到指定的項目則為 `true`，否則為 `false`。
+**真**找到則為指定的項目是否**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -401,4 +401,4 @@ Vector 中的項目數。
 ## <a name="see-also"></a>另請參閱
 
 [Platform 命名空間](platform-namespace-c-cx.md)<br/>
-[在 c + + 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+[在 C++ 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

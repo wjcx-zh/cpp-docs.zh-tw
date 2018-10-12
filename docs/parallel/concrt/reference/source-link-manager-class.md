@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1f84bd617505b78e572537b7c5cf7ce036692bd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 94c3e3c43f573cde22c9818752544eb18bf32191
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405680"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162265"
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager 類別
 
@@ -140,7 +140,7 @@ bool contains(_EType _Link);
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果找不到指定的區塊，`false`否則。
+**真**找不到指定的區塊，如果**false**否則。
 
 ##  <a name="count"></a> 計數
 
@@ -198,7 +198,7 @@ bool remove(_EType _Link);
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果連結已找到並移除，`false`否則。
+**真**如果連結已找到並移除**false**否則。
 
 ##  <a name="set_bound"></a> set_bound
 

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fc41bdccf9cce3d455d4effd3541731929e5de2
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 90ceaf20a5d601fc2904b7ce8610b4a3906e30ac
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789263"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161199"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict 結構
 
@@ -52,7 +52,7 @@ struct IsBaseOfStrict<Base, Base>;
 
 測試某個類型是否為另一個類型的基底。
 
-第一個範本會測試是否為型別衍生自基底型別，可能會產生`true`或`false`。 第二個範本會測試是否為型別衍生自本身，這一律會產生`false`。
+第一個範本會測試是否為型別衍生自基底型別，可能會產生**真**或是**false**。 第二個範本會測試是否為型別衍生自本身，這一律會產生**false**。
 
 ## <a name="members"></a>成員
 
@@ -84,4 +84,4 @@ static const bool value = __is_base_of(Base, Derived);
 
 指出是否會有一個類型的另一個基底。
 
-`value` 已`true`如果型別`Base`型別的基底類別`Derived`，否則就是`false`。
+`value` 是 **，則為 true**如果型別`Base`的基底類別型別的`Derived`，否則就是**false**。

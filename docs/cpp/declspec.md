@@ -1,12 +1,14 @@
 ---
 title: __declspec |Microsoft Docs
 ms.custom: ''
-ms.date: 1/23/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __declspec_cpp
+- __declspec
+- _declspec
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b159bcdae6e7f576ed92275ec5f79d25132b53e5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f413c56b665a1878fb1e948b975ab8e4cbc0daf4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46111313"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163579"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -66,6 +68,8 @@ ms.locfileid: "46111313"
 擴充的屬性文法支援這些 Microsoft 專有儲存類別屬性：[對齊](../cpp/align-cpp.md)，[配置](../cpp/allocate.md)， [appdomain](../cpp/appdomain.md)， [code_seg](../cpp/code-seg-declspec.md)，[過時](../cpp/deprecated-cpp.md)， [dllexport](../cpp/dllexport-dllimport.md)， [dllimport](../cpp/dllexport-dllimport.md)， [jitintrinsic](../cpp/jitintrinsic.md)， [naked](../cpp/naked-cpp.md)， [noalias](../cpp/noalias.md)， [noinline](../cpp/noinline.md)， [noreturn](../cpp/noreturn.md)， [nothrow](../cpp/nothrow-cpp.md)， [novtable](../cpp/novtable.md)[程序](../cpp/process.md)，[限制](../cpp/restrict.md)， [safebuffers](../cpp/safebuffers.md)， [selectany](../cpp/selectany.md)， [spectre](../cpp/spectre.md)，及[執行緒](../cpp/thread.md)。 它也支援這些 COM 物件的屬性：[屬性](../cpp/property-cpp.md)並[uuid](../cpp/uuid-cpp.md)。
 
 **Code_seg**， **dllexport**， **dllimport**， **naked**， **noalias**， **nothrow**，**屬性**，**限制**， **selectany**，**執行緒**，以及**uuid**儲存類別屬性是只宣告物件或函式套用至屬性。 **執行緒**屬性會影響資料，而且只有物件。 **Naked**並**spectre**屬性會影響僅函式。 **Dllimport**並**dllexport**屬性會影響函式、 資料和物件。 **屬性**， **selectany**，並**uuid**屬性會影響 COM 物件。
+
+為了與舊版中，相容性 **_declspec**同義 **__declspec**除非編譯器選項[/Za\(停用語言擴充功能)](../build/reference/za-ze-disable-language-extensions.md)是指定此項目。
 
 **__Declspec**關鍵字應該放置在簡單的宣告的開頭。 編譯器會忽略，不顯示任何警告 **__declspec**關鍵字後面 * 或 & 和變數宣告中的識別項前面。
 

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 622f439355c9d8b059ac48f0bdc1f57c1b32e5eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82266e387bcba3e4e7f2e377c666ce890d258e0f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387662"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162109"
 ---
 # <a name="overwritebuffer-class"></a>overwrite_buffer 類別
 
@@ -67,7 +67,7 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
 |名稱|描述|
 |----------|-----------------|
 |[has_value](#has_value)|檢查是否這`overwrite_buffer`傳訊區塊尚未值。|
-|[value](#value)|取得儲存在訊息的目前內容的參考`overwrite_buffer`傳訊區塊。|
+|[值](#value)|取得儲存在訊息的目前內容的參考`overwrite_buffer`傳訊區塊。|
 
 ### <a name="protected-methods"></a>保護方法
 
@@ -160,7 +160,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果區塊已收到的值，`false`否則。
+**真**區塊已收到的值，如果**false**否則。
 
 ##  <a name="link_target_notification"></a> link_target_notification
 
@@ -214,10 +214,10 @@ overwrite_buffer(
 判斷是否應該接受所提供的訊息篩選器函式。
 
 *_PScheduler*<br/>
-`Scheduler`物件的傳播工作在其中`overwrite_buffer`傳訊區塊已排程。
+`Scheduler` 物件，在其內會排定 `overwrite_buffer` 傳訊區塊的傳播工作。
 
 *_PScheduleGroup*<br/>
-`ScheduleGroup`物件的傳播工作在其中`overwrite_buffer`傳訊區塊已排程。 所使用的 `Scheduler` 物件由排程群組所隱含。
+`ScheduleGroup` 物件，在其內會排定 `overwrite_buffer` 傳訊區塊的傳播工作。 所使用的 `Scheduler` 物件由排程群組所隱含。
 
 ### <a name="remarks"></a>備註
 
@@ -296,7 +296,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>傳回值
 
-`true`，因為區塊不會延後提供的訊息。
+**true**因為區塊不會延後提供的訊息。
 
 ##  <a name="release_message"></a> release_message
 
@@ -326,11 +326,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果已成功保留訊息，`false`否則。
+**真**已成功保留訊息，如果**false**否則。
 
 ### <a name="remarks"></a>備註
 
-在後`reserve`呼叫時，如果它傳回`true`，可以是`consume`或`release`採取，或釋放訊息的擁有權必須先呼叫。
+之後`reserve`呼叫時，如果它傳回 **，則為 true**可以`consume`或`release`必須呼叫採取，或釋放訊息的擁有權。
 
 ##  <a name="resume_propagation"></a> resume_propagation
 

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74e871255e3308450764e8f65cdb6acebe79df38
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ab586243df9b015c95f4a703744bfb02a54d064e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437738"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162187"
 ---
 # <a name="event-class"></a>event 類別
 
@@ -167,7 +167,7 @@ static size_t __cdecl wait_for_multiple(
 中所提供之陣列中的事件計數的`_PPEvents`參數。
 
 *_FWaitAll*<br/>
-如果設定為值`true`，參數會指定陣列中的所有事件都提供在`_PPEvents`參數必須變成收到訊號，以滿足等候。 如果設定為值`false`，它會指定陣列中的任何事件提供在`_PPEvents`變成收到訊號的參數會滿足等候。
+如果設定為值 **，則為 true**，參數會指定陣列中的所有事件都提供在`_PPEvents`參數必須變成收到訊號，以滿足等候。 如果設為值**假**，它會指定陣列中的任何事件提供在`_PPEvents`變成收到訊號的參數會滿足等候。
 
 *逾時 _t*<br/>
 等候逾時之前，請指出毫秒的數。值`COOPERATIVE_TIMEOUT_INFINITE`表示沒有逾時。
@@ -181,7 +181,7 @@ static size_t __cdecl wait_for_multiple(
 如果參數`_FWaitAll`設定為值`true`函式所傳回的索引，表示所有的事件必須以滿足等候變成發出訊號，帶有沒有特殊的意義，不是值的事實以外`COOPERATIVE_WAIT_TIMEOUT`。
 
 > [!IMPORTANT]
->  在通用 Windows 平台 (UWP) 應用程式中，請勿呼叫`wait_for_multiple`在 ASTA 執行緒上因為這個呼叫可以封鎖目前的執行緒，而且可能會導致應用程式變成沒有回應。
+> 在通用 Windows 平台 (UWP) 應用程式中，請勿呼叫`wait_for_multiple`在 ASTA 執行緒上因為這個呼叫可以封鎖目前的執行緒，而且可能會導致應用程式變成沒有回應。
 
 ## <a name="see-also"></a>另請參閱
 

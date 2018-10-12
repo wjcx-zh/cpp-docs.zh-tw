@@ -1,13 +1,17 @@
 ---
 title: __sptr、 __uptr |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __uptr_cpp
 - __sptr_cpp
+- __uptr
+- __sptr
+- _uptr
+- _sptr
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 269fe70a5a40a90a512c826e98ba2c8ea698a55b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fa67c815fdfeac0f5728ecd671aaa8f04a59ef89
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052513"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163474"
 ---
 # <a name="sptr-uptr"></a>__sptr、__uptr
 
@@ -44,6 +48,8 @@ void MyFunction(char * __uptr __ptr32 myValue);
 ```
 
 使用 **__sptr**並 **__uptr**修飾詞搭配指標宣告。 中的位置使用修飾詞[指標類型限定詞](../c-language/pointer-declarations.md)，表示修飾詞必須在星號。 您不能使用修飾詞搭配[成員的指標](../cpp/pointers-to-members.md)。 修飾詞不影響非指標宣告。
+
+為了與舊版中，相容性 **_sptr**並 **_uptr**同義 **__sptr**和 **__uptr**除非編譯器選項[/Za\(停用語言擴充功能)](../build/reference/za-ze-disable-language-extensions.md)指定。
 
 ## <a name="example"></a>範例
 

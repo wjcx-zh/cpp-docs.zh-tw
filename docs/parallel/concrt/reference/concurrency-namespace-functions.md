@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e07c5b985552fcf30b2acb18030ab3288efb9be
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b89c1a3057e9753b99aaac837c903b6fd5f6d3ea
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428144"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163344"
 ---
 # <a name="concurrency-namespace-functions"></a>concurrency 命名空間函式
 
@@ -118,7 +118,7 @@ bool asend(
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果方法傳回時之前，已接受訊息`false`否則。
+**真**如果方法傳回時之前，已接受訊息**false**否則。
 
 ### <a name="remarks"></a>備註
 
@@ -151,7 +151,7 @@ void concurrent_queue<T, _Ax>::clear();
 
 ##  <a name="create_async"></a>  create_async
 
-以使用者提供的 Lambda 或函式物件為基礎，建立 Windows 執行階段非同步建構。 根據傳遞至方法的 Lambda 簽章，`create_async` 的傳回類型是下列其中一個：`IAsyncAction^`、`IAsyncActionWithProgress<TProgress>^`、`IAsyncOperation<TResult>^` 或 `IAsyncOperationWithProgress<TResult, TProgress>^`。
+以使用者提供的 Lambda 或函式物件為基礎，建立 Windows 執行階段非同步建構。 根據傳遞至方法的 Lambda 簽章，`create_async` 的傳回型別是下列其中一個：`IAsyncAction^`、`IAsyncActionWithProgress<TProgress>^`、`IAsyncOperation<TResult>^` 或 `IAsyncOperationWithProgress<TResult, TProgress>^`。
 
 ```
 template<typename _Function>
@@ -177,7 +177,7 @@ Lambda 的傳回型別決定建構是動作或作業。
 
 傳回 void 的 Lambda 造成動作的建立。 傳回屬於 `TResult` 類型之結果的 Lambda 會造成 TResult 作業的建立。
 
-Lambda 可能也會傳回 `task<TResult>`，將非同步工作封裝在本身內或是表示非同步工作的工作鏈結的接續作業。 在這種情況下，Lambda 本身是內嵌執行，因為工作是非同步執行的工作，而且 Lambda 的傳回類型會解除包裝以產生 `create_async` 所傳回的非同步建構。 這表示，lambda，傳回的工作\<void > 會造成的動作，並傳回工作的 lambda 建立\<TResult > 會導致 TResult 作業的建立。
+Lambda 可能也會傳回 `task<TResult>`，將非同步工作封裝在本身內或是表示非同步工作的工作鏈結的接續作業。 在這種情況下，Lambda 本身是內嵌執行，因為工作是非同步執行的工作，而且 Lambda 的傳回型別會解除包裝以產生 `create_async` 所傳回的非同步建構。 這表示，lambda，傳回的工作\<void > 會造成的動作，並傳回工作的 lambda 建立\<TResult > 會導致 TResult 作業的建立。
 
 Lambda 可以接受零個、一個或兩個引數。 有效的引數為 `progress_reporter<TProgress>` 和 `cancellation_token`，兩者都使用時依此順序。 沒有引數的 Lambda 會導致建立沒有進度報告功能的非同步建構。 接受 progress_reporter lambda\<Tprogress> > 將會導致`create_async`傳回的非同步建構，它會報告 TProgress 類型的進度，每次`report`呼叫 progress_reporter 物件的方法。 接受 cancellation_token 的 Lambda 可能使用該語彙基元來檢查取消的狀態，或是將語彙基元傳遞給所建立的工作，讓非同步建構的取消導致取消這些工作。
 
@@ -424,7 +424,7 @@ bool __cdecl is_current_task_group_canceling();
 
 ### <a name="return-value"></a>傳回值
 
-`true` 正在取消目前正在執行的工作群組，如果`false`否則。
+**真**正在取消目前正在執行的工作群組，如果**false**否則。
 
 ### <a name="remarks"></a>備註
 
@@ -687,7 +687,7 @@ C + + 標準程式庫相容的記憶體配置器類型。
 C + + 標準程式庫相容的記憶體配置器執行個體。
 
 *_Func*<br/>
-使用者定義的述詞函式物件，用來定義順序中後續項目應符合的比較準則。 二元述詞會採用兩個引數，並且在符合時傳回 `true`，不符合時則傳回 `false`。 這個比較子函式必須對序列中項目的配對強制執行嚴格的弱式順序。
+使用者定義的述詞函式物件，用來定義順序中後續項目應符合的比較準則。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。 這個比較子函式必須對序列中項目的配對強制執行嚴格的弱式順序。
 
 *_Chunk_size*<br/>
 要分割成兩個進行並行執行的最小區塊大小。
@@ -1217,7 +1217,7 @@ inline void parallel_sort(
 隨機存取迭代器，用於定址要排序之範圍中越過最後一個項目的第一個位置。
 
 *_Func*<br/>
-使用者定義的述詞函式物件，用來定義順序中後續項目應符合的比較準則。 二元述詞會採用兩個引數，並且在符合時傳回 `true`，不符合時則傳回 `false`。 這個比較子函式必須對序列中項目的配對強制執行嚴格的弱式順序。
+使用者定義的述詞函式物件，用來定義順序中後續項目應符合的比較準則。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。 這個比較子函式必須對序列中項目的配對強制執行嚴格的弱式順序。
 
 *_Chunk_size*<br/>
 要分割成兩個進行並行執行的最小區塊大小。
@@ -1460,7 +1460,7 @@ bool send(ITarget<T>& _Trg, const T& _Data);
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果已接受訊息，`false`否則。
+**真**已接受訊息，如果**false**否則。
 
 ### <a name="remarks"></a>備註
 
@@ -1613,7 +1613,7 @@ void Trace_agents_register_name(
 
 ##  <a name="try_receive"></a>  try_receive
 
-一般嘗試-接收實作，可讓內容尋找來自特定一個來源的資料，並且篩選所接受的值。 如果資料還沒準備好，方法會傳回 false。
+一般嘗試-接收實作，可讓內容尋找來自特定一個來源的資料，並且篩選所接受的值。 如果資料尚未就緒，此方法會傳回**false**。
 
 ```
 template <class T>

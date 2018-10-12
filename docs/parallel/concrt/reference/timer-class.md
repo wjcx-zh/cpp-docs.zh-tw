@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b821dcc3426c6e1d9f3cd2f2ff8eb057197ca8d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e37348fe92354d2ea7be3168dc5b3c9aee9fcd63
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416197"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163097"
 ---
 # <a name="timer-class"></a>timer 類別
 
@@ -193,11 +193,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果已成功保留訊息，`false`否則。
+**真**已成功保留訊息，如果**false**否則。
 
 ### <a name="remarks"></a>備註
 
-在後`reserve`呼叫時，如果它傳回`true`，可以是`consume`或`release`採取，或釋放訊息的擁有權必須先呼叫。
+之後`reserve`呼叫時，如果它傳回 **，則為 true**可以`consume`或`release`必須呼叫採取，或釋放訊息的擁有權。
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -267,11 +267,11 @@ timer(
 `Scheduler`物件的傳播工作在其中`timer`傳訊區塊排程已排程。
 
 *_ScheduleGroup*<br/>
-`ScheduleGroup`物件的傳播工作在其中`timer`傳訊區塊已排程。 所使用的 `Scheduler` 物件由排程群組所隱含。
+`ScheduleGroup` 物件，在其內會排定 `timer` 傳訊區塊的傳播工作。 所使用的 `Scheduler` 物件由排程群組所隱含。
 
 ### <a name="remarks"></a>備註
 
-如果您未指定，執行階段會使用預設排程器`_Scheduler`或`_ScheduleGroup`參數。
+如果您未指定 `_Scheduler` 或 `_ScheduleGroup` 參數，執行階段會使用預設排程器。
 
 ##  <a name="dtor"></a> ~ 計時器
 

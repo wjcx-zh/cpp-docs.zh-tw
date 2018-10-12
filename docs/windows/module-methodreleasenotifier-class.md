@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e78542e016ab0ba8ef33a5655b72fcdff45ccc4
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: 68f85794c8d70d642295f9125ac45311df29f16e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494448"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163513"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier 類別
 
@@ -112,14 +112,14 @@ MethodReleaseNotifier(
 
 ### <a name="parameters"></a>參數
 
-*object*  
+*object*<br/>
 物件，其成員函式為事件處理常式。
 
-*方法*  
+*方法*<br/>
 成員函式的參數*物件*也就是事件處理常式。
 
-*release*  
-指定`true`若要啟用呼叫基礎[模組:: ReleaseNotifier::Release()](../windows/module-releasenotifier-class.md#releasenotifier-release)方法; 否則指定`false`。
+*release*<br/>
+指定 **，則為 true**若要啟用呼叫基礎[模組:: ReleaseNotifier::Release()](../windows/module-releasenotifier-class.md#releasenotifier-release)方法; 否則指定**false**。
 
 ## <a name="methodreleasenotifier-object"></a>Module::MethodReleaseNotifier::object_
 

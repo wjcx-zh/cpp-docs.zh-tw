@@ -1,7 +1,7 @@
 ---
 title: __alignof 運算子 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -9,6 +9,8 @@ f1_keywords:
 - alignas_cpp
 - __alignof_cpp
 - alignof_cpp
+- __alignof
+- _alignof
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffea0fdf40f7ef794563849f97b0b68631b9734e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d1852f6d277f54ecb3c232d63262c34465512546
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46099776"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163721"
 ---
 # <a name="alignof-operator"></a>__alignof 運算子
 
@@ -81,6 +83,8 @@ typedef __declspec(align(32)) struct { int a; double b; } S;
 int n = 50; // array size
 S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
 ```
+
+為了與舊版中，相容性 **_alignof**同義 **__alignof**除非編譯器選項[/Za\(停用語言擴充功能)](../build/reference/za-ze-disable-language-extensions.md)是指定此項目。
 
 如需修改對齊的詳細資訊，請參閱：
 

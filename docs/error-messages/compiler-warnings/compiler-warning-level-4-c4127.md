@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 561173e2b451a0b736d97042667a2fb14b3a7eb7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 80f831d527e918fce0551f6a1336fd2fe994917d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094893"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161277"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>編譯器警告 (層級 4) C4127
 
@@ -29,9 +29,9 @@ ms.locfileid: "46094893"
 
 ## <a name="remarks"></a>備註
 
-`if` 陳述式或 `while` 迴圈的控制運算式會評估為常數。 因為其常見慣用語，從 Visual Studio 2015 update 3，一般的常數，例如 1 或`true`不會觸發警告，除非它們是在運算式中作業的結果。
+控制運算式**如果**陳述式或**雖然**迴圈會評估為常數。 因為其常見慣用語，從 Visual Studio 2015 update 3，一般的常數，例如 1 或 **，則為 true**不會觸發警告，除非它們是在運算式中作業的結果。
 
-如果的控制運算式`while`迴圈是常數，因為迴圈會結束，中間，請考慮更換`while`迴圈與`for`迴圈。 您可以省略初始化、 終止測試，並在迴圈的遞增`for`迴圈中，這會導致無限的就像迴圈`while(1)`，您可以結束迴圈的主體和`for`陳述式。
+如果的控制運算式**雖然**迴圈是常數，因為迴圈會結束，中間，請考慮更換**雖然**迴圈**的**迴圈。 您可以省略初始化、 終止測試，並在迴圈的遞增**針對**迴圈中，這會導致無限的就像迴圈`while(1)`，和您可以結束迴圈的主體**的**陳述式。
 
 ## <a name="example"></a>範例
 

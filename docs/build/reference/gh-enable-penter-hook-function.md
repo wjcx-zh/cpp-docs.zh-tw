@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 231eed17f155b9ec184e0cf4fe3bd91e7770a7f4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 608472f3133464137d2d0f96128453e4239b16a2
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716846"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162083"
 ---
 # <a name="gh-enable-penter-hook-function"></a>/Gh (啟用 _penter 攔截函式)
 
@@ -43,7 +43,7 @@ ms.locfileid: "45716846"
 除非您計劃會明確地呼叫`_penter`，您不需要提供原型。 如同它已有下列的原型，並必須推送的所有暫存器內容項目，並在結束 pop 未變更的內容，必須出現函式：
 
 ```
-void __declspec(naked) _cdecl _penter( void );
+void __declspec(naked) __cdecl _penter( void );
 ```
 
 這個宣告不是適用於 64 位元專案。
@@ -66,7 +66,7 @@ void __declspec(naked) _cdecl _penter( void );
 
 下列程式碼，以編譯時 **/Gh**，顯示如何`_penter`兩次; 呼叫一次輸入函式時`main`一次輸入函式時`x`。
 
-```
+```cpp
 // Gh_compiler_option.cpp
 // compile with: /Gh
 // processor: x86
@@ -77,7 +77,7 @@ int main() {
    x();
 }
 
-extern "C" void __declspec(naked) _cdecl _penter( void ) {
+extern "C" void __declspec(naked) __cdecl _penter( void ) {
    _asm {
       push eax
       push ebx

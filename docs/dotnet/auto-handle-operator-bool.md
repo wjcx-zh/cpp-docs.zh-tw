@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: be9c1bc8125c30eb2208b389097eac7e1cf38e09
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2534563ba85ec3d2d513c192637d3ae8b3beb971
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374382"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162356"
 ---
 # <a name="autohandleoperator-bool"></a>auto_handle::operator bool
 
@@ -40,11 +40,11 @@ operator bool();
 
 ## <a name="return-value"></a>傳回值
 
-`true` 已包裝的物件是否有效。`false`否則。
+**true**包裝的物件是否有效。**false**否則。
 
 ## <a name="remarks"></a>備註
 
-這個運算子實際將轉換成`_detail_class::_safe_bool`這是比安全`bool`因為它無法轉換成整數類資料類型。
+這個運算子實際將轉換成`_detail_class::_safe_bool`這是比安全**bool**因為它無法轉換成整數類資料類型。
 
 ## <a name="example"></a>範例
 

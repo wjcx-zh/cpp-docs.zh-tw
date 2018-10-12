@@ -1,7 +1,7 @@
 ---
 title: 建立簡單消費者 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,46 +15,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 120829b08ab65c10cca7ab922fc4f9be732ccc53
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 85efb2a1d699914c6d7ffb1fd079a38be70f0b52
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860806"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163838"
 ---
 # <a name="creating-a-simple-consumer"></a>建立簡單消費者
 
 使用 ATL 專案精靈] 和 [ATL OLE DB 消費者精靈產生的 OLE DB 範本取用者。
 
-### <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>若要建立的 OLE DB 取用者的主控台應用程式
+## <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>若要建立的 OLE DB 取用者的主控台應用程式
 
 1. 按一下 [ **檔案** ] 功能表上的 [ **新增**]，然後按一下 [ **專案**]。
 
    [ **新增專案** ] 對話方塊隨即出現。
 
-1. 在 專案類型 窗格中，按一下**Visual c + + 專案**資料夾，然後再按一下**Win32 專案**範本 窗格中的圖示。 在 **名稱**方塊中，輸入您的專案的名稱，例如**MyCons**。
+1. 在 **專案類型**窗格中，按一下**已安裝** > **範本** > **Visual c + +** 資料夾，和然後按一下**Win32 主控台應用程式**中的圖示**範本**窗格。 在 **名稱**方塊中，輸入您的專案的名稱，例如*MyCons*。
 
 1. 按一下 [確定 **Deploying Office Solutions**]。
 
-   Win32 專案精靈 隨即出現。
+   Win32 應用程式精靈 隨即出現。
 
-1. 在 **應用程式設定**頁面上，選取**主控台應用程式**，然後選取**新增 ATL 支援**。
+1. 在 **應用程式設定**頁面上，選取**主控台應用程式**，然後選取**新增 ATL 通用標頭檔**。
 
 1. 按一下 **完成**關閉精靈並產生專案。
 
 接下來，使用 [ATL OLE DB 消費者精靈] 來新增 OLE DB 取用者物件。
 
-#### <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>若要使用 [ATL OLE DB 消費者精靈] 建立消費者
+## <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>若要使用 [ATL OLE DB 消費者精靈] 建立消費者
 
-1. 在 [類別檢視] 中以滑鼠右鍵按一下 `MyCons` 專案。
+1. 在 **方案總管**，以滑鼠右鍵按一下`MyCons`專案。
 
-1. 在捷徑功能表，按一下 **新增**，然後按一下**加入類別**。
+1. 在捷徑功能表，按一下 **新增**，然後按一下**類別**。
 
    **加入類別** 對話方塊隨即出現。
 
-1. 在 [分類] 窗格中，按一下**Visual c + +**，按一下**ATL OLE DB 消費者**圖示，在範本窗格中，然後按一下**開啟**。
+1. 在 **分類**窗格中，按一下**已安裝** > **Visual c + +** > **ATL**，按一下**ATL OLEDB 消費者**中的圖示**範本**窗格中，然後再按一下**新增**。
 
-   ATL OLE DB 消費者精靈 隨即出現。
+   ATL OLEDB 消費者精靈 隨即出現。
 
 1. 按一下 [**資料來源**] 按鈕。
 
@@ -64,7 +64,7 @@ ms.locfileid: "48860806"
 
    - 在 **提供者**索引標籤上，指定 OLE DB 提供者。
 
-   - 在 **連線**索引標籤上，指定伺服器上的伺服器名稱、 登入識別碼和您的資料來源和資料庫的密碼。
+   - 在 **連線**索引標籤上，指定伺服器上的必要的資訊，例如伺服器名稱、 登入識別碼，與您的資料來源和資料庫的密碼。
 
    > [!NOTE]
    > 安全性問題**允許儲存密碼**功能**資料連結屬性** 對話方塊。 在 **輸入登入伺服器的資訊**，有兩個選項按鈕：**使用 Windows NT 整合式安全性**並**使用特定的使用者名稱和密碼**。
@@ -79,7 +79,7 @@ ms.locfileid: "48860806"
 
    **選取資料庫物件** 對話方塊隨即出現。
 
-1. 您可以使用樹狀結構控制項中，選取資料表、 檢視表或預存程序。 為了此程序中，選取從 Northwind 資料庫的 Products 資料表。
+1. 您可以使用樹狀結構控制項中，選取資料表、 檢視表或預存程序。 此程序，以選取`Products`資料表中`Northwind`資料庫。
 
 1. 按一下 [確定 **Deploying Office Solutions**]。 這會讓您回到 ATL OLE DB 消費者精靈。
 

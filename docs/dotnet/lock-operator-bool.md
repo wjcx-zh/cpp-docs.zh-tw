@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: eea3e1f54fa1c5e1c4313a9442e812770b0a6cdd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d0aee08fc59130e829d9448ba4f28a9823a461ed
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424725"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161771"
 ---
 # <a name="lockoperator-bool"></a>lock::operator bool
 
@@ -40,17 +40,17 @@ operator bool();
 
 ## <a name="return-value"></a>傳回值
 
-`true` 如果鎖定維持，`false`否則。
+**真**在握有鎖定時，如果**false**否則。
 
 ## <a name="remarks"></a>備註
 
-這個運算子實際將轉換成`_detail_class::_safe_bool`這是比安全`bool`因為它無法轉換成整數類資料類型。
+這個運算子實際將轉換成`_detail_class::_safe_bool`這是比安全**bool**因為它無法轉換成整數類資料類型。
 
 ## <a name="example"></a>範例
 
 此範例會跨多個執行緒使用單一類別的執行個體。  類別會使用本身的鎖定，以確保一致的每個執行緒存取其內部的資料。  主應用程式執行緒的類別相同的執行個體上使用鎖定，來定期檢查以查看是否仍存在的任何背景工作執行緒，並等候直到所有的背景工作執行緒結束已完成其工作。
 
-```
+```cpp
 // msl_lock_op_bool.cpp
 // compile with: /clr
 #include <msclr/lock.h>

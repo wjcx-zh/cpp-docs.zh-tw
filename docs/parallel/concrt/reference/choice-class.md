@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 039f69f31c5a92cf07f96442c30bd59b0cc6f40e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9d38b8415b5ca214800c968d186f37c020dce6dc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414572"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163955"
 ---
 # <a name="choice-class"></a>choice 類別
 
@@ -85,7 +85,7 @@ A `tuple`-基底類型表示的輸入來源的裝載。
 |[reserve](#reserve)|保留先前由此訊息`choice`傳訊區塊。|
 |[unlink_target](#unlink_target)|取消連結的目標區塊，從這個`choice`傳訊區塊。|
 |[unlink_targets](#unlink_targets)|取消連結所有的目標，從這個`choice`傳訊區塊。 (覆寫[isource:: Unlink_targets](isource-class.md#unlink_targets)。)|
-|[value](#value)|取得索引的所選取的訊息`choice`傳訊區塊。|
+|[值](#value)|取得索引的所選取的訊息`choice`傳訊區塊。|
 
 ## <a name="remarks"></a>備註
 
@@ -216,7 +216,7 @@ virtual message<size_t>* consume(
 
 ### <a name="remarks"></a>備註
 
-`consume`方法是類似`accept`，但必須一律加上呼叫`reserve`傳回`true`。
+`consume`方法是類似`accept`，但必須一律加上呼叫`reserve`傳回**true**。
 
 ##  <a name="has_value"></a> has_value
 
@@ -229,7 +229,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果區塊已收到的值，`false`否則。
+**真**區塊已收到的值，如果**false**否則。
 
 ##  <a name="index"></a> 索引
 
@@ -315,7 +315,7 @@ virtual bool reserve(
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果已成功保留訊息，`false`否則。 保留失敗可能有許多原因，包括：訊息已經保留或已由另一個目標接受、來源拒絕保留等等。
+**真**已成功保留訊息，如果**false**否則。 保留失敗可能有許多原因，包括：訊息已經保留或已由另一個目標接受、來源拒絕保留等等。
 
 ### <a name="remarks"></a>備註
 

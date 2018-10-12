@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eccefff291dc509f846bce951cfe9508834876e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7e64f5857a2b0530fb0346a2635611db03fd9bc8
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103875"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162551"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 類別
 
@@ -173,7 +173,7 @@ bool HasKey(K key);
 
 ### <a name="return-value"></a>傳回值
 
-如果找到機碼則為 `true`，否則為 `false`。
+**真**找到則為索引鍵是否**false**。
 
 ## <a name="insert"></a>  Map:: insert 方法
 
@@ -195,7 +195,7 @@ virtual bool Insert(K key, V value);
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果目前 Map 中現有項目的索引鍵符合*金鑰*，而且該元素的值部分設定為*值*。 `false` 如果目前 Map 中的任何現有項目不符合*金鑰*而*金鑰*並*值*參數會使其成為的索引鍵 / 值組，而且接著加入目前 Map。
+**true**如果目前 Map 中現有項目的索引鍵符合*金鑰*且該元素的值部分設為*值*。 **false**如果目前 Map 中的任何現有項目不符合*金鑰*和*金鑰*並*值*參數都會成為的索引鍵 / 值組，並再新增至目前的對應。
 
 ## <a name="lookup"></a>  Map:: lookup 方法
 
@@ -304,4 +304,4 @@ Map 中的元素數目。
 ## <a name="see-also"></a>另請參閱
 
 [Platform 命名空間](platform-namespace-c-cx.md)<br/>
-[在 c + + 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+[在 C++ 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e1f944d19efd22cb2c6c7d6a3752d6d32ae1e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d544ac392e2eb227d7e1c37412110d09272f10d5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381669"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162501"
 ---
 # <a name="combinable-class"></a>combinable 類別
 
@@ -182,7 +182,7 @@ T& local(bool& _Exists);
 ### <a name="parameters"></a>參數
 
 *_Exists*<br/>
-布林值的參考。 這個引數所參考的布林值會設定為`true`如果子計算已經存在於這個執行緒上，且設定為`false`如果這是在此執行緒的第一個子計算。
+布林值的參考。 這個引數所參考的布林值會設定為**真**如果子計算已經存在於這個執行緒上，且設定為**false**如果這是在此執行緒的第一個子計算。
 
 ### <a name="return-value"></a>傳回值
 

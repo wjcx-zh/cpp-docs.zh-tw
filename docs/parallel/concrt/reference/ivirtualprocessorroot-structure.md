@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7466c00ec1a5c507a84a098b3dca79d57ffee91e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 891fcd96901423e5d5c23b840784f9e050dbbe81
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445980"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162915"
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot 結構
 
@@ -111,7 +111,7 @@ virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
 
 ### <a name="return-value"></a>傳回值
 
-布林值。 值為`true`表示從傳回的執行緒 proxy`Deactivate`方法以回應呼叫`Activate`方法。 值為`false`表示執行緒 proxy 傳回回應的通知事件在 Resource Manager 中的方法。 在使用者模式排程 (UMS) 執行緒排程器，這表示，項目會出現在 排程器的完成清單中，排程器，才能處理它們。
+布林值。 值為 **，則為 true**表示從傳回的執行緒 proxy`Deactivate`方法以回應呼叫`Activate`方法。 值為`false`表示執行緒 proxy 傳回回應的通知事件在 Resource Manager 中的方法。 在使用者模式排程 (UMS) 執行緒排程器，這表示，項目會出現在 排程器的完成清單中，排程器，才能處理它們。
 
 ### <a name="remarks"></a>備註
 
@@ -119,9 +119,9 @@ virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
 
 已停用的虛擬處理器根可能喚醒藉由呼叫`Activate`方法，並傳遞給相同的引數有`Deactivate`方法。 排程器會負責確保會呼叫`Activate`和`Deactivate`方法配對之後，但它們並不需要以特定順序接收。 Resource Manager 可以處理接收呼叫`Activate`方法之前收到的呼叫`Deactivate`它已用的方法。
 
-如果虛擬處理器根會喚醒並從傳回的值`Deactivate`方法就是值`false`，排程器應該查詢 UMS 完成清單中的，透過`IUMSCompletionList::GetUnblockNotifications`方法，該資訊，並接著再呼叫`Deactivate`方法一次。 這應該在到目前為止，做為重複`Deactivate`方法會傳回值`true`。
+如果虛擬處理器根會喚醒並從傳回的值`Deactivate`方法就是值**false**，排程器應該查詢 UMS 完成清單中的，透過`IUMSCompletionList::GetUnblockNotifications`方法，處理該資訊，然後接著再呼叫`Deactivate`方法一次。 這應該在到目前為止，做為重複`Deactivate`方法會傳回值`true`。
 
-`invalid_argument` 如果擲回引數`pContext`具有值`NULL`。
+`invalid_argument` 如果擲回引數`pContext`有 NULL 值。
 
 `invalid_operation` 如果從未啟用的虛擬處理器根，會擲回引數或`pContext`不代表由這個虛擬處理器根派送最近的執行內容。
 

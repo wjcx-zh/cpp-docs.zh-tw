@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f96a8a27b511c1a93114c32d048043aa9562fe1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 24e1113dac068a20e535bee3e8fd5fa9dcfb9064
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392956"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163565"
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>如何：使用過度訂閱使延遲產生位移
 
@@ -30,7 +30,7 @@ ms.locfileid: "46392956"
 
 這個範例會使用[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)從 HTTP 伺服器下載檔案。 `http_reader`類別衍生自[concurrency:: agent](../../parallel/concrt/reference/agent-class.md)並且使用訊息傳遞，以非同步方式讀取要下載的 URL 名稱。
 
-`http_reader`類別會使用[concurrency:: task_group](reference/task-group-class.md)以並行方式讀取每個檔案的類別。 每個工作會呼叫[concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe)方法`_BeginOversubscription`參數設定為`true`啟用過度訂閱目前內容中的。 每個工作，然後使用 Microsoft Foundation Classes (MFC) [CInternetSession](../../mfc/reference/cinternetsession-class.md)並[CHttpFile](../../mfc/reference/chttpfile-class.md)類別來下載檔案。 最後，每個工作會呼叫`Context::Oversubscribe`具有`_BeginOversubscription`參數設為`false`停用過度訂閱。
+`http_reader`類別會使用[concurrency:: task_group](reference/task-group-class.md)以並行方式讀取每個檔案的類別。 每個工作會呼叫[concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe)方法`_BeginOversubscription`參數設定為**true**啟用過度訂閱目前內容中的。 每個工作，然後使用 Microsoft Foundation Classes (MFC) [CInternetSession](../../mfc/reference/cinternetsession-class.md)並[CHttpFile](../../mfc/reference/chttpfile-class.md)類別來下載檔案。 最後，每個工作會呼叫`Context::Oversubscribe`具有`_BeginOversubscription`參數設為**false**停用過度訂閱。
 
 啟用過度訂閱時，執行階段會建立一個額外的執行緒，在其中執行工作。 每個執行緒可以也過度訂閱目前內容，並藉此建立額外的執行緒。 `http_reader`類別會使用[concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)物件來限制應用程式使用的執行緒數目。 代理程式初始化緩衝區中，使用固定數目的語彙基元值。 每個下載作業，代理程式會從緩衝區讀取語彙基元的值之前作業啟動，然後將該值傳回寫入的緩衝區在作業完成之後。 當緩衝區是空的時代理程式等候其中一個值回寫入緩衝區的下載作業。
 
@@ -68,7 +68,7 @@ Downloaded 1801040 bytes in 3276 ms.
 
 ## <a name="compiling-the-code"></a>編譯程式碼
 
-複製範例程式碼，並將它貼在 Visual Studio 專案中，或貼入名為的檔案中`download-oversubscription.cpp`和執行的下列其中之一然後命令在 Visual Studio 命令提示字元 視窗中。
+複製範例程式碼，並將它貼在 Visual Studio 專案中，或貼入名為的檔案中`download-oversubscription.cpp`並執行的下列其中之一中的命令再**Visual Studio 命令提示字元**視窗。
 
 **cl.exe /EHsc /MD /D"_AFXDLL"download-oversubscription.cpp**
 

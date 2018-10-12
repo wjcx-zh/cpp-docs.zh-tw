@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f48d3a3bba427bcf0bbb50e2c886a05b8267760
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cc7d6ec822eb4ada342110e3f7979c1d97ff583d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395748"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163942"
 ---
 # <a name="concurrentunorderedmultimap-class"></a>concurrent_unordered_multimap 類別
 
@@ -281,7 +281,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果並行容器是空的`false`否則。
+**真**並行容器是空的如果**false**否則。
 
 ### <a name="remarks"></a>備註
 

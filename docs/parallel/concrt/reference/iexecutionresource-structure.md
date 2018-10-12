@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 912cdb59a1841bbe3bbe3e71202a796a3e67a94e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 642b73f81146fa8df68d36ee3b63b1902ed66619
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390255"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162395"
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource 結構
 
@@ -79,7 +79,7 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
 
 訂用帳戶層級會告訴您執行的執行緒數目會與硬體執行緒相關聯。 這只會包含資源管理員不知道的訂閱的執行緒] 和 [正在執行的執行緒 proxy 虛擬處理器根形式的執行緒。
 
-呼叫方法[ischedulerproxy:: Subscribecurrentthread](ischedulerproxy-structure.md#subscribecurrentthread)，或方法[ischedulerproxy:: Requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)參數`doSubscribeCurrentThread`設值`true`硬體執行緒的訂用帳戶層級遞增一。 它們也會傳回`IExecutionResource`介面代表訂用帳戶。 對應呼叫[iexecutionresource:: Remove](#remove)遞減一個硬體執行緒的訂用帳戶層級。
+呼叫方法[ischedulerproxy:: Subscribecurrentthread](ischedulerproxy-structure.md#subscribecurrentthread)，或方法[ischedulerproxy:: Requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)參數`doSubscribeCurrentThread`設值 **，則為 true**硬體執行緒的訂用帳戶層級遞增一。 它們也會傳回`IExecutionResource`介面代表訂用帳戶。 對應呼叫[iexecutionresource:: Remove](#remove)遞減一個硬體執行緒的訂用帳戶層級。
 
 啟動虛擬處理器根，使用方法的 act [ivirtualprocessorroot:: Activate](ivirtualprocessorroot-structure.md#activate)硬體執行緒的訂用帳戶層級遞增一。 方法[ivirtualprocessorroot:: Deactivate](ivirtualprocessorroot-structure.md#deactivate)，或[iexecutionresource:: Remove](#remove)減一時啟動的虛擬處理器根上叫用的訂用帳戶層級。
 

@@ -1,13 +1,15 @@
 ---
 title: __uuidof 運算子 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __LIBID_cpp
 - __uuidof_cpp
+- __uuidof
+- _uuidof
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84fd779d50fb481cffc97b61a65f255c6c8f52a1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c75e33dd7aab1e96a1d2d3464e974a7095f83f3f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056727"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163851"
 ---
 # <a name="uuidof-operator"></a>__uuidof 運算子
 
@@ -50,7 +52,9 @@ __uuidof (expression)
 - 使用建立程式庫區塊[模組](../windows/module-cpp.md)屬性。
 
 > [!NOTE]
->  在偵錯組建中， **__uuidof**一律會初始化物件以動態方式 （在執行階段）。 在發行組建，而 **__uuidof**可以靜態 （在編譯時期） 初始化物件。
+> 在偵錯組建中， **__uuidof**一律會初始化物件以動態方式 （在執行階段）。 在發行組建，而 **__uuidof**可以靜態 （在編譯時期） 初始化物件。
+
+為了與舊版中，相容性 **_uuidof**同義 **__uuidof**除非編譯器選項[/Za\(停用語言擴充功能)](../build/reference/za-ze-disable-language-extensions.md)是指定此項目。
 
 ## <a name="example"></a>範例
 

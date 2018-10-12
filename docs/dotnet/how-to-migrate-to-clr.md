@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 165ea5b42ea4e293eb60b7a798778e3a461e0385
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: f7ecf84317f8d88748e4a50a43c173a3fe41e0e2
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235447"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163734"
 ---
 # <a name="how-to-migrate-to-clr"></a>如何：移轉至 /clr
 
@@ -84,7 +84,7 @@ NewFunc2 = (MYPROC)GetProcAddress( hLib, "Func2" );
 
 C + + 也需要函式必須是原型或是完整定義才可參考或叫用。
 
-C 程式碼中所使用的識別碼，剛好是 c + + 中的關鍵字 (例如`virtual`， `new`， `delete`， `bool`， `true`，`false`等等) 必須重新命名。 這通常可以使用簡單的搜尋和取代操作完成。
+C 程式碼中所使用的識別碼，剛好是 c + + 中的關鍵字 (例如**虛擬**，**新**，**刪除**， **bool**， **，則為 true**， **false**等等) 必須重新命名。 這通常可以使用簡單的搜尋和取代操作完成。
 
 ```
 COMObj1->lpVtbl->Method(COMObj, args);  // C code

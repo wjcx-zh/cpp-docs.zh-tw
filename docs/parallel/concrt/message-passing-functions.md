@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0b7a7afb25d46fa3b521353c4577fbed66e69fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7435bdbc4d5959771a1f80e2ad12f038a8157bae
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436984"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162278"
 ---
 # <a name="message-passing-functions"></a>訊息傳遞函式
 
@@ -41,9 +41,9 @@ ms.locfileid: "46436984"
 
 [Concurrency:: send](reference/concurrency-namespace-functions.md#send)函式將訊息傳送至指定的目標以同步方式並[concurrency:: asend](reference/concurrency-namespace-functions.md#asend)函式將訊息傳送至指定的目標以非同步的方式。 同時`send`和`asend`函式等候，直到目標表示，它最終會接受或拒絕該訊息。
 
-`send`函式會等候直到目標接受或拒絕訊息，再傳回。 `send`函式會傳回`true`如果訊息已傳遞和`false`否則。 因為`send`函式以同步方式執行，`send`函式會等待接收訊息之前它會傳回, 目標。
+`send`函式會等候直到目標接受或拒絕訊息，再傳回。 `send`函式會傳回 **，則為 true**如果訊息已傳遞並**false**否則。 因為`send`函式以同步方式執行，`send`函式會等待接收訊息之前它會傳回, 目標。
 
-相反地，`asend`函式不會等候目標接受或拒絕訊息，再傳回。 相反地，`asend`函式會傳回`true`如果目標接受訊息，並最終將會需要它。 否則，請`asend`傳回`false`來指出目標拒絕訊息或延後決定是否要接收的訊息。
+相反地，`asend`函式不會等候目標接受或拒絕訊息，再傳回。 相反地，`asend`函式會傳回 **，則為 true**如果目標接受訊息，並最終將會需要它。 否則，請`asend`會傳回**false**來指出目標拒絕訊息或延後決定是否要接收的訊息。
 
 [[靠上](#top)]
 

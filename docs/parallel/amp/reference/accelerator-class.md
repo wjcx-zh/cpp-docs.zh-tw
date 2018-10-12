@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7748ae0f3993c1df97dcf97308fd6dfbfafdc8b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a154d266ead19cfef00f30a5327c5b18809a4111
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375867"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163162"
 ---
 # <a name="accelerator-class"></a>accelerator 類別
 
@@ -102,9 +102,9 @@ class accelerator;
 
 |名稱|描述|
 |----------|-----------------|
-|[operator!=](#operator_neq)|比較這個`accelerator`與另一個物件，然後傳回`false`相同; 否則會傳回`true`。|
+|[operator!=](#operator_neq)|比較這個`accelerator`與另一個物件，然後傳回**false**它們是相同的; 否則會傳回**true**。|
 |[operator=](#operator_eq)|將指定的內容複製`accelerator`如下的物件。|
-|[operator==](#operator_eq_eq)|比較這個`accelerator`與另一個物件，然後傳回`true`相同; 否則會傳回`false`。|
+|[operator==](#operator_eq_eq)|比較這個`accelerator`與另一個物件，然後傳回 **，則為 true**它們是相同的; 否則會傳回**false**。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
@@ -362,7 +362,7 @@ bool get_has_display() const;
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果`accelerator`可以輸出至顯示器; 否則`false`。
+**真**如果`accelerator`可以輸出至顯示器，否則**false**。
 
 ##  <a name="get_is_debug"></a> get_is_debug
 
@@ -375,7 +375,7 @@ bool get_is_debug() const;
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果`accelerator`有擴充錯誤報告啟用偵錯層級。 否則為 `false`。
+**真**如果`accelerator`有擴充錯誤報告啟用偵錯層級。 否則，請**false**。
 
 ##  <a name="get_is_emulated"></a> get_is_emulated
 
@@ -388,7 +388,7 @@ bool get_is_emulated() const;
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果`accelerator`模擬。 否則為 `false`。
+**真**如果`accelerator`模擬。 否則，請**false**。
 
 ##  <a name="get_supports_cpu_shared_memory"></a> get_supports_cpu_shared_memory
 
@@ -401,11 +401,11 @@ bool get_supports_cpu_shared_memory() const;
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果加速器支援 CPU 共用記憶體;否則， `false`。
+**true**如果加速器支援 CPU 共用記憶體中; 否則**false**。
 
 ##  <a name="get_supports_double_precision"></a> get_supports_double_precision
 
-傳回布林值，表示加速器是否支援雙精確度浮點，包括融合乘加法 (FMA)，除法，倒數，以及之間的轉換`int`和`double`。
+傳回布林值，表示加速器是否支援雙精確度浮點，包括融合乘加法 (FMA)，除法，倒數，以及之間的轉換**int**和**double**
 
 ```
 bool get_supports_double_precision() const;
@@ -414,11 +414,11 @@ bool get_supports_double_precision() const;
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果加速器支援雙精確度數學;否則， `false`。
+**真**如果加速器支援雙精確度數學; 否則**false**。
 
 ##  <a name="get_supports_limited_double_precision"></a> get_supports_limited_double_precision
 
-傳回布林值，指出是否加速器是否限制了雙精確度運算的支援。 如果加速器都只有有限的支援，然後融合乘加法 (FMA)，除法，倒數，以及之間的轉換`int`和`double`不支援。
+傳回布林值，指出是否加速器是否限制了雙精確度運算的支援。 加速器是否只有有限的支援，然後融合乘加法 (FMA)，除法，倒數，以及之間的轉換**int**並**double**不支援。
 
 ```
 bool get_supports_limited_double_precision() const;
@@ -427,7 +427,7 @@ bool get_supports_limited_double_precision() const;
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果加速器是否限制了雙精確度數學; 支援，否則， `false`。
+**真**如果加速器是否限制了雙精確度數學; 的支援，否則為**false**。
 
 ##  <a name="get_version"></a> get_version
 
@@ -468,7 +468,7 @@ __declspec(property(get= get_is_emulated)) bool is_emulated;
 
 ##  <a name="operator_neq"></a> 運算子 ！ =
 
-比較這個`accelerator`與另一個物件，然後傳回`false`相同; 否則會傳回`true`。
+比較這個`accelerator`與另一個物件，然後傳回**false**它們是相同的; 否則會傳回**true**。
 
 ```
 bool operator!= (const accelerator& _Other) const;
@@ -482,7 +482,7 @@ bool operator!= (const accelerator& _Other) const;
 
 ### <a name="return-value"></a>傳回值
 
-`false` 如果兩個`accelerator`物件是否相同，否則`true`。
+**false**如果兩個`accelerator`物件是否相同，否則 **，則為 true**。
 
 ##  <a name="operator_eq"></a> 運算子 =
 
@@ -503,7 +503,7 @@ accelerator& operator= (const accelerator& _Other);
 
 ##  <a name="operator_eq_eq"></a> 運算子 = =
 
-比較這個`accelerator`與另一個物件，然後傳回`true`相同; 否則會傳回`false`。
+比較這個`accelerator`與另一個物件，然後傳回 **，則為 true**它們是相同的; 否則會傳回**false**。
 
 ```
 bool operator== (const accelerator& _Other) const;
@@ -517,7 +517,7 @@ bool operator== (const accelerator& _Other) const;
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果另`accelerator`物件是否與此相同`accelerator`物件; 否則`false`。
+**則為 true**如果另`accelerator`物件是否與此相同`accelerator`物件; 否則**false**。
 
 ##  <a name="set_default"></a> set_default
 
@@ -534,7 +534,7 @@ static inline bool set_default(std::wstring _Path);
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果呼叫成功設定預設加速器。 否則為 `false`。
+**true**如果呼叫成功設定預設加速器。 否則，請**false**。
 
 ##  <a name="set_default_cpu_access_type"></a> set_default_cpu_access_type
 
@@ -664,7 +664,7 @@ bool get_is_auto_selection() const;
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果執行階段會自動選取適當的加速器;否則， `false`。
+**真**如果執行階段會自動選取適當的加速器;，否則為**false**。
 
 ##  <a name="get_is_debug"></a> get_is_debug
 
@@ -737,7 +737,7 @@ bool operator!= (const accelerator_view& _Other) const;
 
 ### <a name="return-value"></a>傳回值
 
-如果這兩個物件相同則為 `false`，否則為 `true`。
+**false**兩個物件是否相同，否則 **，則為 true**。
 
 ##  <a name="operator_eq"></a> 運算子 =
 
@@ -758,7 +758,7 @@ accelerator_view& operator= (const accelerator_view& _Other);
 
 ##  <a name="operator_eq_eq"></a> 運算子 = =
 
-比較這個[accelerator_view](accelerator-view-class.md)與另一個物件，然後傳回`true`它們是相同的; 否則會傳回`false`。
+比較這個[accelerator_view](accelerator-view-class.md)與另一個物件，然後傳回 **，則為 true**相同; 否則會傳回**false**。
 
 ```
 bool operator== (const accelerator_view& _Other) const;
@@ -772,7 +772,7 @@ bool operator== (const accelerator_view& _Other) const;
 
 ### <a name="return-value"></a>傳回值
 
-如果這兩個物件相同則為 `true`，否則為 `false`。
+**true**兩個物件是否相同，否則**false**。
 
 ##  <a name="queuing_mode"></a> queuing_mode
 

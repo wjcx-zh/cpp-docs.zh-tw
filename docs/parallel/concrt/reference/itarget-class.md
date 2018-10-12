@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c4ada69fcd687d63022d0527ddf8da43906c483
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8fe26b202dbe9aabc1ccf98a59ead6c51c498fc1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412011"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163708"
 ---
 # <a name="itarget-class"></a>ITarget 類別
 
@@ -67,7 +67,7 @@ class ITarget;
 |----------|-----------------|
 |[propagate](#propagate)|在衍生類別中覆寫，以非同步方式會將訊息從來源區塊到此目標區塊。|
 |[傳送](#send)|在衍生類別中覆寫，以同步方式將訊息傳遞給目標區塊。|
-|[supports_anonymous_source](#supports_anonymous_source)|在衍生類別中覆寫時，會根據訊息區塊是否會接受未與它連結的來源所提供的訊息傳回 true 或 false。 如果覆寫的方法傳回 `true`，目標就不可延後提供的訊息，因為之後要使用延後的訊息就需要在其來源連結登錄中識別來源。|
+|[supports_anonymous_source](#supports_anonymous_source)|在衍生類別中覆寫時，會根據訊息區塊是否會接受未與它連結的來源所提供的訊息傳回 true 或 false。 如果覆寫的方法傳回 **，則為 true**，目標無法延後提供的訊息，因為延後訊息的時間較晚的耗用量需要識別其來源連結登錄中的來源。|
 
 ### <a name="protected-methods"></a>保護方法
 
@@ -174,7 +174,7 @@ A [message_status](concurrency-namespace-enums.md)表示決定之訊息的目標
 
 ##  <a name="supports_anonymous_source"></a> supports_anonymous_source
 
-在衍生類別中覆寫時，會根據訊息區塊是否會接受未與它連結的來源所提供的訊息傳回 true 或 false。 如果覆寫的方法傳回 `true`，目標就不可延後提供的訊息，因為之後要使用延後的訊息就需要在其來源連結登錄中識別來源。
+在衍生類別中覆寫時，會根據訊息區塊是否會接受未與它連結的來源所提供的訊息傳回 true 或 false。 如果覆寫的方法傳回 **，則為 true**，目標無法延後提供的訊息，因為延後訊息的時間較晚的耗用量需要識別其來源連結登錄中的來源。
 
 ```
 virtual bool supports_anonymous_source();
@@ -182,7 +182,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>傳回值
 
-如果區塊可以接受未與它連結的來源提供的訊息，則為 `true`，否則為 `false`。
+**真**如果區塊可以接受來自未與它連結的來源訊息**false**否則。
 
 ##  <a name="unlink_source"></a> unlink_source
 

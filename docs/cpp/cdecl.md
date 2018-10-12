@@ -1,12 +1,15 @@
 ---
 title: __cdecl |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __cdecl_cpp
+- __cdecl
+- _cdecl
+- cdecl
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37804aed04f998c6762cdbbc7012ae10c19a2529
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 085d8a49ed3c66f96bf8c2b8bdae7ca54cf3bef6
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066815"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163773"
 ---
 # <a name="cdecl"></a>__cdecl
 
@@ -62,6 +65,8 @@ void CMyClass::mymethod() { return; }
 ```cpp
 void __cdecl CMyClass::mymethod() { return; }
 ```
+
+為了與舊版中，相容性**cdecl**並 **_cdecl**是同義 **__cdecl**除非編譯器選項[/Za\(停用語言擴充功能）](../build/reference/za-ze-disable-language-extensions.md)指定。
 
 ## <a name="example"></a>範例
 

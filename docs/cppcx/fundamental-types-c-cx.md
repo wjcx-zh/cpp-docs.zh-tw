@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0bec396efa2d0a4191c67440e4ed3ed5d4bc083
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 1d8a9340abf7ca16fe2f0e6d6660bf14f00bd594
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110788"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161225"
 ---
 # <a name="fundamental-types-ccx"></a>基本類型 (C++/CX)
 
@@ -26,7 +26,7 @@ ms.locfileid: "44110788"
 
 |命名空間|C + + /CX 名稱|定義|Standard C++ 名稱|值的範圍|
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
-|平台|Boolean|8 位元布林值。|bool|`true` (非零) 和 `false` (零)|
+|平台|Boolean|8 位元布林值。|bool|**真**（非零） 和**false** （零）|
 |default|char16|表示 Unicode (UTF-16) 字碼指標的 16 位元非數值。|wchar_t<br /><br /> -或-<br /><br /> L'c'|(依 Unicode 標準指定)|
 
 ## <a name="numeric-types"></a>數值類型

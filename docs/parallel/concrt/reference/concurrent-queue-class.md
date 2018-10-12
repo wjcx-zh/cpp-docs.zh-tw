@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41e4c6f3a540f44f6cec0d94ffab74d65a1ffe52
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7f8f864dcbf412b9dea0d96f6a0ba046792d7827
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386583"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162967"
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue 類別
 
@@ -177,7 +177,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果並行佇列是空的我們討論，目前`false`否則。
+**真**並行佇列是空的我們討論，目前如果**false**否則。
 
 ### <a name="remarks"></a>備註
 
@@ -229,11 +229,11 @@ bool try_pop(T& _Dest);
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果項目已經成功清除，`false`否則。
+**真**如果項目已經成功清除， **false**否則。
 
 ### <a name="remarks"></a>備註
 
-如果項目已經成功清除，參數`_Dest`收到的清除佇列的值，保留在佇列中的原始值被損毀，以及此函數會傳回`true`。 如果沒有任何項目來清除佇列，則此函數會傳回`false`而不封鎖和內容`_Dest`是未定義的參數。
+如果項目已經成功清除，參數`_Dest`收到的清除佇列的值，保留在佇列中的原始值被損毀，以及此函數會傳回 **，則為 true**。 如果沒有任何項目來清除佇列，則此函數會傳回`false`而不封鎖和內容`_Dest`是未定義的參數。
 
 `try_pop` 是並行安全的方法呼叫而言`push`， `try_pop`，和`empty`。
 

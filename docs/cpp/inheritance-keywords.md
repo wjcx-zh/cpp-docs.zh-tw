@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1106ad878f4053cacae67d9d0e343e9469b1a1c1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f4b3703d0bd4556090c08a874bce362120817397
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061171"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161797"
 ---
 # <a name="inheritance-keywords"></a>繼承關鍵字
 
@@ -83,6 +83,8 @@ int S::*p;
 
 > [!NOTE]
 >  類別成員指標表示法的同一個向前宣告應出現在宣告該類別成員指標的每一個轉譯單位中，而且宣告應在成員指標宣告之前發生。
+
+為了與舊版中，相容性 **_single_inheritance**， **_multiple_inheritance**，並 **_virtual_inheritance**同義 **__single_inheritance**， **__multiple_inheritance**，以及 **__virtual_inheritance**除非編譯器選項[/Za\(停用語言延伸模組）](../build/reference/za-ze-disable-language-extensions.md)指定。
 
 **結束 Microsoft 專屬**
 

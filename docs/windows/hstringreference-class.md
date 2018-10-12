@@ -31,12 +31,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70663c43c6d3bc7b661f339ce679d3faf16c9aae
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: ae2199ec414556fe3401c94c273d5ef0c13c3c5d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235852"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162525"
 ---
 # <a name="hstringreference-class"></a>HStringReference 類別
 
@@ -140,7 +140,7 @@ HStringReference(HStringReference&& other) throw();
 *str*<br/>
 寬字元字串的參考。
 
-*Len*<br/>
+*len*<br/>
 最大長度*str*来使用這項作業中的參數緩衝區。 如果*len*參數未指定，整個*str*參數使用。 如果*len*大於*sizeDest*， *len*設定為*sizeDest*-1。
 
 *other*<br/>
@@ -199,7 +199,7 @@ inline bool operator==(
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果*lhs*並*rhs*參數不相等，否則`false`。
+**真**如果*lhs*並*rhs*參數不相等，否則**false**。
 
 ## <a name="operator-inequality"></a>Hstringreference:: Operator ！ =
 
@@ -229,7 +229,7 @@ inline bool operator!=(
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果*lhs*並*rhs*參數不相等，否則`false`。
+**真**如果*lhs*並*rhs*參數不相等，否則**false**。
 
 ## <a name="operator-less-than"></a>Hstringreference::&lt;
 
@@ -251,4 +251,4 @@ inline bool operator<(
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果*lhs*參數小於*rhs*參數，否則`false`。
+**真**如果*lhs*參數是小於*rhs*參數，否則**false**。

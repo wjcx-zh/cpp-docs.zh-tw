@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 489ff00571c79d89c9e807f0d8796989e7a0f84f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e9b8ee4c80310c4d94ed432d48ee9702c41f80bf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714984"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161784"
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH (啟用 _pexit 攔截函式)
 
@@ -43,7 +43,7 @@ ms.locfileid: "45714984"
 除非您計劃會明確地呼叫`_pexit`，您不需要提供原型。 如同它已有下列的原型，並必須推送的所有暫存器內容項目，並在結束 pop 未變更的內容，必須出現函式：
 
 ```
-void __declspec(naked) _cdecl _pexit( void );
+void __declspec(naked) __cdecl _pexit( void );
 ```
 
 `_pexit` 類似於`_penter`; 請參閱 < [/Gh (啟用 _penter 攔截函式)](../../build/reference/gh-enable-penter-hook-function.md)如需如何撰寫的範例`_pexit`函式。

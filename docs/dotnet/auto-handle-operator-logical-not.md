@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 49dc8a0f1a2c6f7bbb3bf29b84d751d4b3faa48c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 57f342fb8a948a3523626ff1de8a31de35b897de
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429340"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161160"
 ---
 # <a name="autohandleoperator"></a>auto_handle::operator!
 
@@ -39,11 +39,11 @@ bool operator!();
 
 ## <a name="return-value"></a>傳回值
 
-`true` 如果已包裝的物件是無效的;`false`否則。
+**true**包裝的物件是否無效;**false**否則。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // msl_auto_handle_operator_not.cpp
 // compile with: /clr
 #include <msclr\auto_handle.h>

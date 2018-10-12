@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b87ac316c08f93a95f7791297b74cbbb20d5452a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: de97557025929c394039b1a786fe12a7035381e1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413870"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163149"
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue 類別
 
@@ -195,7 +195,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>傳回值
 
-`true` 優先順序佇列是空的目前呼叫的函式，如果`false`否則。
+**真**優先順序佇列是空的目前呼叫的函式，如果**false**否則。
 
 ##  <a name="get_allocator"></a> get_allocator
 
@@ -287,7 +287,7 @@ bool try_pop(reference _Elem);
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果值快顯，`false`否則。
+**真**值已推出 (pop)，如果**false**否則。
 
 ## <a name="see-also"></a>另請參閱
 

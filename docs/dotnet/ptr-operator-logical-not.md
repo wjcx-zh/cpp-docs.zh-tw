@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 186fe4bbeb86780cde586500380a7e2c500da38e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9a5fef363b289ba2062db6f8d903ea832bffd6e5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443501"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161667"
 ---
 # <a name="ptroperator"></a>ptr::operator!
 
@@ -39,17 +39,17 @@ bool operator!();
 
 ## <a name="return-value"></a>傳回值
 
-`true` 如果擁有的 COM 物件無效;`false`否則。
+**true**自有的 COM 物件是否無效;**false**否則。
 
 ## <a name="remarks"></a>備註
 
-擁有的 COM 物件時如果不是有效`nullptr`。
+擁有的 COM 物件時如果不是有效**nullptr**。
 
 ## <a name="example"></a>範例
 
 這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。  `CreateInstance`成員函式使用`operator!`以判斷文件物件被人擁有，且只會建立新的執行個體，如果物件是無效。
 
-```
+```cpp
 // comptr_op_not.cpp
 // compile with: /clr /link msxml2.lib
 #include <msxml2.h>

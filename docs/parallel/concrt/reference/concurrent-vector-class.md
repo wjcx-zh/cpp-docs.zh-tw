@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa50628e9c63eee585eebe2ce63b2c5ec9b6f5fe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 68ea93c137962e48f8a627e9a9409e4e7fceef65
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422203"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163370"
 ---
 # <a name="concurrentvector-class"></a>concurrent_vector 類別
 
@@ -410,7 +410,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果向量是空的目前呼叫的函式，`false`否則。
+**真**如果向量是空的呼叫函式，此時**false**否則。
 
 ##  <a name="end"></a> 結束
 

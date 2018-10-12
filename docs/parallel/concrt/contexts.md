@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be66658c9452fa97c1971ae6719dccb06dbd836
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9fb14544a799861053c2fdf2a5bb92f210eb5c46
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378213"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163825"
 ---
 # <a name="contexts"></a>內容
 
@@ -67,7 +67,7 @@ ms.locfileid: "46378213"
 > [!NOTE]
 >  只從並行執行階段所建立的執行緒啟用過度訂閱。 過度訂閱從不執行階段 （包括主執行緒） 所建立的執行緒呼叫時，沒有任何作用。
 
-若要啟用過度訂閱目前內容中的，呼叫[concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe)方法`_BeginOversubscription`參數設定為`true`。 當您啟用並行執行階段所建立的執行緒上的過度訂閱時，它會導致執行階段建立一個額外的執行緒。 需要過度訂閱完成所有工作之後呼叫`Context::Oversubscribe`具有`_BeginOversubscription`參數設為`false`。
+若要啟用過度訂閱目前內容中的，呼叫[concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe)方法`_BeginOversubscription`參數設定為**true**。 當您啟用並行執行階段所建立的執行緒上的過度訂閱時，它會導致執行階段建立一個額外的執行緒。 需要過度訂閱完成所有工作之後呼叫`Context::Oversubscribe`具有`_BeginOversubscription`參數設為**false**。
 
 您可以啟用過度訂閱多次從目前的內容，但您就必須停用其相同次數，您將它啟用。 過度訂閱也可以是巢狀;也就是使用過度訂閱的另一個工作所建立的工作可以也過度訂閱其內容。 不過，如果巢狀的工作和其父代都屬於相同的內容中，只有最外層的呼叫來`Context::Oversubscribe`會導致其他執行緒的建立。
 

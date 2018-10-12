@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9b438725a5a725597a81f0587936618a06cbb4b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 218451b0483e569bf4c944e139aff3446f5925e7
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414299"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162070"
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token 類別
 
@@ -55,7 +55,7 @@ class cancellation_token;
 |----------|-----------------|
 |[deregister_callback](#deregister_callback)|根據註冊時傳回的 `register` 物件，移除先前透過 `cancellation_token_registration` 方法註冊的回呼。|
 |[is_cancelable](#is_cancelable)|傳回這個語彙基元是否可以取消的指示。|
-|[is_canceled](#is_canceled)|如果語彙基元已取消，則傳回 `true`。|
+|[is_canceled](#is_canceled)|傳回 **，則為 true**如果語彙基元已取消。|
 |[none](#none)|傳回永不需取消的取消語彙基元。|
 |[register_callback](#register_callback)|使用語彙基元註冊回呼函式。 如果這個語彙基元已取消，將會進行回呼。 請注意，如果語彙基元已經在呼叫此方法的時間點取消，將會立即同步進行回呼。|
 
@@ -123,7 +123,7 @@ bool is_cancelable() const;
 
 ##  <a name="is_canceled"></a> is_canceled
 
-如果語彙基元已取消，則傳回 `true`。
+傳回 **，則為 true**如果語彙基元已取消。
 
 ```
 bool is_canceled() const;
@@ -131,7 +131,7 @@ bool is_canceled() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果語彙基元被取消，則為 `true` 值，否則為 `false` 值。
+該值 **，則為 true**語彙基元被取消，否則如果值**false**。
 
 ##  <a name="none"></a> None
 

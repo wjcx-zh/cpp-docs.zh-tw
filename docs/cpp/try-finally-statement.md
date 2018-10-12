@@ -1,17 +1,19 @@
 ---
 title: try-finally 陳述式 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __try
+- _try
 - __leave_cpp
 - __leave
 - __finally_cpp
 - __try_cpp
 - __finally
+- _finally
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -28,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df3519cac370ac7595e0789eeab43c6488120fc8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 94a250862f5514f290043bf596ba19bf0834e71e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024238"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161654"
 ---
 # <a name="try-finally-statement"></a>try-finally 陳述式
 
@@ -81,6 +83,8 @@ __finally {
 
 > [!NOTE]
 >  Try-finally 的行為是不同於其他程式設計語言，支援使用**最後**，例如 C#。  單一 **__try**可能具有其中一個，但並非兩者的 **__finally**並 **__except**。  如果要同時使用兩個，外層的 try-except 陳述式必須以引號括住內部 try-finally 陳述式。  指定的規則在每個區塊執行時也不同。
+
+為了與舊版中，相容性 **_finally**， **__identifier**，並 **_leave**同義 **__try**， **__最後**，並 **__leave**除非編譯器選項[/Za\(停用語言擴充功能)](../build/reference/za-ze-disable-language-extensions.md)指定。
 
 ## <a name="the-leave-keyword"></a>__leave 關鍵字
 

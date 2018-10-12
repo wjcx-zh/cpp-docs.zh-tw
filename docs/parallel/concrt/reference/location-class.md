@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e4e2b7af8e99059151963398215a18411797101
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8c2352662de2d55be823064afd16354ff7f2c72e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380148"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163617"
 ---
 # <a name="location-class"></a>location 類別
 
@@ -157,7 +157,7 @@ bool operator!= (const location& _Rhs) const;
 
 ### <a name="return-value"></a>傳回值
 
-如果這兩個位置不同則為 `true`，否則為 `false`。
+**真**如果兩個位置不同， **false**否則。
 
 ##  <a name="operator_eq"></a> 運算子 =
 
@@ -189,7 +189,7 @@ bool operator== (const location& _Rhs) const;
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果兩個位置都相同，和`false`否則。
+**真**如果兩個位置都相同，並**false**否則。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,7 +1,7 @@
 ---
 title: 內嵌函式 （c + +） |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -9,6 +9,10 @@ f1_keywords:
 - __forceinline_cpp
 - __inline_cpp
 - inline_cpp
+- __inline
+- _inline
+- __forceinline
+- _forceinline
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31738407b788f69998681442f15a8f1c104477a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 21f3d74a7b640e203a8a5882710849c98ba5b40f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017817"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163584"
 ---
 # <a name="inline-functions-c"></a>內嵌函式 (C++)
 
@@ -84,7 +88,7 @@ int main()
 
 編譯器會將內嵌展開選項和關鍵字視為建議， 並不保證函式一定會內嵌。 您無法強制編譯器內嵌特定函式，即使 **__forceinline**關鍵字。 進行編譯時 **/clr**，編譯器不會內嵌函式如果沒有套用至函式的安全性屬性。
 
-**內嵌**關鍵字是僅適用於 c + +。 **__Inline**並 **__forceinline**關鍵字是 C 和 c + + 中可用。 為了與舊版中，相容性 **_inline**同義 **__inline**。
+**內嵌**關鍵字是僅適用於 c + +。 **__Inline**並 **__forceinline**關鍵字是 C 和 c + + 中可用。 為了與舊版中，相容性 **_inline**並 **_forceinline**同義 **__inline**，並 **__forceinline**除非編譯器選項[/Za\(停用語言擴充功能)](../build/reference/za-ze-disable-language-extensions.md)指定。
 
 **內嵌**關鍵字會指示編譯器內嵌展開為慣用。 不過，編譯器可能會建立函式的個別執行個體 (具現化) 和建立標準呼叫連結，而不是將程式碼內嵌插入。 在兩種情況下，可能發生這種情況：
 

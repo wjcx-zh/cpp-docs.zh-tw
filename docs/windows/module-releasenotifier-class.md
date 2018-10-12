@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c9af03549eec7b62cc34aec2840764c54d2a21e
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: e2dae7809a5926fa93626fa33148d444fe12807b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494357"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161888"
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier 類別
 
@@ -56,7 +56,7 @@ class ReleaseNotifier;
 名稱                                                         | 描述
 ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------
 [Module:: releasenotifier:: 叫用](#releasenotifier-invoke)   | 實作時，請在發行模組中的最後一個物件時呼叫的事件處理常式。
-[Module::ReleaseNotifier::Release](#releasenotifier-release) | 刪除目前`Module::ReleaseNotifier`物件如果物件以參數的建構`true`。
+[Module::ReleaseNotifier::Release](#releasenotifier-release) | 刪除目前`Module::ReleaseNotifier`物件如果物件建構搭配參數 **，則為 true**。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -86,7 +86,7 @@ virtual void Invoke() = 0;
 
 ## <a name="releasenotifier-release"></a>Module::ReleaseNotifier::Release
 
-刪除目前`Module::ReleaseNotifier`物件如果物件以參數的建構`true`。
+刪除目前`Module::ReleaseNotifier`物件如果物件建構搭配參數 **，則為 true**。
 
 ```cpp
 void Release() throw();

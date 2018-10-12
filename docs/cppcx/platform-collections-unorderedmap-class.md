@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2050be008f89ff2d125842d5919407dc292eed40
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b0b8a17cf83171a570f2ca3f6ff40c657d17164d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105831"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162343"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap 類別
 
@@ -58,7 +58,7 @@ ref class Map sealed;
 
 - 公用列舉類別
 
-**UnorderedMap**基本上是包裝函式[std:: unordered_map](../standard-library/unordered-map-class.md)可支援 Windows 執行階段類型的儲存體。 它是具象實作[Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)並[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)類型跨公用傳遞 Windows 執行階段介面。 如果您嘗試在公用傳回值或參數中使用 `Platform::Collections::UnorderedMap` 類型，則會引發編譯器錯誤 C3986。 您可以修正這個錯誤，藉由變更參數或傳回值的型別[Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)。
+**UnorderedMap**基本上是包裝函式[std:: unordered_map](../standard-library/unordered-map-class.md)可支援 Windows 執行階段類型的儲存體。 它是具象實作[Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)並[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)類型跨公用傳遞 Windows 執行階段介面。 如果您嘗試在公用傳回值或參數中使用 `Platform::Collections::UnorderedMap` 類型，則會引發編譯器錯誤 C3986。 您可以將參數或傳回值的類型變更為 [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)來修正錯誤。
 
 如需詳細資訊，請參閱 <<c0> [ 集合](../cppcx/collections-c-cx.md)。
 
@@ -163,7 +163,7 @@ bool HasKey(
 
 ### <a name="return-value"></a>傳回值
 
-如果找到機碼則為 `true`，否則為 `false`。
+**真**找到則為索引鍵是否**false**。
 
 ## <a name="insert"></a>  UnorderedMap::Insert Method
 
@@ -188,7 +188,7 @@ virtual bool Insert(
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果目前 Map 中現有項目的索引鍵符合*金鑰*，而且該元素的值部分設定為*值*。 `false` 如果目前 Map 中的任何現有項目不符合*金鑰*並*金鑰*並*值*參數會使其成為的索引鍵 / 值組，而且接著加入目前 UnorderedMap。
+**true**如果目前 Map 中現有項目的索引鍵符合*金鑰*且該元素的值部分設為*值*。 **false**如果目前 Map 中的任何現有項目不符合*金鑰*和*金鑰*並*值*參數都會成為的索引鍵 / 值組，並再新增至目前 UnorderedMap。
 
 ## <a name="lookup"></a>  Unorderedmap:: Lookup 方法
 
@@ -374,4 +374,4 @@ A [std:: initializer_list](../standard-library/initializer-list-class.md)的[std
 [Platform::Collections::Map 類別](../cppcx/platform-collections-map-class.md)<br/>
 [Platform::Collections::UnorderedMapView 類別](../cppcx/platform-collections-unorderedmapview-class.md)<br/>
 [集合](../cppcx/collections-c-cx.md)<br/>
-[在 c + + 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+[在 C++ 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

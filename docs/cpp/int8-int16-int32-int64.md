@@ -1,7 +1,7 @@
 ---
 title: __int8、 __int16，__int32，__int64 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -10,6 +10,14 @@ f1_keywords:
 - __int16_cpp
 - __int32_cpp
 - __int64_cpp
+- __int8
+- __int16
+- __int32
+- __int64
+- _int8
+- _int16
+- _int32
+- _int64
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 723724a477a5cdb714aa2644e1db938d67fb7b73
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b639e7a65bbe206d029a5ba28109170cb0f6a610
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194247"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163539"
 ---
 # <a name="int8-int16-int32-int64"></a>__int8、__int16、__int32、__int64
 
@@ -47,6 +55,8 @@ __int64 nHuge;      // Declares 64-bit integer
 ```
 
 型別 **__int8**， **__int16**，並 **__int32**是同義字，針對具有相同的 ANSI 類型大小，而且可用於撰寫目的行為完全相同的可攜式程式碼跨多個平台。 **__Int8**資料類型是類型的同義詞**char**， **__int16**類型同義**簡短**，和 **__int32**類型同義**int**。**__Int64**類型是類型的同義詞**long long**。
+
+為了與舊版中，相容性 **_int8**， **__int16**， **__int32**，以及 **_int64**同義 **__int8**， **__int16**， **__int32**，和 **__int64**除非編譯器選項[/Za\(停用語言延伸模組）](../build/reference/za-ze-disable-language-extensions.md)指定。
 
 ## <a name="example"></a>範例
 

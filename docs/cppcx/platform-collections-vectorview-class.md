@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3c516881115dd96337f950d83de2d30c57161b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9cfad80ac1f16d200f29504be1d4fb818e6e6afd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102508"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163890"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView 類別
 
@@ -140,7 +140,7 @@ virtual unsigned int GetMany(
 要擷取之開始項目以零為起始的索引。
 
 *dest*<br/>
-這項作業完成時，所指定的項目開始的項目陣列`startIndex`和 VectorView 中的最後一個項目處結束。
+當這項作業完成後，是項目陣列，從 `startIndex` 指定的項目開始，到 VectorView 的最後一個項目結束。
 
 ### <a name="return-value"></a>傳回值
 
@@ -168,11 +168,11 @@ virtual bool IndexOf(
 *index*<br/>
 如果找到參數 `value`，則為項目以零起始的索引，否則為 0。
 
-如果項目是 VectorView 的第一個項目或找不到項目，則 `index` 參數為 0。 如果傳回值為 `true`，表示找到符合項目，並且是第一個項目，否則表示找不到項目。
+*Index*參數為 0，如果任一項目是第一個項目`VectorView`或找不到項目。 如果傳回的值是 **，則為 true**，找不到項目，而且它的第一個元素; 否則項目找不到。
 
 ### <a name="return-value"></a>傳回值
 
-如果找到指定的項目則為 `true`，否則為 `false`。
+**真**找到則為指定的項目是否**false**。
 
 ## <a name="size"></a>  Vectorview:: Size 方法
 
@@ -285,4 +285,4 @@ A [std:: array](../standard-library/array-class-stl.md)用來初始化目前 Vec
 ## <a name="see-also"></a>另請參閱
 
 [Platform 命名空間](platform-namespace-c-cx.md)<br/>
-[在 c + + 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+[在 C++ 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

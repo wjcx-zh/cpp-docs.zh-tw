@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b3997f8beb414992464c51ca1c1fd944145c43d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d8c8c3cc219f0cf658dc2669ccc10adf3aba55bd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715139"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163526"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (將 UAC 資訊內嵌在資訊清單中)
 
@@ -50,7 +50,7 @@ ms.locfileid: "45715139"
 其中一個*asInvoker*， *highestAvailable*，或*requireAdministrator*。 AsInvoker 預設值。 如需詳細資訊，請參閱本主題稍後的 < 備註 > 一節。
 
 *_uiAccess*<br/>
-如果您希望應用程式略過使用者介面保護層級，並將輸入放到桌面上更高權限的視窗，則為 `true`；否則為 `false`。 預設值為 `false`。 若要設定`true`只對使用者介面協助工具應用程式。
+**真**如果您想要應用程式略過使用者介面保護層級，並輸入放到桌面上更高權限視窗; 否則即為磁碟機**false**。 預設值為**false**。 設定為 **，則為 true**只對使用者介面協助工具應用程式。
 
 ## <a name="remarks"></a>備註
 

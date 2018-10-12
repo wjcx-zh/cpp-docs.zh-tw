@@ -1,12 +1,13 @@
 ---
 title: __assume |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
 f1_keywords:
 - __assume
+- _assume
 - __assume_cpp
 dev_langs:
 - C++
@@ -17,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1c8c37bc46580db42bfa2a91d215b09bc1dbaf4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 41542065a4fc7d3b90fd3159dca4c7a7d169c115
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405693"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163662"
 ---
 # <a name="assume"></a>__assume
 
@@ -57,6 +58,8 @@ __assume(
 使用`__assume`中[ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)只有當 assert 是無法復原。 請勿在有後續錯誤復原程式碼的 assert 中使用 `__assume`，因為編譯器可能會將錯誤處理程式碼最佳化掉。
 
 `__assume(0)` 陳述式是特殊的情況。 使用 `__assume(0)`，表示無法到達的程式碼路徑。 下列範例示範如何使用 `__assume(0)`，表示無法到達 switch 陳述式的 default case。 這會示範 `__assume(0)` 最常見的用法。
+
+為了與舊版中，相容性 **_assume**同義 **__assume**除非編譯器選項[/Za\(停用語言擴充功能)](../build/reference/za-ze-disable-language-extensions.md)是指定此項目。
 
 ## <a name="requirements"></a>需求
 

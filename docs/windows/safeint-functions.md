@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 504cfe0780cfb0116f59ae67937ea5f0370dc8b2
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 43960e70f1aad29fa4b8fc03517231c7658d155b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235564"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162577"
 ---
 # <a name="safeint-functions"></a>SafeInt 函式
 
@@ -101,7 +101,7 @@ inline bool SafeAdd (
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果沒有發生錯誤;`false`發生錯誤。
+**true**如果沒有發生錯誤;**false**發生錯誤。
 
 ## <a name="safecast"></a>SafeCast
 
@@ -125,7 +125,7 @@ inline bool SafeCast (
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果沒有發生錯誤;`false`發生錯誤。
+**true**如果沒有發生錯誤;**false**發生錯誤。
 
 ## <a name="safedivide"></a>SafeDivide
 
@@ -153,7 +153,7 @@ inline bool SafeDivide (
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果沒有發生錯誤;`false`發生錯誤。
+**true**如果沒有發生錯誤;**false**發生錯誤。
 
 ## <a name="safeequals"></a>SafeEquals
 
@@ -177,7 +177,7 @@ inline bool SafeEquals (
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果*t*並*u*相等，否則為`false`。
+**真**如果*t*並*u*相等，否則為**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -205,7 +205,7 @@ inline bool SafeGreaterThan (
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果*t*大於*u*否則`false`。
+**真**如果*t*大於*u*; 否則為**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -233,7 +233,7 @@ inline bool SafeGreaterThanEquals (
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果*t*大於或等於*u*否則`false`。
+**真**如果*t*大於或等於*u*; 否則為**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -261,7 +261,7 @@ inline bool SafeLessThan (
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果*t*是小於*u*否則`false`。
+**真**如果*t*是小於*u*; 否則為**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -289,7 +289,7 @@ inline bool SafeLessThanEquals (
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果*t*小於或等於*u*否則`false`。
+**真**如果*t*小於或等於*u*; 否則為**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -321,7 +321,7 @@ inline bool SafeModulus (
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果沒有發生錯誤;`false`發生錯誤。
+**true**如果沒有發生錯誤;**false**發生錯誤。
 
 ## <a name="safemultiply"></a>SafeMultiply
 
@@ -373,7 +373,7 @@ inline bool SafeNotEquals (
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果*t*並*u*不相等，否則為`false`。
+**真**如果*t*並*u*不相等，否則為**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -405,4 +405,4 @@ inline bool SafeSubtract (
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果沒有發生錯誤;`false`發生錯誤。
+**true**如果沒有發生錯誤;**false**發生錯誤。

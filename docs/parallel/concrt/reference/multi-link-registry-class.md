@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26144fe1098e932512344550864c0949e5306238
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 174a168d6a22bca54fb00bf302cd7cbbc65cc961
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401702"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162330"
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry 類別
 
@@ -127,7 +127,7 @@ virtual bool contains(_EType _Link);
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果找不到指定的區塊，`false`否則。
+**真**找不到指定的區塊，如果**false**否則。
 
 ##  <a name="count"></a> 計數
 
@@ -176,7 +176,7 @@ virtual bool remove(_EType _Link);
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果連結已找到並移除，`false`否則。
+**真**如果連結已找到並移除**false**否則。
 
 ##  <a name="set_bound"></a> set_bound
 

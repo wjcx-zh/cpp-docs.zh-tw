@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28bedc703a8fa965b5380cb8c7eba840d07f7772
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d5ad7d0210f99b1b1aa5c481ed1b8695c68fb311
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396931"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163383"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>平行模式程式庫中的最佳作法
 
@@ -118,7 +118,7 @@ PPL 提供兩種方式來取消工作群組或平行演算法所執行的平行�
 
 [!code-cpp[concrt-task-tree-search#6](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_8.cpp)]
 
-如果不需要在樹狀結構的每個項目上呼叫工作函式，`tree::for_all` 方法的呼叫端可以擲回例外狀況。 下列範例顯示 `search_for_value` 函式，這個函式會在提供的 `tree` 物件中搜尋值。 `search_for_value` 函式所使用的工作函式會在樹狀結構的目前項目符合所提供的值時擲回例外狀況。 `search_for_value` 函式會使用 `try-catch` 區塊來擷取例外狀況並將結果列印至主控台。
+如果不需要在樹狀的每個項目上呼叫工作函式，`tree::for_all` 方法的呼叫端可以擲回例外狀況。 下列範例顯示 `search_for_value` 函式，這個函式會在提供的 `tree` 物件中搜尋值。 `search_for_value` 函式所使用的工作函式會在樹狀結構的目前項目符合所提供的值時擲回例外狀況。 `search_for_value` 函式會使用 `try-catch` 區塊來擷取例外狀況並將結果列印至主控台。
 
 [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_9.cpp)]
 
@@ -180,7 +180,7 @@ Container 1: Freeing resources...Exiting program...
 
 當工作執行合作式封鎖作業時，執行階段可以在第一個工作等候資料的同時，執行其他工作。 當等候的工作解除封鎖時，執行階段會重新排定此工作。 執行階段通常會先重新排定最近解除封鎖的工作，然後再重新排定比較久之前解除封鎖的工作。 因此，執行階段可能會在封鎖作業期間排定不必要的工作，這會導致效能降低。 於是，當您在取消平行工作之前執行封鎖作業時，封鎖作業可能會延遲對 `cancel` 的呼叫。 這會導致其他工作執行不必要的工作。
 
-請參閱下列會定義 `parallel_find_answer` 函式的範例，這個函式會在提供的陣列中搜尋符合所提供之述詞函式的項目。 當述詞函式傳回 `true` 時，平行工作函式會建立 `Answer` 物件並取消整體工作。
+請參閱下列會定義 `parallel_find_answer` 函式的範例，這個函式會在提供的陣列中搜尋符合所提供之述詞函式的項目。 當述詞函式會傳回 **，則為 true**，平行工作函式會建立`Answer`物件，並取消整體工作。
 
 [!code-cpp[concrt-blocking-cancel#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_13.cpp)]
 

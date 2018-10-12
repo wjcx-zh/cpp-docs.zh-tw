@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b4f993c357ef3d4f66f9b2f22c9fb37a4e10c77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0a99de307ec64c3b6d4e49f4e0a6eef532314bf9
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423893"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161862"
 ---
 # <a name="call-class"></a>call 類別
 
@@ -55,7 +55,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 
 |名稱|描述|
 |----------|-----------------|
-|[呼叫](#ctor)|多載。 建構`call`傳訊區塊。|
+|[呼叫](#ctor)|多載。 建構 `call` 傳訊區塊。|
 |[~ 呼叫解構函式](#dtor)|終結`call`傳訊區塊。|
 
 ### <a name="protected-methods"></a>保護方法
@@ -88,7 +88,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 
 ##  <a name="ctor"></a> 呼叫
 
-建構`call`傳訊區塊。
+建構 `call` 傳訊區塊。
 
 ```
 call(
@@ -126,10 +126,10 @@ call(
 判斷是否應該接受所提供的訊息篩選器函式。
 
 *_PScheduler*<br/>
-`Scheduler`物件的傳播工作在其中`call`傳訊區塊已排程。
+`Scheduler` 物件，在其內會排定 `call` 傳訊區塊的傳播工作。
 
 *_PScheduleGroup*<br/>
-`ScheduleGroup`物件的傳播工作在其中`call`傳訊區塊已排程。 所使用的 `Scheduler` 物件由排程群組所隱含。
+`ScheduleGroup` 物件，在其內會排定 `call` 傳訊區塊的傳播工作。 所使用的 `Scheduler` 物件由排程群組所隱含。
 
 ### <a name="remarks"></a>備註
 
@@ -227,7 +227,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>傳回值
 
-`true`，因為區塊不會延後提供的訊息。
+**true**因為區塊不會延後提供的訊息。
 
 ## <a name="see-also"></a>另請參閱
 

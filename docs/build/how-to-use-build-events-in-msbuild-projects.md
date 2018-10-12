@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d875836cbfe9506d41a979a63d941d1ee5b467a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fd35ff136c0145e1c76a04d15052d426a7c90dcc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444329"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161264"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>如何：在 MSBuild 專案中使用建置事件
 
@@ -29,7 +29,7 @@ ms.locfileid: "46444329"
 
 每三個建置事件命令項目所表示的項目定義群組中 (`<Command>`) 時要執行的和訊息項目 (`<Message>`) 也就是顯示何時**MSBuild**執行建置事件。 是選擇性的每個項目，如果您多次指定相同的項目，最後一個相符項目會優先使用。
 
-選擇性*使用內建*項目 (`<`*建置事件*`UseInBuild>`) 可以指定表示是否要執行建置事件屬性群組中。 內容的值*使用內建*項目是`true`或`false`。 根據預設，建置事件時執行，除非其相對應*使用內建*元素設定為`false`。
+選擇性*使用內建*項目 (`<`*建置事件*`UseInBuild>`) 可以指定表示是否要執行建置事件屬性群組中。 內容的值*使用內建*項目是 **，則為 true**或是**false**。 根據預設，建置事件時執行，除非其相對應*使用內建*元素設定為`false`。
 
 下表列出每個組建事件 XML 項目：
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e9379dd15dbb0d814da1e617fb1f3f8408d1da0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0b180b1a92defb2c29d0e54b0ecf9700dd299170
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388481"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163422"
 ---
 # <a name="asynchronous-message-blocks"></a>非同步訊息區
 
@@ -307,7 +307,7 @@ fib35 = 9227465fib37 = 24157817half_of_fib42 = 1.33957e+008
 
 `timer`類別會將其訊息傳送至一個目標。 如果您設定`_PTarget`建構函式中的參數`NULL`，您稍後可以藉由呼叫指定的目標[concurrency::ISource::link_target](reference/source-block-class.md#link_target)方法。
 
-A`timer`物件可以重複，或非重複。 若要建立重複的計時器，傳遞`true`針對`_Repeating`當呼叫建構函式的參數。 否則，請傳遞`false`針對`_Repeating`參數來建立非重複的計時器。 如果計時器會重複進行，它會傳送相同訊息到其目標在每個時間間隔之後。
+A`timer`物件可以重複，或非重複。 若要建立重複的計時器，傳遞 **，則為 true**如`_Repeating`當呼叫建構函式的參數。 否則，請傳遞**假**如`_Repeating`參數來建立非重複的計時器。 如果計時器會重複進行，它會傳送相同訊息到其目標在每個時間間隔之後。
 
 代理程式庫建立`timer`處於非使用狀態的物件。 若要啟動計時器物件，呼叫[concurrency::timer::start](reference/timer-class.md#start)方法。 若要停止`timer`物件，終結的物件或呼叫[concurrency::timer::stop](reference/timer-class.md#stop)方法。 若要暫停重複的計時器，請呼叫[concurrency::timer::pause](reference/timer-class.md#pause)方法。
 

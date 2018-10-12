@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 127f5ee876790fa3cfb8a052c2db6c41cc00f332
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 73a66bfbff2cd8ba59d0e4581134e6a9d23932db
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109015"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162876"
 ---
 # <a name="defaulttypenameequals-method"></a>default::(type_name)::Equals 方法
 
@@ -39,7 +39,7 @@ bool Equals(
 
 ### <a name="return-value"></a>傳回值
 
-如果物件相等則為`true` ，否則為 `false`。
+**真**如果物件相等，否則為**false**。
 
 ### <a name="requirements"></a>需求
 

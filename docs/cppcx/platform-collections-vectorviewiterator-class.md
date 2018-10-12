@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d45bd056bff41832a98c7936510d22a321891fd0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 36e0421e002efbcabc4c4525ddcf592258f6f7d1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102035"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163695"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator 類別
 
@@ -123,7 +123,7 @@ VectorViewIterator operator--(int);
 
 第一種 VectorViewIterator 語法會前置遞減目前 VectorViewIterator。
 
-第二種語法會後置遞減目前 VectorViewIterator。 `int`第二個語法中的類型表示後置遞減作業，而不是實際的整數運算元。
+第二種語法會後置遞減目前 VectorViewIterator。 第二種語法中的 `int` 類型表示後置遞減作業，不是實際的整數運算元。
 
 ## <a name="operator-dereference"></a>  Vectorviewiterator:: Operator\*運算子
 
@@ -156,7 +156,7 @@ bool operator==(const VectorViewIterator& other) const;
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果目前 VectorViewIterator 是否等於`other`; 否則`false`。
+**真**如果目前`VectorViewIterator`等於*其他*，否則**false**。
 
 ## <a name="operator-greater-than"></a>  Vectorviewiterator:: Operator&gt;運算子
 
@@ -176,11 +176,11 @@ bool operator>(const VectorViewIterator& other) const;
 
 ### <a name="return-value"></a>傳回值
 
-如果目前 VectorViewIterator 大於 `true` 則為 `other`，否則為 `false`。
+**真**目前 VectorViewIterator 是否大於*其他*; 否則**false**。
 
 ## <a name="operator-greater-than-or-equals"></a>  Vectorviewiterator:: Operator&gt;= 運算子
 
-指出目前 VectorViewIterator 是否大於或等於指定的 VectorViewIterator。
+指出是否目前`VectorViewIterator`大於或等於指定`VectorViewIterator`。
 
 ### <a name="syntax"></a>語法
 
@@ -196,7 +196,7 @@ bool operator>=(const VectorViewIterator& other) const;
 
 ### <a name="return-value"></a>傳回值
 
-如果目前 VectorViewIterator 大於或等於 `true` 則為 `other`，否則為 `false`。
+**真**如果目前`VectorViewIterator`大於或等於*其他*，否則**false**。
 
 ## <a name="operator-increment"></a>  Vectorviewiterator:: Operator + + 運算子
 
@@ -237,7 +237,7 @@ bool operator!=(const VectorViewIterator& other) const;
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果目前 VectorViewIterator 是否不等於`other`; 否則`false`。
+**真**如果目前`VectorViewIterator`不等於*其他*，否則**false**。
 
 ## <a name="operator-less-than"></a>  Vectorviewiterator:: Operator&lt;運算子
 
@@ -252,15 +252,15 @@ bool operator<(const VectorViewIterator& other) const;
 ### <a name="parameters"></a>參數
 
 *other*<br/>
-另一個 VectorIterator。
+另一個`VectorIterator`。
 
 ### <a name="return-value"></a>傳回值
 
-如果目前 VectorIterator 小於 `true` 則為 `other`，否則為 `false`。
+**真**如果目前`VectorIterator`是小於*其他*，否則**false**。
 
 ## <a name="operator-less-than-or-equals"></a>  Vectorviewiterator:: Operator&lt;= 運算子
 
-指出目前 VectorIterator 是否小於或等於指定的 VectorIterator。
+指出是否目前`VectorIterator`小於或等於指定`VectorIterator`。
 
 ### <a name="syntax"></a>語法
 
@@ -272,11 +272,11 @@ bool operator<=(const VectorViewIterator& other) const;
 ### <a name="parameters"></a>參數
 
 *other*<br/>
-另一個 VectorIterator。
+另一個`VectorIterator`。
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果目前 VectorIterator 是否小於或等於`other`; 否則`false`。
+**真**如果目前`VectorIterator`小於或等於*其他*，否則**false**。
 
 ## <a name="operator-minus"></a>  Vectorviewiterator:: Operator-運算子
 
@@ -353,7 +353,7 @@ inline VectorViewIterator<T> operator+
 
 在第一個語法中是 VectorViewIterator，參考從目前 VectorViewIterator 開始指定位移的項目。
 
-在第二個語法中是 VectorViewIterator，參考從參數的開頭開始指定位移的項目`i`。
+在第二個語法中是 VectorViewIterator，參考從參數 `i` 的開頭開始指定位移的項目。
 
 ## <a name="operator-minus-assign"></a>  Vectorviewiterator:: Operator-= 運算子
 

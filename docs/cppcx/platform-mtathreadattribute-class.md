@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc6405337814671d6789c8364e2f458c84d2487a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e2bac4ae71d98cb81eaa05bd3fd6fdf817145e22
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109702"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163747"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute 類別
 
@@ -89,7 +89,7 @@ public:virtual override bool Equals( Object^ obj );
 
 ### <a name="return-value"></a>傳回值
 
-如果物件相等則為 `true`，否則為 `false`。
+**真**如果物件相等，否則**false**。
 
 ## <a name="gethashcode"></a> MTAThreadAttribute::GetHashCode
 

@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9eb820b533b74d5634695ddabda26f081a35f95
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8065be6cc53cad04d5d52bea91da05bb3125dd63
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436919"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162564"
 ---
 # <a name="concurrency-namespace-operators"></a>concurrency 命名空間運算子
 
@@ -151,7 +151,7 @@ inline bool operator== (
 
 ### <a name="return-value"></a>傳回值
 
-`true` 若運算子左邊的並行向量等於運算子; 右邊的並行向量否則`false`。
+**真**若運算子左邊的並行向量等於運算子右邊的並行向量，否則為**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -189,7 +189,7 @@ inline bool operator!= (
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果並行向量不相等。`false`並行向量是否相等。
+**true**並行向量是否不相等; 如果**false**並行向量是否相等。
 
 ### <a name="remarks"></a>備註
 
@@ -227,7 +227,7 @@ inline bool operator<(
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果運算子左邊的並行向量小於運算子; 右邊的並行向量否則`false`。
+**真**如果運算子左邊的並行向量小於運算子; 右邊的並行向量否則**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -265,7 +265,7 @@ inline bool operator<= (
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果運算子左邊的並行向量小於或等於運算子; 右邊的並行向量否則`false`。
+**真**如果運算子左邊的並行向量小於或等於運算子右邊的並行向量，; 否則為**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -303,7 +303,7 @@ inline bool operator>(
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的並行向量大於運算子右邊的並行向量，則為 `true`，否則為 `false`。
+**真**若運算子左邊的並行向量大於運算子右邊的並行向量，否則為**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -341,7 +341,7 @@ inline bool operator>= (
 
 ### <a name="return-value"></a>傳回值
 
-`true` 若運算子左邊的並行向量大於或等於運算子; 右邊的並行向量否則`false`。
+**真**若運算子左邊的並行向量大於或等於運算子右邊的並行向量，否則為**false**。
 
 ### <a name="remarks"></a>備註
 

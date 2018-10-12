@@ -65,12 +65,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1003553cb0c3fc3abc8c24a6870485816397eaa
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 9647e18af021caf67dea5d946c9e5bf00fb50807
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861950"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162928"
 ---
 # <a name="asyncbase-class"></a>AsyncBase 類別
 
@@ -233,7 +233,7 @@ inline bool ContinueAsyncOperation();
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果非同步作業的目前狀態*啟動*，這表示作業應該繼續。 否則， `false`，這表示作業應該停止。
+**真**非同步作業的目前狀態是否*啟動*，這表示作業應該繼續。 否則，請**false**，這表示作業應該停止。
 
 ## <a name="currentstatus"></a>Asyncbase:: Currentstatus
 
@@ -528,7 +528,7 @@ bool TryTransitionToCompleted(
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果非同步作業完成為止，否則， `false`。
+**true**如果非同步作業完成為止，否則**false**。
 
 ## <a name="trytransitiontoerror"></a>Asyncbase:: Trytransitiontoerror
 
@@ -547,7 +547,7 @@ bool TryTransitionToError(
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果內部錯誤狀態已變更，否則， `false`。
+**真**如果內部錯誤狀態已變更，否則**false**。
 
 ### <a name="remarks"></a>備註
 

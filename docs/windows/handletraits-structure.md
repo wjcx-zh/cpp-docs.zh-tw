@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33181b2cf477c3f753eacf63110a426b36e62b31
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3e670dca205f07d1e13a93f8acd0df5965b45109
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235265"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161706"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits 結構
 
@@ -80,7 +80,7 @@ inline static bool Close(
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果處理*h*順利完成，否則關閉`false`。
+**真**如果處理*h*關閉順利完成，否則**false**。
 
 ## <a name="getinvalidvalue"></a>Handletraits:: Getinvalidvalue
 

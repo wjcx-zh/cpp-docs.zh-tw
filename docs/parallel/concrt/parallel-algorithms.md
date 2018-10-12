@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23a4efb1412260ad71a610f53a7d1745157b3c53
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1eb46754f80bca89419e6c3c85db94ec802df2f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434988"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163396"
 ---
 # <a name="parallel-algorithms"></a>平行演算法
 
@@ -284,7 +284,7 @@ PPL 提供三種排序演算法： [concurrency:: parallel_sort](reference/concu
 
 [!code-cpp[concrt-parallel-sort-points#3](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_14.cpp)]
 
-雜湊函式必須傳回整數型別 ([std::is_integral::value](../../standard-library/is-integral-class.md)必須是`true`)。 此整數類資料類型必須轉換成輸入`size_t`。
+雜湊函式必須傳回整數型別 ([std::is_integral::value](../../standard-library/is-integral-class.md)必須 **，則為 true**)。 此整數類資料類型必須轉換成輸入`size_t`。
 
 ###  <a name="choose_sort"></a> 選擇排序演算法
 

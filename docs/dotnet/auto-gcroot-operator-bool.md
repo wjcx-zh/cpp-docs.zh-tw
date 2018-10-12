@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6e21626b9b69d1c25ca638f659b6d8cc1a850594
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2fe517809db7cecacc7a0190e0dae94ef55c35d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421215"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161186"
 ---
 # <a name="autogcrootoperator-bool"></a>auto_gcroot::operator bool
 
@@ -40,15 +40,15 @@ operator bool() const;
 
 ## <a name="return-value"></a>傳回值
 
-`true` 已包裝的物件是否有效。`false`否則。
+**true**包裝的物件是否有效。**false**否則。
 
 ## <a name="remarks"></a>備註
 
-這個運算子實際將轉換成`_detail_class::_safe_bool`這是比安全`bool`因為它無法轉換成整數類資料類型。
+這個運算子實際將轉換成`_detail_class::_safe_bool`這是比安全**bool**因為它無法轉換成整數類資料類型。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // msl_auto_gcroot_operator_bool.cpp
 // compile with: /clr
 #include <msclr\auto_gcroot.h>

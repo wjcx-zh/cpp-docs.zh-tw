@@ -61,12 +61,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f549f0737d74829dbd79c280f3f6c1acd9bca6e
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 12afcfe09335082f873d88e1aa825b4eee3a1ae2
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235993"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163227"
 ---
 # <a name="comptr-class"></a>ComPtr 類別
 
@@ -539,9 +539,9 @@ bool operator==(
 
 ### <a name="return-value"></a>傳回值
 
-第一個運算子會產生`true`如果物件是否等於物件*b*; 否則`false`。
+第一個運算子會產生 **，則為 true**如果物件是否等於物件*b*否則**false**。
 
-第二個和第三個運算子會產生`true`如果物件等於`nullptr`; 否則`false`。
+第二個和第三個運算子會產生 **，則為 true**如果物件等於**nullptr**，則為**false**。
 
 ## <a name="operator-inequality"></a>Comptr:: Operator ！ =
 
@@ -574,9 +574,9 @@ bool operator!=(
 
 ### <a name="return-value"></a>傳回值
 
-第一個運算子會產生`true`如果物件是否不等於物件*b*; 否則`false`。
+第一個運算子會產生 **，則為 true**如果物件是否不等於物件*b*否則**false**。
 
-第二個和第三個運算子會產生`true`如果物件是否不等於`nullptr`; 否則`false`。
+第二個和第三個運算子會產生 **，則為 true**如果物件是否不等於**nullptr**，則為**false**。
 
 ## <a name="operator-microsoft-wrl-details-booltype"></a>Comptr:: booltype
 
@@ -588,7 +588,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果介面是與此相關聯`ComPtr`的地址[boolstruct:: Member](../windows/boolstruct-member-data-member.md)資料成員，否則`nullptr`。
+如果介面是與此相關聯`ComPtr`的地址[boolstruct:: Member](../windows/boolstruct-member-data-member.md)資料成員，否則**nullptr**。
 
 ## <a name="ptr"></a>Comptr:: Ptr_
 

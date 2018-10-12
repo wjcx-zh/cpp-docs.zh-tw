@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3777116bf2a641a4fdc220306680c0150d5ba2d0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2d9c68bde9fdd49e4007b8b6e1d92899d71dde4e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106408"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162538"
 ---
 # <a name="platformstring-class"></a>Platform::String 類別
 
@@ -174,7 +174,7 @@ String^ Concat( String^ str1, String^ str2);
 
 由 `str1` 與 `str2` 兩者的值串連後得出其值的新 String^ 物件。
 
-如果`str1`已`null`並`str2`不是，`str1`會傳回。 如果`str2`已`null`並`str1`不是，`str2`會傳回。 如果 `str1` 與 `str2` 都是 `null`，則會傳回空字串 (L"")。
+如果 `str1` 為 `null` 而 `str2` 不是，則會傳回 `str1`。 如果 `str2` 為 `null` 而 `str1` 不是，則會傳回 `str2`。 如果 `str1` 與 `str2` 都是 `null`，則會傳回空字串 (L"")。
 
 ## <a name="data"></a>  String:: data 方法
 
@@ -240,7 +240,7 @@ bool String::Equals(String^ str);
 
 ### <a name="return-value"></a>傳回值
 
-如果 `true` 等於目前物件則為 `str`，否則為 `false`。
+**真**如果`str`等於目前的物件，否則**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -272,7 +272,7 @@ bool IsEmpty();
 
 ### <a name="return-value"></a>傳回值
 
-如果目前 String 物件為 `true` 或空字串 (L"") 則為 `null`，否則為 `false`。
+**true**如果目前`String`物件**null**或空字串 (L"")，否則**false**。
 
 ## <a name="isfastpass"></a>  String:: isfastpass 方法
 
@@ -286,7 +286,7 @@ bool IsFastPass();
 
 ### <a name="return-value"></a>傳回值
 
-如果目前 String 物件是快速傳遞則為 `true`，否則為 `false`。
+**真**如果目前`String`物件是快速傳遞; 否則為**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -294,7 +294,7 @@ bool IsFastPass();
 
 ## <a name="length"></a>  String:: length 方法
 
-擷取目前 String 物件中的字元數。
+擷取在目前的字元數目`String`物件。
 
 ### <a name="syntax"></a>語法
 
@@ -304,7 +304,7 @@ unsigned int Length();
 
 ### <a name="return-value"></a>傳回值
 
-目前 String 物件中的字元數。
+在目前的字元數`String`物件。
 
 ### <a name="remarks"></a>備註
 
@@ -337,7 +337,7 @@ bool String::operator+( String^ str1, String^ str2);
 
 ### <a name="return-value"></a>傳回值
 
-如果 `true` 等於 `str1`，則為 `str2`，否則為 `false`。
+**真**如果*str1*等於*str2*，否則**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -356,14 +356,14 @@ bool String::operator==( String^ str1, String^ str2);
 ### <a name="parameters"></a>參數
 
 *str1*<br/>
-要比較的第一個 String 物件。
+要比較的第一個 `String` 物件。
 
 *str2*<br/>
-要比較的第二個 String 物件。
+要比較的第二個 `String` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 `true` 和 `str1` 的內容相等，則為 `str2`，否則為 `false`。
+**true**如果的內容`str1`相等`str2`; 否則**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -371,7 +371,7 @@ bool String::operator==( String^ str1, String^ str2);
 
 ##  <a name="operator-greater-than"></a>  String::operator&gt;
 
-指出其中一個 String 物件的值是否大於另一個 String 物件的值。
+指出是否其中一個值`String`物件是否大於第二個值`String`物件。
 
 ### <a name="syntax"></a>語法
 
@@ -382,14 +382,14 @@ bool String::operator>( String^ str1, String^ str2);
 ### <a name="parameters"></a>參數
 
 *str1*<br/>
-第一個 String 物件。
+第一個 `String` 物件。
 
 *str2*<br/>
-第二個 String 物件。
+第二個 `String` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 `str1` 的值大於 `str2` 的值，則為 `true`，否則為 `false`。
+**true**如果的值`str1`的值大於`str2`; 否則**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -397,7 +397,7 @@ bool String::operator>( String^ str1, String^ str2);
 
 ## <a name="operator-greater-than-or-equals"></a> String::operator&gt;=
 
-指出其中一個 String 物件的值是否大於或等於另一個 String 物件的值。
+指出是否其中一個值`String`物件是否大於或等於第二個值`String`物件。
 
 ### <a name="syntax"></a>語法
 
@@ -408,18 +408,18 @@ bool String::operator>=( String^ str1, String^ str2);
 ### <a name="parameters"></a>參數
 
 *str1*<br/>
-第一個 String 物件。
+第一個 `String` 物件。
 
 *str2*<br/>
-第二個 String 物件。
+第二個 `String` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 `str1` 的值大於或等於 `str2` 的值，則為 `true`，否則為 `false`。
+**true**如果的值`str1`大於或等於值`str2`; 否則**false**。
 
 ## <a name="operator-inequality"></a> String:: operator ！ =
 
-指出兩個指定的 String 物件是否具有不同的值。
+指出兩個指定`String`物件有不同的值。
 
 ### <a name="syntax"></a>語法
 
@@ -430,18 +430,18 @@ bool String::operator!=( String^ str1, String^ str2);
 ### <a name="parameters"></a>參數
 
 *str1*<br/>
-要比較的第一個 String 物件。
+要比較的第一個 `String` 物件。
 
 *str2*<br/>
-要比較的第二個 String 物件。
+要比較的第二個 `String` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 `true` 不等於 `str1`，則為 `str2`，否則為 `false`。
+**真**如果`str1`不等於`str2`，否則**false**。
 
 ## <a name="operator-less-than"></a> String:: operator&lt;
 
-指出其中一個 String 物件的值是否小於另一個 String 物件的值。
+指出是否其中一個值`String`物件是否小於第二個值`String`物件。
 
 ### <a name="syntax"></a>語法
 
@@ -452,18 +452,18 @@ bool String::operator<( String^ str1, String^ str2);
 ### <a name="parameters"></a>參數
 
 *str1*<br/>
-第一個 String 物件。
+第一個 `String` 物件。
 
 *str2*<br/>
-第二個 String 物件。
+第二個 `String` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 `str1` 的值小於 `str2` 的值，則為 `true`，否則為 `false`。
+**true**如果的值*str1*的值少於*str2*; 否則**false**。
 
 ## <a name="ctor"></a> String:: string 建構函式
 
-使用輸入字串資料的複本初始化 String 類別的新執行個體。
+初始化的新執行個體`String`複本的輸入的字串資料的類別。
 
 ### <a name="syntax"></a>語法
 
@@ -492,7 +492,7 @@ String^ s = L"Hello!";
 
 ## <a name="tostring"></a> String::ToString
 
-傳回值與目前字串相同的 String 物件。
+傳回`String`物件，其值為與目前字串相同。
 
 ### <a name="syntax"></a>語法
 
@@ -502,7 +502,7 @@ String^ String::ToString();
 
 ### <a name="return-value"></a>傳回值
 
-值與目前字串相同的 String 物件。
+A`String`物件，其值為與目前字串相同。
 
 ## <a name="see-also"></a>另請參閱
 

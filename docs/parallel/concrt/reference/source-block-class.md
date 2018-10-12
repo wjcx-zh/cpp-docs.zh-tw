@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f5b84020d9428066bdadfff53500d671233f07d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f4a184e0fee76f3aa5bb8f7729250c03b10b9dfc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386719"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163487"
 ---
 # <a name="sourceblock-class"></a>source_block 類別
 
@@ -237,7 +237,7 @@ virtual message<_Target_type>* consume(
 
 方法會擲回[bad_target](bad-target-class.md)例外狀況如果參數`_PTarget`不代表呼叫目標`reserve`。
 
-`consume`方法是類似`accept`，但必須一律加上呼叫`reserve`傳回`true`。
+`consume`方法是類似`accept`，但必須一律加上呼叫`reserve`傳回**true**。
 
 ##  <a name="consume_message"></a> consume_message
 
@@ -427,7 +427,7 @@ virtual bool reserve(
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果已成功保留訊息，`false`否則。 保留失敗可能有許多原因，包括：訊息已經保留或已由另一個目標接受、來源拒絕保留等等。
+**真**已成功保留訊息，如果**false**否則。 保留失敗可能有許多原因，包括：訊息已經保留或已由另一個目標接受、來源拒絕保留等等。
 
 ### <a name="remarks"></a>備註
 
@@ -450,11 +450,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId) = 0;
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果已成功保留訊息，`false`否則。
+**真**已成功保留訊息，如果**false**否則。
 
 ### <a name="remarks"></a>備註
 
-在後`reserve`呼叫時，如果它傳回`true`，可以是`consume`或`release`採取，或釋放訊息的擁有權必須先呼叫。
+之後`reserve`呼叫時，如果它傳回 **，則為 true**可以`consume`或`release`必須呼叫採取，或釋放訊息的擁有權。
 
 ##  <a name="resume_propagation"></a> resume_propagation
 

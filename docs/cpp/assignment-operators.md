@@ -17,14 +17,12 @@ f1_keywords:
 - '&='
 - ^=
 - '|='
-- '&&='
 dev_langs:
 - C++
 helpviewer_keywords:
 - operators [C++], assignment
 - assignment operators [C++], C++
 - '&= operator'
-- '&&= operator'
 - ^= operator
 - += operator
 - '>>= operator'
@@ -43,32 +41,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c9efaf8dc5b9f0886a697ad2b872e24264820f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1429bcb9f4002cb65cc14000d3bcf62004000566
+ms.sourcegitcommit: b05cff71a8a6a8a4c7bbea1263fd0a711853f921
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017894"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307915"
 ---
 # <a name="assignment-operators"></a>指派運算子
 
 ## <a name="syntax"></a>語法
 
-```
-expression assignment-operator expression 
-assignment-operator : one of
-   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  &&=
-```
+*運算式**指派運算子**運算式*
+
+*指派運算子*： 其中一個<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>= * = / = %= + =-= \< \<= >> = & = ^ =   \|=</strong>
 
 ## <a name="remarks"></a>備註
 
-指派運算子會將值儲存在左運算元所指定的物件。 有三種類型的指派作業：
+指派運算子會將值儲存在左運算元所指定的物件。 有兩種類型的指派作業：
 
-1. 簡單指派，第二個運算元的值儲存在第一個運算元所指定的物件中。 1. 複合指派，在其中的算術、 移位或位元運算在儲存結果之前執行。
-1. 移動 （針對類別類型） 的指派會傳輸哪些資源，而不複製。
+1. *簡單指派*，在第二個運算元的值儲存在第一個運算元所指定的物件。
 
+1. *複合指派*，在其中的算術、 移位或位元運算在儲存結果之前執行。
 
-所有的指派運算子下, 表中除了 = 和 & & = 運算子都是複合指派運算子。
+下表中除了 = 運算子以外的所有指派運算子都是複合指派運算子。
 
 ### <a name="assignment-operators"></a>指派運算子
 
@@ -85,7 +82,6 @@ assignment-operator : one of
 |**&=**|取得第一和第二個運算元的位元 AND；將結果儲存在第一個運算元所指定的物件。|
 |**^=**|取得第一和第二個運算元的位元排除 OR；將結果儲存在第一個運算元所指定的物件。|
 |**\|=**|取得第一和第二個運算元的位元包含 OR；將結果儲存在第一個運算元所指定的物件。|
-|**&&=**| 移動指派運算子 （只有類別類型）。 如果第二個運算元是右值，其將資源移動到第一個運算元 （而不將它們複製）。 請參閱[移動建構函式和移動指派運算子](move-constructors-and-move-assignment-operators-cpp.md)如需詳細資訊。|
 
 **運算子關鍵字**
 
@@ -125,11 +121,11 @@ int main() {
 
 ## <a name="simple-assignment"></a>單一指派
 
-簡單指派運算子 (=) 會使第二個運算元的值儲存在第一個運算元指定的物件中。 如果兩個物件都是算術類型，右運算元會在儲存值之前轉換成左運算元的類型。
+簡單指派運算子 (**=**) 會導致儲存在第一個運算元所指定之物件中的第二個運算元的值。 如果兩個物件都是算術類型，右運算元會在儲存值之前轉換成左運算元的類型。
 
-可以將 const 和 volatile 類型的物件指派給只屬於 volatile 類型的左值，或者是不是 const 和 volatile 類型的左值。
+物件的**const**並**volatile**為左值的型別只可指派類型**volatile**或兩者皆非**const**也不**volatile**。
 
-類別類型 (結構、等位和類別類型) 之物件的指派作業是由名為 operator= 的函式執行。 這個運算子函式的預設行為是執行位元複製；不過可以使用多載運算子修改此行為  (請參閱[多載運算子](../cpp/operator-overloading.md)如需詳細資訊。)
+指派給類別類型 （結構、 等位和類別類型） 的物件由名為函式執行`operator=`。 這個運算子函式的預設行為是執行位元複製；不過可以使用多載運算子修改此行為  請參閱[運算子多載](../cpp/operator-overloading.md)如需詳細資訊。 此外，類別型別可以有*複製指派*並*移動指派*運算子。 如需詳細資訊，請參閱 <<c0> [ 複製建構函式和複製指派運算子](copy-constructors-and-copy-assignment-operators-cpp.md)並[移動建構函式和移動指派運算子](move-constructors-and-move-assignment-operators-cpp.md)。
 
 只要物件是從指定基底類別明確衍生的任何類別，就可以指派給該基底類別的物件。 反向則不成立，因為可從衍生類別隱含轉換為基底類別，但無法從基底類別轉換為衍生類別。 例如: 
 
@@ -186,7 +182,7 @@ B = A;
 
 可能會有下列其中一項作用：
 
-- 呼叫 `UserType2` 的函式 operator=，前提是必須提供 `UserType1` 引數給 operator=。
+- 呼叫函式`operator=`for`UserType2`提供`operator=`隨附`UserType1`引數。
 
 - 如果 `UserType1::operator UserType2` 函式存在，呼叫這類明確轉換函式。
 
@@ -194,13 +190,13 @@ B = A;
 
 ## <a name="compound-assignment"></a>複合指派
 
-複合指派運算子，表中所示[指派運算子](../cpp/assignment-operators.md)，在表單中指定*e1* `op` =  *e2*，其中*e1*是可修改左值不是 const 類型並*e2*是下列其中之一：
+複合指派運算子，表中所示[指派運算子](#assignment-operators)，在表單中指定*e1* *op*= *e2*，其中*e1*是可修改左值不是**const**型別和*e2*是下列其中之一：
 
 - 算術類型
 
-- 指標，如果`op`是 + 或-
+- 指標，如果*op*是**+** 或 **-**
 
-*E1* `op` =  *e2*表單行為會如同*e1* *= e1* `op` *e2*，但*e1*只評估一次。
+*E1* *op*= *e2*表單行為會如同*e1* **=** *e1* *op* *e2*，但是*e1*只評估一次。
 
 對列舉類型的複合指派會產生錯誤訊息。 如果左運算元為指標類型，則右運算元必須是指標類型，或者必須是判斷值為 0 的常數運算式。 如果左運算元為整數類資料類型，則右運算元不能是指標類型。
 

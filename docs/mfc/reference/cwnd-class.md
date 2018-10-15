@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cbe2269bfe4a67ba4e8c6952980216fce92165f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bd35c0879896ca7edfd6524c31a86765bbcce219
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448606"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084187"
 ---
 # <a name="cwnd-class"></a>CWnd 類別
 
@@ -1662,7 +1662,7 @@ void BringWindowToTop();
 
 此外，`BringWindowToTop` 會啟用快顯、最上層和 MDI 子視窗。 需使用 `BringWindowToTop` 成員函式，才能顯示出重疊視窗部分或完全遮住的視窗。
 
-此函式只會呼叫 Win32 [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673\(v=vs.85\).aspx)函式。 呼叫[SetWindowPos](#setwindowpos)函式來變更視窗的疊置順序位置。 `BringWindowToTop` 函式不會將視窗樣式變更為最上層視窗。 如需詳細資訊，請參閱[between HWND_TOP 和 hwnd_topmost 有何不同的差異為何](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
+此函式只會呼叫 Win32 [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673)函式。 呼叫[SetWindowPos](#setwindowpos)函式來變更視窗的疊置順序位置。 `BringWindowToTop` 函式不會將視窗樣式變更為最上層視窗。 如需詳細資訊，請參閱[between HWND_TOP 和 hwnd_topmost 有何不同的差異為何](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
 
 ### <a name="example"></a>範例
 
@@ -1684,7 +1684,7 @@ virtual void CalcWindowRect(
 [in、 out]矩形結構的指標。 輸入時，此結構會包含用戶端矩形。 方法完成之後，此結構會包含可包含指定的用戶端矩形視窗矩形。
 
 *nAdjustType*<br/>
-[in]使用 [`CWnd::adjustBorder`來計算視窗座標，而不需要 WS_EX_CLIENTEDGE 樣式; 否則，請使用`CWnd::adjustOutside`。
+[in]使用 `CWnd::adjustBorder`來計算視窗座標，而不需要 WS_EX_CLIENTEDGE 樣式; 否則，請使用`CWnd::adjustOutside`。
 
 ### <a name="remarks"></a>備註
 
@@ -4492,7 +4492,7 @@ void GetProperty(
 識別要擷取的屬性。
 
 *vtProp*<br/>
-指定要擷取屬性的型別。 如需可能的值，請參閱 < 備註 > 一節[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
+指定要擷取屬性的型別。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
 
 *pvProp*<br/>
 將這個變數的位址會接收屬性的值。 它必須符合所指定的型別*vtProp*。
@@ -5363,7 +5363,7 @@ void AFX_CDECL InvokeHelper(
 描述要呼叫的內容旗標`IDispatch::Invoke`。
 
 *vtRet*<br/>
-指定傳回值的類型。 如需可能的值，請參閱 < 備註 > 一節[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
+指定傳回值的類型。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
 
 *pvRet*<br/>
 將這個變數的位址將會接收屬性值，或傳回值。 它必須符合所指定的型別*vtRet*。
@@ -5376,9 +5376,9 @@ void AFX_CDECL InvokeHelper(
 
 ### <a name="remarks"></a>備註
 
-*PbParamInfo*參數會指定傳遞至方法或屬性的參數類型。 變數引數清單由 *...* 語法宣告。
+*PbParamInfo*參數會指定傳遞至方法或屬性的參數類型。 引數的變數清單會以 *...* 語法宣告代表。
 
-此函式會將參數轉換為 VARIANTARG 值，然後再叫用`IDispatch::Invoke`ActiveX 控制項上的方法。 如果呼叫`IDispatch::Invoke`失敗，此函式會擲回例外狀況。 如果所傳回的 SCODE （狀態碼）`IDispatch::Invoke`是 DISP_E_EXCEPTION，此函式會擲回[COleException](../../mfc/reference/coleexception-class.md)物件，否則就會擲回[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。
+此函式會將參數轉換為 VARIANTARG 值，然後再叫用`IDispatch::Invoke`ActiveX 控制項上的方法。 若呼叫 `IDispatch::Invoke` 失敗，此函式會擲回例外狀況。 如果所傳回的 SCODE （狀態碼）`IDispatch::Invoke`是 DISP_E_EXCEPTION，此函式會擲回[COleException](../../mfc/reference/coleexception-class.md)物件，否則就會擲回[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。
 
 > [!NOTE]
 > 此函式應該只在呼叫`CWnd`物件，表示 ActiveX 控制項。
@@ -8805,7 +8805,7 @@ afx_msg void OnPaintClipboard(
 指定 [剪貼簿] 應用程式視窗的指標。 該指標可能是暫時性的，因此不應該儲存供日後使用。
 
 *hPaintStruct*<br/>
-識別[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)資料結構，定義要繪製的用戶端區域的哪個部分。
+識別 [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) 資料結構，其定義要繪製工作區的哪一部分。
 
 ### <a name="remarks"></a>備註
 
@@ -11592,7 +11592,7 @@ void AFX_CDECL SetProperty(
 識別要設定的屬性。
 
 *vtProp*<br/>
-指定要設定的屬性類型。 如需可能的值，請參閱 < 備註 > 一節[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
+指定要設定的屬性類型。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
 
 *...*<br/>
 所指定之類型的單一參數*vtProp*。

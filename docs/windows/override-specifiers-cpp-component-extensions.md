@@ -1,7 +1,7 @@
 ---
-title: 覆寫規範 （c + + 元件延伸模組） |Microsoft Docs
+title: 覆寫規範 (C + + /cli 和 C + + /CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bcbc46ea12dd053c0c0cf5066173ea2a28857452
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0620bc7045dcb312667cfdfe670e1f19b0545cf2
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316116"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327460"
 ---
-# <a name="override-specifiers--c-component-extensions"></a>覆寫規範 (C++ 元件擴充功能)
+# <a name="override-specifiers--ccli-and-ccx"></a>覆寫規範 (C + + /cli 和 C + + /CX)
 
 *覆寫規範*修改如何繼承的型別和繼承型別成員的衍生型別中的行為。
 
@@ -65,4 +65,4 @@ ms.locfileid: "44316116"
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)

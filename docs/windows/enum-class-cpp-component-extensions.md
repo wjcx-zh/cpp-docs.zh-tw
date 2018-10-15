@@ -1,7 +1,7 @@
 ---
-title: 列舉類別 （c + + 元件延伸模組） |Microsoft Docs
+title: 列舉類別 (C + + /cli 和 C + + /CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -13,14 +13,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 993f0e190d87b140fba0008872d57f2a34b6a5cb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7b85807b9e9dd0cec63def8ffc4a9aa69056f270
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377262"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328138"
 ---
-# <a name="enum-class--c-component-extensions"></a>enum class (C++ 元件擴充功能)
+# <a name="enum-class--ccli-and-ccx"></a>列舉類別 (C + + /cli 和 C + + /CX)
 
 在命名空間範圍內宣告列舉，這是使用者定義的類型，由一組稱為列舉值的具名常數所組成。
 
@@ -65,7 +65,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊和範例，請參閱 <<c0> [ 列舉](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx)。
+如需詳細資訊與範例，請參閱 [列舉](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx)。
 
 請注意，如果定義列舉程式值的常數運算式無法以 *基礎類型*表示，編譯器將會發出錯誤訊息。  不過，編譯器不會報告不適合基礎類型之值的錯誤。 例如: 
 
@@ -146,13 +146,13 @@ Managed 列舉程式名稱 (*識別項*) 不會插入已定義列舉的範圍，
 
 標準列舉的列舉程式會以強式方式插入封閉範圍。  也就是說，如果封閉範圍中另有一個符號與列舉程式同名，編譯器就會產生錯誤。
 
-在 Visual C++ 2002 和 Visual C++ 2003 中，列舉程式是以弱式方式插入 (會顯示在封閉範圍中，除非另有同名的識別項)。
+在 Visual Studio 2002 和 Visual Studio 2003 中，列舉值是弱式方式插入 （會顯示在封閉範圍中除非有另一個具有相同名稱的識別項）。
 
-如果定義了標準 c + + 列舉 (不含**類別**或**結構**)、 編譯與`/clr`會導致將列舉編譯為 managed 列舉。  列舉仍擁有 Unmanaged 列舉的語意。  請注意，編譯器會插入 Visual C++ 編譯器可辨識的屬性 `Microsoft::VisualC::NativeEnumAttribute`，以識別程式設計人員使用列舉的目的是要做為原生列舉。  其他編譯器只看得到為 Managed 列舉的標準列舉。
+如果定義了標準 c + + 列舉 (不含**類別**或**結構**)、 編譯與`/clr`會導致將列舉編譯為 managed 列舉。  列舉仍擁有 Unmanaged 列舉的語意。  請注意，編譯器會插入屬性 (attribute)`Microsoft::VisualC::NativeEnumAttribute`以識別程式設計人員的目的是原生列舉的列舉。  其他編譯器只看得到為 Managed 列舉的標準列舉。
 
 使用名為 A，標準列舉編譯`/clr`會顯示為 managed 列舉，組件中，而且可供任何其他 managed 編譯器。   不過，不具名的標準列舉就不會在組件中公開顯示。
 
-在 Visual C++ 2002 和 Visual C++ 2003 中，標準列舉在函式參數中用做類型：
+在 Visual Studio 2002 和 Visual Studio 2003，標準列舉做為函式參數中的型別：
 
 ```cpp
 // mcppv2_enum.cpp
@@ -231,4 +231,4 @@ convert to int: 1
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,7 +1,7 @@
 ---
-title: ref new 和 gcnew （c + + 元件延伸模組） |Microsoft Docs
+title: ref new 和 gcnew (C + + /cli 和 C + + /CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -20,14 +20,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c31cda7c074b06025051661d27f00d2624721d0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f5a10278957e6a89b52e744f8f0dd78b475f7730
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596154"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328307"
 ---
-# <a name="ref-new-gcnew--c-component-extensions"></a>ref new 和 gcnew (C++ 元件擴充功能)
+# <a name="ref-new-gcnew--ccli-and-ccx"></a>ref new 和 gcnew (C + + /cli 和 C + + /CX)
 
 **新的 ref**彙總關鍵字，其配置當物件變成無法存取，並傳回控制代碼回收的類型的執行個體 ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) 所配置物件。
 
@@ -99,4 +99,4 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)

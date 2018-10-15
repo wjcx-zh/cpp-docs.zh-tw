@@ -1,5 +1,5 @@
 ---
-title: 泛型委派 （Visual c + +） |Microsoft Docs
+title: 泛型委派 (C + + /cli CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 94b6d94b59e1088501a22f44a219177b926dd02e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1177b3c09649affc781a8c247a109f8efd8088d2
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440871"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328281"
 ---
-# <a name="generic-delegates-visual-c"></a>泛型委派 (Visual C++)
+# <a name="generic-delegates-ccli"></a>泛型委派 (C + + /cli CLI)
 
-您可以使用具有委派的泛型型別參數。 如需有關委派的詳細資訊，請參閱 <<c0> [ 委派 （c + + 元件延伸模組）](../windows/delegate-cpp-component-extensions.md)。
+您可以使用具有委派的泛型型別參數。 如需有關委派的詳細資訊，請參閱 <<c0> [ 委派 (C + + /cli 和 C + + /CX)](../windows/delegate-cpp-component-extensions.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -117,7 +117,7 @@ int main() {
 
 ## <a name="example"></a>範例
 
-下列範例會宣告泛型委派 `GenDelegate<ItemType>`，接著將它與使用類型參數 `MyMethod` 的方法 `ItemType` 產生關聯，藉此將它具現化。 將會建立並叫用委派的兩個執行個體 (一個整數和一個雙精度浮點數)。
+下列範例會宣告泛型委派 `GenDelegate<ItemType>`，接著將它與使用型別參數 `MyMethod` 的方法 `ItemType` 產生關聯，藉此將它具現化。 將會建立並叫用委派的兩個執行個體 (一個整數和一個雙精度浮點數)。
 
 ```cpp
 // generics_generic_delegate.cpp

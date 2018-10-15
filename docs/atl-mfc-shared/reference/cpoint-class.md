@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29f487f77fac6c3f6def51b69715d1d47257dd7c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a1ab725391b03eeba35e230c3e0a5ebe0913fec2
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374219"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328346"
 ---
 # <a name="cpoint-class"></a>CPoint 類別
 
@@ -65,7 +65,7 @@ class CPoint : public tagPOINT
 
 ## <a name="remarks"></a>備註
 
-它也包含成員函式來操作`CPoint`並[點](../../mfc/reference/point-structure1.md)結構。
+它也包含成員函式來操作`CPoint`並[點](../../mfc/reference/point-structure.md)結構。
 
 A`CPoint`物件可以是任一處使用`POINT`使用結構。 這個類別的 「 大小 」 進行互動的運算子都接受[CSize](../../atl-mfc-shared/reference/csize-class.md)物件或[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構，因為這兩個是可互換。
 
@@ -106,7 +106,7 @@ CPoint(LPARAM dwPoint) throw();
 指定 `y` 之 `CPoint` 成員的值。
 
 *initPt*  
-[點](../../mfc/reference/point-structure1.md)結構或`CPoint`，指定用來初始化值`CPoint`。
+[點](../../mfc/reference/point-structure.md)結構或`CPoint`，指定用來初始化值`CPoint`。
 
 *initSize*  
 [大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md) ，指定用來初始化值`CPoint`。
@@ -164,7 +164,7 @@ void Offset(SIZE size) throw();
 指定的位移數量`y`隸屬`CPoint`。
 
 *點*  
-指定的數量 ([點](../../mfc/reference/point-structure1.md)或是`CPoint`) 位移`CPoint`。
+指定的數量 ([點](../../mfc/reference/point-structure.md)或是`CPoint`) 位移`CPoint`。
 
 *size*  
 指定的數量 ([大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)或是[CSize](../../atl-mfc-shared/reference/csize-class.md)) 位移`CPoint`。
@@ -184,7 +184,7 @@ BOOL operator==(POINT point) const throw();
 ### <a name="parameters"></a>參數
 
 *點*  
-包含[點](../../mfc/reference/point-structure1.md)結構或`CPoint`物件。
+包含[點](../../mfc/reference/point-structure.md)結構或`CPoint`物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -205,7 +205,7 @@ BOOL operator!=(POINT point) const throw();
 ### <a name="parameters"></a>參數
 
 *點*  
-包含[點](../../mfc/reference/point-structure1.md)結構或`CPoint`物件。
+包含[點](../../mfc/reference/point-structure.md)結構或`CPoint`物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -230,7 +230,7 @@ void operator+=(POINT point) throw();
 包含[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
 
 *點*  
-包含[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
+包含[點](../../mfc/reference/point-structure.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
 
 ### <a name="remarks"></a>備註
 
@@ -259,7 +259,7 @@ void operator-=(POINT point) throw();
 包含[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
 
 *點*  
-包含[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
+包含[點](../../mfc/reference/point-structure.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
 
 ### <a name="remarks"></a>備註
 
@@ -289,10 +289,10 @@ CRect operator+(const RECT* lpRect) const throw();
 包含[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
 
 *點*  
-包含[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
+包含[點](../../mfc/reference/point-structure.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
 
 *lpRect*  
-包含的指標[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件。
+包含的指標[RECT](../../mfc/reference/rect-structure.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -322,13 +322,13 @@ CPoint operator-() const throw();
 ### <a name="parameters"></a>參數
 
 *點*  
-A[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
+A[點](../../mfc/reference/point-structure.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
 
 *size*  
 A[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
 
 *lpRect*  
-指標[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件。
+指標[RECT](../../mfc/reference/rect-structure.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -354,7 +354,7 @@ A`CSize`也就是兩個點之間的差異`CPoint`的大小，負位移`CRect`位
 
 [MFC 範例 MDI](../../visual-cpp-samples.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
-[POINT 結構](../../mfc/reference/point-structure1.md)<br/>
+[POINT 結構](../../mfc/reference/point-structure.md)<br/>
 [CRect 類別](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CSize 類別](../../atl-mfc-shared/reference/csize-class.md)
 

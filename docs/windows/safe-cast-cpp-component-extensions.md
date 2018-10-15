@@ -1,7 +1,7 @@
 ---
-title: safe_cast （c + + 元件延伸模組） |Microsoft Docs
+title: safe_cast (C + + /cli 和 C + + /CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,14 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d5a4f92e16c2d758fa5e2b88575b12d5710dd08
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 76d53a1322024f1a56477de4e4b58bcdb88930ad
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404203"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328476"
 ---
-# <a name="safecast-c-component-extensions"></a>safe_cast (C++ 元件擴充功能)
+# <a name="safecast-ccli-and-ccx"></a>safe_cast (C + + /cli 和 C + + /CX)
 
 **Safe_cast**作業會傳回與指定的類型，指定的運算式，如果成功; 否則會擲回`InvalidCastException`。
 
@@ -37,11 +37,7 @@ ms.locfileid: "46404203"
 ### <a name="syntax"></a>語法
 
 ```cpp
-[default]:: safe_cast<
-type-id
->(
-expression
-)  
+[default]:: safe_cast< type-id >( expression )  
 ```
 
 ## <a name="windows-runtime"></a>Windows 執行階段
@@ -51,11 +47,7 @@ expression
 ### <a name="syntax"></a>語法
 
 ```cpp
-[default]:: safe_cast<
-type-id
->(
-expression
-)  
+[default]:: safe_cast< type-id >( expression )
 ```
 
 ### <a name="parameters"></a>參數
@@ -115,11 +107,7 @@ Caught expected exception: InvalidCastException
 ### <a name="syntax"></a>語法
 
 ```cpp
-[cli]:: safe_cast<
-type-id
->(
-expression
-)  
+[cli]:: safe_cast< type-id >( expression )  
 ```
 
 ### <a name="parameters"></a>參數
@@ -132,7 +120,7 @@ expression
 
 ### <a name="remarks"></a>備註
 
-運算式`safe_cast<`*型別 id*`>(`*運算式*`)`將運算元運算式轉換成 type-id 類型的物件。
+運算式`safe_cast<`*型別 id*`>(`*運算式*`)`轉換運算元*運算式*物件的型別*型別 id*。
 
 編譯器會接受[static_cast](../cpp/static-cast-operator.md)在大多數的地方，它會接受**safe_cast**。  不過， **safe_cast**保證能夠產生可驗證的 MSIL，其中**static_cast**可能會產生無法驗證的 MSIL。  請參閱[純粹的和可驗證程式碼 (C + + /cli CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)並[Peverify.exe （PEVerify 工具）](/dotnet/framework/tools/peverify-exe-peverify-tool)如需有關驗證的程式碼。
 
@@ -188,4 +176,4 @@ Caught expected exception
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)

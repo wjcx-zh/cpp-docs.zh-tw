@@ -1,7 +1,7 @@
 ---
-title: 類型特性 （c + + 元件擴充功能） 的編譯器支援 |Microsoft Docs
+title: 類型特性的編譯器支援 (C + + /cli 和 C + + /CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -71,16 +71,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5df33233f78eed1f3dc6c9403eb4b1740ccf1a70
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dfa3f599da4594e9cb0d416def1846b9937664f8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42588278"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328530"
 ---
-# <a name="compiler-support-for-type-traits-c-component-extensions"></a>類型特性的編譯器支援 (C++ 元件擴充功能)
+# <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>類型特性的編譯器支援 (C + + /cli 和 C + + /CX)
 
-編譯器支援*類型特性*，這表示在編譯時期的各種類型的特性。
+Microsoft c + + 編譯器支援*類型特性*C + /cli 和 C + + /CX 延伸模組，這表示在編譯時期的各種類型的特性。
 
 ## <a name="all-runtimes"></a>所有執行階段
 
@@ -90,9 +90,9 @@ ms.locfileid: "42588278"
 
 下列清單包含編譯器所支援的類型特性。 所有類型特性都會傳回**false**如果不符合類型特性的名稱所指定的條件。
 
-(在下列清單中，程式碼範例會寫入只在 C + + /cli CLI。 但除非另外註明否則，在 Visual c + + 元件延伸模組也支援對應的類型特性。 詞彙 「 平台類型 」 是指 Windows 執行階段類型或 common language runtime 類型。）
+(在下列清單中，程式碼範例會寫入只在 C + + /cli CLI。 但對應的類型特性也支援在 C + + /CX 除非另外註明否則。 詞彙 「 平台類型 」 是指 Windows 執行階段類型或 common language runtime 類型。）
 
-- `__has_assign(` `type` `)`
+- `__has_assign(` *型別* `)`
 
    傳回 **，則為 true**如果平台或原生類型具有複製指派運算子。
 
@@ -106,7 +106,7 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__has_copy(` `type` `)`
+- `__has_copy(` *型別* `)`
 
    傳回 **，則為 true**如果平台或原生類型具有複製建構函式。
 
@@ -120,9 +120,9 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__has_finalizer(` `type` `)`
+- `__has_finalizer(` *型別* `)`
 
-   （不支援在 Visual c + + 元件擴充功能）。傳回 **，則為 true**如果 CLR 類型具有完成項。 請參閱[解構函式和完成項中如何： 定義和使用類別和結構 (C + + /cli CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)如需詳細資訊。
+   (不支援在 C + + /CX。)傳回 **，則為 true**如果 CLR 類型具有完成項。 請參閱[解構函式和完成項中如何： 定義和使用類別和結構 (C + + /cli CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)如需詳細資訊。
 
     ```cpp
     using namespace System;
@@ -137,7 +137,7 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__has_nothrow_assign(` `type` `)`
+- `__has_nothrow_assign(` *型別* `)`
 
    傳回 **，則為 true**如果複製指派運算子具有空的例外狀況規格。
 
@@ -153,7 +153,7 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__has_nothrow_constructor(` `type` `)`
+- `__has_nothrow_constructor(` *型別* `)`
 
    傳回 **，則為 true**如果預設建構函式具有空的例外狀況規格。
 
@@ -169,7 +169,7 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__has_nothrow_copy(` `type` `)`
+- `__has_nothrow_copy(` *型別* `)`
 
    傳回 **，則為 true**如果複製建構函式具有空的例外狀況規格。
 
@@ -185,7 +185,7 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__has_trivial_assign(` `type` `)`
+- `__has_trivial_assign(` *型別* `)`
 
    傳回 **，則為 true**類型是否為 trivial，編譯器產生的指派運算子。
 
@@ -199,7 +199,7 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__has_trivial_constructor(` `type` `)`
+- `__has_trivial_constructor(` *型別* `)`
 
    傳回 **，則為 true**類型是否為 trivial，編譯器產生的建構函式。
 
@@ -213,7 +213,7 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__has_trivial_copy(` `type` `)`
+- `__has_trivial_copy(` *型別* `)`
 
    傳回 **，則為 true**類型是否為 trivial，編譯器產生的複製建構函式。
 
@@ -227,7 +227,7 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__has_trivial_destructor(` `type` `)`
+- `__has_trivial_destructor(` *型別* `)`
 
    傳回 **，則為 true**類型是否為 trivial，編譯器產生的解構函式。
 
@@ -242,7 +242,7 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__has_user_destructor(` `type` `)`
+- `__has_user_destructor(` *型別* `)`
 
    傳回 **，則為 true**如果平台或原生類型具有使用者宣告解構函式。
 
@@ -259,7 +259,7 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__has_virtual_destructor(` `type` `)`
+- `__has_virtual_destructor(` *型別* `)`
 
    傳回 **，則為 true**如果類型具有虛擬解構函式。
 
@@ -278,11 +278,11 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__is_abstract(` `type` `)`
+- `__is_abstract(` *型別* `)`
 
-   傳回 **，則為 true**如果類型是抽象型別。 如需有關原生抽象類型的詳細資訊，請參閱 <<c0> [ 抽象](../windows/abstract-cpp-component-extensions.md)。
+   傳回 **，則為 true**如果類型是抽象型別。 如需有關原生抽象類型的詳細資訊，請參閱 <<c0> [ 抽象類別](../cpp/abstract-classes-cpp.md)。
 
-   `__is_abstract` 也適用於平台類型。 至少有一個成員的介面是參考類型，至少有一個抽象成員的介面是參考類型。 如需抽象平台類型的詳細資訊，請參閱[抽象類別](../cpp/abstract-classes-cpp.md)
+   `__is_abstract` 也適用於平台類型。 至少有一個成員的介面是參考類型，至少有一個抽象成員的介面是參考類型。 如需抽象平台類型的詳細資訊，請參閱[抽象](../windows/abstract-cpp-component-extensions.md)。
 
     ```cpp
     // is_abstract.cpp
@@ -318,7 +318,7 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__is_class(` `type` `)`
+- `__is_class(` *型別* `)`
 
    傳回 **，則為 true**如果類型是原生類別或結構。
 
@@ -350,9 +350,9 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__is_delegate(` `type` `)`
+- `__is_delegate(` *型別* `)`
 
-   傳回**真**如果`type`是一種委派。 如需詳細資訊，請參閱 <<c0> [ 委派 （c + + 元件延伸模組）](../windows/delegate-cpp-component-extensions.md)。
+   傳回**真**如果`type`是一種委派。 如需詳細資訊，請參閱 <<c0> [ 委派 (C + + /cli 和 C + + /CX)](../windows/delegate-cpp-component-extensions.md)。
 
     ```cpp
     delegate void MyDel();
@@ -361,7 +361,7 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__is_empty(` `type` `)`
+- `__is_empty(` *型別* `)`
 
    傳回 **，則為 true**如果類型沒有執行個體資料成員。
 
@@ -377,7 +377,7 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__is_enum(` `type` `)`
+- `__is_enum(` *型別* `)`
 
    傳回 **，則為 true**類型是否為原生列舉。
 
@@ -399,7 +399,7 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__is_interface_class(` `type` `)`
+- `__is_interface_class(` *型別* `)`
 
    傳回 **，則為 true**如果傳遞平台介面。 如需詳細資訊，請參閱 <<c0> [ 介面類別](../windows/interface-class-cpp-component-extensions.md)。
 
@@ -413,7 +413,7 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__is_pod(` `type` `)`
+- `__is_pod(` *型別* `)`
 
    傳回 **，則為 true**如果類型是類別或等位沒有建構函式或私用或受保護的非靜態成員、 沒有基底類別，並沒有虛擬函式。 如需 POD 的詳細資訊，請參閱 C++ 標準的 8.5.1/1、9/4 和 3.9/10 小節。
 
@@ -429,7 +429,7 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__is_polymorphic(` `type` `)`
+- `__is_polymorphic(` *型別* `)`
 
    傳回 **，則為 true**如果原生類型具有虛擬函式。
 
@@ -445,7 +445,7 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__is_ref_array(` `type` `)`
+- `__is_ref_array(` *型別* `)`
 
    傳回 **，則為 true**如果傳遞平台陣列。 如需詳細資訊，請參閱 <<c0> [ 陣列](../windows/arrays-cpp-component-extensions.md)。
 
@@ -457,7 +457,7 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__is_ref_class(` `type` `)`
+- `__is_ref_class(` *型別* `)`
 
    傳回 **，則為 true**如果傳遞參考類別。 如需有關使用者定義的參考類型的詳細資訊，請參閱 <<c0> [ 類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)。
 
@@ -470,7 +470,7 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__is_sealed(` `type` `)`
+- `__is_sealed(` *型別* `)`
 
    傳回 **，則為 true**如果傳遞平台或標示為密封的原生型別。 如需詳細資訊，請參閱 <<c0> [ 密封](../windows/sealed-cpp-component-extensions.md)。
 
@@ -481,7 +481,7 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__is_simple_value_class(` `type` `)`
+- `__is_simple_value_class(` *型別* `)`
 
    傳回 **，則為 true**如果傳遞實值型別，其中包含不到記憶體回收堆積的參考。 如需有關使用者定義的實值類型的詳細資訊，請參閱[類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)。
 
@@ -499,7 +499,7 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__is_union(` `type` `)`
+- `__is_union(` *型別* `)`
 
    傳回 **，則為 true**如果類型是等位。
 
@@ -516,7 +516,7 @@ ms.locfileid: "42588278"
     }
     ```
 
-- `__is_value_class(` `type` `)`
+- `__is_value_class(` *型別* `)`
 
    傳回 **，則為 true**如果傳遞實值型別。 如需有關使用者定義的實值類型的詳細資訊，請參閱[類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)。
 
@@ -580,4 +580,4 @@ R is a ref class
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)

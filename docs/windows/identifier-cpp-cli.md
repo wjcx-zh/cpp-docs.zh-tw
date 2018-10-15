@@ -1,7 +1,7 @@
 ---
 title: __identifier (c + + /cli CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,25 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 572767c2f85b07f201bef93578b14b731aa467e0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 09a8b69402dbe3812bdd49f8944c979300209bff
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415014"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328268"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 
-可讓您使用 Visual c + + 關鍵字當做識別項。
+可讓您使用 c + + 關鍵字當做識別項。
 
 ## <a name="all-platforms"></a>所有平台
 
 ### <a name="syntax"></a>語法
 
 ```cpp
-__identifier(
-Visual_C++_keyword
-)  
+__identifier(C++_keyword)  
 ```
 
 ### <a name="remarks"></a>備註
@@ -53,7 +51,7 @@ Visual_C++_keyword
 
 **範例**
 
-在下列範例中，具名的類別**範本**是在 C# 中建立和散發的 DLL。 使用的 Visual c + + 程式中**範本**類別 **_try**關鍵字會隱藏的事實，**範本**是標準的 c + + 關鍵字。
+在下列範例中，具名的類別**範本**是在 C# 中建立和散發的 DLL。 在 C + + 使用的 CLI 程式**範本**類別 **_try**關鍵字會隱藏的事實，**範本**是標準的 c + + 關鍵字。
 
 ```cs
 // identifier_template.cs
@@ -85,7 +83,7 @@ int main() {
 
 ### <a name="examples"></a>範例
 
-在下列範例中，具名的類別**範本**是在 C# 中建立和散發的 DLL。 使用的 Visual c + + 程式中**範本**類別 **_try**關鍵字會隱藏的事實，**範本**是標準的 c + + 關鍵字。
+在下列範例中，具名的類別**範本**是在 C# 中建立和散發的 DLL。 在 C + + 使用的 CLI 程式**範本**類別 **_try**關鍵字會隱藏的事實，**範本**是標準的 c + + 關鍵字。
 
 ```cs
 // identifier_template.cs
@@ -108,5 +106,5 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)<br/>
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)

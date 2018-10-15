@@ -1,7 +1,7 @@
 ---
-title: 明確覆寫 （c + + 元件延伸模組） |Microsoft Docs
+title: 明確覆寫 (C + + /cli 和 C + + /CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba6ed66359ee833b51154e47f8f6c26c0de8994c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 689c8420c2526f94f88c8b2ba8433c2310281874
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408943"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328034"
 ---
-# <a name="explicit-overrides--c-component-extensions"></a>明確覆寫 (C++ 元件擴充功能)
+# <a name="explicit-overrides--ccli-and-ccx"></a>明確覆寫 (C + + /cli 和 C + + /CX)
 
 本主題討論如何明確覆寫基底類別或介面的成員。 具名的 （明確） 覆寫應該只用來覆寫方法，以使用衍生的方法具有不同的名稱。
 
@@ -184,4 +184,4 @@ public:
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)

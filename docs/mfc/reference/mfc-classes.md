@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fb0cfa6d3657c0cce01e91c94cb23bce8886a43
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a276868dfdb14f754cac3938e052e82b7ab22a6f
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403138"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328606"
 ---
 # <a name="mfc-classes"></a>MFC 類別
 
@@ -34,7 +34,7 @@ ms.locfileid: "46403138"
 
 ## <a name="in-this-section"></a>本節內容
 
-[Cacceleratedeceleratetransition 類別類別](../../mfc/reference/cacceleratedeceleratetransition-class1.md)<br/>
+[Cacceleratedeceleratetransition 類別類別](../../mfc/reference/cacceleratedeceleratetransition-class.md)<br/>
 實作加速減速轉換。
 
 [CAnimateCtrl 類別](../../mfc/reference/canimatectrl-class.md)<br/>
@@ -137,7 +137,7 @@ ms.locfileid: "46403138"
 提供 Windows 檢查清單方塊的功能。
 
 [CClientDC 類別](../../mfc/reference/cclientdc-class.md)<br/>
-處理 Windows 函式呼叫[GetDC](/windows/desktop/api/winuser/nf-winuser-getdc)在建構階段並[ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc)在解構階段。
+在建構階段處理 Windows 函式 [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) 的呼叫，而在解構階段處理 [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) 的呼叫。
 
 [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)<br/>
 MFC 程式庫訊息對應架構的基底類別。
@@ -863,7 +863,7 @@ Windows `HMENU`的封裝。
 表示通常在浮動工具列周圍出現的半高度框架視窗。
 
 [CMonikerFile 類別](../../mfc/reference/cmonikerfile-class.md)<br/>
-表示資料的資料流 ([IStream](/windows/desktop/api/objidl/nn-objidl-istream)) 所命名[IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)。
+表示由[IMoniker](/windows/desktop/api/objidl/nn-objidl-istream)命名的資料流 ( [IStream](/windows/desktop/api/objidl/nn-objidl-imoniker))。
 
 [CMonthCalCtrl 類別](../../mfc/reference/cmonthcalctrl-class.md)<br/>
 封裝月曆控制項的功能。
@@ -1022,7 +1022,7 @@ OLE 伺服器文件的基底類別。
 用於 OLE [編輯連結] 對話方塊的特殊狀況，當您只需要更新文件中現有的連結或內嵌物件時，應該使用此項。
 
 [COleVariant 類別](../../mfc/reference/colevariant-class.md)<br/>
-封裝[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)資料型別。
+封裝 [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) 資料類型。
 
 [CPagerCtrl 類別](../../mfc/reference/cpagerctrl-class.md)<br/>
 `CPagerCtrl` 類別會封裝 Windows 頁面巡覽區控制項，可以將不符合容器視窗大小的包含視窗捲動到檢視中。
@@ -1109,7 +1109,7 @@ MFC 實作停駐模型的基本元件。 這個類別的物件儲存兩個停駐
 在控制項中顯示資料庫記錄的檢視。
 
 [CRect 類別](../../atl-mfc-shared/reference/crect-class.md)<br/>
-類似於 Windows [RECT 結構](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us)。
+類似於 Windows [RECT 結構](rect-structure.md)。
 
 [CRectTracker 類別](../../mfc/reference/crecttracker-class.md)<br/>
 可讓項目以不同的方式顯示、移動和調整大小。
@@ -1175,7 +1175,7 @@ A [CView 類別](../../mfc/reference/cview-class.md)具有捲動功能。
 封裝由動畫變數的初始速度決定其幅度的正弦曲線速度轉換。
 
 [CSize 類別](../../atl-mfc-shared/reference/csize-class.md)<br/>
-類似於 Windows[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構中，於實作相對座標或位置。
+類似於實作相對座標或位置的 Windows [SIZE](https://msdn.microsoft.com/library/windows/desktop/dd145106) 結構。
 
 [CSliderCtrl 類別](../../mfc/reference/csliderctrl-class.md)<br/>
 提供 Windows 通用滑桿控制項的功能。

@@ -1,7 +1,7 @@
 ---
-title: 使用者定義的屬性 （c + + 元件延伸模組） |Microsoft Docs
+title: 使用者定義的屬性 (C + + /cli 和 C + + /CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,26 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c2f5568b067c119bfa65744290c39d7ca577072
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 004c4c30c6e7e75f626e1ac87c09cb0a87f1c8cc
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789224"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328437"
 ---
-# <a name="user-defined-attributes--c-component-extensions"></a>使用者定義屬性 (C++ 元件擴充功能)
+# <a name="user-defined-attributes--ccli-and-ccx"></a>使用者定義的屬性 (C + + /cli 和 C + + /CX)
 
-自訂屬性可讓您擴充的介面、 類別或結構、 方法、 參數或列舉型別中繼資料。
-
-## <a name="all-runtimes"></a>所有執行階段
-
-所有執行階段支援的自訂屬性。
+C + + /cli 和 C + + /CX 可讓您建立擴充的介面、 類別或結構、 方法、 參數或列舉型別中繼資料的平台特定屬性。 這些屬性是區別[標準 c + + 屬性](../cpp/attributes.md)。
 
 ## <a name="windows-runtime"></a>Windows 執行階段
 
-C + + /CX 屬性支援只有屬性，但不是屬性建構函式或方法。
-
-### <a name="remarks"></a>備註
+您可以套用 C + + /CX 屬性至屬性，但不適用於建構函式或方法。
 
 ### <a name="requirements"></a>需求
 
@@ -43,17 +37,11 @@ C + + /CX 屬性支援只有屬性，但不是屬性建構函式或方法。
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-自訂屬性，可讓您擴充的受管理的項目中繼資料。 如需詳細資訊，請參閱[屬性](/dotnet/standard/attributes/index)。
-
-### <a name="remarks"></a>備註
-
 本主題所述的語法與資訊要取代所顯示的資訊[屬性](attributes/attribute.md)。
 
 您可以定義自訂屬性型別定義，並讓<xref:System.Attribute>基底類別類型，並選擇性地套用<xref:System.AttributeUsageAttribute>屬性。
 
-比方說，在 Microsoft Transaction Server (MTS) 1.0 時，同步處理的交易而言，行為的負載平衡，並透過自訂插入使用 ODL 自訂屬性的型別程式庫的 Guid 指定等等。 因此，MTS 伺服器的用戶端無法讀取類型程式庫來判斷其特性。 在.NET Framework 中，型別程式庫的類比中繼資料，而類比 ODL 自訂屬性的自訂屬性。 此外，讀取類型程式庫是類似於使用反映的類型。
-
-如需詳細資訊，請參閱：
+如需詳細資訊，請參閱:
 
 - [屬性目標](attribute-targets-cpp-component-extensions.md)
 
@@ -216,4 +204,4 @@ ref struct B {};
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](component-extensions-for-runtime-platforms.md)
+[適用於.NET 和 UWP 的元件擴充功能](component-extensions-for-runtime-platforms.md)

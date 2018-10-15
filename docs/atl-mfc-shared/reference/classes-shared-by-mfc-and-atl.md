@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 566164f40f8795c8402b04c9c25e13dda036961d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 50295c9d296449e36ed4a305b568d2e0aaed10a3
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765433"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327904"
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>由 MFC 和 ATL 共用類別
 
@@ -33,8 +33,8 @@ ms.locfileid: "43765433"
 |[CImage](../../atl-mfc-shared/reference/cimage-class.md)|提供增強的點陣圖支援，包括載入和儲存 JPEG、 GIF、 BMP、 和可攜式網路圖形 (PNG) 格式的映像的能力。|atlimage.h|
 |[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)|封裝 OLE automation 中使用的日期資料類型。|atlcomtime.h|
 |[COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md)|代表相對的時間，時間範圍。|atlcomtime.h|
-|[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)|類似於 Windows 的類別[點](../../mfc/reference/point-structure1.md)結構，其中也包含成員函式來操作`CPoint`和`POINT`結構。|atltypes.h|
-|[CRect](../../atl-mfc-shared/reference/crect-class.md)|類似於 Windows 的類別[RECT](../../mfc/reference/rect-structure1.md)結構，其中也包含成員函式來操作`CRect`物件和 Windows`RECT`結構。|atltypes.h|
+|[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)|類似於 Windows 的類別[點](../../mfc/reference/point-structure.md)結構，其中也包含成員函式來操作`CPoint`和`POINT`結構。|atltypes.h|
+|[CRect](../../atl-mfc-shared/reference/crect-class.md)|類似於 Windows 的類別[RECT](../../mfc/reference/rect-structure.md)結構，其中也包含成員函式來操作`CRect`物件和 Windows`RECT`結構。|atltypes.h|
 |[CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)|代表`CSimpleStringT`物件。|atlsimpstr.h|
 |[CSize](../../atl-mfc-shared/reference/csize-class.md)|類似於 Windows SIZE 結構，於實作相對座標或位置的類別。|atltypes.h|
 |[CStrBufT](../../atl-mfc-shared/reference/cstrbuft-class.md)|提供的自動資源清除作業`GetBuffer`並`ReleaseBuffer`呼叫現有`CStringT`物件。|atlsimpstr.h|

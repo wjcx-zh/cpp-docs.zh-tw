@@ -1,7 +1,7 @@
 ---
-title: 追蹤參考運算子 （c + + 元件延伸模組） |Microsoft Docs
+title: 追蹤參考運算子 (C + + /cli 和 C + + /CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da01a2dd7e871bb555b2b5711a59dbb5e65424a8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8ea8cec7a3cc2e24c55c9f8454b421f5488f1c89
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604072"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327917"
 ---
-# <a name="tracking-reference-operator-c-component-extensions"></a>追蹤參考運算子 (C++ 元件擴充功能)
+# <a name="tracking-reference-operator-ccli-and-ccx"></a>追蹤參考運算子 (C + + /cli 和 C + + /CX)
 
 A*追蹤參考*(`%`) 作用如同一般的 c + + 參考 (`&`) 不同之處在於當物件指派給追蹤參考時，物件的參考計數會漸增。
 

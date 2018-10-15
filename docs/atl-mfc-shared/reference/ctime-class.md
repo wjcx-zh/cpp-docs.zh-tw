@@ -1,7 +1,7 @@
 ---
 title: CTime 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9893ce2ef34e1c708c450e410e44167d22d58898
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c14dc8c8c9b697ecb7dcf1ff227eb7a76ad7cfa5
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387143"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328593"
 ---
 # <a name="ctime-class"></a>CTime 類別
 
@@ -180,10 +180,10 @@ A **__time64_t**時間值，也就是在 1970 年 1 月 1 日 UTC 之後的秒�
 MS-DOS 日期和時間值轉換成日期/時間值，並複製到新`CTime`物件。
 
 *st*  
-A [SYSTEMTIME](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/d6609fff-1931-4818-8a26-f042630af0b0/locales/en-us)轉換成日期/時間值，並複製到新的結構`CTime`物件。
+A [SYSTEMTIME](../../mfc/reference/systemtime-structure.md)轉換成日期/時間值，並複製到新的結構`CTime`物件。
 
 *全文檢索*  
-A [FILETIME](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/979ce746-dc17-4147-89f8-41d05c5fcc5f/locales/en-us)轉換成日期/時間值，並複製到新的結構`CTime`物件。
+A [FILETIME](../../mfc/reference/filetime-structure.md)轉換成日期/時間值，並複製到新的結構`CTime`物件。
 
 dbts  
 DBTIMESTAMP 結構，包含目前的當地時間的參考。

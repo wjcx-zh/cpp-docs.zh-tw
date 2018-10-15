@@ -1,7 +1,7 @@
 ---
 title: 如何： 宣告及使用內部指標和 Managed 的陣列 (C + + /cli CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 691b2606e6b479937394c2ba021934e8f98b0fe5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c0c34b43451f8e62583450998efa8e74000807b4
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599078"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328112"
 ---
 # <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>如何：宣告及使用內部指標和 Managed 陣列 (C++/CLI)
 

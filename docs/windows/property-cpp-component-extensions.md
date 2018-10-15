@@ -1,7 +1,7 @@
 ---
-title: 屬性 （c + + 元件延伸模組） |Microsoft Docs
+title: 屬性 (C + + /cli 和 C + + /CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f9c444861587e21724fe5f6aff545935fed6086
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9bd79042a43588ad4cedcbe88cc69f30947de7f8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420500"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328229"
 ---
-# <a name="property--c-component-extensions"></a>property (C++ 元件擴充功能)
+# <a name="property--ccli-and-ccx"></a>屬性 (C + + /cli 和 C + + /CX)
 
 宣告*屬性*，這是成員函式的行為模式，以及存取資料成員或陣列元素。
 
@@ -161,7 +161,7 @@ Get 和屬性的 set 方法應該同意**靜態**修飾詞。
 
 如果屬性的 get 和 set 方法符合下列描述，則屬性為純量：
 
-- get 方法沒有參數，且有傳回類型 `T`。
+- get 方法沒有參數，且有傳回型別 `T`。
 
 - Set 方法具有參數的型別`T`，並傳回型別**void**。
 
@@ -226,4 +226,4 @@ test
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)

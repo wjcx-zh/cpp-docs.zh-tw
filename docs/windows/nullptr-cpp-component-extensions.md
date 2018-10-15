@@ -1,7 +1,7 @@
 ---
-title: nullptr （c + + 元件延伸模組） |Microsoft Docs
+title: nullptr (C + + /cli 和 C + + /CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0596276589790ee6fae8e071e50b4d9b55dd8b85
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 46a68e3ab7119dfb2c99578f299b9d38cbc5736d
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439610"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328489"
 ---
-# <a name="nullptr--c-component-extensions"></a>nullptr (C++ 元件擴充功能)
+# <a name="nullptr--ccli-and-ccx"></a>nullptr (C + + /cli 和 C + + /CX)
 
 **Nullptr**關鍵字表示*null 指標值*。 使用 null 指標值來表示的物件控制代碼、 內部指標或原生指標類型未指向物件。
 
@@ -235,5 +235,5 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [nullptr](../cpp/nullptr.md)

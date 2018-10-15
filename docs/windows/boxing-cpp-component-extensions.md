@@ -1,7 +1,7 @@
 ---
-title: Boxing （c + + 元件延伸模組） |Microsoft Docs
+title: Boxing (C + + /cli 和 C + + /CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92dc2032031fd0f3032db57b9eca8c723367da9e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b11ac2f6b640e42c14522b45fe0c3da89036ae24
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316714"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328008"
 ---
-# <a name="boxing--c-component-extensions"></a>Boxing (C++ 元件擴充功能)
+# <a name="boxing--ccli-and-ccx"></a>Boxing (C + + /cli 和 C + + /CX)
 
-Visual c + + 編譯器可以將實值型別轉換成稱為的處理序中的物件*boxing*，並將物件轉換為呼叫處理序中的實值型別*unboxing*。
+呼叫實值型別轉換為物件*boxing*，並呼叫的物件轉換為實值型別*unboxing*。
 
 ## <a name="all-runtimes"></a>所有執行階段
 
@@ -86,7 +86,7 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-Visual C++ 編譯器現在會將實值類型進行 box 處理為 <xref:System.Object>。 這是可行的，因為編譯器所定義的轉換可將實值類型轉換為 <xref:System.Object>。
+編譯器方塊值的型別<xref:System.Object>。 這是可行的，因為編譯器所定義的轉換可將實值類型轉換為 <xref:System.Object>。
 
 boxing 和 unboxing 可讓實值類型被視為物件。 實值類型，包括結構類型和內建類型 (如 int)，可以往返轉換為類型 <xref:System.Object>。
 
@@ -200,4 +200,4 @@ in func2(System::ValueType^)
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)

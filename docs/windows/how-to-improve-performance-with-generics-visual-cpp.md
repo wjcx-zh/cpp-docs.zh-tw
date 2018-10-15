@@ -1,7 +1,7 @@
 ---
-title: 如何： 使用泛型 （Visual c + +） 改善效能 |Microsoft Docs
+title: 如何： 使用泛型改善效能 (C + + /cli CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f946970f78b432774a5e4c7ba20fd15a00ae654
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ead9491e7b5302cadfa59eb7d98215fb3c41eb09
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318521"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327814"
 ---
-# <a name="how-to-improve-performance-with-generics-visual-c"></a>如何：使用泛型改善效能 (Visual C++)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>如何： 使用泛型改善效能 (C + + /cli CLI)
 
-使用泛型可以根據型別參數建立可重複使用的程式碼。 型別參數的實際類型會延後，直到用戶端程式碼呼叫它為止。 如需有關泛型的詳細資訊，請參閱 <<c0> [ 泛型](../windows/generics-cpp-component-extensions.md)。
+使用泛型可以根據型別參數建立可重複使用的程式碼。 型別參數的實際類型會延後，直到用戶端程式碼呼叫它為止。 如需泛型的詳細資訊，請參閱 [Generics](../windows/generics-cpp-component-extensions.md)。
 
 本文將討論泛型如何協助使用集合的應用程式提升效能。
 
@@ -90,7 +90,7 @@ Popped an int: 7
 
 ## <a name="example"></a>範例
 
-新的 <xref:System.Collections.Generic?displayProperty=fullName> 命名空間包含許多與 <xref:System.Collections?displayProperty=fullName> 命名空間中相同的集合，不過，這些集合已經過修改，可接受泛型類型參數。 這樣就可解決非泛型集合的兩個缺點：實值類型的 Boxing 和 Unboxing，以及無法指定儲存在集合中的類型。 這兩個集合的作業方式相同，只有具現化的方式不同。
+新的 <xref:System.Collections.Generic?displayProperty=fullName> 命名空間包含許多與 <xref:System.Collections?displayProperty=fullName> 命名空間中相同的集合，不過，這些集合已經過修改，可接受泛型型別參數。 這樣就可解決非泛型集合的兩個缺點：實值類型的 Boxing 和 Unboxing，以及無法指定儲存在集合中的類型。 這兩個集合的作業方式相同，只有具現化的方式不同。
 
 請與這個範例前段使用泛型 <xref:System.Collections.Generic.Stack%601> 集合撰寫的範例做比較。 對於經常存取的大型集合而言，這個範例的效能將明顯高於前一個範例。
 

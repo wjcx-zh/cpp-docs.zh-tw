@@ -1,7 +1,7 @@
 ---
-title: 屬性目標 （c + + 元件延伸模組） |Microsoft Docs
+title: 屬性目標 (C + + /cli 和 C + + /CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7a4cc42a0913636b0b63057f0f265f3fb8a034c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9dfb469bb9dcea8a2c1e197fa7c305d08d155cf1
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589412"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327776"
 ---
-# <a name="attribute-targets-c-component-extensions"></a>屬性目標 (C++ 元件擴充功能)
+# <a name="attribute-targets-ccli-and-ccx"></a>屬性目標 (C + + /cli 和 C + + /CX)
 
 屬性使用規範可讓您指定屬性目標。  每個屬性的用途都是套用至特定語言項目。 例如，屬性可能會定義為只套用至類別和結構。  下列清單中顯示可以使用自訂屬性的語法項目。 您也可以將這些值結合起來使用 (使用邏輯 OR)。
 

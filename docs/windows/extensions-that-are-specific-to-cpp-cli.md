@@ -1,7 +1,7 @@
 ---
 title: 延伸模組特有的 C + + /cli CLI |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -13,15 +13,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e4a2b0c631c4356bed7ff190c2867a8540b57526
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0bb6b1738b0eecbfd4e97171d2a9faea2d9b6005
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444654"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327761"
 ---
 # <a name="extensions-that-are-specific-to-ccli"></a>C++/CLI 專用的擴充功能
-在本節中的文件說明的下列語言功能僅適用於 C + + /cli CLI。
+
+下列的語言功能僅適用於 C + + /cli CLI:
   
 [__identifier (C++/CLI)](../windows/identifier-cpp-cli.md)  
   
@@ -37,4 +38,4 @@ ms.locfileid: "46444654"
   
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)

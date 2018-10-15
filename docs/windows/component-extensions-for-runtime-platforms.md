@@ -1,7 +1,7 @@
 ---
-title: 執行階段平台的元件擴充功能 |Microsoft Docs
+title: 適用於.NET 和 UWP 的元件擴充功能 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,28 +19,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0619585a0a5b59ffb6b8cfbe22e7930909369b23
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 45f83fbaaa867e2f58e329d8531259fa3751a521
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386745"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328411"
 ---
-# <a name="component-extensions-for-runtime-platforms"></a>執行階段平台的元件擴充功能
+# <a name="component-extensions-for-net-and-uwp"></a>適用於.NET 和 UWP 的元件擴充功能
 
-Visual C++ 提供語言擴充功能，協助您針對執行階段平台進行程式設計。 使用 C + + /CX 中，您可以設計程式通用 Windows 平台應用程式和元件，編譯成原生程式碼。 雖然您可以藉由直接針對 Windows 執行階段 COM 介面，建立通用 Windows 平台應用程式，使用 C + + /CX 中，您可以使用建構函式、 例外狀況和其他現代 c + + 程式設計慣用語。 若要啟用 c + + 程式設計，在.NET 平台上 managed 的執行環境中，您可以使用 C + + /cli CLI。
+C + + 標準，可讓編譯器廠商，提供非標準的語言擴充功能。 Microsoft 提供擴充功能，協助您連接的原生 c + + 程式碼程式碼，在.NET Framework 或通用 Windows 平台 (UWP) 上執行。 .NET 延伸模組會呼叫 C + +.NET 中執行的 CLI 和產生的程式碼管理稱為 Common Language Runtime (CLR) 的執行環境。 UWP 延伸模組會呼叫 C + + /CX 和它們產生原生機器碼。
+
+> [!NOTE]
+> 對於新的應用程式，我們建議使用 C + + /cli WinRT 而不是 C + + /CX。 C + + /cli WinRT 是新的標準 C + + 17 語言推演，適用於 Windows 執行階段 Api。 我們會繼續支援 C + + /CX 和 WRL，但強烈建議新的應用程式使用 C + + /cli WinRT。 如需詳細資訊，請參閱 < [C + + /cli WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)。
 
 ### <a name="two-runtimes-one-set-of-extensions"></a>兩種執行階段，一組擴充功能
 
-C + + /CX 是子集的 C + + /cli CLI。 延伸模組通用的 C + + /CX 和 C + + /cli CLI，語意取決於您的目標 common language runtime (CLR) 或 Windows 執行階段。 若要編譯您的應用程式在 Windows 執行階段上執行，請指定`/ZW`編譯器選項。 若要編譯您的應用程式以在 CLR 上執行，請指定 `/clr` 編譯器選項。 當您使用 Visual Studio 以建立專案時，會自動設定這些參數。
-
-如需如何建立 c + + 中的通用 Windows 平台應用程式的詳細資訊，請參閱[藍圖適用於 Windows 執行階段應用程式使用 c + +](https://msdn.microsoft.com/library/windows/apps/hh700360.aspx)。
-
 C + + /cli CLI 延伸 ISO/ANSI c + + 標準，並定義在 Ecma C + + /cli CLI 標準。 如需詳細資訊，請參閱 < [.NET 程式設計使用 C + + /cli （Visual c + +）](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)。
+
+C + + /CX 延伸模組是子集的 C + + /cli CLI。 雖然延伸語法完全相同，在大部分情況下，產生的程式碼取決於您是否指定`/ZW`編譯器選項，目標 UWP 或`/clr`以.NET 為目標的選項。 當您使用 Visual Studio 以建立專案時，會自動設定這些參數。
 
 ## <a name="data-type-keywords"></a>資料類型關鍵字
 
-語言擴充功能包含*彙總關鍵字*，這是以泛空白字元分隔的兩個語彙基元所組成的關鍵字。 當語彙基元分開使用時，可能有一個意義，當它們一起使用時，則有另一個意義。 例如，"ref" 這個字是一般的識別項，而 "class" 這個字是宣告原生類別的關鍵字。 但當這些字合併以形成**ref 類別**，產生的彙總關鍵字會宣告稱為實體*執行階段類別*。
+語言擴充功能包含*彙總關鍵字*，其中包含以泛空白字元分隔的兩個語彙基元。 當語彙基元分開使用時，可能有一個意義，當它們一起使用時，則有另一個意義。 例如，"ref" 這個字是一般的識別項，而 "class" 這個字是宣告原生類別的關鍵字。 但當這些字合併以形成**ref 類別**，產生的彙總關鍵字會宣告稱為實體*執行階段類別*。
 
 擴充功能也包括*即時線上*關鍵字。 關鍵字會被視為視內容而有所區別，取決於包含它的陳述式類型，以及它在該陳述式中的位置。 例如，語彙基元 "property" 可以是識別碼，或者它可以宣告一種特殊的公用類別成員。
 
@@ -53,7 +54,7 @@ C + + /cli CLI 延伸 ISO/ANSI c + + 標準，並定義在 Ecma C + + /cli CLI �
 |**介面類別**<br /><br /> **介面結構**|否|宣告介面。|[介面類別](../windows/interface-class-cpp-component-extensions.md)|
 |**列舉類別**<br /><br /> **列舉結構**|否|宣告列舉。|[列舉類別](../windows/enum-class-cpp-component-extensions.md)|
 |**屬性**|是|宣告屬性。|[屬性](../windows/property-cpp-component-extensions.md)|
-|**delegate**|是|宣告委派。|[delegate (C++ 元件延伸模組)](../windows/delegate-cpp-component-extensions.md)|
+|**delegate**|是|宣告委派。|[委派 (C + + /cli 和 C + + /CX)](../windows/delegate-cpp-component-extensions.md)|
 |**event**|是|宣告事件。|[event](../windows/event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>覆寫規範
@@ -87,7 +88,7 @@ C + + /cli CLI 延伸 ISO/ANSI c + + 標準，並定義在 Ecma C + + /cli CLI �
 |**gcnew**|否|在記憶體回收堆積上配置類型。 而不是使用**新**並**刪除**。|[ref new 和 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
 |**新的 ref**|是|配置是 Windows 執行階段類型。 而不是使用**新**並**刪除**。|[ref new 和 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
 |**initonly**|是|表示成員只能在宣告或靜態建構函式中初始化。|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
-|**常值**|是|建立常值變數。|[常值](../windows/literal-cpp-component-extensions.md)|
+|**名稱**|是|建立常值變數。|[名稱](../windows/literal-cpp-component-extensions.md)|
 |**nullptr**|否|指出控制代碼或指標未指向物件。|[nullptr](../windows/nullptr-cpp-component-extensions.md)|
 
 ## <a name="template-constructs"></a>範本建構

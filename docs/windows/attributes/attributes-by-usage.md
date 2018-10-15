@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 39dac1bda25a66ecd67feac167e0029931a204e0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 49e298af793655bb3ea3854909a16dd4db03c6a3
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790946"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328177"
 ---
 # <a name="attributes-by-usage"></a>依使用方式分類的屬性
 
 本主題列出根據它們所套用的 c + + 語言項目屬性。
 
-如果屬性在之前的 Visual c + + 項目不在屬性的範圍內，屬性區塊會被視為註解。
+如果屬性在前面的項目不是屬性的範圍中，屬性區塊會被視為註解中。
 
 |屬性|描述|
 |---------------|-----------------|
@@ -89,6 +89,6 @@ ms.locfileid: "48790946"
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於 COM 和.NET 的 c + + 屬性](cpp-attributes-com-net.md)<br/>
+[適用於 COM 與 .NET 的 C++ 屬性](cpp-attributes-com-net.md)<br/>
 [依群組分類的屬性](attributes-by-group.md)<br/>
 [依字母順序排列的屬性參考](attributes-alphabetical-reference.md)

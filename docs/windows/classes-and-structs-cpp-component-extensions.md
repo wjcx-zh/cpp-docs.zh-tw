@@ -1,7 +1,7 @@
 ---
-title: 類別和結構 （c + + 元件延伸模組） |Microsoft Docs
+title: ref 類別和 ref 結構 (C + + /cli 和 C + + /CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60e388e18e6d3607dac1946c3fd9a511e948afd4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f2d7ceea7dd3253b28eab5b5fad28381f115225f
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448372"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328063"
 ---
-# <a name="classes-and-structs--c-component-extensions"></a>類別和結構 (C++ 元件擴充功能)
+# <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref 類別和 ref 結構 (C + + /cli 和 C + + /CX)
 
-宣告類別或結構之*物件存留期*會自動管理。 當物件不再可存取或超出範圍時，Visual C++ 會自動捨棄配置給物件的記憶體。
+**Ref 類別**或是**ref struct**延伸模組宣告類別或結構其*物件存留期*會自動管理。 當物件不再可存取，或超出範圍時，則會釋放記憶體。
 
 ## <a name="all-runtimes"></a>所有執行階段
 
@@ -61,7 +61,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 *base_type*<br/>
 （選擇性）基底類型。 不過，值類型無法做為基底類型。
 
-如需詳細資訊，請參閱特定語言描述中的 Windows 執行階段和通用語言 Runtimesections 此參數。
+如需詳細資訊，請參閱特定語言描述 Windows 執行階段和通用語言執行平台區段中的此參數。
 
 ### <a name="remarks"></a>備註
 
@@ -129,4 +129,4 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)

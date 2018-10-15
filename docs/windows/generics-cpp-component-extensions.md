@@ -1,7 +1,7 @@
 ---
-title: 泛型 （c + + 元件延伸模組） |Microsoft Docs
+title: 泛型 (C + + /cli 和 C + + /CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,37 +18,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 121d3bf1fd7d59f36362a034216e0728b2fc25b0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bb0c6bc3459ff0b86200502b1a31ee341078280
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448346"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327671"
 ---
-# <a name="generics--c-component-extensions"></a>泛型 (C++ 元件擴充功能)
+# <a name="generics--ccli-and-ccx"></a>泛型 (C + + /cli 和 C + + /CX)
 
-泛型是參數化的類型和方法。 在這一節中，您將了解 Windows 執行階段和通用語言執行平台 (CLR) 都支援的泛型功能，以及只有通用語言執行平台 (CLR) 支援的泛型功能。 此外，您還會了解如何在 Visual C++ 中撰寫自己的泛型方法和類型，以及如何在 Visual C++ 中使用以 .NET Framework 語言撰寫的泛型類型。 最後，本節將提供泛型和 C++ 範本的比較。
+泛型是參數化的類型和方法。 在這一節中，您將了解 Windows 執行階段和通用語言執行平台 (CLR) 都支援的泛型功能，以及只有通用語言執行平台 (CLR) 支援的泛型功能。 此外，了解如何撰寫您自己的泛型方法和類型，在 C + + /cli CLI，以及如何使用泛型型別撰寫以.NET Framework 語言在 C + + CLI。 最後，本節將提供泛型和 C++ 範本的比較。
 
 ## <a name="in-this-section"></a>本節內容
 
 ### <a name="supported-by-the-windows-runtime-and-the-common-language-runtime"></a>Windows 執行階段和通用語言執行平台 (CLR) 所支援
 
-[Visual C++ 中的泛型概觀](../windows/overview-of-generics-in-visual-cpp.md)<br/>
+[概觀泛型在 C + + /cli CLI](../windows/overview-of-generics-in-visual-cpp.md)<br/>
 有關泛型的資訊包括：語言功能的動機、描述泛型的詞彙定義，以及使用參考類型和實值類型做為泛型之型別參數的相關資訊。
 
-[泛型介面 (Visual C++)](../windows/generic-interfaces-visual-cpp.md)<br/>
+[泛型介面 (C + + /cli CLI)](../windows/generic-interfaces-visual-cpp.md)<br/>
 定義及使用泛型介面的相關資訊。
 
-[泛型委派 (Visual C++)](../windows/generic-delegates-visual-cpp.md)<br/>
+[泛型委派 (C + + /cli CLI)](../windows/generic-delegates-visual-cpp.md)<br/>
 定義及使用泛型委派的相關資訊。
 
 [泛型型別參數的條件約束 (C++/CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)<br/>
 在泛型類型中使用條件約束的相關資訊。
 
 [使用泛型 (C++/CLI)](../windows/consuming-generics-cpp-cli.md)<br/>
-在 Visual C++ 中使用 .NET 組件中定義之泛型 (可能是以其他語言所撰寫) 的相關資訊。
+資訊使用泛型定義在.NET 組件，可能會撰寫以其他語言，在 C + + /cli CLI。
 
-[泛型和樣板 (Visual C++)](../windows/generics-and-templates-visual-cpp.md)<br/>
+[泛型和樣板 (C + + /cli CLI)](../windows/generics-and-templates-visual-cpp.md)<br/>
 泛型和範本的比較、何時使用兩者，以及如何將兩者結合提供實用的用途。
 
 ### <a name="supported-by-the-common-language-runtime"></a>通用語言執行平台 (CLR) 所支援
@@ -66,4 +66,4 @@ ms.locfileid: "46448346"
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)

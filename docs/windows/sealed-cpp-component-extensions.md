@@ -1,7 +1,7 @@
 ---
-title: sealed （c + + 元件延伸模組） |Microsoft Docs
+title: sealed (C + + /cli 和 C + + /CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 134ee819edc0698c4ffa067d38b715968f22590f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 211428335473f677f520ee14ad688e5ffcbda8fd
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439558"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327995"
 ---
-# <a name="sealed--c-component-extensions"></a>sealed (C++ 元件擴充功能)
+# <a name="sealed--ccli-and-ccx"></a>sealed (C + + /cli 和 C + + /CX)
 
 **密封**是 ref 類別的即時線上關鍵字表示，就無法覆寫虛擬成員，或類型不能用做基底型別。
 
 > [!NOTE]
-> ISO C + + 11 標準語言有[最終](../cpp/final-specifier.md)支援 Visual Studio 中的關鍵字。 使用**最終**上標準的類別，並**密封**ref 類別上。
+> ISO C + + 11 標準語言引進[最終](../cpp/final-specifier.md)關鍵字。 使用**最終**上標準的類別，並**密封**ref 類別上。
 
 ## <a name="all-runtimes"></a>所有執行階段
 
@@ -53,7 +53,7 @@ virtual return-type identifier() sealed {...};
 
 在第一個語法範例中，已密封類別。 在第二個範例中，已密封虛擬函式。
 
-**密封**關鍵字是有效的原生的目標，以及 Windows 執行階段和 common language runtime (CLR)。 如需詳細資訊，請參閱 <<c0> [ 覆寫規範和原生編譯](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)。
+使用**密封**ref 類別和其虛擬成員函式的關鍵字。 如需詳細資訊，請參閱 <<c0> [ 覆寫規範和原生編譯](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)。
 
 您可以在編譯時期偵測是否為型別密封格式，使用`__is_sealed(type)`類型特性。 如需詳細資訊，請參閱 <<c0> [ 類型特性的編譯器支援](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。
 
@@ -108,7 +108,7 @@ public:
    // the following override generates a compiler error
    virtual void g() override {
       System::Console::WriteLine("Y::g override of I1::g");
-   } 
+   }
    */
 };
 
@@ -150,4 +150,4 @@ public:
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)

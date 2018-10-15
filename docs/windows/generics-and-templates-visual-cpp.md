@@ -1,7 +1,7 @@
 ---
-title: 泛型和樣板 （Visual c + +） |Microsoft Docs
+title: 泛型和樣板 (C + + /cli CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f8a58e26b571c119d45cb981c582ebec335eface
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4d63d7620aa4d2cb83b954494172da9db55f6a2e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590998"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328216"
 ---
-# <a name="generics-and-templates-visual-c"></a>泛型和樣板 (Visual C++)
+# <a name="generics-and-templates-ccli"></a>泛型和樣板 (C + + /cli CLI)
 
 泛型和範本都是這兩種語言功能提供支援的參數化類型。 不過，他們會不同，而且有不同的用途。 本主題提供的許多差異的概觀。
 
@@ -61,7 +61,7 @@ ms.locfileid: "42590998"
 
 下列範例顯示同時使用範本和泛型的簡單範例。 在此範例中，此範本類別會將透過其參數傳遞給泛型類型。 反向執行則不可能。
 
-當您想要建置在現有的一般 API 使用的是 Visual c + + 組件中，本機範本程式碼，或當您需要將泛型型別，利用範本不 supporte 的某些功能的一層額外的參數化時，就可以使用這個慣用語泛型的 d。
+無法使用此慣用句，當您想要建置在現有的一般 API 與範本程式碼的本機 C + + /cli CLI 組件，或當您需要新增一層額外的參數化泛型型別，才能利用範本的某些功能不支援 by 泛型。
 
 ### <a name="code"></a>程式碼
 

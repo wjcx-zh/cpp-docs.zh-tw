@@ -21,16 +21,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa840b2fd6e143715c924d0f7ac67e78eb8306a4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3ca548fec9a70a04b0bdb9a5169021fc43f149eb
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417538"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328534"
 ---
 # <a name="csize-class"></a>CSize 類別
 
-類似於 Windows[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構中，於實作相對座標或位置。
+類似於實作相對座標或位置的 Windows [SIZE](https://msdn.microsoft.com/library/windows/desktop/dd145106) 結構。
 
 ## <a name="syntax"></a>語法
 
@@ -100,7 +100,7 @@ CSize( DWORD dwSize) throw();
 [大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或`CSize`物件，用來初始化`CSize`。
 
 *initPt*  
-[點](../../mfc/reference/point-structure1.md)結構或`CPoint`物件，用來初始化`CSize`。
+[點](../../mfc/reference/point-structure.md)結構或`CPoint`物件，用來初始化`CSize`。
 
 *dwSize*  
 DWORD 用來初始化`CSize`。 低序位字`cx`成員與高序位文字是`cy`成員。

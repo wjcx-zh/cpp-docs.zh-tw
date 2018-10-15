@@ -1,7 +1,7 @@
 ---
-title: Visual c + + 中的泛型概觀 |Microsoft Docs
+title: 概觀泛型在 C + + /cli CLI |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -22,20 +22,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c1a6e9b9734fbb836d9e061b15534e23b95b29c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9e6240fd5e33f44c42d8a0d33302b9ef4cf9f8bb
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590934"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327852"
 ---
-# <a name="overview-of-generics-in-visual-c"></a>Visual C++ 中的泛型概觀
+# <a name="overview-of-generics-in-ccli"></a>概觀泛型在 C + + /cli CLI
 
 泛型是通用語言執行平台 (CLR) 所支援的參數化類型。 參數化類型是以使用泛型時指定的未知型別參數定義的類型。
 
 ## <a name="why-generics"></a>為什麼選擇泛型？
 
-C++ 支援範本，而且範本和泛型都支援使用參數化類型建立具類型的集合類別。 不過，範本會提供編譯時間參數化。 您無法參考包含範本定義的組件，並建立範本的新特製化。 一旦編譯之後，特製化的範本外觀就像任何其他類別或方法。 相反地，泛型會在 MSIL 中做為參數化類型發出，執行階段會將它視為參數化類型。參考包含泛型類型之組件的原始程式碼可以建立泛型類型的特製化。 如需有關比較 Visual c + + 範本和泛型的請參閱[泛型和樣板 （Visual c + +）](../windows/generics-and-templates-visual-cpp.md)。
+C++ 支援範本，而且範本和泛型都支援使用參數化類型建立具類型的集合類別。 不過，範本會提供編譯時間參數化。 您無法參考包含範本定義的組件，並建立範本的新特製化。 一旦編譯之後，特製化的範本外觀就像任何其他類別或方法。 相反地，泛型會在 MSIL 中做為參數化類型發出，執行階段會將它視為參數化類型。參考包含泛型類型之組件的原始程式碼可以建立泛型類型的特製化。 標準 c + + 範本和泛型的比較資訊，請參閱[泛型和樣板 (C + + /cli CLI)](../windows/generics-and-templates-visual-cpp.md)。
 
 ## <a name="generic-functions-and-types"></a>泛型函式和類型
 
@@ -132,13 +132,13 @@ int main() {
 }
 ```
 
-這些限制也適用於運算子。 不受條件約束的泛型類型參數不能使用 `==` 和 `!=` 運算子比較類型參數的兩個執行個體。以免該類型不支援這些運算子。 這些檢查是泛型所必要的，但不適合範本，因為泛型可能會在執行階段以任何符合條件約束的類別特製化，而那時再檢查使用的成員是否無效已經太慢。
+這些限制也適用於運算子。 不受條件約束的泛型型別參數不能使用 `==` 和 `!=` 運算子比較型別參數的兩個執行個體。以免該類型不支援這些運算子。 這些檢查是泛型所必要的，但不適合範本，因為泛型可能會在執行階段以任何符合條件約束的類別特製化，而那時再檢查使用的成員是否無效已經太慢。
 
-預設的類型參數執行個體可以使用 `()` 運算子建立。 例如: 
+預設的型別參數執行個體可以使用 `()` 運算子建立。 例如: 
 
 `T t = T();`
 
-其中 `T` 是泛型類別或方法定義中的類型參數，會將變數初始化為其預設值。 如果 `T` 是 ref 類別，它會是 null 指標；如果 `T` 是實值類別，則物件會初始化為零。 這就叫做*預設初始設定式*。
+其中 `T` 是泛型類別或方法定義中的型別參數，會將變數初始化為其預設值。 如果 `T` 是 ref 類別，它會是 null 指標；如果 `T` 是實值類別，則物件會初始化為零。 這就叫做*預設初始設定式*。
 
 ## <a name="see-also"></a>另請參閱
 

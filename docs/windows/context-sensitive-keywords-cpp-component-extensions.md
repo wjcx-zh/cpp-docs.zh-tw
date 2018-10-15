@@ -1,7 +1,7 @@
 ---
-title: 即時線上關鍵字 （c + + 元件延伸模組） |Microsoft Docs
+title: 即時線上關鍵字 (C + + /cli 和 C + + /CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 785836f575c0dec3a0e08c32063116f01e16d4fe
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5d02939e61da4a247b46da5637c38d01e7990c49
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605235"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327930"
 ---
-# <a name="context-sensitive-keywords--c-component-extensions"></a>視內容而有所區別的關鍵字 (C++ 元件擴充功能)
+# <a name="context-sensitive-keywords--ccli-and-ccx"></a>即時線上關鍵字 (C + + /cli 和 C + + /CX)
 
 *即時線上關鍵字*是只在特定內容中辨識的語言項目。 在特定內容之外，內容相關性關鍵字可以是使用者定義的符號。
 
@@ -48,7 +48,7 @@ ms.locfileid: "42605235"
 
 - `internal`
 
-- [常值](../windows/literal-cpp-component-extensions.md)
+- [名稱](../windows/literal-cpp-component-extensions.md)
 
 - [override](../windows/override-cpp-component-extensions.md)
 
@@ -111,4 +111,4 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)

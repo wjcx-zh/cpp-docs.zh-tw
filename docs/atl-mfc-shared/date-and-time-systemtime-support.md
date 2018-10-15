@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a4628d2db9c454bb689d4eb8316b77986588047
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 57bd89cac53fa7092453b80e9f7e65bccf4f789f
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860481"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328151"
 ---
 # <a name="date-and-time-systemtime-support"></a>日期和時間： SYSTEMTIME 支援
 
 [CTime](../atl-mfc-shared/reference/ctime-class.md)類別具有建構函式會接受來自 Win32 的系統及檔案時間。 如果您使用 `CTime` 物件來進行這些目的，則必須相應地修改其初始化，如本文章所述。
 
-SYSTEMTIME 結構的詳細資訊，請參閱[SYSTEMTIME](../mfc/reference/systemtime-structure1.md)。 FILETIME 結構的詳細資訊，請參閱[FILETIME](../mfc/reference/filetime-structure.md)。
+SYSTEMTIME 結構的詳細資訊，請參閱[SYSTEMTIME](../mfc/reference/systemtime-structure.md)。 FILETIME 結構的詳細資訊，請參閱[FILETIME](../mfc/reference/filetime-structure.md)。
 
 MFC 仍然提供 `CTime` 建構函式，它們接受 MS-DOS 樣式的時間引數，但從 MFC 3.0 版開始，`CTime` 類別也支援接受 Win32 `SYSTEMTIME` 結構的建構函式，以及另一個接受 Win32 `FILETIME` 結構的建構函式。
 

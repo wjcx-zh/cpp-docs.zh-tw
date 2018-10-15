@@ -1,7 +1,7 @@
 ---
 title: 泛型函式 (C + + /cli CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b8c51b3468a636335a74b8a4206a6b533d3a200b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0d687dfbee48105001d3be04fd4918b9889e2d04
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398855"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327696"
 ---
 # <a name="generic-functions-ccli"></a>泛型函式 (C++/CLI)
 
@@ -91,7 +91,7 @@ return-type identifier<type-parameter identifier(s)>
 
 泛型函式會宣告為泛型類型參數的函式。 它們可能在類別或結構或獨立的函式的方法。 單一泛型宣告隱含宣告了一系列的差異只在於不同的實際類型為泛型類型參數的替代的函式。
 
-Visual c + + 中，類別或結構的建構函式不可以宣告泛型型別參數使用。
+類別或結構的建構函式不可以宣告泛型型別參數使用。
 
 呼叫時，實際的類型取代泛型類型參數。 實際的型別可以明確指定使用類似於範本函式呼叫語法的角括號括住。 如果呼叫不具型別參數，編譯器會嘗試推斷實際的型別，從函式呼叫中所提供的參數。 如果預期的類型引數無法推算所使用的參數，編譯器會報告錯誤。
 
@@ -193,5 +193,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [泛型](../windows/generics-cpp-component-extensions.md)

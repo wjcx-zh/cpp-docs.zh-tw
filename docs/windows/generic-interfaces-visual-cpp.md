@@ -1,7 +1,7 @@
 ---
-title: 泛型介面 （Visual c + +） |Microsoft Docs
+title: 泛型介面 (C + + /cli CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2065b96875f2c441b24eb69f8ca51b06fe5717f0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e36a4c1d9604753fd4bff6a51df060e1d26822fb
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444478"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328359"
 ---
-# <a name="generic-interfaces-visual-c"></a>泛型介面 (Visual C++)
+# <a name="generic-interfaces-ccli"></a>泛型介面 (C + + /cli CLI)
 
 套用至型別參數，在類別上的限制會套用至型別參數，在介面上的相同 (請參閱[泛型類別 (C + + /cli CLI)](../windows/generic-classes-cpp-cli.md))。
 

@@ -1,7 +1,7 @@
 ---
 title: 類型轉送 (C + + /cli CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,28 +15,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 806003e33e60b5146bdd722fa5248011cd4939c0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7fe70de2503134bf76f5e1c7099773737cc153f8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396543"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328333"
 ---
 # <a name="type-forwarding-ccli"></a>類型轉送 (C++/CLI)
 
 *類型轉送*可讓您將類型移一個組件 （A） 從另一個組件 （組件 B），使得您不需要重新編譯使用組件 a 的用戶端
 
-## <a name="all-platforms"></a>所有平台
-
-在 所有執行階段不支援此功能。
-
 ## <a name="windows-runtime"></a>Windows 執行階段
 
 在 Windows 執行階段不支援此功能。
-
-### <a name="requirements"></a>需求
-
-編譯器選項：`/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
@@ -44,7 +36,7 @@ ms.locfileid: "46396543"
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 #using "new.dll"
 [assembly:TypeForwardedTo(type::typeid)];
 ```
@@ -97,7 +89,7 @@ ms.locfileid: "46396543"
 
 3. 刪除`MyClass`類型從原始程式檔用來建置 A.dll，並將它取代為下列定義：
 
-    ```
+    ```cpp
     #using "B.dll"
     [assembly:TypeForwardedTo(MyClass::typeid)];
     ```

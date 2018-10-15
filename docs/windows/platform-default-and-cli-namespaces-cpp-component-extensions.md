@@ -1,7 +1,7 @@
 ---
-title: Platform、 default 和 cli 命名空間 （c + + 元件延伸模組） |Microsoft Docs
+title: Platform、 default 和 cli 命名空間 (C + + /cli 和 C + + /CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,20 +19,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 726c9e2653f2914c01d4a45a572614438e12bc8f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a70fb5317f42e98ccddb21fe66e328e1cc6f7643
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194645"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328021"
 ---
-# <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Platform、default 和 cli 命名空間 (C++ 元件擴充功能)
+# <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Platform、 default 和 cli 命名空間 (C + + /cli 和 C + + /CX)
 
 命名空間會限定語言項目的名稱，因此名稱不會與原始程式碼中其他位置的相同名稱發生衝突。 例如，名稱衝突可能會使編譯器無法辨識[即時線上關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。 編譯器會使用命名空間，但是命名空間不會保留在編譯的組件中。
 
 ## <a name="all-runtimes"></a>所有執行階段
 
-當您建立專案時，Visual C++ 會為專案提供預設的命名空間。 雖然 Windows 執行階段中的.winmd 檔案名稱必須符合的根命名空間的名稱，您可以手動命名的命名空間。
+Visual Studio 在建立專案時，會提供您的專案的預設命名空間。 您可以手動重新命名命名空間中，雖然 C + + /CX 的.winmd 檔案名稱必須符合的根命名空間的名稱。
 
 ## <a name="windows-runtime"></a>Windows 執行階段
 
@@ -90,4 +90,4 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)

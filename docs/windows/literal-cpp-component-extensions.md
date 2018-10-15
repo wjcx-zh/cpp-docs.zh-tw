@@ -1,7 +1,7 @@
 ---
-title: 常值 （c + + 元件延伸模組） |Microsoft Docs
+title: 常值 (C + + /cli 和 C + + /CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76a57261b28679c4f05b677dc7b49008535c921b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8168b3cd981bb288df35659ffd3520a7c8597d1e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596442"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328062"
 ---
-# <a name="literal-c-component-extensions"></a>literal (C++ 元件擴充功能)
+# <a name="literal-ccli-and-ccx"></a>常值 (C + + /cli 和 C + + /CX)
 
 變數 （資料成員） 將會標示**常值**中 **/clr**編譯為原生相當於**靜態 const**變數。
 
@@ -137,4 +137,4 @@ class B {
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)

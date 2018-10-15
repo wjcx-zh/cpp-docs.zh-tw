@@ -1,7 +1,7 @@
 ---
-title: Windows 執行階段和 Managed 的樣板 （c + + 元件延伸模組） |Microsoft Docs
+title: Windows 執行階段和 Managed 的樣板 (C + + /cli 和 C + + /CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a7d08354bcd2b0b0d8cf1db6e4bd58fb9821708
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b83aa54b9f9697fddbefc6da29e7cf99d497cc12
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591445"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328294"
 ---
-# <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows 執行階段和 Managed 樣板 (C++ 元件擴充功能)
+# <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows 執行階段和 Managed 的樣板 (C + + /cli 和 C + + /CX)
 
 範本可讓您定義 Windows 執行階段或通用語言執行平台 (CLR) 類型的原型，然後使用不同的範本型別參數具現化該類型的變化。
 
@@ -50,7 +50,7 @@ ms.locfileid: "42591445"
 
 ### <a name="examples"></a>範例
 
-雖然您可以用 Managed 類型範本參數具現化泛型類型，但是無法使用泛型類型範本參數具現化 Managed 範本。 這是因為泛型類型會在執行階段解析。 如需詳細資訊，請參閱 <<c0> [ 泛型和樣板 （Visual c + +）](../windows/generics-and-templates-visual-cpp.md)。
+雖然您可以用 Managed 類型範本參數具現化泛型類型，但是無法使用泛型類型範本參數具現化 Managed 範本。 這是因為泛型類型會在執行階段解析。 如需詳細資訊，請參閱 <<c0> [ 泛型和樣板 (C + + /cli CLI)](../windows/generics-and-templates-visual-cpp.md)。
 
 ```cpp
 // managed_templates.cpp
@@ -142,4 +142,4 @@ class A <int> {};
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)

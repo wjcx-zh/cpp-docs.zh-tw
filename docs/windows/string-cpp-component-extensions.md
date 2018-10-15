@@ -1,7 +1,7 @@
 ---
-title: 字串 （c + + 元件延伸模組） |Microsoft Docs
+title: 字串 (C + + /cli 和 C + + /CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/08/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,24 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d6b6ce066c84056997ec9b54c9d74e782064df4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b835f1d507c8e577f8b44ca314422dd5b6f2ca46
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408397"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327422"
 ---
-# <a name="string--c-component-extensions"></a>字串 (C++ 元件擴充功能)
-
-Visual c + + 編譯器支援*字串*，這些是代表一連串的字元為文字的物件。 Visual c + + 支援字串變數，其值是隱含的與常值，其值是明確加上引號的字串。
-
-## <a name="all-runtimes"></a>所有執行階段
+# <a name="string--ccli-and-ccx"></a>字串 (C + + /cli 和 C + + /CX)
 
 Windows 執行階段和通用語言執行平台代表字串做為其配置的記憶體自動管理的物件。 也就是說，您不需要明確的字串變數超出範圍或您的應用程式結束時，捨棄字串的記憶體。 若要表示的字串物件的存留期自動管理，宣告 string 型別與[控制代碼物件 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)修飾詞。
 
 ## <a name="windows-runtime"></a>Windows 執行階段
 
-Windows 執行階段架構需要實作的 Visual c + +`String`中的資料類型`Platform`命名空間。 為了方便起見，Visual c + + 也提供`string`資料類型，這是的同義字`Platform::String`，請在`default`命名空間。
+Windows 執行階段架構要求`String`資料型別位於`Platform`命名空間。 為了方便起見，Visual c + + 也提供`string`資料類型，這是的同義字`Platform::String`，請在`default`命名空間。
 
 ### <a name="syntax"></a>語法
 
@@ -51,8 +47,6 @@ using namespace default;
 編譯器選項：`/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
-
-本主題將討論當您執行使用 Visual c + + 編譯器處理字串常值的方式`/clr`編譯器選項。 若要使用`/clr`，您也必須使用 common language runtime (CLR)、 C + + /cli 語法和受管理物件。 如需詳細資訊`/clr`，請參閱 < [/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。
 
 進行編譯時`/clr`，編譯器會將字串常值轉換為字串型別的<xref:System.String>。 若要保留與現有程式碼的回溯相容性是兩個例外狀況：
 
@@ -91,9 +85,9 @@ using namespace default;
 using namespace System;
 
 int main() {
-   String ^ a = gcnew String("abc");
-   String ^ b = "def";   // same as gcnew form
-   Object ^ c = gcnew String("ghi");
+   String^ a = gcnew String("abc");
+   String^ b = "def";   // same as gcnew form
+   Object^ c = gcnew String("ghi");
 
    char d[100] = "abc";
 
@@ -111,12 +105,12 @@ int main() {
    // concatenation of a System::String and string literal
    Console::WriteLine(a + "zzz");
 
-   // you can append to a System::String ^
+   // you can append to a System::String^
    Console::WriteLine(a + 1);
    Console::WriteLine(a + 'a');
    Console::WriteLine(a + 3.1);
 
-   // test System::String ^ for equality
+   // test System::String^ for equality
    a += b;
    Console::WriteLine(a);
    a = b;
@@ -127,12 +121,12 @@ int main() {
    if (a != b)  
       Console::WriteLine("a and b are not equal");
 
-   // System:String ^ and tracking reference
+   // System:String^ and tracking reference
    String^% rstr1 = a;
    Console::WriteLine(rstr1);
 
-   // testing an empty System::String ^
-   String ^ n;
+   // testing an empty System::String^
+   String^ n;
    if (n == nullptr)  
       Console::WriteLine("n is empty");
 }
@@ -179,29 +173,29 @@ using namespace System;
 void Test_Overload(const char * a) {
    Console::WriteLine("const char * a");
 }
-void Test_Overload(String ^ a) {
-   Console::WriteLine("String ^ a");
+void Test_Overload(String^ a) {
+   Console::WriteLine("String^ a");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(String ^ a, String ^ b) {
-   return ("overloaded +(String ^ a, String ^ b)");
+String^ operator +(String^ a, String^ b) {
+   return ("overloaded +(String^ a, String^ b)");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(Object ^ a, String ^ b) {
-   return ("overloaded +(Object ^ a, String ^ b)");
+String^ operator +(Object^ a, String^ b) {
+   return ("overloaded +(Object^ a, String^ b)");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(String ^ a, Object ^ b) {
-   return ("overloaded +(String ^ a, Object ^ b)");
+String^ operator +(String^ a, Object^ b) {
+   return ("overloaded +(String^ a, Object^ b)");
 }
 
 int main() {
-   String ^ a = gcnew String("abc");
-   String ^ b = "def";   // same as gcnew form
-   Object ^ c = gcnew String("ghi");
+   String^ a = gcnew String("abc");
+   String^ b = "def";   // same as gcnew form
+   Object^ c = gcnew String("ghi");
 
    char d[100] = "abc";
 
@@ -215,13 +209,13 @@ int main() {
 ```
 
 ```Output
-overloaded +(String ^ a, String ^ b)
+overloaded +(String^ a, String^ b)
 
-overloaded +(String ^ a, Object ^ b)
+overloaded +(String^ a, Object^ b)
 
-overloaded +(Object ^ a, String ^ b)
+overloaded +(Object^ a, String^ b)
 
-String ^ a
+String^ a
 
 const char * a
 ```
@@ -277,6 +271,6 @@ System.String
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [字串和字元常值](../cpp/string-and-character-literals-cpp.md)<br/>
 [/clr (通用語言執行平台編譯)](../build/reference/clr-common-language-runtime-compilation.md)

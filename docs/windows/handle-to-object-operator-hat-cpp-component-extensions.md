@@ -1,7 +1,7 @@
 ---
-title: 物件控制代碼運算子 (^) （c + + 元件延伸模組） |Microsoft Docs
+title: 物件控制代碼運算子 (^) (C + + /cli 和 C + + /CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa72b6ec2983c0d7b9850578e743d03b7e3946e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d7fb74dcff370b314df5da5428ba3e406023acbe
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410854"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327969"
 ---
-# <a name="handle-to-object-operator---c-component-extensions"></a>物件控制代碼運算子 (^) (C++ 元件擴充功能)
+# <a name="handle-to-object-operator---ccli-and-ccx"></a>物件控制代碼運算子 (^) (C + + /cli 和 C + + /CX)
 
 *控制代碼宣告子*(`^`，唸成"hat")，修改型別[規範](../cpp/overview-of-declarators.md)來表示，宣告的物件時，應會自動刪除系統判斷此物件是無法再存取。
 
@@ -34,7 +34,7 @@ ms.locfileid: "46410854"
 
 編譯器會使用 COM*參考計數*機制來判斷是否物件已不再使用，且可以刪除。 究其原因是，從 Windows 執行階段介面衍生的物件實際上是 COM 物件。 當物件建立或複製時參考計數遞增，當物件設定為 null 或超出範圍時則遞減。 如果參考計數歸零，物件會自動並立即刪除。
 
-控制代碼宣告子的優點是，在 COM 中，必須明確地管理物件的參考計數 (這個程序相當繁瑣且易錯)， 也就是，若要遞增和遞減參考計數，必須呼叫物件的 AddRef() 和 Release() 方法。 不過，如果以控制代碼宣告子宣告物件，Visual C++ 編譯器會產生自動調整參考計數的程式碼。
+控制代碼宣告子的優點是，在 COM 中，必須明確地管理物件的參考計數 (這個程序相當繁瑣且易錯)， 也就是，若要遞增和遞減參考計數，必須呼叫物件的 AddRef() 和 Release() 方法。 不過，如果您宣告物件控制代碼宣告子使用時，編譯器會產生自動調整參考計數的程式碼。
 
 如需如何具現化物件的資訊，請參閱[ref 新](../windows/ref-new-gcnew-cpp-component-extensions.md)。
 
@@ -47,8 +47,6 @@ ms.locfileid: "46410854"
 系統會使用 CLR*記憶體回收行程*機制來判斷是否物件已不再使用，且可以刪除。 Common Language Runtime 會維持用以配置物件的堆積，並使用您程式中的 Managed 參考 (變數)，指出物件在堆積上的位置。 當物件不再使用時，物件在堆積上佔用的記憶體會被釋放。 記憶體回收行程會定期壓縮堆積，以更有效地利用釋放的記憶體。 壓縮堆積可能會移動堆積上的物件，而使得 Managed 參考所參考的位置無效。 然而，記憶體回收行程知道所有 Managed 參考的位置，而且會自動更新以指出物件在堆積上目前的位置。
 
 因為原生 C++ 指標 (`*`) 和參考 (`&`) 不是 Managed 參考，所以記憶體回收行程無法自動更新它們所指的位址。 若要解決這個問題，請使用控制代碼宣告子，指定記憶體回收行程知道且會自動更新的變數。
-
-在 Visual C++ 2002 和 Visual C++ 2003 中，`__gc *` 是用來宣告在 Managed 堆積上的物件。  在新語法中，`^` 取代 `__gc *`。
 
 如需詳細資訊，請參閱 <<c0> [ 如何： 以原生類型宣告處理](../dotnet/how-to-declare-handles-in-native-types.md)。
 
@@ -235,5 +233,5 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [追蹤參考運算子](../windows/tracking-reference-operator-cpp-component-extensions.md)

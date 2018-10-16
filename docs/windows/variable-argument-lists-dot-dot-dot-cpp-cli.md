@@ -1,7 +1,7 @@
 ---
 title: 變數引數清單 （...）(C + + /CLI CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e58b7ea2d8db0c3d36ad36aaccbf23957c449a77
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0e95f963636e50bdf453835ee920463e6e266a2a
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590459"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327800"
 ---
 # <a name="variable-argument-lists--ccli"></a>變數引數清單 (...) (C++/CLI)
 
-此範例示範如何使用`...`Visual c + +，來實作具有可變數目的引數的函式的語法。
+此範例示範如何使用`...`語法，在 C + + /cli 來實作具有可變數目的引數的函式的 CLI。
 
 > [!NOTE]
 > 本主題適用於 C + + /cli CLI。 如需有關使用資訊`...`ISO 標準 c + +，請參閱[省略符號和 Variadic 範本](../cpp/ellipses-and-variadic-templates.md)省略符號和預設引數[後置運算式](../cpp/postfix-expressions.md)。

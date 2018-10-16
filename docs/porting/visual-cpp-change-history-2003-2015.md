@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f0e5ce08e362cef0fd625036a92c1d13885ded
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: bcf3ce1f0ddc5003886c367cfe5db8968a911ee9
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821539"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083979"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
 
@@ -282,7 +282,7 @@ ms.locfileid: "48821539"
 
 - **時鐘**
 
-   在舊版中，會使用 Windows API [GetSystemTimeAsFileTime](https://msdn.microsoft.com/library/windows/desktop/ms724397.aspx) 實作 [clock](../c-runtime-library/reference/clock.md) 函式。 連同這項實作，clock 函式會受系統時間影響，因此並不一定是單調函式。 已根據 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) 重新實作 clock 函式，因此該函式現在是單調函式。
+   在舊版中，會使用 Windows API [GetSystemTimeAsFileTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) 實作 [clock](../c-runtime-library/reference/clock.md) 函式。 連同這項實作，clock 函式會受系統時間影響，因此並不一定是單調函式。 已根據 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) 重新實作 clock 函式，因此該函式現在是單調函式。
 
 - **fstat 和 _utime**
 
@@ -2545,7 +2545,7 @@ ms.locfileid: "48821539"
 
 - **屬性化 ATL 程式碼支援已標示為即將淘汰** (層級 1 (`/W1`) 預設為開啟)
 
-   舊版編譯器支援屬性化 ATL 程式碼。 因為從 [Visual Studio 2008 開始](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx)下一階段對屬性化 ATL 支援的移除，所以已淘汰屬性化 ATL 程式碼。 編譯器現在會發出編譯器警告 C4467，協助識別這類已標示為即將淘汰的程式碼。
+   舊版編譯器支援屬性化 ATL 程式碼。 因為從 [Visual Studio 2008 開始](https://msdn.microsoft.com/library/bb384632)下一階段對屬性化 ATL 支援的移除，所以已淘汰屬性化 ATL 程式碼。 編譯器現在會發出編譯器警告 C4467，協助識別這類已標示為即將淘汰的程式碼。
 
     ```Output
     warning C4467: Usage of ATL attributes is deprecated

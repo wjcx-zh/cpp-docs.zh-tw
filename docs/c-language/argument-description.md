@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f79f8648c2c0d12bf521c38e2db025a8841ab927
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2b8508b5a14e67092339a456f5b85f78d17906a5
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061080"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082536"
 ---
 # <a name="argument-description"></a>引數描述
 
@@ -33,7 +33,7 @@ ms.locfileid: "46061080"
 
 `argv` 參數是以 null 終止之字串的指標陣列，表示程式引數。 陣列的每個元素都會指向傳遞至 **main** (或 **wmain**) 之引數的字串表示。 (如需陣列的詳細資訊，請參閱[陣列宣告](../c-language/array-declarations.md))。`argv` 參數可以宣告為 `char` 類型的指標陣列 (`char *argv[]`)，或是宣告為 `char` 類型指標的指標 (`char **argv`)。 對於 **wmain**，`argv` 參數可以宣告為 `wchar_t` 類型的指標陣列 (`wchar_t *argv[]`)，或宣告為 `wchar_t` 類型指標的指標 (`wchar_t **argv`)。
 
-依照慣例，`argv`**[0]** 是對程式叫用的命令。  不過，您可以使用 [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) 來繁衍處理序，且如果您同時使用第一個與第二個引數 (`lpApplicationName` 與 `lpCommandLine`)，`argv`**[0]** 可能不是可執行檔名稱，請使用 [GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197) 來擷取可執行檔名稱。
+依照慣例，`argv`**[0]** 是對程式叫用的命令。  不過，您可以使用 [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) 來繁衍處理序，且如果您同時使用第一個與第二個引數 (`lpApplicationName` 與 `lpCommandLine`)，`argv`**[0]** 可能不是可執行檔名稱，請使用 [GetModuleFileName](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) 來擷取可執行檔名稱。
 
 最後一個指標 (`argv[argc]`) 是 **NULL**。 (如需取得環境變數資訊的替代方法，請參閱*執行階段程式庫參考*中的[getenv](../c-runtime-library/reference/getenv-wgetenv.md))。
 

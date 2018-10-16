@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01ee370b4fd96419ce095fa9a93450b98b241dd2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 51921f8e55b9d4ce4e1875f5216984fe3257ca97
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448567"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084109"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>從 2003 到 2015 的 Visual C++ 新功能
 
@@ -1360,7 +1360,7 @@ ms.locfileid: "46448567"
 
 - **屬性化 ATL 程式碼支援已標示為即將淘汰** (層級 1 (`/W1`) 預設為開啟)
 
-   舊版編譯器支援屬性化 ATL 程式碼。 [自 Visual C++ 2008 開始下一個階段移除對屬性化 ATL 程式碼支援的下一個階段](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx)起，即已將屬性化 ATL 程式碼標示為即將淘汰。 編譯器現在會發出編譯器警告 C4467，協助識別這類已標示為即將淘汰的程式碼。
+   舊版編譯器支援屬性化 ATL 程式碼。 [自 Visual C++ 2008 開始下一個階段移除對屬性化 ATL 程式碼支援的下一個階段](https://msdn.microsoft.com/library/bb384632)起，即已將屬性化 ATL 程式碼標示為即將淘汰。 編譯器現在會發出編譯器警告 C4467，協助識別這類已標示為即將淘汰的程式碼。
 
    ```Output
     warning C4467: Usage of ATL attributes is deprecated

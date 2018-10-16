@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2870aa742806671e39728c3b73604dcf4e810e9
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: e8251f45d07e8a410c41a89fbc618839e9bbb838
+ms.sourcegitcommit: 6a6b2061db9d51c5cc79775512de54589a4d2fbc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083082"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347224"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>使用 C++ 設計 Windows 應用程式概觀
 

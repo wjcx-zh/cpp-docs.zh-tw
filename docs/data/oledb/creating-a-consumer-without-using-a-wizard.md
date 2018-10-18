@@ -1,7 +1,7 @@
 ---
 title: 未使用精靈建立消費者 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a20abb132d0446874b099119dc6c54979aef4638
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7ce6949e582142e208058b4fa59d02008513e29f
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46023588"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410729"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>未使用精靈建立消費者
 
@@ -28,7 +28,7 @@ ms.locfileid: "46023588"
   
 若要新增 OLE DB 取用者支援，而不使用 ATL OLE DB 消費者精靈：  
   
-- 在 Stdafx.h 檔案中，附加下列`#include`陳述式：  
+- 在 pch.h 檔案中，附加下列`#include`陳述式：  
   
     ```cpp  
     #include <atlbase.h>  
@@ -38,10 +38,10 @@ ms.locfileid: "46023588"
   
 以程式設計的方式，取用者通常會執行下列一連串作業：  
   
-- 建立繫結至區域變數的資料行的使用者記錄類別。 在此範例中，`CMyTableNameAccessor`是使用者記錄類別 (請參閱 <<c2> [ 筆使用者記錄](../../data/oledb/user-records.md))。 這個類別包含的資料行對應及參數對應。 宣告使用者記錄類別，針對您指定資料行對應; 中每個欄位中的資料成員針對每個這些資料成員，也宣告的狀態資料成員和長度資料成員。 如需詳細資訊，請參閱 <<c0> [ 精靈產生存取子中的欄位狀態資料成員](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)。  
+1. 建立繫結至區域變數的資料行的使用者記錄類別。 在此範例中，`CMyTableNameAccessor`是使用者記錄類別 (請參閱 <<c2> [ 筆使用者記錄](../../data/oledb/user-records.md))。 這個類別包含的資料行對應及參數對應。 宣告使用者記錄類別，針對您指定資料行對應; 中每個欄位中的資料成員針對每個這些資料成員，也宣告的狀態資料成員和長度資料成員。 如需詳細資訊，請參閱 <<c0> [ 精靈產生存取子中的欄位狀態資料成員](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)。  
   
     > [!NOTE]
-    >  如果您撰寫自己的消費者，資料變數必須出現之前的狀態和長度的變數。  
+    > 如果您撰寫自己的消費者，資料變數必須出現之前的狀態和長度的變數。  
   
 - 具現化的資料來源和工作階段。 決定何種存取子和資料列集使用，然後具現化資料列集，使用[CCommand](../../data/oledb/ccommand-class.md)或是[CTable](../../data/oledb/ctable-class.md):  
   
@@ -67,7 +67,7 @@ ms.locfileid: "46023588"
     hr = rs.Open();            // (Open also executes the command)  
     ```  
   
-- （選擇性） 設定資料列集屬性使用`CDBPropSet::AddProperty`，並將它們傳遞做為參數`rs.Open`。 如需如何做到這點的範例，請參閱中的 GetRowsetProperties[消費者精靈產生方法](../../data/oledb/consumer-wizard-generated-methods.md)。  
+- （選擇性） 設定資料列集屬性使用`CDBPropSet::AddProperty`，並將它們傳遞做為參數`rs.Open`。 如需如何做到這點的範例，請參閱**GetRowsetProperties**中[消費者精靈產生方法](../../data/oledb/consumer-wizard-generated-methods.md)。  
   
 - 您現在可以使用資料列集擷取/處理資料。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "46023588"
   
 - 呼叫`CoUnInitialize`解除初始化 com。 這通常稱為主要的程式碼中。  
   
-    ```  
+    ```cpp  
     CoUninitialize();  
     ```  
   

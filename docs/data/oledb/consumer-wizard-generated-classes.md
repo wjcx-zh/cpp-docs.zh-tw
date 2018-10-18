@@ -1,7 +1,7 @@
 ---
 title: 消費者精靈產生的類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/15/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -21,22 +21,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a4ffcb231824c120c90eaae1751a016ef63b8211
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a7498f15072f3b9687476ba7f6c291ebf5ff88cd
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106177"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410769"
 ---
 # <a name="consumer-wizard-generated-classes"></a>消費者精靈產生的類別
 
-當您使用 [ATL OLE DB 消費者精靈] 產生消費者時，您可以選擇使用 OLE DB 樣板或 OLE DB 屬性。 在這兩種情況下，精靈都會產生一個命令類別和一個使用者記錄類別。 命令類別包含程式碼，可以開啟資料來源和您在精靈中指定的資料列集。 使用者記錄類別包含您所選取之資料庫資料表的資料行對應。 不過，所產生的程式碼在每個案例中會有所不同：  
+當您使用**ATL OLE DB 消費者精靈**產生取用者，您可以選擇使用 OLE DB 樣板或 OLE DB 屬性。 在這兩種情況下，精靈都會產生一個命令類別和一個使用者記錄類別。 命令類別包含程式碼，可以開啟資料來源和您在精靈中指定的資料列集。 使用者記錄類別包含您所選取之資料庫資料表的資料行對應。 不過，所產生的程式碼在每個案例中會有所不同：  
   
-- 如果您選取樣板化消費者，精靈會產生一個命令類別和一個使用者記錄類別。 命令類別會具有您在精靈的 [類別] 方塊中輸入的名稱 (例如 `CProducts`)，而使用者記錄類別的名稱則以 "*ClassName*Accessor" 格式表示 (例如 `CProductsAccessor`)。 這兩個類別都會放在消費者的標頭檔。  
+- 如果您選取樣板化消費者，精靈會產生一個命令類別和一個使用者記錄類別。 命令類別會具有您輸入的名稱**類別**方塊中的精靈 (比方說， `CProducts`)，而使用者記錄類別將表單的名稱"*ClassName*存取子 」 （比方說，`CProductsAccessor`). 這兩個類別都會放在消費者的標頭檔。  
   
 - 如果您選取屬性化消費者，使用者記錄類別的名稱將以 "_*ClassName*Accessor" 格式表示，且將會插入。 也就是說，您將只能在文字編輯器中檢視命令類別。您只能以插入程式碼的方式檢視使用者記錄類別。 如需檢視插入程式碼的相關資訊，請參閱 [插入程式碼偵錯](/visualstudio/debugger/how-to-debug-injected-code)。  
   
-下列範例使用在 Northwind 資料庫的 Products 資料表建立的命令類別，來示範命令類別和使用者記錄類別的精靈產生的消費者程式碼。  
+下列範例會使用建立在上一個命令類別`Products`資料表的`Northwind`來示範命令類別和使用者記錄類別的精靈所產生的取用者程式碼的資料庫。  
   
 ## <a name="templated-user-record-classes"></a>樣板化的使用者記錄類別  
 
@@ -47,10 +47,10 @@ ms.locfileid: "46106177"
 使用者記錄類別的第一個部分，包含資料成員宣告與每個資料繫結資料行的狀態和長度資料成員。 如需這些資料成員的相關資訊，請參閱 [精靈產生的存取子中的欄位狀態資料成員](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)。  
   
 > [!NOTE]
->  如果您修改使用者記錄類別或撰寫自己的消費者，資料變數必須出現在狀態和長度變數之前。  
+> 如果您修改使用者記錄類別或撰寫自己的消費者，資料變數必須出現在狀態和長度變數之前。  
   
 > [!NOTE]
->  [ATL OLE DB 消費者精靈] 會使用`DB_NUMERIC`來繫結數值資料類型的類型。 它先前使用`DBTYPE_VARNUMERIC`(所述的格式是`DB_VARNUMERIC`類型; 請參閱 Oledb.h)。 如果您不使用精靈來建立消費者，建議您改用`DB_NUMERIC`。  
+> [ATL OLE DB 消費者精靈] 會使用`DB_NUMERIC`來繫結數值資料類型的類型。 它先前使用`DBTYPE_VARNUMERIC`(所述的格式是`DB_VARNUMERIC`類型; 請參閱 Oledb.h)。 如果您不使用精靈來建立消費者，建議您改用`DB_NUMERIC`。  
   
 ```cpp  
 // Products.H : Declaration of the CProducts class  
@@ -159,7 +159,7 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
   
 ## <a name="attribute-injected-user-record-classes"></a>插入屬性的使用者記錄類別  
 
-如果您使用資料庫屬性 ([db_command](../../windows/db-command.md) 或 [db_table](../../windows/db-table.md)) 來建立 OLE DB 消費者，屬性會插入使用者記錄類別，且其名稱將為 "_*ClassName*Accessor" 的形式。 例如，如果您將命令類別命名為 `COrders`，則使用者記錄類別將為 `_COrdersAccessor`。 雖然使用者記錄類別會出現在類別檢視中，但按兩下它即可巡覽至標頭檔中的命令或資料表類別。 在這些情況下，您只能藉由檢視插入屬性的程式碼，來檢視使用者記錄類別的實際宣告。  
+如果您使用資料庫屬性 ([db_command](../../windows/db-command.md) 或 [db_table](../../windows/db-table.md)) 來建立 OLE DB 消費者，屬性會插入使用者記錄類別，且其名稱將為 "_*ClassName*Accessor" 的形式。 例如，如果您將命令類別命名為 `COrders`，則使用者記錄類別將為 `_COrdersAccessor`。 雖然使用者記錄類別會出現在**類別檢視**，改為按兩下它即可巡覽至標頭檔中的命令或資料表類別。 在這些情況下，您只能藉由檢視插入屬性的程式碼，來檢視使用者記錄類別的實際宣告。  
   
 如果您加入或覆寫屬性化消費者的方法，可能會有潛在的錯亂。 例如，您可以將 `_COrdersAccessor` 建構函式加入 `COrders` 宣告，但請注意，事實上這會將建構函式加入插入的 `COrdersAccessor` 類別。 這類建構函式可以初始化資料行/參數，但您無法這樣建立複製建構函式，因為它無法直接具現化 `COrdersAccessor` 物件。 如果您需要直接在 `COrders` 類別上的建構函式 (或其他方法)，建議您定義衍生自 `COrders` 的新類別，並在那裡加入必要的方法。  
   

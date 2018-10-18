@@ -1,7 +1,7 @@
 ---
 title: 圖示影像編輯器 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/17/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -23,16 +23,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe7cad7fccabd7acc8af7ecf1f3711d5b0d636ce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ecd2b3b94f04a246242a33494a124171e95cae7c
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379186"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410664"
 ---
 # <a name="image-editor-for-icons"></a>圖示影像編輯器
 
-影像編輯器具有用於建立及編輯影像的多功能工具組，以及可協助您建立工具列點陣圖的功能。 除了點陣圖、圖示和游標之外，您還可使用 [ **影像** ] 功能表上的命令和 [ **影像編輯器** ] 工具列上的工具編輯 GIF 或 JPEG 格式的影像。
+當您按一下方案總管 中的映像檔 （例如.ico、.bmp、.png） 時，映像會在程式碼檔案的程式碼編輯器中開啟的相同方式中開啟在 影像編輯器 中。 影像編輯器索引標籤作用中時，您會看到與許多工具可用來建立和編輯映像的工具列。 除了點陣圖、圖示和游標之外，您還可使用 [ **影像** ] 功能表上的命令和 [ **影像編輯器** ] 工具列上的工具編輯 GIF 或 JPEG 格式的影像。
 
 使用影像編輯器可以：
 

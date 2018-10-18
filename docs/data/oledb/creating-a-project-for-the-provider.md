@@ -17,28 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 573cfdf3abda8f8190ceb7bca447e40130ea8610
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f4d776dbbfbab5e038e14c15a9c281c8edb09153
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46103317"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410872"
 ---
 # <a name="creating-a-project-for-the-provider"></a>為提供者建立專案
 
-### <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>若要建立的 OLE DB 提供者所在的專案  
+## <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>若要建立的 OLE DB 提供者所在的專案  
   
 1. 從 [檔案] 功能表中，依序按一下 [新增] 和 [專案]。  
   
      [ **新增專案** ] 對話方塊隨即出現。  
   
-1. 在 專案類型 窗格中，按一下 Visual c + + 專案資料夾。 在 [範本] 窗格中，按一下**ATL 專案**。  
+1. 在 **專案類型**窗格中，按一下**Visual c + + 專案**資料夾。 在 **範本**窗格中，按一下**ATL 專案**。  
   
 1. 在 **名稱**方塊中，輸入專案的名稱，然後按一下**確定**。  
   
-     [ATL 專案精靈] 隨即出現。  
+     **ATL 專案精靈**隨即出現。  
   
-1. 在 [ATL 專案精靈] 中，選擇**動態連結程式庫 (DLL)** for**伺服器類型**。  
+1. 在  **ATL 專案精靈**，選擇**動態連結程式庫 (DLL)** for**應用程式類型**。  
   
 1. 按一下 [ **完成**]。  
   

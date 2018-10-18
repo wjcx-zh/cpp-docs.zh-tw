@@ -1,7 +1,7 @@
 ---
 title: 實作簡單消費者 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ce6f57846a0dcad79eead500286525e94c66a8e6
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: b407af3e6c105bdbb2f8d91aa9d854e6d877592c
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162291"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410690"
 ---
 # <a name="implementing-a-simple-consumer"></a>實作簡單消費者
 
@@ -211,75 +211,6 @@ ms.locfileid: "49162291"
     ```  
   
 如需有關書籤的詳細資訊，請參閱[使用書籤](../../data/oledb/using-bookmarks.md)。 書籤的範例也會顯示[更新資料列集](../../data/oledb/updating-rowsets.md)。  
-  
-## <a name="adding-xml-support-to-the-consumer"></a>將 XML 支援新增至取用者  
-
-中所述[存取 XML 資料](../../data/oledb/accessing-xml-data.md)，以從資料來源擷取 XML 資料的兩種方式： 使用[CStreamRowset](../../data/oledb/cstreamrowset-class.md) ，或使用[CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)。 這個範例會使用`CStreamRowset`，更有效率，但您需要有執行此範例應用程式的電腦上執行的 SQL Server 2000。  
-  
-### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>若要修改繼承 CStreamRowset 命令類別  
-  
-1. 在您先前建立取用者應用程式的情況下，變更您`CCommand`宣告，以指定`CStreamRowset`作為資料列集類別，如下所示：  
-  
-    ```cpp  
-    class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
-    ```  
-  
-### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>若要修改主要的程式碼，擷取並輸出 XML 資料  
-  
-1. 在您先前建立的主控台應用程式 MyCons.cpp 檔案中，變更主要的程式碼，來讀取，如下所示：  
-  
-    ```cpp  
-    ///////////////////////////////////////////////////////////////////////  
-    // MyCons.cpp : Defines the entry point for the console application.  
-    //  
-  
-    #include "stdafx.h"  
-    #include "Products.h"   
-    #include <iostream>  
-    #include <fstream>  
-    using namespace std;  
-  
-    int _tmain(int argc, _TCHAR* argv[])  
-    {  
-       HRESULT hr = CoInitialize(NULL);  
-  
-       // Instantiate rowset  
-       CProducts rs;  
-  
-       // Add variable declarations for the Read method to handle sequential stream data  
-       CHAR buffer[1001];  // Pointer to buffer into which data stream is read  
-       ULONG cbRead;       // Actual number of bytes read from the data stream  
-  
-       hr = rs.OpenAll();  
-  
-       // Open file output.txt for writing in overwrite mode  
-       ofstream outfile( "C:\\output.txt", ios::out );  
-  
-       if (!outfile)      // Test for invalid file  
-          return -1;  
-  
-       // The following loop reads 1000 bytes of the data stream at a time   
-       // until it reaches the end of the data stream  
-       for (;;)  
-       {  
-          // Read sequential stream data into buffer  
-          HRESULT hr = rs.m_spStream->Read(buffer, 1000, &cbRead);  
-          if (FAILED (hr))  
-             break;  
-          // Output buffer to file  
-          buffer[cbRead] = 0;  
-          outfile << buffer;  
-          // Test for end of data stream  
-          if (cbRead < 1000)  
-             break;  
-       }  
-  
-       rs.CloseAll();  
-       CoUninitialize();  
-  
-       return 0;  
-    }  
-    ```  
   
 ## <a name="see-also"></a>另請參閱  
 

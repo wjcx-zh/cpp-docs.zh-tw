@@ -47,16 +47,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2a70b39352f26d76e9199b9da46f679507b148ed
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: a93c36748eb01a1c647a2aa433196c7364f60744
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163112"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410807"
 ---
 # <a name="hstring-class"></a>HString 類別
 
-來管理使用 RAII 模式的 HSTRING 的存留期的協助程式類別。
+協助程式類別來管理的存留期[HSTRING](/windows/desktop/WinRT/hstring)使用 RAII 模式。
 
 ## <a name="syntax"></a>語法
 
@@ -66,7 +66,7 @@ class HString;
 
 ## <a name="remarks"></a>備註
 
-Windows 執行階段提供存取權透過 HSTRING 控制代碼的字串。 `HString`類別提供方便函式和運算子，以簡化 HSTRING 控制代碼的使用。 這個類別可以處理您透過使用 RAII 模式，它擁有的 HSTRING 的存留期。
+Windows 執行階段會提供透過字串存取[HSTRING](/windows/desktop/WinRT/hstring)控制代碼。 `HString`類別提供方便函式和運算子，以簡化 HSTRING 控制代碼的使用。 這個類別可以處理您透過使用 RAII 模式，它擁有的 HSTRING 的存留期。
 
 ## <a name="members"></a>成員
 

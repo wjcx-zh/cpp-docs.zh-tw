@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4708af3c0fa272a1ca803f549ce8953caccaa27
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 5c9f5beb0e3525de6df88e44248410810502962e
+ms.sourcegitcommit: 4cbde5d164d681204c4011dc95a921d75292f423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688172"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49459149"
 ---
 # <a name="masm-operators-reference"></a>MASM 運算子參考
 
@@ -36,7 +36,7 @@ ms.locfileid: "43688172"
 
 ||||
 |-|-|-|
-|[!(執行階段邏輯 not)](operator-logical-not-masm-run-time.md)|[！ = （不等於執行階段）](operator-not-equal-masm.md)|[&#124;&#124;(邏輯的執行階段或)](operator-logical-or.md)|
+|[\! (執行階段邏輯 not)](operator-logical-not-masm-run-time.md)|[\!= （不等於執行階段）](operator-not-equal-masm.md)|[&#124;&#124;(邏輯的執行階段或)](operator-logical-or.md)|
 |[& & (邏輯的執行階段和)](operator-logical-and-masm-run-time.md)|[< (執行階段小於)](operator-less-than-masm-run-time.md)|[\<= （小於或等於執行階段）](operator-less-or-equal-masm-run-time.md)|
 |[= = （等於執行階段）](operator-equal-masm-run-time.md)|[> （大於執行階段）](operator-greater-than-masm-run-time.md)|[> = （大於或等於執行階段）](operator-greater-or-equal-masm-run-time.md)|
 |[& (位元執行階段和)](operator-bitwise-and.md)|||
@@ -54,7 +54,7 @@ ms.locfileid: "43688172"
 
 ||||
 |-|-|-|
-|[!（字元常值）](operator-logical-not-masm.md)|[%（視為文字）](operator-percent.md)||
+|[\! （字元常值）](operator-logical-not-masm.md)|[%（視為文字）](operator-percent.md)||
 |[;;（視為註解）](operator-semicolons.md)|[&lt; &gt; （將視為一個常值）](operator-literal.md)|[& & （取代參數值）](operator-logical-and-masm.md)|
 
 ## <a name="miscellaneous"></a>其他

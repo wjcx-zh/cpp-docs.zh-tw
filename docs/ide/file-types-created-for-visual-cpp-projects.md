@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 939937ec79ae3e6d172b48d22368176088064397
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dba47b8464c7fcdd170df1819b65aa448d8f8aeb
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434345"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808417"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>為 Visual C++ 專案建立的檔案類型
 
@@ -105,4 +105,3 @@ ms.locfileid: "46434345"
 
 [建立和管理 Visual C++ 專案](../ide/creating-and-managing-visual-cpp-projects.md)<br>
 [Visual C++ 專案類型](../ide/visual-cpp-project-types.md)<br>
-[其他語言的精靈支援](../ide/wizard-support-for-other-languages.md)

@@ -26,7 +26,6 @@
 ### [屬性頁面 XML 檔案](property-page-xml-files.md)
 ### [.vcxproj 和.props 檔案結構](vcxproj-file-structure.md)
 ## [使用應用程式精靈建立桌面專案](creating-desktop-projects-by-using-application-wizards.md)
-### [其他語言的精靈支援](wizard-support-for-other-languages.md)
 ### [建立 Makefile 專案](creating-a-makefile-project.md)
 #### [Makefile 專案精靈](makefile-project-wizard.md)
 ##### [Makefile 專案精靈、應用程式設定](application-settings-makefile-project-wizard.md)

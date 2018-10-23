@@ -1,7 +1,7 @@
 ---
 title: CSimpleStringT 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7a4abff1faaa8fe93f15fb2d4a7e5ba15d6e434
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1f835558bb4d97f90857d44ef63e4b8f6075d2c0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434657"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809144"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT 類別
 
@@ -66,7 +66,7 @@ class CSimpleStringT
 
 ### <a name="parameters"></a>參數
 
-*BaseType*  
+*BaseType*<br/>
 字元類別的型別字串。 可以是下列其中一項：
 
 - **char** （適用於 ANSI 字元字串）。
@@ -151,13 +151,13 @@ void Append(PCXSTR pszSrc);
 ```
 #### <a name="parameters"></a>參數
 
-*strSrc*  
+*strSrc*<br/>
 `CSimpleStringT`来附加的物件。
 
-*pszSrc*  
+*pszSrc*<br/>
 字串，包含要附加的字元指標。
 
-*nLength*  
+*nLength*<br/>
 要附加的字元數。
 
 ### <a name="remarks"></a>備註
@@ -187,7 +187,7 @@ void AppendChar(XCHAR ch);
 ```
 #### <a name="parameters"></a>參數
 
-*ch*  
+*ch*<br/>
 要附加的字元
 
 ### <a name="remarks"></a>備註
@@ -209,13 +209,13 @@ static void CopyChars(
 
 #### <a name="parameters"></a>參數
 
-*pchDest*  
+*pchDest*<br/>
 字元字串指標。
 
-*pchSrc*  
+*pchSrc*<br/>
 字串，包含要複製的字元指標。
 
-*nChars*  
+*nChars*<br/>
 數目*pchSrc*来複製的字元。
 
 ### <a name="remarks"></a>備註
@@ -249,13 +249,13 @@ static void CopyCharsOverlapped(
 
 #### <a name="parameters"></a>參數
 
-*pchDest*  
+*pchDest*<br/>
 字元字串指標。
 
-*pchSrc*  
+*pchSrc*<br/>
 字串，包含要複製的字元指標。
 
-*nChars*  
+*nChars*<br/>
 數目*pchSrc*来複製的字元。
 
 ### <a name="remarks"></a>備註
@@ -280,19 +280,19 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
 ```
 #### <a name="parameters"></a>參數
 
-*strSrc*  
+*strSrc*<br/>
 將現有`CSimpleStringT`要複製到這個物件`CSimpleStringT`物件。
 
-*pchSrc*  
+*pchSrc*<br/>
 長度的字元陣列的指標*nLength*，未終止的 null。
 
-*pszSrc*  
+*pszSrc*<br/>
 要複製到這個 null 結尾字串`CSimpleStringT`物件。
 
-*nLength*  
+*nLength*<br/>
 中的字元數計數`pch`。
 
-*pStringMgr*  
+*pStringMgr*<br/>
 指向的記憶體管理員的`CSimpleStringT`物件。 如需詳細資訊`IAtlStringMgr`和 記憶體管理`CSimpleStringT`，請參閱[記憶體管理和 CStringT](../memory-management-with-cstringt.md)。
 
 ### <a name="remarks"></a>備註
@@ -419,7 +419,7 @@ XCHAR GetAt(int iChar) const;
 ```
 #### <a name="parameters"></a>參數
 
-*iChar*  
+*iChar*<br/>
 以零為起始的索引中的字元`CSimpleStringT`物件。 *IChar*參數必須是大於或等於 0，且所傳回的值大於或等於[GetLength](#getlength)。 否則，`GetAt`會產生例外狀況。
 
 ### <a name="return-value"></a>傳回值
@@ -451,7 +451,7 @@ PXSTR GetBuffer();
 ```
 #### <a name="parameters"></a>參數
 
-*nMinBufferLength*  
+*nMinBufferLength*<br/>
 字元緩衝區可以容納的字元數目下限。 此值不包含 null 結束字元的空間。
 
 如果*nMinBufferLength*大於目前的緩衝區長度`GetBuffer`終結目前的緩衝區，它取代成所要求的大小的緩衝區和重設為零的物件參考計數。 如果您先前已經呼叫[LockBuffer](#lockbuffer)在這個緩衝區中，您會喪失緩衝區鎖定。
@@ -498,7 +498,7 @@ PXSTR GetBufferSetLength(int nLength);
 ```
 #### <a name="parameters"></a>參數
 
-*nLength*  
+*nLength*<br/>
 實際大小`CSimpleStringT`以字元為單位的字元緩衝區。
 
 ### <a name="return-value"></a>傳回值
@@ -696,7 +696,7 @@ XCHAR operator[](int iChar) const;
 ```
 #### <a name="parameters"></a>參數
 
-*iChar*  
+*iChar*<br/>
 字串中字元的以零為起始的索引。
 
 ### <a name="remarks"></a>備註
@@ -727,7 +727,7 @@ XCHAR operator[](int iChar) const;
 
 ### <a name="parameters"></a>參數
 
-*iChar*  
+*iChar*<br/>
 字串中字元的以零為起始的索引。
 
 ### <a name="remarks"></a>備註
@@ -755,13 +755,13 @@ CSimpleStringT& operator +=(wchar_t ch);
 ```
 #### <a name="parameters"></a>參數
 
-*pszSrc*  
+*pszSrc*<br/>
 以 null 終止的字串指標。
 
-*strSrc*  
+*strSrc*<br/>
 指向現有的`CSimpleStringT`物件。
 
-*ch*  
+*ch*<br/>
 要附加的字元。
 
 ### <a name="remarks"></a>備註
@@ -789,10 +789,10 @@ CSimpleStringT& operator =(const CSimpleStringT& strSrc);
 ```
 #### <a name="parameters"></a>參數
 
-*pszSrc*  
+*pszSrc*<br/>
 以 null 終止的字串指標。
 
-*strSrc*  
+*strSrc*<br/>
 指向現有的`CSimpleStringT`物件。
 
 ### <a name="remarks"></a>備註
@@ -894,7 +894,7 @@ void Preallocate( int nLength);
 ```
 #### <a name="parameters"></a>參數
 
-*nLength*  
+*nLength*<br/>
 實際大小`CSimpleStringT`以字元為單位的字元緩衝區。
 
 ### <a name="remarks"></a>備註
@@ -934,7 +934,7 @@ void ReleaseBuffer(int nNewLength = -1);
 ```
 #### <a name="parameters"></a>參數
 
-*nNewLength*  
+*nNewLength*<br/>
 新的長度，以字元為單位，不計入 null 結束字元的字串。 如果字串為 null 終止，-1 預設值會設定`CSimpleStringT`大小目前字串的長度。
 
 ### <a name="remarks"></a>備註
@@ -974,7 +974,7 @@ void ReleaseBufferSetLength(int nNewLength);
 ```
 #### <a name="parameters"></a>參數
 
-*nNewLength*  
+*nNewLength*<br/>
 正在發行的字串長度
 
 ### <a name="remarks"></a>備註
@@ -992,10 +992,10 @@ void SetAt(int iChar, XCHAR ch);
 ```
 #### <a name="parameters"></a>參數
 
-*iChar*  
+*iChar*<br/>
 以零為起始的索引中的字元`CSimpleStringT`物件。 *IChar*參數必須是大於或等於 0，且所傳回的值大於或等於[GetLength](#getlength)。
 
-*ch*  
+*ch*<br/>
 換行字元。
 
 ### <a name="remarks"></a>備註
@@ -1023,7 +1023,7 @@ void SetManager(IAtlStringMgr* pStringMgr);
 ```
 #### <a name="parameters"></a>參數
 
-*pStringMgr*  
+*pStringMgr*<br/>
 新的記憶體管理員指標。
 
 ### <a name="remarks"></a>備註
@@ -1051,10 +1051,10 @@ void SetString(PCXSTR pszSrc);
 ```
 #### <a name="parameters"></a>參數
 
-*pszSrc*  
+*pszSrc*<br/>
 以 null 終止的字串指標。
 
-*nLength*  
+*nLength*<br/>
 中的字元數的計數*pszSrc*。
 
 ### <a name="remarks"></a>備註
@@ -1091,7 +1091,7 @@ ATL_NOINLINE static int StringLength(PCXSTR psz) throw();
 ```
 #### <a name="parameters"></a>參數
 
-*psz*  
+*psz*<br/>
 以 null 終止的字串指標。
 
 ### <a name="return-value"></a>傳回值
@@ -1121,7 +1121,7 @@ void Truncate(int nNewLength);
 ```
 #### <a name="parameters"></a>參數
 
-*nNewLength*  
+*nNewLength*<br/>
 新字串的長度。
 
 ### <a name="remarks"></a>備註

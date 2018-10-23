@@ -1,7 +1,7 @@
 ---
 title: 更新資料列集 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,28 +18,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: be82fb1c1f77ae3204bed54257062f362d286844
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: afe17f30a079e8af24b37b983f8c91d46431966e
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083823"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808853"
 ---
 # <a name="updating-rowsets"></a>更新資料列集
 
-更新或將資料寫入資料存放區是一種基本資料庫作業。 OLE DB 的更新機制很簡單：您的消費者應用程式會設定繫結資料成員值，接著將這些值寫入資料列集；消費者即可要求提供者更新該資料存放區。  
+基本資料庫作業是更新，或將資料寫入至資料存放區。 OLE DB 的更新機制很簡單：您的消費者應用程式會設定繫結資料成員值，接著將這些值寫入資料列集；消費者即可要求提供者更新該資料存放區。  
   
-消費者可以在資料列集資料上執行下列更新類型：設定資料列的資料行值、插入資料列和刪除資料列。 若要執行這些作業，OLE DB 範本類別 [CRowset](../../data/oledb/crowset-class.md) 會實作 [IRowsetChange](/previous-versions/windows/desktop/ms715790) 介面來執行這些動作，並覆寫下列介面方法：  
+取用者可以完成下列種類的資料列集資料的更新： 設定資料列中的資料行值、 插入資料列，並刪除資料列。 若要完成這些作業，OLE DB 範本類別[CRowset](../../data/oledb/crowset-class.md)實作[IRowsetChange](/previous-versions/windows/desktop/ms715790)介面，並覆寫下列介面方法：  
   
-- [SetData](../../data/oledb/crowset-setdata.md) 可以變更在資料列集中的資料列資料行值；它的作用相當於 SQL UPDATE 命令。  
+- [SetData](../../data/oledb/crowset-setdata.md)變更資料行值的資料列集資料列中，它相當於 SQL UPDATE 命令。  
   
-- [Insert](../../data/oledb/crowset-insert.md) 可以將資料列插入至資料列集；它的作用相當於 SQL INSERT 命令。  
+- [插入](../../data/oledb/crowset-insert.md)資料列插入資料列; 它相當於 SQL INSERT 命令。  
   
-- [Delete](../../data/oledb/crowset-delete.md) 可以刪除資料列集的資料列；它的作用相當於 SQL DELETE 命令。  
+- [刪除](../../data/oledb/crowset-delete.md)刪除資料列的資料列; 它相當於 SQL DELETE 命令。  
   
 ## <a name="supporting-update-operations"></a>支援更新作業  
 
-您可以在使用 [ATL OLE DB 消費者精靈] 建立消費者時，選取三個核取方塊 [變更] 、[插入] 和 [刪除] 中的一個或多個方塊以支援更新作業。 如果您選取了上述核取方塊，精靈會適當地修改程式碼以支援您選擇的變更類型。 然而，如果不是使用精靈，您便需要將下列資料列集屬性設定為 `VARIANT_TRUE` 才能支援更新：  
+您可以在使用 [ATL OLE DB 消費者精靈] 建立消費者時，選取三個核取方塊 [變更] 、[插入] 和 [刪除] 中的一個或多個方塊以支援更新作業。 如果您選取這些選項，精靈將程式碼適當地修改以支援您選擇的變更類型。 不過，如果您未使用精靈，您需要下列的資料列集屬性設定為`VARIANT_TRUE`支援更新：  
   
 - `DBPROPVAL_UP_CHANGE` 可讓您變更資料列中的資料值。  
   
@@ -56,11 +56,11 @@ ps.AddProperty(DBPROP_IRowsetChange, true)
 ps.AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE)  
 ```  
   
-如果出現一個或多個資料行無法寫入的情形，變更、插入或刪除等作業便可能會失敗。 請修改您的資料指標對應以修正這個問題。  
+如果一或多個資料行不是可寫入的變更、 插入或刪除作業可能會失敗。 修改您的資料指標對應以修正此問題。  
   
 ## <a name="setting-data-in-rows"></a>設定資料列中的資料  
 
-[CRowset::SetData](../../data/oledb/crowset-setdata.md) 可以在目前資料列的一個或多個資料行中設定資料值。 下列程式碼會設定繫結至 [產品] 資料表的 [名稱] 和 [庫存單位數量] 資料行的資料成員值，接著再呼叫 `SetData` ，將這些值寫入資料列集的第 100 個資料列：  
+[CRowset::SetData](../../data/oledb/crowset-setdata.md) 可以在目前資料列的一個或多個資料行中設定資料值。 下列程式碼設定的值繫結至 名稱 和 庫存單位 」 資料表的資料行的資料成員`Products`，然後呼叫`SetData`將這些值寫入第 100 的資料列的資料列集：  
   
 ```cpp  
 // Instantiate a rowset based on the user record class  
@@ -91,9 +91,9 @@ HRESULT Insert(int nAccessor = 0, bool bGetRow = false)
   
 - **false** (預設值) 指定目前資料列會累加到下一個資料列 (這樣一來，它會指向所插入的資料列)。  
   
-- **true** 指定目前資料列維持不動。  
+- **true**指定，目前資料列保持其所在。  
   
-下列程式碼會設定繫結至產品 資料表的資料行的資料成員的值，然後呼叫`Insert`資料列集的第 100 的資料列之後插入新的資料列，使用這些值。 我們建議您設定所有的資料行值，以免新資料列中出現未定義的資料。  
+下列程式碼設定的值繫結至資料表的資料行的資料成員`Products`，然後呼叫`Insert`資料列集的第 100 的資料列之後插入新的資料列，使用這些值。 我們建議您設定所有的資料行值，以避免在新的資料列中未定義的資料：  
   
 ```cpp  
 // Instantiate a rowset based on the user record class  
@@ -171,17 +171,17 @@ HRESULT hr = product.Delete();
   
 - [Updateall](../../data/oledb/crowset-updateall.md)傳輸任何暫止的變更的所有資料列自上次擷取或`Update`上呼叫。  
   
-請注意，更新方法所用的更新具有根據命令變更的特定意義，請勿將其和 SQL UPDATE 命令混淆 (`SetData` 相當於 SQL UPDATE 命令)。  
+更新，所使用的更新方法中，具有根據命令變更的特定意義並不會與 SQL UPDATE 命令混淆 (`SetData`就相當於 SQL UPDATE 命令)。  
   
-延後更新在某些情況下很有用，舉一連串的銀行交易來說，因為您會在認可最後一個交易完成後才傳送所有變更，所以如果一個交易被取消，您仍可復原變更。 此外，提供者可以將這些變更全部放到一個網路呼叫中，這樣會更有效率。  
+延後的更新十分有用，例如，在一連串的銀行交易; 的情況如果一個交易被取消，您可以復原變更，因為最後一個認可之後，不要將傳送一系列之前的變更。 此外，提供者可以將這些變更全部放到一個網路呼叫中，這樣會更有效率。  
   
-若要支援延後的更新，您必須設定`DBPROP_IRowsetChange`除了 < 支援更新作業 > 中所述的屬性的屬性：  
+若要支援延後的更新，您必須設定`DBPROP_IRowsetChange`屬性，以及 < 支援更新作業 > 中所述的屬性：  
   
 ```cpp  
 pPropSet->AddProperty(DBPROP_IRowsetUpdate, true);  
 ```  
   
-當您呼叫`Update`或`UpdateAll`，方法會從本機快取的變更傳送到資料存放區，並接著再清除本機快取。 因為更新只會傳送目前資料列的變更，所以應用程式要追蹤更新的資料列以及何時更新是很重要的。 下列程式碼示範如何更新兩個連續的資料列：  
+當您呼叫`Update`或`UpdateAll`，方法會從本機快取的變更傳送到資料存放區，並接著再清除本機快取。 因為更新會傳送目前資料列的變更，很重要的應用程式會持續追蹤的資料列來更新，以及何時更新它。 下列程式碼示範如何更新兩個連續的資料列：  
   
 ```cpp  
 // Instantiate a rowset based on the user record class  
@@ -217,7 +217,7 @@ product.Update();                 // Update row 101 now
   
 例如，如果第一個`Update`呼叫上述程式碼中遺漏，資料列 100 會維持不變，而資料列 101 會進行變更。 該動作之後，您的應用程式就必須呼叫`UpdateAll`或移回資料列 100 再呼叫`Update`更新該資料列。  
   
-最後，延後變更的主要原因是為了可以復原這些變更。 呼叫 [CRowset::Undo](../../data/oledb/crowset-undo.md) 可以將本機快取區變更的部分復原到任何暫止變更發生之前的資料存放區狀態。 請務必注意`Undo`不會回復一個步驟 （只在最新的變更之前的狀態） 的本機快取的狀態; 相反地，它會清除本機快取該資料列。 此外，`Undo`會影響在目前資料列。  
+最後，延後變更的主要原因是為了可以復原這些變更。 呼叫 [CRowset::Undo](../../data/oledb/crowset-undo.md) 可以將本機快取區變更的部分復原到任何暫止變更發生之前的資料存放區狀態。 請務必請注意，`Undo`不復原的本機快取的狀態一個步驟 （只在最新的變更之前的狀態）; 相反地，它會清除本機快取該資料列。 此外，`Undo`會影響在目前資料列。  
   
 ## <a name="see-also"></a>另請參閱  
 

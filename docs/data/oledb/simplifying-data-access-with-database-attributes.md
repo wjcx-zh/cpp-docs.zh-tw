@@ -1,7 +1,7 @@
 ---
 title: 以資料庫屬性簡化資料存取 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 41d1692fc69ba4ff29e091ca736cae60b10a402a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2689aab8b33c01c9a4d72b231a11a251813ac625
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054073"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808013"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>以資料庫屬性簡化資料存取
 
@@ -52,18 +52,26 @@ ms.locfileid: "46054073"
   
 - `db_table`屬性化的版本中的呼叫就相當於下列範本宣告：  
   
-    ```  
+    ```cpp  
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>  
     ```  
   
 - `db_column`屬性化的版本中的呼叫是相等的資料行對應 (請參閱`BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) 樣板宣告中。  
   
-屬性會為您插入使用者記錄類別宣告。 使用者記錄類別相當於`CAuthorsNoAttrAccessor`樣板宣告中。 如果您的資料表類別`CAuthors`，名為插入的使用者記錄類別`CAuthorsAccessor`，而您只可以檢視其宣告中插入程式碼。 如需詳細資訊，請參閱 「 插入屬性使用者記錄類別 」 中[使用者記錄](../../data/oledb/user-records.md)。  
+屬性會為您插入使用者記錄類別宣告。 使用者記錄類別等於`CAuthorsNoAttrAccessor`樣板宣告中。 如果您的資料表類別`CAuthors`，名為插入的使用者記錄類別`CAuthorsAccessor`，而您只可以檢視其宣告中插入程式碼。 如需詳細資訊，請參閱 「 插入屬性使用者記錄類別 」 中[使用者記錄](../../data/oledb/user-records.md)。  
   
-請注意，在屬性化和範本化的程式碼，您必須設定使用的資料列集屬性`CDBPropSet::AddProperty`。  
+在屬性化和範本化的程式碼，您必須設定使用的資料列集屬性`CDBPropSet::AddProperty`。  
   
-本主題討論之屬性的相關資訊，請參閱[OLE DB 消費者屬性](../../windows/ole-db-consumer-attributes.md)。  
-  
+本主題討論之屬性的相關資訊，請參閱[OLE DB 消費者屬性](../../windows/ole-db-consumer-attributes.md)。
+
+> [!NOTE]
+> 下列`include`陳述式，才能編譯下列範例：
+> ```cpp
+> #include <atlbase.h>  
+> #include <atlplus.h>  
+> #include <atldbcli.h>    
+> ```
+
 ## <a name="table-and-accessor-declaration-using-attributes"></a>使用資料表和存取子宣告屬性  
 
 下列程式碼會呼叫`db_source`和`db_table`資料表類別上。 `db_source` 指定要使用的連接與資料來源。 `db_table` 會插入適當的範本程式碼，來宣告資料表的類別。 `db_column` 指定資料行對應，並將存取子宣告。 您可以在任何支援 ATL 的專案中使用 OLE DB 消費者屬性  
@@ -85,15 +93,15 @@ ms.locfileid: "46054073"
 class CAuthors  
 {  
 public:  
-   DWORD m_dwAuIDStatus;  
-   DWORD m_dwAuthorStatus;  
-   DWORD m_dwYearBornStatus;  
-   DWORD m_dwAuIDLength;  
-   DWORD m_dwAuthorLength;  
-   DWORD m_dwYearBornLength;  
-   [ db_column(1, status=m_dwAuIDStatus, length=m_dwAuIDLength) ] LONG m_AuID;  
-   [ db_column(2, status=m_dwAuthorStatus, length=m_dwAuthorLength) ] TCHAR m_Author[51];  
-   [ db_column(3, status=m_dwYearBornStatus, length=m_dwYearBornLength) ] SHORT m_YearBorn;  
+   DBSTATUS m_dwAuIDStatus;
+   DBSTATUS m_dwAuthorStatus;
+   DBSTATUS m_dwYearBornStatus;
+   DBLENGTH m_dwAuIDLength;
+   DBLENGTH m_dwAuthorLength;
+   DBLENGTH m_dwYearBornLength;
+   [db_column("1", status = "m_dwAuIDStatus", length = "m_dwAuIDLength")] LONG m_AuID;
+   [db_column("2", status = "m_dwAuthorStatus", length = "m_dwAuthorLength")] TCHAR m_Author[51];
+   [db_column("3", status = "m_dwYearBornStatus", length = "m_dwYearBornLength")] SHORT m_YearBorn;
    void GetRowsetProperties(CDBPropSet* pPropSet)  
    {  
       pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true);  

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b1c48f4699c0add937c2bcdb13d49bce8cb895c4
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: ce3ad819b6e22bfb5c760849e5f3fdf85bd4f7bc
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083955"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809092"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>在精靈產生的存取子中的欄位狀態資料成員
 
@@ -80,13 +80,13 @@ END_COLUMN_MAP()
 ```  
   
 > [!NOTE]
->  如果您修改使用者記錄類別或撰寫自己的消費者，資料變數必須出現在狀態和長度變數之前。  
+> 如果您修改使用者記錄類別或撰寫自己的消費者，資料變數必須出現在狀態和長度變數之前。  
   
 您可以使用 [狀態] 值，以進行偵錯。 如果 ATL OLE DB 消費者精靈產生的程式碼會產生編譯錯誤，例如 DB_S_ERRORSOCCURRED 或 DB_E_ERRORSOCCURRED，您應該先查看欄位狀態資料成員的目前值。 具有非零的值會對應至衝突的資料行。  
   
 您也可以使用 [狀態] 值來設定特定欄位的 NULL 值。 這樣可協助您的情況下您想用來區別欄位值為 NULL，而不是零。 它是您必須決定 NULL 是否為有效的值或特殊值，並決定您的應用程式應該如何處理它。 OLE DB 定義為 DBSTATUS_S_ISNULL 指定泛用的 NULL 值的正確方法。 如果取用者讀取資料，此值為 null，會將 [狀態] 欄位設為 DBSTATUS_S_ISNULL。 如果取用者想要設定為 NULL 值，取用者狀態值設定為 DBSTATUS_S_ISNULL 之前呼叫提供者。  
   
-接下來，開啟 Oledb.h 並搜尋`DBSTATUSENUM`。 您可以接著比對的非零值的狀態，針對數值`DBSTATUSENUM`列舉值。 如果列舉名稱不足以告訴您哪裡有錯誤，請參閱 < 繫結資料值 > 一節中的 「 狀態 」 主題[OLE DB 程式設計人員指南](/previous-versions/windows/desktop/ms713643)。 本主題包含的狀態時使用的值取得或設定資料的資料表。 長度值的詳細資訊，請參閱 「 長度 」 主題中的相同區段。  
+接下來，開啟 Oledb.h 並搜尋 DBSTATUSENUM。 然後，您可以比對的非零值的狀態，針對 DBSTATUSENUM 列舉值的數值。 如果列舉名稱不足以告訴您哪裡有錯誤，請參閱 < 繫結資料值 > 一節中的 「 狀態 」 主題[OLE DB 程式設計人員指南](/previous-versions/windows/desktop/ms713643)。 本主題包含的狀態時使用的值取得或設定資料的資料表。 長度值的詳細資訊，請參閱 「 長度 」 主題中的相同區段。  
   
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>擷取的長度或資料行的狀態  
 

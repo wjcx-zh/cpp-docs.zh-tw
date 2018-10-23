@@ -1,43 +1,45 @@
 ---
-title: CMyProviderWindowsFile |Microsoft Docs
+title: CCustomWindowsFile |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
 f1_keywords:
 - cmyproviderwindowsfile
+- ccustomwindowsfile
 dev_langs:
 - C++
 helpviewer_keywords:
 - CMyProviderWindowsFile class
 - OLE DB providers, wizard-generated files
+- CCustomWindowsFile class
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6f3badc08da7bd11e65c244c42c91ad37a584ca5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a87f8cc4d6581c253225fa038d0c8972e71fcff1
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087262"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808793"
 ---
-# <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
+# <a name="ccustomwindowsfile"></a>CCustomWindowsFile
 
-精靈會建立類別可以包含一個資料列的資料;在此情況下，它會呼叫`CMyProviderWindowsFile`。 下列程式碼會針對`CMyProviderWindowsFile`產生的精靈，並使用列出目錄中的所有檔案`WIN32_FIND_DATA`結構。 `CMyProviderWindowsFile` 繼承自`WIN32_FIND_DATA`結構：  
+精靈會建立類別可以包含一個資料列的資料;在此情況下，它會呼叫`CCustomWindowsFile`。 下列程式碼會針對`CCustomWindowsFile`產生的精靈，並使用列出目錄中的所有檔案`WIN32_FIND_DATA`結構。 `CCustomWindowsFile` 繼承自`WIN32_FIND_DATA`結構：  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////  
-// MyProviderRS.H  
+// CustomRS.H  
   
-class CMyProviderWindowsFile:   
+class CCustomWindowsFile:   
    public WIN32_FIND_DATA  
 {  
 public:  
-BEGIN_PROVIDER_COLUMN_MAP(CMyProviderWindowsFile)  
+BEGIN_PROVIDER_COLUMN_MAP(CCustomWindowsFile)  
    PROVIDER_COLUMN_ENTRY("FileAttributes", 1, dwFileAttributes)  
    PROVIDER_COLUMN_ENTRY("FileSizeHigh", 2, nFileSizeHigh)  
    PROVIDER_COLUMN_ENTRY("FileSizeLow", 3, nFileSizeLow)  
@@ -47,13 +49,13 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
-`CMyProviderWindowsFile` 會呼叫[使用者記錄類別](../../data/oledb/user-record.md)因為它也包含描述提供者的資料列集中的資料行對應。 提供者資料行對應會包含每個欄位中使用 PROVIDER_COLUMN_ENTRY 巨集的資料列集的一個項目。 巨集指定資料行名稱、 序數和位移結構項目。 在上述程式碼中的提供者的資料行項目包含的位移`WIN32_FIND_DATA`結構。 當取用者呼叫`IRowset::GetData`，資料會傳輸一個連續的緩衝區中。 與其讓您執行指標算術，地圖可讓您指定的資料成員。  
+`CCustomWindowsFile` 會呼叫[使用者記錄類別](../../data/oledb/user-record.md)因為它也包含描述提供者的資料列集中的資料行對應。 提供者資料行對應會包含每個欄位中使用 PROVIDER_COLUMN_ENTRY 巨集的資料列集的一個項目。 巨集指定資料行名稱、 序數和位移結構項目。 在上述程式碼中的提供者的資料行項目包含的位移`WIN32_FIND_DATA`結構。 當取用者呼叫`IRowset::GetData`，資料會傳輸一個連續的緩衝區中。 與其讓您執行指標算術，地圖可讓您指定的資料成員。  
   
-`CMyProviderRowset`類別也包含`Execute`方法。 `Execute` 是什麼實際讀取中的資料來源的原生。 下列程式碼會顯示精靈產生`Execute`方法。 此函數會使用 Win32`FindFirstFile`並`FindNextFile`Api 來擷取目錄中檔案的相關資訊，並將它們放在執行個體中的`CMyProviderWindowsFile`類別。  
+`CCustomRowset`類別也包含`Execute`方法。 `Execute` 是什麼實際讀取中的資料來源的原生。 下列程式碼會顯示精靈產生`Execute`方法。 此函數會使用 Win32`FindFirstFile`並`FindNextFile`Api 來擷取目錄中檔案的相關資訊，並將它們放在執行個體中的`CCustomWindowsFile`類別。  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////  
-// MyProviderRS.H  
+// CustomRS.H  
   
 HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)  
 {  
@@ -62,7 +64,7 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
    HANDLE hFile;  
    LPTSTR  szDir = (m_strCommandText == _T("")) ? _T("*.*") :  
        OLE2T(m_strCommandText);  
-   CMyProviderWindowsFile wf;  
+   CCustomWindowsFile wf;  
    hFile = FindFirstFile(szDir, &wf);  
    if (hFile == INVALID_HANDLE_VALUE)  
       return DB_E_ERRORSINCOMMAND;  

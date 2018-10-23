@@ -1,7 +1,7 @@
 ---
 title: CTimeSpan 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b70e4ca31f4346e8ad0b6dda4e66192e2e53111
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 32e6599fa19c23751beaf3545696a90a2d117248
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397516"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809079"
 ---
 # <a name="ctimespan-class"></a>CTimeSpan 類別
 
@@ -114,7 +114,7 @@ bool operator>=(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*  
+*範圍*<br/>
 要比較的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -133,22 +133,22 @@ bool operator>=(CTimeSpan span) const throw();
 CTimeSpan() throw();
 CTimeSpan(__time64_t time) throw();
 
-CTimeSpan(  
-LONG lDays,
-int nHours,
-int nMins,
-int nSecs) throw();
+CTimeSpan(
+    LONG lDays,
+    int nHours,
+    int nMins,
+    int nSecs) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*timeSpanSrc*  
+*timeSpanSrc*<br/>
 A`CTimeSpan`已經存在的物件。
 
-*time*  
+*time*<br/>
 A **__time64_t**時間值，也就是在時間範圍內的秒數。
 
-*lDays*， *nHours*， *nMins*， *nSecs*  
+*lDays*， *nHours*， *nMins*， *nSecs*<br/>
 天、 小時、 分鐘、 和秒數，分別。
 
 ### <a name="remarks"></a>備註
@@ -163,12 +163,12 @@ A **__time64_t**時間值，也就是在時間範圍內的秒數。
 
 - `CTimeSpan( LONG, int, int, int );` 建構`CTimeSpan`從每個元件的元件物件限制為下列範圍：
 
-    |元件|範圍|  
-    |---------------|-----------|  
-    |*lDays*|0-25,000 （大約）|  
-    |*nHours*|0-23|  
-    |*nMins*|0-59|  
-    |*nSecs*|0-59|
+   |元件|範圍|
+   |---------------|-----------|
+   |*lDays*|0-25,000 （大約）|
+   |*nHours*|0-23|
+   |*nMins*|0-59|
+   |*nSecs*|0-59|
 
 請注意，偵錯版本的 Mfc 程式庫判斷提示，如果有一個或多個日期時間元件 je mimo rozsah。 您必須負責驗證之前呼叫的引數。
 
@@ -188,7 +188,7 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>參數
 
-*pFormat*， *pszFormat*  
+*pFormat*， *pszFormat*<br/>
 格式化字串類似於`printf`格式化字串。 格式化程式碼，加上百分比 (`%`) 登入，會取代對應`CTimeSpan`元件。 格式化字串中的其他字元會複製到傳回的字串不變。 值和格式化的程式碼的意義`Format`如下所示：
 
 - **%D**總天數，在此 `CTimeSpan`
@@ -201,7 +201,7 @@ CString Format(UINT nID) const;
 
 - **%%** 百分比符號
 
-*nID*  
+*nID*<br/>
 識別此格式的字串識別碼。
 
 ### <a name="return-value"></a>傳回值
@@ -355,7 +355,7 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*  
+*範圍*<br/>
 要加入至值`CTimeSpan`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -381,7 +381,7 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*  
+*範圍*<br/>
 要加入至值`CTimeSpan`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -409,7 +409,7 @@ CArchive& Serialize64(CArchive& ar);
 
 ### <a name="parameters"></a>參數
 
-*ar*  
+*ar*<br/>
 `CArchive`您想要更新的物件。
 
 ### <a name="return-value"></a>傳回值

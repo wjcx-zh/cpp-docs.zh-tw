@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8c4e3003beb0e50887f6b765904095c65dd8f1b6
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 3a3d2926b2f9c958d3770737729726bbad7b13e7
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083654"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808910"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>使用結構描述資料列集取得中繼資料
 
@@ -31,23 +31,23 @@ ms.locfileid: "49083654"
 OLE DB 樣板提供一組類別來擷取結構描述資訊，這些類別建立預先定義的結構描述資料列，並且詳列於[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。  
   
 > [!NOTE]
->  如果您是使用 OLAP，而且結構描述資料列集類別不支援您的一些資料列集 (例如，您具有變動的資料行數目)，則您應該考慮使用 `CManualAccessor` 或 `CDynamicAccessor`。 您可以捲動資料行，並使用 case 陳述式來處理每個資料行的可能資料型別。  
+> 如果您是使用 OLAP，而且結構描述資料列集類別不支援您的一些資料列集 (例如，您具有變動的資料行數目)，則您應該考慮使用 `CManualAccessor` 或 `CDynamicAccessor`。 您可以捲動資料行，並使用 case 陳述式來處理每個資料行的可能資料型別。  
   
 ## <a name="catalogschema-model"></a>目錄/結構描述模型  
 
 ANSI SQL 會定義資料存放區的目錄/結構描述模型。OLE DB 會使用此模型。 在此模型中，目錄 (資料庫) 包含結構描述，而結構描述包含資料表。  
   
-- **目錄**目錄是另一個資料庫的名稱。 它是相關結構描述的集合。 若要列出屬於給定的資料來源的目錄 （資料庫），請使用[CCatalog](../../data/oledb/ccatalogs-ccataloginfo.md)。 因為許多資料庫都只有一個目錄，所以中繼資料有時會簡稱為結構描述資訊。  
+- **目錄**目錄是另一個資料庫的名稱。 它是相關結構描述的集合。 若要列出屬於給定的資料來源的目錄 （資料庫），請使用[CCatalog](../../data/oledb/ccatalogs-ccataloginfo.md)。 多個資料庫都只有一個目錄，因為中繼資料有時稱為結構描述資訊。  
   
 - **結構描述**結構描述是資料庫物件所擁有或都由特定使用者的集合。 若要列出給定使用者所擁有的結構描述，請使用[CSchemata](../../data/oledb/cschemata-cschematainfo.md)。  
   
-     在 Microsoft SQL Server 和 ODBC 2.x 詞彙中，結構描述是擁有者 （例如 dbo 是典型的結構描述名稱）。 此外，SQL Server 會儲存中繼資料中的一組資料表： 一個資料表包含所有資料表的清單，和另一個資料表包含的所有資料行清單。 Microsoft Access 資料庫中沒有對等的結構描述。  
+     在 Microsoft SQL Server 和 ODBC 2.x 詞彙中，結構描述是擁有者 （例如 dbo 是典型的結構描述名稱）。 此外，SQL Server 會儲存中繼資料中的一組資料表： 一個資料表包含所有資料表的清單，和另一個資料表包含的所有資料行清單。 Microsoft Access 資料庫中的結構描述沒有對等用法。  
   
 - **資料表**資料表是以特定順序排列的資料行的集合。 若要列出給定的目錄 （資料庫） 和那些資料表的相關資訊中所定義的資料表，請使用[CTables](../../data/oledb/ctables-ctableinfo.md))。  
   
 ## <a name="restrictions"></a>限制  
 
-當您查詢結構描述資訊時，您可以使用限制來指定您有興趣的資訊類型。 您可以將限制想成查詢中的篩選條件或限定詞。 例如，在查詢中：  
+當您查詢的結構描述資訊時，您可以使用限制來指定您想要的資訊類型。 您可以將限制想成查詢中的篩選條件或限定詞。 例如，在查詢中：  
   
 ```sql  
 SELECT * FROM authors where l_name = 'pivo'  
@@ -67,7 +67,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
 因此，比方說，如果您想要依資料表名稱限制，請注意 TABLE_NAME 是第三個的限制資料行，並接著呼叫`Open`，做為第三個限制參數，指定所需的資料表名稱，如下列範例所示。  
   
-#### <a name="to-use-schema-rowsets"></a>若要使用結構描述資料列集  
+### <a name="to-use-schema-rowsets"></a>若要使用結構描述資料列集  
   
 1. 您必須包含標頭檔 Atldbsch.h (當然，您也需要消費者支援的 Atldbcli.h)。  
   
@@ -89,7 +89,7 @@ CRestrictions<CAccessor<CColumnsInfo>
     }  
     ```  
   
-1. 若要擷取資訊，請存取結構描述資料列集物件的適當資料成員，例如 `ColumnSchemaRowset.m_szColumnName`。 這會對應至 COLUMN_NAME。 若要查看每個資料成員會對應到哪一個 OLE DB 資料行，請參閱[CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md)。  
+1. 若要擷取資訊，請存取結構描述資料列集物件的適當資料成員，例如 `ColumnSchemaRowset.m_szColumnName`。 此資料成員會對應至 COLUMN_NAME。 若要查看每個資料成員會對應到哪一個 OLE DB 資料行，請參閱[CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md)。  
   
 如需結構描述資料列集的參考，typedef 類別提供於 OLE DB 樣板 (請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md))。  
   

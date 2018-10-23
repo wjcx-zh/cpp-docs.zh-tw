@@ -1,34 +1,37 @@
 ---
-title: CMyProviderRowset (MyProviderRS.H) |Microsoft Docs
+title: CCustomRowset (CustomRS.H) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
 f1_keywords:
 - cmyproviderrowset
 - myproviderrs.h
+- ccustomrowset
+- customrs.h
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderRowset class in MyProviderRS.H
+- CCustomRowset class in CustomRS.H
 ms.assetid: 7ba1a124-3842-40eb-a36b-302190a1af3a
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c7c9830970f6e09d1993ac2fd78510b84068efaa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4ee7aed5463054256d6903e485b83ce201a685d2
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021264"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807909"
 ---
-# <a name="cmyproviderrowset-myproviderrsh"></a>CMyProviderRowset (MyProviderRS.H)
+# <a name="ccustomrowset-customrsh"></a>CCustomRowset (CustomRS.H)
 
-精靈會產生資料列集物件的項目。 在此種情況下，稱為 `CMyProviderRowset`。 `CMyProviderRowset`類別繼承自呼叫 OLE DB 提供者類別`CRowsetImpl`，它會實作所有必要的介面，資料列集物件。 下列程式碼顯示的繼承鏈結`CRowsetImpl`:  
+精靈會產生資料列集物件的項目。 在此種情況下，稱為 `CCustomRowset`。 `CCustomRowset`類別繼承自呼叫 OLE DB 提供者類別`CRowsetImpl`，它會實作所有必要的介面，資料列集物件。 下列程式碼顯示的繼承鏈結`CRowsetImpl`:  
   
 ```cpp  
 template <class T, class Storage, class CreatorClass,   

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7ce6949e582142e208058b4fa59d02008513e29f
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: cd8412ed280c0a256ea8acb7274da5d6238134fc
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410729"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807793"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>未使用精靈建立消費者
 
@@ -67,7 +67,7 @@ ms.locfileid: "49410729"
     hr = rs.Open();            // (Open also executes the command)  
     ```  
   
-- （選擇性） 設定資料列集屬性使用`CDBPropSet::AddProperty`，並將它們傳遞做為參數`rs.Open`。 如需如何做到這點的範例，請參閱**GetRowsetProperties**中[消費者精靈產生方法](../../data/oledb/consumer-wizard-generated-methods.md)。  
+- （選擇性） 設定資料列集屬性使用`CDBPropSet::AddProperty`，並將它們傳遞做為參數`rs.Open`。 如需如何做到這點的範例，請參閱`GetRowsetProperties`中[消費者精靈產生方法](../../data/oledb/consumer-wizard-generated-methods.md)。  
   
 - 您現在可以使用資料列集擷取/處理資料。  
   

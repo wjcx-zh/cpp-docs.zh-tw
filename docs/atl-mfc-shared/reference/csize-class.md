@@ -1,7 +1,7 @@
 ---
 title: CSize 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ca548fec9a70a04b0bdb9a5169021fc43f149eb
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 9966bcdf31df3b6d3f702ec425131c5b8baa3aee
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328534"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808494"
 ---
 # <a name="csize-class"></a>CSize 類別
 
@@ -90,19 +90,19 @@ CSize( DWORD dwSize) throw();
 
 ### <a name="parameters"></a>參數
 
-*initCX*  
+*initCX*<br/>
 設定組`cx`成員`CSize`。
 
-*initCY*  
+*initCY*<br/>
 設定組`cy`成員`CSize`。
 
-*initSize*  
+*initSize*<br/>
 [大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或`CSize`物件，用來初始化`CSize`。
 
-*initPt*  
+*initPt*<br/>
 [點](../../mfc/reference/point-structure.md)結構或`CPoint`物件，用來初始化`CSize`。
 
-*dwSize*  
+*dwSize*<br/>
 DWORD 用來初始化`CSize`。 低序位字`cx`成員與高序位文字是`cy`成員。
 
 ### <a name="remarks"></a>備註

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e7f97011e66c72c79c3ab6db3b6011e1d4d76ce7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d01674929522326c21eea2ad7d40f33e8ff6fae6
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017169"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807519"
 ---
 # <a name="provider-support-for-bookmarks"></a>提供者書籤支援
 
@@ -247,7 +247,7 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 }  
 ```  
   
-While 迴圈包含程式碼以呼叫`Compare`方法中的`IRowsetLocate`介面。 因為您要比較完全相同的書籤，應該一律傳遞您所擁有的程式碼。 此外，儲存在暫存變數一個書籤，以便您可以使用它在一段時間之後迴圈呼叫的完成`MoveToBookmark`消費者範本中的函式。 `MoveToBookmark`函式會呼叫`GetRowsAt`方法中的`IRowsetLocate`。  
+**雖然**迴圈包含程式碼來呼叫`Compare`方法中的`IRowsetLocate`介面。 因為您要比較完全相同的書籤，應該一律傳遞您所擁有的程式碼。 此外，儲存在暫存變數一個書籤，以便您可以使用它之後**雖然**迴圈來呼叫完成`MoveToBookmark`消費者範本中的函式。 `MoveToBookmark`函式會呼叫`GetRowsAt`方法中的`IRowsetLocate`。  
   
 您也需要更新取用者的使用者資料錄。 若要處理的書籤和中的項目類別中新增項目`COLUMN_MAP`:  
   

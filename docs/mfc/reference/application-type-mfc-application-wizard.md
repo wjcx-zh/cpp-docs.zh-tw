@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7d27245e06350a9174699fc20246d5e8997795d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: df0b938186716ab86b8eaeadd69d123ff14e57e0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434371"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808767"
 ---
 # <a name="application-type-mfc-application-wizard"></a>MFC 應用程式精靈、應用程式類型
 
@@ -58,7 +58,7 @@ ms.locfileid: "46434371"
 
 - **資源語言**
 
-   設定資源的語言。 清單會顯示可用的語言在您的系統，由 Visual Studio 安裝。 如果您想要選取您的系統語言以外的語言，必須已安裝該語言的適當的範本資料夾。 如需有關安裝與使用中的預設值不同的語言資源**資源語言**清單中，請參閱[其他語言的精靈支援](../../ide/wizard-support-for-other-languages.md)。
+   設定資源的語言。 清單會顯示可用的語言在您的系統，由 Visual Studio 安裝。 如果您想要選取您的系統語言以外的語言，必須已安裝該語言的適當的範本資料夾。
 
    您選取的語言會反映在**當地語系化字串**選項[文件樣板字串、 MFC 應用程式精靈](../../mfc/reference/document-template-strings-mfc-application-wizard.md)精靈頁面。
 

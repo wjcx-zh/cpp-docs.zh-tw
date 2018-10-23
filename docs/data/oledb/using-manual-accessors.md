@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5aa7f72cc76f80e2304faf93ca0c6198c505e88a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8805878f880d1c195ddf89abc283719e73ff5182
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101636"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808923"
 ---
 # <a name="using-manual-accessors"></a>使用手動存取子
 
@@ -36,7 +36,7 @@ ms.locfileid: "46101636"
   
 - 看看是否有多個傳回的資料列集  
   
-若要使用 OLE DB 消費者範本這樣做，請使用`CManualAccessor`類別，並遵循下列步驟：  
+若要執行這些動作，使用 OLE DB 消費者範本，使用`CManualAccessor`類別，並遵循下列步驟：  
   
 1. 開啟`CCommand`物件`CManualAccessor`做為範本參數。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "46101636"
     CCommand<CManualAccessor, CRowset, CMultipleResults> rs;  
     ```  
   
-1. 查詢的工作階段`IDBSchemaRowset`介面，並使用程序參數的資料列集。 如果`IDBSchemaRowset`介面，則無法使用查詢`ICommandWithParameters`介面。 呼叫`GetParameterInfo`的資訊。 如果兩個介面都可用，您可以假設沒有任何參數。  
+1. 查詢的工作階段`IDBSchemaRowset`介面，並使用程序參數的資料列集。 如果`IDBSchemaRowset`介面無法使用，查詢`ICommandWithParameters`介面。 呼叫`GetParameterInfo`的資訊。 如果兩個介面都可用，您可以假設沒有任何參數。  
   
 1. 針對每個參數，呼叫`AddParameterEntry`，將參數加入並設定它們。  
   

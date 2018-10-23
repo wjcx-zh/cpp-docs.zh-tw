@@ -1,7 +1,7 @@
 ---
 title: TN041:-OLE1 移轉到 MFC-OLE 2 |Microsoft Docs
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75177743b893bdcf48b52b27c25ea4070e000f88
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2f93ffa79c5f737be032ae9edffa6c3e49c7055
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377054"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809014"
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041：MFC/OLE1 移轉到 MFC/OLE 2
 
@@ -301,7 +301,7 @@ ON_COMMAND(ID_OLE_EDIT_CONVERT, OnEditConvert)
 
 OLE 的最有趣的功能之一是就地啟用 （或 「 視覺化編輯 」）。 這項功能可讓伺服器應用程式，以便透過部分容器的使用者介面來為使用者提供更順暢的編輯介面。 若要實作 OCLIENT 就地啟用，一些特殊的資源需要新增，以及一些額外的程式碼。 這些資源和程式碼通常由 AppWizard 所提供，事實上，大部分的程式碼取自直接透過 「 容器 」 支援的全新 AppWizard 應用程式。
 
-首先，就必須新增功能表資源，也就是就地啟用作用中的項目時使用。 您可以在複製 IDR_OCLITYPE 資源，並移除檔案和視窗快顯視窗以外的所有 Visual c + + 中建立此額外的功能表資源。 表示群組的分隔的檔案和視窗快顯之間插入兩個分隔線 (看起來應該像： 檔案&#124;&#124;視窗中)。 如需有關這些分隔符號所代表的意義，以及如何合併伺服器和容器的功能表看到 「 功能表和資源:: 功能表合併 」 中*OLE 2 類別*。
+首先，就必須新增功能表資源，也就是就地啟用作用中的項目時使用。 您可以在複製 IDR_OCLITYPE 資源，並移除檔案和視窗快顯視窗以外的所有 Visual c + + 中建立此額外的功能表資源。 表示群組的分隔的檔案和視窗快顯之間插入兩個分隔線 (看起來應該像： 檔案&#124;&#124;視窗中)。 如需有關這些分隔符號的意義為何及如何合併伺服器和容器的功能表[功能表和資源： 功能表合併](../mfc/menus-and-resources-menu-merging.md)。
 
 建立這些功能表之後，您需要讓架構知道它們。 這是藉由呼叫`CDocTemplate::SetContainerInfo`才能將它加入文件範本清單中您的設定加入 InitInstance 中的文件範本。 新的程式碼，以註冊文件範本看起來像這樣：
 
@@ -618,7 +618,7 @@ CServerItem 也會覆寫`COleServerItem::OnGetTextData`。 此函式 MFC/OLE 中
 \hiersvr\svrview.cpp(325) : error C2660: 'CopyToClipboard' : function does not take 2 parameters
 ```
 
-`COleServerItem::CopyToClipboard` 不再支援 'bIncludeNative' 旗標。 一律複製原生資料 （資料寫出的伺服器項目的序列化函式），讓您移除第一個參數。 颾魤 ㄛ`CopyToClipboard`而不是傳回 FALSE，發生錯誤時將會擲回例外狀況。 變更程式碼的 CServerView::OnEditCopy 如下所示：
+`COleServerItem::CopyToClipboard` 不再支援`bIncludeNative`旗標。 一律複製原生資料 （資料寫出的伺服器項目的序列化函式），讓您移除第一個參數。 颾魤 ㄛ`CopyToClipboard`而不是傳回 FALSE，發生錯誤時將會擲回例外狀況。 變更程式碼的 CServerView::OnEditCopy 如下所示：
 
 ```cpp
 void CServerView::OnEditCopy()
@@ -654,7 +654,7 @@ void CServerView::OnEditCopy()
 
 - 您需要告訴這些特殊的資源和類別的架構。
 
-功能表資源很容易建立。 執行 Visual c + + 中，將 IDR_HIERSVRTYPE 功能表資源複製到名為 IDR_HIERSVRTYPE_SRVR_IP 的功能表資源。 修改 [] 功能表中，以便只編輯和說明功能表快顯視窗會保留。 編輯 和 說明功能表之間的功能表中加入兩個分隔符號 (看起來應該像： 編輯&#124;&#124;協助)。 如需有關這些分隔符號所代表的意義，以及如何合併伺服器和容器的功能表的詳細資訊，請參閱 「 功能表和資源:: 功能表合併 」，在*OLE 2 類別*。
+功能表資源很容易建立。 執行 Visual c + + 中，將 IDR_HIERSVRTYPE 功能表資源複製到名為 IDR_HIERSVRTYPE_SRVR_IP 的功能表資源。 修改 [] 功能表中，以便只編輯和說明功能表快顯視窗會保留。 編輯 和 說明功能表之間的功能表中加入兩個分隔符號 (看起來應該像： 編輯&#124;&#124;協助)。 如需有關這些分隔符號所代表的意義，以及如何合併伺服器和容器的功能表的詳細資訊，請參閱[功能表和資源： 功能表合併](../mfc/menus-and-resources-menu-merging.md)。
 
 藉由勾選 [伺服器] 選項複製其中一個全新的 AppWizard 產生應用程式，可以輕鬆建立子集工具列的點陣圖。 此點陣圖可以再匯入到 Visual c + +。 請務必提供點陣圖 IDR_HIERSVRTYPE_SRVR_IP 識別碼。
 
@@ -677,7 +677,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
     AfxGetApp()->m_pMainWnd);
 ```
 
-請注意參考 *`AfxGetApp()->m_pMainWnd*`。 就地啟用的伺服器時，會有主視窗和設定 m_pMainWnd，但它是通常是不可見。 此外，此視窗是指*主要* 視窗中的應用程式，MDI 框架視窗所顯示的伺服器時完全開啟或執行獨立。 它不是指使用中框架視窗，其中就地啟動時，框架視窗衍生自`COleIPFrameWnd`。 若要取得正確的使用中視窗，就地編輯，此版本的 MFC 將加入新的函式，即使`AfxGetMainWnd`。 一般而言，您應該使用此函式，而不是 *`AfxGetApp()->m_pMainWnd*`。 此程式碼需要變更，如下所示：
+請注意參考`AfxGetApp()->m_pMainWnd`。 就地啟用的伺服器時，會有主視窗和設定 m_pMainWnd，但它是通常是不可見。 此外，此視窗是指*主要* 視窗中的應用程式，MDI 框架視窗所顯示的伺服器時完全開啟或執行獨立。 它不是指使用中框架視窗，其中就地啟動時，框架視窗衍生自`COleIPFrameWnd`。 若要取得正確的使用中視窗，就地編輯，此版本的 MFC 將加入新的函式，即使`AfxGetMainWnd`。 一般而言，您應該使用此函式，而不是`AfxGetApp()->m_pMainWnd`。 此程式碼需要變更，如下所示：
 
 ```cpp
 pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,

@@ -1,7 +1,7 @@
 ---
 title: 模組類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 09/17/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -53,12 +53,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0fa34cb8fce2854f4b3864629b86122bdfe6b35f
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: 5df7ae90a347d82b303d7db251e533733c8e4a86
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494526"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808626"
 ---
 # <a name="module-class"></a>Module 類別
 
@@ -177,22 +177,22 @@ WRL_NOTHROW static Module& Create(
 template<typename T>
 WRL_NOTHROW static Module& Create(
    _In_ T* object,
-   _In_ void (T::* method)()  
+   _In_ void (T::* method)()
 );
 ```
 
 ### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 模組類型。
 
-*回呼*  
+*回呼*<br/>
 當您釋放最後一個執行個體物件的模組時呼叫。
 
-*object*  
+*object*<br/>
 *物件*並*方法*參數搭配使用的。 點的最後一個執行個體物件，當使用者放開模組中的最後一個執行個體物件。
 
-*方法*  
+*方法*<br/>
 *物件*並*方法*參數搭配使用的。 方法的最後一個執行個體物件時釋放最後一個執行個體物件模組中的點。
 
 ### <a name="return-value"></a>傳回值
@@ -225,13 +225,13 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>參數
 
-*pActivatibleClassId*  
+*pActivatibleClassId*<br/>
 執行階段類別的 IID。
 
-*ppIFactory*  
+*ppIFactory*<br/>
 指定的執行階段類別 IActivationFactory。
 
-*伺服器名稱*  
+*伺服器名稱*<br/>
 在目前模組的 class factory 子集的名稱。 指定用於的伺服器名稱[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)巨集，或指定`nullptr`取得預設的伺服器名稱。
 
 ### <a name="return-value"></a>傳回值
@@ -253,16 +253,16 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>參數
 
-*clsid*  
+*clsid*<br/>
 類別識別碼。
 
-*riid*  
+*riid*<br/>
 您要求的介面識別碼。
 
-*ppv*  
+*ppv*<br/>
 傳回的物件指標。
 
-*伺服器名稱*  
+*伺服器名稱*<br/>
 中指定的伺服器名稱`ActivatableClassWithFactory`， `ActivatableClassWithFactoryEx`，或`ActivatableClass`巨集; 或`nullptr`取得預設的伺服器名稱。
 
 ### <a name="return-value"></a>傳回值
@@ -344,19 +344,19 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 ### <a name="parameters"></a>參數
 
-*伺服器名稱*  
+*伺服器名稱*<br/>
 完整伺服器名稱。
 
-*clsid*  
+*clsid*<br/>
 若要註冊的 Clsid 的陣列。
 
-*處理站*  
+*處理站*<br/>
 正在發行其可用性的類別物件的 IUnknown 介面的陣列。
 
-*Cookie*  
+*Cookie*<br/>
 作業完成後，物件的陣列的指標識別類別的值，已註冊。 稍後會使用這些值，撤銷。
 
-*count*  
+*count*<br/>
 若要註冊的 Clsid 數目。
 
 ### <a name="return-value"></a>傳回值
@@ -381,10 +381,10 @@ HRESULT RegisterObjects(
 
 ### <a name="parameters"></a>參數
 
-*模組*  
+*module*<br/>
 COM 或 Windows 執行階段物件的陣列。
 
-*伺服器名稱*  
+*伺服器名稱*<br/>
 建立物件的伺服器名稱。
 
 ### <a name="return-value"></a>傳回值
@@ -399,21 +399,21 @@ COM 或 Windows 執行階段物件的陣列。
 HRESULT RegisterWinRTObject(const wchar_t* serverName,
    wchar_t** activatableClassIds,
    WINRT_REGISTRATION_COOKIE* cookie,
-   unsigned int count)  
+   unsigned int count)
 ```
 
 ### <a name="parameters"></a>參數
 
-*伺服器名稱*  
+*伺服器名稱*<br/>
 指定此作業所影響的物件子集的名稱。
 
-*activatableClassIds*  
+*activatableClassIds*<br/>
 若要註冊的可啟動 Clsid 的陣列。
 
-*Cookie*  
+*Cookie*<br/>
 識別已註冊的類別物件的值。 此值稍後用來撤銷註冊。
 
-*count*  
+*count*<br/>
 若要註冊的物件數目。
 
 ### <a name="return-value"></a>傳回值
@@ -453,13 +453,13 @@ virtual HRESULT UnregisterCOMObject(
 
 ### <a name="parameters"></a>參數
 
-*伺服器名稱*  
+*伺服器名稱*<br/>
 （未使用）
 
-*Cookie*  
+*Cookie*<br/>
 識別要取消註冊的類別物件的值的指標陣列。 建立陣列[RegisterCOMObject](#registercomobject)方法。
 
-*count*  
+*count*<br/>
 若要取消註冊的類別數目。
 
 ### <a name="return-value"></a>傳回值
@@ -478,10 +478,10 @@ HRESULT UnregisterObjects(
 
 ### <a name="parameters"></a>參數
 
-*模組*  
+*module*<br/>
 模組的指標。
 
-*伺服器名稱*  
+*伺服器名稱*<br/>
 合格的名稱，指定此作業所影響的物件子集。
 
 ### <a name="return-value"></a>傳回值
@@ -501,5 +501,5 @@ virtual HRESULT UnregisterWinRTObject(
 
 ### <a name="parameters"></a>參數
 
-*Cookie*  
+*Cookie*<br/>
 值，識別要撤銷其註冊的類別物件指標。

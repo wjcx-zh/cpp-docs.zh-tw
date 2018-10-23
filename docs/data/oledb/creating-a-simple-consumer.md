@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 85efb2a1d699914c6d7ffb1fd079a38be70f0b52
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: c9cb2003b857bb156709e4ba2a3345dfb57bfd3c
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163838"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808936"
 ---
 # <a name="creating-a-simple-consumer"></a>建立簡單消費者
 
@@ -32,15 +32,15 @@ ms.locfileid: "49163838"
 
    [ **新增專案** ] 對話方塊隨即出現。
 
-1. 在 **專案類型**窗格中，按一下**已安裝** > **範本** > **Visual c + +** 資料夾，和然後按一下**Win32 主控台應用程式**中的圖示**範本**窗格。 在 **名稱**方塊中，輸入您的專案的名稱，例如*MyCons*。
+1. 在 **專案類型**窗格中，按一下**已安裝** > **Visual c + +** > **Windows 桌面**資料夾，然後按一下**Windows Desktop 精靈**中的圖示**範本**窗格。 在 **名稱**方塊中，輸入您的專案的名稱，例如*MyCons*。
 
 1. 按一下 [確定 **Deploying Office Solutions**]。
 
-   Win32 應用程式精靈 隨即出現。
+   **Windows 桌面專案** 精靈隨即出現。
 
 1. 在 **應用程式設定**頁面上，選取**主控台應用程式**，然後選取**新增 ATL 通用標頭檔**。
 
-1. 按一下 **完成**關閉精靈並產生專案。
+1. 按一下 **確定**關閉精靈並產生專案。
 
 接下來，使用 [ATL OLE DB 消費者精靈] 來新增 OLE DB 取用者物件。
 
@@ -48,9 +48,9 @@ ms.locfileid: "49163838"
 
 1. 在 **方案總管**，以滑鼠右鍵按一下`MyCons`專案。
 
-1. 在捷徑功能表，按一下 **新增**，然後按一下**類別**。
+1. 在捷徑功能表，按一下 **新增**，然後按一下**新項目**。
 
-   **加入類別** 對話方塊隨即出現。
+   [新增項目] 對話方塊隨即出現。
 
 1. 在 **分類**窗格中，按一下**已安裝** > **Visual c + +** > **ATL**，按一下**ATL OLEDB 消費者**中的圖示**範本**窗格中，然後再按一下**新增**。
 

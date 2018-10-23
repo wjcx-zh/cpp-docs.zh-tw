@@ -14,7 +14,6 @@
 # [C++ 標準程式庫](standard-library/cpp-standard-library-reference.md)
 # [Windows 開發](windows/overview-of-windows-programming-in-cpp.md)
 # [Linux 開發](linux/download-install-and-setup-the-linux-development-workload.md)
-# [使用 C++/CLI 進行 .NET 開發](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 # [以 Visual C++ 進行雲端和 Web 程式設計](cloud/cloud-and-web-programming-in-visual-cpp.md)
 # [平行程式設計](parallel/parallel-programming-in-visual-cpp.md)
 # [資料存取](data/data-access-in-cpp.md)

@@ -1,7 +1,7 @@
 ---
 title: CFileTime 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81a8aeaf2b4475a95421853c4ab5822bc06abb3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 36e71cd975ff138343770b80e60b0287faa32558
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437764"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808819"
 ---
 # <a name="cfiletime-class"></a>CFileTime 類別
 
@@ -133,10 +133,10 @@ CFileTime(ULONGLONG nTime) throw();
 
 ### <a name="parameters"></a>參數
 
-*全文檢索*  
+*全文檢索*<br/>
 A [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)結構。
 
-*n*  
+*n*<br/>
 表示日期和時間做為 64 位元值。
 
 ### <a name="remarks"></a>備註
@@ -246,10 +246,10 @@ CFileTimeSpan operator-(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*  
+*範圍*<br/>
 `CFileTimeSpan` 物件。
 
-*全文檢索*  
+*全文檢索*<br/>
 `CFileTime` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -266,7 +266,7 @@ bool operator!=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>參數
 
-*全文檢索*  
+*全文檢索*<br/>
 要比較的 `CFileTime` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -283,7 +283,7 @@ CFileTime operator+(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*  
+*範圍*<br/>
 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -300,7 +300,7 @@ CFileTime& operator+=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*  
+*範圍*<br/>
 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -317,7 +317,7 @@ bool operator<(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>參數
 
-*全文檢索*  
+*全文檢索*<br/>
 要比較的 `CFileTime` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -338,7 +338,7 @@ bool operator<=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>參數
 
-*全文檢索*  
+*全文檢索*<br/>
 要比較的 `CFileTime` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -355,7 +355,7 @@ CFileTime& operator=(const FILETIME& ft) throw();
 
 ### <a name="parameters"></a>參數
 
-*全文檢索*  
+*全文檢索*<br/>
 A`CFileTime`物件，其中包含新的時間和日期。
 
 ### <a name="return-value"></a>傳回值
@@ -372,7 +372,7 @@ CFileTime& operator-=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*  
+*範圍*<br/>
 A`CFileTimeSpan`物件，其中包含要減去的相對時間。
 
 ### <a name="return-value"></a>傳回值
@@ -389,7 +389,7 @@ bool operator==(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>參數
 
-*全文檢索*  
+*全文檢索*<br/>
 `CFileTime`来比較的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -406,7 +406,7 @@ bool operator>(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>參數
 
-*全文檢索*  
+*全文檢索*<br/>
 要比較的 `CFileTime` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -423,7 +423,7 @@ bool operator>=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>參數
 
-*全文檢索*  
+*全文檢索*<br/>
 要比較的 `CFileTime` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -452,7 +452,7 @@ void SetTime(ULONGLONG nTime) throw();
 
 ### <a name="parameters"></a>參數
 
-*n*  
+*n*<br/>
 64 位元值，其代表的日期和時間，請在本機或 Coordinated Universal Time (UTC) 格式。
 
 ##  <a name="utctolocal"></a>  CFileTime::UTCToLocal
@@ -489,4 +489,3 @@ static const ULONGLONG Week = Day* 7;
 [CFileTimeSpan 類別](../../atl-mfc-shared/reference/cfiletimespan-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39329f4895060ff950f36c3d10dd5e4020f3b98a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 92761508a5e93c7ef0d0a4099dde587987a50dad
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448424"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809157"
 ---
 # <a name="coledatetime-class"></a>COleDateTime 類別
 
@@ -165,7 +165,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="parameters"></a>參數
 
-*日期*  
+*date*<br/>
 要比較的 `COleDateTime` 物件。
 
 ### <a name="remarks"></a>備註
@@ -210,22 +210,22 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 
 ### <a name="parameters"></a>參數
 
-*dateSrc*  
+*dateSrc*<br/>
 將現有`COleDateTime`複製到新的物件`COleDateTime`物件。
 
-*varSrc*  
+*varSrc*<br/>
 將現有`VARIANT`資料結構 (可能`COleVariant`物件) 轉換成日期/時間值 (VT_DATE)，並複製到新`COleDateTime`物件。
 
-*dtSrc*  
+*dtSrc*<br/>
 日期/時間 (`DATE`) 複製到新的值`COleDateTime`物件。
 
-*timeSrc*  
+*timeSrc*<br/>
 A`time_t`或是`__time64_t`值轉換成日期/時間值，並複製到新`COleDateTime`物件。
 
-*systimeSrc*  
+*systimeSrc*<br/>
 A`SYSTEMTIME`結構轉換成日期/時間值，並複製到新`COleDateTime`物件。
 
-*filetimeSrc*  
+*filetimeSrc*<br/>
 A`FILETIME`結構轉換成日期/時間值，並複製到新`COleDateTime`物件。 請注意，`FILETIME`使用 Universal Coordinated Time (UTC)，因此如果您傳遞結構中的當地時間，結果將會不正確。 請參閱[檔案的時間](/windows/desktop/SysInfo/file-times)Windows sdk for 的詳細資訊。
 
 *nYear*， *nMonth*， *n*，*當天的時數*， *nMin*， *nSec*  
@@ -234,7 +234,7 @@ A`FILETIME`結構轉換成日期/時間值，並複製到新`COleDateTime`物件
 *wDosDate*， *wDosTime*  
 MS-DOS 日期和時間值轉換成日期/時間值，並複製到新`COleDateTime`物件。
 
-*dbts*  
+*dbts*<br/>
 參考[DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype)結構，包含目前的當地時間。
 
 ### <a name="remarks"></a>備註
@@ -297,7 +297,7 @@ CString Format(UINT nFormatID) const;
 
 ### <a name="parameters"></a>參數
 
-*dwFlags*  
+*dwFlags*<br/>
 指出其中一個下列的地區設定旗標：
 
 - LOCALE_NOUSEROVERRIDE 使用系統預設地區設定，而不是自訂使用者設定。
@@ -306,10 +306,10 @@ CString Format(UINT nFormatID) const;
 
 - VAR_DATEVALUEONLY 在剖析期間忽略之時間部分。
 
-*lcid*  
+*lcid*<br/>
 表示要用於轉換的地區設定識別碼。 如需有關語言識別碼的詳細資訊，請參閱 <<c0> [ 語言識別碼](/windows/desktop/Intl/language-identifiers)。
 
-*lpszFormat*  
+*lpszFormat*<br/>
 格式化字串類似於`printf`格式化字串。 每個格式化程式碼，加上百分比 ( `%`) 登入，會取代對應`COleDateTime`元件。 格式化字串中的其他字元會複製到傳回的字串不變。 請參閱執行階段函式[strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)如需詳細資訊。 值和格式化的程式碼的意義`Format`是：
 
 - `%H` 目前日期的小時
@@ -320,7 +320,7 @@ CString Format(UINT nFormatID) const;
 
 - `%%` 百分比符號
 
-*nFormatID*  
+*nFormatID*<br/>
 格式控制字串資源識別碼。
 
 ### <a name="return-value"></a>傳回值
@@ -356,7 +356,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="parameters"></a>參數
 
-*dbts*  
+*dbts*<br/>
 參考[DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype)結構。
 
 ### <a name="return-value"></a>傳回值
@@ -381,7 +381,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 
 ### <a name="parameters"></a>參數
 
-*sysTime*  
+*sysTime*<br/>
 參考[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)接收從已轉換的日期/時間值的結構`COleDateTime`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -404,7 +404,7 @@ bool GetAsUDATE(UDATE& udate) const throw();
 
 ### <a name="parameters"></a>參數
 
-*udate*  
+*udate*<br/>
 參考`UDATE`結構，以接收已轉換的日期/時間值從`COleDateTime`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -938,10 +938,10 @@ LCID lcid = LANG_USER_DEFAULT) throw();
 
 ### <a name="parameters"></a>參數
 
-*lpszDate*  
+*lpszDate*<br/>
 要剖析的 null 終止字串指標。 如需詳細資料，請參閱＜備註＞。
 
-*dwFlags*  
+*dwFlags*<br/>
 表示地區設定和剖析的旗標。 一或多個下列旗標：
 
 - LOCALE_NOUSEROVERRIDE 使用系統預設地區設定，而不是自訂使用者設定。
@@ -950,7 +950,7 @@ LCID lcid = LANG_USER_DEFAULT) throw();
 
 - VAR_DATEVALUEONLY 在剖析期間忽略之時間部分。
 
-*lcid*  
+*lcid*<br/>
 表示要用於轉換的地區設定識別碼。
 
 ### <a name="return-value"></a>傳回值
@@ -1151,7 +1151,7 @@ void SetStatus(DateTimeStatus status) throw();
 
 ### <a name="parameters"></a>參數
 
-*status*  
+*status*<br/>
 這個新的狀態值`COleDateTime`物件。
 
 ### <a name="remarks"></a>備註

@@ -1,7 +1,7 @@
 ---
 title: rename_namespace |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,37 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7608255b5369443ce1045f896b776cb283fdb1cb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 966c6dda7e5e0bd28e78f37967397c3b64e4e55c
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411855"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808468"
 ---
 # <a name="renamenamespace"></a>rename_namespace
-**C + + 特定**  
-  
-將包含類型程式庫內容的命名空間重新命名。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-rename_namespace("NewName")  
-```  
-  
-### <a name="parameters"></a>參數  
-*NewName*  
-命名空間的新名稱。  
-  
-## <a name="remarks"></a>備註  
- 
-它接受單一引數， *NewName*，以指定的命名空間的新名稱。  
-  
-若要移除的命名空間，請使用[no_namespace](../preprocessor/no-namespace.md)改為屬性。  
-  
-**END c + + 特定的**  
-  
-## <a name="see-also"></a>另請參閱  
- 
+
+**C + + 特定**
+
+將包含類型程式庫內容的命名空間重新命名。
+
+## <a name="syntax"></a>語法
+
+```
+rename_namespace("NewName")
+```
+
+### <a name="parameters"></a>參數
+
+*NewName*<br/>
+命名空間的新名稱。
+
+## <a name="remarks"></a>備註
+
+它接受單一引數， *NewName*，以指定的命名空間的新名稱。
+
+若要移除的命名空間，請使用[no_namespace](../preprocessor/no-namespace.md)改為屬性。
+
+**END c + + 特定的**
+
+## <a name="see-also"></a>另請參閱
+
 [#import 屬性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指示詞](../preprocessor/hash-import-directive-cpp.md)

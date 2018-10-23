@@ -16,20 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3e75a100bb5b56b613419160a3ea063bce42bbdb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 70fab2751e216ca90dbe09e31c88f9aa80aa7b90
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092319"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808260"
 ---
 # <a name="using-multiple-result-sets-from-one-stored-procedure"></a>從預存程序使用多重結果集
 
-大多數的預存程序會傳回多個結果集。 這類預存程序通常包含一個或多個 select 陳述式。 取用者必須考慮此選項可處理所有結果集。  
+大多數的預存程序會傳回多個結果集。 這類預存程序通常包含一個或多個 select 陳述式。 取用者需要考慮加入此項目來處理所有結果集。  
   
-### <a name="to-handle-multiple-result-sets"></a>若要處理多個結果集  
+## <a name="to-handle-multiple-result-sets"></a>若要處理多個結果集  
   
-1. 建立`CCommand`類別搭配`CMultipleResults`作為範本引數，並使用您選擇的存取子。 通常，這是動態或手動存取子。 如果您使用另一種存取子，您可能會無法決定每個資料列集的輸出資料行。  
+1. 建立`CCommand`類別搭配`CMultipleResults`作為範本引數，並使用您的選擇，通常是動態或手動存取子的存取子。 如果您使用另一種存取子，您可能會無法決定每個資料列集的輸出資料行。  
   
 1. 如往常般執行預存程序和繫結資料行 (請參閱[How Do I 擷取資料嗎？](../../data/oledb/fetching-data.md))。  
   

@@ -1,7 +1,7 @@
 ---
 title: CTime 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 10/12/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c14dc8c8c9b697ecb7dcf1ff227eb7a76ad7cfa5
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 8c99fe44b5012e08a4b32a9e84d4255e4ee2b7e0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328593"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808832"
 ---
 # <a name="ctime-class"></a>CTime 類別
 
@@ -49,7 +49,7 @@ ms.locfileid: "49328593"
 ## <a name="syntax"></a>語法
 
 ```
-class CTime  
+class CTime
 ```
 
 ## <a name="members"></a>成員
@@ -119,17 +119,17 @@ class CTime
 比較運算子。
 
 ```
-bool operator==(CTime time) const throw(); 
+bool operator==(CTime time) const throw();
 bool operator!=(CTime time) const throw();
 bool operator<(CTime time) const throw();
 bool operator>(CTime time) const throw();
 bool operator<=(CTime time) const throw();
-bool operator>=(CTime time) const throw(); 
+bool operator>=(CTime time) const throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*time*  
+*time*<br/>
 要比較的 `CTime` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -152,22 +152,21 @@ CTime(int nYear, int nMonth, int nDay,
 CTime(WORD wDosDate, WORD wDosTime, int nDST = -1);
 CTime(const SYSTEMTIME& st, int nDST = - 1) throw();
 CTime(const FILETIME& ft, int nDST = - 1);
-CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
+CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*timeSrc*  
+*timeSrc*<br/>
 指出`CTime`已經存在的物件。
 
-*time*  
-A **__time64_t**時間值，也就是在 1970 年 1 月 1 日 UTC 之後的秒數。 請注意，這將會調整為您的當地時間。 例如，如果您位在紐約，並建立`CTime`物件，並傳遞的參數為 0， [CTime::GetMonth](#getmonth)會傳回 12。  
+*time*<br/>
+A **__time64_t**時間值，也就是在 1970 年 1 月 1 日 UTC 之後的秒數。 請注意，這將會調整為您的當地時間。 例如，如果您位在紐約，並建立`CTime`物件，並傳遞的參數為 0， [CTime::GetMonth](#getmonth)會傳回 12。
 
-
-*nYear*， *nMonth*， *n*，*當天的時數*， *nMin*， *nSec*  
+*nYear*， *nMonth*， *n*，*當天的時數*， *nMin*， *nSec*<br/>
 表示要複製到新的日期和時間值`CTime`物件。
 
-*nDST*  
+*nDST*<br/>
 指出日光節約時間是否生效。 可以有三個值之一：
 
 - *nDST* 0Standard 時間設為作用中。
@@ -176,16 +175,16 @@ A **__time64_t**時間值，也就是在 1970 年 1 月 1 日 UTC 之後的秒�
 
 - *nDST*設為小於 0The 預設的值。 自動計算標準時間或日光節約時間是否生效。
 
-*wDosDate*， *wDosTime*  
+*wDosDate*， *wDosTime*<br/>
 MS-DOS 日期和時間值轉換成日期/時間值，並複製到新`CTime`物件。
 
-*st*  
+*st*<br/>
 A [SYSTEMTIME](../../mfc/reference/systemtime-structure.md)轉換成日期/時間值，並複製到新的結構`CTime`物件。
 
-*全文檢索*  
+*全文檢索*<br/>
 A [FILETIME](../../mfc/reference/filetime-structure.md)轉換成日期/時間值，並複製到新的結構`CTime`物件。
 
-dbts  
+*dbts*<br/>
 DBTIMESTAMP 結構，包含目前的當地時間的參考。
 
 ### <a name="remarks"></a>備註
@@ -200,13 +199,13 @@ DBTIMESTAMP 結構，包含目前的當地時間的參考。
 
 - `CTime( int, int, ...);` 建構`CTime`物件從當地時間元件，每個元件都受限於下列範圍：
 
-   |元件|範圍|  
-   |---------------|-----------|  
-   |*nYear*|1970-3000|  
-   |*nMonth*|1-12|  
-   |*n*|1-31|  
-   |*當天的時數*|0-23|  
-   |*nMin*|0-59|  
+   |元件|範圍|
+   |---------------|-----------|
+   |*nYear*|1970-3000|
+   |*nMonth*|1-12|
+   |*n*|1-31|
+   |*當天的時數*|0-23|
+   |*nMin*|0-59|
    |*nSec*|0-59|
 
    這個建構函式可讓適當的轉換為 UTC。 Microsoft Foundation 類別庫的偵錯版本判斷提示，如果有一個或多個時間元件會超出範圍。 您必須先驗證再呼叫的引數。 這個建構函式需要本地時間。
@@ -231,16 +230,16 @@ DBTIMESTAMP 結構，包含目前的當地時間的參考。
 呼叫此成員函式來建立格式化的日期時間值的表示法。
 
 ```
-CString Format(LPCTSTR pszFormat) const; 
-CString Format(UINT nFormatID) const; 
+CString Format(LPCTSTR pszFormat) const;
+CString Format(UINT nFormatID) const;
 ```
 
 ### <a name="parameters"></a>參數
 
-*pszFormat*  
+*pszFormat*<br/>
 格式化字串類似於`printf`格式化字串。 格式化程式碼，加上百分比 (`%`) 登入，會取代對應`CTime`元件。 格式化字串中的其他字元會複製到傳回的字串不變。 請參閱執行階段函式[strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)的格式化程式碼清單。
 
-*nFormatID*  
+*nFormatID*<br/>
 識別此格式的字串識別碼。
 
 ### <a name="return-value"></a>傳回值
@@ -268,10 +267,10 @@ CString FormatGmt(UINT nFormatID) const;
 
 ### <a name="parameters"></a>參數
 
-*pszFormat*  
+*pszFormat*<br/>
 指定的格式化字串，類似於`printf`格式化字串。 請參閱執行階段函式[strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)如需詳細資訊。
 
-*nFormatID*  
+*nFormatID*<br/>
 識別此格式的字串識別碼。
 
 ### <a name="return-value"></a>傳回值
@@ -298,7 +297,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="parameters"></a>參數
 
-*dbts*  
+*dbts*<br/>
 DBTIMESTAMP 結構，包含目前的當地時間的參考。
 
 ### <a name="return-value"></a>傳回值
@@ -323,7 +322,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
 
 ### <a name="parameters"></a>參數
 
-*timeDest*  
+*timeDest*<br/>
 參考[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)會保存已轉換的日期/時間值的結構`CTime`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -359,7 +358,7 @@ static CTime WINAPI GetCurrentTime() throw();
 傳回由天代表`CTime`物件。
 
 ```
-int GetDay() const throw(); 
+int GetDay() const throw();
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -404,7 +403,7 @@ struct tm* GetGmtTm(struct tm* ptm) const;
 
 ### <a name="parameters"></a>參數
 
-*ptm*  
+*ptm*<br/>
 指向接收時間資料的緩衝區。 如果此指標為 NULL，則會擲回例外狀況。
 
 ### <a name="return-value"></a>傳回值
@@ -451,7 +450,7 @@ struct tm* GetLocalTm(struct tm* ptm) const;
 
 ### <a name="parameters"></a>參數
 
-*ptm*  
+*ptm*<br/>
 指向接收時間資料的緩衝區。 如果此指標為 NULL，則會擲回例外狀況。
 
 ### <a name="return-value"></a>傳回值
@@ -574,7 +573,7 @@ CTime& operator=(__time64_t time) throw();
 
 ### <a name="parameters"></a>參數
 
-*time*  
+*time*<br/>
 新的日期/時間值。
 
 ### <a name="return-value"></a>傳回值
@@ -597,10 +596,10 @@ CTimeSpan operator-(CTime time) const throw();
 
 ### <a name="parameters"></a>參數
 
-*時間範圍*  
+*時間範圍*<br/>
 `CTimeSpan`要加入或減去的物件。
 
-*time*  
+*time*<br/>
 `CTime`来減去的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -626,7 +625,7 @@ CTime& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*  
+*範圍*<br/>
 `CTimeSpan`要加入或減去的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -654,7 +653,7 @@ CArchive& Serialize64(CArchive& ar);
 
 ### <a name="parameters"></a>參數
 
-*ar*  
+*ar*<br/>
 `CArchive`您想要更新的物件。
 
 ### <a name="return-value"></a>傳回值

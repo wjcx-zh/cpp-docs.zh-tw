@@ -1,7 +1,7 @@
 ---
 title: 正在擷取資料 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,22 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b7aaff3ccd2756ecfbac1cf745aaac74b76a91f9
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 4f0467d322242bb222e5365b45a57e1aa2fe2943
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48859948"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807467"
 ---
 # <a name="fetching-data"></a>擷取資料
 
 開啟資料來源、 工作階段和資料列集物件之後，您可以擷取資料。 根據您使用的存取子的類型，您可能需要繫結資料行。
 
-### <a name="to-fetch-data"></a>若要擷取資料
+## <a name="to-fetch-data"></a>若要擷取資料
 
 1. 開啟使用適當的資料列集**開啟**命令。
 
-1. 如果您使用`CManualAccessor`，如果您還沒有這麼繫結之輸出資料行。 若要繫結資料行，呼叫`GetColumnInfo`，然後再建立存取子繫結，如下列範例所示：
+1. 如果您使用`CManualAccessor`，繫結之輸出資料行，如果您還尚未這麼做。 下列範例取自[DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)範例。 若要繫結資料行，呼叫`GetColumnInfo`，然後再建立存取子繫結，如下列範例所示：
 
     ```cpp
     // From the DBViewer Sample CDBTreeView::OnQueryEdit
@@ -50,7 +50,7 @@ ms.locfileid: "48859948"
     rs.Bind();
     ```
 
-1. 撰寫`while`迴圈來擷取資料。 在迴圈中，呼叫`MoveNext`演進資料指標，測試對 s_ok 時，傳回的值，如下列範例所示：
+1. 撰寫**雖然**迴圈來擷取資料。 在迴圈中，呼叫`MoveNext`演進資料指標，測試對 s_ok 時，傳回的值，如下列範例所示：
 
     ```cpp
     while (rs.MoveNext() == S_OK)
@@ -60,7 +60,7 @@ ms.locfileid: "48859948"
     }
     ```
 
-1. 內`while`迴圈中，您可以根據您的存取子類型擷取資料。
+1. 內**雖然**迴圈中，您可以根據您的存取子類型擷取資料。
 
    - 如果您使用[CAccessor](../../data/oledb/caccessor-class.md)類別，您應該有包含資料成員的使用者記錄。 下列範例所示，您可以存取您的資料，使用那些資料成員：
 

@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4a3f80d3e421701ac0612ddb2552d10d1eff1f02
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6d8bcd61fb77b12db612bb12ae516a8665caaee8
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056023"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808221"
 ---
 # <a name="consumer-wizard-generated-methods"></a>消費者精靈產生的方法
 
@@ -40,7 +40,7 @@ ATL OLE DB 消費者精靈和 MFC 應用程式精靈會產生您應該要注意�
   
 - `CloseAll` 關閉所有開啟的資料列集並釋放所有的命令執行。  
   
-- `OpenRowset` 會呼叫 OpenAll 開啟取用者的資料列集或資料列集。  
+- `OpenRowset` 會呼叫`OpenAll`開啟取用者的資料列集或資料列集。  
   
 - `GetRowsetProperties` 擷取資料列集的屬性集的屬性可以設定的指標。  
   
@@ -91,7 +91,7 @@ int main(int argc, char* argv[])
   
 ## <a name="remarks"></a>備註  
 
-請注意，如果您定義`HasBookmark`方法，`OpenAll`程式碼會將 DBPROP_IRowsetLocate 屬性設定，請確定您只有這樣如果您的提供者支援該屬性。  
+請注意，如果您定義`HasBookmark`方法中，`OpenAll`程式碼設定`DBPROP_IRowsetLocate`屬性; 請確定您只有這樣如果您的提供者支援該屬性。  
   
 ## <a name="openrowset"></a>OpenRowset  
   
@@ -104,7 +104,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);
   
 `OpenAll` 呼叫這個方法，以開啟 取用者中的 資料列集或資料列集。 一般而言，您不需要呼叫`OpenRowset`除非您想要使用多個資料來源/工作階段/資料列集。 `OpenRowset` 命令或資料表類別標頭檔中宣告：  
   
-```  
+```cpp  
 // OLE DB Template version:  
 HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)  
 {  
@@ -117,7 +117,7 @@ HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)
 }  
 ```  
   
-屬性會以不同的方式實作這個方法。 這個版本會將工作階段物件和預設 db_command，在指定的命令字串，雖然您可以傳遞一個不同的命令字串。 請注意，如果您定義`HasBookmark`方法，`OpenRowset`程式碼會將 DBPROP_IRowsetLocate 屬性設定，請確定您只有這樣如果您的提供者支援該屬性。  
+屬性會以不同的方式實作這個方法。 這個版本會將工作階段物件和預設 db_command，在指定的命令字串，雖然您可以傳遞一個不同的命令字串。 請注意，如果您定義`HasBookmark`方法中，`OpenRowset`程式碼設定`DBPROP_IRowsetLocate`屬性; 請確定您只有這樣如果您的提供者支援該屬性。  
   
 ```cpp  
 // Attribute-injected version:  
@@ -142,7 +142,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
-這個方法會擷取資料列集的屬性集; 的指標您可以使用這個指標設定 DBPROP_IRowsetChange 等屬性。 `GetRowsetProperties` 可在使用者記錄類別，如下所示。 您可以修改此程式碼來設定額外的資料列集屬性：  
+這個方法會擷取資料列集的屬性集; 的指標您可以使用這個指標來設定屬性，例如`DBPROP_IRowsetChange`。 `GetRowsetProperties` 可在使用者記錄類別，如下所示。 您可以修改此程式碼來設定額外的資料列集屬性：  
   
 ```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  

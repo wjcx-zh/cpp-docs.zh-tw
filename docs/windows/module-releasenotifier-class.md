@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2dae7809a5926fa93626fa33148d444fe12807b
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 2128164fe3196a77991e755b865357e1aefcac23
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49161888"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808481"
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier 類別
 
@@ -102,5 +102,5 @@ ReleaseNotifier(bool release) throw();
 
 ### <a name="parameters"></a>參數
 
-*release*  
+*release*<br/>
 `true` 若要刪除這個執行個體時`Release`方法稱為;`false`未刪除此執行個體。

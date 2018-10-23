@@ -1,7 +1,7 @@
 ---
 title: IAtlStringMgr 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad98923c21a28976b54c2251f2da83eb0ec4cf5f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6d637750ab4aa9dc30ca7b297373cb2c752802d8
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408137"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808865"
 ---
 # <a name="iatlstringmgr-class"></a>IAtlStringMgr 類別
 
@@ -73,10 +73,10 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 
 ### <a name="parameters"></a>參數
 
-*nAllocLength*  
+*nAllocLength*<br/>
 在新的記憶體區塊中的字元數。
 
-*nCharSize*  
+*nCharSize*<br/>
 字串管理員所使用的字元類型的大小 （以位元組為單位）。
 
 ### <a name="return-value"></a>傳回值
@@ -124,7 +124,7 @@ void Free(CStringData* pData) throw();
 
 ### <a name="parameters"></a>參數
 
-*pData*  
+*pData*<br/>
 要釋放的記憶體區塊指標。
 
 ### <a name="remarks"></a>備註
@@ -151,31 +151,31 @@ CStringData* GetNilString() throw();
 呼叫此函式來傳回空的字串表示法。
 
 > [!NOTE]
->  在實作自訂字串管理員時，此函式必須永遠不會失敗。 您可以藉由內嵌的執行個體來確保這`CNilStringData`字串管理員類別，並傳回指標至該執行個體中。
+> 在實作自訂字串管理員時，此函式必須永遠不會失敗。 您可以藉由內嵌的執行個體來確保這`CNilStringData`字串管理員類別，並傳回指標至該執行個體中。
 
 > [!NOTE]
->  如需使用方式範例，請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
+> 如需使用方式範例，請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
-##  <a name="reallocate"></a>  IAtlStringMgr::Reallocate
+## <a name="reallocate"></a>  IAtlStringMgr::Reallocate
 
 重新配置的字串資料結構。
 
 ```
-CStringData* Reallocate(  
-CStringData* pData,
-int nAllocLength,
-int nCharSize) throw();
+CStringData* Reallocate(
+    CStringData* pData,
+    int nAllocLength,
+    int nCharSize) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*pData*  
+*pData*<br/>
 此記憶體管理員先前配置的記憶體指標。
 
-*nAllocLength*  
+*nAllocLength*<br/>
 在新的記憶體區塊中的字元數。
 
-*nCharSize*  
+*nCharSize*<br/>
 字串管理員所使用的字元類型的大小 （以位元組為單位）。
 
 ### <a name="return-value"></a>傳回值
@@ -189,10 +189,9 @@ int nCharSize) throw();
 呼叫[IAtlStringMgr::Free](#free)釋放這個方法所配置的記憶體。
 
 > [!NOTE]
->  如需使用方式範例，請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
+> 如需使用方式範例，請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

@@ -1,7 +1,7 @@
 ---
 title: CStrBufT 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43c460d45e0f1ce41cebd463bc3ba6b7f295d9ca
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82152ea3df6bb21ee1405790acf9d3fb2c9630c5
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411179"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808988"
 ---
 # <a name="cstrbuft-class"></a>CStrBufT 類別
 
@@ -43,7 +43,7 @@ class CStrBufT
 
 #### <a name="parameters"></a>參數
 
-*TCharType*  
+*TCharType*<br/>
 字元類型`CStrBufT`類別。 可以是下列其中一項：
 
 - **char** （適用於 ANSI 字元字串）
@@ -121,13 +121,13 @@ explicit CStrBufT(StringType& str) throw(...);
 
 ### <a name="parameters"></a>參數
 
-*str*  
+*str*<br/>
 緩衝區相關聯的字串物件。 一般而言，開發人員會使用的預先定義的 typedef `CStrBuf` （TCHAR variant 型別）， `CStrBufA` (**char** variant) 及`CStrBufW`(**wchar_t** variant)。
 
-*nMinLength*  
+*nMinLength*<br/>
 字元緩衝區的長度下限。
 
-*dwFlags*  
+*dwFlags*<br/>
 判斷字串長度自動決定。 可以是下列其中一項：
 
 - AUTO_LENGTH 字串長度會自動判斷何時[CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer)呼叫。 字串必須以 null 結束。 預設值。
@@ -212,7 +212,7 @@ void SetLength(int nLength);
 
 ### <a name="parameters"></a>參數
 
-*nLength*  
+*nLength*<br/>
 字元緩衝區的字串物件的新長度。
 
 > [!NOTE]

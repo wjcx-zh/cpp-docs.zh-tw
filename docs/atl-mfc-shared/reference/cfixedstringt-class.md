@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6ac44a9a27b5c3ad62279dc3065aa9e0aac5236
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d9f48ffb9cad787159a40a58d85e6bff5dacc475
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378217"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808247"
 ---
 # <a name="cfixedstringt-class"></a>CFixedStringT 類別
 
@@ -39,10 +39,10 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 
 #### <a name="parameters"></a>參數
 
-*StringType*  
+*StringType*<br/>
 用於固定的字串物件的基底類別，而且可以是任何`CStringT`-基底類型。 部分範例包括`CString`， `CStringA`，和`CStringW`。
 
-*t_nChars*  
+*t_nChars*<br/>
 儲存在緩衝區中的字元數。
 
 ## <a name="members"></a>成員
@@ -101,13 +101,13 @@ explicit CFixedStringT(const unsigned char* psz);
 
 ### <a name="parameters"></a>參數
 
-*psz*  
+*psz*<br/>
 要複製到這個 null 結尾字串`CFixedStringT`物件。
 
-*str*  
+*str*<br/>
 將現有`CFixedStringT`要複製到這個物件`CFixedStringT`物件。
 
-*pStringMgr*  
+*pStringMgr*<br/>
 指向的記憶體管理員的`CFixedStringT`物件。 如需詳細資訊`IAtlStringMgr`和 記憶體管理`CFixedStringT`，請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
 ### <a name="remarks"></a>備註
@@ -129,10 +129,10 @@ CFixedStringT<StringType, t_nChars>& operator=(const StringType& str);
 
 ### <a name="parameters"></a>參數
 
-*str*  
+*str*<br/>
 要複製到這個 null 結尾字串`CFixedStringT`物件。
 
-*psz*  
+*psz*<br/>
 將現有`CFixedStringT`複製到這個`CFixedStringT`物件。
 
 ### <a name="remarks"></a>備註

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f313b659629f824828c52948b9a73c50f86b5e40
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: be0e05d61d4949deaee683c5b8f43d18e0501d23
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434176"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808975"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan 類別
 
@@ -124,7 +124,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 
 ### <a name="parameters"></a>參數
 
-*dateSpan*  
+*dateSpan*<br/>
 要比較的 `COleDateTimeSpan`。
 
 ### <a name="return-value"></a>傳回值
@@ -154,7 +154,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>參數
 
-*dblSpanSrc*  
+*dblSpanSrc*<br/>
 若要複製到新的天數`COleDateTimeSpan`物件。
 
 *lDays*， *nHours*， *nMins*， *nSecs*  
@@ -189,7 +189,7 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>參數
 
-*pFormat*  
+*pFormat*<br/>
 格式化字串類似於`printf`格式化字串。 格式化程式碼，加上百分比 (`%`) 登入，會取代對應`COleDateTimeSpan`元件。 格式化字串中的其他字元會複製到傳回的字串不變。 值和格式化的程式碼的意義`Format`如下所示：
 
 - **%H**當天的時數
@@ -204,7 +204,7 @@ CString Format(UINT nID) const;
 
 -
 
-*nID*  
+*nID*<br/>
 格式控制字串資源識別碼。
 
 ### <a name="return-value"></a>傳回值
@@ -731,7 +731,7 @@ void SetStatus(DateTimeSpanStatus status) throw();
 
 ### <a name="parameters"></a>參數
 
-*status*  
+*status*<br/>
 這個新的狀態值`COleDateTimeSpan`物件。
 
 ### <a name="remarks"></a>備註

@@ -19,16 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5f9e0e273df1221801a9b761cd7f45200e0b50c0
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 4a17ff7e6e78b21267b71ba495ba10a98e29cfe7
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895080"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808845"
 ---
 # <a name="output-parameters"></a>輸出參數
 
-呼叫預存程序是類似於叫用 SQL 命令。 主要差異是預存程序使用輸出參數 （或 「 outparameters"），並傳回值。
+呼叫預存程序是類似於執行 SQL 命令。 主要差異是預存程序使用輸出參數 （或 「 outparameters"），並傳回值。
 
 下列預存程序，第一個 '？ '的傳回值 (phone) 和第二個是'？ ' 是輸入的參數 （名稱）：
 
@@ -47,11 +47,11 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
 
-您的應用程式必須處理從預存程序所傳回的輸出。 不同的 OLE DB 提供者傳回輸出參數，並傳回結果處理期間的不同時間的值。 比方說，Microsoft OLE DB provider for SQL Server (SQLOLEDB) 不會不提供輸出參數和傳回碼，直到取用者已經擷取或取消預存程序所傳回的結果集之後。 從伺服器傳回的最後一個 TDS 封包的輸出。
+您的應用程式必須處理從預存程序所傳回的輸出。 不同的 OLE DB 提供者傳回輸出參數，並傳回結果處理期間的不同時間的值。 比方說，Microsoft OLE DB provider for SQL Server (SQLOLEDB) 不提供輸出參數和傳回碼，直到取用者已經擷取或取消預存程序所傳回的結果集之後。 從伺服器傳回的最後一個 TDS 封包的輸出。
 
 ## <a name="row-count"></a>資料列計數
 
-如果您執行具有 outparameters 的預存程序使用 OLE DB 消費者樣板，直到您關閉資料列集未設定的資料列計數。
+如果您執行具有 outparameters 的預存程序使用 OLE DB 消費者樣板，直到您關閉資料列集，未設定的資料列計數。
 
 例如，請考慮使用資料列集和具預存程序：
 
@@ -64,7 +64,7 @@ as
 return 0
 ```  
 
-\@_Rowcount 具報告測試資料表中實際傳回多少資料列。 不過，此預存程序會限制為最多 50 個資料列數目。 例如，如果在測試中有 100 個資料列，資料列計數會是 50 （因為這段程式碼會擷取前 50 個資料列）。 如果有先前只有 30 個資料列的資料表中，資料列計數會是 30。 您必須呼叫`Close`或`CloseAll`填入具之前擷取其值。
+\@_Rowcount 具報告測試資料表中傳回多少資料列。 不過，此預存程序會限制為 50 的資料列數目。 例如，如果在測試中有 100 個資料列，資料列計數會是 50 （因為這段程式碼會擷取前 50 個資料列）。 如果有先前只有 30 個資料列的資料表中，資料列計數會是 30。 請務必呼叫`Close`或`CloseAll`填入具之前擷取其值。
 
 ## <a name="see-also"></a>另請參閱
 

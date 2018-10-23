@@ -1,7 +1,7 @@
 ---
 title: CStringT 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d6a6afeca0bcf0d08a0a206983d3db33b61a041
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: f2d31d24007da1ec279e9c9762158b549e83d114
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890695"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809118"
 ---
 # <a name="cstringt-class"></a>CStringT 類別
 
@@ -115,7 +115,7 @@ public CSimpleStringT<BaseType,
 
 #### <a name="parameters"></a>參數
 
-*BaseType*  
+*BaseType*<br/>
 字元類別的型別字串。 可以是下列其中一項：
 
 - **char** （適用於 ANSI 字元字串）。
@@ -124,7 +124,7 @@ public CSimpleStringT<BaseType,
 
 - TCHAR （適用於 ANSI 和 Unicode 字元字串）。
 
-*StringTraits*  
+*StringTraits*<br/>
 判斷字串類別是否需要 C 執行階段 (CRT) 程式庫支援和字串資源位於何處。 可以是下列其中一項：
 
 - **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR、 ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**
@@ -343,13 +343,13 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 
 ### <a name="parameters"></a>參數
 
-*pszFormat*  
+*pszFormat*<br/>
 格式控制字串。
 
-*nFormatID*  
+*nFormatID*<br/>
 包含格式控制字串的字串資源識別碼。
 
-*引數*  
+*引數*<br/>
 選擇性引數。
 
 ### <a name="remarks"></a>備註
@@ -370,7 +370,7 @@ int Collate(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>參數
 
-*psz*  
+*psz*<br/>
 其他用於字串比較。
 
 ### <a name="return-value"></a>傳回值
@@ -391,7 +391,7 @@ int CollateNoCase(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>參數
 
-*psz*  
+*psz*<br/>
 其他用於字串比較。
 
 ### <a name="return-value"></a>傳回值
@@ -416,7 +416,7 @@ int Compare(PCXSTR psz) const;
 
 ### <a name="parameters"></a>參數
 
-*psz*  
+*psz*<br/>
 其他用於字串比較。
 
 ### <a name="return-value"></a>傳回值
@@ -445,7 +445,7 @@ int CompareNoCase(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>參數
 
-*psz*  
+*psz*<br/>
 其他用於字串比較。
 
 ### <a name="return-value"></a>傳回值
@@ -539,28 +539,28 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 
 ### <a name="parameters"></a>參數
 
-*pch*  
+*pch*<br/>
 長度的字元陣列的指標*nLength*，不以 null 終止。
 
-*nLength*  
+*nLength*<br/>
 中的字元數的計數*pch*。
 
-*ch*  
+*ch*<br/>
 單一字元。
 
-*pszSrc*  
+*pszSrc*<br/>
 要複製到這個 null 結尾字串`CStringT`物件。
 
-*pStringMgr*  
+*pStringMgr*<br/>
 指標，memory manager`CStringT`物件。 如需詳細資訊`IAtlStringMgr`和 記憶體管理`CStringT`，請參閱[使用 CStringT 管理記憶體](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
-*strSrc*  
+*strSrc*<br/>
 將現有`CStringT`要複製到這個物件`CStringT`物件。 如需詳細資訊`CThisString`和`CThisSimpleString`，請參閱 < 備註 > 一節。
 
-*varSrc*  
+*varSrc*<br/>
 要複製到此變數物件`CStringT`物件。
 
-*BaseType*  
+*BaseType*<br/>
 字元類別的型別字串。 可以是下列其中一項：
 
 **char** （適用於 ANSI 字元字串）。
@@ -569,13 +569,13 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 
 TCHAR （適用於 ANSI 和 Unicode 字元字串）。
 
-*bMFCDLL*  
+*bMFCDLL*<br/>
 布林值，指定專案是否 MFC DLL (TRUE) 與否 (FALSE)。
 
-*[Systemstring]*  
+*[Systemstring]*<br/>
 必須是`System::String`，並必須以 /clr 編譯專案。
 
-*pString*  
+*pString*<br/>
 控制代碼`CStringT`物件。
 
 ### <a name="remarks"></a>備註
@@ -624,10 +624,10 @@ int Delete(int iIndex, int nCount = 1);
 
 ### <a name="parameters"></a>參數
 
-*iIndex*  
+*iIndex*<br/>
 以零為起始的索引中的第一個字元`CStringT`若要刪除的物件。
 
-*nCount*  
+*nCount*<br/>
 要移除的字元數。
 
 ### <a name="return-value"></a>傳回值
@@ -660,13 +660,13 @@ int Find(XCHAR ch, int iStart=0) const throw();
 
 ### <a name="parameters"></a>參數
 
-*pszSub*  
+*pszSub*<br/>
 要搜尋的子字串。
 
-*iStart*  
+*iStart*<br/>
 中要開始，搜尋的字串或 0 表示從頭開始的字元索引。
 
-*ch*  
+*ch*<br/>
 要搜尋的單一字元。
 
 ### <a name="return-value"></a>傳回值
@@ -691,7 +691,7 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 
 ### <a name="parameters"></a>參數
 
-*pszCharSet*  
+*pszCharSet*<br/>
 字串，包含用於比對的字元。
 
 ### <a name="return-value"></a>傳回值
@@ -717,13 +717,13 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 
 ### <a name="parameters"></a>參數
 
-*nFormatID*  
+*nFormatID*<br/>
 包含格式控制字串的字串資源識別碼。
 
-*pszFormat*  
+*pszFormat*<br/>
 格式控制字串。
 
-*引數*  
+*引數*<br/>
 選擇性引數。
 
 ### <a name="remarks"></a>備註
@@ -751,13 +751,13 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 
 ### <a name="parameters"></a>參數
 
-*nFormatID*  
+*nFormatID*<br/>
 包含未格式化的訊息文字的字串資源識別碼。
 
-*pszFormat*  
+*pszFormat*<br/>
 指向格式控制字串。 它會掃描有插入並據以格式化。 格式字串是類似於執行階段函式*printf*-樣式格式字串，但它可讓您插入以任意順序的參數。
 
-*引數*  
+*引數*<br/>
 選擇性引數。
 
 ### <a name="remarks"></a>備註
@@ -783,10 +783,10 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 
 ### <a name="parameters"></a>參數
 
-*pszFormat*  
+*pszFormat*<br/>
 指向格式控制字串。 它會掃描有插入並據以格式化。 格式字串會與執行階段函式類似`printf`-樣式格式字串，但它可讓您插入以任意順序的參數。
 
-*pArgList*  
+*pArgList*<br/>
 引數清單的指標。
 
 ### <a name="remarks"></a>備註
@@ -808,10 +808,10 @@ void FormatV(PCXSTR pszFormat, va_list args);
 
 ### <a name="parameters"></a>參數
 
-*pszFormat*  
+*pszFormat*<br/>
 指向格式控制字串。 它會掃描有插入並據以格式化。 格式字串會與執行階段函式類似`printf`-樣式格式字串，但它可讓您插入以任意順序的參數。
 
-*引數*  
+*引數*<br/>
 引數清單的指標。
 
 ### <a name="remarks"></a>備註
@@ -834,7 +834,7 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 
 ### <a name="parameters"></a>參數
 
-*pszVar*  
+*pszVar*<br/>
 以 null 終止的字串，指定環境變數的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -860,13 +860,13 @@ int Insert(int iIndex, XCHAR ch);
 
 ### <a name="parameters"></a>參數
 
-*iIndex*  
+*iIndex*<br/>
 在其前插入會發生的字元索引。
 
-*psz*  
+*psz*<br/>
 要插入的子字串指標。
 
-*ch*  
+*ch*<br/>
 要插入的字元。
 
 ### <a name="return-value"></a>傳回值
@@ -891,7 +891,7 @@ CStringT Left(int nCount) const;
 
 ### <a name="parameters"></a>參數
 
-*nCount*  
+*nCount*<br/>
 要從 `CStringT` 這個物件擷取的字元數。
 
 ### <a name="return-value"></a>傳回值
@@ -920,13 +920,13 @@ BOOL LoadString(UINT nID);
 
 ### <a name="parameters"></a>參數
 
-*hInstance*  
+*hInstance*<br/>
 模組的執行個體控制代碼。
 
-*nID*  
+*nID*<br/>
 Windows 字串資源 id。
 
-*wLanguageID*  
+*wLanguageID*<br/>
 字串資源的語言。
 
 ### <a name="return-value"></a>傳回值
@@ -1002,10 +1002,10 @@ CStringT Mid(int iFirst) const;
 
 ### <a name="parameters"></a>參數
 
-*iFirst*  
+*iFirst*<br/>
 在此第一個字元的以零起始的索引`CStringT`是指要包含在所擷取子字串中的物件。
 
-*nCount*  
+*nCount*<br/>
 要從 `CStringT` 這個物件擷取的字元數。 如果未提供這個參數，會擷取字串的其餘部分。
 
 ### <a name="return-value"></a>傳回值
@@ -1054,22 +1054,22 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 
 ### <a name="parameters"></a>參數
 
-*ch1*  
+*ch1*<br/>
 要串連的字串為 ANSI 或 Unicode 字元。
 
-*ch2*  
+*ch2*<br/>
 要串連的字串為 ANSI 或 Unicode 字元。
 
-*str1*  
+*str1*<br/>
 A`CStringT`來串連字串或字元。
 
-*str2*  
+*str2*<br/>
 A`CStringT`來串連字串或字元。
 
-*psz1*  
+*psz1*<br/>
 以 null 終止的字串串連為字串或字元指標。
 
-*psz2*  
+*psz2*<br/>
 要串連的字串或字元字串的指標。
 
 ### <a name="remarks"></a>備註
@@ -1108,22 +1108,22 @@ CStringT& operator+=(const VARIANT& var);
 str  
 對 `CThisSimpleString` 物件的參考。
 
-*bMFCDLL*  
+*bMFCDLL*<br/>
 布林值，指定專案是否 MFC DLL。
 
-*BaseType*  
+*BaseType*<br/>
 字串的基底類型。
 
-*var*  
+*var*<br/>
 要串連到此字串變數物件。
 
-*ch*  
+*ch*<br/>
 要串連的字串為 ANSI 或 Unicode 字元。
 
-*pszSrc*  
+*pszSrc*<br/>
 要串連的原始字串指標。
 
-*strSrc*  
+*strSrc*<br/>
 A`CStringT`来串連到此字串。
 
 ### <a name="remarks"></a>備註
@@ -1155,22 +1155,22 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>參數
 
-*ch1*  
+*ch1*<br/>
 比較為 ANSI 或 Unicode 字元。
 
-*ch2*  
+*ch2*<br/>
 比較為 ANSI 或 Unicode 字元。
 
-*str1*  
+*str1*<br/>
 A`CStringT`進行比較。
 
-*str2*  
+*str2*<br/>
 A`CStringT`進行比較。
 
-*psz1*  
+*psz1*<br/>
 以 null 終止的字串比較的指標。
 
-*psz2*  
+*psz2*<br/>
 以 null 終止的字串比較的指標。
 
 ### <a name="remarks"></a>備註
@@ -1197,22 +1197,22 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>參數
 
-*ch1*  
+*ch1*<br/>
 要串連的字串為 ANSI 或 Unicode 字元。
 
-*ch2*  
+*ch2*<br/>
 要串連的字串為 ANSI 或 Unicode 字元。
 
-*str1*  
+*str1*<br/>
 A`CStringT`進行比較。
 
-*str2*  
+*str2*<br/>
 A`CStringT`進行比較。
 
-*psz1*  
+*psz1*<br/>
 以 null 終止的字串比較的指標。
 
-*psz2*  
+*psz2*<br/>
 以 null 終止的字串比較的指標。
 
 ### <a name="remarks"></a>備註
@@ -1235,16 +1235,16 @@ friend bool operator<(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>參數
 
-*str1*  
+*str1*<br/>
 A`CStringT`進行比較。
 
-*str2*  
+*str2*<br/>
 A`CStringT`進行比較。
 
-*psz1*  
+*psz1*<br/>
 以 null 終止的字串比較的指標。
 
-*psz2*  
+*psz2*<br/>
 以 null 終止的字串比較的指標。
 
 ### <a name="remarks"></a>備註
@@ -1273,16 +1273,16 @@ friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>參數
 
-*str1*  
+*str1*<br/>
 A`CStringT`進行比較。
 
-*str2*  
+*str2*<br/>
 A`CStringT`進行比較。
 
-*psz1*  
+*psz1*<br/>
 以 null 終止的字串比較的指標。
 
-*psz2*  
+*psz2*<br/>
 以 null 終止的字串比較的指標。
 
 ### <a name="remarks"></a>備註
@@ -1311,16 +1311,16 @@ friend bool operator<=(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>參數
 
-*str1*  
+*str1*<br/>
 A`CStringT`進行比較。
 
-*str2*  
+*str2*<br/>
 A`CStringT`進行比較。
 
-*psz1*  
+*psz1*<br/>
 以 null 終止的字串比較的指標。
 
-*psz2*  
+*psz2*<br/>
 以 null 終止的字串比較的指標。
 
 ### <a name="remarks"></a>備註
@@ -1349,16 +1349,16 @@ friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>參數
 
-*str1*  
+*str1*<br/>
 A`CStringT`進行比較。
 
-*str2*  
+*str2*<br/>
 A`CStringT`進行比較。
 
-*psz1*  
+*psz1*<br/>
 要比較的字串指標。
 
-*psz2*  
+*psz2*<br/>
 要比較的字串指標。
 
 ### <a name="remarks"></a>備註
@@ -1385,7 +1385,7 @@ int Remove(XCHAR chRemove);
 
 ### <a name="parameters"></a>參數
 
-*chRemove*  
+*chRemove*<br/>
 要從字串中移除的字元。
 
 ### <a name="return-value"></a>傳回值
@@ -1411,16 +1411,16 @@ int Replace(XCHAR chOld, XCHAR chNew);
 
 ### <a name="parameters"></a>參數
 
-*pszOld*  
+*pszOld*<br/>
 以 null 終止的字串來取代指標*pszNew*。
 
-*pszNew*  
+*pszNew*<br/>
 指向以 null 結束的字串，它會取代*pszOld*。
 
-*chOld*  
+*chOld*<br/>
 要被取代的字元*chNew*。
 
-*chNew*  
+*chNew*<br/>
 字元取代*chOld*。
 
 ### <a name="return-value"></a>傳回值
@@ -1458,7 +1458,7 @@ int ReverseFind(XCHAR ch) const throw();
 
 ### <a name="parameters"></a>參數
 
-*ch*  
+*ch*<br/>
 要搜尋的字元。
 
 ### <a name="return-value"></a>傳回值
@@ -1483,7 +1483,7 @@ CStringT Right(int nCount) const;
 
 ### <a name="parameters"></a>參數
 
-*nCount*  
+*nCount*<br/>
 要從 `CStringT` 這個物件擷取的字元數。
 
 ### <a name="return-value"></a>傳回值
@@ -1510,7 +1510,7 @@ BSTR SetSysString(BSTR* pbstr) const;
 
 ### <a name="parameters"></a>參數
 
-*pbstr*  
+*pbstr*<br/>
 字元字串指標。
 
 ### <a name="return-value"></a>傳回值
@@ -1537,7 +1537,7 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
 
 ### <a name="parameters"></a>參數
 
-*pszCharSet*  
+*pszCharSet*<br/>
 字串會解譯為一組字元。
 
 ### <a name="return-value"></a>傳回值
@@ -1562,7 +1562,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
 
 ### <a name="parameters"></a>參數
 
-*pszCharSet*  
+*pszCharSet*<br/>
 字串會解譯為一組字元。
 
 ### <a name="return-value"></a>傳回值
@@ -1587,10 +1587,10 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 
 ### <a name="parameters"></a>參數
 
-*pszTokens*  
+*pszTokens*<br/>
 字串，包含 token 分隔符號。 這些分隔符號的順序並不重要。
 
-*iStart*  
+*iStart*<br/>
 若要開始搜尋之以零起始的索引。
 
 ### <a name="return-value"></a>傳回值
@@ -1629,10 +1629,10 @@ CStringT& Trim();
 
 ### <a name="parameters"></a>參數
 
-*chTarget*  
+*chTarget*<br/>
 要修剪的目標字元。
 
-*pszTargets*  
+*pszTargets*<br/>
 字串，包含要修剪的目標字元指標。 所有前置和後端中出現的字元*pszTarget*會刪減`CStringT`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -1674,10 +1674,10 @@ CStringT& TrimLeft();
 
 ### <a name="parameters"></a>參數
 
-*chTarget*  
+*chTarget*<br/>
 要修剪的目標字元。
 
-*pszTargets*  
+*pszTargets*<br/>
 字串，包含要修剪的目標字元指標。 所有開頭指定項目中的字元*pszTarget*會刪減`CStringT`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -1710,10 +1710,10 @@ CStringT& TrimRight();
 
 ### <a name="parameters"></a>參數
 
-*chTarget*  
+*chTarget*<br/>
 要修剪的目標字元。
 
-*pszTargets*  
+*pszTargets*<br/>
 字串，包含要修剪的目標字元指標。 所有後端中出現的字元*pszTarget*會刪減`CStringT`物件。
 
 ### <a name="return-value"></a>傳回值

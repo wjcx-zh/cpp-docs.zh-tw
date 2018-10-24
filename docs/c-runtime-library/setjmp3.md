@@ -29,44 +29,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04d06bd7728347770bd17c48abc9898f2a2467a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22416f4036d79f9e9b7c95f1cf9098e450533f39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408363"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054268"
 ---
 # <a name="setjmp3"></a>_setjmp3
-內部 CRT 函式。 `setjmp` 函式的新實作。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int _setjmp3(  
-   OUT jmp_buf env,  
-   int count,  
-   (optional parameters)  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- [輸出] `env`  
- 用於儲存狀態資訊之緩衝區的位址。  
-  
- [輸入] `count`  
- 儲存在 `DWORD` 中之資訊的其他 `optional parameters` 數目。  
-  
- [輸入] `optional parameters`  
- `setjmp` 內建函式向下推展的其他資料。 第一個 `DWORD` 是用於回溯額外資料並回復至非暫時性註冊狀態的函式指標。 第二個 `DWORD` 是要還原的嘗試層級。 所有進一步資料都會以泛型資料陣列儲存在 `jmp_buf` 中。  
-  
-## <a name="return-value"></a>傳回值  
- 一律傳回 0。  
-  
-## <a name="remarks"></a>備註  
- 請勿在 C++ 程式中使用此函式。 這是不支援 C++ 的內建函式。 如需如何使用 `setjmp` 的詳細資訊，請參閱[使用 setjmp/longjmp](../cpp/using-setjmp-longjmp.md)。  
-  
-## <a name="requirements"></a>需求  
-  
-## <a name="see-also"></a>請參閱  
- [依字母順序排列的函式參考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [setjmp](../c-runtime-library/reference/setjmp.md)
+
+內部 CRT 函式。 `setjmp` 函式的新實作。
+
+## <a name="syntax"></a>語法
+
+```
+int _setjmp3(
+   OUT jmp_buf env,
+   int count,
+   (optional parameters)
+);
+```
+
+#### <a name="parameters"></a>參數
+
+*env*<br/>
+[out] 用於儲存狀態資訊的緩衝區位址。
+
+*count*<br/>
+[in] 儲存在 `DWORD` 中資訊的其他 `optional parameters` 數目。
+
+*選擇性參數*<br/>
+[in] `setjmp` 內建函式向下推展的其他資料。 第一個 `DWORD` 是用於回溯額外資料並回復至非暫時性註冊狀態的函式指標。 第二個 `DWORD` 是要還原的嘗試層級。 所有進一步資料都會以泛型資料陣列儲存在 `jmp_buf` 中。
+
+## <a name="return-value"></a>傳回值
+
+一律傳回 0。
+
+## <a name="remarks"></a>備註
+
+請勿在 C++ 程式中使用此函式。 這是不支援 C++ 的內建函式。 如需如何使用 `setjmp` 的詳細資訊，請參閱[使用 setjmp/longjmp](../cpp/using-setjmp-longjmp.md)。
+
+## <a name="requirements"></a>需求
+
+## <a name="see-also"></a>請參閱
+
+[依字母順序排列的函式參考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[setjmp](../c-runtime-library/reference/setjmp.md)

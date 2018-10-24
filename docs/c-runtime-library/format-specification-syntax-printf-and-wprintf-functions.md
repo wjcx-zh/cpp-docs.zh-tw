@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfb885a5d29c26f4a40d5b93490a06652eff1ffc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6253b52d322982efe8beafc45c9942fb3787818a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216668"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082491"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>格式規格語法：printf 和 wprintf 函式
 
@@ -58,8 +58,7 @@ ms.locfileid: "43216668"
 像是 `short`、`int`、`long`、`long long` 的整數類型和其 `unsigned` 的變化可藉由使用 **d**、**i**、**o**、**u**、**x** 和 **X** 指定。像是 `float`、`double` 和 `long double` 的浮點類型可藉由使用 **a**、**A**、**e**、**E**、**f**、**F**、**g** 和 **G** 指定。根據預設，除非 *size* 前置詞修改它們，否則會將整數引數強制轉成 `int` 類型，且會將浮點引數強制轉成 `double`。 在 64 位元系統上，`int` 是 32 位元值；因此，除非使用 **ll** 或 **I64** 的 *size* 前置詞，否則 64 位元整數在為了輸出而格式化時會遭到截斷。 由 **p** 指定的指標類型會使用此平台的預設指標。
 
 > [!NOTE]
-> **Microsoft 專屬**  
-> **Z** 類型字元以及搭配 `printf` 和 `wprintf` 函式使用時的 **c**、**C**、**s** 及 **S** 類型字元的行為，是 Microsoft 延伸模組。 ISO C 標準在所有格式設定函式中，一致地對窄字元和字串使用 **c** 和 **s**，並對寬字元和字串使用 **C** 和 **S**。
+> **Microsoft 特定**：**Z** 類型字元以及與 `printf` 和 `wprintf` 函式搭配使用時的 **c**、**C**、**s** 及 **S** 類型字元的行為，是 Microsoft 延伸模組。 ISO C 標準在所有格式設定函式中，一致地對窄字元和字串使用 **c** 和 **s**，並對寬字元和字串使用 **C** 和 **S**。
 
 ### <a name="type-field-characters"></a>類型欄位字元
 
@@ -212,11 +211,10 @@ ms.locfileid: "43216668"
 **hc** 或 **hC** 類型規範，與 `printf` 函式中的 **c** 和 `wprintf` 函式中的 **C** 同義)。 **lc**、**lC**、**wc** 或 **wC** 類型規範，與 `printf` 函式中的 **C** 和 `wprintf` 函式中的 **c** 同義)。 **hs** 或 **hS** 類型規範，與 `printf` 函式中的 **s** 和 `wprintf` 函式中的 **S** 同義)。 **ls**、**lS**、**ws** 或 **wS** 類型規範，與 `printf` 函式中的 **S** 和 `wprintf` 函式中的 **s** 同義)。
 
 > [!NOTE]
-> **Microsoft 專屬**  
-> **I** (大寫 i)、**I32**、**I64** 及 **w** 引數大小修飾詞前置詞為 Microsoft 延伸模組，且與 ISO C 不相容。 **h** 前置詞與類型 `char` 的資料搭配使用時，以及 **l** (小寫 L) 前置詞與類型 `double` 的資料搭配使用時，這些前置詞都是 Microsoft 副檔名。
+> **Microsoft 特定**：**I** (大寫 i)、**I32**、**I64** 及 **w** 引數大小修飾詞前置詞為 Microsoft 延伸模組，且與 ISO C 不相容。 **h** 前置詞與類型 `char` 的資料搭配使用時，以及 **l** (小寫 L) 前置詞與類型 `double` 的資料搭配使用時，這些前置詞都是 Microsoft 副檔名。
 
 ## <a name="see-also"></a>請參閱
 
-[printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)  
-[printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)  
-[printf_p 位置參數](../c-runtime-library/printf-p-positional-parameters.md)  
+[printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
+[printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
+[printf_p 位置參數](../c-runtime-library/printf-p-positional-parameters.md)

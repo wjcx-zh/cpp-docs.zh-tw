@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 996a891d62ee254fe2ce769483d34941ffb300b6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 40c74633be8556fc075f10e328521209761f385c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680535"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890708"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Visual Studio 2017 中 Visual C++ 的新功能
 
@@ -65,7 +65,7 @@ Visual Studio 2017 有多項 Visual C++ 環境的更新與修正。 我們已修
 
 **Visual Studio 2017 15.5 版**：
 
-Visual C++ 執行階段效能會持續改善，以提高產生的程式碼品質。 這表示您可以輕鬆重新編譯程式碼，而且您的應用程式執行速度會更快。 某些編譯器最佳化功能是全新的，例如條件式純量存放區的向量化、將 `sin(x)` 和 `cos(x)` 呼叫合併成新的 `sincos(x)`，以及從 SSA 最佳化工具排除多餘的指令。 其他編譯器最佳化功能則是現有功能的改善，例如條件運算式的向量化啟發學習法、更佳的迴圈最佳化，以及 float min/max codegen。 連結器有全新且更快的 **/OPT:ICF** 實作，最多可讓連結時間加速 9%，而累加連結中還有其他幾項效能修正。 如需詳細資訊，請參閱 [/OPT (Optimizations)](https://docs.microsoft.com/en-us/cpp/build/reference/opt-optimizations) (/OPT (最佳化)) 和 [/INCREMENTAL (Link Incrementally)](https://docs.microsoft.com/en-us/cpp/build/reference/incremental-link-incrementally) (/INCREMENTAL (以累加方式連結))。
+Visual C++ 執行階段效能會持續改善，以提高產生的程式碼品質。 這表示您可以輕鬆重新編譯程式碼，而且您的應用程式執行速度會更快。 某些編譯器最佳化功能是全新的，例如條件式純量存放區的向量化、將 `sin(x)` 和 `cos(x)` 呼叫合併成新的 `sincos(x)`，以及從 SSA 最佳化工具排除多餘的指令。 其他編譯器最佳化功能則是現有功能的改善，例如條件運算式的向量化啟發學習法、更佳的迴圈最佳化，以及 float min/max codegen。 連結器有全新且更快的 **/OPT:ICF** 實作，最多可讓連結時間加速 9%，而累加連結中還有其他幾項效能修正。 如需詳細資訊，請參閱 [/OPT (Optimizations)](build/reference/opt-optimizations.md) (/OPT (最佳化)) 和 [/INCREMENTAL (Link Incrementally)](build/reference/incremental-link-incrementally.md) (/INCREMENTAL (以累加方式連結))。
 
 Visual C++ 支援 Intel 的 AVX-512，包括將 AVX-512 的新功能整合到 128 和 256 位元寬暫存器的向量長度指令。
 
@@ -394,12 +394,11 @@ C++ 以通用 Windows app 工作負載的選用元件形式提供。  升級 C++
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>通用 Windows 平台 (UWP) 上 C++ 的新選項
 您現在可使用新選項，為通用 Windows 平台及 Microsoft Store 撰寫和封裝 C++ 應用程式：您可以使用傳統型橋接器基礎結構來封裝現有的傳統型應用程式或 COM 物件，以透過 Microsoft Store 部署，或透過現有通道以側載的方式部署。 Windows 10 中的新功能可讓您以各種方式將 UWP 功能新增至傳統型應用程式。 如需詳細資訊，請參閱[傳統型橋接器](/windows/uwp/porting/desktop-to-uwp-root)。
 
-**Visual Studio 2017 15.5 版**  
-新增了 [Windows 應用程式封裝專案] 專案範本，可大幅簡化使用傳統型橋接器來封裝傳統型應用程式的工作。 該範本位於 [檔案] | [開新檔案] | [專案] | [已安裝] | [Visual C++] | [通用 Windows 平台] 中。 如需詳細資訊，請參閱[使用 Visual Studio 封裝應用程式 (傳統型橋接器)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)。
+**Visual Studio 2017 15.5 版**：新增 [Windows 應用程式封裝專案] 專案範本，可大幅簡化使用傳統型橋接器來封裝傳統型應用程式的工作。 該範本位於 [檔案] | [開新檔案] | [專案] | [已安裝] | [Visual C++] | [通用 Windows 平台] 中。 如需詳細資訊，請參閱[使用 Visual Studio 封裝應用程式 (傳統型橋接器)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)。
 
 撰寫新的程式碼時，您現在可以使用 C++/WinRT，它是一種標準 C++ 語言推演，適用於僅在標頭檔中實作的 Windows 執行階段。 它可讓您使用任何符合標準規範的 C++ 編譯器來編寫和使用 Windows 執行階段 API。 C++/WinRT 設計成將現代 Windows API 的第一級存取提供給 C++ 開發人員。 如需詳細資訊，請參閱 [C++/WinRT Available on GitHub](https://moderncpp.com/) (GitHub 上可用的 C++/WinRT)。
 
-自 [Windows SDK Insider Preview 的組建 17025](https://blogs.windows.com/buildingapps/2017/11/01/windows-10-sdk-preview-build-17025/#ryPH3zAy6yk2cIRX.97) 起，C++/WinRT 會隨附於 Windows SDK。 如需詳細資訊，請參閱 [C++/WinRT is now included the Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/) (C++/WinRT 現在隨附於 Windows SDK)。
+自 Windows SDK Insider Preview 的組建 17025 起，C++/WinRT 會隨附於 Windows SDK。 如需詳細資訊，請參閱 [C++/WinRT is now included the Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/) (C++/WinRT 現在隨附於 Windows SDK)。
 
 ## <a name="clangc2-platform-toolset"></a>Clang/C2 平台工具組
 
@@ -440,7 +439,7 @@ Google Test Adapter 和 Boost.Test Adapter 現在是 [使用 C++ 進行桌面開
 
 **Visual Studio 2017 15.7 版**：
 
-新增對 C++ 單元測試專案的 [CodeLens](https://docs.microsoft.com/en-us/visualstudio/ide/find-code-changes-and-other-history-with-codelens) 支援。 如需詳細資訊，請參閱 [Announcing CodeLens for C++ Unit Testing](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/) (宣佈適用於 C++ 單元測試的 CodeLens)。
+新增對 C++ 單元測試專案的 [CodeLens](/visualstudio/ide/find-code-changes-and-other-history-with-codelens) 支援。 如需詳細資訊，請參閱 [Announcing CodeLens for C++ Unit Testing](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/) (宣佈適用於 C++ 單元測試的 CodeLens)。
 
 ## <a name="visual-studio-graphics-diagnostics"></a>Visual Studio 圖形診斷
 

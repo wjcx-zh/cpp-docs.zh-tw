@@ -19,70 +19,63 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3608e40db2aa3eb0c49942de278c1d428e26689f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e4ceed8fa38ae2b6801fa13c65e54f1cd1cc711d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385093"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097688"
 ---
 # <a name="c-floating-point-constants"></a>C 浮點常數
-「浮點常數」是代表帶正負號實數的十進位數字。 帶正負號的實數表示包含整數部分、分數部分和指數。 使用浮點常數表示不能變更的浮點值。  
-  
-## <a name="syntax"></a>語法  
- *floating-point-constant*：  
- &nbsp;&nbsp; *fractional-constant exponent-part*<sub>opt</sub> *floating-suffix*<sub>opt</sub>  
- &nbsp;&nbsp; *digit-sequence exponent-part floating-suffix*<sub>opt</sub>  
-  
- *fractional-constant*：  
- &nbsp;&nbsp; *digit-sequence*<sub>opt</sub> **.** *digit-sequence*  
- &nbsp;&nbsp; *digit-sequence*  **.**  
-  
- *exponent-part*：  
- &nbsp;&nbsp; **e**  *sign*<sub>opt</sub> *digit-sequence*  
- &nbsp;&nbsp; **E**  *sign*<sub>opt</sub> *digit-sequence*  
-  
- *sign*：下列其中一個  
- &nbsp;&nbsp; **+ -**  
-  
- *digit-sequence*：  
- &nbsp;&nbsp; *digit*  
- &nbsp;&nbsp; *digit-sequence digit*  
-  
- *floating-suffix*：下列其中一個  
- &nbsp;&nbsp; **f l F L**  
-  
- 您可以省略小數點之前的數字 (值的整數部分)，或小數點之後的數字 (分數部分)，但不能省略兩者。 只有在加入指數時，才可以省略小數點。 不能使用空白字元分隔常數的數字或字元。  
-  
- 下列範例說明某些形式的浮點常數和表示式︰  
-  
-```  
-15.75  
-1.575E1   /* = 15.75   */  
-1575e-2   /* = 15.75   */  
--2.5e-3   /* = -0.0025 */  
-25E-4     /* =  0.0025 */  
-```  
-  
- 除非前面加上負號 (**-**)，否則浮點常數為正數。 此時，負號會視為一元算術負運算子。 浮點常數有 `float`、`double` 或 `long double` 型別。  
-  
- 沒有**f**、**F**、**l** 或 **L** 後置字元的浮點常數是 `double` 型別。 如果後置字元是字母 **f** 或 **F**，常數則是 `float` 型別。 如果後置字元是字母 **l** 或 **L**，則是 `long double` 型別。 例如:   
-  
-```  
-100L  /* Has type long double  */  
-100F  /* Has type float        */  
-```  
-  
- 請注意，Microsoft C 編譯器在內部將 `long double` 表示為 `double` 型別。 請參閱[基本型別的儲存空間](../c-language/storage-of-basic-types.md)了解 `double`、`float` 和 `long double` 型別的相關資訊。  
-  
- 您可以省略浮點常數的整數部分，如下列範例所示。 數字 .75 可以包括下列多種方式表示︰  
-  
-```  
-.0075e2  
-0.075e1  
-.075e1  
-75e-2  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [C 常數](../c-language/c-constants.md)
+
+「浮點常數」是代表帶正負號實數的十進位數字。 帶正負號的實數表示包含整數部分、分數部分和指數。 使用浮點常數表示不能變更的浮點值。
+
+## <a name="syntax"></a>語法
+
+*floating-point-constant*: &nbsp;&nbsp; *fractional-constant exponent-part*<sub>opt</sub> *floating-suffix*<sub>opt</sub> &nbsp;&nbsp; *digit-sequence exponent-part floating-suffix*<sub>opt</sub>
+
+*fractional-constant*: &nbsp;&nbsp; *digit-sequence*<sub>opt</sub> **.** *digit-sequence* &nbsp;&nbsp; *digit-sequence*  **.**
+
+*exponent-part*: &nbsp;&nbsp; **e**  *sign*<sub>opt</sub> *digit-sequence* &nbsp;&nbsp; **E**  *sign*<sub>opt</sub> *digit-sequence*
+
+*sign* : &nbsp;&nbsp; **+ -** 其中之一
+
+*digit-sequence*: &nbsp;&nbsp; *digit* &nbsp;&nbsp; *digit-sequence digit*
+
+*floating-suffix* : &nbsp;&nbsp; **f l F L** 其中之一
+
+您可以省略小數點之前的數字 (值的整數部分)，或小數點之後的數字 (分數部分)，但不能省略兩者。 只有在加入指數時，才可以省略小數點。 不能使用空白字元分隔常數的數字或字元。
+
+下列範例說明某些形式的浮點常數和表示式︰
+
+```
+15.75
+1.575E1   /* = 15.75   */
+1575e-2   /* = 15.75   */
+-2.5e-3   /* = -0.0025 */
+25E-4     /* =  0.0025 */
+```
+
+除非前面加上負號 (**-**)，否則浮點常數為正數。 此時，負號會視為一元算術負運算子。 浮點常數有 `float`、`double` 或 `long double` 型別。
+
+沒有**f**、**F**、**l** 或 **L** 後置字元的浮點常數是 `double` 型別。 如果後置字元是字母 **f** 或 **F**，常數則是 `float` 型別。 如果後置字元是字母 **l** 或 **L**，則是 `long double` 型別。 例如: 
+
+```
+100L  /* Has type long double  */
+100F  /* Has type float        */
+```
+
+請注意，Microsoft C 編譯器在內部將 `long double` 表示為 `double` 型別。 請參閱[基本型別的儲存空間](../c-language/storage-of-basic-types.md)了解 `double`、`float` 和 `long double` 型別的相關資訊。
+
+您可以省略浮點常數的整數部分，如下列範例所示。 數字 .75 可以包括下列多種方式表示︰
+
+```
+.0075e2
+0.075e1
+.075e1
+75e-2
+```
+
+## <a name="see-also"></a>請參閱
+
+[C 常數](../c-language/c-constants.md)

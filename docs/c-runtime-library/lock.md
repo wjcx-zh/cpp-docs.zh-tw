@@ -30,37 +30,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9a518402d027ae128fcf403752fafb448461628
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 38cd49dd483b556c8bda95e7a77109a9d4682e7c
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390465"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48233615"
 ---
 # <a name="lock"></a>_lock
-取得多執行緒的鎖定。  
-  
+
+取得多執行緒的鎖定。
+
 > [!IMPORTANT]
->  此函式已過時。 自 Visual Studio 2015 起，此函式即無法在 CRT 中使用。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-void __cdecl _lock  
-   int locknum  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- [in] `locknum`  
- 要取得之鎖定的識別碼。  
-  
-## <a name="remarks"></a>備註  
- 若已取得鎖定，此方法仍會取得鎖定，並因而導致內部的 C 執行階段 (CRT) 錯誤。 若方法無法取得鎖定，會結束並引發嚴重錯誤，同時將錯誤碼設為 `_RT_LOCK`。  
-  
-## <a name="requirements"></a>需求  
- **來源：** mlock.c  
-  
-## <a name="see-also"></a>請參閱  
- [依字母順序排列的函式參考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [_unlock](../c-runtime-library/unlock.md)
+>  此函式已過時。 自 Visual Studio 2015 起，此函式即無法在 CRT 中使用。
+
+## <a name="syntax"></a>語法
+
+```
+void __cdecl _lock
+   int locknum
+);
+```
+
+#### <a name="parameters"></a>參數
+
+*locknum*<br/>
+[in] 要取得之鎖定的識別碼。
+
+## <a name="remarks"></a>備註
+
+若已取得鎖定，此方法仍會取得鎖定，並因而導致內部的 C 執行階段 (CRT) 錯誤。 若方法無法取得鎖定，會結束並引發嚴重錯誤，同時將錯誤碼設為 `_RT_LOCK`。
+
+## <a name="requirements"></a>需求
+
+**來源：** mlock.c
+
+## <a name="see-also"></a>請參閱
+
+[依字母順序排列的函式參考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[_unlock](../c-runtime-library/unlock.md)

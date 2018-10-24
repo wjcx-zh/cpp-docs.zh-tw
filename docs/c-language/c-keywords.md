@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3091437333d01db3fa556cb3c164e916c3628333
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 80c1f0d4ac5d843732771281202612e31a4073c2
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057788"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860884"
 ---
 # <a name="c-keywords"></a>C 關鍵字
 
@@ -48,15 +48,15 @@ Microsoft C 編譯器可辨識下列關鍵字和特殊識別項：
 
 |||||
 |-|-|-|-|
-|**__asm**|**dllimport**2|**__int8**|**naked**2|
-|**__based**1|**__except**|**__int16**|**__stdcall**|
-|**__cdecl**|**__fastcall**|**__int32**|**thread**2|
+|**__asm**|**dllimport**<sup>2</sup>|**__int8**|**naked**<sup>2</sup>|
+|**__based**<sup>1</sup>|**__except**|**__int16**|**__stdcall**|
+|**__cdecl**|**__fastcall**|**__int32**|**thread**<sup>2</sup>|
 |**__declspec**|**__finally**|**__int64**|**__try**|
-|**dllexport**2|**__inline**|**__leave**||
+|**dllexport**<sup>2</sup>|**__inline**|**__leave**||
 
-1. **__based** 關鍵字用於 32 位元和 64 位元目標編譯時有所限制。
+<sup>1</sup> **__based** 關鍵字用於 32 位元和 64 位元目標編譯時有所限制。
 
-2. 這些是搭配 **__declspec** 使用時的特殊識別碼，在其他內容中使用則不受限制。
+<sup>2</sup> 這些是與 **__declspec** 搭配使用時的特殊識別碼，在其他內容中使用則不受限制。
 
 Microsoft 擴充功能預設為啟用。 為了確保您的程式可完整移植，您可以在編譯期間指定 /Za 選項 (適用於 ANSI 相容性編譯)，停用 Microsoft 擴充功能。 如果您這樣做，Microsoft 專有關鍵字就會停用。
 

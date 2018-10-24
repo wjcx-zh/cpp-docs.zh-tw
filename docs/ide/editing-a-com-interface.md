@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 451e7fc6e2a7b4a72188da6b69888bf04b605842
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f660f9d69fc787384fcfbec37caec0064a58ec29
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412355"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861339"
 ---
 # <a name="editing-a-com-interface"></a>編輯 COM 介面
 
@@ -38,8 +38,8 @@ ms.locfileid: "46412355"
 
 |精靈|專案類型|
 |------------|------------------|
-|[新增屬性精靈](../ide/names-add-property-wizard.md)|支援 ATL 的 ATL 或 MFC 專案。 以滑鼠右鍵按一下您要新增屬性的介面。<br /><br /> Visual C++ 會偵測專案類型，並據以修改 [新增屬性精靈] 中的選項：<br /><br /> -   針對使用 [MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)建立之專案中的分配介面 (Dispinterface)，叫用 [新增屬性精靈] 會提供 MFC 特定的選項。<br />-   針對 MFC ActiveX 控制項介面，[新增屬性精靈] 會提供內建方法和屬性清單，您可以直接使用或為您的控制項自訂。<br />-   針對所有其他介面，[新增屬性精靈] 會提供大部分情況下都有用的選項。|
-|[新增方法精靈](../ide/add-method-wizard.md)|支援 ATL 的 ATL 或 MFC 專案。 以滑鼠右鍵按一下您要新增方法的介面。<br /><br /> Visual C++ 會偵測專案類型，並據以修改 [新增方法精靈] 中的選項：<br /><br /> -   針對使用 [MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)建立之專案中的分配介面 (Dispinterface)，叫用 [新增方法精靈] 會提供 MFC 特定的選項。<br />-   針對 MFC ActiveX 控制項介面，[新增方法精靈] 會提供內建方法和屬性清單，您可以直接使用或為您的控制項自訂。<br />-   針對所有其他介面，[新增方法精靈] 會提供大部分情況下都有用的選項。|
+|[新增屬性精靈](../ide/names-add-property-wizard.md)|支援 ATL 的 ATL 或 MFC 專案。 以滑鼠右鍵按一下您要新增屬性的介面。<br /><br />Visual C++ 會偵測專案類型，並據以修改 [新增屬性精靈] 中的選項：<br /><br />- 針對使用 [MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)所建立專案中的分配介面 (Dispinterface)，叫用 [新增屬性精靈] 會提供 MFC 特定的選項。<br />- 針對 MFC ActiveX 控制項介面，[新增屬性精靈] 會提供內建方法和屬性清單，您可以直接使用或為您的控制項自訂。<br />- 針對所有其他介面，[新增屬性精靈] 會提供大部分情況下都有用的選項。|
+|[新增方法精靈](../ide/add-method-wizard.md)|支援 ATL 的 ATL 或 MFC 專案。 以滑鼠右鍵按一下您要新增方法的介面。<br /><br />Visual C++ 會偵測專案類型，並據以修改 [新增方法精靈] 中的選項：<br /><br />- 針對使用 [MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)所建立專案中的分配介面 (Dispinterface)，叫用 [新增方法精靈] 會提供 MFC 特定的選項。<br />- 針對 MFC ActiveX 控制項介面，[新增方法精靈] 會提供內建方法和屬性清單，您可以直接使用或為您的控制項自訂。<br />- 針對所有其他介面，[新增方法精靈] 會提供大部分情況下都有用的選項。|
 
 此外，您可以在 [類別檢視] 中以滑鼠右鍵按一下物件的控制項類別，然後按一下[實作介面](../ide/implement-interface-wizard.md)，在您的 COM 控制項上實作新的介面。
 

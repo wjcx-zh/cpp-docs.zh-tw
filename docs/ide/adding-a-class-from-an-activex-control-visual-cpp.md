@@ -1,7 +1,7 @@
 ---
 title: 從 ActiveX 控制項新增類別 (Visual C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/07/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -15,16 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fd284236d2e9267d281061eef3915ed41f6f590
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6f9e7d8ea0e3b21b06d73e187a4f45c53cd896cf
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375944"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250480"
 ---
 # <a name="adding-a-class-from-an-activex-control-visual-c"></a>自 ActiveX 控制項加入類別 (Visual C++)
 
 使用此精靈從可用 ActiveX 控制項中的介面建立 MFC 類別。 您可以將 MFC 類別新增至 [MFC 應用程式](../mfc/reference/creating-an-mfc-application.md)、[MFC DLL](../mfc/reference/creating-an-mfc-dll-project.md) 或 [MFC ActiveX 控制項](../mfc/reference/creating-an-mfc-activex-control.md)。
+
+> [!WARNING]
+> 在 Visual Studio 2017 15.9 版中，此程式碼精靈已淘汰，並且將從 Visual Studio 的未來版本中移除。 使用者很少用到這個精靈。 移除此精靈不會影響 ATL 和 MFC 的一般支援。 如果您想要分享關於此項淘汰的意見反應，請填寫[此問卷](https://www.surveymonkey.com/r/QDWKKCN)。 我們非常重視您的意見反應。
 
 > [!NOTE]
 >  建立 MFC 專案時不需要啟用自動化，即可從 ActiveX 控制項新增類別。

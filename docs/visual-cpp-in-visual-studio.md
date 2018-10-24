@@ -1,35 +1,32 @@
 ---
 title: Visual Studio 中的 Visual C++ | Microsoft Docs
+description: Visual C++ 是 Visual Studio IDE 中 Microsoft C++ 編譯器、程式碼編輯器和相關工具的名稱。 您可以使用 Visual C++ 來開發 Windows、Linux、Android 和 iOS 的程式。
 ms.custom: ''
-ms.date: 08/22/2018
+ms.date: 09/26/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- unmanaged code, C++
-- development environment, Visual C++
-- unmanaged code
-- Visual C++
-- Visual C++, reference
+- Visual C++, home page
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6116a1b27595c6400edfcb79daafb362fb7aec5f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ae68abc0768c0a06526af6439a8a881684ecdb15
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684487"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821275"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio 中的 Visual C++
 
 > [!NOTE]  
 > 此開發人員文件適用於 Visual Studio 2015 與 Visual Studio 2017。 
 
-> 若正在尋找 Visual C++ 可轉散發套件以執行程式，請前往 [Microsoft 下載中心](http://www.microsoft.com/en-us/download/)，並在搜尋方塊中輸入 **Visual C++**。  
+> 若正在尋找 Visual C++ 可轉散發套件以執行程式，請前往 [Microsoft 下載中心](http://www.microsoft.com/download/)，並在搜尋方塊中輸入 **Visual C++**。  
   
 
 Microsoft Visual C++ 通常簡稱為 Visual C++ 或 MSVC，是 C++、C 及組合語言開發工具與程式庫的名稱，屬於 Windows 上的 Visual Studio 可用內容。 這些工具與程式庫可讓您建立通用 Windows 平台 (UWP) 應用程式、原生 Windows 傳統型與伺服器應用程式、跨平台程式庫與應用程式 (於 Windows、Linux、Android 及 iOS 上執行) 以及使用 .NET Framework 的受控應用程式與程式庫。 您可以使用 Visual C++ 撰寫任何項目，涵蓋範圍從簡單的主控台應用程式到最精密複雜的 Windows 傳統型應用程式；從裝置驅動程式與作業系統元件到行動裝置的跨平台遊戲；及從最小的 IoT 裝置到 Azure 雲端中的多伺服器高效能運算。
@@ -81,10 +78,20 @@ MSVC C++ 編譯器中依功能分類的一致性狀態清單。
 
 ## <a name="c-development-tools"></a>C++ 開發工具
 
-[IDE 與開發工具](ide/ide-and-tools-for-visual-cpp-development.md)。
-如何使用 Visual Studio IDE 來建立專案、使用原始程式碼檔、連結至程式庫、編譯、偵錯、建立單元測試、執行靜態分析、部署等等。
+[IDE 與開發工具](ide/ide-and-tools-for-visual-cpp-development.md)<br/>
+如何使用 Visual Studio IDE 來建立專案、編輯程式碼、連結至程式庫、編譯、偵錯、建立單元測試、執行靜態分析、部署等等。
 
-[編譯器與建置工具](build/building-c-cpp-programs.md) Microsoft C++ 編譯器與連結器選項、錯誤訊息、命令列範例、不同平台的設定，以及組建參考主題。 
+[編譯器和建置工具](build/building-c-cpp-programs.md)<br/>
+Microsoft C++ 編譯器與連結器選項、錯誤訊息、命令列範例、不同平台的設定，以及組建參考主題。
+
+[偵錯機器碼](/visualstudio/debugger/debugging-native-code)<br/>
+了解如何針對 C++ 專案使用 Visual Studio 偵錯工具。
+
+[C/C++ 程式碼分析概觀](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+使用 SAL 註釋或 C++ Core Guidelines Checker 執行靜態分析。
+
+[在 Visual Studio 中撰寫 C/C++ 的單元測試](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
+使用適用於 C++ 的 Microsoft 單元測試架構、Google Test、Boost.Test 或 CTest 建立單元測試。
 
 ## <a name="write-applications-in-c"></a>使用 C++ 撰寫應用程式
 
@@ -94,9 +101,11 @@ MSVC C++ 編譯器中依功能分類的一致性狀態清單。
 [傳統型應用程式 (C++)](windows/desktop-applications-visual-cpp.md)<br/>
 了解如何建立 Windows 的傳統原生 C++ 傳統型應用程式。
 
-[利用 C ++ /CLI 進行 .NET 程式設計](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md) 了解如何建立在利用像是 C# 或 Visual Basic 等語言所撰寫的 C++ 與 .NET 程式之間，啟用互通性的 DLL。
+[以 C++/CLI 進行 .NET 程式設計](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+了解如何建立 DLL 以啟用原生 C++ 與 .NET 程式 (以 C# 或 Visual Basic 等語言所撰寫) 之間的互通性。
 
-[Linux 程式設計](linux/index.md) 使用 Visual Studio IDE，編寫程式碼並部署到遠端 Linux 電腦，利用 GCC 進行編譯。
+[Linux 程式設計](linux/index.md)<br/>
+使用 Visual Studio IDE 撰寫程式碼並部署到遠端 Linux 電腦，以利用 GCC 進行編譯。
 
 [Visual C++ 中的 DLL](build/dlls-in-visual-cpp.md)<br/>
 了解如何使用 Win32、ATL 和 MFC 建立 Windows 桌面 DLL，並且提供如何編譯和註冊 DLL 的資訊。
@@ -116,11 +125,15 @@ MSVC C++ 編譯器中依功能分類的一致性狀態清單。
 [文字和字串](text/text-and-strings-in-visual-cpp.md)<br/>
 了解如何使用不同的文字及字串格式化與編碼，進行本機和國際開發。
 
-## <a name="c-language-reference"></a>C++ 語言參考
+## <a name="languages-reference"></a>語言參考
 
-如需 C++ 語言的詳細資訊，請參閱 [C++ Language Reference](cpp/cpp-language-reference.md)。
+[C++ 語言參考](cpp/cpp-language-reference.md)
 
-如需 C++ 前置處理器的詳細資訊，請參閱 [C/C++ Preprocessor Reference](preprocessor/c-cpp-preprocessor-reference.md)。
+[C/C++ 前置處理器參考](preprocessor/c-cpp-preprocessor-reference.md)
+
+[C 語言參考](c-language/c-language-reference.md)
+
+[編譯器內建和組件語言](intrinsics/compiler-intrinsics-and-assembly-language.md)
 
 ## <a name="c-libraries-in-visual-studio"></a>Visual Studio 中的 C++ 程式庫
 

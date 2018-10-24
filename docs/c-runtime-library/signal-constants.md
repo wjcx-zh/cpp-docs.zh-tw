@@ -27,48 +27,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 279f4beb3b550f672ac3950c31f3653ca1f00ba2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: defd5f630f1d3832014e2cc7e9746c0e00e8d816
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409354"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070661"
 ---
 # <a name="signal-constants"></a>signal 常數
-## <a name="syntax"></a>語法  
-  
-```  
-#include <signal.h>  
-```  
-  
-## <a name="remarks"></a>備註  
- `sig` 引數必須是下面所列的其中一個資訊清單常數 (在 SIGNAL.H 中定義)。  
-  
- `SIGABRT`  
- 異常終止。 預設動作終止呼叫程式，結束代碼 3。  
-  
- `SIGABRT_COMPAT`  
- 與 SIGABRT 相同。 針對與其他平台的相容性。  
-  
- `SIGFPE`  
- 浮點數錯誤，例如溢位、除數為零，或是無效的作業。 預設動作終止呼叫程式。  
-  
- `SIGILL`  
- 不合法的指令。 預設動作終止呼叫程式。  
-  
- `SIGINT`  
- CTRL+C 中斷。 預設動作終止呼叫程式，結束代碼 3。  
-  
- `SIGSEGV`  
- 不合法的儲存體存取。 預設動作終止呼叫程式。  
-  
- `SIGTERM`  
- 終止傳送給程式的要求。 預設動作終止呼叫程式，結束代碼 3。  
-  
- `SIG_ERR`  
- 指出已發生錯誤之訊號的傳回類型。  
-  
-## <a name="see-also"></a>請參閱  
- [signal](../c-runtime-library/reference/signal.md)   
- [raise](../c-runtime-library/reference/raise.md)   
- [全域常數](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>語法
+
+```
+#include <signal.h>
+```
+
+## <a name="remarks"></a>備註
+
+`sig` 引數必須是下面所列的其中一個資訊清單常數 (在 SIGNAL.H 中定義)。
+
+|||
+|-|-|
+|SIGABRT|異常終止。 預設動作終止呼叫程式，結束代碼 3。  |
+|SIGABRT_COMPAT|與 SIGABRT 相同。 針對與其他平台的相容性。  |
+|SIGFPE|浮點數錯誤，例如溢位、除數為零，或是無效的作業。 預設動作終止呼叫程式。  |
+|SIGILL|不合法的指令。 預設動作終止呼叫程式。  |
+|SIGINT|CTRL+C 中斷。 預設動作終止呼叫程式，結束代碼 3。  |
+|SIGSEGV|不合法的儲存體存取。 預設動作終止呼叫程式。  |
+|SIGTERM|終止傳送給程式的要求。 預設動作終止呼叫程式，結束代碼 3。  |
+|SIG_ERR|指出已發生錯誤之訊號的傳回類型。  |
+
+## <a name="see-also"></a>請參閱
+
+[signal](../c-runtime-library/reference/signal.md)<br/>
+[raise](../c-runtime-library/reference/raise.md)<br/>
+[全域常數](../c-runtime-library/global-constants.md)

@@ -1,7 +1,7 @@
 ---
 title: 使用程式碼精靈新增功能 (C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -20,16 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d531184b03d06dbe2a395e55638e4457c2c9c0e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 43d6301a13b0abd517b0fb596f953617cf80f7b0
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441963"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861170"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>使用程式碼精靈新增功能 (C++)
 
 當您建立專案之後，您會想要變更或新增該專案的功能。 這類工作包括建立新的類別、新增成員函式和變數，以及新增 Automation 方法和屬性。 程式碼精靈的設計目的是為了讓您執行上述所有工作。
+
+> [!WARNING]
+> 數個 ATL 和 MFC 程式碼精靈現在已淘汰，並且將從 Visual Studio 的未來版本中移除。 這些精靈很少使用。 移除這些精靈不會影響 ATL 和 MFC 的一般支援。 如果您想要分享關於此取代的意見反應，請完成[此問卷](https://www.surveymonkey.com/r/QDWKKCN)。 我們重視您的意見反應。
 
 > [!NOTE]
 >  您現在可以使用 [[屬性] 視窗](/visualstudio/ide/reference/properties-window)來新增訊息處理常式並將訊息對應至這些處理常式，以及覆寫 MFC 虛擬函式。
@@ -72,9 +75,9 @@ ms.locfileid: "46441963"
 
    |存取程式碼精靈來源|描述|
    |-----------------------------|-----------------|
-   |加入新項目|「新增項目」程式碼精靈會將原始程式檔新增至您的專案。 如有必要，請建立其他目錄，以包含專案建置引擎預期找到的檔案。 可從新增項目圖示使用的程式碼精靈包括：<br /><br /> -   新增 C++ 原始程式檔 (.cpp、.h、.idl、.rc、.srf、.def、.rgs)。<br />-   新增網頁程式開發檔案 (.html、.asp、.css、.xml)。<br />-   新增公用程式和資源檔 (.bmp、.cur、.ico、.rct、.sql、.txt)。<br /><br /> 這些程式碼精靈通常不會要求您提供任何資訊，而是將檔案新增至您的開發樹狀結構。 您可以重新命名屬性視窗中的檔案。|
-   |底下提供說明，包括方案總管|可從 [方案總管] 使用的程式碼精靈取決於以滑鼠右鍵按一下項目時的游標焦點所在。 如果當您以滑鼠右鍵按一下項目時未顯示 [新增] 選項，請在開發樹狀結構中將游標上移一層，然後再試一次。 不論您的游標所在位置，程式碼精靈一律會將額外的程式碼放在開發樹狀結構中的適當位置。 可從 [方案總管] 使用的程式碼精靈包括：<br /><br /> -   新增類別 (開啟 [新增類別] 對話方塊，其中包含新的程式碼精靈)。<br />-   新增資源 (新增、匯入或自訂)。<br />-   新增 Web 參考。|
-   |類別檢視|可從 [類別檢視] 使用的程式碼精靈取決於以滑鼠右鍵按一下項目時的游標焦點所在。 如果當您以滑鼠右鍵按一下項目時未顯示 [新增] 選項，請在類別樹狀結構中將游標上移一層，然後再試一次。 不論您的游標所在位置，程式碼精靈一律會將額外的程式碼放在開發樹狀結構中的適當位置。 可從 [類別檢視] 使用的程式碼精靈包括：<br /><br /> -   [新增成員函式](../ide/adding-a-member-function-visual-cpp.md)。<br />-   [新增成員變數](../ide/adding-a-member-variable-visual-cpp.md)。<br />-   [新增類別](../ide/adding-a-class-visual-cpp.md)。<br />-   [實作介面](../ide/implement-interface-wizard.md) (僅限來自控制項類別)<br />-   [新增連接點](../ide/implement-connection-point-wizard.md) (僅限 ATL 類別)<br />-   [新增方法](../ide/add-method-wizard.md) (僅限來自介面)<br />-   [加入屬性](../ide/names-add-property-wizard.md) (僅限來自介面)<br />-   [新增事件](../ide/add-event-wizard.md) (僅限來自控制項類別)<br /><br /> 選取 [新增類別] 會開啟 [新增類別] 對話方塊，讓您存取所有新的「新增類別」程式碼精靈。|
+   |加入新項目|「新增項目」程式碼精靈會將原始程式檔新增至您的專案。 如有必要，請建立其他目錄，以包含專案建置引擎預期找到的檔案。 可從新增項目圖示使用的程式碼精靈包括：<br /><br />- 新增 C++ 來源檔案 (.cpp、.h、.idl、.rc、.srf、.def、.rgs)。<br />- 新增網頁程式開發檔案 (.html、.asp、.css、.xml)。<br />- 新增公用程式和資源檔 (.bmp、.cur、.ico、.rct、.sql、.txt)。<br /><br />這些程式碼精靈通常不會要求您提供任何資訊，而是將檔案新增至您的開發樹狀結構。 您可以重新命名屬性視窗中的檔案。|
+   |底下提供說明，包括方案總管|可從 [方案總管] 使用的程式碼精靈取決於以滑鼠右鍵按一下項目時的游標焦點所在。 如果當您以滑鼠右鍵按一下項目時未顯示 [新增] 選項，請在開發樹狀結構中將游標上移一層，然後再試一次。 不論您的游標所在位置，程式碼精靈一律會將額外的程式碼放在開發樹狀結構中的適當位置。 可從 [方案總管] 使用的程式碼精靈包括：<br /><br />- 新增類別 (開啟 [新增類別] 對話方塊，其中包含新的程式碼精靈)。<br />- 新增資源 (新增、匯入或自訂)。<br />- 新增 Web 參考。|
+   |類別檢視|可從 [類別檢視] 使用的程式碼精靈取決於以滑鼠右鍵按一下項目時的游標焦點所在。 如果當您以滑鼠右鍵按一下項目時未顯示 [新增] 選項，請在類別樹狀結構中將游標上移一層，然後再試一次。 不論您的游標所在位置，程式碼精靈一律會將額外的程式碼放在開發樹狀結構中的適當位置。 可從 [類別檢視] 使用的程式碼精靈包括：<br /><br />- [新增成員函式](../ide/adding-a-member-function-visual-cpp.md)。<br />- [新增成員變數](../ide/adding-a-member-variable-visual-cpp.md)。<br />- [新增類別](../ide/adding-a-class-visual-cpp.md)。<br />- [實作介面](../ide/implement-interface-wizard.md) (僅限來自控制項類別)<br />- [新增連接點](../ide/implement-connection-point-wizard.md) (僅限 ATL 類別)<br />- [新增方法](../ide/add-method-wizard.md) (僅限來自介面)<br />- [加入屬性](../ide/names-add-property-wizard.md) (僅限來自介面)<br />- [新增事件](../ide/add-event-wizard.md) (僅限來自控制項類別)<br /><br />選取 [新增類別] 會開啟 [新增類別] 對話方塊，讓您存取所有新的「新增類別」程式碼精靈。|
 
 ## <a name="see-also"></a>請參閱
 

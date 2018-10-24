@@ -29,45 +29,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e8253db3ce5a1ec60001bb32b241bfebe000502
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b1b93cf52ee7690aa86f4a80acae2731197ec9d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389403"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115368"
 ---
 # <a name="excepthandler3"></a>_except_handler3
-內部 CRT 函式。 供架構用於尋找適當的例外狀況處理常式以處理目前的例外狀況。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int _except_handler3(  
-   PEXCEPTION_RECORD exception_record,  
-   PEXCEPTION_REGISTRATION registration,  
-   PCONTEXT context,  
-   PEXCEPTION_REGISTRATION dispatcher  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- [輸入] `exception_record`  
- 特定例外狀況的資訊。  
-  
- [輸入] `registration`  
- 指出應該使用哪個範圍資料表尋找例外狀況處理常式的記錄。  
-  
- [輸入] `context`  
- 保留的。  
-  
- [輸入] `dispatcher`  
- 保留的。  
-  
-## <a name="return-value"></a>傳回值  
- 若應關閉例外狀況，則傳回 `DISPOSITION_DISMISS`。 若應將例外狀況往上傳遞一個層級至封裝例外狀況處理常式，則傳回 `DISPOSITION_CONTINUE_SEARCH`。  
-  
-## <a name="remarks"></a>備註  
- 若此方法找到適當的例外狀況處理常式，會將例外狀況傳遞至處理常式。 在此情況中，此方法不會回復至呼叫它的程式碼，且傳回值亦不相關。  
-  
-## <a name="see-also"></a>請參閱  
- [依字母順序排列的函式參考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+
+內部 CRT 函式。 供架構用於尋找適當的例外狀況處理常式以處理目前的例外狀況。
+
+## <a name="syntax"></a>語法
+
+```
+int _except_handler3(
+   PEXCEPTION_RECORD exception_record,
+   PEXCEPTION_REGISTRATION registration,
+   PCONTEXT context,
+   PEXCEPTION_REGISTRATION dispatcher
+);
+```
+
+#### <a name="parameters"></a>參數
+
+*exception_record*<br/>
+[in] 特定例外狀況的資訊。
+
+*registration*<br/>
+[in] 指出應該使用哪個範圍資料表尋找例外狀況處理常式的記錄。
+
+*context*<br/>
+[in] 保留。
+
+*dispatcher*<br/>
+[in] 保留。
+
+## <a name="return-value"></a>傳回值
+
+若應關閉例外狀況，則傳回 `DISPOSITION_DISMISS`。 若應將例外狀況往上傳遞一個層級至封裝例外狀況處理常式，則傳回 `DISPOSITION_CONTINUE_SEARCH`。
+
+## <a name="remarks"></a>備註
+
+若此方法找到適當的例外狀況處理常式，會將例外狀況傳遞至處理常式。 在此情況中，此方法不會回復至呼叫它的程式碼，且傳回值亦不相關。
+
+## <a name="see-also"></a>請參閱
+
+[依字母順序排列的函式參考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

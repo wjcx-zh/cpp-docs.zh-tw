@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c5c360246282f8b6062d21061856a57bd2c7194
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26b313aa3e1dec6d401ed27e1a4f8ae0bd870eaa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384329"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118514"
 ---
 # <a name="c-bitwise-operators"></a>C 位元運算子
 
@@ -35,17 +35,11 @@ ms.locfileid: "32384329"
 
 ## <a name="syntax"></a>語法
 
-*AND-expression*：  
-&nbsp;&nbsp;*equality-expression*  
-&nbsp;&nbsp;*AND-expression* **&** *equality-expression*
+*AND-expression*: &nbsp;&nbsp;*equality-expression* &nbsp;&nbsp;*AND-expression* **&** *equality-expression*
 
-*exclusive-OR-expression*：  
-&nbsp;&nbsp;*AND-expression*  
-&nbsp;&nbsp;*exclusive-OR-expression* **^** *AND-expression*
+*exclusive-OR-expression*: &nbsp;&nbsp;*AND-expression* &nbsp;&nbsp;*exclusive-OR-expression* **^** *AND-expression*
 
-*inclusive-OR-expression*：  
-&nbsp;&nbsp;*exclusive-OR-expression*  
-&nbsp;&nbsp;*inclusive-OR-expression* &#124; *exclusive-OR-expression*
+*inclusive-OR-expression*: &nbsp;&nbsp;*exclusive-OR-expression* &nbsp;&nbsp;*inclusive-OR-expression* &#124; *exclusive-OR-expression*
 
 位元運算子的運算元必須是整數類型，但其類型可以不同。 這些運算子會執行一般算術轉換；結果類型是運算元在轉換之後的類型。
 
@@ -79,7 +73,7 @@ n = i ^ j;
 
 第二個範例中的位元包含 OR 會產生值 0xABCD (十六進位)，而第三個範例中的位元互斥 OR 產生 0xCD (十六進位)。
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 在帶正負號的整數上執行位元運算的結果是根據 ANSI C 標準實作定義。 針對 Microsoft C 編譯器，帶正負號整數的位元運算運作方式，與不帶正負號整數的位元運算相同。 例如，`-16 & 99` 可以用二進位運算式表示為
 
@@ -92,10 +86,10 @@ n = i ^ j;
 
 位元 AND 的結果是 96 (十進位)。
 
-**結束 Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 
-[位元 AND 運算子：&](../cpp/bitwise-and-operator-amp.md)  
-[位元互斥 OR 運算子：^](../cpp/bitwise-exclusive-or-operator-hat.md)  
-[位元包含 OR 運算子：&#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)  
+[位元 AND 運算子：&](../cpp/bitwise-and-operator-amp.md)<br/>
+[位元互斥 OR 運算子：^](../cpp/bitwise-exclusive-or-operator-hat.md)<br/>
+[位元包含 OR 運算子：&#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)

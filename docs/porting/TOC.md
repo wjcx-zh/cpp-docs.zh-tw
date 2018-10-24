@@ -15,6 +15,7 @@
 ### [修正程式庫內部項目上的相依性](fix-your-dependencies-on-library-internals.md)
 ### [浮點數的移轉問題](floating-point-migration-issues.md)
 ### [在 Visual Studio 中使用原生多目標來建置舊專案](use-native-multi-targeting.md)
+### [Visual C++ 功能在 Visual Studio 2019 預覽版中已淘汰](features-deprecated-in-visual-studio.md)
 ## [針對 UNIX 使用者的 Visual C++ 簡介](introduction-to-visual-cpp-for-unix-users.md)
 ## [從 UNIX 移植到 Win32](porting-from-unix-to-win32.md)
 ## [移植到通用 Windows 平台 (C++)](porting-to-the-universal-windows-platform-cpp.md)

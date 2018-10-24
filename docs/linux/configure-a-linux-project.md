@@ -1,7 +1,7 @@
 ---
 title: 在 Visual Studio 中設定 C++ Linux 專案 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/18/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,12 +14,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: fbc0674a7659ffccd5ab5c655f74167acebdca97
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 17597ae7497288312b8ddcfcf53a77130fbbf2d8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895197"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383235"
 ---
 # <a name="configure-a-linux-project"></a>設定 Linux 專案
 
@@ -33,9 +33,11 @@ ms.locfileid: "43895197"
 
 預設會使用此工具來建置可執行檔 (.out)。  若要建置靜態或動態程式庫，或使用現有 Makefile，請使用 [組態類型] 選項。
 
+如需屬性頁中選項的詳細資訊，請參閱 [Linux 專案屬性頁參考](prop-pages-linux.md)。
+
 ## <a name="remote-settings"></a>遠端設定
 
-若要變更與遠端的 Linux 電腦有關的設定，請設定出現在 [一般] 設定中的遠端選項：
+若要變更與遠端的 Linux 電腦有關的設定，請設定出現在 [一般][](prop-pages/general-linux.md) 設定中的遠端選項：
 
 - 若要變更目標 Linux 電腦，請使用 [遠端組建電腦] 項目。  這可讓您選取其中一個先前建立的連線。  若要建立新的項目，請參閱[連線到遠端 Linux 電腦](connect-to-your-remote-linux-computer.md)小節。
 
@@ -44,11 +46,12 @@ ms.locfileid: "43895197"
 - [遠端組建專案目錄] 是在遠端 Linux 電腦上建置這個特定專案的位置。  這會預設為上面所設定之根目錄下的 **$(RemoteRootDir)/$(ProjectName)**，其會擴充到目前專案後命名的目錄。
 
 > [!NOTE]
-> 若要變更預設 C 和 C++ 編譯器，或是用來建置專案的連結器和封存工具，請使用 [C/C++] > [一般] 區段和 [連結器] > [一般] 區段中的適當項目。  這些可以設定成使用特定版本的 GCC，甚至 Clang 編譯器 (舉例來說)。
+> 若要變更預設 C 和 C++ 編譯器，或是用來建置專案的連結器和封存工具，請使用 [C/C++] > [一般] 區段和 [連結器] > [一般] 區段中的適當項目。  這些可以設定成使用特定版本的 GCC，甚至 Clang 編譯器 (舉例來說)。 如需詳細資訊，請參閱 [C/C++ 屬性 (Linux C++) ](prop-pages/c-cpp-linux.md)和[連結器屬性 (Linux C++)](prop-pages/linker-linux.md)。
 
 ## <a name="include-directories-and-intellisense-support"></a>Include 目錄和 IntelliSense 支援
 
-**Visual Studio 2017 15.6 版和更早版本：** 根據預設，Visual Studio 不會包含 Linux 電腦中的任何系統層級包含檔案。  例如，Visual Studio 中沒有 **/usr/include** 目錄中的項目。
+**Visual Studio 2017 15.6 及較舊版本**：<br/>
+根據預設，Visual Studio 不會包含 Linux 電腦中的任何系統層級包含檔案。  例如，Visual Studio 中沒有 **/usr/include** 目錄中的項目。
 如需完整 [IntelliSense](/visualstudio/ide/using-intellisense) 支援，您必須將這些檔案複製到開發電腦上的某個位置，並將 Visual Studio 指向這個位置。  其中一個選項是使用 scp (安全複製) 來複製檔案。  在 Windows 10 上，您可以使用 [Bash on Windows](https://msdn.microsoft.com/commandline/wsl/about) 來執行 scp。  針對舊版 Windows，您將使用 [PSCP (PuTTY Secure Copy)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) 這類項目。
 
 使用與下列類似的命令，即可複製檔案：
@@ -61,7 +64,8 @@ ms.locfileid: "43895197"
 
 ![VC++ 目錄](media/settings_directories.png)
 
-**Visual Studio 2017 15.7 和更新版本：** 請參閱[管理 IntelliSense 的遠端標頭](#remote_intellisense)。
+**Visual Studio 2017 15.7 版和更新版本：**<br/>
+請參閱[管理適用於 IntelliSense 的遠端標頭](#remote_intellisense)。
 
 ## <a name="copy-sources"></a>複製來源
 
@@ -95,10 +99,10 @@ apt install zip
 
 ![遠端標頭 IntelliSense](media/remote-header-intellisense.png)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[使用專案屬性](../ide/working-with-project-properties.md)  
-[C++ 一般屬性 (Linux C++)](../linux/prop-pages/general-linux.md)  
-[VC++ 目錄 (Linux C++)](../linux/prop-pages/directories-linux.md)  
-[複製來源專案屬性 (Linux C++)](../linux/prop-pages/copy-sources-project.md)  
+[使用專案屬性](../ide/working-with-project-properties.md)<br/>
+[C++ 一般屬性 (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
+[VC++ 目錄 (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
+[複製來源專案屬性 (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
 [建置事件屬性 (Linux C++)](../linux/prop-pages/build-events-linux.md)

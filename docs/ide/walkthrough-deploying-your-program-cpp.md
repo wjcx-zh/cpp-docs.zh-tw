@@ -1,7 +1,7 @@
 ---
 title: 逐步解說：部署程式 (C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/14/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -19,82 +19,73 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1753c63673b9dd083e2b690788801bd467938c3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d795ea8678c04d5525e726017a2fa3a0760f3a87
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33335532"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235908"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>逐步解說：部署程式 (C++)
-現在您已藉由完成先前列於[使用 Visual Studio IDE 進行 C++ 桌面程式開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)中的相關逐步解說來建立應用程式，最後一個步驟要建立安裝程式，讓其他使用者可以將程式安裝在電腦上。 若要完成這項工作，您需要將新的專案加入至現有方案中。 這個新專案的輸出是 setup.exe 檔案，這個檔案會將您的應用程式安裝在另一部電腦上。  
-  
- 本逐步解說示範如何使用 Windows Installer 部署您的應用程式。 您也可以使用 ClickOnce 部署應用程式。 如需詳細資訊，請參閱 [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md)。 如需部署的一般詳細資訊，請參閱[部署應用程式、服務和元件](/visualstudio/deployment/deploying-applications-services-and-components)。  
-  
-## <a name="prerequisites"></a>必要條件  
-  
--   本逐步解說假設您已了解 C++ 語言的基本概念。  
-  
--   同時假設，您已完成先前列於[使用 Visual Studio IDE 進行 C++ 桌面程式開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)中的相關逐步解說。  
-  
--   這個逐步解說無法在 Visual Studio 的 Express 版本中完成。  
-  
--   如果您還沒有完成這部分，請下載 InstallShield Limited Edition (ISLE)，如本文稍後的步驟所述。 ISLE 免費提供給 Visual Studio 開發人員使用，可以取代舊版 Visual Studio 安裝和部署專案範本中的功能。  
-  
-### <a name="to-install-the-isle-setup-and-deployment-project-template"></a>若要安裝 ISLE 安裝程式並部署專案範本  
-  
-1.  當您連線到網際網路時，在功能表列上選擇 [檔案]、[新增]、[專案]，以開啟 [新增專案] 對話方塊。  
-  
-2.  在對話方塊的左窗格中，展開 [已安裝的]、[範本] 和 [其他專案類型] 節點，然後選取 [安裝和部署]。 在中間窗格中，選取 [啟用 InstallShield 限量版]，然後選擇 [確定] 按鈕。  
-  
-3.  遵循指示安裝 InstallShield Limited Edition for Visual Studio (ISLE)。  
-  
-4.  在您下載、安裝和啟動 ISLE 之後，關閉 Visual Studio 並重新開啟。  
-  
-5.  在功能表列上，選擇 [檔案]、[最近使用的專案和方案]，然後選擇 [遊戲] 方案重新開啟。  
-  
-### <a name="to-create-a-setup-project-and-install-your-program"></a>若要建立安裝專案並安裝您的程式  
-  
-1.  將使用中的方案組態變更為 [發行]。 在功能表列上，選擇 [ **建置**]、[ **組態管理員**]。 在 [組態管理員] 對話方塊中，選取 [使用中的方案組態] 下拉式清單上的 [發行]。 選擇 [關閉] 按鈕以儲存組態。  
-  
-2.  在功能表列上，選擇 [檔案]、[新增]、[專案]，以開啟 [新增專案] 對話方塊。  
-  
-3.  在對話方塊的左窗格中，展開 [已安裝的]、[範本] 和 [其他專案類型] 節點，然後選取 [安裝和部署]。 在中間窗格中，選取 [InstallShield 限量版專案]。  
-  
-4.  在 [名稱] 方塊中，輸入安裝專案的名稱。 在這個範例中，請輸入**遊戲安裝程式**。 在 [方案] 下拉式清單中，選取 [新增至方案]。 選擇 [確定] 按鈕以建立安裝專案。 [專案助理 (遊戲安裝程式)] 索引標籤隨即在編輯器視窗中開啟。  
-  
-5.  在 [專案助理 (遊戲安裝程式)] 索引標籤的底部，選擇 [應用程式資訊] 連結。  
-  
-6.  在 [應用程式資訊] 頁面中，依照您想要在安裝程式中顯示的名稱來指定公司名稱。 您可以使用您自己的公司名稱，或針對此本範例使用 **Contoso**。 指定您的應用程式名稱；在本範例中，請指定**遊戲**。 指定您的公司網址，或使用本範例的 **http://www.contoso.com**。  
-  
-7.  在 [專案助理 (遊戲安裝程式)] 索引標籤的底部，選擇 [安裝面談] 連結。  
-  
-8.  在 [安裝面談] 頁面的 [是否要顯示授權合約對話方塊] 底下，選取 [否] 選項按鈕。 在 [是否要提示使用者輸入其公司名稱和使用者名稱] 底下，選取 [否] 選項按鈕。  
-  
-9. 在 [方案總管] 中，展開 [遊戲安裝程式] 專案，展開 [組織您的安裝] 節點，然後開啟 [一般資訊] 頁面。  
-  
-10. 在編輯器視窗中的 [一般資訊 (遊戲安裝程式)] 索引標籤上，指定 [標記建立者識別碼]，例如 **regid.2012-12.com.Contoso**。  
-  
-11. 在 [方案總管] 的 [遊戲安裝程式] 專案下方，展開 [指定應用程式資料] 節點，然後開啟 [檔案] 頁面。  
-  
-12. 在編輯器視窗中的 [檔案 (遊戲安裝程式)] 索引標籤上，開啟 [來源電腦的檔案] 下方 [遊戲的主要輸出] 的捷徑功能表並選擇 [複製]。  
-  
-13. 開啟 [目的電腦的檔案] 的 [名稱] 欄底下空間中的捷徑功能表，然後選擇 [貼上]。 名為**遊戲.主要輸出**的新項目隨即出現。  
-  
-14. 在 [方案總管] 的 [指定應用程式資料] 節點底下，開啟 [可轉散發套件] 頁面。  
-  
-15. 在編輯器視窗中的 [可轉散發套件 (遊戲安裝程式)] 索引標籤上，選取 [Visual C++ 11.0 CRT (x86)] 核取方塊。  
-  
-16. 在功能表列上，選擇 [建置]、[建置方案] 以建置「遊戲」專案和「遊戲安裝程式」專案。  
-  
-17. 在方案資料夾中，找出從 [遊戲安裝程式] 專案建置的 setup.exe 程式，然後加以執行，將遊戲應用程式安裝在您電腦上。 您可以複製這個檔案，在另一部電腦上安裝應用程式及其必要的程式庫檔案。  
-  
-18. 您可以設定安裝專案中的許多選項來符合您的需求。 如需詳細資訊，請在 [方案總管] 中，開啟 [遊戲安裝程式] 專案下的 [使用者入門] 頁面，然後選擇 F1 鍵開啟 ISLE Help Library。  
-  
-## <a name="next-steps"></a>後續步驟  
- **上一步：**[逐步解說：偵錯專案 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)  
-  
-## <a name="see-also"></a>請參閱  
- [C++ 語言參考](../cpp/cpp-language-reference.md)   
- [建置 C/C++ 程式](../build/building-c-cpp-programs.md)  
- [部署傳統型應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)
+
+現在您已藉由完成先前列於[使用 Visual Studio IDE 進行 C++ 桌面程式開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)中的相關逐步解說來建立應用程式，最後一個步驟要建立安裝程式，讓其他使用者可以將程式安裝在電腦上。 針對安裝程式，您需要將新的專案新增至現有方案中。 這個新專案的輸出是 setup.exe 檔案，這個檔案會將您的應用程式安裝在另一部電腦上。
+
+本逐步解說示範如何使用 Windows Installer 部署您的應用程式。 您也可以使用 ClickOnce 部署應用程式。 如需詳細資訊，請參閱 [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md)。 如需部署的一般詳細資訊，請參閱[部署應用程式、服務和元件](/visualstudio/deployment/deploying-applications-services-and-components)。
+
+## <a name="prerequisites"></a>必要條件
+
+- 本逐步解說假設您已了解 C++ 語言的基本概念。
+
+- 同時假設，您已完成先前列於[使用 Visual Studio IDE 進行 C++ 桌面程式開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)中的相關逐步解說。
+
+- 這個逐步解說無法在 Visual Studio Express Edition 中完成。
+
+- 如果您尚未這麼做，請按照後續步驟所述，下載 Microsoft Visual Studio 安裝程式專案延伸模組。 延伸模組是免費提供給 Visual Studio 開發人員使用，並可將安裝和部署專案範本的功能新增至 Visual Studio。
+
+### <a name="to-install-the-visual-studio-setup-and-deployment-project-template"></a>若要安裝 Visual Studio 安裝程式並部署專案範本
+
+1. 當您已連線到網際網路時，請在 Visual Studio 中選擇 [工具] > [延伸模組和更新]。
+
+1. 選取 [延伸模組和更新] 下方的 [線上] 索引標籤，然後在搜尋方塊中鍵入「Microsoft Visual Studio 安裝程式專案」。 按 **Enter**，選取 [Microsoft Visual Studio \<版本> 安裝程式專案]，然後按一下 [下載]。
+
+1. 選擇安裝延伸模組，然後重新啟動 Visual Studio。
+
+1. 在功能表列上，選擇 [檔案] > [最近使用的專案和方案]，然後選擇 [遊戲] 方案來重新開啟。
+
+### <a name="to-create-a-setup-project-and-install-your-program"></a>若要建立安裝專案並安裝您的程式
+
+1. 將使用中的方案組態變更為 [發行]。 在功能表列上，選擇 [建置] > [組態管理員]。 在 [組態管理員] 對話方塊中，選取 [使用中的方案組態] 下拉式清單上的 [發行]。 選擇 [關閉] 按鈕以儲存組態。
+
+1. 在功能表列上，選擇 [檔案] > [新增] > [專案]，以開啟 [新增專案] 對話方塊。
+
+1. 在對話方塊的左窗格中，展開 [已安裝] > [其他專案類型] 節點，然後選取 [Visual Studio 安裝程式]。 在中間窗格中，選取 [安裝專案]。
+
+1. 在 [名稱] 方塊中，輸入安裝專案的名稱。 在這個範例中，請輸入*遊戲安裝程式*。 在 [方案] 下拉式清單中，選取 [新增至方案]。 選擇 [確定] 按鈕以建立安裝專案。 [File Assistant (Game Installer)] \(檔案小幫手 (遊戲安裝程式)\) 索引標籤隨即在編輯器視窗中開啟。
+
+1. 以滑鼠右鍵按一下 [應用程式資料夾] 節點，然後選取 [新增] > [專案輸出] 以開啟 [新增專案輸出群組] 對話方塊。
+
+1. 在對話方塊中選取 [主要輸出]，然後按一下 [確定]。 隨即顯示新項目，名稱為 [Primary Output from Game (Active)] \(遊戲 (使用中) 的主要輸出\)。
+
+1. 選取 [Primary Output from Game (Active)] \(遊戲 (使用中) 的主要輸出\) 項目，再按一下滑鼠右鍵，然後選擇 [Create Shortcut to Primary Output from Game (Active)] \(建立遊戲 (使用中) 的主要輸出捷徑\)。 隨即顯示新項目，名稱為 [Shortcut to Primary Output from Game (Active)] \(遊戲 (使用中) 的主要輸出捷徑\)。
+
+1. 將捷徑項目重新命名為「遊戲」，然後將項目拖曳至視窗左側的 [使用者的程式功能表] 節點。
+
+1. 在 [方案總管] 中，選取 [遊戲安裝程式] 專案，然後選擇 [檢視] > [屬性視窗] 或按 **F4**，以開啟 [屬性] 視窗。
+
+1. 指定您想要在安裝程式中顯示的其他詳細資料。  例如，將 *Contoso* 作為**製造商**、「遊戲安裝程式」作為**產品名稱**，而 *http://www.contoso.com* 作為 **SupportUrl**。
+
+1. 在功能表列上，選擇 [建置] > [組態管理員]。 在 [專案] 資料表的 [建置] 資料行下方，核取 [遊戲安裝程式] 的方塊。 按一下 [ **關閉**]。
+
+1. 在功能表列上，選擇 [建置] > [建置方案] 以建置遊戲專案和遊戲安裝程式專案。
+
+1. 在方案資料夾中，找出從 [遊戲安裝程式] 專案建置的 setup.exe 程式，然後加以執行，將遊戲應用程式安裝在您電腦上。 您可以複製這個檔案 (和 GameInstaller.msi 檔案)，在另一部電腦上安裝應用程式及其必要的程式庫檔案。
+
+## <a name="next-steps"></a>後續步驟
+
+**上一步：**[逐步解說：偵錯專案 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+
+## <a name="see-also"></a>請參閱
+
+[C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
+[建置 C/C++ 程式](../build/building-c-cpp-programs.md)<br/>
+[部署傳統型應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>

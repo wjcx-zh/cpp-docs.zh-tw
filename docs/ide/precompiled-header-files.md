@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d2e2bab9da3d19347577f0b1d1e8ab2ed6bb0dc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d93486d8df8cdb8bc253a0e71037f4e2ddf9e128
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404016"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890475"
 ---
 # <a name="precompiled-header-files"></a>先行編譯標頭檔
 
@@ -35,7 +35,7 @@ ms.locfileid: "46404016"
 
 |檔案名稱|描述|
 |---------------|-----------------|
-|stdafx.h|Include 檔，代表常用但不常變更的標準系統 Include 檔和專案特定 Include 檔。<br /><br /> 您不能定義或取消定義 stdafx.h 中的任何 _AFX_NO_XXX 巨集；請參閱知識庫文章＜PRB：定義 _AFX_NO_XXX 時發生問題＞。 您可以在 MSDN Library 或是在 [http://support.microsoft.com](http://%20support.microsoft.com/)找到知識庫文章。|
+|stdafx.h|Include 檔，代表常用但不常變更的標準系統 Include 檔和專案特定 Include 檔。<br /><br /> 您不能定義或取消定義 stdafx.h 中的任何 _AFX_NO_XXX 巨集。|
 |stdafx.cpp|包含前置處理器指示詞 `#include "stdafx.h"` ，並為先行編譯類型加入 Include 檔。 任何類型的先行編譯檔 (包括標頭檔)，都可藉由限制僅編譯需要的檔案，來加快編譯時間。 第一次建置專案之後，您會發現後續組建的建置時間會加快許多，這是因為先行編譯標頭檔之故。|
 
 ## <a name="see-also"></a>請參閱

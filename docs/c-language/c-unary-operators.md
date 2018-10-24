@@ -15,32 +15,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d307ee359bd9eb1bfee0e33615f4906646ff22de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ee0f818cca1e7569d3ba6cb53524f2bbc4f12e28
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381235"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062770"
 ---
 # <a name="c-unary-operators"></a>C 一元運算子
-一元運算子會出現在其運算元之前，以及從右邊連結到左邊。  
-  
-## <a name="syntax"></a>語法  
- *unary-expression*：  
- *postfix-expression*  
-  
- **++**  *unary-expression*  
-  
- `--`  *unary-expression*  
-  
- *unary-operator cast-expression*  
-  
- **sizeof**  *unary-expression*  
-  
- **sizeof (**  *type-name*  **)**  
-  
- *unary-operator*：下列其中一個  
- **& \* + -** `~` **!**  
-  
-## <a name="see-also"></a>請參閱  
- [C 運算子](../c-language/c-operators.md)
+
+一元運算子會出現在其運算元之前，以及從右邊連結到左邊。
+
+## <a name="syntax"></a>語法
+
+*unary-expression*: *postfix-expression*
+
+**++**  *unary-expression*
+
+`--`  *unary-expression*
+
+*unary-operator cast-expression*
+
+**sizeof**  *unary-expression*
+
+**sizeof (**  *type-name*  **)**
+
+*unary-operator*: **& \* + -** `~` **!** 其中之一
+
+## <a name="see-also"></a>請參閱
+
+[C 運算子](../c-language/c-operators.md)

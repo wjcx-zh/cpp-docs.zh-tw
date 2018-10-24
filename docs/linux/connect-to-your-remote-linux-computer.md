@@ -13,12 +13,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 9b3977c46e05ab0b175dad3658d1dcc390d33354
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: bba17549abc9f747d93299cf22c39ae7c3e8f4d6
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207662"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601440"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>連線到遠端 Linux 電腦
 
@@ -41,7 +41,7 @@ ms.locfileid: "39207662"
    | **使用者名稱**           | 驗證使用者身分
    | **驗證類型** | 同時支援密碼或私密金鑰
    | **密碼**            | 所輸入使用者名稱的密碼
-   | **私密金鑰檔**    | 為 ssh 連線所建立的私密金鑰
+   | **私密金鑰檔**    | 為 SSH 連線所建立的私密金鑰檔案
    | **複雜密碼**          | 與上面選取的私密金鑰搭配使用的複雜密碼
 
 1. 按一下 [連線] 按鈕，嘗試連線到遠端電腦。  如果連線失敗，將會以紅色標出需要變更的輸入方塊。

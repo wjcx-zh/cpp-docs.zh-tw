@@ -1,7 +1,7 @@
 ---
 title: 結構成員的填補和對齊 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 959d6296c563958a0c8bdd1ecca660680941755f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a1b301372a9998197c46c1e44c91c9d3456cea8e
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46074847"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808208"
 ---
 # <a name="padding-and-alignment-of-structure-members"></a>結構成員的填補和對齊
 
@@ -29,7 +29,7 @@ ms.locfileid: "46074847"
 
 每個資料物件都有一個 alignment-requirement。 所有資料 (結構、等位和陣列除外) 的對齊需求不是物件的大小就是目前的封裝大小 (以 /Zp 或 `pack` pragma 指定，以其中較小者為準)。 結構、等位和陣列的對齊需求是其成員的最大對齊需求。 每個物件都會配置一個 offset，因此
 
-*offset*  `%` *alignment-requirement* `==` 0
+*offset* **%** *alignment-requirement* **== 0**
 
 如果整數類資料類型的大小相同，而且下一個位元欄位符合目前配置單位，不需因為位元欄位的一般對齊需求而加上跨越界限，則相鄰的位元欄位會封裝為相同的 1 個、2 個或 4 個位元組配置單位。
 

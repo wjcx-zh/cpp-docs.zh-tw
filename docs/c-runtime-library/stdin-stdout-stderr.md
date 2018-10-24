@@ -1,7 +1,7 @@
 ---
 title: stdin、stdout、stderr | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/23/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -23,20 +23,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a36d5fd60a19222e6f802e5a14037fb01ff865f5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 707811a9c05135cb46520dd72895d677cdc0a6e4
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071974"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808702"
 ---
 # <a name="stdin-stdout-stderr"></a>stdin、stdout、stderr
 
 ## <a name="syntax"></a>語法
 
 ```
-
-      FILE *stdin; 
+FILE *stdin; 
 FILE *stdout; 
 FILE *stderr; 
 #include <stdio.h>
@@ -53,12 +52,12 @@ FILE *stderr;
 |Pointer|資料流|
 |-------------|------------|
 |`stdin`|標準輸入|
-|**stdout**|標準輸出|
+|`stdout`|標準輸出|
 |`stderr`|標準錯誤|
 
-這些指標可以作為函式的引數使用。 某些函式 (例如 **getchar** 和 `putchar`) 會自動使用 `stdin` 和 **stdout**。
+這些指標可以作為函式的引數使用。 有一些函式 (例如[getchar](../c-runtime-library/reference/getchar-getwchar.md) 及 [putchar](../c-runtime-library/reference/putchar-putwchar.md)) 會自動使用 `stdin` 及 `stdout`。
 
-這些指標是常數，且無法指派新值給它們。 `freopen` 函式可用來將資料流重新導向到磁碟檔案或其他裝置。 作業系統可讓您在命令層級對程式的標準輸入和輸出進行重新導向。
+這些指標是常數，且無法指派新值給它們。 [freopen](../c-runtime-library/reference/freopen-wfreopen.md) 函式可用於將資料流重新導向到磁碟檔案或其他裝置。 作業系統可讓您在命令層級對程式的標準輸入和輸出進行重新導向。
 
 ## <a name="see-also"></a>請參閱
 

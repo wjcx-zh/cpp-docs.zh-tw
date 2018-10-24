@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 310dc9b8e31f72fbd04c620987d9857932f7a0a1
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 31b9c0c8668ec16d84ad84627eb73a0f406eb21e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821127"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328372"
 ---
 # <a name="ide-and-compiler-tools-for-visual-c-development"></a>適用於 Visual C++ 開發的 IDE 和編譯器工具
 
@@ -59,7 +59,7 @@ Visual Studio 2017 支援任何組建系統或是您想要使用的自訂建置�
 
 ![設計工具和工具箱](media/vs2017-toolbox-designer.png "Visual Studio 2017 工具箱和設計工具")
 
-如需設計通用 Windows 平台 App 之使用者介面的詳細資訊，請參閱[設計和 UI](https://developer.microsoft.com/en-us/windows/design)。
+如需設計通用 Windows 平台 App 之使用者介面的詳細資訊，請參閱[設計和 UI](https://developer.microsoft.com/windows/design)。
 
 如需建立 MFC 應用程式之使用者介面的詳細資訊，請參閱 [MFC 傳統型應用程式](../mfc/mfc-desktop-applications.md)。 如需 Win32 Windows 程式的資訊，請參閱 [Windows 傳統型應用程式](../windows/windows-desktop-applications-cpp.md)。
 

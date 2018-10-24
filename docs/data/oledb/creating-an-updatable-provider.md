@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cbf1c696a66024ec1d3b3022b1e3a03445e9b6fe
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ee405244d4c23e3cacddb5efe5dfa276a8a21db0
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46043296"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990317"
 ---
 # <a name="creating-an-updatable-provider"></a>建立可更新的提供者
 
@@ -33,7 +33,7 @@ Visual c + + 支援可更新的提供者 」 或 「 可更新的提供者 （�
 接下來，您必須確定您的提供者包含所有的功能來支援取用者可能會要求它的任何項目。 如果取用者想要更新資料存放區，提供者必須包含資料保存到資料存放區的程式碼。 比方說，您可能會使用 MFC 的 C 執行階段程式庫來執行這類作業在資料來源。 一節 「[寫入至資料來源](#vchowwritingtothedatasource)」 說明如何寫入至資料來源，處理 NULL 和預設值，並設定資料行的旗標。  
   
 > [!NOTE]
->  [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)是可更新的提供者的範例。 為 MyProv，但具有可更新的支援 UpdatePV 都是一樣的。  
+> [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)是可更新的提供者的範例。 為 MyProv，但具有可更新的支援 UpdatePV 都是一樣的。  
   
 ##  <a name="vchowmakingprovidersupdatable"></a> 建立可更新的提供者  
 
@@ -47,7 +47,7 @@ Visual c + + 支援可更新的提供者 」 或 「 可更新的提供者 （�
   
 請注意，`IRowsetUpdateImpl`衍生自`IRowsetChangeImpl`。 因此，`IRowsetUpdateImpl`可讓您變更功能，以及批次功能。  
   
-#### <a name="to-support-updatability-in-your-provider"></a>若要在您的提供者支援更新的能力  
+### <a name="to-support-updatability-in-your-provider"></a>若要在您的提供者支援更新的能力  
   
 1. 在您的資料列集類別，繼承自`IRowsetChangeImpl`或`IRowsetUpdateImpl`。 這些類別會提供適當的介面，來變更資料存放區：  
   
@@ -70,7 +70,7 @@ Visual c + + 支援可更新的提供者 」 或 「 可更新的提供者 （�
     ```  
   
     > [!NOTE]
-    >  您應該移除`IRowsetChangeImpl`繼承鏈結中的一行。 此一的例外狀況，以先前所述的指示詞必須包含的程式碼`IRowsetChangeImpl`。  
+    > 您應該移除`IRowsetChangeImpl`繼承鏈結中的一行。 此一的例外狀況，以先前所述的指示詞必須包含的程式碼`IRowsetChangeImpl`。  
   
 1. 將下列內容新增至 COM 對應 (`BEGIN_COM_MAP ... END_COM_MAP`):  
   
@@ -109,7 +109,7 @@ Visual c + + 支援可更新的提供者 」 或 「 可更新的提供者 （�
      您可以找到這些巨集呼叫中使用，藉由尋找為 Atldb.h 中的屬性識別碼和值的值 （如果為 Atldb.h 和不同的線上文件，為 Atldb.h 取代文件）。  
   
     > [!NOTE]
-    >  許多`VARIANT_FALSE`和`VARIANT_TRUE`設定所需的 OLE DB 範本; OLE DB 規格表示它們可以是讀取/寫入，但 OLE DB 範本只能支援一個值。  
+    > 許多`VARIANT_FALSE`和`VARIANT_TRUE`設定所需的 OLE DB 範本; OLE DB 規格表示它們可以是讀取/寫入，但 OLE DB 範本只能支援一個值。  
   
      **如果您實作 IRowsetChangeImpl**  
   
@@ -142,16 +142,14 @@ Visual c + + 支援可更新的提供者 」 或 「 可更新的提供者 （�
     - `DBPROP_MAXPENDINGROWS`.  
   
         > [!NOTE]
-        >  如果您支援通知，您可能還有其他一些屬性以及;請參閱節`IRowsetNotifyCP`如這份清單。  
+        > 如果您支援通知，您可能還有其他一些屬性以及;請參閱節`IRowsetNotifyCP`如這份清單。  
   
 ##  <a name="vchowwritingtothedatasource"></a> 寫入至資料來源  
 
 若要讀取的資料來源，請呼叫`Execute`函式。 若要寫入的資料來源，請呼叫`FlushData`函式。 （在一般狀況下，排清方法來儲存您對資料表或索引到磁碟進行的修改）。  
 
 ```cpp
-
 FlushData(HROW, HACCESSOR);  
-
 ```
 
 資料列控制代碼 (HROW) 和存取子控制代碼 (HACCESSOR) 引數可讓您指定要寫入的區域。 一般而言，您會一次寫入的單一資料欄位。
@@ -192,7 +190,7 @@ FlushData(HROW, HACCESSOR);
 
 ### <a name="handling-default-values"></a>處理預設值。
 
-若要實作您自己的 FlushData 方法，您需要：
+若要實作您自己`FlushData`方法中，您需要：
 
 - 請移至您的資料列集類別。
 
@@ -207,7 +205,7 @@ FlushData(HROW, HACCESSOR);
 
 - 提供的實作`FlushData`。
 
-只有資料列和實際更新的資料行，會將儲存的 FlushData 完善的實作。 您可以使用 HROW 和 HACCESSOR 參數來判斷目前的資料列和儲存最佳化的資料行。
+完善的實作的`FlushData`只有資料列和實際更新的資料行存放區。 您可以使用 HROW 和 HACCESSOR 參數來判斷目前的資料列和儲存最佳化的資料行。
 
 一般而言，最大的挑戰使用您自己的原生資料存放區。 可能的話，請嘗試：
 
@@ -219,7 +217,7 @@ FlushData(HROW, HACCESSOR);
 
 最佳做法是在您的 NULL 和預設值的資料存放區中實際的指定的值。 最好是如果您可以進行推斷，這項資料。 如果沒有，建議您不允許 NULL，而且預設值。
 
-下列範例顯示如何`FlushData`UpdatePV 範例中 RUpdateRowset 類別中實作 （程式碼範例，請參閱 Rowset.h）：
+下列範例示範如何`FlushData`中實作`RUpdateRowset`類別中`UpdatePV`範例 （程式碼範例，請參閱 Rowset.h）：
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////////  
@@ -374,16 +372,15 @@ ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols, bool bBookma
   
     return _rgColumns;  
 }  
-
 ```
 
 ### <a name="default-values"></a>預設值
 
 如同 NULL 的資料，您必須負責處理變更預設值。
 
-FlushData 和執行的預設值是傳回 S_OK。 因此，如果您不會覆寫這個函式，所做的變更會顯示成功 （會傳回 S_OK），但不是會傳輸到資料存放區。
+預設值是`FlushData`和`Execute`會傳回 S_OK。 因此，如果您不會覆寫這個函式，所做的變更會顯示成功 （會傳回 S_OK），但不是會傳輸到資料存放區。
 
-在 UpdatePV 中的範例 （Rowset.h)`SetDBStatus`方法會處理預設值，如下所示：
+在 `UpdatePV`範例 （在 Rowset.h)`SetDBStatus`方法會處理預設值，如下所示：
 
 ```cpp
 virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,  
@@ -422,11 +419,11 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 
 ### <a name="column-flags"></a>資料行旗標
 
-如果您支援您的資料行上的預設值，您需要使用中繼資料中的設定它\<提供者類別\>w 類別。 設定`m_bColumnHasDefault`= VARIANT_TRUE。
+如果您支援您的資料行上的預設值，您需要使用中繼資料中的設定它\<提供者類別\>w 類別。 設定`m_bColumnHasDefault = VARIANT_TRUE`。
 
 您也必須將設定資料行旗標，指定使用 DBCOLUMNFLAGS 列舉型別。 資料行旗標會描述資料行的特性。
 
-例如，在`CUpdateSessionColSchemaRowset`類別 （在 Session.h) UpdatePV，在第一個資料行設定這種方式：
+例如，在`CUpdateSessionColSchemaRowset`類別中`UpdatePV`（在 Session.h)，第一個資料行設定這種方式：
 
 ```cpp
 // Set up column 1  

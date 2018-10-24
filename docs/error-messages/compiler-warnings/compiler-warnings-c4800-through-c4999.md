@@ -1,6 +1,6 @@
 ---
 title: 編譯器警告 C4800 到 C5999 |Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 10/24/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -99,18 +99,20 @@ f1_keywords:
 - C5042
 - C5043
 - C5044
+- C5045
+- C5046
 dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deee159c9da6fce9001d010a1a6b1db9b3b1d666
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 27f212865965883732e8bd956cafecf50e0a8de3
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861417"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990343"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>編譯器警告 C4800 到 C5999
 
@@ -251,3 +253,4 @@ ms.locfileid: "48861417"
 |編譯器警告 （層級 2） C5043|'*規格*': 例外狀況規格與上一個宣告不符|
 |編譯器警告 （層級 4） C5044|命令列選項的引數* 選項*指向的路徑 '*路徑*' 不存在|
 |[編譯器警告 C5045](c5045.md)|編譯器會在記憶體負載，如果 /Qspectre 參數指定插入 Spectre 風險降低|
+|[編譯器警告 （層級 2） C5046](c5046.md)|'*函式*': 包含類型，具有內部連結未定義的符號|

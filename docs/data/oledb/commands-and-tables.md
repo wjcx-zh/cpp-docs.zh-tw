@@ -1,7 +1,7 @@
 ---
 title: 命令和資料表 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fefd4241d1412ec6ea319db9ca6669856715e631
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 762623d6460404b4de85a45adaff7c5662bac258
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028112"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990006"
 ---
 # <a name="commands-and-tables"></a>命令和資料表
 
@@ -36,7 +36,7 @@ ms.locfileid: "46028112"
 ![CCommand 和 CTable](../../data/oledb/media/vccommandstables.gif "vccommandstables")  
 命令和資料表類別  
   
-在上表中，`TAccessor`可以任何存取子的型別列出[存取子類型](../../data/oledb/accessors-and-rowsets.md)。 *TRowset*可以任何資料列集型別列出[資料列集類型](../../data/oledb/accessors-and-rowsets.md)。 *TMultiple*指定結果型別 （單一或多個結果集）。  
+在上表中，`TAccessor`可以任何存取子的型別列出[存取子類型](../../data/oledb/accessors-and-rowsets.md)。 `TRowset` 可以任何資料列集型別列出[資料列集類型](../../data/oledb/accessors-and-rowsets.md)。 `TMultiple` 指定結果型別 （單一或多個結果集）。  
   
 [ATL OLE DB 消費者精靈](../../atl/reference/atl-ole-db-consumer-wizard.md)可讓您指定是否要讓命令或資料表的物件。  
   

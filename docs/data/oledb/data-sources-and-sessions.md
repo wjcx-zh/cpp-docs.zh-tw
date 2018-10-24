@@ -1,7 +1,7 @@
 ---
 title: 資料來源和工作階段 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 07c7a395f111d4473eed5f85a1329e85358f5d0c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0a1904c0b0c416c216a28ddcaf7bb20ce408ba0a
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037667"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989940"
 ---
 # <a name="data-sources-and-sessions"></a>資料來源和工作階段
 
@@ -35,7 +35,7 @@ ms.locfileid: "46037667"
   
 - [CDataSource](../../data/oledb/cdatasource-class.md)這個類別會具現化資料來源物件，以建立和管理透過 OLE DB 提供者的資料來源的連接。 資料來源需要資訊，例如資料來源位址和驗證資訊的連接字串的形式。  
   
-     另外值得注意的是，協助程式類別[CEnumerator](../../data/oledb/cenumerator-class.md)通常用來取得一份可用的系統上註冊的提供者建立任何連線之前。 這可讓您選取做為資料來源的提供者。 例如，**資料連結屬性** 對話方塊中會使用這個類別上填入 seznam zprostředkovatelů**提供者** 索引標籤。它相當於`SQLBrowseConnect`或`SQLDriverConnect`函式。  
+     另外值得注意的是，協助程式類別[CEnumerator](../../data/oledb/cenumerator-class.md)通常用來取得一份可用的系統上註冊的提供者建立任何連線之前。 這可讓您選取做為資料來源的提供者。 例如，**資料連結屬性** 對話方塊中會使用這個類別上填入 seznam zprostředkovatelů**提供者** 索引標籤。它等同於`SQLBrowseConnect`或`SQLDriverConnect`函式。  
   
 - [CSession](../../data/oledb/csession-class.md)這個類別會具現化工作階段物件，代表資料來源的單一存取工作階段。 不過，您可以建立多個工作階段上的資料來源。 每個工作階段，您可以建立從資料來源存取資料的資料列集、 命令和其他物件。 工作階段處理的交易。  
   

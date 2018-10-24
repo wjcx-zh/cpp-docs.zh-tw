@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aa56a62fa898f7ebe6c171af6f7246106b8e5ac7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4630391d9bce319c35af18767d7133bd34a92362
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038726"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990200"
 ---
 # <a name="testing-the-read-only-provider"></a>測試唯讀提供者
 
@@ -31,13 +31,13 @@ ms.locfileid: "46038726"
   
 本主題中的範例會建立預設的 MFC 應用程式精靈應用程式的測試用戶。 測試應用程式是簡單的對話方塊與加入的 OLE DB 消費者範本程式碼。  
   
-### <a name="to-create-the-test-application"></a>若要建立測試應用程式  
+## <a name="to-create-the-test-application"></a>若要建立測試應用程式  
   
 1. 按一下 [ **檔案** ] 功能表上的 [ **新增**]，然後按一下 [ **專案**]。  
   
-1. 在 [專案類型] 窗格中選取 [Visual C++ 專案] 資料夾。 在 [範本] 窗格中，選取**MFC 應用程式**。  
+1. 在 **專案類型**窗格中，選取**Visual c + + 專案**資料夾。 在 **範本**窗格中，選取**MFC 應用程式**。  
   
-1. 針對專案名稱，輸入**TestProv**，然後按一下**確定**。  
+1. 針對專案名稱，輸入*TestProv*，然後按一下**確定**。  
   
      MFC 應用程式精靈 隨即出現。  
   
@@ -46,9 +46,9 @@ ms.locfileid: "46038726"
 1. 在 **進階功能**頁面上，選取**自動化**，然後按一下**完成**。  
   
 > [!NOTE]
->  如果您新增應用程式不需要自動化支援**CoInitialize**中**CTestProvApp::InitInstance**。  
+> 如果您新增應用程式不需要自動化支援`CoInitialize`在`CTestProvApp::InitInstance`。  
   
-您可以檢視和編輯 TestProv 對話方塊 (IDD_TESTPROV_DIALOG) 在 資源檢視中選取。 將兩個清單方塊，一個用於資料列集，每個字串放在對話方塊中。 關閉 [排序] 屬性的同時按下 ALT + Enter 在選取清單方塊時，按一下清單方塊**樣式**索引標籤，然後清除**排序**核取方塊。 此外，放置**執行**來擷取檔案的對話方塊上的按鈕。 完成的 TestProv 對話方塊應該有兩個分別; 標示為 「 字串 1 」 和 「 String 2"的清單方塊它也有 **[確定]**，**取消**，並**執行**按鈕。  
+您可以檢視及編輯**TestProv**中選取它的對話方塊 (IDD_TESTPROV_DIALOG)**資源檢視**。 將兩個清單方塊，一個用於資料列集，每個字串放在對話方塊中。 關閉排序屬性的同時清單方塊按下**Alt**+**Enter**選取清單方塊時，按一下**樣式**索引標籤，然後清除**排序**核取方塊。 此外，放置**執行**來擷取檔案的對話方塊上的按鈕。 已完成**TestProv**  對話方塊中應該有兩個分別標示為 「 字串 1 」 和 「 String 2"的清單方塊，它也有**確定**，**取消**，和**執行**按鈕。  
   
 開啟對話方塊類別 （在此案例的 TestProvDlg.h) 的標頭檔。 下列程式碼加入標頭檔 （之外的任何類別宣告）：  
   
@@ -73,7 +73,7 @@ END_COLUMN_MAP()
   
 程式碼代表定義資料行都會出現的資料列集的使用者記錄。 當用戶端呼叫`IAccessor::CreateAccessor`，它會使用這些項目指定要繫結的資料行。 OLE DB 消費者範本也可讓您動態繫結資料行。 COLUMN_ENTRY 巨集是用戶端版本 PROVIDER_COLUMN_ENTRY 巨集。 兩個 COLUMN_ENTRY 巨集指定的序數、 兩個字串的型別、 長度和資料成員。  
   
-新增處理常式函式，如**執行**按鈕，按住 ctrl 鍵，並按兩下**執行** 按鈕。 下列程式碼置於函式：  
+新增處理常式函式，如**執行**藉由按下按鈕**Ctrl** ，並按兩下**執行** 按鈕。 下列程式碼置於函式：  
   
 ```cpp
 ///////////////////////////////////////////////////////////////////////  
@@ -115,9 +115,9 @@ if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
    return;  
 ```  
   
-線條以開啟每個類別建立提供者中的每個 COM 物件。 若要尋找的提供者，使用提供者的 ProgID。 從系統登錄，或是查看 MyProvider.rgs 檔案中，您可以取得 ProgID （開啟提供者的目錄和 ProgID 的索引鍵搜尋）。  
+線條以開啟每個類別建立提供者中的每個 COM 物件。 若要尋找的提供者，使用`ProgID`的提供者。 您可以取得`ProgID`從系統登錄，或是查看 MyProvider.rgs 檔案中 (開啟提供者的目錄，並搜尋`ProgID`索引鍵)。  
   
-隨附於 MyProv 範例 MyData.txt 檔案。 若要建立您自己的檔案，請使用編輯器，並輸入偶數數目的按下 ENTER，每個字串之間的字串。 如果您移動檔案，請變更路徑名稱。  
+MyData.txt 檔會包含與`MyProv`範例。 若要建立您自己的檔案，請使用編輯器，並輸入偶數數目的按下 ENTER，每個字串之間的字串。 如果您移動檔案，請變更路徑名稱。  
   
 傳遞字串"c:\\\samples\\\myprov\\\MyData.txt 」 中`table.Open`列。 如果您逐步執行`Open`呼叫中，您會看到這個字串會傳遞至`SetCommandText`提供者中的方法。 請注意，`ICommandText::Execute`使用該字串的方法。  
   

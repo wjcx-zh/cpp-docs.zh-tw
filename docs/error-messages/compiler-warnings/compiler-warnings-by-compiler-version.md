@@ -1,7 +1,7 @@
 ---
 title: 依編譯器版本的編譯器警告 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 10/24/2018
 ms.technology:
 - devlang-cpp
 ms.topic: error-reference
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6645bb81a1fd4a2b42eb7419a0d008b9ac7692ad
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1c4d815ba1036a03042992d2715e49bbd8f74a28
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44319080"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990382"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>依編譯器版本的編譯器警告
 
@@ -45,10 +45,19 @@ ms.locfileid: "44319080"
 | Visual c + + 2017 15.5 版 | 19.12.25830.0 |
 | Visual c + + 2017 15.6 版 | 19.13.26128.0 |
 | Visual c + + 2017 15.7 版 | 19.14.26428.0 |
+| Visual c + + 2017 版 15.8 | 19.15.26726.0 |
 
 您可以指定只有主要版本號碼、 主要和次要的數字或主要、 次要和組建編號 __/Wv__選項。 編譯器會報告所有警告符合指定的數目，以開始的版本，且會抑制所有警告版本大於指定的數目。 例如， __/Wv:17__會報告所有警告導入在或之前的任何版本的 Visual Studio 2012 中，且會抑制任何從 Visual Studio 2013 （第 18 版） 或更新版本的編譯器所引入的所有警告。 若要隱藏在 Visual Studio 2015 中引進的警告更新 2 和更新版本中，您可以使用 __/Wv:19.00.23506__。 使用 __/Wv:19.11__報告所有警告在任何版本的 Visual Studio 2017 15.5 版中之前, 的 Visual Studio 中引進，但會隱藏在 Visual Studio 2017 15.5 版和更新版本中引進的警告。
 
 下列各節將列出每個您可以使用隱藏的 Visual c + + 版本所引進的警告 __/Wv__編譯器選項。 __/Wv__選項無法隱藏警告不會列出，比指定的版本的編譯器。
+
+## <a name="warnings-introduced-in-visual-c-2017-version-158-compiler-version-1915267260"></a>在 Visual c + + 2017 版本 15.8 （編譯器版本 19.15.26726.0） 中引進的警告
+
+使用編譯器選項會隱藏這些警告和更新版本中的所有警告 __/Wv:19.14__。
+
+|||
+|-|-|
+C5046|'*函式*': 包含類型，具有內部連結未定義的符號|
 
 ## <a name="warnings-introduced-in-visual-c-2017-version-157-compiler-version-1914264280"></a>Visual c + + 2017 版 15.7 （編譯器版本 19.14.26428.0） 中引進的警告
 

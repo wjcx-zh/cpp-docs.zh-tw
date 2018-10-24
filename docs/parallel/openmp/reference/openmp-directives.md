@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e761115642cb9ab95931a89ac3b511256d88708b
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 4d92d196cc38e6033c6f16332e4977f2481c4496
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809001"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990330"
 ---
 # <a name="openmp-directives"></a>OpenMP 指示詞
 
@@ -66,7 +66,7 @@ Visual c + + 支援下列的 OpenMP 指示詞：
 [single](#single)                     | 可讓您指定一段程式碼，應該會在單一執行緒，而不一定是主要的執行緒上執行。
 [threadprivate](#threadprivate)       | 指定在執行緒私用變數。
 
-## <a name="atomic"></a>atomic
+## <a name="atomic"></a>不可部分完成
 
 指定的記憶體位置會以不可分割方式更新。
 
@@ -111,7 +111,7 @@ int main() {
 Number of threads: 10
 ```
 
-## <a name="barrier"></a>barrier
+## <a name="barrier"></a>屏障
 
 同步處理的小組中的所有執行緒在屏障的所有執行緒都暫停，直到所有執行緒都執行的屏障為止。
 
@@ -129,7 +129,7 @@ Number of threads: 10
 
 如需如何使用的範例`barrier`，請參閱 <<c2> [ 主要](#master)。
 
-## <a name="critical"></a>critical
+## <a name="critical"></a>重要
 
 指定程式碼只執行一個執行緒上一次。
 
@@ -209,7 +209,7 @@ int main()
 max = 29358
 ```
 
-## <a name="flush-openmp"></a>flush (OpenMP)
+## <a name="flush-openmp"></a>排清 (OpenMP)
 
 指定所有執行緒都有相同的檢視，所有的共用物件的記憶體。
 
@@ -285,7 +285,7 @@ Thread 1: process data
 data = 2
 ```
 
-## <a name="for-openmp"></a>for (OpenMP)
+## <a name="for-openmp"></a>(openmp)
 
 會導致完成的工作`for`來分割於執行緒在平行區域內的迴圈。
 
@@ -382,7 +382,7 @@ int main() {
 The sum of 1 through 10 is 55
 ```
 
-## <a name="master"></a>主要
+## <a name="master"></a>Master
 
 指定只在主要執行緒應該執行的程式區段。
 
@@ -515,7 +515,7 @@ test2() iteration 3
 test2() iteration 4
 ```
 
-## <a name="parallel"></a>parallel
+## <a name="parallel"></a>平行
 
 定義在平行區域，也就是將多個執行緒以平行方式執行的程式碼。
 
@@ -578,7 +578,7 @@ Hello from thread 3
 
 請注意，在不同電腦而異之輸出的順序。
 
-## <a name="sections-openmp"></a>sections (OpenMP)
+## <a name="sections-openmp"></a>區段 (OpenMP)
 
 識別要被所有執行緒之間的程式碼區段。
 
@@ -588,7 +588,7 @@ Hello from thread 3
    #pragma omp section
    {
       code_block
-   } 
+   } 
 }
 ```
 
@@ -636,12 +636,12 @@ Hello from thread 0
 Hello from thread 0
 ```
 
-## <a name="single"></a>single
+## <a name="single"></a>單一
 
 可讓您指定一段程式碼，應該會在單一執行緒，而不一定是主要的執行緒上執行。
 
 ```
-#pragma omp single [clauses] 
+#pragma omp single [clauses] 
 {
    code_block
 }

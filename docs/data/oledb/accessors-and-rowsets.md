@@ -1,7 +1,7 @@
 ---
 title: 存取子和資料列集 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -28,12 +28,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f8dc681e149d54742e4bf5e7ff44afeebe2292eb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c3247cd3b5844df76b8a115a3f28a76874db2a16
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113093"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990174"
 ---
 # <a name="accessors-and-rowsets"></a>存取子和資料列集
 
@@ -50,7 +50,7 @@ ms.locfileid: "46113093"
   
 - [CAccessor](../../data/oledb/caccessor-class.md)使用這個存取子，當您在設計階段知道資料庫來源的結構。 `CAccessor` 以靜態方式將資料庫的記錄，其中包含緩衝區，繫結至資料來源。  
   
-- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)使用這個存取子，當您在設計階段不知道資料庫的結構。 `CDynamicAccessor` 呼叫`IColumnsInfo::GetColumnInfo`取得資料庫資料行資訊。 它會建立並管理存取子和緩衝區。  
+- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)時您不知道資料庫的結構，在設計階段使用這個存取子。 `CDynamicAccessor` 呼叫`IColumnsInfo::GetColumnInfo`取得資料庫資料行資訊。 它會建立並管理存取子和緩衝區。  
   
 - [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)使用這個存取子來處理未知的命令類型。 當您準備命令時`CDynamicParameterAccessor`可以取得參數資訊，從`ICommandWithParameters`介面，如果提供者支援`ICommandWithParameters`。  
   
@@ -77,7 +77,7 @@ OLE DB 範本都支援三種類型的資料列集 （請參閱上圖中）： �
 ![RowsetType 圖形](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")  
 資料列集類別  
   
-[結構描述資料列集](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)執行不存取資料中的資料存放區，但改為存取資料存放區，稱為中繼資料的相關資訊。 結構描述資料列通常會用於資料庫結構在編譯時期不知道以及必須在執行階段取得的情況。  
+[結構描述資料列集](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)不存取資料中的資料存放區，但改為存取資料存放區，稱為中繼資料的相關資訊。 結構描述資料列通常用於在資料庫結構不編譯時期已知和必須在執行階段取得的情況。  
   
 ## <a name="see-also"></a>另請參閱  
 

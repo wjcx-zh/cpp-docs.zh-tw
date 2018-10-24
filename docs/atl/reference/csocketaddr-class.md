@@ -1,7 +1,7 @@
 ---
 title: CSocketAddr 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c39ca72136db7c11e925f28cc3413a5f7b77002
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 705cbd051f7c5761ae9a2aabfe919519681ef089
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040852"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990213"
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr 類別
 
@@ -62,7 +62,7 @@ class CSocketAddr
 
 這個類別會提供 IP 版本無關的方法，來查閱與 Windows 搭配使用的網路位址的通訊端 API 函式和程式庫中的通訊端包裝函式。
 
-這個類別的成員，顯示用來查詢網路位址使用的 Win32 API 函式[getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo)。
+這個類別的成員，顯示用來查詢網路位址使用的 Win32 API 函式[getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo)。 根據您的程式碼會編譯為 ANSI 或 UNICODE，會呼叫函式的 ANSI 或 UNICODE 版本。
 
 此類別支援這兩個 IPv4 andIPv6 網路位址。
 
@@ -88,15 +88,15 @@ CSocketAddr();
 
 ```
 int FindAddr(
-    const char *szHost,
-    const char *szPortOrServiceName,
+    const TCHAR *szHost,
+    const TCHAR *szPortOrServiceName,
     int flags,
     int addr_family,
     int sock_type,
     int ai_proto);
 
 int FindAddr(
-    const char *szHost,
+    const TCHAR *szHost,
     int nPortNo,
     int flags,
     int addr_family,
@@ -141,10 +141,10 @@ int FindAddr(
 
 ```
 int FindINET4Addr(
-    const char *szHost,
+    const TCHAR *szHost,
     int nPortNo,
-    int flags,
-    int sock_type,);
+    int flags = 0,
+    int sock_type = SOCK_STREAM);
 ```
 
 ### <a name="parameters"></a>參數
@@ -175,10 +175,10 @@ int FindINET4Addr(
 
 ```
 int FindINET6Addr(
-    const char *szHost,
+    const TCHAR *szHost,
     int nPortNo,
-    int flags,
-    int sock_type,);
+    int flags = 0,
+    int sock_type = SOCK_STREAM);
 ```
 
 ### <a name="parameters"></a>參數
@@ -208,7 +208,7 @@ int FindINET6Addr(
 呼叫這個方法來傳回特定的項目中的指標`addrinfo`清單。
 
 ```
-addrinfo* const GetAddrInfoint nIndex = 0) const;
+addrinfo* const GetAddrInfo(int nIndex = 0) const;
 ```
 
 ### <a name="parameters"></a>參數

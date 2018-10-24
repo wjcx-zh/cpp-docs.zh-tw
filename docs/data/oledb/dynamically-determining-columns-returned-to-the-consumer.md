@@ -16,22 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d3b7d20fb82399f3778c751de28858b93f81071a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fffa63c9bbcc556009fb5edff93fd02f302ae3ea
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080879"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990122"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>動態決定傳回給消費者的資料行
 
 PROVIDER_COLUMN_ENTRY 巨集通常處理`IColumnsInfo::GetColumnsInfo`呼叫。 不過，取用者可能會選擇使用書籤，因為提供者必須要能夠變更傳回根據取用者是否要求書籤的資料行。  
   
-若要處理`IColumnsInfo::GetColumnsInfo`呼叫時，刪除 PROVIDER_COLUMN_MAP，其定義的函式`GetColumnInfo`，從`CAgentMan`使用者 MyProviderRS.h 中的記錄，並將它取代為您自己的定義`GetColumnInfo`函式：  
+若要處理`IColumnsInfo::GetColumnsInfo`呼叫時，刪除 PROVIDER_COLUMN_MAP，其定義的函式`GetColumnInfo`，從`CAgentMan`中的使用者資料錄*自訂*RS.h 並取代為您自己定義`GetColumnInfo`函式：  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
-// MyProviderRS.H  
+// CustomRS.H  
 class CAgentMan  
 {  
 public:  
@@ -52,13 +52,13 @@ public:
   
 接下來，實作`GetColumnInfo`MyProviderRS.cpp，在函式，如下列程式碼所示。  
   
-`GetColumnInfo` 檢查第一次，看看是否將 OLE DB 屬性`DBPROP_BOOKMARKS`設定。 要取得其屬性，`GetColumnInfo`會使用指標 (`pRowset`) 的資料列集物件。 `pThis`指標表示類別，用於建立資料列集，這是一個類別的屬性對應的儲存位置。 `GetColumnInfo` 類型轉換`pThis`指標`RMyProviderRowset`指標。  
+`GetColumnInfo` 檢查第一次，看看是否將 OLE DB 屬性`DBPROP_BOOKMARKS`設定。 要取得其屬性，`GetColumnInfo`會使用指標 (`pRowset`) 的資料列集物件。 `pThis`指標表示類別，用於建立資料列集，這是一個類別的屬性對應的儲存位置。 `GetColumnInfo` 類型轉換`pThis`指標`RCustomRowset`指標。  
   
 若要檢查`DBPROP_BOOKMARKS`屬性，`GetColumnInfo`會使用`IRowsetInfo`介面，您可以藉由呼叫取得`QueryInterface`上`pRowset`介面。 或者，您可以使用 ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md)方法改為。  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////  
-// MyProviderRS.cpp  
+// CustomRS.cpp  
 ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)  
 {  
    static ATLCOLUMNINFO _rgColumns[5];  
@@ -119,7 +119,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
-// MyProviderRS.h  
+// CustomRS.h  
   
 #define ADD_COLUMN_ENTRY(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member) \  
    _rgColumns[ulCols].pwszName = (LPOLESTR)name; \  

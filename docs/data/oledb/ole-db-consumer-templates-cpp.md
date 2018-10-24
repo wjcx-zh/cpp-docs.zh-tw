@@ -1,7 +1,7 @@
 ---
 title: OLE DB 消費者樣板 （c + +） |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b22f97401900a24ae864174872027b18509dfe0c
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 9983b9347fb0c39333bba33f1c7b1d9237b407ce
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082419"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990135"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB 消費者樣板 (C++)
 
-OLE DB 消費者樣板可以支援 OLE DB 2.6 版規格 (OLE DB 消費者樣板是以 OLE DB 2.6 做為測試對象，但並不支援規格裡的每一個介面)。消費者樣板可將為實作 OLE DB 消費者而必須撰寫的程式碼數量降到最低。 此樣板提供了：  
+OLE DB 消費者樣板可以支援 OLE DB 2.6 版規格 （OLE DB 消費者樣板為測試對象 OLE DB 2.6 的但不支援規格裡的每個介面）。消費者樣板可將為實作 OLE DB 消費者而必須撰寫的程式碼數量降到最低。 此樣板提供了：  
   
 - OLE DB 功能的簡易存取以及 ATL 和 MFC 的簡易整合。  
   
@@ -35,7 +35,7 @@ OLE DB 消費者樣板可以支援 OLE DB 2.6 版規格 (OLE DB 消費者樣板�
   
 - OLE DB 程式設計的原生 C/C++ 資料型別。  
   
-若要使用此 OLE DB 樣板，必須熟悉 C++ 樣板、COM 和 OLE DB 介面。 如果您還不熟悉如何使用 OLE DB，請參閱 [OLE DB 設計人員參考](/previous-versions/windows/desktop/ms718124)。  
+若要使用此 OLE DB 樣板，必須熟悉 C++ 樣板、COM 和 OLE DB 介面。 如果您不熟悉如何使用 OLE DB，請參閱[OLE DB 程式設計人員參考](/previous-versions/windows/desktop/ms718124)。  
   
 OLE DB 樣板會支援現有的 OLE DB 物件模型而不是加入新的物件模型。 OLE DB 消費者樣板裡的上層類別相當於 OLE DB 規格中所定義的元件。 OLE DB 消費者樣板的設計包括一些進階功能，例如，用於資料列集的多重存取子。 使用樣板和多重繼承會使程式庫更小且具備彈性。  
   
@@ -71,5 +71,5 @@ OLE DB 消費者可以繫結資料庫的資料表資料行和區域變數；它�
 
 [OLE DB 程式設計](../../data/oledb/ole-db-programming.md)<br/>
 [資料存取](../data-access-in-cpp.md)<br/>
-[OLE DB SDK 文件](/previous-versions/windows/desktop/ms722784)   
+[OLE DB SDK 文件](/previous-versions/windows/desktop/ms722784)<br/>
 [OLE DB 設計人員參考](/previous-versions/windows/desktop/ms713643)

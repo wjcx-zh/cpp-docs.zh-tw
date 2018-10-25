@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ad8be0655d43fac063a3551f43e667a04caa27b
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: f86574dc1d2b996b66b29d2db6d45afc6b81ff7f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821058"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065222"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>變更繪圖程式碼 (ATL 教學課程，第 4 部分)
 
@@ -121,13 +121,13 @@ ms.locfileid: "48821058"
     > 錯誤涉及`ATL::CW2AEX`，在 Script.Cpp、 取代一行`TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT );`具有`TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT.m_psz );`，和行`TRACE( "Source Text: %s\n", COLE2CT( bstrSourceLineText ) );`與`TRACE( "Source Text: %s\n", bstrSourceLineText );`。<br/>
     > 錯誤涉及`HMONITOR`，開啟在 StdAfx.h`TCProps`專案，並取代：
     > ```
-    > #ifndef WINVER  
-    > #define WINVER 0x0400   
+    > #ifndef WINVER
+    > #define WINVER 0x0400
     > #endif
     > ```
     > 取代為
     > ```
-    > #ifndef WINVER  
+    > #ifndef WINVER
     > #define WINVER 0x0500
     > #define _WIN32_WINNT 0x0500
     > #endif

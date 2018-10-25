@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59689abec68fc6cff2a742bd4db97b58cd023af1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 91098a0a225519f9b657d9424872e99be0e86354
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316259"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065534"
 ---
 # <a name="creating-a-menu-c"></a>建立功能表 （c + +）
 
@@ -37,8 +37,8 @@ ms.locfileid: "44316259"
 
 2. 在功能表列上選取 [新增項目]  方塊 (有「在這裡輸入」的矩形)。
 
-   ![功能表編輯器中的新項目方塊](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")  
-新增項目方塊
+   ![功能表編輯器中的新項目方塊](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")<br/>
+   新增項目方塊
 
 3. 輸入新功能表的名稱，例如「檔案」。
 
@@ -46,8 +46,8 @@ ms.locfileid: "44316259"
 
    一旦在功能表列上指定了新的功能表名稱，[新增項目] 方塊就會右移 (讓您加入另一個功能表)，並在第一個功能表底下開啟另一個 [新增項目] 方塊，讓您加入功能表命令。
 
-   ![展開新的項目方塊](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")  
-輸入功能表名稱之後，[新增項目] 方塊的焦點會移位
+   ![展開新的項目方塊](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")<br/>
+   輸入功能表名稱之後，[新增項目] 方塊的焦點會移位
 
    > [!NOTE]
    > 若要建立單一項目 功能表的功能表列上，設定**快顯**屬性設**False**。

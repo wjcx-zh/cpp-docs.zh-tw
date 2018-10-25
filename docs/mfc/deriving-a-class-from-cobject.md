@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f673f0212884fce33069f044b34d5396cf72b7c3
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: a102eae0dd5f96d74f7258c10c5bcce55c3a6443
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081926"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065366"
 ---
 # <a name="deriving-a-class-from-cobject"></a>從 CObject 衍生類別
 
@@ -65,9 +65,9 @@ ms.locfileid: "49081926"
 
 1. 使用一般的 c + + 語法來衍生您的類別，從`CObject`(或從衍生自類別`CObject`)。
 
-     下列範例顯示簡單的情況下，類別的衍生`CObject`:
+   下列範例顯示簡單的情況下，類別的衍生`CObject`:
 
-     [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
+   [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
 一般來說，不過，您可能想要覆寫某些`CObject`的成員函式來處理您的新類別的詳細資訊。 例如，您通常可以覆寫`Dump`函式的`CObject`以供您類別的內容中的偵錯輸出。 如需有關如何覆寫`Dump`，請參閱文章[診斷： 傾印物件內容](/previous-versions/visualstudio/visual-studio-2010/sc15kz85)。 您也可以覆寫`AssertValid`函式的`CObject`提供自訂的測試，以驗證資料成員的類別物件的一致性。 如需如何覆寫的說明`AssertValid`，請參閱 < [MFC ASSERT_VALID 和 CObject::AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa)。
 

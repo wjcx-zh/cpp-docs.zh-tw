@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9397dbd6c18d2256bf1803080f32d1fae36a159
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e23e883c143b1c65d4f150092193a7a693a34269
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430575"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065235"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel 類別
 
@@ -96,7 +96,8 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>參數
 
-[in][out]*pElem*將新增至 [主面板] 功能區項目的指標。
+*pElem*<br/>
+[in、 out]若要加入至主面板的功能區項目指標。
 
 ### <a name="remarks"></a>備註
 
@@ -132,7 +133,8 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 
 ### <a name="parameters"></a>參數
 
-[in][out]*pElem*將新增至主面板下方功能區項目的指標。
+*pElem*<br/>
+[in、 out]將新增至 [main] 面板底部的功能區項目指標。
 
 ### <a name="remarks"></a>備註
 

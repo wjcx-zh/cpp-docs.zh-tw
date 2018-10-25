@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2b71271dc0579e1d0682b95a0d3bdf57d197d1a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ffa4b43c595bfa75d805e8896aad8c44ac6baa50
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790943"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064702"
 ---
 # <a name="retval"></a>retval
 
@@ -55,10 +55,10 @@ ms.locfileid: "48790943"
 |**必要屬性**|**out**|
 |**無效屬性**|**in**|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [IDL 屬性](idl-attributes.md)<br/>
 [參數屬性](parameter-attributes.md)<br/>
-[方法屬性](method-attributes.md)  
+[方法屬性](method-attributes.md)

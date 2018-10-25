@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 254dffebc258867088f738b10a11bf48d31bd0a4
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 97cf6ccad0a3b30c0abfa0076ea9c6a30b205d67
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990059"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065196"
 ---
 # <a name="openmp-data-types"></a>OpenMP 資料類型
 
@@ -33,10 +33,10 @@ ms.locfileid: "49990059"
 
 Visual c + + 實作的 openmp 標準包含下列資料類型。
 
-資料類型                           | 描述
------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[omp_lock_t](#omp-lock-t)           | 保留鎖定，鎖定是否可供使用，或如果執行緒擁有鎖定的狀態類型。
-[omp_nest_lock_t](#omp-nest-lock-t) | 保留鎖定的相關資訊的下列項目之一的類型： 是否鎖定可供使用，以及執行緒的識別擁有鎖定，並將巢狀的計數。
+|資料類型|描述|
+|---------|-----------|
+|[omp_lock_t](#omp-lock-t)|保留鎖定，鎖定是否可供使用，或如果執行緒擁有鎖定的狀態類型。|
+|[omp_nest_lock_t](#omp-nest-lock-t)|保留鎖定的相關資訊的下列項目之一的類型： 是否鎖定可供使用，以及執行緒的識別擁有鎖定，並將巢狀的計數。|
 
 ## <a name="omp-lock-t"></a>omp_lock_t
 
@@ -44,17 +44,17 @@ Visual c + + 實作的 openmp 標準包含下列資料類型。
 
 下列函式會使用`omp_lock_t`:
 
-- [omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)
-- [omp_destroy_lock](../../../parallel/openmp/reference/omp-destroy-lock.md)
-- [omp_set_lock](../../../parallel/openmp/reference/omp-set-lock.md)
-- [omp_unset_lock](../../../parallel/openmp/reference/omp-unset-lock.md)
-- [omp_test_lock](../../../parallel/openmp/reference/omp-test-lock.md)
+- [omp_init_lock](openmp-functions.md#omp-init-lock)
+- [omp_destroy_lock](openmp-functions.md#omp-destroy-lock)
+- [omp_set_lock](openmp-functions.md#omp-set-lock)
+- [omp_unset_lock](openmp-functions.md#omp-unset-lock)
+- [omp_test_lock](openmp-functions.md#omp-test-lock)
 
 如需詳細資訊，請參閱 < [3.2 鎖定函式](../../../parallel/openmp/3-2-lock-functions.md)。
 
 ### <a name="example"></a>範例
 
-請參閱[omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)如需使用的範例`omp_lock_t`。
+請參閱[omp_init_lock](openmp-functions.md#omp-init-lock)如需使用的範例`omp_lock_t`。
 
 ## <a name="omp-nest-lock-t"></a>omp_nest_lock_t
 
@@ -62,14 +62,14 @@ Visual c + + 實作的 openmp 標準包含下列資料類型。
 
 下列函式會使用`omp_nest_lock_t`:
 
-- [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)
-- [omp_destroy_nest_lock](../../../parallel/openmp/reference/omp-destroy-nest-lock.md)
-- [omp_set_nest_lock](../../../parallel/openmp/reference/omp-set-nest-lock.md)
-- [omp_unset_nest_lock](../../../parallel/openmp/reference/omp-unset-nest-lock.md)
-- [omp_test_nest_lock](../../../parallel/openmp/reference/omp-test-nest-lock.md)
+- [omp_init_nest_lock](openmp-functions.md#omp-init-nest-lock)
+- [omp_destroy_nest_lock](openmp-functions.md#omp-destroy-nest-lock)
+- [omp_set_nest_lock](openmp-functions.md#omp-set-nest-lock)
+- [omp_unset_nest_lock](openmp-functions.md#omp-unset-nest-lock)
+- [omp_test_nest_lock](openmp-functions.md#omp-test-nest-lock)
 
 如需詳細資訊，請參閱 < [3.2 鎖定函式](../../../parallel/openmp/3-2-lock-functions.md)。
 
 ### <a name="example"></a>範例
 
-請參閱[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)如需使用的範例`omp_nest_lock_t`。
+請參閱[omp_init_nest_lock](openmp-functions.md#omp-init-nest-lock)如需使用的範例`omp_nest_lock_t`。

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 163ef22563141b9365bc2c086870877c7ad2bf00
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 5979fcb76dc688bffd9ad8076f123927439e3840
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083589"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064560"
 ---
 # <a name="run-time-object-model-services"></a>執行階段物件模型服務
 
@@ -39,8 +39,6 @@ ms.locfileid: "49083589"
 
 ### <a name="run-time-object-model-services-macros"></a>執行階段物件模型服務巨集
 
-
-
 |||
 |-|-|
 |[DECLARE_DYNAMIC](#declare_dynamic)|啟用對於執行階段類別資訊的存取 (必須在類別宣告中使用)。|
@@ -51,19 +49,11 @@ ms.locfileid: "49083589"
 |[IMPLEMENT_SERIAL](#implement_serial)|允許序列化和存取執行階段類別資訊 (必須在類別實作中使用)。|
 |[RUNTIME_CLASS](#runtime_class)|傳回對應至已命名類別的 `CRuntimeClass` 結構。|
 
-
 OLE 經常需要在執行階段動態建立物件。 例如，OLE 伺服器應用程式必須能夠動態建立 OLE 項目以回應來自用戶端的要求。 同樣地，Automation 伺服器必須能夠建立項目以回應從 Automation 用戶端的要求。
 
 MFC 程式庫提供 OLE 兩個特定巨集。
 
 ### <a name="dynamic-creation-of-ole-objects"></a>動態建立 OLE 物件
-
-
-
-
-
-
-
 
 |||
 |-|-|
@@ -85,6 +75,7 @@ MFC 程式庫提供 OLE 兩個特定巨集。
   ```
 AFX_COMCTL32_IF_EXISTS(  proc );
 ```
+
 ### <a name="parameters"></a>參數
 
 *程序*<br/>
@@ -112,6 +103,7 @@ afxcomctl32.h、afxcomctl32.inl
 ```
 AFX_COMCTL32_IF_EXISTS2( proc );
 ```
+
 ### <a name="parameters"></a>參數
 
 *程序*<br/>
@@ -129,8 +121,6 @@ afxcomctl32.h、afxcomctl32.inl
 
 [MFC 通用控制項程式庫的隔離](../isolation-of-the-mfc-common-controls-library.md)<br/>
 [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
-
-
 
 ##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC
 
@@ -197,7 +187,6 @@ DECLARE_DYNCREATE(class_name)
 
 **標頭：** afx.h
 
-
 ## <a name="declareolectltype"></a>DECLARE_OLECTLTYPE
 
 宣告`GetUserTypeNameID`和`GetMiscStatus`控制類別成員函式。
@@ -207,6 +196,7 @@ DECLARE_DYNCREATE(class_name)
 ```
 DECLARE_OLECTLTYPE( class_name )
 ```
+
 ### <a name="parameters"></a>參數
 
 *class_name*<br/>
@@ -224,7 +214,6 @@ DECLARE_OLECTLTYPE( class_name )
 
 [IMPLEMENT_OLECTLTYPE](#implement_olectltype)
 
-
 ## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
 
 宣告 OLE 控制項提供一份屬性頁以顯示其屬性。
@@ -234,6 +223,7 @@ DECLARE_OLECTLTYPE( class_name )
 ```
 DECLARE_PROPPAGEIDS( class_name )
 ```
+
 ### <a name="parameters"></a>參數
 
 *class_name*<br/>
@@ -370,6 +360,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
     l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
 
 ```
+
 ### <a name="parameters"></a>參數
 
 *class_name*<br/>
@@ -408,7 +399,6 @@ OLE 類別 ID 是唯一的 128 位元識別項的物件。 它包含一個**長*
 [DECLARE_OLECREATE](#declare_olecreate)<br/>
 [CLSID 金鑰](/windows/desktop/com/clsid-key-hklm)
 
-
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
 
 Implements`GetUserTypeNameID`和`GetMiscStatus`控制類別成員函式。
@@ -418,6 +408,7 @@ Implements`GetUserTypeNameID`和`GetMiscStatus`控制類別成員函式。
 ```
 DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 ```
+
 ### <a name="parameters"></a>參數
 
 *class_name*<br/>

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a535858a0d5540db481fd42918b4079f30c90728
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e0fa2a4b422a7bd1f36fc46837adec4136b693fb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375665"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064950"
 ---
 # <a name="logpen-structure"></a>LOGPEN 結構
 
@@ -56,9 +56,9 @@ typedef struct tagLOGPEN {  /* lgpn */
 
 - PS_INSIDEFRAME 由 GDI 上會建立 繪製封閉形狀的框架內線條的畫筆產生輸出指定的週框的函式 (例如`Ellipse`， `Rectangle`， `RoundRect`， `Pie`，和`Chord`成員函式）。 使用 GDI 使用此樣式時輸出未指定的週框的函式 (例如`LineTo`成員函式)，畫筆的繪圖區域不受限於一個框架。
 
-     如果畫筆 PS_INSIDEFRAME 樣式和色彩的不符合，邏輯的色彩表中的色彩，畫筆會繪製遞色色彩。 PS_SOLID 畫筆樣式無法用於建立以遞色色彩的畫筆。 畫筆寬度小於或等於 1 時，等於 PS_SOLID PS_INSIDEFRAME 樣式。
+   如果畫筆 PS_INSIDEFRAME 樣式和色彩的不符合，邏輯的色彩表中的色彩，畫筆會繪製遞色色彩。 PS_SOLID 畫筆樣式無法用於建立以遞色色彩的畫筆。 畫筆寬度小於或等於 1 時，等於 PS_SOLID PS_INSIDEFRAME 樣式。
 
-     當 PS_INSIDEFRAME 樣式會搭配 GDI 物件以外的其他函式所產生`Ellipse`， `Rectangle`，和`RoundRect`，線條可能不完全指定的範圍內。
+   當 PS_INSIDEFRAME 樣式會搭配 GDI 物件以外的其他函式所產生`Ellipse`， `Rectangle`，和`RoundRect`，線條可能不完全指定的範圍內。
 
 *lopnWidth*<br/>
 指定的畫筆寬度，以邏輯單位表示。 如果`lopnWidth`成員為 0，畫筆為 1 個像素寬點陣不論目前的對應模式的裝置上。

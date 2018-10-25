@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b62de2a1e6cba6ecbb29521518f5442ab002ddf3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7907935971fae7d990c651410e5b76982b798075
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381942"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060516"
 ---
 # <a name="servers-implementing-server-documents"></a>伺服器：實作伺服器文件
 
@@ -36,7 +36,7 @@ ms.locfileid: "46381942"
 
 1. 實作`OnGetEmbeddedItem`伺服器文件類別的成員函式。
 
-     `OnGetEmbeddedItem` 容器應用程式的使用者建立或編輯內嵌項目時呼叫。 它應該會傳回代表整個文件的項目。 這應該是物件您`COleServerItem`-衍生的類別。
+   `OnGetEmbeddedItem` 容器應用程式的使用者建立或編輯內嵌項目時呼叫。 它應該會傳回代表整個文件的項目。 這應該是物件您`COleServerItem`-衍生的類別。
 
 1. 覆寫`Serialize`来序列化的文件內容的成員函式。 您不需要序列化的伺服器項目清單，除非您使用它們來代表文件中的原生的資料。 如需詳細資訊，請參閱 <<c0>  *實作伺服器項目*一文中[伺服器： 伺服器項目](../mfc/servers-server-items.md)。
 

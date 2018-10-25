@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e5902019704821d6c34c74480623593b7d7448a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3eb9ab5f08fe1984e52ed16eb26064093fb8e003
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46044245"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052950"
 ---
 # <a name="umenuorid-class"></a>_U_MENUorID 類別
 
@@ -57,7 +57,7 @@ class _U_MENUorID
 
 這個引數的配接器類別會允許呼叫端執行識別碼 （所） 或功能表控制代碼 (HMENUs) 傳遞至函式，而不需要明確轉換。
 
-這個類別專為實作包裝函式以 Windows API 中，特別[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)並[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)函式，這兩者都接受 HMENU 引數可能是子視窗識別碼 (UINT)，而非功能表控制代碼。 例如，您可以看到在使用這個類別做為參數[CWindowImpl::Create](cwindowimpl-class.md#create)。  
+這個類別專為實作包裝函式以 Windows API 中，特別[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)並[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)函式，這兩者都接受 HMENU 引數可能是子視窗識別碼 (UINT)，而非功能表控制代碼。 例如，您可以看到在使用這個類別做為參數[CWindowImpl::Create](cwindowimpl-class.md#create)。
 
 此類別會定義兩個建構函式多載︰ 一個接受 UINT 引數和其他接受 HMENU 引數。 UINT 引數只會轉換成建構函式和儲存類別的單一資料成員，在結果中的 HMENU [m_hMenu](#_u_menuorid__m_hmenu)。 轉換不直接儲存的 HMENU 建構函式的引數。
 

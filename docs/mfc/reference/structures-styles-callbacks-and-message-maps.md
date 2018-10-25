@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8499fd02e9338d518eae9c3f7ea4d4cb077fedb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4aebb9ab084bafa80f212a29969dce27a6ae6c5d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403600"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059684"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>結構、樣式、回呼和訊息對應
 
@@ -51,6 +51,4 @@ ms.locfileid: "46403600"
 
 [MFC 範例](../../visual-cpp-samples.md)<br/>
 提供示範如何使用 MFC 之範例的連結。
-
-
 

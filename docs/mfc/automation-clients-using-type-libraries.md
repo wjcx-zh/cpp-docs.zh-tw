@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 421040024e5dd95fb39bdc78cd54f3f7dc49bf83
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 001dfb29a5ac0f6d93b0715bd2b86ccd60e91259
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377706"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054601"
 ---
 # <a name="automation-clients-using-type-libraries"></a>Automation 用戶端：使用類型程式庫
 
@@ -54,9 +54,9 @@ Visual c + + 可以讀取類型程式庫檔案，並建立分派類別衍生自[
     > [!NOTE]
     >  您可以從一個以上的類型程式庫選取介面。
 
-     若要選擇的介面，按兩下或按一下 [**新增**] 按鈕。 當您這樣做的時候時，分派類別名稱會出現在**產生的類別** 方塊中。 您可以編輯中的類別名稱`Class` 方塊中。
+   若要選擇的介面，按兩下或按一下 [**新增**] 按鈕。 當您這樣做的時候時，分派類別名稱會出現在**產生的類別** 方塊中。 您可以編輯中的類別名稱`Class` 方塊中。
 
-     **檔案**方塊會顯示此類別會宣告的檔案。 （您可以編輯此檔案名稱）。 您也可以使用瀏覽按鈕來選取其他檔案中，如果您想要有寫入在現有的檔案或專案目錄以外的目錄中的標頭和實作資訊。
+   **檔案**方塊會顯示此類別會宣告的檔案。 （您可以編輯此檔案名稱）。 您也可以使用瀏覽按鈕來選取其他檔案中，如果您想要有寫入在現有的檔案或專案目錄以外的目錄中的標頭和實作資訊。
 
     > [!NOTE]
     >  所選介面的所有分派類別便會都放在這裡指定的檔案。 如果您想要在個別的標頭中宣告的介面，您必須執行此精靈為您想要建立每個標頭檔案。
@@ -66,7 +66,7 @@ Visual c + + 可以讀取類型程式庫檔案，並建立分派類別衍生自[
 
 1. 按一下 [ **完成**]。
 
-     精靈接著會寫入分派類別使用指定的類別和檔案名稱的程式碼。
+   精靈接著會寫入分派類別使用指定的類別和檔案名稱的程式碼。
 
 ## <a name="see-also"></a>另請參閱
 

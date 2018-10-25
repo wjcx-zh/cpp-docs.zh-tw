@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7dae7288-8066-4a3e-85e0-78d28bfc6bc8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 988ade49bb7acbb3bcb759f1bdf3e565e033308f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 063ad23a9d356af0cac6c5b9dd8903e81530d2df
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394136"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061335"
 ---
 # <a name="csinglelock-class"></a>CSingleLock 類別
 
@@ -146,7 +146,6 @@ BOOL Lock(DWORD dwTimeOut = INFINITE);
 
 ```
 BOOL Unlock();
-
 
 BOOL Unlock(
     LONG lCount,

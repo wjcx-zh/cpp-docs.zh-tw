@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28e22df4eba5a12806221beea1966d1c1cdeae46
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: af14755b9be9413feb3a519d09200577c9260c5a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052903"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053705"
 ---
 # <a name="atl-control-containment-faq"></a>ATL 控制項內含項目常見問題集
 
@@ -37,7 +37,7 @@ ATL 的控制項裝載程式碼不需要您使用任何 ATL 類別;您可以只�
 |[CAxWindow2T](../atl/reference/caxwindow2t-class.md)|包裝 **"AtlAxWinLic80"** 視窗中，提供方法，來建立視窗、 建立控制項和/或授權的控制項附加至視窗，和擷取主機物件上的介面指標。|
 |[CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md)|做為對話方塊資源為基礎的 ActiveX 控制項類別的基底類別。 這類控制項可以包含其他 ActiveX 控制項。|
 |[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)|做為對話方塊資源為基礎的對話方塊類別的基底類別。 這類對話方塊可以包含 ActiveX 控制項。|
-|[CWindow](../atl/reference/cwindow-class.md)|提供一種方法， [GetDlgControl](../atl/reference/cwindow-class.md#getdlgcontrol)，這會傳回的介面指標上的控制項，指定其裝載視窗的識別碼。 此外，Windows API 的包裝函式會由`CWindow`通常讓視窗管理更容易。|  
+|[CWindow](../atl/reference/cwindow-class.md)|提供一種方法， [GetDlgControl](../atl/reference/cwindow-class.md#getdlgcontrol)，這會傳回的介面指標上的控制項，指定其裝載視窗的識別碼。 此外，Windows API 的包裝函式會由`CWindow`通常讓視窗管理更容易。|
 
 ## <a name="what-is-the-atl-control-hosting-api"></a>什麼是 ATL 控制項裝載 API？
 
@@ -62,11 +62,11 @@ ATL 的控制項裝載 API 是可做為 ActiveX 控制項容器的任何視窗�
 前七個函式會呼叫[AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit)隱含。
 
 > [!NOTE]
->  控制項裝載 API 所構成的 ActiveX 控制項內含項目 ATL 的支援的基礎。 不過，通常很少需要直接呼叫這些函式，如果您利用或充分利用 ATL 的包裝函式類別。 如需詳細資訊，請參閱 <<c0> [ 其中 ATL 類別協助 ActiveX 控制項內含項目](which-atl-classes-facilitate-activex-control-containment-q.md)。  
+>  控制項裝載 API 所構成的 ActiveX 控制項內含項目 ATL 的支援的基礎。 不過，通常很少需要直接呼叫這些函式，如果您利用或充分利用 ATL 的包裝函式類別。 如需詳細資訊，請參閱 <<c0> [ 其中 ATL 類別協助 ActiveX 控制項內含項目](which-atl-classes-facilitate-activex-control-containment-q.md)。
 
 ## <a name="what-is-atlaxwin100"></a>什麼是 AtlAxWin100？
 
-`AtlAxWin100` 是可協助提供 ATL 的控制項裝載功能的視窗類別名稱。 當您建立這個類別的執行個體時，視窗程序會自動使用控制項裝載 API 來建立與視窗相關聯的主機物件，並將它與您指定為視窗的標題控制項。 
+`AtlAxWin100` 是可協助提供 ATL 的控制項裝載功能的視窗類別名稱。 當您建立這個類別的執行個體時，視窗程序會自動使用控制項裝載 API 來建立與視窗相關聯的主機物件，並將它與您指定為視窗的標題控制項。
 
 ## <a name="when-do-i-need-to-call-atlaxwininit"></a>何時需要呼叫 AtlAxWinInit？
 

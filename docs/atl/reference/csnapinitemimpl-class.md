@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 042fe1a446137546654c8f0cfd5ee9be8072dcee
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2b62de5b8303cfdd0516b143654fb9eb2e767eb2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46091825"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059814"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl 類別
 
@@ -119,7 +119,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 這個方法會實作 Win32 函式[IExtendContextMenu::AddMenuItems](https://msdn.microsoft.com/library/aa814841)。
 
 ```
-AddMenuItems(  
+AddMenuItems(
     LPCONTEXTMENUCALLBACK piCallback,
     long* pInsertionAllowed,
     DATA_OBJECT_TYPES type);
@@ -181,7 +181,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 這個方法會實作 Win32 函式[IExtendPropertySheet::CreatePropertyPages](https://msdn.microsoft.com/library/aa814846)。
 
 ```
-CreatePropertyPages(  
+CreatePropertyPages(
     LPPROPERTYSHEETCALLBACK lpProvider,
     long handle,
     IUnknown* pUnk,
@@ -393,7 +393,7 @@ QueryPagesFor(DATA_OBJECT_TYPES type);
 呼叫此函式可修改的功能表插入旗標，指定*pInsertionAllowed*，嵌入式管理單元的物件。
 
 ```
-void SetMenuInsertionFlags(  
+void SetMenuInsertionFlags(
     bool bBeforeInsertion,
     long* pInsertionAllowed);
 ```
@@ -425,7 +425,7 @@ void SetMenuInsertionFlags(
 呼叫此函式來建立工具列之前修改嵌入式管理單元物件的任何工具列按鈕樣式。
 
 ```
-void SetToolbarButtonInfo(  
+void SetToolbarButtonInfo(
     UINT id,
     BYTE* fsState,
     BYTE* fsType);
@@ -469,7 +469,7 @@ void SetToolbarButtonInfo(
 呼叫此函式可修改的功能表項目之前插入物件 嵌入式管理單元中的操作功能表。
 
 ```
-void UpdateMenuState(  
+void UpdateMenuState(
     UINT id,
     LPTSTR pBuf,
     UINT* flags);

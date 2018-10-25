@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3930f08ae0708b81dde218a88fcda4dc34931390
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f07ab7b4420a5c33be56a9278b60afb6424e9e83
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389731"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063545"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026：DDX 和 DDV 常式
 
@@ -224,21 +224,21 @@ ClassWizard 會支援 DDX/DDV 自訂項目的子集，可讓您將自己 DDX_ �
 
    - *promptN*
 
-     將上方的編輯項目 （使用 & accelerator） 的字串。
+      將上方的編輯項目 （使用 & accelerator） 的字串。
 
    - *fmtN*
 
-     做為引數類型，其中的格式字元：
+      做為引數類型，其中的格式字元：
 
-     |字元|類型|
-     |-|-|
-     d | int
-     u | unsigned int
-     D | long int （也就是，long）
-     U | 長時間不帶正負號 (亦即，DWORD)
-     f | float
-     F | double
-     秒 | 字串
+      |字元|類型|
+      |-|-|
+      |d | int|
+      |u | unsigned int|
+      |D | long int （也就是，long）|
+      |U | 長時間不帶正負號 (亦即，DWORD)|
+      |f | float|
+      |F | double|
+      |秒 | 字串|
 
 ## <a name="see-also"></a>另請參閱
 

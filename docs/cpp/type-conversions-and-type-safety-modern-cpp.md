@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb3f2ca2cfe094f4ea9da11786af6f90db7d2217
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9fb13c8c4ce2705d3e7af8ca5b4cd0e4b97b13ca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136151"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059086"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>類型轉換和類型安全 (現代 C++)
 
@@ -70,7 +70,7 @@ int k = 7.7; // warning C4244:'initializing':conversion from 'double' to
 
 ```cpp
 using namespace std;
-unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
+unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
 short num2 = num;
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 // Prints: unsigned val = 65535 signed val = -1
@@ -126,7 +126,7 @@ C 樣式轉型運算子等同於呼叫運算子 （），因此不起眼在程�
     Derived* d2 = static_cast<Derived*>(b);
     ```
 
-     如需詳細資訊，請參閱 < [static_cast](../cpp/static-cast-operator.md)。
+   如需詳細資訊，請參閱 < [static_cast](../cpp/static-cast-operator.md)。
 
 - **dynamic_cast**，指標-基底指標衍生的安全、 執行階段檢查的轉換。 A **dynamic_cast**比安全**static_cast**向下轉型，但執行階段檢查時產生額外負荷。
 
@@ -151,7 +151,7 @@ C 樣式轉型運算子等同於呼叫運算子 （），因此不起眼在程�
     //Output: d3 is null;
     ```
 
-     如需詳細資訊，請參閱 < [dynamic_cast](../cpp/dynamic-cast-operator.md)。
+   如需詳細資訊，請參閱 < [dynamic_cast](../cpp/dynamic-cast-operator.md)。
 
 - **const_cast**，針對轉型**const**性質的變數，或轉換非-**const**變數**const**。 轉型**const**-使用此運算子的性質是只為出錯因為使用 c-style 轉型，差別在於使用**const 轉換**就比較不容易不小心執行轉換。 有時候您必須能**const**-性質的變數，例如，傳遞**const**函式採用非變數**const**參數。 下列範例顯示如何執行這項工作。
 
@@ -164,14 +164,14 @@ C 樣式轉型運算子等同於呼叫運算子 （），因此不起眼在程�
     }
     ```
 
-     如需詳細資訊，請參閱 < [const_cast](../cpp/const-cast-operator.md)。
+   如需詳細資訊，請參閱 < [const_cast](../cpp/const-cast-operator.md)。
 
 - **reinterpret_cast**，針對之間的轉換 （cast） 這類不相關型別**指標**要**int**。
 
     > [!NOTE]
     >  視其他經常不使用此轉換運算子，它具有不保證可以移植到其他編譯器。
 
-     下列範例說明如何**reinterpret_cast**有別**static_cast**。
+   下列範例說明如何**reinterpret_cast**有別**static_cast**。
 
     ```cpp
     const char* str = "hello";
@@ -183,7 +183,7 @@ C 樣式轉型運算子等同於呼叫運算子 （），因此不起眼在程�
                                        // However, it is not 64-bit safe.
     ```
 
-     如需詳細資訊，請參閱 < [reinterpret_cast 運算子](../cpp/reinterpret-cast-operator.md)。
+   如需詳細資訊，請參閱 < [reinterpret_cast 運算子](../cpp/reinterpret-cast-operator.md)。
 
 ## <a name="see-also"></a>另請參閱
 

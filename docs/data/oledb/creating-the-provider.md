@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0dbdf7350eeba1a29392bafc2f099a857e212e37
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 230620a2375ac5aa822e55496d1f26751ee6f7b3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410742"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055342"
 ---
 # <a name="creating-the-provider"></a>建立提供者
 
@@ -32,7 +32,7 @@ ms.locfileid: "49410742"
 
 1. 在 **加入類別**對話方塊的 **已安裝** > **Visual c + +** > **ATL**，選取**ATL OLEDB 提供者**圖示，，然後按一下**開啟**。
 
-1. 在 [ **ATL OLE DB 提供者精靈**，輸入您的提供者中的簡短名稱**簡短名稱**] 方塊中。 下列主題會使用的簡稱 「 MyProvider"，但您可以使用另一個名稱。 其他名稱方塊中填入根據您所輸入的名稱。
+1. 在 [ **ATL OLE DB 提供者精靈**，輸入您的提供者中的簡短名稱**簡短名稱**] 方塊中。 下列主題會使用的簡稱*自訂*，但是您可以使用另一個名稱。 其他名稱方塊中填入根據您所輸入的名稱。
 
 1. 如有需要請編輯其他名稱方塊。 除了物件和檔案名稱，您可以編輯下列項目：
 

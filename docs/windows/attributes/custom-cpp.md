@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a491c120dff7f8f505878d6887498eb5f05fb22
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 7cdfa9011e0021d168c0ad10424a7d326b3c3725
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790746"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062154"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -62,7 +62,7 @@ ms.locfileid: "48790746"
 |**必要屬性**|**coclass** （當使用類別上）|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -72,4 +72,4 @@ ms.locfileid: "48790746"
 [參數屬性](parameter-attributes.md)<br/>
 [方法屬性](method-attributes.md)<br/>
 [類別屬性](class-attributes.md)<br/>
-[介面屬性](interface-attributes.md)  
+[介面屬性](interface-attributes.md)

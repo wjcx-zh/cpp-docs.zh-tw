@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdaf4cf8e1c2f6a062c133ab9e0427cab1d3d094
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 685f1b7d24e781dbee6d67b325b059f09ca9bf4c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762544"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054211"
 ---
 # <a name="adding-connection-points-to-an-object"></a>將連接點加入物件
 
@@ -38,15 +38,15 @@ ms.locfileid: "43762544"
 
 1. Dispinterface 在中定義的程式庫區塊的.idl 檔案。 如果您在使用 ATL 控制項精靈 建立控制項時，您就會啟用連接點的支援，將已建立的分配介面。 如果您在建立控制項時，您並未啟用連接點的支援，您必須以手動方式加入 dispinterface.idl 檔案。 以下是分配介面的範例。 外寄的介面並不一定要分派介面，但許多指令碼語言，例如 VBScript 和 JScript 需要這項目，因此這個範例會使用兩個的分配介面：
 
-     [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]
+   [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]
 
-     您可以使用 uuidgen.exe 或 guidgen.exe 公用程式來產生 GUID。
+   您可以使用 uuidgen.exe 或 guidgen.exe 公用程式來產生 GUID。
 
 2. 新增為 dispinterface`[default,source]`中 coclass 的專案的.idl 檔案中的物件介面。 同樣地，如果您在建立控制項時，您就會啟用連接點的支援，ATL 控制項精靈將會建立`[default,source`] 項目。 若要手動新增此項目，請加入一行以粗體顯示：
 
-     [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]
+   [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]
 
-     請參閱中的.idl 檔案[Circ](../visual-cpp-samples.md) ATL 範例的範例。
+   請參閱中的.idl 檔案[Circ](../visual-cpp-samples.md) ATL 範例的範例。
 
 3. 使用 類別檢視，將方法和屬性新增至事件介面。 以滑鼠右鍵按一下 類別檢視中的類別，指向**新增**捷徑功能表，然後按一下 **加入連接點**。
 
@@ -56,7 +56,7 @@ ms.locfileid: "43762544"
 
    - 連接點對應中新增項目。
 
-     您也會看到您的電腦上的所有型別程式庫的清單。 您只應該使用其中一個其他型別程式庫來定義您的連接點，如果您想要實作另一個型別程式庫中找到的完全相同輸出介面。
+   您也會看到您的電腦上的所有型別程式庫的清單。 您只應該使用其中一個其他型別程式庫來定義您的連接點，如果您想要實作另一個型別程式庫中找到的完全相同輸出介面。
 
 ### <a name="to-reuse-a-connection-point-interface-defined-in-another-type-library"></a>若要重複使用的連接點介面，顯示在另一個型別程式庫中定義。
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd6f38ff8fbe0c4179addf46a43a35be4237b73e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6129bea28b943f8f18e1cf6b1e760e604223bdc1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46100834"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060932"
 ---
 # <a name="compiler-error-c2558"></a>編譯器錯誤 C2558
 
@@ -33,7 +33,7 @@ ms.locfileid: "46100834"
 
 1. 當嘗試複製的類別所擁有的複製建構函式為 `private` 時，就可能會發生這個問題。 在大部分情況下，不應複製具有 `private` 複製建構函式的類別。 一般程式設計技術會宣告一個 `private` 複製建構函式，來防止直接使用類別。 該類別單獨使用可能毫無用處，或需要另一個類別才能正確運作。
 
-     如果您判斷使用具有 `private` 複製建構函式的類別是安全的，則從具有 `private` 建構函式的類別上衍生新的類別，並在新類別中提供 `public` 或 `protected` 複製建構函式使用。 使用這個衍生類別取代原本的。
+   如果您判斷使用具有 `private` 複製建構函式的類別是安全的，則從具有 `private` 建構函式的類別上衍生新的類別，並在新類別中提供 `public` 或 `protected` 複製建構函式使用。 使用這個衍生類別取代原本的。
 
 1. 當嘗試複製的類別擁有明確的複製建構函式時，可能會發生這個問題。 將複製建構函式宣告為 `explicit`，可防止將類別的物件傳遞至函式，或將類別的物件從函式傳回。 如需有關明確建構函式的詳細資訊，請參閱[使用者定義型別轉換](../../cpp/user-defined-type-conversions-cpp.md)。
 

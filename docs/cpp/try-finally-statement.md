@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a250862f5514f290043bf596ba19bf0834e71e
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 4040f5a05f8c9bccfbf1c8b48a40188f684d48ad
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49161654"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060009"
 ---
 # <a name="try-finally-statement"></a>try-finally 陳述式
 
@@ -44,7 +44,7 @@ ms.locfileid: "49161654"
 下列語法描述**try finally**陳述式：
 
 ```cpp
-__try {
+__try {
    // guarded code
 }
 __finally {
@@ -73,7 +73,7 @@ __finally {
 
 1. 當終止處理常式完成時之後, 會繼續執行 **__finally**陳述式。 不論如何保護區段結束 (例如，透過**goto**保護主體外部的或有**傳回**陳述式)，會執行終止處理常式*之前*控制流程移出保護區段。
 
-     A **__finally**陳述式不會封鎖搜尋適當的例外狀況處理常式。
+   A **__finally**陳述式不會封鎖搜尋適當的例外狀況處理常式。
 
 如果發生例外狀況 **__try**區塊中，作業系統必須尋找例外狀況處理常式或程式將會失敗。 如果處理常式找到，則所有 **__finally**區塊執行，並在處理常式繼續執行。
 

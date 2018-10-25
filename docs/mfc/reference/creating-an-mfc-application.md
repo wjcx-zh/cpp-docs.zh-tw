@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c20d3214f8f2f76fedaeebcd439f10e016ccdd9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ec61db21b27ef49f660751605b4788599f7f3485
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410633"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062492"
 ---
 # <a name="creating-an-mfc-application"></a>建立 MFC 應用程式
 
@@ -63,5 +63,4 @@ MFC 應用程式精靈可根據您在精靈中選取的選項，為任意類型�
 
 [使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [屬性頁](../../ide/property-pages-visual-cpp.md)
-
 

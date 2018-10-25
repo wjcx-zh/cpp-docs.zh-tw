@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dd1b5df8749f22873a52782b6f528760c3823a1
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 8a0eeb4b7da53b5722733ba0b0116cf03dab4a29
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788757"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053433"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper 類別
 
@@ -74,7 +74,7 @@ class RoInitializeWrapper;
 HRESULT 值所產生的最後一個擷取`RoInitializeWrapper`建構函式。
 
 ```cpp
-operator HRESULT()  
+operator HRESULT()
 ```
 
 ## <a name="roinitializewrapper"></a>Roinitializewrapper:: Roinitializewrapper
@@ -82,7 +82,7 @@ operator HRESULT()
 初始化 `RoInitializeWrapper` 類別的新執行個體。
 
 ```cpp
-RoInitializeWrapper(   RO_INIT_TYPE flags)  
+RoInitializeWrapper(RO_INIT_TYPE flags)
 ```
 
 ### <a name="parameters"></a>參數
@@ -99,7 +99,7 @@ RoInitializeWrapper(   RO_INIT_TYPE flags)
 取消初始化 Windows 執行階段。
 
 ```cpp
-~RoInitializeWrapper()  
+~RoInitializeWrapper()
 ```
 
 ### <a name="remarks"></a>備註

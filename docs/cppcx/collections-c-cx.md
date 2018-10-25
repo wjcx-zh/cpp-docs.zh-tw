@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67e5b086e57c90b9cb11779d8f3af167768a45fe
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 5b57b03af7c0a98e2bb8c70b6c0921930ebb1b9c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103343"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062635"
 ---
 # <a name="collections-ccx"></a>集合 (C++/CX)
 
@@ -30,14 +30,14 @@ Windows 執行階段定義的介面集合和相關的類型，以及 C + + /CX �
 
 - [Platform::Collections::VectorView 類別](../cppcx/platform-collections-vectorview-class.md) 與[Platform::Collections::MapView 類別](../cppcx/platform-collections-mapview-class.md) 各是 `Vector` 和 `Map`的唯讀版本。
 
-- 迭代器在 [Platform::Collections 命名空間](../cppcx/platform-collections-namespace.md)中定義。 這些迭代器符合 STL 迭代器的需求，並啟用使用[std:: find](../standard-library/algorithm-functions.md#find)，[可](../standard-library/algorithm-functions.md#count_if)，和任何其他 STL 演算法[collections](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.aspx)介面類型或[platform:: collections](../cppcx/platform-collections-namespace.md)具象型別。 比方說，這表示您可以逐一查看集合中的 Windows 執行階段元件會在 C# 中建立，並對其套用 STL 演算法。
+- 迭代器在 [Platform::Collections 命名空間](../cppcx/platform-collections-namespace.md)中定義。 這些迭代器可以滿足 STL 迭代器的需求，並且可讓您針對任何 [Windows::Foundation::Collections](../standard-library/algorithm-functions.md#find)介面類型或  [Platform::Collections](../standard-library/algorithm-functions.md#count_if)具象類型使用 [std::find](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.aspx) 、 [std::count_if](../cppcx/platform-collections-namespace.md) 和其他 STL 演算法。 比方說，這表示您可以逐一查看集合中的 Windows 執行階段元件會在 C# 中建立，並對其套用 STL 演算法。
 
    > [!IMPORTANT]
    > Proxy 迭代器 `VectorIterator` 和 `VectorViewIterator` 會利用 Proxy 物件 `VectoryProxy<T>` 和 `ArrowProxy<T>` 來與 STL 容器搭配使用。 如需詳細資訊，請參閱本文章稍後的＜VectorProxy 元素＞。
 
 - C + + /CX 集合類型相同的執行緒安全性保證 STL 容器所支援的支援。
 
-- [Iobservablevector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_)並[只要](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)定義集合發生各種變更時所引發的事件。 藉由實作這些介面，就能讓  [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) 和 [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) 與 XAML 集合進行資料繫結。 例如，如果您具有資料繫結至 `Vector` 的 `Grid`，當您將項目加入至集合時，此變更會反映在 Grid UI。
+- [Windows::Foundation::Collections::IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) 和 [Windows::Foundation::Collections::IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) 會定義只要集合變更 (無論變更方式為何) 就會觸發的事件。 藉由實作這些介面，就能讓  [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) 和 [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) 與 XAML 集合進行資料繫結。 例如，如果您具有資料繫結至 `Vector` 的 `Grid`，當您將項目加入至集合時，此變更會反映在 Grid UI。
 
 ## <a name="vector-usage"></a>向量用法
 
@@ -60,11 +60,11 @@ Windows 執行階段定義的介面集合和相關的類型，以及 C + + /CX �
 
 ## <a name="value-types-in-vector"></a>Vector 中的實值類型
 
-要儲存在 [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) 中的所有元素都必須隱含或透過您提供的自訂 [std::equal_to](../standard-library/equal-to-struct.md) 比較子支援相等比較。 所有參考型別及所有純量型別都隱含支援相等比較。 針對非純量實值型別這類[Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)，或自訂比較 — 比方說， `objA->UniqueID == objB->UniqueID`— 您必須提供自訂函式物件。
+要儲存在 [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) 中的所有元素都必須隱含或透過您提供的自訂 [std::equal_to](../standard-library/equal-to-struct.md) 比較子支援相等比較。 所有參考型別及所有純量型別都隱含支援相等比較。 針對非純量實值類型 (例如 [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)) 或自訂比較 (例如 `objA->UniqueID == objB->UniqueID`)，您必須提供自訂函式物件。
 
 ## <a name="vectorproxy-elements"></a>VectorProxy 元素
 
-[2&gt;platform::collections::vectoriterator](../cppcx/platform-collections-vectoriterator-class.md)並[vectorviewiterator](../cppcx/platform-collections-vectorviewiterator-class.md)啟用`range for`迴圈和演算法，例如[ivector&lt](../standard-library/algorithm-functions.md#sort) 與[IVector\<T >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx)容器。 但是`IVector`無法存取項目，透過 c + + 指標取值 （dereference），才能存取只能透過[GetAt](https://msdn.microsoft.com/library/windows/apps/br206634.aspx)並[SetAt](https://msdn.microsoft.com/library/windows/apps/br206642.aspx)方法。 因此，基於 STL 的要求，這些迭代器會使用 Proxy 類別 `Platform::Details::VectorProxy<T>` 和 `Platform::Details::ArrowProxy<T>` 透過 `*`、 `->`和 `[]` 運算子存取個別元素。 嚴格來說，如果指定 `IVector<Person^> vec`，則 `*begin(vec)` 的類型就是 `VectorProxy<Person^>`。 不過，對您的程式碼來說，Proxy 物件永遠都像是不存在一樣。 這些 Proxy 物件沒有記錄在文件中，因為它們僅供迭代器在內部使用，但是了解機制如何運作還是很重要。
+[2&gt;platform::collections::vectoriterator](../cppcx/platform-collections-vectoriterator-class.md)並[vectorviewiterator](../cppcx/platform-collections-vectorviewiterator-class.md)啟用`range for`迴圈和演算法，例如[ivector&lt](../standard-library/algorithm-functions.md#sort) 與[IVector\<T >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx)容器。 但是，您無法透過 C++ 指標取值存取 `IVector` 項目，只能透過 [GetAt](https://msdn.microsoft.com/library/windows/apps/br206634.aspx) 和 [SetAt](https://msdn.microsoft.com/library/windows/apps/br206642.aspx) 方法存取。 因此，這些迭代器會使用 proxy 類別`Platform::Details::VectorProxy<T>`並`Platform::Details::ArrowProxy<T>`以存取個別的項目，透過__\*__， __->__，以及__\[]__ 運算子，所需的標準程式庫。 嚴格來說，如果指定 `IVector<Person^> vec`，則 `*begin(vec)` 的類型就是 `VectorProxy<Person^>`。 不過，對您的程式碼來說，Proxy 物件永遠都像是不存在一樣。 這些 Proxy 物件沒有記錄在文件中，因為它們僅供迭代器在內部使用，但是了解機制如何運作還是很重要。
 
 當您針對 `range for` 容器使用 `IVector` 迴圈時，請使用 `auto&&` 讓迭代器變數能夠正確繫結至 `VectorProxy` 元素。 如果您使用 `auto` 或 `auto&`，就會引發編譯器警告 C4239，而且警告文字中會提及 `VectoryProxy` 。
 
@@ -74,8 +74,7 @@ Windows 執行階段定義的介面集合和相關的類型，以及 C + + /CX �
 
 有一種情況下您必須為 Proxy 物件撰寫程式碼，就是必須針對元素執行 `dynamic_cast` 的時候 (例如，當您在 `UIElement` 項目集合中尋找特定類型的 XAML 物件時)。 在這種情況下，您必須先將這個項目轉換為 [Platform::Object](../cppcx/platform-object-class.md)^，然後再執行動態轉換：
 
-```
-
+```cpp
 void FindButton(UIElementCollection^ col)
 {
     // Use auto&& to avoid warning C4239
@@ -96,7 +95,7 @@ void FindButton(UIElementCollection^ col)
 
 [!code-cpp[cx_collections#04](../cppcx/codesnippet/CPP/collections/class1.cpp#04)]
 
-一般而言，基於效能考量，在內部對應功能上最好使用 `std::map` 型別。 如果您必須透過 ABI 傳遞容器，來建構[std:: map](../cppcx/platform-collections-map-class.md)從[std:: map](../standard-library/map-class.md) ，並傳回`Map`為[windows:: foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)。 如果您嘗試在公用傳回值或參數中使用 `Map` 類型，則會引發編譯器錯誤 C3986。 只要將 `Map` 變更為 `IMap`，就可以修正這個錯誤。 在某些情況下，例如，如果不是進行大量搜尋或插入，且您經常透過 ABI 傳遞集合，則一開始便使用 `Platform::Collections::Map` 可耗費較少資源，還能避免轉換 `std::map`時的成本。 在任何情況下，請避免在 `IMap` 上執行查閱和插入作業，因為這些是效能最低的三個類型。 只有在透過 ABI 傳遞容器時，才應該轉換為 `IMap` 。
+一般而言，基於效能考量，在內部對應功能上最好使用 `std::map` 型別。 如果您必須透過 ABI 傳遞容器，請從 [std::map](../cppcx/platform-collections-map-class.md) 建構 [Platform::Collections::Map](../standard-library/map-class.md) ，然後傳回 `Map` 作為 [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)。 如果您嘗試在公用傳回值或參數中使用 `Map` 類型，則會引發編譯器錯誤 C3986。 只要將 `Map` 變更為 `IMap`，就可以修正這個錯誤。 在某些情況下，例如，如果不是進行大量搜尋或插入，且您經常透過 ABI 傳遞集合，則一開始便使用 `Platform::Collections::Map` 可耗費較少資源，還能避免轉換 `std::map`時的成本。 在任何情況下，請避免在 `IMap` 上執行查閱和插入作業，因為這些是效能最低的三個類型。 只有在透過 ABI 傳遞容器時，才應該轉換為 `IMap` 。
 
 ## <a name="value-types-in-map"></a>Map 中的實值類型
 
@@ -149,7 +148,7 @@ void FindButton(UIElementCollection^ col)
 
 `Vector` 和 `Map` 藉由實作變更或重設集合物件時，或者插入、移除或變更集合的任何元素時所發生的事件，來支援 XAML 集合中的資料繫結。 您可以撰寫自己的型別來支援資料繫結，但是您無法繼承自 `Map` 或 `Vector` ，因為這些型別是密封型別。
 
-[Vectorchangedeventhandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)並[2&gt;windows::foundation::collections::vectorchangedeventhandler&lt;2](/uwp/api/windows.foundation.collections.mapchangedeventhandler)委派指定的事件處理常式的簽章集合變更事件。 [{2&gt;windows::foundation::collections::collectionchange&lt;2}](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx)公用列舉類別及`Platform::Collection::Details::MapChangedEventArgs`和`Platform::Collections::Details::VectorChangedEventArgs`ref 類別會儲存事件引數，以判斷造成事件的原因。 *`EventArgs` 類型在 `Details` 命名空間中定義，因為當您使用 `Map` 或 `Vector`時，不需要明確建構或使用這些類型。
+[Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler) 和 [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler) 委派會為集合變更事件的事件處理常式指定簽章。 [Windows::Foundation::Collections::CollectionChange](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx) 公用列舉類別及 `Platform::Collection::Details::MapChangedEventArgs` 和 `Platform::Collections::Details::VectorChangedEventArgs` ref 類別會儲存事件引數，以判斷造成事件的原因。 `*EventArgs`中所定義的型別`Details`命名空間因為您不需要建構或明確地使用它們，當您使用`Map`或`Vector`。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dcd863cabb0f2cc58d25ea98503637592a994794
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: afe00a3c531e39c1d8afb7339fef431e8f240860
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790627"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061413"
 ---
 # <a name="appobject"></a>appobject
 
@@ -68,10 +68,10 @@ class A : public ICustom {
 |**必要屬性**|`coclass`|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [IDL 屬性](idl-attributes.md)<br/>
 [類別屬性](class-attributes.md)<br/>
-[Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)  
+[Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)

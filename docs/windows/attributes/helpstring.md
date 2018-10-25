@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ea4a1ac927d03b0fc6427fb6ad39f748655fda7
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 8cca35d151d0f28c7273c84643662b442afbd3a3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791010"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056980"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -58,7 +58,7 @@ ms.locfileid: "48791010"
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -68,4 +68,4 @@ ms.locfileid: "48791010"
 [方法屬性](method-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)<br/>
 [helpfile](helpfile.md)<br/>
-[helpcontext](helpcontext.md)  
+[helpcontext](helpcontext.md)

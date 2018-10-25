@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b07609b792b7080e2c4c432ed435381007ba286
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fa1e519c9891f0717ec1b69e1f506652250400e4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075224"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057606"
 ---
 # <a name="ipropertypageimpl-class"></a>IPropertyPageImpl 類別
 
@@ -127,7 +127,7 @@ class IPropertyPageImpl
 建立屬性頁對話方塊視窗。
 
 ```
-HRESULT Activate(  
+HRESULT Activate(
     HWND hWndParent,
     LPCRECT pRect,
     BOOL bModal);

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49e298af793655bb3ea3854909a16dd4db03c6a3
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 7dc5519fbef10ca6c369bcffacacb8351dbc0390
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328177"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060425"
 ---
 # <a name="attributes-by-usage"></a>依使用方式分類的屬性
 
@@ -43,7 +43,7 @@ ms.locfileid: "49328177"
 
 ## <a name="module-attributes"></a>模組屬性
 下列屬性只能套用至[模組](module-cpp.md)屬性。
-  
+
 |屬性|描述|
 |---------------|-----------------|
 |[helpstringdll](helpstringdll.md)|指定要用來執行文件字串查閱 （當地語系化） DLL 的名稱。|
@@ -85,7 +85,6 @@ ms.locfileid: "49328177"
 - 不允許任何多載的方法。
 
 當未指定[uuid](uuid-cpp-attributes.md)屬性，並在不同的屬性專案中使用相同的介面名稱，會產生相同的 GUID。
-
 
 ## <a name="see-also"></a>另請參閱
 

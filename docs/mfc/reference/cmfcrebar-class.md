@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db431b80a569436aab477b89be447ee6df1932b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e3b91d0397b1eec53988e7acd5a5b7dce61db4ec
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423997"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059879"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar 類別
 
@@ -81,7 +81,7 @@ Rebar 物件的操作方式類似工具列物件。 Rebar 控制項可以包含�
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用中的各種方法`CMFCReBar`類別。 此範例示範如何建立 rebar 控制項並加入它的頻外。 此群組列做為內部的工具列。 此程式碼片段是一部分[Rebar 測試範例](../../visual-cpp-samples.md)。
+下例示範如何在 `CMFCReBar` 類別中使用各種方法。 此範例示範如何建立 rebar 控制項並加入它的頻外。 此群組列做為內部的工具列。 此程式碼片段是一部分[Rebar 測試範例](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_RebarTest#1](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_1.h)]
 [!code-cpp[NVC_MFC_RebarTest#2](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_2.cpp)]
@@ -117,12 +117,14 @@ BOOL AddBar(
 
 ### <a name="parameters"></a>參數
 
-[in][out]*pBar*要插入至 rebar 的子視窗的指標。 參考的物件必須有**WS_CHILD**視窗樣式。
+*pBar*<br/>
+[in、 out]要插入至 rebar 的子視窗指標。 參考的物件必須有**WS_CHILD**視窗樣式。
 
 *pszText*<br/>
 [in]指定要顯示 rebar 上的文字。 文字不是子視窗的一部分。 相反地，它會顯示 rebar 本身。
 
-[in][out]*pbmp*指定要顯示 rebar 背景點陣圖。
+*pbmp*<br/>
+[in、 out]指定要顯示 rebar 背景點陣圖。
 
 *cheaderctrl:: Create*<br/>
 [in]包含要套用至群組列的樣式。 頻外樣式的完整清單，請參閱的描述`fStyle`中[REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) Windows SDK 文件中的結構。
@@ -151,7 +153,8 @@ BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-[in][out]*pParentWnd*這個 rebar 控制項的父視窗的指標。
+*pParentWnd*<br/>
+[in、 out]此 rebar 控制項的父視窗指標。
 
 *dwCtrlStyle*<br/>
 [in]指定 rebar 控制項的樣式。 預設樣式值是**RBS_BANDBORDERS**，它會顯示縮小範圍，來分隔相鄰的群組列的 rebar 控制項上的線條。 如需有效的樣式清單，請參閱 < [Rebar 控制項的樣式](/windows/desktop/Controls/rebar-control-styles)Windows SDK 文件。
@@ -186,7 +189,6 @@ CReBarCtrl& GetReBarCtrl() const;
 
 ##  <a name="calcfixedlayout"></a>  CMFCReBar::CalcFixedLayout
 
-
 ```
 virtual CSize CalcFixedLayout(
     BOOL bStretch,
@@ -195,15 +197,14 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>參數
 
-*bStretch*<br/>
-[in][in]*bHorz*
+[in]*bStretch*<br/>
+[in]*bHorz*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="canfloat"></a>  CMFCReBar::CanFloat
-
 
 ```
 virtual BOOL CanFloat() const;
@@ -215,19 +216,17 @@ virtual BOOL CanFloat() const;
 
 ##  <a name="enabledocking"></a>  CMFCReBar::EnableDocking
 
-
 ```
 void EnableDocking(DWORD dwDockStyle);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*dwDockStyle*
+[in]*dwDockStyle*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="getrebarbandinfosize"></a>  CMFCReBar::GetReBarBandInfoSize
-
 
 ```
 UINT GetReBarBandInfoSize() const;
@@ -239,21 +238,19 @@ UINT GetReBarBandInfoSize() const;
 
 ##  <a name="onshowcontrolbarmenu"></a>  CMFCReBar::OnShowControlBarMenu
 
-
 ```
 virtual BOOL OnShowControlBarMenu(CPoint);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*CPoint*
+[in]*CPoint*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="ontoolhittest"></a>  CMFCReBar::OnToolHitTest
-
 
 ```
 virtual INT_PTR OnToolHitTest(
@@ -263,15 +260,14 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
-[in][in]*pTI*
+[in]*點*<br/>
+[in]*pTI*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="onupdatecmdui"></a>  CMFCReBar::OnUpdateCmdUI
-
 
 ```
 virtual void OnUpdateCmdUI(
@@ -281,13 +277,12 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>參數
 
-*pTarget*<br/>
-[in][in]*bDisableIfNoHndler*
+[in]*pTarget*<br/>
+[in]*bDisableIfNoHndler*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="setpanealignment"></a>  CMFCReBar::SetPaneAlignment
-
 
 ```
 virtual void SetPaneAlignment(DWORD dwAlignment);
@@ -295,7 +290,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 
 ### <a name="parameters"></a>參數
 
-[in]*dwAlignment*
+[in]*dwAlignment*<br/>
 
 ### <a name="remarks"></a>備註
 

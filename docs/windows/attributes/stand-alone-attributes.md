@@ -16,16 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b46b5c3b4750957c548becfcc5143f5eed858f71
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0df8cb1def78e3a7b564f268eb1b3b0a2069fb11
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790663"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062843"
 ---
 # <a name="stand-alone-attributes"></a>獨立屬性
+
 獨立屬性不能進行 c + + 關鍵字，但更像是程式碼行。 獨立屬性陳述式需要行尾的分號。
-  
+
+## <a name="stand-alone-attribute-list"></a>獨立的屬性清單
+
 |屬性|描述|
 |---------------|-----------------|
 |[cpp_quote](cpp-quote.md)|指定的字串，不能包含單引號字元，發出到產生的標頭檔。|
@@ -40,10 +43,10 @@ ms.locfileid: "48790663"
 |[include](include-cpp.md)|指定要包含在產生的.idl 檔案中的一或多個標頭檔。|
 |[includelib](includelib-cpp.md)|會導致的.idl 或.h 檔案要包含在產生的.idl 檔案中。|
 |[library_block](library-block.md)|會建構的.idl 檔案的程式庫區塊內。|
-|[模組](module-cpp.md)|在 .idl 檔案中定義程式庫區塊。|
+|[module](module-cpp.md)|在 .idl 檔案中定義程式庫區塊。|
 |[no_injected_text](no-injected-text.md)|防止編譯器將程式碼，因為屬性使用。|
 |[pragma](pragma.md)|指定的字串，不能包含單引號字元，發出到產生的.idl 檔案。|
-  
+
 ## <a name="see-also"></a>另請參閱
 
 [依使用方式分類的屬性](attributes-by-usage.md)

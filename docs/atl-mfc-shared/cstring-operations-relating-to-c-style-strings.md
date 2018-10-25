@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a2567182f0e2622a72ceb9b98988c4d122a3561
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 765cb6ccf24415c174761c57268dc79e1fc6845b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860559"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062557"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>與 C 樣式字串相關的 CString
 
@@ -54,9 +54,9 @@ A [CString](../atl-mfc-shared/using-cstring.md)物件包含字元字串資料。
 
 若要使用`CString`物件做為 C 樣式字串，將物件轉換成 LPCTSTR。 在下列範例中，`CString` 會傳回唯讀 C 樣式 null 終止字串的指標。 `strcpy` 函式會將一份 C 樣式字串放在變數 `myString`。
 
-```
-CString aCString = "A string";  
-char myString[256];  
+```cpp
+CString aCString = "A string";
+char myString[256];
 strcpy(myString, (LPCTSTR)aCString);
 ```
 

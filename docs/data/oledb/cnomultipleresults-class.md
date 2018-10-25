@@ -19,32 +19,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 67658f6edadd7723789288ab268b97cecdd611d2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6d68daae7bce6ca4c9ffafe7a24c80cff3a5426a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017348"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059853"
 ---
 # <a name="cnomultipleresults-class"></a>CNoMultipleResults 類別
 
-做為範本引數 (*TMultiple*) 來[CCommand](../../data/oledb/ccommand-class.md)建立最佳化的命令處理單一結果集。  
-  
+做為範本引數 (*TMultiple*) 來[CCommand](../../data/oledb/ccommand-class.md)建立最佳化的命令處理單一結果集。
+
 ## <a name="syntax"></a>語法
 
 ```cpp
-class CNoMultipleResults  
-```  
-  
-## <a name="remarks"></a>備註  
+class CNoMultipleResults
+```
 
-如果您想要處理多個結果集的命令，使用[CMultipleResults](../../data/oledb/cmultipleresults-class.md)改。  
-  
-## <a name="requirements"></a>需求  
+## <a name="remarks"></a>備註
 
-**標題:** atldbcli.h  
-  
-## <a name="see-also"></a>另請參閱  
+如果您想要處理多個結果集的命令，使用[CMultipleResults](../../data/oledb/cmultipleresults-class.md)改。
+
+## <a name="requirements"></a>需求
+
+**標題:** atldbcli.h
+
+## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

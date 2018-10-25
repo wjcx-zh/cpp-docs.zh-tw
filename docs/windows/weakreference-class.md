@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ff2f2b0e329e30ef73b82a8f1fea969eb7c31f1
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: d3682e9b84567a2be77312496a6219238f81625d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48239823"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059099"
 ---
 # <a name="weakreference-class"></a>WeakReference 類別
 
@@ -137,7 +137,7 @@ ULONG IncrementStrongReference();
 支援 WRL 結構，而且不是直接從您的程式碼使用。
 
 ```cpp
-STDMETHOD(Resolve)  
+STDMETHOD(Resolve)
    (REFIID riid,
    _Deref_out_opt_ IInspectable **ppvObject
 );

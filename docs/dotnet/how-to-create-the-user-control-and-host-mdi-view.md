@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: eeeb02393e96e7afd2deed875465f6797d145b6e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2e61a69661034fb582039c744c3483f461405581
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399807"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056967"
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>如何：建立使用者控制項並裝載 MDI 檢視
 
@@ -38,23 +38,23 @@ ms.locfileid: "46399807"
 
 1. 建立 MFC 應用程式專案。
 
-     在上**檔案**功能表上，選取**新增**，然後按一下**專案**。 在  **Visual c + +** 資料夾中，選取**MFC 應用程式**。
+   在上**檔案**功能表上，選取**新增**，然後按一下**專案**。 在  **Visual c + +** 資料夾中，選取**MFC 應用程式**。
 
-     在**名稱**方塊中，輸入`MFC02`並將變更**解決方案**設為**新增至方案**。 按一下 [確定 **Deploying Office Solutions**]。
+   在**名稱**方塊中，輸入`MFC02`並將變更**解決方案**設為**新增至方案**。 按一下 [確定 **Deploying Office Solutions**]。
 
-     在  **MFC 應用程式精靈**，接受所有預設值，然後按一下 **完成**。 這會建立多個的文件介面的 MFC 應用程式。
+   在  **MFC 應用程式精靈**，接受所有預設值，然後按一下 **完成**。 這會建立多個的文件介面的 MFC 應用程式。
 
 1. 設定專案的 Common Language Runtime (CLR) 支援。
 
-     在 [**方案總管] 中**，以滑鼠右鍵按一下`MFC01`專案節點，然後選取**屬性**從內容功能表。 **屬性頁** 對話方塊隨即出現。
+   在 [**方案總管] 中**，以滑鼠右鍵按一下`MFC01`專案節點，然後選取**屬性**從內容功能表。 **屬性頁** 對話方塊隨即出現。
 
-     底下**組態屬性**，選取**一般**。 底下**專案預設值**區段中，將**Common Language Runtime 支援**來**Common Language Runtime 支援 (/ clr)**。
+   底下**組態屬性**，選取**一般**。 底下**專案預設值**區段中，將**Common Language Runtime 支援**來**Common Language Runtime 支援 (/ clr)**。
 
-     底下**組態屬性**，展開**C/c + +** 然後按一下**一般**節點。 設定**偵錯資訊格式**要**程式資料庫 (/Zi)**。
+   底下**組態屬性**，展開**C/c + +** 然後按一下**一般**節點。 設定**偵錯資訊格式**要**程式資料庫 (/Zi)**。
 
-     按一下 **程式碼產生**節點。 設定**啟用最少重建**要**否 (/ /gm-)**。 Ssprop_param_table_default**基本執行階段會檢查**要**預設**。
+   按一下 **程式碼產生**節點。 設定**啟用最少重建**要**否 (/ /gm-)**。 Ssprop_param_table_default**基本執行階段會檢查**要**預設**。
 
-     按一下 **確定**以套用變更。
+   按一下 **確定**以套用變更。
 
 1. 在 stdafx.h 中加入下面這一行：
 
@@ -64,7 +64,7 @@ ms.locfileid: "46399807"
 
 1. 新增.NET 控制項的參考。
 
-     在 **方案總管**，以滑鼠右鍵按一下`MFC02`專案節點，然後選取**新增**，**參考**。 在**屬性頁**，按一下**加入新參考**，選取 [WindowsFormsControlLibrary1 (下**專案**] 索引標籤)，然後按一下 **[確定]**. 這會將參考新增的形式[/FU](../build/reference/fu-name-forced-hash-using-file.md)編譯器選項，如此將會編譯程式; 它也會將 windowsformscontrollibrary1.dll 複製到`MFC02`專案目錄，以便執行程式。
+   在 **方案總管**，以滑鼠右鍵按一下`MFC02`專案節點，然後選取**新增**，**參考**。 在**屬性頁**，按一下**加入新參考**，選取 [WindowsFormsControlLibrary1 (下**專案**] 索引標籤)，然後按一下 **[確定]**. 這會將參考新增的形式[/FU](../build/reference/fu-name-forced-hash-using-file.md)編譯器選項，如此將會編譯程式; 它也會將 windowsformscontrollibrary1.dll 複製到`MFC02`專案目錄，以便執行程式。
 
 1. 在 stdafx.h 中尋找此行：
 
@@ -72,7 +72,7 @@ ms.locfileid: "46399807"
     #endif // _AFX_NO_AFXCMN_SUPPORT
     ```
 
-     加入這行上面：
+   加入這行上面：
 
     ```
     #include <afxwinforms.h>   // MFC Windows Forms support
@@ -80,7 +80,7 @@ ms.locfileid: "46399807"
 
 1. 修改檢視類別，使它繼承自[CWinFormsView](../mfc/reference/cwinformsview-class.md)。
 
-     在 MFC02View.h，取代[CView](../mfc/reference/cview-class.md)具有[CWinFormsView](../mfc/reference/cwinformsview-class.md)使程式碼看起來像這樣：
+   在 MFC02View.h，取代[CView](../mfc/reference/cview-class.md)具有[CWinFormsView](../mfc/reference/cwinformsview-class.md)使程式碼看起來像這樣：
 
     ```
     class CMFC02View : public CWinFormsView
@@ -88,7 +88,7 @@ ms.locfileid: "46399807"
     };
     ```
 
-     如果您想將額外的檢視新增至您的 MDI 應用程式，您必須呼叫[CWinApp::AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate)為您建立每個檢視。
+   如果您想將額外的檢視新增至您的 MDI 應用程式，您必須呼叫[CWinApp::AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate)為您建立每個檢視。
 
 1. 修改 MFC02View.cpp 檔，IMPLEMENT_DYNCREATE 巨集和訊息對應中的 CView 變更為 CWinFormsView，並以如下所示的建構函式取代現有的空白建構函式：
 
@@ -105,11 +105,11 @@ ms.locfileid: "46399807"
 
 1. 建置並執行專案。
 
-     在 **方案總管**，以滑鼠右鍵按一下 MFC02，然後選取**設定為啟始專案**。
+   在 **方案總管**，以滑鼠右鍵按一下 MFC02，然後選取**設定為啟始專案**。
 
-     在 [ **建置** ] 功能表上，按一下 [ **建置方案**]。
+   在 [ **建置** ] 功能表上，按一下 [ **建置方案**]。
 
-     在 **偵錯**功能表上，按一下**啟動但不偵錯**。
+   在 **偵錯**功能表上，按一下**啟動但不偵錯**。
 
 ## <a name="see-also"></a>另請參閱
 

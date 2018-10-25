@@ -1,7 +1,7 @@
 ---
 title: CMFCDropDownToolBar 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/188/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 675a155c8f19ca9c0ab30d15da9be7f5b3b40e7a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5d781cb78b1dce9f7ab3580e7acd32e3e6dbac55
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392316"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063337"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar 類別
 
@@ -115,7 +115,6 @@ A`CMFCDropDownToolBar`物件會結合行為的快顯功能表中的視覺外觀�
 
 ##  <a name="allowshowonpanemenu"></a>  CMFCDropDownToolBar::AllowShowOnPaneMenu
 
-
 ```
 virtual BOOL AllowShowOnPaneMenu() const;
 ```
@@ -164,12 +163,11 @@ virtual BOOL LoadBitmap(
 
 ### <a name="remarks"></a>備註
 
-[Cmfctoolbar:: Loadtoolbarex](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)方法會呼叫這個方法來載入與工具列相關聯的映像。 覆寫這個方法可執行影像資源的自訂載入。
+[CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) 方法會呼叫這個方法來載入與工具列相關聯的影像。 覆寫這個方法可執行影像資源的自訂載入。
 
 呼叫 `LoadBitmapEx` 方法可在建立工具列之後載入其他影像。
 
 ##  <a name="loadtoolbar"></a>  CMFCDropDownToolBar::LoadToolBar
-
 
 ```
 virtual BOOL LoadToolBar(
@@ -184,19 +182,25 @@ virtual BOOL LoadToolBar(
 
 ### <a name="parameters"></a>參數
 
-*uiResID*<br/>
-[in][in]*uiColdResID*
-*uiMenuResID*<br/>
-[in][in]*BOOL*
-*uiDisabledResID*<br/>
-[in][in]*uiMenuDisabledResID* [in] *uiHotResID*
+[in]*uiResID*<br/>
+
+[in]*uiColdResID*<br/>
+
+[in]*uiMenuResID*<br/>
+
+[in]*BOOL*<br/>
+
+[in]*uiDisabledResID*<br/>
+
+[in]*uiMenuDisabledResID*<br/>
+
+[in]*uiHotResID*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="onlbuttonup"></a>  CMFCDropDownToolBar::OnLButtonUp
-
 
 ```
 afx_msg void OnLButtonUp(
@@ -206,13 +210,13 @@ afx_msg void OnLButtonUp(
 
 ### <a name="parameters"></a>參數
 
-*nFlags*<br/>
-[in][in]*點*
+[in]*nFlags*<br/>
+
+[in]*點*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="onmousemove"></a>  CMFCDropDownToolBar::OnMouseMove
-
 
 ```
 afx_msg void OnMouseMove(
@@ -222,13 +226,13 @@ afx_msg void OnMouseMove(
 
 ### <a name="parameters"></a>參數
 
-*nFlags*<br/>
-[in][in]*點*
+[in]*nFlags*<br/>
+
+[in]*點*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="onsendcommand"></a>  CMFCDropDownToolBar::OnSendCommand
-
 
 ```
 virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
@@ -236,14 +240,13 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 
 ### <a name="parameters"></a>參數
 
-[in]*pButton*
+[in]*pButton*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="onupdatecmdui"></a>  CMFCDropDownToolBar::OnUpdateCmdUI
-
 
 ```
 virtual void OnUpdateCmdUI(
@@ -253,8 +256,9 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>參數
 
-*pTarget*<br/>
-[in][in]*bDisableIfNoHndler*
+[in]*pTarget*<br/>
+
+[in]*bDisableIfNoHndler*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -267,6 +271,4 @@ virtual void OnUpdateCmdUI(
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [CMFCDropDownToolbarButton 類別](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)<br/>
 [逐步解說：將控制項放在工具列上](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

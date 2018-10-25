@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d0db4d53d64def1c1f55929aa9d7514142955cf
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 00390f5a5872c183fdea385158dfa5020362a06f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821116"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055057"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>加入屬性頁 (ATL 教學課程，第 6 部分)
 
@@ -45,7 +45,7 @@ ms.locfileid: "48821116"
 
 1. 按一下 **字串**來開啟**字串**頁面，然後輸入 **& 多邊形**作為**標題**。
 
-     **Title**屬性的頁面會顯示在該頁面的索引標籤中的字串。 **文件字串**是屬性框架使用將放在狀態列或工具提示中的描述。 請注意，標準屬性框架目前不使用這個字串，因此您可以將它與預設內容。 您將不會產生**說明檔**目前，所以刪除該文字 方塊中的項目。
+   **Title**屬性的頁面會顯示在該頁面的索引標籤中的字串。 **文件字串**是屬性框架使用將放在狀態列或工具提示中的描述。 請注意，標準屬性框架目前不使用這個字串，因此您可以將它與預設內容。 您將不會產生**說明檔**目前，所以刪除該文字 方塊中的項目。
 
 1. 按一下 **完成**，就會建立屬性頁物件。
 

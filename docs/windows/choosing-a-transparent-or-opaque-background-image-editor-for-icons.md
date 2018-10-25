@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f4c3da16181dca4a3a0722f96f61ce02863d369
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 77d9647fd4432bf2ab0cf9e4add2a08ce964b85a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378719"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060074"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>選擇透明或不透明背景 (圖示影像編輯器)
 
@@ -32,7 +32,7 @@ ms.locfileid: "46378719"
 
 您可以從透明背景 （預設值） 的不透明背景，來回切換。 當您使用選項工具 中，**透明背景**並**不透明的背景**選項會出現在**選項**上的選取器**影像編輯器**工具列 （如下所示）。
 
-![背景選項&#45;不透明或透明](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
+![背景選項&#45;不透明或透明](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")<br/>
 **透明及不透明的選項**上**影像編輯器工具列**
 
 ### <a name="to-switch-between-a-transparent-and-opaque-background"></a>若要切換透明及不透明背景

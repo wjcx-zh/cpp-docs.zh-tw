@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49ea94258c163c241243934f41d55d896d0d1fa2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 74660dc2baeff683d35fac8d4b9dda06bdbec22d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372453"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061309"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>使用 CArchive &lt; &lt;並&gt;&gt;運算子
 
@@ -33,13 +33,13 @@ ms.locfileid: "46372453"
 
 1. 下列範例示範如何透過封存檔案中儲存物件：
 
-     [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
+   [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
 
 #### <a name="to-load-an-object-from-a-value-previously-stored-in-a-file"></a>若要載入的物件，從先前儲存在檔案中的值
 
 1. 下列範例顯示如何將物件從先前儲存在檔案中的值：
 
-     [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
 
 通常，您儲存並載入資料，透過在封存檔案來回`Serialize`函式的`CObject`-衍生的類別，您必須已宣告 DECLARE_SERIALIZE 巨集。 參考`CArchive`物件會傳遞給您`Serialize`函式。 您呼叫`IsLoading`函式`CArchive`物件來判定是否`Serialize`已呼叫函數，以從檔案載入資料，或將資料儲存到檔案。
 

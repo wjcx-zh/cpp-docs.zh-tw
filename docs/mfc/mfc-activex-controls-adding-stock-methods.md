@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b42907273423d69ed93df5700b33556047338fe2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e103e43f23746f8274ad00da4d043e3446dfc706
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391422"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053024"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC ActiveX 控制項：加入內建方法
 
@@ -51,7 +51,7 @@ ms.locfileid: "46391422"
 
 1. 從快顯功能表中，按一下**新增**，然後按一下**加入方法**。
 
-     這會開啟 加入方法精靈。
+   這會開啟 加入方法精靈。
 
 1. 在 **方法名稱**方塊中，按一下**重新整理**。
 

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5071f2c6f00b3cc4aaf09974a01c4601d0078e42
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4908566a80fcad2350023f2306a952b2d97b2e62
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377953"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060672"
 ---
 # <a name="icommandsource-interface"></a>ICommandSource 介面
 
@@ -103,6 +103,7 @@ void AddCommandRangeHandler(
     unsigned int cmdIDMax,
     CommandHandler^ cmdHandler);
 ```
+
 ### <a name="parameters"></a>參數
 
 *cmdIDMin*<br/>
@@ -124,6 +125,7 @@ void AddCommandRangeUIHandler(
     unsigned int cmdIDMax,
     CommandUIHandler^ cmdUIHandler);
 ```
+
 ### <a name="parameters"></a>參數
 
 *cmdIDMin*<br/>
@@ -145,6 +147,7 @@ void AddCommandUIHandler(
     unsigned int cmdID,
     CommandUIHandler^ cmdUIHandler);
 ```
+
 ### <a name="parameters"></a>參數
 
 *cmdID*<br/>
@@ -162,6 +165,7 @@ void AddCommandUIHandler(
 ```
 void PostCommand(unsigned int command);
 ```
+
 ### <a name="parameters"></a>參數
 
 *command*<br/>
@@ -170,13 +174,13 @@ void PostCommand(unsigned int command);
 
 這個方法會以非同步方式張貼訊息對應到命令所指定的識別碼。 它會呼叫 CWnd::PostMessage 視窗的訊息佇列中放置訊息，並傳回而不需等待處理的訊息對應的視窗。
 
-
 ## <a name="removecommandhandler"></a> ICommandSource::RemoveCommandHandler
 
 移除的命令來源物件中的命令處理常式。
 ```
 void RemoveCommandHandler(unsigned int cmdID);
 ```
+
 ### <a name="parameters"></a>參數
 
 *cmdID*<br/>
@@ -184,7 +188,6 @@ void RemoveCommandHandler(unsigned int cmdID);
 ### <a name="remarks"></a>備註
 
 這個方法會移除對應至 cmdID 命令來源物件的命令處理常式。
-
 
 ## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler
 
@@ -194,6 +197,7 @@ void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
+
 ### <a name="parameters"></a>參數
 
 *cmdIDMin*<br/>
@@ -212,6 +216,7 @@ void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
+
 ### <a name="parameters"></a>參數
 
 *cmdIDMin*<br/>
@@ -228,6 +233,7 @@ void RemoveCommandRangeUIHandler(
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
 ```
+
 ### <a name="parameters"></a>參數
 
 *cmdID*<br/>
@@ -242,6 +248,7 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ```
 void SendCommand(unsigned int command);
 ```
+
 ### <a name="parameters"></a>參數
 
 *command*<br/>

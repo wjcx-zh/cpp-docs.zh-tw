@@ -23,66 +23,66 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2e4427eede8efcd492e90597efe9488a89e6d4de
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 40856f33de8bd12ce6bc4e3f4c6ff0ced9c67be4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082367"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053721"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl 類別
 
-提供實作[IDBCreateSession](/previous-versions/windows/desktop/ms724076)介面。  
-  
+提供實作[IDBCreateSession](/previous-versions/windows/desktop/ms724076)介面。
+
 ## <a name="syntax"></a>語法
 
 ```cpp
-template <class T, class SessionClass>  
-class ATL_NO_VTABLE IDBCreateSessionImpl   
-   : public IDBCreateSession  
-```  
-  
-### <a name="parameters"></a>參數  
+template <class T, class SessionClass>
+class ATL_NO_VTABLE IDBCreateSessionImpl
+   : public IDBCreateSession
+```
+
+### <a name="parameters"></a>參數
 
 *T*<br/>
-您的類別，衍生自  
-  
+您的類別，衍生自
+
 *SessionClass*<br/>
-工作階段物件。  
+工作階段物件。
 
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>需求
 
-**Header:** atldb.h 
-  
-## <a name="members"></a>成員  
-  
-### <a name="interface-methods"></a>介面方法  
-  
-|||  
-|-|-|  
-|[CreateSession](#createsession)|從資料來源物件建立新的工作階段，並傳回新建立的工作階段上的要求的介面。|  
-  
-## <a name="remarks"></a>備註  
+**Header:** atldb.h
 
-在 資料來源物件上的強制介面。  
+## <a name="members"></a>成員
+
+### <a name="interface-methods"></a>介面方法
+
+|||
+|-|-|
+|[CreateSession](#createsession)|從資料來源物件建立新的工作階段，並傳回新建立的工作階段上的要求的介面。|
+
+## <a name="remarks"></a>備註
+
+在 資料來源物件上的強制介面。
 
 ## <a name="createsession"></a> Idbcreatesessionimpl:: Createsession
 
-從資料來源物件建立新的工作階段，並傳回新建立的工作階段上的要求的介面。  
-  
-### <a name="syntax"></a>語法  
-  
-```cpp
-STDMETHOD(CreateSession)(IUnknown * pUnkOuter,   
-   REFIID riid,   
-   IUnknown ** ppDBSession);  
-```  
-  
-#### <a name="parameters"></a>參數  
+從資料來源物件建立新的工作階段，並傳回新建立的工作階段上的要求的介面。
 
-請參閱[idbcreatesession:: Createsession](/previous-versions/windows/desktop/ms714942)中*OLE DB 程式設計人員參考*。   
-  
-## <a name="see-also"></a>另請參閱  
+### <a name="syntax"></a>語法
+
+```cpp
+STDMETHOD(CreateSession)(IUnknown * pUnkOuter, 
+   REFIID riid, 
+   IUnknown ** ppDBSession);
+```
+
+#### <a name="parameters"></a>參數
+
+請參閱[idbcreatesession:: Createsession](/previous-versions/windows/desktop/ms714942)中*OLE DB 程式設計人員參考*。
+
+## <a name="see-also"></a>另請參閱
 
 [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c63c10feff624abe399952b682303a6e262d35
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e6ef01a7943bbb0c14ec630651757a8665373b85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425011"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055214"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>伺服器：實作就地編輯框架視窗
 
@@ -39,15 +39,15 @@ ms.locfileid: "46425011"
 
 1. 宣告框架視窗類別中的 `COleResizeBar` 成員。 如果您要支援在伺服器應用程式中就地調整大小，就必須如此。
 
-     宣告`OnCreate`訊息處理常式 (使用**屬性**視窗)，然後呼叫`Create`針對您`COleResizeBar`成員，如果您已定義它。
+   宣告`OnCreate`訊息處理常式 (使用**屬性**視窗)，然後呼叫`Create`針對您`COleResizeBar`成員，如果您已定義它。
 
 1. 如果您有工具列，請在框架視窗類別中宣告 `CToolBar` 成員。
 
-     當伺服器作用中時，請覆寫 `OnCreateControlBars` 成員函式來建立工具列。 例如: 
+   當伺服器作用中時，請覆寫 `OnCreateControlBars` 成員函式來建立工具列。 例如: 
 
-     [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
+   [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
 
-     請參閱步驟 5 之後關於此程式碼的討論。
+   請參閱步驟 5 之後關於此程式碼的討論。
 
 1. 這包括主要 .cpp 檔案中的就地框架視窗類別標頭檔。
 

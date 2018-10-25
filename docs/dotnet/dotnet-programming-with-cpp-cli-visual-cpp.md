@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 338404abe7499b6d9ff7679420f069a2857ce1e0
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: de3ca61005d0bafcc4387c793b09ec4925faf64b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494435"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064071"
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>以 C++/CLI 進行 .NET 程式設計 (Visual C++)
 
-**Visual Studio 2015**： 根據預設，CLR 專案使用 Visual Studio 2015 建立.NET Framework 4.5.2 為目標。 若要在建立新專案時以 .NET Framework 4.6 為目標，請在 [新增專案]  對話方塊中，變更對話方塊頂端中間之下拉式清單中的目標 Framework。 若要變更現有專案的目標 Framework，請關閉專案，編輯專案檔 (.vcxproj)，然後將目標 Framework 版本的值變更為 4.6。 下一次開啟專案時，這些設定將會生效。 
+**Visual Studio 2015**： 根據預設，CLR 專案使用 Visual Studio 2015 建立.NET Framework 4.5.2 為目標。 若要在建立新專案時以 .NET Framework 4.6 為目標，請在 [新增專案]  對話方塊中，變更對話方塊頂端中間之下拉式清單中的目標 Framework。 若要變更現有專案的目標 Framework，請關閉專案，編輯專案檔 (.vcxproj)，然後將目標 Framework 版本的值變更為 4.6。 下一次開啟專案時，這些設定將會生效。
 
-**Visual Studio 2017**： 在 Visual Studio 2017 中，預設的架構是 4.6.1 和 Framework 版本選擇器會在底部**新增專案 對話方塊**。 C + + /cli 預設不安裝 CLI。 若要安裝的元件，請在開啟 Visual Studio 安裝程式，然後選擇 C + + 在 Visual c + + 的 CLI 元件。 
+**Visual Studio 2017**： 在 Visual Studio 2017 中，預設的架構是 4.6.1 和 Framework 版本選擇器會在底部**新增專案 對話方塊**。 C + + /cli 預設不安裝 CLI。 若要安裝的元件，請在開啟 Visual Studio 安裝程式，然後選擇 C + + 在 Visual c + + 的 CLI 元件。
 
 ## <a name="in-this-section"></a>本節內容
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5650707f9c08c144d2f5832744117dfdd06acc08
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0e151ba4fc2adbe6dab2397d68658b0cb1eb5ef1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106905"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059073"
 ---
 # <a name="window-class-macros"></a>視窗類別巨集
 
@@ -32,7 +32,7 @@ ms.locfileid: "46106905"
 |[{2&AMP;GT;DECLARE_WND_CLASS&AMP;LT;2](#declare_wnd_class)|可讓您指定新的視窗類別名稱。|
 |[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017)可讓您指定新的視窗類別，並在封入類別的新類別會使用其視窗程序的名稱。|
 |[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|可讓您指定的現有視窗類別為基礎的新的視窗類別名稱。|
-|[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|可讓您指定類別的參數。|  
+|[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|可讓您指定類別的參數。|
 
 ## <a name="requirements"></a>需求
 
@@ -69,9 +69,9 @@ DECLARE_WND_CLASS( WndClassName )
 
 {2&gt;declare_wnd_class&lt;2 也會指定預設的視窗背景色彩。 使用[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)巨集來提供您自己的樣式和背景色彩。
 
-[CWindowImpl](cwindowimpl-class.md)使用 {2&gt;declare_wnd_class&lt;2 巨集來建立新的視窗類別為基礎的視窗。 若要覆寫此行為，請使用[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)巨集，或提供您自己實作[GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo)函式。  
+[CWindowImpl](cwindowimpl-class.md)使用 {2&gt;declare_wnd_class&lt;2 巨集來建立新的視窗類別為基礎的視窗。 若要覆寫此行為，請使用[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)巨集，或提供您自己實作[GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo)函式。
 
-如需有關如何使用 ATL 中的 windows 的詳細資訊，請參閱[ATL 視窗類別](../../atl/atl-window-classes.md)。  
+如需有關如何使用 ATL 中的 windows 的詳細資訊，請參閱[ATL 視窗類別](../../atl/atl-window-classes.md)。
 
 ##  <a name="declare_wnd_class2"></a>  DECLARE_WND_CLASS2
 
@@ -84,7 +84,7 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 ### <a name="parameters"></a>參數
 
 *WndClassName*<br/>
-[in]新的視窗類別名稱。 如果是 NULL，ATL 會產生視窗類別名稱。 
+[in]新的視窗類別名稱。 如果是 NULL，ATL 會產生視窗類別名稱。
 
 *EnclosingClass*<br/>
 [in]包含新的視窗類別的視窗類別名稱。 不可以是 NULL。
@@ -120,7 +120,7 @@ DECLARE_WND_SUPERCLASS 會實作下列靜態函式：
 
 根據預設， [CWindowImpl](cwindowimpl-class.md)會使用[{2&gt;declare_wnd_class&lt;2](#declare_wnd_class)巨集來建立視窗會根據新的視窗類別。 藉由指定 DECLARE_WND_SUPERCLASS 巨集，在`CWindowImpl`-衍生的類別，視窗類別會根據現有類別，但會使用您的視窗程序。 這項技術稱為 superclassing。
 
-除了使用 {2&gt;declare_wnd_class&lt;2 和 DECLARE_WND_SUPERCLASS 巨集，您可以覆寫[GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo)函式，使用您自己的實作。  
+除了使用 {2&gt;declare_wnd_class&lt;2 和 DECLARE_WND_SUPERCLASS 巨集，您可以覆寫[GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo)函式，使用您自己的實作。
 
 如需有關如何使用 ATL 中的 windows 的詳細資訊，請參閱[ATL 視窗類別](../../atl/atl-window-classes.md)。
 

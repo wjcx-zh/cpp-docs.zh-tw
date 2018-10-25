@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a93c36748eb01a1c647a2aa433196c7364f60744
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 8165a404924b997d70d0097c28ac7d34ade92fc3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410807"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063857"
 ---
 # <a name="hstring-class"></a>HString 類別
 
@@ -115,7 +115,7 @@ Windows 執行階段會提供透過字串存取[HSTRING](/windows/desktop/WinRT/
 終結的目前執行個體`HString`類別。
 
 ```cpp
-~HString() throw()  
+~HString() throw()
 ```
 
 ## <a name="attach"></a>Hstring:: Attach
@@ -125,7 +125,7 @@ Windows 執行階段會提供透過字串存取[HSTRING](/windows/desktop/WinRT/
 ```cpp
 void Attach(
        HSTRING hstr
-       ) throw()  
+       ) throw()
 ```
 
 ### <a name="parameters"></a>參數
@@ -157,7 +157,7 @@ HRESULT CopyTo(
 解除指定`HString`與其基礎值的物件。
 
 ```cpp
-HSTRING Detach() throw()  
+HSTRING Detach() throw()
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -169,7 +169,7 @@ HSTRING Detach() throw()
 擷取基礎 HSTRING 控制代碼的值。
 
 ```cpp
-HSTRING Get() const throw()  
+HSTRING Get() const throw()
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -181,7 +181,7 @@ HSTRING Get() const throw()
 擷取基礎 HSTRING 控制代碼的指標。
 
 ```cpp
-HSTRING* GetAddressOf() throw()  
+HSTRING* GetAddressOf() throw()
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -220,7 +220,7 @@ HSTRING 控制代碼。
 指出是否目前`HString`物件是否為空的。
 
 ```cpp
-bool IsValid() const throw()  
+bool IsValid() const throw()
 ```
 
 ### <a name="parameters"></a>參數
@@ -262,7 +262,7 @@ template<unsigned int sizeDest>
 將另一個值移`HString`物件與目前`HString`物件。
 
 ```cpp
-HString& operator=(HString&& other) throw()  
+HString& operator=(HString&& other) throw()
 ```
 
 ### <a name="parameters"></a>參數
@@ -297,7 +297,7 @@ inline bool operator==(
 
 inline bool operator==(
                  const HString& lhs,
-                 const HSTRING& rhs) throw()  
+                 const HSTRING& rhs) throw()
 ```
 
 ### <a name="parameters"></a>參數
@@ -330,7 +330,7 @@ inline bool operator!=( const HSTRING& lhs,
                         const HString& rhs) throw()
 
 inline bool operator!=( const HString& lhs,
-                        const HSTRING& rhs) throw()  
+                        const HSTRING& rhs) throw()
 ```
 
 ### <a name="parameters"></a>參數
@@ -352,7 +352,7 @@ inline bool operator!=( const HString& lhs,
 ```cpp
 inline bool operator<(
     const HString& lhs,
-    const HString& rhs) throw()  
+    const HString& rhs) throw()
 ```
 
 ### <a name="parameters"></a>參數
@@ -372,7 +372,7 @@ inline bool operator<(
 會刪除基礎字串值，並初始化目前`HString`為空值的物件。
 
 ```cpp
-void Release() throw()  
+void Release() throw()
 ```
 
 ## <a name="set"></a>Hstring:: Set

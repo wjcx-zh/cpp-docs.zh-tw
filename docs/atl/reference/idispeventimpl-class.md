@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 815a276cb07a91da73acb68a32cceef4b2138325
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2419b4da0cad2662a246c167938d673429afbf26
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093831"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060894"
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl 類別
 
@@ -44,7 +44,7 @@ template <UINT nID, class T,
     const IID* pdiid = &IID_NULL,
     const GUID* plibid = &GUID_NULL,
     WORD wMajor = 0,
-    WORD wMinor = 0, 
+    WORD wMinor = 0,
     class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 ```
@@ -102,7 +102,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 
 `IDispEventImpl` 適用於搭配事件接收對應，在您的類別，以將事件路由至適當的處理常式函式。 若要使用此類別：
 
-新增[SINK_ENTRY](composite-control-macros.md#sink_entry)或是[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)針對每個您想要處理的物件上的每個事件的事件接收對應的巨集。 使用時`IDispEventImpl`複合控制項的基底類別，您可以呼叫[AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap)建立，並針對所有項目在事件接收對應會中斷與事件來源的連接。 在其他情況下，或大於控制項中，呼叫[DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise)以建立來源物件與基底類別之間的連線。 呼叫[DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise)中斷連線。  
+新增[SINK_ENTRY](composite-control-macros.md#sink_entry)或是[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)針對每個您想要處理的物件上的每個事件的事件接收對應的巨集。 使用時`IDispEventImpl`複合控制項的基底類別，您可以呼叫[AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap)建立，並針對所有項目在事件接收對應會中斷與事件來源的連接。 在其他情況下，或大於控制項中，呼叫[DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise)以建立來源物件與基底類別之間的連線。 呼叫[DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise)中斷連線。
 
 您必須衍生自`IDispEventImpl`(使用的唯一值*nID*) 針對每個您要處理事件的物件。 您可以藉由取消通知對一個來源物件，則建議針對不同的來源物件，重複使用的基底類別，但可由單一物件一次的來源物件的數目上限的數目受限於`IDispEventImpl`基底類別。
 
@@ -152,7 +152,7 @@ HRESULT GetFuncInfoFromId(
 *lcid*<br/>
 [in]地區設定內容的函式識別碼。
 
-*資訊*<br/>
+*info*<br/>
 [in]結構，表示呼叫此函式的方式。
 
 ### <a name="return-value"></a>傳回值

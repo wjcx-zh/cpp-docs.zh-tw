@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 147b46a3081f842b247ac7a2227bd07bb75d8fe6
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0ea1c6c3d0e8f0458b54f5794824c4b25c3dcd60
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790624"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059373"
 ---
 # <a name="propputref"></a>propputref
 
@@ -51,13 +51,13 @@ ms.locfileid: "48790624"
 |**適用於**|方法|
 |**可重複**|否|
 |**必要屬性**|無|
-|**無效屬性**|`propget`, `propput`|
+|**無效屬性**|`propget`、 `propput`|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [IDL 屬性](idl-attributes.md)<br/>
 [方法屬性](method-attributes.md)<br/>
 [propget](propget.md)<br/>
-[propput](propput.md)  
+[propput](propput.md)

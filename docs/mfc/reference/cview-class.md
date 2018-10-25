@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ccb638669712222cac2dee522bf729766a4bc93
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e76dc8ca4a61839b893b4328bdb9d606424def91
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402261"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062225"
 ---
 # <a name="cview-class"></a>CView 類別
 
@@ -196,7 +196,7 @@ BOOL DoPreparePrinting(CPrintInfo* pInfo);
 ### <a name="parameters"></a>參數
 
 *pInfo*<br/>
-指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)結構，描述目前列印工作。
+指向描述目前列印工作的 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -319,13 +319,13 @@ virtual void OnBeginPrinting(
 指向印表機裝置內容。
 
 *pInfo*<br/>
-指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)結構，描述目前列印工作。
+指向描述目前列印工作的 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 結構。
 
 ### <a name="remarks"></a>備註
 
-此函式的預設實作不做任何動作。 覆寫此函式以配置列印特別需要的任何 GDI 資源，例如畫筆或字型。 將 GDI 物件選取至裝置內容中[OnPrint](#onprint)每個頁面，使用這些成員函式。 如果您使用相同的檢視物件來執行螢幕顯示和列印，請為每個顯示所需的 GDI 資源使用不同的變數；這可讓您在列印期間更新螢幕。
+此函式的預設實作不做任何動作。 覆寫此函式以配置列印特別需要的任何 GDI 資源，例如畫筆或字型。 為使用 GDI 物件的每個頁面，將 GDI 物件選取至 [OnPrint](#onprint) 成員函式的裝置內容中。 如果您使用相同的檢視物件來執行螢幕顯示和列印，請為每個顯示所需的 GDI 資源使用不同的變數；這可讓您在列印期間更新螢幕。
 
-您也可以使用此函式，執行因印表機裝置內容屬性而異的初始設定。 例如，列印文件所需的頁數可能會因使用者在 [列印] 對話方塊中指定的設定 (例如頁面長度) 而異。 在這種情況下，您無法指定在文件長度[OnPreparePrinting](#onprepareprinting)成員函式，其中您會通常這樣做，您必須等到印表機裝置內容已根據對話方塊設定建立。 [OnBeginPrinting](#onbeginprinting)是第一個可覆寫函式，可讓您存取權[CDC](../../mfc/reference/cdc-class.md)代表印表機裝置內容，因此您可以從此函式設定文件長度的物件。 請注意，如果此時未指定文件長度，預覽列印期間將不會顯示捲軸。
+您也可以使用此函式，執行因印表機裝置內容屬性而異的初始設定。 例如，列印文件所需的頁數可能會因使用者在 [列印] 對話方塊中指定的設定 (例如頁面長度) 而異。 在這種情況下，您無法在通常使用的 [OnPreparePrinting](#onprepareprinting) 成員函式中指定文件長度，而必須等到印表機裝置內容已根據對話方塊設定建立完成。 [OnBeginPrinting](#onbeginprinting) 是第一個可讓您存取代表印表機裝置內容之 [CDC](../../mfc/reference/cdc-class.md) 物件的可覆寫函式，因此您可以從此函式設定文件長度。 請注意，如果此時未指定文件長度，預覽列印期間將不會顯示捲軸。
 
 ##  <a name="ondragenter"></a>  CView::OnDragEnter
 
@@ -602,7 +602,7 @@ virtual void OnEndPrinting(
 指向印表機裝置內容。
 
 *pInfo*<br/>
-指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)結構，描述目前列印工作。
+指向描述目前列印工作的 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 結構。
 
 ### <a name="remarks"></a>備註
 
@@ -626,7 +626,7 @@ virtual void OnEndPrintPreview(
 指向印表機裝置內容。
 
 *pInfo*<br/>
-指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)結構，描述目前列印工作。
+指向描述目前列印工作的 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 結構。
 
 *點*<br/>
 上次在預覽模式中顯示的頁面上指定的點。
@@ -701,7 +701,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 ### <a name="parameters"></a>參數
 
 *pInfo*<br/>
-指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)結構，描述目前列印工作。
+指向描述目前列印工作的 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -757,7 +757,7 @@ virtual void OnPrint(
 
 - 若要列印的影像 （也就是如果您的應用程式不是 WYSIWYG） 不同畫面影像。 而不是傳遞印表機裝置內容`OnDraw`，使用裝置內容來呈現使用屬性不會顯示在螢幕上的影像。
 
-     如果您需要不用於螢幕顯示的列印的 GDI 資源，將其選取至裝置內容的繪圖之前和之後將它們取消選取。 中應該配置這些 GDI 資源[OnBeginPrinting](#onbeginprinting)並在發行[OnEndPrinting](#onendprinting)。
+   如果您需要不用於螢幕顯示的列印的 GDI 資源，將其選取至裝置內容的繪圖之前和之後將它們取消選取。 中應該配置這些 GDI 資源[OnBeginPrinting](#onbeginprinting)並在發行[OnEndPrinting](#onendprinting)。
 
 - 若要實作的頁首或頁尾。 您仍然可以使用`OnDraw`藉由限制它就可以列印的區域中進行轉譯。
 

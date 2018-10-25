@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebebd8d0b6dc53ef5d83374c329ebe35d23f7fe8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: be030539a7b2d0585ea895f1428de822d3300d53
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443536"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052963"
 ---
 # <a name="how-to-specify-include-directories-for-resources-c"></a>如何： 指定資源 （c + +） 的 Include 目錄
 
@@ -32,7 +32,7 @@ ms.locfileid: "46443536"
 
 2. 在 [**屬性頁**] 對話方塊中，按一下**資源**節點，在左窗格中，然後指定其他的 include 目錄中的**其他 include 目錄**屬性。
 
-如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index) .NET Framework 開發人員指南中。 
+如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index) .NET Framework 開發人員指南中。
 
 ## <a name="requirements"></a>需求
 

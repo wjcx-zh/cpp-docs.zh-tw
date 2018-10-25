@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b2360e257fa6af343a7df689c48c8de93d967bd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7fb03a63b922a2718c1b17fdb4970f80da3b8b5a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413965"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054835"
 ---
 # <a name="cfontdialog-class"></a>CFontDialog 類別
 
@@ -407,6 +407,4 @@ CHOOSEFONT m_cf;
 [MFC 範例 HIERSVR](../../visual-cpp-samples.md)<br/>
 [CCommonDialog 類別](../../mfc/reference/ccommondialog-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-
-
 

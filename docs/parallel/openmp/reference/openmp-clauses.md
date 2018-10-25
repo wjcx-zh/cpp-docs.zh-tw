@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d19a2b1859012a56bdaf3c454f8b92758179bed9
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: ea394ca09a086229a8718f4e7e1bfa55115652bc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809066"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056218"
 ---
 # <a name="openmp-clauses"></a>OpenMP 子句
 
@@ -56,21 +56,21 @@ ms.locfileid: "49809066"
 
 Visual c + + 支援下列 OpenMP 子句：
 
-子句                             | 描述
----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[copyin](#copyin)                  | 可讓執行緒存取主執行緒的值，如[threadprivate](openmp-directives.md#threadprivate)變數。
-[copyprivate](#copyprivate)        | 指定一或多個變數，應該在所有執行緒之間共用。
-[default](#default-openmp)         | 指定在平行區域不限範圍變數的行為。
-[firstprivate](#firstprivate)      | 指定每個執行緒都應該有自己的執行個體的變數，並以變數的值，應該先初始化變數，因為它存在於之前平行建構。
-[if](#if-openmp)                   | 指定以平行方式或以序列時，是否執行迴圈。
-[lastprivate](#lastprivate)        | 指定封入內容變數的版本，設定等於私用版本的任何執行緒執行的最後一個反覆項目 （for 迴圈建構） 或最後一節 （#pragma 區段）。
-[nowait](#nowait)                  | 覆寫隱含指示詞中的屏障。
-[num_threads](#num-threads)        | 在執行緒小組設定執行緒的數目。
-[排序](#ordered-openmp-clauses) | 需要平行[for](openmp-directives.md#for-openmp)陳述式如果[排序](openmp-directives.md#ordered-openmp-directives)指示詞是在迴圈中使用。
-[private](#private-openmp)         | 指定每個執行緒都應該有自己的執行個體的變數。
-[reduction](#reduction)            | 指定一或多個變數為私用的每個執行緒減少作業在平行區域結尾處的主旨。
-[schedule](#schedule)              | 適用於[針對](openmp-directives.md#for-openmp)指示詞。
-[shared](#shared-openmp)           | 指定一或多個變數，應該在所有執行緒之間共用。
+|子句|描述|
+|------|-----------|
+|[copyin](#copyin)|可讓執行緒存取主執行緒的值，如[threadprivate](openmp-directives.md#threadprivate)變數。|
+|[copyprivate](#copyprivate)|指定一或多個變數，應該在所有執行緒之間共用。|
+|[default](#default-openmp)|指定在平行區域不限範圍變數的行為。|
+|[firstprivate](#firstprivate)|指定每個執行緒都應該有自己的執行個體的變數，並以變數的值，應該先初始化變數，因為它存在於之前平行建構。|
+|[if](#if-openmp)|指定以平行方式或以序列時，是否執行迴圈。|
+|[lastprivate](#lastprivate)|指定封入內容變數的版本，設定等於私用版本的任何執行緒執行的最後一個反覆項目 （for 迴圈建構） 或最後一節 （#pragma 區段）。|
+|[nowait](#nowait)|覆寫隱含指示詞中的屏障。|
+|[num_threads](#num-threads)|在執行緒小組設定執行緒的數目。|
+|[排序](#ordered-openmp-clauses)|需要平行[for](openmp-directives.md#for-openmp)陳述式如果[排序](openmp-directives.md#ordered-openmp-directives)指示詞是在迴圈中使用。|
+|[private](#private-openmp)|指定每個執行緒都應該有自己的執行個體的變數。|
+|[reduction](#reduction)|指定一或多個變數為私用的每個執行緒減少作業在平行區域結尾處的主旨。|
+|[schedule](#schedule)|適用於[針對](openmp-directives.md#for-openmp)指示詞。|
+|[shared](#shared-openmp)|指定一或多個變數，應該在所有執行緒之間共用。|
 
 ## <a name="copyin"></a>copyin
 
@@ -401,7 +401,7 @@ num_threads(num)
 
 ### <a name="remarks"></a>備註
 
-`num_threads`子句具有與相同的功能[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)函式。
+`num_threads`子句具有與相同的功能[omp_set_num_threads](openmp-functions.md#omp-set-num-threads)函式。
 
 `num_threads` 適用於下列指示詞：
 

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378a99021ca1b48599ee934d659542384068e195
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2f3824e87a2016a848b3723aaa293f235f6f9b09
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443341"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054861"
 ---
 # <a name="serialization-making-a-serializable-class"></a>序列化：建立可序列化的類別
 
@@ -67,9 +67,9 @@ ms.locfileid: "46443341"
 
 1. 插入或擷取類別專屬的成員變數。
 
-     插入和擷取運算子會與封存類別互動，以讀取和寫入資料。 下列範例將說明如何為先前宣告的 `Serialize` 類別實作 `CPerson`。
+   插入和擷取運算子會與封存類別互動，以讀取和寫入資料。 下列範例將說明如何為先前宣告的 `Serialize` 類別實作 `CPerson`。
 
-     [!code-cpp[NVC_MFCSerialization#2](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#2](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_2.cpp)]
 
 您也可以使用[carchive:: Read](../mfc/reference/carchive-class.md#read)並[carchive:: Write](../mfc/reference/carchive-class.md#write)成員函式來讀取和寫入大量不具類型的資料。
 

@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14adec8d601778e255ae7e4242fc552fc820e64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8c34b4a842655ebce6fccaa89a1dfc6d4ef49add
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396697"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063480"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX 控制項：使用字型
 
@@ -64,7 +64,7 @@ ms.locfileid: "46396697"
 
 1. 從快顯功能表中，按一下**新增**，然後按一下**加入屬性**。
 
-     這會開啟 [新增屬性精靈]。
+   這會開啟 [新增屬性精靈]。
 
 1. 在 **屬性名稱**方塊中，按一下**字型**。
 
@@ -90,7 +90,7 @@ ms.locfileid: "46396697"
 
 1. 從快顯功能表中，按一下**新增**，然後按一下**加入屬性**。
 
-     這會開啟 [新增屬性精靈]。
+   這會開啟 [新增屬性精靈]。
 
 1. 在 **屬性名稱**方塊中，按一下**標題**。
 
@@ -132,7 +132,7 @@ ms.locfileid: "46396697"
 
 1. 從快顯功能表中，按一下**新增**，然後按一下**加入屬性**。
 
-     這會開啟 [新增屬性精靈]。
+   這會開啟 [新增屬性精靈]。
 
 1. 在 **屬性名稱**方塊中，輸入屬性的名稱。 此範例中，使用**HeadingFont**。
 
@@ -168,35 +168,35 @@ DISP_PROPERTY_EX 巨集產生關聯`HeadingFont`與其對應的屬性名稱`CSam
 
 - 初始化*m_fontHeading*控制建構函式中。
 
-     [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
 
 - 宣告靜態的 FONTDESC 結構，包含字型的預設屬性。
 
-     [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]
 
 - 控制項中`DoPropExchange`成員函式中，將呼叫加入`PX_Font`函式。 這會提供初始設定和持續性自訂的字型屬性。
 
-     [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]
 
 - 完成實作控制項`GetHeadingFont`成員函式。
 
-     [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]
 
 - 完成實作控制項`SetHeadingFont`成員函式。
 
-     [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]
 
 - 修改控制項`OnDraw`成員函式來定義一個變數來保存先前選取的字型。
 
-     [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]
 
 - 修改控制項`OnDraw`放入裝置內容選取自訂的字型，藉由新增下面這行每當字型時要使用的成員函式。
 
-     [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]
 
 - 修改控制項`OnDraw`成員函式，來選取回裝置內容的上一個字型字型用完之後，加入下列這一行。
 
-     [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]
 
 在實作自訂的字型屬性之後，應該被實作標準的 [字型] 屬性頁面允許控制項使用者變更控制項的目前字型。 若要加入屬性頁 ID，標準的字型屬性頁，請 BEGIN_PROPPAGEIDS 巨集之後插入下面這一行：
 

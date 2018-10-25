@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea6b687b00310390e3748fb5a8f6db74a19dfd0a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 97735b5509fb841a8b9b3d8212f4a23514f9d28c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373892"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057461"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>如何：管理排程器執行個體
 
@@ -34,7 +34,7 @@ ms.locfileid: "46373892"
 
 1. 呼叫[concurrency::CurrentScheduler::Create](reference/currentscheduler-class.md#create)方法或[scheduler](reference/scheduler-class.md#create)方法，以建立排程器執行個體。
 
-     如果您使用`Scheduler::Create`方法中，呼叫[concurrency::Scheduler::Attach](reference/scheduler-class.md#attach)方法時您必須將與目前內容關聯的排程器。
+   如果您使用`Scheduler::Create`方法中，呼叫[concurrency::Scheduler::Attach](reference/scheduler-class.md#attach)方法時您必須將與目前內容關聯的排程器。
 
 1. 呼叫[CreateEvent](/windows/desktop/api/synchapi/nf-synchapi-createeventa)函式來建立未收到信號、 自動重設事件物件的控制代碼。
 
@@ -44,7 +44,7 @@ ms.locfileid: "46373892"
 
 1. 呼叫[concurrency::CurrentScheduler::Detach](reference/currentscheduler-class.md#detach)卸離目前的排程器，並還原先前的排程器與目前的方法。
 
-     如果您使用`Scheduler::Create`方法中，呼叫[concurrency::Scheduler::Release](reference/scheduler-class.md#release)方法，以遞減參考計數的`Scheduler`物件。
+   如果您使用`Scheduler::Create`方法中，呼叫[concurrency::Scheduler::Release](reference/scheduler-class.md#release)方法，以遞減參考計數的`Scheduler`物件。
 
 1. 將控制代碼傳遞至事件，以[WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject)等待關閉的排程器的函式。
 

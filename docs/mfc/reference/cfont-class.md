@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 760f8c5527f0dbd4fa0ebc2aed3aed59a9676b82
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c914bab9ab7a4bb15f6fe3d2820d7ff2534c3c6e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399013"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053639"
 ---
 # <a name="cfont-class"></a>CFont 類別
 
@@ -372,6 +372,4 @@ Windows GDI 字型物件的控制代碼附加至`CFont`如果成功，否則為 
 [MFC 範例 HIERSVR](../../visual-cpp-samples.md)<br/>
 [CGdiObject 類別](../../mfc/reference/cgdiobject-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-
-
 

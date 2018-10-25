@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff8687783907cb84af36122c5d7828f8845d595d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 40fa13ecf743bf8e6aa0cd75b16bec65131fe267
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46073456"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061075"
 ---
 # <a name="ccomautocriticalsection-class"></a>CComAutoCriticalSection 類別
 
@@ -48,7 +48,7 @@ class CComAutoCriticalSection : public CComCriticalSection
 
 `CComAutoCriticalSection` 類似於類別[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)，除了`CComAutoCriticalSection`自動初始化建構函式中的重要區段物件。
 
-一般而言，您可以使用`CComAutoCriticalSection`經由`typedef`名稱[AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection)。 此名稱會參考`CComAutoCriticalSection`時[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)正在使用。  
+一般而言，您可以使用`CComAutoCriticalSection`經由`typedef`名稱[AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection)。 此名稱會參考`CComAutoCriticalSection`時[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)正在使用。
 
 `Init`並`Term`方法，從[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)不適用於使用這個類別。
 

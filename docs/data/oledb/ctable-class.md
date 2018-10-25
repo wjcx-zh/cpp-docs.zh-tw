@@ -24,102 +24,102 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4548e319d7a85c547b0e750d040bdc6b6d7bbba5
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: dd9d3b291f967b98017e4136740628ef951ea12a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083901"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060126"
 ---
 # <a name="ctable-class"></a>CTable 類別
 
-提供方法來直接存取簡單的資料列集 （不含任何參數的其中一個）。  
-  
+提供方法來直接存取簡單的資料列集 （不含任何參數的其中一個）。
+
 ## <a name="syntax"></a>語法
 
 ```cpp
-template <class TAccessor = CNoAccessor, 
-            template <typename T> class TRowset = CRowset>  
-class CTable :  
-   public CAccessorRowset <TAccessor, TRowset>  
-```  
-  
-### <a name="parameters"></a>參數  
+template <class TAccessor = CNoAccessor,
+            template <typename T> class TRowset = CRowset>
+class CTable :
+   public CAccessorRowset <TAccessor, TRowset>
+```
+
+### <a name="parameters"></a>參數
 
 *TAccessor*<br/>
-存取子類別。  
-  
+存取子類別。
+
 *TRowset*<br/>
-資料列集類別。  
+資料列集類別。
 
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>需求
 
-**標題:** atldbcli.h  
-  
-## <a name="members"></a>成員  
-  
-### <a name="methods"></a>方法  
-  
-|||  
-|-|-|  
-|[開啟](#open)|開啟資料表。|  
-  
-## <a name="remarks"></a>備註  
+**標題:** atldbcli.h
 
-請參閱[CCommand](../../data/oledb/ccommand-class.md)如需有關如何執行命令來存取資料列集資訊。  
+## <a name="members"></a>成員
+
+### <a name="methods"></a>方法
+
+|||
+|-|-|
+|[開啟](#open)|開啟資料表。|
+
+## <a name="remarks"></a>備註
+
+請參閱[CCommand](../../data/oledb/ccommand-class.md)如需有關如何執行命令來存取資料列集資訊。
 
 ## <a name="open"></a> Ctable:: Open
 
-開啟資料表。  
-  
-### <a name="syntax"></a>語法  
-  
+開啟資料表。
+
+### <a name="syntax"></a>語法
+
 ```cpp
-HRESULT Open(const CSession& session,  
-   LPCWSTR wszTableName,  
-   DBPROPSET* pPropSet = NULL,  
-   ULONG ulPropSets = 0) throw ();  
+HRESULT Open(const CSession& session,
+   LPCWSTR wszTableName,
+   DBPROPSET* pPropSet = NULL,
+   ULONG ulPropSets = 0) throw ();
 
-HRESULT Open(const CSession& session,  
-   LPCSTR szTableName,  
-   DBPROPSET* pPropSet = NULL,  
-   ULONG ulPropSets = 0) throw ();  
+HRESULT Open(const CSession& session,
+   LPCSTR szTableName,
+   DBPROPSET* pPropSet = NULL,
+   ULONG ulPropSets = 0) throw ();
 
-HRESULT Open(const CSession& session,  
-   DBID& dbid,  
-   DBPROPSET* pPropSet = NULL,  
-   ULONG ulPropSets = 0) throw ();  
-```  
-  
-#### <a name="parameters"></a>參數  
+HRESULT Open(const CSession& session,
+   DBID& dbid,
+   DBPROPSET* pPropSet = NULL,
+   ULONG ulPropSets = 0) throw ();
+```
+
+#### <a name="parameters"></a>參數
 
 *工作階段*<br/>
-[in]開啟該表格中的工作階段。  
-  
+[in]開啟該表格中的工作階段。
+
 *wszTableName*<br/>
-[in]若要開啟，資料表名稱傳遞為 Unicode 字串。  
-  
+[in]若要開啟，資料表名稱傳遞為 Unicode 字串。
+
 *szTableName*<br/>
-[in]若要開啟，資料表名稱傳遞為 ANSI 字串。  
-  
+[in]若要開啟，資料表名稱傳遞為 ANSI 字串。
+
 *dbid*<br/>
-[in]`DBID`来開啟的資料表。  
-  
+[in]`DBID`来開啟的資料表。
+
 *pPropSet*<br/>
-[in]陣列的指標[DBPROPSET](/previous-versions/windows/desktop/ms714367)結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](/previous-versions/windows/desktop/ms713696)中*OLE DB 程式設計人員參考*Windows SDK 中。 預設值是 NULL 指定任何屬性。  
-  
+[in]陣列的指標[DBPROPSET](/previous-versions/windows/desktop/ms714367)結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](/previous-versions/windows/desktop/ms713696)中*OLE DB 程式設計人員參考*Windows SDK 中。 預設值是 NULL 指定任何屬性。
+
 *ulPropSets*<br/>
-[in]數目[DBPROPSET](/previous-versions/windows/desktop/ms714367)結構傳入*Dbpropset*引數。  
-  
-### <a name="return-value"></a>傳回值  
+[in]數目[DBPROPSET](/previous-versions/windows/desktop/ms714367)結構傳入*Dbpropset*引數。
 
-標準的 HRESULT。  
-  
-### <a name="remarks"></a>備註  
+### <a name="return-value"></a>傳回值
 
-如需詳細資訊，請參閱 < [iopenrowset:: Openrowset](/previous-versions/windows/desktop/ms716724)中*OLE DB 程式設計人員參考*。  
-  
-## <a name="see-also"></a>另請參閱  
+標準的 HRESULT。
+
+### <a name="remarks"></a>備註
+
+如需詳細資訊，請參閱 < [iopenrowset:: Openrowset](/previous-versions/windows/desktop/ms716724)中*OLE DB 程式設計人員參考*。
+
+## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)   
+[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

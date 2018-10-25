@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb37637cbfc2ec0af96ed339da6e71cf349797e2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b53175e46cfa858a73b581dfefc78047e96380d6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402870"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058945"
 ---
 # <a name="mapping-messages-to-functions"></a>將訊息對應到函式
 
@@ -42,7 +42,7 @@ ms.locfileid: "46402870"
     > [!NOTE]
     >  **訊息**按鈕時，使用您在 類別檢視 或 當您按一下 來源 視窗內選取的類別名稱。
 
-     如果您的專案有一則訊息的處理常式，處理常式的名稱就會出現在右邊的資料行旁邊的訊息。
+   如果您的專案有一則訊息的處理常式，處理常式的名稱就會出現在右邊的資料行旁邊的訊息。
 
 1. 如果訊息沒有處理常式，然後按一下右側的資料行中顯示建議的處理常式做為名稱的 [屬性] 視窗中的資料格\<加入 >*HandlerName*。 (例如，WM_TIMER 訊息處理常式會建議\<新增 >`OnTimer`)。
 
@@ -56,9 +56,9 @@ ms.locfileid: "46402870"
 
 [MFC 訊息處理常式](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
 [使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[加入類別](../../ide/adding-a-class-visual-cpp.md)<br/>
+[新增類別](../../ide/adding-a-class-visual-cpp.md)<br/>
 [新增成員函式](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [新增成員變數](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [覆寫虛擬函式](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
-[新增對話方塊控制項的事件處理常式](../../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
+[加入對話方塊控制項的事件處理常式](../../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [巡覽類別結構](../../ide/navigating-the-class-structure-visual-cpp.md)

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c777f2800d16775ccb9a6ba51baa708d861e0d68
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 8e92b52ce3b14b5ee26641186222ddc228877e71
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313347"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057266"
 ---
 # <a name="changing-the-properties-of-a-resource-c"></a>變更屬性的資源 （c + +）
 
@@ -29,7 +29,7 @@ ms.locfileid: "44313347"
 
 1. 在 [資源檢視](../windows/resource-view-window.md)，以滑鼠右鍵按一下您想要編輯，然後選擇的資源**屬性**從捷徑功能表。
 
-   > [!NOTE] 
+   > [!NOTE]
    > 如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。
 
 2. 在 [[屬性] 視窗](/visualstudio/ide/reference/properties-window)，變更您的資源的屬性。

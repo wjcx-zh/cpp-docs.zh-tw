@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64c123784af81a534a6d6ff2a0fb3d2108ff6021
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: df3a3b17af4ccb55fffccdbe87c1ac8c39eba603
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790328"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057490"
 ---
 # <a name="control"></a>控制項
 
@@ -66,10 +66,10 @@ class CTest : public ICustom {};
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [IDL 屬性](idl-attributes.md)<br/>
 [類別屬性](class-attributes.md)<br/>
-[Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)  
+[Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)

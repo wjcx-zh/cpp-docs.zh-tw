@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6613e38a19987abcc9f95288e9d1cb6957b076a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: add9336165195ba4da0125c606eebd39f3fce298
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427273"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062220"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets：使用封存的通訊端範例
 
@@ -40,11 +40,11 @@ ms.locfileid: "46427273"
 
 - "header"，指定資料的本質 (在此案例中的值*bValue*變數，並將傳送多少複本)。
 
-     兩個項目會隨機產生，此範例中。
+   兩個項目會隨機產生，此範例中。
 
 - 指定的資料複本數目。
 
-     內部**for**迴圈傳送*bValue*指定重試次數。
+   內部**for**迴圈傳送*bValue*指定重試次數。
 
 - 字串，呼叫*strText*接收者顯示給使用者。
 

@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb576ba6ce532bce15b9dda2aa598649044c2d8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 994095042dc473fda315b6d842d9ec9355ff3671
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378006"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055394"
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>TN062：Windows 控制項的訊息反映
 
@@ -126,7 +126,7 @@ ON_NOTIFY_REFLECT 和 ON_CONTROL_REFLECT 巨集必須以處理特定的訊息允
 
 1. 在現有的應用程式中建立新的對話方塊。 如需詳細資訊，請參閱 <<c0> [ 對話方塊編輯器](../windows/dialog-editor.md)主題。
 
-     您必須擁有用來開發可重複使用的控制項中的應用程式。 如果您沒有要使用現有的應用程式，建立使用 AppWizard 的對話方塊架構應用程式。
+   您必須擁有用來開發可重複使用的控制項中的應用程式。 如果您沒有要使用現有的應用程式，建立使用 AppWizard 的對話方塊架構應用程式。
 
 2. 載入 Visual c + + 專案，使用建立新的類別，稱為 ClassWizard`CYellowEdit`根據`CEdit`。
 
@@ -145,7 +145,7 @@ ON_NOTIFY_REFLECT 和 ON_CONTROL_REFLECT 巨集必須以處理特定的訊息允
 
 5. 使用 ClassWizard，加入反映 WM_CTLCOLOR 訊息處理常式您`CYellowEdit`類別。 請注意，等號，您可以處理的訊息清單中的訊息名稱前面會指出訊息反映。 這中所述[定義反映訊息的訊息處理常式](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)。
 
-     ClassWizard 會為您加入下列的訊息對應巨集和基本架構函數：
+   ClassWizard 會為您加入下列的訊息對應巨集和基本架構函數：
 
     ```cpp
     ON_WM_CTLCOLOR_REFLECT()

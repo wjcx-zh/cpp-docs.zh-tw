@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 977bf0a56e21ddbef62daf88a7aa459d7c275a99
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 75836b1d2d64de4f0ea17bf95a9fb2f9814c3cdb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405233"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052879"
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile 類別
 
@@ -174,7 +174,6 @@ IMoniker* GetMoniker() const;
 virtual BOOL Open(
     LPCTSTR lpszURL,
     CFileException* pError = NULL);
-
 
 virtual BOOL Open(
     IMoniker* pMoniker,

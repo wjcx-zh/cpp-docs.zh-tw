@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8dee099912b69d48b0ded4184dc68c14da1899fe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ed6639bdf86a54689834c6eda03a3b6ec4dd171d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391900"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063844"
 ---
 # <a name="toolbar-c-image-editor-for-icons"></a>工具列 （c + + 圖示影像編輯器）
 
@@ -36,8 +36,7 @@ ms.locfileid: "46391900"
 > [!NOTE]
 > 上提供的所有工具**影像編輯器**工具列也會提供從**映像**功能表 (在**工具**命令)。
 
-![影像編輯器工具列](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")  
-影像編輯器工具列
+![影像編輯器工具列](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")影像編輯器工具列
 
 若要使用**影像編輯器**工具列並**選項**選取器中，按一下工具，或您想要的選項。
 
@@ -46,8 +45,7 @@ ms.locfileid: "46391900"
 
 具有**選項**選取器，您可以指定線條、 筆刷筆劃、 等等的寬度。上的圖示**選項**選取器按鈕變更，視哪一種工具而定，您已選取。
 
-![繪製&#45;影像編輯器工具列上的形狀選取器](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")  
-在 影像編輯器工具列上的選項選取器
+![繪製&#45;影像編輯器工具列上的形狀選取器](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")影像編輯器工具列上的選項選取器
 
 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
 

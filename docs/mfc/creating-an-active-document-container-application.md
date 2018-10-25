@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f01b15a226887216b45ba232437d9d20c4691b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1b20dd592e180122e119b08ab59babfdaae8d54
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388327"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052797"
 ---
 # <a name="creating-an-active-document-container-application"></a>建立主動式文件容器應用程式
 
@@ -57,9 +57,9 @@ ms.locfileid: "46388327"
 
          [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
-     `OnPreparePrinting` 提供列印支援。 此程式碼會取代 `DoPreparePrinting`，這是預設的列印準備。
+   `OnPreparePrinting` 提供列印支援。 此程式碼會取代 `DoPreparePrinting`，這是預設的列印準備。
 
-     主動式文件內含項目提供了改良的列印配置：
+   主動式文件內含項目提供了改良的列印配置：
 
    - 您可以先呼叫主動式文件，透過其`IPrint`介面，並告知其自行列印。 這點不同於上一個 OLE 內含項目，容器不得不印表機將包含項目的影像呈現`CDC`物件。
 
@@ -67,7 +67,7 @@ ms.locfileid: "46388327"
 
    - 如果失敗，則自行呈現項目。
 
-     靜態成員函式 `COleDocObjectItem::OnPrint` 和 `COleDocObjectItem::OnPreparePrinting` (如上一個程式碼中所實作) 會處理這個改良的列印配置。
+   靜態成員函式 `COleDocObjectItem::OnPrint` 和 `COleDocObjectItem::OnPreparePrinting` (如上一個程式碼中所實作) 會處理這個改良的列印配置。
 
 11. 加入您自己的所有實作並建置應用程式。
 

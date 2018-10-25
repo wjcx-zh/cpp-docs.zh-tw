@@ -37,105 +37,105 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d00e6a89d8c05f5b9d6a3f1eaef434968931a26
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: ac05cdb93ff87e40c41a59ce466d81aa7bcb5e92
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083303"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053470"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl 類別
 
-提供實作[IRowsetInfo](/previous-versions/windows/desktop/ms724541)介面。  
-  
+提供實作[IRowsetInfo](/previous-versions/windows/desktop/ms724541)介面。
+
 ## <a name="syntax"></a>語法
 
 ```cpp
-template <class T, class PropClass = T>  
-class ATL_NO_VTABLE IRowsetInfoImpl :   
-   public IRowsetInfo,    
-   public CUtlProps<PropClass>  
-```  
-  
-### <a name="parameters"></a>參數  
+template <class T, class PropClass = T>
+class ATL_NO_VTABLE IRowsetInfoImpl :
+   public IRowsetInfo,  
+   public CUtlProps<PropClass>
+```
+
+### <a name="parameters"></a>參數
 
 *T*<br/>
-您的類別，衍生自`IRowsetInfoImpl`。  
-  
+您的類別，衍生自`IRowsetInfoImpl`。
+
 *PropClass*<br/>
-使用者可定義屬性類別，預設值為*T*。 
+使用者可定義屬性類別，預設值為*T*。
 
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>需求
 
-**標頭：** altdb.h   
-  
-## <a name="members"></a>成員  
-  
-### <a name="interface-methods"></a>介面方法  
-  
-|||  
-|-|-|  
-|[GetProperties](#getproperties)|傳回資料列集所支援的所有屬性的目前的設定。|  
-|[GetReferencedRowset](#getreferencedrowset)|要套用書籤的資料列集傳回的介面指標。|  
-|[GetSpecification](#getspecification)|建立此資料列集物件 （命令或工作階段） 上傳回的介面指標。|  
-  
-## <a name="remarks"></a>備註  
+**標頭：** altdb.h
 
-在 資料列集上必要的介面。 這個類別會實作所使用的資料列集屬性[屬性集對應](../../data/oledb/begin-propset-map.md)命令類別中定義。 雖然所出現的資料列集類別，使用命令類別的屬性集，資料列集提供它自己的複本，執行階段內容中的命令或工作階段的物件建立時。  
-  
+## <a name="members"></a>成員
+
+### <a name="interface-methods"></a>介面方法
+
+|||
+|-|-|
+|[GetProperties](#getproperties)|傳回資料列集所支援的所有屬性的目前的設定。|
+|[GetReferencedRowset](#getreferencedrowset)|要套用書籤的資料列集傳回的介面指標。|
+|[GetSpecification](#getspecification)|建立此資料列集物件 （命令或工作階段） 上傳回的介面指標。|
+
+## <a name="remarks"></a>備註
+
+在 資料列集上必要的介面。 這個類別會實作所使用的資料列集屬性[屬性集對應](../../data/oledb/begin-propset-map.md)命令類別中定義。 雖然所出現的資料列集類別，使用命令類別的屬性集，資料列集提供它自己的複本，執行階段內容中的命令或工作階段的物件建立時。
+
 ## <a name="getproperties"></a> Irowsetinfoimpl:: Getproperties
 
-傳回屬性的目前設定`DBPROPSET_ROWSET`群組。  
-  
-### <a name="syntax"></a>語法  
-  
-```cpp
-STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,  
-   const DBPROPIDSET rgPropertyIDSets[],  
-   ULONG* pcPropertySets,  
-   DBPROPSET** prgPropertySets);  
-```  
-  
-#### <a name="parameters"></a>參數  
+傳回屬性的目前設定`DBPROPSET_ROWSET`群組。
 
-請參閱[irowsetinfo:: Getproperties](/previous-versions/windows/desktop/ms719611)中*OLE DB 程式設計人員參考*。 
+### <a name="syntax"></a>語法
+
+```cpp
+STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
+   const DBPROPIDSET rgPropertyIDSets[],
+   ULONG* pcPropertySets,
+   DBPROPSET** prgPropertySets);
+```
+
+#### <a name="parameters"></a>參數
+
+請參閱[irowsetinfo:: Getproperties](/previous-versions/windows/desktop/ms719611)中*OLE DB 程式設計人員參考*。
 
 ## <a name="getreferencedrowset"></a> Irowsetinfoimpl:: Getreferencedrowset
 
-要套用書籤的資料列集傳回的介面指標。  
-  
-### <a name="syntax"></a>語法  
-  
-```cpp
-STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,  
-   REFIID riid,  
-   IUnknown** ppReferencedRowset);  
-```  
-  
-#### <a name="parameters"></a>參數  
+要套用書籤的資料列集傳回的介面指標。
 
-請參閱[IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145)中*OLE DB 程式設計人員參考*。 *IOrdinal*參數必須是書籤資料行。 
+### <a name="syntax"></a>語法
+
+```cpp
+STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
+   REFIID riid,
+   IUnknown** ppReferencedRowset);
+```
+
+#### <a name="parameters"></a>參數
+
+請參閱[IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145)中*OLE DB 程式設計人員參考*。 *IOrdinal*參數必須是書籤資料行。
 
 ## <a name="getspecification"></a> Irowsetinfoimpl:: Getspecification
 
-建立此資料列集物件 （命令或工作階段） 上傳回的介面指標。  
-  
-### <a name="syntax"></a>語法  
-  
+建立此資料列集物件 （命令或工作階段） 上傳回的介面指標。
+
+### <a name="syntax"></a>語法
+
 ```cpp
-STDMETHOD (GetSpecification )(REFIID riid,  
-   IUnknown** ppSpecification);  
-```  
-  
-#### <a name="parameters"></a>參數  
+STDMETHOD (GetSpecification )(REFIID riid,
+   IUnknown** ppSpecification);
+```
 
-請參閱[IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746)中*OLE DB 程式設計人員參考*。  
-  
-### <a name="remarks"></a>備註  
+#### <a name="parameters"></a>參數
 
-使用這個方法搭配[IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)來擷取從資料來源物件的屬性。  
-  
-## <a name="see-also"></a>另請參閱  
+請參閱[IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746)中*OLE DB 程式設計人員參考*。
+
+### <a name="remarks"></a>備註
+
+使用這個方法搭配[IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)來擷取從資料來源物件的屬性。
+
+## <a name="see-also"></a>另請參閱
 
 [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

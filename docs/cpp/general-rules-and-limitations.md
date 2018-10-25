@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a2a21de2cade8eb0d8776b340123df3535c36f4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0222af4bd53b21750cb6debc477e10c96f9d5594
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46034391"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061582"
 ---
 # <a name="general-rules-and-limitations"></a>一般規則和限制
 
@@ -25,7 +25,7 @@ ms.locfileid: "46034391"
 
 - 如果您宣告的函式或物件不含**dllimport**或是**dllexport**屬性、 函式或物件不會視為 DLL 介面的一部分。 因此，函式或物件的定義必須存在該模組中，或是相同程式的另一個模組中。 若要讓 DLL 介面的函式或物件的一部分，您必須宣告的函式或其他模組中的物件定義**dllexport**。 否則會產生連結器錯誤。
 
-     如果您宣告的函式或物件具有**dllexport**屬性，其定義必須出現在同一個程式的一些模組。 否則會產生連結器錯誤。
+   如果您宣告的函式或物件具有**dllexport**屬性，其定義必須出現在同一個程式的一些模組。 否則會產生連結器錯誤。
 
 - 如果您的程式中的單一模組同時包含**dllimport**並**dllexport**相同的函式或物件，宣告**dllexport**屬性會優先透過**dllimport**屬性。 不過，這樣會產生編譯器警告。 例如: 
 
@@ -53,7 +53,7 @@ ms.locfileid: "46034391"
     }
     ```
 
-     不過，因為它包含程式**dllexport**物件的宣告中的屬性必須提供該程式中的某處的物件的定義，您可以初始化全域或區域靜態函式指標地址**dllexport**函式。 同樣地，您可以在其中初始化全域或區域靜態資料指標的位址**dllexport**資料物件。 例如，下列程式碼不會在 C 或 C++ 中產生錯誤：
+   不過，因為它包含程式**dllexport**物件的宣告中的屬性必須提供該程式中的某處的物件的定義，您可以初始化全域或區域靜態函式指標地址**dllexport**函式。 同樣地，您可以在其中初始化全域或區域靜態資料指標的位址**dllexport**資料物件。 例如，下列程式碼不會在 C 或 C++ 中產生錯誤：
 
     ```cpp
     __declspec( dllexport ) void func1( void );
@@ -71,7 +71,7 @@ ms.locfileid: "46034391"
 
 - 如果您套用**dllexport**未標記為基底類別的一般類別**dllexport**，編譯器會產生 C4275。
 
-     如果基底類別是類別樣板的特製化，則編譯器會產生相同的警告。 若要解決這個問題，將標記與基底類別**dllexport**。 類別樣板的特製化的問題是放置的位置 **__declspec （dllexport)**; 不允許您標記類別樣板。 相反地，明確具現化類別範本並將標示與此明確具現化**dllexport**。 例如: 
+   如果基底類別是類別樣板的特製化，則編譯器會產生相同的警告。 若要解決這個問題，將標記與基底類別**dllexport**。 類別樣板的特製化的問題是放置的位置 **__declspec （dllexport)**; 不允許您標記類別樣板。 相反地，明確具現化類別範本並將標示與此明確具現化**dllexport**。 例如: 
 
     ```cpp
     template class __declspec(dllexport) B<int>;
@@ -79,14 +79,14 @@ ms.locfileid: "46034391"
     // ...
     ```
 
-     如果樣板引數為衍生類別，則這個解決方法會失敗。 例如: 
+   如果樣板引數為衍生類別，則這個解決方法會失敗。 例如: 
 
     ```cpp
     class __declspec(dllexport) D : public B<D> {
     // ...
     ```
 
-     因為這是常見的模式使用範本時，編譯器變更的語意**dllexport**它套用到具有一或多個基底類別的類別，以及一或多個基底類別是類別樣板的特製化. 在此情況下，編譯器會隱含地套用**dllexport**類別樣板的特製化。 您可以執行下列作業，不會收到警告：
+   因為這是常見的模式使用範本時，編譯器變更的語意**dllexport**它套用到具有一或多個基底類別的類別，以及一或多個基底類別是類別樣板的特製化. 在此情況下，編譯器會隱含地套用**dllexport**類別樣板的特製化。 您可以執行下列作業，不會收到警告：
 
     ```cpp
     class __declspec(dllexport) D : public B<D> {

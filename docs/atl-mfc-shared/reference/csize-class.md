@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9966bcdf31df3b6d3f702ec425131c5b8baa3aee
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 6d9927712077f7d0d57d9ece5ae72489be291866
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808494"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055218"
 ---
 # <a name="csize-class"></a>CSize 類別
 
@@ -35,7 +35,7 @@ ms.locfileid: "49808494"
 ## <a name="syntax"></a>語法
 
 ```
-class CSize : public tagSIZE 
+class CSize : public tagSIZE
 ```
 
 ## <a name="members"></a>成員
@@ -64,7 +64,7 @@ class CSize : public tagSIZE
 `cx`並`cy`的成員`SIZE`(和`CSize`) 都是公用的。 颾魤 ㄛ`CSize`實作成員函式來操作`SIZE`結構。
 
 > [!NOTE]
->  如需有關共用 公用程式類別 (例如`CSize`)，請參閱 <<c2> [ 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)。
+> 如需有關共用 公用程式類別 (例如`CSize`)，請參閱 <<c2> [ 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -85,7 +85,7 @@ CSize() throw();
 CSize( int initCX, int initCY) throw();
 CSize( SIZE initSize) throw();
 CSize( POINT initPt) throw();
-CSize( DWORD dwSize) throw(); 
+CSize( DWORD dwSize) throw();
 ```
 
 ### <a name="parameters"></a>參數
@@ -117,8 +117,8 @@ DWORD 用來初始化`CSize`。 低序位字`cx`成員與高序位文字是`cy`�
 
 這兩個大小相等檢查。
 
-``` 
-BOOL operator==(SIZE size) const throw(); 
+```
+BOOL operator==(SIZE size) const throw();
 ```
 
 ### <a name="remarks"></a>備註
@@ -133,8 +133,8 @@ BOOL operator==(SIZE size) const throw();
 
 這兩個大小相等檢查。
 
-``` 
-BOOL operator!=(SIZE size) const throw(); 
+```
+BOOL operator!=(SIZE size) const throw();
 ```
 
 ### <a name="remarks"></a>備註
@@ -149,8 +149,8 @@ BOOL operator!=(SIZE size) const throw();
 
 將大小加入至這個`CSize`。
 
-``` 
-void operator+=(SIZE size) throw(); 
+```
+void operator+=(SIZE size) throw();
 ```
 
 ### <a name="example"></a>範例
@@ -161,8 +161,8 @@ void operator+=(SIZE size) throw();
 
 減去大小，以從這個`CSize`。
 
-``` 
-void operator-=(SIZE size) throw(); 
+```
+void operator-=(SIZE size) throw();
 ```
 
 ### <a name="example"></a>範例
@@ -173,10 +173,10 @@ void operator-=(SIZE size) throw();
 
 這些運算子將此新增`CSize`值參數的值。
 
-``` 
+```
 CSize operator+(SIZE size) const throw();
 CPoint operator+(POINT point) const throw();
-CRect operator+(const RECT* lpRect) const throw(); 
+CRect operator+(const RECT* lpRect) const throw();
 ```
 
 ### <a name="remarks"></a>備註
@@ -197,11 +197,11 @@ CRect operator+(const RECT* lpRect) const throw();
 
 這些運算子的前三個減去此`CSize`值參數的值。
 
-``` 
+```
 CSize operator-(SIZE size) const throw();
 CPoint operator-(POINT point) const throw();
 CRect operator-(const RECT* lpRect) const throw();
-CSize operator-() const throw(); 
+CSize operator-() const throw();
 ```
 
 ### <a name="remarks"></a>備註

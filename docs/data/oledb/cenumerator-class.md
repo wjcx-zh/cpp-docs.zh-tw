@@ -33,120 +33,120 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6f85fafe213fa7e53f67fb6a3035f415235c8794
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 8d653618e690a5c60dea460e1dfa7cdb17d70c7a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082445"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056148"
 ---
 # <a name="cenumerator-class"></a>CEnumerator 類別
 
-使用 OLE DB 列舉值物件，它會公開[ISourcesRowset](/previous-versions/windows/desktop/ms715969)介面，以傳回描述所有的資料來源和列舉值的資料列集。  
-  
+使用 OLE DB 列舉值物件，它會公開[ISourcesRowset](/previous-versions/windows/desktop/ms715969)介面，以傳回描述所有的資料來源和列舉值的資料列集。
+
 ## <a name="syntax"></a>語法
 
 ```cpp
-class CEnumerator :   
-   public CAccessorRowset< CAccessor <CEnumeratorAccessor >>  
-```  
+class CEnumerator : 
+   public CAccessorRowset< CAccessor <CEnumeratorAccessor >>
+```
 
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>需求
 
 **標頭：** atldbcli.h
-  
-## <a name="members"></a>成員  
-  
-### <a name="methods"></a>方法  
-  
-|||  
-|-|-|  
-|[Find](#find)|可用的提供者 （資料來源） 搜尋尋找具有指定名稱的其中一個。|  
-|[GetMoniker](#getmoniker)|擷取`IMoniker`目前記錄的介面。|  
-|[開啟](#open)|開啟 列舉值。|  
-  
-## <a name="remarks"></a>備註  
 
-您可以擷取`ISourcesRowset`間接從這個類別的資料。  
+## <a name="members"></a>成員
+
+### <a name="methods"></a>方法
+
+|||
+|-|-|
+|[Find](#find)|可用的提供者 （資料來源） 搜尋尋找具有指定名稱的其中一個。|
+|[GetMoniker](#getmoniker)|擷取`IMoniker`目前記錄的介面。|
+|[開啟](#open)|開啟 列舉值。|
+
+## <a name="remarks"></a>備註
+
+您可以擷取`ISourcesRowset`間接從這個類別的資料。
 
 ## <a name="find"></a> Cenumerator:: Find
 
-在可用提供者中尋找指定的名稱。  
-  
-### <a name="syntax"></a>語法  
-  
+在可用提供者中尋找指定的名稱。
+
+### <a name="syntax"></a>語法
+
 ```cpp
-bool Find(TCHAR* szSearchName) throw();  
-```  
-  
-#### <a name="parameters"></a>參數  
+bool Find(TCHAR* szSearchName) throw();
+```
+
+#### <a name="parameters"></a>參數
 
 *szSearchName*<br/>
-[in] 要搜尋的名稱。  
-  
-### <a name="return-value"></a>傳回值  
+[in] 要搜尋的名稱。
 
-**true**如果找不到名稱。 否則，請**false**。  
-  
-### <a name="remarks"></a>備註  
+### <a name="return-value"></a>傳回值
 
-此名稱會對應到`SOURCES_NAME`隸屬[ISourcesRowset](/previous-versions/windows/desktop/ms715969)介面。  
-  
+**true**如果找不到名稱。 否則，請**false**。
+
+### <a name="remarks"></a>備註
+
+此名稱會對應到`SOURCES_NAME`隸屬[ISourcesRowset](/previous-versions/windows/desktop/ms715969)介面。
+
 ## <a name="getmoniker"></a> Cenumerator:: Getmoniker
 
-剖析顯示名稱，以擷取元件可以轉換成 moniker 的字串。  
-  
-### <a name="syntax"></a>語法  
-  
-```cpp
-HRESULT GetMoniker(LPMONIKER* ppMoniker) const throw();  
+剖析顯示名稱，以擷取元件可以轉換成 moniker 的字串。
 
-HRESULT GetMoniker(LPMONIKER* ppMoniker,   
-   LPCTSTR lpszDisplayName) const throw();  
-```  
-  
-#### <a name="parameters"></a>參數  
+### <a name="syntax"></a>語法
+
+```cpp
+HRESULT GetMoniker(LPMONIKER* ppMoniker) const throw();
+
+HRESULT GetMoniker(LPMONIKER* ppMoniker, 
+   LPCTSTR lpszDisplayName) const throw();
+```
+
+#### <a name="parameters"></a>參數
 
 *ppMoniker*<br/>
-[out]Moniker 所剖析的顯示名稱 ([cenumeratoraccessor:: M_szparsename](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) 之目前資料列。  
-  
-*lpszDisplayName*<br/>
-[in]要剖析的顯示名稱。  
-  
-### <a name="return-value"></a>傳回值  
+[out]Moniker 所剖析的顯示名稱 ([cenumeratoraccessor:: M_szparsename](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) 之目前資料列。
 
-標準的 HRESULT。  
+*lpszDisplayName*<br/>
+[in]要剖析的顯示名稱。
+
+### <a name="return-value"></a>傳回值
+
+標準的 HRESULT。
 
 ## <a name="open"></a> Cenumerator:: Open
 
-會將繫結之 moniker 的列舉值，如果其中一個指定，則擷取資料列集列舉值，藉由呼叫[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200)。  
-  
-### <a name="syntax"></a>語法  
-  
+會將繫結之 moniker 的列舉值，如果其中一個指定，則擷取資料列集列舉值，藉由呼叫[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200)。
+
+### <a name="syntax"></a>語法
+
 ```cpp
-HRESULT Open(LPMONIKER pMoniker) throw();  
+HRESULT Open(LPMONIKER pMoniker) throw();
 
-HRESULT Open(const CLSID* pClsid = & CLSID_OLEDB_ENUMERATOR) throw();  
+HRESULT Open(const CLSID* pClsid = & CLSID_OLEDB_ENUMERATOR) throw();
 
-HRESULT Open(const CEnumerator& enumerator) throw();  
-```  
-  
-#### <a name="parameters"></a>參數  
+HRESULT Open(const CEnumerator& enumerator) throw();
+```
+
+#### <a name="parameters"></a>參數
 
 *pMoniker*<br/>
-[in]Moniker 的列舉值的指標。  
-  
-*pClsid*<br/>
-[in]指標`CLSID`列舉程式。  
-  
-*enumerator*<br/>
-[in]列舉值的參考。  
-  
-### <a name="return-value"></a>傳回值  
+[in]Moniker 的列舉值的指標。
 
-標準的 HRESULT。  
-  
-## <a name="see-also"></a>另請參閱  
+*pClsid*<br/>
+[in]指標`CLSID`列舉程式。
+
+*enumerator*<br/>
+[in]列舉值的參考。
+
+### <a name="return-value"></a>傳回值
+
+標準的 HRESULT。
+
+## <a name="see-also"></a>另請參閱
 
 [DBViewer](../../visual-cpp-samples.md)<br/>
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

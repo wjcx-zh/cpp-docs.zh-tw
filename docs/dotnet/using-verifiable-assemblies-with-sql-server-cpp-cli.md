@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4fca5d567d19434654b7ccf3cfb2b4d5d3e44d53
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 109b0303eaf4c4352d4e9b426642f92e361051a4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410703"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063402"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>使用可驗證的組件搭配 SQL Server (C++/CLI)
 
@@ -32,7 +32,7 @@ SQL Server transact-sql (T-SQL) 可讓您可驗證的組件安裝到 SQL Server 
 
 - 不受限制的模式： 自行承擔風險; 來執行程式碼程式碼可能沒有可驗證的型別安全。
 
-- 安全模式： 執行可驗證的型別安全程式碼。使用 /clr: safe 編譯。 
+- 安全模式： 執行可驗證的型別安全程式碼。使用 /clr: safe 編譯。
 
 > [!IMPORTANT]
 > 已被取代的 visual Studio 2015 和 Visual Studio 2017 不支援 **/clr: pure**並 **/clr: safe**建立可驗證的專案。 如果您需要可驗證程式碼，我們建議您將轉譯成 C# 程式碼。
@@ -88,6 +88,5 @@ sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
 ```
 
 ## <a name="see-also"></a>另請參閱
-
 
 [類別和結構](../cpp/classes-and-structs-cpp.md)

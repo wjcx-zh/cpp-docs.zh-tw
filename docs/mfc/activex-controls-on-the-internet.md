@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6004c3acd052d1424004017941a5e4aa110c602c
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 1bf8d43d9325ff6900cd1c5cd63629ead434acbc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890332"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055511"
 ---
 # <a name="activex-controls-on-the-internet"></a>網際網路上的 ActiveX 控制項
 
@@ -67,7 +67,7 @@ ActiveX 控制項不限於網際網路。 只要控制項支援容器所需的�
 
 - 下載小區塊中的資料。
 
-     當下載大型資料流 (例如點陣圖或視訊資料) 時，配合容器非同步存取控制項的資料。 與其他可能也在擷取資料的控制項合作，以增量或漸進方式擷取資料。 程式碼也可以非同步下載。
+   當下載大型資料流 (例如點陣圖或視訊資料) 時，配合容器非同步存取控制項的資料。 與其他可能也在擷取資料的控制項合作，以增量或漸進方式擷取資料。 程式碼也可以非同步下載。
 
 - 在背景中下載程式碼和屬性。
 
@@ -75,15 +75,15 @@ ActiveX 控制項不限於網際網路。 只要控制項支援容器所需的�
 
 - 考慮如何儲存持續性資料，包括屬性和大型資料 BLOB (例如，點陣圖影像或視訊資料)。
 
-     具有大量持續性資料的控制項 (例如，大型點陣圖或 AVI 檔案) 需要小心注意下載方法。 當控制項在背景中擷取資料時，資料或頁面可以盡快顯示，並讓使用者與頁面互動。
+   具有大量持續性資料的控制項 (例如，大型點陣圖或 AVI 檔案) 需要小心注意下載方法。 當控制項在背景中擷取資料時，資料或頁面可以盡快顯示，並讓使用者與頁面互動。
 
 - 撰寫有效率的常式讓程式碼大小和執行階段保持最小。
 
-     僅具有幾個位元組的持續性資料小按鈕和標籤控制項，適用於網際網路環境並在瀏覽器內運作正常。
+   僅具有幾個位元組的持續性資料小按鈕和標籤控制項，適用於網際網路環境並在瀏覽器內運作正常。
 
 - 考慮進度與容器通訊。
 
-     通知容器非同步的下載進度，包括使用者何時可以開始與頁面互動以及何時下載完成。 容器可以向使用者顯示進度 (例如完成的百分比)。
+   通知容器非同步的下載進度，包括使用者何時可以開始與頁面互動以及何時下載完成。 容器可以向使用者顯示進度 (例如完成的百分比)。
 
 - 考量在用戶端電腦上註冊控制項的方式。
 
@@ -99,7 +99,7 @@ ActiveX 控制項不限於網際網路。 只要控制項支援容器所需的�
 
 1. 在 **控制設定**頁面上，選取**非同步載入屬性**。 選取此選項會為您設定就緒狀態屬性和就緒狀態變更的事件。
 
-     您可以也選取其他最佳化，例如**無視窗啟用**，，用來說明這[ActiveX 控制項： 最佳化](../mfc/mfc-activex-controls-optimization.md)。
+   您可以也選取其他最佳化，例如**無視窗啟用**，，用來說明這[ActiveX 控制項： 最佳化](../mfc/mfc-activex-controls-optimization.md)。
 
 1. 選擇**完成**建立專案。
 
@@ -111,15 +111,15 @@ ActiveX 控制項不限於網際網路。 只要控制項支援容器所需的�
 
 1. 在這個類別中，覆寫 `OnDataAvailable`。 每當有資料可供顯示時呼叫這個函式。 當資料可用時，您可以選擇的任何方法進行處理，例如逐步轉譯。
 
-     下列程式碼摘要就是在編輯控制項中漸進顯示資料的簡易範例。 請注意使用旗標**BSCF_FIRSTDATANOTIFICATION**清除編輯控制項。
+   下列程式碼摘要就是在編輯控制項中漸進顯示資料的簡易範例。 請注意使用旗標**BSCF_FIRSTDATANOTIFICATION**清除編輯控制項。
 
-     [!code-cpp[NVC_MFCActiveXControl#1](../mfc/codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#1](../mfc/codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]
 
-     請注意，您必須包含 AFXCMN.H 才能使用 `CListCtrl` 類別。
+   請注意，您必須包含 AFXCMN.H 才能使用 `CListCtrl` 類別。
 
 1. 當控制項的整體狀態變更 (例如，從載入到初始化或使用者互動) 時，呼叫 `COleControl::InternalSetReadyState`。 如果您的控制項都只有一個資料路徑屬性，您可以加入程式碼上**BSCF_LASTDATANOTIFICATION**以通知容器您的下載已完成。 例如: 
 
-     [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
 
 1. 覆寫 `OnProgress`。 在 `OnProgress` 中，會傳遞給您一個數字顯示最大範圍以及一個數字顯示目前下載的進度。 您可以使用這些數字向使用者顯示狀態 (例如完成的百分比)。
 
@@ -135,19 +135,19 @@ ActiveX 控制項不限於網際網路。 只要控制項支援容器所需的�
 
 1. 將 `CDataPathProperty` 衍生類別的成員變數，宣告為 ActiveX 控制項類別。
 
-     [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]
+   [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]
 
 1. 實作 `Get/Set` 方法。 針對`Get`，傳回的字串。 對於 `Set`，載入屬性並呼叫 `SetModifiedFlag`。
 
-     [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]
 
 1. 在  [DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange)，加入下列一行：
 
-     [!code-cpp[NVC_MFCActiveXControl#5](../mfc/codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#5](../mfc/codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]
 
 1. 覆寫[ResetData](../mfc/reference/cdatapathproperty-class.md#resetdata)通知要加入這一行，以重設其控制項的屬性：
 
-     [!code-cpp[NVC_MFCActiveXControl#6](../mfc/codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#6](../mfc/codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]
 
 ## <a name="deciding-whether-to-derive-from-cdatapathproperty-or-ccacheddatapathproperty"></a>決定是否要從 CDataPathProperty 或 CCachedDataPathProperty 衍生
 
@@ -200,8 +200,6 @@ ActiveX 控制項不限於網際網路。 只要控制項支援容器所需的�
 [!code-cpp[NVC_MFCActiveXControl#8](../mfc/codesnippet/cpp/activex-controls-on-the-internet_8.cpp)]
 
 藉由呼叫下載您的程式碼時，您將會更新就緒狀態[colecontrol:: Internalsetreadystate](../mfc/reference/colecontrol-class.md#internalsetreadystate)。 您可以呼叫 `InternalSetReadyState` 的位置是從 `OnProgress` 衍生的類別覆寫 `CDataPathProperty`。
-
-
 
 ## <a name="see-also"></a>另請參閱
 

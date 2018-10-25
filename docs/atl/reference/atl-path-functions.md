@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d5b3677ab256e6d1b3e88f5bc71c8b9c7b097b2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cdb658b179e3e3488b070203ad7f0909610d4fd8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753288"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054640"
 ---
 # <a name="atl-path-functions"></a>ATL 路徑函式
 
@@ -351,6 +351,7 @@ inline int GetDriveNumber(const wchar_t* pszPath);
 inline BOOL IsDirectory(const char* pszPath);
 inline BOOL IsDirectory(const wchar_t* pszPath);
 ```
+
 ### <a name="remarks"></a>備註
 
 如需詳細資訊，請參閱 PathIsDirectory。

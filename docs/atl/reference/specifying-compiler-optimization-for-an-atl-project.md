@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 622c0720f55e638d6640094f095e59d2d5e5f931
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f756da8f553d68e89dcbee737adbab75f256ae8d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069335"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053119"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>指定 ATL 專案的編譯器最佳化
 
@@ -51,7 +51,7 @@ ATL 然後 _ATL_NO_VTABLE 會，如下所示的定義：
 
 您必須使用 ATL_NO_VTABLE，並進而`declspec(novtable)`，不是直接可建立只基底的類別。 您不能使用`declspec(novtable)`與最高衍生性類別，在您的專案，因為這個類別 (通常[CComObject](../../atl/reference/ccomobject-class.md)， [CComAggObject](../../atl/reference/ccomaggobject-class.md)，或[CComPolyObject](../../atl/reference/ccompolyobject-class.md))vtable 指標初始化為您的專案。
 
-您必須從使用的任何物件的建構函式呼叫虛擬函式`declspec(novtable)`。 您應該將這些呼叫移[跖](ccomobjectrootex-class.md#finalconstruct)方法。  
+您必須從使用的任何物件的建構函式呼叫虛擬函式`declspec(novtable)`。 您應該將這些呼叫移[跖](ccomobjectrootex-class.md#finalconstruct)方法。
 
 如果您不確定您是否應使用`declspec(novtable)`修飾詞，您可以從任何類別定義，移除 ATL_NO_VTABLE 巨集，或您可以全域停用它藉由指定
 

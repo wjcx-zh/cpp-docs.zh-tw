@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5942a41272671a391cb600ef959d2c69b0bab3e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 777180468ec377b50ee0affaa29bd04a302bda52
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419031"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057916"
 ---
 # <a name="dhtml-event-maps"></a>DHTML 事件對應
 
@@ -142,7 +142,6 @@ DHTML 事件對應新增至您的類別，以提供資訊給`CDHtmlDialog`，可
 ### <a name="requirements"></a>需求
 
   **標頭**afxdhtml.h
-
 
 ##  <a name="declare_dhtml_event_map"></a>  DECLARE_DHTML_EVENT_MAP
 
@@ -1160,7 +1159,6 @@ URL_EVENT_ENTRY(className, url,  mapName)
 ### <a name="example"></a>範例
 
 請參閱中的範例[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)。
-
 
 ### <a name="requirements"></a>需求
 

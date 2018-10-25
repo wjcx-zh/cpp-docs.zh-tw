@@ -113,224 +113,224 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3538a8cd15fc315f4d91d1c83c517811acce1802
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 3a5548d9c2b54b265910ea6708bc448f09f8f151
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082900"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059983"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset 類別
 
-擷取和操作處理大量資料擷取的單一呼叫的多個資料列控制代碼的資料列。  
-  
+擷取和操作處理大量資料擷取的單一呼叫的多個資料列控制代碼的資料列。
+
 ## <a name="syntax"></a>語法
 
 ```cpp
-template <class TAccessor>  
-class CBulkRowset : public CRowset<TAccessor>  
-```  
-  
-### <a name="parameters"></a>參數  
+template <class TAccessor>
+class CBulkRowset : public CRowset<TAccessor>
+```
+
+### <a name="parameters"></a>參數
 
 *TAccessor*<br/>
-存取子類別。  
+存取子類別。
 
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>需求
 
-**標題:** atldbcli.h  
-  
-## <a name="members"></a>成員  
-  
-### <a name="methods"></a>方法  
-  
-|||  
-|-|-|  
-|[AddRefRows](#addrefrows)|遞增參考計數。|  
-|[CBulkRowset](#cbulkrowset)|建構函式。|  
-|[MoveFirst](#movefirst)|擷取資料，執行新的大量擷取如有必要的第一列。|  
-|[MoveLast](#movelast)|移至最後一個資料列。|  
-|[MoveNext](#movenext)|擷取下的一個資料列。|  
-|[MovePrev](#moveprev)|移至前一個資料列。|  
-|[MoveToBookmark](#movetobookmark)|擷取書籤所標記的資料列或資料列中指定的位移，從該書籤。|  
-|[MoveToRatio](#movetoratio)|擷取資料列從資料列集中的小數位置開始。|  
-|[ReleaseRows](#releaserows)|設定目前資料列 (`m_nCurrentRow`) 到 0，然後發行所有資料列。|  
-|[SetRows](#setrows)|設定一次呼叫所要擷取的資料列控制代碼數目。|  
-  
-## <a name="example"></a>範例  
+**標題:** atldbcli.h
 
-下列範例示範使用`CBulkRowset`類別。  
-  
-[!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
+## <a name="members"></a>成員
+
+### <a name="methods"></a>方法
+
+|||
+|-|-|
+|[AddRefRows](#addrefrows)|遞增參考計數。|
+|[CBulkRowset](#cbulkrowset)|建構函式。|
+|[MoveFirst](#movefirst)|擷取資料，執行新的大量擷取如有必要的第一列。|
+|[MoveLast](#movelast)|移至最後一個資料列。|
+|[MoveNext](#movenext)|擷取下的一個資料列。|
+|[MovePrev](#moveprev)|移至前一個資料列。|
+|[MoveToBookmark](#movetobookmark)|擷取書籤所標記的資料列或資料列中指定的位移，從該書籤。|
+|[MoveToRatio](#movetoratio)|擷取資料列從資料列集中的小數位置開始。|
+|[ReleaseRows](#releaserows)|設定目前資料列 (`m_nCurrentRow`) 到 0，然後發行所有資料列。|
+|[SetRows](#setrows)|設定一次呼叫所要擷取的資料列控制代碼數目。|
+
+## <a name="example"></a>範例
+
+下列範例示範使用`CBulkRowset`類別。
+
+[!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]
 
 ## <a name="addrefrows"></a> Cbulkrowset:: Addrefrows
 
-呼叫[irowset:: Addrefrows](/previous-versions/windows/desktop/ms719619)遞增目前從大量資料列集擷取的所有資料列的參考計數。  
-  
-### <a name="syntax"></a>語法  
-  
-```cpp
-HRESULT AddRefRows() throw();  
-```  
-  
-### <a name="return-value"></a>傳回值  
+呼叫[irowset:: Addrefrows](/previous-versions/windows/desktop/ms719619)遞增目前從大量資料列集擷取的所有資料列的參考計數。
 
-標準的 HRESULT。 
-  
+### <a name="syntax"></a>語法
+
+```cpp
+HRESULT AddRefRows() throw();
+```
+
+### <a name="return-value"></a>傳回值
+
+標準的 HRESULT。
+
 ## <a name="cbulkrowset"></a> Cbulkrowset:: Cbulkrowset
 
-建立新的 `CBulkRowset` 物件並且將預設資料列計數設定為 10。  
-  
-### <a name="syntax"></a>語法  
-  
+建立新的 `CBulkRowset` 物件並且將預設資料列計數設定為 10。
+
+### <a name="syntax"></a>語法
+
 ```cpp
-CBulkRowset();  
-```  
+CBulkRowset();
+```
 
 ## <a name="movefirst"></a> Cbulkrowset:: Movefirst
 
-擷取第一個資料列。  
-  
-### <a name="syntax"></a>語法  
-  
+擷取第一個資料列。
+
+### <a name="syntax"></a>語法
+
 ```cpp
-HRESULT MoveFirst() throw();  
-```  
-  
-### <a name="return-value"></a>傳回值  
+HRESULT MoveFirst() throw();
+```
+
+### <a name="return-value"></a>傳回值
 
 標準的 HRESULT。
 
 ## <a name="movelast"></a> Cbulkrowset:: Movelast
 
-移至最後一個資料列。  
-  
-### <a name="syntax"></a>語法  
-  
-```cpp
-HRESULT MoveLast() throw();  
-```  
-  
-### <a name="return-value"></a>傳回值  
+移至最後一個資料列。
 
-標準的 HRESULT。  
+### <a name="syntax"></a>語法
+
+```cpp
+HRESULT MoveLast() throw();
+```
+
+### <a name="return-value"></a>傳回值
+
+標準的 HRESULT。
 
 ## <a name="movenext"></a> Cbulkrowset:: Movenext
 
-擷取下的一個資料列。  
-  
-### <a name="syntax"></a>語法  
-  
-```cpp
-HRESULT MoveNext() throw();  
-```  
-  
-### <a name="return-value"></a>傳回值  
+擷取下的一個資料列。
 
-標準的 HRESULT。 當已到達資料列集結尾時，會傳回 DB_S_ENDOFROWSET。 
+### <a name="syntax"></a>語法
+
+```cpp
+HRESULT MoveNext() throw();
+```
+
+### <a name="return-value"></a>傳回值
+
+標準的 HRESULT。 當已到達資料列集結尾時，會傳回 DB_S_ENDOFROWSET。
 
 ## <a name="moveprev"></a> Cbulkrowset:: Moveprev
 
-移至前一個資料列。  
-  
-### <a name="syntax"></a>語法  
-  
-```cpp
-HRESULT MovePrev() throw();  
-```  
-  
-### <a name="return-value"></a>傳回值  
+移至前一個資料列。
 
-標準的 HRESULT。  
+### <a name="syntax"></a>語法
+
+```cpp
+HRESULT MovePrev() throw();
+```
+
+### <a name="return-value"></a>傳回值
+
+標準的 HRESULT。
 
 ## <a name="movetobookmark"></a> Cbulkrowset:: Movetobookmark
 
-擷取標示書籤或指定之位移的資料列的資料列 (*lSkip*) 從該書籤。  
-  
-### <a name="syntax"></a>語法  
-  
+擷取標示書籤或指定之位移的資料列的資料列 (*lSkip*) 從該書籤。
+
+### <a name="syntax"></a>語法
+
 ```cpp
-HRESULT MoveToBookmark(const CBookmarkBase& bookmark, 
-   DBCOUNTITEM lSkip = 0) throw();  
-```  
-  
-#### <a name="parameters"></a>參數  
+HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
+   DBCOUNTITEM lSkip = 0) throw();
+```
+
+#### <a name="parameters"></a>參數
 
 *書籤*<br/>
-[in] 標記您要從中擷取資料之位置的書籤。  
-  
-*lSkip*<br/>
-[in] 從書籤到目標資料列的資料列計數。 如果*lSkip*為零，將擷取的第一個資料列是已標記書籤的資料列。 如果*lSkip*為 1，將擷取的第一個資料列是資料列已標記書籤的資料列之後。 如果*lSkip*為-1，將擷取的第一個資料列是已標記書籤的資料列之前的資料列。  
-  
-### <a name="return-value"></a>傳回值  
+[in] 標記您要從中擷取資料之位置的書籤。
 
-請參閱[irowset:: Getdata](/previous-versions/windows/desktop/ms716988)中*OLE DB 程式設計人員參考*。 
+*lSkip*<br/>
+[in] 從書籤到目標資料列的資料列計數。 如果*lSkip*為零，將擷取的第一個資料列是已標記書籤的資料列。 如果*lSkip*為 1，將擷取的第一個資料列是資料列已標記書籤的資料列之後。 如果*lSkip*為-1，將擷取的第一個資料列是已標記書籤的資料列之前的資料列。
+
+### <a name="return-value"></a>傳回值
+
+請參閱[irowset:: Getdata](/previous-versions/windows/desktop/ms716988)中*OLE DB 程式設計人員參考*。
 
 ## <a name="movetoratio"></a> Cbulkrowset:: Movetoratio
 
-擷取資料列從資料列集中的小數位置開始。  
-  
-### <a name="syntax"></a>語法  
-  
+擷取資料列從資料列集中的小數位置開始。
+
+### <a name="syntax"></a>語法
+
 ```cpp
-HRESULT MoveToRatio(DBCOUNTITEM nNumerator, 
-   DBCOUNTITEM nDenominator)throw();  
-```  
-  
-#### <a name="parameters"></a>參數  
+HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
+   DBCOUNTITEM nDenominator)throw();
+```
+
+#### <a name="parameters"></a>參數
 
 *nNumerator*<br/>
-[in]用來判斷要從中擷取資料的小數位置分子。  
-  
+[in]用來判斷要從中擷取資料的小數位置分子。
+
 *nDenominator*<br/>
-[in]用來判斷要從中擷取資料的小數位置分母。  
-  
-### <a name="return-value"></a>傳回值  
+[in]用來判斷要從中擷取資料的小數位置分母。
 
-標準的 HRESULT。  
-  
-### <a name="remarks"></a>備註  
+### <a name="return-value"></a>傳回值
 
-`MoveToRatio` 提取資料列大約是根據下列公式：  
-  
-`(nNumerator *  RowsetSize ) / nDenominator`  
-  
-其中`RowsetSize`是以資料列的資料列集的大小。 此公式的精確度取決於特定的提供者。 如需詳細資訊，請參閱 < [irowsetscroll::](/previous-versions/windows/desktop/ms709602)中*OLE DB 程式設計人員參考*。   
+標準的 HRESULT。
+
+### <a name="remarks"></a>備註
+
+`MoveToRatio` 提取資料列大約是根據下列公式：
+
+`(nNumerator *  RowsetSize ) / nDenominator`
+
+其中`RowsetSize`是以資料列的資料列集的大小。 此公式的精確度取決於特定的提供者。 如需詳細資訊，請參閱 < [irowsetscroll::](/previous-versions/windows/desktop/ms709602)中*OLE DB 程式設計人員參考*。
 
 ## <a name="releaserows"></a> Cbulkrowset:: Releaserows
 
-呼叫[irowset:: Releaserows](/previous-versions/windows/desktop/ms719771)遞減目前從大量資料列集擷取的所有資料列的參考計數。  
-  
-### <a name="syntax"></a>語法  
-  
-```cpp
-HRESULT ReleaseRows() throw();   
-```  
-  
-### <a name="return-value"></a>傳回值  
+呼叫[irowset:: Releaserows](/previous-versions/windows/desktop/ms719771)遞減目前從大量資料列集擷取的所有資料列的參考計數。
 
-標準的 HRESULT。  
+### <a name="syntax"></a>語法
+
+```cpp
+HRESULT ReleaseRows() throw();
+```
+
+### <a name="return-value"></a>傳回值
+
+標準的 HRESULT。
 
 ## <a name="setrows"></a> Cbulkrowset:: Setrows
 
-設定每個呼叫所擷取的資料列控制代碼數。  
-  
-### <a name="syntax"></a>語法  
-  
+設定每個呼叫所擷取的資料列控制代碼數。
+
+### <a name="syntax"></a>語法
+
 ```cpp
-void SetRows(DBROWCOUNT nRows) throw();  
-```  
-  
-#### <a name="parameters"></a>參數  
+void SetRows(DBROWCOUNT nRows) throw();
+```
+
+#### <a name="parameters"></a>參數
 
 *nRows*<br/>
-[in] 新的資料列集大小 (資料列數)。  
-  
-### <a name="remarks"></a>備註  
+[in] 新的資料列集大小 (資料列數)。
+
+### <a name="remarks"></a>備註
 
 如果您呼叫這個函式，它必須在開啟資料列集之前。
-  
-## <a name="see-also"></a>另請參閱  
+
+## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

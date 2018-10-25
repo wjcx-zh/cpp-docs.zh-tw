@@ -1,5 +1,5 @@
 ---
-title: fp_contract |Microsoft 文件
+title: fp_contract |Microsoft Docs
 ms.custom: ''
 ms.date: 03/12/2018
 ms.technology:
@@ -18,26 +18,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 514b4708129d625ea7880e4c61be22c4b1ac2db5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 95f23fa132a263970047a480ccde37382b6d03de
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912884"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052160"
 ---
 # <a name="fpcontract"></a>fp_contract
 
-判斷是否已發生浮點縮減。 浮點縮減是例如 FMA （Fused 乘以-新增），它結合了兩個個別浮點運算到單一指令的指示。 使用這些指示會影響浮點數的精確度，因為而不是捨入每個作業之後，處理器可能會捨入一次這兩項作業之後。
+判斷是否已發生浮點縮減。 浮點縮減是的指示，例如 FMA （Fused-乘號加入），結合了兩個個別浮點運算成單一的指示。 因為而不是每個作業之後的圓弧半徑，處理器可能會捨入一次這兩項作業之後，使用這些指示可能會影響浮點精確度。
 
 ## <a name="syntax"></a>語法
 
-> **#pragma fp_contract (** {**上** | **關閉**} **)**  
+> **#pragma fp_contract (** {**上** | **關閉**} **)**
 
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>備註
 
-根據預設， **fp_contract**是**上**。 這會告訴編譯器將儘可能使用浮點縮減指示。 設定**fp_contract**至**關閉**以保留個別浮點指示。
+根據預設， **fp_contract**是**上**。 這會告訴編譯器要儘可能使用浮點縮減的指示。 設定**fp_contract**要**關閉**以保留個別浮點數的指示。
 
-如需有關浮點數行為的詳細資訊，請參閱[/fp （指定浮點行為）](../build/reference/fp-specify-floating-point-behavior.md)。
+如需浮點行為的詳細資訊，請參閱[/fp （指定浮點行為）](../build/reference/fp-specify-floating-point-behavior.md)。
 
 其他浮點 pragma 包括：
 
@@ -47,8 +47,8 @@ ms.locfileid: "33912884"
 
 ## <a name="example"></a>範例
 
-這個範例產生的程式碼不使用--融合的指示，即使它使用目標處理器上。 如果您註解`#pragma fp_contract (off)`，產生的程式碼可能會使用--融合指令，如果有的話。  
-  
+這個範例產生的程式碼不使用融合-乘號加入的指令，即使它是位於目標處理器。 如果您註解`#pragma fp_contract (off)`，產生的程式碼可能會使用融合-乘號加入的指令，如果有的話。
+
 ```cpp
 // pragma_directive_fp_contract.cpp
 // on x86 and x64 compile with: /O2 /fp:fast /arch:AVX2

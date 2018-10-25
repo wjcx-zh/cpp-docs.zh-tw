@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59bc8c58c6f11903b483893e99f415ab836ae358
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4303dc9f5f72e4a9500a1d5a6a7c210e7f7bc62f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448047"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063792"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar 類別
 
@@ -121,7 +121,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用中的各種方法`CMFCRibbonStatusBar`類別。 此範例示範如何將新的功能區項目加入至功能區狀態列、 功能區狀態列擴充區域中加入功能區項目新增為分隔符號，並啟用功能區狀態列的一般模式。
+下例示範如何在 `CMFCRibbonStatusBar` 類別中使用各種方法。 此範例示範如何將新的功能區項目加入至功能區狀態列、 功能區狀態列擴充區域中加入功能區項目新增為分隔符號，並啟用功能區狀態列的一般模式。
 
 [!code-cpp[NVC_MFC_RibbonApp#15](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_1.cpp)]
 [!code-cpp[NVC_MFC_RibbonApp#16](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_2.cpp)]
@@ -289,8 +289,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 
 ### <a name="parameters"></a>參數
 
-*uiCmdID*<br/>
-[in][in]*BOOL*
+[in]*uiCmdID*<br/>
+[in]*BOOL*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -385,7 +385,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*rect*
+[in]*rect*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -425,7 +425,7 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*pElement*
+[in]*pElement*<br/>
 
 ### <a name="return-value"></a>傳回值
 

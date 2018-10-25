@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aacbb7709daf6952f00276663e20131e967a554d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 24eded7bac023bd2291e0c574012f72ba86b6bcf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022353"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053795"
 ---
 # <a name="functions-c"></a>函式 (C++)
 
@@ -101,7 +101,7 @@ int sum(int a, int b)
 
     ```
 
-     如需詳細資訊，請參閱 <<c0> [ 程式和連結](../cpp/program-and-linkage-cpp.md)。
+   如需詳細資訊，請參閱 <<c0> [ 程式和連結](../cpp/program-and-linkage-cpp.md)。
 
 1. **內嵌**，這個值會指示編譯器將本身的函式程式碼取代每個呼叫的函式。 如果函式執行速度快速並在效能關鍵的程式碼區段中重複予以叫用，則內嵌有助於提高效能。
 
@@ -112,7 +112,7 @@ int sum(int a, int b)
     }
     ```
 
-     如需詳細資訊，請參閱 <<c0> [ 內嵌函式](../cpp/inline-functions-cpp.md)。
+   如需詳細資訊，請參閱 <<c0> [ 內嵌函式](../cpp/inline-functions-cpp.md)。
 
 1. A`noexcept`運算式，指定是否函式可能會擲回例外狀況。 在下列範例中，此函式不會擲回例外狀況如果`is_pod`運算式會評估 **，則為 true**。
 
@@ -123,7 +123,7 @@ int sum(int a, int b)
     T copy_object(T& obj) noexcept(std::is_pod<T>) {...}
     ```
 
-     如需詳細資訊，請參閱 < [noexcept](../cpp/noexcept-cpp.md)。
+   如需詳細資訊，請參閱 < [noexcept](../cpp/noexcept-cpp.md)。
 
 1. （只有成員函式）Cv 限定詞，指定函式是否**const**或是**volatile**。
 
@@ -263,7 +263,6 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 ```
 
 當**自動**使用尾端傳回型別結合，只是做為預留位置的任何 decltype 運算式所產生，，和本身不會執行類型推斷。
-
 
 ## <a name="function-local-variables"></a>函式區域變數
 

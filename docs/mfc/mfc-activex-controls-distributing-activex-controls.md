@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f067b1835c9ff70c7a7c91d401a83e7fa3e1cce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 734707256bb97e25452c45829fd99a1e0fb06fd0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382293"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060308"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC ActiveX 控制項：散發 ActiveX 控制項
 
@@ -51,7 +51,6 @@ ms.locfileid: "46382293"
 - [安裝 ActiveX 控制項和可轉散發 Dll](#_core_installing_activex_controls_and_redistributable_dlls)
 
 - [註冊控制項](#_core_registering_controls)
-
 
 >[!IMPORTANT]
 > ActiveX 是舊版的技術，不應用於新的開發。 如需有關取代 ActiveX 的現代技術的詳細資訊，請參閱[ActiveX 控制項](activex-controls.md)。

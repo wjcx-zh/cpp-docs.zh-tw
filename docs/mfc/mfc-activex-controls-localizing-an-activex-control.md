@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2705061b1914ac8fad9f7ca8d769df16bab2f5c1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1a970c7fd75eec2ea028f74220cbdb046e5d23bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415690"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053275"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC ActiveX 控制項：當地語系化 ActiveX 控制項
 
@@ -68,7 +68,7 @@ ms.locfileid: "46415690"
 
 1. 控制項專案中開啟，請在**專案**功能表上，按一下**加入現有項目**。
 
-     **加入現有項目** 對話方塊隨即出現。
+   **加入現有項目** 對話方塊隨即出現。
 
 1. 如果需要，請選取要檢視的磁碟機和目錄。
 

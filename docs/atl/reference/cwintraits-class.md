@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb6ee8cd591c4a5b5a4a3701c6974849f9e3238f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 69ea4cf411e0ded0f1c324cea439d5a5a4c0c553
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069388"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062466"
 ---
 # <a name="cwintraits-class"></a>CWinTraits 類別
 
@@ -68,15 +68,15 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 
 ATL 提供三個預先定義的樣板的特製化此常用的視窗樣式的組合：
 
-- `CControlWinTraits`  
+- `CControlWinTraits`
 
    專為標準控制項的視窗。 使用下列標準樣式： WS_CHILD、 WS_VISIBLE、 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS。 沒有延伸的樣式。
 
-- `CFrameWinTraits`  
+- `CFrameWinTraits`
 
    專為標準的框架視窗。 包含所使用的標準樣式： WS_OVERLAPPEDWINDOW、 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS。 包含用於延伸的樣式： WS_EX_APPWINDOW 和 WS_EX_WINDOWEDGE。
 
-- `CMDIChildWinTraits`  
+- `CMDIChildWinTraits`
 
    專為標準的 MDI 子視窗。 包含所使用的標準樣式： WS_OVERLAPPEDWINDOW、 WS_CHILD、 WS_VISIBLE、 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS。 包含用於延伸的樣式： WS_EX_MDICHILD。
 

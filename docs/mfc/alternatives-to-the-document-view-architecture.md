@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07277e9b98186747415cf1bf6abed3e431e64fff
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b45b1a1f2903dfcdfa4a95adc161766f5bb3328c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403470"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053041"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>文件/檢視架構的替代方案
 
@@ -56,7 +56,7 @@ Visual C++ 精靈以及原始檔和對話方塊編輯器都可處理產生的應
 
 - 將文件當做未使用的附加項，並且在檢視類別中實作您的資料管理程式碼，如上面所建議。 文件的額外負荷會將對較低。 單一[CDocument](../mfc/reference/cdocument-class.md)物件時，會產生少量的額外負荷，加上的少量負荷`CDocument`的基底類別、 [CCmdTarget](../mfc/reference/ccmdtarget-class.md)並[CObject](../mfc/reference/cobject-class.md)。 後面兩個類別都很小。
 
-     在宣告`CDocument`:
+   在宣告`CDocument`:
 
    - 兩個 `CString` 物件。
 
@@ -66,7 +66,7 @@ Visual C++ 精靈以及原始檔和對話方塊編輯器都可處理產生的應
 
    - 一個 `CPtrList` 物件，包含文件檢視的清單。
 
-     此外，文件需要一些時間來建立文件物件、其檢視物件、框架視窗及文件範本物件。
+   此外，文件需要一些時間來建立文件物件、其檢視物件、框架視窗及文件範本物件。
 
 - 將文件和檢視都當做未使用的附加項。 將資料管理和繪圖程式碼放入框架視窗中，而不是檢視中。 這個方法與 C 語言程式設計模型較接近。
 

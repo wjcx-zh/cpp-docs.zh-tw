@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ec76a554068dbec050078a0e0558cecd583410c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cd9ea4397c655f0ebb28d10febe82581d6ad8771
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429199"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055004"
 ---
 # <a name="icommandui-interface"></a>ICommandUI 介面
 
@@ -73,6 +73,7 @@ interface class ICommandUI
 ```
 property UICheckState Check;
 ```
+
 ## <a name="remarks"></a>備註
 
 這個屬性會設定為適當的核取狀態的使用者介面項目，此命令。 將核取設定為下列值：
@@ -86,6 +87,7 @@ property UICheckState Check;
 ```
 void ContinueRouting();
 ```
+
 ## <a name="remarks"></a>備註
 
 這是進階的成員函式，應該會傳回 FALSE 的 ON_COMMAND_EX 處理常式搭配使用。 如需詳細資訊，請參閱技術附註 TN006： 訊息對應。
@@ -96,6 +98,7 @@ void ContinueRouting();
 ```
 property bool Enabled;
 ```
+
 ## <a name="remarks"></a>備註
 
 這個屬性會啟用或停用此命令的使用者介面項目。 將啟用 設定為 true 啟用項目，為 FALSE，則將它停用。
@@ -106,6 +109,7 @@ property bool Enabled;
 ```
 property unsigned int ID;
 ```
+
 ## <a name="remarks"></a>備註
 
 這個屬性會取得功能表項目、 工具列按鈕或其他使用者介面物件 ICommandUI 物件所代表的識別碼 （控制代碼）。
@@ -116,6 +120,7 @@ property unsigned int ID;
 ```
 property unsigned int Index;
 ```
+
 ## <a name="remarks"></a>備註
 
 這個屬性會取得功能表項目、 工具列按鈕或其他使用者介面物件 ICommandUI 物件所表示的索引 （控制代碼）。
@@ -126,6 +131,7 @@ property unsigned int Index;
 ```
 property bool Radio;
 ```
+
 ## <a name="remarks"></a>備註
 
 這個屬性會設定為適當的核取狀態的使用者介面項目，此命令。 設定選項，以 true 以啟用項目;否則為 FALSE。
@@ -136,6 +142,7 @@ property bool Radio;
 ```
 property String^ Text;
 ```
+
 ## <a name="remarks"></a>備註
 
 這個屬性設定的使用者介面項目，此命令的文字。 設定文字的文字字串控制代碼。

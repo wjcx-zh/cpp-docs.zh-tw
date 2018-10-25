@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3b93e2c52feab4dea5c4d069d48991a2e14ee54
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2705a1889e7b9c9c0960cce45b8dc7b411e16982
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438895"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060998"
 ---
 # <a name="coleexception-class"></a>COleException 類別
 
@@ -115,13 +115,11 @@ OLE 狀態程式碼中。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[coledispatchdriver:: Createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。
+  請參閱 [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)的範例。
 
 ## <a name="see-also"></a>另請參閱
 
 [MFC 範例 CALCDRIV](../../visual-cpp-samples.md)<br/>
 [CException 類別](../../mfc/reference/cexception-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-
-
 

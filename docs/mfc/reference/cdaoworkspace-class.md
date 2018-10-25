@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 964fab6030e0a89ef69730fd4867973e402db614
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a4a5b6936397728472bf0041735248157091db56
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442015"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054354"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace 類別
 
@@ -163,7 +163,7 @@ MFC DAO，用於安全性控制在未實作的使用者和群組的集合。 如
 
 - 明確地開啟預設工作區。
 
-     通常是隱含的預設工作區使用，當您開啟新[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)或是[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)物件。 但是您可能需要明確存取它，例如，若要存取資料庫引擎內容] 或 [工作區集合。 下面，請參閱 「 隱含使用預設工作區 」。
+   通常是隱含的預設工作區使用，當您開啟新[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)或是[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)物件。 但是您可能需要明確存取它，例如，若要存取資料庫引擎內容] 或 [工作區集合。 下面，請參閱 「 隱含使用預設工作區 」。
 
 - 建立新的工作區。 呼叫[Append](#append)如果您想要將它們新增至工作區集合。
 
@@ -309,7 +309,6 @@ static void PASCAL CompactDatabase(
     LPCTSTR lpszLocale = dbLangGeneral,
     int nOptions = 0);
 
-
 static void PASCAL CompactDatabase(
     LPCTSTR lpszSrcName,
     LPCTSTR lpszDestName,
@@ -453,7 +452,6 @@ void GetDatabaseInfo(
     int nIndex,
     CDaoDatabaseInfo& dbinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetDatabaseInfo(
     LPCTSTR lpszName,
@@ -624,7 +622,6 @@ void GetWorkspaceInfo(
     int nIndex,
     CDaoWorkspaceInfo& wkspcinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetWorkspaceInfo(
     LPCTSTR lpszName,

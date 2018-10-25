@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e5b2783dda3c66736a7e668186d0645cdd4b84
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 659b76a640a0dfaee75179f135fee9d1eeb5ba02
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861313"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058332"
 ---
 # <a name="storage-classes-c"></a>儲存類別 (C++)
 
@@ -35,7 +35,6 @@ A*儲存類別*內容中的 c + + 變數宣告為類型規範，可控管物件�
 1. [可變](../cpp/mutable-data-members-cpp.md)關鍵字可視為儲存類別規範。 不過，它只能在類別定義的成員清單中使用。
 
 1. **Visual c + + 2010年及更新版本：** **自動**關鍵字不再是 c + + 儲存類別規範，而**註冊**關鍵字已被取代。 **Visual Studio 2017 15.7 版及更新版本：** (適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**註冊**關鍵字從 c + + 語言中移除。
-
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class

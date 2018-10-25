@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1d3f8dc2251dbfbcd8155b0edc512a9dc40bacc2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 71e42f7d7a60478ec9344a44e8e86463e5845500
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393395"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061569"
 ---
 # <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>如何：呼叫 Windows Form 控制項的屬性和方法
 
@@ -39,11 +39,11 @@ ms.locfileid: "46393395"
 
 1. 將下行新增到公用的覆寫區段`CMFC02View`類別在 MFC02View.h 中的宣告。
 
-     `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
+   `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
 
 1. 新增 OnInitialupdate 覆寫。
 
-     顯示**屬性**視窗 (F4)。 在 **類別檢視**(CTRL + SHIFT + C)，選取 CMFC02View 類別。 在 [**屬性**] 視窗中，選取用於覆寫的圖示。 往下到清單 OnInitialUpdate Scoll。 按一下下拉式清單並選取\<新增 >。 在 MFC02View.cpp。 請確定 OnInitialUpdate 函式的主體，如下所示：
+   顯示**屬性**視窗 (F4)。 在 **類別檢視**(CTRL + SHIFT + C)，選取 CMFC02View 類別。 在 [**屬性**] 視窗中，選取用於覆寫的圖示。 往下到清單 OnInitialUpdate Scoll。 按一下下拉式清單並選取\<新增 >。 在 MFC02View.cpp。 請確定 OnInitialUpdate 函式的主體，如下所示：
 
     ```
     CWinFormsView::OnInitialUpdate();
@@ -53,11 +53,11 @@ ms.locfileid: "46393395"
 
 1. 建置並執行專案。
 
-     在 [ **建置** ] 功能表上，按一下 [ **建置方案**]。
+   在 [ **建置** ] 功能表上，按一下 [ **建置方案**]。
 
-     在 **偵錯**功能表上，按一下**啟動但不偵錯**。
+   在 **偵錯**功能表上，按一下**啟動但不偵錯**。
 
-     請注意，文字方塊現在已初始化。
+   請注意，文字方塊現在已初始化。
 
 ## <a name="see-also"></a>另請參閱
 

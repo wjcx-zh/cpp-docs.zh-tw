@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eceb6c0b4bb6a43616ceae66701e762e08713bf9
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: a6bd8c230f17e3b62d02d724cfd0744c0d335eac
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101076"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060542"
 ---
 # <a name="allocator-class"></a>allocator 類別
 
@@ -64,7 +64,7 @@ class allocator
 
 ### <a name="parameters"></a>參數
 
-*類型*<br/>
+*Type*<br/>
 正在配置或取消配置儲存體的物件類型。
 
 ## <a name="remarks"></a>備註
@@ -879,6 +879,7 @@ The integer addressed by v1Ptr has a value of: *v1Ptr = 12.
 ```cpp
 struct rebind {    typedef allocator<_Other> other ;    };
 ```
+
 ### <a name="parameters"></a>參數
 
 *other*<br/>

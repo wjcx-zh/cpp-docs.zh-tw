@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4aa07273e68f0320823d258f324bb8631aef77a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 90c50d3a918f452372aacae5beb36f5425d6a77a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095595"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053613"
 ---
 # <a name="cnonstatelessworker-class"></a>CNonStatelessWorker 類別
 
@@ -75,7 +75,7 @@ class CNonStatelessWorker
 
 ##  <a name="execute"></a>  CNonStatelessWorker::Execute
 
-實作[WorkerArchetype::Execute](worker-archetype.md#execute)。  
+實作[WorkerArchetype::Execute](worker-archetype.md#execute)。
 
 ```
 void Execute(
@@ -86,7 +86,7 @@ void Execute(
 
 ### <a name="remarks"></a>備註
 
-這個方法建立的執行個體*背景工作角色*類別上呼叫與堆疊[初始化](worker-archetype.md#initialize)該物件。 如果初始化成功，這個方法也會呼叫[Execute](worker-archetype.md#execute)並[終止](worker-archetype.md#terminate)相同的物件。  
+這個方法建立的執行個體*背景工作角色*類別上呼叫與堆疊[初始化](worker-archetype.md#initialize)該物件。 如果初始化成功，這個方法也會呼叫[Execute](worker-archetype.md#execute)並[終止](worker-archetype.md#terminate)相同的物件。
 
 ##  <a name="initialize"></a>  CNonStatelessWorker::Initialize
 

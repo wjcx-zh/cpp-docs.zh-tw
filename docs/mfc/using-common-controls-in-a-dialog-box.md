@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8d3db1d8c19b68adb8cec53984e0dfe5a189651
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7ff5c3f28a47eb4e1810f046a242f6170c537bf2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389860"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054927"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>在對話方塊中使用通用控制項
 
@@ -42,7 +42,7 @@ ms.locfileid: "46389860"
 
 1. 在  [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)對於您的對話方塊類別，設定 通用控制項的初始條件。 使用前一步驟所建立的成員變數，使用成員函式設定初始值和其他設定值。 如需有關設定值的詳細資訊，請參閱下列控制項的描述。
 
-     您也可以使用[對話資料交換](../mfc/dialog-data-exchange-and-validation.md)(DDX) 初始化對話方塊中的控制項。
+   您也可以使用[對話資料交換](../mfc/dialog-data-exchange-and-validation.md)(DDX) 初始化對話方塊中的控制項。
 
 1. 在對話方塊的控制項處理常式，使用成員變數操作控制項。 如需有關方法的詳細資訊，請參閱下列控制項的說明描述。
 

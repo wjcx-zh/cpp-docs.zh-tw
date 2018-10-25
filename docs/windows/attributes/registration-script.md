@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: edc9d5aa1d7c49de34ee3dbb02d2a55542962a50
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 78d108dfda75147e4147e94544ddddcdfa04481d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790935"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062856"
 ---
 # <a name="registrationscript"></a>registration_script
 
@@ -43,7 +43,7 @@ ms.locfileid: "48790935"
 
 **Registration_script** c + + 屬性執行所指定的自訂註冊指令碼*指令碼*。 如果未指定此屬性，則會使用標準的.rgs 檔案 （包含註冊元件的資訊）。 如需有關.rgs 檔案的詳細資訊，請參閱[ATL 登錄元件 （登錄器）](../../atl/atl-registry-component-registrar.md)。
 
-此屬性需要[coclass](coclass.md)， [progid](progid.md)，或[vi_progid](vi-progid.md)屬性 （或其中一種表示另一個屬性） 也套用至相同的項目。
+此屬性需要 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。
 
 ## <a name="example"></a>範例
 
@@ -79,10 +79,10 @@ class CMyClass:public IFace {};
 |**必要屬性**|一或多個項目： `coclass`， `progid`，或`vi_progid`。|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [COM 屬性](com-attributes.md)<br/>
 [類別屬性](class-attributes.md)<br/>
-[rdx](rdx.md)  
+[rdx](rdx.md)

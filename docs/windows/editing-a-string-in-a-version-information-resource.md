@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87fac131c053afa3c3b6d6da549d7a002fa95b64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5a456c745a11fa4250ad731f00556b211ad21b8f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445020"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061699"
 ---
 # <a name="editing-a-string-in-a-version-information-resource-c"></a>編輯版本資訊資源 （c + +） 內的字串
 
@@ -31,7 +31,7 @@ ms.locfileid: "46445020"
 
 1. 按一下並選取項目，然後再按一次開始編輯。 進行變更直接在**版本資訊**資料表或在[屬性 視窗](/visualstudio/ide/reference/properties-window)。 您所做的變更會反映在這兩個位置。
 
-   > [!NOTE] 
+   > [!NOTE]
    > 編輯時`FILEFLAGS`中的索引鍵**版本資訊**編輯器中，您會發現您無法設定**偵錯**，**私用組建**，或**特殊建置**屬性 (在**屬性**視窗).rc 檔：
 
    - **版本資訊**編輯器組**偵錯**屬性`#ifdef`中的資源指令碼中，根據`_DEBUG`組建旗標。

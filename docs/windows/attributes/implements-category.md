@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f8c7e521d4a79ad1743e87c540e984c43cad7d39
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 3f56562621d217e577abcf694fccb7de14fc4b56
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791030"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059170"
 ---
 # <a name="implementscategory"></a>implements_category
 
@@ -43,7 +43,7 @@ ms.locfileid: "48791030"
 
 **Implements_category** c + + 屬性會指定目標類別所實作的元件類別。 這是藉由建立類別目錄的對應，並加入所指定的個別項目**implements_category**屬性。 如需詳細資訊，請參閱 <<c0> [ 元件類別和執行它們的運作方式為何？](https://msdn.microsoft.com/library/windows/desktop/ms694322)。
 
-此屬性需要[coclass](coclass.md)， [progid](progid.md)，或[vi_progid](vi-progid.md)屬性 （或其中一種表示另一個屬性） 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果`progid`會套用`vi_progid`和`coclass`也會套用。
+此屬性需要 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果`progid`會套用`vi_progid`和`coclass`也會套用。
 
 ## <a name="example"></a>範例
 
@@ -73,10 +73,10 @@ class CMyClass {};
 |**必要屬性**|下列其中之一： `coclass`， `progid`，或 `vi_progid`|
 |**無效屬性**|無|
 
-如需詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [COM 屬性](com-attributes.md)<br/>
 [類別屬性](class-attributes.md)<br/>
-[IMPLEMENTED_CATEGORY](../../atl/reference/category-macros.md#implemented_category)  
+[IMPLEMENTED_CATEGORY](../../atl/reference/category-macros.md#implemented_category)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5cb71c2fcdaf60f19ca381b28213dc0c48971f6
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: c1deb68164cdcbd93b6c4992f1c2a19b01095d57
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790329"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058411"
 ---
 # <a name="v1enum"></a>v1_enum
 
@@ -64,9 +64,9 @@ enum eList {
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [IDL 屬性](idl-attributes.md)<br/>
-[Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)  
+[Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)

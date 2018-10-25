@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a76fa402cd270bfc7d0fa87902362de50c55a73
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: df131b79d3247e39aecb95c81564d7ac9fc2732d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790317"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058930"
 ---
 # <a name="coclass"></a>coclass
 
@@ -102,7 +102,7 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};
 ```
 
-下列範例示範如何覆寫函式所插入的程式碼中所顯示的預設實作**coclass**屬性。 請參閱[/Fx](../../build/reference/fx-merge-injected-code.md)如需檢視插入程式碼的詳細資訊。 任何基底類別或您使用類別的介面會出現在 插入程式碼。 此外，如果類別包含預設會在插入程式碼並明確指定該類別作為基底您 coclass，屬性提供者會使用您的程式碼中指定的格式。
+下列範例示範如何覆寫函式所插入的程式碼中所顯示的預設實作**coclass**屬性。 如需檢視插入程式碼的詳細資訊，請參閱 [/Fx](../../build/reference/fx-merge-injected-code.md) 。 任何基底類別或您使用類別的介面會出現在 插入程式碼。 此外，如果類別包含預設會在插入程式碼並明確指定該類別作為基底您 coclass，屬性提供者會使用您的程式碼中指定的格式。
 
 ```cpp
 // cpp_attr_ref_coclass2.cpp
@@ -128,7 +128,7 @@ public:
       // you can add to the default implementation
       CRegistryVirtualMachine rvm;
       HRESULT hr;
-      if (FAILED(hr = rvm.AddStandardReplacements()))  
+      if (FAILED(hr = rvm.AddStandardReplacements()))
          return hr;
       rvm.AddReplacement(_T("FriendlyName"), GetObjectFriendlyName());
       return rvm.VMUpdateRegistry(GetOpCodes(), GetOpcodeStringVals(),       GetOpcodeDWORDVals(), GetOpcodeBinaryVals(), bRegister);
@@ -147,7 +147,7 @@ public:
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 

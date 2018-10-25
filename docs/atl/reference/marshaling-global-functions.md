@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8426a0113ca245f6c9390a5c95f350398938731
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0b9a8e72cb3c1334484ed4a4e5c85c8b9a12347
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106229"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055134"
 ---
 # <a name="marshaling-global-functions"></a>封送處理全域函式
 
@@ -34,7 +34,7 @@ ms.locfileid: "46106229"
 |-|-|
 |[AtlFreeMarshalStream](#atlfreemarshalstream)|釋出的封送處理資料和`IStream`指標。|
 |[AtlMarshalPtrInProc](#atlmarshalptrinproc)|建立新的資料流物件，並封送處理指定的介面指標。|
-|[AtlUnmarshalPtr](#atlunmarshalptr)|將資料流的封送處理資料轉換成介面指標。|  
+|[AtlUnmarshalPtr](#atlunmarshalptr)|將資料流的封送處理資料轉換成介面指標。|
 
 ## <a name="requirements"></a>需求：
 
@@ -42,7 +42,7 @@ ms.locfileid: "46106229"
 
 ##  <a name="atlfreemarshalstream"></a>  AtlFreeMarshalStream
 
-釋放資料流的封送處理資料，然後釋放資料流指標。  
+釋放資料流的封送處理資料，然後釋放資料流指標。
 
 ```
 HRESULT AtlFreeMarshalStream(IStream* pStream);

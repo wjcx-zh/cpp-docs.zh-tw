@@ -20,31 +20,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e1e64d5f41950492c3c7076160e6d134f7eb62cf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6c0d2fa5ef33f744e3d76c0565920ecc27523054
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46099640"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056122"
 ---
 # <a name="data-source-object-interfaces"></a>資料來源物件介面
 
-下表定義由 OLE DB 資料來源物件的必要和選用的介面。  
-  
-|介面|是否為必要項？|實作 OLE DB 範本嗎？|  
-|---------------|---------------|--------------------------------------|  
-|`IDBCreateSession`|強制|是|  
-|`IDBInitialize`|強制|是|  
-|`IDBProperties`|強制|是|  
-|[IPersist](/windows/desktop/api/objidl/nn-objidl-ipersist)|強制|是|  
-|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Optional|否|  
-|`IDBDataSourceAdmin`|Optional|否|  
-|`IDBInfo`|Optional|否|  
-|[IPersistFile](/windows/desktop/api/objidl/nn-objidl-ipersistfile)|Optional|否|  
-|`ISupportErrorInfo`|Optional|否|  
-  
-資料來源物件實作`IDBProperties`， `IDBInitialize`，和`IDBCreateSession`透過繼承的介面。 您可以選擇支援繼承或不繼承自其中一個實作類別的其他功能。 如果您想要支援`IDBDataSourceAdmin`介面，您必須繼承自`IDBDataSourceAdminImpl`類別。  
-  
-## <a name="see-also"></a>另請參閱  
+下表定義由 OLE DB 資料來源物件的必要和選用的介面。
+
+|介面|是否為必要項？|實作 OLE DB 範本嗎？|
+|---------------|---------------|--------------------------------------|
+|`IDBCreateSession`|強制|是|
+|`IDBInitialize`|強制|是|
+|`IDBProperties`|強制|是|
+|[IPersist](/windows/desktop/api/objidl/nn-objidl-ipersist)|強制|是|
+|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Optional|否|
+|`IDBDataSourceAdmin`|Optional|否|
+|`IDBInfo`|Optional|否|
+|[IPersistFile](/windows/desktop/api/objidl/nn-objidl-ipersistfile)|Optional|否|
+|`ISupportErrorInfo`|Optional|否|
+
+資料來源物件實作`IDBProperties`， `IDBInitialize`，和`IDBCreateSession`透過繼承的介面。 您可以選擇支援繼承或不繼承自其中一個實作類別的其他功能。 如果您想要支援`IDBDataSourceAdmin`介面，您必須繼承自`IDBDataSourceAdminImpl`類別。
+
+## <a name="see-also"></a>另請參閱
 
 [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

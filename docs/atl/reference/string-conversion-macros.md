@@ -21,16 +21,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4df562e693a412ca93720748f929d1bbcefc829
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: aa44449c65dbdfdea93004fa2fe1adffdeba033d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760457"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061733"
 ---
 # <a name="string-conversion-macros"></a>字串轉換巨集
 
-這些巨集提供轉換功能的字串。  
+這些巨集提供轉換功能的字串。
 
 ##  <a name="atl_and_mfc_string_conversion_macros"></a>  ATL 和 MFC 字串轉換巨集
 
@@ -78,7 +78,7 @@ DEVMODEA2W 因此，複製`DEVMODE`LPSTR 結構字串到`DEVMODE`結構的字串
 |DEVMODEA2W|TEXTMETRICA2W|
 |DEVMODEOLE2T|TEXTMETRICOLE2T|
 |DEVMODET2OLE|TEXTMETRICT2OLE|
-|DEVMODEW2A|TEXTMETRICW2A|  
+|DEVMODEW2A|TEXTMETRICW2A|
 
 ## <a name="see-also"></a>另請參閱
 

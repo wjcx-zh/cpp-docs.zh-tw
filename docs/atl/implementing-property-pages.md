@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f69dab9dfc9216d1c56ed54730d5f94cbb58b1db
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f00e95aee0f3e16a979f4969a33b90746b4082ea
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46088731"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062401"
 ---
 # <a name="implementing-property-pages"></a>實作屬性頁
 
@@ -43,11 +43,11 @@ ms.locfileid: "46088731"
 
 - 選擇性地覆寫`IPropertyPageImpl`方法使用以下的指導方針。
 
-   |IPropertyPageImpl 方法|當您想要覆寫...|注意|  
-   |------------------------------|----------------------------------|-----------|  
-   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|執行基本的例行性檢查傳遞至您的頁面和其所支援的介面的物件數目。|執行您自己的程式碼，然後再呼叫基底類別實作。 如果所設定的物件不符合您的預期，您應儘速失敗呼叫。|  
-   |[啟用](../atl/reference/ipropertypageimpl-class.md#activate)|初始化您的頁面使用者介面 （例如，從物件中設定 最新的屬性值的對話方塊控制項、 控制項動態建立，或執行其他的初始設定）。|呼叫基底類別實作，您的程式碼之前，因此基底類別有機會建立對話方塊視窗中，所有控制項，然後再加以更新。|  
-   |[適用於](../atl/reference/ipropertypageimpl-class.md#apply)|驗證的屬性設定，並更新的物件。|就不需要呼叫基底類別實作，因為它不會執行任何除了追蹤呼叫。|  
+   |IPropertyPageImpl 方法|當您想要覆寫...|注意|
+   |------------------------------|----------------------------------|-----------|
+   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|執行基本的例行性檢查傳遞至您的頁面和其所支援的介面的物件數目。|執行您自己的程式碼，然後再呼叫基底類別實作。 如果所設定的物件不符合您的預期，您應儘速失敗呼叫。|
+   |[啟用](../atl/reference/ipropertypageimpl-class.md#activate)|初始化您的頁面使用者介面 （例如，從物件中設定 最新的屬性值的對話方塊控制項、 控制項動態建立，或執行其他的初始設定）。|呼叫基底類別實作，您的程式碼之前，因此基底類別有機會建立對話方塊視窗中，所有控制項，然後再加以更新。|
+   |[適用於](../atl/reference/ipropertypageimpl-class.md#apply)|驗證的屬性設定，並更新的物件。|就不需要呼叫基底類別實作，因為它不會執行任何除了追蹤呼叫。|
    |[停用](../atl/reference/ipropertypageimpl-class.md#deactivate)|清除與視窗相關的項目。|基底類別實作會終結代表屬性頁的對話方塊。 如果您需要清除，再終結對話方塊中，您應該加入程式碼，然後再呼叫基底類別。|
 
 範例屬性頁面上實作，請參閱[範例： 實作屬性頁](../atl/example-implementing-a-property-page.md)。

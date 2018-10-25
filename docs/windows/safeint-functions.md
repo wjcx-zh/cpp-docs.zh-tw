@@ -1,7 +1,7 @@
 ---
 title: SafeInt 函式 |Microsoft Docs
 ms.custom: ''
-ms.date: 09/28/2018
+ms.date: 10/22/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 43960e70f1aad29fa4b8fc03517231c7658d155b
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 515bf6793a2b1546bc79998283104b704de7f1ca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162577"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057281"
 ---
 # <a name="safeint-functions"></a>SafeInt 函式
 
@@ -55,6 +55,9 @@ SafeInt 程式庫提供數個您可以使用而建立的執行個體的函數[Sa
 這些功能可讓您比較，或執行而不需要先將它們轉換成相同類型的兩個不同類型的參數上的數學運算。
 
 所有這些函式有兩種範本類型：`T`和`U`。 每一種類型可以是布林值、 字元或整數類資料類型。 可以帶正負號或不帶正負號整數類資料類型及任何大小從 8 位元到 64 位元。
+
+> [!NOTE]
+> 此程式庫的最新版本是位於[ https://github.com/dcleblanc/SafeInt ](https://github.com/dcleblanc/SafeInt)。
 
 ## <a name="in-this-section"></a>本節內容
 

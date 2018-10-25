@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67a0fd2af9bb8bf3ec11d5a4e2a38c195b18633c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7d29222b461091dcd72a0c894a138a4df15b9d4b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424244"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057285"
 ---
 # <a name="database-macros-and-globals"></a>資料庫巨集和全域
 
@@ -50,7 +50,6 @@ ms.locfileid: "46424244"
 |-|-|
 |[AfxDbInitModule](#afxdbinitmodule)|新增動態連結至 MFC 之標準 MFC DLL 的資料庫支援。|
 |[AfxGetHENV](#afxgethenv)|擷取目前正在由 MFC 使用的 ODBC 環境控制代碼。 您可以直接呼叫 ODBC 時使用這個控制代碼。|
-
 
 ## <a name="afxdbinitmodule"></a> AfxDbInitModule
 
@@ -74,8 +73,6 @@ void AFXAPI AfxDbInitModule( );
 
 [巨集和全域](mfc-macros-and-globals.md)
 
-
-
 ##  <a name="afx_odbc_call"></a>  {2&AMP;GT;AFX_ODBC_CALL&AMP;LT;2}
 
 使用這個巨集呼叫可能會傳回任何 ODBC API 函式`SQL_STILL_EXECUTING`。
@@ -96,7 +93,6 @@ ODBC API 函式。 如需有關 ODBC API 函式的詳細資訊，請參閱 Windo
 叫用之前`AFX_ODBC_CALL`，您必須宣告一個變數， `nRetCode`，型別 RETCODE。
 
 請注意 MFC ODBC 類別現在使用只同步處理。 若要執行非同步作業，您必須呼叫 ODBC API 函式`SQLSetConnectOption`。 如需詳細資訊，請參閱 「 非同步執行函式 「 Windows SDK 中的主題。
-
 
 ### <a name="example"></a>範例
 

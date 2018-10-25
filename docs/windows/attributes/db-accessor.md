@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60cfe67acb2841c3cf5bf3cc371b0f70c7fcf72b
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: aa63ca982f436b49787e542c4789390faa1d16a0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790699"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057019"
 ---
 # <a name="dbaccessor"></a>db_accessor
 
@@ -87,8 +87,8 @@ public:
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 消費者屬性](ole-db-consumer-attributes.md)  
+[OLE DB 消費者屬性](ole-db-consumer-attributes.md)

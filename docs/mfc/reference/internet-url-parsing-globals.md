@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c0ffae70ae2da4edab9326a913e597fe1434611
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 18ef64bc20ba963b248273be16af7748a798a1bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383762"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054705"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>網際網路 URL 剖析全域和協助程式
 
@@ -237,6 +237,7 @@ URL 參考的物件 （可能是空的）。
   ```
 DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 ```
+
 ### <a name="parameters"></a>參數
 
 *hQuery*<br/>
@@ -297,6 +298,7 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 ```
    void AFXAPI AfxThrowInternetException(  DWORD dwContext,  DWORD dwError = 0 );
 ```
+
 ### <a name="parameters"></a>參數
 
 *dwContext*<br/>
@@ -321,5 +323,4 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 [巨集和全域](mfc-macros-and-globals.md)<br/>
 [CInternetException 類別](cinternetexception-class.md)<br/>
 [擲回](#throw)
-
 

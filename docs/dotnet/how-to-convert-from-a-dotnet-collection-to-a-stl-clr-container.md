@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ba6d6193c8422e25e174c7a4b73b2b74095cced9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4dd67728773df86f9961fe54c7dd9e4a08ec743d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436503"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060945"
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>如何：從 .NET 集合轉換為 STL/CLR 容器
 
@@ -31,7 +31,7 @@ ms.locfileid: "46436503"
 
 1. 若要轉換的整個集合，建立 STL/CLR 容器，並將集合傳遞給建構函式。
 
-     第一個範例示範此程序。
+   第一個範例示範此程序。
 
 -或-
 
@@ -39,7 +39,7 @@ ms.locfileid: "46436503"
 
 1. 將.NET 集合的內容複製到容器。 做法是使用 STL/CLR[演算法](../dotnet/algorithm-stl-clr.md)，或藉由反覆查看.NET 集合，並將複本的每個項目插入至 STL/CLR 容器。
 
-     第二個範例示範此程序。
+   第二個範例示範此程序。
 
 ## <a name="example"></a>範例
 

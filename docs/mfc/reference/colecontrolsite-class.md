@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29583218feeff997d30bfa2b16d35be45b25249
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5963bdd004bfbd242e00e8adac274f33949b08ec
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436295"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082407"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite 類別
 
@@ -307,7 +307,6 @@ virtual HRESULT CreateControl(
     CFile* pPersist = NULL,
     BOOL bStorage = FALSE,
     BSTR bstrLicKey = NULL);
-
 
 virtual HRESULT CreateControl(
     CWnd* pWndCtrl,
@@ -573,7 +572,7 @@ virtual void GetProperty(
 識別屬性，在控制項的預設上找到的分派識別碼`IDispatch`介面，以擷取。
 
 *vtProp*<br/>
-指定要擷取屬性的型別。 如需可能的值，請參閱 < 備註 > 一節[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
+指定要擷取屬性的型別。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
 
 *pvProp*<br/>
 將會收到屬性值的變數位址。 它必須符合所指定的型別*vtProp*。
@@ -637,13 +636,13 @@ virtual void AFX_CDECL InvokeHelper(
 描述的 idispatch:: Invoke 的呼叫內容的旗標。 可能*wFlags*值，請參閱`IDispatch::Invoke`Windows SDK 中。
 
 *vtRet*<br/>
-指定傳回值的類型。 如需可能的值，請參閱 < 備註 > 一節[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
+指定傳回值的類型。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
 
 *pvRet*<br/>
 要接收屬性值或傳回值之變數的位址。 它必須符合所指定的型別*vtRet*。
 
 *pbParamInfo*<br/>
-以 null 終止的字串的指定類型的下列參數的位元組指標*pbParamInfo*。 如需可能的值，請參閱 < 備註 > 一節[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
+以 null 終止的字串的指定類型的下列參數的位元組指標*pbParamInfo*。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
 
 *...*<br/>
 變數清單的參數，在指定的型別*pbParamInfo*。
@@ -652,7 +651,7 @@ virtual void AFX_CDECL InvokeHelper(
 
 *PbParamInfo*參數會指定傳遞至方法或屬性的參數類型。 變數引數清單被以...語法宣告。
 
-此函式會將參數轉換為 VARIANTARG 值，然後再叫用`IDispatch::Invoke`控制項上的方法。 如果呼叫`IDispatch::Invoke`失敗，此函式會擲回例外狀況。 如果所傳回的狀態碼`IDispatch::Invoke`已`DISP_E_EXCEPTION`，此函式會擲回`COleDispatchException`物件，否則就會擲回`COleException`。
+此函式會將參數轉換為 VARIANTARG 值，然後再叫用`IDispatch::Invoke`控制項上的方法。 若呼叫 `IDispatch::Invoke` 失敗，此函式會擲回例外狀況。 如果所傳回的狀態碼`IDispatch::Invoke`已`DISP_E_EXCEPTION`，此函式會擲回`COleDispatchException`物件，否則就會擲回`COleException`。
 
 ##  <a name="invokehelperv"></a>  COleControlSite::InvokeHelperV
 
@@ -677,13 +676,13 @@ virtual void InvokeHelperV(
 描述的 idispatch:: Invoke 的呼叫內容的旗標。
 
 *vtRet*<br/>
-指定傳回值的類型。 如需可能的值，請參閱 < 備註 > 一節[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
+指定傳回值的類型。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
 
 *pvRet*<br/>
 要接收屬性值或傳回值之變數的位址。 它必須符合所指定的型別*vtRet*。
 
 *pbParamInfo*<br/>
-以 null 終止的字串的指定類型的下列參數的位元組指標*pbParamInfo*。 如需可能的值，請參閱 < 備註 > 一節[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
+以 null 終止的字串的指定類型的下列參數的位元組指標*pbParamInfo*。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
 
 *argList*<br/>
 變數引數清單的指標。
@@ -1010,7 +1009,7 @@ virtual BOOL AFX_CDECL SafeSetProperty(
 識別屬性或方法，在控制項上找到的分派識別碼`IDispatch`介面，以設定。
 
 *vtProp*<br/>
-指定要設定屬性的型別。 如需可能的值，請參閱 < 備註 > 一節[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
+指定要設定屬性的型別。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
 
 *...*<br/>
 所指定之類型的單一參數*vtProp*。
@@ -1095,7 +1094,7 @@ virtual void AFX_CDECL SetProperty(
 識別屬性或方法，在控制項上找到的分派識別碼`IDispatch`介面，以設定。
 
 *vtProp*<br/>
-指定要設定屬性的型別。 如需可能的值，請參閱 < 備註 > 一節[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
+指定要設定屬性的型別。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
 
 *...*<br/>
 所指定之類型的單一參數*vtProp*。
@@ -1123,7 +1122,7 @@ virtual void SetPropertyV(
 識別屬性或方法，在控制項上找到的分派識別碼`IDispatch`介面，以設定。
 
 *vtProp*<br/>
-指定要設定屬性的型別。 如需可能的值，請參閱 < 備註 > 一節[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。
+指定要設定屬性的型別。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)的＜備註＞一節。
 
 *argList*<br/>
 引數清單的指標。

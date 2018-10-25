@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295749648dd54349c3fa735008ef8c04d51c8e04
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f4c2ad96674058ac57ccdc7cef9537f1cb413b92
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441898"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079697"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory 類別
 
@@ -132,7 +132,6 @@ COleObjectFactory(
     BOOL bMultiInstance,
     LPCTSTR lpszProgID);
 
-
 COleObjectFactory(
     REFCLSID clsid,
     CRuntimeClass* pRuntimeClass,
@@ -163,7 +162,7 @@ COleObjectFactory(
 
 - `afxRegFreeThreading` ThreadingModel 登錄中設定執行緒模型 = 免費。
 
-     您可以結合兩個旗標`afxRegApartmentThreading`和`afxRegFreeThreading`設 ThreadingModel = Both。 請參閱[InprocServer32](/windows/desktop/com/inprocserver32)的執行緒模型註冊的更多有關 Windows SDK 中。
+   您可以結合兩個旗標`afxRegApartmentThreading`和`afxRegFreeThreading`設 ThreadingModel = Both。 請參閱[InprocServer32](/windows/desktop/com/inprocserver32)的執行緒模型註冊的更多有關 Windows SDK 中。
 
 *lpszProgID*<br/>
 指向字串，包含動詞化程式識別碼，例如 「 Microsoft Excel。 」
@@ -349,7 +348,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
 
 - **UpdateRegistry (** `bRegister` **)** 這種形式的函式是可覆寫。 如果*bRegister*為 TRUE 時，此控制項類別系統登錄的函式暫存器。 否則，它會取消註冊類別。
 
-     如果您要建立您的專案使用 MFC ActiveX ControlWizard，ControlWizard 提供覆寫，此純虛擬函式。
+   如果您要建立您的專案使用 MFC ActiveX ControlWizard，ControlWizard 提供覆寫，此純虛擬函式。
 
 ##  <a name="updateregistryall"></a>  登錄下列項目
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e885ef1db8f282bbdca2e8c39c3d1221d791d1a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e067b1d72b80950b4ed33fbae8cac7333ac0438
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067632"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083070"
 ---
 # <a name="atl-module-classes"></a>ATL 模組類別
 
@@ -55,15 +55,15 @@ ms.locfileid: "46067632"
 
 - 進行中的功能`CComModule`細微。
 
-     適用於 COM、 視窗化、 偵錯介面，和應用程式專屬 （DLL 或 EXE） 功能的支援現在為個別的類別。
+   適用於 COM、 視窗化、 偵錯介面，和應用程式專屬 （DLL 或 EXE） 功能的支援現在為個別的類別。
 
 - 自動宣告每個模組的全域執行的個體。
 
-     要求的模組類別的全域執行個體連結至專案。
+   要求的模組類別的全域執行個體連結至專案。
 
 - 移除需要呼叫 Init 和詞彙的方法。
 
-     Init 和詞彙的方法已移至建構函式和解構函式模組類別;此外已不再需要呼叫 Init 和詞彙。
+   Init 和詞彙的方法已移至建構函式和解構函式模組類別;此外已不再需要呼叫 Init 和詞彙。
 
 ## <a name="see-also"></a>另請參閱
 

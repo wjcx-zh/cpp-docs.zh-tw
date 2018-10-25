@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07dddbcfba7920efdda1f222843299ef29f19f0c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 926a0f90f366f3644bfce33f15a0a85dd1792a85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235785"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076746"
 ---
 # <a name="vector-class"></a>vector 類別
 
@@ -116,7 +116,7 @@ class vector
 
 ### <a name="parameters"></a>參數
 
-*類型*<br/>
+*Type*<br/>
 要儲存在向量中的項目資料類型
 
 *配置器*<br/>
@@ -370,7 +370,7 @@ const_reference back() const;
 
 如果 `back` 的傳回值已指派給 `const_reference`，則無法修改向量物件。 如果 `back` 的傳回值指派給 `reference`，則可以修改向量物件。
 
-在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空向量中的元素，則會發生執行階段錯誤。  如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
+在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空向量中的元素，則會發生執行階段錯誤。  如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
 ### <a name="example"></a>範例
 
@@ -402,7 +402,6 @@ int main() {
 
 ```cpp
 const_iterator begin() const;
-
 
 iterator begin();
 ```
@@ -789,7 +788,6 @@ int main( )
 ```cpp
 const_pointer data() const;
 
-
 pointer data();
 ```
 
@@ -1165,7 +1163,7 @@ const_reference front() const;
 
 如果 `front` 的傳回值已指派給 `const_reference`，則無法修改向量物件。 如果 `front` 的傳回值指派給 **reference**，則可以修改向量物件。
 
-在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空向量中的元素，則會發生執行階段錯誤。  如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
+在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空向量中的元素，則會發生執行階段錯誤。  如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
 ### <a name="example"></a>範例
 
@@ -1410,7 +1408,7 @@ const_reference operator[](size_type Pos) const;
 
 如果 `operator[]` 的傳回值已指派給 `const_reference`，則無法修改向量物件。 如果 `operator[]` 的傳回值已指派給參考，則可以修改向量物件。
 
-當使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 編譯之後，如果您嘗試存取的項目超出向量界限，則會發生執行階段錯誤。  如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
+當使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 編譯之後，如果您嘗試存取的項目超出向量界限，則會發生執行階段錯誤。  如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
 ### <a name="example"></a>範例
 
@@ -1554,7 +1552,6 @@ void pop_back();
 
 ```cpp
 void push_back(const T& Val);
-
 
 void push_back(T&& Val);
 ```

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e81ca5418782b993f406f33b0b207bc8acb5ba0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc70d6cd5933608067a43cdb7dcca1e11dd22a2d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393655"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082285"
 ---
 # <a name="resizing-an-image-image-editor-for-icons"></a>調整影像大小 (圖示影像編輯器)
 
@@ -37,7 +37,7 @@ ms.locfileid: "46393655"
 
 有兩種機制來調整影像大小： 調整大小控點並[屬性 視窗](/visualstudio/ide/reference/properties-window)。 您可以拖曳調整大小控點，若要變更的所有大小或影像的一部分。 您可以拖曳調整大小控點是純色。 您無法將拖曳空心的控制代碼。 您可以使用**屬性**視窗重新調整整個影像，未選取的組件。
 
-![縮放控點上的點陣圖](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")  
+![縮放控點上的點陣圖](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")<br/>
 縮放控點
 
 > [!NOTE]

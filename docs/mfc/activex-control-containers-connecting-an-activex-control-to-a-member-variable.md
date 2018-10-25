@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae0cefa518ce44913f5c316a096d221fa9bd41aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1e6fed56e21f2b5d97b9b89596630cd63f544148
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433851"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078683"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>ActiveX 控制項容器：將 ActiveX 控制項連接至成員變數
 
@@ -45,7 +45,7 @@ ms.locfileid: "46433851"
 
 1. 在 **變數的名稱**方塊中，輸入名稱。
 
-     例如， *m_circctl*。
+   例如， *m_circctl*。
 
 1. 按一下 **完成**接受您的選擇，並結束 加入成員變數精靈。
 

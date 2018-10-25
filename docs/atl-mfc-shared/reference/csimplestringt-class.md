@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f835558bb4d97f90857d44ef63e4b8f6075d2c0
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 326fdd3d4d5e8f19408adc7300c97523b37d942e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809144"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078930"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT 類別
 
@@ -73,7 +73,7 @@ class CSimpleStringT
 
 - **wchar_t** （適用於 Unicode 字元字串）。
 
-- TCHAR （適用於 ANSI 和 Unicode 字元字串）。  
+- TCHAR （適用於 ANSI 和 Unicode 字元字串）。
 
 ## <a name="members"></a>成員
 
@@ -89,8 +89,7 @@ class CSimpleStringT
 |名稱|描述|
 |----------|-----------------|
 |[CSimpleStringT::CSimpleStringT](#ctor)|建構`CSimpleStringT`以各種方式的物件。|
-|[CSimpleStringT:: ~ CSimpleStringT](#dtor)|解構函式。|  
-
+|[CSimpleStringT:: ~ CSimpleStringT](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -119,7 +118,7 @@ class CSimpleStringT
 |[CSimpleStringT::SetString](#setstring)|設定字串`CSimpleStringT`物件。|
 |[CSimpleStringT::StringLength](#stringlength)|指定的字串中傳回字元的數。|
 |[CSimpleStringT::Truncate](#truncate)|會截斷至指定之長度的字串。|
-|[CSimpleStringT::UnlockBuffer](#unlockbuffer)|可讓參考計數，並釋放緩衝區中的字串。|  
+|[CSimpleStringT::UnlockBuffer](#unlockbuffer)|可讓參考計數，並釋放緩衝區中的字串。|
 
 ### <a name="public-operators"></a>公用運算子
 
@@ -136,7 +135,7 @@ class CSimpleStringT
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlsimpstr.h  
+**標頭：** atlsimpstr.h
 
 ## <a name="append"></a> CSimpleStringT::Append
 
@@ -145,10 +144,11 @@ class CSimpleStringT
 ### <a name="syntax"></a>語法
 
 ```
-void Append(const CSimpleStringT& strSrc); 
-void Append(PCXSTR pszSrc, int nLength); 
+void Append(const CSimpleStringT& strSrc);
+void Append(PCXSTR pszSrc, int nLength);
 void Append(PCXSTR pszSrc);
 ```
+
 #### <a name="parameters"></a>參數
 
 *strSrc*<br/>
@@ -168,7 +168,7 @@ void Append(PCXSTR pszSrc);
 
 下列範例示範 `CSimpleStringT::Append` 的用法。
 
-```cpp  
+```cpp
 CSimpleString str1(pMgr), str2(pMgr);
 str1.SetString(_T("Soccer is"));
 str2.SetString(_T(" an elegant game"));
@@ -185,6 +185,7 @@ ASSERT(_tcscmp(str1, _T("Soccer is an elegant game")) == 0);
 ```
 void AppendChar(XCHAR ch);
 ```
+
 #### <a name="parameters"></a>參數
 
 *ch*<br/>
@@ -198,7 +199,7 @@ void AppendChar(XCHAR ch);
 
 將複製的字元或字元`CSimpleStringT`物件。
 
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>語法
 
 ```
 static void CopyChars(
@@ -226,7 +227,7 @@ static void CopyChars(
 
 下列範例示範 `CSimpleStringT::CopyChars` 的用法。
 
-```cpp  
+```cpp
 CSimpleString str(_T("xxxxxxxxxxxxxxxxxxx"), 20, pMgr);
 TCHAR* pszSrc = _T("Hello world!");
 _tprintf_s(_T("%s\n"), str);
@@ -238,7 +239,7 @@ _tprintf_s(_T("%s\n"), str);
 
 將複製的字元或字元`CSimpleStringT`物件。
 
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>語法
 
 ```
 static void CopyCharsOverlapped(
@@ -273,11 +274,12 @@ static void CopyCharsOverlapped(
 ### <a name="syntax"></a>語法
 
 ```
-CSimpleStringT(const XCHAR* pchSrc, int nLength, IAtlStringMgr* pStringMgr); 
-CSimpleStringT(PCXSTR pszSrc, IAtlStringMgr* pStringMgr); 
-CSimpleStringT(const CSimpleStringT& strSrc); 
-explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw(); 
+CSimpleStringT(const XCHAR* pchSrc, int nLength, IAtlStringMgr* pStringMgr);
+CSimpleStringT(PCXSTR pszSrc, IAtlStringMgr* pStringMgr);
+CSimpleStringT(const CSimpleStringT& strSrc);
+explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
 ```
+
 #### <a name="parameters"></a>參數
 
 *strSrc*<br/>
@@ -303,7 +305,7 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
 
 下列範例示範如何使用`CSimpleStringT::CSimpleStringT`使用 ATL **typedef** `CSimpleString`。 `CSimpleString` 是常用的類別樣板特製化`CSimpleStringT`。
 
-```cpp  
+```cpp
 CSimpleString s1(pMgr);
 // Empty string
 CSimpleString s2(_T("cat"), pMgr);
@@ -315,9 +317,8 @@ CSimpleString s4(s2 + _T(" ") + s3);
 
 // From a string expression
 CSimpleString s5(_T("xxxxxx"), 6, pMgr);
-// s5 = "xxxxxx"   
+// s5 = "xxxxxx"
 ```
-
 
 ##  <a name="empty"></a>  CSimpleStringT::Empty
 
@@ -326,8 +327,9 @@ CSimpleString s5(_T("xxxxxx"), 6, pMgr);
 ### <a name="syntax"></a>語法
 
 ```
-void Empty() throw();  
+void Empty() throw();
 ```
+
 ### <a name="remarks"></a>備註
 
 如需詳細資訊，請參閱 <<c0> [ 字串： CString 例外狀況清除](../cstring-exception-cleanup.md)。
@@ -336,9 +338,9 @@ void Empty() throw();
 
 下列範例示範 `CSimpleStringT::Empty` 的用法。
 
-```cpp  
+```cpp
 CSimpleString s(pMgr);
-ASSERT(s.IsEmpty());  
+ASSERT(s.IsEmpty());
 ```
 
 ##  <a name="freeextra"></a>  CSimpleStringT::FreeExtra
@@ -348,15 +350,16 @@ ASSERT(s.IsEmpty());
 ### <a name="syntax"></a>語法
 
 ```
-void FreeExtra(); 
+void FreeExtra();
 ```
+
 ### <a name="remarks"></a>備註
 
 這應該會減少字串物件所耗用的記憶體額外負荷。 方法會重新配置所傳回的實際長度的緩衝區[GetLength](#getlength)。
 
 ### <a name="example"></a>範例
 
-```cpp  
+```cpp
 CAtlString basestr;
 IAtlStringMgr* pMgr;
 
@@ -368,13 +371,13 @@ CSimpleString str(_T("Many sports are fun to play."), 28, pMgr);
 _tprintf_s(_T("Alloc length is %d, String length is %d\n"),
    str.GetAllocLength(), str.GetLength());
 
-// Assigning a smaller string won't cause CSimpleString to free its 
+// Assigning a smaller string won't cause CSimpleString to free its
 // memory, because it assumes the string will grow again anyway.
 str = _T("Soccer is best!");
 _tprintf_s(_T("Alloc length is %d, String length is %d\n"),
    str.GetAllocLength(), str.GetLength());
 
-// This call forces CSimpleString to release the extra 
+// This call forces CSimpleString to release the extra
 // memory it doesn't need.
 str.FreeExtra();
 _tprintf_s(_T("Alloc length is %d, String length is %d\n"),
@@ -398,8 +401,9 @@ Alloc length is 15, String length is 15
 ### <a name="syntax"></a>語法
 
 ```
-int GetAllocLength() const throw();  
+int GetAllocLength() const throw();
 ```
+
 ### <a name="return-value"></a>傳回值
 
 配置給這個物件的字元數。
@@ -417,6 +421,7 @@ int GetAllocLength() const throw();
 ```
 XCHAR GetAt(int iChar) const;
 ```
+
 #### <a name="parameters"></a>參數
 
 *iChar*<br/>
@@ -434,7 +439,7 @@ XCHAR GetAt(int iChar) const;
 
 下列範例示範如何使用`CSimpleStringT::GetAt`。
 
-```cpp  
+```cpp
 CSimpleString s(_T("abcdef"), pMgr);
 ASSERT(s.GetAt(2) == _T('c'));
 ```
@@ -446,9 +451,10 @@ ASSERT(s.GetAt(2) == _T('c'));
 ### <a name="syntax"></a>語法
 
 ```
-PXSTR GetBuffer(int nMinBufferLength); 
+PXSTR GetBuffer(int nMinBufferLength);
 PXSTR GetBuffer();
 ```
+
 #### <a name="parameters"></a>參數
 
 *nMinBufferLength*<br/>
@@ -476,7 +482,7 @@ PXSTR GetBuffer();
 
 ### <a name="example"></a>範例
 
-```cpp  
+```cpp
 CSimpleString s(_T("abcd"), pMgr);
 LPTSTR pBuffer = s.GetBuffer(10);
 int sizeOfBuffer = s.GetAllocLength();
@@ -484,7 +490,7 @@ int sizeOfBuffer = s.GetAllocLength();
 // Directly access CSimpleString buffer
 _tcscpy_s(pBuffer, sizeOfBuffer, _T("Hello"));
 ASSERT(_tcscmp(s, _T("Hello")) == 0);
-s.ReleaseBuffer();   
+s.ReleaseBuffer();
 ```
 
 ##  <a name="getbuffersetlength"></a>  CSimpleStringT::GetBufferSetLength
@@ -496,6 +502,7 @@ s.ReleaseBuffer();
 ```
 PXSTR GetBufferSetLength(int nLength);
 ```
+
 #### <a name="parameters"></a>參數
 
 *nLength*<br/>
@@ -529,14 +536,14 @@ A`PXSTR`的物件 （以 null 終止） 的字元緩衝區的指標。
 
 下列範例示範 `CSimpleStringT::GetBufferSetLength` 的用法。
 
-```cpp  
+```cpp
 CSimpleString str(pMgr);
 LPTSTR pstr = str.GetBufferSetLength(3);
 pstr[0] = _T('C');
 pstr[1] = _T('u');
 pstr[2] = _T('p');
 
-// No need for trailing zero or call to ReleaseBuffer() 
+// No need for trailing zero or call to ReleaseBuffer()
 // because GetBufferSetLength() set it for us.
 
 str += _T(" soccer is best!");
@@ -550,8 +557,9 @@ ASSERT(_tcscmp(str, _T("Cup soccer is best!")) == 0);
 ### <a name="syntax"></a>語法
 
 ```
-int GetLength() const throw();  
+int GetLength() const throw();
 ```
+
 ### <a name="return-value"></a>傳回值
 
 在字串中字元計數。
@@ -569,8 +577,9 @@ int GetLength() const throw();
 ### <a name="syntax"></a>語法
 
 ```
-IAtlStringMgr* GetManager() const throw();  
+IAtlStringMgr* GetManager() const throw();
 ```
+
 ### <a name="return-value"></a>傳回值
 
 指標，memory manager`CSimpleStringT`物件。
@@ -588,6 +597,7 @@ IAtlStringMgr* GetManager() const throw();
 ```
 PCXSTR GetString() const throw();
 ```
+
 ### <a name="return-value"></a>傳回值
 
 以 null 結束的字元字串指標。
@@ -603,7 +613,7 @@ PCXSTR GetString() const throw();
 
 下列範例示範 `CSimpleStringT::GetString` 的用法。
 
-```cpp  
+```cpp
 CSimpleString str(pMgr);
 str += _T("Cup soccer is best!");
 _tprintf_s(_T("%s"), str.GetString());
@@ -616,8 +626,9 @@ _tprintf_s(_T("%s"), str.GetString());
 ### <a name="syntax"></a>語法
 
 ```
-bool IsEmpty() const throw();  
+bool IsEmpty() const throw();
 ```
+
 ### <a name="return-value"></a>傳回值
 
 如果為 true`CSimpleStringT`物件具有 0 長度，否則為 FALSE。
@@ -630,7 +641,7 @@ bool IsEmpty() const throw();
 
 下列範例示範 `CSimpleStringT::IsEmpty` 的用法。
 
-```cpp  
+```cpp
 CSimpleString s(pMgr);
 ASSERT(s.IsEmpty());
 ```
@@ -644,6 +655,7 @@ ASSERT(s.IsEmpty());
 ```
 PXSTR LockBuffer();
 ```
+
 ### <a name="return-value"></a>傳回值
 
 指標`CSimpleStringT`物件或以 null 結束的字串。
@@ -675,7 +687,7 @@ PXSTR LockBuffer();
 
 下列範例示範 `CSimpleStringT::LockBuffer` 的用法。
 
-```cpp  
+```cpp
 CSimpleString str(_T("Hello"), pMgr);
 TCHAR ch;
 
@@ -694,6 +706,7 @@ str.UnlockBuffer();
 ```
 XCHAR operator[](int iChar) const;
 ```
+
 #### <a name="parameters"></a>參數
 
 *iChar*<br/>
@@ -710,7 +723,7 @@ XCHAR operator[](int iChar) const;
 
 下列範例示範 `CSimpleStringT::operator []` 的用法。
 
-```cpp  
+```cpp
 CSimpleString s(_T("abc"), pMgr);
 ASSERT(s[1] == _T('b'));
 ```
@@ -721,7 +734,7 @@ ASSERT(s[1] == _T('b'));
 
 ### <a name="syntax"></a>語法
 
-``` 
+```
 XCHAR operator[](int iChar) const;
 ```
 
@@ -737,7 +750,6 @@ XCHAR operator[](int iChar) const;
 > [!NOTE]
 >  您可以使用註標 (**[]**) 來取得中的字元值的運算子`CSimpleStringT`，但您無法使用它來變更中的字元值`CSimpleStringT`。
 
-
 ##  <a name="operator_add_eq"></a>  CSimpleStringT::operator + =
 
 加入現有的字串結尾的新字串或字元。
@@ -745,14 +757,15 @@ XCHAR operator[](int iChar) const;
 ### <a name="syntax"></a>語法
 
 ```
-CSimpleStringT& operator +=(PCXSTR pszSrc); 
-CSimpleStringT& operator +=(const CSimpleStringT& strSrc); 
-template<int t_nSize>  
-CSimpleStringT& operator+=(const CStaticString< XCHAR, t_nSize >& strSrc); 
-CSimpleStringT& operator +=(char ch); 
-CSimpleStringT& operator +=(unsigned char ch); 
+CSimpleStringT& operator +=(PCXSTR pszSrc);
+CSimpleStringT& operator +=(const CSimpleStringT& strSrc);
+template<int t_nSize>
+CSimpleStringT& operator+=(const CStaticString< XCHAR, t_nSize >& strSrc);
+CSimpleStringT& operator +=(char ch);
+CSimpleStringT& operator +=(unsigned char ch);
 CSimpleStringT& operator +=(wchar_t ch);
 ```
+
 #### <a name="parameters"></a>參數
 
 *pszSrc*<br/>
@@ -772,7 +785,7 @@ CSimpleStringT& operator +=(wchar_t ch);
 
 下列範例示範 `CSimpleStringT::operator +=` 的用法。
 
-```cpp  
+```cpp
 CSimpleString str(_T("abc"), pMgr);
 ASSERT(_tcscmp((str += _T("def")), _T("abcdef")) == 0);
 ```
@@ -784,9 +797,10 @@ ASSERT(_tcscmp((str += _T("def")), _T("abcdef")) == 0);
 ### <a name="syntax"></a>語法
 
 ```
-CSimpleStringT& operator =(PCXSTR pszSrc); 
+CSimpleStringT& operator =(PCXSTR pszSrc);
 CSimpleStringT& operator =(const CSimpleStringT& strSrc);
 ```
+
 #### <a name="parameters"></a>參數
 
 *pszSrc*<br/>
@@ -803,7 +817,7 @@ CSimpleStringT& operator =(const CSimpleStringT& strSrc);
 
 下列範例示範 `CSimpleStringT::operator =` 的用法。
 
-```cpp  
+```cpp
 CSimpleString s1(pMgr), s2(pMgr);
 // Empty CSimpleStringT objects
 
@@ -814,7 +828,7 @@ ASSERT(_tcscmp(s1, _T("cat")) == 0);
 s2 = s1;               // s1 and s2 each = "cat"
 ASSERT(_tcscmp(s2, _T("cat")) == 0);
 
-s1 = _T("the ") + s1;      
+s1 = _T("the ") + s1;
 // Or expressions
 ASSERT(_tcscmp(s1, _T("the cat")) == 0);
 
@@ -823,7 +837,7 @@ s1 = _T("x");
 ASSERT(_tcscmp(s1, _T("x")) == 0);
 ```
 
-##  <a name="operator_pcxstr"></a>  CSimpleStringT::operator PCXSTR  
+##  <a name="operator_pcxstr"></a>  CSimpleStringT::operator PCXSTR
 
 直接存取儲存在字元`CSimpleStringT`為 C 樣式字串的物件。
 
@@ -832,6 +846,7 @@ ASSERT(_tcscmp(s1, _T("x")) == 0);
 ```
 operator PCXSTR() const throw();
 ```
+
 ### <a name="return-value"></a>傳回值
 
 字串資料的字元指標。
@@ -844,8 +859,8 @@ operator PCXSTR() const throw();
 
 下列範例示範 `CSimpleStringT::operator PCXSTR` 的用法。
 
-```cpp  
-// If the prototype of a function is known to the compiler, 
+```cpp
+// If the prototype of a function is known to the compiler,
 // the PCXSTR cast operator may be invoked implicitly.
 
 CSimpleString strSports(L"Soccer is Best!", pMgr);
@@ -853,25 +868,25 @@ WCHAR sz[1024];
 
 wcscpy_s(sz, strSports);
 
-// If the prototype isn't known or is a va_arg prototype, 
-// you must invoke the cast operator explicitly. For example, 
+// If the prototype isn't known or is a va_arg prototype,
+// you must invoke the cast operator explicitly. For example,
 // the va_arg part of a call to swprintf_s() needs the cast:
 
 swprintf_s(sz, 1024, L"I think that %s!\n", (PCWSTR)strSports);
 
-// While the format parameter is known to be an PCXSTR and 
+// While the format parameter is known to be an PCXSTR and
 // therefore doesn't need the cast:
 
 swprintf_s(sz, 1024, strSports);
 
-// Note that some situations are ambiguous. This line will 
+// Note that some situations are ambiguous. This line will
 // put the address of the strSports object to stdout:
 
 wcout << strSports;
 
 // while this line will put the content of the string out:
 
-wcout << (PCWSTR)strSports;   
+wcout << (PCWSTR)strSports;
 ```
 
 ##  <a name="pcxstr"></a>  CSimpleStringT::PCXSTR
@@ -881,8 +896,9 @@ wcout << (PCWSTR)strSports;
 ### <a name="syntax"></a>語法
 
 ```
-typedef ChTraitsBase< BaseType >::PCXSTR PCXSTR;    
+typedef ChTraitsBase< BaseType >::PCXSTR PCXSTR;
 ```
+
 ##  <a name="preallocate"></a>  CSimpleStringT::Preallocate
 
 配置一段特定的位元組數`CSimpleStringT`物件。
@@ -892,6 +908,7 @@ typedef ChTraitsBase< BaseType >::PCXSTR PCXSTR;
 ```
 void Preallocate( int nLength);
 ```
+
 #### <a name="parameters"></a>參數
 
 *nLength*<br/>
@@ -907,7 +924,7 @@ void Preallocate( int nLength);
 
 下列範例示範 `CSimpleStringT::Preallocate` 的用法。
 
-```cpp  
+```cpp
 CSimpleString str(pMgr);
 _tprintf_s(_T("Allocated length: %d\n"), str.GetAllocLength());
 str.Preallocate(100);
@@ -921,8 +938,9 @@ _tprintf_s(_T("Allocated length: %d\n"), str.GetAllocLength());
 ### <a name="syntax"></a>語法
 
 ```
-typedef ChTraitsBase< BaseType >::PXSTR PXSTR;  
+typedef ChTraitsBase< BaseType >::PXSTR PXSTR;
 ```
+
 ##  <a name="releasebuffer"></a>  CSimpleStringT::ReleaseBuffer
 
 版本控制配置的緩衝區[GetBuffer](#getbuffer)。
@@ -932,6 +950,7 @@ typedef ChTraitsBase< BaseType >::PXSTR PXSTR;
 ```
 void ReleaseBuffer(int nNewLength = -1);
 ```
+
 #### <a name="parameters"></a>參數
 
 *nNewLength*<br/>
@@ -945,7 +964,7 @@ void ReleaseBuffer(int nNewLength = -1);
 
 下列範例示範 `CSimpleStringT::ReleaseBuffer` 的用法。
 
-```cpp  
+```cpp
 const int bufferSize = 1024;
 CSimpleString s(_T("abc"), pMgr);
 LPTSTR p = s.GetBuffer(bufferSize);
@@ -972,6 +991,7 @@ ASSERT(s.GetLength() == 3);
 ```
 void ReleaseBufferSetLength(int nNewLength);
 ```
+
 #### <a name="parameters"></a>參數
 
 *nNewLength*<br/>
@@ -990,6 +1010,7 @@ void ReleaseBufferSetLength(int nNewLength);
 ```
 void SetAt(int iChar, XCHAR ch);
 ```
+
 #### <a name="parameters"></a>參數
 
 *iChar*<br/>
@@ -1006,7 +1027,7 @@ void SetAt(int iChar, XCHAR ch);
 
 下列範例示範 `CSimpleStringT::SetAt` 的用法。
 
-```cpp  
+```cpp
 CSimpleString s(_T("abcdef"), pMgr);
 s.SetAt(1, _T('a'));
 ASSERT(_tcscmp(s, _T("aacdef")) == 0);
@@ -1021,6 +1042,7 @@ ASSERT(_tcscmp(s, _T("aacdef")) == 0);
 ```
 void SetManager(IAtlStringMgr* pStringMgr);
 ```
+
 #### <a name="parameters"></a>參數
 
 *pStringMgr*<br/>
@@ -1034,7 +1056,7 @@ void SetManager(IAtlStringMgr* pStringMgr);
 
 下列範例示範 `CSimpleStringT::SetManager` 的用法。
 
-```cpp  
+```cpp
 CSimpleString s(pMgr);
 s.SetManager(pCustomMgr);
 ```
@@ -1046,9 +1068,10 @@ s.SetManager(pCustomMgr);
 ### <a name="syntax"></a>語法
 
 ```
-void SetString(PCXSTR pszSrc, int nLength); 
+void SetString(PCXSTR pszSrc, int nLength);
 void SetString(PCXSTR pszSrc);
 ```
+
 #### <a name="parameters"></a>參數
 
 *pszSrc*<br/>
@@ -1073,7 +1096,7 @@ void SetString(PCXSTR pszSrc);
 
 下列範例示範 `CSimpleStringT::SetString` 的用法。
 
-```cpp  
+```cpp
 CSimpleString s(_T("abcdef"), pMgr);
 ASSERT(_tcscmp(s, _T("abcdef")) == 0);
 s.SetString(_T("Soccer"), 6);
@@ -1089,6 +1112,7 @@ ASSERT(_tcscmp(s, _T("Soccer")) == 0);
 ```
 ATL_NOINLINE static int StringLength(PCXSTR psz) throw();
 ```
+
 #### <a name="parameters"></a>參數
 
 *psz*<br/>
@@ -1106,7 +1130,7 @@ ATL_NOINLINE static int StringLength(PCXSTR psz) throw();
 
 下列範例示範 `CSimpleStringT::StringLength` 的用法。
 
-```cpp  
+```cpp
 ASSERT(CSimpleString::StringLength(_T("soccer")) == 6);
 ```
 
@@ -1119,6 +1143,7 @@ ASSERT(CSimpleString::StringLength(_T("soccer")) == 6);
 ```
 void Truncate(int nNewLength);
 ```
+
 #### <a name="parameters"></a>參數
 
 *nNewLength*<br/>
@@ -1135,7 +1160,7 @@ void Truncate(int nNewLength);
 
 下列範例示範 `CSimpleStringT::Truncate` 的用法。
 
-```cpp  
+```cpp
 CSimpleString str(_T("abcdefghi"), pMgr);
 _tprintf_s(_T("Allocated length: %d\n"), str.GetLength());
 _tprintf_s(_T("Contents: %s\n"), str);
@@ -1153,6 +1178,7 @@ _tprintf_s(_T("Contents: %s\n"), str);
 ```
 void UnlockBuffer() throw();
 ```
+
 ### <a name="remarks"></a>備註
 
 呼叫這個方法來重設之字串的參考計數為 1。
@@ -1168,6 +1194,7 @@ void UnlockBuffer() throw();
 ```
 ~CSimpleStringT() throw();
 ```
+
 ### <a name="remarks"></a>備註
 
 呼叫這個方法來終結`CSimpleStringT`物件。

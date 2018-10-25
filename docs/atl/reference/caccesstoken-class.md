@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee8080c8e2caacb882f43425ab528a08dd2f8ea0
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 881c86a75d9015117be4b51a8b7457bed4988fd3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083745"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078540"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 類別
 
@@ -185,7 +185,7 @@ virtual ~CAccessToken() throw();
 
 ```
 bool CheckTokenMembership(
-    const CSid& rSid, 
+    const CSid& rSid,
     bool* pbIsMember) const throw(...);
 ```
 
@@ -216,7 +216,7 @@ bool CheckTokenMembership(
 
 ```
 bool CreateImpersonationToken(
-    CAccessToken* pImp, 
+    CAccessToken* pImp,
     SECURITY_IMPERSONATION_LEVEL sil = SecurityImpersonation) const throw(...);
 ```
 
@@ -1086,7 +1086,7 @@ bool OpenThreadToken(
 ```
 bool PrivilegeCheck(
     PPRIVILEGE_SET RequiredPrivileges,
-     bool* pbResult) const throw();
+    bool* pbResult) const throw();
 ```
 
 ### <a name="parameters"></a>參數

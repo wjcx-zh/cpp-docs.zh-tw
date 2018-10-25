@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04a533acecd837fd5bad51612ce7b7eced841178
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 19dc08fc29de4affaea987025a2bc8b92bc56460
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376482"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079853"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX 控制項：屬性頁
 
@@ -86,7 +86,7 @@ ActiveX 控制項屬性頁會顯示在兩種方式：
 
 1. 開啟 [IDD_PROPPAGE_SAMPLE] 對話方塊。
 
-     ActiveX 控制項精靈將專案的名稱附加至對話方塊 ID，在此情況下，範例的結尾。
+   ActiveX 控制項精靈將專案的名稱附加至對話方塊 ID，在此情況下，範例的結尾。
 
 1. 拖放選取的控制項從工具箱拖曳對話方塊區域。
 

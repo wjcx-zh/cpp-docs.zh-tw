@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b205be3c2417453faa54c9d24ac28216ee0af5cf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 447a03cec8beba331aedc8077a44dc9090fccbc6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060525"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078518"
 ---
 # <a name="new-and-delete-operators"></a>new 和 delete 運算子
 
@@ -45,7 +45,6 @@ char *pch = new char[BUFFER_SIZE];
 如果要求零位元組的儲存體**new 運算子**相異的物件傳回的指標 (也就是說，重複呼叫**new 運算子**傳回不同的指標)。 如果沒有足夠的記憶體配置要求，如**new 運算子**擲回 std:: bad_alloc 例外狀況或傳回**nullptr**如果您已連結在非擲回**new 運算子**支援。
 
 您可以撰寫常式，它會嘗試釋放記憶體，然後重試配置，;請參閱[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)如需詳細資訊。 如需復原配置的詳細資訊，請參閱本主題的處理記憶體不足，無法一節。
-
 
 兩個範圍**new 運算子**函式下表中所述。
 

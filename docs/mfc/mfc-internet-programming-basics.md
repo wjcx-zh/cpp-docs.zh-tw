@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7134ea1a822fa61ec0d82592145f1fd3c5ecc6aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b2be02e6cac5dac226f7b04cd627a292e3761980
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418303"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082669"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC 網際網路程式設計基本概念
 
@@ -91,6 +91,4 @@ MFC 提供支援網際網路程式設計的類別。 您可以使用[COleControl
 Windows SDK 的 OLE 部分包含 OLE 程式設計的其他資訊。 這項資訊提供有關使用 Win32 WinInet 函式，直接管理，而不是透過 MFC 類別的詳細資料。 它也包含網際網路技術的概觀資訊。
 
 ## <a name="see-also"></a>另請參閱
-
-
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc7b0ca9388de82d49927a7fe76694212b94246b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 30715cffb42c1dbf92512fa7314bf70f46f300a3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46053709"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079931"
 ---
 # <a name="service-map-macros"></a>服務對應巨集
 
@@ -33,7 +33,7 @@ ms.locfileid: "46053709"
 |[BEGIN_SERVICE_MAP](#begin_service_map)|標記 ATL 服務對應的開頭。|
 |[END_SERVICE_MAP](#end_service_map)|將標記 ATL service map 的結尾。|
 |[SERVICE_ENTRY](#service_entry)|指出物件支援特定的服務識別碼。|
-|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|會指示[IServiceProviderImpl::QueryService](#queryservice)鏈結到指定的物件。|  
+|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|會指示[IServiceProviderImpl::QueryService](#queryservice)鏈結到指定的物件。|
 
 ## <a name="requirements"></a>需求
 
@@ -115,7 +115,7 @@ SERVICE_ENTRY_CHAIN( punk )
 建立或存取指定的服務，並傳回服務的指定介面的介面指標。
 
 ```
-STDMETHOD(QueryService)( 
+STDMETHOD(QueryService)(
     REFGUID guidService,
     REFIID riid,
     void** ppvObject);

@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 20cb959727cb2c515bd82d5b4d5d8e45019c6875
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 7f5c117d0d65f86e4f4b69011457e166b6440820
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788483"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081559"
 ---
 # <a name="deferrableeventargs-class"></a>DeferrableEventArgs 類別
 
@@ -73,7 +73,7 @@ class DeferrableEventArgs : public TEventArgsInterface;
 取得參考[延遲](http://go.microsoft.com/fwlink/p/?linkid=526520)代表延期的事件的物件。
 
 ```cpp
-HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)  
+HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
 ```
 
 ### <a name="parameters"></a>參數
@@ -88,11 +88,11 @@ HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
 ## <a name="invokeallfinished"></a>Deferrableeventargs:: Invokeallfinished
 
 呼叫此方法，表示已完成延期事件的所有處理。
-  
+
 ```cpp
-void InvokeAllFinished()  
+void InvokeAllFinished()
 ```
-  
+
 ### <a name="remarks"></a>備註
 
 您應該呼叫這個方法之後的事件來源呼叫[InvokeAll](../windows/eventsource-invokeall-method.md)。 呼叫這個方法能避免其他延期，並在沒有採取任何延期時，強制執行完成處理常式。

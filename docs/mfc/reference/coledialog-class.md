@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c6cebf6af24de860c583398c16c87824ede0075
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1ecfe5ba4ac2144ff626d6d37d8639f1798acda8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401273"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079291"
 ---
 # <a name="coledialog-class"></a>COleDialog 類別
 
@@ -105,6 +105,4 @@ UINT GetLastError() const;
 
 [CCommonDialog 類別](../../mfc/reference/ccommondialog-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-
-
 

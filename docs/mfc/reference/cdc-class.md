@@ -412,12 +412,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59fe5aeaa288f0d36db71df7f7ab5d498aec3256
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 496b958c1ff96b2bc8f3fd3ce8b453c9d3497dcf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448580"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081140"
 ---
 # <a name="cdc-class"></a>CDC 類別
 
@@ -887,7 +887,6 @@ BOOL Arc(
     int x4,
     int y4);
 
-
 BOOL Arc(
     LPCRECT lpRect,
     POINT ptStart,
@@ -957,7 +956,6 @@ BOOL ArcTo(
     int y3,
     int x4,
     int y4);
-
 
 BOOL ArcTo(
     LPCRECT lpRect,
@@ -1141,7 +1139,6 @@ BOOL Chord(
     int y3,
     int x4,
     int y4);
-
 
 BOOL Chord(
     LPCRECT lpRect,
@@ -1421,7 +1418,6 @@ void Draw3dRect(
     COLORREF clrTopLeft,
     COLORREF clrBottomRight);
 
-
 void Draw3dRect(
     int x,
     int y,
@@ -1672,7 +1668,6 @@ BOOL DrawIcon(
     int y,
     HICON hIcon);
 
-
 BOOL DrawIcon(
     POINT point,
     HICON hIcon);
@@ -1721,7 +1716,6 @@ BOOL DrawState(
     UINT nFlags,
     HBRUSH hBrush = NULL);
 
-
 BOOL DrawState(
     CPoint pt,
     CSize size,
@@ -1729,7 +1723,6 @@ BOOL DrawState(
     UINT nFlags,
     CBrush* pBrush = NULL);
 
-
 BOOL DrawState(
     CPoint pt,
     CSize size,
@@ -1737,14 +1730,12 @@ BOOL DrawState(
     UINT nFlags,
     HBRUSH hBrush = NULL);
 
-
 BOOL DrawState(
     CPoint pt,
     CSize size,
     HICON hIcon,
     UINT nFlags,
     CBrush* pBrush = NULL);
-
 
 BOOL DrawState(
     CPoint pt,
@@ -1755,7 +1746,6 @@ BOOL DrawState(
     int nTextLen = 0,
     HBRUSH hBrush = NULL);
 
-
 BOOL DrawState(
     CPoint pt,
     CSize size,
@@ -1764,7 +1754,6 @@ BOOL DrawState(
     BOOL bPrefixText = TRUE,
     int nTextLen = 0,
     CBrush* pBrush = NULL);
-
 
 BOOL DrawState(
     CPoint pt,
@@ -1773,7 +1762,6 @@ BOOL DrawState(
     LPARAM lData,
     UINT nFlags,
     HBRUSH hBrush = NULL);
-
 
 BOOL DrawState(
     CPoint pt,
@@ -1840,7 +1828,6 @@ virtual int DrawText(
     LPRECT lpRect,
     UINT nFormat);
 
-
 int DrawText(
     const CString& str,
     LPRECT lpRect,
@@ -1896,7 +1883,6 @@ virtual int DrawTextEx(
     LPRECT lpRect,
     UINT nFormat,
     LPDRAWTEXTPARAMS lpDTParams);
-
 
 int DrawTextEx(
     const CString& str,
@@ -2097,7 +2083,6 @@ virtual int Escape(
     int nCount,
     LPCSTR lpszInData,
     LPVOID lpOutData);
-
 
 int Escape(
     int nEscape,
@@ -2301,7 +2286,6 @@ virtual BOOL ExtTextOut(
     UINT nCount,
     LPINT lpDxWidths);
 
-
 BOOL ExtTextOut(
     int x,
     int y,
@@ -2433,7 +2417,6 @@ BOOL FillRgn(
 void FillSolidRect(
     LPCRECT lpRect,
     COLORREF clr);
-
 
 void FillSolidRect(
     int x,
@@ -3553,7 +3536,7 @@ int GetPath(
 
 PT_BEZIERTO 類型一定要進行中的三個集合。 立即前的路徑中的點定義 Bzier 曲線的起始點。 前兩個 PT_BEZIERTO 點是控制點，而第三個 PT_BEZIERTO 點是結束點 (如果硬式編碼)。
 
-     A PT_LINETO or PT_BEZIERTO type may be combined with the following flag (by using the bitwise operator **OR**) to indicate that the corresponding point is the last point in a figure and that the figure should be closed:
+   PT_LINETO 或 PT_BEZIERTO 類型也可以結合下列旗標 (使用位元運算子**OR**) 以指出對應的點是圖表中的最後一點，且圖都應該關閉：
 
 - PT_CLOSEFIGURE 指定對應的行之後，會自動關閉圖或繪製曲線。 此圖會關閉從直線或曲線結束點繪製一條線，對應到最後一個 PT_MOVETO 的點。
 
@@ -4704,7 +4687,6 @@ BOOL Pie(
     int x4,
     int y4);
 
-
 BOOL Pie(
     LPCRECT lpRect,
     POINT ptStart,
@@ -4768,7 +4750,6 @@ BOOL Pie(
 
 ```
 BOOL PlayMetaFile(HMETAFILE hMF);
-
 
 BOOL PlayMetaFile(
     HENHMETAFILE hEnhMetaFile,
@@ -4951,11 +4932,11 @@ BOOL PolyDraw(
 
 PT_BEZIERTO 類型一定要進行中的三個集合。 目前的位置定義 Bzier 曲線的起始點。 前兩個 PT_BEZIERTO 點是控制點，而第三個 PT_BEZIERTO 點則是結束點。 結束點會成為新的目前位置。 如果有不連續 PT_BEZIERTO 三點，會發生錯誤。
 
-     A PT_LINETO or PT_BEZIERTO type can be combined with the following constant by using the bitwise operator OR to indicate that the corresponding point is the last point in a figure and the figure is closed:
+   PT_LINETO 或 PT_BEZIERTO 類型可以結合下列常數所使用的位元運算子，或已關閉，表示對應的點圖及圖中的最後一點：
 
 - PT_CLOSEFIGURE 指定圖會自動關閉之後 PT_LINETO 或 PT_BEZIERTO 型別，這個點會完成。 從這裡開始到最新的 PT_MOVETO 繪製線條或`MoveTo`點。
 
-     與線條，PT_LINETO 類型或 PT_BEZIERTO 類型使用的位元結束 Bzier 曲線的點，這個旗標會結合**OR**運算子。 目前的位置設定為結束點的結尾行。
+   與線條，PT_LINETO 類型或 PT_BEZIERTO 類型使用的位元結束 Bzier 曲線的點，這個旗標會結合**OR**運算子。 目前的位置設定為結束點的結尾行。
 
 *nCount*<br/>
 指定的資料點總數*lpPoints*陣列中的位元組數目相同*lpTypes*陣列。
@@ -5332,7 +5313,6 @@ BOOL RoundRect(
     int x3,
     int y3);
 
-
 BOOL RoundRect(
     LPCRECT lpRect,
     POINT point);
@@ -5557,7 +5537,6 @@ BOOL SelectClipPath(int nMode);
 
 ```
 int SelectClipRgn(CRgn* pRgn);
-
 
 int SelectClipRgn(
     CRgn* pRgn,
@@ -6194,7 +6173,6 @@ COLORREF SetPixel(
     int y,
     COLORREF crColor);
 
-
 COLORREF SetPixel(
     POINT point,
     COLORREF crColor);
@@ -6233,7 +6211,6 @@ BOOL SetPixelV(
     int x,
     int y,
     COLORREF crColor);
-
 
 BOOL SetPixelV(
     POINT point,
@@ -6903,7 +6880,6 @@ virtual CSize TabbedTextOut(
     LPINT lpnTabStopPositions,
     int nTabOrigin);
 
-
 CSize TabbedTextOut(
     int x,
     int y,
@@ -6961,7 +6937,6 @@ virtual BOOL TextOut(
     int y,
     LPCTSTR lpszString,
     int nCount);
-
 
 BOOL TextOut(
     int x,

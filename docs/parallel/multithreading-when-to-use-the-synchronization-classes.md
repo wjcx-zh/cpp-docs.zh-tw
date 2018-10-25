@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 018623e9e6a093c4f86b8768e0fd5329f4ea3282
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6da48b12b657944864b1a33216692fce296e5dfd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443770"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083447"
 ---
 # <a name="multithreading-when-to-use-the-mfc-synchronization-classes"></a>多執行緒： 何時使用 MFC 的同步處理類別
 
@@ -38,17 +38,17 @@ MFC 提供的多執行緒的類別分為兩類： 同步處理物件 ([CSyncObje
 
 1. 應用程式必須等到事情發生才可存取資源 （例如，資料必須從接收通訊連接埠之前寫入的檔案）？
 
-     如果是，使用`CEvent`。
+   如果是，使用`CEvent`。
 
 2. 可以多個執行緒中相同的應用程式存取此資源一次 （例如，您的應用程式允許最多五個具有相同的文件檢視的 windows）？
 
-     如果是，使用`CSemaphore`。
+   如果是，使用`CSemaphore`。
 
 3. 多個應用程式可以使用此資源 （例如，資源是在 DLL 中）？
 
-     如果是，使用`CMutex`。
+   如果是，使用`CMutex`。
 
-     若為否，使用`CCriticalSection`。
+   若為否，使用`CCriticalSection`。
 
 `CSyncObject` 是永遠不會直接使用。 它是其他四個同步處理類別的基底類別。
 

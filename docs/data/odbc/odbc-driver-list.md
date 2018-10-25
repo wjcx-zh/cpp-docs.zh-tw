@@ -17,33 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 10c5a4fd9b7f15e5f6532bbaf6b5d8af4d3c86ba
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 069ecc2c743e75a120355b6c57acd5968f1de28c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067989"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083148"
 ---
 # <a name="odbc-driver-list"></a>ODBC 驅動程式清單
 
-Visual c + + 會提供下列資料庫中的 ODBC 驅動程式：  
-  
-- SQL Server  
-  
-- Microsoft Access  
-  
-- Microsoft Excel  
-  
-- dBASE  
-  
-- Paradox  
-  
-- Microsoft Oracle ODBC  
-  
-- 文字檔  
-  
-如需有關 ODBC 驅動程式可從 Microsoft 和其他公司，包括 ODBC 驅動程式套件資訊，請連絡 Microsoft 產品支援服務。  
-  
-## <a name="see-also"></a>另請參閱  
+Visual c + + 會提供下列資料庫中的 ODBC 驅動程式：
+
+- SQL Server
+
+- Microsoft Access
+
+- Microsoft Excel
+
+- dBASE
+
+- Paradox
+
+- Microsoft Oracle ODBC
+
+- 文字檔
+
+如需有關 ODBC 驅動程式可從 Microsoft 和其他公司，包括 ODBC 驅動程式套件資訊，請連絡 Microsoft 產品支援服務。
+
+## <a name="see-also"></a>另請參閱
 
 [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

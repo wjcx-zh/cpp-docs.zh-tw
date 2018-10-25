@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed39cc636bdc5cc82c5ac16ab33a75c2efbbd8b8
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 564a5ba5048442ccb1ce599d03ba0064715c7f5f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790612"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079060"
 ---
 # <a name="licensed"></a>licensed
 
@@ -70,9 +70,9 @@ public:
 |**必要屬性**|`coclass`|
 |**無效屬性**|無|
 
-如需詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [IDL 屬性](idl-attributes.md)<br/>
-[類別屬性](class-attributes.md)  
+[類別屬性](class-attributes.md)

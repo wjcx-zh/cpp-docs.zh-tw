@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 411b8f58b38d2b35c1353d1ff446407026977d66
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6537cdb9e7ff9806bef3bfec85a94e0d50808477
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030140"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078462"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray 類別
 
@@ -100,7 +100,7 @@ class CComSafeArray
 |----------|-----------------|
 |[CComSafeArray::operator LPSAFEARRAY](#operator_lpsafearray)|將值轉換`SAFEARRAY`指標。|
 |[CComSafeArray::operator\[\]](ccomsafearray-class.md#operator_at)|從陣列中擷取項目。|
-|[CComSafeArray::operator =](#operator_eq)|指派運算子。|  
+|[CComSafeArray::operator =](#operator_eq)|指派運算子。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
@@ -110,7 +110,7 @@ class CComSafeArray
 
 ## <a name="remarks"></a>備註
 
-`CComSafeArray` 提供的包裝函式[SAFEARRAY 資料型別](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)類別，因此輕鬆簡單地建立和管理單一和多維度陣列的幾乎任何支援 VARIANT 的類型。
+`CComSafeArray` 提供 [SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) 類別的包裝函式，因此可輕鬆地建立及管理由幾乎任何支援 VARIANT 的類型所組成的一維和多維陣列。
 
 `CComSafeArray` 不僅簡化了在處理序之間傳遞陣列的作業，還藉由針對上下限檢查陣列索引值，來提供額外的安全性。
 

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5b5bb50c99efc2a7b18fbbbabba394ec5330661
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fc151ae25df4cac2c6b5ed9ac5a523efda28dff2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378198"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082706"
 ---
 # <a name="using-property-sheets-in-your-application"></a>在應用程式中使用屬性工作表
 
@@ -34,9 +34,9 @@ ms.locfileid: "46378198"
 
 1. 建立每個屬性頁的對話方塊範本資源。 記住使用者可能在各個頁面間切換，因此盡可能一致地配置每一頁。
 
-     所有頁面的對話方塊範本不一定要有相同的大小。 架構會使用最大頁面的大小來決定對於屬性頁要在屬性工作表中配置多少空間。
+   所有頁面的對話方塊範本不一定要有相同的大小。 架構會使用最大頁面的大小來決定對於屬性頁要在屬性工作表中配置多少空間。
 
-     當您建立屬性頁的對話方塊樣板資源時，您必須在對話屬性的屬性工作表中指定下列樣式：
+   當您建立屬性頁的對話方塊樣板資源時，您必須在對話屬性的屬性工作表中指定下列樣式：
 
    - 設定**Caption**編輯方塊**一般**頁面以您想要出現在此頁面的索引標籤的文字。
 
@@ -60,9 +60,9 @@ ms.locfileid: "46378198"
 
    - 呼叫[cpropertysheet:: Addpage](../mfc/reference/cpropertysheet-class.md#addpage)針對每個頁面。
 
-     通常，建立 `CPropertySheet` 的物件也會在這個步驟中建立 `CPropertyPage` 物件。 不過，如果您實作 `CPropertySheet` 衍生類別，您可以在 `CPropertyPage` 物件中內嵌 `CPropertySheet` 物件，以及從 `AddPage` 衍生類別建構函式為每個頁面呼叫 `CPropertySheet`。 `AddPage` 會將 `CPropertyPage` 物件加入至屬性工作表的頁面清單中，但實際上不會建立該頁面的視窗。 因此，不必一直等到建立屬性工作表視窗才呼叫 `AddPage`；您可以從屬性工作表的建構函式呼叫 `AddPage`。
+   通常，建立 `CPropertySheet` 的物件也會在這個步驟中建立 `CPropertyPage` 物件。 不過，如果您實作 `CPropertySheet` 衍生類別，您可以在 `CPropertyPage` 物件中內嵌 `CPropertySheet` 物件，以及從 `AddPage` 衍生類別建構函式為每個頁面呼叫 `CPropertySheet`。 `AddPage` 會將 `CPropertyPage` 物件加入至屬性工作表的頁面清單中，但實際上不會建立該頁面的視窗。 因此，不必一直等到建立屬性工作表視窗才呼叫 `AddPage`；您可以從屬性工作表的建構函式呼叫 `AddPage`。
 
-     根據預設，如果屬性工作表所擁有的索引標籤數目比屬性工作表單一列能夠容納的還多，索引標籤就會堆疊在多列當中。 若要停用堆疊，請呼叫[cpropertysheet:: Enablestackedtabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs)參數設定為**FALSE**。 在建立屬性工作表時，您必須呼叫 `EnableStackedTabs`。
+   根據預設，如果屬性工作表所擁有的索引標籤數目比屬性工作表單一列能夠容納的還多，索引標籤就會堆疊在多列當中。 若要停用堆疊，請呼叫[cpropertysheet:: Enablestackedtabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs)參數設定為**FALSE**。 在建立屬性工作表時，您必須呼叫 `EnableStackedTabs`。
 
 1. 呼叫[cpropertysheet:: Setwizardmode](../mfc/reference/cpropertysheet-class.md#domodal)或是[建立](../mfc/reference/cpropertysheet-class.md#create)顯示屬性工作表。 呼叫 `DoModal` 將屬性工作表建立為強制回應對話方塊。 呼叫**建立**屬性工作表建立為非強制回應對話方塊。
 

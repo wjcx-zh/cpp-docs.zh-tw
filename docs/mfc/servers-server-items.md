@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72f8de75607921edda62aec9baec424066431d61
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c134f0d0b0c8ee3009e372de7712a6c0894a51de
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438856"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082901"
 ---
 # <a name="servers-server-items"></a>伺服器：伺服器項目
 
@@ -43,7 +43,7 @@ ms.locfileid: "46438856"
 
 1. 在衍生類別中，覆寫 `OnDraw` 成員函式。
 
-     這個架構會呼叫 `OnDraw` 以轉譯 OLE 項目為中繼檔。 容器應用程式會使用此中繼檔轉譯項目。 您的應用程式的檢視類別也有一個 `OnDraw` 成員函式，用來在伺服器應用程式作用中時轉譯項目。
+   這個架構會呼叫 `OnDraw` 以轉譯 OLE 項目為中繼檔。 容器應用程式會使用此中繼檔轉譯項目。 您的應用程式的檢視類別也有一個 `OnDraw` 成員函式，用來在伺服器應用程式作用中時轉譯項目。
 
 1. 為您的伺服器文件類別實作 `OnGetEmbeddedItem` 的覆寫。 如需詳細資訊，請參閱文章[伺服器： 實作伺服器文件](../mfc/servers-implementing-server-documents.md)和 MFC OLE 範例[HIERSVR](../visual-cpp-samples.md)。
 

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7bd8c505c857082732e56ff2b4bf1a5bed76647
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 913bc04533668e6576a84641937992504f49390a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420305"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080074"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX 控制項容器：從 ActiveX 控制項中處理事件
 
@@ -34,7 +34,6 @@ ms.locfileid: "46420305"
 
 >[!IMPORTANT]
 > ActiveX 是舊版的技術，不應用於新的開發。 如需有關取代 ActiveX 的現代技術的詳細資訊，請參閱[ActiveX 控制項](activex-controls.md)。
-
 
 > [!NOTE]
 >  本文使用對話架構的 ActiveX 控制項容器專案 (名為 Container) 和內嵌控制項 (名為 Circ) 做為程序和程式碼的範例。
@@ -70,7 +69,7 @@ ms.locfileid: "46420305"
 
 1. 在 [屬性] 視窗中，選取內嵌 ActiveX 控制項的控制項 ID。 此範例中，使用`IDC_CIRCCTRL1`。
 
-     [屬性] 視窗會顯示一份可以內嵌 ActiveX 控制項所引發的事件。 已經以粗體顯示的任何成員函式具有指派給它的處理常式函式。
+   [屬性] 視窗會顯示一份可以內嵌 ActiveX 控制項所引發的事件。 已經以粗體顯示的任何成員函式具有指派給它的處理常式函式。
 
 1. 選取您想要處理的對話方塊類別的事件。 此範例中，選取**按一下**。
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ffee10ea334c6c425aa5ecd81705ef1915dc80c0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: e48d71ace613eac040f83023f70f2a1f28d09f6e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790650"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082290"
 ---
 # <a name="rdx"></a>rdx
 
@@ -62,7 +62,7 @@ ms.locfileid: "48790650"
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="example"></a>範例
 
@@ -90,4 +90,4 @@ public:
 ## <a name="see-also"></a>另請參閱
 
 [COM 屬性](com-attributes.md)<br/>
-[registration_script](registration-script.md)  
+[registration_script](registration-script.md)

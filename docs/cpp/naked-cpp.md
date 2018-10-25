@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ab41c396f8602d16e2b2d88c3d83aeb7cdf21a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cdf77589ea39de4d17ccad1e3ef369cf4f0ca24d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46018376"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080880"
 ---
 # <a name="naked-c"></a>naked (C++)
 
@@ -39,7 +39,6 @@ __declspec(naked) declarator
 ## <a name="remarks"></a>備註
 
 因為**naked**屬性，才會相關函式的定義，而且不是類型修飾詞，naked 函式必須使用擴充的屬性語法並[__declspec](../cpp/declspec.md)關鍵字。
-
 
 編譯器無法產生內嵌函式標記為 naked 屬性中，函式，即使函式也標記著[__forceinline](inline-functions-cpp.md)關鍵字。
 

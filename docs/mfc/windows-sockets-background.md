@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fe08de0cbeaf6e70c8d786f3cfc849094117cd2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a6146106a7ae378821fc7133d2d65597d1225cc1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389530"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079658"
 ---
 # <a name="windows-sockets-background"></a>Windows Sockets：背景
 
@@ -69,11 +69,11 @@ Windows Sockets 規格後，Windows Sockets： 網路運算下 Microsoft Windows
 
 - Stream 通訊端
 
-     Stream 通訊端提供不含記錄界限的資料流程： 位元組資料流。 資料流可保證傳遞和正確排序且不會重複。
+   Stream 通訊端提供不含記錄界限的資料流程： 位元組資料流。 資料流可保證傳遞和正確排序且不會重複。
 
 - 資料包通訊端
 
-     資料包通訊端支援記錄導向資料流不保證傳遞，且可能不會依傳送，或不重複。
+   資料包通訊端支援記錄導向資料流不保證傳遞，且可能不會依傳送，或不重複。
 
 「 循序 」 表示封包，傳遞傳送的順序。 「 不重複 」 表示一次取得一個特定封包。
 

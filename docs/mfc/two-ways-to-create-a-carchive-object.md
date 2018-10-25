@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10b87f57daaf510252fe6f07dc3ba2d9d0a8650d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 630cdd1614aa19ec3a5a654d7dc4bfe7336ce027
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409333"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080581"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>建立 CArchive 物件的兩種方式
 
@@ -66,9 +66,9 @@ ms.locfileid: "46409333"
 
 1. 傳遞`CFile`物件的建構函式`CArchive`，如下列範例所示：
 
-     [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
+   [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
 
-     第二個引數`CArchive`建構函式是一個列舉的值，指定是否會對檔案中儲存或載入資料或使用封存。 `Serialize`函式，物件會檢查此狀態，藉由呼叫`IsStoring`封存物件的函式。
+   第二個引數`CArchive`建構函式是一個列舉的值，指定是否會對檔案中儲存或載入資料或使用封存。 `Serialize`函式，物件會檢查此狀態，藉由呼叫`IsStoring`封存物件的函式。
 
 當您完成儲存或載入資料或從`CArchive`物件、 將它關閉。 雖然`CArchive`(和`CFile`) 封存 （和檔案），將會自動關閉物件，它是很好的作法明確因為讓從錯誤復原更為容易。 如需錯誤處理的詳細資訊，請參閱文章[例外狀況： 攔截及刪除例外狀況](../mfc/exceptions-catching-and-deleting-exceptions.md)。
 
@@ -76,7 +76,7 @@ ms.locfileid: "46409333"
 
 1. 下列範例說明如何關閉`CArchive`物件：
 
-     [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
 
 ## <a name="see-also"></a>另請參閱
 

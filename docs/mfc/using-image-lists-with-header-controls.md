@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 477ed175e6f8e81acdae5c873d1436e6c3dbbd60
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b12f3ff78f88029067d3b77296979a173dad494d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423555"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079645"
 ---
 # <a name="using-image-lists-with-header-controls"></a>搭配使用影像清單與標題控制項
 
@@ -35,17 +35,17 @@ ms.locfileid: "46423555"
 
 1. 藉由呼叫初始化新的影像清單物件[CImageList::Create](../mfc/reference/cimagelist-class.md#create)。 下列程式碼是此呼叫的其中一個範例。
 
-     [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_1.cpp)]
 
 1. 將每個標頭項目的影像。 下列程式碼會新增兩個預先定義的映像。
 
-     [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_2.cpp)]
 
 1. 影像清單與控制項相關聯標頭呼叫[CHeaderCtrl::SetImageList](../mfc/reference/cheaderctrl-class.md#setimagelist)。
 
 1. 修改標頭項目，以顯示相關聯的映像清單中的影像。 下列範例會從第一個映像中，指派`m_phdrImages`，第一個標頭項目， `m_pHdrCtrl`。
 
-     [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_3.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_3.cpp)]
 
 如需使用的參數值的詳細資訊，請參閱相關[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)。
 

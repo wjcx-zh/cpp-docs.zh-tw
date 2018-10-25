@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be0e05d61d4949deaee683c5b8f43d18e0501d23
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 5e50fe341ff52916d16b3c006e438fe2bfa99154
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808975"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082836"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan 類別
 
@@ -157,7 +157,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 *dblSpanSrc*<br/>
 若要複製到新的天數`COleDateTimeSpan`物件。
 
-*lDays*， *nHours*， *nMins*， *nSecs*  
+*lDays*， *nHours*， *nMins*， *nSecs*<br/>
 表示要複製到新的日期和時間值`COleDateTimeSpan`物件。
 
 ### <a name="remarks"></a>備註
@@ -217,10 +217,10 @@ A `CString` ，包含已格式化的日期/時間範圍值。
 
 此函式之表單的簡短描述如下：
 
-**格式 (** *pFormat* **)**  
+**格式 (** *pFormat* **)**<br/>
 此表單會使用格式字串，其中包含特殊格式化的程式碼會加上百分比符號 （%），將值格式化中`printf`。 格式化的字串做為參數傳遞至函式。
 
-**格式 (** *nID* **)**  
+**格式 (** *nID* **)**<br/>
 此表單會使用格式字串，其中包含特殊格式化的程式碼會加上百分比符號 （%），將值格式化中`printf`。 格式化的字串是資源。 此字串資源的識別碼會當做參數傳遞。
 
 ### <a name="example"></a>範例
@@ -388,11 +388,11 @@ DateTimeSpanStatus GetStatus() const throw();
 傳回值由定義`DateTimeSpanStatus`列舉型別，其定義內`COleDateTimeSpan`類別。
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-};  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+};
 ```
 
 如這些狀態值的簡短描述，請參閱下列清單：
@@ -585,11 +585,11 @@ DateTimeSpanStatus m_status;
 ### <a name="remarks"></a>備註
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-   };  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+   };
 ```
 
 如這些狀態值的簡短描述，請參閱下列清單：
@@ -694,7 +694,7 @@ void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>參數
 
-*lDays*， *nHours*， *nMins*， *nSecs*  
+*lDays*， *nHours*， *nMins*， *nSecs*<br/>
 表示要複製到這個範圍內的日期和時間範圍值`COleDateTimeSpan`物件。
 
 ### <a name="remarks"></a>備註
@@ -739,11 +739,11 @@ void SetStatus(DateTimeSpanStatus status) throw();
 *狀態*參數值由定義`DateTimeSpanStatus`列舉型別，其定義內`COleDateTimeSpan`類別。
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-   };  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+   };
 ```
 
 如這些狀態值的簡短描述，請參閱下列清單：

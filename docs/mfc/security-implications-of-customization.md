@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 876f3b45cc9f45ab5ff1aaa7e07116482f89afc1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2035e665bd7d8cba502c3516498934f32c2b3dd0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442080"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080841"
 ---
 # <a name="security-implications-of-customization"></a>自訂的安全性影響
 
@@ -38,7 +38,7 @@ MFC 可讓使用者自訂應用程式使用者介面的外觀，例如按鈕和�
 
 - 將資料改為儲存在安全的檔案而不是在登錄中。
 
-     若要完成前兩種方式其中一種方法，衍生的類別[CSettingsStore 類別](../mfc/reference/csettingsstore-class.md)並覆寫其方法以實作加密或外部登錄的存放裝置。
+   若要完成前兩種方式其中一種方法，衍生的類別[CSettingsStore 類別](../mfc/reference/csettingsstore-class.md)並覆寫其方法以實作加密或外部登錄的存放裝置。
 
 - 您也可以停用應用程式的自訂。
 

@@ -18,26 +18,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15491517ad95973d7eabf2998741dbcc89ca602b
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 8726499df30d26e35d4a554e7028af9ff2249549
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540963"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080893"
 ---
 # <a name="omp"></a>omp
-接受一個或多個 OpenMP 指示詞，以及選擇性的指示詞子句。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-#pragma omp directive  
-```  
-  
-## <a name="remarks"></a>備註  
- 
-請參閱[OpenMP 指示詞](../parallel/openmp/reference/openmp-directives.md)如需詳細資訊。  
-  
-## <a name="see-also"></a>另請參閱  
+接受一個或多個 OpenMP 指示詞，以及選擇性的指示詞子句。
+
+## <a name="syntax"></a>語法
+
+```
+#pragma omp directive
+```
+
+## <a name="remarks"></a>備註
+
+請參閱[OpenMP 指示詞](../parallel/openmp/reference/openmp-directives.md)如需詳細資訊。
+
+## <a name="see-also"></a>另請參閱
 
 [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

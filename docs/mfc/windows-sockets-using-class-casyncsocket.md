@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49e5df8e88124d1d94869618a94525e224d32495
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0aaefc41ca365e2bf4d87583f2e25dfa2a870a90
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424663"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079008"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets：使用類別 CAsyncSocket
 
@@ -48,19 +48,19 @@ ms.locfileid: "46424663"
 
 1. 建構[CAsyncSocket](../mfc/reference/casyncsocket-class.md)物件，並使用物件來建立基礎**通訊端**處理。
 
-     建立通訊端會遵循兩階段建構的 MFC 模式。
+   建立通訊端會遵循兩階段建構的 MFC 模式。
 
-     例如: 
+   例如: 
 
-     [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]
+   [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]
 
      -或-
 
-     [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]
+   [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]
 
-     上述的第一個建構函式會建立`CAsyncSocket`堆疊上的物件。 第二個建構函式建立`CAsyncSocket`在堆積上。 第一個[建立](../mfc/reference/casyncsocket-class.md#create)上述的呼叫會使用預設參數建立資料流通訊端。 第二個`Create`呼叫建立資料包通訊端與指定的連接埠和位址。 (您可以使用`Create`使用任一建構方法的版本。)
+   上述的第一個建構函式會建立`CAsyncSocket`堆疊上的物件。 第二個建構函式建立`CAsyncSocket`在堆積上。 第一個[建立](../mfc/reference/casyncsocket-class.md#create)上述的呼叫會使用預設參數建立資料流通訊端。 第二個`Create`呼叫建立資料包通訊端與指定的連接埠和位址。 (您可以使用`Create`使用任一建構方法的版本。)
 
-     參數以`Create`是：
+   參數以`Create`是：
 
    - 「 連接埠 」: 短整數。
 
@@ -72,28 +72,28 @@ ms.locfileid: "46424663"
 
          This is your Internet Protocol (IP) address on the network. You will probably always rely on the default value for this parameter.
 
-     詞彙 「 連接埠 」 和 「 通訊端位址 」 會在說明[Windows Sockets： 連接埠和通訊端位址](../mfc/windows-sockets-ports-and-socket-addresses.md)。
+   詞彙 「 連接埠 」 和 「 通訊端位址 」 會在說明[Windows Sockets： 連接埠和通訊端位址](../mfc/windows-sockets-ports-and-socket-addresses.md)。
 
 1. 如果用戶端通訊端，通訊端物件連接到伺服器通訊端，使用[CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect)。
 
      -或-
 
-     如果通訊端是伺服器，設定以開始接聽通訊端 (使用[CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)) 從用戶端的連線嘗試。 收到連線要求，請接受它與[CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept)。
+   如果通訊端是伺服器，設定以開始接聽通訊端 (使用[CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)) 從用戶端的連線嘗試。 收到連線要求，請接受它與[CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept)。
 
-     接受連接之後, 您可以執行像是驗證密碼這類工作。
+   接受連接之後, 您可以執行像是驗證密碼這類工作。
 
     > [!NOTE]
     >  `Accept`成員函式會參考新的空白`CSocket`做為其參數的物件。 您必須先建構這個物件，然後再呼叫`Accept`。 如果這個通訊端物件超出範圍，連接就會關閉。 請勿呼叫`Create`這個新的通訊端物件。 如需範例，請參閱文章[Windows Sockets： 作業的順序](../mfc/windows-sockets-sequence-of-operations.md)。
 
 1. 藉由呼叫完成與其他通訊端通訊`CAsyncSocket`封裝 Windows Sockets API 函式物件的成員函式。
 
-     請參閱 Windows Sockets 規格和類別[CAsyncSocket](../mfc/reference/casyncsocket-class.md)中*MFC 參考 》*。
+   請參閱 Windows Sockets 規格和類別[CAsyncSocket](../mfc/reference/casyncsocket-class.md)中*MFC 參考 》*。
 
 1. 終結`CAsyncSocket`物件。
 
-     如果您是在堆疊上建立通訊端物件，包含函式超出範圍時，就是會呼叫其解構函式。 如果您在堆積上建立通訊端物件，使用**新**運算子，您必須負責使用**刪除**運算子來終結物件。
+   如果您是在堆疊上建立通訊端物件，包含函式超出範圍時，就是會呼叫其解構函式。 如果您在堆積上建立通訊端物件，使用**新**運算子，您必須負責使用**刪除**運算子來終結物件。
 
-     解構函式呼叫物件的[關閉](../mfc/reference/casyncsocket-class.md#close)成員函式，然後再終結物件。
+   解構函式呼叫物件的[關閉](../mfc/reference/casyncsocket-class.md#close)成員函式，然後再終結物件。
 
 如需在程式碼中這個序列的範例 (實際的`CSocket`物件)，請參閱[Windows Sockets： 作業的順序](../mfc/windows-sockets-sequence-of-operations.md)。
 

@@ -28,16 +28,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa3f3356cf3fdddeeb4245986549fa1bd2e12ae7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 16aa17ef58e8e4a7f0b8970cb229b6c914f291fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085221"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080113"
 ---
-# <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY 巨集  
+# <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY 巨集
 
-這些巨集會輸入到其 COM 對應物件的介面，讓他們可以存取`QueryInterface`。 COM 對應中的項目順序是訂單介面將會檢查比對期間 iid `QueryInterface`。  
+這些巨集會輸入到其 COM 對應物件的介面，讓他們可以存取`QueryInterface`。 COM 對應中的項目順序是訂單介面將會檢查比對期間 iid `QueryInterface`。
 
 |||
 |-|-|
@@ -55,7 +55,7 @@ ms.locfileid: "46085221"
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|處理到達這個 COM 對應中的項目時，請處理 COM 對應的基底類別。|
 |[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)|連結到 ATL 的一般機制`QueryInterface`邏輯。|
 |[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|與相同[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)，差異在於查詢任何 IID 的呼叫會導致*func*。|
-|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|會傳回 E_NOINTERFACE 並結束 COM 對應會處理查詢指定的介面時。|  
+|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|會傳回 E_NOINTERFACE 並結束 COM 對應會處理查詢指定的介面時。|
 
 ## <a name="requirements"></a>需求
 
@@ -70,6 +70,7 @@ ms.locfileid: "46085221"
 ```
 COM_INTERFACE_ENTRY( x )
 ```
+
 ### <a name="parameters"></a>參數
 
 *x*<br/>
@@ -88,6 +89,7 @@ BEGIN_COM_MAP(CThisExample)
    COM_INTERFACE_ENTRY(ISupportErrorInfo)
 END_COM_MAP()
 ```
+
 ### <a name="requirements"></a>需求
 
 **標頭：** atlcom.h
@@ -406,4 +408,3 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 
 介面的 IID 將建構附加*x*至`IID_`。 例如，如果*x*是`IPersistStorage`，將 IID `IID_IPersistStorage`。
 
-  

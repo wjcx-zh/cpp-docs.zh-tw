@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36da6917a3f0a04cf078132c3949079ccecb25cc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b34c7ee72c7a76d261a50ae227039647617d6fbd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435580"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079021"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC 類別
 
@@ -141,6 +141,4 @@ PAINTSTRUCT m_ps;
 [MFC 範例 MDI](../../visual-cpp-samples.md)<br/>
 [CDC 類別](../../mfc/reference/cdc-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-
-
 

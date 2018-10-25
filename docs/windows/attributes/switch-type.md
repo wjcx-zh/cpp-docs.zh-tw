@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8ba772b03399b820a04c4f2601f2ab5b357a63f
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 7aa11ada46f74c3e2a7293c65151b1f1ede7255e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791027"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080087"
 ---
 # <a name="switchtype"></a>switch_type
 
@@ -79,10 +79,10 @@ struct SizedValue2 {
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [IDL 屬性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)<br/>
-[export](export.md)  
+[export](export.md)

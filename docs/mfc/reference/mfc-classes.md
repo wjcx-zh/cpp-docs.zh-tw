@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a276868dfdb14f754cac3938e052e82b7ab22a6f
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 1eea2e3158d980c77863640d0342f8b074bf7849
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328606"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080243"
 ---
 # <a name="mfc-classes"></a>MFC 類別
 
@@ -1316,6 +1316,4 @@ Windows 應用程式物件所衍生自的基底類別。
 
 [MFC 傳統型應用程式](../../mfc/mfc-desktop-applications.md)<br/>
 包含組成 MFC 程式庫之類別、全域函式、全域變數和巨集的相關主題連結。
-
-
 

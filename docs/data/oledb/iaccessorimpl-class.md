@@ -48,139 +48,139 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a5de49679652b04afa4df08ce9d4ea015ebd031d
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 89762d37977efd4c999c38ee9bc586420655f1cc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082719"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078358"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl 類別
 
-提供實作[IAccessor](/previous-versions/windows/desktop/ms719672)介面。  
-  
+提供實作[IAccessor](/previous-versions/windows/desktop/ms719672)介面。
+
 ## <a name="syntax"></a>語法
 
 ```cpp
-template <class T, 
+template <class T,
    class BindType = ATLBINDINGS,
-   class BindingVector = CAtlMap <HACCESSOR hAccessor, BindType* pBindingsStructure>>  
-class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>  
-```  
-  
-### <a name="parameters"></a>參數  
+   class BindingVector = CAtlMap <HACCESSOR hAccessor, BindType* pBindingsStructure>>
+class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
+```
+
+### <a name="parameters"></a>參數
 
 *T*<br/>
-您的資料列集或指令的物件類別。  
-  
+您的資料列集或指令的物件類別。
+
 *BindType*<br/>
-存放裝置的繫結資訊。 預設值是`ATLBINDINGS`結構 （請參閱為 atldb.h）。  
-  
+存放裝置的繫結資訊。 預設值是`ATLBINDINGS`結構 （請參閱為 atldb.h）。
+
 *BindingVector*<br/>
-資料行資訊的儲存體單位。 預設值是[CAtlMap](../../atl/reference/catlmap-class.md)其中的索引鍵的項目是 HACCESSOR 的值，而值的項目是指標`BindType`結構。  
-  
-## <a name="requirements"></a>需求  
+資料行資訊的儲存體單位。 預設值是[CAtlMap](../../atl/reference/catlmap-class.md)其中的索引鍵的項目是 HACCESSOR 的值，而值的項目是指標`BindType`結構。
 
-**Header:** atldb.h  
+## <a name="requirements"></a>需求
 
-## <a name="members"></a>成員  
-  
-### <a name="methods"></a>方法  
-  
-|||  
-|-|-|  
-|[IAccessorImpl](#iaccessorimpl)|建構函式。|  
-  
-### <a name="interface-methods"></a>介面方法  
-  
-|||  
-|-|-|  
-|[AddRefAccessor](#addrefaccessor)|將現有的存取子中的參考計數。|  
-|[CreateAccessor](#createaccessor)|從一組繫結建立存取子。|  
-|[GetBindings](#getbindings)|傳回的繫結的存取子中。|  
-|[ReleaseAccessor](#releaseaccessor)|釋放存取子。|  
-  
-## <a name="remarks"></a>備註  
+**Header:** atldb.h
 
-這是資料列集和命令的必要參數。 OLE DB 會要求提供者實作 HACCESSOR，這是標記的陣列[DBBINDING](/previous-versions/windows/desktop/ms716845)結構。 所提供的 HACCESSORs`IAccessorImpl`是位址`BindType`結構。 根據預設，`BindType`指`ATLBINDINGS`在`IAccessorImpl`的範本定義。 `BindType` 提供所使用的機制`IAccessorImpl`追蹤中的項目數其`DBBINDING`陣列以及參考計數和存取子旗標。  
+## <a name="members"></a>成員
+
+### <a name="methods"></a>方法
+
+|||
+|-|-|
+|[IAccessorImpl](#iaccessorimpl)|建構函式。|
+
+### <a name="interface-methods"></a>介面方法
+
+|||
+|-|-|
+|[AddRefAccessor](#addrefaccessor)|將現有的存取子中的參考計數。|
+|[CreateAccessor](#createaccessor)|從一組繫結建立存取子。|
+|[GetBindings](#getbindings)|傳回的繫結的存取子中。|
+|[ReleaseAccessor](#releaseaccessor)|釋放存取子。|
+
+## <a name="remarks"></a>備註
+
+這是資料列集和命令的必要參數。 OLE DB 會要求提供者實作 HACCESSOR，這是標記的陣列[DBBINDING](/previous-versions/windows/desktop/ms716845)結構。 所提供的 HACCESSORs`IAccessorImpl`是位址`BindType`結構。 根據預設，`BindType`指`ATLBINDINGS`在`IAccessorImpl`的範本定義。 `BindType` 提供所使用的機制`IAccessorImpl`追蹤中的項目數其`DBBINDING`陣列以及參考計數和存取子旗標。
 
 ## <a name="iaccessorimpl"></a> Iaccessorimpl:: Iaccessorimpl
 
-建構函式。  
-  
-### <a name="syntax"></a>語法  
-  
+建構函式。
+
+### <a name="syntax"></a>語法
+
 ```cpp
-IAccessorImpl();  
-```  
+IAccessorImpl();
+```
 
 ## <a name="addrefaccessor"></a> Iaccessorimpl:: Addrefaccessor
 
-將現有的存取子中的參考計數。  
-  
-### <a name="syntax"></a>語法  
-  
+將現有的存取子中的參考計數。
+
+### <a name="syntax"></a>語法
+
 ```cpp
-STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,  
-   DBREFCOUNT* pcRefCount);  
-```  
-  
-#### <a name="parameters"></a>參數  
+STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
+   DBREFCOUNT* pcRefCount);
+```
+
+#### <a name="parameters"></a>參數
 
 請參閱[IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978)中*OLE DB 程式設計人員參考*。
 
 ## <a name="createaccessor"></a> Iaccessorimpl:: Createaccessor
 
-從一組繫結建立存取子。  
-  
-### <a name="syntax"></a>語法  
-  
-```cpp
-STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,  
-   DBCOUNTITEM cBindings,  
-   const DBBINDING rgBindings[],  
-   DBLENGTH cbRowSize,  
-   HACCESSOR* phAccessor,  
-   DBBINDSTATUS rgStatus[]);  
-```  
-  
-#### <a name="parameters"></a>參數  
+從一組繫結建立存取子。
 
-請參閱[iaccessor:: Createaccessor](/previous-versions/windows/desktop/ms720969)中*OLE DB 程式設計人員參考*。  
+### <a name="syntax"></a>語法
+
+```cpp
+STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
+   DBCOUNTITEM cBindings,
+   const DBBINDING rgBindings[],
+   DBLENGTH cbRowSize,
+   HACCESSOR* phAccessor,
+   DBBINDSTATUS rgStatus[]);
+```
+
+#### <a name="parameters"></a>參數
+
+請參閱[iaccessor:: Createaccessor](/previous-versions/windows/desktop/ms720969)中*OLE DB 程式設計人員參考*。
 
 ## <a name="getbindings"></a> Iaccessorimpl:: Getbindings
 
-從存取子中取用者會傳回基本的資料行繫結。  
-  
-### <a name="syntax"></a>語法  
-  
-```cpp
-STDMETHOD(GetBindings)(HACCESSOR hAccessor,  
-   DBACCESSORFLAGS* pdwAccessorFlags,  
-   DBCOUNTITEM* pcBindings,  
-   DBBINDING** prgBindings);  
-```  
-  
-#### <a name="parameters"></a>參數  
+從存取子中取用者會傳回基本的資料行繫結。
 
-請參閱[IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253)中*OLE DB 程式設計人員參考*。 
+### <a name="syntax"></a>語法
+
+```cpp
+STDMETHOD(GetBindings)(HACCESSOR hAccessor,
+   DBACCESSORFLAGS* pdwAccessorFlags,
+   DBCOUNTITEM* pcBindings,
+   DBBINDING** prgBindings);
+```
+
+#### <a name="parameters"></a>參數
+
+請參閱[IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253)中*OLE DB 程式設計人員參考*。
 
 ## <a name="releaseaccessor"></a> Iaccessorimpl:: Releaseaccessor
 
-釋放存取子。  
-  
-### <a name="syntax"></a>語法  
-  
+釋放存取子。
+
+### <a name="syntax"></a>語法
+
 ```cpp
-STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,  
-   DBREFCOUNT* pcRefCount);  
-```  
-  
-#### <a name="parameters"></a>參數  
+STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
+   DBREFCOUNT* pcRefCount);
+```
+
+#### <a name="parameters"></a>參數
 
 請參閱[iaccessor:: Releaseaccessor](/previous-versions/windows/desktop/ms719717)中*OLE DB 程式設計人員參考*。
-  
-## <a name="see-also"></a>另請參閱  
+
+## <a name="see-also"></a>另請參閱
 
 [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

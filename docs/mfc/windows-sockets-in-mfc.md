@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff86123f395e9647ef848ad017fe3cb69b69dd71
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a460870887f3a012bf02ee6518ba70c65881c804
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427676"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081413"
 ---
 # <a name="windows-sockets-in-mfc"></a>MFC 中的 Windows Sockets
 
@@ -42,11 +42,11 @@ MFC 提供兩種撰寫與 Windows 通訊端，在兩個 MFC 類別的網路通�
 
 - `CAsyncSocket`
 
-     此類別會封裝 Windows Sockets API。 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)適合程式設計人員知道網路程式設計和想要直接對通訊端 API 進行程式設計的彈性但也想要的回呼函式的方便性，不論網路事件的通知。 以外封裝物件導向的表單，以用於 c + + 中的通訊端，只能將額外的抽象概念，這個類別會提供將某些通訊端相關的 Windows 訊息轉換回撥。 如需詳細資訊，請參閱 < [Windows Sockets： 通訊端告知](../mfc/windows-sockets-socket-notifications.md)。
+   此類別會封裝 Windows Sockets API。 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)適合程式設計人員知道網路程式設計和想要直接對通訊端 API 進行程式設計的彈性但也想要的回呼函式的方便性，不論網路事件的通知。 以外封裝物件導向的表單，以用於 c + + 中的通訊端，只能將額外的抽象概念，這個類別會提供將某些通訊端相關的 Windows 訊息轉換回撥。 如需詳細資訊，請參閱 < [Windows Sockets： 通訊端告知](../mfc/windows-sockets-socket-notifications.md)。
 
 - `CSocket`
 
-     這個類別衍生自`CAsyncSocket`，提供透過 MFC 的通訊端所使用的較高層級抽象[CArchive](../mfc/reference/carchive-class.md)物件。 使用通訊端與封存，可大幅類似使用 MFC 的檔案序列化通訊協定。 這可讓您更輕鬆地使用比`CAsyncSocket`模型。 [CSocket](../mfc/reference/csocket-class.md)繼承許多成員函式，從`CAsyncSocket`，它會封裝 Windows Sockets Api，您必須使用其中一些函式，並了解一般程式設計的通訊端。 但是`CSocket`管理，您必須自行使用原始 API 或類別進行通訊的許多層面`CAsyncSocket`。 最重要的是，`CSocket`提供封鎖 （具有背景處理的 Windows 訊息），這是同步作業的`CArchive`。
+   這個類別衍生自`CAsyncSocket`，提供透過 MFC 的通訊端所使用的較高層級抽象[CArchive](../mfc/reference/carchive-class.md)物件。 使用通訊端與封存，可大幅類似使用 MFC 的檔案序列化通訊協定。 這可讓您更輕鬆地使用比`CAsyncSocket`模型。 [CSocket](../mfc/reference/csocket-class.md)繼承許多成員函式，從`CAsyncSocket`，它會封裝 Windows Sockets Api，您必須使用其中一些函式，並了解一般程式設計的通訊端。 但是`CSocket`管理，您必須自行使用原始 API 或類別進行通訊的許多層面`CAsyncSocket`。 最重要的是，`CSocket`提供封鎖 （具有背景處理的 Windows 訊息），這是同步作業的`CArchive`。
 
 建立和使用`CSocket`及`CAsyncSocket`物件所述[Windows Sockets： 使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)和[Windows Sockets： 使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)。
 

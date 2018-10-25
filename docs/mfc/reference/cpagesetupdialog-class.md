@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86dc19600dc8cbb452db585993dec85c3f7b8591
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: b82d7066f9fa0adfaae0f989941f191c99223aed
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328385"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080230"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog 類別
 
@@ -418,6 +418,4 @@ virtual UINT PreDrawPage(
 [MFC 範例 WORDPAD](../../visual-cpp-samples.md)<br/>
 [CCommonDialog 類別](../../mfc/reference/ccommondialog-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-
-
 

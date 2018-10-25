@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5bc9bb1e537b7c8b338ed0164b0d85f27230b11
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2579a926c6a48d86eb12e406a442b17126a9f5c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429223"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081088"
 ---
 # <a name="crebar-class"></a>CReBar 類別
 
@@ -90,7 +90,6 @@ BOOL AddBar(
     LPCTSTR pszText = NULL,
     CBitmap* pbmp = NULL,
     DWORD dwStyle = RBBS_GRIPPERALWAYS | RBBS_FIXEDBMP);
-
 
 BOOL AddBar(
     CWnd* pBar,
@@ -189,6 +188,4 @@ CReBarCtrl& GetReBarCtrl() const;
 [MFC 範例 MFCIE](../../visual-cpp-samples.md)<br/>
 [CControlBar 類別](../../mfc/reference/ccontrolbar-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-
-
 

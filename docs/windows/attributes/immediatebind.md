@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb2169adf5bfce3c1a66e382c79b57c8ef53ef04
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 76a0a6baec4f775d2ec4f7ca0236530125fe7973
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790994"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083408"
 ---
 # <a name="immediatebind"></a>immediatebind
 
@@ -53,7 +53,7 @@ ms.locfileid: "48790994"
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -61,4 +61,4 @@ ms.locfileid: "48790994"
 [方法屬性](method-attributes.md)<br/>
 [defaultbind](defaultbind.md)<br/>
 [displaybind](displaybind.md)<br/>
-[requestedit](requestedit.md)  
+[requestedit](requestedit.md)

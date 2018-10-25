@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 564ff010756a2afa9210fc71dd47fce2b72dcbca
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1223de9791ea5c47c7ef3cf9ee5b490c5238fec3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075718"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078508"
 ---
 # <a name="catlmap-class"></a>CAtlMap 類別
 
@@ -62,8 +62,8 @@ ms.locfileid: "46075718"
 
 ```
 template <typename K,
-          typename V, 
-          class KTraits = CElementTraits<K>, 
+          typename V,
+          class KTraits = CElementTraits<K>,
           class VTraits = CElementTraits<V>>
 class CAtlMap
 ```
@@ -97,7 +97,7 @@ class CAtlMap
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlMap::CPair 類別](#cpair_class)|類別，其中包含索引鍵和值的項目。|  
+|[CAtlMap::CPair 類別](#cpair_class)|類別，其中包含索引鍵和值的項目。|
 
 ### <a name="cpair-data-members"></a>CPair 資料成員
 
@@ -145,7 +145,7 @@ class CAtlMap
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|取代或新增新的項目`CAtlMap`。|  
+|[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|取代或新增新的項目`CAtlMap`。|
 
 ## <a name="remarks"></a>備註
 

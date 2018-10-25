@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98cf8a0532c3b1f2044ba0338d3f2f2bf8e73813
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0070103724385dcb598c20cd15bc29f341628bce
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390980"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079437"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX 控制項：加入自訂屬性
 
@@ -36,19 +36,19 @@ ms.locfileid: "46390980"
 
 - 成員變數的實作
 
-     這項實作以控制項類別中的成員變數，表示此屬性的狀態。 當您不一定要知道當屬性值變更時，請使用成員變數的實作。 三種類型，此實作會建立最少的支援屬性的程式碼。 分派對應項目巨集的成員變數的實作就[DISP_PROPERTY](../mfc/reference/dispatch-maps.md#disp_property)。
+   這項實作以控制項類別中的成員變數，表示此屬性的狀態。 當您不一定要知道當屬性值變更時，請使用成員變數的實作。 三種類型，此實作會建立最少的支援屬性的程式碼。 分派對應項目巨集的成員變數的實作就[DISP_PROPERTY](../mfc/reference/dispatch-maps.md#disp_property)。
 
 - 與通知實作的成員變數
 
-     此實作是由成員變數，以及加入屬性精靈所建立的通知函式所組成。 通知函式會自動由架構呼叫的屬性值變更之後。 使用成員變數通知實作時您需要的屬性值變更後收到通知。 此實作會需要更多時間，因為它需要函式呼叫。 分派對應項目巨集，此實作就[DISP_PROPERTY_NOTIFY](../mfc/reference/dispatch-maps.md#disp_property_notify)。
+   此實作是由成員變數，以及加入屬性精靈所建立的通知函式所組成。 通知函式會自動由架構呼叫的屬性值變更之後。 使用成員變數通知實作時您需要的屬性值變更後收到通知。 此實作會需要更多時間，因為它需要函式呼叫。 分派對應項目巨集，此實作就[DISP_PROPERTY_NOTIFY](../mfc/reference/dispatch-maps.md#disp_property_notify)。
 
 - 取得或設定方法的實作
 
-     此實作是由一組控制項類別中的成員函式所組成。 Get/Set 方法實作會自動呼叫 Get 成員函式控制項的使用者要求此屬性的目前值時，Set 成員函式控制項的使用者要求變更的屬性時。 當您需要在執行期間，計算屬性的值驗證控制項的使用者才能變更實際的屬性，傳遞的值或實作讀取-或唯寫的屬性型別，請使用這項實作。 分派對應項目巨集，此實作就[DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex)。 下一節[使用 [新增屬性精靈] 來新增自訂屬性](#_core_using_classwizard_to_add_a_custom_property)，來示範這項實作會使用 CircleOffset 自訂屬性。
+   此實作是由一組控制項類別中的成員函式所組成。 Get/Set 方法實作會自動呼叫 Get 成員函式控制項的使用者要求此屬性的目前值時，Set 成員函式控制項的使用者要求變更的屬性時。 當您需要在執行期間，計算屬性的值驗證控制項的使用者才能變更實際的屬性，傳遞的值或實作讀取-或唯寫的屬性型別，請使用這項實作。 分派對應項目巨集，此實作就[DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex)。 下一節[使用 [新增屬性精靈] 來新增自訂屬性](#_core_using_classwizard_to_add_a_custom_property)，來示範這項實作會使用 CircleOffset 自訂屬性。
 
 - 參數化的實作
 
-     加入屬性精靈 支援參數化的實作。 參數化的屬性 （有時稱為屬性的陣列） 可用來透過您控制項的單一屬性來存取一組值。 分派對應項目巨集，此實作是 DISP_PROPERTY_PARAM。 如需有關如何實作這種類型的詳細資訊，請參閱 <<c0> [ 實作參數化屬性](../mfc/mfc-activex-controls-advanced-topics.md)文中所 ActiveX 控制項： 進階主題。
+   加入屬性精靈 支援參數化的實作。 參數化的屬性 （有時稱為屬性的陣列） 可用來透過您控制項的單一屬性來存取一組值。 分派對應項目巨集，此實作是 DISP_PROPERTY_PARAM。 如需有關如何實作這種類型的詳細資訊，請參閱 <<c0> [ 實作參數化屬性](../mfc/mfc-activex-controls-advanced-topics.md)文中所 ActiveX 控制項： 進階主題。
 
 ##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> 使用加入屬性精靈來加入自訂屬性
 
@@ -66,7 +66,7 @@ ms.locfileid: "46390980"
 
 1. 從快顯功能表中，按一下**新增**，然後按一下**加入屬性**。
 
-     這會開啟[加入屬性精靈](../ide/names-add-property-wizard.md)。
+   這會開啟[加入屬性精靈](../ide/names-add-property-wizard.md)。
 
 1. 在 **屬性名稱**方塊中，輸入*CircleOffset*。
 

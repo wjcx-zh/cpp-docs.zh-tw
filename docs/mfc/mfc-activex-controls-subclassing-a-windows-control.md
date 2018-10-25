@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03fc15cc2d2a73c0e8a1a016a2a477a5c65cdc15
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 7cd03babd97033495ecfa84817938103cde05a73
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890553"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081702"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC ActiveX 控制項：子類別化 Windows 控制項
 
@@ -94,12 +94,12 @@ ActiveX 控制項容器可能會設計為自行執行訊息反映，如此便不
 
 - 在控制項類別的 .H 檔案中，宣告處理常式函式。 函式應該有傳回型別**LRESULT**和兩個參數，與型別**WPARAM**並**LPARAM**分別。 例如: 
 
-     [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
+   [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
     [!code-cpp[NVC_MFC_AxSub#6](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_6.h)]
 
 - 在控制項類別。CPP 檔案中，新增至訊息對應 ON_MESSAGE 項目。 這個項目的參數應該是訊息識別項和處理常式函式的名稱。 例如: 
 
-     [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
+   [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
 
 - 此外，在。CPP 檔案中，實作`OnOcmCommand`成員函式以處理反映的訊息。 *WParam*並*lParam*參數都是一樣的原始視窗訊息。
 

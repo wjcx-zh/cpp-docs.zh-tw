@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58d0d250e17ddd8beaef2a9f5cff4d4e1046fdcb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a7368e067e1324c3263440a7a6b165099c870735
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380437"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078150"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>如何：建立類型安全集合
 
@@ -45,11 +45,11 @@ MFC 程式庫提供以 C++ 範本為基礎的預先定義類型安全集合。 �
 
 1. 宣告集合類別類型的變數。 例如: 
 
-     [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]
+   [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]
 
 1. 呼叫集合物件的成員函式。 例如: 
 
-     [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]
 
 1. 如有必要，實作[helper 函式](../mfc/reference/collection-class-helpers.md)並[SerializeElements](../mfc/reference/collection-class-helpers.md#serializeelements)。 如需實作這些函式的詳細資訊，請參閱[實作 Helper 函式](#_core_implementing_helper_functions)。
 
@@ -85,27 +85,27 @@ MFC 也支援使用 MFC 1.0 版導入的集合類別。 這些類別不是以範
 
 1. 直接使用其中一個非範本類別，例如 `CWordArray`。
 
-     例如，您可以建立 `CWordArray` 並在其中加入任何 32 位元值，然後擷取它們。 就沒什麼要做的了。 您只要使用預先定義的功能。
+   例如，您可以建立 `CWordArray` 並在其中加入任何 32 位元值，然後擷取它們。 就沒什麼要做的了。 您只要使用預先定義的功能。
 
-     您也可以使用預先定義的集合 (例如 `CObList`) 來包含所有衍生自 `CObject` 的物件。 定義 `CObList` 集合以存放 `CObject` 的指標。 當您從清單中擷取物件時，可能必須將結果轉換為適當的類型，因為 `CObList` 函式會傳回 `CObject` 的指標。 例如，如果您在 `CPerson` 集合中儲存 `CObList` 物件，您必須將已擷取的項目轉換為 `CPerson` 物件的指標。 下列範例使用 `CObList` 集合來保有 `CPerson` 物件：
+   您也可以使用預先定義的集合 (例如 `CObList`) 來包含所有衍生自 `CObject` 的物件。 定義 `CObList` 集合以存放 `CObject` 的指標。 當您從清單中擷取物件時，可能必須將結果轉換為適當的類型，因為 `CObList` 函式會傳回 `CObject` 的指標。 例如，如果您在 `CPerson` 集合中儲存 `CObList` 物件，您必須將已擷取的項目轉換為 `CPerson` 物件的指標。 下列範例使用 `CObList` 集合來保有 `CPerson` 物件：
 
-     [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_4.cpp)]
+   [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_4.cpp)]
 
-     這項技術會使用預先定義的集合類型並視需要進行轉換，可能已滿足您的許多集合的需求。 如果您需要進一步的功能或更多類型安全，請使用範本型類別或遵循下一個程序。
+   這項技術會使用預先定義的集合類型並視需要進行轉換，可能已滿足您的許多集合的需求。 如果您需要進一步的功能或更多類型安全，請使用範本型類別或遵循下一個程序。
 
 #### <a name="to-derive-and-extend-a-nontemplate-type-safe-collection"></a>衍生並擴充非範本類型安全集合
 
 1. 從其中一個預先定義的非範本類別，衍生您自己的集合類別。
 
-     當您衍生您的類別時，您可以將類型安全包裝函式加入，以提供類型安全的介面給現有的函式。
+   當您衍生您的類別時，您可以將類型安全包裝函式加入，以提供類型安全的介面給現有的函式。
 
-     例如，如果您從 `CObList` 衍生清單以保有 `CPerson` 物件，您可以將包裝函式 `AddHeadPerson` 和 `GetHeadPerson` 加入 (如下所示)。
+   例如，如果您從 `CObList` 衍生清單以保有 `CPerson` 物件，您可以將包裝函式 `AddHeadPerson` 和 `GetHeadPerson` 加入 (如下所示)。
 
-     [!code-cpp[NVC_MFCCollections#11](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_5.h)]
+   [!code-cpp[NVC_MFCCollections#11](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_5.h)]
 
-     這些包裝函式提供類型安全方式，從衍生的清單加入和擷取 `CPerson` 物件。 您可以為 `GetHeadPerson` 函式試試該項，您只要封裝類型轉換。
+   這些包裝函式提供類型安全方式，從衍生的清單加入和擷取 `CPerson` 物件。 您可以為 `GetHeadPerson` 函式試試該項，您只要封裝類型轉換。
 
-     您也可以定義擴充集合的功能而不是只包裝在類型安全包裝函式中的現有功能的新函式，來加入新的功能。 例如，發行項[刪除 CObject 集合中的所有物件](../mfc/deleting-all-objects-in-a-cobject-collection.md)描述來刪除清單中包含的所有物件的函式。 可以將這個函式加入到衍生類別做為成員函式。
+   您也可以定義擴充集合的功能而不是只包裝在類型安全包裝函式中的現有功能的新函式，來加入新的功能。 例如，發行項[刪除 CObject 集合中的所有物件](../mfc/deleting-all-objects-in-a-cobject-collection.md)描述來刪除清單中包含的所有物件的函式。 可以將這個函式加入到衍生類別做為成員函式。
 
 ## <a name="see-also"></a>另請參閱
 

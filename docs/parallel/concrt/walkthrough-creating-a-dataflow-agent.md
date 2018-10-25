@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c71bfa1eb9acb270195549eec950fb4fdf6c31b3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f41bdf8d2487d81e7c8dc9887807b05afb32acbd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438947"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060038"
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>逐步解說：建立資料流程代理程式
 
@@ -78,7 +78,7 @@ ms.locfileid: "46438947"
 
 [!code-cpp[concrt-dataflow-agent#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_3.cpp)]
 
-     The `countdown_event` class is shown later in this topic.
+   `countdown_event`類別會在本主題稍後所示。
 
 1. 在資料流程網路中建立訊息將會參與的緩衝區物件。
 
@@ -101,7 +101,7 @@ ms.locfileid: "46438947"
 |成員|描述|
 |------------|-----------------|
 |`increment_active`|A [concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md)作用中事件計數器遞增，並將輸入的值傳遞給網路其餘部分的物件。|
-|`negatives`, `positives`|[concurrency:: call](../../parallel/concrt/reference/call-class.md)作用中事件計數器遞增的數字和遞減計數的物件。 每個物件會使用篩選來接受負數或正數。|
+|`negatives`、 `positives`|[concurrency:: call](../../parallel/concrt/reference/call-class.md)作用中事件計數器遞增的數字和遞減計數的物件。 每個物件會使用篩選來接受負數或正數。|
 |`sentinel`|A [concurrency:: call](../../parallel/concrt/reference/call-class.md)作用中事件計數器接受只有零和遞減的 sentinel 值的物件。|
 |`connector`|A [concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)連接到內部網路的來源訊息緩衝區的物件。|
 

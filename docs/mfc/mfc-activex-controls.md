@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b94172d57bc21e7f747a5d0986ef28dbfb80e481
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 33c79dc8c83f40d0b553a2c44cf22fa107f5ef34
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428638"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065586"
 ---
 # <a name="mfc-activex-controls"></a>MFC ActiveX 控制項
 
@@ -109,19 +109,19 @@ ActiveX 控制項會同時使用數個程式設計項目，在控制項容器與
 
 - **\Common7\Tools**
 
-     包含 （TstCon32.exe，以及它的說明檔案） 的測試容器檔案。
+   包含 （TstCon32.exe，以及它的說明檔案） 的測試容器檔案。
 
 - **\Vc7\atlmfc\include**
 
-     包含開發 ActiveX 控制項與 MFC 所需的 include 檔案
+   包含開發 ActiveX 控制項與 MFC 所需的 include 檔案
 
 - **\Vc7\atlmfc\src\mfc**
 
-     包含在 MFC 中的特定 ActiveX 控制項類別的原始程式碼
+   包含在 MFC 中的特定 ActiveX 控制項類別的原始程式碼
 
 - **\Vc7\atlmfc\lib**
 
-     包含開發 ActiveX 控制項與 MFC 所需的程式庫
+   包含開發 ActiveX 控制項與 MFC 所需的程式庫
 
 另外還有範例 MFC ActiveX 控制項。 如需有關這些範例的詳細資訊，請參閱[控制項範例： MFC-Based ActiveX 控制項](../visual-cpp-samples.md)
 

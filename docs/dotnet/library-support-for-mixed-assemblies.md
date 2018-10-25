@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 868cae6701e17c79c9856b3a16c63c1e25b67bda
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: 8c3fec26f3e41c3edd2346ac2e1b9b1f6b98ba33
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494513"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069616"
 ---
 # <a name="library-support-for-mixed-assemblies"></a>混合組件的程式庫支援
 
@@ -51,7 +51,6 @@ Visual c + + 支援 c + + 標準程式庫、 C 執行階段程式庫 (CRT)，使
 此外，這項支援存在下列限制：
 
 - 只將 CRT DLL 的模型才支援以編譯程式碼 **/clr**。 有不支援的靜態 CRT 程式庫 **/clr**組建。
-
 
 ## <a name="see-also"></a>另請參閱
 

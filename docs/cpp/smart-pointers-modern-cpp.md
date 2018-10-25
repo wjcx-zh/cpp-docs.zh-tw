@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9142ba85a78259c0a6e5ae06f3745d414e62e908
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 58591309faaa107756739a52173ceea2f1f7b188
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425622"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069876"
 ---
 # <a name="smart-pointers-modern-c"></a>智慧型指標 (現代 C++)
 
@@ -76,11 +76,14 @@ C++ 智慧型指標慣用語與在 C# 等語言中建立物件的情形類似：
 
 使用這些智慧型指標做為封裝純舊 C++ 物件 (POCO) 指標的首要選擇。
 
-- `unique_ptr` 可讓一個擁有者的基底的指標。 用做 POCO 的預設選項，除非您確信自己需要 `shared_ptr`。 可以移至新擁有者，但不可複製或共用。 替換已被取代的 `auto_ptr`。 與 `boost::scoped_ptr` 比較。 `unique_ptr` 既小又有效率的;大小是一個指標，並支援快速插入和擷取的 c + + 標準程式庫集合右值參考。 標頭檔：`<memory>`。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立和使用 unique_ptr 執行個體](../cpp/how-to-create-and-use-unique-ptr-instances.md)並[unique_ptr 類別](../standard-library/unique-ptr-class.md)。
+- `unique_ptr`<br/>
+   只允許一個基礎指標的擁有者。 用做 POCO 的預設選項，除非您確信自己需要 `shared_ptr`。 可以移至新擁有者，但不可複製或共用。 替換已被取代的 `auto_ptr`。 與 `boost::scoped_ptr` 比較。 `unique_ptr` 既小又有效率的;大小是一個指標，並支援快速插入和擷取的 c + + 標準程式庫集合右值參考。 標頭檔：`<memory>`。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立和使用 unique_ptr 執行個體](../cpp/how-to-create-and-use-unique-ptr-instances.md)並[unique_ptr 類別](../standard-library/unique-ptr-class.md)。
 
-- `shared_ptr` 參考計數的智慧型指標。 在您想要將原始指標指派給多個擁有者時使用，例如，當您從容器傳回指標的複本，但是想要保留原來的指標時。 原始指標只有在所有的 `shared_ptr` 擁有者都超出範圍或放棄擁有權之後，才會被刪除。 大小是兩個指標；一個針對物件，另一個則針對含有參考計數的共用控制區塊。 標頭檔：`<memory>`。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立和使用 shared_ptr 執行個體](../cpp/how-to-create-and-use-shared-ptr-instances.md)並[shared_ptr 類別](../standard-library/shared-ptr-class.md)。
+- `shared_ptr`<br/>
+   參考計數的智慧型指標。 在您想要將原始指標指派給多個擁有者時使用，例如，當您從容器傳回指標的複本，但是想要保留原來的指標時。 原始指標只有在所有的 `shared_ptr` 擁有者都超出範圍或放棄擁有權之後，才會被刪除。 大小是兩個指標；一個針對物件，另一個則針對含有參考計數的共用控制區塊。 標頭檔：`<memory>`。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立和使用 shared_ptr 執行個體](../cpp/how-to-create-and-use-shared-ptr-instances.md)並[shared_ptr 類別](../standard-library/shared-ptr-class.md)。
 
-- `weak_ptr` 搭配使用的特殊案例智慧型指標`shared_ptr`。 `weak_ptr` 可以讓您存取由一個或多個 `shared_ptr` 執行個體擁有的物件，但是不會參與參考計數。 當您想要觀察物件，但不需要物件保持運作時，即可使用。 在某些要中斷 `shared_ptr` 執行個體之間循環參考的情況下為必要項。 標頭檔：`<memory>`。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立和使用 weak_ptr 執行個體](../cpp/how-to-create-and-use-weak-ptr-instances.md)並[weak_ptr 類別](../standard-library/weak-ptr-class.md)。
+- `weak_ptr`<br/>
+    與 `shared_ptr` 一起使用的特殊案例智慧型指標。 `weak_ptr` 可以讓您存取由一個或多個 `shared_ptr` 執行個體擁有的物件，但是不會參與參考計數。 當您想要觀察物件，但不需要物件保持運作時，即可使用。 在某些要中斷 `shared_ptr` 執行個體之間循環參考的情況下為必要項。 標頭檔：`<memory>`。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立和使用 weak_ptr 執行個體](../cpp/how-to-create-and-use-weak-ptr-instances.md)並[weak_ptr 類別](../standard-library/weak-ptr-class.md)。
 
 ### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>COM 物件 (傳統 Windows 程式設計) 的智慧型指標
 

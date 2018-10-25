@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9783eb0e4468f154591676dc46ed9342082d8512
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4ae69ad1629868a1001f9caa477c75d4f6ab5e61
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396456"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065040"
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog 類別
 
@@ -102,7 +102,6 @@ BOOL Create(
     DWORD dwTabbedStyle= AFX_CBRS_REGULAR_TABS,
     DWORD dwControlBarStyle=AFX_DEFAULT_DOCKING_PANE_STYLE);
 
-
 BOOL Create(
     LPCTSTR lpszWindowName,
     CWnd* pParentWnd,
@@ -111,13 +110,11 @@ BOOL Create(
     UINT nStyle,
     UINT nID);
 
-
 BOOL Create(
     CWnd* pParentWnd,
     LPCTSTR lpszTemplateName,
     UINT nStyle,
     UINT nID);
-
 
 BOOL Create(
     CWnd* pParentWnd,
@@ -221,6 +218,4 @@ virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 [類別](../../mfc/reference/mfc-classes.md)<br/>
 [CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)<br/>
 [視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)
-
-
 

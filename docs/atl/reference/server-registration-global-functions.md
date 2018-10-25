@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c43e28e035691b04181bef2162de828f3271a600
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: c8a2935d5b1c32298215b0ebfcf7382dafd259b3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082750"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052937"
 ---
 # <a name="server-registration-global-functions"></a>伺服器註冊全域函式
 
@@ -38,7 +38,7 @@ ms.locfileid: "49082750"
 |[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)|呼叫此函式可在物件對應中移除每個物件的註冊。|
 |[AtlComModuleRegisterClassObjects](#atlcommoduleregisterclassobjects)|呼叫此函式可註冊類別物件。|
 |[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|若要撤銷從 COM 模組類別物件，會呼叫此函數。|
-|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|此函式會呼叫以取得類別物件。|  
+|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|此函式會呼叫以取得類別物件。|
 
 ## <a name="requirements"></a>需求
 

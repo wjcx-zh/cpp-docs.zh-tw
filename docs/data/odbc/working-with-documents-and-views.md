@@ -18,23 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fdaf290cde69f6d269b4bf055c70171800aa1489
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c3879c6a29f95cc908d12c0b899214b521f46686
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46053962"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060439"
 ---
 # <a name="working-with-documents-and-views"></a>使用文件和檢視
 
-Microsoft Foundation Classes (MFC) 程式庫會依賴的各項功能的文件/檢視架構。 一般而言，文件會儲存您的資料，並檢視顯示在框架視窗的工作區和管理使用者與資料互動。 檢視會與文件以取得和更新的資料通訊。 使用的架構，或沒有它，您可以使用資料庫類別。  
-  
-如需使用 framework 中的資料庫類別的詳細資訊，請參閱[MFC： 使用具有文件和檢視的資料庫類別](../../data/mfc-using-database-classes-with-documents-and-views.md)。  
-  
-依預設，MFC 應用程式精靈建立基本架構的應用程式沒有資料庫支援。 不過，您可以選取選項來包含最少的資料庫支援或以 form 為基礎的更完整支援。 如需應用程式精靈 選項的詳細資訊，請參閱[MFC 應用程式精靈、 資料庫支援](../../mfc/reference/database-support-mfc-application-wizard.md)。  
-  
-您也可以使用資料庫類別，而不需使用完整的文件/檢視架構。 如需詳細資訊，請參閱 < [MFC： 使用資料庫類別不具文件和檢視表](../../data/mfc-using-database-classes-without-documents-and-views.md)。  
-  
-## <a name="see-also"></a>另請參閱  
+Microsoft Foundation Classes (MFC) 程式庫會依賴的各項功能的文件/檢視架構。 一般而言，文件會儲存您的資料，並檢視顯示在框架視窗的工作區和管理使用者與資料互動。 檢視會與文件以取得和更新的資料通訊。 使用的架構，或沒有它，您可以使用資料庫類別。
+
+如需使用 framework 中的資料庫類別的詳細資訊，請參閱[MFC： 使用具有文件和檢視的資料庫類別](../../data/mfc-using-database-classes-with-documents-and-views.md)。
+
+依預設，MFC 應用程式精靈建立基本架構的應用程式沒有資料庫支援。 不過，您可以選取選項來包含最少的資料庫支援或以 form 為基礎的更完整支援。 如需應用程式精靈 選項的詳細資訊，請參閱[MFC 應用程式精靈、 資料庫支援](../../mfc/reference/database-support-mfc-application-wizard.md)。
+
+您也可以使用資料庫類別，而不需使用完整的文件/檢視架構。 如需詳細資訊，請參閱 < [MFC： 使用資料庫類別不具文件和檢視表](../../data/mfc-using-database-classes-without-documents-and-views.md)。
+
+## <a name="see-also"></a>另請參閱
 
 [ODBC 和 MFC](../../data/odbc/odbc-and-mfc.md)

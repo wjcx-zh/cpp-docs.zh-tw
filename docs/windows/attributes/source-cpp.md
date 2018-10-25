@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81ea5c45aff148d8f0683d0058963571bc02a57a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: f7bc10b89df58dc72c35855fea43c2a0387f9efd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790887"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058462"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -90,11 +90,11 @@ class NN : public b
 |**必要屬性**|`coclass` （當套用至類別或結構）|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [IDL 屬性](idl-attributes.md)<br/>
 [類別屬性](class-attributes.md)<br/>
 [方法屬性](method-attributes.md)<br/>
-[coclass](coclass.md)  
+[coclass](coclass.md)

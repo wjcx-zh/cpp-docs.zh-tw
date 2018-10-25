@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 83d518aded30215684970e58d2868625fb8cd0e5
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 2aa88f88fe26b96202f2a917bddf5c8bb07c0d3c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790971"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071124"
 ---
 # <a name="com-attributes"></a>COM 屬性
 
 COM 屬性插入程式碼，以支援 COM 開發和.NET Framework 通用語言執行階段開發的多個區域。 這些區域範圍從自訂的介面實作和支援的現有介面來支援內建屬性、 方法和事件。 此外，可在支援複合和 ActiveX 控制項的實作。
-  
+
 |屬性|描述|
 |---------------|-----------------|
 |[aggregatable](aggregatable.md)|表示控制項，可以彙總的另一個控制項。|
@@ -41,9 +41,9 @@ COM 屬性插入程式碼，以支援 COM 開發和.NET Framework 通用語言�
 |[requires_category](requires-category.md)|指定所需的元件類別的類別。|
 |[support_error_info](support-error-info.md)|支援目標物件的錯誤報告功能。|
 |[synchronize](synchronize.md)|同步處理方法的存取。|
-|[執行緒處理](threading-cpp.md)|指定 COM 物件的執行緒模型。|
+|[threading](threading-cpp.md)|指定 COM 物件的執行緒模型。|
 |[vi_progid](vi-progid.md)|定義控制項與版本無關的 ProgID。|
-  
+
 ## <a name="see-also"></a>另請參閱
 
 [依群組分類的屬性](attributes-by-group.md)

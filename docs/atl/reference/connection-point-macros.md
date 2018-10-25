@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b025e29c93cffe9c600646a2475f7e3230fd03
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a654f820d3c1dcdaa49ed8b3b3203d2c271b6880
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039539"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055474"
 ---
 # <a name="connection-point-macros"></a>連接點巨集
 
@@ -33,7 +33,7 @@ ms.locfileid: "46039539"
 |[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)|標示連接點對應項目的開頭。|
 |[CONNECTION_POINT_ENTRY](#connection_point_entry)|輸入對應的連接點。|
 |[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| (Visual Studio 2017)類似於 CONNECTION_POINT_ENTRY 但接受 iid 的指標。|
-|[END_CONNECTION_POINT_MAP](#end_connection_point_map)|標示連接點對應項目的結尾。|  
+|[END_CONNECTION_POINT_MAP](#end_connection_point_map)|標示連接點對應項目的結尾。|
 
 ## <a name="requirements"></a>需求
 
@@ -74,7 +74,7 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 ### <a name="parameters"></a>參數
 
 *iid*<br/>
-[in]加入連接點對應介面的 GUID。 
+[in]加入連接點對應介面的 GUID。
 
 *piid*<br/>
 [in]正在 adde 介面的 GUID 的指標。

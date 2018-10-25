@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b20b5ea002ac16feb99707610fbe4556bf3254f7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b06302d330ec8677a3de9b3ccaebf0b7b237b0e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375990"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053887"
 ---
 # <a name="application-control"></a>應用程式控制
 
@@ -41,7 +41,6 @@ OLE 會需要應用程式和其物件的實際控制。 OLE 系統 Dll 必須能
 |[AfxOleUnlockControl](#afxoleunlockcontrol)| 取消鎖定指定之控制項的 class factory。 |
 |[AfxOleRegisterServerClass](#afxoleregisterserverclass)|OLE 系統登錄中註冊伺服器。|
 |[AfxOleSetEditMenu](#afxoleseteditmenu)|實作的使用者介面*typename*物件命令。|
-
 
 ##  <a name="afxolecanexitapp"></a>  AfxOleCanExitApp
 
@@ -192,6 +191,7 @@ void AFXAPI AfxOleUnlockApp();
 BOOL AFXAPI AfxOleLockControl(  REFCLSID clsid  );
 BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 ```
+
 ### <a name="parameters"></a>參數
 
 *clsid*<br/>
@@ -357,6 +357,7 @@ void AFXAPI AfxOleSetEditMenu(
 BOOL AFXAPI AfxOleUnlockControl( REFCLSID clsid );
 BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );
 ```
+
 ### <a name="parameters"></a>參數
 
 *clsid*<br/>

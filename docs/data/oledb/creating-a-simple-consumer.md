@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c9cb2003b857bb156709e4ba2a3345dfb57bfd3c
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 5a989466cff50d7e336bc9af8fee68f7ab72929d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808936"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054913"
 ---
 # <a name="creating-a-simple-consumer"></a>建立簡單消費者
 
-使用 ATL 專案精靈] 和 [ATL OLE DB 消費者精靈產生的 OLE DB 範本取用者。
+使用**ATL 專案精靈**並**ATL OLE DB 消費者精靈**產生的 OLE DB 範本取用者。
 
 ## <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>若要建立的 OLE DB 取用者的主控台應用程式
 
@@ -42,7 +42,7 @@ ms.locfileid: "49808936"
 
 1. 按一下 **確定**關閉精靈並產生專案。
 
-接下來，使用 [ATL OLE DB 消費者精靈] 來新增 OLE DB 取用者物件。
+接下來，使用**ATL OLE DB 消費者精靈**新增 OLE DB 取用者物件。
 
 ## <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>若要使用 [ATL OLE DB 消費者精靈] 建立消費者
 
@@ -54,7 +54,7 @@ ms.locfileid: "49808936"
 
 1. 在 **分類**窗格中，按一下**已安裝** > **Visual c + +** > **ATL**，按一下**ATL OLEDB 消費者**中的圖示**範本**窗格中，然後再按一下**新增**。
 
-   ATL OLEDB 消費者精靈 隨即出現。
+   **ATL OLEDB 消費者精靈**隨即出現。
 
 1. 按一下 [**資料來源**] 按鈕。
 
@@ -62,26 +62,26 @@ ms.locfileid: "49808936"
 
 1. 在 **資料連結屬性**對話方塊方塊中，執行下列動作：
 
-   - 在 **提供者**索引標籤上，指定 OLE DB 提供者。
+    1. 在 **提供者**索引標籤上，指定 OLE DB 提供者。
 
-   - 在 **連線**索引標籤上，指定伺服器上的必要的資訊，例如伺服器名稱、 登入識別碼，與您的資料來源和資料庫的密碼。
+    1. 在 **連線**索引標籤上，指定伺服器上的必要的資訊，例如伺服器名稱、 登入識別碼，與您的資料來源和資料庫的密碼。
 
-   > [!NOTE]
-   > 安全性問題**允許儲存密碼**功能**資料連結屬性** 對話方塊。 在 **輸入登入伺服器的資訊**，有兩個選項按鈕：**使用 Windows NT 整合式安全性**並**使用特定的使用者名稱和密碼**。
+       > [!NOTE]
+       > 安全性問題**允許儲存密碼**功能**資料連結屬性** 對話方塊。 在 **輸入登入伺服器的資訊**，有兩個選項按鈕：**使用 Windows NT 整合式安全性**並**使用特定的使用者名稱和密碼**。
 
-   > [!NOTE]
-   > 如果您選取**使用特定的使用者名稱和密碼**，您可以選擇儲存密碼 (使用**允許儲存密碼**核取方塊); 不過，此選項並不安全。 建議您選取**使用 Windows NT 整合式安全性**; 此選項會使用 Windows NT 驗證您的身分識別。
+       > [!NOTE]
+       > 如果您選取**使用特定的使用者名稱和密碼**，您可以選擇儲存密碼 (使用**允許儲存密碼**核取方塊); 不過，此選項並不安全。 建議您選取**使用 Windows NT 整合式安全性**; 此選項會使用 Windows NT 驗證您的身分識別。
 
-   > [!NOTE]
-   > 如果您無法使用 Windows NT 整合式安全性，您就應該使用的中介層應用程式，以提示使用者輸入密碼，或將密碼儲存在一個位置，安全性機制，以便協助保護它 (而不是在原始程式碼中)。
+       > [!NOTE]
+       > 如果您無法使用 Windows NT 整合式安全性，您就應該使用的中介層應用程式，以提示使用者輸入密碼，或將密碼儲存在一個位置，安全性機制，以便協助保護它 (而不是在原始程式碼中)。
 
-   選取您的提供者，以及其他設定後，按一下**測試連接**確認先前的對話方塊頁面上所做的選擇。 如果**結果**方塊報告`Test connection succeeded`，按一下 **確定**建立資料連結。
+   1. 選取您的提供者，以及其他設定後，按一下**測試連接**確認先前的對話方塊頁面上所做的選擇。 如果**結果**方塊報告`Test connection succeeded`，按一下 **確定**建立資料連結。
 
    **選取資料庫物件** 對話方塊隨即出現。
 
-1. 您可以使用樹狀結構控制項中，選取資料表、 檢視表或預存程序。 此程序，以選取`Products`資料表中`Northwind`資料庫。
+1. 您可以使用樹狀結構控制項中，選取資料表、 檢視表或預存程序。 此範例中，選取`Products`資料表中`Northwind`資料庫。
 
-1. 按一下 [確定 **Deploying Office Solutions**]。 這會讓您回到 ATL OLE DB 消費者精靈。
+1. 按一下 [確定 **Deploying Office Solutions**]。 這時會回到**ATL OLE DB 消費者精靈**。
 
 1. 在精靈完成的名稱`Class`並 **.h 檔案**根據名稱的資料表、 檢視或預存程序，您已選取。 如果您想要您可以編輯這些名稱。
 
@@ -93,14 +93,14 @@ ms.locfileid: "49808936"
 
 1. 底下**支援**，保留**變更**，**插入**，以及**刪除**清除的方塊。
 
-   選取 **變更**，**插入**，並**刪除**支援變更、 插入及刪除資料列集中的記錄，如有必要的核取方塊。 如需有關將資料寫入至資料存放區，請參閱 <<c0> [ 更新資料列集](../../data/oledb/updating-rowsets.md)。
+   選取 **變更**，**插入**，並**刪除**核取方塊，以支援變更、 插入和刪除的資料列集中的記錄。 如需有關將資料寫入至資料存放區，請參閱 <<c0> [ 更新資料列集](../../data/oledb/updating-rowsets.md)。
 
 1. 按一下 **完成**建立取用者。
 
 在精靈產生的命令類別和使用者記錄類別，如中所示[消費者精靈產生的類別](../../data/oledb/consumer-wizard-generated-classes.md)。 命令類別會具有您在中輸入的名稱`Class`方塊中的精靈 (在此情況下， `CProducts`)，而使用者記錄類別將表單的名稱 」*ClassName*存取子 」 (在此情況下， `CProductsAccessor`)。
 
 > [!NOTE]
-> 精靈會將下面這一行放 Products.h:
+> 精靈會將下列行插入`Products.h`:
 
 ```cpp
 #error Security Issue: The connection string may contain a password

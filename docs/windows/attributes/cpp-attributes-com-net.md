@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe6941e8809c0d735013b56d340f27302890b149
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 66188f1879c42eaf9429675a2f235130e263211f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790659"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072521"
 ---
 # <a name="c-attributes-for-com-and-net"></a>適用於 COM 和.NET 的 c + + 屬性
 
@@ -90,21 +90,21 @@ Visual c + + 屬性放入您的程式碼之後，您可能想 Visual c + + 編�
 ## <a name="contexts"></a> 屬性內容
 
 C + + 屬性可以使用四個基本的欄位描述： 它們可以套用到目標 (**適用於**)，如果它們是可重複，或是不 (**Repeatable**)、 所需的其他屬性 (存在**所需的屬性**)，和不相容性與其他屬性 (**無效的屬性**)。 隨附的資料表中每個屬性的參考主題會列出這些欄位。 以下說明每個欄位。
-  
+
 ### <a name="applies-to"></a>適用於
 
 此欄位會描述所指定之屬性的合法目標的不同 c + + 語言項目。 比方說，如果屬性會指定 「 類別 」 中**套用至** 欄位中，這會指出屬性只能套用至合法的 c + + 類別。 如果屬性套用至類別的成員函式，會產生語法錯誤。
-  
+
 如需詳細資訊，請參閱 <<c0> [ 屬性的用法](attributes-by-usage.md)。
-  
+
 ### <a name="repeatable"></a>可重複
 
 此欄位會指出是否將屬性可以重複套用至相同的目標。 大部分的屬性不是可重複的。
-  
+
 ### <a name="required-attributes"></a>必要屬性
 
 此欄位會列出其他要使用的屬性才能正確執行指定之屬性的存在 （亦即，套用至相同的目標）。 是常見的此欄位的任何項目屬性。
-  
+
 ### <a name="invalid-attributes"></a>無效的屬性
 
 此欄位會列出與指定的屬性不相容的其他屬性。 是常見的此欄位的任何項目屬性。

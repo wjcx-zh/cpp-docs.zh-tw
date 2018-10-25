@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77bcb8257fc6907b48330301cf009fa44f00578d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d28d909866808fbffb6165e552bf825bf1241771
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082523"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069811"
 ---
 # <a name="postfix-expressions"></a>後置運算式
 
@@ -41,7 +41,7 @@ ms.locfileid: "46082523"
 下列語法描述可能的後置陳述式：
 
 ```
-primary-expression 
+primary-expression 
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )
 ```
 
@@ -83,20 +83,20 @@ simple-type-name ( expression-list )
     Func( 7 );          // Execute function call
     ```
 
-     呼叫之前的概念初始化為：
+   呼叫之前的概念初始化為：
 
     ```cpp
     int Temp_i = 7;
     Func( Temp_i );
     ```
 
-     請注意，初始化的執行方式就如同使用等號語法，而不是括號語法。 將值傳遞至函式之前，會先製作 `i` 的複本  (如需詳細資訊，請參閱 <<c0> [ 初始設定式](../cpp/initializers.md)並[轉換](../cpp/user-defined-type-conversions-cpp.md))。
+   請注意，初始化的執行方式就如同使用等號語法，而不是括號語法。 將值傳遞至函式之前，會先製作 `i` 的複本  (如需詳細資訊，請參閱 <<c0> [ 初始設定式](../cpp/initializers.md)並[轉換](../cpp/user-defined-type-conversions-cpp.md))。
 
-     因此，如果函式原型 （宣告） 呼叫類型的引數**長**，而且如果呼叫端提供類型的實際引數**int**，使用升級的實際引數標準轉換為類型**長**(請參閱[標準轉換](../cpp/standard-conversions.md))。
+   因此，如果函式原型 （宣告） 呼叫類型的引數**長**，而且如果呼叫端提供類型的實際引數**int**，使用升級的實際引數標準轉換為類型**長**(請參閱[標準轉換](../cpp/standard-conversions.md))。
 
-     提供沒有轉換成型式引數類型之標準或使用者定義轉換的實質引數是不正確的做法。
+   提供沒有轉換成型式引數類型之標準或使用者定義轉換的實質引數是不正確的做法。
 
-     對於類別類型的實質引數，型式引數會藉由呼叫類別的建構函式進行初始化。 (請參閱[建構函式](../cpp/constructors-cpp.md)如需這些特殊類別成員函式。)
+   對於類別類型的實質引數，型式引數會藉由呼叫類別的建構函式進行初始化。 (請參閱[建構函式](../cpp/constructors-cpp.md)如需這些特殊類別成員函式。)
 
 - 函式呼叫將會執行。
 

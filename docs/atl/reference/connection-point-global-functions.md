@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12976bcf796466f959807f7ac2fb52257889454b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5a1c972be0b4e14d881812195856465dbc7c9e70
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46025538"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075784"
 ---
 # <a name="connection-point-global-functions"></a>連接點全域函式
 
@@ -36,7 +36,7 @@ ms.locfileid: "46025538"
 |-|-|
 |[AtlAdvise](#atladvise)|建立物件連接點與用戶端接收器之間的連接。|
 |[AtlUnadvise](#atlunadvise)|終止透過所建立的連線`AtlAdvise`。|
-|[AtlAdviseSinkMap](#atladvisesinkmap)|建議，或取消通知事件接收對應中的項目。|  
+|[AtlAdviseSinkMap](#atladvisesinkmap)|建議，或取消通知事件接收對應中的項目。|
 
 ## <a name="requirements"></a>需求
 

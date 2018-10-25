@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c01cc08368e5c02a5513569e7230ab064d06163f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 17e422147da931aee1877e7be54b7032e7bc8712
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386714"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077994"
 ---
 # <a name="cbrush-class"></a>CBrush 類別
 
@@ -183,7 +183,6 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 BOOL CreateDIBPatternBrush(
     HGLOBAL hPackedDIB,
     UINT nUsage);
-
 
 BOOL CreateDIBPatternBrush(
     const void* lpPackedDIB,

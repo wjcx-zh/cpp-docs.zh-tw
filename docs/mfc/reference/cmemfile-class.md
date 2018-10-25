@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0df3da3be3e2ad850b2b84b636d1bc1d3fb7eb98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 90203a2e4fc29b28e6c75193ed1db35e25044951
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447358"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076954"
 ---
 # <a name="cmemfile-class"></a>CMemFile 類別
 
@@ -165,7 +165,6 @@ void Attach(
 
 ```
 CMemFile(UINT nGrowBytes = 1024);
-
 
 CMemFile(
     BYTE* lpBuffer,
@@ -303,6 +302,4 @@ virtual BYTE* Realloc(
 
 [CFile 類別](../../mfc/reference/cfile-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-
-
 

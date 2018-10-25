@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ea824fda89ccf45c62145a0fe72e55edc614970a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8176bad2921edd22edaab1688e38bc7de275b0bb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106953"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074796"
 ---
 # <a name="command-object-interfaces"></a>命令物件介面
 
-命令物件會使用`IAccessor`介面來指定參數繫結。 取用者可以呼叫`IAccessor::CreateAccessor`，它會將陣列傳遞`DBBINDING`結構。 `DBBINDING` 包含資料行繫結 （例如型別和長度） 的相關資訊。 提供者會收到結構，並判斷應該傳送資料的方式，以及是否需要轉換。  
-  
-`ICommandText`介面可用來指定文字的命令。 `ICommandProperties`介面處理命令的所有屬性。  
-  
-## <a name="see-also"></a>另請參閱  
+命令物件會使用`IAccessor`介面來指定參數繫結。 取用者可以呼叫`IAccessor::CreateAccessor`，它會將陣列傳遞`DBBINDING`結構。 `DBBINDING` 包含資料行繫結 （例如型別和長度） 的相關資訊。 提供者會收到結構，並判斷應該傳送資料的方式，以及是否需要轉換。
+
+`ICommandText`介面可用來指定文字的命令。 `ICommandProperties`介面處理命令的所有屬性。
+
+## <a name="see-also"></a>另請參閱
 
 [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

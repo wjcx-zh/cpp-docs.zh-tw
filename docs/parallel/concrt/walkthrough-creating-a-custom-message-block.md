@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9391d99f75bdb5ac2191a65e525ce989aefcd6b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6c4e2f27a6f123d870e56750180a5b7d4ee624fc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421280"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066405"
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>逐步解說：建立自訂訊息區
 
@@ -92,19 +92,19 @@ ms.locfileid: "46421280"
 
 [!code-cpp[concrt-priority-buffer#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_3.h)]
 
-     The `priority_buffer` class stores `message` objects in a `priority_queue` object. These type specializations enable the priority queue to sort messages according to their priority. The priority is the first element of the `tuple` object.
+   `priority_buffer`類別存放區`message`中的物件`priority_queue`物件。 這些類型特製化，讓優先權佇列郵件根據優先順序進行排序。 優先順序是第一個項目`tuple`物件。
 
 1. 在 `concurrencyex`命名空間宣告`priority_buffer`類別。
 
 [!code-cpp[concrt-priority-buffer#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_4.h)]
 
-     The `priority_buffer` class derives from `propagator_block`. Therefore, it can both send and receive messages. The `priority_buffer` class can have multiple targets that receive messages of type `Type`. It can also have multiple sources that send messages of type `tuple<PriorityType, Type>`.
+   `priority_buffer` 類別衍生自 `propagator_block`。 因此，它可以同時傳送和接收訊息。 `priority_buffer`類別可以有多個目標會接收訊息的型別`Type`。 它也可以傳送訊息的類型的多個來源`tuple<PriorityType, Type>`。
 
 1. 在 `private`一節`priority_buffer`類別中，新增下列成員變數。
 
 [!code-cpp[concrt-priority-buffer#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_5.h)]
 
-     The `priority_queue` object holds incoming messages; the `queue` object holds outgoing messages. A `priority_buffer` object can receive multiple messages simultaneously; the `critical_section` object synchronizes access to the queue of input messages.
+   `priority_queue`物件會保留傳入的訊息;`queue`物件會保留外寄訊息。 A`priority_buffer`物件可以同時接收多個訊息，而`critical_section`物件同步處理的輸入訊息佇列的存取權。
 
 1. 在 `private`區段中，定義複製建構函式和指派運算子。 這可防止`priority_queue`從所指派的物件。
 
@@ -122,65 +122,65 @@ ms.locfileid: "46421280"
 
 [!code-cpp[concrt-priority-buffer#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_9.h)]
 
-     The `propagate_to_any_targets` method transfers the message that is at the front of the input queue to the output queue and propagates out all messages in the output queue.
+   `propagate_to_any_targets`方法傳送的訊息，是位於要輸出佇列的輸入佇列，並且將輸出佇列中的所有訊息都傳播出去。
 
 10. 在 `protected`區段中，定義`accept_message`方法。
 
 [!code-cpp[concrt-priority-buffer#8](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_10.h)]
 
-     When a target block calls the `accept_message` method, the `priority_buffer` class transfers ownership of the message to the first target block that accepts it. (This resembles the behavior of `unbounded_buffer`.)
+   當目標區塊呼叫`accept_message`方法，`priority_buffer`類別會將訊息的擁有權轉移到第一個目標區塊接受它。 (這類似於的行為`unbounded_buffer`。)
 
 11. 在 `protected`區段中，定義`reserve_message`方法。
 
 [!code-cpp[concrt-priority-buffer#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_11.h)]
 
-     The `priority_buffer` class permits a target block to reserve a message when the provided message identifier matches the identifier of the message that is at the front of the queue. In other words, a target can reserve the message if the `priority_buffer` object has not yet received an additional message and has not yet  propagated out the current one.
+   `priority_buffer`類別允許目標區塊保留訊息，當提供的訊息識別項符合位於佇列前端的訊息識別項。 換句話說，目標可以保留訊息如果`priority_buffer`物件尚未收到額外的訊息和未尚未傳播出目前的金鑰。
 
 12. 在 `protected`區段中，定義`consume_message`方法。
 
 [!code-cpp[concrt-priority-buffer#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_12.h)]
 
-     A target block calls `consume_message` to transfer ownership of the message that it reserved.
+   目標區塊呼叫`consume_message`轉移擁有權，它所保留的訊息。
 
 13. 在 `protected`區段中，定義`release_message`方法。
 
 [!code-cpp[concrt-priority-buffer#12](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_13.h)]
 
-     A target block calls `release_message` to cancel its reservation to a message.
+   目標區塊呼叫`release_message`取消其保留的訊息。
 
 14. 在 `protected`區段中，定義`resume_propagation`方法。
 
 [!code-cpp[concrt-priority-buffer#13](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_14.h)]
 
-     The runtime calls `resume_propagation` after a target block either consumes or releases a reserved message. This method propagates out any messages that are in the output queue.
+   執行階段呼叫`resume_propagation`目標區塊會耗用或釋放保留的訊息之後。 這個方法會散佈在輸出佇列中的任何訊息。
 
 15. 在 `protected`區段中，定義`link_target_notification`方法。
 
 [!code-cpp[concrt-priority-buffer#14](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_15.h)]
 
-     The `_M_pReservedFor` member variable is defined by the base class, `source_block`. This member variable points to the target block, if any, that is holding a reservation to the message that is at the front of the output queue. The runtime calls `link_target_notification` when a new target is linked to the `priority_buffer` object. This method propagates out any messages that are in the output queue if no target is holding a reservation.
+   `_M_pReservedFor`成員變數由基底類別，定義`source_block`。 此成員變數會指向目標區塊，如果有的話，所保留的訊息，是位於輸出佇列的保留項目。 執行階段會呼叫`link_target_notification`當新的目標連結到`priority_buffer`物件。 這個方法會散佈如果沒有目標持有保留項目，則輸出佇列中的任何訊息。
 
 16. 在 `private`區段中，定義`propagate_priority_order`方法。
 
 [!code-cpp[concrt-priority-buffer#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_16.h)]
 
-     This method propagates out all messages from the output queue. Every message in the queue is offered to every target block until one of the target blocks accepts the message. The `priority_buffer` class preserves the order of the outgoing messages. Therefore, the first message in the output queue must be accepted by a target block before this method offers any other message to the target blocks.
+   這個方法會散佈輸出佇列中的所有訊息。 每個訊息在佇列中的供每個目標區塊，直到其中一個目標區塊接受該訊息。 `priority_buffer`類別會保留外寄訊息的順序。 因此，輸出佇列中的第一個訊息必須先接受由目標區塊這個方法提供給目標區塊的任何其他訊息。
 
 17. 在 `protected`區段中，定義`propagate_message`方法。
 
 [!code-cpp[concrt-priority-buffer#16](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_17.h)]
 
-     The `propagate_message` method enables the `priority_buffer` class to act as a message receiver, or target. This method receives the message that is offered by the provided source block and inserts that message into the priority queue. The `propagate_message` method then asynchronously sends all output messages to the target blocks.
+   `propagate_message`方法可讓`priority_buffer`類別做為訊息接收者，或目標。 這個方法會接收的訊息，提供所提供的來源區塊和優先權佇列中插入該訊息。 `propagate_message`方法然後以非同步方式傳送所有訊息輸出至目標區塊。
 
-     The runtime calls this method when you call the [concurrency::asend](reference/concurrency-namespace-functions.md#asend) function or when the message block is connected to other message blocks.
+   執行階段呼叫這個方法，當您呼叫[concurrency:: asend](reference/concurrency-namespace-functions.md#asend)函式或當訊息區塊連接至其他訊息區塊。
 
 18. 在 `protected`區段中，定義`send_message`方法。
 
 [!code-cpp[concrt-priority-buffer#17](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_18.h)]
 
-     The `send_message` method resembles `propagate_message`. However it sends the output messages synchronously instead of asynchronously.
+   `send_message`方法類似於`propagate_message`。 不過，它會傳送輸出訊息，以同步方式而不是以非同步的方式。
 
-     The runtime calls this method during a synchronous send operation, such as when you call the [concurrency::send](reference/concurrency-namespace-functions.md#send) function.
+   執行階段會呼叫這個方法在同步傳送作業時，例如當您呼叫[concurrency:: send](reference/concurrency-namespace-functions.md#send)函式。
 
 `priority_buffer`類別包含典型的許多訊息區塊類型建構函式多載。 有些建構函式多載採用[concurrency:: scheduler](../../parallel/concrt/reference/scheduler-class.md)或是[concurrency:: schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)物件，讓訊息區塊受特定工作排程器。 其他建構函式多載會採用篩選函式。 篩選函數可讓訊息區塊接受或拒絕訊息，以根據其內容。 如需訊息篩選條件的詳細資訊，請參閱[非同步訊息區](../../parallel/concrt/asynchronous-message-blocks.md)。 如需有關工作排程器的詳細資訊，請參閱[工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。
 

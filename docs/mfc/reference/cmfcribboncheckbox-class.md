@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b10004551a594d6f969ffaf7893cd2e7efe2d76
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bc91a98d1909245e09268cc7129084392a4c096
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396547"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076252"
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox 類別
 
@@ -227,7 +227,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 
 ### <a name="parameters"></a>參數
 
-[in]*CDC** CDC 指標相關聯的核取方塊。
+[in]*CDC&#42;*<br/>
+核取方塊相關聯的 CDC 的指標。
 
 *CRect*<br/>
 [in]A`CRect`物件，指定要繪製的功能表影像的矩形。

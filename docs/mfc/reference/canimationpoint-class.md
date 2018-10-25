@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b584902a1eb9b3c1aba27645e084ad6ea23cb72
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2fa0258b002d421376855eaf88c02444f0ddc620
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404835"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076486"
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint 類別
 
@@ -136,7 +136,6 @@ void AddTransition(
 
 ```
 CAnimationPoint();
-
 
 CAnimationPoint(
     const CPoint& ptDefault,

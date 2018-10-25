@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 740d99bfbc0da4c290a09a95f5d4f8f227a11fc8
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 8296ba9a6f5c6072f025dbdd931b6f609d9df9e8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790714"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067822"
 ---
 # <a name="synchronize"></a>synchronize
 
@@ -40,7 +40,7 @@ ms.locfileid: "48790714"
 
 這個屬性所插入的程式碼會呼叫適當`Lock`方法 （由執行緒模型），在目標方法的開頭。 當此方法會結束時，`Unlock`會自動呼叫。 如需有關這些函式的詳細資訊，請參閱[CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock)
 
-此屬性需要[coclass](coclass.md)， [progid](progid.md)，或[vi_progid](vi-progid.md)屬性 （或其中一種表示另一個屬性） 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果`progid`會套用`vi_progid`和`coclass`也會套用。
+此屬性需要 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果`progid`會套用`vi_progid`和`coclass`也會套用。
 
 ## <a name="example"></a>範例
 
@@ -59,7 +59,7 @@ ms.locfileid: "48790714"
 threading(both),
 vi_progid("MyProject.MyClass"),
 progid("MyProject.MyClass.1"),
-uuid("7a7baa0d-59b8-4576-b754-79d07e1d1cc3")  
+uuid("7a7baa0d-59b8-4576-b754-79d07e1d1cc3")
 ]
 class CMyClass {
    float m_nBalance;
@@ -82,8 +82,8 @@ class CMyClass {
 |**必要屬性**|一或多個項目： `coclass`， `progid`，或`vi_progid`。|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
-[COM 屬性](com-attributes.md)  
+[COM 屬性](com-attributes.md)

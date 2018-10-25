@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 175af6d9fdd02e24aaa9caae663db51c7dd4167a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0c924f49d8b1ec00585c90d5e106a9f6446f521d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432817"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072846"
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator 類別
 
@@ -113,7 +113,6 @@ CCustomInterpolator 從衍生類別並覆寫所有必要的方法，以便實作
 
 ```
 CCustomInterpolator();
-
 
 CCustomInterpolator(
     UI_ANIMATION_SECONDS duration,

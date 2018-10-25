@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b9c82f1d9b4b1a46d134b94842fffe56f457afa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 939340a60d9448c6fac5f97c606a27182a2bb88b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118632"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068433"
 ---
 # <a name="ccomsafedeletecriticalsection-class"></a>CComSafeDeleteCriticalSection 類別
 
@@ -118,7 +118,7 @@ HRESULT Init() throw();
 
 ##  <a name="lock"></a>  CComSafeDeleteCriticalSection::Lock
 
-呼叫的基底類別實作[鎖定](ccomcriticalsection-class.md#lock)。  
+呼叫的基底類別實作[鎖定](ccomcriticalsection-class.md#lock)。
 
 ```
 HRESULT Lock();

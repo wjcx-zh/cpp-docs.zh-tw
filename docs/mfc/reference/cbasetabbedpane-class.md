@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d9a50e3dcfb82e245dcac5f57553b34fef584fa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: addbc7c81c8cd38f44b7b1004c0b4e23ca183ecb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412024"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067316"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane 類別
 
@@ -179,7 +179,8 @@ virtual BOOL AddTab(
 
 ### <a name="parameters"></a>參數
 
-[in][out]*pNewBar*將窗格的指標。 之後呼叫這個方法，這個指標可能會變成無效。 如需詳細資訊，請參閱＜備註＞一節。
+*pNewBar*<br/>
+[in、 out]將窗格指標。 之後呼叫這個方法，這個指標可能會變成無效。 如需詳細資訊，請參閱＜備註＞一節。
 
 *bVisible*<br/>
 [in]若要顯示 [] 索引標籤;，則為 TRUE否則為 FALSE。
@@ -384,7 +385,8 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>參數
 
-[in][out]*pBar* float 窗格的指標。
+*pBar*<br/>
+[in、 out]Float 窗格指標。
 
 *nTabID*<br/>
 [in]指定 float 索引標籤的以零為起始的索引。
@@ -594,7 +596,8 @@ virtual BOOL RemovePane(CWnd* pBar);
 
 ### <a name="parameters"></a>參數
 
-[in][out]*pBar*窗格，即可移除索引標籤式窗格的指標。
+*pBar*<br/>
+[in、 out]若要從索引標籤式窗格移除窗格指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -689,7 +692,8 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 *dwAlignment*<br/>
 [in]指定要建立的 [自動隱藏] 窗格的對齊方式。 如需可能值的清單，請參閱 < [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment)。
 
-[in][out]*pCurrAutoHideBar*目前的自動隱藏工具列的指標。 可以是 NULL。
+*pCurrAutoHideBar*<br/>
+[in、 out]在目前的自動隱藏工具列的指標。 可以是 NULL。
 
 *bUseTimer*<br/>
 [in]指定要使用的自動隱藏 」 效果，當使用者切換窗格為 自動隱藏模式，還是要立即隱藏窗格。

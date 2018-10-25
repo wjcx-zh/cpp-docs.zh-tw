@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95418345d72f0e5be30d2d8df989793dc49b20a4
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: acfb5ea65e4efcba13d6b376dbb2d0f2fe3e6855
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790707"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067861"
 ---
 # <a name="noncreatable"></a>noncreatable
 
@@ -71,9 +71,9 @@ class CMyClass : public A
 |**必要屬性**|**coclass**|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [IDL 屬性](idl-attributes.md)<br/>
-[類別屬性](class-attributes.md)  
+[類別屬性](class-attributes.md)

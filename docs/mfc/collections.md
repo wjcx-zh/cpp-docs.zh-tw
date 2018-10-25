@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b6f2fdeb02fbc5e57bbba58f685d21133841279
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 72bae0d985c81478321109c3c02c07e6b1386028
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412856"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069902"
 ---
 # <a name="collections"></a>集合
 
@@ -53,15 +53,15 @@ MFC 程式庫提供集合類別管理物件群組。 這些類別有兩種類型
 
 - 清單
 
-     清單類別提供經過排序非索引式的項目清單，實作為雙向連結串列。 清單中有「開頭」與「結尾」，從開頭或結尾加入或移除項目，或者從中間插入或刪除項目，都非常快速。
+   清單類別提供經過排序非索引式的項目清單，實作為雙向連結串列。 清單中有「開頭」與「結尾」，從開頭或結尾加入或移除項目，或者從中間插入或刪除項目，都非常快速。
 
 - 陣列
 
-     陣列類別提供動態調整大小、經過排序且整數索引式的物件陣列。
+   陣列類別提供動態調整大小、經過排序且整數索引式的物件陣列。
 
 - 對應 (也稱為字典)
 
-     對應是將金鑰物件與值物件建立關聯的集合。
+   對應是將金鑰物件與值物件建立關聯的集合。
 
 ##  <a name="_core_the_template_based_collection_classes"></a> 樣板型集合類別
 

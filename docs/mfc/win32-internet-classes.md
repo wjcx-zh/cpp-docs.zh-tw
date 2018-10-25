@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1b4adb3de5c6ec57b9f6bc2c48385916c3e5076
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 075804ae82d2e8431bef97d656aeee212feb6757
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445694"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073795"
 ---
 # <a name="win32-internet-classes"></a>Win32 網際網路類別
 
@@ -32,7 +32,6 @@ MFC 包裝 Win32 Internet (WinInet) 和 ActiveX 技術，以便於網際網路�
 
 >[!IMPORTANT]
 > ActiveX 是舊版的技術，不應用於新的開發。 如需有關取代 ActiveX 的現代技術的詳細資訊，請參閱[ActiveX 控制項](activex-controls.md)。
-
 
 [CInternetSession](../mfc/reference/cinternetsession-class.md)<br/>
 建立和初始化一個網際網路工作階段或數個同時網際網路工作階段，如有必要，將告訴您連線到 proxy 伺服器。

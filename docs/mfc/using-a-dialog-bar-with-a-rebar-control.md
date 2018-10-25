@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c881e31d178d6303939c94d68e2824fb11ec2cbd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f9d4155fec333061c65f148f29e849dc4717f0d2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425392"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073756"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>搭配使用對話方塊列與 Rebar 控制項
 
@@ -41,13 +41,13 @@ ms.locfileid: "46425392"
 
 1. 在新的處理常式中，修改現有的程式碼，以符合下列範例：
 
-     [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]
 
 1. 新增 WM_MOVE 訊息處理常式。
 
 1. 在新的處理常式中，修改現有的程式碼，以符合下列範例：
 
-     [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]
 
 新的處理常式來模擬對話方塊列的透明度 WM_ERASEBKGND 訊息轉送至父視窗，並強制重新繪製，每次移動對話方塊列物件。
 

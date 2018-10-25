@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8c6079cd0371afa1b9a3ed32ba2cf67e1691d665
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 09cfc38626cab785eb7fa1c34178aa28aa23dac6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382800"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069929"
 ---
 # <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>如何：使用 /clr 編譯 MFC 和 ATL 程式碼
 
@@ -40,7 +40,7 @@ ms.locfileid: "46382800"
 
 1. 在 **專案屬性**對話方塊方塊中，依序展開節點旁**組態屬性**，然後選取**一般**。 在右窗格中，在**專案預設值**，將**Common Language Runtime 支援**來**Common Language Runtime 支援 (/ clr)**。
 
-     在相同的窗格中，請確定**MFC 用法**設為**使用 MFC 的共用 dll**。
+   在相同的窗格中，請確定**MFC 用法**設為**使用 MFC 的共用 dll**。
 
 1. 底下**組態屬性**，依序展開節點旁**C/c + +** ，然後選取**一般**。 請確定**偵錯資訊格式**設為**程式資料庫 /Zi** (不 **/ZI**)。
 
@@ -60,7 +60,7 @@ ms.locfileid: "46382800"
 
 1. 底下**組態屬性**，依序展開節點旁**C/c + +** ，然後選取**先行編譯標頭**。 設定**建立/使用先行編譯標頭**要**未使用先行編譯標頭**。
 
-     或者，在**方案總管**Stdafx.cpp 上按一下滑鼠右鍵，然後按一下 **屬性**。 底下**組態屬性**，依序展開節點旁**C/c + +** ，然後選取**一般**。 設定**Common Language Runtime 支援編譯**要**Common Language Runtime 不支援**。
+   或者，在**方案總管**Stdafx.cpp 上按一下滑鼠右鍵，然後按一下 **屬性**。 底下**組態屬性**，依序展開節點旁**C/c + +** ，然後選取**一般**。 設定**Common Language Runtime 支援編譯**要**Common Language Runtime 不支援**。
 
 1. 檔案包含 DllMain 和任何項目呼叫，在**方案總管**，以滑鼠右鍵按一下檔案，然後按一下**屬性**。 底下**組態屬性**，依序展開節點旁**C/c + +** ，然後選取**一般**。 在右窗格中下,**專案預設值**，將**Common Language Runtime 支援編譯**來**No Common Language Runtime 支援**。
 
@@ -84,7 +84,7 @@ ms.locfileid: "46382800"
 
 1. 底下**組態屬性**，依序展開節點旁**C/c + +** ，然後選取**先行編譯標頭**。 設定**建立/使用先行編譯標頭**要**未使用先行編譯標頭**。
 
-     或者，在**方案總管**Stdafx.cpp 上按一下滑鼠右鍵，然後按一下 **屬性**。 底下**組態屬性**，依序展開節點旁**C/c + +** ，然後選取**一般**。 設定**Common Language Runtime 支援編譯**要**Common Language Runtime 不支援**。
+   或者，在**方案總管**Stdafx.cpp 上按一下滑鼠右鍵，然後按一下 **屬性**。 底下**組態屬性**，依序展開節點旁**C/c + +** ，然後選取**一般**。 設定**Common Language Runtime 支援編譯**要**Common Language Runtime 不支援**。
 
 1. 檔案包含 DllMain 和任何項目呼叫，在**方案總管**，以滑鼠右鍵按一下檔案，然後按一下**屬性**。 底下**組態屬性**，依序展開節點旁**C/c + +** ，然後選取**一般**。 在右窗格中下,**專案預設值**，將**Common Language Runtime 支援編譯**來**No Common Language Runtime 支援**。
 

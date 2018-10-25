@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 356027e151dcc94891b9c4043e4f1af8b2f0b947
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 847ad295956cafa12e3793dc68d663f005da095a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430913"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072833"
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>WinInet 如何讓您更輕鬆地建立網際網路用戶端應用程式
 
@@ -33,15 +33,15 @@ Visual c + + 提供兩種方法讓您使用 WinInet。 您可以直接呼叫 Win
 
 - 下載 HTML 頁面。
 
-     HTTP 是用來從伺服器傳送 HTML 網頁，用戶端瀏覽器至通訊協定。
+   HTTP 是用來從伺服器傳送 HTML 網頁，用戶端瀏覽器至通訊協定。
 
 - FTP 要求傳送到上傳或下載檔案，或是取得目錄清單。
 
-     典型的要求是匿名的登入以下載的檔案。
+   典型的要求是匿名的登入以下載的檔案。
 
 - 使用 gopher 的功能表系統來存取網際網路上的資源。
 
-     功能表項目可以是數種類型，包括其他功能表、 索引的資料庫，您可以搜尋、 新聞群組或檔案。
+   功能表項目可以是數種類型，包括其他功能表、 索引的資料庫，您可以搜尋、 新聞群組或檔案。
 
 所有的三種通訊協定，您可以建立連線、 對伺服器提出要求並關閉連線。
 
@@ -51,7 +51,7 @@ Visual c + + 提供兩種方法讓您使用 WinInet。 您可以直接呼叫 Win
 
 - 使用 HTTP、 FTP 和 gopher 通訊協定，不需要直接向 WinSock 或 TCP/IP 的程式設計。
 
-     使用 Win32 網際網路函式的開發人員不需要熟悉 TCP/IP 或 Windows 通訊端。 您可以仍然在通訊端層級中，使用程式設計 WinSock 和 TCP/IP 通訊協定直接，但更容易在網際網路上使用 MFC WinInet 類別來存取 HTTP、 FTP 和 gopher 通訊協定。 許多常見的作業，開發人員不需要知道他們所使用的特定通訊協定的詳細資料。
+   使用 Win32 網際網路函式的開發人員不需要熟悉 TCP/IP 或 Windows 通訊端。 您可以仍然在通訊端層級中，使用程式設計 WinSock 和 TCP/IP 通訊協定直接，但更容易在網際網路上使用 MFC WinInet 類別來存取 HTTP、 FTP 和 gopher 通訊協定。 許多常見的作業，開發人員不需要知道他們所使用的特定通訊協定的詳細資料。
 
 可以為網際網路上的其他電腦的用戶端電腦所執行的許多作業可能需要很長的時間。 這些作業的速度通常會受到您的網路連線速度，但它們可能也會受到其他網路流量，以及作業的複雜性。 比方說，連接到遠端 FTP 伺服器，需要您的電腦第一次查閱來尋找其位址該伺服器的名稱。 您的應用程式則會嘗試連接到位於該位址的伺服器。 一旦開啟連接時，您的電腦和遠端伺服器會起始交談與檔案傳輸通訊協定才能實際使用連接來擷取檔案。
 

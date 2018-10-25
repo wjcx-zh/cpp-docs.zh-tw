@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b572af3bdfd444687af98172da9ada0736dac25
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dd420544f341159fa4281c4f837fa222d357e1b1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429509"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068693"
 ---
 # <a name="diagnostic-services"></a>診斷服務
 
@@ -103,7 +103,6 @@ MFC 程式庫提供許多診斷服務，可讓您更輕鬆地對程式進行偵�
 |-|-|
 |[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|隱藏關於使用被取代 MFC 的功能的編譯器警告。|
 
-
 ## <a name="afx_secure_no_warnings"></a> _AFX_SECURE_NO_WARNINGS
 
 隱藏關於使用被取代 MFC 的功能的編譯器警告。
@@ -113,6 +112,7 @@ MFC 程式庫提供許多診斷服務，可讓您更輕鬆地對程式進行偵�
 ```
 _AFX_SECURE_NO_WARNINGS
 ```
+
 ### <a name="example"></a>範例
 
 如果沒有定義 _AFX_SECURE_NO_WARNINGS，則此程式碼範例會產生編譯器警告。
@@ -309,6 +309,7 @@ DEBUG_ONLY 巨集就相當於周圍*運算式*具有`#ifdef _DEBUG`和`#endif`�
 ENSURE(  booleanExpression )
 ENSURE_VALID( booleanExpression  )
 ```
+
 ### <a name="parameters"></a>參數
 
 *booleanExpression*<br/>
@@ -370,7 +371,6 @@ static char THIS_FILE[] = __FILE__;
 [巨集和全域](mfc-macros-and-globals.md)<br/>
 [ASSERT](#assert)<br/>
 [VERIFY](#verify)
-
 
 ##  <a name="trace"></a>  TRACE
 
@@ -450,7 +450,6 @@ CDumpContext  afxDump;
 
 **標頭：** afx.h
 
-
 ## <a name="afxdump"></a> AfxDump （內部）
 
 MFC 使用傾印偵錯時的物件狀態的內部函式。
@@ -460,6 +459,7 @@ MFC 使用傾印偵錯時的物件狀態的內部函式。
 ```
 void AfxDump(const CObject* pOb);
 ```
+
 ### <a name="parameters"></a>參數
 
 *pOb*<br/>
@@ -478,8 +478,6 @@ void AfxDump(const CObject* pOb);
 ### <a name="see-also"></a>另請參閱
 
 [CObject::Dump](cobject-class.md#dump)
-
-
 
 ##  <a name="afxmemdf"></a>  afxMemDF
 
@@ -597,8 +595,6 @@ void AfxDump(const CObject* pOb);
 ### <a name="see-also"></a>另請參閱
 
 [CObject::Dump](cobject-class.md#dump)
-
-
 
 ##  <a name="afxdumpstack"></a>  AfxDumpStack
 

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f96fe03288495eb109795e31c6dfd2bd3928d47c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f3d0b817fc080ff81e11e1789387f50cb3e871e5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036134"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076005"
 ---
 # <a name="cdacl-class"></a>CDacl 類別
 
@@ -93,12 +93,12 @@ class CDacl : public CAcl
 將允許的 ACE （存取控制項目） 加入至`CDacl`物件。
 
 ```
-bool AddAllowedAce(  
+bool AddAllowedAce(
     const CSid& rSid,
     ACCESS_MASK AccessMask,
     BYTE AceFlags = 0) throw(...);
 
-bool AddAllowedAce(  
+bool AddAllowedAce(
     const CSid& rSid,
     ACCESS_MASK AccessMask,
     BYTE AceFlags,
@@ -138,7 +138,7 @@ A`CDacl`物件包含零個或多個 Ace （存取控制項目） 所識別的使
 將拒絕的 ACE （存取控制項目） 加入至`CDacl`物件。
 
 ```
-bool AddDeniedAce(  
+bool AddDeniedAce(
     const CSid& rSid,
     ACCESS_MASK AccessMask,
     BYTE AceFlags = 0) throw(...);

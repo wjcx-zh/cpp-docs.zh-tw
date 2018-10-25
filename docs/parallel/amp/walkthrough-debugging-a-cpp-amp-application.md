@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d198368dd3ed1be9110f08712de646156c98bb63
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 19e2e7120a73ed7e386b46f32d105376f3fac9b2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406772"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069239"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>逐步解說：偵錯 C++ AMP 應用程式
 
@@ -247,27 +247,27 @@ ms.locfileid: "46406772"
 
 1. 若要開啟  **GPU 執行緒**視窗，請在功能表列上，選擇**偵錯** > **Windows** > **GPU 執行緒**。
 
-     您可以檢查的狀態中的 GPU 執行緒**GPU 執行緒**出現的視窗。
+   您可以檢查的狀態中的 GPU 執行緒**GPU 執行緒**出現的視窗。
 
 2. 停駐**GPU 執行緒**視窗底部的 Visual Studio。 選擇**展開執行緒切換** 按鈕以顯示 tile 和執行緒的文字方塊。 **GPU 執行緒**如下圖所示，視窗會顯示作用中和已封鎖的 GPU 執行緒的總數。
 
      ![GPU 執行緒 視窗，顯示 4 個使用中執行緒](../../parallel/amp/media/campc.png "campc") GPU 執行緒 視窗
 
-     有 313 配置給這項計算的圖格。 每個圖格包含 32 個執行緒。 因為本機 GPU 偵錯發生在軟體模擬器上，有四個作用中的 GPU 執行緒。 四個執行緒同時執行的指示，並會繼續在一起的下一個指令。
+   有 313 配置給這項計算的圖格。 每個圖格包含 32 個執行緒。 因為本機 GPU 偵錯發生在軟體模擬器上，有四個作用中的 GPU 執行緒。 四個執行緒同時執行的指示，並會繼續在一起的下一個指令。
 
-     在 [ **GPU 執行緒**] 視窗中，有作用中的四個 GPU 執行緒和 28 的 GPU 執行緒在遭到封鎖[tile_barrier:: wait](reference/tile-barrier-class.md#wait)第 21 行定義在陳述式 (`t_idx.barrier.wait();`)。 所有 32 個 GPU 執行緒屬於第一個磚， `tile[0]`。 箭號會指向包含目前執行緒的資料列。 若要切換到不同的執行緒，請使用下列方法之一：
+   在 [ **GPU 執行緒**] 視窗中，有作用中的四個 GPU 執行緒和 28 的 GPU 執行緒在遭到封鎖[tile_barrier:: wait](reference/tile-barrier-class.md#wait)第 21 行定義在陳述式 (`t_idx.barrier.wait();`)。 所有 32 個 GPU 執行緒屬於第一個磚， `tile[0]`。 箭號會指向包含目前執行緒的資料列。 若要切換到不同的執行緒，請使用下列方法之一：
 
     - 在切換執行緒的資料列中**GPU 執行緒** 視窗中，開啟捷徑功能表，然後選擇**切換至執行緒**。 如果資料列都代表一個以上的執行緒，您將會切換至執行緒座標的第一個執行緒。
 
     - 在對應的文字方塊中輸入 tile 和執行緒的執行緒值，然後選擇**交換器執行緒** 按鈕。
 
-     **呼叫堆疊**視窗會顯示目前的 GPU 執行緒的呼叫堆疊。
+   **呼叫堆疊**視窗會顯示目前的 GPU 執行緒的呼叫堆疊。
 
 ### <a name="to-use-the-parallel-stacks-window"></a>使用 [平行堆疊] 視窗
 
 1. 若要開啟 **平行堆疊**視窗，請在功能表列上，選擇**偵錯** > **Windows** > **平行堆疊**.
 
-     您可以使用**平行堆疊**同時檢查多個 GPU 執行緒的堆疊框架的視窗。
+   您可以使用**平行堆疊**同時檢查多個 GPU 執行緒的堆疊框架的視窗。
 
 2. 停駐**平行堆疊**視窗底部的 Visual Studio。
 
@@ -275,19 +275,19 @@ ms.locfileid: "46406772"
 
      ![平行堆疊 視窗，顯示 4 個使用中執行緒](../../parallel/amp/media/campd.png "campd")平行堆疊 視窗
 
-     32 個執行緒發生從`_kernel_stub`中的 lambda 陳述式`parallel_for_each`函式呼叫然後`sum_kernel_tiled`函式，平行約化發生的位置。 28 超出 32 個執行緒已進入[tile_barrier:: wait](reference/tile-barrier-class.md#wait)陳述式，將持續封鎖在列 22，而其他的 4 個執行緒保持作用中和`sum_kernel_tiled`第 30 行函式。
+   32 個執行緒發生從`_kernel_stub`中的 lambda 陳述式`parallel_for_each`函式呼叫然後`sum_kernel_tiled`函式，平行約化發生的位置。 28 超出 32 個執行緒已進入[tile_barrier:: wait](reference/tile-barrier-class.md#wait)陳述式，將持續封鎖在列 22，而其他的 4 個執行緒保持作用中和`sum_kernel_tiled`第 30 行函式。
 
-     您可以檢查 GPU 執行緒中所提供的屬性**GPU 執行緒** 視窗中的豐富資料提示方塊**平行堆疊**視窗。 若要這樣做，請將滑鼠指標上的堆疊框架**sum_kernel_tiled**。 下圖顯示資料提示方塊。
+   您可以檢查 GPU 執行緒中所提供的屬性**GPU 執行緒** 視窗中的豐富資料提示方塊**平行堆疊**視窗。 若要這樣做，請將滑鼠指標上的堆疊框架**sum_kernel_tiled**。 下圖顯示資料提示方塊。
 
      ![平行堆疊 視窗的 DataTip](../../parallel/amp/media/campe.png "campe") GPU 執行緒資料提示方塊
 
-     如需詳細資訊**平行堆疊** 視窗中，請參閱[使用平行堆疊視窗](/visualstudio/debugger/using-the-parallel-stacks-window)。
+   如需詳細資訊**平行堆疊** 視窗中，請參閱[使用平行堆疊視窗](/visualstudio/debugger/using-the-parallel-stacks-window)。
 
 ### <a name="to-use-the-parallel-watch-window"></a>若要使用平行監看式視窗
 
 1. 若要開啟 **平行監看式**視窗，請在功能表列上，選擇**偵錯** > **Windows** > **平行監看式**  > **平行監看式 1**。
 
-     您可以使用**平行監看式**視窗，以跨多個執行緒檢查運算式的值。
+   您可以使用**平行監看式**視窗，以跨多個執行緒檢查運算式的值。
 
 2. 停駐**平行監看式 1**視窗底部的 Visual Studio。 資料表中有 32 個資料列**平行監看式**視窗。 每個對應至出現在 GPU 執行緒視窗的 GPU 執行緒並**平行堆疊**視窗。 現在，您可以輸入您想要跨所有 32 個 GPU 執行緒檢查其值的運算式。
 
@@ -297,17 +297,17 @@ ms.locfileid: "46406772"
 
 5. 選取**新增監看式**再次資料行標頭中，輸入`localA[localIdx[0]]`，然後選擇**Enter**索引鍵。
 
-     您可以選取其對應的資料行標頭來排序所指定的運算式。
+   您可以選取其對應的資料行標頭來排序所指定的運算式。
 
-     選取  **localA [localIdx [0]]** 排序資料行的資料行標頭。 下圖顯示結果的排序依據**localA [localIdx [0]]**。
+   選取  **localA [localIdx [0]]** 排序資料行的資料行標頭。 下圖顯示結果的排序依據**localA [localIdx [0]]**。
 
      ![已排序的結果使用平行監看式視窗](../../parallel/amp/media/campf.png "campf")排序的結果
 
-     您可以匯出中的內容**平行監看式**選擇 Excel 視窗**Excel**  按鈕，然後選擇**在 Excel 中開啟**。 如果您有在您的開發電腦上安裝 Excel 時，這會開啟 Excel 工作表，包含的內容。
+   您可以匯出中的內容**平行監看式**選擇 Excel 視窗**Excel**  按鈕，然後選擇**在 Excel 中開啟**。 如果您有在您的開發電腦上安裝 Excel 時，這會開啟 Excel 工作表，包含的內容。
 
 6. 在右上角**平行監看式** 視窗中，沒有可供您使用的布林運算式來篩選內容篩選器控制項。 Enter`localA[localIdx[0]] > 20000`在篩選控制項文字方塊方塊，然後選擇  **Enter**索引鍵。
 
-     此視窗現在包含只在其上的執行緒`localA[localIdx[0]]`值是否大於 20000。 內容仍會依照`localA[localIdx[0]]`資料行，也就是您稍早執行的排序動作。
+   此視窗現在包含只在其上的執行緒`localA[localIdx[0]]`值是否大於 20000。 內容仍會依照`localA[localIdx[0]]`資料行，也就是您稍早執行的排序動作。
 
 ## <a name="flagging-gpu-threads"></a>GPU 執行緒加上旗標
 
@@ -321,20 +321,20 @@ ms.locfileid: "46406772"
 
 3. 選擇包含四個執行緒，現在是作用中的資料列左側的旗標符號。
 
-     下圖顯示在四個作用中已標幟的執行緒**GPU 執行緒**視窗。
+   下圖顯示在四個作用中已標幟的執行緒**GPU 執行緒**視窗。
 
      ![已標幟的執行緒，[GPU 執行緒] 視窗](../../parallel/amp/media/campg.png "campg") [GPU 執行緒] 視窗中的作用中執行緒
 
-     **平行監看式** 視窗和的 DataTip**平行堆疊**這兩個視窗指出已標幟的執行緒。
+   **平行監看式** 視窗和的 DataTip**平行堆疊**這兩個視窗指出已標幟的執行緒。
 
 4. 如果您想要專注於您加上旗標的四個執行緒，您可以選擇顯示，請在**GPU 執行緒**，**平行監看式**，並**平行堆疊**windows 中，只加上旗標執行緒。
 
-     選擇**僅顯示已標幟**上任何的按鈕之 windows 或在**偵錯位置**工具列。 如下圖所示**僅顯示已標幟**按鈕**偵錯位置**工具列。
+   選擇**僅顯示已標幟**上任何的按鈕之 windows 或在**偵錯位置**工具列。 如下圖所示**僅顯示已標幟**按鈕**偵錯位置**工具列。
 
      ![偵錯位置工具列，以僅顯示已標幟的圖示](../../parallel/amp/media/camph.png "camph")
 **僅顯示已標幟**按鈕
 
-     現在**GPU 執行緒**，**平行監看式**，並**平行堆疊**視窗會顯示已標幟的執行緒。
+   現在**GPU 執行緒**，**平行監看式**，並**平行堆疊**視窗會顯示已標幟的執行緒。
 
 ## <a name="freezing-and-thawing-gpu-threads"></a>凍結和解除凍結 GPU 執行緒
 
@@ -348,11 +348,11 @@ ms.locfileid: "46406772"
 
 3. 開啟 作用中的資料列的捷徑功能表，然後選擇**凍結**。
 
-     下列圖例**GPU 執行緒**視窗會顯示所有的四個執行緒已遭到凍結。
+   下列圖例**GPU 執行緒**視窗會顯示所有的四個執行緒已遭到凍結。
 
      ![GPU 執行緒 視窗顯示已凍結的執行緒](../../parallel/amp/media/campk.png "campk")凍結的執行緒**GPU 執行緒**視窗
 
-     同樣地，**平行監看式**視窗會顯示所有的四個執行緒已遭到凍結。
+   同樣地，**平行監看式**視窗會顯示所有的四個執行緒已遭到凍結。
 
 4. 在功能表列上選擇 **偵錯** > **繼續**以便接下來四個 GPU 執行緒超過在第 22 行屏障進度，並連線到第 30 行的中斷點。 **GPU 執行緒**視窗會顯示四個先前已凍結的執行緒，仍會凍結並處於作用中狀態。
 
@@ -364,7 +364,7 @@ ms.locfileid: "46406772"
 
 1. 其中一個執行緒中的捷徑功能表上**GPU 執行緒** 視窗中，選擇**Group By**，**位址**。
 
-     中的執行緒**GPU 執行緒**視窗會依位址。 位址會對應至每個執行緒群組所在的反組譯碼中的指示。 24 執行緒位於第 22 行何處[tile_barrier:: wait 方法](reference/tile-barrier-class.md#wait)執行。 12 執行緒是在行 32 屏障的指示。 這些執行緒的四個標示。 8 個執行緒位於第 30 行的中斷點。 這些執行緒的四個已凍結。 下圖顯示在群組的執行緒**GPU 執行緒**視窗。
+   中的執行緒**GPU 執行緒**視窗會依位址。 位址會對應至每個執行緒群組所在的反組譯碼中的指示。 24 執行緒位於第 22 行何處[tile_barrier:: wait 方法](reference/tile-barrier-class.md#wait)執行。 12 執行緒是在行 32 屏障的指示。 這些執行緒的四個標示。 8 個執行緒位於第 30 行的中斷點。 這些執行緒的四個已凍結。 下圖顯示在群組的執行緒**GPU 執行緒**視窗。
 
      ![依位址分組的 GPU 執行緒 視窗中的執行緒](../../parallel/amp/media/campl.png "campl")群組中的執行緒**GPU 執行緒**視窗
 
@@ -382,7 +382,7 @@ ms.locfileid: "46406772"
 
 3. 上的捷徑功能表**程式碼編輯器**，選擇**執行目前磚至游標處**。
 
-     24 先前遭到封鎖而在第 21 行在屏障的執行緒已進入列 32。 這會顯示**GPU 執行緒**視窗。
+   24 先前遭到封鎖而在第 21 行在屏障的執行緒已進入列 32。 這會顯示**GPU 執行緒**視窗。
 
 ## <a name="see-also"></a>另請參閱
 

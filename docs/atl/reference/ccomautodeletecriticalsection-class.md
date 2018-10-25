@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c8ff6141fb5aa58e8de626675e29b46426ed47f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 327c5fdcdc2a73cc8ee662ed71736f848ccd2e9d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118436"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066340"
 ---
 # <a name="ccomautodeletecriticalsection-class"></a>CComAutoDeleteCriticalSection 類別
 
@@ -36,7 +36,7 @@ class CComAutoDeleteCriticalSection : public CComSafeDeleteCriticalSection
 
 ## <a name="remarks"></a>備註
 
-`CComAutoDeleteCriticalSection` 衍生自類別[CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)。 不過，`CComAutoDeleteCriticalSection`會覆寫[詞彙](ccomsafedeletecriticalsection-class.md#term)方法來**私用**強制發生只有當此類別的執行個體超出範圍或明確刪除從內部記憶體清除的存取記憶體。  
+`CComAutoDeleteCriticalSection` 衍生自類別[CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)。 不過，`CComAutoDeleteCriticalSection`會覆寫[詞彙](ccomsafedeletecriticalsection-class.md#term)方法來**私用**強制發生只有當此類別的執行個體超出範圍或明確刪除從內部記憶體清除的存取記憶體。
 
 這個類別會介紹沒有額外的方法，透過其基底類別。 請參閱[CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)並[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)如需有關重要區段協助程式類別。
 

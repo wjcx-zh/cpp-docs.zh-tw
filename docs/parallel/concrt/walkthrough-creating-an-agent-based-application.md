@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68c4b389bdd8f1121a59bce1a0ca8942f077e062
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 41ae491a851d2e9a21a57ce35a54590323060881
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377152"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070586"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>逐步解說：建立代理程式架構應用程式
 
@@ -64,7 +64,7 @@ ms.locfileid: "46377152"
 
 [!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_1.h)]
 
-     The header file agents.h contains the functionality of the [concurrency::agent](../../parallel/concrt/reference/agent-class.md) class.
+   標頭檔 agents.h 包含的功能[concurrency:: agent](../../parallel/concrt/reference/agent-class.md)類別。
 
 1. 請確認應用程式已成功建立，建置並執行它。 若要在建置應用程式時，**建置**功能表上，按一下**建置方案**。 如果應用程式建置成功，請按一下 執行應用程式**開始偵錯**上**偵錯**功能表。
 
@@ -90,19 +90,19 @@ ms.locfileid: "46377152"
 
 [!code-cpp[concrt-basic-agent#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_4.h)]
 
-     The `_file_name` member is the file name that the agent reads from. The `_target` member is a [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md) object that the agent writes the contents of the file to. The `_error` member holds any error that occurs during the life of the agent.
+   `_file_name`成員是代理程式讀取的檔案名稱。 `_target`成員[concurrency:: itarget](../../parallel/concrt/reference/itarget-class.md)物件代理程式寫入至檔案的內容。 `_error`成員包含代理程式的生命期限內，就會發生任何錯誤。
 
 1. 新增下列程式碼`file_reader`建構函式`public`一節`file_reader`類別。
 
 [!code-cpp[concrt-basic-agent#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_5.h)]
 
-     Each constructor overload sets the `file_reader` data members. The second and third constructor overload enables your application to use a specific scheduler with your agent. The first overload uses the default scheduler with your agent.
+   每個建構函式多載設定`file_reader`資料成員。 第二個和第三個建構函式多載可讓您的應用程式，以搭配您的代理程式的特定排程器。 第一個多載會使用您的代理程式的預設排程器。
 
 1. 新增`get_error`方法的 public 區段`file_reader`類別。
 
 [!code-cpp[concrt-basic-agent#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_6.h)]
 
-     The `get_error` method retrieves any error that occurs during the life of the agent.
+   `get_error`方法會擷取代理程式的生命期限內，就會發生任何錯誤。
 
 1. 實作[2&gt;concurrency::agent::run&lt;2}](reference/agent-class.md#run)方法中的`protected`類別的一節。
 
@@ -140,7 +140,7 @@ ms.locfileid: "46377152"
 
 [!code-cpp[concrt-basic-agent#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_12.cpp)]
 
-     This `call` object also sets the `event` object when it receives the empty string to signal the end of processing.
+   這`call`物件也會設定`event`物件收到空的字串，以表示處理結束時。
 
 1. 建立`file_reader`檢閱 test.txt 檔案讀取和寫入至該檔案的內容物件`call`物件。
 

@@ -13,19 +13,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 991e3e74ba280b615d951c12472de46833b7de72
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 2d8c5188cccceb0c09de95c43a72a645ded0e6a9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083342"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077513"
 ---
 # <a name="desktop-applications-visual-c"></a>桌面應用程式 （Visual c + +）
 
 A*桌面應用程式*c + + 中是可以存取 Windows Api 和系統主控台或視窗中的任一個執行一組完整的原生應用程式。 （雖然不會再正式支援的 Windows XP，而且有許多從那時起已引進的 Windows Api），可以在 Windows XP 到 Windows 10 上執行 c + + 的桌面應用程式。
 
 桌面應用程式有所區別的通用 Windows 平台 (UWP) 應用程式，可在執行 Windows 10 電腦上以及 XBox、 Windows Phone、 Surface Hub 和其他裝置上執行。 如需桌面的 vs 的詳細資訊。UWP 應用程式，請參閱[選擇您的技術](https://msdn.microsoft.com/library/windows/desktop/dn614993)。
-
 
 ### <a name="desktop-bridge"></a>傳統型橋接器
 

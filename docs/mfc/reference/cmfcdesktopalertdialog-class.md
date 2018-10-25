@@ -1,7 +1,7 @@
 ---
 title: CMFCDesktopAlertDialog 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7045692504fa2a33fc6ddf8485038193ea416b06
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 241ad51fa26532199d09dcc7cd3e7a78ac24b3d4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377418"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069031"
 ---
 # <a name="cmfcdesktopalertdialog-class"></a>CMFCDesktopAlertDialog 類別
 
@@ -86,7 +86,6 @@ class CMFCDesktopAlertDialog : public CDialogEx
 
 ##  <a name="createfromparams"></a>  CMFCDesktopAlertDialog::CreateFromParams
 
-
 ```
 BOOL CreateFromParams(
     CMFCDesktopAlertWndInfo& params,
@@ -95,15 +94,15 @@ BOOL CreateFromParams(
 
 ### <a name="parameters"></a>參數
 
-*params*<br/>
-[in][in]*pParent*
+[in]*params*<br/>
+
+[in]*pParent*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="getdlgsize"></a>  CMFCDesktopAlertDialog::GetDlgSize
-
 
 ```
 CSize GetDlgSize();
@@ -115,7 +114,6 @@ CSize GetDlgSize();
 
 ##  <a name="hasfocus"></a>  CMFCDesktopAlertDialog::HasFocus
 
-
 ```
 BOOL HasFocus() const;
 ```
@@ -126,14 +124,13 @@ BOOL HasFocus() const;
 
 ##  <a name="pretranslatemessage"></a>  CMFCDesktopAlertDialog::PreTranslateMessage
 
-
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*pMsg*
+[in]*pMsg*<br/>
 
 ### <a name="return-value"></a>傳回值
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f3304106662d290a208545061bf9f71b7f30c10
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 16a61578b7512c1d9ce9d7ca217b29a3ea670657
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820941"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068485"
 ---
 # <a name="vmxvmptrld"></a>__vmx_vmptrld
 
@@ -33,28 +33,32 @@ ms.locfileid: "48820941"
 ## <a name="syntax"></a>語法
 
 ```
-int __vmx_vmptrld( 
-   unsigned __int64 *VmcsPhysicalAddress 
+int __vmx_vmptrld( 
+   unsigned __int64 *VmcsPhysicalAddress 
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-[in] *`VmcsPhysicalAddress` VMCS 指標的儲存位置的位址。
+*VmcsPhysicalAddress*<br/>
+[in]儲存 VMCS 指標位址。
 
 ## <a name="return-value"></a>傳回值
 
-作業成功的 0。
+0<br/>
+作業成功。
 
-1 的作業失敗中可用的擴充狀態`VM-instruction error field`在目前 vmcs。
+1<br/>
+作業失敗，在目前 VMCS的 `VM-instruction error field` 中有擴充狀態。
 
-2 無可用的狀態，，作業失敗。
+2<br/>
+作業失敗，無可用的狀態。
 
 ## <a name="remarks"></a>備註
 
 VMCS 指標是 64 位元的實體位址。
 
-`__vmx_vmptrld`函式相當於`VMPTRLD`機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](https://software.intel.com/articles/intel-sdm)站台。
+`__vmx_vmptrld` 函式相當於 `VMPTRLD` 機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](https://software.intel.com/articles/intel-sdm)站台。
 
 ## <a name="requirements"></a>需求
 

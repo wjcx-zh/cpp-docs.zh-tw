@@ -20,39 +20,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f0b984fdda988ce83fdf8eece0a8f6d11ddd6e94
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c03b85538a795142f5085c93df3a60f4c60481ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031479"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065846"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>設計和建立記錄檢視 (MFC 資料存取)
 
-您可以建立您的資料錄檢視類別與[MFC 應用程式精靈](../mfc/reference/database-support-mfc-application-wizard.md)。 如果您使用應用程式精靈，它會為它建立資料錄檢視類別和對話方塊樣板資源 (不含控制項)。 您必須使用 Visual C++ 的對話方塊編輯器來將控制項加入對話方塊樣板資源。 另一方面，如果您使用**加入類別**，您必須先建立對話方塊樣板資源在對話方塊編輯器，然後建立資料錄檢視類別。  
-  
-  
-#### <a name="to-create-your-record-view-with-the-mfc-application-wizard"></a>使用 MFC 應用程式精靈建立資料錄檢視  
-  
-1. 請參閱[資料庫支援，MFC 應用程式精靈](../mfc/reference/database-support-mfc-application-wizard.md)。  
-  
-#### <a name="to-design-your-form"></a>設計表單  
-  
-1. 請參閱[對話方塊編輯器](../windows/dialog-editor.md)。  
-  
-#### <a name="to-create-your-record-view-class"></a>建立資料錄檢視類別  
-  
-1. 請參閱[加入 MFC ODBC 消費者](../mfc/reference/adding-an-mfc-odbc-consumer.md)。  
-  
-下列主題將說明使用資料錄檢視的其他詳細資料：  
-  
-- [資料錄檢視： 支援的資料錄檢視的 瀏覽](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)  
-  
-- [資料錄檢視： 使用資料錄檢視](../data/using-a-record-view-mfc-data-access.md)  
-  
-- [資料錄檢視： 填入清單方塊從第二個資料錄集](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)  
-  
-## <a name="see-also"></a>另請參閱  
+您可以建立您的資料錄檢視類別與[MFC 應用程式精靈](../mfc/reference/database-support-mfc-application-wizard.md)。 如果您使用應用程式精靈，它會為它建立資料錄檢視類別和對話方塊樣板資源 (不含控制項)。 您必須使用 Visual C++ 的對話方塊編輯器來將控制項加入對話方塊樣板資源。 另一方面，如果您使用**加入類別**，您必須先建立對話方塊樣板資源在對話方塊編輯器，然後建立資料錄檢視類別。
+
+#### <a name="to-create-your-record-view-with-the-mfc-application-wizard"></a>使用 MFC 應用程式精靈建立資料錄檢視
+
+1. 請參閱[資料庫支援，MFC 應用程式精靈](../mfc/reference/database-support-mfc-application-wizard.md)。
+
+#### <a name="to-design-your-form"></a>設計表單
+
+1. 請參閱[對話方塊編輯器](../windows/dialog-editor.md)。
+
+#### <a name="to-create-your-record-view-class"></a>建立資料錄檢視類別
+
+1. 請參閱[加入 MFC ODBC 消費者](../mfc/reference/adding-an-mfc-odbc-consumer.md)。
+
+下列主題將說明使用資料錄檢視的其他詳細資料：
+
+- [資料錄檢視： 支援的資料錄檢視的 瀏覽](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
+
+- [資料錄檢視： 使用資料錄檢視](../data/using-a-record-view-mfc-data-access.md)
+
+- [資料錄檢視： 填入清單方塊從第二個資料錄集](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
+
+## <a name="see-also"></a>另請參閱
 
 [資料錄檢視 (MFC 資料存取)](../data/record-views-mfc-data-access.md)<br/>
 [資料錄集 (ODBC)](../data/odbc/recordset-odbc.md)<br/>

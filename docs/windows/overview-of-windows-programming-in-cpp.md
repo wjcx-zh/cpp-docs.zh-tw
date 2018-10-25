@@ -13,20 +13,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8251f45d07e8a410c41a89fbc618839e9bbb838
-ms.sourcegitcommit: 6a6b2061db9d51c5cc79775512de54589a4d2fbc
+ms.openlocfilehash: 6ea59ae2cb0c12a60a8463434105f1cc6af0a77d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347224"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073524"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>使用 C++ 設計 Windows 應用程式概觀
 
 您可以使用 Visual c + + 撰寫許多種類的 (x x64 或 ARM），在 Windows 電腦上執行的程式，在雲端中，或在 Xbox 上的 Windows 伺服器上。 編寫完善的 c + + 程式會有這些品質：
+
 - 有效率的記憶體需求
-- 經濟實惠的功率耗用量 
+- 經濟實惠的功率耗用量
 - 能夠充分利用多核心和多核心裝置
-- 能夠進行一般運算圖形處理單元 (GPGPU)  
+- 能夠進行一般運算圖形處理單元 (GPGPU)
 - 能夠利用硬體中的其他方面近來的進步。
 
 您可以使用 Visual C++ 開發數種廣泛的 Windows 應用程式分類。 這些分類有不同的程式設計模型或應用程式模型，採用了多年。 每一個模型使用不同的程式庫和 Api，來提供存取平台，並建立使用者介面，例如視窗和對話方塊。 C + + 標準程式庫，以及協力廠商程式庫可用在任何兩個類別，使用適用於 UWP 的一些限制。
@@ -98,7 +99,7 @@ Microsoft 程式庫包括：
 
 - 並行執行階段：可簡化多核心 (multicore) 和數個核心 (many-core) 裝置的平行和非同步程式設計工作的程式庫。 如需詳細資訊，請參閱 [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md)。
 
-許多 Windows 程式設計案例也需要使用 Windows SDK，它包含了可讓您存取 Windows 作業系統元件的標頭檔。 根據預設，Visual Studio 會安裝 Windows SDK 的 c + + 桌面工作負載，讓您能夠開發通用 Windows 應用程式的元件。 若要開發 UWP 應用程式，您需要 Windows 10 的 Windows SDK 版本。 如需資訊，請參閱[Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)。 (如需舊版 Windows 的 Windows Sdk 的詳細資訊，請參閱[Windows SDK 封存](https://developer.microsoft.com/windows/downloads/sdk-archive))。 
+許多 Windows 程式設計案例也需要使用 Windows SDK，它包含了可讓您存取 Windows 作業系統元件的標頭檔。 根據預設，Visual Studio 會安裝 Windows SDK 的 c + + 桌面工作負載，讓您能夠開發通用 Windows 應用程式的元件。 若要開發 UWP 應用程式，您需要 Windows 10 的 Windows SDK 版本。 如需資訊，請參閱[Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)。 (如需舊版 Windows 的 Windows Sdk 的詳細資訊，請參閱[Windows SDK 封存](https://developer.microsoft.com/windows/downloads/sdk-archive))。
 
 **程式檔案 (x86) \Windows 套件**是您已安裝的 Windows sdk 的所有版本的預設位置。
 

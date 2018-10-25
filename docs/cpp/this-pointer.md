@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee6c0b958fe27c04c116b4f82098f459c1f0f745
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c6fddd337cb9c0bcd78df1bfa563d1f447131078
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070583"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077331"
 ---
 # <a name="this-pointer"></a>this 指標
 
@@ -32,7 +32,7 @@ ms.locfileid: "46070583"
 ## <a name="syntax"></a>語法
 
 ```
-this 
+this 
 this->member-identifier
 ```
 
@@ -181,7 +181,7 @@ int main()
 
 型別**這**成員中函式以下列語法描述，其中*cv 限定詞清單*決定從成員函式宣告子，而且可以是**const**或是**volatile** （或兩者），並*類別型別*是類別的名稱：
 
-*[cv 限定詞-清單] 類別型別***\* const 這**
+*[cv 限定詞-清單] 類別型別***&#42; const 這**
 
 亦即**這**永遠是 const 的指標; 它不能重新指派。  **Const**或是**volatile**成員函式宣告中所使用的限定詞適用於所指的類別執行個體**這**該函式的範圍內。
 

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5817267977ea1c8eeca00ef98357f31cb92d5bf4
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0729ad2e68929f8fabbfd2d8439e8c8840e67419
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790999"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071190"
 ---
 # <a name="aggregates"></a>彙總
 
@@ -49,17 +49,17 @@ ms.locfileid: "48790999"
 
 套用至物件時， **aggregates** C++ 屬性會實作所彙總物件的外部包裝函式 (透過 `clsid`所指定)。
 
-此屬性需要[coclass](coclass.md)， [progid](progid.md)，或[vi_progid](vi-progid.md)屬性 （或其中一種表示另一個屬性） 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果`progid`會套用`vi_progid`和`coclass`也會套用。
+此屬性需要 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果`progid`會套用`vi_progid`和`coclass`也會套用。
 
 ### <a name="atl-projects"></a>ATL 專案
 
 如果在使用 ATL 的專案內使用此屬性，則屬性的行為會變更。 首先，會在目標物件的 COM 對應中新增下列項目︰
 
 ```
-COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(_m_spAttrXXX, clsid)  
+COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(_m_spAttrXXX, clsid)
 ```
 
-第二個， [DECLARE_GET_CONTROLLING_UNKNOWN](../../atl/reference/aggregation-and-class-factory-macros.md#declare_get_controlling_unknown)巨集也會加入。
+其次，也會新增 [DECLARE_GET_CONTROLLING_UNKNOWN](../../atl/reference/aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) 巨集。
 
 ## <a name="example"></a>範例
 
@@ -99,7 +99,7 @@ struct CObject : IObject
 |**必要屬性**|一或多個項目： `coclass`， `progid`，或`vi_progid`。|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -108,4 +108,4 @@ struct CObject : IObject
 [Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)<br/>
 [彙總](/windows/desktop/com/aggregation)<br/>
 [彙總](/windows/desktop/Midl/aggregatable)<br/>
-[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)  
+[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)

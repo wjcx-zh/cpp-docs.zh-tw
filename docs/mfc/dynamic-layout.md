@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08fc6f6a5b93851468d412e34b3ee0a85ab534e5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e2fb7b2468946be29553f54fcedde98e43881d7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413246"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068823"
 ---
 # <a name="dynamic-layout"></a>動態版面配置
 
@@ -65,7 +65,7 @@ Mfc 在 Visual Studio 2015 中，您可以建立對話方塊，使用者可以�
 
 1. 在對話方塊類別的實作程式碼中，尋找或建立一個您要為對話指定動態配置的位置。 例如，您可能會想要在對話方塊中加入 `AdjustLayout` 這樣的方法，並從需要變更配置的位置呼叫它。 您可能會先從建構函式呼叫它，或在變更對話方塊後呼叫。
 
-2. 對話方塊中，呼叫[GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout)，方法`CWnd`類別。 `GetDynamicLayout` 將指標傳回至`CMFCDynamicLayout`物件。
+2. 對話方塊中，呼叫[GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout)，方法`CWnd`類別。 `GetDynamicLayout` 傳回 `CMFCDynamicLayout` 物件的指標。
 
     ```cpp
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
@@ -119,7 +119,7 @@ Mfc 在 Visual Studio 2015 中，您可以建立對話方塊，使用者可以�
     dynamicLayout->LoadResource("IDD_DIALOG1");
     ```
 
-     具名的資源必須參考包含配置資訊的表單中的對話**AFX_DIALOG_LAYOUT**項目中的資源檔，如下列範例所示：
+   具名的資源必須參考包含配置資訊的表單中的對話**AFX_DIALOG_LAYOUT**項目中的資源檔，如下列範例所示：
 
     ```RC
     /////////////////////////////////////////////////////////////////////////////

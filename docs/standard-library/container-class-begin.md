@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7b7bf1d15a6ddba4960fa1c77e94f0824840490
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30777ee36c3b5721219dfb676fe3f3d1ff0e31fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841319"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067406"
 ---
 # <a name="container-classbegin"></a>容器類別::begin
 
@@ -33,7 +33,6 @@ ms.locfileid: "33841319"
 ```
 
     const_iterator begin() const;
-
 
 iterator begin();
 ```

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39cde8affc84ed879ad3731cb6c18449c60498f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 097f6173faad4f99f64c5dac45e2a0d1292a07eb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430848"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076356"
 ---
 # <a name="cmultilock-class"></a>CMultiLock 類別
 
@@ -148,19 +148,19 @@ DWORD Lock(
 
 - WAIT_OBJECT_0 和 WAIT_OBJECT_0 + （數字的物件-1）
 
-     如果*bWaitForAll*為 TRUE 時，所有物件都收到都信號 （可用）。 如果*bWaitForAll*為 FALSE，則傳回的值為 WAIT_OBJECT_0 為收到信號 （提供） 的物件之物件的陣列中的索引。
+   如果*bWaitForAll*為 TRUE 時，所有物件都收到都信號 （可用）。 如果*bWaitForAll*為 FALSE，則傳回的值為 WAIT_OBJECT_0 為收到信號 （提供） 的物件之物件的陣列中的索引。
 
 - WAIT_OBJECT_0 + （物件的數目）
 
-     中指定的事件*dwWakeMask*可用執行緒的輸入佇列中。
+   中指定的事件*dwWakeMask*可用執行緒的輸入佇列中。
 
 - WAIT_ABANDONED_0 和 WAIT_ABANDONED_0 + （數字的物件-1）
 
-     如果*bWaitForAll*為 TRUE，所有物件都收到都信號，而至少其中一個物件為已放棄的 mutex 物件。 如果*bWaitForAll*為 FALSE，則傳回值-WAIT_ABANDONED_0 已放棄的 mutex 物件滿足等候條件之物件的陣列中的索引。
+   如果*bWaitForAll*為 TRUE，所有物件都收到都信號，而至少其中一個物件為已放棄的 mutex 物件。 如果*bWaitForAll*為 FALSE，則傳回值-WAIT_ABANDONED_0 已放棄的 mutex 物件滿足等候條件之物件的陣列中的索引。
 
 - WAIT_TIMEOUT
 
-     中指定的逾時間隔*dwTimeOut*過期但不等候成功。
+   中指定的逾時間隔*dwTimeOut*過期但不等候成功。
 
 ### <a name="remarks"></a>備註
 
@@ -174,7 +174,6 @@ DWORD Lock(
 
 ```
 BOOL Unlock();
-
 
 BOOL Unlock(
     LONG lCount,
@@ -202,6 +201,4 @@ BOOL Unlock(
 ## <a name="see-also"></a>另請參閱
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-
-
 

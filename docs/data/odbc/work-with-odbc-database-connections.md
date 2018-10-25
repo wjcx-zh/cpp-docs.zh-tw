@@ -20,23 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5ad69bda1a49d6ebf2878d8b6a7b5d50840e9d8d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ec47e32ca1286ebf69806c211d5700bb25eaeafa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46084818"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076642"
 ---
 # <a name="work-with-odbc-database-connections"></a>使用 ODBC 資料庫連接
 
-下列主題說明如何連接至 ODBC 資料來源。  
-  
-## <a name="in-this-section"></a>本節內容  
-  
-- [管理 ODBC 資料庫連接](../../data/odbc/data-source-managing-connections-odbc.md)  
-  
-- [以程式設計方式設定 ODBC 資料來源](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
-  
-## <a name="see-also"></a>另請參閱  
+下列主題說明如何連接至 ODBC 資料來源。
+
+## <a name="in-this-section"></a>本節內容
+
+- [管理 ODBC 資料庫連接](../../data/odbc/data-source-managing-connections-odbc.md)
+
+- [以程式設計方式設定 ODBC 資料來源](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)
+
+## <a name="see-also"></a>另請參閱
 
 [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

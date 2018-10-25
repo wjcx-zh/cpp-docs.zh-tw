@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fcf62e142c99fad15bec667534bc60b4d19e43d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 78e45db5cf68c4a92fc9e8165ed648760d02e8fb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46045051"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069447"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject 類別
 
@@ -153,8 +153,8 @@ CComPolyObject(void* pv);
 可讓您建立新**CComPolyObject <** `contained` **>** 物件，而不需要的額外負荷[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)。
 
 ```
-static HRESULT WINAPI CreateInstance(  
-    LPUNKNOWN pUnkOuter, 
+static HRESULT WINAPI CreateInstance(
+    LPUNKNOWN pUnkOuter,
     CComPolyObject<contained>** pp);
 ```
 

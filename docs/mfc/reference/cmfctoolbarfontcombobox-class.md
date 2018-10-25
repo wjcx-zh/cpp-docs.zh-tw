@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa96d87c51eb4db8c7d180f741c3543571984ec
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 04ff3603d403c34915bc062ff6c17fd818d8a286
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416483"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072508"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox 類別
 
@@ -103,7 +103,6 @@ CMFCToolBarFontComboBox(
     DWORD dwStyle = CBS_DROPDOWN,
     int iWidth = 0,
     BYTE nPitchAndFamily = DEFAULT_PITCH);
-
 
 protected:
 CMFCToolBarFontComboBox(
@@ -226,6 +225,4 @@ BOOL SetFont(
 [CMFCFontInfo 類別](../../mfc/reference/cmfcfontinfo-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [逐步解說：將控制項放在工具列上](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

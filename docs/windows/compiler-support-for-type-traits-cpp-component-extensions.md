@@ -71,12 +71,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dfa3f599da4594e9cb0d416def1846b9937664f8
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: bef92e7315418e13b660f655a54f20e8696c7590
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328530"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066587"
 ---
 # <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>類型特性的編譯器支援 (C + + /cli 和 C + + /CX)
 
@@ -231,7 +231,7 @@ Microsoft c + + 編譯器支援*類型特性*C + /cli 和 C + + /CX 延伸模組
 
    傳回 **，則為 true**類型是否為 trivial，編譯器產生的解構函式。
 
-    ``` cpp 
+    ``` cpp
     // has_trivial_destructor.cpp
     #include <stdio.h>
     struct S {};
@@ -567,7 +567,7 @@ ref struct is_class {
 ref class R {};
 
 int main () {
-   if (is_class<R>::value)  
+   if (is_class<R>::value)
       Console::WriteLine("R is a ref class");
    else
       Console::WriteLine("R is not a ref class");

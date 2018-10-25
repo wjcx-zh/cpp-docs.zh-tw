@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0baba6503d1d5b4e382347f4f4d9680b11f954ce
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 7bef66e8b3c326f205b6399538a811bcc83c9f9d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328515"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070396"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -36,7 +36,7 @@ ms.locfileid: "49328515"
 
 **/Qspectre**選項預設為關閉。
 
-在其初始版本中， **/Qspectre**選項只適用於在最佳化程式碼。 在 Visual Studio 2017 15.7 版及更新版本 **/Qspectre**選項支援所有的最佳化層級。 
+在其初始版本中， **/Qspectre**選項只適用於在最佳化程式碼。 在 Visual Studio 2017 15.7 版及更新版本 **/Qspectre**選項支援所有的最佳化層級。
 
 Microsoft Visual c + + 程式庫也可用於與 Spectre 風險降低的版本。 Visual Studio 安裝程式中，您可以下載 Visual Studio 2017 的 Spectre 降低程式庫。 中找到**個別元件**索引標籤下**編譯器、 建置工具和執行階段**，並在名稱中有 「 程式庫的 Spectre"。 DLL 和靜態執行階段程式庫，啟用的風險降低與可供 Visual c + + 執行階段的子集： VC + + 啟動程式碼、 vcruntime140、 msvcp140、 concrt140 和 vcamp140。 Dll 支援; 應用程式本機部署Visual c + + 2017年執行階段程式庫可轉散發套件的內容有不修改。 您也可以安裝 Spectre 降低程式庫的 MFC 和 ATL，位於**個別元件**索引標籤下**Sdk、 程式庫和架構**。
 

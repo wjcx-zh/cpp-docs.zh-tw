@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f24cf6cce5cdf268367f547e8a536dcdae7cc859
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 413485bc7675fbc68f2c224ceefdd0f552538eb9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098949"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076980"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 類別
 
@@ -51,7 +51,7 @@ class CComObjectRootEx : public CComObjectRootBase
 #### <a name="parameters"></a>參數
 
 *ThreadModel*<br/>
-類別，其方法實作所需的執行緒模型。 您可以設定，以明確選擇的執行緒模型*ThreadModel*要[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)， [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)，或[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)。 您可以藉由設定接受伺服器的預設執行緒模型*ThreadModel*要[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)或是[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)。  
+類別，其方法實作所需的執行緒模型。 您可以設定，以明確選擇的執行緒模型*ThreadModel*要[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)， [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)，或[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)。 您可以藉由設定接受伺服器的預設執行緒模型*ThreadModel*要[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)或是[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)。
 
 ## <a name="members"></a>成員
 
@@ -139,9 +139,9 @@ HRESULT FinalConstruct();
 
 - 您無法透過虛擬函式機制，從類別的建構函式呼叫虛擬函式。 從類別建構函式呼叫虛擬函式導致以統計方式解析呼叫函式，因為它在該點定義繼承階層架構中。 呼叫純虛擬函式會導致連結器錯誤。
 
-     您的類別不是繼承階層架構中最具衍生性的類別，它依賴衍生類別提供的 ATL 提供其中一些功能。 很可能您的初始化需要使用該類別中 （特別是您類別的物件必須彙總的其他物件時），所提供的功能，但在您的類別建構函式具有無法存取這些功能。 您類別的建構程式碼執行之前的最具衍生性的類別就會完整建構。
+   您的類別不是繼承階層架構中最具衍生性的類別，它依賴衍生類別提供的 ATL 提供其中一些功能。 很可能您的初始化需要使用該類別中 （特別是您類別的物件必須彙總的其他物件時），所提供的功能，但在您的類別建構函式具有無法存取這些功能。 您類別的建構程式碼執行之前的最具衍生性的類別就會完整建構。
 
-     不過，`FinalConstruct`稱為立即之後最多衍生類別就會完整建構可讓您呼叫虛擬函式，並使用參考計數所提供的實作 ATL
+   不過，`FinalConstruct`稱為立即之後最多衍生類別就會完整建構可讓您呼叫虛擬函式，並使用參考計數所提供的實作 ATL
 
 ### <a name="example"></a>範例
 
@@ -265,7 +265,7 @@ long m_dwRef;
 
 ### <a name="remarks"></a>備註
 
-使用`m_pOuterUnknown`聯集的一部分：  
+使用`m_pOuterUnknown`聯集的一部分：
 
 ```
 union {

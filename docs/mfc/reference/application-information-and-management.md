@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9783da47a22260f0edbe5ddf6d8f5021aae31e5c
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 1867f044c143fc0e5fbb06705bf45b8fa729a5cc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083797"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068966"
 ---
 # <a name="application-information-and-management"></a>應用程式資訊和管理
 
@@ -61,8 +61,6 @@ Microsoft Foundation Class Library 會提供下列全域函式，可協助您完
 |[AfxSocketInit](#afxsocketinit)|在呼叫`CWinApp::InitInstance`覆寫，以初始化 Windows 通訊端。|
 |[AfxUserToolsManager](#afxusertoolsmanager)|指標的全域[使用者工具管理員](cusertoolsmanager-class.md)。|
 |[AfxWinInit](#afxwininit)|由 MFC 提供呼叫`WinMain`函式，做為一部分[CWinApp](../../mfc/reference/cwinapp-class.md)以 GUI 為基礎的應用程式，以初始化 MFC 初始化。 必須針對使用 MFC 的主控台應用程式的直接呼叫。|
-
-
 
 ##  <a name="afxbeginthread"></a>  AfxBeginThread
 
@@ -145,6 +143,7 @@ CWinThread* AfxBeginThread(
 ```
 CContextMenuManager* afxContextMenuManager;
 ```
+
 ### <a name="requirements"></a>需求
 
 **標頭：** afxcontextmenumanager.h
@@ -152,7 +151,6 @@ CContextMenuManager* afxContextMenuManager;
 ### <a name="see-also"></a>另請參閱
 
 [CContextMenuManager 類別](ccontextmenumanager-class.md)
-
 
 ##  <a name="afxendthread"></a>  AfxEndThread
 
@@ -190,6 +188,7 @@ void AFXAPI AfxEndThread(
 ```
 HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 ```
+
 ### <a name="parameters"></a>參數
 
 *lpszName*<br/>
@@ -471,6 +470,7 @@ BOOL AFXAPI AfxInitRichEdit2();
 ```
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 ```
+
 ### <a name="parameters"></a>參數
 
 *pWnd*<br/>
@@ -514,6 +514,7 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 ```
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 ```
+
 ### <a name="parameters"></a>參數
 
 *pWnd*<br/>
@@ -536,7 +537,6 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 [CWnd 類別](cwnd-class.md)<br/>
 [CMFCToolBar 類別](cmfctoolbar-class.md)
 
-
 ## <a name="afxkeyboardmanager"></a> AfxKeyboardManager
 
 指標的全域[鍵盤管理員](ckeyboardmanager-class.md)。
@@ -546,6 +546,7 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 ```
 CKeyboardManager* afxKeyboardManager;
 ```
+
 ### <a name="requirements"></a>需求
 
 **標頭：** afxkeyboardmanager.h
@@ -554,7 +555,6 @@ CKeyboardManager* afxKeyboardManager;
 
 [巨集、 全域函式和全域變數](mfc-macros-and-globals.md)<br/>
 [CKeyboardManager 類別](ckeyboardmanager-class.md)
-
 
 ##  <a name="afxloadlibrary"></a>  AfxLoadLibrary
 
@@ -618,6 +618,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 ```
 CMenuTearOffManager* g_pTearOffMenuManager;
 ```
+
 ### <a name="requirements"></a>需求
 
 **標頭：** afxmenutearoffmanager.h
@@ -635,6 +636,7 @@ CMenuTearOffManager* g_pTearOffMenuManager;
 ```
 CMouseManager* afxMouseManager;
 ```
+
 ### <a name="requirements"></a>需求
 
 **標頭：** afxmousemanager.h
@@ -642,8 +644,6 @@ CMouseManager* afxMouseManager;
 ### <a name="see-also"></a>另請參閱
 
 [CMouseManager 類別](cmousemanager-class.md)
-
-
 
 ##  <a name="afxregisterclass"></a>  AfxRegisterClass
 
@@ -843,7 +843,6 @@ CUserToolsManager* afxUserToolsManager;
 ### <a name="see-also"></a>另請參閱
 
 [CUserToolsManager 類別](cusertoolsmanager-class.md)
-
 
 ##  <a name="afxwininit"></a>  AfxWinInit
 

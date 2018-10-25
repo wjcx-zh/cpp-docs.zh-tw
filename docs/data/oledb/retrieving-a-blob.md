@@ -1,7 +1,7 @@
 ---
 title: 擷取 BLOB |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,50 +17,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5194d205dc29df9c73e3ca44637f23ca16f72e6b
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 1608bf5db491a090f70da5242173fc96419a6179
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083771"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070158"
 ---
 # <a name="retrieving-a-blob"></a>擷取 BLOB
 
-您可以擷取各種方式二進位大型物件 (BLOB)。 您可以使用`DBTYPE_BYTES`擷取成位元組序列的 BLOB，或使用像介面`ISequentialStream`。 如需詳細資訊，請參閱 < [BLOB 與 OLE 物件](/previous-versions/windows/desktop/ms711511)中*OLE DB 程式設計人員參考*。  
-  
-下列程式碼示範如何擷取 BLOB 使用`ISequentialStream`。 巨集會[BLOB_ENTRY](../../data/oledb/blob-entry.md)可讓您指定的介面和介面使用的旗標。 開啟資料表之後, 程式碼會呼叫`Read`重複在`ISequentialStream`從 BLOB 讀取位元組。 程式碼會呼叫`Release`來進行處置的介面指標，然後再呼叫`MoveNext`來取得下一筆記錄。  
-  
-```cpp  
-class CCategories  
-{  
-public:  
-   ISequentialStream*   pPicture;  
-  
-BEGIN_COLUMN_MAP(CCategories)  
-   BLOB_ENTRY(4, IID_ISequentialStream, STGM_READ, pPicture)  
-END_COLUMN_MAP()  
-};  
-  
-CTable<CAccessor<CCategories>> categories;  
-ULONG          cb;  
-BYTE            myBuffer[65536];  
-  
-categories.Open(session, "Categories");  
+您可以擷取各種方式二進位大型物件 (BLOB)。 您可以使用`DBTYPE_BYTES`擷取成位元組序列的 BLOB，或使用像介面`ISequentialStream`。 如需詳細資訊，請參閱 < [BLOB 與 OLE 物件](/previous-versions/windows/desktop/ms711511)中**OLE DB 程式設計人員參考**。
 
-while (categories.MoveNext() == S_OK)  
-{  
-   do  
-   {  
-      categories.pPicture->Read(myBuffer, 65536, &cb);  
-      // Do something with the buffer  
-   } while (cb > 0);  
-   categories.pPicture->Release();  
-}  
-```  
-  
-多個處理 BLOB 資料的巨集的詳細資訊，請參閱 「 資料行對應巨集 」，在[巨集和全域函式的 OLE DB 消費者樣板](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)。  
-  
-## <a name="see-also"></a>另請參閱  
+下列程式碼示範如何擷取 BLOB 使用`ISequentialStream`。 巨集會[BLOB_ENTRY](../../data/oledb/blob-entry.md)可讓您指定的介面和介面使用的旗標。 開啟資料表之後, 程式碼會呼叫`Read`重複在`ISequentialStream`從 BLOB 讀取位元組。 程式碼會呼叫`Release`來進行處置的介面指標，然後再呼叫`MoveNext`取得下一筆記錄。
+
+```cpp
+class CCategories
+{
+public:
+   ISequentialStream* pPicture;
+
+BEGIN_COLUMN_MAP(CCategories)
+   BLOB_ENTRY(4, IID_ISequentialStream, STGM_READ, pPicture)
+END_COLUMN_MAP()
+};
+```
+
+然後，使用下列程式碼：
+
+```cpp
+CTable<CAccessor<CCategories>> categories;
+ULONG cb;
+BYTE myBuffer[65536];
+
+categories.Open(session, "Categories");
+
+while (categories.MoveNext() == S_OK)
+{
+   do
+   {
+      categories.pPicture->Read(myBuffer, 65536, &cb);
+      // Do something with the buffer
+   } while (cb > 0);
+   categories.pPicture->Release();
+}
+```
+
+如需有關處理 BLOB 資料的巨集的詳細資訊，請參閱**資料行對應巨集**中[巨集和全域函式的 OLE DB 消費者樣板](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)。
+
+## <a name="see-also"></a>另請參閱
 
 [使用存取子](../../data/oledb/using-accessors.md)<br/>
-[OLE DB 消費者範本的巨集和全域函式](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)
+[OLE DB 消費者範本的巨集和全域函式](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)<br/>

@@ -16,26 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b1c99b8b271b4948584d9bdb25c74518fe835573
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 524fd0ac48c0f26f8621c074f5460e55d7690761
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093216"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074653"
 ---
 # <a name="features-of-record-view-classes--mfc-data-access"></a>記錄檢視類別的功能 (MFC 資料存取)
 
-您可以使用類別的以 form 為基礎的資料存取程式設計[CFormView](../mfc/reference/cformview-class.md)，但[CRecordView](../mfc/reference/crecordview-class.md)通常是較佳的類別衍生自。 除了其`CFormView`功能， `CRecordView`:  
-  
-- 提供表單控制項和相關聯的資料錄集物件之間的對話資料交換 (DDX)。  
-  
-- 處理移到最前面、 移到下一個、 移到上一個和最後一個移動瀏覽的記錄相關聯的資料錄集物件中的命令。  
-  
-- 如果使用者移到另一筆記錄，更新會變更為目前的記錄。  
-  
-如需有關瀏覽的詳細資訊，請參閱[資料錄檢視： 支援在資料錄檢視的瀏覽](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)。  
-  
-## <a name="see-also"></a>另請參閱  
+您可以使用類別的以 form 為基礎的資料存取程式設計[CFormView](../mfc/reference/cformview-class.md)，但[CRecordView](../mfc/reference/crecordview-class.md)通常是較佳的類別衍生自。 除了其`CFormView`功能， `CRecordView`:
+
+- 提供表單控制項和相關聯的資料錄集物件之間的對話資料交換 (DDX)。
+
+- 處理移到最前面、 移到下一個、 移到上一個和最後一個移動瀏覽的記錄相關聯的資料錄集物件中的命令。
+
+- 如果使用者移到另一筆記錄，更新會變更為目前的記錄。
+
+如需有關瀏覽的詳細資訊，請參閱[資料錄檢視： 支援在資料錄檢視的瀏覽](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)。
+
+## <a name="see-also"></a>另請參閱
 
 [資料錄檢視 (MFC 資料存取)](../data/record-views-mfc-data-access.md)<br/>
 [ODBC 驅動程式清單](../data/odbc/odbc-driver-list.md)

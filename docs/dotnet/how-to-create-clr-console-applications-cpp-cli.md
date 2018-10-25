@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a650d62a53fa6cada535119cb8897f1f97870ea1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 446ed0c6fb84990db572e1e1ead5c2ab5094ec70
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421254"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076057"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>如何：建立 CLR 主控台應用程式 (C++/CLI)
 
@@ -33,7 +33,7 @@ ms.locfileid: "46421254"
 
 - 這些 .NET Framework 命名空間的參考：
 
-   - [系統](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)-包含基本使用類別和基底類別，定義常用值和參考資料型別、 事件和事件處理常式、 介面、 屬性和處理例外狀況。
+   - [System](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)—這個命名空間包含了基本類別和基底類別，而這些類別會定義最常使用的值和參考資料類型、事件和事件處理常式、介面、屬性以及處理例外狀況。
 
    - mscorlib—支援 .NET Framework 開發的組件 DLL。
 
@@ -67,7 +67,7 @@ ms.locfileid: "46421254"
 
 1. 在 [名稱]  方塊中輸入應用程式的唯一名稱。
 
-     您可以指定其他專案和方案設定，不過，這些屬性並非必要。
+   您可以指定其他專案和方案設定，不過，這些屬性並非必要。
 
 1. 選擇 [確定]  按鈕。
 

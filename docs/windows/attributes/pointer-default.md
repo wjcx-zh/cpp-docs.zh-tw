@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e8ddf566082bfded1f20a2bfe04e7cef0b5dc14
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 994a4a48c5199c3efb05a00331656b3b23a2a0c0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790325"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067038"
 ---
 # <a name="pointerdefault"></a>pointer_default
 
@@ -58,9 +58,9 @@ ms.locfileid: "48790325"
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [IDL 屬性](idl-attributes.md)<br/>
-[介面屬性](interface-attributes.md)  
+[介面屬性](interface-attributes.md)

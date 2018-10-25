@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04715bb2a0139a730a3436e1d824c3864cc7f4c0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8a9cef05463ddf691b1d3136bae9d55f08608d67
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429847"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071072"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx 類別
 
@@ -204,7 +204,6 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 ##  <a name="adddocksite"></a>  COleIPFrameWndEx::AddDockSite
 
-
 ```
 void AddDockSite();
 ```
@@ -212,7 +211,6 @@ void AddDockSite();
 ### <a name="remarks"></a>備註
 
 ##  <a name="addpane"></a>  COleIPFrameWndEx::AddPane
-
 
 ```
 BOOL AddPane(
@@ -222,8 +220,8 @@ BOOL AddPane(
 
 ### <a name="parameters"></a>參數
 
-*pControlBar*<br/>
-[in][in]*bTail*
+[in]*pControlBar*<br/>
+[in]*bTail*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -231,19 +229,17 @@ BOOL AddPane(
 
 ##  <a name="adjustdockinglayout"></a>  COleIPFrameWndEx::AdjustDockingLayout
 
-
 ```
 virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*hdwp*
+[in]*hdwp*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="dockpane"></a>  COleIPFrameWndEx::DockPane
-
 
 ```
 void DockPane(
@@ -254,8 +250,9 @@ void DockPane(
 
 ### <a name="parameters"></a>參數
 
-*pBar*<br/>
-[in][in]*nDockBarID* [in] *lpRect*
+[in]*pBar*<br/>
+[in]*nDockBarID*<br/>
+[in]*lpRect*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -287,14 +284,13 @@ BOOL DockPaneLeftOf(
 
 ##  <a name="enableautohidepanes"></a>  COleIPFrameWndEx::EnableAutoHidePanes
 
-
 ```
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*dwDockStyle*
+[in]*dwDockStyle*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -302,21 +298,19 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 ##  <a name="enabledocking"></a>  COleIPFrameWndEx::EnableDocking
 
-
 ```
 BOOL EnableDocking(DWORD dwDockStyle);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*dwDockStyle*
+[in]*dwDockStyle*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="enablepanemenu"></a>  COleIPFrameWndEx::EnablePaneMenu
-
 
 ```
 void EnablePaneMenu(
@@ -330,12 +324,12 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>參數
 
-*bEnable*<br/>
-[in][in]*uiCustomizeCmd*
-*strCustomizeLabel*<br/>
-[in][in]*uiViewToolbarsMenuEntryID*
-*bContextMenuShowsToolbarsOnly*<br/>
-[in][in]*bViewMenuShowsToolbarsOnly*
+[in]*bEnable*<br/>
+[in]*uiCustomizeCmd*<br/>
+[in]*strCustomizeLabel*<br/>
+[in]*uiViewToolbarsMenuEntryID*<br/>
+[in]*bContextMenuShowsToolbarsOnly*<br/>
+[in]*bViewMenuShowsToolbarsOnly*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -356,7 +350,6 @@ CMFCPopupMenu* GetActivePopup() const;
 使用這個方法來取得的指標[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)目前顯示的物件。
 
 ##  <a name="getcontainerframewindow"></a>  COleIPFrameWndEx::GetContainerFrameWindow
-
 
 ```
 COleCntrFrameWndEx* GetContainerFrameWindow();
@@ -384,7 +377,6 @@ UINT GetDefaultResId() const;
 
 ##  <a name="getdockframe"></a>  COleIPFrameWndEx::GetDockFrame
 
-
 ```
 CFrameWnd* GetDockFrame();
 ```
@@ -395,7 +387,6 @@ CFrameWnd* GetDockFrame();
 
 ##  <a name="getdockingmanager"></a>  COleIPFrameWndEx::GetDockingManager
 
-
 ```
 CDockingManager* GetDockingManager();
 ```
@@ -405,7 +396,6 @@ CDockingManager* GetDockingManager();
 ### <a name="remarks"></a>備註
 
 ##  <a name="getmainframe"></a>  COleIPFrameWndEx::GetMainFrame
-
 
 ```
 CFrameWnd* GetMainFrame();
@@ -433,14 +423,13 @@ const CMFCMenuBar* GetMenuBar() const;
 
 ##  <a name="getpane"></a>  COleIPFrameWndEx::GetPane
 
-
 ```
 CBasePane* GetPane(UINT nID);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*nID*
+[in]*nID*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -516,7 +505,6 @@ void InitUserToolbars(
 
 ##  <a name="insertpane"></a>  COleIPFrameWndEx::InsertPane
 
-
 ```
 BOOL InsertPane(
     CBasePane* pControlBar,
@@ -526,8 +514,9 @@ BOOL InsertPane(
 
 ### <a name="parameters"></a>參數
 
-*pControlBar*<br/>
-[in][in]*pTarget* [in] *bAfter*
+[in]*pControlBar*<br/>
+[in]*pTarget*<br/>
+[in]*bAfter*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -551,7 +540,6 @@ BOOL IsMenuBarAvailable() const;
 
 ##  <a name="ispointneardocksite"></a>  COleIPFrameWndEx::IsPointNearDockSite
 
-
 ```
 BOOL IsPointNearDockSite(
     CPoint point,
@@ -561,15 +549,15 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
-[in][in]*dwBarAlignment* [in] *bOuterEdge*
+[in]*點*<br/>
+[in]*dwBarAlignment*<br/>
+[in]*bOuterEdge*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="loadframe"></a>  COleIPFrameWndEx::LoadFrame
-
 
 ```
 virtual BOOL LoadFrame(
@@ -581,10 +569,10 @@ virtual BOOL LoadFrame(
 
 ### <a name="parameters"></a>參數
 
-*nIDResource*<br/>
-[in][in]*dwDefaultStyle*
-*pParentWnd*<br/>
-[in][in]*pContext*
+[in]*nIDResource*<br/>
+[in]*dwDefaultStyle*<br/>
+[in]*pParentWnd*<br/>
+[in]*pContext*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -592,14 +580,13 @@ virtual BOOL LoadFrame(
 
 ##  <a name="onclosedockingpane"></a>  COleIPFrameWndEx::OnCloseDockingPane
 
-
 ```
 virtual BOOL OnCloseDockingPane(CDockablePane*);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*CDockablePane**
+[in]*CDockablePane&#42;*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -607,14 +594,13 @@ virtual BOOL OnCloseDockingPane(CDockablePane*);
 
 ##  <a name="oncloseminiframe"></a>  COleIPFrameWndEx::OnCloseMiniFrame
 
-
 ```
 virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*CPaneFrameWnd\**
+[in]*CPaneFrameWnd&#42;*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -639,7 +625,6 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 
 ##  <a name="oncmdmsg"></a>  COleIPFrameWndEx::OnCmdMsg
 
-
 ```
 virtual BOOL OnCmdMsg(
     UINT nID,
@@ -650,10 +635,10 @@ virtual BOOL OnCmdMsg(
 
 ### <a name="parameters"></a>參數
 
-*nID*<br/>
-[in][in]*則 nCode*
-*pExtra*<br/>
-[in][in]*pHandlerInfo*
+[in]*nID*<br/>
+[in]*則 nCode*<br/>
+[in]*pExtra*<br/>
+[in]*pHandlerInfo*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -741,21 +726,19 @@ virtual BOOL OnMenuButtonToolHitTest(
 
 ##  <a name="onmoveminiframe"></a>  COleIPFrameWndEx::OnMoveMiniFrame
 
-
 ```
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*pFrame*
+[in]*pFrame*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="onsetpreviewmode"></a>  COleIPFrameWndEx::OnSetPreviewMode
-
 
 ```
 virtual void OnSetPreviewMode(
@@ -765,13 +748,12 @@ virtual void OnSetPreviewMode(
 
 ### <a name="parameters"></a>參數
 
-*bPreview*<br/>
-[in][in]*pState*
+[in]*bPreview*<br/>
+[in]*pState*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="onshowcustomizepane"></a>  COleIPFrameWndEx::OnShowCustomizePane
-
 
 ```
 virtual BOOL OnShowCustomizePane(
@@ -781,8 +763,8 @@ virtual BOOL OnShowCustomizePane(
 
 ### <a name="parameters"></a>參數
 
-*pMenuPane*<br/>
-[in][in]*uiToolbarID*
+[in]*pMenuPane*<br/>
+[in]*uiToolbarID*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -790,14 +772,13 @@ virtual BOOL OnShowCustomizePane(
 
 ##  <a name="onshowpanes"></a>  COleIPFrameWndEx::OnShowPanes
 
-
 ```
 virtual BOOL OnShowPanes(BOOL bShow);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*bShow*
+[in]*bShow*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -852,7 +833,6 @@ virtual BOOL OnTearOffMenu(
 
 ##  <a name="panefrompoint"></a>  COleIPFrameWndEx::PaneFromPoint
 
-
 ```
 CBasePane* PaneFromPoint(
     CPoint point,
@@ -869,10 +849,11 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
-[in][in]*nSensitivity*
-*bExactBar*<br/>
-[in][in]*pRTCBarType* [in] *dwAlignment*
+[in]*點*<br/>
+[in]*nSensitivity*<br/>
+[in]*bExactBar*<br/>
+[in]*pRTCBarType*<br/>
+[in]*dwAlignment*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -880,14 +861,13 @@ CBasePane* PaneFromPoint(
 
 ##  <a name="pretranslatemessage"></a>  COleIPFrameWndEx::PreTranslateMessage
 
-
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*pMsg*
+[in]*pMsg*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -895,19 +875,17 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ##  <a name="recalclayout"></a>  COleIPFrameWndEx::RecalcLayout
 
-
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*bNotify*
+[in]*bNotify*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="removepanefromdockmanager"></a>  COleIPFrameWndEx::RemovePaneFromDockManager
-
 
 ```
 void RemovePaneFromDockManager(
@@ -920,10 +898,11 @@ void RemovePaneFromDockManager(
 
 ### <a name="parameters"></a>參數
 
-*pControlBar*<br/>
-[in][in]*bDestroy*
-*bAdjustLayout*<br/>
-[in][in]*bAutoHide* [in] *pBarReplacement*
+[in]*pControlBar*<br/>
+[in]*bDestroy*<br/>
+[in]*bAdjustLayout*<br/>
+[in]*bAutoHide*<br/>
+[in]*pBarReplacement*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -970,7 +949,6 @@ void SetupToolbarMenu(
 
 ##  <a name="showpane"></a>  COleIPFrameWndEx::ShowPane
 
-
 ```
 void ShowPane(
     CBasePane* pBar,
@@ -981,10 +959,10 @@ void ShowPane(
 
 ### <a name="parameters"></a>參數
 
-*pBar*<br/>
-[in][in]*bShow*
-*bDelay*<br/>
-[in][in]*bActivate*
+[in]*pBar*<br/>
+[in]*bShow*<br/>
+[in]*bDelay*<br/>
+[in]*bActivate*<br/>
 
 ### <a name="remarks"></a>備註
 

@@ -18,25 +18,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 28a92f6193053baca80ca078bddc0de862f50279
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dc899314070f10c0b10cd959af57a7230a406ac3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036445"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069707"
 ---
 # <a name="enhancing-the-simple-read-only-provider"></a>增強簡單唯讀提供者
 
-本節說明如何增強[簡單唯讀提供者](../../data/oledb/implementing-the-simple-read-only-provider.md)在上一節中建立。 `IRowsetLocateImpl` 建立實作`IRowsetLocate`介面，並加入您的書籤支援。  
-  
-當您有運作的提供者時，您可以增強程式碼進行更新提供者、 處理交易，或強化的資料列擷取的演算法效能。 大部分的提供者增強功能包括將介面加入至現有的 COM 物件。  
-  
-下列主題中的範例藉由新增增強的資料列擷取機制`IRowsetLocate`介面`CAgentRowset`。 本主題說明如何以：  
-  
-- [請 RMyProviderRowset 的繼承自 IRowsetLocate](../../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md)。  
-  
-- [動態決定傳回給消費者的資料行](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)。  
-  
-## <a name="see-also"></a>另請參閱  
+本節說明如何增強[簡單唯讀提供者](../../data/oledb/implementing-the-simple-read-only-provider.md)在上一節中建立。 `IRowsetLocateImpl` 建立實作`IRowsetLocate`介面，並加入您的書籤支援。
+
+當您有運作的提供者時，您可以增強程式碼進行更新提供者、 處理交易，或強化的資料列擷取的演算法效能。 大部分的提供者增強功能包括將介面加入至現有的 COM 物件。
+
+下列主題中的範例藉由新增增強的資料列擷取機制`IRowsetLocate`介面`CAgentRowset`。 本主題說明如何以：
+
+- [請繼承自 IRowsetLocate RCustomRowset](../../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md)。
+
+- [動態決定傳回給消費者的資料行](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)。
+
+## <a name="see-also"></a>另請參閱
 
 [建立簡單唯讀提供者](../../data/oledb/creating-a-simple-read-only-provider.md)

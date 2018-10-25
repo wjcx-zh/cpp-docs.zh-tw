@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a20d069024fd424beeec41d3483f8e2c28432e00
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 62cb53dd65810132170d608e68661b64dc97d791
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410724"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070227"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX 控制項容器：在非對話方塊容器中使用控制項
 
@@ -56,18 +56,18 @@ ms.locfileid: "46410724"
 
 1. 只要在 `CMyView` 類別定義之前，於 CMYVIEW.H 中插入 CIRC.H：
 
-     [!code-cpp[NVC_MFC_AxCont#12](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_1.h)]
+   [!code-cpp[NVC_MFC_AxCont#12](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_1.h)]
 
 1. 將成員變數 (為 `CCirc` 類型) 新增至位於 CMYVIEW.H 的 `CMyView` 類別定義的受保護區段：
 
-     [!code-cpp[NVC_MFC_AxCont#13](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_2.h)]
+   [!code-cpp[NVC_MFC_AxCont#13](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_2.h)]
     [!code-cpp[NVC_MFC_AxCont#14](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_3.h)]
 
 1. 將 `WM_CREATE` 訊息處理常式新增至類別 `CMyView`。
 
 1. 在處理常式函式`CMyView::OnCreate`，呼叫以控制項的`Create`函式使用**這**與父視窗的指標：
 
-     [!code-cpp[NVC_MFC_AxCont#15](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#15](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]
 
 1. 重建專案。 每當應用程式檢視建立時，Circ 控制項就會動態建立。
 

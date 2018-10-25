@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bef300671894e054ddf9b1ca0ab9dcf3b135370
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f035ac105dee4e668ca8bee0bab18c2a31fd027f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019407"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069148"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>偵錯和錯誤報告全域函式
 
@@ -47,11 +47,11 @@ HRESULT AtlHresultFromLastError();
 
 ### <a name="remarks"></a>備註
 
-`AtlHresultFromLastError` 呼叫`GetLastError`取得最後一個錯誤，並將它轉換成 HRESULT 使用 HRESULT_FROM_WIN32 巨集之後傳回錯誤。  
+`AtlHresultFromLastError` 呼叫`GetLastError`取得最後一個錯誤，並將它轉換成 HRESULT 使用 HRESULT_FROM_WIN32 巨集之後傳回錯誤。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlcomcli.h  
+**標頭：** atlcomcli.h
 
 ##  <a name="atlhresultfromwin32"></a>  AtlHresultFromWin32
 
@@ -71,11 +71,11 @@ AtlHresultFromWin32(DWORD error);
 將 Win32 錯誤碼轉換成 HRESULT，使用巨集 HRESULT_FROM_WIN32。
 
 > [!NOTE]
->  而不是使用`HRESULT_FROM_WIN32(GetLastError())`，使用函式[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)。  
+>  而不是使用`HRESULT_FROM_WIN32(GetLastError())`，使用函式[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlcomcli.h  
+**標頭：** atlcomcli.h
 
 ##  <a name="atlreporterror"></a>  AtlReportError
 
@@ -166,7 +166,7 @@ HRESULT WINAPI AtlReportError(
 [!code-cpp[NVC_ATL_COM#52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]
 
 > [!CAUTION]
->  請勿使用`AtlReportError`c + + catch 處理常式。 這些函式的某些覆寫使用 ATL 字串轉換巨集就內部而言，這會依次使用`_alloca`內部函式。 使用`AtlReportError`在 c + + catch 處理常式可能會造成 c + + catch 處理常式中的例外狀況。  
+>  請勿使用`AtlReportError`c + + catch 處理常式。 這些函式的某些覆寫使用 ATL 字串轉換巨集就內部而言，這會依次使用`_alloca`內部函式。 使用`AtlReportError`在 c + + catch 處理常式可能會造成 c + + catch 處理常式中的例外狀況。
 
 ### <a name="requirements"></a>需求
 
@@ -203,11 +203,11 @@ ATL 專案，就可以提供您自己的實作，可供在失敗時的 ATL 此�
 
 ### <a name="example"></a>範例
 
-[!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]  
+[!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atldef.h  
+**標頭：** atldef.h
 
 ##  <a name="atlthrowlastwin32"></a>  AtlThrowLastWin32
 
@@ -225,7 +225,7 @@ inline void AtlThrowLastWin32();
 
 如果未定義 _ATL_NO_EXCEPTIONS ATL 專案中，函式會擲回[CAtlException](../../atl/reference/catlexception-class.md)。
 
-如果定義 _ATL_NO_EXCEPTIONS，函式會造成判斷提示失敗而非擲回例外狀況。  
+如果定義 _ATL_NO_EXCEPTIONS，函式會造成判斷提示失敗而非擲回例外狀況。
 
 ## <a name="requirements"></a>需求
 

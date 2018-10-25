@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 116cd9ee86ca29aac6da489916f78c3884ba8bdd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3a37f79851df043a5473c82b514b7e85f418f1b6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446541"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067913"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>標準對話方塊資料驗證常式
 
@@ -47,8 +47,6 @@ ms.locfileid: "46446541"
 |[DDV_MinMaxUInt](#ddv_minmaxuint)|確認指定的控制項值未超過給定**UINT**範圍。|
 |[DDV_MinMaxUnsigned](#ddv_minmaxuint)|確認指定的控制項值介於兩個指定的值。|
 |[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|確認指定的控制項值未超過給定**ULONGLONG**範圍。|
-
-
 
 ##  <a name="ddv_maxchars"></a>  DDV_MaxChars
 
@@ -552,6 +550,7 @@ void AFXAPI DDV_MinMaxULongLong(
        unsigned minVal,
        unsigned maxVal );
 ```
+
 ### <a name="parameters"></a>參數
 
 *pDX*<br/>
@@ -579,6 +578,4 @@ void AFXAPI DDV_MinMaxULongLong(
 [巨集和全域](mfc-macros-and-globals.md)<br/>
 [DDX_Slider](#ddx_slider)<br/>
 [DDX_FieldSlider](#ddx_fieldslider)
-
-
 

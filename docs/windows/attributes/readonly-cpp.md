@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8cba3c15049c176b19f0da197d19017ae2aa699d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 297b457bdf2c70a75b9abdc433c87381fd115037
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790902"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067744"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 
@@ -36,9 +36,9 @@ ms.locfileid: "48790902"
 
 ## <a name="remarks"></a>備註
 
-**Readonly** c + + 屬性具有相同的功能[readonly](/windows/desktop/Midl/readonly) MIDL 屬性。
+**readonly** C++ 屬性的功能與 [readonly](/windows/desktop/Midl/readonly) MIDL 屬性相同。
 
-如果您想要禁止修改方法參數，然後使用[在](in-cpp.md)屬性。
+如果您想要禁止修改方法參數，則請使用 [in](in-cpp.md) 屬性。
 
 ## <a name="example"></a>範例
 
@@ -69,9 +69,9 @@ __interface IFireTabCtrl
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [IDL 屬性](idl-attributes.md)<br/>
-[資料成員屬性](data-member-attributes.md)  
+[資料成員屬性](data-member-attributes.md)

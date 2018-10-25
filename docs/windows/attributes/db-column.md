@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52b5c5bea282e4ebb4106d8e9c2fede40f375ae3
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: a06353780b78339c39ebb20e9bc2f770694f47c2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083604"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073250"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -125,4 +125,4 @@ class CProducts {
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者屬性](ole-db-consumer-attributes.md)<br/>
-[類別屬性](class-attributes.md)  
+[類別屬性](class-attributes.md)

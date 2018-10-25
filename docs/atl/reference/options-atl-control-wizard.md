@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25116b0750016fdbb4ffd792d0b16efb6c6c1793
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9c1acf9602dedf0eef1b8d96344914c367ce5926
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711935"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073548"
 ---
 # <a name="options-atl-control-wizard"></a>選項, ATL 控制項精靈
 
@@ -49,11 +49,11 @@ ms.locfileid: "45711935"
 
    - 含有複合控制項的 HTML 測試網頁。
 
-     根據預設，設定這個控制項[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)為 true，表示視窗化控制項。 它會實作接收對應。 如需詳細資訊，請參閱 < [DHTML 控制項的支援](../../atl/atl-support-for-dhtml-controls.md)。
+   根據預設，設定這個控制項[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)為 true，表示視窗化控制項。 它會實作接收對應。 如需詳細資訊，請參閱 < [DHTML 控制項的支援](../../atl/atl-support-for-dhtml-controls.md)。
 
 - **DHTML 控制項**: ATL DHTML 控制項指定的使用者介面，使用 HTML。 DHTML UI 類別包含 COM 對應。 根據預設，設定這個控制項[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)為 true，表示視窗化控制項。
 
-     如需詳細資訊，請參閱 <<c0> [ 識別 DHTML 控制項專案的項目](../../atl/identifying-the-elements-of-the-dhtml-control-project.md)。
+   如需詳細資訊，請參閱 <<c0> [ 識別 DHTML 控制項專案的項目](../../atl/identifying-the-elements-of-the-dhtml-control-project.md)。
 
 ### <a name="minimal-control"></a>最小的控制項
 

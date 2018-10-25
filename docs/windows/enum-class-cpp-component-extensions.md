@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b85807b9e9dd0cec63def8ffc4a9aa69056f270
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 7c63a043b8f1a91654c0b765632969b82725a3c0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328138"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066158"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>列舉類別 (C + + /cli 和 C + + /CX)
 
@@ -175,7 +175,7 @@ void f(int32);
 不過，在目前的編譯器版本中，標準列舉是當做附有 [NativeEnumAttribute] 的 Managed 列舉發出，且以 MSIL 格式發出下列項目當做函式簽章：
 
 ```cpp
-void f(E)  
+void f(E)
 ```
 
 如需有關原生列舉的詳細資訊，請參閱 [C++ 列舉宣告](../cpp/enumerations-cpp.md)。
@@ -202,7 +202,7 @@ public enum n { c, d };
 // unnamed, standard enum
 public enum { e, f } o;
 
-int main()  
+int main()
 {
    // consume managed enum
    m mym = m::b;

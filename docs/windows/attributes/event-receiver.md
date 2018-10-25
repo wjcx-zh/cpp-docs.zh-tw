@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b8e049d8338ba63e4d127c8a83fd3d9add32c6a1
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 95e5d65d437b60f6421978682997067d8f53a3d5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790722"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073951"
 ---
 # <a name="eventreceiver"></a>event_receiver
 
@@ -85,7 +85,7 @@ ms.locfileid: "48790722"
 |**必要屬性**|`coclass` 當*event_receiver*=**，則為 true**|
 |**無效屬性**|無|
 
-如需詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -94,4 +94,4 @@ ms.locfileid: "48790722"
 [__event](../../cpp/event.md)<br/>
 [__hook](../../cpp/hook.md)<br/>
 [__unhook](../../cpp/unhook.md)<br/>
-[類別屬性](class-attributes.md)  
+[類別屬性](class-attributes.md)

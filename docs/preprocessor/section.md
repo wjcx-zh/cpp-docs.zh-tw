@@ -18,31 +18,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca2582e4c792e0ef60cb11d632c6f4e88891852d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 06e0356453cfcb8ec2753e3c0a6647729ffad90c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726046"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066691"
 ---
 # <a name="section"></a>section
-在 .obj 檔案中建立區段。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-#pragma section( "section-name" [, attributes] )  
-```  
-  
-## <a name="remarks"></a>備註  
- 
-意義*區段*並*一節*是本主題中的可互換的。  
-  
-區段定義之後，其仍適用於編譯的其餘部分。 不過，您必須使用[__declspec （allocate)](../cpp/allocate.md)或執行任何動作將會放在區段。  
-  
-*區段名稱*是必要的參數，將會是區段的名稱。 名稱不得與任何標準區段名稱相衝突。 請參閱[/section](../build/reference/section-specify-section-attributes.md)如需建立區段時，應該不會使用您的名稱。  
-  
-*屬性*是組成一或多個以逗號分隔的屬性，您想要指派給該區段的選擇性參數。 可能*屬性*是：  
+
+在 .obj 檔案中建立區段。
+
+## <a name="syntax"></a>語法
+
+```
+#pragma section( "section-name" [, attributes] )
+```
+
+## <a name="remarks"></a>備註
+
+意義*區段*並*一節*是本主題中的可互換的。
+
+區段定義之後，其仍適用於編譯的其餘部分。 不過，您必須使用[__declspec （allocate)](../cpp/allocate.md)或執行任何動作將會放在區段。
+
+*區段名稱*是必要的參數，將會是區段的名稱。 名稱不得與任何標準區段名稱相衝突。 請參閱[/section](../build/reference/section-specify-section-attributes.md)如需建立區段時，應該不會使用您的名稱。
+
+*屬性*是組成一或多個以逗號分隔的屬性，您想要指派給該區段的選擇性參數。 可能*屬性*是：
 
 |屬性|描述|
 |-|-|
@@ -54,24 +55,24 @@ ms.locfileid: "45726046"
 |**nocache**|將區段標記為不可快取；適用於 Win32 裝置驅動程式。|
 |**discard**|將區段標記為可捨棄；適用於 Win32 裝置驅動程式。|
 |**remove**|標記為不駐留記憶體; 區段虛擬裝置驅動程式 (V*x*D) 只。|
-  
-如果您未指定屬性，區段將會具有讀取和寫入屬性。  
-  
-## <a name="example"></a>範例  
- 
-在下列範例中，第一個指令會識別區段及其屬性。 由於未以 `j` 宣告整數 `mysec`，因此不會將該整數置於 `__declspec(allocate)`；`j` 會包含在資料區段中。 整數 `i` 屬於 `mysec`，這是其 `__declspec(allocate)` 儲存類別屬性的結果。  
-  
-```cpp  
-// pragma_section.cpp  
-#pragma section("mysec",read,write)  
-int j = 0;  
-  
-__declspec(allocate("mysec"))  
-int i = 0;  
-  
-int main(){}  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- 
+
+如果您未指定屬性，區段將會具有讀取和寫入屬性。
+
+## <a name="example"></a>範例
+
+在下列範例中，第一個指令會識別區段及其屬性。 由於未以 `j` 宣告整數 `mysec`，因此不會將該整數置於 `__declspec(allocate)`；`j` 會包含在資料區段中。 整數 `i` 屬於 `mysec`，這是其 `__declspec(allocate)` 儲存類別屬性的結果。
+
+```cpp
+// pragma_section.cpp
+#pragma section("mysec",read,write)
+int j = 0;
+
+__declspec(allocate("mysec"))
+int i = 0;
+
+int main(){}
+```
+
+## <a name="see-also"></a>另請參閱
+
 [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

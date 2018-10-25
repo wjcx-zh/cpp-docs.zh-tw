@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eb26790a46f46638e4a4180ee2209efefda201c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6dcf63933a54983fcf98e35acce533670dc74ed4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432213"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070955"
 ---
 # <a name="nodualinterfaces"></a>no_dual_interfaces
-**C + + 特定**  
-  
-變更編譯器產生雙重介面方法之包裝函式的方式。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-no_dual_interfaces  
-```  
-  
-## <a name="remarks"></a>備註  
- 
-一般而言，包裝函式將會透過介面的虛擬函式表呼叫方法。 具有**no_dual_interfaces**，包裝函式會改為呼叫`IDispatch::Invoke`叫用方法。  
-  
-**END c + + 特定的**  
-  
-## <a name="see-also"></a>另請參閱  
- 
+**C + + 特定**
+
+變更編譯器產生雙重介面方法之包裝函式的方式。
+
+## <a name="syntax"></a>語法
+
+```
+no_dual_interfaces
+```
+
+## <a name="remarks"></a>備註
+
+一般而言，包裝函式將會透過介面的虛擬函式表呼叫方法。 具有**no_dual_interfaces**，包裝函式會改為呼叫`IDispatch::Invoke`叫用方法。
+
+**END c + + 特定的**
+
+## <a name="see-also"></a>另請參閱
+
 [#import 屬性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指示詞](../preprocessor/hash-import-directive-cpp.md)

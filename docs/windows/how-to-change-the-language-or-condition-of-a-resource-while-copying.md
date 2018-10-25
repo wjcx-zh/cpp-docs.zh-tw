@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6239acd275d94eb2a59fe59882095d5106d3fc1e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3594e3c6ec839e41963ba7458e246563241bb4aa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405732"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066561"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying-c"></a>如何： 變更其語言或條件的資源時複製 （c + +）
 
@@ -35,7 +35,7 @@ ms.locfileid: "46405732"
 資源的語言和條件會顯示在 [工作區] 視窗中資源名稱後的括號中。 在此範例中，名為 IDD_AboutBox 的資源使用芬蘭文為其語言，而其條件是 XX33。
 
 ```cpp
-IDD_AboutBox (Finnish - XX33)  
+IDD_AboutBox (Finnish - XX33)
 ```
 
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>複製現有的資源並變更其語言或條件

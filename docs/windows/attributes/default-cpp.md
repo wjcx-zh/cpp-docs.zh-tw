@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5fb7f205ccdf78e1ef64e2ba2c132e3c2b6b6000
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 2ca39b160aacdf72bb6d6131b757755f87ac22a6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791002"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075071"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -44,13 +44,13 @@ ms.locfileid: "48791002"
 如果未指定預設介面，預設會使用第一個出現的非來源介面。
 
 *介面 2*<br/>
-（選擇性）預設來源介面。 您也必須指定此介面與[來源](source-cpp.md)屬性。
+（選擇性）預設來源介面。 您也必須使用 [source](source-cpp.md) 屬性來指定此介面。
 
 如果未指定預設來源介面，預設會使用第一個來源介面。
 
 ## <a name="remarks"></a>備註
 
-**預設**c + + 屬性具有相同的功能[預設](/windows/desktop/Midl/default)MIDL 屬性。 **預設**屬性也可搭配[案例](case-cpp.md)屬性。
+**default** C++ 屬性具有與 [default](/windows/desktop/Midl/default) MIDL 屬性相同的功能。 **default** 屬性也可搭配 [case](case-cpp.md) 屬性使用。
 
 ## <a name="example"></a>範例
 
@@ -77,7 +77,7 @@ __interface ICustomDispatch : public IDispatch {
    HRESULT Dispatch([in] long l, [out, retval] long *pLong);
 };
 
-[   coclass, default(ICustomDispatch), source(IDual), uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")  
+[   coclass, default(ICustomDispatch), source(IDual), uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")
 ]
 class CClass : public ICustom, public IDual, public ICustomDispatch {
    HRESULT Custom(long l, long *pLong) { return(S_OK); }
@@ -102,7 +102,7 @@ int main() {
 }
 ```
 
-[來源](source-cpp.md)屬性還會有的使用方式範例**預設**。
+[source](source-cpp.md) 屬性也會示範如何使用 **default**。
 
 ## <a name="requirements"></a>需求
 
@@ -115,10 +115,10 @@ int main() {
 |**必要屬性**|**coclass** (當套用至**類別**或是**結構**)|
 |**無效屬性**|無|
 
-如需詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [IDL 屬性](idl-attributes.md)<br/>
 [類別屬性](class-attributes.md)<br/>
-[coclass](coclass.md)  
+[coclass](coclass.md)

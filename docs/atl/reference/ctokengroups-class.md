@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d14a839cded7d22236912ba52a733a9ce15f7aa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ae36ce81d51c3fc66941bfd3c8755c4bcdcc98fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46103232"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077201"
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups 類別
 
@@ -230,7 +230,7 @@ Dword 的陣列指標。 如果這個參數是省略，則為 NULL，不會擷�
 擷取相關聯的屬性`CSid`物件。
 
 ```
-bool LookupSid(  
+bool LookupSid(
     const CSid& rSid,
     DWORD* pdwAttributes = NULL) const throw();
 ```

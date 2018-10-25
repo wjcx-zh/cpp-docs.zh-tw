@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca420ce09cae5bf7c11dcfb0ad384e0002bdc4b1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 738d441cf88b41740cb0cff933916489cac683f2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403565"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073093"
 ---
 # <a name="handlers-for-message-map-ranges"></a>訊息對應範圍的處理常式
 
@@ -81,7 +81,7 @@ ms.locfileid: "46403565"
 
 - 巨集的參數：
 
-     前兩個巨集採取三個參數：
+   前兩個巨集採取三個參數：
 
    - 開始範圍命令 ID
 
@@ -89,9 +89,9 @@ ms.locfileid: "46403565"
 
    - 訊息處理常式函式的名稱
 
-     命令 Id 的範圍必須是連續的。
+   命令 Id 的範圍必須是連續的。
 
-     第三個巨集， `ON_CONTROL_RANGE`，會採用一個額外的第一個參數： 控制項通知訊息，例如**EN_CHANGE**。
+   第三個巨集， `ON_CONTROL_RANGE`，會採用一個額外的第一個參數： 控制項通知訊息，例如**EN_CHANGE**。
 
 ##  <a name="_core_declaring_the_handler_function"></a> 宣告處理常式函式
 
@@ -113,11 +113,11 @@ ms.locfileid: "46403565"
 
 - 兩個命令識別碼，開頭和結尾的連續範圍。
 
-     以下是**ID_VIEW_ZOOM25**並**ID_VIEW_ZOOM300**。
+   以下是**ID_VIEW_ZOOM25**並**ID_VIEW_ZOOM300**。
 
 - 命令處理常式函式名稱。
 
-     這裡有`OnZoom`。
+   這裡有`OnZoom`。
 
 函式宣告會像這樣：
 
@@ -137,15 +137,15 @@ ms.locfileid: "46403565"
 
 - 特定的控制項通知訊息。
 
-     它具有以下**BN_CLICKED**。
+   它具有以下**BN_CLICKED**。
 
 - 連續的控制項範圍相關聯控制項 ID 的值。
 
-     這些如下**IDC_BUTTON1**並**IDC_BUTTON10**。
+   這些如下**IDC_BUTTON1**並**IDC_BUTTON10**。
 
 - 訊息處理常式函式的名稱。
 
-     這裡有`OnButtonClicked`。
+   這裡有`OnButtonClicked`。
 
 當您撰寫處理常式函式時，指定額外**UINT**參數，如下列所示：
 

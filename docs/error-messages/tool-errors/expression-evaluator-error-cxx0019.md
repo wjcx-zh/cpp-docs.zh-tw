@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fba76b75c640917b3b99cd41500d682cb1b32f0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9f1e78bd88f35240e90332ef9a9139558051cab5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031804"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070123"
 ---
 # <a name="expression-evaluator-error-cxx0019"></a>運算式評估工具錯誤 CXX0019
 
@@ -42,4 +42,4 @@ C 運算式評估工具無法執行轉換所寫的型別。
     (char **)h_message
     ```
 
-     無法評估 C 運算式評估工具。
+   無法評估 C 運算式評估工具。

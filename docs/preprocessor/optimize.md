@@ -18,56 +18,57 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8222d909ad23157b4e3ed32a6920abadd77709b6
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 98275f6e0a16c6d07b66ce592eb12b9391157653
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538404"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069733"
 ---
 # <a name="optimize"></a>optimize
-指定要依照函式逐一執行的最佳化。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-#pragma optimize( "[optimization-list]", {on | off} )  
-```  
-  
-## <a name="remarks"></a>備註  
 
-**最佳化**pragma 必須出現在函式之外，並顯示該 pragma 後定義的第一個函式才會生效。 *上*並*off*引數開啟選項中指定*最佳化清單*開啟或關閉。  
-  
-*最佳化清單*可以是零個或多個參數下, 表所示。  
-  
-### <a name="parameters-of-the-optimize-pragma"></a>最佳化 Pragma 的參數  
-  
-|參數|最佳化類型|  
-|--------------------|--------------------------|  
-|*g*|啟用全域最佳化。|  
-|*s*或*t*|指定機器碼的短 (short) 序列或快速 (fast) 序列。|  
-|*y*|在程式堆疊上產生框架指標。|  
-  
-這些是與所用的相同字母[/O](../build/reference/o-options-optimize-code.md)編譯器選項。 例如，下列 pragma 相當於 `/Os` 編譯器選項：  
-  
-```  
-#pragma optimize( "ts", on )  
-```  
-  
-使用**最佳化**pragma 搭配空字串 (**"」**) 是一種特殊形式的指示詞：  
-  
-當您使用*關閉*參數時，會關閉稍早在本主題中，資料表中所列的最佳化。  
-  
-當您使用*上*參數，會最佳化重設為指定的[/O](../build/reference/o-options-optimize-code.md)編譯器選項。  
-  
-```  
-#pragma optimize( "", off )  
-.  
-.  
-.  
-#pragma optimize( "", on )   
-```  
-  
-## <a name="see-also"></a>另請參閱  
- 
+指定要依照函式逐一執行的最佳化。
+
+## <a name="syntax"></a>語法
+
+```
+#pragma optimize( "[optimization-list]", {on | off} )
+```
+
+## <a name="remarks"></a>備註
+
+**最佳化**pragma 必須出現在函式之外，並顯示該 pragma 後定義的第一個函式才會生效。 *上*並*off*引數開啟選項中指定*最佳化清單*開啟或關閉。
+
+*最佳化清單*可以是零個或多個參數下, 表所示。
+
+### <a name="parameters-of-the-optimize-pragma"></a>最佳化 Pragma 的參數
+
+|參數|最佳化類型|
+|--------------------|--------------------------|
+|*g*|啟用全域最佳化。|
+|*s*或*t*|指定機器碼的短 (short) 序列或快速 (fast) 序列。|
+|*y*|在程式堆疊上產生框架指標。|
+
+這些是與所用的相同字母[/O](../build/reference/o-options-optimize-code.md)編譯器選項。 例如，下列 pragma 相當於 `/Os` 編譯器選項：
+
+```
+#pragma optimize( "ts", on )
+```
+
+使用**最佳化**pragma 搭配空字串 (**"」**) 是一種特殊形式的指示詞：
+
+當您使用*關閉*參數，會讓所有的最佳化*g*， *s*， *t*，並*y*、 設為 off。
+
+當您使用*上*參數，會最佳化重設為指定的[/O](../build/reference/o-options-optimize-code.md)編譯器選項。
+
+```
+#pragma optimize( "", off )
+.
+.
+.
+#pragma optimize( "", on )
+```
+
+## <a name="see-also"></a>另請參閱
+
 [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

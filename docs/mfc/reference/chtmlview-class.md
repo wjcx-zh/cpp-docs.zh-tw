@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94b25012f65eb1d86674ae9271dcb4f93ef09617
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d081b09f271bd2f557b0396a2632dc47c9bebdc8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403951"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073567"
 ---
 # <a name="chtmlview-class"></a>CHtmlView 類別
 
@@ -244,7 +244,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::GetLocationURL](#getlocationurl)|擷取 WebBrowser 目前顯示的資源 URL。|
 |[CHtmlView::GetMenuBar](#getmenubar)|擷取決定是否顯示功能表列的值。|
 |[CHtmlView::GetOffline](#getoffline)|擷取決定控制項是否離線的值。|
-|[CHtmlView::GetParentBrowser](#getparentbrowser)|擷取 `IDispatch` 介面的指標。 如需詳細資訊，請參閱 <<c0> [ 實作 IDispatch 介面](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。|
+|[CHtmlView::GetParentBrowser](#getparentbrowser)|擷取 `IDispatch` 介面的指標。 如需詳細資訊，請參閱 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。|
 |[CHtmlView::GetProperty](#getproperty)|擷取與指定物件相關聯屬性目前的值。|
 |[CHtmlView::GetReadyState](#getreadystate)|擷取網頁瀏覽器物件的就緒狀態。|
 |[CHtmlView::GetRegisterAsBrowser](#getregisterasbrowser)|指出 WebBrowser 控制項是否註冊為目標名稱解析的最上層瀏覽器進行。|
@@ -269,14 +269,14 @@ class CHtmlView : public CFormView
 |[CHtmlView::OnBeforeNavigate2](#onbeforenavigate2)|在給定的 WebBrowser 中發生巡覽前呼叫 (無論是在視窗或框架項目上)。|
 |[CHtmlView::OnCommandStateChange](#oncommandstatechange)|呼叫以通知應用程式， 網頁瀏覽器命令啟用的狀態已經變更。|
 |[CHtmlView::OnDocumentComplete](#ondocumentcomplete)|呼叫以通知應用程式的文件到達 READYSTATE_COMPLETE 狀態。|
-|[CHtmlView::OnDocWindowActivate](#ondocwindowactivate)|從 Internet Explorer 或 MSHTML 實作的呼叫[ioleinplaceactiveobject:: Ondocwindowactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate)，這會在容器文件視窗啟用或停用時通知作用中的就地物件。|
+|[CHtmlView::OnDocWindowActivate](#ondocwindowactivate)|從 Internet Explorer 或 MSHTML 實作的 [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate)呼叫，這會在容器文件視窗啟用或停用時，通知使用中的就地物件。|
 |[CHtmlView::OnDownloadBegin](#ondownloadbegin)|呼叫以通知應用程式，巡覽作業已經啟動。|
 |[CHtmlView::OnDownloadComplete](#ondownloadcomplete)|當巡覽作業結束、暫止或失敗時呼叫。|
 |[CHtmlView::OnEnableModeless](#onenablemodeless)|當容器建立或終結強制回應對話方塊時，呼叫以啟用或停用非強制回應對話方塊。|
 |[CHtmlView::OnFilterDataObject](#onfilterdataobject)|Internet Explorer 或 MSHTML 在主機上呼叫，允許主機替換 Internet Explorer 或 MSHTML 的資料物件。|
-|[CHtmlView::OnFrameWindowActivate](#onframewindowactivate)|從呼叫[ioleinplaceactiveobject:: Onframewindowactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate)通知物件，當容器的最上層框架視窗啟用或停用。|
+|[CHtmlView::OnFrameWindowActivate](#onframewindowactivate)|從 [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) 呼叫，在容器的最上層框架視窗啟用或停用時通知物件。|
 |[CHtmlView::OnFullScreen](#onfullscreen)|當 FullScreen 屬性變更時呼叫。|
-|[CHtmlView::OnGetDropTarget](#ongetdroptarget)|由 Internet Explorer 或 MSHTML 呼叫，當它用做為置放目標，讓主機提供另一個[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)。|
+|[CHtmlView::OnGetDropTarget](#ongetdroptarget)|當它用做為置放目標，讓主機提供另一個 [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)時，由 Internet Explorer 或 MSHTML 呼叫。|
 |[CHtmlView::OnGetExternal](#ongetexternal)|由 Internet Explorer 或 MSHTML 呼叫，以取得主機的 `IDispatch` 介面。|
 |[CHtmlView::OnGetHostInfo](#ongethostinfo)|擷取 Internet Explorer 或 MSHTML 主機的 UI 功能。|
 |[CHtmlView::OnGetOptionKeyPath](#ongetoptionkeypath)|傳回 Internet Explorer 或 MSHTML 儲存使用者喜好設定的登錄機碼。|
@@ -288,7 +288,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::OnProgressChange](#onprogresschange)|呼叫以通知應用程式，下載作業的進度已經更新。|
 |[CHtmlView::OnPropertyChange](#onpropertychange)|呼叫以通知應用程式， [PutProperty](#putproperty) 方法已經變更屬性的值。|
 |[CHtmlView::OnQuit](#onquit)|呼叫以通知應用程式，Internet Explorer 應用程式已經可以結束。 (僅限 Internet Explorer)|
-|[CHtmlView::OnResizeBorder](#onresizeborder)|從 Internet Explorer 或 MSHTML 實作的呼叫[ioleinplaceactiveobject:: Resizeborder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)，警示物件它需要調整框線空間的大小。|
+|[CHtmlView::OnResizeBorder](#onresizeborder)|從 Internet Explorer 或 MSHTML 實作的 [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)呼叫，警示物件它需要調整框線空間的大小。|
 |[CHtmlView::OnShowContextMenu](#onshowcontextmenu)|當它正要顯示內容功能表時，從 Internet Explorer 或 MSHTML 呼叫。|
 |[CHtmlView::OnShowUI](#onshowui)|在 Internet Explorer 或 MSHTML 顯示其功能表與工具列之前呼叫。|
 |[CHtmlView::OnStatusBar](#onstatusbar)|當 StatusBar 屬性變更時呼叫。|
@@ -296,7 +296,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::OnTheaterMode](#ontheatermode)|當 TheaterMode 屬性變更時呼叫。|
 |[CHtmlView::OnTitleChange](#ontitlechange)|呼叫以通知應用程式，WebBrowser 控制項中文件的標題是否變成可用或變更。|
 |[CHtmlView::OnToolBar](#ontoolbar)|當 ToolBar 屬性變更時呼叫。|
-|[CHtmlView::OnTranslateAccelerator](#ontranslateaccelerator)|由 Internet Explorer 或 MSHTML 呼叫時[:: Translateaccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator)或是[iolecontrolsite:: Translateaccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator)呼叫以處理來自功能表快速鍵訊息容器的訊息佇列。|
+|[CHtmlView::OnTranslateAccelerator](#ontranslateaccelerator)|當呼叫 [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) 或 [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) 處理來自容器訊息佇列的功能表快速鍵訊息時，由 Internet Explorer 或 MSHTML 呼叫。|
 |[CHtmlView::OnTranslateUrl](#ontranslateurl)|由 Internet Explorer 或 MSHTML 呼叫，讓主機有機會修改要載入的 URL。|
 |[CHtmlView::OnUpdateUI](#onupdateui)|通知主機命令狀態已變更。|
 |[CHtmlView::OnVisible](#onvisible)|當 WebBrowser 控制項的視窗必須顯示/隱藏時呼叫。|
@@ -531,7 +531,7 @@ LPDISPATCH GetApplication() const;
 
 ### <a name="return-value"></a>傳回值
 
-指標`IDispatch`主動式文件物件的介面。 如需詳細資訊，請參閱 <<c0> [ 實作 IDispatch 介面](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
+指標`IDispatch`主動式文件物件的介面。 如需詳細資訊，請參閱 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
 
 ### <a name="remarks"></a>備註
 
@@ -1083,7 +1083,6 @@ void Navigate2(
     DWORD dwFlags = 0,
     LPCTSTR lpszTargetFrameName = NULL);
 
-
 void Navigate2(
     LPCTSTR lpszURL,
     DWORD dwFlags = 0,
@@ -1091,7 +1090,6 @@ void Navigate2(
     LPCTSTR lpszHeaders = NULL,
     LPVOID lpvPostData = NULL,
     DWORD dwPostDataLen = 0);
-
 
 void Navigate2(
     LPCTSTR lpszURL,
@@ -1298,7 +1296,7 @@ virtual HRESULT OnFilterDataObject(
 
 ##  <a name="onframewindowactivate"></a>  CHtmlView::OnFrameWindowActivate
 
-從呼叫[ioleinplaceactiveobject:: Onframewindowactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate)通知物件，當容器的最上層框架視窗啟用或停用。
+從 [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) 呼叫，在容器的最上層框架視窗啟用或停用時通知物件。
 
 ```
 virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
@@ -1571,7 +1569,7 @@ virtual void OnQuit();
 
 ##  <a name="onresizeborder"></a>  CHtmlView::OnResizeBorder
 
-從 Internet Explorer 或 MSHTML 實作的呼叫[ioleinplaceactiveobject:: Resizeborder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)，警示物件它需要調整框線空間的大小。
+從 Internet Explorer 或 MSHTML 實作的 [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)呼叫，警示物件它需要調整框線空間的大小。
 
 ```
 virtual HRESULT OnResizeBorder(
@@ -1742,7 +1740,7 @@ virtual void OnToolBar(BOOL bToolBar);
 
 ##  <a name="ontranslateaccelerator"></a>  CHtmlView::OnTranslateAccelerator
 
-由 Internet Explorer 或 MSHTML 呼叫時[:: Translateaccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator)或是[iolecontrolsite:: Translateaccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator)呼叫以處理來自功能表快速鍵訊息容器的訊息佇列。
+當呼叫 [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) 或 [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) 處理來自容器訊息佇列的功能表快速鍵訊息時，由 Internet Explorer 或 MSHTML 呼叫。
 
 ```
 virtual HRESULT OnTranslateAccelerator(
@@ -1842,21 +1840,17 @@ void PutProperty(
     LPCTSTR lpszProperty,
     const VARIANT& vtValue);
 
-
 void PutProperty(
     LPCTSTR lpszPropertyName,
     double dValue);
-
 
 void PutProperty(
     LPCTSTR lpszPropertyName,
     long lValue);
 
-
 void PutProperty(
     LPCTSTR lpszPropertyName,
     LPCTSTR lpszValue);
-
 
 void PutProperty(
     LPCTSTR lpszPropertyName,

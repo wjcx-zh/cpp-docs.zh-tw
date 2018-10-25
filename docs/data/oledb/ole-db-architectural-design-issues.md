@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a79cc4dfa36170293a8832571ba3348d6e2c8865
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 0a0fc54c002511b9c091acc5d5e3fbe4636ad933
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990019"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072235"
 ---
 # <a name="ole-db-architectural-design-issues"></a>OLE DB 架構設計問題
 
-啟動 OLE DB 應用程式之前，請考慮下列問題：  
-  
+啟動 OLE DB 應用程式之前，請考慮下列問題：
+
 ## <a name="what-programming-implementation-will-you-use-to-write-your-ole-db-application"></a>您將撰寫您的 OLE DB 應用程式使用何種程式設計實作？
 
 Microsoft 提供數個程式庫，以完成這項工作： OLE DB 樣板程式庫、 OLE DB 屬性和 OLE DB SDK 中的原始 OLE DB 介面。 此外，還有精靈可幫助您撰寫您的程式。 這些實作所述[OLE DB 樣板、 屬性和其他實作](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md)。

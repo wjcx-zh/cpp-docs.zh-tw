@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c2bc732453edb66f70fde88da8fb7230f66cd13
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 39c51c10ad8c697fcc21c56fcef247c17e8faab5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162304"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069759"
 ---
 # <a name="platformobject-class"></a>Platform::Object 類別
 
@@ -196,6 +196,7 @@ public:
     };
 };
 ```
+
 ## <a name="see-also"></a>另請參閱
 
 [Platform 命名空間](platform-namespace-c-cx.md)

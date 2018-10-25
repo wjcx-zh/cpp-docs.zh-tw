@@ -1,7 +1,7 @@
 ---
 title: 輸出參數 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4a17ff7e6e78b21267b71ba495ba10a98e29cfe7
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: d37cd1cd1facbdba1aeb4c8bc7f655bc3df954c0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808845"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073015"
 ---
 # <a name="output-parameters"></a>輸出參數
 
@@ -32,20 +32,20 @@ ms.locfileid: "49808845"
 
 下列預存程序，第一個 '？ '的傳回值 (phone) 和第二個是'？ ' 是輸入的參數 （名稱）：
 
-```  
-DEFINE_COMMAND(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }")  
-```  
+```cpp
+DEFINE_COMMAND_EX(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }"))
+```
 
 您可以指定 in 和 out 參數在參數對應：
 
-```  
-BEGIN_PARAM_MAP(CMySProcAccessor)  
-   SET_PARAM_TYPE(DBPARAMIO_OUTPUT)  
+```cpp
+BEGIN_PARAM_MAP(CMySProcAccessor)
+   SET_PARAM_TYPE(DBPARAMIO_OUTPUT)
    COLUMN_ENTRY(1, m_Phone)   // Phone is the return value
-   SET_PARAM_TYPE(DBPARAMIO_INPUT)  
+   SET_PARAM_TYPE(DBPARAMIO_INPUT)
    COLUMN_ENTRY(2, m_Name)   // Name is the input parameter
-END_PARAM_MAP()  
-```  
+END_PARAM_MAP()
+```
 
 您的應用程式必須處理從預存程序所傳回的輸出。 不同的 OLE DB 提供者傳回輸出參數，並傳回結果處理期間的不同時間的值。 比方說，Microsoft OLE DB provider for SQL Server (SQLOLEDB) 不提供輸出參數和傳回碼，直到取用者已經擷取或取消預存程序所傳回的結果集之後。 從伺服器傳回的最後一個 TDS 封包的輸出。
 
@@ -62,9 +62,9 @@ as
    select top 50 * from test
    @_rowcount = @@rowcount
 return 0
-```  
+```
 
-\@_Rowcount 具報告測試資料表中傳回多少資料列。 不過，此預存程序會限制為 50 的資料列數目。 例如，如果在測試中有 100 個資料列，資料列計數會是 50 （因為這段程式碼會擷取前 50 個資料列）。 如果有先前只有 30 個資料列的資料表中，資料列計數會是 30。 請務必呼叫`Close`或`CloseAll`填入具之前擷取其值。
+`@_rowcount`具報告測試資料表中傳回多少資料列。 不過，此預存程序會限制為 50 的資料列數目。 例如，如果在測試中有 100 個資料列，資料列計數會是 50 （因為這段程式碼會擷取前 50 個資料列）。 如果有先前只有 30 個資料列的資料表中，資料列計數會是 30。 請務必呼叫`Close`或`CloseAll`填入具之前擷取其值。
 
 ## <a name="see-also"></a>另請參閱
 

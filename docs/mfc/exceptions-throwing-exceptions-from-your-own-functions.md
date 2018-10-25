@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6ef86f54442031b4383e6a0b8cc6f57e4e53d58
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a26bd11c2a37e3644333a95ed03d9182f7b32b87
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418420"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066106"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>例外狀況：從您自己的函式擲回例外狀況
 
@@ -33,19 +33,19 @@ ms.locfileid: "46418420"
 
 1. 使用其中一個 MFC helper 函式，例如 `AfxThrowMemoryException`。 這些函式會擲回預先配置的適當類型的例外狀況物件。
 
-     在下列範例中，如果任一配置失敗，函式會嘗試配置兩個記憶體區塊並擲回例外狀況：
+   在下列範例中，如果任一配置失敗，函式會嘗試配置兩個記憶體區塊並擲回例外狀況：
 
-     [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]
+   [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]
 
-     如果第一個配置失敗，您可以只擲回記憶體例外狀況。 如果第一個配置成功，但是第二個失敗，您必須在擲回例外狀況之前釋出第一個配置區塊。 如果兩個配置都成功，您可以正常繼續進行並在結束函式時釋出區塊。
+   如果第一個配置失敗，您可以只擲回記憶體例外狀況。 如果第一個配置成功，但是第二個失敗，您必須在擲回例外狀況之前釋出第一個配置區塊。 如果兩個配置都成功，您可以正常繼續進行並在結束函式時釋出區塊。
 
      - 或 -
 
 1. 使用使用者定義的例外狀況來指出問題的狀況。 您可以擲回任何類型的項目，甚至整個類別作為您的例外狀況。
 
-     如果發生失敗，下列範例會嘗試透過聲波裝置播放音效並擲回例外狀況。
+   如果發生失敗，下列範例會嘗試透過聲波裝置播放音效並擲回例外狀況。
 
-     [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]
+   [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]
 
 > [!NOTE]
 >  MFC 的例外狀況預設處理僅適用於 `CException` 物件的指標 (以及 `CException` 衍生類別的物件)。 上述範例會略過 MFC 的例外狀況機制。

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2cdeef97b92550731b06dcb4a1d425d77f5920a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bbac8dc499c08d96abd33d49f5adec08095ca420
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075149"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067289"
 ---
 # <a name="security-global-functions"></a>安全性全域函式
 
@@ -50,11 +50,11 @@ ms.locfileid: "46075149"
 |[AtlSetOwnerSid](#atlsetownersid)|呼叫此函式可設定物件的擁有者安全性識別碼 (SID)。|
 |[AtlGetSacl](#atlgetsacl)|呼叫此函式可擷取所指定物件的系統存取控制清單 (SACL) 資訊。|
 |[AtlSetSacl](#atlsetsacl)|呼叫此函式可設定所指定物件的系統存取控制清單 (SACL) 資訊。|
-|[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|呼叫此函式可擷取所指物件的安全性描述元。|  
+|[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|呼叫此函式可擷取所指物件的安全性描述元。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlsecurity.h 
+**標頭：** atlsecurity.h
 
 ##  <a name="atlgetdacl"></a>  AtlGetDacl
 
@@ -127,7 +127,7 @@ DACL 包含新的安全性資訊。
 在偵錯組建中，判斷提示就會發生錯誤，如果*hObject*無效，或如果*dwInheritanceFlowControl*不是其中的三個允許的值。
 ### <a name="requirements"></a>需求
 
-**標頭：** atlsecurity.h 
+**標頭：** atlsecurity.h
 
 ##  <a name="atlgetgroupsid"></a>  AtlGetGroupSid
 
@@ -156,11 +156,11 @@ inline bool AtlGetGroupSid(
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則傳回 true，失敗則傳回 false。  
+如果成功則傳回 true，失敗則傳回 false。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlsecurity.h 
+**標頭：** atlsecurity.h
 
 ##  <a name="atlsetgroupsid"></a>  AtlSetGroupSid
 
@@ -189,11 +189,11 @@ inline bool AtlSetGroupSid(
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則傳回 true，失敗則傳回 false。  
+如果成功則傳回 true，失敗則傳回 false。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlsecurity.h 
+**標頭：** atlsecurity.h
 
 ##  <a name="atlgetownersid"></a>  AtlGetOwnerSid
 
@@ -222,11 +222,11 @@ inline bool AtlGetOwnerSid(
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則傳回 true，失敗則傳回 false。  
+如果成功則傳回 true，失敗則傳回 false。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlsecurity.h 
+**標頭：** atlsecurity.h
 
 ##  <a name="atlsetownersid"></a>  AtlSetOwnerSid
 
@@ -255,11 +255,11 @@ inline bool AtlSetOwnerSid(
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則傳回 true，失敗則傳回 false。  
+如果成功則傳回 true，失敗則傳回 false。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlsecurity.h 
+**標頭：** atlsecurity.h
 
 ##  <a name="atlgetsacl"></a>  AtlGetSacl
 
@@ -296,11 +296,11 @@ inline bool AtlGetSacl(
 
 ### <a name="remarks"></a>備註
 
-如果`AtlGetSacl`多次呼叫許多不同的物件，它將會啟用 SE_SECURITY_NAME 權限後，才能呼叫函式，以更有效率*bRequestNeededPrivileges*設為 false。  
+如果`AtlGetSacl`多次呼叫許多不同的物件，它將會啟用 SE_SECURITY_NAME 權限後，才能呼叫函式，以更有效率*bRequestNeededPrivileges*設為 false。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlsecurity.h 
+**標頭：** atlsecurity.h
 
 ##  <a name="atlsetsacl"></a>  AtlSetSacl
 
@@ -343,11 +343,11 @@ SACL 包含新的安全性資訊。
 
 在偵錯組建中，判斷提示就會發生錯誤，如果*hObject*無效，或如果*dwInheritanceFlowControl*不是其中的三個允許的值。
 
-如果`AtlSetSacl`多次呼叫許多不同的物件，它將會啟用 SE_SECURITY_NAME 權限後，才能呼叫函式，以更有效率*bRequestNeededPrivileges*設為 false。  
+如果`AtlSetSacl`多次呼叫許多不同的物件，它將會啟用 SE_SECURITY_NAME 權限後，才能呼叫函式，以更有效率*bRequestNeededPrivileges*設為 false。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlsecurity.h 
+**標頭：** atlsecurity.h
 
 ##  <a name="atlgetsecuritydescriptor"></a>  AtlGetSecurityDescriptor
 
@@ -390,7 +390,7 @@ bool bRequestNeededPrivileges = true) throw(...);
 
 ### <a name="remarks"></a>備註
 
-如果`AtlGetSecurityDescriptor`多次呼叫許多不同的物件，它將會啟用 SE_SECURITY_NAME 權限後，才能呼叫函式，以更有效率*bRequestNeededPrivileges*設為 false。  
+如果`AtlGetSecurityDescriptor`多次呼叫許多不同的物件，它將會啟用 SE_SECURITY_NAME 權限後，才能呼叫函式，以更有效率*bRequestNeededPrivileges*設為 false。
 
 ### <a name="requirements"></a>需求
 

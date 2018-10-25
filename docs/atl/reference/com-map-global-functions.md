@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9185a71cc77cadb1ad7cdf577654730819147d2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5c158e5b59decd751340f87d5c29c572d6972d8e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113132"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077903"
 ---
 # <a name="com-map-global-functions"></a>COM 對應全域函式
 
@@ -31,11 +31,11 @@ ms.locfileid: "46113132"
 |||
 |-|-|
 |[AtlInternalQueryInterface](#atlinternalqueryinterface)|委派給`IUnknown`的非彙總的物件。|
-|[InlineIsEqualIUnknown](#inlineisequaliunknown)|會產生有效率的程式碼，來比較介面的`IUnknown`。|  
+|[InlineIsEqualIUnknown](#inlineisequaliunknown)|會產生有效率的程式碼，來比較介面的`IUnknown`。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlbase.h  
+**標頭：** atlbase.h
 
 ##  <a name="atlinternalqueryinterface"></a>  AtlInternalQueryInterface
 

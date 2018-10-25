@@ -1,7 +1,7 @@
 ---
 title: 資料列集上使用多個存取子 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 43fa36e0f5b79a6901c1294345f54386340c43ef
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: fb0eeb3a0a3c347c115cb05c2a35d221e6a94fe4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808455"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071036"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>在資料列集上使用多重存取子
 
@@ -37,7 +37,7 @@ ms.locfileid: "49808455"
 
 - **效能。** 在此案例中，一或多個資料行有大量的資料，例如圖形、 音訊或視訊檔。 每次您移至一個資料列，您可能不想要擷取資料行，將大型資料檔案因為這麼做會降低您的應用程式效能。
 
-   您可以設定個別存取子中的第一個存取子包含大型的資料以外的所有資料行和它的資料會從擷取這些資料行，而第一個存取子是自動存取子。 第二個存取子擷取包含大型的資料，資料行，但它不會自動擷取資料從這個資料行。 您可以有其他更新，或依需求擷取大型資料的方法。
+   您可以設定個別存取子中的第一個存取子包含大型的資料以外的所有資料行和它的資料會從擷取這些資料行，而第一個存取子是自動存取子。 第二個存取子擷取保留大型的資料，資料行，但它不會自動擷取資料從這個資料行。 您可以有其他更新，或依需求擷取大型資料的方法。
 
    - 存取子 0 是自動的存取子;它會擷取大型資料以外的所有資料行。
 
@@ -45,7 +45,7 @@ ms.locfileid: "49808455"
 
    若要指定存取子是否自動存取子中使用的自動引數。
 
-- **多個的 ISequentialStream 資料行。** 在此案例中，您有多個資料行包含`ISequentialStream`資料。 不過，每個存取子僅限一份`ISequentialStream`資料流。 若要解決此問題，請設定數個存取子，各自擁有一個`ISequentialStream`指標。
+- **多個的 ISequentialStream 資料行。** 在此案例中，您已經一個以上的資料行保存`ISequentialStream`資料。 不過，每個存取子僅限一份`ISequentialStream`資料流。 若要解決此問題，請設定數個存取子，各自擁有一個`ISequentialStream`指標。
 
 您通常會建立使用存取子[BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)並[END_ACCESSOR](../../data/oledb/end-accessor.md)巨集。 您也可以使用[db_accessor](../../windows/db-accessor.md)屬性。 (存取子會進一步說明，在[使用者記錄](../../data/oledb/user-records.md)。)巨集或屬性指定是否自動或非自動存取子的存取子：
 

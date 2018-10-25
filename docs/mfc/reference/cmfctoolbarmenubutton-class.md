@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f4dffd2fe57e38855033d192ddaf9ac9752e201
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d1002d0a6bcd8d477aa3af86e72faafa843b7565
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404893"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067458"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton 類別
 
@@ -257,14 +257,13 @@ CMFCToolBarMenuButton(
 
 ##  <a name="comparewith"></a>  CMFCToolBarMenuButton::CompareWith
 
-
 ```
 virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*其他*
+[in]*其他*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -272,14 +271,13 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 
 ##  <a name="copyfrom"></a>  Cmfctoolbarmenubutton:: Copyfrom
 
-
 ```
 virtual void CopyFrom(const CMFCToolBarButton& src);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*src*
+[in]*src*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -364,7 +362,6 @@ void DrawDocumentIcon(
 
 ##  <a name="enablequickcustomize"></a>  CMFCToolBarMenuButton::EnableQuickCustomize
 
-
 ```
 void EnableQuickCustomize();
 ```
@@ -372,7 +369,6 @@ void EnableQuickCustomize();
 ### <a name="remarks"></a>備註
 
 ##  <a name="hasbutton"></a>  CMFCToolBarMenuButton::HasButton
-
 
 ```
 virtual BOOL HasButton() const;
@@ -384,7 +380,6 @@ virtual BOOL HasButton() const;
 
 ##  <a name="havehotborder"></a>  CMFCToolBarMenuButton::HaveHotBorder
 
-
 ```
 virtual BOOL HaveHotBorder() const;
 ```
@@ -394,7 +389,6 @@ virtual BOOL HaveHotBorder() const;
 ### <a name="remarks"></a>備註
 
 ##  <a name="isborder"></a>  CMFCToolBarMenuButton::IsBorder
-
 
 ```
 virtual BOOL IsBorder() const;
@@ -406,7 +400,6 @@ virtual BOOL IsBorder() const;
 
 ##  <a name="isclickedonmenu"></a>  CMFCToolBarMenuButton::IsClickedOnMenu
 
-
 ```
 BOOL IsClickedOnMenu() const;
 ```
@@ -416,7 +409,6 @@ BOOL IsClickedOnMenu() const;
 ### <a name="remarks"></a>備註
 
 ##  <a name="isquickmode"></a>  CMFCToolBarMenuButton::IsQuickMode
-
 
 ```
 BOOL IsQuickMode();
@@ -581,7 +573,6 @@ static BOOL m_bAlwaysCallOwnerDraw;
 
 ##  <a name="onaftercreatepopupmenu"></a>  CMFCToolBarMenuButton::OnAfterCreatePopupMenu
 
-
 ```
 virtual void OnAfterCreatePopupMenu();
 ```
@@ -589,7 +580,6 @@ virtual void OnAfterCreatePopupMenu();
 ### <a name="remarks"></a>備註
 
 ##  <a name="onbeforedrag"></a>  CMFCToolBarMenuButton::OnBeforeDrag
-
 
 ```
 virtual BOOL OnBeforeDrag() const;
@@ -601,7 +591,6 @@ virtual BOOL OnBeforeDrag() const;
 
 ##  <a name="oncalculatesize"></a>  CMFCToolBarMenuButton::OnCalculateSize
 
-
 ```
 virtual SIZE OnCalculateSize(
     CDC* pDC,
@@ -611,15 +600,15 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[in][in]*sizeDefault* [in] *bHorz*
+[in]*pDC*<br/>
+[in]*sizeDefault*<br/>
+[in]*bHorz*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="oncancelmode"></a>  CMFCToolBarMenuButton::OnCancelMode
-
 
 ```
 virtual void OnCancelMode();
@@ -629,19 +618,17 @@ virtual void OnCancelMode();
 
 ##  <a name="onchangeparentwnd"></a>  CMFCToolBarMenuButton::OnChangeParentWnd
 
-
 ```
 virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*pWndParent*
+[in]*pWndParent*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="onclick"></a>  CMFCToolBarMenuButton::OnClick
-
 
 ```
 virtual BOOL OnClick(
@@ -651,8 +638,8 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>參數
 
-*pWnd*<br/>
-[in][in]*bDelay*
+[in]*pWnd*<br/>
+[in]*bDelay*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -678,21 +665,19 @@ virtual BOOL OnClickMenuItem();
 
 ##  <a name="oncontexthelp"></a>  CMFCToolBarMenuButton::OnContextHelp
 
-
 ```
 virtual BOOL OnContextHelp(CWnd* pWnd);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*pWnd*
+[in]*pWnd*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="ondraw"></a>  CMFCToolBarMenuButton::OnDraw
-
 
 ```
 virtual void OnDraw(
@@ -708,19 +693,18 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[in][in]*rect*
-*pImages*<br/>
-[in][in]*bHorz*
-*bCustomizeMode*<br/>
-[in][in]*bHighlight*
-*bDrawBorder*<br/>
-[in][in]*bGrayDisabledButtons*
+[in]*pDC*<br/>
+[in]*rect*<br/>
+[in]*pImages*<br/>
+[in]*bHorz*<br/>
+[in]*bCustomizeMode*<br/>
+[in]*bHighlight*<br/>
+[in]*bDrawBorder*<br/>
+[in]*bGrayDisabledButtons*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarMenuButton::OnDrawOnCustomizeList
-
 
 ```
 virtual int OnDrawOnCustomizeList(
@@ -731,8 +715,9 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[in][in]*rect* [in] *bSelected*
+[in]*pDC*<br/>
+[in]*rect*<br/>
+[in]*bSelected*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -761,7 +746,6 @@ TRUE 的時機[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)
 
 ##  <a name="resetimagetodefault"></a>  CMFCToolBarMenuButton::ResetImageToDefault
 
-
 ```
 virtual void ResetImageToDefault();
 ```
@@ -769,7 +753,6 @@ virtual void ResetImageToDefault();
 ### <a name="remarks"></a>備註
 
 ##  <a name="savebarstate"></a>  CMFCToolBarMenuButton::SaveBarState
-
 
 ```
 virtual void SaveBarState();
@@ -781,14 +764,13 @@ virtual void SaveBarState();
 
 ##  <a name="serialize"></a>  CMFCToolBarMenuButton::Serialize
 
-
 ```
 virtual void Serialize(CArchive& ar);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*ar*
+[in]*ar*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -859,14 +841,13 @@ void SetMenuPaletteMode(
 
 ##  <a name="setmessagewnd"></a>  CMFCToolBarMenuButton::SetMessageWnd
 
-
 ```
 void SetMessageWnd(CWnd* pWndMessage);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*pWndMessage*
+[in]*pWndMessage*<br/>
 
 ### <a name="remarks"></a>備註
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e11e1ce061fcf2e9ce21155dcbeb93b45b66238
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 520b9bf8d6a71593acd95ebaac98a72036fcabf2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790899"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070019"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -49,7 +49,8 @@ ms.locfileid: "48790899"
 
 - `push` 可讓您儲存目前**emitidl**設定為內部**emitidl**堆疊，並`pop`可讓您設定**emitidl**到頂端的 內部的任何值是**emitidl**堆疊。
 
-`defaultimports=`*布林值*\(選擇性)  
+`defaultimports=`*布林值*\(選擇性)
+
 - 如果*布林*是 **，則為 true**，docobj.idl 匯入所產生的.idl 檔案。 此外，如果.idl 檔同名的.h 檔案`#include`到您的來源與.h 檔案中，相同的目錄中找到程式碼，則產生的.idl 檔案將包含該.idl 檔案匯入陳述式。
 
 - 如果*布林*是**false**，docobj.idl 不會匯入所產生的.idl 檔案。 您必須明確地匯入.idl 檔案[匯入](import.md)。
@@ -73,9 +74,9 @@ ms.locfileid: "48790899"
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [編譯器屬性](compiler-attributes.md)<br/>
-[獨立屬性](stand-alone-attributes.md)  
+[獨立屬性](stand-alone-attributes.md)

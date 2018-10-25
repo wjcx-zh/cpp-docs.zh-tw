@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e178dfd91382db6c72fbced24ac990c09861a766
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e493f978606f4013da21c292ccf8f520e4e56ea5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433227"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070409"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>標準對話方塊資料交換常式
 
@@ -75,7 +75,7 @@ void AFXAPI DDX_CBIndex(
 
 當`DDX_CBIndex`呼叫時， *index*設為目前的下拉式方塊選取項目的索引。 如果未不選取任何項目，則*index*設為 0。
 
-如需有關 DDX 的詳細資訊，請參閱 < [ 對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
+如需有關 DDX 的詳細資訊，請參閱 [對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -110,7 +110,7 @@ void AFXAPI DDX_CBString(
 > [!NOTE]
 >  如果下拉式方塊的下拉式清單方塊，交換的值是限制為 255 個字元。
 
-如需有關 DDX 的詳細資訊，請參閱 < [ 對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
+如需有關 DDX 的詳細資訊，請參閱 [對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -145,7 +145,7 @@ void AFXAPI DDX_CBStringExact(
 > [!NOTE]
 >  如果下拉式方塊的下拉式清單方塊，交換的值是限制為 255 個字元。
 
-如需有關 DDX 的詳細資訊，請參閱 < [ 對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
+如需有關 DDX 的詳細資訊，請參閱 [對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -177,7 +177,7 @@ void AFXAPI DDX_Check(
 
 當`DDX_Check`呼叫時，*值*設為核取方塊控制項的目前狀態。 如需可能的狀態值的清單，請參閱 < [BM_GETCHECK](/windows/desktop/Controls/bm-getcheck) Windows SDK 中。
 
-如需有關 DDX 的詳細資訊，請參閱 < [ 對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
+如需有關 DDX 的詳細資訊，請參閱 [對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -209,7 +209,7 @@ void AFXAPI DDX_Control(
 
 *PDX* framework 所提供物件時`DoDataExchange`呼叫函式。 因此，`DDX_Control`只應該覆寫內呼叫`DoDataExchange`。
 
-如需有關 DDX 的詳細資訊，請參閱 < [ 對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
+如需有關 DDX 的詳細資訊，請參閱 [對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -253,7 +253,7 @@ void AFXAPI DDX_DateTimeCtrl(
 
 在上述的第三個版本中`DDX_DateTimeCtrl`管理的傳輸`CString`日期之間的資料的時間控制項和[CString](../../atl-mfc-shared/reference/cstringt-class.md)的控制項檢視物件的資料成員。 使用目前的地區設定的規則來格式化日期和時間格式化字串。
 
-如需有關 DDX 的詳細資訊，請參閱 < [ 對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
+如需有關 DDX 的詳細資訊，請參閱 [對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -268,10 +268,11 @@ void AFXAPI DDX_DateTimeCtrl(
 ```
 template <typename T>
 void DDX_ManagedControl(
-     CDataExchange* pDX,
-     int nIDC,
-     CWinFormsControl<T>& control );
+   CDataExchange* pDX,
+   int nIDC,
+   CWinFormsControl<T>& control );
 ```
+
 ### <a name="parameters"></a>參數
 
 *pDX*<br/>
@@ -297,8 +298,6 @@ void DDX_ManagedControl(
 
 [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
 [CDialog::OnInitDialog](cdialog-class.md#oninitdialog)
-
-
 
 ##  <a name="ddx_ipaddress"></a>  DDX_IPAddress
 
@@ -335,7 +334,7 @@ IP 位址相關聯的控制項與控制項屬性的資源識別碼。
 
 當`DDX_IPAddress`呼叫時，*值*其中一個讀取從 IP 位址的控制項，或*值*寫入至控制項，根據交換的方向。
 
-如需有關 DDX 的詳細資訊，請參閱 < [ 對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
+如需有關 DDX 的詳細資訊，請參閱 [對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -367,7 +366,7 @@ void AFXAPI DDX_LBIndex(
 
 當`DDX_LBIndex`呼叫時， *index*設為目前的清單方塊選取項目索引。 如果未不選取任何項目，則*index*設定為-1。
 
-如需有關 DDX 的詳細資訊，請參閱 < [ 對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
+如需有關 DDX 的詳細資訊，請參閱 [對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -404,7 +403,7 @@ void AFXAPI DDX_LBString(
 > [!NOTE]
 >  如果清單方塊的下拉式清單方塊，交換的值是限制為 255 個字元。
 
-如需有關 DDX 的詳細資訊，請參閱 < [ 對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
+如需有關 DDX 的詳細資訊，請參閱 [對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -441,7 +440,7 @@ void AFXAPI DDX_LBStringExact(
 > [!NOTE]
 >  如果清單方塊的下拉式清單方塊，交換的值是限制為 255 個字元。
 
-如需有關 DDX 的詳細資訊，請參閱 < [ 對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
+如需有關 DDX 的詳細資訊，請參閱 [對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -481,7 +480,7 @@ void AFXAPI DDX_MonthCalCtrl(
 
 當`DDX_MonthCalCtrl`呼叫時，*值*設為月曆控制項的目前狀態。
 
-如需有關 DDX 的詳細資訊，請參閱 < [ 對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
+如需有關 DDX 的詳細資訊，請參閱 [對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -515,7 +514,7 @@ void AFXAPI DDX_Radio(
 
 比方說，在案例中的第一個選項按鈕群組中的檢查 （WS_GROUP 樣式的按鈕） 的值**int**成員為 0，依此類推。
 
-如需有關 DDX 的詳細資訊，請參閱 < [ 對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
+如需有關 DDX 的詳細資訊，請參閱 [對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -547,7 +546,7 @@ void AFXAPI DDX_Scroll(
 
 當`DDX_Scroll`呼叫時，*值*設為控制項的捲動方塊的目前位置。 如需有關控制項的捲動方塊的目前位置相關聯的值的詳細資訊，請參閱[GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrollpos) Windows SDK 中。
 
-如需有關 DDX 的詳細資訊，請參閱 < [ 對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
+如需有關 DDX 的詳細資訊，請參閱 [對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -579,7 +578,7 @@ void AFXAPI DDX_Slider(
 
 當`DDX_Slider`呼叫時，*值*設為目前位置之控制項的基本原則是，或值的接收位置，根據交換的方向。
 
-如需有關 DDX 的詳細資訊，請參閱 < [ 對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。 滑桿控制項的相關資訊，請參閱[使用 CSliderCtrl](../../mfc/using-csliderctrl.md)。
+如需有關 DDX 的詳細資訊，請參閱 [對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。 滑桿控制項的相關資訊，請參閱[使用 CSliderCtrl](../../mfc/using-csliderctrl.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -659,7 +658,7 @@ void AFXAPI DDX_Text(
 
 ### <a name="remarks"></a>備註
 
-如需有關 DDX 的詳細資訊，請參閱 < [ 對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
+如需有關 DDX 的詳細資訊，請參閱 [對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。
 
 ### <a name="requirements"></a>需求
 

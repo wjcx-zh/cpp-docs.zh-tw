@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebc257d78bf658b722a93e9d7c306c9bcf6e88bd
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 87ab9e42af139f9b156fa2a688558077967dfa8c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790894"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067796"
 ---
 # <a name="idl-attributes"></a>IDL 屬性
 
@@ -83,7 +83,7 @@ ms.locfileid: "48790894"
 |[licensed](licensed.md)|表示所套用的 coclass 係授權使用，而且必須具現化使用`IClassFactory2`。|
 |[local](local-cpp.md)|可讓您使用 MIDL 編譯器為標頭的產生器時用於介面標頭。 中的個別函式使用時，會指定任何虛設常式所產生的本機程序。|
 |[max_is](max-is.md)|指定有效的陣列索引的最大值。|
-|[模組](module-cpp.md)|在 .idl 檔案中定義程式庫區塊。|
+|[module](module-cpp.md)|在 .idl 檔案中定義程式庫區塊。|
 |[ms_union](ms-union.md)|控制 nonencapsulated 等位的網路資料表示法對齊方式。|
 |[no_injected_text](no-injected-text.md)|防止編譯器將程式碼，因為屬性使用。|
 |[nonbrowsable](nonbrowsable.md)|指出介面成員不會顯示在屬性瀏覽器。|
@@ -92,7 +92,7 @@ ms.locfileid: "48790894"
 |[object](object-cpp.md)|識別自訂的介面;自訂屬性的同義詞。|
 |[odl](odl.md)|識別物件描述語言 (ODL) 介面的介面。|
 |[oleautomation](oleautomation.md)|表示與 Automation 相容介面。|
-|[選擇性](optional-cpp.md)|指定的成員函式的選擇性參數。|
+|[optional](optional-cpp.md)|指定的成員函式的選擇性參數。|
 |[out](out-cpp.md)|識別從被呼叫程序傳回至呼叫程序的指標參數 (從伺服器至用戶端)。|
 |[pointer_default](pointer-default.md)|指定的預設指標屬性的最上層出現的指標除外的所有指標的參數清單。|
 |[pragma](pragma.md)|指定的字串，不能包含單引號字元，發出到產生的.idl 檔案。|
@@ -102,7 +102,7 @@ ms.locfileid: "48790894"
 |[propput](propput.md)|指定屬性設定函式。|
 |[ptr](ptr.md)|指定指標做為完整的指標。|
 |[public](public-cpp-attributes.md)|可確保 typedef 會移至類型程式庫，即使它不從參考的.idl 檔案中。|
-|[範圍](range-cpp.md)|指定引數或在執行階段設定其值的欄位的允許值的範圍。|
+|[range](range-cpp.md)|指定引數或在執行階段設定其值的欄位的允許值的範圍。|
 |[readonly](readonly-cpp.md)|禁止指派給變數。|
 |[ref](ref-cpp.md)|識別參考指標。|
 |[requestedit](requestedit.md)|表示屬性支援`OnRequestEdit`通知。|
@@ -125,4 +125,4 @@ ms.locfileid: "48790894"
 
 ## <a name="see-also"></a>另請參閱
 
-[依群組分類的屬性](attributes-by-group.md)  
+[依群組分類的屬性](attributes-by-group.md)

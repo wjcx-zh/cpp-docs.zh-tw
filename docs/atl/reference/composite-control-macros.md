@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 352f3e5ebd9606cc355ea9af65739c3e17894298
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 75e34fd4cfa53257f0e8a497cf8bc245c90f6732
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136292"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077346"
 ---
 # <a name="composite-control-macros"></a>複合控制項巨集
 
@@ -41,7 +41,7 @@ ms.locfileid: "46136292"
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcom.h  
+**標頭：** atlcom.h
 
 ##  <a name="begin_sink_map"></a>  BEGIN_SINK_MAP
 
@@ -122,7 +122,7 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 [in]識別控制項。
 
 *iid*<br/>
-[in]識別分派介面。  
+[in]識別分派介面。
 
 *piid*<br/>
 [in]分派介面指標。
@@ -156,7 +156,7 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 [in]識別事件的來源不帶正負號的整數。 此值必須符合*nID*中的相關所使用的範本參數[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)基底類別。
 
 *iid*<br/>
-[in]識別分派介面的 IID。  
+[in]識別分派介面的 IID。
 
 *piid*<br/>
 [in]指標，可識別分派介面的 IID。
@@ -167,7 +167,7 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 *fn*<br/>
 [in]事件處理常式函式的名稱。 此函式必須使用`_stdcall`呼叫慣例，而且有適當的 dispinterface 樣式的簽章。
 
-*資訊*<br/>
+*info*<br/>
 [in]輸入事件處理常式函式的資訊。 此類型資訊的指標的形式提供`_ATL_FUNC_INFO`結構。 CC_CDECL 是唯一的選項，支援 Windows ce 的 CALLCONV 欄位`_ATL_FUNC_INFO`結構。 任何其他值都不支援因此其行為未定義。
 
 ### <a name="remarks"></a>備註

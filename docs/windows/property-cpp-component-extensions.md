@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bd79042a43588ad4cedcbe88cc69f30947de7f8
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 24028ac403092404ddf7fd279864273fcf6016ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328229"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075862"
 ---
 # <a name="property--ccli-and-ccx"></a>屬性 (C + + /cli 和 C + + /CX)
 
@@ -53,17 +53,17 @@ ms.locfileid: "49328229"
 ```cpp
 property type property_name;
 
-property type property_name { 
-   access-modifier type get() inheritance-modifier {property_body}; 
+property type property_name {
+   access-modifier type get() inheritance-modifier {property_body};
    access-modifier void set(type value) inheritance-modifier {property_body};
-} 
+}
 
-property type property_name[index_list] { 
-   access-modifier type get(index_list) inheritance-modifier {property_body}; 
+property type property_name[index_list] {
+   access-modifier type get(index_list) inheritance-modifier {property_body};
    access-modifier void set(index_list, value) inheritance-modifier {property_body};
-} 
+}
 
-property type default[index_list] { 
+property type default[index_list] {
    access-modifier type get(index_list) inheritance-modifier {property_body};
    access-modifier void set(index_list, value) inheritance-modifier {property_body};
 }
@@ -172,7 +172,6 @@ Get 和屬性的 set 方法應該同意**靜態**修飾詞。
 屬性區塊中的存取子方法允許不同的可及性。  也就是說，set 方法可以是公用，而 get 方法可以是私人。  不過，存取子方法的可及性較屬性本身上所宣告的更不受限制是一種錯誤。
 
 **屬性**是內容相關性關鍵字。  如需詳細資訊，請參閱 <<c0> [ 即時線上關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。
-
 
 ### <a name="requirements"></a>需求
 

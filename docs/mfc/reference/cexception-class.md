@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 189a6bd675ef3dec467fac98584abd7edfb49c19
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3de077e636f0dfdd1ab046a57a81808b3f80357e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433932"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052833"
 ---
 # <a name="cexception-class"></a>CException 類別
 
@@ -242,5 +242,4 @@ else
 [階層架構圖表](../hierarchy-chart.md)<br/>
 [例外狀況處理](exception-processing.md)<br/>
 [如何： 建立我自己的自訂例外狀況類別](http://go.microsoft.com/fwlink/p/?linkid=128045)
-
 

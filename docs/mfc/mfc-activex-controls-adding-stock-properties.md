@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4100dc14a25a744e5c28ffd1b16119408d800656
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 038d33a81d96067089eb55affbad6991a62d129f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404510"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055199"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC ActiveX 控制項：加入內建屬性
 
@@ -59,7 +59,7 @@ ms.locfileid: "46404510"
 
 1. 從快顯功能表中，按一下**新增**，然後按一下**加入屬性**。
 
-     這會開啟[加入屬性精靈](../ide/names-add-property-wizard.md)。
+   這會開啟[加入屬性精靈](../ide/names-add-property-wizard.md)。
 
 1. 在 **屬性名稱**方塊中，按一下**標題**。
 

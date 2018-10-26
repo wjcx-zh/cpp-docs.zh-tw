@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37c8c9d319495c3247bf98d9ed3c8f58063ae56
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f2c692f9055e0c2ca3657a6bba0d854209f786b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050550"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068745"
 ---
 # <a name="snap-in-object-macros"></a>嵌入式管理單元物件巨集
 
@@ -41,7 +41,7 @@ ms.locfileid: "46050550"
 |[EXTENSION_SNAPIN_DATACLASS](#extension_snapin_dataclass)|建立嵌入式管理單元延伸模組的資料類別的資料成員。|
 |[EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)|輸入嵌入式管理單元物件的嵌入式管理單元延伸模組資料類別對應中的嵌入式管理單元延伸模組資料類別。|
 |[SNAPINMENUID](#snapinmenuid)|宣告嵌入式管理單元物件所使用的內容功能表的識別碼。|
-|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|輸入嵌入式管理單元物件的工具列對應 工具列。|  
+|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|輸入嵌入式管理單元物件的工具列對應 工具列。|
 
 ## <a name="requirements"></a>需求
 

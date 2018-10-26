@@ -140,12 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e1fb04de4097a2cdf1dd51dc12265bef8d6c0b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c86efacf7211415bfdc2936a736d78e29dc419bf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423126"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076395"
 ---
 # <a name="crecordset-class"></a>CRecordset 類別
 
@@ -727,17 +727,14 @@ void GetFieldValue(
     CDBVariant& varValue,
     short nFieldType = DEFAULT_FIELD_TYPE);
 
-
 void GetFieldValue(
     short nIndex,
     CDBVariant& varValue,
     short nFieldType = DEFAULT_FIELD_TYPE);
 
-
 void GetFieldValue(
     short nIndex,
     CStringA& strValue);
-
 
 void GetFieldValue(
     short nIndex,
@@ -822,7 +819,6 @@ short GetODBCFieldCount() const;
 void GetODBCFieldInfo(
     LPCTSTR lpszName,
     CODBCFieldInfo& fieldinfo);
-
 
 void GetODBCFieldInfo(
     short nIndex,
@@ -1538,7 +1534,7 @@ virtual BOOL Open(
 
 - `CRecordset::forwardOnly` 唯讀資料錄集只會順向捲動。
 
-     針對`CRecordset`，預設值是`CRecordset::snapshot`。 預設值的機制可讓這兩個 ODBC 與互動的 Visual c + + 精靈`CRecordset`和 DAO `CDaoRecordset`，其具有不同的預設值。
+   針對`CRecordset`，預設值是`CRecordset::snapshot`。 預設值的機制可讓這兩個 ODBC 與互動的 Visual c + + 精靈`CRecordset`和 DAO `CDaoRecordset`，其具有不同的預設值。
 
 如需有關這些資料錄集類型的詳細資訊，請參閱[資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)。 如需相關資訊，請參閱文件 」 使用區塊和可捲動資料指標 」 Windows SDK 中。
 
@@ -1613,7 +1609,7 @@ virtual BOOL Open(
 
 一般的程序是傳遞 NULL 給`Open`; 在此情況下，`Open`呼叫[GetDefaultSQL](#getdefaultsql)。 如果您使用衍生`CRecordset`類別，`GetDefaultSQL`可讓您在 類別精靈中指定的資料表名稱。 您可以改為指定中的其他資訊`lpszSQL`參數。
 
-傳遞任何方法，`Open`建構查詢的最終 SQL 字串 (字串可能有 SQL**何處**並**ORDER BY**子句附加至`lpszSQL`您傳遞的字串)，然後執行查詢中。 您可以檢查建構的字串，藉由呼叫[GetSQL](#getsql)之後呼叫 *`Open`。 如有關如何建構 SQL 陳述式資料錄集，並選取記錄，其他詳細資料，請參閱文章[資料錄集： 如何資料錄集選取資料錄 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)。
+傳遞任何方法，`Open`建構查詢的最終 SQL 字串 (字串可能有 SQL**何處**並**ORDER BY**子句附加至`lpszSQL`您傳遞的字串)，然後執行查詢中。 您可以檢查建構的字串，藉由呼叫[GetSQL](#getsql)之後呼叫`Open`。 如有關如何建構 SQL 陳述式資料錄集，並選取記錄，其他詳細資料，請參閱文章[資料錄集： 如何資料錄集選取資料錄 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)。
 
 您的資料錄集類別的欄位資料成員會繫結至選取的資料的資料行。 如果未傳回任何記錄，第一筆記錄會變成目前的記錄。
 

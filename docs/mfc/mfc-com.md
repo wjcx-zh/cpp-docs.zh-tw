@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 660b2fc2f6ece6f60ff7bd1868b3a65bc8f045c1
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 5ae1ccdcda4fac1cbd0660b054d792999ae449fc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890032"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079282"
 ---
 # <a name="mfc-com"></a>MFC COM
 
@@ -52,7 +52,7 @@ Active 技術包括用戶端和伺服器技術，包括下列：
 
 - [自動化](../mfc/automation.md)（先前稱為 OLE Automation） 可讓一個應用程式操作另一個的應用程式中實作的物件，或 「 公開 」 物件以便可以操作。
 
-     自動化的物件可以是本機或遠端 （在另一部電腦透過網路存取）。 Aurotmation 可供 OLE 和 COM 物件使用。
+   自動化的物件可以是本機或遠端 （在另一部電腦透過網路存取）。 Aurotmation 可供 OLE 和 COM 物件使用。
 
 - 本章節也提供有關如何撰寫使用 MFC，例如，在 COM 元件的資訊[連接點](../mfc/connection-points.md)。
 

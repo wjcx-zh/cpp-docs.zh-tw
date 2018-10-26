@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 919cff46250d07876c9ca50acb21972fcfa75d4d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a734e51f298f7f092dde341479293bad3a2d9434
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411402"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072677"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX 控制項：在 ActiveX 控制項中使用圖片
 
@@ -47,15 +47,15 @@ ActiveX 控制項類別提供許多您可以用來在控制項內實作圖片屬
 
 - [CPictureHolder](../mfc/reference/cpictureholder-class.md) 類別。
 
-     這個類別提供簡易存取圖片物件及自訂圖片屬性所顯示之項目的功能。
+   這個類別提供簡易存取圖片物件及自訂圖片屬性所顯示之項目的功能。
 
 - 支援 **LPPICTUREDISP**類型屬性，此由 Get/Set 函式完成實作。
 
-     您可以使用 [類別檢視] 快速加入一個支援圖片類型的自訂屬性或屬性。 如需使用 [類別檢視] 加入 ActiveX 控制項屬性的詳細資訊，請參閱 [MFC ActiveX 控制項：屬性](../mfc/mfc-activex-controls-properties.md)一文。
+   您可以使用 [類別檢視] 快速加入一個支援圖片類型的自訂屬性或屬性。 如需使用 [類別檢視] 加入 ActiveX 控制項屬性的詳細資訊，請參閱 [MFC ActiveX 控制項：屬性](../mfc/mfc-activex-controls-properties.md)一文。
 
 - 操作控制項圖片屬性的屬性頁。
 
-     這個屬性頁是 ActiveX 控制項可以使用的內建屬性頁的一部分。 如需 ActiveX 控制項屬性頁的詳細資訊，請參閱 [MFC ActiveX 控制項：使用內建屬性頁](../mfc/mfc-activex-controls-using-stock-property-pages.md)一文。
+   這個屬性頁是 ActiveX 控制項可以使用的內建屬性頁的一部分。 如需 ActiveX 控制項屬性頁的詳細資訊，請參閱 [MFC ActiveX 控制項：使用內建屬性頁](../mfc/mfc-activex-controls-using-stock-property-pages.md)一文。
 
 ##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> 在 ActiveX 控制項中實作自訂圖片屬性
 
@@ -67,11 +67,11 @@ ActiveX 控制項類別提供許多您可以用來在控制項內實作圖片屬
 
 - [在控制項專案中加入程式碼](#_core_additions_to_your_control_project)。
 
-     必須加入一個標準圖片屬性頁 ID、一個 `CPictureHolder`類型資料成員，和具 Get/Set 實作之 **LPPICTUREDISP** 類型的自訂屬性。
+   必須加入一個標準圖片屬性頁 ID、一個 `CPictureHolder`類型資料成員，和具 Get/Set 實作之 **LPPICTUREDISP** 類型的自訂屬性。
 
 - [在控制項類別中修改幾種函式](#_core_modifications_to_your_control_project)。
 
-     這些修改主要是針對負責 ActiveX 控制項繪製的若干函式。
+   這些修改主要是針對負責 ActiveX 控制項繪製的若干函式。
 
 ##  <a name="_core_additions_to_your_control_project"></a> 於控制項專案中加入項目
 

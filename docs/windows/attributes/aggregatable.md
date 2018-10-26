@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b686cd19d76706bb6a30286cf611c563c1aed50
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 169b0ab1194783f1e7de44c9ae0a153e9d4d3071
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790646"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057825"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -49,7 +49,7 @@ ms.locfileid: "48790646"
 
 **彙總**c + + 屬性具有相同的功能[彙總](/windows/desktop/Midl/aggregatable)MIDL 屬性。 這表示，編譯器會通過**彙總**透過屬性設定為產生的.idl 檔案。
 
-此屬性需要[coclass](coclass.md)， [progid](progid.md)，或[vi_progid](vi-progid.md)屬性 （或其中一種表示另一個屬性） 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果`progid`會套用`vi_progid`和`coclass`也會套用。
+此屬性需要 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果`progid`會套用`vi_progid`和`coclass`也會套用。
 
 ### <a name="atl-projects"></a>ATL 專案
 
@@ -88,11 +88,11 @@ class CMyClass {};
 |**必要屬性**|一或多個項目： `coclass`， `progid`，或`vi_progid`。|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [IDL 屬性](idl-attributes.md)<br/>
 [類別屬性](class-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)<br/>
-[彙總](/windows/desktop/com/aggregation)  
+[彙總](/windows/desktop/com/aggregation)

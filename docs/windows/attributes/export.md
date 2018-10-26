@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a636b7d4c943896bcd1e5e7b3580c2d3f7410fc8
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 1529f6d43c3a4543a172229abe2adf0ce6a99c49
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790638"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060191"
 ---
 # <a name="export"></a>匯出
 
@@ -70,9 +70,9 @@ struct MyStruct {
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [編譯器屬性](compiler-attributes.md)<br/>
-[Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)  
+[Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)

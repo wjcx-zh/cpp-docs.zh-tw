@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f5beba4f9a33a5bd9ee93baae6176d3ea592d2e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b61df9a17903f50ea922edf9c29eee926063254
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445811"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055407"
 ---
 # <a name="internet-security-c"></a>網際網路安全性 (C++)
 
@@ -37,7 +37,6 @@ ms.locfileid: "46445811"
 開發網際網路時，有兩種安全性的基本方法。 第一個部分稱為 「 沙箱 」。 這種方法，是限制為一組特定的 Api，應用程式，並將其排除等檔案 I/O，程式無法終結使用者的電腦上的資料有潛在危險的項目中。 第二個是使用數位簽章來實作。 這種方法稱為 「 shrinkwrap 」 的網際網路功能。 程式碼會驗證，並使用私密金鑰/公開金鑰的關鍵技術簽章。 在執行的程式碼之前，以確保程式碼是從已知的驗證來源，而且，程式碼未被改變已簽署之後驗證其數位簽章。
 
 在第一個案例中，您可以信任應用程式將不會做任何傷害，以及您信任來源的應用程式。 在第二個，數位簽章來確認真實性。 數位簽章是一項工業標準，其用來識別，並提供程式碼的 「 發行者 」 的詳細資料。 其技術是以標準，包括 RSA 和 X.509 為基礎。 瀏覽器通常會允許使用者選擇是否要下載及執行未知來源的程式碼。
-
 
 ## <a name="see-also"></a>另請參閱
 

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 451cf4b404143ce8f9b94481dd27227f487874d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b66debe5c6401b4eee01bc81acc58b8445e20c21
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381162"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068771"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC ActiveX 控制項：授權 ActiveX 控制項
 
@@ -84,15 +84,15 @@ ActiveX 控制項精靈現在會產生一個 ActiveX 控制項架構，可包含
 
 - [VerifyUserLicense](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)
 
-     驗證的控制項可讓設計階段使用，藉由檢查控制項授權檔案存在的系統。 由架構呼叫此函式處理過程`IClassFactory2::GetLicInfo`和`IClassFactory::CreateInstanceLic`。
+   驗證的控制項可讓設計階段使用，藉由檢查控制項授權檔案存在的系統。 由架構呼叫此函式處理過程`IClassFactory2::GetLicInfo`和`IClassFactory::CreateInstanceLic`。
 
 - [GetLicenseKey](../mfc/reference/coleobjectfactory-class.md#getlicensekey)
 
-     會控制 DLL 從要求的唯一索引鍵。 此金鑰會內嵌於容器應用程式和更新版本中，用於搭配`VerifyLicenseKey`，以建立控制項的執行個體。 由架構呼叫此函式處理過程`IClassFactory2::RequestLicKey`。
+   會控制 DLL 從要求的唯一索引鍵。 此金鑰會內嵌於容器應用程式和更新版本中，用於搭配`VerifyLicenseKey`，以建立控制項的執行個體。 由架構呼叫此函式處理過程`IClassFactory2::RequestLicKey`。
 
 - [VerifyLicenseKey](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)
 
-     確認內嵌索引鍵和控制項的唯一索引鍵都相同。 這可讓要建立使用控制項的執行個體的容器。 由架構呼叫此函式處理過程`IClassFactory2::CreateInstanceLic`可覆寫，以提供自訂的驗證的授權金鑰。 預設實作會執行字串比較。 如需詳細資訊，請參閱 <<c0> [ 自訂的 ActiveX 控制項授權](#_core_customizing_the_licensing_of_an_activex_control)稍後在本文中。
+   確認內嵌索引鍵和控制項的唯一索引鍵都相同。 這可讓要建立使用控制項的執行個體的容器。 由架構呼叫此函式處理過程`IClassFactory2::CreateInstanceLic`可覆寫，以提供自訂的驗證的授權金鑰。 預設實作會執行字串比較。 如需詳細資訊，請參閱 <<c0> [ 自訂的 ActiveX 控制項授權](#_core_customizing_the_licensing_of_an_activex_control)稍後在本文中。
 
 ###  <a name="_core_header_file_modifications"></a> 標頭檔案修改
 

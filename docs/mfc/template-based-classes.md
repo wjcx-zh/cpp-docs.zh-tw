@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 680ff7d339f592cf112a91fc303a6367fbc4805b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b972d4552a8e41ca0dcea4ef57d48ef161ea35b9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408749"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069226"
 ---
 # <a name="template-based-classes"></a>樣板架構類別
 
@@ -47,11 +47,11 @@ MFC 預先定義範本為基礎的集合的兩個的類別：
 
 - [簡單陣列、 清單和對應類別](#_core_using_simple_array.2c_.list.2c_.and_map_templates)
 
-     `CArray`, `CList`, `CMap`
+   `CArray`, `CList`, `CMap`
 
 - [陣列、 清單和對應的具類型的指標](#_core_using_typed.2d.pointer_collection_templates)
 
-     `CTypedPtrArray`, `CTypedPtrList`, `CTypedPtrMap`
+   `CTypedPtrArray`, `CTypedPtrList`, `CTypedPtrMap`
 
 簡單集合類別衍生自類別`CObject`，因此它們在繼承序列化、 動態建立，以及其他屬性的`CObject`。 具類型的指標集合類別會要求您指定衍生自的類別，它必須是其中一個預先定義的 mfc，例如非範本指標集合`CPtrList`或`CPtrArray`。 新的集合類別繼承自指定的基底類別，以及新的類別成員函式會使用基底類別成員的封裝的呼叫來強制執行型別安全。
 

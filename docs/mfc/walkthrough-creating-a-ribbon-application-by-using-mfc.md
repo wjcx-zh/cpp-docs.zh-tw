@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d86749cc8481f2472ed2ebe29dd535e05dcb2e2
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 12070bd690cc2b6228ae5f86e69d9d698bd28348
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236019"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056915"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>逐步解說：使用 MFC 建立功能區應用程式
 
@@ -38,7 +38,7 @@ ms.locfileid: "48236019"
 
 1. 在 設定下列選項**MFC 應用程式精靈**:
 
-    1. 在 **應用程式類型**下方區段**視覺化樣式和色彩**，選取**Office 2007 （藍色佈景主題）**。 
+    1. 在 **應用程式類型**下方區段**視覺化樣式和色彩**，選取**Office 2007 （藍色佈景主題）**。
 
     1. 在 **複合文件支援**區段中，請確定**無**已選取。
 
@@ -46,7 +46,7 @@ ms.locfileid: "48236019"
 
     1. 在 **資料庫支援**區段中，請確定**無**已選取。
 
-    1. 在 **使用者介面功能**區段中，請確定**使用功能區**已選取。 
+    1. 在 **使用者介面功能**區段中，請確定**使用功能區**已選取。
 
     1. 根據預設， **MFC 應用程式精靈**新增幾個停駐窗格的支援。 由於這個逐步解說只示範功能區，因此您可以從應用程式移除這些選項。 在 **進階功能**區段中，清除所有選項。
 

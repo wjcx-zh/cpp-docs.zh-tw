@@ -16,12 +16,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90754db9c648395ad916cf03682a5c87c0b7da3b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3cc592deaed967a7b6e93f9250103e28fb058de3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235304"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080750"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>逐步解說：建立和使用靜態程式庫 (C++)
 
@@ -33,9 +33,9 @@ ms.locfileid: "48235304"
 
 - [將類別加入靜態程式庫](#AddClassToLib)
 
-- [建立 c + + 主控台應用程式會參考靜態程式庫](#CreateAppToRefTheLib)
+- [建立參考靜態程式庫的 C++ 主控台應用程式](#CreateAppToRefTheLib)
 
-- [靜態程式庫的應用程式中使用的功能](#UseLibInApp)
+- [在應用程式中使用靜態程式庫的功能](#UseLibInApp)
 
 - [執行應用程式](#RunApp)
 
@@ -54,7 +54,7 @@ ms.locfileid: "48235304"
    > [!NOTE]
    > Visual Studio 2017，以前的版本中**新的專案**對話方塊方塊中，展開**已安裝** > **範本** >  **Visual c + +**，然後選取**Win32**。 在中央窗格中，選取 [Win32 主控台應用程式] 。
 
-1. 指定專案的名稱 — 例如， *MathFuncsLib*— 在**名稱** 方塊中。 指定方案的名稱 — 例如， *StaticLibrary*— 在**方案名稱** 方塊中。 選擇 [確定]  按鈕。
+1. 在 [名稱] 方塊中指定專案的名稱，例如 **MathFuncsLib** 。 在 [方案名稱] 方塊中指定方案的名稱，例如 **StaticLibrary** 。 選擇 [確定]  按鈕。
 
     - Visual Studio 2017，
 
@@ -74,13 +74,13 @@ ms.locfileid: "48235304"
 
 ### <a name="to-add-a-class-to-the-static-library"></a>將類別加入靜態程式庫
 
-1. 若要建立新的類別的標頭檔，開啟捷徑功能表**MathFuncsLib**專案中**方案總管**，然後選擇**新增** >  **新的項目**。 在 [加入新項目]  對話方塊的左窗格中，選取 [Visual C++] 底下的 [程式碼] 。 在中間窗格中，選取 [標頭檔 (.h)] 。 指定標頭檔的名稱 — 比方說， *MathFuncsLib.h*，然後選擇**新增**按鈕。 空白標頭檔隨即顯示。
+1. 若要建立新的類別的標頭檔，開啟捷徑功能表**MathFuncsLib**專案中**方案總管**，然後選擇**新增** >  **新的項目**。 在 [加入新項目]  對話方塊的左窗格中，選取 [Visual C++] 底下的 [程式碼] 。 在中間窗格中，選取 [標頭檔 (.h)] 。 指定標頭檔的名稱 (例如 *MathFuncsLib.h*)，然後選擇 [加入]  按鈕。 空白標頭檔隨即顯示。
 
 1. 新增類別，名為`MyMathFuncs`來執行一般算術運算，例如加法、 減法、 乘法和除法。 程式碼應該類似：
 
    [!code-cpp[NVC_Walkthrough_Create_Static_Lib#100](../windows/codesnippet/CPP/walkthrough-creating-and-using-a-static-library-cpp_1.h)]
 
-1. 若要建立新的類別的原始程式檔，開啟捷徑功能表**MathFuncsLib**專案中**方案總管**，然後選擇**新增** >  **新的項目**。 在 [加入新項目]  對話方塊的左窗格中，選取 [Visual C++] 底下的 [程式碼] 。 在中間窗格中，選取 [C++ 檔 (.cpp)] 。 指定原始程式檔的名稱 — 比方說， *MathFuncsLib.cpp*，然後選擇**新增** 按鈕。 空白原始程式檔隨即顯示。
+1. 若要建立新的類別的原始程式檔，開啟捷徑功能表**MathFuncsLib**專案中**方案總管**，然後選擇**新增** >  **新的項目**。 在 [加入新項目]  對話方塊的左窗格中，選取 [Visual C++] 底下的 [程式碼] 。 在中間窗格中，選取 [C++ 檔 (.cpp)] 。 指定原始程式檔的名稱 (例如 *MathFuncsLib.cpp*)，然後選擇 [加入]  按鈕。 空白原始程式檔隨即顯示。
 
 1. 使用這個原始程式檔來實作 **MyMathFuncs**的功能。 程式碼應該類似：
 
@@ -91,18 +91,18 @@ ms.locfileid: "48235304"
    > [!NOTE]
    > 從 Visual Studio 命令列建置時，您必須以兩個步驟建置程式。 首先，執行`cl /c /EHsc MathFuncsLib.cpp`編譯的程式碼，並建立物件的檔案，稱為`MathFuncsLib.obj`。 (`cl` 命令會叫用編譯器 Cl.exe，而 `/c` 選項則指定編譯但不連結。 如需詳細資訊，請參閱 < [/c （編譯而不連結）](../build/reference/c-compile-without-linking.md)。)其次，執行`lib MathFuncsLib.obj`以連結程式碼並建立靜態程式庫`MathFuncsLib.lib`。 (`lib` 命令會叫用程式庫管理員 Lib.exe。 (如需詳細資訊，請參閱 [LIB Reference](../build/reference/lib-reference.md))。
 
-##  <a name="CreateAppToRefTheLib"></a> 建立 c + + 主控台應用程式會參考靜態程式庫
+##  <a name="CreateAppToRefTheLib"></a> 建立參考靜態程式庫的 C++ 主控台應用程式
 
 ### <a name="to-create-a-c-console-app-that-references-the-static-library"></a>建立參考靜態程式庫的 C++ 主控台應用程式
 
 1. 在功能表列上，選擇 [檔案] > [新增] > [專案]。
 
-1. 在左窗格中**新的專案**對話方塊方塊中，展開**已安裝** > **Visual c + +**，然後選取  **Windows Desktop**. 在中央窗格中，選取**Windows Desktop 精靈**。 
+1. 在左窗格中**新的專案**對話方塊方塊中，展開**已安裝** > **Visual c + +**，然後選取  **Windows Desktop**. 在中央窗格中，選取**Windows Desktop 精靈**。
 
    > [!NOTE]
    > Visual Studio 2017，以前的版本中**新的專案**對話方塊方塊中，展開**已安裝** > **範本** >  **Visual c + +**，然後選取**Win32**。 在中央窗格中，選取 [Win32 主控台應用程式] 。
 
-1. 指定專案的名稱 — 例如， *MyExecRefsLib*— 在**名稱** 方塊中。 在 [方案] 旁邊的下拉式清單中，選取 [加入至方案] 。 此命令會將新的專案加入至包含靜態程式庫的方案。 選擇 [確定]  按鈕。
+1. 在 [名稱] 方塊中指定專案的名稱，例如 **MyExecRefsLib** 。 在 [方案] 旁邊的下拉式清單中，選取 [加入至方案] 。 此命令會將新的專案加入至包含靜態程式庫的方案。 選擇 [確定]  按鈕。
 
     - Visual Studio 2017，
 
@@ -118,7 +118,7 @@ ms.locfileid: "48235304"
 
         1. 請確定**主控台應用程式**已選取。 然後檢查**空專案**方塊，然後選擇**完成**。
 
-##  <a name="UseLibInApp"></a> 靜態程式庫的應用程式中使用的功能
+##  <a name="UseLibInApp"></a> 在應用程式中使用靜態程式庫的功能
 
 ### <a name="to-use-the-functionality-from-the-static-library-in-the-app"></a>在應用程式中使用靜態程式庫的功能
 
@@ -144,7 +144,7 @@ ms.locfileid: "48235304"
 
 1. 在方案總管  中開啟 **MyExecRefsLib** 的捷徑功能表，然後選擇 [設定為啟始專案] ，確定已選取 **MyExecRefsLib**做為預設專案。
 
-1. 若要執行專案，在功能表列上，選擇**偵錯** > **啟動但不偵錯**。 輸出應類似於：
+1. 若要執行專案，請在功能表列上選擇 [偵錯] > [啟動但不偵錯]。 輸出應類似於：
 
     ```Output
     a + b = 106.4

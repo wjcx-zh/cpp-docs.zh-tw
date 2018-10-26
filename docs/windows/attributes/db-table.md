@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03d6512933d114cf1c3b06fa3fdc9eaa03c70934
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 07910693b3236e3a90d7ad420392552d90abd747
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790938"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052144"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -43,7 +43,7 @@ ms.locfileid: "48790938"
 （選擇性）您用來處理與資料表的控制代碼的名稱。 如果您想要傳回一個以上的資料列的結果，您必須指定此參數。 **db_table**會產生具有指定的變數*名稱*，可用來周遊資料列集或執行多個動作查詢。
 
 *source_name*<br/>
-（選擇性）`CSession`變數或具有類別的執行個體`db_source`屬性套用至它在其上執行命令。 請參閱[db_source](db-source.md)。
+（選擇性）`CSession`變數或具有類別的執行個體`db_source`屬性套用至它在其上執行命令。 請參閱 [db_source](db-source.md)。
 
 *hresult*<br/>
 （選擇性）識別將會收到此資料庫命令的 HRESULT 的變數。 如果變數不存在，則屬性會自動予以插入。
@@ -84,8 +84,8 @@ class CProducts {
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 消費者屬性](ole-db-consumer-attributes.md)  
+[OLE DB 消費者屬性](ole-db-consumer-attributes.md)

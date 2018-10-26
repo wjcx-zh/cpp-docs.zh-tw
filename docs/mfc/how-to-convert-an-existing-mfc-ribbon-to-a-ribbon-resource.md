@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07ed60edf2b83810616e2ed58a92510d1d973ff0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b31062530bfe6da940cd6458bd5cfa91f3e29ae7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378107"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052547"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>如何：將現有的 MFC 功能區轉換為功能區資源
 
@@ -37,13 +37,13 @@ ms.locfileid: "46378107"
 
 ```
 
-     Save and close the file.
+   儲存並關閉檔案。
 
 1. 建置並執行 MFC 應用程式，然後在 [記事本] 中，開啟 RibbonOutput.txt 並複製其內容。
 
 1. 在 Visual Studio 中，在**專案**功能表上，按一下**加入資源**。 在 **加入資源**對話方塊中，選取**功能區**，然後按一下 **新增**。
 
-     Visual Studio 會建立功能區資源並在設計檢視中將它開啟。 功能區資源識別碼是 IDR_RIBBON1，這會顯示在**資源檢視**。 功能區會在 ribbon1.mfcribbon-ms XML 檔案中定義。
+   Visual Studio 會建立功能區資源並在設計檢視中將它開啟。 功能區資源識別碼是 IDR_RIBBON1，這會顯示在**資源檢視**。 功能區會在 ribbon1.mfcribbon-ms XML 檔案中定義。
 
 1. 在 Visual Studio 中開啟 ribbon1.mfcribbon-ms，刪除其內容，然後貼上您先前複製之 RibbonOutput.txt 的內容。 儲存並關閉 ribbon1.mfcribbon-ms。
 

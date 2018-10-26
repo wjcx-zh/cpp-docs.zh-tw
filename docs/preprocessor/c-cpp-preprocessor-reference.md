@@ -15,40 +15,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cf1ee9b2bd45da321a9d333e48b6cf0a3d178b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4c7c1b84c23ae16828e2d73cb1f45084dfd5806e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405992"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055329"
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++ 前置處理器參考
-*C/c + + 前置處理器參考 》* 說明前置處理器，因為它實作在 Microsoft C/c + +。 前置處理器會先對 C 和 C++ 檔案執行初步作業，再將檔案傳遞至編譯器。 您可以使用前置處理器，有條件地編譯程式碼、插入檔案、指定編譯時間錯誤訊息，以及將電腦特定規則加入至程式碼區段。  
-  
-## <a name="in-this-section"></a>本節內容  
- 
+*C/c + + 前置處理器參考 》* 說明前置處理器，因為它實作在 Microsoft C/c + +。 前置處理器會先對 C 和 C++ 檔案執行初步作業，再將檔案傳遞至編譯器。 您可以使用前置處理器，有條件地編譯程式碼、插入檔案、指定編譯時間錯誤訊息，以及將電腦特定規則加入至程式碼區段。
+
+## <a name="in-this-section"></a>本節內容
+
 [前置處理器指示詞](../preprocessor/preprocessor-directives.md)<br/>
-描述指示詞，通常用來使原始程式易於變更，以及在不同的執行環境中易於編譯。  
-  
+描述指示詞，通常用來使原始程式易於變更，以及在不同的執行環境中易於編譯。
+
 [前置處理器運算子](../preprocessor/preprocessor-operators.md)<br/>
-討論 `#define` 指示詞的內容中所使用的四個前置處理器特定運算子。  
-  
+討論 `#define` 指示詞的內容中所使用的四個前置處理器特定運算子。
+
 [預先定義的巨集](../preprocessor/predefined-macros.md)<br/>
-討論 ANSI 和 Microsoft C++ 指定的預先定義巨集。  
-  
+討論 ANSI 和 Microsoft C++ 指定的預先定義巨集。
+
 [Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-討論 pragma，它讓每個編譯器可以提供電腦和作業系統專屬功能，同時還能保留與 C 及 C++ 語言的整體相容性。  
-  
-## <a name="related-sections"></a>相關章節  
- 
+討論 pragma，它讓每個編譯器可以提供電腦和作業系統專屬功能，同時還能保留與 C 及 C++ 語言的整體相容性。
+
+## <a name="related-sections"></a>相關章節
+
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
-為 C++ 語言的 Microsoft 實作提供參考資料。  
-  
+為 C++ 語言的 Microsoft 實作提供參考資料。
+
 [C 語言參考](../c-language/c-language-reference.md)<br/>
-為 C 語言的 Microsoft 實作提供參考資料。  
-  
+為 C 語言的 Microsoft 實作提供參考資料。
+
 [建置 C/c + + 程式](../build/reference/c-cpp-building-reference.md)<br/>
-提供討論編譯器和連結器選項的主題連結。  
-  
+提供討論編譯器和連結器選項的主題連結。
+
 [建立和管理 Visual C++ 專案](../ide/creating-and-managing-visual-cpp-projects.md)<br/>
 說明 Visual Studio 使用者介面，可讓您指定專案系統將搜尋的目錄，以尋找您的 C++ 專案的檔案。

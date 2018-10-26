@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a4dbf1b085ca5ffddd87396fc367bf19f2ad02e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 841a140236c092ad14501698db90007bce0322ec
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383050"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054874"
 ---
 # <a name="ddxdhtml-helper-macros"></a>DDX_DHtml 協助程式巨集
 
@@ -58,8 +58,6 @@ DDX_DHtml 協助程式巨集可以讓您輕鬆存取常用的屬性的 HTML 網�
 ## <a name="ddx_dhtml_anchor_href"></a> DDX_DHtml_Anchor_Href
 
 設定或擷取目的地 URL 或錨點。
-
-
 
 ```
 DDX_DHtml_Anchor_Href(
@@ -113,8 +111,6 @@ DDX_DHtml_Anchor_Target(
 
 設定或擷取目前項目的開始和結束標記之間的 HTML。
 
-
-
 ```
 DDX_DHtml_ElementInnerHtml(
     CDataExchange* dx,
@@ -137,12 +133,9 @@ DDX_DHtml_ElementInnerHtml(
 
 這個巨集會呼叫[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)函式使用 DISPID_IHTMLELEMENT_INNERHTML 分派識別碼。
 
-
 ## <a name="ddx_dhtml_elementinnertext"></a>  DDX_DHtml_ElementInnerText
 
 設定或擷取目前項目的開始和結束標記之間的文字。
-
-
 
 ```
 DDX_DHtml_ElementInnerText(
@@ -224,8 +217,6 @@ DDX_DHtml_Frame_Src(
 
 設定或擷取相關聯的畫面格的 URL。
 
-
-
 ```
 DDX_DHtml_IFrame_Src(
     CDataExchange* dx,
@@ -275,7 +266,6 @@ DDX_DHtml_Img_Src(
 當使用 DDX_DHtml_Img_Src 巨集來擷取影像元素的 src 屬性，Internet Explorer 的影像物件會傳回影像來源的完整逸出的 URL。 比方說，如果您使用 DDX_DHtml_Img_Src 巨集來將影像元素的 src 屬性設為字串 「 一些有趣的圖片 」 時，當您擷取該屬性時，Internet Explorer 會傳回字串"res://d:\myapplication\myapp.exe/some%20interesting %20picture。 」
 
 這個巨集會呼叫[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)函式使用 DISPID_IHTMLIMGELEMENT_SRC 分派識別碼。
-
 
 ## <a name="see-also"></a>另請參閱
 

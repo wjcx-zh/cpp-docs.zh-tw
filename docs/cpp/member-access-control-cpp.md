@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dced1bd7db0f3eec9d9d070deb8cf990496116ae
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: e0ac5ceda3b979454c5d37e513cbd77a4d3e3e20
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821656"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063350"
 ---
 # <a name="member-access-control-c"></a>成員存取控制 (C++)
 
@@ -247,7 +247,6 @@ int main()
 ![依序繼承圖形的路徑進行存取](../cpp/media/vc38v91.gif "vc38V91")存取沿著路徑的繼承圖形
 
 在圖中，類別 `VBase` 中宣告的名稱一定會透過類別 `RightPath` 進行存取。 正確的路徑會更容易存取，因為 `RightPath` 會將 `VBase` 宣告為公用基底類別，`LeftPath` 則是將 `VBase` 宣告為私用。
-
 
 ## <a name="see-also"></a>另請參閱
 

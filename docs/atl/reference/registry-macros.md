@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17040448771e4ca3c0f999e72a9c08f0e1fa28aa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c10908454252b1ae381a2b96835ce09f3aa6db6f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058493"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053652"
 ---
 # <a name="registry-macros"></a>登錄巨集
 
@@ -41,7 +41,7 @@ ms.locfileid: "46058493"
 |[DECLARE_REGISTRY](#declare_registry)|進入或移除系統登錄中的主要物件的項目。|
 |[DECLARE_REGISTRY_APPID_RESOURCEID](#declare_registry_appid_resourceid)|指定自動註冊所需的資訊*appid*。|
 |[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|尋找具名的資源，並執行登錄指令碼，在其中。|
-|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|找到識別碼所識別的資源，並執行登錄指令碼，在其中。|  
+|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|找到識別碼所識別的資源，並執行登錄指令碼，在其中。|
 
 ## <a name="requirements"></a>需求
 
@@ -96,10 +96,10 @@ DECLARE_NO_REGISTRY()
 
 ```
 DECLARE_REGISTRY(
-    class, 
-    pid, 
-    vpid, 
-    nid, 
+    class,
+    pid,
+    vpid,
+    nid,
     flags )
 ```
 
@@ -132,7 +132,7 @@ DECLARE_REGISTRY(
 
 ```
 DECLARE_REGISTRY_APPID_RESOURCEID(
-    resid, 
+    resid,
     appid )
 ```
 
@@ -173,7 +173,7 @@ DECLARE_REGISTRY_RESOURCE( x )
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-如果您想在執行階段替換取代值的 ATL，請勿指定 DECLARE_REGISTRY_RESOURCE 或 DECLARE_REGISTRY_RESOURCEID 巨集。 相反地，建立陣列`_ATL_REGMAP_ENTRIES`配對來取代預留位置，在執行階段值的結構，其中每個項目包含變數的預留位置。 然後呼叫[CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)或是[CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources)，將陣列傳遞。 這樣會加入所有中的取代值`_ATL_REGMAP_ENTRIES`註冊機構的取代對應的結構。  
+如果您想在執行階段替換取代值的 ATL，請勿指定 DECLARE_REGISTRY_RESOURCE 或 DECLARE_REGISTRY_RESOURCEID 巨集。 相反地，建立陣列`_ATL_REGMAP_ENTRIES`配對來取代預留位置，在執行階段值的結構，其中每個項目包含變數的預留位置。 然後呼叫[CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)或是[CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources)，將陣列傳遞。 這樣會加入所有中的取代值`_ATL_REGMAP_ENTRIES`註冊機構的取代對應的結構。
 
 如需有關可置換的參數和指令碼的詳細資訊，請參閱文章[ATL 登錄元件 （登錄器）](../../atl/atl-registry-component-registrar.md)。
 
@@ -198,7 +198,7 @@ DECLARE_REGISTRY_RESOURCEID( x )
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-如果您想在執行階段替換取代值的 ATL，請勿指定 DECLARE_REGISTRY_RESOURCE 或 DECLARE_REGISTRY_RESOURCEID 巨集。 相反地，建立陣列`_ATL_REGMAP_ENTRIES`配對來取代預留位置，在執行階段值的結構，其中每個項目包含變數的預留位置。 然後呼叫[CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)或是[CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources)，將陣列傳遞。 這樣會加入所有中的取代值`_ATL_REGMAP_ENTRIES`註冊機構的取代對應的結構。  
+如果您想在執行階段替換取代值的 ATL，請勿指定 DECLARE_REGISTRY_RESOURCE 或 DECLARE_REGISTRY_RESOURCEID 巨集。 相反地，建立陣列`_ATL_REGMAP_ENTRIES`配對來取代預留位置，在執行階段值的結構，其中每個項目包含變數的預留位置。 然後呼叫[CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)或是[CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources)，將陣列傳遞。 這樣會加入所有中的取代值`_ATL_REGMAP_ENTRIES`註冊機構的取代對應的結構。
 
 如需有關可置換的參數和指令碼的詳細資訊，請參閱文章[ATL 登錄元件 （登錄器）](../../atl/atl-registry-component-registrar.md)。
 

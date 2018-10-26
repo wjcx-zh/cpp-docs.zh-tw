@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 154f9b4835f7dc18fcf45de53b078d3d5b649e37
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f9cd49a0083081ff7152c92b731e02cfe50c7ff0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446917"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055316"
 ---
 # <a name="index-class"></a>index 類別
 
@@ -144,6 +144,7 @@ index operator--(
    int
 ) restrict(amp,cpu);
 ```
+
 ### <a name="return-values"></a>傳回值
 
 為前置運算子，index 物件 (* 這)。 為後置運算子，新的索引物件。
@@ -157,6 +158,7 @@ index<_Rank>& operator%=(
    int _Rhs
 ) restrict(cpu, amp);
 ```
+
 ### <a name="parameters"></a>參數
 
 *_Rhs*<br/>
@@ -188,6 +190,7 @@ index<_Rank>& operator/=(
    int _Rhs
 ) restrict(amp,cpu);
 ```
+
 ### <a name="parameters"></a>參數
 
 *_Rhs*<br/>
@@ -237,6 +240,7 @@ index<_Rank> operator++(
    int
 ) restrict(amp,cpu);
 ```
+
 ### <a name="return-value"></a>傳回值
 
 為前置運算子，index 物件 (* 這)。 為後置運算子，新的索引物件。
@@ -253,6 +257,7 @@ index<_Rank>& operator+=(
    int _Rhs
 ) restrict(amp,cpu);
 ```
+
 ### <a name="parameters"></a>參數
 
 *_Rhs*<br/>
@@ -270,6 +275,7 @@ index<_Rank>& operator=(
    const index<_Rank>& _Other
 ) restrict(amp,cpu);
 ```
+
 ### <a name="parameters"></a>參數
 
 *_Other*<br/>
@@ -291,6 +297,7 @@ index<_Rank>& operator-=(
    int _Rhs
 ) restrict(amp,cpu);
 ```
+
 ### <a name="parameters"></a>參數
 
 *_Rhs*<br/>
@@ -305,6 +312,7 @@ Index 物件。
 ```
 static const int rank = _Rank;
 ```
+
 ## <a name="see-also"></a>另請參閱
 
 [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61293576fa36d9e8a853cb7a8b71e4c2de98e932
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4c23e72940115e929658949dc0bb15bb41f82b34
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022548"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055063"
 ---
 # <a name="resource-compiler-error-rc2165"></a>資源編譯器錯誤 RC2165
 
@@ -31,4 +31,4 @@ DLGINCLUDE 陳述式中找不到字串
 
 **DLGINCLUDE**陳述式必須使用下列語法：
 
-**DLGINCLUDE 」*filename*.h"**
+**DLGINCLUDE 」**<em>檔名</em>**.h"**

@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d9acae5f87223a3b23c492f02596452fabb745f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ca8a6689d0ac305a0dc3264b0311a4d7bf2e7d11
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441287"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076070"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton 類別
 
@@ -419,8 +419,6 @@ static BOOL IsWindowsThemingEnabled();
 
 如果目前的 Windows 佈景主題; 的對應按鈕框線的樣式，則為 TRUE。否則為 FALSE。
 
-
-
 ## <a name="a-namembdontusewinxptheme-cmfcbuttonmbdontusewinxptheme"></a><a name="m_bDontUseWinXPTheme"/> CMFCButton::m_bDontUseWinXPTheme
 
 指定是否要繪製按鈕時，使用 Windows XP 佈景主題。
@@ -446,7 +444,6 @@ BOOL m_bDrawFocus;
 ##  <a name="m_bGrayDisabled"></a>  CMFCButton::m_bGrayDisabled
 
 若為 TRUE，可讓要繪製為灰色的已停用的按鈕。
-
 
 ```
 BOOL m_bGrayDisabled;
@@ -479,7 +476,6 @@ BOOL m_bResponseOnButtonDown;
 ```
 BOOL m_bRightImage;
 ```
-
 
 ##  <a name="m_bTopImage"></a>  CMFCButton::m_bTopImage](#m_bTopImage)
 
@@ -663,7 +659,7 @@ virtual void OnDrawText(
 [in]指定如何格式化文字的旗標。 如需詳細資訊，請參閱 < *nFormat*的參數[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)方法。
 
 *uiState*<br/>
-[in]保留。
+[in] 保留。
 
 ### <a name="remarks"></a>備註
 
@@ -739,14 +735,12 @@ void SetCheckedImage(
     HICON hIconDisabled=NULL,
     BOOL bAlphaBlend=FALSE);
 
-
 void SetCheckedImage(
     HBITMAP hBitmap,
     BOOL bAutoDestroy=TRUE,
     HBITMAP hBitmapHot=NULL,
     BOOL bMap3dColors=TRUE,
     HBITMAP hBitmapDisabled=NULL);
-
 
 void SetCheckedImage(
     UINT uiBmpResId,
@@ -828,14 +822,12 @@ void SetImage(
     HICON hIconDisabled=NULL,
     BOOL bAlphaBlend=FALSE);
 
-
 void SetImage(
     HBITMAP hBitmap,
     BOOL bAutoDestroy=TRUE,
     HBITMAP hBitmapHot=NULL,
     BOOL bMap3dColors=TRUE,
     HBITMAP hBitmapDisabled=NULL);
-
 
 void SetImage(
     UINT uiBmpResId,

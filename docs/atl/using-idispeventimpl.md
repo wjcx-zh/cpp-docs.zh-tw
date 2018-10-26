@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48afac392d02edfd3d312583642367bc6726e536
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1d28a9a8bad8ced772d5c698e76d3d08f09c8db2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106788"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066470"
 ---
 # <a name="using-idispeventimpl"></a>使用 IDispEventImpl
 
@@ -41,7 +41,7 @@ ms.locfileid: "46106788"
 
 下列範例示範如何處理`DocumentChange`事件引發的 Word**應用程式**物件。 此事件上定義為方法`ApplicationEvents`dispinterface。
 
-此範例是來自[ATLEventHandling 範例](../visual-cpp-samples.md)。  
+此範例是來自[ATLEventHandling 範例](../visual-cpp-samples.md)。
 
 ```cpp
 [ uuid(000209F7-0000-0000-C000-000000000046), hidden ]

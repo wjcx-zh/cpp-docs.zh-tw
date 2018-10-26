@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aea9e17d17008642f9421beb47be38cac401132
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4e94fa412b76107dde90d3a6a664ec68c6b6bdaf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071311"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078787"
 ---
 # <a name="temporary-objects"></a>暫存物件
 
@@ -41,9 +41,9 @@ ms.locfileid: "46071311"
                     //   value.
     ```
 
-     由於傳回值不會複製到另一個物件，因此會建立暫存物件。 建立暫存物件的更常見案例是在評估運算式期間，必須呼叫多載運算子函式時。 這些多載運算子函式傳回的使用者定義類型通常不會複製到另一個物件。
+   由於傳回值不會複製到另一個物件，因此會建立暫存物件。 建立暫存物件的更常見案例是在評估運算式期間，必須呼叫多載運算子函式時。 這些多載運算子函式傳回的使用者定義類型通常不會複製到另一個物件。
 
-     以 `ComplexResult = Complex1 + Complex2 + Complex3` 運算式為例。 `Complex1 + Complex2` 運算式會加以評估，而且結果會儲存在暫存物件中。 下一步，運算式*暫時*`+ Complex3`評估，而且結果複製到`ComplexResult`（假設指派運算子未多載）。
+   以 `ComplexResult = Complex1 + Complex2 + Complex3` 運算式為例。 `Complex1 + Complex2` 運算式會加以評估，而且結果會儲存在暫存物件中。 下一步，運算式*暫時*`+ Complex3`評估，而且結果複製到`ComplexResult`（假設指派運算子未多載）。
 
 - 為了將轉型的結果儲存為使用者定義類型。 當特定類型的物件明確轉換成使用者定義類型時，該新物件會建構為暫存物件。
 

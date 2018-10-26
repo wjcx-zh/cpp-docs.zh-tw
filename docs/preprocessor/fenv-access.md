@@ -18,23 +18,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeb138a8b2598c209005031a3ccd3104fead48dc
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 3c06556d47bf0c471aa7e4fab610971e2b7ad11e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540766"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081465"
 ---
 # <a name="fenvaccess"></a>fenv_access
 停用 (**上**) 或啟用 (**關閉**) 無法變更的浮點環境最佳化旗標測試和模式變更。
 
 ## <a name="syntax"></a>語法
 
-> **#pragma fenv_access (** {**上** | **關閉**} **)**  
+> **#pragma fenv_access (** {**上** | **關閉**} **)**
 
 ## <a name="remarks"></a>備註
 
-根據預設， **fenv_access**是**關閉**。 如果編譯器可能會假設您的程式碼不會存取或操作的浮點環境，則它可以執行許多的浮點程式碼最佳化。 設定**fenv_access**要**上**以通知編譯器，您的程式碼存取的浮點環境測試狀態旗標，例外狀況，或設定控制項模式的旗標。 編譯器會停用這些最佳化，使您的程式碼能夠一致的方式存取的浮點環境。 
+根據預設， **fenv_access**是**關閉**。 如果編譯器可能會假設您的程式碼不會存取或操作的浮點環境，則它可以執行許多的浮點程式碼最佳化。 設定**fenv_access**要**上**以通知編譯器，您的程式碼存取的浮點環境測試狀態旗標，例外狀況，或設定控制項模式的旗標。 編譯器會停用這些最佳化，使您的程式碼能夠一致的方式存取的浮點環境。
 
 如需浮點行為的詳細資訊，請參閱[/fp （指定浮點行為）](../build/reference/fp-specify-floating-point-behavior.md)。
 

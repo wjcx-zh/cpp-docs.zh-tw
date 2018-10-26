@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46e41ffab3f3f22bca1a9a721b4f2cdb03129d03
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 05e2a39f94eeefa264a9e93623f4ff7c6b2f2e91
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391692"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080452"
 ---
 # <a name="memory-management-examples"></a>記憶體管理：範例
 
@@ -52,19 +52,19 @@ ms.locfileid: "46391692"
 
 1. 下列程式碼所示，請定義陣列。 陣列會自動刪除，並當陣列變數離開範圍時，會回收其記憶體。
 
-     [!code-cpp[NVC_MFC_Utilities#1](../mfc/codesnippet/cpp/memory-management-examples_1.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#1](../mfc/codesnippet/cpp/memory-management-examples_1.cpp)]
 
 #### <a name="to-allocate-an-array-of-bytes-or-any-primitive-data-type-on-the-heap"></a>若要在堆積上配置的位元組 （或任何基本資料類型） 的陣列
 
 1. 使用**新**運算子與陣列語法範例所示：
 
-     [!code-cpp[NVC_MFC_Utilities#2](../mfc/codesnippet/cpp/memory-management-examples_2.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#2](../mfc/codesnippet/cpp/memory-management-examples_2.cpp)]
 
 #### <a name="to-deallocate-the-arrays-from-the-heap"></a>若要解除配置堆積中的陣列
 
 1. 使用**刪除**運算子，如下所示：
 
-     [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]
 
 ##  <a name="_core_allocation_of_a_data_structure"></a> 一種資料結構的配置
 
@@ -72,15 +72,15 @@ ms.locfileid: "46391692"
 
 1. 定義結構變數，如下所示：
 
-     [!code-cpp[NVC_MFC_Utilities#4](../mfc/codesnippet/cpp/memory-management-examples_4.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#4](../mfc/codesnippet/cpp/memory-management-examples_4.cpp)]
 
-     當超出範圍時，會回收結構所佔用的記憶體。
+   當超出範圍時，會回收結構所佔用的記憶體。
 
 #### <a name="to-allocate-data-structures-on-the-heap"></a>配置在堆積上的資料結構
 
 1. 使用**新**配置在堆積上的資料結構並**刪除**解除配置，如下列範例所示：
 
-     [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]
 
 ##  <a name="_core_allocation_of_an_object"></a> 配置的物件
 
@@ -88,25 +88,25 @@ ms.locfileid: "46391692"
 
 1. 物件的宣告，如下所示：
 
-     [!code-cpp[NVC_MFC_Utilities#6](../mfc/codesnippet/cpp/memory-management-examples_6.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#6](../mfc/codesnippet/cpp/memory-management-examples_6.cpp)]
 
-     當物件離開範圍時，會自動叫用物件的解構函式。
+   當物件離開範圍時，會自動叫用物件的解構函式。
 
 #### <a name="to-allocate-an-object-on-the-heap"></a>可配置在堆積上物件
 
 1. 使用**新**運算子，就會傳回物件的指標，配置在堆積上的物件。 使用**刪除**運算子將它們刪除。
 
-     下列的堆積和範圍範例假設`CPerson`建構函式會採用任何引數。
+   下列的堆積和範圍範例假設`CPerson`建構函式會採用任何引數。
 
-     [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]
 
-     如果引數`CPerson`建構函式是指標**char**，框架配置的陳述式是：
+   如果引數`CPerson`建構函式是指標**char**，框架配置的陳述式是：
 
-     [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]
 
-     堆積配置的陳述式是：
+   堆積配置的陳述式是：
 
-     [!code-cpp[NVC_MFC_Utilities#9](../mfc/codesnippet/cpp/memory-management-examples_9.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#9](../mfc/codesnippet/cpp/memory-management-examples_9.cpp)]
 
 ## <a name="see-also"></a>另請參閱
 

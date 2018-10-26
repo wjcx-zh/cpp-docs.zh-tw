@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9019b8f2314cfefa5b952994e7fa7c3e9d8d459e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8236ed06a5863e2208c77294e4ddb7352b0f83f7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442769"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052989"
 ---
 # <a name="form-views-mfc"></a>表單檢視 (MFC)
 
@@ -40,7 +40,7 @@ ms.locfileid: "46442769"
 
 - 建立對話方塊資源具有適當的樣式 （或您可以使用尚未與類別相關聯的現有對話方塊資源）。
 
-     如果您選擇現有的對話方塊資源，您可能需要使用 [屬性] 頁面對話方塊來設定這些樣式。 必須包含 [樣式] 對話方塊中：
+   如果您選擇現有的對話方塊資源，您可能需要使用 [屬性] 頁面對話方塊來設定這些樣式。 必須包含 [樣式] 對話方塊中：
 
      **WS_CHILD**= On
 
@@ -54,17 +54,17 @@ ms.locfileid: "46442769"
 
 - 建立`CDocument`-基礎類別
 
-     您不需要建立一個新類別，您可以使用任何現有`CDocument`-根據您的專案中的類別。
+   您不需要建立一個新類別，您可以使用任何現有`CDocument`-根據您的專案中的類別。
 
 - 產生的文件範本 (衍生自`CDocument`) 的字串、 功能表和圖示的資源。
 
-     您也可以建立新的類別，依據範本。
+   您也可以建立新的類別，依據範本。
 
 - 將呼叫`AddDocumentTemplate`在您的應用程式中`InitInstance`程式碼。
 
-     Visual c + + 加入此程式碼，為您建立時，將表單加入至可用的表單的清單，當使用者選擇每個新表單**新增**命令。 此程式碼包含表單的相關聯的資源識別碼和相關聯的文件、 檢視和框架類別組成新的表單物件的名稱。
+   Visual c + + 加入此程式碼，為您建立時，將表單加入至可用的表單的清單，當使用者選擇每個新表單**新增**命令。 此程式碼包含表單的相關聯的資源識別碼和相關聯的文件、 檢視和框架類別組成新的表單物件的名稱。
 
-     文件範本做為文件、 框架視窗和檢視之間的連線。 單一文件，您可以建立多個範本。
+   文件範本做為文件、 框架視窗和檢視之間的連線。 單一文件，您可以建立多個範本。
 
 如需詳細資訊，請參閱:
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5ab980813eec09fe0eef35f54280444d8c08b80
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 659bc5a1aea1a6e16a3cccbdf63684212a88f2f9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105384"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061257"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>像素/HIMETRIC 轉換全域函式
 
@@ -40,7 +40,7 @@ ms.locfileid: "46105384"
 
 ```
 extern void AtlHiMetricToPixel(
-    const SIZEL* lpSizeInHiMetric, 
+    const SIZEL* lpSizeInHiMetric,
     LPSIZEL lpSizeInPix);
 ```
 
@@ -54,7 +54,7 @@ extern void AtlHiMetricToPixel(
 
 ### <a name="example"></a>範例
 
-[!code-cpp[NVC_ATL_COM#49](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_1.cpp)]  
+[!code-cpp[NVC_ATL_COM#49](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_1.cpp)]
 
 ### <a name="requirements"></a>需求
 
@@ -66,7 +66,7 @@ extern void AtlHiMetricToPixel(
 
 ```
 extern void AtlPixelToHiMetric(
-    const SIZEL* lpSizeInPix, 
+    const SIZEL* lpSizeInPix,
     LPSIZEL lpSizeInHiMetric);
 ```
 
@@ -80,11 +80,11 @@ extern void AtlPixelToHiMetric(
 
 ### <a name="example"></a>範例
 
-[!code-cpp[NVC_ATL_COM#51](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_2.cpp)]  
+[!code-cpp[NVC_ATL_COM#51](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_2.cpp)]
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h  
+**標頭：** atlwin.h
 
 ## <a name="see-also"></a>另請參閱
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9008ba16d52987e4d7f14b5692cdf349951f83a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27e0589e7ba0b2428f4cfea1d2561ef5e666641e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407708"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054159"
 ---
 # <a name="registering-ole-controls"></a>註冊 OLE 控制項
 
@@ -86,7 +86,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 
 - `afxRegFreeThreading` ThreadingModel 登錄中設定執行緒模型 = 免費。
 
-     您可以結合兩個旗標`afxRegApartmentThreading`和`afxRegFreeThreading`設 ThreadingModel = Both。 請參閱[InprocServer32](/windows/desktop/com/inprocserver32)的執行緒模型註冊的更多有關 Windows SDK 中。
+   您可以結合兩個旗標`afxRegApartmentThreading`和`afxRegFreeThreading`設 ThreadingModel = Both。 請參閱[InprocServer32](/windows/desktop/com/inprocserver32)的執行緒模型註冊的更多有關 Windows SDK 中。
 
 > [!NOTE]
 >  在 MFC 4.2 之前的 MFC 版本**int** *nRegFlags*參數，則 BOOL 參數*bInsertable*，可允許或不允許從 Insert 插入控制項[物件] 對話方塊。

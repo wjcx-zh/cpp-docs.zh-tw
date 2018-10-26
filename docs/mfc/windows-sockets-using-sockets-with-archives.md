@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 217dcd1d5e999ea640795c656bbf40f7adad3d7d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 295077b474681cabeb1221052ae9e2c9ad5ed79a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398740"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053171"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets：搭配使用通訊端與封存
 
@@ -49,7 +49,7 @@ ms.locfileid: "46398740"
 
 1. 使用物件來建立基礎**通訊端**處理。
 
-     針對`CSocket`用戶端物件，您通常應該使用預設的參數[建立](../mfc/reference/casyncsocket-class.md#create)，除非您需要資料包通訊端。 針對`CSocket`伺服器物件，您必須指定中的連接埠`Create`呼叫。
+   針對`CSocket`用戶端物件，您通常應該使用預設的參數[建立](../mfc/reference/casyncsocket-class.md#create)，除非您需要資料包通訊端。 針對`CSocket`伺服器物件，您必須指定中的連接埠`Create`呼叫。
 
     > [!NOTE]
     >  `CArchive` 無法搭配資料包通訊端使用。 如果您要對資料包通訊端使用 `CSocket`，則必須使用類別，就像使用 `CAsyncSocket` 一樣，也就是沒有封存。 由於資料包並不可靠 (不保證會達到，而且可能會重複或未依照順序)，因此它們無法透過封存與序列化相容。 您會希望序列化作業能夠確實依序順利完成。 如果您嘗試對資料包使用 `CSocket` 搭配 `CArchive` 物件，MFC 判斷提示就會失敗。
@@ -58,7 +58,7 @@ ms.locfileid: "46398740"
 
      -或-
 
-     如果通訊端伺服器，請呼叫[CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)開始接聽來自用戶端連接嘗試。 收到連線要求，接受它藉由呼叫[CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept)。
+   如果通訊端伺服器，請呼叫[CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)開始接聽來自用戶端連接嘗試。 收到連線要求，接受它藉由呼叫[CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept)。
 
     > [!NOTE]
     >  `Accept`成員函式會參考新的空白`CSocket`做為其參數的物件。 您必須先建構這個物件，然後再呼叫`Accept`。 如果這個通訊端物件超出範圍，連接就會關閉。 請勿呼叫`Create`這個新的通訊端物件。
@@ -67,13 +67,13 @@ ms.locfileid: "46398740"
 
 1. 建立[CArchive](../mfc/reference/carchive-class.md)載入 （接收） 或儲存 （傳送） 資料的物件。 封存會與 `CSocketFile` 物件相關聯。
 
-     務必記住，`CArchive` 無法與資料包通訊端搭配使用。
+   務必記住，`CArchive` 無法與資料包通訊端搭配使用。
 
 1. 請使用 `CArchive` 物件在用戶端和伺服器通訊端之間傳遞資料。
 
-     請記住，一個特定 `CArchive` 物件只會朝某一方向移動資料：載入 (接收) 或儲存 (傳送)。 在某些情況下，您會使用兩個 `CArchive` 物件：一個用於傳送資料，另一個用於接收認可。
+   請記住，一個特定 `CArchive` 物件只會朝某一方向移動資料：載入 (接收) 或儲存 (傳送)。 在某些情況下，您會使用兩個 `CArchive` 物件：一個用於傳送資料，另一個用於接收認可。
 
-     在接受連接併設定封存之後，您就可以執行像是驗證密碼這類工作。
+   在接受連接併設定封存之後，您就可以執行像是驗證密碼這類工作。
 
 1. 終結封存、通訊端檔案和通訊端物件。
 

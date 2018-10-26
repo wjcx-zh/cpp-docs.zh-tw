@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3b02244e0576f99cc0a6940f2ee4a13511cfbe6f
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ea3ece20ac6df0fab00f1e21d27c41ae6e115517
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790321"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065898"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -38,9 +38,9 @@ ms.locfileid: "48790321"
 
 **dispinterface** C++ 屬性在介面前面時，會將介面放在所產生 .idl 檔案的程式庫區塊內。
 
-除非您指定基底類別，否則分派介面將衍生自 `IDispatch`。 您必須指定[識別碼](id.md)分派介面成員。
+除非您指定基底類別，否則分派介面將衍生自 `IDispatch`。 您必須指定分派介面成員的 [id](id.md) 。
 
-用法範例[dispinterface](/windows/desktop/Midl/dispinterface) MIDL 文件中：
+MIDL 文件中 [dispinterface](/windows/desktop/Midl/dispinterface) 的用法範例：
 
 ```cpp
 dispinterface helloPro
@@ -51,7 +51,7 @@ dispinterface helloPro
 
 ## <a name="example"></a>範例
 
-範例，請參閱[可繫結](bindable.md)如需如何使用的範例**dispinterface**。
+如需如何使用 [dispinterface](bindable.md) 的範例，請參閱 **bindable**範例。
 
 ## <a name="requirements"></a>需求
 
@@ -64,7 +64,7 @@ dispinterface helloPro
 |**必要屬性**|無|
 |**無效屬性**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
-如需詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -74,4 +74,4 @@ dispinterface helloPro
 [dual](dual.md)<br/>
 [custom](custom-cpp.md)<br/>
 [object](object-cpp.md)<br/>
-[__interface](../../cpp/interface.md)  
+[__interface](../../cpp/interface.md)

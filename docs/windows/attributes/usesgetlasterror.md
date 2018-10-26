@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 501f6b1801ace9f6002cca5d3559dfcb01e994f5
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: bb08e2442e34c4d579e568c68d240accdfdbde59
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790683"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074237"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
@@ -53,8 +53,8 @@ ms.locfileid: "48790683"
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
-[IDL 屬性](idl-attributes.md)  
+[IDL 屬性](idl-attributes.md)

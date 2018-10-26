@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6e8f448d4b6bee4b301fc567cc8e8e857747a4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1ec2e3253b4d26bc6773ffc4005100edfbec1bff
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440286"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077526"
 ---
 # <a name="cpen-class"></a>CPen 類別
 
@@ -92,12 +92,10 @@ class CPen : public CGdiObject
 ```
 CPen();
 
-
 CPen(
     int nPenStyle,
     int nWidth,
     COLORREF crColor);
-
 
 CPen(
     int nPenStyle,
@@ -132,13 +130,13 @@ CPen(
 
 - PS_COSMETIC 建立外觀的畫筆。
 
-     第二版`CPen`建構函式新增下列畫筆樣式*nPenStyle*:
+   第二版`CPen`建構函式新增下列畫筆樣式*nPenStyle*:
 
 - PS_ALTERNATE 建立畫筆設定每個像素。 （此樣式是只適用於表面的畫筆的）。
 
 - 使用樣式陣列畫筆 PS_USERSTYLE 建立的使用者所提供。
 
-     結束端點可以是下列值之一：
+   結束端點可以是下列值之一：
 
 - PS_ENDCAP_ROUND 末尾會捨入。
 
@@ -146,7 +144,7 @@ CPen(
 
 - PS_ENDCAP_FLAT 末尾是平面的。
 
-     聯結可以是下列值之一：
+   聯結可以是下列值之一：
 
 - 被斜角 PS_JOIN_BEVEL 聯結。
 
@@ -192,7 +190,6 @@ BOOL CreatePen(
     int nPenStyle,
     int nWidth,
     COLORREF crColor);
-
 
 BOOL CreatePen(
     int nPenStyle,

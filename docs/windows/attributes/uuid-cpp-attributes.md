@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2bd15720c30c3a3f298e0094304205fd7fe5caeb
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 3eddf1981aba8babcb87562ed546ce4086499fd7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790691"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071335"
 ---
 # <a name="uuid-c-attributes"></a>uuid (C++ 屬性)
 
@@ -66,7 +66,7 @@ ms.locfileid: "48790691"
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -74,4 +74,4 @@ ms.locfileid: "48790691"
 [介面屬性](interface-attributes.md)<br/>
 [類別屬性](class-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)<br/>
-[uuid](/windows/desktop/Midl/uuid)  
+[uuid](/windows/desktop/Midl/uuid)

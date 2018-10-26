@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2241080fda6aa58dc5e70f57c83afec69a57203
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 57e685ea9ac4b1efc76f7657421d825b83f4a9b7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757334"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078618"
 ---
 # <a name="implementing-the-event-handling-interface"></a>實作事件處理介面
 
@@ -37,7 +37,7 @@ ATL 可協助您處理事件所需的所有三個項目： 實作事件介面、
 
 - 衍生自[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)的分配介面沒有說明類型程式庫中，或當您想要載入不在執行階段類型資訊來改善效率。
 
-如果您要實作自訂或雙重介面，您還應該通知的事件來源，藉由呼叫[AtlAdvise](reference/connection-point-global-functions.md#atladvise)或是[CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)。 您必須追蹤的呼叫所傳回您自己的 cookie。 呼叫[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)中斷連線。  
+如果您要實作自訂或雙重介面，您還應該通知的事件來源，藉由呼叫[AtlAdvise](reference/connection-point-global-functions.md#atladvise)或是[CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)。 您必須追蹤的呼叫所傳回您自己的 cookie。 呼叫[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)中斷連線。
 
 如果您要實作 dispinterface using`IDispEventImpl`或是`IDispEventSimpleImpl`，您應該通知的事件來源，藉由呼叫[IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)。 呼叫[IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)中斷連線。
 
@@ -48,4 +48,3 @@ ATL 可協助您處理事件所需的所有三個項目： 實作事件介面、
 ## <a name="see-also"></a>另請參閱
 
 [事件處理](../atl/event-handling-and-atl.md)
-

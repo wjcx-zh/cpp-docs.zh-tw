@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83606041250dafed0ef57eb4eea18d7314e0bbef
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ba22c87ee601d66ccfb1092047e69be42d8163c3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429262"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052745"
 ---
 # <a name="inserting-a-form-into-a-project"></a>將表單插入專案中
 
@@ -33,7 +33,7 @@ ms.locfileid: "46429262"
 
 1. 從快顯功能表中，按一下**新增**，然後按一下**加入類別**。
 
-     如果**新型**命令無法使用，可以根據您的專案上 Active Template Library (ATL) 中。 若要將表單新增至 ATL 專案中，您必須[指定某些設定](../atl/reference/application-settings-atl-project-wizard.md)首次建立專案時。
+   如果**新型**命令無法使用，可以根據您的專案上 Active Template Library (ATL) 中。 若要將表單新增至 ATL 專案中，您必須[指定某些設定](../atl/reference/application-settings-atl-project-wizard.md)首次建立專案時。
 
 1. 從**MFC**資料夾中，按一下**MFC 類別**。
 

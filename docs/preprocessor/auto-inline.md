@@ -18,26 +18,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc1b8a3b8539fb4871e4a28f4635c8012b9f80a2
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: cc2fb4cb870ff1dca2f0b55e9aad20741ffb8220
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42545751"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083174"
 ---
 # <a name="autoinline"></a>auto_inline
-排除的範圍中定義的任何函式所在**關閉**指定其視為自動內嵌展開的候選項目。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-#pragma auto_inline( [{on | off}] )  
-```  
-  
-## <a name="remarks"></a>備註  
+排除的範圍中定義的任何函式所在**關閉**指定其視為自動內嵌展開的候選項目。
 
-若要使用**auto_inline** pragma，將它放之前和之後 （不在） 函式定義。 pragma 會在顯示該 pragma 後的第一個函式定義生效。  
-  
+## <a name="syntax"></a>語法
+
+```
+#pragma auto_inline( [{on | off}] )
+```
+
+## <a name="remarks"></a>備註
+
+若要使用**auto_inline** pragma，將它放之前和之後 （不在） 函式定義。 pragma 會在顯示該 pragma 後的第一個函式定義生效。
+
 ## <a name="see-also"></a>另請參閱
 
 [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

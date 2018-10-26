@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be2676609cae4de6b2f3995be1bc9311f88e0a84
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a10e1f6adb1fc9274a2a59215564fb60984ea661
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408709"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074484"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef 類別
 
@@ -235,7 +235,7 @@ BOOL CanUpdate();
 
 - 您有資料庫的 update 權限。
 
-     這取決於您是否有實作安全性功能。 MFC 不提供安全性; 支援您必須實作它自己呼叫 DAO 直接或使用 Microsoft Access。 請參閱主題 DAO [說明] 中的 < 權限屬性 >。
+   這取決於您是否有實作安全性功能。 MFC 不提供安全性; 支援您必須實作它自己呼叫 DAO 直接或使用 Microsoft Access。 請參閱主題 DAO [說明] 中的 < 權限屬性 >。
 
 ##  <a name="cdaoquerydef"></a>  CDaoQueryDef::CDaoQueryDef
 
@@ -426,7 +426,6 @@ void GetFieldInfo(
     CDaoFieldInfo& fieldinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 
-
 void GetFieldInfo(
     LPCTSTR lpszName,
     CDaoFieldInfo& fieldinfo,
@@ -519,7 +518,6 @@ void GetParameterInfo(
     int nIndex,
     CDaoParameterInfo& paraminfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetParameterInfo(
     LPCTSTR lpszName,
@@ -790,7 +788,6 @@ void SetODBCTimeout(short nODBCTimeout);
 virtual void SetParamValue(
     LPCTSTR lpszName,
     const COleVariant& varValue);
-
 
 virtual void SetParamValue(
     int nIndex,

@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 732fab9e0f9f0233de6de7db6328c2e6736db5d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dfdec25349afcd9b582952f2c907cd573e366a35
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437711"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059619"
 ---
 # <a name="mfc-database-programming-symbols"></a>MFC 資料庫程式開發符號
 
 此資料表中的符號只會在已經加入資料庫的支援時，出現在 MFC 專案中。 它們支援 MFC 連接到 SQL server 和資料庫程式設計。
-  
+
 |||
 |-|-|
 |AFX_IDP_SQL_API_CONFORMANCE|AFX_IDP_SQL_BOOKMARKS_ NOT_ENABLED|
@@ -44,11 +44,11 @@ ms.locfileid: "46437711"
 |AFX_IDP_SQL_ROW_FETCH|AFX_IDP_SQL_ROW_UPDATE_ NOT_SUPPORTED|
 |AFX_IDP_SQL_SNAPSHOT_ NOT_SUPPORTED|AFX_IDP_SQL_SQL_CONFORMANCE|
 |AFX_IDP_SQL_SQL_NO_TOTAL|AFX_IDP_SQL_UPDATE_DELETE_FAILED|
-  
+
 ## <a name="requirements"></a>需求
 
 MFC
-  
+
 ## <a name="see-also"></a>另請參閱
 
 [MFC 預先定義的符號](../windows/mfc-predefined-symbols.md)<br/>

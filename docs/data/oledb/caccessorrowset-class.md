@@ -41,131 +41,131 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1ef9799c65f4932bf314f3c11fd8324e0fb40bf2
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: adb59e553565d9886cf27b55f2cfffb4cd0e7aa9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081732"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060152"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset 類別
 
-封裝資料列集和其相關聯的存取子，單一類別中。  
-  
+封裝資料列集和其相關聯的存取子，單一類別中。
+
 ## <a name="syntax"></a>語法
 
 ```cpp
-template <class TAccessor = CNoAccessor, 
-   template <typename T> class TRowset = CRowset>  
-class CAccessorRowset : public TAccessor, public TRowset<TAccessor>  
-```  
-  
-### <a name="parameters"></a>參數  
+template <class TAccessor = CNoAccessor,
+   template <typename T> class TRowset = CRowset>
+class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
+```
+
+### <a name="parameters"></a>參數
 
 *TAccessor*<br/>
-存取子類別。  
-  
+存取子類別。
+
 *TRowset*<br/>
-資料列集類別。  
+資料列集類別。
 
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>需求
 
-**標題:** atldbcli.h  
-  
-## <a name="members"></a>成員  
-  
-### <a name="methods"></a>方法  
-  
-|||  
-|-|-|  
-|[Bind](#bind)|建立繫結 (使用的時機`bBind`指定為**false**中[ccommand:: Open](../../data/oledb/ccommand-open.md))。|  
-|[CAccessorRowset](#caccessorrowset)|建構函式。|  
-|[關閉](#close)|關閉資料列集和任何存取子。|  
-|[FreeRecordMemory](#freerecordmemory)|釋出任何需要先釋放目前記錄中的資料行。|  
-|[GetColumnInfo](#getcolumninfo)|Implements [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704)。|  
-  
-## <a name="remarks"></a>備註  
+**標題:** atldbcli.h
 
-類別`TAccessor`管理存取子。 類別*TRowset*管理資料列集。  
+## <a name="members"></a>成員
+
+### <a name="methods"></a>方法
+
+|||
+|-|-|
+|[Bind](#bind)|建立繫結 (使用的時機`bBind`指定為**false**中[ccommand:: Open](../../data/oledb/ccommand-open.md))。|
+|[CAccessorRowset](#caccessorrowset)|建構函式。|
+|[關閉](#close)|關閉資料列集和任何存取子。|
+|[FreeRecordMemory](#freerecordmemory)|釋出任何需要先釋放目前記錄中的資料行。|
+|[GetColumnInfo](#getcolumninfo)|Implements [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704)。|
+
+## <a name="remarks"></a>備註
+
+類別`TAccessor`管理存取子。 類別*TRowset*管理資料列集。
 
 ## <a name="bind"></a> Caccessorrowset:: Bind
 
-建立繫結，如果您指定`bBind`作為**假**中[ccommand:: Open](../../data/oledb/ccommand-open.md)。  
-  
-### <a name="syntax"></a>語法  
-  
-```cpp
-HRESULT Bind();  
-```  
-  
-### <a name="return-value"></a>傳回值  
+建立繫結，如果您指定`bBind`作為**假**中[ccommand:: Open](../../data/oledb/ccommand-open.md)。
 
-標準的 HRESULT。  
+### <a name="syntax"></a>語法
+
+```cpp
+HRESULT Bind();
+```
+
+### <a name="return-value"></a>傳回值
+
+標準的 HRESULT。
 
 ## <a name="caccessorrowset"></a> Caccessorrowset:: Caccessorrowset
 
-初始化 `CAccessorRowset` 物件。  
-  
-### <a name="syntax"></a>語法  
-  
+初始化 `CAccessorRowset` 物件。
+
+### <a name="syntax"></a>語法
+
 ```cpp
-CAccessorRowset();  
-```  
+CAccessorRowset();
+```
 
 ## <a name="close"></a> Caccessorrowset:: Close
 
-釋放使用中的任何存取子和資料列集。  
-  
-### <a name="syntax"></a>語法  
-  
-```cpp
-void Close();  
-```  
-  
-### <a name="remarks"></a>備註  
+釋放使用中的任何存取子和資料列集。
 
-釋放任何相關聯的記憶體。  
+### <a name="syntax"></a>語法
+
+```cpp
+void Close();
+```
+
+### <a name="remarks"></a>備註
+
+釋放任何相關聯的記憶體。
 
 ## <a name="freerecordmemory"></a> Caccessorrowset:: Freerecordmemory
 
-釋出任何需要先釋放目前記錄中的資料行。  
-  
-### <a name="syntax"></a>語法  
-  
+釋出任何需要先釋放目前記錄中的資料行。
+
+### <a name="syntax"></a>語法
+
 ```cpp
-void FreeRecordMemory();  
-```  
+void FreeRecordMemory();
+```
 
 ## <a name="getcolumninfo"></a> Caccessorrowset:: Getcolumninfo
 
-從開啟的資料列集取得資料行資訊。  
-  
-### <a name="syntax"></a>語法  
-  
+從開啟的資料列集取得資料行資訊。
+
+### <a name="syntax"></a>語法
+
 ```cpp
-HRESULT GetColumnInfo(DBORDINAL* pulColumns, 
-   DBCOLUMNINFO** ppColumnInfo, 
-   LPOLESTR* ppStrings) const; 
-    
-HRESULT GetColumnInfo(DBORDINAL* pColumns, 
-   DBCOLUMNINFO** ppColumnInfo);  
-```  
-  
-#### <a name="parameters"></a>參數  
+HRESULT GetColumnInfo(DBORDINAL* pulColumns,
+   DBCOLUMNINFO** ppColumnInfo,
+   LPOLESTR* ppStrings) const;
 
-請參閱[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704)中*OLE DB 程式設計人員參考*。  
-  
-### <a name="return-value"></a>傳回值  
+HRESULT GetColumnInfo(DBORDINAL* pColumns,
+   DBCOLUMNINFO** ppColumnInfo);
+```
 
-標準的 HRESULT。  
-  
-### <a name="remarks"></a>備註  
+#### <a name="parameters"></a>參數
 
-使用者必須釋放字串緩衝區與傳回的資料行資訊。 使用此方法的第二個版本，當您使用[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)和需要覆寫繫結。  
-  
-如需詳細資訊，請參閱 < [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704)中*OLE DB 程式設計人員參考*。  
-  
-## <a name="see-also"></a>另請參閱  
+請參閱[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704)中*OLE DB 程式設計人員參考*。
+
+### <a name="return-value"></a>傳回值
+
+標準的 HRESULT。
+
+### <a name="remarks"></a>備註
+
+使用者必須釋放字串緩衝區與傳回的資料行資訊。 使用此方法的第二個版本，當您使用[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)和需要覆寫繫結。
+
+如需詳細資訊，請參閱 < [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704)中*OLE DB 程式設計人員參考*。
+
+## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

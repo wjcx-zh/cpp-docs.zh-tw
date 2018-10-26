@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b9ec3c034e388cec4f91617fbee0e6ab19180de
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 51dee27c69d42bde83f8eb6925e96d0dad80dca6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418745"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081244"
 ---
 # <a name="containers-advanced-features"></a>容器：進階功能
 
@@ -49,7 +49,7 @@ ms.locfileid: "46418745"
 
 - 覆寫 `COleClientItem::CanActivate`，避免正在使用伺服器就地編輯時編輯項目。
 
-     例如，MFC OLE 範例[OCLIENT](../visual-cpp-samples.md)有內嵌的容器/伺服器應用程式所建立的項目。 您開啟 OCLIENT 應用程式，並且就地編輯您的容器/伺服器應用程式所建立的項目。 在編輯您的應用程式項目時，您決定您想要內嵌 MFC OLE 範例所建立的項目[HIERSVR](../visual-cpp-samples.md)。 若要這樣做，就無法使用就地啟用。 您必須完全開啟 HIERSVR 才能啟用這個項目。 因為 MFC 程式庫不支援這項 OLE 功能，因此覆寫 `COleClientItem::CanActivate` 可讓您檢查是否有這種情況，並防止應用程式中出現可能的執行階段錯誤。
+   例如，MFC OLE 範例[OCLIENT](../visual-cpp-samples.md)有內嵌的容器/伺服器應用程式所建立的項目。 您開啟 OCLIENT 應用程式，並且就地編輯您的容器/伺服器應用程式所建立的項目。 在編輯您的應用程式項目時，您決定您想要內嵌 MFC OLE 範例所建立的項目[HIERSVR](../visual-cpp-samples.md)。 若要這樣做，就無法使用就地啟用。 您必須完全開啟 HIERSVR 才能啟用這個項目。 因為 MFC 程式庫不支援這項 OLE 功能，因此覆寫 `COleClientItem::CanActivate` 可讓您檢查是否有這種情況，並防止應用程式中出現可能的執行階段錯誤。
 
 如果您要建立新的應用程式，並且希望將它當做容器/伺服器應用程式執行，請在應用程式精靈的 [OLE 選項] 對話方塊中選擇該選項，如此就會自動建立這項支援。 如需詳細資訊，請參閱文章[概觀： 建立 ActiveX 控制項容器](../mfc/reference/creating-an-mfc-activex-control-container.md)。 如需有關 MFC 範例的詳細資訊，請參閱「MFC 範例」。
 

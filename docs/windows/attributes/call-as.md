@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ca6336a79b3e218e1e3a68112f1c12d7e4822a4
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: c8769b542fccd512c1c32b418ffc9f1ad5758628
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790597"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061543"
 ---
 # <a name="callas"></a>call_as
 
@@ -70,10 +70,10 @@ __interface IMInterface {
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [IDL 屬性](idl-attributes.md)<br/>
 [方法屬性](method-attributes.md)<br/>
-[local](local-cpp.md)  
+[local](local-cpp.md)

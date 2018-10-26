@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ecd2cea655536ab12751a169793273c27b7d8f7
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 397356f8144e3680f3b2d19824d19c0a3bbaddd1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029563"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062609"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX 控制項：在 ActiveX 控制項中使用資料繫結
 
@@ -63,13 +63,13 @@ ActiveX 控制項的功能更強大的用途之一是資料繫結，可讓資料
 
 1. 以滑鼠右鍵按一下您的控制項的介面節點。
 
-     這會開啟快顯功能表。
+   這會開啟快顯功能表。
 
 1. 從快顯功能表中，按一下**新增**，然後按一下**加入屬性**。
 
 1. 選取其中一個項目**屬性名稱**下拉式清單。 例如，您可以選取**文字**。
 
-     因為**文字**已內建的屬性，**可繫結**並**requestedit**屬性已經過檢查。
+   因為**文字**已內建的屬性，**可繫結**並**requestedit**屬性已經過檢查。
 
 1. 選取下列核取方塊，從**IDL 屬性**索引標籤： **displaybind**並**defaultbind**將屬性新增至專案中的屬性定義。IDL 檔案。 這些屬性讓使用者可看見控制項，且必須內建屬性的預設可繫結屬性。
 
@@ -96,7 +96,7 @@ ActiveX 控制項的功能更強大的用途之一是資料繫結，可讓資料
 
 1. 以滑鼠右鍵按一下您的控制項的介面節點。
 
-     這會開啟快顯功能表。
+   這會開啟快顯功能表。
 
 1. 從快顯功能表中，按一下**新增**，然後按一下**加入屬性**。
 
@@ -112,33 +112,33 @@ ActiveX 控制項的功能更強大的用途之一是資料繫結，可讓資料
 
 11. 修改主體`SetMyProp`函式，使其包含下列程式碼：
 
-     [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
+   [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
 
 12. 將參數傳遞給`BoundPropertyChanged`和`BoundPropertyRequestEdit`函式是屬性，亦即參數傳遞至 id （） 屬性中之屬性的 dispid。IDL 檔案。
 
 13. 修改[OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)函式，如此它包含下列程式碼：
 
-     [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
+   [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
 
 14. 修改`OnDraw`函式，使其包含下列程式碼：
 
-     [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
+   [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
 
 15. 若要標頭檔的標頭檔，針對您的控制項類別的 public 區段，新增下列定義 （建構函式） 的成員變數：
 
-     [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
+   [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
 
 16. 讓下面這行中的最後一行`DoPropExchange`函式：
 
-     [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
+   [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
 
 17. 修改`OnResetState`函式，使其包含下列程式碼：
 
-     [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
+   [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
 
 18. 修改`GetMyProp`函式，使其包含下列程式碼：
 
-     [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
+   [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
 
 您現在可以建置專案，將會註冊該控制項。 當您在對話方塊中，插入控制項**資料欄位**並**資料來源**將已加入的屬性，而且您現在可以選取資料來源，以及要在控制項中顯示的欄位。
 

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 837149397ec45ebd8b41808b170b9f5e25146d6a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c079201b92b6eaf3ef372bf04ab4785598c3b2bf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387688"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053964"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065：OLE Automation 伺服程式的雙重介面支援
 
@@ -328,7 +328,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
     hr = MAKE_HRESULT(SEVERITY_ERROR, FACILITY_ITF, (e->m_wCode + 0x200));
     ```
 
-     這會建立`HRESULT`特定至造成例外狀況的介面。 錯誤碼偏移成 0x200 以避免任何系統定莪 je v konfliktu`HRESULT`的標準 OLE 介面。
+   這會建立`HRESULT`特定至造成例外狀況的介面。 錯誤碼偏移成 0x200 以避免任何系統定莪 je v konfliktu`HRESULT`的標準 OLE 介面。
 
 - [CMemoryException](../mfc/reference/cmemoryexception-class.md) -在此情況下，`E_OUTOFMEMORY`會傳回。
 

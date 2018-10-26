@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3448f915ae7b738c839ceaa4fb7adeb00492d9f4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 48261d545737215ff44b1b56bb3b2d48839b6eb4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112859"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067055"
 ---
 # <a name="default-arguments"></a>預設引數
 
@@ -112,7 +112,7 @@ print( d, 0 ); // Override default argument to achieve other
     }
     ```
 
-     這個程式碼的問題在於定義中的函式宣告會重新定義 `prec` 的預設引數。
+   這個程式碼的問題在於定義中的函式宣告會重新定義 `prec` 的預設引數。
 
 - 您可以利用之後的宣告加入其他預設引數。
 

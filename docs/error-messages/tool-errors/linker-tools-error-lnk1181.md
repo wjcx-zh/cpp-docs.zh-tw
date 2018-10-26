@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eaa6ce8a1ca566fd3d585b5c457e1fb2829b0b0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 787c6c35b698b5dce57c4aaf3acb4eca496ead95
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016737"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072157"
 ---
 # <a name="linker-tools-error-lnk1181"></a>連結器工具錯誤 LNK1181
 
@@ -42,8 +42,6 @@ ms.locfileid: "46016737"
 Lnk1181 另一個可能的原因是不允許有空白字元的長檔名不以引號括住。  在此情況下，連結器會只辨識檔案名稱最多的第一個空間，並採用檔案的副檔名。 obj這種情況的解決方案是來括住的長檔名 （路徑加上檔案名稱） 以引號。
 
 在以編譯[/P （前置處理至檔案）](../../build/reference/p-preprocess-to-a-file.md)選項可能會導致 LNK1181 因為該選項會抑制.obj 檔案的建立。
-
-
 
 ## <a name="see-also"></a>另請參閱
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46fa8b115dd01a9ee11442a0701cd719cc6d389e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 28c93e5d1331d7195b894fe88c3fe5fc11e7c31d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394357"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074068"
 ---
 # <a name="containers-implementing-a-container"></a>容器：實作容器
 
@@ -62,15 +62,15 @@ ms.locfileid: "46394357"
 
 - 於編輯內嵌項目時就地啟用。
 
-     如需詳細資訊，請參閱 <<c0> [ 啟用](../mfc/activation-cpp.md)。
+   如需詳細資訊，請參閱 <<c0> [ 啟用](../mfc/activation-cpp.md)。
 
 - 透過從伺服器應用程式中拖放選取範圍，建立 OLE 項目。
 
-     如需詳細資訊，請參閱 <<c0> [ 拖放 (OLE)](../mfc/drag-and-drop-ole.md)。
+   如需詳細資訊，請參閱 <<c0> [ 拖放 (OLE)](../mfc/drag-and-drop-ole.md)。
 
 - 內嵌物件或組合容器/伺服器應用程式的連結。
 
-     如需詳細資訊，請參閱 <<c0> [ 容器： 進階功能](../mfc/containers-advanced-features.md)。
+   如需詳細資訊，請參閱 <<c0> [ 容器： 進階功能](../mfc/containers-advanced-features.md)。
 
 ## <a name="see-also"></a>另請參閱
 

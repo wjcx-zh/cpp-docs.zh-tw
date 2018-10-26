@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c695dbee2b92a2a3fbc5de0830f298b81e63ad8d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: fbb7bc07ab3b3942f1a3a6fa20c69327c0bd1a53
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790609"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063753"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -36,11 +36,11 @@ ms.locfileid: "48790609"
 
 ## <a name="remarks"></a>備註
 
-**放大**c + + 屬性具有相同的功能[出](/windows/desktop/Midl/out-idl)MIDL 屬性。
+**out** C++ 屬性的功能與 [out](/windows/desktop/Midl/out-idl) MIDL 屬性相同。
 
 ## <a name="example"></a>範例
 
-範例，請參閱[可繫結](bindable.md)範例使用**出**。
+請參閱 [bindable](bindable.md) 範例中 **out**的範例使用。
 
 ## <a name="requirements"></a>需求
 
@@ -53,11 +53,11 @@ ms.locfileid: "48790609"
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [IDL 屬性](idl-attributes.md)<br/>
 [參數屬性](parameter-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
-[id](id.md)  
+[id](id.md)

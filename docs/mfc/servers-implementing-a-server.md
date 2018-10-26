@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d024c9468b06291ba93c4e404674925202fabcad
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a1dd43b806852e578c28dc7a647cb367ad6f2780
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406786"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076616"
 ---
 # <a name="servers-implementing-a-server"></a>伺服器：實作伺服器
 
@@ -36,7 +36,7 @@ ms.locfileid: "46406786"
 
    - 使用的伺服器時作用中就地功能表和工具列資源。
 
-     如需有關這些資源的詳細資訊，請參閱 <<c0> [ 功能表和資源： 伺服器加入](../mfc/menus-and-resources-server-additions.md)。
+   如需有關這些資源的詳細資訊，請參閱 <<c0> [ 功能表和資源： 伺服器加入](../mfc/menus-and-resources-server-additions.md)。
 
 - 定義項目類別衍生自`COleServerItem`。 如需伺服器項目的的詳細資訊，請參閱 <<c0> [ 伺服器： 伺服器項目](../mfc/servers-server-items.md)。
 

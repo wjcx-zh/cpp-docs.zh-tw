@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce6099b904c088399dcb43635a1b254567e8320
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fbfd58491981cdba1b3aa3002736f49a7c09038c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024904"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054472"
 ---
 # <a name="message-map-macros-atl"></a>訊息對應巨集 (ATL)
 
@@ -93,11 +93,11 @@ ms.locfileid: "46024904"
 |[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|將反映的 WM_NOTIFY 訊息對應處理常式函式，根據通知程式碼和控制項識別項。|
 |[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|將反映的 WM_NOTIFY 訊息對應處理常式函式，根據的控制項識別項。|
 |[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|將反映的 WM_NOTIFY 訊息對應處理常式函式，根據通知程式碼和連續範圍的控制識別項。|
-|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|將反映的 WM_NOTIFY 訊息對應處理常式函式，根據連續控制識別項的範圍。|  
+|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|將反映的 WM_NOTIFY 訊息對應處理常式函式，根據連續控制識別項的範圍。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlwin.h  
+**標頭：** atlwin.h
 
 ##  <a name="alt_msg_map"></a>  ALT_MSG_MAP
 
@@ -136,7 +136,7 @@ ATL 識別數字的每個訊息對應。 預設訊息對應 （BEGIN_MSG_MAP 巨
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h   
+**標頭：** atlwin.h
 
 ##  <a name="begin_msg_map"></a>  BEGIN_MSG_MAP
 
@@ -153,7 +153,7 @@ BEGIN_MSG_MAP(theClass)
 
 ### <a name="remarks"></a>備註
 
-[CWindowImpl::WindowProc](cwindowimpl-class.md#windowproc)會使用預設的訊息對應來處理訊息傳送至視窗。 訊息對應會將導向至適當的處理常式函式或另一個訊息對應的訊息。  
+[CWindowImpl::WindowProc](cwindowimpl-class.md#windowproc)會使用預設的訊息對應來處理訊息傳送至視窗。 訊息對應會將導向至適當的處理常式函式或另一個訊息對應的訊息。
 
 下列巨集對應至處理常式函式的訊息。 此函式必須定義於*theClass*。
 
@@ -328,7 +328,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 
 ### <a name="remarks"></a>備註
 
-CHAIN_MSG_MAP_DYNAMIC 指示訊息，在執行階段，在另一個物件的預設訊息對應。 物件，其訊息對應相關聯*dynaChainID*，其中您透過定義[CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry)。 您必須衍生您的類別，從`CDynamicChain`才能使用 CHAIN_MSG_MAP_DYNAMIC。 如需範例，請參閱[CDynamicChain](../../atl/reference/cdynamicchain-class.md)概觀。  
+CHAIN_MSG_MAP_DYNAMIC 指示訊息，在執行階段，在另一個物件的預設訊息對應。 物件，其訊息對應相關聯*dynaChainID*，其中您透過定義[CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry)。 您必須衍生您的類別，從`CDynamicChain`才能使用 CHAIN_MSG_MAP_DYNAMIC。 如需範例，請參閱[CDynamicChain](../../atl/reference/cdynamicchain-class.md)概觀。
 
 > [!NOTE]
 >  一定會開始使用的訊息對應[BEGIN_MSG_MAP](#begin_msg_map)。 然後，您可以宣告使用 ALT_MSG_MAP 的後續替代的訊息對應。 [END_MSG_MAP](#end_msg_map)巨集標記訊息對應的結尾。 每個訊息對應必須有一個執行個體 BEGIN_MSG_MAP 和 END_MSG_MAP。
@@ -823,7 +823,7 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 [in]通知的程式碼。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。  
+[in]訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
 
@@ -846,11 +846,11 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 [in]通知的程式碼。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。  
+[in]訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h  
+**標頭：** atlwin.h
 
 ##  <a name="reflected_command_id_handler"></a>  REFLECTED_COMMAND_ID_HANDLER
 
@@ -866,11 +866,11 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 [in]功能表項目、 控制項或加速器的識別項。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。  
+[in]訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h  
+**標頭：** atlwin.h
 
 ##  <a name="reflected_command_range_code_handler"></a>  REFLECTED_COMMAND_RANGE_CODE_HANDLER
 
@@ -892,11 +892,11 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 [in]通知的程式碼。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。  
+[in]訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h  
+**標頭：** atlwin.h
 
 ##  <a name="reflected_command_range_handler"></a>  REFLECTED_COMMAND_RANGE_HANDLER
 
@@ -915,11 +915,11 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 [in]標記的控制項識別項的連續範圍的結尾。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。  
+[in]訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h  
+**標頭：** atlwin.h
 
 ##  <a name="reflected_notify_code_handler"></a>  REFLECTED_NOTIFY_CODE_HANDLER
 
@@ -935,11 +935,11 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 [in]通知的程式碼。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。  
+[in]訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h  
+**標頭：** atlwin.h
 
 ##  <a name="reflected_notify_handler"></a>  REFLECTED_NOTIFY_HANDLER
 
@@ -958,11 +958,11 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 [in]通知的程式碼。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。  
+[in]訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h  
+**標頭：** atlwin.h
 
 ##  <a name="reflected_notify_id_handler"></a>  REFLECTED_NOTIFY_ID_HANDLER
 
@@ -978,11 +978,11 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 [in]功能表項目、 控制項或加速器的識別項。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。  
+[in]訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h  
+**標頭：** atlwin.h
 
 ##  <a name="reflected_notify_range_code_handler"></a>  REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 

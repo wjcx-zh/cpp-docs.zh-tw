@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 719ff1a87f3f1afc19cf38736c0059c46a8a9bdc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ce6a8b2ef9ac807e48cff42186453666cebda5ee
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46110870"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055980"
 ---
 # <a name="linker-tools-error-lnk1106"></a>連結器工具錯誤 LNK1106
 
@@ -33,16 +33,16 @@ ms.locfileid: "46110870"
 
 1. 磁碟已滿。
 
-     釋出一些空間，並重新連結。
+   釋出一些空間，並重新連結。
 
 1. 嘗試透過網路連結。
 
-     有些網路完全不支援連結器所使用的記憶體對應檔案。 請嘗試連結到本機磁碟上。
+   有些網路完全不支援連結器所使用的記憶體對應檔案。 請嘗試連結到本機磁碟上。
 
 1. 在您的磁碟上不正確的區塊。
 
-     雖然的作業系統和磁碟硬體應該已偵測到這類錯誤，您可能想要執行磁碟檢查程式。
+   雖然的作業系統和磁碟硬體應該已偵測到這類錯誤，您可能想要執行磁碟檢查程式。
 
 1. 堆積空間不足。
 
-     請參閱[C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md)如需詳細資訊。
+   請參閱[C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md)如需詳細資訊。

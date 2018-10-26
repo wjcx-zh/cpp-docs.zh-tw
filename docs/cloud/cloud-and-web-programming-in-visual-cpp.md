@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcdbc8012edbe17ce9fcc8298da68f45acad4b8b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 2553ac5cdc20f3d5d38a6bad77dc79fc7c1737d8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683361"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052872"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>以 Visual C++ 進行雲端和 Web 程式設計
 
@@ -27,7 +27,7 @@ ms.locfileid: "43683361"
 
 - [Windows Azure 行動服務](http://www.windowsazure.com/develop/mobile/)
 
-   提供您可以使用通用 Windows 平台 (UWP) 應用程式或 Windows 桌面應用程式中，連接到 Windows Azure 行動服務的原生 Api。 雖然網站上的大部分範例是採用 C#，您也可以使用 C++。 如需詳細資訊，請參閱 <<c0> [ 快速入門： 新增使用 c + + 的行動服務](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx)。
+   提供您可以使用通用 Windows 平台 (UWP) 應用程式或 Windows 桌面應用程式中，連接到 Windows Azure 行動服務的原生 Api。 雖然網站上的大部分範例是採用 C#，您也可以使用 C++。 如需詳細資訊，請參閱 [快速入門：使用 C++ 新增行動服務](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx)。
 
 - [C + + 的 Microsoft Azure 儲存體用戶端程式庫](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
 
@@ -52,17 +52,17 @@ ms.locfileid: "43683361"
   - 建立 Websocket 連線針對遠端服務
   - PPL，包括內建的執行緒集區為基礎的 API 完全非同步工作
 
-   支援 Windows Desktop （7 +）、 Windows Server （2012年 +）、 通用 Windows 平台、 Linux、 OSX、 Android 和 iOS。 
+   支援 Windows Desktop （7 +）、 Windows Server （2012年 +）、 通用 Windows 平台、 Linux、 OSX、 Android 和 iOS。
 
 - [Windows::Web::Http::HttpClient](https://msdn.microsoft.com/library/windows/apps/windows.web.http.httpclient.aspx)
 
-   Windows 執行階段 HTTP 用戶端類別會在 System.Web 命名空間中相同名稱的 .NET Framework 類別上建立模型。 `HttpClient` 完全支援透過 HTTP 的非同步上傳和下載，以及可讓自訂 HTTP 處理常式插入管線的管線篩選器。 Windows SDK 包含計量網路、OAuth 驗證等等的範例篩選條件。 對於只有通用 Windows 平台為目標的應用程式，我們建議您使用`Windows::Web:HttpClient`類別。 
+   Windows 執行階段 HTTP 用戶端類別會在 System.Web 命名空間中相同名稱的 .NET Framework 類別上建立模型。 `HttpClient` 完全支援透過 HTTP 的非同步上傳和下載，以及可讓自訂 HTTP 處理常式插入管線的管線篩選器。 Windows SDK 包含計量網路、OAuth 驗證等等的範例篩選條件。 對於只有通用 Windows 平台為目標的應用程式，我們建議您使用`Windows::Web:HttpClient`類別。
 
 - [IXMLHTTPRequest2 介面](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)
 
    提供您可以使用 Windows 執行階段應用程式或 Windows 桌面應用程式中，透過 HTTP 連線到網際網路，並發出 GET、 PUT 和其他 HTTP 命令的原生 COM 介面。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 使用工作和 XML HTTP 要求](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)。
 
-- [Windows Internet (WinInet)](/windows/desktop/WinInet/portal)
+- [Windows 網際網路 (WinInet)](/windows/desktop/WinInet/portal)
 
    您可以在 Windows 桌面應用程式中使用，以便連接到網際網路的 Windows 應用程式開發介面。
 

@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c99fe44b5012e08a4b32a9e84d4255e4ee2b7e0
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 2b82d172ec449a48866ee973421da95787bc9858
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808832"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070526"
 ---
 # <a name="ctime-class"></a>CTime 類別
 
@@ -161,7 +161,7 @@ CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 指出`CTime`已經存在的物件。
 
 *time*<br/>
-A **__time64_t**時間值，也就是在 1970 年 1 月 1 日 UTC 之後的秒數。 請注意，這將會調整為您的當地時間。 例如，如果您位在紐約，並建立`CTime`物件，並傳遞的參數為 0， [CTime::GetMonth](#getmonth)會傳回 12。
+A`__time64_t`時間值，也就是在 1970 年 1 月 1 日 UTC 之後的秒數。 請注意，這將會調整為您的當地時間。 例如，如果您位在紐約，並建立`CTime`物件，並傳遞的參數為 0， [CTime::GetMonth](#getmonth)會傳回 12。
 
 *nYear*， *nMonth*， *n*，*當天的時數*， *nMin*， *nSec*<br/>
 表示要複製到新的日期和時間值`CTime`物件。

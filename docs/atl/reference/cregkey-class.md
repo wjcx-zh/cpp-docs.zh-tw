@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a502cbf61f3542c010a89b82131a95f94856cda
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 26861b11aafd4bfcd4f1d5a7cc618ed27b60e6b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042880"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071176"
 ---
 # <a name="cregkey-class"></a>CRegKey 類別
 
@@ -177,7 +177,7 @@ LONG Close() throw();
 如果沒有為的子機碼，呼叫這個方法來建立指定之索引鍵*hKeyParent*。
 
 ```
-LONG Create(  
+LONG Create(
     HKEY hKeyParent,
     LPCTSTR lpszKeyName,
     LPTSTR lpszClass = REG_NONE,
@@ -311,7 +311,7 @@ HKEY Detach() throw();
 呼叫這個方法來列舉開啟的登錄機碼的子機碼。
 
 ```
-LONG EnumKey(  
+LONG EnumKey(
     DWORD iIndex,
     LPTSTR pszName,
     LPDWORD pnNameLength,
@@ -361,7 +361,7 @@ LONG Flush() throw();
 呼叫這個方法來擷取一份保護開啟登錄機碼的安全性描述元。
 
 ```
-LONG GetKeySecurity(  
+LONG GetKeySecurity(
     SECURITY_INFORMATION si,
     PSECURITY_DESCRIPTOR psd,
     LPDWORD pnBytes) throw();
@@ -409,7 +409,7 @@ CAtlTransactionManager* m_pTM;
 這個方法會通知呼叫端相關變更的屬性或開啟登錄機碼的內容。
 
 ```
-LONG NotifyChangeKeyValue(  
+LONG NotifyChangeKeyValue(
     BOOL bWatchSubtree,
     DWORD dwNotifyFilter,
     HANDLE hEvent,
@@ -453,7 +453,7 @@ LONG NotifyChangeKeyValue(
 呼叫這個方法來開啟指定的索引鍵，並設定[m_hKey](#m_hkey)這個機碼的控制代碼。
 
 ```
-LONG Open(  
+LONG Open(
     HKEY hKeyParent,
     LPCTSTR lpszKeyName,
     REGSAM samDesired = KEY_READ | KEY_WRITE) throw();
@@ -514,7 +514,7 @@ CRegKey& operator= (CRegKey& key) throw();
 呼叫這個方法來擷取指定的值名稱的二進位資料。
 
 ```
-LONG QueryBinaryValue(  
+LONG QueryBinaryValue(
     LPCTSTR pszValueName,
     void* pValue,
     ULONG* pnBytes) throw();
@@ -547,7 +547,7 @@ LONG QueryBinaryValue(
 呼叫這個方法來擷取指定的值名稱的 DWORD 資料。
 
 ```
-LONG QueryDWORDValue(  
+LONG QueryDWORDValue(
     LPCTSTR pszValueName,
     DWORD& dwValue) throw();
 ```
@@ -576,7 +576,7 @@ LONG QueryDWORDValue(
 呼叫這個方法來擷取指定的值名稱的 GUID 資料。
 
 ```
-LONG QueryGUIDValue(  
+LONG QueryGUIDValue(
     LPCTSTR pszValueName,
     GUID& guidValue) throw();
 ```
@@ -605,7 +605,7 @@ LONG QueryGUIDValue(
 呼叫這個方法來擷取指定的值名稱的 multistring 資料。
 
 ```
-LONG QueryMultiStringValue(  
+LONG QueryMultiStringValue(
     LPCTSTR pszValueName,
     LPTSTR pszValue,
     ULONG* pnChars) throw();
@@ -638,7 +638,7 @@ LONG QueryMultiStringValue(
 呼叫這個方法來擷取指定的值名稱的 QWORD 資料。
 
 ```
-LONG QueryQWORDValue(  
+LONG QueryQWORDValue(
     LPCTSTR pszValueName,
     ULONGLONG& qwValue) throw();
 ```
@@ -667,7 +667,7 @@ LONG QueryQWORDValue(
 呼叫這個方法來擷取指定的值名稱的字串資料。
 
 ```
-LONG QueryStringValue(  
+LONG QueryStringValue(
     LPCTSTR pszValueName,
     LPTSTR pszValue,
     ULONG* pnChars) throw();
@@ -700,7 +700,7 @@ LONG QueryStringValue(
 呼叫這個方法來擷取指定的值欄位的資料[m_hKey](#m_hkey)。 舊版的這個方法不受支援，並會標示為 ATL_DEPRECATED。
 
 ```
-LONG QueryValue(  
+LONG QueryValue(
     LPCTSTR pszValueName,
     DWORD* pdwType,
     void* pData,
@@ -781,7 +781,7 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
 呼叫此方法以設定登錄機碼的二進位值。
 
 ```
-LONG SetBinaryValue(  
+LONG SetBinaryValue(
     LPCTSTR pszValueName,
     const void* pValue,
     ULONG nBytes) throw();
@@ -859,7 +859,7 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 呼叫這個方法，以將資料儲存在指定的值欄位的指定索引鍵。
 
 ```
-LONG SetKeyValue(  
+LONG SetKeyValue(
     LPCTSTR lpszKeyName,
     LPCTSTR lpszValue,
     LPCTSTR lpszValueName = NULL) throw();
@@ -968,7 +968,7 @@ QWORD 来儲存的資料與指定之值名稱。
 呼叫此方法以設定登錄機碼的字串值。
 
 ```
-LONG SetStringValue(  
+LONG SetStringValue(
     LPCTSTR pszValueName,
     LPCTSTR pszValue,
     DWORD dwType = REG_SZ) throw();
@@ -998,23 +998,23 @@ LONG SetStringValue(
 呼叫這個方法來將資料儲存在指定的值欄位[m_hKey](#m_hkey)。 舊版的這個方法不受支援，並會標示為 ATL_DEPRECATED。
 
 ```
-LONG SetValue(  
+LONG SetValue(
     LPCTSTR pszValueName,
     DWORD dwType,
     const void* pValue,
     ULONG nBytes) throw();
 
-static LONG WINAPI SetValue(  
+static LONG WINAPI SetValue(
     HKEY hKeyParent,
     LPCTSTR lpszKeyName,
     LPCTSTR lpszValue,
     LPCTSTR lpszValueName = NULL);
 
-ATL_DEPRECATED LONG SetValue(  
+ATL_DEPRECATED LONG SetValue(
     DWORD dwValue,
     LPCTSTR lpszValueName);
 
-ATL_DEPRECATED LONG SetValue(  
+ATL_DEPRECATED LONG SetValue(
     LPCTSTR lpszValue,
     LPCTSTR lpszValueName = NULL,
     bool bMulti = false,

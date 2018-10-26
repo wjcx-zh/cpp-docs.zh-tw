@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc4c205ff7c68fbf778b8d300fbe98e6a3deca1d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a0cde2b5c62d4d4584330fe24000114b33ba957b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413025"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067484"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton 類別
 
@@ -146,7 +146,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用中的各種方法`CMFCToolBarComboBoxButton`類別。 此範例示範如何啟用編輯] 和 [下拉式方塊中，應用程式中設定的垂直位置下拉式方塊按鈕、 清單方塊的高度時設定拉下時，應用程式中設定的下拉式方塊按鈕的平面樣式外觀並設定在編輯方塊中的下拉式方塊按鈕的文字。 此程式碼片段是一部分[Visual Studio 示範範例](../../visual-cpp-samples.md)。
+下例示範如何在 `CMFCToolBarComboBoxButton` 類別中使用各種方法。 此範例示範如何啟用編輯] 和 [下拉式方塊中，應用程式中設定的垂直位置下拉式方塊按鈕、 清單方塊的高度時設定拉下時，應用程式中設定的下拉式方塊按鈕的平面樣式外觀並設定在編輯方塊中的下拉式方塊按鈕的文字。 此程式碼片段是一部分[Visual Studio 示範範例](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#37](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]
@@ -1176,11 +1176,9 @@ static BOOL SelectItemAll(
     UINT uiCmd,
     int iIndex);
 
-
 static BOOL SelectItemAll(
     UINT uiCmd,
     DWORD_PTR dwData);
-
 
 static BOOL SelectItemAll(
     UINT uiCmd,
@@ -1348,6 +1346,4 @@ void SetText(LPCTSTR lpszText);
 [CComboBox 類別](../../mfc/reference/ccombobox-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [逐步解說：將控制項放在工具列上](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

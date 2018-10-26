@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bbfce70e33441c1713a2297ca925e83e6cbba9f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 583bb644a50bf1bfbd6b17393fbf86ef1963adc4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427143"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053340"
 ---
 # <a name="cmfcpropertypage-class"></a>CMFCPropertyPage 類別
 
@@ -85,7 +85,6 @@ class CMFCPropertyPage : public CPropertyPage
 CMFCPropertyPage(
     UINT nIDTemplate,
     UINT nIDCaption=0);
-
 
 CMFCPropertyPage(
     LPCTSTR lpszTemplateName,

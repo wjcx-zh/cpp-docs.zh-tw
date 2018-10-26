@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c60cf5d6f61f16aac18524e8b6e75638ec13d27e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9907424a583cc16f170890a739fa7ece8cc93ead
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433331"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075121"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>使用類別來編寫 Windows 應用程式
 
@@ -66,17 +66,17 @@ ms.locfileid: "46433331"
 
 - [記憶體管理](../mfc/memory-management.md)
 
-     除了讓您撰寫的 Windows 作業系統的應用程式的優點，MFC 也更輕鬆撰寫應用程式，特別是使用 OLE 連結和內嵌技術。 您可以讓您的應用程式 OLE 視覺化編輯容器、 OLE 視覺化編輯伺服器，或兩者，以及您可以加入自動化，讓其他應用程式可以使用從您的應用程式的物件，或甚至是從遠端磁碟。
+   除了讓您撰寫的 Windows 作業系統的應用程式的優點，MFC 也更輕鬆撰寫應用程式，特別是使用 OLE 連結和內嵌技術。 您可以讓您的應用程式 OLE 視覺化編輯容器、 OLE 視覺化編輯伺服器，或兩者，以及您可以加入自動化，讓其他應用程式可以使用從您的應用程式的物件，或甚至是從遠端磁碟。
 
 - [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)
 
-     OLE 控制項的開發套件 (CDK) 現在完全整合的架構。 此系列的文章提供與 MFC ActiveX 控制項開發的概觀。 （ActiveX 控制項是先前稱為 OLE 控制項。）
+   OLE 控制項的開發套件 (CDK) 現在完全整合的架構。 此系列的文章提供與 MFC ActiveX 控制項開發的概觀。 （ActiveX 控制項是先前稱為 OLE 控制項。）
 
 - [資料庫程式設計](../data/data-access-programming-mfc-atl.md)
 
-     MFC 也提供兩組，可簡化撰寫資料存取的資料庫類別應用程式。 使用 ODBC 資料庫類別，您可以連接到資料庫，透過 「 開放式資料庫連接 (ODBC) 驅動程式、 從資料表中，選取 記錄和顯示記錄的資訊，在螢幕上的表單。 使用資料存取物件 (DAO) 類別，您可以使用資料庫透過 Microsoft Jet 資料庫引擎或外部 (非 Jet) 資料來源，包括 ODBC 資料來源。
+   MFC 也提供兩組，可簡化撰寫資料存取的資料庫類別應用程式。 使用 ODBC 資料庫類別，您可以連接到資料庫，透過 「 開放式資料庫連接 (ODBC) 驅動程式、 從資料表中，選取 記錄和顯示記錄的資訊，在螢幕上的表單。 使用資料存取物件 (DAO) 類別，您可以使用資料庫透過 Microsoft Jet 資料庫引擎或外部 (非 Jet) 資料來源，包括 ODBC 資料來源。
 
-     此外，MFC 已完全支援撰寫應用程式使用 Unicode 和多位元組字元集 (MBCS)，特別是雙位元組字元集 (DBCS)。
+   此外，MFC 已完全支援撰寫應用程式使用 Unicode 和多位元組字元集 (MBCS)，特別是雙位元組字元集 (DBCS)。
 
 MFC 文件的一般指引，請參閱 <<c0> [ 一般 MFC 主題](../mfc/general-mfc-topics.md)。
 

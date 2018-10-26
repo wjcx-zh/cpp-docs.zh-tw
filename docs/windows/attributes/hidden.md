@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bfe3858070f4dbbd226d46479609f5d0a630956
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 9934f1f66bf520e8da65953dc3355d447d1844e6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790918"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072952"
 ---
 # <a name="hidden"></a>隱藏
 
@@ -53,11 +53,11 @@ ms.locfileid: "48790918"
 |**必要屬性**|**coclass** (當套用至**類別**或是**結構**)|
 |**無效屬性**|無|
 
-如需詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [IDL 屬性](idl-attributes.md)<br/>
 [介面屬性](interface-attributes.md)<br/>
 [類別屬性](class-attributes.md)<br/>
-[方法屬性](method-attributes.md)  
+[方法屬性](method-attributes.md)

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bb329b60b72aae268252ae3ddbcc2c63d4a18f6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 273893f5164c4e89b3516c43b5414e5487af376e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389681"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063207"
 ---
 # <a name="toolbar-editor-c"></a>工具列編輯器 （c + +）
 
@@ -43,8 +43,7 @@ ms.locfileid: "46389681"
 
 **工具列**編輯器 視窗會顯示兩個按鈕的影像，影像編輯器 視窗相同檢視。 這兩個窗格會以分隔列區隔。 您可隨意地拖曳分隔列，以變更窗格的相對大小。 現用窗格會顯示選取框線。 影像的兩個檢視上方是主旨工具列。
 
-![工具列編輯器](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")  
-工具列編輯器
+![工具列編輯器](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")工具列編輯器
 
 ** 工具列**編輯器是類似**映像**編輯器的功能。 功能表項目、 圖形工具和點陣圖格線都與相同**映像**編輯器。 在沒有功能表命令**映像**功能表可讓您切換**工具列**編輯器與**映像**編輯器。 如需有關使用**圖形**工具列**色彩**調色盤，或**映像**功能表上，請參閱[影像編輯器](../windows/image-editor-for-icons.md)。
 
@@ -57,4 +56,4 @@ MFC 或 ATL
 ## <a name="see-also"></a>另請參閱
 
 [資源編輯器](../windows/resource-editors.md)<br/>
-[功能表和其他資源](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[功能表與其他資源](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

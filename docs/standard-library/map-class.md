@@ -1,7 +1,7 @@
 ---
 title: map 類別 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42cd23fcba03ed0161b7a19923851dd3d574e23b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 96d0b6abc7ca9f82c3b9c1ce3e84b7fad99ea486
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235681"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066385"
 ---
 # <a name="map-class"></a>map 類別
 
@@ -126,7 +126,7 @@ class map;
 *Key*<br/>
 要存放在對應中的索引鍵資料類型。
 
-*類型*<br/>
+*Type*<br/>
 要存放在對應中的項目資料類型。
 
 *特性*<br/>
@@ -1012,7 +1012,6 @@ The map m2 is empty.
 ```cpp
 const_iterator end() const;
 
-
 iterator end();
 ```
 
@@ -1115,11 +1114,9 @@ The map m1 doesn't have an element with a key less than 40.
 iterator erase(
     const_iterator Where);
 
-
 iterator erase(
     const_iterator First,
     const_iterator Last);
-
 
 size_type erase(
     const key_type& Key);
@@ -1232,7 +1229,6 @@ int main()
 
 ```cpp
 iterator find(const Key& key);
-
 
 const_iterator find(const Key& key) const;
 ```
@@ -1394,19 +1390,16 @@ int main( )
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1414,13 +1407,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -2636,9 +2627,9 @@ value_compare value_comp() const;
 
 ### <a name="remarks"></a>備註
 
-就 map *m* 而言，如果兩個元素 *e*1( *k*1, *d*1) 和 *e*2( *k*2, `d`2) 是 `value_type` 類型的物件，其中 *k*1 和 *k*2 是其 `key_type` 類型的索引鍵，而 `d`1 和 `d`2 是其 `mapped_type` 類型的資料，則 *m.*`value_comp`( *e*1, *e*2) 會等於 *m.*`key_comp`*(k*1, *k*2)。 預存物件會定義成員函式
+地圖*m*，如果兩個項目*e1*(*版 k1 的 powerapps*， *d1*) 及*e2*(*k2*， *d2*) 類型的物件`value_type`，其中*版 k1 的 powerapps*並*版 k1 的 powerapps*都是其索引鍵的型別`key_type`和*d1*並*d2*是其資料型別的`mapped_type`，然後`m.value_comp(e1, e2)`相當於`m.key_comp(k1, k2)`。 預存物件會定義成員函式
 
-**bool 運算子**( **value_type &**`left`， **value_type &**`right`);
+`bool operator( value_type& left, value_type& right);`
 
 如果 `left` 的索引鍵值在前面且在排序次序中不等於 `right` 的索引鍵值，此函式就會傳回 **true**。
 

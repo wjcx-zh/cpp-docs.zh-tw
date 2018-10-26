@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ec82a1f0aa025b8de938d30117032bd666d8bb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 95c528ca21d0f458fe67908322ac622ad26e55e0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403171"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077500"
 ---
 # <a name="coledocument-class"></a>COleDocument 類別
 
@@ -558,6 +558,4 @@ virtual void UpdateModifiedFlag();
 [MFC 範例 MFCBIND](../../visual-cpp-samples.md)<br/>
 [CDocument 類別](../../mfc/reference/cdocument-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-
-
 

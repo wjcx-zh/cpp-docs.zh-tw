@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1244c05b7af94d69394c412a3c67864d6e75c337
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9f9ce0094bce1f8e7590cef0cbe3bfe85f35158d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050875"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056057"
 ---
 # <a name="run-time-type-information"></a>執行階段類型資訊
 
@@ -35,15 +35,15 @@ ms.locfileid: "46050875"
 
 - [Dynamic_cast](../cpp/dynamic-cast-operator.md)運算子。
 
-     用於多型類型的轉換。
+   用於多型類型的轉換。
 
 - [Typeid](../cpp/typeid-operator.md)運算子。
 
-     用於識別物件的實際類型。
+   用於識別物件的實際類型。
 
 - [Type_info](../cpp/type-info-class.md)類別。
 
-     用來保存所傳回的型別資訊**typeid**運算子。
+   用來保存所傳回的型別資訊**typeid**運算子。
 
 ## <a name="see-also"></a>另請參閱
 

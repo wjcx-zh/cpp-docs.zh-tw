@@ -1,7 +1,7 @@
 ---
 title: hash_multimap 類別 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d34569f1b0f984a521b7d5a79221e089f1a1df0
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3796ba7b243305fbae75e64f44e14964a89a9805
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235759"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075316"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap 類別
 
@@ -125,7 +125,7 @@ class hash_multimap
 *Key*<br/>
 要存放在 hash_multimap 中的索引鍵資料類型。
 
-*類型*<br/>
+*Type*<br/>
 要存放在 hash_multimap 中的項目資料類型。
 
 *特性*<br/>
@@ -1497,7 +1497,6 @@ hash_multimap(
     initializer_list<Type> IList,
     const Compare& Comp);
 
-
 hash_multimap(
     initializer_list<Type> IList,
     const Compare& Comp,
@@ -1554,7 +1553,7 @@ hash_multimap(
 ## <a name="insert"></a>  hash_multimap::insert
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。
+> 這個 API 已過時。 替代文字是 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)。
 
 將某個項目或項目範圍插入 hash_multimap 中。
 
@@ -2477,9 +2476,9 @@ value_compare value_comp() const;
 
 ### <a name="remarks"></a>備註
 
-就 hash_multimap *m* 而言，如果兩個元素 *e*1( *k*1 *, d*1) 和 *e*2( *k*2 *, d*2) 是 [value_type](#value_type) 類型的物件，其中 *k*1 和 *k*2 是其 [key_type](#key_type) 類型的索引鍵，而 `d`1 和 `d`2 是其 [mapped_type](#mapped_type) 類型的資料，則 *m.*`value_comp`( )( *e*1 *, e*2) 會等於 *m.*`key_comp`( ) ( *k*1 *, k*2)。 預存物件會定義成員函式
+針對 hash_multimap *m*，如果兩個項目*e1* (*版 k1 的 powerapps*， *d1*) 及*e2*(*k2*， *d2*) 物件的型別[value_type](#value_type)，其中*版 k1 的 powerapps*並*k2*都是其索引鍵的型別[key_type](#key_type)和*d1*並*d2*會其資料型別的[mapped_type](#mapped_type)，再`m.value_comp()(e1, e2)`就相當於`m.key_comp()(k1, k2)`. 預存物件會定義成員函式
 
-**bool operator**( **value_type&**`left`, **value_type&** `right`);
+`bool operator( value_type& left, value_type& right);`
 
 如果 `left` 的索引鍵值在前面且在排序次序中不等於 `right` 的索引鍵值，此函式就會傳回 **true**。
 

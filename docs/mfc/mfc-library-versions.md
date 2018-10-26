@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1781077896465d8a7a1d925262c3fd0696d24380
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9a077cd90055a17f9aff71d67d2cb9a511a1caf0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410555"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078033"
 ---
 # <a name="mfc-library-versions"></a>MFC 程式庫版本
 
@@ -95,7 +95,7 @@ MFC 專案使用的前置處理器符號\_表示 utf-16 寬字元 Unicode 支援
 
 Mfc 靜態程式庫會使用下列命名慣例。 程式庫名稱的格式如下
 
-> *u*AFX*c * * d*。LIB
+> <em>u</em>AFX<em>cd</em>。LIB
 
 其中顯示為斜體小寫的字母是指定名稱的預留位置，其意義如下表所示：
 

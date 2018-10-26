@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 328db31cf595247932a17a96dab6c6395813470c
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 73dd54920e23850235b770d2999e87e69a45c618
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082406"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071923"
 ---
 # <a name="adding-formatting-or-special-characters-to-a-string-resource-c"></a>將格式或特殊字元新增至字串資源 （c + +）
 
@@ -58,4 +58,4 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[字串編輯器](../windows/string-editor.md)  
+[字串編輯器](../windows/string-editor.md)

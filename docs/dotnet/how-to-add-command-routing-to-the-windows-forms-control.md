@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5161e23d17283ba1495baf6fcb201943f8b6ae12
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2af0148c386bc3b1ea8db60fdf84d080c38af857
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422411"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080685"
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>如何：新增命令傳送至 Windows Form 控制項
 
@@ -51,7 +51,7 @@ ms.locfileid: "46422411"
     partial class UserControl1
     ```
 
-     為此值：
+   為此值：
 
     ```
     partial class UserControl1 : System.Windows.Forms.UserControl, ICommandTarget
@@ -84,19 +84,19 @@ ms.locfileid: "46422411"
 
 1. 加入功能表選項將會叫用`singleMenuHandler`。
 
-     移至**資源檢視**(Ctrl + Shift + E)，展開**功能表**資料夾，然後再按兩下**IDR_MFC02TYPE**。 這會顯示功能表編輯器。
+   移至**資源檢視**(Ctrl + Shift + E)，展開**功能表**資料夾，然後再按兩下**IDR_MFC02TYPE**。 這會顯示功能表編輯器。
 
-     加入功能表選項，在底部**檢視**功能表。 請注意中的功能表選項 ID**屬性**視窗。 儲存檔案。
+   加入功能表選項，在底部**檢視**功能表。 請注意中的功能表選項 ID**屬性**視窗。 儲存檔案。
 
-     在 [**方案總管] 中**、 開啟 Resource.h 檔案，複製您剛才新增的功能表選項 ID 值並貼上該值，做為第一個參數`m_CmdSrc.AddCommandHandler`C# 專案中呼叫`Initialize`方法 （取代`32771`如有必要)。
+   在 [**方案總管] 中**、 開啟 Resource.h 檔案，複製您剛才新增的功能表選項 ID 值並貼上該值，做為第一個參數`m_CmdSrc.AddCommandHandler`C# 專案中呼叫`Initialize`方法 （取代`32771`如有必要)。
 
 9. 建置並執行專案。
 
-     在 [ **建置** ] 功能表上，按一下 [ **建置方案**]。
+   在 [ **建置** ] 功能表上，按一下 [ **建置方案**]。
 
-     在 **偵錯**功能表上，按一下**啟動但不偵錯**。
+   在 **偵錯**功能表上，按一下**啟動但不偵錯**。
 
-     選取您所加入的功能表選項。 請注意，會呼叫此.dll 檔中的方法。
+   選取您所加入的功能表選項。 請注意，會呼叫此.dll 檔中的方法。
 
 ## <a name="see-also"></a>另請參閱
 

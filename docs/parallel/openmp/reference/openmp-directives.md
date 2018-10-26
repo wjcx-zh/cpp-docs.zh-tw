@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d92d196cc38e6033c6f16332e4977f2481c4496
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 98fec6659c2f4e998b946983a0bd2bdea6d0cde1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990330"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083252"
 ---
 # <a name="openmp-directives"></a>OpenMP 指示詞
 
@@ -52,19 +52,19 @@ ms.locfileid: "49990330"
 
 Visual c + + 支援下列的 OpenMP 指示詞：
 
-指示詞                             | 描述
-------------------------------------- | -----------------------------------------------------------------------------------------------------------------
-[atomic](#atomic)                     | 指定的記憶體位置會以不可分割方式更新。
-[barrier](#barrier)                   | 同步處理的小組中的所有執行緒在屏障的所有執行緒都暫停，直到所有執行緒都執行的屏障為止。
-[critical](#critical)                 | 指定一次只在一個執行緒上執行的程式碼。
-[flush](#flush-openmp)                | 指定所有執行緒都有相同的檢視，所有的共用物件的記憶體。
-[for](#for-openmp)                    | 會導致完成的工作`for`來分割於執行緒在平行區域內的迴圈。
-[master](#master)                     | 指定只在主要執行緒應該執行的程式區段。
-[排序](#ordered-openmp-directives) | 指定在平行化程式碼`for`應該執行迴圈，例如循序迴圈。
-[parallel](#parallel)                 | 定義在平行區域，也就是將多個執行緒以平行方式執行的程式碼。
-[區段](#sections-openmp)          | 識別要被所有執行緒之間的程式碼區段。
-[single](#single)                     | 可讓您指定一段程式碼，應該會在單一執行緒，而不一定是主要的執行緒上執行。
-[threadprivate](#threadprivate)       | 指定在執行緒私用變數。
+|指示詞|描述|
+|---------|-----------|
+|[atomic](#atomic)|指定的記憶體位置會以不可分割方式更新。|
+|[barrier](#barrier)|同步處理的小組中的所有執行緒在屏障的所有執行緒都暫停，直到所有執行緒都執行的屏障為止。|
+|[critical](#critical)|指定一次只在一個執行緒上執行的程式碼。|
+|[flush](#flush-openmp)|指定所有執行緒都有相同的檢視，所有的共用物件的記憶體。|
+|[for](#for-openmp)|會導致完成的工作`for`來分割於執行緒在平行區域內的迴圈。|
+|[master](#master)|指定只在主要執行緒應該執行的程式區段。|
+|[排序](#ordered-openmp-directives)|指定在平行化程式碼`for`應該執行迴圈，例如循序迴圈。|
+|[parallel](#parallel)|定義在平行區域，也就是將多個執行緒以平行方式執行的程式碼。|
+|[區段](#sections-openmp)|識別要被所有執行緒之間的程式碼區段。|
+|[single](#single)|可讓您指定一段程式碼，應該會在單一執行緒，而不一定是主要的執行緒上執行。|
+|[threadprivate](#threadprivate)|指定在執行緒私用變數。|
 
 ## <a name="atomic"></a>不可部分完成
 
@@ -306,13 +306,13 @@ A`for`迴圈。 如果使用者程式碼中，將會產生未定義的行為`for
 
 `for`指示詞可支援下列 OpenMP 子句：
 
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [lastprivate](../../../parallel/openmp/reference/lastprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [排序](../../../parallel/openmp/reference/ordered-openmp-directives.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
-- [schedule](../../../parallel/openmp/reference/schedule.md)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [lastprivate](openmp-clauses.md#lastprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [排序](openmp-clauses.md#ordered-openmp-clauses)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
+- [schedule](openmp-clauses.md#schedule)
 
 如果`parallel`同時指定，則`clauses`可以任何子句接受`parallel`或是`for`指示詞，除了`nowait`。
 
@@ -535,14 +535,14 @@ test2() iteration 4
 
 `parallel`指示詞可支援下列 OpenMP 子句：
 
-- [copyin](../../../parallel/openmp/reference/copyin.md)
-- [default](../../../parallel/openmp/reference/default-openmp.md)
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [if](../../../parallel/openmp/reference/if-openmp.md)
-- [num_threads](../../../parallel/openmp/reference/num-threads.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
-- [shared](../../../parallel/openmp/reference/shared-openmp.md)
+- [copyin](openmp-clauses.md#copyin)
+- [default](openmp-clauses.md#default-openmp)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [if](openmp-clauses.md#if-openmp)
+- [num_threads](openmp-clauses.md#num-threads)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
+- [shared](openmp-clauses.md#shared-openmp)
 
 `parallel` 也可與[各節](#sections-openmp)並[如](#for-openmp)指示詞。
 
@@ -603,11 +603,11 @@ Hello from thread 3
 
 `sections`指示詞可支援下列 OpenMP 子句：
 
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [lastprivate](../../../parallel/openmp/reference/lastprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [lastprivate](openmp-clauses.md#lastprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
 
 如果`parallel`同時指定，則`clauses`可以任何子句接受`parallel`或是`sections`指示詞，除了`nowait`。
 
@@ -656,10 +656,10 @@ Hello from thread 0
 
 `single`指示詞可支援下列 OpenMP 子句：
 
-- [copyprivate](../../../parallel/openmp/reference/copyprivate.md)
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
+- [copyprivate](openmp-clauses.md#copyprivate)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [private](openmp-clauses.md#private-openmp)
 
 [主要](#master)指示詞可讓您指定一段程式碼，應該只在主要執行緒上執行。
 
@@ -745,4 +745,4 @@ int main()
 
 ### <a name="example"></a>範例
 
-如需使用的範例`threadprivate`，請參閱 <<c2> [ 私人](../../../parallel/openmp/reference/private-openmp.md)。
+如需使用的範例`threadprivate`，請參閱 <<c2> [ 私人](openmp-clauses.md#private-openmp)。

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e76b1c8be4e180136c4c1ff3de3e4801770bce92
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7b6a915dbe9904a7bbe56e8ba1100631bd954d86
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437675"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071163"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>如何：建立 CLR 空專案
 
@@ -34,7 +34,7 @@ ms.locfileid: "46437675"
 
 1. 按一下 [ **檔案** ] 功能表上的 [ **新增**]，然後按一下 [ **專案**]。
 
-     [ **新增專案** ] 對話方塊隨即出現。
+   [ **新增專案** ] 對話方塊隨即出現。
 
 1. 底下**已安裝的範本**，按一下**Visual c + +** 節點，然後按一下**CLR**節點。 選擇**CLR 空專案**圖示。
 

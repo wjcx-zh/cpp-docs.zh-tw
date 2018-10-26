@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5c66771c9b27d568e32f7d4a361586ff5a62da9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 07ecc1d01afcc857ffaf4726b9b47dee382669d2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384971"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053850"
 ---
 # <a name="concurrencygraphics-namespace-enums"></a>Concurrency:: graphics 命名空間列舉
 
@@ -41,6 +41,7 @@ enum address_mode;
 ```
 enum filter_mode;
 ```
+
 ## <a name="requirements"></a>需求
 
 **標頭：** amp_graphics.h**命名空間：** concurrency:: graphics

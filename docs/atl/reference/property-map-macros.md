@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594b02d777d87decfc218064678dbecdf8ecf0c9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: caa298ebbb96b04145bf2beb52f93838708ae50b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106346"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50088898"
 ---
 # <a name="property-map-macros"></a>屬性對應巨集
 
@@ -39,7 +39,7 @@ ms.locfileid: "46106346"
 |[PROP_ENTRY_TYPE](#prop_entry_type)|輸入屬性對應中的屬性描述、 屬性的 DISPID，與屬性頁 CLSID。|
 |[改用 PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)|輸入屬性描述，屬性的 DISPID，屬性頁 CLSID、 和`IDispatch`屬性對應至 IID。|
 |[PROP_PAGE](#prop_page)|輸入屬性對應中的屬性頁 CLSID。|
-|[END_PROP_MAP](#end_prop_map)|結束標記的 ATL 屬性對應。|  
+|[END_PROP_MAP](#end_prop_map)|結束標記的 ATL 屬性對應。|
 
 ## <a name="requirements"></a>需求
 

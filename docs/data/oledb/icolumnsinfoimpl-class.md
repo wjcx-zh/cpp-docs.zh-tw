@@ -38,81 +38,81 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3a0b7bb8f430f2e132413fbb8bca2563c4fd7014
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: cded311abd2956317861bac484e3c32a4e14f5cb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083706"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072326"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl 類別
 
-提供實作[IColumnsInfo](/previous-versions/windows/desktop/ms724541)介面。  
-  
+提供實作[IColumnsInfo](/previous-versions/windows/desktop/ms724541)介面。
+
 ## <a name="syntax"></a>語法
 
 ```cpp
-template <class T>  
-class ATL_NO_VTABLE IColumnsInfoImpl :   
-   public IColumnsInfo,    
-   public CDBIDOps  
-```  
-  
-### <a name="parameters"></a>參數  
+template <class T>
+class ATL_NO_VTABLE IColumnsInfoImpl :
+   public IColumnsInfo,  
+   public CDBIDOps
+```
+
+### <a name="parameters"></a>參數
 
 *T*<br/>
-您的類別，衍生自`IColumnsInfoImpl`。  
+您的類別，衍生自`IColumnsInfoImpl`。
 
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>需求
 
-**Header:** atldb.h  
-  
-## <a name="members"></a>成員  
-  
-### <a name="methods"></a>方法  
-  
-|||  
-|-|-|  
-|[GetColumnInfo](#getcolumninfo)|傳回大部分消費者所需的資料行中繼資料。|  
-|[MapColumnIDs](#mapcolumnids)|在指定的資料行識別碼所識別的資料列集傳回的資料行序數的陣列。|  
-  
-## <a name="remarks"></a>備註  
+**Header:** atldb.h
 
-在 資料列集和命令上必要的介面。 若要修改您的提供者的行為`IColumnsInfo`實作中，您需要修改提供者資料行對應。  
+## <a name="members"></a>成員
+
+### <a name="methods"></a>方法
+
+|||
+|-|-|
+|[GetColumnInfo](#getcolumninfo)|傳回大部分消費者所需的資料行中繼資料。|
+|[MapColumnIDs](#mapcolumnids)|在指定的資料行識別碼所識別的資料列集傳回的資料行序數的陣列。|
+
+## <a name="remarks"></a>備註
+
+在 資料列集和命令上必要的介面。 若要修改您的提供者的行為`IColumnsInfo`實作中，您需要修改提供者資料行對應。
 
 ## <a name="getcolumninfo"></a> Icolumnsinfoimpl:: Getcolumninfo
 
-傳回大部分消費者所需的資料行中繼資料。  
-  
-### <a name="syntax"></a>語法  
-  
-```cpp
-STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,  
-   DBCOLUMNINFO** prgInfo,  
-   OLECHAR** ppStringsBuffer);  
-```  
-  
-#### <a name="parameters"></a>參數  
+傳回大部分消費者所需的資料行中繼資料。
 
-請參閱[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704)中*OLE DB 程式設計人員參考*。  
+### <a name="syntax"></a>語法
+
+```cpp
+STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
+   DBCOLUMNINFO** prgInfo,
+   OLECHAR** ppStringsBuffer);
+```
+
+#### <a name="parameters"></a>參數
+
+請參閱[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704)中*OLE DB 程式設計人員參考*。
 
 ## <a name="mapcolumnids"></a> Icolumnsinfoimpl:: Mapcolumnids
 
-在指定的資料行識別碼所識別的資料列集傳回的資料行序數的陣列。  
-  
-### <a name="syntax"></a>語法  
-  
-```cpp
-STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,  
-   const DBID rgColumnIDs[],  
-   DBORDINAL rgColumns[]);  
-```  
-  
-#### <a name="parameters"></a>參數  
+在指定的資料行識別碼所識別的資料列集傳回的資料行序數的陣列。
 
-請參閱[IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200)中*OLE DB 程式設計人員參考*。  
-  
-## <a name="see-also"></a>另請參閱  
+### <a name="syntax"></a>語法
+
+```cpp
+STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
+   const DBID rgColumnIDs[],
+   DBORDINAL rgColumns[]);
+```
+
+#### <a name="parameters"></a>參數
+
+請參閱[IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200)中*OLE DB 程式設計人員參考*。
+
+## <a name="see-also"></a>另請參閱
 
 [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

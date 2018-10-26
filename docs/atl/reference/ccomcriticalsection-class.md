@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4678acbe251086f3a42e3544e155a191a5847f11
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4ebabc2d200047acec458c4a29603cc6aee5a589
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101393"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076824"
 ---
 # <a name="ccomcriticalsection-class"></a>CComCriticalSection 類別
 
@@ -67,7 +67,7 @@ class CComCriticalSection
 
 `CComCriticalSection` 類似於類別[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)，只不過您必須明確地初始化，並釋放重要區段。
 
-一般而言，您可以使用`CComCriticalSection`經由**typedef**名稱[CriticalSection](ccommultithreadmodel-class.md#criticalsection)。 此名稱會參考`CComCriticalSection`時[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)正在使用。  
+一般而言，您可以使用`CComCriticalSection`經由**typedef**名稱[CriticalSection](ccommultithreadmodel-class.md#criticalsection)。 此名稱會參考`CComCriticalSection`時[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)正在使用。
 
 請參閱[CComCritSecLock 類別](../../atl/reference/ccomcritseclock-class.md)有更安全的方法，可使用比呼叫這個類別`Lock`和`Unlock`直接。
 

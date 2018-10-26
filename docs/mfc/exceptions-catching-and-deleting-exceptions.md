@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd59cc19c80e305a7e57fb711a49f59a024d528
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5ad6ad1c4d1d7d74f60acbd985ee549d708ae28f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434761"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074120"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>例外狀況：攔截及刪除例外狀況
 
@@ -36,9 +36,9 @@ ms.locfileid: "46434761"
 
 - **攔截**區塊擲回新的例外狀況。
 
-     當然，如果您再次擲回相同的例外狀況，則不得刪除例外狀況：
+   當然，如果您再次擲回相同的例外狀況，則不得刪除例外狀況：
 
-     [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
+   [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
 
 - 執行會返回內在**攔截**區塊。
 
@@ -49,15 +49,15 @@ ms.locfileid: "46434761"
 
 1. 使用**嘗試**關鍵字來設定**嘗試**區塊。 執行任何可能會擲回例外狀況中的程式陳述式**嘗試**區塊。
 
-     使用**攔截**關鍵字來設定**攔截**區塊。 將例外狀況處理程式碼中的放置**攔截**區塊。 中的程式碼**攔截**才會執行的區塊內的程式碼**嘗試**區塊擲回例外狀況中指定之型別的**攔截**陳述式。
+   使用**攔截**關鍵字來設定**攔截**區塊。 將例外狀況處理程式碼中的放置**攔截**區塊。 中的程式碼**攔截**才會執行的區塊內的程式碼**嘗試**區塊擲回例外狀況中指定之型別的**攔截**陳述式。
 
-     下列的基本架構示範如何**嘗試**並**攔截**區塊的正常安排：
+   下列的基本架構示範如何**嘗試**並**攔截**區塊的正常安排：
 
-     [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
+   [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
 
-     擲回例外狀況時，控制權會傳遞給第一個**攔截**的例外狀況宣告符合例外狀況類型的區塊。 您可以選擇性地處理不同類型的例外狀況和循序**攔截**封鎖，如下所示：
+   擲回例外狀況時，控制權會傳遞給第一個**攔截**的例外狀況宣告符合例外狀況類型的區塊。 您可以選擇性地處理不同類型的例外狀況和循序**攔截**封鎖，如下所示：
 
-     [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
+   [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
 如需詳細資訊，請參閱 <<c0> [ 例外狀況： 從 MFC 例外狀況巨集轉換](../mfc/exceptions-converting-from-mfc-exception-macros.md)。
 

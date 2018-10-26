@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa04fdee2b63f9d91d2bdd7dfd62100b3e32a2c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ae8b15431edbdd24a7afd6c7e25be6b9eadb4107
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393317"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081387"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>更新狀態列窗格的文字
 
@@ -40,17 +40,17 @@ ms.locfileid: "46393317"
 
 1. 定義窗格的命令識別碼。
 
-     在 **檢視**功能表上，按一下**資源檢視**。 以滑鼠右鍵按一下專案資源，然後按一下 **資源符號**。 在 資源符號 對話方塊中，按一下  `New`。 輸入的命令識別碼名稱： 例如， `ID_INDICATOR_PAGE`。 識別碼的指定值，或接受建議的 [資源符號] 對話方塊中的值。 例如，對於`ID_INDICATOR_PAGE`，接受預設值。 關閉 [資源符號] 對話方塊。
+   在 **檢視**功能表上，按一下**資源檢視**。 以滑鼠右鍵按一下專案資源，然後按一下 **資源符號**。 在 資源符號 對話方塊中，按一下  `New`。 輸入的命令識別碼名稱： 例如， `ID_INDICATOR_PAGE`。 識別碼的指定值，或接受建議的 [資源符號] 對話方塊中的值。 例如，對於`ID_INDICATOR_PAGE`，接受預設值。 關閉 [資源符號] 對話方塊。
 
 1. 定義在窗格中顯示的預設字串。
 
-     資源檢視中開啟，按兩下**字串資料表**在視窗中列出您的應用程式的資源類型。 具有**字串表**編輯器中開啟，選擇**新字串**從**插入**功能表。 在字串屬性 視窗中，選取窗格的命令 ID (例如`ID_INDICATOR_PAGE`) 輸入的預設字串值，例如 「 頁面 」。 關閉字串編輯器。 （您需要預設的字串，以避免編譯器錯誤）。
+   資源檢視中開啟，按兩下**字串資料表**在視窗中列出您的應用程式的資源類型。 具有**字串表**編輯器中開啟，選擇**新字串**從**插入**功能表。 在字串屬性 視窗中，選取窗格的命令 ID (例如`ID_INDICATOR_PAGE`) 輸入的預設字串值，例如 「 頁面 」。 關閉字串編輯器。 （您需要預設的字串，以避免編譯器錯誤）。
 
 1. 新增窗格，即可*指標*陣列。
 
-     在 MAINFRM 檔案中。CPP、 找出*指標*陣列。 這個陣列會列出所有 [狀態] 列中的指標，從左到右的順序的命令 Id。 在陣列中的適當點，輸入您的窗格的命令識別碼，如下所示的`ID_INDICATOR_PAGE`:
+   在 MAINFRM 檔案中。CPP、 找出*指標*陣列。 這個陣列會列出所有 [狀態] 列中的指標，從左到右的順序的命令 Id。 在陣列中的適當點，輸入您的窗格的命令識別碼，如下所示的`ID_INDICATOR_PAGE`:
 
-     [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]
+   [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]
 
 若要顯示的文字在窗格中的建議的方式是呼叫`SetText`類別成員函式`CCmdUI`中窗格的更新處理常式函式。 比方說，您可能想要設定將整數變數*m_nPage*包含目前的頁碼和使用`SetText`窗格的文字設該數字的字串版本。
 
@@ -63,19 +63,19 @@ ms.locfileid: "46393317"
 
 1. 新增命令的命令更新處理常式。
 
-     手動加入處理常式，原型，如下所示的`ID_INDICATOR_PAGE`（在 MAINFRM。H):
+   手動加入處理常式，原型，如下所示的`ID_INDICATOR_PAGE`（在 MAINFRM。H):
 
-     [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]
+   [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]
 
 1. 在適當的。CPP 檔案中，加入處理常式的定義，如下所示的`ID_INDICATOR_PAGE`（在 MAINFRM。CPP):
 
-     [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]
+   [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]
 
-     此處理常式的最後三行是程式碼，以便顯示您的文字。
+   此處理常式的最後三行是程式碼，以便顯示您的文字。
 
 1. 在適當的訊息對應中，新增 ON_UPDATE_COMMAND_UI 巨集，如下所示的`ID_INDICATOR_PAGE`（在 MAINFRM。CPP):
 
-     [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]
+   [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]
 
 一旦您定義的值*m_nPage*成員變數 (類別的`CMainFrame`)，這項技術會導致應用程式會更新其他指標的相同方式出現在窗格中閒置處理期間的頁碼。 如果*m_nPage*變更、 下一步 的閒置迴圈期間顯示變更。
 

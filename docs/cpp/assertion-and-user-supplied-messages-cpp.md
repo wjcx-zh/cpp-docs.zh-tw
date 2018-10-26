@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88873c9ebde2ce03163e62a59f3dd6fffdd36849
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fdbf1ba3c4cfda4163076386def70c700c156aa7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090278"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057867"
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>判斷提示和使用者提供的訊息 (C++)
 
@@ -36,7 +36,7 @@ C + + 語言支援三種錯誤處理機制，可協助您偵錯您的應用程�
 
 - [Static_assert](../cpp/static-assert.md)宣告適用於在編譯時期。 它會測試由使用者指定的整數運算式代表的軟體判斷提示，此判斷提示可以轉換為布林值。 如果運算式判斷值為零 (false)，編譯器會發出使用者指定的訊息，且編譯會失敗並產生錯誤。
 
-     `static_assert` 宣告適用於進行樣板偵錯，因為樣板引數可以包含在使用者指定的運算式中。
+   `static_assert` 宣告適用於進行樣板偵錯，因為樣板引數可以包含在使用者指定的運算式中。
 
 - [Assert 巨集、 _assert、 _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)巨集適用於在執行階段。 它會評估使用者指定的運算式，如果結果為零，系統會發出診斷訊息並關閉應用程式。 許多其他巨集，例如[_ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)和 _ASSERTE，類似於此巨集，但發出不同的系統定義或使用者定義診斷訊息。
 

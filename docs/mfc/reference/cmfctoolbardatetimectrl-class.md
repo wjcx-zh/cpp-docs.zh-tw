@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4cd4a7c77c5b7a19bff7cf586b55302a9de0cc9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d2ef8bddd43b8a6102a39dfa20787a627c21bb6a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401026"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073028"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>CMFCToolBarDateTimeCtrl 類別
 
@@ -197,7 +197,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ### <a name="parameters"></a>參數
 
 *src*<br/>
-[in]要從中複製來源] 按鈕參考。
+[in]要從中複製來源按鈕參考。
 
 ### <a name="remarks"></a>備註
 
@@ -627,6 +627,4 @@ static BOOL SetTimeAll(
 [類別](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [逐步解說：將控制項放在工具列上](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

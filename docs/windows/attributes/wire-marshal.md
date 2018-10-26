@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 599d602eba101a41892ea66cf203ea9d3d740e1e
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 5c59660f06cfd210e6a67c5bd7373c7f2d7ddab1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790891"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061595"
 ---
 # <a name="wiremarshal"></a>wire_marshal
 
@@ -69,9 +69,9 @@ ms.locfileid: "48790891"
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [IDL 屬性](idl-attributes.md)<br/>
-[Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)  
+[Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)

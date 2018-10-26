@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6b343ec9342199727122ac89f6df77e532429ad
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 85ffa775fd18b6979fccf4354ce243f017634d02
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791031"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059671"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -74,7 +74,7 @@ ms.locfileid: "48791031"
 |**必要屬性**|**coclass**|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -82,4 +82,4 @@ ms.locfileid: "48791031"
 [Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)<br/>
 [類別屬性](class-attributes.md)<br/>
 [舊版程式碼的多執行緒支援 (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)<br/>
-[中性 Apartment](/windows/desktop/cossdk/neutral-apartments)  
+[中性 Apartment](/windows/desktop/cossdk/neutral-apartments)

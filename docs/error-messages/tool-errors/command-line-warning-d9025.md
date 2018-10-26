@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822d1ac0cc1e6b3e728d43b816e7a0a15eee9958
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c5bcc7cbe6fcd8a61e15e80c43f27703957a1e88
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46063688"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083083"
 ---
 # <a name="command-line-warning-d9025"></a>命令列警告 D9025
 
@@ -35,6 +35,6 @@ ms.locfileid: "46063688"
 
 - 在程式碼或專案的專案設定中，則可以指定選項。 如果您查看編譯器[命令列屬性頁](../../ide/command-line-property-pages.md)如果您看到中的選項衝突**所有選項**欄位則選項會設定在專案的屬性頁面中，否則選項在原始程式碼中設定。
 
-     如果選項設定在專案屬性頁中，尋找編譯器前置處理器 屬性頁面上 （在 方案總管 中選取專案節點）。  如果您看不見的選項那里設定，請檢查並確定每個來源的程式碼檔案 （在 方案總管 中) 的前置處理器 屬性頁面設定它未在該處加入。
+   如果選項設定在專案屬性頁中，尋找編譯器前置處理器 屬性頁面上 （在 方案總管 中選取專案節點）。  如果您看不見的選項那里設定，請檢查並確定每個來源的程式碼檔案 （在 方案總管 中) 的前置處理器 屬性頁面設定它未在該處加入。
 
-     如果在程式碼中設定的選項可以設定在程式碼或 windows 標頭。  您可能會嘗試建立前置處理過的檔案 ([/P](../../build/reference/p-preprocess-to-a-file.md))，並搜尋符號。
+   如果在程式碼中設定的選項可以設定在程式碼或 windows 標頭。  您可能會嘗試建立前置處理過的檔案 ([/P](../../build/reference/p-preprocess-to-a-file.md))，並搜尋符號。

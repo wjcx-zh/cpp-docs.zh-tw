@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5bca0f7ff1b2fdb2650eadbcdca4778d9b53ef
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 0567913eac57c4150f9fe6d051d2fc8e0e31860b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890356"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082921"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>升級現有的 ActiveX 控制項
 
@@ -213,11 +213,11 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 
 1. 插入\<物件 > 為您授權的控制項，授權管理員標記之後的標記。
 
-     比方說，如下所示，顯示 Microsoft 遮罩編輯控制項的 HTML 網頁。 識別碼為授權管理員控制的第一個類別，識別碼是遮罩編輯控制項的第二個類別。 變更標籤，來指向您在稍早建立的.lpk 檔案的相對路徑，並新增為您的控制項的類別 id 的物件標記。
+   比方說，如下所示，顯示 Microsoft 遮罩編輯控制項的 HTML 網頁。 識別碼為授權管理員控制的第一個類別，識別碼是遮罩編輯控制項的第二個類別。 變更標籤，來指向您在稍早建立的.lpk 檔案的相對路徑，並新增為您的控制項的類別 id 的物件標記。
 
 1. 插入\<內嵌 > 屬性的 LPK 檔案，如果使用 NCompass ActiveX 外掛程式。
 
-     如果您的控制項可能會檢視上其他作用中啟用瀏覽器 — 比方說，使用 NCompass ActiveX 外掛程式的 Netscape — 您必須新增\<內嵌 > 語法，如下所示。
+   如果您的控制項可能會檢視上其他作用中啟用瀏覽器 — 比方說，使用 NCompass ActiveX 外掛程式的 Netscape — 您必須新增\<內嵌 > 語法，如下所示。
 
 ```
 <OBJECT CLASSID="clsid:5220cb21-c88d-11cf-b347-00aa00a28331">

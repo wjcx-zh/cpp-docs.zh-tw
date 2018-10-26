@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3cdf60f614b95c22b4b3c40b5528a7daf885bed
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6d2e5e91465df0c3e7608b949c6e1f4b8dfc80bc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388734"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064143"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>根據新控制項類別來宣告變數
 
@@ -37,7 +37,7 @@ ms.locfileid: "46388734"
 
 1. 按住 CTRL 鍵，按兩下控制項。
 
-     [加入成員變數](../../ide/add-member-variable-wizard.md) 對話方塊隨即出現。
+   [加入成員變數](../../ide/add-member-variable-wizard.md) 對話方塊隨即出現。
 
 1. 在 **存取**方塊中，選取您的控制項的正確存取權。
 
@@ -57,7 +57,7 @@ ms.locfileid: "46388734"
 
 [將訊息對應到函式](../../mfc/reference/mapping-messages-to-functions.md)<br/>
 [使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[加入類別](../../ide/adding-a-class-visual-cpp.md)<br/>
+[新增類別](../../ide/adding-a-class-visual-cpp.md)<br/>
 [新增成員函式](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [新增成員變數](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [覆寫虛擬函式](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>

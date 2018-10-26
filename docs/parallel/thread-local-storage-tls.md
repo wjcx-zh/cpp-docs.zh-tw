@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b271ed2c2af94e37edcbabb6611cda967f9587c7
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 18d9d2c1b3c633ba3399e93d34317c2360d45215
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081867"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059840"
 ---
 # <a name="thread-local-storage-tls"></a>執行緒區域儲存區
 
@@ -100,7 +100,7 @@ __declspec( thread ) int tls_i = 1;
     int *p = &tls_i;       //This will generate an error in C.
     ```
 
-     這項限制不適用於 C++。 因為 C++ 允許所有物件的動態初始化，所以您可使用採用執行緒區域變數位址的運算式來初始化物件。 其完成方式就如同建構執行緒區域物件一樣。 例如，如果稍早所示的程式碼編譯為 C++ 原始程式檔，則不會產生錯誤。 請注意，只要採用執行緒區域變數位址的執行緒仍存在，此位址就有效。
+   這項限制不適用於 C++。 因為 C++ 允許所有物件的動態初始化，所以您可使用採用執行緒區域變數位址的運算式來初始化物件。 其完成方式就如同建構執行緒區域物件一樣。 例如，如果稍早所示的程式碼編譯為 C++ 原始程式檔，則不會產生錯誤。 請注意，只要採用執行緒區域變數位址的執行緒仍存在，此位址就有效。
 
 - 標準 C 允許利用需要自我參考的運算式來初始化物件或變數，但只限於非靜態範圍的物件。 雖然 C++ 通常允利用需要自我參考的運算式來動態初始化對物件，但此種初始化不適用於執行緒區域物件。 例如: 
 
@@ -110,9 +110,9 @@ __declspec( thread ) int tls_i = 1;
     __declspec( thread )int tls_i = sizeof( tls_i )       // Legal in C and C++
     ```
 
-     請注意，包含所要初始化物件的 `sizeof` 運算式並不代表其本身的參考，但在 C 和 C++ 中皆已啟用。
+   請注意，包含所要初始化物件的 `sizeof` 運算式並不代表其本身的參考，但在 C 和 C++ 中皆已啟用。
 
-     C++ 不允許執行緒資料的這類動態初始化，因為執行緒區域儲存區設備未來可能會增強。
+   C++ 不允許執行緒資料的這類動態初始化，因為執行緒區域儲存區設備未來可能會增強。
 
 - 在 Windows Vista 之前的 Windows 作業系統上`__declspec`(thread) 有一些限制。 如果 DLL 將任何資料或物件宣告為 `__declspec`(thread)，可能會造成保護錯誤 (若以動態方式載入)。 已載入 DLL 之後[LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)，它會導致系統失敗，每當程式碼參考`__declspec`(thread) 資料。 因為執行緒的全域變數空間是在執行階段進行配置，所以此空間的大小是以應用程式的需求，再加上以靜態方式連結之所有 DLL 的需求的計算為基礎。 當您使用 `LoadLibrary` 時，您無法擴充此空間以便使用 `__declspec`(thread) 宣告執行緒區域變數。 使用 TLS Api，例如[TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)，來配置 TLS，如果可能會使用載入的 DLL 在 DLL 中`LoadLibrary`。
 

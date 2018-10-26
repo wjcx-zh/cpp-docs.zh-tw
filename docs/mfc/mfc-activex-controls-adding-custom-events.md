@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c4acd417dacadbe2667f63c70435b97353bafe1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4d5db33dda6abc141c9247c74c16624bef5f0fc8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384412"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076031"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC ActiveX 控制項：加入自訂事件
 
@@ -48,7 +48,7 @@ ms.locfileid: "46384412"
 
 1. 從快顯功能表中，按一下**新增**，然後按一下**新增事件**。
 
-     這會開啟 [新增事件精靈]。
+   這會開啟 [新增事件精靈]。
 
 1. 在 **事件名稱**方塊中，第一次選取任何現有的事件，然後按一下**自訂**選項按鈕，然後輸入*ClickIn*。
 
@@ -94,7 +94,7 @@ ms.locfileid: "46384412"
 
 1. 在 屬性 視窗中，按一下**訊息** 按鈕。
 
-     [屬性] 視窗會顯示一份的 ActiveX 控制項可以處理的訊息。 已經以粗體顯示任何訊息都指派給它的處理常式函式。
+   [屬性] 視窗會顯示一份的 ActiveX 控制項可以處理的訊息。 已經以粗體顯示任何訊息都指派給它的處理常式函式。
 
 1. 從 [屬性] 視窗中，選取您想要處理的訊息。 針對此範例中，選取 WM_LBUTTONDOWN。
 
@@ -131,7 +131,7 @@ ms.locfileid: "46384412"
 
 1. 從快顯功能表中，按一下**新增**，然後按一下**新增事件**。
 
-     這會開啟 [新增事件精靈]。
+   這會開啟 [新增事件精靈]。
 
 1. 在 **事件名稱**下拉式清單中，選取 內建事件名稱。 此範例中，選取**按一下**。
 

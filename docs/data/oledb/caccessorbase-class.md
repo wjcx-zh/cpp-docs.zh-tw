@@ -36,129 +36,129 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6de23571f30373e5ddd3940bcae4be9fa176539a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2e62c4242513c5147dcfd84ee5d69ec51a4816d1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086833"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053327"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase 類別
 
-OLE DB 範本中的所有存取子會衍生自這個類別。 `CAccessorBase` 可讓管理多個存取子的一個資料列集。 它也會提供參數和輸出資料行的繫結。  
-  
+OLE DB 範本中的所有存取子會衍生自這個類別。 `CAccessorBase` 可讓管理多個存取子的一個資料列集。 它也會提供參數和輸出資料行的繫結。
+
 ## <a name="syntax"></a>語法
 
 ```cpp
-// Replace with syntax  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="methods"></a>方法  
-  
-|||  
-|-|-|  
-|[關閉](#close)|關閉存取子。|  
-|[GetHAccessor](#geth)|擷取存取子控制代碼。|  
-|[GetNumAccessors](#getnum)|擷取此類別所建立的存取子數目。|  
-|[IsAutoAccessor](#isauto)|測試指定的存取子是否 autoaccessor。|  
-|[ReleaseAccessors](#release)|釋放存取子。|  
+// Replace with syntax
+```
 
-## <a name="requirements"></a>需求  
+## <a name="members"></a>成員
 
-**標題:** atldbcli.h  
+### <a name="methods"></a>方法
+
+|||
+|-|-|
+|[關閉](#close)|關閉存取子。|
+|[GetHAccessor](#geth)|擷取存取子控制代碼。|
+|[GetNumAccessors](#getnum)|擷取此類別所建立的存取子數目。|
+|[IsAutoAccessor](#isauto)|測試指定的存取子是否 autoaccessor。|
+|[ReleaseAccessors](#release)|釋放存取子。|
+
+## <a name="requirements"></a>需求
+
+**標題:** atldbcli.h
 
 ## <a name="close"></a> Caccessorbase:: Close
 
-關閉存取子。  
-  
-### <a name="syntax"></a>語法  
-  
-```cpp
-void Close();  
-```  
-  
-### <a name="remarks"></a>備註  
+關閉存取子。
 
-您必須呼叫[ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md)第一次。  
+### <a name="syntax"></a>語法
+
+```cpp
+void Close();
+```
+
+### <a name="remarks"></a>備註
+
+您必須呼叫[ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md)第一次。
 
 ## <a name="geth"></a> Caccessorbase:: Gethaccessor
 
-擷取指定之存取子的存取子控制代碼。  
-  
-### <a name="syntax"></a>語法  
-  
+擷取指定之存取子的存取子控制代碼。
+
+### <a name="syntax"></a>語法
+
 ```cpp
-HACCESSOR GetHAccessor(ULONG nAccessor) const;  
-```  
-  
-#### <a name="parameters"></a>參數  
+HACCESSOR GetHAccessor(ULONG nAccessor) const;
+```
+
+#### <a name="parameters"></a>參數
 
 *nAccessor*<br/>
-[in] 存取子的零位移數字。  
-  
-### <a name="return-value"></a>傳回值  
+[in] 存取子的零位移數字。
 
-存取子控制代碼。  
+### <a name="return-value"></a>傳回值
+
+存取子控制代碼。
 
 ## <a name="getnum"></a> Caccessorbase:: Getnumaccessors
 
-擷取此類別所建立的存取子數目。  
-  
-### <a name="syntax"></a>語法  
-  
-```cpp
-ULONG GetNumAccessors() const;  
-```  
-  
-### <a name="return-value"></a>傳回值  
+擷取此類別所建立的存取子數目。
 
-類別所建立的存取子數目。  
+### <a name="syntax"></a>語法
+
+```cpp
+ULONG GetNumAccessors() const;
+```
+
+### <a name="return-value"></a>傳回值
+
+類別所建立的存取子數目。
 
 ## <a name="isauto"></a> Caccessorbase:: Isautoaccessor
 
-如果會自動擷取資料的存取子的移動作業期間，則傳回 true。  
-  
-### <a name="syntax"></a>語法  
-  
+如果會自動擷取資料的存取子的移動作業期間，則傳回 true。
+
+### <a name="syntax"></a>語法
+
 ```cpp
-bool IsAutoAccessor(ULONG nAccessor) const;  
-```  
-  
-#### <a name="parameters"></a>參數  
+bool IsAutoAccessor(ULONG nAccessor) const;
+```
+
+#### <a name="parameters"></a>參數
 
 *nAccessor*<br/>
-[in] 存取子的零位移數字。  
-  
-### <a name="return-value"></a>傳回值  
+[in] 存取子的零位移數字。
 
-傳回 **，則為 true**如果存取子是 autoaccessor。 否則會傳回 **false**。  
+### <a name="return-value"></a>傳回值
+
+傳回 **，則為 true**如果存取子是 autoaccessor。 否則會傳回 **false**。
 
 ## <a name="release"></a> Caccessorbase:: Releaseaccessors
 
-釋放存取子類別建立的。  
-  
-### <a name="syntax"></a>語法  
-  
+釋放存取子類別建立的。
+
+### <a name="syntax"></a>語法
+
 ```cpp
-HRESULT ReleaseAccessors(IUnknown* pUnk);  
-```  
-  
-#### <a name="parameters"></a>參數  
+HRESULT ReleaseAccessors(IUnknown* pUnk);
+```
+
+#### <a name="parameters"></a>參數
 
 *pUnk*<br/>
-[in]指標`IUnknown`已為其建立存取子的 COM 物件的介面。  
-  
-### <a name="return-value"></a>傳回值  
+[in]指標`IUnknown`已為其建立存取子的 COM 物件的介面。
 
-標準的 HRESULT。  
-  
-### <a name="remarks"></a>備註  
+### <a name="return-value"></a>傳回值
 
-從呼叫[caccessorrowset:: Close](../../data/oledb/caccessorrowset-close.md)。 
-  
-## <a name="see-also"></a>另請參閱  
+標準的 HRESULT。
+
+### <a name="remarks"></a>備註
+
+從呼叫[caccessorrowset:: Close](../../data/oledb/caccessorrowset-close.md)。
+
+## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

@@ -17,20 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6857bf80aaaad36b4dcfc4fbf1330eccd03f971a
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: a9710fd4c770f17afb8902b80241179aa20344c1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250350"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060724"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>ATL OLE DB 提供者精靈
 
 此精靈會建立構成的 OLE DB 提供者的類別。
 
 > [!WARNING]
-> 在 Visual Studio 2017 版本 15.9 這個程式碼精靈已被取代，並將 Visual Studio 的未來版本中移除。 此精靈很少使用。 ATL 和 MFC 的一般支援不會受到此精靈的移除。 如果您想要分享您對這個已被取代的意見，請完成[這份問卷](https://www.surveymonkey.com/r/QDWKKCN)。 我們重視您的意見反應。
-
+> 在 Visual Studio 2017 15.9 版中，此程式碼精靈已淘汰，並且將從 Visual Studio 的未來版本中移除。 使用者很少用到這個精靈。 移除此精靈不會影響 ATL 和 MFC 的一般支援。 如果您想要分享關於此項淘汰的意見反應，請填寫[此問卷](https://www.surveymonkey.com/r/QDWKKCN)。 我們非常重視您的意見反應。
 
 ## <a name="remarks"></a>備註
 

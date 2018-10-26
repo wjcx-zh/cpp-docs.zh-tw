@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d618ace9d922daabecf908c76a319e89a9fdedcc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dff9f3c988e7ffdf8f15b5502bb0326e2692a128
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094178"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079034"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>編譯器警告 （層級 3） C4996
 
@@ -82,7 +82,6 @@ Microsoft 已重新命名以依照 C99 與 c++03 規則實作所定義的全域�
 若要修正此問題，我們通常建議您變更程式碼以改用建議的函式名稱。 不過，更新的名稱是 Microsoft 特定的。 如果您需要使用現有的函式名稱的可攜性的理由，您可以關閉這些警告。 POSIX 函式仍在原來的名稱下的文件庫中。
 
 若要關閉這些函式已被取代警告，請定義前置處理器巨集 **\_CRT\_NONSTDC\_無\_警告**。 您可以定義此巨集，在命令列加上選項`/D_CRT_NONSTDC_NO_WARNINGS`。
-
 
 ### <a name="unsafe-crt-library-functions"></a>不安全的 CRT 程式庫函式
 

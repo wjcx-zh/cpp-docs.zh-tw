@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fbc661a870c7adc6e2e5dda5def744fa3e0396
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23b538904c78fc0f0bc88b7c12de1bc4862a88ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417009"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053405"
 ---
 # <a name="mapi-support-in-mfc"></a>MFC 中的 MAPI 支援
 
@@ -44,11 +44,11 @@ MAPI 需要讀取要傳送附件的檔案。 如果應用程式保持其資料�
 
 1. 使用 Visual c + + 功能表編輯器中加入命令 ID 是 ID_FILE_SEND_MAIL 功能表項目。
 
-     這個命令識別碼是在 AFXRES framework 所提供。H. 此命令可新增至任何功能表上，但它通常會加入至**檔案**功能表。
+   這個命令識別碼是在 AFXRES framework 所提供。H. 此命令可新增至任何功能表上，但它通常會加入至**檔案**功能表。
 
 1. 手動加入您的文件訊息對應中加入下列內容：
 
-     [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]
+   [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]
 
     > [!NOTE]
     >  此訊息對應適用於從其中衍生的文件`CDocument`或`COleDocument`— 它會取得正確的基底類別，在任一情況下，即使是在衍生的文件類別中的訊息對應。

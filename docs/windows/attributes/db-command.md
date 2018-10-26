@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0111dfc424a99d413a217149b3c5e579a3999f13
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 6cb9202d020aee86a4ebe3892fa8dd84ec4c4577
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790738"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061624"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -31,7 +31,7 @@ ms.locfileid: "48790738"
 ## <a name="syntax"></a>語法
 
 ```cpp
-[ db_command(command, name, source_name, hresult, bindings, bulk_fetch)  
+[ db_command(command, name, source_name, hresult, bindings, bulk_fetch)
 ]
 ```
 
@@ -74,7 +74,7 @@ ms.locfileid: "48790738"
 
 如果命令字串包含一或多個規範，例如\[中]， \[out]，或\[縮小/放大]、 **db_command**建置參數對應。
 
-如果命令字串包含一或多個參數，例如\[db_column] 或\[bindto]， **db_command**會產生資料列集和一個存取子對應來服務這些繫結的變數。 請參閱[db_accessor](db-accessor.md)如需詳細資訊。
+如果命令字串包含一或多個參數，例如\[db_column] 或\[bindto]， **db_command**會產生資料列集和一個存取子對應來服務這些繫結的變數。 如需詳細資訊，請參閱 [db_accessor](db-accessor.md) 。
 
 > [!NOTE]
 > \[*bindtype*] 語法和*繫結*使用時，不正確參數**db_command**類別層級。
@@ -88,7 +88,7 @@ TCHAR m_state[3] = 'CA';
 
 [db_command (command = "SELECT au_fname([bindto]m_au_fname), au_lname([bindto]m_au_lname) " \
    "FROM dbo.authors " \
-   "WHERE state = ?([in]m_state)")  
+   "WHERE state = ?([in]m_state)")
 ]
 ```
 
@@ -96,7 +96,7 @@ TCHAR m_state[3] = 'CA';
 （選擇性）您用來處理資料列集的控制代碼的名稱。 如果您指定 *name*，則 **db_command** 會產生具有所指定 *name*的類別，以用來周遊資料列集或執行多個動作查詢。 如果您未指定 *name*，則不可能會將多個資料列的結果傳回給使用者。
 
 *source_name*<br/>
-（選擇性）`CSession`變數或具有類別的執行個體`db_source`屬性套用至它在其上執行命令。 請參閱[db_source](db-source.md)。
+（選擇性）`CSession`變數或具有類別的執行個體`db_source`屬性套用至它在其上執行命令。 請參閱 [db_source](db-source.md)。
 
 **db_command** 會確認用於 *source_name* 的變數有效，因此指定的變數應該在函式或全域範圍中。
 
@@ -113,15 +113,15 @@ TCHAR m_state[3] = 'CA';
 *bulk_fetch*<br/>
 （選擇性）整數值，指定要擷取的資料列數目。
 
-預設值是 1，指定單一資料列擷取 (資料列集都屬於類型[CRowset](../../data/oledb/crowset-class.md))。
+預設值為 1，指定單一資料列擷取 (資料列集的類型會是 [CRowset](../../data/oledb/crowset-class.md))。
 
-大於 1 的值指定大量資料列擷取。 大量資料列擷取指的是大量資料列集來擷取多個資料列控制代碼 (資料列集都屬於類型[CBulkRowset](../../data/oledb/cbulkrowset-class.md) ，並將呼叫`SetRows`與指定的資料列數)。
+大於 1 的值指定大量資料列擷取。 大量資料列擷取指的是大量資料列集可以擷取多個資料列處理代碼 (資料列集的類型會是 [CBulkRowset](../../data/oledb/cbulkrowset-class.md) ，並且呼叫具有所指定數目的資料列的 `SetRows` )。
 
 如果 *bulk_fetch* 小於 1，則 `SetRows` 會傳回零。
 
 ## <a name="remarks"></a>備註
 
-**db_command**會建立[CCommand](../../data/oledb/ccommand-class.md)物件，這 OLE DB 消費者用來執行命令。
+**db_command** 會建立 OLE DB 消費者用來執行命令的 [CCommand](../../data/oledb/ccommand-class.md) 物件。
 
 您可以搭配使用 **db_command** 與類別或函式範圍；主要差異在於 `CCommand` 物件的範圍。 使用函式範圍時，繫結這類資料會終止於函式結尾。 類別和函式範圍用法牽涉到 OLE DB 消費者範本類別`CCommand<>`，但函式和類別案例的樣板引數不同。 在函式案例中，繫結將會對`Accessor`組成的區域變數，而類別用法則會推斷`CAccessor`-衍生的類別做為引數。 當成類別屬性使用時， **db_command** 是與 **db_column**搭配運作。
 
@@ -131,7 +131,7 @@ TCHAR m_state[3] = 'CA';
 
 ## <a name="example"></a>範例
 
-此範例所定義的命令會從狀態資料行符合 'CA' 的表格中選取第一個和最後一個名稱。 **db_command**會建立和讀取您對其可呼叫精靈所產生的函式這類的資料列集[OpenAll and CloseAll](../../data/oledb/consumer-wizard-generated-methods.md)，以及`CRowset`成員函式，如[MoveNext](../../data/oledb/crowset-movenext.md)。
+此範例所定義的命令會從狀態資料行符合 'CA' 的表格中選取第一個和最後一個名稱。 **db_command** 會建立和讀取可呼叫精靈所產生的函式 (例如 [OpenAll and CloseAll](../../data/oledb/consumer-wizard-generated-methods.md)) 以及 `CRowset` 成員函式 (例如 [MoveNext](../../data/oledb/crowset-movenext.md)) 的資料列集。
 
 請注意，此程式碼需要您提供連接至 pubs 資料庫的連接字串。 如需如何在開發環境中執行這項操作的資訊，請參閱[如何： 連接到資料庫並瀏覽現有的物件](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects)並[加入新連接](/visualstudio/data-tools/add-new-connections)。
 
@@ -253,9 +253,9 @@ int main() {
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者屬性](ole-db-consumer-attributes.md)<br/>
-[獨立屬性](stand-alone-attributes.md)  
+[獨立屬性](stand-alone-attributes.md)

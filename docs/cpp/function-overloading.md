@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 608b4560f11e35d9aefb2c848a27c99c8dc6f4ec
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 3d942e2c5bca7d86e66cb579de1cbe946cb9f5f6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821344"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081491"
 ---
 # <a name="function-overloading"></a>函式多載
 
@@ -126,7 +126,6 @@ int print(double dvalue, int prec)
 預設引數不會視為函式類型的一部分。 因此，不會在選取多載函式時使用。 兩個函式的不同之處只有在其預設引數是視為多重定義而不是多載函式。
 
 無法為多載函式提供預設引數。
-
 
 ## <a name="argument-matching"></a>引數對應
 
@@ -471,7 +470,7 @@ int main()
     void Print( PSTR szToPrint );
     ```
 
-     上述兩個函式擁有相同的引數清單。 `PSTR` 為類型的同義字`char *`。 在成員範圍內，這個程式碼會產生錯誤。
+   上述兩個函式擁有相同的引數清單。 `PSTR` 為類型的同義字`char *`。 在成員範圍內，這個程式碼會產生錯誤。
 
 - 列舉類型是不同的類型，可以用來區別多載函式。
 
@@ -482,7 +481,7 @@ int main()
     void Print( char szToPrint[] );
     ```
 
-     對於多維度陣列而言，第二個和後續所有維度都會視為類型的一部分。 因此，它們會是用來區別多載函式：
+   對於多維度陣列而言，第二個和後續所有維度都會視為類型的一部分。 因此，它們會是用來區別多載函式：
 
     ```cpp
     void Print( char szToPrint[] );

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c8e2fc86d15472bd4ab63e472df99bb69393b386
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ca9d1ea34aa8a2793f895a3c89f94994743570e5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060300"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082673"
 ---
 # <a name="data-access-in-visual-c"></a>Visual C++ 中的資料存取
 
@@ -52,13 +52,13 @@ Microsoft Foundation Classes (MFC) 程式庫提供可以使用開放式資料庫
 [Azure 儲存體](/azure/storage/storage-introduction)是新式應用程式的雲端儲存解決方案，這些應用程式依賴持久性、可用性和延展性來符合客戶的需求。 使用 C++ 的 Azure 儲存體用戶端程式庫，從 C++ 連線到 Azure 儲存體。
 
 [ODBC Driver 13.1 for SQL Server-Windows 發行](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server)<br/>
-此最新的 ODBC 驅動程式為 C/C++ 架構應用程式，提供對 Microsoft SQL Server 2016 和 Microsoft Azure SQL Database 的強固資料存取。 提供支援的功能包括 always encrypted、 Azure Active Directory 和 AlwaysOn 可用性群組。 也適用於 MacOS 及 Linux。     
- 
+此最新的 ODBC 驅動程式為 C/C++ 架構應用程式，提供對 Microsoft SQL Server 2016 和 Microsoft Azure SQL Database 的強固資料存取。 提供支援的功能包括 always encrypted、 Azure Active Directory 和 AlwaysOn 可用性群組。 也適用於 MacOS 及 Linux。
+
 [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client-programming)<br/>
 SQL Server Native Client 是支援 SQL Server 2005 到 SQL Server 2014 的獨立資料存取應用程式開發介面 (API)，可用於 OLE DB 和 ODBC。 新的應用程式應該使用 ODBC Driver 13.1 for SQL Server。
 
 [Microsoft Azure C 和 c + + 開發人員中心](https://azure.microsoft.com/develop/cpp/)<br/>
-Azure 可讓您使用最愛的工具，以更具有彈性、延展性及可靠的方式，輕鬆建置 C++ 應用程式。    
+Azure 可讓您使用最愛的工具，以更具有彈性、延展性及可靠的方式，輕鬆建置 C++ 應用程式。
 
 [如何使用 c + + 的 Blob 儲存體](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
 Azure Blob 儲存體是可將非結構化的資料儲存在雲端作為物件/Blob 的服務。 Blob 儲存體可以儲存任何類型的文字或二進位資料，例如文件、媒體檔案或應用程式安裝程式。 Blob 儲存體也稱為物件儲存體。

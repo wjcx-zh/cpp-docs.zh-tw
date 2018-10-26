@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 342716f3197713a584e2f0a1d20e4de75ece474b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 800dd3b626a03ec3b04910f6c4c1bbea3e1ab17d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234306"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053522"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>逐步解說： 建立標準的 c + + 程式 （c + +）
 
@@ -45,10 +45,10 @@ Visual c + + 會遵循 2003 c + + 標準，但有下列主要例外狀況： 兩
 
 1. 建立專案，指向**的新**上**檔案**功能表，然後按一下**專案**。
 
-1. 在  **Visual c + +** 專案類型 窗格中，按一下  **Windows 桌面**，然後按一下**Windows 主控台應用程式**。 
+1. 在  **Visual c + +** 專案類型 窗格中，按一下  **Windows 桌面**，然後按一下**Windows 主控台應用程式**。
 
    > [!NOTE]
-   > Visual Studio 2017，以前的版本中**新的專案**對話方塊方塊中，展開**已安裝** > **範本** >  **Visual c + +**，然後選取**Win32**。 在中央窗格中，選取 [Win32 主控台應用程式] 。 
+   > Visual Studio 2017，以前的版本中**新的專案**對話方塊方塊中，展開**已安裝** > **範本** >  **Visual c + +**，然後選取**Win32**。 在中央窗格中，選取 [Win32 主控台應用程式] 。
 
    輸入專案的名稱。
 

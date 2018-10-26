@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4b5ed392850fac97e8671774dee0905bf3417eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 765a5293f233cb6df0654416ea2a5463df1095a8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375886"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054419"
 ---
 # <a name="specifying-levels-of-functionality"></a>指定功能層級
 
@@ -46,11 +46,11 @@ ms.locfileid: "46375886"
 
 1. 在類別宣告中，使用 DECLARE_DYNAMIC 巨集，如下所示：
 
-     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/specifying-levels-of-functionality_1.h)]
+   [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/specifying-levels-of-functionality_1.h)]
 
 1. 使用 IMPLEMENT_DYNAMIC 巨集在實作檔 (。CPP) 您的類別。 這個巨集接受做為引數類別和其基底類別的名稱，如下所示：
 
-     [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/cpp/specifying-levels-of-functionality_2.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/cpp/specifying-levels-of-functionality_2.cpp)]
 
 > [!NOTE]
 >  一律將您的類別放在實作檔 (。CPP) 為您的類別。 IMPLEMENT_DYNAMIC 巨集應該只評估一次在編譯期間，因此應該不用於介面檔案中 (。H），可能無法包含在多個檔案。

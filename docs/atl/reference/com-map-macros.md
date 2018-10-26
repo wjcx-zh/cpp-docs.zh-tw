@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69838a690fcdddc58194caf38e3666fef023222c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 057652eaf1f188cfd61dcfa4a0d433a43ef8c56c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028047"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068888"
 ---
 # <a name="com-map-macros"></a>COM 對應巨集
 
@@ -31,7 +31,7 @@ ms.locfileid: "46028047"
 |||
 |-|-|
 |[BEGIN_COM_MAP](#begin_com_map)|標記 COM 介面對應項目的開頭。|
-|[END_COM_MAP](#end_com_map)|標記 COM 介面對應項目的結尾。|  
+|[END_COM_MAP](#end_com_map)|標記 COM 介面對應項目的結尾。|
 
 ## <a name="requirements"></a>需求
 
@@ -52,7 +52,7 @@ BEGIN_COM_MAP(x)
 
 ### <a name="remarks"></a>備註
 
-[CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) COM 對應中只會傳回介面指標。 開始 BEGIN_COM_MAP 巨集的介面對應、 將項目加入您的介面，以及每個[COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry)巨集或其中一個變數，並完成地圖[END_COM_MAP](#end_com_map)巨集。  
+[CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) COM 對應中只會傳回介面指標。 開始 BEGIN_COM_MAP 巨集的介面對應、 將項目加入您的介面，以及每個[COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry)巨集或其中一個變數，並完成地圖[END_COM_MAP](#end_com_map)巨集。
 
 ### <a name="example"></a>範例
 

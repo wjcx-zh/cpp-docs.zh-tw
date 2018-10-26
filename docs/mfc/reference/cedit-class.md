@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4ae42373ddf70cf4945c540e781397d7d67bd21
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: fc11631b6a9b4c675d488d69c5575a89853e64a3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890747"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079268"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -1031,7 +1031,6 @@ void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ```
 BOOL SetCueBanner(LPCWSTR lpszText);
 
-
 BOOL SetCueBanner(
     LPCWSTR lpszText,
     BOOL fDrawWhenFocused = FALSE);
@@ -1322,7 +1321,6 @@ void SetSel(
     DWORD dwSelection,
     BOOL bNoScroll = FALSE);
 
-
 void SetSel(
     int nStartChar,
     int nEndChar,
@@ -1358,7 +1356,6 @@ void SetSel(
 ```
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
-
 
 BOOL SetTabStops(
     int nTabStops,
@@ -1402,7 +1399,6 @@ BOOL SetTabStops(
 
 ```
 BOOL ShowBalloonTip(PEDITBALLOONTIP pEditBalloonTip);
-
 
 BOOL ShowBalloonTip(
     LPCWSTR lpszTitle,

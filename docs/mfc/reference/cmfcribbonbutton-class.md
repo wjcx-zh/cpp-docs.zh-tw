@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a57ca3224d54db7b303dac07dce2bdcd70ef7116
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2d235fbcf1b78a0a3c167632c7b0a2f13ead1fc3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374525"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077578"
 ---
 # <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton 類別
 
@@ -276,7 +276,6 @@ void AddSubItem(
 
 ##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched
 
-
 ```
 virtual BOOL CanBeStretched();
 ```
@@ -287,7 +286,6 @@ virtual BOOL CanBeStretched();
 
 ##  <a name="cleanupsizes"></a>  CMFCRibbonButton::CleanUpSizes
 
-
 ```
 virtual void CleanUpSizes();
 ```
@@ -295,7 +293,6 @@ virtual void CleanUpSizes();
 ### <a name="remarks"></a>備註
 
 ##  <a name="closepopupmenu"></a>  CMFCRibbonButton::ClosePopupMenu
-
 
 ```
 virtual void ClosePopupMenu();
@@ -350,7 +347,6 @@ CMFCRibbonButton(
 
 ##  <a name="drawbottomtext"></a>  CMFCRibbonButton::DrawBottomText
 
-
 ```
 CSize DrawBottomText(
     CDC* pDC,
@@ -359,15 +355,14 @@ CSize DrawBottomText(
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[in][in]*bCalcOnly*
+[in]*pDC*<br/>
+[in]*bCalcOnly*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="drawimage"></a>  CMFCRibbonButton::DrawImage
-
 
 ```
 virtual void DrawImage(
@@ -378,13 +373,13 @@ virtual void DrawImage(
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[in][in]*型別*[in] *rectImage*
+[in]*pDC*<br/>
+[in]*類型*<br/>
+[in]*rectImage*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="drawribbontext"></a>  CMFCRibbonButton::DrawRibbonText
-
 
 ```
 virtual int DrawRibbonText(
@@ -397,10 +392,11 @@ virtual int DrawRibbonText(
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[in][in]*strText*
-*rectText*<br/>
-[in][in]*uiDTFlags* [in] *clrText*
+[in]*pDC*<br/>
+[in]*先把 strText*<br/>
+[in]*rectText*<br/>
+[in]*uiDTFlags*<br/>
+[in]*clrText*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -425,7 +421,6 @@ int FindSubItemIndexByID(UINT uiID) const;
 
 ##  <a name="getcommandrect"></a>  CMFCRibbonButton::GetCommandRect
 
-
 ```
 CRect GetCommandRect() const;
 ```
@@ -436,14 +431,13 @@ CRect GetCommandRect() const;
 
 ##  <a name="getcompactsize"></a>  Cmfcribbonbutton:: Getcompactsize
 
-
 ```
 virtual CSize GetCompactSize(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*
+[in]*pDC*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -451,14 +445,13 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ##  <a name="geticon"></a>  CMFCRibbonButton::GetIcon
 
-
 ```
 HICON GetIcon(BOOL bLargeIcon = TRUE) const;
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*bLargeIcon*
+[in]*bLargeIcon*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -483,14 +476,13 @@ int GetImageIndex(BOOL bLargeImage) const;
 
 ##  <a name="getimagesize"></a>  CMFCRibbonButton::GetImageSize
 
-
 ```
 virtual CSize GetImageSize(RibbonImageType type) const;
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*類型*
+[in]*類型*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -498,14 +490,13 @@ virtual CSize GetImageSize(RibbonImageType type) const;
 
 ##  <a name="getintermediatesize"></a>  Cmfcribbonbutton:: Getintermediatesize
 
-
 ```
 virtual CSize GetIntermediateSize(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*
+[in]*pDC*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -525,7 +516,6 @@ HMENU GetMenu() const;
 
 ##  <a name="getmenurect"></a>  CMFCRibbonButton::GetMenuRect
 
-
 ```
 CRect GetMenuRect() const;
 ```
@@ -536,21 +526,19 @@ CRect GetMenuRect() const;
 
 ##  <a name="getregularsize"></a>  Cmfcribbonbutton:: Getregularsize
 
-
 ```
 virtual CSize GetRegularSize(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*
+[in]*pDC*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="getsubitems"></a>  CMFCRibbonButton::GetSubItems
-
 
 ```
 const CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& GetSubItems() const;
@@ -562,7 +550,6 @@ const CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& GetSubItems() cons
 
 ##  <a name="gettextrowheight"></a>  CMFCRibbonButton::GetTextRowHeight
 
-
 ```
 int GetTextRowHeight() const;
 ```
@@ -572,7 +559,6 @@ int GetTextRowHeight() const;
 ### <a name="remarks"></a>備註
 
 ##  <a name="gettooltiptext"></a>  Cmfcribbonbutton:: Gettooltiptext
-
 
 ```
 virtual CString GetToolTipText() const;
@@ -584,7 +570,6 @@ virtual CString GetToolTipText() const;
 
 ##  <a name="hascompactmode"></a>  CMFCRibbonButton::HasCompactMode
 
-
 ```
 virtual BOOL HasCompactMode() const;
 ```
@@ -594,7 +579,6 @@ virtual BOOL HasCompactMode() const;
 ### <a name="remarks"></a>備註
 
 ##  <a name="hasintermediatemode"></a>  CMFCRibbonButton::HasIntermediateMode
-
 
 ```
 virtual BOOL HasIntermediateMode() const;
@@ -606,7 +590,6 @@ virtual BOOL HasIntermediateMode() const;
 
 ##  <a name="haslargemode"></a>  CMFCRibbonButton::HasLargeMode
 
-
 ```
 virtual BOOL HasLargeMode() const;
 ```
@@ -616,7 +599,6 @@ virtual BOOL HasLargeMode() const;
 ### <a name="remarks"></a>備註
 
 ##  <a name="hasmenu"></a>  CMFCRibbonButton::HasMenu
-
 
 ```
 virtual BOOL HasMenu() const;
@@ -628,7 +610,6 @@ virtual BOOL HasMenu() const;
 
 ##  <a name="isalwaysdrawborder"></a>  CMFCRibbonButton::IsAlwaysDrawBorder
 
-
 ```
 virtual BOOL IsAlwaysDrawBorder() const;
 ```
@@ -638,7 +619,6 @@ virtual BOOL IsAlwaysDrawBorder() const;
 ### <a name="remarks"></a>備註
 
 ##  <a name="isalwayslargeimage"></a>  CMFCRibbonButton::IsAlwaysLargeImage
-
 
 ```
 virtual BOOL IsAlwaysLargeImage() const;
@@ -650,7 +630,6 @@ virtual BOOL IsAlwaysLargeImage() const;
 
 ##  <a name="isapplicationbutton"></a>  CMFCRibbonButton::IsApplicationButton
 
-
 ```
 virtual BOOL IsApplicationButton() const;
 ```
@@ -660,7 +639,6 @@ virtual BOOL IsApplicationButton() const;
 ### <a name="remarks"></a>備註
 
 ##  <a name="iscommandareahighlighted"></a>  CMFCRibbonButton::IsCommandAreaHighlighted
-
 
 ```
 virtual BOOL IsCommandAreaHighlighted() const;
@@ -684,7 +662,6 @@ BOOL IsDefaultCommand() const;
 
 ##  <a name="isdefaultpanelbutton"></a>  CMFCRibbonButton::IsDefaultPanelButton
 
-
 ```
 virtual BOOL IsDefaultPanelButton() const;
 ```
@@ -694,7 +671,6 @@ virtual BOOL IsDefaultPanelButton() const;
 ### <a name="remarks"></a>備註
 
 ##  <a name="isdrawtooltipimage"></a>  CMFCRibbonButton::IsDrawTooltipImage
-
 
 ```
 virtual BOOL IsDrawTooltipImage() const;
@@ -706,7 +682,6 @@ virtual BOOL IsDrawTooltipImage() const;
 
 ##  <a name="islargeimage"></a>  CMFCRibbonButton::IsLargeImage
 
-
 ```
 BOOL IsLargeImage() const;
 ```
@@ -716,7 +691,6 @@ BOOL IsLargeImage() const;
 ### <a name="remarks"></a>備註
 
 ##  <a name="ismenuareahighlighted"></a>  CMFCRibbonButton::IsMenuAreaHighlighted
-
 
 ```
 virtual BOOL IsMenuAreaHighlighted() const;
@@ -728,7 +702,6 @@ virtual BOOL IsMenuAreaHighlighted() const;
 
 ##  <a name="ismenuonbottom"></a>  CMFCRibbonButton::IsMenuOnBottom
 
-
 ```
 BOOL IsMenuOnBottom() const;
 ```
@@ -738,7 +711,6 @@ BOOL IsMenuOnBottom() const;
 ### <a name="remarks"></a>備註
 
 ##  <a name="ispopupdefaultmenulook"></a>  CMFCRibbonButton::IsPopupDefaultMenuLook
-
 
 ```
 virtual BOOL IsPopupDefaultMenuLook() const;
@@ -762,7 +734,6 @@ BOOL IsRightAlignMenu() const;
 
 ##  <a name="issinglelinetext"></a>  CMFCRibbonButton::IsSingleLineText
 
-
 ```
 BOOL IsSingleLineText() const;
 ```
@@ -773,14 +744,13 @@ BOOL IsSingleLineText() const;
 
 ##  <a name="oncalctextsize"></a>  CMFCRibbonButton::OnCalcTextSize
 
-
 ```
 virtual void OnCalcTextSize(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*
+[in]*pDC*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -803,19 +773,17 @@ virtual void OnClick(CPoint point);
 
 ##  <a name="ondraw"></a>  Cmfcribbonbutton:: Ondraw
 
-
 ```
 virtual void OnDraw(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*
+[in]*pDC*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="ondrawborder"></a>  CMFCRibbonButton::OnDrawBorder
-
 
 ```
 virtual void OnDrawBorder(CDC* pDC);
@@ -823,12 +791,11 @@ virtual void OnDrawBorder(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*
+[in]*pDC*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="onfillbackground"></a>  CMFCRibbonButton::OnFillBackground
-
 
 ```
 virtual COLORREF OnFillBackground(CDC* pDC);
@@ -836,7 +803,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*
+[in]*pDC*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -923,14 +890,13 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 
 ##  <a name="setdescription"></a>  CMFCRibbonButton::SetDescription
 
-
 ```
 virtual void SetDescription(LPCTSTR lpszText);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*lpszText*
+[in]*lpszText*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -988,14 +954,13 @@ Windows 功能表控制代碼。
 
 ##  <a name="setparentcategory"></a>  CMFCRibbonButton::SetParentCategory
 
-
 ```
 virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*pParent*
+[in]*pParent*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1014,14 +979,13 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
 
 ##  <a name="settext"></a>  CMFCRibbonButton::SetText
 
-
 ```
 virtual void SetText(LPCTSTR lpszText);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*lpszText*
+[in]*lpszText*<br/>
 
 ### <a name="remarks"></a>備註
 

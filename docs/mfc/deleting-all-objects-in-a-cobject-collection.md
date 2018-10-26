@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3374b2a292fc6463cb4fd85d0cd56fe9c3556443
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 986bc24c57f8692bfdd98194b9e58c9cee6817f6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448242"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067185"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>刪除 CObject 集合中的所有物件
 
@@ -68,9 +68,9 @@ ms.locfileid: "46448242"
 
 1. 在刪除之後，呼叫 `RemoveAll` 函式以從陣列移除所有項目。
 
-     用於刪除陣列中所有項目的程式碼如下所示：
+   用於刪除陣列中所有項目的程式碼如下所示：
 
-     [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
 
 如上述清單範例，您可以呼叫 `RemoveAll` 移除陣列中所有項目，或呼叫 `RemoveAt` 移除個別項目。
 
@@ -82,9 +82,9 @@ ms.locfileid: "46448242"
 
 1. 在刪除之後，呼叫 `RemoveAll` 函式以從對應移除所有項目。
 
-     用於刪除 `CMap` 集合中所有項目的程式碼，如下所示。 對應中的每個項目都具有字串做為索引鍵，並以 `CPerson` 物件 (衍生自 `CObject`) 做為值。
+   用於刪除 `CMap` 集合中所有項目的程式碼，如下所示。 對應中的每個項目都具有字串做為索引鍵，並以 `CPerson` 物件 (衍生自 `CObject`) 做為值。
 
-     [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
+   [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
 
 您可以呼叫 `RemoveAll` 移除對應或 `RemoveKey` 的所有項目，以移除具有指定索引鍵的個別項目。
 

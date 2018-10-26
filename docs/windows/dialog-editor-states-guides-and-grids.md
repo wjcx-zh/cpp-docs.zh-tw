@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d0cc73df8304377bde00d8da2ab3c501ea5db45
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4a362404cc92a147b0517b394c3923e0c9924ca3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373265"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059333"
 ---
-# <a name="dialog-editor-states-guides-and-grids-c"></a>對話方塊編輯器狀態 （輔助線和格線） （c + +） 
+# <a name="dialog-editor-states-guides-and-grids-c"></a>對話方塊編輯器狀態 （輔助線和格線） （c + +）
 
 您可以使用對話方塊上的控制項排列 **對話方塊**編輯器中的三個不同的狀態：
 

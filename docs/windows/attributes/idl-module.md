@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 91bed0ebfdacae21f2d606c0b8fa1bb43326816d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 54fcef3c7b2ef86273a570e483f65b34b3b2efc2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791035"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063092"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -56,10 +56,10 @@ function declaration
 （選擇性）這個類型程式庫說明識別碼。
 
 *hidden*<br/>
-（選擇性）避免程式庫顯示為參數。 請參閱[隱藏](/windows/desktop/Midl/hidden)MIDL 屬性，如需詳細資訊。
+（選擇性）避免程式庫顯示為參數。 如需詳細資訊，請參閱 [hidden](/windows/desktop/Midl/hidden) MIDL 屬性。
 
 *restricted*<br/>
-（選擇性）程式庫成員不能任意呼叫。 請參閱[限制](/windows/desktop/Midl/restricted)MIDL 屬性，如需詳細資訊。
+（選擇性）程式庫成員不能任意呼叫。 如需詳細資訊，請參閱 [restricted](/windows/desktop/Midl/restricted) MIDL 屬性。
 
 *函式宣告*<br/>
 您將定義的函式。
@@ -98,10 +98,10 @@ void FuncName(int i);
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [IDL 屬性](idl-attributes.md)<br/>
 [獨立屬性](stand-alone-attributes.md)<br/>
-[entry](entry.md)  
+[entry](entry.md)

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff655573f77b901725fe18c2346c46306c9b853a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bf5bca25f0e5b6a349544e24d0983d4d297be9ae
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716803"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065872"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 列舉
 
@@ -73,7 +73,6 @@ enum class copy_options {
 |`directories_only`|僅逐一查看目錄，而略過檔案。|
 |`create_symlinks`|建立符號連結，而不要複製檔案。 除非目的地是目前的目錄，否則就必須將絕對路徑作為來源路徑。|
 |`create_hard_links`|建立永久連結，而不要複製檔案。|
-
 
 ## <a name="directory_options"></a> directory_options
 

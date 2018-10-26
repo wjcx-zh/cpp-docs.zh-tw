@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26345a95559000815ed7d2e2cc336892d619969b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 104f9e0be67a350a1725dfbcd2bf234a8bc79553
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413740"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052560"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>定義反映訊息的訊息處理常式
 
@@ -53,7 +53,7 @@ ms.locfileid: "46413740"
 
 1. 按一下 接受建議的名稱。 處理常式加入至您的專案。
 
-     您已新增的訊息處理常式名稱會出現在右欄中反映的訊息視窗。
+   您已新增的訊息處理常式名稱會出現在右欄中反映的訊息視窗。
 
 9. 若要編輯或刪除的訊息處理常式，重複步驟 4 到 7。 按一下包含要編輯或刪除，然後按一下適當的工作處理常式名稱的儲存格。
 
@@ -61,7 +61,7 @@ ms.locfileid: "46413740"
 
 [將訊息對應到函式](../../mfc/reference/mapping-messages-to-functions.md)<br/>
 [使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[加入類別](../../ide/adding-a-class-visual-cpp.md)<br/>
+[新增類別](../../ide/adding-a-class-visual-cpp.md)<br/>
 [新增成員函式](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [新增成員變數](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [覆寫虛擬函式](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>

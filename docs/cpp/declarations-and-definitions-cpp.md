@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f2155fef0f9287273b3c45e9318665acfdae527
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2c0ebbc2686c229d7818042672cdb1d6d2143f81
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070635"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058072"
 ---
 # <a name="declarations-and-definitions-c"></a>宣告和定義 (C++)
 
@@ -35,7 +35,7 @@ ms.locfileid: "46070635"
 
 1. 為類別宣告內的靜態資料成員。
 
-     由於靜態類別資料成員是由類別中所有物件共用的不連續變數，因此必須在類別宣告之外定義及初始化。 (如需類別以及類別成員的詳細資訊，請參閱[類別](../cpp/classes-and-structs-cpp.md)。)
+   由於靜態類別資料成員是由類別中所有物件共用的不連續變數，因此必須在類別宣告之外定義及初始化。 (如需類別以及類別成員的詳細資訊，請參閱[類別](../cpp/classes-and-structs-cpp.md)。)
 
 1. 為不含下列定義的類別名稱宣告，例如 `class T;`。
 

@@ -16,33 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f217c0dad3bf74ab930cf1f66392fe22d9df832
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 789c9179b2ba48f5c3796f709931728bc756aaaa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446544"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075030"
 ---
 # <a name="rawinterfacesonly"></a>raw_interfaces_only
-**C + + 特定**  
-  
-隱藏的錯誤處理的包裝函式產生及[屬性](../cpp/property-cpp.md)使用這些包裝函式的宣告。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-raw_interfaces_only  
-```  
-  
-## <a name="remarks"></a>備註  
- 
-**Raw_interfaces_only**屬性也會造成用於命名非屬性函式會移除預設前置詞。 一般來說，前置詞是**raw_**。 如果指定這個屬性，函式名稱會直接來自類型程式庫。  
-  
-這個屬性只能讓您公開類型程式庫中的低階內容。  
-  
-**END c + + 特定的**  
-  
-## <a name="see-also"></a>另請參閱  
- 
+**C + + 特定**
+
+隱藏的錯誤處理的包裝函式產生及[屬性](../cpp/property-cpp.md)使用這些包裝函式的宣告。
+
+## <a name="syntax"></a>語法
+
+```
+raw_interfaces_only
+```
+
+## <a name="remarks"></a>備註
+
+**Raw_interfaces_only**屬性也會造成用於命名非屬性函式會移除預設前置詞。 一般來說，前置詞是**raw_**。 如果指定這個屬性，函式名稱會直接來自類型程式庫。
+
+這個屬性只能讓您公開類型程式庫中的低階內容。
+
+**END c + + 特定的**
+
+## <a name="see-also"></a>另請參閱
+
 [#import 屬性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import 指示詞](../preprocessor/hash-import-directive-cpp.md)

@@ -13,18 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d79888a58e5fc6d6911c4cc123877c1537f22cf1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2d0cc85272eae4a5231872232dc259a9120a6bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441924"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059866"
 ---
 # <a name="key-wrl-apis-by-category"></a>依分類區分的重要 WRL 應用程式開發介面
+
 下表列出主要 Windows 執行階段 c + + 樣板程式庫類別、 結構、 函式和巨集。 協助程式的命名空間和類別的建構會省略。 這些清單會增加命名空間所排列的 API 文件。
-  
-### <a name="classes"></a>類別
-  
+
+## <a name="classes"></a>類別
+
 |標題|描述|
 |-----------|-----------------|
 |[ActivationFactory 類別](../windows/activationfactory-class.md)|讓 Windows 執行階段啟動一或多個類別。|
@@ -46,18 +47,18 @@ ms.locfileid: "46441924"
 |[SimpleActivationFactory 類別](../windows/simpleactivationfactory-class.md)|提供基本機制以建立 Windows 執行階段或傳統 COM 基底類別。|
 |[SimpleClassFactory 類別](../windows/simpleclassfactory-class.md)|提供基本機制以建立基底類別。|
 |[WeakRef 類別](../windows/weakref-class.md)|代表 *弱式參考* 僅供 Windows 執行階段使用，而不供傳統 COM 使用。 弱式參考代表不一定可存取的物件。|
-  
-### <a name="structures"></a>結構
-  
+
+## <a name="structures"></a>結構
+
 |標題|描述|
 |-----------|-----------------|
 |[ChainInterfaces 結構](../windows/chaininterfaces-structure.md)|指定可以套用至一組介面 ID 的驗證和初始化函式。|
 |[CloakedIid 結構](../windows/cloakediid-structure.md)|若要指出`RuntimeClass`，`Implements`和`ChainInterfaces`範本指定的介面不是在 IID 清單中存取。|
 |[Implements 結構](../windows/implements-structure.md)|Implements`QueryInterface`和`GetIid`指定介面。|
 |[MixIn 結構](../windows/mixin-structure.md)|確保執行階段類別衍生自 Windows 執行階段介面 (若有的話)，然後才是傳統 COM 介面。|
-  
-### <a name="functions"></a>函式
-  
+
+## <a name="functions"></a>函式
+
 |標題|描述|
 |-----------|-----------------|
 |[ActivateInstance 函式](../windows/activateinstance-function.md)|註冊，並擷取在指定的類別識別碼所定義之指定類型的執行個體|
@@ -67,14 +68,14 @@ ms.locfileid: "46441924"
 |[CreateClassFactory 函式](../windows/createclassfactory-function.md)|建立會產生指定類別之執行個體的處理站。|
 |[GetActivationFactory 函式](../windows/getactivationfactory-function.md)|擷取的範本參數所指定之類型的啟用 factory。|
 |[Make 函式](../windows/make-function.md)|初始化指定的 Windows 執行階段類別。|
-  
-### <a name="macros"></a>巨集
-  
+
+## <a name="macros"></a>巨集
+
 |標題|描述|
 |-----------|-----------------|
 |[ActivatableClass 巨集](../windows/activatableclass-macros.md)|擴展內部快取，其中包含可以建立指定類別的執行個體的處理站。|
 |[InspectableClass 巨集](../windows/inspectableclass-macro.md)|設定執行階段類別名稱和信任層級。|
-  
+
 ## <a name="see-also"></a>另請參閱
 
 [Windows 執行階段 C++ 範本庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

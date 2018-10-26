@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c6bb07071efa162b5b33ae5f1dfe72ac7ea02e8
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: b0d86b31823ec31461f953c7cfc16a5774f215fd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790667"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067159"
 ---
 # <a name="supporterrorinfo"></a>support_error_info
 
@@ -41,9 +41,9 @@ ms.locfileid: "48790667"
 
 ## <a name="remarks"></a>備註
 
-**support_error_info** C++ 屬性支援將目標物件所遇到的詳細內容錯誤傳回給用戶端。 支援錯誤的方法物件`IErrorInfo`，物件必須實作介面。 如需詳細資訊，請參閱 <<c0> [ 支援 IDispatch 和 IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md)。
+**support_error_info** C++ 屬性支援將目標物件所遇到的詳細內容錯誤傳回給用戶端。 支援錯誤的方法物件`IErrorInfo`，物件必須實作介面。 如需詳細資訊，請參閱 [支援 IDispatch 和 IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md)。
 
-此屬性會新增[ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md)類別作為基底類別的目標物件。 這會導致的預設實作`ISupportErrorInfo`，可以在單一介面產生物件錯誤時使用。
+此屬性會將 [ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md) 類別當成基底類別新增至目標物件。 這會導致的預設實作`ISupportErrorInfo`，可以在單一介面產生物件錯誤時使用。
 
 ## <a name="example"></a>範例
 
@@ -80,9 +80,9 @@ class CMyClass
 |**必要屬性**|無|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [COM 屬性](com-attributes.md)<br/>
-[類別屬性](class-attributes.md)  
+[類別屬性](class-attributes.md)

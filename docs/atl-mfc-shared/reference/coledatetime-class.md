@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92761508a5e93c7ef0d0a4099dde587987a50dad
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: b4490eef3427f66456ec79ae2f5429d309a82a54
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809157"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057397"
 ---
 # <a name="coledatetime-class"></a>COleDateTime 類別
 
@@ -228,10 +228,10 @@ A`SYSTEMTIME`結構轉換成日期/時間值，並複製到新`COleDateTime`物�
 *filetimeSrc*<br/>
 A`FILETIME`結構轉換成日期/時間值，並複製到新`COleDateTime`物件。 請注意，`FILETIME`使用 Universal Coordinated Time (UTC)，因此如果您傳遞結構中的當地時間，結果將會不正確。 請參閱[檔案的時間](/windows/desktop/SysInfo/file-times)Windows sdk for 的詳細資訊。
 
-*nYear*， *nMonth*， *n*，*當天的時數*， *nMin*， *nSec*  
+*nYear*， *nMonth*， *n*，*當天的時數*， *nMin*， *nSec*<br/>
 表示要複製到新的日期和時間值`COleDateTime`物件。
 
-*wDosDate*， *wDosTime*  
+*wDosDate*， *wDosTime*<br/>
 MS-DOS 日期和時間值轉換成日期/時間值，並複製到新`COleDateTime`物件。
 
 *dbts*<br/>
@@ -333,13 +333,13 @@ A `CString` ，其中包含已格式化的日期/時間值。
 
 此函式的三種形式的簡短描述如下：
 
-`Format`( *dwFlags*， *lcid*)  
+`Format`( *dwFlags*， *lcid*)<br/>
 此表單會使用語言規格 （也就是地區設定識別碼） 將值格式化日期和時間。 使用預設參數，此表單會列印日期和時間，除非時間部分則為 0 （午夜），在此情況下它只會列印只是日期或日期部分是 0 (30 1899 年 12 月，) 在這種情況下，它會列印只的時間。 如果日期/時間值為 0 (30 年 12 月 1899 午夜)，這份表單的預設參數會列印午夜。
 
-`Format`( *lpszFormat*)  
+`Format`( *lpszFormat*)<br/>
 這種形式中使用格式字串，其中包含特殊格式化的程式碼會加上百分比符號 （%），來格式化值`printf`。 格式化的字串做為參數傳遞至函式。 如需格式化程式碼的詳細資訊，請參閱[strftime、 wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)執行階段程式庫參考中。
 
-`Format`( *nFormatID*)  
+`Format`( *nFormatID*)<br/>
 這種形式中使用格式字串，其中包含特殊格式化的程式碼會加上百分比符號 （%），來格式化值`printf`。 格式化的字串是資源。 此字串資源的識別碼會當做參數傳遞。 如需格式化程式碼的詳細資訊，請參閱[strftime、 wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)中*執行階段程式庫參考*。
 
 ### <a name="example"></a>範例
@@ -701,13 +701,13 @@ DateTimeStatus GetStatus() const throw();
 傳回值由定義`DateTimeStatus`列舉型別，其定義內`COleDateTime`類別。
 
 ```
-enum DateTimeStatus  
-{  
-   error = -1,  
-   valid = 0,  
-   invalid = 1,    // Invalid date (out of range, etc.)  
-   null = 2,       // Literally has no value  
-};  
+enum DateTimeStatus
+{
+   error = -1,
+   valid = 0,
+   invalid = 1,    // Invalid date (out of range, etc.)
+   null = 2,       // Literally has no value
+};
 ```
 
 如這些狀態值的簡短描述，請參閱下列清單：
@@ -930,10 +930,10 @@ operator DATE() const throw();
 剖析字串，以讀取日期/時間值。
 
 ```
-bool ParseDateTime(  
-LPCTSTR lpszDate,
-DWORD dwFlags = 0,
-LCID lcid = LANG_USER_DEFAULT) throw();
+bool ParseDateTime(
+    LPCTSTR lpszDate,
+    DWORD dwFlags = 0,
+    LCID lcid = LANG_USER_DEFAULT) throw();
 ```
 
 ### <a name="parameters"></a>參數
@@ -991,15 +991,15 @@ LCID lcid = LANG_USER_DEFAULT) throw();
 設定這個日期`COleDateTime`物件。
 
 ```
-int SetDate(  
-int nYear,
-int nMonth,
-int nDay) throw();
+int SetDate(
+    int nYear,
+    int nMonth,
+    int nDay) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*nYear*， *nMonth*， *n*  
+*nYear*， *nMonth*， *n*<br/>
 表示要複製到這個的日期元件`COleDateTime`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -1062,18 +1062,18 @@ int nDay) throw();
 設定日期和時間，這個`COleDateTime`物件。
 
 ```
-int SetDateTime(  
-int nYear,
-int nMonth,
-int nDay,
-int nHour,
-int nMin,
-int nSec) throw();
+int SetDateTime(
+    int nYear,
+    int nMonth,
+    int nDay,
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*nYear*， *nMonth*， *n*，*當天的時數*， *nMin*， *nSec*  
+*nYear*， *nMonth*， *n*，*當天的時數*， *nMin*， *nSec*<br/>
 表示要複製到這個日期和時間元件`COleDateTime`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -1170,15 +1170,15 @@ void SetStatus(DateTimeStatus status) throw();
 設定這個時間`COleDateTime`物件。
 
 ```
-int SetTime(  
-int nHour,
-int nMin,
-int nSec) throw();
+int SetTime(
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*當天的時數*， *nMin*， *nSec*  
+*當天的時數*， *nMin*， *nSec*<br/>
 表示要複製到這個階段元件`COleDateTime`物件。
 
 ### <a name="return-value"></a>傳回值

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d050f27688d97cd3ef0352eed00f4dadb1fe6d98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 96bcaf768ece46c22422fb3d98b85def7c57ed6b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403782"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056590"
 ---
 # <a name="creating-stack-and-queue-collections"></a>建立堆疊和佇列集合
 
@@ -40,9 +40,9 @@ ms.locfileid: "46403782"
 
 1. 從其中一個現有的 MFC 清單類別衍生新的清單類別，並加入多個成員函式支援堆疊作業的功能。
 
-     下列範例顯示如何加入成員函式，以推入項目至堆疊、檢視堆疊的最上層項目，並從堆疊最上方彈出項目：
+   下列範例顯示如何加入成員函式，以推入項目至堆疊、檢視堆疊的最上層項目，並從堆疊最上方彈出項目：
 
-     [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
+   [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
 
 請注意，這種方法會公開基礎 `CObList` 類別。 使用者可以呼叫任何 `CObList` 成員函式，無論它是否對堆疊具有意義。
 
@@ -54,9 +54,9 @@ ms.locfileid: "46403782"
 
 1. 從其中一個預先定義的清單類別衍生隨附 MFC 程式庫之新的清單類別，並加入多個成員函式支援佇列作業。
 
-     下列範例顯示如何附加成員函式，將項目加入至佇列的末端，並從佇列的前端取得項目。
+   下列範例顯示如何附加成員函式，將項目加入至佇列的末端，並從佇列的前端取得項目。
 
-     [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
+   [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
 
 ## <a name="see-also"></a>另請參閱
 

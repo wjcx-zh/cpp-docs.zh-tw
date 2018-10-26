@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e5147faaf0170a10295006f12d7e95f5dfd3e8d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 159d452c3b0a813c52d8486f52d67b9817c3a558
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380694"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069278"
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection 類別
 
@@ -81,7 +81,7 @@ Mutex 不會使用的重要區段 (請參閱[CMutex](../../mfc/reference/cmutex-
 
 - 獨立的方法，以使用獨立`CCriticalSection`物件，建構`CCriticalSection`物件時需要它。 之後從建構函式成功傳回時，明確地鎖定的物件呼叫[鎖定](#lock)。 呼叫[Unlock](#unlock)完成時存取重要區段。 此方法，並清楚給其他人讀取您的原始程式碼，是更容易發生錯誤，您必須記得鎖定和解除鎖定重要區段之前, 和之後存取。
 
-     更適合的方法是使用[CSingleLock](../../mfc/reference/csinglelock-class.md)類別。 它也有`Lock`和`Unlock`方法，但您不需要擔心如何解除鎖定的資源，如果發生例外狀況。
+   更適合的方法是使用[CSingleLock](../../mfc/reference/csinglelock-class.md)類別。 它也有`Lock`和`Unlock`方法，但您不需要擔心如何解除鎖定的資源，如果發生例外狀況。
 
 - 內嵌方法，您也可以共用多個執行緒的類別，藉由新增`CCriticalSection`-類別和鎖定時所需的資料成員的型別資料成員。
 

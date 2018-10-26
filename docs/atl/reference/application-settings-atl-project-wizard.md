@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cff60e5316202842b2ee22c5c6ba10813839b5d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 127e5187f2e6511279633ffe9b5e26b24014f6b2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46035847"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070643"
 ---
 # <a name="application-settings-atl-project-wizard"></a>應用程式設定, ATL 專案精靈
 
@@ -31,15 +31,15 @@ ms.locfileid: "46035847"
 
 選擇其中一種伺服器類型：
 
-- **動態連結程式庫 (DLL)**  
+- **動態連結程式庫 (DLL)**
 
    選取即可建立同處理序伺服器。
 
-- **可執行檔 (EXE)**  
+- **可執行檔 (EXE)**
 
    選取即可建立本機的跨處理序伺服器。 此選項不允許對 MFC 或 COM + 1.0 支援。 它不會不允許合併 proxy/stub 程式碼。
 
-- **服務 (EXE)**  
+- **服務 (EXE)**
 
    選取即可建立 Windows 啟動時，會在背景中執行的 Windows 應用程式。 此選項不允許支援 MFC 或 COM + 1.0，或不允許合併 proxy/stub 程式碼。
 
@@ -48,15 +48,15 @@ ms.locfileid: "46035847"
 > [!NOTE]
 > 所有其他選項都適用於僅限 DLL 專案。
 
-- **允許合併 proxy/stub 程式碼**  
+- **允許合併 proxy/stub 程式碼**
 
    選取 **允許合併 proxy/stub 程式碼**核取方塊，以便於需要封送處理介面時。 此選項將放在同一個可執行檔當做伺服器 MIDL 產生 proxy 和虛設常式的程式碼。
 
-- **MFC 支援**  
+- **MFC 支援**
 
    選取此選項，以指定您的物件，包含 MFC 支援。 此選項，將您的專案連結至 MFC 程式庫，讓您可以存取的任何類別和其所包含的函式。
 
-- **支援 COM + 1.0**  
+- **支援 COM + 1.0**
 
    選取此選項，即可修改專案組建設定，以支援 COM + 1.0 元件。 除了標準的程式庫清單中，精靈會新增 COM + 1.0 元件特有的程式庫 comsvcs.lib
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce81436781a92c8d2c9156e1d1c02513c3816dc4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1599500a775bcd1c76f2e63a1f7b20126a2fb329
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440052"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078202"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC ActiveX 控制項：加入另一個自訂屬性頁
 
@@ -65,7 +65,7 @@ ms.locfileid: "46440052"
 
 1. 從快顯功能表中，按一下**新增**，然後按一下**加入類別**。
 
-     這會開啟[加入類別](../ide/add-class-dialog-box.md) 對話方塊。
+   這會開啟[加入類別](../ide/add-class-dialog-box.md) 對話方塊。
 
 1. 按兩下**MFC 類別**範本。
 
@@ -95,25 +95,25 @@ ms.locfileid: "46440052"
 
 1. 按兩下**字串資料表**資料夾然後再按兩下現有的字串資料表的資源，您要新增的字串。
 
-     這是在視窗中開啟字串資料表。
+   這是在視窗中開啟字串資料表。
 
 1. 選取空白的行結尾的字串資料表，並輸入文字或標題的字串： 例如，[其他屬性頁面]。
 
-     這會開啟**字串屬性**頁面上顯示**標題**並**識別碼**方塊。 **標題**方塊包含您所輸入的字串。
+   這會開啟**字串屬性**頁面上顯示**標題**並**識別碼**方塊。 **標題**方塊包含您所輸入的字串。
 
 1. 在 **識別碼**方塊中，選取或輸入字串的識別碼。 當您完成時，請按下 Enter。
 
-     這個範例會使用**IDS_SAMPLE_ADDPAGE**針對新的屬性頁的型別名稱。
+   這個範例會使用**IDS_SAMPLE_ADDPAGE**針對新的屬性頁的型別名稱。
 
 1. 重複步驟 3 和 4 使用**IDS_SAMPLE_ADDPPG_CAPTION**識別碼和 「 額外屬性頁面 」 標題。
 
 1. 在中。您新的屬性頁類別的 CPP 檔案 (在此範例中， `CAddtlPropPage`) 修改`CAddtlPropPage::CAddtlPropPageFactory::UpdateRegistry`以便 IDS_SAMPLE_ADDPAGE 傳[AfxOleRegisterPropertyPageClass](../mfc/reference/registering-ole-controls.md#afxoleregisterpropertypageclass)，如下列範例所示：
 
-     [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
+   [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
 
 1. 修改的建構函式`CAddtlPropPage`以便 IDS_SAMPLE_ADDPPG_CAPTION 傳遞至`COlePropertyPage`建構函式，如下所示：
 
-     [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
+   [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
 
 之後您已進行必要的修改重建專案，然後使用測試容器來測試新的 [屬性] 頁面。 如需測試容器存取方法的詳細資訊，請參閱 [以測試容器測試屬性和事件](../mfc/testing-properties-and-events-with-test-container.md) 。
 

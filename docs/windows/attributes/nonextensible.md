@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 84f14cccdd4dd142f2fa6e17e48c37a3fecb94ea
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 6a025b54e3c41f283e1877e0b97c7dbb6e5f32bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790898"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062805"
 ---
 # <a name="nonextensible"></a>nonextensible
 
@@ -70,9 +70,9 @@ __interface IFireTabCtrl
 |**必要屬性**|`dual` 和`oleautomation`，或 `dispinterface`|
 |**無效屬性**|無|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 
 [IDL 屬性](idl-attributes.md)<br/>
-[介面屬性](interface-attributes.md)  
+[介面屬性](interface-attributes.md)

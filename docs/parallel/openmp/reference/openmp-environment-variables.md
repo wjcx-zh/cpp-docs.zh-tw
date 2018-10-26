@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 395494431c3942832a64cf64c9c150f643389062
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: a229aa453b6e40f0da25252f2f8aa1be3d97a729
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990226"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074250"
 ---
 # <a name="openmp-environment-variables"></a>OpenMP 環境變數
 
@@ -37,12 +37,12 @@ ms.locfileid: "49990226"
 
 Visual c + + 實作的 openmp 標準包含下列環境變數。 這些環境變數會在程式啟動時讀取和修改其值會被忽略，在執行階段 (例如，使用[_putenv、 _wputenv](../../../c-runtime-library/reference/putenv-wputenv.md))。
 
-環境變數                | 描述
------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[OMP_DYNAMIC](#omp-dynamic)         | 指定執行階段的 OpenMP 是否可調整的平行區域中的執行緒數目。
-[OMP_NESTED](#omp-nested)           | 指定是否巢狀平行處理原則已啟用，除非已啟用或停用巢狀平行處理原則`omp_set_nested`。
-[OMP_NUM_THREADS](#omp-num-threads) | 在平行區域中，設定執行緒數目上限，但覆寫[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)或是[num_threads](openmp-clauses.md#num-threads)。
-[OMP_SCHEDULE](#omp-schedule)       | 修改的行為[排程](openmp-clauses.md#schedule)子句時`schedule(runtime)`中指定`for`或`parallel for`指示詞。
+|環境變數|描述|
+|--------------------|-----------|
+|[OMP_DYNAMIC](#omp-dynamic)|指定執行階段的 OpenMP 是否可調整的平行區域中的執行緒數目。|
+|[OMP_NESTED](#omp-nested)|指定是否巢狀平行處理原則已啟用，除非已啟用或停用巢狀平行處理原則`omp_set_nested`。|
+|[OMP_NUM_THREADS](#omp-num-threads)|在平行區域中，設定執行緒數目上限，但覆寫[omp_set_num_threads](openmp-functions.md#omp-set-num-threads)或是[num_threads](openmp-clauses.md#num-threads)。|
+|[OMP_SCHEDULE](#omp-schedule)|修改的行為[排程](openmp-clauses.md#schedule)子句時`schedule(runtime)`中指定`for`或`parallel for`指示詞。|
 
 ## <a name="omp-dynamic"></a>OMP_DYNAMIC
 
@@ -54,7 +54,7 @@ set OMP_DYNAMIC[=TRUE | =FALSE]
 
 ### <a name="remarks"></a>備註
 
-`OMP_DYNAMIC`環境變數可以覆寫[omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)函式。
+`OMP_DYNAMIC`環境變數可以覆寫[omp_set_dynamic](openmp-functions.md#omp-set-dynamic)函式。
 
 在 Visual c + + 實作的 OpenMP 標準預設值是`OMP_DYNAMIC=FALSE`。
 
@@ -84,7 +84,7 @@ set OMP_NESTED[=TRUE | =FALSE]
 
 ### <a name="remarks"></a>備註
 
-`OMP_NESTED`環境變數可以覆寫[omp_set_nested](../../../parallel/openmp/reference/omp-set-nested.md)函式。
+`OMP_NESTED`環境變數可以覆寫[omp_set_nested](openmp-functions.md#omp-set-nested)函式。
 
 在 Visual c + + 實作的 OpenMP 標準預設值是`OMP_DYNAMIC=FALSE`。
 
@@ -106,7 +106,7 @@ set OMP_NESTED
 
 ## <a name="omp-num-threads"></a>OMP_NUM_THREADS
 
-在平行區域中，設定執行緒數目上限，但覆寫[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)或是[num_threads](openmp-clauses.md#num-threads)。
+在平行區域中，設定執行緒數目上限，但覆寫[omp_set_num_threads](openmp-functions.md#omp-set-num-threads)或是[num_threads](openmp-clauses.md#num-threads)。
 
 ```
 set OMP_NUM_THREADS[=num]
@@ -119,7 +119,7 @@ set OMP_NUM_THREADS[=num]
 
 ### <a name="remarks"></a>備註
 
-`OMP_NUM_THREADS`環境變數可以覆寫[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)函式或由[num_threads](openmp-clauses.md#num-threads)。
+`OMP_NUM_THREADS`環境變數可以覆寫[omp_set_num_threads](openmp-functions.md#omp-set-num-threads)函式或由[num_threads](openmp-clauses.md#num-threads)。
 
 預設值`num`Visual c + + 中實作的 OpenMP 標準是虛擬處理器，包括超執行緒 Cpu 數目。
 

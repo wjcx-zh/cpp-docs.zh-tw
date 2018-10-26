@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fc187cea874d16522955dcd46c2ceac34d29098
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c7100199d7e4ee76bf2f096aba9e20c244ae10ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136155"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070554"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>偵錯和錯誤報告巨集
 
@@ -102,7 +102,7 @@ ATLASSERT(booleanExpression);
 
 ### <a name="remarks"></a>備註
 
-在偵錯組建中，評估 ATLASSERT *booleanExpression*結果為 false 時，產生偵錯報表。  
+在偵錯組建中，評估 ATLASSERT *booleanExpression*結果為 false 時，產生偵錯報表。
 
 ## <a name="requirements"></a>需求
 
@@ -139,11 +139,11 @@ ATLENSURE 和 ATLASSERT 之間的差異是 ATLENSURE 在發行組建也如同偵
 
 ### <a name="example"></a>範例
 
-[!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
+[!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afx.h  
+**標頭：** afx.h
 
 ##  <a name="atltracenotimpl"></a>  ATLTRACENOTIMPL
 
@@ -168,7 +168,7 @@ ATLTRACENOTIMPL(funcname);
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atltrace.h 
+**標頭：** atltrace.h
 
 ##  <a name="atltrace"></a>  ATLTRACE
 
@@ -177,7 +177,7 @@ ATLTRACENOTIMPL(funcname);
 ```
 ATLTRACE(exp);
 
-ATLTRACE(  
+ATLTRACE(
     DWORD category,
     UINT  level,
     LPCSTR lpszFormat, ...);

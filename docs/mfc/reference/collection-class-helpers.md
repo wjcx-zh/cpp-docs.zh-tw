@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a14a45341645feeb0b85f92379702c9fc40c9d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 010afb3939afcb392d38cda8dfb1ab1a37100d3b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381714"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083369"
 ---
 # <a name="collection-class-helpers"></a>集合類別 Helper
 
@@ -152,7 +152,6 @@ void  AFXAPI DumpElements(
 `CArray::Dump`， `CList::Dump`，和`CMap::Dump`函式會呼叫這個傾印的深度是否大於 0。
 
 預設實作不做任何動作。 如果您集合的元素衍生自`CObject`，覆寫會通常逐一查看集合的項目，呼叫`Dump`中開啟每個元素。
-
 
 ### <a name="requirements"></a>需求
 

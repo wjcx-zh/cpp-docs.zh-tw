@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b5a4551387716c81766ae99759f8188410497be
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: c7b48b2382ee22cc5d11c1145dc494aca4e7997f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540568"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083187"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>預設為關閉的編譯器警告
 編譯器包含預設關閉的警告，因為大部分的開發人員不想要看到它們。 在某些情況下，它們代表樣式的選擇，或在較舊的程式碼，是常見的習慣用語或利用語言的 Microsoft 擴充功能。 在其他情況下，它們表示程式設計人員通常都會不正確的假設，可能會導致非預期或未定義行為的區域。 有些警告可能非常冗長的程式庫標頭中。 C 執行階段程式庫和 c + + 標準程式庫要不發出任何警告，只能在警告層級[/w4](../build/reference/compiler-option-warning-level.md)。
@@ -154,12 +154,12 @@ ms.locfileid: "42540568"
 |C5042 （層級 3）|'*函式*': 在區塊範圍內的函式宣告不能指定 'inline' standard c + + 中，因此請移除 'inline' 指定名稱<sup>15.5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|如果指定了 /Qspectre 參數，編譯器會插入 Spectre 風險降低為記憶體負載<sup>15.7</sup>|
 
-<sup>14.1</sup>這項警告是使用 Visual Studio 2015 Update 1 開始。  
-<sup>14.3</sup>這項警告是在 Visual Studio 2015 Update 3 開始提供。  
-<sup>15.3</sup>這項警告是在 Visual Studio 2017 15.3 版開始提供。  
-<sup>15.5</sup>這項警告是從 Visual Studio 2017 15.5 版中推出。  
-<sup>15.7</sup>這項警告是從 Visual Studio 2017 15.7 版中推出。  
-<sup>為永久</sup>此警告為關閉，除非[/permissive--](../build/reference/permissive-standards-conformance.md)設定編譯器選項。  
+<sup>14.1</sup>這項警告是使用 Visual Studio 2015 Update 1 開始。<br/>
+<sup>14.3</sup>這項警告是在 Visual Studio 2015 Update 3 開始提供。<br/>
+<sup>15.3</sup>這項警告是在 Visual Studio 2017 15.3 版開始提供。<br/>
+<sup>15.5</sup>這項警告是從 Visual Studio 2017 15.5 版中推出。<br/>
+<sup>15.7</sup>這項警告是從 Visual Studio 2017 15.7 版中推出。<br/>
+<sup>為永久</sup>此警告為關閉，除非[/permissive--](../build/reference/permissive-standards-conformance.md)設定編譯器選項。<br/>
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>在舊版中預設關閉警告
 

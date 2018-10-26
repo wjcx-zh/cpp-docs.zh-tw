@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14f562bd93bf023d540bf362dd2f9a881c2e441
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b33097c6f6f747d99cf582c1553e25942f1bfcd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436789"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056005"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX 控制項：繪製 ActiveX 控制項
 
@@ -112,11 +112,11 @@ ActiveX 控制項繪製的預設實作會繪製整個控制項範圍。 這對�
 
 1. 在 **插入新控制項**，選取控制項，然後按一下**確定**。
 
-     控制項將會出現在測試容器中。
+   控制項將會出現在測試容器中。
 
 1. 在 **控制**功能表上，按一下**繪製中繼檔**。
 
-     另一個顯示中繼檔的視窗隨即出現。 您可以變更這個視窗的大小，查看縮放如何影響控制項的中繼檔。 您可以隨時關閉這個視窗。
+   另一個顯示中繼檔的視窗隨即出現。 您可以變更這個視窗的大小，查看縮放如何影響控制項的中繼檔。 您可以隨時關閉這個視窗。
 
 ## <a name="see-also"></a>另請參閱
 

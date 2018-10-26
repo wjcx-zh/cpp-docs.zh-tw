@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378cd6fd283cd36142e293b51fdb91527afb6f88
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: e5cce23d34c739ed6a3aca67e05b59c6cafd9191
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808897"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062297"
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM 桌面元件
 
@@ -61,4 +61,4 @@ ATL 參考文件 Active Template Library (ATL)，一組樣板架構 c + + 類別
 示範如何使用 ATL 撰寫 COM 物件的範例程式碼。
 
 [OLE DB 範本](../data/oledb/ole-db-templates.md)<br/>
-提供 OLE DB 取用者和提供者範本的參考資料，包含一組範本類別，其中實作許多常用的 OLE DB 介面。  
+提供 OLE DB 取用者和提供者範本的參考資料，包含一組範本類別，其中實作許多常用的 OLE DB 介面。

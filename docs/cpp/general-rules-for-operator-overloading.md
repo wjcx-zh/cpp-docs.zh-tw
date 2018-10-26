@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c3064da609c8a81a6e264c7f46d37d4cd5681d1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3a6eb1b97acfe2fa41511433de3990da8923de7d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107139"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059541"
 ---
 # <a name="general-rules-for-operator-overloading"></a>運算子多載的一般規則
 
@@ -48,7 +48,7 @@ ms.locfileid: "46107139"
     }
     ```
 
-     上述程式碼範例將小於運算子宣告為成員函式；不過，加法運算子會宣告為具有 friend 存取權限的全域函式。 請注意，可以對指定運算子提供一個以上的實作。 上述加法運算子的範例中，提供了兩個實作以協助交替。 就如同新增的運算子`Point`要`Point`， **int**到`Point`，依此類推，可能會實作。
+   上述程式碼範例將小於運算子宣告為成員函式；不過，加法運算子會宣告為具有 friend 存取權限的全域函式。 請注意，可以對指定運算子提供一個以上的實作。 上述加法運算子的範例中，提供了兩個實作以協助交替。 就如同新增的運算子`Point`要`Point`， **int**到`Point`，依此類推，可能會實作。
 
 - 運算子會遵守其優先順序、群組，以及其搭配內建類型使用時指定的運算元數目。 因此，沒有任何方法可以表達此概念，「 將 2 和 3 新增至型別的物件`Point`，「 卻預期將 2 加入至*x*座標而將 3 加入至*y*協調。
 

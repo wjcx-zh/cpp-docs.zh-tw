@@ -66,7 +66,7 @@
 ###### [將字串讀入 OLE DB 提供者內](reading-strings-into-the-ole-db-provider.md)
 ###### [將字串儲存於 OLE DB 提供者內](storing-strings-in-the-ole-db-provider.md)
 ##### [增強簡單唯讀提供者](enhancing-the-simple-read-only-provider.md)
-###### [修改 RMyProviderRowset 的繼承](modifying-the-inheritance-of-rmyproviderrowset.md)
+###### [修改 RCustomRowset 的繼承](modifying-the-inheritance-of-rmyproviderrowset.md)
 ###### [動態決定傳回給消費者的資料行](dynamically-determining-columns-returned-to-the-consumer.md)
 ##### [測試唯讀提供者](testing-the-read-only-provider.md)
 #### [建立可更新的提供者](creating-an-updatable-provider.md)

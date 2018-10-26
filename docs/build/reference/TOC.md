@@ -197,7 +197,7 @@
 ### [/CLRIMAGETYPE (指定 CLR 映像類型)](clrimagetype-specify-type-of-clr-image.md)
 ### [/CLRSUPPORTLASTERROR (保留最後的 PInvoke 呼叫錯誤碼)](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)
 ### [/CLRTHREADATTRIBUTE (設定 CLR 執行緒屬性)](clrthreadattribute-set-clr-thread-attribute.md)
-### [/CLRUNMANAGEDCODECHECK (移除 SuppressUnmanagedCodeSecurityAttribute)](clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute.md)
+### [/CLRUNMANAGEDCODECHECK (移除 SuppressUnmanagedCodeSecurityAttribute)](clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute.md)
 ### [/DEBUG (產生偵錯資訊)](debug-generate-debug-info.md)
 ### [/DEBUGTYPE (偵錯資訊選項)](debugtype-debug-info-options.md)
 ### [/DEF (指定模組定義檔)](def-specify-module-definition-file.md)

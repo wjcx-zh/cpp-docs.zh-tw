@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5a091a4301a107fb820f63c357c4e7f43c35948
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ca1bae4e2ca45424fd7f9cff48d8ece1039d73f6
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721288"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136168"
 ---
 # <a name="linker-options"></a>連結器選項
 
@@ -60,7 +60,7 @@ LINK.exe 會連結通用物件檔案格式 (COFF) 物件檔案及程式庫，以
 |[/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)|設定 CLR 映像的類型 (IJW、純或安全)。|
 |[/CLRSUPPORTLASTERROR](../../build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)|保留透過 P/Invoke 機制呼叫之函式的最後一個錯誤碼。|
 |[/CLRTHREADATTRIBUTE](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md)|指定要套用至 CLR 程式進入點的 threading 屬性。|
-|[/CLRUNMANAGEDCODECHECK](../../build/reference/clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute.md)|指定連結器是否將 SuppressUnmanagedCodeSecurity 屬性套用至連結器產生的 PInvoke Stub，這些 Stub 會從 Managed 程式碼呼叫至原生 DLL。|
+|[/CLRUNMANAGEDCODECHECK](../../build/reference/clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute.md)|指定連結器是否將 SuppressUnmanagedCodeSecurity 屬性套用至連結器產生的 PInvoke Stub，這些 Stub 會從 Managed 程式碼呼叫至原生 DLL。|
 |[/DEBUG](../../build/reference/debug-generate-debug-info.md)|建立偵錯資訊。|
 |[/DEBUGTYPE](../../build/reference/debugtype-debug-info-options.md)|指定要包含在偵錯資訊的資料。|
 |[/DEF](../../build/reference/def-specify-module-definition-file.md)|將模組定義 (.def) 檔傳遞至連結器。|

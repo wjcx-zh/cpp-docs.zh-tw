@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dcc942bc69ebb37a7aba59e722b1a4cebbbab3ff
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3f97ef0f285cda7d31ddd53f0a8b0ca9a22f360c
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071353"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136194"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>如何：使用 winmdidl.exe 和 midlrt.exe 根據 Windows 中繼資料建立 .h 檔案
 
@@ -39,13 +39,13 @@ Winmdidl.exe 和 midlrt.exe 啟用原生 C++ 程式碼與 Windows 執行階段�
 ## <a name="winmdidl-command-line-arguments"></a>Winmdidl 命令列引數
 
 ```
-Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:file] [/utf8] Winmdfile
+Winmdidl.exe [/nologo] [/suppressversioncheck] [/time] [/outdir:dir] [/banner:file] [/utf8] Winmdfile
 ```
 
 **/nologo**<br/>
 防止主控台顯示 winmdidl 著作權訊息和版本號碼。
 
-**/supressversioncheck**<br/>
+**/suppressversioncheck**<br/>
 未使用。
 
 **/ 時間**<br/>

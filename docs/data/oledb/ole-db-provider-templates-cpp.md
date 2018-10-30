@@ -1,7 +1,7 @@
 ---
 title: OLE DB 提供者樣板 （c + +） |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0eef554fd6b7fbd16ff7c34434d08d917b5dcea9
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 4d4d93f656279cf5e5c548ef09bf809364c9d90e
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50080061"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216405"
 ---
 # <a name="ole-db-provider-templates-c"></a>OLE DB 提供者樣板 (C++)
 
@@ -43,21 +43,21 @@ OLE DB 提供者是一份服務取用者物件的介面呼叫的 COM 物件，�
 
 ## <a name="ole-db-specification-level-support"></a>OLE DB 規格的層級支援
 
-OLE DB 提供者範本支援 OLE DB 2.7 版規格。 您可以使用 OLE DB 提供者範本，來實作層級 0 相容的提供者。 提供者範例中，比方說，會使用範本來實作執行 DOS DIR 命令來查詢檔案系統的 non-MS-DOS 命令伺服器。 提供者範例會傳回目錄資訊資料列集，這是傳回表格式資料的標準 OLE DB 機制中。
+OLE DB 提供者範本支援 OLE DB 2.7 版規格。 您可以使用 OLE DB 提供者範本，來實作層級 0 相容的提供者。 `Provider`範例中，例如，使用範本來實作執行 DOS DIR 命令來查詢檔案系統的 non-MS-DOS 命令伺服器。 `Provider`範例會傳回目錄資訊中的資料列集，這是傳回表格式資料的標準 OLE DB 機制。
 
-最簡單的 OLE DB 範本所支援的提供者類型是唯讀的提供者，使用任何命令。 也支援使用命令的提供者，以及書籤和讀取/寫入功能。 您可以撰寫其他程式碼來實作讀取/寫入提供者。 最新版本，不支援動態資料列集和交易，但如果您要新增它們。
+最簡單的 OLE DB 範本所支援的提供者類型是唯讀的提供者，使用任何命令。 也支援使用命令的提供者，因為書籤和讀取/寫入功能。 您可以撰寫其他程式碼來實作讀取/寫入提供者。 最新版本，不支援動態資料列集和交易，但如果您要新增它們。
 
 ## <a name="when-do-you-need-to-create-an-ole-db-provider"></a>您需要時建立的 OLE DB 提供者？
 
-您不一定需要建立自己的提供者;Microsoft 提供數個預先封裝的標準提供者，在**資料連結屬性**Visual c + + 的對話方塊。 若要建立的 OLE DB 提供者的主要原因是運用通用資料存取策略。 這麼做的優點，包括：
+您永遠不需要建立自己的提供者;Microsoft 提供數個預先封裝的標準提供者，在**資料連結屬性**Visual c + + 的對話方塊。 若要建立的 OLE DB 提供者的主要原因是運用通用資料存取策略。 這麼做的優點，包括：
 
 - 透過任何語言，例如 c + +、 Basic 和 Visual Basic Scripting Edition 中存取資料。 它可讓您組織中不同程式設計人員可以存取相同的資料相同的方式，不論使用哪種語言。
 
-- 公開您的資料與其他資料來源 SQL Server、 Excel 和 Access 等。 這可以是非常有用，如果您想要在不同的格式之間的資料傳輸。
+- 開啟您的資料，例如 SQL Server、 Excel 及存取其他資料來源。 這可以是很有用，如果您想要在不同的格式之間的資料傳輸。
 
-- 參與 （異質性） 的跨資料來源的作業。 這可以是資料倉儲最有效方法。 藉由使用 OLE DB 提供者，您可以將資料保存原生格式，並仍能夠存取在簡單的作業。
+- 參與 （異質性） 的跨資料來源的作業。 這可以是資料倉儲的有效方式。 藉由使用 OLE DB 提供者，您可以將資料保存原生格式，並仍能夠存取在簡單的作業。
 
-- 將其他功能加入到您的資料，例如查詢處理。
+- 其他功能加入您的資料，例如查詢處理。
 
 - 增加存取資料，藉由控制它的操作方式的效能。
 
@@ -81,5 +81,5 @@ OLE DB 提供者範本支援 OLE DB 2.7 版規格。 您可以使用 OLE DB 提�
 ## <a name="see-also"></a>另請參閱
 
 [資料存取](../data-access-in-cpp.md)<br/>
-[OLE DB SDK 文件](/previous-versions/windows/desktop/ms722784)
-[OLE DB 程式設計人員參考](/previous-versions/windows/desktop/ms713643)
+[OLE DB SDK 文件](/previous-versions/windows/desktop/ms722784)<br/>
+[OLE DB 設計人員參考](/previous-versions/windows/desktop/ms713643)<br/>

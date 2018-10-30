@@ -22,22 +22,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4808f9165fa6f139b0d3b576620e9db80eb360d3
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 211c83ec63611c493f03e48b58619caca373ce65
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50076993"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216353"
 ---
 # <a name="ccustomrowset-customrsh"></a>CCustomRowset (CustomRS.H)
 
-精靈會產生資料列集物件的項目。 在此種情況下，稱為 `CCustomRowset`。 `CCustomRowset`類別繼承自呼叫 OLE DB 提供者類別`CRowsetImpl`，它會實作所有必要的介面，資料列集物件。 下列程式碼顯示的繼承鏈結`CRowsetImpl`:
+精靈會產生資料列集物件的項目。 在此情況下，它會呼叫`CCustomRowset`。 `CCustomRowset`類別繼承自呼叫 OLE DB 提供者類別`CRowsetImpl`，它會實作所有必要的介面，資料列集物件。 下列程式碼顯示的繼承鏈結`CRowsetImpl`:
 
 ```cpp
-template <class T, class Storage, class CreatorClass,
+template <class T, class Storage, class CreatorClass, 
    class ArrayType = CAtlArray<Storage>>
 class CMyRowsetImpl:
-   public CRowsetImpl<T, Storage, CreatorClass, ArrayType,
+   public CRowsetImpl<T, Storage, CreatorClass, ArrayType, 
       CSimpleRow, IRowsetLocateImpl< T >>
 ```
 
@@ -51,4 +51,4 @@ class CMyRowsetImpl:
 
 ## <a name="see-also"></a>另請參閱
 
-[提供者精靈產生的檔案](../../data/oledb/provider-wizard-generated-files.md)
+[提供者精靈產生的檔案](../../data/oledb/provider-wizard-generated-files.md)<br/>

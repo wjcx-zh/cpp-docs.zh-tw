@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cefa28145e1a53aa4db0bd713a9835c0a35b4151
-ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
+ms.openlocfilehash: 541a9d5064e9bdf9c4ddb9b410ab4dc0277626b0
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47429744"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204609"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows Runtime C++ Template Library (WRL)
 
 Windows 執行階段 C++ 範本庫 (WRL) 是提供低階方式撰寫和使用 Windows 執行階段元件的範本庫。
 
 > [!NOTE]
-> WRL 現在取代 C + /cli WinRT，standard C + + 17 語言推演，適用於 Windows 執行階段 Api。 C + + /cli WinRT 位於 Windows 10 SDK 從 1803年版開始。 C + + /cli WinRT 完全實作於標頭檔，而且設計用來提供您的第一級存取新式 Windows api。
+> WRL 現在已被取代的 C + + /cli WinRT，standard C + + 17 語言推演，適用於 Windows 執行階段 Api。 C + + /cli WinRT 位於 Windows 10 SDK 從 1803年版開始。 C + + /cli WinRT 完全實作於標頭檔，而且設計用來提供您的第一級存取新式 Windows api。
 
 > 使用 C + + /cli WinRT，您可以使用及撰寫 Windows 執行階段 Api 使用任何符合標準的 C + + 17 編譯器。 C + + /cli WinRT 通常會執行得更好，而且會產生較小的二進位檔，比 Windows 執行階段的其他語言選項。 我們會繼續支援 C + + /CX 和 WRL，但強烈建議新的應用程式使用 C + + /cli WinRT。 如需詳細資訊，請參閱 < [C + + /cli WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)。
 
@@ -69,7 +69,7 @@ Windows 執行階段 c + + 樣板程式庫和 C + + /CX 提供不同的優點。
 示範如何使用 Windows 執行階段 c + + 樣板程式庫來建立基本的 COM 元件和註冊和使用桌面應用程式的 COM 元件的基本方法。
 
 [如何：直接具現化 WRL 元件](../windows/how-to-instantiate-wrl-components-directly.md)<br/>
-了解如何使用[Microsoft::WRL::Make](../windows/make-function.md)並[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)函式來具現化模組中定義的元件。
+了解如何使用 [Microsoft::WRL::Make](../windows/make-function.md) 和 [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) 函式，從定義元件的模組中具現化元件。
 
 [如何：使用 winmdidl.exe 和 midlrt.exe 根據 Windows 中繼資料建立 .h 檔案](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
 顯示如何透過從 .winmd 中繼資料建立 IDL 檔案，使用 WRL 的自訂 Windows 執行階段元件。
@@ -119,23 +119,23 @@ Windows 執行階段 c + + 樣板程式庫提供代表某些基本概念的型�
 
 ### <a name="comptr"></a>ComPtr
 
-[ComPtr](../windows/comptr-class.md)已*智慧型指標*代表範本參數所指定的介面類型。 使用 `ComPtr` 來宣告變數，以存取從介面衍生之物件的成員。 `ComPtr` 自動維護基礎介面指標的參考計數，並在參考計數歸零時釋放介面。
+[ComPtr](../windows/comptr-class.md) 是 *智慧型指標* 類型，表示由範本參數指定之介面。 使用 `ComPtr` 來宣告變數，以存取從介面衍生之物件的成員。 `ComPtr` 自動維護基礎介面指標的參考計數，並在參考計數歸零時釋放介面。
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
-[RuntimeClass](../windows/runtimeclass-class.md)表示繼承一組指定之介面的具現化的類別。 A`RuntimeClass`物件可以提供一或多個 Windows 執行階段的 COM 介面或元件的弱式參考支援的組合。
+[RuntimeClass](../windows/runtimeclass-class.md) 表示繼承一組指定之介面的具現化類別。 A`RuntimeClass`物件可以提供一或多個 Windows 執行階段的 COM 介面或元件的弱式參考支援的組合。
 
 ### <a name="module"></a>Module
 
-[模組](../windows/module-class.md)表示相關物件的集合。 `Module` 物件管理 Class Factory 和註冊，前者會建立物件，後者讓其他應用程式使用物件。
+[Module](../windows/module-class.md) 表示相關物件的集合。 `Module` 物件管理 Class Factory 和註冊，前者會建立物件，後者讓其他應用程式使用物件。
 
 ### <a name="callback"></a>回呼
 
-[回呼](../windows/callback-function-windows-runtime-cpp-template-library.md)函式會建立的物件，其成員函式為事件處理常式 （回呼方法）。 使用 `Callback` 函式撰寫非同步作業。
+[Callback](../windows/callback-function-windows-runtime-cpp-template-library.md) 函式建立成員函式是事件處理常式的物件 (回呼方法)。 使用 `Callback` 函式撰寫非同步作業。
 
 ### <a name="eventsource"></a>EventSource
 
-[EventSource](../windows/eventsource-class.md)用來管理*委派*事件處理常式。 使用 Windows 執行階段 c + + 樣板程式庫實作委派，並使用`EventSource`新增、 移除及叫用委派。
+[EventSource](../windows/eventsource-class.md) 用來管理「 *委派* 」(Delegate) 事件處理常式。 使用 Windows 執行階段 c + + 樣板程式庫實作委派，並使用`EventSource`新增、 移除及叫用委派。
 
 ### <a name="asyncbase"></a>AsyncBase
 
@@ -143,11 +143,11 @@ Windows 執行階段 c + + 樣板程式庫提供代表某些基本概念的型�
 
 ### <a name="ftmbase"></a>FtmBase
 
-[FtmBase](../windows/ftmbase-class.md)表示無限制執行緒封送處理器物件。 `FtmBase` 建立全域介面表 (GIT)，並協助管理封送處理和 Proxy 物件。
+[FtmBase](../windows/ftmbase-class.md) 代表無限制執行緒封送處理器物件。 `FtmBase` 建立全域介面表 (GIT)，並協助管理封送處理和 Proxy 物件。
 
 ### <a name="weakref"></a>WeakRef
 
-[WeakRef](../windows/weakref-class.md)是智慧型指標類型，表示*弱式參考*，會參考的物件，可能或可能無法存取。 A`WeakRef`物件可以用，只有在 Windows 執行階段，而不是傳統 com 使用。
+[WeakRef](../windows/weakref-class.md) 是代表 *弱式參考*的智慧型指標類型，會參考不一定可存取的物件。 A`WeakRef`物件可以用，只有在 Windows 執行階段，而不是傳統 com 使用。
 
 `WeakRef` 物件通常代表其存在是由外部執行緒或應用程式所控制的物件。 例如， `WeakRef` 物件可以參考檔案物件。 在檔案開啟時， `WeakRef` 有效，而且參考的檔案是可存取的。 不過，在檔案關閉時， `WeakRef` 是無效，而且檔案無法存取。
 

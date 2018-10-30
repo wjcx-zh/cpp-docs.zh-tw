@@ -1,7 +1,7 @@
 ---
 title: 修改的 RCustomRowset |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/26/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1a9b6e238d3824451ab0f820917c34c97826ffab
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 13e15b470be6f6a5af4f8012e3a70896f648e665
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50060386"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216509"
 ---
 # <a name="modifying-the-inheritance-of-rcustomrowset"></a>修改的 RCustomRowset
 
@@ -35,28 +35,28 @@ ms.locfileid: "50060386"
 // CustomRS.h
 
 template <class T, class Storage, class CreatorClass, class ArrayType = CAtlArray<Storage>>
-class CCustomRowsetImpl:
+class CMyRowsetImpl:
    public CRowsetImpl<T, Storage, CreatorClass, ArrayType, CSimpleRow, IRowsetLocateImpl< T, IRowsetLocate >>
 {
 ...
 };
 ```
 
-現在，編輯 COM 介面對應中 CustomRS.h 要如下所示：
+現在，編輯中的 COM 介面對應*自訂*RS.h 要如下所示：
 
 ```cpp
-BEGIN_COM_MAP(CCustomRowsetImpl)
+BEGIN_COM_MAP(CMyRowsetImpl)
    COM_INTERFACE_ENTRY(IRowsetLocate)
    COM_INTERFACE_ENTRY_CHAIN(_RowsetBaseClass)
 END_COM_MAP()
 ```
 
-這會建立 COM 介面對應，告訴`CCustomRowsetImpl`來呼叫`QueryInterface`同時`IRowset`和`IRowsetLocate`介面。 若要取得所有其他的資料列集的實作類別，對應連結`CCustomRowsetImpl`類別將會回到`CRowsetBaseImpl`OLE DB 範本所定義的類別，地圖會使用 COM_INTERFACE_ENTRY_CHAIN 巨集，它會告訴掃描中的 COM 對應的 OLE DB 樣板`CRowsetBaseImpl`回應`QueryInterface`呼叫。
+此程式碼建立 COM 介面對應，告訴`CMyRowsetImpl`來呼叫`QueryInterface`同時`IRowset`和`IRowsetLocate`介面。 若要取得所有其他的資料列集的實作類別，對應連結`CMyRowsetImpl`類別將會回到`CRowsetBaseImpl`OLE DB 範本所定義的類別，地圖會使用 COM_INTERFACE_ENTRY_CHAIN 巨集，它會告訴掃描中的 COM 對應的 OLE DB 樣板`CRowsetBaseImpl`回應`QueryInterface`呼叫。
 
-最後，連結`RAgentRowset`要`CCustomRowsetBaseImpl`藉由修改`RAgentRowset`繼承自`CCustomRowsetImpl`、，如下所示：
+最後，連結`RAgentRowset`要`CMyRowsetBaseImpl`藉由修改`RAgentRowset`繼承自`CMyRowsetImpl`、，如下所示：
 
 ```cpp
-class RAgentRowset : public CCustomRowsetImpl<RAgentRowset, CAgentMan, CCustomCommand>
+class RAgentRowset : public CMyRowsetImpl<RAgentRowset, CAgentMan, CCustomCommand>
 ```
 
 `RAgentRowset` 現在可以使用`IRowsetLocate`同時利用其餘的資料列集類別的實作的介面。
@@ -65,4 +65,4 @@ class RAgentRowset : public CCustomRowsetImpl<RAgentRowset, CAgentMan, CCustomCo
 
 ## <a name="see-also"></a>另請參閱
 
-[增強簡單唯讀提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md)
+[增強簡單唯讀提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md)<br/>

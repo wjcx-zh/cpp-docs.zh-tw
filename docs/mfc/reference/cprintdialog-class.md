@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f69c315f78c5ce1a587f48a873c9c2517f81537b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 61e2ea655c25b15982f3434437bc3bdc3eaf310f
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441431"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204648"
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog 類別
 
@@ -108,7 +108,7 @@ class CPrintDialog : public CCommonDialog
 > [!NOTE]
 >  `CPrintDialogEx`類別會封裝 Windows 列印屬性工作表所提供的服務。 如需詳細資訊，請參閱[CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md)概觀。
 
-`CPrintDialog`功能來取代[CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md)，可提供您的通用對話方塊中，為兩者列印設定和 版面設定。
+`CPrintDialog`功能已取代的[CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md)，可提供您的通用對話方塊中，為兩者列印設定和 版面設定。
 
 您可以依賴的架構，來處理您的應用程式的列印程序的各個層面。 在此情況下，架構會自動顯示 Windows 通用對話方塊中進行列印。 您也可以讓列印您的應用程式的架構處理，但覆寫通用列印對話方塊，以使用您自己的列印對話方塊。 如需有關如何使用架構來處理列印工作的詳細資訊，請參閱[列印](../../mfc/printing.md)。
 

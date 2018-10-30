@@ -15,22 +15,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a2a580c5ae3d80349b74e6ce7606763c32201805
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: b1730c839ab2eb87511a241c28409646a999cfd6
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50063324"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216249"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>將字串讀入 OLE DB 提供者內
 
 `RCustomRowset::Execute`函式開啟的檔案和讀取字串。 取用者傳遞給提供者的檔案名稱，藉由呼叫[icommandtext:: Setcommandtext](/previous-versions/windows/desktop/ms709757)。 提供者接收的檔案名稱，並將它儲存在成員變數`m_szCommandText`。 `Execute` 讀取的檔案名稱`m_szCommandText`。 如果檔案名稱無效，或檔案無法使用，`Execute`會傳回錯誤。 否則，它會開啟檔案，並在呼叫`fgets`來擷取字串。 針對每個設定的字串讀取`Execute`建立使用者記錄的執行個體 (`CAgentMan`) 並將它放入陣列。
 
-如果無法開啟檔案，`Execute`必須傳回 DB_E_NOTABLE。 如果它改為傳回 E_FAIL，提供者有許多的取用者將無法運作，並將無法通過 OLE DB[一致性測試](../../data/oledb/testing-your-provider.md)。
+如果無法開啟檔案，`Execute`必須傳回 DB_E_NOTABLE。 如果它改為傳回 E_FAIL，提供者不會使用許多消費者來說並不會傳遞 OLE DB[一致性測試](../../data/oledb/testing-your-provider.md)。
 
 ## <a name="example"></a>範例
-
-編輯`Execute`函式看起來像這樣：
 
 ```cpp
 /////////////////////////////////////////////////////////////////////////
@@ -106,4 +104,4 @@ public:
 
 ## <a name="see-also"></a>另請參閱
 
-[實作簡單唯讀提供者](../../data/oledb/implementing-the-simple-read-only-provider.md)
+[實作簡單唯讀提供者](../../data/oledb/implementing-the-simple-read-only-provider.md)<br/>

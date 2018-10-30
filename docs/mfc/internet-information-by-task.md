@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1070dbe1f912f8bb54092fdff4c32ed906100188
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 78a7e7e17ce2958f0827041ec5ac31dc1a554fa2
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380505"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204492"
 ---
 # <a name="internet-information-by-task"></a>依工作分類的網際網路資訊
 

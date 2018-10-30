@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb9d21eee8e561e2caa8a7c4088774435d3ce273
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0e3d6501e969b103146aa53311069e5fdd4d048e
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080437"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204557"
 ---
 # <a name="scope-c"></a>範圍 (C++)
 
@@ -41,7 +41,7 @@ ms.locfileid: "46080437"
 
 - **區域範圍**lambda，包括參數名稱或函式內宣告的名稱具有區域範圍。 它們通常稱為 「 區域變數 」。 它們才看得見從宣告點函式或 lambda 主體的結尾。 區域範圍是一種區塊範圍內，將在本文稍後討論。
 
-- **類別範圍**類別成員的名稱具有類別範圍內，將整個類別定義，無論宣告點延伸。 類別成員存取範圍是由控制的進一步**公開**，**私人**，並**保護**關鍵字。 公用或受保護的成員可以存取只能藉由使用成員選取運算子 (**。** 或是**->**) 或成員指標運算子 (**。**<strong>\*</strong>或是**->** <strong>\*</strong>)。
+- **類別範圍**類別成員的名稱具有類別範圍內，將整個類別定義，無論宣告點延伸。 由進一步控制類別成員存取範圍**公開**，**私人**，並**保護**關鍵字。 公用或受保護的成員可以存取只能藉由使用成員選取運算子 (**。** 或是**->**) 或成員指標運算子 (**。**<strong>\*</strong>或是**->** <strong>\*</strong>)。
 
 - **陳述式範圍**中所宣告的名稱**for**，**如果**，**雖然**，或**切換**陳述式會顯示，直到結束為止陳述式區塊。
 

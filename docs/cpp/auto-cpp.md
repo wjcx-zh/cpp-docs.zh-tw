@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e832dfa694e5d2977e6b6a4d659d373f726c0cd6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f38c4cdfcbb75cd4c2df4fadd10cfcaccda4540e
+ms.sourcegitcommit: a88d228480d4bb5834e985d7b3ead2760be95572
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059028"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50203062"
 ---
 # <a name="auto-c"></a>自動 （c + +）
 
@@ -79,22 +79,22 @@ auto declarator initializer;
 請注意，使用**自動**卸除參考、 const 限定詞和 volatile 限定詞。 參考下列範例：
 
 ```cpp
-// cl.exe /analyze /EHsc /W4
-#include <iostream>
+// cl.exe /analyze /EHsc /W4
+#include <iostream>
 
-using namespace std;
+using namespace std;
 
-int main( )
+int main( )
 {
-    int count = 10;
-    int& countRef = count;
-    auto myAuto = countRef;
+    int count = 10;
+    int& countRef = count;
+    auto myAuto = countRef;
 
-    countRef = 11;
-    cout << count << " ";
+    countRef = 11;
+    cout << count << " ";
 
-    myAuto = 12;
-    cout << count << endl;
+    myAuto = 12;
+    cout << count << endl;
 }
 
 ```
@@ -103,7 +103,7 @@ int main( )
 
 ## <a name="type-deduction-with-braced-initializers-c14"></a>使用括號初始設定式 (C + + 14) 的類型推斷
 
-下列程式碼 exmample 示範如何初始化自動變數，使用大括號。 請注意 B 與 C 和 A 之間的差異和 e。
+下列程式碼範例示範如何初始化自動變數使用大括號。 請注意 B 與 C 和 A 之間的差異和 e。
 
 ```cpp
 #include <initializer_list>

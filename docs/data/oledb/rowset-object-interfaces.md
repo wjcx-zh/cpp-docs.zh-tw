@@ -1,7 +1,7 @@
 ---
 title: 資料列集物件介面 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 29371e1c1acff5846b7b2c454365f9ff52b77231
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: dc9ec134321b2acf9994ad7dfb43c5b14bf0e75f
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50056928"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216444"
 ---
 # <a name="rowset-object-interfaces"></a>資料列集物件介面
 
@@ -61,4 +61,4 @@ ms.locfileid: "50056928"
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

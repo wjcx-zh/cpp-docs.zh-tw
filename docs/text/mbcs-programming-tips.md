@@ -19,16 +19,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac4ed378640942dbe33490d618cec7289125b0c8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a88fffbfc42dd6e7386ec43e55f2013f2548b6f5
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418784"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204466"
 ---
 # <a name="mbcs-programming-tips"></a>MBCS 程式設計提示
 
-在新的開發，您應該為終端使用者可能看到的所有字串使用 Unicode 字元編碼。 MBCS 是由 Unicode 取代的舊版技術。 本節為必須維護使用 MBCS 且不適合轉換為 Unicode 之現有程式的開發人員提供提示。 建議也適用於 MFC 應用程式和撰寫不以 MFC 應用程式。 主題包括：
+在新的開發，您應該為終端使用者可能看到的所有字串使用 Unicode 字元編碼。 MBCS 是舊版的技術，已由 Unicode 取代。 本節為必須維護使用 MBCS 且不適合轉換為 Unicode 之現有程式的開發人員提供提示。 建議也適用於 MFC 應用程式和撰寫不以 MFC 應用程式。 主題包括：
 
 - [一般 MBCS 程式設計的建議](../text/general-mbcs-programming-advice.md)
 

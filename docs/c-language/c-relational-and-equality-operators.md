@@ -1,7 +1,7 @@
 ---
 title: C 關係和等號比較運算子 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bf3c406059fe8744843e1353ad997acc19c499b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9251aeb93ec53c47ca9c7474785b5180c36a3887
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058233"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808949"
 ---
 # <a name="c-relational-and-equality-operators"></a>C 關係和等號比較運算子
 
@@ -31,32 +31,28 @@ ms.locfileid: "46058233"
 
 **語法**
 
-*relational-expression*: *shift-expression*
+*relational-expression*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;=** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>=** *shift-expression*<br/>
 
-*relational-expression*  **\<**  *shift-expression*
-
-*relational-expression*  **>**  *shift-expression*
-
-*relational-expression*  **\<=**  *shift-expression*
-
-*relational-expression*  **>=**  *shift-expression*
-
-*equality-expression*: *relational-expression*
-
-*equality-expression*  **==**  *relational-expression*
-
-*equality-expression*  **!=**  *relational-expression*
+*equality-expression*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*equality-expression* **==** *relational-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*equality-expression* **!=** *relational-expression*
 
 關係運算式和相等運算子會測試下列關聯性：
 
 |運算子|測試的關聯性|
 |--------------|-------------------------|
-|**\<**|第一個運算元小於第二個運算元|
+|**&lt;**|第一個運算元小於第二個運算元|
 |**>**|第一個運算元大於第二個運算元|
-|**\<=**|第一個運算元小於或等於第二個運算元|
+|**&lt;=**|第一個運算元小於或等於第二個運算元|
 |**>=**|第一個運算元大於或等於第二個運算元|
-|`==`|第一個運算元等於第二個運算元|
-|`!=`|第一個運算元不等於第二個運算元|
+|**==**|第一個運算元等於第二個運算元|
+|**!=**|第一個運算元不等於第二個運算元|
 
 上列清單中前四個運算子的優先順序高於相等運算子 (`==` 和 `!=`)。 請參閱表 [C 運算子的優先順序和關聯性](../c-language/precedence-and-order-of-evaluation.md)中的優先順序資訊。
 
@@ -64,7 +60,7 @@ ms.locfileid: "46058233"
 
 - 任何關係運算子或相等運算子的運算元都可以是相同類型的指標。 針對相等運算子 (`==`) 和不等運算子 (`!=`)，比較結果會指出兩種指標是否定址相同的記憶體位置。 針對其他關係運算子 (**\<**、**>**、**\<**= 與 **>**=)，比較結果則會指出物件的兩個記憶體位址所指向的相對位置。 關係運算子只會比較位移。
 
-     指標比較的定義僅適用於同一物件的部分。 如果指標參考陣列的成員，比較就相當於對應註標的比較。 第一個陣列元素的位址「小於」最後一個元素的位址。 以結構來說，之後宣告的結構成員指標「大於」之前在結構中宣告的成員指標。 相等位的成員指標是相等的。
+   指標比較的定義僅適用於同一物件的部分。 如果指標參考陣列的成員，比較就相當於對應註標的比較。 第一個陣列元素的位址「小於」最後一個元素的位址。 以結構來說，之後宣告的結構成員指標「大於」之前在結構中宣告的成員指標。 相等位的成員指標是相等的。
 
 - 指標值可以與常數值 0 進行相等比較 (`==`) 或不等比較 (`!=`)。 值為 0 的指標稱為「Null」指標；也就是說，該指標不指向有效的記憶體位置。
 
@@ -74,14 +70,14 @@ ms.locfileid: "46058233"
 
 以下範例說明關係運算子和相等運算子。
 
-```
+```C
 int x = 0, y = 0;
 if ( x < y )
 ```
 
 因為 `x` 和 `y` 相等，因此這個範例中的運算式產生的值會是 0。
 
-```
+```C
 char array[10];
 char *p;
 
@@ -91,7 +87,7 @@ for ( p = array; p < &array[10]; p++ )
 
 這個範例中的片段會將 `array` 的每個元素設為 Null 字元常數。
 
-```
+```C
 enum color { red, white, green } col;
    .
    .

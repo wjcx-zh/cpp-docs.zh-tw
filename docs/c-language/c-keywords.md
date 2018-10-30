@@ -1,7 +1,7 @@
 ---
 title: C 關鍵字 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -16,16 +16,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80c1f0d4ac5d843732771281202612e31a4073c2
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: d9a5255609c3abb4846ce08a2163407eee6f240c
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860884"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161901"
 ---
 # <a name="c-keywords"></a>C 關鍵字
 
-「關鍵字」是指對 C 編譯器有特殊意義的字詞。 在轉譯階段 7 和 8 中，識別項不能包含與 C 關鍵字相同的拼字和大小寫。 (請參閱《前置處理器參考》中的[轉譯階段](../preprocessor/phases-of-translation.md)描述。如需識別碼的詳細資訊，請參閱[識別碼](../c-language/c-identifiers.md))。C 語言使用下列關鍵字：
+「關鍵字」是指對 C 編譯器有特殊意義的字詞。 在轉譯階段 7 和 8 中，識別項不能包含與 C 關鍵字相同的拼字和大小寫。 (請參閱《前置處理器參考》** 中的[轉譯階段](../preprocessor/phases-of-translation.md)描述。如需識別碼的詳細資訊，請參閱[識別碼](../c-language/c-identifiers.md))。C 語言使用下列關鍵字：
 
 |||||
 |-|-|-|-|
@@ -48,17 +48,19 @@ Microsoft C 編譯器可辨識下列關鍵字和特殊識別項：
 
 |||||
 |-|-|-|-|
-|**__asm**|**dllimport**<sup>2</sup>|**__int8**|**naked**<sup>2</sup>|
-|**__based**<sup>1</sup>|**__except**|**__int16**|**__stdcall**|
-|**__cdecl**|**__fastcall**|**__int32**|**thread**<sup>2</sup>|
-|**__declspec**|**__finally**|**__int64**|**__try**|
-|**dllexport**<sup>2</sup>|**__inline**|**__leave**||
+|**__asm**<sup>3</sup>|**dllimport**<sup>2</sup>|**__int8**<sup>3</sup>|**naked**<sup>2</sup>|
+|**__based**<sup>1, 3</sup>|**__except**<sup>3</sup>|**__int16**<sup>3</sup>|**__stdcall**<sup>3</sup>|
+|**__cdecl**<sup>3</sup>|**__fastcall**|**__int32**<sup>3</sup>|**thread**<sup>2</sup>|
+|**__declspec**<sup>3</sup>|**__finally**<sup>3</sup>|**__int64**<sup>3</sup>|**__try**<sup>3</sup>|
+|**dllexport**<sup>2</sup>|**__inline**<sup>3</sup>|**__leave**<sup>3</sup>||
 
 <sup>1</sup> **__based** 關鍵字用於 32 位元和 64 位元目標編譯時有所限制。
 
 <sup>2</sup> 這些是與 **__declspec** 搭配使用時的特殊識別碼，在其他內容中使用則不受限制。
 
-Microsoft 擴充功能預設為啟用。 為了確保您的程式可完整移植，您可以在編譯期間指定 /Za 選項 (適用於 ANSI 相容性編譯)，停用 Microsoft 擴充功能。 如果您這樣做，Microsoft 專有關鍵字就會停用。
+<sup>3</sup> 為了與舊版相容，這些關鍵字在啟用 Microsoft 擴充功能時可以使用兩個前置底線和單一前置底線。
+
+Microsoft 擴充功能預設為啟用。 為了確保您的程式可完整移植，您可以在編譯期間指定 [/Za \(停用語言擴充功能)](../build/reference/za-ze-disable-language-extensions.md) 來停用 Microsoft 擴充功能。 當您這樣做時，某些 Microsoft 專有關鍵字就會停用。
 
 在 Microsoft 擴充功能啟用時，您可以在程式中使用上面所列的關鍵字。 為了提供 ANSI 相容性，大部分關鍵字前面都會加上雙底線。 **dllexport**、**dllimport**、**naked** 和 **thread** 這四個例外狀況只會搭配 **__declspec** 使用，因此不需要前置雙底線。 為了提供回溯相容性，仍支援其餘關鍵字的單一底線版本。
 

@@ -1,7 +1,7 @@
 ---
 title: 位元移位運算子 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -17,34 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfb5ffe13d8813eff0e3db4978eb1799bee1a85
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b1abcfa37373702df371b42efbf228fe748bfc45
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020117"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808195"
 ---
 # <a name="bitwise-shift-operators"></a>位元移位運算子
 
-移位運算子會按照第二個運算元所指定的位置數目將其第一個運算元左移 (`<<`) 或右移 (`>>`)。
+移位運算子會按照第二個運算元所指定的位置數目將其第一個運算元左移 (**&lt;&lt;**) 或右移 (**>>**)。
 
 ## <a name="syntax"></a>語法
 
-*shift-expression*: *additive-expression*
-
-*shift-expression*  `<<`  *additive-expression shift-expression*  `>>`  *additive-expression*
+*shift-expression*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression* **&lt;&lt;** *additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression* **>>** *additive-expression*
 
 兩個運算元都必須是整數值。 這些運算子會執行一般算術轉換；結果類型是左運算元在轉換之後的類型。
 
 向左移位空出的右位元設為 0。 向右移位空出的左位元則會根據轉換後第一個運算元的類型填入。 如果類型是 `unsigned`，則會設為 0。 否則均會填入正負號位元的複本。 若是沒有溢位的左移運算子，陳述式
 
-```
+```C
 expr1 << expr2
 ```
 
 等於乘以 2<sup>expr2</sup>。 若為右移運算子，
 
-```
+```C
 expr1 >> expr2
 ```
 
@@ -54,7 +55,7 @@ expr1 >> expr2
 
 由於移位運算子所執行的轉換不提供溢位或反向溢位條件，因此，如果移位運算的結果無法以第一個運算元轉換後的類型表示，則可能會遺失資訊。
 
-```
+```C
 unsigned int x, y, z;
 
 x = 0x00AA;

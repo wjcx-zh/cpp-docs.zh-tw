@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a285cc87ec4182586663afcb3559101167ae7261
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0cee62bdf19e6ba3196e0336cb29a7c7606775b5
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095569"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808286"
 ---
 # <a name="sequential-evaluation-operator"></a>循序評估運算子
 
@@ -29,9 +29,9 @@ ms.locfileid: "46095569"
 
 ## <a name="syntax"></a>語法
 
-*expression*: *assignment-expression*
-
-*expression*  **,**  *assignment-expression*
+*expression*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expression* **,** *assignment-expression*
 
 循序評估運算子的左運算元會評估為 `void` 運算式。 此作業的結果會是與右運算元相同的值與類型。 各個運算元可以為任何類型。 循序評估運算子不會在其運算元之間執行類型轉換，因此，它不會產生左值。 在第一個運算元之後有一個序列點，表示會先完成左運算元評估的所有副作用，再開始評估右運算元。 如需詳細資訊，請參閱[序列點](../c-language/c-sequence-points.md)。
 

@@ -13,12 +13,12 @@ f1_keywords: []
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 7ab78284929de8e5991abb0d1a8c89ead500096a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 78918acc70bddb25841b2bcaaf8f7cd7b627d63b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314699"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061556"
 ---
 # <a name="cc-properties-linux-c"></a>C/C++ 屬性 (Linux C++)
 
@@ -85,4 +85,4 @@ C + + 語言標準 | 決定 C++ 語言標準。 | **Default**<br/>**C++03** - C+
 編譯為 | 選取 .c 和 .cpp 檔的編譯語言選項。  'Default' 會根據 .c 或 .cpp 副檔名進行偵測。 (-x c、-x c++) | **預設** - 預設值。<br/>**編譯成 C 程式碼** - 編譯成 C 程式碼。<br/>**編譯成 C++ 程式碼** - 編譯成 C++ 程式碼。<br/>
 強制的 Include 檔案 | 一或多個強制的 Include 檔案。 (-include [名稱])
 
-## <a name="additional-options"></a>其他選項 
+## <a name="additional-options"></a>其他選項

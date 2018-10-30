@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40c74633be8556fc075f10e328521209761f385c
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 6f2b4dddd77b245de307173fbc2496181658be78
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890708"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066067"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Visual Studio 2017 中 Visual C++ 的新功能
 
@@ -42,11 +42,11 @@ Visual Studio 2017 有多項 Visual C++ 環境的更新與修正。 我們已修
 
 - Visual Studio 2017 允許在使用 [/await](build/reference/await-enable-coroutine-support.md) 時，搭配 [/sdl](build/reference/sdl-enable-additional-security-checks.md)。 我們移除了協同程式的 [/RTC](build/reference/rtc-run-time-error-checks.md) 限制。
 
-   **Visual Studio 2017 15.3 版**：  
+   **Visual Studio 2017 15.3 版**：
+
 - [/std:c++14 和 /std:c++latest](build/reference/std-specify-language-standard-version.md)︰這些編譯器選項可讓您在專案中加入特定的 ISO C++ 程式設計語言版本。 大多數新草稿標準功能都在 **/std:c++latest** 選項的防護範圍內。
 
 - [/std:c++17](build/reference/std-specify-language-standard-version.md) 可讓編譯器實作 C++17 功能集。 此選項會對 C++ 標準中，在 C++17 之後推出但屬於進行中草稿及瑕疵更新版本的變更或新增功能，停用編譯器及標準程式庫支援。 若要啟用這些功能，請使用 **/std:c++latest**。
-
 
 ### <a name="codegen-security-diagnostics-and-versioning"></a>Codegen、安全性、診斷和版本控制
 
@@ -342,9 +342,9 @@ Visual Studio 2017 支援使用 CMake 專案，而不需要轉換為 MSBuild 專
 
   ![Cmake 開啟資料夾](media/cmake_cpp.png "CMake 開啟資料夾")
 
-**Visual Studio 2017 15.3**：已新增針對 CMake Ninja 產生器的支援。 
+**Visual Studio 2017 15.3**：已新增針對 CMake Ninja 產生器的支援。
 
-**Visual Studio 2017 15.5 版**：新增對匯入現有 CMake 快取的支援。 
+**Visual Studio 2017 15.5 版**：新增對匯入現有 CMake 快取的支援。
 
 **Visual Studio 2017 15.7 版**：新增對 CMake 3.11、CMake 專案中的程式碼分析、[方案總管] 中的目標檢視、用於產生快取的選項及單一檔案編譯的支援。 如需詳細資訊，請參閱 [CMake Support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) (Visual Studio 中的 CMake 支援) 和 [Visual C++ 中的 CMake 專案](ide/cmake-tools-for-visual-cpp.md)。
 
@@ -416,10 +416,11 @@ Visual Studio 2017 隨附的 Clang/C2 工具組，現已支援 **/bigobj** 參�
 
 某些您可以在 15.3 中找到的警告編號，在 15.5 中已不再使用。 這些警告已取代為更明確的檢查。
 
-**Visual Studio 2017 15.6 版**：  
-新增對單一檔案分析的支援，以及分析執行階段效能的改善。 如需詳細資訊，請參閱 [C++ Static Analysis Improvements for Visual Studio 2017 15.6 Preview 2](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/c-static-analysis-improvements-for-visual-studio-2017-15-6-preview-2/) (Visual Studio 2017 15.6 Preview 2 的 C++ 靜態分析改善)
+**Visual Studio 2017 15.6 版**：
 
-**Visual Studio 2017 15.7 版**：  
+- 新增對單一檔案分析的支援，以及分析執行階段效能的改善。 如需詳細資訊，請參閱 [C++ Static Analysis Improvements for Visual Studio 2017 15.6 Preview 2](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/c-static-analysis-improvements-for-visual-studio-2017-15-6-preview-2/) (Visual Studio 2017 15.6 Preview 2 的 C++ 靜態分析改善)
+
+**Visual Studio 2017 15.7 版**：
 
 - 新增對 [/analyze:ruleset](build/reference/analyze-code-analysis.md) 的支援，這可讓您指定要執行的程式碼分析規則。
 - 新增對其他 C++ Core Guidelines 規則的支援。  如需詳細資訊，請參閱[使用 C++ 核心指南檢查工具](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers)。
@@ -435,7 +436,7 @@ Google Test Adapter 和 Boost.Test Adapter 現在是 [使用 C++ 進行桌面開
 - 新增對 Boost.Test 動態程式庫支援的支援。
 - 現在可以在 IDE 中使用 Boost.Test 項目範本。
 
-如需詳細資訊，請參閱 [Boost.Test Unit Testing: Dynamic Library support and New Item Template](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/) (Boost.Test 單元測試：動態程式庫支援與新項目範本)。 
+如需詳細資訊，請參閱 [Boost.Test Unit Testing: Dynamic Library support and New Item Template](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/) (Boost.Test 單元測試：動態程式庫支援與新項目範本)。
 
 **Visual Studio 2017 15.7 版**：
 

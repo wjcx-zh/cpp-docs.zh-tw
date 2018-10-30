@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2884abbf02c9eb244d6fb446c7158b708c211557
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d0dca0359ea385e3a30f5dab6e8745a2d567ec1e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066449"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055251"
 ---
 # <a name="thread-local-storage"></a>執行緒區域儲存區
 
@@ -94,7 +94,7 @@ __declspec( thread ) int tls_i = 1;
     Thread int tls_i = sizeof( tls_i )    /* Okay  */
     ```
 
-     請注意，包含要初始化之變數的 sizeof 運算式並不會構成其本身的參考，因此可以使用。
+   請注意，包含要初始化之變數的 sizeof 運算式並不會構成其本身的參考，因此可以使用。
 
 - 使用 **__declspec(thread)** 可能會干擾 DLL 匯入的[延遲載入](../build/reference/linker-support-for-delay-loaded-dlls.md)**。**
 

@@ -14,20 +14,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae68abc0768c0a06526af6439a8a881684ecdb15
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 8cb811ccd3291caa9b3da095310c74416fbd5799
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821275"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067939"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio 中的 Visual C++
 
-> [!NOTE]  
-> 此開發人員文件適用於 Visual Studio 2015 與 Visual Studio 2017。 
+> [!NOTE]
+> 此開發人員文件適用於 Visual Studio 2015 與 Visual Studio 2017。
 
-> 若正在尋找 Visual C++ 可轉散發套件以執行程式，請前往 [Microsoft 下載中心](http://www.microsoft.com/download/)，並在搜尋方塊中輸入 **Visual C++**。  
-  
+> 若正在尋找 Visual C++ 可轉散發套件以執行程式，請前往 [Microsoft 下載中心](http://www.microsoft.com/download/)，並在搜尋方塊中輸入 **Visual C++**。
+
 
 Microsoft Visual C++ 通常簡稱為 Visual C++ 或 MSVC，是 C++、C 及組合語言開發工具與程式庫的名稱，屬於 Windows 上的 Visual Studio 可用內容。 這些工具與程式庫可讓您建立通用 Windows 平台 (UWP) 應用程式、原生 Windows 傳統型與伺服器應用程式、跨平台程式庫與應用程式 (於 Windows、Linux、Android 及 iOS 上執行) 以及使用 .NET Framework 的受控應用程式與程式庫。 您可以使用 Visual C++ 撰寫任何項目，涵蓋範圍從簡單的主控台應用程式到最精密複雜的 Windows 傳統型應用程式；從裝置驅動程式與作業系統元件到行動裝置的跨平台遊戲；及從最小的 IoT 裝置到 Azure 雲端中的多伺服器高效能運算。
 

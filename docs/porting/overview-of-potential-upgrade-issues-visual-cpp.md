@@ -8,18 +8,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdfa82580ba61ab276d6d64a9424d7043c2822f1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 742d722033d0fb2e686861d0e09fc45c73540ade
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393772"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075758"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潛在升級問題概觀 (Visual C++)
 
 多年來，Microsoft Visual C++ 編譯器經過許多變更，包括 C++ 語言本身、C++ 標準程式庫、C 執行階段 (CRT) 以及 MFC 和 ATL 這類其他程式庫。 因此，從較舊版 Visual Studio 升級應用程式時，您可能會在先前編譯無誤的程式碼中遇到編譯器和連結器錯誤及警告。 原始程式碼基底越舊，這類錯誤的可能性就越大。 本概觀摘要說明您可能會遇到的最常見問題類別，並提供更多詳細資訊的連結。
 
-> [!NOTE] 
+> [!NOTE]
 > 以往，我們建議應一次一個版本，以累加方式執行跨越數個 Visual Studio 版本的升級。 我們不再建議這種方法。 我們發現，不論程式碼基底多舊，升級至目前 Visual Studio 版本幾乎一律較為簡單。
 
 有關升級程序的問題或意見都可以傳送至 vcupgrade@microsoft.com。
@@ -161,7 +161,7 @@ C++ 標準現在指定從不帶正負號到帶正負號整數值的轉換視為�
 
 ### <a name="windows-version"></a>Windows 版本
 
-升級直接或間接使用 Windows API 的程式時，您需要決定要支援的最小 Windows 版本。 在大部分情況下，Windows 7 是不錯的選擇。 如需詳細資訊，請參閱[標頭檔問題](porting-guide-spy-increment.md#header_file_problems)。 `WINVER` 巨集會定義您的程式應執行的最舊 Windows 版本。 如果您的 MFC 程式將 WINVER 設為 0x0501 (Windows XP)，則因為 MFC 不再支援 XP，所以會收到警告，即使編譯器本身具有 XP 模式也是一樣。  
+升級直接或間接使用 Windows API 的程式時，您需要決定要支援的最小 Windows 版本。 在大部分情況下，Windows 7 是不錯的選擇。 如需詳細資訊，請參閱[標頭檔問題](porting-guide-spy-increment.md#header_file_problems)。 `WINVER` 巨集會定義您的程式應執行的最舊 Windows 版本。 如果您的 MFC 程式將 WINVER 設為 0x0501 (Windows XP)，則因為 MFC 不再支援 XP，所以會收到警告，即使編譯器本身具有 XP 模式也是一樣。
 
 如需詳細資訊，請參閱[更新目標 Windows 版本](porting-guide-spy-increment.md#updating_winver)和[更多過時的標頭檔](porting-guide-spy-increment.md#outdated_header_files)。
 
@@ -188,4 +188,4 @@ MFC 應用程式中可能會發生此錯誤。 這指出 CRT 程式庫與 MFC �
 ## <a name="see-also"></a>另請參閱
 
 [從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Visual Studio 2017 中的 C++ 一致性改善](../cpp-conformance-improvements-2017.md)  
+[Visual Studio 2017 中的 C++ 一致性改善](../cpp-conformance-improvements-2017.md)

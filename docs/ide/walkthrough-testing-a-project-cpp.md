@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 133214cceebf5d43610207e446698341d7803b71
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 56614dc0829834e77cfdf10d8d88ed44492237e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235538"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070136"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>逐步解說：測試專案 (C++)
 
@@ -33,7 +33,7 @@ ms.locfileid: "48235538"
 
 - 本逐步解說假設您已了解 C++ 語言的基本概念。
 
-- 同時假設，您已完成先前列於[使用 Visual Studio IDE 進行 C++ 桌面程式開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)中的相關逐步解說。
+- 也會假設您已完成先前列於[使用 Visual Studio IDE 進行 C++ 桌面程式開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)中的相關逐步解說。
 
 ### <a name="to-run-a-program-in-debug-mode"></a>在 [偵錯] 模式下執行程式
 
@@ -41,7 +41,7 @@ ms.locfileid: "48235538"
 
 1. 選取這行程式碼：
 
-     `Cardgame.solitaire(1);`
+   `Cardgame.solitaire(1);`
 
 1. 若要在該行設定中斷點，請在功能表列上，選擇 [偵錯] > [切換中斷點]，或選擇 **F9** 鍵。 行左邊會出現一個紅色圓圈，表示已設定中斷點。 若要移除中斷點，您可以選擇功能表命令，或再次選擇 **F9** 鍵。
 

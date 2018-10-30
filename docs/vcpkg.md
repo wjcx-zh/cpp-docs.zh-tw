@@ -14,12 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed44479f6e6d1569a9b27a059e837cbbb924b803
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 70af45a860ff854faf244cf51ad7462262f183fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821415"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072688"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：適用於 Windows、Linux 和 MacOS 的 C++ 套件管理員
 
@@ -37,11 +37,11 @@ vcpkg 是命令列套件管理員，可大幅簡化在 Windows、Linux 和 MacOS
 
 [1] *注意：部分專屬程式庫無法取得來源。在這些案例中，Vcpkg 會下載相容的預先建置二進位檔。*
 
-## <a name="installation"></a>安裝 
+## <a name="installation"></a>安裝
 
 複製 GitHub 的 vcpkg 存放庫： https://github.com/Microsoft/vcpkg。 您可以下載到您偏好的任何資料夾位置。
 
-在根資料夾中執行啟動載入器： 
+在根資料夾中執行啟動載入器：
 
 - **bootstrap-vcpkg.bat** (Windows)
 - **./bootstrap-vcpkg.sh** (Linux、MacOS)
@@ -76,7 +76,7 @@ taglib      1.11.1-2   TagLib Audio Meta-Data Library
 
 使用 **vcpkg search** 取得程式庫名稱之後，則用 **vcpkg install** 下載並編譯程式庫。 vcpkg 在連接埠目錄中使用程式庫的 portfile。 如果未指定任何三元組，則 vcpkg 會針對目標平台的預設三元組進行安裝和編譯：x86-windows、x64-linux.cmake 或 x64-osx.cmake。
 
-如果是 Linux 程式庫，vcpkg 取決於本機電腦上安裝的 gcc。 在 MacOS 上，vcpkg 使用 Clang。 
+如果是 Linux 程式庫，vcpkg 取決於本機電腦上安裝的 gcc。 在 MacOS 上，vcpkg 使用 Clang。
 
 如果連接埠檔案指定相依性，vcpkg 也會加以下載並安裝。 下載後，vcpkg 會使用程式庫使用的任何組建系統來建置程式庫。 建議使用 CMake 和 (在 Windows 上) MSBuild 專案，但也支援 MAKE 和任何其他組建系統。 如果 vcpkg 在本機電腦上找不到指定的組建系統，會將其下載並安裝。
 
@@ -91,7 +91,7 @@ Additional packages (*) will be installed to complete this operation.
 
 ```
 
-若為 CMAKE 專案，請使用 CMAKE_TOOLCHAIN_FILE，以利用 `find_package()` 提供程式庫。 例如:   
+若為 CMAKE 專案，請使用 CMAKE_TOOLCHAIN_FILE，以利用 `find_package()` 提供程式庫。 例如: 
 
 ```cmd
 cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
@@ -132,14 +132,13 @@ zlib:x86-windows        1.2.11   A compression library
 1. 執行 **vcpkg install \<library>**。
 1. 使用 **vcpkg integrate project** 依每個專案建立參考該程式庫的 NuGet 套件。
 
-## <a name="integrate-with-visual-studio-code-linuxmacos"></a>與 Visual Studio Code 整合 (Linux/MacOS) 
+## <a name="integrate-with-visual-studio-code-linuxmacos"></a>與 Visual Studio Code 整合 (Linux/MacOS)
 
 執行 **vcpkg 整合安裝**，以使用 vcpkg 登錄的位置在 Linux/MacOS 上設定 Visual Studio Code，並啟用原始程式檔的 IntelliSense。
 
 ## <a name="target-linux-from-windows-via-wsl"></a>透過 WSL 從 Windows 將 Linux 設為目標
 
 您可以透過適用於 Linux 的 Windows 子系統 (WSL) 從 Windows 電腦產生 Linux 二進位檔。 請遵循指示[在 Windows 10 上安裝 WSL](/windows/wsl/install-win10)，並使用[適用於 Linux 的 Visual Studio 延伸模組](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/)進行設定。 您可以將 Windows 及 Linux 這兩者的所有建置程式庫放入相同的資料夾，並同時從 Windows 和 WSL 進行存取。
-
 
 ## <a name="export_binaries_per_project"></a> 匯出編譯的二進位檔和標頭
 

@@ -12,14 +12,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 38c036bf747115823b853d0d66077f4402a7f7ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ea01c5d92cbdb6066dc87675221eae6865af354
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338402"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070974"
 ---
-# <a name="build-event-properties-linux-c"></a>建置事件屬性 (Linux C++) 
+# <a name="build-event-properties-linux-c"></a>建置事件屬性 (Linux C++)
 
 ## <a name="pre-build-event"></a>建置前事件
 

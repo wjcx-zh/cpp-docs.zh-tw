@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ecac60a1b9cbd2758090e52d917c7a65259d62d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4dc0fd45887975c9b50cee141b0c6e8faca33513
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094386"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083239"
 ---
 # <a name="type-qualifiers"></a>類型限定詞
 
@@ -69,7 +69,7 @@ int volatile vint;     /* Volatile integer        */
 
 - 編譯器會假設，`volatile` 變數可在程式中的任何一點供使用或修改其值的未知處理序存取。 因此，不論在命令列上指定的最佳化為何，都必須為 `volatile` 變數的每個指派或參考產生程式碼 (即使它並沒有任何作用)。
 
-     如果單獨使用 `volatile`，則會假設為 `int`。 `volatile` 類型指定名稱可以用來提供可靠的特殊記憶體位置存取。 使用 `volatile` 搭配可供訊號處理常式、同時執行的程式或特殊硬體 (例如，記憶體對應的 I/O 控制暫存器) 存取或修改的資料物件。 您可以將變數的存留期宣告為 `volatile`，或是將單一參考轉型為 `volatile`。
+   如果單獨使用 `volatile`，則會假設為 `int`。 `volatile` 類型指定名稱可以用來提供可靠的特殊記憶體位置存取。 使用 `volatile` 搭配可供訊號處理常式、同時執行的程式或特殊硬體 (例如，記憶體對應的 I/O 控制暫存器) 存取或修改的資料物件。 您可以將變數的存留期宣告為 `volatile`，或是將單一參考轉型為 `volatile`。
 
 - 項目可以同時是 **const** 與 `volatile`，在這種情況下，項目就無法由自己的程式合法修改，但是可以由某個非同步處理序進行修改。
 

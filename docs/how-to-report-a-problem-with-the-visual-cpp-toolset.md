@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 279598c320131b163b936091560de45255c18a4d
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: e2ca0f4aa5f3965adc97e4cdaef09e01646e8809
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235005"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062115"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>如何回報 Visual C++ 工具組或文件的問題
 
@@ -381,7 +381,7 @@ Visual Studio 開發人員社群頁面提供另一種方便的途徑，讓您回
 
 根據預設，**報表中的所有資訊以及任何留言和回覆都是公開顯示**。 一般來說，這是一項優點，因為它可讓整個社群查看問題、解決方案和其他使用者找到的因應措施。 不過，如果您基於隱私權或智慧財產權理由擔心會讓您的資料或身分公開，則可使用其他選項。
 
-如果您擔心揭露您的身分，請[建立新的 Microsoft 帳戶](https://signup.live.com/)，這不會揭露關於您的任何詳細資料。 使用此帳戶來建立您的報表。 
+如果您擔心揭露您的身分，請[建立新的 Microsoft 帳戶](https://signup.live.com/)，這不會揭露關於您的任何詳細資料。 使用此帳戶來建立您的報表。
 
 **請不要在公開的初始報表標題或內容中放置您想要保持私用的任何項目。** 相反地，請注意您會在個別的留言中私下傳送詳細資料。 為了確定您的報表會導向至適當的人員，請在問題報表的主題清單中包含 **cppcompiler**。 建立問題報表後，現在就能夠指定誰可以查看您的回覆和附件。
 

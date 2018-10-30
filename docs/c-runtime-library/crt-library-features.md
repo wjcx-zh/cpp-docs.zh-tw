@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0864c87b33937fe18c3e4c3083e63bde23ac06
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7562f6e5a8915f33b3f2c8bd23ce310e641984c6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092231"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057035"
 ---
 # <a name="crt-library-features"></a>CRT 程式庫功能
 
@@ -123,7 +123,6 @@ C 執行階段程式庫 (CRT) 是納入 ISO C99 標準程式庫之 C++ 標準程
 如果處理序中的所有映像都使用 CRT 的相同動態載入版本，則也可能避開部分這類問題。 若要確保所有元件都使用 CRT 的相同 DLL 版本，請使用 **/MD** 選項來建置，並使用相同的編譯器工具組和屬性設定。
 
 即便使用相同版本的 CRT，當程式會跨 DLL 界限傳遞某些 CRT 資源時 (例如檔案控制代碼、地區設定和環境變數)，還是需要留意。 如需涉及問題及解決方法的相關資訊，請參閱[跨 DLL 界限傳遞 CRT 物件時可能發生的錯誤](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。
-
 
 ## <a name="see-also"></a>另請參閱
 

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: d2ffd41fe224e492eb4b27a355f6df864e0dd066
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 964da719da8d6f48131fc60f7e7fdfb247637fbf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410820"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069943"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>部署、執行和偵錯 Linux 專案
 
@@ -41,7 +41,7 @@ ms.locfileid: "49410820"
 
     - 在 **gdb** 模式中，Visual Studio 偵錯工具會在遠端系統上驅動 GDB，這在本機與目標電腦上所安裝 GDB 的版本不同時較為相容。 |
 
-    > [!NOTE] 
+    > [!NOTE]
     > 若無法在 gdbserver 偵錯模式中叫用中斷電，請嘗試 gdb 模式。 必須先在遠端目標上[安裝](../linux/download-install-and-setup-the-linux-development-workload.md) gdb。
 
 2. 在 Visual Studio 中使用標準 [偵錯] 工具列選取遠端目標。
@@ -64,7 +64,7 @@ ms.locfileid: "49410820"
 
     如果沒有任何錯誤，應用程式就會啟動，而偵錯工具則會在中斷點暫停。
 
-    ![叫用中斷點](media/hit_breakpoint.png)  
+    ![叫用中斷點](media/hit_breakpoint.png)
 
     您現在可以和目前狀態下的應用程式互動、檢視變數，以及按下 **F10** 或 **F11** 等命令鍵逐步完成程式碼。
 
@@ -79,7 +79,7 @@ ms.locfileid: "49410820"
 ## <a name="configure-other-debugging-options"></a>設定其他偵錯選項
 
 * 使用專案 [偵錯] 屬性頁中的 [程式引數] 項目，即可將命令列引數傳遞至可執行檔。
-  
+
   ![程式引數](media/settings_programarguments.png)
 
 * 使用 [其他偵錯工具命令] 項目，可以將特定偵錯工具選項傳遞至 GDB。  例如，您可能想要忽略 SIGILL (不合法指令) 訊號。  您可以使用 **handle** 命令來進行這項作業。  如上所示將下列項目新增至 [其他偵錯工具命令] 項目：

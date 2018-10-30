@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f367bd5d9e61d44c24a876bf1d69ad24406d0630
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 957b76b6b39586016e9ed7b921b7bfa51a1fdf34
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036211"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075134"
 ---
 # <a name="try-except-statement-c"></a>try-except 陳述式 (C)
 
@@ -49,11 +49,11 @@ ms.locfileid: "46036211"
 
 1. 如果在執行保護的區段時或在保護區段所呼叫的任何常式中發生例外狀況，就會評估 `__except` 運算式，並由傳回值決定例外狀況處理方式。 共有三個值：
 
-     `EXCEPTION_CONTINUE_SEARCH`：無法辨識例外狀況。 繼續搜尋堆疊中的處理常式，首先搜尋包含 **try-except** 陳述式，然後是具有次高優先順序的處理常式。
+   `EXCEPTION_CONTINUE_SEARCH`：無法辨識例外狀況。 繼續搜尋堆疊中的處理常式，首先搜尋包含 **try-except** 陳述式，然後是具有次高優先順序的處理常式。
 
-     `EXCEPTION_CONTINUE_EXECUTION`：可辨識例外狀況，但已解除。 在例外狀況發生的位置繼續執行。
+   `EXCEPTION_CONTINUE_EXECUTION`：可辨識例外狀況，但已解除。 在例外狀況發生的位置繼續執行。
 
-     `EXCEPTION_EXECUTE_HANDLER`：可辨識例外狀況。 執行 `__except` 複合陳述式，然後在發生例外狀況的點繼續執行，將控制項傳送給例外狀況處理常式。
+   `EXCEPTION_EXECUTE_HANDLER`：可辨識例外狀況。 執行 `__except` 複合陳述式，然後在發生例外狀況的點繼續執行，將控制項傳送給例外狀況處理常式。
 
 由於 `__except` 運算式會以 C 運算式求值，因此限於單一值、條件運算式運算子或逗號運算子。 如果需要更廣泛的處理，運算式可以呼叫常式，傳回上面所列三個值的其中一個。
 

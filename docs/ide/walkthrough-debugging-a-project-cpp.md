@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04bec9c0de7734ae2c78dd3e9c124eac3d0a55d8
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: bd8d0cebc34b8f0d59f54e720d6a37a52ab2d9e9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234307"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069317"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>逐步解說：偵錯專案 (C++)
 
@@ -31,7 +31,7 @@ ms.locfileid: "48234307"
 
 - 本逐步解說假設您已了解 C++ 語言的基本概念。
 
-- 其同時假設，您已完成先前列於[使用 Visual Studio IDE 進行 C++ 桌面程式開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)中的相關逐步解說。
+- 也會假設您已完成先前列於[使用 Visual Studio IDE 進行 C++ 桌面程式開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)中的相關逐步解說。
 
 ### <a name="to-fix-a-program-that-has-a-bug"></a>修正具有 Bug 的程式
 
@@ -45,11 +45,11 @@ ms.locfileid: "48234307"
 
 1. 若要在 Cardgame 結束時減少 `totalParticipants`，請在 `Cardgame::~Cardgame` 解構函式的左右大括弧之間新增下列程式碼。
 
-     [!code-cpp[NVC_Walkthrough_Debugging_A_Project#110](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_1.cpp)]
+   [!code-cpp[NVC_Walkthrough_Debugging_A_Project#110](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_1.cpp)]
 
 1. 在您變更之後，Cardgame.cpp 檔案應類似以下程式碼：
 
-     [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]
+   [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]
 
 1. 在功能表列上選擇 [建置] > [建置解決方案]。
 

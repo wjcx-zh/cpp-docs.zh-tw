@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aefcd05f4187e22adf5f21c4beffa74ca8be39b3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5c7473cd7d6f2f07d81011eca0826b8066513d23
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420552"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069252"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Visual C++ 中的開啟資料夾專案
 
@@ -245,6 +245,7 @@ CppProperties.json 支援 Include 路徑和其他屬性值的系統環境變數�
   ]
 }
 ```
+
 ### <a name="define-tasks-with-tasksvsjson"></a>以 tasks.vs.json 定義工作
 
 您可以針對您目前在工作區中所擁有的檔案自動化建置指令碼或任何其他外部作業，方法是直接在 IDE 中以工作的形式執行它們。 您能以滑鼠右鍵按一下檔案或資料夾，並選取 [設定工作] 來設定新工作。

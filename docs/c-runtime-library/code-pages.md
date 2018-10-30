@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a81b358a89f3ed16747d27bc6401c01ad194680
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6eafdf3a140dd8a5976cf2fe8554b3b076111b74
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113717"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060503"
 ---
 # <a name="code-pages"></a>字碼頁
 
@@ -43,7 +43,7 @@ Microsoft 執行階段程式庫使用下列類型的字碼頁：
     setlocale ( LC_ALL, "" );
     ```
 
-     也會將地區設定設定為系統預設 ANSI 字碼頁。
+   也會將地區設定設定為系統預設 ANSI 字碼頁。
 
 - 地區設定字碼頁。 多個執行階段常式的行為取決於包含地區設定字碼頁的目前地區設定 (如需詳細資訊，請參閱[地區設定相關常式](../c-runtime-library/locale.md))。Microsoft 執行階段程式庫中的所有地區設定相關常式預設都會使用對應至 "C" 地區設定的字碼頁。 在執行階段，您可以變更或查詢與 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 呼叫搭配使用的地區設定字碼頁。
 

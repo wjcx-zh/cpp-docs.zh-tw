@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e1edc9e4a6172b3ac55e7a8bc9b21cdc571774d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 24056346520897988fe92587ab45aa7cbc754199
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578396"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074991"
 ---
 # <a name="porting-third-party-libraries"></a>移植協力廠商程式庫
 
-將專案升級至目前版本的 Visual C++ 時，也需要升級專案所使用的任何程式庫，以使用相同的版本和利用編譯器來建置程式庫和您的專案。 (如需詳細資訊，請參閱[潛在升級問題概觀](overview-of-potential-upgrade-issues-visual-cpp.md))。 
+將專案升級至目前版本的 Visual C++ 時，也需要升級專案所使用的任何程式庫，以使用相同的版本和利用編譯器來建置程式庫和您的專案。 (如需詳細資訊，請參閱[潛在升級問題概觀](overview-of-potential-upgrade-issues-visual-cpp.md))。
 
 ## <a name="introducing-vcpkg"></a>vcpkg 簡介
 
@@ -35,7 +35,7 @@ ms.locfileid: "42578396"
 如果您的程式庫不存在於 **vcpkg** 目錄中，則可以在 [GitHub 存放庫](https://github.com/Microsoft/vcpkg/issues)提出問題，社群和 Visual C++ 小組可在該處看到問題，並可能會建立此程式庫的移植檔。
 
 針對專屬協力廠商程式庫 (非開放程式碼)，建議您連絡程式庫提供者。 不過，我們有興趣知道您正在使用和無法使用的任何專屬程式庫，請讓我們知道您依存的程式庫 (您可以透過 vcupgrade@microsoft.com 連絡我們)。
-  
-## <a name="see-also"></a>請參閱  
+
+## <a name="see-also"></a>請參閱
 
 [Visual C++ 移植和升級指南](visual-cpp-porting-and-upgrading-guide.md)

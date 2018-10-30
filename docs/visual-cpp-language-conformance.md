@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a40738b5a360e521ff890ef53240609a9afde32
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dd4848ae88d7bd66286ef13b3505a741d9b55c5c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388965"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060881"
 ---
 # <a name="visual-c-language-conformance"></a>Visual C++ 語言一致性
 
@@ -93,8 +93,6 @@ ms.locfileid: "46388965"
 |&nbsp;&nbsp;[P0283R2 略過無法辨認的屬性](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0702R1 修正初始設定式清單 ctor 的類別樣板引數推斷](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html) \(英文\)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 
-  
-  
 |功能範圍| |
 |----|---|
 |__C++17 核心語言功能 (缺失報表)__|__支援__|
@@ -105,8 +103,6 @@ ms.locfileid: "46388965"
 |&nbsp;&nbsp;[P0962R2 放寬 range-for 迴圈的自訂點尋找規則](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html)|否|
 |&nbsp;&nbsp;[P0969R0 允許可存取成員進行結構化繫結](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0969r0.pdf)|否|
 
-  
-  
 |功能範圍| |
 |----|---|
 |__C++20 核心語言功能__|__支援__|
@@ -117,7 +113,6 @@ ms.locfileid: "46388965"
 |&nbsp;&nbsp;[P0683R1 針對位元欄位的預設成員初始設定式](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0683r1.html) \(英文\)|否|
 |&nbsp;&nbsp;[P0704R1 修正針對成員的常數左值 ref 限定指標](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0704r1.html) \(英文\)|否|
 |&nbsp;&nbsp;[P0734R0 概念](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0734r0.pdf) \(英文\)|否|
-
 
 ## <a name="standard-library-features"></a>標準程式庫功能
 
@@ -258,38 +253,55 @@ ms.locfileid: "46388965"
 
 ### <a name="supported-values"></a>支援的值
 
-__否__：表示尚未實作。  
-__部份__：表示 Visual Studio 2017 的實作不完整。 如需詳細資料，請參閱＜附註＞一節。  
-__N/A__：表示提案報告未描述這些功能。 這些報告已更改標準的語言，但未建立任何實作者的工作。 為求完整性，將它們一併列出。  
-__VS 2010__：表示 Visual Studio 2010 所支援的功能。  
-__VS 2013__：表示 Visual Studio 2013 所支援的功能。  
-__VS 2015__：表示 Visual Studio 2015 RTM 所支援的功能。  
-__VS 2015.2__ 和 __VS 2015.3__：表示 Visual Studio 2015 Update 2 和 Visual Studio 2015 Update 3 分別支援的功能。  
-__VS 2017__：表示 Visual Studio 2017 RTM 所支援的功能。  
-__VS 2017 15.3__：表示 Visual Studio 2017 15.3 版所支援的功能。  
-__VS 2017 15.5__表示 Visual Studio 2017 15.5 版所支援的功能。
-__VS 2017 15.7__ 表示 Visual Studio 2017 15.7 版所支援的功能。
+__否__：表示尚未實作。<br/>
+__部份__：表示 Visual Studio 2017 的實作不完整。 如需詳細資料，請參閱＜附註＞一節。<br/>
+__N/A__：表示提案報告未描述這些功能。 這些報告已更改標準的語言，但未建立任何實作者的工作。 為求完整性，將它們一併列出。<br/>
+__VS 2010__：表示 Visual Studio 2010 所支援的功能。<br/>
+__VS 2013__：表示 Visual Studio 2013 所支援的功能。<br/>
+__VS 2015__：表示 Visual Studio 2015 RTM 所支援的功能。<br/>
+__VS 2015.2__ 和 __VS 2015.3__：表示 Visual Studio 2015 Update 2 和 Visual Studio 2015 Update 3 分別支援的功能。<br/>
+__VS 2017__：表示 Visual Studio 2017 RTM 所支援的功能。<br/>
+__VS 2017 15.3__：表示 Visual Studio 2017 15.3 版所支援的功能。<br/>
+__VS 2017 15.5__表示 Visual Studio 2017 15.5 版所支援的功能。<br/>
+__VS 2017 15.7__ 表示 Visual Studio 2017 15.7 版所支援的功能。<br/>
 
 ### <a name="notes"></a>注意
 
 <a name="note_A"></a>__A__ 在 /std:c++14 模式中，動態例外狀況規格保持未實作，而 throw() 仍被視為 \_\_declspec(nothrow) 的同義字。 在 C++17 中，P0003R5 移除了大部分的動態例外狀況規格，並保留一個殘留項目：throw() 將會被淘汰，而且必須作為 noexcept 的同義字。 在 /std:c++17 模式中，MSVC 現在藉由賦與 throw() 與 noexcept 相同的行為 (也就是透過終止強制執行) 來符合標準。
-編譯器選項 /Zc:noexceptTypes- 會要求 \_\_declspec(nothrow) 的舊行為。 很可能會在 C++20 中移除 throw()。 為了協助移轉程式碼以回應標準及我們實作中的這些變更，已在 **/std:c++17** 和 **/permissive-** 下新增例外狀況規格問題的編譯器警告。  
-<a name="note_B"></a>__B__ 在 Visual Studio 2017 15.7 版的 /permissive- 模式下支援。 如需詳細資訊，請參閱 [MSVC 推出兩階段名稱查閱支援](https://blogs.msdn.microsoft.com/vcblog/2017/09/11/two-phase-name-lookup-support-comes-to-msvc/)。  
-<a name="note_C"></a>__C__ 自 Visual Studio 2015 Update 2 起，編譯器的運算式 SFINAE 支援對標準程式庫而言已足夠。 不論是否設定了/permissive- 模式，Visual Studio 2017 15.7 均可支援。 有一些 Bug 仍待修正。 「唯一的標記類型」因應措施已不再需要，因此我們已從 STL 實作中移除這個因應措施。  
-<a name="note_D"></a>__D__ 編譯器的 C99 前置處理器規則支援在 Visual Studio 2017 中仍未完善。 支援 Variadic 巨集，但在前置處理器的行為方面有很多 Bug。  我們正在檢修前置處理器，並且即將以實驗方式在 **/permissive-** 模式下遞送這些變更。  
-<a name="note_E"></a>__E__ 編譯器可以支援擴充的整數類型，但並沒有這個必要，因此將其標示為不適用。  我們也決定不提供支援 (如同 GCC 和 Clang)。  
-<a name="note_F"></a>__F__ 同樣地，編譯器可以實作此最佳化，但並沒有這個必要，因此將其標示為不適用。  
-<a name="note_G"></a>__G__ 於 [/std:c++14](./build/reference/std-specify-language-standard-version.md) 底下受到支援，並具有可隱藏的警告。  
-<a name="note_J"></a>__J__ Visual Studio 2015 中未完成的功能分別列於此表各處。  
-<a name="note_K"></a>__K__ 這是全新的實作，與舊版 std::experimental 不相容，符號連結支援、Bug 修正，以及標準必要行為的變更都需要此實作。 目前，包括 \<filesystem> 可提供新的 std::filesystem 和之前的 std::experimental::filesystem，而包括 \<experimental/filesystem> 只會提供舊的實驗性實作。 實驗性實作將會在程式庫的下一個 ABI 重大版本中「移除」。  
-<a name="note_L"></a>__L__ 由編譯器內建支援。   
-<a name="note_14"></a>__14__ 這些 C++17/20 功能一律會啟用，就算在指定 [/std:c++14](build/reference/std-specify-language-standard-version.md) (預設值) 的情況下也一樣。 這是因為該功能已在 **/std** 選項推出之前實作，或是因為條件式實作過於複雜。  
-<a name="note_17"></a>__17__ 這些功能是由 [/std:c++17](./build/reference/std-specify-language-standard-version.md) (或 [/std:c++latest](./build/reference/std-specify-language-standard-version.md)) 編譯器選項啟用。  
-<a name="note_byte"></a>__byte__ `std::byte` 是由 [/std:c++17](./build/reference/std-specify-language-standard-version.md) (或 [/std:c++latest](./build/reference/std-specify-language-standard-version.md)) 啟用，但它在某些情況下可能會與 Windows SDK 標頭發生衝突，並具有可微調的退出巨集。 可以透過將 `_HAS_STD_BYTE` 定義為 `0`來停用它。  
-<a name="note_C11"></a>__C11__ 通用 CRT 已實作 C++17 所需的 C11 標準程式庫組件，除了 C99 `strftime()` E/O 替代轉換規範、C11 `fopen()` 獨佔模式，以及 C11 `aligned_alloc()`之外。 最後一個項目最有可能尚未實作，因為 C11 指定 `aligned_alloc()` 的方式與 Microsoft 的 `free()` 實作並不相容，亦即 `free()` 必須能夠處理高度對齊的配置。  
-<a name="note_rem"></a>__rem__ 當指定 [/std:c++17](./build/reference/std-specify-language-standard-version.md) (或 [/std:c++latest](./build/reference/std-specify-language-standard-version.md)) 編譯器選項時，將會移除這些功能。 這些功能具有退出巨集：`_HAS_AUTO_PTR_ETC`、`_HAS_FUNCTION_ALLOCATOR_SUPPORT`、`_HAS_OLD_IOSTREAMS_MEMBERS`，以及 `_HAS_UNEXPECTED`。  
-<a name="note_charconv"></a>__charconv__ 的 from_chars() 和 to_chars() 可用於整數。 我們目前正在處理浮點 from_chars()，接下來會處理浮點 to_chars()。  
-<a name ="note_parallel"></a> __parallel__ C++17 的平行演算法程式庫已完成。 請注意，這並不表示每個演算法都會在每種情況下進行平行處理；最重要的演算法已進行平行處理，因此即使演算法未進行平行處理，也會提供執行原則的簽章。 我們的 STL 實作的中央內部標頭 yvals.h　包含下列「平行演算法附註」：C++ 允許實作將平行演算法實作為序列演算法的呼叫。   這項實作會平行處理數個常見的演算法呼叫，但並非全部。  
+
+編譯器選項 /Zc:noexceptTypes- 會要求 \_\_declspec(nothrow) 的舊行為。 很可能會在 C++20 中移除 throw()。 為了協助移轉程式碼以回應標準及我們實作中的這些變更，已在 **/std:c++17** 和 **/permissive-** 下新增例外狀況規格問題的編譯器警告。
+
+<a name="note_B"></a>__B__ 在 Visual Studio 2017 15.7 版的 /permissive- 模式下支援。 如需詳細資訊，請參閱 [MSVC 推出兩階段名稱查閱支援](https://blogs.msdn.microsoft.com/vcblog/2017/09/11/two-phase-name-lookup-support-comes-to-msvc/)。
+
+<a name="note_C"></a>__C__ 自 Visual Studio 2015 Update 2 起，編譯器的運算式 SFINAE 支援對標準程式庫而言已足夠。 不論是否設定了/permissive- 模式，Visual Studio 2017 15.7 均可支援。 有一些 Bug 仍待修正。 「唯一的標記類型」因應措施已不再需要，因此我們已從 STL 實作中移除這個因應措施。
+
+<a name="note_D"></a>__D__ 編譯器的 C99 前置處理器規則支援在 Visual Studio 2017 中仍未完善。 支援 Variadic 巨集，但在前置處理器的行為方面有很多 Bug。  我們正在檢修前置處理器，並且即將以實驗方式在 **/permissive-** 模式下遞送這些變更。
+
+<a name="note_E"></a>__E__ 編譯器可以支援擴充的整數類型，但並沒有這個必要，因此將其標示為不適用。  我們也決定不提供支援 (如同 GCC 和 Clang)。
+
+<a name="note_F"></a>__F__ 同樣地，編譯器可以實作此最佳化，但並沒有這個必要，因此將其標示為不適用。
+
+<a name="note_G"></a>__G__ 於 [/std:c++14](./build/reference/std-specify-language-standard-version.md) 底下受到支援，並具有可隱藏的警告。
+
+<a name="note_J"></a>__J__ Visual Studio 2015 中未完成的功能分別列於此表各處。
+
+<a name="note_K"></a>__K__ 這是全新的實作，與舊版 std::experimental 不相容，符號連結支援、Bug 修正，以及標準必要行為的變更都需要此實作。 目前，包括 \<filesystem> 可提供新的 std::filesystem 和之前的 std::experimental::filesystem，而包括 \<experimental/filesystem> 只會提供舊的實驗性實作。 實驗性實作將會在程式庫的下一個 ABI 重大版本中「移除」。
+
+<a name="note_L"></a>__L__ 由編譯器內建支援。
+
+<a name="note_14"></a>__14__ 這些 C++17/20 功能一律會啟用，就算在指定 [/std:c++14](build/reference/std-specify-language-standard-version.md) (預設值) 的情況下也一樣。 這是因為該功能已在 **/std** 選項推出之前實作，或是因為條件式實作過於複雜。
+
+<a name="note_17"></a>__17__ 這些功能是由 [/std:c++17](./build/reference/std-specify-language-standard-version.md) (或 [/std:c++latest](./build/reference/std-specify-language-standard-version.md)) 編譯器選項啟用。
+
+<a name="note_byte"></a>__byte__ `std::byte` 是由 [/std:c++17](./build/reference/std-specify-language-standard-version.md) (或 [/std:c++latest](./build/reference/std-specify-language-standard-version.md)) 啟用，但它在某些情況下可能會與 Windows SDK 標頭發生衝突，並具有可微調的退出巨集。 可以透過將 `_HAS_STD_BYTE` 定義為 `0`來停用它。
+
+<a name="note_C11"></a>__C11__ 通用 CRT 已實作 C++17 所需的 C11 標準程式庫組件，除了 C99 `strftime()` E/O 替代轉換規範、C11 `fopen()` 獨佔模式，以及 C11 `aligned_alloc()`之外。 最後一個項目最有可能尚未實作，因為 C11 指定 `aligned_alloc()` 的方式與 Microsoft 的 `free()` 實作並不相容，亦即 `free()` 必須能夠處理高度對齊的配置。
+
+<a name="note_rem"></a>__rem__ 當指定 [/std:c++17](./build/reference/std-specify-language-standard-version.md) (或 [/std:c++latest](./build/reference/std-specify-language-standard-version.md)) 編譯器選項時，將會移除這些功能。 這些功能具有退出巨集：`_HAS_AUTO_PTR_ETC`、`_HAS_FUNCTION_ALLOCATOR_SUPPORT`、`_HAS_OLD_IOSTREAMS_MEMBERS`，以及 `_HAS_UNEXPECTED`。
+
+<a name="note_charconv"></a>__charconv__ 的 from_chars() 和 to_chars() 可用於整數。 我們目前正在處理浮點 from_chars()，接下來會處理浮點 to_chars()。
+
+<a name ="note_parallel"></a> __parallel__ C++17 的平行演算法程式庫已完成。 請注意，這並不表示每個演算法都會在每種情況下進行平行處理；最重要的演算法已進行平行處理，因此即使演算法未進行平行處理，也會提供執行原則的簽章。 我們的 STL 實作的中央內部標頭 yvals.h　包含下列「平行演算法附註」：C++ 允許實作將平行演算法實作為序列演算法的呼叫。   這項實作會平行處理數個常見的演算法呼叫，但並非全部。
 
 下列演算法已平行處理：
 
@@ -314,4 +326,4 @@ __VS 2017 15.7__ 表示 Visual Studio 2017 15.7 版所支援的功能。
 [Visual Studio 2017 中 Visual C++ 的新功能](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [從 2003 到 2015 的 Visual C++ 變更歷程記錄](porting/visual-cpp-change-history-2003-2015.md)<br/>
 [從 2003 到 2015 的 Visual C++ 新功能](porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
-[Visual C++ Team Blog](https://blogs.msdn.microsoft.com/vcblog/) (Visual C++ 小組部落格)  
+[Visual C++ Team Blog](https://blogs.msdn.microsoft.com/vcblog/) (Visual C++ 小組部落格)

@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50db1a8370a43b8b0c43c7c228c7b3acf9dd2c8a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 04a4c2005dc0a7e0e052002198bebb7c78267843
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082870"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059946"
 ---
 # <a name="scanf-type-field-characters"></a>scanf 類型欄位字元
 
@@ -49,12 +49,11 @@ ms.locfileid: "46082870"
 |`p`|十六進位數字中的指標位址。 已讀取數字的最大數目取決於指標大小 (32 或 64 位元)，而這取決於電腦架構。 "0x" 或 "0X" 視為前置詞。|指向 `void*`。|否。|
 |`u`|不帶正負號的十進位整數。|指向 `unsigned int`。|否。|
 |`x`|十六進位整數。|指向 `int`。|否。|
-|`e`、 `E`、 `f`、 `F`、 `g`、 `G`|浮點值包含選用正負號 (+ 或 -)、一或多個一系列包含小數點的十進位數字，以及後面接著選擇性帶正負號的整數值之選擇性指數 (「e」或「E」)。|指向 `float`。|否。|
+|`e`, `E`, `f`, `F`, `g`, `G`|浮點值包含選用正負號 (+ 或 -)、一或多個一系列包含小數點的十進位數字，以及後面接著選擇性帶正負號的整數值之選擇性指數 (「e」或「E」)。|指向 `float`。|否。|
 |`a`、 `A`|浮點數值包含一系列一或多個十六進位數字，該類數字包含選擇性小數點，以及後面接著十進位值的指數 ("p" 或 "P")。|指向 `float`。|否。|
 |`n`|沒有從資料流或緩衝區輸入讀取。|指向用來成功儲存字元數的 `int`，它會從資料流或緩衝讀取字元數，直到目前呼叫 `scanf` 函式或 `wscanf` 函式為止。|否。|
 |`s`|字串，最多至第一個空白字元 (空格、定位字元或新行字元)。 若要讀取未以空白字元分隔的字串，請使用一組方括弧 (`[ ]`)，如 [scanf Width Specification](../c-runtime-library/scanf-width-specification.md)。|搭配 `scanf` 函式使用時，表示單一位元組字元；搭配 `wscanf` 函式使用時，表示全形字元陣列。 在任一情況下，字元陣列必須有足夠大的空間，以便納入輸入欄位以及自動加上之結束的 null 字元。|必要。 大小包含 null 結束字元的空間。|
 |`S`|相反大小字串，最多至第一個空白字元 (空格、定位字元或新行字元)。 若要讀取未以空白字元分隔的字串，請使用一組方括弧 (`[ ]`)，如 [scanf 寬度規格](../c-runtime-library/scanf-width-specification.md)中所述。|搭配 `scanf` 函式使用時，表示寬字元陣列；搭配 `wscanf` 函式使用時，表示單一位元組字元陣列。 在任一情況下，字元陣列必須有足夠大的空間，以便納入輸入欄位以及自動加上之結束的 null 字元。|必要。 大小包含 null 結束字元的空間。|
-
 
 必要時，大小引數應該緊接所套用的引數在參數清單中進行傳遞。 例如，下列程式碼：
 

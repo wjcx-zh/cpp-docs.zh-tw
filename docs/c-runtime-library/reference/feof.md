@@ -1,10 +1,6 @@
 ---
-title: feof | Microsoft Docs
-ms.custom: ''
+title: feof
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - feof
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - feof
-dev_langs:
-- C++
 helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c3162fd72acdfedc198764a92deec043cd681a10
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9c023290df601bfc48f9708af86d32d91cd52dc4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397011"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580691"
 ---
 # <a name="feof"></a>feof
 
@@ -58,15 +48,15 @@ int feof(
 
 ## <a name="return-value"></a>傳回值
 
-**Feof**如果讀取的作業已嘗試讀取超過檔案結尾，函數會傳回非零值; 否則它會傳回 0。 如果資料流的指標是**NULL**，函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL**和**feof**傳回 0。
+**Feof**如果讀取的作業已嘗試讀取超過檔案結尾，函式會傳回非零值; 否則會傳回 0。 如果資料流指標**NULL**，函式會叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為**EINVAL**並**feof**會傳回 0。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Feof**常式 （同時為函式和巨集實作） 會決定是否結尾*資料流*傳遞了無效的。 檔案結尾傳遞時，讀取作業會傳回檔案結尾指標，直到資料流已關閉，或直到[倒轉](rewind.md)， **fsetpos**， [fseek](fseek-fseeki64.md)，或**clearerr**對它呼叫。
+**Feof**常式 （實作為函式和巨集） 會決定是否結尾*串流*已傳遞。 傳遞的檔案結尾時，讀取作業會傳回檔案結尾指標直到資料流已關閉，或直到[倒轉](rewind.md)， **fsetpos**， [fseek](fseek-fseeki64.md)，或**clearerr**針對它呼叫。
 
-例如，如果檔案包含 10 個位元組，且您從檔案讀取 10 個位元組**feof**會傳回 0，因為即使檔案指標會位於檔案結尾，您不嘗試讀取超過結尾。 只有您嘗試讀取後 11 的位元組會**feof**傳回非零值。
+例如，如果檔案包含 10 個位元組，且您從檔案讀取 10 個位元組**feof**會傳回 0，因為即使檔案指標位於檔案結尾時，您並未嘗試讀取超過結尾。 只有您嘗試讀取之後，都會將第 11 個位元組**feof**傳回非零值。
 
 ## <a name="requirements"></a>需求
 

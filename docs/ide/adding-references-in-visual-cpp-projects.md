@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5e32599096b4e0fa451c18b3e05adf01b34ff4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b372959105407074cd2a7295837e2c47ef629da7
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407591"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162161"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>在 Visual C++ 專案中加入參考
 
@@ -84,11 +84,11 @@ ActiveX 參考屬性僅適用於 COM 元件的參考。 這些屬性僅在 [參�
 
 - **複製附屬組件到本機**
 
-   指定是否要在建置期間，自動將參考組件的附屬組件複製到目標位置。 僅在 [複製到本機]  為 `true`時才會使用。
+   指定是否要在建置期間，自動將參考組件的附屬組件複製到目標位置。 僅在 [複製到本機] 為 **true** 時才會使用。
 
 - **參考組件輸出**
 
-   指定這個組件用於建置流程。 如果為 `true`，則組件會在建置期間用於編譯器命令列上。
+   指定這個組件用於建置流程。 如果為 **true**，則組件會在建置期間用於編譯器命令列上。
 
 ### <a name="project-to-project-reference-properties"></a>專案對專案參考屬性
 
@@ -144,7 +144,7 @@ ActiveX 參考屬性僅適用於 COM 元件的參考。 這些屬性僅在 [參�
 
 - **強式名稱**
 
-   如果參考組件具有強式名稱，則為 `true`。 強式命名組件是唯一版本。
+   如果參考組件具有強式名稱，則為`true` 。 強式命名組件是唯一版本。
 
 - **版本**
 

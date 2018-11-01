@@ -15,12 +15,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 82134d48853896ccb70c2620cd70c803fcc74bc8
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 0e735ece878797ffdcf89fffefa33473107ad3d5
+ms.sourcegitcommit: 7098d64443ffbd4a47f30bc41753007b570b47e8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821045"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120560"
 ---
 # <a name="configure-a-linux-cmake-project"></a>設定 Linux CMake 專案
 
@@ -30,7 +30,7 @@ ms.locfileid: "48821045"
 本主題假設您對 Visual Studio 中的 CMake 支援有基本認識。 如需詳細資訊，請參閱 [Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)。 如需 CMake 本身的詳細資訊，請參閱 [Build, Test and Package Your Software With CMake](https://cmake.org/) (使用 CMake 建置、測試及封裝您的軟體)。
 
 > [!NOTE]  
-> Visual Studio 中的 CMake 支援需要 CMake 3.8 中所引進的伺服器模式支援。 如需由 Microsoft 提供，可在 Visual Studio 中支援 [CMake Targets View](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/)窗格的 CMake 變體，請下載最新的預先建置二進位檔，下載位置：[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases)。 如果您的套件管理員提供舊版的 CMake 3.8，可以採取的因應措施為[從來源建置 CMake](#build-a-supported-cmake-release-from-source)，或者若您偏好使用標準 CMake，則可從官方 [CMake 下載頁面](https://cmake.org/download/)加以下載。 
+> Visual Studio 中的 CMake 支援需要 CMake 3.8 中所引進的伺服器模式支援。 針對 Microsoft 所提供的 CMake 變數，請在下列網頁下載最新的預先建置二進位檔：[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases)。 
 
 ## <a name="open-a-folder"></a>開啟資料夾
 
@@ -118,49 +118,10 @@ add_executable(hello-cmake hello.cpp)
 
 這些選項可讓您在建置前後及 CMake 產生之前，於遠端方塊執行命令。 這些命令可以是遠端方塊上的任何有效命令。 輸出會經由管線回到 Visual Studio。
 
-## <a name="build-a-supported-cmake-release-from-source"></a>從來源建置支援的 CMake 版本
+## <a name="download-prebuilt-cmake-binaries"></a>下載預先建置的 CMake 二進位檔
 
-您 Linux 電腦上所需的 CMake 最低版本為 3.8，而且該版本必須同時支援伺服器模式。 若要確認這會執行此命令：
+您的 Linux 發行套件可能會有較舊版本的 CMake。 Visual Studio 中的 CMake 支援需要 CMake 3.8 中所引進的伺服器模式支援。 針對 Microsoft 所提供的 CMake 變數，請在下列網頁下載最新的預先建置二進位檔：[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases)。 
 
-```cmd
-cmake --version
-```
-
-若要確認已啟用伺服器模式，請執行：
-
-```cmd
-cmake -E capabilities
-```
-
-在輸出中，尋找 **"serverMode":true**。 請注意，即使您如下所述從來源編譯 CMake，還是必須在完成時檢查功能。 您的 Linux 系統可能具有防止伺服器模式啟用的限制。
-
-若要在 Linux 系統殼層中開始從來源建置 CMake，請確定您的套件管理員是最新版本，而且有 git 和 cmake 可用。
-
-首先，從我們維護 Visual Studio CMake 支援分支的 [Microsoft CMake 存放庫](https://github.com/Microsoft/CMake) \(英文\)，複製 CMake 來源：
-
-```cmd
-sudo apt-get update
-sudo apt-get install -y git cmake
-git clone https://github.com/Microsoft/CMake.git
-cd CMake
-```
-
-接下來，執行這些程式碼來建置 CMake 並將之安裝到 /usr/local/bin：
-
-```cmd
-mkdir out
-cd out
-cmake ../
-make
-sudo make install
-```
-
-然後，執行此命令以確認版本為 >= 3.8 且已啟用伺服器模式：
-
-```cmd
-/usr/local/bin/cmake –version
-cmake -E capabilities
-```
 
 ## <a name="see-also"></a>請參閱
 

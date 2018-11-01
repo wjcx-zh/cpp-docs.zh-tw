@@ -1,10 +1,6 @@
 ---
-title: _putw | Microsoft Docs
-ms.custom: ''
+title: _putw
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putw
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - _putw
 - putw
-dev_langs:
-- C++
 helpviewer_keywords:
 - integers, writing to streams
 - putw function
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c5e33bc207fe83795c31f6c8b61d931985760e3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3fd18c2a8869d6b09703547f50ee6e096bd72395
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404008"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602679"
 ---
 # <a name="putw"></a>_putw
 
@@ -65,17 +55,17 @@ int _putw(
 
 ## <a name="return-value"></a>傳回值
 
-傳回寫入的值。 傳回值為**EOF**可能表示發生錯誤。 因為**EOF**也是合法的整數值，使用**ferror**驗證錯誤。 如果*資料流*為 null 指標，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**至**EINVAL**並傳回**EOF**。
+傳回寫入的值。 傳回值**EOF**可能表示發生錯誤。 因為**EOF**也是合法的整數值，使用**ferror**驗證錯誤。 如果*資料流*為 null 指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**要**EINVAL** ，並傳回**EOF**。
 
 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Putw**函式會寫入類型的二進位值**int**的目前位置*資料流。* **_putw**不會影響的資料流中的項目對齊方式，也不會假設任何特殊的對齊方式。 **_putw**是主要是為了與先前的程式庫的相容性。 可移植性問題時可能發生之 **_putw**因為大小**int**中位元組的順序和**int**在系統之間會有所不同。
+**_Putw**函式會寫入二進位值的型別**int**的目前位置到*資料流。* **_putw**並不會影響的資料流中的項目對齊方式，也不會假設任何特殊對齊方式。 **_putw**是主要是為了與先前的程式庫相容。 可攜性問題時可能發生之 **_putw**因為大小**int**和位元組順序**int**系統而有所不同。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_putw**|\<stdio.h>|
 

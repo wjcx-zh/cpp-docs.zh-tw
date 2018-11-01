@@ -1,27 +1,17 @@
 ---
-title: 專案建置錯誤 PRJ0026 |Microsoft Docs
-ms.custom: ''
+title: 專案建置錯誤 PRJ0026
 ms.date: 08/27/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - PRJ0026
-dev_langs:
-- C++
 helpviewer_keywords:
 - PRJ0026
 ms.assetid: c52bc9b5-8b22-4015-b477-8645ae56c489
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2402ee3f8e099a58c236ad7055a1a1487773dd9f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7450d655e4cc8cc073940ef13f8bd57db2ad5219
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195046"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590277"
 ---
 # <a name="project-build-error-prj0026"></a>專案建置錯誤 PRJ0026
 

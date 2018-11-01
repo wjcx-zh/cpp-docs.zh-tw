@@ -1,10 +1,6 @@
 ---
-title: _close | Microsoft Docs
-ms.custom: ''
+title: _close
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _close
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _close
-dev_langs:
-- C++
 helpviewer_keywords:
 - _close function
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eabf084d2e4dd7e280c0ff730d1ec34d86f1ed98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: faea008903136e8abdc39297672b31800ada796d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394193"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528020"
 ---
 # <a name="close"></a>_close
 
@@ -59,19 +49,19 @@ int _close(
 
 ## <a name="return-value"></a>傳回值
 
-**_close**如果檔案已成功關閉時，則傳回 0。 傳回值-1 表示錯誤。
+**_close**會傳回 0，如果已成功關閉檔案。 傳回值為-1 表示錯誤。
 
 ## <a name="remarks"></a>備註
 
 **_Close**函式會關閉與相關聯的檔案*fd*。
 
-關閉檔案描述元和基礎 OS 檔案控制代碼。 因此，不需要呼叫**CloseHandle**如果使用的 Win32 函式原本開啟檔案**CreateFile** ，轉換為使用檔案描述元 **_open_osfhandle**.
+關閉檔案描述元和基礎 OS 檔案控制代碼。 因此，不需要呼叫**CloseHandle**如果檔案原開啟使用 Win32 函式**CreateFile**轉換為使用檔案描述元 **_open_osfhandle**.
 
-這個函式會驗證它的參數。 如果*fd*是不正確的檔案描述項無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函數會傳回-1 和**errno**設**EBADF**。
+這個函式會驗證它的參數。 如果*fd*是不正確的檔案描述項無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函數會傳回-1 及**errno**設為**EBADF**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|---------------------|
 |**_close**|\<io.h>|\<errno.h>|
 

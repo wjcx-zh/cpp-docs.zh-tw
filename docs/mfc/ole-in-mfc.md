@@ -1,12 +1,6 @@
 ---
-title: MFC 中的 OLE |Microsoft Docs
-ms.custom: ''
+title: MFC 中的 OLE
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, OLE and
 - OLE items
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - applications [OLE], about OLE
 - OLE component object model (COM)
 ms.assetid: 5193479d-1239-4697-aea4-e82f92c707ab
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e43484e5f30191c604f43a2280a8deab6eddd93c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 992715c545f90176ab750890c4be3e05dfe950d3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434943"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520480"
 ---
 # <a name="ole-in-mfc"></a>MFC 中的 OLE
 

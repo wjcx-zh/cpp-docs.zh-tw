@@ -1,10 +1,6 @@
 ---
-title: _get_unexpected | Microsoft Docs
-ms.custom: ''
+title: _get_unexpected
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_unexpected
 apilocation:
@@ -23,27 +19,21 @@ f1_keywords:
 - __get_unexpected
 - _get_unexpected
 - get_unexpected
-dev_langs:
-- C++
 helpviewer_keywords:
 - __get_unexpected function
 - get_unexpected function
 - _get_unexpected function
 ms.assetid: a5f7a7a0-18e0-485e-953d-db291068a1e8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e6f768d6f384e5b3b39e8d2884a7a7cb0362915
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 225158ecab60a5997ebedbad107eb43d82189234
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451650"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519401"
 ---
 # <a name="getunexpected"></a>_get_unexpected
 
-傳回由呼叫終止常式**意外**。
+傳回由呼叫的終止常式**意外**。
 
 ## <a name="syntax"></a>語法
 
@@ -53,11 +43,11 @@ unexpected_function _get_unexpected( void );
 
 ## <a name="return-value"></a>傳回值
 
-將指標傳回由 [set_unexpected](set-unexpected-crt.md) 註冊的函式。 如果尚未設定任何函式，傳回的值可能用來還原預設行為。這個值可能是**NULL**。
+將指標傳回由 [set_unexpected](set-unexpected-crt.md) 註冊的函式。 如果尚未設定任何函式，傳回的值可能用於還原預設行為。此值可能**NULL**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_get_unexpected**|\<eh.h>|
 

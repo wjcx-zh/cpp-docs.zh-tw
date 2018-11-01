@@ -1,27 +1,17 @@
 ---
-title: 框架視窗類別 (Windows) |Microsoft Docs
-ms.custom: ''
+title: 框架視窗類別 (Windows)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.frame
-dev_langs:
-- C++
 helpviewer_keywords:
 - frame window classes [MFC], reference
 ms.assetid: 6342ec5f-f922-4da8-a78e-2f5f994c7142
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: be63dd57900bbbe1691e132cd880d3da60caf4e5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 93df9ce745fc907425f1a840ffb7d16a696831fc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431940"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514331"
 ---
 # <a name="frame-window-classes-windows"></a>框架視窗類別 (Windows)
 

@@ -1,27 +1,17 @@
 ---
-title: 並行執行階段 |Microsoft Docs
-ms.custom: ''
+title: 並行執行階段
 ms.date: 07/20/2018
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency Runtime, getting started
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ac7999919daa7dc028bd8e12e7d98b737afc4e36
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bed1d7680d9bc6615476c7d5d4b700d729026c66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413805"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495949"
 ---
 # <a name="concurrency-runtime"></a>並行執行階段
 
@@ -108,10 +98,10 @@ C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的�
 
 |||
 |-|-|
-|[非同步程式設計模式和秘訣在 Hilo （使用 c + + 和 XAML Windows 市集應用程式）](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我們如何使用並行執行階段來實作非同步作業，使用 c + + 和 XAML 的 Windows 執行階段應用程式。|
-|[並行執行階段和 Visual Studio 2010 中的平行模式程式庫程式碼範例](http://go.microsoft.com/fwlink/p/?linkid=183875)|提供示範並行執行階段的範例應用程式和公用程式。|
-|[機器碼部落格中的平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=183873)|提供有關在並行執行階段中之平行程式設計的其他深入部落格文章。|
-|[在 c + + 和機器碼論壇中的平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=183874)|讓您參與有關並行執行階段的社群討論。|
+|[Hilo 的非同步程式設計模式和祕訣 (使用 C++ 和 XAML 的 Windows 市集應用程式)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我們如何使用並行執行階段來實作非同步作業，使用 c + + 和 XAML 的 Windows 執行階段應用程式。|
+|[Visual Studio 2010 中的並行執行階段和平行模式程式庫程式碼範例](http://go.microsoft.com/fwlink/p/?linkid=183875)|提供示範並行執行階段的範例應用程式和公用程式。|
+|[機器碼平行程式設計部落格](http://go.microsoft.com/fwlink/p/?linkid=183873)|提供有關在並行執行階段中之平行程式設計的其他深入部落格文章。|
+|[C++ 和機器碼平行程式設計論壇](http://go.microsoft.com/fwlink/p/?linkid=183874)|讓您參與有關並行執行階段的社群討論。|
 |[平行程式設計](/dotnet/standard/parallel-programming/index)|將教導您有關使用.NET Framework 中平行程式設計模型。|
 
 ## <a name="see-also"></a>另請參閱

@@ -1,15 +1,9 @@
 ---
-title: -VERSION （版本資訊） |Microsoft Docs
-ms.custom: ''
+title: /VERSION (版本資訊)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.Version
 - /version
-dev_langs:
-- C++
 helpviewer_keywords:
 - -VERSION linker option
 - Version Information linker option
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - /VERSION linker option
 - VERSION linker option
 ms.assetid: b86d0e86-dca6-4316-aee2-d863ccb9f223
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: de2d7e3988c2e0024c4b0a668960bccfcf3dd2ae
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3e24a5307b8c4f60f29de390d38d9694f1cacf29
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720885"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529685"
 ---
 # <a name="version-version-information"></a>/VERSION (版本資訊)
 

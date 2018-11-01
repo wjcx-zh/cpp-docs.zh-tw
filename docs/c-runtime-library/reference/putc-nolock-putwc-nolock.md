@@ -1,10 +1,6 @@
 ---
-title: _putc_nolock、_putwc_nolock | Microsoft Docs
-ms.custom: ''
+title: _putc_nolock、_putwc_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putc_nolock
 - _putwc_nolock
@@ -28,8 +24,6 @@ f1_keywords:
 - _putwc_nolock
 - _putc_nolock
 - putc_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - puttc_nolock function
 - putc_nolock function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - _puttc_nolock function
 - _putwc_nolock function
 ms.assetid: 3cfc7f21-c9e8-4b7f-b0fb-af0d4d85e7e1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5975c25c015bb77c627eda3483566f358aedbedb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b2a30b83f0746b1b4f5ab03b4c3dfa0229656bb9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404460"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50510907"
 ---
 # <a name="putcnolock-putwcnolock"></a>_putc_nolock、_putwc_nolock
 
@@ -82,9 +72,9 @@ wint_t _putwc_nolock(
 
 ## <a name="remarks"></a>備註
 
-**_putc_nolock**和 **_putwc_nolock**沒有版本相同 **_nolock**後置詞，不同之處在於它們未受保護的干擾由其他執行緒。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
+**_putc_nolock**並 **_putwc_nolock**版本，而不需要相同 **_nolock**尾碼不同之處在於它們不會受到干擾其他執行緒。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
 
-**_putwc_nolock**是寬字元版本的 **_putc_nolock**; 兩個函式的資料流在 ANSI 模式中開啟時即會相同行為。 **_putc_nolock**目前不支援 UNICODE 資料流輸出。
+**_putwc_nolock**是寬字元版本 **_putc_nolock**; 如果資料流以 ANSI 模式開啟兩個函式行為相同。 **_putc_nolock**目前不支援輸出至 UNICODE 資料流。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -94,12 +84,12 @@ wint_t _putwc_nolock(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_putc_nolock**|\<stdio.h>|
 |**_putwc_nolock**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 應用程式中不支援主控台。 在主控台中，與相關聯的標準資料流控制代碼**stdin**， **stdout**，和**stderr**，必須重新導向之後 C 執行階段函式可以在 UWP 應用程式中使用它們,. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台中，相關聯的標準資料流控制代碼**stdin**， **stdout**，並**stderr**，必須重新導向，C 執行階段函式才能使用它們在 UWP 應用程式. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 

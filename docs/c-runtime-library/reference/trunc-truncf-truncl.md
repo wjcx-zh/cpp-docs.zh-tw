@@ -1,11 +1,6 @@
 ---
-title: trunc、truncf、truncl | Microsoft Docs
-ms.custom: ''
+title: trunc、truncf、truncl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - trunc
 - truncf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/trunc
 - math/truncf
 - math/truncl
-dev_langs:
-- C++
 helpviewer_keywords:
 - trunc function
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 67c179065a6b2c6fc10a4ba6ba87868c8306a2aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6e023b9d894ea1b40a0e056e73b7c32f1e3cbed7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409455"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519856"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc、truncf、truncl
 
@@ -72,7 +61,7 @@ float trunc( float x ); //C++ only
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，傳回的整數值*x*，朝向零四捨五入。
+如果成功，傳回的整數值*x*、 朝向零四捨五入。
 
 否則，可能會傳回下列其中一項：
 
@@ -86,7 +75,7 @@ float trunc( float x ); //C++ only
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**trunc**採用並傳回**float**和**長** **double**型別。 在 C 程式中， **trunc**一律採用並傳回**double**。
+因為 c + + 允許多載，您可以呼叫多載**trunc**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **trunc**一律採用並傳回**double**。
 
 因為浮點數的最大值是確切的整數，這個函式本身不會溢位。 不過，您可能會因為將值傳回到整數類型而造成函式溢位。
 

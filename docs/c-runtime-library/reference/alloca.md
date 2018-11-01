@@ -1,10 +1,6 @@
 ---
-title: _alloca |Microsoft 文件
-ms.custom: ''
+title: _alloca
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _alloca
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - _alloca
 - alloca
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory allocation, stack
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fdc595d33bdc5ce464df1aed86cf885e5673ddc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7c083e791301d3224709a5fc6c711ceaa6397d38
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394112"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668064"
 ---
 # <a name="alloca"></a>_alloca
 
@@ -59,32 +49,32 @@ void *_alloca(
 
 ## <a name="return-value"></a>傳回值
 
-**_Alloca**常式傳回**void**指標至配置的空間，保證會適當地對齊任何物件類型的儲存體。 如果*大小*為 0， **_alloca**配置長度為零的項目並傳回該項目有效的指標。
+**_Alloca**常式會傳回**void**指標至配置的空間保證會適當地對齊任何物件類型的儲存體。 如果*大小*為 0， **_alloca**配置零長度項目，並傳回該項目的有效指標。
 
 如果無法配置空間，則會產生堆疊溢位例外狀況。 堆疊溢位例外狀況不是 C++ 例外狀況，而是結構化例外狀況。 您必須使用[結構化例外狀況處理](../../cpp/structured-exception-handling-c-cpp.md) (SEH)，而不是使用 C++ 例外狀況處理。
 
 ## <a name="remarks"></a>備註
 
-**_alloca**配置*大小*位元組程式堆疊。 （不超出範圍只是通過配置） 時，呼叫的函式結束時，會自動釋放已配置的空間。 因此，不會傳遞所傳回的指標值 **_alloca**做為引數[可用](free.md)。
+**_alloca**配置*大小*位元組從程式堆疊。 （不只是超出範圍的配置） 時，呼叫的函式結束時，會自動釋放配置的空間。 因此，不會傳遞所傳回的指標值 **_alloca**做為引數[免費](free.md)。
 
-有一些限制，明確呼叫 **_alloca**例外狀況處理常式 (EH) 中。 在 x86 等級處理器上執行的 EH 常式會在自己的記憶體框架中運作︰這些常式會在不是根據封入函式之堆疊指標目前位置的記憶體空間中執行其工作。 最常見的實作包括 Windows NT 結構化例外狀況處理 (SEH) 和 C++ catch 子句運算式。 因此，明確呼叫 **_alloca**任何的下列案例會導致程式失敗時回傳給呼叫 EH 常式中：
+若要明確呼叫的限制 **_alloca**例外狀況處理常式 (EH) 中。 在 x86 等級處理器上執行的 EH 常式會在自己的記憶體框架中運作︰這些常式會在不是根據封入函式之堆疊指標目前位置的記憶體空間中執行其工作。 最常見的實作包括 Windows NT 結構化例外狀況處理 (SEH) 和 C++ catch 子句運算式。 因此，明確呼叫 **_alloca**任何下列案例中的結果傳回給呼叫的 EH 常式期間的程式發生失敗：
 
 - Windows NT SEH 例外狀況篩選條件運算式： `__except ( _alloca() )`
 
-- Windows NT SEH 最後一個例外狀況處理常式： `__finally { _alloca() }`
+- Windows NT SEH 最終例外狀況處理常式： `__finally { _alloca() }`
 
 - C++ EH catch 子句運算式
 
-不過， **_alloca**可以直接從呼叫 EH 常式內或從應用程式所提供的回呼叫用由其中一個先前所列的 EH 案例。
+不過， **_alloca**可以直接從 EH 常式或呼叫應用程式所提供的回呼所叫用由其中一個 EH 情節先前所列。
 
 > [!IMPORTANT]
 > 在 Windows XP 中，如果 **_alloca**稱為 try/catch 區塊中，您必須呼叫[_resetstkoflw](resetstkoflw.md) catch 區塊中。
 
-除了上述的限制，當使用[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)選項， **_alloca**不能用於在 **__except**區塊。 如需詳細資訊，請參閱 [/clr Restrictions](../../build/reference/clr-restrictions.md)。
+除了上述限制，當使用[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)選項時， **_alloca**不適用於 **__except**區塊。 如需詳細資訊，請參閱 [/clr Restrictions](../../build/reference/clr-restrictions.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_alloca**|\<malloc.h>|
 

@@ -1,10 +1,6 @@
 ---
-title: isalpha、iswalpha、_isalpha_l、_iswalpha_l | Microsoft Docs
-ms.custom: ''
+title: isalpha、iswalpha、_isalpha_l、_iswalpha_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswalpha
 - _iswalpha_l
@@ -31,8 +27,6 @@ f1_keywords:
 - iswalpha
 - _istalpha_l
 - _iswalpha_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _iswalpha_l function
 - _isalpha_l function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 28d533a7865a49df7cc962e0f2cc392f5e56d95d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47b7e43172884524e50e332dcb421e84a99b9806
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401990"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591746"
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha、iswalpha、_isalpha_l、_iswalpha_l
 
@@ -88,11 +78,11 @@ int _iswalpha_l(
 
 ## <a name="return-value"></a>傳回值
 
-每個這些常式傳回非零，如果*c*是字母字元的特定表示法。 **isalpha**傳回非零值，如果*c* A-Z 或 a-z 的範圍內。 **iswalpha**傳回非零的值，只為寬字元的[iswupper](isupper-isupper-l-iswupper-iswupper-l.md)或**iswlower**為非零值; 也就是針對任何寬字元也就是為實作定義字元集的其中一個不**iswcntrl**， **iswdigit**， **iswpunct**，或**iswspace**為非零值。 這些常式都會傳回 0，如果*c*不符合測試條件。
+這些常式傳回非零值如果*c*表示特定的字母字元。 **isalpha**傳回非零值，如果*c* A-Z 或 a-z 的範圍內。 **iswalpha**為其傳回非零的值，只會針對寬字元[iswupper](isupper-isupper-l-iswupper-iswupper-l.md)或是**iswlower**為非零值; 也就是說，對於任何寬字元也就是其中一個實作定義字元集的均**iswcntrl**， **iswdigit**， **iswpunct**，或**iswspace**為非零值。 這些常式都會傳回 0，如果*c*不符合測試條件。
 
 有這些函式的版本 **_l**後置詞使用傳入的地區設定參數，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-行為**isalpha**和 **_isalpha_l**是未定義的如果*c*不 EOF 或 0 到 0xFF，（含) 範圍中。 當使用 CRT 偵錯程式庫和*c*不是其中一個函式產生，這些值的判斷提示。
+行為**isalpha**並 **_isalpha_l**如果是未定義*c*不是 EOF 或介於 0 到 0xFF 的內含。 使用偵錯 CRT 程式庫時， *c*是不是其中一個值，函式會引發判斷提示。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -103,7 +93,7 @@ int _iswalpha_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**isalpha**|\<ctype.h>|
 |**iswalpha**|\<ctype.h> 或 \<wchar.h>|

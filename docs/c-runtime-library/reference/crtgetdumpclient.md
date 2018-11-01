@@ -1,10 +1,6 @@
 ---
-title: _CrtGetDumpClient | Microsoft Docs
-ms.custom: ''
+title: _CrtGetDumpClient
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtGetDumpClient
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - CrtGetDumpClient
 - _CrtGetDumpClient
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtGetDumpClient function
 - CrtGetDumpClient function
 ms.assetid: 9051867f-341b-493b-b53d-45d2b454a3ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1f15e41c91867c7728a1d006b8038aa1ca18010a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e4700bd936bec97014508c4a971f6e6c278c6a11
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394405"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550731"
 ---
 # <a name="crtgetdumpclient"></a>_CrtGetDumpClient
 
-擷取目前的應用程式定義函式來傾印 **_CLIENT_BLOCK**輸入記憶體區塊 （僅限偵錯版本）。
+擷取目前的應用程式定義函式以傾印 **_CLIENT_BLOCK**類型記憶體區塊 （僅限偵錯版本）。
 
 ## <a name="syntax"></a>語法
 
@@ -55,13 +45,13 @@ _CRT_DUMP_CLIENT _CrtGetDumpClient( void );
 
 ## <a name="remarks"></a>備註
 
-**_CrtGetDumpClient**函式會擷取目前的攔截函式來傾印物件儲存在 **_CLIENT_BLOCK** C 執行階段的記憶體區塊偵錯記憶體傾印程序。
+**_CrtGetDumpClient**函式會擷取目前的攔截函式傾印中儲存的物件 **_CLIENT_BLOCK** C 執行階段的記憶體區塊偵錯記憶體傾印處理序。
 
 如需使用支援攔截程序之其他執行階段函式，以及撰寫您自己的用戶端定義攔截函式的詳細資訊，請參閱[撰寫偵錯攔截函式](/visualstudio/debugger/debug-hook-function-writing)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_CrtGetDumpClient**|\<crtdbg.h>|
 

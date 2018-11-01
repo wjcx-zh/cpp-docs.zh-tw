@@ -1,12 +1,7 @@
 ---
-title: 關鍵字 （c + +） |Microsoft Docs
+title: 關鍵字 （c + +）
 ms.custom: index-page
 ms.date: 10/10/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, keywords
 - keywords [C++]
@@ -14,16 +9,12 @@ helpviewer_keywords:
 - Microsoft-specific keywords
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 86912ad8dfa3e048b74c67b6936eb09f74db308a
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 645a0edb053320499c3ecca1c9d2ffd639b15931
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162447"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659302"
 ---
 # <a name="keywords-c"></a>關鍵字 （c + +）
 
@@ -85,7 +76,7 @@ ms.locfileid: "49162447"
 
 在 Microsoft C++ 中，有兩個前置底線的識別項是保留給編譯器實作。 因此，Microsoft 慣例就是在 Microsoft 專有關鍵字前面加上雙底線。 這些字詞不可做為識別項名稱使用。
 
-Microsoft 擴充功能預設為啟用。 若要確保您的程式具完整可攜性，您可以停用 Microsoft 擴充功能藉由指定[/Za\(停用語言擴充功能)](../build/reference/za-ze-disable-language-extensions.md)在編譯期間的選項。 當您這樣做時，會停用某些 Microsoft 專有的關鍵字。
+Microsoft 擴充功能預設為啟用。 為了確保您的程式可完整移植，您可以在編譯期間指定 [/Za \(停用語言擴充功能)](../build/reference/za-ze-disable-language-extensions.md) 來停用 Microsoft 擴充功能。 當您這樣做時，某些 Microsoft 專有關鍵字就會停用。
 
 啟用 Microsoft 擴充功能後，您可以在程式中使用 Microsoft 專有的關鍵字。 為符合 ANSI 標準，這些關鍵字前面都加上雙底線。 回溯相容性，支援的許多其他雙底線關鍵字的單底線版本。 颾魤 ㄛ **__cdecl**適用於沒有前置的底線。
 

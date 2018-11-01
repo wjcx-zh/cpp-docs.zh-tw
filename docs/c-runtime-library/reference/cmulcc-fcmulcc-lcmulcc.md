@@ -1,11 +1,6 @@
 ---
-title: _Cmulcc _FCmulcc，_LCmulcc |Microsoft 文件
-ms.custom: ''
+title: _Cmulcc、 _FCmulcc、 _LCmulcc
 ms.date: 03/30/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - _Cmulcc
 - _FCmulcc
@@ -30,26 +25,20 @@ f1_keywords:
 - complex/_Cmulcc
 - complex/_FCmulcc
 - complex/_LCmulcc
-dev_langs:
-- C++
 helpviewer_keywords:
 - _Cmulcc function
 - _FCmulcc function
 - _LCmulcc function
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f1c4290c7e1f7a1ec917f2b2a197f787d28b9cd9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f81ccb641a80ab264e8bc54ba1987e2c2c8469f1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394980"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656764"
 ---
-# <a name="cmulcc-fcmulcc-lcmulcc"></a>_Cmulcc _FCmulcc _LCmulcc
+# <a name="cmulcc-fcmulcc-lcmulcc"></a>_Cmulcc、 _FCmulcc、 _LCmulcc
 
-乘上兩個複數。
+乘以兩個複數相加。
 
 ## <a name="syntax"></a>語法
 
@@ -62,26 +51,26 @@ _Lcomplex _LCmulcc( _Lcomplex x, _Lcomplex y );
 ### <a name="parameters"></a>參數
 
 *x*<br/>
-要相乘的複雜運算元的其中一個。
+其中一個要相乘的複雜運算元。
 
 *y*<br/>
 其他複雜運算元相乘。
 
 ## <a name="return-value"></a>傳回值
 
-A **_Dcomplex**， **_Fcomplex**，或 **_Lcomplex**結構，表示複雜複雜的數字的乘積*x*和*y*。
+A **_Dcomplex**， **_Fcomplex**，或 **_Lcomplex**結構，表示複雜的複數乘積*x*並*y*。
 
 ## <a name="remarks"></a>備註
 
-因為內建算術運算子無法運作的複雜型別中，Microsoft 實作 **_Cmulcc**， **_FCmulcc**，和 **_LCmulcc**函式簡化複雜型別的乘法。
+因為 Microsoft 實作的複雜型別上無法運作的內建算術運算子 **_Cmulcc**， **_FCmulcc**，並 **_LCmulcc**函式簡化的複雜型別。
 
 ## <a name="requirements"></a>需求
 
-|常式|C 標頭|C++ 標頭|
+|常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
 |**_Cmulcc**， **_FCmulcc**， **_LCmulcc**|\<complex.h>|\<complex.h>|
 
-這些函式是 Microsoft 特定的。 型別 **_Dcomplex**， **_Fcomplex**，和 **_Lcomplex**是 Microsoft 特定對等項目未實作 C99 原生類型**double _Complex**， **float _Complex**，和**長雙精度 _Complex**分別。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+這些函式是 Microsoft 特定的。 型別 **_Dcomplex**， **_Fcomplex**，並 **_Lcomplex**是 Microsoft 特定對等項目未實作 C99 原生類型**double _Complex**， **float _Complex**，以及**long double _Complex**分別。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

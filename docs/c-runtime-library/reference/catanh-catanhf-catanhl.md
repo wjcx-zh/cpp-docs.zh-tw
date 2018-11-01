@@ -1,11 +1,6 @@
 ---
-title: catanh、catanhf、catanhl | Microsoft Docs
-ms.custom: ''
+title: catanh、catanhf、catanhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - catanh
 - catanhf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/catanh
 - complex/catanhf
 - complex/catanhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - catanh function
 - catanhf function
 - catanhl function
 ms.assetid: 1b6021cb-647a-41b4-9d7f-919cc8b57b86
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cd74d00e7f5be5e7631bc33fb9b7ea13eb32a407
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c71d4e44de72b54fd334fc2464ca221f36855a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393946"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646354"
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh、catanhf、catanhl
 
-擷取與實際的軸間隔 [-1; + 1] 以外的分支剪下複數的反雙曲正切。
+擷取複數，而且在實數軸的間隔 [-1; + 1] 外部分支的反雙曲正切。
 
 ## <a name="syntax"></a>語法
 
@@ -79,15 +68,15 @@ _Lcomplex catanhl(
 
 ## <a name="return-value"></a>傳回值
 
-反雙曲正切*z*，以弧度為單位。 結果是在實際的軸和間隔中未繫結 [-iπ/2; + iπ/2] 的虛數座標軸。 如果會發生網域錯誤*z*超出間隔 [-1，+ 1]。 如果會發生柵欄錯誤*z*為-1 或 + 1。
+反雙曲正切*z*，以弧度為單位。 結果是未繫結，而且實際軸中，並且在間隔 [-i π/2; + i π/2] 在虛數軸。 如果會發生網域錯誤*z*超出的間隔 [-1，+ 1]。 如果會發生極錯誤*z*為-1 或 + 1。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**catanh**採用並傳回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程式中， **catanh**一律採用並傳回 **_Dcomplex**值。
+因為 c + + 允許多載，您可以呼叫多載**catanh**採用並傳回 **_Fcomplex**並 **_Lcomplex**值。 在 C 程式中， **catanh**一律採用並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
-|常式|C 標頭|C++ 標頭|
+|常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
 |**catanh**， **catanhf**， **catanhl**|\<complex.h>|\<ccomplex>|
 

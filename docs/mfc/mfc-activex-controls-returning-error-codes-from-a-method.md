@@ -1,12 +1,6 @@
 ---
-title: MFC ActiveX 控制項： 從方法傳回錯誤碼 |Microsoft Docs
-ms.custom: ''
+title: MFC ActiveX 控制項：從方法傳回錯誤碼
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
 - SetNotSupported method, using
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - SCODE, MFC ActiveX controls
 - ThrowError method [MFC]
 ms.assetid: 771fb9c9-2413-4dcc-b386-7bc4c4adeafd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9daaa86f6f57d28b56a7374ff64b0fcbca2a3d98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8c5fe88cf952337a7d070eae7a5da149a8e905bd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383593"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676482"
 ---
 # <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>MFC ActiveX 控制項：從方法傳回錯誤碼
 

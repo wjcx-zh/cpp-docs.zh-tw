@@ -1,15 +1,9 @@
 ---
-title: 建置 C/c + + 應用程式 |Microsoft Docs
-ms.custom: ''
+title: 建置 C/C++ 程式
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
 f1_keywords:
 - vcbuilding
 - buildingaprogramVC
-dev_langs:
-- C++
 helpviewer_keywords:
 - builds [C++]
 - Visual C++ projects, building
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - builds [C++], options
 - Visual C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3fd4bdeb73a2b2979a93a051c3ee490659b5248b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 79f799fc643d931555bc8c2c56fa9ba5f51b63a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392502"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50558336"
 ---
 # <a name="building-cc-programs"></a>建置 C/C++ 程式
 

@@ -1,10 +1,6 @@
 ---
-title: _heapchk | Microsoft Docs
-ms.custom: ''
+title: _heapchk
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _heapchk
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _heapchk
 - heapchk
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - consistency checking of heaps
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b3fc500ee86bde40def0e1e2d3dd3edad3127daf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b34b4ea1bb2512628213cabb55e26e2dad6d445c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399630"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580618"
 ---
 # <a name="heapchk"></a>_heapchk
 
@@ -55,7 +45,7 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>傳回值
 
-**_heapchk**傳回下列整數資訊清單常數在 Malloc.h 中定義的其中一個。
+**_heapchk**會傳回在 Malloc.h 中定義下列整數資訊清單常數之一。
 
 |傳回值|條件|
 |-|-|
@@ -65,15 +55,15 @@ int _heapchk( void );
 **_HEAPEMPTY**|堆積尚未初始化。
 **_HEAPOK**|堆積看似一致。
 
-此外，如果發生錯誤， **_heapchk**設定**errno**至**ENOSYS**。
+此外，如果發生錯誤時， **_heapchk**設定**errno**來**ENOSYS**。
 
 ## <a name="remarks"></a>備註
 
-**_Heapchk**函式可協助偵錯堆積相關的問題的最小堆積的一致性檢查。 如果作業系統不支援 **_heapchk**（例如 Windows 98），則函數會傳回 **_HEAPOK**並設定**errno**至**ENOSYS**.
+**_Heapchk**函式可協助堆積相關問題的偵錯堆積的最小一致性檢查。 如果作業系統不支援 **_heapchk**（例如 Windows 98），則函數會傳回 **_HEAPOK**並設定**errno**至**ENOSYS**.
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|---------------------|
 |**_heapchk**|\<malloc.h>|\<errno.h>|
 

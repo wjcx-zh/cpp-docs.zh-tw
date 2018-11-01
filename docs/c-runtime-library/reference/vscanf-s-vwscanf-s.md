@@ -1,10 +1,6 @@
 ---
-title: vscanf_s、vwscanf_s | Microsoft Docs
-ms.custom: ''
+title: vscanf_s、vwscanf_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - vscanf_s
 - vwscanf_s
@@ -24,19 +20,13 @@ f1_keywords:
 - _vtscanf_s
 - vscanf_s
 - vwscanf_s
-dev_langs:
-- C++
 ms.assetid: 23a1c383-5b01-4887-93ce-534a1e38ed93
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c32d1e50f554c32917f9fa0450abba15463386ab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 90100a5fbc03371a11f437acc12562d9ccf957f9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415643"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519466"
 ---
 # <a name="vscanfs-vwscanfs"></a>vscanf_s、vwscanf_s
 
@@ -60,22 +50,22 @@ int vwscanf_s(
 *格式*<br/>
 格式控制字串。
 
-*引數清單*<br/>
+*arglist*<br/>
 變數引數清單。
 
 ## <a name="return-value"></a>傳回值
 
-這會在成功轉換並指派時傳回欄位數；傳回值不包含已讀取但尚未指派的欄位。 傳回值 0 表示未指派任何欄位。 傳回值是**EOF**錯誤，或如果在第一次嘗試讀取字元遇到檔案結尾字元或字串結尾字元。 如果*格式*是**NULL**指標、 無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**vscanf_s**和**vwscanf_s**傳回**EOF**並設定**errno**至**EINVAL**.
+這會在成功轉換並指派時傳回欄位數；傳回值不包含已讀取但尚未指派的欄位。 傳回值 0 表示未指派任何欄位。 傳回值是**EOF**錯誤，或如果在第一次嘗試讀取字元遇到檔案結尾字元或字串結尾字元。 如果*格式*是**NULL**指標，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**vscanf_s**並**vwscanf_s**傳回**EOF** ，並設定**errno**到**EINVAL**.
 
 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Vscanf_s**函式會從標準輸入資料流讀取資料**stdin**將資料寫入所指定的位置和*引數清單*引數清單。 在清單中的每個引數必須是對應於型別規範中的型別變數指標*格式*。 如果在重疊的字串之間進行複製，則行為是未定義的。
+**Vscanf_s**函式會從標準輸入資料流讀取資料**stdin**並將資料寫入至所指定的位置*arglist*引數清單。 在清單中的每個引數必須是對應至中的類型指定名稱的型別變數指標*格式*。 如果在重疊的字串之間進行複製，則行為是未定義的。
 
-**vwscanf_s**是寬字元版本的**vscanf_s**;*格式*引數**vwscanf_s**是寬字元字串。 **vwscanf_s**和**vscanf_s**運作方式完全相同的資料流在 ANSI 模式中開啟時。 **vscanf_s**不支援來自 UNICODE 資料流輸入。
+**vwscanf_s**是寬字元版本的**vscanf_s**;*格式*引數**vwscanf_s**是寬字元字串。 **vwscanf_s**並**vscanf_s**運作方式完全相同，如果資料流以 ANSI 模式開啟。 **vscanf_s**不支援來自 UNICODE 資料流輸入。
 
-不同於**vscanf**和**vwscanf**， **vscanf_s**和**vwscanf_s**需要的所有輸入參數的型別指定的緩衝區大小**c**， **C**， **s**， **S**，括住的字串控制項集合或 **[]**。 以字元為單位的緩衝區大小會作為緊接指標的額外參數傳遞至緩衝區或變數。 以字元為單位的緩衝區大小**wchar_t**字串不是以位元組為單位的大小相同。
+不同於**vscanf**並**vwscanf**， **vscanf_s**並**vwscanf_s**需要的所有輸入參數的型別指定的緩衝區大小**c**， **C**， **s**， **S**，或會括住的字串控制項集合 **[]**。 以字元為單位的緩衝區大小會作為緊接指標的額外參數傳遞至緩衝區或變數。 以字元為單位的緩衝區大小**wchar_t**字串不是以位元組為單位的大小相同。
 
 緩衝區大小包含結束的 null。 您可以使用寬度規格欄位，以確保在讀取的 Token 可納入緩衝區。 如果沒有使用寬度規格欄位，則讀取的語彙基元太大而無法納入緩衝區中，並且不會寫入該緩衝區。
 
@@ -94,12 +84,12 @@ int vwscanf_s(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**vscanf_s**|\<stdio.h>|
 |**wscanf_s**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 應用程式中不支援主控台。 在主控台中，與相關聯的標準資料流控制代碼**stdin**， **stdout**，和**stderr**，必須重新導向之後 C 執行階段函式可以在 UWP 應用程式中使用它們,. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台中，相關聯的標準資料流控制代碼**stdin**， **stdout**，並**stderr**，必須重新導向，C 執行階段函式才能使用它們在 UWP 應用程式. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

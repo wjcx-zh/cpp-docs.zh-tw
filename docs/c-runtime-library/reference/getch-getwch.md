@@ -1,10 +1,6 @@
 ---
-title: _getch、_getwch | Microsoft Docs
-ms.custom: ''
+title: _getch、_getwch
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getch
 - _getwch
@@ -25,8 +21,6 @@ f1_keywords:
 - getwch
 - _getch
 - _getwch
-dev_langs:
-- C++
 helpviewer_keywords:
 - characters, getting from console
 - getch function
@@ -35,23 +29,19 @@ helpviewer_keywords:
 - _getch function
 - getwch function
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b69149340d2fca15071292001b9936e9d3bd5470
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b8f8ed4985810526552a3b66e81462fd656bb23
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400112"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666306"
 ---
 # <a name="getch-getwch"></a>_getch、_getwch
 
 在不回應的情形下，從主控台取得字元。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -66,7 +56,7 @@ wint_t _getwch( void );
 
 ## <a name="remarks"></a>備註
 
-**_Getch**和 **_getwch**函式從主控台讀取為單一字元，而不回應的字元。 這些函式都不可以用來讀取 CTRL+C。 在讀取功能鍵或方向鍵時，每個函式必須呼叫兩次；第一次呼叫會傳回 0 或 0xE0，而第二次呼叫會傳回實際的按鍵碼。
+**_Getch**並 **_getwch**函式從主控台讀取單一字元，且不回應該字元。 這些函式都不可以用來讀取 CTRL+C。 在讀取功能鍵或方向鍵時，每個函式必須呼叫兩次；第一次呼叫會傳回 0 或 0xE0，而第二次呼叫會傳回實際的按鍵碼。
 
 這些函式鎖定呼叫執行緒，因此為安全執行緒。 如需非鎖定版本，請參閱 [_getch_nolock、_getwch_nolock](getch-nolock-getwch-nolock.md)。
 
@@ -78,7 +68,7 @@ wint_t _getwch( void );
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_getch**|\<conio.h>|
 |**_getwch**|\<conio.h> 或 \<wchar.h>|

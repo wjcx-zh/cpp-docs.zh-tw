@@ -1,26 +1,16 @@
 ---
-title: 如何： 轉換使用削減變數來使用並行執行階段的 OpenMP 迴圈 |Microsoft Docs
-ms.custom: ''
+title: 如何：轉換使用削減變數的 OpenMP 迴圈來使用並行執行階段
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, reduction variables
 - reduction variables, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 96623f36-5e57-4d3f-8c13-669e6cd535b1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8f9989e115bfdbe296bebb3f24bff39abfcc6ebb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b58f6025c41091b39375c566d2c1d4b4798437b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406973"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50633073"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-a-reduction-variable-to-use-the-concurrency-runtime"></a>如何：轉換使用削減變數的 OpenMP 迴圈來使用並行執行階段
 

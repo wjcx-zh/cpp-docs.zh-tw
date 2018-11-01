@@ -1,27 +1,16 @@
 ---
-title: 編譯器屬性 (c + + COM) |Microsoft Docs
-ms.custom: ''
+title: 編譯器屬性 (c + + COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl.exe compiler, attributes
 - attributes [C++/CLI], compiler
 ms.assetid: 53cd9bee-1521-48ec-b171-80feac2096cc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9f0483676fd0dd60d893f8931511083d369539dd
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 8fef953a520572b42e69a48ea391282c7b70ba44
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790635"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667359"
 ---
 # <a name="compiler-attributes"></a>編譯器屬性
 
@@ -33,7 +22,7 @@ ms.locfileid: "48790635"
 |[event_receiver](event-receiver.md)|建立事件接收器。|
 |[event_source](event-source.md)|建立事件來源。|
 |[export](export.md)|會導致資料結構，以放入.idl 檔案。|
-|[實作](implements-cpp.md)|指定分派介面，強制讓 IDL coclass 的成員。|
+|[implements](implements-cpp.md)|指定分派介面，強制讓 IDL coclass 的成員。|
 |[importidl](importidl.md)|指定的.idl 檔插入所產生的.idl 檔案。|
 |[importlib](importlib.md)|讓已編譯成其他類型程式庫的類型可供正在建立的類型程式庫使用。|
 |[includelib](includelib-cpp.md)|會導致的.idl 或.h 檔案要包含在產生的.idl 檔案中。|

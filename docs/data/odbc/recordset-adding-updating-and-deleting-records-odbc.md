@@ -1,12 +1,6 @@
 ---
-title: 資料錄集： 加入、 更新和刪除資料錄 (ODBC) |Microsoft Docs
-ms.custom: ''
+title: 資料錄集：加入、更新和刪除資料錄 (ODBC)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - records [C++], updating
 - record editing [C++], in recordsets
@@ -24,17 +18,12 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: b3574433f0780df64fe5a9a2e5633747decb747b
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: a13bffdc79f01c49c290b8b5d4388f06ce777105
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50059567"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512368"
 ---
 # <a name="recordset-adding-updating-and-deleting-records-odbc"></a>資料錄集：加入、更新和刪除資料錄 (ODBC)
 

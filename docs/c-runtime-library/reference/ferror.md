@@ -1,10 +1,6 @@
 ---
-title: ferror | Microsoft Docs
-ms.custom: ''
+title: ferror
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - ferror
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - ferror
-dev_langs:
-- C++
 helpviewer_keywords:
 - ferror function
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 49aaff776a90dd687ee4dae1902903ed01b83e20
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2be90ffe8a135b4108abd9504099bd2f6c28f249
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397365"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587885"
 ---
 # <a name="ferror"></a>ferror
 
@@ -59,13 +49,13 @@ int ferror(
 
 ## <a name="return-value"></a>傳回值
 
-如果不發生任何錯誤*資料流*， **ferror**傳回 0。 否則，它會傳回非零值。 如果資料流**NULL**， **ferror**叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**至**EINVAL**並傳回 0。
+如果不發生任何錯誤*資料流*， **ferror**會傳回 0。 否則，它會傳回非零值。 如果資料流**NULL**， **ferror**叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**要**EINVAL**且會傳回 0。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Ferror**讀取或寫入與相關聯的檔案時發生錯誤 （實作同時做為函式和巨集） 的常式測試*資料流*。 如果發生錯誤，資料流的錯誤指標會保持原位直到資料流已關閉或倒轉，或直到**clearerr**對它呼叫。
+**Ferror**常式 （實作為函式和巨集） 測試的讀取或寫入錯誤相關聯的檔案*串流*。 如果發生錯誤，資料流的錯誤指標會保持設定直到資料流已關閉或倒轉，或直到**clearerr**針對它呼叫。
 
 ## <a name="requirements"></a>需求
 

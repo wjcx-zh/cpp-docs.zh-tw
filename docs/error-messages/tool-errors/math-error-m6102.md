@@ -1,27 +1,17 @@
 ---
-title: 運算錯誤 M6102 |Microsoft Docs
-ms.custom: ''
+title: 運算錯誤 M6102
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - M6102
-dev_langs:
-- C++
 helpviewer_keywords:
 - M6102
 ms.assetid: dbd2241f-6595-431e-9597-d9dbdb3a0ca2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ae8ee21b8cb8f2a5bffe471019e65d32c8872af3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 73c4b48819937ed4b49c80969c18701c8820956e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037498"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444976"
 ---
 # <a name="math-error-m6102"></a>運算錯誤 M6102
 

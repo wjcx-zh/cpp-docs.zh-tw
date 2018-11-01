@@ -1,10 +1,6 @@
 ---
-title: isgraph、iswgraph、_isgraph_l、_iswgraph_l | Microsoft Docs
-ms.custom: ''
+title: isgraph、iswgraph、_isgraph_l、_iswgraph_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - isgraph
 - iswgraph
@@ -31,8 +27,6 @@ f1_keywords:
 - _istgraph_l
 - _istgraph
 - iswgraph
-dev_langs:
-- C++
 helpviewer_keywords:
 - isgraph function
 - _istgraph_l function
@@ -43,16 +37,12 @@ helpviewer_keywords:
 - _istgraph function
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b60e022471bdfa7cbbddb6b5263f757438572a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: af3fae11536a869c0c3e3ebae285ebbaca5ea907
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401268"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664798"
 ---
 # <a name="isgraph-iswgraph-isgraphl-iswgraphl"></a>isgraph、iswgraph、_isgraph_l、_iswgraph_l
 
@@ -84,11 +74,11 @@ int _iswgraph_l(
 
 ## <a name="return-value"></a>傳回值
 
-每個這些常式傳回非零，如果*c*是可列印的字元空間以外的特定表示法。 **isgraph**傳回非零值，如果*c*是可列印的字元以外的空間。 **iswgraph**傳回非零值，如果*c*是寬字元空間以外的可列印的寬字元。 這些常式都會傳回 0，如果*c*不符合測試條件。
+這些常式傳回非零值如果*c*是可列印字元空白以外的特定表示法。 **isgraph**傳回非零值，如果*c*是空白以外的可列印字元。 **iswgraph**傳回非零值，如果*c*是寬字元空白以外的可列印寬字元。 這些常式都會傳回 0，如果*c*不符合測試條件。
 
-有這些函式的版本 **_l**尾碼而不是目前的地區設定使用傳入的地區設定，地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+有這些函式的版本 **_l**後置詞使用傳入的地區設定而不是目前的地區設定其地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-行為**isgraph**和 **_isgraph_l**是未定義的如果*c*不 EOF 或 0 到 0xFF，（含) 範圍中。 當使用 CRT 偵錯程式庫和*c*不是其中一個函式產生，這些值的判斷提示。
+行為**isgraph**並 **_isgraph_l**如果是未定義*c*不是 EOF 或介於 0 到 0xFF 的內含。 使用偵錯 CRT 程式庫時， *c*是不是其中一個值，函式會引發判斷提示。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -99,7 +89,7 @@ int _iswgraph_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**isgraph**|\<ctype.h>|
 |**iswgraph**|\<ctype.h> 或 \<wchar.h>|

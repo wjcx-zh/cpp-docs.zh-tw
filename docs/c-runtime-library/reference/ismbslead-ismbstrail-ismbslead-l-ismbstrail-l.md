@@ -1,10 +1,6 @@
 ---
-title: _ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l | Microsoft Docs
-ms.custom: ''
+title: _ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbstrail
 - _ismbslead_l
@@ -34,8 +30,6 @@ f1_keywords:
 - _ismbstrail_l
 - ismbstrail
 - _ismbslead_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbstrail function
 - _ismbslead function
@@ -46,23 +40,19 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c0dc0fb0a6912d728343de360b4e8f8a3a252566
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b4d3f371f4be640cc22a1bdc3d920acf88e2585
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403192"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468909"
 ---
 # <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l
 
 執行多位元組字元字串前導位元組和後隨位元組的即時線上測試，並判斷指定的子字串指標是否指向前導位元組或後隨位元組。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -100,17 +90,17 @@ int _ismbstrail_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_ismbslead**傳回-1，如果字元是前導位元組和 **_ismbstrail**如果字元是後隨位元組，則傳回-1。 如果輸入字串有效，但不是前導位元組或後隨位元組，則這些函式會傳回零。 如果其中一個引數是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函數會傳回**NULL**並設定**errno**至**EINVAL**。
+**_ismbslead**會傳回-1，如果字元是前導位元組和 **_ismbstrail**會傳回-1，如果字元是後隨位元組。 如果輸入字串有效，但不是前導位元組或後隨位元組，則這些函式會傳回零。 如果其中一個引數**NULL**，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則這些函式會傳回**NULL**並設定**errno**來**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**_ismbslead**和 **_ismbstrail**低於 **_ismbblead**和 **_ismbbtrail**版本因為這些字串內容列入考量。
+**_ismbslead**並 **_ismbstrail**低於 **_ismbblead**並 **_ismbbtrail**版本因為這些字串內容納入考量。
 
-有這些函式的版本 **_l**尾碼是一樣的不同之處在於其地區設定相關的行為使用傳入的地區設定而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+有這些函式的版本 **_l**尾碼都相同，不同之處在於其地區設定相關行為使用傳入的地區設定而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|---------------------|
 |**_ismbslead**|\<mbctype.h> 或 \<mbstring.h>|\<ctype.h>、* \<limits.h>、\<stdlib.h>|
 |**_ismbstrail**|\<mbctype.h> 或 \<mbstring.h>|\<ctype.h>、* \<limits.h>、\<stdlib.h>|

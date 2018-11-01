@@ -1,12 +1,6 @@
 ---
-title: 混合的組件的初始化 |Microsoft Docs
-ms.custom: ''
+title: 混合組件的初始化
 ms.date: 03/09/2018
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - mixed assemblies [C++], loader lock
 - loader lock [C++]
@@ -16,23 +10,18 @@ helpviewer_keywords:
 - custom locales [C++]
 - mixed assemblies [C++], initilizing
 ms.assetid: bfab7d9e-f323-4404-bcb8-712b15f831eb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: ba9f3143fb110b25f384e462e7dfcd69c0140802
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1f4ea7f5cfc6e99390c93ba9c2beadc46fce8584
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439571"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665006"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>混合組件的初始化
 
 Windows 開發人員必須一律小心的載入器鎖定時執行程式碼期間`DllMain`。 不過，有一些其他考量，派上用場時處理 C + + /cli clr 混合模式組件。
 
-內的程式碼[DllMain](/windows/desktop/Dlls/dllmain)不得存取 CLR。 這表示 `DllMain` 不應該直接或間接呼叫 Managed 函式；Managed 程式碼不應該在 `DllMain`中宣告或實作；而且 `DllMain`內不應該發生記憶體回收或自動程式庫載入。
+[DllMain](/windows/desktop/Dlls/dllmain) 內的程式碼不得存取 CLR。 這表示 `DllMain` 不應該直接或間接呼叫 Managed 函式；Managed 程式碼不應該在 `DllMain`中宣告或實作；而且 `DllMain`內不應該發生記憶體回收或自動程式庫載入。
 
 ## <a name="causes-of-loader-lock"></a>載入器鎖定的原因
 

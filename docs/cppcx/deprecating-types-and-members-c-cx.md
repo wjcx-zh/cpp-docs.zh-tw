@@ -1,31 +1,24 @@
 ---
-title: 即將過時的型別和成員 (C + + /CX) |Microsoft Docs
-ms.custom: ''
+title: 將類型和成員設為已被取代 (C++/CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 500b93f3a84ecb39706b5c1575887a7339d1fdd4
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 661445c8a365451d94f938cfe262623866b0fa5e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102087"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618630"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>將類型和成員設為已被取代 (C++/CX)
 
 在 C + + /CX 中，Windows 執行階段型別和成員的生產者和取用者使用[Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute)支援屬性。 如果您使用的 API 已套用這個屬性，您會收到一個編譯時期警告訊息，表示 API 已被取代，此外建議替代的 API 以供使用。 在您的公用類型和方法，可以套用這個屬性並提供自訂訊息。
 
 > [!CAUTION]
-> [Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute)是只能與 Windows 執行階段類型的屬性。 標準 c + + 類別和成員，請使用[__declspec （deprecated)](../cpp/deprecated-cpp.md)。
+> [Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute)是只能與 Windows 執行階段類型的屬性。 如果是 Standard C++ 類別和成員，請使用 [__declspec(deprecated)](../cpp/deprecated-cpp.md)。
 
 ### <a name="example"></a>範例
 
-下列範例示範如何 (例如在 Windows 執行階段元件中) 將您的公用 API 設為已被取代。 第二個參數，型別[Windows: Foundation:: metadata:: deprecationtype](/uwp/api/windows.foundation.metadata.deprecationtype)指定 API 正要被取代或移除。 目前只支援 DeprecationType::Deprecated 值。 在屬性中的第三個參數會指定[Windows::Foundation::Metadata::Platform](/uwp/api/windows.foundation.metadata.platformattribute)來套用屬性。
+下列範例示範如何 (例如在 Windows 執行階段元件中) 將您的公用 API 設為已被取代。 第二個參數，其類型為 [Windows:Foundation::Metadata::DeprecationType](/uwp/api/windows.foundation.metadata.deprecationtype) ，指定 API 正要被取代或移除。 目前只支援 DeprecationType::Deprecated 值。 屬性中的第三個參數指定要套用屬性的 [Windows::Foundation::Metadata::Platform](/uwp/api/windows.foundation.metadata.platformattribute) 。
 
 ```
 

@@ -1,10 +1,6 @@
 ---
-title: terminate (CRT) | Microsoft Docs
-ms.custom: ''
+title: terminate (CRT)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - terminate
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - terminate
-dev_langs:
-- C++
 helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c743439b487f091b760e3747c47b471832e1ff3d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f655d328b4d97a2989ad49005ed8a9f44fd9d79
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408670"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438633"
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 
@@ -51,7 +41,7 @@ void terminate( void );
 
 ## <a name="remarks"></a>備註
 
-**終止**函式會搭配 c + + 例外狀況處理，並在下列情況中，稱為：
+**終止**函式搭配 c + + 例外狀況處理，並呼叫在下列情況：
 
 - 擲回的 C++ 例外狀況找不到相符的 catch 處理常式。
 
@@ -59,11 +49,11 @@ void terminate( void );
 
 - 堆疊在擲回例外狀況之後損毀。
 
-**終止**呼叫[中止](abort.md)預設。 您可以透過撰寫自己的中止函式和呼叫來變更此預設**set_terminate**您為其引數的函式的名稱。 **終止**做為引數所指定的最後一個函式會呼叫**set_terminate**。 如需詳細資訊，請參閱[未處理的 C++ 例外狀況](../../cpp/unhandled-cpp-exceptions.md)。
+**終止**呼叫[中止](abort.md)預設。 您可以變更此預設值，方法是撰寫您自己的終止函式，並呼叫**set_terminate**您作為其引數的函式的名稱。 **終止**呼叫最後一個指定為引數的函式**set_terminate**。 如需詳細資訊，請參閱[未處理的 C++ 例外狀況](../../cpp/unhandled-cpp-exceptions.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**terminate**|\<eh.h>|
 

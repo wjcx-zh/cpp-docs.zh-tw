@@ -1,27 +1,17 @@
 ---
-title: 編譯器錯誤 C2152 |Microsoft Docs
-ms.custom: ''
+title: 編譯器錯誤 C2152
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2152
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2152
 ms.assetid: a9ea2b0c-d55d-41c7-ba9f-dd75592ffc8a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b3a2215e43573b08a69501edfbd0c7c86897fdd3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 072b5f13a639b1bd3d8e028fcd6c811012bfa2bd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46064897"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50479946"
 ---
 # <a name="compiler-error-c2152"></a>編譯器錯誤 C2152
 

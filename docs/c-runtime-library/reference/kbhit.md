@@ -1,10 +1,6 @@
 ---
-title: _kbhit | Microsoft Docs
-ms.custom: ''
+title: _kbhit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _kbhit
 apilocation:
@@ -24,8 +20,6 @@ f1_keywords:
 - _kbhit
 - kbhit
 - conio/_kbhit
-dev_langs:
-- C++
 helpviewer_keywords:
 - keyboard input
 - user input, checking for keyboard
@@ -36,23 +30,19 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f414403774a6f2dbd5e21b70d707ab8c8b20c63f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9133d73e92438327bb2381e3293fd37076dd27ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399045"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667986"
 ---
 # <a name="kbhit"></a>_kbhit
 
 檢查主控台的鍵盤輸入。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -67,11 +57,11 @@ int _kbhit( void );
 
 ## <a name="remarks"></a>備註
 
-**_Kbhit**函式會檢查新按鍵的主控台。 如果函式傳回非零值，則緩衝區中有等候的按鍵輸入。 然後可以呼叫程式 **_getch**或 **_getche**取得按鍵。
+**_Kbhit**函式會檢查最新的按鍵輸入的主控台。 如果函式傳回非零值，則緩衝區中有等候的按鍵輸入。 程式接著可以呼叫 **_getch**或是 **_getche**來取得該按鍵輸入。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_kbhit**|\<conio.h>|
 

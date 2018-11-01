@@ -1,29 +1,19 @@
 ---
-title: allocator_chunklist 類別 | Microsoft Docs
-ms.custom: ''
+title: allocator_chunklist 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - allocators/stdext::allocator_chunklist
 - allocators/stdext::allocators::allocator_chunklist
-dev_langs:
-- C++
 helpviewer_keywords:
 - stdext::allocator_chunklist
 - stdext::allocators [C++], allocator_chunklist
 ms.assetid: ea72ed0a-dfdb-4c8b-8096-e4baf567b80f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 20e601608b1a6b0f076040c10e027f7dc78db17a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d52eeb1f34938958c9716692ed6bbd7d830c93b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955354"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630486"
 ---
 # <a name="allocatorchunklist-class"></a>allocator_chunklist 類別
 
@@ -40,7 +30,7 @@ class allocator_chunklist;
 
 |參數|描述|
 |---------------|-----------------|
-|*類型*|配置器所配置的元素類型。|
+|*Type*|配置器所配置的元素類型。|
 
 ## <a name="remarks"></a>備註
 

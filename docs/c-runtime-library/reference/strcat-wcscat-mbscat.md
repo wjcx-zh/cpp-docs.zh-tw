@@ -1,10 +1,6 @@
 ---
-title: strcat、wcscat、_mbscat | Microsoft Docs
-ms.custom: ''
+title: strcat、wcscat、_mbscat
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbscat
 - wcscat
@@ -29,8 +25,6 @@ f1_keywords:
 - _tcscat
 - strcat
 - wcscat
-dev_langs:
-- C++
 helpviewer_keywords:
 - concatenating strings
 - mbscat function
@@ -45,23 +39,19 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f2daf6621cb2e72c38212227da20f6b847bb08e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b49e2e39fb0acd9128a52e83bf704567bb82d532
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413410"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546381"
 ---
 # <a name="strcat-wcscat-mbscat"></a>strcat、wcscat、_mbscat
 
 附加字串。 這些函式已有更安全的版本可供使用，請參閱 [strcat_s、wcscat_s、_mbscat_s](strcat-s-wcscat-s-mbscat-s.md)。
 
 > [!IMPORTANT]
-> **_mbscat_s**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbscat_s**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -105,16 +95,16 @@ unsigned char *_mbscat(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式會傳回目的地字串 (*strDestination*)。 未保留表示錯誤的傳回值。
+所有這些函式都會傳回目的地字串 (*strDestination*)。 未保留表示錯誤的傳回值。
 
 ## <a name="remarks"></a>備註
 
-**Strcat**函式會將附加*strSource*至*strDestination*並終止產生以 null 字元的字串。 起始字元*strSource*結束的 null 字元會覆寫*strDestination*。 行為**strcat**是未定義的如果來源和目的字串重疊。
+**Strcat**函式會將附加*strSource*來*strDestination*並終止於 null 字元產生的字串。 起始字元*strSource*會結束的 null 字元的覆寫*strDestination*。 行為**strcat**是未定義的如果來源和目的字串重疊。
 
 > [!IMPORTANT]
-> 因為**strcat**不會檢查有足夠的空間中*strDestination*附加之前*strSource*，它是緩衝區滿溢的潛在原因。 請考慮改用 [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)。
+> 因為**strcat**不會檢查在有足夠的空間*strDestination*附加之前*strSource*，這是緩衝區滿溢的潛在原因。 請考慮改用 [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)。
 
-**wcscat**和 **_mbscat**是寬字元和多位元組字元版本的**strcat**。 引數和傳回值**wcscat**是寬字元字串; **_mbscat**是多位元組字元字串。 除此之外，這三個函式的行為相同。
+**wcscat**並 **_mbscat**是寬字元和多位元組字元版本的**strcat**。 引數和傳回值**wcscat**是寬字元字串; **_mbscat**是多位元組字元字串。 除此之外，這三個函式的行為相同。
 
 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -126,7 +116,7 @@ unsigned char *_mbscat(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**strcat**|\<string.h>|
 |**wcscat**|\<string.h> 或 \<wchar.h>|

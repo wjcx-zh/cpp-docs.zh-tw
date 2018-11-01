@@ -1,10 +1,6 @@
 ---
-title: vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l | Microsoft Docs
-ms.custom: ''
+title: vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _vswprintf_s_l
 - vsprintf_s
@@ -26,8 +22,6 @@ f1_keywords:
 - vswprintf_s
 - vsprintf_s
 - _vstprintf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _vstprintf_s_l function
 - vsprintf_s_l function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - _vswprintf_s_l function
 ms.assetid: 60e90518-57f0-4f1b-b732-f62a69702833
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2f1ee1235b5fe6c3904c6dc201e7c8a183d95647
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ef1d99caddfcff78bc41c24f7c132c307958db2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416232"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616488"
 ---
 # <a name="vsprintfs-vsprintfsl-vswprintfs-vswprintfsl"></a>vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l
 
@@ -118,19 +108,19 @@ int vswprintf_s(
 
 ## <a name="return-value"></a>傳回值
 
-**vsprintf_s**和**vswprintf_s**傳回寫入的字元數，不包括結束的 null 字元或負數值，如果發生輸出錯誤。 如果*緩衝區*或*格式*計數為零，如果是 null 指標，或如果格式字串包含無效格式化字元，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1，並設定**errno**至**EINVAL**。
+**vsprintf_s**並**vswprintf_s**傳回寫入的字元數，如果發生輸出錯誤，不包括結束的 null 字元或為負值。 如果*緩衝區*或是*格式*計數為零，如果是 null 指標，或如果格式字串包含無效格式化字元，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1，並設定**errno**要**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式接受引數清單的指標，然後格式化並寫入所指向的記憶體中指定的資料*緩衝區*。
+所有這些函式都會接受引數清單的指標，然後格式化並將寫入指定的資料所指向的記憶體*緩衝區*。
 
-**vswprintf_s**符合 ISO C 標準的**vswprintf**，這需要第二個參數，*計數*，型別**size_t**。
+**vswprintf_s**符合 ISO C 標準**vswprintf**，這需要第二個參數， *count*，型別的**size_t**。
 
 這些函式與不安全版本的差異，僅在於安全版本支援位置參數。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的執行緒地區設定的地區設定參數。
+使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
 
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -143,7 +133,7 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
 |**vsprintf_s**， **_vsprintf_s_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
 |**vswprintf_s**， **_vswprintf_s_l**|\<stdio.h> 或 \<wchar.h>，以及 \<stdarg.h>|\<varargs.h>*|

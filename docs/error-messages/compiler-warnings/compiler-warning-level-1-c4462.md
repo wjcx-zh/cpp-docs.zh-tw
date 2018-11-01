@@ -1,34 +1,25 @@
 ---
-title: 編譯器警告 （層級 1） C4462 |Microsoft 文件
+title: 編譯器警告 (層級 1) C4462
 ms.date: 10/25/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4462
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4462
 ms.assetid: 4e20aca4-293e-4c75-a83d-961c27ab7840
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 105a78fe9f8a8d2b6442c9b403af0266de53d3b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 801a440f131e9428c7f217346a6fd26c72cc1374
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281397"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50582321"
 ---
 # <a name="compiler-warning-level-1-c4462"></a>編譯器警告 (層級 1) C4462
 
 > 無法判斷類型的 GUID。 程式可能在執行階段失敗。
 
-警告 C4462 當公用 `TypedEventHandler` 的其中一個類型參數做為封入類別的參考時，Windows 執行階段應用程式或元件中就會發生警告 C4462。
+警告 C4462 當公用 `TypedEventHandler` 的其中一個型別參數做為封入類別的參考時，Windows 執行階段應用程式或元件中就會發生警告 C4462。
 
-這個警告會自動升級為錯誤。 如果您想要修改此行為，使用[#pragma 警告](../../preprocessor/warning.md)。 比方說，要 C4462 變成層級 4 警告問題，將這一行加入至您的原始程式碼檔：
+這個警告會自動升級為錯誤。 如果您想要修改此行為，使用[#pragma 警告](../../preprocessor/warning.md)。 比方說，若要讓 C4462 層級 4 警告問題，這行加入您的原始程式碼檔：
 
 ```cpp
 #pragma warning(4:4462)
@@ -36,23 +27,23 @@ ms.locfileid: "33281397"
 
 ## <a name="example"></a>範例
 
-這個範例會產生警告 C4462:
+此範例會產生警告 C4462:
 
 ```cpp
 namespace N
 {
-       public ref struct EventArgs sealed {};
-       public ref struct R sealed
-       {
-              R() {}
-              event Windows::Foundation::TypedEventHandler<R ^, EventArgs^>^ e;
-       };
+       public ref struct EventArgs sealed {};
+       public ref struct R sealed
+       {
+              R() {}
+              event Windows::Foundation::TypedEventHandler<R ^, EventArgs^>^ e;
+       };
 }
 
 [Platform::MTAThread]
 int main()
 {
-     auto x = ref new N::R();
+     auto x = ref new N::R();
 }
 ```
 

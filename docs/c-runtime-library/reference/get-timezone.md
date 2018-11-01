@@ -1,10 +1,6 @@
 ---
-title: _get_timezone | Microsoft Docs
-ms.custom: ''
+title: _get_timezone
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_timezone
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _get_timezone
 - get_timezone
-dev_langs:
-- C++
 helpviewer_keywords:
 - time zones
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 111cbff00d1f6119fbd806cc5fc3d14c28a7d7c1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26cf8114ab766bdb394d2db9ad5842622a447bd1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398272"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613911"
 ---
 # <a name="gettimezone"></a>_get_timezone
 
@@ -60,17 +50,17 @@ UTC 與當地時間之間的時差，以秒為單位。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功或零**errno**值發生錯誤。
+如果成功，或在為零**errno**值發生錯誤。
 
 ## <a name="remarks"></a>備註
 
-**_Get_timezone**函式會擷取之間的時差 UTC 與本地時間為整數。 對太平洋標準時間而言，預設值為 28,800 秒 (晚 UTC 八小時)。
+**_Get_timezone**函式會擷取之間的時差 UTC 與當地時間做為整數。 對太平洋標準時間而言，預設值為 28,800 秒 (晚 UTC 八小時)。
 
-如果*秒*是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**至**EINVAL**並傳回**EINVAL**。
+如果*秒*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**要**EINVAL** ，並傳回**EINVAL**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_get_timezone**|\<time.h>|
 

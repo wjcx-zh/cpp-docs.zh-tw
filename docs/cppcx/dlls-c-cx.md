@@ -1,20 +1,13 @@
 ---
-title: Dll (C + + /CX) |Microsoft Docs
-ms.custom: ''
+title: DLL (C++/CX)
 ms.date: 02/06/2018
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1ac06336e5ba80406157285ebe660080aff6e319
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1a72ecc5eb46abfbc7b9a52a168510ce0873ee04
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763629"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445704"
 ---
 # <a name="dlls-ccx"></a>DLL (C++/CX)
 
@@ -24,7 +17,7 @@ ms.locfileid: "43763629"
 
 在幾乎所有的情況下，當您想要建立的 DLL 在 UWP 應用程式中使用，做為 Windows 執行階段元件加以建立，使用該名稱的專案範本。 您可以建立 Windows 執行階段元件專案，適用於具有公用或私用的 Windows 執行階段類型的 Dll。 Windows 執行階段元件可以從任何 Windows 執行階段相容語言所撰寫的應用程式存取。 根據預設，Windows 執行階段元件的編譯器設定專案使用 **/ZW**切換。 .winmd 檔案必須具有根命名空間的相同名稱。 例如，名為 A.B.C.MyClass 的類別必須在名為 A.winmd、A.B.winmd 或 A.B.C.winmd 的中繼資料檔案中定義，才能執行個體化。 DLL 的名稱不需符合 .winmd 檔案名稱。
 
-如需詳細資訊，請參閱 < [Creating Windows Runtime Components in c + +](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
+如需詳細資訊，請參閱 [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
 
 ### <a name="to-reference-a-third-party-windows-runtime-component-binary-in-your-project"></a>若要參考的協力廠商 Windows 執行階段元件專案中的二進位
 

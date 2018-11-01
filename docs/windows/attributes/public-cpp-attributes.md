@@ -1,28 +1,17 @@
 ---
-title: public （c + + 屬性） （c + + COM 屬性） |Microsoft Docs
-ms.custom: ''
+title: public （c + + 屬性） （c + + COM 屬性）
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.public
-dev_langs:
-- C++
 helpviewer_keywords:
 - public attribute
 ms.assetid: c42e1fd5-6cb1-48fe-8a03-95f2a2e0137c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ddbd516421f72e1d6ee13a9c32fe90f99aec44e3
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: d89df014beae5a62a035c3156b92d3337ecd2c14
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50067952"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579331"
 ---
 # <a name="public-c-attributes"></a>public (C++ 屬性)
 

@@ -1,25 +1,15 @@
 ---
-title: 前置處理器 |Microsoft Docs
-ms.custom: ''
+title: 前置處理器
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 74cf3ff56f37375cd8f267e3541b78e2d76a18fa
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: bd139dcbbbe519cc4c9750a657f8b47c5a5bcd18
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083304"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530958"
 ---
 # <a name="preprocessor"></a>前置處理器
 前置處理器是文字處理器，會在轉譯的第一個階段操作原始程式檔的文字。 前置處理器不會剖析原始程式文字，但會將原始程式文字分解為用於尋找巨集呼叫的語彙基元。 雖然編譯器通常在第一次傳遞時叫用前置處理器，但也可以分別叫用前置處理器，在不進行編譯的情況下處理文字。

@@ -1,27 +1,18 @@
 ---
-title: MMC 嵌入式管理單元類別 (ATL) |Microsoft Docs
-ms.custom: ''
+title: MMC 嵌入式管理單元類別 (ATL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.atl.MMC
-dev_langs:
-- C++
 helpviewer_keywords:
 - MMC Snap-In classes
 ms.assetid: 4af1d5af-687f-48b1-b2c5-fa252241b4d6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 85d32a4550c2a7b3522456defc53b9741ea2eb25
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 242a517cfa2e4547ffcae43f292edf8b4bc417a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024225"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595022"
 ---
 # <a name="mmc-snap-in-classes"></a>MMC 嵌入式管理單元類別
 

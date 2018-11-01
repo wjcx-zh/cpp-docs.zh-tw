@@ -1,10 +1,6 @@
 ---
-title: _mbccpy_s、_mbccpy_s_l | Microsoft Docs
-ms.custom: ''
+title: _mbccpy_s、_mbccpy_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbccpy_s
 - _mbccpy_s_l
@@ -26,8 +22,6 @@ f1_keywords:
 - mbccpy_s_l
 - mbccpy_s
 - _mbccpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - tccpy_s_l function
 - _tccpy_s function
@@ -38,23 +32,19 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a3a52314209b62c818623e315757dcd358ec491
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9a7554630bd3b46196358c01c21b99978c53e53
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404024"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575034"
 ---
 # <a name="mbccpys-mbccpysl"></a>_mbccpy_s、_mbccpy_s_l
 
 將一個多位元組字元從某個字串複製到另一個字串。 這些是 [_mbccpy、_mbccpy_l](mbccpy-mbccpy-l.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -96,7 +86,7 @@ errno_t _mbccpy_s_l(
 目的緩衝區大小。
 
 *pCopied*<br/>
-填入所複製的位元組數目 (若成功，即為 1 或 2)。 傳遞**NULL**如果您不在意數目。
+填入所複製的位元組數目 (若成功，即為 1 或 2)。 傳遞**NULL**如果您不在意的數字。
 
 *src*<br/>
 要複製的多位元組字元。
@@ -106,17 +96,17 @@ errno_t _mbccpy_s_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，就是零，如果失敗，則為錯誤碼。 如果*src*或*目的地*是**NULL**，或如果多個**buffSizeinBytes**會將位元組複製到*目的地*，然後無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回**EINVAL**和**errno**設**EINVAL**。
+如果成功，就是零，如果失敗，則為錯誤碼。 如果*src*或是*dest*是**NULL**，或如果多個**buffSizeinBytes**位元組將會複製到*dest*，則無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則函式會傳回**EINVAL**並**errno**設定為**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**_Mbccpy_s**函式會複製一個多位元組字元從*src*至*目的地*。 如果*src*並未指向的隱含呼叫所決定的多位元組字元的前導位元組[_ismbblead](ismbblead-ismbblead-l.md)，然後的單一位元組的*src*指向複製。 如果*src*指向前導位元組，但下一個位元組是 0，因此無效，則 0 複製到*目的地*， **errno**設**EILSEQ**，而函式會傳回**EILSEQ**。
+**_Mbccpy_s**函式會複製一個多位元組字元從*src*來*dest*。 如果*src*未指向隱含呼叫所決定之多位元組字元的前導位元組[_ismbblead](ismbblead-ismbblead-l.md)，然後的單一位元組， *src*指向會複製。 如果*src*指向前導位元組，但下一個位元組 0 而無效，則 0 複製到*dest*， **errno**設定為**EILSEQ**，和函式會傳回**EILSEQ**。
 
-**_mbccpy_s**不會附加 null 結束字元; 不過，如果*src*指向 null 字元，則該 null 複製到*目的地*（這是只是一般的單一位元組複本）。
+**_mbccpy_s**不會附加 null 結束字元; 不過，如果*src*指向 null 字元，則該 null 值複製到*dest* （這是只是一般的單一位元組複本）。
 
-中的值*pCopied*填滿複製的位元組數。 如果作業成功，可能的值為 1 和 2。 如果**NULL**傳遞中，這個參數已忽略。
+中的值*pCopied*填滿複製的位元組數。 如果作業成功，可能的值為 1 和 2。 如果**NULL**傳遞中，會忽略這個參數。
 
-|*src*|複製到*目的地*|*pCopied*|傳回值|
+|*src*|複製到*dest*|*pCopied*|傳回值|
 |-----------|----------------------|---------------|------------------|
 |非前導位元組|非前導位元組|1|0|
 |0|0|1|0|
@@ -137,7 +127,7 @@ errno_t _mbccpy_s_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_mbccpy_s**|\<mbstring.h>|
 |**_mbccpy_s_l**|\<mbstring.h>|

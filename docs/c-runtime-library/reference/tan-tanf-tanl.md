@@ -1,10 +1,6 @@
 ---
-title: tan、 tanf、 tanl |Microsoft 文件
-ms.custom: ''
+title: tan、 tanf、 tanl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tan
 - tanf
@@ -27,8 +23,6 @@ f1_keywords:
 - tanf
 - _tanl
 - tanl
-dev_langs:
-- C++
 helpviewer_keywords:
 - tanl function
 - _tanl function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6c0108e6d72e35a253e31df6ec96cbff19113c0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 79a374142a914e8c2c7cf5c094d443b16e4bce88
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409624"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564014"
 ---
 # <a name="tan-tanf-tanl"></a>tan、 tanf、 tanl
 
@@ -73,20 +63,20 @@ long double tan( long double x );  // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-**Tan**函式會傳回的正切函數*x*。 如果*x*是大於或等於 263，或小於或等於-263，就會發生遺失精確度結果。
+**Tan**函式會傳回的正切函數*x*。 如果*x*大於或等於 263，或小於或等於-263，結果中的遺失，就會發生。
 
 |輸入|SEH 例外狀況|**Matherr**例外狀況|
 |-----------|-------------------|-------------------------|
 |± QNAN、IND|無|_DOMAIN|
-|± INF|**無效**|_DOMAIN|
+|常见 INF|**無效**|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**tan**採用並傳回**float**或**長** **double**值。 在 C 程式中， **tan**一律採用並傳回**double**。
+因為 c + + 允許多載，您可以呼叫多載**tan**採用並傳回**float**或是**長** **double**值。 在 C 程式中， **tan**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭 (C)|必要的標頭 (C++)|
+|常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
 |-------------|---------------------|-|
 |**tan**， **tanf**， **tanl**|\<math.h>|\<cmath> 或 \<math.h>|
 

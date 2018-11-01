@@ -1,10 +1,6 @@
 ---
-title: _get_doserrno | Microsoft Docs
-ms.custom: ''
+title: _get_doserrno
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_doserrno
 apilocation:
@@ -23,55 +19,49 @@ apitype: DLLExport
 f1_keywords:
 - _get_doserrno
 - get_doserrno
-dev_langs:
-- C++
 helpviewer_keywords:
 - get_doserrno function
 - _get_doserrno function
 ms.assetid: 7fec7be3-6e39-4181-846b-8ef24489361c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f7cef2c068fad2f18cb1d11d33e551588800cb64
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d28b9ec47108f7051a908f874584bbfddf5d6a3d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399565"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605162"
 ---
 # <a name="getdoserrno"></a>_get_doserrno
 
-取得轉譯成之前，作業系統傳回的錯誤值**errno**值。
+取得錯誤所傳回的值的作業系統之前就會轉譯成對**errno**值。
 
 ## <a name="syntax"></a>語法
 
 ```C
-errno_t _get_doserrno( 
-   int * pValue 
+errno_t _get_doserrno( 
+   int * pValue 
 );
 ```
 
 ### <a name="parameters"></a>參數
 
 *pValue*<br/>
-要填入的目前值為整數的指標 **_doserrno**全域巨集。
+要填入的目前值的整數指標 **_doserrno**全域巨集。
 
 ## <a name="return-value"></a>傳回值
 
-如果 **_get_doserrno**成功，則會傳回零; 若失敗，則會傳回錯誤碼。 如果*pValue*是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**至**EINVAL**並傳回**EINVAL**。
+如果 **_get_doserrno**成功，則會傳回零; 如果失敗，它會傳回錯誤碼。 如果*pValue*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**要**EINVAL** ，並傳回**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**_Doserrno**全域巨集設為零 CRT 初始化期間，處理程序之前開始執行。 此巨集是設定為由會傳回作業系統錯誤的任何系統層級函式呼叫所傳回的作業系統錯誤值，且在執行期間永不重設為 0。 當您撰寫程式碼會檢查出現的錯誤值傳回的函式，一律清除 **_doserrno**使用[_set_doserrno](set-doserrno.md)函式呼叫之前。 因為另一個函式呼叫可能會覆寫 **_doserrno**，藉由檢查值 **_get_doserrno**函式呼叫之後立即。
+**_Doserrno**全域巨集設為零 CRT 初始化期間，處理程序之前開始執行。 此巨集是設定為由會傳回作業系統錯誤的任何系統層級函式呼叫所傳回的作業系統錯誤值，且在執行期間永不重設為 0。 當您撰寫程式碼來檢查錯誤值時傳回的函式，一律清除 **_doserrno**利用[_set_doserrno](set-doserrno.md)函式呼叫之前。 因為另一個函式呼叫可能會覆寫 **_doserrno**，藉由檢查值 **_get_doserrno**函式呼叫之後立即。
 
-我們建議[_get_errno](get-errno.md)而不是 **_get_doserrno**可攜式錯誤代碼。
+我們建議[_get_errno](get-errno.md)而不是 **_get_doserrno**針對可攜式錯誤碼。
 
-可能的值 **_doserrno**中定義\<errno.h >。
+可能的值 **_doserrno**中所定義\<errno.h >。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|---------------------|
 |**_get_doserrno**|\<stdlib.h>、\<cstdlib> (C++)|\<errno.h>、\<cerrno> (C++)|
 

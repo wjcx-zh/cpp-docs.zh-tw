@@ -1,10 +1,6 @@
 ---
-title: sscanf、_sscanf_l、swscanf、_swscanf_l | Microsoft Docs
-ms.custom: ''
+title: sscanf、_sscanf_l、swscanf、_swscanf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - swscanf
 - sscanf
@@ -29,8 +25,6 @@ f1_keywords:
 - _stscanf_l
 - sscanf
 - _swscanf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - swscanf function
 - _stscanf function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - sscanf_l function
 - stscanf_l function
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9ac67b27564f694631977fd21c96922132b633e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60dbb8e89e531c3020c243d998a69370095424e5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413601"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50661964"
 ---
 # <a name="sscanf-sscanfl-swscanf-swscanfl"></a>sscanf、_sscanf_l、swscanf、_swscanf_l
 
@@ -94,7 +84,7 @@ int _swscanf_l(
 已儲存資料
 
 *格式*<br/>
-格式控制字串。 如需詳細資訊，請參閱[格式規格](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。
+格式控制字串。 如需詳細資訊，請參閱 [格式規格](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。
 
 *引數*<br/>
 選擇性引數
@@ -104,22 +94,22 @@ int _swscanf_l(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式都會傳回成功轉換和指派的欄位數；傳回值不包含已讀取但尚未指派的欄位。 傳回值 0 表示未指派任何欄位。 傳回值是**EOF**錯誤或如果字串的結尾已到達第一個轉換之前。
+所有這些函式都會傳回成功轉換和指派的欄位數；傳回值不包含已讀取但尚未指派的欄位。 傳回值 0 表示未指派任何欄位。 傳回值是**EOF**錯誤或第一次轉換之前就到達的字串結尾。
 
-如果*緩衝區*或*格式*是**NULL**指標、 無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**至**EINVAL**。
+如果*緩衝區*或是*格式*會**NULL**指標，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**要**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Sscanf**函式會將資料從*緩衝區*由每個給定的位置到*引數*。 每個*引數*必須對應於型別規範中的型別變數指標*格式*。 *格式*引數的控制項欄位輸入的解譯，並具有相同的形式和功能*格式*引數**scanf**函式。 如果在重疊的字串之間執行複製，則行為是未定義的。
+**Sscanf**函式的資料讀入*緩衝區*每一個所指定的位置*引數*。 每隔*引數*必須是對應至中的類型指定名稱的型別變數指標*格式*。 *格式*引數會控制欄位輸入的解譯，而且具有相同的形式和運作方式*格式*引數**scanf**函式。 如果在重疊的字串之間執行複製，則行為是未定義的。
 
 > [!IMPORTANT]
-> 當讀取的字串**sscanf**，一定要指定的寬度 **%s**格式 (例如， **"%32s"** 而不是 **"%s"**); 否則為格式不正確的輸入，很容易造成緩衝區溢位。
+> 讀取的字串時**sscanf**，一定要指定的寬度 **%s**格式 (例如 **"%32s"** 而不是 **"%s"**)，否則為格式不正確的輸入很容易造成緩衝區溢位。
 
-**swscanf**是寬字元版本的**sscanf**; 的引數**swscanf**是寬字元字串。 **sscanf**無法處理多位元組的十六進位字元。 **swscanf**不會處理 Unicode 全形十六進位或 「 相容性區 」 的字元。 否則， **swscanf**和**sscanf**行為即會相同。
+**swscanf**是寬字元版本的**sscanf**; 的引數**swscanf**是寬字元字串。 **sscanf**不會處理多位元組十六進位字元。 **swscanf**不會處理 Unicode 全形十六進位或 「 相容性區域 」 字元。 否則，請**swscanf**並**sscanf**運作方式完全相同。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的執行緒地區設定的地區設定參數。
+使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -130,7 +120,7 @@ int _swscanf_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**sscanf**， **_sscanf_l**|\<stdio.h>|
 |**swscanf**， **_swscanf_l**|\<stdio.h> 或 \<wchar.h>|

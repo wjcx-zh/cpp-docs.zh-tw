@@ -1,29 +1,19 @@
 ---
-title: -CLRHEADER | Microsoft Docs
-ms.custom: ''
+title: /CLRHEADER
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /CLRHEADER
-dev_langs:
-- C++
 helpviewer_keywords:
 - -CLRHEADER dumpbin option
 - /CLRHEADER dumpbin option
 - CLRHEADER dumpbin option
 ms.assetid: cf73424f-4541-47e2-b94e-69b95266ef2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f6cda2f03e8a0473d2c45f54c96ca97b043d80d5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 864ecc0063716ce712e28b063714ce7c17fc294a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704437"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50627366"
 ---
 # <a name="clrheader"></a>/CLRHEADER
 
@@ -37,21 +27,21 @@ ms.locfileid: "34704437"
 
 |||
 |-|-|
-*file*| 使用建立的映像檔[/clr](../../build/reference/clr-common-language-runtime-compilation.md)。
+*file*| 使用建置的映像檔[/clr](../../build/reference/clr-common-language-runtime-compilation.md)。
 
 ## <a name="remarks"></a>備註
 
-**/CLRHEADER**顯示可用在任何受管理程式的.NET 標頭的相關資訊。 輸出會顯示的位置和大小，以位元組為單位的.NET 標頭和標頭中的章節。
+**/CLRHEADER**顯示可用在任何受管理程式的.NET 標頭的相關資訊。 輸出會顯示的位置和大小，以位元組為單位，.NET 標頭以及標頭中的區段。
 
-只有[/HEADERS](../../build/reference/headers.md) DUMPBIN 選項僅適用於所產生的檔案上[/GL](../../build/reference/gl-whole-program-optimization.md)編譯器選項。
+只有[/HEADERS](../../build/reference/headers.md) DUMPBIN 選項只適用於所產生的檔案上[/GL](../../build/reference/gl-whole-program-optimization.md)編譯器選項。
 
-當 **/CLRHEADER**會使用以 /clr 編譯的檔案，會有**clr 標頭：** dumpbin 輸出中的區段。 值**旗標**表示已使用哪一個 /clr 選項：
+當 **/CLRHEADER**用在使用 /clr 所編譯的檔案上, 會有**clr 標頭：** dumpbin 輸出一節。 值**旗標**表示已使用哪些 /clr 選項：
 
-- 0-/clr （映像可能包含原生程式碼）。
+- 0-/clr （映像可能會包含原生程式碼）。
 
-您也以程式設計方式可以檢查映像已針對 common language runtime。  如需詳細資訊，請參閱[How to： 判斷影像是否為原生或 CLR](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)。
+您可以也以程式設計方式檢查是否專為通用語言執行平台映像的動作。  如需詳細資訊，請參閱 <<c0> [ 如何： 判斷影像是否為原生或 CLR](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)。
 
-**/Clr: pure**和 **/clr: safe**編譯器選項都是 Visual Studio 2015 中已被取代，並不支援的 Visual Studio 2017 中。 必須是 「 單純的 」 或 「 安全 」 的程式碼應該移植到 C#。
+**/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。 必須是 「 純 」 或 「 安全 」 的程式碼才能移植到C#。
 
 ## <a name="see-also"></a>另請參閱
 

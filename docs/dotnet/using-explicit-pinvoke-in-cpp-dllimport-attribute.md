@@ -1,12 +1,6 @@
 ---
-title: C + + （DllImport 屬性） 中使用明確的 PInvoke |Microsoft Docs
-ms.custom: ''
+title: 在 C++ 中使用明確的 PInvoke (DllImport 屬性)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - marshaling [C++], platform invoke
 - C++ Interop, platform invoke
@@ -14,17 +8,12 @@ helpviewer_keywords:
 - platform invoke [C++], marshaling in C++
 - data marshaling [C++], platform invoke
 ms.assetid: 18e5218c-6916-48a1-a127-f66e22ef15fc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: bbaaee5845124dda45b4fe11ff44033e8c6a9f17
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8ac9dac3ea90062b632358ade2cd99e9c67e446f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444264"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588704"
 ---
 # <a name="using-explicit-pinvoke-in-c-dllimport-attribute"></a>在 C++ 中使用明確的 PInvoke (DllImport 屬性)
 

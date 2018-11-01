@@ -1,31 +1,21 @@
 ---
-title: 二進位輸出檔案 | Microsoft Docs
-ms.custom: ''
+title: 二進位輸出檔案
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - I/O [C++], binary output files
 - files [C++], binary output files
 - binary data, binary output files
 ms.assetid: 180954af-8cd6-444b-9a76-2f630a3389d8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cdb101620b1a61f3a29057ee408cf9e89d38f9e8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 99445275a8f92622f451e8a88082dc2b28fb60b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842348"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615640"
 ---
 # <a name="binary-output-files"></a>二進位輸出檔案
 
-資料流最初是針對文字所設計，因此預設輸出模式是文字。 在文字模式下，新行字元 (十六進位 10) 會展開以復-換行 （僅限 16 位元）。 此擴充可能造成問題，如下所示：
+資料流最初是針對文字所設計，因此預設輸出模式是文字。 在文字模式中，新行字元 (十六進位 10) 會展開以復位換行 （僅限 16 位元）。 此擴充可能造成問題，如下所示：
 
 ```cpp
 // binary_output_files.cpp

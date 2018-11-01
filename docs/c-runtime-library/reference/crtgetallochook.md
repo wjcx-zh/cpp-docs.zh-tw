@@ -1,10 +1,6 @@
 ---
-title: _CrtGetAllocHook | Microsoft Docs
-ms.custom: ''
+title: _CrtGetAllocHook
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtGetAllocHook
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtGetAllocHook
 - _CrtGetAllocHook
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtGetAllocHook function
 - CrtGetAllocHook function
 ms.assetid: 036acf7c-547a-4b3f-a636-80451070d7ed
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fb811353d0ac252411cc5bfc8beb408b6e707089
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b49c4cfc820a925187d0ea4d1562965295bea817
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394518"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514955"
 ---
 # <a name="crtgetallochook"></a>_CrtGetAllocHook
 
@@ -55,13 +45,13 @@ _CRT_ALLOC_HOOK _CrtGetAllocHook( void );
 
 ## <a name="remarks"></a>備註
 
-**_CrtGetAllocHook**擷取目前的用戶端定義的應用程式攔截函式的 C 執行階段偵錯程式庫的記憶體配置處理。
+**_CrtGetAllocHook**擷取目前的用戶端定義的應用程式攔截函式的 C 執行階段偵錯程式庫記憶體配置處理序。
 
 如需使用支援攔截程序之其他執行階段函式，以及撰寫您自己的用戶端定義攔截函式的詳細資訊，請參閱[撰寫偵錯攔截函式](/visualstudio/debugger/debug-hook-function-writing)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_CrtGetAllocHook**|\<crtdbg.h>|
 

@@ -1,11 +1,6 @@
 ---
-title: nearbyint nearbyintf，nearbyintl |Microsoft 文件
-ms.custom: ''
+title: nearbyint、nearbyintf、nearbyintl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - nearbyint
 - nearbyintf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/nearbyint
 - math/narbyintf
 - math/narbyintl
-dev_langs:
-- C++
 helpviewer_keywords:
 - nearbyint function
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2362a68bf73a370f2fdf8eaa5ecb18b0a08bfaad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4a36bddb28db9fb4c5809432dfaef9ca3ece4328
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403231"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668308"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint、nearbyintf、nearbyintl
 
@@ -72,23 +61,23 @@ long double nearbyint( long double x ); //C++ only
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，傳回*x*，四捨五入為最接近的整數，報告的使用目前的捨入格式[fegetround](fegetround-fesetround2.md)。 否則，此函式可能會傳回下列其中一個值：
+如果成功，則傳回*x*，四捨五入為最接近的整數，報告所使用之目前進位格式[fegetround](fegetround-fesetround2.md)。 否則，此函式可能會傳回下列其中一個值：
 
 |問題|Return|
 |-----------|------------|
-|*x* = ±INFINITY|±INFINITY，未修改|
-|*x* = ±0|±0，未修改|
+|*x* = ±INFINITY|±INFINITY，未經修改的狀態|
+|*x* = ±0|±0，未經修改的狀態|
 |*x* = NaN|NaN|
 
-錯誤不會報告透過[_matherr](matherr.md); 具體而言，此函式不會報告任何**FE_INEXACT**例外狀況。
+錯誤不會報告透過[_matherr](matherr.md); 具體來說，此函式不會報告任何**FE_INEXACT**例外狀況。
 
 ## <a name="remarks"></a>備註
 
-此函式之間的主要差異和[rint](rint-rintf-rintl.md)是此函式不會產生不精確的浮動點例外狀況。
+此函式的主要差異及[rint](rint-rintf-rintl.md)是此函式不會引發不精確的浮點例外狀況。
 
 因為最大浮點值是精確的整數，所以此函式自身永遠不會溢位；相反地，根據您使用的函式版本，輸出可能會造成傳回值溢位。
 
-C + + 允許多載，所以您可以呼叫的多載**nearbyint**採用並傳回**float**或**長** **double**參數。 在 C 程式中， **nearbyint**一律會採用兩個雙精度浮點數值，並傳回雙精度浮點數值。
+C + + 允許多載，因此您可以呼叫多載**nearbyint**採用並傳回**float**或是**長** **double**參數。 在 C 程式中， **nearbyint**一律會採用兩個雙精度浮點數值，並傳回雙精度浮點數值。
 
 ## <a name="requirements"></a>需求
 

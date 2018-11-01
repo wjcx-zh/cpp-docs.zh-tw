@@ -1,10 +1,6 @@
 ---
-title: islower、iswlower、_islower_l、_iswlower_l | Microsoft Docs
-ms.custom: ''
+title: islower、iswlower、_islower_l、_iswlower_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswlower
 - _islower_l
@@ -33,8 +29,6 @@ f1_keywords:
 - _islower _l
 - _islower_l
 - iswlower
-dev_langs:
-- C++
 helpviewer_keywords:
 - _islower _l function
 - _ismbclower_l function
@@ -47,16 +41,12 @@ helpviewer_keywords:
 - iswlower function
 - _islower_l function
 ms.assetid: fcc3b70a-2b47-45fd-944d-e5c1942e6457
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 14fb6eae9e06e973413c21607f2ca2881f33aa38
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14510d38f5bb4890f98c39b49ca17adc2be3ff41
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401827"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594125"
 ---
 # <a name="islower-iswlower-islowerl-iswlowerl"></a>islower、iswlower、_islower_l、_iswlower_l
 
@@ -91,11 +81,11 @@ int _iswlower_l(
 
 ## <a name="return-value"></a>傳回值
 
-每個這些常式傳回非零，如果*c*是小寫字元的特定表示法。 **islower**傳回非零值，如果*c*是小寫字元 (a-z)。 **iswlower**傳回非零值，如果*c*寬字元都會對應至小寫字母，或如果*c*全部不是寬字元實作定義字元集的其中一個**iswcntrl**， **iswdigit**， **iswpunct**，或**iswspace**為非零值。 這些常式都會傳回 0，如果*c*不符合測試條件。
+這些常式傳回非零值如果*c*表示特定的小寫字元。 **islower**傳回非零值，如果*c*是小寫字元 (a-z)。 **iswlower**傳回非零值，如果*c*是寬字元對應至小寫字母，或如果*c* 均為寬字元實作定義字元集的其中一個**iswcntrl**， **iswdigit**， **iswpunct**，或**iswspace**為非零值。 這些常式都會傳回 0，如果*c*不符合測試條件。
 
-有這些函式的版本 **_l**尾碼而不是目前的地區設定使用傳入的地區設定，地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+有這些函式的版本 **_l**後置詞使用傳入的地區設定而不是目前的地區設定其地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-行為**islower**和 **_islower_l**是未定義的如果*c*不 EOF 或 0 到 0xFF，（含) 範圍中。 當使用 CRT 偵錯程式庫和*c*不是其中一個函式產生，這些值的判斷提示。
+行為**islower**並 **_islower_l**如果是未定義*c*不是 EOF 或介於 0 到 0xFF 的內含。 使用偵錯 CRT 程式庫時， *c*是不是其中一個值，函式會引發判斷提示。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -106,7 +96,7 @@ int _iswlower_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**islower**|\<ctype.h>|
 |**iswlower**|\<ctype.h> 或 \<wchar.h>|

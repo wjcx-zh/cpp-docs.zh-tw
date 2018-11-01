@@ -1,28 +1,17 @@
 ---
-title: 將控制項加入至對話方塊會造成對話方塊無法再函式 （c + +） |Microsoft Docs
-ms.custom: ''
+title: 將控制項加入至對話方塊會造成對話方塊無法再函式 （c + +）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [C++], troubleshooting
 - dialog boxes [C++], troubleshooting
 - InitCommonControls
 ms.assetid: b2dd4574-ea59-4343-8d65-b387cead5da6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 89e4a639ad953593195401fe2eadeb5d7877a160
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d95c89c0a07e02ab0934a54ca1fe067961348766
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445856"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648288"
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function-c"></a>將控制項加入至對話方塊會造成對話方塊無法再函式 （c + +）
 

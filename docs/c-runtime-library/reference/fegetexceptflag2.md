@@ -1,11 +1,6 @@
 ---
-title: fegetexceptflag |Microsoft 文件
-ms.custom: ''
+title: fegetexceptflag
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fegetexceptflag
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - fegetexceptflag
 - fenv/fegetexceptflag
-dev_langs:
-- C++
 helpviewer_keywords:
 - fegetexceptflag function
 ms.assetid: 2d28f0ca-70c9-4cff-be8b-3d876eacde71
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: baccf3f32381568472bd4d0d5f37d434ca789fc8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8dc82f6ee054dc3d0f86055cb63da1fc63c79a8b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399536"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605474"
 ---
 # <a name="fegetexceptflag"></a>fegetexceptflag
 
@@ -57,10 +46,10 @@ int fegetexceptflag(
 ### <a name="parameters"></a>參數
 
 *pstatus*<br/>
-指標**fexcept_t**物件，以包含所指定的例外狀況旗標的目前值*excepts*。
+指標**fexcept_t**物件，包含目前的值，指定例外狀況旗標*removed*。
 
-*excepts*<br/>
-浮點例外狀況旗標，以存放*pstatus*。
+*removed*<br/>
+在中儲存的浮點例外狀況旗標*pstatus*。
 
 ## <a name="return-value"></a>傳回值
 
@@ -68,7 +57,7 @@ int fegetexceptflag(
 
 ## <a name="remarks"></a>備註
 
-**Fegetexceptflag**函式將所指定的浮點例外狀況狀態旗標的目前狀態儲存*excepts*中**fexcept_t**指向的物件*pstatus*。  *pstatus*必須指向有效**fexcept_t**物件或後續的行為是未定義。 **Fegetexceptflag**函式可支援定義在這些例外狀況巨集\<fenv.h >:
+**Fegetexceptflag**函式會儲存所指定的浮點例外狀況狀態旗標的目前狀態*removed*中**fexcept_t**指向的物件*pstatus*。  *pstatus*必須指向有效**fexcept_t**物件或後續行為是未定義。 **Fegetexceptflag**函式支援這些例外狀況巨集，定義於\<fenv.h >:
 
 |例外狀況巨集|描述|
 |---------------------|-----------------|
@@ -79,7 +68,7 @@ int fegetexceptflag(
 |FE_UNDERFLOW|稍早的浮點運算結果太小，無法以完整精確度表示；已建立 denormal 值。|
 |FE_ALLEXCEPT|所有受支援浮點例外狀況的位元 OR。|
 
-*Excepts*引數可以是零，其中一種支援的浮點例外狀況巨集，或位元或兩個或多個巨集。 未定義任何其他引數值的效果。
+*Removed*引數可以是零，其中一個支援的浮點例外狀況巨集，或位元，或是兩個或以上巨集。 未定義任何其他引數值的效果。
 
 若要使用此函式，您必須在呼叫之前使用 `#pragma fenv_access(on)` 指示詞，以關閉可能會妨礙存取的浮點最佳化作業。 如需詳細資訊，請參閱 [fenv_access](../../preprocessor/fenv-access.md)。
 

@@ -1,10 +1,6 @@
 ---
-title: _cprintf_p、_cprintf_p_l、_cwprintf_p、_cwprintf_p_l | Microsoft Docs
-ms.custom: ''
+title: _cprintf_p、_cprintf_p_l、_cwprintf_p、_cwprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cprintf_p_l
 - _cwprintf_p_l
@@ -33,8 +29,6 @@ f1_keywords:
 - _cwprintf_p
 - _tcprintf_p
 - cprintf_p_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _cwprintf_p_l function
 - cwprintf_p function
@@ -49,23 +43,19 @@ helpviewer_keywords:
 - tcprintf_p function
 - cprintf_p function
 ms.assetid: 1f82fd7d-13c8-4c4a-a3e4-db0df3873564
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 328e6fba2854e2cee82bdb9b7ccfe2e62e7c1ddc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef4ac6a89749c2784e4935fcf83810e81b61ae11
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402643"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658454"
 ---
 # <a name="cprintfp-cprintfpl-cwprintfp-cwprintfpl"></a>_cprintf_p、_cprintf_p_l、_cwprintf_p、_cwprintf_p_l
 
 這會格式化並列印到主控台，且支援格式字串中的位置參數。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -107,16 +97,16 @@ int _cwprintf_p_l(
 
 ## <a name="remarks"></a>備註
 
-這些函式格式化並列印一系列字元和值到主控台，直接使用 **_putch**和 **_putwch**輸出字元的函式。 每個*引數*（如果有的話） 會轉換和輸出中的對應格式規格根據*格式*。 此格式具有相同的形式和功能*格式*參數[printf_p](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)函式。 之間的差異 **_cprintf_p**和**cprintf_s**在於 **_cprintf_p**支援位置參數，可讓您指定的引數順序格式字串中使用。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
+這些函式格式化並列印一系列的字元和值到主控台，直接使用 **_putch**並 **_putwch**輸出字元的函式。 每個*引數*（如果有的話） 會轉換和輸出中的對應格式規格根據*格式*。 此格式具有相同的形式和運作方式*格式*參數[printf_p](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)函式。 之間的差異 **_cprintf_p**並**cprintf_s**在於 **_cprintf_p**支援位置參數，可讓您指定的引數的順序格式字串中使用。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-不同於**fprintf_p**， **printf_p**，和**sprintf_p**函式，兩者都不 **_cprintf_p**也 **_cwprintf_p**換行字元轉譯為歸位字元-換 (CR-LF) 組合輸出時。 重要的差異在於 **_cwprintf_p**會顯示在 Windows NT 中使用時的 Unicode 字元。 不同於 **_cprintf_p**， **_cwprintf_p**會使用目前的主控台地區設定。
+不同於**fprintf_p**， **printf_p**，並**sprintf_p**函式，都不 **_cprintf_p**也 **_cwprintf_p**會將換行字元轉譯為歸位字元傳回換行字元 (CR-LF) 組合時輸出。 重要的差異在於 **_cwprintf_p**會顯示在 Windows NT 中使用時的 Unicode 字元。 不同於 **_cprintf_p**， **_cwprintf_p**會使用目前的主控台地區設定。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的地區設定的地區設定參數。
+使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前的地區設定傳入的地區設定參數。
 
 > [!IMPORTANT]
 > 確認 *format* 不是使用者定義的字串。
 
-並且，如同 **_cprintf_s**和 **_cwprintf_s**，它們會驗證輸入的指標和格式字串。 如果*格式*或*引數*是**NULL**，或格式的字串包含無效格式化字元，則這些函式叫用無效參數處理常式中，做為中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**至**EINVAL**。
+並且，如同 **_cprintf_s**並 **_cwprintf_s**，它們會驗證輸入的指標和格式字串。 如果*格式*或是*引數*會**NULL**，或此格式字串包含無效格式化字元，這些函式叫用無效的參數處理常式，做為中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**要**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -127,7 +117,7 @@ int _cwprintf_p_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_cprintf_p**， **_cprintf_p_l**|\<conio.h>|
 |**_cwprintf_p**， **_cwprintf_p_l**|\<conio.h>|

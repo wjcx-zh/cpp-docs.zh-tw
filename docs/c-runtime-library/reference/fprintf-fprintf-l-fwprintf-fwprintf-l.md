@@ -1,10 +1,6 @@
 ---
-title: fprintf、_fprintf_l、fwprintf、_fwprintf_l | Microsoft Docs
-ms.custom: ''
+title: fprintf、_fprintf_l、fwprintf、_fwprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fwprintf
 - fprintf
@@ -26,8 +22,6 @@ f1_keywords:
 - fprintf
 - fwprintf
 - _ftprintf
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fwprintf_l function
 - fprintf function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - print formatted data to streams
 - fwprintf_l function
 ms.assetid: 34a87e1c-6e4d-4d48-a611-58314dd4dc4b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c7578a8a8c2bef7fe68e9a08ae987ac7c1609cb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d84ef50e6fd522e393bb87664fb1eb47f3d32bb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403878"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637291"
 ---
 # <a name="fprintf-fprintfl-fwprintf-fwprintfl"></a>fprintf、_fprintf_l、fwprintf、_fwprintf_l
 
@@ -99,17 +89,17 @@ int _fwprintf_l(
 
 ## <a name="return-value"></a>傳回值
 
-**fprintf**傳回寫入的位元組數目。 **fwprintf**傳回寫入的寬字元數目。 發生輸出錯誤時，所有這些函式都會改為傳回負值。 如果*資料流*或*格式*是**NULL**，這些函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1，並設定**errno**至**EINVAL**。 格式字串不會檢查有效的格式字元時使用，所以**fprintf_s**或**fwprintf_s**。
+**fprintf**傳回寫入的位元組數目。 **fwprintf**傳回寫入的寬字元數目。 發生輸出錯誤時，所有這些函式都會改為傳回負值。 如果*資料流*或是*格式*是**NULL**，這些函式叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1，並設定**errno**要**EINVAL**。 格式字串不會檢查有效的格式化字元，即使用時**fprintf_s**或是**fwprintf_s**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**fprintf**格式化並列印一系列字元和值的輸出*資料流*。 每個函式*引數*（如果有的話） 會轉換和輸出中的對應格式規格根據*格式*。 如**fprintf**、*格式*引數具有相同的語法和使用中**printf**。
+**fprintf**格式化並列印一系列的字元和值的輸出*串流*。 每個函式*引數*（如果有的話） 會轉換和輸出中的對應格式規格根據*格式*。 針對**fprintf**，則*格式*引數具有相同的語法和用法與在**printf**。
 
-**fwprintf**是寬字元版本的**fprintf**; 在**fwprintf**，*格式*是寬字元字串。 如果資料流是以 ANSI 模式開啟，則這些函式的行為相同。 **fprintf**目前不支援輸出到 UNICODE 資料流。
+**fwprintf**是寬字元版本的**fprintf**; 在**fwprintf**，*格式*是寬字元字串。 如果資料流是以 ANSI 模式開啟，則這些函式的行為相同。 **fprintf**目前不支援輸出至 UNICODE 資料流。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的執行緒地區設定的地區設定參數。
+使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
 
 > [!IMPORTANT]
 > 確認 *format* 不是使用者定義的字串。

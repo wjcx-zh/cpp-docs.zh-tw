@@ -1,10 +1,6 @@
 ---
-title: remove、_wremove | Microsoft Docs
-ms.custom: ''
+title: remove0、_wremove
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wremove
 - remove
@@ -25,8 +21,6 @@ f1_keywords:
 - remove
 - _wremove
 - _tremove
-dev_langs:
-- C++
 helpviewer_keywords:
 - tremove function
 - _wremove function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 36cdc09107a66067b358cb2fd72ec9bd1b2b30a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d5636912ea36fd1b1412a556d516ac3e8184e0b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406429"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613963"
 ---
 # <a name="remove-wremove"></a>remove0、_wremove
 
@@ -69,13 +59,13 @@ int _wremove(
 
 ## <a name="return-value"></a>傳回值
 
-如果已成功刪除檔案，這些函式每個都會傳回 0。 否則，它會傳回-1，並設定**errno**至**EACCES**指示路徑指定唯讀檔案或檔案已經開啟，或**ENOENT**表示找不到檔案名稱或路徑，或路徑指定的目錄。
+如果已成功刪除檔案，這些函式每個都會傳回 0。 否則會傳回-1，並設定**errno**可以是**EACCES** ，表示路徑指定唯讀檔案或檔案已開啟，或**ENOENT**表示找不到檔案名稱或路徑或路徑指定的目錄。
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**remove** 函式會刪除 *path* 指定的檔案。 **_wremove**是寬字元版本的**移除 （_r)**;*路徑*引數 **_wremove**是寬字元字串。 **_wremove**和**移除 （_r)** 除此之外的行為相同。 必須先關閉檔案的所有處理常式，才能刪除它。
+**remove** 函式會刪除 *path* 指定的檔案。 **_wremove**是寬字元版本的 **_remove**;*路徑*引數 **_wremove**是寬字元字串。 **_wremove**並**移除 （_r)** 行為相同。 必須先關閉檔案的所有處理常式，才能刪除它。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -85,7 +75,7 @@ int _wremove(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**remove**|\<stdio.h> 或 \<io.h>|
 |**_wremove**|\<stdio.h> 或 \<wchar.h>|

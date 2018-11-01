@@ -1,23 +1,13 @@
 ---
-title: 以 Visual c + + 進行平行程式設計 |Microsoft Docs
-ms.custom: ''
+title: 以 Visual C++ 進行平行程式設計
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: f5c28ab6-a1d9-492f-b207-05e8aee73e96
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3425542e09fe4f1572021945e65664b436b0e73f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2ac9d983ad492d9d367cc30119e78156a23a2bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443068"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659000"
 ---
 # <a name="parallel-programming-in-visual-c"></a>以 Visual C++ 進行平行程式設計
 

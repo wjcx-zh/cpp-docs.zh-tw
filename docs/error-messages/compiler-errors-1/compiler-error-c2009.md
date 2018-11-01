@@ -1,27 +1,17 @@
 ---
-title: 編譯器錯誤 C2009 |Microsoft Docs
-ms.custom: ''
+title: 編譯器錯誤 C2009
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2009
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2009
 ms.assetid: fe9d94ed-20a5-4d83-b9c4-60ee69d2f30a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2a6baaed5ed0569f5bc7e71314f8b27d8f6de6b0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d2216b3fe990109828492fb2b2055e9425c1e306
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016388"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638772"
 ---
 # <a name="compiler-error-c2009"></a>編譯器錯誤 C2009
 

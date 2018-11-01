@@ -1,10 +1,6 @@
 ---
-title: _fclose_nolock | Microsoft Docs
-ms.custom: ''
+title: _fclose_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fclose_nolock
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - fclose_nolock
 - _fclose_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, closing
 - fclose_nolock function
 - _fclose_nolock function
 ms.assetid: b4af4392-5fc8-49bb-9fe2-ca7293d3ce04
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7474d195f2a04525ed2bc4cf671950308a70c7b5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 440582bb42a1795721eab17b24be3e0bc3daf80f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398954"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620957"
 ---
 # <a name="fclosenolock"></a>_fclose_nolock
 
@@ -60,11 +50,11 @@ int _fclose_nolock(
 
 ## <a name="return-value"></a>傳回值
 
-**fclose**傳回 0，如果已成功關閉資料流。 傳回**EOF**表示錯誤。
+**fclose**會傳回 0，如果已成功關閉資料流。 傳回**EOF**表示錯誤。
 
 ## <a name="remarks"></a>備註
 
-此函式為非鎖定版本**fclose**。 完全一致，唯一不同在於不受保護，不能免於其他執行緒的干擾。 因為它不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這個函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
+此函式為非鎖定版本的**fclose**。 完全一致，唯一不同在於不受保護，不能免於其他執行緒的干擾。 因為它不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這個函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
 
 ## <a name="requirements"></a>需求
 

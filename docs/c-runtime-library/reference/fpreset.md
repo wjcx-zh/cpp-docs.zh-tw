@@ -1,10 +1,6 @@
 ---
-title: _fpreset | Microsoft Docs
-ms.custom: ''
+title: _fpreset
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fpreset
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _fpreset
 - fpreset
-dev_langs:
-- C++
 helpviewer_keywords:
 - fpreset function
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8b550df3e43b56038ae6d1b2d6695c86d90c3499
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b3ea4289cd0ff031fd2828e3c4183911459297c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398890"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592605"
 ---
 # <a name="fpreset"></a>_fpreset
 
@@ -53,9 +43,9 @@ void _fpreset( void );
 
 ## <a name="remarks"></a>備註
 
-**_Fpreset**函式會重新初始化浮點數學封裝。 **_fpreset**通常會搭配**訊號**，**系統**，或 **_exec**或 **_spawn**函式。 如果程式設陷浮點數的錯誤訊號 (**SIGFPE**) 與**訊號**，它可以安全地從錯誤中復原浮點叫用 **_fpreset**和使用**longjmp**。
+**_Fpreset**函式會重新初始化浮點數學套件。 **_fpreset**通常會搭配**訊號**， **system**，或有 **_exec**或是 **_spawn**函式。 如果程式捕捉浮點錯誤信號 (**SIGFPE**) 與**訊號**，它可以安全地復原浮點錯誤，藉由叫用 **_fpreset**和使用**longjmp**。
 
-此函式已被取代，以編譯時[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)因為 common language runtime 只支援預設的浮點精確度。
+進行編譯時，此函式已被取代[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)因為 common language runtime 只支援預設的浮點精確度。
 
 ## <a name="requirements"></a>需求
 

@@ -1,10 +1,6 @@
 ---
-title: fgetpos | Microsoft Docs
-ms.custom: ''
+title: fgetpos
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fgetpos
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fgetpos
-dev_langs:
-- C++
 helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b111a911083354c8d9478b2c914a0a5f7dfe7725
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397381"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658415"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -62,11 +52,11 @@ int fgetpos(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功的話， **fgetpos**傳回 0。 如果失敗，它會傳回非零值，並設定**errno**的下列其中一個資訊清單常數 （定義於 STDIO。H): **EBADF**，這表示指定的資料流不是有效的檔案指標或無法存取，或**EINVAL**，這表示*資料流*值或值*pos*是無效的例如，如果不是 null 指標。 如果*資料流*或*pos*是**NULL**指標，函式會叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md).
+如果成功， **fgetpos**會傳回 0。 在失敗時，它會傳回非零值，並設定**errno**的下列其中一個資訊清單常數 （定義於 STDIO。H): **EBADF**，這表示指定的資料流不是有效的檔案指標或無法存取，或**EINVAL**，這表示*串流*的值*pos*是無效的例如，如果不是 null 指標。 如果*資料流*或是*pos*會**NULL**指標，函式會叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>備註
 
-**Fgetpos**函式取得的目前值*資料流*引數的檔案位置指標，該物件中所指向的存放區*pos*。**Fsetpos**函式可以稍後使用資訊儲存在*pos*重設*資料流*時其位置引數的指標**fgetpos**呼叫。 *Pos*值會儲存在內部格式，並僅適用於**fgetpos**和**fsetpos**。
+**Fgetpos**函式會取得目前的值*串流*引數的檔案位置指標和它的物件中所指向的存放區*pos*。**Fsetpos**函式稍後可以使用資訊儲存在*pos*重設*串流*次其位置的引數的指標**fgetpos**呼叫。 *Pos*值會以內部格式儲存，並僅適用於**fgetpos**並**fsetpos**。
 
 ## <a name="requirements"></a>需求
 

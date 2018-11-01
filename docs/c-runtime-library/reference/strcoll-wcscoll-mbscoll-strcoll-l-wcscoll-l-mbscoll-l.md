@@ -1,10 +1,6 @@
 ---
-title: strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l | Microsoft Docs
-ms.custom: ''
+title: strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcscoll
 - _mbscoll
@@ -31,8 +27,6 @@ f1_keywords:
 - _mbscoll
 - _tcscoll
 - _ftcscoll
-dev_langs:
-- C++
 helpviewer_keywords:
 - code pages, using for string comparisons
 - mbscoll function
@@ -49,23 +43,19 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: 900a7540-c7ec-4c2f-b292-7a85f63e3fe8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d7ea6a480ad5600a69cae31033c4abc28ed78e5e
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: ae72b4cbb2b001a332d41a74883a0e2a9d20a181
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451920"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50625182"
 ---
 # <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l
 
 使用目前的地區設定或指定的 LC_COLLATE 轉換狀態分類來比較字串。
 
 > [!IMPORTANT]
-> **_mbscoll**和 **_mbscoll_l**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbscoll**並 **_mbscoll_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -109,7 +99,7 @@ int _mbscoll_l(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式傳回值，指出關聯性的*string1*至*string2*、，如下所示。
+所有這些函式都會傳回值，指出的關聯性*string1*要*string2*、，如下所示。
 
 |傳回值|string1 與 string2 的關係|
 |------------------|----------------------------------------|
@@ -117,15 +107,15 @@ int _mbscoll_l(
 |0|*string1*等於*string2*|
 |> 0|*string1*大於*string2*|
 
-所有這些函式傳回 **_NLSCMPERROR**在發生錯誤。 若要使用 **_NLSCMPERROR**，包括其中一個字串。H 或 MBSTRING。H. **wcscoll**就會失敗可能是*string1*或*string2*是**NULL**或包含的定序順序之網域外部的寬字元碼。 發生錯誤時， **wcscoll**可能設定**errno**至**EINVAL**。 若要檢查是否有錯誤的呼叫上**wcscoll**，將**errno**設為 0，然後檢查**errno**之後呼叫**wcscoll**。
+每一種函式都會傳回 **_NLSCMPERROR**在發生錯誤。 若要使用 **_NLSCMPERROR**，包含其中一個字串。H 或 MBSTRING。H. **wcscoll**可能會失敗，如果有任一*string1*或*string2*是**NULL**或包含的定序順序之網域外部的寬字元碼。 發生錯誤時， **wcscoll**可能設定**errno**來**EINVAL**。 若要檢查是否發生錯誤，在呼叫**wcscoll**，將**errno**設為 0，然後再檢查**errno**之後呼叫**wcscoll**。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式執行區分大小寫的比較*string1*和*string2*根據目前使用中的字碼頁。 只有在字元集順序與目前字碼頁中的字典編纂字元順序不同時，以及字串比較注意這項差異時，才應該使用這些函式。
+所有這些函式都會執行區分大小寫的比較*string1*並*string2*根據目前使用中的字碼頁。 只有在字元集順序與目前字碼頁中的字典編纂字元順序不同時，以及字串比較注意這項差異時，才應該使用這些函式。
 
-這些函式全都會驗證它們的參數。 如果有任一個*string1*或*string2*為 null 指標，或如果*計數*大於**INT_MAX**，叫用無效參數處理常式中, 所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函數會傳回 **_NLSCMPERROR**並設定**errno**至**EINVAL**。
+這些函式全都會驗證它們的參數。 如果有任一*string1*或*string2*為 null 指標，或如果*計數*大於**INT_MAX**，叫用無效參數處理常式如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md) 。 如果允許繼續執行，則這些函式會傳回 **_NLSCMPERROR**並設定**errno**來**EINVAL**。
 
-這兩個字串的比較是與地區設定相關的作業，因為每個地區設定都有不同的字元排序規則。 這些功能，但不包含新版 **_l**後置詞使用目前的執行緒地區設定，針對此與地區設定相關行為; 具有版本 **_l**後置詞都與對應的函式沒有後置詞，除了它們會使用傳入做為參數，而不是目前的地區設定的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這兩個字串的比較是與地區設定相關的作業，因為每個地區設定都有不同的字元排序規則。 這些功能，但不包含新版 **_l**後置詞使用目前執行緒的地區設定，針對此與地區設定相關行為; 具有版本 **_l**後置詞是相同的對應函式沒有尾碼不同之處在於，它們會使用傳入做為參數，而不是目前的地區設定的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -135,7 +125,7 @@ int _mbscoll_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**strcoll**|\<string.h>|
 |**wcscoll**|\<wchar.h>、\<string.h>|

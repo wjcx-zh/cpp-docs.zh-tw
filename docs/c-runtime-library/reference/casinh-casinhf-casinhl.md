@@ -1,11 +1,6 @@
 ---
-title: casinh、casinhf、casinhl | Microsoft Docs
-ms.custom: ''
+title: casinh、casinhf、casinhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - casinh
 - casinhl
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/casinh
 - complex/casinhf
 - complex/casinhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - casinh function
 - casinhf function
 - casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 460c5cdd41d49b9448aa8d4b7fbd2454e8301e4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c274f4dcdfb16317820ce5c39918fa6135210eea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393962"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580747"
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh、casinhf、casinhl
 
-擷取與分支剪下間隔外部的複數的反雙曲正弦 [-i + 我] 軸虛數。
+擷取複數，而且分支的間隔外部的反雙曲正弦值 [-i，+ i] 在虛數軸。
 
 ## <a name="syntax"></a>語法
 
@@ -79,15 +68,15 @@ _Lcomplex casinhl(
 
 ## <a name="return-value"></a>傳回值
 
-反雙曲正弦*z*，以弧度為單位。 結果是在實際的軸和間隔中未繫結 [-iπ/2 + iπ/2] 的虛數座標軸。
+反雙曲正弦*z*，以弧度為單位。 結果是未繫結，而且實際軸中，並且在間隔 [-i π/2，+ i π/2] 在虛數軸。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**casinh**採用並傳回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程式中， **casinh**一律採用並傳回 **_Dcomplex**值。
+因為 c + + 允許多載，您可以呼叫多載**casinh**採用並傳回 **_Fcomplex**並 **_Lcomplex**值。 在 C 程式中， **casinh**一律採用並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
-|常式|C 標頭|C++ 標頭|
+|常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
 |**casinh**， **casinhf**， **casinhl**|\<complex.h>|\<ccomplex>|
 

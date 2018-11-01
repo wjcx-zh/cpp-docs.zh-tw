@@ -1,12 +1,6 @@
 ---
-title: 資料錄集： 執行聯結 (ODBC) |Microsoft Docs
-ms.custom: ''
+title: 資料錄集：執行聯結 (ODBC)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - joins [C++], in recordsets
 - data binding [C++], recordset columns
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - ODBC recordsets [C++], joins
 - recordsets [C++], joining tables
 ms.assetid: ca720900-a156-4780-bf01-4293633bea64
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 60a2a06e5b6f2ba72c0cf5c7997a20e5df88d7e6
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 135992e7eebd56c985c24228370695f10ac6da3a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50062141"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523934"
 ---
 # <a name="recordset-performing-a-join-odbc"></a>資料錄集：執行聯結 (ODBC)
 

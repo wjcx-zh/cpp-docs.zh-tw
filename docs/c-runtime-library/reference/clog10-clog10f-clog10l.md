@@ -1,11 +1,6 @@
 ---
-title: clog10、clog10f、clog10l | Microsoft Docs
-ms.custom: ''
+title: clog10、clog10f、clog10l
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - clog10
 - clog10f
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/clog10
 - complex/clog10f
 - complex/clog10l
-dev_langs:
-- C++
 helpviewer_keywords:
 - clog10 function
 - clog10f function
 - clog10l function
 ms.assetid: 2ddae00d-ef93-4441-add3-f4d58358401b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 81b082aff192a866ec46d22120806e6ba89379d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 195f4be80f0320e83cc9455a598185ce281bbf59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394677"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506908"
 ---
 # <a name="clog10-clog10f-clog10l"></a>clog10、clog10f、clog10l
 
@@ -84,11 +73,11 @@ _Lcomplex clog10( _Lcomplex z );  // C++ only
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**clog10**採用並傳回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程式中， **clog10**一律採用並傳回 **_Dcomplex**值。
+因為 c + + 允許多載，您可以呼叫多載**clog10**採用並傳回 **_Fcomplex**並 **_Lcomplex**值。 在 C 程式中， **clog10**一律採用並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
-|常式|C 標頭|C++ 標頭|
+|常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
 |**clog10**， **clog10f**， **clogl**|\<complex.h>|\<ccomplex>|
 

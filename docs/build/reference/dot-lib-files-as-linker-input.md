@@ -1,14 +1,8 @@
 ---
-title: .Lib 檔作為連結器輸入 |Microsoft Docs
-ms.custom: ''
+title: .Lib 檔做為連結器輸入
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.AdditionalDependencies
-dev_langs:
-- C++
 helpviewer_keywords:
 - OMF libraries
 - linking [C++], OMF libraries
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - defaults [C++], libraries
 - .lib files
 ms.assetid: dc5d2b1c-2487-41fa-aa71-ad1e0647958b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 774fe236b66bbe6222956de05efbfe89fab3de9f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0bf791d682b66d9d0da968fb0bfd5229e912e84c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706494"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505338"
 ---
 # <a name="lib-files-as-linker-input"></a>.Lib 檔做為連結器輸入
 

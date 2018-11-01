@@ -1,10 +1,6 @@
 ---
-title: isprint、iswprint、_isprint_l、_iswprint_l | Microsoft Docs
-ms.custom: ''
+title: isprint、iswprint、_isprint_l、_iswprint_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswprint
 - isprint
@@ -27,8 +23,6 @@ f1_keywords:
 - iswprint
 - _istprint
 - isprint
-dev_langs:
-- C++
 helpviewer_keywords:
 - _istprint function
 - iswprint function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - iswprint_l function
 - _isprint_l function
 ms.assetid: a8bbcdb0-e8d0-4d8c-ae4e-56d3bdee6ca3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: af7cd775c22d4d34d7a6512938a0f612c3708940
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 826bc825824054a5a6716f8074690f18a2c3f016
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401512"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556399"
 ---
 # <a name="isprint-iswprint-isprintl-iswprintl"></a>isprint、iswprint、_isprint_l、_iswprint_l
 
@@ -83,11 +73,11 @@ int _iswprint_l(
 
 ## <a name="return-value"></a>傳回值
 
-每個這些常式傳回非零，如果*c*是可列印字元的特定表示法。 **isprint**傳回非零值，如果*c*是可列印的字元，包括空格字元 (0x20-0x7E)。 **iswprint**傳回非零值，如果*c*可列印的寬字元，這包括寬字元的空間。 這些常式都會傳回 0，如果*c*不符合測試條件。
+這些常式傳回非零值如果*c*表示特定的可列印字元。 **isprint**傳回非零值，如果*c*是可列印的字元 — 這包括空白字元 (0x20-0x7E)。 **iswprint**傳回非零值，如果*c*是可列印寬字元 — 這包括空白寬字元。 這些常式都會傳回 0，如果*c*不符合測試條件。
 
-這些函式的測試條件的結果會取決於**LC_CTYPE**之地區設定分類設定，請參閱 < [setlocale、 _wsetlocale](setlocale-wsetlocale.md)如需詳細資訊。 不需要這些函式的版本 **_l**針對任何地區設定相關行為的後置詞使用目前的地區設定; 沒有版本 **_l**尾碼是一樣的不同之處在於會使用改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些函式的測試條件的結果會取決於**LC_CTYPE**地區設定分類設定; 請參閱[setlocale、 _wsetlocale](setlocale-wsetlocale.md)如需詳細資訊。 不需要這些函式的版本 **_l**後置詞使用目前的地區設定，針對任何地區設定相關行為; 沒有版本 **_l**尾碼都相同，不同之處在於它們使用會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-行為**isprint**和 **_isprint_l**是未定義的如果*c*不 EOF 或 0 到 0xFF，（含) 範圍中。 當使用 CRT 偵錯程式庫和*c*不是其中一個函式產生，這些值的判斷提示。
+行為**isprint**並 **_isprint_l**如果是未定義*c*不是 EOF 或介於 0 到 0xFF 的內含。 使用偵錯 CRT 程式庫時， *c*是不是其中一個值，函式會引發判斷提示。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -97,7 +87,7 @@ int _iswprint_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**isprint**|\<ctype.h>|
 |**iswprint**|\<ctype.h> 或 \<wchar.h>|

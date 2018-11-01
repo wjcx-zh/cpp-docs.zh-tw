@@ -1,10 +1,6 @@
 ---
-title: _set_SSE2_enable | Microsoft Docs
-ms.custom: ''
+title: _set_SSE2_enable
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_SSE2_enable
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _set_SSE2_enable
 - set_SSE2_enable
-dev_langs:
-- C++
 helpviewer_keywords:
 - _set_SSE2_enable function
 - Streaming SIMD Extensions 2 instructions
 - set_SSE2_enable function
 ms.assetid: 55db895d-fc1e-475a-9110-b781a9bb51c5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 45f4ed5333dd8ae6bab6291233391884e4efc7ff
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c340423e93b6487a4a951e4b96055cba6e474269
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407847"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539327"
 ---
 # <a name="setsse2enable"></a>_set_SSE2_enable
 
@@ -64,7 +54,7 @@ int _set_SSE2_enable(
 
 ## <a name="remarks"></a>備註
 
-下列的函式具有 SSE2 的實作，可以使用啟用 **_set_SSE2_enable**:
+下列的函式具有可以使用啟用的 SSE2 實作 **_set_SSE2_enable**:
 
 - [atan](atan-atanf-atanl-atan2-atan2f-atan2l.md)
 
@@ -85,13 +75,13 @@ int _set_SSE2_enable(
 因為 SSE2 中間值是 64 位元浮點數量，但預設實作中間值是 80 位元浮點數量，所以這些函式的 SSE2 實作所提供的答案可能會與預設實作略有不同。
 
 > [!NOTE]
-> 如果您使用[/Oi （產生內建函式）](../../build/reference/oi-generate-intrinsic-functions.md)編譯器選項，來編譯專案，它可能會顯示 **_set_SSE2_enable**沒有任何作用。 **/Oi**編譯器選項可讓編譯器用來取代 CRT 呼叫內建函式的授權單位; 這個行為會覆寫的效果 **_set_SSE2_enable**。 如果您想要保證 **/Oi**不會覆寫 **_set_SSE2_enable**，使用 **/Oi-** 編譯專案。 當您使用其他編譯器參數隱含的權限時，這可能也會很好的作法 **/Oi**。
+> 如果您使用[/Oi （產生內建函式）](../../build/reference/oi-generate-intrinsic-functions.md)編譯器選項來編譯專案，它可能會顯示 **_set_SSE2_enable**沒有任何作用。 **/Oi**編譯器選項可讓編譯器使用內建函式來取代 CRT 呼叫的授權單位; 這種行為會覆寫的效果 **_set_SSE2_enable**。 如果您想要保證 **/Oi**未覆寫 **_set_SSE2_enable**，使用 **/Oi-** 編譯您的專案。 當您使用表示其他編譯器參數時，這可能也會很好的作法 **/Oi**。
 
 只有在遮罩所有例外狀況時，才會使用 SSE2 實作。 使用 [_control87、_controlfp](control87-controlfp-control87-2.md) 來遮罩例外狀況。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_set_SSE2_enable**|\<math.h>|
 

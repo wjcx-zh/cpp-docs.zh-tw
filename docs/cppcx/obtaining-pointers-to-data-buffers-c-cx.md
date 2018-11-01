@@ -1,32 +1,25 @@
 ---
-title: 取得資料緩衝區的指標 (C + + /CX) |Microsoft Docs
-ms.custom: ''
+title: 取得資料緩衝區的指標 (C++/CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b8b94e2c342551d63612155d1d8a5771139e42cb
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 6fc136af4098659779b4b4ff7fb8878e1cea6590
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101778"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514266"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>取得資料緩衝區的指標 (C++/CX)
 
-在 Windows 執行階段[Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx)介面提供以語言中性、 資料流為基礎的方式存取資料緩衝區。 在 C++ 中，可以透過定義在 robuffer.h 中的 Windows 執行階段程式庫 IBufferByteAccess 介面，取得基礎位元組陣列的原始指標。 使用這種方法，可以就地修改位元組陣列，而不建立任何不必要的資料複本。
+在 Windows 執行階段中， [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) 介面提供以語言中性、資料流的方式存取資料緩衝區。 在 C++ 中，可以透過定義在 robuffer.h 中的 Windows 執行階段程式庫 IBufferByteAccess 介面，取得基礎位元組陣列的原始指標。 使用這種方法，可以就地修改位元組陣列，而不建立任何不必要的資料複本。
 
-下圖顯示 XAML 影像項目，其來源是[Windows::UI::Xaml::Media::Imaging WriteableBitmap](https://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx)。 以任何語言撰寫的用戶端應用程式可以將 `WriteableBitmap` 的參考傳遞至 C++ 程式碼，然後 C++ 可以使用該參考到達基礎緩衝區。 中以 c + + 撰寫的通用 Windows 平台應用程式，您可以在下列範例中的原始程式碼中直接使用函式而不將它包裝在 Windows 執行階段元件中。
+下圖顯示 XAML 影像項目，其來源為 [Windows::UI::Xaml::Media::Imaging WriteableBitmap](https://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx)。 以任何語言撰寫的用戶端應用程式可以將 `WriteableBitmap` 的參考傳遞至 C++ 程式碼，然後 C++ 可以使用該參考到達基礎緩衝區。 中以 c + + 撰寫的通用 Windows 平台應用程式，您可以在下列範例中的原始程式碼中直接使用函式而不將它包裝在 Windows 執行階段元件中。
 
 ![C&#43; &#43;直接存取像素資料的程式碼](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")
 
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData
 
-下列方法會接受[Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx)並傳回基礎位元組陣列的原始指標。 若要呼叫的函式，傳入[writeablebitmap:: Pixelbuffer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx)屬性。
+下列方法會接受 [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) ，並傳回基礎位元組陣列的原始指標。 若要呼叫函式，請傳入 [WriteableBitmap::PixelBuffer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) 屬性。
 
 ```cpp
 #include <wrl.h>

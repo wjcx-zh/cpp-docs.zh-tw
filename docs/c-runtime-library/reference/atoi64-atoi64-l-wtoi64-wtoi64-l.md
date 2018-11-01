@@ -1,10 +1,6 @@
 ---
-title: _atoi64、_atoi64_l、_wtoi64、_wtoi64_l | Microsoft Docs
-ms.custom: ''
+title: _atoi64、_atoi64_l、_wtoi64、_wtoi64_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _atoi64_l
 - _wtoi64
@@ -35,8 +31,6 @@ f1_keywords:
 - wtoi64_l
 - _atoi64_l
 - atoi64_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tstoi64 function
 - wtoi64 function
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fbb0f49edcba73bdf2b7e83d6495573cc2cc0567
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c80480be8895db6afe499d5426b91dcde786d654
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396673"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50515475"
 ---
 # <a name="atoi64-atoi64l-wtoi64-wtoi64l"></a>_atoi64、_atoi64_l、_wtoi64、_wtoi64_l
 
@@ -96,11 +86,11 @@ __int64 _wtoi64_l(
 
 ## <a name="return-value"></a>傳回值
 
-每個函式會傳回 **__int64**產生的輸入的字元解譯為數字值。 傳回值是 0 **_atoi64**如果輸入無法轉換成該類型的值。
+每個函式會傳回 **__int64**值所產生的輸入的字元解譯為數字。 傳回值為 0 **_atoi64**如果輸入無法轉換成該類型的值。
 
-在大型正值的整數值，溢位的情況下 **_atoi64**傳回**I64_MAX**和**I64_MIN**在大負整數值溢位。
+如果溢位具有大型正整數值， **_atoi64**會傳回**I64_MAX**並**I64_MIN**如果溢位具有大型負整數值。
 
-在超出範圍的情況下， **errno**設**為 ERANGE**。 如果傳入的參數是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**至**EINVAL**並傳回 0。
+在所有超出範圍的情況下， **errno**設為**ERANGE**。 如果傳入的參數是**NULL**，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**要**EINVAL**並傳回 0。
 
 ## <a name="remarks"></a>備註
 
@@ -110,13 +100,13 @@ __int64 _wtoi64_l(
 
 *Str*引數 **_atoi64**具有下列格式：
 
-> [*空白字元*] [*登*] [*位數*]
+> [*空白字元*] [*號*] [*位數*]
 
-A*空白字元*包含空格或定位字元，都會被忽略;*登*是加號 （+） 或減號 （-）; 和*位數*一或多個位數。
+A*空白字元*包含空格或定位鍵字元，則會忽略;*登*是加號 （+） 或減號 （–）; 並*數字*是一個以上的數字。
 
-**_wtoi64**等同於 **_atoi64**不同之處在於它需要寬字元字串做為參數。
+**_wtoi64**等同於 **_atoi64** ，差別在於它採用寬字元字串，做為參數。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的地區設定的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前的地區設定傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -134,7 +124,7 @@ A*空白字元*包含空格或定位字元，都會被忽略;*登*是加號 （+
 
 ## <a name="example"></a>範例
 
-此程式會顯示如何以字串的形式儲存的數字可以轉換成數值資料，請使用 **_atoi64**函式。
+此程式示範如何儲存為字串的數字可以轉換成數值資料，請使用 **_atoi64**函式。
 
 ```C
 // crt_atoi64.c

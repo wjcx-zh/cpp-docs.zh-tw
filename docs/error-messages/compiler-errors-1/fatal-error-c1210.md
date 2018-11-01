@@ -1,33 +1,23 @@
 ---
-title: 嚴重錯誤 C1210 |Microsoft 文件
-ms.custom: ''
+title: 嚴重錯誤 C1210
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1210
-dev_langs:
-- C++
 helpviewer_keywords:
 - C1210
 ms.assetid: e2208309-c284-425c-a7e8-48e96e66f35b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4d22a34f44fb2c97fe341cb313d7917a35506cdd
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a90ca3e3b55642f1a6cd847997b83e4b7db46818
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704980"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591798"
 ---
 # <a name="fatal-error-c1210"></a>嚴重錯誤 C1210
 
 > 所安裝的執行階段版本不支援 /clr:pure 和 /clr:safe
 
-**/Clr: pure**和 **/clr: safe**編譯器選項都是 Visual Studio 2015 中已被取代，並不支援的 Visual Studio 2017 中。
+**/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
 
 如果您有目前版本的編譯器，但 Common Language Runtime 來自舊版本，就會發生 C1210。
 

@@ -1,10 +1,6 @@
 ---
-title: _strtime_s、_wstrtime_s | Microsoft Docs
-ms.custom: ''
+title: _strtime_s、_wstrtime_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wstrtime_s
 - _strtime_s
@@ -26,8 +22,6 @@ f1_keywords:
 - strtime_s
 - wstrtime_s
 - _strtime_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wstrtime_s function
 - copying time to buffers
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e7f9814bb783c763eef6d94e9d1372316a2393a6
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 579c4a99b52c66bd14cea947eaa1f301cc1127e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451243"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642360"
 ---
 # <a name="strtimes-wstrtimes"></a>_strtime_s、_wstrtime_s
 
@@ -97,13 +87,13 @@ errno_t _wstrtime_s(
 
 ## <a name="security-issues"></a>安全性問題
 
-傳遞無效的非**NULL**當緩衝區就會發生存取違規的值*numberOfElements*參數大於 9。
+傳入無效的非**NULL**值，如果緩衝區會造成存取違規*numberOfElements*參數大於 9。
 
-傳遞的值*numberOfElements*大於緩衝區的實際大小會導致緩衝區滿溢。
+傳遞的值*numberOfElements*大於緩衝區的實際大小會導致緩衝區溢位。
 
 ## <a name="remarks"></a>備註
 
-這些函式提供更安全的版本[_strtime](strtime-wstrtime.md)和[_wstrtime](strtime-wstrtime.md)。 **_Strtime_s**函式會將目前的當地時間複製到所指向的緩衝區*timestr*。 時間格式為**hh: mm:** 其中**hh**是兩位數，表示 24 小時制的小時**公釐**是兩位數表示的小時和分鐘**ss**是兩位數表示秒數。 例如，字串**18:23:44**代表 23 分 44 秒過去的下午 6 緩衝區必須至少有 9 個位元組長，實際大小由第二個參數指定。
+這些函式提供更安全的版本[_strtime](strtime-wstrtime.md)並[_wstrtime](strtime-wstrtime.md)。 **_Strtime_s**函式會將目前的當地時間複製到所指向的緩衝區*timestr*。 時間格式為**hh: mm:** 其中**hh**是代表小時以 24 小時制標記法中，兩位數**mm**是兩位數表示過去與小時、分鐘**ss**是兩位數表示秒數。 例如，字串**18:23:44**代表 23 分 44 秒下午 6 點 緩衝區必須至少有 9 個位元組長，實際大小由第二個參數指定。
 
 **_wstrtime**是寬字元版本的 **_strtime**; 的引數和傳回值 **_wstrtime**是寬字元字串。 除此之外，這些函式的行為相同。
 
@@ -117,7 +107,7 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_strtime_s**|\<time.h>|
 |**_wstrtime_s**|\<time.h> 或 \<wchar.h>|

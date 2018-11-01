@@ -1,26 +1,16 @@
 ---
-title: 如何： 擴充封送處理程式庫 |Microsoft Docs
+title: 如何：擴充封送處理程式庫
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: d4e50ca6fd99f373a65ba0592114cb7d9eedb242
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 697a246012544e6be1189b6cc40d6185e5ec26d3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384900"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569842"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>如何：擴充封送處理程式庫
 

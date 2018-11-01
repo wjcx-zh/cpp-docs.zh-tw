@@ -1,27 +1,17 @@
 ---
-title: return 陳述式在程式終止 （c + +） |Microsoft Docs
-ms.custom: ''
+title: 程式終止中的 return 陳述式 (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - data types [C++], function return types
 - function return types [C++], return statement
 - return keyword [C++], syntax
 ms.assetid: 66d002ab-5625-4b68-8446-71e1b8fcdbd8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cfcf65258767178c0f74f63ca6e938e1d940e3be
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9c7b6130ee1a0b49ab75a70d84764d3a1f8c5ef0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061132"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613040"
 ---
 # <a name="return-statement-in-program-termination-c"></a>程式終止中的 return 陳述式 (C++)
 

@@ -1,27 +1,16 @@
 ---
-title: 如何： 從 STL/CLR 容器轉換為.NET 集合 |Microsoft Docs
-ms.custom: ''
+title: 如何：從 STL/CLR 容器轉換為 .NET 集合
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, converting to .NET collections
 ms.assetid: 70b2dfd9-869c-4e0f-9a29-b1ee0cb0d107
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 111d1ab8515252d38179bd1ef9627b52fdbc0612
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3444339f43f8000d8a9c9b8a6577adb286245dbb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403236"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621620"
 ---
 # <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>如何：從 STL/CLR 容器轉換為 .NET 集合
 

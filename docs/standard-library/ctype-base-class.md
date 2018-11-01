@@ -1,27 +1,17 @@
 ---
-title: ctype_base 類別 | Microsoft Docs
-ms.custom: ''
+title: ctype_base 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - locale/std::ctype_base
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3def685a8cd108666b3e1b8be9314fc7585a9837
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 83ef35f9fac438cfa217decf222abd365ff84269
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844890"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531127"
 ---
 # <a name="ctypebase-class"></a>ctype_base 類別
 
@@ -79,7 +69,7 @@ struct ctype_base : public locale::facet
 
 - **graph** (函式 [isgraph](../standard-library/locale-functions.md#isgraph))
 
-您可以搭配使用 OR 與這些常數來描述分類的組合。 特別是，它會一律是 true，**與 alnum** = = ( **alpha** &#124; **位數**\)和**圖形** \=\= \( **與 alnum** &#124; **符號**)。
+您可以搭配使用 OR 與這些常數來描述分類的組合。 特別是，它一定是 true， **alnum** = = ( **alpha** &#124; **數字**\)並**圖形** \=\= \( **alnum** &#124; **punct**)。
 
 ## <a name="requirements"></a>需求
 

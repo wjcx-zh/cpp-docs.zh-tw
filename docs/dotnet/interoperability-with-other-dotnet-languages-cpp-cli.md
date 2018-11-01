@@ -1,12 +1,6 @@
 ---
-title: 與其他.NET 語言的互通性 (C + + /cli CLI) |Microsoft Docs
-ms.custom: ''
+title: 與其他 .NET 程式設計語言間的互通性 (C++/CLI)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - C++, indexers
 - indexers, consuming C#
@@ -15,17 +9,12 @@ helpviewer_keywords:
 - lock statement
 - lock C# keyword [C++]
 ms.assetid: a5902cf8-a14d-4559-aefb-c178615d45bb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: aa9397f94e9251b3eb1ed1f2aa590012e012473f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bfc220852563d8c8f96108e05344c507b63875ff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387051"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50581388"
 ---
 # <a name="interoperability-with-other-net-languages-ccli"></a>與其他 .NET 程式設計語言間的互通性 (C++/CLI)
 

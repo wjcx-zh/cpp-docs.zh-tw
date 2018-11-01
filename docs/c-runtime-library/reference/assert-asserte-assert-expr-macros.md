@@ -1,10 +1,6 @@
 ---
-title: _ASSERT、_ASSERTE、_ASSERT_EXPR 巨集 | Microsoft Docs
-ms.custom: ''
+title: _ASSERT、_ASSERTE、_ASSERT_EXPR 巨集
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,8 +18,6 @@ f1_keywords:
 - ASSERTE
 - _ASSERT
 - _ASSERT_EXPR
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [CRT], using macros
 - _ASSERTE macro
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - _ASSERT macro
 - _ASSERT_EXPR macro
 ms.assetid: e98fd2a6-7f5e-4aa8-8fe8-e93490deba36
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 254550acf94acb846826bc0efe76ef26753c54b8
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: d2d83c3afa8e22c1f75480fe2afefa8bf68be858
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107584"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598454"
 ---
 # <a name="assert-asserte-assertexpr-macros"></a>_ASSERT、_ASSERTE、_ASSERT_EXPR 巨集
 
@@ -80,7 +70,7 @@ _ASSERTE( booleanExpression );
 _CrtSetReportMode(CRT_ASSERT, _CRTDBG_MODE_WNDW);
 ````
 
-**_CrtDbgReportW**產生偵錯報表，並判斷其目的地，根據目前報表模式及定義的檔案 **_CRT_ASSERT**報表類型。 判斷提示失敗及錯誤預設會導向到偵錯訊息視窗。 [_CrtSetReportMode](crtsetreportmode.md) 和 [_CrtSetReportFile](crtsetreportfile.md) 函式可用於定義每個報表類型的目的地。
+**_CrtDbgReportW**產生偵錯報表，並判斷其目的地，根據目前報表模式及定義的檔案 **_CRT_ASSERT**報表類型。 判斷提示失敗及錯誤預設會導向到偵錯訊息視窗。 [_CrtSetReportMode](crtsetreportmode.md) 及 [_CrtSetReportFile](crtsetreportfile.md) 函式可用於定義每個報表類型的目的地。
 
 如果目的地是偵錯訊息視窗，且使用者按下**重試** 按鈕， **_CrtDbgReportW**會傳回 1，造成 **_ASSERT_EXPR**， **_判斷提示**並 **_ASSERTE**巨集啟動偵錯工具，提供已啟用的 just-in-time (JIT) 偵錯。
 

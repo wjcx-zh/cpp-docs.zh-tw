@@ -1,10 +1,6 @@
 ---
-title: cos、 cosf、 cosl |Microsoft 文件
-ms.custom: ''
+title: cos、 cosf、 cosl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cos
 - cosf
@@ -26,8 +22,6 @@ f1_keywords:
 - cos
 - cosf
 - cosl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cosines
 - cosl function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a49f8489d084b1f67bc46432970114350c56f09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395444"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519885"
 ---
 # <a name="cos-cosf-cosl"></a>cos、 cosf、 cosl
 
@@ -72,20 +62,20 @@ long double cos( long double x );  // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-餘弦*x*。 如果*x*是大於或等於 263，或小於或等於-263，就會發生遺失精確度結果。
+餘弦*x*。 如果*x*大於或等於 263，或小於或等於-263，結果中的遺失，就會發生。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± QNAN、 IND|無|**_DOMAIN**|
-|± INF|**無效**|**_DOMAIN**|
+|常见 QNAN IND|無|**（_D)**|
+|常见 INF|**無效**|**（_D)**|
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**cos**採用並傳回**float**或**長** **double**值。 在 C 程式中， **cos**一律採用並傳回**double**。
+因為 c + + 允許多載，您可以呼叫多載**cos**採用並傳回**float**或是**長** **double**值。 在 C 程式中， **cos**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的 C 標頭|必要的 C++ 標頭|
+|常式傳回的值|必要的 C 標頭|必要的 C++ 標頭|
 |-------------|---------------------|-|
 |**cos**， **cosh**， **cosf**|\<math.h>|\<cmath> 或 \<math.h>|
 

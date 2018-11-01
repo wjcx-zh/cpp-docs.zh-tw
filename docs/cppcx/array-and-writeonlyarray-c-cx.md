@@ -1,20 +1,13 @@
 ---
-title: Array 和 WriteOnlyArray (C + + /CX) |Microsoft Docs
-ms.custom: ''
+title: Array 和 WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4423616a9a05268a68e6eff095a2503c3a1d0590
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b957e7d34486aced4796a029ebfdfa710dc71fcc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103667"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530191"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array 和 WriteOnlyArray (C++/CX)
 
@@ -86,13 +79,13 @@ Windows 執行階段類型系統不支援不規則陣列的概念，因此您也
 
 在透過 ABI 傳遞資料給 [Platform::Array](../cppcx/platform-array-class.md)，且您最終需要在 C-Style 陣列中處理資料以提升效率的某些情況下，您可以使用 [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) 避免額外的複製作業。 當您將 [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) 當做引數傳遞給採用 `Platform::Array`的參數時， `ArrayReference` 會將資料直接儲存到您指定的 C-Style 陣列中。 請注意， `ArrayReference` 不會鎖定來源資料，因此如果在呼叫完成之前修改或刪除另一個執行緒上的資料，結果會是未定義的。
 
-下列程式碼片段示範如何將複製的結果[DataReader](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx)作業分成`Platform::Array`（一般模式），以及如何接著替代`ArrayReference`將資料複製到 c-style 陣列直接：
+下列程式碼片段示範如何將 [DataReader](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) 作業的結果複製到 `Platform::Array` 中 (一般模式)，以及如何接著替代 `ArrayReference` ，將資料直接複製到 C-Style 陣列中：
 
 [!code-cpp[cx_arrays#07](../cppcx/codesnippet/CPP/js-array/class1.h#07)]
 
 ## <a name="avoid-exposing-an-array-as-a-property"></a>避免將陣列公開為屬性
 
-一般而言，您應該避免將 `Platform::Array` 類型公開為 ref 類別中的屬性，因為即使用戶端程式碼只嘗試存取單一元素，也會傳回整個陣列。 當您需要將 「 時序 」 容器公開為公用 ref 類別中的屬性[Windows::Foundation::IVector](https://msdn.microsoft.com/library/windows/apps/br206631.aspx)是較好的選擇。 在私用或內部應用程式開發介面中 (不會發行到中繼資料)，請考慮使用 Standard C++ 容器，例如 [std::vector](../standard-library/vector-class.md)。
+一般而言，您應該避免將 `Platform::Array` 類型公開為 ref 類別中的屬性，因為即使用戶端程式碼只嘗試存取單一元素，也會傳回整個陣列。 當您必須將序列容器公開為公用 ref 類別中的屬性時， [Windows::Foundation::IVector](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) 會是較佳選擇。 在私用或內部應用程式開發介面中 (不會發行到中繼資料)，請考慮使用 Standard C++ 容器，例如 [std::vector](../standard-library/vector-class.md)。
 
 ## <a name="see-also"></a>另請參閱
 

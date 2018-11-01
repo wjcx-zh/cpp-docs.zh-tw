@@ -1,27 +1,16 @@
 ---
-title: 使用 OLE DB 消費者樣板 |Microsoft Docs
-ms.custom: ''
+title: 使用 OLE DB 消費者樣板
 ms.date: 10/24/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - sample applications [C++], OLE DB Templates
 - OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: c9edeb5f765f50243e0f73387cee66ff88d8240f
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 79eb11a2a9d6403eb267098bb4f893b4424d6a67
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50064455"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466335"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>使用 OLE DB 消費者樣板
 

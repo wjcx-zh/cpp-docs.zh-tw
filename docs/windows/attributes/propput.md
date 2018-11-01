@@ -1,28 +1,17 @@
 ---
-title: propput （c + + COM 屬性） |Microsoft Docs
-ms.custom: ''
+title: propput （c + + COM 屬性）
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.propput
-dev_langs:
-- C++
 helpviewer_keywords:
 - propput attribute
 ms.assetid: 1f84dda9-9cce-4e16-aaf0-b2c5219827f2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: d9064a73dcafff8efbaffd50501dd86c2e91a29e
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 1902ba61417be457b4c296b513e1632bfdd8cec6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791058"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492725"
 ---
 # <a name="propput"></a>propput
 
@@ -51,9 +40,9 @@ ms.locfileid: "48791058"
 |**適用於**|方法|
 |**可重複**|否|
 |**必要屬性**|無|
-|**無效屬性**|`propget`, `propputref`|
+|**無效屬性**|`propget`、 `propputref`|
 
-如需有關屬性內容的詳細資訊，請參閱 <<c0> [ 屬性內容](cpp-attributes-com-net.md#contexts)。
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="see-also"></a>另請參閱
 

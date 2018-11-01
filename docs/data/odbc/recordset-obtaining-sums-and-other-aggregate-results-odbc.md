@@ -1,12 +1,6 @@
 ---
-title: 資料錄集： 取得 Sum 和其他彙總的結果 (ODBC) |Microsoft Docs
-ms.custom: ''
+title: 資料錄集：取得 SUM 和其他彙總結果 (ODBC)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - SQL, retrieving aggregate values from recordsets
 - recordsets, retrieving SQL aggregate values
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 639c5fb2df443de7e2eee963f942c9154dc4de6e
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 7a63e6b0e4ac26fb2806d8505e3fcd8f5daf0f10
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50058046"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491577"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>資料錄集：取得 SUM 和其他彙總結果 (ODBC)
 

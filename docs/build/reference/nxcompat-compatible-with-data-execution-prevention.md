@@ -1,28 +1,18 @@
 ---
-title: /NXCOMPAT （與資料執行防止相容） |Microsoft Docs
-ms.custom: ''
+title: /NXCOMPAT (與資料執行防止相容)
 ms.date: 12/29/2017
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /NXCOMPAT
-dev_langs:
-- C++
 helpviewer_keywords:
 - /NXCOMPAT linker option
 - -NXCOMPAT linker option
 - NXCOMPAT linker option
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 431cd954845041a7a186a967c83df7ffb1aac788
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 815719468e7dcf9325d19efe879b8f4ace040094
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821669"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50490489"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (與資料執行防止相容)
 

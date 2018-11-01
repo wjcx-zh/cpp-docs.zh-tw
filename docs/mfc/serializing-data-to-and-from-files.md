@@ -1,12 +1,6 @@
 ---
-title: 從檔案序列化資料 |Microsoft Docs
-ms.custom: ''
+title: 將資料序列化至檔案以及從檔案序列化資料
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - documents [MFC], serialization
 - documents [MFC], saving
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - data [MFC], serializing
 - document data [MFC]
 ms.assetid: b42a0c68-4bc4-4012-9938-5433a26d2c24
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 65cf6d8944c1b14d6c55ce2c35a257bfa63a3606
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 87e216f1959a7c169673822ffa7041ed511817d3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395384"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473615"
 ---
 # <a name="serializing-data-to-and-from-files"></a>將資料序列化至檔案以及從檔案序列化資料
 

@@ -1,24 +1,17 @@
 ---
-title: Boxing (C + + /CX) |Microsoft Docs
-ms.custom: ''
+title: Boxing (C++/CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e9ab84bf840f01fbb22ef3b2510056338d10c74
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: dd950e2463da7541ebad731e74275ce360a1c8a4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108373"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491035"
 ---
 # <a name="boxing-ccx"></a>Boxing (C++/CX)
 
-*Boxing*這類包裝實值類型變數[Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)— 或基本純量類型，例如`int`— 在 ref 類別變數傳遞至採用的方法時[Platform:: object ^](../cppcx/platform-object-class.md)作為其輸入類型。
+將實值類型變數 (例如 *) 傳遞給使用* ) 或基本純量類型變數 (例如 [) 傳遞給使用](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)Boxing `int`作為其輸入類型的方法時， [Boxing](../cppcx/platform-object-class.md) 會將此變數包裝在 ref 類別中。
 
 ## <a name="passing-a-value-type-to-an-object-parameter"></a>傳遞實值類型給 Object^ 參數
 

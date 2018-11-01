@@ -1,8 +1,6 @@
 ---
-title: 'Platform:: stringreference 類別 |Microsoft Docs'
-ms.custom: ''
+title: Platform::StringReference 類別
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::StringReference::StringReference
@@ -10,19 +8,13 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::Length
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
-dev_langs:
-- C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1b177cf30b4eee49d144ddf3516a4bbf3da91c85
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 09b15a1530661ce537c9d2aab333a1a17fa52ff9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105792"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50498380"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference 類別
 
@@ -72,7 +64,7 @@ class StringReference
 
 ## <a name="data"></a>  Stringreference:: Data 方法
 
-傳回這個內容`StringReference`當做 char16 值的陣列。
+傳回這個 `StringReference` 的內容作為 char16 值的陣列。
 
 ### <a name="syntax"></a>語法
 
@@ -199,7 +191,7 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg);
 
 ### <a name="remarks"></a>備註
 
-此建構函式的第一個版本是預設建構函式。 第二個版本會從 `StringReference` 參數指定的物件初始化新的 `__fstrArg` 執行個體類別。 第三個和第四個多載會初始化新`StringReference`char16 值的陣列中的執行個體。 char16 表示 16 位元的 UNICODE 文字字元。
+此建構函式的第一個版本是預設建構函式。 第二個版本會從 `StringReference` 參數指定的物件初始化新的 `__fstrArg` 執行個體類別。 第三和第四個多載會從 char16 值的陣列初始化新的 `StringReference` 執行個體。 char16 表示 16 位元的 UNICODE 文字字元。
 
 ## <a name="see-also"></a>另請參閱
 

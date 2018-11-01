@@ -1,24 +1,14 @@
 ---
-title: 如何： 啟用和使用 Windows 執行階段元件使用 WRL |Microsoft Docs
-ms.custom: ''
+title: 如何：利用 WRL 啟動與使用 Windows 執行階段元件
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ac5e03b7a9453b4b33c4a495842465b16a186543
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 908929767443b0fcbaa89ecbdf389fd63a469d00
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219188"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497336"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>如何：利用 WRL 啟動與使用 Windows 執行階段元件
 

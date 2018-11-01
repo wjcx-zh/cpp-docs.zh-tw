@@ -1,10 +1,6 @@
 ---
-title: strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l | Microsoft Docs
-ms.custom: ''
+title: strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wcsncat_s_l
 - wcsncat_s
@@ -35,8 +31,6 @@ f1_keywords:
 - strncat_s
 - _mbsncat_s
 - _tcsncat_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - concatenating strings
 - _mbsncat_s function
@@ -53,23 +47,19 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d88467034eeab3f3a269f735d5b158d94a429873
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb188f9cb5ab5f6f1a8bb66575364b7a94fe6e22
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418467"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500746"
 ---
 # <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
 
 將字元附加至字串。 這些版本的 [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) 具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
-> **_mbsncat_s**和 **_mbsncat_s_l**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsncat_s**並 **_mbsncat_s_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -179,15 +169,15 @@ errno_t _mbsncat_s_l(
 
 |*strDestination*|*numberOfElements*|*strSource*|傳回值|內容*strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULL**或未結束|任何|任何|**EINVAL**|未修改|
-|任何|任何|**NULL**|**EINVAL**|未修改|
-|任何|0 或太小|任何|**ERANGE**|未修改|
+|**NULL**或未終止的|any|any|**EINVAL**|未修改|
+|any|any|**NULL**|**EINVAL**|未修改|
+|any|0 或太小|any|**ERANGE**|未修改|
 
 ## <a name="remarks"></a>備註
 
-這些函式會嘗試附加第一個*D*字元*strSource*結尾*strDest*，其中*D*較小的*計數*長度和*strSource*。 如果附加的*D*字元可容納*strDest* (其大小指定為*numberOfElements*)，並仍然保留空間給 null 結束字元，則這些字元附加，開始結束的 null 原始*strDest*，且新結束的 null 附加，否則*strDest*[0] 設為 null 字元且不正確的參數已叫用處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。
+這些函式會嘗試附加第一個*D*個字元*strSource*結尾*strDest*，其中*D*是較小的*計數*和長度*strSource*。 如果附加那些*D*字元適合*strDest* (其大小指定為*numberOfElements*) 並仍留出空間給 null 結束字元，則這些字元會附加，開始於原始終止 null 的*strDest*，且新的終止 null 附加，否則*strDest*[0] 設為 null 字元並不正確的參數會叫用處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。
 
-上述段落有一個例外狀況。 如果*計數*是[_TRUNCATE](../../c-runtime-library/truncate.md)然後盡可能*strSource*會盡調整會附加至*strDest*同時仍保留的空間以附加正在結束的 null。
+上述段落有一個例外狀況。 如果*計數*是[_TRUNCATE](../../c-runtime-library/truncate.md)然後盡可能*strSource*地調整附加至會盡*strDest*同時仍留出空間，附加終止 null。
 
 例如，套用至物件的
 
@@ -197,9 +187,9 @@ strncpy_s(dst, _countof(dst), "12", 2);
 strncat_s(dst, _countof(dst), "34567", 3);
 ```
 
-表示我們詢問**strncat_s**將三個字元附加至兩個字元，在緩衝區中五個字元長，則這會留下任何空間給 null 結束字元，因此**strncat_s**零的字串呼叫無效參數處理常式。
+表示我們要求**strncat_s**若要將三個字元附加至兩個字元，在緩衝區中五個字元的長度; 這不會留下任何空間給 null 結束字元，因此**strncat_s**零字串並呼叫無效的參數處理常式。
 
-如果需要截斷行為，使用 **_TRUNCATE**或調整*大小*參數據以：
+如果需要截斷行為，使用 **_TRUNCATE** ，或調整*大小*參數據以：
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _TRUNCATE);
@@ -213,9 +203,9 @@ strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 
 在所有案例中，產生的字串都終止於 Null 字元。 如果在重疊的字串之間執行複製，則行為是未定義的。
 
-如果*strSource*或*strDest*是**NULL**，或者是*numberOfElements*是零，則無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則此函數會傳回**EINVAL**而不需要修改它的參數。
+如果*strSource*或是*strDest*會**NULL**，或*numberOfElements*為零，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md) 。 如果允許繼續執行，則函數會傳回**EINVAL**而不需修改其參數。
 
-**wcsncat_s**和 **_mbsncat_s**是寬字元和多位元組字元版本的**strncat_s**。 字串引數和傳回值**wcsncat_s**是寬字元字串; **_mbsncat_s**是多位元組字元字串。 除此之外，這三個函式的行為相同。
+**wcsncat_s**並 **_mbsncat_s**是寬字元和多位元組字元版本的**strncat_s**。 字串引數和傳回值**wcsncat_s**是寬字元字串; **_mbsncat_s**是多位元組字元字串。 除此之外，這三個函式的行為相同。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
@@ -230,11 +220,11 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 |**_tcsncat_s**|**strncat_s**|**_mbsnbcat_s**|**wcsncat_s**|
 |**_tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
-**_strncat_s_l**和 **_wcsncat_s_l**有沒有地區設定相依性; 它們僅提供為 **_tcsncat_s_l**。
+**_strncat_s_l**並 **_wcsncat_s_l**沒有任何地區設定相依性; 它們僅供 **_tcsncat_s_l**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**strncat_s**|\<string.h>|
 |**wcsncat_s**|\<string.h> 或 \<wchar.h>|

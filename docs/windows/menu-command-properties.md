@@ -1,26 +1,15 @@
 ---
-title: 功能表命令屬性 （c + +） |Microsoft Docs
-ms.custom: ''
+title: 功能表命令屬性 （c + +）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - menu items, properties
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c846cecb415365db92e3097bbf04ab06cd4209d0
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: ddb33293d654944aa9390b9955388d6e3b01cddb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860442"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468974"
 ---
 # <a name="menu-command-properties-c"></a>功能表命令屬性 （c + +）
 
@@ -28,7 +17,7 @@ ms.locfileid: "48860442"
 
 |屬性|描述|
 |--------------|-----------------|
-|**Break**|可以是下列值之一：<br /><br />- **無**（預設）： 不換行。<br />- **資料行**： 對於靜態功能表，這個值會將功能表命令放在新行上。 對於快顯功能表，這個值會將功能表命令放在資料行中，而且資料行之間沒有分隔線。 設定這個屬性只會在執行階段影響功能表的外觀，但在功能表編輯器中卻不會。<br />- **橫條**： 與相同**資料行**除了針對快顯功能表，這個值會區隔新的資料行從舊的資料行，以垂直線。 設定這個屬性會影響功能表的外觀，只有在執行階段，不是在** 功能表**編輯器。|
+|**Break**|可以是下列值之一：<br /><br />- **無** (預設值)：不換行<br />- **資料行**：對於靜態功能表，這個值會將功能表命令放在新行上。 對於快顯功能表，這個值會將功能表命令放在資料行中，而且資料行之間沒有分隔線。 設定這個屬性只會在執行階段影響功能表的外觀，但在功能表編輯器中卻不會。<br />- **橫條**： 與相同**資料行**除了針對快顯功能表，這個值會區隔新的資料行從舊的資料行，以垂直線。 設定這個屬性會影響功能表的外觀，只有在執行階段，不是在** 功能表**編輯器。|
 |**標題**|標示功能表命令的文字 (功能表名稱)。 若要讓功能表命令的其中一個大寫字母成為助憶鍵，請在其前面加下連字號 (&)。|
 |**已核取**|如果 **，則為 True**，功能表命令一開始選取。 類型： **Bool**。 預設值： **False**。|
 |**已啟用**|若為 **False**，則會停用功能表項目。|

@@ -1,10 +1,6 @@
 ---
-title: CMFCListCtrl 類別 |Microsoft Docs
-ms.custom: ''
+title: CMFCListCtrl 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCListCtrl
 - AFXLISTCTRL/CMFCListCtrl
@@ -19,8 +15,6 @@ f1_keywords:
 - AFXLISTCTRL/CMFCListCtrl::RemoveSortColumn
 - AFXLISTCTRL/CMFCListCtrl::SetSortColumn
 - AFXLISTCTRL/CMFCListCtrl::Sort
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCListCtrl [MFC], EnableMarkSortedColumn
 - CMFCListCtrl [MFC], EnableMultipleSort
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], SetSortColumn
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e85ba42db937a6b9abf3415115bb301739456bd4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7d289dc25dfdb07ae581c4669154517882867f2a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432772"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642257"
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl 類別
 
@@ -79,7 +69,7 @@ class CMFCListCtrl : public CListCtrl
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用中的各種方法`CMFCListCtrl`類別。 此範例示範如何建立清單控制項、 插入資料行中，插入項目、 設定的文字項目的內容，以及設定清單控制項的字型。 此程式碼片段是一部分[Visual Studio 示範範例](../../visual-cpp-samples.md)。
+下例示範如何在 `CMFCListCtrl` 類別中使用各種方法。 此範例示範如何建立清單控制項、 插入資料行中，插入項目、 設定的文字項目的內容，以及設定清單控制項的字型。 此程式碼片段是一部分[Visual Studio 示範範例](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#25](../../mfc/codesnippet/cpp/cmfclistctrl-class_1.h)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#26](../../mfc/codesnippet/cpp/cmfclistctrl-class_2.cpp)]

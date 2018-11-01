@@ -1,33 +1,23 @@
 ---
-title: ostream_iterator 類別 | Microsoft Docs
-ms.custom: ''
+title: ostream_iterator 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - iterator/std::ostream_iterator
 - iterator/std::ostream_iterator::char_type
 - iterator/std::ostream_iterator::ostream_type
 - iterator/std::ostream_iterator::traits_type
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::ostream_iterator [C++]
 - std::ostream_iterator [C++], char_type
 - std::ostream_iterator [C++], ostream_type
 - std::ostream_iterator [C++], traits_type
 ms.assetid: 24d842d3-9f45-4bf6-a697-62f5968f5a03
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e3f18f3d312adb00370d6dc51203542c259914ec
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 6a065a100faf5ea40be161e980de2913add917fe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314244"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449217"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator 類別
 
@@ -42,7 +32,7 @@ class ostream_iterator
 
 ### <a name="parameters"></a>參數
 
-*類型*<br/>
+*Type*<br/>
 要插入至輸出資料流的物件類型。
 
 *CharType*<br/>

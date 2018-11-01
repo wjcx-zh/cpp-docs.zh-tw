@@ -1,26 +1,16 @@
 ---
-title: 緩衝的效果 | Microsoft Docs
-ms.custom: ''
+title: 緩衝的效果
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - buffers, effects of buffering
 - buffering, effects of
 ms.assetid: 5d544812-e95e-4f28-b15a-edef3f3414fd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c28deb0f5e30d3ec28fac4805a86645bebf27f22
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e10b28edffdfe3411f86c031bfd12ea886410e20
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842374"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631435"
 ---
 # <a name="effects-of-buffering"></a>緩衝的效果
 
@@ -49,7 +39,7 @@ int main( )
 cout <<"Please wait..." <<flush;
 ```
 
-這個步驟會排清緩衝區，確保訊息在等待前即印出。 您也可以使用`endl`操作工具，排清緩衝區以及輸出歸位字元傳回的換行，或者您可以使用`cin`物件。 這個物件 (與 `cerr` 或 `clog` 物件) 通常會繫結至 `cout` 物件。 因此，只要使用 `cin` (或 `cerr` 或 `clog` 物件) 就會排清 `cout` 物件。
+這個步驟會排清緩衝區，確保訊息在等待前即印出。 您也可以使用`endl`操作工具，排清緩衝區以及輸出歸位換行，或者您可以使用`cin`物件。 這個物件 (與 `cerr` 或 `clog` 物件) 通常會繫結至 `cout` 物件。 因此，只要使用 `cin` (或 `cerr` 或 `clog` 物件) 就會排清 `cout` 物件。
 
 ## <a name="see-also"></a>另請參閱
 

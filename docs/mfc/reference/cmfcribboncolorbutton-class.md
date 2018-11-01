@@ -1,10 +1,6 @@
 ---
-title: CMFCRibbonColorButton 類別 |Microsoft Docs
-ms.custom: ''
+title: CMFCRibbonColorButton 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonColorButton
 - AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton
@@ -25,8 +21,6 @@ f1_keywords:
 - AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::SetDocumentColors
 - AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::SetPalette
 - AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::UpdateColor
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonColorButton [MFC], CMFCRibbonColorButton
 - CMFCRibbonColorButton [MFC], AddColorsGroup
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - CMFCRibbonColorButton [MFC], SetPalette
 - CMFCRibbonColorButton [MFC], UpdateColor
 ms.assetid: 6b4b4ee3-8cc0-41b4-a4eb-93e8847008e1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca18f54cc38c81e7b78f0afe4d1bba99029404b8
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: f0a55fa9cb431900a0454d481a77efc4e63372ed
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50057903"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644829"
 ---
 # <a name="cmfcribboncolorbutton-class"></a>CMFCRibbonColorButton 類別
 
@@ -182,7 +172,7 @@ CMFCRibbonColorButton(
 [in]出現在按鈕上的小型影像之以零起始的索引。
 
 *色彩*<br/>
-[in]（預設為黑色）] 按鈕的色彩。
+[in]（預設為黑色）按鈕的色彩。
 
 *bSimpleButtonLook*<br/>
 [in]如果為 TRUE，按鈕是繪製為一個簡單的矩形中。

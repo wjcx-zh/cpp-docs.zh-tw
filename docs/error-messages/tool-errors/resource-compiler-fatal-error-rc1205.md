@@ -1,30 +1,20 @@
 ---
-title: 資源編譯器嚴重錯誤 RC1205 |Microsoft Docs
-ms.custom: ''
+title: 資源編譯器嚴重錯誤 RC1205
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - RC1205
-dev_langs:
-- C++
 helpviewer_keywords:
 - RC1205
 ms.assetid: 6cfbe019-ad8a-4267-b4b9-0d675bb3819a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 62c6538e77d3b21c088a5a48f9870a743ea9c5d3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7593c6ca0ab12ef21297a592b866eb6a87cef8fe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093944"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50649042"
 ---
 # <a name="resource-compiler-fatal-error-rc1205"></a>資源編譯器嚴重錯誤 RC1205
 
 無效的字碼頁
 
-指定字碼頁 (/c) 選項後面無效的字碼頁。 請參閱[字碼頁](../../c-runtime-library/code-pages.md)中*執行階段程式庫參考*如需詳細資訊。
+指定字碼頁 (/c) 選項後面無效的字碼頁。 如需詳細資訊，請參閱 [執行階段程式庫參考](../../c-runtime-library/code-pages.md) 中的 *字碼頁* 。

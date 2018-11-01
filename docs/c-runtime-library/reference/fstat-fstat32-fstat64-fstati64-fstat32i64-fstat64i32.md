@@ -1,10 +1,6 @@
 ---
-title: _fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32 | Microsoft Docs
-ms.custom: ''
+title: _fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fstat32
 - _fstat64
@@ -38,8 +34,6 @@ f1_keywords:
 - _fstat
 - fstat32
 - _fstat64i32
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fstat64 function
 - fstati64 function
@@ -55,16 +49,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 65d77bfdd7922387568ca8257e66f6e19dde1a35
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2cec64e408b326dccc7b950656d0aa699c084f83
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404964"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677782"
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
 
@@ -109,32 +99,32 @@ int _fstat64i32(
 
 ## <a name="return-value"></a>傳回值
 
-如果取得檔案狀態資訊，則傳回 0。 傳回值-1 表示錯誤。 如果檔案描述項無效或*緩衝區*是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EBADF**、 在無效的檔案描述元的情況下，或者**EINVAL**，如果*緩衝區*是**NULL**。
+如果取得檔案狀態資訊，則傳回 0。 傳回值為-1 表示錯誤。 如果檔案描述項無效，或*緩衝區*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為**EBADF**、 在檔案描述項無效，或**EINVAL**的話*緩衝區*已**NULL**。
 
 ## <a name="remarks"></a>備註
 
-**_Fstat**函式會取得相關聯的開啟檔案的相關資訊*fd*並將它儲存在結構中所指*緩衝區*。 **_Stat** SYS\Stat.h 中定義的結構包含下列欄位。
+**_Fstat**函式會取得開啟的檔案與相關聯的資訊*fd*並將它儲存在結構中所指*緩衝區*。 **_Stat** SYS\Stat.h 中定義的結構包含下列欄位。
 
 |欄位|意義|
 |-|-|
 **st_atime**|最後存取檔案的時間。
 **st_ctime**|建立檔案的時間。
-**st_dev**|如果裝置*fd*; 否則為 0。
-**st_mode**|檔案模式資訊的位元遮罩。 **_S_IFCHR**會設定位元，如果*fd*指裝置。 **_S_IFREG**會設定位元，如果*fd*指的是一般的檔案。 讀取/寫入位元會根據檔案的權限模式設定。 **_S_IFCHR**和其他常數 SYS\Stat.h 中定義。
+**st_dev**|如果是裝置，請*fd*，否則為 0。
+**st_mode**|檔案模式資訊的位元遮罩。 **_S_IFCHR**如果使用者設定位元*fd*指的是裝置。 **_S_IFREG**如果使用者設定位元*fd*指的是一般的檔案。 讀取/寫入位元會根據檔案的權限模式設定。 **_S_IFCHR**和其他常數於 SYS\Stat.h 中定義。
 **st_mtime**|檔案的上次修改時間。
 **st_nlink**|在非 NTFS 檔案系統上一律為 1。
-**st_rdev**|如果裝置*fd*; 否則為 0。
+**st_rdev**|如果是裝置，請*fd*，否則為 0。
 **st_size**|檔案大小，以位元組為單位。
 
-如果*fd*裝置是指**st_atime**， **st_ctime**， **st_mtime**，和**st_size**欄位不具意義。
+如果*fd*指的是裝置， **st_atime**， **st_ctime**， **st_mtime**，以及**st_size**欄位沒有意義。
 
 因為 Stat.h 使用在 Types.h 中定義的 [_dev_t](../../c-runtime-library/standard-types.md) 類型，所以您必須在程式碼中的 Stat.h 之前包含 Types.h。
 
-**_fstat64**，它會使用 **__stat64**結構時，請允許檔案建立日期，以透過 23:59:59，3000 年 12 月 31 日 UTC; 設定來表示，而其他函式只代表 23:59:59 年 1 月 18 日的日期2038 年 UTC。 1970 年 1 月 1 日午夜是所有這些函式的日期範圍下限。
+**_fstat64**，它會使用 **__stat64**結構，可讓檔案建立日期到 23:59:59，3000 年 12 月 31 日 UTC; 表示，而其他函式只能表示 23:59:59 年 1 月 18 日的日期2038 年 UTC。 1970 年 1 月 1 日午夜是所有這些函式的日期範圍下限。
 
-這些函式的變化支援 32 位元或 64 位元時間類型，以及 32 位元或 64 位元檔案長度。 第一個數字尾碼 (**32**或**64**) 表示時間的大小類型使用; 第二個後置詞是**i32**或**i64**，表示檔案大小以 32 位元或 64 位元整數。
+這些函式的變化支援 32 位元或 64 位元時間類型，以及 32 位元或 64 位元檔案長度。 第一個數值尾碼 (**32**或**64**) 表示時間的大小類型使用，第二個尾碼為**i32**或是**i64**，表示檔案大小以 32 位元或 64 位元的整數。
 
-**_fstat**相當於 **_fstat64i32**，和**結構** **_stat**包含 64 位元時間。 這是 true 除非 **_USE_32BIT_TIME_T**定義在此情況下舊的行為是作用中。**_fstat**使用 32 位元時間和**結構** **_stat**包含 32 位元時間。 同樣適用於 **_fstati64**。
+**_fstat**相當於 **_fstat64i32**，以及**結構** **_stat**包含 64 位元時間。 這適用於除非 **_USE_32BIT_TIME_T**定義，在此情況下會採用舊版行為生效;**_fstat**使用 32 位元時間，以及**結構** **_stat**包含 32 位元時間。 這也適用於 **_fstati64**。
 
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>_stat 的時間類型和檔案長度類型版本
 

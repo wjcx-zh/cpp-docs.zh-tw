@@ -1,26 +1,15 @@
 ---
-title: 類別屬性 (c + + COM) |Microsoft Docs
-ms.custom: ''
+title: 類別屬性 (c + + COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - attributes [C++/CLI], class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a727bcf53a11e98ffd7e037037452c6bbdc4fe8a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: bdc689107eb973b9701e3f1fbe37a10aa6ae8d85
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790695"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50448863"
 ---
 # <a name="class-attributes"></a>類別屬性
 
@@ -49,16 +38,16 @@ ms.locfileid: "48790695"
 |[helpstringcontext](helpstringcontext.md)|指定.hlp 或.chm 檔案中的說明主題的識別碼。|
 |[helpstring](helpstring.md)|指定用來描述所套用之項目的字元字串。|
 |[hidden](hidden.md)|表示項目存在，但不是會顯示在使用者導向的瀏覽器中。|
-|[實作](implements-cpp.md)|指定分派介面，強制讓 IDL coclass 的成員。|
+|[implements](implements-cpp.md)|指定分派介面，強制讓 IDL coclass 的成員。|
 |[implements_category](implements-category.md)|指定類別的實作的元件類別。|
-|[模組](module-cpp.md)|在 .idl 檔案中定義程式庫區塊。|
+|[module](module-cpp.md)|在 .idl 檔案中定義程式庫區塊。|
 |[noncreatable](noncreatable.md)|定義本身無法具現化的物件。|
 |[progid](progid.md)|定義控制項 ProgID。|
 |[registration_script](registration-script.md)|執行指定的註冊指令碼。|
 |[requestedit](requestedit.md)|表示屬性支援`OnRequestEdit`通知。|
 |[source](source-cpp.md)|指定控制項的連接點的來源介面的類別上。 在屬性或方法，`source`屬性會指出成員傳回的物件或`VARIANT`也就是事件來源。|
 |[support_error_info](support-error-info.md)|支援目標物件的錯誤報告功能。|
-|[執行緒處理](threading-cpp.md)|指定控制項的執行緒模型。|
+|[threading](threading-cpp.md)|指定控制項的執行緒模型。|
 |[uuid](uuid-cpp-attributes.md)|指定類別或介面的唯一識別碼。|
 |[version](version-cpp.md)|識別類別的多個版本之間的特定版本。|
 |[vi_progid](vi-progid.md)|指定與版本無關的 ProgID 表單。|

@@ -1,10 +1,6 @@
 ---
-title: _stat、_stat32、_stat64、_stati64、_stat32i64、_stat64i32、_wstat、_wstat32、_wstat64、_wstati64、_wstat32i64、_wstat64i32 | Microsoft Docs
-ms.custom: ''
+title: _stat、_stat32、_stat64、_stati64、_stat32i64、_stat64i32、_wstat、_wstat32、_wstat64、_wstati64、_wstat32i64、_wstat64i32
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wstat64
 - _stati64
@@ -78,8 +74,6 @@ f1_keywords:
 - stat/_wstati64
 - stat/_wstat32i64
 - stat/_wstat64i32
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], status information
 - _stat function
@@ -112,16 +106,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 13ce367bdee78be1610a36c887a04f2130375114
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 316012479ec374cc5f40061384475008fe04e331
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418009"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637277"
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat、_stat32、_stat64、_stati64、_stat32i64、_stat64i32、_wstat、_wstat32、_wstat64、_wstati64、_wstat32i64、_wstat64i32
 
@@ -190,26 +180,26 @@ int _wstat64i32(
 
 ## <a name="return-value"></a>傳回值
 
-上述每個函式會在取得檔案狀態資訊時傳回 0。 傳回值-1 表示錯誤，在此情況下**errno**設**ENOENT**，指出，檔案名稱或路徑找不到。 傳回值為**EINVAL**表示無效的參數;**errno**也會設為**EINVAL**在此情況下。
+上述每個函式會在取得檔案狀態資訊時傳回 0。 傳回值為-1 表示發生錯誤時，在此情況下**errno**設為**ENOENT**，指出，檔案名稱或路徑找不到。 傳回值**EINVAL**表示無效的參數;**errno**也會設定為**EINVAL**在此情況下。
 
 如需這個及其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。
 
-可以表示的檔案上的日期戳記，如果是 1970 年 1 月 1 日午夜且之前 23:59:59，3000 年 12 月 31 日 UTC，除非您使用 **_stat32**或 **_wstat32**，或者已定義 **_USE_32BIT_TIME_T**，在此情況下只到 23:59:59 2038 年 1 月 18 日，UTC 代表的日期。
+如果是 1970 年 1 月 1 日午夜之前 23:59:59，3000 年 12 月 31 日 UTC，除非您使用，就可以表示檔案的日期戳記 **_stat32**或 **_wstat32**，或者已定義 **_USE_32BIT_TIME_T**，在此情況下代表的日期，只會保存 23:59:59 2038 年 1 月 18 日 UTC。
 
 ## <a name="remarks"></a>備註
 
-**_Stat**函式會取得資訊的檔案或目錄所指定*路徑*並將它儲存在結構中所指*緩衝區*。 **_stat**自動多位元組字元字串引數處理為適當且可辨識的多位元組字元序列，會根據目前使用中的多位元組字碼頁。
+**_Stat**函式會取得檔案或目錄所指定的資訊*路徑*並將它儲存在結構中所指*緩衝區*。 **_stat**自動多位元組字元字串引數處理為適當，辨識多位元組字元序列，根據目前使用中的多位元組字碼頁。
 
-**_wstat**是寬字元版本的 **_stat**;*路徑*引數 **_wstat**是寬字元字串。 **_wstat**和 **_stat**行為相同，除了 **_wstat**不會處理多位元組字元字串。
+**_wstat**是寬字元版本的 **_stat**;*路徑*引數 **_wstat**是寬字元字串。 **_wstat**並 **_stat**運作方式完全相同，不同之處在於 **_wstat**不會處理多位元組字元字串。
 
-這些函式的各種版本支援 32 位元或 64 位元時間類型，以及 32 位元或 64 位元檔案長度。 第一個數字尾碼 (**32**或**64**) 表示時間的大小類型使用; 第二個後置詞是**i32**或**i64**，表示檔案大小以 32 位元或 64 位元整數。
+這些函式的各種版本支援 32 位元或 64 位元時間類型，以及 32 位元或 64 位元檔案長度。 第一個數值尾碼 (**32**或**64**) 表示時間的大小類型使用，第二個尾碼為**i32**或是**i64**，表示檔案大小以 32 位元或 64 位元的整數。
 
-**_stat**相當於 **_stat64i32**，和**結構** **_stat**包含 64 位元時間。 這是 true 除非 **_USE_32BIT_TIME_T**定義在此情況下舊的行為是作用中。**_stat**使用 32 位元時間和**結構** **_stat**包含 32 位元時間。 同樣適用於 **_stati64**。
+**_stat**相當於 **_stat64i32**，以及**結構** **_stat**包含 64 位元時間。 這適用於除非 **_USE_32BIT_TIME_T**定義，在此情況下會採用舊版行為生效;**_stat**使用 32 位元時間，以及**結構** **_stat**包含 32 位元時間。 這也適用於 **_stati64**。
 
 > [!NOTE]
-> **_wstat**不適用於 Windows Vista 的符號連結。 在這些情況下， **_wstat**一律會回報檔案大小為 0。 **_stat**運作正常與符號連結。
+> **_wstat**不適用於 Windows Vista 的符號連結。 在這些情況下， **_wstat**一律會回報檔案大小為 0。 **_stat**則適用於符號連結。
 
-這個函式會驗證它的參數。 如果有任一個*路徑*或*緩衝區*是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。
+這個函式會驗證它的參數。 如果有任一*路徑*或是*緩衝區*是**NULL**，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。
 
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>_stat 的時間類型和檔案長度類型版本
 
@@ -234,27 +224,27 @@ int _wstat64i32(
 |**_tstat32i64**|**_stat32i64**|**_stat32i64**|**_wstat32i64**|
 |**_tstat64i32**|**_stat64i32**|**_stat64i32**|**_wstat64i32**|
 
-**_Stat** SYS\STAT 中定義的結構。H、 包含下列欄位。
+**_Stat** SYS\STAT 中定義的結構。H，包含下列欄位。
 
 |欄位||
 |-|-|
 **st_gid**|擁有檔案 (UNIX 特定) 之群組的數值識別碼。這個欄位在 Windows 系統上一律為零。 重新導向的檔案會歸類為 Windows 檔案。
 **st_atime**|檔案的上次存取時間。 適用於 NTFS，但不適用 FAT 格式的磁碟機。
 **st_ctime**|檔案的建立時間。 適用於 NTFS，但不適用 FAT 格式的磁碟機。
-**st_dev**|磁碟機包含檔案的磁碟數目 (與相同**st_rdev**)。
-**st_ino**|資訊節點數目 ( **inode**) 檔案 （UNIX 特定）。 在 UNIX 檔案系統， **inode**描述檔案日期和時間戳記、 權限，以及內容。 檔案是硬式連結至另一個，它們共用相同**inode**。 **Inode**，因此**st_ino**，FAT、 HPFS 或 NTFS 檔案系統中沒有任何意義。
-**st_mode**|檔案模式資訊的位元遮罩。 **_S_IFDIR**會設定位元，如果*路徑*指定的目錄; **_S_IFREG**會設定位元，如果*路徑*指定一般檔案或裝置。 使用者讀取/寫入位元會根據檔案的權限模式進行設定；使用者執行位元會根據副檔名進行設定。
+**st_dev**|磁碟機的包含檔的磁碟數目 (與相同**st_rdev**)。
+**st_ino**|資訊的節點數目 ( **inode**) 檔案 （UNIX 特定）。 在 UNIX 檔案系統**inode**描述檔案日期和時間戳記、 權限，以及內容。 當檔案永久連結至另一部，它們會共用相同**inode**。 **Inode**，因此**st_ino**，FAT、 HPFS 或 NTFS 檔案系統中沒有任何意義。
+**st_mode**|檔案模式資訊的位元遮罩。 **_S_IFDIR**如果設定位元*路徑*指定的目錄，而 **_S_IFREG**位元設定如果*路徑*指定一般檔案或裝置。 使用者讀取/寫入位元會根據檔案的權限模式進行設定；使用者執行位元會根據副檔名進行設定。
 **st_mtime**|檔案的上次修改時間。
 **st_nlink**|在非 NTFS 檔案系統上一律為 1。
-**st_rdev**|磁碟機包含檔案的磁碟數目 (與相同**st_dev**)。
-**st_size**|以位元組為單位; 檔案的大小版本使用 64 位元整數**i64**後置詞。
+**st_rdev**|磁碟機的包含檔的磁碟數目 (與相同**st_dev**)。
+**st_size**|以位元組為單位; 檔的大小版本使用 64 位元整數**i64**後置詞。
 **st_uid**|擁有檔案 (UNIX 特定) 之使用者的數值識別碼。 這個欄位在 Windows 系統上一律為零。 重新導向的檔案會歸類為 Windows 檔案。
 
-如果*路徑*裝置是指**st_size**，各種時間欄位、 **st_dev**，和**st_rdev**中欄位 **_stat**結構是無意義。 因為 STAT.H 使用在 TYPES.H 中定義的 [_dev_t](../../c-runtime-library/standard-types.md) ，所以您必須在程式碼中的 STAT.H 之前包含 TYPES.H。
+如果*路徑*指的是裝置， **st_size**、 各種時間欄位、 **st_dev**，以及**st_rdev**中的欄位 **_stat**結構便沒有意義。 因為 STAT.H 使用在 TYPES.H 中定義的 [_dev_t](../../c-runtime-library/standard-types.md) ，所以您必須在程式碼中的 STAT.H 之前包含 TYPES.H。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
 |**_stat**， **_stat32**， **_stat64**， **_stati64**， **_stat32i64**， **_stat64i32**|\<sys/types.h>，後面接著 \<sys/stat.h>|\<errno.h>|
 |**_wstat**， **_wstat32**， **_wstat64**， **_wstati64**， **_wstat32i64**， **_wstat64i32**|\<sys/types.h>，後面接著 \<sys/stat.h> 或 \<wchar.h>|\<errno.h>|

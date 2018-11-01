@@ -1,11 +1,6 @@
 ---
-title: cacosh、cacoshf、cacoshl | Microsoft Docs
-ms.custom: ''
+title: cacosh、cacoshf、cacoshl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cacosh
 - cacoshf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cacosh
 - complex/cacoshf
 - complex/cacoshl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cacosh function
 - cacoshf function
 - cacoshl function
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c61130dbfcc0363ef020216389299634cfcd002f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa31dfa1b29eda18d34528fc8aa9544e58a5a082
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394151"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668191"
 ---
 # <a name="cacosh-cacoshf-cacoshl"></a>cacosh、cacoshf、cacoshl
 
@@ -79,15 +68,15 @@ _Lcomplex cacoshl(
 
 ## <a name="return-value"></a>傳回值
 
-反雙曲線餘弦*z*，以弧度為單位。 結果是未繫結和非負真實座標軸和間隔 [-iπ，+ iπ] 軸虛數。
+反雙曲餘弦*z*，以弧度為單位。 結果是未繫結和非負實數軸中，並且在間隔 [-i π，+ i π] 在虛數軸。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**cacosh**採用並傳回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程式中， **cacosh**一律採用並傳回 **_Dcomplex**值。
+因為 c + + 允許多載，您可以呼叫多載**cacosh**採用並傳回 **_Fcomplex**並 **_Lcomplex**值。 在 C 程式中， **cacosh**一律採用並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
-|常式|C 標頭|C++ 標頭|
+|常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
 |**cacosh**， **cacoshf**， **cacoshl**|\<complex.h>|\<ccomplex>|
 

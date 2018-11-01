@@ -1,10 +1,6 @@
 ---
-title: _get_purecall_handler、_set_purecall_handler | Microsoft Docs
-ms.custom: ''
+title: _get_purecall_handler、_set_purecall_handler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_purecall_handler
 - _set_purecall_handler_m
@@ -29,8 +25,6 @@ f1_keywords:
 - stdlib/_set_purecall_handler
 - stdlib/_get_purecall_handler
 - _get_purecall_handler
-dev_langs:
-- C++
 helpviewer_keywords:
 - _set_purecall_handler function
 - set_purecall_handler function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - _set_purecall_handler_m function
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1dca104d04546786a361c63461e502f7aa8b6127
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0009b4bc1c7bf70bd84b9a82ecdc8643789e8164
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400271"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646353"
 ---
 # <a name="getpurecallhandler-setpurecallhandler"></a>_get_purecall_handler、_set_purecall_handler
 
@@ -68,25 +58,25 @@ _purecall_handler __cdecl _set_purecall_handler(
 ### <a name="parameters"></a>參數
 
 *function*<br/>
-呼叫純虛擬函式時要呼叫的函式。 A **_purecall_handler**函式必須有 void 傳回型別。
+呼叫純虛擬函式時要呼叫的函式。 A **_purecall_handler**函式必須有 void 的傳回型別。
 
 ## <a name="return-value"></a>傳回值
 
-先前 **_purecall_handler**。 傳回**nullptr**如果沒有任何先前的處理常式。
+先前 **_purecall_handler**。 傳回**nullptr**如果有任何先前的處理常式。
 
 ## <a name="remarks"></a>備註
 
-**_Get_purecall_handler**和 **_set_purecall_handler**函式是 Microsoft 專有和僅適用於 c + + 程式碼。
+**_Get_purecall_handler**並 **_set_purecall_handler**函式是 Microsoft 專有而且僅適用於 c + + 程式碼。
 
-呼叫純虛擬函式會產生錯誤，因為它有沒有實作。 根據預設，呼叫純虛擬函式時，編譯器會產生程式碼來叫用錯誤處理常式函式，該函式會終止程式。 您可以為純虛擬函式呼叫安裝您自己的錯誤處理函式，以攔截它們，用於偵錯或報告目的。 若要使用您自己的錯誤處理常式，建立的函式具有 **_purecall_handler**簽章，然後使用 **_set_purecall_handler**使其目前的處理常式。
+呼叫純虛擬函式會產生錯誤，因為它有沒有實作。 根據預設，呼叫純虛擬函式時，編譯器會產生程式碼來叫用錯誤處理常式函式，該函式會終止程式。 您可以為純虛擬函式呼叫安裝您自己的錯誤處理函式，以攔截它們，用於偵錯或報告目的。 若要使用您自己的錯誤處理常式，建立具有的函式 **_purecall_handler**簽章，然後使用 **_set_purecall_handler**使它成為目前的處理常式。
 
 因為只有一個 **_purecall_handler**每個處理序，當您呼叫 **_set_purecall_handler**它立即影響所有執行緒。 任何執行緒的上一個呼叫端會設定處理常式。
 
-若要還原預設行為，請呼叫 **_set_purecall_handler**使用**nullptr**引數。
+若要還原預設行為，請呼叫 **_set_purecall_handler**利用**nullptr**引數。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_get_purecall_handler**， **_set_purecall_handler**|\<cstdlib> 或 \<stdlib.h>|
 

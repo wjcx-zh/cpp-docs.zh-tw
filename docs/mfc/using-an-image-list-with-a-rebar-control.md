@@ -1,26 +1,16 @@
 ---
-title: 使用影像清單與 Rebar 控制項 |Microsoft Docs
-ms.custom: ''
+title: 搭配使用影像清單與 Rebar 控制項
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - image lists [MFC], rebar controls
 - rebar controls [MFC], image lists
 ms.assetid: 1a5836ac-019a-46aa-8741-b35c3376b839
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9ff524f1f29e4db2ac5bb4628064583f0fe7583e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3cf359a5d06396f9c2c31cbec511c04784053e53
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372362"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641430"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>搭配使用影像清單與 Rebar 控制項
 

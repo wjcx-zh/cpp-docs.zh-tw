@@ -1,28 +1,18 @@
 ---
-title: 建立 MFC ActiveX 控制項 |Microsoft Docs
-ms.custom: ''
+title: 建立 MFC ActiveX 控制項
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.activex.project
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 68ad9b2627921024e5bd9477ee2aab62494b4912
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: be0b4639fd42461a19db10f88ced336cd1129fb3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50053067"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50633505"
 ---
 # <a name="creating-an-mfc-activex-control"></a>建立 MFC ActiveX 控制項
 

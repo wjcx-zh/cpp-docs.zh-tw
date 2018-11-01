@@ -1,10 +1,6 @@
 ---
-title: wctype | Microsoft Docs
-ms.custom: ''
+title: wctype
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wctype
 apilocation:
@@ -21,22 +17,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wctype
-dev_langs:
-- C++
 helpviewer_keywords:
 - wctype function
 - wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0bb5003db02ed27c2906ebc3619313489e40e5fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81caf8e1ab04635d205d7b01af2d4c2896eec01c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411896"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456897"
 ---
 # <a name="wctype"></a>wctype
 
@@ -57,7 +47,7 @@ wctype_t wctype(
 
 ## <a name="return-value"></a>傳回值
 
-如果**LC_CTYPE**目前的地區設定分類的未定義的分類規則，其名稱符合屬性的字串*屬性*，此函數會傳回零。 否則，它會傳回適合用為 [towctrans](towctrans.md) 後續呼叫的第二個引數的非零值。
+如果**LC_CTYPE**目前的地區設定的類別不會定義名稱符合屬性字串的分類規則*屬性*，函數會傳回零。 否則，它會傳回適合用為 [towctrans](towctrans.md) 後續呼叫的第二個引數的非零值。
 
 ## <a name="remarks"></a>備註
 
@@ -65,21 +55,21 @@ wctype_t wctype(
 
 |功能|同於|
 |--------------|-------------|
-|iswalnum(c)|iswctype (c、 wctype ("與 alnum"))|
-|iswalpha(c)|iswctype (c、 wctype ("alpha"))|
-|iswcntrl(c)|iswctype (c、 wctype （「 控制項 」）)|
-|iswdigit(c)|iswctype (c、 wctype （「 數字 」）)|
-|iswgraph(c)|iswctype (c、 wctype （「 圖形 」）)|
-|iswlower(c)|iswctype (c、 wctype （「 下方 」）)|
-|iswprint(c)|iswctype (c、 wctype ("print"))|
-|iswpunct(c)|iswctype (c、 wctype （「 符號 」）)|
-|iswspace(c)|iswctype (c、 wctype （「 空間 」）)|
-|iswupper(c)|iswctype (c、 wctype （「 上限 」）)|
-|iswxdigit(c)|iswctype (c、 wctype (「 xdigit"))|
+|iswalnum(c)|iswctype (c，wctype (「 alnum"))|
+|iswalpha(c)|iswctype (c，wctype ("alpha"))|
+|iswcntrl(c)|iswctype (c，wctype （「 控制項 」）)|
+|iswdigit(c)|iswctype (c，wctype （「 數字 」）)|
+|iswgraph(c)|iswctype (c，wctype （「 圖形 」）)|
+|iswlower(c)|iswctype (c，wctype （「 下方 」）)|
+|iswprint(c)|iswctype (c，wctype ("print"))|
+|iswpunct(c)|iswctype (c，wctype (「 punct"))|
+|iswspace(c)|iswctype (c，wctype （「 空間 」）)|
+|iswupper(c)|iswctype (c，wctype （「 上方 」）)|
+|iswxdigit(c)|iswctype (c，wctype (「 xdigit"))|
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**wctype**|\<wctype.h>|
 

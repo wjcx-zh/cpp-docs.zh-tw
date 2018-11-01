@@ -1,11 +1,6 @@
 ---
-title: cabs、cabsf、cabsl | Microsoft Docs
-ms.custom: ''
+title: cabs、cabsf、cabsl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cabs
 - cabsf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cabs
 - complex/cabsf
 - complex/cabsl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cabs function
 - cabsf function
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c14252e7857331482b0fe6f99dd56e49ab838dd0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfa437a5d248a83568032d4c9ef8d4f938074dfe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393559"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623956"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs、cabsf、cabsl
 
@@ -83,11 +72,11 @@ long double cabsl(
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**cabs**採用 **_Fcomplex**或 **_Lcomplex**值，並傳回**float**或**長** **double**值。 在 C 程式中， **cabs**一律採用 **_Dcomplex**值並傳回**double**值。
+因為 c + + 允許多載，您可以呼叫多載**cabs**採用 **_Fcomplex**或是 **_Lcomplex**值並傳回**float**或**長** **double**值。 在 C 程式中， **cabs**一律採用 **_Dcomplex**值，然後傳回**double**值。
 
 ## <a name="requirements"></a>需求
 
-|常式|C 標頭|C++ 標頭|
+|常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
 |**cabs**， **cabsf**， **cabsl**|\<complex.h>|\<ccomplex>|
 

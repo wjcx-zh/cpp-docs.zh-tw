@@ -1,10 +1,6 @@
 ---
-title: _ismbbtrail、_ismbbtrail_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbtrail、_ismbbtrail_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbtrail
 - _ismbbtrail_l
@@ -26,24 +22,18 @@ f1_keywords:
 - ismbbtrail
 - _ismbbtrail_l
 - ismbbtrail_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbbtrail_l function
 - _ismbbtrail function
 - _ismbbtrail_l function
 - ismbbtrail function
 ms.assetid: dfdd0292-960b-4c1d-bf11-146e0fc80247
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e41ad2be1447946570f10028249582225386877
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c09884f013e878fca516388f1ad933a2a08b35a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399747"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545934"
 ---
 # <a name="ismbbtrail-ismbbtraill"></a>_ismbbtrail、_ismbbtrail_l
 
@@ -75,11 +65,11 @@ int _ismbbtrail_l(
 
 ## <a name="remarks"></a>備註
 
-**_ismbbtrail**會針對地區設定相關行為使用目前的地區設定。 **_ismbbtrail_l**是完全相同，不同之處在於它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_ismbbtrail**會針對地區設定相關行為使用目前的地區設定。 **_ismbbtrail_l**完全相同，只不過它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|---------------------|
 |**_ismbbtrail**|\<mbctype.h> 或 \<mbstring.h>|\<ctype.h>、* \<limits.h>、\<stdlib.h>|
 |**_ismbbtrail_l**|\<mbctype.h> 或 \<mbstring.h>|\<ctype.h>、* \<limits.h>、\<stdlib.h>|

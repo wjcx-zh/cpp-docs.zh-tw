@@ -1,27 +1,17 @@
 ---
-title: 編譯器警告 （層級 1） C4273 |Microsoft Docs
-ms.custom: ''
+title: 編譯器警告 (層級 1) C4273
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4273
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4273
 ms.assetid: cc18611d-9454-40a4-ad73-69823d5888fb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3fb8be688fa90a015996c1ba056ef368fbc1c588
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4d00ed0113f9954e7400da24f37b51b9fdd247bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042087"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544322"
 ---
 # <a name="compiler-warning-level-1-c4273"></a>編譯器警告 (層級 1) C4273
 

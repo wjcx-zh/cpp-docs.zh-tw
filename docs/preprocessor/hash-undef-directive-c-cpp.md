@@ -1,29 +1,19 @@
 ---
-title: '#undef 指示詞 （C/c + +） |Microsoft Docs'
-ms.custom: ''
+title: '#undef 指示詞 （C/c + +）'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - '#undef'
-dev_langs:
-- C++
 helpviewer_keywords:
 - '#undef directive'
 - undef directive (#undef)
 - preprocessor, directives
 ms.assetid: 88900e0e-2c19-4a63-b681-f3d3133c24ca
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8412c7f4de3107674c67a64ee5e298a6173fbb12
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: cb3a08165e41f336df0e141f50310f191cd83257
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50082953"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537263"
 ---
 # <a name="undef-directive-cc"></a>#undef 指示詞 (C/C++)
 移除 (取消定義) 先前使用 `#define` 建立的名稱。

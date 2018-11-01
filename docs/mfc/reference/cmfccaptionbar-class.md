@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a6379112de9b31de55b86cc4bc4e06a94863ac6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
-ms.translationtype: MT
+ms.openlocfilehash: 509c2eb386e235e8ba7c6d2bc016ff92f6499263
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406813"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077539"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar 類別
 
@@ -158,7 +158,7 @@ class CMFCCaptionBar : public CPane
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用中的各種方法`CMFCCaptionBar`類別。 此範例示範如何建立標題列控制項、 設定標題列的 3D 框線、 設定像素為單位，項目列標題的邊緣和標題列控制項的邊緣之間的距離，、 設定標題列按鈕設定按鈕的工具提示、 標題列的文字標籤設定、 設定標題列中，點陣圖影像以及設定影像的工具提示的標題列中。 此程式碼片段是一部分[MS Office 2007 示範範例](../../visual-cpp-samples.md)。
+下例示範如何在 `CMFCCaptionBar` 類別中使用各種方法。 此範例示範如何建立標題列控制項、 設定標題列的 3D 框線、 設定像素為單位，項目列標題的邊緣和標題列控制項的邊緣之間的距離，、 設定標題列按鈕設定按鈕的工具提示、 標題列的文字標籤設定、 設定標題列中，點陣圖影像以及設定影像的工具提示的標題列中。 此程式碼片段是一部分[MS Office 2007 示範範例](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]
 [!code-cpp[NVC_MFC_MSOffice2007Demo#2](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]
@@ -525,7 +525,6 @@ void SetBitmap(
     COLORREF clrTransparent,
     BOOL bStretch=FALSE,
     BarElementAlignment bmpAlignment=ALIGN_RIGHT);
-
 
 void SetBitmap(
     UINT uiBmpResID,

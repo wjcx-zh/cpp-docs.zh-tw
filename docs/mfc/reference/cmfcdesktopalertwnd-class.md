@@ -1,7 +1,7 @@
 ---
 title: CMFCDesktopAlertWnd 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 728aa39341eb808b2bae178e0a419ec3a2ab46e1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
-ms.translationtype: MT
+ms.openlocfilehash: abd7a3348f59379e798a0c1369a4f69ca99a4d7e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432427"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081062"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 
@@ -160,7 +160,6 @@ virtual BOOL Create(
     CPoint ptPos = CPoint(-1,-1),
     CRuntimeClass* pRTIDlgBar = RUNTIME_CLASS(CMFCDesktopAlertDialog));
 
-
 virtual BOOL Create(
     CWnd* pWndOwner,
     CMFCDesktopAlertWndInfo& params,
@@ -170,7 +169,8 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-[in][out]*pWndOwner*指定 [警示] 視窗的擁有者。 該擁有者將會接到桌面警示視窗的所有通知。 此值不能是 NULL。
+*pWndOwner*<br/>
+[in、 out]指定 [警示] 視窗的擁有者。 該擁有者將會接到桌面警示視窗的所有通知。 此值不能是 NULL。
 
 *uiDlgResID*<br/>
 [in]指定 [警示] 視窗的資源識別碼。
@@ -319,14 +319,13 @@ BOOL HasSmallCaption() const;
 
 ##  <a name="onbeforeshow"></a>  CMFCDesktopAlertWnd::OnBeforeShow
 
-
 ```
 virtual BOOL OnBeforeShow(CPoint&);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*CPoint （& s)*
+[in]*CPoint （& s)*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -355,7 +354,6 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 
 ##  <a name="oncommand"></a>  CMFCDesktopAlertWnd::OnCommand
 
-
 ```
 virtual BOOL OnCommand(
     WPARAM wParam,
@@ -364,8 +362,9 @@ virtual BOOL OnCommand(
 
 ### <a name="parameters"></a>參數
 
-*wParam*<br/>
-[in][in]*lParam*
+[in]*wParam*<br/>
+
+[in]*lParam*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -373,19 +372,17 @@ virtual BOOL OnCommand(
 
 ##  <a name="ondraw"></a>  CMFCDesktopAlertWnd::OnDraw
 
-
 ```
 virtual void OnDraw(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*
+[in]*pDC*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="processcommand"></a>  CMFCDesktopAlertWnd::ProcessCommand
-
 
 ```
 BOOL ProcessCommand(HWND hwnd);
@@ -393,7 +390,7 @@ BOOL ProcessCommand(HWND hwnd);
 
 ### <a name="parameters"></a>參數
 
-[in]*hwnd*
+[in]*hwnd*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -495,7 +492,6 @@ void SetTransparency(BYTE nTransparency);
 呼叫此函式可設定的快顯視窗的透明度層級。
 
 ##  <a name="getdialogsize"></a>  CMFCDesktopAlertWnd::GetDialogSize
-
 
 ```
 virtual CSize GetDialogSize();

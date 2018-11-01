@@ -1,8 +1,6 @@
 ---
-title: '&lt;utility&gt; 函式 | Microsoft Docs'
-ms.custom: ''
+title: '&lt;utility&gt; 函式'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - utility/std::exchange
 - utility/std::forward
@@ -16,12 +14,12 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: 12e8b2c4dfb0d7d36974fb2e5979d82b69c89316
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7a061ede19c5c4c181b5fea912b9c6212c583267
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718315"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543906"
 ---
 # <a name="ltutilitygt-functions"></a>&lt;utility&gt; 函式
 
@@ -101,7 +99,7 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
 
 |參數|描述|
 |---------------|-----------------|
-|*類型*|傳入值的型別*Arg*，這可能會不同的型別*Arg*。 通常由轉送函式的樣板引數所決定。|
+|*Type*|傳入值的型別*Arg*，這可能會不同的型別*Arg*。 通常由轉送函式的樣板引數所決定。|
 |*引數*|要轉型的引數。|
 
 ### <a name="return-value"></a>傳回值
@@ -277,7 +275,7 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 
 |參數|描述|
 |---------------|-----------------|
-|*類型*|傳入的引數類型推算類型*Arg*，以及參考摺疊規則。|
+|*Type*|傳入的引數類型推算類型*Arg*，以及參考摺疊規則。|
 |*引數*|要轉型的引數。 雖然的型別*Arg*指定為右值參考，會出現`move`也接受左值引數，因為左值參考可以繫結至右值參考。|
 
 ### <a name="return-value"></a>傳回值

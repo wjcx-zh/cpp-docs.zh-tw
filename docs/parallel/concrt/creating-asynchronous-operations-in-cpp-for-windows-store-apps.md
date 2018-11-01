@@ -1,26 +1,16 @@
 ---
-title: 為 UWP 應用程式，建立 c + + 中的非同步作業 |Microsoft Docs
-ms.custom: ''
+title: 為 UWP 應用程式，建立 c + + 中的非同步作業
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4014d0d7cea999c105a5ee513d9dd1be410546f4
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: ecef168d2162adf3a478268ec08b0a61f35c6260
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084070"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563198"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>為 UWP 應用程式，建立 c + + 中的非同步作業
 

@@ -1,25 +1,15 @@
 ---
-title: '#匯入屬性 （c + +） |Microsoft Docs'
-ms.custom: ''
+title: '#匯入屬性 （c + +）'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - '#import directive, attributes'
 ms.assetid: 2a5085e3-82ee-4f83-892b-0aa6cc13863b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d9c362ce6c85d1c090c6c9265f2093dd7c754792
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 3cd1b259270ff8c76ac80ec66000f3c8177140fa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50080425"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624402"
 ---
 # <a name="import-attributes-c"></a>#import 屬性 (C++)
 提供搭配使用的屬性連結`#import`指示詞。

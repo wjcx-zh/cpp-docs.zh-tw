@@ -1,29 +1,19 @@
 ---
-title: __movsb |Microsoft Docs
-ms.custom: ''
+title: __movsb
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __movsb
-dev_langs:
-- C++
 helpviewer_keywords:
 - movsb instruction
 - rep movsb instruction
 - __movsb intrinsic
 ms.assetid: ba5469f6-f797-4cd2-bee8-74c7666c26d4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3488815f31f8148c21ebf2242ef85773505a316c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4b68eb4ca735274243db0c9ae006aa04be55355f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387675"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666930"
 ---
 # <a name="movsb"></a>__movsb
 
@@ -34,10 +24,10 @@ ms.locfileid: "46387675"
 ## <a name="syntax"></a>語法
 
 ```
-void __movsb( 
-   unsigned char* Destination, 
-   unsigned const char* Source, 
-   size_t Count 
+void __movsb( 
+   unsigned char* Destination, 
+   unsigned const char* Source, 
+   size_t Count 
 );
 ```
 
@@ -46,7 +36,7 @@ void __movsb(
 *目的地*<br/>
 [out]若要複製的目的地的指標。
 
-*Source*<br/>
+*來源*<br/>
 [in]要複製的來源指標。
 
 *計數*<br/>

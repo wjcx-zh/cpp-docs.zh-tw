@@ -1,28 +1,17 @@
 ---
-title: 顯示或隱藏工具列 （c + + 圖示影像編輯器） |Microsoft Docs
-ms.custom: ''
+title: 顯示或隱藏工具列 （c + + 圖示影像編輯器）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], toolbar
 - toolbars [C++], showing
 - toolbars [C++], hiding
 ms.assetid: 78d25184-a8f4-457f-aa6f-069a5a27bcf8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: d11fdea6e85bf542a00b497b311494ba6133e1d3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6a96c16e4a4a8da927ec54e23960c3b9179fd650
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376586"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595815"
 ---
 # <a name="displaying-or-hiding-the-toolbar-c-image-editor-for-icons"></a>顯示或隱藏工具列 （c + + 圖示影像編輯器）
 

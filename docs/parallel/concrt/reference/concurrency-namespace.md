@@ -1,10 +1,6 @@
 ---
-title: concurrency 命名空間 |Microsoft Docs
-ms.custom: ''
+title: concurrency 命名空間
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue/concurrency
 - agents/concurrency
@@ -21,21 +17,15 @@ f1_keywords:
 - concurrent_unordered_set/concurrency
 - pplconcrt/concurrency
 - internal_concurrent_hash/concurrency
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9d423d80606da9edcec2cb5f4da4d02e39213ba7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ccfa168f811b2c357a3760097ca7bbaab4f5ed3a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386024"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629847"
 ---
 # <a name="concurrency-namespace"></a>concurrency 命名空間
 
@@ -188,7 +178,7 @@ namespace concurrency;
 |[Alloc 函式](concurrency-namespace-functions.md#alloc)|會透過並行執行階段的快取子配置器指定的大小，來配置記憶體區塊。|
 |[asend 函式](concurrency-namespace-functions.md#asend)|多載。 非同步傳送作業，會排程工作將資料傳播到目標區塊。|
 |[cancel_current_task 函式](concurrency-namespace-functions.md#cancel_current_task)|取消目前執行的工作。 這個函式可以從工作主體內呼叫，以中止工作執行並導致它進入 `canceled` 狀態。<br /><br /> 如果不是在 `task` 的主體中，這就不是支援呼叫這個函式的情況。 這樣做會在應用程式中導致未定義的行為，例如當機或停止回應。|
-|[create_async 函式](concurrency-namespace-functions.md#create_async)|以使用者提供的 Lambda 或函式物件為基礎，建立 Windows 執行階段非同步建構。 根據傳遞至方法的 Lambda 簽章，`create_async` 的傳回類型是下列其中一個：`IAsyncAction^`、`IAsyncActionWithProgress<TProgress>^`、`IAsyncOperation<TResult>^` 或 `IAsyncOperationWithProgress<TResult, TProgress>^`。|
+|[create_async 函式](concurrency-namespace-functions.md#create_async)|以使用者提供的 Lambda 或函式物件為基礎，建立 Windows 執行階段非同步建構。 根據傳遞至方法的 Lambda 簽章，`create_async` 的傳回型別是下列其中一個：`IAsyncAction^`、`IAsyncActionWithProgress<TProgress>^`、`IAsyncOperation<TResult>^` 或 `IAsyncOperationWithProgress<TResult, TProgress>^`。|
 |[create_task 函式](concurrency-namespace-functions.md#create_task)|多載。 建立 PPL[任務](task-class.md)物件。 您可以在任何會使用工作建構函式的地方使用 `create_task`。 這主要是為了方便起見而提供，因為它允許在建立工作時使用 `auto` 關鍵字。|
 |[CreateResourceManager 函式](concurrency-namespace-functions.md#createresourcemanager)|傳回代表並行執行階段資源管理員單一執行個體的介面。 資源管理員會負責將資源指派給想要與彼此相互合作的排程器。|
 |[DisableTracing 函式](concurrency-namespace-functions.md#disabletracing)|停用並行執行階段中的追蹤。 根據預設，這個函式因為 ETW 追蹤已移除註冊而被取代。|

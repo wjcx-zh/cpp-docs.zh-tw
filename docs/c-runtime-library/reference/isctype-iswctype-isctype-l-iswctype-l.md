@@ -1,10 +1,6 @@
 ---
-title: _isctype、iswctype、_isctype_l、_iswctype_l | Microsoft Docs
-ms.custom: ''
+title: _isctype、iswctype、_isctype_l、_iswctype_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isctype_l
 - iswctype
@@ -32,8 +28,6 @@ f1_keywords:
 - iswctype_l
 - isctype_l
 - _iswctype_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - isctype_l function
 - iswctype_l function
@@ -44,20 +38,16 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a9ca4580ba19c4efc342186c0c3b348d76ce94e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c5eb0b51cf0371100ed884221ee04885dfbe9ad9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402548"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563153"
 ---
 # <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype、iswctype、_isctype_l、_iswctype_l
 
-測試*c* ctype 屬性所指定*desc*引數。 針對每一個有效值的*desc*，沒有對等的寬字元分類常式。
+測試*c* ctype 屬性所指定*desc*引數。 針對每個有效值*desc*，沒有對等的寬字元分類常式。
 
 ## <a name="syntax"></a>語法
 
@@ -95,9 +85,9 @@ int _iswctype_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_isctype**和**iswctype**傳回非零值，如果*c*具有所指定的屬性*desc*中目前的地區設定或 0，如果不存在。 這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳入的地區設定而不是目前的地區設定的地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_isctype**並**iswctype**傳回非零值，如果*c*具有所指定的屬性*desc* 0，如果沒有目前的地區設定中。 使用這些函式的版本 **_l**尾碼都相同，不同之處在於使用傳入的地區設定而不是目前的地區設定其地區設定相關行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-行為 **_isctype**和 **_isctype_l**是未定義的如果*c*不 EOF 或 0 到 0xFF，（含) 範圍中。 當使用 CRT 偵錯程式庫和*c*不是其中一個函式產生，這些值的判斷提示。
+行為 **_isctype**並 **_isctype_l**如果是未定義*c*不是 EOF 或介於 0 到 0xFF 的內含。 使用偵錯 CRT 程式庫時， *c*是不是其中一個值，函式會引發判斷提示。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -108,7 +98,7 @@ int _iswctype_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_isctype**|\<ctype.h>|
 |**iswctype**|\<ctype.h> 或 \<wchar.h>|

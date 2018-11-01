@@ -1,11 +1,6 @@
 ---
-title: cpow、cpowf、cpowl | Microsoft Docs
-ms.custom: ''
+title: cpow、cpowf、cpowl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cpow
 - cpowf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cpow
 - complex/cpowf
 - complex/copwl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cpow function
 - cpowf function
 - complex/cpowl function
 ms.assetid: 83fe2187-22b7-4295-ab16-4d77abdbb80b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8311b4c8bd8c082b03f01a2df253c55d170c560e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 588c437a01237de297e1db31fb2c507eb1145d90
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394778"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562483"
 ---
 # <a name="cpow-cpowf-cpowl"></a>cpow、cpowf、cpowl
 
@@ -82,15 +71,15 @@ _Lcomplex cpowl(
 
 ## <a name="return-value"></a>傳回值
 
-值*x*乘冪*y*與分支的剪下*x*負真實的軸。
+值*x*的乘冪*y*使用的分支部分*x*沿著負實軸。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**cpow**採用並傳回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程式中， **cpow**一律採用並傳回 **_Dcomplex**值。
+因為 c + + 允許多載，您可以呼叫多載**cpow**採用並傳回 **_Fcomplex**並 **_Lcomplex**值。 在 C 程式中， **cpow**一律採用並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
-|常式|C 標頭|C++ 標頭|
+|常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
 |**cpow**， **cpowf**， **cpowl**|\<complex.h>|\<ccomplex>|
 

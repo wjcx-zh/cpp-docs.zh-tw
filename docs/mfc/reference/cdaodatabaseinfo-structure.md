@@ -1,28 +1,18 @@
 ---
-title: CDaoDatabaseInfo 結構 |Microsoft Docs
-ms.custom: ''
+title: CDaoDatabaseInfo 結構
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDaoDatabaseInfo
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDaoDatabaseInfo structure [MFC]
 - DAO (Data Access Objects), Databases collection
 ms.assetid: 68e9e0da-8382-4fc6-8115-1b1519392ddb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2c70e903e66a34bcb05302ac3732850f9dbb8fa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 43095707718fe00a746d082d30c689dbd05292bc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380785"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564784"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo 結構
 

@@ -1,25 +1,15 @@
 ---
-title: 撰寫例外狀況篩選條件 |Microsoft Docs
-ms.custom: ''
+title: 撰寫例外狀況篩選條件
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - exception handling [C++], filters
 ms.assetid: 47fc832b-a707-4422-b60a-aaefe14189e5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9a5a855abafb91ece594eb3b079191153c846cf8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2bc159247604877fb22ff6084e1fda36946561a1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46104565"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478347"
 ---
 # <a name="writing-an-exception-filter"></a>撰寫例外狀況篩選條件
 

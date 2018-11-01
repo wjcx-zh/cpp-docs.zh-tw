@@ -1,10 +1,6 @@
 ---
-title: 編譯器錯誤 C3000 到 C3099 |Microsoft Docs
-ms.custom: ''
+title: 編譯器錯誤 C3000 到 C3099
 ms.date: 11/17/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3051
 - C3061
@@ -41,19 +37,13 @@ helpviewer_keywords:
 - C3092
 - C3093
 - C3098
-dev_langs:
-- C++
 ms.assetid: 01b7b9cb-b351-4b5a-8cb0-1fcddb08d2ab
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7565a2656bcb5c9ad10c83179b563423d42be7b5
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b7a01c35086fe503e39af2af60655c03301dc7c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44319041"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50475487"
 ---
 # <a name="compiler-errors-c3000-through-c3099"></a>編譯器錯誤 C3000 到 C3099
 

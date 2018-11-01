@@ -1,10 +1,6 @@
 ---
-title: _set_controlfp | Microsoft Docs
-ms.custom: ''
+title: _set_controlfp
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_controlfp
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - set_controlfp
 - _set_controlfp
-dev_langs:
-- C++
 helpviewer_keywords:
 - set_controlfp function
 - floating-point functions, setting control word
 - _set_controlfp function
 ms.assetid: e0689d50-f68a-4028-a9c1-fb23eedee4ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2647e9719c2aa3fe303393fcc1da55de0385581
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1187502f09849d7ca4d8e595c237cfa511d00c6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406416"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50498992"
 ---
 # <a name="setcontrolfp"></a>_set_controlfp
 
@@ -68,13 +58,13 @@ void __cdecl _set_controlfp(
 
 ## <a name="remarks"></a>備註
 
-**_Set_controlfp**函數很相似 **_control87**，但它只會設定浮點控制字組*newControl*。 值中的位元表示浮點控制狀態。 浮點控制狀態可讓程式變更浮點數學套件中的精確度、四捨五入和無限大模式。 您也可以加上遮罩或取消遮罩使用浮點例外狀況 **_set_controlfp**。 如需詳細資訊，請參閱 [_control87、_controlfp、\__control87_2](control87-controlfp-control87-2.md)。
+**_Set_controlfp**函數很相似 **_control87**，但它只會設定浮點控制字組*newControl*。 值中的位元表示浮點控制狀態。 浮點控制狀態可讓程式變更浮點數學套件中的精確度、四捨五入和無限大模式。 您也可以加上遮罩或取消遮罩浮點例外狀況，使用 **_set_controlfp**。 如需詳細資訊，請參閱 [_control87、_controlfp、\__control87_2](control87-controlfp-control87-2.md)。
 
-此函式已被取代，以編譯時[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)因為 common language runtime 只支援預設的浮點精確度。
+進行編譯時，此函式已被取代[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)因為 common language runtime 只支援預設的浮點精確度。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|相容性|
+|常式傳回的值|必要的標頭|相容性|
 |-------------|---------------------|-------------------|
 |**_set_controlfp**|\<float.h>|僅限 x86 處理器|
 

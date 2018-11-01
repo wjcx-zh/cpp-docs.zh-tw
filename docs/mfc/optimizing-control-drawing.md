@@ -1,25 +1,15 @@
 ---
-title: 最佳化控制項繪圖 |Microsoft Docs
-ms.custom: ''
+title: 最佳化控制項繪圖
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 29ff985d-9bf5-4678-b62d-aad12def75fb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7cf929f55b2333bf40cf6fd4ac2588ce17842312
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9096c43088c89ceef9e57d0e3a994340f9115d6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377777"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487343"
 ---
 # <a name="optimizing-control-drawing"></a>最佳化控制項繪圖
 

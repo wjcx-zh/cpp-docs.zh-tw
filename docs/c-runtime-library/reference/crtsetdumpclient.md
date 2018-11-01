@@ -1,10 +1,6 @@
 ---
-title: _CrtSetDumpClient | Microsoft Docs
-ms.custom: ''
+title: _CrtSetDumpClient
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetDumpClient
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetDumpClient
 - CrtSetDumpClient
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtSetDumpClient function
 - CrtSetDumpClient function
 ms.assetid: f3dd06d0-c331-4a12-b68d-25378d112033
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8d5fecc90b4b7259f1440a0a0d86277c769c4e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 09f319f6298dbec6b229b2923bd86fc9b50314de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397219"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50470742"
 ---
 # <a name="crtsetdumpclient"></a>_CrtSetDumpClient
 
-安裝應用程式定義的函式傾印 **_CLIENT_BLOCK**輸入記憶體區塊 （僅限偵錯版本）。
+安裝的應用程式定義的函式傾印 **_CLIENT_BLOCK**類型記憶體區塊 （僅限偵錯版本）。
 
 ## <a name="syntax"></a>語法
 
@@ -60,25 +50,25 @@ _CRT_DUMP_CLIENT _CrtSetDumpClient( _CRT_DUMP_CLIENT dumpClient );
 
 ## <a name="remarks"></a>備註
 
-**_CrtSetDumpClient**函式可讓應用程式以攔截它自己的函式來傾印物件儲存在 **_CLIENT_BLOCK**記憶體區塊至 C 執行階段偵錯記憶體傾印程序。 如此一來，每次偵錯傾印函式例如[_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md)或[_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md)傾印 **_CLIENT_BLOCK**記憶體區塊，應用程式也會呼叫傾印函式。 **_CrtSetDumpClient**應用程式提供簡單的方法，偵測記憶體流失和驗證或報告中儲存的資料內容 **_CLIENT_BLOCK**區塊。 當[_DEBUG](../../c-runtime-library/debug.md)未定義時，呼叫 **_CrtSetDumpClient**會在前置處理期間移除。
+**_CrtSetDumpClient**函式可讓應用程式將自己的函式，來傾印物件儲存在連結 **_CLIENT_BLOCK**到 C 執行階段的記憶體區塊偵錯記憶體傾印處理序。 如此一來，每當偵錯傾印函式這類[_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md)或是[_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md)傾印 **_CLIENT_BLOCK**記憶體區塊，應用程式傾印函式也會呼叫。 **_CrtSetDumpClient**提供一個簡單的方法中的應用程式，偵測記憶體流失和驗證或報告中所儲存資料的內容 **_CLIENT_BLOCK**區塊。 當[_DEBUG](../../c-runtime-library/debug.md)未定義，呼叫 **_CrtSetDumpClient**會在前置處理期間移除。
 
-**_CrtSetDumpClient**函式會安裝新的應用程式定義的傾印函式中指定*dumpClient*並傳回先前定義的傾印函式。 用戶端區塊傾印函式的範例如下所示：
+**_CrtSetDumpClient**函式會安裝新的應用程式定義傾印函式中指定*dumpClient*並傳回先前定義的傾印函式。 用戶端區塊傾印函式的範例如下所示：
 
 ```C
 void DumpClientFunction( void *userPortion, size_t blockSize );
 ```
 
-*UserPortion*引數是指標的記憶體區塊的使用者資料部分的開頭和*blockSize*指定配置的記憶體大小區塊以位元組為單位。 用戶端區塊傾印函式必須傳回**void**。 傳遞至用戶端傾印函式的指標 **_CrtSetDumpClient**的型別 **_CRT_DUMP_CLIENT**、 在 crtdbg.h 裡定義：
+*UserPortion*引數是記憶體區塊的使用者資料部分開頭的指標並*blockSize*指定配置的記憶體大小區塊以位元組為單位。 用戶端區塊傾印函式必須傳回**void**。 要傳遞至用戶端傾印函式的指標 **_CrtSetDumpClient**別的 **_CRT_DUMP_CLIENT**，定義在 crtdbg.h 裡：
 
 ```C
 typedef void (__cdecl *_CRT_DUMP_CLIENT)( void *, size_t );
 ```
 
-如需有關運作的函式 **_CLIENT_BLOCK**輸入記憶體區塊，請參閱[用戶端區塊攔截函式](/visualstudio/debugger/client-block-hook-functions)。 [_CrtReportBlockType](crtreportblocktype.md) 函式可用來傳回區塊類型和子類型的相關資訊。
+如需有關運作的函式 **_CLIENT_BLOCK**類型記憶體區塊，請參閱[用戶端區塊攔截函式](/visualstudio/debugger/client-block-hook-functions)。 [_CrtReportBlockType](crtreportblocktype.md) 函式可用來傳回區塊類型和子類型的相關資訊。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_CrtSetDumpClient**|\<crtdbg.h>|
 

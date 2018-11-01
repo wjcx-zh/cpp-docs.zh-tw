@@ -1,23 +1,15 @@
 ---
-title: 如何： 建立和使用 weak_ptr 執行個體 |Microsoft Docs
+title: 如何：建立和使用 weak_ptr 執行個體
 ms.custom: how-to
 ms.date: 07/12/2018
-ms.technology:
-- cpp-language
 ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7fe982762c6e6c44b8f1923d27779bcfd6140225
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c3f788a23acf30fac84757f8cd4430f128df67af
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087696"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478191"
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>如何：建立和使用 weak_ptr 執行個體
 

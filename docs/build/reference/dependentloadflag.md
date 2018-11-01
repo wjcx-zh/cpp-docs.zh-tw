@@ -1,31 +1,21 @@
 ---
 title: / DEPENDENTLOADFLAG （設定預設相依載入旗標）
 description: /DEPENDENTLOADFLAG 選項會設定預設旗標適用於使用 LoadLibrary 載入的 Dll
-ms.custom: ''
 ms.date: 05/18/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - dependentloadflag
-dev_langs:
-- C++
 helpviewer_keywords:
 - LINK tool [C++], dependent load flags
 - -DEPENDENTLOADFLAG linker option
 - linker [C++], DEPENDENTLOADFLAG
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0b6d5099e90e4a4bf83874fe8e761280bc277830
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 80065bb4e67674c49761d0832395ae535bbfbf24
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688113"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604257"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/ DEPENDENTLOADFLAG （設定預設相依載入旗標）
 

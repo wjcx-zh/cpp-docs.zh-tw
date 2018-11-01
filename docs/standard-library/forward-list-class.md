@@ -1,10 +1,6 @@
 ---
-title: forward_list 類別 | Microsoft Docs
-ms.custom: ''
+title: forward_list 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - forward_list/std::forward_list
 - forward_list/std::forward_list::allocator_type
@@ -44,8 +40,6 @@ f1_keywords:
 - forward_list/std::forward_list::splice_after
 - forward_list/std::forward_list::swap
 - forward_list/std::forward_list::unique
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::forward_list
 - std::forward_list::allocator_type
@@ -86,16 +80,12 @@ helpviewer_keywords:
 - std::forward_list::swap
 - std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 017d5d5c2934fa687f91898b896a0ad6f1dcab6f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: a818be72266e2cb8471c2eb29a6e058b8dd3ef7d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102573"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50612039"
 ---
 # <a name="forwardlist-class"></a>forward_list 類別
 
@@ -113,7 +103,7 @@ class forward_list
 
 |參數|描述|
 |---------------|-----------------|
-|*類型*|要儲存在 forward_list 中的項目資料類型。|
+|*Type*|要儲存在 forward_list 中的項目資料類型。|
 |*配置器*|預存配置器物件，可封裝有關 forward_list 之記憶體配置和解除配置的詳細資料。 這是選擇性參數。 預設值為 allocator< `Type`>。|
 
 ## <a name="remarks"></a>備註
@@ -228,7 +218,7 @@ void assign(InputIterator First, InputIterator Last);
 |*最後一個*|取代範圍的結尾。|
 |*count*|要指派的元素數目。|
 |*val*|要指派給每個元素的值。|
-|*類型*|值的類型。|
+|*Type*|值的類型。|
 |* IList'|要複製的 initializer_list。|
 
 ### <a name="remarks"></a>備註
@@ -884,7 +874,7 @@ void splice_after(
 *Where*<br/>
 目的地 forward_list 中的位置，要在其後面插入。
 
-*Source*<br/>
+*來源*<br/>
 要插入至目的地 forward_list 的來源 forward_list。
 
 *Iter*<br/>

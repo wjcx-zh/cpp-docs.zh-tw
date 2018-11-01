@@ -1,15 +1,9 @@
 ---
-title: '加法類運算子: + 和-|Microsoft Docs'
-ms.custom: ''
+title: 加法類運算子：+ 和 -
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - +
 - '-'
-dev_langs:
-- C++
 helpviewer_keywords:
 - operators [C++], addition
 - subtraction operator [C++], additive operators
@@ -18,23 +12,19 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dd087905c46fbbfa83f2da567074b6d76d4fc679
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0da5a5e50f20972ab29c0318c0b3bbac1ab3cbb1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136253"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441284"
 ---
 # <a name="additive-operators--and--"></a>加法類運算子：+ 和 -
 
 ## <a name="syntax"></a>語法
 
 ```
-expression + expression 
+expression + expression 
 expression - expression
 ```
 

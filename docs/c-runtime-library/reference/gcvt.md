@@ -1,10 +1,6 @@
 ---
-title: _gcvt | Microsoft Docs
-ms.custom: ''
+title: _gcvt
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _gcvt
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _gcvt
-dev_langs:
-- C++
 helpviewer_keywords:
 - _gcvt function
 - _CVTBUFSIZE
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d824d42a102aee68619d602044c39f398af177dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9cf966b455af601d09b4444a5c590e305a6681c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400976"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430858"
 ---
 # <a name="gcvt"></a>_gcvt
 
@@ -72,19 +62,19 @@ char *_gcvt(
 
 ## <a name="return-value"></a>傳回值
 
-**_gcvt**傳回數字的字串的指標。
+**_gcvt**讓指標回到個數字的字串。
 
 ## <a name="remarks"></a>備註
 
-**_Gcvt**函數將轉換成浮點*值*（其中包含小數點和可能的正負號位元組） 為字元字串，並將字串中的*緩衝區*。 *緩衝區*應該要夠大，無法容納轉換的值加上會自動予以附加結束 null 字元。 如果緩衝區大小為*位數*+ 1 時，此函式會覆寫緩衝區結尾。 這是因為已轉換的字串包含小數點，且可以包含符號和指數的資訊。 沒有提供溢位。 **_gcvt**嘗試產生*位數*十進位格式的數字。 如果不行，它會產生*位數*指數 」 格式的數字。 可能於轉換中隱藏尾端零。
+**_Gcvt**函式會轉換為浮點*值*（其中包含小數點和可能的正負號位元組） 為字元字串，並將儲存在字串*緩衝區*。 *緩衝區*應該大到足以容納轉換的值加上結束的 null 字元，會自動予以附加。 如果緩衝區大小，為*數字*+ 1，此函式會覆寫緩衝區結尾。 這是因為已轉換的字串包含小數點，且可以包含符號和指數的資訊。 沒有提供溢位。 **_gcvt**嘗試產生*數字*十進位格式的數字。 如果不行，它會產生*數字*指數 」 格式的數字。 可能於轉換中隱藏尾端零。
 
-A*緩衝區*長度的 **_CVTBUFSIZE**就足以應付任何浮點值。
+A*緩衝區*的長度 **_CVTBUFSIZE**是足可供任何浮點值。
 
-這個函式會驗證它的參數。 如果*緩衝區*是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**至**EINVAL**並傳回**NULL**。
+這個函式會驗證它的參數。 如果*緩衝區*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**要**EINVAL** ，並傳回**NULL**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_gcvt**|\<stdlib.h>|
 

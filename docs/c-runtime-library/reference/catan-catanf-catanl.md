@@ -1,11 +1,6 @@
 ---
-title: catan、catanf、catanl | Microsoft Docs
-ms.custom: ''
+title: catan、catanf、catanl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - catan
 - catanf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/catan
 - complex/catanf
 - complex/catanl
-dev_langs:
-- C++
 helpviewer_keywords:
 - catan function
 - catanf function
 - catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a66781ad1b9962a8d6a1792ad0b77abf853f2559
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 99acdccca1b83be2fa667b5e5ef6e5181dc1ba81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393933"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455220"
 ---
 # <a name="catan-catanf-catanl"></a>catan、catanf、catanl
 
-擷取複數的虛數座標軸的間隔 [-1; + 1] 以外的分支剪下的反正切值。
+擷取複數的虛數軸的間隔 [-1; + 1] 以外的分支切割的反正切值。
 
 ## <a name="syntax"></a>語法
 
@@ -72,15 +61,15 @@ _Lcomplex catan( _Lcomplex z );  // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-反正切*z*，以弧度為單位。 結果是虛數座標軸和間隔中未繫結 [-π/2; + π/2] 真實的軸。
+反正切*z*，以弧度為單位。 結果是未繫結，虛數軸中，並且在間隔 [-π/2; + π/2] 在實數軸。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**catan**採用並傳回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程式中， **catan**一律採用並傳回 **_Dcomplex**值。
+因為 c + + 允許多載，您可以呼叫多載**catan**採用並傳回 **_Fcomplex**並 **_Lcomplex**值。 在 C 程式中， **catan**一律採用並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
-|常式|C 標頭|C++ 標頭|
+|常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
 |**catan**， **catanf**， **catanl**|\<complex.h>|\<ccomplex>|
 

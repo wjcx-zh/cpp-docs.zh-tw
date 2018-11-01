@@ -1,12 +1,6 @@
 ---
-title: 啟用： 動詞命令 |Microsoft Docs
-ms.custom: ''
+title: 啟用：動詞命令
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - verbs [MFC]
 - OLE [MFC], activation
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - Primary verb [MFC]
 - OLE activation {MFC]
 ms.assetid: eb56ff23-1de8-43ad-abeb-dc7346ba7b70
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 63b21e4d7f40d87b35d2ea5650f86801294affaa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f6774f1de1e7abd318e5cd38fed1a2c805270c15
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425713"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443321"
 ---
 # <a name="activation-verbs"></a>啟用：動詞命令
 

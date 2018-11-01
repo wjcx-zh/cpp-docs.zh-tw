@@ -1,10 +1,6 @@
 ---
-title: imaxdiv | Microsoft Docs
-ms.custom: ''
+title: imaxdiv
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - imaxdiv
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - imaxdiv
-dev_langs:
-- C++
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db2a57e9b91672d39fbce5eaee061043604a0998
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 23067b2028fc11193fae707e25165fb0ce754515
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399692"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434454"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -53,7 +43,7 @@ imaxdiv_t imaxdiv(
 
 ### <a name="parameters"></a>參數
 
-*numer*<br/>
+*號碼*<br/>
 分子。
 
 *denom*<br/>
@@ -61,15 +51,15 @@ imaxdiv_t imaxdiv(
 
 ## <a name="return-value"></a>傳回值
 
-**imaxdiv**的型別引數呼叫[intmax_t](../../c-runtime-library/standard-types.md)傳回型別的結構[imaxdiv_t](../../c-runtime-library/standard-types.md) ，包含商和餘數。
+**imaxdiv**類型的引數呼叫[intmax_t](../../c-runtime-library/standard-types.md)會傳回類型的結構[imaxdiv_t](../../c-runtime-library/standard-types.md)包含商數和餘數。
 
 ## <a name="remarks"></a>備註
 
-**Imaxdiv**函式除以*numer*由*denom* ，並藉此計算商數及餘數。 **Imaxdiv_t**結構包含商數**intmax_t** **q u o t**，其餘部分，及**intmax_t** **rem**.商數的正負號與數學商數相同。 其絕對值是小於數學商數絕對值的最大整數。 如果分母為 0，程式會終止並出現錯誤訊息。
+**Imaxdiv**函式除以*號碼*由*denom* ，並藉此計算商數和餘數。 **Imaxdiv_t**結構包含商數**intmax_t** **q u o t**，和餘數**intmax_t** **rem**.商數的正負號與數學商數相同。 其絕對值是小於數學商數絕對值的最大整數。 如果分母為 0，程式會終止並出現錯誤訊息。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**imaxdiv**|\<inttypes.h>|
 

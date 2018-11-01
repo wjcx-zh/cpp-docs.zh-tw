@@ -1,25 +1,15 @@
 ---
-title: 匯出字串類別使用 CStringT |Microsoft Docs
-ms.custom: ''
+title: 使用 CStringT 匯出字串類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - CStringT class, exporting strings
 ms.assetid: bdfc441e-8d2a-461c-9885-46178066c09f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f2d77516ae53b0ee1c4f39e4d8f095848aa00acc
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 8c46ae040e64b999c570e99f3bd18cc7d5bc36a1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48889967"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432444"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>使用 CStringT 匯出字串類別
 

@@ -1,26 +1,16 @@
 ---
-title: 建立日期和時間選擇器控制項 |Microsoft Docs
-ms.custom: ''
+title: 建立日期時間選擇器控制項
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - DateTimePicker control [MFC], creating
 - CDateTimeCtrl class [MFC], creating
 ms.assetid: 764ec2fb-98cd-478b-a5f2-d63f0bb12279
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 864d6cfef599da61238baa92f7ab01a8ad82229d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27a3a654a73300b7dd667d422fe84c73de524f3c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393291"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456117"
 ---
 # <a name="creating-the-date-and-time-picker-control"></a>建立日期時間選擇器控制項
 

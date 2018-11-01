@@ -1,10 +1,6 @@
 ---
-title: strerror_s、_strerror_s、_wcserror_s、__wcserror_s | Microsoft Docs
-ms.custom: ''
+title: strerror_s、_strerror_s、_wcserror_s、__wcserror_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __wcserror_s
 - _strerror_s
@@ -31,8 +27,6 @@ f1_keywords:
 - tcserror_s
 - strerror_s
 - _strerror_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - __wcserror_s function
 - error messages, printing
@@ -45,16 +39,12 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 362716963911a29a9b3558c387e69c4cd91b369e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00ff9d0df1a78d07eaa509201fb998b30396cc4c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415578"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429636"
 ---
 # <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s、_strerror_s、_wcserror_s、__wcserror_s
 
@@ -127,12 +117,12 @@ errno_t __wcserror_s(
 
 |*buffer*|*numberOfElements*|*strErrMsg*|內容*緩衝區*|
 |--------------|------------------------|-----------------|--------------------------|
-|**NULL**|任何|任何|N/A|
-|任何|0|任何|未修改|
+|**NULL**|any|any|N/A|
+|any|0|any|未修改|
 
 ## <a name="remarks"></a>備註
 
-**Strerror_s**函式對應*errnum*為錯誤訊息字串，傳回的字串中*緩衝區*。 **_strerror_s**不接受的錯誤號碼; 它會使用目前的值**errno**來判斷適當的訊息。 既不**strerror_s**也 **_strerror_s**實際上會列印訊息： 您需要為此，呼叫的輸出函式，例如[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+**Strerror_s**函式對應*errnum*為錯誤訊息字串，傳回的字串*緩衝區*。 **_strerror_s**不接受錯誤號碼; 它會使用目前的值**errno**來判斷適當的訊息。 既不**strerror_s**也不 **_strerror_s**實際上會列印訊息： 為此，您需要這類呼叫的輸出函式[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -142,17 +132,17 @@ if (( _access( "datafile",2 )) == -1 )
 }
 ```
 
-如果*strErrMsg*是**NULL**， **_strerror_s**傳回的字串中*緩衝區*包含最後一次程式庫呼叫的系統錯誤訊息會產生錯誤。 錯誤訊息字串會以新行字元 ('\n') 為結尾。 如果*strErrMsg*不等於**NULL**，然後 **_strerror_s**傳回的字串中*緩衝區*（依順序），其中包含您的字串訊息冒號、 空格、 最後一次產生錯誤，而且新行字元的程式庫呼叫的系統錯誤訊息。 您的字串訊息最多可以是 94 個字元長度。
+如果*strErrMsg*是**NULL**， **_strerror_s**傳回的字串*緩衝區*包含最後一次程式庫呼叫的系統錯誤訊息產生錯誤。 錯誤訊息字串會以新行字元 ('\n') 為結尾。 如果*strErrMsg*不等於**NULL**，然後 **_strerror_s**傳回的字串*緩衝區*（依順序），其中包含您的字串訊息冒號、 空格、 最後一次產生錯誤，而新行字元的程式庫呼叫的系統錯誤訊息。 您的字串訊息最多可以是 94 個字元長度。
 
-這些函式截斷的錯誤訊息，如果它的長度超過*numberOfElements* -1。 在產生的字串*緩衝區*是一律以 null 終止。
+這些函式會截斷錯誤訊息，如果其長度超過*numberOfElements* -1。 在產生的字串*緩衝區*是一律以 null 終止。
 
-實際的錯誤號碼 **_strerror_s**儲存在變數[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 系統錯誤訊息是透過變數 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 來存取，這是依錯誤號碼排序的訊息陣列。 **_strerror_s**存取適當的錯誤訊息使用**errno**為變數的索引值 **_sys_errlist**。 變數的值[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)定義中的項目數目上限為 **_sys_errlist**陣列。 若要產生準確的結果，呼叫 **_strerror_s**之後立即在程式庫常式傳回錯誤。 否則，後續呼叫**strerror_s**或 **_strerror_s**可以覆寫**errno**值。
+實際的錯誤號碼 **_strerror_s**儲存在變數[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 系統錯誤訊息是透過變數 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 來存取，這是依錯誤號碼排序的訊息陣列。 **_strerror_s**藉由使用會存取適當的錯誤訊息**errno**值為變數的索引 **_sys_errlist**。 變數的值[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)中的項目數目上限指 **_sys_errlist**陣列。 若要產生精確的結果，呼叫 **_strerror_s**之後立即在程式庫常式傳回錯誤。 否則，後續呼叫**strerror_s**或是 **_strerror_s**可以覆寫**errno**值。
 
-**_wcserror_s**和 **__wcserror_s**是寬字元版本的**strerror_s**和 **_strerror_s**分別。
+**_wcserror_s**並 **__wcserror_s**是寬字元版本**strerror_s**並 **_strerror_s**分別。
 
-這些函式會驗證它們的參數。 如果緩衝區**NULL**或大小參數為 0，如果無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回**EINVAL**並設定**errno**至**EINVAL**。
+這些函式會驗證它們的參數。 如果緩衝區**NULL**或大小參數為 0，如果無效的參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則函式會傳回**EINVAL**並設定**errno**來**EINVAL**。
 
-**_strerror_s**， **_wcserror_s**，和 **__wcserror_s**不屬於 ANSI 定義，但會改為 Microsoft 擴充功能。 不要使用它們其中攜;對於 ANSI 相容性，使用**strerror_s**改為。
+**_strerror_s**， **_wcserror_s**，以及 **__wcserror_s**不屬於 ANSI 定義，而是 Microsoft 擴充功能。 請勿使用它們的可攜性想要的地方;基於 ANSI 相容性，使用**strerror_s**改。
 
 在 C++ 中，使用這些函式已透過範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -166,7 +156,7 @@ if (( _access( "datafile",2 )) == -1 )
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**strerror_s**， **_strerror_s**|\<string.h>|
 |**_wcserror_s**， **__wcserror_s**|\<string.h> 或 \<wchar.h>|

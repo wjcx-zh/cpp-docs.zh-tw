@@ -1,10 +1,6 @@
 ---
-title: _get_wpgmptr | Microsoft Docs
-ms.custom: ''
+title: _get_wpgmptr
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_wpgmptr
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - get_wpgmptr
 - _get_wpgmptr
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wpgmptr global variable
 - get_wpgmptr function
 - wpgmptr global variable
 - _get_wpgmptr function
 ms.assetid: a77cdd13-2303-4b7c-9a60-8debdbef2011
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9393351174477a4da43d0b3bd49e107430e68ece
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0e49bc35f43ed6ed5a5f86e6c76c51854ab71add
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398766"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436331"
 ---
 # <a name="getwpgmptr"></a>_get_wpgmptr
 
@@ -49,8 +39,8 @@ ms.locfileid: "32398766"
 ## <a name="syntax"></a>語法
 
 ```C
-errno_t _get_wpgmptr( 
-   wchar_t **pValue 
+errno_t _get_wpgmptr( 
+   wchar_t **pValue 
 );
 ```
 
@@ -61,15 +51,15 @@ errno_t _get_wpgmptr(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，傳回零；如果失敗，則傳回錯誤碼。 如果*pValue*是**NULL**，會叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**至**EINVAL**並傳回**EINVAL**。
+如果成功，傳回零；如果失敗，則傳回錯誤碼。 如果*pValue*是**NULL**，會叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**要**EINVAL** ，並傳回**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-只能呼叫 **_get_wpgmptr**如果您的程式有廣泛的進入點，如**wmain()** 或**wWinMain()**。 **_Wpgmptr**全域變數包含寬字元字串的處理序相關聯的可執行檔的完整路徑。 如需詳細資訊，請參閱 [_pgmptr、_wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)。
+只呼叫 **_get_wpgmptr**如果您的程式具有的各種進入點，例如**wmain()** 或是**wWinMain()**。 **_Wpgmptr**全域變數包含寬字元字串的處理序相關聯的可執行檔的完整路徑。 如需詳細資訊，請參閱 [_pgmptr、_wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_get_wpgmptr**|\<stdlib.h>|
 

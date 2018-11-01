@@ -1,10 +1,6 @@
 ---
-title: _ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l | Microsoft Docs
-ms.custom: ''
+title: _ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbclower
 - _ismbclower_l
@@ -26,8 +22,6 @@ apitype: DLLExport
 f1_keywords:
 - _ismbcupper
 - _ismbclower
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbcupper function
 - ismbclower function
@@ -38,23 +32,19 @@ helpviewer_keywords:
 - ismbclower_l function
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4ef7b21cc10ca5e72a5054e34b0e228be89d74cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29a1e97f4583808931e5228a6905aed7c0a62702
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402230"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431859"
 ---
 # <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l
 
 檢查多位元組字元是大寫或小寫。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -85,24 +75,24 @@ int _ismbcupper_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果字元符合測試條件，這些常式都會傳回非零值，如果不符合，則傳回 0。 如果*c*< = 255，而且沒有相對應 **_ismbb**常式 (例如， **_ismbcalnum**對應至 **_ismbbalnum**)，結果會是對應的傳回值 **_ismbb**常式。
+如果字元符合測試條件，這些常式都會傳回非零值，如果不符合，則傳回 0。 如果*c*< = 255 且有對應 **_ismbb**常式 (例如 **_ismbcalnum**對應至 **_ismbbalnum**)，結果是對應的傳回值 **_ismbb**常式。
 
 ## <a name="remarks"></a>備註
 
 這些函式每一個都會測試指定的多位元組字元是否符合指定的條件。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳入的地區設定而不是目前的地區設定的地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+使用這些函式的版本 **_l**尾碼都相同，不同之處在於使用傳入的地區設定而不是目前的地區設定其地區設定相關行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-|常式|測試條件|字碼頁 932 範例|
+|常式傳回的值|測試條件|字碼頁 932 範例|
 |-------------|--------------------|---------------------------|
-|**_ismbclower**|小寫字母|傳回非零，才*c*是 ASCII 小寫英文字母的單一位元組表示法： 0x61 < =*c*< = 0x7A。|
-|**_ismbclower_l**|小寫字母|傳回非零，才*c*是 ASCII 小寫英文字母的單一位元組表示法： 0x61 < =*c*< = 0x7A。|
-|**_ismbcupper**|大寫字母|傳回非零，才*c*是 ASCII 大寫英文字母的單一位元組表示法： 0x41 < =*c*< = 0x5A。|
-|**_ismbcupper_l**|大寫字母|傳回非零，才*c*是 ASCII 大寫英文字母的單一位元組表示法： 0x41 < =*c*< = 0x5A。|
+|**_ismbclower**|小寫字母|傳回非零值，才*c*是 ASCII 小寫英文字母的單一位元組表示法： 0x61 < =*c*< = 0x7A。|
+|**_ismbclower_l**|小寫字母|傳回非零值，才*c*是 ASCII 小寫英文字母的單一位元組表示法： 0x61 < =*c*< = 0x7A。|
+|**_ismbcupper**|大寫字母|傳回非零值，才*c*是 ASCII 大寫英文字母的單一位元組表示法： 將 0x41 向 < =*c*< lt;=0x5a。|
+|**_ismbcupper_l**|大寫字母|傳回非零值，才*c*是 ASCII 大寫英文字母的單一位元組表示法： 將 0x41 向 < =*c*< lt;=0x5a。|
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_ismbclower**|\<mbstring.h>|
 |**_ismbclower_l**|\<mbstring.h>|

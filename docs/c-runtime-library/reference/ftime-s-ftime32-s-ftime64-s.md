@@ -1,10 +1,6 @@
 ---
-title: _ftime_s、_ftime32_s、_ftime64_s | Microsoft Docs
-ms.custom: ''
+title: _ftime_s、_ftime32_s、_ftime64_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ftime_s
 - _ftime64_s
@@ -29,8 +25,6 @@ f1_keywords:
 - _ftime32_s
 - ftime32_s
 - ftime64_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftime32_s function
 - ftime_s function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - _ftime_s function
 - _ftime32_s function
 ms.assetid: d03080d9-a520-45be-aa65-504bdb197e8b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1a23b31fb88b60b05e587bf62ab07ec7e72de869
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 696b461cdb6b8d58bb668b996a99c5d0bb774d6c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402984"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435473"
 ---
 # <a name="ftimes-ftime32s-ftime64s"></a>_ftime_s、_ftime32_s、_ftime64_s
 
@@ -75,20 +65,20 @@ errno_t _ftime64_s( struct __timeb64 *timeptr );
 
 ## <a name="remarks"></a>備註
 
-**_Ftime_s**函式取得目前的當地時間，並將它儲存在結構中所指*timeptr*。 **_Timeb**， **__timeb32**，和 **__timeb64** SYS\Timeb.h 中所定義的結構。 它們包含下表中所列出的四個欄位。
+**_Ftime_s**函式取得目前的當地時間，並將它儲存在結構中所指*timeptr*。 **_Timeb**， **__timeb32**，並 **__timeb64**結構於 SYS\Timeb.h 中定義。 它們包含下表中所列出的四個欄位。
 
 |欄位|描述|
 |-|-|
 |**dstflag**|若日光節約時間目前於本地時區已生效，則為非零。 (如需如何判斷日光節約時間的說明，請參閱 [_tzset](tzset.md)。)|
 |**millitm**|秒數的分數，以毫秒為單位。|
 |**time**|自國際標準時間 (UTC) 1970 年 1 月 1 日午夜 (00:00:00) 以來的時間，以秒為單位。|
-|**timezone**|UTC 和當地時間之間的時差，向西推進，以分鐘為單位。 值**時區**從全域變數的值會設定 **_timezone** (請參閱 **_tzset**)。|
+|**timezone**|UTC 和當地時間之間的時差，向西推進，以分鐘為單位。 值**時區**會設定全域變數的值從 **_timezone** (請參閱 **_tzset**)。|
 
-**_Ftime64_s**函式，以使用 **__timeb64**結構時，請允許檔案建立日期，以透過 23:59:59，3000 年 12 月 31 日 UTC; 設定來表示，而 **_ftime32_s**僅代表 23:59:59 2038 年 1 月 18 日，UTC 日期。 1970 年 1 月 1 日午夜是所有這些函式的日期範圍下限。
+**_Ftime64_s**函式，以使用 **__timeb64**結構，可讓檔案建立日期最高表示為 23:59:59，3000 年 12 月 31 日 UTC; 而 **_ftime32_s**僅代表到 23:59:59 2038 年 1 月 18 日 UTC 的日期。 1970 年 1 月 1 日午夜是所有這些函式的日期範圍下限。
 
-**_Ftime_s**函數即相當於 **_ftime64_s**，和 **_timeb**包含 64 位元時間，除非 **_USE_32BIT_TIME_T**是定義，在此情況下舊的行為是作用中。**_ftime_s**使用 32 位元時間和 **_timeb**包含 32 位元時間。
+**_Ftime_s**函式相當於 **_ftime64_s**，並 **_timeb**包含 64 位元時間，除非 **_USE_32BIT_TIME_T**是定義，在此情況下會採用舊版行為生效;**_ftime_s**會使用 32 位元時間並 **_timeb**包含 32 位元時間。
 
-**_ftime_s**會驗證其參數。 如果傳遞 null 做為指標*timeptr*，函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會將**errno**至**EINVAL**。
+**_ftime_s**會驗證其參數。 如果傳遞 null 做為指標*timeptr*，函式會叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則函式會設定**errno**要**EINVAL**。
 
 ## <a name="requirements"></a>需求
 

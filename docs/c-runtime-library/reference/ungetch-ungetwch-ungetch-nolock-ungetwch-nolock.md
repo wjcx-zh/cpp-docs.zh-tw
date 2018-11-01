@@ -1,10 +1,6 @@
 ---
-title: _ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock | Microsoft Docs
-ms.custom: ''
+title: _ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ungetch_nolock
 - _ungetwch_nolock
@@ -34,8 +30,6 @@ f1_keywords:
 - _ungettch_nolock
 - _ungettch
 - _ungetwch_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ungetch function
 - ungetwch function
@@ -50,23 +44,19 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c9c6f09c3bd6ce679662d9ea77f8a7b360521b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7407d26606bd5242c430961faa4f60090b83f036
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411292"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430299"
 ---
 # <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 
 推送回讀取自主控台的最後一個字元。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -92,11 +82,11 @@ wint_t _ungetwch_nolock(
 
 ## <a name="return-value"></a>傳回值
 
-這兩個函數傳回的字元*c*如果成功的話。 如果沒有發生錯誤， **_ungetch**傳回值的**EOF**和 **_ungetwch**傳回**WEOF**。
+這兩個函式會傳回字元*c*如果成功。 如果沒有發生錯誤時， **_ungetch**會傳回值**EOF**並 **_ungetwch**傳回**WEOF**。
 
 ## <a name="remarks"></a>備註
 
-這些函式推入字元*c*回到主控台中，造成*c*要讀取的下一個字元 **_getch**或 **_getche** （或 **_getwch**或 **_getwche**)。 **_ungetch**和 **_ungetwch**如果會多次呼叫下一個要讀取之前失敗。 *c*引數不可以是**EOF** (或**WEOF**)。
+這些函式推播字元*c*回到主控台中，造成*c*要讀取的下一個字元 **_getch**或是 **_getche** （或 **_getwch**或是 **_getwche**)。 **_ungetch**並 **_ungetwch**如果它們會在下次讀取之前多次呼叫失敗。 *c*可能不到引數**EOF** (或**WEOF**)。
 
 具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
 
@@ -109,7 +99,7 @@ wint_t _ungetwch_nolock(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_ungetch**， **_ungetch_nolock**|\<conio.h>|
 |**_ungetwch**， **_ungetwch_nolock**|\<conio.h> 或 \<wchar.h>|

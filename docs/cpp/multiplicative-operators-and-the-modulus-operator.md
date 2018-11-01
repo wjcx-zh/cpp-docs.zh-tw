@@ -1,15 +1,9 @@
 ---
-title: 乘法類運算子和模數運算子 |Microsoft Docs
-ms.custom: ''
+title: 乘法類運算子和模數運算子
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - '%'
 - /
-dev_langs:
-- C++
 helpviewer_keywords:
 - operators [C++], multiplicative
 - arithmetic operators [C++], multiplicative operators
@@ -21,24 +15,20 @@ helpviewer_keywords:
 - multiplicative operators [C++]
 - division operator
 ms.assetid: b53ea5da-d0b4-40dc-98f3-0aa52d548293
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 02d6d7d5d8f6c7dcce54e1dff54795b253d9d04a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d3f52e8ed2f631c93672ae74cf04b86910d1d185
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106049"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430845"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>乘法類運算子和模數運算子
 
 ## <a name="syntax"></a>語法
 
 ```
-expression * expression 
-expression / expression 
+expression * expression 
+expression / expression 
 expression % expression
 ```
 

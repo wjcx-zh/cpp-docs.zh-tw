@@ -1,25 +1,15 @@
 ---
-title: 輸入/輸出替代項目 | Microsoft Docs
-ms.custom: ''
+title: 輸入 / 輸出替代項目
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - I/O [C++], alternatives
 ms.assetid: 9f8401c7-d90d-4285-8918-63573df74a80
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 28e61dbbd7db6737cd39337acc9925c669cff61d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bc595b64c991ada8e958e71e13f8cb9d134adb8a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843960"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50439685"
 ---
 # <a name="inputoutput-alternatives"></a>輸入/輸出替代項目
 

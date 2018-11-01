@@ -1,28 +1,17 @@
 ---
-title: 測試您的提供者 |Microsoft Docs
-ms.custom: ''
+title: 測試提供者
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - testing, OLE DB providers
 - testing providers
 - OLE DB providers, testing
 ms.assetid: bf824fe4-81af-4ffb-beb3-4fa2928dc450
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 1c99a881dd90d94c87de98239a7de1a2b49be020
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: ca1eaed3baf8e0ee4adad4968f7ecd176533ede3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50060218"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430871"
 ---
 # <a name="testing-your-provider"></a>測試提供者
 

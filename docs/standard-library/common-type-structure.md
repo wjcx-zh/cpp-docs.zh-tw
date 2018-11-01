@@ -1,25 +1,15 @@
 ---
-title: common_type 結構 | Microsoft Docs
-ms.custom: ''
+title: common_type 結構
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - chrono/std::common_type
-dev_langs:
-- C++
 ms.assetid: 2b42722c-c3dc-4d62-8613-0271e52b6f00
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0abe4480c95e598706365060db500661a2b48b24
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4d2f1fe6ebf5b8f35f65fb9b551e6e7d473615a4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843141"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435330"
 ---
 # <a name="commontype-structure"></a>common_type 結構
 

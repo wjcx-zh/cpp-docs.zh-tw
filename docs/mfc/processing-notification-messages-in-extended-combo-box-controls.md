@@ -1,26 +1,16 @@
 ---
-title: 處理通知訊息中的擴充的下拉式方塊控制項 |Microsoft Docs
-ms.custom: ''
+title: 處理擴充下拉式方塊控制項中的通知訊息
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - extended combo boxes [MFC], notifications
 - notifications [MFC], extended combo box controls
 ms.assetid: 4e442758-d054-4746-bb1a-6ff84accb127
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2ea37fb8724a6427e287f1ebef23344662dcb34
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6a007af9bf92868049edba99943e080d509a40da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382778"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430988"
 ---
 # <a name="processing-notification-messages-in-extended-combo-box-controls"></a>處理擴充下拉式方塊控制項中的通知訊息
 

@@ -1,10 +1,6 @@
 ---
-title: _finite、_finitef | Microsoft Docs
-ms.custom: ''
+title: _finite、_finitef
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _finite
 - _finitef
@@ -28,23 +24,17 @@ f1_keywords:
 - math/_finite
 - math/_finitef
 - float/_finite
-dev_langs:
-- C++
 helpviewer_keywords:
 - finite function
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3367f13e68aa85e53d9f5f0ee83521ef465d3996
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b1bce6f1b2da77ed9de255f49dd8d0160e33e31
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396637"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431644"
 ---
 # <a name="finite-finitef"></a>_finite、_finitef
 
@@ -69,11 +59,11 @@ int _finitef(
 
 ## <a name="return-value"></a>傳回值
 
-同時 **_finite**和 **_finitef**傳回非零值，如果引數*x*為有限; 也就是說，如果-INF < *x* < + INF。 如果引數為無限或 NAN，它會傳回 0。
+兩者 **_finite**並 **_finitef**傳回非零值，如果引數*x*是有限; 也就是說，如果-INF < *x* < + INF。 如果引數為無限或 NAN，它會傳回 0。
 
 ## <a name="remarks"></a>備註
 
-**_Finite**和 **_finitef**函式是 Microsoft 專有的。 **_Finitef**函式只是針對 x86、 ARM、 或 ARM64 編譯時，才能使用平台。
+**_Finite**並 **_finitef**函式是 Microsoft 專有的。 **_Finitef**函式只是時，才能使用適用於 x86 ARM 或 ARM64 平台編譯。
 
 ## <a name="requirements"></a>需求
 

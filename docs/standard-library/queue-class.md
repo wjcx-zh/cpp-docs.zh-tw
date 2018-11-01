@@ -1,10 +1,6 @@
 ---
-title: queue 類別 | Microsoft Docs
-ms.custom: ''
+title: queue 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - queue/std::queue::container_type
 - queue/std::queue::size_type
@@ -15,8 +11,6 @@ f1_keywords:
 - queue/std::queue::pop
 - queue/std::queue::push
 - queue/std::queue::size
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::queue [C++], container_type
 - std::queue [C++], size_type
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 20566e34200b5c0e89b532d7096821d58a5f564f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2b82e4237a525b09758323ae2483d8818fc938af
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103695"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429727"
 ---
 # <a name="queue-class"></a>queue 類別
 
@@ -52,7 +42,7 @@ class queue
 
 ### <a name="parameters"></a>參數
 
-*類型*<br/>
+*Type*<br/>
 要存放在佇列中的項目資料類型
 
 *容器*<br/>
@@ -123,7 +113,7 @@ const_reference back() const;
 
 如果 `back` 的傳回值已指派給 `const_reference`，則無法修改佇列物件。 如果傳回值`back`指派給`reference`，可以修改佇列物件。
 
-在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空佇列中的項目，則會發生執行階段錯誤。  如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
+在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空佇列中的項目，則會發生執行階段錯誤。  如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
 ### <a name="example"></a>範例
 
@@ -235,7 +225,7 @@ const_reference front() const;
 
 成員函式傳回`reference`受控制序列的第一個元素，絕對不能空白。
 
-在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空佇列中的項目，則會發生執行階段錯誤。  如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
+在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空佇列中的項目，則會發生執行階段錯誤。  如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
 ### <a name="example"></a>範例
 

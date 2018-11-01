@@ -1,20 +1,13 @@
 ---
-title: 靜態程式庫 (C + + /CX) |Microsoft Docs
-ms.custom: ''
+title: 靜態程式庫 (C++/CX)
 ms.date: 02/03/2017
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 77a8684861b440fd855693018c7ca3dfb575dd4b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 4c423f9e59b7597782acfa4c98db3c9bff747098
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105363"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50437945"
 ---
 # <a name="static-libraries-ccx"></a>靜態程式庫 (C++/CX)
 

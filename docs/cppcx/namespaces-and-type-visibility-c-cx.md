@@ -1,20 +1,13 @@
 ---
-title: 命名空間和類型可視性 (C + + /CX) |Microsoft Docs
-ms.custom: ''
+title: 命名空間和類型可視性 (C++/CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 42457da3c85a73292b836c6da58b17f0341df1be
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e9efc207fe0ed49fecf30366d265019e7a3ee009
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102768"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440517"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>命名空間和類型可視性 (C++/CX)
 
@@ -41,13 +34,13 @@ ms.locfileid: "44102768"
 |private|預設存取範圍。 等同於在 Standard C++ 中。|否|
 |protected|等同於在 Standard C++ 中，同時在應用程式 (或元件) 和中繼資料內。|是|
 |public|等同於在 Standard C++ 中。|是|
-|`public protected` -或者- `protected public`|在中繼資料內為受保護存取範圍，在應用程式或元件內是公用的。|是|
+|`public protected` -或- `protected public`|在中繼資料內為受保護存取範圍，在應用程式或元件內是公用的。|是|
 |`protected private` 或 `private protected`|在中繼資料內是不可見的，在應用程式或元件內為受保護存取範圍。||
 |`internal` 或 `private public`|此成員在應用程式或元件內是公用的，但是在中繼資料內是不可見的。|否|
 
 ## <a name="windows-runtime-namespaces"></a>Windows 執行階段命名空間
 
-Windows API 包含在 Windows 中宣告的類型::\*命名空間。 這些命名空間保留給 Windows，不能在其中加入類型。 在 [ **物件瀏覽器**] 中，您可以檢視 windows.winmd 檔案中的命名空間。 如需這些命名空間的文件，請參閱[Windows API](https://msdn.microsoft.com/library/windows/apps/br211377)。
+Windows API 包含在 Windows 中宣告的類型::\*命名空間。 這些命名空間保留給 Windows，不能在其中加入類型。 在 [ **物件瀏覽器**] 中，您可以檢視 windows.winmd 檔案中的命名空間。 如需這些命名空間的文件，請參閱 [Windows API](https://msdn.microsoft.com/library/windows/apps/br211377)。
 
 ## <a name="ccx-namespaces"></a>C++/CX 命名空間
 

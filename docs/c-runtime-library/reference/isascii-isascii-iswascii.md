@@ -1,10 +1,6 @@
 ---
-title: isascii、__isascii、iswascii | Microsoft Docs
-ms.custom: ''
+title: isascii、__isascii、iswascii
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswascii
 - __isascii
@@ -30,8 +26,6 @@ f1_keywords:
 - ctype/isascii
 - ctype/__isascii
 - corecrt_wctype/iswascii
-dev_langs:
-- C++
 helpviewer_keywords:
 - __isascii function
 - _isascii function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bffc46bae24689558999d188f96e5b9f8d21c54e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d150e7bb335dc77ed86f445128eebf97b8be5ac3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402269"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50433653"
 ---
 # <a name="isascii-isascii-iswascii"></a>isascii、__isascii、iswascii
 
@@ -75,13 +65,13 @@ int iswascii(
 
 ## <a name="return-value"></a>傳回值
 
-每個這些常式傳回非零，如果**c**是 ASCII 字元的特定表示法。 **__isascii**傳回非零值，如果**c**是 ASCII 字元 (0x7F 範圍內 0x00-）。 **iswascii**傳回非零值，如果**c**是 ASCII 字元的寬字元表示法。 這些常式都會傳回 0，如果**c**不符合測試條件。
+這些常式傳回非零值如果**c**表示特定的 ASCII 字元。 **__isascii**傳回非零值，如果**c**是 ASCII 字元 （0x00-0x7F 範圍）。 **iswascii**傳回非零值，如果**c**是 ASCII 字元的寬字元表示法。 這些常式都會傳回 0，如果**c**不符合測試條件。
 
 ## <a name="remarks"></a>備註
 
-同時 **__isascii**和**iswascii**除非已定義前置處理器巨集 _CTYPE_DISABLE_MACROS 會實作成巨集。
+兩者 **__isascii**並**iswascii**除非已定義前置處理器巨集 _CTYPE_DISABLE_MACROS，否則，會實作為巨集。
 
-回溯相容性， **isascii**會實作成巨集才[ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md)未定義或定義為 0; 否則為未定義。
+回溯相容性， **isascii**實作為巨集才[ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md)未定義或定義為 0; 否則就是未定義。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -91,12 +81,12 @@ int iswascii(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**isascii**， **__isascii**|C: \<ctype.h><br /><br /> C++: \<cctype> 或 \<ctype.h>|
 |**iswascii**|C：\<wctype.h>、\<ctype.h>，或 \<wchar.h><br /><br /> C++：\<cwctype>、\<cctype >、\<wctype.h>、\<ctype.h> 或 \<wchar.h>|
 
-**Isascii**， **__isascii**和**iswascii**函式是 Microsoft 專有的。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+**Isascii**， **__isascii**並**iswascii**函式是 Microsoft 專有的。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

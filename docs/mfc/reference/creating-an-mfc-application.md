@@ -1,27 +1,17 @@
 ---
-title: 建立 MFC 應用程式 |Microsoft Docs
-ms.custom: ''
+title: 建立 MFC 應用程式
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - applications [MFC]
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ec61db21b27ef49f660751605b4788599f7f3485
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: df1e49ffe9e4350d2023bc471d3687bec5defa04
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50062492"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434602"
 ---
 # <a name="creating-an-mfc-application"></a>建立 MFC 應用程式
 

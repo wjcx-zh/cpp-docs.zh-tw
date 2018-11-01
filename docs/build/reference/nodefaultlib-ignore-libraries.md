@@ -1,16 +1,10 @@
 ---
-title: -NODEFAULTLIB （忽略程式庫） |Microsoft Docs
-ms.custom: ''
+title: /NODEFAULTLIB (忽略程式庫)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.OVERWRITEAllDefaultLibraries
 - VC.Project.VCLinkerTool.OVERWRITEDefaultLibraryNames
 - /nodefaultlib
-dev_langs:
-- C++
 helpviewer_keywords:
 - default libraries, removing
 - -NODEFAULTLIB linker option
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - /NODEFAULTLIB linker option
 - ignore libraries linker option
 ms.assetid: 7270b673-6711-468e-97a7-c2925ac2be6e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ae291677743cc05b0eeb85b41ebfa84e5a6e022e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 12a6e988828d1e4e2dbdc46d49da5ff2fe9e9d8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726303"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473771"
 ---
 # <a name="nodefaultlib-ignore-libraries"></a>/NODEFAULTLIB (忽略程式庫)
 
@@ -67,7 +57,7 @@ ms.locfileid: "45726303"
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 
-- 請參閱<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreDefaultLibraryNames%2A>和<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreAllDefaultLibraries%2A>。
+- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreDefaultLibraryNames%2A> 和 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreAllDefaultLibraries%2A>。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,10 +1,6 @@
 ---
-title: _strdup、_wcsdup、_mbsdup | Microsoft Docs
-ms.custom: ''
+title: _strdup、_wcsdup、_mbsdup
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdup
 - _mbsdup
@@ -30,8 +26,6 @@ f1_keywords:
 - _strdup
 - _ftcsdup
 - _wcsdup
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcsdup function
 - ftcsdup function
@@ -48,23 +42,19 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a88051cbf5ac32f51e18f6d3dd256b177b7044a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 094843fdb1432aa58ec04b3b4e39ac8861b928ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413508"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461512"
 ---
 # <a name="strdup-wcsdup-mbsdup"></a>_strdup、_wcsdup、_mbsdup
 
 重複字串。
 
 > [!IMPORTANT]
-> **_mbsdup**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsdup**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 <<c0> [ 通用 Windows 平台應用程式不支援的 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -87,13 +77,13 @@ unsigned char *_mbsdup(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式會傳回所複製字串的儲存位置的指標或**NULL**無法配置儲存區時。
+所有這些函式都會傳回所複製字串的儲存位置的指標或**NULL**如果無法配置儲存體。
 
 ## <a name="remarks"></a>備註
 
-**_Strdup**函式呼叫[malloc](malloc.md)為複本配置儲存空間*strSource* ，然後將複製*strSource*至已配置空間。
+**_Strdup**函式會呼叫[malloc](malloc.md)複本的配置儲存空間*strSource* ，然後將複製*strSource*至配置的空間。
 
-**_wcsdup**和 **_mbsdup**是寬字元和多位元組字元版本的 **_strdup**。 引數和傳回值 **_wcsdup**是寬字元字串; **_mbsdup**是多位元組字元字串。 除此之外，這三個函式的行為相同。
+**_wcsdup**並 **_mbsdup**是寬字元和多位元組字元版本的 **_strdup**。 引數和傳回值 **_wcsdup**是寬字元字串; **_mbsdup**是多位元組字元字串。 除此之外，這三個函式的行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -101,13 +91,13 @@ unsigned char *_mbsdup(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsdup**|**_strdup**|**_mbsdup**|**_wcsdup**|
 
-因為 **_strdup**呼叫**malloc**副本的配置儲存空間*strSource*，它是不錯的作法，一律以釋放此記憶體，藉由呼叫[可用](free.md)常式的呼叫所傳回的指標上 **_strdup**。
+因為 **_strdup**呼叫**malloc**複本的配置儲存空間*strSource*，最好一律以釋放這個記憶體，藉由呼叫[免費](free.md)常式的呼叫所傳回的指標 **_strdup**。
 
-如果 **_DEBUG**和 **_CRTDBG_MAP_ALLOC**所定義， **_strdup**和 **_wcsdup**會呼叫所取代 **_strdup_dbg**和 **_wcsdup_dbg**以便進行偵錯記憶體配置。 如需詳細資訊，請參閱 [_strdup_dbg、_wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)。
+如果 **_DEBUG**並 **_CRTDBG_MAP_ALLOC**定義， **_strdup**並 **_wcsdup**會取代藉由呼叫 **_strdup_dbg**並 **_wcsdup_dbg**以便進行偵錯記憶體配置。 如需詳細資訊，請參閱 [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_strdup**|\<string.h>|
 |**_wcsdup**|\<string.h> 或 \<wchar.h>|

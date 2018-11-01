@@ -1,10 +1,6 @@
 ---
-title: rename、 _wrename | Microsoft Docs
-ms.custom: ''
+title: rename、_wrename
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - rename
 - _wrename
@@ -25,8 +21,6 @@ f1_keywords:
 - _wrename
 - _trename
 - Rename
-dev_langs:
-- C++
 helpviewer_keywords:
 - trename function
 - directories [C++], renaming
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f02829b394649b86dfda9baad7c5792853fce746
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70793dee54460b6372bfbe815115aa9211670c6f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407469"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463982"
 ---
 # <a name="rename-wrename"></a>rename、_wrename
 
@@ -78,7 +68,7 @@ int _wrename(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，這些函式每個都會傳回 0。 發生錯誤時，此函數會傳回非零值，並設定**errno**至下列值之一：
+如果成功，這些函式每個都會傳回 0。 發生錯誤時，此函式會傳回非零值，並設定**errno**下列值之一：
 
 |errno 值|條件|
 |-|-|
@@ -92,7 +82,7 @@ int _wrename(
 
 **rename** 函式會將由 *oldname* 指定的檔案或目錄重新命名為由 *newname* 指定的名稱。 舊名稱必須是現有的檔案或目錄的路徑。 新名稱不得是現有的檔案或目錄的名稱。 您可以使用 **rename** 將檔案從一個目錄或裝置移到另一個，方法是在 *newname* 引數中提供不同的路徑。 不過，您無法使用 **rename** 移動目錄。 目錄可以重新命名，但不能移動。
 
-**_wrename**是寬字元版本的 **_rename**; 的引數 **_wrename**是寬字元字串。 **_wrename**和 **_rename**除此之外的行為相同。
+**_wrename**是寬字元版本的 **_rename**; 的引數 **_wrename**是寬字元字串。 **_wrename**並 **_rename**行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -102,7 +92,7 @@ int _wrename(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**rename**|\<io.h> 或 \<stdio.h>|
 |**_wrename**|\<stdio.h> 或 \<wchar.h>|

@@ -1,10 +1,6 @@
 ---
-title: sqrt、sqrtf、sqrtl | Microsoft Docs
-ms.custom: ''
+title: sqrt、sqrtf、sqrtl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sqrtl
 - sqrtf
@@ -26,8 +22,6 @@ f1_keywords:
 - sqrt
 - sqrtf
 - _sqrtl
-dev_langs:
-- C++
 helpviewer_keywords:
 - sqrtf function
 - sqrt function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a6eefbbf3269ad809cdf30dd3ea034f7ca6c8ad8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c44f8813812b2aeffc2680a0a666d968bb2b4da6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407297"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560572"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt、sqrtf、sqrtl
 
@@ -78,11 +68,11 @@ long double sqrtl(
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**sqrt**採用**float**或**長** **double**型別。 在 C 程式中， **sqrt**一律採用並傳回**double**。
+C + + 允許多載，因為您可以呼叫多載**sqrt**採用**float**或是**長** **double**類型。 在 C 程式中， **sqrt**一律採用並傳回**double**。
 
 ## <a name="return-value"></a>傳回值
 
-**Sqrt**函式會傳回平方根*x*。 根據預設，如果*x*是負數， **sqrt**傳回不確定的 NaN。
+**Sqrt**函式會傳回平方根*x*。 根據預設，如果*x*是負數**sqrt**傳回不確定的 NaN。
 
 |輸入|SEH 例外狀況|**_matherr**例外狀況|
 |-----------|-------------------|--------------------------|

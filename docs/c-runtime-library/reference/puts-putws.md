@@ -1,10 +1,6 @@
 ---
-title: puts、_putws | Microsoft Docs
-ms.custom: ''
+title: puts、_putws
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putws
 - puts
@@ -25,8 +21,6 @@ f1_keywords:
 - _putts
 - _putws
 - puts
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], writing
 - _putts function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d8a0b4f0c4924970905cb541d82450a807de1357
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0151d29f627a8f6b91142d619f64921333bb48f5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404525"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667320"
 ---
 # <a name="puts-putws"></a>puts、_putws
 
@@ -69,17 +59,17 @@ int _putws(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，則傳回非負值。 如果**放**失敗，它會傳回**EOF**; 如果 **_putws**失敗，它會傳回**WEOF**。 如果*str*為 null 指標，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會將**errno**至**EINVAL**並傳回**EOF**或**WEOF**。
+如果成功，則傳回非負值。 如果**放**失敗，則會傳回**EOF**; 如果 **_putws**失敗，則會傳回**WEOF**。 如果*str*為 null 指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會將**errno**要**EINVAL** ，並傳回**EOF**或是**WEOF**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**放**函式寫入*str*標準輸出資料流**stdout**，取代字串的終止新行字元 ('\n') 的 null 字元 ('\0')輸出資料流。
+**放**函式寫入*str*寫入標準輸出資料流**stdout**，取代字串的結束 null 字元 ('\0') 以新行字元 ('\n') 中輸出資料流。
 
-**_putws**是寬字元版本的**放**; 兩個函式的資料流在 ANSI 模式中開啟時即會相同行為。 **將**目前不支援 UNICODE 資料流輸出。
+**_putws**是寬字元版本**放**; 如果資料流以 ANSI 模式開啟兩個函式行為相同。 **將**目前不支援輸出至 UNICODE 資料流。
 
-**_putwch**寫入使用目前的主控台地區設定的 Unicode 字元。
+**_putwch**會寫入使用目前的主控台地區設定的 Unicode 字元。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -89,12 +79,12 @@ int _putws(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**puts**|\<stdio.h>|
 |**_putws**|\<stdio.h>|
 
-通用 Windows 平台 (UWP) 應用程式中不支援主控台。 在主控台中，與相關聯的標準資料流控制代碼**stdin**， **stdout**，和**stderr**，必須重新導向之後 C 執行階段函式可以在 UWP 應用程式中使用它們,. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台中，相關聯的標準資料流控制代碼**stdin**， **stdout**，並**stderr**，必須重新導向，C 執行階段函式才能使用它們在 UWP 應用程式. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 

@@ -1,10 +1,6 @@
 ---
-title: printf、_printf_l、wprintf、_wprintf_l | Microsoft Docs
-ms.custom: ''
+title: printf、_printf_l、wprintf、_wprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _printf_l
 - wprintf
@@ -26,8 +22,6 @@ f1_keywords:
 - printf
 - _tprintf
 - wprintf
-dev_langs:
-- C++
 helpviewer_keywords:
 - printf function
 - printf_l function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e66c185a6ee56e4a82a98e62d8d2c7d8167399e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f3d439c12fa803bfe1af31a9a45d777b2e1caa2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405233"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666891"
 ---
 # <a name="printf-printfl-wprintf-wprintfl"></a>printf、_printf_l、wprintf、_wprintf_l
 
@@ -95,17 +85,17 @@ int _wprintf_l(
 
 ## <a name="return-value"></a>傳回值
 
-傳回列印的字元數；如果發生錯誤，則為負值。 如果*格式*是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1 以及設定執行**errno**至**EINVAL**。 如果**EOF** (0xFFFF) 中遇到*引數*，此函數會傳回-1。
+傳回列印的字元數；如果發生錯誤，則為負值。 如果*格式*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1 和集執行**errno**要**EINVAL**。 如果**EOF** (0xFFFF) 中遇到*引數*，此函數會傳回-1。
 
-如需有關詳細**errno**和錯誤代碼，請參閱[_doserrno，errno，_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如需**errno**和錯誤碼，請參閱[_doserrno、 errno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Printf**函式格式化並列印一系列字元和值寫入標準輸出資料流**stdout**。 如果引數會遵循*格式*字串*格式*字串必須包含決定輸出格式的引數的規格。 **printf**和[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)行為相同，除了**printf**將輸出寫入到**stdout** ，而不是類型的目的地**檔案**.
+**Printf**函式格式化並列印一系列的字元和值寫入標準輸出資料流**stdout**。 如果引數接*格式*字串*格式*字串必須包含決定引數輸出格式的規格。 **printf**並[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)運作方式完全相同，不同之處在於**printf**將輸出寫入到**stdout** ，而不是類型的目的地**檔案**.
 
-**wprintf**是寬字元版本的**printf**;*格式*是寬字元字串。 **wprintf**和**printf**運作方式完全相同的資料流在 ANSI 模式中開啟時。 **printf**目前不支援輸出到 UNICODE 資料流。
+**wprintf**是寬字元版本的**printf**;*格式*是寬字元字串。 **wprintf**並**printf**運作方式完全相同，如果資料流以 ANSI 模式開啟。 **printf**目前不支援輸出至 UNICODE 資料流。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的執行緒地區設定的地區設定參數。
+使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -113,7 +103,7 @@ int _wprintf_l(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tprintf**|**printf**|**printf**|**wprintf**|
 
-*格式*引數包含一般字元，逸出序列，以及 (如果引數會遵循*格式*) 格式規格。 一般字元和逸出序列複製到**stdout**其出現的順序。 例如，下面這行：
+*格式*引數包含一般字元、 逸出序列，以及 (如果引數接*格式*) 格式規格。 一般字元和逸出序列會複製到**stdout**依其出現的順序。 例如，下面這行：
 
 ```C
 printf("Line one\n\t\tLine two\n");
@@ -126,7 +116,7 @@ Line one
         Line two
 ```
 
-[格式規格](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)一律會以百分比符號開頭 (**%**)，會從左至右讀取。 當**printf**遇到的第一個格式規格 （如果有的話），它後面的第一個引數的值，轉換*格式*並據此將其輸出。 第二個格式規格會轉換及輸出第二個引數，依此類推。 如果引數的數目大於格式規格的數目，則會略過額外的引數。 如果提供給所有格式規格的引數不足，則結果為未定義。
+[格式規格](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)一定會開始以百分比符號 (**%**) 和左讀到右。 當**printf**遇到第一個格式規格 （如果有的話），它會將轉換後的第一個引數的值*格式*並據此將其輸出。 第二個格式規格會轉換及輸出第二個引數，依此類推。 如果引數的數目大於格式規格的數目，則會略過額外的引數。 如果提供給所有格式規格的引數不足，則結果為未定義。
 
 > [!IMPORTANT]
 > 確認 *format* 不是使用者定義的字串。
@@ -140,12 +130,12 @@ Line one
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**printf**， **_printf_l**|\<stdio.h>|
 |**wprintf**， **_wprintf_l**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 應用程式中不支援主控台。 在主控台中，與相關聯的標準資料流控制代碼**stdin**， **stdout**，和**stderr**，必須重新導向之後 C 執行階段函式可以在 UWP 應用程式中使用它們,. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台中，相關聯的標準資料流控制代碼**stdin**， **stdout**，並**stderr**，必須重新導向，C 執行階段函式才能使用它們在 UWP 應用程式. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

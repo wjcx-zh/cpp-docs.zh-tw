@@ -1,10 +1,6 @@
 ---
-title: _CrtReportBlockType | Microsoft Docs
-ms.custom: ''
+title: _CrtReportBlockType
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtReportBlockType
 apilocation:
@@ -22,8 +18,6 @@ apitype: DLLExport
 f1_keywords:
 - _CrtReportBlockType
 - CrtReportBlockType
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtReportBlockType function
 - BLOCK_SUBTYPE macro
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 59f8e919ee8a3ec9cc0822420ebbf6581480a13b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 186c63ce1619d6427436ff1458ca551e464d0bce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395561"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50516053"
 ---
 # <a name="crtreportblocktype"></a>_CrtReportBlockType
 
@@ -62,17 +52,17 @@ int _CrtReportBlockType(
 
 ## <a name="return-value"></a>傳回值
 
-當傳遞有效的偵錯堆積的指標， **_CrtReportBlockType**函式傳回的區塊類型與子類型的形式**int**。當傳遞無效的指標時，函式會傳回 -1。
+當傳遞有效的偵錯堆積指標時， **_CrtReportBlockType**函式傳回的區塊類型和子類型的形式**int**。當傳遞無效的指標時，函式會傳回 -1。
 
 ## <a name="remarks"></a>備註
 
-若要擷取的型別與所傳回的子類型 **_CrtReportBlockType**，使用巨集 **_BLOCK_TYPE**和 **_BLOCK_SUBTYPE** （兩者都定義在 crtdbg.h 裡） 傳回的值。
+擷取所傳回的子型別與型別 **_CrtReportBlockType**，使用巨集 **_BLOCK_TYPE**並 **_BLOCK_SUBTYPE** （兩者都定義在 crtdbg.h 裡） 傳回的值。
 
 如需配置區塊類型以及如何使用它們的資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_CrtReportBlockType**|\<crtdbg.h>|
 

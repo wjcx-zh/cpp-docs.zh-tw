@@ -1,10 +1,6 @@
 ---
-title: _lrotl、_lrotr | Microsoft Docs
-ms.custom: ''
+title: _lrotl、_lrotr
 ms.date: 04/04/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lrotl
 - _lrotr
@@ -26,8 +22,6 @@ f1_keywords:
 - lrotl
 - _lrotr
 - _lrotl
-dev_langs:
-- C++
 helpviewer_keywords:
 - lrotl function
 - bits
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0182256b06a3f04acbb941d02624e2b512b22a97
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 71ca61676e4551155f9f14e792c5c1cee65ddb7e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400625"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518413"
 ---
 # <a name="lrotl-lrotr"></a>_lrotl、_lrotr
 
@@ -73,11 +63,11 @@ unsigned long _lrotr( unsigned long value, int shift );
 
 ## <a name="remarks"></a>備註
 
-**_Lrotl**和 **_lrotr**函式旋轉*值*由*shift*位元。 **_lrotl**圖示旋轉，保留，朝更重要的位元的值。 **_lrotr**旋轉值右邊的 往較高有效位元。 這兩個函式會將旋轉超出 *value* 一端的位元換行到另一端。
+**_Lrotl**並 **_lrotr**函式旋轉*值*由*shift*位元。 **_lrotl**旋轉保留，到更高有效位元的值。 **_lrotr**旋轉值右邊的 往較高有效位元。 這兩個函式會將旋轉超出 *value* 一端的位元換行到另一端。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_lrotl**， **_lrotr**|\<stdlib.h>|
 

@@ -1,26 +1,16 @@
 ---
-title: 如何： 將現有的 MFC 功能區轉換為功能區資源 |Microsoft Docs
-ms.custom: ''
+title: 如何：將現有的 MFC 功能區轉換為功能區資源
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ribbon resource, converting from an MFC ribbon
 - MFC ribbon, converting to a ribbon resource
 ms.assetid: 324b7ff6-58f9-4691-96a9-9836a79d0fb6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b31062530bfe6da940cd6458bd5cfa91f3e29ae7
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 2ba2907a95018948670847282fd09e0a71a8c106
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50052547"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509552"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>如何：將現有的 MFC 功能區轉換為功能區資源
 

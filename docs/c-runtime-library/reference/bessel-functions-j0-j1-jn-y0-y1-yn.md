@@ -1,10 +1,6 @@
 ---
-title: Bessel 函式：_j0、_j1、_jn、_y0、_y1、_yn | Microsoft Docs
-ms.custom: ''
+title: Bessel 函數：_j0、_j1、_jn、_y0、_y1、_yn
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _j0
 - _j1
@@ -33,8 +29,6 @@ f1_keywords:
 - _y0
 - _y1
 - _yn
-dev_langs:
-- C++
 helpviewer_keywords:
 - Bessel functions
 - _j0 function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cf461a7737ee1f23650ff80f203524c427fb644d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393598"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531859"
 ---
 # <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Bessel 函數：_j0、_j1、_jn、_y0、_y1、_yn
 
@@ -94,27 +84,27 @@ Bessel 函數的整數階數。
 
 ## <a name="return-value"></a>傳回值
 
-這些常式都會傳回的 Bessel 函數*x*。 如果*x*中為負數 **_y0**， **_y1**，或 **_yn**函式，此常式會將**errno** 至**EDOM**，列印 **_DOMAIN**錯誤訊息， **stderr**，並傳回 **_HUGE_VAL**。 您可以修改錯誤處理使用 **_matherr**。
+這些常式都會傳回 Bessel 函數*x*。 如果*x*是負數中 **_y0**， **_y1**，或 **_yn**函式、 例行集**errno** 至**EDOM**，會列印 **（_d)** 錯誤訊息**stderr**，並傳回 **_HUGE_VAL**。 您可以修改錯誤處理使用 **_matherr**。
 
 ## <a name="remarks"></a>備註
 
-**_J0**， **_j1**，和 **_jn**常式傳回 Bessel 函式的第一類： 分別排序 0、 1 和 n。
+**_J0**， **_j1**，並 **_jn**常式傳回 Bessel 函式的第一類： 分別排序 0、 1 和 n。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± **QNAN**， **IND**|**無效**|**_DOMAIN**|
+|常见**QNAN**， **IND**|**無效**|**（_D)**|
 
-**_Y0**， **_y1**，和 **_yn**常式傳回 Bessel 函式的第二類： 分別排序 0、 1 和 n。
+**_Y0**， **_y1**，並 **_yn**常式傳回 Bessel 函式的第二類： 分別排序 0、 1 和 n。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± **QNAN**， **IND**|**無效**|**_DOMAIN**|
+|常见**QNAN**， **IND**|**無效**|**（_D)**|
 |± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0.0|**無效**|**_DOMAIN**|
+|&#124;x&#124; < 0.0|**無效**|**（_D)**|
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_j0**， **_j1**， **_jn**， **_y0**， **_y1**， **_yn**|\<cmath> (C++)、\<math.h> (C、C++)|
 

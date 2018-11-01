@@ -1,11 +1,6 @@
 ---
-title: cacos、cacosf、cacosl | Microsoft Docs
-ms.custom: ''
+title: cacos、cacosf、cacosl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cacos
 - cacosf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/cacos
 - complex/cacosf
 - complex/cacosl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cacos function
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a6734080e8aff91d9276ef59203e2a3911ee9e7f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 18757ecd30f399ca3d1fdb77e8bff8213a265e74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394453"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543191"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos、cacosf、cacosl
 
-擷取複數，與實際的軸間隔 [-1，+ 1] 以外的分支剪下反餘弦值。
+擷取複數，而且在實數軸的間隔 [-1，+ 1] 外部分支反餘弦值。
 
 ## <a name="syntax"></a>語法
 
@@ -72,15 +61,15 @@ _Lcomplex cacos( _Lcomplex z );  // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-反餘弦值*z*，以弧度為單位。 結果是在虛數軸中為未繫結，並且在實數軸的間隔 [0, π] 中。 如果會發生網域錯誤*z*超出間隔 [-1，+ 1]。
+反餘弦*z*，以弧度為單位。 結果是在虛數軸中為未繫結，並且在實數軸的間隔 [0, π] 中。 如果會發生網域錯誤*z*超出的間隔 [-1，+ 1]。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**cacos**採用並傳回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程式中， **cacos**一律採用並傳回 **_Dcomplex**值。
+因為 c + + 允許多載，您可以呼叫多載**cacos**採用並傳回 **_Fcomplex**並 **_Lcomplex**值。 在 C 程式中， **cacos**一律採用並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
-|常式|C 標頭|C++ 標頭|
+|常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
 |**cacos**， **cacosf**， **cacosl**|\<complex.h>|\<ccomplex>|
 

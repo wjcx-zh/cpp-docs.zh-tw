@@ -1,10 +1,6 @@
 ---
-title: sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l | Microsoft Docs
-ms.custom: ''
+title: sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _swprintf_s_l
 - _sprintf_s_l
@@ -31,8 +27,6 @@ f1_keywords:
 - stdio/_swprintf_s_l
 - _sprintf_s_l
 - _swprintf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - stprintf_s function
 - stprintf_s_l function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - _sprintf_s_l function
 - formatted text [C++]
 ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0200740df3b41e356bcf83f0756b8a5267b38166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51469ccec348545ff780d14d5f433099def3eb69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417787"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511939"
 ---
 # <a name="sprintfs-sprintfsl-swprintfs-swprintfsl"></a>sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l
 
@@ -125,23 +115,23 @@ int swprintf_s(
 
 ## <a name="return-value"></a>傳回值
 
-寫入字元數，則為-1，發生錯誤。 如果*緩衝區*或*格式*為 null 指標， **sprintf_s**和**swprintf_s**傳回-1 並設定**errno**至**EINVAL**。
+寫入字元數目，則為-1，發生錯誤。 如果*緩衝區*或*格式*為 null 指標， **sprintf_s**並**swprintf_s**傳回-1，並且設定**errno**要**EINVAL**。
 
-**sprintf_s**傳回儲存在位元組數目*緩衝區*，不計結束的 null 字元。 **swprintf_s**傳回儲存在寬字元數目*緩衝區*，不計結束的 null 寬字元。
+**sprintf_s**會傳回儲存在位元組數目*緩衝區*，不計入結束的 null 字元。 **swprintf_s**會傳回儲存在寬字元數目*緩衝區*，不計入結束的 null 寬字元。
 
 ## <a name="remarks"></a>備註
 
-**Sprintf_s**函式格式化並儲存一連串字元和值*緩衝區*。 每個*引數*（如果有的話） 會轉換和輸出中的對應格式規格根據*格式*。 此格式包含一般字元，與具有相同的形式和功能*格式*引數[printf](printf-printf-l-wprintf-wprintf-l.md)。 null 字元會附加至最後一個寫入的字元之後。 如果在重疊的字串之間進行複製，則行為是未定義的。
+**Sprintf_s**函式加以格式化並且儲存一連串字元和值*緩衝區*。 每個*引數*（如果有的話） 會轉換和輸出中的對應格式規格根據*格式*。 此格式包含一般字元，與具有相同的形式和運作方式*格式*引數[printf](printf-printf-l-wprintf-wprintf-l.md)。 null 字元會附加至最後一個寫入的字元之後。 如果在重疊的字串之間進行複製，則行為是未定義的。
 
-其中一個主要差異**sprintf_s**和[sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)在於**sprintf_s**會檢查格式字串中的有效格式的字元，而[sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)只檢查格式字串或緩衝區是否**NULL**指標。 若其中一個檢查失敗，就會叫用無效的參數處理常式，如 [Parameter Validation](../../c-runtime-library/parameter-validation.md)所述。 如果允許繼續執行，函式會傳回-1 以及設定執行**errno**至**EINVAL**。
+其中一個主要差異**sprintf_s**並[sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)在於**sprintf_s**檢查是否有效的格式化字元的格式字串，而[sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)只會檢查格式字串或緩衝區是否**NULL**指標。 若其中一個檢查失敗，就會叫用無效的參數處理常式，如 [Parameter Validation](../../c-runtime-library/parameter-validation.md)所述。 如果允許繼續執行，函式會傳回-1 和集執行**errno**要**EINVAL**。
 
-另一個主要差異之間**sprintf_s**和[sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)在於**sprintf_s**接受指定輸出緩衝區的大小以字元為單位的長度參數。 如果緩衝區太小，格式化的文字，包括結束的 null，則將緩衝區設定為空字串放入 null 字元在*緩衝區*[0]，並叫用無效參數處理常式。 不同於 **_snprintf**， **sprintf_s**可保證，緩衝區將會以 null 終止除非緩衝區大小為零。
+其他的主要差異**sprintf_s**並[sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)在於**sprintf_s**採用指定的輸出緩衝區大小，以字元為單位的長度參數。 如果緩衝區太小，格式化的文字，包括終止的 null，就將緩衝區設為空字串的 null 字元放在*緩衝區*[0]，並叫用無效參數處理常式。 不同於 **_snprintf**， **sprintf_s**保證，緩衝區會以 null 結尾除非緩衝區大小為零。
 
-**swprintf_s**是寬字元版本的**sprintf_s**; 指標引數**swprintf_s**是寬字元字串。 編碼錯誤偵測**swprintf_s**可能不同於**sprintf_s**。 這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的執行緒地區設定的地區設定參數。
+**swprintf_s**是寬字元版本的**sprintf_s**; 指標引數**swprintf_s**是寬字元字串。 編碼錯誤偵測**swprintf_s**可能會不同於**sprintf_s**。 使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
 
 在 C++ 中，範本多載簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不需指定大小引數)，也可將不安全的較舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
-有新版**sprintf_s**會提供更多的控制如果緩衝區太小，會發生什麼事。 如需詳細資訊，請參閱 [_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)。
+有新版**sprintf_s** ，以提供更多的控制如果緩衝區太小，會發生什麼事。 如需詳細資訊，請參閱 [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -152,7 +142,7 @@ int swprintf_s(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**sprintf_s**， **_sprintf_s_l**|C：\<stdio.h><br /><br /> C++：\<cstdio> 或 \<stdio.h>|
 |**swprintf_s**， **_swprintf_s_l**|C：\<stdio.h> 或 \<wchar.h><br /><br /> C++：\<cstdio>、\<cwchar>、\<stdio.h> 或 \<wchar.h>|

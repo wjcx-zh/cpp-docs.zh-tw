@@ -1,30 +1,20 @@
 ---
-title: CFixedStringT 類別 |Microsoft Docs
-ms.custom: ''
+title: CFixedStringT 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CFixedStringT
 - CSTRINGT/ATL::CFixedStringT
 - CSTRINGT/ATL::CFixedStringT::CFixedStringT
-dev_langs:
-- C++
 helpviewer_keywords:
 - CFixedStringT class
 - shared classes, CFixedStringT
 ms.assetid: 6d4171ba-3104-493a-a6cc-d515f4ba9a4b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d9f48ffb9cad787159a40a58d85e6bff5dacc475
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 25556b45f93898acbb8b8b4f9263231b5b3ce2e8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808247"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473784"
 ---
 # <a name="cfixedstringt-class"></a>CFixedStringT 類別
 

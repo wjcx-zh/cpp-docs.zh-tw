@@ -1,10 +1,6 @@
 ---
-title: asin、asinf、asinl | Microsoft Docs
-ms.custom: ''
+title: asin、asinf、asinl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - asinf
 - asinl
@@ -26,8 +22,6 @@ f1_keywords:
 - asin
 - asinl
 - asinf
-dev_langs:
-- C++
 helpviewer_keywords:
 - asin function
 - asinl function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee65e4c8ce884ac42de35a23c81dbf5009dd1185
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 20a2ffc37ea666207b9558cb5c282c414cfd4838
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393273"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476040"
 ---
 # <a name="asin-asinf-asinl"></a>asin、asinf、asinl
 
@@ -70,23 +60,23 @@ long double asin( long double x );  // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-**Asin**函式會傳回的反正弦值 （數值的反正弦值函式） *x*範圍-π/2 到 π/2 弧度中。
+**Asin**函式會傳回的反正弦值 （反向的 sine 函式） *x*範圍-π/2 到 π/2 弧度。
 
-根據預設，如果*x*小於-1 或大於 1， **asin**傳回無限期。
+根據預設，如果*x*小於-1 或大於 1， **asin**傳回不定。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± ∞|**無效**|**_DOMAIN**|
-|± **QNAN**， **IND**|無|**_DOMAIN**|
-|&#124;x&#124;>1|**無效**|**_DOMAIN**|
+|± ∞|**無效**|**（_D)**|
+|常见**QNAN**， **IND**|無|**（_D)**|
+|&#124;x&#124;>1|**無效**|**（_D)**|
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**asin**與**float**和**長** **double**值。 在 C 程式中， **asin**一律採用並傳回**double**。
+因為 c + + 允許多載，您可以呼叫多載**asin**與**float**並**長** **double**值。 在 C 程式中， **asin**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭 (C)|必要的標頭 (C++)|
+|常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
 |-------------|---------------------|-|
 |**asin**， **asinf**， **asinl**|\<math.h>|\<cmath> 或 \<math.h>|
 

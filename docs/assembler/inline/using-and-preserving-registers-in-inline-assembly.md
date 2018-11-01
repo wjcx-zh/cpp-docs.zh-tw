@@ -1,28 +1,18 @@
 ---
-title: 使用和保留在內嵌組譯碼中的暫存器 |Microsoft Docs
-ms.custom: ''
+title: 在內嵌組譯碼中使用和保留暫存器
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - __asm keyword [C++], register values
 - inline assembly, registers
 - registers, inline assembly
 - preserving registers
 ms.assetid: dbcd7360-6f3e-4b22-9ee2-9f65ca6f2543
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 60506f53eb1933e5acbb03318edada82a8904386
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 30b2f9ca8c658b65819709bb2e536b5aaecad676
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677014"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643062"
 ---
 # <a name="using-and-preserving-registers-in-inline-assembly"></a>在內嵌組譯碼中使用和保留暫存器
 

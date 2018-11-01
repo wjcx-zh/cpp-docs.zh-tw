@@ -1,10 +1,6 @@
 ---
-title: div ldiv、 lldiv |Microsoft 文件
-ms.custom: ''
+title: div、 ldiv、 lldiv
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - div
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - div
-dev_langs:
-- C++
 helpviewer_keywords:
 - div function
 - quotients, computing
@@ -31,18 +25,14 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3ba1625105adf6edbc6419bd4fdabc8bda5d0e98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0ee1b3b6a5d7b15470ffe1e667b4077d1f9581e4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396588"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653423"
 ---
-# <a name="div-ldiv-lldiv"></a>div ldiv、 lldiv
+# <a name="div-ldiv-lldiv"></a>div、 ldiv、 lldiv
 
 計算兩個整數值的商數和餘數。
 
@@ -76,7 +66,7 @@ lldiv_t div(
 
 ### <a name="parameters"></a>參數
 
-*numer*<br/>
+*號碼*<br/>
 分子。
 
 *denom*<br/>
@@ -84,17 +74,17 @@ lldiv_t div(
 
 ## <a name="return-value"></a>傳回值
 
-**div**使用類型引數呼叫**int**傳回型別的結構**div_t**，其中包括商數及餘數。 傳回值的型別引數**長**是**ldiv_t**，和傳回值的型別引數與**長****長**是**lldiv_t**。 **div_t**， **ldiv_t**，和**lldiv_t**中定義\<stdlib.h >。
+**div**使用的型別引數呼叫**int**會傳回類型的結構**div_t**，其中包括商數和餘數。 傳回值與類型的引數**長**是**ldiv_t**，和傳回值的型別引數**長****長**是**lldiv_t**。 **div_t**， **ldiv_t**，以及**lldiv_t**中所定義\<stdlib.h >。
 
 ## <a name="remarks"></a>備註
 
-**Div**函式除以*numer*由*denom* ，並藉此計算商數及餘數。 [Div_t](../../c-runtime-library/standard-types.md)結構包含商數**q u o t**，其餘部分，及**rem**。商數的正負號與數學商數相同。 其絕對值是小於數學商數絕對值的最大整數。 如果分母為 0，程式會終止並出現錯誤訊息。
+**Div**函式除以*號碼*由*denom* ，並藉此計算商數和餘數。 [Div_t](../../c-runtime-library/standard-types.md)結構包含商數**q u o t**，和餘數**rem**。商數的正負號與數學商數相同。 其絕對值是小於數學商數絕對值的最大整數。 如果分母為 0，程式會終止並出現錯誤訊息。
 
-多載**div**可接受類型引數**長**或**長****長**才可以使用 c + + 程式碼。 傳回型別[ldiv_t](../../c-runtime-library/standard-types.md)和[lldiv_t](../../c-runtime-library/standard-types.md)包含成員**q u o t**和**rem**，其中具有相同意義為成員**div_t**。
+多載**div**可接受類型引數**長**或是**長****長**而僅適用於 c + + 程式碼。 傳回型別[ldiv_t](../../c-runtime-library/standard-types.md)並[lldiv_t](../../c-runtime-library/standard-types.md)包含成員**q u o t**並**rem**，其中具有相同意義隸屬**div_t**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**div**， **ldiv**， **lldiv**|\<stdlib.h>|
 

@@ -1,10 +1,6 @@
 ---
-title: fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l | Microsoft Docs
-ms.custom: ''
+title: fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fprintf_s_l
 - fwprintf_s
@@ -26,8 +22,6 @@ f1_keywords:
 - _ftprintf_s
 - fprintf_s
 - fwprintf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftprintf_s_l function
 - ftprintf_s function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - _fwprintf_s_l function
 - print formatted data to streams
 ms.assetid: 16067c3c-69ce-472a-8272-9aadf1f5beed
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ea8e9d28a960149d0f199b090daa98e76049f291
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 05886dc4ce7de771749f157913a222b6b01a5c5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404213"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639422"
 ---
 # <a name="fprintfs-fprintfsl-fwprintfs-fwprintfsl"></a>fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l
 
@@ -103,16 +93,16 @@ int _fwprintf_s_l(
 
 ## <a name="remarks"></a>備註
 
-**fprintf_s**格式化並列印一系列字元和值的輸出*資料流*。 在每個引數*argument_list* （如果有的話） 會轉換和輸出中的對應格式規格根據*格式*。 *格式*引數會使用[格式規格語法 printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。
+**fprintf_s**格式化並列印一系列的字元和值的輸出*串流*。 在每個引數*argument_list* （如果有的話） 會轉換和輸出中的對應格式規格根據*格式*。 *格式*引數會使用[格式規格語法，printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。
 
-**fwprintf_s**是寬字元版本的**fprintf_s**; 在**fwprintf_s**，*格式*是寬字元字串。 如果資料流是以 ANSI 模式開啟，則這些函式的行為相同。 **fprintf_s**目前不支援 UNICODE 資料流輸出。
+**fwprintf_s**是寬字元版本的**fprintf_s**; 在**fwprintf_s**，*格式*是寬字元字串。 如果資料流是以 ANSI 模式開啟，則這些函式的行為相同。 **fprintf_s**目前不支援輸出至 UNICODE 資料流。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的地區設定的地區設定參數。
+使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前的地區設定傳入的地區設定參數。
 
 > [!IMPORTANT]
 > 確認 *format* 不是使用者定義的字串。
 
-例如不安全的版本 (請參閱[fprintf、 _fprintf_l、 fwprintf、 _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md))，這些函式會驗證它們的參數，並叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)，如果有任一個*資料流*或*格式*為 null 指標。 格式字串本身也會進行驗證。 如果有任何未知或錯誤格式的格式規範，則這些函式會產生無效參數例外狀況。 在所有情況下，若要繼續，允許執行函式會傳回-1，並設定**errno**至**EINVAL**。 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+與不安全版本 (請參閱[fprintf、 _fprintf_l、 fwprintf、 _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md))，這些函式會驗證其參數，並叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)，如果有任一*資料流*或是*格式*為 null 指標。 會一併驗證格式字串本身。 如果有任何未知或錯誤格式的格式規範，則這些函式會產生無效參數例外狀況。 在所有情況下，如果要繼續，請允許執行函式會傳回-1，並設定**errno**要**EINVAL**。 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

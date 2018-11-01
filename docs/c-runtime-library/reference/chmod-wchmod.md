@@ -1,10 +1,6 @@
 ---
-title: _chmod、_wchmod | Microsoft Docs
-ms.custom: ''
+title: _chmod、_wchmod
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _chmod
 - _wchmod
@@ -25,8 +21,6 @@ f1_keywords:
 - _chmod
 - _wchmod
 - wchmod
-dev_langs:
-- C++
 helpviewer_keywords:
 - _chmod function
 - wchmod function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0e4944f871195b276189014ed9d5d294b9b445fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f3133aac1548be5cb497fe32ae4f9f1c0e238d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399943"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595126"
 ---
 # <a name="chmod-wchmod"></a>_chmod、_wchmod
 
@@ -67,11 +57,11 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ## <a name="return-value"></a>傳回值
 
-如果成功變更權限設定，則這些函式會傳回 0。 傳回值-1 表示失敗。 如果找不到指定的檔案， **errno**設**ENOENT**; 如果參數是無效的**errno**設**EINVAL**。
+如果成功變更權限設定，則這些函式會傳回 0。 傳回值為-1 表示失敗。 如果找不到指定的檔案， **errno**設為**ENOENT**; 如果不正確、 此參數**errno**設定為**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**_Chmod**函式會變更所指定的檔案的權限設定*filename*。 權限設定會控制檔案的讀取和寫入權。 整數運算式*pmode*包含一或兩個下列資訊清單常數，在 SYS\Stat.h 中定義。
+**_Chmod**函式會變更所指定之檔案的權限設定*filename*。 權限設定會控制檔案的讀取和寫入權。 整數運算式*pmode*包含一或兩個下列資訊清單常數，SYS\Stat.h 中所定義。
 
 |*pmode*|意義|
 |-|-|
@@ -79,11 +69,11 @@ int _wchmod( const wchar_t *filename, int pmode );
 **_S_IWRITE**|允許寫入 (實際上允許讀取和寫入)。
 **_S_IREAD** &AMP;#124; **_S_IWRITE**|允許讀取和寫入。
 
-當兩個常數時，加入與位元 or 運算子 (**|**)。 若沒有指定寫入權限，則檔案為唯讀。 請注意，所有檔案皆為可讀取；不可能授與僅限寫入權限。 因此，模式 **_S_IWRITE**和 **_S_IREAD** | **_S_IWRITE**相等。
+時指定這兩個常數，它們會結合使用位元 or 運算子 (**|**)。 若沒有指定寫入權限，則檔案為唯讀。 請注意，所有檔案皆為可讀取；不可能授與僅限寫入權限。 因此，模式 **_S_IWRITE**並 **_S_IREAD** | **_S_IWRITE**相等。
 
-**_wchmod**是寬字元版本的 **_chmod**; *filename*引數 **_wchmod**是寬字元字串。 **_wchmod**和 **_chmod**除此之外的行為相同。
+**_wchmod**是寬字元版本的 **_chmod**; *filename*引數 **_wchmod**是寬字元字串。 **_wchmod**並 **_chmod**行為相同。
 
-這個函式會驗證它的參數。 如果*pmode*不是組合資訊清單常數之一，或納入另外組的常數，此函式完全忽略這些。 如果*filename*是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL**而且函數會傳回-1。
+這個函式會驗證它的參數。 如果*pmode*不是其中一個資訊清單常數的組合或包含另一組常數，此函式只會忽略這些。 如果*檔名*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為**EINVAL**和函式會傳回-1。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -93,7 +83,7 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|---------------------|
 |**_chmod**|\<io.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|
 |**_wchmod**|\<io.h> 或 \<wchar.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|

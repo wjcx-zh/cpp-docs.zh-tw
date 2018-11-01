@@ -1,10 +1,6 @@
 ---
-title: _memicmp、_memicmp_l | Microsoft Docs
-ms.custom: ''
+title: _memicmp、_memicmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _memicmp_l
 - _memicmp
@@ -25,24 +21,18 @@ f1_keywords:
 - _memicmp
 - memicmp_l
 - _memicmp_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - memicmp function
 - _memicmp function
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3ddd09fbfbfd4de095bfbc67bc669cf9c794dee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8beb632c8bd2cfac486fc58fc930b94490bdecbc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403049"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636809"
 ---
 # <a name="memicmp-memicmpl"></a>_memicmp、_memicmp_l
 
@@ -84,22 +74,22 @@ int _memicmp_l(
 
 |傳回值|buf1 和 buf2 的前幾個位元組的關聯性|
 |------------------|--------------------------------------------------------|
-|< 0|*buffer1*小於*buffer2*。|
-|0|*buffer1*等於*buffer2*。|
+|< 0|*buffer1*少於*buffer2*。|
+|0|*buffer1*等同*buffer2*。|
 |> 0|*buffer1*大於*buffer2*。|
 |**_NLSCMPERROR**|發生錯誤。|
 
 ## <a name="remarks"></a>備註
 
-**_Memicmp**函式會比較第一個*計數*的兩個緩衝區的字元*buffer1*和*buffer2*位元組的。 這項比較不會區分大小寫。
+**_Memicmp**函式會比較第一個*計數*兩個緩衝區的字元*buffer1*並*buffer2*逐位元組。 這項比較不會區分大小寫。
 
-如果有任一個*buffer1*或*buffer2*為 null 指標，此函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則此函數會傳回 **_NLSCMPERROR**並設定**errno**至**EINVAL**。
+如果有任一*buffer1*或*buffer2*為 null 指標，此函式叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則函數會傳回 **_NLSCMPERROR**並設定**errno**來**EINVAL**。
 
-**_memicmp**使用目前的地區設定進行地區設定相關行為。**_memicmp_l**是完全相同，不同之處在於它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_memicmp**地區設定相關行為; 針對使用目前的地區設定 **_memicmp_l**完全相同，只不過它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_memicmp**|\<memory.h> 或 \<string.h>|
 |**_memicmp_l**|\<memory.h> 或 \<string.h>|

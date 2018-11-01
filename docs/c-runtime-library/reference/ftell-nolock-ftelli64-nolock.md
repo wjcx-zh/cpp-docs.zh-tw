@@ -1,10 +1,6 @@
 ---
-title: _ftell_nolock、_ftelli64_nolock | Microsoft Docs
-ms.custom: ''
+title: _ftell_nolock、_ftelli64_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ftelli64_nolock
 - _ftell_nolock
@@ -26,8 +22,6 @@ f1_keywords:
 - ftelli64_nolock
 - ftell_nolock
 - _ftell_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftelli64_nolock function
 - _ftelli64_nolock function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - ftell_nolock function
 - file pointers [C++], getting current position
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 15d1001b1f0465273771649404de306153edf920
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 58bfc8c7a8b8e820fdec09d52e24dfcb07f328f8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398446"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580839"
 ---
 # <a name="ftellnolock-ftelli64nolock"></a>_ftell_nolock、_ftelli64_nolock
 
@@ -68,11 +58,11 @@ __int64 _ftelli64_nolock(
 
 ## <a name="return-value"></a>傳回值
 
-與相同**ftell**和 **_ftelli64**。 如需詳細資訊，請參閱[ftell、 _ftelli64](ftell-ftelli64.md)。
+與相同**ftell**並 **_ftelli64**。 如需詳細資訊，請參閱 < [ftell、_ftelli64](ftell-ftelli64.md)。
 
 ## <a name="remarks"></a>備註
 
-這些函式是非鎖定版本**ftell**和 **_ftelli64**分別。 它們是相同**ftell**和 **_ftelli64**不同之處在於它們未受保護的干擾由其他執行緒。 這些函式因為不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
+這些函式為非鎖定版本**ftell**並 **_ftelli64**分別。 它們是相同**ftell**並 **_ftelli64**不同之處在於它們不會受到干擾其他執行緒。 這些函式因為不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
 
 ## <a name="requirements"></a>需求
 

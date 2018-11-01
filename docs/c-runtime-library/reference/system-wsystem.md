@@ -1,10 +1,6 @@
 ---
-title: system、_wsystem | Microsoft Docs
-ms.custom: ''
+title: system、_wsystem
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - system
 - _wsystem
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - _tsystem
 - _wsystem
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wsystem function
 - wsystem function
@@ -35,23 +29,19 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca44648ed378d4484b8e4c32a38a6780b3eddd53
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fa034b164a188b1b5b7ccd8a4ca71ab7ac754fa1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414698"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624662"
 ---
 # <a name="system-wsystem"></a>system、_wsystem
 
 執行命令。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -71,7 +61,7 @@ int _wsystem(
 
 ## <a name="return-value"></a>傳回值
 
-如果*命令*是**NULL**並找到命令解譯器，傳回非零值。 如果找不到命令解譯器，會傳回 0，並設定**errno**至**ENOENT**。 如果*命令*不**NULL**，**系統**傳回命令解譯器所傳回的值。 只有當命令解譯器傳回為 0 的值，它才會傳回為 0 的值。 傳回值為-1 表示錯誤，和**errno**設為下列值之一：
+如果*命令*是**NULL**並找到命令解譯器，則傳回非零值。 如果找不到命令解譯器，會傳回 0，並將**errno**要**ENOENT**。 如果*命令*不是**NULL**，**系統**傳回命令解譯器所傳回的值。 只有當命令解譯器傳回為 0 的值，它才會傳回為 0 的值。 傳回值為-1 表示錯誤，並**errno**設為下列值之一：
 
 |||
 |-|-|
@@ -84,9 +74,9 @@ int _wsystem(
 
 ## <a name="remarks"></a>備註
 
-**系統**函式傳遞*命令*給命令解譯器，它會執行與作業系統命令的字串。 **系統**使用**COMSPEC**和**路徑**環境變數，以找出命令解譯器檔案 CMD.exe。 如果*命令*是**NULL**，函式只會檢查命令解譯器是否存在。
+**系統**函式傳遞*命令*給命令解譯器，它就會執行作業系統命令的字串。 **系統**會使用**COMSPEC**並**路徑**環境變數，以找出命令解譯器檔案 CMD.exe。 如果*命令*是**NULL**，函式只會檢查命令解譯器是否存在。
 
-您必須明確清除，使用[fflush](fflush.md)或[_flushall](flushall.md)，或呼叫之前先關閉所有資料流**系統**。
+您必須明確地排清，請使用[fflush](fflush.md)或是[_flushall](flushall.md)，或關閉所有資料流，然後再呼叫**系統**。
 
 **_wsystem**是寬字元版本的**系統**;*命令*引數 **_wsystem**是寬字元字串。 除此之外，這些函式的行為相同。
 
@@ -98,7 +88,7 @@ int _wsystem(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**system**|\<process.h> 或 \<stdlib.h>|
 |**_wsystem**|\<process.h> 或 \<stdlib.h> 或 \<wchar.h>|
@@ -107,7 +97,7 @@ int _wsystem(
 
 ## <a name="example"></a>範例
 
-這個範例會使用**系統**輸入文字檔案。
+這個範例會使用**系統**輸入的文字檔案。
 
 ```C
 // crt_system.c

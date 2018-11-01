@@ -1,27 +1,17 @@
 ---
-title: EDITBIN 選項 |Microsoft Docs
-ms.custom: ''
+title: EDITBIN 選項
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - editbin
-dev_langs:
-- C++
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0850f242b8368a9592a5622e627c781b4df4cde5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 263cfb79897ae60daff64521928db865f1dcb874
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710134"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50540539"
 ---
 # <a name="editbin-options"></a>EDITBIN 選項
 

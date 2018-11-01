@@ -1,37 +1,27 @@
 ---
-title: 編譯器錯誤 C2472 |Microsoft 文件
-ms.custom: ''
+title: 編譯器錯誤 C2472
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2472
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2472
 ms.assetid: 3b36bcdc-2ba5-4357-ab88-7545ba0551cd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 43279190847322fa2154c6faababdcd41b490eef
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d2f104bb61915f8d19d5fff22eea17929c0e8d74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704856"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632735"
 ---
 # <a name="compiler-error-c2472"></a>編譯器錯誤 C2472
 
-> '*函式*' 無法在 managed 程式碼產生: '*訊息*'; 以 /clr 編譯以便產生混合的影像
+> '*函式*' 不能在 managed 程式碼產生: '*訊息*'; 以 /clr 編譯以便產生混合的影像
 
 ## <a name="remarks"></a>備註
 
 在純粹 Common Language Runtime (CLR) 環境內使用 Managed 程式碼不支援的類型時，會發生這個錯誤。 請使用 **/clr** 進行編譯，來解決這個錯誤。
 
-**/Clr: pure**和 **/clr: safe**編譯器選項都是 Visual Studio 2015 中已被取代，並不支援的 Visual Studio 2017 中。
+**/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
 
 ## <a name="example"></a>範例
 

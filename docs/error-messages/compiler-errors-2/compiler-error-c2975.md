@@ -1,37 +1,27 @@
 ---
-title: 編譯器錯誤 C2975 |Microsoft 文件
-ms.custom: ''
+title: 編譯器錯誤 C2975
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2975
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2975
 ms.assetid: 526f6b9d-6c76-4c12-9252-1b1d7c1e06c7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 53cb020dc0d456f10b7cfbae82a16b2ebe5fda6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 66b7c0d61cbc8141b9ed3e5f6eb329b68eb00477
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246979"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609751"
 ---
 # <a name="compiler-error-c2975"></a>編譯器錯誤 C2975
 
-> '*引數*': 無效的樣板引數'*類型*'，必須是編譯時期常數運算式
+> '*引數*': 無效的樣板引數的'*型別*'，必須是編譯時期常數運算式
 
-樣板引數不符合樣板宣告中。常數運算式應該在角括號內會出現。 變數不允許作為範本實質引數。 請檢查樣板定義，以找出正確的類型。
+樣板引數不符合樣板宣告中;常數運算式，應該會出現在角括號內。 變數不允許作為範本的實際引數。 請檢查樣板定義，以找出正確的類型。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C2975，並也會顯示正確的使用方式：
+下列範例會產生 C2975，並也會示範正確使用方式：
 
 ```cpp
 // C2975.cpp
@@ -45,7 +35,7 @@ int main() {
 }
 ```
 
-當您使用時，也會發生 C2975 &#95;&#95;列&#95;&#95;為編譯時期常數與[/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)。 一個解決方式是使用編譯[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)而不是 **/ZI**。
+當您使用時，也會發生 C2975 &#95;&#95;行&#95;&#95;做為編譯時間常數，與[/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)。 一個解決方案是使用編譯[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)而不是 **/ZI**。
 
 ```cpp
 // C2975b.cpp

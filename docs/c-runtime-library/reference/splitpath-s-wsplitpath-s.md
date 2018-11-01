@@ -1,10 +1,6 @@
 ---
-title: _splitpath_s、_wsplitpath_s | Microsoft Docs
-ms.custom: ''
+title: _splitpath_s、_wsplitpath_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wsplitpath_s
 - _splitpath_s
@@ -26,8 +22,6 @@ f1_keywords:
 - splitpath_s
 - _splitpath_s
 - wsplitpath_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - splitpath_s function
 - pathnames
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e5fd1407aa6c2b7630e0720eeec179ca27e7d31a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5a6770b7f5f0f8ee82cf86757d14e03b33c1f5d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417428"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602900"
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s、_wsplitpath_s
 
@@ -100,25 +90,25 @@ errno_t _wsplitpath_s(
 完整路徑。
 
 *磁碟機*<br/>
-磁碟機代號，後面接著冒號 (**:**)。 您可以傳遞**NULL**這個參數，如果您不需要的磁碟機代號。
+磁碟機代號，後面接著冒號 (**:**)。 您可以傳遞**NULL**此參數，如果您不需要的磁碟機代號。
 
 *driveNumberOfElements*<br/>
 大小*磁碟機*以單一位元組或寬字元為單位的緩衝區。 如果*磁碟機*是**NULL**，這個值必須是 0。
 
 *dir*<br/>
-目錄路徑，包括結尾斜線。 正斜線 ( **/** )、 反斜線 ( **\\** )，或兩者都可能使用。 您可以傳遞**NULL**這個參數，如果您不需要的目錄路徑。
+目錄路徑，包括結尾斜線。 正斜線 ( **/** )，反斜線 ( **\\** )，或可以使用。 您可以傳遞**NULL**此參數，如果您不需要的目錄路徑。
 
 *dirNumberOfElements*<br/>
 大小*dir*以單一位元組或寬字元為單位的緩衝區。 如果*dir*是**NULL**，這個值必須是 0。
 
 *fname*<br/>
-基底檔名 (不含副檔名)。 您可以傳遞**NULL**這個參數，如果您不需要檔案名稱。
+基底檔名 (不含副檔名)。 您可以傳遞**NULL**此參數，如果您不需要檔案名稱。
 
 *nameNumberOfElements*<br/>
 大小*fname*以單一位元組或寬字元為單位的緩衝區。 如果*fname*是**NULL**，這個值必須是 0。
 
 *ext*<br/>
-檔案的副檔名，包括前置週期 (**。**)。您可以傳遞**NULL**這個參數，如果您不需要檔名的副檔名。
+副檔名，包括前置句點 (**。**)。您可以傳遞**NULL**此參數，如果您不需要檔名的副檔名。
 
 *extNumberOfElements*<br/>
 大小*ext*以單一位元組或寬字元為單位的緩衝區。 如果*ext*是**NULL**，這個值必須是 0。
@@ -132,22 +122,22 @@ errno_t _wsplitpath_s(
 |條件|傳回值|
 |---------------|------------------|
 |*路徑*是**NULL**|**EINVAL**|
-|*磁碟機*是**NULL**， *driveNumberOfElements*為非零|**EINVAL**|
+|*磁碟機*已**NULL**， *driveNumberOfElements*為非零|**EINVAL**|
 |*磁碟機*是非**NULL**， *driveNumberOfElements*為零|**EINVAL**|
-|*dir*是**NULL**， *dirNumberOfElements*為非零|**EINVAL**|
+|*dir*已**NULL**， *dirNumberOfElements*為非零|**EINVAL**|
 |*dir*是非**NULL**， *dirNumberOfElements*為零|**EINVAL**|
-|*fname*是**NULL**， *nameNumberOfElements*為非零|**EINVAL**|
+|*fname*已**NULL**， *nameNumberOfElements*為非零|**EINVAL**|
 |*fname*是非**NULL**， *nameNumberOfElements*為零|**EINVAL**|
-|*ext*是**NULL**， *extNumberOfElements*為非零|**EINVAL**|
+|*ext*已**NULL**， *extNumberOfElements*為非零|**EINVAL**|
 |*ext*是非**NULL**， *extNumberOfElements*為零|**EINVAL**|
 
-如果發生上述任何狀況，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**至**EINVAL**並傳回**EINVAL**。
+如果發生上述任何狀況，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**要**EINVAL** ，並傳回**EINVAL**。
 
-如有任何的緩衝區太短，以保存結果，這些函式會清除空白字串，請將設定的所有緩衝區**errno**至**為 ERANGE**，並傳回**為 ERANGE**。
+如果任何緩衝區太短而無法保留結果，這些函式將所有緩衝區都清除成空字串、 設定**errno**要**ERANGE**，並傳回**ERANGE**。
 
 ## <a name="remarks"></a>備註
 
-**_Splitpath_s**函式分成四個元件的路徑。 **_splitpath_s**自動多位元組字元字串引數處理為適當且可辨識的多位元組字元序列，會根據目前使用中的多位元組字碼頁。 **_wsplitpath_s**是寬字元版本的 **_splitpath_s**; 的引數 **_wsplitpath_s**是寬字元字串。 否則，這些函式的行為相同。
+**_Splitpath_s**函式會分成四個元件中的路徑。 **_splitpath_s**自動多位元組字元字串引數處理為適當，辨識多位元組字元序列，根據目前使用中的多位元組字碼頁。 **_wsplitpath_s**是寬字元版本的 **_splitpath_s**; 的引數 **_wsplitpath_s**是寬字元字串。 否則，這些函式的行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -155,7 +145,7 @@ errno_t _wsplitpath_s(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath_s**|**_splitpath_s**|**_splitpath_s**|**_wsplitpath_s**|
 
-每個元件的完整路徑儲存在個別的緩衝區。資訊清單常數 **_MAX_DRIVE**， **_MAX_DIR**， **_MAX_FNAME**，和 **_MAX_EXT** （定義於 STDLIB。H） 指定每個檔案元件的最大允許大小。 大於對應資訊清單常數的檔案元件會造成堆積損毀。
+完整路徑的每個元件都會儲存在個別的緩衝區;資訊清單常數 **_MAX_DRIVE**， **_MAX_DIR**， **_MAX_FNAME**，以及 **_MAX_EXT** （定義於 STDLIB。H） 指定每個檔案元件的最大容許大小。 大於對應資訊清單常數的檔案元件會造成堆積損毀。
 
 下表列出資訊清單常數的值。
 
@@ -166,7 +156,7 @@ errno_t _wsplitpath_s(
 |_MAX_FNAME|256|
 |_MAX_EXT|256|
 
-如果完整路徑未包含的元件 （例如，檔案名稱）， **_splitpath_s**將空字串指派給對應的緩衝區。
+如果完整路徑未包含的元件 （例如，檔名）， **_splitpath_s**將空字串指派給對應的緩衝區。
 
 在 C++ 中，使用這些函式已透過範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -174,7 +164,7 @@ errno_t _wsplitpath_s(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_splitpath_s**|\<stdlib.h>|
 |**_wsplitpath_s**|\<stdlib.h> 或 \<wchar.h>|

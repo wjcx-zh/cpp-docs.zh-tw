@@ -1,27 +1,17 @@
 ---
-title: 編譯器錯誤 C3133 |Microsoft Docs
-ms.custom: ''
+title: 編譯器錯誤 C3133
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3133
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3133
 ms.assetid: 4a709405-b67b-4061-8a2a-19fa5fb34a2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 269cc2c22d260b058f16263e4ee73e4a480920eb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 54683f97000bb1467d2cd93376ee8db77fd0685c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46023393"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532687"
 ---
 # <a name="compiler-error-c3133"></a>編譯器錯誤 C3133
 

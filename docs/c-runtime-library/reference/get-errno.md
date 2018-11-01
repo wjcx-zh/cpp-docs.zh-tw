@@ -1,10 +1,6 @@
 ---
-title: _get_errno | Microsoft Docs
-ms.custom: ''
+title: _get_errno
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_errno
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _get_errno
-dev_langs:
-- C++
 helpviewer_keywords:
 - get_errno function
 - errno global variable
 - _get_errno function
 ms.assetid: b3fd5ebc-f41b-4314-a2f4-2f2d79d6e740
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fec59334ff6585e2385295c58c284df7e602ca1c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6ffb76bb31fe1633af78ee73423bb06857e0b893
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397407"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50535716"
 ---
 # <a name="geterrno"></a>_get_errno
 
@@ -47,23 +37,23 @@ ms.locfileid: "32397407"
 ## <a name="syntax"></a>語法
 
 ```C
-errno_t _get_errno( 
-   int * pValue 
+errno_t _get_errno( 
+   int * pValue 
 );
 ```
 
 ### <a name="parameters"></a>參數
 
 *pValue*<br/>
-要填入的目前值為整數的指標**errno**變數。
+要填入的目前值的整數指標**errno**變數。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，傳回零；如果失敗，則傳回錯誤碼。 如果*pValue*是**NULL**，會叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**至**EINVAL**並傳回**EINVAL**。
+如果成功，傳回零；如果失敗，則傳回錯誤碼。 如果*pValue*是**NULL**，會叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**要**EINVAL** ，並傳回**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-可能的值**errno**都在 Errno.h 中定義。 此外，請參閱 [errno 常數](../../c-runtime-library/errno-constants.md)。
+可能的值**errno**於 Errno.h 中定義。 此外，請參閱 [errno 常數](../../c-runtime-library/errno-constants.md)。
 
 ## <a name="example"></a>範例
 
@@ -93,7 +83,7 @@ fyi, ENOENT = 2
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|---------------------|
 |**_get_errno**|\<stdlib.h>|\<errno.h>|
 

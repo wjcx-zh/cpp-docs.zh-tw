@@ -1,25 +1,15 @@
 ---
-title: 如何： 自訂應用程式按鈕 |Microsoft Docs
-ms.custom: ''
+title: 如何：自訂應用程式按鈕
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ef82904a5c84847f3f0064cba6dee171c960f135
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e556e9e6509179b692e4c86b67d59ff2e2ec0f02
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401468"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592786"
 ---
 # <a name="how-to-customize-the-application-button"></a>如何：自訂應用程式按鈕
 

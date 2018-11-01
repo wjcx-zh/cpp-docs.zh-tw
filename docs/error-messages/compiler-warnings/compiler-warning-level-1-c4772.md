@@ -1,36 +1,27 @@
 ---
-title: 編譯器警告 （層級 1） C4772 |Microsoft 文件
+title: 編譯器警告 (層級 1) C4772
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4772
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4772
 ms.assetid: dafe6fd8-9faf-41f5-9d66-a55838742c14
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cbdcfec8d36568c31c291a9de8f9af3aac821fc6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95243ab66d5d0296e1c316ff8dde7add75a030cd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282268"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50540019"
 ---
 # <a name="compiler-warning-level-1-c4772"></a>編譯器警告 (層級 1) C4772
 
-> \#匯入從遺漏的類型程式庫; 參考型別'*遺漏類型*' 做為預留位置
+> \#匯入參考型別從遺漏的類型程式庫;'*遺漏類型*' 做為預留位置
 
-類型程式庫參考與[#import](../../preprocessor/hash-import-directive-cpp.md)指示詞。 不過，類型程式庫包含未參考的另一個類型程式庫的參考`#import`。 編譯器找不到此.tlb 檔案。
+使用所參考的型別程式庫[#import](../../preprocessor/hash-import-directive-cpp.md)指示詞。 不過，類型程式庫包含未參考與另一個型別程式庫的參考`#import`。 編譯器找不到此其他的.tlb 檔案。
 
-請注意，編譯器會不到類型程式庫不同的目錄中是否您使用[（其他 Include 目錄） /I](../../build/reference/i-additional-include-directories.md)編譯器選項以指定這些目錄。 如果您想要在不同的目錄中尋找類型程式庫編譯器，將這些目錄加入至 PATH 環境變數。
+請注意，編譯器會不到類型程式庫中不同的目錄是否您使用[/I （其他 Include 目錄）](../../build/reference/i-additional-include-directories.md)編譯器選項以指定這些目錄。 如果您想要編譯器尋找不同的目錄中的類型程式庫，請將這些目錄加入 PATH 環境變數。
 
-依預設會發出這個警告視為錯誤。 無法隱藏 C4772 /W0 與。
+依預設會發出這個警告視為錯誤。 無法隱藏 C4772 /W0 使用。
 
 ## <a name="example"></a>範例
 
@@ -49,7 +40,7 @@ library C4772aLib
 };
 ```
 
-這是重現 C4772 第二個型別程式庫。
+這是重現 C4772 的第二個類型程式庫。
 
 ```IDL
 // c4772b.idl

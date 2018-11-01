@@ -1,10 +1,6 @@
 ---
-title: _fullpath、_wfullpath | Microsoft Docs
-ms.custom: ''
+title: _fullpath、_wfullpath
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fullpath
 - _wfullpath
@@ -26,8 +22,6 @@ f1_keywords:
 - fullpath
 - _wfullpath
 - _fullpath
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wfullpath function
 - relative file paths
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b472987b0cac41c57e5fd22b2eedecef522613b4
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: aeacaf581b7f33ee893754c192ae547376ce73ea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451676"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550393"
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath、_wfullpath
 
@@ -74,16 +64,16 @@ wchar_t *_wfullpath(
 *relPath*<br/>
 相對路徑名稱。
 
-*maxLength*<br/>
-絕對路徑名稱緩衝區的最大長度 (*absPath*)。 這個長度是以位元組為單位的 **_fullpath**但寬字元 (**wchar_t**) 的 **_wfullpath**。
+*MaxLength*<br/>
+絕對路徑名稱緩衝區的最大長度 (*absPath*)。 這個長度是以位元組為單位 **_fullpath**但是寬字元 (**wchar_t**) 的 **_wfullpath**。
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式會傳回包含絕對路徑名稱之緩衝區的指標 (*absPath*)。 如果發生錯誤 (例如，如果的值傳遞*relPath*包含無效或找不到的磁碟機代號或建立的絕對路徑名稱的長度 (*absPath*) 大於*maxLength*)，則函數會傳回**NULL**。
+所有這些函式都會傳回包含絕對路徑名稱之緩衝區的指標 (*absPath*)。 如果發生錯誤 (例如，如果傳入的值時，才*relPath*包含磁碟機代號無效或找不到，或如果建立的絕對路徑名稱的長度 (*absPath*) 大於*maxLength*)，則函數會傳回**NULL**。
 
 ## <a name="remarks"></a>備註
 
-**_Fullpath**函式會擴展中的相對路徑名稱*relPath*為完整或絕對路徑和儲存區中的這個名稱*absPath*。 如果*absPath*是**NULL**， **malloc**用來配置儲存路徑名稱的長度足夠的緩衝區。 釋放這個緩衝區是呼叫端的責任。 相對路徑名稱指定從目前的位置到另一個位置的路徑 (例如目前的工作目錄：「.」)。 絕對路徑名稱是相對路徑名稱的擴充狀態，其表示從檔案系統根目錄到達所需位置的完整路徑。 不同於 **_makepath**， **_fullpath**可用來取得相對路徑的絕對路徑名稱 (*relPath*)，包括 「。 / 「 或 」.../"中的名稱。
+**_Fullpath**函式會擴展中的相對路徑名稱*relPath*其完整或絕對路徑，並將此名稱在儲存*absPath*。 如果*absPath*是**NULL**， **malloc**用來配置足夠長度儲存路徑名稱的緩衝區。 釋放這個緩衝區是呼叫端的責任。 相對路徑名稱指定從目前的位置到另一個位置的路徑 (例如目前的工作目錄：「.」)。 絕對路徑名稱是相對路徑名稱的擴充狀態，其表示從檔案系統根目錄到達所需位置的完整路徑。 不同於 **_makepath**， **_fullpath**可用來取得相對路徑的絕對路徑名稱 (*relPath*)，包括 「。 / 「 或 」.../ 」 在其名稱中。
 
 例如，若要使用 C 執行階段常式，應用程式必須包含具有常式宣告的標頭檔。 每個標頭檔以相對的方式包含檔案位置的陳述式參考 (從應用程式的工作目錄)︰
 
@@ -95,11 +85,11 @@ wchar_t *_wfullpath(
 
 `\\machine\shareName\msvcSrc\crt\headerFiles\stdlib.h`
 
-**_fullpath**自動多位元組字元字串引數處理為適當且可辨識的多位元組字元序列，會根據目前使用中的多位元組字碼頁。 **_wfullpath**是寬字元版本的 **_fullpath**; 字串引數以 **_wfullpath**是寬字元字串。 **_wfullpath**和 **_fullpath**行為相同，除了 **_wfullpath**不會處理多位元組字元字串。
+**_fullpath**自動多位元組字元字串引數處理為適當，辨識多位元組字元序列，根據目前使用中的多位元組字碼頁。 **_wfullpath**是寬字元版本的 **_fullpath**; 的字串引數 **_wfullpath**是寬字元字串。 **_wfullpath**並 **_fullpath**運作方式完全相同，不同之處在於 **_wfullpath**不會處理多位元組字元字串。
 
-如果 **_DEBUG**和 **_CRTDBG_MAP_ALLOC**是這兩個定義，呼叫 **_fullpath**和 **_wfullpath**被呼叫 **_fullpath_dbg**和 **_wfullpath_dbg**以便進行偵錯記憶體配置。 如需詳細資訊，請參閱 [_fullpath_dbg、_wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md)。
+如果 **_DEBUG**並 **_CRTDBG_MAP_ALLOC**兩者都已定義，來呼叫 **_fullpath**和 **_wfullpath**會取代藉由呼叫 **_fullpath_dbg**並 **_wfullpath_dbg**以便進行偵錯記憶體配置。 如需詳細資訊，請參閱 [_fullpath_dbg、_wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md)。
 
-此函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)，如果*maxlen*小於或等於 0。 如果允許繼續執行，此函式會將**errno**至**EINVAL**並傳回**NULL**。
+此函式會叫用無效參數處理常式中，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)，如果*maxlen*小於或等於 0。 如果允許繼續執行，此函式會將**errno**要**EINVAL** ，並傳回**NULL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -107,7 +97,7 @@ wchar_t *_wfullpath(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfullpath**|**_fullpath**|**_fullpath**|**_wfullpath**|
 
-如果*absPath*緩衝區**NULL**， **_fullpath**呼叫[malloc](malloc.md)配置的緩衝區，並忽略*maxLength*引數。 呼叫端必須負責視需要取消配置這個緩衝區 (使用 [free](free.md))。 如果*relPath*引數指定磁碟機，此磁碟機目前的目錄與路徑結合。
+如果*absPath*緩衝區**NULL**， **_fullpath**呼叫[malloc](malloc.md)配置緩衝區，並忽略*maxLength*引數。 呼叫端必須負責視需要取消配置這個緩衝區 (使用 [free](free.md))。 如果*relPath*引數會指定磁碟機，此磁碟機的目前目錄會結合路徑。
 
 ## <a name="requirements"></a>需求
 

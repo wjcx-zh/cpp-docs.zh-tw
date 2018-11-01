@@ -1,26 +1,16 @@
 ---
-title: 如何： 加入重新啟動管理員支援 |Microsoft Docs
-ms.custom: ''
+title: 如何：加入重新啟動管理員支援
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Restart manager [MFC]
 - C++, application crash support
 ms.assetid: 7f3f5867-d4bc-4ba8-b3c9-dc1e7be93642
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4d31775323a40c8894bca0a5f0ee1dbbbb373a34
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 77267cdad1fa976d73381ca798ca5002c09dc7ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394869"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565125"
 ---
 # <a name="how-to-add-restart-manager-support"></a>如何：加入重新啟動管理員支援
 

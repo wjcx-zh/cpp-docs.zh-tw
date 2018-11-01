@@ -1,14 +1,8 @@
 ---
-title: 將點陣圖儲存為 Gif 或 Jpeg （圖示影像編輯器） |Microsoft Docs
-ms.custom: ''
+title: 將點陣圖儲存為 GIF 或 JPEG (圖示影像編輯器)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.editing
-dev_langs:
-- C++
 helpviewer_keywords:
 - .gif files [C++], saving bitmaps as
 - jpg files [C++], saving bitmaps as
@@ -21,17 +15,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 115df69f-10fb-4e6f-906b-853c1e4a54af
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 11eea641132a608bf780f9adcc7cfeafad0950d5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 99b083236f935bc02acef46d6620256416df93a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383128"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592825"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>將點陣圖儲存為 GIF 或 JPEG (圖示影像編輯器)
 

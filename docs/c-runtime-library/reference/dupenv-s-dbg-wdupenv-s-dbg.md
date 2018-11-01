@@ -1,10 +1,6 @@
 ---
-title: _dupenv_s_dbg、_wdupenv_s_dbg | Microsoft Docs
-ms.custom: ''
+title: _dupenv_s_dbg、_wdupenv_s_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
@@ -24,8 +20,6 @@ f1_keywords:
 - _tdupenv_s_dbg
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tdupenv_s_dbg function
 - dupenv_s_dbg function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ef129cec096734c23e911a5dc77bf3bd0b2df03
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 95d8c18a0ebc543304fdb6bf51c4adde589333aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404301"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579582"
 ---
 # <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg、_wdupenv_s_dbg
 
@@ -83,10 +73,10 @@ errno_t _wdupenv_s_dbg(
 環境變數名稱。
 
 *blockType*<br/>
-要求的記憶體區塊類型： **_CLIENT_BLOCK**或 **_NORMAL_BLOCK**。
+要求的記憶體區塊類型： **_CLIENT_BLOCK**或是 **_NORMAL_BLOCK**。
 
 *filename*<br/>
-指標的原始程式檔的名稱或**NULL**。
+原始程式檔名稱的指標或**NULL**。
 
 *linenumber*<br/>
 原始程式檔中的行號或**NULL**。
@@ -95,15 +85,15 @@ errno_t _wdupenv_s_dbg(
 
 若成功，就是零；若失敗，則為錯誤碼。
 
-這些函式會驗證它們的參數;如果*緩衝區*或*varname*是**NULL**，會叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會將**errno**至**EINVAL**並傳回**EINVAL**。
+這些函式會驗證其參數;如果*緩衝區*或是*varname*是**NULL**，如中所述，會叫用無效參數處理常式[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會將**errno**要**EINVAL** ，並傳回**EINVAL**。
 
-若這些函式無法配置足夠的記憶體，這些設定*緩衝區*至**NULL**和*numberOfElements*為 0，並傳回**ENOMEM**。
+如果這些函式無法配置足夠的記憶體，它們將*緩衝區*要**NULL**並*numberOfElements*為 0，並傳回**ENOMEM**。
 
 ## <a name="remarks"></a>備註
 
-**_Dupenv_s_dbg**和 **_wdupenv_s_dbg**函式完全相同 **_dupenv_s**和 **_wdupenv_s**不同之處在於，當 **_DEBUG**是定義，這些函式使用的偵錯版本[malloc](malloc.md)， [_malloc_dbg](malloc-dbg.md)、 配置記憶體給環境變數的值。 如需有關偵錯功能的詳細 **_malloc_dbg**，請參閱[_malloc_dbg](malloc-dbg.md)。
+**_Dupenv_s_dbg**並 **_wdupenv_s_dbg**函式 **_dupenv_s**並 **_wdupenv_s**不同之處在於，當 **_DEBUG**是定義，這些函式使用的偵錯版本[malloc](malloc.md)， [_malloc_dbg](malloc-dbg.md)來配置記憶體的環境變數的值。 如需有關偵錯功能的資訊 **_malloc_dbg**，請參閱[_malloc_dbg](malloc-dbg.md)。
 
-在大多數情況中，您不需要明確地呼叫這些函式。 相反地，您可以在其中定義的旗標 **_CRTDBG_MAP_ALLOC**。 當 **_CRTDBG_MAP_ALLOC**定義，但呼叫 **_dupenv_s**和 **_wdupenv_s**重新對應至 **_dupenv_s_dbg**和 **_wdupenv_s_dbg**，分別與*blockType*設 **_NORMAL_BLOCK**。 因此，您不需要明確地呼叫這些函式，除非您想要將做為堆積區塊標示 **_CLIENT_BLOCK**。 如需區塊類型的詳細資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。
+在大多數情況中，您不需要明確地呼叫這些函式。 相反地，您可以在其中定義的旗標 **_CRTDBG_MAP_ALLOC**。 當 **_CRTDBG_MAP_ALLOC**定義，呼叫 **_dupenv_s**並 **_wdupenv_s**重新對應至 **_dupenv_s_dbg**和 **_wdupenv_s_dbg**分別與*blockType*設為 **_NORMAL_BLOCK**。 因此，您不需要明確呼叫這些函式，除非您想要將標示為堆積區塊 **_CLIENT_BLOCK**。 如需區塊類型的詳細資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -113,7 +103,7 @@ errno_t _wdupenv_s_dbg(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_dupenv_s_dbg**|\<crtdbg.h>|
 |**_wdupenv_s_dbg**|\<crtdbg.h>|

@@ -1,10 +1,6 @@
 ---
-title: atexit | Microsoft Docs
-ms.custom: ''
+title: atexit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atexit
 apilocation:
@@ -21,22 +17,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - atexit
-dev_langs:
-- C++
 helpviewer_keywords:
 - processing, at exit
 - atexit function
 ms.assetid: 92c156d2-8052-4e58-96dc-00128baac6f9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d66954348d5d812fac7eca0b231304267cc26157
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48f0fbfa1f3350f73899fcdbb3bf7922f1c6174d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393130"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556635"
 ---
 # <a name="atexit"></a>atexit
 
@@ -61,21 +51,21 @@ int atexit(
 
 ## <a name="remarks"></a>備註
 
-**Atexit**函式傳遞的函式位址*func*正常程式終止時呼叫。 後續呼叫**atexit**建立暫存器的順序執行後進先出 (LIFO) 的函式。 函式傳遞至**atexit**無法使用參數。 **atexit**和 **_onexit**來保存的暫存器的函式使用堆積。 因此，可以登錄的函式數目僅受限於堆積記憶體。
+**Atexit**函式的位址傳遞給函式*func*當程式正常終止時呼叫。 後續呼叫**atexit**建立後進先出 (LIFO) 順序執行的函式的暫存器。 函式傳遞至**atexit**不能接受參數。 **atexit**並 **_onexit**使用堆積保存函式暫存器。 因此，可以登錄的函式數目僅受限於堆積記憶體。
 
-中的程式碼**atexit**函式不能包含任何相依性可能已經被卸載時的任何 DLL **atexit**呼叫函式。
+中的程式碼**atexit**函式不應包含的任何相依性可能已卸載時的任何 DLL **atexit**呼叫函式。
 
-產生符合 ANSI 標準的應用程式，請使用 ANSI 標準**atexit**函式 (而不是十分類似 **_onexit**函式)。
+若要產生符合 ANSI 標準的應用程式，使用 ANSI 標準**atexit**函式 (不是類似 **_onexit**函式)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**atexit**|\<stdlib.h>|
 
 ## <a name="example"></a>範例
 
-此程式推入四個函式至函式時執行的堆疊**atexit**呼叫。 當程式結束時，這些程式會依後進先出的基礎執行。
+此程式的推播四個函式時執行的函式的堆疊**atexit**呼叫。 當程式結束時，這些程式會依後進先出的基礎執行。
 
 ```C
 // crt_atexit.c

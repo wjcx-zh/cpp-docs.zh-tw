@@ -1,27 +1,17 @@
 ---
-title: 專案建置錯誤 PRJ0027 |Microsoft Docs
-ms.custom: ''
+title: 專案建置錯誤 PRJ0027
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - PRJ0027
-dev_langs:
-- C++
 helpviewer_keywords:
 - PRJ0027
 ms.assetid: 85d73a78-4b9e-4553-9f5d-2d76c48a790a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c642c678c7db29b9826449731f07ad90bc865294
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bc87ec33e78b9d45625432bd379b4ec7aeeecb52
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46062055"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555884"
 ---
 # <a name="project-build-error-prj0027"></a>專案建置錯誤 PRJ0027
 

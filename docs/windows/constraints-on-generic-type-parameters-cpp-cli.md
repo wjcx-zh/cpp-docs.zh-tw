@@ -1,29 +1,19 @@
 ---
-title: 型別參數的泛型條件約束 (C + + /cli CLI) |Microsoft Docs
-ms.custom: ''
+title: 泛型型別參數的條件約束 (C++/CLI)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - where
-dev_langs:
-- C++
 helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 7b5a81f8e0472a9f30c8a29a94724063ddae4250
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: c0ad5a22adec0d93019e9ea5c81cc8329d1607f8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50059996"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533701"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>泛型型別參數的條件約束 (C++/CLI)
 

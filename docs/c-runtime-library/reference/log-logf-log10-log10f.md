@@ -1,10 +1,6 @@
 ---
-title: 記錄檔、 logf、 logl、 log10、 log10f、 log10l |Microsoft 文件
-ms.custom: ''
+title: 記錄檔、 logf、 logl、 log10、 log10f、 log10l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - log10f
 - logf
@@ -34,8 +30,6 @@ f1_keywords:
 - log10f
 - log10l
 - log10
-dev_langs:
-- C++
 helpviewer_keywords:
 - calculating logarithms
 - log10f function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12f475cde27d4660f4b4936f3f7717a665b70e86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8e3f73e61fefa7a39a6d53d63739b094d78c499
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402838"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543295"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>記錄檔、 logf、 logl、 log10、 log10f、 log10l
 
@@ -86,25 +76,25 @@ long double log10( long double x );  // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-**記錄**函式會傳回自然對數 (基底*e*) 的*x*如果成功的話。 **Log10**函式會傳回基底 10 對數。 如果*x*是負數，這些函數會傳回無限期 (IND)，根據預設。 如果*x*是 0，則它們會傳回 infinity (INF)。
+**記錄檔**函式會傳回自然對數 (基底*e*) 的*x*如果成功。 **Log10**函式會傳回基底 10 對數。 如果*x*是負數，這些函式會傳回無限制 (IND)，根據預設。 如果*x*為 0，則會傳回無限大 (INF)。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± QNAN、 IND|無|_DOMAIN|
+|常见 QNAN IND|無|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
 |*x* < 0|INVALID|_DOMAIN|
 
-**記錄**和**log10**有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
+**記錄檔**並**log10**有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
 ## <a name="remarks"></a>備註
 
-C + + 允許多載，所以您可以呼叫的多載**記錄**和**log10**採用並傳回**float**或**長雙精度**值。 在 C 程式中，**記錄**和**log10**一律採用並傳回**double**。
+C + + 允許多載，因此您可以呼叫多載**記錄檔**並**log10**採用並傳回**float**或是**長雙精度**值。 在 C 程式中，**記錄檔**並**log10**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**記錄**， **logf**， **logl**， **log10**， **log10f**， **log10l**|\<math.h>|
+|**記錄檔**， **logf**， **logl**， **log10**， **log10f**， **log10l**|\<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

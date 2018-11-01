@@ -1,10 +1,6 @@
 ---
-title: _getdcwd_dbg、_wgetdcwd_dbg | Microsoft Docs
-ms.custom: ''
+title: _getdcwd_dbg、_wgetdcwd_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdcwd_dbg
 - _wgetdcwd_dbg
@@ -25,8 +21,6 @@ f1_keywords:
 - getdcwd_dbg
 - _wgetdcwd_dbg
 - wgetdcwd_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - working directory
 - _getdcwd_dbg function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _wgetdcwd_dbg function
 - directories [C++], current working
 ms.assetid: 266bf6f0-0417-497f-963d-2e0f306d9385
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0f68fc4fe1c19204433e8f5c9b6c7991d8f7f90e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 700cfe732dc390ca59a976694403bb3d91af5980
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402822"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547169"
 ---
 # <a name="getdcwddbg-wgetdcwddbg"></a>_getdcwd_dbg、_wgetdcwd_dbg
 
@@ -81,10 +71,10 @@ wchar_t *_wgetdcwd_dbg(
 路徑的儲存位置。
 
 *maxlen*<br/>
-路徑，以字元為單位的最大長度： **char**如 **_getdcwd_dbg**和**wchar_t**如 **_wgetdcwd_dbg**。
+路徑以字元為單位的最大長度： **char**如 **_getdcwd_dbg**並**wchar_t**如 **_wgetdcwd_dbg**。
 
 *blockType*<br/>
-要求的記憶體區塊類型： **_CLIENT_BLOCK**或 **_NORMAL_BLOCK**。
+要求的記憶體區塊類型： **_CLIENT_BLOCK**或是 **_NORMAL_BLOCK**。
 
 *filename*<br/>
 要求配置作業之原始程式檔名稱的指標或**NULL**。
@@ -94,13 +84,13 @@ wchar_t *_wgetdcwd_dbg(
 
 ## <a name="return-value"></a>傳回值
 
-將指標傳回至*緩衝區*。 A **NULL**傳回值表示錯誤，和**errno**會設為**ENOMEM**，表示記憶體不足以配置*maxlen*位元組 (當**NULL**引數指定為*緩衝區*)，或**為 ERANGE**，表示路徑長度超過*maxlen*字元。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+將指標傳回至*緩衝區*。 A **NULL**傳回值表示錯誤，並**errno**設為**ENOMEM**，表示記憶體不足，無法配置*maxlen*位元組 (當**NULL**引數指定為*緩衝區*)，或**ERANGE**，表示路徑長度超過*maxlen*字元。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Getdcwd_dbg**和 **_wgetdcwd_dbg**函式完全相同 **_getdcwd**和 **_wgetdcwd**不同之處在於，當 **_DEBUG**是定義，這些函式使用的偵錯版本**malloc**和 **_malloc_dbg**配置記憶體，如果**NULL**傳遞做為*緩衝區*參數。 如需詳細資訊，請參閱 [_malloc_dbg](malloc-dbg.md)。
+**_Getdcwd_dbg**並 **_wgetdcwd_dbg**函式 **_getdcwd**並 **_wgetdcwd**不同之處在於，當 **_DEBUG**是定義，這些函式使用的偵錯版本**malloc**並 **_malloc_dbg**來配置記憶體**NULL**傳遞作為*緩衝區*參數。 如需詳細資訊，請參閱 [_malloc_dbg](malloc-dbg.md)。
 
-在大多數情況中，您不需要明確地呼叫這些函式。 相反地，您可以定義 **_CRTDBG_MAP_ALLOC**旗標。 當 **_CRTDBG_MAP_ALLOC**定義，但呼叫 **_getdcwd**和 **_wgetdcwd**重新對應至 **_getdcwd_dbg**和 **_wgetdcwd_dbg**，分別與*blockType*設 **_NORMAL_BLOCK**。 因此，您不需要明確地呼叫這些函式，除非您想要將做為堆積區塊標示 **_CLIENT_BLOCK**。 如需詳細資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。
+在大多數情況中，您不需要明確地呼叫這些函式。 相反地，您可以定義 **_CRTDBG_MAP_ALLOC**旗標。 當 **_CRTDBG_MAP_ALLOC**定義，呼叫 **_getdcwd**並 **_wgetdcwd**重新對應至 **_getdcwd_dbg**和 **_wgetdcwd_dbg**分別與*blockType*設定為 **_NORMAL_BLOCK**。 因此，您不需要明確呼叫這些函式，除非您想要將標示為堆積區塊 **_CLIENT_BLOCK**。 如需詳細資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -110,7 +100,7 @@ wchar_t *_wgetdcwd_dbg(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_getdcwd_dbg**|\<crtdbg.h>|
 |**_wgetdcwd_dbg**|\<crtdbg.h>|

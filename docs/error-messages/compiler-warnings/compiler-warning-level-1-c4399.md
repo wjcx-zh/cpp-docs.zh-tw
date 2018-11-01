@@ -1,37 +1,27 @@
 ---
-title: 編譯器警告 （層級 1） C4399 |Microsoft 文件
-ms.custom: ''
+title: 編譯器警告 (層級 1) C4399
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4399
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4399
 ms.assetid: f58d9ba7-71a0-4c3b-b26f-f946dda8af30
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aedad6aed07a6056f74ad338037a7268c722627f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 56fe0f314142d873fc02136bc2c3fe65e71f4dda
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703716"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544062"
 ---
 # <a name="compiler-warning-level-1-c4399"></a>編譯器警告 (層級 1) C4399
 
-> '*符號*': __declspec （dllimport） 以 /clr 編譯時不會標示每個處理序專屬符號： pure
+> '*符號*': __declspec （dllimport） 以 /clr 編譯時不應該標示處理序專屬符號： pure
 
 ## <a name="remarks"></a>備註
 
-**/Clr: pure**編譯器選項已被取代 Visual Studio 2015 中，在 Visual Studio 2017 中支援。
+**/Clr: pure**編譯器選項是在 Visual Studio 2015 中已被取代，不支援的 Visual Studio 2017 中。
 
-原生映像或原生和 CLR 建構的映像中的資料不會匯純映像。 若要解決這個警告，以編譯 **/clr** (不 **/clr: pure**) 或刪除`__declspec(dllimport)`。
+原生映像或 CLR 建構與原生映像中的資料不匯入到純映像。 若要解決這個警告，以編譯 **/clr** (不 **/clr: pure**) 或刪除`__declspec(dllimport)`。
 
 ## <a name="example"></a>範例
 

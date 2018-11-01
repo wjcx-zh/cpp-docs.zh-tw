@@ -1,27 +1,17 @@
 ---
-title: WM_ 訊息處理常式 |Microsoft Docs
-ms.custom: ''
+title: WM_ 訊息的處理常式
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - WM_
-dev_langs:
-- C++
 helpviewer_keywords:
 - WM_ messages [MFC]
 ms.assetid: cad81690-90bf-4f77-943f-a435e7563bdd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9dd9dc149a034b452b3e42974bc0422c2ee4f800
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ea95958ccc7180ffa6472ea2f288dda85223cea5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439818"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605045"
 ---
 # <a name="handlers-for-wm-messages"></a>WM_ 訊息的處理常式
 

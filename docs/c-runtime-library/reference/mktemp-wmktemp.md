@@ -1,10 +1,6 @@
 ---
-title: _mktemp、_wmktemp | Microsoft Docs
-ms.custom: ''
+title: _mktemp、_wmktemp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wmktemp
 - _mktemp
@@ -27,8 +23,6 @@ f1_keywords:
 - tmktemp
 - _wmktemp
 - _mktemp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wmktemp function
 - _mktemp function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - mktemp function
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 087348b3cc59fb1b47699fc0e64f533c22d992b4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9dbaba9e4a68523c0d79762c6a7ff54c238e397d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404343"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554154"
 ---
 # <a name="mktemp-wmktemp"></a>_mktemp、_wmktemp
 
@@ -80,11 +70,11 @@ wchar_t *_wmktemp(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式傳回已修改 nameTemplate 的指標。 此函數會傳回**NULL**如果*nameTemplate*格式不正確或沒有其他的唯一名稱可由從給定 nameTemplate。
+所有這些函式都會傳回已修改的 nameTemplate 的指標。 此函數會傳回**NULL**如果*nameTemplate*格式不正確，或從指定 nameTemplate 可以建立沒有其他的唯一名稱。
 
 ## <a name="remarks"></a>備註
 
-**_Mktemp**函式會建立唯一的檔案名稱，藉由修改*nameTemplate*引數。 **_mktemp**自動多位元組字元字串引數處理為適當且可辨識由執行階段系統的多位元組字元序列，會根據目前使用中的多位元組字碼頁。 **_wmktemp**是寬字元版本的 **_mktemp**; 的引數和傳回值 **_wmktemp**是寬字元字串。 **_wmktemp**和 **_mktemp**除此之外的行為相同，不同處在於 **_wmktemp**不會處理多位元組字元字串。
+**_Mktemp**函式會建立唯一的檔案名稱，藉由修改*nameTemplate*引數。 **_mktemp**自動多位元組字元字串引數處理為適當且由執行階段系統辨識多位元組字元序列，根據目前使用中的多位元組字碼頁。 **_wmktemp**是寬字元版本的 **_mktemp**; 的引數和傳回值 **_wmktemp**是寬字元字串。 **_wmktemp**並 **_mktemp**行為相同，不同之處在於 **_wmktemp**不會處理多位元組字元字串。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -92,17 +82,17 @@ wchar_t *_wmktemp(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp**|**_mktemp**|**_mktemp**|**_wmktemp**|
 
-*NameTemplate*引數的形式*基底 * * XXXXXX*，其中*基底*屬於您提供的新檔案名稱，而且每個 X 是預留位置，代表所提供的字元 **_mktemp**。 中的每個預留位置字元*nameTemplate*必須是大寫的 x **_mktemp**保留*基底*取代第一個尾端 X，以字母字元。 **_mktemp**取代下列尾端 x 的五位數的值; 這個值是唯一的數字，識別呼叫處理序中，或在多執行緒程式中，呼叫的執行緒。
+*NameTemplate*引數的形式*基底 * * XXXXXX*，其中*基底*是您所提供的新檔案名稱的一部分，而每個 X 是所提供的字元預留位置 **_mktemp**。 每個預留位置字元*nameTemplate*必須是大寫 x。 **_mktemp**保留*基底*，並以字母字元取代的第一個後置 X。 **_mktemp**取代的後置 x 的五位數的值，這個值是唯一的數字，識別呼叫處理序中，或在多執行緒程式中，呼叫的執行緒。
 
-每次成功呼叫 **_mktemp**修改*nameTemplate*。 在每一個後續的呼叫，從相同的程序或具有相同的執行緒*nameTemplate*引數， **_mktemp**檢查所傳回的名稱比對的檔案名稱 **_mktemp**中先前的呼叫。 如果檔案不存在指定名稱時，請 **_mktemp**傳回該名稱。 如果檔案存在，所有先前傳回名稱、 **_mktemp**建立的新名稱來取代它的下一個可用小寫字母 'a' 到 'z' 從順序先前傳回名稱中使用的字母字元。 例如，如果*基底*是：
+每次成功呼叫 **_mktemp**修改*nameTemplate*。 在每個後續的呼叫，從相同的程序或執行緒具有相同*nameTemplate*引數 **_mktemp**檢查所傳回的名稱相符的檔案名稱 **_mktemp**中先前的呼叫。 如果檔案不存在指定名稱時，請 **_mktemp**傳回該名稱。 如果檔案存在，所有先前傳回的名稱， **_mktemp**建立的新名稱來取代它使用於下一個可用的小寫字母，順序，從 'a' 到 'z' 先前傳回的名稱的字母字元。 例如，如果*基底*是：
 
 > **fn**
 
-與所提供的 5 位數值 **_mktemp**為 12345，傳回的第一個名稱為：
+與所提供的五位數值 **_mktemp**為 12345，傳回的第一個名稱為：
 
 > **fna12345**
 
-如果這個名稱用來建立檔案 FNA12345，而且此檔案是否仍然存在，從相同的程序或具有相同的執行緒呼叫傳回的下一個名稱*基底*如*nameTemplate*是：
+如果此名稱會用來建立檔案 FNA12345，而且此檔案仍然存在，在呼叫傳回相同的程序或執行緒具有相同的下一步 的名稱*基底*for *nameTemplate*是：
 
 > **fnb12345**
 
@@ -110,15 +100,15 @@ wchar_t *_wmktemp(
 
 > **fna12345**
 
-**_mktemp**的任何特定組合的 26 唯一的檔案名稱最多可以建立*基底*和*nameTemplate*值。 因此，FNZ12345 是最後一個唯一的檔案名稱 **_mktemp**可以建立*基底*和*nameTemplate*用在此範例中的值。
+**_mktemp**可以建立最多 26 的唯一檔案名稱，任何給定的組合*基底*並*nameTemplate*值。 因此，FNZ12345 是最後一個唯一的檔案名稱 **_mktemp**可以為建立*基底*並*nameTemplate*此範例中使用的值。
 
-如果失敗， **errno**設定。 如果*nameTemplate*格式無效 (例如，少於 6 X)， **errno**設**EINVAL**。 如果 **_mktemp**無法建立唯一的名稱，因為所有 26 可能的檔案名稱已經存在， **_mktemp** nameTemplate 設定為空字串並傳回**EEXIST**。
+在失敗時， **errno**設定。 如果*nameTemplate*具有無效的格式 (例如，少於 6 X)， **errno**設定為**EINVAL**。 如果 **_mktemp**無法建立唯一的名稱，因為 26 的所有可能的檔案名稱已經存在，所以 **_mktemp** nameTemplate 設為空字串，並傳回**EEXIST**。
 
 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_mktemp**|\<io.h>|
 |**_wmktemp**|\<io.h> 或 \<wchar.h>|

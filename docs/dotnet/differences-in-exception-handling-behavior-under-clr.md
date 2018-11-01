@@ -1,27 +1,16 @@
 ---
-title: 在例外狀況處理-CLR 之下的行為差異 |Microsoft Docs
-ms.custom: ''
+title: 在例外狀況處理-CLR 之下的行為差異
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 5423e7c5b607f8a38a123a1c7f52c26f305ddb64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4898ff7893ec327495e757f2ffa0eb37ae051875
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380603"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551329"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>在 /CLR 之下例外狀況處理行為的差異
 

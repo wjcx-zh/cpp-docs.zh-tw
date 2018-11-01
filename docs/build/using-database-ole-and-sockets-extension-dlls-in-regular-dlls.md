@@ -1,27 +1,17 @@
 ---
-title: 使用 MFC 的標準 Dll 中的資料庫、 OLE 和通訊端 MFC 延伸模組 Dll |Microsoft Docs
-ms.custom: ''
+title: 使用 MFC 的標準 Dll 中的資料庫、 OLE 和通訊端 MFC 延伸模組 Dll
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - DLLs [C++], initializing
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7b8fe2c57991ffd15f135fab39c185b6a68f2e9c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 74945f712fed68548e3853d231a586ec0c70d84b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701976"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587521"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>使用 MFC 的標準 Dll 中的資料庫、 OLE 和通訊端 MFC 延伸模組 Dll
 

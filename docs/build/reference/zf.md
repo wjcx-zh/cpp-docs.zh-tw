@@ -1,28 +1,21 @@
 ---
-title: /Zf （產生更快的 PDB） |Microsoft 文件
+title: /Zf （PDB 產生速度加快）
 ms.date: 03/29/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /Zf
-dev_langs:
-- C++
 helpviewer_keywords:
 - /Zf
 - -Zf
-author: corob-msft
-ms.author: corob
-ms.openlocfilehash: 968ce17302fa608888c7ae2fedf695946b0119bd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2c3f8d08f59c3a6803eda67126ef8a8f9ba6b1fc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379961"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595727"
 ---
-# <a name="zf-faster-pdb-generation"></a>/Zf （速度 PDB 的產生）
+# <a name="zf-faster-pdb-generation"></a>/Zf （PDB 產生速度加快）
 
-啟用平行組建中的更快產生 PDB mspdbsrv.exe RPC 呼叫將降至最低。
+最小化 mspdbsrv.exe RPC 呼叫，以啟用更快速的平行組建的 PDB 產生。
 
 ## <a name="syntax"></a>語法
 
@@ -30,19 +23,19 @@ ms.locfileid: "32379961"
 
 ## <a name="remarks"></a>備註
 
-**/Zf**選項更快產生 PDB 檔的編譯器支援使用時，啟用[/MP （使用多個處理序建置）](mp-build-with-multiple-processes.md)選項，或當建置系統 (例如， [MSBuild](/visualstudio/msbuild/msbuild-reference)或[CMake](../../ide/cmake-tools-for-visual-cpp.md)) 可能時間內執行多個 cl.exe 編譯器處理程序相同。 此選項會使延遲產生的型別索引 PDB 檔案中每個型別記錄的編譯時，結束之前的編譯器前端然後 mspdbsrv.exe，而非讓 RPC 要求每一筆記錄的單一 RPC 呼叫中的所有要求。 這基本上可以改善建置輸送量藉由減少 mspdbsrv.exe 程序，在多個 cl.exe 編譯器處理序同時執行的所在的環境中的 RPC 負載。
+**/Zf**使用時，選項會啟用更快產生 PDB 檔的編譯器支援[/MP （使用多個處理序建置）](mp-build-with-multiple-processes.md)選項，或當建置系統 (例如[MSBuild](/visualstudio/msbuild/msbuild-reference)或是[CMake](../../ide/cmake-tools-for-visual-cpp.md)) 可能會多個 cl.exe 在同時執行編譯器處理序。 此選項會導致編譯器前端延遲類型索引的產生 PDB 檔案中的每個類型記錄到結束的編譯，然後要求它們全都放在單一的 RPC 呼叫到 mspdbsrv.exe，而不是 RPC 要求每一筆記錄。 這可以減少 RPC 負載 mspdbsrv.exe 程序，在多個 cl.exe 編譯器處理序同時執行的所在的環境中，大幅改善建置輸送量。
 
-因為 **/Zf**選項僅適用於產生 PDB，它需要[/Zi](z7-zi-zi-debug-information-format.md)或[/ZI](z7-zi-zi-debug-information-format.md)選項。
+因為 **/Zf**選項僅適用於的 PDB 產生，它需要[/Zi](z7-zi-zi-debug-information-format.md)或是[/ZI](z7-zi-zi-debug-information-format.md)選項。
 
-**/Zf**選項是從開始使用 Visual Studio 2017 版本 15.1，其中它預設為關閉。 從 Visual Studio 2017 版本 15.7 Preview 3，此選項預設為開啟時 **/Zi**或 **/ZI**啟用選項。
+**/Zf**選項是在 Visual Studio 2017 15.1 版，開始提供，它預設為關閉。 開始在 Visual Studio 2017 15.7 版 Preview 3，此選項預設為開啟時 **/Zi**或是 **/ZI**啟用選項。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
 
-1. 選取**組態屬性** > **C/c + +** > **命令列**屬性頁。
+1. 選取 **組態屬性** > **C/c + +** > **命令列**屬性頁。
 
-1. 修改**其他選項**屬性，以包括 **/Zf** ，然後選擇 **確定**。
+1. 修改**其他選項**屬性，以包括 **/Zf** ，然後選擇**確定**。
 
 ## <a name="see-also"></a>另請參閱
 

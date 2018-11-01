@@ -1,10 +1,6 @@
 ---
-title: _execle、_wexecle | Microsoft Docs
-ms.custom: ''
+title: _execle、_wexecle
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execle
 - _wexecle
@@ -25,31 +21,25 @@ f1_keywords:
 - wexecle
 - _execle
 - _wexecle
-dev_langs:
-- C++
 helpviewer_keywords:
 - wexecle function
 - execle function
 - _wexecle function
 - _execle function
 ms.assetid: 75efa9c5-96b7-4e23-acab-06258901f63a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 519cdb78132c50513ae3197985de7faaceff7c91
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbd84dd8d8e150a063dad4dc89a572c317bce544
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400638"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530516"
 ---
 # <a name="execle-wexecle"></a>_execle、_wexecle
 
 載入並執行新的子處理序。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -83,7 +73,7 @@ intptr_t _wexecle(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功的話，這些函式不會傳回呼叫處理序。 傳回值-1 表示錯誤，在此情況下**errno**設定全域變數。
+如果成功的話，這些函式不會傳回呼叫處理序。 傳回值為-1 表示發生錯誤時，在此情況下**errno**設定全域變數。
 
 |**errno**值|描述|
 |-------------------|-----------------|
@@ -101,7 +91,7 @@ intptr_t _wexecle(
 
 這些函式中的每一個都會載入和執行新處理序，並將每個命令列引數做為個別參數傳遞，也會將指標的陣列傳遞至環境設定。
 
-**_Execle**函式會驗證它們的參數。 如果*cmdname*或*arg0*為 null 指標或空字串，這些函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**至**EINVAL**並傳回-1。 未啟動任何新的處理序。
+**_Execle**函式會驗證其參數。 如果*cmdname*或是*arg0*是 null 指標或空字串，這些函式叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**要**EINVAL**並傳回-1。 未啟動任何新的處理序。
 
 ## <a name="requirements"></a>需求
 

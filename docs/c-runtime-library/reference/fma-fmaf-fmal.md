@@ -1,11 +1,6 @@
 ---
-title: fma、fmaf、fmal | Microsoft Docs
-ms.custom: ''
+title: fma、fmaf、fmal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fma
 - fmaf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/fma
 - math/fmaf
 - math/fmal
-dev_langs:
-- C++
 helpviewer_keywords:
 - fma function
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b28009a9c3cc4edceb9032660a0c2a71916dfb2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3b540a72c6f2fc2264d6366111831fbe2a02a6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401473"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529944"
 ---
 # <a name="fma-fmaf-fmal"></a>fma、fmaf、fmal
 
@@ -106,10 +95,10 @@ long double fmal(
 
 |問題|Return|
 |-----------|------------|
-|*x* = 無限大， *y* = 0 或<br /><br /> *x* = 0， *y* = 無限|NaN|
-|*x*或*y* = 確切 ± 無限大， *z*正負號相反 = 無限|NaN|
-|*x*或*y* = NaN|NaN|
-|不 (*x* = 0， *y*= 無限期) 和*z* = NaN<br /><br /> 不 (*x*= 無限期， *y*= 0) 和*z* = NaN|NaN|
+|*x* = 無限大*y* = 0 或<br /><br /> *x* = 0 時， *y* = INFINITY|NaN|
+|*x*或是*y* = 確切常见無限大*z*正負號相反 = INFINITY|NaN|
+|*x*或是*y* = NaN|NaN|
+|不 (*x* = 0， *y*= 無限制) 和*z* = NaN<br /><br /> 不 (*x*= 無限制， *y*= 0) 和*z* = NaN|NaN|
 |溢位範圍錯誤|±HUGE_VAL、 ±HUGE_VALF 或 ±HUGE_VALL|
 |反向溢位範圍錯誤|四捨五入後的正確值。|
 
@@ -117,7 +106,7 @@ long double fmal(
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**fma**採用並傳回**float**和**長** **double**型別。 在 C 程式中， **fma**一律採用並傳回**double**。
+因為 c + + 允許多載，您可以呼叫多載**fma**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **fma**一律採用並傳回**double**。
 
 此函式會計算值，就像它採用無限精確度，然後將最終結果進行四捨五入。
 

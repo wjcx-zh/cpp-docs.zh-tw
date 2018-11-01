@@ -1,10 +1,6 @@
 ---
-title: isleadbyte、_isleadbyte_l | Microsoft Docs
-ms.custom: ''
+title: isleadbyte、_isleadbyte_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isleadbyte_l
 - isleadbyte
@@ -25,8 +21,6 @@ f1_keywords:
 - _istleadbyte
 - _isleadbyte_l
 - isleadbyte
-dev_langs:
-- C++
 helpviewer_keywords:
 - lead bytes
 - _isleadbyte_l function
@@ -34,23 +28,19 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 682cdde6983c5e590920c43418e510b9c275b34e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a3f427e49e53bb553020da100b0e713350fab3f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401014"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531885"
 ---
 # <a name="isleadbyte-isleadbytel"></a>isleadbyte、_isleadbyte_l
 
 判斷某個字元是否為多位元組字元的前導位元組。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -66,15 +56,15 @@ int _isleadbyte_l( int c );
 
 ## <a name="return-value"></a>傳回值
 
-**isleadbyte**傳回非零值，如果引數符合測試條件或 0 則否。 在"C"地區設定和單一位元組字元集 (SBCS) 地區設定中， **isleadbyte**一律傳回 0。
+**isleadbyte**如果引數符合測試條件或 0 則會傳回非零值。 在"C"地區設定和單一位元組字元集 (SBCS) 地區設定中， **isleadbyte**一律會傳回 0。
 
 ## <a name="remarks"></a>備註
 
-**Isleadbyte**巨集會傳回非零值，如果其引數是多位元組字元的第一個位元組。 **isleadbyte**會產生有意義的結果的任何整數引數，介於-1 (**EOF**) 至**UCHAR_MAX** (0xFF)，（含)。
+**Isleadbyte**巨集會傳回非零值，如果其引數是多位元組字元的第一個位元組。 **isleadbyte**會產生有意義的結果的任何整數引數，介於-1 (**EOF**) 來**UCHAR_MAX** (0xFF)，內含。
 
-預期的引數型別**isleadbyte**是**int**; 如果傳遞了帶正負號的字元，則編譯器可能會將它轉換成整數的正負號擴充，而產生無法預期的結果。
+預期的引數型別**isleadbyte**是**int**; 如果傳遞的帶正負號的字元，則編譯器可能會將它轉換成整數的正負號擴充，產生無法預期的結果。
 
-這個函式版本 **_l**尾碼是完全相同，不同之處在於它會使用傳入的地區設定而不是目前的地區設定的地區設定相關的行為。
+使用此函式的版本 **_l**尾碼是完全相同，不同之處在於它會使用傳入的地區設定而不是目前的地區設定針對與其地區設定相關的行為。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -84,7 +74,7 @@ int _isleadbyte_l( int c );
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**isleadbyte**|\<ctype.h>|
 |**_isleadbyte_l**|\<ctype.h>|

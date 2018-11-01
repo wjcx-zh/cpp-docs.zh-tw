@@ -1,10 +1,6 @@
 ---
-title: _commit | Microsoft Docs
-ms.custom: ''
+title: _commit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _commit
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _commit
 - commit
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], flushing
 - flushing files to disk
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3e9bc746c347bfb60fb78edbf025b676f8218c66
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8408158cb3d4ef0d29d9af24d8a2acbd28e00192
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394827"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523065"
 ---
 # <a name="commit"></a>_commit
 
@@ -62,17 +52,17 @@ int _commit(
 
 ## <a name="return-value"></a>傳回值
 
-**_commit**傳回 0，如果檔案已成功排清至磁碟。 傳回值-1 表示錯誤。
+**（_c)** 會傳回 0，如果已成功將檔案清除至磁碟。 傳回值為-1 表示錯誤。
 
 ## <a name="remarks"></a>備註
 
-**_Commit**函式會強制寫入檔案與相關聯的作業系統*fd*至磁碟。 這個呼叫確保立即清除指定的檔案，而不是由作業系統自行決定。
+**（_c)** 函式會強制作業系統在寫入相關聯的檔案*fd*到磁碟。 這個呼叫確保立即清除指定的檔案，而不是由作業系統自行決定。
 
-如果*fd*是無效的檔案描述項無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函數會傳回-1 和**errno**設**EBADF**。
+如果*fd*是無效的檔案描述項無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函數會傳回-1 及**errno**設為**EBADF**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
 |**_commit**|\<io.h>|\<errno.h>|
 

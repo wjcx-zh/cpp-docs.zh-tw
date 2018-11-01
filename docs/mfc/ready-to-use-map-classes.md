@@ -1,29 +1,19 @@
 ---
-title: 已準備好要使用的對應類別 |Microsoft Docs
-ms.custom: ''
+title: 立即可用的對應類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.map
-dev_langs:
-- C++
 helpviewer_keywords:
 - collection classes [MFC], maps
 - classes [MFC], map
 - map classes [MFC]
 ms.assetid: 3f0b1c05-2243-4d4d-98d4-429fc3310c9f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5fe4a72a4237360f674fabdf0ac992d7fcbd1c68
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4a538e469521d8fdae6d2b74b155794bf559d6dd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438661"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496404"
 ---
 # <a name="ready-to-use-map-classes"></a>立即可用的對應類別
 

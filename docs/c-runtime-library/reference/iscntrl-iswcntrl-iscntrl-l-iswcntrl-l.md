@@ -1,10 +1,6 @@
 ---
-title: iscntrl、iswcntrl、_iscntrl_l、_iswcntrl_l | Microsoft Docs
-ms.custom: ''
+title: iscntrl、iswcntrl、_iscntrl_l、_iswcntrl_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iscntrl
 - _iswcntrl_l
@@ -30,8 +26,6 @@ f1_keywords:
 - _iscntrl_l
 - iscntrl
 - _istcntrl
-dev_langs:
-- C++
 helpviewer_keywords:
 - iscntrl function
 - _iscntrl_l function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c87745a4aa1c2e9d93f2c779e089e0bff6f66fcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 150073e78426f5029dd46cbc6766fbd6a2a242e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401525"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506742"
 ---
 # <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl、iswcntrl、_iscntrl_l、_iswcntrl_l
 
@@ -85,11 +75,11 @@ int _iswcntrl_l(
 
 ## <a name="return-value"></a>傳回值
 
-每個這些常式傳回非零，如果*c*是控制字元的特定表示法。 **iscntrl**傳回非零值，如果*c*是控制字元 (0x00-0x1F 或 0x7F)。 **iswcntrl**傳回非零值，如果*c*是控制項的寬字元。 這些常式都會傳回 0，如果*c*不符合測試條件。
+這些常式傳回非零值如果*c*表示特定的控制字元。 **iscntrl**傳回非零值，如果*c*是控制字元 (0x00-0x1F 或 0x7F)。 **iswcntrl**傳回非零值，如果*c*是控制寬字元。 這些常式都會傳回 0，如果*c*不符合測試條件。
 
 有這些函式的版本 **_l**後置詞使用傳入的地區設定參數，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-行為**iscntrl**和 **_iscntrl_l**是未定義的如果*c*不 EOF 或 0 到 0xFF，（含) 範圍中。 當使用 CRT 偵錯程式庫和*c*不是其中一個函式產生，這些值的判斷提示。
+行為**iscntrl**並 **_iscntrl_l**如果是未定義*c*不是 EOF 或介於 0 到 0xFF 的內含。 使用偵錯 CRT 程式庫時， *c*是不是其中一個值，函式會引發判斷提示。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -100,7 +90,7 @@ int _iswcntrl_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**iscntrl**|\<ctype.h>|
 |**iswcntrl**|\<ctype.h> 或 \<wchar.h>|

@@ -1,10 +1,6 @@
 ---
-title: tmpfile_s | Microsoft Docs
-ms.custom: ''
+title: tmpfile_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tmpfile_s
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - tmpfile_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - temporary files
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1cd7866a7135f04aa580910d5ac121311312c542
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 341e1c8ed6dd20ec7e6a3d71999fb365e45e614a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412146"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50488110"
 ---
 # <a name="tmpfiles"></a>tmpfile_s
 
@@ -67,19 +57,19 @@ errno_t tmpfile_s(
 |----------------|----------------------|---------------------------------|
 |**NULL**|**EINVAL**|未變更|
 
-如果發生上述參數驗證錯誤，會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若要繼續，允許執行**errno**設**EINVAL**和傳回值是**EINVAL**。
+如果發生上述參數驗證錯誤，會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續，請執行**errno**設為**EINVAL**傳回的值，而且**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
 **Tmpfile_s**函式會建立暫存檔，並將指標放在該資料流*pFilePtr*引數。 暫存檔案建立於根目錄。 若要在非根目錄的目錄建立暫存檔案，請使用 [tmpnam_s](tmpnam-s-wtmpnam-s.md) 或 [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) 搭配 [fopen](fopen-wfopen.md)。
 
-如果無法開啟檔案， **tmpfile_s**寫入**NULL**至*pFilePtr*參數。 檔案關閉時，在程式終止一般來說，或當時，會自動刪除這個暫存檔 **_rmtmp**呼叫時，假設目前的工作目錄不會變更。 在中開啟暫存檔**w + b** （二進位讀取/寫入） 模式。
+無法開啟檔案，如果**tmpfile_s**寫入**NULL**來*pFilePtr*參數。 關閉檔案時，一般來說，或當，在程式終止時，會自動刪除這個暫存檔 **_rmtmp**呼叫時，假設目前的工作目錄不會變更。 在中開啟暫存檔**w + b** （二進位讀取/寫入） 模式。
 
-如果您嘗試使用，就會發生失敗超過**TMP_MAX_S** （請參閱 STDIO。H） 呼叫**tmpfile_s**。
+如果您嘗試，就會發生失敗超過**TMP_MAX_S** （請參閱 STDIO。使用 H） 呼叫**tmpfile_s**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**tmpfile_s**|\<stdio.h>|
 

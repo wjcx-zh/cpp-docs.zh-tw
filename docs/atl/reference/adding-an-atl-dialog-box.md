@@ -1,27 +1,17 @@
 ---
-title: 新增 ATL 對話方塊 |Microsoft Docs
-ms.custom: ''
+title: 新增 ATL 對話方塊
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, adding dialog resources
 - MFC dialog boxes, ATL dialogs
 - dialog boxes, ATL
 ms.assetid: 152a378f-7b24-4f66-aeba-c740973f03a6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1b8074ad511544dcc6638ca804a26745e3da317b
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: ee6f6b1b83c625b30b601275084550309e0e7c68
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860338"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495364"
 ---
 # <a name="adding-an-atl-dialog-box"></a>新增 ATL 對話方塊
 
@@ -44,6 +34,6 @@ ms.locfileid: "48860338"
 
 ## <a name="see-also"></a>另請參閱
 
-[加入類別](../../ide/adding-a-class-visual-cpp.md)<br/>
+[新增類別](../../ide/adding-a-class-visual-cpp.md)<br/>
 [視窗類別](../../atl/atl-window-classes.md)<br/>
 [訊息對應](../../atl/message-maps-atl.md)

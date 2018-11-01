@@ -1,10 +1,6 @@
 ---
-title: strtold、_strtold_l、wcstold、_wcstold_l | Microsoft Docs
-ms.custom: ''
+title: strtold、_strtold_l、wcstold、_wcstold_l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcstold
 - strtold
@@ -30,19 +26,13 @@ f1_keywords:
 - strtold
 - _strtold_l
 - wcstold
-dev_langs:
-- C++
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1a5018f9245da77fbadb301a8fa45d1f0f7b4117
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fce60775ee1ef6def214e559779004d4de95453c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417073"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484574"
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold、_strtold_l、wcstold、_wcstold_l
 
@@ -84,15 +74,15 @@ long double wcstold_l(
 
 ## <a name="return-value"></a>傳回值
 
-**strtold**傳回做為浮點數的值**長** **double**，除了當表示法會造成溢位 — 在此情況下，此函數會傳回 + /-**HUGE_VALL**。 正負號**HUGE_VALL**符合無法表示的值的正負號。 **strtold**若可以執行任何轉換，或反向溢位，則傳回 0。
+**strtold**傳回為浮點數的值**長** **double**，但表示法可能造成溢位時，在此情況下，此函數會傳回 + /-**HUGE_VALL**。 正負號**HUGE_VALL**符合無法表示的值的正負號。 **strtold**會傳回 0，如果在執行任何轉換，或反向溢位，就會發生。
 
-**wcstold**類似地，傳回值**strtold**。 對於這兩個函式， **errno**設**為 ERANGE**如果發生溢位或反向溢位，而且無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。
+**wcstold**傳回值類似**strtold**。 這兩個函式中， **errno**設為**ERANGE**如果發生溢位或反向溢位，而且無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。
 
 如需傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-每個函式會將輸入的字串轉換*strSource*至**長** **double**。 **Strtold**函式停止讀取字串*strSource*無法辨識為數字部分的第一個字元。 這可能是終止的 Null 字元。 寬字元版本的**strtold**是**wcstold**; 其*strSource*引數是寬字元字串。 除此之外，這些函式的行為相同。
+每個函式會將輸入的字串*strSource*要**長** **double**。 **Strtold**函式停止讀取字串*strSource*它無法辨識為數字一部分的第一個字元。 這可能是終止的 Null 字元。 寬字元版本**strtold**是**wcstold**，其*strSource*引數是寬字元字串。 除此之外，這些函式的行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -101,19 +91,19 @@ long double wcstold_l(
 |**_tcstold**|**strtold**|**strtold**|**wcstold**|
 |**_tcstold_l**|**_strtold_l**|**_strtold_l**|**_wcstold_l**|
 
-**LC_NUMERIC**目前的地區設定分類設定決定中的基底字元辨識*strSource*。 如需詳細資訊，請參閱 [setlocale、_wsetlocale](setlocale-wsetlocale.md)。 功能，但不包含 **_l**後置詞使用目前的地區設定;**_strtold_l**和 **_wcstold_l**相同 **_strtold**和 **_wcstold**不同之處在於改為使用的地區設定的傳入。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**LC_NUMERIC**目前的地區設定類別設定會決定在基底字元辨識*strSource*。 如需詳細資訊，請參閱 [setlocale、_wsetlocale](setlocale-wsetlocale.md)。 沒有函式 **_l**後置詞使用目前的地區設定，**_strtold_l**並 **_wcstold_l**等於 **_strtold**並 **_wcstold** ，只不過它們改用地區設定的傳入。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-如果*endptr*不**NULL**，停止掃描的字元指標所指向的位置儲存*endptr*。 如果可以不執行任何轉換 （找不到沒有有效的數字或指定無效的基底） 的值*strSource*所指向的位置會儲存*endptr*。
+如果*endptr*不是**NULL**，則停止掃描的字元指標會儲存在所指向的位置*endptr*。 如果可以不執行任何轉換 （找不到任何有效的數字或指定無效的基底） 的值*strSource*所指向的位置會儲存*endptr*。
 
-**strtold**預期*strSource*指向字串的格式如下：
+**strtold**預期*strSource*指向下列格式的字串：
 
-[*空白字元*] [*登*] [*位數*] [。*數字*] [{**d** &#124; **D** &#124; **e** &#124; **E**} [*符號*]*位數*]
+[*空白字元*] [*號*] [*位數*] [。*數字*] [{**d** &#124; **D** &#124; **e** &#124; **E**} [*登*]*數字*]
 
-A*空白字元*可能包含空格和定位字元字元，會被忽略;*登*是加上 (**+**) 或減號 (**-**); 和*位數*一或多個十進位數字。 如果基底字元前沒有任何數字，則在基底字元後至少必須要有一個數字。 小數位數的後面會接著包含簡介字母 (**d**、**D**、**e** 或 **E**) 的指數以及選擇性的帶正負號整數。 如果沒有出現指數部分也沒有出現基底字元，基底字元假設會跟在字串的最後一位數的後面。 不符合此格式的第一個字元會停止掃描。
+A*空白字元*可能包含空格和定位字元字元，則會忽略;*登*是加上 (**+**) 或減號 (**-**); 以及*位數*是一或多個十進位數字。 如果基底字元前沒有任何數字，則在基底字元後至少必須要有一個數字。 小數位數的後面會接著包含簡介字母 (**d**、**D**、**e** 或 **E**) 的指數以及選擇性的帶正負號整數。 如果沒有出現指數部分也沒有出現基底字元，基底字元假設會跟在字串的最後一位數的後面。 不符合此格式的第一個字元會停止掃描。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**strtold**， **_strtold_l**|\<stdlib.h>|
 |**wcstold**， **_wcstold_l**|\<stdlib.h> 或 \<wchar.h>|

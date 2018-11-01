@@ -1,8 +1,6 @@
 ---
-title: 'Platform:: agile 類別 |Microsoft Docs'
-ms.custom: ''
+title: Platform::Agile 類別
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
@@ -11,21 +9,15 @@ f1_keywords:
 - AGILE/Platform::Platform::Agile::GetAddressOf
 - AGILE/Platform::Platform::Agile::GetAddressOfForInOut
 - AGILE/Platform::Platform::Agile::Release
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3745ead4fec8466df3f164c415b21d98f68c0ef7
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9350d94fdff615056fca193d654b2bb001d78d72
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109780"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471197"
 ---
 # <a name="platformagile-class"></a>Platform::Agile 類別
 
@@ -162,11 +154,11 @@ T^* GetAddressOf() throw();
 
 ### <a name="return-value"></a>傳回值
 
-型別的物件的控制代碼位址`T`。
+`T` 類型物件的控制代碼位址。
 
 ### <a name="remarks"></a>備註
 
-這個作業釋放目前的類型的物件表示`T`、 如果有的話，重新初始化 Agile 物件的資料成員，取得目前的執行緒內容中，則會傳回可以代表物件的控制代碼變數位址非 agile 物件。 若要讓 Agile 類別執行個體來代表的物件，使用指派運算子 ([agile:: operator =](#operator-assign)) 將物件指派給 Agile 類別執行個體。
+這個作業釋放 `T` 類型物件的目前表示 (如果有的話)、重新初始化 Agile 物件的資料成員、取得目前執行緒內容，然後傳回可以代表非 Agile 物件的物件控制代碼變數位址。 若要讓 Agile 類別執行個體來代表的物件，使用指派運算子 ([agile:: operator =](#operator-assign)) 將物件指派給 Agile 類別執行個體。
 
 ## <a name="getaddressofforinout"></a>  Agile:: getaddressofforinout 方法
 

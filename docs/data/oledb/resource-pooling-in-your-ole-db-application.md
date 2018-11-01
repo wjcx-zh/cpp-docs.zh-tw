@@ -1,29 +1,18 @@
 ---
-title: 在 OLE DB 應用程式中的資源集區 |Microsoft Docs
-ms.custom: ''
+title: OLE DB 應用程式的資源集中化
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - OLE DB services [OLE DB], resource pooling
 - resource pooling [OLE DB], services
 - OLE DB, resource pooling
 - OLE DB providers, resource pooling
 ms.assetid: 2ead1bcf-bbd4-43ea-a307-bb694b992fc1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 0302f35c7de78088d1c5e662f65daf467cb1dfa2
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: c4e548d00f5772e41e0a725020cd2f279e3ab89b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50069689"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50479543"
 ---
 # <a name="resource-pooling-in-your-ole-db-application"></a>OLE DB 應用程式的資源集中化
 

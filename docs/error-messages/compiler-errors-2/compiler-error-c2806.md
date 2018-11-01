@@ -1,27 +1,17 @@
 ---
-title: 編譯器錯誤 C2806 |Microsoft Docs
-ms.custom: ''
+title: 編譯器錯誤 C2806
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2806
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2806
 ms.assetid: 7c9ff1f4-1590-4c47-991d-b1075a173b48
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 01cf48170c8fc8b73f9c4cbe36c051a8daff4314
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1d37f5d1c6e253c01ae8a3b7640fb3ee4cf12534
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46043634"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50490362"
 ---
 # <a name="compiler-error-c2806"></a>編譯器錯誤 C2806
 

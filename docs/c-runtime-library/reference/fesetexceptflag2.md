@@ -1,11 +1,6 @@
 ---
-title: fesetexceptflag |Microsoft 文件
-ms.custom: ''
+title: fesetexceptflag
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fesetexceptflag
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - fesetexceptflag
 - fenv/fesetexceptflag
-dev_langs:
-- C++
 helpviewer_keywords:
 - fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eef8ba1c91e6db4f0d620ef820a6487b3b17e649
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ac79e790f0b1e7a89413a0d4974f6053c95616e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398604"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615874"
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 
@@ -56,9 +45,9 @@ int fesetexceptflag(
 ### <a name="parameters"></a>參數
 
 *pstatus*<br/>
-指標**fexcept_t**物件，其中包含要設定為例外狀況狀態旗標的值。 物件可能是由先前呼叫 [fegetexceptflag](fegetexceptflag2.md) 所設定。
+指標**fexcept_t**物件，其中包含將例外狀況狀態旗標設定為值。 物件可能是由先前呼叫 [fegetexceptflag](fegetexceptflag2.md) 所設定。
 
-*excepts*<br/>
+*removed*<br/>
 要設定的浮點例外狀況狀態旗標。
 
 ## <a name="return-value"></a>傳回值
@@ -67,7 +56,7 @@ int fesetexceptflag(
 
 ## <a name="remarks"></a>備註
 
-**Fesetexceptflag**函式會將所指定的浮點例外狀況狀態旗標的狀態*excepts*設定中的對應值**fexcept_t**指向的物件*pstatus*。  它不會引發例外狀況。 *Pstatus*指標必須指向有效**fexcept_t**物件或後續的行為是未定義。 **Fesetexceptflag**函式支援這些例外狀況巨集值中的*excepts*，定義在\<fenv.h >:
+**Fesetexceptflag**函式設定所指定的浮點例外狀況狀態旗標的狀態*removed*設定中的對應值**fexcept_t**指向的物件*pstatus*。  它不會引發例外狀況。 *Pstatus*指標必須指向有效**fexcept_t**物件或後續行為是未定義。 **Fesetexceptflag**函式支援這些例外狀況巨集值*removed*，其定義於\<fenv.h >:
 
 |例外狀況巨集|描述|
 |---------------------|-----------------|
@@ -78,7 +67,7 @@ int fesetexceptflag(
 |FE_UNDERFLOW|稍早的浮點運算結果太小，無法以完整精確度表示；已建立 denormal 值。|
 |FE_ALLEXCEPT|所有受支援浮點例外狀況的位元 OR。|
 
-*Excepts*引數可以是零，其中一種支援的浮點例外狀況巨集，或位元或兩個或多個巨集。 未定義任何其他引數值的效果。
+*Removed*引數可以是零，其中一個支援的浮點例外狀況巨集，或位元，或是兩個或以上巨集。 未定義任何其他引數值的效果。
 
 若要使用此函式，您必須在呼叫之前使用 `#pragma fenv_access(on)` 指示詞，以關閉可能會妨礙存取的浮點最佳化作業。 如需詳細資訊，請參閱 [fenv_access](../../preprocessor/fenv-access.md)。
 

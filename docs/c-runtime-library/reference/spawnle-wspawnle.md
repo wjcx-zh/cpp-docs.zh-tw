@@ -1,10 +1,6 @@
 ---
-title: _spawnle、_wspawnle | Microsoft Docs
-ms.custom: ''
+title: _spawnle、_wspawnle
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _spawnle
 - _wspawnle
@@ -26,8 +22,6 @@ f1_keywords:
 - _spawnle
 - wspawnle
 - _wspawnle
-dev_langs:
-- C++
 helpviewer_keywords:
 - spawnle function
 - processes, creating
@@ -37,23 +31,19 @@ helpviewer_keywords:
 - wspawnle function
 - _spawnle function
 ms.assetid: 80308892-2815-49b1-8cca-53894c366f5a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d8833364dcda0adf577dab63776f7ead5b61833
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7da0cf4f7232ad7b8b1c5edb1240ee67fdf393e3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413469"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632280"
 ---
 # <a name="spawnle-wspawnle"></a>_spawnle、_wspawnle
 
 建立和執行新處理序。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -87,14 +77,14 @@ intptr_t _wspawnle(
 待執行檔案的路徑。
 
 *arg0*， *arg1*，...*argn*<br/>
-引數指標的清單。 *Arg0*引數通常是指向*cmdname*。 引數*arg1*透過*argn*是指向形成新引數清單之字元字串。 遵循*argn*，必須要有**NULL**指標，以標記引數清單的結尾。
+引數指標的清單。 *Arg0*引數通常是一個指向*cmdname*。 引數*arg1*透過*argn*是形成新引數清單之字元字串的指標。 遵循*argn*，必須要有**NULL**指標，以標記引數清單的結尾。
 
 *envp*<br/>
 環境設定的指標陣列。
 
 ## <a name="return-value"></a>傳回值
 
-來自同步的傳回值 **_spawnle**或 **_wspawnle** (**_P_WAIT**指定*模式*) 是新處理序的結束狀態. 傳回值的非同步 **_spawnle**或 **_wspawnle** (**_P_NOWAIT**或 **_P_NOWAITO**指定*模式*) 是處理序控制代碼。 如果處理序正常終止，結束狀態為 0。 您可以將結束狀態為非零值，如果繁衍的處理序明確呼叫**結束**常式則為非零的引數。 如果新處理序未明確設定確定的結束狀態，所謂確定的結束狀態表示因中止或中斷而異常結束。 傳回值-1 表示的錯誤 （新處理序未啟動）。 在此情況下， **errno**設為下列值之一。
+同步的傳回值 **_spawnle**或是 **_wspawnle** (**_P_WAIT**指定為*模式*) 是新處理序的結束狀態. 非同步的傳回值 **_spawnle**或是 **_wspawnle** (**_P_NOWAIT**或是 **_P_NOWAITO**指定*模式*) 是處理序控制代碼。 如果處理序正常終止，結束狀態為 0。 您可以將結束狀態為非零值，如果繁衍的處理序明確呼叫**結束**例行以非零的引數。 如果新處理序未明確設定確定的結束狀態，所謂確定的結束狀態表示因中止或中斷而異常結束。 傳回值為-1 表示的錯誤 （未啟動新的處理序）。 在此情況下， **errno**設為下列值之一。
 
 |||
 |-|-|
@@ -110,11 +100,11 @@ intptr_t _wspawnle(
 
 所有這些函式都會建立和執行新處理序，並將每個命令列引數作為個別參數傳遞，也會將指標的陣列傳遞至環境設定。
 
-這些函式會驗證它們的參數。 如果有任一個*cmdname*或*arg0*為空字串或 null 指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**至**EINVAL**，並傳回-1。 未繁衍任何新處理序。
+這些函式會驗證它們的參數。 如果有任一*cmdname*或是*arg0*為空字串或 null 指標，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**要**EINVAL**，並傳回-1。 未繁衍任何新處理序。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_spawnle**|\<process.h>|
 |**_wspawnle**|\<stdio.h> 或 \<wchar.h>|

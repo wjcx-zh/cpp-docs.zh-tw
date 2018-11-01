@@ -1,10 +1,6 @@
 ---
-title: _fwrite_nolock | Microsoft Docs
-ms.custom: ''
+title: _fwrite_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fwrite_nolock
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _fwrite_nolock
 - fwrite_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - fwrite_nolock function
 - streams, writing data to
 - _fwrite_nolock function
 ms.assetid: 2b4ec6ce-742e-4615-8407-44a0a18ec1d7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e22f2c281b076e64419686b9f7c058e284cc5532
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c899e34e19547b30a42135f3f818f220f1bc5b7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397918"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626048"
 ---
 # <a name="fwritenolock"></a>_fwrite_nolock
 
@@ -76,7 +66,7 @@ size_t _fwrite_nolock(
 
 ## <a name="remarks"></a>備註
 
-此函式為非鎖定版本**fwrite**。 它相當於**fwrite**不同之處在於它不受干擾其他執行緒。 因為它不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這個函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
+此函式為非鎖定版本的**fwrite**。 它等同於**fwrite**不同之處在於它不受干擾其他執行緒。 因為它不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這個函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
 
 ## <a name="requirements"></a>需求
 

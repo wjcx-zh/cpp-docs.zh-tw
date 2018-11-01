@@ -1,10 +1,6 @@
 ---
-title: _cputs、_cputws | Microsoft Docs
-ms.custom: ''
+title: _cputs、_cputws
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cputws
 - _cputs
@@ -25,8 +21,6 @@ f1_keywords:
 - cputws
 - _cputs
 - _cputws
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], writing
 - _cputs function
@@ -36,23 +30,19 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3c192adccb6fe0e0cee66f03b5d85d89fc2e446a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81d2364cd1fc409ca3267bc416bd3cbd16c62a15
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399760"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601171"
 ---
 # <a name="cputs-cputws"></a>_cputs、_cputws
 
 將字串放入主控台。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -72,13 +62,13 @@ int _cputws(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功的話， **_cputs**傳回 0。 如果函式失敗，則會傳回非零值。
+如果成功， **_cputs**會傳回 0。 如果函式失敗，則會傳回非零值。
 
 ## <a name="remarks"></a>備註
 
-**_Cputs**函式會寫入所指向的 null 終止字串*str*直接到主控台。 歸位字元-換行字元 (CR-LF) 組合不會自動附加至字串。
+**_Cputs**函式會寫入 null 結束的字串，指向*str*直接到主控台。 歸位字元-換行字元 (CR-LF) 組合不會自動附加至字串。
 
-這個函式會驗證其參數。 如果*str*是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL** ，則傳回-1。
+這個函式會驗證其參數。 如果*str*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為**EINVAL** ，則傳回-1。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -88,7 +78,7 @@ int _cputws(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|---------------------|
 |**_cputs**|\<conio.h>|\<errno.h>|
 |**_cputws**|\<conio.h>|\<errno.h>|

@@ -1,28 +1,17 @@
 ---
-title: 使用資源檔 （c + +） |Microsoft Docs
-ms.custom: ''
+title: 使用資源檔 （c + +）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - resources [C++], about resources
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: d72e37b8625480779620025dfd1e1eda1101b824
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 276a63f01eba3cfc8c4fd45e0f875d78ada1942a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430549"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483313"
 ---
 # <a name="working-with-resource-files"></a>使用資源檔
 
@@ -59,4 +48,4 @@ ms.locfileid: "46430549"
 ## <a name="see-also"></a>另請參閱
 
 [Windows 桌面應用程式](../windows/windows-desktop-applications-cpp.md)<br/>
-[功能表和其他資源](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[功能表與其他資源](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

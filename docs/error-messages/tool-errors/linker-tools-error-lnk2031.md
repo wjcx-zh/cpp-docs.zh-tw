@@ -1,41 +1,31 @@
 ---
-title: 連結器工具錯誤 LNK2031 |Microsoft 文件
-ms.custom: ''
+title: 連結器工具錯誤 LNK2031
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK2031
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d86ea6da8a73d9ba2427e9455c4fca87cd32dd2b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 003b9a58bfb08130f034530f59e2de27efa2ae8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703661"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484821"
 ---
 # <a name="linker-tools-error-lnk2031"></a>連結器工具錯誤 LNK2031
 
-> 無法產生 p/invoke，如"*function_declaration*" *decorated_name*; 中繼資料中遺漏呼叫慣例
+> 無法產生 p/invoke，如 「*function_declaration*" *decorated_name*; 中繼資料中遺漏呼叫慣例
 
 ## <a name="remarks"></a>備註
 
-當嘗試以原生函式匯入純映像，請記住，隱含的呼叫慣例，原生或純編譯之間不同而有所不同。 如需純映像的詳細資訊，請參閱[純粹的和可驗證程式碼 (C + + /CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。
+當嘗試將純映像匯入原生函式，請記住，隱含的呼叫慣例，不同於原生和單純的編譯。 如需純映像的詳細資訊，請參閱[純粹的和可驗證程式碼 (C + + /cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。
 
-**/Clr: pure**編譯器選項已被取代 Visual Studio 2015 中，在 Visual Studio 2017 中支援。
+**/Clr: pure**編譯器選項是在 Visual Studio 2015 中已被取代，不支援的 Visual Studio 2017 中。
 
 ## <a name="example"></a>範例
 
-此程式碼範例會產生含匯出、 原生函式的呼叫慣例是隱含的元件[__cdecl](../../cpp/cdecl.md)。
+此程式碼範例會產生具有其呼叫慣例是隱含的匯出、 原生函式的元件[__cdecl](../../cpp/cdecl.md)。
 
 ```cpp
 // LNK2031.cpp
@@ -47,7 +37,7 @@ extern "C" {
 
 ## <a name="example"></a>範例
 
-下列範例會建立使用原生函式的純用戶端。 不過，下方的呼叫慣例 **/clr: pure**是[__clrcall](../../cpp/clrcall.md)。 下列範例會產生 LNK2031。
+下列範例會建立單純的用戶端使用原生函式。 不過，底下的呼叫慣例 **/clr: pure**是[__clrcall](../../cpp/clrcall.md)。 下列範例會產生 LNK2031。
 
 ```cpp
 // LNK2031_b.cpp
@@ -62,7 +52,7 @@ int main() {
 
 ## <a name="example"></a>範例
 
-下列範例會示範如何使用純映像的原生函式。 請注意明確 **__cdecl**呼叫慣例的規範。
+下列範例示範如何使用原生函式，從純映像。 請注意明確 **__cdecl**呼叫慣例的規範。
 
 ```cpp
 // LNK2031_c.cpp

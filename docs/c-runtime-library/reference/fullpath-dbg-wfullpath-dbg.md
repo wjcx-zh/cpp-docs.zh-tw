@@ -1,10 +1,6 @@
 ---
-title: _fullpath_dbg、_wfullpath_dbg | Microsoft Docs
-ms.custom: ''
+title: _fullpath_dbg、_wfullpath_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wfullpath_dbg
 - _fullpath_dbg
@@ -25,8 +21,6 @@ f1_keywords:
 - _wfullpath_dbg
 - _fullpath_dbg
 - fullpath_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fullpath_dbg function
 - relative file paths
@@ -35,20 +29,16 @@ helpviewer_keywords:
 - _wfullpath_dbg function
 - wfullpath_dbg function
 ms.assetid: 81f72f85-07da-4f5c-866a-598e0fb03f6b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d04f3d7b53eca27d38a38b0bce284c17b15cae02
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: b84c5b77d0a9bfb298d4c597e372cd39a92441f9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450891"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50488006"
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg、_wfullpath_dbg
 
-新版[_fullpath、 _wfullpath](fullpath-wfullpath.md)所使用的偵錯版本**malloc**配置記憶體。
+新版[_fullpath、 _wfullpath](fullpath-wfullpath.md)使用的偵錯版本**malloc**配置記憶體。
 
 ## <a name="syntax"></a>語法
 
@@ -79,11 +69,11 @@ wchar_t *_wfullpath_dbg(
 *relPath*<br/>
 相對路徑名稱。
 
-*maxLength*<br/>
-絕對路徑名稱緩衝區的最大長度 (*absPath*)。 這個長度是以位元組為單位的 **_fullpath**但寬字元 (**wchar_t**) 的 **_wfullpath**。
+*MaxLength*<br/>
+絕對路徑名稱緩衝區的最大長度 (*absPath*)。 這個長度是以位元組為單位 **_fullpath**但是寬字元 (**wchar_t**) 的 **_wfullpath**。
 
 *blockType*<br/>
-要求的記憶體區塊類型： **_CLIENT_BLOCK**或 **_NORMAL_BLOCK**。
+要求的記憶體區塊類型： **_CLIENT_BLOCK**或是 **_NORMAL_BLOCK**。
 
 *filename*<br/>
 要求配置作業之原始程式檔名稱的指標或**NULL**。
@@ -93,13 +83,13 @@ wchar_t *_wfullpath_dbg(
 
 ## <a name="return-value"></a>傳回值
 
-每個函式會傳回包含絕對路徑名稱之緩衝區的指標 (*absPath*)。 如果發生錯誤 (例如，如果的值傳遞*relPath*包含無效或找不到的磁碟機代號或建立的絕對路徑名稱的長度 (*absPath*) 大於*maxLength*) 函式會傳回**NULL**。
+每個函式會傳回包含絕對路徑名稱之緩衝區的指標 (*absPath*)。 如果發生錯誤 (例如，如果傳入的值時，才*relPath*包含磁碟機代號無效或找不到，或如果建立的絕對路徑名稱的長度 (*absPath*) 大於*maxLength*) 的函式會傳回**NULL**。
 
 ## <a name="remarks"></a>備註
 
-**_Fullpath_dbg**和 **_wfullpath_dbg**函式完全相同 **_fullpath**和 **_wfullpath**不同之處在於，當 **_DEBUG**是定義，這些函式使用的偵錯版本**malloc**， **_malloc_dbg**來配置記憶體，如果**NULL**傳遞做為第一個參數。 如需有關偵錯功能的詳細 **_malloc_dbg**，請參閱[_malloc_dbg](malloc-dbg.md)。
+**_Fullpath_dbg**並 **_wfullpath_dbg**函式 **_fullpath**並 **_wfullpath**不同之處在於，當 **_DEBUG**是定義，這些函式使用的偵錯版本**malloc**， **_malloc_dbg**來配置記憶體，如果**NULL**傳遞第一個參數。 如需有關偵錯功能的資訊 **_malloc_dbg**，請參閱[_malloc_dbg](malloc-dbg.md)。
 
-在大多數情況中，您不需要明確地呼叫這些函式。 相反地，您可以定義 **_CRTDBG_MAP_ALLOC**旗標。 當 **_CRTDBG_MAP_ALLOC**定義，但呼叫 **_fullpath**和 **_wfullpath**重新對應至 **_fullpath_dbg**和 **_wfullpath_dbg**，分別與*blockType*設 **_NORMAL_BLOCK**。 因此，您不需要明確地呼叫這些函式，除非您想要將做為堆積區塊標示 **_CLIENT_BLOCK**。 如需詳細資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。
+在大多數情況中，您不需要明確地呼叫這些函式。 相反地，您可以定義 **_CRTDBG_MAP_ALLOC**旗標。 當 **_CRTDBG_MAP_ALLOC**定義，呼叫 **_fullpath**並 **_wfullpath**重新對應至 **_fullpath_dbg**和 **_wfullpath_dbg**分別與*blockType*設為 **_NORMAL_BLOCK**。 因此，您不需要明確呼叫這些函式，除非您想要將標示為堆積區塊 **_CLIENT_BLOCK**。 如需詳細資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

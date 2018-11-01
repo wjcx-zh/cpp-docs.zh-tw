@@ -1,10 +1,6 @@
 ---
-title: vsscanf_s、vswscanf_s | Microsoft Docs
-ms.custom: ''
+title: vsscanf_s、vswscanf_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - vswscanf_s
 - vsscanf_s
@@ -24,19 +20,13 @@ f1_keywords:
 - vsscanf_s
 - vswscanf_s
 - _vstscanf_s
-dev_langs:
-- C++
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbcf6d0a8b54cc08242d613b24c415ac1ef05fd3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3106e3533f5bb65334f8a4f3d38f55d886faef4c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417099"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477164"
 ---
 # <a name="vsscanfs-vswscanfs"></a>vsscanf_s、vswscanf_s
 
@@ -65,20 +55,20 @@ int vswscanf_s(
 *格式*<br/>
 格式控制字串。 如需詳細資訊，請參閱[格式規格欄位：scanf 和 wscanf 函式](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。
 
-*引數清單*<br/>
+*arglist*<br/>
 變數引數清單。
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式都會傳回已成功轉換並指派的欄位數，傳回值不包含已讀取但未指派的欄位。 傳回值 0 表示未指派任何欄位。 傳回值是**EOF**錯誤或如果字串的結尾已到達第一個轉換之前。
+所有這些函式都會傳回已成功轉換並指派的欄位數，傳回值不包含已讀取但未指派的欄位。 傳回值 0 表示未指派任何欄位。 傳回值是**EOF**錯誤或第一次轉換之前就到達的字串結尾。
 
-如果*緩衝區*或*格式*是**NULL**指標、 無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**至**EINVAL**。
+如果*緩衝區*或是*格式*會**NULL**指標，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**要**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Vsscanf_s**函式會將資料從*緩衝區*到每個引數中所指定的位置*引數清單*引數清單。 引數清單中的引數指定具有對應於型別規範中的型別變數指標*格式*。 與較不安全的版本不同的是**vsscanf**，緩衝區大小參數時，需要您使用型別欄位字元**c**， **C**， **s**，**S**，或括住的字串控制項集合 **[]**。 必須提供以字元為單位的緩衝區大小，作為緊接在每個需要它之緩衝區參數後的額外參數。
+**Vsscanf_s**函式的資料讀入*緩衝區*中的每個引數所指定的位置*arglist*引數清單。 引數清單中的引數指定變數對應至中的類型指定名稱的類型指標*格式*。 與較不安全的版本不同**vsscanf**，緩衝區大小參數時，必須使用類型欄位字元**c**， **C**， **s**，**S**，或會括住的字串控制集 **[]**。 必須提供以字元為單位的緩衝區大小，作為緊接在每個需要它之緩衝區參數後的額外參數。
 
 緩衝區大小包含結束的 null。 寬度規格欄位可以用來確保讀入的 Token 可納入緩衝區。 如果沒有使用寬度規格欄位，則讀取的語彙基元太大而無法納入緩衝區中，並且不會寫入該緩衝區。
 
@@ -87,9 +77,9 @@ int vswscanf_s(
 > [!NOTE]
 > 大小參數的類型是**不帶正負號**，而非**size_t**。
 
-*格式*引數的控制項欄位輸入的解譯，並具有相同的形式和功能*格式*引數**scanf_s**函式。 如果在重疊的字串之間進行複製，則行為是未定義的。
+*格式*引數會控制欄位輸入的解譯，而且具有相同的形式和運作方式*格式*引數**scanf_s**函式。 如果在重疊的字串之間進行複製，則行為是未定義的。
 
-**vswscanf_s**是寬字元版本的**vsscanf_s**; 的引數**vswscanf_s**是寬字元字串。 **vsscanf_s**無法處理多位元組的十六進位字元。 **vswscanf_s**不會處理 Unicode 全形十六進位或 「 相容性區 」 的字元。 否則， **vswscanf_s**和**vsscanf_s**行為即會相同。
+**vswscanf_s**是寬字元版本的**vsscanf_s**; 的引數**vswscanf_s**是寬字元字串。 **vsscanf_s**不會處理多位元組十六進位字元。 **vswscanf_s**不會處理 Unicode 全形十六進位或 「 相容性區域 」 字元。 否則，請**vswscanf_s**並**vsscanf_s**運作方式完全相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -99,7 +89,7 @@ int vswscanf_s(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**vsscanf_s**|\<stdio.h>|
 |**vswscanf_s**|\<stdio.h> 或 \<wchar.h>|

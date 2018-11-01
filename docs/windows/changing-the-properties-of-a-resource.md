@@ -1,27 +1,16 @@
 ---
-title: 變更屬性的資源 （c + +） |Microsoft Docs
-ms.custom: ''
+title: 變更屬性的資源 （c + +）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: c4373b36-2651-4954-afa6-3f66300673d4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8e92b52ce3b14b5ee26641186222ddc228877e71
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: a913d77abb53236ddbc76946e82e6b37208e9026
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50057266"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50485527"
 ---
 # <a name="changing-the-properties-of-a-resource-c"></a>變更屬性的資源 （c + +）
 

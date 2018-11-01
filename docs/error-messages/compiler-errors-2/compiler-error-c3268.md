@@ -1,35 +1,25 @@
 ---
-title: 編譯器錯誤 C3268 |Microsoft 文件
-ms.custom: ''
+title: 編譯器錯誤 C3268
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3268
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3268
 ms.assetid: d74a630c-daea-4e29-9759-83efef7fb184
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eac0c4e7c25df466ecf1e7e28bccf9ee2a2e2953
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c766488b29273f321feffa8e38a97e54454db7b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705253"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480531"
 ---
 # <a name="compiler-error-c3268"></a>編譯器錯誤 C3268
 
-> '*函式*': 泛型函式或成員函式的泛型類別不能有變數參數清單
+> '*函式*': 泛型函式或泛型類別的成員函式不能有變數參數清單
 
 ## <a name="remarks"></a>備註
 
-**/Clr: pure**和 **/clr: safe**編譯器選項都是 Visual Studio 2015 中已被取代，並不支援的 Visual Studio 2017 中。
+**/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
 
 請參閱[泛型](../../windows/generics-cpp-component-extensions.md)如需詳細資訊。
 

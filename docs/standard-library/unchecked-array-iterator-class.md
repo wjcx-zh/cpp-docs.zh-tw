@@ -1,25 +1,15 @@
 ---
-title: unchecked_array_iterator 類別 | Microsoft Docs
-ms.custom: ''
+title: unchecked_array_iterator 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - stdext::unchecked_array_iterator
-dev_langs:
-- C++
 ms.assetid: 693b3b30-4e3a-465b-be06-409700bc50b1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a483d1509ce14a9192c237c5475ec9b8e65d24e6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b3db474bedca50922334bd4dbd09c71d4e6e987
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856185"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626196"
 ---
 # <a name="uncheckedarrayiterator-class"></a>unchecked_array_iterator 類別
 

@@ -1,10 +1,6 @@
 ---
-title: imaxabs | Microsoft Docs
-ms.custom: ''
+title: imaxabs
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - imaxabs
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - imaxabs
-dev_langs:
-- C++
 helpviewer_keywords:
 - imaxabs function
 ms.assetid: de2566a3-1415-4e9a-91b5-7ac3a49ebf5e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9476db108a4296811e1c88e820d12ddd24b1386
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7492e08c3a078698292923ce395524ab5327ecf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400485"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666241"
 ---
 # <a name="imaxabs"></a>imaxabs
 
@@ -60,11 +50,11 @@ intmax_t imaxabs(
 **Imaxabs**函式會傳回引數的絕對值。 不會傳回錯誤。
 
 > [!NOTE]
-> 因為可以表示使用的負整數範圍**intmax_t**大於範圍的可以表示的正整數，就可以提供引數給**imaxabs**無法轉換的。 如果引數的絕對值無法表示的傳回類型，行為**imaxabs**是未定義。
+> 因為可以表示使用的負整數範圍**intmax_t**超過範圍的可表示的正整數，就可以提供的引數**imaxabs**無法轉換。 如果引數的絕對值無法由傳回類型，行為**imaxabs**是未定義。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**imaxabs**|\<inttypes.h>|
 

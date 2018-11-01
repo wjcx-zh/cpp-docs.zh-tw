@@ -1,10 +1,6 @@
 ---
-title: _ecvt | Microsoft Docs
-ms.custom: ''
+title: _ecvt
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ecvt
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _ecvt
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ecvt function
 - numbers, converting
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 63514db5abe0a7cd531590dd419aa4b5931e7729
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 36c9cb2e8cd9eb4dd67bb91e9e4dbd36d8d1fc8e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450959"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605721"
 ---
 # <a name="ecvt"></a>_ecvt
 
@@ -72,21 +62,21 @@ char *_ecvt(
 
 ## <a name="return-value"></a>傳回值
 
-**_ecvt**傳回的數字，字串的指標**NULL**如果發生錯誤。
+**_ecvt**字串的數字，傳回的指標**NULL**如果發生錯誤。
 
 ## <a name="remarks"></a>備註
 
-**_Ecvt**函式會將浮點數轉換為字元字串。 *值*參數是要轉換的浮點數。 此函式會儲存最多*計數*位數*值*做為字串，並將 null 字元 ('\0')。 如果數字位數中*值*超過*計數*，低序位字會捨入。 如果有少於*計數*以零填補數字的字串。
+**_Ecvt**函式會將浮點數轉換為字元字串。 *值*參數是要轉換的浮點數。 此函式會儲存最多*計數*位數*值*做為字串和結尾處附加 null 字元 ('\0')。 如果在中的位數*值*超過*計數*，低位數四捨五入。 如果少於*計數*以零填補數字的字串。
 
-所傳回的數字總數 **_ecvt**將不超過 **_CVTBUFSIZE**。
+所傳回的位數總數 **_ecvt**將不會超過 **_CVTBUFSIZE**。
 
-字串中只能儲存數字。 小數點和的正負號的位置*值*可以取自*dec*和*登*呼叫之後。 *Dec*參數會指向提供字串的開頭與小數點的位置的整數值。 0 或負整數值表示小數點位於第一位數字的左邊。 *登*參數指向表示已轉換的數字的正負號的整數。 如果整數值為 0，則數字為正數。 否則，數字為負數。
+字串中只能儲存數字。 小數點和的正負號的位置*值*可以取自*dec*並*登*之後呼叫。 *Dec*參數指向整數值，並提供字串的開頭小數點的位置。 0 或負整數值表示小數點位於第一位數字的左邊。 *號*參數指向表示已轉換的數字的正負號的整數。 如果整數值為 0，則數字為正數。 否則，數字為負數。
 
-之間的差異 **_ecvt**和 **_fcvt**中的解譯*計數*參數。 **_ecvt**解譯*計數*做為輸出字串中的位數總數而 **_fcvt**解譯*計數*之後位數的數目小數點。
+之間的差異 **_ecvt**並 **_fcvt**中的解譯*計數*參數。 **_ecvt**解譯*計數*做為輸出字串中的位數總數而 **_fcvt**解譯*計數*後的位數數字小數點。
 
-**_ecvt**和 **_fcvt**使用單一靜態配置的緩衝區來進行轉換。 每呼叫其中一個此等常式會導致先前呼叫結果的終結。
+**_ecvt**並 **_fcvt**使用單一靜態配置的緩衝區來進行轉換。 每呼叫其中一個此等常式會導致先前呼叫結果的終結。
 
-這個函式會驗證它的參數。 如果*dec*或*登*是**NULL**，或*計數*為 0、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL**和**NULL**傳回。
+這個函式會驗證它的參數。 如果*dec*或是*登*會**NULL**，或*計數*為 0 時，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為**EINVAL**並**NULL**會傳回。
 
 ## <a name="requirements"></a>需求
 

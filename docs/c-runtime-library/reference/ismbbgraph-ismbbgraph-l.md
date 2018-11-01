@@ -1,10 +1,6 @@
 ---
-title: _ismbbgraph、_ismbbgraph_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbgraph、_ismbbgraph_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbgraph_l
 - _ismbbgraph
@@ -26,24 +22,18 @@ f1_keywords:
 - _ismbbgraph_l
 - ismbbgraph
 - ismbbgraph_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbgraph_l function
 - ismbbgraph_l function
 - _ismbbgraph function
 - ismbbgraph function
 ms.assetid: b60db718-134f-4796-acc1-592d0b9efbb7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6336beee17759ac01667d7c2aac65be419d9e170
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d5b5dace39e674744148a1ddf0c692692fb889f8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399247"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662864"
 ---
 # <a name="ismbbgraph-ismbbgraphl"></a>_ismbbgraph、_ismbbgraph_l
 
@@ -75,11 +65,11 @@ int _ismbbgraph_l (
 
 `isctype(c, ( _PUNCT | _UPPER | _LOWER | _DIGIT )) || _ismbbkprint(c)`
 
-非零代表*c*，或如果不是 0。 **_ismbbgraph**針對任何地區設定相關行為使用目前的地區設定。 **_ismbbgraph_l**是完全相同，不同之處在於它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+為非零值，如*c*，或如果不是 0。 **_ismbbgraph**針對任何地區設定相關行為使用目前的地區設定。 **_ismbbgraph_l**完全相同，只不過它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_ismbbgraph**|\<mbctype.h>|
 |**_ismbbgraph_l**|\<mbctype.h>|

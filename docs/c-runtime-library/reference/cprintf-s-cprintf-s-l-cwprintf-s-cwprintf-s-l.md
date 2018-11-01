@@ -1,10 +1,6 @@
 ---
-title: _cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l | Microsoft Docs
-ms.custom: ''
+title: _cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwprintf_s_l
 - _cprintf_s_l
@@ -33,8 +29,6 @@ f1_keywords:
 - cprintf_s
 - _cwprintf_s
 - tcprintf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcprintf_s_l function
 - _cprintf_s_l function
@@ -49,23 +43,19 @@ helpviewer_keywords:
 - cprintf_s_l function
 - cwprintf_s_l function
 ms.assetid: c28504fe-0d20-4f06-8f97-ee33225922ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2d8a2f5f80b00eef47d09a8d505f31a42a0fab2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3652587c9622c2eb9fe316782d1b1c7c9644dc8f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401340"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50606515"
 ---
 # <a name="cprintfs-cprintfsl-cwprintfs-cwprintfsl"></a>_cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l
 
 格式化並列印至主控台。 這些版本的 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md) 具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -107,16 +97,16 @@ int _cwprintf_s_l(
 
 ## <a name="remarks"></a>備註
 
-這些函式格式化並列印一系列字元和值到主控台，直接使用 **_putch**函式 (**_putwch**如 **_cwprintf_s**) 至輸出字元。 每個*引數*（如果有的話） 會轉換和輸出中的對應格式規格根據*格式*。 此格式具有相同的形式和功能*格式*參數[printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)函式。 不同於**fprintf_s**， **printf_s**，和**sprintf_s**函式，兩者都不 **_cprintf_s**也 **_cwprintf_s**換行字元轉譯為歸位字元-換 (CR-LF) 組合輸出時。
+這些函式格式化並列印一系列的字元和值到主控台，直接使用 **_putch**函式 (**_putwch** for **_cwprintf_s**) 輸出字元。 每個*引數*（如果有的話） 會轉換和輸出中的對應格式規格根據*格式*。 此格式具有相同的形式和運作方式*格式*參數[printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)函式。 不同於**fprintf_s**， **printf_s**，並**sprintf_s**函式，都不 **_cprintf_s**也 **_cwprintf_s**會將換行字元轉譯為歸位字元傳回換行字元 (CR-LF) 組合時輸出。
 
 重要的差異在於 **_cwprintf_s**會顯示在 Windows NT 中使用時的 Unicode 字元。 不同於 **_cprintf_s**， **_cwprintf_s**會使用目前的主控台地區設定
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的地區設定的地區設定參數。
+使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前的地區設定傳入的地區設定參數。
 
 > [!IMPORTANT]
 > 確認 *format* 不是使用者定義的字串。
 
-例如不安全的版本 (請參閱[_cprintf、 _cprintf_l、 _cwprintf、 _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md))，這些函式會驗證它們的參數，並叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)，如果*格式*為 null 指標。 這些函式與不安全版本的差異在於也會一併驗證格式字串本身。 如果有任何未知或錯誤格式的格式規範，這些函式會叫用無效的參數處理常式。 在所有情況下，若要繼續，允許執行函式會傳回-1，並設定**errno**至**EINVAL**。
+與不安全版本 (請參閱[_cprintf、 _cprintf_l、 _cwprintf、 _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md))，這些函式會驗證其參數，並叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)的話*格式*為 null 指標。 這些函式與不安全版本的差異在於也會一併驗證格式字串本身。 如果有任何未知或錯誤格式的格式規範，這些函式會叫用無效的參數處理常式。 在所有情況下，如果要繼續，請允許執行函式會傳回-1，並設定**errno**要**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -127,7 +117,7 @@ int _cwprintf_s_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_cprintf_s**， **_cprintf_s_l**|\<conio.h>|
 |**_cwprintf_s**， **_cwprintf_s_l**|\<conio.h>|

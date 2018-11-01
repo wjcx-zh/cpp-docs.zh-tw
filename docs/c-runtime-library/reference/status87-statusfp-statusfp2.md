@@ -1,10 +1,6 @@
 ---
-title: _status87、_statusfp、_statusfp2 | Microsoft Docs
-ms.custom: ''
+title: _status87、_statusfp、_statusfp2
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _statusfp2
 - _statusfp
@@ -29,8 +25,6 @@ f1_keywords:
 - _status87
 - status87
 - statusfp
-dev_langs:
-- C++
 helpviewer_keywords:
 - floating-point functions, getting status word
 - floating-point numbers, status word
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - floating-point functions
 - status word
 ms.assetid: 7ef963fa-b1fb-429d-94d6-fbf282ab7432
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 69297d7ff1e3ec40cfe4fc22dec86c356d1697d4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 271c28dd4e267e5b3b702858cc398689e3e35d6f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412552"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597509"
 ---
 # <a name="status87-statusfp-statusfp2"></a>_status87、_statusfp、_statusfp2
 
@@ -77,21 +67,21 @@ void _statusfp2(unsigned int *px86, unsigned int *pSSE2)
 
 ## <a name="return-value"></a>傳回值
 
-如 **_status87**和 **_statusfp**，傳回的值中的位元表示浮點狀態。 請參閱浮點數。H 包含所傳回的位元的定義檔 **_statusfp**。 許多數學程式庫函式都會修改浮點狀態字組，伴隨著無法預期的結果。 最佳化可以重新排列、 結合及排除的呼叫周圍的浮點運算 **_status87**， **_statusfp**，和相關函式。 使用 [/Od (停用 (偵錯))](../../build/reference/od-disable-debug.md) 編譯器選項或 [fenv_access](../../preprocessor/fenv-access.md) pragma 指示詞，防止最佳化重新排序浮點運算。 傳回值，從 **_clearfp**和 **_statusfp**，和也傳回參數的 **_statusfp2**，如果您執行較少浮點作業更可靠之間的浮點狀態字組已知的狀態。
+針對 **_status87**並 **_statusfp**，傳回值中的位元表示浮點狀態。 請參閱浮點數。H 包含檔案的定義所傳回的位元 **_statusfp**。 許多數學程式庫函式都會修改浮點狀態字組，伴隨著無法預期的結果。 最佳化可以重新排列、 結合及消除呼叫的浮點運算 **_status87**， **_statusfp**，和相關函式。 使用 [/Od (停用 (偵錯))](../../build/reference/od-disable-debug.md) 編譯器選項或 [fenv_access](../../preprocessor/fenv-access.md) pragma 指示詞，防止最佳化重新排序浮點運算。 從中傳回值 **_clearfp**並 **_statusfp**，和也傳回參數的 **_statusfp2**，如果較少浮點作業將會更加可靠之間的浮點狀態字組的已知狀態。
 
 ## <a name="remarks"></a>備註
 
-**_Statusfp**函式會取得浮點狀態字組。 狀態字組是浮點處理器狀態與浮點例外狀況處理常式所偵測到之其他條件的組合，例如浮點堆疊溢位和反向溢位。 傳回狀態字組的內容之前，會檢查取消遮罩的例外狀況。 這表示會通知呼叫端有關暫止例外狀況。 在 x86 平台， **_statusfp**傳回將 x87 和 SSE2 浮點狀態的組合。 在 x64 平台上，傳回的狀態是根據 SSE 的 MXCSR 狀態。 在 ARM 平台， **_statusfp**從在 FPSCR 暫存器會傳回狀態。
+**_Statusfp**函式會取得浮點狀態字組。 狀態字組是浮點處理器狀態與浮點例外狀況處理常式所偵測到之其他條件的組合，例如浮點堆疊溢位和反向溢位。 傳回狀態字組的內容之前，會檢查取消遮罩的例外狀況。 這表示會通知呼叫端有關暫止例外狀況。 在 x86 平台 **_statusfp**傳回 x87 和 SSE2 浮點狀態的組合。 在 x64 平台上，傳回的狀態是根據 SSE 的 MXCSR 狀態。 在 ARM 平台， **_statusfp**傳回 FPSCR 暫存器中的狀態。
 
-**_statusfp**平台無關的可攜式版本 **_status87**。 它相當於 **_status87** Intel (x86) 平台上，也受 x64 和 ARM 平台支援。 若要確保您的浮點程式碼移植到所有架構，使用 **_statusfp**。 如果您僅以 x86 為目標平台，您可以使用 **_status87**或 **_statusfp**。
+**_statusfp**平台無關的可攜式版本 **_status87**。 它等同於 **_status87** Intel (x86) 平台上，也受 x64 和 ARM 平台支援。 若要確保您的浮點程式碼可移植到所有的架構，請使用 **_statusfp**。 如果您只的目標 x86 平台，您可以使用 **_status87**或是 **_statusfp**。
 
-我們建議 **_statusfp2**的晶片 （例如 Pentium IV) 具有 x87 和 SSE2 浮點處理器。 如 **_statusfp2**，位址會填滿將 x87 或 SSE2 浮點處理器使用浮點狀態字組。 EM_AMBIGUOUS 晶片，可支援 x87 和浮點 SSE2 的處理器，會設定為 1，否則 **_statusfp**或 **_controlfp**用和動作的模稜兩可，因為它無法參考將 x87 或 SSE2浮點狀態字組。 **_Statusfp2**函式只有支援 x86 平台。
+我們建議 **_statusfp2**如有 x87 和 SSE2 浮點處理器的晶片 （例如 Pentium IV)。 針對 **_statusfp2**，位址會填入 x87 或 SSE2 浮點處理器使用浮點狀態字組。 針對支援 x87 和 SSE2 浮點處理器的晶片，則 EM_AMBIGUOUS 會設為 1; 如果 **_statusfp**或是 **_controlfp**用和動作模稜兩可，因為它無法參照 x87 或 SSE2浮點狀態字組。 **_Statusfp2**函式才支援 x86 平台。
 
-這些函式不是適用於[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)因為 common language runtime (CLR) 只支援預設的浮點精確度。
+這些函式不適用於[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)因為 common language runtime (CLR) 只支援預設的浮點精確度。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_status87**， **_statusfp**， **_statusfp2**|\<float.h>|
 

@@ -1,43 +1,33 @@
 ---
-title: 編譯器警告 （層級 2） C4412 |Microsoft 文件
-ms.custom: ''
+title: 編譯器警告 (層級 2) C4412
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4412
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 47659a9ba0469b8ee719dbc686ba611e876d32c1
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 2c9d50fc3433321c0ca92366a512892212545754
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704009"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665513"
 ---
 # <a name="compiler-warning-level-2-c4412"></a>編譯器警告 (層級 2) C4412
 
-> '*函式*': 函式簽章含有類型'*類型*';C + + 物件是純程式碼之間傳遞的不安全與混合或原生。
+> '*函式*': 函式簽章含有類型'*型別*';C + + 物件是純程式碼之間傳遞的不安全和混合或原生。
 
 ## <a name="remarks"></a>備註
 
-**/Clr: pure**編譯器選項已被取代 Visual Studio 2015 中，在 Visual Studio 2017 中支援。 如果您有必須是純程式碼時，我們建議您將其移植到 C#。
+**/Clr: pure**編譯器選項是在 Visual Studio 2015 中已被取代，不支援的 Visual Studio 2017 中。 如果您有必須是單純的程式碼，我們建議您移植到C#。
 
-編譯器偵測到可能不安全的情況，可能會導致執行階段錯誤： 從進行呼叫 **/clr: pure**編譯模組匯入透過 dllimport 和函式簽章的函式包含不安全的類型. 如果它包含的成員函式，或具有不安全的類型或不安全的類型間接取值的資料成員，則不安全的類型。
+編譯器偵測到可能不安全的情況下，可能會導致執行階段錯誤： 正在進行呼叫，從 **/clr: pure**編譯模組已匯入透過 dllimport 和函式簽章的函式包含不安全的類型. 類型為不安全的如果它包含一個成員函式，或為不安全的型別或不安全類型的間接取值的資料成員。
 
-這是不安全，因為在預設的呼叫慣例純粹的和原生程式碼之間的差異 （或混合的原生和 managed）。 當匯入 (透過`dllimport`) 函式匯入 **/clr: pure**編譯時，請確定簽章中的每個型別的宣告都與匯出函式 （尤其要特別注意的編譯差異隱含呼叫慣例）。
+這是因為不同的預設呼叫慣例純粹的和原生程式碼之間的不安全 （或混合原生和 managed）。 當匯入 (透過`dllimport`) 函式匯入 **/clr: pure**編譯時，請確保匯出函式 （尤其是謹慎的編譯相同的簽章中的每個型別宣告差異隱含的呼叫慣例）。
 
-虛擬成員函式是特別容易產生非預期的結果。  不過，即使非虛擬函式應該測試，以確保您能取得正確的結果。 如果您不確定您要取得正確的結果，您可以忽略此警告。
+虛擬成員函式是特別容易產生非預期的結果。  不過，即使非虛擬函式應該測試以確保您取得正確的結果。 如果您不確定您會收到正確的結果，您可以忽略此警告。
 
-C4412 預設為關閉。 請參閱[編譯器警告為關閉的預設](../../preprocessor/compiler-warnings-that-are-off-by-default.md)和[dllexport、 dllimport](../../cpp/dllexport-dllimport.md)如需詳細資訊。
+C4412 預設為關閉。 請參閱[編譯器警告為關閉的預設](../../preprocessor/compiler-warnings-that-are-off-by-default.md)並[dllexport、 dllimport](../../cpp/dllexport-dllimport.md)如需詳細資訊。
 
 若要解決這個警告，移除型別中的所有函式。
 
@@ -91,7 +81,7 @@ struct Safe {
 
 ## <a name="example"></a>範例
 
-這個範例會匯出函式標頭檔中定義的型別。
+此範例會匯出函式使用的標頭檔中定義的類型。
 
 ```cpp
 // C4412_2.cpp
@@ -108,7 +98,7 @@ __declspec(dllexport) Safe * __cdecl func2() { return new Safe; }
 
 ## <a name="example"></a>範例
 
-預設呼叫慣例 **/clr: pure**編譯為原生編譯而不同。  當 C4412.h 隨附`Test`預設為`__clrcall`。 如果您編譯並執行此程式 (請勿使用 **/c**)，程式將會擲回例外狀況。
+預設呼叫慣例 **/clr: pure**編譯為不同於原生編譯。  包含在內，C4412.h 時`Test`預設為`__clrcall`。 如果您編譯並執行此程式 (請勿使用 **/c**)，程式將會擲回例外狀況。
 
 下列範例會產生 C4412。
 

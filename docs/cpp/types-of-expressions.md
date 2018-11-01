@@ -1,25 +1,16 @@
 ---
-title: 運算式的型別 |Microsoft Docs
+title: 運算式的類型
 ms.custom: index-page
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - expressions [C++], types
 ms.assetid: 1e7540b0-8fdb-49ab-b3e1-6ec439ff473a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f5dbe30a7775413a44a163bec13d1d7d3a1e0dae
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f67f7c2ce8872f3a88549259a82d9869f32b6f56
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058558"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624740"
 ---
 # <a name="types-of-expressions"></a>運算式的類型
 

@@ -1,10 +1,6 @@
 ---
-title: getc、getwc | Microsoft Docs
-ms.custom: ''
+title: getc、getwc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - getwc
 - getc
@@ -26,8 +22,6 @@ f1_keywords:
 - getwc
 - _gettchar
 - getc
-dev_langs:
-- C++
 helpviewer_keywords:
 - characters, reading
 - _gettc function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - getwc function
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9a4908e8fa3343bb54191fe2494f738ff0edf887
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbaee79eac6802959a11f7f1ba30eaf590ecf2f6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404327"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664863"
 ---
 # <a name="getc-getwc"></a>getc、getwc
 
@@ -71,22 +61,22 @@ wint_t getwc(
 
 ## <a name="return-value"></a>傳回值
 
-傳回讀取的字元。 若要表示讀取的錯誤或檔案結尾條件**getc**傳回**EOF**，和**getwc**傳回**WEOF**。 如**getc**，使用**ferror**或**feof**檢查錯誤的檔案結尾。 如果*資料流*是**NULL**， **getc**和**getwc**叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函數會傳回**EOF** (或**WEOF**如**getwc**) 並設定**errno**至**EINVAL**。
+傳回讀取的字元。 若要表示讀取的錯誤或檔案結尾條件， **getc**會傳回**EOF**，並**getwc**傳回**WEOF**。 針對**getc**，使用**ferror**或是**feof**來檢查錯誤或檔案結尾。 如果*資料流*是**NULL**， **getc**並**getwc**叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則這些函式會傳回**EOF** (或**WEOF** for **getwc**)，並設定**errno**到**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-每個常式從目前位置的檔案讀取單一字元，並遞增相關聯的檔案指標 (如果有定義) 以指向下一個字元。 與檔案關聯*資料流*。
+每個常式從目前位置的檔案讀取單一字元，並遞增相關聯的檔案指標 (如果有定義) 以指向下一個字元。 檔案相關聯*資料流*。
 
 這些函式鎖定呼叫執行緒，因此為安全執行緒。 如需非鎖定版本，請參閱 [_getc_nolock、_getwc_nolock](getc-nolock-getwc-nolock.md)。
 
 常式特定備註如下。
 
-|常式|備註|
+|常式傳回的值|備註|
 |-------------|-------------|
-|**getc**|與相同**fgetc**，但實作函式和巨集。|
-|**getwc**|寬字元版本的**getc**。 讀取多位元組字元或寬字元是否根據*資料流*文字模式或二進位模式中開啟。|
+|**getc**|與相同**fgetc**，但是實作，為函式和巨集。|
+|**getwc**|寬字元版本的**getc**。 讀取多位元組字元或寬字元是否根據*資料流*以文字模式還是二進位模式開啟。|
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -96,7 +86,7 @@ wint_t getwc(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**getc**|\<stdio.h>|
 |**getwc**|\<stdio.h> 或 \<wchar.h>|

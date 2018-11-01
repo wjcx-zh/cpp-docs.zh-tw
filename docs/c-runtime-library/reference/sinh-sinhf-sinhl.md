@@ -1,10 +1,6 @@
 ---
-title: sinh、 sinhf、 sinhl |Microsoft 文件
-ms.custom: ''
+title: sinh、 sinhf、 sinhl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sinhl
 - sinhf
@@ -26,8 +22,6 @@ f1_keywords:
 - sinh
 - sinhf
 - sinhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - sinh function
 - sinhl function
@@ -37,20 +31,16 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 220bbeb1d78957be153e23b578f217c8098f7e7d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7327809a20569c520aa799690203458d54e30fb5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410459"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569802"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh、 sinhf、 sinhl
 
-計算的雙曲正弦值。
+計算雙曲正弦。
 
 ## <a name="syntax"></a>語法
 
@@ -72,22 +62,22 @@ long double sinh(long double x);  // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-**Sinh**函式會傳回的雙曲正弦*x*。 根據預設，如果結果太大， **sinh**設定**errno**至**為 ERANGE**並傳回 ±**HUGE_VAL**。
+**Sinh**函式會傳回的雙曲正弦*x*。 根據預設，如果結果太大， **sinh**設定**errno**來**ERANGE** ，並傳回常见**HUGE_VAL**。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
 |± QNAN、IND|無|_DOMAIN|
-|&#124;x&#124; ≥ 7.104760e + 002|OVERFLOW+INEXACT|OVERFLOW|
+|&#124;x&#124; ≥ 7.104760e+002|OVERFLOW+INEXACT|OVERFLOW|
 
 如需傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**sinh**採用並傳回**float**或**長** **double**值。 在 C 程式中， **sinh**一律採用並傳回**double**。
+因為 c + + 允許多載，您可以呼叫多載**sinh**採用並傳回**float**或是**長** **double**值。 在 C 程式中， **sinh**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭 (C)|必要的標頭 (C++)|
+|常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
 |-|-|-|
 |**sinh**， **sinhf**， **sinhl**|\<math.h>|\<cmath> 或 \<math.h>|
 

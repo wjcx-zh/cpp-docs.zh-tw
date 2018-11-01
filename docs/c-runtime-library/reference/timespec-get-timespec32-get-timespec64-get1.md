@@ -1,11 +1,6 @@
 ---
-title: timespec_get、_timespec32_get、_timespec64_get1 | Microsoft Docs
-ms.custom: ''
+title: timespec_get _timespec32_get _timespec64_get1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - timespec_get
 - _timespec32_get
@@ -33,23 +28,17 @@ f1_keywords:
 - timespec
 - _timespec32
 - _timespec64
-dev_langs:
-- C++
 helpviewer_keywords:
 - timespec_get function
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f00a59f8b5813398b47562b106f3ec0eff3363b1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1d0cbaf194060d816e31d397a9319ef47f75371
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412829"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638447"
 ---
 # <a name="timespecget-timespec32get-timespec64get"></a>timespec_get、_timespec32_get、_timespec64_get
 
@@ -83,21 +72,21 @@ int _timespec64_get(
 
 ## <a name="return-value"></a>傳回值
 
-值*基底*如果成功，否則它會傳回零。
+值*基底*如果成功，否則會傳回零。
 
 ## <a name="remarks"></a>備註
 
-**Timespec_get**函式會將目前的時間所指向的結構*time_spec*引數。 此結構的所有版本都有兩個成員， **tv_sec**和**tv_nsec**。 **Tv_sec**值設定為整數秒數和**tv_nsec**奈秒的整數數字，四捨五入到系統時鐘的解析度所指定之epoch啟動之後*基底*。
+**Timespec_get**函式中所指向的結構會將目前的時間*time_spec*引數。 所有版本的此結構都具有兩個成員， **tv_sec**並**tv_nsec**。 **Tv_sec**值設定為整數秒數和**tv_nsec**奈秒的整數的數字，四捨五入到系統時鐘的解析度所指定的epoch啟動之後*基底*。
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
-這些函式僅支援**TIME_UTC**為*基底*值。 這會設定*time_spec*秒及奈秒自 epoch 啟動，1970 年 1 月 1 日午夜 Coordinated Universal Time (UTC) 後的數字的值。 在**結構** **_timespec32**， **tv_sec**是 **__time32_t**值。 在**結構** **_timespec64**， **tv_sec**是 **__time64_t**值。 在**結構** **timespec**， **tv_sec**是**time_t**類型，這是 32 位元或 64 位元長度，取決於是否前置處理器定義巨集 _USE_32BIT_TIME_T。 **Timespec_get**函式是內嵌函式呼叫 **_timespec32_get**有定義 _USE_32BIT_TIME_T; 否則它會呼叫 **_timespec64_get**。
+這些函式僅支援**TIME_UTC**作為*基底*值。 這會設定*time_spec*秒及奈自 epoch 啟動，1970 年 1 月 1 日午夜 Coordinated Universal Time (UTC) 之後的數字的值。 在  **struct** **_timespec32**， **tv_sec**是 **__time32_t**值。 在  **struct** **_timespec64**， **tv_sec**是 **__time64_t**值。 在  **struct** **timespec**， **tv_sec**是**time_t**類型，這是 32 位元或 64 位元長度取決於是否前置處理器定義巨集 _USE_32BIT_TIME_T。 **Timespec_get**函式是內嵌函式呼叫 **_timespec32_get**如果已定義 _USE_32BIT_TIME_T; 否則會呼叫 **_timespec64_get**。
 
 **結束 Microsoft 專有**
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**timespec_get**， **_timespec32_get**， **_timespec64_get**|C: \<time.h>，C++： \<ctime> 或 \<time.h>|
 

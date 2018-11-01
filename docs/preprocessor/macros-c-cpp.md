@@ -1,27 +1,17 @@
 ---
-title: 巨集 （C/c + +） |Microsoft Docs
-ms.custom: ''
+title: 巨集 (C/C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor
 - preprocessor, macros
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cf97e61e68cd02891c738db5de8820924957fc56
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: eb576fae7a2a895b88aa958c61b3170e58fbb070
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50065469"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656296"
 ---
 # <a name="macros-cc"></a>巨集 (C/C++)
 前置處理會展開巨集不是前置處理器指示詞的所有行 (沒有行**#** 作為第一個非空格字元) 和中的某些指示詞不會略過一部分的組件條件式編譯。 「條件式編譯」指示詞可讓您隱藏原始程式檔某些部分的編譯，方法是透過測試常數運算式或識別項，判斷在前置處理期間，哪些文字區塊會傳遞到編譯器上，以及哪些文字區塊會從原始程式檔中移除。

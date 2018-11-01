@@ -1,10 +1,6 @@
 ---
-title: _getdcwd、_wgetdcwd | Microsoft Docs
-ms.custom: ''
+title: _getdcwd、_wgetdcwd
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdcwd
 - _wgetdcwd
@@ -28,8 +24,6 @@ f1_keywords:
 - tgetdcwd
 - _wgetdcwd
 - _tgetdcwd
-dev_langs:
-- C++
 helpviewer_keywords:
 - wgetdcwd function
 - working directory
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 45c03ed2c057781c082988ac15e838249db0f28a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 87cccec82ce648498c2bd3a7ac0ecbe436cb9baf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689711"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677015"
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd、_wgetdcwd
 
@@ -100,9 +90,9 @@ wchar_t *_wgetdcwd(
 
 這個函式即使相依於本身不是安全執行緒的 **GetFullPathName**，仍是安全執行緒。 不過，您可能會違反執行緒安全多執行緒的應用程式呼叫此函式和[GetFullPathNameA](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)。
 
-這個函式具有新版 **_nolock**行為完全相同後, 置詞對這個函式不同之處在於它不是安全執行緒，並不受干擾其他執行緒。 如需詳細資訊，請參閱 [_getdcwd_nolock、_wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md)。
+這個函式具有新版 **_nolock**行為完全相同後, 置詞對這個函式不同之處在於它不是安全執行緒，並不受干擾其他執行緒。 如需詳細資訊，請參閱 [_getdcwd_nolock, _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md)。
 
-時 **_DEBUG**並 **_CRTDBG_MAP_ALLOC**所定義，但呼叫 **_getdcwd**並 **_wgetdcwd**會取代藉由呼叫 **_getdcwd_dbg**並 **_wgetdcwd_dbg** ，讓您可以偵錯記憶體配置。 如需詳細資訊，請參閱 [_getdcwd_dbg、_wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md)。
+時 **_DEBUG**並 **_CRTDBG_MAP_ALLOC**所定義，但呼叫 **_getdcwd**並 **_wgetdcwd**會取代藉由呼叫 **_getdcwd_dbg**並 **_wgetdcwd_dbg** ，讓您可以偵錯記憶體配置。 如需詳細資訊，請參閱[_getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -121,7 +111,7 @@ wchar_t *_wgetdcwd(
 
 ## <a name="example"></a>範例
 
-請參閱 [_getdrive](getdrive.md) 中的範例。
+請參閱 [_getdrive](getdrive.md)中的範例。
 
 ## <a name="see-also"></a>另請參閱
 

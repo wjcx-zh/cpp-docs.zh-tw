@@ -1,10 +1,6 @@
 ---
-title: frexp frexpf，frexpl |Microsoft 文件
-ms.custom: ''
+title: frexp、 frexpf、 frexpl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - frexp
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - frexp
 - _frexpl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _frexpl function
 - mantissas, floating-point variables
@@ -33,18 +27,14 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c3bf79e954274b1cedb104ed637ad14b8e1c6431
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c9e259f730d2d63d07032735be930f6f0fdb17e5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400085"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563835"
 ---
-# <a name="frexp-frexpf-frexpl"></a>frexp frexpf frexpl
+# <a name="frexp-frexpf-frexpl"></a>frexp、 frexpf、 frexpl
 
 取得浮點數的尾數和指數。
 
@@ -83,13 +73,13 @@ long double frexp(
 
 ## <a name="return-value"></a>傳回值
 
-**frexp**傳回則表示尾數。 如果*x*是 0，則函數會傳回 0，則表示尾數和指數。 如果*expptr*是**NULL**，會叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**至**EINVAL**並傳回 0。
+**frexp**會傳回尾數。 如果*x*是 0，則此函數會傳回 0 則表示尾數和指數。 如果*expptr*是**NULL**，會叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**要**EINVAL**且會傳回 0。
 
 ## <a name="remarks"></a>備註
 
-**Frexp**細分的浮點值的函式 (*x*) 到尾數 (*m*) 和指數 (*n*)，這類絕對值值*m*大於或等於 0.5 且小於 1.0 和*x* = *m* * 2<sup>*n*</sup>. 整數指數*n*儲存在所指位置*expptr*。
+**Frexp**函式會細分的浮點數值 (*x*) 分解為尾數 (*m*) 和指數 (*n*)，使得絕對值*m*大於或等於 0.5 並小於 1.0，以及*x* = *m* * 2<sup>*n*</sup>. 整數指數*n*所指向的位置會儲存*expptr*。
 
-C + + 允許多載，所以您可以呼叫的多載**frexp**。 在 C 程式中， **frexp**一律採用**double**和**int**指標並傳回**double**。
+C + + 允許多載，因此您可以呼叫多載**frexp**。 在 C 程式中， **frexp**一律採用**double**並**int**指標並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

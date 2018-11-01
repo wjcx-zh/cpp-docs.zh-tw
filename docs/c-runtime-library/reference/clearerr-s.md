@@ -1,10 +1,6 @@
 ---
-title: clearerr_s | Microsoft Docs
-ms.custom: ''
+title: clearerr_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - clearerr_s
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - clearerr_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - error indicator for streams
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34feccd2d4d6de53ed9c5a446bf6c7d065dd4e62
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 140d984c470bd505f347aa43065b033339ed38a1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450862"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665019"
 ---
 # <a name="clearerrs"></a>clearerr_s
 
@@ -59,17 +49,17 @@ errno_t clearerr_s(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，則為零**EINVAL**如果*資料流*是**NULL**。
+如果成功則為零**EINVAL**如果*串流*會**NULL**。
 
 ## <a name="remarks"></a>備註
 
-**Clearerr_s**函式會重設錯誤指標和檔案結尾指標*資料流*。 不會自動清除錯誤指標。指定的資料流的錯誤指標設定之後，該資料流的作業繼續傳回的錯誤值，直到**clearerr_s**， **clearerr**， [fseek](fseek-fseeki64.md)， **fsetpos**，或[倒轉](rewind.md)呼叫。
+**Clearerr_s**函式重設錯誤指標和檔案結尾指標*串流*。 不會自動清除錯誤指標;一旦設定指定的資料流的錯誤指標之後，該資料流的作業會繼續傳回錯誤值直到**clearerr_s**， **clearerr**， [fseek](fseek-fseeki64.md)， **fsetpos**，或[rewind](rewind.md)呼叫。
 
-如果*資料流*是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**至**EINVAL**並傳回**EINVAL**。
+如果*資料流*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**要**EINVAL** ，並傳回**EINVAL**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**clearerr_s**|\<stdio.h>|
 

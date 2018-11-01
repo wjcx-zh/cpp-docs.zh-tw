@@ -1,26 +1,16 @@
 ---
-title: 前置處理器運算子 |Microsoft Docs
-ms.custom: ''
+title: 前置處理器運算子
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor operators
 - operators [C++], preprocessor
 ms.assetid: 884126d1-0ce2-48b6-9e06-8a2d7c4a9656
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c1bc364f0b24ed0f2e561ff9f452018faf2cfab6
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 3573ce2d86f38193a4f8f7c1c0f310283f304648
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50066457"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50584388"
 ---
 # <a name="preprocessor-operators"></a>前置處理器運算子
 `#define` 指示詞的內容中使用四個前置處理器特定運算子 (請參閱下列清單以取得每一個運算子的摘要)。 字串化、字元化和語彙基元帶入運算子在下面三節中討論。 如需`defined`運算子，請參閱[#if、 #elif、 #else 和 #endif 指示詞](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)。

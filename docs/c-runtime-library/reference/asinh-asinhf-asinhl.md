@@ -1,10 +1,6 @@
 ---
-title: asinh、asinhf、asinhl | Microsoft Docs
-ms.custom: ''
+title: asinh、asinhf、asinhl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - asinh
 - asinhf
@@ -26,23 +22,17 @@ f1_keywords:
 - asinhf
 - asinhl
 - asinh
-dev_langs:
-- C++
 helpviewer_keywords:
 - asinh function
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1387e44b885d0f1ed58113b87d26ba5928768c18
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f6100268b77178487b7a7aa1cc3f10ac3ea7e9dc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393286"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662951"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh、asinhf、asinhl
 
@@ -76,13 +66,13 @@ long double asinh( long double x );  // C++ only
 
 ## <a name="remarks"></a>備註
 
-當您使用 c + + 時，您可以呼叫的多載**asinh**採用並傳回**float**或**長** **double**值。 在 C 程式中， **asinh**一律採用並傳回**double**。
+當您使用 c + + 時，您可以呼叫多載**asinh**採用並傳回**float**或是**長** **double**值。 在 C 程式中， **asinh**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 
 |功能|必要的 C 標頭|必要的 C++ 標頭|
 |--------------|--------------|------------------|
-|**asinh**， **asinhf**， **asinhl**|\<math.h>|\<h > 或\<math.h <|
+|**asinh**， **asinhf**， **asinhl**|\<math.h>|\<cmath> > 或\<math.h> <|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

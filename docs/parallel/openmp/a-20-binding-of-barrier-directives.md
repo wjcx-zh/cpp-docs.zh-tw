@@ -1,23 +1,13 @@
 ---
-title: A.20 繫結 barrier 指示詞 |Microsoft Docs
-ms.custom: ''
+title: A.20 繫結 barrier 指示詞
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: a3fdcc26-6873-429b-998e-de451401483b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 628920caa6a122230f42394cc757e3abdb1874cd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cf6f20a8539c47ca529af93e65f3a5fe244228d8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381305"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50652942"
 ---
 # <a name="a20---binding-of-barrier-directives"></a>A.20 繫結 barrier 指示詞
 

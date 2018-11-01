@@ -1,4 +1,51 @@
-)---title:"_strdec、 _wcsdec、 _mbsdec、 _mbsdec_l |Microsoft Docs"ms.custom:""ms.date:"11/04/2016"ms.technology: [[cpp-標準-程式庫]] ms.topic: 「 參考 」 apiname: ["_wcsdec 」、 「 _strdec"、"_mbsdec"、"_mbsdec_l"] apilocation: ["msvcrt.dll"、"msvcr80.dll 」、 「 msvcr90.dll"、"msvcr100.dll 」"msvcr100_clr0400.dll"、"msvcr110.dll"、"msvcr110_clr0400.dll"、"msvcr120.dll"、"msvcr120_clr0400.dll"、"ucrtbase.dll"、"api-ms-win-crt-multibyte-l1-1-0.dll"] apitype: 「 DLLExport"f1_keywords: ["_strdec 」、 「 mbsdec_l"，"strdec"，"_mbsdec"，「 _mbsdec_l"，"mbsdec"，"wcsdec"，"_wcsdec"] dev_langs: ["c + +"] helpviewer_keywords: ["mbsdec_l 函式 」、 「 mbsdec 函式 」，「 tcsdec 函式 」，「 _tcsdec 函式 」、 「 _strdec 函式 」，「 _wcsdec 函式 」、 「 _mbsdec_l 函式 」、 「 strdec 函式 」，」wcsdec 函式 」、 「 _mbsdec 函式 」] ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd author:"corob msft"ms.author:"corob"ms.workload: ["cplusplus"]
+---
+title: _strdec、_wcsdec、_mbsdec、_mbsdec_l
+ms.date: 11/04/2016
+apiname:
+- _wcsdec
+- _strdec
+- _mbsdec
+- _mbsdec_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _strdec
+- mbsdec_l
+- strdec
+- _mbsdec
+- _mbsdec_l
+- mbsdec
+- wcsdec
+- _wcsdec
+helpviewer_keywords:
+- mbsdec_l function
+- mbsdec function
+- tcsdec function
+- _tcsdec function
+- _strdec function
+- _wcsdec function
+- _mbsdec_l function
+- strdec function
+- wcsdec function
+- _mbsdec function
+ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
+ms.openlocfilehash: 7e88bcf5bf7ffc5eba6feecd545cda8f7950829c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591707"
 ---
 # <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec、_wcsdec、_mbsdec、_mbsdec_l
 

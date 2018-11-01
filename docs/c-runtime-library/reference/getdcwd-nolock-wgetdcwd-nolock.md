@@ -1,10 +1,6 @@
 ---
-title: _getdcwd_nolock、_wgetdcwd_nolock | Microsoft Docs
-ms.custom: ''
+title: _getdcwd_nolock、_wgetdcwd_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wgetdcwd_nolock
 - _getdcwd_nolock
@@ -27,8 +23,6 @@ f1_keywords:
 - _getdcwd_nolock
 - _tgetdcwd_nolock
 - getdcwd_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - getdcwd_nolock function
 - _tgetdcwd_nolock function
@@ -40,23 +34,19 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aa969bb756754c1a6e1d28ac1b029ee443666ea0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47938c387ba30d7bcba038145c2dff9c7b59b750
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401574"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563680"
 ---
 # <a name="getdcwdnolock-wgetdcwdnolock"></a>_getdcwd_nolock、_wgetdcwd_nolock
 
 取得指定磁碟機上目前工作目錄的完整路徑。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -82,7 +72,7 @@ wchar_t *_wgetdcwd_nolock(
 路徑的儲存位置。
 
 *maxlen*<br/>
-以字元為單位的路徑長度上限： **char**如 **_getdcwd**和**wchar_t**如 **_wgetdcwd**。
+以字元為單位的路徑長度上限： **char** for **_getdcwd**並**wchar_t**如 **_wgetdcwd**。
 
 ## <a name="return-value"></a>傳回值
 
@@ -90,7 +80,7 @@ wchar_t *_wgetdcwd_nolock(
 
 ## <a name="remarks"></a>備註
 
-**_getdcwd_nolock**和 **_wgetdcwd_nolock**相同 **_getdcwd**和 **_wgetdcwd**分別，不同之處在於不受保護的由其他執行緒的干擾。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
+**_getdcwd_nolock**和 **_wgetdcwd_nolock**等於 **_getdcwd**並 **_wgetdcwd**分別，不同之處在於它們未受保護的由其他執行緒的干擾。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -100,7 +90,7 @@ wchar_t *_wgetdcwd_nolock(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_getdcwd_nolock**|\<direct.h>|
 |**_wgetdcwd_nolock**|\<direct.h> 或 \<wchar.h>|

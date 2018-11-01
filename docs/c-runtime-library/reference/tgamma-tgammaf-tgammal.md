@@ -1,11 +1,6 @@
 ---
-title: tgamma、tgammaf、tgammal | Microsoft Docs
-ms.custom: ''
+title: tgamma、tgammaf、tgammal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - tgamma
 - tgammaf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/tgamma
 - math/tgammaf
 - math/tgammal
-dev_langs:
-- C++
 helpviewer_keywords:
 - tgamma function
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7861b297646f4a704134e0d874fad8c924a7ebc8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6cfe455b0e9e83cd5283d36fed33ca168bc97d0a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409871"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570660"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma、tgammaf、tgammal
 
@@ -86,7 +75,7 @@ long double tgammal(
 
 如果成功，傳回的 gamma *x*。
 
-如果，可能會發生範圍錯誤的量級*x*太大或太小的資料類型。 如果，則可能會發生網域錯誤或範圍錯誤*x* < = 0。
+如果，可能會發生範圍錯誤的變動*x*太大或太小的資料類型。 如果，則可能會發生網域錯誤或範圍錯誤*x* < = 0。
 
 |問題|Return|
 |-----------|------------|
@@ -104,7 +93,7 @@ long double tgammal(
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**tgamma**採用並傳回**float**和**長** **double**型別。 在 C 程式中， **tgamma**一律採用並傳回**double**。
+因為 c + + 允許多載，您可以呼叫多載**tgamma**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **tgamma**一律採用並傳回**double**。
 
 如果 x 為自然數，此函式會傳回 (x-1) 階乘。
 

@@ -1,26 +1,15 @@
 ---
-title: 結構描述資料列 |Microsoft Docs
-ms.custom: ''
+title: 結構描述資料列集
 ms.date: 10/22/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - schema rowsets, defined
 ms.assetid: 0716a065-230c-4c20-bb53-98870e79ea29
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: d33ada08132d5748b2cf2630ac44c81a52cec7c6
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 9be586d4bd9c0b5591dbab3202b9fc44d0924a5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50082784"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556581"
 ---
 # <a name="schema-rowsets"></a>結構描述資料列集
 

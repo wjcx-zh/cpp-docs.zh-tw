@@ -1,31 +1,21 @@
 ---
-title: 警告 |Microsoft Docs
-ms.custom: ''
+title: warning
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - warning_CPP
 - vc-pragma.warning
-dev_langs:
-- C++
 helpviewer_keywords:
 - pragmas, warning
 - push pragma warning
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 90cb11a6e6ab0c088c0b2425856d61556e76564c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 53f79061ded358c9cb895fd7e8e245c46ed99fd5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234628"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631714"
 ---
 # <a name="warning-pragma"></a>警告 Pragma
 啟用選擇性修改編譯器警告訊息的行為。
@@ -46,7 +36,7 @@ ms.locfileid: "48234628"
 |警告指定名稱|意義|
 |------------------------|-------------|
 |*1、 2、 3、 4*|將指定的層級套用至指定的警告。 這樣也會開啟預設為關閉的指定警告。|
-|*default*|將警告行為重設為預設值。 這樣也會開啟預設為關閉的指定警告。 警告會以其記載的預設層級產生。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 編譯器警告，預設為關閉的](../preprocessor/compiler-warnings-that-are-off-by-default.md)。|
+|*default*|將警告行為重設為預設值。 這樣也會開啟預設為關閉的指定警告。 警告會以其記載的預設層級產生。<br /><br /> 如需詳細資訊，請參閱 [Compiler Warnings That Are Off by Default](../preprocessor/compiler-warnings-that-are-off-by-default.md)。|
 |*disable*|不發出指定的警告訊息。|
 |*error*|將指定的警告回報為錯誤。|
 |*once*|只顯示指定的訊息一次。|

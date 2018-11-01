@@ -1,27 +1,17 @@
 ---
-title: 編譯器錯誤 C2434 |Microsoft 文件
-ms.custom: ''
+title: 編譯器錯誤 C2434
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2434
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2434
 ms.assetid: 01329e26-7c74-4219-b74f-69e3a40c9738
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 45f9ccdef84713883c53dab0e7caf3b1519628de
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c73a8d4fcde945ddf2495cc2d0d7dc47216f2db3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704223"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587586"
 ---
 # <a name="compiler-error-c2434"></a>編譯器錯誤 C2434
 
@@ -29,9 +19,9 @@ ms.locfileid: "34704223"
 
 ## <a name="remarks"></a>備註
 
-**/Clr: pure**和 **/clr: safe**編譯器選項都是 Visual Studio 2015 中已被取代，並不支援的 Visual Studio 2017 中。
+**/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
 
-不可能以動態方式初始化處理序專屬變數下的 **/clr: pure**。 如需詳細資訊，請參閱[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)和[程序](../../cpp/process.md)。
+不可能以動態方式初始化處理序專屬變數下的 **/clr: pure**。 如需詳細資訊，請參閱 < [/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)並[程序](../../cpp/process.md)。
 
 ## <a name="example"></a>範例
 

@@ -1,10 +1,6 @@
 ---
-title: _RTC_SetErrorType | Microsoft Docs
-ms.custom: ''
+title: _RTC_SetErrorType
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _RTC_SetErrorType
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - RTC_SetErrorType
 - _RTC_SetErrorType
-dev_langs:
-- C++
 helpviewer_keywords:
 - run-time errors
 - RTC_SetErrorType function
 - _RTC_SetErrorType function
 ms.assetid: f5f99be7-d357-4b11-b8f5-ddd3428f2b06
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83395727b37ea3901e2e3c28d7adb6663f043d12
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 022079bd199477c8bca92e853ed66879c96428db
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406611"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635666"
 ---
 # <a name="rtcseterrortype"></a>_RTC_SetErrorType
 
@@ -59,13 +49,13 @@ int _RTC_SetErrorType(
 數字，介於零與 [_RTC_NumErrors](rtc-numerrors.md) 所傳回的值減一之間。
 
 *ErrType*<br/>
-值，會指派給此 *errnum*。 例如，您可以使用 **_CRT_ERROR**。 如果您使用 **_CrtDbgReport**錯誤處理常式中，為*ErrType*只能一個中定義的符號[_CrtSetReportMode](crtsetreportmode.md)。 如果您有自己的錯誤處理常式 ([_RTC_SetErrorFunc](rtc-seterrorfunc.md))，則可以有數目與 *errnum*相同的 *ErrType*。
+值，會指派給此 *errnum*。 例如，您可以使用 **_CRT_ERROR**。 如果您使用 **_CrtDbgReport**為您的錯誤處理常式*ErrType*只能一個中定義的符號[_CrtSetReportMode](crtsetreportmode.md)。 若您有自己的錯誤處理常式 ([_RTC_SetErrorFunc](rtc-seterrorfunc.md))，您可以有可以有和 *errnum*等量的 *ErrType*。
 
-*ErrType* _RTC_ERRTYPE_IGNORE 具有特殊意義 **_CrtSetReportMode**; 已忽略錯誤。
+*ErrType* _RTC_ERRTYPE_IGNORE 有特殊的意義 **_CrtSetReportMode**; 已忽略錯誤。
 
 ## <a name="return-value"></a>傳回值
 
-先前的錯誤類型值*類型*。
+先前的錯誤類型的值*型別*。
 
 ## <a name="remarks"></a>備註
 
@@ -75,7 +65,7 @@ int _RTC_SetErrorType(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_RTC_SetErrorType**|\<rtcapi.h>|
 

@@ -1,11 +1,6 @@
 ---
-title: fetestexcept |Microsoft 文件
-ms.custom: ''
+title: fetestexcept
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fetestexcept
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - fetestexcept
 - fenv/fetestexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0450fcaddf8ca05484d0b2bd122ff006eb8355f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ae170e4c5826e2053b330d81773b75f176303332
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397394"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667437"
 ---
 # <a name="fetestexcept"></a>fetestexcept
 
@@ -55,7 +44,7 @@ int fetestexcept(
 
 ### <a name="parameters"></a>參數
 
-*excepts*<br/>
+*removed*<br/>
 要測試的浮點狀態旗標位元 OR。
 
 ## <a name="return-value"></a>傳回值
@@ -64,7 +53,7 @@ int fetestexcept(
 
 ## <a name="remarks"></a>備註
 
-使用 fetestexcept 函式判斷浮點運算引發的例外狀況。 使用*excepts*參數來指定要測試的例外狀況狀態旗標。 **Fetestexcept**函式會使用定義在這些例外狀況巨集\<fenv.h > 中*excepts*和傳回值：
+使用 fetestexcept 函式判斷浮點運算引發的例外狀況。 使用*removed*參數來指定要測試的例外狀況狀態旗標。 **Fetestexcept**函式會使用定義在這些例外狀況巨集\<fenv.h > 中*removed*和傳回值：
 
 |例外狀況巨集|描述|
 |---------------------|-----------------|
@@ -75,7 +64,7 @@ int fetestexcept(
 |FE_UNDERFLOW|稍早的浮點運算結果太小，無法以完整精確度表示；已建立 denormal 值。|
 |FE_ALLEXCEPT|所有受支援浮點例外狀況的位元 OR。|
 
-指定*excepts*引數可以是 0，其中一種支援的浮點例外狀況巨集，或位元或兩個或多個巨集。 任何其他效果*excepts*引數值是未定義。
+指定*removed*引數可以是 0，其中一個支援的浮點例外狀況巨集，或位元，或是兩個或以上巨集。 任何其他的效果*removed*引數的值未定義。
 
 若要使用此函式，您必須在呼叫之前使用 `#pragma fenv_access(on)` 指示詞，以關閉可能會妨礙存取的浮點最佳化作業。 如需詳細資訊，請參閱 [fenv_access](../../preprocessor/fenv-access.md)。
 

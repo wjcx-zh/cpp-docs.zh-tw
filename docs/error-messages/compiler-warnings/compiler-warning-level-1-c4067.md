@@ -1,27 +1,17 @@
 ---
-title: 編譯器警告 （層級 1） C4067 |Microsoft 文件
-ms.custom: ''
+title: 編譯器警告 （層級 1） C4067
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4067
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4067
 ms.assetid: 1d10353e-8cd5-4b01-9184-a06189b965a4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ee6b48327e8754f9388e0df8f43009a5be70c97
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 012866e328433ec9511782c26a39265481ff4940
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255449"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541177"
 ---
 # <a name="compiler-warning-level-1-c4067"></a>編譯器警告 （層級 1） C4067
 
@@ -29,7 +19,7 @@ ms.locfileid: "34255449"
 
 ## <a name="remarks"></a>備註
 
-編譯器發現，並忽略多餘的字元，前置處理器指示詞後面。 這可能被因未預期的字元，但常見的原因是偏離分號指示詞後。 註解不會導致此警告。 **/Za**編譯器選項可讓這項警告詳細的前置處理器指示詞，比預設設定。
+編譯器發現，並忽略多餘的字元，前置處理器指示詞後面。 原因可能是任何非預期的字元，但常見的原因是偏離分號指示詞之後。 註解不會導致此警告。 **/Za**編譯器選項可讓這項警告比預設設定的多個前置處理器指示詞。
 
 ## <a name="example"></a>範例
 
@@ -49,7 +39,7 @@ int main()
 }
 ```
 
-若要解決這個警告，刪除偏離的字元，或將它們移入註解區塊。 某些 C4067 警告可能會停用移除 **/Za**編譯器選項。
+若要解決這個警告，請刪除偏離的字元，或將它們移入註解區塊。 某些 C4067 警告可能會停用，藉由移除 **/Za**編譯器選項。
 
 ```cpp
 // C4067b.cpp

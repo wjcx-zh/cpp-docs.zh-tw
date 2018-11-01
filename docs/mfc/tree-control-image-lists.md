@@ -1,27 +1,17 @@
 ---
-title: 樹狀目錄控制項影像清單 |Microsoft Docs
-ms.custom: ''
+title: 樹狀目錄控制項影像清單
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - images [MFC], lists in tree controls
 - tree controls [MFC], image lists
 - CTreeCtrl class [MFC], image lists
 ms.assetid: f560c4f2-20d2-4d28-ac33-4017e65fb0a6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3de5e390f933d3a4ff96520f823c737291922b89
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2b680ece131df434b65f02501f78f0cdb6507f08
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440572"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551758"
 ---
 # <a name="tree-control-image-lists"></a>樹狀目錄控制項影像清單
 

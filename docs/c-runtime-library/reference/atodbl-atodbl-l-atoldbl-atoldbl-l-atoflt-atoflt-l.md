@@ -1,10 +1,6 @@
 ---
-title: _atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l | Microsoft Docs
-ms.custom: ''
+title: _atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _atoldbl
 - _atoldbl_l
@@ -38,8 +34,6 @@ f1_keywords:
 - atoflt
 - atoldbl_l
 - _atodbl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _atodbl function
 - _atoldbl_l function
@@ -55,16 +49,12 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da36dfae81f33f5fb30a1a4bc93a57437980d720
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb8d711dc8dfa912333f34603ad607f0a74143bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393585"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552031"
 ---
 # <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l
 
@@ -94,15 +84,15 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，會傳回 0。 可能的錯誤代碼是 **_UNDERFLOW**或 **_OVERFLOW**，標頭檔中定義所在\<math.h >。
+如果成功，會傳回 0。 可能的錯誤碼是 **_UNDERFLOW**或是 **_OVERFLOW**，標頭檔中定義\<math.h> >。
 
 ## <a name="remarks"></a>備註
 
-這些函式會將字串轉換成浮點值。 這些函式之間的差異和**atof**函式系列即這些函式不會產生的浮點程式碼，並不會造成硬體例外狀況。 相反地，錯誤狀況會回報為錯誤碼。
+這些函式會將字串轉換成浮點值。 這些函式之間的差異並**atof**函式系列即這些函式不會產生浮點碼，並不會導致硬體例外狀況。 相反地，錯誤狀況會回報為錯誤碼。
 
-如果字串不具有有效的解譯為浮點值，*值*設為零且傳回值為零。
+如果字串無法有效解譯為浮點值時，*值*設為零，而傳回值為零。
 
-有這些函式的版本 **_l**尾碼是相同的版本，不需要後置詞，不同之處在於會使用*地區設定*傳入而非目前執行緒的參數地區設定。
+有這些函式的版本 **_l**是相同的後置詞沒有後置詞，，不同之處在於它們使用的版本*地區設定*會傳入，而不是目前執行緒的參數地區設定。
 
 ## <a name="requirements"></a>需求
 

@@ -1,10 +1,6 @@
 ---
-title: _scprintf、_scprintf_l、_scwprintf、_scwprintf_l | Microsoft Docs
-ms.custom: ''
+title: _scprintf、_scprintf_l、_scwprintf、_scwprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _scprintf_l
 - _scwprintf
@@ -33,8 +29,6 @@ f1_keywords:
 - _sctprintf_l
 - scwprintf_l
 - _sctprintf
-dev_langs:
-- C++
 helpviewer_keywords:
 - scprintf function
 - sctprintf_l function
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - _scprintf function
 - scwprintf function
 ms.assetid: ecbb0ba6-5f4c-4ce6-a64b-144ad8b5fe92
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d9d912d039cc732ebfe5399a90422d8b68d51332
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 09c44bbf6f918211c1aa2ee875a23bfcc7ca2da5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407209"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500846"
 ---
 # <a name="scprintf-scprintfl-scwprintf-scwprintfl"></a>_scprintf、_scprintf_l、_scwprintf、_scwprintf_l
 
@@ -103,17 +93,17 @@ int _scwprintf_l(
 
 ## <a name="return-value"></a>傳回值
 
-傳回要使用所指定格式化程式碼將字串列印或傳送至檔案或緩衝區時所產生的字元數。 傳回的值不包含終止 Null 字元。 **_scwprintf**寬字元中執行相同的功能。
+傳回要使用所指定格式化程式碼將字串列印或傳送至檔案或緩衝區時所產生的字元數。 傳回的值不包含終止 Null 字元。 **_scwprintf**執行相同的函式的寬字元。
 
-如果*格式*是**NULL**指標、 無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**至**EINVAL**。
+如果*格式*是**NULL**指標，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**要**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-每個*引數*（如果有的話） 會轉換中的對應格式規格根據*格式*。 此格式包含一般字元，與具有相同的形式和功能*格式*引數[printf](printf-printf-l-wprintf-wprintf-l.md)。
+每個*引數*（如果有的話） 會根據對應格式規格中轉換*格式*。 此格式包含一般字元，與具有相同的形式和運作方式*格式*引數[printf](printf-printf-l-wprintf-wprintf-l.md)。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的執行緒地區設定的地區設定參數。
+使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
 
 > [!IMPORTANT]
 > 確認 *format* 不是使用者定義的字串。
@@ -127,7 +117,7 @@ int _scwprintf_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_scprintf**， **_scprintf_l**|\<stdio.h>|
 |**_scwprintf**， **_scwprintf_l**|\<stdio.h> 或 \<wchar.h>|

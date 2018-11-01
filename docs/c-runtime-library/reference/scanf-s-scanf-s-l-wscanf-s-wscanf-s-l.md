@@ -1,10 +1,6 @@
 ---
-title: scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l | Microsoft Docs
-ms.custom: ''
+title: scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wscanf_s
 - _wscanf_s_l
@@ -29,8 +25,6 @@ f1_keywords:
 - scanf_s
 - _tscanf_s
 - _scanf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - reading data [C++], from input streams
 - buffers [C++], buffer overruns
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - wscanf_s_l function
 - buffers [C++], avoiding overruns
 ms.assetid: 42cafcf7-52d6-404a-80e4-b056a7faf2e5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cd8abf72b67c060bd6016b7e784ded5a30801ca6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0fcf2a9f3ac8585e71caa9f2cc990c7e303a2f5f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415209"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528605"
 ---
 # <a name="scanfs-scanfsl-wscanfs-wscanfsl"></a>scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l
 
@@ -99,19 +89,19 @@ int _wscanf_s_l(
 
 ## <a name="return-value"></a>傳回值
 
-這會在成功轉換並指派時傳回欄位數；傳回值不包含已讀取但尚未指派的欄位。 傳回值 0 表示未指派任何欄位。 傳回值是**EOF**錯誤，或如果在第一次嘗試讀取字元遇到檔案結尾字元或字串結尾字元。 如果*格式*是**NULL**指標、 無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**scanf_s**和**wscanf_s**傳回**EOF**並設定**errno**至**EINVAL**.
+這會在成功轉換並指派時傳回欄位數；傳回值不包含已讀取但尚未指派的欄位。 傳回值 0 表示未指派任何欄位。 傳回值是**EOF**錯誤，或如果在第一次嘗試讀取字元遇到檔案結尾字元或字串結尾字元。 如果*格式*是**NULL**指標，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**scanf_s**並**wscanf_s**傳回**EOF** ，並設定**errno**到**EINVAL**.
 
 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Scanf_s**函式會從標準輸入資料流讀取資料**stdin** ，並將資料寫入至的位置由提供*引數*。 每個*引數*必須對應於型別規範中的型別變數指標*格式*。 如果在重疊的字串之間進行複製，則行為是未定義的。
+**Scanf_s**函式會從標準輸入資料流讀取資料**stdin**並將資料寫入至所指定的位置*引數*。 每個*引數*必須是對應至中的類型指定名稱的型別變數指標*格式*。 如果在重疊的字串之間進行複製，則行為是未定義的。
 
-**wscanf_s**是寬字元版本的**scanf_s**;*格式*引數**wscanf_s**是寬字元字串。 **wscanf_s**和**scanf_s**運作方式完全相同的資料流在 ANSI 模式中開啟時。 **scanf_s**目前不支援來自 UNICODE 資料流輸入。
+**wscanf_s**是寬字元版本的**scanf_s**;*格式*引數**wscanf_s**是寬字元字串。 **wscanf_s**並**scanf_s**運作方式完全相同，如果資料流以 ANSI 模式開啟。 **scanf_s**目前不支援來自 UNICODE 資料流輸入。
 
-有這些函式的版本 **_l**尾碼是一樣的不同之處在於它們使用傳入的地區設定參數，而不是目前的執行緒地區設定。
+有這些函式的版本 **_l**尾碼都相同，不同之處在於它們使用傳入的地區設定參數，而不是目前執行緒的地區設定。
 
-不同於**scanf**和**wscanf**， **scanf_s**和**wscanf_s**需要的所有輸入參數的型別指定的緩衝區大小**c**， **C**， **s**， **S**，括住的字串控制項集合或 **[]**。 以字元為單位的緩衝區大小會作為緊接指標的額外參數傳遞至緩衝區或變數。 例如，如果您正在讀取字串，則該字串的緩衝區大小將以下列方式傳遞：
+不同於**scanf**並**wscanf**， **scanf_s**並**wscanf_s**要求到指定的型別所有輸入參數的緩衝區大小**c**， **C**， **s**， **S**，或會括住的字串控制項集合 **[]**。 以字元為單位的緩衝區大小會作為緊接指標的額外參數傳遞至緩衝區或變數。 例如，如果您正在讀取字串，則該字串的緩衝區大小將以下列方式傳遞：
 
 ```C
 char s[10];
@@ -121,9 +111,9 @@ scanf_s("%9s", s, (unsigned)_countof(s)); // buffer size is 10, width specificat
 緩衝區大小包含結束的 null。 您可以使用寬度規格欄位，以確保在讀取的語彙基元可納入緩衝區。 如果沒有使用寬度規格欄位，則讀取的語彙基元太大而無法納入緩衝區中，並且不會寫入該緩衝區。
 
 > [!NOTE]
-> 大小參數的類型是**不帶正負號**，而非**size_t**。 使用靜態轉型轉換**size_t**值設定為**不帶正負號**適用於 64 位元組建組態。
+> 大小參數的類型是**不帶正負號**，而非**size_t**。 使用靜態轉型來轉換**size_t**值**不帶正負號**適用於 64 位元組建組態。
 
-下列範例顯示緩衝區大小參數會描述字元數目上限，而非位元組。 在呼叫**wscanf_s**，由緩衝區類型所表示的字元寬度不符合所指示的格式規範字元寬度。
+下列範例顯示緩衝區大小參數會描述字元數目上限，而非位元組。 在呼叫**wscanf_s**，緩衝區型別所表示的字元寬度不符合所指示的格式規範字元寬度。
 
 ```C
 wchar_t ws[10];
@@ -159,12 +149,12 @@ scanf_s("%4c", &c, (unsigned)_countof(c)); // not null terminated
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**scanf_s**， **_scanf_s_l**|\<stdio.h>|
 |**wscanf_s**， **_wscanf_s_l**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 應用程式中不支援主控台。 在主控台中，與相關聯的標準資料流控制代碼**stdin**， **stdout**，和**stderr**，必須重新導向之後 C 執行階段函式可以在 UWP 應用程式中使用它們,. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台中，相關聯的標準資料流控制代碼**stdin**， **stdout**，並**stderr**，必須重新導向，C 執行階段函式才能使用它們在 UWP 應用程式. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

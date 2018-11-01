@@ -1,25 +1,15 @@
 ---
-title: _variant_t 成員函式 |Microsoft Docs
-ms.custom: ''
+title: _variant_t 成員函式
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - _variant_t class [C++], member functions
 ms.assetid: 3c340097-55c3-4efe-873e-11e8a56f552d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9ddbf5b7f354ed7d18f28290482b9ca2673d639a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 29d2568617d31059b0dd965de97305a9d428a382
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117636"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50535875"
 ---
 # <a name="variantt-member-functions"></a>_variant_t 成員函式
 

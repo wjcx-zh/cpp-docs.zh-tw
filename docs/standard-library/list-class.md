@@ -1,10 +1,6 @@
 ---
-title: list 類別 | Microsoft Docs
-ms.custom: ''
+title: list 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - list/std::list
 - list/std::list::allocator_type
@@ -53,8 +49,6 @@ f1_keywords:
 - list/std::list::splice
 - list/std::list::swap
 - list/std::list::unique
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::list [C++]
 - std::list [C++], allocator_type
@@ -104,16 +98,12 @@ helpviewer_keywords:
 - std::list [C++], swap
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 86e1c74d3aa53dd64a48676e4fe9bdbc2065b9c5
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0f874cc6b9f00f72c4c4b6d15e4503b8b49fbf8a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107468"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481909"
 ---
 # <a name="list-class"></a>list 類別
 
@@ -128,7 +118,7 @@ class list
 
 ### <a name="parameters"></a>參數
 
-*類型*<br/>
+*Type*<br/>
 要存放在清單中的元素資料類型。
 
 *配置器*<br/>
@@ -339,7 +329,7 @@ const_reference back() const;
 
 如果 `back` 的傳回值已指派給 `const_reference`，則無法修改清單物件。 如果 `back` 的傳回值已指派給 `reference`，則可以修改清單物件。
 
-使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空清單中的元素，將會發生執行階段錯誤。  如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
+使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空清單中的元素，將會發生執行階段錯誤。  如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
 ### <a name="example"></a>範例
 
@@ -1071,7 +1061,7 @@ const_reference front() const;
 
 如果 `front` 的傳回值已指派給 `const_reference`，則無法修改清單物件。 如果 `front` 的傳回值已指派給 `reference`，則可以修改清單物件。
 
-使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空清單中的元素，將會發生執行階段錯誤。  如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
+使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空清單中的元素，將會發生執行階段錯誤。  如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
 ### <a name="example"></a>範例
 
@@ -2370,7 +2360,7 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 *Where*<br/>
 目的地清單中的位置 (要在此位置之前插入)。
 
-*Source*<br/>
+*來源*<br/>
 要插入至目的地清單的來源清單。
 
 *Iter*<br/>

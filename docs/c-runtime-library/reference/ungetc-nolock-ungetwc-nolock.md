@@ -1,10 +1,6 @@
 ---
-title: _ungetc_nolock、_ungetwc_nolock | Microsoft Docs
-ms.custom: ''
+title: _ungetc_nolock、_ungetwc_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ungetwc_nolock
 - _ungetc_nolock
@@ -27,8 +23,6 @@ f1_keywords:
 - ungetc_nolock
 - _ungetc_nolock
 - _ungetwc_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ungettc_nolock function
 - _ungetwc_nolock function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 14bd0f51ac01f2e335a5609a0140e30e83977433
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 17fadee825aff7b691db74eaaa7b695ba5a49a42
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409286"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50482858"
 ---
 # <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock、_ungetwc_nolock
 
@@ -76,13 +66,13 @@ wint_t _ungetwc_nolock(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，所有這些函式會傳回字元引數*c*。 如果*c*不能回推入或已讀取的字元，如果輸入資料流不變並 **_ungetc_nolock**傳回 * * EOF`; **_ungetwc_nolock`傳回**WEOF**。 如果*資料流*是**NULL**， **EOF**或**WEOF**傳回和**errno**設**EINVAL**。
+如果成功，所有這些函式都會傳回字元引數*c*。 如果*c*無法回推或如果已經讀取的字元，輸入資料流不變並 **_ungetc_nolock**傳回 * * EOF`; **_ungetwc_nolock`傳回**WEOF**。 如果*資料流*是**NULL**， **EOF**或**WEOF**會傳回與**errno**設**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-這些函式是非鎖定版本**ungetc**和**ungetwc**。 具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
+這些函式為非鎖定版本**ungetc**並**ungetwc**。 具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -92,7 +82,7 @@ wint_t _ungetwc_nolock(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_ungetc_nolock**|\<stdio.h>|
 |**_ungetwc_nolock**|\<stdio.h> 或 \<wchar.h>|

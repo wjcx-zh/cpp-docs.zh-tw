@@ -1,27 +1,17 @@
 ---
-title: '逐步解說: 使用工作和 XML HTTP 要求連線 |Microsoft Docs'
-ms.custom: ''
+title: 逐步解說：使用工作和 XML HTTP 要求連線
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - connecting to web services, UWP apps [C++]
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 074470d7ba7d9fa67e36587e420f4c67e5750ca6
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 69e365c0f0bbee7014b6d754c920bd6241064fdf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50057071"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495546"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>逐步解說：使用工作和 XML HTTP 要求連線
 

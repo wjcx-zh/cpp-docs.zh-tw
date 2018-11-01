@@ -1,10 +1,6 @@
 ---
-title: COleTemplateServer 類別 |Microsoft Docs
-ms.custom: ''
+title: COleTemplateServer 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleTemplateServer
 - AFXDISP/COleTemplateServer
@@ -12,24 +8,18 @@ f1_keywords:
 - AFXDISP/COleTemplateServer::ConnectTemplate
 - AFXDISP/COleTemplateServer::Unregister
 - AFXDISP/COleTemplateServer::UpdateRegistry
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleTemplateServer [MFC], COleTemplateServer
 - COleTemplateServer [MFC], ConnectTemplate
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aef24acf61aae2d6690e5f302822ce52aaa4917a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f66936c597b8c595dc21ae6994d7af0477e8d2aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427156"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528644"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer 類別
 
@@ -177,7 +167,7 @@ void UpdateRegistry(
 
 引數中的資訊*rglpszRegister*並*rglpszOverwrite*透過呼叫登錄寫入[AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass)。 預設資訊，註冊之後，當兩個引數都是 NULL 時，適合大部分的應用程式。 如需這些引數中的資訊結構的資訊，請參閱`AfxOleRegisterServerClass`。
 
-如需詳細資訊，請參閱 <<c0> [ 實作 IDispatch 介面](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
+如需詳細資訊，請參閱 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
 
 ## <a name="see-also"></a>另請參閱
 

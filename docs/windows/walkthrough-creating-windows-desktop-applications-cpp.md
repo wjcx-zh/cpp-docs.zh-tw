@@ -1,27 +1,17 @@
 ---
-title: 逐步解說： 建立傳統 Windows 桌面應用程式 （c + +） |Microsoft Docs
+title: 逐步解說： 建立傳統 Windows 桌面應用程式 （c + +）
 ms.custom: get-started-article
 ms.date: 09/18/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0b50234efa193adda081520667658f57e42de1b4
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: fc2080470e3292a459325679a6c5dc00c01d6b35
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235410"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528372"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>逐步解說： 建立傳統 Windows 桌面應用程式 （c + +）
 
@@ -142,7 +132,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
 
    在此函式中，您可以撰寫程式碼來處理*訊息*接收從 Windows 的應用程式時*事件*發生。 比方說，如果使用者選擇 [確定] 按鈕，在您的應用程式中，Windows 會將訊息傳送給您，而您可以撰寫程式碼內您`WndProc`會執行任何工作適當的函式。 它會呼叫*處理*事件。 您只需要處理您的應用程式相關的事件。
 
-   如需詳細資訊，請參閱 < [Window 程序](https://msdn.microsoft.com/library/windows/desktop/ms632593)。
+   如需詳細資訊，請參閱 [Window 程序](https://msdn.microsoft.com/library/windows/desktop/ms632593)。
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>將功能加入 WinMain 函式中
 
@@ -167,7 +157,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
 
    上述的結構欄位的詳細資訊，請參閱[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)。
 
-1. 註冊`WNDCLASSEX`與 Windows，讓它知道有關您的視窗，以及如何將訊息傳送給它。 使用[RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587)函式，並將視窗類別結構當做引數。 `_T`巨集，因為我們使用`TCHAR`型別。
+1. 註冊`WNDCLASSEX`與 Windows，讓它知道有關您的視窗，以及如何將訊息傳送給它。 請使用 [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) 函式，並將視窗類別結構當做引數傳遞。 `_T`巨集，因為我們使用`TCHAR`型別。
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -181,7 +171,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
    }
    ```
 
-1. 現在您可以建立視窗。 使用[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)函式。
+1. 現在您可以建立視窗。 請使用 [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) 函式。
 
    ```cpp
    static TCHAR szWindowClass[] = _T("DesktopApp");
@@ -219,7 +209,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
    }
    ```
 
-   此函數會傳回`HWND`，這是視窗的控制代碼。 控制代碼會有些許類似 Windows 會使用要追蹤開啟的視窗的指標。 如需詳細資訊，請參閱 < [Windows 資料類型](/windows/desktop/WinProg/windows-data-types)。
+   此函數會傳回`HWND`，這是視窗的控制代碼。 控制代碼會有些許類似 Windows 會使用要追蹤開啟的視窗的指標。 如需詳細資訊，請參閱 [Windows 資料類型](/windows/desktop/WinProg/windows-data-types)。
 
 1. 此時，已建立的視窗，但我們仍需要告知要顯示的 Windows。 這就是此程式碼的:
 
@@ -247,7 +237,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
    return (int) msg.wParam;
    ```
 
-   如需有關的結構和訊息迴圈中的函式的詳細資訊，請參閱[MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)， [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936)， [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)，和[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
+   如需訊息迴圈中之結構和函式的詳細資訊，請參閱 [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)、 [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936)、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)。
 
    此時的 `WinMain` 函式應該類似下列程式碼。
 
@@ -342,7 +332,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
 
    是一個重要的訊息，以處理[WM_PAINT](/windows/desktop/gdi/wm-paint)訊息。 應用程式收到`WM_PAINT`必須更新時顯示的視窗部分的訊息。 當使用者移動程式視窗中，前面的視窗，然後將它移開一次，並不知道您的應用程式，這些事件發生時，就會發生的事件。 只有 Windows 知道，因此它會通知您`WM_PAINT`。 當第一次顯示視窗時，全都必須更新。
 
-   若要處理`WM_PAINT`訊息，第一次呼叫[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint)，然後處理用以配置文字、 按鈕和其他控制項在視窗中，所有邏輯，然後呼叫[EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint)。 應用程式，在開頭呼叫與結尾呼叫之間的邏輯是顯示字串"Hello，Windows desktop"！ 在視窗中顯示 "Hello, World!" 字串。 在下列程式碼中，注意[TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta)函數用來顯示字串。
+   若要處理 `WM_PAINT` 訊息，請先呼叫 [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint)，然後處理用以配置視窗中文字、按鈕和其他控制項的所有邏輯，再呼叫 [EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint)。 應用程式，在開頭呼叫與結尾呼叫之間的邏輯是顯示字串"Hello，Windows desktop"！ 在視窗中顯示 "Hello, World!" 字串。 請注意，下列程式碼使用 [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) 函式來顯示字串。
 
    ```cpp
    PAINTSTRUCT ps;

@@ -1,23 +1,13 @@
 ---
-title: 逐步解說： 編譯 C + + /CX 程式，在命令列 |Microsoft Docs
-ms.custom: ''
+title: 逐步解說：在命令列上編譯 C++/CX 程式
 ms.date: 09/24/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9d9e6fa7cb30a14a3c5914e1cb80e22db118df9e
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 6acfa707ac64a647e838fd1dbcd5564c79faa1a1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821201"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50515137"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>逐步解說：在命令列上編譯 C++/CX 程式
 

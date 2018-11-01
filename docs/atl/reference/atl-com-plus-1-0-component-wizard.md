@@ -1,28 +1,18 @@
 ---
-title: ATL COM + 1.0 元件精靈 |Microsoft Docs
-ms.custom: ''
+title: ATL COM+ 1.0 元件精靈
 ms.date: 10/03/2018
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.mts.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, adding components
 - ATL COM+ 1.0 Component Wizard
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 102ec4f85c8915cf6afb70f03d470cec4e9e807f
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: 227dda9518b67b410f52db8c6efb33bbc2c8f1b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250402"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513772"
 ---
 # <a name="atl-com-10-component-wizard"></a>ATL COM+ 1.0 元件精靈
 
@@ -31,7 +21,7 @@ ms.locfileid: "48250402"
 您可以指定物件是否支援雙重介面和自動化。 您也可以指定錯誤的資訊介面、 增強的物件控制、 交易和非同步的訊息佇列的支援。
 
 > [!WARNING]
-> 在 Visual Studio 2017 版本 15.9 這個程式碼精靈已被取代，並將 Visual Studio 的未來版本中移除。 此精靈很少使用。 ATL 和 MFC 的一般支援不會受到此精靈的移除。 如果您想要分享您對這個已被取代的意見，請完成[這份問卷](https://www.surveymonkey.com/r/QDWKKCN)。 我們重視您的意見反應。
+> 在 Visual Studio 2017 15.9 版中，此程式碼精靈已淘汰，並且將從 Visual Studio 的未來版本中移除。 使用者很少用到這個精靈。 移除此精靈不會影響 ATL 和 MFC 的一般支援。 如果您想要分享關於此項淘汰的意見反應，請填寫[此問卷](https://www.surveymonkey.com/r/QDWKKCN)。 我們非常重視您的意見反應。
 
 ## <a name="remarks"></a>備註
 

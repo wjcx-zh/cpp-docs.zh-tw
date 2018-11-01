@@ -1,29 +1,19 @@
 ---
-title: 新增 ATL 簡單物件 |Microsoft Docs
-ms.custom: ''
+title: 新增 ATL 簡單物件
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.classes.adding.atl
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, adding objects
 - objects [ATL]
 - ATL, simple objects
 ms.assetid: 9c57d2ef-0447-4c84-8982-3304b8e49847
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f757602459c55b7b66e01d9512d9d4cdeb2f3946
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: df835b35bb036086382fc6adb4beed142f99be76
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861040"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50508289"
 ---
 # <a name="adding-an-atl-simple-object"></a>新增 ATL 簡單物件
 
@@ -45,9 +35,9 @@ ms.locfileid: "48861040"
 
 ## <a name="see-also"></a>另請參閱
 
-[加入類別](../../ide/adding-a-class-visual-cpp.md)<br/>
+[新增類別](../../ide/adding-a-class-visual-cpp.md)<br/>
 [在 ATL 專案中新增介面](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)<br/>
 [將連接點新增至物件](../../atl/adding-connection-points-to-an-object.md)<br/>
-[加入方法](../../ide/adding-a-method-visual-cpp.md)<br/>
+[新增方法](../../ide/adding-a-method-visual-cpp.md)<br/>
 [MFC 類別](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [新增泛型 C++ 類別](../../ide/adding-a-generic-cpp-class.md)

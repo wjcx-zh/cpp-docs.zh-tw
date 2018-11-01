@@ -1,26 +1,16 @@
 ---
-title: MFC ActiveX 控制項： 加入自訂屬性 |Microsoft Docs
-ms.custom: ''
+title: MFC ActiveX 控制項：加入自訂屬性
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0070103724385dcb598c20cd15bc29f341628bce
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 2cc9cfa1886c6ba8e714736e0192b56bf3b154f2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50079437"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496417"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX 控制項：加入自訂屬性
 

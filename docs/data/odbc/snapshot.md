@@ -1,12 +1,6 @@
 ---
-title: 快照集 |Microsoft Docs
-ms.custom: ''
+title: 快照
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ODBC cursor library [ODBC], snapshots
 - cursors [ODBC], static
@@ -17,17 +11,12 @@ helpviewer_keywords:
 - cursor library [ODBC], snapshots
 - snapshots
 ms.assetid: b5293a52-0657-43e9-bd71-fe3785b21c7e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 23d4d3fcfac5e5d714d658dfe4161c77377b9361
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 99e1d76f8d65def326b0514f3219cef43f695220
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50064910"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512658"
 ---
 # <a name="snapshot"></a>快照
 

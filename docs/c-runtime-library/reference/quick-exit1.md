@@ -1,11 +1,6 @@
 ---
-title: quick_exit1 | Microsoft Docs
-ms.custom: ''
+title: quick_exit1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - quick_exit
 apilocation:
@@ -25,21 +20,15 @@ f1_keywords:
 - quick_exit
 - process/quick_exit
 - stdlib/quick_exit
-dev_langs:
-- C++
 helpviewer_keywords:
 - quick_exit function
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: de3eb88093db0eea470a0c1d775516574c466ddd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50f1ee72cce04c2bebc8f7396a2b6fad98301dd7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405727"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429011"
 ---
 # <a name="quickexit"></a>quick_exit
 
@@ -60,19 +49,19 @@ __declspec(noreturn) void quick_exit(
 
 ## <a name="return-value"></a>傳回值
 
-**Quick_exit**函式無法傳回其呼叫端。
+**Quick_exit**函式無法傳回至其呼叫端。
 
 ## <a name="remarks"></a>備註
 
-**Quick_exit**函式會導致一般程式終止。 它會呼叫註冊沒有函式**atexit**， **_onexit**或訊號處理常式註冊**訊號**函式。 行為是未定義的如果**quick_exit**會呼叫超過一次，或如果**結束**也稱為函式。
+**Quick_exit**函式會導致正常程式終止。 它會呼叫註冊的任何函式**atexit**， **_onexit**或訊號處理常式註冊**訊號**函式。 行為是未定義的如果**quick_exit**稱為超過一次，或如果**結束**也呼叫函式。
 
-**Quick_exit**函式呼叫，後進先出 (LIFO) 順序、 所註冊的函式中**at_quick_exit**，除了函式註冊時就已呼叫這些函式。  若在呼叫會終止函式呼叫的已註冊函式時定義了 [longjmp](longjmp.md)，則行為未定義。
+**Quick_exit**函式呼叫，在後進先出 (LIFO) 順序、 註冊的函式**at_quick_exit**，但函式註冊時就已呼叫這些函式。  若在呼叫先前已註冊，會終止函數呼叫的函式時呼叫 [longjmp](longjmp.md) ，其行為不確定。
 
-已註冊的函式呼叫之後， **quick_exit**叫用 **_Exit**使用*狀態*將控制權交還給主機環境的值。
+已註冊的函式呼叫之後， **quick_exit**叫用 **_Exit**利用*狀態*將控制權交還給主機環境的值。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**quick_exit**|\<process.h> 或 \<stdlib.h>|
 

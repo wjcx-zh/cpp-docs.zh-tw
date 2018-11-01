@@ -1,26 +1,15 @@
 ---
-title: 對齊控制項群組 |Microsoft Docs
-ms.custom: ''
+title: 對齊控制項群組
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [C++], aligning
 ms.assetid: a4f49a73-4a17-44b3-8568-aa35f646b5cf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c791f2951eb7ac9947d48b563bde624bc3b7979f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2c1f1d53a39d37424fec9ad1782ca96572df9371
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393577"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456767"
 ---
 # <a name="aligning-groups-of-controls"></a>對齊控制項群組
 

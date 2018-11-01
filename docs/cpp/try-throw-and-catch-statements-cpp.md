@@ -1,16 +1,10 @@
 ---
-title: try、 throw 和 catch 陳述式 （c + +） |Microsoft Docs
-ms.custom: ''
+title: try、throw 和 catch 陳述式 (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - catch_cpp
 - try_cpp
 - throw_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - catch keyword [C++]
 - keywords [C++], exception handling
@@ -25,16 +19,12 @@ helpviewer_keywords:
 - throwing exceptions [C++]
 - throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8454df8f8f66264e1e877a1e1504f4266944fa7a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 81d954b2e757c692bd80604a3f85ffb8c79c4f85
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118891"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455727"
 ---
 # <a name="try-throw-and-catch-statements-c"></a>try、throw 和 catch 陳述式 (C++)
 
@@ -51,34 +41,34 @@ A**擲回**運算式表示的例外狀況，通常是錯誤 — 中發生**嘗�
 ## <a name="example"></a>範例
 
 ```cpp
-MyData md;
-try {
-   // Code that could throw an exception
-   md = GetNetworkResource();
+MyData md;
+try {
+   // Code that could throw an exception
+   md = GetNetworkResource();
 }
-catch (const networkIOException& e) {
-   // Code that executes when an exception of type
-   // networkIOException is thrown in the try block
-   // ...
-   // Log error message in the exception object
-   cerr << e.what();
+catch (const networkIOException& e) {
+   // Code that executes when an exception of type
+   // networkIOException is thrown in the try block
+   // ...
+   // Log error message in the exception object
+   cerr << e.what();
 }
-catch (const myDataFormatException& e) {
-   // Code that handles another exception type
-   // ...
-   cerr << e.what();
+catch (const myDataFormatException& e) {
+   // Code that handles another exception type
+   // ...
+   cerr << e.what();
 }
 
 // The following syntax shows a throw expression
-MyData GetNetworkResource()
+MyData GetNetworkResource()
 {
-   // ...
-   if (IOSuccess == false)
-      throw networkIOException("Unable to connect");
-   // ...
-   if (readError)
-      throw myDataFormatException("Format error");
-   // ...
+   // ...
+   if (IOSuccess == false)
+      throw networkIOException("Unable to connect");
+   // ...
+   if (readError)
+      throw myDataFormatException("Format error");
+   // ...
 }
 ```
 
@@ -90,14 +80,14 @@ A**擲回**不含運算元的運算式會重新擲回目前正在處理的例外
 
 ```cpp
 try {
-   throw CSomeOtherException();
+   throw CSomeOtherException();
 }
 catch(...) {
-   // Catch all exceptions - dangerous!!!
-   // Respond (perhaps only partially) to the exception, then
-   // re-throw to pass the exception to some other handler
-   // ...
-   throw;
+   // Catch all exceptions - dangerous!!!
+   // Respond (perhaps only partially) to the exception, then
+   // re-throw to pass the exception to some other handler
+   // ...
+   throw;
 }
 ```
 

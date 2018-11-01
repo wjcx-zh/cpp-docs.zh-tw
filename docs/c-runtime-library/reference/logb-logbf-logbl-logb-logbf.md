@@ -1,10 +1,6 @@
 ---
-title: logb、logbf、logbl、_logb、_logbf | Microsoft Docs
-ms.custom: ''
+title: logb、logbf、logbl、_logb、_logbf
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - logb
 - _logb
@@ -30,8 +26,6 @@ f1_keywords:
 - _logb
 - _logbf
 - logbf
-dev_langs:
-- C++
 helpviewer_keywords:
 - _logbf function
 - mantissas, floating-point variables
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f09a243994112c3ce19d72213391e09ba23c3c4c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9f598eedaf30b1f2a1858129e648a117355d112e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402770"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466283"
 ---
 # <a name="logb-logbf-logbl-logb-logbf"></a>logb、logbf、logbl、_logb、_logbf
 
@@ -92,13 +82,13 @@ float _logbf(
 
 ## <a name="return-value"></a>傳回值
 
-**logb**傳回非偏誤指數值*x*為帶正負號整數，表示為浮點數的值。
+**logb**傳回的非偏誤指數值*x*為帶正負號的整數，表示為浮點數的值。
 
 ## <a name="remarks"></a>備註
 
-**Logb**函式會擷取浮點引數的指數值*x*，如同*x*表示無限的範圍。 如果引數*x*為未標準化，它會被視為已正規化。
+**Logb**函式會擷取浮點引數的指數值*x*，就像*x*以無限範圍表示一樣。 如果引數*x*是反正規化，它會被視為已正規化。
 
-因為 c + + 允許多載，所以您可以呼叫的多載**logb**採用並傳回**float**或**長** **double**值。 在 C 程式中， **logb**一律採用並傳回**double**。
+因為 c + + 允許多載，您可以呼叫多載**logb**採用並傳回**float**或是**長** **double**值。 在 C 程式中， **logb**一律採用並傳回**double**。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
@@ -107,7 +97,7 @@ float _logbf(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_logb**|\<float.h>|
 |**logb**， **logbf**， **logbl**， **_logbf**|\<math.h>|

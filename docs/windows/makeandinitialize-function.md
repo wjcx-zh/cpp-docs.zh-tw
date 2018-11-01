@@ -1,26 +1,16 @@
 ---
-title: MakeAndInitialize 函式 |Microsoft Docs
-ms.custom: ''
+title: MakeAndInitialize 函式
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::MakeAndInitialize
-dev_langs:
-- C++
 ms.assetid: 71ceeb12-d2a2-4317-b010-3dcde1b39467
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 54cb237a4dac09b26018cef92b4c5980c3de5061
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 61c923675aa7b5653aacb9ba2c51dec6105498a4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50061679"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50448616"
 ---
 # <a name="makeandinitialize-function"></a>MakeAndInitialize 函式
 

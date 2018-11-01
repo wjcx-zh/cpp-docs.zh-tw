@@ -1,30 +1,20 @@
 ---
-title: 建立 Web 瀏覽器樣式的 MFC 應用程式 |Microsoft Docs
-ms.custom: ''
+title: 建立 Web 瀏覽器樣式的 MFC 應用程式
 ms.date: 06/25/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcweb.project
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, Web applications
 - Web browsers, creating from MFC architecture
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 89ac9f6b17636d6c0b8a4326df2b49d8e6785383
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 1fd61b3e6bcb2f429c43edcabb41e166bcec95c6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50078865"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466153"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>建立 Web 瀏覽器樣式的 MFC 應用程式
 

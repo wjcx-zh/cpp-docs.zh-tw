@@ -1,10 +1,6 @@
 ---
-title: _ecvt_s | Microsoft Docs
-ms.custom: ''
+title: _ecvt_s
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ecvt_s
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - ecvt_s
 - _ecvt_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ecvt_s function
 - ecvt_s function
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 623d12bb515794a1d57b5a18e0e93e70d50a6812
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0123c618eb5ba614bd8e5b5b3f1f4b0aff539c4c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404356"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435577"
 ---
 # <a name="ecvts"></a>_ecvt_s
 
@@ -84,37 +74,37 @@ errno_t _ecvt_s(
 *_Dec*<br/>
 儲存的小數點位置。
 
-*_Sign*<br/>
+*登 （_s)*<br/>
 已轉換數字的正負號。
 
 ## <a name="return-value"></a>傳回值
 
 如果成功，則為零。 如果失敗，傳回的值會是錯誤碼。 錯誤碼於 Errno.h 中定義。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-如果是下表所列的無效參數，則此函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**至**EINVAL**並傳回**EINVAL**。
+如果是下表所列的無效參數，則此函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**要**EINVAL** ，並傳回**EINVAL**。
 
 ### <a name="error-conditions"></a>錯誤狀況
 
 |*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|傳回值|中的值*緩衝區*|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
-|**NULL**|任何|任何|任何|任何|任何|**EINVAL**|未修改。|
-|不**NULL** （指向有效的記憶體）|<=0|任何|任何|任何|任何|**EINVAL**|未修改。|
-|任何|任何|任何|任何|**NULL**|任何|**EINVAL**|未修改。|
-|任何|任何|任何|任何|任何|**NULL**|**EINVAL**|未修改。|
+|**NULL**|any|any|any|any|any|**EINVAL**|未修改。|
+|不**NULL** （指向有效的記憶體）|<=0|any|any|any|any|**EINVAL**|未修改。|
+|any|any|any|any|**NULL**|any|**EINVAL**|未修改。|
+|any|any|any|any|any|**NULL**|**EINVAL**|未修改。|
 
 ## <a name="security-issues"></a>安全性問題
 
-**_ecvt_s**可能會產生存取違規，如果*緩衝區*並未指向有效的記憶體，而且不是**NULL**。
+**_ecvt_s**可能會產生存取違規，如果*緩衝區*不是指向有效的記憶體，而且不**NULL**。
 
 ## <a name="remarks"></a>備註
 
-**_Ecvt_s**函式會將浮點數轉換為字元字串。 *_Value*參數是要轉換的浮點數。 此函式會儲存最多*計數*位數 *_Value*做為字串，並將 null 字元 ('\0')。 如果數字位數中 *_Value*超過 *_Count*，低序位字會捨入。 如果有少於*計數*以零填補數字的字串。
+**_Ecvt_s**函式會將浮點數轉換為字元字串。 *_Value*參數是要轉換的浮點數。 此函式會儲存最多*計數*位數 *_Value*做為字串和結尾處附加 null 字元 ('\0')。 如果在中的位數 *_Value*超過 *_Count*，低位數四捨五入。 如果少於*計數*以零填補數字的字串。
 
-字串中只能儲存數字。 小數點和的正負號的位置 *_Value*可以取自 *_Dec*和 *_Sign*呼叫之後。 *_Dec*參數會指向提供字串的開頭與小數點的位置的整數值。 0 或負整數值表示小數點位於第一位數字的左邊。 *_Sign*參數指向表示已轉換的數字的正負號的整數。 如果整數值為 0，則數字為正數。 否則，數字為負數。
+字串中只能儲存數字。 小數點和的正負號的位置 *_Value*可以取自 *_Dec*並*登 （_s)* 之後呼叫。 *_Dec*參數指向整數值，並提供字串的開頭小數點的位置。 0 或負整數值表示小數點位於第一位數字的左邊。 *登 （_s)* 參數指向表示已轉換的數字的正負號的整數。 如果整數值為 0，則數字為正數。 否則，數字為負數。
 
-長度的緩衝區 **_CVTBUFSIZE**就足以應付任何浮點值。
+長度的緩衝區 **_CVTBUFSIZE**就已足夠供任何浮點值。
 
-之間的差異 **_ecvt_s**和 **_fcvt_s**中的解譯 *_Count*參數。 **_ecvt_s**解譯 *_Count*做為輸出字串中的位數總數而 **_fcvt_s**解譯 *_Count*之後位數的數目小數點。
+之間的差異 **_ecvt_s**並 **_fcvt_s**中的解譯 *_Count*參數。 **_ecvt_s**解譯 *_Count*做為輸出字串中的位數總數而 **_fcvt_s**解譯 *_Count*後的位數數字小數點。
 
 在 C++ 中，這個函式的使用已由範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

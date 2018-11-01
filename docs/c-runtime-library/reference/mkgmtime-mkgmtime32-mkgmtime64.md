@@ -1,10 +1,6 @@
 ---
-title: _mkgmtime、_mkgmtime32、_mkgmtime64 | Microsoft Docs
-ms.custom: ''
+title: _mkgmtime、_mkgmtime32、_mkgmtime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mkgmtime32
 - _mkgmtime64
@@ -29,8 +25,6 @@ f1_keywords:
 - mkgmtime
 - mkgmtime64
 - _mkgmtime
-dev_langs:
-- C++
 helpviewer_keywords:
 - mkgmtime32 function
 - time functions
@@ -42,20 +36,16 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bcb587cf5504f661512ccf88cf4f15d0555e2f18
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 65d96d79a45e05e4b371315c0612ed086f6ea2a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405136"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452256"
 ---
 # <a name="mkgmtime-mkgmtime32-mkgmtime64"></a>_mkgmtime、_mkgmtime32、_mkgmtime64
 
-將所代表的 UTC 時間轉換**結構** **tm**為 UTC 時間由**time_t**型別。
+將所表示的 UTC 時間轉換**struct** **tm**所表示的 UTC 時間**time_t**型別。
 
 ## <a name="syntax"></a>語法
 
@@ -74,19 +64,19 @@ __time64_t _mkgmtime64(
 ### <a name="parameters"></a>參數
 
 *timeptr*<br/>
-UTC 時間，做為指標**結構** **tm**轉換。
+UTC 時間的指標**struct** **tm**轉換。
 
 ## <a name="return-value"></a>傳回值
 
-類型數量 **__time32_t**或 **__time64_t**午夜 1970 年 1 月 1 日，以國際標準時間 (UTC) 起代表秒數過。 如果日期超出範圍 （請參閱 < 備註 > 一節） 或輸入無法解譯為有效的時間，傳回的值為-1。
+類型的數量 **__time32_t**或是 **__time64_t**自 1970 年 1 月 1 日，以 Coordinated Universal Time (UTC) 午夜後經過的表示的秒數。 如果日期超出範圍 （請參閱 < 備註 > 一節） 或輸入無法解譯為有效的時間，傳回的值為-1。
 
 ## <a name="remarks"></a>備註
 
-**_Mkgmtime32**和 **_mkgmtime64**函數會將轉換為 UTC 時間，以 **__time32_t**或 **__time64_t**代表的時間，以型別UTC。 若要將本地時間轉換為 UTC 時間，使用**mktime**， **_mktime32**，和 **_mktime64**改為。
+**_Mkgmtime32**並 **_mkgmtime64**函式轉換 UTC 時間 **__time32_t**或 **__time64_t**代表時間型別UTC。 若要將當地時間轉換為 UTC 時間，使用**mktime**， **_mktime32**，並 **_mktime64**改。
 
-**_mkgmtime**是內嵌函式評估為 **_mkgmtime64**，和**time_t**相當於 **__time64_t**。 如果您要強制編譯器將解譯**time_t**為舊的 32 位元**time_t**，您可以定義 **_USE_32BIT_TIME_T**。 建議您不要因為您的應用程式可能會在 2038 年 1 月 18 日之後失敗 (32 位元的最大範圍**time_t**)，且不允許完全在 64 位元平台上。
+**_mkgmtime**是評估為內嵌函數 **_mkgmtime64**，以及**time_t**相當於 **__time64_t**。 如果您要強制編譯器將解譯**time_t**為舊的 32 位元**time_t**，您可以定義 **_USE_32BIT_TIME_T**。 這因為您的應用程式可能會在 2038 年 1 月 18 日之後失敗，所以不建議使用 (32 位元的最大範圍**time_t**)，且不允許完全在 64 位元平台上。
 
-傳遞結構的時間將會變更，如下所示，相同的方式會變更與 **_mktime**函式： **tm_wday**和**tm_yday**新欄位同時設定為值依據的值**tm_mday**和**tm_year**。 當指定**tm**結構時間時，請設定**tm_isdst**欄位設為：
+結構傳入的時間將會變更，如下所示，在相同的方式如有變更與 **_mktime**函式： **tm_wday**並**tm_yday**新欄位設定為值的值計算**tm_mday**並**tm_year**。 指定時**tm**結構的時間，設定**tm_isdst**欄位設為：
 
 - 零 (0)，以指出標準時間已生效。
 
@@ -94,11 +84,11 @@ UTC 時間，做為指標**結構** **tm**轉換。
 
 - 小於 0 的值，使 C 執行階段程式庫程式碼計算標準時間或日光節約時間是否生效。
 
-C 執行階段程式庫使用 TZ 環境變數來判斷正確的日光節約時間。 如果未設定 TZ，則會查詢作業系統以取得正確的地區日光節約時間行為。 **tm_isdst**是必要的欄位。 如果未設定，未定義其值和傳回值，從**mktime**無法預測。
+C 執行階段程式庫使用 TZ 環境變數來判斷正確的日光節約時間。 如果未設定 TZ，則會查詢作業系統以取得正確的地區日光節約時間行為。 **tm_isdst**  是必要的欄位。 如果未設定，其值為未定義和傳回值**mktime**無法預期。
 
-範圍 **_mkgmtime32**函式是從 1970 年 1 月 1 日午夜 UTC 到 23:59:59 2038 年 1 月 18 日，UTC。 範圍 **_mkgmtime64**是從 1970 年 1 月 1 日午夜 UTC 到 23:59:59，3000 年 12 月 31 日 UTC。 傳回值-1 會產生超出範圍的日期。 範圍 **_mkgmtime**取決於是否 **_USE_32BIT_TIME_T**定義。 如果未定義 （預設值） 的範圍是屬於 **_mkgmtime64**; 否則範圍僅限於的 32 位元範圍 **_mkgmtime32**。
+範圍 **_mkgmtime32**函式是從 1970 年 1 月 1 日午夜 UTC 到 23:59:59 2038 年 1 月 18 日 UTC。 範圍 **_mkgmtime64**是從 1970 年 1 月 1 日午夜 UTC 到 23:59:59，3000 年 12 月 31 日 UTC。 範圍外的日期會導致傳回值為-1。 範圍 **_mkgmtime**取決於是否 **_USE_32BIT_TIME_T**定義。 如果未定義 （預設值） 的範圍是屬於 **_mkgmtime64**; 否則範圍會限制為 32 位元範圍 **_mkgmtime32**。
 
-請注意， **gmtime**和**localtime**使用單一靜態配置的緩衝區來進行轉換。 如果您提供此緩衝區**mkgmtime**，先前的內容將被終結。
+請注意， **gmtime**並**localtime**使用單一靜態配置的緩衝區來進行轉換。 如果您提供此緩衝區**mkgmtime**，先前的內容會遭到銷毀。
 
 ## <a name="example"></a>範例
 

@@ -1,10 +1,6 @@
 ---
-title: _heapwalk | Microsoft Docs
-ms.custom: ''
+title: _heapwalk
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _heapwalk
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - heapwalk
 - _heapwalk
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - heapwalk function
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d98260ce281bc8773f597dae5897afe4beee0bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc2a49d9032746cc6c82c9dc401fc96baabbe2e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403397"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454895"
 ---
 # <a name="heapwalk"></a>_heapwalk
 
@@ -61,22 +51,22 @@ int _heapwalk( _HEAPINFO *entryinfo );
 
 ## <a name="return-value"></a>傳回值
 
-**_heapwalk**傳回下列整數資訊清單常數在 Malloc.h 中定義的其中一個。
+**_heapwalk**會傳回在 Malloc.h 中定義下列整數資訊清單常數之一。
 
 |傳回值|意義|
 |-|-|
 |**_HEAPBADBEGIN**| 找不到初始標頭資訊或其無效。|
 |**_HEAPBADNODE**| 堆積已損毀或找到故障的節點。|
-|**_HEAPBADPTR**| **_Pentry**欄位 **_HEAPINFO**堆積結構未包含有效的指標或*entryinfo*為 null 指標。|
+|**_HEAPBADPTR**| **_Heapinfo**欄位 **_HEAPINFO**堆積結構不包含有效的指標或*entryinfo*為 null 指標。|
 |**_HEAPEND**| 已成功達到堆積的結尾。|
 |**_HEAPEMPTY**| 堆積未初始化。|
-|**_HEAPOK**| 沒有錯誤為止。*entryinfo*更新下一個堆積項目相關資訊。|
+|**_HEAPOK**| 到目前為止，沒有錯誤*entryinfo*會更新下一個堆積項目的相關資訊。|
 
-此外，如果發生錯誤， **_heapwalk**設定**errno**至**ENOSYS**。
+此外，如果發生錯誤時， **_heapwalk**設定**errno**來**ENOSYS**。
 
 ## <a name="remarks"></a>備註
 
-**_Heapwalk**函式可協助偵錯堆積相關的問題，在程式中。 函式逐步解說堆積，周遊呼叫，每一個項目，並傳回類型的結構指標 **_HEAPINFO** ，其中包含下一個堆積項目的相關資訊。 **_HEAPINFO** Malloc.h 中, 所定義的類型包含下列項目。
+**_Heapwalk**函式可協助偵錯程式中的堆積相關問題。 函式查核堆積，周遊一個項目，每一呼叫和傳回類型的結構的指標 **_HEAPINFO** ，其中包含下一個堆積項目的相關資訊。 **_HEAPINFO** Malloc.h 中定義的類型包含下列項目。
 
 |欄位|意義|
 |-|-|
@@ -84,13 +74,13 @@ int _heapwalk( _HEAPINFO *entryinfo );
 |`size_t _size`|堆積項目大小。|
 |`int _useflag`|表示堆積項目是否為使用中的旗標。|
 
-呼叫 **_heapwalk**傳回 **_HEAPOK**儲存中的項目大小 **_size**欄位並設定 **_useflag**欄位設為 **_FREEENTRY**或 **_USEDENTRY** （兩者都是在 Malloc.h 中定義的常數）。 若要取得此堆積中的第一個項目相關資訊，請傳遞 **_heapwalk**指標 **_HEAPINFO**結構其 **_pentry**成員是**NULL**. 如果作業系統不支援 **_heapwalk**（例如 Windows 98），則函數會傳回 **_HEAPEND**並設定**errno**至**ENOSYS**.
+呼叫 **_heapwalk**會傳回 **_HEAPOK**存放區中的項目大小**大小) (_s**欄位和集 **_heapinfo**欄位設為其中一個 **_FREEENTRY**或是 **_USEDENTRY** （兩者都是 Malloc.h 中定義的常數）。 若要取得此堆積中的第一個項目相關資訊，請傳遞 **_heapwalk**指標 **_HEAPINFO**結構，其 **_heapinfo**成員是**NULL**. 如果作業系統不支援 **_heapwalk**（例如 Windows 98），則函數會傳回 **_HEAPEND**並設定**errno**至**ENOSYS**.
 
-這個函式會驗證其參數。 如果*entryinfo*為 null 指標，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL**並傳回函式 **_HEAPBADPTR**。
+這個函式會驗證其參數。 如果*entryinfo*為 null 指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為**EINVAL**和函式會傳回 **_HEAPBADPTR**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|---------------------|
 |**_heapwalk**|\<malloc.h>|\<errno.h>|
 

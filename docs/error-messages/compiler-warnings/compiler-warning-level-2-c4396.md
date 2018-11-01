@@ -1,33 +1,23 @@
 ---
-title: 編譯器警告 （層級 2） C4396 |Microsoft Docs
-ms.custom: ''
+title: 編譯器警告 (層級 2) C4396
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4396
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4396
 ms.assetid: 7cd6b283-db17-4574-b299-03e0b913ad70
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fa0a084e90db9d48f517bfe65c6340eb532f0ae6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 84045ea2c285be8b1c1c9d1fd62b417db00dd29c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118566"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445314"
 ---
 # <a name="compiler-warning-level-2-c4396"></a>編譯器警告 (層級 2) C4396
 
 'name' : 當 Friend 宣告參考函式樣板的特製化時，不能使用內嵌規範
 
-函式樣板的特製化不能指定任何[內嵌](../../cpp/inline-functions-cpp.md)規範。 編譯器會發出警告 C4396 並忽略內嵌規範。
+函式樣板的特製化不能指定任何 [內嵌](../../cpp/inline-functions-cpp.md) 規範。 編譯器會發出警告 C4396 並忽略內嵌規範。
 
 ### <a name="to-correct-this-error"></a>更正這個錯誤
 

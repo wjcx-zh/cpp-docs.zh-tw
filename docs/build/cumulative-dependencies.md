@@ -1,27 +1,17 @@
 ---
-title: 累計相依性 |Microsoft Docs
-ms.custom: ''
+title: 累計相依性
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - dependencies, cumulative
 - cumulative dependencies in NMAKE
 - dependencies
 ms.assetid: fa6dd777-80b8-437d-87a7-aec0ed818a49
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5a66b153a52da06cca14845b9a58fcef0f42676d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c31740b830993c91568aea6d167fd3113b04fc57
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725708"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50460277"
 ---
 # <a name="cumulative-dependencies"></a>累計相依性
 

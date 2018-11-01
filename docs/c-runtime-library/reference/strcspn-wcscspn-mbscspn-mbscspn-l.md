@@ -1,10 +1,6 @@
 ---
-title: strcspn、wcscspn、_mbscspn、_mbscspn_l | Microsoft Docs
-ms.custom: ''
+title: strcspn、wcscspn、_mbscspn、_mbscspn_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbscspn_l
 - wcscspn
@@ -30,8 +26,6 @@ f1_keywords:
 - wcscspn
 - _ftcscspn
 - _tcscspn
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], searching
 - ftcscspn function
@@ -45,23 +39,19 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e282aa9d796f06e2682278e08dfae4f24b7a65c4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bcb1699f9a3f3c4d9e5ee040fdcb2e999397ac30
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415170"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446445"
 ---
 # <a name="strcspn-wcscspn-mbscspn-mbscspnl"></a>strcspn、wcscspn、_mbscspn、_mbscspn_l
 
 傳回字串中屬於字元集之第一個出現的字元索引。
 
 > [!IMPORTANT]
-> **_mbschr**和 **_mbschr_l**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbschr**並 **_mbschr_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -98,15 +88,15 @@ size_t _mbscspn_l(
 
 ## <a name="return-value"></a>傳回值
 
-這些函式傳回的第一個字元的索引*str*位於*strCharSet*。 如果沒有任何字元在*str*處於*strCharSet*，則傳回值是長度*str*。
+這些函式傳回的第一個字元的索引*str*位於*strCharSet*。 如果沒有在字元*str*處於*strCharSet*，則傳回的值是長度*str*。
 
 未保留表示錯誤的傳回值。
 
 ## <a name="remarks"></a>備註
 
-**wcscspn**和 **_mbscspn**是寬字元和多位元組字元版本的**strcspn**。 引數**wcscspn**是寬字元字串; **_mbscspn**是多位元組字元字串。
+**wcscspn**並 **_mbscspn**是寬字元和多位元組字元版本的**strcspn**。 引數**wcscspn**是寬字元字串; **_mbscspn**是多位元組字元字串。
 
-**_mbscspn**會驗證其參數。 如果有任一個*str*或*strCharSet*為 null 指標，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，函數會傳回 0 和集合允許執行**errno**至**EINVAL**。 **strcspn**和**wcscspn**不會驗證它們的參數。 除此之外，這三個函式的行為相同。
+**_mbscspn**會驗證其參數。 如果有任一*str*或是*strCharSet*為 null 指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，則函式會傳回 0 並集允許執行**errno**要**EINVAL**。 **strcspn**並**wcscspn**不會驗證其參數。 除此之外，這三個函式的行為相同。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
@@ -119,7 +109,7 @@ size_t _mbscspn_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**strcspn**|\<string.h>|
 |**wcscspn**|\<string.h> 或 \<wchar.h>|

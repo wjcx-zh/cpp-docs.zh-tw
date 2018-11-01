@@ -1,11 +1,6 @@
 ---
-title: log2、log2f、log2l | Microsoft Docs
-ms.custom: ''
+title: log2、log2f、log2l
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - log2
 - log2l
@@ -23,19 +18,13 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
-dev_langs:
-- C++
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 16fb56b1a3aef56e201d469974c5de434a08aa41
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f1db48abdc7237dc46a0ea8a3ea5647a0fce62f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399523"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579305"
 ---
 # <a name="log2-log2f-log2l"></a>log2、log2f、log2l
 
@@ -73,7 +62,7 @@ long double log2l(
 
 ## <a name="return-value"></a>傳回值
 
-成功時，會傳回 log2 *x*。
+如果成功，則傳回 log2 *x*。
 
 否則，可能會傳回下列其中一個值：
 
@@ -91,7 +80,7 @@ long double log2l(
 
 ## <a name="remarks"></a>備註
 
-如果 x 是整數，這個函式基本上會傳回的最重要的 1 位元的以零為起始的索引*x*。
+如果 x 是整數，這個函式基本上會傳回最大顯著性的 1 位元的以零為起始的索引*x*。
 
 ## <a name="requirements"></a>需求
 

@@ -1,10 +1,6 @@
 ---
-title: _mbsnbcoll、_mbsnbcoll_l、_mbsnbicoll、_mbsnbicoll_l | Microsoft Docs
-ms.custom: ''
+title: _mbsnbcoll、_mbsnbcoll_l、_mbsnbicoll、_mbsnbicoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbicoll_l
 - _mbsnbcoll_l
@@ -32,8 +28,6 @@ f1_keywords:
 - _ftcsnicoll
 - _ftcsncoll
 - mbsnbcoll_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbsnbcoll_l function
 - mbsnbcoll_l function
@@ -48,23 +42,19 @@ helpviewer_keywords:
 - tcsncoll function
 - tcsnicoll function
 ms.assetid: d139ed63-ccba-4458-baa2-61cbcef03e94
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 19e17552a674d4931134eb9d7b436a0f858843d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c18faa3c93969a683b3ee3ef58dd02e1c1ae61f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405389"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665191"
 ---
 # <a name="mbsnbcoll-mbsnbcolll-mbsnbicoll-mbsnbicolll"></a>_mbsnbcoll、_mbsnbcoll_l、_mbsnbicoll、_mbsnbicoll_l
 
-比較*n*位元組的兩個多位元組字元字串，使用多位元組字碼頁資訊。
+比較*n*個位元組的兩個多位元組字元字串，藉由使用多位元組字碼頁資訊。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -106,7 +96,7 @@ int _mbsnbicoll_l(
 
 ## <a name="return-value"></a>傳回值
 
-傳回值會指出子字串的關聯性*string1*和*string2*。
+傳回值，表示子字串的關聯*string1*並*string2*。
 
 |傳回值|描述|
 |------------------|-----------------|
@@ -114,15 +104,15 @@ int _mbsnbicoll_l(
 |0|*string1*子字串等於*string2*子字串。|
 |> 0|*string1*子字串大於*string2*子字串。|
 
-如果*string1*或*string2*是**NULL**或*計數*大於**INT_MAX**，無效參數叫用處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函數會傳回 **_NLSCMPERROR**並設定**errno**至**EINVAL**。 若要使用 **_NLSCMPERROR**，包括 String.h 或 Mbstring.h。
+如果*string1*或是*string2*是**NULL**或是*計數*大於**INT_MAX**，無效參數叫用處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則這些函式會傳回 **_NLSCMPERROR**並設定**errno**來**EINVAL**。 若要使用 **_NLSCMPERROR**，包括 String.h 或 Mbstring.h。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式自動分頁，最多第一個*計數*位元組*string1*和*string2*和傳回值，指出產生之間的關聯性子字串的*string1*和*string2*。 如果中的子字串的最後一個位元組*string1*或*string2*是前導位元組，它將不會包含在比較中，這些函式比較之子字串只有完整的字元。 **_mbsnbicoll**是不區分大小寫版本的 **_mbsnbcoll**。 像[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)和[_mbsnbicmp](mbsnbicmp-mbsnbicmp-l.md)， **_mbsnbcoll**和 **_mbsnbicoll** collate 根據兩個的多位元組字元字串多位元組所指定的字典編撰順序[字碼頁](../../c-runtime-library/code-pages.md)目前使用中。
+所有這些函式會對照最多會第一個*計數*中的位元組*string1*並*string2*和傳回值，指出產生之間的關聯性子字串*string1*並*string2*。 如果中的子字串的最後一個位元組*string1*或是*string2*是前導位元組，它將不會包含在比較中，這些函式會比較只有完整字元之子字串。 **_mbsnbicoll**是不區分大小寫版本 **_mbsnbcoll**。 像是[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)並[_mbsnbicmp](mbsnbicmp-mbsnbicmp-l.md)， **_mbsnbcoll**並 **_mbsnbicoll**比較兩個的多位元組字元字串，根據多位元組所指定的詞典編纂順序[字碼頁](../../c-runtime-library/code-pages.md)目前使用中。
 
-針對某些字碼頁和對應的字元集，字元集中的字元順序可能與詞典編纂的字元順序不同。 在 "C" 地區設定中則不然：ASCII 字元集中的字元順序會與詞典編纂的字元順序相同。 不過，某些歐洲字碼頁中的字元順序卻不同，例如，字元 'a' (值 0x61) 在字元集中排在字元 'ä' (值 0xE4) 之前，但在詞典編纂上，字元 'a' 卻排在字元 'ä' 之後。 若要執行這類執行個體中的位元組字串的詞典編纂比較，請使用 **_mbsnbcoll**而 **_mbsnbcmp**; 若要只會檢查字串是否相等，請使用 **_mbsnbcmp**.
+針對某些字碼頁和對應的字元集，字元集中的字元順序可能與詞典編纂的字元順序不同。 在 "C" 地區設定中則不然：ASCII 字元集中的字元順序會與詞典編纂的字元順序相同。 不過，某些歐洲字碼頁中的字元順序卻不同，例如，字元 'a' (值 0x61) 在字元集中排在字元 'ä' (值 0xE4) 之前，但在詞典編纂上，字元 'a' 卻排在字元 'ä' 之後。 若要執行這類執行個體中的位元組字串的詞典編纂比較，請使用 **_mbsnbcoll**而非 **_mbsnbcmp**; 若只要檢查字串是否相等，請使用 **_mbsnbcmp**.
 
-因為**coll**函式自動分頁字串以辭典編纂順序進行比較，而**cmp**函式只會測試字串是否相等， **coll**函式對應比慢很多**cmp**版本。 因此， **coll**沒有目前的字碼頁字元集順序與詞典編纂字元順序之間的差異，且比較感興趣的這項差異時，才應該使用函式。
+因為**coll**函式會比較字串以辭典編纂順序進行比較，而**cmp**函式只會測試字串是否相等，如**coll**函式速度也比不上對應**cmp**版本。 因此， **coll**只時沒有目前的字碼頁中字元集順序與詞典編纂字元順序之間差異以及這項差異值得注意的比較時，才應該使用的函式。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
@@ -137,7 +127,7 @@ int _mbsnbicoll_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_mbsnbcoll**|\<mbstring.h>|
 |**_mbsnbcoll_l**|\<mbstring.h>|

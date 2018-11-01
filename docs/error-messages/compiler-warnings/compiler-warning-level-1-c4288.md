@@ -1,27 +1,17 @@
 ---
-title: 編譯器警告 （層級 1） C4288 |Microsoft Docs
-ms.custom: ''
+title: 編譯器警告 (層級 1) C4288
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4288
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4288
 ms.assetid: 6aaeb139-90cd-457a-9d37-65687042736f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b8b9e82f8cb24c4635fb64c3ac0a1c82e301c086
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d8769f5663ca0bde9048e52d4579012dfccab0a1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056480"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532024"
 ---
 # <a name="compiler-warning-level-1-c4288"></a>編譯器警告 (層級 1) C4288
 

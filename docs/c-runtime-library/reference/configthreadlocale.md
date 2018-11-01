@@ -1,10 +1,6 @@
 ---
-title: _configthreadlocale | Microsoft Docs
-ms.custom: ''
+title: _configthreadlocale
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _configthreadlocale
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _configthreadlocale
 - configthreadlocale
-dev_langs:
-- C++
 helpviewer_keywords:
 - configthreadlocale function
 - locales, per-thread
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7531a5849bc1e86d469a12747b5c4648b76c9117
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 244ef9ce93e39bef23a9d5d6792a10ca25355f5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395773"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648379"
 ---
 # <a name="configthreadlocale"></a>_configthreadlocale
 
@@ -60,27 +50,27 @@ int _configthreadlocale( int per_thread_locale_type );
 
 ## <a name="return-value"></a>傳回值
 
-先前的個別執行緒地區設定狀態 (**_DISABLE_PER_THREAD_LOCALE**或 **_ENABLE_PER_THREAD_LOCALE**)，則為-1 失敗。
+先前的個別執行緒地區設定狀態 (**_DISABLE_PER_THREAD_LOCALE**或是 **_ENABLE_PER_THREAD_LOCALE**)，則為-1 失敗。
 
 ## <a name="remarks"></a>備註
 
-**_Configurethreadlocale**函數用來控制使用的執行緒特定地區設定。 使用下列其中一種*per_thread_locale_type*選項來指定，或判斷每個執行緒的地區設定狀態：
+**_Configurethreadlocale**函數用來控制使用的執行緒特定地區設定。 使用其中一種*per_thread_locale_type*選項來指定或判斷個別執行緒地區設定狀態：
 
 |||
 |-|-|
-**_ENABLE_PER_THREAD_LOCALE**|讓目前執行緒使用執行緒特定地區設定。 後續呼叫**setlocale**在這個執行緒會影響執行緒的地區設定。
-**_DISABLE_PER_THREAD_LOCALE**|讓目前執行緒使用全域地區設定。 後續呼叫**setlocale**在這個執行緒會影響其他使用全域地區設定的執行緒。
+**_ENABLE_PER_THREAD_LOCALE**|讓目前執行緒使用執行緒特定地區設定。 後續呼叫**setlocale**此執行緒中會影響執行緒自己的地區設定。
+**_DISABLE_PER_THREAD_LOCALE**|讓目前執行緒使用全域地區設定。 後續呼叫**setlocale**此執行緒中會影響其他執行緒使用全域地區設定。
 **0**|擷取這個特定執行緒的目前設定。
 
-這些函式會影響行為的**setlocale**， **_tsetlocale**， **_wsetlocale**，和 **_setmbcp**。 當每個執行緒的地區設定是已停用，任何後續呼叫**setlocale**或 **_wsetlocale**變更使用全域地區設定的所有執行緒的地區設定。 啟用個別執行緒地區設定時， **setlocale**或 **_wsetlocale**只會影響目前的執行緒地區設定。
+這些函式會影響行為**setlocale**， **_tsetlocale**， **_wsetlocale**，以及 **_setmbcp**。 每個執行緒的地區設定時已停用，任何後續呼叫**setlocale**或是 **_wsetlocale**變更使用全域地區設定的所有執行緒的地區設定。 啟用個別執行緒地區設定時， **setlocale**或是 **_wsetlocale**只會影響目前的執行緒地區設定。
 
-如果您使用 **_configurethreadlocale**若要啟用個別執行緒地區設定，我們建議您呼叫**setlocale**或 **_wsetlocale**慣用的地區設定中的執行緒立即之後。
+如果您使用 **_configurethreadlocale**若要啟用個別執行緒地區設定，我們建議您呼叫**setlocale**或是 **_wsetlocale**在該執行緒中設定慣用的地區設定緊接著。
 
-如果*per_thread_locale_type*不是其中一個值列於表格中，此函式會叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**至**EINVAL**並傳回-1。
+如果*per_thread_locale_type*不是其中一個值表所述，此函式會叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**要**EINVAL**並傳回-1。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_configthreadlocale**|\<locale.h>|
 

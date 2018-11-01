@@ -1,28 +1,18 @@
 ---
-title: -來源-字元集 （設定來源字元集） |Microsoft Docs
-ms.custom: ''
+title: /source-charset （設定來源字元集）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - source-charset
 - /source-charset
-dev_langs:
-- C++
 helpviewer_keywords:
 - /execution-charset compiler option
 ms.assetid: d3c5bf7f-526d-4ee4-acc5-c1a02a4fc481
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 14c8d40f508096822a741bac65f4d553a6804120
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 6927c6e54a89f619182916c561dcbe7d1c92a25b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029641"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663823"
 ---
 # <a name="source-charset-set-source-character-set"></a>/source-charset （設定來源字元集）
 

@@ -1,28 +1,18 @@
 ---
-title: C/c + + 建置參考 |Microsoft Docs
-ms.custom: ''
+title: C/C++ 建置參考
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - compiling source code [C++], additional information
 - cl.exe compiler [C++], building programs
 - linker [C++], building reference
 - builds [C++], additional information
 ms.assetid: 100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5935c0642ba0cd69992c68c521d284c3e8733ce4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 36f261ee993932d1a08d5cdb02e2d4681ae60f0c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390028"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481727"
 ---
 # <a name="cc-building-reference"></a>C/C++ 建置參考
 

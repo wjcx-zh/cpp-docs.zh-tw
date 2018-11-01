@@ -1,12 +1,6 @@
 ---
-title: C++ 標準程式庫標頭檔 | Microsoft Docs
-ms.custom: ''
+title: C++ 標準程式庫標頭檔
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - header files, C++ Standard Library
 - wrappers
@@ -15,22 +9,18 @@ helpviewer_keywords:
 - C++ Standard Library, header files
 - Visual C++, header files
 ms.assetid: e7bf497a-0f63-48d0-9b54-cb0eef4073c4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4f177ebceff77aa9776ce2943ff5cb6176440ec3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a94e419e07194ffb8903cd474f878b0e8553356c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846996"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496351"
 ---
 # <a name="c-standard-library-header-files"></a>C++ 標準程式庫標頭檔
 
 下列為按類別區分的 C++ 標準程式庫和擴充功能的標頭檔。
 
-## <a name="headers-by-category"></a>標頭，依類別目錄
+## <a name="headers-by-category"></a>依類別的標頭
 
 |分類|標頭|
 |-|-|
@@ -39,8 +29,8 @@ ms.locfileid: "33846996"
 |[容器](../cpp/containers-modern-cpp.md)||
 |序列容器|[\<array>](../standard-library/array.md)、[\<deque>](../standard-library/deque.md)、[<forward_list>](../standard-library/forward-list.md)、[\<list>](../standard-library/list.md)、[\<vector>](../standard-library/vector.md)|
 |已排序關聯容器| [\<map>](../standard-library/map.md)、[\<set>](../standard-library/set.md)|
-|未排序的關聯容器|[<unordered_map>](../standard-library/unordered-map.md)、[<unordered_set>](../standard-library/unordered-set.md)|
-|容器配接器|[\<queue>](../standard-library/queue.md)、[\<stack>](../standard-library/stack.md)|
+|未排序關聯容器|[<unordered_map>](../standard-library/unordered-map.md)、[<unordered_set>](../standard-library/unordered-set.md)|
+|配接器的容器|[\<queue>](../standard-library/queue.md)、[\<stack>](../standard-library/stack.md)|
 |[錯誤和例外狀況處理](../cpp/errors-and-exception-handling-modern-cpp.md)|[\<exception>](../standard-library/exception.md)、[\<stdexcept>](../standard-library/stdexcept.md)、[<system_error>](../standard-library/system-error.md)|
 |[I/O 和格式化](../cpp/string-and-i-o-formatting-modern-cpp.md)|[\<filesystem>](../standard-library/filesystem.md)、[\<fstream>](../standard-library/fstream.md)、[\<iomanip>](../standard-library/iomanip.md)、[\<ios>](../standard-library/ios.md)、[\<iosfwd>](../standard-library/iosfwd.md)、[\<iostream>](../standard-library/iostream.md)、[\<istream>](../standard-library/istream.md)、[\<ostream>](../standard-library/ostream.md)、[\<sstream>](../standard-library/sstream.md)、[\<streambuf>](../standard-library/streambuf.md)、[\<strstream>](../standard-library/strstream.md)|
 |迭代器|[\<iterator>](../standard-library/iterator.md)|

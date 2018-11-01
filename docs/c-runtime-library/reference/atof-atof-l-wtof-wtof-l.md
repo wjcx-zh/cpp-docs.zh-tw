@@ -1,10 +1,6 @@
 ---
-title: atof、_atof_l、_wtof、_wtof_l | Microsoft Docs
-ms.custom: ''
+title: atof、_atof_l、_wtof、_wtof_l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtof_l
 - atof
@@ -36,8 +32,6 @@ f1_keywords:
 - corecrt_wstdlib/_wtof
 - _wtof_l
 - corecrt_wstdlib/_wtof_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tstof function
 - atof_l function
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d78fe14783200e1e145c39b9b274d9e7e3ddb6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c2ec158ac0b75a861b5b226d33de113d76988cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396806"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471171"
 ---
 # <a name="atof-atofl-wtof-wtofl"></a>atof、_atof_l、_wtof、_wtof_l
 
@@ -96,9 +86,9 @@ double _wtof_l(
 
 ## <a name="return-value"></a>傳回值
 
-每個函式會傳回**double**產生的輸入的字元解譯為數字值。 如果輸入無法轉換成該類型的值，則傳回值為 0.0。
+每個函式會傳回**double**值所產生的輸入的字元解譯為數字。 如果輸入無法轉換成該類型的值，則傳回值為 0.0。
 
-在超出範圍的情況下， **errno**設**為 ERANGE**。 如果傳入的參數是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**至**EINVAL**並傳回 0。
+在所有超出範圍的情況下， **errno**設為**ERANGE**。 如果傳入的參數是**NULL**，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**要**EINVAL**並傳回 0。
 
 ## <a name="remarks"></a>備註
 
@@ -106,15 +96,15 @@ double _wtof_l(
 
 輸入字串是一串字元，可解譯為所指定類型的數值。 此函式會從無法辨識為數字一部分的第一個字元處停止讀取輸入字串。 此字元可能是終止字串的 Null 字元 ('\0' 或 L'\0')。
 
-*Str*引數**atof**和 **_wtof**具有下列格式：
+*Str*引數**atof**並 **_wtof**具有下列格式：
 
-[*空白字元*] [*登*] [*位數*] [__。__*位數*] [{**e** &#124; **E** } [*登*]*位數*]
+[*空白字元*] [*號*] [*位數*] [__。__*數字*] [{**e** &#124; **電子**} [*登*]*位數*]
 
-A*空白字元*包含空格或定位字元，都會被忽略;*登*是加號 （+） 或減號 （-）; 和*位數*一或多個十進位數字。 如果小數點前沒有數字，則在小數點後至少必須要有一個數字。 十進位數字後面可能接著指數，其中包含一個字母，簡介 (**e**，或**E**) 和選擇性帶正負號的十進位整數。
+A*空白字元*包含空格或定位鍵字元，則會忽略;*號*是加號 （+） 或減號 （–）; 並*數字*是一或多個十進位數字。 如果小數點前沒有數字，則在小數點後至少必須要有一個數字。 十進位數字後面可能接著指數，其中包含簡介字母 (**電子**，或**E**) 和一個選擇性帶正負號的十進位整數。
 
-這些函式的 UCRT 版本不支援 Fortran 樣式的轉換 (**d**或**D**) 指數的字母。 舊版 CRT 支援此非標準延伸模組，而且它可能是您程式碼的重大變更。
+這些函式的 UCRT 版本不支援轉換 Fortran 樣式 (**d**或是**D**) 指數字母。 舊版 CRT 支援此非標準延伸模組，而且它可能是您程式碼的重大變更。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用*地區設定*參數中傳遞而不是目前的地區設定。
+使用這些函式的版本 **_l**後置詞都相同，只不過它們*地區設定*傳入參數而不是目前的地區設定。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -132,7 +122,7 @@ A*空白字元*包含空格或定位字元，都會被忽略;*登*是加號 （+
 
 ## <a name="example"></a>範例
 
-此程式會顯示如何以字串的形式儲存的數字可以轉換成數值資料，請使用**atof**和 **_atof_l**函式。
+此程式示範如何儲存為字串的數字可以轉換成數值資料，請使用**atof**並 **_atof_l**函式。
 
 ```C
 // crt_atof.c

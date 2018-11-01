@@ -1,12 +1,6 @@
 ---
-title: 初始設定式 |Microsoft Docs
-ms.custom: ''
+title: 初始設定式
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - array-element initializers
 - initializing arrays [C++], initializers
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 44b0dede1e583de1e01e9ea4627b4d411f1ecb84
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2948e65538359815da151a540e96227e56bbea6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205917"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544660"
 ---
 # <a name="initializers"></a>初始設定式
 
@@ -487,7 +477,7 @@ int main() {
 
 ### <a name="reference-initialization"></a>參考初始化
 
-若要初始化參考類型的變數，必須使用衍生該參考類型之類型的物件，或者其類型可轉換成衍生該參考類型之類型的物件。 例如:
+若要初始化參考類型的變數，必須使用衍生該參考類型之類型的物件，或者其類型可轉換成衍生該參考類型之類型的物件。 例如: 
 
 ```cpp
 // initializing_references.cpp
@@ -512,25 +502,25 @@ int main()
 
 只有在下列情況下，可以不使用初始設定式宣告參考類型變數：
 
-- 函式宣告 (原型)。 例如:
+- 函式宣告 (原型)。 例如: 
 
     ```cpp
     int func( int& );
     ```
 
-- 函式傳回類型宣告。 例如:
+- 函式傳回類型宣告。 例如: 
 
     ```cpp
     int& func( int& );
     ```
 
-- 宣告函式類型類別成員。 例如:
+- 宣告函式類型類別成員。 例如: 
 
     ```cpp
     class c {public:   int& i;};
     ```
 
-- 明確地指定為變數的宣告**extern**。 例如:
+- 明確地指定為變數的宣告**extern**。 例如: 
 
     ```cpp
     extern int& iVal;

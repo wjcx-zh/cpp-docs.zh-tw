@@ -1,10 +1,6 @@
 ---
-title: strstr、wcsstr、_mbsstr、_mbsstr_l | Microsoft Docs
-ms.custom: ''
+title: strstr、wcsstr、_mbsstr、_mbsstr_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsstr
 - wcsstr
@@ -32,8 +28,6 @@ f1_keywords:
 - wcsstr
 - _mbsstr
 - _tcsstr
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], searching
 - mbsstr function
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2dce749440d3321c07d549a2862048206dee45ca
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 42e02473e062c3af9524ed432aa163b7574342de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070804"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541059"
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr、wcsstr、_mbsstr、_mbsstr_l
 
@@ -163,7 +153,7 @@ const unsigned char *_mbsstr_l(
 |-------------|---------------------|
 |`strstr`|\<string.h>|
 |`wcsstr`|\<string.h> 或 \<wchar.h>|
-|`_mbsstr`, `_mbsstr_l`|\<mbstring.h>|
+|`_mbsstr`、 `_mbsstr_l`|\<mbstring.h>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,10 +1,6 @@
 ---
-title: _query_new_handler | Microsoft Docs
-ms.custom: ''
+title: _query_new_handler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _query_new_handler
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - _query_new_handler
 - query_new_handler
-dev_langs:
-- C++
 helpviewer_keywords:
 - query_new_handler function
 - handler routines
 - error handling
 - _query_new_handler function
 ms.assetid: 9a84b5c3-fe33-4c01-83a0-be87dc3ec518
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 340574a57bf1e6309ac9a5e1aa59b7e28632ae59
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: febefbe46d95b7e5c8de026806a20d7eff74e7cc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400995"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50515991"
 ---
 # <a name="querynewhandler"></a>_query_new_handler
 
@@ -56,15 +46,15 @@ _PNH _query_new_handler(
 
 ## <a name="return-value"></a>傳回值
 
-傳回目前新處理常式的地址所設定的 **_set_new_handler**。
+傳回目前新處理常式的位址所設定的 **_set_new_handler**。
 
 ## <a name="remarks"></a>備註
 
-C + + **_query_new_handler**函式會傳回目前例外狀況處理函式的 c + + 所設定的位址[_set_new_handler](set-new-handler.md)函式。 **_set_new_handler**用來指定要取得的控制，如果例外狀況處理函式**新**運算子無法配置記憶體。 如需詳細資訊，請參閱 C++ 語言參考中的 [new 和 delete 運算子](../../cpp/new-and-delete-operators.md)的討論。
+C + + **_query_new_handler**函式會傳回 c + + 所設定的目前例外狀況處理函式的位址[_set_new_handler](set-new-handler.md)函式。 **_set_new_handler**用來指定例外狀況處理函式，便會取得控制權，如果**新**運算子無法配置記憶體。 如需詳細資訊，請參閱 C++ 語言參考中的 [new 和 delete 運算子](../../cpp/new-and-delete-operators.md)的討論。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_query_new_handler**|\<new.h>|
 

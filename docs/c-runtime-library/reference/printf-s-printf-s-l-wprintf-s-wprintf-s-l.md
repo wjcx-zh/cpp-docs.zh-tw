@@ -1,10 +1,6 @@
 ---
-title: printf_s、_printf_s_l、wprintf_s、_wprintf_s_l | Microsoft Docs
-ms.custom: ''
+title: printf_s、_printf_s_l、wprintf_s、_wprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _printf_s_l
 - wprintf_s
@@ -25,8 +21,6 @@ apitype: DLLExport
 f1_keywords:
 - wprintf_s
 - printf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wprintf_s function
 - tprintf_s function
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - tprintf_s_l function
 - _wprintf_s_l function
 ms.assetid: 044ebb2e-5cc1-445d-bb4c-f084b405615b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ffe17ed1fc562b61d306294e970a070b03186e7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a140d63f18244ec453e97b727a2f93ca56547fe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405259"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560234"
 ---
 # <a name="printfs-printfsl-wprintfs-wprintfsl"></a>printf_s、_printf_s_l、wprintf_s、_wprintf_s_l
 
@@ -97,17 +87,17 @@ int _wprintf_s_l(
 
 ## <a name="remarks"></a>備註
 
-**Printf_s**函式格式化並列印一系列字元和值寫入標準輸出資料流**stdout**。 如果引數會遵循*格式*字串*格式*字串必須包含決定輸出格式的引數的規格。
+**Printf_s**函式格式化並列印一系列的字元和值寫入標準輸出資料流**stdout**。 如果引數接*格式*字串*格式*字串必須包含決定引數輸出格式的規格。
 
-主要差異**printf_s**和**printf**在於**printf_s**會檢查格式字串中的有效格式的字元，而**printf**只會檢查格式字串是否為 null 指標。 如果其中一個檢查失敗，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回-1 以及設定執行**errno**至**EINVAL**。
+主要差異**printf_s**並**printf**在於**printf_s**檢查是否有效的格式化字元的格式字串，而**printf**只會檢查格式字串是否為 null 指標。 如果其中一個檢查失敗，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回-1 和集執行**errno**要**EINVAL**。
 
-如需有關詳細**errno**和錯誤代碼，請參閱[_doserrno，errno，_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如需**errno**和錯誤碼，請參閱[_doserrno、 errno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-**printf_s**和**fprintf_s**行為相同，除了**printf_s**將輸出寫入到**stdout** ，而不是類型的目的地**檔案**。 如需詳細資訊，請參閱 [fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)。
+**printf_s**並**fprintf_s**運作方式完全相同，不同之處在於**printf_s**將輸出寫入到**stdout** ，而不是類型的目的地**檔案**。 如需詳細資訊，請參閱 [fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)。
 
-**wprintf_s**是寬字元版本的**printf_s**;*格式*是寬字元字串。 **wprintf_s**和**printf_s**運作方式完全相同的資料流在 ANSI 模式中開啟時。 **printf_s**目前不支援 UNICODE 資料流輸出。
+**wprintf_s**是寬字元版本的**printf_s**;*格式*是寬字元字串。 **wprintf_s**並**printf_s**運作方式完全相同，如果資料流以 ANSI 模式開啟。 **printf_s**目前不支援輸出至 UNICODE 資料流。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的執行緒地區設定的地區設定參數。
+使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -116,7 +106,7 @@ int _wprintf_s_l(
 |**_tprintf_s**|**printf_s**|**printf_s**|**wprintf_s**|
 |**_tprintf_s_l**|**_printf_s_l**|**_printf_s_l**|**_wprintf_s_l**|
 
-*格式*引數包含一般字元，逸出序列，以及 (如果引數會遵循*格式*) 格式規格。 一般字元和逸出序列複製到**stdout**其出現的順序。 例如，下面這行
+*格式*引數包含一般字元、 逸出序列，以及 (如果引數接*格式*) 格式規格。 一般字元和逸出序列會複製到**stdout**依其出現的順序。 例如，下面這行
 
 ```C
 printf_s("Line one\n\t\tLine two\n");
@@ -129,19 +119,19 @@ Line one
         Line two
 ```
 
-[格式規格](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)一律會以百分比符號開頭 (**%**)，會從左至右讀取。 當**printf_s**遇到的第一個格式規格 （如果有的話），它後面的第一個引數的值，轉換*格式*並據此將其輸出。 第二個格式規格會轉換及輸出第二個引數，依此類推。 如果引數的數目大於格式規格的數目，則會略過額外的引數。 如果提供給所有格式規格的引數不足，則結果為未定義。
+[格式規格](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)一定會開始以百分比符號 (**%**) 和左讀到右。 當**printf_s**遇到第一個格式規格 （如果有的話），它會將轉換後的第一個引數的值*格式*並據此將其輸出。 第二個格式規格會轉換及輸出第二個引數，依此類推。 如果引數的數目大於格式規格的數目，則會略過額外的引數。 如果提供給所有格式規格的引數不足，則結果為未定義。
 
 > [!IMPORTANT]
 > 確認 *format* 不是使用者定義的字串。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**printf_s**， **_printf_s_l**|\<stdio.h>|
 |**wprintf_s**， **_wprintf_s_l**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 應用程式中不支援主控台。 在主控台中，與相關聯的標準資料流控制代碼**stdin**， **stdout**，和**stderr**，必須重新導向之後 C 執行階段函式可以在 UWP 應用程式中使用它們,. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台中，相關聯的標準資料流控制代碼**stdin**， **stdout**，並**stderr**，必須重新導向，C 執行階段函式才能使用它們在 UWP 應用程式. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

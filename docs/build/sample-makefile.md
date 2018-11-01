@@ -1,23 +1,13 @@
 ---
-title: 範例 Makefile |Microsoft Docs
-ms.custom: ''
+title: 範例 Makefile
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 8343ce71-5556-4ae0-8d1e-7efd82673070
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b66d7d341f734608a7e2298b00a1078549c5de1c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 248924ff83befdefe1045da197be5328095c0caf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705220"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534874"
 ---
 # <a name="sample-makefile"></a>範例 Makefile
 

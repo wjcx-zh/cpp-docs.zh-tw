@@ -1,33 +1,23 @@
 ---
-title: MFC ODBC 消費者精靈 |Microsoft Docs
-ms.custom: ''
+title: MFC ODBC 消費者精靈
 ms.date: 10/03/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.mfc.consumer.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9623fae94891c62cca2ce34c621823251b65fe9
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: f86eded7cc7c04a85b1bcd93e917bd5a2b5c9696
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082601"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590875"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>MFC ODBC 消費者精靈
 
 > [!WARNING]
-> 在 Visual Studio 2017 版本 15.9 這個程式碼精靈已被取代，並將 Visual Studio 的未來版本中移除。 此精靈很少使用。 ATL 和 MFC 的一般支援不會受到此精靈的移除。 如果您想要分享您對這個已被取代的意見，請完成[這份問卷](https://www.surveymonkey.com/r/QDWKKCN)。 我們重視您的意見反應。
+> 在 Visual Studio 2017 15.9 版中，此程式碼精靈已淘汰，並且將從 Visual Studio 的未來版本中移除。 使用者很少用到這個精靈。 移除此精靈不會影響 ATL 和 MFC 的一般支援。 如果您想要分享關於此項淘汰的意見反應，請填寫[此問卷](https://www.surveymonkey.com/r/QDWKKCN)。 我們非常重視您的意見反應。
 
 此精靈設定 ODBC 資料錄集類別和資料繫結存取指定的資料來源所需。
 

@@ -1,27 +1,17 @@
 ---
-title: const_mem_fun1_ref_t 類別 | Microsoft Docs
-ms.custom: ''
+title: const_mem_fun1_ref_t 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xfunctional/std::const_mem_fun1_ref_t
-dev_langs:
-- C++
 helpviewer_keywords:
 - const_mem_fun1_ref_t class
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c2dafffcaee1dc4ba9bc87c2bfaa60dee45ca234
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e90ac09543c0704cf900e0fc5448e295034dcb66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100763"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50516437"
 ---
 # <a name="constmemfun1reft-class"></a>const_mem_fun1_ref_t 類別
 
@@ -56,7 +46,7 @@ class const_mem_fun1_ref_t
 
 ## <a name="remarks"></a>備註
 
-此範本類別會儲存一份*Pm*，它必須是類別的成員函式的指標`Type`，私用成員物件中。 它會在傳回下列項目時定義其成員函式 `operator()`：( `left`.\**Pm*)( `right`) **const**。
+此範本類別會儲存一份*Pm*，它必須是類別的成員函式的指標`Type`，私用成員物件中。 它會在傳回下列項目時定義其成員函式 `operator()`：( `left`.\*Pm)( `right`) **const**。
 
 ## <a name="example"></a>範例
 

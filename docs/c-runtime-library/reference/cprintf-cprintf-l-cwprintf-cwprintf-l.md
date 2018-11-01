@@ -1,10 +1,6 @@
 ---
-title: _cprintf、_cprintf_l、_cwprintf、_cwprintf_l | Microsoft Docs
-ms.custom: ''
+title: _cprintf、_cprintf_l、_cwprintf、_cwprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwprintf_l
 - _cprintf_l
@@ -34,8 +30,6 @@ f1_keywords:
 - cprintf_l
 - _cprintf_l
 - _cwprintf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _cprintf_l function
 - _cwprintf_l function
@@ -51,23 +45,19 @@ helpviewer_keywords:
 - cwprintf_l function
 - _cprintf function
 ms.assetid: 67ffefd4-45b3-4be0-9833-d8d26ac7c4e2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 57eaced46b786352b794e68a1a11423ba13b0948
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce1913012ee37b19e15602daaa4eea042a69a3de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400869"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534039"
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf、_cprintf_l、_cwprintf、_cwprintf_l
 
 格式化並列印至主控台。 已有更安全的版本可用；請參閱 [_cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -105,13 +95,13 @@ int _cwprintf_l(
 
 ## <a name="remarks"></a>備註
 
-這些函式格式化並列印一系列字元和值到主控台，直接使用 **_putch**函式 (**_putwch**如 **_cwprintf**) 來輸出字元. 在每個引數*argument_list* （如果有的話） 會轉換和輸出中的對應格式規格根據*格式*。 *格式*引數會使用[格式規格語法 printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 不同於**fprintf**， **printf**，和**sprintf**函式，兩者都不 **_cprintf**也 **_cwprintf**換行字元轉譯為歸位字元-換 (CR-LF) 組合輸出時。
+這些函式格式化並列印一系列的字元和值到主控台，直接使用 **_putch**函式 (**_putwch** for **_cwprintf**) 來輸出字元. 在每個引數*argument_list* （如果有的話） 會轉換和輸出中的對應格式規格根據*格式*。 *格式*引數會使用[格式規格語法，printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 不同於**fprintf**， **printf**，並**sprintf**函式，都不 **_cprintf**也 **_cwprintf**會將換行字元轉譯為歸位字元傳回換行字元 (CR-LF) 組合時輸出。
 
 重要的差異在於 **_cwprintf**會顯示在 Windows 中使用時的 Unicode 字元。 不同於 **_cprintf**， **_cwprintf**會使用目前的主控台地區設定。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的地區設定的地區設定參數。
+使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前的地區設定傳入的地區設定參數。
 
-**_cprintf**驗證*格式*參數。 如果*格式*為 null 指標，函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1 以及設定執行**errno**至**EINVAL**。
+**_cprintf**驗證*格式*參數。 如果*格式*為 null 指標，函式會叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1 和集執行**errno**要**EINVAL**。
 
 > [!IMPORTANT]
 > 確認 *format* 不是使用者定義的字串。
@@ -125,7 +115,7 @@ int _cwprintf_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_cprintf**， **_cprintf_l**|\<conio.h>|
 |**_cwprintf**， **_cwprintf_l**|\<conio.h>|

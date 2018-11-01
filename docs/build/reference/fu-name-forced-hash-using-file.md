@@ -1,31 +1,21 @@
 ---
-title: '-FU (命名強制 #using 檔案) |Microsoft Docs'
-ms.custom: ''
+title: '/FU (命名強制的 #using 檔案)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ForcedUsingFiles
 - /FU
 - VC.Project.VCNMakeTool.ForcedUsingAssemblies
-dev_langs:
-- C++
 helpviewer_keywords:
 - -FU compiler option [C++]
 - FU compiler option [C++]
 - /FU compiler option [C++]
 ms.assetid: 698f8603-457f-435a-baff-5ac9243d6ca1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0e804aa48752d1f100e4c843fae9c0d5c70ae8b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ecd9290336cfd6efd183bdd701f1d447b7ddaf2b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423146"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492084"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (命名強制的 #using 檔案)
 

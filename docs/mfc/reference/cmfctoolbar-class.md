@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b92acb477e6e15dfe933360dd6456db09d7f52a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
-ms.translationtype: MT
+ms.openlocfilehash: d50d751028cc9e162f2a4bd903f35255a5ed3814
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408736"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067809"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar 類別
 
@@ -535,7 +535,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用中的各種方法`CMFCToolBar`類別。 此範例示範如何設定標籤的文字視窗的工具列、 設定的框線、 將窗格 的樣式設定和啟用**新增或移除按鈕**會出現在結尾的工具列的按鈕。 此程式碼片段是一部分[IE 示範範例](../../visual-cpp-samples.md)。
+下例示範如何在 `CMFCToolBar` 類別中使用各種方法。 此範例示範如何設定標籤的文字視窗的工具列、 設定的框線、 將窗格 的樣式設定和啟用**新增或移除按鈕**會出現在結尾的工具列的按鈕。 此程式碼片段是一部分[IE 示範範例](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]
@@ -1155,7 +1155,6 @@ void EnableCustomizeButton(
     int iCustomizeCmd,
     const CString& strCustomizeText,
     BOOL bQuickCustomize=TRUE);
-
 
 void EnableCustomizeButton(
     BOOL bEnable,
@@ -2173,7 +2172,6 @@ virtual int InsertButton(
     const CMFCToolBarButton& button,
     INT_PTR iInsertAt=-1);
 
-
 virtual int InsertButton(
     CMFCToolBarButton* pButton,
     int iInsertAt=-1);
@@ -2543,7 +2541,6 @@ BOOL IsOneRowWithSibling();
 
 ##  <a name="isresourcechanged"></a>  CMFCToolBar::IsResourceChanged
 
-
 ```
 virtual BOOL IsResourceChanged() const;
 ```
@@ -2553,7 +2550,6 @@ virtual BOOL IsResourceChanged() const;
 ### <a name="remarks"></a>備註
 
 ##  <a name="issibling"></a>  CMFCToolBar::IsSibling
-
 
 ```
 BOOL IsSibling();
@@ -2615,12 +2611,11 @@ virtual BOOL LoadBitmap(
 
 ### <a name="remarks"></a>備註
 
-[Cmfctoolbar:: Loadtoolbarex](#loadtoolbarex)方法會呼叫這個方法來載入與工具列相關聯的映像。 覆寫這個方法可執行影像資源的自訂載入。
+[CMFCToolBar::LoadToolBarEx](#loadtoolbarex) 方法會呼叫這個方法來載入與工具列相關聯的影像。 覆寫這個方法可執行影像資源的自訂載入。
 
 呼叫 `LoadBitmapEx` 方法可在建立工具列之後載入其他影像。
 
 ##  <a name="loadbitmapex"></a>  CMFCToolBar::LoadBitmapEx
-
 
 ```
 virtual BOOL LoadBitmapEx(
@@ -2630,8 +2625,8 @@ virtual BOOL LoadBitmapEx(
 
 ### <a name="parameters"></a>參數
 
-*params*<br/>
-[in][in]*封鎖*
+[in]*params*<br/>
+[in]*封鎖*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -2639,14 +2634,13 @@ virtual BOOL LoadBitmapEx(
 
 ##  <a name="loadlargeiconsstate"></a>  CMFCToolBar::LoadLargeIconsState
 
-
 ```
 static BOOL __stdcall LoadLargeIconsState(LPCTSTR lpszProfileName = NULL);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*lpszProfileName*
+[in]*lpszProfileName*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -2804,7 +2798,6 @@ AFX_IMPORT_DATA static double m_dblLargeImageRatio;
 
 ##  <a name="nextmenu"></a>  CMFCToolBar::NextMenu
 
-
 ```
 virtual BOOL NextMenu();
 ```
@@ -2814,7 +2807,6 @@ virtual BOOL NextMenu();
 ### <a name="remarks"></a>備註
 
 ##  <a name="onbeforeremovebutton"></a>  CMFCToolBar::OnBeforeRemoveButton
-
 
 ```
 virtual BOOL OnBeforeRemoveButton(
@@ -2853,7 +2845,6 @@ virtual void OnChangeHot(int iHot);
 
 ##  <a name="onchangevisualmanager"></a>  CMFCToolBar::OnChangeVisualManager
 
-
 ```
 virtual void OnChangeVisualManager();
 ```
@@ -2881,7 +2872,6 @@ virtual void OnFillBackground(CDC* pDC);
 
 ##  <a name="onglobalfontschanged"></a>  CMFCToolBar::OnGlobalFontsChanged
 
-
 ```
 virtual void OnGlobalFontsChanged();
 ```
@@ -2904,14 +2894,13 @@ virtual void OnReset();
 
 ##  <a name="onsetaccdata"></a>  CMFCToolBar::OnSetAccData
 
-
 ```
 virtual BOOL OnSetAccData(long lVal);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*lVal*
+[in]*lVal*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -2969,7 +2958,6 @@ virtual BOOL OnUserToolTip(
 覆寫`OnUserToolTip`自訂工具列按鈕的工具提示。 預設實作會呼叫[CMFCToolBar::OnUserToolTip](#onusertooltip)取得的工具提示文字。
 
 ##  <a name="prevmenu"></a>  CMFCToolBar::PrevMenu
-
 
 ```
 virtual BOOL PrevMenu();
@@ -3132,7 +3120,6 @@ static void __stdcall ResetAllImages();
 
 ##  <a name="resetimages"></a>  CMFCToolBar::ResetImages
 
-
 ```
 virtual void ResetImages();
 ```
@@ -3140,7 +3127,6 @@ virtual void ResetImages();
 ### <a name="remarks"></a>備註
 
 ##  <a name="restorefocus"></a>  CMFCToolBar::RestoreFocus
-
 
 ```
 virtual void RestoreFocus();
@@ -3168,14 +3154,13 @@ virtual BOOL RestoreOriginalState();
 
 ##  <a name="saveparameters"></a>  CMFCToolBar::SaveParameters
 
-
 ```
 static BOOL __stdcall SaveParameters(LPCTSTR lpszProfileName = NULL);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*lpszProfileName*
+[in]*lpszProfileName*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -3431,19 +3416,17 @@ void SetHeight(int cyHeight);
 
 ##  <a name="sethelpmode"></a>  CMFCToolBar::SetHelpMode
 
-
 ```
 static void __stdcall SetHelpMode(BOOL bOn = TRUE);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*bOn*
+[in]*bOn*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="sethot"></a>  CMFCToolBar::SetHot
-
 
 ```
 BOOL SetHot(CMFCToolBarButton* pMenuButton);
@@ -3451,7 +3434,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 
 ### <a name="parameters"></a>參數
 
-[in]*pMenuButton*
+[in]*pMenuButton*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -3495,14 +3478,13 @@ static void SetHotTextColor(COLORREF clrText);
 
 ##  <a name="setignoresettext"></a>  CMFCToolBar::SetIgnoreSetText
 
-
 ```
 void SetIgnoreSetText(BOOL bValue);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*bValue*
+[in]*bValue*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -3557,14 +3539,13 @@ void SetLockedSizes(
 
 ##  <a name="setmaskmode"></a>  CMFCToolBar::SetMaskMode
 
-
 ```
 void SetMaskMode(BOOL bMasked);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*bMasked*
+[in]*bMasked*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -3631,14 +3612,13 @@ void SetOneRowWithSibling();
 
 ##  <a name="setorigbuttons"></a>  CMFCToolBar::SetOrigButtons
 
-
 ```
 void SetOrigButtons(const CObList& lstOrigButtons);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*lstOrigButtons*
+[in]*lstOrigButtons*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -3936,6 +3916,4 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 [CMFCPopupMenuBar 類別](../../mfc/reference/cmfcpopupmenubar-class.md)<br/>
 [CMFCDropDownToolBar 類別](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
 [逐步解說：將控制項放在工具列上](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

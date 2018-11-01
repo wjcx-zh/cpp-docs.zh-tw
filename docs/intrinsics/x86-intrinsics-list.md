@@ -1,25 +1,15 @@
 ---
-title: x86 內建函式清單 |Microsoft Docs
-ms.custom: ''
+title: x86 內建清單
 ms.date: 06/01/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, x86
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d3ae21e0c7f39ef1f4b2ab5379c556b987fcf37b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 251e4741f069cf44376c2f6a7ed4e92aa949452b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448463"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560585"
 ---
 # <a name="x86-intrinsics-list"></a>x86 內建清單
 
@@ -29,7 +19,7 @@ ms.locfileid: "46448463"
 
 - 標頭檔。 許多內建函式會記錄在標頭檔中的註解裡。
 
-- [Intel 內建功能指南](https://software.intel.com/sites/landingpage/IntrinsicsGuide/)。 使用搜尋方塊來尋找特定的內建函式。
+- [Intel 內建功能指南](https://software.intel.com/sites/landingpage/IntrinsicsGuide/)： 使用搜尋方塊來尋找特定的內建函式。
 
 - [Intel 64 和 IA-32 架構軟體開發人員手冊](https://software.intel.com/articles/intel-sdm)
 
@@ -1277,4 +1267,4 @@ ms.locfileid: "46448463"
 
 [編譯器內建](../intrinsics/compiler-intrinsics.md)<br/>
 [ARM 內建](../intrinsics/arm-intrinsics.md)<br/>
-[x64 (amd64) 內建函式](../intrinsics/x64-amd64-intrinsics-list.md)
+[x64 (amd64) 內建](../intrinsics/x64-amd64-intrinsics-list.md)

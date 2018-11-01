@@ -1,10 +1,6 @@
 ---
-title: memmove_s、wmemmove_s | Microsoft Docs
-ms.custom: ''
+title: memmove_s、wmemmove_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wmemmove_s
 - memmove_s
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - wmemmove_s
 - memmove_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 39fde456dd2e45d38bdd1b6ba8d9d7eb9811dd05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b60174c3a06e60301a3e9123434220227f4f426
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403891"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561183"
 ---
 # <a name="memmoves-wmemmoves"></a>memmove_s、wmemmove_s
 
@@ -74,7 +64,7 @@ errno_t wmemmove_s(
 來源物件。
 
 *count*<br/>
-位元組數目 (**memmove_s**) 或字元 (**wmemmove_s**) 複製。
+位元組數 (**memmove_s**) 或字元 (**wmemmove_s**) 複製。
 
 ## <a name="return-value"></a>傳回值
 
@@ -82,21 +72,21 @@ errno_t wmemmove_s(
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*dest*|*numberOfElements*|*src*|傳回值|內容*目的地*|
+|*dest*|*numberOfElements*|*src*|傳回值|內容*dest*|
 |------------|------------------------|-----------|------------------|------------------------|
-|**NULL**|任何|任何|**EINVAL**|未修改|
-|任何|任何|**NULL**|**EINVAL**|未修改|
-|任何|< *計數*|任何|**ERANGE**|未修改|
+|**NULL**|any|any|**EINVAL**|未修改|
+|any|any|**NULL**|**EINVAL**|未修改|
+|any|< *計數*|any|**ERANGE**|未修改|
 
 ## <a name="remarks"></a>備註
 
-複製*計數*位元組的字元從*src*至*目的地*。 如果來源區域和目的地的某些區域重疊， **memmove_s**可確保在重疊的區域中的原始來源位元組會複製之前遭到覆寫。
+複本*計數*個位元組的字元從*src*來*dest*。 如果來源區域與目的地的某些區域重疊時， **memmove_s**可確保複製重疊區域中的原始來源位元組時，會再遭到覆寫。
 
-如果*目的地*或*src*為 null 指標，或如果目的字串太小，這些函式會叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md) . 如果允許繼續執行，這些函數會傳回**EINVAL**並設定**errno**至**EINVAL**。
+如果*dest*或者*src*為 null 指標，或如果目的字串太小，這些函式會叫用無效參數處理常式中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md) . 如果允許繼續執行，則這些函式會傳回**EINVAL**並設定**errno**來**EINVAL**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**memmove_s**|\<string.h>|
 |**wmemmove_s**|\<wchar.h>|

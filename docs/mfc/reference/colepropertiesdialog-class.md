@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa1803fb34ce1c9cf50b996efb9cc5467dd55996
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
-ms.translationtype: MT
+ms.openlocfilehash: 0bd1e6953d936106f272aa8bef4243728d742d8c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387831"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078189"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog 類別
 
@@ -138,15 +138,15 @@ COlePropertiesDialog(
 
 - 一般
 
-     此頁面包含所選取的文件項目表示之檔案的系統資訊。 從這個頁面上，使用者可以將選取的項目轉換成另一種類型。
+   此頁面包含所選取的文件項目表示之檔案的系統資訊。 從這個頁面上，使用者可以將選取的項目轉換成另一種類型。
 
 - 檢視
 
-     此頁面包含顯示的項目、 變更圖示，以及變更影像的縮放選項。
+   此頁面包含顯示的項目、 變更圖示，以及變更影像的縮放選項。
 
 - 連結
 
-     此頁面包含選項來變更連結項目的位置和更新連結的項目。 從這個頁面上，使用者可能會中斷選取的項目連結。
+   此頁面包含選項來變更連結項目的位置和更新連結的項目。 從這個頁面上，使用者可能會中斷選取的項目連結。
 
 若要新增超過所提供的預設頁面，請修改[m_psh](#m_psh)成員變數的建構函式在結束之前您`COlePropertiesDialog`-衍生的類別。 這是進階的實作`COlePropertiesDialog`建構函式。
 

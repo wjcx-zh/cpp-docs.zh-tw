@@ -1,10 +1,6 @@
 ---
-title: _findnext、_findnext32、_findnext32i64、_findnext64、_findnext64i32、_findnexti64、_wfindnext、_wfindnext32、_wfindnext32i64、_wfindnext64、_wfindnext64i32、_wfindnexti64 | Microsoft Docs
-ms.custom: ''
+title: _findnext、_findnext32、_findnext32i64、_findnext64、_findnext64i32、_findnexti64、_wfindnext、_wfindnext32、_wfindnext32i64、_wfindnext64、_wfindnext64i32、_wfindnexti64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wfindnext
 - _findnext
@@ -58,8 +54,6 @@ f1_keywords:
 - _wfindnexti64
 - _tfindnext
 - _findnext32
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wfindnexti64 function
 - _tfindnext32 function
@@ -98,20 +92,16 @@ helpviewer_keywords:
 - tfindnext32i64 function
 - _tfindnexti64 function
 ms.assetid: 75d97188-5add-4698-a46c-4c492378f0f8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 540ec2aae5e13df68438c74e0371e91326e9bb0a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 32d21b310d8a7826fd1d95f806d470a1fb7e492e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405558"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518504"
 ---
 # <a name="findnext-findnext32-findnext32i64-findnext64-findnext64i32-findnexti64-wfindnext-wfindnext32-wfindnext32i64-wfindnext64-wfindnext64i32-wfindnexti64"></a>_findnext、_findnext32、_findnext32i64、_findnext64、_findnext64i32、_findnexti64、_wfindnext、_wfindnext32、_wfindnext32i64、_wfindnext64、_wfindnext64i32、_wfindnexti64
 
-尋找下一個的名稱，如果有符合*filespec*先前呼叫中的引數[_findfirst](findfirst-functions.md)，然後再修改*fileinfo*據此結構內容。
+尋找下一個的名稱，如果有符合*filespec>* 先前呼叫中的引數[_findfirst](findfirst-functions.md)，然後再修改*fileinfo*據此結構內容。
 
 ## <a name="syntax"></a>語法
 
@@ -176,7 +166,7 @@ int _wfindnext64i32(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，則傳回 0。 否則，傳回-1，並設定**errno**為值，表示失敗的性質。 下表顯示可能的錯誤碼。
+如果成功，則傳回 0。 否則，會傳回-1，並將**errno**到值，指出失敗的本質。 下表顯示可能的錯誤碼。
 
 |errno 值|條件|
 |-|-|
@@ -188,13 +178,13 @@ int _wfindnext64i32(
 
 ## <a name="remarks"></a>備註
 
-您必須呼叫[_findclose](findclose.md)使用完畢之後 **_findfirst**或 **_findnext**函式 （或任何變化）。 這會釋放應用程式中這些函式所使用的資源。
+您必須呼叫[_findclose](findclose.md)完成使用後 **_findfirst**或是 **_findnext**函式 （或任何變體）。 這會釋放應用程式中這些函式所使用的資源。
 
-這些函式的變化**w**前置詞是寬字元版本，否則它們是對應的單一位元組函式完全相同。
+這些函式的變化**w**前置詞是寬字元版本; 否則它們與對應的單一位元組函式相同。
 
-這些函式的變化支援 32 位元或 64 位元時間類型，以及 32 位元或 64 位元檔案大小。 第一個數字尾碼 (**32**或**64**) 表示時間的大小類型使用; 第二個後置詞是**i32**或**i64**，表示檔案大小以 32 位元或 64 位元整數。 如需支援 32 位元和 64 位元時間類型與檔案大小之版本的資訊，請參閱下表。 使用 64 位元時間類型的變化可將檔案建立日期最高表示為 3000 年 12 月 31 日 23:59:59 UTC；而使用 32 位元時間類型的變化僅代表到 2038 年 1 月 18 日 23:59:59 UTC 的日期。 1970 年 1 月 1 日午夜是所有這些函式的日期範圍下限。
+這些函式的變化支援 32 位元或 64 位元時間類型，以及 32 位元或 64 位元檔案大小。 第一個數值尾碼 (**32**或**64**) 表示時間的大小類型使用，第二個尾碼為**i32**或是**i64**，表示檔案大小以 32 位元或 64 位元的整數。 如需支援 32 位元和 64 位元時間類型與檔案大小之版本的資訊，請參閱下表。 使用 64 位元時間類型的變化可將檔案建立日期最高表示為 3000 年 12 月 31 日 23:59:59 UTC；而使用 32 位元時間類型的變化僅代表到 2038 年 1 月 18 日 23:59:59 UTC 的日期。 1970 年 1 月 1 日午夜是所有這些函式的日期範圍下限。
 
-除非您有特定的理由来使用的版本，明確地指定時間大小，請使用 **_findnext**或 **_wfindnext**或者，如果您要支援大於 3 GB 的檔案大小，請使用 **_findnexti64**或 **_wfindnexti64**。 所有這些函式都使用 64 位元時間類型。 在舊版本中，這些函式都是使用 32 位元時間類型。 如果這是應用程式的重大變更，您可以定義 **_USE_32BIT_TIME_T**取得舊的行為。 如果 **_USE_32BIT_TIME_T**定義， **_findnext**， **_finnexti64**和其相對應的 Unicode 版本使用 32 位元時間。
+除非您有特定原因来使用的版本，明確地指定時間大小，請使用 **_findnext**或是 **_wfindnext**或者，如果您需要支援大於 3 GB 的檔案大小，使用 **_findnexti64**或是 **_wfindnexti64**。 所有這些函式都使用 64 位元時間類型。 在舊版本中，這些函式都是使用 32 位元時間類型。 如果這是應用程式的重大變更，您可以定義 **_USE_32BIT_TIME_T**舊的行為。 如果 **_USE_32BIT_TIME_T**定義，則 **_findnext**， **_finnexti64**和其對應的 Unicode 版本會使用 32 位元時間。
 
 ### <a name="time-type-and-file-length-type-variations-of-findnext"></a>_findnext 的時間類型和檔案長度類型變化
 

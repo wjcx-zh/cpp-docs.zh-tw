@@ -1,10 +1,6 @@
 ---
-title: _rotl、_rotl64、_rotr、_rotr64 | Microsoft Docs
-ms.custom: ''
+title: _rotl、_rotl64、_rotr、_rotr64
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _rotr64
 - _rotl
@@ -32,8 +28,6 @@ f1_keywords:
 - _rotr
 - _rotl
 - rotl
-dev_langs:
-- C++
 helpviewer_keywords:
 - rotl64 function
 - _rotl function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - _rotr64 function
 - bits, rotating
 ms.assetid: cfce439b-366f-4584-8ab1-d527b13fcfc6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a4ec4844c54bef09522191be62599ed79b97eb6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8cf61ecd8ffab9433f5c6ad077ddba39401c0e4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406650"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50567410"
 ---
 # <a name="rotl-rotl64-rotr-rotr64"></a>_rotl、_rotl64、_rotr、_rotr64
 
@@ -97,11 +87,11 @@ unsigned __int64 _rotr64(
 
 ## <a name="remarks"></a>備註
 
-**_Rotl**和 **_rotr**函式旋轉不帶正負號*值*由*shift*位元。 **_rotl**圖示旋轉，保留的值。 **_rotr**旋轉值權限。 這兩個函式會將旋轉超出 *value* 一端的位元換行到另一端。
+**_Rotl**並 **_rotr**旋轉不帶正負號的函式*值*由*shift*位元。 **_rotl**會將值向左旋轉。 **_rotr**會將值向右旋轉。 這兩個函式會將旋轉超出 *value* 一端的位元換行到另一端。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_rotl**， **_rotl64**|\<stdlib.h>|
 |**_rotr**， **_rotr64**|\<stdlib.h>|

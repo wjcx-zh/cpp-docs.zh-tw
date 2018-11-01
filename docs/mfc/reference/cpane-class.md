@@ -143,12 +143,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 629e10d06a59b926604fad3b3a6e191fefcb71e7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
-ms.translationtype: MT
+ms.openlocfilehash: 1a32625001ae86f4d6dffa7eeb953c538822d207
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384496"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080217"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -500,7 +500,8 @@ virtual BOOL Create(
 *rect*<br/>
 [in]指定的初始大小和位置*pParentWnd*視窗中的，在工作區座標。
 
-[in][out]*pParentWnd*指定此窗格的父視窗。
+*pParentWnd*<br/>
+[in、 out]指定此窗格的父視窗。
 
 *nID*<br/>
 [in]指定 [] 窗格中的識別碼。
@@ -508,7 +509,8 @@ virtual BOOL Create(
 *dwControlBarStyle*<br/>
 [in]指定的樣式窗格。 如需詳細資訊，請參閱 < [cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)。
 
-[in][out]*pContext*指定建立的內容窗格。
+*pContext*<br/>
+[in、 out]指定建立的內容窗格。
 
 ### <a name="return-value"></a>傳回值
 
@@ -573,7 +575,8 @@ virtual BOOL CreateEx(
 *rect*<br/>
 [in]指定的初始大小和位置*pParentWnd*視窗中的，在工作區座標。
 
-[in][out]*pParentWnd*指定此窗格的父視窗。
+*pParentWnd*<br/>
+[in、 out]指定此窗格的父視窗。
 
 *nID*<br/>
 [in]指定 [] 窗格中的識別碼。
@@ -581,7 +584,8 @@ virtual BOOL CreateEx(
 *dwControlBarStyle*<br/>
 [in]指定的樣式窗格。 如需詳細資訊，請參閱 < [cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)。
 
-[in][out]*pContext*指定建立內容窗格。
+*pContext*<br/>
+[in、 out]指定建立內容窗格。
 
 ### <a name="return-value"></a>傳回值
 
@@ -623,7 +627,8 @@ virtual BOOL DockPane(
 
 ### <a name="parameters"></a>參數
 
-[in][out]*pDockBar*指定基底的窗格，即可停駐此窗格，即可。
+*pDockBar*<br/>
+[in、 out]指定基底的窗格，即可停駐此窗格，即可。
 
 *lpRect*<br/>
 [in]在基底窗格的停駐此窗格的地方指定的矩形。
@@ -1161,7 +1166,8 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>參數
 
-[in][out]*pWndOldParent*前一父視窗的窗格。
+*pWndOldParent*<br/>
+[in、 out]前一父視窗的窗格。
 
 ### <a name="remarks"></a>備註
 
@@ -1213,7 +1219,8 @@ virtual void OnBeforeChangeParent(
 
 ### <a name="parameters"></a>參數
 
-[in][out]*pWndNewParent*指定新的父視窗。
+*pWndNewParent*<br/>
+[in、 out]指定新的父視窗。
 
 *bDelay*<br/>
 [in]若要延遲全域的停駐配置調整;，則為 TRUE否則為 FALSE。
@@ -1237,7 +1244,8 @@ virtual BOOL OnBeforeDock(
 
 ### <a name="parameters"></a>參數
 
-[in][out]*ppDockBar*指定此窗格停駐窗格。
+*ppDockBar*<br/>
+[in、 out]指定此窗格停駐窗格。
 
 *lpRect*<br/>
 [in]指定的停駐的矩形。
@@ -1518,7 +1526,8 @@ void SetMiniFrameRTC(CRuntimeClass* pClass);
 
 ### <a name="parameters"></a>參數
 
-[in][out]*pClass*指定迷你框架視窗的執行階段類別資訊。
+*pClass*<br/>
+[in、 out]指定迷你框架視窗的執行階段類別資訊。
 
 ### <a name="remarks"></a>備註
 

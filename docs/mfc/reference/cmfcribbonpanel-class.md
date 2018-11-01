@@ -124,19 +124,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 664894fb99f02168d06cfc5d82b4225defe7fe38
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
-ms.translationtype: MT
+ms.openlocfilehash: 46b7f613cdb67fa446c878ceda7dd9eca6eec7e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422217"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082576"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel 類別
 
 實作包含一組功能區項目的面板。 繪製面板時，會在指定的面板大小下，顯示盡可能多的項目。
 
 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
-
 
 ## <a name="syntax"></a>語法
 
@@ -540,7 +539,6 @@ LPCTSTR GetName() const;
 
 ##  <a name="getparentbutton"></a>  CMFCRibbonPanel::GetParentButton
 
-
 ```
 CMFCRibbonBaseElement* GetParentButton() const;
 ```
@@ -562,7 +560,6 @@ CMFCRibbonCategory* GetParentCategory() const;
 包含此功能區面板的功能區分類的指標。
 
 ##  <a name="getparentmenubar"></a>  CMFCRibbonPanel::GetParentMenuBar
-
 
 ```
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
@@ -830,7 +827,6 @@ virtual BOOL IsMainPanel() const;
 
 ##  <a name="ismenumode"></a>  CMFCRibbonPanel::IsMenuMode
 
-
 ```
 BOOL IsMenuMode() const;
 ```
@@ -841,14 +837,13 @@ BOOL IsMenuMode() const;
 
 ##  <a name="onkey"></a>  CMFCRibbonPanel::OnKey
 
-
 ```
 virtual BOOL OnKey(UINT nChar);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*nChar*
+[in]*nChar*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -929,7 +924,8 @@ CMFCRibbonBaseElement* pElem);
 *nIndex*<br/>
 [in]指定要取代之項目的以零為起始的索引。
 
-[in][out]*pElem*取代原始項目之項目的有效指標。
+*pElem*<br/>
+[in、 out]會取代原始項目之項目的有效指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -954,7 +950,8 @@ CMFCRibbonBaseElement* pElem);
 *uiCmdID*<br/>
 [in]指定要取代之項目的命令識別碼。
 
-[in][out]*pElem*將會取代原始項目之項目的有效指標。
+*pElem*<br/>
+[in、 out]將會取代原始項目之項目的有效指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1007,7 +1004,6 @@ HMENU hMenu,
 BOOL bIsDefautCommand = FALSE,
 BOOL bRightAlign = FALSE);
 
-
 BOOL SetElementMenu(
 UINT uiCmdID,
 UINT uiMenuResID,
@@ -1055,7 +1051,8 @@ CRuntimeClass* pRTC);
 *nIndex*<br/>
 [in]指定要加入功能區項目的以零為起始的索引。
 
-[in][out]*pRTC*加入至功能區面板的功能區項目執行階段類別資訊的指標。
+*pRTC*<br/>
+[in、 out]要加入至功能區面板的功能區項目執行階段類別資訊指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1080,7 +1077,8 @@ CRuntimeClass* pRTC);
 *uiCmdID*<br/>
 [in]指定要新增功能區項目的命令的識別碼。
 
-[in][out]*pRTC*加入至功能區面板的功能區項目相關聯的執行階段類別資訊的指標。
+*pRTC*<br/>
+[in、 out]要加入至功能區面板的功能區項目相關聯的執行階段類別資訊指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1106,7 +1104,6 @@ CMFCRibbonColorButton* pColorButton =
 (CMFCRibbonColorButton*)pPanel->SetElementRTCByID(
 ID_CHAR_COLOR,
     RUNTIME_CLASS (CMFCRibbonColorButton));
-
 
 // SetElementRTCByID sets runtime class and returns a pointer
 // to the newly created custom button,

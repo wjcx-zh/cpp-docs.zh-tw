@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43f180fd62d4e79f64119097401632caca9b44fe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
-ms.translationtype: MT
+ms.openlocfilehash: d50731fede9a65e8d354008e1cee0075b43dd163
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399394"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083525"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 類別
 
@@ -803,10 +803,11 @@ virtual BOOL OnDrawBrowseButton(
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[in][in]*rect*
-*pEdit*<br/>
-[in][in]*狀態*[in] *clrText*
+[in]*pDC*<br/>
+[in]*rect*<br/>
+[in]*pEdit*<br/>
+[in]*狀態*<br/>
+[in]*clrText*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1057,8 +1058,9 @@ virtual void OnDrawHeaderCtrlBorder(
 *rect*<br/>
 [in]指定的標頭控制項界限的矩形。
 
-*bIsPressed*<br/>
-[in][in]*bIsHighlighted*布林參數，指出是否按下標題控制項。
+[in]*bIsPressed*<br/>
+[in]*bIsHighlighted*<br/>
+布林值參數，指出是否按下標題控制項。
 
 ### <a name="remarks"></a>備註
 
@@ -1717,8 +1719,9 @@ virtual void OnDrawStatusBarProgress(
 *clrBar*<br/>
 [in]進度列的初始色彩。 值是色彩漸層的開始或完成的進度列的色彩。
 
-*clrProgressBarDest*<br/>
-[in][in]*clrProgressText* [in] *bProgressText*
+[in]*clrProgressBarDest*<br/>
+[in]*clrProgressText*<br/>
+[in]*bProgressText*<br/>
 
 ### <a name="remarks"></a>備註
 

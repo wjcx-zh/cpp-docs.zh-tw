@@ -1,27 +1,17 @@
 ---
-title: 編譯器警告 （層級 1） C4965 |Microsoft Docs
-ms.custom: ''
+title: 編譯器警告 (層級 1) C4965
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4965
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d8613585d1f34060fb2e60f976f76c6801005aca
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7d77df395d680b467d1a04a3f59c9822842f99f5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036640"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653098"
 ---
 # <a name="compiler-warning-level-1-c4965"></a>編譯器警告 (層級 1) C4965
 
@@ -29,7 +19,7 @@ ms.locfileid: "46036640"
 
 Visual c + + 提供隱含 boxing 處理實值型別。 使用 Managed Extensions for c + + 現在已成為 boxed int 指派 null 指派會導致指令
 
-如需詳細資訊，請參閱 < [Boxing](../../windows/boxing-cpp-component-extensions.md)。
+如需詳細資訊，請參閱 [Boxing](../../windows/boxing-cpp-component-extensions.md)中定義的介面的私用 C++ 專屬實作。
 
 ## <a name="example"></a>範例
 

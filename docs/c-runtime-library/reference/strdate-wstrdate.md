@@ -1,10 +1,6 @@
 ---
-title: _strdate、_wstrdate | Microsoft Docs
-ms.custom: ''
+title: _strdate、_wstrdate
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdate
 - _wstrdate
@@ -27,8 +23,6 @@ f1_keywords:
 - _wstrdate
 - _strdate
 - strdate
-dev_langs:
-- C++
 helpviewer_keywords:
 - strdate function
 - dates, copying
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8924ac1ad29408dd1d69a68c6f31d9194831fbc2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4dc2ea7f25e644c9bf7a4ddca4a625991f37d912
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411353"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639606"
 ---
 # <a name="strdate-wstrdate"></a>_strdate、_wstrdate
 
@@ -80,15 +70,15 @@ wchar_t *_wstrdate(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式會傳回產生的字元字串的指標*datestr*。
+所有這些函式都會傳回產生的字元字串的指標*datestr*。
 
 ## <a name="remarks"></a>備註
 
 這些函式已有更安全的版本可用，請參閱 [_strdate_s、_wstrdate_s](strdate-s-wstrdate-s.md)。 建議您盡可能使用更安全的函式。
 
-**_Strdate**函式會複製到所指向之緩衝區的目前系統日期*datestr*格式化**公釐**/**dd** / **yy**，其中**公釐**是兩位數表示月份， **dd**是兩位數代表日期，以及**yy**是兩位數的年份。 例如，字串**12/05/99**代表 1999 年 12 月 5 日。 緩衝區長度至少必須是 9 個位元組。
+**_Strdate**函式會將目前的系統日期複製到所指向的緩衝區*datestr*格式化**mm**/**dd** / **yy**，其中**mm**是兩位數表示月份， **dd**是兩位數表示日期和**yy**是一年的後兩位數。 例如，字串**12/05/99**代表 1999 年 12 月 5 日。 緩衝區長度至少必須是 9 個位元組。
 
-如果*datestr*是**NULL**指標、 無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**至**EINVAL**。
+如果*datestr*是**NULL**指標，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**要**EINVAL**。
 
 **_wstrdate**是寬字元版本的 **_strdate**; 的引數和傳回值 **_wstrdate**是寬字元字串。 除此之外，這些函式的行為相同。
 
@@ -102,7 +92,7 @@ wchar_t *_wstrdate(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_strdate**|\<time.h>|
 |**_wstrdate**|\<time.h> 或 \<wchar.h>|

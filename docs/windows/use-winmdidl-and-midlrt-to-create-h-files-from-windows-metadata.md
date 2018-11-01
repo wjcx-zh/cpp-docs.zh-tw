@@ -1,24 +1,14 @@
 ---
-title: 如何： 使用 winmdidl.exe 和 midlrt.exe windows 中繼資料建立.h 檔案 |Microsoft Docs
-ms.custom: ''
+title: 如何：使用 winmdidl.exe 和 midlrt.exe 根據 Windows 中繼資料建立 .h 檔案
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 3f97ef0f285cda7d31ddd53f0a8b0ca9a22f360c
-ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
+ms.openlocfilehash: b81f6901e60f27ada27f14d7dbc7c10fa3faec34
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50136194"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664928"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>如何：使用 winmdidl.exe 和 midlrt.exe 根據 Windows 中繼資料建立 .h 檔案
 

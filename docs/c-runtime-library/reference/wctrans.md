@@ -1,10 +1,6 @@
 ---
-title: wctrans | Microsoft Docs
-ms.custom: ''
+title: wctrans
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wctrans
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wctrans
-dev_langs:
-- C++
 helpviewer_keywords:
 - character codes, wctrans
 - characters, codes
 - characters, converting
 - wctrans function
 ms.assetid: 215404bf-6d60-489c-9ae9-880e6b586162
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 613c3c64885f10029a8b013504d84ffa8f35d664
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c7aace7a93160d2e9a4c1523d49bcaf6ae4dc20
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410485"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656686"
 ---
 # <a name="wctrans"></a>wctrans
 
@@ -60,7 +50,7 @@ wctrans_t wctrans(
 
 ## <a name="return-value"></a>傳回值
 
-如果**LC_CTYPE**目前的地區設定的類別並未定義的對應，其名稱符合屬性的字串*屬性*，此函數會傳回零。 否則，它會傳回適合用為 [towctrans](towctrans.md) 後續呼叫的第二個引數的非零值。
+如果**LC_CTYPE**目前的地區設定的類別不會定義名稱符合屬性字串的對應*屬性*，函數會傳回零。 否則，它會傳回適合用為 [towctrans](towctrans.md) 後續呼叫的第二個引數的非零值。
 
 ## <a name="remarks"></a>備註
 
@@ -70,8 +60,8 @@ wctrans_t wctrans(
 
 |功能|同於|
 |--------------|-------------|
-|tolower(c)|towctrans (c、 wctrans("towlower"))|
-|towupper(c)|towctrans (c、 wctrans("toupper"))|
+|tolower(c)|towctrans (c wctrans("towlower"))|
+|towupper(c)|towctrans (c wctrans("toupper"))|
 
 ## <a name="requirements"></a>需求
 

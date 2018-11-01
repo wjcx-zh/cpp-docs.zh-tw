@@ -1,35 +1,25 @@
 ---
-title: 依字母順序列出編譯器選項 |Microsoft Docs
-ms.custom: ''
+title: 依字母順序排列的編譯器選項
 ms.date: 08/20/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - compiler options, C++
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f99df40d5718a450019fb7cd26aa0c00a59c0a48
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fa5ae089e112c147fb5e18b13af2ef5b95a7fda3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701854"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646728"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>依字母順序排列的編譯器選項
 
-以下是編譯器選項的完整字母順序清單。 如需分類清單，請參閱 <<c0> [ 依分類排列的編譯器選項](compiler-options-listed-by-category.md)。
+以下是編譯器選項的完整字母順序清單。 如需分類清單，請參閱 [依分類排列的編譯器選項](compiler-options-listed-by-category.md)。
 
 |選項|用途|
 |------------|-------------|
 |[@](at-specify-a-compiler-response-file.md)|指定回應檔。|
 |[/?](help-compiler-command-line-help.md)|列出編譯器選項。|
 |[/AI](ai-specify-metadata-directories.md)|指定一個要搜尋的目錄，以解析傳遞給 [#using](../../preprocessor/hash-using-directive-cpp.md) 指示詞的檔案參考。|
-|[/ 分析](analyze-code-analysis.md)|啟用程式碼分析|
+|[/analyze](analyze-code-analysis.md)|啟用程式碼分析|
 |[/arch](arch-minimum-cpu-architecture.md)|為程式碼產生指定架構。|
 |[/ await](await-enable-coroutine-support.md)|啟用協同程式 （可繼續函式） 擴充功能。|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|增加 .obj 檔案中可定址區段的數目。|
@@ -79,9 +69,9 @@ ms.locfileid: "45701854"
 |[/guard:cf](guard-enable-control-flow-guard.md)|加入控制流程防護安全性檢查。|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|使用 `__vectorcall` 呼叫慣例。 (僅限 x86 和 x64)|
 |[/Gw](gw-optimize-global-data.md)|啟用整個程式全域資料最佳化。|
-|[/GX](gx-enable-exception-handling.md)|已取代。 啟用同步例外狀況處理。 使用[/EH](eh-exception-handling-model.md)改。|
+|[/GX](gx-enable-exception-handling.md)|已取代。 啟用同步例外狀況處理。 改用 [/EH](eh-exception-handling-model.md) 。|
 |[/Gy](gy-enable-function-level-linking.md)|啟用函式階層連結。|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已取代。 與相同[/rtc1](rtc-run-time-error-checks.md)。|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已取代。 與 [/RTC1](rtc-run-time-error-checks.md)相同。|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|使用 `__stdcall` 呼叫慣例 (僅適用於 x86)。|
 |[/H](h-restrict-length-of-external-names.md)|已取代。 限制外部 (公用) 名稱的長度。|
 |[/HELP](help-compiler-command-line-help.md)|列出編譯器選項。|
@@ -143,7 +133,7 @@ ms.locfileid: "45701854"
 |[/volatile](volatile-volatile-keyword-interpretation.md)|選取 volatile 關鍵字的解譯方式。|
 |[/w](compiler-option-warning-level.md)|停用所有警告。|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|設定要輸出的警告層級。|
-|[/w1、 /w2、 / w3/w4](compiler-option-warning-level.md)|為指定的警告設定警告層級。|
+|[/w1, /w2, /w3, /w4](compiler-option-warning-level.md)|為指定的警告設定警告層級。|
 |[/Wall](compiler-option-warning-level.md)|啟用所有警告，包括預設停用的警告。|
 |[/wd](compiler-option-warning-level.md)|停用指定的警告。|
 |[/we](compiler-option-warning-level.md)|將指定的警告視為錯誤。|
@@ -155,7 +145,7 @@ ms.locfileid: "45701854"
 |[/X](x-ignore-standard-include-paths.md)|忽略標準 Include 目錄。|
 |[/Y-](y-ignore-precompiled-header-options.md)|忽略目前組建中所有其他先行編譯標頭編譯器選項。|
 |[/Yc](yc-create-precompiled-header-file.md)|建立先行編譯標頭檔。|
-|[/Yd](yd-place-debug-information-in-object-file.md)|已取代。 將完整的偵錯資訊置於所有目的檔中。 使用[/Zi](z7-zi-zi-debug-information-format.md)改。|
+|[/Yd](yd-place-debug-information-in-object-file.md)|已取代。 將完整的偵錯資訊置於所有目的檔中。 改用 [/Zi](z7-zi-zi-debug-information-format.md) 。|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|在建立偵錯程式庫時插入一個 PCH 參考。|
 |[/Yu](yu-use-precompiled-header-file.md)|在建置時使用先行編譯標頭檔。|
 |[/Z7](z7-zi-zi-debug-information-format.md)|產生 C 7.0 相容的偵錯資訊。|

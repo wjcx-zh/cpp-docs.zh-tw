@@ -1,27 +1,17 @@
 ---
-title: 在所有架構上的內建 |Microsoft 文件
-ms.custom: ''
+title: 可用的所有架構內建
 ms.date: 04/11/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbe070c2bae69563d65344072a56003f808d1486
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a1331f53cd8b44c8a7bfc903216cbdbaf5fec1f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340615"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473277"
 ---
-# <a name="intrinsics-available-on-all-architectures"></a>在所有架構上內建
+# <a name="intrinsics-available-on-all-architectures"></a>可用的所有架構內建
 
 Microsoft C/c + + 編譯器和通用的 C 執行階段程式庫 (UCRT) 提供一些內建函式在所有架構上。
 
@@ -99,7 +89,7 @@ x86、AMD64 和 ARM 架構可以使用下列內建函式：
 
 ## <a name="ucrt-intrinsics"></a>UCRT 內建函式
 
-下列的 UCRT 函式在所有架構上具有內建形式：
+下列的 UCRT 函式會在所有架構上具有內建形式：
 
 |內建|頁首|
 |---------------|------------|

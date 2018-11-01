@@ -1,27 +1,17 @@
 ---
-title: static_cast 運算子 |Microsoft Docs
-ms.custom: ''
+title: static_cast 運算子
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - static_cast_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c60eee337ba565c43217bf6afbcf7d9344337695
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8e39fe7eb0fb9b77a82b305fa2f8186ad4e855a1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090021"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601704"
 ---
 # <a name="staticcast-operator"></a>static_cast 運算子
 
@@ -35,7 +25,7 @@ static_cast <type-id> ( expression )
 
 ## <a name="remarks"></a>備註
 
-標準 C++ 不會利用執行階段類型檢查來確認轉換是否安全。 在 C++/CX 中會執行編譯時期和執行階段檢查。 如需詳細資訊，請參閱 <<c0> [ 轉型](casting.md)。
+標準 C++ 不會利用執行階段類型檢查來確認轉換是否安全。 在 C++/CX 中會執行編譯時期和執行階段檢查。 如需詳細資訊，請參閱 [轉型](casting.md)中定義的介面的私用 C++ 專屬實作。
 
 **Static_cast**運算子可以用於作業，例如將指標轉換成基底類別，衍生類別的指標。 這類轉換不一定一直都是安全的。
 

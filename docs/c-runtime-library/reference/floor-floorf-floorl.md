@@ -1,10 +1,6 @@
 ---
-title: floor、floorf、floorl | Microsoft Docs
-ms.custom: ''
+title: floor、floorf、floorl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - floorf
 - floorl
@@ -27,24 +23,18 @@ f1_keywords:
 - floorl
 - _floorl
 - floorf
-dev_langs:
-- C++
 helpviewer_keywords:
 - floor function
 - floorf function
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83795c9388b3889f99c9283cbffd33755d63fcd8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 050b7ea0eedf07666fa52145eeaf43f8fde2e18b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399419"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647719"
 ---
 # <a name="floor-floorf-floorl"></a>floor、floorf、floorl
 
@@ -77,7 +67,7 @@ long double floorl(
 
 ## <a name="return-value"></a>傳回值
 
-**Floor**函式會傳回表示是否小於或等於最大整數的浮點值*x*。 不會傳回錯誤。
+**Floor**函式會傳回浮點數的值，表示是否小於或等於最大整數*x*。 不會傳回錯誤。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
@@ -87,7 +77,7 @@ long double floorl(
 
 ## <a name="remarks"></a>備註
 
-C + + 允許多載，所以您可以呼叫的多載**floor**採用並傳回**float**和**長** **double**值。 在 C 程式中， **floor**一律採用並傳回**double**。
+C + + 允許多載，因此您可以呼叫多載**floor**採用並傳回**float**並**長** **double**值。 在 C 程式中， **floor**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

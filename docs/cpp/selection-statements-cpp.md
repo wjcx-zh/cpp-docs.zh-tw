@@ -1,26 +1,17 @@
 ---
-title: 選取範圍陳述式 （c + +） |Microsoft Docs
+title: 選擇陳述式 (C++)
 ms.custom: index-page
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - selection statements [C++], syntax
 - selection statements
 ms.assetid: 2ce662fc-5e62-461b-ac31-2c159d8ef33b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c4241621383936c477514bb6881330c514548a81
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 51165a4fa609f79c19b81b7660a23127a7520358
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117697"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50651226"
 ---
 # <a name="selection-statements-c"></a>選擇陳述式 (C++)
 

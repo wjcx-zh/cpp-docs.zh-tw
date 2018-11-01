@@ -1,10 +1,6 @@
 ---
-title: _printf_p、_printf_p_l、_wprintf_p、_wprintf_p_l | Microsoft Docs
-ms.custom: ''
+title: _printf_p、_printf_p_l、_wprintf_p、_wprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _printf_p
 - _wprintf_p
@@ -31,8 +27,6 @@ f1_keywords:
 - _wprintf_p_l
 - _printf_p_l
 - wprintf_p_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - printf_p function
 - printf_p_l function
@@ -45,16 +39,12 @@ helpviewer_keywords:
 - tprintf_p_l function
 - _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 09a66fc0149b33d8fb5fe2d7eab411bf66e8dbdc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c7d798bde3ab68541bdcd64b768275b864694284
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404240"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660354"
 ---
 # <a name="printfp-printfpl-wprintfp-wprintfpl"></a>_printf_p、_printf_p_l、_wprintf_p、_wprintf_p_l
 
@@ -100,18 +90,18 @@ int _wprintf_p_l(
 
 ## <a name="remarks"></a>備註
 
-**_Printf_p**函式格式化並列印一系列字元和值寫入標準輸出資料流**stdout**。 如果引數會遵循*格式*字串*格式*字串必須包含決定輸出格式的引數的規格 (請參閱[printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)).
+**_Printf_p**函式格式化並列印一系列的字元和值寫入標準輸出資料流**stdout**。 如果引數接*格式*字串*格式*字串必須包含決定引數輸出格式的規格 (請參閱[printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)).
 
-之間的差異 **_printf_p**和**printf_s**在於 **_printf_p**支援位置參數，可讓您指定的引數順序格式字串中使用。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
+之間的差異 **_printf_p**並**printf_s**在於 **_printf_p**支援位置參數，可讓您指定的引數的順序格式字串中使用。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-**_wprintf_p**是寬字元版本的 **_printf_p**; 它們的行為即會相同資料流在 ANSI 模式中開啟。 **_printf_p**目前不支援 UNICODE 資料流輸出。
+**_wprintf_p**是寬字元版本 **_printf_p**; 它們的行為完全相同的資料流以 ANSI 模式開啟。 **_printf_p**目前不支援輸出至 UNICODE 資料流。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的執行緒地區設定的地區設定參數。
+使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
 
 > [!IMPORTANT]
 > 確認 *format* 不是使用者定義的字串。
 
-如果*格式*或*引數*是**NULL**，此格式字串包含無效格式化字元，或 **_printf_p**和 **_wprintf_p**函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1 以及設定執行**errno**至**EINVAL**。
+如果*格式*或是*引數*會**NULL**，此格式字串包含無效格式化字元，或 **_printf_p**和 **_wprintf_p**函式叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1 和集執行**errno**要**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -122,12 +112,12 @@ int _wprintf_p_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_printf_p**， **_printf_p_l**|\<stdio.h>|
 |**_wprintf_p**， **_wprintf_p_l**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 應用程式中不支援主控台。 在主控台中，與相關聯的標準資料流控制代碼**stdin**， **stdout**，和**stderr**，必須重新導向之後 C 執行階段函式可以在 UWP 應用程式中使用它們,. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台中，相關聯的標準資料流控制代碼**stdin**， **stdout**，並**stderr**，必須重新導向，C 執行階段函式才能使用它們在 UWP 應用程式. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

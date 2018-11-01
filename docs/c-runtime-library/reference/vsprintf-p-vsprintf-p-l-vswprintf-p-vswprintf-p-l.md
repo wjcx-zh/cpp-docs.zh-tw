@@ -1,10 +1,6 @@
 ---
-title: _vsprintf_p、_vsprintf_p_l、_vswprintf_p、_vswprintf_p_l | Microsoft Docs
-ms.custom: ''
+title: _vsprintf_p、_vsprintf_p_l、_vswprintf_p、_vswprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _vsprintf_p
 - _vswprintf_p
@@ -29,8 +25,6 @@ f1_keywords:
 - vswprintf_p
 - _vsprintf_p
 - vstprintf_p
-dev_langs:
-- C++
 helpviewer_keywords:
 - vstprintf_p_l function
 - _vsprintf_p_l function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - _vsprintf_p function
 - _vstprintf_p_l function
 ms.assetid: 00821c0d-9fee-4d8a-836c-0669cfb11317
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ab2c33301f5746065e46dcba9f166679a330c98f
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 15f368da84eb9cbf8c394a0e9b5eeec2611c3f7f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450875"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628367"
 ---
 # <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p、_vsprintf_p_l、_vswprintf_p、_vswprintf_p_l
 
@@ -114,17 +104,17 @@ int _vswprintf_p_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_vsprintf_p**和 **_vswprintf_p**傳回寫入的字元數，不包括結束的 null 字元或負數值，如果發生輸出錯誤。
+**_vsprintf_p**並 **_vswprintf_p**傳回寫入的字元數，如果發生輸出錯誤，不包括結束的 null 字元或為負值。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式接受引數清單的指標，然後格式化並寫入所指向的記憶體中指定的資料*緩衝區*。
+所有這些函式都會接受引數清單的指標，然後格式化並將寫入指定的資料所指向的記憶體*緩衝區*。
 
-這些函式的不同**vsprintf_s**和**vswprintf_s**僅在於它們支援位置參數。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
+這些函式與差異**vsprintf_s**並**vswprintf_s**僅在於它們支援位置參數。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的執行緒地區設定的地區設定參數。
+使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
 
-如果*緩衝區*或*格式*參數**NULL**指標，如果計數為零，或如果格式字串包含無效格式化字元，不正確的參數已叫用處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1，並設定**errno**至**EINVAL**。
+如果*緩衝區*或是*格式*參數**NULL**指標、 如果計數為零，或如果格式字串包含無效格式化字元，無效的參數會叫用處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1，並設定**errno**要**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -135,7 +125,7 @@ int _vswprintf_p_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
 |**_vsprintf_p**， **_vsprintf_p_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
 |**_vswprintf_p**， **_vswprintf_p_l**|\<stdio.h> 或 \<wchar.h>，以及 \<stdarg.h>|\<varargs.h>*|

@@ -1,10 +1,6 @@
 ---
-title: _ismbbalpha、_ismbbalpha_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbalpha、_ismbbalpha_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbalpha
 - _ismbbalpha_l
@@ -26,24 +22,18 @@ f1_keywords:
 - ismbbalpha_l
 - _ismbbalpha
 - _ismbbalpha_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbbalpha function
 - ismbbalpha_l function
 - _ismbbalpha function
 - _ismbbalpha_l function
 ms.assetid: 8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6fa4708cf4c5c297d5a537728d4e5988f21e21b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c08a92ae0630c977f12deb1d0bd7587f575efd86
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399084"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588665"
 ---
 # <a name="ismbbalpha-ismbbalphal"></a>_ismbbalpha、_ismbbalpha_l
 
@@ -74,11 +64,11 @@ int _ismbbalpha_l(
 
 `isalpha(c) || _ismbbkalnum(c)`
 
-非零代表*c*，或如果不是 0。 **_ismbbalpha**針對任何地區設定相關的字元設定使用目前的地區設定。 **_ismbbalpha_l**是完全相同，不同之處在於它會使用傳入的地區設定。
+為非零值，如*c*，或如果不是 0。 **_ismbbalpha**使用目前的地區設定進行地區設定相關字元的任何設定。 **_ismbbalpha_l**完全相同，不同之處在於它會使用傳入的地區設定。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_ismbbalpha**|\<mbctype.h>|
 |**_ismbbalpha_l**|\<mbctype.h>|

@@ -1,27 +1,17 @@
 ---
-title: 編譯器錯誤 C2758 |Microsoft Docs
-ms.custom: ''
+title: 編譯器錯誤 C2758
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2758
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2758
 ms.assetid: 1d273034-194c-4926-9869-142d1b219cbe
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6ffa6d33dba70a463d789f3b0f016dc1d157eb65
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c3a86b8b8c7f122929a52221d4f01a17c50395be
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46072923"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618022"
 ---
 # <a name="compiler-error-c2758"></a>編譯器錯誤 C2758
 

@@ -1,10 +1,6 @@
 ---
-title: _umask | Microsoft Docs
-ms.custom: ''
+title: _umask
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _umask
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _umask
-dev_langs:
-- C++
 helpviewer_keywords:
 - masks, file-permission-setting
 - _umask function
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce3053bfb19cc81dff15d41d1b5bc6d405da619f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f51e2c19933953eb4910cdeb5e1ec50b7387bd59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412611"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677158"
 ---
 # <a name="umask"></a>_umask
 
@@ -60,11 +50,11 @@ int _umask( int pmode );
 
 ## <a name="return-value"></a>傳回值
 
-**_umask**傳回先前的值*pmode*。 不會傳回錯誤。
+**_umask**會傳回先前的值*pmode*。 不會傳回錯誤。
 
 ## <a name="remarks"></a>備註
 
-**_Umask**函式所指定的模式會將目前的處理序的檔案權限遮罩*pmode*。 建立的新檔案的權限設定會修改檔案權限遮罩 **_creat**， **_open**，或 **_sopen**。 如果遮罩中的位元為 1，則會將檔案的要求權限值中的對應位元設定為 0 (不允許)。 如果遮罩中的位元為 0，對應的位元會保持不變。 新檔案的權限設定要一直到第一次關閉檔案時才會設定。
+**_Umask**函式所指定的模式會設定目前的處理序的檔案權限遮罩*pmode*。 將檔案權限遮罩會修改所建立的新檔案的權限設定 **_creat**， **_open**，或 **_sopen**。 如果遮罩中的位元為 1，則會將檔案的要求權限值中的對應位元設定為 0 (不允許)。 如果遮罩中的位元為 0，對應的位元會保持不變。 新檔案的權限設定要一直到第一次關閉檔案時才會設定。
 
 整數運算式*pmode*包含一或兩個下列資訊清單常數，SYS\STAT 中定義。H:
 
@@ -74,13 +64,13 @@ int _umask( int pmode );
 **_S_IREAD**|允許讀取。
 **_S_IREAD** \| **_S_IWRITE**|允許讀取和寫入。
 
-當兩個常數時，其是否加入位元 OR 運算子 ( **|** )。 如果*pmode*引數是 **_S_IREAD**，不允許讀取 （檔案是唯寫）。 如果*pmode*引數是 **_S_IWRITE**，不允許寫入 （檔案是唯讀的）。 比方說，如果遮罩中設定了寫入位元，任何新的檔案將會是唯讀。 請注意，在 MS-DOS 和 Windows 作業系統中，所有檔案皆為可讀取，不可能授與僅限寫入的權限。 因此，會設定位元讀取 **_umask**不有任何影響檔案的模式。
+它們兩個常數指定時，會使用位元 OR 運算子結合 ( **|** )。 如果*pmode*引數是 **_S_IREAD**，則不允許讀取 （此檔案是唯寫）。 如果*pmode*引數是 **_S_IWRITE**，則不允許寫入 （此檔案是唯讀）。 比方說，如果遮罩中設定了寫入位元，任何新的檔案將會是唯讀。 請注意，在 MS-DOS 和 Windows 作業系統中，所有檔案皆為可讀取，不可能授與僅限寫入的權限。 因此，設定讀取位元 **_umask**對檔案的模式沒有任何作用。
 
-如果*pmode*不是組合資訊清單常數之一，或納入另外組的常數，此函式會直接略過這些。
+如果*pmode*不是其中一個資訊清單常數的組合或包含另一組常數，此函式只會忽略這些。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_umask**|\<io.h>、\<sys/stat.h>、\<sys/types.h>|
 

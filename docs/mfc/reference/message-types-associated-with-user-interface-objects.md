@@ -1,27 +1,17 @@
 ---
-title: 訊息與使用者介面物件相關聯的類型 |Microsoft Docs
-ms.custom: ''
+title: 與使用者介面物件關聯的訊息類型
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.uiobject.msgs
-dev_langs:
-- C++
 helpviewer_keywords:
 - message types and user interface objects [MFC]
 ms.assetid: 681ee1a7-f6e6-4ea0-9fc6-1fb53a35516e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bd89f19547eef8ade9d23a6176ea74cb49586857
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 42584a6514a48e7c02d98e1b619c06a11a8f277b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860286"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641684"
 ---
 # <a name="message-types-associated-with-user-interface-objects"></a>與使用者介面物件關聯的訊息類型
 
@@ -39,7 +29,7 @@ ms.locfileid: "48860286"
 
 [將訊息對應到函式](../../mfc/reference/mapping-messages-to-functions.md)<br/>
 [使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[加入類別](../../ide/adding-a-class-visual-cpp.md)<br/>
+[新增類別](../../ide/adding-a-class-visual-cpp.md)<br/>
 [新增成員函式](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [新增成員變數](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [覆寫虛擬函式](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>

@@ -1,10 +1,6 @@
 ---
-title: memcpy_s、wmemcpy_s | Microsoft Docs
-ms.custom: ''
+title: memcpy_s、wmemcpy_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - memcpy_s
 - wmemcpy_s
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - wmemcpy_s
 - memcpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12bf97e596a7cb4e3befa4c0633a8ef2df29a6d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7d6cc7abdd5f343bf1482f534f5112eabbc96b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403790"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607151"
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s、wmemcpy_s
 
@@ -82,22 +72,22 @@ memcpy_s 和寬字元 (wchar_t) 的 wmemcpy_s 之目的緩衝區大小 (以位�
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*dest*|*destSize*|*src*|*count*|傳回值|內容*目的地*|
+|*dest*|*destSize*|*src*|*count*|傳回值|內容*dest*|
 |------------|----------------|-----------|---|------------------|------------------------|
-|任何|任何|任何|0|0|未修改|
-|**NULL**|任何|任何|非零|**EINVAL**|未修改|
-|任何|任何|**NULL**|非零|**EINVAL**|*目的地*已清空|
-|任何|< *計數*|任何|非零|**ERANGE**|*目的地*已清空|
+|any|any|any|0|0|未修改|
+|**NULL**|any|any|非零|**EINVAL**|未修改|
+|any|any|**NULL**|非零|**EINVAL**|*dest*歸零|
+|any|< *計數*|any|非零|**ERANGE**|*dest*歸零|
 
 ## <a name="remarks"></a>備註
 
-**memcpy_s**複本*計數*位元組從*src*至*目的地*;**wmemcpy_s**複本*計數*寬字元 （兩個位元組為單位）。 如果來源和目的地重疊，行為**memcpy_s**是未定義。 使用**memmove_s**處理重疊的區域。
+**memcpy_s**複本*計數*位元組*src*來*dest*;**wmemcpy_s**複本*計數*寬字元 （兩個位元組為單位）。 如果來源和目的地重疊，行為**memcpy_s**是未定義。 使用**memmove_s**處理重疊的區域。
 
-這些函式會驗證它們的參數。 如果*計數*為非零和*目的地*或*src*為 null 指標，或*destSize*小於*計數*，這些函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函數會傳回**EINVAL**或**為 ERANGE**並設定**errno**的傳回值。
+這些函式會驗證它們的參數。 如果*計數*為非零並*dest*或是*src*為 null 指標，或*destSize*小於*計數*，這些函式叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則這些函式會傳回**EINVAL**或是**ERANGE**並設定**errno**的傳回值。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**memcpy_s**|\<memory.h> 或 \<string.h>|
 |**wmemcpy_s**|\<wchar.h>|

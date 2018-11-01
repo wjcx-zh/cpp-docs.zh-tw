@@ -1,35 +1,25 @@
 ---
-title: 從 Typelib 精靈加入類別 |Microsoft Docs
-ms.custom: ''
+title: 從 Typelib 加入類別精靈
 ms.date: 10/03/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.typelib
-dev_langs:
-- C++
 helpviewer_keywords:
 - Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a54948fd98b5a5445aa1fdfafcf0fcd015bbf08
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: c0423ac06aa46b65c1fb0ffb3935d4bb54821ee9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250376"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50654333"
 ---
 # <a name="add-class-from-typelib-wizard"></a>從 Typelib 加入類別精靈
 
 您可以使用此精靈，從可用的型別程式庫加入 MFC 類別。 精靈會建立從所選的型別程式庫加入每個介面的類別。
 
 > [!WARNING]
-> 在 Visual Studio 2017 版本 15.9 這個程式碼精靈已被取代，並將 Visual Studio 的未來版本中移除。 此精靈很少使用。 ATL 和 MFC 的一般支援不會受到此精靈的移除。 如果您想要分享您對這個已被取代的意見，請完成[這份問卷](https://www.surveymonkey.com/r/QDWKKCN)。 我們重視您的意見反應。
+> 在 Visual Studio 2017 15.9 版中，此程式碼精靈已淘汰，並且將從 Visual Studio 的未來版本中移除。 使用者很少用到這個精靈。 移除此精靈不會影響 ATL 和 MFC 的一般支援。 如果您想要分享關於此項淘汰的意見反應，請填寫[此問卷](https://www.surveymonkey.com/r/QDWKKCN)。 我們非常重視您的意見反應。
 
 - **加入類別來源**
 
@@ -69,7 +59,7 @@ ms.locfileid: "48250376"
 
 - **類別**
 
-   指定在 [產生的類別] 方塊中選取之類別的名稱 (當您按一下 [完成] 時，精靈會新增此名稱)。 您可以編輯中的名稱**類別** 方塊中。
+   指定在 [產生的類別] 方塊中選取之類別的名稱 (當您按一下 [完成] 時，精靈會新增此名稱)。 您可以在 [類別] 方塊中編輯名稱。
 
 - **檔案**
 

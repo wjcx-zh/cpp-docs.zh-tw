@@ -1,10 +1,6 @@
 ---
-title: cosh、 coshf、 coshl |Microsoft 文件
-ms.custom: ''
+title: cosh、 coshf、 coshl
 ms.date: 04/11/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cosh
 - coshf
@@ -26,28 +22,22 @@ f1_keywords:
 - cosh
 - coshf
 - coshl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cosh function
 - coshf function
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d77bb1d1b8f055bb4fe11d4c44c48fb3bf3be535
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f55e084e760cb6d04dbe7ec4fefb5e2ac1d79fd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395467"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609530"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh、 coshf、 coshl
 
-計算雙曲線餘弦。
+計算雙曲餘弦值。
 
 ## <a name="syntax"></a>語法
 
@@ -71,20 +61,20 @@ long double cosh( long double x );  // C++ only
 
 雙曲線餘弦*x*。
 
-根據預設，如果結果太大**cosh**， **coshf**，或**coshl**呼叫時，此函數會傳回**HUGE_VAL**並設定**errno**至**為 ERANGE**。
+根據預設，如果結果太大而無法在**cosh**， **coshf**，或**coshl**呼叫，則函數會傳回**HUGE_VAL**並設定**errno**要**ERANGE**。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± **QNAN**， **IND**|無|**_DOMAIN**|
-|*x* ≥ 7.104760e + 002|**精確**+**溢位**|**溢位**|
+|常见**QNAN**， **IND**|無|**（_D)**|
+|*x* ≥ 7.104760e+002|**精確**+**溢位**|**溢位**|
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**cosh**採用並傳回**float**或**長** **double**值。 在 C 程式中， **cosh**一律採用並傳回**double**。
+因為 c + + 允許多載，您可以呼叫多載**cosh**採用並傳回**float**或是**長** **double**值。 在 C 程式中， **cosh**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭 (C)|必要的標頭 (C++)|
+|常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
 |-------------|---------------------|-|
 |**coshf**， **cosl**， **coshl**|\<math.h>|\<cmath> 或 \<math.h>|
 

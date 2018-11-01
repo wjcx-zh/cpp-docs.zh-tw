@@ -1,10 +1,6 @@
 ---
-title: isupper、_isupper_l、iswupper、_iswupper_l | Microsoft Docs
-ms.custom: ''
+title: isupper、_isupper_l、iswupper、_iswupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - isupper
 - iswupper
@@ -27,8 +23,6 @@ f1_keywords:
 - isupper
 - _istupper
 - iswupper
-dev_langs:
-- C++
 helpviewer_keywords:
 - istupper function
 - iswupper function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _iswupper_l function
 - isupper function
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d58fc8e10fbc533787fe0e7b99194e282bb906f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 498644fc2de8a687e2b9b63a88591385055db6c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402097"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588431"
 ---
 # <a name="isupper-isupperl-iswupper-iswupperl"></a>isupper、_isupper_l、iswupper、_iswupper_l
 
@@ -83,11 +73,11 @@ int _iwsupper_l(
 
 ## <a name="return-value"></a>傳回值
 
-每個這些常式傳回非零，如果*c*是大寫字母開頭的特定表示法。 **isupper**傳回非零值，如果*c*是大寫字元 (A-Z)。 **iswupper**傳回非零值，如果*c*寬字元都會對應到大寫的字母，或如果*c*的不是寬字元實作定義字元集的其中一個**iswcntrl**， **iswdigit**， **iswpunct**，或**iswspace**為非零值。 這些常式都會傳回 0，如果*c*不符合測試條件。
+這些常式傳回非零值如果*c*是大寫字母的特定表示法。 **isupper**傳回非零值，如果*c*是大寫字元 (A-Z)。 **iswupper**傳回非零值，如果*c*是寬字元對應至一個大寫字母，或是如果*c*均為寬字元實作定義字元集的其中一個**iswcntrl**， **iswdigit**， **iswpunct**，或**iswspace**為非零值。 這些常式都會傳回 0，如果*c*不符合測試條件。
 
-有這些函式的版本 **_l**尾碼而不是目前的地區設定使用傳入的地區設定，地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+有這些函式的版本 **_l**後置詞使用傳入的地區設定而不是目前的地區設定其地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-行為**isupper**和 **_isupper_l**是未定義的如果*c*不 EOF 或 0 到 0xFF，（含) 範圍中。 當使用 CRT 偵錯程式庫和*c*不是其中一個函式產生，這些值的判斷提示。
+行為**isupper**並 **_isupper_l**如果是未定義*c*不是 EOF 或介於 0 到 0xFF 的內含。 使用偵錯 CRT 程式庫時， *c*是不是其中一個值，函式會引發判斷提示。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -98,7 +88,7 @@ int _iwsupper_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**isupper**|\<ctype.h>|
 |**_isupper_l**|\<ctype.h>|

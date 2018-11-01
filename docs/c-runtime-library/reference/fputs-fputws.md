@@ -1,10 +1,6 @@
 ---
-title: fputs、fputws | Microsoft Docs
-ms.custom: ''
+title: fputs、fputws
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fputs
 - fputws
@@ -25,8 +21,6 @@ f1_keywords:
 - fputs
 - fputws
 - _fputts
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, writing strings to
 - fputws function
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - fputs function
 - fputts function
 ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 94a8a872d88d42b2e76c5171b1adb22900b66436
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f7c7cff3300ae28717062a41aebd9e19c0cb5e0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400173"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574846"
 ---
 # <a name="fputs-fputws"></a>fputs、fputws
 
@@ -72,15 +62,15 @@ int fputws(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，則所有這些函式都會傳回非負值。 發生錯誤時， **fputs**和**fputws**傳回**EOF**。 如果*str*或*資料流*為 null 指標，這些函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**至**EINVAL**然後**fputs**傳回**EOF**，和**fputws**傳回**WEOF**。
+如果成功，則所有這些函式都會傳回非負值。 發生錯誤時， **fputs**並**fputws**傳回**EOF**。 如果*str*或是*資料流*為 null 指標，這些函式叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**要**EINVAL** ，然後**fputs**傳回**EOF**，和**fputws**會傳回**WEOF**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式複製*str*輸出*資料流*在目前的位置。 **fputws**寬字元引數會複製*str*至*資料流*為多位元組字元字串或寬字元字串是否根據*資料流*會分別在文字模式或二進位模式中中, 開啟。 任一函式都不會複製終止 Null 字元。
+所有這些函式都會複製*str*輸出*串流*目前的位置。 **fputws**複製的寬字元引數*str*要*串流*為多位元組字元字串或寬字元字串，根據*資料流*分別以文字模式還是二進位模式中，開啟。 任一函式都不會複製終止 Null 字元。
 
-如果資料流是以 ANSI 模式開啟，則這兩個函式的行為相同。 **fputs**目前不支援輸出到 UNICODE 資料流。
+如果資料流是以 ANSI 模式開啟，則這兩個函式的行為相同。 **fputs**目前不支援輸出至 UNICODE 資料流。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -95,7 +85,7 @@ int fputws(
 |**fputs**|\<stdio.h>|
 |**fputws**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台與相關聯的標準資料流控制代碼 —**stdin**， **stdout**，和**stderr**-C 執行階段函式才能使用它們在 UWP 應用程式必須重新導向. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台與相關聯的標準資料流控制代碼 —**stdin**， **stdout**，並**stderr**— 必須重新導向，C 執行階段函式才能使用它們在 UWP 應用程式. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

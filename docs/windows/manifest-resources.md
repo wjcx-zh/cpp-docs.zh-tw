@@ -1,27 +1,16 @@
 ---
-title: 資訊清單資源 （c + +） |Microsoft Docs
-ms.custom: ''
+title: 資訊清單資源 （c + +）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - manifest resources [C++]
 - resources [C++], manifest
 ms.assetid: 8615334c-22a0-44c0-93e0-5924528c9917
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2da93d1baaf95799c7ef68d6cc854d554fbe6c47
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 081fd12a86c31973c7856ca7b9f3fcb129e2eb81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429561"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578278"
 ---
 # <a name="manifest-resources-c"></a>資訊清單資源 （c + +）
 
@@ -43,7 +32,7 @@ ms.locfileid: "46429561"
 </dependency>
 ```
 
-Windows XP 或 Windows Vista 應用程式資訊清單資源不只會指定應用程式使用最新版本的 Windows 通用控制項 (v6.0，如上所示)，但它也支援[Syslink 控制項](/windows/desktop/Controls/syslink-overview)。
+對於 Windows XP 或 Windows Vista 應用程式，資訊清單資源不只會指定應用程式使用最新版的 Windows 通用控制項 (v6.0，如上所示)，也會支援 [Syslink 控制項](/windows/desktop/Controls/syslink-overview)。
 
 若要檢視版本和類型資訊清單資源內含的資訊，您可以在 Visual Studio 文字編輯器或 XML 檢視器中開啟檔案。 如需詳細資訊，請參閱 [在 Visual Studio 文字編輯器中開啟資訊清單資源](../windows/how-to-open-a-manifest-resource.md)。
 

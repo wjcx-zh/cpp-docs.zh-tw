@@ -1,10 +1,6 @@
 ---
-title: _getpid | Microsoft Docs
-ms.custom: ''
+title: _getpid
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getpid
 apilocation:
@@ -22,30 +18,24 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _getpid
-dev_langs:
-- C++
 helpviewer_keywords:
 - getpid function
 - _getpid function
 - process identification numbers
 ms.assetid: d3e13bae-9a0c-4f33-86d3-ec9df9519285
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f93f6c1c70618b300e8bc05b8e3a15104de6fa6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c110fb7b6d64be281fb3779c7e03f2c4145f4ce8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396744"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621074"
 ---
 # <a name="getpid"></a>_getpid
 
 取得處理序識別碼。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -59,11 +49,11 @@ int _getpid( void );
 
 ## <a name="remarks"></a>備註
 
-**_Getpid**函式會從系統取得處理序識別碼。 處理序 ID 可唯一識別呼叫處理序。
+**_Getpid**函式會從系統取得的處理序識別碼。 處理序 ID 可唯一識別呼叫處理序。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_getpid**|\<process.h>|
 

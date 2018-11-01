@@ -1,11 +1,6 @@
 ---
-title: csin、csinf、csinl | Microsoft Docs
-ms.custom: ''
+title: csin、csinf、csinl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - csin
 - csinf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/csin
 - complex/csinf
 - complex/csinl
-dev_langs:
-- C++
 helpviewer_keywords:
 - csin function
 - csinf function
 - csinl function
 ms.assetid: 3ed475e8-9aae-42ba-a25c-7ae656a0fd4d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 572220af53fe937dd0d5306f0e0e7d287b1d41b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 66483c9121750c3333850d6244704b89b8893cad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397310"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50633489"
 ---
 # <a name="csin-csinf-csinl"></a>csin、csinf、csinl
 
@@ -79,15 +68,15 @@ _Lcomplex csinl(
 
 ## <a name="return-value"></a>傳回值
 
-正弦函數*z*，以弧度為單位。
+正弦*z*，以弧度為單位。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**csin**採用並傳回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程式中， **csin**一律採用並傳回 **_Dcomplex**值。
+因為 c + + 允許多載，您可以呼叫多載**csin**採用並傳回 **_Fcomplex**並 **_Lcomplex**值。 在 C 程式中， **csin**一律採用並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
-|常式|C 標頭|C++ 標頭|
+|常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
 |**csin**， **csinf**， **csinl**|\<complex.h>|\<ccomplex>|
 

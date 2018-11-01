@@ -1,28 +1,19 @@
 ---
-title: 逐步解說： 編譯命令列上的原生 c + + 程式 |Microsoft Docs
+title: 逐步解說：在命令列上編譯原生 C++ 程式
 ms.custom: conceptual
 ms.date: 09/24/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - native code [C++]
 - Visual C++, native code
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 122d33be06755b92a17db62237787151a0811898
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 2d02560f9a76ee6f7a2aa7170f2bca6a95fe3ce8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860403"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602250"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>逐步解說：在命令列上編譯原生 C++ 程式
 
@@ -160,7 +151,7 @@ Build Tools for Visual Studio 會安裝僅命令列編譯器、 工具和您要�
 
 `cl /EHsc file1.cpp file2.cpp file3.cpp`
 
-`/EHsc`命令列選項會指示編譯器啟用 c + + 例外狀況處理。 如需詳細資訊，請參閱 [/EH (例外狀況處理模型)](../build/reference/eh-exception-handling-model.md)。
+`/EHsc` 命令列選項會指示編譯器啟用 C++ 例外狀況處理。 如需詳細資訊，請參閱 [/EH (例外狀況處理模型)](../build/reference/eh-exception-handling-model.md)。
 
 當您提供其他原始程式檔時，編譯器會使用第一個輸入的檔來建立程式名稱。 在此情況下，它會輸出稱為 file1.exe 程式。 若要將名稱變更為 program1.exe，新增[/out](../build/reference/out-output-file-name.md)連結器選項：
 

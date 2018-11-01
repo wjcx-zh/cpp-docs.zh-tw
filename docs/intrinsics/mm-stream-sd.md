@@ -1,28 +1,18 @@
 ---
-title: _mm_stream_sd |Microsoft Docs
-ms.custom: ''
+title: _mm_stream_sd
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _mm_stream_sd
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mm_stream_sd intrinsic
 - movntsd instruction
 ms.assetid: 2b4bea5e-e64e-45fa-9afc-88a2e4b82cfc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b965c1882e6126f34e9e81c99c950e072246db97
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d85197aca4c277e8a5ebdf5119c0a63d23f479f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437597"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648652"
 ---
 # <a name="mmstreamsd"></a>_mm_stream_sd
 
@@ -44,7 +34,7 @@ void _mm_stream_sd(
 *目的地*<br/>
 [out]將在其中寫入來源資料的位置指標。
 
-*Source*<br/>
+*來源*<br/>
 [in]128 位元值，包含`double`以寫入下 64 位元的值...
 
 ## <a name="return-value"></a>傳回值

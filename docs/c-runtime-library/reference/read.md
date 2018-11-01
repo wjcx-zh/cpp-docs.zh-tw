@@ -1,10 +1,6 @@
 ---
-title: _read | Microsoft Docs
-ms.custom: ''
+title: _read
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _read
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _read
-dev_langs:
-- C++
 helpviewer_keywords:
 - data [CRT]
 - _read function
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2c67ce8ac0e754bf3003b23c56cd1d3f428be903
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c43cbbc2681433bda02038ae73a827fad904835
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405805"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658434"
 ---
 # <a name="read"></a>_read
 
@@ -70,23 +60,23 @@ int _read(
 
 ## <a name="return-value"></a>傳回值
 
-**閱讀**傳回讀取位元組數，這可能會小於比*計數*如果少於*計數*位元組保留在檔案中，或如果在文字模式中開啟檔案，在此情況下每個歸位字元換行字元組 '\r\n' 會取代單一換行字元 '\n'。 在傳回值中只會計算單一換行字元。 這種取代不會影響檔案指標。
+**_read**傳回的讀取，這可能會小於的位元組數目比*計數*如果少於*計數*檔案中剩餘的位元組，或如果以文字模式開啟檔案，在此情況下每個歸位字元換行字元組 '\r\n' 會取代單一換行字元 '\n'。 在傳回值中只會計算單一換行字元。 這種取代不會影響檔案指標。
 
-如果函式嘗試讀取檔案的結尾，則會傳回 0。 如果*fd*不是正確，檔案不是開啟可供讀取，或檔案鎖定、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1 以及設定執行**errno**至**EBADF**。
+如果函式嘗試讀取檔案的結尾，則會傳回 0。 如果*fd*不是合法檔案不是開啟可供讀取，或檔案已鎖定，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1 和集執行**errno**要**EBADF**。
 
-如果 *buffer* 為 **NULL**，則會叫用無效的參數處理常式。 如果允許繼續執行，此函數會傳回-1 和**errno**設**EINVAL**。
+如果 *buffer* 為 **NULL**，則會叫用無效的參數處理常式。 如果允許繼續執行，此函數會傳回-1 及**errno**設為**EINVAL**。
 
-如需此傳回碼與其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如需此函式與其他傳回碼的詳細資訊，請參閱 [_doserrno, errno、_sys_errlist 及 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**閱讀**函式會讀取最多*計數*位元組*緩衝區*與相關聯的檔案從*fd*。 讀取作業會從與指定檔案相關之檔案指標的目前位置開始。 讀取作業之後，檔案指標會指向下一個未讀取的字元。
+**_Read**函式讀取的最大*計數*位元組*緩衝區*從 與相關聯的檔案*fd*。 讀取作業會從與指定檔案相關之檔案指標的目前位置開始。 讀取作業之後，檔案指標會指向下一個未讀取的字元。
 
-如果在文字模式中開啟檔案，在讀取時就會終止**閱讀**遇到 CTRL + Z 字元視為檔案結尾指標。 使用 [_lseek](lseek-lseeki64.md) 可清除檔案結尾指標。
+如果以文字模式開啟檔案，在讀取時就會終止 **_read**遇到 CTRL + Z 字元視為檔案結尾指標。 使用 [_lseek](lseek-lseeki64.md) 可清除檔案結尾指標。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_read**|\<io.h>|
 

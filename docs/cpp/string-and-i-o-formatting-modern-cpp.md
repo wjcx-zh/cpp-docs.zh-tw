@@ -1,49 +1,40 @@
 ---
-title: 字串和 I-o 格式化 （現代 c + +） |Microsoft Docs
-ms.custom: ''
+title: 字串和 I-o 格式化 （現代 c + +）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
 ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8d73e42beb086f3db3e6a6fd060048fcb700156c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0cc0c84a6e4ffac3e6a80425039bfcc1db567911
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46099820"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631838"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>字串和 I/O 格式化 (現代 C++)
 
 C + + [iostreams](../standard-library/iostream.md)會進行格式化的字串 I/O。 例如，下列程式碼示範如何設定 cout 將整數輸出以十六進位方式，先儲存目前狀態和重新設定，之後，因為一旦狀態格式傳遞至 cout，它會保持這種方式，直到變更為止，不只是針對同一行格式化程式碼。
 
 ```cpp
-#include <iostream>
-#include <iomanip>
+#include <iostream>
+#include <iomanip>
 
-using namespace std;
+using namespace std;
 
-int main() 
+int main() 
 {
-    ios state(nullptr);
+    ios state(nullptr);
 
-    cout << "The answer in decimal is: " << 42 << endl;
+    cout << "The answer in decimal is: " << 42 << endl;
 
-    state.copyfmt(cout); // save current formatting
-    cout << "In hex: 0x" // now load up a bunch of formatting modifiers
-        << hex 
-        << uppercase 
-        << setw(8) 
-        << setfill('0') 
-        << 42            // the actual value we wanted to print out
-        << endl;
-    cout.copyfmt(state); // restore previous formatting
+    state.copyfmt(cout); // save current formatting
+    cout << "In hex: 0x" // now load up a bunch of formatting modifiers
+        << hex 
+        << uppercase 
+        << setw(8) 
+        << setfill('0') 
+        << 42            // the actual value we wanted to print out
+        << endl;
+    cout.copyfmt(state); // restore previous formatting
 }
 ```
 
@@ -62,13 +53,13 @@ Boost.Format 的一些優點包括：
 下列程式碼會示範部分提升格式化功能。
 
 ```cpp
-    string s = str( format("%2% %2% %1%\n") % "world" % "hello" );
-    // s contains "hello hello world"  
+    string s = str( format("%2% %2% %1%\n") % "world" % "hello" );
+    // s contains "hello hello world"  
 
-    for( auto i = 0; i < names.size(); ++i )
-        cout << format("%1% %2% %|40t|%3%\n") % first[i] % last[i] % tel[i];
-    // Georges Benjamin Clemenceau             +33 (0) 123 456 789
-    // Jean de Lattre de Tassigny              +33 (0) 987 654 321
+    for( auto i = 0; i < names.size(); ++i )
+        cout << format("%1% %2% %|40t|%3%\n") % first[i] % last[i] % tel[i];
+    // Georges Benjamin Clemenceau             +33 (0) 123 456 789
+    // Jean de Lattre de Tassigny              +33 (0) 987 654 321
 ```
 
 ## <a name="see-also"></a>另請參閱

@@ -1,10 +1,6 @@
 ---
-title: _lfind | Microsoft Docs
-ms.custom: ''
+title: _lfind
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lfind
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - lfind
 - _lfind
-dev_langs:
-- C++
 helpviewer_keywords:
 - linear searching
 - lfind function
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0c3bfc7b6abe5f0d5902a02c88e7d5ba16cb24ab
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 1508d54d6b2f2566e4aee3afef02af45b28e4f48
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450646"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579162"
 ---
 # <a name="lfind"></a>_lfind
 
@@ -79,17 +69,17 @@ void *_lfind(
 
 ## <a name="return-value"></a>傳回值
 
-如果找到機碼， **_lfind**傳回的陣列元素的指標*基底*符合*金鑰*。 如果找不到索引鍵， **_lfind**傳回**NULL**。
+如果找到索引鍵，則 **_lfind**傳回的項目處之陣列的指標*基底*符合*金鑰*。 如果找不到索引鍵， **_lfind**會傳回**NULL**。
 
 ## <a name="remarks"></a>備註
 
-**_Lfind**函式會執行值的線性搜尋*金鑰*陣列中的*數目*項目，每個*寬度*位元組。 不同於**bsearch**， **_lfind**不需要排序的陣列。 *基底*引數是要搜尋之陣列的基底指標。 *比較*引數是指標，以使用者提供的常式會比較兩個陣列項目，並會傳回值，指定其關聯性。 **_lfind**呼叫*比較*在搜尋期間，將指標傳遞至兩個陣列項目，每次呼叫常式的一或多次。 *比較*常式必須比較項目，並再傳回則為非零 （表示元素為不同） 或 0 （表示項目完全相同）。
+**_Lfind**函式會執行值的線性搜尋*金鑰*陣列中的*號碼*項目，每個*寬度*位元組。 不同於**bsearch**， **_lfind**不需要排序陣列。 *基底*引數是要搜尋之陣列的基底的指標。 *比較*引數是使用者所提供的常式比較兩個陣列元素，則會傳回值，指定其關聯性的指標。 **_lfind**呼叫*比較*在搜尋期間，將指標傳遞至兩個陣列元素中，每次呼叫的常式一或多次。 *比較*常式必須比較項目，然後傳回非零 （表示元素不同） 或 0 （表示元素完全相同）。
 
-這個函式會驗證它的參數。 如果*比較*，*金鑰*或*數目*是**NULL**，或如果*基底*是**NULL**和*數目*非零，或如果*寬度*小於零，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL**並傳回函式**NULL**。
+這個函式會驗證它的參數。 如果*比較*，*金鑰*或*號碼*是**NULL**，或如果*基底*是**NULL**及*數字*為非零值，或如果*寬度*小於零，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為**EINVAL**和函式會傳回**NULL**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_lfind**|\<search.h>|
 

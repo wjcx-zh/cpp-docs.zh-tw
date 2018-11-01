@@ -1,17 +1,11 @@
 ---
-title: 執行 LIB |Microsoft Docs
-ms.custom: ''
+title: 執行 LIB
 ms.date: 09/28/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.TargetMachine
 - Lib
 - VC.Project.VCLibrarianTool.PrintProgress
 - VC.Project.VCLibrarianTool.SuppressStartupBanner
-dev_langs:
-- C++
 helpviewer_keywords:
 - -MACHINE target platform option
 - command files, LIB
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5d8a221a829d3cded8d974c608bdd27edab07f60
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 73a259faa57d74fbe535bfa329dfc2a39cb6bbad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235411"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656972"
 ---
 # <a name="running-lib"></a>執行 LIB
 
@@ -86,7 +76,7 @@ ms.locfileid: "48235411"
 
 在建置過程中，LIB 的輸出會傳送至連結。 連結都有它自己的個別 **/LTCG**用來執行各種最佳化，包括整個程式最佳化 」 和 「 特性指引最佳化 (PGO) 檢測選項。 如需 [連結] 選項的詳細資訊，請參閱[/LTCG](ltcg-link-time-code-generation.md)。
 
-> **/ 電腦**
+> **/MACHINE**
 
 指定程式的目標平台。 通常，您不需要指定 /MACHINE。 LIB 會推斷.obj 檔中的機器類型。 不過，在某些情況下，LIB 無法判斷電腦類型，而且會發出錯誤訊息。 如果發生這類錯誤，請指定 /MACHINE。 在 /EXTRACT 模式中，此選項是用於驗證。 使用`lib /?`在命令列以查看可用的機器類型。
 

@@ -1,11 +1,6 @@
 ---
-title: feupdateenv | Microsoft Docs
-ms.custom: ''
+title: feupdateenv
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feupdateenv
 apilocation:
@@ -23,21 +18,15 @@ apitype: HeaderDef
 f1_keywords:
 - feupdateenv
 - fenv/feupdateenv
-dev_langs:
-- C++
 helpviewer_keywords:
 - feupdateenv function
 ms.assetid: 3d170042-dfd5-4e4f-a55f-038cf2296cc9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d88284717aec7a19c936d7ed8d87da96006d7ed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6d553d6899f55f5bdfb3ff313e88abfcb56ab4ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397590"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605089"
 ---
 # <a name="feupdateenv"></a>feupdateenv
 
@@ -54,7 +43,7 @@ int feupdateenv(
 ### <a name="parameters"></a>參數
 
 *penv*<br/>
-指標**fenv_t**物件，其中包含所設定的浮點數的環境，藉由呼叫[fegetenv](fegetenv1.md)或[feholdexcept](feholdexcept2.md)。 您也可以使用 FE_DFL_ENV 巨集指定預設啟動浮點環境。
+指標**fenv_t**物件，其中包含所設定的浮點環境，藉由呼叫[fegetenv](fegetenv1.md)或是[feholdexcept](feholdexcept2.md)。 您也可以使用 FE_DFL_ENV 巨集指定預設啟動浮點環境。
 
 ## <a name="return-value"></a>傳回值
 
@@ -62,7 +51,7 @@ int feupdateenv(
 
 ## <a name="remarks"></a>備註
 
-**Feupdateenv**函式會執行多個動作。 首先，它會將目前引發的浮點例外狀況狀態旗標儲存在自動儲存體中。 然後，它會設定目前的浮點環境中儲存的值從**fenv_t**指向的物件*penv*。 如果*penv*不**FE_DFL_ENV**或未指向有效**fenv_t**物件，後續的行為是未定義。 最後， **feupdateenv**引發儲存在本機的浮點例外狀況。
+**Feupdateenv**函式會執行多個動作。 首先，它會將目前引發的浮點例外狀況狀態旗標儲存在自動儲存體中。 然後，它會設定目前的浮點環境中儲存的值從**fenv_t**指向的物件*penv*。 如果*penv*不是**FE_DFL_ENV**或不是指向有效**fenv_t**物件，不定義後續行為。 最後， **feupdateenv**引發儲存在本機的浮點例外狀況。
 
 若要使用此函式，您必須在呼叫之前使用 `#pragma fenv_access(on)` 指示詞，以關閉可能會妨礙存取的浮點最佳化作業。 如需詳細資訊，請參閱 [fenv_access](../../preprocessor/fenv-access.md)。
 

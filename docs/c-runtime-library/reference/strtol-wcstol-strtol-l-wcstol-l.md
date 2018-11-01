@@ -1,10 +1,6 @@
 ---
-title: strtol、wcstol、_strtol_l、_wcstol_l | Microsoft Docs
-ms.custom: ''
+title: strtol、wcstol、_strtol_l、_wcstol_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strtol
 - wcstol
@@ -30,8 +26,6 @@ f1_keywords:
 - wcstol
 - _strtol_l
 - _tcstol_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcstol function
 - wcstol_l function
@@ -43,16 +37,12 @@ helpviewer_keywords:
 - _strtol_l function
 - strtol function
 ms.assetid: 1787c96a-f283-4a83-9325-33cfc1c7e240
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 70f854e9bb78932f5d9fc102c835476e6b52d68b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5aa69a44a2ce8bde0ee16b02ecd9923f247c7e65
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416323"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617460"
 ---
 # <a name="strtol-wcstol-strtoll-wcstoll"></a>strtol、wcstol、_strtol_l、_wcstol_l
 
@@ -101,13 +91,13 @@ long _wcstol_l(
 
 ## <a name="return-value"></a>傳回值
 
-**strtol**傳回代表字串中的值*strSource*時表示法可能會造成溢位在此情況下它傳回之外， **LONG_MAX**或**LONG_MIN**。 **strtol**可以執行任何轉換，則傳回 0。 **wcstol**類似地，傳回值**strtol**。 對於這兩個函式， **errno**設**為 ERANGE**發生溢位或反向溢位。
+**strtol**會傳回代表字串中的值*strSource*，但表示法可能造成溢位，當在此情況下它會傳回**LONG_MAX**或**LONG_最小**。 **strtol**會傳回 0，如果可以不執行任何轉換。 **wcstol**傳回值類似**strtol**。 這兩個函式中， **errno**設為**ERANGE**發生溢位或反向溢位。
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Strtol**函式會將轉換*strSource*至**長**。 **strtol**停止讀取字串*strSource*無法辨識為數字部分的第一個字元。 這可能是結束的 null 字元，或者可能是大於或等於第一個數字字元*基底*。
+**Strtol**函式會將*strSource*來**長**。 **strtol**停止讀取字串*strSource*它無法辨識為數字一部分的第一個字元。 這可能是終止的 null 字元，或是它可能會大於或等於第一個數字字元*基底*。
 
 **wcstol**是寬字元版本的**strtol**; 其*strSource*引數是寬字元字串。 除此之外，這些函式的行為相同。
 
@@ -118,19 +108,19 @@ long _wcstol_l(
 |**_tcstol**|**strtol**|**strtol**|**wcstol**|
 |**_tcstol_l**|**_strtol_l**|**_strtol_l**|**_wcstol_l**|
 
-目前的地區設定**LC_NUMERIC**類別目錄設定會決定中的基底字元辨識*strSource * *;* 如需詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)。 功能，但不包含 **_l**後置詞使用目前的地區設定;**_strtol_l**和 **_wcstol_l**與對應的功能，但不包含 **_l**後置詞，只不過它們改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+目前的地區設定**LC_NUMERIC**類別設定會決定在基底字元辨識*strSource * *;* 如需詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)。 沒有函式 **_l**後置詞使用目前的地區設定，**_strtol_l**並 **_wcstol_l**等於對應的函式，而不需要 **_l**後置詞，只不過它們改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-如果*endptr*不**NULL**，停止掃描的字元指標所指向的位置儲存*endptr*。 如果可以不執行任何轉換 （找不到沒有有效的數字或指定無效的基底） 的值*strSource*儲存在所指位置*endptr*。
+如果*endptr*不是**NULL**，則停止掃描的字元指標會儲存在所指向位置*endptr*。 如果可以不執行任何轉換 （找不到任何有效的數字或指定無效的基底） 的值*strSource*所指向的位置會儲存*endptr*。
 
-**strtol**預期*strSource*指向字串的格式如下：
+**strtol**預期*strSource*指向下列格式的字串：
 
 > [*空白字元*] [{**+** &#124; **-**}] [**0** [{ **x**&#124; **X** }]] [*位數*&#124; *字母*]  
 
-A*空白字元*可能包含空格和定位字元字元，會被忽略;*位數*一或多個十進位數字;*字母*是一或多個字母 'a' 到 'z' （或 'A' 到 'Z'）。  不符合此格式的第一個字元會停止掃描。 如果*基底*是介於 2 到 36，則會使用做為基底的數字。 如果*基底*為 0，起始的字元字串所指向的*strSource*用來判斷基底。 如果第一個字元為 0，而第二個字元不是 'x' 或 X'，則字串會解譯為八進位整數。 如果第一個字元為 '0'，而第二個字元是 'x' 或 X'，則字串會解譯為十六進位整數。 如果第一個字元為 '1' 到 '9'，則字串會解譯為十進位整數。 字母 'a' 到 'z' (或 'A' 到 'Z') 被指派值 10 到 35，只允許指派值小於 *base* 的字母。 基底範圍外的第一個字元會停止掃描。 例如，如果*基底*為 0 和掃描的第一個字元是 '0'、 八進位整數會假設和 '8' 或 '9' 的字元將會停止掃描。
+A*空白字元*可能包含空格和定位字元字元，則會忽略;*數字*是一或多個十進位數字;*字母*是一或多個字母 'a' 到 'z' （或 'A' 到 'Z'）。  不符合此格式的第一個字元會停止掃描。 如果*基底*是介於 2 到 36，則當成基底的數目。 如果*基底*為 0，所指向的字串起始字元*strSource*用來判斷基底。 如果第一個字元為 0，而第二個字元不是 'x' 或 X'，則字串會解譯為八進位整數。 如果第一個字元為 '0'，而第二個字元是 'x' 或 X'，則字串會解譯為十六進位整數。 如果第一個字元為 '1' 到 '9'，則字串會解譯為十進位整數。 字母 'a' 到 'z' (或 'A' 到 'Z') 被指派值 10 到 35，只允許指派值小於 *base* 的字母。 基底範圍外的第一個字元會停止掃描。 例如，如果*基底*為 0 和掃描的第一個字元是 '0'，假設為八進位整數，且 '8' 或 '9' 字元會停止掃描。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**strtol**|\<stdlib.h>|
 |**wcstol**|\<stdlib.h> 或 \<wchar.h>|

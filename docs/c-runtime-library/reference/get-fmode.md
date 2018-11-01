@@ -1,10 +1,6 @@
 ---
-title: _get_fmode | Microsoft Docs
-ms.custom: ''
+title: _get_fmode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_fmode
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - get_fmode
 - _get_fmode
-dev_langs:
-- C++
 helpviewer_keywords:
 - _get_fmode function
 - file translation [C++], default mode
 - get_fmode function
 ms.assetid: 22ea70e2-b9b5-422d-b514-64f4beaea45c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a28909e5e848712305fb28e8ac4d46180f8948cf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f326069c1c190b0fa1c1bbd5ee4ead7346481a38
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398298"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658025"
 ---
 # <a name="getfmode"></a>_get_fmode
 
@@ -48,27 +38,27 @@ ms.locfileid: "32398298"
 ## <a name="syntax"></a>語法
 
 ```C
-errno_t _get_fmode( 
-   int * pmode 
+errno_t _get_fmode( 
+   int * pmode 
 );
 ```
 
 ### <a name="parameters"></a>參數
 
 *pmode*<br/>
-要填入目前的預設模式為整數的指標： **_O_TEXT**或 **_O_BINARY**。
+到目前的預設模式填滿的整數的指標： **_O_TEXT**或是 **_O_BINARY**。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，傳回零；如果失敗，則傳回錯誤碼。 如果*pmode*是**NULL**，會叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL**並傳回函式**EINVAL**。
+如果成功，傳回零；如果失敗，則傳回錯誤碼。 如果*pmode*是**NULL**，會叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為**EINVAL**和函式會傳回**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-函式取得 [_fmode](../../c-runtime-library/fmode.md) 全域變數的值。 此變數的低層級指定預設檔案轉譯模式和資料流檔案 I/O 作業，例如 **_open**， **_pipe**， **fopen**，和[freopen](freopen-wfreopen.md)。
+函式取得 [_fmode](../../c-runtime-library/fmode.md) 全域變數的值。 這個變數的低層級指定預設檔案轉譯模式，並傳送資料流檔案 I/O 作業，例如 **_open**， **_pipe**， **fopen**，和[freopen](freopen-wfreopen.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|---------------------|
 |**_get_fmode**|\<stdlib.h>|\<fcntl.h>|
 

@@ -1,23 +1,13 @@
 ---
-title: ARM 組合程式指示詞 |Microsoft Docs
-ms.custom: ''
+title: ARM 組合程式指示詞
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5c37e010caa6c7cfb44ddaf2f7dd1e28bbb5c291
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9124f893b3334e0893073332c9d5f5a1388373d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717700"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592448"
 ---
 # <a name="arm-assembler-directives"></a>ARM 組合程式指示詞
 
@@ -67,7 +57,7 @@ ms.locfileid: "45717700"
 
    > **匯出**|**GLOBAL** <em>sym</em>{**[**<em>類型</em>**]**}
 
-   *sym*是要匯出的符號。  [*型別*]，如果指定，可以是`[DATA]`表示符號是否指向資料或`[FUNC]`表示符號是否指向程式碼。 `GLOBAL` 是的同義字`EXPORT`。
+   *sym*是要匯出的符號。  [*型別*]，如果指定，可以是`[DATA]`表示符號是否指向資料或`[FUNC]`表示符號是否指向程式碼。 `GLOBAL` 與 `EXPORT`同義。
 
 - EXPORTAS
 

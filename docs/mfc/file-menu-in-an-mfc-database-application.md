@@ -1,26 +1,16 @@
 ---
-title: MFC 資料庫應用程式檔案 功能表 |Microsoft Docs
-ms.custom: ''
+title: MFC 資料庫應用程式中的檔案功能表
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - File menu
 - database applications [MFC], File menu commands
 ms.assetid: 92dafb75-c1b3-4860-80a0-87a83bfc36f2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5fe90e01ec53711f47418d4512262e2e05e62f26
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ce56dd5f04312ae9e7b7f747ce81cb704f3d085d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425128"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629199"
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>MFC 資料庫應用程式中的檔案功能表
 

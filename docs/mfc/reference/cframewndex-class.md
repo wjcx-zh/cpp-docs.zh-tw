@@ -1,10 +1,6 @@
 ---
-title: CFrameWndEx 類別 |Microsoft Docs
-ms.custom: ''
+title: CFrameWndEx 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CFrameWndEx
 - AFXFRAMEWNDEX/CFrameWndEx
@@ -94,8 +90,6 @@ f1_keywords:
 - AFXFRAMEWNDEX/CFrameWndEx::ShowPane
 - AFXFRAMEWNDEX/CFrameWndEx::UpdateCaption
 - AFXFRAMEWNDEX/CFrameWndEx::WinHelp
-dev_langs:
-- C++
 helpviewer_keywords:
 - CFrameWndEx [MFC], ActiveItemRecalcLayout
 - CFrameWndEx [MFC], AddPane
@@ -184,16 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 50b895bc23d37918a521c3ebd19b6fbadf6cd69e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e847fd3a3c5a4217db694ec5586a24313c8102f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408762"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50612194"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx 類別
 
@@ -232,7 +222,7 @@ class CFrameWndEx : public CFrameWnd
 |[CFrameWndEx::GetRibbonBar](#getribbonbar)|擷取框架的功能區列控制項。|
 |[CFrameWndEx::GetTearOffBars](#gettearoffbars)|傳回分割狀態的窗格物件清單。|
 |[CFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|應用程式顯示的工具列按鈕的工具提示時，由架構呼叫。|
-|[CFrameWndEx::InsertPane](#insertpane)|向停駐的管理員 窗格。|
+|[CFrameWndEx::InsertPane](#insertpane)|向停駐的管理員窗格。|
 |[CFrameWndEx::IsFullScreen](#isfullscreen)|決定框架視窗是否為全螢幕模式。|
 |[CFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|決定功能表列物件的指標是否有效。|
 |[CFrameWndEx::IsPointNearDockSite](#ispointneardocksite)|指出點是否位於未對齊的區域。|
@@ -734,7 +724,7 @@ BOOL InsertPane(
 
 ### <a name="remarks"></a>備註
 
-您必須使用註冊每個控制列[CDockingManager Class](../../mfc/reference/cdockingmanager-class.md)參與停駐的配置。
+您必須使用 [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md) 參與停駐的配置，註冊每個控制列。
 
 ##  <a name="isfullscreen"></a>  CFrameWndEx::IsFullScreen
 

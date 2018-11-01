@@ -1,11 +1,6 @@
 ---
-title: feholdexcept |Microsoft 文件
-ms.custom: ''
+title: feholdexcept
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feholdexcept
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - feholdexcept
 - fenv/feholdexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - feholdexcept function
 ms.assetid: 88e512ae-b5d8-452c-afe9-c824cd3ef1d8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6250de98b2eb3f8cc8c475d341c1d63a79262362
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26097398b9f9d498ab4c56690dc9c6cbb950bafb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397538"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525732"
 ---
 # <a name="feholdexcept"></a>feholdexcept
 
@@ -55,17 +44,17 @@ int feholdexcept(
 ### <a name="parameters"></a>參數
 
 *penv*<br/>
-指標**fenv_t**物件，以便包含浮點環境的複本。
+指標**fenv_t**物件，以包含浮點環境的複本。
 
 ## <a name="return-value"></a>傳回值
 
-如果且只有函式是能夠順利開啟非停止浮點例外狀況處理則傳回零。
+才能夠順利開啟連續浮點例外狀況處理函式，是的則傳回零。
 
 ## <a name="remarks"></a>備註
 
-**Feholdexcept**函式用來儲存目前的浮動點環境的狀態**fenv_t**指向的物件*penv*，以及將環境設定不會中斷執行浮點例外狀況。 這稱之為連續模式。  此模式會繼續執行，直到使用 [fesetenv](fesetenv1.md) 或 [feupdateenv](feupdateenv.md) 還原環境為止。
+**Feholdexcept**函式用來儲存目前浮點環境中的狀態**fenv_t**指向物件*penv*，同時將環境設定為不會中斷執行浮點例外狀況。 這稱之為連續模式。  此模式會繼續執行，直到使用 [fesetenv](fesetenv1.md) 或 [feupdateenv](feupdateenv.md) 還原環境為止。
 
-您可以在需要隱藏呼叫端一或多個浮點例外狀況的副程式開頭使用此函式。 若要報告例外狀況，只要清除不必要的例外狀況使用[feclearexcept，](feclearexcept1.md)然後結束呼叫非停止模式**feupdateenv**。
+您可以在需要隱藏呼叫端一或多個浮點例外狀況的副程式開頭使用此函式。 若要回報例外狀況，只要清除不想要的例外狀況使用[feclearexcept](feclearexcept1.md)然後結束連續模式下，呼叫**feupdateenv**。
 
 若要使用此函式，您必須在呼叫之前使用 `#pragma fenv_access(on)` 指示詞，以關閉可能會妨礙存取的浮點最佳化作業。 如需詳細資訊，請參閱 [fenv_access](../../preprocessor/fenv-access.md)。
 

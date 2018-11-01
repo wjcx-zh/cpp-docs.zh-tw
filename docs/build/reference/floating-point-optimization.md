@@ -1,22 +1,13 @@
 ---
-title: Microsoft Visual c + + 浮點最佳化 |Microsoft Docs
-ms.custom: ''
+title: Microsoft Visual c + + 浮點最佳化
 ms.date: 03/09/2018
-ms.technology:
-- cpp-tools
 ms.topic: conceptual
-dev_langs:
-- C++
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6208e425ce4a2e1b5738932b8acaf6b11b7db24b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6e297cebb4982b293e86885815436c4120d903cd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706676"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50504295"
 ---
 # <a name="microsoft-visual-c-floating-point-optimization"></a>Microsoft Visual c + + 浮點最佳化
 

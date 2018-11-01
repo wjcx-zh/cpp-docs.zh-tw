@@ -1,10 +1,6 @@
 ---
-title: cbrt、cbrtf、cbrtl | Microsoft Docs
-ms.custom: ''
+title: cbrt、cbrtf、cbrtl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cbrt
 - cbrtf
@@ -26,23 +22,17 @@ f1_keywords:
 - cbrtl
 - cbrt
 - cbrtf
-dev_langs:
-- C++
 helpviewer_keywords:
 - cbrtl function
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 29dee00f35c2b4d75e838e5abe2ee24de9753013
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c395a063cfa07cdfb7e841f19bc64fb1c57ca796
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393611"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505530"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt、cbrtf、cbrtl
 
@@ -83,7 +73,7 @@ long double cbrtl(
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**cbrt**採用**float**或**長** **double**型別。 在 C 程式中， **cbrt**一律採用並傳回**double**。
+C + + 允許多載，因為您可以呼叫多載**cbrt**採用**float**或是**長** **double**類型。 在 C 程式中， **cbrt**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

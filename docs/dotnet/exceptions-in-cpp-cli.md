@@ -1,24 +1,13 @@
 ---
-title: 例外狀況，在 C + + /cli CLI |Microsoft Docs
-ms.custom: ''
+title: C++/CLI 中的例外狀況
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 0010e205-4487-49a9-a8db-4a8ec63cfc83
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 7853be282e3ba7ad05aaf16e53a443a77e8b5e33
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6036a4c1155beb7f45f133609cbe4b0ac8105a9a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387038"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506817"
 ---
 # <a name="exceptions-in-ccli"></a>C++/CLI 中的例外狀況
 

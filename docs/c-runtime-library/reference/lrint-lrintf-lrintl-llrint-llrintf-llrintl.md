@@ -1,11 +1,6 @@
 ---
-title: lrint、lrintf、lrintl、llrint、llrintf、llrintl | Microsoft Docs
-ms.custom: ''
+title: lrint、lrintf、lrintl、llrint、llrintf、llrintl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - lrint
 - lrintl
@@ -39,8 +34,6 @@ f1_keywords:
 - math/llrint
 - math/llrintf
 - math/llrintl
-dev_langs:
-- C++
 helpviewer_keywords:
 - lrint function
 - lrintf function
@@ -49,16 +42,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5ace427267a45c87213f62276e1d7799f27db1cd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a1fc404182d9d2a5cd6870fcb2cd1ff3e5f4da55
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401255"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500837"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint、lrintf、lrintl、llrint、llrintf、llrintl
 
@@ -116,17 +105,17 @@ long long int llrintl(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，傳回的整數值捨入*x*。
+如果成功，傳回的圓角的整數值*x*。
 
 |問題|Return|
 |-----------|------------|
-|*x*超出範圍的傳回型別<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|引發**FE_INVALID**並傳回零 (0)。|
+|*x*超出傳回型別的範圍<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|會引發**FE_INVALID** ，並傳回零 (0)。|
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**lrint**和**llrint**採用**float**和**長** **double**型別。 在 C 程式中， **lrint**和**llrint**一定要進行**double**。
+C + + 允許多載，因為您可以呼叫多載**lrint**並**llrint**採用**float**並**長** **double**型別。 在 C 程式中， **lrint**並**llrint**蝯篔**double**。
 
-如果*x*不代表浮點數的整數值，這些函式產生對等**FE_INEXACT**。
+如果*x*不代表整數值，這些函式會引發的浮點對應項**FE_INEXACT**。
 
 **Microsoft 特定的**︰當結果超出傳回型別的範圍，或是參數為 NAN 或無限大時，傳回值是已定義的實作。 Microsoft 編譯器會傳回零 (0) 值。
 

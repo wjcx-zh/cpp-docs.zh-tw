@@ -1,27 +1,17 @@
 ---
-title: 函式範本 |Microsoft Docs
-ms.custom: ''
+title: 函式樣板
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - function templates
 - templates, function
 - function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 82c68fa22f8acda313510cf1cf18e48332576e53
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 77f3d1ee704c8094fd3bd94597311976e54ba6a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118683"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493518"
 ---
 # <a name="function-templates"></a>函式樣板
 
@@ -52,7 +42,7 @@ MySwap( j, k );          //OK
 MySwap( j, Hello );      //error
 ```
 
-因為編譯器無法產生具有不同類型之參數的 `MySwap` 函式，因此第二個 `MySwap` 呼叫會觸發編譯時期錯誤。 如果使用了 void 指標，則會正確編譯兩個函式呼叫，不過，函式在執行階段將無法正常運作。
+因為編譯器無法產生具有不同類型之參數的 `MySwap` 函式，因此第二個 `MySwap` 呼叫會觸發編譯時間錯誤。 如果使用了 void 指標，則會正確編譯兩個函式呼叫，不過，函式在執行階段將無法正常運作。
 
 您可以明確指定函式樣板的樣板引數。 例如: 
 

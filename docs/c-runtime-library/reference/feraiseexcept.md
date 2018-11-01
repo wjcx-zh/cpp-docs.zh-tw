@@ -1,11 +1,6 @@
 ---
-title: feraiseexcept | Microsoft Docs
-ms.custom: ''
+title: feraiseexcept
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feraiseexcept
 apilocation:
@@ -23,21 +18,15 @@ apitype: HeaderDef
 f1_keywords:
 - feraiseexcept
 - fenv/feraiseexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dfd60612c92f8e3ff542fd22bbf5b4a01f7b7365
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 581dd4026a20ce7221945c5815af3ae102f132fa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398633"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532245"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -53,7 +42,7 @@ int feraiseexcept(
 
 ### <a name="parameters"></a>參數
 
-*excepts*<br/>
+*removed*<br/>
 要引發的浮點例外狀況。
 
 ## <a name="return-value"></a>傳回值
@@ -62,7 +51,7 @@ int feraiseexcept(
 
 ## <a name="remarks"></a>備註
 
-**Feraiseexcept**函式會嘗試引發浮點例外狀況，由指定*excepts*。   **Feraiseexcept**函式可支援定義在這些例外狀況巨集\<fenv.h >:
+**Feraiseexcept**函式嘗試引發所指定的浮點例外狀況*removed*。   **Feraiseexcept**函式支援這些例外狀況巨集，定義於\<fenv.h >:
 
 |例外狀況巨集|描述|
 |---------------------|-----------------|
@@ -73,11 +62,11 @@ int feraiseexcept(
 |FE_UNDERFLOW|稍早的浮點運算結果太小，無法以完整精確度表示；已建立 denormal 值。|
 |FE_ALLEXCEPT|所有受支援浮點例外狀況的位元 OR。|
 
-*Excepts*引數可以是零，其中一個例外狀況巨集的值，或位元或是兩個或多個支援的例外狀況巨集。 如果其中一個指定的例外狀況巨集是 FE_OVERFLOW 或 FE_UNDERFLOW，則可能會發生副作用 FE_INEXACT 例外狀況。
+*Removed*引數可以是零，其中一個例外狀況巨集值中，或位元，或是兩個或多個受支援例外狀況巨集。 如果其中一個指定的例外狀況巨集是 FE_OVERFLOW 或 FE_UNDERFLOW，則可能會發生副作用 FE_INEXACT 例外狀況。
 
 若要使用此函式，您必須在呼叫之前使用 `#pragma fenv_access(on)` 指示詞，以關閉可能會妨礙存取的浮點最佳化作業。 如需詳細資訊，請參閱 [fenv_access](../../preprocessor/fenv-access.md)。
 
-**Microsoft 特定的：** 中指定的例外狀況*excepts*會依照順序 FE_INVALID，引發 FE_DIVBYZERO、 FE_OVERFLOW、 FE_UNDERFLOW、 FE_INEXACT。 不過，FE_INEXACT 可以引發 FE_OVERFLOW 或 FE_UNDERFLOW 引發時，即使在未指定*excepts*。 **結束 Microsoft 專有**
+**Microsoft 專有：** 中指定的例外狀況*removed*所引發的順序依照 FE_INVALID、 FE_DIVBYZERO、 FE_OVERFLOW、 FE_UNDERFLOW、 FE_INEXACT。 不過，FE_INEXACT 可以引發 FE_OVERFLOW 或 FE_UNDERFLOW 引發時，即使在未指定*removed*。 **結束 Microsoft 專有**
 
 ## <a name="requirements"></a>需求
 

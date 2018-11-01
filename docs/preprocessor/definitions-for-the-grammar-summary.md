@@ -1,26 +1,16 @@
 ---
-title: 文法摘要的定義 |Microsoft Docs
-ms.custom: ''
+title: 文法摘要的定義
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor, definitions
 - preprocessor
 ms.assetid: cc752dc8-6f4e-4347-a556-e0d9ef4c46bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3c11f2f839ef806d74eae65c9fc8fe3a71cd2e9c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 133000c0cc8ef636a3f9752d2f6fc7f1934bd831
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760808"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521121"
 ---
 # <a name="definitions-for-the-grammar-summary"></a>文法摘要的定義
 
@@ -30,7 +20,7 @@ ms.locfileid: "43760808"
 
 `constant`*常數運算式*，*識別項*，*關鍵字*， `operator`， `punctuator`
 
-指出選用元件的註標<sub>opt</sub>。 例如，以下表示以大括號括住的選擇性運算式：
+選擇性的元件會以下標的 <sub>opt</sub> 表示。 例如，以下表示以大括號括住的選擇性運算式：
 
 **{** *運算式*<sub>opt</sub> **}**
 

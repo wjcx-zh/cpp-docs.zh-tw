@@ -1,12 +1,6 @@
 ---
-title: 剪貼簿： 何時使用每個剪貼簿機制 |Microsoft Docs
-ms.custom: ''
+title: 剪貼簿：何時使用每個剪貼簿機制
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - applications [OLE], Clipboard
 - OLE Clipboard, guidelines
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - formats [MFC], Clipboard for OLE
 - Clipboard [MFC], formats
 ms.assetid: fd071996-ef8c-488b-81bd-89057095a201
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 18b8a772dd58cf9623d4076665e7859d191bb27e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 69d033199b1cfec77c05bf8d457e8398d11aa457
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379810"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562002"
 ---
 # <a name="clipboard-when-to-use-each-clipboard-mechanism"></a>剪貼簿：何時使用每個剪貼簿機制
 

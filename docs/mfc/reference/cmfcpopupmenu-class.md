@@ -1,7 +1,7 @@
 ---
 title: CMFCPopupMenu 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067f9dc580a901974a5e980eabb28c04076f3fa9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
-ms.translationtype: MT
+ms.openlocfilehash: 689a3d8e2ce7b63b5f5e507343084848cf6c52f4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374538"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081741"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu 類別
 
@@ -312,7 +312,6 @@ class CMFCPopupMenu : public CMiniFrameWnd
 
 ##  <a name="activatepopupmenu"></a>  CMFCPopupMenu::ActivatePopupMenu
 
-
 ```
 static BOOL __stdcall ActivatePopupMenu(
     CFrameWnd* pTopFrame,
@@ -321,8 +320,8 @@ static BOOL __stdcall ActivatePopupMenu(
 
 ### <a name="parameters"></a>參數
 
-*pTopFrame*<br/>
-[in][in]*pPopupMenu*
+[in]*pTopFrame*<br/>
+[in]*pPopupMenu*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -342,7 +341,6 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
 [in]如果快顯功能表可顯示空的項目，則為 TRUEFALSE 否則。
 
 ##  <a name="areallcommandsshown"></a>  CMFCPopupMenu::AreAllCommandsShown
-
 
 ```
 BOOL AreAllCommandsShown() const;
@@ -387,14 +385,13 @@ MENUAREA_TYPE 參數可以有下列值之一。
 
 ##  <a name="closemenu"></a>  CMFCPopupMenu::CloseMenu
 
-
 ```
 void CloseMenu(BOOL bSetFocusToBar = FALSE);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*bSetFocusToBar*
+[in]*bSetFocusToBar*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -470,7 +467,6 @@ virtual BOOL Create(
 
 ##  <a name="createtearoffbar"></a>  CMFCPopupMenu::CreateTearOffBar
 
-
 ```
 virtual CPane* CreateTearOffBar(
     CFrameWnd* pWndMain,
@@ -480,15 +476,15 @@ virtual CPane* CreateTearOffBar(
 
 ### <a name="parameters"></a>參數
 
-*pWndMain*<br/>
-[in][in]*uiID* [in] *lpszName*
+[in]*pWndMain*<br/>
+[in]*uiID*<br/>
+[in]*lpszName*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="defaultmouseclickonclose"></a>  CMFCPopupMenu::DefaultMouseClickOnClose
-
 
 ```
 virtual BOOL DefaultMouseClickOnClose() const;
@@ -541,19 +537,17 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 
 ##  <a name="enableresize"></a>  CMFCPopupMenu::EnableResize
 
-
 ```
 void EnableResize(CSize sizeMinResize);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*sizeMinResize*
+[in]*sizeMinResize*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="enablescrolling"></a>  CMFCPopupMenu::EnableScrolling
-
 
 ```
 void EnableScrolling(BOOL = TRUE);
@@ -561,12 +555,11 @@ void EnableScrolling(BOOL = TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in]*BOOL*
+[in]*BOOL*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="enablevertresize"></a>  CMFCPopupMenu::EnableVertResize
-
 
 ```
 void EnableVertResize(int nMinResize);
@@ -574,12 +567,11 @@ void EnableVertResize(int nMinResize);
 
 ### <a name="parameters"></a>參數
 
-[in]*nMinResize*
+[in]*nMinResize*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="findsubitembycommand"></a>  CMFCPopupMenu::FindSubItemByCommand
-
 
 ```
 CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
@@ -587,7 +579,7 @@ CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*uiCmd*
+[in]*uiCmd*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -657,7 +649,6 @@ static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
 
 ##  <a name="getdropdirection"></a>  CMFCPopupMenu::GetDropDirection
 
-
 ```
 DROP_DIRECTION GetDropDirection() const;
 ```
@@ -683,7 +674,6 @@ static BOOL GetForceMenuFocus();
 根據預設，您的應用程式不會傳回焦點功能表列。 若要變更此設定，請使用[CMFCPopupMenu::SetForceMenuFocus](#setforcemenufocus)。
 
 ##  <a name="getforceshadow"></a>  CMFCPopupMenu::GetForceShadow
-
 
 ```
 static BOOL __stdcall GetForceShadow();
@@ -768,14 +758,13 @@ CWnd* GetMessageWnd() const;
 
 ##  <a name="getparentarea"></a>  CMFCPopupMenu::GetParentArea
 
-
 ```
 virtual CWnd* GetParentArea(CRect& rectParentBtn);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*rectParentBtn*
+[in]*rectParentBtn*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -817,7 +806,6 @@ CMFCPopupMenu* GetParentPopupMenu() const;
 
 ##  <a name="getparentribbonelement"></a>  CMFCPopupMenu::GetParentRibbonElement
 
-
 ```
 CMFCRibbonBaseElement* GetParentRibbonElement() const;
 ```
@@ -843,7 +831,6 @@ CMFCToolBar* GetParentToolBar() const;
 如果`CMFCPopupMenu`是快顯功能表，它將包含沒有父工具列。
 
 ##  <a name="getquickcustomizetype"></a>  CMFCPopupMenu::GetQuickCustomizeType
-
 
 ```
 QUICK_CUSTOMIZE_TYPE GetQuickCustomizeType() const;
@@ -871,7 +858,6 @@ CMFCToolBarMenuButton* GetSelItem();
 
 ##  <a name="hasbeenresized"></a>  CMFCPopupMenu::HasBeenResized
 
-
 ```
 BOOL HasBeenResized() const;
 ```
@@ -897,7 +883,6 @@ BOOL HideRarelyUsedCommands() const;
 這個方法會指定是否可以隱藏快顯功能表只有很少使用的命令，如果已啟用該設定。 快顯功能表可以隱藏很少使用的命令，如果它具有父代按鈕和父視窗衍生自[CMFCMenuBar 類別](../../mfc/reference/cmfcmenubar-class.md)。 使用[CMFCMenuBar::SetRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#setrecentlyusedmenus)若要啟用這項功能並[CMFCMenuBar::IsRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#isrecentlyusedmenus)來判斷目前是否已啟用此功能。 您必須呼叫這兩種方法在父視窗。
 
 ##  <a name="incommand"></a>  CMFCPopupMenu::InCommand
-
 
 ```
 virtual BOOL InCommand();
@@ -958,7 +943,6 @@ int InsertSeparator(int iInsertAt = -1);
 
 ##  <a name="isalwaysclose"></a>  CMFCPopupMenu::IsAlwaysClose
 
-
 ```
 virtual BOOL IsAlwaysClose() const;
 ```
@@ -968,7 +952,6 @@ virtual BOOL IsAlwaysClose() const;
 ### <a name="remarks"></a>備註
 
 ##  <a name="isalwaysshowemptytoolsentry"></a>  CMFCPopupMenu::IsAlwaysShowEmptyToolsEntry
-
 
 ```
 static BOOL __stdcall IsAlwaysShowEmptyToolsEntry();
@@ -998,7 +981,6 @@ BOOL IsCustomizePane();
 
 ##  <a name="isescclose"></a>  CMFCPopupMenu::IsEscClose
 
-
 ```
 BOOL IsEscClose();
 ```
@@ -1025,7 +1007,6 @@ virtual BOOL IsIdle() const;
 
 ##  <a name="ismenusound"></a>  CMFCPopupMenu::IsMenuSound
 
-
 ```
 static UINT __stdcall IsMenuSound();
 ```
@@ -1051,7 +1032,6 @@ BOOL IsQuickCustomize();
 在 QuickCustomize 模式的使用者會選取直接自訂按鈕的工具列上的按鈕。
 
 ##  <a name="isresizeble"></a>  CMFCPopupMenu::IsResizeble
-
 
 ```
 BOOL IsResizeble() const;
@@ -1080,7 +1060,6 @@ BOOL IsRightAlign() const;
 功能表對齊不是全域設定，和快顯功能表而有所不同。
 
 ##  <a name="isscrollable"></a>  CMFCPopupMenu::IsScrollable
-
 
 ```
 BOOL IsScrollable() const;
@@ -1120,19 +1099,17 @@ BOOL IsShown() const;
 
 ##  <a name="moveto"></a>  CMFCPopupMenu::MoveTo
 
-
 ```
 void MoveTo(const CPoint& pt);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*pt*
+[in]*pt*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="onchangehot"></a>  CMFCPopupMenu::OnChangeHot
-
 
 ```
 virtual void OnChangeHot(int nHot);
@@ -1140,12 +1117,11 @@ virtual void OnChangeHot(int nHot);
 
 ### <a name="parameters"></a>參數
 
-[in]*nHot*
+[in]*nHot*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="onchooseitem"></a>  CMFCPopupMenu::OnChooseItem
-
 
 ```
 virtual void OnChooseItem(UINT uidCmdID);
@@ -1153,12 +1129,11 @@ virtual void OnChooseItem(UINT uidCmdID);
 
 ### <a name="parameters"></a>參數
 
-[in]*uidCmdID*
+[in]*uidCmdID*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="oncmdmsg"></a>  CMFCPopupMenu::OnCmdMsg
-
 
 ```
 virtual BOOL OnCmdMsg(
@@ -1170,10 +1145,10 @@ virtual BOOL OnCmdMsg(
 
 ### <a name="parameters"></a>參數
 
-*nID*<br/>
-[in][in]*則 nCode*
-*pExtra*<br/>
-[in][in]*pHandlerInfo*
+[in]*nID*<br/>
+[in]*則 nCode*<br/>
+[in]*pExtra*<br/>
+[in]*pHandlerInfo*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1181,14 +1156,13 @@ virtual BOOL OnCmdMsg(
 
 ##  <a name="postcommand"></a>  CMFCPopupMenu::PostCommand
 
-
 ```
 BOOL PostCommand(UINT uiCommandID);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*uiCommandID*
+[in]*uiCommandID*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1196,14 +1170,13 @@ BOOL PostCommand(UINT uiCommandID);
 
 ##  <a name="pretranslatemessage"></a>  CMFCPopupMenu::PreTranslateMessage
 
-
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*pMsg*
+[in]*pMsg*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1211,14 +1184,13 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ##  <a name="recalclayout"></a>  CMFCPopupMenu::RecalcLayout
 
-
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*bNotify*
+[in]*bNotify*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1252,7 +1224,6 @@ BOOL RemoveItem(int iIndex);
 這個方法會自動排列受影響的項目移除任何分隔字元。 如需此架構如何重新排列分隔符號的詳細資訊，請參閱[CMFCToolBar::RemoveButton](../../mfc/reference/cmfctoolbar-class.md#removebutton)。
 
 ##  <a name="savestate"></a>  CMFCPopupMenu::SaveState
-
 
 ```
 virtual void SaveState();
@@ -1298,14 +1269,13 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 
 ##  <a name="setautodestroy"></a>  CMFCPopupMenu::SetAutoDestroy
 
-
 ```
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*bAutoDestroy*
+[in]*bAutoDestroy*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1379,19 +1349,17 @@ void SetMaxWidth(int iMaxWidth);
 
 ##  <a name="setmessagewnd"></a>  CMFCPopupMenu::SetMessageWnd
 
-
 ```
 void SetMessageWnd(CWnd* pMsgWnd);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*pMsgWnd*
+[in]*pMsgWnd*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="setparentribbonelement"></a>  CMFCPopupMenu::SetParentRibbonElement
-
 
 ```
 void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
@@ -1399,12 +1367,11 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>參數
 
-[in]*pElem*
+[in]*pElem*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="setquickcustomizetype"></a>  CMFCPopupMenu::SetQuickCustomizeType
-
 
 ```
 void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
@@ -1412,12 +1379,11 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 
 ### <a name="parameters"></a>參數
 
-[in]*類型*
+[in]*類型*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="setquickmode"></a>  CMFCPopupMenu::SetQuickMode
-
 
 ```
 void SetQuickMode();
@@ -1472,7 +1438,6 @@ void ShowAllCommands();
 這不是全域設定，而且會影響只有目前的快顯功能表。
 
 ##  <a name="triggerresize"></a>  CMFCPopupMenu::TriggerResize
-
 
 ```
 void TriggerResize();

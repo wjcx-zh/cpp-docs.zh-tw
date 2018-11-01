@@ -1,7 +1,7 @@
 ---
 title: CDockablePane 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed4325cc950cdfa5320f1107df7103cbb2c026b5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
-ms.translationtype: MT
+ms.openlocfilehash: 91058da47a97098826939be2248d81ba657f3cbb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417484"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078303"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -337,7 +337,8 @@ virtual CDockablePane* AttachToTabWnd(
 
 ### <a name="parameters"></a>參數
 
-[in][out]*pTabControlBarAttachTo*指定目前的窗格會將附加至 [目標] 窗格。 [目標] 窗格中必須是可停駐窗格。
+*pTabControlBarAttachTo*<br/>
+[in、 out]指定目前的窗格會將附加至 [目標] 窗格。 [目標] 窗格中必須是可停駐窗格。
 
 *dockMethod*<br/>
 [in]指定的停駐的方法。
@@ -585,7 +586,6 @@ virtual BOOL Create(
     DWORD dwControlBarStyle = AFX_DEFAULT_DOCKING_PANE_STYLE,
     CCreateContext* pContext = NULL);
 
-
 virtual BOOL Create(
     LPCTSTR lpszWindowName,
     CWnd* pParentWnd,
@@ -602,7 +602,8 @@ virtual BOOL Create(
 *lpszCaption*<br/>
 [in]指定視窗名稱。
 
-[in][out]*pParentWnd*指定父視窗。
+*pParentWnd*<br/>
+[in、 out]指定父視窗。
 
 *rect*<br/>
 [in]在用戶端座標中指定的大小和位置] 視窗中， *pParentWnd*。
@@ -622,7 +623,8 @@ virtual BOOL Create(
 *dwControlBarStyle*<br/>
 [in]指定其他的樣式屬性。
 
-[in][out]*pContext*指定視窗的建立內容。
+*pContext*<br/>
+[in、 out]指定視窗的建立內容。
 
 *lpszWindowName*<br/>
 [in]指定視窗名稱。
@@ -705,7 +707,8 @@ virtual BOOL CreateEx(
 *lpszCaption*<br/>
 [in]指定視窗名稱。
 
-[in][out]*pParentWnd*指定父視窗。
+*pParentWnd*<br/>
+[in、 out]指定父視窗。
 
 *rect*<br/>
 [in]在用戶端座標中指定的大小和位置] 視窗中， *pParentWnd*。
@@ -725,7 +728,8 @@ virtual BOOL CreateEx(
 *dwControlBarStyle*<br/>
 [in]指定的其他樣式屬性。
 
-[in][out]*pContext*指定視窗的建立內容。
+*pContext*<br/>
+[in、 out]指定視窗的建立內容。
 
 ### <a name="return-value"></a>傳回值
 
@@ -842,7 +846,8 @@ virtual BOOL DockToWindow(
 
 ### <a name="parameters"></a>參數
 
-[in][out]*pTargetWindow*指定停駐此窗格可停駐窗格。
+*pTargetWindow*<br/>
+[in、 out]指定停駐此窗格可停駐窗格。
 
 *dwAlignment*<br/>
 [in]指定 [] 窗格的停駐對齊方式。 可能是 CBRS_ALIGN_LEFT、 CBRS_ALIGN_TOP、 CBRS_ALIGN_RIGHT、 CBRS_ALIGN_BOTTOM 或 CBRS_ALIGN_ANY 之一。 （在 afxres.h 中定義。）
@@ -1339,7 +1344,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>參數
 
-[in]*pWndOldParent*
+[in]*pWndOldParent*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1509,7 +1514,8 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 *dwAlignment*<br/>
 [in]指定要建立的 [自動隱藏] 窗格的對齊方式。
 
-[in][out]*pCurrAutoHideBar*目前的自動隱藏工具列的指標。 可以是 NULL。
+*pCurrAutoHideBar*<br/>
+[in、 out]在目前的自動隱藏工具列的指標。 可以是 NULL。
 
 *bUseTimer*<br/>
 [in]指定要使用的自動隱藏 」 效果，當使用者將窗格切換為自動隱藏模式還是要立即隱藏窗格。

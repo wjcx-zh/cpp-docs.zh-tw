@@ -1,10 +1,6 @@
 ---
-title: fwide | Microsoft Docs
-ms.custom: ''
+title: fwide
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fwide
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fwide
-dev_langs:
-- C++
 helpviewer_keywords:
 - fwide function
 ms.assetid: a4641f5b-d74f-4946-95d5-53a64610d28d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd52c450e2eb34c40d44d00a76550c401abcb6c9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d992ebc527744beeb4ef14175e3f10646a77a064
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397260"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50557842"
 ---
 # <a name="fwide"></a>fwide
 
@@ -53,7 +43,7 @@ int fwide(
 ### <a name="parameters"></a>參數
 
 *資料流*<br/>
-指標**檔案**結構 （忽略）。
+指標**檔案**（忽略） 的結構。
 
 *mode*<br/>
 資料流的新寬度︰寬字元為正值、位元組為負值、零則保留不變。 (這個值會被忽略。)

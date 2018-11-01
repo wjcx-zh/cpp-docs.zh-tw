@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ac2ddb08b485a56274f6067871c5bbd5893f94
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
-ms.translationtype: MT
+ms.openlocfilehash: fb6e87d9deac7a6d0082480196b7dbeecf5a85b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434813"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081075"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd 類別
 
@@ -312,7 +312,6 @@ virtual void AdjustLayout();
 
 ##  <a name="adjustpaneframes"></a>  CPaneFrameWnd::AdjustPaneFrames
 
-
 ```
 virtual void AdjustPaneFrames();
 ```
@@ -401,7 +400,6 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 
 ##  <a name="checkgrippervisibility"></a>  CPaneFrameWnd::CheckGripperVisibility
 
-
 ```
 virtual void CheckGripperVisibility();
 ```
@@ -440,9 +438,11 @@ virtual BOOL Create(
 *rect*<br/>
 [in]指定的初始大小和位置的迷你框架。
 
-[in][out]*pParentWnd*指定父框架的迷你框架。 此值必須不是 NULL。
+*pParentWnd*<br/>
+[in、 out]指定父框架的迷你框架。 此值必須不是 NULL。
 
-[in][out]*pContext*指定使用者定義的內容。
+*pContext*<br/>
+[in、 out]指定使用者定義的內容。
 
 ### <a name="return-value"></a>傳回值
 
@@ -480,9 +480,11 @@ virtual BOOL CreateEx(
 *rect*<br/>
 [in]指定的初始大小和位置的迷你框架。
 
-[in][out]*pParentWnd*指定父框架的迷你框架。 此值必須不是 NULL。
+*pParentWnd*<br/>
+[in、 out]指定父框架的迷你框架。 此值必須不是 NULL。
 
-[in][out]*pContext*指定使用者定義的內容。
+*pContext*<br/>
+[in、 out]指定使用者定義的內容。
 
 ### <a name="return-value"></a>傳回值
 
@@ -607,7 +609,6 @@ virtual CString GetCaptionText();
 
 ##  <a name="getdockingmanager"></a>  CPaneFrameWnd::GetDockingManager
 
-
 ```
 CDockingManager* GetDockingManager() const;
 ```
@@ -648,7 +649,6 @@ virtual CWnd* GetFirstVisiblePane() const;
 
 ##  <a name="gethotpoint"></a>  CPaneFrameWnd::GetHotPoint
 
-
 ```
 CPoint GetHotPoint() const;
 ```
@@ -687,7 +687,6 @@ virtual int GetPaneCount() const;
 
 ##  <a name="getparent"></a>  CPaneFrameWnd::GetParent
 
-
 ```
 CWnd* GetParent();
 ```
@@ -698,7 +697,6 @@ CWnd* GetParent();
 
 ##  <a name="getpinstate"></a>  CPaneFrameWnd::GetPinState
 
-
 ```
 BOOL GetPinState() const;
 ```
@@ -708,7 +706,6 @@ BOOL GetPinState() const;
 ### <a name="remarks"></a>備註
 
 ##  <a name="getrecentfloatingrect"></a>  CPaneFrameWnd::GetRecentFloatingRect
-
 
 ```
 CRect GetRecentFloatingRect() const;
@@ -770,7 +767,6 @@ virtual LRESULT HitTest(
 
 ##  <a name="iscaptured"></a>  CPaneFrameWnd::IsCaptured
 
-
 ```
 BOOL IsCaptured() const;
 ```
@@ -780,7 +776,6 @@ BOOL IsCaptured() const;
 ### <a name="remarks"></a>備註
 
 ##  <a name="isdelayshow"></a>  CPaneFrameWnd::IsDelayShow
-
 
 ```
 BOOL IsDelayShow() const;
@@ -991,14 +986,13 @@ virtual void OnShowPane(
 
 ##  <a name="pin"></a>  CPaneFrameWnd::Pin
 
-
 ```
 void Pin(BOOL bPin = TRUE);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*bPin*
+[in]*bPin*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1141,19 +1135,17 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 
 ##  <a name="setdelayshow"></a>  CPaneFrameWnd::SetDelayShow
 
-
 ```
 void SetDelayShow(BOOL bDelayShow);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*bDelayShow*
+[in]*bDelayShow*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="setdockingmanager"></a>  CPaneFrameWnd::SetDockingManager
-
 
 ```
 void SetDockingManager(CDockingManager* pManager);
@@ -1161,7 +1153,7 @@ void SetDockingManager(CDockingManager* pManager);
 
 ### <a name="parameters"></a>參數
 
-[in]*pManager*
+[in]*pManager*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1193,14 +1185,13 @@ virtual void SetDockState(CDockingManager* pDockManager);
 
 ##  <a name="sethotpoint"></a>  CPaneFrameWnd::SetHotPoint
 
-
 ```
 void SetHotPoint(CPoint& ptNew);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*ptNew*
+[in]*ptNew*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1267,19 +1258,17 @@ BOOL StartTearOff(CMFCPopu* pMenu);
 
 ##  <a name="storerecentdocksiteinfo"></a>  CPaneFrameWnd::StoreRecentDockSiteInfo
 
-
 ```
 virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*pBar*
+[in]*pBar*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="storerecenttabrelatedinfo"></a>  CPaneFrameWnd::StoreRecentTabRelatedInfo
-
 
 ```
 virtual void StoreRecentTabRelatedInfo(
@@ -1289,8 +1278,8 @@ virtual void StoreRecentTabRelatedInfo(
 
 ### <a name="parameters"></a>參數
 
-*pDockingBar*<br/>
-[in][in]*pTabbedBar*
+[in]*pDockingBar*<br/>
+[in]*pTabbedBar*<br/>
 
 ### <a name="remarks"></a>備註
 

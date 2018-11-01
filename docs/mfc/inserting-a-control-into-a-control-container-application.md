@@ -1,26 +1,16 @@
 ---
-title: ActiveX 控制項容器： 將控制項插入控制項容器應用程式 |Microsoft Docs
-ms.custom: ''
+title: ActiveX 控制項容器：將控制項插入控制項容器應用程式中
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ActiveX control containers [MFC], inserting controls
 - ActiveX controls [MFC], adding to projects
 ms.assetid: bbb617ff-872f-43d8-b4d6-c49adb16b148
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f025c9fa564bcd37c585db6ea5c5cd0f5be83e0d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2ca503119df955e8b76f6f8c131421f3e2d85652
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432135"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541371"
 ---
 # <a name="activex-control-containers-inserting-a-control-into-a-control-container-application"></a>ActiveX 控制項容器：將控制項插入控制項容器應用程式中
 

@@ -1,10 +1,6 @@
 ---
-title: _eof | Microsoft Docs
-ms.custom: ''
+title: _eof
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _eof
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _eof
-dev_langs:
-- C++
 helpviewer_keywords:
 - eof function
 - end of file, testing for
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da7ccad98491762d30db2741f8c3d9fe0d784dc6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1da849c3721d4d83ff0b3166bc18f95728ebf124
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395120"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522391"
 ---
 # <a name="eof"></a>_eof
 
@@ -62,11 +52,11 @@ int _eof(
 
 ## <a name="return-value"></a>傳回值
 
-**_eof**如果目前的位置是檔案結尾或 0 便傳回 1。 傳回值-1 表示錯誤。在此情況下，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EBADF**，表示無效的檔案描述項。
+**_eof**如果目前的位置是檔案結尾或 0 便會傳回 1。 傳回值為-1 表示錯誤;在此情況下，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為**EBADF**，表示無效的檔案描述項。
 
 ## <a name="remarks"></a>備註
 
-**_Eof**函式判斷是否與相關聯檔案的結尾*fd*已達到。
+**_Eof**函式會判斷是否與相關聯檔案的結尾*fd*已達到。
 
 ## <a name="requirements"></a>需求
 

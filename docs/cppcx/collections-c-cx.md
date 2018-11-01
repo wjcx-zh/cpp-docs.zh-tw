@@ -1,20 +1,13 @@
 ---
-title: 集合 (C + + /CX) |Microsoft Docs
-ms.custom: ''
+title: 集合 (C++/CX)
 ms.date: 01/22/2017
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5b57b03af7c0a98e2bb8c70b6c0921930ebb1b9c
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: d139bcfc6cdf61940a40ca069dd157c1805e2034
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50062635"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531582"
 ---
 # <a name="collections-ccx"></a>集合 (C++/CX)
 

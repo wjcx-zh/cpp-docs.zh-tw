@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24b663e1b07d1012c1611714390340df3ce3867f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
-ms.translationtype: MT
+ms.openlocfilehash: c17b280d658eb615d314526f4fd241bf57c2eed1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448491"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074731"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager 類別
 
@@ -196,7 +196,7 @@ class CDockingManager : public CObject
 |[CDockingManager::AddDockSite](#adddocksite)|建立停駐窗格，並將它新增至控制列清單。|
 |[CDockingManager::AddHiddenMDITabbedBar](#addhiddenmditabbedbar)|將控制代碼加入至列窗格，即可隱藏 MDI 索引標籤式窗格列的清單。|
 |[CDockingManager::AddMiniFrame](#addminiframe)|您可以將框架加入迷你框架的清單。|
-|[CDockingManager::AddPane](#addpane)|向停駐的管理員 窗格。|
+|[CDockingManager::AddPane](#addpane)|向停駐的管理員窗格。|
 |[CDockingManager::AdjustDockingLayout](#adjustdockinglayout)|重新計算，並調整框架視窗中的所有窗格的配置。|
 |[CDockingManager::AdjustPaneFrames](#adjustpaneframes)|會導致 WM_NCCALCSIZE 訊息傳送至所有窗格和`CPaneFrameWnd`windows。|
 |[CDockingManager::AdjustRectToClientArea](#adjustrecttoclientarea)|調整對齊的矩形。|
@@ -245,12 +245,12 @@ class CDockingManager : public CObject
 |[CDockingManager::OnMoveMiniFrame](#onmoveminiframe)|由架構呼叫以移動迷你框架視窗。|
 |[CDockingManager::OnPaneContextMenu](#onpanecontextmenu)|建置一個功能表，並有一份窗格時，由架構呼叫。|
 |[CDockingManager::PaneFromPoint](#panefrompoint)|傳回包含指定的點的窗格。|
-|[CDockingManager::ProcessPaneContextMenuCommand](#processpanecontextmenucommand)|由架構呼叫來選取或清除核取方塊，針對指定的命令，並重新計算顯示 窗格的配置。|
+|[CDockingManager::ProcessPaneContextMenuCommand](#processpanecontextmenucommand)|由架構呼叫來選取或清除核取方塊，針對指定的命令，並重新計算顯示窗格的配置。|
 |[CDockingManager::RecalcLayout](#recalclayout)|重新計算中的控制項清單控制項的內部配置。|
 |[CDockingManager::ReleaseEmptyPaneContainers](#releaseemptypanecontainers)|釋出的空窗格中的容器。|
 |[CDockingManager::RemoveHiddenMDITabbedBar](#removehiddenmditabbedbar)|移除指定的列窗格隱藏項目。|
 |[CDockingManager::RemoveMiniFrame](#removeminiframe)|從迷你框架的清單中移除指定的範圍。|
-|[CDockingManager::RemovePaneFromDockManager](#removepanefromdockmanager)|取消註冊 窗格，並從停駐的管理員在清單中移除。|
+|[CDockingManager::RemovePaneFromDockManager](#removepanefromdockmanager)|取消註冊窗格，並從停駐的管理員在清單中移除。|
 |[CDockingManager::ReplacePane](#replacepane)|以一個窗格取代另一個。|
 |[CDockingManager::ResortMiniFramesForZOrder](#resortminiframesforzorder)|訴諸迷你框架的清單中的框架。|
 |[CDockingManager::SaveState](#savestate)|將停駐的管理員狀態儲存至登錄中。|
@@ -296,7 +296,7 @@ class CDockingManager : public CObject
 
     - `AFX_DOCK_TYPE::DT_SMART`
 
-     這些停駐的模式由[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)並且由呼叫設定[CDockingManager::SetDockingMode](#setdockingmode)。
+   這些停駐的模式由[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)並且由呼叫設定[CDockingManager::SetDockingMode](#setdockingmode)。
 
 - 如果您想要建立非浮動、 不可調整大小的窗格中，呼叫[CDockingManager::AddPane](#addpane)方法。 這個方法會向停駐的管理員會負責配置的窗格中的窗格。
 
@@ -328,7 +328,7 @@ BOOL AddDockSite(
 
 ### <a name="parameters"></a>參數
 
-*資訊*<br/>
+*info*<br/>
 [in]包含的資訊結構的參考停駐窗格的對齊方式。
 
 *ppDockBar*<br/>
@@ -353,7 +353,7 @@ void AddHiddenMDITabbedBar(CDockablePane* pBar);
 
 ##  <a name="addpane"></a>  CDockingManager::AddPane
 
-向停駐的管理員 窗格。
+向停駐的管理員窗格。
 
 ```
 BOOL AddPane(
@@ -396,7 +396,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ### <a name="parameters"></a>參數
 
 *hdwp*<br/>
-[in]指定延遲的視窗位置結構。 如需詳細資訊，請參閱 < [Windows 資料類型](/windows/desktop/WinProg/windows-data-types)。
+[in]指定延遲的視窗位置結構。 如需詳細資訊，請參閱 [Windows 資料類型](/windows/desktop/WinProg/windows-data-types)。
 
 ### <a name="remarks"></a>備註
 
@@ -798,7 +798,7 @@ virtual CDockSite* FindDockSite(
 ### <a name="parameters"></a>參數
 
 *dwAlignment*<br/>
-[in]列的對齊方式] 窗格。
+[in]列的對齊方式窗格。
 
 *bOuter*<br/>
 [in]如果為 TRUE，擷取在控制列前端的位置清單中的列。 否則，擷取在清單中的控制列的結尾位置中的列。
@@ -949,7 +949,7 @@ DWORD GetEnabledAutoHideAlignment() const;
 
 ### <a name="return-value"></a>傳回值
 
-CBRS_ALIGN_ 旗標或 0，如果未啟用自動隱藏 窗格的位元組合。 如需詳細資訊，請參閱 < [CFrameWnd::EnableDocking](../../mfc/reference/cframewnd-class.md#enabledocking)。
+CBRS_ALIGN_ 旗標或 0，如果未啟用自動隱藏窗格的位元組合。 如需詳細資訊，請參閱 < [CFrameWnd::EnableDocking](../../mfc/reference/cframewnd-class.md#enabledocking)。
 
 ### <a name="remarks"></a>備註
 
@@ -1080,7 +1080,7 @@ BOOL InsertDockSite(
 
 ### <a name="parameters"></a>參數
 
-*資訊*<br/>
+*info*<br/>
 [in]結構，其中包含 [dock] 窗格中的對齊方式資訊。
 
 *dwAlignToInsertAfter*<br/>
@@ -1398,7 +1398,7 @@ virtual CBasePane* PaneFromPoint(
 [in]若要檢查可見窗格; TRUE否則為 FALSE。
 
 *dwAlignment*<br/>
-[out]如果指定點上找到一個窗格，則此參數會包含已最接近指定點] 窗格。 如需詳細資訊，請參閱＜備註＞一節。
+[out]如果指定點上找到一個窗格，則此參數會包含已最接近指定點窗格。 如需詳細資訊，請參閱＜備註＞一節。
 
 *pBarToIgnore*<br/>
 [in]如果不是 NULL，則這個方法會忽略此參數所指定的窗格。
@@ -1413,7 +1413,7 @@ virtual CBasePane* PaneFromPoint(
 
 ##  <a name="processpanecontextmenucommand"></a>  CDockingManager::ProcessPaneContextMenuCommand
 
-由架構呼叫來選取或清除核取方塊，針對指定的命令，並重新計算顯示 窗格的配置。
+由架構呼叫來選取或清除核取方塊，針對指定的命令，並重新計算顯示窗格的配置。
 
 ```
 BOOL ProcessPaneContextMenuCommand(
@@ -1494,7 +1494,7 @@ virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
 
 ##  <a name="removepanefromdockmanager"></a>  CDockingManager::RemovePaneFromDockManager
 
-取消註冊 窗格，並從停駐的管理員在清單中移除。
+取消註冊窗格，並從停駐的管理員在清單中移除。
 
 ```
 void RemovePaneFromDockManager(

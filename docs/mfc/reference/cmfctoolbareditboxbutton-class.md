@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a346cf75a0afebcfdcb31259a0ba72d3a8f6c22
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
-ms.translationtype: MT
+ms.openlocfilehash: fe5aa32a8d6cf0eecc1cc38e49643900bf34f9ae
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397316"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066990"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton 類別
 
@@ -141,7 +141,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用中的各種方法`CMFCToolBarEditBoxButton`類別。 此範例示範如何指定使用者可以延伸按鈕進行自訂時，指定當使用者按一下按鈕時，會顯示按鈕的框線、 設定文字方塊控制項中的文字，應用在指定的編輯方塊按鈕的平面樣式外觀cation，並指定編輯方塊控制項的工具列的樣式。
+下例示範如何在 `CMFCToolBarEditBoxButton` 類別中使用各種方法。 此範例示範如何指定使用者可以延伸按鈕進行自訂時，指定當使用者按一下按鈕時，會顯示按鈕的框線、 設定文字方塊控制項中的文字，應用在指定的編輯方塊按鈕的平面樣式外觀cation，並指定編輯方塊控制項的工具列的樣式。
 
 [!code-cpp[NVC_MFC_RibbonApp#40](../../mfc/reference/codesnippet/cpp/cmfctoolbareditboxbutton-class_1.cpp)]
 
@@ -218,7 +218,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ### <a name="parameters"></a>參數
 
 *src*<br/>
-[in]要從中複製來源] 按鈕參考。
+[in]要從中複製來源按鈕參考。
 
 ### <a name="remarks"></a>備註
 
@@ -703,6 +703,4 @@ virtual void SetStyle(UINT nStyle);
 [CEdit 類別](../../mfc/reference/cedit-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [逐步解說：將控制項放在工具列上](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7d895671efdec4649faf1f0611380d2065770ac
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
-ms.translationtype: MT
+ms.openlocfilehash: dec0456c880fea47219dc11c509bbecac025f5d3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861443"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070579"
 ---
 # <a name="standard-conversions"></a>標準轉換
 
@@ -81,11 +81,11 @@ C++ 提升為「保留值」。 也就是說，保證提升後的值會和提升
 
 - 運算元**/**， `%`， `/=`， `%=`， **<**， **\< =**，**>**，或 **>=**
 
-     這些運算子需要依據正負號判斷結果。 因此，保留值和保留正負號的提升套用至這些運算元時，會產生不同的結果。
+   這些運算子需要依據正負號判斷結果。 因此，保留值和保留正負號的提升套用至這些運算元時，會產生不同的結果。
 
 - 左的運算元**>>** 或 **>>=**
 
-     執行移位作業時，這些運算子會將帶正負號和不帶正負號的數量視為不同。 對於帶正負號的數量，將數量右移會造成正負號位元傳播至空出的位元位置。 對於不帶正負號的數量，空出的位元位置會以零填滿。
+   執行移位作業時，這些運算子會將帶正負號和不帶正負號的數量視為不同。 對於帶正負號的數量，將數量右移會造成正負號位元傳播至空出的位元位置。 對於不帶正負號的數量，空出的位元位置會以零填滿。
 
 - 多載函式的引數，或是依據運算元類型的正負號狀態進行引數比對的多載運算子之運算元。 (請參閱[多載運算子](../cpp/operator-overloading.md)如需定義多載運算子。)
 
@@ -221,7 +221,7 @@ int main() {
 
 這類轉換的結果會是「子物件」指標，也就是物件中以基底類別完整描述的部分。
 
-下列程式碼會定義兩種類別 `A` 和 `B`，其中 `B` 衍生自 `A`  (如需有關繼承的詳細資訊，請參閱 <<c0> [ 衍生類別](../cpp/inheritance-cpp.md)。)然後它會定義 `bObject`、`B` 類型的物件，以及兩個指向物件的指標 (`pA` 和 `pB`)。
+下列程式碼會定義兩種類別 `A` 和 `B`，其中 `B` 衍生自 `A` (如需有關繼承的詳細資訊，請參閱 <<c0> [ 衍生類別](../cpp/inheritance-cpp.md)。)然後它會定義 、`bObject` 類型的物件，以及兩個指向物件的指標 (`B` 和 `pB`)。
 
 ```cpp
 // C2039 expected

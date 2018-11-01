@@ -1,37 +1,27 @@
 ---
-title: 編譯器錯誤 C3808 |Microsoft 文件
-ms.custom: ''
+title: 編譯器錯誤 C3808
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3808
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3808
 ms.assetid: 2ee8ac97-3ea4-417a-8710-be73a7f98cf4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 40668b8b2cc1a1f85b0ad4a7ef63d89956e922b3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 0a1b0b82241c6e48d2c1941ff8122697d11492eb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705201"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587729"
 ---
 # <a name="compiler-error-c3808"></a>編譯器錯誤 C3808
 
-> '*類型*': 具有 ComImport 屬性的類別不可定義成員'*成員*'、 只抽象或 dllimport 函式允許
+> '*型別*': 具有 ComImport 屬性的類別不可定義成員'*成員*'、 只抽象或 dllimport 函式允許
 
 ## <a name="remarks"></a>備註
 
-衍生自型別<xref:System.Runtime.InteropServices.ComImportAttribute>無法定義*成員*。
+衍生自類型<xref:System.Runtime.InteropServices.ComImportAttribute>不能定義*成員*。
 
-**/Clr: pure**和 **/clr: safe**編譯器選項都是 Visual Studio 2015 中已被取代，並不支援的 Visual Studio 2017 中。
+**/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
 
 ## <a name="example"></a>範例
 

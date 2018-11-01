@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7c797cdb2b0950d0158e8a63294f1e2ea913512
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
-ms.translationtype: MT
+ms.openlocfilehash: b238dedf9b4f638baf4ea2c9373e7658c90114cb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436893"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069330"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx 類別
 
@@ -191,7 +191,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |----------|-----------------|
 |[CMDIFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|重新計算使用中的項目的配置。|
 |`CMDIFrameWndEx::AddDockSite`|不會使用這個方法。|
-|[CMDIFrameWndEx::AddPane](#addpane)|向停駐的管理員 窗格。|
+|[CMDIFrameWndEx::AddPane](#addpane)|向停駐的管理員窗格。|
 |[CMDIFrameWndEx::AdjustClientArea](#adjustclientarea)|減少工作區，以便加上框線。|
 |[CMDIFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)|重新計算所有停駐窗格的配置。|
 |[CMDIFrameWndEx::AreMDITabs](#aremditabs)|判斷是否已啟用 MDI 索引標籤功能或 MDI 索引標籤式群組功能。|
@@ -209,9 +209,9 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::EnableLoadDockState](#enableloaddockstate)|啟用或停用的銜接狀態的載入。|
 |[Cmdiframewndex:: Enablemditabbedgroups](#enablemditabbedgroups)|啟用或停用 MDI 索引標籤式群組功能。|
 |[CMDIFrameWndEx::EnableMDITabs](#enablemditabs)|啟用或停用 MDI 索引標籤功能。 啟用時，框架視窗會顯示每個 MDI 子視窗的索引標籤。|
-|[CMDIFrameWndEx::EnableMDITabsLastActiveActivation](#enablemditabslastactiveactivation)|指定當使用者關閉目前的索引標籤時，是否啟用 [最後一個使用中] 索引標籤。|
+|[CMDIFrameWndEx::EnableMDITabsLastActiveActivation](#enablemditabslastactiveactivation)|指定當使用者關閉目前的索引標籤時，是否啟用 最後一個使用中索引標籤。|
 |[CMDIFrameWndEx::EnablePaneMenu](#enablepanemenu)|啟用或停用自動建立及管理的快顯窗格功能表顯示的應用程式窗格清單。  。|
-|[CMDIFrameWndEx::EnableWindowsDialog](#enablewindowsdialog)|插入的命令識別碼呼叫的功能表項目[CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)  對話方塊。|
+|[CMDIFrameWndEx::EnableWindowsDialog](#enablewindowsdialog)|插入的命令識別碼呼叫的功能表項目[CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) 對話方塊。|
 |[CMDIFrameWndEx::GetActivePopup](#getactivepopup)|將指標傳回到目前顯示的快顯功能表。|
 |[CMDIFrameWndEx::GetPane](#getpane)|讓指標回到 [] 窗格中具有指定的控制項 id。|
 |[CMDIFrameWndEx::GetDefaultResId](#getdefaultresid)|傳回的 MDI 框架視窗的共用資源的識別碼。|
@@ -312,7 +312,7 @@ void ActiveItemRecalcLayout();
 
 ##  <a name="addpane"></a>  CMDIFrameWndEx::AddPane
 
-向停駐的管理員 窗格。
+向停駐的管理員窗格。
 
 ```
 BOOL AddPane(
@@ -823,7 +823,7 @@ void EnablePaneMenu(
 
 ##  <a name="enablewindowsdialog"></a>  CMDIFrameWndEx::EnableWindowsDialog
 
-插入的命令識別碼呼叫的功能表項目[CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)  對話方塊。
+插入的命令識別碼呼叫的功能表項目[CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) 對話方塊。
 
 ```
 void EnableWindowsDialog(
@@ -831,7 +831,6 @@ void EnableWindowsDialog(
     LPCTSTR lpszMenuText,
     BOOL bShowAllways=FALSE,
     BOOL bShowHelpButton=FALSE);
-
 
 void EnableWindowsDialog(
     UINT uiMenuId,
@@ -2033,7 +2032,7 @@ virtual void WinHelp(
 
 ### <a name="remarks"></a>備註
 
-這個方法會覆寫[cwnd:: Winhelp](../../mfc/reference/cwnd-class.md#winhelp)。
+這個方法會覆寫 [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp)。
 
 ## <a name="see-also"></a>另請參閱
 

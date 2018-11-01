@@ -1,7 +1,7 @@
 ---
 title: CMDIChildWndEx 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -122,19 +122,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f52ce513f0a0d96fe2454397417f2f7885e2c2f2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
-ms.translationtype: MT
+ms.openlocfilehash: 64e8b62f79a6294810fc30b1796958c6ca4a153a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441730"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073860"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 類別
 
 `CMDIChildWndEx`類別會提供功能的 Windows 多重文件介面 (MDI) 子視窗。 它會擴充功能[CMDIChildWnd 類別](../../mfc/reference/cmdichildwnd-class.md)。 當 MDI 應用程式使用特定 MFC 類別時，Framework 必須有這個類別。
 
 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
-
 
 ## <a name="syntax"></a>語法
 
@@ -284,7 +283,6 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs
 
-
 ```
 virtual BOOL CanShowOnMDITabs();
 ```
@@ -411,7 +409,6 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ##  <a name="getdockingmanager"></a>  CMDIChildWndEx::GetDockingManager
 
-
 ```
 CDockingManager* GetDockingManager();
 ```
@@ -502,7 +499,6 @@ CBasePane* GetPane(UINT nID);
 窗格中，如果找到，否則為 NULL 指標。
 
 ##  <a name="getrelatedtabgroup"></a>  CMDIChildWndEx::GetRelatedTabGroup
-
 
 ```
 CMFCTabCtrl* GetRelatedTabGroup();
@@ -770,19 +766,17 @@ void RemovePaneFromDockManager(
 
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup
 
-
 ```
 void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```
 
 ### <a name="parameters"></a>參數
 
-[in]*p*
+[in]*p*<br/>
 
 ### <a name="remarks"></a>備註
 
 ##  <a name="showpane"></a>  CMDIChildWndEx::ShowPane
-
 
 ```
 void ShowPane(
@@ -794,10 +788,13 @@ void ShowPane(
 
 ### <a name="parameters"></a>參數
 
-*pBar*<br/>
-[in][in]*bShow*
-*bDelay*<br/>
-[in][in]*bActivate*
+[in]*pBar*<br/>
+
+[in]*bShow*<br/>
+
+[in]*bDelay*<br/>
+
+[in]*bActivate*<br/>
 
 ### <a name="remarks"></a>備註
 

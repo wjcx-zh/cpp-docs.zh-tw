@@ -1,11 +1,6 @@
 ---
-title: feclearexcept1 | Microsoft Docs
-ms.custom: ''
+title: feclearexcept1
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feclearexcept
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - feclearexcept
 - fenv/feclearexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - feclearexcept function
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: face2637f308a56d95baa7563a6409dd38870d73
-ms.sourcegitcommit: 2f571220e16f6c20e1fdb005f6cbc9e7ef5608f5
+ms.openlocfilehash: 3c2f037a5be903fc006debfa7319c483431fdd92
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37070073"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551108"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
@@ -54,16 +43,16 @@ int feclearexcept(
 
 ### <a name="parameters"></a>參數
 
-*excepts*<br/>
+*removed*<br/>
 要清除的例外狀況狀態旗標。
 
 ## <a name="return-value"></a>傳回值
 
-傳回零如果*excepts*為零，或如果已成功清除所有指定的例外狀況。 否則，傳回非零值。
+傳回零，如果*removed*為零，或如果已順利清除所有指定的例外狀況。 否則，傳回非零值。
 
 ## <a name="remarks"></a>備註
 
-**Feclearexcept**函式會嘗試清除浮點點所指定的例外狀況狀態旗標*excepts*。 函式支援這些在 fenv.h 中定義的例外狀況巨集︰
+**Feclearexcept**函式嘗試清除浮點點所指定的例外狀況狀態旗標*removed*。 函式支援這些在 fenv.h 中定義的例外狀況巨集︰
 
 |例外狀況巨集|描述|
 |---------------------|-----------------|
@@ -74,7 +63,7 @@ int feclearexcept(
 |FE_UNDERFLOW|稍早的浮點運算結果太小，無法以完整精確度表示；已建立 denormal 值。|
 |FE_ALL_EXCEPT|所有受支援浮點例外狀況的位元 OR。|
 
-*Excepts*引數可以是零或一或多個支援的例外狀況巨集的位元 OR。 未定義任何其他引數值的結果。
+*Removed*引數可以是零或一或多個受支援例外狀況巨集的位元 OR。 未定義任何其他引數值的結果。
 
 ## <a name="requirements"></a>需求
 

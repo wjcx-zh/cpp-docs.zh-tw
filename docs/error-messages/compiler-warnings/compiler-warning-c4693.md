@@ -1,32 +1,23 @@
 ---
-title: 編譯器警告 C4693 |Microsoft 文件
+title: 編譯器警告 C4693
 ms.date: 10/25/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4693
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4693
 ms.assetid: 72d8db01-5e6f-4794-8731-76107e8f064a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f8230e60d65c80b4f839cc8a1c97ccc0c7b18086
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 49d101ea56cd868e18489b6c74724a2d106c9265
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273877"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536644"
 ---
 # <a name="compiler-warning-c4693"></a>編譯器警告 C4693
 
 > 'class': 密封的抽象類別不能有任何執行個體成員 'Test'
 
-如果類型標記[密封](../../windows/sealed-cpp-component-extensions.md)和[抽象](../../windows/abstract-cpp-component-extensions.md)，它只能有靜態成員。
+如果類型標記[密封](../../windows/sealed-cpp-component-extensions.md)並[抽象](../../windows/abstract-cpp-component-extensions.md)，就只能有靜態成員。
 
 這個警告會自動升級為錯誤。 如果您想要修改此行為，使用[#pragma 警告](../../preprocessor/warning.md)。
 

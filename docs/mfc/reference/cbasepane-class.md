@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9351e363bfa0ca654837436a01bb36b4f2b51eb2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
-ms.translationtype: MT
+ms.openlocfilehash: 5099251f46d3446368c04a39d624fde8128ab2e4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378393"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076304"
 ---
 # <a name="cbasepane-class"></a>CBasePane 類別
 
@@ -210,7 +210,7 @@ class CBasePane : public CWnd
 |`CBasePane::accLocation`|由架構呼叫以擷取目前的畫面位置指定的物件。 (覆寫[CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation)。)|
 |[CBasePane::AccNotifyObjectFocusEvent](#accnotifyobjectfocusevent)|`CBasePane` 不使用這個方法。|
 |`CBasePane::accSelect`|由架構呼叫以修改選取或移動指定物件的鍵盤焦點。 (覆寫[CWnd::accSelect](../../mfc/reference/cwnd-class.md#accselect)。)|
-|[CBasePane::AddPane](#addpane)|將停駐的管理員 窗格。|
+|[CBasePane::AddPane](#addpane)|將停駐的管理員窗格。|
 |[Cbasepane:: Adjustdockinglayout](#adjustdockinglayout)|將重新導向呼叫停駐的管理員，以調整停駐的配置。|
 |[Cbasepane:: Adjustlayout](#adjustlayout)|當 [] 窗格應該調整其內部的版面配置時由架構呼叫。|
 |[Cbasepane:: Calcfixedlayout](#calcfixedlayout)|計算的控制列的水平大小。|
@@ -223,7 +223,7 @@ class CBasePane : public CWnd
 |[CBasePane::CanBeTabbedDocument](#canbetabbeddocument)|指定窗格是否可以轉換成 MDI 索引標籤式文件。|
 |[CBasePane::CanFloat](#canfloat)|判斷是否可以浮動窗格。|
 |[CBasePane::CanFocus](#canfocus)|指定是否可以取得焦點。|
-|[CBasePane::CopyState](#copystate)|將複製給定 窗格的狀態。|
+|[CBasePane::CopyState](#copystate)|將複製給定窗格的狀態。|
 |[CBasePane::CreateDefaultMiniframe](#createdefaultminiframe)|如果窗格可以浮動，會建立迷你框架視窗。|
 |[Cbasepane:: Createex](#createex)|建立窗格控制項。|
 |[Cbasepane:: Dockpane](#dockpane)|另一個窗格或框架視窗停駐窗格。|
@@ -294,7 +294,7 @@ class CBasePane : public CWnd
 |[CBasePane::PaneFromPoint](#panefrompoint)|傳回包含指定的點的窗格。|
 |`CBasePane::PreTranslateMessage`|[CWinApp](../../mfc/reference/cwinapp-class.md) 類別用來轉譯分派至 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) 和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函式之前的視窗訊息。 (覆寫 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。)|
 |[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` 不使用這個方法。|
-|[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|取消註冊 窗格，並從停駐的管理員在清單中移除。|
+|[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|取消註冊窗格，並從停駐的管理員在清單中移除。|
 |[CBasePane::SaveState](#savestate)|將窗格的狀態儲存至登錄。|
 |[CBasePane::SelectDefaultFont](#selectdefaultfont)|選取指定的裝置內容的預設字型。|
 |`CBasePane::Serialize`|從封存中讀取或寫入此物件。 (覆寫 [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)。)|
@@ -314,7 +314,7 @@ class CBasePane : public CWnd
 
 |名稱|描述|
 |----------|-----------------|
-|[CBasePane::DoPaint](#dopaint)|填滿 窗格的背景。|
+|[CBasePane::DoPaint](#dopaint)|填滿窗格的背景。|
 
 ## <a name="remarks"></a>備註
 
@@ -332,7 +332,7 @@ class CBasePane : public CWnd
 
     - AFX_CBRS_CLOSE 啟用 [關閉 （隱藏）] 窗格。
 
-     這些是您可以結合的位元 OR 運算的旗標。
+   這些是您可以結合的位元 OR 運算的旗標。
 
 `CBasePane` 實作下列虛擬布林方法，以反映這些旗標： [cbasepane:: Canbeclosed](#canbeclosed)， [CBasePane::CanAutoHide](#canautohide)， [CBasePane::CanFloat](#canfloat)。 您可以在 衍生的類別，以自訂其行為來覆寫這些設定。
 
@@ -344,7 +344,7 @@ class CBasePane : public CWnd
 
 - 若要判斷窗格可見性，請使用[CBasePane::IsVisible](#isvisible)。 它可正確處理的可見性狀態中的索引標籤，自動隱藏模式。
 
-- 如果您想要建立非浮動的可調整大小 窗格中，建立不含 AFX_CBRS_FLOAT 樣式和呼叫[CFrameWnd::DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar)。
+- 如果您想要建立非浮動的可調整大小窗格中，建立不含 AFX_CBRS_FLOAT 樣式和呼叫[CFrameWnd::DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar)。
 
 - 若要排除窗格從停駐的配置，或移除其停駐列中的工具列，呼叫[CBasePane::UndockPane](#undockpane)。 請勿呼叫這個方法，自動隱藏模式中的窗格，或位於索引標籤式視窗的索引標籤的窗格。
 
@@ -352,7 +352,7 @@ class CBasePane : public CWnd
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用中的各種方法`CBasePane`類別。 此範例示範如何擷取從窗格`CFrameWndEx`類別以及如何設定固定的模式、 窗格對齊和窗格樣式。 程式碼取自[Wordpad 範例](../../visual-cpp-samples.md)。
+下例示範如何在 `CBasePane` 類別中使用各種方法。 此範例示範如何擷取從窗格`CFrameWndEx`類別以及如何設定固定的模式、 窗格對齊和窗格樣式。 程式碼取自[Wordpad 範例](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]
 
@@ -385,7 +385,7 @@ virtual void AccNotifyObjectFocusEvent(int);
 
 ##  <a name="addpane"></a>  CBasePane::AddPane
 
-將停駐的管理員 窗格。
+將停駐的管理員窗格。
 
 ```
 void AddPane(CBasePane* pBar);
@@ -431,7 +431,7 @@ virtual void AdjustLayout();
 
 ### <a name="remarks"></a>備註
 
-調整其內部的版面配置 窗格時，架構會呼叫這個方法。 基底實作沒有任何作用。
+調整其內部的版面配置窗格時，架構會呼叫這個方法。 基底實作沒有任何作用。
 
 ##  <a name="calcfixedlayout"></a>  Cbasepane:: Calcfixedlayout
 
@@ -640,7 +640,7 @@ virtual BOOL CanFocus() const;
 
 ##  <a name="copystate"></a>  CBasePane::CopyState
 
-將複製給定 窗格的狀態。
+將複製給定窗格的狀態。
 
 ```
 virtual void CopyState(CBasePane* pOrgBar);
@@ -859,7 +859,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 
 ##  <a name="dopaint"></a>  CBasePane::DoPaint
 
-填滿 窗格的背景。
+填滿窗格的背景。
 
 ```
 virtual void DoPaint(CDC* pDC);
@@ -1346,7 +1346,7 @@ virtual BOOL IsDocked() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果窗格的父代不是迷你框架，或具有; 的另一個窗格的迷你框架中 窗格浮動，則為 TRUE。否則為 FALSE。
+如果窗格的父代不是迷你框架，或具有; 的另一個窗格的迷你框架中窗格浮動，則為 TRUE。否則為 FALSE。
 
 ##  <a name="isfloating"></a>  CBasePane::IsFloating
 
@@ -1514,9 +1514,9 @@ virtual BOOL IsVisible() const;
 
 ### <a name="remarks"></a>備註
 
-使用此方法來決定可見性 窗格。 請勿使用`::IsWindowVisible`。
+使用此方法來決定可見性窗格。 請勿使用 `::IsWindowVisible`。
 
-如果不索引標籤式窗格 (請參閱[CBasePane::IsTabbed](#istabbed))，這個方法會檢查 WS_VISIBLE 樣式。 如果索引標籤式窗格中，這個方法會檢查父索引標籤式視窗的可見性。 如果父視窗為可見的函式會檢查窗格 索引標籤使用的可視性[CMFCBaseTabCtrl::IsTabVisible](../../mfc/reference/cmfcbasetabctrl-class.md#istabvisible)。
+如果不索引標籤式窗格 (請參閱[CBasePane::IsTabbed](#istabbed))，這個方法會檢查 WS_VISIBLE 樣式。 如果索引標籤式窗格中，這個方法會檢查父索引標籤式視窗的可見性。 如果父視窗為可見的函式會檢查窗格索引標籤使用的可視性[CMFCBaseTabCtrl::IsTabVisible](../../mfc/reference/cmfcbasetabctrl-class.md#istabvisible)。
 
 ##  <a name="loadstate"></a>  CBasePane::LoadState
 
@@ -1643,7 +1643,8 @@ virtual void OnMovePaneDivider(CPaneDivider*);
 
 ### <a name="parameters"></a>參數
 
-[in]*CPaneDivider\** 不使用。
+*CPaneDivider\**<br/>
+[in]不使用。
 
 ##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu
 
@@ -1747,7 +1748,7 @@ virtual void RecalcLayout();
 
 ##  <a name="removepanefromdockmanager"></a>  CBasePane::RemovePaneFromDockManager
 
-取消註冊 窗格，並從停駐的管理員在清單中移除。
+取消註冊窗格，並從停駐的管理員在清單中移除。
 
 ```
 void RemovePaneFromDockManager(
@@ -1980,7 +1981,7 @@ virtual void ShowPane(
 
 這個方法會顯示或隱藏窗格。 使用這個方法，而不是`ShowWindow`因為這個方法會通知相關的變更窗格的可見性的相關停駐的管理員。
 
-使用[CBasePane::IsVisible](#isvisible)以判斷目前的可見性 窗格。
+使用[CBasePane::IsVisible](#isvisible)以判斷目前的可見性窗格。
 
 ##  <a name="stretchpane"></a>  Cbasepane:: Stretchpane
 

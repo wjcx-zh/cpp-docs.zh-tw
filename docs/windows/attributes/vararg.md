@@ -1,28 +1,17 @@
 ---
-title: vararg （c + + COM 屬性） |Microsoft Docs
-ms.custom: ''
+title: vararg （c + + COM 屬性）
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.vararg
-dev_langs:
-- C++
 helpviewer_keywords:
 - vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 49e6851bba775a2ccbdae8560effd50063a5afa7
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 6f3048e60c10efed05fc5bccc3c61949351f7bf9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50077216"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50504698"
 ---
 # <a name="vararg"></a>vararg
 

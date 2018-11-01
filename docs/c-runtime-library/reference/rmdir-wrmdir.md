@@ -1,10 +1,6 @@
 ---
-title: _rmdir、_wrmdir | Microsoft Docs
-ms.custom: ''
+title: _rmdir、_wrmdir
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wrmdir
 - _rmdir
@@ -27,8 +23,6 @@ f1_keywords:
 - wrmdir
 - _rmdir
 - _wrmdir
-dev_langs:
-- C++
 helpviewer_keywords:
 - _rmdir function
 - directories [C++], deleting
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 11e6521060932bd1273b6a3888332ac2c8b2bb7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1169405ae2f03a1e6affe2fcc00d594912e08ae1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406985"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511120"
 ---
 # <a name="rmdir-wrmdir"></a>_rmdir、_wrmdir
 
@@ -72,7 +62,7 @@ int _wrmdir(
 
 ## <a name="return-value"></a>傳回值
 
-如果已成功刪除目錄，所有這些函式都會傳回 0。 傳回值-1 表示錯誤和**errno**設為下列值之一：
+如果已成功刪除目錄，所有這些函式都會傳回 0。 傳回值為-1 表示錯誤並**errno**設為下列值之一：
 
 |errno 值|條件|
 |-|-|
@@ -86,7 +76,7 @@ int _wrmdir(
 
 **_Rmdir**函式會刪除所指定的目錄*dirname*。 目錄必須是空的，而且它不得是目前工作目錄或根目錄。
 
-**_wrmdir**是寬字元版本的 **_rmdir**; *dirname*引數 **_wrmdir**是寬字元字串。 **_wrmdir**和 **_rmdir**除此之外的行為相同。
+**_wrmdir**是寬字元版本的 **_rmdir**; *dirname*引數 **_wrmdir**是寬字元字串。 **_wrmdir**並 **_rmdir**行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -96,7 +86,7 @@ int _wrmdir(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_rmdir**|\<direct.h>|
 |**_wrmdir**|\<direct.h> 或 \<wchar.h>|

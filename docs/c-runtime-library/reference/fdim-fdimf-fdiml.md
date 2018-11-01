@@ -1,11 +1,6 @@
 ---
-title: fdim、fdimf、fdiml | Microsoft Docs
-ms.custom: ''
+title: fdim、fdimf、fdiml
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fdim
 - fdimf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/fdim
 - math/fdimf
 - math/fdiml
-dev_langs:
-- C++
 helpviewer_keywords:
 - fdim function
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cdcad02c94717715fdda1b3a9d2e820fc16d0bf4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8cea831e333ebcd9677d830641c60e460ba5ed4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397502"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50515085"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim、fdimf、fdiml
 
@@ -92,7 +81,7 @@ long double fdiml(
 
 ## <a name="return-value"></a>傳回值
 
-傳回的正差異*x*和*y*:
+傳回之間的正差*x*並*y*:
 
 |傳回值|情節|
 |------------------|--------------|
@@ -105,15 +94,15 @@ long double fdiml(
 |-----------|------------|
 |溢位範圍錯誤|+HUGE_VAL、+HUGE_VALF 或 +HUGE_VALL|
 |反向溢位範圍錯誤|正確的值 (四捨五入後)|
-|*x*或*y*是 NaN|NaN|
+|*x*或是*y*是 NaN|NaN|
 
 依 [_matherr](matherr.md) 中的指定回報錯誤。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**fdim**採用並傳回**float**和**長** **double**型別。 在 C 程式中， **fdim**一律採用並傳回**double**。
+因為 c + + 允許多載，您可以呼叫多載**fdim**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **fdim**一律採用並傳回**double**。
 
-除了 NaN 處理中，此函式相當於`fmax(x - y, 0)`。
+除了 NaN 處理，此函式相當於`fmax(x - y, 0)`。
 
 ## <a name="requirements"></a>需求
 

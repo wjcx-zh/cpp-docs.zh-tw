@@ -1,10 +1,6 @@
 ---
-title: sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l | Microsoft Docs
-ms.custom: ''
+title: sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _sscanf_s_l
 - sscanf_s
@@ -29,8 +25,6 @@ f1_keywords:
 - _swscanf_s_l
 - _stscanf_s_l
 - _sscanf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - stscanf_s_l function
 - stscanf_s function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 08cdc1b3fe2d190bdc4a6cbb3d505378e6dcf6ae
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: b1f535ad8a418fa3ce6492f9bdaa6e0299073504
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451819"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538134"
 ---
 # <a name="sscanfs-sscanfsl-swscanfs-swscanfsl"></a>sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l
 
@@ -104,15 +94,15 @@ int _swscanf_s_l(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式都會傳回已成功轉換並指派的欄位數，傳回值不包含已讀取但未指派的欄位。 傳回值 0 表示未指派任何欄位。 傳回值是**EOF**錯誤或如果字串的結尾已到達第一個轉換之前。
+所有這些函式都會傳回已成功轉換並指派的欄位數，傳回值不包含已讀取但未指派的欄位。 傳回值 0 表示未指派任何欄位。 傳回值是**EOF**錯誤或第一次轉換之前就到達的字串結尾。
 
-如果*緩衝區*或*格式*是**NULL**指標、 無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**至**EINVAL**
+如果*緩衝區*或是*格式*會**NULL**指標，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**到**EINVAL**
 
 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Sscanf_s**函式會將資料從*緩衝區*至的位置由每個提供*引數*。 格式字串後面的引數指定具有對應於型別規範中的型別變數指標*格式*。 與較不安全的版本不同的是[sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md)，緩衝區大小參數時，需要您使用型別欄位字元**c**， **C**， **s**，**S**，括住的字串控制項集合或 **[]**。 必須提供以字元為單位的緩衝區大小，作為緊接在每個需要它之緩衝區參數後的額外參數。 例如，如果您正在讀入字串，則會如下傳遞該字串的緩衝區大小：
+**Sscanf_s**函式的資料讀入*緩衝區*到每個所指定的位置*引數*。 格式字串後面的引數指定變數對應至中的類型指定名稱的類型指標*格式*。 與較不安全的版本不同[sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md)，緩衝區大小參數時，必須使用類型欄位字元**c**， **C**， **s**，**S**，或會括住的字串控制項集合 **[]**。 必須提供以字元為單位的緩衝區大小，作為緊接在每個需要它之緩衝區參數後的額外參數。 例如，如果您正在讀入字串，則會如下傳遞該字串的緩衝區大小：
 
 ```C
 wchar_t ws[10];
@@ -138,13 +128,13 @@ sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated
 如需詳細資訊，請參閱 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 和 [scanf 類型欄位字元](../../c-runtime-library/scanf-type-field-characters.md)。
 
 > [!NOTE]
-> 大小參數的類型是**不帶正負號**，而非**size_t**。 當為 64 位元目標編譯時，使用靜態轉型轉換 **_countof**或**sizeof**正確大小的結果。
+> 大小參數的類型是**不帶正負號**，而非**size_t**。 針對 64 位元目標編譯時，使用靜態轉型將轉換 **_countof**或是**sizeof**成正確大小的結果。
 
-*格式*引數的控制項欄位輸入的解譯，並具有相同的形式和功能*格式*引數**scanf_s**函式。 如果在重疊的字串之間進行複製，則行為是未定義的。
+*格式*引數會控制欄位輸入的解譯，而且具有相同的形式和運作方式*格式*引數**scanf_s**函式。 如果在重疊的字串之間進行複製，則行為是未定義的。
 
-**swscanf_s**是寬字元版本的**sscanf_s**; 的引數**swscanf_s**是寬字元字串。 **sscanf_s**無法處理多位元組的十六進位字元。 **swscanf_s**不會處理 Unicode 全形十六進位或 「 相容性區 」 的字元。 否則， **swscanf_s**和**sscanf_s**行為即會相同。
+**swscanf_s**是寬字元版本的**sscanf_s**; 的引數**swscanf_s**是寬字元字串。 **sscanf_s**不會處理多位元組十六進位字元。 **swscanf_s**不會處理 Unicode 全形十六進位或 「 相容性區域 」 字元。 否則，請**swscanf_s**並**sscanf_s**運作方式完全相同。
 
-有這些函式的版本 **_l**尾碼是一樣的不同之處在於它們使用傳入的地區設定參數，而不是目前的執行緒地區設定。
+有這些函式的版本 **_l**尾碼都相同，不同之處在於它們使用傳入的地區設定參數，而不是目前執行緒的地區設定。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -155,7 +145,7 @@ sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**sscanf_s**， **_sscanf_s_l**|\<stdio.h>|
 |**swscanf_s**， **_swscanf_s_l**|\<stdio.h> 或 \<wchar.h>|

@@ -1,10 +1,6 @@
 ---
-title: _ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l | Microsoft Docs
-ms.custom: ''
+title: _ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbckata
 - _ismbchira_l
@@ -32,8 +28,6 @@ f1_keywords:
 - ismbchira_l
 - _ismbchira_l
 - _ismbchira
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbckata function
 - _ismbchira function
@@ -46,23 +40,19 @@ helpviewer_keywords:
 - Hiragana
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0fe2b9c824fcc45eb2d0fda82cd350d3a9435b94
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2a5d0336e5ed4ad8bbb19f8a259128ab33d004e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403725"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506583"
 ---
 # <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l
 
 **字碼頁 932 特定函式**
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -93,26 +83,26 @@ int _ismbckata_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果字元符合測試條件，這些常式都會傳回非零值，如果不符合，則傳回 0。 如果*c* < = 255，而且沒有相對應 **_ismbb**常式 (例如， **_ismbcalnum**對應至 **_ismbbalnum**)，結果會是對應的傳回值 **_ismbb**常式。
+如果字元符合測試條件，這些常式都會傳回非零值，如果不符合，則傳回 0。 如果*c* < = 255 且有對應 **_ismbb**常式 (例如 **_ismbcalnum**對應至 **_ismbbalnum**)，結果是對應的傳回值 **_ismbb**常式。
 
 ## <a name="remarks"></a>備註
 
 這些函式每一個都會測試指定的多位元組字元是否符合指定的條件。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳入的地區設定而不是目前的地區設定的地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+使用這些函式的版本 **_l**尾碼都相同，不同之處在於使用傳入的地區設定而不是目前的地區設定其地區設定相關行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-|常式|測試條件 (限字碼頁 932)|
+|常式傳回的值|測試條件 (限字碼頁 932)|
 |-------------|-------------------------------------------|
-|**_ismbchira**|雙位元組平假名： 0x829F < =*c*< = 0x82F1。|
-|**_ismbchira_l**|雙位元組平假名： 0x829F < =*c*< = 0x82F1。|
-|**_ismbckata**|雙位元組片假名： 0x8340 < =*c*< = 0x8396。|
-|**_ismbckata_l**|雙位元組片假名： 0x8340 < =*c*< = 0x8396。|
+|**_ismbchira**|雙位元組平假名： 0x829f< < =*c*< lt;=0x82f1。|
+|**_ismbchira_l**|雙位元組平假名： 0x829f< < =*c*< lt;=0x82f1。|
+|**_ismbckata**|雙位元組片假名： 0x8340< < =*c*< lt;=0x8396。|
+|**_ismbckata_l**|雙位元組片假名： 0x8340< < =*c*< lt;=0x8396。|
 
 **結束特定字碼頁 932**
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_ismbchira**|\<mbstring.h>|
 |**_ismbchira_l**|\<mbstring.h>|

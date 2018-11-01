@@ -1,28 +1,17 @@
 ---
-title: 縮小或延伸整個影像 （圖示影像編輯器） |Microsoft Docs
-ms.custom: ''
+title: 縮小或延伸整個影像 (圖示影像編輯器)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], shrinking and stretching images
 - images [C++], stretching
 - images [C++], shrinking
 ms.assetid: accdef79-c77e-493f-b8e8-a5ef033a4e9e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 789747ff05c044aa77b58b7f94988fd78202bedc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 12a5d8a4e99893cc55ff2d90624cc9afc1281140
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443516"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506167"
 ---
 # <a name="shrinking-or-stretching-an-entire-image-image-editor-for-icons"></a>縮小或延伸整個影像 (圖示影像編輯器)
 

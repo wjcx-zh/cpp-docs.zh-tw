@@ -1,10 +1,6 @@
 ---
-title: difftime、_difftime32、_difftime64 | Microsoft Docs
-ms.custom: ''
+title: difftime、_difftime32、_difftime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _difftime32
 - difftime
@@ -28,8 +24,6 @@ f1_keywords:
 - difftime64
 - _difftime32
 - difftime32
-dev_langs:
-- C++
 helpviewer_keywords:
 - _difftime32 function
 - difftime function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a972a8f7ee2cc5e97c22afeaa21f86e4b4d6d509
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eefa946f0458f79950b443c0a84272866845df8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398717"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505946"
 ---
 # <a name="difftime-difftime32-difftime64"></a>difftime、_difftime32、_difftime64
 
@@ -71,21 +61,21 @@ double _difftime64( __time64_t timeEnd, __time64_t timeStart );
 
 ## <a name="return-value"></a>傳回值
 
-**difftime**傳回以秒為單位，所經過的時間，從*timeStart*至*時間結束*。 傳回的值是雙精度浮點數。 傳回的值可能是 0，表示有錯誤。
+**difftime**經過的時間 （秒），會傳回從*timeStart*要*時間結束*。 傳回的值是雙精度浮點數。 傳回的值可能是 0，表示有錯誤。
 
 ## <a name="remarks"></a>備註
 
-**Difftime**函數會計算兩個提供的時間值之間的差異*timeStart*和*時間結束*。
+**Difftime**函式會計算兩個時間值之間的差異*timeStart*並*時間結束*。
 
-所提供的時間值必須符合的範圍內**time_t**。 **time_t**是 64 位元值。 因此，範圍的結束時間已從 2038 年 1 月 18 日 23:59:59 (UTC) 延長到 3000 年 12 月 31 日 23:59:59。 較低的範圍的**time_t**仍會從 1970 年 1 月 1 日的午夜。
+提供的時間值必須符合的範圍內**time_t**。 **time_t**是 64 位元值。 因此，範圍的結束時間已從 2038 年 1 月 18 日 23:59:59 (UTC) 延長到 3000 年 12 月 31 日 23:59:59。 較低的範圍**time_t**仍然是 1970 年 1 月 1 日午夜。
 
-**difftime**是內嵌函式評估為 **_difftime32**或 **_difftime64**取決於是否 **_USE_32BIT_TIME_T**定義。 _difftime32 和 _difftime64 可用來直接強制使用特定大小的時間類型。
+**difftime**是評估為內嵌函數 **_difftime32**或是 **_difftime64**取決於是否 **_USE_32BIT_TIME_T**定義。 _difftime32 和 _difftime64 可用來直接強制使用特定大小的時間類型。
 
-這些函式會驗證它們的參數。 如果任一參數為零或負數，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函數會傳回 0，並設定**errno**至**EINVAL**。
+這些函式會驗證它們的參數。 如果任一參數為零或負數，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回 0，並設定**errno**要**EINVAL**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**difftime**|\<time.h>|
 |**_difftime32**|\<time.h>|

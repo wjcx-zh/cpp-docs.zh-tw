@@ -1,25 +1,15 @@
 ---
-title: 如何： 從 MFC 應用程式載入功能區資源 |Microsoft Docs
-ms.custom: ''
+title: 如何：從 MFC 應用程式載入功能區應用程式
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ribbon resource [MFC], loading
 ms.assetid: 1c76bb8f-6345-414a-9f3f-128815ceadc5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1643989a96a9003847fb53de624bff12cd51cd88
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 14ba37952d6f8849c51b36901a6bc17404f938e2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434283"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50515150"
 ---
 # <a name="how-to-load-a-ribbon-resource-from-an-mfc-application"></a>如何：從 MFC 應用程式載入功能區應用程式
 

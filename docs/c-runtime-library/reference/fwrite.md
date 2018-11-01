@@ -1,10 +1,6 @@
 ---
-title: fwrite | Microsoft Docs
-ms.custom: ''
+title: fwrite
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fwrite
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fwrite
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f1320bcc61830833f2b1a4a225dff30652df2d3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b4d6b9ce4fb66ee545f52946e28e4984d9e4f924
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400576"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506739"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -70,15 +60,15 @@ size_t fwrite(
 
 ## <a name="return-value"></a>傳回值
 
-**fwrite**傳回完整的實際寫入的項目，這可能會小於*計數*如果發生錯誤。 此外，若發生錯誤，也無法判斷檔案位置指標。 如果有任一個*資料流*或*緩衝區*為 null 指標，或如果奇數位元組會寫入指定在 Unicode 模式下，函式會叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**至**EINVAL**並傳回 0。
+**fwrite**傳回的完整實際寫入的項目，這可能會小於*計數*發生錯誤。 此外，若發生錯誤，也無法判斷檔案位置指標。 如果有任一*資料流*或是*緩衝區*為 null 指標，或如果奇數數目的可寫入的位元組會指定在 Unicode 模式中，函式會叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**要**EINVAL**且會傳回 0。
 
 ## <a name="remarks"></a>備註
 
-**Fwrite**函式會寫入最多*計數*項目的*大小*長度，從*緩衝區*輸出*資料流*. 與相關聯的檔案指標*資料流*（如果有的話） 就會遞增的實際寫入的位元組數目。 如果*資料流*開啟在文字模式下，每個換行字元會取代為歸位字元-換行字元組。 這種取代不會對傳回值產生影響。
+**Fwrite**函式會寫入最多*計數*項目 的*大小*長度，從*緩衝區*輸出*資料流*. 與相關聯的檔案指標*資料流*（如果有的話） 會遞增的實際寫入的位元組數目。 如果*資料流*開啟在文字模式中，每個換行字元會取代為歸位/換行字元組。 這種取代不會對傳回值產生影響。
 
-當*資料流*在 Unicode 轉譯模式中開啟 — 例如，如果*資料流*開啟藉由呼叫**fopen**和使用模式參數，其包含**ccs= UNICODE**， **ccs = UTF 16LE**，或**ccs = utf-8**，或如果模式變更為 Unicode 轉譯模式使用 **_setmode**和模式參數，其包含 **_O_WTEXT**， **_O_U16TEXT**，或 **_O_U8TEXT**—*緩衝區*解譯為的指標陣列**wchar_t**包含 utf-16 資料。 嘗試以此模式寫入奇數位元組會導致參數驗證錯誤。
+當*資料流*在 Unicode 轉譯模式中開啟 — 比方說，如果*串流*開啟藉由呼叫**fopen**和使用模式參數，其包含**ccs= UNICODE**， **ccs =-16LE**，或**ccs = utf-8**，或如果模式變更為 Unicode 轉譯模式使用 **_setmode**和模式包含的參數 **_O_WTEXT**， **_O_U16TEXT**，或 **_O_U8TEXT**—*緩衝區*會解譯為變數的指標，陣列**wchar_t**包含 utf-16 資料。 嘗試以此模式寫入奇數位元組會導致參數驗證錯誤。
 
-因為此函示會鎖定呼叫執行緒，這是安全執行緒。 如需非鎖定版本，請參閱 **_fwrite_nolock**。
+因為此函示會鎖定呼叫執行緒，這是安全執行緒。 如需非鎖定版本，請參閱 < **_fwrite_nolock**。
 
 ## <a name="requirements"></a>需求
 

@@ -1,27 +1,17 @@
 ---
-title: 規則運算式 (C++) | Microsoft Docs
-ms.custom: ''
+title: 規則運算式 (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, regular expressions
 - regular expressions, Visual C++
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca3d636b1dffdb3237fb94fade41c90057543b9d
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: dafbe7c7ba10db2b0f34fdc6065c1475d63be284
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861560"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443457"
 ---
 # <a name="regular-expressions-c"></a>規則運算式 (C++)
 
@@ -342,8 +332,8 @@ DSW 逸出字元是字元類別的簡短名稱，如下表所示。
 
 |文法|允許的識別逸出字元|
 |-------------|----------------------------------------|
-|`basic`, `grep`|{ '(', ')', '{', '}', '.', '[', '\\', '\*', '^', '$' }|
-|`extended`, `egrep`|{ '(', ')', '{', '.', '[', '\\', '\*', '^', '$', '+', '?', '&#124;' }|
+|`basic`、 `grep`|{ '(', ')', '{', '}', '.', '[', '\\', '\*', '^', '$' }|
+|`extended`、 `egrep`|{ '(', ')', '{', '.', '[', '\\', '\*', '^', '$', '+', '?', '&#124;' }|
 |`awk`|`extended` 加上 { '"', '/' }|
 |`ECMAScript`|所有字元，但可以是識別項一部分的字元除外。 這通常包括字母、 數字、 '$'、 '\_'，和 unicode 逸出序列。 如需詳細資訊，請參閱＜ECMAScript 語言規格＞。|
 

@@ -1,16 +1,10 @@
 ---
-title: -C （前置處理期間保留註解） |Microsoft Docs
-ms.custom: ''
+title: /C (前置處理時保留註解)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.KeepComments
 - /c
 - VC.Project.VCCLWCECompilerTool.KeepComments
-dev_langs:
-- C++
 helpviewer_keywords:
 - comments, not stripping during preprocessing
 - preserve comments during preprocessing
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - c compiler option [C++]
 - /c compiler option [C++]
 ms.assetid: 944567ca-16bc-4728-befe-d414a7787f26
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8716c0a0f954b0a2ad0bbe0e25c29a4445b11823
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b37e279af3995bd1d61c97dc88b49cdd95495c75
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428339"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50442597"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (前置處理時保留註解)
 

@@ -1,23 +1,13 @@
 ---
-title: 概觀的 x64 呼叫慣例 |Microsoft Docs
-ms.custom: ''
+title: x64 呼叫慣例概觀
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: a05db5eb-0844-4d9d-8b92-b1b2434be0ea
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e70f4017cb31fcc76b1cf3ef2a77d3a28e31bd28
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 37ba3c68310af938f382f88ab4f339166589b96b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707989"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444192"
 ---
 # <a name="overview-of-x64-calling-conventions"></a>x64 呼叫慣例概觀
 

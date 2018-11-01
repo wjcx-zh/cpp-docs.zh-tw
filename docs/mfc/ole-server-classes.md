@@ -1,30 +1,20 @@
 ---
-title: OLE 伺服器類別 |Microsoft Docs
-ms.custom: ''
+title: OLE 伺服器類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.ole
-dev_langs:
-- C++
 helpviewer_keywords:
 - OLE server applications [MFC], server classes
 - OLE server documents
 - COM components, classes [MFC]
 - component classes [MFC]
 ms.assetid: 8e9b67a2-c0ff-479c-a8d6-19b36c5e6fc6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9994cdadb0ca2924a3ac773752ae40f3a750b74f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 610a69204e5cb66f2129351ab2a04bb0915a1b4c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442886"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451684"
 ---
 # <a name="ole-server-classes"></a>OLE 伺服器類別
 

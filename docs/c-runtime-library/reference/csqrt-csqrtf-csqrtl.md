@@ -1,11 +1,6 @@
 ---
-title: csqrt、csqrtf、csqrtl | Microsoft Docs
-ms.custom: ''
+title: csqrt、csqrtf、csqrtl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - csqrt
 - csqrtf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/csqrt
 - complex/csqrtf
 - complex/csqrtl
-dev_langs:
-- C++
 helpviewer_keywords:
 - csqrt function
 - csqrtf function
 - csqrtl function
 ms.assetid: b65f086b-0f55-4622-a7a3-4e79d9c9c05c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 143bb55180b3394f8ac32b36f7641503dd346b76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00fe12d4f9c136278e56ceaf3fa62443092d0ec4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396306"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449877"
 ---
 # <a name="csqrt-csqrtf-csqrtl"></a>csqrt、csqrtf、csqrtl
 
@@ -83,16 +72,16 @@ _Lcomplex csqrtl(
 
 |輸入|SEH 例外狀況|**_matherr**例外狀況|
 |-----------|-------------------|--------------------------|
-|± QNAN、 IND|無|_DOMAIN|
+|常见 QNAN IND|無|_DOMAIN|
 |- ∞|無|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**csqrt**採用並傳回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程式中， **csqrt**一律採用並傳回 **_Dcomplex**值。
+因為 c + + 允許多載，您可以呼叫多載**csqrt**採用並傳回 **_Fcomplex**並 **_Lcomplex**值。 在 C 程式中， **csqrt**一律採用並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
-|常式|C 標頭|C++ 標頭|
+|常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
 |**csqrt**， **csqrtf**， **csqrtl**|\<complex.h>|\<ccomplex>|
 

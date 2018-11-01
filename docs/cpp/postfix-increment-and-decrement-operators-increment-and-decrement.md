@@ -1,15 +1,9 @@
 ---
-title: '後置遞增和遞減運算子: + + 和-|Microsoft Docs'
-ms.custom: ''
+title: 後置遞增和遞減運算子：++ 和 --
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - --
 - ++
-dev_langs:
-- C++
 helpviewer_keywords:
 - increment operators [C++], syntax
 - member-selection operators [C++]
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4591f9f4fed8b3b8dd1c24b8200b3365d87194b8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e1a87fe4815a75b97616d7b11a4b9aa4ae65eb9f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46044661"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438817"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>後置遞增和遞減運算子：++ 和 --
 

@@ -1,10 +1,6 @@
 ---
-title: _mbclen、mblen、_mblen_l | Microsoft Docs
-ms.custom: ''
+title: _mbclen、mblen、_mblen_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbclen
 - mblen
@@ -31,8 +27,6 @@ f1_keywords:
 - _ftclen
 - _tclen
 - mbclen
-dev_langs:
-- C++
 helpviewer_keywords:
 - tclen function
 - _mblen_l function
@@ -42,23 +36,19 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 932695b9d3474f892460e222fd1d9cc2b34c0dd6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dddf7d3a1705460d2c8d42cc1b36230d7bdaf942
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403205"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434382"
 ---
 # <a name="mbclen-mblen-mblenl"></a>_mbclen、mblen、_mblen_l
 
 取得長度，並判斷多位元組字元的有效性。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -93,13 +83,13 @@ int _mblen_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_mbclen**根據是否傳回 1 或 2，多位元組字元*c* 1 或 2 的長度是位元組。 沒有任何錯誤傳回的 **_mbclen**。 如果*mbstr*不**NULL**， **mblen**傳回長度，以位元組為單位的多位元組字元。 如果*mbstr*是**NULL**或它所指向的寬字元 null 字元**mblen**傳回 0。 如果物件的*mbstr*指向不會構成有效的多位元組字元內第一個*計數*字元， **mblen**傳回-1。
+**_mbclen**傳回 1 或 2，根據多位元組字元*c*為 1 或 2 個位元組長。 不沒有傳回任何錯誤 **_mbclen**。 如果*mbstr*不是**NULL**， **mblen**傳回長度，以位元組為單位的多位元組字元。 如果*mbstr*是**NULL**或是指向寬字元的 null 字元**mblen**會傳回 0。 如果物件的*mbstr*點不會構成有效的多位元組字元，在第一個*計數*字元**mblen**會傳回-1。
 
 ## <a name="remarks"></a>備註
 
-**_Mbclen**函式會傳回長度，以位元組為單位的多位元組字元*c*。 如果*c*並未指向的隱含呼叫所決定的多位元組字元的前導位元組 **_ismbblead**，結果 **_mbclen**無法預測。
+**_Mbclen**函式會傳回長度，以位元組為單位的多位元組字元*c*。 如果*c*未指向隱含呼叫所決定之多位元組字元的前導位元組 **_ismbblead**，結果 **_mbclen**無法預期。
 
-**mblen**傳回的長度，以位元組為單位的*mbstr*如果它是有效的多位元組字元，並判斷多位元組字元的字碼頁相關聯的有效性。 **mblen**檢查*計數*或中包含的位元組更少*mbstr*，但是不能超過**MB_CUR_MAX**位元組。
+**mblen**傳回長度以位元組為單位*mbstr*如果它是有效的多位元組字元，並判斷多位元組字元的字碼頁相關聯的有效性。 **mblen**會檢查*計數*或更少個位元組內*mbstr*，但不是能超過**MB_CUR_MAX**位元組。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
@@ -111,7 +101,7 @@ int _mblen_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_mbclen**|\<mbstring.h>|
 |**mblen**|\<stdlib.h>|

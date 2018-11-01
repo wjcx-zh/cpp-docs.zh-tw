@@ -1,28 +1,17 @@
 ---
-title: 記錄應用程式精靈 （MFC 資料存取） 建立的檢視程式碼 |Microsoft Docs
-ms.custom: ''
+title: 應用程式精靈所建立的記錄檢視程式碼 (MFC 資料存取)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - application wizards [C++], record view code
 - record views, refreshing controls
 - record views, application wizard code
 ms.assetid: 18fd4703-5939-491d-b759-985f767b951f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 0209a841f3cd2051a9491b5df3ca7a1a88e28ca5
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5340926789925d8243ecd20c27537c9690582a41
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50060178"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50427972"
 ---
 # <a name="record-view-code-created-by-application-wizard--mfc-data-access"></a>應用程式精靈所建立的記錄檢視程式碼 (MFC 資料存取)
 

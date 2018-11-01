@@ -1,29 +1,19 @@
 ---
-title: -SAFESEH （影像擁有安全例外狀況處理常式） |Microsoft Docs
-ms.custom: ''
+title: /SAFESEH (影像擁有安全例外狀況處理常式)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /SAFESEH
-dev_langs:
-- C++
 helpviewer_keywords:
 - /SAFESEH linker option
 - -SAFESEH linker option
 - SAFESEH linker option
 ms.assetid: 7722ff99-b833-4c65-a855-aaca902ffcb7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 035485540135fb3b3b082de630b31d6bf934b3d9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 85c59d99a17c4e13750f5e51fd85d348346ff922
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713878"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450215"
 ---
 # <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH (影像擁有安全例外狀況處理常式)
 

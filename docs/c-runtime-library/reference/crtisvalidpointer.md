@@ -1,10 +1,6 @@
 ---
-title: _CrtIsValidPointer | Microsoft Docs
-ms.custom: ''
+title: _CrtIsValidPointer
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtIsValidPointer
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsValidPointer
 - _CrtIsValidPointer
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtIsValidPointer function
 - _CrtIsValidPointer function
 ms.assetid: 91c35590-ea5e-450f-a15d-ad8d62ade1fa
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1bb78f8dee494fd213df6db16e2800cb9090bdf3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 64197d460cdb7dd26d22196c08151be09df48573
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397261"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429237"
 ---
 # <a name="crtisvalidpointer"></a>_CrtIsValidPointer
 
@@ -70,7 +60,7 @@ int _CrtIsValidPointer(
 
 ## <a name="remarks"></a>備註
 
-開始在 Visual Studio 2010 中，CRT 程式庫*大小*和*存取*參數被忽略，和 **_CrtIsValidPointer**只會驗證指定的*位址*不是 null。 因為這項測試很容易由您自行執行，所以我們不建議您使用此函式。 在 Visual Studio 2010 之前的版本，此函式會驗證記憶體範圍開始位置在*位址*並延伸*大小*位元組是有效的指定存取範圍作業或作業。 當*存取*是設為 TRUE，記憶體範圍驗證以進行讀取和寫入。 當*存取*為 FALSE 時，才會進行讀取會進行驗證記憶體範圍。 當[_DEBUG](../../c-runtime-library/debug.md)未定義時，呼叫 **_CrtIsValidPointer**會在前置處理期間移除。
+開始在 Visual Studio 2010 CRT 程式庫*大小*並*存取*參數會被忽略，並 **_CrtIsValidPointer**只會驗證指定的*地址*不是 null。 因為這項測試很容易由您自行執行，所以我們不建議您使用此函式。 在 Visual Studio 2010 之前的版本，此函式會驗證記憶體範圍開始*地址*並延伸*大小*位元組是適用於指定的存取範圍作業或作業。 當*存取*是設為 TRUE，記憶體範圍會驗證讀取和寫入。 當*存取*為 FALSE 時，才會進行讀取會進行驗證記憶體範圍。 當[_DEBUG](../../c-runtime-library/debug.md)未定義，呼叫 **_CrtIsValidPointer**會在前置處理期間移除。
 
 因為此函式會傳回 TRUE 或 FALSE，所以可將該函式傳遞至其中一個 [_ASSERT](assert-asserte-assert-expr-macros.md) 巨集，以建立簡單的偵錯處理機制。 若記憶體範圍無法有效用於讀取和寫入作業，則下列範例會引發判斷提示：
 
@@ -82,7 +72,7 @@ _ASSERTE( _CrtIsValidPointer( address, size, TRUE ) );
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_CrtIsValidPointer**|\<crtdbg.h>|
 

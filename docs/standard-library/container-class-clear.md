@@ -1,25 +1,15 @@
 ---
-title: 容器類別::clear | Microsoft Docs
-ms.custom: ''
+title: 容器類別::clear
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - clear method
 ms.assetid: 725f2717-5dc2-428f-a19a-05f046aafb2b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dd71ca2892a35b2c33dfaffcd92218a551d2ee99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9de32230e6dcfdc0663fc13cc2656243a74267fb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841820"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445288"
 ---
 # <a name="container-classclear"></a>容器類別::clear
 

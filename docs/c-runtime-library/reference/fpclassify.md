@@ -1,8 +1,6 @@
 ---
-title: fpclassify | Microsoft Docs
-ms.custom: ''
+title: fpclassify
 ms.date: 04/05/2018
-ms.topic: reference
 apiname:
 - fpclassify
 apilocation:
@@ -24,16 +22,12 @@ helpviewer_keywords:
 - fpclassify macro
 - fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da55cb87804d178d5a305ed466aa498de4bc1ee5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 626e356cf61415e4f8212a8a12d90a72fe4576bf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398428"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613872"
 ---
 # <a name="fpclassify"></a>fpclassify
 
@@ -67,7 +61,7 @@ int fpclassify(
 
 ## <a name="return-value"></a>傳回值
 
-**fpclassify**傳回整數值，指出引數的浮點數的類別*x*。 下表顯示可能的值傳回**fpclassify**，定義在\<math.h >。
+**fpclassify**傳回整數值，指出引數的浮點類別*x*。 下表顯示可能的值所傳回**fpclassify**，其定義於\<math.h> >。
 
 |值|描述|
 |-----------|-----------------|
@@ -79,7 +73,7 @@ int fpclassify(
 
 ## <a name="remarks"></a>備註
 
-在 C 中， **fpclassify**是巨集; c + + **fpclassify**是使用引數類型的多載函式**float**， **double**，或**長** **double**。 在任一情況下，傳回值取決於引數運算式的有效類型，而非任何中繼呈現。 例如，一般**double**或**長****雙**值會是無限值、 異常，或零值時轉換成**float**。
+在 C 中， **fpclassify**是巨集; 在 c + + **fpclassify**是多載使用引數類型的函式**float**， **double**，或**長** **double**。 在任一情況下，傳回值取決於引數運算式的有效類型，而非任何中繼呈現。 比方說，一般**雙**或**長** **double**的值可以是無限大、 異常或零值時轉換成**float**。
 
 ## <a name="requirements"></a>需求
 
@@ -87,7 +81,7 @@ int fpclassify(
 |---------------------|---------------------------|-------------------------------|
 |**fpclassify**|\<math.h>|\<math.h> 或 \<cmath>|
 
-**Fpclassify**巨集和**fpclassify**函式符合 ISO C99 與 C + + 11 規格。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+**Fpclassify**巨集並**fpclassify**函式符合 ISO C99 和 c++11 規格。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

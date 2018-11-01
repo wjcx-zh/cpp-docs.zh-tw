@@ -1,27 +1,17 @@
 ---
-title: 如何： 使用訊息對應交互參考 |Microsoft Docs
-ms.custom: ''
+title: 如何：使用訊息對應交互參考
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.messages
-dev_langs:
-- C++
 helpviewer_keywords:
 - windows [MFC], message maps
 ms.assetid: 2e863d23-9e58-45ba-b5e4-a8ceefccd0c8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fccdf620cbdaeffc7fb201e014edc4c7c1dddc83
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 71c46e7c30eab414534012c2fe314999568d2bd8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434449"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50457794"
 ---
 # <a name="how-to-use-the-message-map-cross-reference"></a>如何：使用訊息對應交互參考
 

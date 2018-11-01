@@ -1,11 +1,6 @@
 ---
-title: cexp、cexpf、cexpl | Microsoft Docs
-ms.custom: ''
+title: cexp、cexpf、cexpl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cexp
 - cexpf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cepx
 - complex/cexpf
 - complex/cexpl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cexp function
 - cexpl function
 - cexpf function
 ms.assetid: f27fd5a9-70c7-4957-a7ee-5256d19bd1da
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3a54dc0c25fd0b476887914778278ec83c19fe8e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 401dd30b326fcd6caef7cae6f1ecbdc43ed5dd5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393988"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462929"
 ---
 # <a name="cexp-cexpf-cexpl"></a>cexp、cexpf、cexpl
 
@@ -72,15 +61,15 @@ _Lcomplex cexp( _Lcomplex z );  // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-值**e**乘冪*z*。
+值**電子**的乘冪*z*。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**cexp**採用並傳回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程式中， **cexp**一律採用並傳回 **_Dcomplex**值。
+因為 c + + 允許多載，您可以呼叫多載**cexp**採用並傳回 **_Fcomplex**並 **_Lcomplex**值。 在 C 程式中， **cexp**一律採用並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
-|常式|C 標頭|C++ 標頭|
+|常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
 |**cexp**， **cexpf**， **cexpl**|\<complex.h>|\<complex.h>|
 

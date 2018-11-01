@@ -1,41 +1,31 @@
 ---
-title: 編譯器錯誤 C2653 |Microsoft 文件
-ms.custom: ''
+title: 編譯器錯誤 C2653
 ms.date: 11/30/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2653
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2653
 ms.assetid: 3f49e731-affd-43a0-a8d0-181db7650bc3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a8e1df7dd6337b1a3e363a5744181b12d94c879b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4a3a8a74483317b87e16458f44016f0aeca1379
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234963"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471145"
 ---
 # <a name="compiler-error-c2653"></a>編譯器錯誤 C2653
 
-> '*識別碼*': 不是類別或命名空間名稱
+> '*識別碼*': 不是類別或命名空間的名稱
 
 語言語法需要類別、 結構、 等位或在此命名空間名稱。
 
-當您使用尚未宣告為類別、 結構、 等位或命名空間範圍運算子前方的名稱時，會發生此錯誤。 若要修正此問題，宣告名稱，或包含宣告的名稱，才能使用的標頭。
+當您使用尚未宣告為類別、 結構、 等位或範圍運算子前面的命名空間的名稱時，會發生此錯誤。 若要修正此問題，請宣告名稱，或包含宣告的名稱，才能使用的標頭。
 
-您也可以，如果您嘗試定義 C2653*複合命名空間*，包含一或多個範圍巢狀命名空間名稱的命名空間。 複合定義中不允許使用 c + + 在 C + + 17 之前的命名空間。 當您指定時，在 Visual Studio 2015 Update 3 開始支援複合的命名空間[/std:c + + 最新](../../build/reference/std-specify-language-standard-version.md)編譯器選項。 從 Visual c + + 2017 15.5 版本開始，編譯器支援複合的命名空間定義當[/std:c + + 17](../../build/reference/std-specify-language-standard-version.md)指定選項。
+C2653 此外，也可以，如果您嘗試定義*複合的命名空間*，包含一或多個範圍巢狀命名空間名稱的命名空間。 複合定義 c + + 中不允許在 c++17 之前的命名空間。 在 Visual Studio 2015 Update 3 開始，當您指定支援複合的命名空間[/std: c + + 最新](../../build/reference/std-specify-language-standard-version.md)編譯器選項。 從 Visual c + + 2017 15.5 版開始，編譯器支援複合的命名空間定義時[/std: c + + 17](../../build/reference/std-specify-language-standard-version.md)指定選項。
 
 ## <a name="examples"></a>範例
 
-這個範例會產生 C2653，因為已使用的領域名稱，但未宣告。 編譯器會預期類別、 結構、 等位或之前的範圍運算子 （:） 的命名空間名稱。
+此範例會產生 C2653，因為已使用範圍名稱，但未宣告。 編譯器預期類別、 結構、 等位或之前的範圍運算子 （:） 的命名空間名稱。
 
 ```cpp
 // C2653.cpp
@@ -48,7 +38,7 @@ void xx::func1(int m) {}   // C2653, xx is not declared
 void yy::func1(int m) {}   // OK
 ```
 
-在未編譯 C + + 17 或更新版本標準的程式碼，巢狀命名空間必須使用每個巢狀層級的明確命名空間宣告：
+程式碼中就不會編譯為 C + + 17 或更新版本的標準，巢狀命名空間必須使用明確的命名空間宣告，每個巢狀層級：
 
 ```cpp
 // C2653b.cpp

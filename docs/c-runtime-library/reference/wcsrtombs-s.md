@@ -1,10 +1,6 @@
 ---
-title: wcsrtombs_s | Microsoft Docs
-ms.custom: ''
+title: wcsrtombs_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcsrtombs_s
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wcsrtombs_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - string conversion, wide characters
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 94e27965d1660f4c344d0026bbfce8685a935c7a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ece21737b1e0b4d157b241286638ac376843fc6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417297"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459055"
 ---
 # <a name="wcsrtombss"></a>wcsrtombs_s
 
@@ -80,7 +70,7 @@ errno_t wcsrtombs_s(
 指向要轉換的寬字元字串。
 
 *count*<br/>
-要儲存在中的位元組數目上限*mbstr*緩衝區，或[_TRUNCATE](../../c-runtime-library/truncate.md)。
+要儲存在位元組的數目上限*mbstr*緩衝區，或是[_TRUNCATE](../../c-runtime-library/truncate.md)。
 
 *mbstate*<br/>
 指標**mbstate_t**轉換狀態物件。
@@ -91,42 +81,42 @@ errno_t wcsrtombs_s(
 
 |錯誤狀況|傳回值和**errno**|
 |---------------------|------------------------------|
-|*mbstr*是**NULL**和*sizeInBytes* > 0|**EINVAL**|
+|*mbstr*已**NULL**並*sizeInBytes* > 0|**EINVAL**|
 |*wcstr*是**NULL**|**EINVAL**|
-|目的地緩衝區為太小，無法包含已轉換的字串 (除非*計數*是 **_TRUNCATE**; 請參閱下面的備註)|**ERANGE**|
+|目的緩衝區太小而無法包含已轉換的字串 (除非*計數*是 **_TRUNCATE**; 請參閱下面的 < 備註 >)|**ERANGE**|
 
-如果發生上述任何一種情況，則會叫用無效的參數例外狀況，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函數會傳回錯誤碼，並設定**errno**如下表所示。
+如果發生上述任何一種情況，則會叫用無效的參數例外狀況，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回錯誤碼，並設定**errno**資料表中所示。
 
 ## <a name="remarks"></a>備註
 
-**Wcsrtombs_s**函式所指向的寬字元字串，轉換為*wcstr*到儲存在緩衝區所指向的多位元組字元*mbstr*，並使用中所包含的轉換狀態*mbstate*。 除非遇到下列情況之一，否則會繼續為每個字元進行轉換：
+**Wcsrtombs_s**函式會將所指向的寬字元字串轉換*wcstr*到儲存在緩衝區所指向的多位元組字元*mbstr*，並使用中包含的轉換狀態*mbstate*。 除非遇到下列情況之一，否則會繼續為每個字元進行轉換：
 
 - 遇到 Null 寬字元
 
 - 遇到無法轉換的寬字元
 
-- 儲存在位元組數目*mbstr*緩衝等於*計數*。
+- 儲存在位元組的數目*mbstr*緩衝 equals*計數*。
 
 目的字串一律會以 Null 結束 (即使發生錯誤亦然)。
 
-如果*計數*是特殊值[_TRUNCATE](../../c-runtime-library/truncate.md)，然後**wcsrtombs_s**轉換的字串會盡量符合目的地緩衝區，同時仍留出空間給 null結束字元。
+如果*計數*是特殊值[_TRUNCATE](../../c-runtime-library/truncate.md)，然後**wcsrtombs_s**的字串會轉換符合目的緩衝區，同時仍留出空間給 null 值結束字元。
 
-如果**wcsrtombs_s**成功轉換來源的字串，它會將大小以位元組為單位的已轉換的字串，包含 null 結束字元，放 *&#42;pReturnValue* (提供*pReturnValue*不**NULL**)。 發生這種情況即使*mbstr*引數是**NULL** ，並提供一個方式來判斷所需的緩衝區大小。 請注意，如果*mbstr*是**NULL**，*計數*會被忽略。
+如果**wcsrtombs_s**成功轉換來源字串中，它會在將大小以位元組為單位的已轉換的字串，包括 null 結束字元，將放置 *&#42;pReturnValue* (提供*pReturnValue*不是**NULL**)。 發生這種情況即使*mbstr*引數是**NULL** ，並提供一個方式來判斷所需的緩衝區大小。 請注意，如果*mbstr*是**NULL**，*計數*會被忽略。
 
-如果**wcsrtombs_s**遇到寬字元不能轉換的多位元組字元，它會將-1 放 *\*pReturnValue*，設定目的地緩衝區為空字串，設定**errno**至**EILSEQ**，並傳回**EILSEQ**。
+如果**wcsrtombs_s**遇到寬字元，它無法轉換成多位元組字元，它將-1 放入 *\*pReturnValue*，將目的緩衝區設為空字串，設定**errno**要**EILSEQ**，並傳回**EILSEQ**。
 
-如果指向的序列*wcstr*和*mbstr*重疊，行為**wcsrtombs_s**是未定義。 **wcsrtombs_s**會受到目前地區設定之 LC_TYPE 分類。
+如果指向的序列所*wcstr*並*mbstr*重疊，就會有的行為**wcsrtombs_s**是未定義。 **wcsrtombs_s**會受到目前地區設定之 LC_TYPE 分類。
 
 > [!IMPORTANT]
-> 請確認*wcstr*和*mbstr*沒有重疊，而且*計數*會正確反映要轉換的寬字元數目。
+> 請確認*wcstr*並*mbstr*未重疊時，且*計數*正確反映要轉換的寬字元數目。
 
-**Wcsrtombs_s**函式不同於[wcstombs_s、 _wcstombs_s_l](wcstombs-s-wcstombs-s-l.md)重新。 轉換狀態會儲存在*mbstate*的相同或其他可重新啟動的函式的後續呼叫。 混合使用可重新啟動和不可重新啟動之函式的結果不明。 例如，應用程式會使用**wcsrlen**而**wcslen**，如果的後續呼叫**wcsrtombs_s**而不是使用**wcstombs_s**.
+**Wcsrtombs_s**函式與不同[wcstombs_s、 _wcstombs_s_l](wcstombs-s-wcstombs-s-l.md)重新。 轉換狀態會儲存在*mbstate*的後續呼叫相同或其他可重新啟動的函式。 混合使用可重新啟動和不可重新啟動之函式的結果不明。 例如，應用程式會使用**wcsrlen**而非**wcslen**，如果後續呼叫**wcsrtombs_s**而不是使用**wcstombs_s**.
 
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
 ## <a name="exceptions"></a>例外狀況
 
-**Wcsrtombs_s**函式是多執行緒安全，只要在目前執行緒中的任何函式呼叫**setlocale**此函式執行時和*mbstate*為 null。
+**Wcsrtombs_s**函式是多執行緒的安全，只要在目前的執行緒中的任何函式會呼叫**setlocale**執行此函式時， *mbstate*為 null。
 
 ## <a name="example"></a>範例
 
@@ -177,7 +167,7 @@ The string was successfully converted.
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**wcsrtombs_s**|\<wchar.h>|
 

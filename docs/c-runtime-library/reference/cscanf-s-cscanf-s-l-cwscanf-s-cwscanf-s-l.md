@@ -1,10 +1,6 @@
 ---
-title: _cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l | Microsoft Docs
-ms.custom: ''
+title: _cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwscanf_s_l
 - _cwscanf_s
@@ -35,8 +31,6 @@ f1_keywords:
 - _tcscanf_s_l
 - tcscanf_s
 - tcscanf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - cscanf_s function
 - _cwscanf_s_l function
@@ -54,23 +48,19 @@ helpviewer_keywords:
 - _tcscanf_s function
 - tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ca65c4746256611ed6958bc76d8779cd36ae1ff
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b49c464c7262a60bb7744a68c0144234e152edd3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403270"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463696"
 ---
 # <a name="cscanfs-cscanfsl-cwscanfs-cwscanfsl"></a>_cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l
 
 從主控台讀取格式化資料。 這些是具有如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的更安全 [_cscanf、_cscanf_l、_cwscanf、_cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md) 版本。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -108,20 +98,20 @@ int _cwscanf_s_l(
 
 ## <a name="return-value"></a>傳回值
 
-已成功轉換並指派的欄位數目。 此傳回值不包含已讀取但未指派的欄位。 傳回值是**EOF**嘗試讀取檔案結尾處的情況。 當鍵盤輸入在作業系統命令列層級重新導向時，就會發生此情況。 傳回值 0 表示未指派任何欄位。
+已成功轉換並指派的欄位數目。 此傳回值不包含已讀取但未指派的欄位。 傳回值是**EOF**嘗試讀取檔案結尾。 當鍵盤輸入在作業系統命令列層級重新導向時，就會發生此情況。 傳回值 0 表示未指派任何欄位。
 
-這些函式會驗證它們的參數。 如果*格式*為 null 指標，這些函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函數會傳回**EOF**和**errno**設**EINVAL**。
+這些函式會驗證它們的參數。 如果*格式*為 null 指標，這些函式叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則這些函式會傳回**EOF**並**errno**設定為**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**_Cscanf_s**函式會將資料直接從主控台讀入指定的位置*引數*。 [_getche](getch-getwch.md)函式可用來讀取字元。 每個選擇性參數必須是對應於型別規範中的型別變數指標*格式*。 格式控制項的輸入解譯欄位，並具有相同的形式和功能*格式*參數[scanf_s](scanf-scanf-l-wscanf-wscanf-l.md)函式。 雖然 **_cscanf_s**通常會回應輸入的字元，它不會這樣如果在上次呼叫 **_ungetch**。
+**_Cscanf_s**函式會將資料直接從主控台讀入指定的位置*引數*。 [_getche](getch-getwch.md)函式可用來讀取字元。 每個選擇性參數必須是一種類型，對應至中的類型指定名稱的變數的指標*格式*。 該格式會控制欄位輸入的解譯，而且具有相同的形式和運作方式*格式*參數[scanf_s](scanf-scanf-l-wscanf-wscanf-l.md)函式。 雖然 **_cscanf_s**通常會回應輸入的字元，它不是最後一次呼叫時要 **_ungetch**。
 
-類似其他安全的版本中的函式**scanf**系列 **_cscanf_s**和 **_cswscanf_s**需要大小引數的型別欄位字元**c**， **C**， **s**， **S**，和 **[**。 如需詳細資訊，請參閱 [scanf 寬度規格](../../c-runtime-library/scanf-width-specification.md)。
+與其他安全的版本中的函式**scanf**家人 **_cscanf_s**並 **_cswscanf_s**需要類型欄位字元的大小引數**c**， **C**， **s**， **S**，並 **[**。 如需詳細資訊，請參閱 [scanf 寬度規格](../../c-runtime-library/scanf-width-specification.md)。
 
 > [!NOTE]
 > 大小參數的類型是**不帶正負號**，而非**size_t**。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的執行緒地區設定的地區設定參數。
+使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -132,7 +122,7 @@ int _cwscanf_s_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_cscanf_s**， **_cscanf_s_l**|\<conio.h>|
 |**_cwscanf_s**， **_cwscanf_s_l**|\<conio.h> 或 \<wchar.h>|

@@ -1,10 +1,6 @@
 ---
-title: fread | Microsoft Docs
-ms.custom: ''
+title: fread
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fread
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fread
-dev_langs:
-- C++
 helpviewer_keywords:
 - reading data [C++], from input streams
 - fread function
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 819ec0b494b6e800f858e2e5647164567531ab0b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d3516dc67047064b9293b1bb289888596736ed47
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400924"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468831"
 ---
 # <a name="fread"></a>fread
 
@@ -72,15 +62,15 @@ size_t fread(
 
 ## <a name="return-value"></a>傳回值
 
-**fread**傳回實際讀取的完整項目數目，可能會小於*計數*如果發生錯誤，或到達之前遇到檔案結尾*計數*。 使用**feof**或**ferror**讀取的錯誤區別檔案結尾條件的函式。 如果*大小*或*計數*為 0， **fread**傳回 0 緩衝區內容並不會改變。 如果*資料流*或*緩衝區*為 null 指標， **fread**叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**至**EINVAL**並傳回 0。
+**fread**傳回實際讀取的完整項目數，可能會小於*計數*發生錯誤，或如果到達之前遇到檔案結尾，則*計數*。 使用**feof**或是**ferror**函式來區分讀取的錯誤與檔案結尾條件。 如果*大小*或是*計數*為 0， **fread**傳回 0，而且緩衝區內容未變更。 如果*資料流*或是*緩衝區*為 null 指標， **fread**叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**要**EINVAL**且會傳回 0。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Fread**函式會讀取最多*計數*的項目*大小*位元組輸入*資料流*並將其儲存在*緩衝區*. 與相關聯的檔案指標*資料流*（如果有的話） 會增加實際讀取的位元組數目。 如果在文字模式中開啟時指定的資料流，歸位字元傳回換行字元組會取代單一換行字元。 這種取代不會影響檔案指標或傳回值。 發生錯誤時，無法確定檔案指標位置。 無法判斷部分讀取項目的值。
+**Fread**函式會讀取多達*計數*的項目*大小*從輸入位元組*串流*並將它們儲存在*緩衝區*. 與相關聯的檔案指標*資料流*（如果有的話） 會增加實際讀取的位元組數目。 如果指定的資料流以文字模式開啟，則歸位字元復位換行組，將取代為單一換行字元。 這種取代不會影響檔案指標或傳回值。 發生錯誤時，無法確定檔案指標位置。 無法判斷部分讀取項目的值。
 
-此函式會鎖定其他執行緒。 如果您需要非鎖定版本，請使用 **_fread_nolock**。
+此函式會鎖定其他執行緒。 如果您需要非鎖定版本時，使用 **_fread_nolock**。
 
 ## <a name="requirements"></a>需求
 

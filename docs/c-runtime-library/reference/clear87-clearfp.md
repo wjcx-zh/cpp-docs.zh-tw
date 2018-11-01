@@ -1,10 +1,6 @@
 ---
-title: _clear87、_clearfp | Microsoft Docs
-ms.custom: ''
+title: _clear87、_clearfp
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _clearfp
 - _clear87
@@ -26,8 +22,6 @@ f1_keywords:
 - _clearfp
 - _clear87
 - clear87
-dev_langs:
-- C++
 helpviewer_keywords:
 - clearing floating point status word
 - clearfp function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - _clearfp function
 - clear87 function
 ms.assetid: 72d24a70-7688-4793-ae09-c96d33fcca52
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 195bd9f78ed9edfa47ec9ebbd2babbee676e5644
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4148f85d82a4210033686455c73046081832e3c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395613"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477255"
 ---
 # <a name="clear87-clearfp"></a>_clear87、_clearfp
 
@@ -59,19 +49,19 @@ unsigned int _clearfp( void );
 
 ## <a name="return-value"></a>傳回值
 
-傳回的值中的位元表示在呼叫之前的浮點狀態 **_clear87**或 **_clearfp**。 如需所傳回的位元的完整定義 **_clear87**，請參閱 Float.h。 許多數學程式庫函式會修改 8087/80287 狀態字組，伴隨著無法預期的結果。 傳回值，從 **_clear87**和 **_status87**變得更加可靠，因為浮點狀態字組之已知狀態之間執行較少浮點作業。
+傳回的值中的位元表示浮點狀態，再呼叫 **_clear87**或是 **_clearfp**。 如需完整的定義所傳回的位元 **_clear87**，請參閱 Float.h。 許多數學程式庫函式會修改 8087/80287 狀態字組，伴隨著無法預期的結果。 傳回值，從 **_clear87**並 **_status87**變得更加可靠，因為浮點狀態字組之已知狀態之間執行較少浮點運算。
 
 ## <a name="remarks"></a>備註
 
-**_Clear87**函式會清除浮點狀態字組中的例外狀況旗標、 忙碌的位元設定為 0，並傳回狀態字組。 浮點狀態字組是 8087/80287 狀態字組和 8087/80287 例外狀況處理常式所偵測到其他條件的組合，例如浮點的堆疊溢位和反向溢位。
+**_Clear87**函式，可清除浮點狀態字組中的例外狀況旗標、 忙碌的位元設定為 0，並在傳回狀態字組。 浮點狀態字組是 8087/80287 狀態字組和 8087/80287 例外狀況處理常式所偵測到其他條件的組合，例如浮點的堆疊溢位和反向溢位。
 
-**_clearfp**平台無關的可攜式版本 **_clear87**常式。 它相當於 **_clear87** Intel (x86) 平台上，也受 x64 和 ARM 平台支援。 若要確保您的浮點程式碼可移植到 x64 和 ARM，請使用 **_clearfp**。 如果您僅以 x86 為目標平台，您可以使用 **_clear87**或 **_clearfp**。
+**_clearfp**平台無關的可攜式版本 **_clear87**常式。 它等同於 **_clear87** Intel (x86) 平台上，也受 x64 和 ARM 平台支援。 若要確保您的浮點程式碼移植到 x64 和 ARM，使用 **_clearfp**。 如果您只的目標 x86 平台，您可以使用 **_clear87**或是 **_clearfp**。
 
-這些函式已被取代，以編譯時[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)因為 common language runtime 只支援預設的浮點精確度。
+進行編譯時，會取代這些函式[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)因為 common language runtime 只支援預設的浮點精確度。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_clear87**|\<float.h>|
 |**_clearfp**|\<float.h>|

@@ -1,10 +1,6 @@
 ---
-title: fsetpos | Microsoft Docs
-ms.custom: ''
+title: fsetpos
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fsetpos
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fsetpos
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, setting position indicators
 - fsetpos function
 ms.assetid: 6d19ff48-1a2b-47b3-9f23-ed0a47b5a46e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c381cf478a97d47efe10c68096fffe3d9fd8efdf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9854c71e381da6ec9a75d440b9588e2476bada7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399305"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528228"
 ---
 # <a name="fsetpos"></a>fsetpos
 
@@ -62,13 +52,13 @@ int fsetpos(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功的話， **fsetpos**傳回 0。 如果失敗，此函數會傳回非零值，並設定**errno**的下列其中一個資訊清單常數 （定義於 ERRNO。H): **EBADF**，這表示無法存取檔案，或物件的*資料流*指向不是有效的檔案結構; 或**EINVAL**，這表示的值無效*資料流*或*pos*傳遞。 如果傳入無效參數，則這些函式會叫用無效的參數處理常式 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。
+如果成功， **fsetpos**會傳回 0。 在失敗時，此函式會傳回非零值，並設定**errno**的下列其中一個資訊清單常數 （定義於 ERRNO。H): **EBADF**，這表示檔案不是可存取或物件的*串流*指向不是有效的檔案結構; 或**EINVAL**，這表示的值無效*資料流*或是*pos*傳遞。 如果傳入無效參數，則這些函式會叫用無效的參數處理常式 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Fsetpos**函式會將檔案位置指標*資料流*值*pos*，在先前的呼叫，以取得**fgetpos**針對*資料流*。 清除檔案結尾指標的函式，並復原任何影響[ungetc](ungetc-ungetwc.md)上*資料流*。 在呼叫**fsetpos**下, 一項作業上的*資料流*可能是輸入或輸出。
+**Fsetpos**函式設定的檔案位置指標*串流*的值*pos*，這先前呼叫中取得**fgetpos**對抗*串流*。 函式會清除檔案結尾指標，並會復原的任何影響[ungetc](ungetc-ungetwc.md)上*串流*。 之後呼叫**fsetpos**的下一個作業*串流*可能是輸入或輸出。
 
 ## <a name="requirements"></a>需求
 

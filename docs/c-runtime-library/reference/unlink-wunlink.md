@@ -1,10 +1,6 @@
 ---
-title: _unlink、_wunlink | Microsoft Docs
-ms.custom: ''
+title: _unlink、_wunlink
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _unlink
 - _wunlink
@@ -26,8 +22,6 @@ f1_keywords:
 - _unlink
 - wunlink
 - _wunlink
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], deleting
 - _wunlink function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ace694452467d6d559f8820216be71ecd85b54e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7565679c58af83d64fd59419e8e841ee48133edf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411005"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544192"
 ---
 # <a name="unlink-wunlink"></a>_unlink、_wunlink
 
@@ -71,7 +61,7 @@ int _wunlink(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，所有這些函式都會傳回 0。 否則，此函數會傳回-1 和集合**errno**至**EACCES**，這表示路徑指定唯讀的檔案，或**ENOENT**，這表示檔案或路徑找不到或指定目錄的路徑。
+如果成功，所有這些函式都會傳回 0。 否則，函數會傳回-1 和集**errno**來**EACCES**，表示路徑指定唯讀檔案，或**ENOENT**，這表示檔案或路徑找不到或指定目錄的路徑。
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
@@ -87,7 +77,7 @@ int _wunlink(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_unlink**|\<io.h> 和 \<stdio.h>|
 |**_wunlink**|\<io.h> 或 \<wchar.h>|

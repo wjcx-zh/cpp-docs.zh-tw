@@ -1,28 +1,18 @@
 ---
-title: 通知來自 Rich Edit 控制項 |Microsoft Docs
-ms.custom: ''
+title: 來自 Rich Edit 控制項的告知
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - messages [MFC], notification [MFC]
 - CRichEditCtrl class [MFC], notifications
 - rich edit controls [MFC], notifications
 - notifications [MFC], from CRichEditCtrl
 ms.assetid: eb5304fe-f4f3-4557-9ebf-3095dea383c4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8898ac9d5aabebef42877ff063aaf93ceee77fad
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 87168b6e58264b4257b7adfb32207ec1dd40729e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386783"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529203"
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>來自 Rich Edit 控制項的告知
 

@@ -1,28 +1,18 @@
 ---
-title: __svm_invlpga |Microsoft Docs
-ms.custom: ''
+title: __svm_invlpga
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __svm_invlpga
-dev_langs:
-- C++
 helpviewer_keywords:
 - __svm_invlpga intrinsic
 - INVLPGA instruction
 ms.assetid: aa6578ce-8278-464b-8815-a0fc45330915
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3fa5655911366b0adf21618ec7be7eeccdca9c5a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2d356cf7426c558c8ac0312eff02c0cb9de9c859
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401901"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544296"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 
@@ -45,7 +35,7 @@ void __svm_invlpga(void *Va, int ASID);
 
 ## <a name="remarks"></a>備註
 
-`__svm_invlpga`函式相當於`INVLPGA`機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2： 系統程式設計中，「 文件數目 24593，修訂 3.11，位於[AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站台。
+`__svm_invlpga` 函式相當於 `INVLPGA` 機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2： 系統程式設計中，「 文件數目 24593，修訂 3.11，位於[AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站台。
 
 ## <a name="requirements"></a>需求
 

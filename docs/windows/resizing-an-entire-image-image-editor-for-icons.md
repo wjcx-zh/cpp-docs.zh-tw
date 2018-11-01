@@ -1,29 +1,18 @@
 ---
-title: 調整整個影像 （圖示影像編輯器） |Microsoft Docs
-ms.custom: ''
+title: 調整整個影像大小 (圖示影像編輯器)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], resizing images
 - size [C++], images
 - images [C++], resizing
 - resizing images
 ms.assetid: 10782937-7eb4-4340-bdec-618ee7d7904b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2326918b6efd4c8da5f74527166d8f373dbacefc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e21706b08ec8debf0b8c3ee93832fc11525b78b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376834"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566409"
 ---
 # <a name="resizing-an-entire-image-image-editor-for-icons"></a>調整整個影像大小 (圖示影像編輯器)
 

@@ -1,28 +1,17 @@
 ---
-title: 如何： 指定資源 （c + +） 的 Include 目錄 |Microsoft Docs
-ms.custom: ''
+title: 如何： 指定資源 （c + +） 的 Include 目錄
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - directories [C++], specifying include paths for resources
 - include files [C++], specifying for resources
 - resources [C++], including in projects
 ms.assetid: d6a7c0f6-4810-4bb0-b4b7-7d2476a20ca2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: be030539a7b2d0585ea895f1428de822d3300d53
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 9b127c70fc9da43c07de768b00de4a27941beebb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50052963"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555151"
 ---
 # <a name="how-to-specify-include-directories-for-resources-c"></a>如何： 指定資源 （c + +） 的 Include 目錄
 

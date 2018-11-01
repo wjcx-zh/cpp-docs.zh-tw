@@ -1,27 +1,17 @@
 ---
-title: 編譯器錯誤 C3850 |Microsoft Docs
-ms.custom: ''
+title: 編譯器錯誤 C3850
 ms.date: 09/05/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3850
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3850
 ms.assetid: 028f3a37-f3ad-4ebc-9168-3cdea47524d4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: daa4b6128672b47891c563acfd4399952a17e7e6
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 9cd0428726f92c7347b162f74b46035f99cc2d3c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894534"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572662"
 ---
 # <a name="compiler-error-c3850"></a>編譯器錯誤 C3850
 
@@ -33,7 +23,7 @@ ms.locfileid: "43894534"
 
 在編譯為 C 程式碼，通用字元名稱不一定代表的字元範圍 0000 009F，內含與 0024 （' $'）、 0040 ('\@') 和 0060 (' ')。
 
-在編譯為 C++ 的程式碼中，通用字元名稱可能會使用字串或字元常值中的任何有效 Unicode 字碼指標。 在常值以外，通用字元名稱不一定代表 0000-001F 或 007F-009F (含) 範圍中的控制字元，或基本來源字元集的成員。  如需詳細資訊，請參閱 <<c0> [ 字元集](../../cpp/character-sets.md)。
+在編譯為 C++ 的程式碼中，通用字元名稱可能會使用字串或字元常值中的任何有效 Unicode 字碼指標。 在常值以外，通用字元名稱不一定代表 0000-001F 或 007F-009F (含) 範圍中的控制字元，或基本來源字元集的成員。  如需詳細資訊，請參閱 [Character Sets](../../cpp/character-sets.md)。
 
 ## <a name="example"></a>範例
 

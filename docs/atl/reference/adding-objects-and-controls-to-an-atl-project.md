@@ -1,14 +1,8 @@
 ---
-title: 加入 ATL 專案中的物件和控制項 |Microsoft Docs
-ms.custom: ''
+title: 將物件和控制項新增至 ATL 專案
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.ATL.controls
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, adding objects
 - wizards [C++], ATL projects
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5758dff128cd213442ec3738967ccd78e20e75af
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 0577788e4ab28139943da4b3bd14914799341213
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861131"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506128"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>將物件和控制項新增至 ATL 專案
 

@@ -1,23 +1,13 @@
 ---
-title: -Qpar-report （自動平行化工具報告層級） |Microsoft Docs
-ms.custom: ''
+title: /Qpar-report (自動平行化工具報告層級)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 562673b9-02da-4bf8-bb64-70bc25ef4651
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ab72225287eab71180e80a059bc320829c24b5f7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4f3f496deb9f87d4f33f5e36832bd46405a482b0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419265"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550029"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report (自動平行化工具報告層級)
 

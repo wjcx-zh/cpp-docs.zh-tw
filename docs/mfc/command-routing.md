@@ -1,12 +1,6 @@
 ---
-title: 命令路由 |Microsoft Docs
-ms.custom: ''
+title: 命令傳送
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, command routing
 - command handling [MFC], routing commands
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 543b9e34c881285c295fb7ab7ee2107e36c99a9c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: add047984f5a32e505e8a739922daa137b5e671d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418316"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541696"
 ---
 # <a name="command-routing"></a>命令傳送
 
@@ -45,11 +35,11 @@ Windows 訊息通常會傳送至主框架視窗，但命令訊息會接著路由
 
 |當此類型的物件收到命令時。 。 。|它會依照下列順序，提供機會給自己及其他命令目標物件來處理命令︰|
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-|MDI 框架視窗 (`CMDIFrameWnd`)|1.使用中 `CMDIChildWnd`<br />2.此框架視窗<br />3.應用程式 (`CWinApp`物件)|
-|文件框架視窗 (`CFrameWnd`、 `CMDIChildWnd`)|1.現用檢視表<br />2.此框架視窗<br />3.應用程式 (`CWinApp`物件)|
+|MDI 框架視窗 (`CMDIFrameWnd`)|1.使用中 `CMDIChildWnd`<br />2.此框架視窗<br />3.應用程式 (`CWinApp` 物件)|
+|文件框架視窗 (`CFrameWnd`、 `CMDIChildWnd`)|1.現用檢視表<br />2.此框架視窗<br />3.應用程式 (`CWinApp` 物件)|
 |檢視|1.此檢視<br />2.附加至檢視的文件|
 |文件|1.此文件<br />2.附加至文件的文件範本|
-|對話方塊|1.此對話方塊<br />2.擁有此對話方塊的視窗<br />3.應用程式 (`CWinApp`物件)|
+|對話方塊|1.此對話方塊<br />2.擁有此對話方塊的視窗<br />3.應用程式 (`CWinApp` 物件)|
 
 在上表第二欄的編號項目提到其他物件 (例如文件) 的情況下，請參閱第一欄的對應項目。 例如，當您在第二欄中讀到「檢視將命令轉送至其文件」時，請參閱第一欄的「文件」項目以進一步路由傳送。
 

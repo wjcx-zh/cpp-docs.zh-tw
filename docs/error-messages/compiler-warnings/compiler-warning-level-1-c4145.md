@@ -1,27 +1,17 @@
 ---
-title: 編譯器警告 （層級 1） C4145 |Microsoft Docs
-ms.custom: ''
+title: 編譯器警告 (層級 1) C4145
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4145
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4145
 ms.assetid: 0440777a-cca2-4159-aff5-e67a254ad64a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 65d041b9fdb7fb4b01abfadf5010444b0e406220
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 10c0211bfda354a00e05cba3131d047fce843df8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46100673"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50553786"
 ---
 # <a name="compiler-warning-level-1-c4145"></a>編譯器警告 (層級 1) C4145
 

@@ -1,11 +1,6 @@
 ---
-title: log1p、log1pf、log1pl2 | Microsoft Docs
-ms.custom: ''
+title: log1p log1pf log1pl2
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - log1p
 - log1pf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 650fb8f7567b4f2f3b0b9032397c2b54a99013dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7984367aa4244a927bb9dabc5533a807d74ac1a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402744"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524991"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p、log1pf、log1pl
 
@@ -82,7 +73,7 @@ long double log1pl(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，傳回的自然 (基底-*e*) 的記錄 (*x* + 1)。
+如果成功，傳回的自然 (底數為*電子*) 的記錄 (*x* + 1)。
 
 否則，可能會傳回下列其中一個值：
 
@@ -95,17 +86,17 @@ long double log1pl(
 |< -1|NAN|INVALID|EDOM|
 |-inf|NAN|INVALID|EDOM|
 |±SNaN|與輸入相同|INVALID||
-|無限期 ±QNaN|與輸入相同|||
+|±QNaN，無限制|與輸入相同|||
 
-**Errno**值將設為 ERANGE 如果*x* =-1。 **Errno**值設定為**EDOM**如果*x* <-1。
+**Errno**如果值設為 ERANGE *x* =-1。 **Errno**值設定為**EDOM**如果*x* <-1。
 
 ## <a name="remarks"></a>備註
 
-**Log1p**函式可能會比使用更精確`log(x + 1)`時*x*接近 0。
+**Log1p**函式可能比使用更準確`log(x + 1)`當*x*趨近於 0。
 
-因為 c + + 允許多載，所以您可以呼叫的多載**log1p**採用並傳回**float**和**長** **double**型別。 在 C 程式中， **log1p**一律採用並傳回**double**。
+因為 c + + 允許多載，您可以呼叫多載**log1p**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **log1p**一律採用並傳回**double**。
 
-如果*x*是自然數字，此函式傳回的階乘的對數 (*x* -1)。
+如果*x*為自然數，此函數會傳回階乘的對數 (*x* -1)。
 
 ## <a name="requirements"></a>需求
 

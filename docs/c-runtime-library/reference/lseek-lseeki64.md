@@ -1,10 +1,6 @@
 ---
-title: _lseek、_lseeki64 | Microsoft Docs
-ms.custom: ''
+title: _lseek、_lseeki64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lseeki64
 - _lseek
@@ -25,8 +21,6 @@ f1_keywords:
 - _lseeki64
 - _lseek
 - lseeki64
-dev_langs:
-- C++
 helpviewer_keywords:
 - lseek function
 - _lseek function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb47214ac2de3c3e217bf41387ba206b94caf906
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 19a312bcc3cdeea82bcebce6da95e26ef88992b0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403374"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541683"
 ---
 # <a name="lseek-lseeki64"></a>_lseek、_lseeki64
 
@@ -78,13 +68,13 @@ __int64 _lseeki64(
 
 ## <a name="return-value"></a>傳回值
 
-**_lseek**傳回位移，以位元組為單位從頭檔案中的新位置。 **_lseeki64**在 64 位元整數傳回的位移。 函數會傳回-1l; 此時表示錯誤。 如果傳遞的參數無效 (例如檔案描述項不正確)、*origin* 的值無效，或是 *offset* 所指定的位置在檔案開頭之前，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**至**EBADF**並傳回-1l; 此時。 在沒有搜尋功能的裝置上 (例如終端機和印表機)，傳回的值未定義。
+**_lseek**傳回位移，以位元組為單位的檔案從一開始的新位置。 **_lseeki64**的位移傳回 64 位元整數。 此函數會傳回-1l 表示錯誤。 如果傳遞的參數無效 (例如檔案描述項不正確)、*origin* 的值無效，或是 *offset* 所指定的位置在檔案開頭之前，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**要**EBADF**並傳回-1l。 在沒有搜尋功能的裝置上 (例如終端機和印表機)，傳回的值未定義。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Lseek**函式，將相關聯的檔案指標移*fd*至新位置*位移*位元組從*原點*。 對檔案的下一項作業會在新位置進行。 *origin* 引數必須是定義於 Stdio.h 中的下列其中一個常數。
+**_Lseek**函式將與相關聯的檔案指標移至*fd*到新位置*位移*位元組*原點*。 對檔案的下一項作業會在新位置進行。 *origin* 引數必須是定義於 Stdio.h 中的下列其中一個常數。
 
 |*原始*值||
 |-|-|
@@ -92,11 +82,11 @@ __int64 _lseeki64(
 **SEEK_CUR**|檔案指標的目前位置。
 **SEEK_END**|檔案結尾。
 
-您可以使用 **_lseek**若要在檔案或檔案結尾以外的任何地方調整指標。
+您可以使用 **_lseek**將指標重新置放任何位置在檔案或檔案結尾之外。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_lseek**|\<io.h>|
 |**_lseeki64**|\<io.h>|

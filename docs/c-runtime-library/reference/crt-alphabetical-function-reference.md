@@ -1,29 +1,19 @@
 ---
-title: UCRT 依字母順序排列的函式參考 |Microsoft 文件
-ms.custom: ''
+title: UCRT 依字母順序排列的函式參考
 ms.date: 04/11/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - vc.tables.runtime
-dev_langs:
-- C++
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e5b6d73219bed94268ee3a9b8854d28d1fc6c06
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8c16b0f3eeb21bc9ad665bffee9fac15607f21f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405454"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520455"
 ---
 # <a name="ucrt-alphabetical-function-reference"></a>UCRT 依字母順序排列的函式參考
 
-通用 C 執行階段 （UCRT，通常只是 CRT） 程式庫參考文件是依字母順序排列的常式。 若要尋找 CRT 常式根據功能，請參閱[依類別目錄的通用 C 執行階段常式](../../c-runtime-library/run-time-routines-by-category.md)。
+通用 C 執行階段 （UCRT，通常只需要 CRT） 程式庫參考文件會依字母順序排列的常式。 若要尋找 CRT 常式，根據功能，請參閱[依類別的通用 C 執行階段常式](../../c-runtime-library/run-time-routines-by-category.md)。
 
 ## <a name="a"></a>A
 

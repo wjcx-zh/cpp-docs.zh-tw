@@ -1,11 +1,6 @@
 ---
-title: c16rtomb、c32rtomb1 | Microsoft Docs
-ms.custom: ''
+title: c16rtomb、c32rtomb1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - c16rtomb
 - c32rtomb
@@ -27,22 +22,16 @@ f1_keywords:
 - c32rtomb
 - uchar/c16rtomb
 - uchar/c32rtomb
-dev_langs:
-- C++
 helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3282fb13e5b59ad3214c67410eef5186687114e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d735363bbb317b06c1ebc73a2b0678479a243ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394536"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536583"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb，c32rtomb
 
@@ -76,19 +65,19 @@ size_t c32rtomb(
 
 ## <a name="return-value"></a>傳回值
 
-儲存在陣列物件中的位元組數目*mbchar*，包括任何移位序列。 如果*wchar*不是有效的寬字元，值 (**size_t**傳回)(-1)， **errno**設**EILSEQ**，和值*狀態*未指定。
+陣列物件中儲存的位元組數目*mbchar*，包括任何移位序列。 如果*wchar*不是有效的寬字元，值 (**size_t**傳回)(-1) **errno**設定為**EILSEQ**，的值*狀態*未指定。
 
 ## <a name="remarks"></a>備註
 
-**C16rtomb**函式將轉換的 utf-16 字元*wchar*目前地區設定的對等的多位元組窄字元序列。 如果*mbchar*不是 null 指標的陣列物件中轉換的序列所指向之函式存放區*mbchar*。 最多**MB_CUR_MAX**位元組會儲存在*mbchar*，和*狀態*設定為產生的多位元組移位狀態。    如果*wchar*是 null 寬字元序列，才能的還原初始移位狀態會儲存，如有需要後面接著 null 字元，並*狀態*設為初始轉換狀態。 **C32rtomb**函式相同，但轉換 utf-32 字元。
+**C16rtomb**函式會將轉換的 utf-16 字元*wchar*目前的地區設定中的對等的多位元組窄字元序列。 如果*mbchar*不是 null 指標所指向的陣列物件中已轉換的序列的函式存放區*mbchar*。 最多**MB_CUR_MAX**位元組會儲存在*mbchar*，並*狀態*設為產生的多位元組移位狀態。    如果*wchar*是 null 寬字元序列，才能的還原初始移位狀態會儲存，如有需要後面接著 null 字元，並*狀態*設為初始轉換狀態。 **C32rtomb**函式相同，但轉換 UTF-32 字元。
 
-如果*mbchar*為 null 指標，此行為相當為替代的內部緩衝區的函式的呼叫*mbchar*和寬 null 字元*wchar*。
+如果*mbchar*為 null 指標，行為相當於呼叫替代的內部緩衝區的函式*mbchar*和 寬 null 字元*wchar*。
 
-*狀態*轉換狀態物件可讓您進行後續呼叫此函式和其他可重新啟動的函式的維護的多位元組輸出字元移位狀態。 結果便未定義，當您混合使用可重新啟動和非可重新啟動的函式，或如果呼叫**setlocale**之間可重新啟動的函式呼叫。
+*狀態*轉換狀態物件可讓您進行後續呼叫此函式和其他可重新啟動的函式所維護的多位元組輸出字元移位狀態。 當您混合使用可重新啟動和非可重新啟動的函式，或如果呼叫，結果便未定義**setlocale**之間可重新啟動的函式呼叫。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**c16rtomb**， **c32rtomb**|C、C++：\<uchar.h>|
 

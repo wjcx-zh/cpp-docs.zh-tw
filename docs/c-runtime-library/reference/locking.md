@@ -1,10 +1,6 @@
 ---
-title: _locking | Microsoft Docs
-ms.custom: ''
+title: _locking
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _locking
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _locking
-dev_langs:
-- C++
 helpviewer_keywords:
 - locking function
 - bytes [C++], locking file
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1666f631d9bceccb8925b2002b797753e024ab9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1309d99d8e7040626384e38324c1e910e4731295
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404142"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523794"
 ---
 # <a name="locking"></a>_locking
 
@@ -69,20 +59,20 @@ int _locking(
 
 ## <a name="return-value"></a>傳回值
 
-**_locking**如果成功則傳回 0。 傳回值-1 表示失敗，在此情況下[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)設為下列值之一。
+**_locking**如果成功則傳回 0。 傳回值為-1 表示失敗，在此情況下[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)設為下列值之一。
 
 |errno 值|條件|
 |-|-|
 **EACCES**|鎖定違規 (檔案已鎖定或解除鎖定)。
 **EBADF**|檔案描述項無效。
-**EDEADLOCK**|鎖定違規。 傳回當 **_LK_LOCK**或 **_LK_RLCK**指定旗標和 10 次嘗試之後無法鎖定檔案。
-**EINVAL**|無效的引數提供給 **_locking**。
+**EDEADLOCK**|鎖定違規。 時，傳回 **_LK_LOCK**或是 **_LK_RLCK**指定旗標，並嘗試 10 次之後，無法鎖定檔案。
+**EINVAL**|無效的引數指定給 **_locking**。
 
 如果由於參數不正確而失敗 (例如檔案描述項無效)，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
 
 ## <a name="remarks"></a>備註
 
-**_Locking**函式鎖定或解除鎖定*nbytes*檔案所指定的位元組*fd*。 鎖定檔案中的位元組可防止其他處理序存取這些位元組。 所有鎖定或解除鎖定都會從檔案指標的目前位置開始，並接著繼續進行 *nbytes* 個位元組。 您可以鎖定超過檔案結尾的位元組。
+**_Locking**函式鎖定或解除鎖定*nbytes*所指定的檔案位元組*fd*。 鎖定檔案中的位元組可防止其他處理序存取這些位元組。 所有鎖定或解除鎖定都會從檔案指標的目前位置開始，並接著繼續進行 *nbytes* 個位元組。 您可以鎖定超過檔案結尾的位元組。
 
 *mode* 必須是定義於 Locking.h 中的下列其中一個資訊清單常數。
 
@@ -94,11 +84,11 @@ int _locking(
 **_LK_RLCK**|與相同 **_LK_LOCK**。
 **_LK_UNLCK**|解除鎖定指定的位元組，這些位元組之前必須已鎖定。
 
-可鎖定檔案中多個不重疊的區域。 要解除鎖定的區域之前必須已鎖定。 **_locking**不會不合併相鄰地區; 如果兩個鎖定的區域是相鄰的每個區域必須解除鎖定分開。 區域只能短暫鎖定，而且必須在關閉檔案或結束程式之前解除鎖定。
+可鎖定檔案中多個不重疊的區域。 要解除鎖定的區域之前必須已鎖定。 **_locking**不會合併相鄰區域; 如果兩個鎖定的區域相鄰，每個區域必須個別解除鎖定。 區域只能短暫鎖定，而且必須在關閉檔案或結束程式之前解除鎖定。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|---------------------|
 |**_locking**|\<io.h> 和 \<sys/locking.h>|\<errno.h>|
 

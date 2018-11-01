@@ -1,14 +1,8 @@
 ---
-title: C 語言 api 的關聯性 |Microsoft Docs
-ms.custom: ''
+title: 與 C 語言應用程式開發介面的關聯性
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
-dev_langs:
-- C++
 helpviewer_keywords:
 - books [MFC], about MFC and Windows SDK
 - books [MFC]
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - Visual C, Windows API calls
 - Windows API [MFC], and MFC
 ms.assetid: 334e8efc-f3cc-4018-bc2e-02908b2a39fe
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 027a14213f173bdc6be5fc34e9fd4faf0eba8023
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8f58a33d3accb8eb81299877df1b0c8a4ebe0576
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415145"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525693"
 ---
 # <a name="relationship-to-the-c-language-api"></a>與 C 語言應用程式開發介面的關聯性
 

@@ -1,10 +1,6 @@
 ---
-title: _gcvt_s | Microsoft Docs
-ms.custom: ''
+title: _gcvt_s
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _gcvt_s
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _gcvt_s
 - gcvt_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _gcvt_s function
 - _CVTBUFSIZE
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a2bd12a63db064bca0c880484f99a2df9d210f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 168e0657150d072bbe41cd0ad6e914ca1f53e512
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403764"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554956"
 ---
 # <a name="gcvts"></a>_gcvt_s
 
@@ -89,17 +79,17 @@ errno_t _gcvt_s(
 
 |*buffer*|*sizeInBytes*|*值*|*digits*|Return|中的值*緩衝區*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
-|**NULL**|任何|任何|任何|**EINVAL**|未修改。|
-|不**NULL** （指向有效的記憶體）|零|任何|任何|**EINVAL**|未修改。|
-|不**NULL** （指向有效的記憶體）|任何|任何|>= *sizeInBytes*|**EINVAL**|未修改。|
+|**NULL**|any|any|any|**EINVAL**|未修改。|
+|不**NULL** （指向有效的記憶體）|零|any|any|**EINVAL**|未修改。|
+|不**NULL** （指向有效的記憶體）|any|any|>= *sizeInBytes*|**EINVAL**|未修改。|
 
 **安全性問題**
 
-**_gcvt_s**可以產生存取違規，如果*緩衝區*並未指向有效的記憶體，而且不是**NULL**。
+**_gcvt_s**可以產生存取違規，如果*緩衝區*不是指向有效的記憶體，而且不**NULL**。
 
 ## <a name="remarks"></a>備註
 
-**_Gcvt_s**函數將轉換成浮點*值*（其中包含小數點和可能的正負號位元組） 為字元字串，並將字串中的*緩衝區*. *緩衝區*應該要夠大，無法容納轉換的值加上會自動予以附加結束 null 字元。 長度的緩衝區 **_CVTBUFSIZE**就足以應付任何浮點值。 如果緩衝區大小為*位數*+ 1 時，此函式不會覆寫最後的緩衝區，因此請務必提供足夠的緩衝區，這項作業。 **_gcvt_s**嘗試產生*位數*十進位格式的數字。 如果不行，它會產生*位數*指數 」 格式的數字。 可於轉換中隱藏尾端零。
+**_Gcvt_s**函式會轉換為浮點*值*（其中包含小數點和可能的正負號位元組） 為字元字串，並將儲存在字串*緩衝區*. *緩衝區*應該大到足以容納轉換的值加上結束的 null 字元，會自動予以附加。 長度的緩衝區 **_CVTBUFSIZE**是足可供任何浮點值。 如果緩衝區大小，為*數字*+ 1，此函式不會覆寫結尾的緩衝區，因此請務必提供足夠的緩衝區，這項作業。 **_gcvt_s**嘗試產生*數字*十進位格式的數字。 如果不行，它會產生*數字*指數 」 格式的數字。 可於轉換中隱藏尾端零。
 
 在 C++ 中，這個函式的使用已由範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -107,7 +97,7 @@ errno_t _gcvt_s(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|---------------------|
 |**_gcvt_s**|\<stdlib.h>|\<error.h>|
 

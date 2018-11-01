@@ -1,10 +1,6 @@
 ---
-title: _CrtDbgBreak | Microsoft Docs
-ms.custom: ''
+title: _CrtDbgBreak
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtDbgBreak
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _CrtDbgBreak
 - CrtDbgBreak
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtDbgBreak function
 - _CrtDbgBreak function
 ms.assetid: 01f8b4a2-a2c7-4e1f-9f39-e573b4a7871f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2141b3c70755eb03e77c8f66feed482b5e86b529
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4cf64daaea3193f7cf6b3aaa0b1aab031f104704
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394047"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478296"
 ---
 # <a name="crtdbgbreak"></a>_CrtDbgBreak
 
@@ -55,13 +45,13 @@ void _CrtDbgBreak( void );
 
 ## <a name="remarks"></a>備註
 
-**_CrtDbgBreak**函式會將偵錯中斷點上特定程式碼行所在的函式。 此函式用於僅限偵錯模式而且相依於 **_DEBUG**先前所定義。
+**_CrtDbgBreak**函式會將偵錯中斷點特定程式碼行上的函式所在的位置。 此函式會在僅限偵錯模式，並相依於 **_DEBUG**先前所定義。
 
 如需使用支援攔截程序之其他執行階段函式，以及撰寫您自己的用戶端定義攔截函式的詳細資訊，請參閱[撰寫您自己的偵錯攔截函式](/visualstudio/debugger/debug-hook-function-writing)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_CrtDbgBreak**|\<CRTDBG.h>|
 

@@ -1,10 +1,6 @@
 ---
-title: _ismbbkalnum、_ismbbkalnum_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbkalnum、_ismbbkalnum_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbkalnum
 - _ismbbkalnum_l
@@ -26,24 +22,18 @@ f1_keywords:
 - ismbbkalnum
 - ismbbkalnum_l
 - _ismbbkalnum_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbkalnum_l function
 - ismbbkalnum_l function
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 62aa208085b3a295ef51f4aa5ecafd7e68bb4710
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4eca5738068dab7393f70edf619629b179637e73
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399292"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481051"
 ---
 # <a name="ismbbkalnum-ismbbkalnuml"></a>_ismbbkalnum、_ismbbkalnum_l
 
@@ -71,11 +61,11 @@ int _ismbbkalnum_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_ismbbkalnum**傳回非零值，如果整數*c*如果它不是標點符號，則為 0 以外的非 ASCII 文字符號。 **_ismbbkalnum**使用目前的地區設定進行地區設定相關的字元資訊。 **_ismbbkalnum_l**等同於 **_ismbbkalnum**不同之處在於它接受地區設定做為參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_ismbbkalnum**傳回非零值，如果整數*c*如果不是標點符號，則為 0 以外的非 ASCII 文字符號。 **_ismbbkalnum**會使用目前的地區設定，如地區設定相關字元的詳細資訊。 **_ismbbkalnum_l**等同於 **_ismbbkalnum**不同之處在於它接受地區設定做為參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_ismbbkalnum**|\<mbctype.h>|
 |**_ismbbkalnum_l**|\<mbctype.h>|

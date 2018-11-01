@@ -1,30 +1,22 @@
 ---
-title: 'Platform:: collections 命名空間 |Microsoft Docs'
-ms.custom: ''
+title: Platform::Collections 命名空間
 ms.date: 01/18/2018
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::Collections Namespace
 ms.assetid: b5042864-5f22-40b7-b7a5-c0691f65cc47
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a8c6191f8cbcf79973a5af55d222dd6f17fc47e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 025c25d6c01ab9a28c68574cc2a13e09dbf28388
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106066"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480362"
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections 命名空間
 
-Platform:: collections 命名空間包含`Map`， `MapView`， `Vector`，和`VectorView`類別。 這些類別是中所定義的相對應介面的具象實作[collections](/uwp/api/Windows.Foundation.Collections)命名空間。 實體集合類型無法橫跨 ABI 移植 (例如，當 Javascript 或 C# 程式呼叫 C++ 元件時)，但是可以隱含地轉換成對應的介面類型。 比方說，如果您實作公用方法來填入和傳回集合，然後使用  [collections](../cppcx/platform-collections-vector-class.md)在內部實作集合，並使用[collections:: IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)的傳回型別。 如需詳細資訊，請參閱 <<c0> [ 集合](../cppcx/collections-c-cx.md)並[Creating Windows Runtime Components in c + +](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
+Platform:: collections 命名空間包含`Map`， `MapView`， `Vector`，和`VectorView`類別。 這些類別是 [Windows::Foundation::Collections](/uwp/api/Windows.Foundation.Collections) 命名空間中定義的相對應介面的具象實作。 實體集合類型無法橫跨 ABI 移植 (例如，當 Javascript 或 C# 程式呼叫 C++ 元件時)，但是可以隱含地轉換成對應的介面類型。 例如，如果您實作公用方法來填入和傳回集合，請使用 [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) 在內部實作集合，並使用 [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) 作為傳回類型。 如需詳細資訊，請參閱 <<c0> [ 集合](../cppcx/collections-c-cx.md)並[Creating Windows Runtime Components in c + +](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
 
 您可以從 [std::vector](../standard-library/vector-class.md) 建構 Platform::Collections::Vector，也可以從 [std::map](../cppcx/platform-collections-map-class.md) 建構 [Platform::Collections::Map](../standard-library/map-class.md)。
 

@@ -1,10 +1,6 @@
 ---
-title: _fprintf_p、_fprintf_p_l、_fwprintf_p、_fwprintf_p_l | Microsoft Docs
-ms.custom: ''
+title: _fprintf_p、_fprintf_p_l、_fwprintf_p、_fwprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fwprintf_p
 - _fprintf_p_l
@@ -29,8 +25,6 @@ f1_keywords:
 - _fwprintf_p
 - fprintf_p
 - ftprintf_p
-dev_langs:
-- C++
 helpviewer_keywords:
 - fprintf_p_l function
 - fprintf_p function
@@ -47,16 +41,12 @@ helpviewer_keywords:
 - ftprintf_p_l function
 - fwprintf_p_l function
 ms.assetid: 46b082e1-45ba-4383-9ee4-97015aa50bc6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ef748590f412afc10b5046691c982ed1d5ccabb8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db9e9a746193c7bf35913d6792d87aa9ba85fa79
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404424"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462773"
 ---
 # <a name="fprintfp-fprintfpl-fwprintfp-fwprintfpl"></a>_fprintf_p、_fprintf_p_l、_fwprintf_p、_fwprintf_p_l
 
@@ -105,20 +95,20 @@ int _fwprintf_p_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_fprintf_p**和 **_fwprintf_p**傳回寫入的字元數或發生輸出錯誤時傳回負值。
+**_fprintf_p**並 **_fwprintf_p**傳回寫入的字元數，或發生輸出錯誤時傳回負值。
 
 ## <a name="remarks"></a>備註
 
-**_fprintf_p**格式化並列印一系列字元和值的輸出*資料流*。 每個函式*引數*（如果有的話） 會轉換和輸出中的對應格式規格根據*格式*。 如 **_fprintf_p**、*格式*引數具有相同的語法和使用中 **_printf_p**。 這些函式支援位置參數，表示您可以變更格式字串所使用的參數順序。 如需位置參數的詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
+**_fprintf_p**格式化並列印一系列的字元和值的輸出*串流*。 每個函式*引數*（如果有的話） 會轉換和輸出中的對應格式規格根據*格式*。 針對 **_fprintf_p**，則*格式*引數具有相同的語法和用法與在 **_printf_p**。 這些函式支援位置參數，表示您可以變更格式字串所使用的參數順序。 如需位置參數的詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-**_fwprintf_p**是寬字元版本的 **_fprintf_p**; 在 **_fwprintf_p**，*格式*是寬字元字串。 如果資料流是以 ANSI 模式開啟，則這些函式的行為相同。 **_fprintf_p**目前不支援 UNICODE 資料流輸出。
+**_fwprintf_p**是寬字元版本的 **_fprintf_p**; 在 **_fwprintf_p**，*格式*是寬字元字串。 如果資料流是以 ANSI 模式開啟，則這些函式的行為相同。 **_fprintf_p**目前不支援輸出至 UNICODE 資料流。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的地區設定的地區設定參數。
+使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前的地區設定傳入的地區設定參數。
 
 > [!IMPORTANT]
 > 確認 *format* 不是使用者定義的字串。
 
-例如不安全的版本 (請參閱[fprintf、 _fprintf_l、 fwprintf、 _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md))，這些函式會驗證它們的參數，並叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)，如果有任一個*資料流*或*格式*為 null 指標或者如果有任何未知或格式不正確的格式規範。 如果允許繼續執行，函式會傳回-1，並設定**errno**至**EINVAL**。
+與不安全版本 (請參閱[fprintf、 _fprintf_l、 fwprintf、 _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md))，這些函式會驗證其參數，並叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)，如果*資料流*或是*格式*是 null 指標，或者如果有任何未知或格式不正確的格式規範。 如果允許繼續執行，函式會傳回-1，並設定**errno**要**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

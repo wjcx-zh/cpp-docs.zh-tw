@@ -1,11 +1,6 @@
 ---
-title: ctanh、ctanhf、ctanhl | Microsoft Docs
-ms.custom: ''
+title: ctanh、ctanhf、ctanhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ctanh
 - ctahf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/ctanh
 - complex/ctanhf
 - complex/ctanhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctanh function
 - ctanhl function
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bf81e503405959686974a26ceb5d064c1ab84400
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e390aceaad2ee82e1fe2a865d3903f5062f52e9d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396078"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50470550"
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh、ctanhf、ctanhl
 
@@ -79,20 +68,20 @@ _Lcomplex ctanhl(
 
 ## <a name="return-value"></a>傳回值
 
-複雜的雙曲線正切函數*z*。
+複雜雙曲正切*z*。
 
 |輸入|SEH 例外狀況|**_matherr**例外狀況|
 |-----------|-------------------|--------------------------|
 |± ∞、QNAN、IND|無|_DOMAIN|
-|± ∞ （tan、 tanf）|無效|_DOMAIN|
+|常见 ∞ （tan、 tanf）|無效|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**ctanh**採用並傳回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程式中， **ctanh**一律採用並傳回 **_Dcomplex**值。
+因為 c + + 允許多載，您可以呼叫多載**ctanh**採用並傳回 **_Fcomplex**並 **_Lcomplex**值。 在 C 程式中， **ctanh**一律採用並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
-|常式|C 標頭|C++ 標頭|
+|常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
 |**ctanh**， **ctanhf**， **ctanhl**|\<complex.h>|\<ccomplex>|
 

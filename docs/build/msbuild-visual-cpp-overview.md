@@ -1,25 +1,15 @@
 ---
-title: MSBuild （Visual c + +） 概觀 |Microsoft Docs
-ms.custom: ''
+title: MSBuild (Visual C++) 概觀
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9c337ec94f863e6c19851bcf962db61f277491cf
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 0eac756824b3da6352c60ec69e9d6e679732522c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163240"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484795"
 ---
 # <a name="msbuild-visual-c-overview"></a>MSBuild (Visual C++) 概觀
 

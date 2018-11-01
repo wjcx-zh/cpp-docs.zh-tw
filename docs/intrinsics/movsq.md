@@ -1,29 +1,19 @@
 ---
-title: __movsq |Microsoft Docs
-ms.custom: ''
+title: __movsq
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __movsq
-dev_langs:
-- C++
 helpviewer_keywords:
 - __movsq intrinsic
 - rep movsq instruction
 - movsq instruction
 ms.assetid: be116a6e-2176-4ca4-93b1-9ccf3e7e7835
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9386a35d7cfab67d0a981bd75d889f27e0ef4631
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d614bd33cde01c0097e02a0899b05fc55d4b064c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443821"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461746"
 ---
 # <a name="movsq"></a>__movsq
 
@@ -34,10 +24,10 @@ ms.locfileid: "46443821"
 ## <a name="syntax"></a>語法
 
 ```
-void __movsq( 
-   unsigned char* Dest, 
-   unsigned char* Source, 
-   size_t Count 
+void __movsq( 
+   unsigned char* Dest, 
+   unsigned char* Source, 
+   size_t Count 
 );
 ```
 
@@ -46,7 +36,7 @@ void __movsq(
 *目的地*<br/>
 [out]作業的目的地。
 
-*Source*<br/>
+*來源*<br/>
 [in]作業的來源。
 
 *計數*<br/>

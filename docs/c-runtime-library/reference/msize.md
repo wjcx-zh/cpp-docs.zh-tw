@@ -1,10 +1,6 @@
 ---
-title: _msize | Microsoft Docs
-ms.custom: ''
+title: _msize
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _msize
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - msize
 - _msize
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b9e27751072891bcabc0b068cb5ca57b571d35d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0321e42face817a0a9f12d780f72c86c67ba308d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402149"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477268"
 ---
 # <a name="msize"></a>_msize
 
@@ -60,19 +50,19 @@ size_t _msize(
 
 ## <a name="return-value"></a>傳回值
 
-**_msize**傳回做為不帶正負號整數的大小 （以位元組為單位）。
+**_msize**傳回做為不帶正負號的整數的大小 （以位元組為單位）。
 
 ## <a name="remarks"></a>備註
 
 **_Msize**函式傳回的大小，以位元組為單位的呼叫所配置的記憶體區塊**calloc**， **malloc**，或**realloc**。
 
-當應用程式的 C 執行階段程式庫的偵錯版本連結時 **_msize**解析成[_msize_dbg](msize-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。
+當偵錯版本的 C 執行階段程式庫，連結的應用程式時 **_msize**解析[_msize_dbg](msize-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。
 
-這個函式會驗證其參數。 如果*memblock*為 null 指標， **_msize**叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 處理錯誤，函式會將**errno**至**EINVAL**並傳回-1。
+這個函式會驗證其參數。 如果*memblock*為 null 指標， **_msize**叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果已處理的錯誤，則函式會設定**errno**要**EINVAL**並傳回-1。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_msize**|\<malloc.h>|
 

@@ -1,10 +1,6 @@
 ---
-title: _setmode | Microsoft Docs
-ms.custom: ''
+title: _setmode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _setmode
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _setmode
-dev_langs:
-- C++
 helpviewer_keywords:
 - Unicode [C++], console output
 - files [C++], modes
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 59aed27ec4803cd1709635da44ef37d748342e29
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 887936299dce0a13738f9dd891a168785d17c979
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407492"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617434"
 ---
 # <a name="setmode"></a>_setmode
 
@@ -68,22 +58,22 @@ int _setmode (
 
 若成功，會傳回之前的轉譯模式。
 
-如果將無效參數傳遞至此函式，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若要繼續，此函數會傳回-1 和設定允許執行**errno**為**EBADF**，表示無效的檔案描述項，或**EINVAL**，表示無效*模式*引數。
+如果將無效參數傳遞至此函式，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若要繼續，此函數會傳回-1 和集合允許執行**errno**設為**EBADF**，表示無效的檔案描述項，或**EINVAL**，表示無效*模式*引數。
 
 如需有關這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Setmode**函式會將*模式*所提供檔案的轉譯模式*fd*。 傳遞 **_O_TEXT**為*模式*設定文字 （也就，已轉譯） 模式。 歸位字元傳回行摘要 (CR-LF) 組合會轉譯成單行換上輸入的字元。 換行字元會在輸出中轉譯為 CR-LF 組合。 傳遞 **_O_BINARY**設定二進位 （未轉譯） 模式，這些翻譯都會被隱藏。
+**_Setmode**函式會設定*模式*所指定之檔案的轉譯模式*fd*。 傳遞 **_O_TEXT**作為*模式*設定文字 （也就，已轉譯） 模式。 歸位換摘要 (CR-LF) 組合會轉譯成單一換行字元上輸入的字元。 換行字元會在輸出中轉譯為 CR-LF 組合。 傳遞 **_O_BINARY**設定二進位 （未轉譯） 模式，以隱藏這些翻譯。
 
-您也可以傳遞 **_O_U16TEXT**， **_O_U8TEXT**，或 **_O_WTEXT**啟用 Unicode 模式，如本文稍後的第二個範例所示。 **_setmode**通常用來修改的預設轉譯模式**stdin**和**stdout**，但是您可以使用它的任何檔案上。 如果您套用 **_setmode**資料流的檔案描述項，呼叫 **_setmode**執行資料流上的任何輸入或輸出作業之前。
+您也可以傳遞 **_O_U16TEXT**， **_O_U8TEXT**，或 **_O_WTEXT**啟用 Unicode 模式，如本文件稍後的第二個範例所示。 **_setmode**通常用來修改的預設轉譯模式**stdin**並**stdout**，但您可以將其用於任何檔案。 如果您套用 **_setmode**若要針對資料流的檔案描述項，呼叫 **_setmode**才能執行任何輸入或輸出資料流的作業。
 
 > [!CAUTION]
-> 如果您資料寫入檔案資料流排清明確程式碼使用[fflush](fflush.md)使用之前 **_setmode**来變更的模式。 若您沒有清除代碼，可能會發生未預期的行為。 若您沒有將資料寫入資料流，則不用清除代碼。
+> 如果您資料寫入檔案資料流，明確地清除程式碼使用[fflush](fflush.md)使用之前 **_setmode**變更模式。 若您沒有清除代碼，可能會發生未預期的行為。 若您沒有將資料寫入資料流，則不用清除代碼。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
 |**_setmode**|\<io.h>|\<fcntl.h>|
 

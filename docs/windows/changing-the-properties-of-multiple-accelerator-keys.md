@@ -1,27 +1,16 @@
 ---
-title: 變更屬性的多個快速鍵 （c + +） |Microsoft Docs
-ms.custom: ''
+title: 變更屬性的多個快速鍵 （c + +）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: b55c9bd6-b430-48bb-b942-0e6f21d7abf9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 56deca345915c5736cb15e7ce5d8d0e0ee0b7062
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 00c2bed34d70fa13161cbaa8968d967664c8bb0e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400781"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668997"
 ---
 # <a name="changing-the-properties-of-multiple-accelerator-keys-c"></a>變更屬性的多個快速鍵 （c + +）
 

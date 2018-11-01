@@ -1,26 +1,17 @@
 ---
-title: 逐步解說： 建立和使用您自己動態連結程式庫 （c + +） |Microsoft Docs
+title: 逐步解說： 建立和使用您自己動態連結程式庫 （c + +）
 ms.custom: conceptual
 ms.date: 09/24/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9806a17bfb603ff54609f2d509c50d0a5d91e15d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: d997cb37c6cadb03bd3d16c4b1d4e56874f00018
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821244"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591005"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>逐步解說： 建立和使用您自己動態連結程式庫 （c + +）
 
@@ -64,7 +55,7 @@ ms.locfileid: "48821244"
 
 ### <a name="to-create-a-dll-project-in-visual-studio-2017-version-153-or-later"></a>DLL 中建立專案 Visual Studio 2017 版本 15.3 或更新版本
 
-1. 在功能表列上選擇 [**檔案** > **新增** > **專案**開啟**新專案**] 對話方塊。
+1. 在功能表列上，選擇 [檔案] > [新增] > [專案]，以開啟 [新增專案] 對話方塊。
 
 1. 在左窗格中**新的專案**對話方塊方塊中，展開**已安裝**並**Visual c + +** 如有必要，，然後選擇  **Windows 桌面**. 在中央窗格中，選取**Windows Desktop 精靈**。 請輸入`MathLibrary`中**名稱**方塊，以指定專案的名稱。
 
@@ -405,7 +396,7 @@ int main()
 
 既然您已建立的 DLL 和用戶端應用程式，您可以實驗。 請嘗試在用戶端應用程式的程式碼中設定中斷點和偵錯工具中執行應用程式。 請參閱 < 當您逐步執行程式庫呼叫，會發生什麼事。 將其他函式新增至程式庫，或撰寫您的 DLL 會使用的另一個用戶端應用程式。
 
-當您部署您的應用程式時，您也必須部署它所使用的 Dll。 最簡單的方式，可讓您建置或您所包含的 Dll 協力廠商使用您的應用程式是將它們置於您的應用程式相同的目錄也稱為*應用程式本機部署*。 如需有關部署的詳細資訊，請參閱 < [Visual c + + 中的部署](..\ide\deployment-in-visual-cpp.md)。
+當您部署您的應用程式時，您也必須部署它所使用的 Dll。 最簡單的方式，可讓您建置或您所包含的 Dll 協力廠商使用您的應用程式是將它們置於您的應用程式相同的目錄也稱為*應用程式本機部署*。 如需部署的詳細資訊，請參閱 [Deployment in Visual C++](..\ide\deployment-in-visual-cpp.md)。
 
 ## <a name="see-also"></a>另請參閱
 

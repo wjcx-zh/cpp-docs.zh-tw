@@ -1,10 +1,6 @@
 ---
-title: fopen_s、_wfopen_s | Microsoft Docs
-ms.custom: ''
+title: fopen_s、_wfopen_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wfopen_s
 - fopen_s
@@ -25,8 +21,6 @@ f1_keywords:
 - fopen_s
 - _tfopen_s
 - _wfopen_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wfopen_s function
 - opening files, for file I/O
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bef5587188cebe4ed7e91cbd95eb46cca7f05044
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b5ac5203f2246a7ede31bcbc9a34c4632772a14c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405623"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636107"
 ---
 # <a name="fopens-wfopens"></a>fopen_s、_wfopen_s
 
@@ -88,17 +78,17 @@ errno_t _wfopen_s(
 
 |*pFile*|*filename*|*mode*|傳回值|內容*pFile*|
 |-------------|----------------|------------|------------------|------------------------|
-|**NULL**|任何|任何|**EINVAL**|未變更|
-|任何|**NULL**|任何|**EINVAL**|未變更|
-|任何|任何|**NULL**|**EINVAL**|未變更|
+|**NULL**|any|any|**EINVAL**|未變更|
+|any|**NULL**|any|**EINVAL**|未變更|
+|any|any|**NULL**|**EINVAL**|未變更|
 
 ## <a name="remarks"></a>備註
 
-所開啟的檔案**fopen_s**和 **_wfopen_s**不是可共用。 如果您需要該檔案要是可共用，使用[_fsopen、 _wfsopen](fsopen-wfsopen.md)與適當的共用模式常數 — 例如， **_SH_DENYNO**共用的讀取/寫入。
+所開啟的檔案**fopen_s**並 **_wfopen_s**不共用。 如果您需要該檔案要是可共用，使用[_fsopen、 _wfsopen](fsopen-wfsopen.md)具有適當的共用模式常數 — 例如 **_SH_DENYNO**用於讀取/寫入共用。
 
-**Fopen_s**函式會開啟檔案所指定*filename*。 **_wfopen_s**是寬字元版本的**fopen_s**; 的引數 **_wfopen_s**是寬字元字串。 **_wfopen_s**和**fopen_s**除此之外的行為相同。
+**Fopen_s**函式會開啟指定的檔案*filename*。 **_wfopen_s**是寬字元版本的**fopen_s**; 的引數 **_wfopen_s**是寬字元字串。 **_wfopen_s**並**fopen_s**行為相同。
 
-**fopen_s**接受執行; 在檔案系統為有效的路徑接受 UNC 路徑以及包含對應的網路磁碟機的路徑**fopen_s**只要執行程式碼的系統具有共用存取權，或每次執行對應網路磁碟機。 當您建構路徑**fopen_s**，請不要假設磁碟機、 路徑，或網路共用執行環境中。 您可以使用正斜線 (/) 或反斜線 (\\) 作為路徑中的目錄分隔符號。
+**fopen_s**接受執行; 在檔案系統為有效的路徑接受 UNC 路徑以及包含對應的網路磁碟機的路徑**fopen_s**只要系統是執行程式碼有共用的存取權，或在執行時對應網路磁碟機。 當您建構路徑**fopen_s**、 不要假設磁碟機、 路徑，或網路共用執行環境中。 您可以使用正斜線 (/) 或反斜線 (\\) 作為路徑中的目錄分隔符號。
 
 這些函式會驗證它們的參數。 如果*pFile*， *filename*，或*模式*為 null 指標，這些函式會產生無效參數例外狀況中所述[參數驗證](../../c-runtime-library/parameter-validation.md).
 
@@ -106,30 +96,30 @@ errno_t _wfopen_s(
 
 ## <a name="unicode-support"></a>Unicode 支援
 
-**fopen_s**支援 Unicode 檔案資料流。 若要開啟新的或現有的 Unicode 檔案，請傳遞*ccs*旗標，指定想要的編碼至**fopen_s**:
+**fopen_s**支援 Unicode 檔案資料流。 若要開啟新的或現有的 Unicode 檔案，請傳遞*ccs*旗標，指定想要的編碼來**fopen_s**:
 
-**fopen_s (& fp、"newfile.txt"，"rw ccs =**_編碼_**");**
+**fopen_s (& fp、 「 newfile.txt"，"rw，ccs =**_編碼_**");**
 
-允許的值為*編碼*是**UNICODE**， **utf-8**，和**UTF 16LE**。 如果那里任何指定的值*編碼*， **fopen_s**使用 ANSI 編碼方式。
+允許的值為*編碼*會**UNICODE**， **utf-8**，以及 **-16LE**。 如果那里任何指定的值*編碼*， **fopen_s**使用 ANSI 編碼方式。
 
-如果檔案已經存在，而且已開啟來進行讀取或附加，則位元順序標記 (BOM) (如果已在檔案中) 會決定編碼方式。 BOM 編碼方式會採用所指定的優先順序高於編碼*ccs*旗標。 *Ccs*編碼時才會使用無 BOM 不存在或該檔案是否為新的檔案。
+如果檔案已經存在，而且已開啟來進行讀取或附加，則位元順序標記 (BOM) (如果已在檔案中) 會決定編碼方式。 BOM 編碼方式的優先權會高於的編碼方式，由*ccs*旗標。 *Ccs*編碼時才會使用不含 BOM 不存在或檔案是否為新的檔案。
 
 > [!NOTE]
-> BOM 偵測只適用於以 Unicode 模式開啟的檔案也就藉由傳遞*ccs*旗標。
+> BOM 偵測只適用於在 Unicode 模式中開啟的檔案也就藉由傳遞*ccs*旗標。
 
-下表摘要說明不同的模式*ccs*旗標，指定給**fopen_s**和檔案中的位元組順序標記。
+下表摘要說明模式各種*ccs*旗標，提供給**fopen_s**和檔案中的位元順序標記。
 
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>根據 ccs 旗標和 BOM 使用的編碼方式
 
 |ccs 旗標|沒有 BOM (或新檔案)|BOM：UTF-8|BOM：UTF-16|
 |----------------|----------------------------|-----------------|------------------|
-|**UNICODE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
-|**UTF-8**|**UTF-8**|**UTF-8**|**UTF-16LE**|
-|**UTF-16LE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
+|**UNICODE**|**-16LE**|**UTF-8**|**-16LE**|
+|**UTF-8**|**UTF-8**|**UTF-8**|**-16LE**|
+|**-16LE**|**-16LE**|**UTF-8**|**-16LE**|
 
 開啟以供在 Unicode 模式下寫入的檔案會有 BOM 自動寫入其中。
 
-如果*模式*是 **"，ccs =**_編碼_**"**， **fopen_s**第一次嘗試開啟檔案讀取存取和寫入權限。 如果成功，則函式會讀取 BOM 以判斷檔案的編碼方式，如果不成功，則函式會使用檔案的預設編碼方式。 在任一情況下， **fopen_s**接著重新開啟檔案的唯寫存取。 (這適用於模式只有，not **+**。)
+如果*模式*是 **"，ccs =**_編碼_**"**， **fopen_s**第一次嘗試開啟檔案讀取存取和寫入權限。 如果成功，則函式會讀取 BOM 以判斷檔案的編碼方式，如果不成功，則函式會使用檔案的預設編碼方式。 在任一情況下， **fopen_s**接著重新開啟檔案的唯寫存取。 (這適用於模式，不**a +**。)
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -137,52 +127,52 @@ errno_t _wfopen_s(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tfopen_s**|**fopen_s**|**fopen_s**|**_wfopen_s**|
 
-字元字串*模式*指定要求的檔案，如下所示的存取種類。
+字元字串*模式*指定，如下所示要求檔案的存取種類。
 
 |*mode*|存取|
 |-|-|
-**"r"**|開啟以讀取。 如果檔案不存在或找不到**fopen_s**呼叫就會失敗。
+**"r"**|開啟以讀取。 如果檔案不存在或無法找到**fopen_s**呼叫就會失敗。
 **"w"**|開啟空白檔案以寫入。 如果指定的檔案已存在，其內容將被終結。
 **"a"**|開啟以供在檔案結尾寫入 (附加)，並且在將新資料寫入檔案之前，不會移除檔案結尾 (EOF) 標記。 如果檔案不存在時，建立檔案。
 **"r+"**|開啟以進行讀取和寫入。 檔案必須存在。
 **"w+"**|開啟空白檔案以進行讀取和寫入。 如果檔案存在，其內容會遭到銷毀。
 **"a+"**|開啟以進行讀取和附加。 附加作業包括在將新資料寫入檔案之前移除 EOF 標記。 寫入完成後，不會還原 EOF 標記。 如果檔案不存在時，建立檔案。
 
-檔案開啟時使用 **"a"** 或 **"+"** 存取類型，所有寫入作業都會在檔案結尾進行。 檔案指標可以藉由重新定位[fseek](fseek-fseeki64.md)或[倒轉](rewind.md)，但它會一律移回至檔案結尾之前執行任何寫入作業會，所以無法覆寫現有資料。
+使用開啟的檔案時 **"a"** 或是 **"a +"** 存取類型，所有寫入作業都會在檔案結尾。 檔案指標可以使用重新定位到[fseek](fseek-fseeki64.md)或是[倒轉](rewind.md)，但是它一律移回至檔案結尾之前任何寫入作業會執行，因此無法覆寫現有的資料。
 
-**"A"** 模式不會附加到檔案之前移除 EOF 標記。 進行附加之後，MS-DOS TYPE 命令只顯示到原始 EOF 標記為止的資料，任何附加至檔案的資料都不會出現。 **"+"** 模式會附加到檔案之前移除 EOF 標記。 附加之後，MS-DOS TYPE 命令會顯示檔案中的所有資料。 **"+"** 模式是需要附加至使用 CTRL + Z EOF 標記終止的資料流檔案。
+**"A"** 模式不會附加到檔案之前移除 EOF 標記。 進行附加之後，MS-DOS TYPE 命令只顯示到原始 EOF 標記為止的資料，任何附加至檔案的資料都不會出現。 **"A +"** 模式會附加到檔案之前移除 EOF 標記。 附加之後，MS-DOS TYPE 命令會顯示檔案中的所有資料。 **"A +"** 模式，才能附加至使用 CTRL + Z EOF 標記終止的資料流檔案。
 
-當 **"r +"**， **"w +"**，或 **"+"** 指定存取型別，允許進行讀取和寫入。 (表示檔案是要開啟以供「更新」之用。)不過，當您從讀取切換為寫入時，輸入作業一定會遇到 EOF 標記。 如果沒有 EOF，您就必須使用檔案定位函式的介入呼叫。 檔案定位函式是**fsetpos**， [fseek](fseek-fseeki64.md)，和[倒轉](rewind.md)。 當您從寫入切換為讀取時，您必須使用的中間呼叫**fflush**或檔案定位函式。
+當 **"r +"**， **"w +"**，或 **"a +"** 指定存取類型，允許讀取和寫入。 (表示檔案是要開啟以供「更新」之用。)不過，當您從讀取切換為寫入時，輸入作業一定會遇到 EOF 標記。 如果沒有 EOF，您就必須使用檔案定位函式的介入呼叫。 檔案定位函式**fsetpos**， [fseek](fseek-fseeki64.md)，並[倒轉](rewind.md)。 當您從寫入切換為讀取時，您必須使用其中一個的介入呼叫**fflush**或是檔案定位函式。
 
-除了上述的值，可以包含下列字元在*模式*來指定新行字元的轉譯模式：
+除了上述的值，可以將下列字元包含在*模式*來指定新行字元的轉譯模式：
 
 |*模式*修飾詞|轉譯模式|
 |-|-|
 **t**|以文字 (已轉譯) 模式開啟。
 **b**|以二進位 (未轉譯) 模式開啟；抑制涉及歸位字元和換行字元的轉譯。
 
-在文字 （已轉譯） 模式下，CTRL + Z 會解譯成檔案結尾字元上輸入。 在檔案開啟為讀取/寫入與 **"+"**， **fopen_s**會檢查是否有 CTRL + Z，檔案的結尾，並盡可能加以移除。 這是因為使用[fseek](fseek-fseeki64.md)和**ftell** CTRL + Z，結束可能會造成檔案內移動[fseek](fseek-fseeki64.md)檔案結尾附近產生不當行為。
+在文字 （已轉譯） 模式中，CTRL + Z 會解譯成檔案結尾字元上輸入。 在檔案開啟供讀取/寫入與 **"a +"**， **fopen_s**會檢查是否有 CTRL + Z 結尾的檔案，並盡可能加以移除。 這是因為使用[fseek](fseek-fseeki64.md)並**ftell** CTRL + Z，結束可能會導致檔案內移動[fseek](fseek-fseeki64.md)檔案結尾附近產生不當行為。
 
-此外，在文字模式下，歸位字元傳回換行字元組合會轉譯成單一換行字元上輸入，並換行字元會轉譯為歸位字元傳回換行字元組合，在輸出上。 Unicode 資料流 I/O 函式在文字模式 (預設) 下運作時，會假設來源或目的資料流是多位元組字元的序列。 因此，Unicode 資料流輸入函式會將多位元組字元轉換為寬字元 (就像呼叫 **mbtowc** 函式一樣)。 基於相同的原因，Unicode 資料流輸出函式會將寬字元轉換為多位元組字元 (就像呼叫 **wctomb** 函式一樣)。
+此外，在文字模式下，歸位字元復位換行的組合會轉譯成單一換行字元，輸入時，並換行字元會轉譯為歸位字元在輸出的復位換行組合。 Unicode 資料流 I/O 函式在文字模式 (預設) 下運作時，會假設來源或目的資料流是多位元組字元的序列。 因此，Unicode 資料流輸入函式會將多位元組字元轉換為寬字元 (就像呼叫 **mbtowc** 函式一樣)。 基於相同的原因，Unicode 資料流輸出函式會將寬字元轉換為多位元組字元 (就像呼叫 **wctomb** 函式一樣)。
 
-如果**t**或**b**中未指定*模式*，則預設轉譯模式由全域變數[_fmode](../../c-runtime-library/fmode.md)。 如果**t**或**b**前置引數，函式失敗並傳回**NULL**。
+如果**t**或是**b**中未指定*模式*，則預設轉譯模式由全域變數[_fmode](../../c-runtime-library/fmode.md)。 如果**t**或是**b**前面加上引數，函式會失敗並傳回**NULL**。
 
 如需在 Unicode 和多位元組資料流 I/O 中使用文字和二進位模式的詳細資訊，請參閱[文字和二進位模式檔案 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 和[文字和二進位模式的 Unicode 資料流 I/O](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)。
 
 |*模式*修飾詞|行為|
 |-|-|
-**C**|啟用相關聯的認可旗標*filename*以便將檔案緩衝區的內容直接寫入磁碟**fflush**或 **_flushall**呼叫。
-**n**|相關聯的認可旗標重設*filename*以 「 不認可 」。 這是預設值。 如果將程式與 COMMODE.OBJ 連結，也會覆寫全域認可旗標。 除非您明確連結程式與 COMMODE.OBJ，否則全域認可旗標的預設值為 "no-commit" (請參閱 [Link Options](../../c-runtime-library/link-options.md))。
+**C**|啟用相關聯的認可旗標*檔名*使檔案緩衝區的內容會直接寫入磁碟**fflush**或是 **_flushall**呼叫。
+**n**|重設相關聯的認可旗標*filename*以 「 不認可 」。 這是預設值。 如果將程式與 COMMODE.OBJ 連結，也會覆寫全域認可旗標。 除非您明確連結程式與 COMMODE.OBJ，否則全域認可旗標的預設值為 "no-commit" (請參閱 [Link Options](../../c-runtime-library/link-options.md))。
 **N**|指定子處理序不繼承檔案。
 **S**|指定針對但不限於磁碟的循序存取進行快取最佳化。
 **R**|指定針對但不限於磁碟的隨機存取進行快取最佳化。
 **T**|指定檔案做為暫存檔。 可能的話，不將其清除至磁碟。
 **D**|指定檔案做為暫存檔。 當最後一個檔案指標關閉時，將其刪除。
-**ccs =**_編碼_|指定要使用的編碼的字元集 (其中**utf-8**， **UTF 16LE**，或**UNICODE**) 為此檔案。 如果您想要使用 ANSI 編碼方式，請保持為未指定。
+**ccs =**_編碼_|指定要使用的編碼的字元集 (其中**utf-8**， **-16LE**，或**UNICODE**) 此檔案。 如果您想要使用 ANSI 編碼方式，請保持為未指定。
 
-有效字元*模式*中使用字串**fopen_s**和[_fdopen](fdopen-wfdopen.md)對應至*oflag*引數中使用[_開啟](open-wopen.md)和[_sopen](sopen-wsopen.md)、，如下所示。
+有效字元*模式*中所使用的字串**fopen_s**並[_fdopen](fdopen-wfdopen.md)對應至*oflag*引數中使用[_開啟](open-wopen.md)並[_sopen](sopen-wsopen.md)、，如下所示。
 
-|在字元*模式*字串|對等*oflag* _open/_sopen 值|
+|中的字元*模式*字串|對等*oflag* _open/_sopen 值|
 |-------------------------------|----------------------------------------------------|
 |**a**|**_O_WRONLY** &#124; **_O_APPEND** (通常 **_O_WRONLY** &#124; **_O_CREAT** &#124;* * _O_APPEND * *)|
 |**+**|**_O_RDWR** &#124; **_O_APPEND** (通常 **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
@@ -199,10 +189,10 @@ errno_t _wfopen_s(
 |**T**|**_O_SHORTLIVED**|
 |**D**|**_O_TEMPORARY**|
 |**ccs = UNICODE**|**_O_WTEXT**|
-|**ccs = utf-8**|**_O_UTF8**|
-|**ccs = UTF 16LE**|**_O_UTF16**|
+|**ccs = utf-8**|**_O_TEXTW、_O_UTF8**|
+|**ccs =-16LE**|**_O_UTF16**|
 
-如果您使用**rb**模式，不需要移植程式碼，且預期會讀取大量的檔案及/或不在意網路效能、 記憶體對應 Win32 檔案也可能是一個選項。
+如果您使用**rb**模式中，不需要移植程式碼，並且打算讀取大量的檔案和/或不在意網路效能、 記憶體對應 Win32 檔案也可能是一個選項。
 
 ## <a name="requirements"></a>需求
 
@@ -217,7 +207,7 @@ errno_t _wfopen_s(
 
 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。
 
-**c**， **n**，和**t** *模式*選項是 Microsoft 擴充功能，如**fopen_s**和[_fdopen](fdopen-wfdopen.md)和不應在需要 ANSI 可攜性。
+**c**， **n**，並**t** *模式*選項都是 Microsoft 擴充功能**fopen_s**及[_fdopen](fdopen-wfdopen.md)和不應在需要 ANSI 可攜性。
 
 ## <a name="example"></a>範例
 

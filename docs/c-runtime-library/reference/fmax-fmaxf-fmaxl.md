@@ -1,11 +1,6 @@
 ---
-title: fmax、fmaxf、fmaxl | Microsoft Docs
-ms.custom: ''
+title: fmax、fmaxf、fmaxl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fmax
 - fmaxf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/fmax
 - math/fmaxf
 - math/fmaxl
-dev_langs:
-- C++
 helpviewer_keywords:
 - fmax function
 - fmaxf function
 - fmaxl function
 ms.assetid: a773ccf7-495e-4a9a-8c6d-dfb53e341e35
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6e210fac83c19efaecb909d54734d0422956f37
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0fbe23a4b7d6e0c59523d62f844dd89e66642933
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399812"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50465152"
 ---
 # <a name="fmax-fmaxf-fmaxl"></a>fmax、fmaxf、fmaxl
 
@@ -92,7 +81,7 @@ long double fmaxl(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，傳回較大的*x*或*y*。 傳回的值會完全相同，而且不是取決於任何形式的四捨五入。
+如果成功，傳回的較大*x*或是*y*。 傳回的值會完全相同，而且不是取決於任何形式的四捨五入。
 
 否則，可能會傳回下列其中一個值：
 
@@ -100,7 +89,7 @@ long double fmaxl(
 |-----------|------------|
 |*x* = NaN|*y*|
 |*y* = NaN|*x*|
-|*x*和*y* = NaN|NaN|
+|*x*並*y* = NaN|NaN|
 
 此函式不會使用 [_matherr](matherr.md) 中所指定的錯誤。
 

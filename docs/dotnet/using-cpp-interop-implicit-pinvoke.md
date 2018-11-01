@@ -1,12 +1,6 @@
 ---
-title: 使用 c + + Interop (隱含 PInvoke) |Microsoft 文件
-ms.custom: ''
+title: 使用 C++ Interop (隱含 PInvoke)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - blittable types [C++]
 - platform invoke [C++], implicit
@@ -26,51 +20,46 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: a095f252c4e46e212e42a7ab4cf3cb8d5ef6f53d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ffe4aaeecc3e0f65851a87840cd21f81c4806fb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704288"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464577"
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>使用 C++ Interop (隱含 PInvoke)
 
-不同於其他.NET 語言中，Visual c + + 已經在同一個應用程式，甚至相同的檔案，可讓存在於 managed 和 unmanaged 程式碼的互通性支援 (使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) pragma)。 這可讓 Visual c + + 開發人員整合至現有的 Visual c + + 應用程式的.NET 功能，也不會干擾其餘的應用程式。
+不同於其他.NET 語言，Visual c + + 有互通性支援，可讓 managed 和 unmanaged 程式碼存在，在相同的應用程式，並甚至在相同的檔案 (使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) pragma)。 這可讓 Visual c + + 開發人員將.NET 功能整合到現有的 Visual c + + 應用程式中，而不會影響應用程式的其餘部分。
 
-您也可以呼叫 unmanaged 函式，從受管理的編譯模組使用[dllexport、 dllimport](../cpp/dllexport-dllimport.md)。
+您也可以從受管理的編譯模組，使用呼叫 unmanaged 函式[dllexport、 dllimport](../cpp/dllexport-dllimport.md)。
 
 隱含 PInvoke 時，您不需要指定如何函式參數會封送處理，或任何其他明確呼叫 DllImportAttribute 時，可以指定的詳細資料。
 
-Visual c + + 提供交互操作的 managed 和 unmanaged 函式的兩種方式：
+Visual c + + 提供兩種方法讓交互操作的 managed 和 unmanaged 函式：
 
 - [在 C++ 中使用明確的 PInvoke (DllImport 屬性)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
 
-明確的 PInvoke.NET Framework 所支援，可在大部分的.NET 語言。 但是，正如其名，是 Visual c + + 特有的 c + + Interop。
+明確的 PInvoke 支援的.NET Framework，並且可在大部分的.NET 語言。 但是，正如其名，c + + Interop 是特定 Visual c + +。
 
 ## <a name="c-interop"></a>C++ Interop
 
-C + + Interop 建議透過明確的 PInvoke 因為它提供更佳的型別安全實作通常較不費時，為時更寬容 unmanaged 的 API 已經過修改，並讓效能增強功能可能就無法使用，明確PInvoke。 不過，c + + Interop 不可能，如果未受管理的來源程式碼無法使用。
+因為它提供更好的型別安全實作通常比較不瑣碎，如果未受管理的 API 已經過修改，而使效能增強功能可能即無法在明確是更寬容明確的 PInvoke 建議 c + + InteropPInvoke。 不過，c + + Interop 不可能，如果無法使用未受管理的原始程式碼。
 
 ## <a name="c-com-interop"></a>C++ COM Interop
 
-與 COM 元件相互操作時，支援 Visual c + + 的互通性功能會提供其他.NET 語言特定的優勢。 而不是以.NET framework 限制受限於[Tlbimp.exe （類型程式庫匯入工具）](/dotnet/framework/tools/tlbimp-exe-type-library-importer)，例如有限支援資料類型，以及強制公開的每個 COM 介面的每個成員，c + + Interop 允許 COM要在存取元件將而且不需要個別的 interop 組件。 不同於 Visual Basic 和 C#，Visual c + + 可以使用直接使用一般的 COM 機制的 COM 物件 (例如**CoCreateInstance**和**QueryInterface**)。 這是可能會因為會導致編譯器自動插入從 managed 到 unmanaged 函式，並再次轉換程式碼的 c + + Interop 功能。
+與 COM 元件交互操作時，支援的 Visual c + + 的互通性功能會提供優於其他.NET 語言的特定優點。 而不受限於.NET Framework 的限制[Tlbimp.exe （型別程式庫匯入工具）](/dotnet/framework/tools/tlbimp-exe-type-library-importer)，限制對資料型別和必要的曝光度的每個 COM 介面的每個成員的詳細資訊，例如 c + + Interop 讓 COM若要在存取元件將而且不需要個別的 interop 組件。 不同於 Visual Basic 和C#，Visual c + + 可以使用直接使用一般的 COM 機制的 COM 物件 (例如**CoCreateInstance**並**QueryInterface**)。 這是可能會因為 c + + Interop 功能，會導致編譯器自動插入的轉換程式碼，以從 managed 到 unmanaged 的函式及移動一次。
 
-使用 c + + Interop，COM 元件可以做為它們通常會使用或在 c + + 類別換行。 這些包裝函式類別會呼叫自訂執行階段可呼叫包裝函式，或 CRCWs，而且它們有直接在應用程式程式碼中使用 COM 的兩個優點：
+使用 c + + Interop，COM 元件便能以一般使用，或在 c + + 類別包裝起來。 這些包裝函式的類別稱為自訂執行階段可呼叫包裝函式，或 CRCWs，而且它們有透過直接在應用程式程式碼中使用 COM 的兩個優點：
 
-- 產生的類別可以使用 Visual c + + 以外的語言。
+- 產生的類別可以從 Visual c + + 以外的語言使用。
 
-- 從受管理的用戶端程式碼，可以隱藏 COM 介面的詳細資料。 .NET 資料型別可以用來取代原生型別，並可無障礙地執行資料封送處理的詳細資料，CRCW 內。
+- 從受管理的用戶端程式碼，可以隱藏 COM 介面的詳細資料。 .NET 資料型別可以用來取代原生類型，並可以無障礙地執行資料封送處理的詳細資料，CRCW 內。
 
-無論使用 COM 直接或透過 CRCW，以外的簡單、 blittable 類型的引數型別必須封送處理。
+不論是否直接或透過 CRCW，使用 COM，簡單的 blittable 類型以外的引數類型必須是封送處理。
 
 ## <a name="blittable-types"></a>Blittable 類型
 
-使用簡單、 內建類型的 unmanaged api (請參閱[Blittable 和非 Blittable 類型](/dotnet/framework/interop/blittable-and-non-blittable-types))，因為這些資料型別都具有相同表示在記憶體中，但更複雜的資料類型需要任何特殊的程式碼為必要明確的資料封送處理。 如需範例，請參閱[How to： 從 Managed 程式碼使用 PInvoke 呼叫原生 Dll](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)。
+使用簡單、 內建類型的 unmanaged api (請參閱[Blittable 和非 Blittable 類型](/dotnet/framework/interop/blittable-and-non-blittable-types))，因為這些資料類型都有相同表示法在記憶體中，但更複雜的資料類型需要任何特殊的程式碼是必要明確封送處理的資料。 如需範例，請參閱[如何： 從 Managed 程式碼使用 PInvoke 呼叫原生 Dll](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)。
 
 ## <a name="example"></a>範例
 
@@ -154,7 +143,7 @@ Done
 
 - [如何：包裝原生類別以便讓 C# 使用](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-如需在 interop 案例中使用委派資訊，請參閱[委派 （c + + 元件擴充功能）](../windows/delegate-cpp-component-extensions.md)。
+如需在 interop 的案例中使用委派的資訊，請參閱[委派 （c + + 元件延伸模組）](../windows/delegate-cpp-component-extensions.md)。
 
 ## <a name="see-also"></a>另請參閱
 

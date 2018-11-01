@@ -1,20 +1,13 @@
 ---
-title: 例外狀況 (C + + /CX) |Microsoft Docs
-ms.custom: ''
+title: 例外狀況 (C++/CX)
 ms.date: 01/18/2018
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e7514fdfc07fcbb4a1fff42d80fd138ab7d6043
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7134cbb9e90f0355a3b2a912330027cf73876443
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100244"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471697"
 ---
 # <a name="exceptions-ccx"></a>例外狀況 (C++/CX)
 
@@ -22,7 +15,7 @@ ms.locfileid: "44100244"
 
 ## <a name="exceptions"></a>例外狀況
 
-在 c + + 程式中，您可以擲回並攔截來自 Windows 執行階段作業的例外狀況，例外狀況衍生自`std::exception`，或使用者定義型別。 您有只在會跨應用程式二進位介面 (ABI) 界限，例如，當會攔截例外狀況的程式碼以 JavaScript 撰寫時所擲回 Windows 執行階段例外狀況。 當非-Windows 執行階段 c + + 例外狀況到達 ABI 界限時，會轉譯成`Platform::FailureException`例外狀況，表示 E_FAIL HRESULT。 如需 ABI 的詳細資訊，請參閱[Creating Windows Runtime Components in c + +](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
+在 c + + 程式中，您可以擲回並攔截來自 Windows 執行階段作業的例外狀況，例外狀況衍生自`std::exception`，或使用者定義型別。 您有只在會跨應用程式二進位介面 (ABI) 界限，例如，當會攔截例外狀況的程式碼以 JavaScript 撰寫時所擲回 Windows 執行階段例外狀況。 當非-Windows 執行階段 c + + 例外狀況到達 ABI 界限時，會轉譯成`Platform::FailureException`例外狀況，表示 E_FAIL HRESULT。 如需 ABI 的詳細資訊，請參閱 [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
 
 您可以宣告[platform:: exception](platform-exception-class.md)使用其中兩個建構函式採用 HRESULT 參數或採用 HRESULT 參數和[platform:: string](platform-string-class.md)^ 可以之間傳遞的參數會處理它的任何 Windows 執行階段應用程式的 ABI。 或者，您可以透過採用 HRESULT 參數或採用 HRESULT 參數和 [參數的兩個](platform-exception-class.md#createexception) Exception::CreateException 方法 `Platform::String^` 多載之一，來宣告例外狀況。
 
@@ -66,11 +59,11 @@ C + + /CX 支援標準代表一般 HRESULT 錯誤的例外狀況的集合。 每
 
 [!code-cpp[cx_exceptions#02](codesnippet/CPP/exceptiontest/class1.cpp#02)]
 
-若要攔截非同步作業期間所擲回的例外狀況，使用工作類別並新增錯誤處理接續工作。 錯誤處理接續工作會將其他執行緒上擲回的例外狀況封送回呼叫端執行緒，讓您在程式碼中的單一位置上即可處理所有可能的例外狀況。 如需詳細資訊，請參閱 < [c + + 進行非同步程式設計](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)。
+若要攔截非同步作業期間所擲回的例外狀況，使用工作類別並新增錯誤處理接續工作。 錯誤處理接續工作會將其他執行緒上擲回的例外狀況封送回呼叫端執行緒，讓您在程式碼中的單一位置上即可處理所有可能的例外狀況。 如需詳細資訊，請參閱 [使用 C++ 進行非同步程式設計](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)。
 
 ## <a name="unhandlederrordetected-event"></a>UnhandledErrorDetected 事件
 
-在 Windows 8.1 中，您可以訂閱以[unhandlederrordetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected)靜態事件，可讓您存取即將使處理序當機的未處理錯誤。 不論錯誤源自何處，到達這個處理常式[Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror)以透過事件引數傳遞的物件。 當您針對物件呼叫 `Propagate` 時，它會建立及擲回對應至錯誤代碼類型的 `Platform::*Exception` 。 在 Catch 區塊，您可以視需要儲存使用者狀態，然後透過呼叫 `throw`允許處理序結束，或是執行某個動作，讓程式回到已知狀態。 下列範例示範基本模式：
+在 Windows 8.1 中，您可以訂閱以[unhandlederrordetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected)靜態事件，可讓您存取即將使處理序當機的未處理錯誤。 不論錯誤源自何處，它都會以透過事件引數傳入的 [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) 物件形式，到達這個處理常式。 當您針對物件呼叫 `Propagate` 時，它會建立及擲回對應至錯誤代碼類型的 `Platform::*Exception` 。 在 Catch 區塊，您可以視需要儲存使用者狀態，然後透過呼叫 `throw`允許處理序結束，或是執行某個動作，讓程式回到已知狀態。 下列範例示範基本模式：
 
 在 app.xaml.h:
 

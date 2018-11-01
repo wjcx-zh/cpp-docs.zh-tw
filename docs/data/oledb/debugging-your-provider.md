@@ -1,29 +1,18 @@
 ---
-title: 偵錯您的提供者 |Microsoft Docs
-ms.custom: ''
+title: 偵錯提供者
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [C++], providers
 - OLE DB providers, debugging
 - Visual C++ debugger, debugging providers
 - Visual C++ debugger
 ms.assetid: 90d4e7db-06ea-4de0-a7f4-4f3751d50d93
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 59431204ae242ac6fab0d562740f859dc85bcd11
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: e79719075bcd98733031abd63708bea861388cff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50081793"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466205"
 ---
 # <a name="debugging-your-provider"></a>偵錯提供者
 

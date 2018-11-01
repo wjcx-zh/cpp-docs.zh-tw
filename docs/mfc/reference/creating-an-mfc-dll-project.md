@@ -1,30 +1,20 @@
 ---
-title: 建立 MFC DLL 專案 |Microsoft Docs
-ms.custom: ''
+title: 建立 MFC DLL 專案
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcdll.project
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC DLLs [MFC], creating projects
 - DLLs [MFC], MFC
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e787eb7e638751fa369923f8f4059f40fae34104
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 6a24fb136570d1b5984582cab3593a29d843a54c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50061244"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608113"
 ---
 # <a name="creating-an-mfc-dll-project"></a>建立 MFC DLL 專案
 

@@ -1,26 +1,16 @@
 ---
-title: C/c + + 前置處理器參考 |Microsoft Docs
-ms.custom: ''
+title: C/C++ 前置處理器參考
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c7c1b84c23ae16828e2d73cb1f45084dfd5806e
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 1ad46a1a3006cbca52336bf65bcfbafd37e59752
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50055329"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607658"
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++ 前置處理器參考
 *C/c + + 前置處理器參考 》* 說明前置處理器，因為它實作在 Microsoft C/c + +。 前置處理器會先對 C 和 C++ 檔案執行初步作業，再將檔案傳遞至編譯器。 您可以使用前置處理器，有條件地編譯程式碼、插入檔案、指定編譯時間錯誤訊息，以及將電腦特定規則加入至程式碼區段。

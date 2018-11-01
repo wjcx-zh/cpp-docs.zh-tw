@@ -1,12 +1,6 @@
 ---
-title: 函式具有變數引數清單 （c + +） |Microsoft Docs
-ms.custom: ''
+title: 具有變數引數的函式清單 （c + +）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - arguments [C++], variable number of
 - variable argument lists
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - declaring functions [C++], variables
 - function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e27d32ad117c7d202a9e6824ddbf7387647fd708
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1f366af6f4058ffb8356017d59a7c176a978b860
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118579"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637293"
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>具有變數引數的函式清單 （c + +）
 

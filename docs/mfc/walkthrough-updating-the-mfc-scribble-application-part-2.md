@@ -1,25 +1,15 @@
 ---
-title: 逐步解說： 更新 MFC Scribble 應用程式 （第 2 部分） |Microsoft Docs
-ms.custom: ''
+title: 逐步解說：更新 MFC Scribble 應用程式 (第 2 部分)
 ms.date: 09/20/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d3623eb594ff82660e97809eef609a33e74e74dc
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: d618d79c50892523b3e4a71be163b8778402e48e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235434"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570335"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>逐步解說：更新 MFC Scribble 應用程式 (第 2 部分)
 
@@ -190,7 +180,7 @@ ms.locfileid: "48235434"
 
 ### <a name="to-add-a-color-button-to-the-pen-panel"></a>若要加入 [畫筆] 面板中的色彩按鈕
 
-1. 新增色彩按鈕之前，請為其建立的功能表項目。 在 **資源檢視**視窗中，開啟**IDR_SCRIBBTYPE**功能表資源。 按一下 **畫筆**以開啟 畫筆 功能表的功能表項目。 然後按一下**在這裡輸入**並輸入`&Color`。 以滑鼠右鍵按一下您要顯示您輸入的文字**屬性**視窗。 變更要 ID `ID_PEN_COLOR`。
+1. 新增色彩按鈕之前，請為其建立的功能表項目。 在 **資源檢視**視窗中，開啟**IDR_SCRIBBTYPE**功能表資源。 按一下 **畫筆**以開啟 畫筆 功能表的功能表項目。 然後按一下**在這裡輸入**並輸入`&Color`。 以滑鼠右鍵按一下您要顯示您輸入的文字**屬性**視窗。 將識別碼變更為 `ID_PEN_COLOR`。
 
 1. 現在加入色彩按鈕。 從**工具箱**，拖曳**色彩按鈕**來**畫筆**面板。
 

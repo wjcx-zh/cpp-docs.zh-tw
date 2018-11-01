@@ -1,25 +1,15 @@
 ---
-title: 類別由 MFC 和 ATL 共用 |Microsoft Docs
-ms.custom: ''
+title: 由 MFC 和 ATL 共用類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - shared classes, classes
 ms.assetid: ca8b4b6b-744d-430b-b31f-d5b2f17bf210
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 50295c9d296449e36ed4a305b568d2e0aaed10a3
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 6e63664020508252a61682c46439af85033cf068
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327904"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50583868"
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>由 MFC 和 ATL 共用類別
 

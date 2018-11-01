@@ -1,28 +1,18 @@
 ---
-title: 即時線上關鍵字 (C + + /cli 和 C + + /CX) |Microsoft Docs
-ms.custom: ''
+title: 即時線上關鍵字 (C + + /cli 和 C + + /CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - internal_CPP
-dev_langs:
-- C++
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5d02939e61da4a247b46da5637c38d01e7990c49
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 78b61e77da8ed45a43b3830b7eaa9588c1860928
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327930"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50652747"
 ---
 # <a name="context-sensitive-keywords--ccli-and-ccx"></a>即時線上關鍵字 (C + + /cli 和 C + + /CX)
 
@@ -111,4 +101,4 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)
+[適用於.NET 和 UWP 的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

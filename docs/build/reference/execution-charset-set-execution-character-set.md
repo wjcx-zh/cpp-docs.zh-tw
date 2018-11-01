@@ -1,29 +1,19 @@
 ---
-title: -執行-字元集 （設定執行字元集） |Microsoft Docs
-ms.custom: ''
+title: /execution-charset （設定執行字元集）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - execution-charset
 - /execution-charset
-dev_langs:
-- C++
 helpviewer_keywords:
 - /execution-charset compiler option
 - -execution-charset compiler option
 ms.assetid: 0e02f487-2236-45bc-95f3-5760933a8f96
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca6681fde6ae4e46dea62e0258138f567ef8ebc5
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 3535b60d7aad50f7efc5d1f32726560431ac86a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029602"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663966"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/execution-charset （設定執行字元集）
 

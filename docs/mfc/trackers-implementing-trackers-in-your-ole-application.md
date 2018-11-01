@@ -1,12 +1,6 @@
 ---
-title: 追蹤器： 在 OLE 應用程式中實作追蹤器 |Microsoft Docs
-ms.custom: ''
+title: 追蹤器：在 OLE 應用程式中實作追蹤器
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - trackers [MFC]
 - OLE applications [MFC], trackers
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - OLE containers [MFC], trackers
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: 5103a517-65bd-441a-8a53-02915ff3ef08
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 26fe49a9932ded22dbc1f0d4600f57b1f0eb6f14
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 19ffa94b7be4b96c57317f63d9cfd9242bff061f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441397"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613092"
 ---
 # <a name="trackers-implementing-trackers-in-your-ole-application"></a>追蹤器：在 OLE 應用程式中實作追蹤器
 

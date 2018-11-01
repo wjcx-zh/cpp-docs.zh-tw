@@ -1,10 +1,6 @@
 ---
-title: _CrtMemCheckpoint | Microsoft Docs
-ms.custom: ''
+title: _CrtMemCheckpoint
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtMemCheckpoint
 apilocation:
@@ -23,22 +19,16 @@ f1_keywords:
 - CrtMemCheckpoint
 - _CrtMemCheckpoint
 - crtdbg/_CrtMemCheckpoint
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtMemCheckpoint function
 - _CrtMemCheckpoint function
 ms.assetid: f1bacbaa-5a0c-498a-ac7a-b6131d83dfbc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e1418278f4b6756db4e747162f090545c3e9f3ae
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: ee435ba3e9e40795280dee0f97feaad32c8b0fc3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107559"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589507"
 ---
 # <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
 
@@ -59,7 +49,7 @@ void _CrtMemCheckpoint(
 
 ## <a name="remarks"></a>備註
 
-**_CrtMemCheckpoint**函式會建立偵錯堆積的目前狀態的快照集，在任何給定的時刻。 其他堆積狀態函式 (例如 [_CrtMemDifference](crtmemdifference.md)) 可使用此快照協助偵測記憶體流失及其他問題。 當[_DEBUG](../../c-runtime-library/debug.md)未定義，呼叫 **_CrtMemState**會在前置處理期間移除。
+**_CrtMemCheckpoint**函式會建立偵錯堆積的目前狀態的快照集，在任何給定的時刻。 其他堆積狀態函式 (例如 [_CrtMemDifference](crtmemdifference.md) ) 可使用此快照協助偵測記憶體流失及其他問題。 當[_DEBUG](../../c-runtime-library/debug.md)未定義，呼叫 **_CrtMemState**會在前置處理期間移除。
 
 應用程式必須將指標傳遞至先前配置的執行個體 **_CrtMemState**結構，定義在 Crtdbg.h 中*狀態*參數。 如果 **_CrtMemCheckpoint**遇到錯誤，檢查點建立期間，函式會產生 **_CRT_WARN**偵錯報表，描述問題。
 

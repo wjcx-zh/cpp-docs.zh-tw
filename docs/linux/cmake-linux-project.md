@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: Linux
 ms.topic: conceptual
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-author: corob-msft
-ms.author: corob
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 0e735ece878797ffdcf89fffefa33473107ad3d5
-ms.sourcegitcommit: 7098d64443ffbd4a47f30bc41753007b570b47e8
+ms.openlocfilehash: b7c28a8e67ef2731d26071262383e93d32be9583
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120560"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064104"
 ---
 # <a name="configure-a-linux-cmake-project"></a>設定 Linux CMake 專案
 
@@ -29,8 +29,8 @@ ms.locfileid: "49120560"
 
 本主題假設您對 Visual Studio 中的 CMake 支援有基本認識。 如需詳細資訊，請參閱 [Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)。 如需 CMake 本身的詳細資訊，請參閱 [Build, Test and Package Your Software With CMake](https://cmake.org/) (使用 CMake 建置、測試及封裝您的軟體)。
 
-> [!NOTE]  
-> Visual Studio 中的 CMake 支援需要 CMake 3.8 中所引進的伺服器模式支援。 針對 Microsoft 所提供的 CMake 變數，請在下列網頁下載最新的預先建置二進位檔：[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases)。 
+> [!NOTE]
+> Visual Studio 中的 CMake 支援需要 CMake 3.8 中所引進的伺服器模式支援。 針對 Microsoft 所提供的 CMake 變數，請在下列網頁下載最新的預先建置二進位檔：[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases)。
 
 ## <a name="open-a-folder"></a>開啟資料夾
 
@@ -120,10 +120,9 @@ add_executable(hello-cmake hello.cpp)
 
 ## <a name="download-prebuilt-cmake-binaries"></a>下載預先建置的 CMake 二進位檔
 
-您的 Linux 發行套件可能會有較舊版本的 CMake。 Visual Studio 中的 CMake 支援需要 CMake 3.8 中所引進的伺服器模式支援。 針對 Microsoft 所提供的 CMake 變數，請在下列網頁下載最新的預先建置二進位檔：[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases)。 
-
+您的 Linux 發行套件可能會有較舊版本的 CMake。 Visual Studio 中的 CMake 支援需要 CMake 3.8 中所引進的伺服器模式支援。 針對 Microsoft 所提供的 CMake 變數，請在下列網頁下載最新的預先建置二進位檔：[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases)。
 
 ## <a name="see-also"></a>請參閱
 
 [使用專案屬性](../ide/working-with-project-properties.md)<br/>
-[Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)  
+[Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)

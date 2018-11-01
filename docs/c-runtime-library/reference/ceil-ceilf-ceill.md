@@ -1,10 +1,6 @@
 ---
-title: ceil、ceilf、ceill | Microsoft Docs
-ms.custom: ''
+title: ceil、ceilf、ceill
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - ceilf
 - ceil
@@ -27,24 +23,18 @@ f1_keywords:
 - ceil
 - ceilf
 - ceill
-dev_langs:
-- C++
 helpviewer_keywords:
 - calculating value ceilings
 - ceill function
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fa68ff857db09d1426fbed6ea497624e13cc362a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b128f20593d41fff3c4c50f6d68f8643798c5b66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394261"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637186"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil、ceilf、ceill
 
@@ -77,21 +67,21 @@ long double ceill(
 
 ## <a name="return-value"></a>傳回值
 
-**Ceil**函式會傳回表示大於或等於最小整數的浮點值*x*。 不會傳回錯誤。
+**Ceil**函式會傳回浮點數的值，表示大於或等於最小整數*x*。 不會傳回錯誤。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± **QNAN**， **IND**|無|**_DOMAIN**|
+|常见**QNAN**， **IND**|無|**（_D)**|
 
 **ceil**有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**ceil**採用**float**或**長** **double**型別。 在 C 程式中， **ceil**一律採用並傳回**double**。
+C + + 允許多載，因為您可以呼叫多載**ceil**採用**float**或是**長** **double**類型。 在 C 程式中， **ceil**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**ceil**， **ceilf**， **ceill**|\<math.h>|
 

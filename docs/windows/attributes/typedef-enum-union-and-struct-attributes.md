@@ -1,27 +1,16 @@
 ---
-title: Typedef、 Enum、 Union 和 Struct 屬性 (c + + COM) |Microsoft Docs
-ms.custom: ''
+title: Typedef、 Enum、 Union 和 Struct 屬性 (c + + COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - union attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 89e1511df2aeabe7cbd63549a1dca6e53944fbe2
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 289935c3651535b5f935624dc33246fbe83a4ceb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790743"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631058"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Typedef、Enum、Union 和 Struct 屬性
 
@@ -107,7 +96,7 @@ ms.locfileid: "48790743"
 |[requires_category](requires-category.md)|指定目標類別的必要的元件類別目錄。|
 |[size_is](size-is.md)|指定記憶體的大小配置大小的指標，且大小來調整大小的指標，以及單一或多維陣列的指標。|
 |[source](source-cpp.md)|在類別上，指定連接點的 COM 物件的來源介面。 在屬性或方法中，表示成員傳回的物件或變數，是事件來源。|
-|[執行緒處理](threading-cpp.md)|指定 COM 物件的執行緒模型。|
+|[threading](threading-cpp.md)|指定 COM 物件的執行緒模型。|
 |[unique](unique-cpp.md)|指定唯一的指標。|
 |[uuid](uuid-cpp-attributes.md)|指定類別或介面的唯一識別碼。|
 |[version](version-cpp.md)|識別類別的多個版本之間的特定版本。|

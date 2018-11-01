@@ -1,17 +1,11 @@
 ---
-title: Makefile 前置處理器指示詞 |Microsoft 文件
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
+title: Makefile 前置處理指示詞
+ms.date: 06/14/2018
 f1_keywords:
 - '!UNDEF'
 - '!INCLUDE'
 - '!IFNDEF'
 - '!MESSAGE'
-dev_langs:
-- C++
 helpviewer_keywords:
 - ERROR directive
 - '!MESSAGE directive'
@@ -45,59 +39,71 @@ helpviewer_keywords:
 - ELSE directive
 - ELSEIFDEF directive
 ms.assetid: bcedeccb-d981-469d-b9e8-ab5d097fd8c2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6a84557388f521fb6c70c33ce6814ce33a5f6a1d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: adc81e5c4ea3d0d4a80e7efad4eaab15a5048cd3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50593566"
 ---
 # <a name="makefile-preprocessing-directives"></a>Makefile 前置處理指示詞
-前置處理器指示詞不區分大小寫。 初始驚嘆號 （！） 必須出現在一行的開頭。 零或多個空格或定位字元可以驚嘆號的縮排的後面出現。  
-  
- **!CMDSWITCHES**  
- {**+** &#124; **-**}*選項*...開啟每個*選項*列出開啟或關閉。 空格或定位字元必須出現在之前 + 或-運算子;沒有任何可以出現在運算子之間和[選項字母](../build/nmake-options.md)。 字母不區分大小寫，且已指定但不是斜線 （/）。 若要開啟某些選項並關閉其他，使用不同的**！CMDSWITCHES**。  
-  
- 只有 /D / 用於我、 /N 和 /S makefile。 除非 /F、 /HELP、 /NOLOGO，允許 Tools.ini，所有的選項/X，，/？。 描述區塊中指定的變更進行下一個描述區塊才生效。 這個指示詞更新**MAKEFLAGS**; 如果在遞迴時繼承變更**MAKEFLAGS**指定。  
-  
- **!錯誤***文字*   
- 顯示*文字*錯誤 U1050，則會中止 NMAKE，即使在 /K，/ I、 **。忽略**， **！CMDSWITCHES**，或使用破折號 （-） 命令修飾詞。 空格或定位點之前*文字*都會被忽略。  
-  
- **!訊息***文字*   
- 顯示*文字*至標準輸出。 空格或定位點之前*文字*都會被忽略。  
-  
- **!包含**[ **\<**] *filename*[ **>**]  
- 讀取*filename*為 makefile，再繼續執行目前的 makefile。 搜尋 NMAKE *filename*第一次在指定或目前目錄中，然後以遞迴方式透過目錄的任何父系 makefile，然後，如果*filename*括在角括弧 (\<>)，在所指定的目錄中**INCLUDE**巨集，一開始設定為 INCLUDE 環境變數。 可用來傳遞**。尾碼**設定**。珍貴**，和推斷規則，以便遞迴 makefile。  
-  
- **!如果**  `constantexpression`  
- 處理陳述式之間**！如果**下, 一個**！其他**或`!ENDIF`如果`constantexpression`評估為非零值。  
-  
- **!IFDEF***巨集名稱*   
- 處理陳述式之間`!IFDEF`下, 一個**！其他**或`!ENDIF`如果*巨集名稱*定義。 Null 巨集視為定義。  
-  
- **!IFNDEF***巨集名稱*   
- 處理陳述式之間**！IFNDEF**下, 一個**！其他**或`!ENDIF`如果*巨集名稱*未定義。  
-  
- **!其他**[**如果** *constantexpression* &#124; **IFDEF** *巨集名稱*&#124; **IFNDEF** *巨集名稱*]  
- 處理陳述式之間**！其他**下, 一個`!ENDIF`如果之前**！如果**， `!IFDEF`，或**！IFNDEF**陳述式評估為零。 選擇性的關鍵字進一步控制前置處理。  
-  
- **!ELSEIF**  
- 同義字**！ELSE IF**。  
-  
- **!ELSEIFDEF**  
- 同義字**！其他 IFDEF**。  
-  
- **!ELSEIFNDEF**  
- 同義字**！其他 IFNDEF**。  
-  
- `!ENDIF`  
- 結束標記**！如果**， `!IFDEF`，或**！IFNDEF**區塊。 之後的任何文字`!ENDIF`同一行上會被忽略。  
-  
- **!UNDEF***巨集名稱*   
- 取消定義*巨集名稱*。  
-  
-## <a name="see-also"></a>另請參閱  
- [Makefile 前置處理](../build/makefile-preprocessing.md)
+
+前置處理器指示詞不區分大小寫。 初始驚嘆號 （！） 必須出現在一行的開頭。 零或多個空間索引標籤可以顯示驚嘆號的 縮排後。
+
+- **!CMDSWITCHES** {**+** &#124; **-**}*選項*...
+
+   開啟每個*選項*列出開啟或關閉。 空格或定位字元必須出現在之前 + 或-運算子;都不出現 between 運算子和[選項字母](../build/nmake-options.md)。 字母不區分大小寫，且會指定不含斜線 （/）。 若要開啟上的一些選項並關閉其他選項，可分別指定 **！CMDSWITCHES**。
+
+   只有 /D / 我、 /N 和 /S 可用 makefile 中。 除了 /F、 /HELP、 /NOLOGO，允許 Tools.ini，所有的選項/X，，/？。 描述區塊中指定的變更才會生效之前的下一個描述區塊。 這個指示詞會更新**MAKEFLAGS**; 如果在遞迴期間會繼承變更**MAKEFLAGS**指定。
+
+- **!錯誤***文字* 
+
+   顯示*文字*錯誤 U1050，則會中止 NMAKE，即使在 /K，/ 我， **。略過**， **！CMDSWITCHES**，或使用破折號 （-） 命令修飾詞。 空間或標籤之前*文字*都會被忽略。
+
+- **!訊息***文字* 
+
+   顯示*文字*至標準輸出。 空間或標籤之前*文字*都會被忽略。
+
+- **!包含**[ **\<** ]*檔名*[ **>** ]
+
+   讀取*filename*為 makefile，再繼續執行目前的 makefile。 搜尋 NMAKE*檔名*第一次在指定或目前的目錄中，然後遞迴地目錄的任何父系的 makefile，然後，如果*filename*加上角括弧 (\<>)，在所指定的目錄**INCLUDE**巨集，一開始是設定為 INCLUDE 環境變數。 可用來傳遞 **。尾碼**設定， **。寶貴**，與推斷規則，以遞迴的 makefile。
+
+- **!如果** *constant_expression*
+
+   處理陳述式之間 **！如果**和 [下一步] **！ELSE**或 **！ENDIF**如果*constant_expression*評估為非零值。
+
+- **!IFDEF***巨集名稱* 
+
+   處理陳述式之間 **！IFDEF**和 [下一步] **！ELSE**或 **！ENDIF**如果*macroname*定義。 Null 巨集視為定義。
+
+- **!IFNDEF***巨集名稱* 
+
+   處理陳述式之間 **！IFNDEF**和 [下一步] **！ELSE**或 **！ENDIF**如果*macroname*未定義。
+
+- **!ELSE** [**IF** *constant_expression* &#124; **IFDEF** *macroname* &#124; **IFNDEF** *macroname*]
+
+   處理陳述式之間 **！ELSE**和 [下一步] **！ENDIF**如果之前 **！如果**， **！IFDEF**，或 **！IFNDEF**陳述式評估為零。 選擇性關鍵字提供進一步的前置處理的控制項。
+
+- **!ELSEIF**
+
+   同義字 **！ELSE IF**。
+
+- **!ELSEIFDEF**
+
+   同義字 **！其他 IFDEF**。
+
+- **!ELSEIFNDEF**
+
+   同義字 **！其他 IFNDEF**。
+
+- **!ENDIF**
+
+   標記的結尾 **！如果**， **！IFDEF**，或 **！IFNDEF**區塊。 之後的任何文字 **！ENDIF**同一行上會被忽略。
+
+- **!UNDEF***巨集名稱* 
+
+   取消定義*macroname*。
+
+## <a name="see-also"></a>另請參閱
+
+- [Makefile 前置處理](../build/makefile-preprocessing.md)

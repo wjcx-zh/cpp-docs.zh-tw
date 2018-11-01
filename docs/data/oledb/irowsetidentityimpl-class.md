@@ -1,10 +1,6 @@
 ---
-title: IRowsetIdentityImpl 類別 |Microsoft Docs
-ms.custom: ''
+title: IRowsetIdentityImpl 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
 f1_keywords:
 - ATL::IRowsetIdentityImpl
 - ATL.IRowsetIdentityImpl
@@ -14,23 +10,16 @@ f1_keywords:
 - ATL.IRowsetIdentityImpl.IsSameRow
 - IRowsetIdentityImpl::IsSameRow
 - ATL::IRowsetIdentityImpl::IsSameRow
-dev_langs:
-- C++
 helpviewer_keywords:
 - IRowsetIdentityImpl class
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 9a1b11450dd67e63927aeb20c54643a5980fa672
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5ce4db130f4e8569b666047ca7a5c2bc4e0e6cb1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50058865"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50593189"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl 類別
 

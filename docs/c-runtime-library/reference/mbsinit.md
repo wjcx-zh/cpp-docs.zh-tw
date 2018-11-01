@@ -1,10 +1,6 @@
 ---
-title: mbsinit | Microsoft Docs
-ms.custom: ''
+title: mbsinit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - mbsinit
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - mbsinit
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsinit function
 ms.assetid: 4618555b-baaa-4d04-93fa-36abae411034
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 413592bcf3af01c898a72d0ca70239364ee432f9
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 8b467ae7f705fc2f4b2b38d3f76f3936f30ec15e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450446"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597232"
 ---
 # <a name="mbsinit"></a>mbsinit
 
@@ -56,11 +46,11 @@ int mbsinit(
 
 ## <a name="return-value"></a>傳回值
 
-為非零，如果*ps*是**NULL**或如果不進行轉換。
+非零*ps*是**NULL**或不在轉換過程。
 
 ## <a name="remarks"></a>備註
 
-使用其中一個會採用 ANSI 函式時**mbstate_t**指標的位址傳遞您**mbstate_t**會傳回緩衝區中的最後一個位元組是否已轉換的相關資訊。
+當使用其中一個 ANSI 函式接受**mbstate_t**指標的位址傳遞您**mbstate_t**會傳回緩衝區中的最後一個位元組是否已轉換的相關資訊。
 
 必須安裝適當的字碼頁，才能支援您的多位元組字元。
 

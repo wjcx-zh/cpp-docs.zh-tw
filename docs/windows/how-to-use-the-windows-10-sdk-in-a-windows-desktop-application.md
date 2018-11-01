@@ -1,24 +1,14 @@
 ---
-title: 如何： 使用 Windows 10 SDK，在 Windows 桌面應用程式 |Microsoft Docs
+title: 如何：在 Windows 桌面應用程式中使用 Windows 10 SDK
 ms.custom: get-started-article
 ms.date: 07/12/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: afe678ca4ea381709b126168639df3f710867b9e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ed860a229866991b01266093058b71cc2ae84986
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611316"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50669114"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>如何：在 Windows 桌面應用程式中使用 Windows 10 SDK
 
@@ -26,7 +16,7 @@ ms.locfileid: "42611316"
 
 如果您想要的目標是舊版的 SDK，您可以開啟**專案 |屬性**，然後選擇 從可用的 Windows SDK 版本下拉式清單中的其他 SDK 版本。
 
-從 Visual Studio 2015 和 Windows 10 SDK 開始，CRT 程式庫已分成兩個部分 (ucrtbase) 包含的函式可接受用於通用 Windows 應用程式，以及包含其他項目 (vcruntime140)。 由於 Windows 10 SDK 包含新的函式，例如許多 C99 函式，因此您必須遵循下列步驟以使用這些函式。 請參閱 [CRT 程式庫的功能](../c-runtime-library/crt-library-features.md)。
+從 Visual Studio 2015 和 Windows 10 SDK 開始，CRT 程式庫已分成兩個部分 (ucrtbase) 包含的函式可接受用於通用 Windows 應用程式，以及包含其他項目 (vcruntime140)。 由於 Windows 10 SDK 包含新的函式，例如許多 C99 函式，因此您必須遵循下列步驟以使用這些函式。 請參閱 [CRT Library Features](../c-runtime-library/crt-library-features.md)。
 
 ### <a name="to-target-the-windows-10-sdk"></a>以 Windows 10 SDK 為目標
 

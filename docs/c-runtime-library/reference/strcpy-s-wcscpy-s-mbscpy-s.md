@@ -1,10 +1,6 @@
 ---
-title: strcpy_s、wcscpy_s、_mbscpy_s | Microsoft Docs
-ms.custom: ''
+title: strcpy_s、wcscpy_s、_mbscpy_s
 ms.date: 03/22/2086
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcscpy_s
 - _mbscpy_s
@@ -28,8 +24,6 @@ f1_keywords:
 - _mbscpy_s
 - _tcscpy_s
 - wcscpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - strcpy_s function
 - _tcscpy_s function
@@ -39,23 +33,19 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ee648776d4c8b7df1089edf34d30b5c7e59a63c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7deeb2d3286ca20518527df26c4765197f8a087
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416608"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616602"
 ---
 # <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s、wcscpy_s、_mbscpy_s
 
 複製字串。 這些是 [strcpy、wcscpy、_mbscpy](strcpy-wcscpy-mbscpy.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
-> **_mbscpy_s**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbscpy_s**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -102,7 +92,7 @@ errno_t _mbscpy_s(
 目的地字串緩衝區的位置。
 
 *dest_size*<br/>
-在目的地字串緩衝區的大小**char**單位為窄和多位元組函式和**wchar_t**單位為寬函式。 此值必須小於或等於零，也不得大於**RSIZE_MAX**。
+在目的地字串緩衝區的大小**char**窄和多位元組函式中，單位並**wchar_t**為寬函式的單位。 此值必須小於或等於零且不大於**RSIZE_MAX**。
 
 *src*<br/>
 以 null 結束的來源字串緩衝區。
@@ -113,25 +103,25 @@ errno_t _mbscpy_s(
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*dest*|*dest_size*|*src*|傳回值|內容*目的地*|
+|*dest*|*dest_size*|*src*|傳回值|內容*dest*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULL**|任何|任何|**EINVAL**|未修改|
-|任何|任何|**NULL**|**EINVAL**|*目的地*[0] 設為 0|
-|任何|0 或太小|任何|**ERANGE**|*目的地*[0] 設為 0|
+|**NULL**|any|any|**EINVAL**|未修改|
+|any|any|**NULL**|**EINVAL**|*dest*[0] 設為 0|
+|any|0 或太小|any|**ERANGE**|*dest*[0] 設為 0|
 
 ## <a name="remarks"></a>備註
 
-**Strcpy_s**函式會將內容複製的地址*src*，包括結束的 null 字元，由所指定的位置來*目的地*。 目的字串必須大到足以保留來源字串及其結束的 null 字元。 行為**strcpy_s**是未定義的如果來源和目的字串重疊。
+**Strcpy_s**函式會複製內容的地址*src*，包括結束的 null 字元，到所指定的位置*dest*。 目的字串必須大到足以保留來源字串及其結束的 null 字元。 行為**strcpy_s**是未定義的如果來源和目的字串重疊。
 
-**wcscpy_s**是寬字元版本的**strcpy_s**，和 **_mbscpy_s**是多位元組字元版本。 引數**wcscpy_s**是寬字元字串; **_mbscpy_s**是多位元組字元字串。 除此之外，這三個函式的行為相同。
+**wcscpy_s**是寬字元版本**strcpy_s**，以及 **_mbscpy_s**是多位元組字元版本。 引數**wcscpy_s**是寬字元字串; **_mbscpy_s**是多位元組字元字串。 除此之外，這三個函式的行為相同。
 
-如果*目的地*或*src*為 null 指標，或如果目的地字串大小*dest_size*太小，叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函數會傳回**EINVAL**並設定**errno**至**EINVAL**時*目的地*或*src*為 null 指標，且它們傳回**為 ERANGE**並設定**errno**至**為 ERANGE**目的地字串時太小。
+如果*dest*或是*src*為 null 指標，或者目的地字串大小*dest_size*太小，叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則這些函式會傳回**EINVAL**並設定**errno**來**EINVAL**當*dest*或*src*為 null 指標，以及它們會傳回**ERANGE** ，並設定**errno**來**ERANGE**目的字串太小時。
 
 成功執行後，目的字串永遠是以 null 終止的。
 
 在 C++ 中，樣板多載簡化了這些函式的使用方式，樣板多載可自動推斷緩衝區長度 (因而您不須指定大小引數)，也可以自動將較舊且較不安全的函式取代成其較新且較安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
-偵錯程式庫版本，這些函式的第一次填入 0xFE 緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+這些函式的偵錯程式庫版本會先填入用 0xfe 緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -141,7 +131,7 @@ errno_t _mbscpy_s(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**strcpy_s**|\<string.h>|
 |**wcscpy_s**|\<string.h> 或 \<wchar.h>|
@@ -151,7 +141,7 @@ errno_t _mbscpy_s(
 
 ## <a name="example"></a>範例
 
-不同於實際執行品質的程式碼，此範例會呼叫的安全字串函數，而不會檢查有錯誤：
+不同於生產環境品質的程式碼，此範例會呼叫的安全字串函式，而不檢查有錯誤：
 
 ```C
 // crt_strcpy_s.c
@@ -181,7 +171,7 @@ int main(void)
 String = Hello world from strcpy_s and strcat_s!
 ```
 
-建置 c + + 程式碼，當範本版本可能會更容易使用。
+當建置 c + + 程式碼，則可能會更輕鬆地使用範本版本。
 
 ```cpp
 // crt_wcscpy_s.cpp

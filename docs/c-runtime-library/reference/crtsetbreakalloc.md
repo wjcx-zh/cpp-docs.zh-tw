@@ -1,10 +1,6 @@
 ---
-title: _CrtSetBreakAlloc | Microsoft Docs
-ms.custom: ''
+title: _CrtSetBreakAlloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetBreakAlloc
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtSetBreakAlloc
 - _CrtSetBreakAlloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetBreakAlloc function
 - _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32e8fedcd70d0e901c63cd5e794773451f436326
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbc4b0de553533dde95f37675b3c9234569e3505
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395431"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487824"
 ---
 # <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
 
@@ -62,7 +52,7 @@ long _CrtSetBreakAlloc(
 
 ## <a name="remarks"></a>備註
 
-**_CrtSetBreakAlloc**允許應用程式來執行記憶體流失偵測重大特定點的記憶體配置要求來源後追蹤。 此函式會在記憶體區塊配置於堆積中時，使用指派給記憶體區塊的循序物件配置順序編號。 當[_DEBUG](../../c-runtime-library/debug.md)未定義時，呼叫 **_CrtSetBreakAlloc**會在前置處理期間移除。
+**_CrtSetBreakAlloc**允許應用程式的記憶體配置的特定點中斷並追溯回要求的來源，以執行記憶體遺漏偵測。 此函式會在記憶體區塊配置於堆積中時，使用指派給記憶體區塊的循序物件配置順序編號。 當[_DEBUG](../../c-runtime-library/debug.md)未定義，呼叫 **_CrtSetBreakAlloc**會在前置處理期間移除。
 
 物件配置順序編號會儲存在定義於 Crtdbg.h 中的 **_CrtMemBlockHeader** 結構的 *lRequest* 欄位內。 當記憶體區塊的相關資訊由其中一個偵錯傾印函式報告時，此編號會包含在大括號，例如{36}。
 
@@ -70,7 +60,7 @@ long _CrtSetBreakAlloc(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_CrtSetBreakAlloc**|\<crtdbg.h>|
 

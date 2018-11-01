@@ -1,10 +1,6 @@
 ---
-title: _makepath_s、_wmakepath_s | Microsoft Docs
-ms.custom: ''
+title: _makepath_s、_wmakepath_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wmakepath_s
 - _makepath_s
@@ -26,8 +22,6 @@ f1_keywords:
 - makepath_s
 - _makepath_s
 - wmakepath_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _makepath_s function
 - wmakepath_s function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a981e8758200e055693f24761238c98c3755311c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6914299dd7ede97c9004dcc95e01b1a35188f5c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404756"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471912"
 ---
 # <a name="makepaths-wmakepaths"></a>_makepath_s、_wmakepath_s
 
@@ -99,16 +89,16 @@ errno_t _wmakepath_s(
 以位元組為單位的緩衝區大小。
 
 *磁碟機*<br/>
-包含對應至所需磁碟機的代號 (A、B 等) 及選擇性後置冒號。 **_makepath_s**冒號自動插入複合路徑中遺漏時。 如果*磁碟機*是**NULL**或指向空字串時，沒有磁碟機代號會出現在複合*路徑*字串。
+包含對應至所需磁碟機的代號 (A、B 等) 及選擇性後置冒號。 **_makepath_s**冒號自動插入複合路徑中遺失。 如果*磁碟機*是**NULL**或指向空字串，不要的磁碟機代號會出現在複合*路徑*字串。
 
 *dir*<br/>
-包含目錄路徑，但不包含磁碟機指示項或實際檔案名稱。 句尾斜線是選用的並正斜線 （/） 或反斜線 (\\) 或兩者都可能會使用單一*dir*引數。 如果未指定後置斜線 (/ 或\\)，則會自動插入。 如果*dir*是**NULL**指向空字串，沒有目錄路徑在複合插入或*路徑*字串。
+包含目錄路徑，但不包含磁碟機指示項或實際檔案名稱。 結尾的斜線是選擇性的並正斜線 （/） 或反斜線 (\\)，或是兩者都可能會用於在單一*dir*引數。 如果未指定後置斜線 (/ 或\\)，則會自動插入。 如果*dir*是**NULL**或指向空字串，沒有目錄路徑會插入複合*路徑*字串。
 
 *fname*<br/>
-包含基底檔案名稱，但不包含任何副檔名。 如果*fname*是**NULL**或空字串，任何檔名指向插入複合*路徑*字串。
+包含基底檔案名稱，但不包含任何副檔名。 如果*fname*是**NULL**或指向空字串，任何檔名會插入複合*路徑*字串。
 
 *ext*<br/>
-包含實際副檔名，可包含或不含前置句號 (.)。 **_makepath_s**自動插入期間，如果它不會顯示在*ext*。如果*ext*是**NULL**或空字串，沒有副檔名的點插入複合*路徑*字串。
+包含實際副檔名，可包含或不含前置句號 (.)。 **_makepath_s**自動插入句號，如果它不會出現在*ext*。如果*ext*是**NULL**或指向空字串，不含副檔名會插入複合*路徑*字串。
 
 ## <a name="return-value"></a>傳回值
 
@@ -118,14 +108,14 @@ errno_t _wmakepath_s(
 
 |*path*|*sizeInWords* / *sizeInBytes*|Return|內容*路徑*|
 |------------|------------------------------------|------------|------------------------|
-|**NULL**|任何|**EINVAL**|未修改|
-|任何|<= 0|**EINVAL**|未修改|
+|**NULL**|any|**EINVAL**|未修改|
+|any|<= 0|**EINVAL**|未修改|
 
-如果發生上述任何一種錯誤狀況，則這些函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若要繼續，允許執行**errno**設**EINVAL**而且函數會傳回**EINVAL**。 **NULL**允許參數*磁碟機*， *fname*，和*ext*。如需這些參數為 null 指標或空字串時之行為的資訊，請參閱＜備註＞一節。
+如果發生上述任何一種錯誤狀況，則這些函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續，請執行**errno**設為**EINVAL**和函式會傳回**EINVAL**。 **NULL**允許的參數*磁碟機*， *fname*，和*ext*。如需這些參數為 null 指標或空字串時之行為的資訊，請參閱＜備註＞一節。
 
 ## <a name="remarks"></a>備註
 
-**_Makepath_s**函式會建立複合路徑字串儲存在該結果的個別元件來自*路徑*。 *路徑*可能包括磁碟機代號、 目錄路徑、 檔案名稱和副檔名。 **_wmakepath_s**是寬字元版本的 **_makepath_s**; 的引數 **_wmakepath_s**是寬字元字串。 **_wmakepath_s**和 **_makepath_s**除此之外的行為相同。
+**_Makepath_s**函式會從 個別元件，儲存在結果中建立複合路徑字串*路徑*。 *路徑*可能包含磁碟機代號、 目錄路徑、 檔名和副檔名。 **_wmakepath_s**是寬字元版本的 **_makepath_s**; 的引數 **_wmakepath_s**是寬字元字串。 **_wmakepath_s**並 **_makepath_s**行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -133,9 +123,9 @@ errno_t _wmakepath_s(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmakepath_s**|**_makepath_s**|**_makepath_s**|**_wmakepath_s**|
 
-*路徑*引數必須指向空的緩衝區不夠大，無法保存完整路徑。 複合*路徑*必須不能大於 **_MAX_PATH** Stdlib.h 中定義的常數。
+*路徑*引數必須指向空的緩衝區不夠大，無法容納完整路徑。 複合*路徑*必須是不能大於 **_MAX_PATH**在 Stdlib.h 中定義的常數。
 
-如果路徑是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 此外， **errno**設**EINVAL**。 **NULL**允許所有其他參數值。
+如果路徑**NULL**，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 颾魤 ㄛ **errno**設為**EINVAL**。 **NULL**允許所有其他參數的值。
 
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -143,7 +133,7 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_makepath_s**|\<stdlib.h>|
 |**_wmakepath_s**|\<stdlib.h> 或 \<wchar.h>|

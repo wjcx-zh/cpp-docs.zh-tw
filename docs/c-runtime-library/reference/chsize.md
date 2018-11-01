@@ -1,10 +1,6 @@
 ---
-title: _chsize | Microsoft Docs
-ms.custom: ''
+title: _chsize
 ms.date: 03/29/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _chsize
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _chsize
-dev_langs:
-- C++
 helpviewer_keywords:
 - size
 - _chsize function
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb40d218439ebe308e7d7cf01ab5043a2ebb3b1e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c60f3aa08a405eb9a83dc6ba8636cd316a32925
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395750"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600638"
 ---
 # <a name="chsize"></a>_chsize
 
@@ -65,19 +55,19 @@ int _chsize(
 
 ## <a name="return-value"></a>傳回值
 
-**_chsize**傳回值 0，如果已成功變更檔案大小。 傳回值-1 表示錯誤： **errno**設**EACCES**如果指定的檔案是唯讀，或指定的檔案已鎖定，無法存取，為**EBADF**如果描述項無效， **ENOSPC**如果沒有空間保留在裝置上，或**EINVAL**如果*大小*小於零。
+**_chsize**傳回值為 0，如果已成功變更檔案大小。 傳回值-1 表示發生錯誤： **errno**設為**EACCES**指定的檔案是唯讀或為指定的檔案鎖定的存取，如果**EBADF**如果描述元無效**ENOSPC**如果沒有空間保留在裝置上，或是**EINVAL**如果*大小*小於零。
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Chsize**函式擴充或截斷檔案與相關聯*fd*所指定的長度*大小*。 檔案必須以允許寫入的模式開啟。 如果擴充檔案，則會附加 Null 字元 ('\0')。 如果檔案遭到截斷，則會遺失從縮短檔案結尾到檔案原始長度的所有資料。
+**_Chsize**函式擴充或截斷與相關聯的檔案*fd*所指定的長度*大小*。 檔案必須以允許寫入的模式開啟。 如果擴充檔案，則會附加 Null 字元 ('\0')。 如果檔案遭到截斷，則會遺失從縮短檔案結尾到檔案原始長度的所有資料。
 
-這個函式會驗證它的參數。 如果*大小*小於零或*fd*是不正確的檔案描述項無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。
+這個函式會驗證它的參數。 如果*大小*小於零或*fd*是不正確的檔案描述項無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|---------------------|
 |**_chsize**|\<io.h>|\<errno.h>|
 

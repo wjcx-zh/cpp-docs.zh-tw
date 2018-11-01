@@ -1,40 +1,31 @@
 ---
-title: 編譯器錯誤 C2672 |Microsoft 文件
+title: 編譯器錯誤 C2672
 ms.date: 10/24/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2672
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2672
 ms.assetid: 7e86338a-2d4b-40fe-9dd2-ac6886f3f31a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98c569c8b9b1466f184b44d345e76341d1476935
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df0f656c9db23739ec62629088b9cc5f7950a92d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236114"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570439"
 ---
 # <a name="compiler-error-c2672"></a>編譯器錯誤 C2672
 
-> '*函式*': 沒有相符的多載找到函式
+> '*函式*': 沒有相符的多載函式找到
 
-編譯器找不到符合指定的函式多載函式。 找不到相符的參數或沒有符合的函式會在內容中有必要的協助工具的任何函式。
+編譯器找不到符合指定的函式多載函式。 找不到相符的參數或沒有相符的函式會採用具有所需的協助工具，在內容中的任何函式。
 
-由特定的標準程式庫容器或演算法時，您的型別必須提供可存取的成員或 friend 函式符合需求的容器或演算法。 例如，迭代器類型應該衍生自`std::iterator<>`。 比較作業或使用其他運算子的容器項目類型，可能需要類型被視為左、 右運算元。 使用類型的右方運算元可以為之型別的非成員函式需要運算子的實作。
+當使用特定的標準程式庫容器或演算法，可存取的成員或 friend 函式符合演算法之容器的需求，必須提供您的型別。 比方說，迭代器類型應該衍生自`std::iterator<>`。 比較作業或其他容器項目類型的運算子使用，可能需要型別會被視為左側和右側的運算元。 使用類型的右運算元可以為類型的非成員函式需要運算子的實作。
 
 ## <a name="example"></a>範例
 
-版本的編譯器，Visual Studio 2017 之前並未執行存取檢查某些範本內容中的限定名稱。 這可能會干擾預期 SFINAE 行為，其中，替代預期會因無法存取名稱而失敗。 這可能會在執行階段因編譯器錯誤地呼叫運算子的錯誤多載而導致當機或意外行為。 在 Visual Studio 2017 中，會引發編譯器錯誤。
+版本的編譯器，Visual Studio 2017 之前並未執行存取檢查部分範本內容中限定名稱。 這可能會干擾預期 SFINAE 行為，其中，替代預期會因無法存取名稱而失敗。 這可能會在執行階段因編譯器錯誤地呼叫運算子的錯誤多載而導致當機或意外行為。 在 Visual Studio 2017 中，會引發編譯器錯誤。
 
-此範例會在 Visual Studio 2015 中編譯，但 Visual Studio 2017 中引發錯誤。 若要修正此問題，請存取的範本參數成員評估的位置。
+此範例是在 Visual Studio 2015 中編譯，但 Visual Studio 2017 中引發錯誤。 若要修正此問題，讓範本參數成員可存取評估的位置。
 
 ```cpp
 #include <type_traits>

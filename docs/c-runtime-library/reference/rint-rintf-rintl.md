@@ -1,10 +1,6 @@
 ---
-title: rint、rintf、rintl | Microsoft Docs
-ms.custom: ''
+title: rint、rintf、rintl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - rintf
 - rintl
@@ -26,23 +22,17 @@ f1_keywords:
 - rintf
 - rintl
 - rint
-dev_langs:
-- C++
 helpviewer_keywords:
 - rintf function
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 784a540982c41ba7aa144559d3846746b59481f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407284"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609478"
 ---
 # <a name="rint-rintf-rintl"></a>rint、rintf、rintl
 
@@ -68,7 +58,7 @@ long double rint( long double x );  // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-**Rint**函式會傳回代表最接近的整數的浮點值*x*。 正中間時的值會捨入浮點捨入模式，與相同的目前設定根據**nearbyint**函式。 不同於**nearbyint**函式， **rint**函式可能會引發**FE_INEXACT**浮點例外狀況，若結果與引數的值不同。 不會傳回錯誤。
+**Rint**函式會傳回浮點數的值，表示最接近的整數*x*。 中間值根據目前的浮點捨入模式，與相同的設定將會四捨五入**nearbyint**函式。 不同於**nearbyint**函式**rint**函式可能會引發**FE_INEXACT**若結果與引數中的值中的浮點例外狀況。 不會傳回錯誤。
 
 |輸入|SEH 例外狀況|**_matherr**例外狀況|
 |-----------|-------------------|--------------------------|
@@ -77,7 +67,7 @@ long double rint( long double x );  // C++ only
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**rint**採用並傳回**float**和**長** **double**值。 在 C 程式中， **rint**一律採用並傳回**double**。
+因為 c + + 允許多載，您可以呼叫多載**rint**採用並傳回**float**並**長** **double**值。 在 C 程式中， **rint**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

@@ -1,10 +1,6 @@
 ---
-title: _CrtIsMemoryBlock | Microsoft Docs
-ms.custom: ''
+title: _CrtIsMemoryBlock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtIsMemoryBlock
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsMemoryBlock
 - _CrtIsMemoryBlock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtIsMemoryBlock function
 - CrtIsMemoryBlock function
 ms.assetid: f7cbbc60-3690-4da0-a07b-68fd7f250273
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 45331186cca5aab3c7971ba404d7b6da98139130
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c4a85ebeb45552c6f5355853de2a45766d6bc984
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450728"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555728"
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 
@@ -57,30 +47,30 @@ int _CrtIsMemoryBlock(
 
 ### <a name="parameters"></a>參數
 
-*UserData*<br/>
+*保留使用者資料*<br/>
 要確認之記憶體區塊開頭的指標。
 
 *size*<br/>
 指定區塊的大小 (以位元組為單位)。
 
 *requestNumber*<br/>
-在區塊的配置編號的指標或**NULL**。
+配置數區塊的指標或**NULL**。
 
 *filename*<br/>
-要求區塊的來源檔案名稱的指標或**NULL**。
+要求區塊之原始程式檔名稱的指標或**NULL**。
 
 *linenumber*<br/>
 原始程式檔中的行號的指標或**NULL**。
 
 ## <a name="return-value"></a>傳回值
 
-**_CrtIsMemoryBlock**傳回**TRUE**如果指定的記憶體區塊是位在本機堆積內，而且具有有效的偵錯堆積區塊類型識別項; 否則函數會傳回**FALSE**。
+**_CrtIsMemoryBlock**會傳回 **，則為 TRUE**如果指定的記憶體區塊位於本機堆積，且具有有效的偵錯堆積區塊類型識別項; 否則函式會傳回**FALSE**。
 
 ## <a name="remarks"></a>備註
 
-**_CrtIsMemoryBlock**函式會驗證指定的記憶體區塊會位於應用程式的本機堆積內，而且它有無效的區塊類型識別項。 此函式也可用來取得物件配置順序編號，以及原始要求記憶體區塊配置的原始程式檔名/行號。 傳遞非**NULL**值*requestNumber*， *filename*，或*linenumber*參數原因 **_CrtIsMemoryBlock**設定這些參數中的記憶體區塊的偵錯標頭的值，如果在本機堆積中找到的區塊。 當[_DEBUG](../../c-runtime-library/debug.md)未定義時，呼叫 **_CrtIsMemoryBlock**會在前置處理期間移除。
+**_CrtIsMemoryBlock**函式會確認指定的記憶體區塊位於應用程式的本機堆積內，且具有有效的區塊類型識別項。 此函式也可用來取得物件配置順序編號，以及原始要求記憶體區塊配置的原始程式檔名/行號。 傳遞非**NULL**值*requestNumber*，*檔名*，或*linenumber*參數原因 **_CrtIsMemoryBlock**將這些參數設定為記憶體區塊偵錯標頭中的值，如果在本機堆積中找到此區塊。 當[_DEBUG](../../c-runtime-library/debug.md)未定義，呼叫 **_CrtIsMemoryBlock**會在前置處理期間移除。
 
-如果 **_CrtIsMemoryBlock**失敗，它會傳回**FALSE**和輸出參數會初始化為預設值： *requestNumber*和**lineNumber**設為 0 和*filename*設**NULL**。
+如果 **_CrtIsMemoryBlock**失敗，則會傳回**FALSE**且輸出參數會初始化為預設值： *requestNumber*並**lineNumber**會設定為 0 並*檔名*設定為**NULL**。
 
 因為此函式會傳回 **TRUE** 或 **FALSE**，所以可將該函式傳遞至其中一個 [_ASSERT](assert-asserte-assert-expr-macros.md) 巨集，以建立簡單的偵錯處理機制。 如果指定的位址不在本機堆積內，則下列範例會造成判斷提示失敗：
 
@@ -93,7 +83,7 @@ _ASSERTE( _CrtIsMemoryBlock( userData, size, &requestNumber,
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_CrtIsMemoryBlock**|\<crtdbg.h>|
 

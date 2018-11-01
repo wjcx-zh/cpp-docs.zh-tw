@@ -1,10 +1,6 @@
 ---
-title: _countof Macro | Microsoft Docs
-ms.custom: ''
+title: _countof 巨集
 ms.date: 03/22/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,26 +16,20 @@ apitype: DLLExport
 f1_keywords:
 - _countof
 - countof
-dev_langs:
-- C++
 helpviewer_keywords:
 - countof macro
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f30df64b045e2af6181d343a4eafb962d22eaa05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60b4350d6cf14a545de67de0bdaee70ee2099006
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394739"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536132"
 ---
 # <a name="countof-macro"></a>_countof 巨集
 
-計算靜態配置陣列中的項目數。
+計算靜態配置的陣列中的項目數。
 
 ## <a name="syntax"></a>語法
 
@@ -58,9 +48,9 @@ ms.locfileid: "32394739"
 
 ## <a name="remarks"></a>備註
 
-**_countof**實作為函式類似前置處理器巨集。 C + + 版本都有額外的範本機制，來偵測在編譯時期，如果將指標傳遞而不是以靜態方式宣告陣列。
+**_countof**會實作為函式類似前置處理器巨集。 C + + 版本中有額外的範本的機制，如果將指標傳遞而不是以靜態方式宣告陣列，在編譯時期偵測。
 
-請確認*陣列*其實是一個陣列，而非指標。 在 C 中， **_countof**會產生錯誤的結果，如果*陣列*的指標。 C + + **_countof**無法編譯如果*陣列*的指標。  陣列當做參數傳遞至函式*指標 decays*，這表示，在函式，您無法使用 **_countof**來判斷陣列的範圍。
+請確認*陣列*其實是一個陣列，不是指標。 在 C 中， **_countof**會產生錯誤的結果，如果*陣列*是指標。 C + + **_countof**無法編譯，如果*陣列*是指標。  陣列做為參數傳遞至函式*指標的 decays*，這表示在函式，您無法使用 **_countof**來判斷陣列的範圍。
 
 ## <a name="requirements"></a>需求
 

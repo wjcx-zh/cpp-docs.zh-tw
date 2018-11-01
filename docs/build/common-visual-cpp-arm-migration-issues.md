@@ -1,23 +1,13 @@
 ---
-title: 常見的 Visual c + + ARM 移轉問題 |Microsoft Docs
-ms.custom: ''
+title: Visual C++ ARM 移轉時常見的問題
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c0e42cd14c5707f728f5577a77b2dd613c5ef2a0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6aea623bc9f096265decbe91ccdc5d5f1f6ecef1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709603"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618503"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Visual C++ ARM 移轉時常見的問題
 

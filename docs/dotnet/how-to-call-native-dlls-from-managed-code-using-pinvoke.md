@@ -1,29 +1,19 @@
 ---
-title: 如何： 使用 PInvoke 的 Managed 程式碼呼叫原生 Dll |Microsoft Docs
+title: 如何：使用 PInvoke 從 Managed 程式碼呼叫原生 DLL
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - platform invoke [C++], calling native DLLs
 - interop [C++], calling native DLLs
 - marshaling [C++], calling native DLLs
 - data marshaling [C++], calling native DLLs
 ms.assetid: 3273eb4b-38d1-4619-92a6-71bda542be72
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: f849d2d9c3fd4a2d50d652ad159e93442b4c7ff3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 921a3504bd4fcb3f8dfe3d6c1a80c69d00298fb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404640"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444404"
 ---
 # <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>如何：使用 PInvoke 從 Managed 程式碼呼叫原生 DLL
 

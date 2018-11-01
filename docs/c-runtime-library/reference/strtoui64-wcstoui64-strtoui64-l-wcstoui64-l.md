@@ -1,10 +1,6 @@
 ---
-title: _strtoui64、_wcstoui64、_strtoui64_l、_wcstoui64_l | Microsoft Docs
-ms.custom: ''
+title: _strtoui64、_wcstoui64、_strtoui64_l、_wcstoui64_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strtoui64
 - _strtoui64_l
@@ -32,8 +28,6 @@ f1_keywords:
 - strtoui64
 - _strtoui64
 - wcstoui64_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strtoui64_l function
 - _wcstoui64_l function
@@ -45,16 +39,12 @@ helpviewer_keywords:
 - strtoui64_l function
 - strtoui64 function
 ms.assetid: 7fcb537e-4554-4ceb-a5b6-bc09244e72ef
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ab70c1d74c0db837ba3d8e453988ca441f6fc06d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c733a14d5f32e5dc4ef31eb9fedd984079456505
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417878"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659806"
 ---
 # <a name="strtoui64-wcstoui64-strtoui64l-wcstoui64l"></a>_strtoui64、_wcstoui64、_strtoui64_l、_wcstoui64_l
 
@@ -103,19 +93,19 @@ unsigned __int64 _wcstoui64(
 
 ## <a name="return-value"></a>傳回值
 
-**_strtoui64**傳回代表字串中的值*strSource*時表示法可能會造成溢位在此情況下它傳回之外， **_UI64_MAX**。 **_strtoui64**可以執行任何轉換，則傳回 0。
+**_strtoui64**會傳回代表字串中的值*strSource*，但表示法可能造成溢位，當在此情況下它會傳回 **_UI64_MAX**。 **_strtoui64**會傳回 0，如果可以不執行任何轉換。
 
-**_UI64_MAX**定義限制。H.
+**_UI64_MAX**定義的限制。H.
 
-如果*strSource*是**NULL**或*基底*為非零值，可能是小於 2 或大於 36， **errno**設為**EINVAL**.
+如果*strSource*是**NULL**或*基底*為非零值且小於 2 或大於 36， **errno**設為**EINVAL**.
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Strtoui64**函式會將轉換*strSource*至**不帶正負號** **__int64**。 **_wcstoui64**是寬字元版本的 **_strtoui64**; 其*strSource*引數是寬字元字串。 否則，這些函式的行為相同。
+**_Strtoui64**函式會將*strSource*來**不帶正負號** **__int64**。 **_wcstoui64**是寬字元版本的 **_strtoui64**; 其*strSource*引數是寬字元字串。 否則，這些函式的行為相同。
 
-這兩個函式停止讀取字串*strSource*它們無法辨識的數字的第一個字元。 這可能是結束的 null 字元，或者可能是大於或等於第一個數字字元*基底*。
+這兩項功能可讓您停止讀取字串*strSource*它們無法辨識為數字一部分的第一個字元。 這可能是終止的 null 字元，或是它可能會大於或等於第一個數字字元*基底*。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -124,19 +114,19 @@ unsigned __int64 _wcstoui64(
 |**_tcstoui64**|**_strtoui64**|**_strtoui64**|**_wstrtoui64**|
 |**_tcstoui64_l**|**_strtoui64_l**|**_strtoui64_l**|**_wstrtoui64_l**|
 
-目前的地區設定**LC_NUMERIC**類別目錄設定會決定中的基底字元辨識*strSource*; 如需詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)。 不含 _l 尾碼的函式會使用目前的地區設定;**_strtoui64_l**和 **_wcstoui64_l**與對應的功能，但不包含 **_l**後置詞，只不過它們改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+目前的地區設定**LC_NUMERIC**類別設定會決定在基底字元辨識*strSource*; 如需詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)。 這些沒有 _l 尾碼的函式使用目前的地區設定;**_strtoui64_l**並 **_wcstoui64_l**等於對應的函式，而不需要 **_l**後置詞，只不過它們改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-如果*endptr*不**NULL**，停止掃描的字元指標所指向的位置儲存*endptr*。 如果可以不執行任何轉換 （找不到沒有有效的數字或指定無效的基底） 的值*strSource*儲存在所指位置*endptr*。
+如果*endptr*不是**NULL**，則停止掃描的字元指標會儲存在所指向位置*endptr*。 如果可以不執行任何轉換 （找不到任何有效的數字或指定無效的基底） 的值*strSource*所指向的位置會儲存*endptr*。
 
-**_strtoui64**預期*strSource*指向字串的格式如下：
+**_strtoui64**預期*strSource*指向下列格式的字串：
 
 > [*空白字元*] [{**+** &#124; **-**}] [**0** [{ **x**&#124; **X** }]] [*位數*&#124; *字母*]  
 
-A*空白字元*可能空間和索引標籤，會忽略的字元所組成。 *數字*一或多個十進位數字。 *字母*是一或多個字母 'a' 到 'z' （或 'A' 到 'Z'）。 不符合此格式的第一個字元會停止掃描。 如果*基底*是介於 2 到 36，則會使用做為基底的數字。 如果*基底*為 0，起始的字元字串所指向的*strSource*用來判斷基底。 如果第一個字元為 0，而第二個字元不是 'x' 或 X'，則字串會解譯為八進位整數。 如果第一個字元為 '0'，而第二個字元是 'x' 或 X'，則字串會解譯為十六進位整數。 如果第一個字元為 '1' 到 '9'，則字串會解譯為十進位整數。 字母 'a' 到 'z' (或 'A' 到 'Z') 被指派值 10 到 35，只允許指派值小於 *base* 的字母。 基底範圍外的第一個字元會停止掃描。 例如，如果*基底*為 0 和掃描的第一個字元是 '0'、 八進位整數會假設和 '8' 或 '9' 的字元將會停止掃描。
+A*空白字元*可能包含空格和定位字元字元，都會被忽略。 *數字*是一或多個十進位數字。 *字母*是一或多個字母 'a' 到 'z' （或 'A' 到 'Z'）。 不符合此格式的第一個字元會停止掃描。 如果*基底*是介於 2 到 36，則當成基底的數目。 如果*基底*為 0，所指向的字串起始字元*strSource*用來判斷基底。 如果第一個字元為 0，而第二個字元不是 'x' 或 X'，則字串會解譯為八進位整數。 如果第一個字元為 '0'，而第二個字元是 'x' 或 X'，則字串會解譯為十六進位整數。 如果第一個字元為 '1' 到 '9'，則字串會解譯為十進位整數。 字母 'a' 到 'z' (或 'A' 到 'Z') 被指派值 10 到 35，只允許指派值小於 *base* 的字母。 基底範圍外的第一個字元會停止掃描。 例如，如果*基底*為 0 和掃描的第一個字元是 '0'，假設為八進位整數，且 '8' 或 '9' 字元會停止掃描。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_strtoui64**|\<stdlib.h>|
 |**_wcstoui64**|\<stdlib.h> 或 \<wchar.h>|

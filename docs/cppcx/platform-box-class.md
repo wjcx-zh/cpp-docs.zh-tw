@@ -1,24 +1,16 @@
 ---
-title: 'Platform:: box 類別 |Microsoft Docs'
-ms.custom: ''
+title: Platform::Box 類別
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Box
-dev_langs:
-- C++
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 133c8ebabe3e67526086661ab459bb6e96c4e727
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 387fa03caebed599d51292dd1b6d18ad4afd921c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106505"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429064"
 ---
 # <a name="platformbox-class"></a>Platform::Box 類別
 
@@ -38,7 +30,7 @@ ref class Box abstract;
 **命名空間：** Platform
 |成員|描述|
 |------------|-----------------|
-|[Box](#ctor)|建立`Box`其可封裝指定類型的值。|
+|[Box](#ctor)|建立可封裝指定類型之值的 `Box`。|
 |[運算子方塊&lt;const T&gt;^](#box-const-t)|可以透過 Boxing 處理，從 `const` 實值類別 `T` 或 `enum` 類別 `T` 轉換為 `Box<T>`。|
 |[運算子方塊&lt;const volatile T>&gt;^](#box-const-volatile-t)|可以透過 Boxing 處理，從 `const volatile` 實值類別 `T` 或 `enum` 類型 `T` 轉換為 `Box<T>`。 |
 |[運算子方塊&lt;T&gt;^](#box-t)|可以透過 Boxing 處理，從 `T` 實值類別轉換為 `Box<T>`。|
@@ -56,7 +48,7 @@ Box(T valueArg);
 ### <a name="parameters"></a>參數
 
 *valueArg*<br/>
-要處理為 boxed 值的型別，例如`int`， `bool`， `float64`， `DateTime`。
+要處理為 boxed 之值的類型，例如 `int`、`bool`、`float64`、`DateTime`。
 
 ## <a name="box-const-t"></a> :: Operator box<const 方塊&lt;const T>&gt;^ 運算子
 

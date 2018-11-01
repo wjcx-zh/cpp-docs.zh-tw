@@ -1,16 +1,10 @@
 ---
-title: -Gy （啟用函式階層連結） |Microsoft Docs
-ms.custom: ''
+title: /Gy (啟用函式階層連結)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableFunctionLevelLinking
 - /gy
 - VC.Project.VCCLWCECompilerTool.EnableFunctionLevelLinking
-dev_langs:
-- C++
 helpviewer_keywords:
 - enable function-level linking compiler option [C++]
 - COMDAT function
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - /Gy compiler option [C++]
 - packaged functions
 ms.assetid: 0d3cf14c-ed7d-4ad3-b4b6-104e56f61046
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 09faa1a1d2b6743b7fce31af32ba4fe1572b592e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1fd06b17ca0cfb1583b3014fb2c8f02b5e5a5437
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704999"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629914"
 ---
 # <a name="gy-enable-function-level-linking"></a>/Gy (啟用函式階層連結)
 

@@ -1,28 +1,17 @@
 ---
-title: 支援的資料錄檢視 （MFC 資料存取） 瀏覽 |Microsoft Docs
-ms.custom: ''
+title: 支援記錄檢視的巡覽 (MFC 資料存取)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - records [C++], navigating
 - record views, navigation
 - navigation [C++], in record view
 ms.assetid: 227f2a6d-87c9-4656-807a-8e246965bcce
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 49c29a4410db2d4253fbd8afc917cd4298df513c
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 86e98cd8b29b0056966f6f201589ded3347c9779
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50074822"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450653"
 ---
 # <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>支援記錄檢視的巡覽 (MFC 資料存取)
 

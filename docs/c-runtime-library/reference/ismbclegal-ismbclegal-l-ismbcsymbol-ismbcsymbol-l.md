@@ -1,10 +1,6 @@
 ---
-title: _ismbclegal、_ismbclegal_l、_ismbcsymbol、_ismbcsymbol_l | Microsoft Docs
-ms.custom: ''
+title: _ismbclegal、_ismbclegal_l、_ismbcsymbol、_ismbcsymbol_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbclegal_l
 - _ismbclegal
@@ -32,8 +28,6 @@ f1_keywords:
 - ismbclegal_l
 - ismbcsymbol
 - ismbclegal
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbcsymbol function
 - ismbclegal_l function
@@ -48,23 +42,19 @@ helpviewer_keywords:
 - _ismbcsymbol_l function
 - istlegal_l function
 ms.assetid: 31bf1ea5-b56f-4e28-b21e-b49a2cf93ffc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8d2bd03eb230d85a1f93038d50566b8ccae468a5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 07855ec970b2bf307238982987912f1e91505e96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402591"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454570"
 ---
 # <a name="ismbclegal-ismbclegall-ismbcsymbol-ismbcsymboll"></a>_ismbclegal、_ismbclegal_l、_ismbcsymbol、_ismbcsymbol_l
 
 檢查多位元組字元是否為合法或符號字元。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -95,18 +85,18 @@ int _ismbcsymbol_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果字元符合測試條件，這些常式都會傳回非零值，如果不符合，則傳回 0。 如果*c*< = 255，而且沒有相對應 **_ismbb**常式 (例如， **_ismbcalnum**對應至 **_ismbbalnum**)，結果會是對應的傳回值 **_ismbb**常式。
+如果字元符合測試條件，這些常式都會傳回非零值，如果不符合，則傳回 0。 如果*c*< = 255 且有對應 **_ismbb**常式 (例如 **_ismbcalnum**對應至 **_ismbbalnum**)，結果是對應的傳回值 **_ismbb**常式。
 
 ## <a name="remarks"></a>備註
 
 這些函式每一個都會測試指定的多位元組字元是否符合指定的條件。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳入的地區設定而不是目前的地區設定的地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+使用這些函式的版本 **_l**尾碼都相同，不同之處在於使用傳入的地區設定而不是目前的地區設定其地區設定相關行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-|常式|測試條件|字碼頁 932 範例|
+|常式傳回的值|測試條件|字碼頁 932 範例|
 |-------------|--------------------|---------------------------|
-|**_ismbclegal**|有效的多位元組|傳回的第一個位元組則為非零，才*c*是在範圍內 0x81-0x9F 或 0xE0-0xFC，而是在範圍 0x40-0x7E 或 0x80-內 FC 的第二個位元組。|
-|**_ismbcsymbol**|多位元組的符號|傳回非零，才 0x8141 < =*c*< = 0x81AC。|
+|**_ismbclegal**|有效的多位元組|第一個位元組傳回非零值，才*c*是在範圍內 0x81-0x9F 或 0xE0-0xFC，而是內範圍 0x40-0x7E 或 0x80-FC 的第二個位元組。|
+|**_ismbcsymbol**|多位元組的符號|傳回非零值，才在 0x8141< < =*c*< lt;=0x81ac。|
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -117,7 +107,7 @@ int _ismbcsymbol_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_ismbclegal**， **_ismbclegal_l**|\<mbstring.h>|
 |**_ismbcsymbol**， **_ismbcsymbol_l**|\<mbstring.h>|

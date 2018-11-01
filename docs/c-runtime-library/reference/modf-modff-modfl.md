@@ -1,10 +1,6 @@
 ---
-title: modf、modff、modfl | Microsoft Docs
-ms.custom: ''
+title: modf、modff、modfl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - modff
 - modf
@@ -30,23 +26,17 @@ f1_keywords:
 - math/modf
 - math/modff
 - math/modfl
-dev_langs:
-- C++
 helpviewer_keywords:
 - modf function
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 87cddb8b565cdc369e6b1e9679583db64039bb49
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59d6e2b9b02ad182c5630d6dc9a989c035e8fa92
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404827"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478061"
 ---
 # <a name="modf-modff-modfl"></a>modf、modff、modfl
 
@@ -79,15 +69,15 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 ## <a name="remarks"></a>備註
 
-**Modf**細分的浮點值的函式*x*成小數和整數部分，每一個都有相同的簽章為*x*。 帶正負號的小數部分的*x*傳回。 整數部分會儲存為浮點值在*intptr*。
+**Modf**函式會細分的浮點數值*x*成小數和整數部分，每個都有相同的簽章為*x*。 帶正負號小數部分*x*會傳回。 整數部分會儲存為浮點數的值，在*intptr*。
 
 **modf**有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
-C + + 允許多載，所以您可以呼叫的多載**modf**採用並傳回**float**或**長** **double**參數。 在 C 程式中， **modf**一律會採用兩個雙精度浮點數值，並傳回雙精度浮點數值。
+C + + 允許多載，因此您可以呼叫多載**modf**採用並傳回**float**或是**長** **double**參數。 在 C 程式中， **modf**一律會採用兩個雙精度浮點數值，並傳回雙精度浮點數值。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**modf**， **modff**， **modfl**|C：\<math.h><br /><br /> C++：\<cmath> 或 \<math.h>|
 

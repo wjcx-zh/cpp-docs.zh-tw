@@ -1,10 +1,6 @@
 ---
-title: 基本類型 （c + +） |Microsoft Docs
-ms.custom: ''
+title: 基本類型 (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - __int128_cpp
 - __wchar_t_cpp
@@ -19,8 +15,6 @@ f1_keywords:
 - unsigned_cpp
 - unsigned_int_cpp
 - wchar_t_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - specifiers [C++], type
 - float keyword [C++]
@@ -49,16 +43,12 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7abb1efa9ca7260648574299cde454a33f84b3f4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f4af392ed559349b0e49fd26f3ecb4406a70b74b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114887"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601366"
 ---
 # <a name="fundamental-types--c"></a>基本類型 (C++)
 
@@ -70,7 +60,7 @@ C++ 中的基本類型分為三類：整數、浮點和 void。 整數類資料�
 
 - 逗號運算子的左運算元 (如需詳細資訊，請參閱 [逗號運算子](../cpp/comma-operator.md) )。
 
-- 條件運算子的第二個或第三個運算元 (`? :`)。 (如需詳細資訊，請參閱 [含條件運算子的運算式](../cpp/conditional-operator-q.md) )。
+- 條件運算子 (`? :`) 的第二個或第三個運算元 (如需詳細資訊，請參閱 [含條件運算子的運算式](../cpp/conditional-operator-q.md) )。
 
 下表說明類型大小的限制。 這些限制與 Microsoft 實作無關。
 

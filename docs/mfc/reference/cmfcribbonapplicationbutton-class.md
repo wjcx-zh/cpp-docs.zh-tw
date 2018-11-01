@@ -1,31 +1,21 @@
 ---
-title: CMFCRibbonApplicationButton 類別 |Microsoft Docs
-ms.custom: ''
+title: CMFCRibbonApplicationButton 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonApplicationButton
 - AFXRIBBONBAR/CMFCRibbonApplicationButton
 - AFXRIBBONBAR/CMFCRibbonApplicationButton::CMFCRibbonApplicationButton
 - AFXRIBBONBAR/CMFCRibbonApplicationButton::SetImage
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonApplicationButton [MFC], CMFCRibbonApplicationButton
 - CMFCRibbonApplicationButton [MFC], SetImage
 ms.assetid: beb81757-fabd-4641-9130-876ba8505b78
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7b82e0da2ac080ea65807b92f7eab549fe3301bf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6bf62cc414162a15ee685361cacad8d72fc41b06
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393798"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600340"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton 類別
 
@@ -55,7 +45,7 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用中的各種方法`CMFCRibbonApplicationButton`類別。 此範例示範如何將影像指派給應用程式 按鈕，以及如何設定其工具提示。 這段程式碼片段是 [Draw 用戶端範例](../../visual-cpp-samples.md)的一部分。
+下例示範如何在 `CMFCRibbonApplicationButton` 類別中使用各種方法。 此範例示範如何將影像指派給應用程式 按鈕，以及如何設定其工具提示。 這段程式碼片段是 [Draw 用戶端範例](../../visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_DrawClient#4](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_1.h)]
 [!code-cpp[NVC_MFC_DrawClient#5](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_2.cpp)]

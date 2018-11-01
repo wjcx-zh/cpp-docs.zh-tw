@@ -1,11 +1,6 @@
 ---
-title: norm、 normf、 norml |Microsoft 文件
-ms.custom: ''
+title: norm、normf、norml
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - norm
 - normf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/norm
 - complex/normf
 - complex/norml
-dev_langs:
-- C++
 helpviewer_keywords:
 - norm function
 - normf function
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 272f43a7b92c069da8fc4eda64a678ff38efd6ab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c1803a54f0dfc27975af5bb0eeb7e5c042b2579
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401125"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628107"
 ---
 # <a name="norm-normf-norml"></a>norm、normf、norml
 
@@ -72,19 +61,19 @@ long double norm( _Lcomplex z );  // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-平方的幅度*z*。
+平方的大小*z*。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**norm**採用 **_Fcomplex**或 **_Lcomplex**值，並傳回**float**或**長雙精度**值。 在 C 程式中， **norm**一律採用 **_Dcomplex**值並傳回**double**值。
+因為 c + + 允許多載，您可以呼叫多載**norm**採用 **_Fcomplex**或 **_Lcomplex**的值，並傳回**float**或**長雙精度**值。 在 C 程式中， **norm**一律採用 **_Dcomplex**值，然後傳回**double**值。
 
 ## <a name="requirements"></a>需求
 
-|常式|C 標頭|C++ 標頭|
+|常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
 |**norm**， **normf**， **norml**|\<complex.h>|\<complex.h>|
 
-**_Fcomplex**， **_Dcomplex**，和 **_Lcomplex**型別是 Microsoft 特定的對等的未實作的原生 C99 類型**float _Complex**， **double _Complex**，和**長雙精度 _Complex**分別。  如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+**_Fcomplex**， **_Dcomplex**，並 **_Lcomplex**型別是 Microsoft 特定對等項目未實作的原生 C99 類型**float _Complex**， **double _Complex**，以及**long double _Complex**分別。  如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

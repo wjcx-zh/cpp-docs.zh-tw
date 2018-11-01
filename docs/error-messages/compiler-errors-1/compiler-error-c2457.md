@@ -1,37 +1,27 @@
 ---
-title: 編譯器錯誤 C2457 |Microsoft 文件
-ms.custom: ''
+title: 編譯器錯誤 C2457
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2457
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2457
 ms.assetid: 347e169d-23ad-434f-8836-5b09b53980ff
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 61cdb4f4b679bab858717a6fb96838f389822a6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a08ac9f9cfbc332b90ad16c663349ee227427278
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224919"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446629"
 ---
 # <a name="compiler-error-c2457"></a>編譯器錯誤 C2457
 
-> '*巨集*': 預先定義巨集不能出現在函式主體之外
+> '*巨集*': 預先定義的巨集不能出現在函式主體之外
 
-您嘗試使用預先定義的巨集，例如[ &#95;&#95;函式&#95;&#95;](../../preprocessor/predefined-macros.md)，全域空間中。
+您嘗試使用預先定義的巨集，例如[ &#95;&#95;函式&#95;&#95;](../../preprocessor/predefined-macros.md)，在全域空間中。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C2457，並也會顯示正確的使用方式：
+下列範例會產生 C2457，並也會示範正確使用方式：
 
 ```cpp
 // C2457.cpp

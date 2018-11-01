@@ -1,31 +1,21 @@
 ---
-title: CComAllocator 類別 |Microsoft Docs
-ms.custom: ''
+title: CComAllocator 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComAllocator
 - ATLBASE/ATL::CComAllocator
 - ATLBASE/ATL::CComAllocator::Allocate
 - ATLBASE/ATL::CComAllocator::Free
 - ATLBASE/ATL::CComAllocator::Reallocate
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComAllocator class
 ms.assetid: 0cd706fd-0c7b-42d3-9054-febe2966fc8e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f867d3a7ca81d190ee363c7539e56a62004eb377
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 83ea5cdbc2460d308edf89647dafba65cb327f03
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46088939"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658870"
 ---
 # <a name="ccomallocator-class"></a>CComAllocator 類別
 

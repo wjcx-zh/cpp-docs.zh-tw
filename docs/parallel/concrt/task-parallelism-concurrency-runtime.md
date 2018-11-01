@@ -1,12 +1,6 @@
 ---
-title: 工作平行處理原則 （並行執行階段） |Microsoft Docs
-ms.custom: ''
+title: 工作平行處理原則 (並行執行階段)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - structured task groups [Concurrency Runtime]
 - structured tasks [Concurrency Runtime]
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7ec6e99b3e4f1e86d9f0ee42ca92a93a57b1a1fb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 43af08f3be75bff7621cd2f57b9d50b658420f26
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378081"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630421"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>工作平行處理原則 (並行執行階段)
 
@@ -159,11 +149,11 @@ ms.locfileid: "46378081"
 [!code-cpp[concrt-async-unwrapping#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_7.cpp)]
 
 > [!IMPORTANT]
->  當工作的接續傳回類型 `N` 的巢狀工作時，產生的工作類型為 `N`，而非 `task<N>`，並且會在巢狀工作完成時完成。 換句話說，接續會執行巢狀工作的解除包裝。
+>  當工作的接續傳回型別 `N` 的巢狀工作時，產生的工作類型為 `N`，而非 `task<N>`，並且會在巢狀工作完成時完成。 換句話說，接續會執行巢狀工作的解除包裝。
 
 ##  <a name="value-versus-task"></a> 值為基礎，與以工作為基礎的接續
 
-假如有 `task` 物件，其傳回類型是 `T`，則您可以提供類型 `T` 或 `task<T>` 的值給其接續工作。 會採用型別接續`T`就所謂*值為基礎的接續*。 以值為基礎的接續會排定在前項工作完成且沒有錯誤也未取消時執行。 會採用型別接續`task<T>`為其參數就所謂*工作為基礎的接續*。 以工作為基礎的接續一定會排定在前項工作完成時執行，即使當前項工作取消或擲回例外狀況時亦然。 接著您便可以呼叫 `task::get` 取得前項工作的結果。 如果前項工作已取消，`task::get`會擲回[concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md)。 如果前項工作擲回例外狀況，`task::get` 會重新擲回該例外狀況。 以工作為基礎的接續在其前項工作取消時，不會標示為已取消。
+假如有 `task` 物件，其傳回型別是 `T`，則您可以提供類型 `T` 或 `task<T>` 的值給其接續工作。 會採用型別接續`T`就所謂*值為基礎的接續*。 以值為基礎的接續會排定在前項工作完成且沒有錯誤也未取消時執行。 會採用型別接續`task<T>`為其參數就所謂*工作為基礎的接續*。 以工作為基礎的接續一定會排定在前項工作完成時執行，即使當前項工作取消或擲回例外狀況時亦然。 接著您便可以呼叫 `task::get` 取得前項工作的結果。 如果前項工作已取消，`task::get`會擲回[concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md)。 如果前項工作擲回例外狀況，`task::get` 會重新擲回該例外狀況。 以工作為基礎的接續在其前項工作取消時，不會標示為已取消。
 
 ##  <a name="composing-tasks"></a> 組成工作
 
@@ -254,7 +244,7 @@ ms.locfileid: "46378081"
 
 有兩種方法可以完成這項作業：使用接續，或啟動工作並等待工作之工作函式內的事件。 然而，在某些情況中無法使用這些方法。 例如，若要建立接續，您必須要有前項工作。 不過，如果您沒有前項工作，您可以建立*工作完成事件*和更新版本可供使用時，鏈結前項工作完成事件。 此外，因為等待中的工作也會阻擋執行緒，您可以使用工作完成事件在非同步作業完成時執行工作，並藉此釋放執行緒。
 
-[Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)類別有助於簡化這類工作的組合。 就像 `task` 類別，類型參數 `T` 是工作所產生之結果的類型。 如果工作不會傳回值，此類型可以是 `void`。 `T` 無法使用 `const` 修飾詞。 一般而言，會提供 `task_completion_event` 物件給執行緒或工作，在物件的值可用時對其發出通知。 同時，一或多個工作會設定為該事件的接聽程式。 設定事件之後，接聽程式工作便會完成，而其接續工作會排定繼續執行。
+[Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)類別有助於簡化這類工作的組合。 就像 `task` 類別，型別參數 `T` 是工作所產生之結果的類型。 如果工作不會傳回值，此類型可以是 `void`。 `T` 無法使用 `const` 修飾詞。 一般而言，會提供 `task_completion_event` 物件給執行緒或工作，在物件的值可用時對其發出通知。 同時，一或多個工作會設定為該事件的接聽程式。 設定事件之後，接聽程式工作便會完成，而其接續工作會排定繼續執行。
 
 如需使用的範例`task_completion_event`若要實作會在延遲之後完成的工作，請參閱[如何： 建立工作的完成後延遲](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)。
 

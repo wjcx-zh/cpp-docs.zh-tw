@@ -1,12 +1,6 @@
 ---
-title: 選擇集合類別的建議 |Microsoft Docs
-ms.custom: ''
+title: 選擇集合類別的建議
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - type safety of collection classes [MFC]
 - collection classes [MFC], serialization
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0bb6338d7a40059da5f4e351dfac0d8d879e8c21
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2c8cb323feb44618909895a4ee536ad3b7832173
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404783"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446731"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>選擇集合類別的建議
 
@@ -95,11 +85,11 @@ ms.locfileid: "46404783"
 |`CUIntArray`|否|否|是|是 3|
 |`CWordArray`|否|是|是|是 3|
 
-1. 若要序列化，您必須明確呼叫集合物件的`Serialize`函式; 若要傾印，您必須明確地呼叫其`Dump`函式。 您不能使用 `ar << collObj` 格式進行序列化，也不能使用 `dmp` `<< collObj` 格式進行傾印。
+1. 若要序列化，您必須明確呼叫集合物件的 `Serialize` 函式；若要傾印，您必須明確呼叫其 `Dump` 函式。 您不能使用 `ar << collObj` 格式進行序列化，也不能使用 `dmp` `<< collObj` 格式進行傾印。
 
-2. 能否序列化取決於基礎集合類型。 例如，如果具類型的指標陣列是以 `CObArray`為基礎，則可以序列化；如果是以 `CPtrArray`為基礎，則無法序列化。 一般而言，您無法序列化 "Ptr" 類別。
+2. 能否序列化取決於基礎集合類型。 例如，如果具類型的指標陣列是以 `CObArray` 為基礎，則可以序列化；如果是以 `CPtrArray` 為基礎，則無法序列化。 一般而言，您無法序列化 "Ptr" 類別。
 
-3. 如果在此欄中標示為 [是]，則非範本集合類別為型別安全 (但前提是您必須如預期般使用它)。 例如，如果您將位元組儲存在 `CByteArray`中，則陣列為型別安全。 但是，如果您用來儲存字元，就不一定是型別安全。
+3. 如果在此欄中標示為 [是]，則非範本集合類別為型別安全 (但前提是您必須如預期般使用它)。 例如，如果您將位元組儲存在 `CByteArray` 中，則陣列為型別安全。 但是，如果您用來儲存字元，就不一定是型別安全。
 
 ## <a name="see-also"></a>另請參閱
 

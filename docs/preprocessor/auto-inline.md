@@ -1,29 +1,19 @@
 ---
-title: auto_inline |Microsoft Docs
-ms.custom: ''
+title: auto_inline
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - auto_inline_CPP
 - vc-pragma.auto_inline
-dev_langs:
-- C++
 helpviewer_keywords:
 - pragmas, auto_inline
 - auto_inline pragma
 ms.assetid: f7624cd1-be76-429a-881c-65c9040acf43
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cc2fb4cb870ff1dca2f0b55e9aad20741ffb8220
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: a3e49941271ec294ddb69861d12e3451332770fe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083174"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50633336"
 ---
 # <a name="autoinline"></a>auto_inline
 排除的範圍中定義的任何函式所在**關閉**指定其視為自動內嵌展開的候選項目。

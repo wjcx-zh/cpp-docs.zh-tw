@@ -1,12 +1,6 @@
 ---
-title: 訊息分類 |Microsoft Docs
-ms.custom: ''
+title: 訊息分類
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - messages [MFC], categories
 - control-notification messages [MFC]
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - messages [MFC], Windows
 - message handling [MFC], message types
 ms.assetid: 68e1db75-9da6-4a4d-b2c2-dc4d59f8d87b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4184ca20188ccbc3eff0818e807911635292b668
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: e8b7385a233c2074fe9bfc491d89de7629c730c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50081374"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619852"
 ---
 # <a name="message-categories"></a>訊息分類
 

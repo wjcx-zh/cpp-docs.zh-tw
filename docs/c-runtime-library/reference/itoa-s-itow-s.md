@@ -1,10 +1,6 @@
 ---
-title: _itoa_s、 _itow_s 函式 |Microsoft 文件
-ms.custom: ''
+title: _itoa_s，_itow_s 函式
 ms.date: 03/21/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _itoa_s
 - _ltoa_s
@@ -60,8 +56,6 @@ f1_keywords:
 - ultot_s
 - i64tot_s
 - ui64tot_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ui64toa_s function
 - _itow_s function
@@ -81,20 +75,16 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 71808a65a58209f843cd65b4e53f49a1c9fd17f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47eb030790359f25a7df5275a247c071fb3d599f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404983"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441701"
 ---
 # <a name="itoas-ltoas-ultoas-i64toas-ui64toas-itows--ltows--ultows-i64tows-ui64tows"></a>_itoa_s、 _ltoa_s、 _ultoa_s、 _i64toa_s、 _ui64toa_s、 _itow_s、 _ltow_s、 _ultow_s、 _i64tow_s、 _ui64tow_s
 
-將整數轉換成字串。 這些是舊版[_itoa、 _itow 函式](itoa-itow.md)具有安全性增強功能中所述[CRT 中安全性功能](../../c-runtime-library/security-features-in-the-crt.md)。
+將整數轉換成字串。 這些是舊版[_itoa，_itow 函式](itoa-itow.md)中所述之安全性增強功能[CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -151,7 +141,7 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 大小*緩衝區*中字元或寬字元。
 
 *radix*<br/>
-使用轉換的數字基底的基數*值*，這必須在範圍 2-36。
+將轉換的數值基底的基數*值*，它必須介於 2 到 36 的範圍。
 
 ## <a name="return-value"></a>傳回值
 
@@ -161,24 +151,24 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 |value|buffer|大小|radix|Return|
 |-----------|------------|----------------------|-----------|------------|
-|任何|**NULL**|任何|任何|**EINVAL**|
-|任何|任何|<=0|任何|**EINVAL**|
-|任何|任何|<= 需要的結果字串長度|任何|**EINVAL**|
-|任何|任何|任何|*基數*< 2 或*基數*> 36|**EINVAL**|
+|any|**NULL**|any|any|**EINVAL**|
+|any|any|<=0|any|**EINVAL**|
+|any|any|<= 需要的結果字串長度|any|**EINVAL**|
+|any|any|any|*基數*< 2 或*基數*> 36|**EINVAL**|
 
 ### <a name="security-issues"></a>安全性問題
 
-這些函式可以產生存取違規，如果*緩衝區*並未指向有效的記憶體，而且不是**NULL**，或緩衝區長度不是長到足以容納結果字串。
+如果這些函式可以產生存取違規*緩衝區*不是指向有效的記憶體，而且不**NULL**，或如果緩衝區的長度不長到足以保存結果字串。
 
 ## <a name="remarks"></a>備註
 
-參數和傳回值，除了 **_itoa_s**和 **_itow_s**函式系列有相同的行為，較不安全之對應 **_itoa**和 **_itow**版本。
+除了參數和傳回值， **_itoa_s**並 **_itow_s**函式系列有相同的行為，為對應較不安全 **_itoa**並 **_itow**版本。
 
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
-偵錯程式庫版本，這些函式的第一次填入 0xFD 緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+這些函式的偵錯程式庫版本會先填入 0xfd 緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
-CRT 包括方便的巨集來定義的每個整數型別，包括 null 結束字元的最長可能的值轉換所需的緩衝區大小和登入數個通用基底的字元。 如需資訊，請參閱[最大轉換計數巨集](itoa-itow.md#maximum-conversion-count-macros)。
+CRT 包含方便的巨集，以定義要轉換的最長的可能值的每個整數類型，包括 null 結束字元所需要的緩衝區大小，並登入數個常見的基底的字元。 如需資訊，請參閱[最多轉換計數巨集](itoa-itow.md#maximum-conversion-count-macros)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -192,7 +182,7 @@ CRT 包括方便的巨集來定義的每個整數型別，包括 null 結束字�
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_itoa_s**， **_ltoa_s**， **_ultoa_s**， **_i64toa_s**， **_ui64toa_s**|\<stdlib.h>|
 |**_itow_s**， **_ltow_s**， **_ultow_s**， **_i64tow_s**， **_ui64tow_s**|\<stdlib.h> 或 \<wchar.h>|
@@ -201,7 +191,7 @@ CRT 包括方便的巨集來定義的每個整數型別，包括 null 結束字�
 
 ## <a name="example"></a>範例
 
-這個範例會示範幾個整數的轉換函式的使用。 請注意， [_countof](countof-macro.md)巨集只能看到給編譯器，而不具有毒死指標的參數陣列宣告時決定的緩衝區大小。
+這個範例會示範幾個整數的轉換函式使用。 請注意， [_countof](countof-macro.md)巨集只能看到給編譯器，而不具有毒死指標的參數陣列宣告時決定的緩衝區大小。
 
 ```C
 // crt_itoa_s.c
@@ -272,4 +262,4 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ## <a name="see-also"></a>另請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa、 _itow 函式](itoa-itow.md)<br/>
+[_itoa，_itow 函式](itoa-itow.md)<br/>

@@ -1,10 +1,6 @@
 ---
-title: fread_s | Microsoft Docs
-ms.custom: ''
+title: fread_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fread_s
 apilocation:
@@ -23,19 +19,13 @@ apitype: DLLExport
 f1_keywords:
 - fread_s
 - stdio/fread_s
-dev_langs:
-- C++
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: febfab21889afab773dd9a8405b1e07dc7798f5c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 898e813c19fd53cfdacd536c2e9819743a62a8da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401889"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519817"
 ---
 # <a name="freads"></a>fread_s
 
@@ -72,15 +62,15 @@ size_t fread_s(
 
 ## <a name="return-value"></a>傳回值
 
-**fread_s**傳回數字 （整數） 的項目讀取到緩衝區，可能會小於*計數*讀取的錯誤或檔案的結尾之前遇到*計數*為止。 使用**feof**或**ferror**錯誤區別檔案結尾條件的函式。 如果*大小*或*計數*為 0， **fread_s**傳回 0 緩衝區內容並不會改變。 如果*資料流*或*緩衝區*為 null 指標， **fread_s**叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md). 如果允許繼續執行，此函式會將**errno**至**EINVAL**並傳回 0。
+**fread_s**會傳回讀入緩衝區，它可能是數字 （整數） 的項目少於*計數*如果發生讀取的錯誤或檔案結尾之前*計數*為止。 使用**feof**或是**ferror**函式來區分錯誤與檔案結尾條件。 如果*大小*或是*計數*為 0， **fread_s**傳回 0，而且緩衝區內容未變更。 如果*資料流*或是*緩衝區*為 null 指標， **fread_s**叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md). 如果允許繼續執行，此函式會將**errno**要**EINVAL**且會傳回 0。
 
 如需錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Fread_s**函式會讀取最多*計數*的項目*elementSize*位元組輸入*資料流*並將它們儲存在*緩衝區*。  相關聯的檔案指標*資料流*（如果有的話） 會增加實際讀取的位元組數目。 如果在文字模式中開啟時指定的資料流，歸位字元傳回換行字元組會取代單一換行字元。 這種取代不會影響檔案指標或傳回值。 發生錯誤時，無法確定檔案指標位置。 無法判斷部分讀取項目的值。
+**Fread_s**函式會讀取多達*計數*的項目*elementSize*從輸入位元組*串流*並將它們儲存在*緩衝區*。  相關聯的檔案指標*資料流*（如果有的話） 會增加實際讀取的位元組數目。 如果指定的資料流以文字模式開啟，則歸位字元復位換行組，將取代為單一換行字元。 這種取代不會影響檔案指標或傳回值。 發生錯誤時，無法確定檔案指標位置。 無法判斷部分讀取項目的值。
 
-此函式會鎖定其他執行緒。 如果您需要非鎖定版本，使用 **_fread_nolock**。
+此函式會鎖定其他執行緒。 如果您需要非鎖定版本，請使用 **_fread_nolock**。
 
 ## <a name="requirements"></a>需求
 

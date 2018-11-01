@@ -1,10 +1,6 @@
 ---
-title: _spawnvp、_wspawnvp | Microsoft Docs
-ms.custom: ''
+title: _spawnvp、_wspawnvp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wspawnvp
 - _spawnvp
@@ -25,8 +21,6 @@ f1_keywords:
 - _wspawnvp
 - _spawnvp
 - wspawnvp
-dev_langs:
-- C++
 helpviewer_keywords:
 - wspawnvp function
 - processes, creating
@@ -36,23 +30,19 @@ helpviewer_keywords:
 - process creation
 - _spawnvp function
 ms.assetid: 8d8774ec-6ad4-4680-a5aa-440cde1e0249
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e31cb0d21b6ac626dcf00c6a80e50b924adac285
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5470c88ea0c39c421f027d219af5d3465324b1ff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411909"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50649536"
 ---
 # <a name="spawnvp-wspawnvp"></a>_spawnvp、_wspawnvp
 
 建立處理序並加以執行。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -78,11 +68,11 @@ intptr_t _wspawnvp(
 待執行檔案的路徑。
 
 *argv*<br/>
-引數指標的陣列。 引數*argv*[0] 通常是路徑是指向真實模式中或程序名稱在受保護模式中，和*argv*[1] 透過*argv*[**n**] 是指向形成新引數清單之字元字串。 引數*argv*[**n** + 1] 必須是**NULL**指標，以標記引數清單的結尾。
+引數指標的陣列。 引數*argv*[0] 通常是路徑的指標以真實模式或程式名稱在受保護模式中，並*argv*[1] 透過*argv*[**n**] 是形成新引數清單之字元字串的指標。 引數*argv*[**n** + 1] 必須是**NULL**指標，以標記引數清單的結尾。
 
 ## <a name="return-value"></a>傳回值
 
-來自同步的傳回值 **_spawnvp**或 **_wspawnvp** (**_P_WAIT**指定*模式*) 是新處理序的結束狀態. 傳回值的非同步 **_spawnvp**或 **_wspawnvp** (**_P_NOWAIT**或 **_P_NOWAITO**指定*模式*) 是處理序控制代碼。 如果處理序正常終止，結束狀態為 0。 您可以將結束狀態為非零值，如果繁衍的處理序明確使用非零引數呼叫**結束**常式。 如果新處理序未明確設定確定的結束狀態，所謂確定的結束狀態表示因中止或中斷而異常結束。 傳回值-1 表示的錯誤 （新處理序未啟動）。 在此情況下， **errno**設為下列值之一：
+同步的傳回值 **_spawnvp**或是 **_wspawnvp** (**_P_WAIT**指定為*模式*) 是新處理序的結束狀態. 非同步的傳回值 **_spawnvp**或是 **_wspawnvp** (**_P_NOWAIT**或是 **_P_NOWAITO**指定*模式*) 是處理序控制代碼。 如果處理序正常終止，結束狀態為 0。 您可以將結束狀態為非零值，如果繁衍的處理序特別是使用非零引數來呼叫**結束**常式。 如果新處理序未明確設定確定的結束狀態，所謂確定的結束狀態表示因中止或中斷而異常結束。 傳回值為-1 表示的錯誤 （未啟動新的處理序）。 在此情況下， **errno**設為下列值之一：
 
 |||
 |-|-|
@@ -96,13 +86,13 @@ intptr_t _wspawnvp(
 
 ## <a name="remarks"></a>備註
 
-所有這些函式會建立新的處理序並加以執行，並將指標的陣列傳遞至命令列引數，以及使用**路徑**環境變數尋找要執行的檔案。
+所有這些函式會建立新的處理序和執行它，並將指標陣列傳遞至命令列引數，並使用**路徑**環境變數尋找要執行的檔案。
 
-這些函式會驗證它們的參數。 如果有任一個*cmdname*或*argv*為 null 指標，或如果*argv*指向 null 指標，或*argv*[0] 為空字串，不正確參數叫用處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**至**EINVAL**，並傳回-1。 未繁衍任何新處理序。
+這些函式會驗證它們的參數。 如果有任一*cmdname*或*argv*為 null 指標，或如果*argv*指向 null 指標，或*argv*[0] 為空字串，不正確參數叫用處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**要**EINVAL**，並傳回-1。 未繁衍任何新處理序。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_spawnvp**|\<stdio.h> 或 \<process.h>|
 |**_wspawnvp**|\<stdio.h> 或 \<wchar.h>|

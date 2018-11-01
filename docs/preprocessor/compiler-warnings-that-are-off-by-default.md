@@ -1,25 +1,16 @@
 ---
-title: 預設為關閉的編譯器警告 |Microsoft Docs
+title: 預設為關閉的編譯器警告
 ms.date: 05/30/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c7b48b2382ee22cc5d11c1145dc494aca4e7997f
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 48c18ce5af758e1329f149bc49969dad733af88f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083187"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50651369"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>預設為關閉的編譯器警告
 編譯器包含預設關閉的警告，因為大部分的開發人員不想要看到它們。 在某些情況下，它們代表樣式的選擇，或在較舊的程式碼，是常見的習慣用語或利用語言的 Microsoft 擴充功能。 在其他情況下，它們表示程式設計人員通常都會不正確的假設，可能會導致非預期或未定義行為的區域。 有些警告可能非常冗長的程式庫標頭中。 C 執行階段程式庫和 c + + 標準程式庫要不發出任何警告，只能在警告層級[/w4](../build/reference/compiler-option-warning-level.md)。

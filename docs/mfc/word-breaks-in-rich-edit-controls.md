@@ -1,28 +1,18 @@
 ---
-title: Rich Edit 控制項中的斷字法 |Microsoft Docs
-ms.custom: ''
+title: Rich Edit 控制項中的斷字法
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CRichEditCtrl class [MFC], word breaks in
 - word breaks
 - breaking words in CRichEditCtrl
 - rich edit controls [MFC], word breaks in
 ms.assetid: 641dcf9e-7b40-4dc0-85f7-575a8c142f73
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f012897d968d108cb366126fc38992ff1dd11d0a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: efe4a0a2c06c14d913d43c51d1f0100f27c6a537
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424608"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632592"
 ---
 # <a name="word-breaks-in-rich-edit-controls"></a>Rich Edit 控制項中的斷字法
 

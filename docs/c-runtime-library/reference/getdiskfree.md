@@ -1,10 +1,6 @@
 ---
-title: _getdiskfree | Microsoft Docs
-ms.custom: ''
+title: _getdiskfree
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdiskfree
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - getdiskfree
 - _getdiskfree
-dev_langs:
-- C++
 helpviewer_keywords:
 - diskfree_t type
 - _getdiskfree function
@@ -32,23 +26,19 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2fad5c67f247a40f1c8d65bec50ccf80f44b3d4d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03c39802301406bc4250328983c8cf8bad94497f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401613"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602276"
 ---
 # <a name="getdiskfree"></a>_getdiskfree
 
-使用磁碟機的詳細資訊，來填入 **_diskfree_t**結構。
+使用磁碟機的資訊來填入 **_diskfree_t**結構。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -65,11 +55,11 @@ unsigned _getdiskfree(
 您想要的磁碟機資訊。
 
 *driveinfo*<br/>
-A **_diskfree_t**將填入該磁碟機的相關資訊的結構。
+A **_diskfree_t**結構，則會使用磁碟機的相關資訊填入。
 
 ## <a name="return-value"></a>傳回值
 
-如果此函式成功，則傳回值為零。 如果此函式失敗，則傳回值是錯誤碼。 值**errno**設定作業系統所傳回的任何錯誤。 如需有關所表示之錯誤狀況**errno**，請參閱[errno 常數](../../c-runtime-library/errno-constants.md)。
+如果此函式成功，則傳回值為零。 如果此函式失敗，則傳回值是錯誤碼。 該值**errno**設定作業系統所傳回的任何錯誤。 如需詳細資訊，指出的錯誤條件的相關**errno**，請參閱[errno 常數](../../c-runtime-library/errno-constants.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -84,11 +74,11 @@ struct _diskfree_t {
 };
 ```
 
-這個函式會驗證它的參數。 如果*driveinfo*指標**NULL**或*磁碟機*指定無效的磁碟機，此函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則此函數會傳回**EINVAL**並設定**errno**至**EINVAL**。 有效的磁碟機範圍為 0 到 26。 A*磁碟機*0 值指定目前的磁碟機; 之後，數字會對應至英文字母，使得 1 表示磁碟機 A，3 表示磁碟機 C，依此類推。
+這個函式會驗證它的參數。 如果*driveinfo*指標**NULL**或*磁碟機*指定無效的磁碟機，此函式叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則函數會傳回**EINVAL**並設定**errno**來**EINVAL**。 有效的磁碟機範圍為 0 到 26。 A*磁碟機*值為 0 指定目前的磁碟機; 之後，數字會對應至英文字母，使得 1 表示磁碟機 A，3 表示磁碟機 C，依此類推。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_getdiskfree**|\<direct.h>|
 

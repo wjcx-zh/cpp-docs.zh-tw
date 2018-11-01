@@ -1,25 +1,15 @@
 ---
-title: steady_clock 結構 | Microsoft Docs
-ms.custom: ''
+title: steady_clock 結構
 ms.date: 05/22/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::steady_clock
-dev_langs:
-- C++
 ms.assetid: 970d12ec-fc80-4391-a2f7-b57b2aec668d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 53f4deb0bfe9439011f75cd22d0d52b74dae9c1f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 19e9f5c4dcfc7306b989605894e9a0787e0920ff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959721"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579292"
 ---
 # <a name="steadyclock-struct"></a>steady_clock 結構
 
@@ -35,7 +25,7 @@ struct steady_clock;
 
 在 Windows 中，`steady_clock`包裝`QueryPerformanceCounter`函式。
 
-如果第一次呼叫 `now` 傳回的值一律小於或等於後續呼叫 `now` 所傳回的值，則時鐘具「單一性」。 如果時鐘具「單一性」且時鐘刻度之間的時間固定，則時鐘具「穩定性」。
+如果第一次呼叫 `now` 傳回的值一律小於或等於後續呼叫 `now` 所傳回的值，則時鐘具「單一性」。 如果時鐘具*單一性*且時鐘刻度之間的時間固定，則時鐘具「穩定性」。
 
 `high_resolution_clock` 是的 typedef `steady_clock`。
 

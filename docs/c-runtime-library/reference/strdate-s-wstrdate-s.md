@@ -1,10 +1,6 @@
 ---
-title: _strdate_s、_wstrdate_s | Microsoft Docs
-ms.custom: ''
+title: _strdate_s、_wstrdate_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdate_s
 - _wstrdate_s
@@ -27,8 +23,6 @@ f1_keywords:
 - _wstrdate_s
 - strdate_s
 - _tstrdate_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - dates, copying
 - tstrdate_s function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _strdate_s function
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8e4e9ff3783fc7a89e7af42ebf283209c034c0d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85c9ab7dcad68f3aa4832236461cd38b07d4ae44
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414307"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629004"
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s、_wstrdate_s
 
@@ -98,17 +88,17 @@ errno_t _wstrdate_s(
 
 ## <a name="security-issues"></a>安全性問題
 
-傳遞無效的非**NULL**當緩衝區就會發生存取違規的值*numberOfElements*參數大於 9。
+傳入無效的非**NULL**值，如果緩衝區會造成存取違規*numberOfElements*參數大於 9。
 
-傳遞大小的值大於實際大小*緩衝區*會導致緩衝區滿溢。
+傳遞值的大小大於實際大小*緩衝區*會導致緩衝區溢位。
 
 ## <a name="remarks"></a>備註
 
-這些函式提供更安全的版本 **_strdate**和 **_wstrdate**。 **_Strdate_s**函式會複製到所指向之緩衝區的目前系統日期*緩衝區*格式化**公釐**/**dd** / **yy**，其中**公釐**是兩位數表示月份， **dd**是兩位數代表日期，以及**yy**是兩位數的年份。 例如，字串**12/05/99**代表 1999 年 12 月 5 日。 緩衝區長度至少必須是 9 個字元。
+這些函式提供更安全的版本 **_strdate**並 **_wstrdate**。 **_Strdate_s**函式會將目前的系統日期複製到所指向的緩衝區*緩衝區*格式化**mm**/**dd** / **yy**，其中**mm**是兩位數表示月份， **dd**是兩位數表示日期和**yy**是一年的後兩位數。 例如，字串**12/05/99**代表 1999 年 12 月 5 日。 緩衝區長度至少必須是 9 個字元。
 
 **_wstrdate_s**是寬字元版本的 **_strdate_s**; 的引數和傳回值 **_wstrdate_s**是寬字元字串。 除此之外，這些函式的行為相同。
 
-如果*緩衝區*是**NULL**指標，或如果*numberOfElements*小於 9 個字元、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**至**EINVAL**如果緩衝區已**NULL**或*numberOfElements*小於或等於 0 或一組**errno**至**為 ERANGE**如果*numberOfElements*少於 9。
+如果*緩衝區*是**NULL**指標，或如果*numberOfElements*小於 9 個字元，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**要**EINVAL**如果緩衝區**NULL**或者*numberOfElements*小於或等於 0 或一組**errno**要**ERANGE**如果*numberOfElements*小於 9。
 
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -120,7 +110,7 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_strdate**|\<time.h>|
 |**_wstrdate**|\<time.h> 或 \<wchar.h>|

@@ -1,11 +1,6 @@
 ---
-title: clog、clogf、clogl | Microsoft Docs
-ms.custom: ''
+title: clog、clogf、clogl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - clog
 - clogf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/clog
 - complex/clogf
 - complex/clogl
-dev_langs:
-- C++
 helpviewer_keywords:
 - clog function
 - clogf function
 - clogl function
 ms.assetid: 870b9b0b-6618-46f3-bfcf-da595cbd5e18
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ca1b5b917b48a0307b9bd2a362ac7eb6a21dca3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fcbc9ba7984898d51f7a3d0beb5ef7c8b6d6892c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394791"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636549"
 ---
 # <a name="clog-clogf-clogl"></a>clog、clogf、clogl
 
@@ -79,7 +68,7 @@ _Lcomplex clogl(
 
 ## <a name="return-value"></a>傳回值
 
-自然對數*z*。 結果是真正的軸和間隔中未繫結 [-iπ，+ iπ] 軸虛數。
+自然對數*z*。 結果是在實數軸，並在間隔中未繫結 [-i π，+ i π] 在虛數軸。
 
 可能的傳回值如下：
 
@@ -93,11 +82,11 @@ _Lcomplex clogl(
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**clog**採用並傳回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程式中， **clog**一律採用並傳回 **_Dcomplex**值。
+因為 c + + 允許多載，您可以呼叫多載**clog**採用並傳回 **_Fcomplex**並 **_Lcomplex**值。 在 C 程式中， **clog**一律採用並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
-|常式|C 標頭|C++ 標頭|
+|常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
 |**clog**， **clogf**， **clogl**|\<complex.h>|\<ccomplex>|
 

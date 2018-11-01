@@ -1,29 +1,19 @@
 ---
-title: -bigobj （增加中的區段數目。Obj 檔） |Microsoft Docs
-ms.custom: ''
+title: /bigobj (增加 .Obj 檔中的區段數目)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /bigobj
-dev_langs:
-- C++
 helpviewer_keywords:
 - -bigobj compiler option [C++]
 - /bigobj compiler option [C++]
 - bigobj compiler option [C++]
 ms.assetid: ba94d602-4015-4a8d-86ec-49241ab74c12
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5f10456bea8be552df42efe135818ac9c47393fc
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d2deaf7b3e248dd1269d9f04037c9d38651a5b56
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721483"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50649705"
 ---
 # <a name="bigobj-increase-number-of-sections-in-obj-file"></a>/bigobj (增加 .Obj 檔中的區段數目)
 

@@ -1,11 +1,6 @@
 ---
-title: fegetround、 fesetround |Microsoft 文件
-ms.custom: ''
+title: fegetround、fesetround
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fegetround
 - fesetround
@@ -27,22 +22,16 @@ f1_keywords:
 - fesetround
 - fenv/fegetround
 - fenv/fesetround
-dev_langs:
-- C++
 helpviewer_keywords:
 - fegetround function
 - fesetround function
 ms.assetid: 596af00b-be2f-4f57-b2f5-460485f9ff0b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 137d886d557cbb1fee7db1dd60405b9557bf6bf2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 061f0c9563d284396e85c6de70a2fe0911218eb3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398080"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666800"
 ---
 # <a name="fegetround-fesetround"></a>fegetround、fesetround
 
@@ -65,9 +54,9 @@ int fesetround(
 
 ## <a name="return-value"></a>傳回值
 
-成功時， **fegetround**做為其中一個浮點捨入巨集的值傳回捨入模式。 如果無法判斷目前的捨入模式，它就會傳回負值。
+成功時， **fegetround**做為其中一個浮點捨入巨集值傳回捨入模式。 如果無法判斷目前的捨入模式，它就會傳回負值。
 
-成功時， **fesetround**傳回 0。 否則，會傳回非零值。
+成功時， **fesetround**會傳回 0。 否則，會傳回非零值。
 
 ## <a name="remarks"></a>備註
 
@@ -88,13 +77,13 @@ FE_TONEAREST 的預設行為會使用雙數 (0) 最低有效位元，將結果�
 
 - 常數運算式之外的浮點算術運算子結果。
 
-- 例如捨入函式，程式庫**rint**和**nearbyint**。
+- 程式庫，例如捨入函式**rint**並**nearbyint**。
 
 - 從標準程式庫數學函式傳回值。
 
 目前的捨入模式不會影響下列作業：
 
-- **Trunc**， **ceil**， **floor**，和**lround**程式庫函式。
+- **Trunc**， **ceil**， **floor**，以及**lround**程式庫函式。
 
 - 浮點至整數隱含轉型和轉換，其一律會以趨近於零的方式捨入。
 

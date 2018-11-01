@@ -1,25 +1,15 @@
 ---
-title: 輸出檔資料流成員函式 | Microsoft Docs
-ms.custom: ''
+title: 輸出檔資料流成員函式
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ab1d229f2c1933025993aa1bc3a3a8b91b41a2cc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: eba627c69437754a9c0a819167443aa00c025fef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195811"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621763"
 ---
 # <a name="output-file-stream-member-functions"></a>輸出檔資料流成員函式
 
@@ -112,7 +102,7 @@ int main( )
 
 寫入資料流時，請使用下列成員函式來測試是否發生錯誤：
 
-|函式|傳回值|
+|功能|傳回值|
 |--------------|------------------|
 |[bad](basic-ios-class.md#bad)|如果有無法復原的錯誤，則傳回 **true**。|
 |[fail](basic-ios-class.md#fail)|如果有無法復原的錯誤，或是「預期」的狀況 (例如轉換錯誤，或是找不到檔案)，則傳回 **true**。 通常可以在呼叫之後繼續處理`clear`使用零引數。|

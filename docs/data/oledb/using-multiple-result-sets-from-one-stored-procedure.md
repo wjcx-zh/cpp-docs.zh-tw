@@ -1,27 +1,16 @@
 ---
-title: 使用多個結果集從某個預存程序 |Microsoft Docs
-ms.custom: ''
+title: 從預存程序使用多重結果集
 ms.date: 10/24/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - stored procedures, returning result sets
 - multiple result sets
 ms.assetid: c450c12c-a76c-4ae4-9675-071a41eeac05
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: ac30f74a593f79cea7f252c454f19b85260e27b8
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: fe41bfe1d9fb0207f55d2cd653a56a1ff00ce2d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50078503"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570673"
 ---
 # <a name="using-multiple-result-sets-from-one-stored-procedure"></a>從預存程序使用多重結果集
 

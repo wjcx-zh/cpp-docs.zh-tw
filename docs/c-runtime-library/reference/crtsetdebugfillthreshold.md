@@ -1,10 +1,6 @@
 ---
-title: _CrtSetDebugFillThreshold | Microsoft Docs
-ms.custom: ''
+title: _CrtSetDebugFillThreshold
 ms.date: 03/21/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetDebugFillThreshold
 apilocation:
@@ -22,8 +18,6 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetDebugFillThreshold
 - CrtSetDebugFillThreshold
-dev_langs:
-- C++
 helpviewer_keywords:
 - debug, buffer-filling behavior
 - CrtSetDebugFillThreshold function
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - buffer-filling behavior
 - 0xFD
 ms.assetid: 6cb360e8-56ae-4248-b17f-e28aee3e0ed7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c0980331389a36fa123c6ee64989296f5afec5c8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebe958ddc1c9a5c372f4ae68336e0dea3144e8b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398655"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602198"
 ---
 # <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
 
@@ -63,9 +53,9 @@ size_t _CrtSetDebugFillThreshold( size_t newThreshold );
 
 ## <a name="remarks"></a>備註
 
-某些安全性增強 CRT 函式的偵錯版本填入傳遞給它們的特殊字元的緩衝區 (0xFE)。 這有助於發現傳遞至函式的大小不正確的情況。 可惜的是，它也會降低效能。 若要改善效能，請使用 **_CrtSetDebugFillThreshold**停用緩衝區填滿緩衝區大於*newThreshold*臨界值。 A *newThreshold*值為 0 會停用它的所有緩衝區。
+某些安全性增強 CRT 函式的偵錯版本填滿緩衝區傳遞給它們的特殊字元 (0xFE)。 這有助於發現傳遞至函式的大小不正確的情況。 可惜的是，它也會降低效能。 若要改善效能，使用 **_CrtSetDebugFillThreshold**若要停用緩衝區之緩衝區的填入大於*newThreshold*臨界值。 A *newThreshold*值為 0 會停用它的所有緩衝區。
 
-預設閾值是**SIZE_T_MAX**。
+預設臨界值是**SIZE_T_MAX**。
 
 以下是受影響的函式清單。
 
@@ -107,15 +97,15 @@ size_t _CrtSetDebugFillThreshold( size_t newThreshold );
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_CrtSetDebugFillThreshold**|\<crtdbg.h>|
 
-此函式是 Microsoft 專有。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+此函式是 Microsoft 特有。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 
-偵錯版本的[C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)只。
+偵錯版本[C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)只。
 
 ## <a name="example"></a>範例
 

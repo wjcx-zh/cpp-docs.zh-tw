@@ -1,10 +1,6 @@
 ---
-title: _tell、_telli64 | Microsoft Docs
-ms.custom: ''
+title: _tell、_telli64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _telli64
 - _tell
@@ -26,8 +22,6 @@ f1_keywords:
 - telli64
 - _telli64
 - _tell
-dev_langs:
-- C++
 helpviewer_keywords:
 - tell function
 - file pointers [C++], getting
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c47958fdb3723c16f8f2dce03ace54c75ce6176
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 628f37d3b8a39a75fb2329a1b2805426f15e821f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409982"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660144"
 ---
 # <a name="tell-telli64"></a>_tell、_telli64
 
@@ -71,17 +61,17 @@ __int64 _telli64(
 
 檔案指標的目前位置。 在無法搜尋的裝置上，傳回的值為未定義。
 
-傳回-1l; 此時的值會指出錯誤。 如果*處理*是無效的檔案描述項無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**至**EBADF**並傳回-1l; 此時。
+傳回值為-1l 表示錯誤。 如果*處理*是無效的檔案描述項無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**要**EBADF**並傳回-1l。
 
 如需這個及其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。
 
 ## <a name="remarks"></a>備註
 
-**_Tell**函式取得目前位置的檔案指標 （如果有的話） 相關聯*處理*引數。 位置是以從檔案開頭的位元組數目來表示。 如 **_telli64**函式，這個值會表示為 64 位元整數。
+**_Tell**函式會取得檔案指標 （如果有的話） 的目前位置，與相關聯*處理*引數。 位置是以從檔案開頭的位元組數目來表示。 針對 **_telli64**函式，這個值會以 64 位元整數。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_tell**， **_telli64**|\<io.h>|
 

@@ -1,31 +1,20 @@
 ---
-title: 資料來源： 以程式設計方式設定 ODBC 資料來源 |Microsoft Docs
-ms.custom: ''
+title: 資料來源：以程式設計方式設定 ODBC 資料來源
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
 f1_keywords:
 - SQLConfigDataSource
-dev_langs:
-- C++
 helpviewer_keywords:
 - ODBC data sources, configuring
 - SQLConfigDataSource method example
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: a06cefdd9df96cd228d2d8814eaafea7eab18930
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 3d02a19d6c61e79fffd31b67ef1b8f7ea9007fcb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50080256"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677366"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>資料來源：以程式設計方式設定 ODBC 資料來源
 

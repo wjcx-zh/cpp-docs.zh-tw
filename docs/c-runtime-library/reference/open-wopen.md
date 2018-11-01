@@ -1,10 +1,6 @@
 ---
-title: _open、_wopen | Microsoft Docs
-ms.custom: ''
+title: _open、_wopen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _open
 - _wopen
@@ -25,8 +21,6 @@ f1_keywords:
 - _wopen
 - _topen
 - _open
-dev_langs:
-- C++
 helpviewer_keywords:
 - opening files, for file I/O
 - topen function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - wopen function
 - open function
 ms.assetid: 13f6a0c3-d1aa-450d-a7aa-74abc91b163e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bf1d5cca5f729e0b3e2ee55cd6d8778450bdead1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2395b1aa48b7802a508ab0cb8be1ef35a1a81564
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405337"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50612979"
 ---
 # <a name="open-wopen"></a>_open、_wopen
 
@@ -80,13 +70,13 @@ int _wopen(
 
 ## <a name="return-value"></a>傳回值
 
-這些函式每一個都會傳回已開啟檔案的檔案描述項。 傳回值-1 表示錯誤。在此情況下**errno**設為下列值之一。
+這些函式每一個都會傳回已開啟檔案的檔案描述項。 傳回值為-1 表示錯誤;在此情況下**errno**設為下列值之一。
 
 |errno 值|條件|
 |-|-|
 **EACCES**|嘗試開啟唯讀檔案以供寫入，檔案的共用模式不允許指定的作業，或是指定的路徑為目錄。
-**EEXIST**|**_O_CREAT**和 **_O_EXCL**旗標指定，但*filename*已經存在。
-**EINVAL**|無效*oflag*或*pmode*引數。
+**EEXIST**|**_O_CREAT**並 **_O_EXCL**旗標指定，但*filename*已經存在。
+**EINVAL**|無效*oflag*或是*pmode*引數。
 **EMFILE**|沒有更多檔案描述項可用 (開啟了太多檔案)。
 **ENOENT**|找不到檔案或路徑。
 
@@ -94,7 +84,7 @@ int _wopen(
 
 ## <a name="remarks"></a>備註
 
-**_Open**函式會開啟所指定的檔案*filename*並準備好供讀取或寫入，所指定*oflag*。 **_wopen**是寬字元版本的 **_open**; *filename*引數 **_wopen**是寬字元字串。 **_wopen**和 **_open**除此之外的行為相同。
+**_Open**函式會開啟所指定的檔案*檔名*，並準備好供讀取或寫入，必須按照*oflag*。 **_wopen**是寬字元版本的 **_open**; *filename*引數 **_wopen**是寬字元字串。 **_wopen**並 **_open**行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -102,39 +92,39 @@ int _wopen(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_topen**|**_open**|**_open**|**_wopen**|
 
-*oflag*整數運算式形成從其中一個或多個下列資訊清單常數或常數組合，定義於\<.h >。
+*oflag*整數運算式，由一或多個下列資訊清單常數或常數組合，定義於\<fcntl.h> >。
 
 |*oflag*常數|行為|
 |-|-|
 **_O_APPEND**|在每次寫入作業之前，將檔案指標移到檔案的結尾。
 **_O_BINARY**|以二進位 (未轉譯) 模式開啟檔案 (如需二進位模式的描述，請參閱 [fopen](fopen-wfopen.md))。
-**_O_CREAT**|建立檔案並開啟以供寫入。 如果指定的檔案有任何作用*filename*存在。 *Pmode*引數時，需要 **_O_CREAT**指定。
-**_O_CREAT** &AMP;#124; **_O_SHORT_LIVED**|將檔案建立為暫存檔，若有可能的話，請勿清除至磁碟。 *Pmode*引數時，需要 **_O_CREAT**指定。
-**_O_CREAT** &AMP;#124; **_O_TEMPORARY**|將檔案建立為暫存檔；當最後一個檔案描述項關閉時會刪除檔案。 *Pmode*引數時，需要 **_O_CREAT**指定。
-**_O_CREAT**&AMP;#124; ` _O_EXCL`|如果指定的檔案傳回錯誤值*filename*存在。 只有在搭配使用時，才適用 **_O_CREAT**。
+**_O_CREAT**|建立檔案並開啟以供寫入。 如果指定的檔案有任何作用*filename*存在。 *Pmode*引數時，必須 **_O_CREAT**指定。
+**_O_CREAT** &AMP;#124; **_O_SHORT_LIVED**|將檔案建立為暫存檔，若有可能的話，請勿清除至磁碟。 *Pmode*引數時，必須 **_O_CREAT**指定。
+**_O_CREAT** &AMP;#124; **_O_TEMPORARY**|將檔案建立為暫存檔；當最後一個檔案描述項關閉時會刪除檔案。 *Pmode*引數時，必須 **_O_CREAT**指定。
+**_O_CREAT**&AMP;#124; ` _O_EXCL`|如果指定的檔案會傳回錯誤值*filename*存在。 只有在搭配使用時，才適用 **_O_CREAT**。
 **_O_NOINHERIT**|防止建立共用檔案描述項。
 **_O_RANDOM**|指定針對但不限於磁碟的隨機存取進行快取最佳化。
-**_O_RDONLY**|開啟檔案為僅供讀取。 不能與指定 **_O_RDWR**或 **_O_WRONLY**。
-**_O_RDWR**|開啟檔案以進行讀取和寫入。 不能與指定 **_O_RDONLY**或 **_O_WRONLY**。
+**_O_RDONLY**|開啟檔案為僅供讀取。 不能與指定 **_O_RDWR**或是 **_O_WRONLY**。
+**_O_RDWR**|開啟檔案以進行讀取和寫入。 不能與指定 **_O_RDONLY**或是 **_O_WRONLY**。
 **_O_SEQUENTIAL**|指定針對但不限於磁碟的循序存取進行快取最佳化。
 **_O_TEXT**|以文字 (已轉譯) 模式開啟檔案 (如需詳細資訊，請參閱[文字和二進位模式檔案 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 和 [fopen](fopen-wfopen.md))。
-**_O_TRUNC**|開啟檔案，並將檔案截斷為零長度；檔案必須具有寫入權限。 不能與指定 **_O_RDONLY**。 **_O_TRUNC**搭配 **_O_CREAT**開啟現有的檔案，或建立檔案。 **注意：** **_O_TRUNC**旗標會終結指定檔案的內容。
-**_O_WRONLY**|將檔案開啟為僅供寫入。 不能與指定 **_O_RDONLY**或 **_O_RDWR**。
+**_O_TRUNC**|開啟檔案，並將檔案截斷為零長度；檔案必須具有寫入權限。 不能與指定 **_O_RDONLY**。 **_O_TRUNC**搭配 **_O_CREAT**開啟現有的檔案，或建立檔案。 **注意︰** **_O_TRUNC**旗標會終結指定檔案的內容。
+**_O_WRONLY**|將檔案開啟為僅供寫入。 不能與指定 **_O_RDONLY**或是 **_O_RDWR**。
 **_O_U16TEXT**|以 Unicode UTF-16 模式開啟檔案。
 **_O_U8TEXT**|以 Unicode UTF-8 模式開啟檔案。
 **_O_WTEXT**|以 Unicode 模式開啟檔案。
 
 若要指定檔案存取模式，您必須指定 **_O_RDONLY**， **_O_RDWR**，或 **_O_WRONLY**。 存取模式沒有預設值。
 
-如果 **_O_WTEXT**用來開啟檔案進行讀取， **_open**讀取檔案開頭，並檢查是否有位元組順序標示 (BOM)。 若有 BOM，會將檔案視為 UTF-8 或 UTF-16LE，這會取決於 BOM。 若無 BOM，會將檔案視為 ANSI。 當開啟檔案進行寫入使用 **_O_WTEXT**，會使用 utf-16。 不論任何先前的設定或位元順序標記為何，如果 **_O_U8TEXT**是使用，一律將檔案開啟為 utf-8; 如果 **_O_U16TEXT**是使用，一律將檔案開啟為 utf-16。
+如果 **_O_WTEXT**用來開啟檔案進行讀取， **_open**讀取檔案的開頭，並檢查是否有位元組順序標記 (BOM)。 若有 BOM，會將檔案視為 UTF-8 或 UTF-16LE，這會取決於 BOM。 若無 BOM，會將檔案視為 ANSI。 當開啟檔案進行寫入使用 **_O_WTEXT**，會使用 utf-16。 不論任何先前的設定或位元順序標記，如果 **_O_U8TEXT**時，一律將檔案開啟為 utf-8; 如果 **_O_U16TEXT**是，一律將檔案開啟為 utf-16。
 
-以 Unicode 模式開啟檔案是時，使用 **_O_WTEXT**， **_O_U8TEXT**，或 **_O_U16TEXT**，請輸入函式轉譯成 utf-16 資料從檔案讀取資料儲存為類型**wchar_t**。 寫入至以 Unicode 模式開啟檔案的函式預期會包含儲存為類型的 utf-16 資料的緩衝區**wchar_t**。 若檔案是編碼為 UTF-8，則會在寫入 UTF-16 資料時轉譯為 UTF-8，且會在讀取檔案的 UTF-8 編碼內容時轉譯成 UTF-16。 嘗試以 Unicode 模式讀取或寫入奇數位元組會導致參數驗證錯誤。 若要讀取或寫入作為 UTF-8 儲存在您程式裡的資料時，請使用文字或二進位檔案模式，不要使用 Unicode 模式。 您要負責所有必要的編碼轉譯。
+以 Unicode 模式開啟的檔案是時，使用 **_O_WTEXT**， **_O_U8TEXT**，或 **_O_U16TEXT**、 輸入函式會轉譯成 utf-16 資料從檔案讀取的資料儲存為類型**wchar_t**。 以 Unicode 模式開啟的檔案寫入的函式預期包含 utf-16 資料儲存為類型的緩衝區**wchar_t**。 若檔案是編碼為 UTF-8，則會在寫入 UTF-16 資料時轉譯為 UTF-8，且會在讀取檔案的 UTF-8 編碼內容時轉譯成 UTF-16。 嘗試以 Unicode 模式讀取或寫入奇數位元組會導致參數驗證錯誤。 若要讀取或寫入作為 UTF-8 儲存在您程式裡的資料時，請使用文字或二進位檔案模式，不要使用 Unicode 模式。 您要負責所有必要的編碼轉譯。
 
 如果 **_open**呼叫 **_O_WRONLY** | **_O_APPEND** （附加模式） 和 **_O_WTEXT**， **_O_U16TEXT**，或 **_O_U8TEXT**，它會先嘗試開啟檔案進行讀取和寫入，讀取 BOM，然後重新開啟它僅供寫入。 若開啟檔案以供讀取和寫入失敗，則會僅針對寫入開啟檔案，並使用 Unicode 模式設定的預設值。
 
 當兩個或多個資訊清單常數用於表單*oflag*引數，會使用位元 OR 運算子結合常數 ( **&#124;** )。 如需二進位及文字模式的討論，請參閱[文字和二進位模式檔案 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md)。
 
-*Pmode*引數是需要時才 **_O_CREAT**指定。 如果檔案已經存在， *pmode*會被忽略。 否則， *pmode*指定檔案的權限設定，新檔案第一次關閉時會進行此設定。 **_open**目前檔案權限遮罩套用至*pmode*之前已設定權限。 (如需詳細資訊，請參閱[_umask](umask.md)。)*pmode*是整數運算式，其中包含一或兩個下列的資訊清單常數，定義於\<sys\stat.h >。
+*Pmode*是必要引數時，才 **_O_CREAT**指定。 如果檔案已經存在， *pmode*會被忽略。 否則，請*pmode*指定檔案的權限設定，新的檔案第一次關閉時會進行此設定。 **_open**到目前的檔案權限遮罩套用*pmode*之前已設定的權限。 (如需詳細資訊，請參閱 < [_umask](umask.md)。)*pmode*是整數運算式，其中包含一或兩個下列的資訊清單常數，定義於\<sys\stat.h >。
 
 |*pmode*|意義|
 |-|-|
@@ -142,18 +132,18 @@ int _wopen(
 **_S_IWRITE**|允許寫入 (實際上允許讀取和寫入)。
 **_S_IREAD** &AMP;#124; **_S_IWRITE**|允許讀取和寫入。
 
-當兩個常數時，其是否加入位元 OR 運算子 ( **&#124;** )。 在 Windows 所有檔案皆為可讀取；不提供僅限寫入的權限。 因此，模式 **_S_IWRITE**和 **_S_IREAD** | **_S_IWRITE**相等。
+它們兩個常數指定時，會使用位元 OR 運算子結合 ( **&#124;** )。 在 Windows 所有檔案皆為可讀取；不提供僅限寫入的權限。 因此，模式 **_S_IWRITE**並 **_S_IREAD** | **_S_IWRITE**相等。
 
-如果值以外的某種組合 **_S_IREAD**和 **_S_IWRITE**指定*pmode*— 即使會指定有效的*pmode*在其他作業系統，或任何值而不是允許*oflag*指定值，函式在偵錯模式產生判斷提示，並叫用無效參數處理常式，中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1 以及設定執行**errno**至**EINVAL**。
+如果以外的某種組合的值 **_S_IREAD**並 **_S_IWRITE**指定*pmode*— 即使它會指定有效*pmode*在其他作業系統，或任何其他超過允許值*oflag*指定值，函式偵錯模式產生判斷提示，並會叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1 和集執行**errno**要**EINVAL**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|---------------------|
 |**_open**|\<io.h>|\<fcntl.h>、\<sys\types.h>、\<sys\stat.h>|
 |**_wopen**|\<io.h> 或 \<wchar.h>|\<fcntl.h>、\<sys\types.h>、\<sys\stat.h>|
 
-**_open**和 **_wopen**是 Microsoft 擴充功能。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+**_open**並 **_wopen**是 Microsoft 擴充功能。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 

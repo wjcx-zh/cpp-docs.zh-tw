@@ -1,26 +1,16 @@
 ---
-title: 遺漏函式主體或變數 |Microsoft Docs
-ms.custom: ''
+title: 遺漏函式主體或變數
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - function body
 - variables, missing
 ms.assetid: 1a88d809-b14f-46a4-97c4-3e48beb418f2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8a1337cf936d986c038aacc355490f13e5f0c2d8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 88470272192520e9aa0582fd06ff36a0542803ba
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46088445"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647118"
 ---
 # <a name="missing-function-body-or-variable"></a>遺漏函式主體或變數
 

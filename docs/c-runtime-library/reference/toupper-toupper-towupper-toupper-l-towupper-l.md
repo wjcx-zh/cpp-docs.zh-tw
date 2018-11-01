@@ -1,10 +1,6 @@
 ---
-title: toupper、_toupper、towupper、_toupper_l、_towupper_l | Microsoft Docs
-ms.custom: ''
+title: toupper、_toupper、towupper、_toupper_l、_towupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _toupper_l
 - towupper
@@ -29,8 +25,6 @@ f1_keywords:
 - _toupper
 - _totupper
 - toupper
-dev_langs:
-- C++
 helpviewer_keywords:
 - _toupper function
 - towupper function
@@ -47,16 +41,12 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 73157691cc1635d038339d9fe707aa535e1df93f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e0ae3f1c69b0e5f77ea2ed8141a93867fd43b33
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413456"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608860"
 ---
 # <a name="toupper-toupper-towupper-toupperl-towupperl"></a>toupper、_toupper、towupper、_toupper_l、_towupper_l
 
@@ -94,19 +84,19 @@ int _towupper_l(
 
 ## <a name="return-value"></a>傳回值
 
-這些常式都會將轉換的複本*c*，可能的話，並傳回結果。
+這些常式都會將一份*c*，可能的話，並傳回結果。
 
-如果*c*是寬字元的**iswlower**為非零值，而且沒有對應的寬字元，其[iswupper](isupper-isupper-l-iswupper-iswupper-l.md)非零， **towupper**傳回對應的寬字元;否則， **towupper**傳回*c*不變。
+如果*c*是寬字元為其**iswlower**為非零值，而且沒有對應的寬字元，其[iswupper](isupper-isupper-l-iswupper-iswupper-l.md)是零， **towupper**會傳回對應的寬字元;否則，請**towupper**會傳回*c*不變。
 
 沒有表示錯誤的保留傳回值。
 
-為了讓**toupper**提供預期的結果， [__isascii](isascii-isascii-iswascii.md)和[islower](islower-iswlower-islower-l-iswlower-l.md)必須兩者都傳回非零值。
+為了讓**toupper**預期的結果，提供給[__isascii](isascii-isascii-iswascii.md)並[islower](islower-iswlower-islower-l-iswlower-l.md)必須都傳回非零值。
 
 ## <a name="remarks"></a>備註
 
-這些常式都會將指定的小寫字母轉換為大寫字母 (如果可能且適當的話)。 大小寫轉換**towupper**地區設定而定。 只有與目前地區設定相關字元的大小寫會變更。 功能，但不包含 **_l**後置詞使用目前設定的地區設定。 這些函式版本 **_l**尾碼接受做為參數的地區設定，並使用，而不是目前已設定的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些常式都會將指定的小寫字母轉換為大寫字母 (如果可能且適當的話)。 大小寫轉換**towupper**地區設定而定。 只有與目前地區設定相關字元的大小寫會變更。 沒有函式 **_l**後置詞使用目前設定的地區設定。 使用這些函式的版本 **_l**尾碼採用的地區設定做為參數，並使用，而不是目前設定的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-為了讓**toupper**提供預期的結果， [__isascii](isascii-isascii-iswascii.md)和[isupper](isupper-isupper-l-iswupper-iswupper-l.md)必須兩者都傳回非零值。
+為了讓**toupper**預期的結果，提供給[__isascii](isascii-isascii-iswascii.md)並[isupper](isupper-isupper-l-iswupper-iswupper-l.md)必須都傳回非零值。
 
 [資料轉換常式](../../c-runtime-library/data-conversion.md)
 
@@ -118,11 +108,11 @@ int _towupper_l(
 |**_totupper_l**|**_toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 > [!NOTE]
-> **_toupper_l**和 **_towupper_l**有沒有地區設定相依性，而且不是直接呼叫。 可供內部使用 **_totupper_l**。
+> **_toupper_l**並 **_towupper_l**沒有任何地區設定相依性，不是直接呼叫。 它們專供內部使用 **_totupper_l**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**toupper**|\<ctype.h>|
 |**_toupper**|\<ctype.h>|

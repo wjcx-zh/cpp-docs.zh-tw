@@ -1,27 +1,17 @@
 ---
-title: codecvt_byname 類別 | Microsoft Docs
-ms.custom: ''
+title: codecvt_byname 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xlocale/std::codecvt_byname
-dev_langs:
-- C++
 helpviewer_keywords:
 - codecvt_byname class
 ms.assetid: b63b6c04-f60c-47b9-8e30-a933f24a8ffb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a785c7868f3a1f3262283cf131bbd3cc3ae88e4c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 62aac6abca3dce45ff3cc875823df04c69618b10
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102152"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641580"
 ---
 # <a name="codecvtbyname-class"></a>codecvt_byname 類別
 

@@ -1,10 +1,6 @@
 ---
-title: memcmp、wmemcmp | Microsoft Docs
-ms.custom: ''
+title: memcmp、wmemcmp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - memcmp
 - wmemcmp
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - memcmp
 - wmemcmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1e40264c3ee7e48a545c88d7d48891126117ecc8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9504635a2a96c4579afc7a8d9caf1844504c05b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404385"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610453"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp、wmemcmp
 
@@ -69,13 +59,13 @@ int wmemcmp(
 第二個緩衝區。
 
 *count*<br/>
-要比較的字元數。 (比較的位元組數**memcmp**，寬字元的**wmemcmp**)。
+要比較的字元數。 (比較的位元組數**memcmp**，寬字元**wmemcmp**)。
 
 ## <a name="return-value"></a>傳回值
 
 傳回值表示緩衝區之間的關聯性。
 
-|傳回值|第一個關聯性*計數*buf1 和 buf2 字元|
+|傳回值|第一個關聯性*計數*buf1 和 buf2 的字元|
 |------------------|---------------------------------------------------------------|
 |< 0|*buffer1*小於*buffer2*|
 |0|*buffer1*等於*buffer2*|
@@ -83,11 +73,11 @@ int wmemcmp(
 
 ## <a name="remarks"></a>備註
 
-比較第一個*計數*字元*buffer1*和*buffer2*和傳回值，這個值指出其關聯性。 非零傳回值的正負號是緩衝區中第一組不同值之間差異的正負號。 值會解譯為**不帶正負號** **char**如**memcmp**，並做為**wchar_t**如**wmemcmp**。
+比較第一個*計數*個字元*buffer1*並*buffer2*和傳回值，這個值指出其關聯性。 非零傳回值的正負號是緩衝區中第一組不同值之間差異的正負號。 值會解譯為**不帶正負號** **char** for **memcmp**，並做為**wchar_t**針對**wmemcmp**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**memcmp**|\<memory.h> 或 \<string.h>|
 |**wmemcmp**|\<wchar.h>|

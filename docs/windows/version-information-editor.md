@@ -1,30 +1,19 @@
 ---
-title: 版本資訊編輯器 （c + +） |Microsoft Docs
-ms.custom: ''
+title: 版本資訊編輯器 （c + +）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.version.F1
-dev_langs:
-- C++
 helpviewer_keywords:
 - Version Information editor [C++], about Version Information editor
 - editors, Version Information
 - resource editors [C++], Version Information editor
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b953343fa14d35ab387b0fd133d6e53db4551e1d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 817092af316fbc39b696e1ed19e1c67f9a799bd7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429249"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667489"
 ---
 # <a name="version-information-editor-c"></a>版本資訊編輯器 （c + +）
 
@@ -57,4 +46,4 @@ Win32
 ## <a name="see-also"></a>另請參閱
 
 [資源編輯器](../windows/resource-editors.md)<br/>
-[功能表和其他資源](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[功能表與其他資源](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

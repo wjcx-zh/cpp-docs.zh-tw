@@ -1,12 +1,6 @@
 ---
-title: 列印和預覽列印 |Microsoft Docs
-ms.custom: ''
+title: 列印和預覽列印
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - printing [MFC]
 - previewing printing
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - print preview
 - printing [MFC], print preview
 ms.assetid: d15059cd-32de-4450-95f7-e73aece238f6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9aad5c69f6466ea8803cb466c5e5529f3dce1340
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 73aae3391f07ba5ba2fe54e2c45179fe4b347a0b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374447"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629290"
 ---
 # <a name="printing-and-print-preview"></a>列印和預覽列印
 

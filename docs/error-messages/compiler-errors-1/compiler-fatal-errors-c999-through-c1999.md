@@ -1,10 +1,6 @@
 ---
-title: 編譯器嚴重錯誤 C999 至 c1999 |Microsoft 文件
-ms.custom: ''
+title: 編譯器嚴重錯誤 C999 至 C1999
 ms.date: 11/17/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1012
 - C1013
@@ -165,23 +161,17 @@ helpviewer_keywords:
 - C1901
 - C1903
 - C1904
-dev_langs:
-- C++
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bdd0949d2d76cad636f833a75ea1371246ee3ebf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: edf2227bd0a542ce9ca5e8a6a3f908347bd816e6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237259"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677327"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>編譯器嚴重錯誤 C999 至 C1999
 
-文件的本節文章說明編譯器所產生的錯誤訊息的子集。
+文件的本節文章會說明編譯器所產生的錯誤訊息的子集。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -198,7 +188,7 @@ ms.locfileid: "33237259"
 |[嚴重錯誤 C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|無法辨認 '*option*' 中的旗標 '*string*'|
 |[嚴重錯誤 C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|沒有指定輸入檔案|
 |[嚴重錯誤 C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|編譯器限制: 巨集巢狀結構太深，請簡化|
-|[嚴重錯誤 C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|尋找先行編譯的標頭時出現非預期的檔案結尾。 您忘記新增 ' #include <*檔案*>' 到您的來源？|
+|[嚴重錯誤 C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|尋找先行編譯的標頭時出現非預期的檔案結尾。 您是否忘記新增 ' #include <*檔案*>' 到您的來源？|
 |嚴重錯誤 C1012|無對應的括號: 遺漏 '*character*"|
 |嚴重錯誤 C1013|編譯器限制: 左括號太多，請簡化運算式或分為數個陳述式|
 |嚴重錯誤 C1014|Include 檔太多: 深度 = *number*|

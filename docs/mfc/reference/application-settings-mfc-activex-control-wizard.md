@@ -1,27 +1,17 @@
 ---
-title: MFC ActiveX 控制項精靈、 應用程式設定 |Microsoft Docs
-ms.custom: ''
+title: 應用程式設定，MFC ActiveX 控制項精靈
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.ctl.appset
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, application settings
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cfaebdabb9011fd76b18701c81c722671ff8fc3d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 17d8ad581640611a5b517edd15609aa8052ecae4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433540"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677132"
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>應用程式設定，MFC ActiveX 控制項精靈
 
@@ -42,7 +32,7 @@ ms.locfileid: "46433540"
 
    - .vcxproj 檔包含在專案建置時用來建置和設定說明檔的程式碼。
 
-   - 檔案*projnamePropPage*.cpp 檔[SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo)建構函式的函式。
+   - *projnamePropPage*.cpp 檔在建構函式中含有 [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) 函式。
 
    - projname.hpj 檔，這是說明編譯器用來建立 ActiveX 控制項說明檔的說明專案檔。 hpj 檔是文字檔，其中包含建置說明檔的資訊以及前往說明檔所含之其他檔案 (例如點陣圖) 的路徑。
 

@@ -1,10 +1,6 @@
 ---
-title: CurrentScheduler 類別 |Microsoft Docs
-ms.custom: ''
+title: CurrentScheduler 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - CurrentScheduler
 - CONCRT/concurrency::CurrentScheduler
@@ -18,21 +14,15 @@ f1_keywords:
 - CONCRT/concurrency::CurrentScheduler::IsAvailableLocation
 - CONCRT/concurrency::CurrentScheduler::RegisterShutdownEvent
 - CONCRT/concurrency::CurrentScheduler::ScheduleTask
-dev_langs:
-- C++
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 27c295f1cf8c6d02721a999c46ce02d961cc3702
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 46bd55c39e79ca01664c3800d10e4efa8cf7d042
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419018"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619176"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler 類別
 
@@ -56,7 +46,7 @@ class CurrentScheduler;
 |[Get](#get)|讓指標回到呼叫的內容，也稱為目前排程器相關聯的排程器。|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|傳回與呼叫內容相關聯的排程器目前的虛擬處理器數目。|
 |[GetPolicy](#getpolicy)|傳回一份目前的排程器所建立的原則。|
-|[Id](#id)|傳回目前的排程器的唯一識別碼。|
+|[ID](#id)|傳回目前的排程器的唯一識別碼。|
 |[IsAvailableLocation](#isavailablelocation)|判斷某一特定位置是否可在目前的排程器中使用。|
 |[RegisterShutdownEvent](#registershutdownevent)|Windows 事件控制代碼傳遞的原因`_ShutdownEvent`收到訊號時與目前內容相關聯的排程器關閉並終結本身的參數。 在事件收到訊號時，所有已排程器已排程的工作已完成。 透過這個方法，可以註冊多個關機的事件。|
 |[ScheduleTask](#scheduletask)|多載。 排程與呼叫內容相關聯的排程器內的輕量級工作。 輕量工作會置於執行階段所決定的排程群組中。 採用 `_Placement` 參數的版本會造成工作在指定的位置變成優先執行。|

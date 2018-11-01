@@ -1,24 +1,17 @@
 ---
-title: 運算子 Windows::UI::Xaml::Interop::TypeName |Microsoft Docs
-ms.custom: ''
+title: 運算子 Windows::UI::Xaml::Interop::TypeName
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: a65a105e-7e3a-452f-932f-2cdaf00fbba5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 262fb9d08da72201db041eff1a510a598851e3e2
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: c77655ed7692c4cdccc311bc27c492126d62e54e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105961"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659204"
 ---
 # <a name="operator-windowsuixamlinteroptypename"></a>運算子 Windows::UI::Xaml::Interop::TypeName
 
-可讓從轉換`Platform::Type`要[Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)。
+可以從 `Platform::Type` 轉換為 [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)。
 
 ## <a name="syntax"></a>語法
 
@@ -28,11 +21,11 @@ Operator TypeName(Platform::Type^ type);
 
 ### <a name="return-value"></a>傳回值
 
-傳回[Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)時指定`Platform::Type^`。
+指定 [時，則傳回](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) Windows::UI::Xaml::Interop::TypeName `Platform::Type^`。
 
 ### <a name="remarks"></a>備註
 
-`TypeName` 是用來表示類型資訊的非語言相關 Windows 執行階段結構。 [Platform::Type](../cppcx/platform-type-class.md) 則是 C++ 專屬，並且無法跨應用程式二進位介面 (ABI) 傳遞。 以下是使用一`TypeName`，請在[Navigate](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx)函式：
+`TypeName` 是用來表示類型資訊的非語言相關 Windows 執行階段結構。 [Platform::Type](../cppcx/platform-type-class.md) 則是 C++ 專屬，並且無法跨應用程式二進位介面 (ABI) 傳遞。 以下是 `TypeName`其中一種在 [Navigate](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx) 函式內的用法：
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);

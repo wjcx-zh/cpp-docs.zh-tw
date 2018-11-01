@@ -1,10 +1,6 @@
 ---
-title: CBitmap 類別 |Microsoft Docs
-ms.custom: ''
+title: CBitmap 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CBitmap
 - AFXWIN/CBitmap
@@ -22,8 +18,6 @@ f1_keywords:
 - AFXWIN/CBitmap::LoadOEMBitmap
 - AFXWIN/CBitmap::SetBitmapBits
 - AFXWIN/CBitmap::SetBitmapDimension
-dev_langs:
-- C++
 helpviewer_keywords:
 - CBitmap [MFC], CBitmap
 - CBitmap [MFC], CreateBitmap
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 322b13ee62e61a836d6b0c66ab619a11348adeae
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 295f61ed120e957bc0d5ec1746e7d3bdfbb6d001
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375637"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624597"
 ---
 # <a name="cbitmap-class"></a>CBitmap 類別
 
@@ -161,11 +151,11 @@ BOOL CreateBitmap(
 
 若是彩色點陣圖，任一*nPlanes*或是*nBitcount*參數應設為 1。 如果這兩個參數都設為 1， `CreateBitmap` 會建立單色點陣圖。
 
-雖然您無法直接選取點陣圖，顯示裝置，也可以選取作為 「 記憶體裝置內容 」 的目前點陣圖使用[cdc:: selectobject](../../mfc/reference/cdc-class.md#selectobject)並複製到任何相容裝置內容中，使用[Cdc:: bitblt](../../mfc/reference/cdc-class.md#bitblt)函式。
+雖然您無法直接選取用於顯示裝置的點陣圖，但可以使用 [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) 選取一個點陣圖作為「記憶體裝置內容」的目前點陣圖，再使用 [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) 函式將該點陣圖複製到任何相容裝置內容。
 
 當您完成使用 `CBitmap` 函式所建立的 `CreateBitmap` 物件時，請先選取點陣圖並移出裝置內容，再刪除 `CBitmap` 物件。
 
-如需詳細資訊，請參閱說明`bmBits`欄位中`BITMAP`結構。 [點陣圖](../../mfc/reference/bitmap-structure.md)結構，描述於[Createbitmapindirect](#createbitmapindirect)成員函式。
+如需詳細資訊，請參閱說明`bmBits`欄位中`BITMAP`結構。 [CBitmap::CreateBitmapIndirect](../../mfc/reference/bitmap-structure.md) 成員函式下提供 [BITMAP](#createbitmapindirect) 結構的說明。
 
 ##  <a name="createbitmapindirect"></a>  Createbitmapindirect
 

@@ -1,11 +1,6 @@
 ---
-title: cimag、cimagf、cimagl | Microsoft Docs
-ms.custom: ''
+title: cimag、cimagf、cimagl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cimag
 - cimagf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cimagf
 - complex/cimagl
 - cimag
-dev_langs:
-- C++
 helpviewer_keywords:
 - cimag function
 - cimagf function
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c466ad2373686d368cb29c46c68da3aabd68662f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6f5067967aa62894abb5316f60074b5125b1cba1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394125"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572727"
 ---
 # <a name="cimag-cimagf-cimagl"></a>cimag、cimagf、cimagl
 
@@ -76,11 +65,11 @@ long double cimag( _Lcomplex z );  // C++
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**cimag**採用 **_Fcomplex**或 **_Lcomplex**值，並傳回**float**或**長** **double**值。 在 C 程式中， **cimag**一律採用 **_Dcomplex**值並傳回**double**值。
+因為 c + + 允許多載，您可以呼叫多載**cimag**採用 **_Fcomplex**或是 **_Lcomplex**的值，並傳回**float**或是**長** **double**值。 在 C 程式中， **cimag**一律採用 **_Dcomplex**值，然後傳回**double**值。
 
 ## <a name="requirements"></a>需求
 
-|常式|C 標頭|C++ 標頭|
+|常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
 |**cimag**， **cimagf**， **cimagl**|\<complex.h>|\<ccomplex>|
 

@@ -1,10 +1,6 @@
 ---
-title: _strupr、_strupr_l、_mbsupr、_mbsupr_l、_wcsupr_l、_wcsupr | Microsoft Docs
-ms.custom: ''
+title: _strupr、_strupr_l、_mbsupr、_mbsupr_l、_wcsupr_l、_wcsupr
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsupr_l
 - _mbsupr
@@ -37,8 +33,6 @@ f1_keywords:
 - _strupr
 - mbsupr_l
 - _wcsupr
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcsupr_l function
 - mbsupr function
@@ -66,23 +60,19 @@ helpviewer_keywords:
 - _tcsupr function
 - strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6d34f0bd4e24fa70f37bb2191293cbc2a3e7ad9c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c3d155ebfdc40c5dd479cffed0b892dd73f80138
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415380"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603641"
 ---
 # <a name="strupr-struprl-mbsupr-mbsuprl-wcsuprl-wcsupr"></a>_strupr、_strupr_l、_mbsupr、_mbsupr_l、_wcsupr_l、_wcsupr
 
 將字串轉換成大寫。 這些函式已有更安全的版本可供使用，請參閱 [_strupr_s、_strupr_s_l、_mbsupr_s、_mbsupr_s_l、_wcsupr_s、_wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbsupr**和 **_mbsupr_l**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsupr**並 **_mbsupr_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -151,11 +141,11 @@ unsigned char *_mbsupr_l(
 
 ## <a name="remarks"></a>備註
 
-**_Strupr**函式轉換時，在每個小寫字母就地*str*為大寫。 轉換由**LC_CTYPE**之地區設定分類設定。 不會影響其他字元。 如需有關**LC_CTYPE**，請參閱[setlocale](setlocale-wsetlocale.md)。 這些功能，但不包含新版 **_l**後置詞使用目前的地區設定; 具有版本 **_l**尾碼是一樣的只不過它們改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_Strupr**函式會將，在每個小寫字母就地*str*為大寫。 轉換由**LC_CTYPE**地區設定分類設定。 不會影響其他字元。 如需詳細資訊**LC_CTYPE**，請參閱[setlocale](setlocale-wsetlocale.md)。 這些功能，但不包含新版 **_l**後置詞使用目前的地區設定; 具有版本 **_l**尾碼都相同，只不過它們改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-**_wcsupr**和 **_mbsupr**是寬字元和多位元組字元版本的 **_strupr**。 引數和傳回值 **_wcsupr**是寬字元字串; **_mbsupr**是多位元組字元字串。 除此之外，這三個函式的行為相同。
+**_wcsupr**並 **_mbsupr**是寬字元和多位元組字元版本的 **_strupr**。 引數和傳回值 **_wcsupr**是寬字元字串; **_mbsupr**是多位元組字元字串。 除此之外，這三個函式的行為相同。
 
-如果*str*為 null 指標，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，這些函數會傳回原始字串和集合允許執行**errno**至**EINVAL**。
+如果*str*為 null 指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，這些函式會傳回原始字串和集合允許執行**errno**要**EINVAL**。
 
 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -168,7 +158,7 @@ unsigned char *_mbsupr_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_strupr**， **_strupr_l**|\<string.h>|
 |**_wcsupr**， **_wcsupr_l**|\<string.h> 或 \<wchar.h>|

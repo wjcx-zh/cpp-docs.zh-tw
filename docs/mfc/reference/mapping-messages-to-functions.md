@@ -1,28 +1,18 @@
 ---
-title: 將訊息對應到函式 |Microsoft Docs
-ms.custom: ''
+title: 將訊息對應到函式
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.mapping.msg.function
-dev_langs:
-- C++
 helpviewer_keywords:
 - Windows messages [MFC], adding message handlers
 - message maps [MFC], mapping messages to functions
 ms.assetid: a7727a62-f638-4b20-b7f5-131f47200d6a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b53175e46cfa858a73b581dfefc78047e96380d6
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 0393475143b9448091d4a886c43ce1206c655b25
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50058945"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629186"
 ---
 # <a name="mapping-messages-to-functions"></a>將訊息對應到函式
 

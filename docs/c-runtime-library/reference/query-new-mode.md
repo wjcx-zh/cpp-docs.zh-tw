@@ -1,10 +1,6 @@
 ---
-title: _query_new_mode | Microsoft Docs
-ms.custom: ''
+title: _query_new_mode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _query_new_mode
 apilocation:
@@ -23,27 +19,21 @@ apitype: DLLExport
 f1_keywords:
 - query_new_mode
 - _query_new_mode
-dev_langs:
-- C++
 helpviewer_keywords:
 - query_new_mode function
 - handler modes
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8907b043e8b4441d6e5213a1d386dbc1a5a6910a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 327f22c847793316bd126721b4a66846d7da84dd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405714"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620021"
 ---
 # <a name="querynewmode"></a>_query_new_mode
 
-傳回一個整數，表示新的處理常式模式所設定 **_set_new_mode**如**malloc**。
+傳回一個整數，表示所設定的新處理常式模式 **_set_new_mode** for **malloc**。
 
 ## <a name="syntax"></a>語法
 
@@ -55,15 +45,15 @@ int _query_new_mode(
 
 ## <a name="return-value"></a>傳回值
 
-傳回目前新處理常式的模式，也就是 0 或 1， **malloc**。 傳回值為 1，表示無法配置記憶體， **malloc**呼叫新的處理常式; 傳回值 0 表示，不會。
+傳回目前新處理常式的模式，也就是 0 或 1， **malloc**。 傳回值 1 表示，無法配置記憶體**malloc**呼叫新的處理常式模式; 傳回值 0 表示不。
 
 ## <a name="remarks"></a>備註
 
-C + + **_query_new_mode**函式會傳回一個整數，表示新的處理常式模式所設定的 c + + [_set_new_mode](set-new-mode.md)函式[malloc](malloc.md)。 新的處理常式模式指出是否在無法配置記憶體， **malloc**是新的處理常式呼叫所設定的[_set_new_handler](set-new-handler.md)。 根據預設， **malloc**不會將新的處理常式呼叫失敗。 您可以使用 **_set_new_mode**因此覆寫這個行為的失敗**malloc**呼叫新的處理常式在相同的方式來**新**運算子會在無法時配置的記憶體。 如需詳細資訊，請參閱 C++ 語言參考中的 [new 和 delete 運算子](../../cpp/new-and-delete-operators.md)的討論。
+C + + **_query_new_mode**函式會傳回一個整數，表示新的處理常式模式所設定的 c + + [_set_new_mode](set-new-mode.md)函式[malloc](malloc.md)。 新的處理常式模式表示失敗時要配置記憶體時， **malloc**就是呼叫所設定的新處理常式[_set_new_handler](set-new-handler.md)。 根據預設， **malloc**不會在失敗時呼叫新的處理常式。 您可以使用 **_set_new_mode**因此覆寫這個行為在失敗**malloc**呼叫新的處理常式在相同方式來**新**運算子因時失敗配置的記憶體。 如需詳細資訊，請參閱 C++ 語言參考中的 [new 和 delete 運算子](../../cpp/new-and-delete-operators.md)的討論。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_query_new_mode**|\<new.h>|
 

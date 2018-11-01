@@ -1,29 +1,18 @@
 ---
-title: 新增自訂資源對話方塊 （c + +） |Microsoft Docs
-ms.custom: ''
+title: 新增自訂資源對話方塊 （c + +）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.newcustomresource
-dev_langs:
-- C++
 helpviewer_keywords:
 - resources [C++], adding
 - Custom Resource Type dialog box [C++]
 ms.assetid: 8216e29d-27ca-4aed-8036-d55fa4468ea2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: cf3bf99a2bc27cce0b95249e18400962e0a4bd35
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: a313e4665c1574e38fcb1d7f21e70ed1374e5412
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316961"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629888"
 ---
 # <a name="new-custom-resource-dialog-box-c"></a>新增自訂資源對話方塊 （c + +）
 
@@ -39,4 +28,4 @@ ms.locfileid: "44316961"
 
 ## <a name="see-also"></a>另請參閱
 
-[新增資源對話方塊](../windows/add-resource-dialog-box.md)
+[Add Resource Dialog Box](../windows/add-resource-dialog-box.md)

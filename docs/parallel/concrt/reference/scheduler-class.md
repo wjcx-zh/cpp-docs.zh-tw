@@ -1,10 +1,6 @@
 ---
-title: Scheduler 類別 |Microsoft Docs
-ms.custom: ''
+title: Scheduler 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - Scheduler
 - CONCRT/concurrency::Scheduler
@@ -22,21 +18,15 @@ f1_keywords:
 - CONCRT/concurrency::Scheduler::ResetDefaultSchedulerPolicy
 - CONCRT/concurrency::Scheduler::ScheduleTask
 - CONCRT/concurrency::Scheduler::SetDefaultSchedulerPolicy
-dev_langs:
-- C++
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 745ab1f4f992591927be101521e0f2902af0ccd7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1b2b4de2a0aa844f9450af9d853b11ea6f485274
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448269"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638265"
 ---
 # <a name="scheduler-class"></a>Scheduler 類別
 
@@ -66,7 +56,7 @@ class Scheduler;
 |[CreateScheduleGroup](#createschedulegroup)|多載。 建立新的排程群組，則排程器內。 會採用參數的版本`_Placement`會導致變成優先執行在該參數所指定的位置在新建立的排程群組內的工作。|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|傳回排程器目前的虛擬處理器數目。|
 |[GetPolicy](#getpolicy)|傳回以建立排程器原則的複本。|
-|[Id](#id)|排程器傳回的唯一識別碼。|
+|[ID](#id)|排程器傳回的唯一識別碼。|
 |[IsAvailableLocation](#isavailablelocation)|判斷指定的位置是否可用排程器上。|
 |[參考資料](#reference)|遞增排程器參考計數。|
 |[RegisterShutdownEvent](#registershutdownevent)|Windows 事件控制代碼傳遞的原因`_Event`收到訊號時，排程器關閉並終結本身的參數。 在事件收到訊號時，所有已排程器已排程的工作已完成。 透過這個方法，可以註冊多個關機的事件。|

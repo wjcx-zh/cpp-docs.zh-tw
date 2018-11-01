@@ -1,10 +1,6 @@
 ---
-title: deque 類別 | Microsoft Docs
-ms.custom: ''
+title: deque 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - deque/std::deque
 - deque/std::deque::allocator_type
@@ -48,8 +44,6 @@ f1_keywords:
 - deque/std::deque::shrink_to_fit
 - deque/std::deque::size
 - deque/std::deque::swap
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::deque [C++]
 - std::deque [C++], allocator_type
@@ -94,16 +88,12 @@ helpviewer_keywords:
 - std::deque [C++], size
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: afcf2528ba84edd90179ef6eb29d356466372633
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0d411344e20c6ef42d8af32e9a1adc448b73584c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713302"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619878"
 ---
 # <a name="deque-class"></a>deque 類別
 
@@ -118,7 +108,7 @@ class deque
 
 ### <a name="parameters"></a>參數
 
-*類型*<br/>
+*Type*<br/>
 要存放在 deque 中的項目資料類型。
 
 *配置器*<br/>
@@ -388,7 +378,7 @@ deque 的最後一個元素。 如果 deque 是空的，傳回值為未定義。
 
 如果 `back` 的傳回值已指派給 `const_reference`，則無法修改 deque 物件。 如果 `back` 的傳回值已指派給 `reference`，則可以修改 deque 物件。
 
-在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空 deque 中的元素，則會發生執行階段錯誤。  如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
+在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空 deque 中的元素，則會發生執行階段錯誤。  如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
 ### <a name="example"></a>範例
 
@@ -1424,7 +1414,7 @@ const_reference front() const;
 
 如果 `front` 的傳回值已指派給 `const_reference`，則無法修改 deque 物件。 如果 `front` 的傳回值已指派給 `reference`，則可以修改 deque 物件。
 
-在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空 deque 中的元素，則會發生執行階段錯誤。  如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
+在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空 deque 中的元素，則會發生執行階段錯誤。  如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
 ### <a name="example"></a>範例
 
@@ -1613,7 +1603,7 @@ const_reference operator[](size_type pos) const;
 
 如果 `operator[]` 的傳回值已指派給 `const_reference`，則無法修改 deque 物件。 如果 `operator[]` 的傳回值已指派給 `reference`，則可以修改 deque 物件。
 
-當使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 編譯之後，如果您嘗試存取的元素超出 deque 界限，則會發生執行階段錯誤。  如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
+當使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 編譯之後，如果您嘗試存取的元素超出 deque 界限，則會發生執行階段錯誤。  如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
 ### <a name="example"></a>範例
 

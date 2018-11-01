@@ -1,11 +1,6 @@
 ---
-title: carg、cargf、cargl、| Microsoft Docs
-ms.custom: ''
+title: carg、cargf、cargl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - carg
 - cargf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/carg
 - complex/cargf
 - complex/cargl
-dev_langs:
-- C++
 helpviewer_keywords:
 - carg function
 - cargf function
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34a5e55b4261c68d90c3bcb28cf2f0e7be1a2c50
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 584732594cd9ca9579907986e3dc3b5f3dbf52c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393468"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665591"
 ---
 # <a name="carg-cargf-cargl"></a>carg、cargf、cargl
 
@@ -79,15 +68,15 @@ long double cargl(
 
 ## <a name="return-value"></a>傳回值
 
-引數 （也稱為階段） *z*。 結果的間隔內會是 [-π，+ π]。
+引數 （也稱為階段） *z*。 結果是在間隔 [-π，+ π]。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**carg**採用 **_Fcomplex**或 **_Lcomplex**值，並傳回**float**或**長** **double**值。 在 C 程式中， **carg**一律採用 **_Dcomplex**值並傳回**double**值。
+C + + 允許多載，因為您可以呼叫多載**carg**採用 **_Fcomplex**或是 **_Lcomplex**的值，並傳回**float**或**長** **double**值。 在 C 程式中， **carg**一律採用 **_Dcomplex**值，然後傳回**double**值。
 
 ## <a name="requirements"></a>需求
 
-|常式|C 標頭|C++ 標頭|
+|常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
 |**carg**， **cargf**， **cargl**|\<complex.h>|\<ccomplex>|
 

@@ -1,26 +1,15 @@
 ---
-title: 快速鍵輔助按鍵屬性 （c + +） |Microsoft Docs
-ms.custom: ''
+title: 快速鍵輔助按鍵屬性 （c + +）
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Modifier property
 ms.assetid: f05a9379-e037-4cfb-b6ef-d2c655bcfa7f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 3c053af58842c75910b0214ae828c652daa33a81
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f9dfcbde68d2b3d1ebdd1b94aa40339bbc0ff4e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389287"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650661"
 ---
 # <a name="accelerator-modifier-property-c"></a>快速鍵輔助按鍵屬性 （c + +）
 

@@ -1,23 +1,14 @@
 ---
-title: 將在網頁上 (ATL 教學課程，第 7 部分) 控制項放 |Microsoft Docs
+title: 將控制項放在網頁上 (ATL 教學課程，第 7 部分)
 ms.custom: get-started-article
 ms.date: 09/27/2018
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 50dc4c95-c95b-4006-b88a-9826f7bdb222
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 052c6fa80b222a077fb41d861a4ea234f64073ec
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 77d608fddfc63862c81ce7c7d259510fb4784910
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821604"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659195"
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>將控制項放在網頁上 (ATL 教學課程，第 7 部分)
 

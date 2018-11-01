@@ -1,11 +1,6 @@
 ---
-title: fesetenv |Microsoft 文件
-ms.custom: ''
+title: fesetenv
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fesetenv
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - fesetenv
 - fenv/fesetenv
-dev_langs:
-- C++
 helpviewer_keywords:
 - fesetenv function
 ms.assetid: ffc64fff-8ea7-4d59-9e04-ff96ef8cd012
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bd761f505c602aad44c5e00df223d4a6c983e851
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c91bfbb89df964fed0a632d5fb5ebac47ebe948
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397242"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436132"
 ---
 # <a name="fesetenv"></a>fesetenv
 
@@ -55,7 +44,7 @@ int fesetenv(
 ### <a name="parameters"></a>參數
 
 *penv*<br/>
-指標**fenv_t**物件，其中包含所設定的浮點數的環境，藉由呼叫[fegetenv](fegetenv1.md)或[feholdexcept](feholdexcept2.md)。 您也可以使用指定的預設啟動浮點環境**FE_DFL_ENV**巨集。
+指標**fenv_t**物件，其中包含所設定的浮點環境，藉由呼叫[fegetenv](fegetenv1.md)或是[feholdexcept](feholdexcept2.md)。 您也可以使用，指定預設啟動浮點環境**FE_DFL_ENV**巨集。
 
 ## <a name="return-value"></a>傳回值
 
@@ -63,7 +52,7 @@ int fesetenv(
 
 ## <a name="remarks"></a>備註
 
-**Fesetenv**函式會將目前的浮點環境中儲存的值從**fenv_t**指向的物件*penv*。 浮點點環境是一組會影響浮點計算的狀態旗標和控制項模式。 這包括捨入模式以及處理浮點例外狀況的狀態旗標。  如果*penv*不**FE_DFL_ENV**或未指向有效**fenv_t**物件，後續的行為是未定義。
+**Fesetenv**函式會將目前的浮點環境中儲存的值從**fenv_t**指向物件*penv*。 浮點點環境是一組會影響浮點計算的狀態旗標和控制項模式。 這包括捨入模式以及處理浮點例外狀況的狀態旗標。  如果*penv*不是**FE_DFL_ENV**或不是指向有效**fenv_t**物件，不定義後續行為。
 
 呼叫此函式設定的例外狀況中的狀態旗標*penv*物件，但它不會引發這些例外狀況。
 

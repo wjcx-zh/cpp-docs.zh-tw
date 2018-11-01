@@ -1,10 +1,6 @@
 ---
-title: mbrlen | Microsoft Docs
-ms.custom: ''
+title: mbrlen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - mbrlen
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - mbrlen
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 77e5cb106a971bcaf02662bfd8459267a134173a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75ae134db0e74099a9b19f4820a44a197fdfda2e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404437"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438450"
 ---
 # <a name="mbrlen"></a>mbrlen
 
@@ -69,18 +59,18 @@ size_t mbrlen(
 
 |||
 |-|-|
-0|下一步*計數*或較少位元組完成多位元組字元，表示寬 null 字元。
-1 到*計數*(含） 之間|下一步*計數*或較少位元組完成有效多位元組字元。 傳回的值是完成多位元組字元的位元組數目。
+0|下一步*計數*或更少個位元組會完成代表 null 字元的寬字元的多位元組字元。
+1 到*計數*(含） 之間|下一步*計數*或更少個位元組會完成有效多位元組字元。 傳回的值是完成多位元組字元的位元組數目。
 (size_t)(-2)|下一步*計數*個位元組會產生不完整但可能有效的多位元組字元和所有*計數*已處理的位元組。
-(size_t)(-1)|發生編碼錯誤。 下一步*計數*或較少位元組不會產生完整且有效的多位元組字元。 在此情況下， **errno**設為 EILSEQ，且在轉換狀態*mbstate*未指定。
+(size_t)(-1)|發生編碼錯誤。 下一步*計數*或更少個位元組並不會提供完整且有效的多位元組字元。 在此情況下， **errno**設為 EILSEQ，且在轉換狀態*mbstate*未指定。
 
 ## <a name="remarks"></a>備註
 
-**Mbrlen**函式會檢查最多*計數*所指向的位元組開始的位元組*str*來判斷完成下一個所需的位元組數目多位元組字元，包括任何移位序列。 它相當於呼叫`mbrtowc(NULL, str, count, &mbstate)`其中*mbstate*是其中一個使用者提供**mbstate_t**物件或程式庫提供的靜態內部物件。
+**Mbrlen**函式最多會檢查*計數*位元組的位元組開始所指向*str*來判斷完成下一個所需的位元組數目多位元組字元，包括任何移位序列。 它相當於呼叫`mbrtowc(NULL, str, count, &mbstate)`何處*mbstate*是其中一個使用者提供**mbstate_t**物件或程式庫提供的靜態內部物件。
 
-**Mbrlen**函式，儲存及使用不完整的多位元組字元的移位狀態*mbstate*參數。 這可讓**mbrlen**必須是多位元組字元中間重新啟動，如果的功能，檢查最*計數*位元組。 如果*mbstate*為 null 指標， **mbrlen**使用內部靜態**mbstate_t**物件儲存移位狀態。 因為內部**mbstate_t**物件不是執行緒安全，我們建議您一律配置及傳遞自己*mbstate*參數。
+**Mbrlen**函式，儲存及使用中的不完整多位元組字元的移位狀態*mbstate*參數。 這可讓**mbrlen**多位元組字元中間重新啟動，如果需要檢查最*計數*位元組。 如果*mbstate*為 null 指標， **mbrlen**會使用內部靜態**mbstate_t**物件儲存移位狀態。 因為內部**mbstate_t**物件不是執行緒安全，我們建議您一律配置及傳遞您自己*mbstate*參數。
 
-**Mbrlen**函式不同於[_mbclen、 mblen、 _mblen_l](mbclen-mblen-mblen-l.md)重新。 移位狀態會儲存在*mbstate*的相同或其他可重新啟動的函式的後續呼叫。 混合使用可重新啟動和不可重新啟動之函式的結果不明。  例如，應用程式應該使用**wcsrlen**而不是**wcslen**如果的後續呼叫**wcsrtombs**而非**wcstombs**.
+**Mbrlen**函式與不同[_mbclen、 mblen、 _mblen_l](mbclen-mblen-mblen-l.md)重新。 移位狀態會儲存在*mbstate*的後續呼叫相同或其他可重新啟動的函式。 混合使用可重新啟動和不可重新啟動之函式的結果不明。  例如，應用程式應該使用**wcsrlen**而不是**wcslen**如果後續呼叫**wcsrtombs**改用**wcstombs**.
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -90,7 +80,7 @@ size_t mbrlen(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**mbrlen**|\<wchar.h>|
 
@@ -98,7 +88,7 @@ size_t mbrlen(
 
 ## <a name="example"></a>範例
 
-此範例示範多位元組字元的解譯如何取決於目前的字碼頁，並示範的繼續功能**mbrlen**。
+此範例示範如何多位元組字元的解譯取決於目前的字碼頁，以及示範的繼續功能**mbrlen**。
 
 ```C
 // crt_mbrlen.c

@@ -1,11 +1,6 @@
 ---
-title: fmin fminf，fminl |Microsoft 文件
-ms.custom: ''
+title: fmin、fminf、fminl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fmin
 - fminf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: abf16c4cc21d1dc396f0b81aadc8d495c6bdd4b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f73853e18bd5d7f699cd2c3109fe5fb830859bf1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398941"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464359"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin、fminf、fminl
 
@@ -89,23 +80,23 @@ long double fminl(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，傳回較小的*x*或*y*。
+如果成功，會傳回較小的一個*x*或是*y*。
 
 |輸入|結果|
 |-----------|------------|
 |*x*是 NaN|*y*|
 |*y*是 NaN|*x*|
-|*x*和*y*是 NaN|NaN|
+|*x*並*y*是 NaN|NaN|
 
-此函式不會造成[_matherr](matherr.md)叫用時，會造成任何浮點例外狀況，或變更的值**errno**。
+此函式不會造成[_matherr](matherr.md)若要叫用時，會導致任何浮點例外狀況，或變更的值**errno**。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**fmin**採用並傳回**float**和**長** **double**型別。 在 C 程式中， **fmin**一律採用並傳回**double**。
+因為 c + + 允許多載，您可以呼叫多載**fmin**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **fmin**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**fmin**， **fminf**， **fminl**|C：\<math.h><br />C++：\<math.h> 或 \<cmath>|
 

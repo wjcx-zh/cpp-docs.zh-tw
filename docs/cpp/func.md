@@ -1,29 +1,19 @@
 ---
-title: __func__ |Microsoft 文件
-ms.custom: ''
+title: __func__
 ms.date: 10/19/2017
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - __func__
-dev_langs:
-- C++
 ms.assetid: a5299b8d-f0ee-4af2-91dd-8fb165e68798
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d78a249fe5b111c17c29895edcdc3fa5ba2f27a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eecd3efea6239c92a8bc81c0ed13a9563e5b87d2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413589"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438580"
 ---
 # <a name="func"></a>__func__
 
-**(C + + 11)** 預先定義的識別項&#95; &#95;func&#95; &#95;隱含定義為字串，其中包含封入函式的非限定和未修飾名稱。 &#95;&#95;func&#95; &#95; c + + 標準所託管，而且不是 Microsoft 擴充功能。
+**(C + + 11)** 預先定義的識別碼&#95; &#95;f&#95; &#95;已隱含定義為包含封入函式的非限定和未裝飾名稱的字串。 &#95;&#95;func&#95; &#95; c + + 標準所託管，而且不是 Microsoft 擴充功能。
 
 ## <a name="syntax"></a>語法
 
@@ -33,7 +23,7 @@ __func__
 
 ## <a name="return-value"></a>傳回值
 
-傳回以 null 終止 const char 的字元陣列，其中包含函式名稱。
+傳回以 null 結束 const char 陣列的字元，包含函式名稱。
 
 ## <a name="example"></a>範例
 

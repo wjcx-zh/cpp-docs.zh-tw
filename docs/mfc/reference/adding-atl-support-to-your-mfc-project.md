@@ -1,28 +1,18 @@
 ---
-title: 將 ATL 支援加入至 MFC 專案 |Microsoft Docs
-ms.custom: ''
+title: 將 ATL 支援加入至 MFC 專案
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.adding.atl.mfc
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bc0d21202478a02980dbc94dc866b769c3c71a9b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9f8861e3b6aa0fee95aa84b989cf1057ae0f76b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429730"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50448591"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>將 ATL 支援加入至 MFC 專案
 
@@ -51,7 +41,7 @@ ms.locfileid: "46429730"
 
 ## <a name="see-also"></a>另請參閱
 
-[加入類別](../../ide/adding-a-class-visual-cpp.md)<br/>
+[新增類別](../../ide/adding-a-class-visual-cpp.md)<br/>
 [使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [新增成員函式](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [新增成員變數](../../ide/adding-a-member-variable-visual-cpp.md)<br/>

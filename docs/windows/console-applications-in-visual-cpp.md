@@ -1,24 +1,13 @@
 ---
-title: 主控台應用程式，Visual c + + |Microsoft Docs
-ms.custom: ''
+title: Visual C++ 中的主控台應用程式
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 3071307f-af0d-489a-8e20-02acded7fc66
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f769f782c96f6a0143d98b2e2039ce915b2640f8
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 20b203ffabd1403160141b27dab43b41a6c55db0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50060360"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459133"
 ---
 # <a name="console-applications-in-visual-c"></a>Visual C++ 中的主控台應用程式
 主控台應用程式會接受輸入並將輸出傳送至主控台 (也稱為命令提示字元)。 您可以建立主控台應用程式，來完成基本工作或執行非常複雜的工作。 您也可以使用主控台應用程式，對您稍後要併入 Windows 傳統型應用程式或通用 Windows 平台應用程式的功能進行概念證明示範。 主控台應用程式可以透過管道或其他 RPC 機制，與其他傳統型應用程式溝通。

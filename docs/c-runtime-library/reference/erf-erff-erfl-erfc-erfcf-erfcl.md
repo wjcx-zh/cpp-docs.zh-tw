@@ -1,10 +1,6 @@
 ---
-title: erf、erff、erfl、erfc、erfcf、erfcl | Microsoft Docs
-ms.custom: ''
+title: erf、erff、erfl、erfc、erfcf、erfcl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - erff
 - erfl
@@ -26,23 +22,17 @@ f1_keywords:
 - erfl
 - erf
 - erff
-dev_langs:
-- C++
 helpviewer_keywords:
 - erfl function
 - erff function
 - erf function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b7ab1448c3f1d77ab79266858a19d822b1cdb4f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5723286add75a57844f177b9df5d86eb15080229
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396153"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450039"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf、erff、erfl、erfc、erfcf、erfcl
 
@@ -94,13 +84,13 @@ long double erfcl(
 
 ## <a name="remarks"></a>備註
 
-**Erf**函數會計算的高斯錯誤函式*x*，其定義為：
+**Erf**函式會計算的高斯錯誤函式*x*，其定義為：
 
 ![x 的誤差函式](media/crt_erf_formula.PNG "CRT_erf_formula")
 
-補充高斯錯誤函式定義為 1-erf （x)。 **Erf**函式傳回的值範圍為-1.0 到 1.0。 不會傳回錯誤。 **Erfc**函式會傳回範圍 0 到 2 中的值。 如果*x*而言太大**erfc**、 **errno**變數會設為**為 ERANGE**。
+補充高斯錯誤函式定義為 1-erf （x)。 **Erf**函式傳回值，範圍-1.0 為 1.0。 不會傳回錯誤。 **Erfc**函式會傳回範圍 0 到 2 中的值。 如果*x*太大**erfc**，則**errno**變數設定為**ERANGE**。
 
-因為 c + + 允許多載，所以您可以呼叫的多載**erf**和**erfc**採用並傳回**float**和**長** **double**型別。 在 C 程式中， **erf**和**erfc**一律採用並傳回**double**。
+因為 c + + 允許多載，您可以呼叫多載**erf**並**erfc**採用並傳回**float**並**長** **雙**型別。 在 C 程式中， **erf**並**erfc**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

@@ -1,10 +1,6 @@
 ---
-title: COleDispatchException 類別 |Microsoft Docs
-ms.custom: ''
+title: COleDispatchException 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleDispatchException
 - AFXDISP/COleDispatchException
@@ -13,8 +9,6 @@ f1_keywords:
 - AFXDISP/COleDispatchException::m_strHelpFile
 - AFXDISP/COleDispatchException::m_strSource
 - AFXDISP/COleDispatchException::m_wCode
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleDispatchException [MFC], m_dwHelpContext
 - COleDispatchException [MFC], m_strDescription
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - COleDispatchException [MFC], m_strSource
 - COleDispatchException [MFC], m_wCode
 ms.assetid: 0e95c8be-e21a-490c-99ec-181c6a9a26d0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b921f03f965e02b85ebc7bd9efff45910ab6adfb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 06f8d8abd8ea337369ceed62a9944e867d355768
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431069"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456234"
 ---
 # <a name="coledispatchexception-class"></a>COleDispatchException 類別
 
@@ -89,7 +79,7 @@ DWORD m_dwHelpContext;
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[coledispatchdriver:: Createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。
+  請參閱 [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)的範例。
 
 ##  <a name="m_strdescription"></a>  COleDispatchException::m_strDescription
 
@@ -105,7 +95,7 @@ CString m_strDescription;
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[coledispatchdriver:: Createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。
+  請參閱 [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)的範例。
 
 ##  <a name="m_strhelpfile"></a>  COleDispatchException::m_strHelpFile
 
@@ -125,7 +115,7 @@ CString m_strSource;
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[coledispatchdriver:: Createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。
+  請參閱 [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)的範例。
 
 ##  <a name="m_wcode"></a>  COleDispatchException::m_wCode
 

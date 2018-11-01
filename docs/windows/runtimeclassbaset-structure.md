@@ -1,32 +1,22 @@
 ---
-title: RuntimeClassBaseT 結構 |Microsoft Docs
-ms.custom: ''
+title: RuntimeClassBaseT 結構
 ms.date: 10/03/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::RuntimeClassBaseT
 - implements/Microsoft::WRL::Details::RuntimeClassBaseT::AsIID
 - implements/Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::Details::RuntimeClassBaseT structure
 - Microsoft::WRL::Details::RuntimeClassBaseT::AsIID method
 - Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS method
 ms.assetid: a62775fb-3359-4f45-9ff1-c07fa8da464b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9c46e89dc11f4c6fe216cfd61c3222a9c52d9e45
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 3dd55c322e7da3be3f888c4faa88172fd0c17672
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789133"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456845"
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT 結構
 
@@ -85,7 +75,7 @@ __forceinline static HRESULT AsIID(
 *T*<br/>
 實作介面識別碼參數所指定的型別*riid*。
 
-*實作*<br/>
+*implements*<br/>
 範本參數所指定類型的變數*T*。
 
 *riid*<br/>
@@ -120,7 +110,7 @@ __forceinline static HRESULT GetImplementedIIDS(
 *T*<br/>
 型別*實作*參數。
 
-*實作*<br/>
+*implements*<br/>
 參數所指定的類型指標*T*。
 
 *iidCount*<br/>

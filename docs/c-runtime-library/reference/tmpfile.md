@@ -1,10 +1,6 @@
 ---
-title: tmpfile | Microsoft Docs
-ms.custom: ''
+title: tmpfile
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tmpfile
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - tmpfile
-dev_langs:
-- C++
 helpviewer_keywords:
 - temporary files
 - tmpfile function
 - temporary files, creating
 ms.assetid: c4a4dc24-70da-438d-ae4e-98352d88e375
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ebcad2a25af2f2acb0056d882c4191f1a51293d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 98afcb7a3e04a96a1b08bc1b975634153e550839
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409065"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530321"
 ---
 # <a name="tmpfile"></a>tmpfile
 
@@ -52,19 +42,19 @@ FILE *tmpfile( void );
 
 ## <a name="return-value"></a>傳回值
 
-如果成功的話， **tmpfile**傳回的資料流指標。 否則，它會傳回**NULL**指標。
+如果成功， **tmpfile**傳回資料流指標。 否則，它會傳回**NULL**指標。
 
 ## <a name="remarks"></a>備註
 
 **Tmpfile**函式會建立暫存檔，並傳回該資料流的指標。 暫存檔案建立於根目錄。 若要在非根目錄的目錄建立暫存檔案，請使用 [tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) 或 [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) 搭配 [fopen](fopen-wfopen.md)。
 
-如果無法開啟檔案， **tmpfile**傳回**NULL**指標。 檔案關閉時，在程式終止一般來說，或當時，會自動刪除這個暫存檔 **_rmtmp**呼叫時，假設目前的工作目錄不會變更。 在中開啟暫存檔**w + b** （二進位讀取/寫入） 模式。
+無法開啟檔案，如果**tmpfile**會傳回**NULL**指標。 關閉檔案時，一般來說，或當，在程式終止時，會自動刪除這個暫存檔 **_rmtmp**呼叫時，假設目前的工作目錄不會變更。 在中開啟暫存檔**w + b** （二進位讀取/寫入） 模式。
 
-如果您嘗試使用多個 TMP_MAX，就會發生失敗 （請參閱 STDIO。H） 呼叫**tmpfile**。
+如果您嘗試超過 TMP_MAX，就會發生失敗 （請參閱 STDIO。使用 H） 呼叫**tmpfile**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**tmpfile**|\<stdio.h>|
 

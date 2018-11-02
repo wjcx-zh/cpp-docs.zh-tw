@@ -1,33 +1,23 @@
 ---
-title: 編譯器錯誤 C3012 |Microsoft Docs
-ms.custom: ''
+title: 編譯器錯誤 C3012
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3012
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3012
 ms.assetid: cc7040b1-b3fb-4da6-a474-877914d30332
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 99bdac5ffb75978479ae7ef420a48b3d1b2f8e64
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9fe0ac7d3637cad3a5571c4631345dac1a0021bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46063667"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50503077"
 ---
 # <a name="compiler-error-c3012"></a>編譯器錯誤 C3012
 
 > '*內建*': 不允許直接放在平行區域內的內建函式
 
-A[編譯器內建](../../intrinsics/compiler-intrinsics.md)函式中不允許`omp parallel`區域。 若要修正此問題，將內建函式移出區域，或取代非內建的對等項目。
+[](../../intrinsics/compiler-intrinsics.md) 區域中不允許 `omp parallel` 函式。 若要修正此問題，將內建函式移出區域，或取代非內建的對等項目。
 
 ## <a name="example"></a>範例
 

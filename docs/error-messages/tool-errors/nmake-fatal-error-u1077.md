@@ -1,31 +1,21 @@
 ---
-title: NMAKE 嚴重錯誤 U1077 |Microsoft Docs
-ms.custom: ''
+title: NMAKE 嚴重錯誤 U1077
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - U1077
-dev_langs:
-- C++
 helpviewer_keywords:
 - U1077
 ms.assetid: 70d989f8-ef34-4ad7-8fe0-5b800556b2a1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 31a1164ecd8ce17aec7058525598c68d312f14e0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6b0e7b13628c9f38231f4a8772e9babadaf90636
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113028"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608131"
 ---
 # <a name="nmake-fatal-error-u1077"></a>NMAKE 嚴重錯誤 U1077
 
-程式: 傳回碼 'value'
+[程式]: 傳回碼 'value'
 
 指定的命令或程式呼叫 NMAKE 失敗，傳回指定的結束代碼。
 

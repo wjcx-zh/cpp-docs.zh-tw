@@ -1,10 +1,6 @@
 ---
-title: _isatty | Microsoft Docs
-ms.custom: ''
+title: _isatty
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isatty
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _isatty
-dev_langs:
-- C++
 helpviewer_keywords:
 - isatty function
 - character device checking
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4be35fce0a790751683a4bf8a0cceaf938fea82
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef0df5f859779c081df47ef4bfe938ec2601d524
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402455"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545583"
 ---
 # <a name="isatty"></a>_isatty
 
@@ -58,17 +48,17 @@ int _isatty( int fd );
 
 ## <a name="return-value"></a>傳回值
 
-**_isatty**字元裝置相關聯的描述元是否傳回非零值。 否則， **_isatty**傳回 0。
+**_isatty**傳回非零值，描述元是否與字元裝置相關聯。 否則，請 **_isatty**會傳回 0。
 
 ## <a name="remarks"></a>備註
 
-**_Isatty**函式判斷是否*fd*字元裝置 （終端機、 主控台、 印表機或序列連接埠） 與相關聯。
+**_Isatty**函式會判斷是否*fd*與字元裝置 （終端機、 主控台、 印表機或序列連接埠） 相關聯。
 
-此函式會驗證*fd*參數。 如果*fd*是不正確的檔案指標，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，函數會傳回 0 和集合允許執行**errno**至**EBADF**。
+此函式會驗證*fd*參數。 如果*fd*是不正確的檔案指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，則函式會傳回 0 並集允許執行**errno**要**EBADF**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_isatty**|\<io.h>|
 

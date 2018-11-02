@@ -1,10 +1,6 @@
 ---
-title: strncmp、wcsncmp、_mbsncmp、_mbsncmp_l | Microsoft Docs
-ms.custom: ''
+title: strncmp、wcsncmp、_mbsncmp、_mbsncmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strncmp
 - _mbsncmp
@@ -33,8 +29,6 @@ f1_keywords:
 - strncmp
 - _mbsncmp
 - wcsncmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tcsnccmp function
 - ftcsncmp function
@@ -54,23 +48,19 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a64d7248151287f4f2af38e666db62f9a15d833f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b8b5472289bacc940bb0cbea7876f246243660bf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417349"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523749"
 ---
 # <a name="strncmp-wcsncmp-mbsncmp-mbsncmpl"></a>strncmp、wcsncmp、_mbsncmp、_mbsncmp_l
 
 比較最多兩個字串的指定字元計數。
 
 > [!IMPORTANT]
-> **_mbsncmp**和 **_mbsncmp_l**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsncmp**並 **_mbsncmp_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -115,7 +105,7 @@ int _mbsncmp_l(
 
 ## <a name="return-value"></a>傳回值
 
-傳回值會指出子字串的關聯性*string1*和*string2* ，如下所示。
+傳回值，表示子字串的關聯*string1*並*string2* ，如下所示。
 
 |傳回值|描述|
 |------------------|-----------------|
@@ -123,17 +113,17 @@ int _mbsncmp_l(
 |0|*string1*子字串等於*string2*子字串|
 |> 0|*string1*子字串大於*string2*子字串|
 
-參數驗證錯誤時， **_mbsncmp**和 **_mbsncmp_l**傳回 **_NLSCMPERROR**，定義在\<h > 和\<m >。
+參數驗證錯誤時， **_mbsncmp**並 **_mbsncmp_l**傳回 **_NLSCMPERROR**，其定義於\<h > 和\<m >。
 
 ## <a name="remarks"></a>備註
 
-**Strncmp**函式會執行序數比較的第一個最*計數*字串中字元*string1*和*string2*和傳回值，指出子字串之間的關聯性。 **strncmp**是區分大小寫版本的 **_strnicmp**。 **wcsncmp**和 **_mbsncmp**是區分大小寫版本的 **_wcsnicmp**和 **_mbsnicmp**。
+**Strncmp**函式會執行序數比較最多的第一個*計數*中的字元*string1*並*string2*和傳回值，指出子字串之間的關聯性。 **strncmp**區分大小寫版本 **_strnicmp**。 **wcsncmp**並 **_mbsncmp**是區分大小寫的版本 **_wcsnicmp**並 **_mbsnicmp**。
 
-**wcsncmp**和 **_mbsncmp**是寬字元和多位元組字元版本的**strncmp**。 引數**wcsncmp**是寬字元字串; **_mbsncmp**是多位元組字元字串。 **_mbsncmp**根據多位元組字碼頁辨識多位元組字元序列，並傳回 **_NLSCMPERROR**在發生錯誤。
+**wcsncmp**並 **_mbsncmp**是寬字元和多位元組字元版本的**strncmp**。 引數**wcsncmp**是寬字元字串; **_mbsncmp**是多位元組字元字串。 **_mbsncmp**辨識多位元組字元序列，根據多位元組字碼頁，並傳回 **_NLSCMPERROR**在發生錯誤。
 
-此外， **_mbsncmp**和 **_mbsncmp_l**驗證的參數。 如果*string1*或*string2*為 null 指標，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行 **_mbsncmp**和 **_mbsncmp_l**傳回 **_NLSCMPERROR**並設定**errno**至**EINVAL**。 **strncmp**和**wcsncmp**不會驗證它們的參數。 除此之外，這些函式的行為相同。
+此外， **_mbsncmp**並 **_mbsncmp_l**驗證參數。 如果*string1*或是*string2*為 null 指標，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行 **_mbsncmp**並 **_mbsncmp_l**傳回 **_NLSCMPERROR** ，並設定**errno**到**EINVAL**。 **strncmp**並**wcsncmp**不會驗證其參數。 除此之外，這些函式的行為相同。
 
-比較行為 **_mbsncmp**和 **_mbsncmp_l**的設定會受到**LC_CTYPE**之地區設定分類設定。 這會控制對多位元組字元的開頭和結尾位元組的偵測。 如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 **_Mbsncmp**函式會針對地區設定相關行為使用目前的地區設定。 **_Mbsncmp_l**函式是完全相同，不同之處在於它會使用*地區設定*參數改為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。 如果地區設定是單一位元組地區設定，這些函式的行為等同於**strncmp**。
+比較行為 **_mbsncmp**並 **_mbsncmp_l**的設定會影響**LC_CTYPE**地區設定分類設定。 這會控制對多位元組字元的開頭和結尾位元組的偵測。 如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 **_Mbsncmp**函式會針對地區設定相關行為使用目前的地區設定。 **_Mbsncmp_l**函式完全相同，不同之處在於它會使用*地區設定*參數改。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。 如果地區設定是單一位元組的地區設定，這些函式的行為等同於**strncmp**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -146,7 +136,7 @@ int _mbsncmp_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**strncmp**|\<string.h>|
 |**wcsncmp**|\<string.h> 或 \<wchar.h>|

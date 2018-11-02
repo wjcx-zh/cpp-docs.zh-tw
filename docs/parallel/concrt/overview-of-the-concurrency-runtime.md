@@ -1,28 +1,18 @@
 ---
-title: 並行執行階段概觀 |Microsoft Docs
-ms.custom: ''
+title: 並行執行階段概觀
 ms.date: 07/20/2018
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency Runtime, requirements
 - Concurrency Runtime, architecture
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b837a68c1887254cd6ace9546a9c5175d1ee08a9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c1b9f9ca0565bfb04c3bff56b23ea1ef1dfa42d6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384491"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613664"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>並行執行階段概觀
 本文件提供並行執行階段的總覽。 內容描述並行執行階段的優點、使用時機，以及其元件如何與彼此、與作業系統及應用程式互動。
@@ -39,7 +29,7 @@ ms.locfileid: "46384491"
 
 - [C + + Lambda 運算式](#lambda)
 
-- [Requirements](#requirements)
+- [需求](#requirements)
 
 ## <a name="dlls"></a> 並行執行階段實作歷程記錄
 

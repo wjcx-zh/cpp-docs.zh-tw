@@ -1,28 +1,18 @@
 ---
-title: __vmx_vmread |Microsoft Docs
-ms.custom: ''
+title: __vmx_vmread
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __vmx_vmread
-dev_langs:
-- C++
 helpviewer_keywords:
 - VMREAD instruction
 - __vmx_vmread intrinsic
 ms.assetid: 08bdd7a0-6435-4ea6-b9a0-f592d870e5aa
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0d9483dafd763112f31f5299a5e0e7e54c224459
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 0a4528bed4426ce5b611e986a69f4b0b8c750548
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821019"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499091"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 
@@ -56,7 +46,7 @@ unsigned char __vmx_vmread(
 
 ## <a name="remarks"></a>備註
 
-`__vmx_vmread`函式相當於`VMREAD`機器指令。 值`Field`參數是 Intel 文件中所述的編碼的欄位索引。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](https://software.intel.com/articles/intel-sdm)網站的 url，然後參閱該文件的附錄 C.
+`__vmx_vmread` 函式相當於 `VMREAD` 機器指令。 值`Field`參數是 Intel 文件中所述的編碼的欄位索引。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](https://software.intel.com/articles/intel-sdm)網站的 url，然後參閱該文件的附錄 C.
 
 ## <a name="requirements"></a>需求
 

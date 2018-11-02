@@ -1,29 +1,19 @@
 ---
-title: TN051： 在現在和將來使用 CTL3D |Microsoft Docs
-ms.custom: ''
+title: TN051：現在和將來使用 CTL3D
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ctl3d
-dev_langs:
-- C++
 helpviewer_keywords:
 - TN051
 - CTL3D.DLL
 - 3D effect
 ms.assetid: ab517a13-a137-4a60-8039-be92a632b76b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dfffe63e80160cab1c85ef19de321b361e1c26cb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fb70bc7b073b3b1ef45741d4f4be314d7ce61466
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388635"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50504217"
 ---
 # <a name="tn051-using-ctl3d-now-and-in-the-future"></a>TN051：現在和將來使用 CTL3D
 

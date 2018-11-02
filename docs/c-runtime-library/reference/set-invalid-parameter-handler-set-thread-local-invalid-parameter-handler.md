@@ -1,10 +1,6 @@
 ---
-title: _set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler | Microsoft Docs
-ms.custom: ''
+title: _set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_invalid_parameter_handler
 - _set_thread_local_invalid_parameter_handler
@@ -25,24 +21,18 @@ f1_keywords:
 - set_invalid_parameter_handler
 - _set_invalid_parameter_handler
 - _set_thread_local_invalid_parameter_handler
-dev_langs:
-- C++
 helpviewer_keywords:
 - invalid parameter handler
 - set_invalid_parameter_handler function
 - _set_invalid_parameter_handler function
 - _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4808367c94ec6c869c7f3bcafd2965a317553a6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1df876d6df9327e817d5d2c401e0abe97ad7a548
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407599"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617031"
 ---
 # <a name="setinvalidparameterhandler-setthreadlocalinvalidparameterhandler"></a>_set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler
 
@@ -70,7 +60,7 @@ _invalid_parameter_handler _set_thread_local_invalid_parameter_handler(
 
 ## <a name="remarks"></a>備註
 
-許多 C 執行階段函式都會檢查傳遞給它們之引數的有效性。 如果傳遞無效的引數，則可以設定的函式**errno**錯誤號碼或傳回錯誤碼。 在這種情況下，也會呼叫無效的參數處理常式。 C 執行階段會提供預設全域無效的參數處理常式，以終止程式，並顯示執行階段錯誤訊息。 您可以使用 **_set_invalid_parameter_handler**將自己的函式設定為全域的無效參數處理常式。 C 執行階段也支援執行緒區域無效的參數處理常式。 如果執行緒區域參數處理常式在執行緒中使用設定 **_set_thread_local_invalid_parameter_handler**，從執行緒中呼叫 C 執行階段函式使用該處理常式，而不是全域的處理常式。 一次只有一個函式可以指定為全域無效引數處理常式。 只有一個函式可以指定為一個執行緒的執行緒區域無效引數處理常式，但不同的執行緒可以有不同的執行緒區域處理常式。 這可讓您變更程式碼某個部分所用的處理常式，而不會影響其他執行緒的行為。
+許多 C 執行階段函式都會檢查傳遞給它們之引數的有效性。 如果傳遞無效的引數，則可以設定函式**errno**錯誤號碼或傳回錯誤碼。 在這種情況下，也會呼叫無效的參數處理常式。 C 執行階段會提供預設全域無效的參數處理常式，以終止程式，並顯示執行階段錯誤訊息。 您可以使用 **_set_invalid_parameter_handler**將自己的函式設定為全域無效的參數處理常式。 C 執行階段也支援執行緒區域無效的參數處理常式。 如果執行緒區域參數處理常式在執行緒中使用設定 **_set_thread_local_invalid_parameter_handler**，從執行緒中呼叫 C 執行階段函式使用該處理常式，而不是全域處理常式。 一次只有一個函式可以指定為全域無效引數處理常式。 只有一個函式可以指定為一個執行緒的執行緒區域無效引數處理常式，但不同的執行緒可以有不同的執行緒區域處理常式。 這可讓您變更程式碼某個部分所用的處理常式，而不會影響其他執行緒的行為。
 
 執行階段呼叫無效參數函式時，通常表示發生無法復原的錯誤。 您提供的無效的參數處理常式函式應該會在儲存後中止任何資料。 除非您確定錯誤是可復原的，否則不應該將控制權傳回給主要函式。
 
@@ -86,15 +76,15 @@ void _invalid_parameter(
 );
 ```
 
-*運算式*引數是寬的字串表示的引數運算式引發錯誤。 *函式*引數是收到無效的引數的 CRT 函式名稱。 *檔案*引數是 CRT 來源檔案包含函式的名稱。 *列*引數是在該檔案中的行號。 最後一個引數會予以保留。 所有參數都具有值**NULL**除非使用 CRT 程式庫的偵錯版本。
+*運算式*引數是寬字串表示的引數運算式引發錯誤。 *函式*引數是收到無效的引數的 CRT 函式的名稱。 *檔案*引數是包含此函式的 CRT 原始程式檔的名稱。 *列*引數是在該檔案中的行號。 最後一個引數會予以保留。 所有參數都有值**NULL**除非使用 CRT 程式庫的偵錯版本。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_set_invalid_parameter_handler**， **_set_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> 或 \<stdlib.h>|
 
-**_Set_invalid_parameter_handler**和 **_set_thread_local_invalid_parameter_handler**函式是 Microsoft 專有的。 如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+**_Set_invalid_parameter_handler**並 **_set_thread_local_invalid_parameter_handler**函式是 Microsoft 專有的。 如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

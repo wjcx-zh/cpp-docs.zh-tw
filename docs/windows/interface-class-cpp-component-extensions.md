@@ -1,29 +1,19 @@
 ---
-title: 介面類別 (C + + /cli 和 C + + /CX) |Microsoft Docs
-ms.custom: ''
+title: 介面類別 (C + + /cli 和 C + + /CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - interface_CPP
-dev_langs:
-- C++
 helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ecc99a5c97f96290932a7d758a959501532c07be
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 57bb83e91492995551ec155c2bcd6bbff3da3186
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328320"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50517126"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>介面類別 (C + + /cli 和 C + + /CX)
 
@@ -67,7 +57,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 - [介面靜態建構函式](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)
 
-- [泛型介面 (C + + /cli CLI)](../windows/generic-interfaces-visual-cpp.md)
+- [泛型介面 (C++/CLI)](../windows/generic-interfaces-visual-cpp.md)
 
 如需其他的 CLR 型別資訊，請參閱[類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)。
 
@@ -230,4 +220,4 @@ ref struct R : I, J {
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)
+[適用於.NET 和 UWP 的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

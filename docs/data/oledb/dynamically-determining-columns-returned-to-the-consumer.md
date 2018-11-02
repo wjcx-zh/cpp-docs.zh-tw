@@ -1,27 +1,16 @@
 ---
-title: 動態決定資料行傳回給消費者 |Microsoft Docs
-ms.custom: ''
+title: 動態決定傳回給消費者的資料行
 ms.date: 10/26/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - bookmarks [C++], dynamically determining columns
 - dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: a2149c50f4dc8880e20bff2401adf0db46ad6588
-ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
+ms.openlocfilehash: 0d01fdac1a64bee62bd7227f4efac8650ff635b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216496"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50428376"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>動態決定傳回給消費者的資料行
 

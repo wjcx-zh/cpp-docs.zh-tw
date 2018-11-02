@@ -1,27 +1,17 @@
 ---
-title: C + + 中的 lambda 運算式 |Microsoft Docs
-ms.custom: ''
+title: C++ 中的 Lambda 運算式
 ms.date: 07/19/2017
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - lambda expressions [C++]
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d7a9915c7ca6b9d2c3f01cea12e2979ef256f904
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 44255df8633ad677587129dd27c0bdc23a616d96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821175"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493804"
 ---
 # <a name="lambda-expressions-in-c"></a>C++ 中的 Lambda 運算式
 
@@ -182,7 +172,7 @@ int main() // C4297 expected
 
 ### <a name="return-type"></a>傳回型別
 
-Lambda 運算式的傳回型別會自動推算出來。 您不需要使用[自動](../cpp/auto-cpp.md)關鍵字除非您指定*尾端傳回型別*。 *尾端傳回型別*類似一般方法或函式的傳回類型部分。 不過，傳回類型必須接在參數清單後面，而且您必須在傳回類型前面包含 trailing-return-type 關鍵字 `->`。
+Lambda 運算式的傳回型別會自動推算出來。 您不需要使用[自動](../cpp/auto-cpp.md)關鍵字除非您指定*尾端傳回型別*。 *尾端傳回型別*類似一般方法或函式的傳回類型部分。 不過，傳回型別必須接在參數清單後面，而且您必須在傳回型別前面包含 trailing-return-type 關鍵字 `->`。
 
 如果 Lambda 主體包含單一 return 陳述式，或者運算式不會傳回值，您可以省略 Lambda 運算式的傳回類型部分。 如果 Lambda 主體包含單一 return 陳述式，編譯器會從傳回運算式的類型推算傳回型別。 否則，編譯器會推算的傳回型別是**void**。 請考慮下列說明此原則的範例程式碼片段。
 

@@ -1,29 +1,19 @@
 ---
-title: ref 類別和 ref 結構 (C + + /cli 和 C + + /CX) |Microsoft Docs
-ms.custom: ''
+title: ref 類別和 ref 結構 (C + + /cli 和 C + + /CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - ref class keyword [C++]
 - value class keyword [C++]
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f2d7ceea7dd3253b28eab5b5fad28381f115225f
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: ab460d30dae49d3cbc8100799ffe0bdcda59249b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328063"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545882"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref 類別和 ref 結構 (C + + /cli 和 C + + /CX)
 
@@ -129,4 +119,4 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)
+[適用於.NET 和 UWP 的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

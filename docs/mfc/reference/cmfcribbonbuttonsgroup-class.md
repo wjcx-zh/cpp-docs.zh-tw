@@ -1,10 +1,6 @@
 ---
-title: CMFCRibbonButtonsGroup 類別 |Microsoft Docs
-ms.custom: ''
+title: CMFCRibbonButtonsGroup 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonButtonsGroup
 - AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup
@@ -20,8 +16,6 @@ f1_keywords:
 - AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup::RemoveAll
 - AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup::SetImages
 - AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup::SetParentCategory
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], CMFCRibbonButtonsGroup
 - CMFCRibbonButtonsGroup [MFC], AddButton
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], SetImages
 - CMFCRibbonButtonsGroup [MFC], SetParentCategory
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e19b01aa2fa268064f9e6a5c51c56d26be22d1a6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0babda16ee29671a584599699b459062c22406e6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425206"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592734"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup 類別
 
@@ -87,7 +77,7 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用中的各種方法`CMFCRibbonButtonsGroup`類別。 此範例示範如何建構`CMFCRibbonButtonsGroup`物件、 將映像指派給功能區按鈕群組，並將按鈕加入的功能區按鈕的群組。 這段程式碼片段是 [Draw 用戶端範例](../../visual-cpp-samples.md)的一部分。
+下例示範如何在 `CMFCRibbonButtonsGroup` 類別中使用各種方法。 此範例示範如何建構`CMFCRibbonButtonsGroup`物件、 將映像指派給功能區按鈕群組，並將按鈕加入的功能區按鈕的群組。 這段程式碼片段是 [Draw 用戶端範例](../../visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_DrawClient#2](../../mfc/reference/codesnippet/cpp/cmfcribbonbuttonsgroup-class_1.cpp)]
 

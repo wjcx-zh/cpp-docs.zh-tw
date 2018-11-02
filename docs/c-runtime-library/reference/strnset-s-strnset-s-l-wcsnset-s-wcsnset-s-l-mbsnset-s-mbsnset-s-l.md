@@ -1,10 +1,6 @@
 ---
-title: _strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l | Microsoft Docs
-ms.custom: ''
+title: _strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnset_s_l
 - _strnset_s
@@ -41,8 +37,6 @@ f1_keywords:
 - mbsnset_s_l
 - mbsnset_s
 - wcsnset_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcsnset_s function
 - mbsnset_s_l function
@@ -60,23 +54,19 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 786f802a25964b118b997a2d5af7376932f8f74f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb82e96c23e1554fb2ec5e2a36089823eaf55595
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416017"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459991"
 ---
 # <a name="strnsets-strnsetsl-wcsnsets-wcsnsetsl-mbsnsets-mbsnsetsl"></a>_strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l
 
 將字串字元初始化為指定的字元。 這些版本的 [_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) 具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
-> **_mbsnset_s**和 **_mbsnset_s_l**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsnset_s**並 **_mbsnset_s_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -143,13 +133,13 @@ errno_t _mbsnset_s_l(
 
 如果成功則為零，否則為錯誤碼。
 
-這些函式會驗證它們的引數。 如果*str*不是有效的 null 終止字串或大小引數小於或等於 0，則會叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，這些函數會傳回錯誤程式碼和設定允許執行**errno**該錯誤碼。 預設的錯誤代碼是**EINVAL**如果未套用更精確的值。
+這些函式會驗證它們的引數。 如果*str*不是有效的 null 結尾字串，或 size 引數是小於或等於 0，則會叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回錯誤程式碼和設定執行**errno**該錯誤的程式碼。 預設的錯誤程式碼**EINVAL**如果更精確的值不會套用。
 
 ## <a name="remarks"></a>備註
 
-這些函式設定，最多第一個*計數*字元*str*至*c*。 如果*計數*的大小大於*str*，大小為*str*而非*計數*。 如果發生錯誤*計數*大於*numberOfElements*這些兩個參數都大於的大小和*str*。
+這些函式設定，最多會第一個*計數*個字元*str*來*c*。 如果*計數*大於大小*str*，則大小*str*改用*計數*。 如果發生錯誤*計數*大於*numberOfElements*和這兩個參數都大於大小*str*。
 
-**_wcsnset_s**和 **_mbsnset_s**是寬字元和多位元組字元版本的 **_strnset_s**。 字串引數的 **_wcsnset_s**是寬字元字串; 的 **_mbsnset_s** amultibyte 字元字串。 除此之外，這三個函式的行為相同。
+**_wcsnset_s**並 **_mbsnset_s**是寬字元和多位元組字元版本的 **_strnset_s**。 字串引數 **_wcsnset_s**是寬字元字串; 屬於 **_mbsnset_s**是寬字元字串。 除此之外，這三個函式的行為相同。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
@@ -164,7 +154,7 @@ errno_t _mbsnset_s_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_strnset_s**|\<string.h>|
 |**_strnset_s_l**|\<tchar.h>|

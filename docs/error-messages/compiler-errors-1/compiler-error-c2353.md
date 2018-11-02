@@ -1,27 +1,17 @@
 ---
-title: 編譯器錯誤 C2353 |Microsoft Docs
-ms.custom: ''
+title: 編譯器錯誤 C2353
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2353
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2353
 ms.assetid: d57f8f77-d9b1-4bba-a940-87ec269ad183
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3685db97a213f6347fccedefdaeebfdeaaffb7bc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3cfcb544349adc0b7b4e13472f70aac382f958fd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109271"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50516986"
 ---
 # <a name="compiler-error-c2353"></a>編譯器錯誤 C2353
 

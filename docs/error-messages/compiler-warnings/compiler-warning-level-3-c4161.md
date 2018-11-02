@@ -1,27 +1,17 @@
 ---
-title: 編譯器警告 （層級 3） C4161 |Microsoft Docs
-ms.custom: ''
+title: 編譯器警告 (層級 3) C4161
 ms.date: 08/27/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4161
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4161
 ms.assetid: 03d3be61-83f1-4009-8310-8758ab67055f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7d279822d823ffb8efcaf08ff3f64cd9d82d0a44
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e1bbc949c298a7cfb6c3a3a061616db3dc4730f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220554"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555827"
 ---
 # <a name="compiler-warning-level-3-c4161"></a>編譯器警告 (層級 3) C4161
 
@@ -29,7 +19,7 @@ ms.locfileid: "43220554"
 
 ## <a name="remarks"></a>備註
 
-因為您的程式碼會包含一個 pop 數目比 push 針對多*pragma*，堆疊可能無法如預期運作。 若要避免這個警告，請確定 pop 數目未超過 push 數目。
+因為您原始程式碼針對 *pragma*所包含的 pop 數目比 push 多一個，所以堆疊可能無法如預期運作。 若要避免這個警告，請確定 pop 數目未超過 push 數目。
 
 ## <a name="example"></a>範例
 

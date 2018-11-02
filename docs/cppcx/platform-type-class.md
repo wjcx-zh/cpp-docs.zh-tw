@@ -1,27 +1,19 @@
 ---
-title: 'Platform:: type 類別 |Microsoft Docs'
-ms.custom: ''
+title: Platform::Type 類別
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Type::GetTypeCode
 - VCCORLIB/Platform::Type::FullName
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ea0723d1dfa3c278ab385e393cd0f3b0d9f633f0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 8df41f8845bad0847e8835c1c6c3a1019d2621d3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109054"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50517061"
 ---
 # <a name="platformtype-class"></a>Platform::Type 類別
 
@@ -112,7 +104,7 @@ Platform::TypeCode GetTypeCode();
 
 ### <a name="remarks"></a>備註
 
-Gettypecode （） 成員方法的對應是`typeid`屬性。
+GetTypeCode () 成員方法相當於 `typeid` 屬性。
 
 ## <a name="tostring"></a> Type::ToString 方法
 

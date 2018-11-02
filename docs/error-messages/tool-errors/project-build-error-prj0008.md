@@ -1,27 +1,17 @@
 ---
-title: 專案建置錯誤 PRJ0008 |Microsoft Docs
-ms.custom: ''
+title: 專案建置錯誤 PRJ0008
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - PRJ0008
-dev_langs:
-- C++
 helpviewer_keywords:
 - PRJ0008
 ms.assetid: 6bf7f17a-d2a8-4826-99c7-d600d846952f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d7c24634a845423de590228af01cb9f4779e37ab
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 696b77e9906b231a680027a3faaf23e53d8fb6e9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46062783"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525897"
 ---
 # <a name="project-build-error-prj0008"></a>專案建置錯誤 PRJ0008
 

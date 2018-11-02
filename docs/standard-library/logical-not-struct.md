@@ -1,28 +1,18 @@
 ---
-title: logical_not 結構 | Microsoft Docs
-ms.custom: ''
+title: logical_not 結構
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xfunctional/std::logical_not
-dev_langs:
-- C++
 helpviewer_keywords:
 - logical_not class
 - logical_not struct
 ms.assetid: 892db678-31da-4540-974b-17b05efc0849
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5ea50f3e8ad70de8473df88bde60673f7b5caa35
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0c647219cfb485910765f02e772c3e3220312fa5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108703"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50593267"
 ---
 # <a name="logicalnot-struct"></a>logical_not 結構
 
@@ -49,7 +39,7 @@ struct logical_not<void>
 
 ### <a name="parameters"></a>參數
 
-*類型*<br/>
+*Type*<br/>
 任何支援 `operator!` (接受指定或推斷類型的運算元) 的類型。
 
 *左邊*<br/>

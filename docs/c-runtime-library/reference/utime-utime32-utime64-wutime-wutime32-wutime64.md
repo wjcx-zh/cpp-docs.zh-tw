@@ -1,10 +1,6 @@
 ---
-title: _utime、_utime32、_utime64、_wutime、_wutime32、_wutime64 | Microsoft Docs
-ms.custom: ''
+title: _utime、_utime32、_utime64、_wutime、_wutime32、_wutime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _utime64
 - _utime
@@ -40,8 +36,6 @@ f1_keywords:
 - _utime32
 - _tutime64
 - _wutime32
-dev_langs:
-- C++
 helpviewer_keywords:
 - tutime function
 - utime32 function
@@ -64,16 +58,12 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cd8737d6391ea1effd50e967008520b2d77707e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1e9633784ad78a2b46701e6600ad1ddb6b3318e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417707"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471083"
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64
 
@@ -118,7 +108,7 @@ int _wutime64(
 
 ## <a name="return-value"></a>傳回值
 
-如果檔案修改時間變更，則所有這些函式都會傳回 0。 傳回值-1 表示錯誤。 如果傳遞無效參數，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回-1 和**errno**設為下列值之一：
+如果檔案修改時間變更，則所有這些函式都會傳回 0。 傳回值為-1 表示錯誤。 如果傳遞無效參數，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回-1 及**errno**設為下列值之一：
 
 |errno 值|條件|
 |-|-|
@@ -129,22 +119,22 @@ int _wutime64(
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-如果變更日期晚於 1970 年 1 月 1 日午夜，且早於所使用函式的結束日期，則可以變更檔案的日期。 **_utime**和 **_wutime**使用 64 位元時間值，因此結束日期 23:59:59，3000 年 12 月 31 日 UTC。 如果 **_USE_32BIT_TIME_T**定義結束日期來強制執行舊的行為，請為 23:59:59 2038 年 1 月 18 日，UTC。 **_utime32**或 **_wutime32**使用 32 位元時間類型，而不論是否 **_USE_32BIT_TIME_T**定義，且一定會在先前的結束日期。 **_utime64**或 **_wutime64**一律使用 64 位元時間類型，因此這些函式一定會支援更新版本的結束日期。
+如果變更日期晚於 1970 年 1 月 1 日午夜，且早於所使用函式的結束日期，則可以變更檔案的日期。 **_utime**並 **_wutime**使用 64 位元時間值，因此結束日期是 23:59:59，3000 年 12 月 31 日 UTC。 如果 **_USE_32BIT_TIME_T**定義結束日期來強制進行舊行為，是 23:59:59 2038 年 1 月 18 日 UTC。 **_utime32**或是 **_wutime32**使用 32 位元時間類型，不論 **_USE_32BIT_TIME_T**已定義，並一律具有較早的結束日期。 **_utime64**或是 **_wutime64**一律使用 64 位元時間類型，因此這些函式一律會支援較新的結束日期。
 
 ## <a name="remarks"></a>備註
 
-**_Utime**函式會將所指定的檔案的修改時間*filename * *。* 處理序必須具有檔案的寫入權，才能變更時間。 在 Windows 作業系統中，您可以變更存取時間與修改的時間中 **_utimbuf**結構。 如果*時間*是**NULL**指標，修改時間設定為目前的當地時間。 否則，*時間*類型的結構必須指向 **_utimbuf**SYS\UTIME 中定義。H.
+**_Utime**函式會將所指定之檔案的修改時間*filename * *。* 處理序必須具有檔案的寫入權，才能變更時間。 在 Windows 作業系統中，您可以變更的存取時間和修改時間，以 **_utimbuf**結構。 如果*次數*是**NULL**指標，修改時間設為目前的當地時間。 否則*時間*類型的結構必須指向 **_utimbuf**SYS\UTIME 中定義。H.
 
-**_Utimbuf**結構會儲存所使用的檔案存取和修改時間 **_utime**以變更檔案修改日期。 此結構中有下列欄位，也就是這兩個型別**time_t**:
+**_Utimbuf**結構會儲存所使用的檔案存取和修改時間 **_utime**以變更檔案修改日期。 此結構具有下列欄位，也就是這兩個型別**time_t**:
 
 |欄位||
 |-|-|
 **actime**|檔案存取的時間
 **modtime**|檔案修改的時間
 
-特定版本的 **_utimbuf**結構 (**_utimebuf32**和 **__utimbuf64**) 都是使用 32 位元和 64 位元版本的階段類型的定義。 這些是用在此函式的 32 位元和 64 位元特定版本。 **_utimbuf**本身預設會使用 64 位元時間類型，除非 **_USE_32BIT_TIME_T**定義。
+特定版本的 **_utimbuf**結構 (**_utimebuf32**並 **__utimbuf64**) 使用 32 位元和 64 位元版本的時間類型所定義。 這些是用在此函式的 32 位元和 64 位元特定版本。 **_utimbuf**本身預設會使用 64 位元時間類型，除非 **_USE_32BIT_TIME_T**定義。
 
-**_utime**等同於 **_futime**不同之處在於*filename*引數的 **_utime**檔名，或是檔案，而不是檔案描述元的路徑開啟檔案。
+**_utime**等同於 **_futime**不同之處在於*filename*引數 **_utime**是檔案名稱或檔案，而不是檔案描述項的路徑開啟檔案。
 
 **_wutime**是寬字元版本的 **_utime**; *filename*引數 **_wutime**是寬字元字串。 除此之外，這些函式的行為相同。
 
@@ -158,7 +148,7 @@ int _wutime64(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要標頭|選擇性標頭|
+|常式傳回的值|必要標頭|選擇性標頭|
 |-------------|----------------------|----------------------|
 |**_utime**， **_utime32**， **_utime64**|\<sys/utime.h>|\<errno.h>|
 |**_utime64**|\<sys/utime.h>|\<errno.h>|
@@ -168,7 +158,7 @@ int _wutime64(
 
 ## <a name="example"></a>範例
 
-此程式會使用 **_utime**設為目前時間的檔案修改時間。
+此程式會使用 **_utime**檔案修改時間設定為目前的時間。
 
 ```C
 // crt_utime.c

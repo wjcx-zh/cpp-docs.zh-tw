@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ca75ca3b69fb175bea160d7f2a35d36416ea2f5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e032c2f1579294431b01d5a7695bf2c8a35aa421
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441365"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136116"
 ---
 # <a name="extract-function"></a>擷取函式
 **功能：** 讓您將程式碼片段轉換成它自己的函式。
@@ -41,7 +41,7 @@ ms.locfileid: "46441365"
 
 1. 在 [擷取函式/方法 (實驗)] 視窗中，輸入新的函式名稱、選取您想執行程式碼的放置，並按一下 [確定] 按鈕。
 
-   ![擷取函式功能](images/extractfunction_dialog.png)
+   ![擷取函式對話方塊](images/extractfunction_dialog.png)
 
 1. 將在您指定處建立新的函式，在對應的標頭檔中建立函式原型，並且會變更原始的程式碼以呼叫該函式。
 

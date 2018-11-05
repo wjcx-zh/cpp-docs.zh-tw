@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31b9c0c8668ec16d84ad84627eb73a0f406eb21e
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 99fdb8f9c08845c5f440fc4ae1f100f8afd832e2
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328372"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136155"
 ---
 # <a name="ide-and-compiler-tools-for-visual-c-development"></a>適用於 Visual C++ 開發的 IDE 和編譯器工具
 
@@ -30,7 +30,7 @@ Microsoft Visual C++ (MSVC) 是 Visual Studio 整合式開發環境 (IDE) 的一
 
 ## <a name="create-projects"></a>建立專案
 
-「專案」基本上是一組原始程式碼檔和資源，例如內建於可執行檔的影像或資料檔案。 
+「專案」基本上是一組原始程式碼檔和資源，例如內建於可執行檔的影像或資料檔案。
 
 Visual Studio 2015 提供 MSBuild 專案的支援。 您可以下載其他組建系統 (例如 Qt 或 CMake) 的 Visual Studio 延伸模組。
 
@@ -51,7 +51,7 @@ Visual Studio 2017 支援任何組建系統或是您想要使用的自訂建置�
 
 ![Team Explorer](media/vs2017-team-explorer.png "Visual Studio 2017 Team Explorer")
 
-如需 Git 與 Azure 中存放庫整合的詳細資訊，請參閱[使用 Visual Studio 2017 和 Azure Repos Git 共用程式碼](/azure/devops/repos/git/share-your-code-in-git-vs-2017)。 如需 Git 與 GitHub 整合的資訊，請參閱 [Visual Studio 的 GitHub 延伸模組](https://visualstudio.github.com/)。
+如需 Git 與 Azure 中存放庫整合的詳細資訊，請參閱[使用 Visual Studio 2017 和 Azure Repos Git 共用程式碼](/azure/devops/repos/git/share-your-code-in-git-vs-2017)。 如需 Git 與 GitHub 整合的資訊，請參閱 [GitHub Extension for Visual Studio](https://visualstudio.github.com/)。
 
 ## <a name="create-user-interfaces-with-designers"></a>使用設計工具建立使用者介面
 
@@ -65,7 +65,7 @@ Visual Studio 2017 支援任何組建系統或是您想要使用的自訂建置�
 
 ## <a name="write-code"></a>撰寫程式碼
 
-建立專案之後，所有專案檔會都會顯示在 [方案總管] 視窗中。 (「方案」是指一或多個相關專案的邏輯容器。)當您按一下 [方案總管] 中的 .h 或 .cpp 檔案時，會在程式碼編輯器中開啟檔案。 
+建立專案之後，所有專案檔會都會顯示在 [方案總管] 視窗中。 (「方案」是指一或多個相關專案的邏輯容器。)當您按一下 [方案總管] 中的 .h 或 .cpp 檔案時，會在程式碼編輯器中開啟檔案。
 
 ![方案總管和程式碼編輯器](media/vs2017-solution-explorer-code-editor.png "Visual Studio 2017 方案總管和程式碼編輯器")
 

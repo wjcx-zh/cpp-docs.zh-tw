@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51921f8e55b9d4ce4e1875f5216984fe3257ca97
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: f005beb9bc71724c289322822a3bae4c03f19d48
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084109"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136246"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>從 2003 到 2015 的 Visual C++ 新功能
 
@@ -128,7 +128,7 @@ ms.locfileid: "49084109"
 
     struct S2
     {
-        template <class C, void (C::*Function)(int) const> void f() {}        
+        template <class C, void (C::*Function)(int) const> void f() {}
     };
 
     void f()
@@ -271,7 +271,7 @@ ms.locfileid: "49084109"
    例如，假設您的程式碼同時定義 **placement new** 和 **placement delete**：
 
    ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
    ```
 
@@ -318,14 +318,14 @@ ms.locfileid: "49084109"
 
    ```cpp
     struct S {
-      S();
-     };
+      S();
+     };
 
-     union {
-      struct {
-       S s;
-      };
-     } u; // C2280
+     union {
+      struct {
+       S s;
+      };
+     } u; // C2280
    ```
 
    前述程式碼會在 Visual Studio 2015 產生下列錯誤：
@@ -525,7 +525,7 @@ ms.locfileid: "49084109"
 
 - **私用的虛擬基底類別與間接繼承**
 
-   舊版編譯器允許衍生的類別呼叫其*間接衍生*`private virtual`的基底類別成員函式。 這個舊的行為不正確，而且不符合 C++ 標準。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C2280。
+   舊版編譯器允許衍生類別呼叫其「間接衍生」`private virtual`基底類別的成員函式。 這個舊的行為不正確，而且不符合 C++ 標準。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C2280。
 
    ```Output
     error C2280: 'void *S3::__delDtor(unsigned int)': attempting to reference a deleted function
@@ -834,7 +834,7 @@ ms.locfileid: "49084109"
 
 - **#include：路徑名稱使用上層目錄指定名稱 '..'** (只會影響 `/Wall` `/WX`)
 
-     舊版編譯器未偵測到 在  `#include` 指示詞的路徑名稱中是否使用上層目錄指定名稱 '..'。 以這種方式撰寫的程式碼通常會包含因為錯誤使用專案相對路徑而存在於專案以外的標頭。 這種舊行為造成的風險是，編譯程式時所包含的原始程式檔，可能不是程式設計人員想要的檔案，或是這些相對路徑無法移植到其他建置環境。 編譯器現在會偵測以這種方式撰寫的程式碼，並通知程式設計人員，如已啟用，還會發出選擇性的編譯器警告 C4464。
+   舊版編譯器未偵測到 在  `#include` 指示詞的路徑名稱中是否使用上層目錄指定名稱 '..'。 以這種方式撰寫的程式碼通常會包含因為錯誤使用專案相對路徑而存在於專案以外的標頭。 這種舊行為造成的風險是，編譯程式時所包含的原始程式檔，可能不是程式設計人員想要的檔案，或是這些相對路徑無法移植到其他建置環境。 編譯器現在會偵測以這種方式撰寫的程式碼，並通知程式設計人員，如已啟用，還會發出選擇性的編譯器警告 C4464。
 
    ```Output
     warning C4464: relative include path contains '..'
@@ -1465,7 +1465,7 @@ ms.locfileid: "49084109"
 
    範例 (之前)：
 
-     X.cpp (-Ycc.h)
+   X.cpp (-Ycc.h)
 
    ```cpp
     #include "a.h"
@@ -1473,7 +1473,7 @@ ms.locfileid: "49084109"
     #include "c.h"
    ```
 
-     Z.cpp (-Yuc.h)
+   Z.cpp (-Yuc.h)
 
    ```cpp
     #include "b.h"
@@ -1483,7 +1483,7 @@ ms.locfileid: "49084109"
 
    範例 (之後)
 
-     X.cpp (-Ycc.h)
+   X.cpp (-Ycc.h)
 
    ```cpp
     #include "a.h"
@@ -1491,7 +1491,7 @@ ms.locfileid: "49084109"
     #include "c.h"
    ```
 
-     Z.cpp (-Yuc.h)
+   Z.cpp (-Yuc.h)
 
    ```cpp
     #include "a.h"
@@ -1774,7 +1774,7 @@ C++ AMP 善用在獨立圖形顯示卡上通常呈現為 GPU 的資料平行硬�
 
 #### <a name="architecture-dependency-graphs"></a>架構相依性圖形
 
-若要深入了解程式碼，現在可以在方案中產生二進位、類別、命名空間和 Include 檔案的相依性圖形。 在功能表列上，選擇 [架構] > [產生相依性關係圖]，然後**針對解決方案**或**針對 Include 檔案**產生相依性關係圖。 關係圖產生完成後，即可展開每個節點進行探索、在節點之間移動來了解相依性關係，以及選擇節點捷徑功能表上的 [檢視內容] 來瀏覽原始程式碼。 若要產生 Include 檔案的相依性關係圖，請在 *.cpp 原始程式碼檔或 *.h 標頭檔的捷徑功能表上，選擇 [產生 Include 檔案關係圖]。
+若要深入了解程式碼，現在可以在方案中產生二進位、類別、命名空間和 Include 檔案的相依性圖形。 在功能表列上，選擇 [架構] > [產生相依性關係圖]，然後**針對解決方案**或**針對 Include 檔案**產生相依性關係圖。 關係圖產生完成後，即可展開每個節點進行探索、在節點之間移動來了解相依性關係，以及選擇節點捷徑功能表上的 [檢視內容] 來瀏覽原始程式碼。 若要產生 Include 檔案的相依性關係圖，請在 \*.cpp 原始程式碼檔或 \*.h 標頭檔的捷徑功能表上，選擇 [產生 Include 檔案關係圖]。
 
 #### <a name="architecture-explorer"></a>架構總管
 
@@ -2100,7 +2100,7 @@ __sptr、__uptr
 - 已新增 `/CLRIMAGETYPE` (指定 CLR 映像類型) 連結器選項。
 - 已新增 `/CLRSUPPORTLASTERROR` (保留最後的 PInvoke 呼叫錯誤碼) 連結器選項。
 - 已新增 `/CLRTHREADATTRIBUTE` (設定 CLR 執行緒屬性) 連結器選項。
-- 已新增 `/CLRUNMANAGEDCODECHECK` (新增 SupressUnmanagedCodeSecurityAttribute) 連結器選項。
+- 已新增 `/CLRUNMANAGEDCODECHECK` (新增 SuppressUnmanagedCodeSecurityAttribute) 連結器選項。
 - 已新增 `/ERRORREPORT` (回報內部連結器錯誤) 連結器選項。
 - 已移除 `/EXETYPE` 連結器選項。 連結器不再支援建立 Windows 95 和 Windows 98 裝置驅動程式。 使用適當的 DDK 來建立這些裝置驅動程式。 EXETYPE 關鍵字不再適用於模組定義檔。
 - 已新增 `/FUNCTIONPADMIN` (建立可線上修補的映像) 連結器選項。

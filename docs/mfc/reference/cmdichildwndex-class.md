@@ -1,10 +1,6 @@
 ---
-title: CMDIChildWndEx 類別 |Microsoft Docs
-ms.custom: ''
+title: CMDIChildWndEx 類別
 ms.date: 10/18/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMDIChildWndEx
 - AFXMDICHILDWNDEX/CMDIChildWndEx
@@ -61,8 +57,6 @@ f1_keywords:
 - AFXMDICHILDWNDEX/CMDIChildWndEx::ShowPane
 - AFXMDICHILDWNDEX/CMDIChildWndEx::UnregisterTaskbarTab
 - AFXMDICHILDWNDEX/CMDIChildWndEx::UpdateTaskbarTabIcon
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMDIChildWndEx [MFC], ActivateTopLevelFrame
 - CMDIChildWndEx [MFC], AddPane
@@ -118,16 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 64e8b62f79a6294810fc30b1796958c6ca4a153a
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: 9b92c9689749dca1ab4eebcade1c4f7e71d25a76
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50073860"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541540"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 類別
 
@@ -658,7 +648,7 @@ virtual void OnSetPreviewMode(
 ### <a name="parameters"></a>參數
 
 *bPreview*<br/>
-[in]如果為 TRUE，進入 [預覽列印模式。 如果為 FALSE，結束預覽列印模式。
+[in]如果為 TRUE，進入 預覽列印模式。 如果為 FALSE，結束預覽列印模式。
 
 *pState*<br/>
 [in]預覽列印狀態結構指標。
@@ -709,7 +699,7 @@ CBasePane* PaneFromPoint(
 [in]如果不是 NULL，則該方法會搜尋窗格指定的型別。
 
 *dwAlignment*<br/>
-[in]如果指定點上找到一個窗格，則此參數會包含已最接近指定點] 窗格。 如需詳細資訊，請參閱＜備註＞一節。
+[in]如果指定點上找到一個窗格，則此參數會包含已最接近指定點 窗格。 如需詳細資訊，請參閱＜備註＞一節。
 
 ### <a name="return-value"></a>傳回值
 

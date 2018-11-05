@@ -1,10 +1,6 @@
 ---
-title: CMFCTabDropTarget 類別 |Microsoft Docs
-ms.custom: ''
+title: CMFCTabDropTarget 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCTabDropTarget
 - AFXBASETABCTRL/CMFCTabDropTarget
@@ -13,8 +9,6 @@ f1_keywords:
 - AFXBASETABCTRL/CMFCTabDropTarget::OnDragOver
 - AFXBASETABCTRL/CMFCTabDropTarget::OnDropEx
 - AFXBASETABCTRL/CMFCTabDropTarget::Register
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDragEnter
 - CMFCTabDropTarget [MFC], OnDragLeave
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca9b67737933ceeb59861234759aa2652b6b985e
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: bd68179be21fec85c0ebb901c2a8c9a4491ff401
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50057448"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534819"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget 類別
 
@@ -170,7 +160,7 @@ virtual DROPEFFECT OnDragOver(
 |*pWnd*|[in]未使用。|
 |*pDataObject*|[in]在使用者拖曳物件的指標。|
 |*dwKeyState*|[in]包含的輔助按鍵的狀態。 這是任意數目的下列組合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。|
-|*點*|[in]在 [工作區座標中滑鼠指標的位置。|
+|*點*|[in]在 工作區座標中滑鼠指標的位置。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -214,7 +204,7 @@ virtual DROPEFFECT OnDropEx(
 |*pDataObject*|[in]在使用者拖曳物件的指標。|
 |*dropEffect*|[in]預設的拖放作業。|
 |*下拉清單*|[in]未使用。|
-|*點*|[in]在 [工作區座標中滑鼠指標的位置。|
+|*點*|[in]在 工作區座標中滑鼠指標的位置。|
 
 ### <a name="return-value"></a>傳回值
 

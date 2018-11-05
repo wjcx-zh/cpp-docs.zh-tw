@@ -1,7 +1,7 @@
 ---
 title: abort 函式 (C) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -14,18 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c6d83a597716ed86870cc11ef2f063edd34642b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b5056f28b8688626243ead6cfb3662b12932442e
+ms.sourcegitcommit: 1870c342d44b10990fd015e60856225c3026e8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081937"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49963034"
 ---
 # <a name="abort-function-c"></a>abort 函式 (C)
 
 **ANSI 4.10.4.1** 與已開啟檔案和暫存檔案相關的 **abort** 函式行為
 
-**abort** 函式不會關閉已開啟的檔案或暫存檔案。 它不會清除資料流緩衝區。
+**abort** 函式不會關閉已開啟的檔案或暫存檔案。 它不會清除資料流緩衝區。 如需詳細資訊，請參閱[中止](../c-runtime-library/reference/abort.md)。
 
 ## <a name="see-also"></a>請參閱
 

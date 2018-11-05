@@ -1,7 +1,7 @@
 ---
 title: Visual C++ 中的 CMake 專案 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/26/2018
+ms.date: 10/18/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76877a0559fd954661fb3e38131796e89c41679f
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 93cfa14e943e277b5255eeb486491c831eba0da3
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235096"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143727"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Visual C++ 中的 CMake 專案
 
@@ -89,7 +89,7 @@ ms.locfileid: "48235096"
 若要建置 CMake 專案，您有下列選項：
 
 1. 在 [偵錯] 下拉式清單中選取目標，然後按 **F5** 鍵，或按一下 [執行] (綠色三角形) 按鈕。 專案會先自動建置，如同 Visual Studio 方案一樣。
-1. 以滑鼠右鍵按一下 CMakeLists.txt，然後從操作功能表選取 [建置]。 如果您的資料夾結構中有多個目標，您可以選擇全部建置或只建置一個特定目標；或
+1. 以滑鼠右鍵按一下 CMakeLists.txt，然後從操作功能表選取 [建置]。 如果您的資料夾結構中有多個目標，您可以選擇全部建置或只建置一個特定目標。
 1. 從主功能表，選取 [建置] | [建置方案] (**F7** 或 **Ctrl+Shift+B**)。 確定已在 [一般] 工具列的 [啟動項目] 下拉式清單中選取 CMake 目標。
 
 ![CMake 建置功能表命令](media/cmake-build-menu.png "CMake 建置命令功能表")
@@ -215,7 +215,7 @@ JSON IntelliSense 可協助您編輯 CMakeSettings.json 檔案：
 
 1. **buildRoot**：對應至 **-DCMAKE_BINARY_DIR** 參數並指定 CMake 快取的建立位置。 如果資料夾不存在，則會建立資料夾。
 
-1. **variables**：包含成對的 CMake 變數名稱和值，會以 **-D**_name_**=**_value_ 形式傳遞至 CMake。 如果您的 CMake 專案建置指示指定直接將任何變數新增至 CMake 快取檔案，建議您改為在此新增。 下列範例將示範如何指定名稱/值對：
+1. **variables**：包含成對的 CMake 變數名稱和值，會以 **-D** *_name_=_value_* 形式傳遞至 CMake。 如果您的 CMake 專案建置指示指定直接將任何變數新增至 CMake 快取檔案，建議您改為在此新增。 下列範例將示範如何指定名稱/值對：
 
 ```json
 "variables": [
@@ -285,7 +285,7 @@ CMakeSettings.json 現在支援繼承的環境。 此功能可讓您 (1) 繼承�
 
 上述範例相當於使用 **-arch=amd64 -host_arch=amd64** 引數執行 **VS 2017 開發人員命令提示字元**。
 
-下表顯示預設值及其命令列對應項：
+下表顯示預設值：
 
 |內容名稱|描述|
 |-----------|-----------------|

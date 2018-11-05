@@ -1,7 +1,7 @@
 ---
 title: 建立 C++ Makefile 專案 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/12/2018
+ms.date: 10/19/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -17,22 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3360d2ed86d220bc59d6f09f582c71b48f7d78c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5f937c11b2453bd296468c5f153b7c9495eba290
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399479"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990239"
 ---
 # <a name="creating-a-c-makefile-project"></a>建立 C++ Makefile 專案
 
-*Makefile* 是文字檔，其中包含如何編譯和連結 (或「建置」) 一組 C++ 原始程式碼檔案的指示。 *Make* 程式會讀取 Makefile 並叫用編譯器、連結器和可能的其他程式來產生可執行檔。 Microsoft 對 *Make* 程式的實作稱為 **NMAKE**。 (根據預設，Visual Studio 使用基於 .vcsproj 檔案的 MSBuild 系統；這是由 [檔案] |[ 新建] | [專案] 所建立。)
+*Makefile* 是文字檔，其中包含如何編譯和連結 (或「建置」) 一組 C++ 原始程式碼檔案的指示。 *Make* 程式會讀取 Makefile 並叫用編譯器、連結器和可能的其他程式來產生可執行檔。 Microsoft 對 *Make* 程式的實作稱為 **NMAKE**。 (根據預設，Visual Studio 會使用基於 .vcxproj 檔案的 MSBuild 系統；這是透過 [檔案] | [新增] | [專案] 所建立。)
 
 如果您有現有的 Makefile 專案，則當您希望在 Visual Studio IDE 中撰寫和/或對其進行偵錯時，可以選擇這些選項：
 
 - 在 Visual Studio 中建立 Makefile 專案，以使用您現有的 Makefile 在 IDE 中建置您的程式碼。 (您將無法使用原生 MSBuild 專案取得所有 IDE 功能。)請參閱下方的[建立 Makefile 專案](#create_a_makefile_project)。
 - 使用 [從現有程式碼檔建立新專案精靈]，從您的原始程式碼建立原生 MSBuild 專案。 如需詳細資訊，請參閱[如何：從現有程式碼建立 C++ 專案](how-to-create-a-cpp-project-from-existing-code.md)。
-- **Visual Studio 2017 和更新版本**：使用 [開啟資料夾] 功能開啟 Makefile。 如需詳細資訊，請參閱 [Visual C++ 中的「開啟資料夾」專案](non-msbuild-projects.md)。
+- **Visual Studio 2017 和更新版本**：使用 [開啟資料夾] 功能開啟 Makefile 專案，而不將其轉換為 MSBuild。 如需詳細資訊，請參閱 [Visual C++ 中的「開啟資料夾」專案](non-msbuild-projects.md)。
 
 ## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> 使用 Makefile 專案範本建立 Makefile 專案
 

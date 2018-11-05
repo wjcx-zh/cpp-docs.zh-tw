@@ -1,10 +1,6 @@
 ---
-title: CMFCPropertyGridCtrl 類別 |Microsoft Docs
-ms.custom: ''
+title: CMFCPropertyGridCtrl 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridCtrl
 - AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl
@@ -80,8 +76,6 @@ f1_keywords:
 - AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnPropertyChanged
 - AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnSelectCombo
 - AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::ValidateItemData
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], CMFCPropertyGridCtrl
 - CMFCPropertyGridCtrl [MFC], accSelect
@@ -156,16 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3516614809ffda8e0659379ebfc8566ea7aee942
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: 764a1fc33d91888c8c32111eca41666d9d0abbd7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50075979"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50557322"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl 類別
 
@@ -472,7 +462,7 @@ virtual BOOL Create(
 [in]位元組合 (OR)[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。
 
 *rect*<br/>
-[in]指定的大小和位置] 視窗中，在用戶端的周框座標*pParentWnd*。
+[in]指定的大小和位置 視窗中，在用戶端的周框座標*pParentWnd*。
 
 *pParentWnd*<br/>
 [in]父視窗的指標。 必須不是 NULL。
@@ -1549,7 +1539,7 @@ void SetGroupNameFullWidth(
 [in]顯示完整的寬度，類別目錄名稱，不論屬性名稱資料行的寬度，則為 TRUE。 如果為 false，則類別名稱為寬度的屬性名稱資料行的寬度限制。 預設值為 TRUE。
 
 *bRedraw*<br/>
-[in]True 表示要更新立即; 屬性方格控制項為 FALSE，則下一步] 重繪事件時更新控制項就會發生。 預設值為 TRUE。
+[in]True 表示要更新立即; 屬性方格控制項為 FALSE，則下一步 重繪事件時更新控制項就會發生。 預設值為 TRUE。
 
 ### <a name="remarks"></a>備註
 

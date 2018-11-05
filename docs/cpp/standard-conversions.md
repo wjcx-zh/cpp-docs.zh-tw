@@ -1,27 +1,17 @@
 ---
-title: 標準轉換 |Microsoft Docs
-ms.custom: ''
+title: 標準轉換
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dec0456c880fea47219dc11c509bbecac025f5d3
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: 7a42a4f35a29489fe23327c6b34ed49197a64724
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50070579"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575444"
 ---
 # <a name="standard-conversions"></a>標準轉換
 
@@ -221,7 +211,7 @@ int main() {
 
 這類轉換的結果會是「子物件」指標，也就是物件中以基底類別完整描述的部分。
 
-下列程式碼會定義兩種類別 `A` 和 `B`，其中 `B` 衍生自 `A` (如需有關繼承的詳細資訊，請參閱 <<c0> [ 衍生類別](../cpp/inheritance-cpp.md)。)然後它會定義 、`bObject` 類型的物件，以及兩個指向物件的指標 (`B` 和 `pB`)。
+下列程式碼會定義兩種類別 `A` 和 `B`，其中 `B` 衍生自 `A` (如需有關繼承的詳細資訊，請參閱 <<c0> [ 衍生類別](../cpp/inheritance-cpp.md)。)然後它會定義 `bObject`、`B` 類型的物件，以及兩個指向物件的指標 (`pA` 和 `pB`)。
 
 ```cpp
 // C2039 expected

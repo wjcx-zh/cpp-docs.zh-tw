@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcf3ce1f0ddc5003886c367cfe5db8968a911ee9
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 8bda25bc1705183d1482355ae064f87c040daec4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083979"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068069"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
 
@@ -37,7 +37,6 @@ ms.locfileid: "49083979"
 我們還要建議您不要為不是 COM 介面或 POD 物件的物件撰寫依賴特定配置的程式碼。 如果您撰寫了這種程式碼，則必須確定它在升級之後可以正確運作。 如需詳細資訊，請參閱 [ABI 界限上的可攜性](../cpp/portability-at-abi-boundaries-modern-cpp.md)。
 
 此外，隨著編譯器合規性不斷改進，有時候可能會改變編譯器解讀您現有原始程式碼的方式。 當發生這種情況時，可能會在您建置時發生不同或新的錯誤，甚至程式碼的行為與上版組建不同，而且看似正常運作。 雖然這些並非本文件中所討論的中斷性變更，但為了解析這些問題，仍然可能需要變更原始程式碼：
-
 
 - [C 執行階段 (CRT) 程式庫的重大變更](#BK_CRT)
 
@@ -183,7 +182,7 @@ ms.locfileid: "49083979"
     ```
 
     ```Output
-        Old:  1208925819614629200000000    New:  1208925819614629174706176
+        Old:  1208925819614629200000000    New:  1208925819614629174706176
     ```
 
    舊的剖析演算法只會考慮輸入字串中最多 17 個有效位數，並會捨棄其餘位數。 這足以產生字串所代表值的非常接近之近似值，而且通常會產生非常接近捨入正確的結果。 新的實作會考慮所有出現的位數，而且會針對所有輸入 (長度最多 768 位數) 產生正確捨入的結果。 此外，這些函式現在會遵循捨入模式 (可透過 fesetround 控制)。  這可能是行為重大變更，因為這些函式可能會輸出不同的結果。 新的結果永遠比舊的結果正確。
@@ -652,7 +651,7 @@ ms.locfileid: "49083979"
    例如，假設您的程式碼同時定義 **placement new** 和 **placement delete**：
 
     ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
     ```
 
@@ -1705,7 +1704,7 @@ ms.locfileid: "49083979"
 
 - **私用的虛擬基底類別與間接繼承**
 
-   舊版編譯器允許衍生的類別呼叫其*間接衍生*`private virtual`的基底類別成員函式。 這個舊的行為不正確，而且不符合 C++ 標準。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C2280。
+   舊版編譯器允許衍生類別呼叫其「間接衍生」`private virtual`基底類別的成員函式。 這個舊的行為不正確，而且不符合 C++ 標準。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C2280。
 
     ```Output
     error C2280: 'void *S3::__delDtor(unsigned int)': attempting to reference a deleted function
@@ -1743,7 +1742,7 @@ ms.locfileid: "49083979"
     }
     ```
 
-   -或-
+   \-或-
 
     ```cpp
     class base;  // as above
@@ -1919,7 +1918,7 @@ ms.locfileid: "49083979"
 
 - **還原 switch 陳述式警告**
 
-   編譯器先前版本已移除先前存在與 **switch** 陳述式相關的警告，現在已還原這些警告。 編譯器現在會發出還原的警告，而與特定情況相關的警告 (包括預設的情況) 都會在包含違規情況的程式行發出，而不是在 switch 陳述式的最後一行發出。 現在，在和過去不一樣的程式行中發出警告的結果是，以前使用 `#pragma warning(disable:####)` 隱藏的警告，可能不會如預期隱藏起來。 若想要如預期隱藏這些警告，就必須將 `#pragma warning(disable:####)` 指示詞移至第一個可能違規情況的上一行。 以下是還原的警告。
+   舊版編譯器中移除了先前與 **switch** 陳述式相關的警告；現在則已還原這些警告。 編譯器現在會發出還原的警告，而與特定情況相關的警告 (包括預設的情況) 都會在包含違規情況的程式行發出，而不是在 switch 陳述式的最後一行發出。 現在，在和過去不一樣的程式行中發出警告的結果是，以前使用 `#pragma warning(disable:####)` 隱藏的警告，可能不會如預期隱藏起來。 若想要如預期隱藏這些警告，就必須將 `#pragma warning(disable:####)` 指示詞移至第一個可能違規情況的上一行。 以下是還原的警告。
 
     ```Output
     warning C4060: switch statement contains no 'case' or 'default' labels

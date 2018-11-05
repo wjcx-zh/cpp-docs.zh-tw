@@ -1,10 +1,6 @@
 ---
-title: CMFCToolBar 類別 |Microsoft Docs
-ms.custom: ''
+title: CMFCToolBar 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCToolBar
 - AFXTOOLBAR/CMFCToolBar
@@ -160,8 +156,6 @@ f1_keywords:
 - AFXTOOLBAR/CMFCToolBar::OnUserToolTip
 - AFXTOOLBAR/CMFCToolBar::m_bDontScaleImages
 - AFXTOOLBAR/CMFCToolBar::m_dblLargeImageRatio
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCToolBar [MFC], AddBasicCommand
 - CMFCToolBar [MFC], AddCommandUsage
@@ -317,16 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d50d751028cc9e162f2a4bd903f35255a5ed3814
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: d1677716db42f7f2e3b74e63562d00527291c144
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50067809"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524658"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar 類別
 
@@ -1759,7 +1749,7 @@ virtual void GetInvalidateItemRect(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-[in]要擷取工作區] 按鈕的索引。
+[in]要擷取工作區 按鈕的索引。
 
 *lpRect*<br/>
 [out]接收用戶端區域的區域的矩形物件的指標。
@@ -3241,7 +3231,7 @@ void SetButtonInfo(
 [in]按鈕的樣式。 請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)可用工具列按鈕樣式的清單。
 
 *iImage*<br/>
-[in]（也就是集合中工具列影像的索引）] 按鈕之以零為起始的影像索引。
+[in]（也就是集合中工具列影像的索引） 按鈕之以零為起始的影像索引。
 
 ### <a name="remarks"></a>備註
 

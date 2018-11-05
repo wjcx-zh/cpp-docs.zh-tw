@@ -1,10 +1,6 @@
 ---
-title: CMFCCaptionButton 類別 |Microsoft Docs
-ms.custom: ''
+title: CMFCCaptionButton 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCCaptionButton
 - AFXCAPTIONBUTTON/CMFCCaptionButton
@@ -17,8 +13,6 @@ f1_keywords:
 - AFXCAPTIONBUTTON/CMFCCaptionButton::Move
 - AFXCAPTIONBUTTON/CMFCCaptionButton::OnDraw
 - AFXCAPTIONBUTTON/CMFCCaptionButton::SetMiniFrameButton
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCCaptionButton [MFC], CMFCCaptionButton
 - CMFCCaptionButton [MFC], GetHit
@@ -30,16 +24,12 @@ helpviewer_keywords:
 - CMFCCaptionButton [MFC], OnDraw
 - CMFCCaptionButton [MFC], SetMiniFrameButton
 ms.assetid: c5774b38-c0dd-414a-9ede-3b2f78f233ec
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8d6b1363dd77d4fd052a530a60b2e462e15a2291
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: 4fa9d6a57cb2ee70e9da7853954241955d724a5c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50074432"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604272"
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton 類別
 
@@ -278,7 +268,7 @@ virtual void OnDraw(
 [in]是否要繪製最大化的按鈕影像。
 
 *bDisabled*<br/>
-[in]是否要繪製已啟用] 按鈕影像。
+[in]是否要繪製已啟用 按鈕影像。
 
 ### <a name="remarks"></a>備註
 

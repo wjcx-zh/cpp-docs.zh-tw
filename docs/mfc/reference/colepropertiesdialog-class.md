@@ -1,10 +1,6 @@
 ---
-title: COlePropertiesDialog 類別 |Microsoft Docs
-ms.custom: ''
+title: COlePropertiesDialog 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COlePropertiesDialog
 - AFXODLGS/COlePropertiesDialog
@@ -16,8 +12,6 @@ f1_keywords:
 - AFXODLGS/COlePropertiesDialog::m_op
 - AFXODLGS/COlePropertiesDialog::m_psh
 - AFXODLGS/COlePropertiesDialog::m_vp
-dev_langs:
-- C++
 helpviewer_keywords:
 - COlePropertiesDialog [MFC], COlePropertiesDialog
 - COlePropertiesDialog [MFC], DoModal
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0bd1e6953d936106f272aa8bef4243728d742d8c
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: e40483781427e3135d89a9339a34f606d45db77c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50078189"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547351"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog 類別
 
@@ -166,7 +156,7 @@ IDOK 或 IDCANCEL 如果登錄成功。否則為 0。 IDOK 及 IDCANCEL 是常�
 
 ##  <a name="m_gp"></a>  COlePropertiesDialog::m_gp
 
-類型的結構[OLEUIGNRLPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuignrlpropsa)，用來初始化 OLE 物件屬性] 對話方塊的 [一般] 頁面。
+類型的結構[OLEUIGNRLPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuignrlpropsa)，用來初始化 OLE 物件屬性 對話方塊的 [一般] 頁面。
 
 ```
 OLEUIGNRLPROPS m_gp;
@@ -180,7 +170,7 @@ OLEUIGNRLPROPS m_gp;
 
 ##  <a name="m_lp"></a>  COlePropertiesDialog::m_lp
 
-類型的結構[OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa)，用來初始化 OLE 物件屬性] 對話方塊的 [連結] 頁面。
+類型的結構[OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa)，用來初始化 OLE 物件屬性 對話方塊的 [連結] 頁面。
 
 ```
 OLEUILINKPROPS m_lp;
@@ -224,7 +214,7 @@ PROPSHEETHEADER m_psh;
 
 ##  <a name="m_vp"></a>  COlePropertiesDialog::m_vp
 
-類型的結構[OLEUIVIEWPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiviewpropsa)，用來初始化 OLE 物件屬性] 對話方塊的 [檢視] 頁面。
+類型的結構[OLEUIVIEWPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiviewpropsa)，用來初始化 OLE 物件屬性 對話方塊的 [檢視] 頁面。
 
 ```
 OLEUIVIEWPROPS m_vp;

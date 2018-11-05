@@ -1,10 +1,6 @@
 ---
-title: CDockSite 類別 |Microsoft Docs
-ms.custom: ''
+title: CDockSite Class
 ms.date: 10/18/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDockSite
 - AFXDOCKSITE/CDockSite
@@ -48,8 +44,6 @@ f1_keywords:
 - AFXDOCKSITE/CDockSite::ShowPane
 - AFXDOCKSITE/CDockSite::ShowRow
 - AFXDOCKSITE/CDockSite::SwapRows
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDockSite [MFC], AddRow
 - CDockSite [MFC], AdjustDockingLayout
@@ -92,16 +86,12 @@ helpviewer_keywords:
 - CDockSite [MFC], ShowRow
 - CDockSite [MFC], SwapRows
 ms.assetid: 0fcfff79-5f50-4281-b2de-a55653bbea40
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6f2ae2cd18543e2ad27cd41a36406efc75facceb
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: 08acf9e47a26d4cbc5bcb96cbff086b19768e972
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50062622"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486303"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 
@@ -787,7 +777,7 @@ virtual BOOL ShowPane(
 [in]TRUE 表示指定的窗格是顯示;如果為 false，則指定要隱藏窗格。
 
 *bDelay*<br/>
-[in]若要指定，版面配置] 窗格應該會延遲到之後會顯示該窗格;，則為 TRUE否則為 FALSE。
+[in]若要指定，版面配置 窗格應該會延遲到之後會顯示該窗格;，則為 TRUE否則為 FALSE。
 
 *bActivate*<br/>
 [in]未使用此參數。

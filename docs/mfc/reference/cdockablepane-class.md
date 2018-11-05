@@ -1,10 +1,6 @@
 ---
-title: CDockablePane 類別 |Microsoft Docs
-ms.custom: ''
+title: CDockablePane Class
 ms.date: 10/18/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDockablePane
 - AFXDOCKABLEPANE/CDockablePane
@@ -71,8 +67,6 @@ f1_keywords:
 - AFXDOCKABLEPANE/CDockablePane::m_bDisableAnimation
 - AFXDOCKABLEPANE/CDockablePane::m_bHideInAutoHideMode
 - AFXDOCKABLEPANE/CDockablePane::m_nSlideSteps
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDockablePane [MFC], CDockablePane
 - CDockablePane [MFC], AttachToTabWnd
@@ -138,16 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 91058da47a97098826939be2248d81ba657f3cbb
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: 657f71e5d89f7d91d8b44836b4d478b41d041f88
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50078303"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623011"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -606,7 +596,7 @@ virtual BOOL Create(
 [in、 out]指定父視窗。
 
 *rect*<br/>
-[in]在用戶端座標中指定的大小和位置] 視窗中， *pParentWnd*。
+[in]在用戶端座標中指定的大小和位置 視窗中， *pParentWnd*。
 
 *bHasGripper*<br/>
 [in]若要建立窗格使用的標題;，則為 TRUE否則為 FALSE。
@@ -711,7 +701,7 @@ virtual BOOL CreateEx(
 [in、 out]指定父視窗。
 
 *rect*<br/>
-[in]在用戶端座標中指定的大小和位置] 視窗中， *pParentWnd*。
+[in]在用戶端座標中指定的大小和位置 視窗中， *pParentWnd*。
 
 *bHasGripper*<br/>
 [in]若要建立窗格使用的標題;，則為 TRUE否則為 FALSE。

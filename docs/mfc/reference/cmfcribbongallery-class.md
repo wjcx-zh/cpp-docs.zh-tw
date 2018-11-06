@@ -1,10 +1,6 @@
 ---
-title: CMFCRibbonGallery 類別 |Microsoft Docs
-ms.custom: ''
+title: CMFCRibbonGallery 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonGallery
 - AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery
@@ -44,8 +40,6 @@ f1_keywords:
 - AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::SetPalette
 - AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::SetPaletteID
 - AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::OnDrawPaletteIcon
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonGallery [MFC], CMFCRibbonGallery
 - CMFCRibbonGallery [MFC], AddGroup
@@ -84,16 +78,12 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], SetPaletteID
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0e0680bb1bed7973071eaabc3535574cb5f470b5
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: c6ebfc39c3fcfb467774fb898d9188c2dd3e69e8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50057630"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618846"
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery 類別
 
@@ -462,7 +452,7 @@ static int GetLastSelectedItem(UINT uiCmdID);
 ### <a name="parameters"></a>參數
 
 *uiCmdID*<br/>
-[in]指定功能表項目，開啟 [功能區圖庫的命令識別碼。
+[in]指定功能表項目，開啟 功能區圖庫的命令識別碼。
 
 ### <a name="return-value"></a>傳回值
 

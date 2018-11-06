@@ -1,10 +1,6 @@
 ---
-title: CMFCToolBarEditBoxButton 類別 |Microsoft Docs
-ms.custom: ''
+title: CMFCToolBarEditBoxButton 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCToolBarEditBoxButton
 - AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton
@@ -31,8 +27,6 @@ f1_keywords:
 - AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::OnUpdateToolTip
 - AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::SetContextMenuID
 - AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::SetFlatMode
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCToolBarEditBoxButton [MFC], CMFCToolBarEditBoxButton
 - CMFCToolBarEditBoxButton [MFC], CanBeStretched
@@ -58,16 +52,12 @@ helpviewer_keywords:
 - CMFCToolBarEditBoxButton [MFC], SetContextMenuID
 - CMFCToolBarEditBoxButton [MFC], SetFlatMode
 ms.assetid: b21d9b67-6bf7-4ca9-bd62-b237756e0ab3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fe5aa32a8d6cf0eecc1cc38e49643900bf34f9ae
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: bf71bb508bf0327a7fdf34b128bdb825323cd3a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50066990"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525709"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton 類別
 
@@ -282,7 +272,7 @@ static CString __stdcall GetContentsAll(UINT uiCmd);
 ### <a name="parameters"></a>參數
 
 *uiCmd*<br/>
-[in]要從中擷取內容] 按鈕的命令識別碼。
+[in]要從中擷取內容 按鈕的命令識別碼。
 
 ### <a name="return-value"></a>傳回值
 

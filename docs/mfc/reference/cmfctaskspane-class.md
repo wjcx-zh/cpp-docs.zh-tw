@@ -1,10 +1,6 @@
 ---
-title: CMFCTasksPane 類別 |Microsoft Docs
-ms.custom: ''
+title: CMFCTasksPane 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCTasksPane
 - AFXTASKSPANE/CMFCTasksPane
@@ -102,8 +98,6 @@ f1_keywords:
 - AFXTASKSPANE/CMFCTasksPane::ShowTaskByCmdId
 - AFXTASKSPANE/CMFCTasksPane::Update
 - AFXTASKSPANE/CMFCTasksPane::OnActivateTasksPanePage
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCTasksPane [MFC], CMFCTasksPane
 - CMFCTasksPane [MFC], AddGroup
@@ -200,16 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a1dcf14a23331ef783a25d75ed167703dcd4ffd7
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: e11d1f95cf44756a39ab52fcd4dfeb87addc6e17
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50065665"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563653"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane 類別
 
@@ -412,7 +402,7 @@ int AddGroup(
 [in]指定群組名稱。
 
 *bBottomLocation*<br/>
-[in]底部的 [工作窗格控制項; 中建立群組，則為 TRUE否則為 FALSE。
+[in]底部的 工作窗格控制項; 中建立群組，則為 TRUE否則為 FALSE。
 
 *bSpecial*<br/>
 [in]TRUE 表示將此群組中的標記*特殊*群組; 否則為 FALSE。 如需有關特殊群組的詳細資訊，請參閱 < 備註 > 一節`CMFCTasksPane`。
@@ -1349,10 +1339,10 @@ virtual void OnClickTask(
 ### <a name="parameters"></a>參數
 
 *nGroupNumber*<br/>
-[in]指定包含已按下 [的工作群組的以零為起始的索引。
+[in]指定包含已按下 的工作群組的以零為起始的索引。
 
 *nTaskNumber*<br/>
-[in]指定已按下 [工作的以零為起始的索引。
+[in]指定已按下 工作的以零為起始的索引。
 
 *uiCommandID*<br/>
 [in]指定與工作相關聯的命令識別碼。

@@ -1,10 +1,6 @@
 ---
-title: CDockingManager 類別 |Microsoft Docs
-ms.custom: ''
+title: CDockingManager 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDockingManager
 - AFXDOCKINGMANAGER/CDockingManager
@@ -85,8 +81,6 @@ f1_keywords:
 - AFXDOCKINGMANAGER/CDockingManager::m_nDockSensitivity
 - AFXDOCKINGMANAGER/CDockingManager::m_nTimeOutBeforeDockingBarDock
 - AFXDOCKINGMANAGER/CDockingManager::m_nTimeOutBeforeToolBarDock
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDockingManager [MFC], AddDockSite
 - CDockingManager [MFC], AddHiddenMDITabbedBar
@@ -166,16 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c17b280d658eb615d314526f4fd241bf57c2eed1
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: 6a920c92a0a3b3948ad89e31cfaf317f54ad6724
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50074731"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438037"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager 類別
 
@@ -349,7 +339,7 @@ void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ### <a name="parameters"></a>參數
 
 *pBar*<br/>
-[in]指標為橫條] 窗格
+[in]指標為橫條 窗格
 
 ##  <a name="addpane"></a>  CDockingManager::AddPane
 
@@ -366,7 +356,7 @@ BOOL AddPane(
 ### <a name="parameters"></a>參數
 
 *pWnd*<br/>
-[in、 out]指定將新增至停駐的管理員] 窗格。
+[in、 out]指定將新增至停駐的管理員 窗格。
 
 *bTail*<br/>
 [in]TRUE 表示停駐的管理員; 中的窗格清單的結尾加入窗格否則為 FALSE。
@@ -514,7 +504,7 @@ void BringBarsToTop(
 ### <a name="parameters"></a>參數
 
 *dwAlignment*<br/>
-[in]就可以享受頂端的 [其他視窗停駐列對齊方式。
+[in]就可以享受頂端的 其他視窗停駐列對齊方式。
 
 *bExcludeDockedBars*<br/>
 [in]若要排除的停駐的列在最上層顯示;，則為 TRUE否則為 FALSE。
@@ -1110,7 +1100,7 @@ BOOL InsertPane(
 [in]指向控制項窗格的指標。
 
 *pTarget*<br/>
-[in]指向的目標] 窗格。
+[in]指向的目標 窗格。
 
 *bAfter*<br/>
 [in]插入窗格的 [目標] 窗格中; 位置之後，則為 TRUEFALSE 否則。
@@ -1517,7 +1507,7 @@ void RemovePaneFromDockManager(
 [in]如果為 TRUE，請立即調整停駐的配置。
 
 *bAutoHide*<br/>
-[in]如果為 TRUE，窗格會從 [自動隱藏列清單中移除。 如果為 FALSE，窗格會移除從清單中的 [一般] 窗格中。
+[in]如果為 TRUE，窗格會從 自動隱藏列清單中移除。 如果為 FALSE，窗格會移除從清單中的 [一般] 窗格中。
 
 *pBarReplacement*<br/>
 [in]指標，會取代 [移除] 窗格的窗格。
@@ -1685,7 +1675,7 @@ void SetPrintPreviewMode(
 ### <a name="parameters"></a>參數
 
 *bPreview*<br/>
-[in]如果已設定 [預覽列印模式，則為 TRUEFALSE 否則。
+[in]如果已設定 預覽列印模式，則為 TRUEFALSE 否則。
 
 *pState*<br/>
 [in]預覽狀態的指標。 不使用這個參數。

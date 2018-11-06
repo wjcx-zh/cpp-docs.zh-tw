@@ -1,10 +1,6 @@
 ---
-title: CTaskDialog 類別 |Microsoft Docs
-ms.custom: ''
+title: CTaskDialog Class
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CTaskDialog
 - AFXTASKDIALOG/CTaskDialog
@@ -63,8 +59,6 @@ f1_keywords:
 - AFXTASKDIALOG/CTaskDialog::SetWindowTitle
 - AFXTASKDIALOG/CTaskDialog::ShowDialog
 - AFXTASKDIALOG/CTaskDialog::TaskDialogCallback
-dev_langs:
-- C++
 helpviewer_keywords:
 - CTaskDialog [MFC], CTaskDialog
 - CTaskDialog [MFC], AddCommandControl
@@ -122,16 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83b56c82248397c3d355fb365ccb630760a4a741
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: cbfb0a355b4901907b5df0a0b42ac28d5a76c551
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50076044"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441947"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -1133,7 +1123,7 @@ void SetDialogWidth(int nWidth = 0);
 ### <a name="parameters"></a>參數
 
 *nWidth*<br/>
-[in]對話方塊的 [像素為單位的寬度。
+[in]對話方塊的 像素為單位的寬度。
 
 ### <a name="remarks"></a>備註
 
@@ -1330,7 +1320,7 @@ void SetProgressBarMarquee(
 ### <a name="parameters"></a>參數
 
 *bEnabled*<br/>
-[in]TRUE 表示啟用跑馬燈] 列中;FALSE 會停用跑馬燈列，並將它從移除`CTaskDialog`。
+[in]TRUE 表示啟用跑馬燈 列中;FALSE 會停用跑馬燈列，並將它從移除`CTaskDialog`。
 
 *nMarqueeSpeed*<br/>
 [in]整數，表示跑馬燈列的速度。
@@ -1466,7 +1456,7 @@ void SetVerificationCheckbox(BOOL bChecked);
 ### <a name="parameters"></a>參數
 
 *bChecked*<br/>
-[in]True，以已驗證] 核取方塊時選取`CTaskDialog`顯示;為 false，則驗證 核取方塊未選取時`CTaskDialog`隨即出現。
+[in]True，以已驗證 核取方塊時選取`CTaskDialog`顯示;為 false，則驗證 核取方塊未選取時`CTaskDialog`隨即出現。
 
 ### <a name="example"></a>範例
 

@@ -1,10 +1,6 @@
 ---
-title: CMFCBaseTabCtrl 類別 |Microsoft Docs
-ms.custom: ''
+title: CMFCBaseTabCtrl Class
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCBaseTabCtrl
 - AFXBASETABCTRL/CMFCBaseTabCtrl
@@ -124,8 +120,6 @@ f1_keywords:
 - AFXBASETABCTRL/CMFCBaseTabCtrl::CreateWrapper
 - AFXBASETABCTRL/CMFCBaseTabCtrl::m_bActivateTabOnRightClick
 - AFXBASETABCTRL/CMFCBaseTabCtrl::m_bAutoDestroyWindow
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], AddIcon
 - CMFCBaseTabCtrl [MFC], AddTab
@@ -244,16 +238,12 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f1ef6e0c0df01807d23b89bc8cf9f6a35035b6f2
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: b01802439a7f7335561e331f87ad770d4e5313fe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50056083"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574287"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
@@ -593,7 +583,7 @@ virtual BOOL DetachTab(
 [in]所提供的列舉的資料型別[CBasePane 類別](../../mfc/reference/cbasepane-class.md)。 此資料型別會指定用來中斷連結索引標籤的方法。
 
 *nTabNum*<br/>
-[in]要卸離] 索引標籤的以零為起始的索引。
+[in]要卸離 索引標籤的以零為起始的索引。
 
 *bHide*<br/>
 [in]布林值參數，指出架構是否應該隱藏 [中斷連結] 索引標籤。
@@ -1367,7 +1357,7 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 ### <a name="parameters"></a>參數
 
 *bHide*<br/>
-[in]布林值，指定是否要啟用 [隱藏單一索引標籤。
+[in]布林值，指定是否要啟用 隱藏單一索引標籤。
 
 ### <a name="remarks"></a>備註
 
@@ -1981,7 +1971,7 @@ virtual BOOL SetActiveTab(int iTab) = 0;
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]以零起始的索引] 索引標籤的`SetActiveTab`將與這個索引標籤設為作用中。
+[in]以零起始的索引 索引標籤的`SetActiveTab`將與這個索引標籤設為作用中。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2209,7 +2199,7 @@ virtual BOOL SetTabIcon(
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]更新] 索引標籤的以零為起始的索引。
+[in]更新 索引標籤的以零為起始的索引。
 
 *uiIcon*<br/>
 [in][新增] 圖示的圖示識別碼。 此識別碼會參考內部[CImageList](../../mfc/reference/cimagelist-class.md)物件。
@@ -2261,7 +2251,7 @@ virtual BOOL SetTabLabel(
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]更新] 索引標籤的以零為起始的索引。
+[in]更新 索引標籤的以零為起始的索引。
 
 *strLabel*<br/>
 [in]包含新索引標籤的標籤文字字串的參考。

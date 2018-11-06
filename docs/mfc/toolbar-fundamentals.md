@@ -1,14 +1,8 @@
 ---
-title: 工具列基本概念 |Microsoft Docs
-ms.custom: ''
+title: 工具列基本概念
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - RT_TOOLBAR
-dev_langs:
-- C++
 helpviewer_keywords:
 - embedding toolbar in frame window class [MFC]
 - application wizards [MFC], installing default application toolbars
@@ -26,22 +20,18 @@ helpviewer_keywords:
 - frame window classes [MFC], toolbar embedded in
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f52c5af48631a1441b160a9b59a987f697fdedc6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 965842dd42033910366ec4686e7c0abf775f2d5c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438141"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530789"
 ---
 # <a name="toolbar-fundamentals"></a>工具列基本概念
 
 本文會說明基本的 MFC 實作，可讓您將預設工具列新增至您的應用程式中，應用程式精靈中選取一個選項。 涵蓋的主題包括：
 
-- [應用程式精靈] 的 [工具列] 選項](#_core_the_appwizard_toolbar_option)
+- [應用程式精靈 的 [工具列] 選項](#_core_the_appwizard_toolbar_option)
 
 - [在程式碼中的工具列](#_core_the_toolbar_in_code)
 

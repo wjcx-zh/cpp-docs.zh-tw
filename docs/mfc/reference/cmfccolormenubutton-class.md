@@ -1,10 +1,6 @@
 ---
-title: CMFCColorMenuButton 類別 |Microsoft Docs
-ms.custom: ''
+title: CMFCColorMenuButton 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCColorMenuButton
 - AFXCOLORMENUBUTTON/CMFCColorMenuButton
@@ -27,8 +23,6 @@ f1_keywords:
 - AFXCOLORMENUBUTTON/CMFCColorMenuButton::IsEmptyMenuAllowed
 - AFXCOLORMENUBUTTON/CMFCColorMenuButton::OnDraw
 - AFXCOLORMENUBUTTON/CMFCColorMenuButton::OnDrawOnCustomizeList
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCColorMenuButton [MFC], CMFCColorMenuButton
 - CMFCColorMenuButton [MFC], EnableAutomaticButton
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f307a5c0d1c1666c4d8a016496d9a6bf717c6d48
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: adb0cdbdde90ad7bdd6aef42c1e83c7ba3fd28b0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083007"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624883"
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton 類別
 
@@ -264,7 +254,7 @@ void EnableOtherButton(
 [in]指定按鈕的文字。
 
 *bAltColorDlg*<br/>
-[in]指定 TRUE，即可顯示`CMFCColorDialog`] 對話方塊中或 FALSE 表示顯示標準系統的 [色彩] 對話方塊。
+[in]指定 TRUE，即可顯示`CMFCColorDialog` 對話方塊中或 FALSE 表示顯示標準系統的 [色彩] 對話方塊。
 
 *bEnable*<br/>
 [in]指定 TRUE，以顯示 [其他] 按鈕，否則為 FALSE。 預設值為 TRUE。
@@ -419,7 +409,7 @@ virtual void OnDraw(
 [in]TRUE 會指定，則會顯示按鈕的框線;否則為 FALSE。 預設值為 TRUE。
 
 *bGrayDisabledButtons*<br/>
-[in]TRUE 表示指定 out; 的 [停用的按鈕會呈現灰色 (dimmed)否則為 FALSE。 預設值為 TRUE。
+[in]TRUE 表示指定 out; 的 停用的按鈕會呈現灰色 (dimmed)否則為 FALSE。 預設值為 TRUE。
 
 ### <a name="remarks"></a>備註
 

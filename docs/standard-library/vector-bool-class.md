@@ -1,10 +1,6 @@
 ---
-title: vector&lt;bool&gt; 類別 | Microsoft Docs
-ms.custom: ''
+title: vector&lt;bool&gt; 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - vector<bool>
 - vector/std::vector::const_pointer
@@ -12,8 +8,6 @@ f1_keywords:
 - vector/std::vector::pointer
 - vector/std::vector::flip
 - vector/std::vector::swap
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::vector [C++], const_pointer
 - std::vector [C++], const_reference
@@ -21,16 +15,12 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b158f6bedd2dba2d65f7b0778758eafe08e88851
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 79b2231882f65715f47c774119c0e6e0608f1676
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702906"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455480"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; 類別
 
@@ -163,7 +153,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="remarks"></a>備註
 
-如果您 _ITERATOR_DEBUG_LEVEL 組編譯時，如果您嘗試存取向量界限以外的項目，就會發生執行階段錯誤。  如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
+如果您 _ITERATOR_DEBUG_LEVEL 組編譯時，如果您嘗試存取向量界限以外的項目，就會發生執行階段錯誤。  如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>範例
 

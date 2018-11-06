@@ -1,10 +1,6 @@
 ---
-title: CMDIFrameWndEx 類別 |Microsoft Docs
-ms.custom: ''
+title: CMDIFrameWndEx 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMDIFrameWndEx
 - AFXMDIFRAMEWNDEX/CMDIFrameWndEx
@@ -83,8 +79,6 @@ f1_keywords:
 - AFXMDIFRAMEWNDEX/CMDIFrameWndEx::WinHelp
 - AFXMDIFRAMEWNDEX/CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild
 - AFXMDIFRAMEWNDEX/CMDIFrameWndEx::m_bDisableSetRedraw
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMDIFrameWndEx [MFC], ActiveItemRecalcLayout
 - CMDIFrameWndEx [MFC], AddPane
@@ -162,16 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b238dedf9b4f638baf4ea2c9373e7658c90114cb
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: be9ecf2eaabb51f4c2dffd996bca76bd3f4c9128
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50069330"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512862"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx 類別
 
@@ -535,7 +525,7 @@ BOOL DockPaneLeftOf(
 [in]若要停駐窗格的指標。
 
 *pLeftOf*<br/>
-[in][窗格]，做為 [停駐位置的指標。 。
+[in][窗格]，做為 停駐位置的指標。 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -763,7 +753,7 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ### <a name="parameters"></a>參數
 
 *bLastActiveTab*<br/>
-[in]如果為 TRUE，啟用 [啟用的最後一個使用中的索引標籤。如果為 FALSE，停用啟用的最後一個使用中的索引標籤。
+[in]如果為 TRUE，啟用 啟用的最後一個使用中的索引標籤。如果為 FALSE，停用啟用的最後一個使用中的索引標籤。
 
 ### <a name="remarks"></a>備註
 
@@ -1552,7 +1542,7 @@ virtual void OnSetPreviewMode(
 ### <a name="parameters"></a>參數
 
 *bPreview*<br/>
-[in]如果為 TRUE，設定 [預覽列印模式。 如果為 FALSE，則取消預覽模式。
+[in]如果為 TRUE，設定 預覽列印模式。 如果為 FALSE，則取消預覽模式。
 
 *pState*<br/>
 [in]指標`CPrintPreviewState`結構。
@@ -1574,10 +1564,10 @@ virtual BOOL OnShowCustomizePane(
 ### <a name="parameters"></a>參數
 
 *pMenuPane*<br/>
-[in]快速自訂] 窗格的指標。
+[in]快速自訂 窗格的指標。
 
 *uiToolbarID*<br/>
-[in]若要自訂 [控制項工具列的識別碼。
+[in]若要自訂 控制項工具列的識別碼。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1619,7 +1609,7 @@ virtual BOOL OnShowMDITabContextMenu(
 - BCGP_MDI_CAN_BE_DOCKED-切換至 停駐狀態 （如索引標籤式文件相關） 的索引標籤式文件。
 
 *bTabDrop*<br/>
-[in]顯示結果] 索引標籤拖曳到另一個索引標籤式群組功能表則為 TRUE。 如果為 false，則為目前作用中 索引標籤上的快顯功能表中顯示功能表。
+[in]顯示結果 索引標籤拖曳到另一個索引標籤式群組功能表則為 TRUE。 如果為 false，則為目前作用中 索引標籤上的快顯功能表中顯示功能表。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1820,7 +1810,7 @@ void RemovePaneFromDockManager(
 [in]立即調整停駐的配置，則為 TRUE。 調整 如果為 FALSE，就會發生只重繪事件發生時的其他原因 （使用者調整視窗大小時，拖曳主要畫面格，依此類推）。
 
 *bAutoHide*<br/>
-[in]若要移除的自動隱藏窗格清單] 窗格，則為 TRUE。 如果為 false，則移除規則 窗格的清單中的窗格。
+[in]若要移除的自動隱藏窗格清單 窗格，則為 TRUE。 如果為 false，則移除規則 窗格的清單中的窗格。
 
 *pBarReplacement*<br/>
 [in]指標，會取代 [移除] 窗格的窗格。

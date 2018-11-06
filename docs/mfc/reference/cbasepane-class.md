@@ -1,10 +1,6 @@
 ---
-title: CBasePane 類別 |Microsoft Docs
-ms.custom: ''
+title: CBasePane 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CBasePane
 - AFXBASEPANE/CBasePane
@@ -88,8 +84,6 @@ f1_keywords:
 - AFXBASEPANE/CBasePane::StretchPane
 - AFXBASEPANE/CBasePane::UndockPane
 - AFXBASEPANE/CBasePane::DoPaint
-dev_langs:
-- C++
 helpviewer_keywords:
 - CBasePane [MFC], AccNotifyObjectFocusEvent
 - CBasePane [MFC], AddPane
@@ -172,16 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5099251f46d3446368c04a39d624fde8128ab2e4
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: a04e60c3cbaecc018fb1d577770e70c2148efc3b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50076304"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50469364"
 ---
 # <a name="cbasepane-class"></a>CBasePane 類別
 
@@ -1969,7 +1959,7 @@ virtual void ShowPane(
 ### <a name="parameters"></a>參數
 
 *bShow*<br/>
-[in]指定是否要顯示 (TRUE) 或隱藏 (FALSE)] 窗格。
+[in]指定是否要顯示 (TRUE) 或隱藏 (FALSE) 窗格。
 
 *bDelay*<br/>
 [in]如果為 TRUE，將重新計算停駐的配置會延遲。

@@ -1,29 +1,19 @@
 ---
-title: 位元組分類 | Microsoft Docs
-ms.custom: ''
+title: 位元組分類
 ms.date: 04/04/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.types.bytes
-dev_langs:
-- C++
 helpviewer_keywords:
 - code page 932
 - byte classification routines
 - bytes, testing
 ms.assetid: 1cb52d71-fb0c-46ca-aad7-6472c1103370
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8f1051ea7b8d4cc3a3f38a5a95f015674ac3e35c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9c00d0c0165bdae15ba5fc413d00a99bf4601b21
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390970"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632397"
 ---
 # <a name="byte-classification"></a>位元組分類
 

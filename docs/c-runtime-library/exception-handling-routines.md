@@ -1,27 +1,17 @@
 ---
-title: 例外狀況處理常式 | Microsoft Docs
-ms.custom: ''
+title: 例外狀況處理常式
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.exceptions
-dev_langs:
-- C++
 helpviewer_keywords:
 - exception handling, routines
 ms.assetid: f60548c6-850a-4e1e-a79b-a2a6a541ab62
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eea92c5bfdb54b6c15ae2ae643b2d23b397a3bf6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 09d58e49d3c9dc9b4b8ef40f725e927603e3e47c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389071"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507454"
 ---
 # <a name="exception-handling-routines"></a>例外狀況處理常式
 

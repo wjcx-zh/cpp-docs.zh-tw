@@ -1,26 +1,16 @@
 ---
-title: 如何：組織組建的專案輸出檔 | Microsoft Docs
-ms.custom: ''
+title: 如何：組織組建的專案輸出檔案
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, output files
 - output files, organizing
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f139342e7ccb264d89f9012b8177ff57260f3738
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9dd70f52c79d00282122f935b19770b973901103
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399791"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575964"
 ---
 # <a name="how-to-organize-project-output-files-for-builds"></a>如何：組織組建的專案輸出檔案
 

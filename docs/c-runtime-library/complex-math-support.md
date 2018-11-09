@@ -1,28 +1,18 @@
 ---
-title: C 複雜數學支援 | Microsoft Docs
-ms.custom: ''
+title: C 複雜數學支援
 ms.date: 03/30/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.complex
-dev_langs:
-- C++
 helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 661e1367ea64713cf7a143f276cd195d54fecf85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 12ba858993d3712cbf390288df60faedc602c90a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392074"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452607"
 ---
 # <a name="c-complex-math-support"></a>C 複雜數學支援
 

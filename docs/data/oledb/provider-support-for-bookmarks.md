@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-ms.openlocfilehash: 4a0a0ea51cf6ac347cd79cb777f9cb6a51670063
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 326a52805cb78a3f31141d3eac6a0942a7fee477
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584622"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51264719"
 ---
 # <a name="provider-support-for-bookmarks"></a>提供者書籤支援
 
@@ -60,7 +60,7 @@ END_COM_MAP()
 
 最後，處理`IColumnsInfo::GetColumnsInfo`呼叫。 您通常會使用 PROVIDER_COLUMN_ENTRY 巨集，若要這樣做。 不過，取用者可能會想要使用書籤。 您必須是能夠變更提供者會傳回根據取用者是否要求書籤的資料行。
 
-若要處理`IColumnsInfo::GetColumnsInfo`呼叫時，刪除`PROVIDER_COLUMN`對應`CTextData`類別。 PROVIDER_COLUMN_MAP 巨集定義的函式`GetColumnInfo`。 您需要定義您自己`GetColumnInfo`函式。 函式宣告應該如下所示：
+若要處理`IColumnsInfo::GetColumnsInfo`呼叫時，刪除在 PROVIDER_COLUMN 對應`CTextData`類別。 PROVIDER_COLUMN_MAP 巨集定義的函式`GetColumnInfo`。 定義您自己`GetColumnInfo`函式。 函式宣告應該如下所示：
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -78,7 +78,7 @@ class CTextData
 };
 ```
 
-然後，實作`GetColumnInfo`運作 CustomRS.cpp 檔案中，如下所示：
+然後，實作`GetColumnInfo`函式中*自訂*RS.cpp 檔案，如下所示：
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -119,7 +119,6 @@ ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols)
                         DBCOLUMNFLAGS_ISBOOKMARK)
          ulCols++;
       }
-
    }
 
    // Next set the other columns up.
@@ -151,9 +150,9 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 
 `GetColumnInfo` 若要查看屬性是否呼叫會先檢查`DBPROP_IRowsetLocate`設定。 OLE DB 會有選擇性的資料列集物件介面的每個屬性。 如果取用者想要使用其中一種選擇性介面，它會將屬性設定為 true。 提供者可以檢查這個屬性，並採取以它為基礎的特殊動作。
 
-在您的實作中，您可以取得的屬性使用命令物件的指標。 `pThis`指標代表的資料列集或命令的類別。 因為您在這裡使用範本，您必須將這在為`void`指標或程式碼無法編譯。
+在您的實作中，您可以取得的屬性使用命令物件的指標。 `pThis`指標代表的資料列集或命令的類別。 因為您在這裡使用範本，您必須將這中作為**void**指標或程式碼不會進行編譯。
 
-指定一個靜態的陣列，包含資料行資訊。 如果取用者不想書籤資料行，而浪費在陣列中的項目。 您可以動態地配置此陣列，但您必須確定它正確地終結。 此範例中定義，並使用巨集 ADD_COLUMN_ENTRY 和 ADD_COLUMN_ENTRY_EX 来插入陣列中的資訊。 您可以將巨集新增至 CustomRS.H 檔案，如下列程式碼所示：
+指定靜態的陣列，用以保存的資料行資訊。 如果取用者不想書籤資料行，而浪費在陣列中的項目。 您可以動態地配置此陣列，但您必須確定它正確地終結。 此範例中定義，並使用巨集 ADD_COLUMN_ENTRY 和 ADD_COLUMN_ENTRY_EX 来插入陣列中的資訊。 您可以加入巨集來*自訂*RS。H 檔案，如下列程式碼所示：
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -238,7 +237,7 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 
 **雖然**迴圈包含程式碼來呼叫`Compare`方法中的`IRowsetLocate`介面。 因為您要比較完全相同的書籤，應該一律傳遞您所擁有的程式碼。 此外，儲存在暫存變數一個書籤，以便您可以使用它之後**雖然**迴圈來呼叫完成`MoveToBookmark`消費者範本中的函式。 `MoveToBookmark`函式會呼叫`GetRowsAt`方法中的`IRowsetLocate`。
 
-您也需要更新取用者的使用者資料錄。 若要處理的書籤和中的項目類別中新增項目`COLUMN_MAP`:
+您也需要更新取用者的使用者資料錄。 若要處理的書籤和 COLUMN_MAP 中的項目類別中新增項目：
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////
@@ -263,7 +262,7 @@ END_ACCESSOR_MAP()
 };
 ```
 
-更新程式碼之後，您應該能夠建置並執行的提供者`IRowsetLocate`介面。
+當您已更新程式碼時，您應該能夠建置並執行的提供者`IRowsetLocate`介面。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,23 +1,13 @@
 ---
-title: 讀取指標值 | Microsoft Docs
-ms.custom: ''
+title: 讀取指標值
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: 3dd1cf15-30ac-4dec-9b14-258d20501fcf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 126db1ffe203c050c69b32d74bb295bab143c9ea
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0b8451399813d48db16d5d52205b25757b039af6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106242"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50479504"
 ---
 # <a name="reading-pointer-values"></a>讀取指標值
 

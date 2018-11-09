@@ -1,12 +1,6 @@
 ---
-title: C 關係和等號比較運算子 | Microsoft Docs
-ms.custom: ''
+title: C 關係和等號比較運算子
 ms.date: 10/18/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - relational operators, syntax
 - equality operator
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - equality operator, syntax
 - operators [C], relational
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9251aeb93ec53c47ca9c7474785b5180c36a3887
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: fb33fd051c7639ccb77c59c5f88f46e45be58d17
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808949"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507274"
 ---
 # <a name="c-relational-and-equality-operators"></a>C 關係和等號比較運算子
 

@@ -1,32 +1,22 @@
 ---
-title: 安全範本多載 | Microsoft Docs
-ms.custom: ''
+title: 安全範本多載
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES
 - _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES
 - _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT
 - secure template overloads
 ms.assetid: 562741d0-39c0-485e-8529-73d740f29f8f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 18f4d0962101e859ebab38ffaf333c0adae91548
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a1747102b53febfe20b76d6de05e71d5b19aad19
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016673"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603537"
 ---
 # <a name="secure-template-overloads"></a>安全範本多載
 

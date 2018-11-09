@@ -1,16 +1,10 @@
 ---
-title: CRT 中的安全性功能 | Microsoft Docs
-ms.custom: ''
+title: CRT 中的安全性功能
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - _CRT_SECURE_NO_DEPRECATE
 - _CRT_NONSTDC_NO_WARNINGS
 - _CRT_SECURE_NO_WARNINGS
-dev_langs:
-- C++
 helpviewer_keywords:
 - security deprecation warnings [C++]
 - CRT_NONSTDC_NO_DEPRECATE
@@ -30,16 +24,12 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 99c449f9f96abbc335c58c6d46d81b55b5156c76
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a6ebbb09bc724fe1d3b2f06a27cb6708acb7566b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46023861"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538355"
 ---
 # <a name="security-features-in-the-crt"></a>CRT 中的安全性功能
 
@@ -66,7 +56,7 @@ strcpy(szBuf, "test"); // warning: deprecated
 
 對於那些沒有安全範本多載的已取代函式，您便應該考慮手動更新您的程式碼，以使用安全的版本。
 
-另一個與安全性無關的已取代警告來源是 POSIX 函式。 使用 POSIX 函式的標準對等版本來取代 POSIX 函式名稱 (例如，將 [access](../c-runtime-library/reference/access-crt.md) 變更為 [_access](../c-runtime-library/reference/access-waccess.md))，或透過定義 `_CRT_NONSTDC_NO_WARNINGS` 來停用 POSIX 相關的取代警告。 如需詳細資訊，請參閱[相容性](compatibility.md)。
+另一個與安全性無關的已取代警告來源是 POSIX 函式。 使用 POSIX 函式的標準對等版本來取代 POSIX 函式名稱 (例如，將 [access](../c-runtime-library/reference/access-crt.md) 變更為 [_access](../c-runtime-library/reference/access-waccess.md))，或透過定義 `_CRT_NONSTDC_NO_WARNINGS` 來停用 POSIX 相關的取代警告。 如需詳細資訊，請參閱 [相容性](compatibility.md)。
 
 ## <a name="additional-security-features"></a>其他的安全性功能
 

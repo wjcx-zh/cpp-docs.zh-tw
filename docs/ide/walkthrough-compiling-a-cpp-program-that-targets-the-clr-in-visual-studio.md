@@ -1,34 +1,24 @@
 ---
-title: 編譯針對 CLR 的 C++ 程式 | Microsoft Docs
-ms.custom: ''
+title: 編譯以 CLR 為目標的 C++ 程式
 ms.date: 09/17/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - command-line applications [C++], managed code
 - compiling programs [C++]
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c656f2f11de6b33ae7299215192a2bbb8750c53d
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: f3e55799e2ce88ea53ad5d49f6ae0deb9ad50ec9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50078735"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506037"
 ---
-# <a name="walkthrough-compiling-a-c-program-that-targets-the-clr-in-visual-studio"></a>逐步解說：編譯針對 Visual Studio 中 CLR 的 C++ 程式
+# <a name="walkthrough-compiling-a-c-program-that-targets-the-clr-in-visual-studio"></a>逐步解說：編譯以 Visual Studio 中 CLR 為目標的 C++ 程式
 
 您可以建立使用 .NET 類別的 Visual C++ 程式，並使用 Visual Studio 開發環境進行編譯。
 
-在此程序中，您可以鍵入自己的 Visual C++ 程式，或使用其中一個範例程式。 我們在此程序中使用的範例程式會建立名為 textfile.txt 的文字檔，並將它儲存至專案目錄。
+在此程序中，您可以輸入自己的 Visual C++ 程式，或使用其中一個範例程式。 我們在此程序中使用的範例程式會建立名為 textfile.txt 的文字檔，並將它儲存至專案目錄。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -36,14 +26,14 @@ ms.locfileid: "50078735"
 
 ### <a name="to-create-a-new-project-in-visual-studio-and-add-a-new-source-file"></a>在 Visual Studio 中建立新專案並新增原始程式檔
 
-1. 建立新的專案。 在 [檔案]  功能表中，指向 [新增] ，然後按一下 [專案] 。
+1. 建立新的專案。 在 [檔案] 功能表中，指向 [新增]，然後按一下 [專案]。
 
 1. 從 Visual C++ 專案類型，按一下 [CLR]，然後按一下 [CLR 空專案]。
 
    > [!NOTE]
    > 如果遺漏 [CLR 空專案] 類型 (僅限 Visual Studio 2017)，請選取 [新增專案] 對話方塊左窗格中的 [開啟 Visual Studio 安裝程式]。 安裝位於 [選用元件] 區段中 [使用 C++ 的桌面開發] 下方的選項 ，其名稱為 [C++/CLI 支援]。<br/>
 
-1. 鍵入專案名稱。
+1. 輸入專案名稱。
 
     根據預設，包含專案的方案與新專案具有相同的名稱，但您可以輸入不同的名稱。 如果您想要，也可以輸入不同的專案位置。
 
@@ -53,13 +43,13 @@ ms.locfileid: "50078735"
 
 1. 新增原始程式檔至專案：
 
-    - 以滑鼠右鍵按一下 [方案總管] 中的**來源檔案**資料夾，指向 [新增]，然後按一下 [新增項目]。
+    - 以滑鼠右鍵按一下 [方案總管] 中的 [來源檔案] 資料夾，指向 [新增]，然後按一下 [新增項目]。
 
-    - 按一下 [C++ 檔 (.cpp)] 並鍵入檔案名稱，然後按一下 [新增]。
+    - 按一下 [C++ 檔 (.cpp)] 並輸入檔案名稱，然後按一下 [新增]。
 
-    **.cpp** 檔案會出現在 [方案總管] 的**來源檔案**資料夾中；當您在該檔案中鍵入所需程式碼時，該處會顯示索引標籤式視窗。
+    **.cpp** 檔案會出現在 [方案總管] 的**來源檔案**資料夾中；當您在該檔案中輸入所需程式碼時，該處會顯示索引標籤式視窗。
 
-1. 按一下 Visual Studio 中新建立的索引標籤，然後鍵入有效的 Visual C++ 程式，或複製並貼上其中一個範例程式。
+1. 按一下 Visual Studio 中新建立的索引標籤，然後輸入有效的 Visual C++ 程式，或複製並貼上其中一個範例程式。
 
     例如，您可以使用[如何：寫入文字檔 (C++/CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md) 範例程式 (位於《程式設計指南》的**檔案處理和 I/O**節點中)。
 

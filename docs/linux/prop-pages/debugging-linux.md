@@ -1,23 +1,13 @@
 ---
 title: 偵錯工具屬性 (Linux C++) | Microsoft Docs
-ms.custom: ''
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 0c1c0fcc-a49b-451c-a5cb-ce9711fac064
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: df57a884186fe33d91de78647cc225f3a63a6f9f
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: ac5992ca9921a87616b9ff10e5744791510b7a7a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578354"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50448057"
 ---
 # <a name="c-debugging-properties-linux-c"></a>C++ 偵錯工具屬性 (Linux C++)
 

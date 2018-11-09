@@ -1,25 +1,18 @@
 ---
-title: vcpkg -- 適用於 Windows、Linux 和 MacOS 的 C++ 套件管理員 | Microsoft Docs
+title: vcpkg-- 適用於 Windows、Linux 與 MacOS 的 C++ 套件管理員
 description: vcpkg 是命令列套件管理員，大幅簡化在 Windows 上取得和安裝開放原始碼 C++ 程式庫的流程。
-keywords: vcpkg
 author: mikeblome
 ms.author: mblome
 ms.date: 05/14/2018
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: windows
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.topic: conceptual
-dev_langs:
-- C++
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 70af45a860ff854faf244cf51ad7462262f183fe
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 03446a9b4e1ec3a0425104b9e755efb902f79219
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50072688"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598792"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：適用於 Windows、Linux 和 MacOS 的 C++ 套件管理員
 
@@ -48,7 +41,7 @@ vcpkg 是命令列套件管理員，可大幅簡化在 Windows、Linux 和 MacOS
 
 ## <a name="search-the-list-of-available-libraries"></a>搜尋可用的程式庫清單
 
-若要查看有哪些套件可用，請在命令提示字元中鍵入：**vcpkg search**
+若要查看有哪些套件可用，請在命令提示字元中輸入：**vcpkg search**
 
 此命令會列舉 vcpkg/ports 子資料夾中的控制檔案。 您會看到類似下面的清單內容：
 
@@ -119,7 +112,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 執行 **vcpkg integrate install** 以設定 Visual Studio 針對每個使用者逐一尋找所有 vcpkg 標頭檔和二進位檔，而不需要手動編輯 VC++ 目錄路徑。 如有多個複製品，此命令執行所在的複製品就會成為新的預設位置。
 
-現在您只要鍵入資料夾/標頭就可以 #include 標頭，自動完成會協助您。 不需要任何其他步驟即可連結至程式庫或新增專案參考。 下圖顯示 Visual Studio 如何找到 azure-storage-cpp 標頭。 vcpkg 會將其標頭放在 **/installed** 子資料夾中，依目標平台分割資料。 下圖顯示程式庫 **/was** 子資料夾中的 Include 檔清單：
+現在您只要輸入資料夾/標頭就可以 #include 標頭，自動完成會協助您。 不需要任何其他步驟即可連結至程式庫或新增專案參考。 下圖顯示 Visual Studio 如何找到 azure-storage-cpp 標頭。 vcpkg 會將其標頭放在 **/installed** 子資料夾中，依目標平台分割資料。 下圖顯示程式庫 **/was** 子資料夾中的 Include 檔清單：
 
 ![vcpkg IntelliSense 整合](media/vcpkg-intellisense.png "vcpkg 和 IntelliSense")
 
@@ -184,7 +177,7 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 ## <a name="remove-a-library"></a>移除程式庫
 
-鍵入 **vcpkg remove** 可移除安裝的程式庫。 如有任何其他程式庫與其相依，系統會要求您以 **--recurse** 重新執行命令，這會移除所有下游程式庫。
+輸入 **vcpkg remove** 可移除安裝的程式庫。 如有任何其他程式庫與其相依，系統會要求您以 **--recurse** 重新執行命令，這會移除所有下游程式庫。
 
 ## <a name="customize-vcpkg"></a>自訂 vcpkg
 

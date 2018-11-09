@@ -1,12 +1,6 @@
 ---
-title: 格式化自訂建置步驟或建置事件的輸出 | Microsoft Docs
-ms.custom: ''
+title: 格式化自訂建置步驟或建置事件的輸出
 ms.date: 08/27/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - builds [C++], build events
 - custom build steps [C++], output format
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - build steps [C++], output format
 - builds [C++], custom build steps
 ms.assetid: 92ad3e38-24d7-4b89-90e6-5a16f5f998da
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8a975951142c028ffcfb8ece870ab3ac2d2b60fc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 70ab20c1564d9530059fb850437bd1e3a47b9af9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203245"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50501552"
 ---
 # <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>格式化自訂建置步驟或建置事件的輸出
 

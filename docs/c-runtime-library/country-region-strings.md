@@ -1,29 +1,19 @@
 ---
-title: 國家/地區字串 | Microsoft Docs
-ms.custom: ''
+title: 國家-地區字串
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.strings
-dev_langs:
-- C++
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4e5cd978c5774a4deb8b5bb79fc2b8e59c198e45
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3a3bbe9d1278cf733bafbeb23efcb0a1ad577228
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028385"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463462"
 ---
-# <a name="countryregion-strings"></a>Country/Region Strings
+# <a name="countryregion-strings"></a>國家/地區字串
 
 國家/地區字串可以結合語言字串，建立適合 `setlocale`、 `_wsetlocale`、 `_create_locale`和 `_wcreate_locale` 函式的地區設定規格。 如需各 Windows operating 作業系統支援的國家與地區名稱清單，請參閱＜[MS-LCID]：Windows 語言代碼識別碼 (LCID) 參考＞中[附錄 A：產品行為](https://msdn.microsoft.com/library/cc233982.aspx) \(英文\) 中之表格的 [Language] \(語言\)、[Location] \(位置\) 與 [Language tag] \(語言標記\) 欄。 如需會列舉可用地區設定名稱與相關值之程式碼的範例，請參閱 [NLS：名稱型 API 範例](/windows/desktop/intl/nls--name-based-apis-sample)。
 
@@ -33,7 +23,7 @@ Microsoft C 執行階段程式庫實作也支援下列其他國家/地區字串�
 
 |國家/地區字串|縮寫|對等的地區設定名稱|
 |----------------------------|------------------|----------------------------|
-|美洲|USA|zh-TW|
+|美洲|USA|en-US|
 |英國|GBR|en-GB|
 |中國|CHN|zh-CN|
 |捷克|CZE|cs-CZ|
@@ -54,8 +44,8 @@ Microsoft C 執行階段程式庫實作也支援下列其他國家/地區字串�
 |千里達及托巴哥|TTO|en-TT|
 |uk|GBR|en-GB|
 |英國|GBR|en-GB|
-|美國|USA|zh-TW|
-|us|USA|zh-TW|
+|美國|USA|en-US|
+|us|USA|en-US|
 
 ## <a name="see-also"></a>另請參閱
 

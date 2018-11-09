@@ -8,12 +8,12 @@ helpviewer_keywords:
 - conformance testing [OLE DB]
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-ms.openlocfilehash: f7c5435003866e2c3490bd07e28ec10eca0ec0cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7365176df314baf40ac1cc1ed53936598f05c79e
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491711"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265070"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>通過 OLE DB 一致性測試
 
@@ -26,7 +26,7 @@ ms.locfileid: "50491711"
 > [!NOTE]
 > 您要新增您的提供者，將 OLE DB 一致性測試的數個驗證函式。
 
-此提供者需要兩個驗證常式。 第一個常式， `CRowsetImpl::ValidateCommandID`，是您的資料列集類別的一部分。 它會呼叫在資料列集建立期間提供者樣板。 此範例會使用這個常式，以告知取用者不支援索引。 第一個呼叫是對`CRowsetImpl::ValidateCommandID`(提供者所使用的附註`_RowsetBaseClass`新增的介面對應中的 typedef`CCustomRowset`中[書籤的提供者支援](../../data/oledb/provider-support-for-bookmarks.md)，因此您不需要輸入該範本的較長的行引數）。 接下來，如果索引參數不是 NULL，傳回 DB_E_NOINDEX （這表示取用者想要使用的索引，我們的產品）。 如需有關命令 Id 的詳細資訊，請參閱 OLE DB 規格，並尋找`IOpenRowset::OpenRowset`。
+此提供者需要兩個驗證常式。 第一個常式， `CRowsetImpl::ValidateCommandID`，是您的資料列集類別的一部分。 它會呼叫在資料列集建立期間提供者樣板。 此範例會使用這個常式，以告知取用者，它並不支援索引。 第一個呼叫是對`CRowsetImpl::ValidateCommandID`(提供者所使用的附註`_RowsetBaseClass`新增的介面對應中的 typedef`CCustomRowset`中[書籤的提供者支援](../../data/oledb/provider-support-for-bookmarks.md)，因此您不需要輸入該範本的較長的行引數）。 接下來，如果索引參數不是的 NULL （這表示取用者想要使用的索引，我們的產品） 時，才傳回 DB_E_NOINDEX。 如需有關命令 Id 的詳細資訊，請參閱 OLE DB 規格，並尋找`IOpenRowset::OpenRowset`。
 
 下列程式碼是`ValidateCommandID`驗證常式：
 
@@ -48,11 +48,11 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
 }
 ```
 
-提供者範本呼叫`OnPropertyChanged`每當有人在變更屬性的方法`DBPROPSET_ROWSET`群組。 如果您想要處理的其他群組的屬性，您將它們加入適當的物件 (亦即`DBPROPSET_SESSION`檢查進入`CCustomSession`類別)。
+提供者範本呼叫`OnPropertyChanged`方法只要有人變更 DBPROPSET_ROWSET 群組上的屬性。 如果您想要處理的其他群組的屬性，您將它們加入適當的物件 (也就是 DBPROPSET_SESSION 檢查進入`CCustomSession`類別)。
 
-程式碼會先檢查是否要將屬性連結至另一個。 如果屬性要鏈結，它會設定`DBPROP_BOOKMARKS`屬性設`True`。 OLE DB 規格的附錄 C 包含內容的相關資訊。 這項資訊也會告訴您是否將屬性鏈結至另一個。
+程式碼會先檢查是否要將屬性連結至另一個。 如果屬性要鏈結，它將 DBPROP_BOOKMARKS 屬性設定為`True`。 OLE DB 規格的附錄 C 包含內容的相關資訊。 這項資訊也會告訴您是否將屬性鏈結至另一個。
 
-您也可以在新增`IsValidValue`常式程式碼。 範本呼叫`IsValidValue`時嘗試設定屬性。 如果您需要額外的處理設定的屬性值時，會覆寫這個方法。 您可以其中一種方法，每個屬性集。
+您也可以在新增`IsValidValue`常式程式碼。 範本呼叫`IsValidValue`嘗試設定屬性時。 如果您需要額外的處理設定的屬性值時，會覆寫這個方法。 您可以其中一種方法，每個屬性集。
 
 ## <a name="see-also"></a>另請參閱
 

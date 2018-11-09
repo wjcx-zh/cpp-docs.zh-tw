@@ -1,32 +1,32 @@
 ---
 title: 覆寫提供者服務預設值
-ms.date: 11/04/2016
+ms.date: 10/29/2018
 helpviewer_keywords:
 - service providers [OLE DB]
 - OLE DB services [OLE DB], overriding defaults
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
-ms.openlocfilehash: 9bd202a1e913bf624332e7a6499557851b0285ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9f8eb1c96c40336f39f14fe1a0ee29d60efd003
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588058"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265213"
 ---
 # <a name="overriding-provider-service-defaults"></a>覆寫提供者服務預設值
 
 OLEDB_SERVICES 的提供者的登錄值會傳回的預設值[DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898)初始化資料來源物件的屬性。
 
-只要登錄項目存在，提供者的物件會彙總，而且使用者可以覆寫提供者的預設設定為已啟用的服務，藉由設定`DBPROP_INIT_OLEDBSERVICES`之前初始化的屬性。 若要啟用或停用特定的服務，使用者通常取得的目前值`DBPROP_INIT_OLEDBSERVICES`屬性，設定或清除的位元為特定的屬性來啟用或停用，以及重設屬性。 `DBPROP_INIT_OLEDBSERVICES` 可以直接在 OLE DB 或 ado 傳遞的連接字串中設定或`IDataInitialize::GetDatasource`。 啟用/停用個別的服務對應的值詳列於下表。
+只要存在的登錄項目，會彙總提供者的物件。 使用者可以覆寫提供者的預設設定初始化之前 DBPROP_INIT_OLEDBSERVICES 屬性值已啟用的服務。 若要啟用或停用特定的服務，使用者會取得 DBPROP_INIT_OLEDBSERVICES 屬性的目前值、 設定或清除的位元為特定的屬性來啟用或停用，以及重設屬性。 直接在 OLE DB 或 ado 傳遞的連接字串中，就可以設定 DBPROP_INIT_OLEDBSERVICES 或`IDataInitialize::GetDatasource`。 啟用/停用個別的服務對應的值詳列於下表。
 
 |預設啟用的服務|DBPROP_INIT_OLEDBSERVICES 屬性值|連接字串中的值|
 |------------------------------|------------------------------------------------|--------------------------------|
-|所有服務 （預設值）|`DBPROPVAL_OS_ENABLEALL`|「 OLE DB 服務 =-1;"|
+|所有服務 （預設值）|DBPROPVAL_OS_ENABLEALL|「 OLE DB 服務 =-1;"|
 |集區以外的所有與自動編列|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_RESOURCEPOOLING &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT`|「 OLE DB 服務 =-4; 」|
 |用戶端資料指標的全部項目|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|「 OLE DB 服務 =-5，"|
 |以外所有集區，自動編列和用戶端資料指標|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|「 OLE DB 服務 =-7;"|
 |沒有服務|`~DBPROPVAL_OS_ENABLEALL`|「 OLE DB 服務 = 0;"|
 
-如果提供者的登錄項目不存在，元件管理員將不會彙總提供者的物件，並沒有服務會叫用，即使使用者明確要求。
+如果登錄項目不存在提供者，元件管理員不會收集提供者的物件。 任何服務將會不開啟，即使使用者明確要求。
 
 ## <a name="see-also"></a>另請參閱
 

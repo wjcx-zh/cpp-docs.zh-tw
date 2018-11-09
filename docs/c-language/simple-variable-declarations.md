@@ -1,26 +1,16 @@
 ---
-title: 簡單變數宣告 | Microsoft Docs
-ms.custom: ''
+title: 簡單變數宣告
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - untyped variables
 - declaring variables, simple
 ms.assetid: b07adf9d-9e79-4b64-8a34-e6fe1c7eccec
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7216a4a470b6293a31d6f364626188e41351b5cb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: be6a60d5765954efbc4a1cc6b991ac989e20b8f3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763135"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615315"
 ---
 # <a name="simple-variable-declarations"></a>簡單變數宣告
 
@@ -61,6 +51,6 @@ unsigned long reply, flag; /* Declares two variables
 
 在這個範例中，`reply` 和 `flag` 這兩個變數都具有 `unsigned long` 類型並且保存不帶正負號的整數值。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [宣告子和變數宣告](../c-language/declarators-and-variable-declarations.md)

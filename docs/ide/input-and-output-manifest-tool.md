@@ -1,10 +1,6 @@
 ---
-title: 資訊清單工具輸入與輸出屬性 (Visual C++) | Microsoft Docs
-ms.custom: ''
+title: 資訊清單工具輸入與輸出屬性 (Visual C++)
 ms.date: 08/27/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCManifestTool.OutputManifestFile
 - VC.Project.VCManifestTool.InputResourceManifests
@@ -13,19 +9,13 @@ f1_keywords:
 - VC.Project.VCManifestTool.DependencyInformationFile
 - VC.Project.VCManifestTool.OutputResourceManifest
 - VC.Project.VCManifestTool.GenerateCatalogFiles
-dev_langs:
-- C++
 ms.assetid: a8bb20f6-7ace-45ca-bab0-b4f4a5caf170
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b4320339021f0de25d49cba3fbe1f5e4377cd062
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8aa007e41cdabe0bf548f1184b801c1f81655596
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201215"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624691"
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>輸入和輸出、資訊清單工具、組態屬性、&lt;Projectname&gt; 屬性頁對話方塊
 
@@ -73,6 +63,6 @@ ms.locfileid: "43201215"
 
 ## <a name="see-also"></a>請參閱
 
-[ClickOnce 應用程式資訊清單](/visualstudio/deployment/clickonce-application-manifest)<br/>
+[ndptecclick](/visualstudio/deployment/clickonce-application-manifest)<br/>
 [資訊清單工具屬性頁](../ide/manifest-tool-property-pages.md)<br/>
 [使用專案屬性](../ide/working-with-project-properties.md)<br/>

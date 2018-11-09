@@ -1,24 +1,14 @@
 ---
-title: 在 Visual Studio 中安裝 C++ Linux 工作負載 | Microsoft Docs
+title: 在 Visual Studio 中安裝 C++ Linux 工作負載
 description: 描述如何在 Visual Studio 中下載、安裝和設定 Linux 工作負載。
-ms.custom: ''
 ms.date: 10/12/2018
-ms.technology:
-- cpp-linux
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 8ef0a8d3ecae6371603716ad31530776eed7ee86
-ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
+ms.openlocfilehash: 2fa4036ece6dd161c73a5176740870c5593f4669
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50143688"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441921"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>下載、安裝和設定 Linux 工作負載
 
@@ -26,7 +16,7 @@ ms.locfileid: "50143688"
 
 ## <a name="visual-studio-setup"></a>Visual Studio 安裝程式
 
-1. 在 Windows 搜尋方塊：![Windows 搜尋方塊](media/visual-studio-installer-search.png) 中鍵入「Visual Studio 安裝程式」
+1. 在 Windows 搜尋方塊：![Windows 搜尋方塊](media/visual-studio-installer-search.png) 中輸入「Visual Studio 安裝程式」
 2. 在 [應用程式] 結果下方尋找該安裝程式，然後按兩下。 安裝程式開啟後，選擇 [修改]，然後按一下 [工作負載]標籤。向下捲動至 [其他工具組]，然後選取 [使用 C++ 進行 Linux 開發] 工作負載。
 
    ![適用於 Linux 開發的 Visual C++ 工作負載](media/linuxworkload.png)

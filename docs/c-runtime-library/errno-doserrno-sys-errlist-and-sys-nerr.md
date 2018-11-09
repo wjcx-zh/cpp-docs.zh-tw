@@ -1,10 +1,6 @@
 ---
-title: errno、_doserrno、_sys_errlist 和 _sys_nerr | Microsoft Docs
-ms.custom: ''
+title: errno、_doserrno、_sys_errlist 和 _sys_nerr
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 apiname:
 - _errno
 apilocation:
@@ -15,8 +11,6 @@ f1_keywords:
 - errno
 - _sys_nerr
 - _doserrno
-dev_langs:
-- C++
 helpviewer_keywords:
 - error codes, printing
 - sys_errlist global variable
@@ -27,16 +21,12 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5ea13f86b99dd0a4678a715452122ee3f1a64d98
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 50b44c659aac66dbaddad711cceef635f277d2c3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054944"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487720"
 ---
 # <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno、_doserrno、_sys_errlist 和 _sys_nerr
 
@@ -63,7 +53,7 @@ ms.locfileid: "46054944"
 |------------------|----------------------------|
 |`_doserrno`|[_get_doserrno](../c-runtime-library/reference/get-doserrno.md)、[_set_doserrno](../c-runtime-library/reference/set-doserrno.md)|
 |`errno`|[_get_errno](../c-runtime-library/reference/get-errno.md)、[_set_errno](../c-runtime-library/reference/set-errno.md)|
-|`_sys_errlist`, `_sys_nerr`|[strerror_s、_strerror_s、_wcserror_s、\__wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)|
+|`_sys_errlist`、 `_sys_nerr`|[strerror_s、_strerror_s、_wcserror_s、\__wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)|
 
 程式庫數學常式會以呼叫 [_matherr](../c-runtime-library/reference/matherr.md) 的方式設定 `errno`。 若要以不同方式處理算術錯誤，請根據 `_matherr` 參考描述撰寫自己的常式，並命名為 `_matherr`。
 

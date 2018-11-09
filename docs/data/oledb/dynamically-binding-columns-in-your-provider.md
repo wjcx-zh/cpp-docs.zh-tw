@@ -6,20 +6,20 @@ helpviewer_keywords:
 - dynamic column binding
 - providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-ms.openlocfilehash: 5ceb3b21d59bef3dcbe9d5b53e6a9b779b8b381f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f681907360812f51b34b187ee0ece776816cc82
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509310"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51264602"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>在提供者內動態繫結資料行
 
 請確定您真的需要動態的資料行繫結。 因為您可能需要它：
 
-- 您的資料列集資料行不會在編譯時期定義。
+- 您的資料列集資料行未定義在編譯時期。
 
-- 您支援的書籤等的項目，將資料行。
+- 您支援的項目，例如將資料行加入書籤。
 
 ## <a name="to-implement-dynamic-column-binding"></a>若要實作動態資料行繫結
 

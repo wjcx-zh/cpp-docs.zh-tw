@@ -1,12 +1,6 @@
 ---
-title: 格式規格語法：printf 和 wprintf 函式 | Microsoft Docs
-ms.custom: ''
+title: 格式規格語法：printf 和 wprintf 函式
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - format specification fields for printf function
 - printf function format specification fields
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6253b52d322982efe8beafc45c9942fb3787818a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cb7d99077a082323a6662d29c0386cd1d416297c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082491"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665331"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>格式規格語法：printf 和 wprintf 函式
 

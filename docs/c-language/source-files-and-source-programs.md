@@ -1,28 +1,18 @@
 ---
-title: 原始程式檔和來源程式 | Microsoft Docs
-ms.custom: ''
+title: 原始程式檔和來源程式
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], source
 - programs [C++], source
 - source files, specifying in compiler
 - source programs
 ms.assetid: 18bb2826-17da-48e5-92a2-10e649f1bc9f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 50486a785530e1ba784eaede97a10fa0d300ea6c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c9a7c17c5cf52cb263d61fe79baa331c5b4d57a5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46110844"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637136"
 ---
 # <a name="source-files-and-source-programs"></a>原始程式檔和來源程式
 

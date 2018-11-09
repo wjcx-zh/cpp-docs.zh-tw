@@ -1,23 +1,17 @@
 ---
-title: Visual C++ 範例 | Microsoft Docs
-ms.custom: ''
+title: Visual C++ 範例
 ms.date: 11/30/2017
 ms.technology:
 - cpp-language
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 76798022-5886-48e7-a7f2-f99352b15cbf
 author: mikeblome
 ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee8e06636a7d02ac0f34940031d9f0cac3fbef6c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f4baf057f421ffbf604916e1077533057b1d1ccf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612431"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50490385"
 ---
 # <a name="visual-c-samples"></a>Visual C++ 範例
 
@@ -25,22 +19,22 @@ ms.locfileid: "42612431"
 
 [Visual C++ 範例](https://github.com/Microsoft/vcsamples)
 
-[Visual Studio samples](https://code.msdn.microsoft.com/vstudio/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B) (Visual Studio 範例)
+[Visual Studio 範例](https://code.msdn.microsoft.com/vstudio/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B)
 
 [Github 上的 Windows](https://microsoft.github.io/windows/)
 
 [通用 Windows app 範例](https://code.msdn.microsoft.com/windowsapps/Universal-Windows-app-cb3248c3)
 
-[The All-In-One code framework](https://1code.codeplex.com/) (全方位程式碼架構)
+[全方位程式碼架構](https://1code.codeplex.com/)
 
 [Windows Desktop code samples](https://code.msdn.microsoft.com/windowsdesktop/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B&f%5B0%5D.Text=C%2B%2B) (Windows 桌面版程式碼範例)
 
 [MFC 範例](https://code.msdn.microsoft.com/site/search?query=mfc&f%5B0%5D.Value=mfc&f%5B0%5D.Type=SearchText&ac=4)
 
-[CodePlex samples](https://archive.codeplex.com/) (CodePlex 範例)
+[CodePlex 範例](https://archive.codeplex.com/)
 
-[ADO code samples](https://msdn.microsoft.com/library/jj249212.aspx) (ADO 程式碼範例)
+[ADO 程式碼範例](https://msdn.microsoft.com/library/jj249212.aspx)
 
-[Windows Hardware development samples](https://code.msdn.microsoft.com/windowshardware/) (Windows 硬體開發範例)
+[Windows 硬體開發範例](https://code.msdn.microsoft.com/windowshardware/)
 
 [!INCLUDE[note_security_samplecode](includes/note_security_samplecode_md.md)]

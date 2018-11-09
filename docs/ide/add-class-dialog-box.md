@@ -1,27 +1,17 @@
 ---
-title: 新增類別對話方塊 | Microsoft Docs
-ms.custom: ''
+title: 加入類別對話方塊
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.addclass
-dev_langs:
-- C++
 helpviewer_keywords:
 - Add Class dialog box
 ms.assetid: 916259b8-8e5f-4267-bd10-313483beba67
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f1eb848ae20ba9a587bfdf14881e1a3df3bbeb31
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 405f88f7f77ea75584ec3cfd76af1ea9a0457ed6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420279"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643192"
 ---
 # <a name="add-class-dialog-box"></a>加入類別對話方塊
 
@@ -33,7 +23,7 @@ ms.locfileid: "46420279"
 
 - 在專案中加入適當的檔案和原始程式碼，自動建立新類別。
 
-您可以從 [專案] 功能表、[方案總管] 或[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)，存取 [新增類別] 對話方塊。
+您可以從 [專案]  功能表、 **方案總管** 或 [類別檢視](/visualstudio/ide/viewing-the-structure-of-code) ，存取 [加入類別] 對話方塊。
 
 > [!NOTE]
 >  當您嘗試加入不適合目前專案的類別時，您會收到錯誤訊息。 按一下 [確定]  返回 [加入類別]  對話方塊。

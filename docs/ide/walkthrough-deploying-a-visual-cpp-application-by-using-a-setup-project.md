@@ -1,25 +1,15 @@
 ---
-title: 使用安裝專案部署 Visual C++ 應用程式 | Microsoft Docs
-ms.custom: ''
+title: 使用安裝專案部署 Visual C++ 應用程式
 ms.date: 09/17/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - deployment for Visual C++
 ms.assetid: 66735cda-8fe3-4211-a19a-2cf717a12a3f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ea46400f0c04b62a35a676e94b7a023620c13a50
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 3dc607ea082e31ba73f34ce1ca8acd3ebc78292a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50069642"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565590"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>逐步解說：使用安裝專案部署 Visual C++ 應用程式
 
@@ -42,13 +32,13 @@ ms.locfileid: "50069642"
    > [!NOTE]
    > 如果缺少**MFC 應用程式**類型：<br/>
    > **Visual Studio 2017**：選取 [新增專案] 對話方塊左窗格中的 [開啟 Visual Studio 安裝程式]。 安裝位於 [選用元件] 區段中 [使用 C++ 的桌面開發] 下方的選項 ，其名稱為 **x86 與 x64 版 Visual C++ MFC**。<br/>
-   > **Visual Studio 2015**：按一下 Windows [開始] 按鈕並鍵入**新增或移除程式**。 從結果清單中開啟程式，然後在已安裝的程式清單中尋找您的 Microsoft Visual Studio 2015 安裝。 按兩下該安裝項目，然後選擇 [修改]，並選取 **Visual C++** 下方的 [Microsoft Foundation Classes]。
+   > **Visual Studio 2015**：按一下 Windows [開始] 按鈕並輸入**新增或移除程式**。 從結果清單中開啟程式，然後在已安裝的程式清單中尋找您的 Microsoft Visual Studio 2015 安裝。 按兩下該安裝項目，然後選擇 [修改]，並選取 **Visual C++** 下方的 [Microsoft Foundation Classes]。
 
 1. 將使用中的解決方案組態變更為 [發行]。 從 [建置] 功能表，選取 [組態管理員]。 在 [組態管理員] 對話方塊中，選取 [使用中的方案組態] 下拉式清單方塊上的 [發行]。 按一下 [ **關閉**]。
 
 1. 按 **Ctrl**+**Shift**+**B** 建置應用程式。 或者，在 [建置] 功能表上，按一下 [建置方案]。 建置應用程式時，可讓安裝專案使用此 MFC 應用程式專案的輸出。
 
-1. 如果您尚未這麼做，請下載 Microsoft Visual Studio 安裝程式專案延伸模組。 延伸模組是免費提供給 Visual Studio 開發人員使用，並可將安裝和部署專案範本的功能新增至 Visual Studio。 當您已連線到網際網路時，請在 Visual Studio 中選擇 [工具] > [延伸模組和更新]。 選取 [延伸模組和更新] 對話方塊下方的 [線上] 索引標籤，然後在搜尋方塊中鍵入「Microsoft Visual Studio 安裝程式專案」。 按 **Enter**，選取 [Microsoft Visual Studio \<版本> 安裝程式專案]，然後按一下 [下載]。 選擇執行並安裝延伸模組，然後重新啟動 Visual Studio。
+1. 如果您尚未這麼做，請下載 Microsoft Visual Studio 安裝程式專案延伸模組。 延伸模組是免費提供給 Visual Studio 開發人員使用，並可將安裝和部署專案範本的功能新增至 Visual Studio。 當您已連線到網際網路時，請在 Visual Studio 中選擇 [工具] > [延伸模組和更新]。 選取 [延伸模組和更新] 對話方塊下方的 [線上] 索引標籤，然後在搜尋方塊中輸入 *Microsoft Visual Studio 安裝程式專案*。 按 **Enter**，選取 [Microsoft Visual Studio \<版本> 安裝程式專案]，然後按一下 [下載]。 選擇執行並安裝延伸模組，然後重新啟動 Visual Studio。
 
 1. 在功能表列上，選擇 [檔案] > [最近使用的專案和方案]，然後選擇重新開啟專案。
 

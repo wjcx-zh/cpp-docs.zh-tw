@@ -1,28 +1,18 @@
 ---
-title: 轉散發 Web 用戶端應用程式 | Microsoft Docs
-ms.custom: ''
+title: 轉散發 Web 用戶端應用程式
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Web applications [C++], redistributing
 - deploying applications [C++], Web applications
 - Internet applications [C++], redistributing
 - application deployment [C++], Web applications
 ms.assetid: fe05988b-dee8-4a46-b381-016b5103a6bf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d036f7d46e0db84b8572b26c747947c929972517
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 37ff666493ada7dada19f5731e6581603d3cb57e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48889928"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512409"
 ---
 # <a name="redistributing-web-client-applications"></a>轉散發 Web 用戶端應用程式
 

@@ -1,24 +1,14 @@
 ---
-title: 在 Visual Studio 中連線至您的遠端 Linux 電腦 | Microsoft Docs
+title: 在 Visual Studio 中連線至您的遠端 Linux 電腦
 description: 如何從 Visual Studio C++ 專案內連線至遠端 Linux 電腦。
-ms.custom: ''
 ms.date: 07/20/2018
-ms.technology:
-- cpp-linux
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 387550fa7d3e745038d0be8ee66574d4496132a0
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: ce6a3c02846586dbc46b0c9bc0db0d579878c814
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50061284"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575236"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>連線到遠端 Linux 電腦
 

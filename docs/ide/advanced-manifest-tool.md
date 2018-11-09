@@ -1,29 +1,19 @@
 ---
-title: 進階、資訊清單工具、組態屬性、&lt;Projectname&gt; 屬性頁對話方塊 | Microsoft Docs
-ms.custom: ''
+title: 進階、資訊清單工具、組態屬性、&lt;Projectname&gt; 屬性頁對話方塊
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCManifestTool.KeyFile
 - VC.Project.VCManifestTool.UpdateFileHashes
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - VC.Project.VCManifestTool.ValidateSignature
 - VC.Project.VCManifestTool.KeyContainer
-dev_langs:
-- C++
 ms.assetid: 3d587366-05ea-4956-a978-313069660735
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1e44ba6065658c085777ada39f75bd5fa1cdc2fb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 10da66c690106255d34c82b066f3450c5cc8a37a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382943"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530555"
 ---
 # <a name="advanced-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>進階、資訊清單工具、組態屬性、&lt;Projectname&gt; 屬性頁對話方塊
 
@@ -44,6 +34,6 @@ ms.locfileid: "46382943"
 ## <a name="see-also"></a>請參閱
 
 [\<file> 元素](/visualstudio/deployment/file-element-clickonce-application)<br>
-[ClickOnce 應用程式資訊清單](/visualstudio/deployment/clickonce-application-manifest)<br>
+[ndptecclick](/visualstudio/deployment/clickonce-application-manifest)<br>
 [資訊清單工具屬性頁](../ide/manifest-tool-property-pages.md)<br>
 [使用專案屬性](../ide/working-with-project-properties.md)

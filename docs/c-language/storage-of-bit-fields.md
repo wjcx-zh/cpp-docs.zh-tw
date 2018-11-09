@@ -1,23 +1,13 @@
 ---
-title: 位元欄位的儲存 | Microsoft Docs
-ms.custom: ''
+title: 位元欄位的儲存
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: 4816a241-1580-4d1c-82ed-13d359733959
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c39fa4455cfdc387ab5aa2068c80494a4a8810ef
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7aa6e02c347ff14bb0552320567b343c7215ebc7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020080"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499082"
 ---
 # <a name="storage-of-bit-fields"></a>位元欄位的儲存
 

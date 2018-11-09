@@ -1,25 +1,13 @@
 ---
-title: 在 Visual Studio 中設定 C++ Linux 專案 | Microsoft Docs
-ms.custom: ''
+title: 在 Visual Studio 中設定 C++ Linux 專案
 ms.date: 09/18/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- cpp-linux
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: b4ba6a2300bcdac46467debc544ed69294834f15
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: fd87b3d60e6625fb86ad1b494fd878b9b5ca031b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410794"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50622491"
 ---
 # <a name="configure-a-linux-project"></a>設定 Linux 專案
 
@@ -37,7 +25,7 @@ ms.locfileid: "49410794"
 
 ## <a name="remote-settings"></a>遠端設定
 
-若要變更與遠端的 Linux 電腦有關的設定，請設定出現在 [一般][](prop-pages/general-linux.md) 設定中的遠端選項：
+若要變更與遠端的 Linux 電腦有關的設定，請設定出現在 [一般](prop-pages/general-linux.md) 設定中的遠端選項：
 
 - 若要變更目標 Linux 電腦，請使用 [遠端組建電腦] 項目。  這可讓您選取其中一個先前建立的連線。  若要建立新的項目，請參閱[連線到遠端 Linux 電腦](connect-to-your-remote-linux-computer.md)小節。
 

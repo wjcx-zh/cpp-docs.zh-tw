@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-ms.openlocfilehash: 18edc1ae13ef66f9646edbcf1d0fdfdbe0586cff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cda4efcdb26499f910ad875b2bf7b7504a825cf6
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611207"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265096"
 ---
 # <a name="testing-the-read-only-provider"></a>測試唯讀提供者
 
@@ -24,11 +24,11 @@ ms.locfileid: "50611207"
 
 1. 按一下 [ **檔案** ] 功能表上的 [ **新增**]，然後按一下 [ **專案**]。
 
-1. 在 **專案類型**窗格中，選取**Visual c + + 專案**資料夾。 在 **範本**窗格中，選取**MFC 應用程式**。
+1. 在 **專案類型**窗格中，選取**已安裝** > **Visual c + +** > **MFC/ATL**資料夾。 在 **範本**窗格中，選取**MFC 應用程式**。
 
 1. 針對專案名稱，輸入*TestProv*，然後按一下**確定**。
 
-   MFC 應用程式精靈 隨即出現。
+   **MFC 應用程式** 精靈隨即出現。
 
 1. 在 **應用程式類型**頁面上，選取**採用對話方塊**。
 
@@ -37,13 +37,14 @@ ms.locfileid: "50611207"
 > [!NOTE]
 > 如果您新增應用程式不需要自動化支援`CoInitialize`在`CTestProvApp::InitInstance`。
 
-您可以檢視及編輯**TestProv**中選取它的對話方塊 (IDD_TESTPROV_DIALOG)**資源檢視**。 將兩個清單方塊，一個用於資料列集，每個字串放在對話方塊中。 關閉排序屬性的同時清單方塊按下**Alt**+**Enter**選取清單方塊時，按一下**樣式**索引標籤，然後清除**排序**核取方塊。 此外，放置**執行**來擷取檔案的對話方塊上的按鈕。 已完成**TestProv**  對話方塊中應該有兩個分別標示為 「 字串 1 」 和 「 String 2"的清單方塊，它也有**確定**，**取消**，和**執行**按鈕。
+您可以檢視及編輯**TestProv**中選取它的對話方塊 (IDD_TESTPROV_DIALOG)**資源檢視**。 將兩個清單方塊，一個用於資料列集，每個字串放在對話方塊中。 關閉排序屬性的同時清單方塊按下**Alt**+**Enter**選取清單方塊時，並設定**排序**屬性 **，則為 false**。 此外，放置**執行**來擷取檔案的對話方塊上的按鈕。 已完成**TestProv**  對話方塊中應該有兩個分別標示為 「 字串 1 」 和 「 String 2"的清單方塊，它也有**確定**，**取消**，和**執行**按鈕。
 
 開啟對話方塊類別 （在此案例的 TestProvDlg.h) 的標頭檔。 下列程式碼加入標頭檔 （之外的任何類別宣告）：
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
 // TestProvDlg.h
+#include <atldbcli.h>  
 
 class CProvider
 {
@@ -68,11 +69,11 @@ END_COLUMN_MAP()
 ///////////////////////////////////////////////////////////////////////
 // TestProvDlg.cpp
 
-void CtestProvDlg::OnRun()
+void CTestProvDlg::OnRun()
 {
    CCommand<CAccessor<CProvider>> table;
    CDataSource source;
-   CSession   session;
+   CSession session;
 
    if (source.Open("Custom.Custom.1", NULL) != S_OK)
       return;
@@ -91,36 +92,17 @@ void CtestProvDlg::OnRun()
 }
 ```
 
-`CCommand`， `CDataSource`，和`CSession`全部都屬於 OLE DB 消費者範本的類別。 每個類別會模擬 COM 物件提供者中。 `CCommand`物件會`CProvider`標頭檔，做為範本參數中宣告的類別。 `CProvider`參數代表您用來從提供者存取的資料繫結。 以下是`Open`資料來源、 工作階段和命令的程式碼：
-
-```cpp
-if (source.Open("Custom.Custom.1", NULL) != S_OK)
-   return;
-
-if (session.Open(source) != S_OK)
-   return;
-
-if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
-   return;
-```
+`CCommand`， `CDataSource`，和`CSession`全部都屬於 OLE DB 消費者範本的類別。 每個類別會模擬 COM 物件提供者中。 `CCommand`物件會`CProvider`標頭檔，做為範本參數中宣告的類別。 `CProvider`參數代表您用來從提供者存取的資料繫結。 
 
 線條以開啟每個類別建立提供者中的每個 COM 物件。 若要尋找的提供者，使用`ProgID`的提供者。 您可以取得`ProgID`從系統登錄，或是查看 Custom.rgs 檔案中 (開啟提供者的目錄，並搜尋`ProgID`索引鍵)。
 
-MyData.txt 檔會包含與`MyProv`範例。 若要建立您自己的檔案，請使用編輯器，並輸入偶數數目的按下 ENTER，每個字串之間的字串。 如果您移動檔案，請變更路徑名稱。
+MyData.txt 檔會包含與`MyProv`範例。 建立您自己，使用的檔案編輯器並輸入偶數數目的字串，按下**Enter**每個字串之間。 如果您移動檔案，請變更路徑名稱。
 
 傳遞字串"c:\\\samples\\\myprov\\\MyData.txt 」 中`table.Open`列。 如果您逐步執行`Open`呼叫中，您會看到這個字串會傳遞至`SetCommandText`提供者中的方法。 請注意，`ICommandText::Execute`使用該字串的方法。
 
-若要擷取的資料，請呼叫`MoveNext`資料表上。 `MoveNext` 呼叫`IRowset::GetNextRows`， `GetRowCount`，和`GetData`函式。 有沒有更多的資料列時 (也就是資料列集的目前位置大於`GetRowCount`)，迴圈便會終止：
+若要擷取的資料，請呼叫`MoveNext`資料表上。 `MoveNext` 呼叫`IRowset::GetNextRows`， `GetRowCount`，和`GetData`函式。 有沒有更多的資料列時 (也就是資料列集的目前位置大於`GetRowCount`)，迴圈便會終止。
 
-```cpp
-while (table.MoveNext() == S_OK)
-{
-   m_ctlString1.AddString(table.szField1);
-   m_ctlString2.AddString(table.szField2);
-}
-```
-
-請注意，沒有其他資料列時，提供者會傳回 DB_S_ENDOFROWSET。 DB_S_ENDOFROWSET 值不是錯誤。 您應該一律檢查針對 S_OK 取消資料擷取迴圈，而不使用 SUCCEEDED 巨集。
+沒有其他資料列時，提供者會傳回 DB_S_ENDOFROWSET。 DB_S_ENDOFROWSET 值不是錯誤。 您應該一律檢查針對 S_OK 取消資料擷取迴圈，而不使用 SUCCEEDED 巨集。
 
 您現在應該能夠建置和測試程式。
 

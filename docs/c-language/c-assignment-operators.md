@@ -1,12 +1,6 @@
 ---
-title: C 指派運算子 | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
+title: C 指派運算子
+ms.date: 06/14/2018
 helpviewer_keywords:
 - remainder assignment operator (%=)
 - '&= operator'
@@ -36,46 +30,44 @@ helpviewer_keywords:
 - operator >>=, C assignment operators
 - <<= operator
 ms.assetid: 11688dcb-c941-44e7-a636-3fc98e7dac40
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9a13f3b36ae4f5bbd11f170d78d735427882d2ff
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5080f390d302840e9e7b349cf1c21ab618ae48db
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50657024"
 ---
 # <a name="c-assignment-operators"></a>C 指派運算子
-指派作業會將右方運算元的值指派到左方運算元命名的儲存位置。 因此，指派運算的左方運算元必須是可修改的左值。 在進行指派之後，指派運算式會具有左運算元的值，但不是左值。  
-  
- **語法**  
-  
- *assignment-expression*：  
- *conditional-expression*  
-  
- *unary-expression assignment-operator assignment-expression*  
-  
- *assignment-operator*：下列其中一個  
- **= \*=** `/=` `%=` `+=` **-= <\<= >>= &=** `^=` `|=`  
-  
- C 中的指派運算子可以在單一操作中轉換以及指派值。 C 會提供下列指派運算子：  
-  
-|運算子|作業已執行|  
-|--------------|-------------------------|  
-|**=**|單一指派|  
-|**\*=**|乘法指派|  
-|`/=`|除法指派|  
-|`%=`|餘數指派|  
-|`+=`|加法指派|  
-|**-=**|減法指派|  
-|**<\<=**|左移指派|  
-|**>>=**|右移指派|  
-|**&=**|位元 AND 指派|  
-|`^=`|位元互斥 OR 指派|  
-|`&#124;=`|位元包含 OR 指派|  
-  
- 在指派之中，右方值的類型會轉換為左方值的類型，因此，在完成指派之後，值會儲存在左運算元中。 左運算元不可以是陣列、函式或常數。 特定的轉換路徑取決於轉換的兩個類型，並詳述於[類型轉換](../c-language/type-conversions-c.md)中。  
-  
-## <a name="see-also"></a>請參閱  
- [指派運算子](../cpp/assignment-operators.md)
+
+指派作業會將右方運算元的值指派到左方運算元命名的儲存位置。 因此，指派運算的左方運算元必須是可修改的左值。 在進行指派之後，指派運算式會具有左運算元的值，但不是左值。
+
+## <a name="syntax"></a>語法
+
+*assignment-expression*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
+
+*assignment-operator*：下列其中一個<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**=** **\*=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **|=**
+
+C 中的指派運算子可以在單一操作中轉換以及指派值。 C 會提供下列指派運算子：
+
+|運算子|作業已執行|
+|--------------|-------------------------|
+|**=**|單一指派|
+|**&#42;=**|乘法指派|
+|**/=**|除法指派|
+|**%=**|餘數指派|
+|**+=**|加法指派|
+|**-=**|減法指派|
+|**<\<=**|左移指派|
+|**>>=**|右移指派|
+|**&=**|位元 AND 指派|
+|**^=**|位元互斥 OR 指派|
+|**&#124;=**|位元包含 OR 指派|
+
+在指派之中，右方值的類型會轉換為左方值的類型，因此，在完成指派之後，值會儲存在左運算元中。 左運算元不可以是陣列、函式或常數。 特定的轉換路徑取決於轉換的兩個類型，並詳述於[類型轉換](../c-language/type-conversions-c.md)中。
+
+## <a name="see-also"></a>另請參閱
+
+- [指派運算子](../cpp/assignment-operators.md)

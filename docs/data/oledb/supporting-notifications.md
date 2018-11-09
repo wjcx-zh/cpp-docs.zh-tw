@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE DB provider templates, notifications
 - OLE DB providers, notifications
 ms.assetid: 76e875fd-2bfd-4e4e-9f43-dbe5a3fa7382
-ms.openlocfilehash: 92af327ee69de73697464de59e8c29bdd971b46d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e5327f2197a1d48542ad5f7a615294a915948f5
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616550"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265018"
 ---
 # <a name="supporting-notifications"></a>支援告知
 
@@ -24,9 +24,9 @@ ms.locfileid: "50616550"
 
 `IRowsetNotifyCP` 實作連接點介面的提供者站台[IRowsetNotify](/previous-versions/windows/desktop/ms712959)。 `IRowsetNotifyCP` 實作廣播通知接聽程式連接點上的函式`IID_IRowsetNotify`的資料列集的內容變更。
 
-請注意，您也必須實作並註冊`IRowsetNotify`在取用者 （也稱為接收） 使用[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) ，好讓取用者可以處理通知。 在取用者實作連接點介面的詳細資訊，請參閱[接收通知](../../data/oledb/receiving-notifications.md)。
+您也必須實作並註冊`IRowsetNotify`在取用者 （也稱為接收） 使用[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) ，好讓取用者可以處理通知。 在取用者實作連接點介面的詳細資訊，請參閱[接收通知](../../data/oledb/receiving-notifications.md)。
 
-此外，類別也必須包含的地圖，定義連接點項目，像這樣：
+此外，此類別必須有對應定義的連接點項目，像這樣：
 
 ```cpp
 BEGIN_CONNECTION_POINT_MAP
@@ -85,21 +85,21 @@ END_CONNECTION_POINT_MAP()
 
 |屬性|新增 如果您支援|
 |--------------|------------------------|
-|`DBPROP_IConnectionPointContainer`|永遠|
-|`DBPROP_NOTIFICATIONGRANULARITY`|永遠|
-|`DBPROP_NOTIFICATIONPHASES`|永遠|
-|`DBPROP_NOTIFYCOLUMNSET`|`IRowsetChange`|
-|`DBPROP_NOTIFYROWDELETE`|`IRowsetChange`|
-|`DBPROP_NOTIFYROWINSERT`|`IRowsetChange`|
-|`DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE`|永遠|
-|`DBPROP_NOTIFYROWFIRSTCHANGE`|`IRowsetUpdate`|
-|`DBPROP_NOTIFYROWSETRELEASE`|永遠|
-|`DBPROP_NOTIFYROWUNDOCHANGE`|`IRowsetUpdate`|
-|`DBPROP_NOTIFYROWUNDODELETE`|`IRowsetUpdate`|
-|`DBPROP_NOTIFYROWUNDOINSERT`|`IRowsetUpdate`|
-|`DBPROP_NOTIFYROWUPDATE`|`IRowsetUpdate`|
+|DBPROP_IConnectionPointContainer|永遠|
+|DBPROP_NOTIFICATIONGRANULARITY|永遠|
+|DBPROP_NOTIFICATIONPHASES|永遠|
+|DBPROP_NOTIFYCOLUMNSET|`IRowsetChange`|
+|DBPROP_NOTIFYROWDELETE|`IRowsetChange`|
+|DBPROP_NOTIFYROWINSERT|`IRowsetChange`|
+|DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE|永遠|
+|DBPROP_NOTIFYROWFIRSTCHANGE|`IRowsetUpdate`|
+|DBPROP_NOTIFYROWSETRELEASE|永遠|
+|DBPROP_NOTIFYROWUNDOCHANGE|`IRowsetUpdate`|
+|DBPROP_NOTIFYROWUNDODELETE|`IRowsetUpdate`|
+|DBPROP_NOTIFYROWUNDOINSERT|`IRowsetUpdate`|
+|DBPROP_NOTIFYROWUPDATE|`IRowsetUpdate`|
 
-通知的實作大多已內嵌在 OLE DB 提供者樣板。 如果您沒有加入`IRowsetNotifyCP`到您的繼承鏈結，編譯器會移除所有程式碼從編譯資料流，因而讓您的程式碼大小較小。
+通知的實作大多已內嵌在 OLE DB 提供者樣板。 如果您未新增`IRowsetNotifyCP`到您的繼承鏈結，編譯器會移除所有程式碼從編譯資料流，因而讓您的程式碼大小較小。
 
 ## <a name="see-also"></a>另請參閱
 

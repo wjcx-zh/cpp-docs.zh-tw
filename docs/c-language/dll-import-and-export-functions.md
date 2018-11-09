@@ -1,12 +1,6 @@
 ---
-title: DLL 匯入及匯出函式 | Microsoft Docs
-ms.custom: ''
+title: DLL 匯入及匯出函式
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - DLLs [C++], importing
 - dllimport attribute [C++], storage-class attribute
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - extended storage-class attributes
 - dllexport attribute [C++], storage-class attribute
 ms.assetid: 08d164b9-770a-4e14-afeb-c6f21d9e33e4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3da47c4d6c5af518660b5799b3bf9ae3f512a6fe
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b4f0674e68f2c7b8deeae663c42470b83777ac78
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46029217"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572379"
 ---
 # <a name="dll-import-and-export-functions"></a>DLL 匯入及匯出函式
 

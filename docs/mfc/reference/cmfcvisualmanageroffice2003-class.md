@@ -1,10 +1,6 @@
 ---
-title: CMFCVisualManagerOffice2003 類別 |Microsoft Docs
-ms.custom: ''
+title: CMFCVisualManagerOffice2003 類別
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCVisualManagerOffice2003
 - AFXVISUALMANAGEROFFICE2003/CMFCVisualManagerOffice2003
@@ -93,21 +89,15 @@ f1_keywords:
 - AFXVISUALMANAGEROFFICE2003/CMFCVisualManagerOffice2003::SetDefaultWinXPColors
 - AFXVISUALMANAGEROFFICE2003/CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook
 - AFXVISUALMANAGEROFFICE2003/CMFCVisualManagerOffice2003::SetUseGlobalTheme
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCVisualManagerOffice2003 Class [MFC]
 ms.assetid: 115482cd-e349-450a-8dc4-c6023d092aab
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d50731fede9a65e8d354008e1cee0075b43dd163
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: 1b811de23b4a049bd462ddbb3f9b96e80ae25be0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083525"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50558804"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 類別
 
@@ -534,7 +524,7 @@ virtual void GetTabFrameColors(
 [out]這個方法儲存的索引標籤視窗框線的色彩 COLORREF 參數的參考。 框線的預設色彩為黑色。
 
 *clrHighlight*<br/>
-[out]這個方法儲存的色彩反白顯示視窗的狀態] 索引標籤的位置 COLORREF 參數的參考。
+[out]這個方法儲存的色彩反白顯示視窗的狀態 索引標籤的位置 COLORREF 參數的參考。
 
 *clrFace*<br/>
 [out]這個方法儲存的索引標籤視窗的色彩 COLORREF 參數的參考。
@@ -744,7 +734,7 @@ virtual void OnDrawAutoHideButtonBorder(
 [in]裝置內容指標。
 
 *rectBounds*<br/>
-[in]大小和自動隱藏] 按鈕的位置。
+[in]大小和自動隱藏 按鈕的位置。
 
 *rectBorderSize*<br/>
 [in]框線的大小。
@@ -902,7 +892,7 @@ virtual void OnDrawCheckBoxEx(
 [in]週框的核取方塊。
 
 *nState*<br/>
-[in]核取方塊的狀態： 0，如果未選取，1，若選取此選項，2 如果已核取 [混合。
+[in]核取方塊的狀態： 0，如果未選取，1，若選取此選項，2 如果已核取 混合。
 
 *bHighlighted*<br/>
 [in]如果核取方塊反白顯示，或如果沒有，則為 FALSE，則為 TRUE。
@@ -1353,7 +1343,7 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 [in]裝置內容指標。
 
 *pTab*<br/>
-[in]功能區] 索引標籤物件指標。 Framework 繪製此索引標籤。
+[in]功能區 索引標籤物件指標。 Framework 繪製此索引標籤。
 
 *bIsActive*<br/>
 [in]如果索引標籤作用中或 FALSE 如果沒有，則為 TRUE。
@@ -1526,7 +1516,7 @@ virtual void OnDrawRibbonSliderZoomButton(
 [in]布林值參數，指出是否按下按鈕。
 
 *bIsDisabled*<br/>
-[in]布林值參數，指出是否無法使用] 按鈕。
+[in]布林值參數，指出是否無法使用 按鈕。
 
 ### <a name="remarks"></a>備註
 
@@ -1778,7 +1768,7 @@ virtual void OnDrawTab(
 [in]Framework 繪製索引標籤的索引。
 
 *bIsActive*<br/>
-[in]布林值參數，指定是否使用中] 索引標籤。
+[in]布林值參數，指定是否使用中 索引標籤。
 
 *pTabWnd*<br/>
 [in]指標[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)物件。 Framework 繪製這個索引標籤控制項。
@@ -1815,7 +1805,7 @@ virtual void OnDrawTabsButtonBorder(
 [in]按鈕的狀態 (請參閱[CButton::GetState](../../mfc/reference/cbutton-class.md#getstate))。
 
 *pWndTab*<br/>
-[in]父代] 索引標籤視窗的指標。
+[in]父代 索引標籤視窗的指標。
 
 ### <a name="remarks"></a>備註
 
@@ -2020,7 +2010,7 @@ virtual void OnEraseTabsButton(
 [in]指定的索引標籤按鈕界限的矩形。
 
 *pButton*<br/>
-[in]指向的索引標籤] 按鈕。 架構會清除文字和圖示，此按鈕。
+[in]指向的索引標籤 按鈕。 架構會清除文字和圖示，此按鈕。
 
 *pWndTab*<br/>
 [in]索引標籤控制項之索引標籤按鈕的指標。
@@ -2173,7 +2163,7 @@ virtual COLORREF OnFillCommandsListBackground(
 [in]指定按鈕的界限的矩形。
 
 *bIsSelected*<br/>
-[in]布林值參數，指出是否已選取] 按鈕。
+[in]布林值參數，指出是否已選取 按鈕。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2344,7 +2334,7 @@ virtual void OnFillTab(
 [in]指定的索引標籤視窗界限的矩形。
 
 *pbrFill*<br/>
-[in]指標，此架構用來填滿] 索引標籤視窗的筆刷。
+[in]指標，此架構用來填滿 索引標籤視窗的筆刷。
 
 *iTab*<br/>
 [in]此架構，填滿背景索引標籤的以零為起始的索引標籤索引。

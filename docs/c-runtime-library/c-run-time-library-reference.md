@@ -1,29 +1,19 @@
 ---
-title: C 執行階段程式庫參考 | Microsoft Docs
-ms.custom: ''
+title: C 執行階段程式庫參考
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.runtime
-dev_langs:
-- C++
 helpviewer_keywords:
 - CRT
 - run-time libraries
 - CRT, reference
 ms.assetid: a503e11c-8dca-4846-84fb-025a826c32b8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 38326a76c884d180e4337626a4efec6d52fa24af
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4e45194e5dc5fcd3dc9e13ec3da4cd1c76980c2f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430484"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589458"
 ---
 # <a name="c-run-time-library-reference"></a>C 執行階段程式庫參考
 

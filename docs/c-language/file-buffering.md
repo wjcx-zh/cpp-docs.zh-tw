@@ -1,27 +1,17 @@
 ---
-title: 檔案緩衝 | Microsoft Docs
-ms.custom: ''
+title: 檔案緩衝
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - buffering
 - buffers [C++], file buffering
 - files [C++], buffering
 ms.assetid: 6bca67d1-a98f-43ac-9c6e-6c0504357aba
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2a2b8221976dc00666a24cfc2627dad35e73f3ce
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e3af51053a7de5bd264f5d76b1a6a162f10bc2bd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076017"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642724"
 ---
 # <a name="file-buffering"></a>檔案緩衝
 

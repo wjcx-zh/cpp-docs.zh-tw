@@ -1,27 +1,17 @@
 ---
-title: Typedef 宣告 | Microsoft Docs
-ms.custom: ''
+title: Typedef 宣告
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - declarations, typedef
 - typedef declarations
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a7af5e89e66b179b4527fd35a042caf8ddb1c644
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6493c5240ca66fc1f12c9617e05072f8399d4786
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46100574"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468896"
 ---
 # <a name="typedef-declarations"></a>Typedef 宣告
 

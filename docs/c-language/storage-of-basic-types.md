@@ -1,12 +1,6 @@
 ---
-title: 基本類型的儲存空間 | Microsoft Docs
-ms.custom: ''
+title: 基本類型的儲存空間
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - specifiers [C++], type
 - integral types, storage
@@ -27,16 +21,12 @@ helpviewer_keywords:
 - unsigned types [C++], storage
 - data types [C], storage
 ms.assetid: bd1f33c1-c6b9-4558-8a72-afb21aef3318
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 14c8483671e806adb9170429f2e17d4487de0cfd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fe6d3fb861143a44047e01f338282dbb0d10ffae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090486"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554995"
 ---
 # <a name="storage-of-basic-types"></a>基本類型的儲存空間
 
@@ -48,7 +38,7 @@ ms.locfileid: "46090486"
 |----------|-------------|
 |`char`、`unsigned char`、**signed char**|1 個位元組|
 |**short**、**unsigned short**|2 個位元組|
-|`int`, `unsigned int`|4 個位元組|
+|`int`、 `unsigned int`|4 個位元組|
 |**long**、`unsigned long`|4 個位元組|
 |**float**|4 個位元組|
 |**double**|8 個位元組|

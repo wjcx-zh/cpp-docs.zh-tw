@@ -1,15 +1,9 @@
 ---
-title: 提示檔案 | Microsoft Docs
-ms.custom: ''
+title: 提示檔案
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - cpp.hint
 - vc.hint.file
-dev_langs:
-- C++
 helpviewer_keywords:
 - stop file
 - cpp.hint
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98734522410b867d735d0af25f440d5b45874563
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0b3ca7c6b09d85cddb519242e63af0b8097e3fec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393278"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50558778"
 ---
 # <a name="hint-files"></a>提示檔案
 
@@ -115,7 +105,7 @@ STDMETHOD(myMethod)(int parameter1);
 |`@>`|提示檔案特定的 *replacement-string*，表示一組對應項目的結尾。|
 |`#undef` *hint-name*|刪除現有提示的前置處理器指示詞。 提示的名稱是由 *hint-name* 識別項提供。|
 |`//` *comment*|單行註解。|
-|`/*` comment `*/`|多行註解。|
+|`/*` *註解* `*/`|多行註解。|
 
 ## <a name="what-macros-require-a-hint"></a>哪些巨集需要提示？
 

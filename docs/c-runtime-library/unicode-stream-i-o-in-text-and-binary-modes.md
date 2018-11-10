@@ -1,30 +1,20 @@
 ---
-title: 文字和二進位模式的 Unicode 資料流 I/O | Microsoft Docs
-ms.custom: ''
+title: 文字和二進位模式的 Unicode 資料流 I/O
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.io
-dev_langs:
-- C++
 helpviewer_keywords:
 - stream I/O routines
 - I/O [CRT], unicode stream
 - Unicode, stream I/O routines
 - Unicode stream I/O
 ms.assetid: 68be0c3e-a9e6-4fd5-b34a-1b5207f0e7d6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b89ff3fc752901e9b3cf30c305110b387dc04562
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e54f29292ae9e202cf27c354374132dda267aff8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409049"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50469769"
 ---
 # <a name="unicode-stream-io-in-text-and-binary-modes"></a>文字和二進位模式的 Unicode 資料流 I/O
 

@@ -1,26 +1,16 @@
 ---
-title: 開發 Visual C++ 的 IDE 和工具 | Microsoft Docs
+title: 開發 Visual C++ 的 IDE 和工具
 description: Visual Studio IDE 支援在 Windows、Linux、Android 和 iOS 上使用程式碼編輯器、偵錯工具、測試架構、靜態分析器和其他程式設計工具以進行 C++ 開發。
-ms.custom: ''
 ms.date: 09/27/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, development tools
 ms.assetid: 56eabafb-1956-4f0f-bec5-29b887763559
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 99fdb8f9c08845c5f440fc4ae1f100f8afd832e2
-ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
+ms.openlocfilehash: e24ba58cf0cf94f1505adaf056f64580b8f7829e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50136155"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473355"
 ---
 # <a name="ide-and-compiler-tools-for-visual-c-development"></a>適用於 Visual C++ 開發的 IDE 和編譯器工具
 

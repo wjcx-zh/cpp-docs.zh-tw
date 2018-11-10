@@ -1,27 +1,17 @@
 ---
-title: 方向旗標 | Microsoft Docs
-ms.custom: ''
+title: 方向旗標
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.flags
-dev_langs:
-- C++
 helpviewer_keywords:
 - direction flag
 ms.assetid: 0836b4af-dbbb-4ab8-a4b2-156f2e2099e2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7db91b20b76ef06130cbb8357344352b820ed731
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ae2936c4e07a434a49d931ed60a7d7dee74e3177
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093192"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534872"
 ---
 # <a name="direction-flag"></a>方向旗標
 

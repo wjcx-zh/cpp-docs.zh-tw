@@ -1,21 +1,13 @@
 ---
-title: 重新命名 | Microsoft Docs
-ms.custom: ''
+title: 重新命名
 ms.date: 11/16/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 ms.assetid: 64b42a88-3bd9-4399-8b96-75bceffc353b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7a00eed341e0fc1ca8573e2f66744ea04055f259
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b677d825675ebb0b60da8f43f778774e2e08695e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399199"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455506"
 ---
 # <a name="rename"></a>重新命名
 **功能：** 讓您重新命名程式碼符號 (例如欄位、區域變數、方法、命名空間、屬性及類型) 的識別碼。

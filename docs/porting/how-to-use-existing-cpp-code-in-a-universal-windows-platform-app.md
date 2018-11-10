@@ -1,23 +1,13 @@
 ---
-title: 做法：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼 | Microsoft Docs
-ms.custom: ''
+title: 做法：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼
 ms.date: 08/21/2018
-ms.technology:
-- cpp-language
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a8eab8dc29e56df18fda5ecc8b00b4fea8c2b33c
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 55fb1f3fa89f192c83effb755966158394d2fbcf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50080516"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528709"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>做法：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼
 

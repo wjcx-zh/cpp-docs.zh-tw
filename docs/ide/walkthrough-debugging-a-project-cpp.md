@@ -1,27 +1,17 @@
 ---
-title: 逐步解說：對專案進行偵錯 (C++) | Microsoft Docs
-ms.custom: ''
+title: 逐步解說：偵錯專案 (C++)
 ms.date: 09/14/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - projects [C++], debugging
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bd8d0cebc34b8f0d59f54e720d6a37a52ab2d9e9
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 85753e4842ab2377aa64384bb75e0c2dafd3f858
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50069317"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50581944"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>逐步解說：偵錯專案 (C++)
 

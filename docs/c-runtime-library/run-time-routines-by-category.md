@@ -1,30 +1,20 @@
 ---
-title: 依分類排序的通用 C 執行階段常式 | Microsoft Docs
-ms.custom: ''
+title: 依分類排序的通用 C 執行階段常式
 ms.date: 04/06/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.runtime
-dev_langs:
-- C++
 helpviewer_keywords:
 - routines, run-time
 - functions [CRT], run-time
 - categories, run-time functions
 - functions [CRT]
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd18cf5cfdd2583e866045000ddcc992a573b199
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f81ad76a535cc4e4f5aa740e1501d3ffd323e2f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412367"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499576"
 ---
 # <a name="universal-c-runtime-routines-by-category"></a>依分類排序的通用 C 執行階段常式
 

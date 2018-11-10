@@ -1,25 +1,15 @@
 ---
-title: 使用可轉散發套件部署應用程式 (C++) | Microsoft Docs
-ms.custom: ''
+title: 使用可轉散發套件部署應用程式 (C++)
 ms.date: 09/17/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9759811554fd0998a919c9939a0441c63c26a3f8
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: 6de94ac300c5d50be67ede24cfcc3d03bc966fed
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494344"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436424"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>逐步解說：使用 Visual C++ 可轉散發套件部署 Visual C++ 應用程式
 

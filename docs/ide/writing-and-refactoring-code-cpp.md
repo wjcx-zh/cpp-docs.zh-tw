@@ -1,25 +1,13 @@
 ---
-title: 撰寫及重構程式碼 (C++) | Microsoft Docs
-ms.custom: ''
+title: 撰寫及重構程式碼 (C++)
 ms.date: 04/30/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 977fc221a5a940e2446dbf0ede8445680218dc73
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: bc839a759d2ff3f403ca001ab32702d3fe27833e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705614"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570426"
 ---
 # <a name="writing-and-refactoring-code-c"></a>撰寫及重構程式碼 (C++)
 

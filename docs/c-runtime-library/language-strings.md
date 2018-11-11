@@ -1,27 +1,17 @@
 ---
-title: 語言字串 | Microsoft Docs
-ms.custom: ''
+title: 語言字串
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.strings
-dev_langs:
-- C++
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0bcb9d5dbadc0fbaa33a3c8df6f9193704514e0a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 143f06a0cf22265734d6d77f8fca4efd5ac3031b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46083284"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620281"
 ---
 # <a name="language-strings"></a>語言字串
 

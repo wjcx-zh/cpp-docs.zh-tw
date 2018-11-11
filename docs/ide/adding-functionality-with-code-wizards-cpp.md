@@ -1,14 +1,8 @@
 ---
-title: 使用程式碼精靈新增功能 (C++) | Microsoft Docs
-ms.custom: ''
+title: 使用程式碼精靈新增功能 (C++)
 ms.date: 10/03/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.classes
-dev_langs:
-- C++
 helpviewer_keywords:
 - code wizards [C++]
 - wizards [C++], code
@@ -16,23 +10,19 @@ helpviewer_keywords:
 - projects [C++], adding functionality
 - class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 43d6301a13b0abd517b0fb596f953617cf80f7b0
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: d96b02317f88abd426ceaca4a239e59b2c88b585
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861170"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629862"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>使用程式碼精靈新增功能 (C++)
 
 當您建立專案之後，您會想要變更或新增該專案的功能。 這類工作包括建立新的類別、新增成員函式和變數，以及新增 Automation 方法和屬性。 程式碼精靈的設計目的是為了讓您執行上述所有工作。
 
 > [!WARNING]
-> 數個 ATL 和 MFC 程式碼精靈現在已淘汰，並且將從 Visual Studio 的未來版本中移除。 這些精靈很少使用。 移除這些精靈不會影響 ATL 和 MFC 的一般支援。 如果您想要分享關於此取代的意見反應，請完成[此問卷](https://www.surveymonkey.com/r/QDWKKCN)。 我們重視您的意見反應。
+> 數個 ATL 和 MFC 程式碼精靈現在已淘汰，並且將從 Visual Studio 的未來版本中移除。 這些精靈很少使用。 移除這些精靈不會影響 ATL 和 MFC 的一般支援。 如果您想要分享關於此取代的意見反應，請完成[此問卷](https://www.surveymonkey.com/r/QDWKKCN)。 我們非常重視您的意見反應。
 
 > [!NOTE]
 >  您現在可以使用 [[屬性] 視窗](/visualstudio/ide/reference/properties-window)來新增訊息處理常式並將訊息對應至這些處理常式，以及覆寫 MFC 虛擬函式。

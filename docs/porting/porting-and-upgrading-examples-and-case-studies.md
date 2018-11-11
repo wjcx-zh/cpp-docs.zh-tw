@@ -1,23 +1,13 @@
 ---
-title: 移植和升級：範例和案例研究 | Microsoft Docs
-ms.custom: ''
+title: 移植和升級：範例和案例研究
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: d48bbff9-1ea7-467f-8c8b-758601f01573
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 99e002f3e290c5c1c6d525a8848abb19ab5df385
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 1f49b72b8d390d5631687f67640f4ddd38bec3b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50070150"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50568204"
 ---
 # <a name="porting-and-upgrading-examples-and-case-studies"></a>移植和升級：範例和案例研究
 

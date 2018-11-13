@@ -1,28 +1,18 @@
 ---
-title: 資料轉換 | Microsoft Docs
-ms.custom: ''
+title: 資料轉換
 ms.date: 03/21/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - c.conversions
-dev_langs:
-- C++
 helpviewer_keywords:
 - data conversion routines [C++]
 - converting data
 ms.assetid: b15b5268-7467-49f1-bf95-5299b598f94c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2475a7d4f6399f408dfd1d5903a1920baf97c6bd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 80acfefa7368d293b466230a26b6a609597166fe
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201734"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331148"
 ---
 # <a name="data-conversion"></a>資料轉換
 
@@ -57,7 +47,7 @@ ms.locfileid: "43201734"
 |[strtol、wcstol、_strtol_l、_wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)|將字串轉換為 **long** 整數|
 |[strtoul、_strtoul_l、wcstoul、_wcstoul_l](../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)|將字串轉換為 **unsigned long** 整數|
 |[strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)|根據地區設定特定資訊，將字串轉換為定序的形式|
-|[toascii、__toascii](../c-runtime-library/reference/toascii-toascii.md)|將字元轉換為 ASCII 碼||
+|[toascii、__toascii](../c-runtime-library/reference/toascii-toascii.md)|將字元轉換為 ASCII 碼|
 |[tolower、_tolower、towlower、_tolower_l、_towlower_l](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)、[_mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l](../c-runtime-library/reference/mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)|測試字元並轉換為小寫 (如果目前為大寫)|
 |[tolower、_tolower、towlower、_tolower_l、_towlower_l](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)|將字元無條件轉換為小寫|[System::String::ToLower](https://msdn.microsoft.com/library/system.string.tolower.aspx)|
 |[toupper、_toupper、towupper、_toupper_l、_towupper_l](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)、[_mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l](../c-runtime-library/reference/mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)|測試字元並轉換為大寫 (如果目前為小寫)|

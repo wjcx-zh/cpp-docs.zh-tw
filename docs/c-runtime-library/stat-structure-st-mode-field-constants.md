@@ -1,10 +1,6 @@
 ---
-title: _stat 結構 st_mode 欄位常數 | Microsoft Docs
-ms.custom: ''
+title: _stat 結構 st_mode 欄位常數
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - S_IFCHR
 - S_IFDIR
@@ -20,8 +16,6 @@ f1_keywords:
 - S_IREAD
 - _S_IFCHR
 - _S_IFREG
-dev_langs:
-- C++
 helpviewer_keywords:
 - S_IFDIR constant
 - stat structure
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - _S_IREAD constant
 - _S_IFCHR constant
 ms.assetid: fd462004-7563-4766-8443-30b0a86174b6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd7278d017002ff0d5aa716db61fdcdb54e24018
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: edb88c70a58c501ae09342c91b6c5ec667b8151c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46051134"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523828"
 ---
 # <a name="stat-structure-stmode-field-constants"></a>_stat 結構 st_mode 欄位常數
 
@@ -59,7 +49,6 @@ ms.locfileid: "46051134"
 ```
 
 #include <sys/stat.h>
-
 ```
 
 ## <a name="remarks"></a>備註

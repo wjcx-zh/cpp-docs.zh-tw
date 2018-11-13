@@ -1,18 +1,12 @@
 ---
-title: 共用常數 | Microsoft Docs
-ms.custom: ''
+title: 共用常數
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - _SH_DENYNO
 - _SH_DENYRD
 - _SH_DENYRW
 - _SH_DENYWR
 - _SH_COMPAT
-dev_langs:
-- C++
 helpviewer_keywords:
 - _SH_DENYRW constant
 - SH_DENYRD constant
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - _SH_DENYNO constant
 - SH_COMPAT constant
 ms.assetid: 95fadc3a-55dc-473d-98b5-e8211900465d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 05226ffcc5a10785391969f8162a76034efc4d92
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ecc7e5fc5afaf1d6d97f3ab46be3b1ed3001d8e5
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097299"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519538"
 ---
 # <a name="sharing-constants"></a>共用常數
 
@@ -46,7 +36,6 @@ ms.locfileid: "46097299"
 ```
 
 #include <share.h>
-
 ```
 
 ## <a name="remarks"></a>備註

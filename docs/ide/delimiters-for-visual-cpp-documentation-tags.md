@@ -1,34 +1,25 @@
 ---
-title: Visual C++ 文件標記的分隔符號 | Microsoft Docs
-ms.custom: ''
+title: Visual C++ 文件標記的分隔符號
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - XML documentation, delimiters
 ms.assetid: debfbdd9-63fa-4c58-a18e-a4d203d241d7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 44d867f9bc33c56bf57f55d75a4f8babbbf70748
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 709c17138032a98ec2f8ff978d9b8364241989b1
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401754"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326474"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Visual C++ 文件標記的分隔符號
 
 使用文件標記時需要分隔符號，以向編譯器指出文件註解的開始和結束位置。
 
 您可以搭配使用下列類型的分隔符號與 XML 文件標記︰
-|||
+
+| | |
 |-|-|
-|`///`  | 這是顯示在文件範例中並供 Visual C++ 專案範本使用的格式。  |
+| `///` | 這是顯示在文件範例中並供 Visual C++ 專案範本使用的格式。  |
 | `/** */`  | 這些是多行分隔符號。  |
 
 使用 `/** */` 分隔符號時，有一些格式化規則：

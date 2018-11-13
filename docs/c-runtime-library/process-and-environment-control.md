@@ -11,12 +11,12 @@ helpviewer_keywords:
 - environment control routines
 - process control routines
 ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
-ms.openlocfilehash: 74194311eb33a23de5643b3cb956c2e3f752dea0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df080d1ed8c5a00711468a159acb07159ad31930
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525615"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329406"
 ---
 # <a name="process-and-environment-control"></a>處理序控制和環境控制
 
@@ -46,7 +46,7 @@ ms.locfileid: "50525615"
 |[exit](../c-runtime-library/reference/exit-exit-exit.md)|呼叫 **atexit** 和 **_onexit** 註冊的函式、清除所有緩衝區、關閉所有開啟的檔案，並且終止處理序|
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|立即終止處理序，但不呼叫 **atexit** 或 **_onexit** 或清除緩衝區|
 |[getenv、_wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)、[getenv_s、_wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|取得環境變數的值|
-|[_getpid](../c-runtime-library/reference/getpid.md)|取得處理序 ID 編號|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/library/system.diagnostics.process.id.aspx)|
+|[_getpid](../c-runtime-library/reference/getpid.md)|取得處理序 ID 編號|
 |[longjmp](../c-runtime-library/reference/longjmp.md)|還原儲存的堆疊環境；使用它來執行非區域的 **goto**|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|排程常式在程式終止時執行；為了與 Microsoft C/C++ 版本 7.0 或更早版本的相容性而使用|
 |[_pclose](../c-runtime-library/reference/pclose.md)|等候新的命令處理程式，然後關閉相關管道上的資料流|

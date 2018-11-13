@@ -2,12 +2,12 @@
 title: 浮點數的移轉問題
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
-ms.openlocfilehash: ea34f1eb8e8bd528273da5d7d18cd545cd22de37
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a259cf276c0347fda4954b46318cc79be88028ee
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530867"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332344"
 ---
 # <a name="floating-point-migration-issues"></a>浮點數的移轉問題
 
@@ -17,7 +17,7 @@ ms.locfileid: "50530867"
 
 好幾年來，Visual Studio 就已提供大多數的 CRT 數學函式，但是自 Visual Studio 2013 起，才包含所有 ISO C99 所需的函式。 實作這些函式可以平衡效能與正確性。 因為要在每個情況中產生正確的四捨五入結果可能極為昂貴，所以這些函式會設計成有效率產生最接近正確四捨五入結果的近似值。 在大部分情況下，產生的結果是在正確四捨五入結果的 +/-1 *ulp* 內，但也可能出現較大的誤差。 如果您之前是使用不同的數學程式庫來取得這些函式，則結果的變更可能是因為實作差異導致。
 
-在將數學函式移至 Visual Studio 2015 的通用 CRT 時，即已使用一些新的演算法，並將於 Visual Studio 2013 新發現的數個函式實作 Bug 加以修正。 如果浮點數計算是使用這些函式，這些變更可能會導致計算結果出現可偵測到的差異。 有 Bug 問題的函式是 erf、exp2、remainder、remquo、scalbln、scalbn 及其浮點與長雙精度的變化。  Visual Studio 2015 的其他變更已修正在 _clear87、_clearfp、fegetenv、fesetenv 和 feholdexcept 函式中保留浮點數狀態文字和例外狀況狀態資訊時發生的問題。
+在將數學函式移至 Visual Studio 2015 的通用 CRT 時，即已使用一些新的演算法，並將於 Visual Studio 2013 新發現的數個函式實作 Bug 加以修正。 如果浮點數計算是使用這些函式，這些變更可能會導致計算結果出現可偵測到的差異。 有 Bug 問題的函式是 erf、exp2、remainder、remquo、scalbln、scalbn 及其浮點與長雙精度的變化。  Visual Studio 2015 的其他變更已修正保留浮點數狀態文字時發生的問題，以及 _clear87、_clearfp、fegetenv、fesetenv 和 feholdexcept 函式例外狀況的狀態資訊問題。
 
 ## <a name="processor-differences-and-compiler-flags"></a>處理器的差異和編譯器旗標
 

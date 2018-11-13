@@ -1,10 +1,6 @@
 ---
-title: HUGE_VAL、_HUGE | Microsoft Docs
-ms.custom: ''
+title: HUGE_VAL、_HUGE
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 apiname:
 - _HUGE
 apilocation:
@@ -13,23 +9,17 @@ apitype: DLLExport
 f1_keywords:
 - _HUGE
 - HUGE_VAL
-dev_langs:
-- C++
 helpviewer_keywords:
 - _HUGE constant
 - HUGE_VAL constant
 - double value
 ms.assetid: 3f044b45-02cd-46b2-b1de-87fd0441dd6a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a9917d614261afaffe28ea92f913799c429a9611
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8f8342990ea62b368b46ed56f0697a844c755a61
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060716"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522125"
 ---
 # <a name="hugeval-huge"></a>HUGE_VAL、_HUGE
 
@@ -38,7 +28,6 @@ ms.locfileid: "46060716"
 ```
 
 #include <math.h>
-
 ```
 
 ## <a name="remarks"></a>備註

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - debug macros
 - debugging [CRT], runtime routines
 ms.assetid: cb4d2664-10f3-42f7-a516-595558075471
-ms.openlocfilehash: f8ceb25f7ccdd10ff2b6dc7529563616b2fd0da6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1281b578435086dc7de04c7962145c2b265277a
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452178"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329460"
 ---
 # <a name="debug-routines"></a>偵錯常式
 
@@ -63,7 +63,7 @@ C 執行階段程式庫的偵錯版本提供許多診斷服務，使得偵錯程
 |[_calloc_dbg](../c-runtime-library/reference/calloc-dbg.md)|針對偵錯標頭和覆寫緩衝區，使用額外空間在堆積中配置指定的記憶體區塊數。|
 |[_expand_dbg](../c-runtime-library/reference/expand-dbg.md)|以展開或收縮區塊的方式，調整堆積的指定記憶體區塊大小。|
 |[_free_dbg](../c-runtime-library/reference/free-dbg.md)|釋放堆積的記憶體區塊|
-|[_fullpath_dbg、_wfullpath_dbg](../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md)|使用 [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) 配置記憶體，為指定的相對路徑名稱建立絕對或完整路徑名稱。|[System::IO::File::Create](https://msdn.microsoft.com/library/system.io.file.create.aspx)|
+|[_fullpath_dbg、_wfullpath_dbg](../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md)|使用 [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) 配置記憶體，為指定的相對路徑名稱建立絕對或完整路徑名稱。|
 |[_getcwd_dbg、_wgetcwd_dbg](../c-runtime-library/reference/getcwd-dbg-wgetcwd-dbg.md)|使用 [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) 配置記憶體，取得目前的工作目錄。|
 |[_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md)|針對偵錯標頭和覆寫緩衝區，使用額外空間在堆積中配置記憶體區塊。|
 |[_msize_dbg](../c-runtime-library/reference/msize-dbg.md)|計算堆積的記憶體區塊大小|

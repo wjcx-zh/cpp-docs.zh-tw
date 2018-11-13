@@ -7,12 +7,12 @@ ms.date: 05/14/2018
 ms.technology:
 - cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 03446a9b4e1ec3a0425104b9e755efb902f79219
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f7dc6f1d9c78d894c5cf0e6ba20c8bdfc54e67a
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598792"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518680"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：適用於 Windows、Linux 和 MacOS 的 C++ 套件管理員
 
@@ -41,7 +41,7 @@ vcpkg 是命令列套件管理員，可大幅簡化在 Windows、Linux 和 MacOS
 
 ## <a name="search-the-list-of-available-libraries"></a>搜尋可用的程式庫清單
 
-若要查看有哪些套件可用，請在命令提示字元中輸入：**vcpkg search**
+若要查看有哪些套件可用，請在命令提示字元中鍵入：**vcpkg search**
 
 此命令會列舉 vcpkg/ports 子資料夾中的控制檔案。 您會看到類似下面的清單內容：
 
@@ -62,7 +62,6 @@ atk       2.24.0  GNOME Accessibility Toolkit
 botan       2.0.1      A cryptography library written in C++11
 portaudio   19.0.6.00  PortAudio Portable Cross-platform Audio I/O API P...
 taglib      1.11.1-2   TagLib Audio Meta-Data Library
-
 ```
 
 ### <a name="install-a-library-on-your-local-machine"></a>在本機電腦上安裝程式庫
@@ -81,7 +80,6 @@ The following packages will be built and installed:
   * bzip2:x86-windows
   * zlib:x86-windows
 Additional packages (*) will be installed to complete this operation.
-
 ```
 
 若為 CMAKE 專案，請使用 CMAKE_TOOLCHAIN_FILE，以利用 `find_package()` 提供程式庫。 例如: 
@@ -112,7 +110,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 執行 **vcpkg integrate install** 以設定 Visual Studio 針對每個使用者逐一尋找所有 vcpkg 標頭檔和二進位檔，而不需要手動編輯 VC++ 目錄路徑。 如有多個複製品，此命令執行所在的複製品就會成為新的預設位置。
 
-現在您只要輸入資料夾/標頭就可以 #include 標頭，自動完成會協助您。 不需要任何其他步驟即可連結至程式庫或新增專案參考。 下圖顯示 Visual Studio 如何找到 azure-storage-cpp 標頭。 vcpkg 會將其標頭放在 **/installed** 子資料夾中，依目標平台分割資料。 下圖顯示程式庫 **/was** 子資料夾中的 Include 檔清單：
+現在您只要鍵入資料夾/標頭就可以 #include 標頭，自動完成會協助您。 不需要任何其他步驟即可連結至程式庫或新增專案參考。 下圖顯示 Visual Studio 如何找到 azure-storage-cpp 標頭。 vcpkg 會將其標頭放在 **/installed** 子資料夾中，依目標平台分割資料。 下圖顯示程式庫 **/was** 子資料夾中的 Include 檔清單：
 
 ![vcpkg IntelliSense 整合](media/vcpkg-intellisense.png "vcpkg 和 IntelliSense")
 
@@ -177,7 +175,7 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 ## <a name="remove-a-library"></a>移除程式庫
 
-輸入 **vcpkg remove** 可移除安裝的程式庫。 如有任何其他程式庫與其相依，系統會要求您以 **--recurse** 重新執行命令，這會移除所有下游程式庫。
+鍵入 **vcpkg remove** 可移除安裝的程式庫。 如有任何其他程式庫與其相依，系統會要求您以 **--recurse** 重新執行命令，這會移除所有下游程式庫。
 
 ## <a name="customize-vcpkg"></a>自訂 vcpkg
 

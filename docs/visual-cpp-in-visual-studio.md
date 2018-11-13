@@ -8,18 +8,18 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: fbabb949fa0dae03cabfb6db1c98c2ebc1f1af12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b5f263bb6716d4f66673257115d37cd17a59051
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668334"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327183"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio 中的 Visual C++
 
 > [!NOTE]
 > 此開發人員文件適用於 Visual Studio 2015 與 Visual Studio 2017。
-
+>
 > 若正在尋找 Visual C++ 可轉散發套件以執行程式，請前往 [Microsoft 下載中心](http://www.microsoft.com/download/)，並在搜尋方塊中輸入 **Visual C++**。
 
 

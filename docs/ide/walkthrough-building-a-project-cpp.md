@@ -6,12 +6,12 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: 53f9d1ca823385c17bf2b235d844e40886092e44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c12cd50dd92e728c88945cd83029f7e5e62816da
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618357"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524153"
 ---
 # <a name="walkthrough-building-a-project-c"></a>逐步解說：建置專案 (C++)
 
@@ -27,15 +27,15 @@ ms.locfileid: "50618357"
 
 1. 在 TestGames.cpp 中，刪除最後一行中的分號，讓其看起來類似此陳述式：
 
-    `return 0`
+   `return 0`
 
 1. 在功能表列上選擇 [建置] > [建置解決方案]。
 
 1. 在 [錯誤清單] 視窗中的訊息指出專案中有建置錯誤。 訊息描述看起來類似此錯誤訊息：
 
-    `error C2143: syntax error: missing ';' before '}'`
+   `error C2143: syntax error: missing ';' before '}'`
 
-  若要檢視這個錯誤的說明資訊，請在 [錯誤清單] 視窗中醒目提示該錯誤，然後選擇 **F1** 鍵。
+   若要檢視這個錯誤的說明資訊，請在 [錯誤清單] 視窗中醒目提示該錯誤，然後選擇 **F1** 鍵。
 
 1. 將分號加回到發生語法錯誤的那一行結尾：
 
@@ -43,7 +43,7 @@ ms.locfileid: "50618357"
 
 1. 在功能表列上選擇 [建置] > [建置解決方案]。
 
-  [輸出] 視窗中的訊息顯示專案已成功編譯。
+   [輸出] 視窗中的訊息顯示專案已成功編譯。
 
     ```Output
     1>------ Build started: Project: Game, Configuration: Debug Win32 ------

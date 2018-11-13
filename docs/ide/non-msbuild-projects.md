@@ -1,25 +1,15 @@
 ---
-title: Visual C++ 中的開啟資料夾專案 | Microsoft Docs
-ms.custom: ''
+title: Visual C++ 中的開啟資料夾專案
 ms.date: 06/01/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5c7473cd7d6f2f07d81011eca0826b8066513d23
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 6354cc656d501d1611219378f72831cc2fa94389
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50069252"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523991"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Visual C++ 中的開啟資料夾專案
 
@@ -43,7 +33,8 @@ CMake 已整合到 Visual Studio IDE 作為 Visual C++ CMake 工具，這是 C++
 ## <a name="configuring-open-folder-projects"></a>設定「開啟資料夾」專案
 
 您可以透過三個 JSON 檔案自訂「開啟資料夾」專案：
-|||
+
+| | |
 |-|-|
 |CppProperties.json|指定自訂組態資訊以供瀏覽。 如有需要，請在您的根專案資料夾中建立此檔案。|
 |launch.vs.json|指定命令列引數。 存取方式為透過 [方案總管] 的操作功能表項目 [偵錯並啟動設定]。|
@@ -68,6 +59,7 @@ IntelliSense 和瀏覽行為部分取決於使用中組建組態，這會定義 
   ]
 }
 ```
+
 組態可以有下列任何屬性：
 
 |||
@@ -145,6 +137,7 @@ CppProperties.json 支援 Include 路徑和其他屬性值的系統環境變數�
   ]
 }
 ```
+
 您也可以在組態中定義 **environments** 屬性，讓它只會套用至該組態，並覆寫相同名稱的任何全域變數。 在下列範例中，x64 組態會定義區域 **INCLUDE** 變數來覆寫全域值：
 
 ```json
@@ -196,6 +189,7 @@ CppProperties.json 支援 Include 路徑和其他屬性值的系統環境變數�
 #### <a name="macros"></a>巨集
 
 您可以存取 CppProperties.json 的下列內建巨集：
+
 |||
 |-|-|
 |`${workspaceRoot}`| 工作區資料夾的完整路徑|
@@ -268,11 +262,13 @@ CppProperties.json 支援 Include 路徑和其他屬性值的系統環境變數�
   ]
 }
 ```
+
 您可以在儲存 tasks.vs.json 之後，以滑鼠右鍵按一下資料夾中的任何 .cpp 檔案，從操作功能表選擇 [Echo filename]，然後查看 [輸出] 視窗中顯示的檔案名稱。
 
 #### <a name="appliesto"></a>appliesTo
 
 您可以在 `appliesTo` 欄位中指定任何檔案或資料夾的名稱來針對它們建立工作，例如 `"appliesTo" : "hello.cpp"`。 下列檔案遮罩可作為值使用：
+
 |||
 |-|-|
 |`"*"`| 工作可供工作區中的所有檔案及資料夾使用|
@@ -350,4 +346,3 @@ CppProperties.json 支援 Include 路徑和其他屬性值的系統環境變數�
 ## <a name="see-also"></a>請參閱
 
 [開發 Visual C++ 的 IDE 和工具](ide-and-tools-for-visual-cpp-development.md)
-

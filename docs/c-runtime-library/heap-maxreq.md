@@ -1,30 +1,20 @@
 ---
-title: _HEAP_MAXREQ | Microsoft Docs
-ms.custom: ''
+title: _HEAP_MAXREQ
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - HEAP_MAXREQ
 - _HEAP_MAXREQ
-dev_langs:
-- C++
 helpviewer_keywords:
 - HEAP_MAXREQ constants
 - _HEAP_MAXREQ constants
 - heap constants
 ms.assetid: c2dbc2ea-35ad-45d8-b459-d76ba0089ff7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 21e2fb3b7c9db01621d54376dcf3afa1f456f471
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 98a78a3ad54ed2e91c85ae043a98abeef9774b74
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46034300"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524504"
 ---
 # <a name="heapmaxreq"></a>_HEAP_MAXREQ
 
@@ -33,7 +23,6 @@ ms.locfileid: "46034300"
 ```
 
 #include <malloc.h>
-
 ```
 
 ## <a name="remarks"></a>備註

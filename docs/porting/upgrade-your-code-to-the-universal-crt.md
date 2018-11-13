@@ -2,12 +2,12 @@
 title: 將程式碼升級至通用 CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: 5e417df380ff2239b7c09ba32cc02b784e9343d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41b33698c1617cef02f1b98a654d3403843215d8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668607"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331746"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>將程式碼升級至通用 CRT
 
@@ -37,7 +37,7 @@ C 和 C++ 編譯器特定執行階段支援程式庫 **vcruntime**包含支援�
 
 您可以在 Visual Studio 2015 或 Visual Studio 2017 支援的任何 Windows 版本上使用 UCRT。 您可以針對 Windows 10 以外的 Windows 支援版本，使用 vcredist 套件進行轉散發。 vcredist 套件包括 UCRT 元件，並將它們自動安裝在預設未安裝它們的 Windows 作業系統上。 如需詳細資訊，請參閱[轉散發 Visual C++ 檔案](../ide/redistributing-visual-cpp-files.md)。
 
-支援 UCRT 的應用程式本機部署，但基於效能和安全性原因不建議使用。 進行應用程式本機部署的 DLL 隨附為 Windows SDK 的一部分，且位於 **redist** 子目錄下。 所需的 DLL 包括 ucrtbase.dll 和一組名為 api-ms-win-_subset_.dll 的 **APISet forwarder** DLL。 每個作業系統上所需的這組 DLL 都會不同，因此建議您在使用應用程式本機部署時包括所有 DLL。 如需應用程式本機部署的其他詳細資料和注意事項，請參閱 [Visual C++ 中的部署](../ide/deployment-in-visual-cpp.md)。
+支援 UCRT 的應用程式本機部署，但基於效能和安全性原因不建議使用。 進行應用程式本機部署的 DLL 隨附為 Windows SDK 的一部分，且位於 **redist** 子目錄下。 所需的 DLL 包括 ucrtbase.dll 和一組名為 api-ms-win-_subset_.dll 的 **APISet forwarder** DLL。 每個作業系統上所需的這組 DLL 都會不同，因此建議您在使用應用程式本機部署時包括所有 DLL。 如需應用程式本機部署的其他詳細資料和注意事項，請參閱 [Visual C++ 中的部署](../ide/deployment-in-visual-cpp.md)。
 
 ## <a name="changes-to-the-universal-crt-functions-and-macros"></a>通用 CRT 函式和巨集的變更
 

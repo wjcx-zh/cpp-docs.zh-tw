@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, creating
 ms.assetid: 1be84d3c-6886-4d1e-8493-56c4d38a96d4
-ms.openlocfilehash: 53379a7937bd96b50de61652f67bd0dcb34a6730
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d76dac150f86078e67374eec2e5e2e0f8b9f5e3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569727"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523485"
 ---
 # <a name="creating-a-com-interface-visual-c"></a>建立 COM 介面 (Visual C++)
 
@@ -53,7 +53,6 @@ Visual C++ 提供精靈與範本來為您的 COM 物件與自動化類別，建�
 ```
 interface IMyInterface {
 };
-
 ```
 
 如需詳細資訊，請參閱[實作介面](../ide/implementing-an-interface-visual-cpp.md)和[將物件和控制項新增至 ATL 專案](../atl/reference/adding-objects-and-controls-to-an-atl-project.md)。

@@ -102,12 +102,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: c62dd4ba7f4f91371378b7c1a6b0295edb3625e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb7f7ee0b4c190889daf661816a9e1c96575a052
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431066"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557085"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset 類別
 
@@ -154,7 +154,7 @@ class CBulkRowset : public CRowset<TAccessor>
 
 ## <a name="addrefrows"></a> Cbulkrowset:: Addrefrows
 
-呼叫[irowset:: Addrefrows](/previous-versions/windows/desktop/ms719619)遞增目前從大量資料列集擷取的所有資料列的參考計數。
+呼叫[irowset:: Addrefrows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85))遞增目前從大量資料列集擷取的所有資料列的參考計數。
 
 ### <a name="syntax"></a>語法
 
@@ -253,7 +253,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 ### <a name="return-value"></a>傳回值
 
-請參閱[irowset:: Getdata](/previous-versions/windows/desktop/ms716988)中*OLE DB 程式設計人員參考*。
+請參閱[irowset:: Getdata](https://docs.microsoft.com/previous-versions/windows/desktop/ms716988(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ## <a name="movetoratio"></a> Cbulkrowset:: Movetoratio
 
@@ -284,11 +284,11 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-其中`RowsetSize`是以資料列的資料列集的大小。 此公式的精確度取決於特定的提供者。 如需詳細資訊，請參閱 < [irowsetscroll::](/previous-versions/windows/desktop/ms709602)中*OLE DB 程式設計人員參考*。
+其中`RowsetSize`是以資料列的資料列集的大小。 此公式的精確度取決於特定的提供者。 如需詳細資訊，請參閱 < [irowsetscroll::](https://docs.microsoft.com/previous-versions/windows/desktop/ms709602(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ## <a name="releaserows"></a> Cbulkrowset:: Releaserows
 
-呼叫[irowset:: Releaserows](/previous-versions/windows/desktop/ms719771)遞減目前從大量資料列集擷取的所有資料列的參考計數。
+呼叫[irowset:: Releaserows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85))遞減目前從大量資料列集擷取的所有資料列的參考計數。
 
 ### <a name="syntax"></a>語法
 

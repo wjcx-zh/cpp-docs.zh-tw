@@ -2,12 +2,12 @@
 title: Visual C++ 移植和升級指南
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: c1f4114be236e5e3707113bc19779bb50f358ca8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39b0e716ae6dbc1210130908b27cfa1d06f86ec6
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478087"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556864"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 移植和升級指南
 
@@ -86,6 +86,6 @@ Visual Studio 中的建置系統和專案檔格式，已從 Visual Studio 2008 �
 |[針對 UNIX 使用者的 Visual C++ 簡介](introduction-to-visual-cpp-for-unix-users.md)|提供資訊給剛開始使用 Visual C++，並想更有效率使用它的 UNIX 使用者。|
 |[從 UNIX 移植到 Win32](porting-from-unix-to-win32.md)|討論將 UNIX 應用程式移轉至 Windows 的選擇。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Visual C++](../visual-cpp-in-visual-studio.md)

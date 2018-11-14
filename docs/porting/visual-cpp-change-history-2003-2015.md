@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 1025b3469611ee1e880a2abd5a4e553a1317a0d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1070a330e40c0bf73f3713783b3f126d0848cbc
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570712"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525518"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
 
@@ -64,19 +64,19 @@ ms.locfileid: "50570712"
 
    已移動的函式：
 
-   - double abs(double) 和 float abs(float)
+  - double abs(double) 和 float abs(float)
 
-   - double pow(double, int)、float pow(float, float)、float pow(float, int)、long double pow(long double, long double)、long double pow(long double, int)
+  - double pow(double, int)、float pow(float, float)、float pow(float, int)、long double pow(long double, long double)、long double pow(long double, int)
 
-   - 下列浮點函式的浮點數和 long double 版本：acos、acosh、asin、asinh、atan、atanh、atan2、cbrt、ceil、copysign、cos、cosh、erf、erfc、exp、exp2、expm1、fabs、fdim、floor、fma、fmax、fmin、fmod、frexp、hypot、ilogb、ldexp、lgamma、llrint、llround、log、log10、log1p、log2、lrint、lround、modf、nearbyint、nextafter、nexttoward、remainder、remquo、rint、round、scalbln、scalbn、sin、sinh、sqrt、tan、tanh、tgamma、trunc
+  - 下列浮點函式的浮點數和 long double 版本：acos、acosh、asin、asinh、atan、atanh、atan2、cbrt、ceil、copysign、cos、cosh、erf、erfc、exp、exp2、expm1、fabs、fdim、floor、fma、fmax、fmin、fmod、frexp、hypot、ilogb、ldexp、lgamma、llrint、llround、log、log10、log1p、log2、lrint、lround、modf、nearbyint、nextafter、nexttoward、remainder、remquo、rint、round、scalbln、scalbn、sin、sinh、sqrt、tan、tanh、tgamma、trunc
 
-   如果您有使用 abs 搭配浮點類型撰寫的程式碼，且該程式碼只包含 math.h 標頭，則此浮點版本將不再可用，因此即使使用浮點引數，現在仍會將該呼叫解析成 abs(int)。 這會產生此錯誤：
+  如果您有使用 abs 搭配浮點類型撰寫的程式碼，且該程式碼只包含 math.h 標頭，則此浮點版本將不再可用，因此即使使用浮點引數，現在仍會將該呼叫解析成 abs(int)。 這會產生此錯誤：
 
     ```Output
     warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
     ```
 
-   若要修正這個警告，可將 `abs` 呼叫取代為 `abs` 的浮點版本；例如 `fabs` (雙精度浮點引數) 或 `fabsf` (浮點引數)，或包含 cmath 標頭，即可繼續使用 `abs`。
+  若要修正這個警告，可將 `abs` 呼叫取代為 `abs` 的浮點版本；例如 `fabs` (雙精度浮點引數) 或 `fabsf` (浮點引數)，或包含 cmath 標頭，即可繼續使用 `abs`。
 
 - **浮點的一致性**
 
@@ -116,7 +116,7 @@ ms.locfileid: "50570712"
 
    若要在 IDE 中將此程式庫新增至您的連結器輸入，請開啟專案節點的操作功能表，選擇 [屬性] ，然後在 [專案屬性]  對話方塊中選擇 [連結器] ，並編輯 [連結器輸入]，將 `legacy_stdio_definitions.lib` 新增至分號分隔的清單。
 
-   如果您的專案與靜態程式庫連結，且此程式庫使用 2015 之前的 Visual Studio 版本進行編譯，則此連結器可能會回報無法解析的外部符號。 這些錯誤可能會參考 _iob、_iob_func 的內部 stdio 定義，或某些以 _imp\_* 格式宣告之 stdio 函式的相關匯入。 Microsoft 建議您在升級專案時，應以最新版本的 C++ 編譯器和程式庫重新編譯所有的靜態程式庫。 如果該程式庫是協力廠商程式庫，其來源無法取得，您應該向協力廠商要求更新的二進位檔，或將該程式庫的使用方式封裝成以舊版編譯器和舊版程式庫編譯的獨立 DLL。
+   如果您的專案與靜態程式庫連結，且此程式庫使用 2015 之前的 Visual Studio 版本進行編譯，則此連結器可能會回報無法解析的外部符號。 這些錯誤可能會參考 `_iob`、`_iob_func` 的內部 stdio 定義，或某些以 _imp_\* 格式宣告之 stdio 函式的相關匯入。 Microsoft 建議您在升級專案時，應以最新版本的 C++ 編譯器和程式庫重新編譯所有的靜態程式庫。 如果該程式庫是協力廠商程式庫，其來源無法取得，您應該向協力廠商要求更新的二進位檔，或將該程式庫的使用方式封裝成以舊版編譯器和舊版程式庫編譯的獨立 DLL。
 
     > [!WARNING]
     > 如果您要以 Windows SDK 8.1 或更早版本連結，您可能會遇到這些無法解析的外部符號錯誤。 在該情況下，您應該如先前所述地將 legacy_stdio_definitions.lib 加入連結器輸入來解決此錯誤。
@@ -139,27 +139,27 @@ ms.locfileid: "50570712"
 
    在舊版本中，會使用一組 MSVC 特定的 Sentinel 字串，將無限大和 NaN 格式化。
 
-   - 無限大：1.#INF
+  - 無限大：1.#INF
 
-   - 無訊息的 NaN：1.#QNAN
+  - 無訊息的 NaN：1.#QNAN
 
-   - 訊號 NaN：1.#SNAN
+  - 訊號 NaN：1.#SNAN
 
-   - 不確定的 NaN：1.#IND
+  - 不確定的 NaN：1.#IND
 
-   其中任何一項都可能會有正負號，也可能根據欄位寬度和精確度而有稍微不同的格式 (有時會有不尋常的效果，例如：`printf("%.2f\n", INFINITY)` 可能會印出 1.#J，因為有可能會將 #INF「四捨五入」為 2 位數的精確度)。 C99 導入了無限大和 NaN 格式化方式之新的需求。 MSVC 實作現在符合這些需求。 新的字串如下：
+  其中任何一項都可能會有正負號，也可能根據欄位寬度和精確度而有稍微不同的格式 (有時會有不尋常的效果，例如：`printf("%.2f\n", INFINITY)` 可能會印出 1.#J，因為有可能會將 #INF「四捨五入」為 2 位數的精確度)。 C99 導入了無限大和 NaN 格式化方式之新的需求。 MSVC 實作現在符合這些需求。 新的字串如下：
 
-   - 無限大：inf
+  - 無限大：inf
 
-   - 無訊息的 NaN：nan
+  - 無訊息的 NaN：nan
 
-   - 訊號 NaN：nan(snan)
+  - 訊號 NaN：nan(snan)
 
-   - 不確定的 NaN：nan(ind)
+  - 不確定的 NaN：nan(ind)
 
-   其中任何一項都可以有正負號的前置詞。 如果使用了大寫格式規範 (%F，而非 %f)，則此字串會視需要以大寫字母 (INF，而非 inf) 列印。
+  其中任何一項都可以有正負號的前置詞。 如果使用了大寫格式規範 (%F，而非 %f)，則此字串會視需要以大寫字母 (INF，而非 inf) 列印。
 
-   [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 函式在經過修改之後，已可剖析這些新字串，讓這些字串可以透過 printf 及 scanf 來回。
+  [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 函式在經過修改之後，已可剖析這些新字串，讓這些字串可以透過 printf 及 scanf 來回。
 
 - **浮點數格式化和剖析**
 
@@ -171,8 +171,16 @@ ms.locfileid: "50570712"
     printf("%.0f\n", pow(2.0, 80))
     ```
 
+   舊的輸出：
+
     ```Output
-        Old:  1208925819614629200000000    New:  1208925819614629174706176
+    1208925819614629200000000
+    ```
+
+   新的輸出：
+
+    ```Output
+    1208925819614629174706176
     ```
 
    舊的剖析演算法只會考慮輸入字串中最多 17 個有效位數，並會捨棄其餘位數。 這足以產生字串所代表值的非常接近之近似值，而且通常會產生非常接近捨入正確的結果。 新的實作會考慮所有出現的位數，而且會針對所有輸入 (長度最多 768 位數) 產生正確捨入的結果。 此外，這些函式現在會遵循捨入模式 (可透過 fesetround 控制)。  這可能是行為重大變更，因為這些函式可能會輸出不同的結果。 新的結果永遠比舊的結果正確。
@@ -641,7 +649,7 @@ ms.locfileid: "50570712"
    例如，假設您的程式碼同時定義 **placement new** 和 **placement delete**：
 
     ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
     ```
 
@@ -3515,6 +3523,6 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - 編譯器現在會回報無法存取的程式碼 (C4702)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Visual Studio 之 Visual C++ 的新功能](../what-s-new-for-visual-cpp-in-visual-studio.md)

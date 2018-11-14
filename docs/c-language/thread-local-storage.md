@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thread-local storage
 - storage, thread local storage
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
-ms.openlocfilehash: e13aa9600cd26fba47ce43a318fa7174995d58fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a20e337cddcc45701f20941ac5d7fea5e4324a5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572220"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330303"
 ---
 # <a name="thread-local-storage"></a>執行緒區域儲存區
 
@@ -86,12 +86,12 @@ __declspec( thread ) int tls_i = 1;
 
    請注意，包含要初始化之變數的 sizeof 運算式並不會構成其本身的參考，因此可以使用。
 
-- 使用 **__declspec(thread)** 可能會干擾 DLL 匯入的[延遲載入](../build/reference/linker-support-for-delay-loaded-dlls.md)**。**
+- 使用 **\_\_declspec(thread)** 可能會干擾 DLL 匯入的[延遲載入](../build/reference/linker-support-for-delay-loaded-dlls.md)。
 
 如需使用 thread 屬性的詳細資訊，請參閱[多執行緒主題](../parallel/multithreading-support-for-older-code-visual-cpp.md)。
 
 **結束 Microsoft 專屬**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 擴充的儲存類別屬性](../c-language/c-extended-storage-class-attributes.md)

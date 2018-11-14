@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ismbc routines
 - _ismbc routines
 ms.assetid: b8995391-7857-4ac3-9a1e-de946eb4464d
-ms.openlocfilehash: 707287ea7abe255409911f5388cd1f96d976802b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 97094c6773ee6b67655dacc557335ed222fed311
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454625"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326728"
 ---
 # <a name="ismbc-routines"></a>_ismbc 常式
 
@@ -42,7 +42,7 @@ ms.locfileid: "50454625"
 |常式傳回的值|測試條件|字碼頁 932 範例|
 |-------------|--------------------|---------------------------|
 |[_ismbcalnum、_ismbcalnum_l](../c-runtime-library/reference/ismbcalnum-functions.md)|英數字元|只有在 `c` 是代表 ASCII 英文字母的單一位元組時，才傳回非零：請參閱 `_ismbcdigit` 和 `_ismbcalpha` 的範例。|
-|[_ismbcalpha、_ismbcalpha\_](../c-runtime-library/reference/ismbcalnum-functions.md)|字母順序|只有在 `c` 是代表 ASCII 英文字母 (請參閱 `_ismbcupper` 和 `_ismbclower` 的範例) 或片假名字母的單一位元組時，才傳回非零：0xA6<=`c`<=0xDF。|
+|[_ismbcalpha、_ismbcalpha](../c-runtime-library/reference/ismbcalnum-functions.md)|字母順序|只有在 `c` 是代表 ASCII 英文字母 (請參閱 `_ismbcupper` 和 `_ismbclower` 的範例) 或片假名字母的單一位元組時，才傳回非零：0xA6<=`c`<=0xDF。|
 |[_ismbcdigit、_ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|數字|只有在 `c` 是代表 ASCII 數字的單一位元組時，才傳回非零︰0x30<=`c`<=0x39。|
 |[_ismbcgraph、_ismbcgraph_l](../c-runtime-library/reference/ismbcgraph-functions.md)|圖形|只有在 `c` 代表單一位元組，除了空白字元 ( ) 以外的任何 ASCII 或片假名可列印字元時，才傳回非零。 請參閱 `_ismbcdigit`、`_ismbcalpha` 和 `_ismbcpunct` 的範例。|
 |[_ismbclegal、_ismbclegal_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|有效的多位元組字元|只在 `c` 的第一個位元組介於 0x81 - 0x9F 或 0xE0 - 0xFC 的範圍內，同時第二個位元組介於 0x40 - 0x7E 或 0x80 - FC 的範圍內時，才傳回非零。|
@@ -70,7 +70,7 @@ ms.locfileid: "50454625"
 
 **END 字碼頁 932 特定**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [字元分類](../c-runtime-library/character-classification.md)<br/>
 [is、isw 常式](../c-runtime-library/is-isw-routines.md)<br/>

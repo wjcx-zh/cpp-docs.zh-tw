@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: 5479b892a2cb97fb645dba4ffac70dd9ac4aeffe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f7af0f3dd9ff373a458a6f93fb78fda443bd8e9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594502"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520474"
 ---
 # <a name="general-property-page-project"></a>一般屬性頁 (專案)
 
@@ -110,29 +110,29 @@ ms.locfileid: "50594502"
 
 - **組態類型**
 
-   有數個組態類型可供選擇：
+  有數個組態類型可供選擇：
 
-   - **應用程式 (.exe)**
+  - **應用程式 (.exe)**
 
-      會顯示連結器工具組 (C/C++ 編譯器、MIDL、資源編譯器、連結器、BSCMake、XML Web Service Proxy 產生器、自訂建置、建置前、連結前、建置後事件)。
+     會顯示連結器工具組 (C/C++ 編譯器、MIDL、資源編譯器、連結器、BSCMake、XML Web Service Proxy 產生器、自訂建置、建置前、連結前、建置後事件)。
 
-   - **動態程式庫 (.dll)**
+  - **動態程式庫 (.dll)**
 
-      會顯示連結器工具組、指定 /DLL 連結器選項，並將 _WINDLL define 新增至 CL。
+     會顯示連結器工具組、指定 /DLL 連結器選項，並將 _WINDLL define 新增至 CL。
 
-   - **Makefile**
+  - **Makefile**
 
-      會顯示 Makefile 工具組 (NMake)。
+     會顯示 Makefile 工具組 (NMake)。
 
-   - **靜態程式庫 (.lib)**
+  - **靜態程式庫 (.lib)**
 
-      會顯示管理員工具組 (與連結器工具組相同，除了用管理員取代連結器，並省略 XML Web Service Proxy 產生器)。
+     會顯示管理員工具組 (與連結器工具組相同，除了用管理員取代連結器，並省略 XML Web Service Proxy 產生器)。
 
-   - **公用程式**
+  - **公用程式**
 
-      會顯示公用程式工具組 (MIDL、自訂建置、建置前、建置後事件)。
+     會顯示公用程式工具組 (MIDL、自訂建置、建置前、建置後事件)。
 
-   若要以程式設計方式存取此屬性，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>。
+  若要以程式設計方式存取此屬性，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>。
 
 - **MFC 用途**
 

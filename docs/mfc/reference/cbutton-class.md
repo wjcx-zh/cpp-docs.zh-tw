@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: ae1b444d424693a2372389fb27fcec90133b3a7d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14018a1bf3265642f8ab06af51eea51eb1125dc8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662848"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333533"
 ---
 # <a name="cbutton-class"></a>CButton 類別
 
@@ -153,13 +153,13 @@ class CButton : public CWnd
 
 每個訊息對應項目都會使用下列格式：
 
-**ON_** 通知 **(**`id`， `memberFxn` **)**
+**ON\_**_通知_ **(** _識別碼_， _memberFxn_ **)**
 
-何處`id`指定傳送通知之控制項的子視窗識別碼和`memberFxn`是您撰寫來處理通知的父成員函式的名稱。
+何處*識別碼*指定傳送通知之控制項的子視窗識別碼並*memberFxn*是您撰寫來處理通知的父成員函式的名稱。
 
 父代的函式原型如下所示：
 
-**afx_msg** `void` `memberFxn` **（);**
+`afx_msg void memberFxn();`
 
 可能的訊息對應項目如下所示：
 

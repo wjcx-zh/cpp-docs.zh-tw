@@ -1,17 +1,17 @@
 ---
 title: 測試已修改的 ATL DHTML 控制項
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 helpviewer_keywords:
 - HTML controls, testing
 - testing controls
 - DHTML controls, testing
 ms.assetid: 42316118-9433-410f-9d8a-0efcc1eff824
-ms.openlocfilehash: f0fec3e2430fd5956e3cc48cd64532efee30926d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99f55807a7da647af0961f73c600ae0e31166cdc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501669"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330966"
 ---
 # <a name="testing-the-modified-atl-dhtml-control"></a>測試已修改的 ATL DHTML 控制項
 
@@ -31,13 +31,13 @@ ms.locfileid: "50501669"
 
 1. 反白顯示控制項，以便啟動框線。
 
-1. 在 **控制**功能表上，按一下**叫用方法**。
+1. 在 **控制**功能表上，選擇**叫用方法**。
 
-標示為清單中的方法**方法名稱**容器可以呼叫的方法：`MethodInvoked`和`GoToURL`。 所有其他的方法是由 UI 控制。
+   標示為清單中的方法**方法名稱**容器可以呼叫的方法：`MethodInvoked`和`GoToURL`。 所有其他的方法是由 UI 控制。
 
-1. 選取的方法來叫用，並按一下`Invoke`顯示方法的訊息方塊，或瀏覽至 www.microsoft.com。
+1. 選取的方法來叫用，並選擇**Invoke**以顯示方法的訊息方塊，或瀏覽至`www.microsoft.com`。
 
-1. 在 [**叫用方法**] 對話方塊中，按一下**關閉**。
+1. 在 **叫用方法**對話方塊方塊中，選擇**關閉**。
 
 若要深入了解各種項目和 ATL DHTML 控制項所組成的檔案，請參閱[識別 DHTML 控制項專案的項目](../atl/identifying-the-elements-of-the-dhtml-control-project.md)。
 

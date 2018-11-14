@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: ac8a1b43b3bf8bde8f910e72b601bf7d94e0d19d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a15e519be14d9a05cb30a8c9282baccc87a5f35e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480284"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326962"
 ---
 # <a name="pointers-to-members"></a>成員的指標
 
@@ -25,28 +25,40 @@ ms.locfileid: "50480284"
 ```
 
 1. 宣告規範：
-  - 選擇性的儲存類別規範。
 
-  - 選擇性**const**及/或**volatile**規範。
+   - 選擇性的儲存類別規範。
 
-  - 類型指定名稱：類型的名稱。  這是指向成員的類型，而不是類別的類型。
+   - 選擇性**const**及/或**volatile**規範。
+
+   - 類型指定名稱：類型的名稱。  這是指向成員的類型，而不是類別的類型。
 
 1. 宣告子：
 
-  - 選擇性的 Microsoft 專有修飾詞。 如需詳細資訊，請參閱 < [Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)。
-1. 包含指向成員之類別的限定名稱。
-  - :: 運算子。
-  - <strong>\*</strong>運算子。
-  - 選擇性**const**及/或**volatile**規範。
-  - 為成員指標命名的識別項。
+   - 選擇性的 Microsoft 專有修飾詞。 如需詳細資訊，請參閱 < [Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)。
 
-  - 選擇性的初始設定式：
-  - **=** 運算子。
-  - **&** 運算子。
-  - 類別的限定名稱。
-  - `::` 運算子。
-  - 適當類型類別之非靜態成員的名稱
-  - 一如往常，單一宣告允許使用多個宣告子 (和任何關聯的初始設定式)。
+   - 包含指向成員之類別的限定名稱。
+
+   - __::__ 運算子。
+
+   - __\*__ 運算子。
+
+   - 選擇性**const**及/或**volatile**規範。
+
+   - 為成員指標命名的識別項。
+
+1. 選擇性的初始設定式：
+
+   - **=** 運算子。
+
+   - **&** 運算子。
+
+   - 類別的限定名稱。
+
+   - __::__ 運算子。
+
+   - 適當類型類別之非靜態成員的名稱
+
+一如往常，單一宣告允許使用多個宣告子 (和任何關聯的初始設定式)。
 
 類別成員指標不同於一般指標，因為這類指標包含成員類型及成員所屬類別的類型資訊。 一般指標只能識別記憶體中的單一物件 (能取得其位址)。 類別的成員指標可以在類別的任何執行個體中識別該成員。 下列範例宣告類別、`Window` 和某些成員資料指標。
 

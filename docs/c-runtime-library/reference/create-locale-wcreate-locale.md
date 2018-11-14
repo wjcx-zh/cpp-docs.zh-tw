@@ -28,12 +28,12 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: 0ede14d56dc093b83078bf28eb01f5b5c55d8949
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 109a1d93692d0c65269b40fd0559381907ce1cab
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545921"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326559"
 ---
 # <a name="createlocale-wcreatelocale"></a>_create_locale、_wcreate_locale
 
@@ -70,16 +70,16 @@ _locale_t _wcreate_locale(
 
 **_wcreate_locale**是寬字元版本的 **_create_locale**;*地區設定*引數 **_wcreate_locale**是寬字元字串。 **_wcreate_locale**並 **_create_locale**行為相同。
 
-*分類*引數會指定受影響的組件的地區設定特定行為。 所使用的旗標*分類*和影響程式的部分是下表所示。
+*分類*引數會指定受影響的組件的地區設定特定行為。 所使用的旗標*分類*和影響程式的部分是下表所示：
 
-|*類別目錄*旗標|Affects|
-|-|-|
-**LC_ALL**|所有分類，如下所示。
-**LC_COLLATE**|**Strcoll**， **_stricoll**， **wcscoll**， **_wcsicoll**， **strxfrm**， **_strncoll**， **_strnicoll**， **_wcsncoll**， **_wcsnicoll**，並**wcsxfrm**函式。
-**LC_CTYPE**|字元處理函式 (除了**isdigit**， **isxdigit**， **mbstowcs**，以及**mbtowc**，這不會受到影響)。
-**LC_MONETARY**|所傳回的貨幣格式資訊**localeconv**函式。
-**LC_NUMERIC**|小數點字元的格式化的輸出常式 (例如**printf**)、 資料轉換常式，以及所傳回的非貨幣格式化資訊**localeconv**。 除了小數點字元以外**LC_NUMERIC**集千分位分隔符號和群組控制傳回字串[localeconv](localeconv.md)。
-**LC_TIME**|**Strftime**並**wcsftime**函式。
+| *類別目錄*旗標 | Affects |
+|-----------------|---------|
+| **LC_ALL** |所有分類，如下所示。 |
+| **LC_COLLATE** |**Strcoll**， **_stricoll**， **wcscoll**， **_wcsicoll**， **strxfrm**， **_strncoll**， **_strnicoll**， **_wcsncoll**， **_wcsnicoll**，並**wcsxfrm**函式。 |
+| **LC_CTYPE** | 字元處理函式 (除了**isdigit**， **isxdigit**， **mbstowcs**，以及**mbtowc**，這不會受到影響)。 |
+| **LC_MONETARY** | 所傳回的貨幣格式資訊**localeconv**函式。 |
+| **LC_NUMERIC** | 小數點字元的格式化的輸出常式 (例如**printf**)、 資料轉換常式，以及所傳回的非貨幣格式化資訊**localeconv**。 除了小數點字元以外**LC_NUMERIC**集千分位分隔符號和群組控制傳回字串[localeconv](localeconv.md)。 |
+| **LC_TIME** | **Strftime**並**wcsftime**函式。 |
 
 此函式會驗證*分類*並*地區設定*參數。 如果分類參數不是其中一個上表中指定的值，或如果*地區設定*是**NULL**，則函數會傳回**NULL**。
 

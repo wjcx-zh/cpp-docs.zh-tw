@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2338
 ms.assetid: 49bba575-1de4-4963-86c6-ce3226a2ba51
-ms.openlocfilehash: 4ca3feb2a71efa60229afdbf918109a5d5d59cad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a76ecaf78b117b0c1acabd9fcd50c9ae0f73b98
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539590"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332058"
 ---
 # <a name="compiler-error-c2338"></a>編譯器錯誤 C2338
 
@@ -21,11 +21,11 @@ ms.locfileid: "50539590"
 
 也可以由外部提供者，編譯器產生這個錯誤訊息。 在大部分情況下，屬性提供者 DLL，例如 ATLPROV 報告這些錯誤。 此訊息的一些常見的形式包括：
 
-> '*屬性*' Atl 屬性提供者： 錯誤 ATL*數目**訊息*
+- '*屬性*' Atl 屬性提供者： 錯誤 ATL*數目**訊息*
 
-> 不正確的使用方式的屬性 '*屬性*'
+- 不正確的使用方式的屬性 '*屬性*'
 
-> '*使用量*': 屬性 [使用量] 的格式不正確
+- '*使用量*': 屬性 [使用量] 的格式不正確
 
 這些錯誤通常是無法復原，並且之後可能會嚴重編譯器錯誤。
 

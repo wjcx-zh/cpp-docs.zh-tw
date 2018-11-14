@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pointers, to class instance
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
-ms.openlocfilehash: fb7198b22491a94eb2f00fecec83ec296ce03450
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 586ed9d7e07165af71eeb2ee7ab22aba9570bcd3
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535001"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328873"
 ---
 # <a name="this-pointer"></a>this 指標
 
@@ -22,7 +22,7 @@ ms.locfileid: "50535001"
 ## <a name="syntax"></a>語法
 
 ```
-this 
+this
 this->member-identifier
 ```
 

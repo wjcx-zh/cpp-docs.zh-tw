@@ -30,12 +30,12 @@ helpviewer_keywords:
 - defining locales
 - _wsetlocale function
 ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
-ms.openlocfilehash: 0f2c0478ba5898ab369a04362734891f6d45cf42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c9f44e9619b9c34c9424e0be78186d14f2d6a21
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548534"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327131"
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale、_wsetlocale
 
@@ -96,12 +96,12 @@ en-US
 
 |*類別目錄*旗標|Affects|
 |-|-|
-**LC_ALL**|所有分類，如下所示。
-**LC_COLLATE**|**Strcoll**， **_stricoll**， **wcscoll**， **_wcsicoll**， **strxfrm**， **_strncoll**， **_strnicoll**， **_wcsncoll**， **_wcsnicoll**，並**wcsxfrm**函式。
-**LC_CTYPE**|字元處理函式 (除了**isdigit**， **isxdigit**， **mbstowcs**，以及**mbtowc**，這不會受到影響)。
-**LC_MONETARY**|所傳回的貨幣格式資訊**localeconv**函式。
-**LC_NUMERIC**|小數點字元的格式化的輸出常式 (例如**printf**)、 資料轉換常式，以及所傳回的非貨幣格式化資訊**localeconv**。 除了小數點字元以外**LC_NUMERIC**集千分位分隔符號和群組控制傳回字串[localeconv](localeconv.md)。
-**LC_TIME**|**Strftime**並**wcsftime**函式。
+| **LC_ALL** | 所有分類，如下所示。 |
+| **LC_COLLATE** | **Strcoll**， **_stricoll**， **wcscoll**， **_wcsicoll**， **strxfrm**， **_strncoll**， **_strnicoll**， **_wcsncoll**， **_wcsnicoll**，並**wcsxfrm**函式。 |
+| **LC_CTYPE** | 字元處理函式 (除了**isdigit**， **isxdigit**， **mbstowcs**，以及**mbtowc**，這不會受到影響)。 |
+| **LC_MONETARY** | 所傳回的貨幣格式資訊**localeconv**函式。 |
+| **LC_NUMERIC** | 小數點字元的格式化的輸出常式 (例如**printf**)、 資料轉換常式，以及所傳回的非貨幣格式化資訊**localeconv**。 除了小數點字元以外**LC_NUMERIC**集千分位分隔符號和群組控制傳回字串[localeconv](localeconv.md)。 |
+| **LC_TIME** | **Strftime**並**wcsftime**函式。 |
 
 此函式會驗證分類參數。 如果分類參數不是前表中所指定的其中一個值，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則函式會設定**errno**要**EINVAL** ，並傳回**NULL**。
 

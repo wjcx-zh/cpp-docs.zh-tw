@@ -20,12 +20,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
-ms.openlocfilehash: 00bac7b15263d976fa840e22406f4be4c7836962
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49467b9c59d8f8861011f0f36009f4e3951871f9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551706"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329848"
 ---
 # <a name="base-base-address"></a>/BASE (基底位址)
 
@@ -46,7 +46,7 @@ ms.locfileid: "50551706"
 
 命令列上指定的基底位址的另一種方式是使用基底的位址回應檔。 基底的位址回應檔是文字檔，其中包含基底地址和選擇性的所有 Dll 會使用您的程式，以及每個基底位址的唯一文字索引鍵的大小。 若要使用回應檔案，以指定的基底位址，使用 at 符號 (**\@**) 再加上的回應檔名稱*filename*，後面接著一個逗號，則*金鑰*檔案中使用的基底地址的值。 連結器會尋找*filename*中任一個指定的路徑，或如果未指定路徑，LIB 環境變數中指定之目錄中。 中的每一行*filename*代表一個 DLL 並具有下列語法：
 
-> *索引鍵* *地址*[*大小*] **;***註解*
+> *索引鍵**地址*[*大小*] **;***註解*
 
 *金鑰*是英數字元的字串，不區分大小寫。 它通常是 DLL 的名稱，但不是需要。 *金鑰*後面接著基底*地址*在 C 語言、 十六進位或是十進位標記法和選擇性的最大*大小*。 所有的三個引數是以空格或定位字元分隔。 連結器會發出警告，如果指定*大小*小於程式所需的虛擬位址空間。 A*註解*指定分號 (**;**) 可以位於相同或不同的行。 連結器會忽略從分號到行結尾的所有文字。 此範例會示範這類檔案的一部分：
 

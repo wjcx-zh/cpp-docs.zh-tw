@@ -39,12 +39,12 @@ helpviewer_keywords:
 - operator<= member [STL/CLR]
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
-ms.openlocfilehash: 817e4224e926ea305312aaebc6d94bc19e51e82f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a884a75fbc3ba979402c94c67d2915863a847e9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633563"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331460"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
@@ -83,7 +83,7 @@ ms.locfileid: "50633563"
 
 ## <a name="members"></a>成員
 
-##<a name="pair"></a> 配對 (STL/CLR)
+## <a name="pair"></a> 配對 (STL/CLR)
 此範本類別描述包裝一組值的物件。
 
 ### <a name="syntax"></a>語法

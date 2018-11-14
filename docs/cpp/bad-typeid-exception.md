@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bad_typeid exception
 - exceptions [C++], bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
-ms.openlocfilehash: 5d53d2e25b56aa78edaebcd4be0e468993ebb8f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0389a6db1249ad47d4ca5cc10003169933c7a5c3
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514032"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331668"
 ---
 # <a name="badtypeid-exception"></a>bad_typeid 例外狀況
 
@@ -23,7 +23,7 @@ ms.locfileid: "50514032"
 
 ```
 catch (bad_typeid)
-   statement
+   statement
 ```
 
 ## <a name="remarks"></a>備註

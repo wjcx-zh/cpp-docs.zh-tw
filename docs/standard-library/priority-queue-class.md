@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-ms.openlocfilehash: 1b276f427fc127fb04f4f8e09f0278033ef64754
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8f2b4ab788c82e531d1121f04dd0d422efb17cd
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677171"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333211"
 ---
 # <a name="priorityqueue-class"></a>priority_queue 類別
 
@@ -224,9 +224,9 @@ After a pop, the element at the top of the priority_queue is 20.
 ```cpp
 priority_queue();
 
-explicit priority_queue(const Traits&_comp);
+explicit priority_queue(const Traits& _comp);
 
-priority_queue(const Traits&_comp, const container_type& _Cont);
+priority_queue(const Traits& _comp, const container_type& _Cont);
 
 priority_queue(const priority_queue& right);
 
@@ -234,15 +234,15 @@ template <class InputIterator>
 priority_queue(InputIterator first, InputIterator last);
 
 template <class InputIterator>
-priority_queue(InputIterator first, InputIterator last, const Traits&_comp);
+priority_queue(InputIterator first, InputIterator last, const Traits& _comp);
 
 template <class InputIterator>
-priority_queue(InputIterator first, InputIterator last, const Traits&_comp, const container_type& _Cont);
+priority_queue(InputIterator first, InputIterator last, const Traits& _comp, const container_type& _Cont);
 ```
 
 ### <a name="parameters"></a>參數
 
-*_ comp*<br/>
+*_comp*<br/>
 類型為 **constTraits** 並用來排序 priority_queue 中項目的比較函式，預設為基底容器的比較函式。
 
 *_Cont*<br/>
@@ -263,7 +263,7 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
 
 第四個建構函式會指定 priority_queue 的複本*右*。
 
-最後三個建構函式會將範圍複製 [* 第一次，最後一個 *) 某些容器並使用值來初始化以越來越明確指定類型的比較函式類別 priority_queue **Traits**和`container_type`.
+最後三個建構函式會將範圍複製\[*第一次*，*最後一個*) 的某個容器並使用值來初始化 priority_queue 以越來越明確指定的型別類別的比較函式`Traits`和`container_type`。
 
 ### <a name="example"></a>範例
 

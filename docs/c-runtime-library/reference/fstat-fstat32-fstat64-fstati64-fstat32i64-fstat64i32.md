@@ -49,12 +49,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 2cec64e408b326dccc7b950656d0aa699c084f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36d8b0d6480266f86136119a470fb7af5859a5b8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677782"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331239"
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
 
@@ -107,14 +107,14 @@ int _fstat64i32(
 
 |欄位|意義|
 |-|-|
-**st_atime**|最後存取檔案的時間。
-**st_ctime**|建立檔案的時間。
-**st_dev**|如果是裝置，請*fd*，否則為 0。
-**st_mode**|檔案模式資訊的位元遮罩。 **_S_IFCHR**如果使用者設定位元*fd*指的是裝置。 **_S_IFREG**如果使用者設定位元*fd*指的是一般的檔案。 讀取/寫入位元會根據檔案的權限模式設定。 **_S_IFCHR**和其他常數於 SYS\Stat.h 中定義。
-**st_mtime**|檔案的上次修改時間。
-**st_nlink**|在非 NTFS 檔案系統上一律為 1。
-**st_rdev**|如果是裝置，請*fd*，否則為 0。
-**st_size**|檔案大小，以位元組為單位。
+| **st_atime** | 最後存取檔案的時間。 |
+| **st_ctime** | 建立檔案的時間。 |
+| **st_dev** | 如果是裝置，請*fd*，否則為 0。 |
+| **st_mode** | 檔案模式資訊的位元遮罩。 **_S_IFCHR**如果使用者設定位元*fd*指的是裝置。 **_S_IFREG**如果使用者設定位元*fd*指的是一般的檔案。 讀取/寫入位元會根據檔案的權限模式設定。 **_S_IFCHR**和其他常數於 SYS\Stat.h 中定義。 |
+| **st_mtime** | 檔案的上次修改時間。 |
+| **st_nlink** | 在非 NTFS 檔案系統上一律為 1。 |
+| **st_rdev** | 如果是裝置，請*fd*，否則為 0。 |
+| **st_size** | 檔案大小，以位元組為單位。 |
 
 如果*fd*指的是裝置， **st_atime**， **st_ctime**， **st_mtime**，以及**st_size**欄位沒有意義。
 

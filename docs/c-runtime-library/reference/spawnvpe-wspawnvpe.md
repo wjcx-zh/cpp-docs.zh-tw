@@ -31,12 +31,12 @@ helpviewer_keywords:
 - process creation
 - spawnvpe function
 ms.assetid: 3db6394e-a955-4837-97a1-fab1db1e6092
-ms.openlocfilehash: 88838352bb8c4677e8b6693811f8060f698ef47a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a98cc3c441261a92876b94e1231e66bb71e9d3d9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525875"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326598"
 ---
 # <a name="spawnvpe-wspawnvpe"></a>_spawnvpe、_wspawnvpe
 
@@ -82,11 +82,11 @@ intptr_t _wspawnvpe(
 
 |||
 |-|-|
-**E2BIG**|引數清單超過 1024 個位元組。
-**EINVAL**|*模式*引數無效。
-**ENOENT**|找不到檔案或路徑。
-**ENOEXEC**|指定的檔案無法執行或可執行檔格式無效。
-**ENOMEM**|可用記憶體不足，無法執行新處理序。
+| **E2BIG** | 引數清單超過 1024 個位元組。 |
+| **EINVAL** | *模式*引數無效。 |
+| **ENOENT** | 找不到檔案或路徑。 |
+| **ENOEXEC** | 指定的檔案無法執行或可執行檔格式無效。 |
+| **ENOMEM** | 可用記憶體不足，無法執行新處理序。 |
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

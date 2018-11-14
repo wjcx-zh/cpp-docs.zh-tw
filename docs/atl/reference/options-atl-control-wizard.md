@@ -6,16 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-ms.openlocfilehash: 932661227daa216934c061a8b6807b05ca8270ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e607e35b2b3970f329692ba8d2c612d7f6a6591b
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443754"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522307"
 ---
 # <a name="options-atl-control-wizard"></a>選項, ATL 控制項精靈
-
-在這裡插入 [搜尋結果] 摘要。
 
 您可以使用精靈的這個頁面來定義您要建立的控制項型別和它所包含的介面支援的層級。
 
@@ -29,17 +27,17 @@ ms.locfileid: "50443754"
 
 - **複合控制項**: ActiveX 控制項，它可以包含 （類似於對話方塊中） 其他 ActiveX 控制項或 Windows 控制項。 複合控制項包含下列項目：
 
-   - 實作複合控制項的對話方塊範本。
+  - 實作複合控制項的對話方塊範本。
 
-   - 自訂資源中，登錄，這樣會自動註冊時叫用的複合控制項。
+  - 自訂資源中，登錄，這樣會自動註冊時叫用的複合控制項。
 
-   - C + + 類別實作複合控制項。
+  - C + + 類別實作複合控制項。
 
-   - 複合控制項所公開 COM 介面。
+  - 複合控制項所公開 COM 介面。
 
-   - 含有複合控制項的 HTML 測試網頁。
+  - 含有複合控制項的 HTML 測試網頁。
 
-   根據預設，設定這個控制項[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)為 true，表示視窗化控制項。 它會實作接收對應。 如需詳細資訊，請參閱 < [DHTML 控制項的支援](../../atl/atl-support-for-dhtml-controls.md)。
+    根據預設，設定這個控制項[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)為 true，表示視窗化控制項。 它會實作接收對應。 如需詳細資訊，請參閱 < [DHTML 控制項的支援](../../atl/atl-support-for-dhtml-controls.md)。
 
 - **DHTML 控制項**: ATL DHTML 控制項指定的使用者介面，使用 HTML。 DHTML UI 類別包含 COM 對應。 根據預設，設定這個控制項[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)為 true，表示視窗化控制項。
 

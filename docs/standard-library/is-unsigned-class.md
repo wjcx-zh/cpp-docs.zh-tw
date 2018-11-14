@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_unsigned class
 - is_unsigned
 ms.assetid: ba5bec3d-796b-4e54-8595-a3941ec6a8dc
-ms.openlocfilehash: 10488fa329558d24c0563d90ea91f515bd422cf4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc27689eb367950daf9dfdf113e1472b0945f9af
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578304"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524231"
 ---
 # <a name="isunsigned-class"></a>is_unsigned 類別
 
@@ -60,7 +60,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - linker [C++], DEPENDENTLOADFLAG
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
-ms.openlocfilehash: 80065bb4e67674c49761d0832395ae535bbfbf24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bdf2542d641f751f40757079eb576f2c97540dc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604257"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326156"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/ DEPENDENTLOADFLAG （設定預設相依載入旗標）
 
@@ -27,9 +27,8 @@ ms.locfileid: "50604257"
 
 ### <a name="arguments"></a>引數
 
-|||
-|-|-|
-*loadflags*|選擇性"C"樣式 16 位元整數值以十進位、 八進位以有前置零，或十六進位前置`0x`，指定要套用到所有的相依載入旗標[LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)呼叫。 預設值為 0。
+*loadflags*<br/>
+選擇性"C"樣式 16 位元整數值以十進位、 八進位以有前置零，或十六進位前置`0x`，指定要套用到所有的相依載入旗標[LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)呼叫。 預設值為 0。
 
 ## <a name="remarks"></a>備註
 

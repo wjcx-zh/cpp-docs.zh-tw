@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: e709404ed6e0ba79159131de1cbff80905e9f216
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1c98056d5a5e2565e57044b1fb551db4f354f34
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517646"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326195"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011：將 MFC 當成 DLL 的一部分來使用
 
@@ -33,7 +33,7 @@ MFC 的標準 Dll 中有幾項優點：
 
 - 使用以靜態方式連結至 MFC 的標準 MFC Dll，DLL 的大小只會視 MFC 和 C 執行階段常式所使用和連結。
 
-- 動態連結至 MFC 的標準 MFC dll，節省的記憶體使用 MFC 的共用的版本很可觀。 不過，您必須將發佈共用的 Dll、 Mfc*\<版本 >*.dll 和 Msvvcrt*\<版本 >*.dll，與您的 DLL。
+- 動態連結至 MFC 的標準 MFC dll，節省的記憶體使用 MFC 的共用的版本很可觀。 不過，您必須將發佈共用的 Dll、 Mfc\<*版本*>.dll 和 Msvvcrt\<*版本*>.dll，與您的 DLL。
 
 - DLL 的設計與如何實作類別無關。 您的 DLL 設計只會匯出至您要的 API。 如此一來，如果實作變更，MFC 的標準 Dll 都仍然有效。
 

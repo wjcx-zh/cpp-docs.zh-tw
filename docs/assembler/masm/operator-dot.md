@@ -8,12 +8,12 @@ helpviewer_keywords:
 - operator .
 - . operator
 ms.assetid: 468ea0c8-5b08-47be-991b-38abacb77611
-ms.openlocfilehash: 1bfb7ccb83ae5391657d88b91013a541dde2aa2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75eccec0c65cba093d84e9d71107247e5b697287
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658571"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330829"
 ---
 # <a name="operator-"></a>運算子 .
 
@@ -21,9 +21,9 @@ ms.locfileid: "50658571"
 
 ## <a name="syntax"></a>語法
 
-> *運算式*<br/> 。 *欄位*[[。 *欄位*]]...
-
-> [*註冊*]。 *欄位*[[。 *欄位*]]...
+> *運算式* __。__ *欄位* \[ __。__ *欄位*]...
+>
+> __\[__*註冊*__]__ __。__ *欄位* \[ __。__ *欄位*]...
 
 ## <a name="see-also"></a>另請參閱
 

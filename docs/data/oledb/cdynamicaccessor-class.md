@@ -127,12 +127,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: ba456f11973a33eb3b65b8de940e5be76b821f89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12953da220016c7f66e9a2f01b4b8860d2e508b8
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461463"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557020"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor 類別
 
@@ -156,7 +156,7 @@ class CDynamicAccessor : public CAccessorBase
 |-|-|
 |[AddBindEntry](#addbindentry)|當覆寫預設存取子，則您可以將輸出資料行的繫結項目。|
 |[CDynamicAccessor](#cdynamicaccessor)|具現化並初始化`CDynamicAccessor`物件。|
-|[關閉](#close)|所有資料行解除繫結，釋放配置的記憶體，並釋放[IAccessor](/previous-versions/windows/desktop/ms719672)類別中的介面指標。|
+|[關閉](#close)|所有資料行解除繫結，釋放配置的記憶體，並釋放[IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85))類別中的介面指標。|
 |[GetBlobHandling](#getblobhandling)|擷取 BLOB 處理目前的資料列的值。|
 |[GetBlobSizeLimit](#getblobsizelimit)|擷取最大 BLOB 大小 （位元組）。|
 |[GetBookmark](#getbookmark)|擷取目前的資料列的書籤。|
@@ -196,7 +196,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 #### <a name="parameters"></a>參數
 
 *info*<br/>
-[in]A`DBCOLUMNINFO`結構，其中包含資料行資訊。 請參閱中的"DBCOLUMNINFO 結構 」 [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704)中*OLE DB 程式設計人員參考*。
+[in]A`DBCOLUMNINFO`結構，其中包含資料行資訊。 請參閱中的"DBCOLUMNINFO 結構 」 [icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -233,7 +233,7 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
 
 ## <a name="close"></a> Cdynamicaccessor:: Close
 
-所有資料行解除繫結，釋放配置的記憶體，並釋放[IAccessor](/previous-versions/windows/desktop/ms719672)類別中的介面指標。
+所有資料行解除繫結，釋放配置的記憶體，並釋放[IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85))類別中的介面指標。
 
 ### <a name="syntax"></a>語法
 
@@ -313,7 +313,7 @@ DBORDINAL GetColumnCount() const throw();
 ### <a name="syntax"></a>語法
 
 ```cpp
-bool GetColumnFlags(DBORDINAL nColumn, 
+bool GetColumnFlags(DBORDINAL nColumn,
    DBCOLUMNFLAGS* pFlags) const throw();
 ```
 
@@ -323,7 +323,7 @@ bool GetColumnFlags(DBORDINAL nColumn, 
 [in] 資料行編號。 資料行編號是從 1 開始。 如果有的話，值為 0 就是指書籤資料行。
 
 *pFlags*<br/>
-[out]指標，描述資料行特性的位元遮罩。 在中看到 「 < DBCOLUMNFLAGS 列舉類型 」 [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704)中*OLE DB 程式設計人員參考*。
+[out]指標，描述資料行特性的位元遮罩。 在中看到 「 < DBCOLUMNFLAGS 列舉類型 」 [icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -340,22 +340,22 @@ bool GetColumnFlags(DBORDINAL nColumn, 
 ### <a name="syntax"></a>語法
 
 ```cpp
-HRESULT GetColumnInfo(IRowset* pRowset, 
-   DBORDINAL* pColumns, 
-   DBCOLUMNINFO** ppColumnInfo, 
+HRESULT GetColumnInfo(IRowset* pRowset,
+   DBORDINAL* pColumns,
+   DBCOLUMNINFO** ppColumnInfo,
    OLECHAR** ppStringsBuffer) throw();
 ```
 
 #### <a name="parameters"></a>參數
 
 *pRowset*<br/>
-[in]指標[IRowset](/previous-versions/windows/desktop/ms720986)介面。
+[in]指標[IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85))介面。
 
 *pColumns*<br/>
 [out]要在其中傳回的資料行數目資料列集; 中的記憶體指標如果有的話，這個數目包含書籤資料行。
 
 *ppColumnInfo*<br/>
-[out]要在其中傳回的陣列的記憶體指標`DBCOLUMNINFO`結構。 請參閱中的"DBCOLUMNINFO 結構 」 [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704)中*OLE DB 程式設計人員參考*。
+[out]要在其中傳回的陣列的記憶體指標`DBCOLUMNINFO`結構。 請參閱中的"DBCOLUMNINFO 結構 」 [icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 *ppStringsBuffer*<br/>
 [out]要在其中傳回的所有字串值的儲存體的指標記憶體的指標 (使用中的名稱*columnid*或是*pwszName*) 單一配置區塊內。
@@ -366,7 +366,7 @@ HRESULT GetColumnInfo(IRowset* pRowset, 
 
 ### <a name="remarks"></a>備註
 
-請參閱[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704)中*OLE DB 程式設計人員參考*如需資料類型資訊`DBORDINAL`， `DBCOLUMNINFO`，和`OLECHAR`。
+請參閱[icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))中*OLE DB 程式設計人員參考*如需資料類型資訊`DBORDINAL`， `DBCOLUMNINFO`，和`OLECHAR`。
 
 ## <a name="getcolumnname"></a> Cdynamicaccessor:: Getcolumnname
 
@@ -394,7 +394,7 @@ LPOLESTR GetColumnName(DBORDINAL nColumn) const throw();
 ### <a name="syntax"></a>語法
 
 ```cpp
-bool GetColumnType(DBORDINAL nColumn, 
+bool GetColumnType(DBORDINAL nColumn,
    DBTYPE* pType) const throw();
 ```
 
@@ -417,13 +417,13 @@ bool GetColumnType(DBORDINAL nColumn, 
 ### <a name="syntax"></a>語法
 
 ```cpp
-bool GetLength(DBORDINAL nColumn, 
+bool GetLength(DBORDINAL nColumn,
    DBLENGTH* pLength) const throw();
 
-bool GetLength(const CHAR* pColumnName, 
+bool GetLength(const CHAR* pColumnName,
    DBLENGTH* pLength) const throw();
 
-bool GetLength(const WCHAR* pColumnName, 
+bool GetLength(const WCHAR* pColumnName,
    DBLENGTH* pLength) const throw();
 ```
 
@@ -479,7 +479,7 @@ bool GetOrdinal(const WCHAR* pColumnName,
 ### <a name="syntax"></a>語法
 
 ```cpp
-bool GetStatus(DBORDINAL nColumn, 
+bool GetStatus(DBORDINAL nColumn,
    DBSTATUS* pStatus) const throw();
 
 bool GetStatus(const CHAR* pColumnName,
@@ -498,7 +498,7 @@ bool GetStatus(const WCHAR* pColumnName,
 [in] 指向包含資料行名稱之字元字串的指標。
 
 *pStatus*<br/>
-[out]包含的資料行狀態變數的指標。 請參閱[DBSTATUS](/previous-versions/windows/desktop/ms722617)中*OLE DB 程式設計人員參考*如需詳細資訊。
+[out]包含的資料行狀態變數的指標。 請參閱[DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程式設計人員參考*如需詳細資訊。
 
 ### <a name="return-value"></a>傳回值
 
@@ -608,13 +608,13 @@ void SetBlobSizeLimit(DBLENGTH nBlobSize);
 ### <a name="syntax"></a>語法
 
 ```cpp
-bool SetLength(DBORDINAL nColumn, 
+bool SetLength(DBORDINAL nColumn,
    DBLENGTH nLength)throw();
 
-bool SetLength(const CHAR* pColumnName, 
+bool SetLength(const CHAR* pColumnName,
    DBLENGTH nLength) throw();
 
-bool SetLength(const WCHAR* pColumnName, 
+bool SetLength(const WCHAR* pColumnName,
    DBLENGTH nLength) throw();
 ```
 
@@ -640,13 +640,13 @@ bool SetLength(const WCHAR* pColumnName, 
 ### <a name="syntax"></a>語法
 
 ```cpp
-bool SetStatus(DBORDINAL nColumn, 
+bool SetStatus(DBORDINAL nColumn,
    DBSTATUS status)throw();
 
-bool SetStatus(const CHAR* pColumnName, 
+bool SetStatus(const CHAR* pColumnName,
    DBSTATUS status) throw();
 
-bool SetStatus(const WCHAR* pColumnName, 
+bool SetStatus(const WCHAR* pColumnName,
    DBSTATUS status) throw();
 ```
 
@@ -656,7 +656,7 @@ bool SetStatus(const WCHAR* pColumnName, 
 [in] 資料行編號。 資料行編號是從 1 開始。 如果有的話，值為 0 就是指書籤資料行。
 
 *status*<br/>
-[in]資料行狀態。 請參閱[DBSTATUS](/previous-versions/windows/desktop/ms722617)中*OLE DB 程式設計人員參考*如需詳細資訊。
+[in]資料行狀態。 請參閱[DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程式設計人員參考*如需詳細資訊。
 
 *pColumnName*<br/>
 [in] 指向包含資料行名稱之字元字串的指標。
@@ -673,16 +673,16 @@ bool SetStatus(const WCHAR* pColumnName, 
 
 ```cpp
 template <class ctype>
-bool SetValue( 
-   DBORDINAL nColumn, 
+bool SetValue(
+   DBORDINAL nColumn,
    constctype& data) throw( );
 
-template <class ctype>  
-bool SetValue( 
-   const CHAR * pColumnName, 
+template <class ctype> 
+bool SetValue(
+   const CHAR * pColumnName,
    const ctype& data) throw( );
 
-template <class ctype> 
+template <class ctype>
 bool SetValue(
    const WCHAR *pColumnName,
    const ctype& data) throw( );

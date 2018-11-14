@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleDBRecordView [MFC], OnGetRowset
 - COleDBRecordView [MFC], OnMove
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
-ms.openlocfilehash: b862ce5176a1fd4fa4ac48cabf7830cd8ebf3d92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fbbaaae72c7b58f898735d768c019a02cdb7d7e5
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599598"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518576"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView 類別
 
@@ -107,7 +107,6 @@ COleDBRecordView(UINT nIDTemplate);
 
 ```
 virtual CRowset<>* OnGetRowset() = 0;
-
 ```
 
 ### <a name="return-value"></a>傳回值

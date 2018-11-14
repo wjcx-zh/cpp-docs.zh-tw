@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-ms.openlocfilehash: 980bf8a14ceace82a76562cc47d353f78dbca582
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b830dc940fa2abb131f70130033d27b057412137
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445717"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329627"
 ---
 # <a name="matherr"></a>_matherr
 
@@ -73,12 +73,12 @@ struct _exception
 
 |巨集|意義|
 |-|-|
-**（_D)**|引數網域錯誤
-**_SING**|引數獨一性
-**_OVERFLOW**|溢位範圍錯誤
-**_PLOSS**|精確度部分遺失
-**_TLOSS**|精確度完全遺失
-**_UNDERFLOW**|結果太小，無法表示 (目前不支援這種狀況)。
+| **（_D)** | 引數網域錯誤 |
+| **_SING** | 引數獨一性 |
+| **_OVERFLOW** | 溢位範圍錯誤 |
+| **_PLOSS** | 精確度部分遺失 |
+| **_TLOSS** | 精確度完全遺失 |
+| **_UNDERFLOW** | 結果太小，無法表示 (目前不支援這種狀況)。 |
 
 結構成員 **name** 是以 Null 結束的字串指標，其中包含造成錯誤的函式名稱。 結構成員 **arg1** 和 **arg2** 會指定造成錯誤的值 如果只指定一個引數，它會儲存在**arg1**。
 

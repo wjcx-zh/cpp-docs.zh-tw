@@ -12,12 +12,12 @@ helpviewer_keywords:
 - catalog functions (ODBC), calling
 - ODBC [C++], API functions
 ms.assetid: 4295f1d9-4528-4d2e-bd6a-c7569953c7fa
-ms.openlocfilehash: 8c6781e0ff49b026e3b969f062f01e9923eb0a6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e76ff4da090a00409465333f8cbc9816ab4c4de6
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665695"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518342"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC：直接呼叫 ODBC API 函式
 
@@ -38,7 +38,7 @@ ms.locfileid: "50665695"
 
 - 當您完成時，取消配置儲存區。
 
-如需有關這些步驟的詳細資訊，請參閱 <<c0> [ 開放式資料庫連接 (ODBC)](/previous-versions/windows/desktop/ms710252) MSDN 文件中的 SDK。
+如需有關這些步驟的詳細資訊，請參閱 <<c0> [ 開放式資料庫連接 (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) MSDN 文件中的 SDK。
 
 除了這些步驟中，您需要採取額外步驟以檢查函式傳回值，請確定您的程式不等候非同步呼叫完成，然後依此類推。 您可以使用 AFX_SQL_ASYNC 和 AFX_SQL_SYNC 巨集，以簡化最後一個步驟執行。 如需詳細資訊，請參閱 <<c0> [ 巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)中*MFC 參考 》*。
 

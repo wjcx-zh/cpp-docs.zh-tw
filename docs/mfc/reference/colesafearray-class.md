@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: efffa6057f6322f3de3d9d0bfe050d6d2021d9b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07e507f0546849a64625ccd67a0f7463cd510841
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648093"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525401"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray 類別
 
@@ -408,7 +408,7 @@ VARIANT Detach();
 
 ### <a name="remarks"></a>備註
 
-函式會藉由設定物件的 VARTYPE 設為 VT_EMPTY，中斷連結的安全陣列中的資料。 它是以釋放陣列呼叫 Windows 函式的呼叫者的責任[VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear)。
+函式會藉由設定物件的 VARTYPE 設為 VT_EMPTY，中斷連結的安全陣列中的資料。 它是以釋放陣列呼叫 Windows 函式的呼叫者的責任[VariantClear](/windows/desktop/api/oleauto/nf-oleauto-variantclear)。
 
 發生錯誤時，此函式會擲回[COleException](../../mfc/reference/coleexception-class.md)。
 
@@ -674,7 +674,7 @@ void PutElement(
 
 ### <a name="remarks"></a>備註
 
-此函式會自動呼叫 Windows 函式[SafeArrayLock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraylock)並[SafeArrayUnlock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock)之前和之後指派項目。 如果資料項目是字串、物件或變數，函數會正確將它複製，而且如果現有的項目是字串、物件或變數，則會正確清除。
+此函式會自動呼叫 Windows 函式[SafeArrayLock](/windows/desktop/api/oleauto/nf-oleauto-safearraylock)並[SafeArrayUnlock](/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock)之前和之後指派項目。 如果資料項目是字串、物件或變數，函數會正確將它複製，而且如果現有的項目是字串、物件或變數，則會正確清除。
 
 請注意，您可以在陣列中擁有多個鎖定，因此您可以在陣列由其他作業鎖定時將項目放入陣列。
 

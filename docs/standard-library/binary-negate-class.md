@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-ms.openlocfilehash: a2aa5e2521eafbdd5ab7be93ad133f118a8d9356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ac5ebc991174ca5f835d30571b4995bedb5dea2
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536625"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329770"
 ---
 # <a name="binarynegate-class"></a>binary_negate 類別
 
@@ -49,7 +49,7 @@ public:
 
 ## <a name="remarks"></a>備註
 
-此樣板類別會儲存二元函式 object _ *Func* 的複本。 它會將其成員函式 `operator()` 定義為傳回的 **!**\_*Func(left, right)。*
+此範本類別會儲存二元函式物件的複本*Func*。 它會定義其成員函式`operator()`做為傳回`!Func(left, right)`。
 
 `binary_negate` 的建構函式很少會直接使用。 通常會優先以 Helper 函式 [not2](../standard-library/functional-functions.md#not2) 來宣告和使用 **binary_negator** 配接器述詞。
 

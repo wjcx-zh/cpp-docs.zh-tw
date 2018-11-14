@@ -5,12 +5,12 @@ helpviewer_keywords:
 - statically linking to ATL Registrar code
 - linking [C++], to ATL Registrar code
 ms.assetid: 835f5885-87a6-48fa-91e6-60988ee65538
-ms.openlocfilehash: e5f09ce4626e030c43ecc30ca44d1ac738341c6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11600b47abbbd247d099d871fce5e9d5d17d3cf4
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557394"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327885"
 ---
 # <a name="setting-up-a-static-link-to-the-registrar-code-c-only"></a>設定登錄器程式碼 （只有 c + +） 的靜態連結
 
@@ -20,7 +20,7 @@ C + + 用戶端可以建立註冊機構的程式碼的靜態連結。 靜態連�
 
 ## <a name="to-create-a-static-link-using-declareregistryresourceid"></a>若要建立使用 DECLARE_REGISTRY_RESOURCEID 靜態連結
 
-1. 指定[/D](../build/reference/d-preprocessor-definitions.md) `_ATL_STATIC_REGISTRY`而不是 /D **_ATL_DLL**。
+1. 指定[/D](../build/reference/d-preprocessor-definitions.md)  **\_ATL\_靜態\_登錄**而不是 **/D \_ATL\_DLL**。
 
 1. 重新編譯。
 

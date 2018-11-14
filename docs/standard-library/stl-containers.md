@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ Standard Library, template class containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-ms.openlocfilehash: 240a05822ea93493c917469fc18fa8a9c224359d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6f4da35468143e6d7c3dda684ed93f33e29b21d
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568619"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518641"
 ---
 # <a name="c-standard-library-containers"></a>C++ 標準程式庫容器
 
@@ -117,7 +117,6 @@ int main()
 }
 
 //Output: myNewSet element = 62F
-
 ```
 
 map、multimap、set 和 multiset 中的下列成員函式已多載來支援異質查閱：

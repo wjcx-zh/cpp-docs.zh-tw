@@ -25,12 +25,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: e912a7a53619e9347cf2c0cd40adf0f9162b314b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd2fc9cd789b02f1fa1e0b9969b597aa51aceedd
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618487"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327547"
 ---
 # <a name="qsort"></a>qsort
 
@@ -41,7 +41,7 @@ ms.locfileid: "50618487"
 ```C
 void qsort(
    void *base,
-   size_t num,
+   size_t number,
    size_t width,
    int (__cdecl *compare )(const void *, const void *)
 );
@@ -49,7 +49,7 @@ void qsort(
 
 ### <a name="parameters"></a>參數
 
-<br/>
+*base*<br/>
 目標陣列的開頭。
 
 *數字*<br/>
@@ -68,7 +68,7 @@ void qsort(
 **qsort**呼叫*比較*常式一或多次，並將指標傳遞至兩個陣列元素中，每次呼叫。
 
 ```C
-compare( (void *) & elem1, (void *) & elem2 );
+compare( (void *) & elem1, (void *) & elem2 );
 ```
 
 常式會比較這些項目，然後傳回下列其中一個值。
@@ -81,7 +81,7 @@ compare( (void *) & elem1, (void *) & elem2 );
 
 陣列是以比較函式所定義的遞增順序排序。 若要以遞減順序排序陣列，請將比較函式中的「大於」和「小於」意義反轉。
 
-這個函式會驗證它的參數。 如果*比較*或*數目*會**NULL**，或如果*基底*是**NULL**和 **號碼*為非零值，或者如果*寬度*小於零，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則函數會傳回與**errno**設為**EINVAL**。
+這個函式會驗證它的參數。 如果*比較*或*數目*會**NULL**，或如果*基底*是**NULL**和*號碼*為非零值，或者如果*寬度*小於零，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則函數會傳回與**errno**設為**EINVAL**。
 
 ## <a name="requirements"></a>需求
 

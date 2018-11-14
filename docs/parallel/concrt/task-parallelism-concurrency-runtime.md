@@ -8,12 +8,12 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-ms.openlocfilehash: 43af08f3be75bff7621cd2f57b9d50b658420f26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9f18dfd1498538ce3700fd73a27ce6f6088ee42
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630421"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331213"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>工作平行處理原則 (並行執行階段)
 
@@ -22,8 +22,7 @@ ms.locfileid: "50630421"
 當您撰寫非同步程式碼，並想要在非同步作業完成之後執行一些作業時，您可以使用工作。 例如，您可以使用工作來以非同步方式從檔案讀取，然後使用 另一項工作 —*接續工作*，本文件稍後會說明 — 處理資料之後可供使用。 反過來說，您可以使用工作群組將平行工作分解成較小的片段。 例如，假設您擁有可將剩餘工作分成兩個分割的遞迴演算法， 您就可以使用工作群組同時執行這些分割，然後等待分割的工作完成。
 
 > [!TIP]
-
->  當您想要以平行方式集合的每個項目套用相同的常式時，使用平行處理演算法，例如[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)，而不是工作或工作群組。 如需平行演算法的詳細資訊，請參閱[平行演算法](../../parallel/concrt/parallel-algorithms.md)。
+> 當您想要以平行方式集合的每個項目套用相同的常式時，使用平行處理演算法，例如[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)，而不是工作或工作群組。 如需平行演算法的詳細資訊，請參閱[平行演算法](../../parallel/concrt/parallel-algorithms.md)。
 
 ## <a name="key-points"></a>重點
 
@@ -205,7 +204,6 @@ ms.locfileid: "50630421"
 1. 在 MainPage.xaml.cpp 中實作 `WriteFilesAsync`，如範例所示。
 
 > [!TIP]
-
 > `when_all` 是未封鎖的函式，會產生 `task` 做為其結果。 不同於[task:: wait](reference/task-class.md#wait)，安全地在 ASTA (應用程式 STA) 執行緒上的 UWP 應用程式中呼叫此函式。
 
 ###  <a name="when-any"></a> When_any 函式
@@ -229,14 +227,14 @@ ms.locfileid: "50630421"
 在此範例中，您也可以指定 `task<pair<int, size_t>>` 來產生以工作為基礎的接續。
 
 > [!NOTE]
->  如同 `when_all`，您將傳遞給 `when_any` 的工作必須全部傳回相同的類型。
+> 如同 `when_all`，您將傳遞給 `when_any` 的工作必須全部傳回相同的類型。
 
 您也可以使用 `||` 語法來產生工作，在一組工作中的第一項工作完成之後完成，如下列範例所示。
 
 `auto t = t1 || t2; // same as when_any`
 
 > [!TIP]
->  如同`when_all`，`when_any`是未封鎖的可安全地呼叫在 ASTA 執行緒上的 UWP 應用程式中。
+> 如同`when_all`，`when_any`是未封鎖的可安全地呼叫在 ASTA 執行緒上的 UWP 應用程式中。
 
 ##  <a name="delayed-tasks"></a> 延遲的執行工作
 
@@ -257,8 +255,7 @@ PPL 使用[concurrency:: task_group](reference/task-group-class.md)並[concurren
 PPL 將工作群組分成這兩種類別：*非結構化的工作群組*並*結構化工作群組*。 PPL 使用 `task_group` 類別來代表非結構化工作群組，並使用 `structured_task_group` 類別來代表結構化工作群組。
 
 > [!IMPORTANT]
-
->  PPL 也會定義[concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)演算法，其使用`structured_task_group`平行執行的一組工作的類別。 由於 `parallel_invoke` 演算法的語法更簡潔，如果可以的話，我們建議您使用它，而不要使用 `structured_task_group` 類別。 本主題[平行演算法](../../parallel/concrt/parallel-algorithms.md)描述`parallel_invoke`詳細說明。
+> PPL 也會定義[concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)演算法，其使用`structured_task_group`平行執行的一組工作的類別。 由於 `parallel_invoke` 演算法的語法更簡潔，如果可以的話，我們建議您使用它，而不要使用 `structured_task_group` 類別。 本主題[平行演算法](../../parallel/concrt/parallel-algorithms.md)描述`parallel_invoke`詳細說明。
 
 當您有數個想要同時執行的獨立工作，而且必須等候所有工作完成才能繼續時，請使用 `parallel_invoke`。 這項技術通常稱為*分岔和聯結*平行處理原則。 當您有數個想要同時執行的獨立工作，但是想要等候工作晚點才完成時，請使用 `task_group`。 例如，您可以將工作加入 `task_group` 物件，並等候工作在另一個函式或另一個執行緒中完成。
 

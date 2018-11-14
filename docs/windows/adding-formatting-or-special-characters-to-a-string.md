@@ -7,12 +7,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: c40f394a-8b2c-4896-ab30-6922863ddbb5
-ms.openlocfilehash: 740bf02d40dfcb236eef0dccbf55201dd79aec4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b60f48983913f4dc146af1b4645710cd1393d072
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493843"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328327"
 ---
 # <a name="adding-formatting-or-special-characters-to-a-string-resource-c"></a>將格式或特殊字元新增至字串資源 （c + +）
 
@@ -29,12 +29,12 @@ ms.locfileid: "50493843"
 
    |若要取得此|輸入這|
    |-----------------|---------------|
-   |換行|\n|
-   |歸位字元|\r|
-   |索引標籤|\t|
-   |反斜線 (\\)|\\\|
-   |ASCII 字元|\ddd （八進位標記法）|
-   |警示 （鈴聲）|\a|
+   | 換行 | \\n |
+   | 歸位字元 | \\R |
+   | 索引標籤 | \\t |
+   | 反斜線 (\\) | \\\\ |
+   | ASCII 字元 | \\ddd （八進位標記法） |
+   | 警示 （鈴聲） | \\a |
 
 > [!NOTE]
 > **字串**編輯器不支援完整的逸出 ASCII 字元。 您只能使用以上所列。

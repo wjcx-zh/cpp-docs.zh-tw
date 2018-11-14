@@ -8,12 +8,12 @@ helpviewer_keywords:
 - connection strings [C++], OLE DB consumers
 - ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: 835b3e6246741c3859f51e017686531f450db194
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59ad635f62ab7a20a31de7255ec4522136e102ec
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499563"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524127"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB 消費者精靈
 
@@ -84,13 +84,13 @@ ms.locfileid: "50499563"
 
       **其他：** 中**連接的逾時值**，指定的逾時之前所允許的閒置時間的秒數。 在 **存取權限**，資料連線指定的存取權限。
 
-       如需進階的初始化屬性的詳細資訊，請參閱每個特定的 OLE DB 提供者所提供的文件。
+      如需進階的初始化屬性的詳細資訊，請參閱每個特定的 OLE DB 提供者所提供的文件。
 
    - **所有** 索引標籤
 
       此索引標籤會顯示您所指定的連接與資料來源初始化屬性的摘要。 您可以編輯這些值。
 
-   按一下 **確定**才能完成。 **選取資料庫物件** 對話方塊隨即出現。 從這個對話方塊中，選取資料表、 檢視或取用者會使用的預存程序。
+      按一下 **確定**才能完成。 **選取資料庫物件** 對話方塊隨即出現。 從這個對話方塊中，選取資料表、 檢視或取用者會使用的預存程序。
 
 - **類別**
 

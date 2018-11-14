@@ -6,12 +6,12 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-ms.openlocfilehash: 39e0fffa10af560537a932d503946ec2469bef5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04db02bc8ad4db0c669e07a0bcf1b60ffa22e8ad
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570582"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521397"
 ---
 # <a name="creating-an-updatable-provider"></a>建立可更新的提供者
 
@@ -40,7 +40,7 @@ Visual c + + 支援可更新的提供者 」 或 「 可更新的提供者 （�
 
 1. 在您的資料列集類別，繼承自`IRowsetChangeImpl`或`IRowsetUpdateImpl`。 這些類別會提供適當的介面，來變更資料存放區：
 
-     **新增 IRowsetChange**
+   **新增 IRowsetChange**
 
    新增`IRowsetChangeImpl`您使用這種形式的繼承鏈結：
 
@@ -50,7 +50,7 @@ Visual c + + 支援可更新的提供者 」 或 「 可更新的提供者 （�
 
    也加入`COM_INTERFACE_ENTRY(IRowsetChange)`至`BEGIN_COM_MAP`資料列集類別中的區段。
 
-     **新增 IRowsetUpdate**
+   **新增 IRowsetUpdate**
 
    新增`IRowsetUpdate`您使用這種形式的繼承鏈結：
 
@@ -58,22 +58,27 @@ Visual c + + 支援可更新的提供者 」 或 「 可更新的提供者 （�
     IRowsetUpdateImpl< rowset-name, storage>
     ```
 
-    > [!NOTE]
-    > 您應該移除`IRowsetChangeImpl`繼承鏈結中的一行。 此一的例外狀況，以先前所述的指示詞必須包含的程式碼`IRowsetChangeImpl`。
+   > [!NOTE]
+   > 您應該移除`IRowsetChangeImpl`繼承鏈結中的一行。 此一的例外狀況，以先前所述的指示詞必須包含的程式碼`IRowsetChangeImpl`。
 
 1. 將下列內容新增至 COM 對應 (`BEGIN_COM_MAP ... END_COM_MAP`):
 
-    |如果您實作|將新增到 COM 對應|
-    |----------------------|--------------------|
-    |`IRowsetChangeImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)`|
-    |`IRowsetUpdateImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)COM_INTERFACE_ENTRY(IRowsetUpdate)`|
+   |  如果您實作   |           將新增到 COM 對應             |
+   |---------------------|--------------------------------------|
+   | `IRowsetChangeImpl` | `COM_INTERFACE_ENTRY(IRowsetChange)` |
+   | `IRowsetUpdateImpl` | `COM_INTERFACE_ENTRY(IRowsetUpdate)` |
+
+   | 如果您實作 | 將加入至屬性集合對應 |
+   |----------------------|-----------------------------|
+   | `IRowsetChangeImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)` |
+   | `IRowsetUpdateImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)` |
 
 1. 在命令中，將下列內容新增至您的屬性集對應 (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`):
 
-    |如果您實作|將加入至屬性集合對應|
-    |----------------------|-----------------------------|
-    |`IRowsetChangeImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`|
-    |`IRowsetUpdateImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)`|
+   |  如果您實作   |                                             將加入至屬性集合對應                                              |
+   |---------------------|------------------------------------------------------------------------------------------------------------------|
+   | `IRowsetChangeImpl` |                            `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`                             |
+   | `IRowsetUpdateImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)` |
 
 1. 在屬性集對應，您應該也包含下列設定的所有下面所列：
 
@@ -97,41 +102,41 @@ Visual c + + 支援可更新的提供者 」 或 「 可更新的提供者 （�
 
    您可以找到這些巨集呼叫中使用，藉由尋找為 Atldb.h 中的屬性識別碼和值的值 （如果為 Atldb.h 和不同的線上文件，為 Atldb.h 取代文件）。
 
-    > [!NOTE]
-    > 許多`VARIANT_FALSE`和`VARIANT_TRUE`設定所需的 OLE DB 範本; OLE DB 規格表示它們可以是讀取/寫入，但 OLE DB 範本只能支援一個值。
+   > [!NOTE]
+   > 許多`VARIANT_FALSE`和`VARIANT_TRUE`設定所需的 OLE DB 範本; OLE DB 規格表示它們可以是讀取/寫入，但 OLE DB 範本只能支援一個值。
 
-     **如果您實作 IRowsetChangeImpl**
+   **如果您實作 IRowsetChangeImpl**
 
    如果您實作`IRowsetChangeImpl`，您必須在您的提供者上設定下列屬性。 這些屬性主要用來要求介面傳遞`ICommandProperties::SetProperties`。
 
-    - `DBPROP_IRowsetChange`： 設定就會自動設定`DBPROP_IRowsetChange`。
+   - `DBPROP_IRowsetChange`： 設定就會自動設定`DBPROP_IRowsetChange`。
 
-    - `DBPROP_UPDATABILITY`： 指定支援的方法位元遮罩`IRowsetChange`: `SetData`， `DeleteRows`，或`InsertRow`。
+   - `DBPROP_UPDATABILITY`： 指定支援的方法位元遮罩`IRowsetChange`: `SetData`， `DeleteRows`，或`InsertRow`。
 
-    - `DBPROP_CHANGEINSERTEDROWS`： 取用者可以呼叫`IRowsetChange::DeleteRows`或`SetData`新插入的資料列。
+   - `DBPROP_CHANGEINSERTEDROWS`： 取用者可以呼叫`IRowsetChange::DeleteRows`或`SetData`新插入的資料列。
 
-    - `DBPROP_IMMOBILEROWS`： 資料列集不會重新排列插入或更新的資料列。
+   - `DBPROP_IMMOBILEROWS`： 資料列集不會重新排列插入或更新的資料列。
 
-     **如果您實作 IRowsetUpdateImpl**
+   **如果您實作 IRowsetUpdateImpl**
 
    如果您實作`IRowsetUpdateImpl`，您必須設定下列屬性在您的提供者，另外設定的所有屬性`IRowsetChangeImpl`先前所列：
 
-    - `DBPROP_IRowsetUpdate`.
+   - `DBPROP_IRowsetUpdate`.
 
-    - `DBPROP_OWNINSERT`： 必須是 READ_ONLY 和為 VARIANT_TRUE。
+   - `DBPROP_OWNINSERT`： 必須是 READ_ONLY 和為 VARIANT_TRUE。
 
-    - `DBPROP_OWNUPDATEDELETE`： 必須是 READ_ONLY 和為 VARIANT_TRUE。
+   - `DBPROP_OWNUPDATEDELETE`： 必須是 READ_ONLY 和為 VARIANT_TRUE。
 
-    - `DBPROP_OTHERINSERT`： 必須是 READ_ONLY 和為 VARIANT_TRUE。
+   - `DBPROP_OTHERINSERT`： 必須是 READ_ONLY 和為 VARIANT_TRUE。
 
-    - `DBPROP_OTHERUPDATEDELETE`： 必須是 READ_ONLY 和為 VARIANT_TRUE。
+   - `DBPROP_OTHERUPDATEDELETE`： 必須是 READ_ONLY 和為 VARIANT_TRUE。
 
-    - `DBPROP_REMOVEDELETED`： 必須是 READ_ONLY 和為 VARIANT_TRUE。
+   - `DBPROP_REMOVEDELETED`： 必須是 READ_ONLY 和為 VARIANT_TRUE。
 
-    - `DBPROP_MAXPENDINGROWS`.
+   - `DBPROP_MAXPENDINGROWS`.
 
-        > [!NOTE]
-        > 如果您支援通知，您可能還有其他一些屬性以及;請參閱節`IRowsetNotifyCP`如這份清單。
+   > [!NOTE]
+   > 如果您支援通知，您可能還有其他一些屬性以及;請參閱節`IRowsetNotifyCP`如這份清單。
 
 ##  <a name="vchowwritingtothedatasource"></a> 寫入至資料來源
 

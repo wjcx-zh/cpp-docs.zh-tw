@@ -9,12 +9,12 @@ helpviewer_keywords:
 - string comparison, CString operations
 - characters, accessing in CStrings
 ms.assetid: 41db66b2-9427-4bb3-845a-9b6869159a6c
-ms.openlocfilehash: d1f16e470123bd52cb2656541aafaabdfc16af8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b387cbb8671dda0aca63da9b57dd694e478b62a9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434071"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523126"
 ---
 # <a name="basic-cstring-operations"></a>基本 CString 運算
 
@@ -91,11 +91,10 @@ ms.locfileid: "50434071"
 
 若要使用與 CString`wcout`您必須明確地將物件轉換成`const wchar_t*`如下列範例所示：
 
-```
+```cpp
 CString cs("meow");
 
-    wcout <<(const wchar_t*) cs <<endl;
-
+wcout << (const wchar_t*) cs << endl;
 ```
 
 沒有轉型，`cs`會被視為`void*`和`wcout`列印物件的位址。 此行為起因於樣板引數推算和多載解析中自行正確且符合間的微妙互動，而 c + + 標準。

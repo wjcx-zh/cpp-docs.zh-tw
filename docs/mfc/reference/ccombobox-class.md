@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 9509b122e271ac22529c1b8a7b8e8d0b4b50025b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91cf9b2035bf24c16007ed6021772c7d5344fc68
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641099"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333263"
 ---
 # <a name="ccombobox-class"></a>CComboBox 類別
 
@@ -208,7 +208,7 @@ class CComboBox : public CWnd
 
 每個訊息對應項目都會使用下列格式：
 
-**ON_** 通知 **(**`id`**，**`memberFxn`**)**
+**ON\_**_通知_ **(** _識別碼_， _memberFxn_ **)**
 
 何處`id`指定將通知傳送給下拉式方塊控制項的子視窗識別碼和`memberFxn`是您撰寫來處理通知的父成員函式的名稱。
 

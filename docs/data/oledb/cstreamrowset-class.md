@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CStreamRowset class, constructor
 - Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-ms.openlocfilehash: d15807c7204841a436180d4da96357eba89dbb5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69844a9048601060a425f7bcf52bc2cf30381227
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488175"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556454"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset 類別
 
@@ -61,7 +61,7 @@ class CStreamRowset
 |||
 |-|-|
 |[CStreamRowset](#cstreamrowset)|建構函式。 具現化並初始化`CStreamRowset`物件。|
-|[關閉](#close)|版本[ISequentialStream](/previous-versions/windows/desktop/ms718035)類別中的介面指標。|
+|[關閉](#close)|版本[ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85))類別中的介面指標。|
 
 ## <a name="remarks"></a>備註
 
@@ -94,7 +94,7 @@ CStreamRowset();
 
 ## <a name="close"></a> Cstreamrowset:: Close
 
-版本[ISequentialStream](/previous-versions/windows/desktop/ms718035)類別中的介面指標。
+版本[ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85))類別中的介面指標。
 
 ### <a name="syntax"></a>語法
 

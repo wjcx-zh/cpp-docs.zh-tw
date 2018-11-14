@@ -32,12 +32,12 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-ms.openlocfilehash: 17fadee825aff7b691db74eaaa7b695ba5a49a42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55888f122af0848c92204168a23cca93e2517904
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482858"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331499"
 ---
 # <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock、_ungetwc_nolock
 
@@ -66,7 +66,7 @@ wint_t _ungetwc_nolock(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，所有這些函式都會傳回字元引數*c*。 如果*c*無法回推或如果已經讀取的字元，輸入資料流不變並 **_ungetc_nolock**傳回 * * EOF`; **_ungetwc_nolock`傳回**WEOF**。 如果*資料流*是**NULL**， **EOF**或**WEOF**會傳回與**errno**設**EINVAL**。
+如果成功，所有這些函式都會傳回字元引數*c*。 如果*c*無法回推或如果已經讀取的字元，輸入資料流不變並 **_ungetc_nolock**會傳回**EOF**;**_ungetwc_nolock**會傳回**WEOF**。 如果*資料流*是**NULL**， **EOF**或**WEOF**會傳回與**errno**設**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

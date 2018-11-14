@@ -1,13 +1,13 @@
 ---
 title: 逐步解說：矩陣乘法
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: a8f43f5b9df0726c9c01f940965b77b856e35430
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9516cf79b738ec03dd98133a4603b47f75eb2c8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647444"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327105"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>逐步解說：矩陣乘法
 
@@ -27,15 +27,15 @@ ms.locfileid: "50647444"
 
 1. 在 Visual Studio 中的功能表列上選擇 **檔案** > **新增** > **專案**。
 
-2. 底下**已安裝**在 [範本] 窗格中，選取**Visual c + +**。
+1. 底下**已安裝**在 [範本] 窗格中，選取**Visual c + +**。
 
-3. 選取**空專案**，輸入`MatrixMultiply`中**名稱** 方塊中，然後選擇**確定** 按鈕。
+1. 選取**空專案**，輸入*MatrixMultiply*中**名稱**方塊，然後再選擇**確定** 按鈕。
 
-4. 選擇 [下一步] 按鈕。
+1. 選擇 [下一步] 按鈕。
 
-5. 中**方案總管**，開啟捷徑功能表**原始程式檔**，然後選擇**新增** > **新項目**。
+1. 中**方案總管**，開啟捷徑功能表**原始程式檔**，然後選擇**新增** > **新項目**。
 
-6. 在 **加入新項目**對話方塊中，選取**c + + 檔 (.cpp)**，輸入`MatrixMultiply.cpp`中**名稱** 方塊中，然後選擇 **新增**按鈕。
+1. 在 **加入新項目**對話方塊中，選取**c + + 檔 (.cpp)**，輸入*MatrixMultiply.cpp*中**名稱**方塊，然後再選擇  **新增** 按鈕。
 
 ## <a name="multiplication-without-tiling"></a>乘法，而不需要並排顯示
 
@@ -47,7 +47,7 @@ ms.locfileid: "50647444"
 
 A 是 3-2 矩陣，而 B 是 2-3 的矩陣。 由 B 相乘的乘積是下列 3-3 矩陣。 產品是計算方式是乘的 B 項的資料行的資料列。
 
-![3&#45;的&#45;3 的矩陣](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")
+![3&#45;的&#45;3 的矩陣](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;的&#45;3 的矩陣")
 
 ### <a name="to-multiply-without-using-c-amp"></a>要相乘，而不使用 c + + AMP
 
@@ -79,13 +79,13 @@ void main() {
 }
 ```
 
-    The algorithm is a straightforward implementation of the definition of matrix multiplication. It does not use any parallel or threaded algorithms to reduce the computation time.
+   此演算法為定義的矩陣相乘的簡單實作。 它不使用任何平行或執行緒的演算法來減少計算時間。
 
-2. 在功能表列上，依序選擇 [檔案] > [全部儲存]。
+1. 在功能表列上，依序選擇 [檔案] > [全部儲存]。
 
-3. 選擇**F5**開始偵錯，並確認輸出正確無誤的鍵盤快速鍵。
+1. 選擇**F5**開始偵錯，並確認輸出正確無誤的鍵盤快速鍵。
 
-4. 選擇**Enter**結束應用程式。
+1. 選擇**Enter**結束應用程式。
 
 ### <a name="to-multiply-by-using-c-amp"></a>若要將乘以使用 c + + AMP
 
@@ -124,16 +124,16 @@ void MultiplyWithAMP() {
 }
 ```
 
-    The AMP code resembles the non-AMP code. The call to `parallel_for_each` starts one thread for each element in `product.extent`, and replaces the `for` loops for row and column. The value of the cell at the row and column is available in `idx`. You can access the elements of an `array_view` object by using either the `[]` operator and an index variable, or the `()` operator and the row and column variables. The example demonstrates both methods. The `array_view::synchronize` method copies the values of the `product` variable back to the `productMatrix` variable.
+   AMP 程式碼類似於非 AMP 程式碼。 在呼叫`parallel_for_each`啟動每個項目中的一個執行緒`product.extent`，並取代`for`資料列和資料行的迴圈。 在資料列和資料行儲存格的值位於`idx`。 您可以存取的項目`array_view`物件，使用其中一種`[]`運算子和索引變數，或`()`運算子和資料列和資料行的變數。 此範例會示範這兩種方法。 `array_view::synchronize`方法會將複製的值`product`變數傳回給`productMatrix`變數。
 
-2. 新增下列`include`和`using`MatrixMultiply.cpp 頂端的陳述式。
+1. 新增下列`include`和`using`MatrixMultiply.cpp 頂端的陳述式。
 
 ```cpp
 #include <amp.h>
 using namespace concurrency;
 ```
 
-3. 修改`main`方法來呼叫`MultiplyWithAMP`方法。
+1. 修改`main`方法來呼叫`MultiplyWithAMP`方法。
 
 ```cpp
 void main() {
@@ -143,9 +143,9 @@ void main() {
 }
 ```
 
-4. 選擇**Ctrl**+**F5**開始偵錯，並確認輸出正確無誤的鍵盤快速鍵。
+1. 選擇**Ctrl**+**F5**開始偵錯，並確認輸出正確無誤的鍵盤快速鍵。
 
-5. 選擇**空格鍵**結束應用程式。
+1. 選擇**空格鍵**結束應用程式。
 
 ## <a name="multiplication-with-tiling"></a>乘法與並排顯示
 
@@ -159,23 +159,23 @@ void main() {
 
 若要利用並排顯示中的矩陣相乘，演算法必須分割成磚的 矩陣，然後複製 tile 資料到`tile_static`以利快速存取的變數。 在此範例中，矩陣會分割成相同大小的 submatrices。 找不到乘以 submatrices 的產品。 兩個矩陣和他們的產品，在此範例如下：
 
-![4&#45;的&#45;4 矩陣](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")
+![4&#45;的&#45;4 矩陣](../../parallel/amp/media/campmatrixatiled.png "4&#45;的&#45;4 矩陣的")
 
-![4&#45;的&#45;4 矩陣](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")
+![4&#45;的&#45;4 矩陣](../../parallel/amp/media/campmatrixbtiled.png "4&#45;的&#45;4 矩陣 B")
 
-![4&#45;的&#45;4 矩陣](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")
+![4&#45;的&#45;4 矩陣](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;的&#45;4 矩陣產品")
 
 矩陣會分割成四個 2 x 2 矩陣，定義如下：
 
-![4&#45;的&#45;分割成 2 的 4 矩陣&#45;的&#45;2 sub&#45;矩陣](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")
+![4&#45;藉由&#45;分割成 2 的 4 矩陣&#45;藉由&#45;2 的子&#45;矩陣](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;的&#45;分割成 2 的 4 矩陣&#45;的&#45;2 的子&#45;矩陣")
 
-![4&#45;的&#45;分割成 2 的 4 矩陣&#45;的&#45;2 sub&#45;矩陣](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")
+![4&#45;藉由&#45;分割成 2 的 4 矩陣&#45;藉由&#45;2 的子&#45;矩陣](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;的&#45;分割成 2 的 4 矩陣&#45;的&#45;2 的子&#45;矩陣")
 
 產品的 A 和 B 可以寫入和計算，如下所示：
 
-![4&#45;的&#45;分割成 2 的 4 矩陣&#45;的&#45;2 sub&#45;矩陣](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")
+![4&#45;的&#45;分割成 2 的 4 矩陣&#45;的&#45;2 的子&#45;矩陣](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;的&#45;4 矩陣的乘積和 B")
 
-因為矩陣`a`透過`h`為 2x2 矩陣的所有產品，而且它們的總和也 2x2 矩陣。 它也會遵循 A * B 是 4 x 4 矩陣，如預期般運作。 若要快速檢查演算法，計算的第一個資料列中的項目，產品中的第一個資料行的值。 在範例中，這會是元素的值中的第一個資料列和第一個資料行`ae + bg`。 您只需要計算的第一個資料行、 第一個資料列`ae`和`bg`每個詞彙。 該值`ae`是`1*1 + 2*5 = 11`。 值`bg`是`3*1 + 4*5 = 23`。 最終的值會是`11 + 23 = 34`，這是正確。
+因為矩陣`a`透過`h`為 2x2 矩陣的所有產品，而且它們的總和也 2x2 矩陣。 它也說明如下的產品，而 B 是 4 x 4 矩陣，如預期般運作。 若要快速檢查演算法，計算的第一個資料列中的項目，產品中的第一個資料行的值。 在範例中，這會是元素的值中的第一個資料列和第一個資料行`ae + bg`。 您只需要計算的第一個資料行、 第一個資料列`ae`和`bg`每個詞彙。 該值`ae`是`(1 * 1) + (2 * 5) = 11`。 值`bg`是`(3 * 1) + (4 * 5) = 23`。 最終的值會是`11 + 23 = 34`，這是正確。
 
 若要實作這個演算法，將程式碼：
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: 6b0c0f018d5d66ea62b29b971e5390751a69e3c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55d22951c4203c582f7823fef033a0476f8c9a52
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631799"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326912"
 ---
 # <a name="try-finally-statement"></a>try-finally 陳述式
 
@@ -33,27 +33,26 @@ ms.locfileid: "50631799"
 
 下列語法描述**try finally**陳述式：
 
-```cpp
-__try {
-   // guarded code
-}
-__finally {
-   // termination code
-}
-```
+> **\_\_請嘗試**<br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;受防護的程式碼<br/>
+> }<br/>
+> **\_\_最後**<br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;終止程式碼<br/>
+> }<br/>
 
 ## <a name="grammar"></a>文法
 
-*try finally-陳述式*: **__try** *複合陳述式*
-
-**__finally** *複合陳述式*
+*try-finally-statement*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**\_\_請嘗試***複合陳述式*  **\_\_最後***複合陳述式*
 
 **Try finally**陳述式是 C 和 c + + 語言的 Microsoft 擴充功能，可讓目標應用程式來執行的程式碼區塊將會中斷時，保證會執行清除程式碼。 清除包含如取消配置記憶體、關閉檔案和釋放檔案控制代碼等工作。 **Try finally**陳述式是特別有用，有幾個地方，其中會進行檢查錯誤的可能會導致過早傳回常式。
 
 如需相關的資訊和程式碼範例，請參閱[嘗試-try-except 陳述式](../cpp/try-except-statement.md)。 如需有關結構化例外狀況處理的詳細資訊，請參閱[Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md)。 如需有關如何處理在受管理的應用程式中的例外狀況的詳細資訊，請參閱[例外狀況處理在 /clr 下](../windows/exception-handling-cpp-component-extensions.md)。
 
 > [!NOTE]
->  結構化例外狀況處理可搭配 Win32 處理 C 和 C++ 原始程式檔。 不過，它不是專為 C++ 所設計。 使用 C++ 例外狀況處理可確保您的程式碼更具可移植性。 此外，C++ 例外狀況處理更有彈性，因為它可以處理任何類型的例外狀況。 對於 c + + 程式，建議您使用 c + + 例外狀況處理機制 ([try、 catch 和 throw](../cpp/try-throw-and-catch-statements-cpp.md)陳述式)。
+> 結構化例外狀況處理可搭配 Win32 處理 C 和 C++ 原始程式檔。 不過，它不是專為 C++ 所設計。 使用 C++ 例外狀況處理可確保您的程式碼更具可移植性。 此外，C++ 例外狀況處理更有彈性，因為它可以處理任何類型的例外狀況。 對於 c + + 程式，建議您使用 c + + 例外狀況處理機制 ([try、 catch 和 throw](../cpp/try-throw-and-catch-statements-cpp.md)陳述式)。
 
 後面的複合陳述式 **__try**子句是保護的區段。 後面的複合陳述式 **__finally**子句會終止處理常式。 處理常式會指定一組當保護區段結束時執行的動作，不管保護的區段是因例外狀況 (異常終止) 而結束，或是依標準的執行順序 (正常終止) 而結束。
 
@@ -72,7 +71,7 @@ __finally {
 ![終止的順序&#45;處理常式執行](../cpp/media/vc38cx1.gif "vc38CX1")終止處理常式執行順序
 
 > [!NOTE]
->  Try-finally 的行為是不同於其他程式設計語言，支援使用**最後**，例如 C#。  單一 **__try**可能具有其中一個，但並非兩者的 **__finally**並 **__except**。  如果要同時使用兩個，外層的 try-except 陳述式必須以引號括住內部 try-finally 陳述式。  指定的規則在每個區塊執行時也不同。
+> Try-finally 的行為是不同於其他程式設計語言，支援使用**最後**，例如 C#。  單一 **__try**可能具有其中一個，但並非兩者的 **__finally**並 **__except**。  如果要同時使用兩個，外層的 try-except 陳述式必須以引號括住內部 try-finally 陳述式。  指定的規則在每個區塊執行時也不同。
 
 為了與舊版中，相容性 **_finally**， **__identifier**，並 **_leave**同義 **__try**， **__最後**，並 **__leave**除非編譯器選項[/Za\(停用語言擴充功能)](../build/reference/za-ze-disable-language-extensions.md)指定。
 

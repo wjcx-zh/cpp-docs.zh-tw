@@ -22,12 +22,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: bd10b143753bf908a7a30f8675998e355f331b64
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d94f0391c1aebc95b51a1bc94bea28168c445086
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601080"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519382"
 ---
 # <a name="handlers-for-message-map-ranges"></a>訊息對應範圍的處理常式
 
@@ -37,9 +37,9 @@ ms.locfileid: "50601080"
 
 - 您可以將對應的命令識別碼的範圍：
 
-   - 命令處理常式函式。
+  - 命令處理常式函式。
 
-   - 命令更新處理常式函式。
+  - 命令更新處理常式函式。
 
 - 您可以將某個範圍內的控制項 Id 的控制項通知訊息對應至訊息處理常式函式。
 
@@ -63,25 +63,25 @@ ms.locfileid: "50601080"
 
 - 訊息對應範圍巨集：
 
-   - [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)
+  - [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)
 
-   - [ON_UPDATE_COMMAND_UI_RANGE](reference/message-map-macros-mfc.md#on_update_command_ui_range)
+  - [ON_UPDATE_COMMAND_UI_RANGE](reference/message-map-macros-mfc.md#on_update_command_ui_range)
 
-   - [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range)
+  - [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range)
 
 - 巨集的參數：
 
-   前兩個巨集採取三個參數：
+  前兩個巨集採取三個參數：
 
-   - 開始範圍命令 ID
+  - 開始範圍命令 ID
 
-   - 範圍結束命令識別碼
+  - 範圍結束命令識別碼
 
-   - 訊息處理常式函式的名稱
+  - 訊息處理常式函式的名稱
 
-   命令 Id 的範圍必須是連續的。
+  命令 Id 的範圍必須是連續的。
 
-   第三個巨集， `ON_CONTROL_RANGE`，會採用一個額外的第一個參數： 控制項通知訊息，例如**EN_CHANGE**。
+  第三個巨集， `ON_CONTROL_RANGE`，會採用一個額外的第一個參數： 控制項通知訊息，例如**EN_CHANGE**。
 
 ##  <a name="_core_declaring_the_handler_function"></a> 宣告處理常式函式
 

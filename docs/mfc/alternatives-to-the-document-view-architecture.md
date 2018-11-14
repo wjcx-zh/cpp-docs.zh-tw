@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-ms.openlocfilehash: 5a9026ca400c3e7c403ff8f2b86f486bcde79cf8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b4da7df691837b47daa35c4b474711062d4e5c7
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569776"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523165"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>文件/檢視架構的替代方案
 
@@ -48,15 +48,15 @@ Visual C++ 精靈以及原始檔和對話方塊編輯器都可處理產生的應
 
    在宣告`CDocument`:
 
-   - 兩個 `CString` 物件。
+  - 兩個 `CString` 物件。
 
-   - 三個**BOOL**s。
+  - 三個**BOOL**s。
 
-   - 一個 `CDocTemplate` 指標。
+  - 一個 `CDocTemplate` 指標。
 
-   - 一個 `CPtrList` 物件，包含文件檢視的清單。
+  - 一個 `CPtrList` 物件，包含文件檢視的清單。
 
-   此外，文件需要一些時間來建立文件物件、其檢視物件、框架視窗及文件範本物件。
+  此外，文件需要一些時間來建立文件物件、其檢視物件、框架視窗及文件範本物件。
 
 - 將文件和檢視都當做未使用的附加項。 將資料管理和繪圖程式碼放入框架視窗中，而不是檢視中。 這個方法與 C 語言程式設計模型較接近。
 

@@ -20,16 +20,16 @@ helpviewer_keywords:
 - OnRowChange method
 - OnRowsetChange method
 ms.assetid: fbfd0cb2-38ff-4b42-899a-8de902f834b8
-ms.openlocfilehash: f75f2cc2191fdaf2007d2c9a89544f917ccdcdd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01bcc60b0c88a3953d5e75b53ac58877f7eb15df
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506336"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556383"
 ---
 # <a name="irowsetnotifyimpl-class"></a>IRowsetNotifyImpl 類別
 
-實作並註冊[IRowsetNotify](/previous-versions/windows/desktop/ms712959)上取用者 （也稱為 「 接收 」），使其可以處理通知。
+實作並註冊[IRowsetNotify](https://docs.microsoft.com/previous-versions/windows/desktop/ms712959(v=vs.85))上取用者 （也稱為 「 接收 」），使其可以處理通知。
 
 ## <a name="syntax"></a>語法
 
@@ -55,7 +55,7 @@ class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify
 
 請參閱[接收通知](../../data/oledb/receiving-notifications.md)需於取用者實作連接點介面。
 
-`IRowsetNotifyImpl` 提供的虛擬實作`IRowsetNotify`，使用空白的函式`IRowsetNotify`方法[OnFieldChange](/previous-versions/windows/desktop/ms715961)， [OnRowChange](/previous-versions/windows/desktop/ms722694)，和[OnRowsetChange](/previous-versions/windows/desktop/ms722669). 如果您繼承自這個類別實作時`IRowsetNotify`介面，您可以實作只有您所需的方法。 您也需要自行提供空的實作，如需其他方法。
+`IRowsetNotifyImpl` 提供的虛擬實作`IRowsetNotify`，使用空白的函式`IRowsetNotify`方法[OnFieldChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715961(v=vs.85))， [OnRowChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722694(v=vs.85))，和[OnRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722669(v=vs.85)). 如果您繼承自這個類別實作時`IRowsetNotify`介面，您可以實作只有您所需的方法。 您也需要自行提供空的實作，如需其他方法。
 
 ## <a name="onfieldchange"></a> Irowsetnotifyimpl:: Onfieldchange
 
@@ -64,7 +64,7 @@ class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify
 ### <a name="syntax"></a>語法
 
 ```cpp
-STDMETHOD(OnFieldChange)( 
+STDMETHOD(OnFieldChange)(
 /* [in] */ IRowset* /* pRowset */,
 /* [in] */ HROW /* hRow */,
 /* [in] */ DBORDINAL /* cColumns */,
@@ -76,15 +76,15 @@ STDMETHOD(OnFieldChange)( 
 
 #### <a name="parameters"></a>參數
 
-請參閱[IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961)的參數說明。
+請參閱[IRowsetNotify::OnFieldChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715961(v=vs.85))的參數說明。
 
 ### <a name="return-value"></a>傳回值
 
-請參閱[IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961)的回傳值描述。
+請參閱[IRowsetNotify::OnFieldChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715961(v=vs.85))的回傳值描述。
 
 ### <a name="remarks"></a>備註
 
-這個方法會包裝[IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961)方法。 請參閱《OLE DB 程式設計人員參考》中該方法的說明以取得詳細資訊。
+這個方法會包裝[IRowsetNotify::OnFieldChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715961(v=vs.85))方法。 請參閱《OLE DB 程式設計人員參考》中該方法的說明以取得詳細資訊。
 
 ## <a name="onrowchange"></a> Irowsetnotifyimpl:: Onrowchange
 
@@ -93,7 +93,7 @@ STDMETHOD(OnFieldChange)( 
 ### <a name="syntax"></a>語法
 
 ```cpp
-STDMETHOD(OnRowChange)( 
+STDMETHOD(OnRowChange)(
 /* [in] */ IRowset* /* pRowset */,
 /* [in] */ DBCOUNTITEM /* cRows */,
 /* [size_is][in] */ const HROW /* rghRows*/ [] ,
@@ -104,15 +104,15 @@ STDMETHOD(OnRowChange)( 
 
 #### <a name="parameters"></a>參數
 
-請參閱[irowsetnotify:: Onrowchange](/previous-versions/windows/desktop/ms722694)的參數說明。
+請參閱[irowsetnotify:: Onrowchange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722694(v=vs.85))的參數說明。
 
 ### <a name="return-value"></a>傳回值
 
-請參閱[irowsetnotify:: Onrowchange](/previous-versions/windows/desktop/ms722694)的回傳值描述。
+請參閱[irowsetnotify:: Onrowchange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722694(v=vs.85))的回傳值描述。
 
 ### <a name="remarks"></a>備註
 
-這個方法會包裝[irowsetnotify:: Onrowchange](/previous-versions/windows/desktop/ms722694)方法。 請參閱《OLE DB 程式設計人員參考》中該方法的說明以取得詳細資訊。
+這個方法會包裝[irowsetnotify:: Onrowchange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722694(v=vs.85))方法。 請參閱《OLE DB 程式設計人員參考》中該方法的說明以取得詳細資訊。
 
 ## <a name="onrowsetchange"></a> Irowsetnotifyimpl:: Onrowsetchange
 
@@ -121,7 +121,7 @@ STDMETHOD(OnRowChange)( 
 ### <a name="syntax"></a>語法
 
 ```cpp
-STDMETHOD(OnRowsetChange)( 
+STDMETHOD(OnRowsetChange)(
 /* [in] */ IRowset* /* pRowset */,
 /* [in] */ DBREASON /* eReason */,
 /* [in] */ DBEVENTPHASE /* ePhase */,
@@ -130,19 +130,19 @@ STDMETHOD(OnRowsetChange)( 
 
 #### <a name="parameters"></a>參數
 
-請參閱[IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669)的參數說明。
+請參閱[IRowsetNotify::OnRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722669(v=vs.85))的參數說明。
 
 ### <a name="return-value"></a>傳回值
 
-請參閱[IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669)的回傳值描述。
+請參閱[IRowsetNotify::OnRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722669(v=vs.85))的回傳值描述。
 
 ### <a name="remarks"></a>備註
 
-這個方法會包裝[IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669)方法。 請參閱《OLE DB 程式設計人員參考》中該方法的說明以取得詳細資訊。
+這個方法會包裝[IRowsetNotify::OnRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722669(v=vs.85))方法。 請參閱《OLE DB 程式設計人員參考》中該方法的說明以取得詳細資訊。
 
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[IRowsetNotify](/previous-versions/windows/desktop/ms712959)
+[IRowsetNotify](https://docs.microsoft.com/previous-versions/windows/desktop/ms712959(v=vs.85))
 [IRowsetNotifyCP 類別](../../data/oledb/irowsetnotifycp-class.md)

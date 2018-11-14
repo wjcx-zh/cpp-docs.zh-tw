@@ -58,12 +58,12 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-ms.openlocfilehash: f1e9633784ad78a2b46701e6600ad1ddb6b3318e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e52845a828e272ff3b8458b299c3757b8def748
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471083"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524627"
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64
 
@@ -112,10 +112,10 @@ int _wutime64(
 
 |errno 值|條件|
 |-|-|
-**EACCES**|路徑指定目錄或唯讀檔案
-**EINVAL**|無效*時間*引數
-**EMFILE**|開啟太多檔案 (必須開啟檔案，才能變更其修改時間)
-**ENOENT**|找不到路徑或檔名
+| **EACCES** | 路徑指定目錄或唯讀檔案 |
+| **EINVAL** | 無效*時間*引數 |
+| **EMFILE** | 開啟太多檔案 (必須開啟檔案，才能變更其修改時間) |
+| **ENOENT** | 找不到路徑或檔名 |
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
@@ -123,14 +123,14 @@ int _wutime64(
 
 ## <a name="remarks"></a>備註
 
-**_Utime**函式會將所指定之檔案的修改時間*filename * *。* 處理序必須具有檔案的寫入權，才能變更時間。 在 Windows 作業系統中，您可以變更的存取時間和修改時間，以 **_utimbuf**結構。 如果*次數*是**NULL**指標，修改時間設為目前的當地時間。 否則*時間*類型的結構必須指向 **_utimbuf**SYS\UTIME 中定義。H.
+**_Utime**函式會將所指定之檔案的修改時間*filename*。 處理序必須具有檔案的寫入權，才能變更時間。 在 Windows 作業系統中，您可以變更的存取時間和修改時間，以 **_utimbuf**結構。 如果*次數*是**NULL**指標，修改時間設為目前的當地時間。 否則*時間*類型的結構必須指向 **_utimbuf**SYS\UTIME 中定義。H.
 
 **_Utimbuf**結構會儲存所使用的檔案存取和修改時間 **_utime**以變更檔案修改日期。 此結構具有下列欄位，也就是這兩個型別**time_t**:
 
-|欄位||
-|-|-|
-**actime**|檔案存取的時間
-**modtime**|檔案修改的時間
+| 欄位 |   |
+|-------|---|
+| **actime** | 檔案存取的時間 |
+| **modtime** | 檔案修改的時間 |
 
 特定版本的 **_utimbuf**結構 (**_utimebuf32**並 **__utimbuf64**) 使用 32 位元和 64 位元版本的時間類型所定義。 這些是用在此函式的 32 位元和 64 位元特定版本。 **_utimbuf**本身預設會使用 64 位元時間類型，除非 **_USE_32BIT_TIME_T**定義。
 

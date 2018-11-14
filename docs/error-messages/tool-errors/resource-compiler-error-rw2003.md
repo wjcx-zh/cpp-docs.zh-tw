@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW2003
 ms.assetid: 9dc0ba70-6776-4aef-b316-5f1711d8e42e
-ms.openlocfilehash: 2e0a7d2d5b7e8fc4603b10450ba30dbf014e02cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f359c1f71f03ce0d946579776230398fb31d046f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583162"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520604"
 ---
 # <a name="resource-compiler-error-rw2003"></a>資源編譯器錯誤 RW2003
 
@@ -51,10 +51,10 @@ ms.locfileid: "50583162"
 
    Windows 3.1 資源不能超過約 65000 個位元組。 如果您的資源，然後您將無法使用 Visual c + + 或命令列的資源編譯器進行編譯。 這項限制不適用於資料指標、圖示、點陣圖或其他檔案型資源。
 
-9. **資源檔不是 3.00 格式**
+1. **資源檔不是 3.00 格式**
 
    資料指標或圖示使用 3.00 版之前的格式。 資源必須轉換或重繪使用格式的 3.00 版或更新版本。
 
-10. **無法開啟暫存檔案**
+1. **無法開啟暫存檔案**
 
    資源編譯器/Visual C++ 無法開啟暫存檔。 可能的原因是您沒有目錄的寫入權限，或目錄不存在。 資源編譯器/Visual C++ 嘗試在 **TMP** 環境變數所指定的目錄或目前的目錄 (如果未指定) 中使用這些檔案。

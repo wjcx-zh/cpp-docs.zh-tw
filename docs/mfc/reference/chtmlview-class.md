@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: f30194d552f8bafb4d52597aeb53dbe02a780213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b37cff8bd3eb3bd05bc7030c4cc12b9b84568b1f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438112"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333637"
 ---
 # <a name="chtmlview-class"></a>CHtmlView 類別
 
@@ -1194,7 +1194,7 @@ virtual void OnDocumentComplete(LPCTSTR lpszURL);
 
 並非每個畫面格會引發此事件，但每個畫面格，就會引發[OnDownloadBegin](#ondownloadbegin)事件就會引發對應`OnDocumentComplete`事件。
 
-所指定的 URL *lpszURL*可能會不同於瀏覽器已告知瀏覽至，因為此 URL 是正式化和完整 URL 的 URL。 比方說，如果應用程式指定 URL 的"www.microsoft.com"的呼叫中要[Navigate](#navigate)或[Navigate2](#navigate2)，傳遞的 URL`OnNavigateComplete2`將會 「 http://www.microsoft.com/"。 此外，如果伺服器已被瀏覽器重新導向至不同的 URL，重新導向的 URL 將會反映這裡。
+所指定的 URL *lpszURL*可能會不同於瀏覽器已告知瀏覽至，因為此 URL 是正式化和完整 URL 的 URL。 比方說，如果應用程式指定 URL 的"www.microsoft.com"的呼叫中要[Navigate](#navigate)或[Navigate2](#navigate2)，傳遞的 URL`OnNavigateComplete2`將會 「<http://www.microsoft.com/>"。 此外，如果伺服器已被瀏覽器重新導向至不同的 URL，重新導向的 URL 將會反映這裡。
 
 ##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate
 
@@ -1458,7 +1458,7 @@ virtual void OnNavigateComplete2(LPCTSTR strURL);
 
 URL 參數可以是在沒有 URL 表示法是殼層名稱空間實體的情況下 PIDL。
 
-請注意，URL 中包含*strURL*可能會不同於瀏覽器已告知瀏覽至，因為此 URL 是正式化和完整 URL 的 URL。 比方說，如果應用程式指定 URL 的"www.microsoft.com"的呼叫中要[Navigate](#navigate)或[Navigate2](#navigate2)，傳遞的 URL`OnNavigateComplete2`將會 「 http://www.microsoft.com/"。 此外，如果伺服器已被瀏覽器重新導向至不同的 URL，重新導向的 URL 將會反映這裡。
+請注意，URL 中包含*strURL*可能會不同於瀏覽器已告知瀏覽至，因為此 URL 是正式化和完整 URL 的 URL。 比方說，如果應用程式指定 URL 的"www.microsoft.com"的呼叫中要[Navigate](#navigate)或[Navigate2](#navigate2)，傳遞的 URL`OnNavigateComplete2`將會 「<http://www.microsoft.com/>"。 此外，如果伺服器已被瀏覽器重新導向至不同的 URL，重新導向的 URL 將會反映這裡。
 
 ##  <a name="onnavigateerror"></a>  CHtmlView::OnNavigateError
 

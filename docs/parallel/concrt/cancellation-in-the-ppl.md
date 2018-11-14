@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-ms.openlocfilehash: b776aedb71f81d7dc27f9322ed87fd080c8819a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1a762f97cf144c39043203dbf68d927b2cbd0e4
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558716"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327417"
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL 中的取消
 
@@ -90,13 +90,12 @@ PPL 使用工作和工作群組來管理細部的工作和計算。 您可以巢
 `cancel_current_task` 函式會擲回；因此，您不需要明確地從目前的迴圈或函式傳回。
 
 > [!TIP]
-
->  或者，您可以呼叫[concurrency:: interruption_point](reference/concurrency-namespace-functions.md#interruption_point)函式，而不是`cancel_current_task`。
+> 或者，您可以呼叫[concurrency:: interruption_point](reference/concurrency-namespace-functions.md#interruption_point)函式，而不是`cancel_current_task`。
 
 當您回應取消時務必要呼叫 `cancel_current_task`，因為它會將工作轉換成已取消的狀態。 如果您提早傳回，而不是呼叫 `cancel_current_task`，則作業會轉換成已完成狀態，並且會執行任何以值為基礎的接續。
 
 > [!CAUTION]
->  永遠不會從您的程式碼擲回 `task_canceled`。 請改為呼叫 `cancel_current_task`。
+> 永遠不會從您的程式碼擲回 `task_canceled`。 請改為呼叫 `cancel_current_task`。
 
 在工作取消的狀態，在結束時[concurrency](reference/task-class.md#get)方法會擲回[concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md)。 (相反地， [concurrency::task::wait](reference/task-class.md#wait)會傳回[task_status:: canceled](reference/concurrency-namespace-enums.md#task_group_status)並不會擲回。)下列範例針對以工作為基礎的接續說明此行為。 一律會呼叫以工作為基礎的接續，即使前項工作已取消亦然。
 
@@ -107,8 +106,7 @@ PPL 使用工作和工作群組來管理細部的工作和計算。 您可以巢
 [!code-cpp[concrt-task-canceled#2](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_4.cpp)]
 
 > [!CAUTION]
-
->  如果您沒有傳遞取消語彙基元`task`建構函式或[concurrency:: create_task](reference/concurrency-namespace-functions.md#create_task)函式，該工作便無法取消。 此外，您必須傳遞相同的取消語彙基元給任何巢狀工作的建構函式 (也就是在另一個工作主體內建立的工作)，以便同時取消所有工作。
+> 如果您沒有傳遞取消語彙基元`task`建構函式或[concurrency:: create_task](reference/concurrency-namespace-functions.md#create_task)函式，該工作便無法取消。 此外，您必須傳遞相同的取消語彙基元給任何巢狀工作的建構函式 (也就是在另一個工作主體內建立的工作)，以便同時取消所有工作。
 
 您可能會想要在取消取消語彙基元時，執行任意程式碼。 例如，如果您的使用者選擇**取消**按鈕來取消作業的使用者介面，您可以停用該按鈕直到使用者開始另一項作業。 下列範例示範如何使用[3&gt;concurrency::cancellation_token::register_callback&lt;3}](reference/cancellation-token-class.md#register_callback)方法，登錄當取消語彙基元已取消時執行的回呼函式。
 
@@ -123,11 +121,10 @@ PPL 使用工作和工作群組來管理細部的工作和計算。 您可以巢
 這些行為不會受到錯誤工作 (也就是擲回例外狀況的工作) 影響。 在此情況下，以值為基礎的接續會取消；以工作為基礎的接續不會取消。
 
 > [!CAUTION]
->  在另一項工作中建立的工作 (也就是巢狀工作) 不會繼承父工作的取消語彙基元。 只有以值為基礎的接續才會繼承其前項工作的取消語彙基元。
+> 在另一項工作中建立的工作 (也就是巢狀工作) 不會繼承父工作的取消語彙基元。 只有以值為基礎的接續才會繼承其前項工作的取消語彙基元。
 
 > [!TIP]
-
->  使用[concurrency:: cancellation_token:: none](reference/cancellation-token-class.md#none)方法，當您呼叫建構函式或函式接受`cancellation_token`物件，而且您不想要取消作業。
+> 使用[concurrency:: cancellation_token:: none](reference/cancellation-token-class.md#none)方法，當您呼叫建構函式或函式接受`cancellation_token`物件，而且您不想要取消作業。
 
 您也可以提供取消語彙基元給 `task_group` 或 `structured_task_group` 物件的建構函式。 其中的一個重要環節是子工作群組會繼承這個取消語彙基元。 如需使用示範這個概念的範例[concurrency:: run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token)若要執行至呼叫的函式`parallel_for`，請參閱[取消平行演算法](#algorithms)本主題後面文件。
 

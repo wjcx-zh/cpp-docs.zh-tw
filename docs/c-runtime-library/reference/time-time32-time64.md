@@ -1,6 +1,6 @@
 ---
 title: time、_time32、_time64
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 apiname:
 - time
 - _time64
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-ms.openlocfilehash: 0749ecbf0f88620e7293a043130b49dbe45aaf31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 693b70b3682876d7e6c3721f5d06aa13d31abb96
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546564"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329146"
 ---
 # <a name="time-time32-time64"></a>time、_time32、_time64
 
@@ -70,8 +70,8 @@ __time64_t _time64( __time64_t *destTime );
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的 C 標頭|必要的 C++ 標頭|
-|-------------|---------------------|
-|**時間**， **_time32**， **_time64**|\<time.h>|\<ctime > 或\<time.h >|
+|-------|------|---------------------|
+|**時間**，  **\_time32**，  **\_time64**|\<time.h>|\<ctime > 或\<time.h >|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

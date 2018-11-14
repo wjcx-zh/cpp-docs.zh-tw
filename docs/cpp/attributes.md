@@ -2,12 +2,12 @@
 title: C + + 中的屬性
 ms.date: 06/01/2018
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: a4d24324165f3cce60d259adf6e3d21638296cf8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 444abf2ddf6d4563dcbeb5b683adc52f903bd97f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471821"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520786"
 ---
 # <a name="attributes-in-c"></a>C + + 中的屬性
 
@@ -45,16 +45,16 @@ void Foo(int);
 
 - `[[nodiscard]]` **Visual Studio 2017 版本 15.3 和更新版本：** (適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)) 指定函式的傳回值並不適合被捨棄。 引發警告 C4834，在此範例中所示：
 
-   ```cpp
-   [[nodiscard]]
-   int foo(int i) { return i * i; }
+    ```cpp
+    [[nodiscard]]
+    int foo(int i) { return i * i; }
 
-   int main()
-   {
-       foo(42); //warning C4834: discarding return value of function with 'nodiscard' attribute
-       return 0;
-   }
-   ```
+    int main()
+    {
+        foo(42); //warning C4834: discarding return value of function with 'nodiscard' attribute
+        return 0;
+    }
+    ```
 
 - `[[maybe_unused]]` **Visual Studio 2017 版本 15.3 和更新版本：** (適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)) 指定的變數、 函式、 類別、 typedef、 非靜態資料成員、 列舉或樣板特製化可能會刻意不會使用。 實體標記時，編譯器不會警告`[[maybe_unused]]`未使用。 與屬性，反之亦然，稍後可以重新宣告沒有屬性宣告的實體。 實體會被視為標記標示為其第一個宣告分析之後，以及轉譯目前轉譯單位的其餘部分。
 
@@ -75,12 +75,12 @@ void Foo(int);
     }
     ```
 
-   此範例中，會引發下列警告：
+  此範例中，會引發下列警告：
 
-   - 26494 (型別規則 5： 一律初始化物件。)
+  - 26494 (型別規則 5： 一律初始化物件。)
 
-   - 26485 (範圍規則 3： 沒有指標衰減陣列。)
+  - 26485 (範圍規則 3： 沒有指標衰減陣列。)
 
-   - 26481 (範圍規則 1： 請勿使用指標算術。 請改用 span。）
+  - 26481 (範圍規則 1： 請勿使用指標算術。 請改用 span。）
 
-   當您編譯此程式碼使用 CppCoreCheck 程式碼分析工具安裝並啟動時，就會引發的前兩個警告。 但並不會因為屬性中引發的第三個警告。 您可以藉由撰寫且不包含幾個特定規則的 [[gsl::suppress(bounds)]] 隱藏整個 「 範圍 」 設定檔。 C + + Core Guidelines 專門設計來協助您撰寫更好且更安全的程式碼。 隱藏屬性讓您更容易時不想要關閉的警告。
+  當您編譯此程式碼使用 CppCoreCheck 程式碼分析工具安裝並啟動時，就會引發的前兩個警告。 但並不會因為屬性中引發的第三個警告。 您可以藉由撰寫且不包含幾個特定規則的 [[gsl::suppress(bounds)]] 隱藏整個 「 範圍 」 設定檔。 C + + Core Guidelines 專門設計來協助您撰寫更好且更安全的程式碼。 隱藏屬性讓您更容易時不想要關閉的警告。

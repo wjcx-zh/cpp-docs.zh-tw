@@ -90,12 +90,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: b8c43a47eceb5213f292b825a771cd25e99efceb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2cc67e6e837844356a071aa362dcca85eca24e4
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592656"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556968"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor 類別
 
@@ -147,9 +147,10 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 
 ```cpp
 typedef CDynamicParameterAccessor _ParamClass;
-CDynamicParameterAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
-   DBLENGTH nBlobSize = 8000 )
-   : CDynamicAccessor(eBlobHandling, nBlobSize )
+CDynamicParameterAccessor(
+   DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
+   DBLENGTH nBlobSize = 8000 )
+   : CDynamicAccessor(eBlobHandling, nBlobSize )
 ```
 
 #### <a name="parameters"></a>參數
@@ -171,10 +172,10 @@ CDynamicParameterAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFA
 ### <a name="syntax"></a>語法
 
 ```cpp
-template <class ctype>bool GetParam(DBORDINAL nParam, 
+template <class ctype>bool GetParam(DBORDINAL nParam,
    ctype* pData) const throw();
 
-template <class ctype> bool GetParam(TCHAR* pParamName, 
+template <class ctype> bool GetParam(TCHAR* pParamName,
    ctype* pData) const throw();
 
 void* GetParam(DBORDINAL nParam) const throw();
@@ -223,7 +224,7 @@ DB_UPARAMS GetParamCount() const throw();
 ### <a name="syntax"></a>語法
 
 ```cpp
-bool GetParamIO(DBORDINAL nParam, 
+bool GetParamIO(DBORDINAL nParam,
    DBPARAMIO* pParamIO) const throw();
 ```
 
@@ -312,7 +313,7 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 [in] 參數編號 (從 1 開始位移)。 參數 0 保留作為傳回值。 參數編號是根據參數在 SQL 或預存程序呼叫中的順序編制的索引。 請參閱[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)的範例。
 
 *pStatus*<br/>
-[out]包含指定的參數 DBSTATUS 狀態變數的指標。 如需 DBSTATUS 值的資訊，請參閱[狀態](/previous-versions/windows/desktop/ms722617)中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。
+[out]包含指定的參數 DBSTATUS 狀態變數的指標。 如需 DBSTATUS 值的資訊，請參閱[狀態](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。
 
 ### <a name="remarks"></a>備註
 
@@ -424,7 +425,7 @@ bool SetParam(TCHAR* pParamName,
 [in]要包含的資料寫入緩衝區記憶體的指標。
 
 *status*<br/>
-[in] DBSTATUS 資料行狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](/previous-versions/windows/desktop/ms722617)中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。
+[in] DBSTATUS 資料行狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。
 
 ### <a name="return-value"></a>傳回值
 
@@ -472,7 +473,7 @@ bool SetParamStatus(DBORDINAL nParam,
 [in] 參數編號 (從 1 開始位移)。 參數 0 保留作為傳回值。 參數編號是根據參數在 SQL 或預存程序呼叫中的順序編制的索引。 請參閱[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)的範例。
 
 *status*<br/>
-[in]指定的參數 DBSTATUS 狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](/previous-versions/windows/desktop/ms722617)中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。
+[in]指定的參數 DBSTATUS 狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。
 
 ### <a name="remarks"></a>備註
 
@@ -485,10 +486,10 @@ bool SetParamStatus(DBORDINAL nParam,
 ### <a name="syntax"></a>語法
 
 ```cpp
-bool SetParamString(DBORDINAL nParam, 
-   constCHAR* pString, 
-   DBSTATUS status = DBSTATUS_S_OK) throw();bool SetParamString(DBORDINAL nParam, 
-   constWCHAR* pString, 
+bool SetParamString(DBORDINAL nParam,
+   constCHAR* pString,
+   DBSTATUS status = DBSTATUS_S_OK) throw();bool SetParamString(DBORDINAL nParam,
+   constWCHAR* pString,
    DBSTATUS status = DBSTATUS_S_OK) throw();
 ```
 
@@ -501,7 +502,7 @@ bool SetParamString(DBORDINAL nParam, 
 [in]ANSI 的指標 (**CHAR**) 或 Unicode (**WCHAR**) 字串的指定參數的資料。 請參閱 oledb.h DBSTATUS。
 
 *status*<br/>
-[in]指定的參數 DBSTATUS 狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](/previous-versions/windows/desktop/ms722617)中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。
+[in]指定的參數 DBSTATUS 狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。
 
 ### <a name="remarks"></a>備註
 

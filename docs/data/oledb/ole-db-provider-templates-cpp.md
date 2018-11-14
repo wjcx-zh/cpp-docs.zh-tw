@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB provider templates [C++], about OLE DB provider templates
 - templates [C++], OLE DB
 ms.assetid: fccff85f-2af8-4500-82bd-6312d28a74b8
-ms.openlocfilehash: 99bf377ff10a2978a912666e787ed3a024d8654e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4b0523234e5e62b76762b07bb74b21a97c6713b
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485168"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556591"
 ---
 # <a name="ole-db-provider-templates-c"></a>OLE DB 提供者樣板 (C++)
 
@@ -70,5 +70,5 @@ OLE DB 提供者範本支援 OLE DB 2.7 版規格。 您可以使用 OLE DB 提�
 ## <a name="see-also"></a>另請參閱
 
 [資料存取](../data-access-in-cpp.md)<br/>
-[OLE DB SDK 文件](/previous-versions/windows/desktop/ms722784)<br/>
-[OLE DB 設計人員參考](/previous-versions/windows/desktop/ms713643)<br/>
+[OLE DB SDK 文件](https://docs.microsoft.com/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
+[OLE DB 設計人員參考](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)<br/>

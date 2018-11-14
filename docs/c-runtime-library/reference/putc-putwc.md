@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _puttc function
 - puttc function
 ms.assetid: a37b2e82-9d88-4565-8190-ff8d04c0ddb9
-ms.openlocfilehash: 05bbb5434e6626076aab0d574b04058ec730b77c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de87ca4996540737dad319fc920f4c76415250b9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444691"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330875"
 ---
 # <a name="putc-putwc"></a>putc、putwc
 
@@ -63,7 +63,7 @@ wint_t putwc(
 
 ## <a name="return-value"></a>傳回值
 
-傳回寫入的字元。 表示錯誤或檔案結尾條件**putc**並**putchar**傳回 * * EOF`; **putwc`並**putwchar**傳回**WEOF**。 針對所有四個常式，使用 [ferror](ferror.md) 或 [feof](feof.md) 可檢查是否有錯誤或檔案是否已結束。 如果是 null 指標傳遞給*資料流*，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則這些函式會傳回**EOF**或是**WEOF**並設定**errno**至**EINVAL**。
+傳回寫入的字元。 表示錯誤或檔案結尾條件**putc**並**putchar**傳回**EOF**;**putwc**並**putwchar**傳回**WEOF**。 針對所有四個常式，使用 [ferror](ferror.md) 或 [feof](feof.md) 可檢查是否有錯誤或檔案是否已結束。 如果是 null 指標傳遞給*資料流*，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則這些函式會傳回**EOF**或是**WEOF**並設定**errno**至**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

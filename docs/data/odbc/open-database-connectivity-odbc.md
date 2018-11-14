@@ -6,18 +6,18 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: 49955f12c5e9d4105d9fdbe0ec16bbd302672546
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a4d6cad399b1773102dc0bc64e28049cca30d2d
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468727"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523347"
 ---
 # <a name="open-database-connectivity-odbc"></a>開放式資料庫連接 (ODBC)
 
 Microsoft Foundation Classes (MFC) 程式庫提供可以使用開放式資料庫連接 (ODBC) 進行程式設計的類別。 Visual Studio 2015 和 SQL Server 2012 ODBC 是連接到 SQL 資料來源的慣用的方法。
 
-如需使用不以 MFC ODBC API 的詳細資訊，請參閱[開放式資料庫連接 (ODBC)](/previous-versions/windows/desktop/ms710252) MSDN 中的 SDK。
+如需使用不以 MFC ODBC API 的詳細資訊，請參閱[開放式資料庫連接 (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) MSDN 中的 SDK。
 
 
 ## <a name="in-this-section"></a>本節內容
@@ -58,7 +58,7 @@ Microsoft Foundation Classes (MFC) 程式庫提供可以使用開放式資料庫
 
 ## <a name="odbc-database-tasks"></a>ODBC 資料庫工作
 
-這些工作以 MFC 為基礎[ODBC](odbc-basics.md)類別。 如需使用不以 MFC ODBC API 的詳細資訊，請參閱[開放式資料庫連接 (ODBC)](/previous-versions/windows/desktop/ms710252) SDK。
+這些工作以 MFC 為基礎[ODBC](odbc-basics.md)類別。 如需使用不以 MFC ODBC API 的詳細資訊，請參閱[開放式資料庫連接 (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK。
 
 - [安裝和開始使用 ODBC](installing-and-getting-started-with-odbc.md)
 

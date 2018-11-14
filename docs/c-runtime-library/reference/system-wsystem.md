@@ -29,12 +29,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: fa034b164a188b1b5b7ccd8a4ca71ab7ac754fa1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46c4949fcc8cfbe4a3477e66b57d8fc6fc97ed73
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624662"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328652"
 ---
 # <a name="system-wsystem"></a>system、_wsystem
 
@@ -65,10 +65,10 @@ int _wsystem(
 
 |||
 |-|-|
-**E2BIG**|引數清單 (依系統而定) 太大。
-**ENOENT**|找不到命令解譯器。
-**ENOEXEC**|無法執行命令解譯器檔案，因為此格式無效。
-**ENOMEM**|沒有足夠的記憶體可用來執行命令；可用的記憶體已損毀；或存在非無效的區塊，表示未正確配置執行此呼叫的處理序。
+| **E2BIG** | 引數清單 (依系統而定) 太大。 |
+| **ENOENT** | 找不到命令解譯器。 |
+| **ENOEXEC** | 無法執行命令解譯器檔案，因為此格式無效。 |
+| **ENOMEM** | 沒有足夠的記憶體可用來執行命令；可用的記憶體已損毀；或存在非無效的區塊，表示未正確配置執行此呼叫的處理序。 |
 
 如需這些傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

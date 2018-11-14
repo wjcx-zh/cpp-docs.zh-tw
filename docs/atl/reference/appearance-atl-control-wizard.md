@@ -6,16 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, appearance
 ms.assetid: cc16d7ff-74d7-4c15-9ebd-4b19201ff457
-ms.openlocfilehash: d2ebba551d9b848a3a59944f7efb5f0f39af95e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34c72fa8a2c5108a20065041c5cb7ea461e501a8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602159"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330589"
 ---
 # <a name="appearance-atl-control-wizard"></a>外觀, ATL 控制項精靈
-
-在這裡插入 [搜尋結果] 摘要。
 
 您可以使用精靈的這個頁面來識別控制項的其他使用者的項目選項。 此頁面可供控制項視為**標準控制項**下方**控制項類型**上[選項，ATL 控制項精靈](../../atl/reference/options-atl-control-wizard.md)頁面。
 

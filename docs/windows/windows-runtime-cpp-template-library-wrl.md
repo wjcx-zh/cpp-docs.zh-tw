@@ -3,12 +3,12 @@ title: Windows Runtime C++ Template Library (WRL)
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 777e8226a12b3e57c136ea54d301ff7c9eb890a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 484718ee044b752c381d54b471a33e58ca470d80
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641931"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520656"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows Runtime C++ Template Library (WRL)
 
@@ -16,7 +16,7 @@ Windows 執行階段 C++ 範本庫 (WRL) 是提供低階方式撰寫和使用 Wi
 
 > [!NOTE]
 > WRL 現在已被取代的 C + + /cli WinRT，standard C + + 17 語言推演，適用於 Windows 執行階段 Api。 C + + /cli WinRT 位於 Windows 10 SDK 從 1803年版開始。 C + + /cli WinRT 完全實作於標頭檔，而且設計用來提供您的第一級存取新式 Windows api。
-
+>
 > 使用 C + + /cli WinRT，您可以使用及撰寫 Windows 執行階段 Api 使用任何符合標準的 C + + 17 編譯器。 C + + /cli WinRT 通常會執行得更好，而且會產生較小的二進位檔，比 Windows 執行階段的其他語言選項。 我們會繼續支援 C + + /CX 和 WRL，但強烈建議新的應用程式使用 C + + /cli WinRT。 如需詳細資訊，請參閱 < [C + + /cli WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)。
 
 ## <a name="benefits"></a>優點
@@ -65,7 +65,7 @@ Windows 執行階段 c + + 樣板程式庫和 C + + /CX 提供不同的優點。
 顯示如何透過從 .winmd 中繼資料建立 IDL 檔案，使用 WRL 的自訂 Windows 執行階段元件。
 
 [逐步解說：使用工作和 XML HTTP 要求連接](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
-示範如何使用[IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)並[IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback)介面，以及將 HTTP GET 和 POST 要求傳送至 UWP 應用程式中的 web 服務的工作。
+示範如何使用[IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)並[IXMLHTTPRequest2Callback](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback)介面，以及將 HTTP GET 和 POST 要求傳送至 UWP 應用程式中的 web 服務的工作。
 
 [Bing 地圖服務路線最佳化程式範例](https://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
 會使用`HttpRequest`中所定義的類別[逐步解說： 使用工作和 XML HTTP 要求](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)完成的 UWP 應用程式的內容中。

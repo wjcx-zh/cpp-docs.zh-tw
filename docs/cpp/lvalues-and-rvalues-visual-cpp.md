@@ -5,12 +5,12 @@ helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-ms.openlocfilehash: 261453d5640c122f23491304b71e53e27c06eb7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 301e6140699c921ee1b1229b9183c8555992f716
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546346"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330604"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Lvalues 和 Rvalues （Visual c + +）
 
@@ -20,7 +20,7 @@ C + + 17 標準會定義運算式值的類別，如下所示：
 
 - A *glvalue*是的運算式的評估會決定物件、 位元欄位或函式的身分識別。
 - A *prvalue*是其評估初始化物件或位元欄位，或計算運算子的運算元的值，因為在它出現內容所指定的運算式。
-- *Xvalue*是代表物件或位元欄位 （通常是因為它是接近其存留期結束時），可以重複使用其資源的 glvalue。 [範例： 特定種類的運算式涉及右值參考 (8.3.2) 產生 xvalues，例如其傳回型別是右值參考的函式呼叫或轉型為右值參考類型。 ]
+- *Xvalue*是代表物件或位元欄位 （通常是因為它是接近其存留期結束時），可以重複使用其資源的 glvalue。 範例： 特定種類的運算式涉及右值參考 (8.3.2) 產生 xvalues，例如其傳回型別是右值參考的函式呼叫或轉型為右值參考類型。
 - *左值*是不是 xvalue glvalue。
 - *Rvalue* prvalue 或 xvalue。
 

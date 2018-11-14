@@ -7,12 +7,12 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: fdea70f8d87604ca0665baa64c8652c14295a670
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f58a33a0c43cb0d70d98f3f2ae33f766058b1c23
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506570"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331265"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>資料錄集：參數化資料錄集 (ODBC)
 
@@ -54,7 +54,7 @@ ms.locfileid: "50506570"
 
    資料錄集的篩選條件字串，儲存在`m_strFilter`，可能會看起來像這樣：
 
-    ```
+    ```cpp
     "StudentID = ?"
     ```
 
@@ -62,7 +62,7 @@ ms.locfileid: "50506570"
 
    參數值的指派，如下所示：
 
-    ```
+    ```cpp
     strInputID = "100";
     ...
     m_strParam = strInputID;
@@ -70,7 +70,7 @@ ms.locfileid: "50506570"
 
    您不想在這種方式設定的篩選字串：
 
-    ```
+    ```cpp
     m_strFilter = "StudentID = 100";   // 100 is incorrectly quoted
                                        // for some drivers
     ```
@@ -79,15 +79,15 @@ ms.locfileid: "50506570"
 
    參數為不同的值每次您重新資料錄集查詢新的學生識別碼。
 
-    > [!TIP]
-    >  使用參數是比只是篩選器更有效率。 以參數化資料錄集，資料庫必須處理 SQL**選取**陳述式一次。 已篩選的資料錄集，如果沒有參數，如**選取 **必須處理陳述式每次您`Requery`使用新的篩選值。
+   > [!TIP]
+   > 使用參數是比只是篩選器更有效率。 以參數化資料錄集，資料庫必須處理 SQL**選取**陳述式一次。 已篩選的資料錄集，如果沒有參數，如**選取 **必須處理陳述式每次您`Requery`使用新的篩選值。
 
 如需有關篩選的詳細資訊，請參閱[資料錄集： 篩選資料錄 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。
 
 ##  <a name="_core_parameterizing_your_recordset_class"></a> 參數化資料錄集類別
 
 > [!NOTE]
->  本節適用於物件衍生自`CRecordset`的大量資料列中擷取尚未實作。 如果您使用大量資料列擷取，實作參數是類似的程序。 如需詳細資訊，請參閱 <<c0> [ 資料錄集： 擷取記錄中大量資料庫連接 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+> 本節適用於物件衍生自`CRecordset`的大量資料列中擷取尚未實作。 如果您使用大量資料列擷取，實作參數是類似的程序。 如需詳細資訊，請參閱 <<c0> [ 資料錄集： 擷取記錄中大量資料庫連接 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 建立您的資料錄集類別之前，請決定您需要哪些參數，其資料類型為何，以及資料錄集如何使用它們。
 
@@ -116,7 +116,7 @@ ms.locfileid: "50506570"
 
 1. 修改[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)在.cpp 檔案中的成員函式定義。 每個參數的資料成員新增至類別中新增的 RFX 函式呼叫。 如需撰寫 RFX 函式的詳細資訊，請參閱 <<c0> [ 資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。 之前的單一呼叫 RFX 呼叫的參數：
 
-    ```
+    ```cpp
     pFX->SetFieldType( CFieldExchange::param );
     // RFX calls for parameter data members
     ```
@@ -130,11 +130,10 @@ ms.locfileid: "50506570"
    在執行階段，"？"預留位置會填入，順序，則會在您傳遞的參數值。 之後的第一個參數的資料成員設定[SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)呼叫取代第一個"？"在 SQL 字串中，第二個參數的資料成員會取代第二個"？"，依此類推。
 
 > [!NOTE]
->  參數的順序很重要： RFX 的順序呼叫中參數的您`DoFieldExchange`函式必須符合 SQL 字串中參數預留位置的順序。
+> 參數的順序很重要： RFX 的順序呼叫中參數的您`DoFieldExchange`函式必須符合 SQL 字串中參數預留位置的順序。
 
 > [!TIP]
-
->  使用最可能的字串是您指定的字串 （如果有的話） 的類別[m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter)資料成員，但有些 ODBC 驅動程式可能會允許其他 SQL 子句中的參數。
+> 使用最可能的字串是您指定的字串 （如果有的話） 的類別[m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter)資料成員，但有些 ODBC 驅動程式可能會允許其他 SQL 子句中的參數。
 
 ##  <a name="_core_passing_parameter_values_at_run_time"></a> 在執行階段傳遞參數值
 

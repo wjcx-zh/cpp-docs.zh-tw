@@ -106,12 +106,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-ms.openlocfilehash: 316012479ec374cc5f40061384475008fe04e331
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9272cd4596a54a38e1ba21ac92b038c2da0d207
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637277"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331200"
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat、_stat32、_stat64、_stati64、_stat32i64、_stat64i32、_wstat、_wstat32、_wstat64、_wstati64、_wstat32i64、_wstat64i32
 
@@ -228,17 +228,17 @@ int _wstat64i32(
 
 |欄位||
 |-|-|
-**st_gid**|擁有檔案 (UNIX 特定) 之群組的數值識別碼。這個欄位在 Windows 系統上一律為零。 重新導向的檔案會歸類為 Windows 檔案。
-**st_atime**|檔案的上次存取時間。 適用於 NTFS，但不適用 FAT 格式的磁碟機。
-**st_ctime**|檔案的建立時間。 適用於 NTFS，但不適用 FAT 格式的磁碟機。
-**st_dev**|磁碟機的包含檔的磁碟數目 (與相同**st_rdev**)。
-**st_ino**|資訊的節點數目 ( **inode**) 檔案 （UNIX 特定）。 在 UNIX 檔案系統**inode**描述檔案日期和時間戳記、 權限，以及內容。 當檔案永久連結至另一部，它們會共用相同**inode**。 **Inode**，因此**st_ino**，FAT、 HPFS 或 NTFS 檔案系統中沒有任何意義。
-**st_mode**|檔案模式資訊的位元遮罩。 **_S_IFDIR**如果設定位元*路徑*指定的目錄，而 **_S_IFREG**位元設定如果*路徑*指定一般檔案或裝置。 使用者讀取/寫入位元會根據檔案的權限模式進行設定；使用者執行位元會根據副檔名進行設定。
-**st_mtime**|檔案的上次修改時間。
-**st_nlink**|在非 NTFS 檔案系統上一律為 1。
-**st_rdev**|磁碟機的包含檔的磁碟數目 (與相同**st_dev**)。
-**st_size**|以位元組為單位; 檔的大小版本使用 64 位元整數**i64**後置詞。
-**st_uid**|擁有檔案 (UNIX 特定) 之使用者的數值識別碼。 這個欄位在 Windows 系統上一律為零。 重新導向的檔案會歸類為 Windows 檔案。
+| **st_gid** | 擁有檔案 (UNIX 特定) 之群組的數值識別碼。這個欄位在 Windows 系統上一律為零。 重新導向的檔案會歸類為 Windows 檔案。 |
+| **st_atime** | 檔案的上次存取時間。 適用於 NTFS，但不適用 FAT 格式的磁碟機。 |
+| **st_ctime** | 檔案的建立時間。 適用於 NTFS，但不適用 FAT 格式的磁碟機。 |
+| **st_dev** | 磁碟機的包含檔的磁碟數目 (與相同**st_rdev**)。 |
+| **st_ino** | 資訊的節點數目 ( **inode**) 檔案 （UNIX 特定）。 在 UNIX 檔案系統**inode**描述檔案日期和時間戳記、 權限，以及內容。 當檔案永久連結至另一部，它們會共用相同**inode**。 **Inode**，因此**st_ino**，FAT、 HPFS 或 NTFS 檔案系統中沒有任何意義。 |
+| **st_mode** | 檔案模式資訊的位元遮罩。 **_S_IFDIR**如果設定位元*路徑*指定的目錄，而 **_S_IFREG**位元設定如果*路徑*指定一般檔案或裝置。 使用者讀取/寫入位元會根據檔案的權限模式進行設定；使用者執行位元會根據副檔名進行設定。 |
+| **st_mtime** | 檔案的上次修改時間。 |
+| **st_nlink** | 在非 NTFS 檔案系統上一律為 1。 |
+| **st_rdev** | 磁碟機的包含檔的磁碟數目 (與相同**st_dev**)。 |
+| **st_size** | 以位元組為單位; 檔的大小版本使用 64 位元整數**i64**後置詞。 |
+| **st_uid** | 擁有檔案 (UNIX 特定) 之使用者的數值識別碼。 這個欄位在 Windows 系統上一律為零。 重新導向的檔案會歸類為 Windows 檔案。 |
 
 如果*路徑*指的是裝置， **st_size**、 各種時間欄位、 **st_dev**，以及**st_rdev**中的欄位 **_stat**結構便沒有意義。 因為 STAT.H 使用在 TYPES.H 中定義的 [_dev_t](../../c-runtime-library/standard-types.md) ，所以您必須在程式碼中的 STAT.H 之前包含 TYPES.H。
 

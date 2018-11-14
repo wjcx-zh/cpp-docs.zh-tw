@@ -12,12 +12,12 @@ helpviewer_keywords:
 - __readgsqword intrinsic
 - __readgsbyte intrinsic
 ms.assetid: f822632d-854c-4558-a71b-cdfc3eea2236
-ms.openlocfilehash: b3e5664064f9c32d6c5f5a1e6751712bc36cc7b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1bc6a3b2ef2d78e5b30ea36149ea691468c9b0ec
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668555"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327508"
 ---
 # <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte、__readgsdword、__readgsqword、__readgsword
 
@@ -28,17 +28,17 @@ ms.locfileid: "50668555"
 ## <a name="syntax"></a>語法
 
 ```
-unsigned char __readgsbyte( 
-   unsigned long Offset 
-);
-unsigned short __readgsword( 
-   unsigned long Offset 
-);
-unsigned long __readgsdword( 
+unsigned char __readgsbyte(
    unsigned long Offset
 );
-unsigned __int64 __readgsqword( 
-   unsigned long Offset 
+unsigned short __readgsword(
+   unsigned long Offset
+);
+unsigned long __readgsdword(
+   unsigned long Offset
+);
+unsigned __int64 __readgsqword(
+   unsigned long Offset
 );
 ```
 

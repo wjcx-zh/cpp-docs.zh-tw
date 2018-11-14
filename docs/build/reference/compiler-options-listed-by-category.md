@@ -1,15 +1,15 @@
 ---
 title: 依分類排列的編譯器選項
-ms.date: 08/20/2018
+ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 20dab3e4ec1d0a409d591e2b470e127e20156a8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa93158e518950efa9d1f2f8092aeabbc3c7724c
+ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532947"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598817"
 ---
 # <a name="compiler-options-listed-by-category"></a>依分類排列的編譯器選項
 
@@ -46,7 +46,7 @@ ms.locfileid: "50532947"
 |[/Gh](gh-enable-penter-hook-function.md)|呼叫攔截函式 `_penter`。|
 |[/GH](gh-enable-pexit-hook-function.md)|呼叫攔截函式 `_pexit`。|
 |[/GL](gl-whole-program-optimization.md)|啟用整個程式最佳化。|
-|[/Gm](gm-enable-minimal-rebuild.md)|啟用最少重建。|
+|[/Gm](gm-enable-minimal-rebuild.md)|已取代。 啟用最少重建。|
 |[/GR](gr-enable-run-time-type-information.md)|啟用執行階段類型資訊 (RTTI)。|
 |[/Gr](gd-gr-gv-gz-calling-convention.md)|使用 `__fastcall` 呼叫慣例。 (僅限 x86)|
 |[/GS](gs-buffer-security-check.md)|檢查緩衝區安全性。|
@@ -202,6 +202,7 @@ ms.locfileid: "50532947"
 |[/clr:noAssembly](clr-common-language-runtime-compilation.md)|已取代。 請改用 [/LN (Create MSIL Module)](ln-create-msil-module.md) 。|
 |[/Fr](fr-fr-create-dot-sbr-file.md)|已取代。 建立不包含本機變數的瀏覽資訊檔。|
 |[/Ge](ge-enable-stack-probes.md)|已取代。 啟動堆疊探查。 預設為開啟。|
+|[/Gm](gm-enable-minimal-rebuild.md)|已取代。 啟用最少重建。|
 |[/GX](gx-enable-exception-handling.md)|已取代。 啟用同步例外狀況處理。 改用 [/EH](eh-exception-handling-model.md) 。|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已取代。 啟用快速檢查。 改用 [/RTC1](rtc-run-time-error-checks.md) 。|
 |[/H](h-restrict-length-of-external-names.md)|已取代。 限制外部 (公用) 名稱的長度。|

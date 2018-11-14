@@ -33,12 +33,12 @@ helpviewer_keywords:
 - mktemp function
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
-ms.openlocfilehash: 9dbaba9e4a68523c0d79762c6a7ff54c238e397d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1c5f0ee12c9e07d76405014bb4a6a6ecc7d97e6
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554154"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326260"
 ---
 # <a name="mktemp-wmktemp"></a>_mktemp、_wmktemp
 
@@ -82,7 +82,7 @@ wchar_t *_wmktemp(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp**|**_mktemp**|**_mktemp**|**_wmktemp**|
 
-*NameTemplate*引數的形式*基底 * * XXXXXX*，其中*基底*是您所提供的新檔案名稱的一部分，而每個 X 是所提供的字元預留位置 **_mktemp**。 每個預留位置字元*nameTemplate*必須是大寫 x。 **_mktemp**保留*基底*，並以字母字元取代的第一個後置 X。 **_mktemp**取代的後置 x 的五位數的值，這個值是唯一的數字，識別呼叫處理序中，或在多執行緒程式中，呼叫的執行緒。
+*NameTemplate*引數的形式*基底*XXXXXX，其中*基底*是您所提供的新檔案名稱的一部分，而每個 X 是所提供的字元預留位置 **_mktemp**。 每個預留位置字元*nameTemplate*必須是大寫 x。 **_mktemp**保留*基底*，並以字母字元取代的第一個後置 X。 **_mktemp**取代的後置 x 的五位數的值，這個值是唯一的數字，識別呼叫處理序中，或在多執行緒程式中，呼叫的執行緒。
 
 每次成功呼叫 **_mktemp**修改*nameTemplate*。 在每個後續的呼叫，從相同的程序或執行緒具有相同*nameTemplate*引數 **_mktemp**檢查所傳回的名稱相符的檔案名稱 **_mktemp**中先前的呼叫。 如果檔案不存在指定名稱時，請 **_mktemp**傳回該名稱。 如果檔案存在，所有先前傳回的名稱， **_mktemp**建立的新名稱來取代它使用於下一個可用的小寫字母，順序，從 'a' 到 'z' 先前傳回的名稱的字母字元。 例如，如果*基底*是：
 

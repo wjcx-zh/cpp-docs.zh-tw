@@ -22,16 +22,16 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: fafd1198776c558ff39ef35c0b7beca538e976ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d05af932d5f531a4dab02e7e0ca171f4484891a3
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677691"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556318"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl 類別
 
-提供實作[ICommandText](/previous-versions/windows/desktop/ms714914)介面。
+提供實作[ICommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms714914(v=vs.85))介面。
 
 ## <a name="syntax"></a>語法
 
@@ -76,13 +76,13 @@ class ATL_NO_VTABLE ICommandTextImpl
 ### <a name="syntax"></a>語法
 
 ```cpp
-STDMETHOD(GetCommandText)(GUID * pguidDialect, 
+STDMETHOD(GetCommandText)(GUID * pguidDialect,
    LPOLESTR * ppwszCommand);
 ```
 
 #### <a name="parameters"></a>參數
 
-請參閱[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825)中*OLE DB 程式設計人員參考*。 *PguidDialect*依預設，會忽略參數。
+請參閱[ICommandText::GetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709825(v=vs.85))中*OLE DB 程式設計人員參考*。 *PguidDialect*依預設，會忽略參數。
 
 ## <a name="setcommandtext"></a> Icommandtextimpl:: Setcommandtext
 
@@ -91,13 +91,13 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect, 
 ### <a name="syntax"></a>語法
 
 ```cpp
-STDMETHOD(SetCommandText)(REFGUID rguidDialect, 
+STDMETHOD(SetCommandText)(REFGUID rguidDialect,
    LPCOLESTR pwszCommand);
 ```
 
 #### <a name="parameters"></a>參數
 
-請參閱[icommandtext:: Setcommandtext](/previous-versions/windows/desktop/ms709757)中*OLE DB 程式設計人員參考*。
+請參閱[icommandtext:: Setcommandtext](https://docs.microsoft.com/previous-versions/windows/desktop/ms709757(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ## <a name="strcommandtext"></a> Icommandtextimpl:: M_strcommandtext
 

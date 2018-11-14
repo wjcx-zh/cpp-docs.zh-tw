@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-ms.openlocfilehash: f9ce63aeba4db7c49aee36bc9b847e6832d26f8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c996fdc2756ee489dc3b0abf9321a1d9ce47aded
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638708"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332396"
 ---
 # <a name="integersequence-class"></a>integer_sequence 類別
 
@@ -45,7 +45,7 @@ struct integer_sequence
 |||
 |-|-|
 |`static size_t size() noexcept`|序列中的項目數。|
-|typedef T value_type|序列中每個項目的類型。 必須是整數類型。|
+|`typedef T value_type`|序列中每個項目的類型。 必須是整數類型。|
 
 ## <a name="remarks"></a>備註
 
@@ -57,10 +57,9 @@ struct integer_sequence
 
 在 `a2t` 函式中，根據 `size_t` 整數類資料類型，`index_sequence` 是 `integer_sequence` 的別名。 `make_index_sequence` 是編譯時期的別名，會以呼叫端傳入之陣列相同的項目數，建立以零為起始的 `index_sequence`。 `a2t` 會將 `index_sequence` 以值傳遞至 `a2t_`，其中運算式 `a[I]...` 會解除封裝 `I`，然後項目會饋送至 `make_tuple`，它會使用它們做為個別引數。 例如，如果序列包含三個項目，則 `make_tuple` 稱為 make_tuple (a[0]、a[1]、a[2])。 當然，陣列項目本身可以是任何類型。
 
-apply 函式會接受 [std::tuple](../standard-library/tuple-class.md)，並使用 `tuple_size` 協助程式類別來產生 integer_sequence。 請注意，[std::decay_t](../standard-library/decay-class.md) 是必要的，因為 [tuple_size](../standard-library/tuple-size-class-tuple.md) 不適用於參考類型。 `apply_` 函式會解除封裝 tuple 成員，並且將它們當作個別引數轉送至函式呼叫。 在此範例中，函式是會列印出值的簡單 Lambda 運算式。
+套用函式會接受[std:: tuple](../standard-library/tuple-class.md)，並產生`integer_sequence`使用`tuple_size`協助程式類別。 請注意， [std:: decay_t](../standard-library/decay-class.md)需要因為[tuple_size](../standard-library/tuple-size-class-tuple.md)不適用於參考型別。 `apply_` 函式會解除封裝 tuple 成員，並且將它們當作個別引數轉送至函式呼叫。 在此範例中，函式是會列印出值的簡單 Lambda 運算式。
 
-```
-
+```cpp
 #include <stddef.h>
 #include <iostream>
 #include <tuple>
@@ -114,7 +113,6 @@ int main()
     char c;
     cin >> c;
 }
-
 ```
 
 若要為參數封裝建立 `index_sequence`，請使用 `index_sequence_for`\<T...>，這是 `make_index_sequence`\<sizeof...(T)> 的別名

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: 3df2252e1879fbbcdf6cc950fa8dd637894ba3f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0c734648b084c3f58577cb56984e3ea003a6a8e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664551"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523933"
 ---
 # <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>如何： 設定 Visual c + + 專案，以 64 位元、 x64 平台
 
@@ -43,18 +43,18 @@ ms.locfileid: "50664551"
 
 - 當 [新增方案平台]  對話方塊在您設定專案鎖定 64 位元平台時開啟，請在 [複製設定值來源]  下拉式清單中選取 [Win32] 。 這些專案設定會自動在專案層級上更新：
 
-   - [/MACHINE](../build/reference/machine-specify-target-platform.md) 連結器選項會設為 **/MACHINE:X64**。
+  - [/MACHINE](../build/reference/machine-specify-target-platform.md) 連結器選項會設為 **/MACHINE:X64**。
 
-   - [登錄輸出] 已關閉。 如需詳細資訊，請參閱 [Linker Property Pages](../ide/linker-property-pages.md)。
+  - [登錄輸出] 已關閉。 如需詳細資訊，請參閱 [Linker Property Pages](../ide/linker-property-pages.md)。
 
-   - [目標環境] 設為 **/env x64**。 如需詳細資訊，請參閱 [MIDL Property Pages: General](../ide/midl-property-pages-general.md)。
+  - [目標環境] 設為 **/env x64**。 如需詳細資訊，請參閱 [MIDL Property Pages: General](../ide/midl-property-pages-general.md)。
 
-   - [驗證參數] 已清除並重設為預設值。 如需詳細資訊，請參閱 [MIDL Property Pages: Advanced](../ide/midl-property-pages-advanced.md)。
+  - [驗證參數] 已清除並重設為預設值。 如需詳細資訊，請參閱 [MIDL Property Pages: Advanced](../ide/midl-property-pages-advanced.md)。
 
-   - 如果 [偵錯資訊格式]  在 Win32 專案組態中設為 **/ZI** ，則在 64 位元專案組態中就會設為 **/Zi** 。 如需詳細資訊，請參閱 [/Z7、/Zi、/ZI (偵錯資訊格式)](../build/reference/z7-zi-zi-debug-information-format.md)。
+  - 如果 [偵錯資訊格式]  在 Win32 專案組態中設為 **/ZI** ，則在 64 位元專案組態中就會設為 **/Zi** 。 如需詳細資訊，請參閱 [/Z7、/Zi、/ZI (偵錯資訊格式)](../build/reference/z7-zi-zi-debug-information-format.md)。
 
-   > [!NOTE]
-   > 如果它們在檔案層級上覆寫，這些專案屬性全都不會變更。
+  > [!NOTE]
+  > 如果它們在檔案層級上覆寫，這些專案屬性全都不會變更。
 
 ## <a name="see-also"></a>另請參閱
 

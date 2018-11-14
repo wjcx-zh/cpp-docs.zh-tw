@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 66edab2950a752e00767e10e7b8c36a3a01240ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91d85f62917ff722a61ecbc87c58379a00016b83
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460875"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523152"
 ---
 # <a name="constructors-c"></a>建構函式 (C++)
 
@@ -127,7 +127,6 @@ int main() {
 ```cpp
     // Default constructor
     Box() = delete;
-
 ```
 
 為已刪除無法預設可建構的任何類別成員時，將會定義編譯器產生的預設建構函式。 例如，類別型別的所有成員和其類別類型成員，必須有預設建構函式和解構函式，可存取。 所有資料成員的參考都類型，也一樣**const**成員必須有預設成員初始設定式。

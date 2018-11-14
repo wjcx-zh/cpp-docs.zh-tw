@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: a35188e0194a57ac399610f3130634132addf8f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3ca469058ba65f83b0df60a93c63895e34f916e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644817"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332214"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt; 運算子
 
@@ -115,7 +115,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="remarks"></a>備註
 
-每個函式都會多載 `operator+`，來串連樣板類別 [basic_string 類別](../standard-library/basic-string-class.md)的兩個物件。 所有函式都會有效地傳回 `basic_string`\< **CharType**, **Traits**, **Allocator**>(_ *Left*). [append](../standard-library/basic-string-class.md#append)(\_ *Right*)。
+每個函式都會多載 `operator+`，來串連樣板類別 [basic_string 類別](../standard-library/basic-string-class.md)的兩個物件。 所有有效地傳回`basic_string< CharType, Traits, Allocator>(Left).append(right)`。 如需詳細資訊，請參閱 <<c0> [ 附加](../standard-library/basic-string-class.md#append)。
 
 ### <a name="example"></a>範例
 
@@ -575,7 +575,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="remarks"></a>備註
 
-樣板函式會多載 **operator<<**，以將樣板類別 [basic_string](../standard-library/basic-string-class.md) 的物件 _ *Str* 插入資料流 \_ *Ostr*。 函式會有效地傳回 \_ *Ostr*. **write**( \_ *Str*. [c_str](../standard-library/basic-string-class.md#c_str), \_ *Str*. [size](../standard-library/basic-string-class.md#size))。
+範本函式多載**運算子 <<** 插入物件*str*樣板類別[basic_string](../standard-library/basic-string-class.md)到資料流 *\_Ostr*。 此函式會有效地傳回`_Ostr.write( str.c_str, str.size )`。
 
 ## <a name="op_gt"></a> operator&gt;
 

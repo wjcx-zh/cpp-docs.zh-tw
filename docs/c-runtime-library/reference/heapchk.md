@@ -26,12 +26,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: b34b4ea1bb2512628213cabb55e26e2dad6d445c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bdc0137761664a668d6ef95d739f09501e8290e5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580618"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331395"
 ---
 # <a name="heapchk"></a>_heapchk
 
@@ -49,11 +49,11 @@ int _heapchk( void );
 
 |傳回值|條件|
 |-|-|
-**_HEAPBADBEGIN**|初始標頭資訊不正確或找不到。
-**_HEAPBADNODE**|找到不正確的節點或堆積損壞。
-**_HEAPBADPTR**|無效的堆積指標。
-**_HEAPEMPTY**|堆積尚未初始化。
-**_HEAPOK**|堆積看似一致。
+| **_HEAPBADBEGIN** | 初始標頭資訊不正確或找不到。 |
+| **_HEAPBADNODE** | 找到不正確的節點或堆積損壞。 |
+| **_HEAPBADPTR** | 無效的堆積指標。 |
+| **_HEAPEMPTY** | 堆積尚未初始化。 |
+| **_HEAPOK** | 堆積看似一致。 |
 
 此外，如果發生錯誤時， **_heapchk**設定**errno**來**ENOSYS**。
 

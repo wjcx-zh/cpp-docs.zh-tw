@@ -31,12 +31,12 @@ helpviewer_keywords:
 - wspawnle function
 - _spawnle function
 ms.assetid: 80308892-2815-49b1-8cca-53894c366f5a
-ms.openlocfilehash: 7da0cf4f7232ad7b8b1c5edb1240ee67fdf393e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1caa949fab71a7ebc7731c91871e460869ca9f5b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632280"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329251"
 ---
 # <a name="spawnle-wspawnle"></a>_spawnle、_wspawnle
 
@@ -88,11 +88,11 @@ intptr_t _wspawnle(
 
 |||
 |-|-|
-**E2BIG**|引數清單超過 1024 個位元組。
-**EINVAL**|*模式*引數無效。
-**ENOENT**|找不到檔案或路徑。
-**ENOEXEC**|指定的檔案無法執行或可執行檔格式無效。
-**ENOMEM**|可用記憶體不足，無法執行新處理序。
+| **E2BIG** | 引數清單超過 1024 個位元組。 |
+| **EINVAL** | *模式*引數無效。 |
+| **ENOENT** | 找不到檔案或路徑。 |
+| **ENOEXEC** | 指定的檔案無法執行或可執行檔格式無效。 |
+| **ENOMEM** | 可用記憶體不足，無法執行新處理序。 |
 
 如需有關這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

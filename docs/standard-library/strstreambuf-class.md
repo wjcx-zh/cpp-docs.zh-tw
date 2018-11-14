@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::strstreambuf [C++], str
 - std::strstreambuf [C++], underflow
 ms.assetid: b040b8ea-0669-4eba-8908-6a9cc159c54b
-ms.openlocfilehash: 5a9fa47ab19a5935bf0c7c36dea37b3cfe6180ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75c9a96b727ef60280055536296f850f492d16ac
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512381"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327300"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf 類別
 
@@ -186,11 +186,11 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="return-value"></a>傳回值
 
-如果函式不成功，則會傳回 `EOF`。 否則，如果 _ *Meta* == `EOF`，就會傳回 `EOF` 以外的某個值。 否則，會傳回 \_ *Meta*。
+如果函式不成功，則會傳回 `EOF`。 否則，如果 *\_Meta* == `EOF`，它會傳回某個值以外的其他`EOF`。 否則，它會傳回 *\_Meta*。
 
 ### <a name="remarks"></a>備註
 
-如果 _ *Meta* != `EOF`，受保護的虛擬成員函式就會嘗試將項目 ( `char`)\_ *Meta* 插入輸出緩衝區。 它可以透過下列各種方式來執行：
+如果 *\_Meta* ！ = `EOF`，受保護虛擬成員函式會嘗試將元素`(char)_Meta`插入輸出緩衝區。 它可以透過下列各種方式來執行：
 
 - 如果有寫入位置可供使用，它可以將項目儲存至寫入位置，並遞增輸出緩衝區的下一個指標。
 
@@ -211,13 +211,13 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="return-value"></a>傳回值
 
-如果函式不成功，則會傳回 `EOF`。 否則，如果 _ *Meta* == `EOF`，就會傳回 `EOF` 以外的某個值。 否則，會傳回 \_ *Meta*。
+如果函式不成功，則會傳回 `EOF`。 否則，如果 *\_Meta* == `EOF`，它會傳回某個值以外的其他`EOF`。 否則，它會傳回 *\_Meta*。
 
 ### <a name="remarks"></a>備註
 
-受保護的虛擬成員函式會嘗試將元素放回輸入緩衝區，然後將其設成目前的元素 (由下一個指標指向)。
+此受保護的虛擬成員函式會嘗試將元素放回輸入緩衝區，然後將其設成目前的元素 (由下一個指標指向)。
 
-如果 _ *Meta* == `EOF`，要推回的項目實際上是已經在資料流中目前項目之前的項目。 否則，**ch** = ( `char`)\_ *Meta* 會取代該項目。 函式可透過下列各種方式來放回項目：
+如果 *\_Meta* == `EOF`，要推回的元素實際上是一個已在資料流中目前的項目之前。 否則，會藉由取代該項目`ch = (char)_Meta`。 函式可透過下列各種方式來放回項目：
 
 - 如果有 putback 位置可供使用，而且儲存在該處的項目比較為相等`ch`，則可遞減輸入緩衝區的下一個指標。
 
@@ -289,15 +289,15 @@ virtual streampos seekoff(streamoff _Off,
 
 新位置的判斷方式如下：
 
-- 如果 `_Way` == `ios_base::beg`，新位置是資料流開頭加上 _ *Off*。
+- 如果`_Way == ios_base::beg`，新的位置是加上資料流開頭 *_Off*。
 
-- 如果 `_Way` == `ios_base::cur`，新位置是目前的資料流位置加上 _ *Off*。
+- 如果`_Way == ios_base::cur`，新的位置是目前的資料流位置加上 *_Off*。
 
-- 如果 `_Way` == `ios_base::end`，新位置是資料流結尾加上 _ *Off*。
+- 如果`_Way == ios_base::end`，新的位置是加上資料流末端 *_Off*。
 
-如果 `_Which` & **ios_base::in** 為非零值，且輸入緩衝區存在，函式就會改變輸入緩衝區中下一個要讀取的位置。 如果 `_Which` & **ios_base::out** 也是非零值、`_Way` != **ios_base::cur**，且輸出緩衝區存在，則函式也會設定下一個要寫入的位置，以符合下一個要讀取的位置。
+如果`_Which & ios_base::in`為非零值和輸入的緩衝區存在，函式會改變要讀入輸入緩衝區的下一個位置。 如果`_Which & ios_base::out`也是零， `_Way != ios_base::cur`，且輸出緩衝區存在，函式也會設定下一個位置，以符合要讀取的下一個位置撰寫。
 
-否則，如果 `_Which` & `ios_base::out` 為非零值，且輸入緩衝區存在，函式就會改變輸出緩衝區中下一個要寫入的位置。 否則，置放作業會失敗。 若要讓置放作業能夠成功，產生的資料流位置必須位於受控制的序列內。
+否則，如果`_Which & ios_base::out`為非零值且輸出緩衝區存在，函式會改變要寫入輸出緩衝區的下一個位置。 否則，置放作業會失敗。 若要讓置放作業能夠成功，產生的資料流位置必須位於受控制的序列內。
 
 ## <a name="seekpos"></a>  strstreambuf::seekpos
 
@@ -321,7 +321,7 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="remarks"></a>備註
 
-受保護的虛擬成員函式會致力於改變受控制資料流的目前位置。 針對 strstreambuf 類別的物件，資料流位置完全是由資料流位移所組成。 位移零會指定受控制序列的第一個項目。 新位置是由 _ *Sp* 所來判斷。
+受保護的虛擬成員函式會致力於改變受控制資料流的目前位置。 針對 strstreambuf 類別的物件，資料流位置完全是由資料流位移所組成。 位移零會指定受控制序列的第一個項目。 新的位置取決於 *_Sp*。
 
 如果 `_Which` & **ios_base::in** 為非零值，且輸入緩衝區存在，函式就會改變輸入緩衝區中下一個要讀取的位置。 如果 `_Which` & `ios_base::out` 為非零值，且輸出緩衝區存在，則函式也會設定下一個要寫入的位置，以符合下一個要讀取的位置。 否則，如果 `_Which` & `ios_base::out` 為非零值，且輸入緩衝區存在，函式就會改變輸出緩衝區中下一個要寫入的位置。 否則，置放作業會失敗。 若要讓置放作業能夠成功，產生的資料流位置必須位於受控制的序列內。
 
@@ -398,7 +398,7 @@ strstreambuf(const unsigned char* _Getptr,
 
 第一個建構函式會在控制輸入緩衝區、輸出緩衝區及 strstreambuf 配置的所有指標中儲存一個 null 指標。 它會設定儲存的 strstreambuf 模式，以使受控制的序列成為可修改且可擴充的。 它也會接受*計數*做為建議的初始配置大小。
 
-第二個建構函式的運作方式與第一個類似，但它會儲存 _ *Allocfunc* 做為要呼叫來配置儲存體之函式的指標，以及 \_ *Freefunc* 做為要呼叫來釋放該儲存體之函式的指標。
+第二個建構函式行為類似第一天，但它會儲存 *\_Allocfunc*為要呼叫來配置儲存體之函式指標和 *\_Freefunc*與指標若要呼叫來釋放該儲存體的函式。
 
 這三個建構函式：
 

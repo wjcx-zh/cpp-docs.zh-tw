@@ -9,12 +9,12 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 9e39929b4e669b6d7ed5662484ee71f762b4ea42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e7bbaad949b5f4456ce4c8aea60099792deb786
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618448"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329462"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>資料錄集：資料錄集選取資料錄的方式 (ODBC)
 
@@ -61,9 +61,8 @@ ms.locfileid: "50618448"
 
 - [排序](../../data/odbc/recordset-sorting-records-odbc.md)排序資料錄集，如果任何項目，包含在[m_strSort](../../mfc/reference/crecordset-class.md#m_strsort)資料成員。 架構會使用此字串來建構 SQL **ORDER BY**子句。
 
-
-    > [!TIP]
-    >  若要使用 SQL **GROUP BY**子句 (而且可能**HAVING**子句)，將子句附加至您的篩選字串的結尾。
+   > [!TIP]
+   > 若要使用 SQL **GROUP BY**子句 (而且可能**HAVING**子句)，將子句附加至您的篩選字串的結尾。
 
 - 值的任何[參數的資料成員](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)您指定的類別。 只在您呼叫之前，設定參數值`Open`或`Requery`。 架構會繫結的參數值"？"中的 SQL 字串的預留位置。 在編譯時期，您可以指定字串預留位置。 在執行階段，架構會填滿，根據您傳遞的參數值的詳細資料。
 

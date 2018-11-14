@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: dbae9ef71927fd5b781488258bf801cf19f4fb90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450670"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518862"
 ---
 # <a name="allocator-class"></a>allocator 類別
 
@@ -63,7 +63,7 @@ class allocator
 
 例如，配置器物件可在私密堆積或共用記憶體中配置儲存體，或是可針對小型或大型物件最佳化。 它也能指定透過其提供的類型定義，透過管理共用記憶體的特殊存取子物件來存取項目，或是執行自動化記憶體回收。 因此，使用配置器物件來配置儲存區的類別，應該使用這些類型來宣告指標和參考物件，如 C++ 標準程式庫中的容器所做的一般。
 
-**(僅限 C_++98/03)** 從 allocator 類別衍生時，您必須提供 [rebind](#rebind) 結構，其 `_Other` typedef 會參考您最近衍生的類別。
+<strong>(C + + 98/03 只)</strong>當您從 allocator 類別衍生時，您必須提供[重新繫結](#rebind)結構，其`_Other`typedef 會參考您最近衍生的類別。
 
 因此，配置器會定義下列類型：
 

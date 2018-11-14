@@ -6,12 +6,12 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-ms.openlocfilehash: 78fce31b3044cb1b80dc6a129d1a0182094c158a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6230cc161d7b7fc011d4f3082cc7b9452e136280
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677379"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332435"
 ---
 # <a name="postfix-expressions"></a>後置運算式
 
@@ -31,7 +31,7 @@ ms.locfileid: "50677379"
 下列語法描述可能的後置陳述式：
 
 ```
-primary-expression 
+primary-expression
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )
 ```
 

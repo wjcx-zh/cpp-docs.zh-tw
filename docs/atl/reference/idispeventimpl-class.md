@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
-ms.openlocfilehash: a07cf577ec6be2c6d2d895a85f49f44318596ded
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75946005acc22874b17ee806cd89ec99095f9c35
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497452"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524296"
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl 類別
 
@@ -151,7 +151,7 @@ HRESULT GetFuncInfoFromId(
 
 ##  <a name="getidsofnames"></a>  IDispEventImpl::GetIDsOfNames
 
-將單一成員和一組選擇性的引數名稱對應至一組對應的整數 Dispid，可用來在後續呼叫[idispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)。
+將單一成員和一組選擇性的引數名稱對應至一組對應的整數 Dispid，可用來在後續呼叫[idispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)。
 
 ```
 STDMETHOD(GetIDsOfNames)(
@@ -164,7 +164,7 @@ STDMETHOD(GetIDsOfNames)(
 
 ### <a name="remarks"></a>備註
 
-請參閱[IDispatch::GetIDsOfNames](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) Windows SDK 中。
+請參閱[IDispatch::GetIDsOfNames](/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) Windows SDK 中。
 
 ##  <a name="gettypeinfo"></a>  IDispEventImpl::GetTypeInfo
 
@@ -189,7 +189,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 
 ### <a name="remarks"></a>備註
 
-請參閱[IDispatch::GetTypeInfoCount](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) Windows SDK 中。
+請參閱[IDispatch::GetTypeInfoCount](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) Windows SDK 中。
 
 ##  <a name="getuserdefinedtype"></a>  IDispEventImpl::GetUserDefinedType
 
@@ -204,7 +204,7 @@ VARTYPE GetUserDefinedType(
 ### <a name="parameters"></a>參數
 
 *PTI*<br/>
-[in]指標[ITypeInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)包含使用者定義類型的介面。
+[in]指標[ITypeInfo](/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)包含使用者定義類型的介面。
 
 *hrt*<br/>
 [in]要擷取之型別描述的控制代碼。
@@ -215,7 +215,7 @@ Variant 類型。
 
 ### <a name="remarks"></a>備註
 
-請參閱[ITypeInfo::GetRefTypeInfo](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-itypeinfo-getreftypeinfo)。
+請參閱[ITypeInfo::GetRefTypeInfo](/windows/desktop/api/oaidl/nf-oaidl-itypeinfo-getreftypeinfo)。
 
 ##  <a name="idispeventimpl"></a>  IDispEventImpl::IDispEventImpl
 

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-ms.openlocfilehash: b2a5cfc08da7812e32ad84940ab4c78288017720
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4336c6cc478a035fcc0b9b059a7161d58bc4442
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445769"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328093"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -75,9 +75,9 @@ int setvbuf(
 
 |*模式*值|意義|
 |-|-|
-**_IOFBF**|完整緩衝處理;亦即*緩衝區*做為緩衝區並*大小*用作緩衝區的大小。 如果*緩衝區*是**NULL**，會自動配置的緩衝區*大小*使用位元組那麼長。
-**_IOLBF**|對於某些系統，這提供行緩衝處理。 不過，對於 Win32，行為是相同 **_IOFBF** -完整緩衝處理。
-**_IONBF**|沒有緩衝區可使用，而不論*緩衝區*或是*大小*。
+| **_IOFBF** | 完整緩衝處理;亦即*緩衝區*做為緩衝區並*大小*用作緩衝區的大小。 如果*緩衝區*是**NULL**，會自動配置的緩衝區*大小*使用位元組那麼長。 |
+| **_IOLBF** | 對於某些系統，這提供行緩衝處理。 不過，對於 Win32，行為是相同 **_IOFBF** -完整緩衝處理。 |
+| **_IONBF** | 沒有緩衝區可使用，而不論*緩衝區*或是*大小*。 |
 
 ## <a name="requirements"></a>需求
 

@@ -1,6 +1,6 @@
 ---
 title: /hotpatch (建立可線上修補的影像)
-ms.date: 11/04/2016
+ms.date: 11/12/2018
 f1_keywords:
 - /hotpatch
 - VC.Project.VCCLCompilerTool.CreateHotpatchableImage
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /hotpatch compiler option [C++]
 - hotpatching
 ms.assetid: aad539b6-c053-4c78-8682-853d98327798
-ms.openlocfilehash: b304edffc024fac084338789134269745111ba00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c3431067f04ff36c63143f7d0e7483efa5376ba
+ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581437"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598791"
 ---
 # <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch (建立可線上修補的影像)
 
@@ -48,10 +48,6 @@ ms.locfileid: "50581437"
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
 - 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。
-
-## <a name="guidance"></a>指引
-
-更新管理的詳細資訊，請參閱 「 安全性指導方針的更新管理 」，網址[ http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx ](http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-ms.openlocfilehash: 19a312bcc3cdeea82bcebce6da95e26ef88992b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d0320b45cb8cd99f1d9f6494b7dcb17bc545a81
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541683"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326091"
 ---
 # <a name="lseek-lseeki64"></a>_lseek、_lseeki64
 
@@ -78,9 +78,9 @@ __int64 _lseeki64(
 
 |*原始*值||
 |-|-|
-**SEEK_SET**|檔案開頭。
-**SEEK_CUR**|檔案指標的目前位置。
-**SEEK_END**|檔案結尾。
+| **SEEK_SET** | 檔案開頭。 |
+| **SEEK_CUR** | 檔案指標的目前位置。 |
+| **SEEK_END** | 檔案結尾。 |
 
 您可以使用 **_lseek**將指標重新置放任何位置在檔案或檔案結尾之外。
 

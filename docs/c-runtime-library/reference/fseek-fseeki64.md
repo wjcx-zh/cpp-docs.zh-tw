@@ -28,12 +28,12 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-ms.openlocfilehash: 15ff6e4a70069845369acdc3ffd153c48f228201
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5f775eab370f8f4a3b6a5c1d7f0918ec7efa3ff
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447532"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331083"
 ---
 # <a name="fseek-fseeki64"></a>fseek、_fseeki64
 
@@ -75,9 +75,9 @@ int _fseeki64(
 
 |原始值|意義|
 |-|-|
-**SEEK_CUR**|檔案指標的目前位置。
-**SEEK_END**|檔案結尾。
-**SEEK_SET**|檔案開頭。
+| **SEEK_CUR** | 檔案指標的目前位置。 |
+| **SEEK_END** | 檔案結尾。 |
+| **SEEK_SET** | 檔案開頭。 |
 
 您可以使用**fseek**並 **_fseeki64**將指標重新置放任何位置在檔案中。 指標也可以放置在超過檔案結尾的位置。 **fseek**並 **_fseeki64**清除檔案結尾指標，並取消任何之前的效果[ungetc](ungetc-ungetwc.md)對呼叫*串流*。
 

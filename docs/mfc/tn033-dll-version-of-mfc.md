@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLL version of MFC [MFC]
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
-ms.openlocfilehash: 89a9fddd6f12f92d18bcd6fc75f117beb14746f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17ffc8b46060e742449c9612424b1cd06dd8a9d3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571817"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523958"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033：MFC 的 DLL 版本
 
@@ -174,7 +174,6 @@ protected: \
     public: \
     static AFX_DATA CRuntimeClass class##class_name; \
     virtual CRuntimeClass* GetRuntimeClass() const; \
-
 ```
 
 開頭的 「 靜態`AFX_DATA`」 宣告在您的類別內的靜態物件。 若要正確匯出這個類別，並從用戶端存取的執行階段資訊。EXE，您需要匯出這個靜態物件。 因為靜態物件會使用修飾詞宣告`AFX_DATA`，您只需要定義`AFX_DATA`要`__declspec(dllexport)`建置 DLL 時，它定義為`__declspec(dllimport)`建置您的用戶端可執行檔時。

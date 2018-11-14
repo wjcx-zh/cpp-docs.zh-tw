@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 28b2f929e9f8695904bcd3f02dd2d315ab3ca349
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd8fefd3424ab5ec422adb352972ba846e45139d
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483400"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525492"
 ---
 # <a name="cstringt-class"></a>CStringT 類別
 
@@ -94,13 +94,10 @@ ms.locfileid: "50483400"
 ## <a name="syntax"></a>語法
 
 ```
-
 template<typename BaseType, class StringTraits>
 class CStringT :
-public CSimpleStringT<BaseType,
-                      _CSTRING_IMPL_::_MFCDLLTraitsCheck<BaseType, StringTraits>
-                      ::c_bIsMFCDLLTraits>
-
+    public CSimpleStringT<BaseType,
+        _CSTRING_IMPL_::_MFCDLLTraitsCheck<BaseType, StringTraits>::c_bIsMFCDLLTraits>
 ```
 
 #### <a name="parameters"></a>參數
@@ -117,19 +114,19 @@ public CSimpleStringT<BaseType,
 *StringTraits*<br/>
 判斷字串類別是否需要 C 執行階段 (CRT) 程式庫支援和字串資源位於何處。 可以是下列其中一項：
 
-- **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR、 ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitATL < wchar_t** &#124; **char** &#124; **TCHAR、 ChTraitsCRT < wchar_t** &#124; **char** &#124; **TCHAR >>**
 
    類別需要 CRT 支援並搜尋所指定的模組中的資源字串`m_hInstResource`（應用程式的模組類別的成員）。
 
-- **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR、 ChTraitsOS < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitATL < wchar_t** &#124; **char** &#124; **TCHAR、 ChTraitsOS < wchar_t** &#124; **char** &#124; **TCHAR >>**
 
    類別不需要 CRT 支援及搜尋所指定的模組中的資源字串`m_hInstResource`（應用程式的模組類別的成員）。
 
-- **StrTraitMFC < wchar_t** &#124; `char` &#124; **TCHAR、 ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitMFC < wchar_t** &#124; **char** &#124; **TCHAR、 ChTraitsCRT < wchar_t** &#124; **char** &#124; **TCHAR >>**
 
    類別需要 CRT 支援和搜尋的資源字串使用標準的 MFC 搜尋演算法。
 
-- **StrTraitMFC < wchar_t** &#124; `char` &#124; **TCHAR、 ChTraitsOS < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitMFC < wchar_t** &#124; **char** &#124; **TCHAR、 ChTraitsOS < wchar_t** &#124; **char** &#124; **TCHAR >>**
 
    CRT 支援並使用標準的 MFC 搜尋演算法的資源字串搜尋，不需要的類別。
 
@@ -295,9 +292,9 @@ BSTR AllocSysString() const;
 
 在 MFC 程式中， [CMemoryException 類別](../../mfc/reference/cmemoryexception-class.md)如果存在記憶體不足，就會擲回。 在 ATL 程式中， [CAtlException](../../atl/reference/catlexception-class.md)就會擲回。 此函式通常用於自動化傳回的字串。
 
-通常，如果這個字串會傳遞給 COM 函式做為 [in] 參數，則這需要呼叫者釋放字串。 做法是使用[SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)、 Windows SDK 中所述。 如需詳細資訊，請參閱 < [Allocating 和釋放記憶體的 BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)。
+通常，如果這個字串會傳遞給 COM 函式做為 [in] 參數，則這需要呼叫者釋放字串。 做法是使用[SysFreeString](/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)、 Windows SDK 中所述。 如需詳細資訊，請參閱 < [Allocating 和釋放記憶體的 BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)。
 
-如需有關在 Windows 中的 OLE 配置函式的詳細資訊，請參閱[SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) Windows SDK 中。
+如需有關在 Windows 中的 OLE 配置函式的詳細資訊，請參閱[SysAllocString](/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) Windows SDK 中。
 
 ### <a name="example"></a>範例
 

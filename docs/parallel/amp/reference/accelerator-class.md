@@ -40,12 +40,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-ms.openlocfilehash: 5cf3cbb0cbff10deb029e81945f63921495bd0de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2045d2d1c6a848378ac55114b61177d386b14fab
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522264"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523919"
 ---
 # <a name="accelerator-class"></a>accelerator 類別
 
@@ -282,7 +282,6 @@ static accelerator_view __cdecl get_auto_selection_view();
 
 ```
 size_t get_dedicated_memory() const;
-
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -295,7 +294,6 @@ size_t get_dedicated_memory() const;
 
 ```
 access_type get_default_cpu_access_type() const;
-
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -308,7 +306,6 @@ access_type get_default_cpu_access_type() const;
 
 ```
 accelerator_view get_default_view() const;
-
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -321,7 +318,6 @@ accelerator_view get_default_view() const;
 
 ```
 std::wstring get_description() const;
-
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -334,7 +330,6 @@ std::wstring get_description() const;
 
 ```
 std::wstring get_device_path() const;
-
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -347,7 +342,6 @@ std::wstring get_device_path() const;
 
 ```
 bool get_has_display() const;
-
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -360,7 +354,6 @@ bool get_has_display() const;
 
 ```
 bool get_is_debug() const;
-
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -373,7 +366,6 @@ bool get_is_debug() const;
 
 ```
 bool get_is_emulated() const;
-
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -386,7 +378,6 @@ bool get_is_emulated() const;
 
 ```
 bool get_supports_cpu_shared_memory() const;
-
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -399,7 +390,6 @@ bool get_supports_cpu_shared_memory() const;
 
 ```
 bool get_supports_double_precision() const;
-
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -412,7 +402,6 @@ bool get_supports_double_precision() const;
 
 ```
 bool get_supports_limited_double_precision() const;
-
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -425,7 +414,6 @@ bool get_supports_limited_double_precision() const;
 
 ```
 unsigned int get_version() const;
-
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -462,7 +450,6 @@ __declspec(property(get= get_is_emulated)) bool is_emulated;
 
 ```
 bool operator!= (const accelerator& _Other) const;
-
 ```
 
 ### <a name="parameters"></a>參數
@@ -497,7 +484,6 @@ accelerator& operator= (const accelerator& _Other);
 
 ```
 bool operator== (const accelerator& _Other) const;
-
 ```
 
 ### <a name="parameters"></a>參數
@@ -636,7 +622,6 @@ void flush();
 
 ```
 accelerator get_accelerator() const;
-
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -649,7 +634,6 @@ accelerator get_accelerator() const;
 
 ```
 bool get_is_auto_selection() const;
-
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -662,7 +646,6 @@ bool get_is_auto_selection() const;
 
 ```
 bool get_is_debug() const;
-
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -675,7 +658,6 @@ bool get_is_debug() const;
 
 ```
 queuing_mode get_queuing_mode() const;
-
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -688,7 +670,6 @@ queuing_mode get_queuing_mode() const;
 
 ```
 unsigned int get_version() const;
-
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -717,7 +698,6 @@ __declspec(property(get= get_is_debug)) bool is_debug;
 
 ```
 bool operator!= (const accelerator_view& _Other) const;
-
 ```
 
 ### <a name="parameters"></a>參數
@@ -752,7 +732,6 @@ accelerator_view& operator= (const accelerator_view& _Other);
 
 ```
 bool operator== (const accelerator_view& _Other) const;
-
 ```
 
 ### <a name="parameters"></a>參數

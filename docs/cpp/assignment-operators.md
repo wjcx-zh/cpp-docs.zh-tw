@@ -31,12 +31,12 @@ helpviewer_keywords:
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-ms.openlocfilehash: d435ea051610f9ffa496f41f364ffc1c81694b61
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44211e43a0449c8a50ff03cac31eeed1fcc49a28
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617395"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328470"
 ---
 # <a name="assignment-operators"></a>指派運算子
 
@@ -45,7 +45,7 @@ ms.locfileid: "50617395"
 *運算式**指派運算子**運算式*
 
 *指派運算子*： 其中一個<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>= * = / = %= + =-= \< \<= >> = & = ^ =   \|=</strong>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>=&nbsp;&nbsp;&nbsp;*=&nbsp;&nbsp;&nbsp;/=&nbsp;&nbsp;&nbsp;%=&nbsp;&nbsp;&nbsp;+=&nbsp;&nbsp;&nbsp;-=&nbsp;&nbsp;&nbsp;\<\<=&nbsp;&nbsp;&nbsp;>>=&nbsp;&nbsp;&nbsp;&=&nbsp;&nbsp;&nbsp;^=&nbsp;&nbsp;&nbsp;\|=</strong>
 
 ## <a name="remarks"></a>備註
 

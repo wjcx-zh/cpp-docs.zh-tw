@@ -7,16 +7,16 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: f8c96021b93a35ae9fd10503e78401bbac8abeb7
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
-ms.translationtype: HT
+ms.openlocfilehash: 6046bcb1b99e446974a3b4fae11d0021778bf526
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51264888"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556877"
 ---
 # <a name="supporting-schema-rowsets"></a>支援結構描述資料列集
 
-結構描述資料列集可讓取用者取得的資料存放區的相關資訊，而不需要知道其基礎結構描述。 例如，資料存放區可能不有組織成使用者定義階層，所以會有任何方式可以確保在閱讀本文的知道除了結構描述的資料表。 （另舉一例，Visual c + + 精靈使用結構描述資料列集來產生取用者的存取子）。若要讓取用者若要這樣做，提供者的工作階段物件會公開方法上[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686)介面。 在 Visual c + + 應用程式，您可以使用[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)類別來實作`IDBSchemaRowset`。
+結構描述資料列集可讓取用者取得的資料存放區的相關資訊，而不需要知道其基礎結構描述。 例如，資料存放區可能不有組織成使用者定義階層，所以會有任何方式可以確保在閱讀本文的知道除了結構描述的資料表。 （另舉一例，Visual c + + 精靈使用結構描述資料列集來產生取用者的存取子）。若要讓取用者若要這樣做，提供者的工作階段物件會公開方法上[IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))介面。 在 Visual c + + 應用程式，您可以使用[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)類別來實作`IDBSchemaRowset`。
 
 `IDBSchemaRowsetImpl` 支援下列方法：
 
@@ -86,7 +86,7 @@ class CUpdateSessionTRSchemaRowset :
 
 `CUpdateSession` 繼承自`IDBSchemaRowsetImpl`，所以它沒有處理常式方法的所有限制。 使用`CSchemaRowsetImpl`，宣告三個 （列於上述的結構描述對應） 的子類別： `CUpdateSessionTRSchemaRowset`， `CUpdateSessionColSchemaRowset`，和`CUpdateSessionPTSchemaRowset`。 這些子類別的每個都有`Execute`處理個別組的限制 （搜尋條件） 的方法。 每個`Execute`方法會比較的值*cRestrictions*並*rgRestrictions*參數。 請參閱中的這些參數的說明[SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md)。
 
-如需哪些限制對應至特定結構描述資料列集的詳細資訊，請參閱結構描述資料列集 Guid 的資料表中[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686)中**OLE DB 程式設計人員參考**Windows SDK 中.
+如需哪些限制對應至特定結構描述資料列集的詳細資訊，請參閱結構描述資料列集 Guid 的資料表中[IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))中**OLE DB 程式設計人員參考**Windows SDK 中.
 
 例如，如果您支援 DBSCHEMA_TABLES TABLE_NAME 限制，您會執行下列項目：
 

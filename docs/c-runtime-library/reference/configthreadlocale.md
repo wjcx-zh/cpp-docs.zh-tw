@@ -26,12 +26,12 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-ms.openlocfilehash: 244ef9ce93e39bef23a9d5d6792a10ca25355f5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99e10a0330ba4880ea181e9fe3d56f3fb6bd6493
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648379"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326039"
 ---
 # <a name="configthreadlocale"></a>_configthreadlocale
 
@@ -56,11 +56,11 @@ int _configthreadlocale( int per_thread_locale_type );
 
 **_Configurethreadlocale**函數用來控制使用的執行緒特定地區設定。 使用其中一種*per_thread_locale_type*選項來指定或判斷個別執行緒地區設定狀態：
 
-|||
+| 選項 | 描述 |
 |-|-|
-**_ENABLE_PER_THREAD_LOCALE**|讓目前執行緒使用執行緒特定地區設定。 後續呼叫**setlocale**此執行緒中會影響執行緒自己的地區設定。
-**_DISABLE_PER_THREAD_LOCALE**|讓目前執行緒使用全域地區設定。 後續呼叫**setlocale**此執行緒中會影響其他執行緒使用全域地區設定。
-**0**|擷取這個特定執行緒的目前設定。
+| **_ENABLE_PER_THREAD_LOCALE** | 讓目前執行緒使用執行緒特定地區設定。 後續呼叫**setlocale**此執行緒中會影響執行緒自己的地區設定。 |
+| **_DISABLE_PER_THREAD_LOCALE** | 讓目前執行緒使用全域地區設定。 後續呼叫**setlocale**此執行緒中會影響其他執行緒使用全域地區設定。 |
+| **0** | 擷取這個特定執行緒的目前設定。 |
 
 這些函式會影響行為**setlocale**， **_tsetlocale**， **_wsetlocale**，以及 **_setmbcp**。 每個執行緒的地區設定時已停用，任何後續呼叫**setlocale**或是 **_wsetlocale**變更使用全域地區設定的所有執行緒的地區設定。 啟用個別執行緒地區設定時， **setlocale**或是 **_wsetlocale**只會影響目前的執行緒地區設定。
 

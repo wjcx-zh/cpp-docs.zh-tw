@@ -8,12 +8,12 @@ f1_keywords:
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-ms.openlocfilehash: 7fd81a1ccf6702c74a013c5772d59f01121b61a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0da45fa18d12b3f1c93df6b8c8736ed1bfb58ade
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479218"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524991"
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr 結構
 
@@ -58,7 +58,7 @@ struct scheduler_ptr;
 
 ##  <a name="get"></a>  scheduler_ptr:: get 方法
 
-傳回排程器的原始指標
+傳回排程器的原始指標。
 
 ```
 scheduler_interface* get() const;
@@ -68,39 +68,39 @@ scheduler_interface* get() const;
 
 ##  <a name="operator_bool"></a>  scheduler_ptr:: operator bool
 
-測試排程器指標是否為非 null
-
-'' 運算子 bool （) const;
-```
-
-##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;
-
-Behave like a pointer
+測試排程器指標是否為非 null。
 
 ```
-scheduler_interface * operator-> const; （)
+operator bool() const;
 ```
 
-### Return Value
+##  <a name="operator_ptr"></a>  scheduler_ptr:: operator-&gt;
 
-##  <a name="ctor"></a>  scheduler_ptr::scheduler_ptr Constructor
-
-Creates a scheduler pointer from shared_ptr to scheduler
+如同指標的行為。
 
 ```
-明確 scheduler_ptr （std:: < scheduler_interface > 排程器）;
-
-明確 scheduler_ptr (_In_opt_ scheduler_interface * pScheduler);
+scheduler_interface* operator->() const;
 ```
 
-### Parameters
+### <a name="return-value"></a>傳回值
+
+##  <a name="ctor"></a>  scheduler_ptr:: scheduler_ptr 建構函式
+
+排程器 shared_ptr 建立排程器指標。
+
+```
+explicit scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);
+explicit scheduler_ptr(_In_opt_ scheduler_interface* pScheduler);
+```
+
+### <a name="parameters"></a>參數
 
 *scheduler*<br/>
-The scheduler to convert.
+要轉換的排程器。
 
 *pScheduler*<br/>
-The scheduler pointer to convert.
+要轉換的排程器指標。
 
-## See Also
+## <a name="see-also"></a>另請參閱
 
-[concurrency Namespace](concurrency-namespace.md)
+[concurrency 命名空間](concurrency-namespace.md)

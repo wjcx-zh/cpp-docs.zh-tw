@@ -94,12 +94,12 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-ms.openlocfilehash: d15e38c63e335dbd574ad2d1c1ee23e0d5a70a30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 581652ea39d0729079666dc675b7214b4b3a4da3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565720"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524673"
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf 類別
 
@@ -457,7 +457,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="remarks"></a>備註
 
-如果 _ *Meta* 與 **traits_type::eof** 比較的結果不相等，此受保護的虛擬成員函式會嘗試將元素 **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) 插入輸出資料流。 它可以透過下列各種方式來執行：
+如果 *\_Meta*不會比較等於**traits_type:: eof**，受保護虛擬成員函式會致力於將元素**traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_中繼*) 插入輸出資料流。 它可以透過下列各種方式來執行：
 
 - 如果有`write position`可供使用，它可以將元素儲存在寫入位置，並遞增輸出緩衝區的下一個指標。
 
@@ -492,7 +492,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="remarks"></a>備註
 
-如果 _ *Meta* 與 **traits_type::eof** 比較的結果相等，要推回的元素實際上是一個已在資料流中目前元素之前的元素。 否則會以 **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) 取代該元素。 函式可透過下列各種方式來放回項目：
+如果 *\_Meta*比較結果相等**traits_type:: eof**，要推回的元素實際上是一個已在資料流中目前的項目之前。 否則，該項目會取代**traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*)。 函式可透過下列各種方式來放回項目：
 
 - 如果有放回位置可供使用，它可以將元素儲存在放回位置，並遞減輸入緩衝區的下一個指標。
 
@@ -689,15 +689,12 @@ int main( )
 }
 ```
 
-```Output
-
+```Input
 3
-
 ```
 
 ```Output
-
-      33
+33
 51
 ```
 
@@ -967,14 +964,11 @@ int main( )
 }
 ```
 
-```Output
-
+```Input
 aa
-
 ```
 
 ```Output
-
 aa97
 ```
 

@@ -2,12 +2,12 @@
 title: 以範圍為基礎的 for 陳述式 (C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
-ms.openlocfilehash: 965159a3bd4f92bbb1bd044882451a2b98daf6aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1cbdb4e1636f471c26f6742b9e8686a332ed845f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469980"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330927"
 ---
 # <a name="range-based-for-statement-c"></a>以範圍為基礎的 for 陳述式 (C++)
 
@@ -17,7 +17,7 @@ ms.locfileid: "50469980"
 
 ```
 for ( for-range-declaration : expression )
-   statement
+   statement
 ```
 
 ## <a name="remarks"></a>備註

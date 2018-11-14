@@ -42,12 +42,12 @@ helpviewer_keywords:
 - C2895
 - C2899
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-ms.openlocfilehash: 1c1b001e4d55c913cd2b9a50ee2e4bb4d2915523
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c35cd91f836070ff45faa489e1c16c40909f922
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601100"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332071"
 ---
 # <a name="compiler-errors-c2800-through-c2899"></a>編譯器錯誤 C2800 到 C2899
 
@@ -74,7 +74,7 @@ ms.locfileid: "50601100"
 |[編譯器錯誤 C2812](compiler-error-c2812.md)|#import 不支援使用 /clr: pure 和 /clr: safe|
 |[編譯器錯誤 C2813](compiler-error-c2813.md)|使用 /MP 時不支援 #import|
 |[編譯器錯誤 C2814](compiler-error-c2814.md)|'*成員*': 原生類型不能巢狀內管理/WinRT 類型'*類別*'|
-|[編譯器錯誤 C2815](compiler-error-c2815.md)|'operator delete': 第一型式參數必須是 'void *'，但'* 類型 *' 使用|
+|[編譯器錯誤 C2815](compiler-error-c2815.md)|'operator delete': 第一型式參數必須是 'void \*'，但'*型別*' 使用|
 |編譯器錯誤 C2816|已過時。|
 |[編譯器錯誤 C2817](compiler-error-c2817.md)|'operator delete' 的傳回型別必須是 'void'|
 |[編譯器錯誤 C2818](compiler-error-c2818.md)|應用程式的多載 'operator->' 是遞迴透過類型 '*類別*'|
@@ -83,7 +83,7 @@ ms.locfileid: "50601100"
 |[編譯器錯誤 C2821](compiler-error-c2821.md)|'operator new' 的第一個型式參數必須是 'size_t'|
 |編譯器錯誤 C2822|這個平台不支援區域回溯|
 |[編譯器錯誤 C2823](compiler-error-c2823.md)|typedef 範本/泛型是不合法|
-|[編譯器錯誤 C2824](compiler-error-c2824.md)|必須是 'operator new' 的傳回類型 ' void *'|
+|[編譯器錯誤 C2824](compiler-error-c2824.md)|必須是 'operator new' 的傳回類型 ' void \*'|
 |[編譯器錯誤 C2825](compiler-error-c2825.md)|'*識別碼*': 必須是類別或命名空間時，後面接著 ':: '|
 |編譯器錯誤 C2826|已過時。|
 |[編譯器錯誤 C2827](compiler-error-c2827.md)|'運算子*運算子*' 不能使用一元形式全域覆寫|

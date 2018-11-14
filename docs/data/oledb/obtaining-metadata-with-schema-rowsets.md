@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, getting provider metadata
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
-ms.openlocfilehash: cb0f7813a351f272d5417955fb98719d889a64ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9717649c1bd4f956da8bc926e8f492f4eccff74
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561205"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556838"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>使用結構描述資料列集取得中繼資料
 
@@ -52,7 +52,7 @@ CRestrictions<CAccessor<CColumnsInfo>
 
 [CRestrictions](../../data/oledb/crestrictions-class.md)類別提供限制支援。 您建立結構描述資料列集的執行個體之後，請呼叫[crestrictions:: Open](../../data/oledb/crestrictions-open.md)。 這個方法會根據您指定的限制傳回結果集。
 
-若要指定限制，請參閱[附錄 b： 結構描述資料列集](/previous-versions/windows/desktop/ms712921)並尋找您所使用的資料列集。 例如，`CColumns`對應至[COLUMNS 資料列集](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); 該主題列出 COLUMNS 資料列集的限制資料行： table_catalog 排列、 TABLE_SCHEMA、 TABLE_NAME、 COLUMN_NAME。 您必須依照該順序指定您的限制。
+若要指定限制，請參閱[附錄 b： 結構描述資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms712921(v=vs.85))並尋找您所使用的資料列集。 例如，`CColumns`對應至[COLUMNS 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms723052(v=vs.85)\(v%3dvs.85\)); 該主題列出 COLUMNS 資料列集的限制資料行： table_catalog 排列、 TABLE_SCHEMA、 TABLE_NAME、 COLUMN_NAME。 您必須依照該順序指定您的限制。
 
 因此，比方說，如果您想要依資料表名稱限制，TABLE_NAME 是第三個的限制資料行，然後呼叫`Open`，做為第三個限制參數，指定需要的資料表名稱，如下列範例所示。
 
@@ -82,7 +82,7 @@ CRestrictions<CAccessor<CColumnsInfo>
 
 如需結構描述資料列集的參考，typedef 類別提供於 OLE DB 樣板 (請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md))。
 
-如需有關 OLE DB 結構描述資料列集，包括限制資料行，請參閱[附錄 b： 結構描述資料列集](/previous-versions/windows/desktop/ms712921)中**OLE DB 程式設計人員參考**。
+如需有關 OLE DB 結構描述資料列集，包括限制資料行，請參閱[附錄 b： 結構描述資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms712921(v=vs.85))中**OLE DB 程式設計人員參考**。
 
 如需如何使用結構描述資料列集類別的更複雜範例，請參閱[CatDB](https://github.com/Microsoft/VCSamples)並[DBViewer](https://github.com/Microsoft/VCSamples)範例。
 

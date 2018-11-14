@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-ms.openlocfilehash: 587168323b8af63d232b8df63e9dcac2f4601433
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0c8e0c1f4dc2e1082d5df230c74efafcae24f29
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620944"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327118"
 ---
 # <a name="autoptr-class"></a>auto_ptr 類別
 
@@ -282,11 +282,11 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 ### <a name="return-value"></a>傳回值
 
-`auto_ptr`\< **Type**> 類型之物件的參考。
+類型為 `auto_ptr<Type>` 之物件的參考。
 
 ### <a name="remarks"></a>備註
 
-指派才會評估運算式`delete myptr`，但只有當已儲存的指標`myptr`因指派而變更。 它接著會儲存 \_*Right*，以轉移 _*Right* 中所儲存指標的擁有權。 [釋放](#release)在`myptr`。 此函式會傳回 **\*this**。
+指派才會評估運算式`delete myptr`，但只有當已儲存的指標`myptr`因指派而變更。 它接著會傳送儲存在指標的擁有權*右*，藉由儲存*右*。[釋放](#release)在`myptr`。 此函式會傳回 __\*this__。
 
 ### <a name="example"></a>範例
 

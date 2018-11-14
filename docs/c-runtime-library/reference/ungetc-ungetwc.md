@@ -28,12 +28,12 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-ms.openlocfilehash: 95d2160ba4d008ab67f443d4e9dda7180d62b590
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c504540f8fbbe14961fa051bb93ebef350c2c1da
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633576"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332383"
 ---
 # <a name="ungetc-ungetwc"></a>ungetc、ungetwc
 
@@ -62,7 +62,7 @@ wint_t ungetwc(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，所有這些函式都會傳回字元引數*c*。 如果*c*無法回推或如果已經讀取的字元，輸入資料流不變並**ungetc**傳回 * * EOF`; **ungetwc`傳回**WEOF**。 如果*資料流*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**EOF**或**WEOF**會傳回並**errno**設定為**EINVAL**。
+如果成功，所有這些函式都會傳回字元引數*c*。 如果*c*無法回推或如果已經讀取的字元，輸入資料流不變並**ungetc**會傳回**EOF**;**ungetwc**會傳回**WEOF**。 如果*資料流*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**EOF**或**WEOF**會傳回並**errno**設定為**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

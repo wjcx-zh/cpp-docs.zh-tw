@@ -9,18 +9,18 @@ helpviewer_keywords:
 - dynasets
 - ODBC drivers, dynasets
 ms.assetid: 585cc67b-4d92-404b-9903-d769cd17badc
-ms.openlocfilehash: 3ba333b8c5c90a4b9bb1aca94f57e5fc92aa2b47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a92b8a7a7236a51c3506c4d46dad31a03b2f10d3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647053"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521579"
 ---
 # <a name="odbc-driver-requirements-for-dynasets"></a>動態集的 ODBC 驅動程式需求
 
 在 MFC ODBC 資料庫類別中，動態集是資料錄集動態屬性;它們都能保持同步的資料來源，在某些方面。 MFC 動態集 （但不是順向資料錄集） 需要使用一致性層級 2 API 的 ODBC 驅動程式。 如果驅動程式為您[資料來源](../../data/odbc/data-source-odbc.md)符合層級 1 API 設定，您仍然可以使用可更新和唯讀快照集和順向資料錄集，但不是動態集。 不過，層級 1 的驅動程式可支援動態集，如果它支援擴充的擷取與索引鍵集驅動資料指標。
 
-在 ODBC 術語中，動態集和快照集被指資料指標。 資料指標是一種機制，用於追蹤的資料錄集中的位置。 如需有關動態集的驅動程式需求的詳細資訊，請參閱[動態集](../../data/odbc/dynaset.md)。 如需有關資料指標的詳細資訊，請參閱 <<c0> [ 開放式資料庫連接 (ODBC)](/previous-versions/windows/desktop/ms710252) MSDN 文件中的 SDK。
+在 ODBC 術語中，動態集和快照集被指資料指標。 資料指標是一種機制，用於追蹤的資料錄集中的位置。 如需有關動態集的驅動程式需求的詳細資訊，請參閱[動態集](../../data/odbc/dynaset.md)。 如需有關資料指標的詳細資訊，請參閱 <<c0> [ 開放式資料庫連接 (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) MSDN 文件中的 SDK。
 
 > [!NOTE]
 >  可更新的資料錄集，您的 ODBC 驅動程式必須支援任一定位的 update 陳述式或`::SQLSetPos`ODBC API 函式。 如果兩者都有支援，MFC 會使用`::SQLSetPos`為了提高效率。 或者，對於快照集，您可以使用資料指標程式庫，可提供所需的支援可更新的快照集 （靜態資料指標和定位的 update 陳述式）。

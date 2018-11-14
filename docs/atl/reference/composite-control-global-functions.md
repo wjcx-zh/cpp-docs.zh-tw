@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: d86978c6bf8aba87828cdda91c3e849a2f755a90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6438b9d125cc2b44c6c4525dcfa5a2bd95763304
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525264"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524426"
 ---
 # <a name="composite-control-global-functions"></a>複合控制項全域函式
 
@@ -95,7 +95,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-如需有關如何編輯資源指令碼的詳細資訊，請參閱 <<c0> [ 如何： 以文字格式開啟資源指令碼檔](../../windows/how-to-open-a-resource-script-file-in-text-format.md)。 如需有關控制資源定義陳述式的詳細資訊，請參閱[常見的控制參數](/windows/desktop/menurc/common-control-parameters)下方 Windows SDK *: SDK Tools*。
+如需有關如何編輯資源指令碼的詳細資訊，請參閱 <<c0> [ 如何： 以文字格式開啟資源指令碼檔](../../windows/how-to-open-a-resource-script-file-in-text-format.md)。 如需有關控制資源定義陳述式的詳細資訊，請參閱[常見的控制參數](/windows/desktop/menurc/common-control-parameters)下 Windows SDK: SDK Tools。
 
 如需有關一般對話方塊的詳細資訊，請參閱[對話方塊中](/windows/desktop/api/winuser/nf-winuser-dialogboxa)並[CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) Windows SDK 中。
 
@@ -160,7 +160,7 @@ ATLAPI AtlAxCreateControl(
 
 - 例如"{8E27C92B-1264-101C-8A2F-040224009C02}"的 CLSID
 
-- URL，例如 " http://www.microsoft.com "
+- URL，例如 " <http://www.microsoft.com> "
 
 - 這類的主動式文件的參考 「 file://\\\Documents\MyDoc.doc"
 
@@ -212,7 +212,7 @@ ATLAPI AtlAxCreateControlEx(
 
 - 例如"{8E27C92B-1264-101C-8A2F-040224009C02}"的 CLSID
 
-- URL，例如 " http://www.microsoft.com "
+- URL，例如 " <http://www.microsoft.com> "
 
 - 這類的主動式文件的參考 「 file://\\\Documents\MyDoc.doc"
 
@@ -271,7 +271,7 @@ ATLAPI AtlAxCreateControlLic(
 
 - 例如"{8E27C92B-1264-101C-8A2F-040224009C02}"的 CLSID
 
-- URL，例如 " http://www.microsoft.com "
+- URL，例如 " <http://www.microsoft.com> "
 
 - 這類的主動式文件的參考 「 file://\\\Documents\MyDoc.doc"
 
@@ -325,7 +325,7 @@ ATLAPI AtlAxCreateControlLicEx(
 
 - 例如"{8E27C92B-1264-101C-8A2F-040224009C02}"的 CLSID
 
-- URL，例如 " http://www.microsoft.com "
+- URL，例如 " <http://www.microsoft.com> "
 
 - 這類的主動式文件的參考 「 file://\\\Documents\MyDoc.doc"
 

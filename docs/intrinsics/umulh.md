@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __umulh intrinsic
 ms.assetid: d241b53a-e6f7-4af1-9f6e-84e149158f03
-ms.openlocfilehash: b116de7cd91d26463858fb03e5f319e2a2da1cde
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a0d427f32e275725177b10f01565e6947760f09
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524796"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328531"
 ---
 # <a name="umulh"></a>__umulh
 
@@ -22,9 +22,9 @@ ms.locfileid: "50524796"
 ## <a name="syntax"></a>語法
 
 ```
-unsigned __int64 __umulh( 
-   unsigned __int64 a, 
-   unsigned __int64 b 
+unsigned __int64 __umulh(
+   unsigned __int64 a,
+   unsigned __int64 b
 );
 ```
 

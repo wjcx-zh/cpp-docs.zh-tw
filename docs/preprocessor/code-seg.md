@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, code_seg
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
-ms.openlocfilehash: 794280bc3b439a4c833483de51ffad91ebd6fc9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80edcb709073021ccf024aaf14c9a914bd8d8939
+ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655945"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51597699"
 ---
 # <a name="codeseg"></a>code_seg
 指定文字區段，其中函式儲存在 .obj 檔案中。
@@ -24,7 +24,7 @@ ms.locfileid: "50655945"
 #pragma code_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )
 ```
 
-### <a name="paramters"></a>參數
+### <a name="parameters"></a>參數
 
 **push**<br/>
 （選擇性）將記錄放入內部編譯器堆疊上。 A**推播**可以有*識別項*並*區段名稱*。

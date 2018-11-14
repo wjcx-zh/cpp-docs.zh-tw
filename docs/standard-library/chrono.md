@@ -10,12 +10,12 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: 904e4df6b6c16b846ab4417d24a1d9836380d75b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1fcf87d84b2c99b89217b7f2e0fc7fecd55fff02
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544543"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331473"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -84,7 +84,7 @@ ms.locfileid: "50544543"
 
 ### <a name="literals"></a>常值
 
-**(C++11)** \<chrono> 標頭會定義下列[使用者定義的常值](../cpp/user-defined-literals-cpp.md)供您使用，讓您的程式碼更具方便性、類型安全和可維護性。 這些常值定義於 `literals::chrono_literals` 內嵌命名空間中， 而當 std::chrono 在範圍內時，這些常值也會在範圍內。
+**(C + + 11)** \<Chrono > 標頭會定義下列[使用者定義常值](../cpp/user-defined-literals-cpp.md)，您可以使用更方便、 型別安全和可維護性程式碼。 這些常值定義於 `literals::chrono_literals` 內嵌命名空間中， 而當 std::chrono 在範圍內時，這些常值也會在範圍內。
 
 |Literal|描述|
 |-------------|-----------------|

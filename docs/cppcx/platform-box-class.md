@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Box
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-ms.openlocfilehash: 387fa03caebed599d51292dd1b6d18ad4afd921c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29cbe852dcd606ea5cf2953c709fc8e47b89e1f1
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429064"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327027"
 ---
 # <a name="platformbox-class"></a>Platform::Box 類別
 
@@ -21,24 +21,29 @@ ms.locfileid: "50429064"
 ```cpp
 ref class Box abstract;
 ```
-  ### <a name="remarks"></a>備註
 
 ### <a name="requirements"></a>需求
 
 **標頭：** vccorlib.h
 
 **命名空間：** Platform
+
+### <a name="members"></a>成員
+
 |成員|描述|
 |------------|-----------------|
-|[Box](#ctor)|建立可封裝指定類型之值的 `Box`。|
-|[運算子方塊&lt;const T&gt;^](#box-const-t)|可以透過 Boxing 處理，從 `const` 實值類別 `T` 或 `enum` 類別 `T` 轉換為 `Box<T>`。|
-|[運算子方塊&lt;const volatile T>&gt;^](#box-const-volatile-t)|可以透過 Boxing 處理，從 `const volatile` 實值類別 `T` 或 `enum` 類型 `T` 轉換為 `Box<T>`。 |
-|[運算子方塊&lt;T&gt;^](#box-t)|可以透過 Boxing 處理，從 `T` 實值類別轉換為 `Box<T>`。|
-|[運算子方塊&lt;volatile T&gt;^](#box-volatile-t)|可以透過 Boxing 處理，從 `volatile` 實值類別 `T` 或 `enum` 類型 `T` 轉換為 `Box<T>`。|
-|[Box:: operator T](#t)|可以透過 Boxing 處理，從 `T` 實值類別或 `enum` 類別 `T` 轉換為 `Box<T>`。|
+|[Box](#ctor) | 建立可封裝指定類型之值的 `Box`。 |
+|[運算子方塊&lt;const T&gt;^](#box-const-t) | 可以透過 Boxing 處理，從 `const` 實值類別 `T` 或 `enum` 類別 `T` 轉換為 `Box<T>`。 |
+|[運算子方塊&lt;const volatile T>&gt;^](#box-const-volatile-t) | 可以透過 Boxing 處理，從 `const volatile` 實值類別 `T` 或 `enum` 類型 `T` 轉換為 `Box<T>`。 |
+|[運算子方塊&lt;T&gt;^](#box-t) | 可以透過 Boxing 處理，從 `T` 實值類別轉換為 `Box<T>`。 |
+|[運算子方塊&lt;volatile T&gt;^](#box-volatile-t) | 可以透過 Boxing 處理，從 `volatile` 實值類別 `T` 或 `enum` 類型 `T` 轉換為 `Box<T>`。 |
+|[Box:: operator T](#t) | 可以透過 Boxing 處理，從 `T` 實值類別或 `enum` 類別 `T` 轉換為 `Box<T>`。 |
+|[Value 屬性](#value) | 傳回 `Box` 物件中封裝的值。 |
+
 ## <a name="ctor"></a> Box:: box 建構函式
 
-會建立`Box`其可封裝指定類型的值。 | |[Value 屬性](#value)|傳回值，會封裝在`Box`物件。 |
+建立可封裝指定類型之值的 `Box`。
+
 ### <a name="syntax"></a>語法
 
 ```cpp

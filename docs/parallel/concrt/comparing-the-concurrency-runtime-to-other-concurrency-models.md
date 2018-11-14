@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 0b5c24761f176d9c256c1ef6aee85b25231cea2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82e1dca1345b909919320b911c4c107e965c9850
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655841"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332669"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>比較並行執行階段和其他並行模型
 
@@ -33,7 +33,7 @@ ms.locfileid: "50655841"
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>先佔式與合作式排程
 
-*「先佔式排程」* (preemptive scheduling) 是具有優先順序的循環配置資源機制，可在指定的期間內將運算資源的獨佔存取權指定給每項工作，然後再切換到另一項工作。 先佔式排程是多工作業系統 (例如 Windows) 中的常用方式。「合作式排程」(Cooperative scheduling) 機制可讓每項工作獨佔存取運算資源，直到工作完成或工作讓渡其資源存取權為止。 並行執行階段可使用合作式排程搭配作業系統的先佔式排程器，來達成處理資源的最大使用量。
+*「先佔式排程」* (preemptive scheduling) 是具有優先順序的循環配置資源機制，可在指定的期間內將運算資源的獨佔存取權指定給每項工作，然後再切換到另一項工作。 先佔式排程中很常見的多工作業系統，例如 Windows。 *合作式排程*是一種機制，讓每項工作獨佔存取運算資源，直到工作完成或工作讓渡其資源的存取權。 並行執行階段可使用合作式排程搭配作業系統的先佔式排程器，來達成處理資源的最大使用量。
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>先佔式排程器與合作式排程器之間的差異
 

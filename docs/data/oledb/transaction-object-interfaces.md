@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 - interfaces, list of
 ms.assetid: d2ce99ce-6f7a-4ff9-bc6e-acda3633d5c8
-ms.openlocfilehash: af67edca97cbfd644668ed48b3145cdbc38636a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 177f66222a054c3305418ffcd0acdda5c82ccf43
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564316"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556175"
 ---
 # <a name="transaction-object-interfaces"></a>異動物件介面
 
@@ -25,8 +25,8 @@ ms.locfileid: "50564316"
 |介面|是否為必要項？|實作 OLE DB 範本嗎？|
 |---------------|---------------|--------------------------------------|
 |[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|強制|否|
-|[ITransaction](/previous-versions/windows/desktop/ms723053)|強制|否|
-|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816)|Optional|否|
+|[ITransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms723053(v=vs.85))|強制|否|
+|[ISupportErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms715816(v=vs.85))|Optional|否|
 
 ## <a name="see-also"></a>另請參閱
 

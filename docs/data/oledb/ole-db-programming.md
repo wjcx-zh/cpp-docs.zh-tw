@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data access [C++], OLE DB programming
 - OLE DB [C++], about OLE DB
 ms.assetid: 52a80d66-17a9-43a1-9b90-392ae43cea2b
-ms.openlocfilehash: 8b56378eb93216891f4c0b540d622dbdb412b8cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59bee1c204d2f101d8175ff42c78ca4bbdcaeb4c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576913"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523139"
 ---
 # <a name="ole-db-programming"></a>OLE DB 程式設計
 
@@ -29,7 +29,7 @@ Visual C++ 也支援精靈建立 OLE DB 起始應用程式。
 |使用 OLE DB 提供者範本 (概念性主題)|[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)|
 |OLE DB 範本類別和巨集|[OLE DB 範本參考](../../data/oledb/ole-db-templates.md)（Visual c + +）|
 |OLE DB 取用者屬性|[OLE DB 消費者屬性](../../windows/ole-db-consumer-attributes.md)|
-|OLE DB 介面|[OLE DB 程式設計人員參考](/previous-versions/windows/desktop/ms713643(v%3dvs.85))（在 Windows SDK)|
+|OLE DB 介面|[OLE DB 程式設計人員參考](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming(v%3dvs.85))（在 Windows SDK)|
 |OLE DB 範本範例|[OLE DB 範本範例](https://github.com/Microsoft/VCSamples)|
 |資料存取程式設計概觀 (Visual C++)|[資料存取程式設計](../../data/data-access-programming-mfc-atl.md)|
 |ODBC 概念性主題|[開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|

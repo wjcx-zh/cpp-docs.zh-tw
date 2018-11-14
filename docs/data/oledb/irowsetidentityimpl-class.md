@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IRowsetIdentityImpl class
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-ms.openlocfilehash: 5ce4db130f4e8569b666047ca7a5c2bc4e0e6cb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b70ebdaa44331d9fa545763f0dd19e6320dd652b
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593189"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556214"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl 類別
 
-實作 OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913)介面，可讓資料列識別測試。
+實作 OLE DB [IRowsetIdentity](https://docs.microsoft.com/previous-versions/windows/desktop/ms715913(v=vs.85))介面，可讓資料列識別測試。
 
 ## <a name="syntax"></a>語法
 
@@ -66,7 +66,7 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 
 #### <a name="parameters"></a>參數
 
-請參閱[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629)中*OLE DB 程式設計人員參考*。
+請參閱[IRowsetIdentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ### <a name="remarks"></a>備註
 

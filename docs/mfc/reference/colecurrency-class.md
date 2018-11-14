@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: d831353c72c40ab4f35b64046ab5d5236aa9644a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3b0a369071571fb343d1b5030eebbf7c471bc81
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553487"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519187"
 ---
 # <a name="colecurrency-class"></a>COleCurrency 類別
 
@@ -132,11 +132,11 @@ COleCurrency(
 
 - COleCurrency (`curSrc`) 建構`COleCurrency`從現有的物件`COleCurrency`物件。 新的物件具有相同的狀態與來源物件。
 
-- COleCurrency (`varSrc`) 建構`COleCurrency`物件。 嘗試轉換[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)結構或`COleVariant`為貨幣 (VT_CY) 值的物件。 如果這項轉換成功，已轉換的值會複製到新`COleCurrency`物件。 如果不是，windows 7`COleCurrency`物件設定為零 (0) 和其狀態變更為無效。
+- COleCurrency (`varSrc`) 建構`COleCurrency`物件。 嘗試轉換[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)結構或`COleVariant`為貨幣 (VT_CY) 值的物件。 如果這項轉換成功，已轉換的值會複製到新`COleCurrency`物件。 如果不是，windows 7`COleCurrency`物件設定為零 (0) 和其狀態變更為無效。
 
 - `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency' 物件從指定的數值元件。 如果值的小數部分的絕對值大於 10000，單位會適當調整。 請注意，會將單位與小數部分指定帶正負號的 long 值。
 
-如需詳細資訊，請參閱 <<c0> [ 貨幣](/windows/desktop/api/wtypes/ns-wtypes-tagcy)並[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Windows SDK 中的項目。
+如需詳細資訊，請參閱 <<c0> [ 貨幣](/windows/desktop/api/wtypes/ns-wtypes-tagcy)並[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Windows SDK 中的項目。
 
 ### <a name="example"></a>範例
 
@@ -314,7 +314,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
 
 - **運算子 = (** *varSrc* **)** 如果轉換`VARIANT`值 (或是[COleVariant](../../mfc/reference/colevariant-class.md)物件) 貨幣 ( `VT_CY`) 是成功，已轉換的值會複製到這個`COleCurrency`物件和其狀態設為有效。 如果轉換不成功，值`COleCurrency`物件設定為 0 和其狀態變更為無效。
 
-如需詳細資訊，請參閱 <<c0> [ 貨幣](/windows/desktop/api/wtypes/ns-wtypes-tagcy)並[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Windows SDK 中的項目。
+如需詳細資訊，請參閱 <<c0> [ 貨幣](/windows/desktop/api/wtypes/ns-wtypes-tagcy)並[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Windows SDK 中的項目。
 
 ### <a name="example"></a>範例
 

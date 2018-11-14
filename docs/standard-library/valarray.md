@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: efd3e750abb68ad84eb8894ea6b53fe8e29e0e17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b8118722d7219e3b30e11ad67411595c3dc36ad
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447784"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332630"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -21,12 +21,11 @@ ms.locfileid: "50447784"
 
 ```cpp
 #include <valarray>
-
 ```
 
 ## <a name="remarks"></a>備註
 
-這些範本類別和函式為了改善效能，可允許不尋常的範圍。 具體而言，傳回型別 **valarray\<** T1**>** 的任何函式都可能會傳回某些其他 T2 型別的物件。 在此情況下，接受 **valarray\<** T2**>** 型別一個或多個引數的任何函式，都必須具有接受這些引數任意組合的多載，其中每個都以 T2 類型的引數取代。
+這些範本類別和函式為了改善效能，可允許不尋常的範圍。 具體而言，任何函式會傳回型別`valarray<T1>`可能會傳回某些其他 T2 類型的物件。 在此情況下，任何函式會接受一或多個引數的型別`valarray<T2>`必須具有接受這些引數，每個都取代 T2 類型的引數任意組合的多載。
 
 ### <a name="functions"></a>函式
 

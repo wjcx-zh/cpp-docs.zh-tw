@@ -92,12 +92,12 @@ helpviewer_keywords:
 - tfindnext32i64 function
 - _tfindnexti64 function
 ms.assetid: 75d97188-5add-4698-a46c-4c492378f0f8
-ms.openlocfilehash: 32d21b310d8a7826fd1d95f806d470a1fb7e492e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c7df8649625488a83239a19e4afcecea129f9072
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518504"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329445"
 ---
 # <a name="findnext-findnext32-findnext32i64-findnext64-findnext64i32-findnexti64-wfindnext-wfindnext32-wfindnext32i64-wfindnext64-wfindnext64i32-wfindnexti64"></a>_findnext、_findnext32、_findnext32i64、_findnext64、_findnext64i32、_findnexti64、_wfindnext、_wfindnext32、_wfindnext32i64、_wfindnext64、_wfindnext64i32、_wfindnexti64
 
@@ -170,9 +170,9 @@ int _wfindnext64i32(
 
 |errno 值|條件|
 |-|-|
-**EINVAL**|無效的參數： *fileinfo*已**NULL**。 或者，作業系統傳回未預期的錯誤。
-**ENOENT**|無法再找到相符檔案。
-**ENOMEM**|沒有足夠的記憶體或檔案名稱的長度超過**MAX_PATH**。
+| **EINVAL** | 無效的參數： *fileinfo*已**NULL**。 或者，作業系統傳回未預期的錯誤。 |
+| **ENOENT** | 無法再找到相符檔案。 |
+| **ENOMEM** | 沒有足夠的記憶體或檔案名稱的長度超過**MAX_PATH**。 |
 
 如果傳入無效參數，則這些函式會叫用無效的參數處理常式 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。
 

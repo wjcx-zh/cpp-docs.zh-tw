@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 2f63535210110e699daedd39a0b5a5ac25fc53c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9791f1c59bb393f7de64ffb16ccb95e99928b04c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505894"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525336"
 ---
 # <a name="coledatetime-class"></a>COleDateTime 類別
 
@@ -104,7 +104,7 @@ class COleDateTime
 
 `COleDateTime` 沒有基底類別。
 
-它是其中一個可能的類型，如[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) OLE automation 資料類型。 A`COleDateTime`值會表示為絕對日期和時間值。
+它是其中一個可能的類型，如[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) OLE automation 資料類型。 A`COleDateTime`值會表示為絕對日期和時間值。
 
 `DATE`實作類型為浮點值。 天被測量從 1899 年 12 月 30 日，在午夜。 下表顯示一些日期和其相關聯的值：
 
@@ -828,7 +828,7 @@ COleDateTime& operator=(const UDATE& udate) throw();
 
 - **運算子 = (** `dateSrc` **)** 的值和運算元的狀態複製到這個`COleDateTime`物件。
 
-- **運算子 = (** *varSrc* **)** 如果轉換[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)值 (或[COleVariant](../../mfc/reference/colevariant-class.md)物件) 至日期/時間 (VT_日期） 成功，已轉換的值會複製到這個`COleDateTime`物件和其狀態設為有效。 如果轉換不成功，這個物件的值設為零 (30 年 12 月 1899 午夜) 和其狀態變更為無效。
+- **運算子 = (** *varSrc* **)** 如果轉換[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)值 (或[COleVariant](../../mfc/reference/colevariant-class.md)物件) 至日期/時間 (VT_日期） 成功，已轉換的值會複製到這個`COleDateTime`物件和其狀態設為有效。 如果轉換不成功，這個物件的值設為零 (30 年 12 月 1899 午夜) 和其狀態變更為無效。
 
 - **運算子 = (** `dtSrc` **)** `DATE`值會複製到這個`COleDateTime`物件和其狀態設為有效。
 
@@ -836,11 +836,11 @@ COleDateTime& operator=(const UDATE& udate) throw();
 
 - **運算子 = (** *systimeSrc* **)** [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)值會轉換並複製到這個`COleDateTime`物件。 如果轉換成功，這個物件的狀態設定為有效的;如果不成功，它會設定為無效。
 
-- **運算子 = (** `udate` **)** `UDATE`值會轉換並複製到這個`COleDateTime`物件。 如果轉換成功，這個物件的狀態設定為有效的;如果不成功，它會設定為無效。 A`UDATE`結構代表 「 解壓縮 」 日期。 請參閱函數[VarDateFromUdate](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate)如需詳細資訊。
+- **運算子 = (** `udate` **)** `UDATE`值會轉換並複製到這個`COleDateTime`物件。 如果轉換成功，這個物件的狀態設定為有效的;如果不成功，它會設定為無效。 A`UDATE`結構代表 「 解壓縮 」 日期。 請參閱函數[VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate)如需詳細資訊。
 
 - **運算子 = (** `filetimeSrc` **)** [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)值會轉換並複製到這個`COleDateTime`物件。 如果轉換成功，這個物件的狀態設定為有效的;否則，會設定為無效。 `FILETIME` 使用全球定位時間 (UTC)，因此為 UTC 時間結構中，您的結果會從 UTC 時間轉換為當地時間，而且將會儲存為 variant 的時間。 此行為是與 Visual c + + 6.0 和 Visual c + +.NET 2003 SP2 相同。 請參閱[檔案的時間](/windows/desktop/SysInfo/file-times)Windows sdk for 的詳細資訊。
 
-如需詳細資訊，請參閱 < [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Windows SDK 中的項目。
+如需詳細資訊，請參閱 < [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Windows SDK 中的項目。
 
 如需詳細資訊`time_t`資料類型，請參閱[時間](../../c-runtime-library/reference/time-time32-time64.md)函式中*執行階段程式庫參考*。
 
@@ -1083,7 +1083,7 @@ int SetDateTime(
 |*nMin*|0 - 59|
 |*nSec*|0 - 59|
 
-如果月份天數溢位，則會轉換成正確的下個月和月份日期及/或年份會隨之遞增。 一天的值為零表示上一個月份的最後一天。 行為是相同[SystemTimeToVariantTime](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-systemtimetovarianttime)。
+如果月份天數溢位，則會轉換成正確的下個月和月份日期及/或年份會隨之遞增。 一天的值為零表示上一個月份的最後一天。 行為是相同[SystemTimeToVariantTime](/windows/desktop/api/oleauto/nf-oleauto-systemtimetovarianttime)。
 
 如果參數所指定的日期或時間值不是有效的這個物件的狀態設為無效，此物件的值不會變更。
 

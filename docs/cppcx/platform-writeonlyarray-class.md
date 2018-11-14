@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: 2c4c9fecd8e3c8e638af96bc7d047e03a0f31bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff339bc2b144e22d7177638424dd8e617eecfb3b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651317"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330607"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray 類別
 
@@ -39,8 +39,12 @@ private ref class WriteOnlyArray<T, 1>
 
 |名稱|描述|
 |----------|-----------------|
-
-|[Writeonlyarray:: Begin](#begin)|指向陣列的第一個元素的迭代器。 ||[Writeonlyarray:: Data](#data)|資料緩衝區的指標。 ||[Writeonlyarray:: End](#end)|迭代器，指向一個陣列中最後一個元素。 ||[Writeonlyarray:: Fastpass](#fastpass)|表示陣列是否可以使用 FastPass 機制，也就是由系統所執行的最佳化。 請勿在您的程式碼中使用這 | |[Writeonlyarray:: Length](#length)|傳回陣列中的項目數目。 ||[Writeonlyarray:: Set](#set)|將指定的項目設定為指定的值。 |
+|[Writeonlyarray:: Begin](#begin)|指向陣列中第一個元素的迭代器。|
+|[Writeonlyarray:: Data](#data)|資料緩衝區的指標。|
+|[Writeonlyarray:: End](#end)|指向陣列中最後一個元素後加一的迭代器。|
+|[Writeonlyarray:: Fastpass](#fastpass)|表示陣列是否可以使用 FastPass 機制，這是由系統悄悄執行的最佳化作業。 請勿在您的程式碼中使用此屬性。|
+|[Writeonlyarray:: Length](#length)|傳回陣列中的元素數目。|
+|[Writeonlyarray:: Set](#set)|為指定的元素設定指定的值。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

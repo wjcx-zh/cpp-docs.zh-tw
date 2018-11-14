@@ -57,12 +57,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: f52b5b4313f8c9703a578f7d0d3ed672555f647e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 53e9305dd308e77afbd8d53754614c1cfb559f94
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646097"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557072"
 ---
 # <a name="cdatasource-class"></a>CDataSource 類別
 
@@ -117,7 +117,7 @@ void Close() throw();
 ### <a name="syntax"></a>語法
 
 ```cpp
-HRESULT GetInitializationString(BSTR* pInitializationString, 
+HRESULT GetInitializationString(BSTR* pInitializationString,
    bool bIncludePassword = false) throw();
 ```
 
@@ -144,15 +144,15 @@ HRESULT GetInitializationString(BSTR* pInitializationString, 
 ### <a name="syntax"></a>語法
 
 ```cpp
-HRESULT GetProperties(ULONG ulPropIDSets, 
-   constDBPROPIDSET* pPropIDSet, 
-   ULONG* pulPropertySets, 
+HRESULT GetProperties(ULONG ulPropIDSets,
+   constDBPROPIDSET* pPropIDSet,
+   ULONG* pulPropertySets,
    DBPROPSET** ppPropsets) const throw();
 ```
 
 #### <a name="parameters"></a>參數
 
-請參閱[idbproperties:: Getproperties](/previous-versions/windows/desktop/ms714344)中*OLE DB 程式設計人員參考*Windows SDK 中。
+請參閱[idbproperties:: Getproperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms714344(v=vs.85))中*OLE DB 程式設計人員參考*Windows SDK 中。
 
 ### <a name="return-value"></a>傳回值
 
@@ -169,8 +169,8 @@ HRESULT GetProperties(ULONG ulPropIDSets, 
 ### <a name="syntax"></a>語法
 
 ```cpp
-HRESULT GetProperty(const GUID& guid, 
-   DBPROPID propid, 
+HRESULT GetProperty(const GUID& guid,
+   DBPROPID propid,
    VARIANT* pVariant) const throw();
 ```
 
@@ -228,13 +228,13 @@ HRESULT Open(const CEnumerator& enumerator,
 HRESULT Open(HWND hWnd = GetActiveWindow(),
    DBPROMPTOPTIONS dwPromptOptions = DBPROMPTOPTIONS_WIZARDSHEET) throw();
 
-HRESULT Open(LPCWSTR szProgID, 
-   DBPROPSET* pPropSet = NULL, 
+HRESULT Open(LPCWSTR szProgID,
+   DBPROPSET* pPropSet = NULL,
    ULONG nPropertySets = 1) throw();
 
-HRESULT Open(LPCSTR szProgID, 
-   LPCTSTR pName,LPCTSTR pUserName = NULL, 
-   LPCTSTR pPassword = NULL, 
+HRESULT Open(LPCSTR szProgID,
+   LPCTSTR pName,LPCTSTR pUserName = NULL,
+   LPCTSTR pPassword = NULL,
    long nInitMode = 0) throw();
 ```
 
@@ -244,10 +244,10 @@ HRESULT Open(LPCSTR szProgID, 
 [in]`CLSID`的資料提供者。
 
 *pPropSet*<br/>
-[in]陣列的指標[DBPROPSET](/previous-versions/windows/desktop/ms714367)結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](/previous-versions/windows/desktop/ms713696)中*OLE DB 程式設計人員參考*Windows SDK 中。
+[in]陣列的指標[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85))中*OLE DB 程式設計人員參考*Windows SDK 中。
 
 *nPropertySets*<br/>
-[in]數目[DBPROPSET](/previous-versions/windows/desktop/ms714367)結構傳入*Dbpropset*引數。
+[in]數目[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))結構傳入*Dbpropset*引數。
 
 *pName*<br/>
 [in] 要連接的資料庫名稱。
@@ -259,7 +259,7 @@ HRESULT Open(LPCSTR szProgID, 
 [in] 使用者的密碼。
 
 *nInitMode*<br/>
-[in] 資料庫初始化模式。 請參閱[初始化屬性](/previous-versions/windows/desktop/ms723127)中*OLE DB 程式設計人員參考*Windows SDK，如需有效初始化模式的清單中。 如果*nInitMode*是零、 任何初始化模式會包含用來開啟連接的屬性集。
+[in] 資料庫初始化模式。 請參閱[初始化屬性](https://docs.microsoft.com/previous-versions/windows/desktop/ms723127(v=vs.85))中*OLE DB 程式設計人員參考*Windows SDK，如需有效初始化模式的清單中。 如果*nInitMode*是零、 任何初始化模式會包含用來開啟連接的屬性集。
 
 *szProgID*<br/>
 [in] 程式識別碼。
@@ -304,7 +304,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 *szFileName*<br/>
 [in] 檔案的名稱，通常是資料來源連接 (.UDL) 檔案。
 
-如需詳細資料連結檔案 （.udl 檔案） 的詳細資訊，請參閱[資料連結 API 概觀](/previous-versions/windows/desktop/ms718102)Windows SDK 中。
+如需詳細資料連結檔案 （.udl 檔案） 的詳細資訊，請參閱[資料連結 API 概觀](https://docs.microsoft.com/previous-versions/windows/desktop/ms718102(v=vs.85))Windows SDK 中。
 
 ### <a name="return-value"></a>傳回值
 
@@ -321,7 +321,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 ### <a name="syntax"></a>語法
 
 ```cpp
-HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString, 
+HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString,
    bool fPromptForInfo= false) throw();
 ```
 
@@ -350,8 +350,8 @@ HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString, 
 ### <a name="syntax"></a>語法
 
 ```cpp
-HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ), 
-   DBPROMPTOPTIONS dwPromptOptions = DBPROMPTOPTIONS_NONE, 
+HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
+   DBPROMPTOPTIONS dwPromptOptions = DBPROMPTOPTIONS_NONE,
    LPCOLESTR szInitialDirectory = NULL) throw();
 ```
 
@@ -399,10 +399,10 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 [in] 資料提供者的程式識別碼。
 
 *Dbpropset*<br/>
-[in]陣列的指標[DBPROPSET](/previous-versions/windows/desktop/ms714367)結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](/previous-versions/windows/desktop/ms713696)中*OLE DB 程式設計人員參考*Windows SDK 中。 如果資料來源物件已初始化，屬性必須屬於資料來源屬性群組。 如果相同的屬性中指定了一次以上*Dbpropset*，則會使用哪些值是特定提供者。 如果*ulPropSets*為零，會忽略這個參數。
+[in]陣列的指標[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85))中*OLE DB 程式設計人員參考*Windows SDK 中。 如果資料來源物件已初始化，屬性必須屬於資料來源屬性群組。 如果相同的屬性中指定了一次以上*Dbpropset*，則會使用哪些值是特定提供者。 如果*ulPropSets*為零，會忽略這個參數。
 
 *ulPropSets*<br/>
-[in]數目[DBPROPSET](/previous-versions/windows/desktop/ms714367)結構傳入*Dbpropset*引數。 如果這是零，提供者會忽略*Dbpropset*。
+[in]數目[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))結構傳入*Dbpropset*引數。 如果這是零，提供者會忽略*Dbpropset*。
 
 ### <a name="return-value"></a>傳回值
 

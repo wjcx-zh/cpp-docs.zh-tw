@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: a3acc035a1781bd67cfc3b5561eb6dbdef41de72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b820ea3687fd52947eff48e4814ab4173fd95c7
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586311"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519289"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 類別
 
@@ -318,12 +318,12 @@ CFtpConnection* GetFtpConnection(
 *pstrPassword*<br/>
 以 null 終止的字串，指定要用來登入密碼的指標。 如果兩個*pstrPassword*並*pstrUserName*為 NULL 時，預設匿名密碼是使用者的電子郵件名稱。 如果*pstrPassword*是 NULL （或空字串），但*pstrUserName*不是 NULL，則使用空白密碼。 下表描述的四個可能的設定行為*pstrUserName*並*pstrPassword*:
 
-|*pstrUserName*|*pstrPassword*|傳送至 FTP 伺服器的使用者名稱|傳送至 FTP 伺服器的密碼|
-|--------------------|--------------------|---------------------------------|---------------------------------|
-|NULL 或""|NULL 或""|「 匿名 」|使用者的電子郵件名稱|
-|非 NULL 字串|NULL 或""|*pstrUserName*|" "|
-|NULL|非 NULL 字串|錯誤|錯誤||
-|非 NULL 字串|非 NULL 字串|*pstrUserName*|*pstrPassword*|
+| *pstrUserName*  | *pstrPassword*  | 傳送至 FTP 伺服器的使用者名稱 | 傳送至 FTP 伺服器的密碼 |
+|-----------------|-----------------|-----------------------------|-----------------------------|
+|   NULL 或""   |   NULL 或""   |         「 匿名 」         |      使用者的電子郵件名稱      |
+| 非 NULL 字串 |   NULL 或""   |       *pstrUserName*        |             " "             |
+|      NULL       | 非 NULL 字串 |            ERROR            |            ERROR            |
+| 非 NULL 字串 | 非 NULL 字串 |       *pstrUserName*        |       *pstrPassword*        |
 
 *nPort*<br/>
 識別要使用的伺服器上的 TCP/IP 連接埠的數字。

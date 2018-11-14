@@ -6,16 +6,16 @@ helpviewer_keywords:
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: 69e365c0f0bbee7014b6d754c920bd6241064fdf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36769fa531decaee81c73a4751f5c6ed24008ffc
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495546"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525007"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>逐步解說：使用工作和 XML HTTP 要求連線
 
-此範例示範如何使用[IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)並[IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback)介面，以及將 HTTP GET 和 POST 要求傳送至 web 服務在通用 Windows 平台 (UWP 工作) 應用程式。 將 `IXMLHTTPRequest2` 與工作結合之後，您就可以撰寫程式碼來撰寫其他工作。 例如，您可以使用下載工作做為工作鏈結的一部分。 當工作取消時，下載工作也可以回應。
+此範例示範如何使用[IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)並[IXMLHTTPRequest2Callback](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback)介面，以及將 HTTP GET 和 POST 要求傳送至 web 服務在通用 Windows 平台 (UWP 工作) 應用程式。 將 `IXMLHTTPRequest2` 與工作結合之後，您就可以撰寫程式碼來撰寫其他工作。 例如，您可以使用下載工作做為工作鏈結的一部分。 當工作取消時，下載工作也可以回應。
 
 > [!TIP]
 >  您也可以使用 c + + REST SDK 來執行 HTTP 要求，從 UWP 應用程式使用 c + + 應用程式，或從桌面 c + + 應用程式。 如需詳細資訊，請參閱 < [c + + REST SDK (Codename"Casablanca")](https://github.com/Microsoft/cpprestsdk)。
@@ -69,35 +69,34 @@ ms.locfileid: "50495546"
 
    [!code-xml[concrt-using-ixhr2#A1](../../parallel/concrt/codesnippet/xaml/walkthrough-connecting-using-tasks-and-xml-http-requests_4.xaml)]
 
-1. 在 MainPage.xaml.h 中加入這個 `#include` 指示詞：
+2. 在 MainPage.xaml.h 中加入這個 `#include` 指示詞：
 
    [!code-cpp[concrt-using-ixhr2#A2](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_5.h)]
 
-1. 在 MainPage.xaml.h 中，將這些 `private` 成員變數加入至 `MainPage` 類別：
+3. 在 MainPage.xaml.h 中，將這些 `private` 成員變數加入至 `MainPage` 類別：
 
    [!code-cpp[concrt-using-ixhr2#A3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_6.h)]
 
-1. 在 MainPage.xaml.h 中宣告 `private` 方法 `ProcessHttpRequest`：
+4. 在 MainPage.xaml.h 中宣告 `private` 方法 `ProcessHttpRequest`：
 
    [!code-cpp[concrt-using-ixhr2#A4](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_7.h)]
 
-1. 在 MainPage.xaml.cpp 中加入下列 `using` 陳述式：
+5. 在 MainPage.xaml.cpp 中加入下列 `using` 陳述式：
 
    [!code-cpp[concrt-using-ixhr2#A5](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_8.cpp)]
 
-1. 在 MainPage.xaml.cpp 中實作 `GetButton_Click` 類別的 `PostButton_Click`、`CancelButton_Click` 和 `MainPage` 方法。
+6. 在 MainPage.xaml.cpp 中實作 `GetButton_Click` 類別的 `PostButton_Click`、`CancelButton_Click` 和 `MainPage` 方法。
 
    [!code-cpp[concrt-using-ixhr2#A6](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_9.cpp)]
 
-    > [!TIP]
-
-    >  如果您的應用程式不需要支援取消，則會傳遞[concurrency:: cancellation_token:: none](reference/cancellation-token-class.md#none)要`HttpRequest::GetAsync`和`HttpRequest::PostAsync`方法。
+   > [!TIP]
+   > 如果您的應用程式不需要支援取消，則會傳遞[concurrency:: cancellation_token:: none](reference/cancellation-token-class.md#none)要`HttpRequest::GetAsync`和`HttpRequest::PostAsync`方法。
 
 1. 在 MainPage.xaml.cpp 中實作 `MainPage::ProcessHttpRequest` 方法。
 
    [!code-cpp[concrt-using-ixhr2#A7](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_10.cpp)]
 
-1. 在專案屬性中，在**連結器**，**輸入**，指定`shcore.lib`和`msxml6.lib`。
+8. 在專案屬性中，在**連結器**，**輸入**，指定`shcore.lib`和`msxml6.lib`。
 
 執行的應用程式如下：
 

@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-ms.openlocfilehash: 21c77f71fb576177a6e61ef38d1ef0459f14ab05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a67afdf00f0a524a94b50643d6541251feca2c2c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625169"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520253"
 ---
 # <a name="collection-classes"></a>集合類別
 
@@ -32,9 +32,9 @@ ms.locfileid: "50625169"
 
 - [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md)這個類別提供方法，靜態的函式，和 typedef 有用時建立集合的 COM 介面指標。
 
-- [CComSafeArray](../atl/reference/ccomsafearray-class.md)這個類別是包裝函式[SAFEARRAY 資料型別](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)結構。
+- [CComSafeArray](../atl/reference/ccomsafearray-class.md)這個類別是包裝函式[SAFEARRAY 資料型別](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)結構。
 
-- [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md)這個類別是包裝函式[SAFEARRAYBOUND](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound)結構。
+- [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md)這個類別是包裝函式[SAFEARRAYBOUND](/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound)結構。
 
 - [CComUnkArray](../atl/reference/ccomunkarray-class.md)這個類別會儲存**IUnknown**指標，旨在用於做為參數[IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)範本類別。
 

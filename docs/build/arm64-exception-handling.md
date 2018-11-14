@@ -1,12 +1,12 @@
 ---
 title: ARM64 例外狀況處理
 ms.date: 07/11/2018
-ms.openlocfilehash: 82775a61adf8437565b5bb691716451b225e72e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5189c399a4cbff071d2ec846008229ba76306882
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620593"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333585"
 ---
 # <a name="arm64-exception-handling"></a>ARM64 例外狀況處理
 
@@ -56,7 +56,7 @@ Windows 上 ARM64 會使用相同的結構化例外狀況，以處理非同步�
 
 框架鏈結函式，fp 和 lr 組可以儲存在變數根據最佳化考量的區域中的任何位置。 目標是要最大化單一框架指標 (r29) 或堆疊指標 (sp) 為基礎的單一指令可以觸達的區域變數的數目。 不過針對`alloca`函式一定會鏈結和 r29 必須指向堆疊的底部。 若要允許更好的暫存器配對-位址-模式涵蓋範圍，靜態暫存器 aave 區域都位於區域堆疊的頂端。 以下是範例，說明幾個最有效率的初構序列。 為了清楚起見，較佳的快取位置將被呼叫端儲存的暫存器儲存在所有的標準初構中的順序為"成長設定 」 的順序。 `#framesz` 下面代表 （不含 alloca 區域） 的整個堆疊的大小。 `#localsz` 和`#outsz`指出本機區域大小 (包括儲存區域\<r29，lr > 組) 和分別傳出參數的大小。
 
-1. 鏈結，#localsz < = 512
+1. 鏈結，#localsz \<= 512
 
     ```asm
         stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -95,7 +95,7 @@ Windows 上 ARM64 會使用相同的結構化例外狀況，以處理非同步�
         sub    sp,#framesz-72           // allocate the remaining local area
     ```
 
-   根據 TECHED-SERVICES 存取所有的區域變數 \<r29，lr > 指向上一個畫面格。 畫面格大小 < = 512，"sp，sub...」 如果移到堆疊底部的 regs 儲存區域，則可以繼續最佳化。 缺點，是範圍的不一致，其他版面配置，並儲存的 regs 掌握組 regs 和前置和後置索引位移的定址模式。
+   根據 TECHED-SERVICES 存取所有的區域變數 \<r29，lr > 指向上一個畫面格。 畫面格大小\<= 512，"sp，sub...」 如果移到堆疊底部的 regs 儲存區域，則可以繼續最佳化。 缺點，是範圍的不一致，其他版面配置，並儲存的 regs 掌握組 regs 和前置和後置索引位移的定址模式。
 
 1. 會見到非分葉函式 （lr 儲存區內儲存的 Int）
 
@@ -131,7 +131,7 @@ Windows 上 ARM64 會使用相同的結構化例外狀況，以處理非同步�
 
    根據 TECHED-SERVICES 存取所有的區域變數 \<r29 > 指向上一個畫面格。
 
-1. 鏈結，#framesz < = 512，#outsz = 0
+1. 鏈結，#framesz \<= 512，#outsz = 0
 
     ```asm
         stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
@@ -283,40 +283,40 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 回溯程式碼會根據下表進行編碼。 所有回溯程式碼是單一/雙位元組，除了會配置大量的堆疊。 完全有 21 的回溯程式碼。 每個回溯程式碼對應一個指令，在初構/終解以容許回溯部分執行的初構和終。
 
-回溯程式碼|位元和轉譯
+|回溯程式碼|位元和轉譯|
 |-|-|
-`alloc_s`|000xxxxx： 配置小型堆疊大小 < 512 (2 ^5 * 16)。
-`save_r19r20_x`|    001zzzzz： 儲存\<r19，r20 > 對，在 [sp #Z * 8] ！，索引預先位移 > =-248
-`save_fplr`|        01zzzzzz： 儲存\<r29，lr > 配對在 [sp + #Z * 8]，位移 < = 504。
-`save_fplr_x`|        10zzzzzz： 儲存\<r29，lr > 配對在 [sp-（#Z + 1） * 8] ！，索引預先位移 > =-512
-`alloc_m`|        11000xxx\|xxxxxxxx： 配置大堆疊大小 < 16k (2 ^11 * 16)。
-`save_regp`|        110010xx\|xxzzzzzz： 儲存 r(19+#X) 組，在 [sp + #Z * 8]，位移 < = 504
-`save_regp_x`|        110011xx\|xxzzzzzz： 儲存在組 r(19+#X) [預存程序-（#Z + 1） * 8] ！，索引預先位移 > =-512
-`save_reg`|        110100xx\|xxzzzzzz： 儲存在登錄 r(19+#X) [預存程序 + #Z * 8]，位移 < = 504
-`save_reg_x`|        1101010 x\|xxxzzzzz： 儲存在登錄 r(19+#X) [預存程序-（#Z + 1） * 8] ！，索引預先位移 > =-256
-`save_lrpair`|         1101011 x\|xxzzzzzz： 儲存配對\<r19 + 2 *#X，lr > 在 [sp + #Z*8]，位移 < = 504
-`save_fregp`|        1101100 x\|xxzzzzzz： 儲存在組 d(8+#X) [預存程序 + #Z * 8]，位移 < = 504
-`save_fregp_x`|        1101101 x\|xxzzzzzz： 將組 d(8+#X) 儲存在 [預存程序-（#Z + 1） * 8] ！，索引預先位移 > =-512
-`save_freg`|        1101110 x\|xxzzzzzz： 儲存在登錄 d(8+#X) [預存程序 + #Z * 8]，位移 < = 504
-`save_freg_x`|        11011110\|xxxzzzzz： 儲存在登錄 d(8+#X) [預存程序-（#Z + 1） * 8] ！，索引預先位移 > =-256
-`alloc_l`|         11100000\|xxxxxxxx\|xxxxxxxx\|xxxxxxxx： 配置大堆疊大小 < 256m (2 ^24 * 16)
-`set_fp`|        11100001： 設定 r29： 與： mov r29 預存程序
-`add_fp`|        11100010\|xxxxxxxx： 設定使用 r29： 新增 r29、 sp、 #x * 8
-`nop`|            11100011： 沒有回溯會需要作業。
-`end`|            11100100： 結尾回溯程式碼。 表示 ret 終解中。
-`end_c`|        11100101： 鏈結是目前範圍中的回溯程式碼的結尾。
-`save_next`|        11100110： 儲存下一個非暫時性 Int 或 FP 暫存器組。
-`arithmetic(add)`|    11100111\| 000zxxxx: lr 新增 cookie reg(z) (0 = x28，1 = 預存程序)，新增 lr，lr，reg(z)
-`arithmetic(sub)`|    11100111\| 001zxxxx: sub cookie reg(z) lr 從 (0 = x28，1 = 預存程序); sub lr，lr，reg(z)
-`arithmetic(eor)`|    11100111\| 010zxxxx: eor lr 與 cookie reg(z) (0 = x28，1 = 預存程序); eor lr，lr，reg(z)
-`arithmetic(rol)`|    11100111\| 0110xxxx： 模擬選角色的使用 cookie reg (x28) lr; xip0 = neg x28; ror lr，xip0
-`arithmetic(ror)`|    11100111\| 100zxxxx: ror lr 與 cookie reg(z) (0 = x28，1 = 預存程序); ror lr，lr，reg(z)
-||            11100111: xxxz---:---保留
-||              11101xxx： 保留供自訂的堆疊以下案例只產生 asm 常式
-||              11101001: MSFT_OP_TRAP_FRAME 自訂堆疊
-||              11101010: MSFT_OP_MACHINE_FRAME 自訂堆疊
-||              11101011: MSFT_OP_CONTEXT 自訂堆疊
-||              1111xxxx： 保留
+|`alloc_s`|000xxxxx： 配置大小的小型堆疊\<512 (2 ^5 * 16)。|
+|`save_r19r20_x`|    001zzzzz： 儲存\<r19，r20 > 對，在 [sp #Z * 8] ！，索引預先位移 > =-248 |
+|`save_fplr`|        01zzzzzz： 儲存\<r29，lr > 配對在 [sp + #Z * 8]，位移\<= 504。 |
+|`save_fplr_x`|        10zzzzzz： 儲存\<r29，lr > 配對在 [sp-（#Z + 1） * 8] ！，索引預先位移 > =-512 |
+|`alloc_m`|        11000xxx'xxxxxxxx： 配置大小的大型堆疊\<16k (2 ^11 * 16)。 |
+|`save_regp`|        110010xx'xxzzzzzz： 儲存 r(19+#X) 組，在 [sp + #Z * 8]，位移\<= 504 |
+|`save_regp_x`|        110011xx'xxzzzzzz： 儲存在組 r(19+#X) [預存程序-（#Z + 1） * 8] ！，索引預先位移 > =-512 |
+|`save_reg`|        110100xx'xxzzzzzz： 儲存在登錄 r(19+#X) [預存程序 + #Z * 8]，位移\<= 504 |
+|`save_reg_x`|        1101010 x'xxxzzzzz： 儲存在登錄 r(19+#X) [預存程序-（#Z + 1） * 8] ！，索引預先位移 > =-256 |
+|`save_lrpair`|         1101011 x'xxzzzzzz： 儲存配對\<r19 + 2 *#X，lr > 在 [sp + #Z*8]，位移\<= 504 |
+|`save_fregp`|        1101100 x'xxzzzzzz： 儲存在組 d(8+#X) [預存程序 + #Z * 8]，位移\<= 504 |
+|`save_fregp_x`|        1101101 x'xxzzzzzz： 將組 d(8+#X) 儲存在 [預存程序-（#Z + 1） * 8] ！，索引預先位移 > =-512 |
+|`save_freg`|        1101110 x'xxzzzzzz： 儲存在登錄 d(8+#X) [預存程序 + #Z * 8]，位移\<= 504 |
+|`save_freg_x`|        11011110' xxxzzzzz： 儲存在登錄 d(8+#X) [預存程序-（#Z + 1） * 8] ！，索引預先位移 > =-256 |
+|`alloc_l`|         11100000' xxxxxxxx 'xxxxxxxx' xxxxxxxx： 配置大小的大型堆疊\<256m (2 ^24 * 16) |
+|`set_fp`|        11100001： 設定 r29： 與： mov r29 預存程序 |
+|`add_fp`|        11100010' xxxxxxxx： 設定使用 r29： 新增 r29、 sp、 #x * 8 |
+|`nop`|            11100011： 沒有回溯會需要作業。 |
+|`end`|            11100100： 結尾回溯程式碼。 表示 ret 終解中。 |
+|`end_c`|        11100101： 鏈結是目前範圍中的回溯程式碼的結尾。 |
+|`save_next`|        11100110： 儲存下一個非暫時性 Int 或 FP 暫存器組。 |
+|`arithmetic(add)`|    11100111' 000zxxxx: lr 新增 cookie reg(z) (0 = x28，1 = 預存程序);新增 lr，lr，reg(z) |
+|`arithmetic(sub)`|    11100111' 001zxxxx: sub cookie reg(z) lr 從 (0 = x28，1 = 預存程序);sub lr，lr，reg(z) |
+|`arithmetic(eor)`|    11100111' 010zxxxx: eor lr 與 cookie reg(z) (0 = x28，1 = 預存程序);eor lr，lr，reg(z) |
+|`arithmetic(rol)`|    11100111' 0110xxxx： 模擬選角色的使用 cookie reg (x28); lrxip0 = neg x28;ror lr xip0 |
+|`arithmetic(ror)`|    11100111' 100zxxxx: ror lr 與 cookie reg(z) (0 = x28，1 = 預存程序);ror lr，lr，reg(z) |
+| |            11100111: xxxz---:---保留 |
+| |              11101xxx： 保留供自訂的堆疊以下案例只產生 asm 常式 |
+| |              11101001: MSFT_OP_TRAP_FRAME 自訂堆疊 |
+| |              11101010: MSFT_OP_MACHINE_FRAME 自訂堆疊 |
+| |              11101011: MSFT_OP_CONTEXT 自訂堆疊 |
+| |              1111xxxx： 保留 |
 
 具有涵蓋多個位元組的大數值的指示，會先儲存的最大顯著性的位元。 上述的回溯程式碼被設計能使得只要查閱此程式碼的第一個位元組，就可以知道以位元組為單位的回溯程式碼的總大小。 假設每個回溯程式碼完全對應到在初構/終解中的指示，來計算大小的初構和終解中，所有必須完成是引導從序列開頭到結尾，以判斷使用的查閱資料表或類似的裝置時間長度 cor是回應的 opcode。
 
@@ -382,7 +382,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 5d|(**CR** = = 00 \| \| **CR**= = 01) （&AMP; S) （&AMP; S)<br/>#locsz < = 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
 5e|(**CR** = = 00 \| \| **CR**= = 01) （&AMP; S) （&AMP; S)<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
-\*： 如果**CR** = = 01 並**RegI**是奇數，步驟 2 和步驟 1 中的最後一個 save_rep 會合併成一個 save_regp。
+\* 如果**CR** = = 01 並**RegI**是奇數，步驟 2 和步驟 1 中的最後一個 save_rep 會合併成一個 save_regp。
 
 \*\* 如果**RegI** == **CR** = = 0，並**RegF** ！ = 0，第一個 spanning tree protocol，如浮點前置遞減。
 

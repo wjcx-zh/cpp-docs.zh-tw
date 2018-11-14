@@ -5,12 +5,12 @@ helpviewer_keywords:
 - servers, implementing
 - OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
-ms.openlocfilehash: bd5967fe07670bd4b3bd076ca23fda62b02b2177
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5c89ff1256d557ef417b9e53ce76bbf1b5d6196
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566749"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518953"
 ---
 # <a name="servers-implementing-a-server"></a>伺服器：實作伺服器
 
@@ -22,11 +22,11 @@ ms.locfileid: "50566749"
 
 - 定義伺服器資源：
 
-   - 伺服器會編輯內嵌項目在它自己的視窗時所使用的功能表資源。
+  - 伺服器會編輯內嵌項目在它自己的視窗時所使用的功能表資源。
 
-   - 使用的伺服器時作用中就地功能表和工具列資源。
+  - 使用的伺服器時作用中就地功能表和工具列資源。
 
-   如需有關這些資源的詳細資訊，請參閱 <<c0> [ 功能表和資源： 伺服器加入](../mfc/menus-and-resources-server-additions.md)。
+  如需有關這些資源的詳細資訊，請參閱 <<c0> [ 功能表和資源： 伺服器加入](../mfc/menus-and-resources-server-additions.md)。
 
 - 定義項目類別衍生自`COleServerItem`。 如需伺服器項目的的詳細資訊，請參閱 <<c0> [ 伺服器： 伺服器項目](../mfc/servers-server-items.md)。
 

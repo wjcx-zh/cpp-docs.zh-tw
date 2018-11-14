@@ -23,12 +23,12 @@ helpviewer_keywords:
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-ms.openlocfilehash: 33fd1cc0a618fccc4a59e5aff059d3f2cdeec8fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6312297e6daa9b4790674bd26d21812d5bee34c6
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661754"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330251"
 ---
 # <a name="tzset"></a>_tzset
 
@@ -51,11 +51,11 @@ void _tzset( void );
 
 |參數|描述|
 |-|-|
-*tzn*|三個字母的時區名稱，例如 PST (太平洋標準時間)。 您必須指定從本地時間到 UTC 的正確位移。
-*hh*|UTC 與本地時間之間的時間差異 (小時)。 正值可選用正號 (+)。
-*mm*|分鐘。 分開*hh*分號 (**:**)。
-*ss*|秒鐘。 分開*公釐*分號 (**:**)。
-*dzn*|三個字母的日光節約時區例如 PDT。 如果日光節約時間永遠不會作用中該位置，請設定**TZ**的值不*dzn*。 C 執行階段程式庫會在實作日光節約時間 (DST) 的計算時，假定使用美國的規則。
+| *tzn* | 三個字母的時區名稱，例如 PST (太平洋標準時間)。 您必須指定從本地時間到 UTC 的正確位移。 |
+| *hh* | UTC 與本地時間之間的時間差異 (小時)。 正值可選用正號 (+)。 |
+| *mm* | 分鐘。 分開*hh*分號 (**:**)。 |
+| *ss* | 秒鐘。 分開*公釐*分號 (**:**)。 |
+| *dzn* | 三個字母的日光節約時區例如 PDT。 如果日光節約時間永遠不會作用中該位置，請設定**TZ**的值不*dzn*。 C 執行階段程式庫會在實作日光節約時間 (DST) 的計算時，假定使用美國的規則。 |
 
 > [!NOTE]
 > 要特別小心運算時間差異的正負號。 因為時間差異是從本地時間到 UTC (而不是從 UTC 到本地時間) 的位移，正負號可能與您直覺的預期相反。 早於 UTC 的時區，時間差異為負數；晚於 UTC 的時區，時間差異為正數。

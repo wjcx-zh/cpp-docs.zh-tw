@@ -32,16 +32,16 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: 13dadfdcaf912e5cb2d82361de997d09961f1ceb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dacf9de0835108ae946e7523472a0adf12e7e222
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514601"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556721"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl 類別
 
-OLE DB 樣板實作[IRowsetChange](/previous-versions/windows/desktop/ms715790) OLE DB 規格中的介面。
+OLE DB 樣板實作[IRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715790(v=vs.85)) OLE DB 規格中的介面。
 
 ## <a name="syntax"></a>語法
 
@@ -124,7 +124,7 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>參數
 
-請參閱[irowsetchange:: Deleterows](/previous-versions/windows/desktop/ms724362(v%3dvs.85))中*OLE DB 程式設計人員參考*。
+請參閱[irowsetchange:: Deleterows](https://docs.microsoft.com/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85))中*OLE DB 程式設計人員參考*。
 
 ## <a name="insertrow"></a> Irowsetchangeimpl:: Insertrow
 
@@ -141,7 +141,7 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>參數
 
-請參閱[irowsetchange:: Insertrow](/previous-versions/windows/desktop/ms716921)中*OLE DB 程式設計人員參考*。
+請參閱[irowsetchange:: Insertrow](https://docs.microsoft.com/previous-versions/windows/desktop/ms716921(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ## <a name="setdata"></a> Irowsetchangeimpl:: Setdata
 
@@ -157,7 +157,7 @@ STDMETHOD (SetData )(HROW hRow,
 
 #### <a name="parameters"></a>參數
 
-請參閱[irowsetchange:: Setdata](/previous-versions/windows/desktop/ms721232)中*OLE DB 程式設計人員參考*。
+請參閱[irowsetchange:: Setdata](https://docs.microsoft.com/previous-versions/windows/desktop/ms721232(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ## <a name="flushdata"></a> Irowsetchangeimpl:: Flushdata
 

@@ -90,12 +90,12 @@ helpviewer_keywords:
 - wfindfirst64i32 function
 - _wfindfirst64 function
 ms.assetid: 9bb46d1a-b946-47de-845a-a0b109a33ead
-ms.openlocfilehash: eaecf466617669e6abf156370854b88d16fc4086
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ceaa8fea4414bab4bbb035aa4525b415ca7ac0b8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542073"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331434"
 ---
 # <a name="findfirst-findfirst32-findfirst32i64-findfirst64-findfirst64i32-findfirsti64-wfindfirst-wfindfirst32-wfindfirst32i64-wfindfirst64-wfindfirst64i32-wfindfirsti64"></a>_findfirst、_findfirst32、_findfirst32i64、_findfirst64、_findfirst64i32、_findfirsti64、_wfindfirst、_wfindfirst32、_wfindfirst32i64、_wfindfirst64、_wfindfirst64i32、_wfindfirsti64
 
@@ -166,12 +166,12 @@ intptr_t _wfindfirst64i32(
 
 如果成功， **_findfirst**會傳回唯一搜尋控制代碼以識別符合的檔案群組中的檔案*filespec*規格，可以用於後續呼叫[_findnext](findnext-functions.md)上，或者[_findclose](findclose.md)。 否則，請 **_findfirst**會傳回-1 並將**errno**下列值之一。
 
-|errno 值|條件|
+| errno 值 | 條件 |
 |-|-|
-**EINVAL**|無效的參數： *filespec>* 或是*fileinfo*已**NULL**。 或者，作業系統傳回未預期的錯誤。
-**ENOENT**|不相符的檔案規格。
-**ENOMEM**|記憶體不足。
-**EINVAL**|無效的檔案名稱規格或指定的檔名是大於**MAX_PATH**。
+| **EINVAL** | 無效的參數： *filespec>* 或是*fileinfo*已**NULL**。 或者，作業系統傳回未預期的錯誤。 |
+| **ENOENT** | 不相符的檔案規格。 |
+| **ENOMEM** | 記憶體不足。 |
+| **EINVAL** | 無效的檔案名稱規格或指定的檔名是大於**MAX_PATH**。 |
 
 如需有關這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

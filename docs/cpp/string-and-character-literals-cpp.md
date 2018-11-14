@@ -16,12 +16,12 @@ helpviewer_keywords:
 - NULL, character constant
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: 787756dd3e886afb6afa87ed3871158bddcbf3ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3721f3624a64a24de0a5458d88de4836b07a9c1
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614587"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329835"
 ---
 # <a name="string-and-character-literals--c"></a>字串和字元常值 （c + +）
 
@@ -49,7 +49,7 @@ int main()
 
     // Raw string literals containing unescaped \ and "
     auto R0 =   R"("Hello \ world")"; // const char*
-    auto R1 = u8R"("Hello \ world")"; // const char*, encoded as UTF-8
+    auto R1 = u8R"("Hello \ world")"; // const char*, encoded as UTF-8
     auto R2 =  LR"("Hello \ world")"; // const wchar_t*
     auto R3 =  uR"("Hello \ world")"; // const char16_t*, encoded as UTF-16
     auto R4 =  UR"("Hello \ world")"; // const char32_t*, encoded as UTF-32
@@ -106,15 +106,22 @@ int main()
 
 逸出序列有三種：簡單的、八進位和十六進位。 逸出序列可以是下列任何一項：
 
-|值|逸出序列|值|逸出序列|
-|-----------|---------------------|-----------|---------------------|
-|新行字元|\n|反斜線|\\\|
-|水平定位字元|\t|問號|? 或 \\?|
-|垂直定位字元|\v|單引號|\\'|
-|退格鍵|\b|雙引號|\\"|
-|歸位字元|\r|null 字元|\0|
-|換頁字元|\f|八進位|\ooo|
-|警示 (鈴聲)|\a|十六進位|\xhhh|
+|值|逸出序列|
+|-----------|---------------------|
+| 新行字元 | \\n |
+| 反斜線 | \\\\ |
+| 水平定位字元 | \\t |
+| 問號 | ? 或 \\? |
+| 垂直定位字元 | \\V |
+| 單引號 | \\' |
+| 退格鍵 | \\B |
+| 雙引號 | \\" |
+| 歸位字元 | \\R |
+| null 字元 | \\0 |
+| 換頁字元 | \\F |
+| 八進位 | \\ooo |
+| 警示 (鈴聲) | \\a |
+| 十六進位 | \\xhhh |
 
 下列程式碼顯示使用一般字元常值的逸出字元的一些範例。 其他字元常值類型相同的逸出序列語法無效。
 
@@ -253,7 +260,7 @@ auto s4 = U"hello"; // const char32_t*
 // represents the string: An unescaped \ character
 const char* raw_narrow = R"(An unescaped \ character)";
 const wchar_t* raw_wide = LR"(An unescaped \ character)";
-const char*       raw_utf8  = u8R"(An unescaped \ character)";
+const char*       raw_utf8  = u8R"(An unescaped \ character)";
 const char16_t* raw_utf16 = uR"(An unescaped \ character)";
 const char32_t* raw_utf32 = UR"(An unescaped \ character)";
 ```

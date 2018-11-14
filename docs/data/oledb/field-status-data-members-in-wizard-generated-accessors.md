@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: 25bb370c0714bfef97bc6659deae2fbd21aed23f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46cf285e07bffe178874546d13d196b5165cb28b
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664564"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524354"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>在精靈產生的存取子中的欄位狀態資料成員
 
@@ -58,7 +58,7 @@ public:
 
 您也可以使用 [狀態] 值來設定特定欄位的 NULL 值。 這樣可協助您的情況下您想用來區別欄位值為 NULL，而不是零。 它是您必須決定 NULL 是否為有效的值或特殊值，並決定您的應用程式應該如何處理它。 OLE DB 定義為 DBSTATUS_S_ISNULL 指定泛用的 NULL 值的正確方法。 如果取用者讀取資料，此值為 null，會將 [狀態] 欄位設為 DBSTATUS_S_ISNULL。 如果取用者想要設定為 NULL 值，取用者狀態值設定為 DBSTATUS_S_ISNULL 之前呼叫提供者。
 
-接下來，開啟 Oledb.h 並搜尋 DBSTATUSENUM。 然後，您可以比對的非零值的狀態，針對 DBSTATUSENUM 列舉值的數值。 如果列舉名稱不足以告訴您哪裡有錯誤，請參閱 <<c0>  **狀態**中的主題**繫結資料值**一節[OLE DB 程式設計人員指南](/previous-versions/windows/desktop/ms713643)。 本主題包含的狀態時使用的值取得或設定資料的資料表。 長度值的詳細資訊，請參閱**長度**相同區段中的主題。
+接下來，開啟 Oledb.h 並搜尋 DBSTATUSENUM。 然後，您可以比對的非零值的狀態，針對 DBSTATUSENUM 列舉值的數值。 如果列舉名稱不足以告訴您哪裡有錯誤，請參閱 <<c0>  **狀態**中的主題**繫結資料值**一節[OLE DB 程式設計人員指南](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)。 本主題包含的狀態時使用的值取得或設定資料的資料表。 長度值的詳細資訊，請參閱**長度**相同區段中的主題。
 
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>擷取的長度或資料行的狀態
 

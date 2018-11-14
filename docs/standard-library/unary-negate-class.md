@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: acb0eaa446bf21a014d8be8c4dbeaedf0f282a1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b43db182d9274281020d7ce92cfa1b3efe724197
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648184"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326013"
 ---
 # <a name="unarynegate-class"></a>unary_negate 類別
 
@@ -44,7 +44,7 @@ public:
 
 ## <a name="remarks"></a>備註
 
-此樣板類別會儲存一元函式物件 _ *Func* 的複本。 它會將其成員函式 `operator()` 定義為傳回的 **!**\_*Func(left)*。
+此範本類別會儲存一元函式物件的複本 *\_Func*。 它會定義其成員函式`operator()`做為傳回`!_Func(left)`。
 
 `unary_negate` 的建構函式很少會直接使用。 Helper 函式 [not1](../standard-library/functional-functions.md#not1) 提供宣告和使用 **unary_negator** 配接器述詞的更簡易方式。
 

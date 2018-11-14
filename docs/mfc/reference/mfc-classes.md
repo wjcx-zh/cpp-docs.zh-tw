@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-ms.openlocfilehash: 40294e0d0af3f5181ffe295a2a6c625fa5223f5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c35d7bf16b851fe9a96bdd896babfa450c726374
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463384"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525272"
 ---
 # <a name="mfc-classes"></a>MFC 類別
 
@@ -1012,7 +1012,7 @@ OLE 伺服器文件的基底類別。
 用於 OLE [編輯連結] 對話方塊的特殊狀況，當您只需要更新文件中現有的連結或內嵌物件時，應該使用此項。
 
 [COleVariant 類別](../../mfc/reference/colevariant-class.md)<br/>
-封裝 [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) 資料類型。
+封裝 [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) 資料類型。
 
 [CPagerCtrl 類別](../../mfc/reference/cpagerctrl-class.md)<br/>
 `CPagerCtrl` 類別會封裝 Windows 頁面巡覽區控制項，可以將不符合容器視窗大小的包含視窗捲動到檢視中。

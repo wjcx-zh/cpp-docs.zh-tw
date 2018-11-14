@@ -20,12 +20,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: a6677d5d265b2de9f94160dae6afaedfb3c8b89f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a900a472a3783bde66584b64e361d80c606f0e9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644323"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524556"
 ---
 # <a name="diagnostic-services"></a>診斷服務
 
@@ -657,7 +657,7 @@ BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes
 - IMAGEHLP 檔案。DLL 必須位於您的路徑。 如果您沒有此 DLL，此函式會顯示錯誤訊息。 請參閱[映像 Help Library](/windows/desktop/Debug/image-help-library) IMAGEHLP 所提供的函式集上的資訊。
 
 - 具有堆疊框架的模組必須包含偵錯資訊。 如果它們不包含偵錯資訊，此函式仍會產生堆疊追蹤，但會較不詳細追蹤。
-### <a name="requirements"></a>需求
+  ### <a name="requirements"></a>需求
 
 **標頭：** afx.h
 

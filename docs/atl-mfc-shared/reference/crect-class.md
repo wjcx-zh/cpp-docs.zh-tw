@@ -1,6 +1,6 @@
 ---
 title: CRect 類別
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 f1_keywords:
 - CRect
 - ATLTYPES/ATL::CRect
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: 200f4a9345904055496a53ff2f751c3e2571e7d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2ecaeb4f3b434ef7b57573f2ea379719aebcbff
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471483"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520032"
 ---
 # <a name="crect-class"></a>CRect 類別
 
@@ -97,8 +97,8 @@ class CRect : public tagRECT
 |[CRect::operator ！ =](#operator_neq)|決定是否`CRect`不等於矩形。|
 |[CRect::operator &amp;](#operator_amp)|建立交集`CRect`還有一個矩形，並傳回產生`CRect`。|
 |[CRect::operator &amp;=](#operator_amp_eq)|設定組`CRect`相等的交集`CRect`還有一個矩形。|
-|[CRect::operator |](#operator_or)|建立的聯合`CRect`還有一個矩形，並傳回產生`CRect`。|
-|[CRect::operator |=](#operator_or_eq)|設定組`CRect`相等的聯集`CRect`還有一個矩形。|
+|[CRect::operator&#124;](#operator_or)|建立的聯合`CRect`還有一個矩形，並傳回產生`CRect`。|
+|[CRect::operator &#124;=](#operator_or_eq)|設定組`CRect`相等的聯集`CRect`還有一個矩形。|
 |[CRect::operator +](#operator_add)|將指定的位移`CRect`或擴大`CRect`，並傳回產生`CRect`。|
 |[CRect::operator + =](#operator_add_eq)|將所指定的位移`CRect`擴大或`CRect`。|
 |[CRect::operator =](#operator_eq)|將複製的矩形維度`CRect`。|
@@ -112,7 +112,7 @@ class CRect : public tagRECT
 A`CRect`物件可以傳遞做為函式參數每當`RECT`結構`LPCRECT`，或`LPRECT`可以傳遞。
 
 > [!NOTE]
->  此類別衍生自`tagRECT`結構。 (名稱`tagRECT`小於-常用名稱`RECT`結構。)這表示資料成員 (`left`， `top`， `right`，以及`bottom`) 的`RECT`結構是否可存取資料成員`CRect`。
+> 此類別衍生自`tagRECT`結構。 (名稱`tagRECT`小於-常用名稱`RECT`結構。)這表示資料成員 (`left`， `top`， `right`，以及`bottom`) 的`RECT`結構是否可存取資料成員`CRect`。
 
 A`CRect`包含定義矩形的左上和右下方點的成員變數。
 
@@ -443,11 +443,11 @@ BOOL EqualRect(LPCRECT lpRect) const throw();
 ### <a name="example"></a>範例
 
 ```cpp
-   CRect rect1(35, 150, 10, 25);
-   CRect rect2(35, 150, 10, 25);
-   CRect rect3(98, 999, 6, 3);
+CRect rect1(35, 150, 10, 25);
+CRect rect2(35, 150, 10, 25);
+CRect rect3(98, 999, 6, 3);
 ASSERT(rect1.EqualRect(rect2));
-   ASSERT(!rect1.EqualRect(rect3));
+ASSERT(!rect1.EqualRect(rect3));
 // works just fine against RECTs, as well
 
 RECT test;
@@ -484,12 +484,8 @@ int Height() const throw();
 CRect rect(20, 30, 80, 70);
 int nHt = rect.Height();
 
-```cpp
-   CRect rect(20, 30, 80, 70);
-int nHt = rect.Height();
-
-   // nHt is now 40
-   ASSERT(nHt == 40);
+// nHt is now 40
+ASSERT(nHt == 40);
 ```
 
 ##  <a name="inflaterect"></a>  CRect::InflateRect
@@ -578,7 +574,6 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 CRect rectOne(125, 0, 150, 200);
 CRect rectTwo(0, 75, 350,  95);
 CRect rectInter;
-
 ```cpp
    CRect rectOne(125,  0, 150, 200);
    CRect rectTwo(0, 75, 350, 95);
@@ -617,7 +612,6 @@ BOOL IsRectEmpty() const throw();
 ```cpp
 CRect rectNone(0, 0, 0, 0);
 CRect rectSome(35, 50, 135, 150);
-
 ```cpp
    CRect rectNone(0, 0, 0, 0);
    CRect rectSome(35, 50, 135, 150);
@@ -648,7 +642,6 @@ BOOL IsRectNull() const throw();
 ```cpp
 CRect rectNone(0, 0, 0, 0);
 CRect rectSome(35, 50, 135, 150);
-
 ```cpp
    CRect rectNone(0, 0, 0, 0);
    CRect rectSome(35, 50, 135, 150);
@@ -678,7 +671,6 @@ void MoveToX(int x) throw();
 ```cpp
 CRect rect(0, 0, 100, 100);
 rect.MoveToX(10);
-
 ```cpp
    CRect rect(0, 0, 100, 100);
 rect.MoveToX(10);
@@ -712,7 +704,6 @@ A`POINT`結構，指定絕對左上角的矩形。
 ```cpp
 CRect rect(0, 0, 100, 100);
 rect.MoveToXY(10, 10);
-
 ```cpp
    CRect rect(0, 0, 100, 100);
    rect.MoveToXY(10, 10);

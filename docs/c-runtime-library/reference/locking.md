@@ -25,12 +25,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: 1309d99d8e7040626384e38324c1e910e4731295
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90327ed3388d4f18e0f64f92c33112c9ddd800f5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523794"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327040"
 ---
 # <a name="locking"></a>_locking
 
@@ -63,10 +63,10 @@ int _locking(
 
 |errno 值|條件|
 |-|-|
-**EACCES**|鎖定違規 (檔案已鎖定或解除鎖定)。
-**EBADF**|檔案描述項無效。
-**EDEADLOCK**|鎖定違規。 時，傳回 **_LK_LOCK**或是 **_LK_RLCK**指定旗標，並嘗試 10 次之後，無法鎖定檔案。
-**EINVAL**|無效的引數指定給 **_locking**。
+| **EACCES** | 鎖定違規 (檔案已鎖定或解除鎖定)。 |
+| **EBADF** | 檔案描述項無效。 |
+| **EDEADLOCK** | 鎖定違規。 時，傳回 **_LK_LOCK**或是 **_LK_RLCK**指定旗標，並嘗試 10 次之後，無法鎖定檔案。 |
+| **EINVAL** | 無效的引數指定給 **_locking**。 |
 
 如果由於參數不正確而失敗 (例如檔案描述項無效)，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
 
@@ -78,11 +78,11 @@ int _locking(
 
 |*模式*值|作用|
 |-|-|
-**_LK_LOCK**|鎖定指定的位元組。 如果無法鎖定位元組，程式會在 1 秒後立即重試。 如果嘗試 10 次之後還是無法鎖定位元組，常數會傳回錯誤。
-**_LK_NBLCK**|鎖定指定的位元組。 如果無法鎖定位元組，常數會傳回錯誤。
-**_LK_NBRLCK**|與相同 **_LK_NBLCK**。
-**_LK_RLCK**|與相同 **_LK_LOCK**。
-**_LK_UNLCK**|解除鎖定指定的位元組，這些位元組之前必須已鎖定。
+| **_LK_LOCK** | 鎖定指定的位元組。 如果無法鎖定位元組，程式會在 1 秒後立即重試。 如果嘗試 10 次之後還是無法鎖定位元組，常數會傳回錯誤。 |
+| **_LK_NBLCK** | 鎖定指定的位元組。 如果無法鎖定位元組，常數會傳回錯誤。 |
+| **_LK_NBRLCK** | 與相同 **_LK_NBLCK**。 |
+| **_LK_RLCK** | 與相同 **_LK_LOCK**。 |
+| **_LK_UNLCK** | 解除鎖定指定的位元組，這些位元組之前必須已鎖定。 |
 
 可鎖定檔案中多個不重疊的區域。 要解除鎖定的區域之前必須已鎖定。 **_locking**不會合併相鄰區域; 如果兩個鎖定的區域相鄰，每個區域必須個別解除鎖定。 區域只能短暫鎖定，而且必須在關閉檔案或結束程式之前解除鎖定。
 

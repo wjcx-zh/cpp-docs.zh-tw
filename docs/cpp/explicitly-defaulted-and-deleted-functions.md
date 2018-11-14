@@ -2,12 +2,12 @@
 title: 明確的預設和被刪除的函式
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-ms.openlocfilehash: a090bd1b1a60dd7a5a5350fcf81dec7f17e083c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa03ca826eebe467e45e2bb7e0bc47537d40f366
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662601"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327014"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>明確的預設和被刪除的函式
 
@@ -36,12 +36,12 @@ ms.locfileid: "50662601"
    - 不會自動產生移動指派運算子。
 
 > [!NOTE]
->  此外，C++11 標準指定下列額外規則：
+> 此外，C++11 標準指定下列額外規則：
 >
 > - 如果已明確宣告複製建構函式或解構函式，則複製指派運算子自動產生為已被取代。
 > - 如果已明確宣告複製指派運算子或解構函式，則複製建構函式自動產生為已被取代。
 >
->  在這兩種情況下，Visual Studio 會繼續自動隱含產生必要函式，且不會發出警告。
+> 在這兩種情況下，Visual Studio 會繼續自動隱含產生必要函式，且不會發出警告。
 
 這些規則的結果也可能滲入物件階層架構中。 比方說，如果因為任何原因的基底類別無法有預設建構函式可從衍生類別呼叫 — 亦即**公用**或**保護**不接受任何參數的建構函式 — 然後類別衍生自無法自動產生它自己的預設建構函式。
 

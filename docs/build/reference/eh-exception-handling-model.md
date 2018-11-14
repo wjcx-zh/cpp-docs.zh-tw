@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-ms.openlocfilehash: f118f55ddaa4a2dbc8a4a3ad1e596ec461a2b078
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8707ac716a010ea1d3dc0fa51740e76a5822462
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615055"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329296"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (例外狀況處理模型)
 
@@ -29,12 +29,17 @@ ms.locfileid: "50615055"
 
 ## <a name="arguments"></a>引數
 
-|||
-|-|-|
-**a**|例外狀況處理模型同時攔截非同步 （結構化） 和同步 （c + +） 例外狀況所使用的 c + +`catch(...)`語法。
-**s**|例外狀況處理模型會攔截同步 （c + +） 例外狀況只並告知編譯器来假設函式宣告為**extern"C"** 可能會擲回例外狀況。
-**C**|如果搭配**s** (**/EHsc**)、 攔截僅 c + + 例外狀況，並告知編譯器来假設函式宣告為**extern"C"** 絕不會擲回 c + + 例外狀況。 **/EHca** 相當於 **/EHa**。
-**r**|告知編譯器一律會產生執行階段終止檢查所有**noexcept**函式。 根據預設，執行階段會檢查**noexcept**可能會繼續最佳化如果編譯器判斷函式會呼叫只有非擲回函式。
+**a**<br/>
+例外狀況處理模型同時攔截非同步 （結構化） 和同步 （c + +） 例外狀況所使用的 c + +`catch(...)`語法。
+
+**s**<br/>
+例外狀況處理模型會攔截同步 （c + +） 例外狀況只並告知編譯器来假設函式宣告為**extern"C"** 可能會擲回例外狀況。
+
+**C**<br/>
+如果搭配**s** (**/EHsc**)、 攔截僅 c + + 例外狀況，並告知編譯器来假設函式宣告為**extern"C"** 絕不會擲回 c + + 例外狀況。 **/EHca** 相當於 **/EHa**。
+
+**r**<br/>
+告知編譯器一律會產生執行階段終止檢查所有**noexcept**函式。 根據預設，執行階段會檢查**noexcept**可能會繼續最佳化如果編譯器判斷函式會呼叫只有非擲回函式。
 
 ## <a name="remarks"></a>備註
 

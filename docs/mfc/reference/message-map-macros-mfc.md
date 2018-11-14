@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 8d4caca4d5a0b5c12b0af5a948b17b7e2ad05221
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4012f1f0729ff0f46a8504c44f27a37cd55c77e5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474265"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327443"
 ---
 # <a name="message-map-macros-mfc"></a>訊息對應巨集 (MFC)
 
@@ -246,31 +246,12 @@ ON_COMMAND_EX(id, memberFxn);
 命令 ID。
 
 *memberFxn*<br/>
-命令所對應的訊息處理常式函式的名稱。
-
-### <a name="remarks"></a>備註
-
-擴充的格式的命令訊息處理常式可供進階使用。 ON_COMMAND_EX 巨集用於這類訊息處理常式，並提供 [ON_COMMAND] (#on_command) 功能的超集。  擴充的命令處理常式成員函式會採用單一參數，包含命令 ID，UINT，並傳回 BOOL。 傳回的值應為 true
-
-這個巨集擴充的命令處理常式成員函式對應的命令訊息。
-
-### <a name="syntax"></a>語法
-
-```
-ON_COMMAND_EX(id,  memberFxn);
-```
-
-### <a name="parameters"></a>參數
-
-*id*<br/>
-命令 ID。
-
-*memberFxn*<br/>
 命令對應的訊息處理函式名稱。
 
 ### <a name="remarks"></a>備註
 
 擴充的格式的命令訊息處理常式可供進階使用。 ON_COMMAND_EX 巨集用於這類訊息處理常式，並提供的超集合[ON_COMMAND](message-map-macros-mfc.md#on_command)功能。 擴充的命令處理常式成員函式會採用單一參數，包含命令 ID，UINT，並傳回 BOOL。 傳回的值應為 TRUE，表示已處理的命令;否則路由會繼續其他命令目標物件。
+
 如需詳細資訊，請參閱 < 技術提示 [TN006： 訊息對應] tm006-訊息-maps.md)。
 
 ### <a name="requirements"></a>需求

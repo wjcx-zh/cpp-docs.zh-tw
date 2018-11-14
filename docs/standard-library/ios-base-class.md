@@ -108,12 +108,12 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 3c9b1081a7e2ccd45c64c1cbcd833dcda9470f7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8911c3763e6a0c861c162611e1b2617ec26f0cf9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648665"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333347"
 ---
 # <a name="iosbase-class"></a>ios_base 類別
 
@@ -914,7 +914,7 @@ fmtflags setf(
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式會有效地呼叫[旗標](#flags)(_*遮罩* &#124; \_ *旗標*) （將選取的位元），然後傳回先前的格式旗標。 第二個成員函式會有效地呼叫**旗標**(\_ *遮罩* **& fmtfl，旗標 & ~**`_Mask`) （取代選取的位元在遮罩）然後傳回先前的格式旗標。
+第一個成員函式會有效地呼叫[旗標](#flags)( *\_遮罩* &#124; *\_旗標*) （將選取的位元），然後傳回先前的格式旗標。 第二個成員函式會有效呼叫`flags(_Mask & fmtfl, flags & ~_Mask)`（取代選取的位元遮罩底下），然後傳回先前的格式旗標。
 
 ### <a name="example"></a>範例
 

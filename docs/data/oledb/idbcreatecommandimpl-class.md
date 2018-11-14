@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 2ac243f5e2c91636183c31640b50fa7bef95254d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b8c713bcf00cd68f9621b8c112d4d6fd27aec01
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459016"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556397"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl 類別
 
-提供實作[IDBCreateCommand](/previous-versions/windows/desktop/ms711625)介面。
+提供實作[IDBCreateCommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms711625(v=vs.85))介面。
 
 ## <a name="syntax"></a>語法
 
@@ -62,14 +62,14 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 ### <a name="syntax"></a>語法
 
 ```cpp
-STDMETHOD(CreateCommand)(IUnknown * pUnkOuter, 
-   REFIID riid, 
+STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
+   REFIID riid,
    IUnknown ** ppvCommand);
 ```
 
 #### <a name="parameters"></a>參數
 
-請參閱[idbcreatecommand:: Createcommand](/previous-versions/windows/desktop/ms709772)中*OLE DB 程式設計人員參考*。
+請參閱[idbcreatecommand:: Createcommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms709772(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 某些參數會對應至*OLE DB 程式設計人員參考*參數中所述的不同名稱的`IDBCreateCommand::CreateCommand`:
 

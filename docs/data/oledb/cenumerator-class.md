@@ -22,27 +22,27 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: c148bdb0a897e19bc3f3aeb7ed40e905073336b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb44af102f08e05edddc2fb692d1e30dd7e31717
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428592"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556669"
 ---
 # <a name="cenumerator-class"></a>CEnumerator 類別
 
-使用 OLE DB 列舉值物件，它會公開[ISourcesRowset](/previous-versions/windows/desktop/ms715969)介面，以傳回描述所有的資料來源和列舉值的資料列集。
+使用 OLE DB 列舉值物件，它會公開[ISourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms715969(v=vs.85))介面，以傳回描述所有的資料來源和列舉值的資料列集。
 
 ## <a name="syntax"></a>語法
 
 ```cpp
-class CEnumerator : 
+class CEnumerator :
    public CAccessorRowset< CAccessor <CEnumeratorAccessor >>
 ```
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atldbcli.h
+**標題:** atldbcli.h
 
 ## <a name="members"></a>成員
 
@@ -79,7 +79,7 @@ bool Find(TCHAR* szSearchName) throw();
 
 ### <a name="remarks"></a>備註
 
-此名稱會對應到`SOURCES_NAME`隸屬[ISourcesRowset](/previous-versions/windows/desktop/ms715969)介面。
+此名稱會對應到`SOURCES_NAME`隸屬[ISourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms715969(v=vs.85))介面。
 
 ## <a name="getmoniker"></a> Cenumerator:: Getmoniker
 
@@ -90,7 +90,7 @@ bool Find(TCHAR* szSearchName) throw();
 ```cpp
 HRESULT GetMoniker(LPMONIKER* ppMoniker) const throw();
 
-HRESULT GetMoniker(LPMONIKER* ppMoniker, 
+HRESULT GetMoniker(LPMONIKER* ppMoniker,
    LPCTSTR lpszDisplayName) const throw();
 ```
 
@@ -108,7 +108,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker, 
 
 ## <a name="open"></a> Cenumerator:: Open
 
-會將繫結之 moniker 的列舉值，如果其中一個指定，則擷取資料列集列舉值，藉由呼叫[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200)。
+會將繫結之 moniker 的列舉值，如果其中一個指定，則擷取資料列集列舉值，藉由呼叫[isourcesrowset:: Getsourcesrowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85))。
 
 ### <a name="syntax"></a>語法
 

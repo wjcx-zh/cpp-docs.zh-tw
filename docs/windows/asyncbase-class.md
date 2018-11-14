@@ -25,7 +25,6 @@ f1_keywords:
 - async/Microsoft::WRL::AsyncBase::put_Id
 - async/Microsoft::WRL::AsyncBase::PutOnComplete
 - async/Microsoft::WRL::AsyncBase::PutOnProgress
-- async/Microsoft::WRL::AsyncBase::Start
 - async/Microsoft::WRL::AsyncBase::TryTransitionToCompleted
 - async/Microsoft::WRL::AsyncBase::TryTransitionToError
 helpviewer_keywords:
@@ -51,16 +50,15 @@ helpviewer_keywords:
 - Microsoft::WRL::AsyncBase::put_Id method
 - Microsoft::WRL::AsyncBase::PutOnComplete method
 - Microsoft::WRL::AsyncBase::PutOnProgress method
-- Microsoft::WRL::AsyncBase::Start method
 - Microsoft::WRL::AsyncBase::TryTransitionToCompleted method
 - Microsoft::WRL::AsyncBase::TryTransitionToError method
 ms.assetid: 64259b9b-f427-4ffd-a611-e7a2f82362b2
-ms.openlocfilehash: 71839fbea4300560dbf2b9617fe7b8d3864676b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19c4779dbd4d39260d5fe03967e8c0a530a75026
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599663"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556916"
 ---
 # <a name="asyncbase-class"></a>AsyncBase 類別
 
@@ -116,7 +114,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 [Asyncbase:: Put_id](#put-id)                 | 設定非同步作業的控制代碼。
 [Asyncbase:: Putoncomplete](#putoncomplete)   | 指定的值設定完成事件處理常式的位址。
 [Asyncbase:: Putonprogress](#putonprogress)   | 指定的值設定進度事件處理常式的位址。
-[Asyncbase:: Start](#start)                   | 啟動非同步作業。
+
 
 ### <a name="protected-methods"></a>保護方法
 
@@ -130,6 +128,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 [Asyncbase:: Oncancel](#oncancel)                                             | 當在衍生類別中覆寫時，取消非同步作業。
 [Asyncbase:: Onclose](#onclose)                                               | 當在衍生類別中覆寫時，會關閉的非同步作業。
 [Asyncbase:: Onstart](#onstart)                                               | 當在衍生類別中覆寫時，會啟動非同步作業。
+[Asyncbase:: Start](#start)                                                   | 啟動非同步作業。
 [Asyncbase:: Trytransitiontocompleted](#trytransitiontocompleted)             | 表示目前的非同步作業是否已完成。
 [Asyncbase:: Trytransitiontoerror](#trytransitiontoerror)                     | 指出指定的錯誤程式碼是否可以修改的內部錯誤狀態。
 
@@ -504,7 +503,7 @@ S_OK 如果作業啟動或已啟動;否則，E_ILLEGAL_STATE_CHANGE。
 
 ### <a name="remarks"></a>備註
 
-`Start()` 預設實作`IAsyncInfo::Start`，並不執行任何實際工作。 若要實際啟動非同步作業，覆寫`OnStart()`純虛擬方法。
+`Start()` 是受保護的方法，不是外部可見因為非同步作業 「 經常性開始 」，然後傳回給呼叫端。
 
 ## <a name="trytransitiontocompleted"></a>Asyncbase:: Trytransitiontocompleted
 

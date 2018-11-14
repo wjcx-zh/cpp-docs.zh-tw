@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-ms.openlocfilehash: 44123e3cbad3115dc990cd8dc9f1316994560656
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6b7b7b3d1cb5ed9f3cd2b3655b45aaac8d8d195
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580917"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524920"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>將 Windows Form 使用者控制項裝載成 MFC 對話方塊
 
@@ -68,7 +68,7 @@ MFC 提供樣板類別[CWinFormsDialog](../mfc/reference/cwinformsdialog-class.m
 
    接下來，您將加入程式碼來監視在 MFC 應用程式從 Windows Forms 上控制項的狀態。
 
-9. 加入 oninitdialog 的處理常式。
+1. 加入 oninitdialog 的處理常式。
 
    顯示**屬性**視窗 (F4)。 在 **類別檢視**，選取 CHostForWinForm。 在 [**屬性**] 視窗中，選取覆寫在 OnInitDialog 的資料列，按一下左邊的資料行，並選取\<新增 >。 這會將下面這一行加入到 chostforwinform.h 中：
 
@@ -76,9 +76,9 @@ MFC 提供樣板類別[CWinFormsDialog](../mfc/reference/cwinformsdialog-class.m
     virtual BOOL OnInitDialog();
     ```
 
-10. 定義 OnInitDialog （在 CHostForWinForm.cpp 中) 如下所示：
+1. 定義 OnInitDialog （在 CHostForWinForm.cpp 中) 如下所示：
 
-    ```
+    ```cpp
     BOOL CHostForWinForm::OnInitDialog() {
        CWinFormsDialog<WindowsControlLibrary1::UserControl1>::OnInitDialog();
        GetControl()->button1->Click += MAKE_DELEGATE(System::EventHandler, OnButton1);
@@ -86,9 +86,9 @@ MFC 提供樣板類別[CWinFormsDialog](../mfc/reference/cwinformsdialog-class.m
     }
     ```
 
-11. 接下來，加入 OnButton1 處理常式。 將下列幾行新增到 CHostForWinForm.h 中 CHostForWinForm 類別的 public 區段：
+1. 接下來，加入 OnButton1 處理常式。 將下列幾行新增到 CHostForWinForm.h 中 CHostForWinForm 類別的 public 區段：
 
-    ```
+    ```cpp
     virtual void OnButton1( System::Object^ sender, System::EventArgs^ e );
 
     BEGIN_DELEGATE_MAP( CHostForWinForm )
@@ -98,41 +98,41 @@ MFC 提供樣板類別[CWinFormsDialog](../mfc/reference/cwinformsdialog-class.m
 
    在 CHostForWinForm.cpp 中加入下列定義：
 
-    ```
+    ```cpp
     void CHostForWinForm::OnButton1( System::Object^ sender, System::EventArgs^ e )
     {
        System::Windows::Forms::MessageBox::Show("test");
     }
     ```
 
-12. 建置並執行專案。 當您按一下按鈕，也就是 Windows Form 上，則會執行 MFC 應用程式中的程式碼。
+1. 建置並執行專案。 當您按一下按鈕，也就是 Windows Form 上，則會執行 MFC 應用程式中的程式碼。
 
-   接下來您將加入從 MFC 程式碼將值顯示在文字方塊中，Windows Form 上的程式碼。
+    接下來您將加入從 MFC 程式碼將值顯示在文字方塊中，Windows Form 上的程式碼。
 
-13. 在 CHostForWinForm.h 中 CHostForWinForm 類別的 public 區段，新增下列宣告：
+1. 在 CHostForWinForm.h 中 CHostForWinForm 類別的 public 區段，新增下列宣告：
 
-    ```
+    ```cpp
     CString m_sEditBoxOnWinForm;
     ```
 
-14. 在 chostforwinform.cpp 的 DoDataExchange 定義中，加入函式結尾中的下列三行：
+1. 在 chostforwinform.cpp 的 DoDataExchange 定義中，加入函式結尾中的下列三行：
 
-    ```
+    ```cpp
     if (pDX->m_bSaveAndValidate)
        m_sEditBoxOnWinForm = CString( GetControl()->textBox1->Text);
     else
        GetControl()->textBox1->Text = gcnew System::String(m_sEditBoxOnWinForm);
     ```
 
-15. 在 chostforwinform.cpp 的 OnButton1 定義中，加入函式結尾中的下列三行：
+1. 在 chostforwinform.cpp 的 OnButton1 定義中，加入函式結尾中的下列三行：
 
-    ```
+    ```cpp
     this->UpdateData(TRUE);
     System::String ^ z = gcnew System::String(m_sEditBoxOnWinForm);
     System::Windows::Forms::MessageBox::Show(z);
     ```
 
-16. 建置並執行專案。
+1. 建置並執行專案。
 
 ## <a name="see-also"></a>另請參閱
 

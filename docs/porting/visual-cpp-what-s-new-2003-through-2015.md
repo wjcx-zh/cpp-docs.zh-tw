@@ -2,12 +2,12 @@
 title: 從 2003 到 2015 的 Visual C++ 新功能
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 7066b5bd8ea0fcd7cc7cda34ca05588199cbaef5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d79406e07b8839e196f15d9bc3aed96cbc3dca8
+ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499615"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51520172"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>從 2003 到 2015 的 Visual C++ 新功能
 
@@ -260,7 +260,7 @@ ms.locfileid: "50499615"
    例如，假設您的程式碼同時定義 **placement new** 和 **placement delete**：
 
    ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
    ```
 
@@ -306,15 +306,15 @@ ms.locfileid: "50499615"
    現在與標準更一致。 舊版的編譯器會產生匿名等位的明確建構函式和解構函式。 這些已在 Visual Studio 2015 中刪除。
 
    ```cpp
-    struct S {
-      S();
-     };
+   struct S {
+      S();
+   };
 
-     union {
-      struct {
-       S s;
-      };
-     } u; // C2280
+   union {
+      struct {
+         S s;
+      };
+   } u; // C2280
    ```
 
    前述程式碼會在 Visual Studio 2015 產生下列錯誤：
@@ -328,14 +328,14 @@ ms.locfileid: "50499615"
 
    ```cpp
     struct S {
-    // Provide a default constructor by adding an empty function body.
-    S() {}
+       // Provide a default constructor by adding an empty function body.
+       S() {}
     };
 
     union {
-    struct {
-    S s;
-    };
+       struct {
+          S s;
+       };
     } u;
    ```
 
@@ -552,7 +552,7 @@ ms.locfileid: "50499615"
     }
    ```
 
-  -或-
+  \-或-
 
    ```cpp
     class base;  // as above
@@ -586,7 +586,7 @@ ms.locfileid: "50499615"
     void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // removed 'static inline'
    ```
 
-      Additionally, although the compiler doesn't give a specific diagnostic, inline operator new is considered ill-formed.
+   此外，雖然編譯器不提供特定的診斷，但內嵌運算子 new 會被視為語式錯誤。
 
 - **對非類別類型呼叫 'operator *type*()' (使用者定義的轉換)**：舊版編譯器允許對非類別類型呼叫 'operator *type*()'，但以無訊息方式略過。 這種舊行為造成的風險是，會產生無訊息的錯誤程式碼，導致無法預期的執行階段行為。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C2228。
 
@@ -1673,10 +1673,10 @@ Microsoft Visual C++ 編譯器支援下列 ISO C++11 語言功能：
 - 限定範圍的列舉支援。 現在支援 C++ 列舉類別列舉索引鍵。 下列程式碼示範此列舉索引鍵與前一個列舉行為的差異。
 
    ```cpp
-enum class Element { Hydrogen, Helium, Lithium, Beryllium };
-void func1(Element e);
-func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
-func1(Element::Helium); // OK
+  enum class Element { Hydrogen, Helium, Lithium, Beryllium };
+  void func1(Element e);
+  func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
+  func1(Element::Helium); // OK
    ```
 
 ### <a name="windows-runtime-app-development-support"></a>Windows 執行階段應用程式開發支援

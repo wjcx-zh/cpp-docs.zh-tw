@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: cf1f519521d86f2b7782fb93ed3b4aca4ecd5b24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b6713a80244d7063baac2c75ffead76fe93facc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643439"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326495"
 ---
 # <a name="iterators"></a>迭代器
 
@@ -41,7 +41,7 @@ for (auto num : vec)
 
 迭代器有五種分類。 為了增加能力，在這裡將分類為：
 
-- **輸出**。 *輸出迭代器*`X`可以逐一執行序列透過**++** 運算子，而且可以使用一次，寫入項目 **&ast;** 運算子。
+- **輸出**。 *輸出迭代器*`X`可以逐一執行序列透過**++** 運算子，而且可以使用一次，寫入項目 __\*__ 運算子。
 
 - **輸入**。 *輸入迭代器*`X`可以逐一執行序列使用 + + 運算子，並可以元素無數次使用讀取**&ast;** 運算子。 您可以使用，以便比較輸入迭代器**++** 並 **！ =** 運算子。 遞增輸入迭代器的任何複本之後，就沒有其他複本可以安全地進行比較、取值 (Dereference) 或在以後遞增。
 

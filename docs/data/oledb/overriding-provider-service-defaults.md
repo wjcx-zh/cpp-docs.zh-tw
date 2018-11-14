@@ -5,16 +5,16 @@ helpviewer_keywords:
 - service providers [OLE DB]
 - OLE DB services [OLE DB], overriding defaults
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
-ms.openlocfilehash: a9f8eb1c96c40336f39f14fe1a0ee29d60efd003
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
-ms.translationtype: HT
+ms.openlocfilehash: 9f845834b844c16bf2820a295768696e8f6a6526
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265213"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556292"
 ---
 # <a name="overriding-provider-service-defaults"></a>覆寫提供者服務預設值
 
-OLEDB_SERVICES 的提供者的登錄值會傳回的預設值[DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898)初始化資料來源物件的屬性。
+OLEDB_SERVICES 的提供者的登錄值會傳回的預設值[DBPROP_INIT_OLEDBSERVICES](https://docs.microsoft.com/previous-versions/windows/desktop/ms716898(v=vs.85))初始化資料來源物件的屬性。
 
 只要存在的登錄項目，會彙總提供者的物件。 使用者可以覆寫提供者的預設設定初始化之前 DBPROP_INIT_OLEDBSERVICES 屬性值已啟用的服務。 若要啟用或停用特定的服務，使用者會取得 DBPROP_INIT_OLEDBSERVICES 屬性的目前值、 設定或清除的位元為特定的屬性來啟用或停用，以及重設屬性。 直接在 OLE DB 或 ado 傳遞的連接字串中，就可以設定 DBPROP_INIT_OLEDBSERVICES 或`IDataInitialize::GetDatasource`。 啟用/停用個別的服務對應的值詳列於下表。
 
@@ -30,7 +30,7 @@ OLEDB_SERVICES 的提供者的登錄值會傳回的預設值[DBPROP_INIT_OLEDBSE
 
 ## <a name="see-also"></a>另請參閱
 
-[資源集區](/previous-versions/windows/desktop/ms713655)<br/>
-[如何取用者會使用資源集區](/previous-versions/windows/desktop/ms715907)<br/>
-[提供者如何有效地使用資源集區](/previous-versions/windows/desktop/ms714906)<br/>
+[資源集區](https://docs.microsoft.com/previous-versions/windows/desktop/ms713655(v=vs.85))<br/>
+[如何取用者會使用資源集區](https://docs.microsoft.com/previous-versions/windows/desktop/ms715907(v=vs.85))<br/>
+[提供者如何有效地使用資源集區](https://docs.microsoft.com/previous-versions/windows/desktop/ms714906(v=vs.85))<br/>
 [啟用和停用 OLE DB 服務](../../data/oledb/enabling-and-disabling-ole-db-services.md)<br/>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: def97b2c-b5a6-445f-afeb-308050fd4852
-ms.openlocfilehash: 8430c1bfc9716c760a1f57060d862975bf84e799
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8341cf715c96783880fd83f1b8fbb197dbff6046
+ms.sourcegitcommit: b08ddf79ea76369c388173913e4e8f6fd8ad02d5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639787"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51830474"
 ---
 # <a name="data-access-programming-mfcatl"></a>Data Access Programming (MFC/ATL)
 
@@ -21,7 +21,7 @@ Visual C++ 多年來提供了數種使用資料庫的方式。 2011 年，Micros
 
 OLE DB 是以 COM 規格為基礎的低階高效 API，只有 Windows 提供支援。 如果您的程式正在存取[連結的伺服器](/sql/relational-databases/linked-servers/linked-servers-database-engine)，請使用 OLE DB。 ATL 提供 OLE DB 範本，讓您更容易建立自訂的 OLE DB 提供者和取用者。 OLE DB 最新版本隨附於 SQL Native Client 11。
 
-如果舊版應用程式使用 OLE DB 或更高階的 ADO 介面連接到 SQL Server，而您存取的不是連結的伺服器，您應該考慮於近期移轉到 ODBC。 如果您不需要跨平台可攜性或最新的 SQL Server 功能，您可能可以使用 Microsoft OLE DB Provider for ODBC (MSDASQL)。  MSDASQL 讓建置在 OLE DB 和 ADO (在內部使用 OLEDB) 上的應用程式透過 ODBC 驅動程式存取資料來源。 和所有的轉譯層一樣，MSDASQL 會影響資料庫效能。 您應該測試以判斷此影響對您的應用程式是否太過。 MSDASQL 隨附於 Windows 作業系統，而 Windows Server 2008 和 Windows Vista SP1 是第一批包含此技術 64 位元版本的 Windows 版本。
+如果舊版應用程式使用 OLE DB 或更高階的 ADO 介面連接到 SQL Server，而您存取的不是連結的伺服器，您應該考慮於近期移轉到 ODBC。 如果您不需要跨平台可攜性或最新的 SQL Server 功能，您可能可以使用 Microsoft OLE DB Provider for ODBC (MSDASQL)。  MSDASQL 讓建置在 OLE DB 和 ADO (在內部使用 OLEDB) 上的應用程式透過 ODBC 驅動程式存取資料來源。 如同所有的轉譯層，MSDASQL 會影響資料庫效能。 您應該測試以判斷是否影響大量應用程式。 MSDASQL 隨附於 Windows 作業系統，而 Windows Server 2008 和 Windows Vista SP1 是第一批包含此技術 64 位元版本的 Windows 版本。
 
 將 OLE DB 和 ODBC 驅動程式封裝在單一 DLL 的 SQL Native Client 元件 (SNAC)，已被 ODBC 應用程式取代。 SNAC 的 SQL Server 2012 版本 (SQLNCLI11.DLL) 隨附於 SQL Server 2016，因為其他的 SQL Server 元件都依存於它。 但是，透過 ODBC 連接到 SQL Server 或 Azure SQL Database 的新 C++ 應用程式，都應該使用[最新版的 ODBC 驅動程式](https://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server)。 如需詳細資訊，請參閱 [SQL Server Native Client Programming](/sql/relational-databases/native-client/sql-server-native-client-programming) (SQL Server Native Client 程式設計)
 

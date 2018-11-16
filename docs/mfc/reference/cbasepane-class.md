@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: eef6c6e08fec3b0ee89046aae19db9c23849f91f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
-ms.translationtype: HT
+ms.openlocfilehash: 1de59e4404960ed99dedaadfa576168bc31da444
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525414"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694786"
 ---
 # <a name="cbasepane-class"></a>CBasePane 類別
 
@@ -1566,7 +1566,7 @@ virtual HDWP MoveWindow(
 
 ### <a name="remarks"></a>備註
 
-如果您傳遞 NULL 做*hdwp*參數，這個方法通常移動的視窗。 如果您傳遞的控制代碼，這個方法會執行以延後的視窗的移動。 您可以藉由呼叫來取得控制代碼[BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672)或將儲存的先前呼叫這個方法傳回的值。
+如果您傳遞 NULL 做*hdwp*參數，這個方法通常移動的視窗。 如果您傳遞的控制代碼，這個方法會執行以延後的視窗的移動。 您可以藉由呼叫來取得控制代碼[BeginDeferWindowPos](/windows/desktop/api/winuser/nf-winuser-begindeferwindowpos)或將儲存的先前呼叫這個方法傳回的值。
 
 ##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent
 

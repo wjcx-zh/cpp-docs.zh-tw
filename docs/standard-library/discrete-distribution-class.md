@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 5bf5deec5820976c742efa490bf02d0c0d830a09
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 7ad375c14e9034a55d280a2927d6ef00f098ddbc
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464892"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693903"
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution 類別
 
@@ -230,7 +230,7 @@ explicit discrete_distribution(const param_type& parm);
 
 如果是具有 *firstW* 和 *lastW* 參數的迭代器範圍建構函式，其會使用加權值來建構分佈物件，這些加權值是取自間隔序列 [*firstW*, *lastW*) 的迭代器。
 
-如果是具有 *weightlist* 參數的初始設定式清單建構函式，其會使用來自初始設定式清單 *weightlist* 的加權來建構分佈物件。
+初始設定式清單建構函式*weightlist*參數建構分佈物件具有來自初始設定式清單的加權*weightlist*。
 
 如果是具有 *count*、*low*、*high* 和 *weightfunc* 參數的建構函式，其會根據下列規則建構初始化的分佈物件：
 

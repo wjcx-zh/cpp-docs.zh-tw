@@ -36,12 +36,12 @@ helpviewer_keywords:
 - GetRowset method
 - GetSchemas method
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
-ms.openlocfilehash: 0469a41fce07dcd0a8a26fdc630a022399f9b455
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9b0c5319c7eacbb2b5b4d40d5a936e680e82a89
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535777"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556929"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl 類別
 
@@ -82,15 +82,15 @@ class ATL_NO_VTABLE IDBSchemaRowsetImpl : public IDBSchemaRowset
 
 ## <a name="remarks"></a>備註
 
-此類別實作 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) 介面和範本化的建立者函式 [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md)。
+此類別實作 [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) 介面和範本化的建立者函式 [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md)。
 
-OLE DB 使用結構描述資料列集，傳回提供者內部資料的相關資料。 這類資料通常稱為「中繼資料」。 根據預設，提供者必須一律支援`DBSCHEMA_TABLES`， `DBSCHEMA_COLUMNS`，並`DBSCHEMA_PROVIDER_TYPES`所述，在[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686)中*OLE DB 程式設計人員參考*。 結構描述資料列集是在結構描述對應中指定。 如需結構描述對應項目的資訊，請參閱 [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)。
+OLE DB 使用結構描述資料列集，傳回提供者內部資料的相關資料。 這類資料通常稱為「中繼資料」。 根據預設，提供者必須一律支援`DBSCHEMA_TABLES`， `DBSCHEMA_COLUMNS`，並`DBSCHEMA_PROVIDER_TYPES`所述，在[IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))中*OLE DB 程式設計人員參考*。 結構描述資料列集是在結構描述對應中指定。 如需結構描述對應項目的資訊，請參閱 [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)。
 
 [ATL 物件精靈] 中的 [OLE DB 提供者精靈] 會自動為您專案中的結構描述資料列集產生程式碼 (根據預設，此精靈支援上述的必要結構描述資料列集)。當您使用 [ATL 物件精靈] 建立消費者時，此精靈會使用結構描述資料列集，將正確的資料繫結至提供者。 如果您未實作結構描述資料列集以提供正確的中繼資料，此精靈將不會繫結正確的資料。
 
 如需如何在提供者內支援結構描述資料列集的資訊，請參閱 [支援結構描述資料列集](../../data/oledb/supporting-schema-rowsets.md)。
 
-如需結構描述資料列集的詳細資訊，請參閱＜OLE DB 程式設計人員參考＞ [](/previous-versions/windows/desktop/ms712921) 中的 *Schema Rowsets*(結構描述資料列集)。
+如需結構描述資料列集的詳細資訊，請參閱 *＜OLE DB 程式設計人員參考＞* 中的 [Schema Rowsets(結構描述資料列集)](https://docs.microsoft.com/previous-versions/windows/desktop/ms712921(v=vs.85))。
 
 ## <a name="checkrestrictions"></a> Idbschemarowsetimpl:: Checkrestrictions
 
@@ -100,7 +100,7 @@ OLE DB 使用結構描述資料列集，傳回提供者內部資料的相關資�
 
 ```cpp
 HRESULT CheckRestrictions(REFGUID rguidSchema,
-   ULONG cRestrictions,  const VARIANT rgRestrictions[]);
+   ULONG cRestrictions,  const VARIANT rgRestrictions[]);
 ```
 
 #### <a name="parameters"></a>參數
@@ -120,7 +120,7 @@ HRESULT CheckRestrictions(REFGUID rguidSchema,
 
 `CheckRestrictions` 如果正在呼叫取用者會決定[GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md)的正確限制和正確限制類型 (例如，字串 VT_BSTR) 提供者支援。 它也會判斷是否支援正確的限制數目。 根據預設， `CheckRestrictions` 會透過 [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) 呼叫，來詢問提供者有關它在指定資料列集上支援的限制。 接著，它會將來自消費者的限制與提供者支援的限制進行比較，以判斷其為成功或失敗。
 
-如需有關結構描述資料列集的詳細資訊，請參閱 < [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686)中*OLE DB 程式設計人員參考*Windows SDK 中。
+如需有關結構描述資料列集的詳細資訊，請參閱 < [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))中*OLE DB 程式設計人員參考*Windows SDK 中。
 
 ## <a name="createschemarowset"></a> Idbschemarowsetimpl:: Createschemarowset
 
@@ -158,7 +158,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
 [in] 要設定的屬性集數目。
 
 *rgPropertySets*<br/>
-[in] 指定要設定之屬性的 [DBPROPSET](/previous-versions/windows/desktop/ms714367) 結構陣列。
+[in] 指定要設定之屬性的 [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) 結構陣列。
 
 *ppRowset*<br/>
 [out]外寄`IUnknown`要求*riid*。 這`IUnknown`是結構描述資料列集物件上的介面。
@@ -195,7 +195,7 @@ void SetRestrictions(ULONG cRestrictions,
 [in] 要擷取限制之目標結構描述資料列集的 GUID 陣列。 每個陣列元素包含一個結構描述資料列集的 GUID (例如 `DBSCHEMA_TABLES`)。
 
 *rgRestrictions*<br/>
-[in] 要設定之限制值的長度 *cRestrictions* 陣列。 每個元素會對應至 GUID 所識別之結構描述資料列集上的限制。 如果提供者不支援結構描述資料列集，此元素會設定為零。 否則， **ULONG** 值會包含代表該結構描述資料列集支援之限制的位元遮罩。 在其的限制對應至特定的結構描述資料列集的詳細資訊，請參閱結構描述資料列集 Guid 的資料表中[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686)中*OLE DB 程式設計人員參考*在 Windows 中SDK。
+[in] 要設定之限制值的長度 *cRestrictions* 陣列。 每個元素會對應至 GUID 所識別之結構描述資料列集上的限制。 如果提供者不支援結構描述資料列集，此元素會設定為零。 否則， **ULONG** 值會包含代表該結構描述資料列集支援之限制的位元遮罩。 在其的限制對應至特定的結構描述資料列集的詳細資訊，請參閱結構描述資料列集 Guid 的資料表中[IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))中*OLE DB 程式設計人員參考*在 Windows 中SDK。
 
 ### <a name="remarks"></a>備註
 
@@ -207,7 +207,7 @@ void SetRestrictions(ULONG cRestrictions,
 
 如需支援結構描述資料列集的提供者範例，請參閱 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) 範例。
 
-如需有關結構描述資料列集的詳細資訊，請參閱 < [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686)中*OLE DB 程式設計人員參考*Windows SDK 中。
+如需有關結構描述資料列集的詳細資訊，請參閱 < [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))中*OLE DB 程式設計人員參考*Windows SDK 中。
 
 ## <a name="getrowset"></a> Idbschemarowsetimpl:: Getrowset
 
@@ -247,7 +247,7 @@ STDMETHOD (GetRowset)(IUnknown *pUnkOuter,
 [in] 要設定的屬性集數目。
 
 *rgPropertySets*<br/>
-[in/out] 要在新建立的結構描述資料列集上設定的 [DBPROPSET](/previous-versions/windows/desktop/ms714367) 結構陣列。
+[in/out] 要在新建立的結構描述資料列集上設定的 [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) 結構陣列。
 
 *ppRowset*<br/>
 [out] 新建立之結構描述資料列集上所要求的介面指標。
@@ -256,7 +256,7 @@ STDMETHOD (GetRowset)(IUnknown *pUnkOuter,
 
 此方法需要使用者具有工作階段類別中的結構描述對應。 使用結構描述對應資訊`GetRowset`會建立指定資料列集物件，如果*rguidSchema*參數等於其中一個對應項目 Guid。 如需對應項目的說明，請參閱 [SCHEMA_ENTRY](../../data/oledb/schema-entry.md) 。
 
-請參閱[idbschemarowset:: Getrowset](/previous-versions/windows/desktop/ms722634) Windows SDK 中。
+請參閱[idbschemarowset:: Getrowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms722634(v=vs.85)) Windows SDK 中。
 
 ## <a name="getschemas"></a> Idbschemarowsetimpl:: Getschemas
 
@@ -283,7 +283,7 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
 
 ### <a name="remarks"></a>備註
 
-此方法會傳回提供者支援之所有結構描述資料列集的陣列。 請參閱[idbschemarowset:: Getschemas](/previous-versions/windows/desktop/ms719605) Windows SDK 中。
+此方法會傳回提供者支援之所有結構描述資料列集的陣列。 請參閱[idbschemarowset:: Getschemas](https://docs.microsoft.com/previous-versions/windows/desktop/ms719605(v=vs.85)) Windows SDK 中。
 
 此函式的實作需要使用者具有工作階段類別中的結構描述對應。 藉由使用此結構描述對應資訊，它就能接著以對應中結構描述的 GUID 陣列來回應。 這會是提供者支援的結構描述。
 

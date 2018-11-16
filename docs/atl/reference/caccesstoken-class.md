@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: faa715e8f5333a717689d281ccb89bd2369e9929
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8fadb6825bbdc970e952d2ea6c26a27b4837dfc
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661262"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694526"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 類別
 
@@ -254,7 +254,7 @@ bool CreatePrimaryToken(
 
 ### <a name="remarks"></a>備註
 
-`CreatePrimaryToken` 呼叫[DuplicateTokenEx](https://msdn.microsoft.com/library/windows/desktop/aa446617)來建立新的主要權杖。
+`CreatePrimaryToken` 呼叫[DuplicateTokenEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex)來建立新的主要權杖。
 
 ##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser
 
@@ -289,7 +289,7 @@ bool CreateProcessAsUser(
 指標[STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa)結構，指定新的處理序的主視窗的顯示方式。
 
 *dwCreationFlags*<br/>
-指定控制項的優先權類別] 和 [建立處理程序的其他旗標。 請參閱 Win32 函式[CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429)旗標的清單。
+指定控制項的優先權類別] 和 [建立處理程序的其他旗標。 請參閱 Win32 函式[CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera)旗標的清單。
 
 *bLoadProfile*<br/>
 如果為 TRUE，會載入使用者設定檔[LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea)。
@@ -312,7 +312,7 @@ bool CreateProcessAsUser(
 
 ### <a name="remarks"></a>備註
 
-`CreateProcessAsUser` 會使用`CreateProcessAsUser`Win32 函式來建立新的處理序中所表示的使用者的安全性內容執行`CAccessToken`物件。 請參閱 popis [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429)函式所需的參數的完整討論。
+`CreateProcessAsUser` 會使用`CreateProcessAsUser`Win32 函式來建立新的處理序中所表示的使用者的安全性內容執行`CAccessToken`物件。 請參閱 popis [CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera)函式所需的參數的完整討論。
 
 若要成功，這個方法`CAccessToken`（除非它是限制的權杖），物件必須保留 AssignPrimaryToken 和 IncreaseQuota 權限。
 
@@ -348,7 +348,7 @@ A`CTokenPrivileges`物件，指定要刪除權限限制的權杖中。 預設會
 
 ### <a name="remarks"></a>備註
 
-`CreateRestrictedToken` 會使用[CreateRestrictedToken](https://msdn.microsoft.com/library/windows/desktop/aa446583)來建立新的 Win32 函式`CAccessToken`物件，但有限制。
+`CreateRestrictedToken` 會使用[CreateRestrictedToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken)來建立新的 Win32 函式`CAccessToken`物件，但有限制。
 
 > [!IMPORTANT]
 >  使用時`CreateRestrictedToken`，請確認下列事項： 現有的語彙基元且有效 （未由使用者輸入） 和*SidsToDisable*並*PrivilegesToDelete*都有效 （且無法由使用者輸入）。 如果方法傳回 FALSE，則拒絕功能。

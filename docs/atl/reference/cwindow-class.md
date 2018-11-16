@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 59258864eddb251b24f2e191d309707abf3736a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ce3c93c7cb8c26ae6008516c93faa8c8a5b37fb
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441102"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694591"
 ---
 # <a name="cwindow-class"></a>CWindow 類別
 
@@ -388,7 +388,7 @@ UINT ArrangeIconicWindows() throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[ArrangeIconicWindows](https://msdn.microsoft.com/library/windows/desktop/ms632671) Windows SDK 中。
+請參閱[ArrangeIconicWindows](/windows/desktop/api/winuser/nf-winuser-arrangeiconicwindows) Windows SDK 中。
 
 ##  <a name="attach"></a>  CWindow::Attach
 
@@ -433,7 +433,7 @@ BOOL BringWindowToTop() throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673) Windows SDK 中。
+請參閱[BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop) Windows SDK 中。
 
 ### <a name="example"></a>範例
 
@@ -509,7 +509,7 @@ HWND ChildWindowFromPoint(POINT point) const throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[ChildWindowFromPoint](https://msdn.microsoft.com/library/windows/desktop/ms632676) Windows SDK 中。
+請參閱[ChildWindowFromPoint](/windows/desktop/api/winuser/nf-winuser-childwindowfrompoint) Windows SDK 中。
 
 ##  <a name="childwindowfrompointex"></a>  CWindow::ChildWindowFromPointEx
 
@@ -578,7 +578,7 @@ HWND Create(
 [in]類型的變數[_U_MENUorID](../../atl/reference/u-menuorid-class.md)指定功能表或視窗識別項的控制代碼。 預設值是 0U。
 
 *lpCreateParam*<br/>
-中包含的視窗建立資料指標[CREATESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632603)結構。
+中包含的視窗建立資料指標[CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -813,7 +813,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE) throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[EnableWindow](https://msdn.microsoft.com/library/windows/desktop/ms646291) Windows SDK 中。
+請參閱[EnableWindow](/windows/desktop/api/winuser/nf-winuser-enablewindow) Windows SDK 中。
 
 ### <a name="example"></a>範例
 
@@ -857,7 +857,7 @@ BOOL GetClientRect(LPRECT lpRect) const throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[GetClientRect](https://msdn.microsoft.com/library/windows/desktop/ms633503) Windows SDK 中。
+請參閱[GetClientRect](/windows/desktop/api/winuser/nf-winuser-getclientrect) Windows SDK 中。
 
 ### <a name="example"></a>範例
 
@@ -1109,7 +1109,7 @@ HWND GetLastActivePopup() const throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[GetLastActivePopup](https://msdn.microsoft.com/library/windows/desktop/ms633507) Windows SDK 中。
+請參閱[GetLastActivePopup](/windows/desktop/api/winuser/nf-winuser-getlastactivepopup) Windows SDK 中。
 
 ##  <a name="getmenu"></a>  CWindow::GetMenu
 
@@ -1157,7 +1157,7 @@ HWND GetParent() const throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[GetParent](https://msdn.microsoft.com/library/windows/desktop/ms633510) Windows SDK 中。
+請參閱[GetParent](/windows/desktop/api/winuser/nf-winuser-getparent) Windows SDK 中。
 
 ### <a name="example"></a>範例
 
@@ -1268,7 +1268,7 @@ HWND GetTopWindow() const throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[GetTopWindow](https://msdn.microsoft.com/library/windows/desktop/ms633514) Windows SDK 中。
+請參閱[GetTopWindow](/windows/desktop/api/winuser/nf-winuser-gettopwindow) Windows SDK 中。
 
 ### <a name="example"></a>範例
 
@@ -1363,7 +1363,7 @@ LONG_PTR GetWindowLongPtr(int nIndex) const throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[GetWindowLongPtr](https://msdn.microsoft.com/library/windows/desktop/ms633585) Windows SDK 中。
+請參閱[GetWindowLongPtr](/windows/desktop/api/winuser/nf-winuser-getwindowlongptra) Windows SDK 中。
 
 ### <a name="remarks"></a>備註
 
@@ -1384,7 +1384,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT FAR* lpwndpl) const throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[GetWindowPlacement](https://msdn.microsoft.com/library/windows/desktop/ms633518) Windows SDK 中。
+請參閱[GetWindowPlacement](/windows/desktop/api/winuser/nf-winuser-getwindowplacement) Windows SDK 中。
 
 ##  <a name="getwindowprocessid"></a>  CWindow::GetWindowProcessID
 
@@ -1396,7 +1396,7 @@ DWORD GetWindowProcessID() throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[GetWindowThreadProcessID](https://msdn.microsoft.com/library/windows/desktop/ms633522) Windows SDK 中。
+請參閱[GetWindowThreadProcessID](/windows/desktop/api/winuser/nf-winuser-getwindowthreadprocessid) Windows SDK 中。
 
 ### <a name="example"></a>範例
 
@@ -1412,7 +1412,7 @@ BOOL GetWindowRect(LPRECT lpRect) const throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[GetWindowRect](https://msdn.microsoft.com/library/windows/desktop/ms633519) Windows SDK 中。
+請參閱[GetWindowRect](/windows/desktop/api/winuser/nf-winuser-getwindowrect) Windows SDK 中。
 
 ##  <a name="getwindowrgn"></a>  CWindow::GetWindowRgn
 
@@ -1470,7 +1470,7 @@ int GetWindowTextLength() const throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[GetWindowTextLength](https://msdn.microsoft.com/library/windows/desktop/ms633521) Windows SDK 中。
+請參閱[GetWindowTextLength](/windows/desktop/api/winuser/nf-winuser-getwindowtextlengtha) Windows SDK 中。
 
 ##  <a name="getwindowthreadid"></a>  CWindow::GetWindowThreadID
 
@@ -1482,7 +1482,7 @@ DWORD GetWindowThreadID() throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[GetWindowThreadProcessID](https://msdn.microsoft.com/library/windows/desktop/ms633522) Windows SDK 中。
+請參閱[GetWindowThreadProcessID](/windows/desktop/api/winuser/nf-winuser-getwindowthreadprocessid) Windows SDK 中。
 
 ### <a name="example"></a>範例
 
@@ -1599,7 +1599,7 @@ BOOL IsChild(const HWND hWnd) const throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[IsChild](https://msdn.microsoft.com/library/windows/desktop/ms633524) Windows SDK 中。
+請參閱[IsChild](/windows/desktop/api/winuser/nf-winuser-ischild) Windows SDK 中。
 
 ##  <a name="isdialogmessage"></a>  CWindow::IsDialogMessage
 
@@ -1635,7 +1635,7 @@ BOOL IsIconic() const throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[IsIconic](https://msdn.microsoft.com/library/windows/desktop/ms633527) Windows SDK 中。
+請參閱[IsIconic](/windows/desktop/api/winuser/nf-winuser-isiconic) Windows SDK 中。
 
 ### <a name="example"></a>範例
 
@@ -1663,7 +1663,7 @@ BOOL IsWindow() throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[IsWindow](https://msdn.microsoft.com/library/windows/desktop/ms633528) Windows SDK 中。
+請參閱[IsWindow](/windows/desktop/api/winuser/nf-winuser-iswindow) Windows SDK 中。
 
 ### <a name="example"></a>範例
 
@@ -1679,7 +1679,7 @@ BOOL IsWindowEnabled() const throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[IsWindowEnabled](https://msdn.microsoft.com/library/windows/desktop/ms646303) Windows SDK 中。
+請參閱[IsWindowEnabled](/windows/desktop/api/winuser/nf-winuser-iswindowenabled) Windows SDK 中。
 
 ### <a name="example"></a>範例
 
@@ -1695,7 +1695,7 @@ BOOL IsWindowVisible() const throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[IsWindowVisible](https://msdn.microsoft.com/library/windows/desktop/ms633530) Windows SDK 中。
+請參閱[IsWindowVisible](/windows/desktop/api/winuser/nf-winuser-iswindowvisible) Windows SDK 中。
 
 ### <a name="example"></a>範例
 
@@ -1711,7 +1711,7 @@ BOOL IsWindowUnicode() throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[IsWindowUnicode](https://msdn.microsoft.com/library/windows/desktop/ms633529) Windows SDK 中。
+請參閱[IsWindowUnicode](/windows/desktop/api/winuser/nf-winuser-iswindowunicode) Windows SDK 中。
 
 ### <a name="example"></a>範例
 
@@ -1727,7 +1727,7 @@ BOOL IsZoomed() const throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[IsZoomed](https://msdn.microsoft.com/library/windows/desktop/ms633531) Windows SDK 中。
+請參閱[IsZoomed](/windows/desktop/api/winuser/nf-winuser-iszoomed) Windows SDK 中。
 
 ##  <a name="killtimer"></a>  CWindow::KillTimer
 
@@ -1739,7 +1739,7 @@ BOOL KillTimer(UINT nIDEvent) throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[KillTimer](https://msdn.microsoft.com/library/windows/desktop/ms644903) Windows SDK 中。
+請參閱[KillTimer](/windows/desktop/api/winuser/nf-winuser-killtimer) Windows SDK 中。
 
 ##  <a name="lockwindowupdate"></a>  CWindow::LockWindowUpdate
 
@@ -1978,7 +1978,7 @@ BOOL PostMessage(
 
 ### <a name="remarks"></a>備註
 
-請參閱[PostMessage](https://msdn.microsoft.com/library/windows/desktop/ms644944) Windows SDK 中。
+請參閱[PostMessage](/windows/desktop/api/winuser/nf-winuser-postmessagea) Windows SDK 中。
 
 傳回而不需等待的執行緒來處理訊息。
 
@@ -2206,7 +2206,7 @@ static LRESULT SendMessage(
 
 ### <a name="remarks"></a>備註
 
-請參閱[SendMessage](https://msdn.microsoft.com/library/windows/desktop/ms644950) Windows SDK 中。
+請參閱[SendMessage](/windows/desktop/api/winuser/nf-winuser-sendmessage) Windows SDK 中。
 
 ### <a name="example"></a>範例
 
@@ -2255,7 +2255,7 @@ BOOL SendNotifyMessage(
 
 ### <a name="remarks"></a>備註
 
-請參閱[SendNotifyMessage](https://msdn.microsoft.com/library/windows/desktop/ms644953) Windows SDK 中。
+請參閱[SendNotifyMessage](/windows/desktop/api/winuser/nf-winuser-sendnotifymessagea) Windows SDK 中。
 
 如果視窗由呼叫的執行緒中，建立`SendNotifyMessage`不會傳回之前的視窗程序已經處理此訊息。 否則，它會立即傳回。
 
@@ -2269,7 +2269,7 @@ HWND SetActiveWindow() throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[SetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646311) Windows SDK 中。
+請參閱[SetActiveWindow](/windows/desktop/api/winuser/nf-winuser-setactivewindow) Windows SDK 中。
 
 ### <a name="example"></a>範例
 
@@ -2285,7 +2285,7 @@ HWND SetCapture() throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[SetCapture](https://msdn.microsoft.com/library/windows/desktop/ms646262) Windows SDK 中。
+請參閱[SetCapture](/windows/desktop/api/winuser/nf-winuser-setcapture) Windows SDK 中。
 
 ##  <a name="setclipboardviewer"></a>  CWindow::SetClipboardViewer
 
@@ -2353,7 +2353,7 @@ HWND SetFocus() throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[SetFocus](https://msdn.microsoft.com/library/windows/desktop/ms646312) Windows SDK 中。
+請參閱[SetFocus](/windows/desktop/api/winuser/nf-winuser-setfocus) Windows SDK 中。
 
 ### <a name="example"></a>範例
 
@@ -2441,7 +2441,7 @@ HWND SetParent(HWND hWndNewParent) throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[SetParent](https://msdn.microsoft.com/library/windows/desktop/ms633541) Windows SDK 中。
+請參閱[SetParent](/windows/desktop/api/winuser/nf-winuser-setparent) Windows SDK 中。
 
 ### <a name="example"></a>範例
 
@@ -2527,7 +2527,7 @@ UINT SetTimer(
 
 ### <a name="remarks"></a>備註
 
-請參閱[SetTimer](https://msdn.microsoft.com/library/windows/desktop/ms644906) Windows SDK 中。
+請參閱[SetTimer](/windows/desktop/api/winuser/nf-winuser-settimer) Windows SDK 中。
 
 ##  <a name="setwindowcontexthelpid"></a>  CWindow::SetWindowContextHelpId
 
@@ -2566,7 +2566,7 @@ LONG_PTR SetWindowLongPtr(int nIndex, LONG_PTR dwNewLong) throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[SetWindowLongPtr](https://msdn.microsoft.com/library/windows/desktop/ms644898) Windows SDK 中。
+請參閱[SetWindowLongPtr](/windows/desktop/api/winuser/nf-winuser-setwindowlongptra) Windows SDK 中。
 
 這個函數會取代`CWindow::SetWindowLong`方法。 若要撰寫與 32 位元和 64 位元版本的 Windows 相容的程式碼，使用`CWindow::SetWindowLongPtr`。
 
@@ -2580,7 +2580,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT FAR* lpwndpl);
 
 ### <a name="remarks"></a>備註
 
-請參閱[SetWindowPlacement](https://msdn.microsoft.com/library/windows/desktop/ms633544) Windows SDK 中。
+請參閱[SetWindowPlacement](/windows/desktop/api/winuser/nf-winuser-setwindowplacement) Windows SDK 中。
 
 ##  <a name="setwindowpos"></a>  CWindow::SetWindowPos
 
@@ -2673,7 +2673,7 @@ BOOL ShowOwnedPopups(BOOL bShow = TRUE) throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[ShowOwnedPopups](https://msdn.microsoft.com/library/windows/desktop/ms633547) Windows SDK 中。
+請參閱[ShowOwnedPopups](/windows/desktop/api/winuser/nf-winuser-showownedpopups) Windows SDK 中。
 
 ##  <a name="showscrollbar"></a>  CWindow::ShowScrollBar
 
@@ -2697,7 +2697,7 @@ BOOL ShowWindow(int nCmdShow) throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[ShowWindow](https://msdn.microsoft.com/library/windows/desktop/ms633548) Windows SDK 中。
+請參閱[ShowWindow](/windows/desktop/api/winuser/nf-winuser-showwindow) Windows SDK 中。
 
 ### <a name="example"></a>範例
 
@@ -2713,7 +2713,7 @@ BOOL ShowWindowAsync(int nCmdShow) throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[ShowWindowAsync](https://msdn.microsoft.com/library/windows/desktop/ms633549) Windows SDK 中。
+請參閱[ShowWindowAsync](/windows/desktop/api/winuser/nf-winuser-showwindowasync) Windows SDK 中。
 
 ##  <a name="updatewindow"></a>  CWindow::UpdateWindow
 

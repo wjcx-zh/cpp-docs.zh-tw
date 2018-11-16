@@ -2,12 +2,12 @@
 title: 通用 Windows 應用程式 (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
-ms.openlocfilehash: e6e294b45e183e5e8baebcaad65cece846adb07e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ffcc38dfd849c9cd5eaf9e6466d53731becdd9a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481896"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693083"
 ---
 # <a name="universal-windows-apps-c"></a>通用 Windows 應用程式 (C++)
 
@@ -32,8 +32,9 @@ C + + /cli WinRT 是新的、 僅限標頭的程式庫為基礎 c + + 語言推�
 
 ## <a name="uwp-apps-that-use-the-windows-runtime-c-template-library-wrl"></a>使用 Windows 執行階段 c + + 樣板程式庫 (WRL) 的 UWP 應用程式
 
-Windows 執行階段 c + + 樣板程式庫提供的 ISO c + + 程式碼可以存取 Windows 執行階段例外狀況的環境中的低階 COM 介面。 在大部分情況下，我們建議您使用 C + + /cli WinRT 或 C + + /CX 而不是 Windows 執行階段 c + + 樣板程式庫，適用於 UWP 應用程式開發。 Windows 執行階段 c + + 樣板程式庫的相關資訊，請參閱[Windows 執行階段 c + + 範本庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)。
+Windows 執行階段 c + + 樣板程式庫提供的 ISO c + + 程式碼可以存取 Windows 執行階段例外狀況的環境中的低階 COM 介面。 在大部分情況下，我們建議您使用 C + + /cli WinRT 或 C + + /CX 而不是 Windows 執行階段 c + + 樣板程式庫，適用於 UWP 應用程式開發。 Windows 執行階段 c + + 樣板程式庫的相關資訊，請參閱[Windows 執行階段 c + + 範本庫 (WRL)](windows-runtime-cpp-template-library-wrl.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [Visual C++](../visual-cpp-in-visual-studio.md)<br/>
+[使用 C++ 進行 Windows 程式設計的概觀](overview-of-windows-programming-in-cpp.md)<br/>

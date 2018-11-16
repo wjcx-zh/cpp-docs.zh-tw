@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetFlags
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
-ms.openlocfilehash: 5f257cb57e7b6f287d5032bdc2655bb65fe946cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf7e5f9c9b44524491737b27098bc91bb472cb32
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445873"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694279"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl 類別
 
@@ -53,7 +53,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 |名稱|描述|
 |----------|-----------------|
 |[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|啟用或停用快顯功能表。|
-|[CMFCShellTreeCtrl::GetFlags](#getflags)|傳回傳遞至的旗標的組合[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)。|
+|[CMFCShellTreeCtrl::GetFlags](#getflags)|傳回傳遞至的旗標的組合[IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects)。|
 |[CMFCShellTreeCtrl::GetItemPath](#getitempath)|擷取項目的路徑。|
 |[CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist)|將指標傳回至[CMFCShellListCtrl 類別](../../mfc/reference/cmfcshelllistctrl-class.md)物件，其可搭配這`CMFCShellTreeCtrl`物件來建立類似檔案總管的視窗。|
 |[CMFCShellTreeCtrl::OnChildNotify](#onchildnotify)|此視窗的父視窗收到通知訊息，此視窗時，會呼叫此成員函式。 (覆寫[On_xxx_reflect](../../mfc/reference/cwnd-class.md#onchildnotify)。)|
@@ -118,7 +118,7 @@ DWORD GetFlags() const;
 
 ### <a name="remarks"></a>備註
 
-在設定的旗標`CMFCShellTreeCtrl`傳送至方法[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)每次重新整理物件。 您可以變更的旗標[CMFCShellTreeCtrl::SetFlags](#setflags)方法。
+在設定的旗標`CMFCShellTreeCtrl`傳送至方法[IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects)每次重新整理物件。 您可以變更的旗標[CMFCShellTreeCtrl::SetFlags](#setflags)方法。
 
 ##  <a name="getitempath"></a>  CMFCShellTreeCtrl::GetItemPath
 
@@ -269,7 +269,7 @@ void SetFlags(
 
 ### <a name="remarks"></a>備註
 
-`CMFCShellTreeCtrl`所有設定旗標為傳遞[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)。 不同的旗標之值的相關資訊，請參閱[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)。
+`CMFCShellTreeCtrl`所有設定旗標為傳遞[IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects)。 不同的旗標之值的相關資訊，請參閱[IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects)。
 
 ##  <a name="setrelatedlist"></a>  CMFCShellTreeCtrl::SetRelatedList
 

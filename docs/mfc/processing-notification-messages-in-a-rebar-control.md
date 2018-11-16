@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RBN_ notification messages [MFC]
 - notifications [MFC], CReBarCtrl
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
-ms.openlocfilehash: 8cbe9849e16e8bfa9c0d0ce1f96e846bffaab2ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c35a1efb1c93aecf17e8f57b9e96c033aa4334a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621828"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693180"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>處理 Rebar 控制項中的通知訊息
 
@@ -38,7 +38,7 @@ ms.locfileid: "50621828"
 
 - RBN_LAYOUTCHANGED 傳送，由 rebar 控制項，當使用者變更控制項的群組列的配置。
 
-如需有關這些通知的詳細資訊，請參閱 < [Rebar 控制項參考](https://msdn.microsoft.com/library/windows/desktop/bb774375)Windows SDK 中。
+如需有關這些通知的詳細資訊，請參閱 < [Rebar 控制項參考](/windows/desktop/controls/rebar-control-reference)Windows SDK 中。
 
 ## <a name="see-also"></a>另請參閱
 

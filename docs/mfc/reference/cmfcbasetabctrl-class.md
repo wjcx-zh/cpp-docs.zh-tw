@@ -238,12 +238,12 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: b01802439a7f7335561e331f87ad770d4e5313fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d12c7a8c9363e93baf56d53ad7b8d81401984228
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574287"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51330394"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
@@ -1790,7 +1790,7 @@ virtual BOOL OnDrop(
 
 ### <a name="parameters"></a>參數
 
-[in]*COleDataObject\**<br/>
+[in]_COleDataObject\*_<br/>
 
 [in]*DROPEFFECT*<br/>
 
@@ -1811,7 +1811,7 @@ virtual DROPEFFECT OnDragOver(
 
 ### <a name="parameters"></a>參數
 
-[in]*COleDataObject\**<br/>
+[in]_COleDataObject\*_<br/>
 
 [in]*DWORD*<br/>
 
@@ -1840,7 +1840,7 @@ virtual DROPEFFECT OnDragEnter(
 
 ### <a name="parameters"></a>參數
 
-[in]*COleDataObject\**<br/>
+[in]_COleDataObject\*_<br/>
 
 [in]*DWORD*<br/>
 

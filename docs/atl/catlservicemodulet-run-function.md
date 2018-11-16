@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ATL services, security
 ms.assetid: 42c010f0-e60e-459c-a63b-a53a24cda93b
-ms.openlocfilehash: 3abb6908a64864463c45d8fc4dc24bfc813db586
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91b6465dd975a1e3227d1416f2b78a8abbd441ad
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458653"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694318"
 ---
 # <a name="catlservicemoduletrun-function"></a>Catlservicemodulet:: Run 函式
 
-`Run` 包含呼叫`PreMessageLoop`， `RunMessageLoop`，和`PostMessageLoop`。 在被呼叫之後`PreMessageLoop`第一次儲存服務的執行緒 id。 服務會使用此 ID 來傳送 WM_QUIT 訊息使用 Win32 API 函式，就可以將它關閉本身[PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946)。
+`Run` 包含呼叫`PreMessageLoop`， `RunMessageLoop`，和`PostMessageLoop`。 在被呼叫之後`PreMessageLoop`第一次儲存服務的執行緒 id。 服務會使用此 ID 來傳送 WM_QUIT 訊息使用 Win32 API 函式，就可以將它關閉本身[PostThreadMessage](/windows/desktop/api/winuser/nf-winuser-postthreadmessagea)。
 
 `PreMessageLoop` 然後呼叫`InitializeSecurity`。 根據預設，`InitializeSecurity`呼叫[CoInitializeSecurity](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity)與安全性描述元設定為 NULL，這表示任何使用者可對您物件的存取。
 

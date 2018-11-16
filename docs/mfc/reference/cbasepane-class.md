@@ -1,6 +1,6 @@
 ---
 title: CBasePane 類別
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 f1_keywords:
 - CBasePane
 - AFXBASEPANE/CBasePane
@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: a04e60c3cbaecc018fb1d577770e70c2148efc3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: eef6c6e08fec3b0ee89046aae19db9c23849f91f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469364"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525414"
 ---
 # <a name="cbasepane-class"></a>CBasePane 類別
 
@@ -316,13 +316,13 @@ class CBasePane : public CWnd
 
 - 當您建立一個窗格時，您可以套用數個新的樣式：
 
-    - AFX_CBRS_FLOAT 讓窗格浮動。
+  - AFX_CBRS_FLOAT 讓窗格浮動。
 
-    - AFX_CBRS_AUTOHIDE 啟用自動隱藏模式。
+  - AFX_CBRS_AUTOHIDE 啟用自動隱藏模式。
 
-    - AFX_CBRS_CLOSE 啟用 [關閉 （隱藏）] 窗格。
+  - AFX_CBRS_CLOSE 啟用 [關閉 （隱藏）] 窗格。
 
-   這些是您可以結合的位元 OR 運算的旗標。
+  這些是您可以結合的位元 OR 運算的旗標。
 
 `CBasePane` 實作下列虛擬布林方法，以反映這些旗標： [cbasepane:: Canbeclosed](#canbeclosed)， [CBasePane::CanAutoHide](#canautohide)， [CBasePane::CanFloat](#canfloat)。 您可以在 衍生的類別，以自訂其行為來覆寫這些設定。
 
@@ -1628,12 +1628,12 @@ virtual void OnDrawCaption();
 目前未使用這個方法。
 
 ```
-virtual void OnMovePaneDivider(CPaneDivider*);
+virtual void OnMovePaneDivider(CPaneDivider* /* unused */);
 ```
 
 ### <a name="parameters"></a>參數
 
-*CPaneDivider\**<br/>
+*未使用*<br/>
 [in]不使用。
 
 ##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu

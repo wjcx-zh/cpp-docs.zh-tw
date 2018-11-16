@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: 6b8f84966ed58c5b031518bdf5e9f42cf7cedb48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2617113f2805f8d1c56e7fa6cbebfe669709c100
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429203"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694032"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc 類別
 
@@ -101,7 +101,7 @@ bool ConvertToAutoInherit(
 
 ### <a name="remarks"></a>備註
 
-這個方法會嘗試判斷是否 Ace 中 discretionary 存取控制清單 (DACL) 和目前的安全性描述元的系統存取控制清單 (SACL) 繼承自父代的安全性描述元。 它會呼叫[ConvertToAutoInheritPrivateObjectSecurity](https://msdn.microsoft.com/library/windows/desktop/aa376403)函式。
+這個方法會嘗試判斷是否 Ace 中 discretionary 存取控制清單 (DACL) 和目前的安全性描述元的系統存取控制清單 (SACL) 繼承自父代的安全性描述元。 它會呼叫[ConvertToAutoInheritPrivateObjectSecurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity)函式。
 
 ##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc
 
@@ -181,7 +181,7 @@ bool Create(
 
 ### <a name="remarks"></a>備註
 
-這個方法會呼叫[CreatePrivateObjectSercurity](https://msdn.microsoft.com/library/windows/desktop/aa376405)或是[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)。
+這個方法會呼叫[CreatePrivateObjectSercurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity)或是[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)。
 
 指定新的物件的物件類型的 GUID 或控制 Ace 繼承的方式，可允許第二個方法。
 

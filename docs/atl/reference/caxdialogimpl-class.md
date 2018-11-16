@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CAxDialogImpl class
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
-ms.openlocfilehash: 1814d95ae4346706c8f78125903e26fca8136d68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cb4ec679e26adc32ffc6d68ebff9b1ed73c2f43
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544595"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694227"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl 類別
 
@@ -177,7 +177,7 @@ INT_PTR DoModal(
 ### <a name="parameters"></a>參數
 
 *hWndParent*<br/>
-[in]主控視窗控制代碼。 預設值是傳回值[GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) Win32 函式。
+[in]主控視窗控制代碼。 預設值是傳回值[GetActiveWindow](/windows/desktop/api/winuser/nf-winuser-getactivewindow) Win32 函式。
 
 *dwInitParam*<br/>
 [in]指定要傳遞至對話方塊中的值*lParam* WM_INITDIALOG 訊息參數。

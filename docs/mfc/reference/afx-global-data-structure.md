@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 495d30f9fabcb3a9586504282dee881362988c3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9b6a462cf359bbd31958509c4fe7d0d71e490d11
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523477"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694305"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 結構
 
@@ -259,10 +259,10 @@ BOOL DrawTextOnGlass(
 [in]裝置內容指標。
 
 *iPartId*<br/>
-[in]具有所需的文字外觀之控制項組件。 如需詳細資訊，請參閱 [Parts and States](https://msdn.microsoft.com/library/windows/desktop/bb773210)(組件和狀態) 表格中的 Parts 資料行。 如果此值為 0，則會使用預設字型來繪製文字；否則會使用裝置內容中所選取的字型。
+[in]具有所需的文字外觀之控制項組件。 如需詳細資訊，請參閱 [Parts and States](/windows/desktop/controls/parts-and-states)(組件和狀態) 表格中的 Parts 資料行。 如果此值為 0，則會使用預設字型來繪製文字；否則會使用裝置內容中所選取的字型。
 
 *iStateId*<br/>
-[in]具有所需的文字外觀的控制項狀態。 如需詳細資訊，請參閱 [Parts and States](https://msdn.microsoft.com/library/windows/desktop/bb773210)(組件和狀態) 表格中的 States 資料行。
+[in]具有所需的文字外觀的控制項狀態。 如需詳細資訊，請參閱 [Parts and States](/windows/desktop/controls/parts-and-states)(組件和狀態) 表格中的 States 資料行。
 
 *先把 strText*<br/>
 [in]要繪製的文字。
@@ -293,7 +293,7 @@ BOOL DrawTextOnGlass(
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [COLORREF](/windows/desktop/gdi/colorref)<br/>
-[組件和狀態](https://msdn.microsoft.com/library/windows/desktop/bb773210)<br/>
+[組件和狀態](/windows/desktop/controls/parts-and-states)<br/>
 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)<br/>
 [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
 [桌面視窗管理員](/windows/desktop/dwm/dwm-overview)<br/>
@@ -431,7 +431,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ### <a name="parameters"></a>參數
 
 *info*<br/>
-[in、 out]A [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)結構，其中包含與非最小化視窗中非工作區相關聯的可調整的度量資訊。
+[in、 out]A [NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)結構，其中包含與非最小化視窗中非工作區相關聯的可調整的度量資訊。
 
 ### <a name="return-value"></a>傳回值
 
@@ -439,7 +439,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 
 ### <a name="see-also"></a>另請參閱
 
-[NONCLIENTMETRICS 結構](https://msdn.microsoft.com/library/windows/desktop/ff729175)
+[NONCLIENTMETRICS 結構](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 

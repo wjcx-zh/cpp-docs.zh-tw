@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 71b5eb9c97b8c6370a08281fdf4be7074a579f8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d5216cd399943cda67bc9387ea37c938e5cab48
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596660"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694331"
 ---
 # <a name="application-information-and-management"></a>應用程式資訊和管理
 
@@ -646,7 +646,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 ### <a name="parameters"></a>參數
 
 *lpWndClass*<br/>
-指標[WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)結構，其中包含要註冊視窗類別的相關資訊。 如需有關此結構的詳細資訊，請參閱 Windows SDK。
+指標[WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)結構，其中包含要註冊視窗類別的相關資訊。 如需有關此結構的詳細資訊，請參閱 Windows SDK。
 
 ### <a name="return-value"></a>傳回值
 
@@ -681,7 +681,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>參數
 
 *nClassStyle*<br/>
-指定的 Windows 類別樣式或樣式，建立使用位元 OR 組合 ( **&#124;**) 運算子，視窗類別。 如需類別樣式的清單，請參閱 < [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) Windows SDK 中的結構。 如果是 NULL，預設值將，如下所示：
+指定的 Windows 類別樣式或樣式，建立使用位元 OR 組合 ( **&#124;**) 運算子，視窗類別。 如需類別樣式的清單，請參閱 < [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Windows SDK 中的結構。 如果是 NULL，預設值將，如下所示：
 
 - 將滑鼠樣式設定為 CS_DBLCLKS，會將按兩下訊息至視窗程序當使用者按兩下滑鼠。
 

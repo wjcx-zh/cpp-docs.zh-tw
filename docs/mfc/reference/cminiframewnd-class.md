@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-ms.openlocfilehash: f16a8cd21fe724c44a1ed648f29e42cb5d00dcd1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6fdef34ba5873718caed509100cbe7e905d880d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663294"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693519"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd 類別
 
@@ -167,7 +167,7 @@ virtual BOOL CreateEx(
 指定的擴充的樣式`CMiniFrameWnd`所建立。 套用的任何[延伸視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)至視窗。
 
 *lpClassName*<br/>
-指向以 null 結尾的字元字串，可命名 Windows 類別 ( [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)結構)。 類別名稱可以是任何名稱向全域[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)函式或任何預先定義的控制項類別名稱。 它必須不是 NULL。
+指向以 null 結尾的字元字串，可命名 Windows 類別 ( [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)結構)。 類別名稱可以是任何名稱向全域[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)函式或任何預先定義的控制項類別名稱。 它必須不是 NULL。
 
 *lpWindowName*<br/>
 指向以 null 結束的字元字串，包含視窗的名稱。

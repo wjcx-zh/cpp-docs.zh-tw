@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 33ca9e1c07dc350845104a6027166e511b3bbe4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf2f97c1c3b389d0ee2b3d4bcdd2d9da2dbb3c8d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605073"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694851"
 ---
 # <a name="cregkey-class"></a>CRegKey 類別
 
@@ -892,7 +892,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 |DACL_SECURITY_INFORMATION|設定索引鍵的判別存取控制清單 (DACL)。 此金鑰必須具備 WRITE_DAC 存取權，或呼叫的處理序必須是物件的擁有者。|
 |GROUP_SECURITY_INFORMATION|設定索引鍵的主要群組安全性識別碼 (SID)。 此金鑰必須具備 WRITE_OWNER 存取，或呼叫的處理序必須是物件的擁有者。|
 |OWNER_SECURITY_INFORMATION|設定金鑰的擁有者 SID。 此金鑰必須具備 WRITE_OWNER 存取，或呼叫的處理序必須是物件的擁有者或具有已啟用的 SE_TAKE_OWNERSHIP_NAME 權限。|
-|SACL_SECURITY_INFORMATION|設定索引鍵的系統存取控制清單 (SACL)。 此金鑰必須具備 ACCESS_SYSTEM_SECURITY 存取。 若要取得此存取權的正確方式是啟用 SE_SECURITY_NAME[權限](https://msdn.microsoft.com/library/windows/desktop/aa379306)中呼叫端的目前的存取權杖，請在開啟 ACCESS_SYSTEM_SECURITY 存取的控制代碼，然後再停用的權限。|
+|SACL_SECURITY_INFORMATION|設定索引鍵的系統存取控制清單 (SACL)。 此金鑰必須具備 ACCESS_SYSTEM_SECURITY 存取。 若要取得此存取權的正確方式是啟用 SE_SECURITY_NAME[權限](/windows/desktop/secauthz/privileges)中呼叫端的目前的存取權杖，請在開啟 ACCESS_SYSTEM_SECURITY 存取的控制代碼，然後再停用的權限。|
 
 *psd*<br/>
 指標[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)結構，指定安全性屬性，設定指定之索引鍵。

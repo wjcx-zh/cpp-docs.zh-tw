@@ -1,7 +1,7 @@
 ---
 title: 預先定義的巨集
 ms.custom: update_every_version
-ms.date: 04/30/2018
+ms.date: 11/12/2018
 f1_keywords:
 - _ATL_VER
 - __ATOM__
@@ -143,12 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: 42b81431ca69de84a5d38cca3eaa088bb7255656
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ebc23545817de0f249185700454237c66610c13
+ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660456"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678350"
 ---
 # <a name="predefined-macros"></a>預先定義的巨集
 
@@ -378,6 +378,8 @@ Microsoft Visual c + + 支援這些額外的預先定義巨集。
    |Visual Studio 2017 15.5 版|1912|
    |Visual Studio 2017 15.6 版|1913|
    |Visual Studio 2017 15.7 版|1914|
+   |Visual Studio 2017 15.8 版|1915|
+   |Visual Studio 2017 版本 15.9|1916|
 
    若要測試為編譯器版本或更新指定版本的 Visual Studio 或之後，使用**>=** （大於或等於） 運算子來比較 **&#95;MSC&#95;VER**針對已知版本。 如果您有數個版本中是互斥的方式比較時，我們建議您訂購的版本號碼的遞減順序比較。 比方說，這段程式碼會檢查發行 Visual Studio 2015 和更新版本的編譯器中，或在 Visual Studio 2013 之後, 發行的編譯器，則會採用所有編譯器發行 Visual Studio 2013 之前的動作，然後：
 

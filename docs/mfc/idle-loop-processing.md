@@ -16,18 +16,18 @@ helpviewer_keywords:
 - processing [MFC]
 - background processing [MFC]
 ms.assetid: 5c7c46c1-6107-4304-895f-480983bb1e44
-ms.openlocfilehash: 1eff76e2e5fd98e63dccb9110882656f69da6539
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35078b944412142a07906791e74209fd5dab06d3
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604258"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693434"
 ---
 # <a name="idle-loop-processing"></a>閒置迴圈處理
 
 許多應用程式會「在背景」進行耗時的處理。 有時候會因為效能考量而使用多執行緒進行此類工作。 執行緒會涉及額外的開發負荷，因此不建議使用如 MFC 會在閒置時間工作等簡單的工作[OnIdle](../mfc/reference/cwinthread-class.md#onidle)函式。 本文會著重於閒置處理的部分。 如需有關多執行緒處理，請參閱[多執行緒主題](../parallel/multithreading-support-for-older-code-visual-cpp.md)。
 
-某些種類的背景處理適合在使用者與應用程式沒有互動的期間完成。 在針對 Microsoft Windows 作業系統所開發的應用程式中，應用程式可以藉由將耗時的處理序分割成許多小片段來執行閒置時間處理。 在處理每個片段之後, 應用程式會產生 Windows 所使用的執行控制[PeekMessage](https://msdn.microsoft.com/library/windows/desktop/ms644943)迴圈。
+某些種類的背景處理適合在使用者與應用程式沒有互動的期間完成。 在針對 Microsoft Windows 作業系統所開發的應用程式中，應用程式可以藉由將耗時的處理序分割成許多小片段來執行閒置時間處理。 在處理每個片段之後, 應用程式會產生 Windows 所使用的執行控制[PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagea)迴圈。
 
 本文說明兩種可在應用程式中進行閒置處理的方式：
 
@@ -37,7 +37,7 @@ ms.locfileid: "50604258"
 
 ##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a> MFC 訊息迴圈中的 PeekMessage
 
-在使用 MFC 開發應用程式的主要訊息迴圈中`CWinThread`類別包含呼叫的訊息迴圈[PeekMessage](https://msdn.microsoft.com/library/windows/desktop/ms644943) Win32 API。 這個迴圈也會在各個訊息之間呼叫 `OnIdle` 的 `CWinThread` 成員函式。 應用程式可以藉由覆寫 `OnIdle` 函式，在閒置時間處理這些訊息。
+在使用 MFC 開發應用程式的主要訊息迴圈中`CWinThread`類別包含呼叫的訊息迴圈[PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagea) Win32 API。 這個迴圈也會在各個訊息之間呼叫 `OnIdle` 的 `CWinThread` 成員函式。 應用程式可以藉由覆寫 `OnIdle` 函式，在閒置時間處理這些訊息。
 
 > [!NOTE]
 >  `Run``OnIdle`，和其他特定成員函式現在是類別的成員`CWinThread`而不是類別的`CWinApp`。 `CWinApp` 衍生自 `CWinThread`。

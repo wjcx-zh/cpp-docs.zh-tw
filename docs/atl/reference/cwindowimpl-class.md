@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: 0a1d0c79e97cf9f9cb0c2b0c6b140654deb4c227
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3752e8b58560e522aecc3689e2a5c3be2649b1e1
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454648"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694162"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl 類別
 
@@ -210,7 +210,7 @@ LRESULT DefWindowProc();
 
 ### <a name="remarks"></a>備註
 
-根據預設，`DefWindowProc`呼叫[CallWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633571)要傳送的訊息資訊中指定的視窗程序的 Win32 函式[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。
+根據預設，`DefWindowProc`呼叫[CallWindowProc](/windows/desktop/api/winuser/nf-winuser-callwindowproca)要傳送的訊息資訊中指定的視窗程序的 Win32 函式[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。
 
 不含任何參數的函式會自動擷取所需的參數，從目前的訊息。
 

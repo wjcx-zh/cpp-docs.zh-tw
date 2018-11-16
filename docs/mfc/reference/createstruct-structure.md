@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CREATESTRUCT structure [MFC]
 ms.assetid: 028c7b5e-4fdc-48da-a550-d3e4f9e6cc85
-ms.openlocfilehash: 13f715dc914ccc052945790aeaff9c47bd34ed46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1de42ba3e26f7a06918a69358083e68f142836cc
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619644"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694695"
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT 結構
 
@@ -69,7 +69,7 @@ typedef struct tagCREATESTRUCT {
 指向以 null 終止的字串，指定新的視窗名稱。
 
 *lpszClass*<br/>
-指向以 null 終止的字串，指定新的視窗 Windows 類別名稱 ( [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)結構; 如需詳細資訊，請參閱 Windows SDK)。
+指向以 null 終止的字串，指定新的視窗 Windows 類別名稱 ( [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)結構; 如需詳細資訊，請參閱 Windows SDK)。
 
 *dwExStyle*<br/>
 指定[延伸樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)新視窗。

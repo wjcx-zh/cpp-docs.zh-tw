@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: 94530f17c801c62005e837055ce3608e2eaa512f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87f99b4f037c8cc881b33e1d07b4f07596ee9a1b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499671"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694539"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 類別
 
@@ -258,7 +258,7 @@ Windows 訊息`CFileDialog`類別視您正在使用哪個作業系統。 比方�
 初始化對話方塊控制項之後，請呼叫[CFileDialog::DoModal](#domodal)方法，以顯示對話方塊方塊，讓使用者可以輸入路徑和檔案名稱。 `DoModal` 傳回使用者是否按一下 [確定] (IDOK) 或 [取消 (IDCANCEL)] 按鈕。 如果`DoModal`傳回 IDOK，您可以使用其中一個`CFileDialog`公用成員函式來擷取資訊放入使用者。
 
 > [!NOTE]
-> 在 Windows Vista 或更新版本中，多次呼叫[IFileDialog::SetFileTypes](https://msdn.microsoft.com/library/windows/desktop/bb775980)會造成錯誤。 第二次呼叫`SetFileTypes`之執行個體`CFileDialog`會傳回 E_UNEXPECTED，在 Windows Vista 或更新版本。 有些`CFileDialog`方法函式會呼叫`SetFileTypes`。 例如，兩個呼叫來`CFileDialog::DoModal`同一個執行個體`CFileDialog`會產生[ASSERT](diagnostic-services.md#assert)。
+> 在 Windows Vista 或更新版本中，多次呼叫[IFileDialog::SetFileTypes](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes)會造成錯誤。 第二次呼叫`SetFileTypes`之執行個體`CFileDialog`會傳回 E_UNEXPECTED，在 Windows Vista 或更新版本。 有些`CFileDialog`方法函式會呼叫`SetFileTypes`。 例如，兩個呼叫來`CFileDialog::DoModal`同一個執行個體`CFileDialog`會產生[ASSERT](diagnostic-services.md#assert)。
 
 `CFileDialog` 包含幾個受保護的成員，讓您執行自訂處理共用違規 」、 「 檔案名稱驗證和 「 清單方塊變更通知。 這些受保護的成員是大部分的應用程式並沒有使用，因為預設的處理會自動執行的回呼函式。 訊息對應項目，這些函式不是必要的因為它們是標準虛擬函式。
 
@@ -851,7 +851,7 @@ IFileOpenDialog* GetIFileOpenDialog();
 
 使用此函式只有在 Windows Vista 或更新版本的物件具有*bVistaStyle*設為 TRUE。 此函式會傳回 NULL，如果`CFileDialog`不是**開放** 對話方塊中或如果*bVistaStyle*設為 FALSE。 在這個最後的情況下，函式只會傳回 NULL 以發行模式-在偵錯模式則會擲回判斷提示。
 
-如需詳細資訊`IFileOpenDialog`介面，請參閱 < [IFileOpenDialog](https://msdn.microsoft.com/library/windows/desktop/bb775834)。
+如需詳細資訊`IFileOpenDialog`介面，請參閱 < [IFileOpenDialog](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifileopendialog)。
 
 ### <a name="example"></a>範例
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-ms.openlocfilehash: a9d1e3638df46f9a60af54ae4c402337710c7561
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 58d8453cc50c28527c1f777db1b47ea23299d38f
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474723"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693941"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>疑難排解 C/C++ 隔離應用程式和並存組件
 
@@ -37,7 +37,7 @@ ms.locfileid: "50474723"
 
 1. 如果您的應用程式相依於並存組件，並且未出現資訊清單，您必須確定連結器可產生專案的資訊清單。 請檢查連結器選項**產生資訊清單**中**專案屬性**專案 對話方塊。
 
-1. 如果資訊清單內嵌於二進位檔，請確定 RT_MANIFEST 的識別碼對這種類型的二進位檔是正確的。 如需使用的資源識別碼的詳細資訊，請參閱[使用並排顯示的組件做為資源 (Windows)](/windows/desktop/SbsCs/using-side-by-side-assemblies-as-a-resource)。 如果資訊清單位於不同的檔案，請在 XML 編輯器或文字編輯器中開啟它。 如需資訊清單和部署的規則的詳細資訊，請參閱 <<c0> [ 資訊清單](https://msdn.microsoft.com/library/aa375365)。
+1. 如果資訊清單內嵌於二進位檔，請確定 RT_MANIFEST 的識別碼對這種類型的二進位檔是正確的。 如需使用的資源識別碼的詳細資訊，請參閱[使用並排顯示的組件做為資源 (Windows)](/windows/desktop/SbsCs/using-side-by-side-assemblies-as-a-resource)。 如果資訊清單位於不同的檔案，請在 XML 編輯器或文字編輯器中開啟它。 如需資訊清單和部署的規則的詳細資訊，請參閱 <<c0> [ 資訊清單](/windows/desktop/sbscs/manifests)。
 
    > [!NOTE]
    > 如果出現內嵌資訊清單和個別的資訊清單檔案，作業系統載入器會使用內嵌資訊清單，並忽略個別的檔案。 不過，在 Windows XP 上的情況則相反，會使用不同的資訊清單檔案，而且會忽略內嵌資訊清單。

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: fcc233b2cc0bfeeb589fec10c94343839f2c8032
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b520072bd0c07e261f2cf4baf51d7ea3d14a5ab
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623440"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694552"
 ---
 # <a name="exception-handling-in-mfc"></a>MFC 中的例外狀況處理
 
@@ -103,7 +103,7 @@ ms.locfileid: "50623440"
 |[CUserException 類別](../mfc/reference/cuserexception-class.md)|警示訊息方塊中，使用使用者的例外狀況則會擲回泛型[CException 類別](../mfc/reference/cexception-class.md)|
 
 > [!NOTE]
->  MFC 支援 c + + 例外狀況和 MFC 例外狀況巨集。 MFC 不直接支援 Windows NT 結構化例外狀況處理常式 (SEH)，如所述[Structured Exception Handling](https://msdn.microsoft.com/library/windows/desktop/ms680657)。
+>  MFC 支援 c + + 例外狀況和 MFC 例外狀況巨集。 MFC 不直接支援 Windows NT 結構化例外狀況處理常式 (SEH)，如所述[Structured Exception Handling](/windows/desktop/debug/structured-exception-handling)。
 
 ##  <a name="_core_further_reading_about_exceptions"></a> 深入了解例外狀況
 

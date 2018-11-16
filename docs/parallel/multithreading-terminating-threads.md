@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-ms.openlocfilehash: c92d95bc2aa63d78c98d10e25de79344fe1ee0f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37a7a6fc443e172f80cc7c30c462ec4d69b3e8de
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484012"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693291"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>多執行緒： 結束在 MFC 中的執行緒
 
@@ -34,7 +34,7 @@ ms.locfileid: "50484012"
 
 對於背景工作執行緒，正常的執行緒終止很簡單： 結束控制函式，並傳回值，表示終止的原因。 您可以使用[AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread)函式或**傳回**陳述式。 一般而言，0 表示順利完成，但這由您決定。
 
-使用者介面執行緒，程序也一樣簡單： 從使用者介面執行緒內呼叫[PostQuitMessage](https://msdn.microsoft.com/library/windows/desktop/ms644945) Windows SDK 中。 唯一的參數，`PostQuitMessage`會是執行緒的結束代碼。 至於背景工作執行緒，0 通常表示順利完成。
+使用者介面執行緒，程序也一樣簡單： 從使用者介面執行緒內呼叫[PostQuitMessage](/windows/desktop/api/winuser/nf-winuser-postquitmessage) Windows SDK 中。 唯一的參數，`PostQuitMessage`會是執行緒的結束代碼。 至於背景工作執行緒，0 通常表示順利完成。
 
 ##  <a name="_core_premature_thread_termination"></a> 過早的執行緒終止
 

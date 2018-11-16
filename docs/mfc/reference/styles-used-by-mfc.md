@@ -196,12 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: a0aef399b734ad5b15a9a2d4028be3fde3f02505
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b47fa90fff6753b805d7fd0495050e45bc915d5d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525298"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694773"
 ---
 # <a name="styles-used-by-mfc"></a>MFC 使用的樣式
 
@@ -445,7 +445,7 @@ MFC 中提供下列下拉式方塊樣式。 如需有關在 Windows 中的下拉
 
 ## <a name="window-styles"></a> 視窗樣式
 
-視窗樣式套用至[CWnd 類別](../../mfc/reference/cwnd-class.md)物件。 指定的組合中的樣式*cheaderctrl:: Create*的參數[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)或是[CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)。 如需有關在 Windows 中的視窗樣式的詳細資訊，請參閱 <<c0> [ 的視窗樣式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)。
+視窗樣式套用至[CWnd 類別](../../mfc/reference/cwnd-class.md)物件。 指定的組合中的樣式*cheaderctrl:: Create*的參數[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)或是[CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)。 如需有關在 Windows 中的視窗樣式的詳細資訊，請參閱 <<c0> [ 的視窗樣式 (Windows)](/windows/desktop/winmsg/window-styles)。
 
 |樣式|描述|
 |-----------|-----------------|
@@ -524,5 +524,5 @@ MFC 中提供下列下拉式方塊樣式。 如需有關在 Windows 中的下拉
 [MessageBox 函式 (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox)<br/>
 [捲軸控制項的樣式 (Windows)](/windows/desktop/Controls/scroll-bar-control-styles)<br/>
 [靜態控制項樣式 (Windows)](/windows/desktop/Controls/static-control-styles)<br/>
-[視窗樣式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)<br/>
+[視窗樣式 (Windows)](/windows/desktop/winmsg/window-styles)<br/>
 [延伸的視窗樣式 (Windows)](/windows/desktop/winmsg/extended-window-styles)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - manifests [C++]
 - manifest tool (mt.exe)
 ms.assetid: fc2ff255-82b1-4c44-af76-8405c5850292
-ms.openlocfilehash: e192122a5b9411f983683c2fa01fab2aded49ffe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 440bf785f61a438099a394319a6df6e7389a608d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505356"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692524"
 ---
 # <a name="manifest-generation-at-the-command-line"></a>命令列的資訊清單產生過程
 
@@ -18,7 +18,7 @@ ms.locfileid: "50505356"
 
 ## <a name="see-also"></a>另請參閱
 
-[資訊清單](https://msdn.microsoft.com/library/aa375365)<br/>
+[資訊清單](/windows/desktop/sbscs/manifests)<br/>
 [/INCREMENTAL (以累加方式連結)](../build/reference/incremental-link-incrementally.md)<br/>
 [強式名稱組件 (組件簽署) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)<br/>
 [編輯後繼續](/visualstudio/debugger/edit-and-continue)<br/>

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: 91d1793999c12951bd80e0f592772bbae1e2d679
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab08476923f253d666e024d8944aec64ed0af8da
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463294"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693649"
 ---
 # <a name="tn006-message-maps"></a>TN006：訊息對應
 
@@ -237,7 +237,7 @@ ON_CONTROL(wNotificationCode, id, memberFxn)
 > [!NOTE]
 > ClassWizard 不支援使用者介面中建立 ON_CONTROL 或 ON_CONTROL_RANGE 處理常式。 必須由您手動輸入的文字編輯器。 ClassWizard 會剖析這些項目，並可讓您瀏覽它們就像任何其他訊息對應項目。
 
-Windows 通用控制項使用功能更強大[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)複雜的控制項通知。 這個 MFC 版本有直接支援這個新的訊息使用和 ON_NOTIFY_RANGE 巨集。 請參閱產品文件，如需這些巨集的詳細資訊。
+Windows 通用控制項使用功能更強大[WM_NOTIFY](/windows/desktop/controls/wm-notify)複雜的控制項通知。 這個 MFC 版本有直接支援這個新的訊息使用和 ON_NOTIFY_RANGE 巨集。 請參閱產品文件，如需這些巨集的詳細資訊。
 
 ## <a name="see-also"></a>另請參閱
 

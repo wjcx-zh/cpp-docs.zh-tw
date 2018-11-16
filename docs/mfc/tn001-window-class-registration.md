@@ -8,16 +8,16 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-ms.openlocfilehash: 92d55780ad309a9c8392cf86e7fa4eaefc5f407a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f16480d238ca2a3e683219984c54d67159f806d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619150"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693852"
 ---
 # <a name="tn001-window-class-registration"></a>TN001：視窗類別註冊
 
-本提示描述註冊特殊的 MFC 常式[WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)es 所需的 Microsoft Windows。 特定`WNDCLASS`討論 MFC 與 Windows 所使用的屬性。
+本提示描述註冊特殊的 MFC 常式[WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)es 所需的 Microsoft Windows。 特定`WNDCLASS`討論 MFC 與 Windows 所使用的屬性。
 
 ## <a name="the-problem"></a>問題
 

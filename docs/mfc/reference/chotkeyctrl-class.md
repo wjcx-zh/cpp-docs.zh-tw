@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 1ab89c860813996360cddbf0caf5d4ebc395603d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ec5b734b23a27522fe430d24d2a65eebcca3dd3
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452711"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694721"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl 類別
 
@@ -67,7 +67,7 @@ class CHotKeyCtrl : public CWnd
 
 當使用者選擇的按鍵組合時，應用程式就可以從控制項擷取指定的按鍵組合，並使用 WM_SETHOTKEY 訊息在系統中設定熱鍵。 每當使用者按下便捷鍵之後，從任何系統的一部分，WM_SETHOTKEY 訊息中所指定視窗就會收到指定 SC_HOTKEY WM_SYSCOMMAND 訊息。 此訊息會啟動所收到的視窗。 熱鍵的應用程式，稱為 WM_SETHOTKEY 結束之前會保持有效。
 
-這項機制是從經常性存取金鑰的支援取決於 WM_HOTKEY 訊息和 Windows 的不同[RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309)並[UnregisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646327)函式。
+這項機制是從經常性存取金鑰的支援取決於 WM_HOTKEY 訊息和 Windows 的不同[RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309)並[UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey)函式。
 
 如需有關使用`CHotKeyCtrl`，請參閱 <<c2> [ 控制項](../../mfc/controls-mfc.md)並[使用 CHotKeyCtrl](../../mfc/using-chotkeyctrl.md)。
 

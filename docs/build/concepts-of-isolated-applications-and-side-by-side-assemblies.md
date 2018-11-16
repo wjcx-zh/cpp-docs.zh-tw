@@ -5,12 +5,12 @@ helpviewer_keywords:
 - side-by-side assemblies [C++]
 - isolated assemblies [C++]
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
-ms.openlocfilehash: 6453e68b07013bc5f5799b7252ad9a88e73250f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac354ed34bc3ab849eecf9256b447308f449abfe
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532934"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693564"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>隔離應用程式和並存組件的概念
 
@@ -22,7 +22,7 @@ ms.locfileid: "50532934"
 
 ## <a name="manifests-and-search-order"></a>資訊清單和搜尋順序
 
-[資訊清單](https://msdn.microsoft.com/library/aa375365)會描述隔離的應用程式和並存組件。 資訊清單是 XML 文件，它可以是外部檔案，也可以內嵌於應用程式中或組件中以做為資源。 隔離之應用程式的資訊清單檔是用來管理共用之並存組件的名稱和版本 (應用程式在執行階段應該要繫結至這個組件)。 並存組件的資訊清單會指定並存組件的名稱、版本、資源和相依組件。 如果是共用並存組件，它的資訊清單會安裝在 %WINDIR%\WinSxS\Manifests\ 資料夾中。 如果是私用組件，我們建議您將其資訊清單加入 DLL，做為 ID 等於 1 的資源。 您也可以將私用組件命名為和 DLL 相同的名稱。 如需詳細資訊，請參閱 <<c0> [ 關於私用組件](/windows/desktop/SbsCs/about-private-assemblies-)。
+[資訊清單](/windows/desktop/sbscs/manifests)會描述隔離的應用程式和並存組件。 資訊清單是 XML 文件，它可以是外部檔案，也可以內嵌於應用程式中或組件中以做為資源。 隔離之應用程式的資訊清單檔是用來管理共用之並存組件的名稱和版本 (應用程式在執行階段應該要繫結至這個組件)。 並存組件的資訊清單會指定並存組件的名稱、版本、資源和相依組件。 如果是共用並存組件，它的資訊清單會安裝在 %WINDIR%\WinSxS\Manifests\ 資料夾中。 如果是私用組件，我們建議您將其資訊清單加入 DLL，做為 ID 等於 1 的資源。 您也可以將私用組件命名為和 DLL 相同的名稱。 如需詳細資訊，請參閱 <<c0> [ 關於私用組件](/windows/desktop/SbsCs/about-private-assemblies-)。
 
 在執行時，Windows 會使用應用程式資訊清單中的組件資訊來搜尋及載入相對應的並存組件。 如果隔離之應用程式指定組件相依性，則作業系統會先在 %WINDIR%\WinSxS\ 資料夾原生組件快取中的共用組件之間搜尋這個組件。 如果找不到必要的組件，則作業系統會搜尋在應用程式目錄結構之資料夾內的私用組件。 如需詳細資訊，請參閱 [Assembly Searching Sequence](/windows/desktop/SbsCs/assembly-searching-sequence)(組件搜尋順序)。
 

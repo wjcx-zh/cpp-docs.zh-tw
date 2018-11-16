@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: fc2080470e3292a459325679a6c5dc00c01d6b35
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da95b1dac2f058de67719b4754d2df6dbeb6f7f0
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528372"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694045"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>逐步解說： 建立傳統 Windows 桌面應用程式 （c + +）
 
@@ -132,7 +132,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
 
    在此函式中，您可以撰寫程式碼來處理*訊息*接收從 Windows 的應用程式時*事件*發生。 比方說，如果使用者選擇 [確定] 按鈕，在您的應用程式中，Windows 會將訊息傳送給您，而您可以撰寫程式碼內您`WndProc`會執行任何工作適當的函式。 它會呼叫*處理*事件。 您只需要處理您的應用程式相關的事件。
 
-   如需詳細資訊，請參閱 [Window 程序](https://msdn.microsoft.com/library/windows/desktop/ms632593)。
+   如需詳細資訊，請參閱 [Window 程序](/windows/desktop/winmsg/window-procedures)。
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>將功能加入 WinMain 函式中
 
@@ -157,7 +157,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
 
    上述的結構欄位的詳細資訊，請參閱[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)。
 
-1. 註冊`WNDCLASSEX`與 Windows，讓它知道有關您的視窗，以及如何將訊息傳送給它。 請使用 [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) 函式，並將視窗類別結構當做引數傳遞。 `_T`巨集，因為我們使用`TCHAR`型別。
+1. 註冊`WNDCLASSEX`與 Windows，讓它知道有關您的視窗，以及如何將訊息傳送給它。 請使用 [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa) 函式，並將視窗類別結構當做引數傳遞。 `_T`巨集，因為我們使用`TCHAR`型別。
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -237,7 +237,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
    return (int) msg.wParam;
    ```
 
-   如需訊息迴圈中之結構和函式的詳細資訊，請參閱 [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)、 [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936)、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)。
+   如需訊息迴圈中之結構和函式的詳細資訊，請參閱 [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)、 [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage)、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)。
 
    此時的 `WinMain` 函式應該類似下列程式碼。
 

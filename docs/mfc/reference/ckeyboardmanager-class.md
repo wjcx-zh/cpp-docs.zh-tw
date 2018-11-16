@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: 85bda6747c4ef6bed87b7a2ef30a3ef06bdfe29e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d144731d05e861f4b462c4d58022b5155fdeb79b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517854"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694266"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager 類別
 
@@ -206,7 +206,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 
 ### <a name="remarks"></a>備註
 
-如果呼叫，這個方法就會失敗[GetKeyboardState](https://msdn.microsoft.com/library/windows/desktop/ms646299)失敗。
+如果呼叫，這個方法就會失敗[GetKeyboardState](/windows/desktop/api/winuser/nf-winuser-getkeyboardstate)失敗。
 
 ##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators
 

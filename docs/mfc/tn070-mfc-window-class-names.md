@@ -7,12 +7,12 @@ helpviewer_keywords:
 - window class names [MFC]
 - TN070 [MFC]
 ms.assetid: 90617912-dd58-4a7c-9082-ced71736d7cd
-ms.openlocfilehash: d59dc052cc253c8d036de0559018065e4ba7457d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 609cfade60b1b7b51fb2fd5597c4d491d3eb861c
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533610"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692656"
 ---
 # <a name="tn070-mfc-window-class-names"></a>TN070：MFC 視窗類別名稱
 
@@ -28,7 +28,7 @@ Afx:%x:%x
 Afx:%x:%x:%x:%x:%x
 ```
 
-取代的十六進位數字`%x`字元會從資料填入[WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)結構。 MFC 使用這項技術，讓多個需要相同的 c + + 類別**WNDCLASS**結構可以共用相同的已註冊的視窗類別。 不同於大部分簡易的 Win32 應用程式，MFC 應用程式只能有一個**WNDPROC**，因此您可以輕鬆地共用**WNDCLASS**結構，以節省時間和記憶體。 可取代以上所顯示 `%x` 字元的值如下：
+取代的十六進位數字`%x`字元會從資料填入[WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)結構。 MFC 使用這項技術，讓多個需要相同的 c + + 類別**WNDCLASS**結構可以共用相同的已註冊的視窗類別。 不同於大部分簡易的 Win32 應用程式，MFC 應用程式只能有一個**WNDPROC**，因此您可以輕鬆地共用**WNDCLASS**結構，以節省時間和記憶體。 可取代以上所顯示 `%x` 字元的值如下：
 
 - **WNDCLASS.hInstance**
 

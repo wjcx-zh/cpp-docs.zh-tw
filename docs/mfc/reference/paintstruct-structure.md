@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PAINTSTRUCT structure [MFC]
 ms.assetid: 81ce4993-3e89-43b2-8c98-7946f1314d24
-ms.openlocfilehash: b5179a1bcba4a654ff235885ec2d0516e801fbb7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1b901ef26c61adbedb3bbe56808cd94bdfad30d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677119"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694643"
 ---
 # <a name="paintstruct-structure"></a>PAINTSTRUCT 結構
 
@@ -36,7 +36,7 @@ typedef struct tagPAINTSTRUCT {
 識別要用來繪製的顯示內容。
 
 *fErase*<br/>
-指定是否需要重新繪製背景。 它不是 0，如果應用程式應該重新繪製背景。 應用程式會負責繪製背景，如果 Windows 視窗類別建立時沒有背景筆刷 (請參閱的說明`hbrBackground`隸屬[WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) Windows SDK 中的結構)。
+指定是否需要重新繪製背景。 它不是 0，如果應用程式應該重新繪製背景。 應用程式會負責繪製背景，如果 Windows 視窗類別建立時沒有背景筆刷 (請參閱的說明`hbrBackground`隸屬[WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Windows SDK 中的結構)。
 
 *rcPaint*<br/>
 指定的右上方，並降低要求在其中繪製的矩形的右角。

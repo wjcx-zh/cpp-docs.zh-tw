@@ -1,6 +1,6 @@
 ---
 title: 文件範本和文件-檢視建立程序
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - icons, for multiple document templates
 - document templates [MFC], and views
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CDocTemplate class [MFC]
 - templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
-ms.openlocfilehash: 544a9bf60ee2066688703faa7e430e2337454e66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29575166a188b0691465bef0a72810d2e3d97624
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606345"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174864"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>文件範本和文件/檢視建立流程
 
@@ -24,7 +24,8 @@ ms.locfileid: "50606345"
 
 某些應用程式支援多種文件類型。 例如，某些應用程式可能支援文字文件和圖形文件。 在這種應用程式中，當使用者選擇 [檔案] 功能表上的 [新增] 命令時會顯示一個對話方塊，其中會顯示可供開啟的新文件類型清單。 對於每種支援的文件類型，應用程式會使用不同的文件範本物件。 下圖說明支援兩種文件類型以及顯示多種開啟文件的 MDI 應用程式組態。
 
-![有兩種文件類型的 MDI 應用程式](../mfc/media/vc387h1.gif "vc387h1")兩個文件類型的 MDI 應用程式
+![有兩種文件類型的 MDI 應用程式](../mfc/media/vc387h1.gif "有兩種文件類型的 MDI 應用程式") <br/>
+具有兩種文件類型的 MDI 應用程式
 
 文件範本是由應用程式物件所建立和維護。 應用程式的 `InitInstance` 函式執行期間要執行的其中一個主要工作即是建構一種或多種適當類型的文件範本。 這項功能所述[文件樣板建立](../mfc/document-template-creation.md)。 應用程式物件會將每個文件範本的指標儲存在它的範本清單中，並提供新增文件範本的介面。
 

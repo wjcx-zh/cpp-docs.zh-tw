@@ -1,6 +1,6 @@
 ---
 title: MFC ActiveX 控制項
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - MFC ActiveX Controls (MFC)
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
-ms.openlocfilehash: 95e1e1cc47d9c14448635fae5d6a9added8e15e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10ad0645e873a1a745168be9b839bbf97a1c05a6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553266"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174860"
 ---
 # <a name="mfc-activex-controls"></a>MFC ActiveX 控制項
 
@@ -39,7 +39,8 @@ ActiveX 控制項可以繪製本身在它自己的視窗中，回應事件 （�
 
 ActiveX 控制項會實作為可用於任何 OLE 容器同處理序伺服器 （通常是小型物件）。 請注意，ActiveX 控制項的完整功能的設計目的是要注意的 ActiveX 控制項的 OLE 容器內使用時，才能使用。 請參閱[其他應用程式的連接埠 ActiveX 控制項](../mfc/containers-for-activex-controls.md)取得一份支援 ActiveX 控制項的容器。 這種容器類型，以下稱為 「 控制容器 」，可以使用控制項的屬性和方法，執行 ActiveX 控制項，並從事件表單中的 ActiveX 控制項接收通知。 下圖示範這種互動。
 
-![ActiveX 控制項容器和控制項相互作用](../mfc/media/vc37221.gif "vc37221")互動之間 ActiveX 控制項容器和視窗型 ActiveX 控制項，
+![ActiveX 控制項容器和控制項相互作用](../mfc/media/vc37221.gif "相互作用的 ActiveX 控制項容器和控制項") <br/>
+ActiveX 控制項容器與視窗型 ActiveX 控制項之間的互動
 
 最佳化您的 ActiveX 控制項的一些新資訊，請參閱[MFC ActiveX 控制項： 最佳化](../mfc/mfc-activex-controls-optimization.md)。
 
@@ -69,7 +70,8 @@ ActiveX 控制項會同時使用數個程式設計項目，在控制項容器與
 
 控制項容器中使用控制項時，它會使用兩種機制來進行通訊： 它會公開屬性和方法，以及它就會引發事件。 下圖示範如何實作這兩種機制。
 
-![ActiveX 控制項與其容器通訊](../mfc/media/vc37222.gif "vc37222")通訊之間 ActiveX 控制項容器和 ActiveX 控制項
+![ActiveX 控制項與其容器通訊](../mfc/media/vc37222.gif "ActiveX 控制項與其容器通訊") <br/>
+ActiveX 控制項容器和 ActiveX 控制項之間的通訊
 
 上圖也說明 （除了自動化和事件） 的其他 OLE 介面控制項的處理方式。
 
@@ -83,7 +85,8 @@ ActiveX 控制項會同時使用數個程式設計項目，在控制項容器與
 
 使用中視窗的控制項時，就能夠完全互動的控制項容器、 使用者和 Windows。 下圖示範 ActiveX 控制項、 控制項容器中，與作業系統之間的通訊的路徑。
 
-![作用中的視窗型 ActiveX 控制項中的訊息處理](../mfc/media/vc37223.gif "vc37223") （當使用中） 的視窗型 ActiveX 控制項中的 Windows 訊息處理
+![作用中的視窗型 ActiveX 控制項中的訊息處理](../mfc/media/vc37223.gif "作用中的視窗型 ActiveX 控制項中的訊息處理") <br/>
+Windows 中的訊息處理視窗型 ActiveX 控制項 （當使用中時）
 
 ##  <a name="_core_serializing_activex_elements"></a> 序列化
 

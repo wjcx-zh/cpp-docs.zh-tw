@@ -1,6 +1,6 @@
 ---
 title: 多重文件類型、檢視和框架視窗
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - static splitter windows [MFC]
 - multiple views [MFC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-ms.openlocfilehash: 3c1422aed5535d30a2f9fb79300f6093326d2ef3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9c26413d45dfa03087bf9909bf8004064766a00
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669101"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175783"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>多重文件類型、檢視和框架視窗
 
@@ -64,7 +64,8 @@ MFC 支援相同文件上需要多個檢視的三種常見使用者介面。 這
 
 下圖分成 a、b 和 c 部分，並依上述順序顯示三種使用者介面模型。
 
-![多個&#45;檢視使用者介面](../mfc/media/vc37a71.gif "vc37a71")多個檢視使用者介面
+![多個&#45;檢視使用者介面](../mfc/media/vc37a71.gif "多個&#45;檢視使用者介面") <br/>
+多個檢視使用者介面
 
 此架構透過實作 [開新視窗] 命令及提供 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)類別，來提供這些模型 (如 [分隔視窗](#_core_splitter_windows)中所述)。 您可以使用這些模型作為起點，來實作其他模型。 如需說明檢視、框架視窗和分隔器之不同組態的範例程式，請參閱 [MFC 範例](../visual-cpp-samples.md)。
 

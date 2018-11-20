@@ -1,6 +1,6 @@
 ---
 title: ATL 集合類別
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - DestructElements function
 - collection classes, choosing
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: dcb784fe2df8383382c7a9d184e9f241684bf931
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f24e5f7dd2ffa4eb5992362aee18a78fb0000aa9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474809"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176701"
 ---
 # <a name="atl-collection-classes"></a>ATL 集合類別
 
@@ -110,7 +110,7 @@ CTraits 類別是類似，但比 MFC 集合類別 helper 函式; 更有彈性請
 
 下圖顯示 CTraits 類別的類別階層。
 
-![集合類別特性階層架構](../atl/media/vctraitscollectionclasseshierarchy.gif "vctraitscollectionclasseshierarchy")
+![集合類別特性階層架構](../atl/media/vctraitscollectionclasseshierarchy.gif "的集合類別特性階層架構")
 
 ## <a name="collection-classes-samples"></a>集合類別的範例
 
@@ -128,4 +128,3 @@ CTraits 類別是類似，但比 MFC 集合類別 helper 函式; 更有彈性請
 
 [概念](../atl/active-template-library-atl-concepts.md)<br/>
 [集合類別](../atl/collection-classes.md)
-

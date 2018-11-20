@@ -1,6 +1,6 @@
 ---
 title: CSmartDockingInfo 類別
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CSmartDockingInfo
 - AFXDOCKINGMANAGER/CSmartDockingInfo
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-ms.openlocfilehash: 885af55987c2d1e78cd0145fcee5ca0f4ef67dc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8931af856bc75bd499d8237278998adfcdb02a6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524653"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176766"
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo 類別
 
@@ -75,7 +75,7 @@ class CSmartDockingInfo : public CObject
 
 Framework 控點內部智慧停駐標記。 下圖顯示標準的智慧停駐標記：
 
-![智慧停駐的標準標記](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")
+![智慧停駐的標準標記](../../mfc/reference/media/nextsdmarkers.png "智慧停駐的標準標記")
 
 在此圖中，在左側的映像會顯示沒有啟用索引標籤停駐集中的群組智慧停駐標記。 中間影像顯示右邊緣智慧停駐標記。 右側影像顯示停駐索引標籤啟用有中央群組智慧停駐標記。 中央群組智慧停駐標記有一個主要的點陣圖和五個智慧停駐標記的點陣圖。
 
@@ -93,7 +93,7 @@ Framework 控點內部智慧停駐標記。 下圖顯示標準的智慧停駐標
 
 下圖顯示已自訂的智慧停駐標記的範例：
 
-![智慧停駐的自訂標記](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")
+![智慧停駐的自訂標記](../../mfc/reference/media/nextsdmarkerscustom.png "智慧停駐的自訂標記")
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

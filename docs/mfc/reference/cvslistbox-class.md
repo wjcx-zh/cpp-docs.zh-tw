@@ -1,6 +1,6 @@
 ---
 title: CVSListBox 類別
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CVSListBox
 - AFXVSLISTBOX/CVSListBox
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CVSListBox [MFC], SetItemData
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
-ms.openlocfilehash: e44fa868fc573efbf89bb00147f670298f633381
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb12f17aec43653931343e80926d59560d879c3a
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513759"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176208"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox 類別
 
@@ -81,7 +81,7 @@ class CVSListBox : public CVSListBoxBase
 
 以下是可編輯的清單控制項的圖片。 第二個清單項目，標題為"Item2"，這是所選取來編輯。
 
-![CVSListBox 控制項](../../mfc/reference/media/cvslistbox.png "cvslistbox")
+![CVSListBox 控制項](../../mfc/reference/media/cvslistbox.png "CVSListBox 控制項")
 
 如果您使用資源編輯器來編輯清單控制項，以加入時，請注意**工具箱**編輯器窗格不會提供預先定義的可編輯清單控制項。 相反地，例如新增靜態控制項**群組方塊**控制項。 若要指定的大小和位置的可編輯的清單控制項，架構會使用靜態控制項做為預留位置。
 

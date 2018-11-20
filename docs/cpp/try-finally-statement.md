@@ -1,6 +1,6 @@
 ---
 title: try-finally 陳述式
-ms.date: 10/09/2018
+ms.date: 11/19/2018
 f1_keywords:
 - __try
 - _try
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: 55d22951c4203c582f7823fef033a0476f8c9a52
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: d05e1d113f4fc661cb6e2e2905fbd8c9dcdd7e2d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326912"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175916"
 ---
 # <a name="try-finally-statement"></a>try-finally 陳述式
 
@@ -68,7 +68,8 @@ ms.locfileid: "51326912"
 
 例如，假設有一系列的函式呼叫連結了函式 A 與函式 D，如下圖所示。 每個函式都具有一個終止處理常式。 如果例外狀況在函式 D 中引發，並在函式 A 中處理，則會在系統回溯堆疊時，依此順序呼叫終止處理常式：D、C、B。
 
-![終止的順序&#45;處理常式執行](../cpp/media/vc38cx1.gif "vc38CX1")終止處理常式執行順序
+![終止的順序&#45;處理常式執行](../cpp/media/vc38cx1.gif "順序終止&#45;處理常式執行") <br/>
+終止處理常式的執行順序
 
 > [!NOTE]
 > Try-finally 的行為是不同於其他程式設計語言，支援使用**最後**，例如 C#。  單一 **__try**可能具有其中一個，但並非兩者的 **__finally**並 **__except**。  如果要同時使用兩個，外層的 try-except 陳述式必須以引號括住內部 try-finally 陳述式。  指定的規則在每個區塊執行時也不同。

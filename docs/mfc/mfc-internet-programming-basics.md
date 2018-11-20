@@ -1,6 +1,6 @@
 ---
 title: MFC 網際網路程式設計基本概念
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - ISAPI extensions, programming with ISAPI
 - Internet applications [MFC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 9d44d78474ccb030184c6e79ed2f257ffb00a068
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bb6a1d379ed754ed96637dfe5b3e4da983edb9f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509457"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175583"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC 網際網路程式設計基本概念
 
@@ -30,7 +30,7 @@ Microsoft 提供許多 Api 用戶端和伺服器應用程式的程式設計。 �
 >[!IMPORTANT]
 > ActiveX 是舊版的技術，不應用於新的開發。 如需詳細資訊，請參閱 < [ActiveX 控制項](activex-controls.md)。
 
-![用戶端和伺服器應用程式](../mfc/media/vc38bq1.gif "vc38bq1")
+![用戶端和伺服器應用程式](../mfc/media/vc38bq1.gif "用戶端和伺服器應用程式")
 
 MFC 提供支援網際網路程式設計的類別。 您可以使用[COleControl](../mfc/reference/colecontrol-class.md)並[CDocObjectServer](../mfc/reference/cdocobjectserver-class.md)和相關的 MFC 類別來撰寫 ActiveX 控制項和主動式文件。 您可以使用 MFC 類別，例如[CInternetSession](../mfc/reference/cinternetsession-class.md)， [CFtpConnection](../mfc/reference/cftpconnection-class.md)，並[CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)來擷取檔案和使用 FTP，例如網際網路通訊協定的資訊HTTP 和 gopher。
 

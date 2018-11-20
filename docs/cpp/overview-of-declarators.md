@@ -1,21 +1,22 @@
 ---
 title: 宣告子概觀
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
-ms.openlocfilehash: 66f1068fd3f69d3e4546f159ec22b34024bd2057
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e651b4422a159bf947e364c82cc4aac1b888d30d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326754"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177078"
 ---
 # <a name="overview-of-declarators"></a>宣告子概觀
 
 宣告子是用來指定物件或函式名稱的宣告元件。 宣告子也可將具名物件指定為物件、指標、參考或陣列。  當宣告子未指定基底類型時，會將基底類型中的類型資訊修改為指定的衍生類型，如指標、參考和陣列。  套用至函式時，宣告子會搭配類型規範，將函式的傳回類型完整指定為物件、指標或參考。 (規範，所述[宣告和定義](declarations-and-definitions-cpp.md)，傳達等型別和儲存類別屬性。 在本節中，然後在討論的修飾詞[Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)，宣告子修改。)下圖顯示 `MyFunction` 的完整宣告，以及呼叫宣告的元件。
 
-![修飾詞、 規範和宣告子](../cpp/media/vc38qy1.gif "vc38QY1")規範、 修飾詞和宣告子
+![修飾詞、 規範和宣告子](../cpp/media/vc38qy1.gif "修飾詞、 規範和宣告子") <br/>
+規範、 修飾詞和宣告子
 
 **Microsoft 專屬**
 

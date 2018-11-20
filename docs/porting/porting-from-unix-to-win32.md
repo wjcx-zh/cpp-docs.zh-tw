@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: ac1fb2304c6d06a6d3e1638fa7ded8a6903ee9fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70cbff207931ada378a89b978acf13fadb3a8744
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467770"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694084"
 ---
 # <a name="porting-from-unix-to-win32"></a>從 UNIX 移植到 Win32
 
@@ -61,7 +61,7 @@ Microsoft Windows Services for UNIX (SFU) 針對將 Windows 整合至現有的 U
 
 另一個做法是直接將 UNIX 應用程式移植到 Win32。 透過 ANSI C/C++ 程式庫和商用 C 編譯器程式庫，UNIX 應用程式所依賴的許多傳統系統呼叫都可以用於 Win32 應用程式中。
 
-因為 Win32 主控台 API 會模擬 **stdio** 模型，並且存在使用 Win32 主控台 API 的 *curses* 版本，所以您不需要變更 **stdio** 應用程式的輸出模型。 如需詳細資訊，請參閱 [SetConsoleCursorPosition](https://msdn.microsoft.com/library/windows/desktop/ms686025)。
+因為 Win32 主控台 API 會模擬 **stdio** 模型，並且存在使用 Win32 主控台 API 的 *curses* 版本，所以您不需要變更 **stdio** 應用程式的輸出模型。 如需詳細資訊，請參閱 [SetConsoleCursorPosition](/windows/console/setconsolecursorposition)。
 
 Berkeley Socket 應用程式只需少許變更就可以當成 Win32 應用程式來使用。 Windows Sockets 介面是為了 BSD 通訊端的可攜性而設計的，只需 WinSock 規格的簡介章節裡已經指出的極少變更部分。
 
@@ -69,7 +69,7 @@ Windows 支援符合 DCE 標準的 RPC，因此 RPC 應用程式都很容易使�
 
 大規模差異的其中一項是處理序模型。 UNIX 具有 `fork`，Win32 則沒有。 根據 `fork` 和程式碼基底的用法，Win32 包含兩個可用的 API：`CreateProcess` 和 `CreateThread`。 您可以在 Win32 中重新設計將本身分岔成多個複本的 UNIX 應用程式，以使用多個處理序，或含有多個執行緒的單一處理程序。 如果使用多個處理序，有多種 IPC 方法可以用於處理序間的通訊 (而且在 `fork` 提供的功能是必要時，也許會更新新處理序的程式碼和資料，讓它像其父代)。 如需 IPC 的詳細資訊，請參閱 [Interprocess Communications](/windows/desktop/ipc/interprocess-communications) (處理序間通訊)。
 
-Windows 和 UNIX 圖形模型差異極大。 UNIX 使用 X Window 系統 GUI，而 Windows 使用 GDI。 雖然在概念上類似，但是 X API 和 GDI API 之間沒有簡單的對應。 不過，針對移轉 UNIX OpenGL 應用程式已提供 OpenGL 支援， 而且還有適用於 Windows 的 X 用戶端和 X 伺服器。 如需 GDI 的相關資訊，請參閱[裝置內容](https://msdn.microsoft.com/library/windows/desktop/dd183553)。
+Windows 和 UNIX 圖形模型差異極大。 UNIX 使用 X Window 系統 GUI，而 Windows 使用 GDI。 雖然在概念上類似，但是 X API 和 GDI API 之間沒有簡單的對應。 不過，針對移轉 UNIX OpenGL 應用程式已提供 OpenGL 支援， 而且還有適用於 Windows 的 X 用戶端和 X 伺服器。 如需 GDI 的相關資訊，請參閱[裝置內容](/windows/desktop/gdi/device-contexts)。
 
 基本 UNIX 應用程式 (包括許多 CGI 應用程式) 應該很容易移植到在 Windows 上執行的 Visual C++。 `open`、`fopen`、`read`、`write` 等函式在 Visual C++ 執行階段程式庫中都可以使用。 此外，C UNIX API 和 Win32 API 之間也有一對一對應：`open` 對應 `CreateFile`、`read` 對應 `ReadFile`、`write` 對應 `WriteFile`、`ioctl` 對應 `DeviceIOControl`、`close` 對應 `CloseFile` 等。
 

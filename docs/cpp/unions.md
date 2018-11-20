@@ -1,18 +1,18 @@
 ---
 title: 等位
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - union_cpp
 helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: df100ddcacd0a9b1d839dbe6a0551eb5f5707afb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f14f1197c4c835e9dfb753b1396e12e2d2f12772
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608903"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176519"
 ---
 # <a name="unions"></a>等位
 
@@ -631,7 +631,8 @@ int main()
 
 `NumericType` 等位會依照下圖中所示的方式在記憶體內部排列 (概念上)。
 
-![數值類型等位中的資料的儲存體](../cpp/media/vc38ul1.png "vc38UL1")儲存體的資料在 NumericType 等位
+![數值類型等位中的資料的儲存體](../cpp/media/vc38ul1.png "NumericType 等位中的資料的儲存體") <br/>
+在 NumericType 等位中儲存資料
 
 ## <a name="anonymous_unions"></a> 匿名等位
 

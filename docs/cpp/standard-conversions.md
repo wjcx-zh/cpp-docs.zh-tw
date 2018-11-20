@@ -1,17 +1,17 @@
 ---
 title: 標準轉換
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-ms.openlocfilehash: 7a42a4f35a29489fe23327c6b34ed49197a64724
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aee100bdc7e8ba6dd7d06c6bca9ed39c09cf2d97
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575444"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176974"
 ---
 # <a name="standard-conversions"></a>標準轉換
 
@@ -189,7 +189,8 @@ int main() {
 
 基底類別是否可存取，取決於衍生中所使用的繼承種類。 請參考下圖中說明的繼承。
 
-![顯示基底的繼承圖形&#45;類別存取範圍](../cpp/media/vc38xa1.gif "vc38XA1")圖的基底類別存取範圍的繼承圖形
+![顯示基底的繼承圖形&#45;類別存取範圍](../cpp/media/vc38xa1.gif "繼承圖形，顯示基底&#45;類別存取範圍") <br/>
+說明基底類別存取範圍的繼承圖表
 
 下表說明圖中所示情況的基底類別存取範圍。
 

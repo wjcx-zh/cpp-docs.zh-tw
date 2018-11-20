@@ -1,6 +1,6 @@
 ---
 title: 框架視窗
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - document frame windows [MFC]
 - windows [MFC], MDI
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-ms.openlocfilehash: 09db7bab392778297f17c14f7bb807f91af4d896
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76c2f303713644c5f78f20d2ea868bd67b9eae71
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619930"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175365"
 ---
 # <a name="frame-windows"></a>框架視窗
 
@@ -30,7 +30,8 @@ ms.locfileid: "50619930"
 
 MFC 架構會使用框架視窗包含檢視。 兩個元件 — 框架和內容，都會呈現和管理由 MFC 中的兩個不同類別。 框架視窗類別管理框架，並檢視類別管理內容。 [檢視] 視窗是框架視窗的子系。 繪圖和其他的使用者互動，與文件中進行檢視的工作區中，框架視窗的工作區。 框架視窗會提供檢視完整的標題列和標準的視窗控制項，例如控制項功能表上，最小化及最大化視窗中，按鈕周圍顯示框架，並控制調整大小的視窗。 包含視窗的工作區，完全佔用子視窗的 [內容]，檢視。 下圖顯示在框架視窗和檢視之間的關聯性。
 
-![框架視窗檢視](../mfc/media/vc37fx1.gif "vc37fx1")框架視窗和檢視
+![框架視窗檢視](../mfc/media/vc37fx1.gif "框架視窗檢視") <br/>
+框架視窗和檢視
 
 ## <a name="frame-windows-and-splitter-windows"></a>框架 Windows 和分隔器的 Windows
 

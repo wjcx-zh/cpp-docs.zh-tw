@@ -1,6 +1,6 @@
 ---
 title: 建立新文件、視窗和檢視
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - MDI [MFC], creating windows
 - window objects [MFC], creating
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - views [MFC], overriding default behavior
 - initializing views [MFC]
 ms.assetid: 88aa1f5f-2078-4603-b16b-a2b4c7b4a2a3
-ms.openlocfilehash: 20bc94c7a688d3cf88fa89fff060ab155d327606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57e558848ce76a7c74b5715529661ad24c9cbb8e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643894"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175388"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>建立新文件、視窗和檢視
 
@@ -37,11 +37,14 @@ ms.locfileid: "50643894"
 
 在完成此程序之後，會存在相互合作的物件，且會儲存彼此指標。 下圖顯示物件建立的序列。 您可以遵循圖表到圖表的序列。
 
-![建立文件順序](../mfc/media/vc387l1.gif "vc387l1")建立文件的順序
+![建立文件順序](../mfc/media/vc387l1.gif "建立文件順序") <br/>
+建立文件的序列
 
-![框架視窗建立順序](../mfc/media/vc387l2.png "vc387l2")建立框架視窗的序列
+![框架視窗建立順序](../mfc/media/vc387l2.png "框架視窗建立順序") <br/>
+建立框架視窗的序列
 
-![建立檢視順序](../mfc/media/vc387l3.gif "vc387l3")序列中建立檢視
+![建立檢視順序](../mfc/media/vc387l3.gif "建立檢視順序") <br/>
+建立檢視的序列
 
 如需架構如何初始化新的文件、 檢視和框架視窗物件的資訊，請參閱類別[CDocument](../mfc/reference/cdocument-class.md)， [CView](../mfc/reference/cview-class.md)， [CFrameWnd](../mfc/reference/cframewnd-class.md)， [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)，並[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) MFC 程式庫參考中。 另請參閱[技術提示 22](../mfc/tn022-standard-commands-implementation.md)，其中說明其目的架構標準命令討論下的建立和初始化程序進一步**新增**和**開啟**中的項目**檔案**功能表。
 

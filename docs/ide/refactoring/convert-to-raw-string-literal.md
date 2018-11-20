@@ -2,14 +2,15 @@
 title: 轉換為原始字串常值
 ms.date: 11/16/2016
 ms.assetid: fffbfee4-66ee-42ba-aeb9-df07fb702c51
-ms.openlocfilehash: 508ab52dc1ca41a97dd8c24df5c5d45c379ea265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf492e6796b9d2342b5952abb093bddd5ede114b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509509"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692587"
 ---
 # <a name="convert-to-raw-string-literal"></a>轉換為原始字串常值
+
 **功能：** 可讓您將任何字串轉換成 C++ 原始字串常值。
 
 **時機：** 您的字串裡有不應該處理為逸出字元的逸出字元。

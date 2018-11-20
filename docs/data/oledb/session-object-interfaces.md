@@ -1,6 +1,6 @@
 ---
 title: 工作階段物件介面
-ms.date: 10/24/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - session objects [OLE DB]
 - session objects [OLE DB], interfaces
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interfaces, session object
 - interfaces, list of
 ms.assetid: ac01a958-6dde-4bd7-8b63-94459e488335
-ms.openlocfilehash: 6b4748b804572c72b75f63b8ea2473818bdac989
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 284f93d96b974a616e957a65ef0c8aa39b33a564
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556617"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176896"
 ---
 # <a name="session-object-interfaces"></a>工作階段物件介面
 
@@ -42,7 +42,7 @@ ms.locfileid: "51556617"
 
 工作階段物件建立資料列集物件。 如果提供者支援的命令，在工作階段也會建立命令物件 (`CCommand`，實作 OLE DB `TCommand`)。 命令物件會實作`ICommand`介面並使用`ICommand::Execute`方法，以在資料列集上執行命令，如下圖所示。
 
-![提供者概念圖](../../data/oledb/media/vc4u551.gif "vc4u551")
+![提供者概念圖](../../data/oledb/media/vc4u551.gif "提供者概念圖")
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,18 +1,18 @@
 ---
 title: 多個基底類別
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - base classes [C++], multiple
 - derived classes [C++], multiple bases
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-ms.openlocfilehash: fbbe6d6194b878b4851cbde84b55d71b9e4fc02c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b58c238da37fbbaf7c2c2913b652c26d98fbd96e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483456"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176351"
 ---
 # <a name="multiple-base-classes"></a>多個基底類別
 
@@ -52,11 +52,13 @@ class CollectionOfBook : public Book, public Collection {
 
 考慮下圖中的類別階層架構，其中示範模擬的午餐供應線。
 
-![模擬的午餐圖形](../cpp/media/vc38xp1.gif "vc38XP1")模擬的午餐線圖表
+![模擬的午餐圖形](../cpp/media/vc38xp1.gif "模擬的午餐圖形") <br/>
+模擬的午餐線圖表
 
 在圖中，`Queue` 為 `CashierQueue` 和 `LunchQueue` 的基底類別。 不過，在將這兩個類別合併為 `LunchCashierQueue` 時會發生下列問題：新的類別會內含兩個來自 `Queue` 類型的子物件，其中一個來自 `CashierQueue`，另一個則是來自 `LunchQueue`。 下圖顯示概念性的記憶體配置 (實際的記憶體配置可能會進行最佳化)。
 
-![模擬的午餐&#45;行 」 物件](../cpp/media/vc38xp2.gif "vc38XP2")模擬的午餐線物件
+![模擬的午餐&#45;行 」 物件](../cpp/media/vc38xp2.gif "模擬的午餐&#45;行 」 物件") <br/>
+模擬的午餐流程物件
 
 請注意，`Queue` 物件中有兩個 `LunchCashierQueue` 子物件。 下列程式碼會將 `Queue` 宣告為虛擬基底類別：
 
@@ -71,15 +73,18 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
 
 **虛擬**關鍵字可確保只有一個子物件的複本`Queue`功能 （請參閱下圖）。
 
-![模擬的午餐&#45;行 」 物件、 虛擬基底類別](../cpp/media/vc38xp3.gif "vc38XP3")具有虛擬基底類別模擬的午餐線物件
+![模擬的午餐&#45;行 」 物件、 虛擬基底類別](../cpp/media/vc38xp3.gif "模擬的午餐&#45;行 」 物件、 虛擬基底類別") <br/>
+具有虛擬基底類別的模擬的午餐線物件
 
 一個類別可以擁有一個虛擬元件和一個特定類型的非虛擬元件。 此情況會發生在如下圖中示範的情況下。
 
-![類別的虛擬和非虛擬元件](../cpp/media/vc38xp4.gif "vc38XP4")虛擬和非虛擬元件相同的類別
+![虛擬與非&#45;類別的虛擬元件](../cpp/media/vc38xp4.gif "虛擬和非&#45;類別的虛擬元件") <br/>
+在相同類別的虛擬和非虛擬元件
 
 在圖中，`CashierQueue` 和 `LunchQueue` 使用 `Queue` 做為虛擬基底類別。 不過，`TakeoutQueue` 指定 `Queue` 做為基底類別，而不是虛擬基底類別。 因此，`LunchTakeoutCashierQueue` 內含兩個類型為 `Queue` 的子物件：一個是來自包含 `LunchCashierQueue` 的繼承路徑，另一個是來自包含 `TakeoutQueue` 的路徑。 下圖中說明此情形。
 
-![物件配置中的虛擬和非虛擬繼承](../cpp/media/vc38xp5.gif "vc38XP5")虛擬與非虛擬繼承的物件配置
+![虛擬與非&#45;中的物件配置的虛擬繼承](../cpp/media/vc38xp5.gif "虛擬和非&#45;中的物件配置的虛擬繼承") <br/>
+使用虛擬和非虛擬繼承的物件配置
 
 > [!NOTE]
 >  與使用非虛擬繼承相比較，使用虛擬繼承在大小方面提供相當大的優勢。 不過，它可能會增加額外的處理負擔。
@@ -187,7 +192,8 @@ public:
 
 - 將使用傳址運算子取得的指標明確轉換為基底類別類型 `A` 的作用。 請注意，若強制將物件位址設為 `A*` 類型，編譯器永遠無法得到足以判斷應選取哪一個 `A` 類型之子物件的資訊；在這種情況下，會同時存在兩個子物件。
 
-![模稜兩可的基底類別指標的轉換](../cpp/media/vc38xt1.gif "vc38XT1")指標轉換為基底類別的方式模稜兩可
+![模稜兩可的基底類別指標的轉換](../cpp/media/vc38xt1.gif "模稜兩可的基底類別指標的轉換") <br/>
+指標不明確地轉換為基底類別
 
 類型 `A*` (`A` 的指標) 的轉換是模稜兩可的，因為沒有辦法分辨哪一個 `A` 類型的子物件是正確的。 請注意，您可以明確指定要使用的子物件，以避免模稜兩可的情況，如下所示：
 
@@ -202,7 +208,8 @@ public:
 
 下圖顯示物件使用虛擬和非虛擬繼承的組成方式。
 
-![虛擬衍生和非虛擬的衍生](../cpp/media/vc38xr1.gif "vc38XR1")虛擬 vs。非虛擬的衍生
+![虛擬衍生和非&#45;虛擬衍生](../cpp/media/vc38xr1.gif "虛擬衍生和非&#45;虛擬衍生") <br/>
+虛擬與非虛擬衍生
 
 在圖中，透過非虛擬基底類別存取類別 `A` 的所有成員會產生模稜兩可的情況，編譯器不會提供是否要使用與 `B` 關聯的子物件，或使用與 `C` 關聯之子物件的資訊。 不過，當 `A` 指定為虛擬基底類別時，沒有存取子物件的問題。
 

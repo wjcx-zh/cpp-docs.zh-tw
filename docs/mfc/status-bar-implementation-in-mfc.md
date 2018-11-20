@@ -1,6 +1,6 @@
 ---
 title: MFC 中的狀態列實作
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - COldStatusBar
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - status indicators
 - status bars [MFC], Windows 95 implementation
 ms.assetid: be5cd876-38e3-4d5c-b8cb-16d57a16a142
-ms.openlocfilehash: 25848e4467a0d767c40ffb00a1bd4d50a062d3a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 521b24646b673159d14e89bd57ea698a7ba73381
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496274"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175363"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>MFC 中的狀態列實作
 
@@ -33,7 +33,8 @@ A [CStatusBar](../mfc/reference/cstatusbar-class.md)物件是一種控制列的�
 
 下圖顯示一個狀態列會顯示數個指標。
 
-![狀態列](../mfc/media/vc37dy1.gif "vc37dy1")狀態列
+![狀態列](../mfc/media/vc37dy1.gif "狀態列") <br/>
+狀態列
 
 工具列上，例如狀態列物件內嵌在其父框架視窗中，當建構自動建構的框架視窗。 [狀態] 列中，所有的控制列，例如，會自動終結以及父框架時終結。
 

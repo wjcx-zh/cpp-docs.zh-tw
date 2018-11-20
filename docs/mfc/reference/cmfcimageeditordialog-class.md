@@ -1,6 +1,6 @@
 ---
 title: CMFCImageEditorDialog 類別
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCImageEditorDialog
 - AFXIMAGEEDITORDIALOG/CMFCImageEditorDialog
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
-ms.openlocfilehash: 84bbe72abeedc03f19f06a1f8498023ff54be95e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68cfa663f9be9f190a6d3425a2ebf6ceb73e2007
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503060"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175066"
 ---
 # <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog 類別
 
@@ -47,7 +47,7 @@ class CMFCImageEditorDialog : public CDialogEx
 
 下圖顯示的影像編輯器 對話方塊。
 
-![CMFCImageEditorDialog 對話方塊](../../mfc/reference/media/imageedit.png "imageedit")
+![CMFCImageEditorDialog 對話方塊](../../mfc/reference/media/imageedit.png "CMFCImageEditorDialog 對話方塊")
 
 使用一種方式`CMFCImageEditorDialog`物件是將它傳遞`CBitmap`編輯映像。 請勿建立大型映像，因為編輯區域的映像具有大小限制，且邏輯像素大小會進行調整以納入區域。 呼叫`DoModal`方法來啟動強制回應對話方塊。
 

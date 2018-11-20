@@ -1,6 +1,6 @@
 ---
 title: MFC ActiveX 控制項：使用字型
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - OnFontChanged
 - HeadingFont
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 6a647f67849d84119d58186fc71ec1b412713734
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9fb7668f65b04372b87059034c3ec6cd20abc48d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608875"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175817"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX 控制項：使用字型
 
@@ -204,7 +204,8 @@ DISP_PROPERTY_EX 巨集產生關聯`HeadingFont`與其對應的屬性名稱`CSam
 
 如果控制項使用內建字型屬性，其通知則由`OnFontChanged`成員函式`COleControl`。 當您新增自訂的字型屬性時，您可以讓它們使用相同的實作。 在上一節範例中，這透過傳遞 &*m_xFontNotification*初始化時*m_fontHeading*成員變數。
 
-![實作多個字型物件介面](../mfc/media/vc373q1.gif "vc373q1")實作多個字型物件介面
+![實作多個字型物件介面](../mfc/media/vc373q1.gif "實作多個字型物件介面") <br/>
+實作多個字型物件介面
 
 在上圖中的實心線條顯示這兩個字型物件所使用的相同實作`IFontNotification`。 如果您想要區別哪些字型變更，這可能會造成問題。
 

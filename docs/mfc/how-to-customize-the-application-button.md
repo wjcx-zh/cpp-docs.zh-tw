@@ -1,21 +1,21 @@
 ---
 title: 如何：自訂應用程式按鈕
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: e556e9e6509179b692e4c86b67d59ff2e2ec0f02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba29e9ad65e0bb1d2163e4051c7c7b53664d8817
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592786"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175323"
 ---
 # <a name="how-to-customize-the-application-button"></a>如何：自訂應用程式按鈕
 
 當您按一下 [應用程式] 按鈕時，會顯示命令的功能表。 通常，功能表會包含檔案相關命令這類**開放**，**儲存**，**列印**，以及**結束**。
 
-![MFC 功能區應用程式按鈕](../mfc/media/application_button.png "application_button")
+![MFC 功能區應用程式按鈕](../mfc/media/application_button.png "MFC 功能區應用程式按鈕")
 
 若要自訂的應用程式按鈕，開啟它**屬性**視窗中，修改其屬性，然後再預覽功能區控制項。
 
@@ -57,4 +57,3 @@ ms.locfileid: "50592786"
 ## <a name="see-also"></a>另請參閱
 
 [功能區設計工具 (MFC)](../mfc/ribbon-designer-mfc.md)
-

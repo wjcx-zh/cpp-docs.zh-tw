@@ -1,6 +1,6 @@
 ---
 title: 灰色和遞色點陣圖函式
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - AFXWIN/AfxDrawGrayBitmap
 - AFXWIN/AfxGetGrayBitmap
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: 1134cde55fbe5addac34b9c0433ff11df4c9bdc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e1d4bd0e851a14680a46d7d6ae79dcf4bd190e4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490892"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176727"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>灰色和遞色點陣圖函式
 
@@ -22,7 +22,7 @@ ms.locfileid: "50490892"
 
 MFC 提供兩個函式來提供點陣圖已停用控制項的外觀。
 
-![灰色和原本圖示版本的比較](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![灰色和原本圖示版本的比較](../../mfc/reference/media/vcgraybitmap.gif "灰色和原本圖示版本的比較")
 
 |||
 |-|-|
@@ -33,7 +33,7 @@ MFC 提供兩個函式來提供點陣圖已停用控制項的外觀。
 
 MFC 也提供兩個函式將點陣圖的背景取代為遞色圖樣。
 
-![遞色和原本圖示版本的比較](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+![遞色和原本圖示版本的比較](../../mfc/reference/media/vcditheredbitmap.gif "遞色和原本圖示版本的比較")
 
 |||
 |-|-|
@@ -74,7 +74,7 @@ void AFXAPI AfxDrawGrayBitmap(
 
 使用 `AfxDrawGrayBitmap` 繪製的點陣圖，外觀為已停用的控制項。
 
-![灰色和原本圖示版本的比較](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![灰色和原本圖示版本的比較](../../mfc/reference/media/vcgraybitmap.gif "灰色和原本圖示版本的比較")
 
 ### <a name="example"></a>範例
 
@@ -110,7 +110,7 @@ void AFXAPI AfxGetGrayBitmap(
 
 使用 `AfxGetGrayBitmap` 複製的點陣圖，外觀上會有已停用的控制項。
 
-![灰色和原本圖示版本的比較](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![灰色和原本圖示版本的比較](../../mfc/reference/media/vcgraybitmap.gif "灰色和原本圖示版本的比較")
 
 ### <a name="example"></a>範例
 
@@ -158,7 +158,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 
 含有兩個色彩的目的地 DC 上繪製的來源點陣圖 (*cr1*並*cr2*) 棋盤式的圖樣取代點陣圖的背景。 來源點陣圖的背景會定義為其白色像素，以及符合點陣圖左上角像素色彩的所有像素。
 
-![遞色和原本圖示版本的比較](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+![遞色和原本圖示版本的比較](../../mfc/reference/media/vcditheredbitmap.gif "遞色和原本圖示版本的比較")
 
 ### <a name="example"></a>範例
 

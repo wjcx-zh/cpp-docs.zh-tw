@@ -45,12 +45,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 49a65680d330752679c86c47c4b142ee3153237c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: caaa3fb40a75292bd32e14ddec33b504e0c1296b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533792"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693710"
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn、_wspawn 函式
 
@@ -139,7 +139,7 @@ ms.locfileid: "50533792"
 
 如果從 DLL 或 GUI 應用程式呼叫 `_spawn`，而且想要將輸出重新導向至管道，您有兩個選項︰
 
-- 使用 Win32 API 建立管道，然後呼叫[AllocConsole](https://msdn.microsoft.com/library/windows/desktop/ms681944) (AllocConsole 函式)，在啟動結構中設定控制代碼值，再呼叫 [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) (CreateProcess 函式)。
+- 使用 Win32 API 建立管道，然後呼叫[AllocConsole](/windows/console/allocconsole) (AllocConsole 函式)，在啟動結構中設定控制代碼值，再呼叫 [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) (CreateProcess 函式)。
 
 - 呼叫會建立管道的 [_popen、_wpopen](../c-runtime-library/reference/popen-wpopen.md)，並叫用使用 **cmd.exe /c** (或 **command.exe /c**) 的應用程式。
 

@@ -1,17 +1,17 @@
 ---
 title: C++ 位元欄位
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - bitfields [C++]
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: df4e5a068f76c35dc22b3915ad7e4ace421ca10b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 747920378472cc091928a080e303a0543e287aaa
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644954"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175089"
 ---
 # <a name="c-bit-fields"></a>C++ 位元欄位
 
@@ -43,7 +43,8 @@ struct Date {
 
 `Date` 類型物件的概念性記憶體配置如下圖所示。
 
-![Date 物件的記憶體配置](../cpp/media/vc38uq1.png "vc38UQ1")的 Date 物件的記憶體配置
+![Date 物件的記憶體配置](../cpp/media/vc38uq1.png "日期物件的記憶體配置") <br/>
+Date 物件的記憶體配置
 
 請注意，`nYear`為 8 位元，並會溢位的宣告類型的字邊界**不帶正負號****簡短**。 因此，它新的開頭處開始**不帶正負號****簡短**。 不需要所有位元欄位都調整至基礎類型的一個物件中；新的單位儲存根據宣告所要求的位元數目進行配置。
 
@@ -69,7 +70,8 @@ struct Date {
 
 記憶體配置則在下圖所示：
 
-![具有零的 Date 物件配置&#45;長度位元欄位](../cpp/media/vc38uq2.png "vc38UQ2") Date 物件的版面配置具有長度為零的位元欄位
+![具有零的 Date 物件配置&#45;長度位元欄位](../cpp/media/vc38uq2.png "為零的版面配置的 Date 物件&#45;長度位元欄位") <br/>
+具有長度為零之位元欄位的 Date 物件配置
 
 位元欄位的基礎類型必須是整數類型，如中所述[基本類型](../cpp/fundamental-types-cpp.md)。
 

@@ -1,6 +1,6 @@
 ---
 title: CRectTracker 類別
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CRectTracker
 - AFXEXT/CRectTracker
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 519f88a3706812ae77d7dbd77e199b3e3ef4e97a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c82b06903f0705a79a15b263b1dbdfc6aee4c8ca
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473368"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176506"
 ---
 # <a name="crecttracker-class"></a>CRectTracker 類別
 
@@ -237,7 +237,7 @@ virtual UINT GetHandleMask() const;
 
 矩形有 8 編號 0 到 7 的調整大小控點。 每個調整大小控點被以位元遮罩; 中該位元的值為 2 ^ *n*，其中*n*是調整大小控點數目。 位元 0-3 會對應至角調整大小控點，從左上方移動順時針旋轉。 位元的一端對應的 4-7 調整大小控點，依順時針方向移動從頂端開始。 下圖顯示矩形的大小調整控點和其對應調整大小控點數量和值：
 
-![調整大小控點數字](../../mfc/reference/media/vc35dp1.gif "vc35dp1")
+![調整大小控點數字](../../mfc/reference/media/vc35dp1.gif "調整大小控點數量")
 
 預設實作`GetHandleMask`傳回位元遮罩，以便調整大小控點出現。 如果單一的位元為開啟，就會繪製對應的大小調整控點。
 

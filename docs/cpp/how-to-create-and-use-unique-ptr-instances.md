@@ -1,15 +1,15 @@
 ---
 title: 如何：建立和使用 unique_ptr 執行個體
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
-ms.openlocfilehash: 13823b34042d8658d0d690e6657e1f41db50f788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3e5705b47a4cfdf17b9a4b4829f1e13565dd7ce
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610245"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174863"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>如何：建立和使用 unique_ptr 執行個體
 
@@ -17,7 +17,7 @@ A [unique_ptr](../standard-library/unique-ptr-class.md)不共用其指標。 無
 
 下圖說明兩個 `unique_ptr` 執行個體之間的擁有權轉移。
 
-![移動的唯一擁有權&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")
+![移動的唯一擁有權&#95;ptr](../cpp/media/unique_ptr.png "移動的唯一擁有權&#95;ptr")
 
 `unique_ptr` 定義於`<memory>`c + + 標準程式庫中的標頭。 它完全與原始指標一樣有效率，並可以用於 c + + 標準程式庫容器。 新增`unique_ptr`執行個體，以 c + + 標準程式庫容器是有效率因為的移動建構函式`unique_ptr`就不需要複製作業。
 

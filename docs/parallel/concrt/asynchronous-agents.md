@@ -1,16 +1,16 @@
 ---
 title: 非同步代理程式
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - asynchronous agents
 - agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-ms.openlocfilehash: 949074981d77702fd23ee3ff70f219c013fa6543
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a99400e4df49e36e1cddda7068f315485b976cde
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467596"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176532"
 ---
 # <a name="asynchronous-agents"></a>非同步代理程式
 
@@ -22,7 +22,7 @@ ms.locfileid: "50467596"
 
 代理程式已設定的生命週期。 [Concurrency:: agent_status](reference/concurrency-namespace-enums.md#agent_status)列舉會定義代理程式的各種狀態。 下圖是顯示如何代理程式進行從某個狀態到另一個狀態圖表。 在此圖中，實線表示您從您的應用程式; 呼叫的方法虛線代表從執行階段呼叫的方法。
 
-![代理程式狀態圖表](../../parallel/concrt/media/agentstate.png "agentstate")
+![代理程式狀態圖表](../../parallel/concrt/media/agentstate.png "代理程式狀態圖表")
 
 下表描述中的每個狀態`agent_status`列舉型別。
 

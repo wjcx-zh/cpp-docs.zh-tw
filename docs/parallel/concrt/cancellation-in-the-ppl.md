@@ -1,6 +1,6 @@
 ---
 title: PPL 中的取消
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms, canceling [Concurrency Runtime]
 - canceling parallel algorithms [Concurrency Runtime]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-ms.openlocfilehash: b1a762f97cf144c39043203dbf68d927b2cbd0e4
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 1cb5404ff8c18492b940f7396ab4c8f4154d69e6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327417"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177013"
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL 中的取消
 
@@ -57,7 +57,7 @@ ms.locfileid: "51327417"
 
 PPL 使用工作和工作群組來管理細部的工作和計算。 您可以巢狀工作群組，以形成*樹狀結構*的平行工作。 下圖顯示平行工作樹狀。 在此圖中，`tg1` 和 `tg2` 代表工作群組；`t1`、`t2`、`t3`、`t4` 和 `t5` 代表工作群組執行的工作。
 
-![平行工作樹狀](../../parallel/concrt/media/parallelwork_trees.png "parallelwork_trees")
+![平行工作樹狀](../../parallel/concrt/media/parallelwork_trees.png "平行工作樹狀")
 
 下列範例顯示在圖中建立樹狀時需要的程式碼。 在此範例中，`tg1`並`tg2`會[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)物件;`t1`， `t2`， `t3`， `t4`，並`t5`會[concurrency:: task_handle](../../parallel/concrt/reference/task-handle-class.md)物件。
 

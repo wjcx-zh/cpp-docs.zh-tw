@@ -2,14 +2,15 @@
 title: 重新命名
 ms.date: 11/16/2016
 ms.assetid: 64b42a88-3bd9-4399-8b96-75bceffc353b
-ms.openlocfilehash: b677d825675ebb0b60da8f43f778774e2e08695e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a747784f46341f130d1271fd0f15475b63d7b6d8
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455506"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692537"
 ---
 # <a name="rename"></a>重新命名
+
 **功能：** 讓您重新命名程式碼符號 (例如欄位、區域變數、方法、命名空間、屬性及類型) 的識別碼。
 
 **時機：** 您想要安全地重新命名某個項目，而無須尋找所有執行個體及複製/貼上新名稱。

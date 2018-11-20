@@ -1,6 +1,6 @@
 ---
 title: 範圍 (C++)
-ms.date: 04/08/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - classes [C++], scope
 - scope [C++]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-ms.openlocfilehash: f44b75be7b2b1459e3ee9d0472f9a5ef6dac9025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 534bb9711ff54e21ca091b399aa3d13ec5a7359d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506609"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176753"
 ---
 # <a name="scope-c"></a>範圍 (C++)
 
@@ -41,7 +41,8 @@ ms.locfileid: "50506609"
 
 您可以在封閉的區塊中宣告名稱，以隱藏該名稱。 下圖是在內層區塊中重新宣告 `i`，從而隱藏外層區塊範圍中與 `i` 相關的變數。
 
-![區塊&#45;的範圍名稱隱藏](../cpp/media/vc38sf1.png "vc38SF1")區塊範圍和名稱隱藏
+![區塊&#45;的範圍名稱隱藏](../cpp/media/vc38sf1.png "區塊&#45;範圍名稱隱藏") <br/>
+區塊範圍和隱藏名稱
 
 本圖所示的程式輸出為：
 

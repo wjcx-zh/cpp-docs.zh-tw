@@ -2,14 +2,15 @@
 title: 移動定義位置
 ms.date: 11/16/2016
 ms.assetid: c6d507ac-c61e-4da2-95c8-d504b42e2520
-ms.openlocfilehash: fd4fe2fb755919656fba935c29ab8a8591426bea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7957e18732dfae92b7b3ae9cf7ecea441fc3a6b4
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462357"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693201"
 ---
 # <a name="move-definition-location"></a>移動定義位置
+
 **功能：** 讓您立即將函式定義移至對應的標頭檔。
 
 **時機：** 您有想要移動至標頭檔的函式。

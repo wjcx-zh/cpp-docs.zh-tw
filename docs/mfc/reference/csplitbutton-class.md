@@ -1,6 +1,6 @@
 ---
 title: CSplitButton 類別
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CSplitButton
 - AFXCMN/CSplitButton
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: ca4899714fa336d058b2a53bcd5103c5b0c993e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56c006eaa9b0c9860a973727602fd29a33d7ec43
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547273"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176624"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton 類別
 
@@ -58,7 +58,7 @@ class CSplitButton : public CButton
 
 下圖說明對話方塊中，其中包含頁面巡覽區控制項和 (1) 的分割按鈕控制項。 已按下的 (2) 的下拉式箭號，並顯示 (3) 的子功能表。
 
-![包含 splitbutton 和 pager 控制項對話方塊。](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")
+![包含 splitbutton 和 pager 控制項對話方塊。](../../mfc/reference/media/splitbutton_pager.png "Splitbutton 和 pager 控制項 對話方塊。")
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -188,7 +188,7 @@ void SetDropDownMenu(CMenu* pMenu);
 
 下圖說明對話方塊中，其中包含頁面巡覽區控制項和 (1) 的分割按鈕控制項。 已按下的 (2) 的下拉式箭號，並顯示 (3) 的子功能表。
 
-![包含 splitbutton 和 pager 控制項對話方塊。](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")
+![包含 splitbutton 和 pager 控制項對話方塊。](../../mfc/reference/media/splitbutton_pager.png "Splitbutton 和 pager 控制項 對話方塊。")
 
 ### <a name="example"></a>範例
 

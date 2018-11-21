@@ -1,13 +1,13 @@
 ---
 title: 集合 (C++/CX)
-ms.date: 01/22/2017
+ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: d139bcfc6cdf61940a40ca069dd157c1805e2034
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d256e333ddf31bdb637680b70718af85e753a21d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531582"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176389"
 ---
 # <a name="collections-ccx"></a>集合 (C++/CX)
 
@@ -15,7 +15,7 @@ ms.locfileid: "50531582"
 
 Windows 執行階段定義的介面集合和相關的類型，以及 C + + /CX 提供 collection.h 標頭檔中的具象 c + + 實作。 下圖顯示集合型別之間的關聯性：
 
-![C&#43;&#43;&#47;/CX 集合類型的繼承樹狀結構](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")
+![C&#43;&#43;&#47;/CX 集合類型的繼承樹狀結構](../cppcx/media/cppcxcollectionsinheritancetree.png "C&#43;&#43;&#47;/CX 集合類型的繼承樹狀結構")
 
 - [Platform::Collections::Vector 類別](../cppcx/platform-collections-vector-class.md) 與 [std::vector 類別](../standard-library/vector-class.md)類似。
 
@@ -63,7 +63,7 @@ Windows 執行階段定義的介面集合和相關的類型，以及 C + + /CX �
 
 下圖顯示針對 `range for` 執行的 `IVector<Person^>`迴圈。 請注意，程式會執行到第 64 行的中斷點停止。 [ **快速監看式** ] 視窗會顯示迭代器變數 `p` 就是擁有 `VectorProxy<Person^>` 和 `m_v` 成員變數的 `m_i` 。 但是，當您針對這個變數呼叫 `GetType` 時，它會將相同的類型傳回給 `Person` 執行個體 `p2`。 因此，雖然 `VectorProxy` 和 `ArrowProxy` 可能會出現在 [ **快速監看式**]、偵錯工具、某些編譯器錯誤或其他位置，但是一般而言，您仍然不必明確為它們撰寫程式碼。
 
-![範圍中的 VectorProxy&#45;架構的 for 迴圈](../cppcx/media/vectorproxy-1.png "VectorProxy_1")
+![範圍中的 VectorProxy&#45;架構的 for 迴圈](../cppcx/media/vectorproxy-1.png "範圍中的 VectorProxy&#45;架構的 for 迴圈")
 
 有一種情況下您必須為 Proxy 物件撰寫程式碼，就是必須針對元素執行 `dynamic_cast` 的時候 (例如，當您在 `UIElement` 項目集合中尋找特定類型的 XAML 物件時)。 在這種情況下，您必須先將這個項目轉換為 [Platform::Object](../cppcx/platform-object-class.md)^，然後再執行動態轉換：
 

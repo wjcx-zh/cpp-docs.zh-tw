@@ -1,18 +1,18 @@
 ---
 title: 主動式文件容器
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - active documents [MFC], containers
 - active document containers [MFC]
 - containers [MFC], active document
 - MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
-ms.openlocfilehash: ec2e4d11e00040cf0b94957db8466d127e0b5420
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfd4018496f1516f8016bb56da2406f2e4b04c08
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510834"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176779"
 ---
 # <a name="active-document-containers"></a>主動式文件容器
 
@@ -54,7 +54,7 @@ MFC 中的主動式文件容器提供完整支援`COleDocObjectItem`類別。 �
 
 下圖顯示容器和其元件 （左側），並使用中文件和自己的檢視 （右邊） 之間的概念的關聯性。 主動式文件管理儲存體和資料，並檢視顯示，或選擇性地列印該資料。 以粗體顯示的介面是所需的主動式文件參與;這些粗體和斜體是選擇性的。 需要的其他所有介面都。
 
-![主動式文件容器介面](../mfc/media/vc37gj1.gif "vc37gj1")
+![主動式文件容器介面](../mfc/media/vc37gj1.gif "主動式文件容器介面")
 
 支援單一檢視的文件可以在單一的具象類別上實作檢視 」 和 「 文件的元件 （也就是其對應的介面）。 此外，只支援一個檢視，一次的容器站台可以結合是文件及檢視網站的單一實體站台的類別。 容器的框架物件，不過，必須有所區別，以及容器的文件元件只是這裡包含提供完整的架構;它不會受到使用中文件內含項目結構。
 

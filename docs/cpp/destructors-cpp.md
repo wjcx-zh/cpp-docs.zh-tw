@@ -1,6 +1,6 @@
 ---
 title: 解構函式 (C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - objects [C++], destroying
 - Visual C++, destructors
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - destructors, about destructors
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-ms.openlocfilehash: 5c56a6ffc43f8fa00ffd540a5922d8ac279475ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f26f797da75f0d7d7aa6f6849c9484cea35fb125
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586013"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175869"
 ---
 # <a name="destructors-c"></a>解構函式 (C++)
 
@@ -152,9 +152,8 @@ B1 dtor
 
 虛擬基底類別的解構函式會依它們出現在導向非循環圖中的反向順序呼叫 (深度優先、由左至右、後序走訪)。 下圖將說明繼承圖表。
 
-![顯示虛擬基底類別的繼承圖形](../cpp/media/vc392j1.gif "vc392J1")
-
-顯示虛擬基底類別的繼承圖表
+![顯示虛擬基底類別的繼承圖形](../cpp/media/vc392j1.gif "顯示虛擬基底類別的繼承圖形") <br/>
+顯示虛擬基底類別的繼承圖形
 
 以下列出圖中所顯示類別的類別開頭。
 

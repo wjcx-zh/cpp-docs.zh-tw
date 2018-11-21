@@ -1,6 +1,6 @@
 ---
 title: friend (C++)
-ms.date: 07/02/2018
+ms.date: 11/19/2018
 f1_keywords:
 - friend_cpp
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-ms.openlocfilehash: 46027692bfa4a7245418ab032168b5b3c107e839
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 769720877cc58de530791b268811d7d01adad3e6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480518"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176714"
 ---
 # <a name="friend-c"></a>friend (C++)
 
@@ -230,7 +230,8 @@ Managed 型別不能包含任何 friend 函式、friend 類別或 friend 介面�
 
 下圖說明四種類別宣告：`Base`、`Derived`、`aFriend` 和 `anotherFriend`。 只有類別 `aFriend` 可以直接存取 `Base` 的 private 成員 (以及 `Base` 可能繼承的任何成員)。
 
-![Friend 關聯性的含意](../cpp/media/vc38v41.gif "vc38V41")隱含的 friend 關聯性
+![Friend 關聯性的含意](../cpp/media/vc38v41.gif "friend 關聯性的含意") <br/>
+friend 關聯性的含意
 
 ## <a name="inline-friend-definitions"></a>內嵌 friend 定義
 

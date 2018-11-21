@@ -1,17 +1,17 @@
 ---
 title: 函式多載
-ms.date: 1/25/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-ms.openlocfilehash: f37a539c74b995b1dce5f68344c555a679a87991
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c05e4b840a02b3d9bbcd4ed259509be4c35c22c2
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333367"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176298"
 ---
 # <a name="function-overloading"></a>函式多載
 
@@ -280,7 +280,8 @@ volatile Over&
 
    - 從指標轉換成衍生類別、轉換成基底類別的指標會產生較佳的相符項目，基底類別也會越接近直接基底類別。 假設類別階層架構如下圖所示。
 
-![慣用轉換](../cpp/media/vc391t1.gif "vc391T1")圖形說明慣用轉換
+![慣用轉換的圖形](../cpp/media/vc391t1.gif "慣用轉換的圖形") <br/>
+顯示慣用的轉換的圖形
 
 從 `D*` 類型轉換成 `C*` 類型，比從 `D*` 類型轉換成 `B*` 類型更理想。 同樣地，從 `D*` 類型轉換成 `B*` 類型，比從 `D*` 類型轉換成 `A*` 類型更理想。
 
@@ -290,7 +291,8 @@ volatile Over&
 
 前述規則僅適用於所指的衍生路徑。 以下圖顯示的圖形為例。
 
-![多個&#45;顯示偏好的轉換的繼承](../cpp/media/vc391t2.gif "vc391T2")多重繼承圖形說明慣用轉換
+![多個&#45;顯示偏好的轉換的繼承](../cpp/media/vc391t2.gif "多個&#45;顯示偏好的轉換的繼承") <br/>
+顯示偏好的轉換的多重繼承圖形
 
 從 `C*` 類型轉換成 `B*` 類型，比從 `C*` 類型轉換成 `A*` 類型更理想。 這是因為它們位於相同路徑上，且 `B*` 較接近。 不過，從 `C*` 類型轉換成 `D*` 類型不會比轉換成 `A*` 類型理想，因為轉換遵循的路徑不相同。
 

@@ -1,6 +1,6 @@
 ---
 title: 對話方塊資料交換
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - initializing dialog boxes
 - canceling data exchange
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - UpdateData method [MFC]
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
-ms.openlocfilehash: a72be4daf6c10a7d16b8558bfdddb8337ff1b1be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f80d80dc9e212dbe0d87da65ac92943ad1f0edad
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566279"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175492"
 ---
 # <a name="dialog-data-exchange"></a>對話方塊資料交換
 
@@ -34,7 +34,8 @@ ms.locfileid: "50566279"
 
 下圖說明對話方塊的資料交換。
 
-![對話方塊資料交換](../mfc/media/vc379d1.gif "vc379d1")對話方塊資料交換
+![對話方塊資料交換](../mfc/media/vc379d1.gif "對話方塊資料交換") <br/>
+對話方塊資料交換
 
 `UpdateData` 適用於所指定的兩個方向**BOOL**參數傳遞給它。 若要執行交換，`UpdateData` 會設定 `CDataExchange` 物件並呼叫您對話方塊類別中 `CDialog` 的 `DoDataExchange` 成員函式的覆寫。 `DoDataExchange` 會採用 `CDataExchange` 類型的引數。 傳遞至 `CDataExchange` 的 `UpdateData` 物件表示交換的內容，定義如交換方向等此類資訊。
 

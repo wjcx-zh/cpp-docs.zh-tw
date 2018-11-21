@@ -1,15 +1,15 @@
 ---
 title: 實作屬性頁 (ATL)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 6eb65ca3ddff79262c2f2b53d84d2f964f273c9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a76a0f49e8b0ec7458b781785cd5030d2c523f0b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669088"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176467"
 ---
 # <a name="example-implementing-a-property-page"></a>範例： 實作屬性頁
 
@@ -58,7 +58,7 @@ ms.locfileid: "50669088"
 
 現在，已產生內容頁，您必須將幾個控制項新增至對話方塊資源，其代表您的頁面。 新增編輯方塊、 靜態文字控制項，並核取方塊，並設定其識別碼，如下所示：
 
-![編輯對話方塊資源](../atl/media/ppgresourcelabeled.gif "ppgresourcelabeled")
+![編輯對話方塊資源](../atl/media/ppgresourcelabeled.gif "編輯對話方塊資源")
 
 這些控制項將用來顯示文件和其唯讀狀態的檔案名稱中。
 

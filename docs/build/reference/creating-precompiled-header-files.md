@@ -1,6 +1,6 @@
 ---
 title: 建立先行編譯標頭檔
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - pch
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 3014b2da9f9d9e03e9ea791c9a97ff59f842e8ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b570b76328ee9824610aac495d97cede19189cf9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482611"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176428"
 ---
 # <a name="creating-precompiled-header-files"></a>建立先行編譯標頭檔
 
@@ -42,8 +42,6 @@ Microsoft C 和 C++ 編譯器提供對任何 C 或 C++ 程式碼進行先行編�
 
 如需與先行編譯標頭相關的編譯器選項的參考資訊，請參閱[/Y （先行編譯標頭）](../../build/reference/y-precompiled-headers.md)。
 
-<a name="when-to-precompile-source-code"></a>
-
 ## <a name="when-to-precompile-source-code"></a>先行編譯原始程式碼的時機
 
 先行編譯的程式碼很有用的開發週期縮短編譯時間，特別是當：
@@ -57,11 +55,9 @@ Microsoft C 和 C++ 編譯器提供對任何 C 或 C++ 程式碼進行先行編�
 您可以先行編譯 C 和 c + + 程式。 在 c + + 程式設計中很常見的做法，來區隔成標頭檔的類別介面資訊。 稍後可以包含這些標頭檔中使用類別的程式。 先行編譯這些標頭，您可以減少程式編譯所需的時間。
 
 > [!NOTE]
->  雖然您可以使用只有一個先行編譯標頭 (.pch) 檔案，每個來源檔案，您可以使用多個專案中的.pch 檔案。
+> 雖然您可以使用只有一個先行編譯標頭 (.pch) 檔案，每個來源檔案，您可以使用多個專案中的.pch 檔案。
 
-<a name="two-choices-for-precompiling-code"></a>
-
-# <a name="two-choices-for-precompiling-code"></a>先行編譯程式碼的兩個選擇
+## <a name="two-choices-for-precompiling-code"></a>先行編譯程式碼的兩個選擇
 
 您可以使用 Visual c + +，先行編譯任何 C 或 c + + 程式碼;您不一定要先行編譯僅標頭檔。
 
@@ -73,13 +69,9 @@ Microsoft C 和 C++ 編譯器提供對任何 C 或 C++ 程式碼進行先行編�
 
 編譯器選項參考主題 **/Yu**並 **/Yc**討論如何存取這項功能在開發環境中的。
 
-<a name="precompiled-header-consistency-rules"></a>
-
 ## <a name="precompiled-header-consistency-rules"></a>先行編譯標頭檔的一致性規則
 
 因為 PCH 檔案包含電腦環境的相關資訊，以及關於此計畫的記憶體位址資訊，您應該只使用 PCH 檔案在電腦上的，建立位置。
-
-<a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>
 
 ## <a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>針對每個檔案使用的先行編譯標頭檔的一致性規則
 
@@ -134,8 +126,6 @@ PCH 檔案並不會包含已在作用中建立時的 include 路徑的相關資�
 |`data_seg`|`intrinsic`|`warning`|
 |`function`|`optimize`||
 
-<a name="consistency-rules-for-yc-and-yu"></a>
-
 ## <a name="consistency-rules-for-yc-and-yu"></a>/Yc 和 /Yu 的一致性規則
 
 當您使用先行編譯標頭使用 /Yc 或 /Yu 建立時，編譯器就會比較目前編譯環境以取得存在於建立 PCH 檔案時。 請務必指定與上一個 （使用一致的編譯器選項、 pragma，等等） 目前的編譯一致的環境。 如果編譯器偵測到不一致的問題，它會發出警告，並盡可能識別不一致的情況。 這類警告不一定表示有問題 PCH 檔案;只要可以警告您可能發生的衝突。 下列各節說明先行編譯標頭的一致性需求。
@@ -155,15 +145,11 @@ PCH 檔案並不會包含已在作用中建立時的 include 路徑的相關資�
 > [!NOTE]
 >  先行編譯標頭設備適合只有在 C 和 c + + 原始程式檔。
 
-<a name="using-precompiled-headers-in-a-project"></a>
-
 ## <a name="using-precompiled-headers-in-a-project"></a>在專案中使用先行編譯標頭檔
 
 前幾節會提供的先行編譯標頭： /Yc 和 /Yu，/Fp 選項中，而[hdrstop](../../preprocessor/hdrstop.md) pragma。 本章節描述的專案中; 中使用手動先行編譯標頭選項的方法範例 makefile 與它所管理的程式碼結束。
 
 在專案中使用手動先行編譯標頭選項的另一種方法，如研究位於 MFC\SRC 目錄是預設在安裝期間建立的 Visual c + + 的 makefile 的其中一個。 這些 makefile 採取類似的方式來顯示這一節，但更善用 Microsoft 計劃維護公用程式 (NMAKE) 巨集，並提供更好的控制，建置程序。
-
-<a name="pch-files-in-the-build-process"></a>
 
 ## <a name="pch-files-in-the-build-process"></a>建置程序中的 PCH 檔
 
@@ -171,8 +157,8 @@ PCH 檔案並不會包含已在作用中建立時的 include 路徑的相關資�
 
 此圖會使用三個圖表的裝置，顯示的建置程序流程。 名稱的矩形代表每個檔案或巨集;三個巨集代表一或多個檔案。 陰影的區域代表每個編譯或連結的動作。 箭號會顯示在編譯或連結流程期間合併的檔案與巨集。
 
-![使用先行編譯標頭檔的 Makefile](../../build/reference/media/vc30ow1.gif "使用先行編譯標頭檔的 Makefile 結構")
-##### <a name="structure-of-a-makefile-that-uses-a-precompiled-header-file"></a>使用先行編譯標頭檔的 Makefile 的結構
+![使用先行編譯標頭檔的 makefile 結構](../../build/reference/media/vc30ow1.gif "使用先行編譯標頭檔的 makefile 結構") <br/>
+使用先行編譯標頭檔的 Makefile 的結構
 
 從頂端，STABLEHDRS 和界限是圖表的您可以在其中列出不太可能需要重新編譯檔案的 NMAKE 巨集。 這些檔案編譯的命令字串
 
@@ -187,8 +173,6 @@ APPLIB.obj 繼續往下圖，代表您最終的應用程式中使用的支援程
 MYAPP.obj 代表最終的應用程式。 它會建立從 MYAPP.cpp，檔案列在 UNSTABLEHDRS 巨集和先行編譯程式碼從先行編譯標頭。
 
 最後，可執行檔 (MYAPP。EXE) 會建立連結的 OBJ 巨集 （APPLIB.obj 和 MYAPP.obj） 中列出的檔案。
-
-<a name="sample-makefile-for-pch"></a>
 
 ## <a name="sample-makefile-for-pch"></a>PCH 的 Makefile 範例
 
@@ -254,8 +238,6 @@ NMAKE DEBUG=0
 ```
 
 如需有關 makefile 的詳細資訊，請參閱[NMAKE 參考](../../build/nmake-reference.md)。 另請參閱[編譯器選項](../../build/reference/compiler-options.md)並[連結器選項](../../build/reference/linker-options.md)。
-
-<a name="example-code-for-pch"></a>
 
 ## <a name="example-code-for-pch"></a>PCH 範例程式碼
 

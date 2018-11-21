@@ -1,29 +1,34 @@
 ---
 title: 視覺化管理員
-ms.date: 06/28/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Visualization Manager
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
-ms.openlocfilehash: befff860f50677f9c70c0fbb6b45ac528c36e773
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c9dc19266d80d56f696953c5f5896eb9d99cc8b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521368"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175570"
 ---
 # <a name="visualization-manager"></a>視覺化管理員
 
 視覺管理員時的物件可控制整個應用程式的外觀。 它會將單一類別作為您可以在其中放置您的應用程式的所有繪圖程式碼。 MFC 程式庫包含數個視覺管理員。 如果您想要建立您的應用程式的自訂檢視，您也可以建立您自己的視覺管理員。 啟用不同的視覺管理員時下, 圖將顯示同一個應用程式：
 
-![由 CMFCVisualManagerWindows 呈現的 MyApp](../mfc/media/vmwindows.png "vmwindows") CMFCVisualManagerWindows 視覺管理員會使用的 MyApp
+![由 CMFCVisualManagerWindows 呈現的 MyApp](../mfc/media/vmwindows.png "由 CMFCVisualManagerWindows 呈現的 MyApp") <br/>
+使用 CMFCVisualManagerWindows 視覺管理員的 MyApp
 
-![由 CMFCVisualManagerVS2005 呈現的 MyApp](../mfc/media/vmvs2005.png "vmvs2005") CMFCVisualManagerVS2005 視覺管理員會使用的 MyApp
+![由 CMFCVisualManagerVS2005 呈現的 MyApp](../mfc/media/vmvs2005.png "由 CMFCVisualManagerVS2005 呈現的 MyApp") <br/>
+使用 CMFCVisualManagerVS2005 視覺管理員的 MyApp
 
-![由 CMFCVisualManagerOfficeXP 呈現的 MyApp](../mfc/media/vmofficexp.png "vmofficexp") CMFCVisualManagerOfficeXP 視覺管理員會使用的 MyApp
+![由 CMFCVisualManagerOfficeXP 呈現的 MyApp](../mfc/media/vmofficexp.png "由 CMFCVisualManagerOfficeXP 呈現的 MyApp") <br/>
+使用 CMFCVisualManagerOfficeXP 視覺管理員的 MyApp
 
-![由 CMFCVisualManagerOffice2003 呈現的 MyApp](../mfc/media/vmoffice2003.png "vmoffice2003") CMFCVisualManagerOffice2003 視覺管理員會使用的 MyApp
+![由 CMFCVisualManagerOffice2003 呈現的 MyApp](../mfc/media/vmoffice2003.png "由 CMFCVisualManagerOffice2003 呈現的 MyApp") <br/>
+使用 CMFCVisualManagerOffice2003 視覺管理員的 MyApp
 
-![由 CMFCVisualManagerOffice2007 呈現的 MyApp](../mfc/media/msoffice2007.png "msoffice2007") CMFCVisualManagerOffice2007 視覺管理員會使用的 MyApp
+![由 CMFCVisualManagerOffice2007 呈現的 MyApp](../mfc/media/msoffice2007.png "由 CMFCVisualManagerOffice2007 呈現的 MyApp") <br/>
+使用 CMFCVisualManagerOffice2007 視覺管理員的 MyApp
 
 根據預設，視覺管理員會維護 GUI 的幾個元素的繪製程式碼。 若要提供自訂的 UI 項目，您需要覆寫相關的繪圖方法的視覺管理員。 如需這些方法的清單，請參閱[CMFCVisualManager 類別](../mfc/reference/cmfcvisualmanager-class.md)。 您可以覆寫，以提供自訂外觀的方法為開頭的所有方法`OnDraw`。
 

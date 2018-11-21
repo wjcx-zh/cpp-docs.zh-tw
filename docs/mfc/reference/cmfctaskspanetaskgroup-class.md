@@ -1,6 +1,6 @@
 ---
 title: CMFCTasksPaneTaskGroup 類別
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPaneTaskGroup
 - AFXTASKSPANE/CMFCTasksPaneTaskGroup
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCTasksPaneTaskGroup [MFC], m_rectGroup
 - CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
-ms.openlocfilehash: 25e714aa617cdccc4e02e288f1a24f636e05cb0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ed50950bc62a0c2f382e42782c58a0d7354116f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539603"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176584"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup 類別
 
@@ -72,19 +72,19 @@ class CMFCTasksPaneTaskGroup : public CObject
 
 下圖顯示已展開的工作群組：
 
-![工作群組中，展開](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")
+![工作群組中，展開](../../mfc/reference/media/nexttaskgrpexpand.png "展開的工作群組")
 
 下圖顯示已摺疊的工作群組：
 
-![摺疊的工作群組](../../mfc/reference/media/nexttaskgrpcollapse.png "nexttaskgrpcollapse")
+![摺疊工作群組](../../mfc/reference/media/nexttaskgrpcollapse.png "摺疊工作群組")
 
 下圖顯示沒有標題的工作群組：
 
-![沒有標題的工作群組](../../mfc/reference/media/nexttaskgrpnocapt.png "nexttaskgrpnocapt")
+![沒有標題的工作群組](../../mfc/reference/media/nexttaskgrpnocapt.png "沒有標題的工作群組")
 
 下圖顯示兩個工作群組。 第一個工作群組設定標示為特殊`m_bIsSpecial`旗標設為 TRUE，而第二個工作群組並不特殊。 請注意如何在第一個工作群組的標題比第二個工作群組深：
 
-![特殊的工作群組](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")
+![特殊的工作群組](../../mfc/reference/media/nexttaskgrpspecial.png "特殊工作群組")
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

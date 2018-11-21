@@ -1,13 +1,13 @@
 ---
 title: 使用磚
-ms.date: 06/28/2018
+ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: 02a6f35801c30ce5e25e79a4e736e6c08776a1da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588509"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176090"
 ---
 # <a name="using-tiles"></a>使用磚
 
@@ -27,7 +27,7 @@ ms.locfileid: "50588509"
 
 下圖顯示資料以 2x3 並排排列的 8x9 的矩陣。
 
-![8&#45;的&#45;9 矩陣分成 2&#45;的&#45;3 的圖格](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")
+![8&#45;所&#45;9 矩陣分成 2&#45;所&#45;3 的圖格](../../parallel/amp/media/usingtilesmatrix.png "8&#45;的&#45;9 矩陣分成 2&#45;的&#45;3 的圖格")
 
 下列範例會顯示 [全域] 圖格和區域的索引，此並排矩陣。 `array_view`物件使用類型的項目來建立`Description`。 `Description`保存的全域、 並排以及區域索引的矩陣中的項目。 呼叫中的程式碼`parallel_for_each`設定的全域值、 圖格，以及區域索引的每個項目。 輸出會顯示在值`Description`結構。
 

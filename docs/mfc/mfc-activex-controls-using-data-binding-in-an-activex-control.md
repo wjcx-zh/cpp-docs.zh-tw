@@ -1,6 +1,6 @@
 ---
 title: MFC ActiveX 控制項：在 ActiveX 控制項中使用資料繫結
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - bindable
 - requestedit
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: 9efac8ba0889d648def622ca045b9398c8eeef11
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a5cb73496cd6678e3f45500d9d53c2127b0fb17c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518485"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175800"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX 控制項：在 ActiveX 控制項中使用資料繫結
 
@@ -30,7 +30,8 @@ ActiveX 控制項的功能更強大的用途之一是資料繫結，可讓資料
 
 本文章涵蓋您的工作的控制項部分。 實作與資料庫的資料繫結互動是控制項容器的責任。 您在容器中管理的資料庫互動的方式已超出本文件的範圍。 本文的其餘部分會說明如何準備資料繫結的控制項。
 
-![資料的概念圖&#45;繫結控制項](../mfc/media/vc374v1.gif "vc374v1")的資料繫結控制項的概念圖
+![資料的概念圖&#45;繫結控制項](../mfc/media/vc374v1.gif "資料的概念圖&#45;繫結控制項") <br/>
+資料繫結控制項的概念圖
 
 `COleControl`類別提供兩個成員函式，讓資料繫結來實作簡單的程序。 第一個函式中， [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit)，用來要求權限可變更屬性值。 [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged)，第二個函式，呼叫後已成功變更屬性值。
 

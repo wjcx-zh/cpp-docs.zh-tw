@@ -1,6 +1,6 @@
 ---
 title: 文件檢視架構
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - CView class [MFC], view architecture
 - CDocument class [MFC]
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: 943199e2398bcb49c7dddf6b3a67f5556c9c81a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0886f364637c8844aceb5d5d7b6b2ed7175225d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509275"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176844"
 ---
 # <a name="documentview-architecture"></a>文件/檢視架構
 
@@ -47,7 +47,8 @@ MFC 架構給使用者和程式設計人員，最明顯的部分是文件和檢�
 
 下圖顯示文件及其檢視之間的關聯性。
 
-![檢視是顯示文件的一部份](../mfc/media/vc379n1.gif "vc379n1")文件和檢視
+![檢視是顯示文件的一部份](../mfc/media/vc379n1.gif "檢視是顯示文件的一部分") <br/>
+文件和檢視
 
 類別庫中的文件/檢視實作區隔資料本身從它的顯示畫面和使用者作業的資料。 透過文件類別管理資料的所有變更。 檢視會呼叫這個介面來存取及更新資料。
 

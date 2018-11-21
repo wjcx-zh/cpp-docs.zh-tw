@@ -1,21 +1,21 @@
 ---
 title: 如何：自訂快速存取工具列
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: d9bdc523218c7fad217d066eabd518aaff011df3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aced2e732b68f838c679518ef67b1d6bdd361964
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558479"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176324"
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>如何：自訂快速存取工具列
 
 快速存取工具列 (QAT) 是包含一組命令的可自訂工具列，命令是顯示在 [應用程式] 按鈕旁或類別索引標籤下。 下圖將顯示一般的快速存取工具列。
 
-![MFC 功能區快速存取工具列](../mfc/media/quick_access_toolbar.png "quick_access_toolbar")
+![MFC 功能區快速存取工具列](../mfc/media/quick_access_toolbar.png "MFC 功能區快速存取工具列")
 
 若要自訂快速存取工具列，請開啟它**屬性**視窗中，修改其命令，然後再預覽功能區控制項。
 
@@ -55,4 +55,3 @@ ms.locfileid: "50558479"
 ## <a name="see-also"></a>另請參閱
 
 [功能區設計工具 (MFC)](../mfc/ribbon-designer-mfc.md)
-

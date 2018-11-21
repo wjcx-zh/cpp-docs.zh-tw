@@ -1,17 +1,17 @@
 ---
 title: C++ 中的 Lambda 運算式
-ms.date: 07/19/2017
+ms.date: 11/19/2018
 helpviewer_keywords:
 - lambda expressions [C++]
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 44255df8633ad677587129dd27c0bdc23a616d96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1b8568d69fea002e59925e1e9354407457954e42
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493804"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176259"
 ---
 # <a name="lambda-expressions-in-c"></a>C++ 中的 Lambda 運算式
 
@@ -43,7 +43,7 @@ void abssort(float* x, unsigned n) {
 
 下圖顯示 Lambda 的組件：
 
-![Lambda 運算式的結構化項目](../cpp/media/lambdaexpsyntax.png "LambdaExpSyntax")
+![Lambda 運算式的結構化項目](../cpp/media/lambdaexpsyntax.png "lambda 運算式的結構化項目")
 
 1. *擷取子句*(也稱為*lambda introducer* c + + 規格中。)
 

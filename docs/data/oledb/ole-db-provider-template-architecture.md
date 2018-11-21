@@ -1,17 +1,17 @@
 ---
 title: OLE DB 提供者樣板架構
-ms.date: 10/24/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - OLE DB [C++], object model
 - architecture [C++], OLE DB Provider
 - OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-ms.openlocfilehash: 6256328caa11d188f3a50445f62df096b6f6acb3
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 099c29e141d721645c416e60be240c22d22cd869
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557033"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175635"
 ---
 # <a name="ole-db-provider-template-architecture"></a>OLE DB 提供者樣板架構
 
@@ -19,7 +19,7 @@ ms.locfileid: "51557033"
 
 OLE DB 提供者架構包含資料來源物件和一或多個工作階段。 資料來源物件是每個提供者必須具現化初始物件。 當取用者應用程式需要資料時，它同時會建立啟動提供者的資料來源物件。 資料來源物件會建立工作階段物件 (使用`IDBCreateSession`介面) 透過這取用者會連接到資料來源物件。 ODBC 程式設計人員可以將資料來源物件視為相當於`HENV`和 工作階段物件，相當於`HDBC`。
 
-![提供者架構](../../data/oledb/media/vc4twb1.gif "vc4twb1")
+![提供者架構](../../data/oledb/media/vc4twb1.gif "提供者架構")
 
 與所建立的來源檔案一起**OLE DB 提供者精靈**，OLE DB 範本實作的資料來源物件。 工作階段是一個物件，對應至 OLE DB `TSession`。
 

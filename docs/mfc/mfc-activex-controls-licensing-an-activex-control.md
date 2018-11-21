@@ -1,6 +1,6 @@
 ---
 title: MFC ActiveX 控制項：授權 ActiveX 控制項
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - COleObjectFactory
 helpviewer_keywords:
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - GetLicenseKey method [MFC]
 - licensing ActiveX controls
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
-ms.openlocfilehash: 4001d49da8477ab9dd481d0eb3ee02cb10e1e18b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35ca5d410f642f2557d9ee797eda2d9529f7f4d1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465620"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176353"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC ActiveX 控制項：授權 ActiveX 控制項
 
 授權支援 ActiveX 控制項的選擇性功能可讓您控制能夠使用或散發控制項。 (如需額外的授權問題的詳細討論，請參閱中的授權問題[升級現有的 ActiveX 控制項](../mfc/upgrading-an-existing-activex-control.md)。)
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > ActiveX 是舊版的技術，不應用於新的開發。 如需有關取代 ActiveX 的現代技術的詳細資訊，請參閱[ActiveX 控制項](activex-controls.md)。
 
 這篇文章討論下列主題：
@@ -43,13 +43,15 @@ ms.locfileid: "50465620"
 
 下圖示範如何將容器應用程式開發期間使用的 ActiveX 控制項的授權驗證。 如先前所述，容器應用程式開發人員必須正確。若要建立控制項的執行個體的開發電腦上安裝的授權檔案。
 
-![授權 ActiveX 控制項，在開發階段驗證](../mfc/media/vc374d1.gif "vc374d1")授權 ActiveX 控制項開發期間的驗證
+![授權 ActiveX 控制項，在開發階段驗證](../mfc/media/vc374d1.gif "在開發階段驗證的授權的 ActiveX 控制項") <br/>
+授權的 ActiveX 控制項的開發期間進行驗證
 
 當使用者執行的容器應用程式時，就會發生下一個程序下, 圖所示。
 
 當應用程式啟動時，控制項的執行個體通常需要建立。 容器可完成此作業藉由呼叫`CreateInstanceLic`，傳遞做為參數的內嵌的授權金鑰。 內嵌的授權金鑰和控制自己的授權金鑰複本之間再進行字串比較。 如果比對成功，會建立控制項的執行個體和應用程式會繼續正常執行。 請注意，。公用檔案不需要存在於控制使用者的電腦上。
 
-![授權 ActiveX 控制項在執行階段驗證](../mfc/media/vc374d2.gif "vc374d2")授權 ActiveX 控制項時執行的驗證
+![授權 ActiveX 控制項在執行階段驗證](../mfc/media/vc374d2.gif "授權的 ActiveX 控制項在執行階段驗證") <br/>
+授權的 ActiveX 控制項的執行期間進行驗證
 
 控制項授權包含兩個基本元件： 在控制項實作 DLL 中的特定程式碼和授權檔案。 程式碼是由兩個 （或可能是三個） 的函式呼叫和字元字串，以下稱為 「 授權 」，包含字串的著作權注意事項所組成。 這些呼叫和授權字串位於控制項實作 (。CPP) 檔案。 ActiveX 控制項精靈，產生的授權檔案是含有文字檔案的著作權陳述式。 它會使用與專案名稱來命名。公用擴充功能，例如範例。授權。 授權的控制項必須伴隨授權檔案，視設計階段使用。
 

@@ -1,16 +1,16 @@
 ---
 title: 識別 DHTML 控制項專案的項目
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - HTML controls, ATL support
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-ms.openlocfilehash: bb7fa67e6a3009922596c225895032bfb2f4fbb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e38b94e200754ce9dd37df2bfb17dfaa32cafe49
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533688"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175700"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>識別 DHTML 控制項專案的項目
 
@@ -26,7 +26,7 @@ DHTML 控制項是類似於任何 ATL 的控制項，除了：
 
 下圖說明您的 DLL、 DHTML 控制項、 網頁瀏覽器和 HTML 資源之間的關聯性。
 
-![DHTML 控制項專案的項目](../atl/media/vc52en1.gif "vc52en1")
+![DHTML 控制項專案的項目](../atl/media/vc52en1.gif "DHTML 控制項專案的項目")
 
 > [!NOTE]
 >  此圖形上的名稱是預留位置。 ATL 控制項精靈中所指派的名稱會以 HTML 資源和控制項上所公開的介面的名稱。
@@ -47,7 +47,7 @@ DHTML 控制項是類似於任何 ATL 的控制項，除了：
 
 ATL 控制項精靈會產生具有預設的程式碼的控制項的 HTML 資源和.cpp 檔案中。 您可以編譯和執行精靈時，所產生的控制項，然後在網頁瀏覽器或 ActiveX 控制項測試容器中檢視控制項。 下圖顯示含有三個按鈕顯示在測試容器中的 ATL DHTML 控制項的預設值：
 
-![ATL DHTML 控制項](../atl/media/vc52en2.gif "vc52en2")
+![ATL DHTML 控制項](../atl/media/vc52en2.gif "ATL DHTML 控制項")
 
 請參閱[建立 ATL DHTML 控制項](../atl/creating-an-atl-dhtml-control.md)開始建立 DHTML 控制項。 請參閱[以測試容器測試屬性和事件](../mfc/testing-properties-and-events-with-test-container.md)如需有關如何測試容器存取資訊。
 

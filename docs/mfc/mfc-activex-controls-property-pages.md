@@ -1,6 +1,6 @@
 ---
 title: MFC ActiveX 控制項：屬性頁
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - DDP_ functions [MFC]
 - MFC ActiveX controls [MFC], properties
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-ms.openlocfilehash: 764590b5d7162d7f10a60dda24649adde9e090c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7027a58960e07903c9d774e07379c8050bc489b8
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656168"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176454"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX 控制項：屬性頁
 
@@ -32,7 +32,8 @@ ActiveX 控制項屬性頁會顯示在兩種方式：
 
 屬性 對話方塊中 （如下圖所示） 包含區域來顯示目前的屬性頁面上，索引標籤切換 屬性頁，以及執行常見工作，例如關閉 屬性頁 對話方塊中，按鈕的集合取消任何變更，或立即將變更套用至 ActiveX 控制項。
 
-![Circ3 屬性對話方塊](../mfc/media/vc373i1.gif "vc373i1")內容 對話方塊
+![Circ3 屬性對話方塊](../mfc/media/vc373i1.gif "Circ3 屬性對話方塊") <br/>
+內容 對話方塊
 
 本文章涵蓋使用 ActiveX 控制項中的 屬性頁的相關主題。 它們包括：
 

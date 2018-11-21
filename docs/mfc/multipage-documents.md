@@ -1,6 +1,6 @@
 ---
 title: 多頁文件
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - pagination [MFC]
 - overriding [MFC], View class functions for printing
@@ -25,12 +25,12 @@ helpviewer_keywords:
 - printing [MFC], pagination
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
-ms.openlocfilehash: 0c0363c1741b713ff24ec7ca7837f0f3c1b3eaf1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4ec9f456443b9cd180f1558946829281bc10a36
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587664"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176376"
 ---
 # <a name="multipage-documents"></a>多頁文件
 
@@ -68,7 +68,8 @@ ms.locfileid: "50587664"
 
 下圖說明列印處理序中包含的步驟，並顯示所呼叫的每個 `CView` 列印成員函式。 本文的其餘部分將詳細說明大部分的步驟。 列印程序的其他部分所述的發行項[配置 GDI 資源](../mfc/allocating-gdi-resources.md)。
 
-![列印迴圈處理序](../mfc/media/vc37c71.gif "vc37c71")列印迴圈
+![列印迴圈處理序](../mfc/media/vc37c71.gif "列印迴圈程序") <br/>
+列印迴圈
 
 ##  <a name="_core_pagination"></a> 分頁
 

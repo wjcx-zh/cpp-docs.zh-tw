@@ -1,6 +1,6 @@
 ---
 title: 資料錄集：動態地繫結資料行 (ODBC)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - ODBC recordsets [C++], binding columns dynamically
 - data binding [C++], recordset columns
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: 0284fbeed23c5fdad47cafd29af7a47251b923a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2fc870ba08bbec0a886b3d77281f3c697ae09fe
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469676"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175661"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>資料錄集：動態地繫結資料行 (ODBC)
 
@@ -78,7 +78,7 @@ ms.locfileid: "50469676"
 
    其中一個方法是建置一或多個動態清單，一個用於新的資料行名稱，另一個其結果值，以及第三個針對其資料類型 （如有必要）。 這些清單中，特別是值清單中，提供的資訊，並繫結的必要儲存體。 下圖說明建置清單。
 
-   ![建置要動態繫結的資料行的清單](../../data/odbc/media/vc37w61.gif "vc37w61")<br/>
+   ![建置要動態繫結的資料行的清單](../../data/odbc/media/vc37w61.gif "建置動態繫結的資料行清單")<br/>
    建置要動態繫結的資料行清單
 
 1. RFX 函式呼叫增益集主要資料錄集的`DoFieldExchange`函式每個加入資料行。 這些 RFX 呼叫進行擷取資料錄，包括其他的資料行，和資料行繫結至資料錄集資料成員，或您以動態方式提供的儲存體為其的工作。

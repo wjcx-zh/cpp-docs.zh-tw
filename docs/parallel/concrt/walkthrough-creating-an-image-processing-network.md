@@ -1,16 +1,16 @@
 ---
 title: 逐步解說：建立影像處理網路
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-ms.openlocfilehash: 4eb1d6f9e5bc0055a1a4b4be5e18497b20c3a73a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93a20ca9967c8730e1563a653c8f4546d94161fb
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643630"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176168"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>逐步解說：建立影像處理網路
 
@@ -134,7 +134,7 @@ ms.locfileid: "50643630"
 
 下圖顯示映像處理網路：
 
-![映像處理網路](../../parallel/concrt/media/concrt_imageproc.png "concrt_imageproc")
+![映像處理網路](../../parallel/concrt/media/concrt_imageproc.png "影像處理網路")
 
 `countdown_event`在此範例中的物件可讓已處理的所有映像時，通知主應用程式的映像處理網路。 `countdown_event`類別會使用[concurrency:: event](../../parallel/concrt/reference/event-class.md)計數器值達到零時發出訊號的物件。 每次它傳送至網路的檔案名稱，主應用程式就會遞增計數器。 終端節點之網路遞減計數器在處理每個映像之後。 主要的應用程式會周遊指定的目錄之後，它會等候`countdown_event`物件來表示其計數器達到零。
 
@@ -152,7 +152,7 @@ ms.locfileid: "50643630"
 
 下圖顯示範例輸出。 每個來源映像會高於其相對應修改的映像。
 
-![範例之範例的輸出](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")
+![範例之範例的輸出](../../parallel/concrt/media/concrt_imageout.png "範例之範例的輸出")
 
 `Lighthouse` Tom Alphin 所撰寫，並因此會轉換為灰階。 `Chrysanthemum``Desert`， `Koala`，和`Tulips`已做的主要色彩的紅色因此已移除的藍色與綠色的色彩元件，而且會變黑。 `Hydrangeas``Jellyfish`，和`Penguins`符合預設準則，因此 深褐色 toned。
 

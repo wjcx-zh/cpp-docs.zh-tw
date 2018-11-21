@@ -2,16 +2,16 @@
 title: 在 Visual Studio 2017 中安裝 c + + 支援
 description: 安裝 Visual c + + 的 Visual Studio 支援
 ms.custom: mvc
-ms.date: 09/17/2018
+ms.date: 11/19/2018
 ms.topic: tutorial
 ms.devlang: C++
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 019eadee35829bb546de0a69707520dc98f4077e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0dd1c25cd17c67c310840396c80fe05dfc2b7e1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507233"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175739"
 ---
 # <a name="install-c-support-in-visual-studio"></a>在 Visual Studio 中安裝 c + + 支援
 
@@ -45,11 +45,11 @@ ms.locfileid: "50507233"
 
 1. 尋找您已下載並執行它的安裝程式檔案。 它可能會顯示在瀏覽器中，或您可能會發現您的 [下載] 資料夾中。 安裝程式需要系統管理員權限，才能執行。 您可能會看到**使用者帳戶控制**詢問是否要授與權限，讓安裝程式對您的系統進行變更; 選擇的對話方塊**是**。 如果您遇到問題，在檔案總管中尋找下載的檔案，以滑鼠右鍵按一下 [安裝程式] 圖示，然後選擇**系統管理員身分執行**從內容功能表。
 
-   ![執行 Visual Studio 2017 安裝程式](../build/media/vscpp-concierge-run-installer.gif "執行 Visual Studio 安裝程式")
+   ![下載並安裝 Visual Studio Installer](../build/media/vscpp-concierge-run-installer.gif "下載並安裝 Visual Studio 安裝程式")
 
 1. 安裝程式會顯示一份工作負載清單，而工作負載是特定開發區域的相關選項群組。 C + + 的支援現在是選擇性並未預設安裝的工作負載的一部分。
 
-   ![使用 c + + 的桌面開發](../build/media/desktop-development-with-cpp.png "使用 c + + 的桌面開發")
+   ![使用 c + + 工作負載的桌面開發](../build/media/desktop-development-with-cpp.png "使用 c + + 的桌面開發")
 
    C + +，請選取**使用 c + + 的桌面開發**工作負載，然後選擇**安裝**。
 

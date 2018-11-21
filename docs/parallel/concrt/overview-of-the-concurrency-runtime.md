@@ -1,18 +1,18 @@
 ---
 title: 並行執行階段概觀
-ms.date: 07/20/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Concurrency Runtime, requirements
 - Concurrency Runtime, architecture
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: dab4860bcc69780fa6a6390e2ef111216642637a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: ffaf560361da2fd54febb5e38af121ad5149f012
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693635"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176662"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>並行執行階段概觀
 
@@ -60,10 +60,10 @@ ms.locfileid: "51693635"
 
 **並行執行階段架構**
 
-![並行執行階段架構](../../parallel/concrt/media/concurrencyrun.png "concurrencyrun")
+![並行執行階段架構](../../parallel/concrt/media/concurrencyrun.png "並行執行階段架構")
 
 > [!IMPORTANT]
->  無法使用從通用 Windows 平台 (UWP) 應用程式，或當您使用 ppltasks.h 中的工作類別或其他類型的工作排程器和資源管理員元件。
+> 無法使用從通用 Windows 平台 (UWP) 應用程式，或當您使用 ppltasks.h 中的工作類別或其他類型的工作排程器和資源管理員元件。
 
 並行執行階段很*簡式*，也就是您可以結合現有的功能，以執行更多作業。 並行執行階段會組合來自較低層級元件的許多功能，例如平行演算法。
 

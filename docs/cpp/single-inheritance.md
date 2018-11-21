@@ -1,6 +1,6 @@
 ---
 title: 單一繼承
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - single inheritance
 - base classes [C++], indirect
@@ -10,18 +10,19 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-ms.openlocfilehash: a188780201c00451b125288b37c7c62fbe2322c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96af0c42a32f14280fd8c208a3e4eaec38a8ca3a
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461850"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175618"
 ---
 # <a name="single-inheritance"></a>單一繼承
 
 在「單一繼承」(一種常見的繼承形式) 中，任何類別都只能有一個基底類別。 請考慮下圖中說明的關係。
 
-![基本的單一&#45;繼承圖形](../cpp/media/vc38xj1.gif "vc38XJ1")簡單的單一繼承圖形
+![基本的單一&#45;繼承圖形](../cpp/media/vc38xj1.gif "基本的單一&#45;繼承圖形") <br/>
+簡單的單一繼承圖形
 
 請注意圖中從一般到特定的進展。 在大部分類別階層架構設計中，另一種常見的屬性是衍生類別，其與基底類別具有一種「種類」(kind of) 的關聯性。 在圖中，`Book` 是一種 `PrintedDocument`，而 `PaperbackBook` 是一種 `book`。
 
@@ -47,12 +48,13 @@ class PaperbackBook : public Book {};
 
 類別可做為許多特定類別的基底類別，如下圖所示。
 
-![Directed 非循環圖](../cpp/media/vc38xj2.gif "vc38XJ2")範例的有向非循環圖
+![Directed 非循環圖](../cpp/media/vc38xj2.gif "Directed 非循環圖") <br/>
+導向非循環圖的範例
 
 上圖中 (稱為「導向非循環圖」或 "DAG") 的某些類別是多個衍生類別的基底類別。 不過，反向並不成立：其中只有一個指定衍生類別的直接基底類別。 此圖中描述了一個「單一繼承」結構。
 
 > [!NOTE]
->  導向非循環圖不是唯一的單一繼承。 它們也可用來描述多重繼承圖形。
+> 導向非循環圖不是唯一的單一繼承。 它們也可用來描述多重繼承圖形。
 
 在繼承中，衍生類別包含基底類別的成員以及您加入的新成員。 因此，除非在衍生類別中重新定義這些成員，否則衍生類別可能會參考基底類別的成員。 當這些成員在衍生類別中重新定義時，可以使用範圍解析運算子 (`::`) 來參考直接或間接基底類別的成員。 請考量以下範例：
 

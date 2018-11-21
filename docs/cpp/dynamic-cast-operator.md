@@ -1,17 +1,17 @@
 ---
 title: dynamic_cast 運算子
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - dynamic_cast_cpp
 helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-ms.openlocfilehash: 75085fe6dd1478fee769e23938c55c6300429d86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b359885eb72f9272fb1efe14afe9a6cbe6ddb30
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529151"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176961"
 ---
 # <a name="dynamiccast-operator"></a>dynamic_cast 運算子
 
@@ -121,7 +121,8 @@ int main() {
 }
 ```
 
-![類別階層顯示多重繼承](../cpp/media/vc39011.gif "vc39011")類別階層顯示多重繼承
+![類別階層顯示多重繼承](../cpp/media/vc39011.gif "類別顯示多重繼承的階層") <br/>
+顯示多重繼承的類別階層
 
 型別的物件的指標`D`可以安全地轉換成`B`或`C`。 不過，如果`D`轉型為指向`A`物件，哪一個執行個體`A`而造成？ 這會導致模稜兩可的轉換錯誤。 若要解決此問題，您可以執行兩個模稜兩可的轉換 （cast）。 例如: 
 
@@ -141,13 +142,15 @@ void f() {
 
 當您使用虛擬基底類別時，可能會造成進一步模稜兩可。 請考慮下圖所示的類別階層架構。
 
-![類別會顯示虛擬基底類別的階層](../cpp/media/vc39012.gif "vc39012")類別階層顯示虛擬基底類別
+![類別會顯示虛擬基底類別的階層](../cpp/media/vc39012.gif "類別顯示虛擬基底類別的階層") <br/>
+顯示虛擬基底類別的類別階層
 
 在此階層中，`A`虛擬基底類別。 指定類別的執行個體`E`以及指標`A`子物件**dynamic_cast**指標`B`因為模稜兩可會失敗。 您必須先轉換回完整`E`物件，然後備份階層中，進行以明確的方式，連線到正確`B`物件。
 
 請考慮下圖所示的類別階層架構。
 
-![類別顯示重複基底類別的階層](../cpp/media/vc39013.gif "vc39013")類別階層顯示重複基底類別
+![類別顯示重複基底類別的階層](../cpp/media/vc39013.gif "類別顯示重複基底類別的階層") <br/>
+顯示重複基底類別的類別階層
 
 指定類型的物件`E`以及指標`D`子物件，從瀏覽`D`最左邊的子物件`A`子物件，可將三個轉換。 您可以執行**dynamic_cast**從轉換`D`指標`E`指標，則轉換 (任一**dynamic_cast**或隱含的轉換) 從`E`要`B`，以及最後的隱含轉換`B`至`A`。 例如: 
 

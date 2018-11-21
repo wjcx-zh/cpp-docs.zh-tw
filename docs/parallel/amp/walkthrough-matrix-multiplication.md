@@ -1,13 +1,13 @@
 ---
 title: 逐步解說：矩陣乘法
-ms.date: 11/06/2018
+ms.date: 11/19/2018
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: d9516cf79b738ec03dd98133a4603b47f75eb2c8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ae86ff5a111348404616c8bb4fecd3bf22afc90c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327105"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176155"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>逐步解說：矩陣乘法
 
@@ -41,13 +41,13 @@ ms.locfileid: "51327105"
 
 在本節中，請考慮 A 和 B，且會定義，如下所示的兩個矩陣相乘︰
 
-![3&#45;的&#45;2 的矩陣](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")
+![3&#45;的&#45;2 矩陣 A](../../parallel/amp/media/campmatrixanontiled.png "3&#45;的&#45;2 矩陣的")
 
-![2&#45;的&#45;3 的矩陣](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")
+![2&#45;的&#45;3 的矩陣 B](../../parallel/amp/media/campmatrixbnontiled.png "2&#45;的&#45;3 矩陣 B")
 
 A 是 3-2 矩陣，而 B 是 2-3 的矩陣。 由 B 相乘的乘積是下列 3-3 矩陣。 產品是計算方式是乘的 B 項的資料行的資料列。
 
-![3&#45;的&#45;3 的矩陣](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;的&#45;3 的矩陣")
+![3&#45;的&#45;3 產品矩陣](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;的&#45;3 產品矩陣")
 
 ### <a name="to-multiply-without-using-c-amp"></a>要相乘，而不使用 c + + AMP
 
@@ -159,21 +159,21 @@ void main() {
 
 若要利用並排顯示中的矩陣相乘，演算法必須分割成磚的 矩陣，然後複製 tile 資料到`tile_static`以利快速存取的變數。 在此範例中，矩陣會分割成相同大小的 submatrices。 找不到乘以 submatrices 的產品。 兩個矩陣和他們的產品，在此範例如下：
 
-![4&#45;的&#45;4 矩陣](../../parallel/amp/media/campmatrixatiled.png "4&#45;的&#45;4 矩陣的")
+![4&#45;的&#45;4 矩陣 A](../../parallel/amp/media/campmatrixatiled.png "4&#45;的&#45;4 矩陣的")
 
-![4&#45;的&#45;4 矩陣](../../parallel/amp/media/campmatrixbtiled.png "4&#45;的&#45;4 矩陣 B")
+![4&#45;的&#45;4 矩陣 B](../../parallel/amp/media/campmatrixbtiled.png "4&#45;的&#45;4 矩陣 B")
 
-![4&#45;的&#45;4 矩陣](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;的&#45;4 矩陣產品")
+![4&#45;的&#45;4 產品矩陣](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;的&#45;4 產品矩陣")
 
 矩陣會分割成四個 2 x 2 矩陣，定義如下：
 
-![4&#45;藉由&#45;分割成 2 的 4 矩陣&#45;藉由&#45;2 的子&#45;矩陣](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;的&#45;分割成 2 的 4 矩陣&#45;的&#45;2 的子&#45;矩陣")
+![4&#45;所&#45;4 矩陣的分割成 2&#45;的&#45;2 的子&#45;矩陣](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;的&#45;4 矩陣的分割成 2&#45;的&#45;2 的子&#45;矩陣")
 
-![4&#45;藉由&#45;分割成 2 的 4 矩陣&#45;藉由&#45;2 的子&#45;矩陣](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;的&#45;分割成 2 的 4 矩陣&#45;的&#45;2 的子&#45;矩陣")
+![4&#45;藉由&#45;4 矩陣 B 分割成 2&#45;的&#45;2 的子&#45;矩陣](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;的&#45;4 矩陣 B 分割成 2&#45;的&#45;2 的子&#45;矩陣")
 
 產品的 A 和 B 可以寫入和計算，如下所示：
 
-![4&#45;的&#45;分割成 2 的 4 矩陣&#45;的&#45;2 的子&#45;矩陣](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;的&#45;4 矩陣的乘積和 B")
+![4&#45;所&#45;4 矩陣 B 分割成 2&#45;所&#45;2 的子&#45;矩陣](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;的&#45;4 矩陣 B 分割成 2&#45;的&#45;2 的子&#45;矩陣")
 
 因為矩陣`a`透過`h`為 2x2 矩陣的所有產品，而且它們的總和也 2x2 矩陣。 它也說明如下的產品，而 B 是 4 x 4 矩陣，如預期般運作。 若要快速檢查演算法，計算的第一個資料列中的項目，產品中的第一個資料行的值。 在範例中，這會是元素的值中的第一個資料列和第一個資料行`ae + bg`。 您只需要計算的第一個資料行、 第一個資料列`ae`和`bg`每個詞彙。 該值`ae`是`(1 * 1) + (2 * 5) = 11`。 值`bg`是`(3 * 1) + (4 * 5) = 23`。 最終的值會是`11 + 23 = 34`，這是正確。
 

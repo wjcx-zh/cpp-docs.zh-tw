@@ -1,18 +1,18 @@
 ---
 title: 運算式的語意
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - grammar, expressions
 - expressions [C++], semantics
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: df86f73aa38ad9393adcbf193390cd785c934115
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490957"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175774"
 ---
 # <a name="semantics-of-expressions"></a>運算式的語意
 
@@ -43,7 +43,8 @@ int main()
 54
 ```
 
-![在運算式中的評估順序](../cpp/media/vc38zv1.gif "vc38ZV1")運算式-評估順序
+![在運算式中的評估順序](../cpp/media/vc38zv1.gif "中運算式的評估順序") <br/>
+運算式評估順序
 
 上圖中顯示運算式評估的順序可用來判斷運算子的優先順序和關聯性：
 
@@ -55,7 +56,8 @@ int main()
 
 在子運算式的群組中使用括號時，會改變優先順序以及運算式的評估順序，如下圖所示。
 
-![使用括號運算式的評估順序](../cpp/media/vc38zv2.gif "vc38ZV2")括弧括住的運算式-評估順序
+![使用括號運算式的評估順序](../cpp/media/vc38zv2.gif "使用括號運算式的評估順序") <br/>
+使用括號運算式-評估順序
 
 運算式 (如上圖) 會單純地評估其副作用，在此例中，會將資訊傳送到標準輸出裝置。
 
@@ -68,7 +70,7 @@ int main()
 |預期的類型|允許的類型|
 |-------------------|-------------------|
 |*type*|`const` *型別*<br /> `volatile` *型別*<br /> *type*&<br /> `const` *型別*&<br /> `volatile` *型別*&<br /> `volatile const` *型別*<br /> `volatile const` *型別*&|
-|*type*\*|*type*\*<br /> `const` *型別*\*<br /> `volatile` *型別*\*<br /> `volatile const` *型別*\*|
+|*型別* \*|*型別* \*<br /> `const` *型別* \*<br /> `volatile` *型別* \*<br /> `volatile const` *型別* \*|
 |`const` *型別*|*type*<br /> `const` *型別*<br />`const` *型別*&|
 |`volatile` *型別*|*type*<br /> `volatile` *型別*<br /> `volatile` *型別*&|
 

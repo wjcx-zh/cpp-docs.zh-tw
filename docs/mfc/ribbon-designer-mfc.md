@@ -1,24 +1,24 @@
 ---
 title: 功能區設計工具 (MFC)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - vc.editors.ribbon.F1
 helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 3b28783cb12aeeb03bf1687e5922b276af0d52c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 903adc96f4c9bc092ac23787781a76c0e7e3714c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521394"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175830"
 ---
 # <a name="ribbon-designer-mfc"></a>功能區設計工具 (MFC)
 
 功能區設計工具可讓您建立和自訂 MFC 應用程式中的功能區。 功能區是可將命令組織成邏輯群組的使用者介面 (UI) 項目。 這些群組可出現在跨視窗頂端區域中的個別索引標籤上。 功能區取代了功能表列和工具列。 功能區可大幅改善應用程式可用性。 如需詳細資訊，請參閱 <<c0> [ 功能區](/windows/desktop/uxguide/cmd-ribbons)。 下圖顯示功能區。
 
-![MFC 功能區資源控制](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")
+![MFC 功能區資源控制](../mfc/media/ribbon_no_callouts.png "MFC 功能區資源控制")
 
 在舊版的 Visual Studio 中，功能區必須撰寫程式碼，例如使用 MFC 功能區類別建立[CMFCRibbonBar 類別](../mfc/reference/cmfcribbonbar-class.md)。 在 Visual Studio 2010 和更新版本，則功能區設計工具會提供建置功能區的替代方法。 首先，建立及自訂功能區作為資源。 然後從 MFC 應用程式中的程式碼載入功能區資源。 您甚至可以一起使用功能區資源和 MFC 功能區類別。 例如，您可以建立功能區資源，並再以程式設計方式加入更多項目，在執行階段使用程式碼。
 
@@ -71,7 +71,7 @@ ms.locfileid: "50521394"
 
 下圖顯示功能區設計工具中的不同元件。
 
-![MFC 功能區設計工具](../mfc/media/ribbon_designer.png "ribbon_designer")
+![MFC 功能區設計工具](../mfc/media/ribbon_designer.png "MFC 功能區設計工具")
 
 - **在 [工具箱]:** 包含可以拖曳至設計工具介面的控制項。
 
@@ -95,7 +95,7 @@ ms.locfileid: "50521394"
 
 ## <a name="definitions-of-ribbon-elements"></a>功能區項目定義
 
-![MFC 功能區](../mfc/media/ribbon.png "功能區")
+![MFC 功能區](../mfc/media/ribbon.png "MFC 功能區")
 
 - **應用程式按鈕：** 出現在功能區的左上角的按鈕。 應用程式按鈕會取代 [檔案] 功能表，而且即使功能區最小化時也會出現。 按一下按鈕時，會顯示具有命令列表的功能表。
 

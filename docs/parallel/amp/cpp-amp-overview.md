@@ -1,6 +1,6 @@
 ---
 title: C++ AMP 概觀
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, requirements
 - C++ Accelerated Massive Parallelism, architecture
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 070f0885f11f29413aca3028d4f747e0edfd2413
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26f24e922769a565c88264032373662116eee290
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663784"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176987"
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概觀
 
@@ -362,7 +362,7 @@ void AddArraysWithFunction() {
 
 下圖代表以磚排列的資料取樣的二維陣列。
 
-![並排範圍中的值的索引](../../parallel/amp/media/camptiledgridexample.png "camptiledgridexample")
+![並排範圍中的值的索引](../../parallel/amp/media/camptiledgridexample.png "並排顯示範圍中的索引值")
 
 下列程式碼範例會使用上圖中的取樣資料。 程式碼會並排顯示中值的平均值取代磚中的每個值。
 

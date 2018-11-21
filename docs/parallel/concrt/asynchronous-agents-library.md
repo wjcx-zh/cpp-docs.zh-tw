@@ -1,16 +1,16 @@
 ---
 title: 非同步代理程式程式庫
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-ms.openlocfilehash: 9086734b22523d395022299fb75b7a130a8e7a16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b4e8e6489e98aadb6ea41d32d5a9ba14efe2668
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629277"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175856"
 ---
 # <a name="asynchronous-agents-library"></a>非同步代理程式程式庫
 
@@ -26,7 +26,7 @@ ms.locfileid: "50629277"
 
 下圖顯示如何在兩個代理程式，使用訊息區和訊息傳遞函式來進行通訊。 在此圖中，`agent1`傳送訊息給`agent2`利用[concurrency:: send](reference/concurrency-namespace-functions.md#send)函式和[concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)物件。 `agent2` 會使用[concurrency:: receive](reference/concurrency-namespace-functions.md#receive)函式來讀取訊息。 `agent2` 會使用相同的方法來傳送訊息至`agent1`。 虛線的箭頭代表代理程式之間的資料流程。 實心箭號連接它們寫入或讀取的訊息區塊的代理程式。
 
-![代理程式庫的元件](../../parallel/concrt/media/agent_librarycomp.png "agent_librarycomp")
+![代理程式庫的元件](../../parallel/concrt/media/agent_librarycomp.png "代理程式庫的元件")
 
 實作此圖中的程式碼範例是本主題稍後所示。
 

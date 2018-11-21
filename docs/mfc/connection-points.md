@@ -1,6 +1,6 @@
 ---
 title: 連接點
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - IConnectionPoint
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: cddbdb30cbc5f5ddb5fa98524ad067655f262be1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf21e7bf591a5b1977784db1542053817a73e6cd
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517633"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175479"
 ---
 # <a name="connection-points"></a>連接點
 
@@ -30,7 +30,8 @@ ms.locfileid: "50517633"
 
 連線有兩個部分： 呼叫的介面，呼叫來源，以及實作介面之物件的物件稱為接收器。 連接點是來源所公開的介面。 藉由公開的連接點，為來源可讓接收來建立連接至其本身 （來源）。 透過連接點的機制 (`IConnectionPoint`介面)，接收介面的指標傳遞至來源物件。 此指標會提供具有存取權的接收器實作的一組成員函式的來源。 比方說，若要引發事件接收實作，來源可以呼叫的接收器實作適當的方法。 下圖示範連接先前所提到的點。
 
-![實作連接點](../mfc/media/vc37lh1.gif "vc37lh1")實作連接點
+![實作連接點](../mfc/media/vc37lh1.gif "實作連接點") <br/>
+實作的連接點
 
 MFC 實作這種模式[CConnectionPoint](../mfc/reference/cconnectionpoint-class.md)並[CCmdTarget](../mfc/reference/ccmdtarget-class.md)類別。 類別衍生自`CConnectionPoint`實作`IConnectionPoint`介面，用來公開其他物件的連接點。 類別衍生自`CCmdTarget`實作`IConnectionPointContainer`介面，它可以列舉的所有物件的可用的連接點，或尋找特定的連接點。
 
@@ -54,7 +55,8 @@ MFC 實作這種模式[CConnectionPoint](../mfc/reference/cconnectionpoint-class
 
 在插入此程式碼之後, 您`CCmdTarget`-衍生的類別會公開的連接點`ISampleSink`介面。 下圖說明此範例。
 
-![使用 MFC 實作連接點](../mfc/media/vc37lh2.gif "vc37lh2") MFC 實作連接點
+![使用 MFC 實作連接點](../mfc/media/vc37lh2.gif "使用 MFC 實作連接點") <br/>
+使用 MFC 實作連接點
 
 通常，連接點支援 「 多點傳送 」 — 廣播到多個接收器的能力連線到相同的介面。 下列範例片段將示範如何逐一查看每個接收連接點上的多點傳送：
 

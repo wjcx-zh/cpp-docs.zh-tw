@@ -1,14 +1,14 @@
 ---
 title: C++ 類型系統 (現代 C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: ba24a4a739e4eb13d983202943ca046f857422d2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 476ebabc4bfc19f995119649d6f012d4b39d8369
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521088"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176337"
 ---
 # <a name="c-type-system-modern-c"></a>C++ 類型系統 (現代 C++)
 
@@ -59,7 +59,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 下圖顯示內建類型的相對大小：
 
-![大小 （位元組） 的內建&#45;中類型](../cpp/media/built-intypesizes.png "內建 inTYpeSizes")
+![大小 （位元組） 的內建&#45;中類型](../cpp/media/built-intypesizes.png "大小 （位元組） 的內建&#45;型別中")
 
 下表列出最常用的基本類型：
 
@@ -70,13 +70,13 @@ int maxValue;                // Not recommended! maxValue contains
 |bool|1 個位元組|表示可以是 true 或 false 的值。|
 |char|1 個位元組|使用較舊 C-Style 字串或 std::string 物件中永遠不需要轉換成 UNICODE 之的 ASCII 字元。|
 |wchar_t|2 個位元組|表示可能以 UNICODE 格式 (在 Windows 上為 UTF-16，而其他作業系統可能不同) 編碼的「寬」字元值。 這是用於 `std::wstring` 類型字串的字元類型。|
-|unsigned char|1 個位元組|C++ 沒有內建 `byte` 類型。  使用 unsigned char 表示位元組值。|
+|不帶正負號&nbsp;char|1 個位元組|C++ 沒有內建 `byte` 類型。  使用 unsigned char 表示位元組值。|
 |unsigned int|4 個位元組|位元旗標的預設選項。|
 |long long|8 個位元組|表示極大的整數值。|
 
 ## <a name="the-void-type"></a>void 類型
 
-**Void**型別是一種特殊類型; 您不能宣告類型的變數**void**，但您可以宣告型別的變數`void *`(指向**void**)，也就是有時是必須配置未經處理的 （不具型別的） 記憶體時。 不過，指標**void**都不具備類型安全及一般用法是強烈建議不要在現代 c + +。 在函式宣告中， **void**傳回的值表示函式不會傳回值，這是常見的適當用途**void**。 雖然 C 語言所需函式具有零參數，來宣告**void**在參數清單中，例如`fou(void)`，這種做法建議您不要在現代 c + + 中，因此應宣告為`fou()`。 如需詳細資訊，請參閱 <<c0> [ 型別轉換和類型安全](../cpp/type-conversions-and-type-safety-modern-cpp.md)。
+**Void**型別是一種特殊類型; 您不能宣告類型的變數**void**，但您可以宣告型別的變數__void \*__  (指向**void**)，也就是有時候需要時配置未經處理 （不具類型） 的記憶體。 不過，指標**void**都不具備類型安全及一般用法是強烈建議不要在現代 c + +。 在函式宣告中， **void**傳回的值表示函式不會傳回值，這是常見的適當用途**void**。 雖然 C 語言所需函式具有零參數，來宣告**void**在參數清單中，例如`fou(void)`，這種做法建議您不要在現代 c + + 中，因此應宣告為`fou()`。 如需詳細資訊，請參閱 <<c0> [ 型別轉換和類型安全](../cpp/type-conversions-and-type-safety-modern-cpp.md)。
 
 ## <a name="const-type-qualifier"></a>常數類型限定詞
 

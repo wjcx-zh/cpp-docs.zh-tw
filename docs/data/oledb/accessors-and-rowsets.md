@@ -1,6 +1,6 @@
 ---
 title: 存取子和資料列集
-ms.date: 10/22/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - accessors [C++]
 - OLE DB consumer templates, rowset support
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-ms.openlocfilehash: 74a839d36f96b115d1f4e0c35532bd76d998a4b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d29c409f2ed410d9f697419e9a98b675eee7a69d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651252"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175704"
 ---
 # <a name="accessors-and-rowsets"></a>存取子和資料列集
 
@@ -34,7 +34,7 @@ ms.locfileid: "50651252"
 
 下圖顯示存取子類型。
 
-![存取子的型別](../../data/oledb/media/vcaccessortypes.gif "vcaccessortypes")<br/>
+![存取子的型別](../../data/oledb/media/vcaccessortypes.gif "存取子類型")<br/>
 存取子類別
 
 - [CAccessor](../../data/oledb/caccessor-class.md)使用這個存取子，當您在設計階段知道資料庫來源的結構。 `CAccessor` 以靜態方式將資料庫的記錄，其中包含緩衝區，繫結至資料來源。
@@ -63,7 +63,7 @@ OLE DB 範本都支援三種類型的資料列集 （請參閱上圖中）： �
 
 下圖顯示的資料列集的類型。
 
-![RowsetType 圖形](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")<br/>
+![RowsetType 圖形](../../data/oledb/media/vcrowsettypes.gif "RowsetType 圖形")<br/>
 資料列集類別
 
 [結構描述資料列集](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)不存取資料中的資料存放區，但改為存取資料存放區，稱為中繼資料的相關資訊。 結構描述資料列通常用於在資料庫結構不編譯時期已知和必須在執行階段取得的情況。

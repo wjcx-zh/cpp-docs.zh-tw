@@ -1,17 +1,17 @@
 ---
 title: 成員存取控制 (C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - access control [C++]
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: ee4e9d89878aab4be2e4daf45525f9e951d214f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 546b23b939078c723084bdfc659ff4fd3216b479
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611415"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176221"
 ---
 # <a name="member-access-control-c"></a>成員存取控制 (C++)
 
@@ -234,7 +234,8 @@ int main()
 
 在包含虛擬基底類別的多重繼承斜格紋中，可以透過多個路徑存取指定的名稱。 由於可以依循這些不同路徑套用不同的存取控制，編譯器會選擇授予較多存取權的路徑。 請參閱下圖。
 
-![依序繼承圖形的路徑進行存取](../cpp/media/vc38v91.gif "vc38V91")存取沿著路徑的繼承圖形
+![依序繼承圖形的路徑進行存取](../cpp/media/vc38v91.gif "繼承圖形的路徑進行存取") <br/>
+依序繼承圖形的路徑進行存取
 
 在圖中，類別 `VBase` 中宣告的名稱一定會透過類別 `RightPath` 進行存取。 正確的路徑會更容易存取，因為 `RightPath` 會將 `VBase` 宣告為公用基底類別，`LeftPath` 則是將 `VBase` 宣告為私用。
 

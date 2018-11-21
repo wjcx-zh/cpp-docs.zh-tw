@@ -1,18 +1,18 @@
 ---
 title: 逐步解說：使用聯結以避免死結
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - preventing deadlock with joins [Concurrency Runtime]
 - deadlock, preventing [Concurrency Runtime]
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: b98c2deb158b9b9fc71caa7133aeaeb2acfd369c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b62f4007a79faaff479e4e8ff998a8b48e4d5dd1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498809"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175908"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>逐步解說：使用聯結以避免死結
 
@@ -48,7 +48,7 @@ ms.locfileid: "50498809"
 
 哲學家用餐問題，說明如何在應用程式中發生死結。 這個問題，請在五個哲學家坐在圓形桌前。 每個哲學家交替使用思考和吃。 每個哲學家必須分享到左側，而另一個鄰近的 chopstick chopstick 使用右邊的芳鄰。 下圖顯示此版面配置。
 
-![餐廳用餐問題](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")
+![哲學家用餐問題](../../parallel/concrt/media/dining_philosophersproblem.png "哲學家用餐問題")
 
 若要吃，哲學家必須保留兩個筷子。 如果每個哲學家會保留一個 chopstick，正在等候另一個則沒有哲學家可能會用掉，所有變空。
 

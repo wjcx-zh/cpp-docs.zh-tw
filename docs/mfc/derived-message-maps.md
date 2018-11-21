@@ -1,18 +1,18 @@
 ---
 title: 衍生訊息對應
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - message handling [MFC], derived message handlers
 - messages, routing
 - message maps [MFC], derived
 - derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
-ms.openlocfilehash: 1413290bc04af37a6d3204150dff5244e1dcb5c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ae536a53a43472a4fb81d30e685fbc3faaa603f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662523"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175596"
 ---
 # <a name="derived-message-maps"></a>衍生訊息對應
 
@@ -20,7 +20,8 @@ ms.locfileid: "50662523"
 
 請記住，`CView` 的基底類別 `CMyView` 會接著從`CWnd` 衍生。 因此`CMyView`*是*`CView`並*是* `CWnd`。 這些類別的每一種都有其訊息對應。 以下為「檢視階層架構」的圖例，顯示類別的階層關聯性，但請記住，`CMyView` 物件為具有所有三個類別特性的單一物件。
 
-![檢視的階層](../mfc/media/vc38621.gif "vc38621")檢視階層架構
+![檢視的階層](../mfc/media/vc38621.gif "檢視的階層") <br/>
+檢視階層架構
 
 因此，如果訊息在類別 `CMyView` 的訊息對應中無法相符，架構也會搜尋其直接基底類別的訊息對應。 在訊息對應的開始 `BEGIN_MESSAGE_MAP` 巨集指定兩個類別名稱做為其引數:
 

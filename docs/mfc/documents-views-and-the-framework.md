@@ -1,6 +1,6 @@
 ---
 title: 文件、檢視和架構
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - document templates [MFC], template objects
 - applications [MFC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - MFC object relationships
 - thread objects [MFC]
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
-ms.openlocfilehash: f9397c2a16d8411fe91cbf6c1c1de3ecdffbeae7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e59e8b69dcdf0bf3b22d4286ba4692558a11e096
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662367"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175752"
 ---
 # <a name="documents-views-and-the-framework"></a>文件、檢視和架構
 
@@ -59,7 +59,8 @@ MFC 架構的核心是文件和檢視的概念。 文件是一種在編輯工作
 
 在執行中的應用程式中，這些物件會一起回應使用者動作，並透過命令和其他訊息繫結程序在一起。 單一應用程式物件會管理一個或多個文件範本。 每個文件範本會建立和管理一個或多個文件 (根據應用程式為 SDI 還是 MDI 而定)。 使用者透過框架視窗中的檢視來檢視和操作文件。 下圖顯示 SDI 應用程式中這些物件之間的關聯性。
 
-![在執行中 SDI 應用程式中的物件](../mfc/media/vc386v1.gif "vc386v1")執行 SDI 應用程式中的物件
+![在執行中 SDI 應用程式中的物件](../mfc/media/vc386v1.gif "執行中 SDI 應用程式中的物件") <br/>
+執行中 SDI 應用程式內的物件
 
 這一系列的其他文章說明架構工具、MFC 應用程式精靈和資源編輯器如何建立這些物件、它們如何一起運作，以及如何在您的程式設計中使用它們。 文件、 檢視和框架視窗會更詳細地討論[Window 物件](../mfc/window-objects.md)並[文件/檢視架構](../mfc/document-view-architecture.md)。
 

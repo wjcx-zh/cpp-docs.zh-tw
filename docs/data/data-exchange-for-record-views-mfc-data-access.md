@@ -1,6 +1,6 @@
 ---
 title: 記錄檢視的資料交換 (MFC 資料存取)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - RFX (record field exchange), data exchange mechanism
 - RFX (record field exchange), record views
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DDX (dialog data exchange), record views
 - RFX (record field exchange)
 ms.assetid: abc52ca7-6997-47a7-98f3-f347f52b1f72
-ms.openlocfilehash: d3b1c5b997baa0938c532c7a2806d5e65eb125a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf9f32e970becd1ef8dc4e347512dcfaa7cf62ac
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546452"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175404"
 ---
 # <a name="data-exchange-for-record-views---mfc-data-access"></a>記錄檢視的資料交換 (MFC 資料存取)
 
@@ -23,7 +23,7 @@ ms.locfileid: "50546452"
 
 下圖顯示資料錄檢視的 DDX 及 RFX 之間的關聯性。
 
-![對話方塊&#45;資料交換和記錄&#45;欄位 exchange](../data/media/vc37xt1.gif "vc37xt1")<br/>
+![對話方塊&#45;資料交換和記錄&#45;欄位 exchange](../data/media/vc37xt1.gif "對話方塊中&#45;資料交換和記錄&#45;欄位交換")<br/>
 對話方塊資料交換及記錄欄位交換
 
 如需有關 DDX 的詳細資訊，請參閱 [對話方塊資料交換和驗證](../mfc/dialog-data-exchange-and-validation.md)。 如需 RFX 的詳細資訊，請參閱[資料錄欄位交換 (RFX)](../data/odbc/record-field-exchange-rfx.md)。

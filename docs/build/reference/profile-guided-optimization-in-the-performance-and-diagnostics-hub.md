@@ -1,13 +1,13 @@
 ---
 title: 效能及診斷中樞中的特性指引最佳化
-ms.date: 03/14/2018
+ms.date: 11/19/2018
 ms.assetid: dc3a1914-dbb6-4401-bc63-10665a8c8943
-ms.openlocfilehash: 57e0c32b401f2c1c3216a120bc86efa649ee0104
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8c0467e1a3051609f52053894ea59064e40a3ac
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580852"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176194"
 ---
 # <a name="profile-guided-optimization-in-the-visual-studio-2013-performance-and-diagnostics-hub"></a>特性指引最佳化 Visual Studio 2013 效能及診斷中樞
 
@@ -45,21 +45,21 @@ ms.locfileid: "50580852"
 
 開啟 效能及診斷中樞，在功能表列上選擇 **分析**，**效能及診斷**。 這樣會開啟診斷工作階段頁面，其中會有分析工具可供您的專案類型使用。
 
-![在 效能及診斷中樞的 PGO](../../build/reference/media/pgofig0hub.png "PGOFig0Hub")
+![在 效能及診斷中樞的 PGO](../../build/reference/media/pgofig0hub.png "效能及診斷中樞中的 PGO")
 
 在 **可用的工具**，選取**特性指引最佳化**核取方塊。 選擇**啟動** 按鈕，啟動 PGO 外掛程式。
 
-![PGO 簡介頁面](../../build/reference/media/pgofig1start.png "PGOFig1Start")
+![PGO 簡介頁面](../../build/reference/media/pgofig1start.png "PGO 簡介頁面")
 
 **特性指引最佳化**頁面描述外掛程式用來改善您的應用程式效能的步驟。 選擇**啟動** 按鈕。
 
-![PGO 檢測頁面](../../build/reference/media/pgofig2instrument.png "PGOFig2Instrument")
+![PGO 檢測頁面](../../build/reference/media/pgofig2instrument.png "PGO 檢測頁面")
 
 在**檢測**區段中，您使用**一開始即啟用訓練**選項可選擇是否要在訓練中納入您的應用程式的啟動階段。 如果未選取這個選項，除非您明確啟用訓練，否則執行中的已檢測應用程式中就不會記錄訓練資料。
 
 選擇**檢測**按鈕，即可建立您的應用程式使用一組特殊的編譯器選項。 編譯器會在產生的程式碼中插入探查指令。 這些指令會在訓練階段記錄程式碼剖析資料。
 
-![PGO 檢測的建置頁面](../../build/reference/media/pgofig3build.PNG "PGOFig3Build")
+![PGO 檢測的建置頁面](../../build/reference/media/pgofig3build.PNG "PGO 檢測的建置頁面")
 
 當已檢測的應用程式組建完成時，應用程式會自動啟動。
 
@@ -67,22 +67,22 @@ ms.locfileid: "50580852"
 
 您的應用程式啟動時，您可以使用**訓練課程**並**暫停訓練**中的連結**訓練**一節，以控制當記錄程式碼剖析資訊。 您可以使用**停止應用程式**並**啟動應用程式**停止並重新啟動應用程式的連結。
 
-![PGO 定型頁面](../../build/reference/media/pgofig4training.PNG "PGOFig4Training")
+![PGO 定型頁面](../../build/reference/media/pgofig4training.PNG "PGO 定型頁面")
 
 在訓練期間，檢閱您的使用者案例以擷取 PGO 外掛程式最佳化程式碼所需的程式碼剖析資訊。 當您完成訓練時，請關閉您的應用程式，或選擇**停止應用程式**連結。 選擇**分析** 按鈕，開始執行分析步驟。
 
 分析完成時，**分析**區段會顯示報表的使用者案例訓練階段中所擷取的程式碼剖析資訊。 您可以使用這份報告檢查應用程式呼叫最多次的函式，以及花最多時間處理的函式。 PGO 外掛程式會使用這些資訊來判斷要將哪些應用程式函式的速度及大小最佳化。 PGO 外掛程式會設定組建最佳化，針對訓練期間所記錄的使用者案例建立最小、速度最快的應用程式。
 
-![PGO 分析頁面](../../build/reference/media/pgofig5analyze.png "PGOFig5Analyze")
+![PGO 分析頁面](../../build/reference/media/pgofig5analyze.png "PGO 分析頁面")
 
 如果訓練擷取到預期的程式碼剖析資訊，您可以選擇**儲存變更**儲存分析的分析資料最佳化未來的組建的專案中。 若要捨棄分析資料並從頭開始訓練，選擇**重做訓練**。
 
 設定資料檔會儲存在您的專案中**PGO 訓練資料**資料夾。 這些資料可用來控制應用程式中的編譯器組建最佳化設定。
 
-![在 [方案總管] 中的 PGO 資料檔案](../../build/reference/media/pgofig6data.png "PGOFig6Data")
+![在 [方案總管] 中的 PGO 資料檔案](../../build/reference/media/pgofig6data.png "方案總管 中的 PGO 資料檔案")
 
 在分析後，PGO 外掛程式會設定專案中的組建選項，以便在編譯期間使用分析資料選擇性地最佳化應用程式。 您可以繼續使用相同的分析資料修改和建置應用程式。 應用程式建置完成後，組建輸出會報告使用分析資料最佳化的函式和指令數目。
 
-![PGO 輸出診斷](../../build/reference/media/pgofig7diagnostics.png "PGOFig7Diagnostics")
+![PGO 輸出診斷](../../build/reference/media/pgofig7diagnostics.png "PGO 輸出診斷")
 
 如果您在開發期間進行重大的程式碼變更，則可能需要重新訓練您的應用程式以獲得最理想的最佳化結果。 在組建輸出報告使用分析資料最佳化的函式或指令未達 80% 時，建議您重新訓練應用程式。

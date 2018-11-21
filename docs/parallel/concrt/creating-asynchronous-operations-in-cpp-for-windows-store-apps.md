@@ -1,16 +1,16 @@
 ---
 title: 為 UWP 應用程式，建立 c + + 中的非同步作業
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 4824180ec0ff9f7adb7c2d0a9b505a2abb58c20b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 59630c7702dffc4b606943e174e44fdba6aecfe8
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333328"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176948"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>為 UWP 應用程式，建立 c + + 中的非同步作業
 
@@ -124,7 +124,7 @@ Windows 執行階段是可用來建立只在特殊作業系統環境中執行的
 
 下圖顯示選擇每個選項之後的 `Primes` 應用程式。
 
-![Windows 執行階段 Primes 應用程式](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")
+![Windows 執行階段 Primes 應用程式](../../parallel/concrt/media/concrt_windows_primes.png "Windows 執行階段 Primes 應用程式")
 
 如需使用 `create_async` 建立可供其他語言使用之非同步工作的範例，請參閱 [在 Bing 地圖服務路線最佳化程式範例中使用 C++](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) 和 [Windows 8 Asynchronous Operations in C++ with PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d)(使用 C++ 和 PPL 的 Windows 8 非同步作業)。
 
@@ -186,7 +186,7 @@ Windows 執行階段會使用 COM 執行緒模型。 在這個模型中，物件
 
 下圖顯示 `CommonWords` 應用程式的結果。
 
-![Windows 執行階段 CommonWords 應用程式](../../parallel/concrt/media/concrt_windows_common_words.png "concrt_windows_common_words")
+![Windows 執行階段 CommonWords 應用程式](../../parallel/concrt/media/concrt_windows_common_words.png "Windows 執行階段 CommonWords 應用程式")
 
 在這個範例中可以支援取消，因為支援 `task` 的 `create_async` 物件使用隱含取消語彙基元。 如果您的工作需要以合作方式回應取消，請定義您的工作函式使其接受 `cancellation_token` 物件。 如需在 PPL 中取消的詳細資訊，請參閱 [Cancellation in the PPL](cancellation-in-the-ppl.md)。
 

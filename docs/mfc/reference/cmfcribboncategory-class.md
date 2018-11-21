@@ -1,6 +1,6 @@
 ---
 title: CMFCRibbonCategory 類別
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCRibbonCategory
 - AFXRIBBONCATEGORY/CMFCRibbonCategory
@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: b510befa8993337ce62b5bd3b00ea3f48091b0e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96a3351656807fa841661ec9f082bb4255d5136a
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657335"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176610"
 ---
 # <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory 類別
 
@@ -244,7 +244,7 @@ CMFCRibbonPanel* pPanel = pCategory->AddPanel (
 
 下圖顯示從 RibbonApp 範例應用程式的首頁類別目錄的圖形。
 
-![CMFCRibbonCategory 影像](../../mfc/reference/media/cmfcribboncategory.png "cmfcribboncategory")
+![從 RibbonApp 範例應用程式的主類別](../../mfc/reference/media/cmfcribboncategory.png "RibbonApp 應用程式的主類別")
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

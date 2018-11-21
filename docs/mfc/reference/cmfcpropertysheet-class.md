@@ -1,6 +1,6 @@
 ---
 title: CMFCPropertySheet 類別
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCPropertySheet
 - AFXPROPERTYSHEET/CMFCPropertySheet
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 8e643474d577c606e80f5f34c6166a59753610f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1168375606ef86061269454aa361a076efa331a4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531608"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176402"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet 類別
 
@@ -112,15 +112,15 @@ class CMFCPropertySheet : public CPropertySheet
 
 下圖描述其樣式為內嵌 Microsoft Outlook 工具列的屬性工作表。 Outlook 工具列會出現在屬性工作表的左邊。
 
-![CMFCPropertySheet 色彩控制項](../../mfc/reference/media/cmfcpropertysheet_color.png "cmfcpropertysheet_color")
+![CMFCPropertySheet 色彩控制項](../../mfc/reference/media/cmfcpropertysheet_color.png "CMFCPropertySheet 色彩控制項")
 
 下圖顯示包含的屬性工作表[CMFCPropertyGridCtrl 類別](../../mfc/reference/cmfcpropertygridctrl-class.md)物件。 該物件是樣式為標準通用控制項屬性頁的屬性工作表。
 
-![CMFCPropertySheet 清單和屬性控制項](../../mfc/reference/media/cmfcpropertysheet_list.png "cmfcpropertysheet_list")
+![CMFCPropertySheet 清單和屬性控制項](../../mfc/reference/media/cmfcpropertysheet_list.png "CMFCPropertySheet 清單和屬性控制項")
 
 下圖描述其樣式為樹狀目錄控制項的屬性工作表。
 
-![屬性樹狀目錄](../../mfc/reference/media/proptree.png "proptree")
+![屬性樹狀](../../mfc/reference/media/proptree.png "屬性樹狀結構")
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

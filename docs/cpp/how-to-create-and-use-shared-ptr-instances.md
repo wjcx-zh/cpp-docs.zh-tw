@@ -1,15 +1,15 @@
 ---
 title: 如何：建立和使用 shared_ptr 執行個體
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: f437ccb476456a8081fa3be293bf67adb4fb2d0e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79d85de6859096bdff3e2bc17357b721e5ce5846
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606644"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176272"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>如何：建立和使用 shared_ptr 執行個體
 
@@ -17,33 +17,33 @@ ms.locfileid: "50606644"
 
 下圖顯示幾個指向一個記憶體位置的 `shared_ptr` 執行個體。
 
-[![共用指標](../cpp/media/shared_ptr.png "shared_ptr")]
+![共用指標圖表](../cpp/media/shared_ptr.png "共用指標圖表")
 
-## <a name="example"></a>範例
+## <a name="example-1"></a>範例 1
 
 可能的話，使用[make_shared](../standard-library/memory-functions.md#make_shared)函式來建立`shared_ptr`記憶體資源第一次建立時。 `make_shared` 是無例外狀況之虞。 它會使用相同的呼叫來為控制區塊和資源配置記憶體，從而降低建構的額外負荷。 如果您不使用 `make_shared`，則在將其傳遞至 `shared_ptr` 建構函式前，必須先使用明確的新運算式建立物件。 下列範例顯示各種宣告和初始化 `shared_ptr` 及新物件的方式。
 
 [!code-cpp[stl_smart_pointers#1](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
-## <a name="example"></a>範例
+## <a name="example-2"></a>範例 2
 
 下列範例顯示如何宣告和初始化 `shared_ptr` 執行個體，其具有已被另一個 `shared_ptr` 配置之物件的共用擁有權。 假設 `sp2` 是已初始化的 `shared_ptr`。
 
 [!code-cpp[stl_smart_pointers#2](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]
 
-## <a name="example"></a>範例
+## <a name="example-3"></a>範例 3
 
 `shared_ptr` 也是 c + + 標準程式庫容器很有幫助您使用複製項目的演算法時。 您可以包裝 `shared_ptr` 中的項目，然後將它複製到能夠辨識只有需要時才有效 (不再需要時則無效) 之基礎記憶體的其他容器中。 下列範例顯示如何在向量中的 `replace_copy_if` 執行個體上運用 `shared_ptr` 演算法。
 
 [!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
 
-## <a name="example"></a>範例
+## <a name="example-4"></a>範例 4
 
 您可以使用 `dynamic_pointer_cast`、`static_pointer_cast` 和 `const_pointer_cast` 轉換 `shared_ptr`。 這些函式類似 `dynamic_cast`、`static_cast` 和 `const_cast` 運算子。 下列範例顯示如何測試在基底類別的 `shared_ptr` 向量中每個項目的衍生類型，然後複製項目並顯示其相關資訊。
 
 [!code-cpp[stl_smart_pointers#5](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
 
-## <a name="example"></a>範例
+## <a name="example-5"></a>範例 5
 
 您可以透過下列方式將 `shared_ptr` 傳遞至另一個函式：
 
@@ -59,7 +59,7 @@ ms.locfileid: "50606644"
 
 - 在某些情況下，例如在 `std:vector<shared_ptr<T>>` 中，您可能必須將每個 `shared_ptr` 傳遞到 Lambda 運算式主體或具名函式物件。 如果 Lambda 或函式不儲存指標，則以傳址方式傳遞 `shared_ptr`，以避免叫用每個項目的複製建構函式。
 
-## <a name="example"></a>範例
+## <a name="example-6"></a>範例 6
 
 以下範例顯示 `shared_ptr` 如何多載各種比較運算子，以啟用 `shared_ptr` 執行個體所擁有之記憶體的指標比較。
 

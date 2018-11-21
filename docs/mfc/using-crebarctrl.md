@@ -1,6 +1,6 @@
 ---
 title: 使用 CReBarCtrl
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CReBarCtrl
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - combo boxes [MFC], in rebar controls
 - rebar controls
 ms.assetid: 2c0aeec2-ffc3-44b8-97b5-0f56e116a338
-ms.openlocfilehash: 0317ece49d3d5ee3c815df6f9716809ebb1fd27f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2749e4ec919e2014b3de50f1cd164ef66d2fa0ad
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562171"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175440"
 ---
 # <a name="using-crebarctrl"></a>使用 CReBarCtrl
 
@@ -21,7 +21,7 @@ Rebar 控制項可當做子視窗的容器。 這些子視窗通常是其他控�
 
 下圖顯示具有兩個群組列的 Rebar 控制項。 一個包含 Rebar 的移駐夾列、文字標籤 (「Address」) 和下拉式方塊子視窗。 其他群組列包含移駐夾列、文字標籤和一般工具列 (用子視窗實作)。
 
-![有兩個群組列的 rebar 控制項](../mfc/media/vc4ruz1.gif "vc4ruz1")
+![有兩個群組列的 rebar 控制項](../mfc/media/vc4ruz1.gif "具有兩個群組列的 Rebar 控制項")
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
 

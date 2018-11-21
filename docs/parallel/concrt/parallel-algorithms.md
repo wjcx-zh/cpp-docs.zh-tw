@@ -1,15 +1,15 @@
 ---
 title: 平行演算法
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-ms.openlocfilehash: 0ad7f67016dcb7d4638de0f159feb23cd1282b19
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8a08919ce6792babb9b8b1b809e242465a200f9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445587"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176441"
 ---
 # <a name="parallel-algorithms"></a>平行演算法
 
@@ -247,7 +247,7 @@ PPL 提供三種排序演算法： [concurrency:: parallel_sort](reference/concu
 
 下圖更以圖形方式顯示重要的三個的平行排序演算法的屬性。
 
-![排序演算法的比較](../../parallel/concrt/media/concrt_parallel_sorting.png "concrt_parallel_sorting")
+![排序演算法的比較](../../parallel/concrt/media/concrt_parallel_sorting.png "排序演算法的比較")
 
 這些平行排序演算法遵循的規則的取消和例外狀況處理。 如需有關取消和例外狀況處理並行執行階段的詳細資訊，請參閱[取消平行演算法](../../parallel/concrt/cancellation-in-the-ppl.md#algorithms)並[例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。
 

@@ -1,6 +1,6 @@
 ---
 title: CNetAddressCtrl 類別
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CNetAddressCtrl
 - AFXCMN/CNetAddressCtrl
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 09dfdb57fb22b958edc64ec8cbdce95527a304d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee44c05fa6417aaca367798d7a94a900d521b896
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654663"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176234"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 類別
 
@@ -64,7 +64,7 @@ class CNetAddressCtrl : public CEdit
 
 下圖將說明包含網路位址控制項的對話方塊。 文字 方塊中 （1） 的網路位址控制項包含無效的網路位址。 網路位址是否無效，會顯示資訊提示訊息 (2)。
 
-![使用網路位址控制項和資訊提示的對話方塊。](../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")
+![使用網路位址控制項和資訊提示的對話方塊。](../../mfc/reference/media/cnetaddctrl.png "使用網路位址控制項和資訊提示的對話方塊。")
 
 ## <a name="example"></a>範例
 

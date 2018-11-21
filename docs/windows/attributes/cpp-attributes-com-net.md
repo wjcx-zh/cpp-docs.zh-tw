@@ -1,17 +1,17 @@
 ---
 title: 適用於 COM 和.NET 的 c + + 屬性
 ms.custom: index-page
-ms.date: 10/02/2018
+ms.date: 11/19/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: bacfd4cb78c5bf65422fb4472a4563776041a87b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a37542bd69926572e44322c406862117560affe
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589276"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175765"
 ---
 # <a name="c-attributes-for-com-and-net"></a>適用於 COM 和.NET 的 c + + 屬性
 
@@ -55,7 +55,7 @@ class CMyReceiver
 
 下圖示範編譯器和屬性提供者之間的關聯性。
 
-![元件屬性通訊](../media/vccompattrcomm.gif "vcCompAttrComm")
+![元件屬性通訊](../media/vccompattrcomm.gif "元件屬性通訊")
 
 > [!NOTE]
 > 屬性使用方式不會更改原始程式檔的內容。 產生的屬性程式碼會顯示的唯一時間是在偵錯工作階段期間。 此外，在專案中每個原始程式檔，您可以產生文字檔案，以顯示屬性的替代結果。 如需有關此程序的詳細資訊，請參閱 < [/Fx （合併插入程式碼）](../../build/reference/fx-merge-injected-code.md)並[偵錯插入程式碼](/visualstudio/debugger/how-to-debug-injected-code)。

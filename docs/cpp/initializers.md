@@ -1,6 +1,6 @@
 ---
 title: 初始設定式
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - array-element initializers
 - initializing arrays [C++], initializers
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: 2948e65538359815da151a540e96227e56bbea6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1890899fb2ad63bff06d514ae8b18f9dc3ff9e21
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544660"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176285"
 ---
 # <a name="initializers"></a>初始設定式
 
@@ -528,7 +528,8 @@ int main()
 
 初始化參考類型變數時，編譯器會使用下圖所示的決策圖，在建立物件參考或建立參考指向之暫存物件之間做選擇。
 
-![初始化參考類型的決策圖形](../cpp/media/vc38s71.gif "vc38S71")決策圖表初始化參考類型
+![初始化參考類型的決策圖形](../cpp/media/vc38s71.gif "決策圖表初始化參考類型") <br/>
+初始化參考類型的決策圖形
 
 參考**volatile**類型 (宣告為**volatile** *typename* <strong>&</strong> *的識別項*)可以 nelze s položkami **volatile**物件的相同型別，或者使用尚未宣告為**volatile**。 它們不能不過，nelze s položkami **const**該類型的物件。 同樣地，參考**const**類型 (宣告為**const** *typename* <strong>&</strong> *識別碼*) 可以 nelze s položkami **const**相同類型的物件 (或轉換成該類型，或者使用尚未宣告為任何項目**const**)。 它們不能不過，nelze s položkami **volatile**該類型的物件。
 

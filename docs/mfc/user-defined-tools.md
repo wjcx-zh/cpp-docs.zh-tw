@@ -1,15 +1,15 @@
 ---
 title: 使用者定義類型
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
-ms.openlocfilehash: 5c5773cdbbd641b30f39494b2d11c282d2d43954
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df8ba98fa1986052bae82b2afbdf40725298bef7
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607069"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175726"
 ---
 # <a name="user-defined-tools"></a>使用者定義類型
 
@@ -17,7 +17,8 @@ MFC 支援使用者定義的工具。 使用者定義的工具是執行外部的
 
 如果您啟用使用者定義的工具支援，自訂 對話方塊會自動包含**工具** 索引標籤。如下圖所示**工具**頁面。
 
-![工具索引標籤的 [自訂] 對話方塊](../mfc/media/custdialogboxtoolstab.png "custdialogboxtoolstab")自訂對話方塊的 工具索引標籤
+![工具索引標籤的 [自訂] 對話方塊](../mfc/media/custdialogboxtoolstab.png "工具 索引標籤，在 [自訂] 對話方塊") <br/>
+自訂對話方塊的 工具索引標籤
 
 ## <a name="enabling-user-defined-tools-support"></a>啟用使用者定義工具支援
 
@@ -57,4 +58,3 @@ MFC 支援使用者定義的工具。 使用者定義的工具是執行外部的
 [CUserTool 類別](../mfc/reference/cusertool-class.md)<br/>
 [CUserToolsManager 類別](../mfc/reference/cusertoolsmanager-class.md)<br/>
 [CWinAppEx 類別](../mfc/reference/cwinappex-class.md)
-

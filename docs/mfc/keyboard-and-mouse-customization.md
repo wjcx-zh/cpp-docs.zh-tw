@@ -1,16 +1,16 @@
 ---
 title: 鍵盤和滑鼠自訂
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - customizations [MFC], keyboard and mouse (MFC Extensions)
 - keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
-ms.openlocfilehash: 8bb685974ed4020611ffe275ba504951d132afac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ccbe83185c48439273024a97c881f1c32a2ddc7
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487382"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175674"
 ---
 # <a name="keyboard-and-mouse-customization"></a>鍵盤和滑鼠自訂
 
@@ -22,7 +22,8 @@ MFC 可讓應用程式的使用者自訂處理鍵盤和滑鼠輸入的方式。 
 
 如下圖所示**鍵盤**索引標籤**自訂** 對話方塊。
 
-![在 [自訂] 對話方塊的 [鍵盤] 索引標籤](../mfc/media/mfcnextkeyboardtab.png "mfcnextkeyboardtab")鍵盤自訂索引標籤
+![在 [自訂] 對話方塊的 [鍵盤] 索引標籤](../mfc/media/mfcnextkeyboardtab.png "自訂 對話方塊中的 [鍵盤] 索引標籤") <br/>
+鍵盤自訂索引標籤
 
 使用者可與 [鍵盤] 索引標籤互動，將一個或多個鍵盤快速鍵指派給命令。 索引標籤左側會列出可用的命令。使用者可以從功能表中選取所有可用的命令。 但是只有功能表命令可以與鍵盤快速鍵相關聯。 在使用者輸入新的快速鍵之後**指派**按鈕即變成啟用。 當使用者按一下這個按鈕時，應用程式就會將選取的命令與該捷徑產生關聯。
 
@@ -36,7 +37,8 @@ MFC 可讓應用程式的使用者自訂處理鍵盤和滑鼠輸入的方式。 
 
 如下圖所示**滑鼠**索引標籤**自訂** 對話方塊。
 
-![在 [自訂] 對話方塊中 [滑鼠] 索引標籤](../mfc/media/mfcnextmousetab.png "mfcnextmousetab")滑鼠自訂索引標籤
+![在 [自訂] 對話方塊中 [滑鼠] 索引標籤](../mfc/media/mfcnextmousetab.png "滑鼠 索引標籤中 [自訂] 對話方塊") <br/>
+滑鼠自訂索引標籤
 
 使用者可與這個索引標籤互動，以指派按兩下滑鼠動作的功能表命令。 使用者從視窗左側選取一個檢視，然後使用右側的控制項將命令與按兩下動作產生關聯。 在使用者按下**關閉**，每當使用者的任何位置按兩下檢視中，應用程式會執行相關聯的命令。
 

@@ -1,6 +1,6 @@
 ---
 title: CMFCTasksPane 類別
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPane
 - AFXTASKSPANE/CMFCTasksPane
@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: e11d1f95cf44756a39ab52fcd4dfeb87addc6e17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaf0e68391dd1273c3f973315ac58fe0d6bd1c24
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563653"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176805"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane 類別
 
@@ -350,11 +350,11 @@ class CMFCTasksPane : public CDockablePane
 
 下圖顯示典型的工作窗格控制項。 第一個群組是*特殊*群組和它的標題是較深的色彩。 第三個群組會摺疊。 最後一個群組會與工作窗格的底端對齊，並且沒有標題，而群組中的最後一個工作是簡單的標籤：
 
-![範例工作窗格](../../mfc/reference/media/nexttaskpane.png "nexttaskpane")
+![範例工作窗格](../../mfc/reference/media/nexttaskpane.png "工作窗格範例")
 
 您可以藉由調整各種邊界和位移來自訂工作窗格的外觀。 下圖將釐清這些變數的意義：
 
-![自訂的工作群組](../../mfc/reference/media/nexttaskgrpcustom.png "nexttaskgrpcustom")
+![自訂的工作群組](../../mfc/reference/media/nexttaskgrpcustom.png "自訂工作群組")
 
 ## <a name="example"></a>範例
 

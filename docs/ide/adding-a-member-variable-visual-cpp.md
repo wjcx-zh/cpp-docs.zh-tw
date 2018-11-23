@@ -1,27 +1,32 @@
 ---
-title: 新增成員變數 (Visual C++)
-ms.date: 11/04/2016
+title: 新增成員變數
+ms.date: 11/09/2018
 f1_keywords:
 - vc.codewiz.classes.member.variable
+- vc.codewiz.variable.overview
 helpviewer_keywords:
 - member variables, adding
 - member variables
+- add member variable wizard [C++]
+- dialog box controls, member variables
+- dialog box controls, variable types
+- variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: 3c7f64fae00e489da7c71bcfe5731db72e1afdf7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a519c0606a7df6e0ce55997a055d78865afafbf
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595766"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694409"
 ---
-# <a name="adding-a-member-variable--visual-c"></a>加入成員變數 (Visual C++)
+# <a name="add-a-member-variable"></a>新增成員變數
 
-您可以使用 [類別檢視] 將成員變數新增至類別。 成員變數可以是用於[資料交換和資料驗證](../mfc/dialog-data-exchange-and-validation.md)，也可以是泛型。 資料成員變數精靈是特別設計來取得相關資訊並用來在原始程式檔的適當位置插入項目。 您可以從[資源檢視](../windows/resource-view-window.md)中的[對話方塊編輯器](../windows/dialog-editor.md)，或從[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)新增成員變數。
+您可以使用 [類別檢視] 將成員變數新增至類別。 成員變數可以是用於[資料交換和資料驗證](../mfc/dialog-data-exchange-and-validation.md)，也可以是泛型。 資料成員變數精靈專用於取得相關資訊，並將該資訊用來在來源檔案的適當位置插入元素。 您可以透過 [[資源檢視]](../windows/resource-view-window.md) 中的 [[對話方塊編輯器]](../windows/dialog-editor.md)，或透過 [[類別檢視]](/visualstudio/ide/viewing-the-structure-of-code) 新增成員變數。
 
 > [!NOTE]
->  當您設計和實作對話方塊時，可能會發現使用對話方塊編輯器新增對話方塊控制項，然後實作控制項的成員變數這樣的做法更有效率。
+> 當您設計和實作對話方塊時，也許會發現使用 [對話方塊編輯器] 新增對話方塊控制項，然後實作控制項成員變數的做法更有效率。
 
-### <a name="to-add-a-member-variable-for-a-dialog-control-in-resource-view-using-the-add-member-variable-wizard"></a>使用 [新增成員變數精靈] 中的 [資源檢視] 新增對話方塊控制項的成員變數
+**使用 [新增成員變數精靈] 在 [資源檢視] 中新增對話方塊控制項的成員變數：**
 
 1. 在 [資源檢視] 中，展開專案節點及對話方塊節點，顯示專案的對話方塊清單。
 
@@ -29,31 +34,136 @@ ms.locfileid: "50595766"
 
 1. 在對話方塊編輯器中顯示的對話方塊中，以滑鼠右鍵按一下您要新增成員變數的控制項。
 
-1. 在捷徑功能表上，按一下 [新增變數]，顯示[新增成員變數精靈](../ide/add-member-variable-wizard.md)。
+1. 在捷徑功能表上，選擇 [新增變數]，以顯示 [[新增成員變數精靈]](#add-member-variable-wizard)。
 
    > [!NOTE]
    > [控制項識別碼] 中已提供預設值。
 
-1. 在適當的精靈方塊中提供資訊。 如需詳細資訊，請參閱[對話方塊控制項和變數類型](../ide/dialog-box-controls-and-variable-types.md)。
+1. 在適當的精靈方塊中提供資訊。 如需詳細資訊，請參閱[對話方塊控制項和變數類型](#dialog-box-controls-and-variable-types)。
 
-1. 按一下 [完成]，將定義和實作程式碼新增至專案，然後關閉精靈。
+1. 選取 [完成]，將定義和實作程式碼新增至專案，然後關閉精靈。
 
-### <a name="to-add-a-member-variable-from-class-view-using-the-add-member-variable-wizard"></a>使用 [新增成員變數精靈] 從 [類別檢視] 新增成員變數
+**使用 [新增成員變數精靈] 透過 [類別檢視] 新增成員變數：**
 
 1. 在[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)中，展開專案節點，顯示專案中的類別。
 
 1. 以滑鼠右鍵按一下您要新增變數的類別。
 
-1. 在捷徑功能表上，依序按一下 [新增]、[新增變數]，顯示 [新增成員變數精靈]。
+1. 在捷徑功能表上，依序選擇 [新增]、[新增變數]，以顯示 [新增成員變數精靈]。
 
-1. 在適當的精靈方塊中提供資訊。 如需詳細資料，請參閱[新增成員變數精靈](../ide/add-member-variable-wizard.md)。
+1. 在適當的精靈方塊中提供資訊。 如需詳細資訊，請參閱[新增成員變數精靈](#add-member-variable-wizard)。
 
-1. 按一下 [完成]，將定義和實作程式碼新增至專案，然後關閉精靈。
+1. 選取 [完成]，將定義和實作程式碼新增至專案，然後關閉精靈。
 
-## <a name="see-also"></a>請參閱
+## <a name="in-this-section"></a>本節內容
 
-[使用程式碼精靈新增功能](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
-[新增類別](../ide/adding-a-class-visual-cpp.md)<br>
-[新增成員函式](../ide/adding-a-member-function-visual-cpp.md)<br>
-[MFC 訊息處理常式](../mfc/reference/adding-an-mfc-message-handler.md)<br>
-[巡覽類別結構](../ide/navigating-the-class-structure-visual-cpp.md)
+- [新增成員變數精靈](#add-member-variable-wizard)
+- [對話方塊控制項和變數類型](#dialog-box-controls-and-variable-types)
+
+## <a name="add-member-variable-wizard"></a>新增成員變數精靈
+
+此精靈可將成員變數宣告新增至標頭檔。 根據選項而定，此精靈可將程式碼新增至 .cpp 檔案。 在您使用精靈新增了成員變數後，就可以在開發環境中編輯程式碼。
+
+- **存取權**
+
+  設定成員變數的存取權。 存取修飾詞是指定其他類別對成員變數所具有之存取權的關鍵字。 如需指定存取權的詳細資訊，請參閱[成員存取控制](../cpp/member-access-control-cpp.md)。 成員變數存取層級根據預設設為 `public`。
+
+  - [public](../cpp/public-cpp.md)
+  - [protected](../cpp/protected-cpp.md)
+  - [private](../cpp/private-cpp.md)
+
+- **變數類型**
+
+  設定您要新增的成員變數傳回型別。
+
+  - 若要新增非對話方塊控制項的成員變數，請從可用類型清單中選取。
+
+    如需這些類型的資訊，請參閱[基本類型](../cpp/fundamental-types-cpp.md)。
+
+    |||
+    |-|-|
+    |`char`|`short`|
+    |`double`|`unsigned char`|
+    |`float`|`unsigned int`|
+    |`int`|`unsigned long`|
+    |`long`||
+
+  - 若要新增對話方塊控制項的成員變數，此方塊會填入針對控制項或值傳回的物件類型。 如果您選取 [控制項]，則 [變數類型] 會指定您在 [控制項識別碼] 方塊中選取之控制項的基底類別。 若對話方塊控制項可以包含值，而且您選取 [值]，則 [變數類型] 會為該控制項可包含的值指定適當類型。 如需詳細資訊，請參閱[對話方塊控制項與變數類型](#dialog-box-controls-and-variable-types)。
+
+    此值依 [控制項識別碼] 中的選取項目而定，而且無法變更。
+
+- **變數名稱**
+
+  設定您要新增的成員變數名稱。 成員變數通常以根據預設為您提供的識別字串 `m_` 開頭。
+
+- **控制變數**
+
+  表示成員變數會管理具有[資料交換和資料驗證](../mfc/dialog-data-exchange-and-validation.md)支援之對話方塊中的控制項。 如需詳細資訊，請參閱 [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)。 此選項僅適用於新增至衍生自 [CDialog](../mfc/reference/cdialog-class.md) 之類別的成員變數。 選取此方塊可啟用 [控制項識別碼] 和 [控制項類型] 選項。
+
+- **控制項識別碼**
+
+  設定您要新增的控制項變數識別碼。 從您要新增成員變數的控制項類型識別碼清單中選取。 此清單只有在選取 [控制變數] 方塊時才能使用，而且僅限於已新增至對話方塊的控制項識別碼。 例如，標準 [確定] 按鈕的控制項識別碼為 **IDOK**。
+
+  |選項|描述|
+  |------------|-----------------|
+  |**控制項**|控制項類型預設會設定此選項。 它會管理控制項本身，而不是控制項的狀態或內容 (原因是您可能會想要為清單方塊、下拉式方塊或編輯方塊管理這兩項)。|
+  |**值**|此選項適用於可包含值或顯示狀態的控制項類型，像是編輯方塊或核取方塊。 同時也適用於您可能會管理範圍、內容或狀態的控制項類型。 如需詳細資訊，請參閱[對話方塊控制項與變數類型](#dialog-box-controls-and-variable-types)。|
+
+- **分類**
+
+  指定變數是根據控制項類型或控制項的值。
+
+- **控制項類型**
+
+  設定要新增之控制項的類型。 此方塊無法變更。 例如，按鈕的控制項類型為 **BUTTON**，而下拉式方塊的控制項類型為 **COMBOBOX**。 如需詳細資訊，請參閱[對話方塊控制項與變數類型](#dialog-box-controls-and-variable-types)。
+
+- **最大字元數**
+
+  僅適用於 [變數類型] 設定為 [CString](../atl-mfc-shared/reference/cstringt-class.md) 時。 表示控制項可容納的最大字元數。
+
+- **最小值**
+
+  僅在變數類型為 `BOOL`、`int`、`UINT`、`long`、`DWORD`、`float`、`double`、`BYTE`、`short`、[COLECurrency](../mfc/reference/colecurrency-class.md) 或 [CTime](../atl-mfc-shared/reference/ctime-class.md) 時才可使用。 表示刻度或日期範圍可接受的最小值。
+
+- **最大值**
+
+  僅在變數類型為 `BOOL`、`int`、`UINT`、`long`、`DWORD`、`float`、`double`、`BYTE`、`short`、`COLECurrency` 或 `CTime` 時才可使用。 表示刻度或日期範圍可接受的最大值。
+
+- **.h 檔案**
+
+  適用於其成員變數需要包裝函式類別的 ActiveX 控制項。 設定要新增類別宣告之標頭檔的名稱。
+
+- **.cpp 檔案**
+
+  適用於其成員變數需要包裝函式類別的 ActiveX 控制項。 設定要新增類別定義之實作檔的名稱。
+
+- **註解**
+
+  提供成員變數之標頭檔中的註解。
+
+## <a name="dialog-box-controls-and-variable-types"></a>對話方塊控制項與變數類型
+
+您可以使用 [[新增成員變數精靈]](#add-member-variable-wizard)，將成員變數新增至使用 MFC 建立的對話方塊控制項。 您新增成員變數的控制項類型會決定出現在對話方塊中的選項。
+
+下表說明 MFC 及[對話方塊編輯器](../windows/dialog-editor.md)支援的所有對話方塊控制項類型。 該表也會列出他們的可用類型與值。
+
+|控制項|控制項類型|控制變數類型|變數值類型|最小/最大值 (僅限實值型別)|
+|-------------|------------------|---------------------------|-------------------------|-----------------------------------------|
+|動畫控制項|SysAnimate32|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|無；僅限控制項|N/A|
+|按鈕|BUTTON|[CButton](../mfc/reference/cbutton-class.md)|無；僅限控制項|N/A|
+|核取方塊|CHECK|[CButton](../mfc/reference/cbutton-class.md)|`BOOL`|最小值/最大值|
+|下拉式方塊|COMBOBOX|[CComboBox](../mfc/reference/ccombobox-class.md)|[CString](../atl-mfc-shared/reference/cstringt-class.md)|最大字元數|
+|日期時間選擇器控制項|SysDateTimePick32|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|[CTime](../atl-mfc-shared/reference/ctime-class.md)|最小值/最大值|
+|編輯方塊|編輯|[CEdit](../mfc/reference/cedit-class.md)|`CString`、int、UINT、long、DWORD、float、double、BYTE、short、BOOL、`COleDateTime` 或 `COleCurrency`|最小值/最大值；某些支援最大字元數|
+|熱鍵控制項|msctls_hotkey32|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|無；僅限控制項|N/A|
+|清單方塊|LISTBOX|[CListBox](../mfc/reference/clistbox-class.md)|`CString`|最大字元數|
+|清單控制項|SysListView32|[CListCtrl](../mfc/reference/clistctrl-class.md)|無；僅限控制項|N/A|
+|月曆控制項|SysMonthCal32|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|`CTime`|最小值/最大值|
+|進度控制項|msctls_progress32|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|無；僅限控制項|N/A|
+|Rich Edit 2 控制項|RichEdit20A|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|`CString`|最大字元數|
+|Rich Edit 控制項|RICHEDIT|`CRichEditCtrl`|`CString`|最大字元數|
+|捲軸 (垂直或水平)|SCROLLBAR|[CScrollBar](../mfc/reference/cscrollbar-class.md)|`int`|最小值/最大值|
+|Slider 控制項|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|`int`|最小值/最大值|
+|微調控制項|msctls_updown32|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|無；僅限控制項|N/A|
+|索引標籤控制項|SysTabControl32|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|無；僅限控制項|N/A|
+|樹狀控制項|SysTreeView32|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|無；僅限控制項|N/A|

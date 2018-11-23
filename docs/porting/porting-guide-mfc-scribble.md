@@ -1,13 +1,13 @@
 ---
 title: 移植指南：MFC Scribble
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: b41689b1e0207029f4494cfd91c261705789a733
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 353dc8fb42b73ec7e0ee748ef9fefd030c073703
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539759"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175648"
 ---
 # <a name="porting-guide-mfc-scribble"></a>移植指南：MFC Scribble
 
@@ -31,7 +31,7 @@ MFC Scribble 是已知隨附於許多不同 Visual C++ 版本的範例。 它是
 
 當您在 Visual Studio 2017 中開啟舊專案檔時，Visual Studio 會詢問您是否要將專案檔轉換成最新版本，我們已選擇接受。 接著會出現下列對話方塊：
 
-![檢閱專案和方案變更](../porting/media/scribbleprojectupgrade.PNG "ScribbleProjectUpgrade")
+![檢閱專案和解決方案變更](../porting/media/scribbleprojectupgrade.PNG "檢閱專案和解決方案變更")
 
 出現錯誤，通知我們 Itanium 目標無法使用，因此將不會進行轉換。
 
@@ -43,7 +43,7 @@ Platform 'Itanium' is missing from this project. All the configurations and thei
 
 Visual Studio 接著會顯示移轉報告，列出舊專案檔的所有問題。
 
-![升級報表](../porting/media/scribblemigrationreport.PNG "ScribbleMigrationReport")
+![升級報表](../porting/media/scribblemigrationreport.PNG "升級報表")
 
 在本例中，問題全部都是警告，而且 Visual Studio 已對專案檔進行適當的變更。 對於專案而言，最大的差異是建置工具從 vcbuild 變更為 msbuild。 這項變更最初是由 Visual Studio 2010 所引進。 其他變更還包括專案檔本身中項目順序的一些重新排列。 對於這個範例專案而言，這些問題都不需要進一步注意。
 

@@ -1,21 +1,21 @@
 ---
 title: 資料流狀態
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - streams, states
 ms.assetid: 5f28c968-f132-403f-968c-8417ff315e52
-ms.openlocfilehash: d51f24b82c10d58e91f5d20b6656eb16621004ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43d28fa504c64fcb25d5c7cd3ee2c6ed906acd7e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481168"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175557"
 ---
 # <a name="stream-states"></a>資料流狀態
 
 資料流的有效狀態和狀態轉換如下圖所示。
 
-![資料流](../c-runtime-library/media/stream.gif "資料流")
+![資料流狀態圖表](../c-runtime-library/media/stream.gif "資料流狀態圖表")
 
 每個圓圈都表示穩定的狀態。 每條線則表示對資料流進行函式呼叫後可能發生的轉換。 有五組函式會造成狀態轉換。
 

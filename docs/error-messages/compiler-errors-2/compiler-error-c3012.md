@@ -17,7 +17,7 @@ ms.locfileid: "50503077"
 
 > '*內建*': 不允許直接放在平行區域內的內建函式
 
-[](../../intrinsics/compiler-intrinsics.md) 區域中不允許 `omp parallel` 函式。 若要修正此問題，將內建函式移出區域，或取代非內建的對等項目。
+A[編譯器內建](../../intrinsics/compiler-intrinsics.md)函式中不允許`omp parallel`區域。 若要修正此問題，將內建函式移出區域，或取代非內建的對等項目。
 
 ## <a name="example"></a>範例
 

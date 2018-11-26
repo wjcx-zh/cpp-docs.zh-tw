@@ -17,6 +17,6 @@ ms.locfileid: "50642919"
 
 PRIMARY LANGUAGE ID 不是數字
 
-PRIMARY LANGUAGE ID 必須是十六進位語言 ID。 請參閱《執行階段程式庫參考》 [](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) 中的 *語言和國家/地區字串* ，以取得有效語言 ID 的清單。
+PRIMARY LANGUAGE ID 必須是十六進位語言 ID。 請參閱《執行階段程式庫參考》 中的 [語言和國家/地區字串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) ，以取得有效語言 ID 的清單。
 
 如果已在 .RC 檔案中使用工具加入和刪除資源，也會發生此錯誤。 若要修正這個問題，請在文字編輯器中開啟 .RC 檔案，並以手動方式清除任何未使用的資源。

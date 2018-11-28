@@ -1,6 +1,6 @@
 ---
 title: /Oy (框架指標省略)
-ms.date: 09/22/2017
+ms.date: 11/19/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.OmitFramePointers
 - /oy
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - suppress frame pointer creation
 - /Oy compiler option [C++]
 ms.assetid: c451da86-5297-4c5a-92bc-561d41379853
-ms.openlocfilehash: d6d896079c08ed2cf595b95ed41045885c83b5bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 343b0e026c2932e97d4a8d4472ba2035d6302661
+ms.sourcegitcommit: 3da2cb3ec85e77ddfd4d2a55edb133d580ce4f18
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431729"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52330386"
 ---
 # <a name="oy-frame-pointer-omission"></a>/Oy (框架指標省略)
 
@@ -32,9 +32,9 @@ ms.locfileid: "50431729"
 
 這個選項會加速函式呼叫，因為並不需要設定及移除框架指標。 它也會釋放出更多的暫存，一般用途。
 
-**/Oy**啟用框架指標省略並 **/Oy-** 停用省略。 **/Oy**僅適用於 x86 編譯器。
+**/Oy**啟用框架指標省略並 **/Oy-** 停用省略。 在 x64 編譯器 **/Oy**並 **/Oy-** 不提供。
 
-如果您的程式碼需要 EBP 架構定址，您可以指定 **/Oy-** 選項之後 **/Ox**選項，或使用[最佳化](../../preprocessor/optimize.md)具有 「**y**"並**關閉**獲得最大程度最佳化 EBP 架構定址的引數。 編譯器會偵測大部分需要 EBP 架構定址的情況 (例如，對於 `_alloca` 和 `setjmp` 函式以及處理結構化例外狀況)。
+如果您的程式碼會要求框架定址，您可以指定 **/Oy-** 選項之後 **/Ox**選項，或使用[最佳化](../../preprocessor/optimize.md)具有 「**y**"和**關閉**引數，以獲得最大程度最佳化框架定址。 編譯器偵測到的是需要框架定址的大部分情況下 (例如，對於`_alloca`和`setjmp`函式和結構化例外狀況處理)。
 
 [/Ox （啟用最速度最佳化）](../../build/reference/ox-full-optimization.md)並[/o1，/o2 （最小大小、 最快速度）](../../build/reference/o1-o2-minimize-size-maximize-speed.md)選項會隱含 **/Oy**。 指定 **/Oy-** 之後 **/Ox**， **/o1**，或 **/o2**選項停用 **/Oy**，不論是明確或隱含。
 
@@ -44,11 +44,9 @@ ms.locfileid: "50431729"
 
 1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
 
-1. 按一下 [C/C++]  資料夾。
+1. 選取 **組態屬性** > **C/c + +** > **最佳化**屬性頁。
 
-1. 按一下 **最佳化**屬性頁。
-
-1. 修改**省略框架指標**屬性。 這個屬性中加入或移除只有 **/Oy**選項。 如果您想要新增 **/Oy-** 選項，請按一下**命令列**並修改**其他選項**。
+1. 修改**省略框架指標**屬性。 這個屬性中加入或移除只有 **/Oy**選項。 如果您想要新增 **/Oy-** 選項中，選取**命令列** 屬性頁面，然後修改**其他選項**。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
@@ -56,8 +54,6 @@ ms.locfileid: "50431729"
 
 ## <a name="see-also"></a>另請參閱
 
-[/O 選項 (最佳化程式碼)](../../build/reference/o-options-optimize-code.md)
-
-[編譯器選項](../../build/reference/compiler-options.md)
-
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[/O 選項 (最佳化程式碼)](../../build/reference/o-options-optimize-code.md)<br/>
+[編譯器選項](../../build/reference/compiler-options.md)<br/>
+[設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>

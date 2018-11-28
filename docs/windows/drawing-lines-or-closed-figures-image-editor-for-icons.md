@@ -20,7 +20,7 @@ ms.locfileid: "50449071"
 
 ### <a name="to-draw-a-line"></a>若要繪製一條線
 
-1. 上[影像編輯器] 工具列](../windows/toolbar-image-editor-for-icons.md)(或從**映像**功能表**工具**命令)，按一下 [**列**工具。
+1. 上[影像編輯器 工具列](../windows/toolbar-image-editor-for-icons.md)(或從**映像**功能表**工具**命令)，按一下 **列**工具。
 
 2. 如有必要，選取 色彩和筆刷：
 

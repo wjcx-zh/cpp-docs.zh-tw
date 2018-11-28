@@ -1,15 +1,15 @@
 ---
 title: /sdl (啟用其他安全性檢查)
-ms.date: 11/04/2016
+ms.date: 11/26/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-ms.openlocfilehash: 84e3b7b80727c359e711f182e2f06a7332989549
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49ac57f81ef07eb2a9c1e11280e160f0c48fce73
+ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587456"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389938"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (啟用其他安全性檢查)
 
@@ -49,7 +49,17 @@ ms.locfileid: "50587456"
 
 - 執行有限的指標淨化。 在未涉及取值的運算式中和沒有使用者定義解構函式的類型中，指標參考在呼叫 `delete` 之後設定為非有效位址。 這有助於防止過時的指標參考重複使用。
 
-- 執行類別成員初始化。 在物件具現化 (在建構函式執行之前)，自動將所有類別成員初始化為零。 這有助於避免使用未初始化的資料 (與建構函式未明確初始化的類別成員相關聯)。
+- 執行類別成員指標初始化。 自動初始化類別成員指標型別**nullptr**在物件具現化 （在建構函式執行之前）。 這有助於避免使用未初始化的指標，建構函式未明確初始化。 稱為編譯器產生的成員指標初始化，只要：
+
+  - 物件未配置的自訂 （使用者定義） `operator new`
+
+  - 物件未配置陣列的一部分 (例如`new A[x]`)
+
+  - 未受管理或匯入類別
+
+  - 此類別具有使用者定義的預設建構函式。
+
+  若要由編譯器所產生的類別初始化函式初始化，成員必須是指標，並不是屬性或常數。
 
 ## <a name="remarks"></a>備註
 

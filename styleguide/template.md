@@ -20,7 +20,7 @@
 
 支援所有基本和 GitHub Flavored Markdown (GFM)。 如需詳細資訊，請參閱：
 
-- [基本 Markdown 語法 (英文)](https://daringfireball.net/projects/markdown/syntax)
+- [基準 Markdown 語法 (英文)](https://daringfireball.net/projects/markdown/syntax)
 - [GFM 文件 (英文)](https://guides.github.com/features/mastering-markdown)
 
 Markdown 使用 \*、\` 和 \# 等特殊字元來設定格式。 如果要在內容中包含這些字元，請遵循下列其中一種作法：

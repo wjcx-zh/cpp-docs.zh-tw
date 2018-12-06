@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _aligned_offset_malloc_dbg function
 - aligned_offset_malloc_dbg function
 ms.assetid: 6c242307-c59e-4d63-aae5-d8cbec8e021c
-ms.openlocfilehash: 481109a5ed7d137aa2d10c77955a2f460cba43c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96fe9e7fda0d0cdfdbfa5462e4f601e3649e2233
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507532"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977715"
 ---
 # <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
 
@@ -68,7 +68,7 @@ void * _aligned_offset_malloc_dbg(
 
 ## <a name="remarks"></a>備註
 
-**_aligned_offset_malloc_dbg**是偵錯版本[_aligned_offset_malloc](aligned-offset-malloc.md)函式。 當[_DEBUG](../../c-runtime-library/debug.md)未定義，每次呼叫 **_aligned_offset_malloc_dbg**的呼叫會降低 **_aligned_offset_malloc**。 兩者 **_aligned_offset_malloc**並 **_aligned_offset_malloc_dbg**配置基底堆積中中的記憶體區塊，但 **_aligned_offset_malloc_dbg**提供數個偵錯功能： 以測試遺漏，來追蹤特定配置類型的區塊類型參數的區塊使用者部分任一端使用緩衝區和*檔名*/*linenumber*來判斷配置要求來源的資訊。
+**_aligned_offset_malloc_dbg**是偵錯版本[_aligned_offset_malloc](aligned-offset-malloc.md)函式。 當[_DEBUG](../../c-runtime-library/debug.md)未定義，每次呼叫 **_aligned_offset_malloc_dbg**的呼叫會降低 **_aligned_offset_malloc**。 兩者 **_aligned_offset_malloc**並 **_aligned_offset_malloc_dbg**配置基底堆積中中的記憶體區塊，但 **_aligned_offset_malloc_dbg**提供數個偵錯功能： 以測試遺漏，區塊使用者部分任一端使用緩衝區和*檔名*/*linenumber*資訊來判斷的原點配置要求。 追蹤特定配置類型的區塊類型參數不是支援的偵錯功能的對齊的配置。 對齊的配置會顯示為 _NORMAL_BLOCK 區塊型別。
 
 **_aligned_offset_malloc_dbg**配置記憶體區塊，使用比要求稍微多一些的空間*大小*。 偵錯堆積管理員會使用額外的空間連結偵錯記憶體區塊，以及為應用程式提供偵錯標頭資訊和覆寫緩衝區。 區塊配置後，區塊的使用者部分會填入值 0xCD，且每個覆寫緩衝區會填入 0xFD。
 

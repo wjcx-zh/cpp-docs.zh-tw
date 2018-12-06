@@ -8,9 +8,9 @@ Visual Basic 與 Visual C# 的文件位於 [http://github.com/dotnet/core-docs](
 
 ## <a name="contributing-to-the-documentation"></a>參與文件
 
-我們歡迎您的參與，協助我們改善 Visual C++ 文件。如需關於貢獻到 docs.microsoft.com 的全方位指南，請參閱 [Microsoft Docs 參與者指南概觀](https://docs.microsoft.com/contribute)。 如需如何貢獻到 Visual C++ 文件的詳細資料，請參閱[貢獻](CONTRIBUTING.md)指南。
+我們歡迎您的參與，協助我們改善 Visual C++ 文件。如需關於貢獻到 docs.microsoft.com 的全方位指南，請參閱 [Microsoft Docs 參與者指南概觀](https://docs.microsoft.com/contribute)。 如需如何對 Visual C++ 文件做出貢獻的詳細資料，請參閱[貢獻指南](CONTRIBUTING.md)。
 
-Visual C++ 的數個功能區域都在此存放庫中有自己的資料夾，例如 `standard-library` 有 C++ 標準程式庫的主題，`ide` 有 Visual Studio 互動式開發環境 (IDE) 的 C++ 特定主題等等。 每個資料夾的 `/media` 子資料夾都包含主題的美工檔案。 [貢獻](CONTRIBUTING.md)指南有詳細資訊。
+Visual C++ 的數個功能區域都在此存放庫中有自己的資料夾，例如 `standard-library` 有 C++ 標準程式庫的主題，`ide` 有 Visual Studio 互動式開發環境 (IDE) 的 C++ 特定主題等等。 每個資料夾的 `/media` 子資料夾都包含主題的美工檔案。 [參與指南](CONTRIBUTING.md)有詳細資訊。
 
 ## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft 開放原始碼管理辦法
 

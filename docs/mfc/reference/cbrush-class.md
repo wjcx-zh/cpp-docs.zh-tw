@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-ms.openlocfilehash: 4f6b5db22b956584507a2979a517ff26d5364a0c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dbc5e36fdf613f1db2818ac6193709829e3bd001
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661639"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178703"
 ---
 # <a name="cbrush-class"></a>CBrush 類別
 
@@ -185,7 +185,7 @@ BOOL CreateDIBPatternBrush(
 識別包含封裝的裝置獨立點陣圖 (DIB) 的全域記憶體物件。
 
 *nUsage*<br/>
-指定是否`bmiColors[]`的欄位[BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md)資料結構 （的 「 封裝 DIB 」 的一部分） 包含明確的 RGB 值或索引的目前具現化的邏輯調色盤。 參數必須是下列值之一：
+指定是否`bmiColors[]`的欄位[BITMAPINFO](/windows/desktop/api/wingdi/ns-wingdi-tagbitmapinfo)資料結構 （的 「 封裝 DIB 」 的一部分） 包含明確的 RGB 值或索引的目前具現化的邏輯調色盤。 參數必須是下列值之一：
 
 - DIB_PAL_COLORS color 資料表所組成的 16 位元索引陣列。
 

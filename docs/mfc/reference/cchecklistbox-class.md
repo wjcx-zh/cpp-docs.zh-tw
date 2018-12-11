@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: b3bf93a876f9092d5615b75ca45fea71341d3557
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b1e64e947f798becef32fa4d99f21e61133cc8fc
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327339"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177832"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox 類別
 
@@ -146,7 +146,7 @@ virtual BOOL Create(
 指定的檢查清單方塊的樣式。 樣式必須是 LBS_HASSTRINGS 和 LBS_OWNERDRAWFIXED （清單中的所有項目都有相同的高度） 或 LBS_OWNERDRAWVARIABLE （清單中的項目都是不同高度的）。 這個樣式可以結合其他[清單方塊樣式](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)除了 LBS_USETABSTOPS。
 
 *rect*<br/>
-指定的檢查清單方塊的大小和位置。 可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](../../mfc/reference/rect-structure1.md)結構。
+指定的檢查清單方塊的大小和位置。 可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構。
 
 *pParentWnd*<br/>
 指定檢查清單方塊的父視窗 (通常`CDialog`物件)。 它必須不是 NULL。
@@ -193,7 +193,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>參數
 
 *lpDrawItemStruct*<br/>
-長指標[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)結構，其中包含的所需的繪圖類型的相關資訊。
+長指標[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)結構，其中包含的所需的繪圖類型的相關資訊。
 
 ### <a name="remarks"></a>備註
 
@@ -290,7 +290,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>參數
 
 *lpMeasureItemStruct*<br/>
-長指標[MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)結構。
+長指標[MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct)結構。
 
 ### <a name="remarks"></a>備註
 

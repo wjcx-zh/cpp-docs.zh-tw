@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 9d5216cd399943cda67bc9387ea37c938e5cab48
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c1e742d3320dae4140cc4886c47d34dbe9b6071f
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694331"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178339"
 ---
 # <a name="application-information-and-management"></a>應用程式資訊和管理
 
@@ -114,7 +114,7 @@ CWinThread* AfxBeginThread(
 
 必須由應用程式啟用多執行緒否則，此函式會失敗。 如需有關如何啟用多執行緒的詳細資訊，請參閱[/MD、 /MT、 /LD （使用執行階段程式庫）](../../build/reference/md-mt-ld-use-run-time-library.md)下方*Visual c + + 編譯器選項*。
 
-如需詳細資訊`AfxBeginThread`，請參閱文章[多執行緒： 建立背景工作執行緒](../../parallel/multithreading-creating-worker-threads.md)並[多執行緒： 建立使用者介面執行緒](../../parallel/multithreading-creating-user-interface-threads.md)。
+如需詳細資訊`AfxBeginThread`，請參閱文章[多執行緒：建立背景工作執行緒](../../parallel/multithreading-creating-worker-threads.md)和[多執行緒：建立使用者介面執行緒](../../parallel/multithreading-creating-user-interface-threads.md)。
 
 ### <a name="example"></a>範例
 
@@ -164,7 +164,7 @@ void AFXAPI AfxEndThread(
 
 必須從內呼叫的執行緒終止。
 
-如需詳細資訊`AfxEndThread`，請參閱文章[多執行緒： 結束執行緒](../../parallel/multithreading-terminating-threads.md)。
+如需詳細資訊`AfxEndThread`，請參閱文章[多執行緒：終止執行緒](../../parallel/multithreading-terminating-threads.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -567,9 +567,9 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 
 - 目前的目錄。
 
-- **Windows 95/98:** Windows 系統目錄。 **Windows NT:** 32 位元 Windows 系統目錄。 這個目錄的名稱是 SYSTEM32。
+- **Windows 95/98:** Windows 系統目錄中。 **Windows NT 中：** 32 位元 Windows 系統目錄中。 這個目錄的名稱是 SYSTEM32。
 
-- **只有 Windows NT:** 16 位元 Windows 系統目錄。 取得此目錄中，路徑的 Win32 函式，但它會搜尋。 這個目錄的名稱是系統。
+- **Windows NT 適用：** 16 位元 Windows 系統目錄中。 取得此目錄中，路徑的 Win32 函式，但它會搜尋。 這個目錄的名稱是系統。
 
 - Windows 目錄中。
 
@@ -715,7 +715,7 @@ MFC 程式庫會自動為您註冊多個標準視窗類別。 如果您要註冊
 
 如果以相同參數對多個 CWnd 衍生類別呼叫 `AfxRegisterWndClass`，除了取得每個類別的獨立視窗類別之外，每個類別還會共用相同的視窗類別。 如果使用 CS_CLASSDC 類別樣式，這可能會造成問題。 而不是多個 CS_CLASSDC 視窗類別，您得到一個 CS_CLASSDC 視窗類別，並使用該類別共用相同的 DC 的所有 c + + 視窗。 若要避免這個問題，請呼叫[AfxRegisterClass](#afxregisterclass)註冊類別。
 
-請參閱技術附註[TN001： 視窗類別註冊](../../mfc/tn001-window-class-registration.md)如需有關視窗類別註冊和`AfxRegisterWndClass`函式。
+請參閱技術提示[TN001:視窗類別註冊](../../mfc/tn001-window-class-registration.md)如需有關視窗類別註冊和`AfxRegisterWndClass`函式。
 
 ### <a name="example"></a>範例
 
@@ -802,7 +802,7 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 ### <a name="parameters"></a>參數
 
 *lpwsaData*<br/>
-指標[WSADATA](../../mfc/reference/wsadata-structure.md)結構。 如果*lpwsaData*不等於 null 值，然後的地址`WSADATA`結構的呼叫所填滿`WSAStartup`。 此函式也可確保`WSACleanup`應用程式終止之前，您會呼叫。
+指標[WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata)結構。 如果*lpwsaData*不等於 null 值，然後的地址`WSADATA`結構的呼叫所填滿`WSAStartup`。 此函式也可確保`WSACleanup`應用程式終止之前，您會呼叫。
 
 ### <a name="return-value"></a>傳回值
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 3ec5b734b23a27522fe430d24d2a65eebcca3dd3
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 9a06f3bd8a8c5646f384c3f788518078b121bfe1
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694721"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178131"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl 類別
 
@@ -111,7 +111,7 @@ virtual BOOL Create(
 指定熱鍵控制項的樣式。 適用於任何控制項樣式的組合。 請參閱[常見的控制項樣式](/windows/desktop/Controls/common-control-styles)Windows sdk for 的詳細資訊。
 
 *rect*<br/>
-指定熱鍵控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](../../mfc/reference/rect-structure1.md)。
+指定熱鍵控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)。
 
 *pParentWnd*<br/>
 指定熱鍵控制項的父視窗，通常[CDialog](../../mfc/reference/cdialog-class.md)。 它必須不是 NULL。

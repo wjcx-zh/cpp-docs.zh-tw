@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 0f6c41b3675251df6b07e44003215fa67fb7e795
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 9c2b393354f65195e0d0060a08b83e321e3d5b1d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694188"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178417"
 ---
 # <a name="cwinthread-class"></a>CWinThread 類別
 
@@ -126,7 +126,7 @@ class CWinThread : public CCmdTarget
 
 而不是呼叫`AfxBeginThread`，您可以建構`CWinThread`-衍生物件，然後再呼叫`CreateThread`。 如果您想要重複使用這個兩階段建構方法相當實用`CWinThread`後續建立與終止的執行緒執行之間的物件。
 
-如需詳細資訊`CWinThread`，請參閱文章[多執行緒 c + + 和 MFC](../../parallel/multithreading-with-cpp-and-mfc.md)，[多執行緒： 建立使用者介面執行緒](../../parallel/multithreading-creating-user-interface-threads.md)，[多執行緒： 建立背景工作角色執行緒](../../parallel/multithreading-creating-worker-threads.md)，並[多執行緒： 如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
+如需詳細資訊`CWinThread`，請參閱文章[多執行緒 c + + 和 MFC](../../parallel/multithreading-with-cpp-and-mfc.md)，[多執行緒：建立使用者介面執行緒](../../parallel/multithreading-creating-user-interface-threads.md)，[多執行緒：建立背景工作執行緒](../../parallel/multithreading-creating-worker-threads.md)，和[多執行緒：如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -458,7 +458,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>參數
 
 *pMsg*<br/>
-指向[MSG 結構](../../mfc/reference/msg-structure1.md)包含要處理的訊息。
+指向[MSG 結構](/windows/desktop/api/winuser/ns-winuser-tagmsg)包含要處理的訊息。
 
 ### <a name="return-value"></a>傳回值
 
@@ -484,7 +484,7 @@ virtual BOOL ProcessMessageFilter(
 指定攔截程式碼。 此成員函式會使用程式碼來判斷如何處理*lpMsg。*
 
 *lpMsg*<br/>
-Windows 的指標[MSG 結構](../../mfc/reference/msg-structure1.md)。
+Windows 的指標[MSG 結構](/windows/desktop/api/winuser/ns-winuser-tagmsg)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -512,7 +512,7 @@ virtual LRESULT ProcessWndProcException(
 若要處理的例外狀況的點。
 
 *pMsg*<br/>
-指向[MSG 結構](../../mfc/reference/msg-structure1.md)包含導致擲回例外狀況架構的 windows 訊息的相關資訊。
+指向[MSG 結構](/windows/desktop/api/winuser/ns-winuser-tagmsg)包含導致擲回例外狀況架構的 windows 訊息的相關資訊。
 
 ### <a name="return-value"></a>傳回值
 

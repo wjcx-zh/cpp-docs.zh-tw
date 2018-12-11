@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: 879f7d6eb4887dfebcc9b2be393b60da4942a351
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9eac0f7efdacc6181d8aaa15398f4d7365c0edd3
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614918"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178495"
 ---
 # <a name="cdialog-class"></a>CDialog 類別
 
@@ -405,7 +405,7 @@ void MapDialogRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)協調要轉換的物件，其中包含對話方塊。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)協調要轉換的物件，其中包含對話方塊。
 
 ### <a name="remarks"></a>備註
 

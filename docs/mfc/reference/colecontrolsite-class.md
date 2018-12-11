@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: c9aa5b57b2610dbe0528d99d1c8ad996e1fc4a60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26d0f5e875c4f3982705a2cf571b15cd5bfac985
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437800"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178913"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite 類別
 
@@ -444,7 +444,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 ### <a name="parameters"></a>參數
 
 *bEnable*<br/>
-指定是否要啟用或停用視窗： 如果視窗輸入被啟用，否則為 FALSE，則為 TRUE。
+指定是否要啟用或停用視窗：如果視窗輸入被啟用，否則為 FALSE，則為 TRUE。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1062,7 +1062,7 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
 ### <a name="parameters"></a>參數
 
 *lpmsg*<br/>
-指標[MSG 結構](../../mfc/reference/msg-structure1.md)。 此結構中包含 Windows 訊息觸發`SetFocus`要求在目前的控制站所包含的控制項。
+指標[MSG 結構](/windows/desktop/api/winuser/ns-winuser-tagmsg)。 此結構中包含 Windows 訊息觸發`SetFocus`要求在目前的控制站所包含的控制項。
 
 ### <a name="return-value"></a>傳回值
 

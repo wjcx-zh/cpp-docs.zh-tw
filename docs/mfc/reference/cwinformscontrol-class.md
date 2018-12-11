@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: c27bcfa88ec5ba8b330a62f6ecfbad7e10a54d6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8728c876badcf6648740cc842a1f289789bf0f4
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547481"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178235"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl 類別
 
@@ -111,10 +111,10 @@ inline BOOL CreateManagedControl(
 要建立之控制項的資料型別。 必須是[型別](https://msdn.microsoft.com/library/system.type)資料型別。
 
 *cheaderctrl:: Create*<br/>
-要套用至控制項的視窗樣式。 指定的組合[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 目前支援下列樣式： WS_TABSTOP、 WS_VISIBLE、 WS_DISABLED 和 WS_GROUP。
+要套用至控制項的視窗樣式。 指定的組合[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 目前支援下列樣式：WS_TABSTOP、 WS_VISIBLE、 WS_DISABLED 和 WS_GROUP。
 
 *rect*<br/>
-A [RECT 結構](../../mfc/reference/rect-structure1.md)定義控制項的左上角和右下角的座標 （第一個多載只）。
+A [RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)定義控制項的左上角和右下角的座標 （第一個多載只）。
 
 *nPlaceHolderID*<br/>
 靜態位置持有者控制項的控制代碼會放在資源編輯器中。 新建立的 Windows Form 控制項取代靜態控制項，並假設其位置、 疊置順序和樣式 （第二個多載只）。

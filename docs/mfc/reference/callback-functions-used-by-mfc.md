@@ -9,12 +9,12 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: 17078bd9d916aac2676180f8854d93a4de92aa4a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: acb7b6c677d03ef1320e24373671a7577c2ccda8
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555606"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178430"
 ---
 # <a name="callback-functions-used-by-mfc"></a>MFC 使用的回呼函式
 
@@ -45,7 +45,7 @@ int CALLBACK EXPORT ObjectFunc(
 ### <a name="parameters"></a>參數
 
 *lpszLogObject*<br/>
-指向[LOGPEN](../../mfc/reference/logpen-structure.md)或是[LOGBRUSH](../../mfc/reference/logbrush-structure.md)資料結構，包含物件的邏輯屬性相關資訊。
+指向[LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen)或是[LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)資料結構，包含物件的邏輯屬性相關資訊。
 
 *lpData*<br/>
 指向傳遞至 `EnumObjects` 函式的應用程式所提供的資料。

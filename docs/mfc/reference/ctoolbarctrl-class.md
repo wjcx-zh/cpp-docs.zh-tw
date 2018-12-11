@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: d2214af96f3eba7d1b1d3c8e52f0c82873b982d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e2df5117f6cbb96c69f54fe9e21f85b45218d6d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462997"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178976"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl 類別
 
@@ -1106,7 +1106,7 @@ BOOL GetMaxSize(LPSIZE pSize) const;
 ### <a name="parameters"></a>參數
 
 *pSize*<br/>
-指標[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構會接收項目的大小。
+指標[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構會接收項目的大小。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1247,7 +1247,7 @@ int GetState(int nID) const;
 
 ### <a name="remarks"></a>備註
 
-此函式是特別有用，如果您想要擷取一個以上的按鈕狀態。 若要只擷取一種狀態，請使用下列成員函式的其中一個： [IsButtonEnabled](#isbuttonenabled)， [IsButtonChecked](#isbuttonchecked)， [IsButtonPressed](#isbuttonpressed)， [IsButtonHidden](#isbuttonhidden)，或[IsButtonIndeterminate](#isbuttonindeterminate)。 不過，`GetState`成員函式是唯一的方法，可偵測 TBSTATE_WRAP 按鈕狀態。
+此函式是特別有用，如果您想要擷取一個以上的按鈕狀態。 若要只擷取一種狀態，請使用下列成員函式的其中一個：[IsButtonEnabled](#isbuttonenabled)， [IsButtonChecked](#isbuttonchecked)， [IsButtonPressed](#isbuttonpressed)， [IsButtonHidden](#isbuttonhidden)，或[IsButtonIndeterminate](#isbuttonindeterminate)。 不過，`GetState`成員函式是唯一的方法，可偵測 TBSTATE_WRAP 按鈕狀態。
 
 ##  <a name="getstring"></a>  CToolBarCtrl::GetString
 
@@ -2335,7 +2335,7 @@ BOOL SetState(
 
 ### <a name="remarks"></a>備註
 
-此函式是特別有用，如果您想要設定一個以上的按鈕狀態。 若要只設定一個狀態，請使用下列成員函式的其中一個： [EnableButton](#enablebutton)， [CheckButton](#checkbutton)， [HideButton](#hidebutton)，[未定](#indeterminate)，或是[PressButton](#pressbutton)。
+此函式是特別有用，如果您想要設定一個以上的按鈕狀態。 若要只設定一個狀態，請使用下列成員函式的其中一個：[EnableButton](#enablebutton)， [CheckButton](#checkbutton)， [HideButton](#hidebutton)，[不定](#indeterminate)，或[PressButton](#pressbutton)。
 
 ##  <a name="setstyle"></a>  CToolBarCtrl::SetStyle
 

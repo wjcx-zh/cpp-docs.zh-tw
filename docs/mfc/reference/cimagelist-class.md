@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: d311c064d9b91967a60823fc3fd0e43f22a119c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bcf815fce4123ca1014e1679fd810c1ce321be4
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500759"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178586"
 ---
 # <a name="cimagelist-class"></a>CImageList 類別
 
@@ -694,7 +694,7 @@ BOOL DrawIndirect(
 A[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)結構，包含 x 和 y 座標會繪製影像的位置。
 
 *sz*<br/>
-A[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構表示要繪製影像的大小。
+A[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構表示要繪製影像的大小。
 
 *ptOrigin*<br/>
 A[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)結構，包含 x 和 y 座標指定相對於映像本身繪圖作業的左上的角。 不會繪製像素的影像左側的 x 座標和 y 軸上方。

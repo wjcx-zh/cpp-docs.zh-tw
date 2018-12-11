@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 06c68d02433ce53c2b27167a985fc5854ca49700
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0c8944846e249e4f752183b057bf8d2857022ab5
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176909"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179054"
 ---
 # <a name="cdc-class"></a>CDC 類別
 
@@ -913,7 +913,7 @@ BOOL Arc(
 指定的週框 （以邏輯單位表示）。 您可以將任一個 LPRECT 或[CRect](../../atl-mfc-shared/reference/crect-class.md)此參數的物件。
 
 *ptStart*<br/>
-指定定義弧形的點 x 和 y 座標的起始點 （以邏輯單位表示）。 此點沒有落在弧線。您可以傳遞[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)此參數的物件。
+指定定義弧形的點 x 和 y 座標的起始點 （以邏輯單位表示）。 此點沒有落在弧線。您可以傳遞[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)此參數的物件。
 
 *ptEnd*<br/>
 指定定義弧線的終點 （以邏輯單位表示） 的點 x 和 y 座標。 此點沒有落在弧線。您可以傳遞`POINT`結構或`CPoint`此參數的物件。
@@ -980,10 +980,10 @@ BOOL ArcTo(
 指定定義弧線的端點 （以邏輯單位表示） 的點的 y 座標。 此點沒有落在弧線。
 
 *lpRect*<br/>
-指定的週框 （以邏輯單位表示）。 您可以傳遞指標給[RECT](../../mfc/reference/rect-structure1.md)資料結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)此參數的物件。
+指定的週框 （以邏輯單位表示）。 您可以傳遞指標給[RECT](/windows/desktop/api/windef/ns-windef-tagrect)資料結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)此參數的物件。
 
 *ptStart*<br/>
-指定定義弧形的點 x 和 y 座標的起始點 （以邏輯單位表示）。 此點沒有落在弧線。您可以傳遞[點](../../mfc/reference/point-structure1.md)資料結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)此參數的物件。
+指定定義弧形的點 x 和 y 座標的起始點 （以邏輯單位表示）。 此點沒有落在弧線。您可以傳遞[點](/windows/desktop/api/windef/ns-windef-tagpoint)資料結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)此參數的物件。
 
 *ptEnd*<br/>
 指定定義弧線的終點 （以邏輯單位表示） 的點 x 和 y 座標。 此點沒有落在弧線。您可以傳遞`POINT`資料結構或`CPoint`此參數的物件。
@@ -1169,7 +1169,7 @@ BOOL Chord(
 指定定義弦點 x 和 y 座標的起始點 （以邏輯單位表示）。 此點沒有落在弦。 您可以傳遞`POINT`結構或`CPoint`此參數的物件。
 
 *ptEnd*<br/>
-指定定義的同步選取 （以邏輯單位表示） 的結束點的點 x 和 y 座標。 此點沒有落在弦。 您可以傳遞[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)此參數的物件。
+指定定義的同步選取 （以邏輯單位表示） 的結束點的點 x 和 y 座標。 此點沒有落在弦。 您可以傳遞[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)此參數的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1361,7 +1361,7 @@ void DPtoHIMETRIC(LPSIZE lpSize) const;
 ### <a name="parameters"></a>參數
 
 *lpSize*<br/>
-指向[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
+指向[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
 
 ### <a name="remarks"></a>備註
 
@@ -1383,16 +1383,16 @@ void DPtoLP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>參數
 
 *lpPoints*<br/>
-指向陣列[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
+指向陣列[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
 
 *nCount*<br/>
 陣列中的點數目。
 
 *lpRect*<br/>
-指向[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件。 這個參數使用於簡單的情況下，將一個矩形從裝置點轉換為邏輯的點。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件。 這個參數使用於簡單的情況下，將一個矩形從裝置點轉換為邏輯的點。
 
 *lpSize*<br/>
-指向[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
+指向[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
 
 ### <a name="remarks"></a>備註
 
@@ -1420,7 +1420,7 @@ void Draw3dRect(
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指定的週框 （以邏輯單位表示）。 您可以傳遞指標給[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)此參數的物件。
+指定的週框 （以邏輯單位表示）。 您可以傳遞指標給[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)此參數的物件。
 
 *clrTopLeft*<br/>
 指定線上方和左側 3d 矩形的色彩。
@@ -1465,13 +1465,13 @@ void DrawDragRect(
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)指定矩形的邏輯座標的物件 — 在此情況下，重新繪製的矩形的結束位置。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)指定矩形的邏輯座標的物件 — 在此情況下，重新繪製的矩形的結束位置。
 
 *size*<br/>
 會指定從左上角的外框左上角的矩形內部的框線 （也就是框線的粗細）。
 
 *lpRectLast*<br/>
-指向[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)指定矩形的位置的邏輯座標的物件 — 在此情況下，重新繪製的矩形的原始位置。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)指定矩形的位置的邏輯座標的物件 — 在此情況下，重新繪製的矩形的原始位置。
 
 *sizeLast*<br/>
 會指定從左上角的外框左上角的原始重新繪製的矩形內部的框線 （也就是框線的粗細）。
@@ -1555,7 +1555,7 @@ void DrawFocusRect(LPCRECT lpRect);
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，指定要繪製的矩形的邏輯座標。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，指定要繪製的矩形的邏輯座標。
 
 ### <a name="remarks"></a>備註
 
@@ -1675,7 +1675,7 @@ BOOL DrawIcon(
 識別要繪製的圖示的控制代碼。
 
 *點*<br/>
-指定邏輯 x 和 y 座標的左上角的圖示。 您可以傳遞[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)此參數的物件。
+指定邏輯 x 和 y 座標的左上角的圖示。 您可以傳遞[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)此參數的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1833,7 +1833,7 @@ int DrawText(
 在字串中指定字元的數目。 如果*nCount*為-1，然後*lpszString*皆必須以 null 終止的字串長度指標和`DrawText`自動計算的字元計數。
 
 *lpRect*<br/>
-指向[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，其中包含要格式化文字的矩形 （在邏輯座標中）。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，其中包含要格式化文字的矩形 （在邏輯座標中）。
 
 *str*<br/>
 A [CString](../../atl-mfc-shared/reference/cstringt-class.md)物件，其中包含要繪製指定的字元。
@@ -1890,7 +1890,7 @@ int DrawTextEx(
 在字串中指定字元的數目。 如果*nCount*為-1，然後*lpszString*皆必須以 null 終止的字串長度指標和`DrawText`自動計算的字元計數。
 
 *lpRect*<br/>
-指向[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，其中包含要格式化文字的矩形 （在邏輯座標中）。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，其中包含要格式化文字的矩形 （在邏輯座標中）。
 
 *str*<br/>
 A [CString](../../atl-mfc-shared/reference/cstringt-class.md)物件，其中包含要繪製指定的字元。
@@ -2301,7 +2301,7 @@ BOOL ExtTextOut(
 - ETO_OPAQUE 指定，目前的背景色彩填滿矩形。 (您可以設定及查詢與目前的背景顏色[SetBkColor](#setbkcolor)並[GetBkColor](#getbkcolor)成員函式。)
 
 *lpRect*<br/>
-指向[RECT](../../mfc/reference/rect-structure1.md)結構，決定矩形的維度。 這個參數可以是 NULL。 您也可以傳遞[CRect](../../atl-mfc-shared/reference/crect-class.md)此參數的物件。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構，決定矩形的維度。 這個參數可以是 NULL。 您也可以傳遞[CRect](../../atl-mfc-shared/reference/crect-class.md)此參數的物件。
 
 *lpszString*<br/>
 指向要繪製指定的字元字串。 您也可以傳遞[CString](../../atl-mfc-shared/reference/cstringt-class.md)此參數的物件。
@@ -2354,7 +2354,7 @@ void FillRect(
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向[RECT](../../mfc/reference/rect-structure1.md)結構，其中包含要填滿的矩形的邏輯座標。 您也可以傳遞[CRect](../../atl-mfc-shared/reference/crect-class.md)此參數的物件。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構，其中包含要填滿的矩形的邏輯座標。 您也可以傳遞[CRect](../../atl-mfc-shared/reference/crect-class.md)此參數的物件。
 
 *pBrush*<br/>
 識別用來填滿矩形的筆刷。
@@ -2419,7 +2419,7 @@ void FillSolidRect(
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指定的週框 （以邏輯單位表示）。 您可以傳遞指標給[RECT](../../mfc/reference/rect-structure1.md)資料結構或`CRect`此參數的物件。
+指定的週框 （以邏輯單位表示）。 您可以傳遞指標給[RECT](/windows/desktop/api/windef/ns-windef-tagrect)資料結構或`CRect`此參數的物件。
 
 *clr*指定要用來填滿矩形的色彩。
 
@@ -2501,7 +2501,7 @@ void FrameRect(
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)包含矩形的左上角和右下角邊角的邏輯座標的物件。 您也可以傳遞`CRect`此參數的物件。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)包含矩形的左上角和右下角邊角的邏輯座標的物件。 您也可以傳遞`CRect`此參數的物件。
 
 *pBrush*<br/>
 識別要用於框架矩形的筆刷。
@@ -2767,10 +2767,10 @@ BOOL GetCharABCWidths(
 從目前的字型字元寬度為其傳回的字元範圍中指定的最後一個字元。
 
 *lpabc*<br/>
-指向陣列[ABC](../../mfc/reference/abc-structure.md)接收字元寬度，當函式傳回的結構。 這個陣列必須包含至少會為許多`ABC`結構中所指定的範圍有字元*nFirstChar*並*nLastChar*參數。
+指向陣列[ABC](/windows/desktop/api/wingdi/ns-wingdi-_abc)接收字元寬度，當函式傳回的結構。 這個陣列必須包含至少會為許多`ABC`結構中所指定的範圍有字元*nFirstChar*並*nLastChar*參數。
 
 *lpABCF*<br/>
-指向陣列的一個應用程式所提供的緩衝區[ABCFLOAT](../../mfc/reference/abcfloat-structure.md)接收字元寬度，當函式傳回的結構。 此函數所傳回的寬度是 IEEE 浮點格式。
+指向陣列的一個應用程式所提供的緩衝區[ABCFLOAT](/windows/desktop/api/wingdi/ns-wingdi-_abcfloat)接收字元寬度，當函式傳回的結構。 此函數所傳回的寬度是 IEEE 浮點格式。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2911,7 +2911,7 @@ virtual int GetClipBox(LPRECT lpRect) const;
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)接收矩形維度的物件。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)接收矩形維度的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2940,7 +2940,7 @@ BOOL GetColorAdjustment(LPCOLORADJUSTMENT lpColorAdjust) const;
 ### <a name="parameters"></a>參數
 
 *lpColorAdjust*<br/>
-指向[COLORADJUSTMENT](../../mfc/reference/coloradjustment-structure.md)接收色彩調整值的資料結構。
+指向[COLORADJUSTMENT](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment)接收色彩調整值的資料結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3513,7 +3513,7 @@ int GetPath(
 ### <a name="parameters"></a>參數
 
 *lpPoints*<br/>
-指向陣列[點](../../mfc/reference/point-structure1.md)資料結構或`CPoint`位於其中的線條端點和曲線控制點的物件。
+指向陣列[點](/windows/desktop/api/windef/ns-windef-tagpoint)資料結構或`CPoint`位於其中的線條端點和曲線控制點的物件。
 
 *lpTypes*<br/>
 指向陣列的頂點類型的放置位置的位元組。 值可以是下列其中一項：
@@ -3531,7 +3531,7 @@ PT_BEZIERTO 類型一定要進行中的三個集合。 立即前的路徑中的�
 - PT_CLOSEFIGURE 指定對應的行之後，會自動關閉圖或繪製曲線。 此圖會關閉從直線或曲線結束點繪製一條線，對應到最後一個 PT_MOVETO 的點。
 
 *nCount*<br/>
-指定的總數[點](../../mfc/reference/point-structure1.md)資料結構，可能會放置於*lpPoints*陣列。 此值必須是相同的位元組數目，顯示可能會放置於*lpTypes*陣列。
+指定的總數[點](/windows/desktop/api/windef/ns-windef-tagpoint)資料結構，可能會放置於*lpPoints*陣列。 此值必須是相同的位元組數目，顯示可能會放置於*lpTypes*陣列。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3578,7 +3578,7 @@ COLORREF GetPixel(POINT point) const;
 
 並非所有的裝置皆支援 `GetPixel` 函式。 如需詳細資訊，請參閱底下的 RC_BITBLT 點陣功能[GetDeviceCaps](#getdevicecaps)成員函式。
 
-`GetPixel`成員函式有兩種形式。 第一個採用兩個座標的值;第二個會接受[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
+`GetPixel`成員函式有兩種形式。 第一個採用兩個座標的值;第二個會接受[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
 
 ##  <a name="getpolyfillmode"></a>  CDC::GetPolyFillMode
 
@@ -3841,7 +3841,7 @@ BOOL GetTextExtentExPointI(
 接收部分圖像 （glyph） 範圍的整數的陣列指標。 陣列中的每個項目提供的距離，以邏輯單位，表示圖像 （glyph） 索引陣列的開頭與符合所指定的空間中的一個字符的之間*nMaxExtent*。 雖然這個陣列應該有至少多個項目，為所指定的字符索引*cgi*，此函式會填滿範圍只會針對多個字符索引時所指定的陣列*lpnFit*。 如果*lpnDx*是 NULL，函式不會計算部分的字串寬度。
 
 *lpSize*<br/>
-指標[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)以邏輯單位表示收到的圖像 （glyph） 索引陣列維度的結構。 此值不能是 NULL。
+指標[大小](/windows/desktop/api/windef/ns-windef-tagsize)以邏輯單位表示收到的圖像 （glyph） 索引陣列維度的結構。 此值不能是 NULL。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3871,7 +3871,7 @@ BOOL GetTextExtentPointI(
 所指陣列中指定的字符數目*pgiIn*。
 
 *lpSize*<br/>
-指標[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)以邏輯單位表示收到的圖像 （glyph） 索引陣列維度的結構。 此值不能是 NULL。
+指標[大小](/windows/desktop/api/windef/ns-windef-tagsize)以邏輯單位表示收到的圖像 （glyph） 索引陣列維度的結構。 此值不能是 NULL。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4130,7 +4130,7 @@ void HIMETRICtoDP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>參數
 
 *lpSize*<br/>
-指向[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
+指向[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
 
 ### <a name="remarks"></a>備註
 
@@ -4147,7 +4147,7 @@ void HIMETRICtoLP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>參數
 
 *lpSize*<br/>
-指向[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
+指向[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
 
 ### <a name="remarks"></a>備註
 
@@ -4309,16 +4309,16 @@ void LPtoDP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>參數
 
 *lpPoints*<br/>
-指向陣列的點。 陣列中的每個點都[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
+指向陣列的點。 陣列中的每個點都[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
 
 *nCount*<br/>
 陣列中的點數目。
 
 *lpRect*<br/>
-指向[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件。 這個參數會用於對應裝置單位從邏輯的矩形的常見案例。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件。 這個參數會用於對應裝置單位從邏輯的矩形的常見案例。
 
 *lpSize*<br/>
-指向[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
+指向[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
 
 ### <a name="remarks"></a>備註
 
@@ -4713,7 +4713,7 @@ BOOL Pie(
 指定週框矩形。 您可以傳遞`CRect`物件的指標或`RECT`結構為此參數。
 
 *ptStart*<br/>
-指定弧線的起點。此點沒有落在弧線。您可以傳遞[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)此參數的物件。
+指定弧線的起點。此點沒有落在弧線。您可以傳遞[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)此參數的物件。
 
 *ptEnd*<br/>
 指定弧線的端點。此點沒有落在弧線。您可以傳遞`POINT`結構或`CPoint`此參數的物件。
@@ -4850,7 +4850,7 @@ BOOL PolyBezier(
 ### <a name="parameters"></a>參數
 
 *lpPoints*<br/>
-指向陣列[點](../../mfc/reference/point-structure1.md)資料結構，包含端點及控制 spline(s) 的點。
+指向陣列[點](/windows/desktop/api/windef/ns-windef-tagpoint)資料結構，包含端點及控制 spline(s) 的點。
 
 *nCount*<br/>
 指定的資料點數目*lpPoints*陣列。 此值必須是其中一個要繪製曲線的數目超過三次，因為每個 Bzier 曲線需要兩個控制點和結束點，以及初始的曲線，所以需要額外的起始點。
@@ -4878,7 +4878,7 @@ BOOL PolyBezierTo(
 ### <a name="parameters"></a>參數
 
 *lpPoints*<br/>
-指向陣列[點](../../mfc/reference/point-structure1.md)包含端點和控制項的資料結構的點。
+指向陣列[點](/windows/desktop/api/windef/ns-windef-tagpoint)包含端點和控制項的資料結構的點。
 
 *nCount*<br/>
 指定的資料點數目*lpPoints*陣列。 此值必須是三次要繪製曲線的數目，因為每個 Bzier 曲線需要兩個控制點和結束點。
@@ -4909,7 +4909,7 @@ BOOL PolyDraw(
 ### <a name="parameters"></a>參數
 
 *lpPoints*<br/>
-指向陣列[點](../../mfc/reference/point-structure1.md)包含每個端點的資料結構行區段和端點，並控制每個 Bzier 曲線的點。
+指向陣列[點](/windows/desktop/api/windef/ns-windef-tagpoint)包含每個端點的資料結構行區段和端點，並控制每個 Bzier 曲線的點。
 
 *lpTypes*<br/>
 陣列，指定每個中的點會指向*lpPoints*陣列用。 值可以是下列其中一項：
@@ -5016,7 +5016,7 @@ BOOL PolylineTo(
 ### <a name="parameters"></a>參數
 
 *lpPoints*<br/>
-指向陣列[點](../../mfc/reference/point-structure1.md)包含線條的頂點的資料結構。
+指向陣列[點](/windows/desktop/api/windef/ns-windef-tagpoint)包含線條的頂點的資料結構。
 
 *nCount*<br/>
 陣列中指定點的數目。
@@ -5932,7 +5932,7 @@ BOOL SetColorAdjustment(const COLORADJUSTMENT* lpColorAdjust);
 ### <a name="parameters"></a>參數
 
 *lpColorAdjust*<br/>
-指向[COLORADJUSTMENT](../../mfc/reference/coloradjustment-structure.md)包含色彩調整值的資料結構。
+指向[COLORADJUSTMENT](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment)包含色彩調整值的資料結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -6219,7 +6219,7 @@ BOOL SetPixelV(
 指定要用來繪製點的色彩。
 
 *點*<br/>
-指定邏輯 x 和 y 座標點設定。 您可以傳遞[點](../../mfc/reference/point-structure1.md)資料結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)此參數的物件。
+指定邏輯 x 和 y 座標點設定。 您可以傳遞[點](/windows/desktop/api/windef/ns-windef-tagpoint)資料結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)此參數的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -6328,10 +6328,10 @@ int SetStretchBltMode(int nStretchMode);
 |COLORONCOLOR|刪除的像素為單位。 此模式會刪除所有已排除像素行，但不會嘗試保留他們的資訊。|
 |半色調|會從來源矩形的像素對應到目的地矩形中的像素的區塊中。 透過像素為單位的目標區塊的平均色彩基本原則而論來源像素的色彩。|
 ||設定自動縮放模式半色調之後, 應用程式必須呼叫 Win32 函式[SetBrushOrgEx](/windows/desktop/api/wingdi/nf-wingdi-setbrushorgex)設定筆刷的原點。 如果它無法這麼做，就會發生筆刷對齊錯誤。|
-|STRETCH_ANDSCANS|**Windows 95/98**： 相同 BLACKONWHITE|
-|STRETCH_DELETESCANS|**Windows 95/98**： 相同 COLORONCOLOR|
-|STRETCH_HALFTONE|**Windows 95/98**： 相同半色調。|
-|STRETCH_ORSCANS|**Windows 95/98**： 相同 WHITEONBLACK|
+|STRETCH_ANDSCANS|**Windows 95/98**:BLACKONWHITE 相同|
+|STRETCH_DELETESCANS|**Windows 95/98**:COLORONCOLOR 相同|
+|STRETCH_HALFTONE|**Windows 95/98**:與 半色調相同。|
+|STRETCH_ORSCANS|**Windows 95/98**:WHITEONBLACK 相同|
 |WHITEONBLACK|執行布林值 OR 運算，用於已排除的和現有的像素的色彩值。 如果點陣圖是單色點陣圖，這個模式會保留白色像素，但會犧牲黑色像素。|
 
 ### <a name="return-value"></a>傳回值

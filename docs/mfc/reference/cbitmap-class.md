@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 295f61ed120e957bc0d5ec1746e7d3bdfbb6d001
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6722011bf343a391fcc7180558eead5c039afc59
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624597"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178170"
 ---
 # <a name="cbitmap-class"></a>CBitmap 類別
 
@@ -155,7 +155,7 @@ BOOL CreateBitmap(
 
 當您完成使用 `CBitmap` 函式所建立的 `CreateBitmap` 物件時，請先選取點陣圖並移出裝置內容，再刪除 `CBitmap` 物件。
 
-如需詳細資訊，請參閱說明`bmBits`欄位中`BITMAP`結構。 [CBitmap::CreateBitmapIndirect](../../mfc/reference/bitmap-structure.md) 成員函式下提供 [BITMAP](#createbitmapindirect) 結構的說明。
+如需詳細資訊，請參閱說明`bmBits`欄位中`BITMAP`結構。 [CBitmap::CreateBitmapIndirect](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) 成員函式下提供 [BITMAP](#createbitmapindirect) 結構的說明。
 
 ##  <a name="createbitmapindirect"></a>  Createbitmapindirect
 
@@ -168,7 +168,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="parameters"></a>參數
 
 *lpBitmap*<br/>
-指向[點陣圖](../../mfc/reference/bitmap-structure.md)包含點陣圖的相關資訊的結構。
+指向[點陣圖](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)包含點陣圖的相關資訊的結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -286,7 +286,7 @@ int GetBitmap(BITMAP* pBitMap);
 ### <a name="parameters"></a>參數
 
 *pBitMap*<br/>
-指標[點陣圖結構](../../mfc/reference/bitmap-structure.md)會收到的映像屬性的結構。 這個參數必須不是 NULL。
+指標[點陣圖](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)會收到的映像屬性的結構。 這個參數必須不是 NULL。
 
 ### <a name="return-value"></a>傳回值
 

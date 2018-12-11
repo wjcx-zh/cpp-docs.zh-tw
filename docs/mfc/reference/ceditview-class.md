@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: e0095f2c490ebde10d20ec0705b1297b976b76b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e853a770dd1f98b1e7f06afd814962f3b3805ceb
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528657"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177871"
 ---
 # <a name="ceditview-class"></a>CEditView 類別
 
@@ -110,7 +110,7 @@ class CEditView : public CCtrlView
 
 建立類型的物件`CEditView`如果您想使用上面所列的新增功能的 [編輯] 視窗，或如果您想要簡單的文字編輯器功能。 A`CEditView`物件可以佔用整個視窗的工作區。 衍生您自己的類別，從`CEditView`新增或修改的基本功能，或宣告可以加入至文件範本的類別。
 
-類別的預設實作`CEditView`處理下列命令： ID_EDIT_SELECT_ALL、 ID_EDIT_FIND、 ID_EDIT_REPLACE、 ID_EDIT_REPEAT 和 ID_FILE_PRINT。
+類別的預設實作`CEditView`處理下列命令：ID_EDIT_SELECT_ALL、 ID_EDIT_FIND、 ID_EDIT_REPLACE、 ID_EDIT_REPEAT 和 ID_FILE_PRINT。
 
 預設字元限制`CEditView`是 (1024年\*1024年-1 = 1048575)。 這可以藉由呼叫基礎編輯控制項的 EM_LIMITTEXT 函式變更。 不過，限制會根據作業系統而不同，而且類型的編輯控制項 （單一或多行）。 如需有關這些限制的詳細資訊，請參閱 < [EM_LIMITTEXT](/windows/desktop/Controls/em-limittext)。
 
@@ -401,7 +401,7 @@ UINT PrintInsideRect(
 印表機裝置內容指標。
 
 *rectLayout*<br/>
-若要參考[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](../../mfc/reference/rect-structure1.md)指定呈現之文字的矩形。
+若要參考[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)指定呈現之文字的矩形。
 
 *nIndexStart*<br/>
 要轉譯的第一個字元的緩衝區內的索引。

@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: c25d79dc1fb201d10e090f512a5a96f649efbcfe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f9afdf18fcaff0d3613b4204d8690f915079e7d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542359"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178937"
 ---
 # <a name="cwinapp-class"></a>CWinApp 類別
 
@@ -347,7 +347,7 @@ class CWinApp : public CWinThread
 
 - [AfxGetAppName](application-information-and-management.md#afxgetappname)取得字串，包含應用程式的名稱的指標。 或者，如果您有一個指向`CWinApp`物件，請使用`m_pszExeName`取得應用程式的名稱。
 
-請參閱[CWinApp： 應用程式類別](../../mfc/cwinapp-the-application-class.md)如需詳細資訊`CWinApp`類別，包括下列概觀：
+請參閱[CWinApp:應用程式類別](../../mfc/cwinapp-the-application-class.md)如需詳細資訊`CWinApp`類別，包括下列概觀：
 
 - `CWinApp`-衍生應用程式精靈所撰寫的程式碼。
 
@@ -1060,7 +1060,7 @@ virtual BOOL InitInstance();
 
 應用程式初始化在概念上分成兩個區段： 一次性的應用程式的初始化完成第一次程式執行時，和執行每個執行個體初始化時間一份程式執行，包括第一次。 架構的實作`WinMain`呼叫此函式。
 
-覆寫`InitInstance`來初始化每個 Windows 底下執行的應用程式的新執行個體。 通常，您會覆寫`InitInstance`來建構您的主視窗物件和設定`CWinThread::m_pMainWnd`指向該視窗的資料成員。 如需有關如何覆寫此成員函式的詳細資訊，請參閱 < [CWinApp： 應用程式類別](../../mfc/cwinapp-the-application-class.md)。
+覆寫`InitInstance`來初始化每個 Windows 底下執行的應用程式的新執行個體。 通常，您會覆寫`InitInstance`來建構您的主視窗物件和設定`CWinThread::m_pMainWnd`指向該視窗的資料成員。 如需有關如何覆寫此成員函式的詳細資訊，請參閱[CWinApp:應用程式類別](../../mfc/cwinapp-the-application-class.md)。
 
 > [!NOTE]
 > MFC 應用程式必須初始化為單一執行緒 apartment (STA)。 如果您呼叫[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)中您`InitInstance`覆寫，請指定 COINIT_APARTMENTTHREADED （而不是 COINIT_MULTITHREADED）。
@@ -1508,7 +1508,7 @@ LPCTSTR m_pszRegistryKey;
 
 一般來說，這個資料成員都會被視為唯讀。
 
-- 值會儲存至登錄機碼。 應用程式設定檔設定的名稱會附加至下列登錄機碼： HKEY_CURRENT_USER/軟體/LocalAppWizard 產生 /。
+- 值會儲存至登錄機碼。 應用程式設定檔設定的名稱會附加至下列登錄機碼：HKEY_CURRENT_USER/軟體/LocalAppWizard 產生 /。
 
 如果您將值指派給`m_pszRegistryKey`，它必須以動態方式配置到堆積上。 `CWinApp`解構函式呼叫**免費**> （) 與這個指標。 您有許多想要使用`_tcsdup`（） 執行階段程式庫函式，進行配置。 此外，釋放記憶體指派新值之前，與目前的指標相關聯。 例如: 
 
@@ -1793,7 +1793,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>參數
 
 *pMsg*<br/>
-指標[MSG](../../mfc/reference/msg-structure1.md)結構，其中包含要處理的訊息。
+指標[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)結構，其中包含要處理的訊息。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1815,7 +1815,7 @@ virtual BOOL ProcessMessageFilter(
 指定攔截程式碼。 此成員函式會使用程式碼來判斷如何處理*lpMsg。*
 
 *lpMsg*<br/>
-Windows 的指標[MSG](../../mfc/reference/msg-structure1.md)結構。
+Windows 的指標[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1886,7 +1886,7 @@ virtual LRESULT ProcessWndProcException(
 無法攔截的例外狀況的指標。
 
 *pMsg*<br/>
-A [MSG](../../mfc/reference/msg-structure1.md)結構，其中包含導致擲回例外狀況架構的 windows 訊息的相關資訊。
+A [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)結構，其中包含導致擲回例外狀況架構的 windows 訊息的相關資訊。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2086,7 +2086,7 @@ BOOL RunEmbedded();
 
 ### <a name="remarks"></a>備註
 
-如果有的話，是從命令列移除的選項。 如需有關內嵌的詳細資訊，請參閱文章[伺服器： 實作伺服器](../../mfc/servers-implementing-a-server.md)。
+如果有的話，是從命令列移除的選項。 如需有關內嵌的詳細資訊，請參閱文章[伺服器：實作伺服器](../../mfc/servers-implementing-a-server.md)。
 
 ##  <a name="saveallmodified"></a>  CWinApp::SaveAllModified
 
@@ -2118,7 +2118,7 @@ void SelectPrinter(
 ### <a name="parameters"></a>參數
 
 *hDevNames*<br/>
-控制代碼[DEVNAMES](../../mfc/reference/devnames-structure.md)識別驅動程式、 裝置及特定印表機的輸出連接埠名稱的結構。
+控制代碼[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)識別驅動程式、 裝置及特定印表機的輸出連接埠名稱的結構。
 
 *hDevMode*<br/>
 控制代碼[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)結構，指定裝置初始化和印表機的環境的相關資訊。
@@ -2168,7 +2168,7 @@ void SetRegistryKey(UINT nIDRegistryKey);
 
 ### <a name="remarks"></a>備註
 
-此函式會將*m_pszRegistryKey*，然後可由`GetProfileInt`， `GetProfileString`， `WriteProfileInt`，和`WriteProfileString`的成員函式`CWinApp`。 如果已呼叫此函式之最近使用 (的 MRU) 檔案的清單也會儲存在登錄中。 登錄機碼通常是公司的名稱。 它會儲存在下列形式的索引鍵： HKEY_CURRENT_USER\Software\\< 公司名稱\>\\< 應用程式名稱\>\\< 區段名稱\>\\< 值名稱\>。
+此函式會將*m_pszRegistryKey*，然後可由`GetProfileInt`， `GetProfileString`， `WriteProfileInt`，和`WriteProfileString`的成員函式`CWinApp`。 如果已呼叫此函式之最近使用 (的 MRU) 檔案的清單也會儲存在登錄中。 登錄機碼通常是公司的名稱。 它會儲存在下列形式的索引鍵：HKEY_CURRENT_USER\Software\\< 公司名稱\>\\< 應用程式名稱\>\\< 區段名稱\>\\< 值名稱\>。
 
 ##  <a name="supportsapplicationrecovery"></a>  CWinApp::SupportsApplicationRecovery
 
@@ -2395,4 +2395,4 @@ void SetAppID(LPCTSTR lpcszAppID);
 
 [CWinThread 類別](../../mfc/reference/cwinthread-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
-[如何：新增重新啟動管理員支援](../../mfc/how-to-add-restart-manager-support.md)
+[操作說明：新增重新啟動管理員支援](../../mfc/how-to-add-restart-manager-support.md)

@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 2eebfe18275aa63ac26c0c898a5d796300860db8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8cfaef2c8b064cb9faa8c0f6bf65a8868eed7cc7
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476601"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178736"
 ---
 # <a name="cricheditview-class"></a>CRichEditView 類別
 
@@ -787,7 +787,7 @@ virtual void OnFindNext(
 要尋找的字串。
 
 *bNext*<br/>
-要搜尋的方向： TRUE 表示關閉;為 FALSE，最多。
+要搜尋的方向：TRUE 表示關閉;為 FALSE，最多。
 
 *bCase*<br/>
 指出搜尋是否區分大小寫。
@@ -933,7 +933,7 @@ virtual void OnReplaceSel(
 要被取代的文字。
 
 *bNext*<br/>
-表示搜尋方向： 關閉，則為 TRUE為 FALSE，最多。
+表示搜尋方向：關閉，則為 TRUE為 FALSE，最多。
 
 *bCase*<br/>
 指出搜尋是否區分大小寫。
@@ -1050,7 +1050,7 @@ long PrintInsideRect(
 輸出區域的裝置內容指標。
 
 *rectLayout*<br/>
-[RECT](../../mfc/reference/rect-structure1.md)或是[CRect](../../atl-mfc-shared/reference/crect-class.md)定義輸出區域。
+[RECT](/windows/desktop/api/windef/ns-windef-tagrect)或是[CRect](../../atl-mfc-shared/reference/crect-class.md)定義輸出區域。
 
 *nIndexStart*<br/>
 要格式化的第一個字元的以零為起始索引。

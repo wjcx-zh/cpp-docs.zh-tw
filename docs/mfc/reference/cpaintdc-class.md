@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CPaintDC [MFC], m_ps
 - CPaintDC [MFC], m_hWnd
 ms.assetid: 7e245baa-bf9b-403e-a637-7218adf28fab
-ms.openlocfilehash: 991ea39ccf03cd4f2921a759d3278576c7a1fd92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4e6ded945bac15b6584eadc21d8648f1a0f9ab3
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525741"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178326"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC 類別
 
@@ -41,7 +41,7 @@ class CPaintDC : public CDC
 
 |名稱|描述|
 |----------|-----------------|
-|[CPaintDC::m_ps](#m_ps)|包含[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)用來繪製工作區。|
+|[CPaintDC::m_ps](#m_ps)|包含[PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)用來繪製工作區。|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
@@ -71,7 +71,7 @@ A`CPaintDC`回應時，才會使用物件[WM_PAINT](/windows/desktop/gdi/wm-pain
 
 ##  <a name="cpaintdc"></a>  CPaintDC::CPaintDC
 
-建構`CPaintDC`物件，來繪製，準備應用程式視窗，並將[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)結構[m_ps](#m_ps)成員變數。
+建構`CPaintDC`物件，來繪製，準備應用程式視窗，並將[PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)結構[m_ps](#m_ps)成員變數。
 
 ```
 explicit CPaintDC(CWnd* pWnd);
@@ -108,7 +108,7 @@ HWND m_hWnd;
 
 ##  <a name="m_ps"></a>  CPaintDC::m_ps
 
-`m_ps` 這類型的公用成員變數[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)。
+`m_ps` 這類型的公用成員變數[PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)。
 
 ```
 PAINTSTRUCT m_ps;

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-ms.openlocfilehash: c35d7bf16b851fe9a96bdd896babfa450c726374
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: ee64ca259f2466bb02f7dd650a10dc18f8d8f8a1
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525272"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178950"
 ---
 # <a name="mfc-classes"></a>MFC 類別
 
@@ -1099,7 +1099,7 @@ MFC 實作停駐模型的基本元件。 這個類別的物件儲存兩個停駐
 在控制項中顯示資料庫記錄的檢視。
 
 [CRect 類別](../../atl-mfc-shared/reference/crect-class.md)<br/>
-類似於 Windows [RECT 結構](rect-structure.md)。
+類似於 Windows [RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)。
 
 [CRectTracker 類別](../../mfc/reference/crecttracker-class.md)<br/>
 可讓項目以不同的方式顯示、移動和調整大小。
@@ -1165,7 +1165,7 @@ A [CView 類別](../../mfc/reference/cview-class.md)具有捲動功能。
 封裝由動畫變數的初始速度決定其幅度的正弦曲線速度轉換。
 
 [CSize 類別](../../atl-mfc-shared/reference/csize-class.md)<br/>
-類似於實作相對座標或位置的 Windows [SIZE](https://msdn.microsoft.com/library/windows/desktop/dd145106) 結構。
+類似於實作相對座標或位置的 Windows [SIZE](/windows/desktop/api/windef/ns-windef-tagsize) 結構。
 
 [CSliderCtrl 類別](../../mfc/reference/csliderctrl-class.md)<br/>
 提供 Windows 通用滑桿控制項的功能。

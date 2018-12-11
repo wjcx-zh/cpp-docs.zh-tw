@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 38463d5e7daf86c40cdef429cd80b18598e19025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad9f945a91a96c40afe614240a847a028ba5b5d9
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656088"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178612"
 ---
 # <a name="clistbox-class"></a>CListBox 類別
 
@@ -339,7 +339,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 ### <a name="return-value"></a>傳回值
 
-指出兩個項目中所述的相對位置[COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md)結構。 它可能是下列值之一：
+指出兩個項目中所述的相對位置[COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct)結構。 它可能是下列值之一：
 
 |值|意義|
 |-----------|-------------|
@@ -426,7 +426,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>參數
 
 *lpDeleteItemStruct*<br/>
-Windows 的長指標[DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md)結構，包含已刪除的項目相關的資訊。
+Windows 的長指標[DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct)結構，包含已刪除的項目相關的資訊。
 
 ### <a name="remarks"></a>備註
 
@@ -511,7 +511,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>參數
 
 *lpDrawItemStruct*<br/>
-長指標[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)結構，其中包含的所需的繪圖類型的相關資訊。
+長指標[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)結構，其中包含的所需的繪圖類型的相關資訊。
 
 ### <a name="remarks"></a>備註
 
@@ -770,7 +770,7 @@ int GetItemRect(
 指定項目的以零為起始的索引。
 
 *lpRect*<br/>
-指定的長指標[RECT 結構](../../mfc/reference/rect-structure1.md)接收項目的清單方塊用戶端座標。
+指定的長指標[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)接收項目的清單方塊用戶端座標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -991,7 +991,7 @@ int InitStorage(
 
 此函式可協助加速有大量的項目 (超過 100) 的清單方塊的初始化。 它會預先配置的指定讓後續的記憶體數量[AddString](#addstring)， [InsertString](#insertstring)，並[Dir](#dir)函式接受最短的時間。 您可以使用估計值的參數。 如果在增長時，會配置一些額外的記憶體;如果您低估，一般配置使用超過預先配置的量的項目。
 
-Windows 95/98 只： *nItems*參數會限制為 16 位元值。 這表示清單方塊不能包含超過 32,767 個項目。 雖然項目數目有限制，總大小的清單方塊中的項目只會受到可用記憶體。
+Windows 95/98 只有：*NItems*參數會限制為 16 位元值。 這表示清單方塊不能包含超過 32,767 個項目。 雖然項目數目有限制，總大小的清單方塊中的項目只會受到可用記憶體。
 
 ### <a name="example"></a>範例
 
@@ -1068,7 +1068,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>參數
 
 *lpMeasureItemStruct*<br/>
-長指標[MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)結構。
+長指標[MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct)結構。
 
 ### <a name="remarks"></a>備註
 

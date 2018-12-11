@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: b33c4c89276b99b6b5f8a4129ef17f809f058ac5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a82793ce29765bf01e8c52c94257bd3150187505
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547312"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178456"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton 類別
 
@@ -567,7 +567,7 @@ virtual void OnDraw(
 [in]參考之按鈕的界限的矩形。
 
 *uiState*<br/>
-[in]目前的按鈕狀態。 如需詳細資訊，請參閱 <<c0> `itemState` 隸屬[DRAWITEMSTRUCT 結構](../../mfc/reference/drawitemstruct-structure.md)主題。
+[in]目前的按鈕狀態。 如需詳細資訊，請參閱 <<c0> `itemState` 隸屬[DRAWITEMSTRUCT 結構](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)主題。
 
 ### <a name="remarks"></a>備註
 
@@ -593,7 +593,7 @@ virtual void OnDrawBorder(
 [in]參考之按鈕的界限的矩形。
 
 *uiState*<br/>
-[in]目前的按鈕狀態。 如需詳細資訊，請參閱 <<c0> `itemState` 隸屬[DRAWITEMSTRUCT 結構](../../mfc/reference/drawitemstruct-structure.md)主題。
+[in]目前的按鈕狀態。 如需詳細資訊，請參閱 <<c0> `itemState` 隸屬[DRAWITEMSTRUCT 結構](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)主題。
 
 ### <a name="remarks"></a>備註
 

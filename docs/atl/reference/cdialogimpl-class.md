@@ -17,12 +17,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: 04acfb9c653df85be8958d7248bafd93f3e0a30b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: b4844ed2246b5e700d9dc1895c3292cdde4efe8b
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693653"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178144"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl 類別
 
@@ -263,7 +263,7 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向`CRect`物件或[RECT](../../mfc/reference/rect-structure.md)結構要接收的更新，包含更新區域的用戶端座標。
+指向`CRect`物件或[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構要接收的更新，包含更新區域的用戶端座標。
 
 ### <a name="return-value"></a>傳回值
 

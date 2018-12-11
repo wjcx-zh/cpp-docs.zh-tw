@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: f1d418cadd2739b840efd14874fd4bbd6afeb4c5
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0a27b78d873b0a561b84b13cc16c67aef9ff2e8b
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177104"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179080"
 ---
 # <a name="cwnd-class"></a>CWnd 類別
 
@@ -1554,7 +1554,7 @@ CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
 ### <a name="parameters"></a>參數
 
 *lpPaint*<br/>
-指向[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)接收繪製資訊的結構。
+指向[PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)接收繪製資訊的結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1854,10 +1854,10 @@ void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) 
 ### <a name="parameters"></a>參數
 
 *lpPoint*<br/>
-指向[POINT 結構](../../mfc/reference/point-structure1.md)或`CPoint`来轉換的物件，包含用戶端座標。
+指向[POINT 結構](/windows/desktop/api/windef/ns-windef-tagpoint)或`CPoint`来轉換的物件，包含用戶端座標。
 
 *lpRect*<br/>
-指向[RECT 結構](../../mfc/reference/rect-structure1.md)或`CRect`来轉換的物件，包含用戶端座標。
+指向[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)或`CRect`来轉換的物件，包含用戶端座標。
 
 ### <a name="remarks"></a>備註
 
@@ -2061,13 +2061,13 @@ BOOL CreateControl(
 視窗樣式。 < 備註 > 底下列出的可用樣式。
 
 *rect*<br/>
-指定控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](../../mfc/reference/rect-structure1.md)。
+指定控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)。
 
 *ppt*<br/>
-指向[POINT 結構](../../mfc/reference/point-structure1.md)或`CPoint`物件，包含控制項的左上的角。
+指向[POINT 結構](/windows/desktop/api/windef/ns-windef-tagpoint)或`CPoint`物件，包含控制項的左上的角。
 
 *pSize*<br/>
-指向[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或`CSize`物件，包含控制項的大小
+指向[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或`CSize`物件，包含控制項的大小
 
 *pParentWnd*<br/>
 指定控制項的父視窗。 它必須不是 NULL。
@@ -2977,7 +2977,7 @@ void EndPaint(LPPAINTSTRUCT lpPaint);
 ### <a name="parameters"></a>參數
 
 *lpPaint*<br/>
-指向[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)結構，其中包含所擷取之繪製資訊[BeginPaint](#beginpaint)成員函式。
+指向[PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)結構，其中包含所擷取之繪製資訊[BeginPaint](#beginpaint)成員函式。
 
 ### <a name="remarks"></a>備註
 
@@ -3710,7 +3710,7 @@ void GetClientRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向[RECT 結構](../../mfc/reference/rect-structure1.md)或`CRect`物件，以接收的用戶端座標。 `left`和`top`成員將會是 0。 `right`和`bottom`成員將包含視窗的高度與寬度。
+指向[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)或`CRect`物件，以接收的用戶端座標。 `left`和`top`成員將會是 0。 `right`和`bottom`成員將包含視窗的高度與寬度。
 
 ### <a name="remarks"></a>備註
 
@@ -3784,7 +3784,7 @@ static const MSG* PASCAL GetCurrentMessage();
 
 ### <a name="return-value"></a>傳回值
 
-將指標傳回至[MSG](../../mfc/reference/msg-structure1.md)目前正在處理結構，其中包含訊息的視窗。 應該只呼叫時**上**<em>訊息</em>處理常式。
+將指標傳回至[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)目前正在處理結構，其中包含訊息的視窗。 應該只呼叫時**上**<em>訊息</em>處理常式。
 
 ### <a name="example"></a>範例
 
@@ -4491,7 +4491,7 @@ void GetProperty(
 > [!NOTE]
 > 此函式應該只在呼叫`CWnd`物件，表示 ActiveX 控制項。
 
-如需這個成員函式使用 ActiveX 控制項容器的詳細資訊，請參閱文章[ActiveX 控制項容器： 在 ActiveX 控制項容器中程式設計 ActiveX 控制項](../../mfc/programming-activex-controls-in-a-activex-control-container.md)。
+如需這個成員函式使用 ActiveX 控制項容器的詳細資訊，請參閱文章[ActiveX 控制項容器：程式設計 ActiveX 控制項容器中的 ActiveX 控制項](../../mfc/programming-activex-controls-in-a-activex-control-container.md)。
 
 ##  <a name="getrendertarget"></a>  CWnd::GetRenderTarget
 
@@ -4864,7 +4864,7 @@ BOOL GetUpdateRect(
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向`CRect`物件或[RECT 結構](../../mfc/reference/rect-structure1.md)將要接收的更新，包含更新區域的用戶端座標。
+指向`CRect`物件或[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)將要接收的更新，包含更新區域的用戶端座標。
 
 將此參數設定為 NULL 則判斷更新區域是否存在於`CWnd`。 如果*lpRect*是 NULL，`GetUpdateRect`成員函式傳回非零值，如果更新區域存在，而且如果有一個 0 並不會。 這會提供一個方式來判斷是否 WM_PAINT 訊息產生無效的區域。 沒有設定此參數為 NULL Windows 3.0 版和更早版本。
 
@@ -5050,7 +5050,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;
 
 ### <a name="remarks"></a>備註
 
-`flags`隸屬[WINDOWPLACEMENT](../../mfc/reference/windowplacement-structure.md)擷取由此函式的結構一定是 0。 如果`CWnd`最大化`showCmd`隸屬`WINDOWPLACEMENT`是 sw_showmaximized 其中一個。 如果視窗最小化，它會是 SW_SHOWMINIMIZED。 否則，它是 SW_SHOWNORMAL。
+`flags`隸屬[WINDOWPLACEMENT](/windows/desktop/api/winuser/ns-winuser-tagwindowplacement)擷取由此函式的結構一定是 0。 如果`CWnd`最大化`showCmd`隸屬`WINDOWPLACEMENT`是 sw_showmaximized 其中一個。 如果視窗最小化，它會是 SW_SHOWMINIMIZED。 否則，它是 SW_SHOWNORMAL。
 
 ##  <a name="getwindowrect"></a>  CWnd::GetWindowRect
 
@@ -5063,7 +5063,7 @@ void GetWindowRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向`CRect`物件或[RECT 結構](../../mfc/reference/rect-structure1.md)，將會收到的左上角和右下角的螢幕座標。
+指向`CRect`物件或[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)，將會收到的左上角和右下角的螢幕座標。
 
 ### <a name="remarks"></a>備註
 
@@ -5286,7 +5286,7 @@ void InvalidateRect(
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向`CRect`物件或[RECT 結構](../../mfc/reference/rect-structure1.md)，其中包含要新增到更新區域的矩形 （在工作區座標中）。 如果*lpRect*為 NULL，就是整個工作區加入到區域中。
+指向`CRect`物件或[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)，其中包含要新增到更新區域的矩形 （在工作區座標中）。 如果*lpRect*為 NULL，就是整個工作區加入到區域中。
 
 *bErase*<br/>
 指定是否要清除的背景更新區域內。
@@ -5370,7 +5370,7 @@ void AFX_CDECL InvokeHelper(
 > [!NOTE]
 > 此函式應該只在呼叫`CWnd`物件，表示 ActiveX 控制項。
 
-如需這個成員函式使用 ActiveX 控制項容器的詳細資訊，請參閱文章[ActiveX 控制項容器： 在 ActiveX 控制項容器中程式設計 ActiveX 控制項](../../mfc/programming-activex-controls-in-a-activex-control-container.md)。
+如需這個成員函式使用 ActiveX 控制項容器的詳細資訊，請參閱文章[ActiveX 控制項容器：程式設計 ActiveX 控制項容器中的 ActiveX 控制項](../../mfc/programming-activex-controls-in-a-activex-control-container.md)。
 
 ##  <a name="ischild"></a>  CWnd::IsChild
 
@@ -5416,7 +5416,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 ### <a name="parameters"></a>參數
 
 *lpMsg*<br/>
-指向[MSG](../../mfc/reference/msg-structure1.md)結構，其中包含要檢查的訊息。
+指向[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)結構，其中包含要檢查的訊息。
 
 ### <a name="return-value"></a>傳回值
 
@@ -5649,7 +5649,7 @@ void MapWindowPoints(
 指定的點是要轉換的矩形。 只有 Windows 3.1 和更新版本，可使用此函式的第一個版本。
 
 *lpPoint*<br/>
-陣列的指標[POINT 結構](../../mfc/reference/point-structure1.md)包含一組要轉換的點。
+陣列的指標[POINT 結構](/windows/desktop/api/windef/ns-windef-tagpoint)包含一組要轉換的點。
 
 *nCount*<br/>
 指定的數目`POINT`結構陣列中的所指*lpPoint*。
@@ -5827,7 +5827,7 @@ void MoveWindow(
 指定是否`CWnd`會重新繪製。 如果為 TRUE，`CWnd`接收[WM_PAINT](/windows/desktop/gdi/wm-paint)訊息中其[OnPaint](#onpaint)如往常般訊息處理常式。 如果此參數為 FALSE，未重新繪製任何種類的就會發生。 這適用於工作區、 非工作區 （包括標題和捲軸），以及未涵蓋範圍的父任何的視窗部分`CWnd`的移動。 當此參數為 FALSE 時，應用程式必須明確失效或重新繪製的任何部分`CWnd`和父視窗，必須重新繪製。
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](../../mfc/reference/rect-structure1.md)，指定新的大小和位置。
+[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)，指定新的大小和位置。
 
 ### <a name="remarks"></a>備註
 
@@ -6099,7 +6099,7 @@ afx_msg void OnChangeUIState(
 
 - UISF_HIDEFOCUS 焦點指標。
 
-- UISF_ACTIVE Windows XP： 應該在使用中的控制項所使用的樣式繪製控制項。
+- UISF_ACTIVE Windows XP:應該繪製控制項，用於使用中控制項的樣式。
 
 ### <a name="remarks"></a>備註
 
@@ -6338,7 +6338,7 @@ afx_msg int OnCompareItem(
 傳送 WM_COMPAREITEM 訊息控制項的識別項。
 
 *lpCompareItemStruct*<br/>
-包含的長指標[COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md)資料結構，其中包含的識別項和應用程式提供兩個項目，在下拉式方塊或清單方塊中的資料。
+包含的長指標[COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct)資料結構，其中包含的識別項和應用程式提供兩個項目，在下拉式方塊或清單方塊中的資料。
 
 ### <a name="return-value"></a>傳回值
 
@@ -6446,7 +6446,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>參數
 
 *lpCreateStruct*<br/>
-指向[CREATESTRUCT](../../mfc/reference/createstruct-structure.md)包含的相關資訊的結構`CWnd`物件所建立。
+指向[CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)包含的相關資訊的結構`CWnd`物件所建立。
 
 ### <a name="return-value"></a>傳回值
 
@@ -6581,7 +6581,7 @@ afx_msg void OnDeleteItem(
 傳送 WM_DELETEITEM 訊息控制項的識別項。
 
 *lpDeleteItemStruct*<br/>
-指定的長指標[DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md)資料結構，包含已刪除的清單方塊項目的相關資訊。
+指定的長指標[DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct)資料結構，包含已刪除的清單方塊項目的相關資訊。
 
 ### <a name="remarks"></a>備註
 
@@ -6749,7 +6749,7 @@ afx_msg void OnDrawItem(
 
 ### <a name="remarks"></a>備註
 
-`itemAction`隸屬[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)結構會定義要執行繪製作業。 此成員內的資料可讓控制項的擁有者，以判斷需要繪製的動作。
+`itemAction`隸屬[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)結構會定義要執行繪製作業。 此成員內的資料可讓控制項的擁有者，以判斷需要繪製的動作。
 
 在傳回之前無法處理此訊息，應用程式應該確保所識別的裝置內容*hDC*隸屬`DRAWITEMSTRUCT`結構會還原成預設狀態。
 
@@ -7018,7 +7018,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO* lpMMI);
 ### <a name="parameters"></a>參數
 
 *lpMMI*<br/>
-指向`MINMAXINFO`結構，包含視窗的相關資訊的最大化，大小和位置和大小的最小和最大的追蹤。 如需有關此結構的詳細資訊，請參閱[MINMAXINFO](../../mfc/reference/minmaxinfo-structure.md)結構。
+指向`MINMAXINFO`結構，包含視窗的相關資訊的最大化，大小和位置和大小的最小和最大的追蹤。 如需有關此結構的詳細資訊，請參閱[MINMAXINFO](/windows/desktop/api/winuser/ns-winuser-tagminmaxinfo)結構。
 
 ### <a name="remarks"></a>備註
 
@@ -7502,7 +7502,7 @@ afx_msg void OnLButtonDblClk(
 
 ### <a name="remarks"></a>備註
 
-有 CS_DBLCLKS 的 windows [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)樣式會收到`OnLButtonDblClk`呼叫。 這是 Microsoft Foundation Class windows 的預設值。 Windows 呼叫`OnLButtonDblClk`當使用者按下，釋出，然後按下滑鼠左的按鈕內系統的按兩下時間限制。 按兩下滑鼠左鍵實際上會產生四個事件： [WM_LBUTTONDOWN](#onlbuttondown)， [WM_LBUTTONUP](#onlbuttonup)訊息、 需要知道 WM_LBUTTONDBLCLK 呼叫，以及另一個 WM_LBUTTONUP 訊息 按鈕時釋出。
+有 CS_DBLCLKS 的 windows [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)樣式會收到`OnLButtonDblClk`呼叫。 這是 Microsoft Foundation Class windows 的預設值。 Windows 呼叫`OnLButtonDblClk`當使用者按下，釋出，然後按下滑鼠左的按鈕內系統的按兩下時間限制。 按兩下滑鼠左鍵時，實際上會產生四個事件：[WM_LBUTTONDOWN](#onlbuttondown)， [WM_LBUTTONUP](#onlbuttonup)訊息、 需要知道 WM_LBUTTONDBLCLK 呼叫時，以及另一個 WM_LBUTTONUP 訊息在放開按鍵時。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -7601,7 +7601,7 @@ afx_msg void OnMButtonDblClk(
 
 ### <a name="remarks"></a>備註
 
-有 CS_DBLCLKS 的 windows [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)樣式會收到`OnMButtonDblClk`呼叫。 這是所有 Microsoft Foundation Class 視窗的預設值。 Windows 會產生`OnMButtonDblClk`呼叫時，在使用者按下、 版本，然後按下滑鼠中間按鈕一次在系統中按兩下 時間限制。 按兩下滑鼠中間鍵實際上會產生四個事件： [WM_MBUTTONDOWN](#onmbuttondown)並[WM_MBUTTONUP](#onmbuttonup)訊息、 WM_MBUTTONDBLCLK 呼叫，以及另一個 WM_MBUTTONUP 訊息。
+有 CS_DBLCLKS 的 windows [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)樣式會收到`OnMButtonDblClk`呼叫。 這是所有 Microsoft Foundation Class 視窗的預設值。 Windows 會產生`OnMButtonDblClk`呼叫時，在使用者按下、 版本，然後按下滑鼠中間按鈕一次在系統中按兩下 時間限制。 按兩下滑鼠中鍵時，實際上會產生四個事件：[WM_MBUTTONDOWN](#onmbuttondown)並[WM_MBUTTONUP](#onmbuttonup)訊息、 WM_MBUTTONDBLCLK 呼叫，以及另一個 WM_MBUTTONUP 訊息。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -7714,7 +7714,7 @@ afx_msg void OnMeasureItem(
 控制項的 ID。
 
 *lpMeasureItemStruct*<br/>
-指向[MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)資料結構，其中包含主控描繪控制項的維度。
+指向[MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct)資料結構，其中包含主控描繪控制項的維度。
 
 ### <a name="remarks"></a>備註
 
@@ -8149,7 +8149,7 @@ afx_msg void OnMoving(
 要移動的視窗邊緣。
 
 *lpRect*<br/>
-位址[CRect](../../atl-mfc-shared/reference/crect-class.md)或是[RECT 結構](../../mfc/reference/rect-structure1.md)，就會包含項目的座標。
+位址[CRect](../../atl-mfc-shared/reference/crect-class.md)或是[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)，就會包含項目的座標。
 
 ### <a name="remarks"></a>備註
 
@@ -8196,7 +8196,7 @@ afx_msg void OnNcCalcSize(
 指定應用程式是否應該指定用戶端區域的哪一個部分包含有效的資訊。 Windows 會將有效的資訊複製到新的用戶端區域內的指定區域。 如果此參數為 TRUE，應用程式應指定用戶端區域的哪一部分無效。
 
 *lpncsp*<br/>
-指向[NCCALCSIZE_PARAMS](../../mfc/reference/nccalcsize-params-structure.md)包含應用程式可以用來計算新的大小和位置資訊的資料結構`CWnd`矩形 （包括工作區、 框線、 標題、 捲軸等等）.
+指向[NCCALCSIZE_PARAMS](/windows/desktop/api/winuser/ns-winuser-tagnccalcsize_params)包含應用程式可以用來計算新的大小和位置資訊的資料結構`CWnd`矩形 （包括工作區、 框線、 標題、 捲軸等等）.
 
 ### <a name="remarks"></a>備註
 
@@ -8222,7 +8222,7 @@ afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>參數
 
 *lpCreateStruct*<br/>
-指向[CREATESTRUCT](../../mfc/reference/createstruct-structure.md)的資料結構`CWnd`。
+指向[CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)的資料結構`CWnd`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -8791,7 +8791,7 @@ afx_msg void OnPaintClipboard(
 指定 [剪貼簿] 應用程式視窗的指標。 該指標可能是暫時性的，因此不應該儲存供日後使用。
 
 *hPaintStruct*<br/>
-識別 [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) 資料結構，其定義要繪製工作區的哪一部分。
+識別 [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) 資料結構，其定義要繪製工作區的哪一部分。
 
 ### <a name="remarks"></a>備註
 
@@ -8988,7 +8988,7 @@ afx_msg UINT OnQueryUIState();
 
 - 會隱藏 UISF_HIDEACCEL 鍵盤快速鍵。
 
-- UISF_ACTIVE Windows XP： 應該在使用中的控制項所使用的樣式繪製控制項。
+- UISF_ACTIVE Windows XP:應該繪製控制項，用於使用中控制項的樣式。
 
 ### <a name="remarks"></a>備註
 
@@ -9048,7 +9048,7 @@ afx_msg void OnRButtonDblClk(
 
 ### <a name="remarks"></a>備註
 
-有 CS_DBLCLKS 的 windows [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)樣式可以接收`OnRButtonDblClk`呼叫。 這是適用於 Microsoft Foundation 類別程式庫內的 windows 預設值。 Windows 呼叫`OnRButtonDblClk`當使用者按下，釋出，然後再次按下滑鼠右按鈕，在系統中的按兩下 時間限制。 按兩下滑鼠右按鈕實際上會產生四個事件： [WM_RBUTTONDOWN](#onrbuttondown)並[WM_RBUTTONUP](#onrbuttonup)訊息，`OnRButtonDblClk`呼叫時，並另一個 WM_RBUTTONUP 訊息時的按鈕釋出。
+有 CS_DBLCLKS 的 windows [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)樣式可以接收`OnRButtonDblClk`呼叫。 這是適用於 Microsoft Foundation 類別程式庫內的 windows 預設值。 Windows 呼叫`OnRButtonDblClk`當使用者按下，釋出，然後再次按下滑鼠右按鈕，在系統中的按兩下 時間限制。 按兩下滑鼠按鈕時，實際上會產生四個事件：[WM_RBUTTONDOWN](#onrbuttondown)並[WM_RBUTTONUP](#onrbuttonup)訊息，`OnRButtonDblClk`呼叫時，並在放開按鍵時的另一個 WM_RBUTTONUP 訊息。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -9410,7 +9410,7 @@ afx_msg void OnSizing(
 要移動的視窗邊緣。
 
 *lpRect*<br/>
-位址[CRect](../../atl-mfc-shared/reference/crect-class.md)或是[RECT 結構](../../mfc/reference/rect-structure1.md)，就會包含項目的座標。
+位址[CRect](../../atl-mfc-shared/reference/crect-class.md)或是[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)，就會包含項目的座標。
 
 ### <a name="remarks"></a>備註
 
@@ -9961,7 +9961,7 @@ afx_msg void OnUniChar(
 |---------------|-----------------|
 |*NChar*|[in]指定的按鍵的字元碼。|
 |*nRepCnt*|[in]指定目前訊息的重複計數。 值是按鍵輸入是因為使用者按住鍵而 autorepeated 的次數。 如果按鍵輸入會保存夠久的時間，會傳送多則訊息。 不過，不是累計的重複計數。|
-|*nFlags*|[in]旗標，指定掃描程式碼、 擴充的索引鍵、 內容程式碼，先前的主要狀態和轉移狀態下, 表所示：<br /><br /> **0-7:** 指定掃描程式碼。 值取決於原始設備製造商 (OEM)。<br /><br /> **8:** 指定擴充的索引鍵，例如增強的 101 或 102-key 鍵盤上出現的右 ALT 和 CTRL 鍵。 旗標為 1，如果金鑰是延伸的金鑰;否則，它會是 0。<br /><br /> **9 至 12:** 內部使用的 Windows。<br /><br /> **13:** 指定的內容程式碼。 旗標為 1，如果按下按鍵; 時，按住 ALT 鍵否則，值為 0。<br /><br /> **14:** 指定前一個索引鍵的狀態。 旗標是如果金鑰已關閉，再傳送訊息，則為 1 或 0，如果索引鍵已啟動。<br /><br /> **15:** 指定轉換狀態。 旗標會是 1，表示被釋放，索引鍵，則為 0，如果按下索引鍵。|
+|*nFlags*|[in]旗標，指定掃描程式碼、 擴充的索引鍵、 內容程式碼，先前的主要狀態和轉移狀態下, 表所示：<br /><br /> **0-7:** 指定掃描程式碼。 值取決於原始設備製造商 (OEM)。<br /><br /> **8:** 指定擴充的索引鍵，例如增強的 101 或 102-key 鍵盤上出現的右 ALT 和 CTRL 鍵。 旗標為 1，如果金鑰是延伸的金鑰;否則，它會是 0。<br /><br /> **9 至 12:** Windows 內部使用。<br /><br /> **13:** 指定的內容程式碼。 旗標為 1，如果按下按鍵; 時，按住 ALT 鍵否則，值為 0。<br /><br /> **14:** 指定前一個索引鍵的狀態。 旗標是如果金鑰已關閉，再傳送訊息，則為 1 或 0，如果索引鍵已啟動。<br /><br /> **15:** 指定轉換狀態。 旗標會是 1，表示被釋放，索引鍵，則為 0，如果按下索引鍵。|
 
 ### <a name="remarks"></a>備註
 
@@ -10022,7 +10022,7 @@ afx_msg void OnUpdateUIState(
 
 - UISF_HIDEFOCUS 焦點指標。
 
-- UISF_ACTIVE Windows XP： 應該在使用中的控制項所使用的樣式繪製控制項。
+- UISF_ACTIVE Windows XP:應該繪製控制項，用於使用中控制項的樣式。
 
 ### <a name="remarks"></a>備註
 
@@ -10202,7 +10202,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
 ### <a name="parameters"></a>參數
 
 *lpwndpos*<br/>
-指向[WINDOWPOS](../../mfc/reference/windowpos-structure1.md)資料結構，包含視窗的新大小和位置的相關資訊。
+指向[WINDOWPOS](/windows/desktop/api/winuser/ns-winuser-tagwindowpos)資料結構，包含視窗的新大小和位置的相關資訊。
 
 ### <a name="remarks"></a>備註
 
@@ -10226,7 +10226,7 @@ afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
 
 ### <a name="remarks"></a>備註
 
-應用程式可以藉由設定或清除適當的位元，在視窗來防止變更**旗標**隸屬[WINDOWPOS](../../mfc/reference/windowpos-structure1.md)結構。
+應用程式可以藉由設定或清除適當的位元，在視窗來防止變更**旗標**隸屬[WINDOWPOS](/windows/desktop/api/winuser/ns-winuser-tagwindowpos)結構。
 
 與視窗[WS_OVERLAPPED](styles-used-by-mfc.md#window-styles)或是[WS_THICKFRAME](styles-used-by-mfc.md#window-styles)樣式的預設實作會將傳送[WM_GETMINMAXINFO](/windows/desktop/winmsg/wm-getminmaxinfo)至視窗的訊息。 這是以驗證新的大小和視窗的位置，並強制執行所需 CS_BYTEALIGNCLIENT 和 CS_BYTEALIGN 用戶端樣式。 應用程式可以藉由不呼叫其基底類別中覆寫這項功能。
 
@@ -10549,7 +10549,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ### <a name="parameters"></a>參數
 
 *cs*<br/>
-A [CREATESTRUCT](../../mfc/reference/createstruct-structure.md)結構。
+A [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -10597,7 +10597,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>參數
 
 *pMsg*<br/>
-指向[MSG](../../mfc/reference/msg-structure1.md)結構，其中包含要處理的訊息。
+指向[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)結構，其中包含要處理的訊息。
 
 ### <a name="return-value"></a>傳回值
 
@@ -10719,7 +10719,7 @@ BOOL RedrawWindow(
 ### <a name="parameters"></a>參數
 
 *lpRectUpdate*<br/>
-指向[RECT 結構](../../mfc/reference/rect-structure1.md)包含更新矩形的座標。 如果這個參數就會忽略*prgnUpdate*包含有效的區域控制代碼。
+指向[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)包含更新矩形的座標。 如果這個參數就會忽略*prgnUpdate*包含有效的區域控制代碼。
 
 *prgnUpdate*<br/>
 識別更新區域。 如果兩個*prgnUpdate*並*lpRectUpdate*為 NULL 時，整個工作區加入到更新區域。
@@ -10889,10 +10889,10 @@ void RepositionBars(UINT nIDFirst,
 - `CWnd::reposExtra` 值相加*lpRectParam*的工作區*nIDLast*而也會執行配置。
 
 *lpRectParam*<br/>
-指向[RECT 結構](../../mfc/reference/rect-structure1.md); 的使用方式取決於值*旗*。
+指向[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect); 的使用方式取決於值*旗*。
 
 *lpRectClient*<br/>
-指向[RECT 結構](../../mfc/reference/rect-structure1.md)包含可用的用戶端區域。 如果是 NULL，則將使用視窗的工作區。
+指向[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)包含可用的用戶端區域。 如果是 NULL，則將使用視窗的工作區。
 
 *bStretch*<br/>
 指出軸是否應該自動縮放以框架的大小。
@@ -10939,10 +10939,10 @@ void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) 
 ### <a name="parameters"></a>參數
 
 *lpPoint*<br/>
-指向[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件或[POINT 結構](../../mfc/reference/point-structure1.md)，其中包含要轉換的螢幕座標。
+指向[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件或[POINT 結構](/windows/desktop/api/windef/ns-windef-tagpoint)，其中包含要轉換的螢幕座標。
 
 *lpRect*<br/>
-指向[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](../../mfc/reference/rect-structure1.md)，其中包含要轉換的螢幕座標。
+指向[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)，其中包含要轉換的螢幕座標。
 
 ### <a name="remarks"></a>備註
 
@@ -10973,7 +10973,7 @@ void ScrollWindow(
 以裝置為單位，垂直捲動的指定單位的數量。 這個參數必須為負值，向上捲動。
 
 *lpRect*<br/>
-指向[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](../../mfc/reference/rect-structure1.md)，指定要捲動的部分。 如果*lpRect*為 NULL，就會捲動整個工作區。 如果資料指標矩形交集捲動矩形，已重新定位到插入號。
+指向[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)，指定要捲動的部分。 如果*lpRect*為 NULL，就會捲動整個工作區。 如果資料指標矩形交集捲動矩形，已重新定位到插入號。
 
 *lpClipRect*<br/>
 指向`CRect`物件或`RECT`結構，指定要捲動的裁剪方框。 在此矩形內的位元會捲動。 即使是在中，不會影響此矩形的外面的位元*lpRect*矩形。 如果*lpClipRect*是 NULL，不裁剪對捲軸的矩形。
@@ -11012,7 +11012,7 @@ int ScrollWindowEx(
 以裝置為單位，垂直捲動的指定單位的數量。 這個參數必須為負值，向上捲動。
 
 *lpRectScroll*<br/>
-指向[RECT 結構](../../mfc/reference/rect-structure1.md)，指定要捲動的部分。 如果此參數為 NULL，就會捲動整個工作區。
+指向[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)，指定要捲動的部分。 如果此參數為 NULL，就會捲動整個工作區。
 
 *lpRectClip*<br/>
 指向`RECT`結構，指定要捲動的裁剪方框。 此結構的優先順序高於所指的矩形*lpRectScroll*。 在此矩形內的位元會捲動。 即使是在中，不會影響此矩形的外面的位元*lpRectScroll*矩形。 如果此參數為 NULL，就會捲動矩形上執行不裁剪。
@@ -11588,7 +11588,7 @@ void AFX_CDECL SetProperty(
 > [!NOTE]
 > 此函式應該只在呼叫`CWnd`物件，表示 OLE 控制項。
 
-如需 OLE 控制項容器搭配使用此成員函式的詳細資訊，請參閱文章[ActiveX 控制項容器： 在 ActiveX 控制項容器中程式設計 ActiveX 控制項](../../mfc/programming-activex-controls-in-a-activex-control-container.md)。
+如需有關如何使用 OLE 控制項容器中的此成員函式的詳細資訊，請參閱[ActiveX 控制項容器：程式設計 ActiveX 控制項容器中的 ActiveX 控制項](../../mfc/programming-activex-controls-in-a-activex-control-container.md)。
 
 ##  <a name="setredraw"></a>  CWnd::SetRedraw
 
@@ -11811,7 +11811,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT* lpwndpl);
 ### <a name="parameters"></a>參數
 
 *lpwndpl*<br/>
-指向[WINDOWPLACEMENT](../../mfc/reference/windowplacement-structure.md)結構，指定新的顯示狀態和位置。
+指向[WINDOWPLACEMENT](/windows/desktop/api/winuser/ns-winuser-tagwindowplacement)結構，指定新的顯示狀態和位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -12304,7 +12304,7 @@ void ValidateRect(LPCRECT lpRect);
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](../../mfc/reference/rect-structure1.md)，其中包含從更新區域中移除矩形的用戶端座標。 如果*lpRect*是 NULL，在驗證完整的視窗。
+指向[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)，其中包含從更新區域中移除矩形的用戶端座標。 如果*lpRect*是 NULL，在驗證完整的視窗。
 
 ### <a name="remarks"></a>備註
 
@@ -12342,7 +12342,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 ### <a name="parameters"></a>參數
 
 *點*<br/>
-指定[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件或[點](../../mfc/reference/point-structure1.md)資料結構，定義要檢查點。
+指定[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件或[點](/windows/desktop/api/windef/ns-windef-tagpoint)資料結構，定義要檢查點。
 
 ### <a name="return-value"></a>傳回值
 
@@ -12420,7 +12420,7 @@ BOOL RegisterTouchWindow(
 TRUE 表示註冊 Windows 觸控支援;FALSE 否則。
 
 *ulFlags*<br/>
-一組的位元旗標，指定選擇性的修改。 此欄位可能包含 0 或其中一個下列的值： TWF_FINETOUCH、 TWF_WANTPALM。
+一組的位元旗標，指定選擇性的修改。 此欄位可能包含 0 或下列值之一：TWF_FINETOUCH TWF_WANTPALM。
 
 ### <a name="return-value"></a>傳回值
 

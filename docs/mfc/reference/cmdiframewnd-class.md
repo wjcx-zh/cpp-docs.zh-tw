@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: a565e1c9d9c9e4d3773763b0ee78c49f61696723
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d9a2d33f61aa9033bb17c090989b4f08ee82bd7
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617538"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178378"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd 類別
 
@@ -160,7 +160,7 @@ virtual BOOL CreateClient(
 ### <a name="parameters"></a>參數
 
 *lpCreateStruct*<br/>
-長指標[CREATESTRUCT](../../mfc/reference/createstruct-structure.md)結構。
+長指標[CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)結構。
 
 *pWindowMenu*<br/>
 指向 [視窗] 快顯功能表的指標。
@@ -276,7 +276,7 @@ void MDICascade(int nType);
 ### <a name="parameters"></a>參數
 
 *n*<br/>
-指定 cascade 旗標。 您可以指定下列旗標： MDITILE_SKIPDISABLED，這樣可防止正在重疊顯示已停用的 MDI 子視窗。
+指定 cascade 旗標。 您可以指定下列旗標：MDITILE_SKIPDISABLED，防止已停用的 MDI 子視窗正在串聯。
 
 ### <a name="remarks"></a>備註
 

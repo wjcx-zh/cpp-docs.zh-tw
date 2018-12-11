@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-ms.openlocfilehash: bed403e4bc1cca1d31a394be7157de9e65abff95
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cedd1bfd4ea955f920e13b5d01beb3a478656b69
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519440"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178118"
 ---
 # <a name="ctime-class"></a>CTime 類別
 
@@ -169,10 +169,10 @@ A`__time64_t`時間值，也就是在 1970 年 1 月 1 日 UTC 之後的秒數�
 MS-DOS 日期和時間值轉換成日期/時間值，並複製到新`CTime`物件。
 
 *st*<br/>
-A [SYSTEMTIME](../../mfc/reference/systemtime-structure.md)轉換成日期/時間值，並複製到新的結構`CTime`物件。
+A [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)轉換成日期/時間值，並複製到新的結構`CTime`物件。
 
 *全文檢索*<br/>
-A [FILETIME](../../mfc/reference/filetime-structure.md)轉換成日期/時間值，並複製到新的結構`CTime`物件。
+A [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)轉換成日期/時間值，並複製到新的結構`CTime`物件。
 
 *dbts*<br/>
 DBTIMESTAMP 結構，包含目前的當地時間的參考。

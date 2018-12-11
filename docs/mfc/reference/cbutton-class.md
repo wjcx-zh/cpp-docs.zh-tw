@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 745b04751c96e79c6bfa332ebdde15b254578137
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 26dcf50cc3dc48fec5d6e4957ffd1ef340ad1dbf
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694799"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178639"
 ---
 # <a name="cbutton-class"></a>CButton 類別
 
@@ -265,7 +265,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>參數
 
 *lpDrawItemStruct*<br/>
-長指標[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)結構。 此結構包含要繪製的項目和繪圖所需的類型資訊。
+長指標[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)結構。 此結構包含要繪製的項目和繪圖所需的類型資訊。
 
 ### <a name="remarks"></a>備註
 
@@ -532,7 +532,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 |參數|描述|
 |---------------|-----------------|
-|*pSize*|[out]指標[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)接收之矩形的描述的結構。|
+|*pSize*|[out]指標[大小](/windows/desktop/api/windef/ns-windef-tagsize)接收之矩形的描述的結構。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -1006,7 +1006,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 |參數|描述|
 |---------------|-----------------|
-|*pSize*|[in]指標[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)該結構描述的周框。|
+|*pSize*|[in]指標[大小](/windows/desktop/api/windef/ns-windef-tagsize)該結構描述的周框。|
 
 ### <a name="return-value"></a>傳回值
 

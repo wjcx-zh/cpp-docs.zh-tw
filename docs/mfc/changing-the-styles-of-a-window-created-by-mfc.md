@@ -21,12 +21,12 @@ helpviewer_keywords:
 - CMainFrame class [MFC]
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
-ms.openlocfilehash: ebef671a34d2b50bd547a2fd9e484581df8ee3e8
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 19ff4e41f3b8c73e7ae62fbf264ea955b42bbc1a
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693214"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177899"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>變更 MFC 所建立之視窗的樣式
 
@@ -46,7 +46,7 @@ ms.locfileid: "51693214"
 
 如果您要變更現有的應用程式視窗的屬性，請改為遵循這篇文章的其餘部分中的指示。
 
-若要變更使用的應用程式精靈所建立的 framework 應用程式所使用的預設視窗屬性，覆寫視窗[PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow)虛擬成員函式。 `PreCreateWindow` 可讓應用程式存取通常由在內部建立程序[CDocTemplate](../mfc/reference/cdoctemplate-class.md)類別。 這個架構會呼叫`PreCreateWindow`之前建立視窗。 藉由修改[CREATESTRUCT](../mfc/reference/createstruct-structure.md)結構傳遞給`PreCreateWindow`，您的應用程式可以變更用來建立視窗的屬性。 比方說，若要確保視窗不會使用標題，請使用下列的位元運算：
+若要變更使用的應用程式精靈所建立的 framework 應用程式所使用的預設視窗屬性，覆寫視窗[PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow)虛擬成員函式。 `PreCreateWindow` 可讓應用程式存取通常由在內部建立程序[CDocTemplate](../mfc/reference/cdoctemplate-class.md)類別。 這個架構會呼叫`PreCreateWindow`之前建立視窗。 藉由修改[CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)結構傳遞給`PreCreateWindow`，您的應用程式可以變更用來建立視窗的屬性。 比方說，若要確保視窗不會使用標題，請使用下列的位元運算：
 
 [!code-cpp[NVC_MFCDocView#15](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]
 

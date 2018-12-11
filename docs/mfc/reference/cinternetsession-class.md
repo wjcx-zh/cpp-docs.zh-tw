@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 3b820ea3687fd52947eff48e4814ab4173fd95c7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 216f3bf0ce62eb6e69ad0650289c4c2d91f95159
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519289"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178157"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 類別
 
@@ -98,10 +98,10 @@ class CInternetSession : public CObject
 
 `CInternetSession` 成員函式[SetCookie](#setcookie)， [GetCookie](#getcookie)，並[GetCookieLength](#getcookielength)提供方法來管理透過此伺服器和指令碼維護的 Win32 cookie 資料庫用戶端工作站的狀態資訊。
 
-如需有關基本網際網路程式設計工作的詳細資訊，請參閱[網際網路前幾個步驟： WinInet](../../mfc/wininet-basics.md)。 如需使用 MFC WinInet 類別的一般資訊，請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)。
+如需有關基本網際網路程式設計工作的詳細資訊，請參閱[網際網路前幾個步驟：WinInet](../../mfc/wininet-basics.md)。 如需使用 MFC WinInet 類別的一般資訊，請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)。
 
 > [!NOTE]
-> `CInternetSession` 將會擲回[AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception)不支援的服務類型。 目前支援以下服務類型： FTP、 HTTP、 gopher 和檔案。
+> `CInternetSession` 將會擲回[AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception)不支援的服務類型。 目前支援以下服務類型：FTP、 HTTP、 gopher 和檔案。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -223,7 +223,7 @@ DWORD_PTR GetContext() const;
 
 [OnStatusCallback](#onstatuscallback)所傳回的內容識別碼的用法`GetContext`報告特定的應用程式的狀態。 例如，使用者啟動牽涉到傳回狀態資訊的網際網路要求，狀態回呼就會使用報告狀態的內容識別碼針對該特定的要求。 如果使用者啟動兩個不同網際網路要求兩者都涉及傳回狀態資訊`OnStatusCallback`使用內容識別項，傳回有關其相對應的要求的狀態。 因此，內容識別碼使用於所有的狀態回呼作業，而相關聯的工作階段，直到工作階段結束為止。
 
-如需有關非同步作業的詳細資訊，請參閱文章[網際網路前幾個步驟： WinInet](../../mfc/wininet-basics.md)。
+如需有關非同步作業的詳細資訊，請參閱文章[網際網路前幾個步驟：WinInet](../../mfc/wininet-basics.md)。
 
 ## <a name="getcookie"></a>  CInternetSession::GetCookie
 
@@ -457,7 +457,7 @@ virtual void OnStatusCallback(
 |-----------|-------------|
 |INTERNET_STATUS_RESOLVING_NAME|查閱中所包含的名稱的 IP 位址*lpvStatusInformation*。|
 |INTERNET_STATUS_NAME_RESOLVED|已成功找到名稱中包含的 IP 位址*lpvStatusInformation*。|
-|INTERNET_STATUS_CONNECTING_TO_SERVER|連接到通訊端位址 ([SOCKADDR](../../mfc/reference/sockaddr-structure.md)) 所指*lpvStatusInformation*。|
+|INTERNET_STATUS_CONNECTING_TO_SERVER|連接到通訊端位址 ([SOCKADDR](/windows/desktop/winsock/sockaddr-2)) 所指*lpvStatusInformation*。|
 |INTERNET_STATUS_CONNECTED_TO_SERVER|已成功連線到通訊端位址 (SOCKADDR)，指向*lpvStatusInformation*。|
 |INTERNET_STATUS_SENDING_REQUEST|資訊要求傳送至伺服器。 *LpvStatusInformation*參數為 NULL。|
 |INTERNET_STATUS_ REQUEST_SENT|已成功傳送至伺服器的資訊要求。 *LpvStatusInformation*參數為 NULL。|
@@ -475,7 +475,7 @@ virtual void OnStatusCallback(
 
 [!code-cpp[NVC_MFCHtmlHttp#8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]
 
-如需有關非同步作業的詳細資訊，請參閱文章[網際網路前幾個步驟： WinInet](../../mfc/wininet-basics.md)。
+如需有關非同步作業的詳細資訊，請參閱文章[網際網路前幾個步驟：WinInet](../../mfc/wininet-basics.md)。
 
 ## <a name="openurl"></a>  Cinternetsession:: Openurl
 

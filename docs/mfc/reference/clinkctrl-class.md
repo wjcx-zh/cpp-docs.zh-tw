@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: 79c6aa9f0448ed399554d634d48f666aaaf60566
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b24b92006b73dff2ae9f091256ef8401efc64fe9
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597557"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178041"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl 類別
 
@@ -134,7 +134,7 @@ virtual BOOL Create(DWORD dwStyle,
 指定連結控制項的樣式。 適用於任何控制項樣式的組合。 請參閱[常見的控制項樣式](/windows/desktop/Controls/common-control-styles)在`Windows SDK`如需詳細資訊。
 
 *rect*<br/>
-指定連結控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](../../mfc/reference/rect-structure1.md)結構。
+指定連結控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構。
 
 *pParentWnd*<br/>
 指定連結控制項的父視窗。 它必須不是 NULL。
@@ -196,7 +196,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 指定連結控制項的樣式。 適用於任何控制項樣式的組合。 如需詳細資訊，請參閱 <<c0> [ 常見的控制項樣式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。
 
 *rect*<br/>
-指定連結控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](../../mfc/reference/rect-structure1.md)結構。
+指定連結控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構。
 
 *pParentWnd*<br/>
 指定連結控制項的父視窗。 它必須不是 NULL。
@@ -245,7 +245,7 @@ int GetIdealSize(
 |參數|描述|
 |---------------|-----------------|
 |*cxMaxWidth*|[in]連結，像素為單位的最大寬度。|
-|[out]\* *pSize*|Windows 的指標[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構。 當這個方法傳回時， *cy*隸屬`SIZE`結構中包含所指定的連結文字寬度的理想的連結文字高度*cxMaxWidth*。 *Cx*結構成員會包含實際所需的連結文字寬度。|
+|[out]\* *pSize*|Windows 的指標[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構。 當這個方法傳回時， *cy*隸屬`SIZE`結構中包含所指定的連結文字寬度的理想的連結文字高度*cxMaxWidth*。 *Cx*結構成員會包含實際所需的連結文字寬度。|
 
 ### <a name="return-value"></a>傳回值
 

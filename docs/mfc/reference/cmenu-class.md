@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: bcaf24c14938bcf56eb083ad2dd79e4c245c7c84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2834de457ce9e2a71537e706f0fdf84463b16a8d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613677"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178914"
 ---
 # <a name="cmenu-class"></a>CMenu 類別
 
@@ -322,7 +322,7 @@ UINT CheckMenuItem(
 
 ### <a name="return-value"></a>傳回值
 
-先前的狀態項目： MF_CHECKED 或 MF_UNCHECKED，或 0xFFFFFFFF 如果功能表項目不存在。
+項目先前的狀態：MF_CHECKED MF_UNCHECKED 或 0xFFFFFFFF 如果功能表項目不存在。
 
 ### <a name="remarks"></a>備註
 
@@ -551,7 +551,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>參數
 
 *lpDrawItemStruct*<br/>
-指標[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)結構，其中包含的所需的繪圖類型的相關資訊。
+指標[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)結構，其中包含的所需的繪圖類型的相關資訊。
 
 ### <a name="remarks"></a>備註
 

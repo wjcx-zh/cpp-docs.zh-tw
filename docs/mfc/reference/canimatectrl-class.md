@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 5bbd59101815d18cae92b9996aff54f0cadaf9ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a22c88e1a19cd1aef1bbfacd7f255adc2b19d0e
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608425"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178250"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl 類別
 
@@ -152,7 +152,7 @@ virtual BOOL Create(
 指定動畫控制項的樣式。 適用於的 windows 中的 < 備註 > 一節和動畫控制項的樣式中所述的樣式所述的任何組合[動畫控制項的樣式](/windows/desktop/Controls/animation-control-styles)Windows SDK 中。
 
 *rect*<br/>
-指定動畫控制項的位置和大小。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](../../mfc/reference/rect-structure1.md)結構。
+指定動畫控制項的位置和大小。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構。
 
 *pParentWnd*<br/>
 指定動畫控制項的父視窗，通常`CDialog`。 它必須不是 NULL。

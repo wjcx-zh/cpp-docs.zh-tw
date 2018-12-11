@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 756f50afd9b67e4895d8d1b15652602630c24918
-ms.sourcegitcommit: 984fb4814a2dd9bcea5ec88c9528707f17a7cffa
+ms.openlocfilehash: c42f7b77c04b2c94923908fa8b9542bea313b154
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51949540"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178989"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl 類別
 
@@ -427,7 +427,7 @@ virtual BOOL Create(
 指定編輯控制項的樣式。 適用於所列出的視窗樣式的組合 **< 備註 > 一**一節，以及[編輯控制項的樣式](/windows/desktop/Controls/edit-control-styles)Windows SDK 中所述。
 
 *rect*<br/>
-指定編輯控制項的大小和位置。 可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](../../mfc/reference/rect-structure1.md)結構。
+指定編輯控制項的大小和位置。 可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構。
 
 *pParentWnd*<br/>
 指定編輯控制項的父視窗 (通常[CDialog](../../mfc/reference/cdialog-class.md))。 它必須不是 NULL。
@@ -552,7 +552,7 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 ### <a name="parameters"></a>參數
 
 *pDisplayRect*<br/>
-指標[RECT](../../mfc/reference/rect-structure1.md)或是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，指定要顯示的文字之裝置的區域。
+指標[RECT](/windows/desktop/api/windef/ns-windef-tagrect)或是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，指定要顯示的文字之裝置的區域。
 
 ### <a name="return-value"></a>傳回值
 
@@ -973,7 +973,7 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md)或指標[RECT](../../mfc/reference/rect-structure1.md)接收這個格式化矩形`CRichEditCtrl`物件。
+[CRect](../../atl-mfc-shared/reference/crect-class.md)或指標[RECT](/windows/desktop/api/windef/ns-windef-tagrect)接收這個格式化矩形`CRichEditCtrl`物件。
 
 ### <a name="remarks"></a>備註
 
@@ -1855,7 +1855,7 @@ void SetRect(LPCRECT lpRect);
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md)或指標[RECT](../../mfc/reference/rect-structure1.md) ，指出格式化矩形的新界限。
+[CRect](../../atl-mfc-shared/reference/crect-class.md)或指標[RECT](/windows/desktop/api/windef/ns-windef-tagrect) ，指出格式化矩形的新界限。
 
 ### <a name="remarks"></a>備註
 

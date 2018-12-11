@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 136f172dcd406e323afddae87d6fb234b5d4b273
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3fdcfa664de93f62b8b4dbcbc6184d08fdf591c
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544881"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178078"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog 類別
 
@@ -142,7 +142,7 @@ CPageSetupDialog(
 
 - PSD_DISABLEORIENTATION 停用頁面方向對話方塊控制項。
 
-- PSD_RETURNDEFAULT 會導致`CPageSetupDialog`返回[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)並[DEVNAMES](../../mfc/reference/devnames-structure.md)會初始化為系統預設的印表機，而不會顯示一個對話方塊中的結構。 它假設這兩個`hDevNames`和`hDevMode`都為 NULL; 否則函數會傳回錯誤。 如果系統預設的印表機支援舊的印表機驅動程式 （早於 Windows 3.0 版） 只能`hDevNames`傳回;`hDevMode`為 NULL。
+- PSD_RETURNDEFAULT 會導致`CPageSetupDialog`返回[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)並[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)會初始化為系統預設的印表機，而不會顯示一個對話方塊中的結構。 它假設這兩個`hDevNames`和`hDevMode`都為 NULL; 否則函數會傳回錯誤。 如果系統預設的印表機支援舊的印表機驅動程式 （早於 Windows 3.0 版） 只能`hDevNames`傳回;`hDevMode`為 NULL。
 
 - PSD_DISABLEPAPER 停用文件選取範圍控制項。
 
@@ -171,7 +171,7 @@ CPageSetupDialog(
 
 ##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC
 
-建立從印表機裝置內容[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)並[DEVNAMES](../../mfc/reference/devnames-structure.md)結構。
+建立從印表機裝置內容[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)並[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)結構。
 
 ```
 HDC CreatePrinterDC();
@@ -262,7 +262,7 @@ void GetMargins(
 ### <a name="parameters"></a>參數
 
 *lpRectMargins*<br/>
-指標[RECT](rect-structure.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)告訴您目前所選印表機的列印邊界 （以 1/1000年英吋或 1/100 公釐） 的物件。 如果您不想要這個矩形，這個參數，傳遞 NULL。
+指標[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)告訴您目前所選印表機的列印邊界 （以 1/1000年英吋或 1/100 公釐） 的物件。 如果您不想要這個矩形，這個參數，傳遞 NULL。
 
 *lpRectMinMargins*<br/>
 指標`RECT`結構或`CRect`告訴您目前所選印表機的最小列印邊界 （以 1/1000年英吋或 1/100 公釐） 的物件。 如果您不想要這個矩形，這個參數，傳遞 NULL。
@@ -341,7 +341,7 @@ virtual UINT OnDrawPage(
 - 用於代表寄件地址的 WM_PSD_YAFULLPAGERECT 區域。 這個區域會延伸到範例的頁面區域的邊緣。
 
 *lpRect*<br/>
-指標[CRect](../../atl-mfc-shared/reference/crect-class.md)或是[RECT](rect-structure.md)物件，含有在繪圖區域的座標。
+指標[CRect](../../atl-mfc-shared/reference/crect-class.md)或是[RECT](/windows/desktop/api/windef/ns-windef-tagrect)物件，含有在繪圖區域的座標。
 
 ### <a name="return-value"></a>傳回值
 

@@ -34,16 +34,16 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: f2ecaeb4f3b434ef7b57573f2ea379719aebcbff
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 5e9d4b5c28adceb52078c13dbf18170e7a2b19e5
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520032"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178749"
 ---
 # <a name="crect-class"></a>CRect 類別
 
-類似於 Windows [RECT](../../mfc/reference/rect-structure.md)結構。
+類似於 Windows [RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構。
 
 ## <a name="syntax"></a>語法
 
@@ -120,7 +120,7 @@ A`CRect`包含定義矩形的左上和右下方點的成員變數。
 
 操作時請小心`CRect`具有[CDC::DPtoLP](../../mfc/reference/cdc-class.md#dptolp)並[CDC::LPtoDP](../../mfc/reference/cdc-class.md#lptodp)成員函式。 顯示內容的對應模式是否 y-範圍為負數，如同`MM_LOENGLISH`，然後`CDC::DPtoLP`會將轉換`CRect`使其頂端大於底部。 這類函式`Height`並`Size`接著會傳回已轉換的高度的負數值`CRect`，矩形會未正規化。
 
-當使用多載`CRect`運算子，在第一個運算元必須是`CRect`; 第二個可以是[RECT](../../mfc/reference/rect-structure.md)結構或`CRect`物件。
+當使用多載`CRect`運算子，在第一個運算元必須是`CRect`; 第二個可以是[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或`CRect`物件。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -249,7 +249,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 ### <a name="parameters"></a>參數
 
 *lpSrcRect*<br/>
-指向[RECT](../../mfc/reference/rect-structure.md)結構或`CRect`要複製的物件。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或`CRect`要複製的物件。
 
 ### <a name="example"></a>範例
 
@@ -301,7 +301,7 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 指定底部`CRect`。
 
 *srcRect*<br/>
-是指[RECT](../../mfc/reference/rect-structure.md)結構的座標`CRect`。
+是指[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構的座標`CRect`。
 
 *lpSrcRect*<br/>
 指向`RECT`結構的座標`CRect`。
@@ -382,10 +382,10 @@ void DeflateRect(int l, int t, int r, int b) throw();
 指定要 deflate 頂端和底部的單位數`CRect`。
 
 *size*<br/>
-A[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)或是[CSize](csize-class.md) ，指定要 deflate 的單位數`CRect`。 `cx`值會指定要 deflate 左邊和右邊的單位數和`cy`值會指定要 deflate 上方和下方的單位數。
+A[大小](/windows/desktop/api/windef/ns-windef-tagsize)或是[CSize](csize-class.md) ，指定要 deflate 的單位數`CRect`。 `cx`值會指定要 deflate 左邊和右邊的單位數和`cy`值會指定要 deflate 上方和下方的單位數。
 
 *lpRect*<br/>
-指向[RECT](../../mfc/reference/rect-structure.md)結構或`CRect`，指定要 deflate 每一端的單位數。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或`CRect`，指定要 deflate 每一端的單位數。
 
 *l*<br/>
 指定要 deflate 左下的方的單位數`CRect`。
@@ -431,7 +431,7 @@ BOOL EqualRect(LPCRECT lpRect) const throw();
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向[RECT](../../mfc/reference/rect-structure.md)結構或`CRect`物件，其中包含矩形的左上角和右下角座標。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或`CRect`物件，其中包含矩形的左上角和右下角座標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -508,10 +508,10 @@ void InflateRect(int l, int t, int r,  int b) throw();
 指定要擴充的頂端和底部的單位數`CRect`。
 
 *size*<br/>
-A[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)或是[CSize](csize-class.md) ，指定要擴充的單位數`CRect`。 `cx`值會指定要擴充的左邊和右邊的單位數和`cy`值會指定要擴充的頂端和底端的單位數。
+A[大小](/windows/desktop/api/windef/ns-windef-tagsize)或是[CSize](csize-class.md) ，指定要擴充的單位數`CRect`。 `cx`值會指定要擴充的左邊和右邊的單位數和`cy`值會指定要擴充的頂端和底端的單位數。
 
 *lpRect*<br/>
-指向[RECT](../../mfc/reference/rect-structure.md)結構或`CRect`，指定要擴充每一端的單位數。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或`CRect`，指定要擴充每一端的單位數。
 
 *l*<br/>
 指定要擴充的左下的方的單位數`CRect`。
@@ -552,7 +552,7 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ### <a name="parameters"></a>參數
 
 *lpRect1*<br/>
-指向[RECT](../../mfc/reference/rect-structure.md)結構或`CRect`物件，其中包含來源矩形。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或`CRect`物件，其中包含來源矩形。
 
 *lpRect2*<br/>
 指向`RECT`結構或`CRect`物件，其中包含來源矩形。
@@ -746,7 +746,7 @@ void NormalizeRect() throw();
 矩形會正規化為第四個象限定位，Windows 通常會使用座標。 `NormalizeRect` 比較上方和下方的值，並會交換其頂端是否大於底部。 同樣地，它交換的左邊和右邊的值，如果左側大於右側。 此函式會處理具有不同的對應模式時，就很有用，並反轉的矩形。
 
 > [!NOTE]
-> 下列`CRect`成員函式需要標準化的矩形，才能正常運作：[高度](#height)，[寬度](#width)，[大小](#size)， [IsRectEmpty](#isrectempty)， [PtInRect](#ptinrect)， [EqualRect](#equalrect)， [UnionRect](#unionrect)， [IntersectRect](#intersectrect)， [SubtractRect](#subtractrect)，[運算子 = =](#operator_eq_eq)，[運算子 ！ =](#operator_neq)，[運算子&#124; ](#operator_or)，[運算子&#124;=](#operator_or_eq)，[運算子 &](#operator_amp)，並[運算子 （& s) =](#operator_amp_eq)。
+> 下列`CRect`成員函式需要標準化的矩形，才能正常運作：[高度](#height)，[寬度](#width)，[大小](#size)， [IsRectEmpty](#isrectempty)， [PtInRect](#ptinrect)， [EqualRect](#equalrect)，[UnionRect](#unionrect)， [IntersectRect](#intersectrect)， [SubtractRect](#subtractrect)，[運算子 = =](#operator_eq_eq)，[運算子 ！ =](#operator_neq)，[運算子&#124; ](#operator_or)，[運算子&#124;=](#operator_or_eq)，[運算子 &](#operator_amp)，以及[運算子 & =](#operator_amp_eq)。
 
 ### <a name="example"></a>範例
 
@@ -777,10 +777,10 @@ void OffsetRect(SIZE size) throw();
 指定要上移或下移的數量。 它必須是負數以向上移動。
 
 *點*<br/>
-包含[點](../../mfc/reference/point-structure.md)結構或[CPoint](cpoint-class.md)物件，指定用來移動兩個維度。
+包含[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或[CPoint](cpoint-class.md)物件，指定用來移動兩個維度。
 
 *size*<br/>
-包含[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](csize-class.md)物件，指定用來移動兩個維度。
+包含[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或[CSize](csize-class.md)物件，指定用來移動兩個維度。
 
 ### <a name="remarks"></a>備註
 
@@ -833,7 +833,7 @@ void operator=(const RECT& srcRect) throw();
 ### <a name="parameters"></a>參數
 
 *srcRect*<br/>
-是指來源矩形。 可以是[RECT](../../mfc/reference/rect-structure.md)或`CRect`。
+是指來源矩形。 可以是[RECT](/windows/desktop/api/windef/ns-windef-tagrect)或`CRect`。
 
 ### <a name="example"></a>範例
 
@@ -856,7 +856,7 @@ BOOL operator==(const RECT& rect) const throw();
 ### <a name="parameters"></a>參數
 
 *rect*<br/>
-是指來源矩形。 可以是[RECT](../../mfc/reference/rect-structure.md)或`CRect`。
+是指來源矩形。 可以是[RECT](/windows/desktop/api/windef/ns-windef-tagrect)或`CRect`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -896,7 +896,7 @@ BOOL operator!=(const RECT& rect) const throw();
 ### <a name="parameters"></a>參數
 
 *rect*<br/>
-是指來源矩形。 可以是[RECT](../../mfc/reference/rect-structure.md)或`CRect`。
+是指來源矩形。 可以是[RECT](/windows/desktop/api/windef/ns-windef-tagrect)或`CRect`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -938,13 +938,13 @@ void operator+=(LPCRECT lpRect) throw();
 ### <a name="parameters"></a>參數
 
 *點*<br/>
-A[點](../../mfc/reference/point-structure.md)結構或[CPoint](cpoint-class.md)物件，指定要移動矩形的單位數。
+A[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或[CPoint](cpoint-class.md)物件，指定要移動矩形的單位數。
 
 *size*<br/>
-A[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](csize-class.md)物件，指定要移動矩形的單位數。
+A[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或[CSize](csize-class.md)物件，指定要移動矩形的單位數。
 
 *lpRect*<br/>
-指向[RECT](../../mfc/reference/rect-structure.md)結構或`CRect`物件，其中包含要擴充的每一端的單位數`CRect`。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或`CRect`物件，其中包含要擴充的每一端的單位數`CRect`。
 
 ### <a name="remarks"></a>備註
 
@@ -976,13 +976,13 @@ void operator-=(LPCRECT lpRect) throw();
 ### <a name="parameters"></a>參數
 
 *點*<br/>
-A[點](../../mfc/reference/point-structure.md)結構或[CPoint](cpoint-class.md)物件，指定要移動矩形的單位數。
+A[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或[CPoint](cpoint-class.md)物件，指定要移動矩形的單位數。
 
 *size*<br/>
-A[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](csize-class.md)物件，指定要移動矩形的單位數。
+A[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或[CSize](csize-class.md)物件，指定要移動矩形的單位數。
 
 *lpRect*<br/>
-指向[RECT](../../mfc/reference/rect-structure.md)結構或`CRect`物件，其中包含要 deflate 的每一端的單位數`CRect`。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或`CRect`物件，其中包含要 deflate 的每一端的單位數`CRect`。
 
 ### <a name="remarks"></a>備註
 
@@ -1012,7 +1012,7 @@ void operator&=(const RECT& rect) throw();
 ### <a name="parameters"></a>參數
 
 *rect*<br/>
-包含[RECT](../../mfc/reference/rect-structure.md)或`CRect`。
+包含[RECT](/windows/desktop/api/windef/ns-windef-tagrect)或`CRect`。
 
 ### <a name="remarks"></a>備註
 
@@ -1036,7 +1036,7 @@ void operator|=(const RECT& rect) throw();
 ### <a name="parameters"></a>參數
 
 *rect*<br/>
-包含`CRect`或是[RECT](../../mfc/reference/rect-structure.md)。
+包含`CRect`或是[RECT](/windows/desktop/api/windef/ns-windef-tagrect)。
 
 ### <a name="remarks"></a>備註
 
@@ -1069,13 +1069,13 @@ CRect operator+(SIZE size) const throw();
 ### <a name="parameters"></a>參數
 
 *點*<br/>
-A[點](../../mfc/reference/point-structure.md)結構或[CPoint](cpoint-class.md)物件，指定要移動的傳回值的單位數。
+A[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或[CPoint](cpoint-class.md)物件，指定要移動的傳回值的單位數。
 
 *size*<br/>
-A[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](csize-class.md)物件，指定要移動的傳回值的單位數。
+A[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或[CSize](csize-class.md)物件，指定要移動的傳回值的單位數。
 
 *lpRect*<br/>
-指向[RECT](../../mfc/reference/rect-structure.md)結構或`CRect`物件，其中包含要擴充的傳回值的每一端的單位數。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或`CRect`物件，其中包含要擴充的傳回值的每一端的單位數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1112,13 +1112,13 @@ CRect operator-(LPCRECT lpRect) const throw();
 ### <a name="parameters"></a>參數
 
 *點*<br/>
-A[點](../../mfc/reference/point-structure.md)結構或`CPoint`物件，指定要移動的傳回值的單位數。
+A[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或`CPoint`物件，指定要移動的傳回值的單位數。
 
 *size*<br/>
-A[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或`CSize`物件，指定要移動的傳回值的單位數。
+A[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或`CSize`物件，指定要移動的傳回值的單位數。
 
 *lpRect*<br/>
-指向[RECT](../../mfc/reference/rect-structure.md)結構或`CRect`物件，其中包含要 deflate 每一端的傳回值的單位數。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或`CRect`物件，其中包含要 deflate 每一端的傳回值的單位數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1153,7 +1153,7 @@ CRect operator&(const RECT& rect2) const throw();
 ### <a name="parameters"></a>參數
 
 *rect2*<br/>
-包含[RECT](../../mfc/reference/rect-structure.md)或`CRect`。
+包含[RECT](/windows/desktop/api/windef/ns-windef-tagrect)或`CRect`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1190,7 +1190,7 @@ rect2) const throw();
 ### <a name="parameters"></a>參數
 
 *rect2*<br/>
-包含[RECT](../../mfc/reference/rect-structure.md)或`CRect`。
+包含[RECT](/windows/desktop/api/windef/ns-windef-tagrect)或`CRect`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1226,7 +1226,7 @@ BOOL PtInRect(POINT point) const throw();
 ### <a name="parameters"></a>參數
 
 *點*<br/>
-包含[點](../../mfc/reference/point-structure.md)結構或[CPoint](cpoint-class.md)物件。
+包含[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或[CPoint](cpoint-class.md)物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1353,7 +1353,7 @@ BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
 ### <a name="parameters"></a>參數
 
 *lpRectSrc1*<br/>
-指向[RECT](../../mfc/reference/rect-structure.md)結構或`CRect`從中矩形是要減去的物件。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或`CRect`從中矩形是要減去的物件。
 
 *lpRectSrc2*<br/>
 指向`RECT`結構或`CRect`指向的物件為矩形相減*lpRectSrc1*參數。
@@ -1441,7 +1441,7 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ### <a name="parameters"></a>參數
 
 *lpRect1*<br/>
-指向[RECT](../../mfc/reference/rect-structure.md)或`CRect`，其中包含來源矩形。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)或`CRect`，其中包含來源矩形。
 
 *lpRect2*<br/>
 指向`RECT`或`CRect`，其中包含來源矩形。
@@ -1503,5 +1503,5 @@ int Width() const throw();
 
 [CPoint 類別](cpoint-class.md)<br/>
 [CSize 類別](csize-class.md)<br/>
-[RECT](../../mfc/reference/rect-structure.md)
+[RECT](/windows/desktop/api/windef/ns-windef-tagrect)
 

@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 9c08b679f1423b499a5b95b260fd0fac9ddeaf9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74ee046e81e0f55e5550220166c957317c2bf6cd
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467974"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178547"
 ---
 # <a name="crgn-class"></a>CRgn 類別
 
@@ -78,13 +78,13 @@ class CRgn : public CGdiObject
 |[CRgn::CombineRgn](#combinergn)|設定組`CRgn`物件，讓它相當於兩個指定的聯集`CRgn`物件。|
 |[CRgn::CopyRgn](#copyrgn)|設定組`CRgn`物件，使它是一份指定的`CRgn`物件。|
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|初始化`CRgn`橢圓形的區域物件。|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|初始化`CRgn`物件所定義的橢圓形區域[RECT](../../mfc/reference/rect-structure1.md)結構。|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|初始化`CRgn`物件所定義的橢圓形區域[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構。|
 |[CRgn::CreateFromData](#createfromdata)|從指定的區域和轉換資料，會建立區域。|
 |[CRgn::CreateFromPath](#createfrompath)|從所選入指定的裝置內容的路徑中建立區域。|
 |[CRgn::CreatePolygonRgn](#createpolygonrgn)|初始化`CRgn`物件的多邊形的區域。 系統多邊形會自動關閉，如有必要，所繪製一條線從上次的頂點，第一個。|
 |[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|初始化`CRgn`物件，其中包含一系列的封閉的多邊形的區域。 多邊形可能是脫離的或者可能會重疊。|
 |[CRgn::CreateRectRgn](#createrectrgn)|初始化`CRgn`物件的矩形區域。|
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|初始化`CRgn`物件所定義的矩形區域[RECT](../../mfc/reference/rect-structure1.md)結構。|
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|初始化`CRgn`物件所定義的矩形區域[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構。|
 |[CRgn::CreateRoundRectRgn](#createroundrectrgn)|初始化`CRgn`物件與具有圓角矩形區域。|
 |[CRgn::EqualRgn](#equalrgn)|檢查兩個`CRgn`物件，判斷它們是否相等。|
 |[CRgn::FromHandle](#fromhandle)|將指標傳回至`CRgn`物件給 Windows 區域中的控制代碼時。|
@@ -297,13 +297,13 @@ BOOL CreateFromData(
 ### <a name="parameters"></a>參數
 
 *lpXForm*<br/>
-指向[XFORM](../../mfc/reference/xform-structure.md)資料結構，定義要在區域上執行的轉換。 如果此指標為 NULL，則會使用識別轉換。
+指向[XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform)資料結構，定義要在區域上執行的轉換。 如果此指標為 NULL，則會使用識別轉換。
 
 *nCount*<br/>
 指定所指向的位元組數目*pRgnData*。
 
 *pRgnData*<br/>
-指向[RGNDATA](../../mfc/reference/rgndata-structure.md)資料結構，包含區域資料。
+指向[RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata)資料結構，包含區域資料。
 
 ### <a name="return-value"></a>傳回值
 
@@ -631,7 +631,7 @@ int GetRegionData(
 ### <a name="parameters"></a>參數
 
 *lpRgnData*<br/>
-指向[RGNDATA](../../mfc/reference/rgndata-structure.md)接收資訊的資料結構。 如果此參數為 NULL，則傳回的值會包含所需的區域資料的位元組數目。
+指向[RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata)接收資訊的資料結構。 如果此參數為 NULL，則傳回的值會包含所需的區域資料的位元組數目。
 
 *nCount*<br/>
 指定的大小，以位元組為單位*lpRgnData*緩衝區。

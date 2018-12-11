@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 91cf9b2035bf24c16007ed6021772c7d5344fc68
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e7472b808d8b5d743d884d9e3806df7ffe499836
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333263"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178775"
 ---
 # <a name="ccombobox-class"></a>CComboBox 類別
 
@@ -331,7 +331,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="parameters"></a>參數
 
 *lpCompareItemStruct*<br/>
-長指標[COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md)結構。
+長指標[COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct)結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -383,7 +383,7 @@ virtual BOOL Create(
 指定下拉式方塊的樣式。 套用的任何組合[下拉式方塊樣式](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)至方塊。
 
 *rect*<br/>
-指向的位置和下拉式方塊的大小。 可以是[RECT 結構](../../mfc/reference/rect-structure1.md)或`CRect`物件。
+指向的位置和下拉式方塊的大小。 可以是[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)或`CRect`物件。
 
 *pParentWnd*<br/>
 指定下拉式方塊的父視窗 (通常`CDialog`)。 它必須不是 NULL。
@@ -450,7 +450,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>參數
 
 *lpDeleteItemStruct*<br/>
-Windows 的長指標[DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md)結構，包含已刪除的項目相關的資訊。 請參閱[CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)針對此結構描述。
+Windows 的長指標[DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct)結構，包含已刪除的項目相關的資訊。 請參閱[CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)針對此結構描述。
 
 ### <a name="remarks"></a>備註
 
@@ -542,7 +542,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>參數
 
 *lpDrawItemStruct*<br/>
-指標[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)結構，其中包含的所需的繪圖類型的相關資訊。
+指標[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)結構，其中包含的所需的繪圖類型的相關資訊。
 
 ### <a name="remarks"></a>備註
 
@@ -715,7 +715,7 @@ void GetDroppedControlRect(LPRECT lprect) const;
 ### <a name="parameters"></a>參數
 
 *lprect*<br/>
-指向[RECT 結構](../../mfc/reference/rect-structure1.md)將要接收座標。
+指向[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)將要接收座標。
 
 ### <a name="example"></a>範例
 
@@ -1028,7 +1028,7 @@ int InitStorage(
 
 呼叫此函式，再將大量的項目新增至清單方塊部分`CComboBox`。
 
-Windows 95/98 只： *wParam*參數會限制為 16 位元值。 這表示清單方塊不能包含超過 32,767 個項目。 雖然項目數目有限制，總大小的清單方塊中的項目只會受到可用記憶體。
+Windows 95/98 只有：*WParam*參數會限制為 16 位元值。 這表示清單方塊不能包含超過 32,767 個項目。 雖然項目數目有限制，總大小的清單方塊中的項目只會受到可用記憶體。
 
 此函式可協助加速有大量的項目 (超過 100) 的清單方塊的初始化。 它會預先配置的指定讓後續的記憶體數量[AddString](#addstring)， [InsertString](#insertstring)，並[Dir](#dir)函式接受最短的時間。 您可以使用估計值的參數。 如果在增長時，會配置一些額外的記憶體;如果您低估，一般配置使用超過預先配置的量的項目。
 
@@ -1107,7 +1107,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>參數
 
 *lpMeasureItemStruct*<br/>
-長指標[MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)結構。
+長指標[MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct)結構。
 
 ### <a name="remarks"></a>備註
 

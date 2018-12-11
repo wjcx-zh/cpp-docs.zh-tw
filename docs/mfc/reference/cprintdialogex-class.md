@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-ms.openlocfilehash: 79d696f89ca7474220559abbf5464f32b6e684c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb88cc39ddaffe51b80484bbe8460507a1d0aecb
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543321"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178443"
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx 類別
 
@@ -154,7 +154,7 @@ CPrintDialogEx(
 
 ##  <a name="createprinterdc"></a>  CPrintDialogEx::CreatePrinterDC
 
-從建立印表機裝置內容 (DC) [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)並[DEVNAMES](../../mfc/reference/devnames-structure.md)結構。
+從建立印表機裝置內容 (DC) [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)並[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)結構。
 
 ```
 HDC CreatePrinterDC();
@@ -216,9 +216,9 @@ BOOL GetDefaults();
 
 ### <a name="remarks"></a>備註
 
-從建立印表機裝置內容 (DC) [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)並[DEVNAMES](../../mfc/reference/devnames-structure.md)結構。
+從建立印表機裝置內容 (DC) [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)並[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)結構。
 
-`GetDefaults` 不會顯示列印屬性工作表。 相反地，它會設定`hDevNames`和`hDevMode`的成員[m_pdex](#m_pdex)來控制代碼[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)並[DEVNAMES](../../mfc/reference/devnames-structure.md)結構初始化進行系統預設的印表機。 兩者`hDevNames`並`hDevMode`必須是 NULL，或`GetDefaults`失敗。
+`GetDefaults` 不會顯示列印屬性工作表。 相反地，它會設定`hDevNames`和`hDevMode`的成員[m_pdex](#m_pdex)來控制代碼[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)並[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)結構初始化進行系統預設的印表機。 兩者`hDevNames`並`hDevMode`必須是 NULL，或`GetDefaults`失敗。
 
 如果設定 PD_RETURNDC 旗標，這個函式不只會傳回`hDevNames`和`hDevMode`(位於`m_pdex.hDevNames`並`m_pdex.hDevMode`) 呼叫者，但也會傳回在是印表機 DC `m_pdex.hDC`。 刪除印表機 DC 並呼叫 Windows 呼叫端負責[GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree)函式的控制代碼，當您完成`CPrintDialogEx`物件。
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-ms.openlocfilehash: 343ab1a5d0c38ab0d17c609fbfc134b144502553
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfbe03c5c81b2c7d6517dff7ce4e5f88b7c076bc
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471808"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178300"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC 類別
 
@@ -186,7 +186,7 @@ BOOL CreateEnhanced(
 指向以 null 結束的字元字串。 指定要建立的增強型中繼檔的檔案名稱。 如果此參數為 NULL，加強型中繼檔是記憶體為基礎及其內容遺失或終結物件時 Win32`DeleteEnhMetaFile`呼叫函式。
 
 *lpBounds*<br/>
-指向[RECT](../../mfc/reference/rect-structure1.md)資料結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)以 himetric 為單位 （以.01 公釐） 的圖片儲存在加強型中繼檔中指定維度的物件。
+指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)資料結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)以 himetric 為單位 （以.01 公釐） 的圖片儲存在加強型中繼檔中指定維度的物件。
 
 *lpszDescription*<br/>
 指向以零為結尾的字串，指定建立圖片，以及圖片的標題的應用程式的名稱。

@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: d1677716db42f7f2e3b74e63562d00527291c144
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98de92a9473d64a87b9b7a9f2891adf4263e1951
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524658"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178963"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar 類別
 
@@ -519,7 +519,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 1. 呼叫[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)指定停駐樣式。
 
-若要插入的特殊按鈕，例如下拉式方塊或下拉式工具列中，保留假的按鈕，在父資源中，並使用取代假的按鈕，在執行階段[CMFCToolBar::ReplaceButton](#replacebutton)。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 將工具列控制項](../walkthrough-putting-controls-on-toolbars.md)。
+若要插入的特殊按鈕，例如下拉式方塊或下拉式工具列中，保留假的按鈕，在父資源中，並使用取代假的按鈕，在執行階段[CMFCToolBar::ReplaceButton](#replacebutton)。 如需詳細資訊，請參閱[逐步解說：將工具列上的控制項加入](../walkthrough-putting-controls-on-toolbars.md)。
 
 `CMFCToolBar` MFC 程式庫類別的基底類別[CMFCMenuBar 類別](../../mfc/reference/cmfcmenubar-class.md)， [CMFCPopupMenuBar 類別](../../mfc/reference/cmfcpopupmenubar-class.md)，並[CMFCDropDownToolBar 類別](../../mfc/reference/cmfcdropdowntoolbar-class.md)。
 
@@ -1242,7 +1242,7 @@ void EnableReflections(BOOL bEnable = TRUE);
 
 呼叫這個方法，以啟用命令的工具列按鈕的包含內嵌的控制項，例如下拉式方塊的反映。
 
-如需有關命令反映的詳細資訊，請參閱[TN062： 訊息反映的 Windows 控制項](../../mfc/tn062-message-reflection-for-windows-controls.md)。
+如需有關命令反映的詳細資訊，請參閱[TN062:訊息反映的 Windows 控制項](../../mfc/tn062-message-reflection-for-windows-controls.md)。
 
 ##  <a name="enabletextlabels"></a>  CMFCToolBar::EnableTextLabels
 
@@ -2491,7 +2491,7 @@ static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
 
 ### <a name="remarks"></a>備註
 
-這個方法會取得的指標[MSG 結構](../../mfc/reference/msg-structure1.md)藉由呼叫`CWnd::GetCurrentMessage`。 然後它會比較具有按鈕的 HWND`MSG::lParam`和`MSG::hwnd`成員以判斷是否在按鈕原先的命令來源。
+這個方法會取得的指標[MSG 結構](/windows/desktop/api/winuser/ns-winuser-tagmsg)藉由呼叫`CWnd::GetCurrentMessage`。 然後它會比較具有按鈕的 HWND`MSG::lParam`和`MSG::hwnd`成員以判斷是否在按鈕原先的命令來源。
 
 ##  <a name="islocked"></a>  CMFCToolBar::IsLocked
 
@@ -3905,5 +3905,5 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 [CMFCMenuBar 類別](../../mfc/reference/cmfcmenubar-class.md)<br/>
 [CMFCPopupMenuBar 類別](../../mfc/reference/cmfcpopupmenubar-class.md)<br/>
 [CMFCDropDownToolBar 類別](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
-[逐步解說：將控制項放在工具列上](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+[逐步解說：將放在工具列上的控制項](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 

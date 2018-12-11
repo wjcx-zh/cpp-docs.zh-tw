@@ -6,12 +6,12 @@ ms.technology:
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 3b01c58349aa1dff1c782b051156250fd495df91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5aee74c9fee1480d2bb61c36abba97edc5c5d4cf
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460004"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178092"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ 說明和社群
 
@@ -19,13 +19,13 @@ ms.locfileid: "50460004"
 
 ## <a name="samples"></a>範例
 
-|標題|描述|
+|標題|說明|
 |-----------|-----------------|
 |[開發人員程式碼範例](https://code.msdn.microsoft.com/)|包含 Microsoft 和社群投稿的可下載範例程式碼。|
 
 ## <a name="product-documentation"></a>產品文件
 
-|標題|描述|
+|標題|說明|
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|包含有關 Visual C++ 的參考及概念文件。 MSDN Library 的一部分。|
 |[Windows 開發人員中心](https://developer.microsoft.com/windows/)|包含如何使用 C++ 和其他語言開發 Windows 8 應用程式的資訊。 Windows 開發人員中心的一部分，C++ 內容位於 [文件] > [語言參考] 節點下。|
@@ -40,9 +40,9 @@ ms.locfileid: "50460004"
 
 ## <a name="related-articles"></a>相關文章
 
-|標題|描述|
+|標題|說明|
 |-----------|-----------------|
 |[Visual C++ Team 部落格](https://blogs.msdn.microsoft.com/vcblog/)|包含 Visual C++ 產品小組專家發表的各種主題的文章。|
 |[Channel 9](https://channel9.msdn.com/)|包含訪談和演講影片。 請使用 Channel 9 首頁上的 [搜尋] 方塊尋找 C++ 內容。|
 |[Visual Studio](https://visualstudio.microsoft.com/)|包含有關 Visual Studio 和相關開發工具的文章及新聞。|
-|[MSDN 論壇](https://social.msdn.microsoft.com/Forums/en-US/home?category=visualc)與[開發人員社群](https://developercommunity.visualstudio.com)|官方 Microsoft 論壇，您可以在這裡提出 C++ 相關問題，並 從 Microsoft 與社群專家處獲得解答。|
+|[MSDN 論壇](https://social.msdn.microsoft.com/Forums/home?category=visualc)與[開發人員社群](https://developercommunity.visualstudio.com)|官方 Microsoft 論壇，您可以在這裡提出 C++ 相關問題，並 從 Microsoft 與社群專家處獲得解答。|

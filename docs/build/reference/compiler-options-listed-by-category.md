@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: aa93158e518950efa9d1f2f8092aeabbc3c7724c
-ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
+ms.openlocfilehash: ef61ebbfad62e6a7bf764bad35204247e47d8ddb
+ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51598817"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248568"
 ---
 # <a name="compiler-options-listed-by-category"></a>依分類排列的編譯器選項
 
@@ -62,7 +62,7 @@ ms.locfileid: "51598817"
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|在函式進入時，強制暫存器中所傳遞的參數寫入至堆疊上的位置。 這個編譯器選項是僅適用於 x64 編譯器 （原生和跨編譯）。|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|建立可線上修補的影像。|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|產生快速超越函式。|
-|[QIfist](qifist-suppress-ftol.md)|已取代。 在必須從浮點類型轉換為整數類型時，抑制對 Helper 函式 `_ftol` 的呼叫。 (僅限 x86)|
+|[/QIfist](qifist-suppress-ftol.md)|已取代。 在必須從浮點類型轉換為整數類型時，抑制對 Helper 函式 `_ftol` 的呼叫。 (僅限 x86)|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|移除 `fwait` 區塊內的 `try` 命令。|
 |[/Qpar](qpar-auto-parallelizer.md)|啟用迴圈自動平行處理。|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|啟用自動平行處理的報告層級。|
@@ -207,7 +207,7 @@ ms.locfileid: "51598817"
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已取代。 啟用快速檢查。 改用 [/RTC1](rtc-run-time-error-checks.md) 。|
 |[/H](h-restrict-length-of-external-names.md)|已取代。 限制外部 (公用) 名稱的長度。|
 |[/Og](og-global-optimizations.md)|已取代。 使用全域最佳化。|
-|[QIfist](qifist-suppress-ftol.md)|已取代。 曾用以指定如何從浮點型別轉換為整數型別。|
+|[/QIfist](qifist-suppress-ftol.md)|已取代。 曾用以指定如何從浮點型別轉換為整數型別。|
 |[/V](v-version-number.md)|已取代。 設定 obj 檔案版本字串。|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|已過時。 偵測 64 位元可移植性問題。|
 |[/Yd](yd-place-debug-information-in-object-file.md)|已取代。 將完整的偵錯資訊置於所有目的檔中。 改用 [/Zi](z7-zi-zi-debug-information-format.md) 。|

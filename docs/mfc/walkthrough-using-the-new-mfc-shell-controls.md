@@ -90,7 +90,7 @@ ms.locfileid: "50507558"
 
 1. 現在我們更新`CMFCShellControlsView`類別來處理`WM_CREATE`windows 訊息。 開啟**類別檢視**視窗，然後選取`CMFCShellControlsView`類別。 以滑鼠右鍵按一下並選取**屬性**。
 
-    接下來，在**屬性** 視窗中，按一下**訊息**圖示。 向下捲動，直到您找到`WM_CREATE`訊息。 從下拉式清單旁`WM_CREATE`，選取**\<新增 > OnCreate**。 此命令會為我們建立的訊息處理常式，並會自動更新的 MFC 訊息對應。
+    接下來，在**屬性** 視窗中，按一下**訊息**圖示。 向下捲動，直到您找到`WM_CREATE`訊息。 從下拉式清單旁`WM_CREATE`，選取 **\<新增 > OnCreate** 。 此命令會為我們建立的訊息處理常式，並會自動更新的 MFC 訊息對應。
 
    在 `OnCreate`方法中，我們現在將建立我們`CMFCShellListCtrl`物件。 尋找`OnCreate`MFCShellControlsView.cpp 中的方法定義原始程式檔，並以下列程式碼取代它的實作：
 

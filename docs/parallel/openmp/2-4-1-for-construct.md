@@ -35,7 +35,7 @@ ms.locfileid: "51329487"
 
 **For**指示詞會置於對應的結構中的限制**如**迴圈。 具體來說，對應**針對**迴圈必須有標準的圖形：
 
-**為 (** *init expr* **;***var 邏輯 op b*;*incr expr* **)**
+**為 (** *init expr* **;** *var 邏輯 op b*;*incr expr* **)**
 
 *init expr*<br/>
 下列其中一項：

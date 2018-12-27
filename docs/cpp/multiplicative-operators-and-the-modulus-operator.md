@@ -36,7 +36,7 @@ expression % expression
 
 乘法類運算子包括：
 
-- 乘法 (<strong>\**</strong>)
+- 乘法 (<strong>\*</strong>)
 
 - 除法 (**/**)
 

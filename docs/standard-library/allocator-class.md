@@ -543,7 +543,7 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="remarks"></a>備註
 
-此成員函式釋放之計算物件的類型陣列的儲存體`Type`開始*ptr*，藉由呼叫`operator delete(ptr)`。 指標*ptr*必須傳回先前呼叫所[配置](#allocate)比較為相等的配置器物件**\*這**，配置陣列相同的大小和類型的物件。 `deallocate` 絕不會擲回例外狀況。
+此成員函式釋放之計算物件的類型陣列的儲存體`Type`開始*ptr*，藉由呼叫`operator delete(ptr)`。 指標*ptr*必須傳回先前呼叫所[配置](#allocate)比較為相等的配置器物件 **\*這** ，配置陣列相同的大小和類型的物件。 `deallocate` 絕不會擲回例外狀況。
 
 ### <a name="example"></a>範例
 

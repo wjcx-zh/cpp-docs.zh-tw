@@ -260,7 +260,7 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="remarks"></a>備註
 
-此成員函式會報告回呼事件**清除\_事件**。 然後它會複製從*右*成**\*這**填滿字元、 繫結指標和格式設定資訊。 再改變例外狀況遮罩，它會報告回呼事件`copyfmt_event`。 如果複製完成之後，**state &**[exceptions](#exceptions) 為非零值，此函式會以引數 [rdstate](#rdstate) 有效呼叫 [clear](#clear)。 它會傳回 **\*this**。
+此成員函式會報告回呼事件**清除\_事件**。 然後它會複製從*右* 成 **\*這** 填滿字元、 繫結指標和格式設定資訊。 再改變例外狀況遮罩，它會報告回呼事件`copyfmt_event`。 如果複製完成之後，**state &**[exceptions](#exceptions) 為非零值，此函式會以引數 [rdstate](#rdstate) 有效呼叫 [clear](#clear)。 它會傳回 **\*this**。
 
 ### <a name="example"></a>範例
 

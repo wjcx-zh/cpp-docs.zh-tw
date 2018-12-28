@@ -241,7 +241,7 @@ enum event {
 
 - `copyfmt_event`識別以呼叫結尾附近發生的回呼[copyfmt](../standard-library/basic-ios-class.md#copyfmt)、 之前[例外狀況遮罩](../standard-library/ios-base-class.md)複製。
 
-- `erase_event`識別的呼叫開頭發生的回呼[copyfmt](../standard-library/basic-ios-class.md#copyfmt)，或呼叫的解構函式的開頭**\*這**。
+- `erase_event`識別的呼叫開頭發生的回呼[copyfmt](../standard-library/basic-ios-class.md#copyfmt)，或呼叫的解構函式的開頭 **\*這**。
 
 - `imbue_event`識別發生結尾的呼叫的回呼[imbue](#imbue)、 函式會傳回之前。
 

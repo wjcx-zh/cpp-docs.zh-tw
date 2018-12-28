@@ -155,7 +155,7 @@ LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 
 - `setlocale( LC_ALL, "<language>_<country>.<code_page>" );`
 
-   設定所指定的地區設定的語言、 國家/地區和字碼頁*\<語言 >*， *\<國家/地區 >*，以及*\<字碼頁>* 字串。 您可以使用各種語言、國家/地區和字碼頁的組合。 例如，此呼叫會以字碼頁 1252 將地區設定設為加拿大法文：
+   設定所指定的地區設定的語言、 國家/地區和字碼頁 *\<語言 >*， *\<國家/地區 >*，以及 *\<字碼頁>* 字串。 您可以使用各種語言、國家/地區和字碼頁的組合。 例如，此呼叫會以字碼頁 1252 將地區設定設為加拿大法文：
 
    `setlocale( LC_ALL, "French_Canada.1252" );`
 

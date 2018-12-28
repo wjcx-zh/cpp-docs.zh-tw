@@ -1520,7 +1520,7 @@ virtual void OnDrawRibbonSliderZoomButton(
 
 ### <a name="remarks"></a>備註
 
-根據預設，在功能區滑桿上的顯示比例按鈕會以圓形**+** 或是**-** 登入的中心。 若要自訂顯示比例按鈕的外觀，覆寫這個方法在衍生的視覺管理員。
+根據預設，在功能區滑桿上的顯示比例按鈕會以圓形 **+** 或是 **-** 登入的中心。 若要自訂顯示比例按鈕的外觀，覆寫這個方法在衍生的視覺管理員。
 
 ##  <a name="ondrawribbonstatusbarpane"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonStatusBarPane
 

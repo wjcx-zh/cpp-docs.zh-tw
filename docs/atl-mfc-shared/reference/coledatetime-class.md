@@ -169,7 +169,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="example"></a>範例
 
-運算子**>=**， **\< =**， **>**，與**<**，如果會判斷提示`COleDateTime`物件設定為 null。
+運算子 **>=**， **\<=**， **>**，與 **<**，如果會判斷提示`COleDateTime`物件設定為 null。
 
 [!code-cpp[NVC_ATLMFC_Utilities#170](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_3.cpp)]
 

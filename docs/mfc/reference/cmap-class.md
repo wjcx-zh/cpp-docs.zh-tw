@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 3991ae4c7455aa8e6eb377112cb89c057e9567e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88ca218d4cb4e70dcc46ba04bbdfb7a9d12eb808
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627314"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657574"
 ---
 # <a name="cmap-class"></a>CMap 類別
 
@@ -106,7 +106,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 
 |名稱|描述|
 |----------|-----------------|
-|[CMap::operator]](#operator_at)|將元素插入到 map — 運算子替代`SetAt`。|
+|[CMap::operator \[ \]](#operator_at)|將元素插入到 map — 運算子替代`SetAt`。|
 
 ## <a name="remarks"></a>備註
 
@@ -116,7 +116,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 
 全域 helper 函式，這個類別呼叫的特定成員函式必須是可自訂的大部分使用`CMap`類別。 請參閱[集合類別 Helper](../../mfc/reference/collection-class-helpers.md)的巨集和全域區段中**MFC 參考 》**。
 
-`CMap` 覆寫[cobject:: Serialize](../../mfc/reference/cobject-class.md#serialize)支援序列化和傾印其項目。 如果對應儲存封存使用`Serialize`，每個地圖元素會依序序列化。 預設實作`SerializeElements`helper 函式會執行位元的寫入。 如需指標集合項目的序列化的資訊衍生自`CObject`或其他使用者定義型別，請參閱[如何： 建立類型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。
+`CMap` 覆寫[cobject:: Serialize](../../mfc/reference/cobject-class.md#serialize)支援序列化和傾印其項目。 如果對應儲存封存使用`Serialize`，每個地圖元素會依序序列化。 預設實作`SerializeElements`helper 函式會執行位元的寫入。 如需指標集合項目的序列化的資訊衍生自`CObject`或其他使用者定義型別，請參閱[How to:建立類型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。
 
 如果您需要個別的項目對應 （索引鍵和值） 中的診斷傾印，您必須設定為 1 或更高的傾印內容的深度。
 

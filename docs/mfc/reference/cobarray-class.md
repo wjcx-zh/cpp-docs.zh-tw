@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 27894efd-2370-4776-9ed9-24a98492af17
-ms.openlocfilehash: 255928fd767dab36404af561f9dda2c1115fc30f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031f163a5a4b5663b296dc6615712fe7dd5dbc56
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508260"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657600"
 ---
 # <a name="cobarray-class"></a>CObArray 類別
 
@@ -93,7 +93,7 @@ class CObArray : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CObArray::operator]](#operator_at)|設定或取得指定索引處的項目。|
+|[CObArray::operator \[ \]](#operator_at)|設定或取得指定索引處的項目。|
 
 ## <a name="remarks"></a>備註
 

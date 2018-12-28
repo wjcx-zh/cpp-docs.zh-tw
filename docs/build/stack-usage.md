@@ -1,30 +1,64 @@
 ---
-title: 堆疊使用方式
-ms.date: 11/04/2016
+title: x64 堆疊使用方式
+ms.date: 12/17/2018
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
-ms.openlocfilehash: 5ee9da50a03e1137ed6543cd349481148c9127d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3318a3512f83e242496454ffa2dc4aa8d26e1fc3
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452217"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627315"
 ---
-# <a name="stack-usage"></a>堆疊使用方式
+# <a name="x64-stack-usage"></a>x64 堆疊使用方式
 
-目前的 RSP 位址以外的所有記憶體會被都視為 volatile： 期間的使用者偵錯工作階段中或中斷處理常式的 OS 或偵錯工具中，可能會覆寫這個記憶體。 因此，必須一律設定 RSP，然後再嘗試讀取或寫入至堆疊框架的值。
+目前的 RSP 位址以外的所有記憶體會都視為 volatile:OS 或偵錯工具中，可能會覆寫此記憶體期間的使用者偵錯工作階段中或中斷處理常式。 因此，必須一律設定 RSP，然後再嘗試讀取或寫入至堆疊框架的值。
 
 本章節將討論的本機變數的堆疊空間配置和**alloca**內建函式。
 
-- [堆疊配置](../build/stack-allocation.md)
+## <a name="stack-allocation"></a>堆疊配置
 
-- [動態參數堆疊區域建構](../build/dynamic-parameter-stack-area-construction.md)
+函式的初構會負責配置堆疊空間的本機變數，儲存的暫存器，堆疊參數和暫存器參數。
 
-- [函式類型](../build/function-types.md)
+[參數] 區域會一律位於堆疊的底部 (即使`alloca`用)，如此一來，它一律是相鄰的傳回位址的任何函式呼叫期間。 它包含至少四個項目，但一定足夠空間來保存所有的參數所需的任何可能被呼叫的函式。 請注意，即使參數本身會在堆疊; 永遠不會主目錄，暫存器參數一律配置空間被呼叫端會保證其所有的參數有已配置空間。 住家地址所需的暫存器引數的因此如果呼叫的函式需要的引數清單 (va_list) 或個別引數位址的連續區域使用。 此區域也提供方便的地方來儲存暫存器引數，thunk 執行期間，或做為偵錯的選項 （例如，它很容易引數如果它們儲存在其初構程式碼中的住家地址，偵錯期間尋找）。 即使呼叫的函式具有少於 4 個參數，這 4 的堆疊位置有效地呼叫的函式，所擁有，並可能由所呼叫函式用於儲存暫存器值的參數以外的其他用途。  因此呼叫者可能不會儲存資訊在堆疊的這個區域中跨函式呼叫。
 
-- [malloc 對齊](../build/malloc-alignment.md)
+如果以動態方式配置空間 (`alloca`) 在函數中，然後靜態暫存器必須用作框架指標來標記的固定部分堆疊的基底和暫存器必須儲存，且在初構中初始化。 請注意，當`alloca`是，從相同的呼叫端呼叫相同的被呼叫端可能會有不同的住家地址為暫存器參數。
 
-- [alloca](../build/alloca.md)
+堆疊一律會維持 16 個位元組對齊，除非內 （例如之後會推入的傳回位址,），初構和 try-except 中指示的位置[函式型別](#function-types)框架函式的特定類別。
+
+以下是所有暫存器和堆疊所需的參數在堆疊底部的 B 中 where 函式的呼叫非分葉函式 b 函式 A 的初構堆疊配置的範例有已配置空間。 呼叫會推入的傳回位址和 B 的初構會針對其本機變數、 靜態暫存器，並呼叫函式所需的空間配置空間。 如果使用 B `alloca`，儲存區域的本機變數/靜態暫存器和參數堆疊區域之間已配置空間。
+
+![AMD 轉換範例](../build/media/vcamd_conv_ex_5.png "AMD 轉換範例")
+
+當函式 B 呼叫另一個函式時，為住家地址的正下方 RCX 的推入的傳回位址。
+
+## <a name="dynamic-parameter-stack-area-construction"></a>動態參數堆疊區域建構
+
+使用框架指標時，選擇以動態方式建立參數堆疊區域。 未進行此設定目前 x64 編譯器。
+
+## <a name="function-types"></a>函式類型
+
+基本上有兩種類型的函式。 需要的堆疊框架的函式會呼叫*框架函式*。 不需要堆疊框架的函式會呼叫*分葉函式*。
+
+畫面格函式是配置堆疊空間，會呼叫其他函式、 將儲存靜態暫存器，或使用例外狀況處理函式。 您也必須以函式的資料表項目。 畫面格函式需要初構和終解。 畫面格函式可以動態地配置堆疊空間，而且可以利用框架指標。 框架函式具有完整的功能，呼叫標準，其可供使用。
+
+如果框架函式不會呼叫另一個函式，則不需要對齊堆疊 (參考一節[堆疊配置](#stack-allocation))。
+
+分葉函式是不需要函式表項目。 它無法變更任何靜態暫存器，包括 RSP，這表示它無法呼叫任何函數或配置堆疊空間。 它允許它執行時保留堆疊是未對齊。
+
+## <a name="malloc-alignment"></a>malloc 對齊
+
+[malloc](../c-runtime-library/reference/malloc.md)保證會傳回已適當對齊的儲存具有基本對齊，以及任何物件配置的記憶體無法容納的記憶體。 A*基本對齊*是小於或等於沒有對齊規格的實作所支援的最大對齊的對齊方式。 (在 Visual c + + 中，這是所需的對齊方式`double`，或 8 個位元組。 在以 64 位元平台為目標的程式碼中，則為 16 個位元組)。比方說，四個位元組的配置會在支援任何四個位元組或較小物件的界限上對齊。
+
+Visual c + + 允許具有型別*延伸對齊*，也稱為*過度對齊*型別。 例如，SSE 類型[__m128](../cpp/m128.md)並`__m256`，和使用宣告的型別`__declspec(align( n ))`其中`n`大於 8，擁有延伸對齊。 不保證記憶體對齊在適合需要擴充的對齊之物件的界限上`malloc`。 若要為過度對齊類型配置記憶體，請使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)和相關函式。
+
+## <a name="alloca"></a>alloca
+
+[_alloca](../c-runtime-library/reference/alloca.md)必須是 16 位元組對齊，並且還必須使用框架指標。
+
+堆疊配置必須包含空間之後，後續呼叫的函式，參數中所述[堆疊配置](#stack-allocation)。
 
 ## <a name="see-also"></a>另請參閱
 
-[x64 軟體慣例](../build/x64-software-conventions.md)
+[x64 軟體慣例](../build/x64-software-conventions.md)<br/>
+[align](../cpp/align-cpp.md)<br/>
+[__declspec](../cpp/declspec.md)

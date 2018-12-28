@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-ms.openlocfilehash: a0d8fa733a5da14e8ee16acf2623df07c9974893
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d33c54e82e9bc228b97bff4802c9231a98f51033
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523366"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657483"
 ---
 # <a name="arrayview-class"></a>array_view 類別
 
@@ -94,7 +94,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 |名稱|描述|
 |----------|-----------------|
 |[operator()](#operator_call)|傳回的值或多個參數所指定的項目。|
-|[operator[]](#operator_at)|傳回參數所指定的項目。|
+|[operator\[\]](#operator_at)|傳回參數所指定的項目。|
 |[operator=](#operator_eq)|將指定的內容複製`array_view`到這個物件。|
 
 ### <a name="public-constants"></a>公用常數

@@ -1,18 +1,18 @@
 ---
 title: align (C++)
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - align_cpp
 helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-ms.openlocfilehash: f5353354a334f6ee597bca3e49dfa2b4f98a0005
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1bfe6e7a4646be8cea622078b4d85f20f458e1c5
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440439"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627328"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -78,9 +78,9 @@ __declspec(align(32)) struct Str1{
 
 - [Align 如何搭配資料封裝](#vclrfhowalignworkswithdatapacking)
 
-- [結構對齊範例](../build/examples-of-structure-alignment.md)(x64 專用)
+- [結構對齊範例](../build/x64-software-conventions.md#examples-of-structure-alignment)(x64 專用)
 
-##  <a name="vclrfalignexamples"></a> align 範例
+## <a name="vclrfalignexamples"></a> align 範例
 
 下列範例說明 `__declspec(align(#))` 如何影響資料結構的大小和對齊。 這個範例會假設下列定義：
 
@@ -171,7 +171,7 @@ void fn() {
 
 如果已在堆積上配置記憶體，則對齊會取決於所呼叫的配置函式。  例如，如果您使用 `malloc`，則結果會取決於運算元大小。 如果*arg* > = 8，則傳回的記憶體對齊 8 位元組。 如果*arg* < 8，則傳回的記憶體其對齊會是第一個 2 的乘冪小於*arg*。 例如，如果您使用 malloc(7)，則對齊是 4 個位元組。
 
-##  <a name="vclrf_declspecaligntypedef"></a> 定義新型別與 __declspec(align(#))
+## <a name="vclrf_declspecaligntypedef"></a> 定義新型別與 __declspec(align(#))
 
 您可以定義具有對齊特性的類型。
 
@@ -184,7 +184,7 @@ typedef __declspec(align(32)) struct aType bType;
 
 現在，請`aType`並`bType`相同的大小 （8 位元組），但類型的變數`bType`會對齊 32 位元組。
 
-##  <a name="vclrfthreadlocalstorageallocation"></a> 對齊執行緒區域儲存區中的資料
+## <a name="vclrfthreadlocalstorageallocation"></a> 對齊執行緒區域儲存區中的資料
 
 使用 `__declspec(thread)` 屬性建立並放入影像之 TLS 區段的靜態執行緒區域儲存區 (TLS) 可用於對齊，就像一般靜態資料一樣。 為了建立 TLS 資料，作業系統會配置記憶體的 TLS 區段大小，並接受 TLS 區段對齊屬性。
 
@@ -207,7 +207,7 @@ struct CACHE_ALIGN S9 {
 __declspec(thread) struct S9 a;
 ```
 
-##  <a name="vclrfhowalignworkswithdatapacking"></a> Align 如何搭配資料封裝
+## <a name="vclrfhowalignworkswithdatapacking"></a> Align 如何搭配資料封裝
 
 `/Zp`編譯器選項和`pack`pragma 有封裝資料結構和等位成員的影響。此範例示範如何`/Zp`和`__declspec(align(#))`一起運作：
 
@@ -244,4 +244,4 @@ struct S {
 
 [__declspec](../cpp/declspec.md)<br/>
 [ARM ABI 慣例概觀](../build/overview-of-arm-abi-conventions.md)<br/>
-[x64 呼叫慣例概觀](../build/overview-of-x64-calling-conventions.md)
+[x64 軟體慣例](../build/x64-software-conventions.md)

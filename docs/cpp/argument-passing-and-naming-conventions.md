@@ -1,6 +1,6 @@
 ---
 title: 引數傳遞和命名慣例
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 helpviewer_keywords:
 - argument passing [C++], conventions
 - arguments [C++], widening
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-ms.openlocfilehash: 735e703e3e7d3ddb55a04fb0d29b3899682fe24e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca09d31d3d8d50ca94543c5e02262edd7b2deefc
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473290"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627237"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>引數傳遞和命名慣例
 
@@ -31,11 +31,11 @@ Visual C++ 編譯器允許您指定在函式和呼叫端之間傳遞引數和傳
 如果在函式中使用 ESI、EDI、EBX 和 EBP 暫存器，編譯器會產生初構和終解程式碼來儲存和還原這些暫存器。
 
 > [!NOTE]
->  從函式以傳值方式傳回結構、等位或類別時，類型的所有定義必須相同，否則程式可能會在執行階段失敗。
+> 從函式以傳值方式傳回結構、等位或類別時，類型的所有定義必須相同，否則程式可能會在執行階段失敗。
 
 如需如何定義您自己的函式初構和終解程式碼的資訊，請參閱[Naked 函式呼叫](../cpp/naked-function-calls.md)。
 
-預設值的相關資訊，請在目標為 x64 平台，請參閱的程式碼中呼叫慣例[概觀的 x64 呼叫慣例](../build/overview-of-x64-calling-conventions.md)。 在 ARM 平台為目標的程式碼中呼叫慣例問題的詳細資訊，請參閱[Visual c + + ARM 移轉常見問題](../build/common-visual-cpp-arm-migration-issues.md)。
+預設值的相關資訊，請在目標為 x64 平台，請參閱的程式碼中呼叫慣例[x64 呼叫慣例](../build/x64-calling-convention.md)。 在 ARM 平台為目標的程式碼中呼叫慣例問題的詳細資訊，請參閱[Visual c + + ARM 移轉常見問題](../build/common-visual-cpp-arm-migration-issues.md)。
 
 Visual C/C++ 編譯器支援下列呼叫慣例。
 

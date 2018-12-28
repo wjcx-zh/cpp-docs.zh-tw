@@ -1,6 +1,6 @@
 ---
 title: pack
-ms.date: 09/17/2018
+ms.date: 12/17/2018
 f1_keywords:
 - pack_CPP
 - vc-pragma.pack
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 0067b30c5c2eae9391defeea11c722d455ec8f1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b959c161a933cc76590cfbd65d295aad36f07d7
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507597"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627443"
 ---
 # <a name="pack"></a>pack
 指定結構、等位及類別成員的封裝對齊。
@@ -57,7 +57,7 @@ ms.locfileid: "50507597"
 
 - [__unaligned](../cpp/unaligned.md)
 
-- [結構對齊範例](../build/examples-of-structure-alignment.md)(x64 專用)
+- [結構對齊範例](../build/x64-software-conventions.md#examples-of-structure-alignment)(x64 專用)
 
    > [!WARNING]
    > 請注意，在 Visual Studio 2015 和更新版本中，您可以使用標準 alignas 和 alignof 運算子，與可跨編譯器移植的 `__alignof` 和 `declspec( align )` 不同。 C + + 標準無法處理封裝作業，因此您仍然必須使用**組件**（或其他編譯器上對應的延伸模組） 來指定比目標架構的文字大小較小的對齊方式。

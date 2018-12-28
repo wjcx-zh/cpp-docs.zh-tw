@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - calling conventions
 ms.assetid: 11b1e45c-8fd1-420b-bca0-a19e294c1d85
-ms.openlocfilehash: 9aa25598674aa52502d5d3619e5015eb13b6fff8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc79a0636f900aa49e31f0dc35ee19657c3e1ccb
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532778"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626730"
 ---
 # <a name="calling-conventions"></a>呼叫慣例
 
@@ -17,7 +17,7 @@ Visual C/C++ 編譯器提供數個用於呼叫內部和外部函式的不同慣�
 
 與此主旨有關的主題將說明呼叫慣例之間的差異、引數傳遞方式，以及函式傳回值的方式。 並且也會探討 naked 函式呼叫，這是一個讓您自行撰寫初構和終解程式碼的進階功能。
 
-如需適用於 x64 呼叫慣例的處理器，請參閱[呼叫慣例](../build/calling-convention.md)。
+如需適用於 x64 呼叫慣例的處理器，請參閱[呼叫慣例](../build/x64-calling-convention.md)。
 
 ## <a name="topics-in-this-section"></a>本節主題
 

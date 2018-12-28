@@ -1,6 +1,6 @@
 ---
 title: __vectorcall
-ms.date: 10/10/2018
+ms.date: 12/17/2018
 f1_keywords:
 - __vectorcall_cpp
 - __vectorcall
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - __vectorcall keyword
 - __vectorcall
 ms.assetid: 1c95ed59-86c6-4857-b4ed-10519193f851
-ms.openlocfilehash: ab542a7fbae286a7f39b66bb4857cd8e8ff6ab59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55c383c4bdf83ddb5fdf1c4990d5f2e47b4d819a
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507220"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627412"
 ---
 # <a name="vectorcall"></a>__vectorcall
 
 **Microsoft 專屬**
 
-**__Vectorcall**呼叫慣例會指定函數的引數會傳入暫存器，盡可能中。 **__vectorcall**使用更多的暫存器引數比[__fastcall](../cpp/fastcall.md)則是預設[x64 呼叫慣例](../build/overview-of-x64-calling-conventions.md)使用。 **__Vectorcall**呼叫慣例僅適用於原生程式碼及更新版本包含 Streaming SIMD Extensions 2 (SSE2) 的 x86 和 x64 處理器上。 使用 **__vectorcall**加速函式，傳遞多個浮點或 SIMD 向量引數，並執行作業，利用引數的暫存器中載入。 下列清單顯示的 x86 和 x64 實作通用的功能 **__vectorcall**。 這些差異稍後會在本文中加以說明。
+**__Vectorcall**呼叫慣例會指定函數的引數會傳入暫存器，盡可能中。 **__vectorcall**使用更多的暫存器引數比[__fastcall](../cpp/fastcall.md)則是預設[x64 呼叫慣例](../build/x64-calling-convention.md)使用。 **__Vectorcall**呼叫慣例僅適用於原生程式碼及更新版本包含 Streaming SIMD Extensions 2 (SSE2) 的 x86 和 x64 處理器上。 使用 **__vectorcall**加速函式，傳遞多個浮點或 SIMD 向量引數，並執行作業，利用引數的暫存器中載入。 下列清單顯示的 x86 和 x64 實作通用的功能 **__vectorcall**。 這些差異稍後會在本文中加以說明。
 
 |元素|實作|
 |-------------|--------------------|

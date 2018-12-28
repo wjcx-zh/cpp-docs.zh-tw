@@ -24,12 +24,12 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-ms.openlocfilehash: bb658db157433aadce183e7fab437f15251ff54c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6083fcf9db8236df15d1cb5e7de4cc15fe5916e
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631292"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626717"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Visual C++ 中的文字和字串
 
@@ -46,10 +46,10 @@ ms.locfileid: "50631292"
 [針對多位元組字元集 (MBCS) 支援](../text/support-for-multibyte-character-sets-mbcss.md)<br/>
 討論 MBCS 至 Unicode 支援字元集，例如日文和中文，不能以單一位元組表示的替代方案。
 
-[Tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)<br/>
+[在 tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)<br/>
 提供許多資料類型、 常式和其他物件的 Microsoft 特定的泛型文字對應。
 
-[如何：在各種字串類型之間轉換](../text/how-to-convert-between-various-string-types.md)<br/>
+[如何：各種字串類型之間轉換](../text/how-to-convert-between-various-string-types.md)<br/>
 示範如何將各種 Visual c + + 字串類型轉換成其他字串。
 
 ## <a name="related-sections"></a>相關章節

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-ms.openlocfilehash: b6c8dc5548eb1082866b7a069fb38fd329effc75
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f309f6d7147b37691564d3d72c151da90055c6a
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437232"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627341"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>多位元組字元集 (MBCS) 的支援
 
@@ -46,7 +46,7 @@ C 執行階段程式庫和 MFC 支援單一位元組、MBCS 和 Unicode 程式�
 
 ### <a name="mbcsunicode-portability"></a>MBCS/Unicode 可攜性
 
-使用 Tchar.h 標頭檔，您可以從相同來源建置單一位元組、MBCS 和 Unicode 應用程式。 Tchar.h 中定義巨集前面加上 *_tcs* ，其對應至`str`， `_mbs`，或`wcs`函式，視需要。 若要建立 MBCS，請定義符號`_MBCS`。 若要建置 Unicode，請定義符號`_UNICODE`。 根據預設，`_MBCS`定義針對 MFC 應用程式。 如需詳細資訊，請參閱 < [Tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)。
+使用 tchar.h 標頭檔，您可以建置單一位元組、 MBCS 和 Unicode 來源相同的應用程式。 Tchar.h 中定義巨集前面加上 *_tcs* ，其對應至`str`， `_mbs`，或`wcs`函式，視需要。 若要建立 MBCS，請定義符號`_MBCS`。 若要建置 Unicode，請定義符號`_UNICODE`。 根據預設，`_UNICODE`定義針對 MFC 應用程式。 如需詳細資訊，請參閱 < [tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)。
 
 > [!NOTE]
 >  如果您同時定義行為是未定義`_UNICODE`和`_MBCS`。

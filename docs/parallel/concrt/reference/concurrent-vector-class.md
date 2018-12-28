@@ -33,12 +33,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-ms.openlocfilehash: 367a5ed6bf9d42730a309570c93afd1b315bae25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8036b0942600e5d47254583e2675c525010a5c1
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501747"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657561"
 ---
 # <a name="concurrentvector-class"></a>concurrent_vector 類別
 
@@ -121,7 +121,7 @@ private details::_Concurrent_vector_base_v4;
 
 |名稱|描述|
 |----------|-----------------|
-|[operator[]](#operator_at)|多載。 提供存取並行向量中的指定索引處的項目。 這個方法是並行安全的讀取作業，以及同時成長，只要確定之值的向量，`_Index`小於並行向量的大小。|
+|[operator\[\]](#operator_at)|多載。 提供存取並行向量中的指定索引處的項目。 這個方法是並行安全的讀取作業，以及同時成長，只要確定之值的向量，`_Index`小於並行向量的大小。|
 |[operator=](#operator_eq)|多載。 將另一個內容指派`concurrent_vector`如下的物件。 這個方法不是並行安全。|
 
 ## <a name="remarks"></a>備註

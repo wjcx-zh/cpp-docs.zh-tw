@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 4b70aa57a6485fefe0dbb678e72ba127502c89e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78fa83c30bc55d82ffa5d2ba1e7d65472643f86b
+ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481922"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53737620"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>從 OpenMP 移轉至並行執行階段
 
@@ -34,7 +34,7 @@ OpenMP 程式設計模型是以開放標準定義的，具有定義完善的 For
 |您需要例外狀況處理支援。|PPL 可讓您攔截例外狀況的內部和外部的平行區域或迴圈。 在 OpenMP，您必須處理迴圈的平行區域內的例外狀況。|
 |您需要取消機制。|PPL 讓取消個別工作和平行工作樹狀結構的應用程式。 OpenMP 需要應用程式實作自己的取消機制。|
 |您需要完成啟動所在的不同內容中的平行程式碼。|並行執行階段可讓您在某個內容中，啟動工作，然後等候或取消該工作在其他內容中。 OpenMP，在所有的平行工作必須完成啟動所在的內容中。|
-|您需要增強的偵錯支援。|Visual Studio 提供**平行堆疊**並**平行工作**windows，讓您更輕鬆地偵錯多執行緒應用程式。<br /><br /> 如需有關偵錯支援並行執行階段的詳細資訊，請參閱[使用工作視窗](/visualstudio/debugger/using-the-tasks-window)，[使用平行堆疊視窗](/visualstudio/debugger/using-the-parallel-stacks-window)，和[逐步解說： 偵錯平行處理應用程式](/visualstudio/debugger/walkthrough-debugging-a-parallel-application)。|
+|您需要增強的偵錯支援。|Visual Studio 提供**平行堆疊**並**平行工作**windows，讓您更輕鬆地偵錯多執行緒應用程式。<br /><br /> 如需有關偵錯支援並行執行階段的詳細資訊，請參閱[使用工作視窗](/visualstudio/debugger/using-the-tasks-window)，[使用平行堆疊視窗](/visualstudio/debugger/using-the-parallel-stacks-window)，和[逐步解說：偵錯平行應用程式](/visualstudio/debugger/walkthrough-debugging-a-parallel-application)。|
 
 ## <a name="when-not-to-migrate-from-openmp-to-the-concurrency-runtime"></a>不要從 OpenMP 移轉至並行執行階段的時機
 
@@ -52,13 +52,13 @@ OpenMP 程式設計模型是以開放標準定義的，具有定義完善的 For
 
 指定使用 OpenMP 基本迴圈[平行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)並[如](../../parallel/openmp/reference/for-openmp.md)指示詞，示範如何將它轉換成使用並行執行階段[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)演算法。
 
-[如何：轉換使用取消的 OpenMP 迴圈來使用並行執行階段](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
+[如何：轉換使用並行執行階段使用取消的 OpenMP 迴圈](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
 指定 OpenMP[平行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[如](../../parallel/openmp/reference/for-openmp.md)迴圈，不需要所有的反覆項目，若要執行，示範如何將它轉換成使用並行執行階段取消機制。
 
-[如何：轉換使用例外狀況處理的 OpenMP 迴圈來使用並行執行階段](../../parallel/concrt/convert-an-openmp-loop-that uses-exception-handling.md)<br/>
+[如何：轉換的 OpenMP 迴圈來使用並行執行階段使用例外狀況處理](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
 指定 OpenMP[平行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[如](../../parallel/openmp/reference/for-openmp.md)執行例外狀況處理的迴圈會示範如何將它轉換成使用並行執行階段例外狀況處理機制。
 
-[如何：轉換使用削減變數的 OpenMP 迴圈來使用並行執行階段](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
+[如何：轉換使用削減變數來使用並行執行階段的 OpenMP 迴圈](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
 指定 OpenMP[平行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[如](../../parallel/openmp/reference/for-openmp.md)使用迴圈[減少](../../parallel/openmp/reference/reduction.md)子句中，示範如何將它轉換成使用並行執行階段。
 
 ## <a name="see-also"></a>另請參閱

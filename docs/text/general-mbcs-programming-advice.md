@@ -9,18 +9,18 @@ helpviewer_keywords:
 - MBCS [C++], programming
 - dialog boxes [C++], fonts
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
-ms.openlocfilehash: 0ff15244f4e93ecd2913fa825e8b5c351c7ff84d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 800e94bfb8a52b806ad45368499f126fbf163389
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501838"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626691"
 ---
 # <a name="general-mbcs-programming-advice"></a>一般 MBCS 程式設計的建議
 
 使用下列秘訣：
 
-- 為彈性，請使用執行階段巨集這類`_tcschr`和`_tcscpy`盡可能。 如需詳細資訊，請參閱 < [Tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)。
+- 為彈性，請使用執行階段巨集這類`_tcschr`和`_tcscpy`盡可能。 如需詳細資訊，請參閱 < [tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)。
 
 - 使用 C 執行階段`_getmbcp`函式可取得目前的字碼頁的相關資訊。
 

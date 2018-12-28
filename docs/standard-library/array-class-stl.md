@@ -96,12 +96,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: 6f32519e56e42620caec755e6c250d0ee93c6677
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fdc3705980ac8f763e0438f19920148437e7ed27
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518961"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657522"
 ---
 # <a name="array-class-c-standard-library"></a>array 類別 (C++ 標準程式庫)
 
@@ -162,7 +162,7 @@ class array;
 |運算子|描述|
 |-|-|
 |[array::operator=](#op_eq)|取代受控制的序列。|
-|[array::operator[]](#op_at)|存取指定位置的項目。|
+|[array:: operator\[\]](#op_at)|存取指定位置的項目。|
 
 ## <a name="remarks"></a>備註
 

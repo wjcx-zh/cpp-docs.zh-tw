@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: ad89dfa29df6e4ef500e01e53f203fa3c401602b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a6fa8b9c923ff697831c29b8004ce360baf7d77
+ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638226"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53587885"
 ---
 # <a name="opt-optimizations"></a>/OPT (最佳化)
 
@@ -67,7 +67,7 @@ ms.locfileid: "50638226"
 
 ## <a name="remarks"></a>備註
 
-在命令列使用時，連結器會預設為**ICF，/opt: ref，LBR**。 如果 **/debug**指定，預設值是 **/opt: noref NOICR，NOLBR**。
+在命令列使用時，連結器會預設為**ICF，/opt: ref，LBR**。 如果 **/debug**指定，預設值是 **/opt: noref NOICF，NOLBR**。
 
 **/Opt**最佳化通常減少映像大小，以及增加程式的速度。 這些增強功能可能很長，在較大的程式中，這也是為什麼在零售組建的預設啟用。
 

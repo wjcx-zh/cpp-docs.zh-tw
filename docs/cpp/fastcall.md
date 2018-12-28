@@ -1,6 +1,6 @@
 ---
 title: __fastcall
-ms.date: 10/09/2018
+ms.date: 12/17/2018
 f1_keywords:
 - __fastcall_cpp
 - __fastcall
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __fastcall keyword [C++]
 ms.assetid: bb5b9c8a-dfad-450c-9119-0ac2bc59544f
-ms.openlocfilehash: 19cc8efb98660e8cdb3f6d9b03f0b7bd85a34949
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e7cd4b1202ee717abf9a9767785ed8abe96bd69
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480037"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627360"
 ---
 # <a name="fastcall"></a>__fastcall
 
@@ -29,11 +29,11 @@ ms.locfileid: "50480037"
 |大小寫轉譯慣例|未執行大小寫轉譯。|
 
 > [!NOTE]
->  未來的編譯器版本可能會使用不同的暫存器來儲存參數。
+> 未來的編譯器版本可能會使用不同的暫存器來儲存參數。
 
 使用[/Gr](../build/reference/gd-gr-gv-gz-calling-convention.md)編譯器選項會造成編譯為模組中的每個函式 **__fastcall**除非使用衝突的屬性，宣告的函式或函式的名稱是`main`.
 
-**__Fastcall**關鍵字會接受並忽略 ARM 和 x64 為目標的編譯器架構; 在 x64 晶片，依照慣例前, 四個引數會傳入暫存器，可能的話，請傳遞額外引數在堆疊中。 如需詳細資訊，請參閱 <<c0> [ 概觀的 x64 呼叫慣例](../build/overview-of-x64-calling-conventions.md)。 在 ARM 晶片上，最多可以在暫存器中傳遞四個整數引數和八個浮點引數，而其他引數則是在堆疊上傳遞。
+**__Fastcall**關鍵字會接受並忽略 ARM 和 x64 為目標的編譯器架構; 在 x64 晶片，依照慣例前, 四個引數會傳入暫存器，可能的話，請傳遞額外引數在堆疊中。 如需詳細資訊，請參閱 < [x64 呼叫慣例](../build/x64-calling-convention.md)。 在 ARM 晶片上，最多可以在暫存器中傳遞四個整數引數和八個浮點引數，而其他引數則是在堆疊上傳遞。
 
 對於非靜態類別函式，如果函式是以非正規的方式定義，則不需要在非正規定義上指定呼叫慣例修飾詞。 也就是說，對於類別非靜態成員方法而言，宣告時所指定的呼叫慣例是在定義時假設。 如果已指定此類別定義：
 

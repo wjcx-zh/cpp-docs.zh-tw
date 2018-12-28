@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: da31f6eef95364ad010d9c9aeb19225d42a42283
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 767d4782ec637a0404051e6871d584f73cefdcd2
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452321"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657470"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray 類別
 
@@ -67,7 +67,7 @@ class CTypedPtrArray : public BASE_CLASS
 
 |名稱|描述|
 |----------|-----------------|
-|[CTypedPtrArray::operator]](#operator_at)|設定或取得指定索引處的項目。|
+|[CTypedPtrArray::operator \[ \]](#operator_at)|設定或取得指定索引處的項目。|
 
 ## <a name="remarks"></a>備註
 

@@ -17,12 +17,12 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: 675112e108f57ad5208899005865570491e0d055
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e427206379f1e7d094362411f074ad9cafb43fd
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486579"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657535"
 ---
 # <a name="texture-class"></a>texture 類別
 
@@ -76,7 +76,7 @@ class texture;
 |名稱|描述|
 |----------|-----------------|
 |[operator()](#operator_call)|傳回參數所指定的項目值。|
-|[operator[]](#operator_at)|傳回位於指定索引處的項目。|
+|[operator\[\]](#operator_at)|傳回位於指定索引處的項目。|
 |[operator=](#operator_eq)|複製指定[紋理](texture-class.md)如下的物件。|
 
 ### <a name="public-constants"></a>公用常數
@@ -103,7 +103,7 @@ class texture;
 
 **標頭：** amp_graphics.h
 
-**命名空間：** concurrency:: graphics
+**命名空間：** Concurrency:: graphics
 
 ##  <a name="dtor"></a> ~ 紋理
 
@@ -335,7 +335,7 @@ void set(
 *_Rank*<br/>
 索引的順位。
 
-*值*<br/>
+*value*<br/>
 項目的新值。
 
 ##  <a name="ctor"></a> 材質

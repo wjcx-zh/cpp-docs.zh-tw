@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-ms.openlocfilehash: 4476b0805c8806d344a9290ba190aed7c7697a8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51d85991fdab273d1cdad4e99400d1ad8ed6324c
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514630"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627423"
 ---
 # <a name="international-enabling"></a>啟用國際化
 
@@ -27,7 +27,7 @@ ms.locfileid: "50514630"
 
    - 使用相同的可攜式執行階段功能可讓 MFC 可攜式下其中一個環境。
 
-   - 請常值字串和字元可攜式下其中一個環境中，使用`_T`巨集。 如需詳細資訊，請參閱 < [Tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)。
+   - 請常值字串和字元可攜式下其中一個環境中，使用`_T`巨集。 如需詳細資訊，請參閱 < [tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)。
 
    - 剖析字串，在 MBCS 下的時，請採取預防措施。 這些措施並不需要在 Unicode。 如需詳細資訊，請參閱 < [MBCS 程式設計提示](../text/mbcs-programming-tips.md)。
 

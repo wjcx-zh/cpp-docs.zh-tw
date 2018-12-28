@@ -1,6 +1,6 @@
 ---
 title: include_alias
-ms.date: 11/04/2016
+ms.date: 12/16/2018
 f1_keywords:
 - vc-pragma.include_alias
 - include_alias_CPP
@@ -8,25 +8,25 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-ms.openlocfilehash: 616672d713a9f0ac6eab4be8bce9b178d2510723
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d32cad2533b6044348651797d0278bcbebcafd6
+ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573159"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53587872"
 ---
 # <a name="includealias"></a>include_alias
 
-指定*short_filename*是要做為別名*long_filename*。
+指定當*alias_filename*中找到`#include`指示詞，編譯器會取代*actual_filename*在其位置。
 
 ## <a name="syntax"></a>語法
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias (「*long_filename*"，"*short_filename*")
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias (*long_filename*， *short_filename*)
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias (「*alias_filename*"，"*actual_filename*")
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias (\<*alias_filename*>， \< *actual_filename*>)
 
 ## <a name="remarks"></a>備註
 
-有些檔案系統可使用比 8.3 FAT 檔案系統所限制更長的標頭檔名稱。 由於較長標頭檔名稱的前八個字元不一定是唯一的，因此編譯器無法依照 8.3 的限制直接截斷較長的名稱。 只要編譯器遇到*long_filename*字串，它會替代*short_filename*，並尋找標頭檔*short_filename*改。 這個 pragma 必須出現在對應的 `#include` 指示詞前面。 例如: 
+**Include_alias** pragma 指示詞可讓您取代具有不同的名稱或路徑，包含原始程式檔的檔案名稱的檔案。 比方說，有些檔案系統允許較長的標頭檔名稱超過 8.3 FAT 檔案系統限制。 由於較長標頭檔名稱的前八個字元不一定是唯一的，因此編譯器無法依照 8.3 的限制直接截斷較長的名稱。 只要編譯器遇到*alias_filename*字串，它會替代*actual_filename*，並尋找標頭檔*actual_filename*改。 這個 pragma 必須出現在對應的 `#include` 指示詞前面。 例如: 
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -83,8 +83,8 @@ ms.locfileid: "50573159"
 請注意，檔案名稱會報告錯誤訊息，或做為預先定義的值`__FILE__`巨集，在執行替代之後是檔案的名稱。 例如，下列指示詞之後看到輸出：
 
 ```cpp
-#pragma include_alias( "VeryLongFileName.H", "myfile.h" )
-#include "VeryLongFileName.H"
+#pragma include_alias( "VERYLONGFILENAME.H", "myfile.h" )
+#include "VERYLONGFILENAME.H"
 ```
 
 VERYLONGFILENAME 時發生錯誤。H 會產生下列錯誤訊息：
@@ -101,7 +101,7 @@ myfile.h(15) : error C2059 : syntax error
 #include "one.h"
 ```
 
-編譯器會搜尋 TWO.H 這個檔案，而不是 THREE.H。
+編譯器會搜尋這個檔案而不是 three.h。
 
 ## <a name="see-also"></a>另請參閱
 

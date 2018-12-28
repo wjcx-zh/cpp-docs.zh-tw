@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-ms.openlocfilehash: 81e51f136a42c0d0db12744735521ae2b3cdb5f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dcb194c72ca2a64317cddda8a1559e78edc0978f
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510704"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626665"
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>使用含有 _MBCS 程式碼的 TCHAR.H 資料類型
 
@@ -43,7 +43,7 @@ ms.locfileid: "50510704"
     #define _USE_INLINING
     ```
 
-   這個方法會導致在 Tchar.h 中，可將泛型文字常式直接對應到適當的 MBCS 常式中提供內嵌函式 thunk。 下列的程式碼將在 Tchar.h 中摘錄示範如何做到這點。
+   這個方法會導致在 tchar.h 中，可將泛型文字常式直接對應到適當的 MBCS 常式中提供內嵌函式 thunk。 下列的程式碼將在 tchar.h 中摘錄示範如何做到這點。
 
     ```cpp
     __inline char *_tcsrev(char *_s1)
@@ -58,7 +58,7 @@ ms.locfileid: "50510704"
     #define _MB_MAP_DIRECT
     ```
 
-   若您不想使用預設行為或無法使用內嵌，此方法提供快速替代方式。 它會讓泛型文字常式來由巨集直接對應到常式，如來自 Tchar.h 的下列範例所示的 MBCS 版本。
+   若您不想使用預設行為或無法使用內嵌，此方法提供快速替代方式。 它會讓泛型文字常式來由巨集直接對應到常式，如來自 tchar.h 的下列範例所示的 MBCS 版本。
 
     ```cpp
     #define _tcschr _mbschr
@@ -68,4 +68,4 @@ ms.locfileid: "50510704"
 
 ## <a name="see-also"></a>另請參閱
 
-[Tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)
+[在 tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)

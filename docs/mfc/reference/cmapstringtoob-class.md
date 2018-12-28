@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
-ms.openlocfilehash: 29f60748f8ff0681a3a73e31cbb049c27c3a45be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75e9b49bca6b94595186e69a900a28fe5e38522c
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656126"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657613"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb 類別
 
@@ -81,7 +81,7 @@ class CMapStringToOb : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CMapStringToOb::operator [ ]](#operator_at)|將元素插入到 map — 運算子替代`SetAt`。|
+|[CMapStringToOb::operator \[ \]](#operator_at)|將元素插入到 map — 運算子替代`SetAt`。|
 
 ## <a name="remarks"></a>備註
 
@@ -400,7 +400,7 @@ BOOL IsEmpty() const;
 
 ### <a name="remarks"></a>備註
 
-下表顯示其他成員函式，類似於**CMapStringToOb:: IsEmpty**。
+下表顯示其他成員函式，類似於**CMapStringToOb::IsEmpty**。
 
 |類別|成員函式|
 |-----------|---------------------|

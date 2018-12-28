@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-ms.openlocfilehash: bfb1a8b779f741360b406d9a5c24a36bca5e54f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32a5f9d20999740d4368f7901c797d87acce0be9
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662510"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657457"
 ---
 # <a name="matchresults-class"></a>match_results 類別
 
@@ -80,7 +80,7 @@ class match_results
 |運算子|描述|
 |-|-|
 |[operator=](#op_eq)|複製 match_results 物件。|
-|[operator[]](#op_at)|存取子物件。|
+|[operator\[\]](#op_at)|存取子物件。|
 
 ## <a name="requirements"></a>需求
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cmpxchg16b instruction
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
-ms.openlocfilehash: 62c9501bb2a21aab241f37805d58c6ec12073ff8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3cfe9d650b66dc08a96599652b52f0b153198afa
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629953"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627354"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
 
@@ -131,4 +131,4 @@ BigInt.Int[1] = 34, BigInt.Int[0] = 12
 
 [編譯器內建](../intrinsics/compiler-intrinsics.md)<br/>
 [_InterlockedCompareExchange 內建函式](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)<br/>
-[與 x86 編譯器衝突](../build/conflicts-with-the-x86-compiler.md)
+[與 x86 編譯器衝突](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - character sets [C++], international programming strategies
 - localization [C++], character sets
 ms.assetid: b09d9854-0709-4b9a-a00c-b0b8bc4199b1
-ms.openlocfilehash: 615ad42d5a1e4cb6076877e1d1b5de4bd11fdf83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91f4805152944202b7d3f7f45fce494f7e9d81af
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501318"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626678"
 ---
 # <a name="internationalization-strategies"></a>國際化策略
 
@@ -30,7 +30,7 @@ ms.locfileid: "50501318"
 
    您使用 MBCS 特有的功能。 字串可以包含單一位元組字元、 雙位元組字元，或兩者。 C 執行階段程式庫會提供僅限 MBCS 程式設計中的函式、 巨集和資料類型。 MFC 是完全 MBCS 啟用。
 
-- 您的應用程式的原始程式碼寫入完整的可攜性，藉由重新編譯使用的符號`_UNICODE`或符號`_MBCS`定義，您可以產生使用的版本。 如需詳細資訊，請參閱 < [Tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)。
+- 您的應用程式的原始程式碼寫入完整的可攜性，藉由重新編譯使用的符號`_UNICODE`或符號`_MBCS`定義，您可以產生使用的版本。 如需詳細資訊，請參閱 < [tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)。
 
    您使用完全可攜 C 執行階段函式、 巨集和資料類型。 MFC 的彈性支援任何這些策略。
 

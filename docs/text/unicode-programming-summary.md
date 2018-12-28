@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-ms.openlocfilehash: 01e5866866bfc9cf81b243c569e527ab5019b928
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df9335fa2fc66ebba73b5c92ecd8007ca435f499
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437924"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627263"
 ---
 # <a name="unicode-programming-summary"></a>Unicode 程式設計摘要
 
@@ -22,11 +22,11 @@ ms.locfileid: "50437924"
 
 - 指定進入點。
 
-   在上**輸出**頁面**連結器**在專案的資料夾[屬性頁](../ide/property-pages-visual-cpp.md) 對話方塊中，將**進入點**符號`wWinMainCRTStartup`.
+   在上**進階**頁面**連結器**在專案的資料夾[屬性頁](../ide/property-pages-visual-cpp.md) 對話方塊中，將**進入點**的符號`wWinMainCRTStartup`.
 
 - 使用可攜式執行階段函式和類型。
 
-   使用適當的 C 執行階段函式的 Unicode 字串處理。 您可以使用`wcs`系列函式，但您可能會偏好 （國際啟用），完全可攜式`_TCHAR`巨集。 這些巨集都會加上`_tcs`; 它們取代，其中第一，如`str`系列函式。 在將詳細說明這些函式[國際化](../c-runtime-library/internationalization.md)一節*執行階段程式庫參考*。 如需詳細資訊，請參閱 < [Tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)。
+   使用適當的 C 執行階段函式的 Unicode 字串處理。 您可以使用`wcs`系列函式，但您可能會偏好 （國際啟用），完全可攜式`_TCHAR`巨集。 這些巨集都會加上`_tcs`; 它們取代，其中第一，如`str`系列函式。 在將詳細說明這些函式[國際化](../c-runtime-library/internationalization.md)一節*執行階段程式庫參考*。 如需詳細資訊，請參閱 < [tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)。
 
    使用`_TCHAR`和相關的可移植資料型別中所述[Unicode 支援](../text/support-for-unicode.md)。
 
@@ -87,7 +87,7 @@ ms.locfileid: "50437924"
 
 - 執行階段程式庫提供所有字串處理函式的 Unicode 的版本。 （執行階段程式庫也提供適合的可攜式版本 MBCS 或 Unicode。 這些是`_tcs`巨集。)
 
-- Tchar.h 會提供可移植資料型別和`_T`巨集來轉譯常值字串和字元。 如需詳細資訊，請參閱 < [Tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)。
+- Tchar.h 會提供可移植資料型別和`_T`巨集來轉譯常值字串和字元。 如需詳細資訊，請參閱 < [tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)。
 
 - 執行階段程式庫提供的寬字元版本`main`。 使用`wmain`讓 Unicode 感知應用程式。
 

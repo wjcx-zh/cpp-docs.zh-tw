@@ -14,12 +14,12 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-ms.openlocfilehash: e7099c247a68823fbe5467f47c6afe1dc5a33abc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c76f1f9b00ea6e44f69f98286b83d4a84f12cac1
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544452"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657496"
 ---
 # <a name="textureview-class"></a>texture_view 類別
 
@@ -82,7 +82,7 @@ class texture_view<const value_type, _Rank>
 |名稱|描述|
 |----------|-----------------|
 |[operator()](#operator_call)|多載。 依索引取得項目值。|
-|[operator[]](#operator_at)|多載。 依索引取得項目值。|
+|[operator\[\]](#operator_at)|多載。 依索引取得項目值。|
 |[operator=](#operator_eq)|多載。 指派運算子。|
 
 ### <a name="public-data-members"></a>公用資料成員
@@ -473,7 +473,7 @@ void set(
 *_Index*<br/>
 若要設定，可能是多維度的項目索引。
 
-*值*<br/>
+*value*<br/>
 若要設定項目的值。
 
 ##  <a name="value_type"></a> value_type

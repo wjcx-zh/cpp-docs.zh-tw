@@ -6,12 +6,12 @@ helpviewer_keywords:
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 1b8568d69fea002e59925e1e9354407457954e42
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 9ebe4fec06996e908c619b6ac14af098b1c07a01
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176259"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978305"
 ---
 # <a name="lambda-expressions-in-c"></a>C++ 中的 Lambda 運算式
 
@@ -55,7 +55,7 @@ void abssort(float* x, unsigned n) {
 
 1. *尾端傳回型別*選擇性。
 
-1. *lambda 主體*)
+1. *lambda 主體*。
 
 ### <a name="capture-clause"></a>擷取子句
 
@@ -104,7 +104,7 @@ void f(Args... args) {
 
 **Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**這**指標可能傳值方式擷取，藉由指定`*this`capture 子句中。 表示整個值，藉以擷取*closure*，這是匿名函式物件，該 encapulates lambda 運算式，會複製到每個呼叫站台，會在叫用 lambda。 值，藉以擷取時，lambda 將執行中的平行或非同步作業，尤其是在特定硬體架構，例如 NUMA。
 
-如需示範如何使用 lambda 運算式與類別方法的範例，請參閱"範例:: Lambda 運算式在方法中使用 「 在[Lambda 運算式的範例](../cpp/examples-of-lambda-expressions.md)。
+如需示範如何使用 lambda 運算式與類別方法的範例，請參閱 「 範例：中的使用中方法的 Lambda 運算式 > [Lambda 運算式的範例](../cpp/examples-of-lambda-expressions.md)。
 
 使用擷取子句時，建議您記住這幾個重點，特別是同時使用 Lambda 與多執行緒時：
 
@@ -324,7 +324,7 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
 
 ## <a name="constexpr-lambda-expressions"></a>constexpr lambda 運算式
 
-**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): lambda 運算式可宣告為`constexpr`或常數運算式中使用時的每個資料成員初始設定它擷取或導入了允許的常數運算式。
+**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):Lambda 運算式可宣告為`constexpr`或常數運算式中允許的它會擷取或導入了每個資料成員初始設定時，常數運算式中使用。
 
 ```cpp
     int y = 32;

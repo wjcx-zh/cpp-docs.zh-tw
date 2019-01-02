@@ -12,18 +12,18 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: bf7c5e58b88da4f60d2e784692cb6d4a0ed84970
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 59df523cc553881186921a878d131a109ae3cf27
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627447"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978292"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>在 tchar.h 中的泛型文字對應
 
 若要簡化國際使用的程式碼的傳輸，Microsoft 執行階段程式庫會提供 Microsoft 特定的泛型文字對應的許多資料類型、 常式和其他物件。 您可以使用這些對應，在撰寫一般單一位元組、 多位元組，也能編譯的程式碼的 tchar.h 中定義或 Unicode 字元的設定，根據您使用定義的資訊清單常數`#define`陳述式。 泛型文字對應是與 ANSI 不相容的 Microsoft 延伸模組。
 
-藉由使用 tchar.h，您可以建置單一位元組、 多位元組字元集 (MBCS)，與來源相同的 Unicode 應用程式。 Tchar.h 中定義的巨集 (具有前置詞`_tcs`) 會使用正確的前置處理器定義中，對應到`str`， `_mbs`，或`wcs`函式，視需要。 若要建立 MBCS，請定義符號`_MBCS`。 若要建置 Unicode，請定義符號`_UNICODE`。 若要建置單一位元組的應用程式，定義未 （預設值）。 根據預設，`_MBCS`定義針對 MFC 應用程式。
+藉由使用 tchar.h，您可以建置單一位元組、 多位元組字元集 (MBCS)，與來源相同的 Unicode 應用程式。 Tchar.h 中定義的巨集 (具有前置詞`_tcs`) 會使用正確的前置處理器定義中，對應到`str`， `_mbs`，或`wcs`函式，視需要。 若要建立 MBCS，請定義符號`_MBCS`。 若要建置 Unicode，請定義符號`_UNICODE`。 若要建置單一位元組的應用程式，定義未 （預設值）。 根據預設，`_UNICODE`定義針對 MFC 應用程式。
 
 `_TCHAR`有條件地在 tchar.h 中定義資料類型。 如果符號`_UNICODE`為您的組建定義`_TCHAR`定義為**wchar_t**; 否則它定義為單一位元組和 MBCS 組建， **char**。 (**wchar_t**，基本的 Unicode 寬字元資料類型，是以 8 位元帶正負號的 16 位元對應項目**char**。)國際應用程式，使用`_tcs`系列函式，在運作`_TCHAR`單位，不是位元組。 例如，`_tcsncpy`複本`n` `_TCHARs`，而非`n`位元組。
 

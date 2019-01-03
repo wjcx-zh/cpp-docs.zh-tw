@@ -12,5 +12,6 @@
 ## [C/C++ 屬性 (Linux)](prop-pages/c-cpp-linux.md)
 ## [連結器屬性 (Linux)](prop-pages/linker-linux.md)
 ## [建置事件屬性 (Linux)](prop-pages/build-events-linux.md)
-## [自訂建置步驟屬性 (Linux)](prop-pages/custom-build-step-linux.md) 
+## [自訂建置步驟屬性 (Linux)](prop-pages/custom-build-step-linux.md)
 ## [Makefile 專案屬性 (Linux)](prop-pages/makefile-linux.md)
+## [遠端封存屬性 (Linux)](prop-pages/remote-ar-linux.md)

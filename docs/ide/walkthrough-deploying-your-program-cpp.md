@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 43e6b9320fb52fc17f65b27b06e2c6f4d4851528
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7170fe3ae058f832e452089021d9f863f1791f14
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496427"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657509"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>逐步解說：部署程式 (C++)
 
@@ -62,7 +62,7 @@ ms.locfileid: "50496427"
 
 1. 在 [方案總管] 中，選取 [遊戲安裝程式] 專案，然後選擇 [檢視] > [屬性視窗] 或按 **F4**，以開啟 [屬性] 視窗。
 
-1. 指定您想要在安裝程式中顯示的其他詳細資料。  例如，將 *Contoso* 作為**製造商**、「遊戲安裝程式」作為**產品名稱**，而 *http://www.contoso.com* 作為 **SupportUrl**。
+1. 指定您想要在安裝程式中顯示的其他詳細資料。  例如，將 *Contoso* 作為**製造商**、*遊戲安裝程式*作為**產品名稱**，而 *http\://www.contoso.com* 作為 **SupportUrl**。
 
 1. 在功能表列上，選擇 [建置] > [組態管理員]。 在 [專案] 資料表的 [建置] 資料行下方，核取 [遊戲安裝程式] 的方塊。 按一下 [ **關閉**]。
 

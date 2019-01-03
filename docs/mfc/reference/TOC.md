@@ -1,5 +1,5 @@
 # [MFC 類別](mfc-classes.md)
-## [CAccelerateDecelerateTransition 類別1](cacceleratedeceleratetransition-class1.md)
+## [CAccelerateDecelerateTransition 類別](cacceleratedeceleratetransition-class.md)
 ## [CAnimateCtrl 類別](canimatectrl-class.md)
 ## [CAnimationBaseObject 類別](canimationbaseobject-class.md)
 ## [CAnimationColor 類別](canimationcolor-class.md)

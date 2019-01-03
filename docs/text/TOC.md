@@ -18,6 +18,6 @@
 #### [字元比較](character-comparison.md)
 #### [緩衝區溢位](buffer-overflow.md)
 ## [支援 ANSI](support-for-ansi.md)
-## [Tchar.h 中的泛型文字對應](generic-text-mappings-in-tchar-h.md)
+## [tchar.h 中的泛型文字對應](generic-text-mappings-in-tchar-h.md)
 ### [使用含有 _MBCS 程式碼的 TCHAR.H 資料類型](using-tchar-h-data-types-with-mbcs-code.md)
 ## [如何：在各種字串類型之間轉換](how-to-convert-between-various-string-types.md)

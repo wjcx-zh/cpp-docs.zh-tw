@@ -8,16 +8,16 @@ helpviewer_keywords:
 - language reference, Visual C++
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 69b244a1559a4570cc00a72d86426a7929ffc474
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d184e70e6a7284d07e706ce8b8c247c96442750
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469377"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031261"
 ---
 # <a name="c-language-reference"></a>C++ 語言參考
 
-本参考将介绍在 Microsoft Visual C++ 中实现的 C++ 编程语言。 于组织*C++ 参考手册批注 》* Margaret Ellis 和 Bjarne stroustrup 撰写和 ANSI/ISO C++ 国际标准 (ISO/IEC FDIS 14882)。 本文涵盖了 C++ 语言功能的 Microsoft 专用实现。 
+本参考将介绍在 Microsoft Visual C++ 中实现的 C++ 编程语言。 組織會根據[*註解 c + + 參考手冊*](http://www.stroustrup.com/arm.html) ，作者 Margaret Ellis 和 Bjarne Stroustrup 與 ANSI/ISO c + + International Standard (ISO/IEC FDIS 14882)。 本文涵盖了 C++ 语言功能的 Microsoft 专用实现。 
 
 有关现代 C++ 编程做法的概述，请参阅[欢迎回到 C++](welcome-back-to-cpp-modern-cpp.md)。
 

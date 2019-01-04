@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: 1397f3b3513fc9a3e93a69841a93b40c16e490cf
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fb5f78411521dcbaddefda6c621b7fe44ce91736
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333224"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031287"
 ---
 # <a name="fopen-wfopen"></a>fopen、_wfopen
 
@@ -97,7 +97,7 @@ FILE *_wfopen(
 
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>根據 ccs 旗標和 BOM 使用的編碼方式
 
-|ccs 旗標|沒有 BOM (或新檔案)|BOM：UTF-8|BOM：UTF-16|
+|ccs 旗標|沒有 BOM (或新檔案)|BOM:UTF-8|BOM:UTF-16|
 |----------------|----------------------------|-----------------|------------------|
 |**UNICODE**|**-16LE**|**UTF-8**|**-16LE**|
 |**UTF-8**|**UTF-8**|**UTF-8**|**-16LE**|
@@ -160,25 +160,25 @@ FILE *_wfopen(
 
 有效字元*模式*中所使用的字串**fopen**並 **_fdopen**對應至*oflag* 中所使用的引數[_open](open-wopen.md)並[_sopen](sopen-wsopen.md)、，如下所示。
 
-|中的字元*模式*字串|對等*oflag* _open/_sopen 值|
+|中的字元*模式*字串|對等*oflag*值\_開啟 /\_sopen|
 |-------------------------------|----------------------------------------------------|
-|**a**|**_O_WRONLY** &#124; **_O_APPEND** (通常 **_O_WRONLY** &#124; **_O_CREAT** &#124;* * _O_APPEND * *)|
-|**+**|**_O_RDWR** &#124; **_O_APPEND** (通常 **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
-|**r**|**_O_RDONLY**|
-|**r +**|**_O_RDWR**|
-|**w**|**_O_WRONLY** (通常 **_O_WRONLY** &#124; **_O_CREAT** &#124;* * _O_TRUNC * *)|
-|**w +**|**_O_RDWR** (通常 **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
-|**b**|**_O_BINARY**|
-|**t**|**_O_TEXT**|
+|**a**|**\_O\_WRONLY** &#124;  **\_O\_附加**(通常 **\_O\_WRONLY** &#124; **\_O\_CREAT** &#124;  **\_O\_附加**)|
+|**+**|**\_O\_RDWR** &#124;  **\_O\_附加**(通常 **\_O\_RDWR** &#124;  **\_O\_APPEND** &#124;  **\_O\_CREAT** )|
+|**r**|**\_O\_RDONLY**|
+|**r +**|**\_O\_RDWR**|
+|**w**|**\_O\_WRONLY** (通常 **\_O\_WRONLY** &#124;  **\_O\_建立** &#124; **\_O\_TRUNC**)|
+|**w +**|**\_O\_RDWR** (通常 **\_O\_RDWR** &#124;  **\_O\_建立** &#124;  **\_O\_TRUNC**)|
+|**b**|**\_O\_BINARY**|
+|**t**|**\_O\_TEXT**|
 |**C**|無|
 |**n**|無|
-|**S**|**_O_SEQUENTIAL**|
-|**R**|**_O_RANDOM**|
-|**T**|**_O_SHORTLIVED**|
-|**D**|**_O_TEMPORARY**|
-|**ccs = UNICODE**|**_O_WTEXT**|
-|**ccs = utf-8**|**_O_TEXTW、_O_UTF8**|
-|**ccs =-16LE**|**_O_UTF16**|
+|**S**|**\_O\_循序**|
+|**R**|**\_O\_隨機**|
+|**T**|**\_O\_SHORTLIVED**|
+|**D**|**\_O\_暫存**|
+|**ccs = UNICODE**|**\_O\_WTEXT**|
+|**ccs = utf-8**|**\_O\_UTF8**|
+|**ccs =-16LE**|**\_O\_UTF16**|
 
 如果您使用**rb**模式中，您不需要移植程式碼，以及如果您打算讀取大部分大型檔案，或不在意網路效能，您也可以考慮是否要使用的記憶體對應 Win32 檔案做為選項。
 

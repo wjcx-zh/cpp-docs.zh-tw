@@ -26,12 +26,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 887936299dce0a13738f9dd891a168785d17c979
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67cca27ba03a99d7e192d438a98f1bb3a93845ee
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617434"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031274"
 ---
 # <a name="setmode"></a>_setmode
 
@@ -66,7 +66,12 @@ int _setmode (
 
 **_Setmode**函式會設定*模式*所指定之檔案的轉譯模式*fd*。 傳遞 **_O_TEXT**作為*模式*設定文字 （也就，已轉譯） 模式。 歸位換摘要 (CR-LF) 組合會轉譯成單一換行字元上輸入的字元。 換行字元會在輸出中轉譯為 CR-LF 組合。 傳遞 **_O_BINARY**設定二進位 （未轉譯） 模式，以隱藏這些翻譯。
 
-您也可以傳遞 **_O_U16TEXT**， **_O_U8TEXT**，或 **_O_WTEXT**啟用 Unicode 模式，如本文件稍後的第二個範例所示。 **_setmode**通常用來修改的預設轉譯模式**stdin**並**stdout**，但您可以將其用於任何檔案。 如果您套用 **_setmode**若要針對資料流的檔案描述項，呼叫 **_setmode**才能執行任何輸入或輸出資料流的作業。
+您也可以傳遞 **_O_U16TEXT**， **_O_U8TEXT**，或 **_O_WTEXT**啟用 Unicode 模式，如本文件稍後的第二個範例所示。
+
+> [!CAUTION]
+> Unicode 模式為寬列印函式 (例如`wprintf`) 並不支援窄的列印功能。 使用 Unicode 模式資料流上窄列印函式就會觸發判斷提示。
+
+**_setmode**通常用來修改的預設轉譯模式**stdin**並**stdout**，但您可以將其用於任何檔案。 如果您套用 **_setmode**若要針對資料流的檔案描述項，呼叫 **_setmode**才能執行任何輸入或輸出資料流的作業。
 
 > [!CAUTION]
 > 如果您資料寫入檔案資料流，明確地清除程式碼使用[fflush](fflush.md)使用之前 **_setmode**變更模式。 若您沒有清除代碼，可能會發生未預期的行為。 若您沒有將資料寫入資料流，則不用清除代碼。

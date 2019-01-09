@@ -3,12 +3,12 @@ title: 在 Visual Studio 中設定 Linux CMake 專案
 description: 如何在 Visual Studio 中設定 Linux CMake 專案
 ms.date: 07/20/2018
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 32d69e28c0991adc6117b7f9496eeb1022943ef2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28902f0a2938fe653eb4dfbb6e512367b1052b8c
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585038"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978318"
 ---
 # <a name="configure-a-linux-cmake-project"></a>設定 Linux CMake 專案
 
@@ -18,11 +18,11 @@ ms.locfileid: "50585038"
 本主題假設您對 Visual Studio 中的 CMake 支援有基本認識。 如需詳細資訊，請參閱 [Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)。 如需 CMake 本身的詳細資訊，請參閱 [Build, Test and Package Your Software With CMake](https://cmake.org/) (使用 CMake 建置、測試及封裝您的軟體)。
 
 > [!NOTE]
-> Visual Studio 中的 CMake 支援需要 CMake 3.8 中所引進的伺服器模式支援。 針對 Microsoft 所提供的 CMake 變數，請在下列網頁下載最新的預先建置二進位檔：[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases)。
+> Visual Studio 中的 CMake 支援需要 CMake 3.8 中所引進的伺服器模式支援。 針對 Microsoft 所提供的 CMake 變數，請在下列網頁下載最新的預先建置二進位檔：[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases)。 在 Visual Studio 2019 中，預先建置的二進位檔案可自動部署 (請參閱[下載預先建置的 CMake 二進位檔案](#download-prebuilt-cmake-binaries))。
 
 ## <a name="open-a-folder"></a>開啟資料夾
 
-若要開始使用，請從主功能表選擇 [檔案] > [開啟] > [資料夾]，或在命令列上輸入 `devenv.exe <foldername>`。 您開啟的資料夾內應該有 CMakeLists.txt 檔案，以及您的原始程式碼。
+若要開始使用，請從主功能表選擇 [檔案] > [開啟] > [資料夾]，或在命令列上鍵入 `devenv.exe <foldername>`。 您開啟的資料夾內應該有 CMakeLists.txt 檔案，以及您的原始程式碼。
 下列範例顯示簡單的 CMakeLists.txt 檔案和 .cpp 檔案：
 
 ```cpp
@@ -110,7 +110,10 @@ add_executable(hello-cmake hello.cpp)
 
 您的 Linux 發行套件可能會有較舊版本的 CMake。 Visual Studio 中的 CMake 支援需要 CMake 3.8 中所引進的伺服器模式支援。 針對 Microsoft 所提供的 CMake 變數，請在下列網頁下載最新的預先建置二進位檔：[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases)。
 
-## <a name="see-also"></a>請參閱
+**Visual Studio 2019**<br/>
+若在遠端電腦上找不到有效的 CMake，將會出現資訊列並提供選項以自動部署預先建置的 CMake 二進位檔案。 二進位檔案將安裝到 `~/.vs/cmake`。 部署二進位檔案之後，您的專案將自動重新產生。 請注意，若 `CMakeSettings.json` 中之 `cmakeExecutable` 指定的 CMake 無效 (不存在或它是不支援的版本) 且預先建置的二進位檔案存在，Visual Studio 將會忽略 `cmakeExecutable` 並使用預先建置的二進位檔案。
+
+## <a name="see-also"></a>另請參閱
 
 [使用專案屬性](../ide/working-with-project-properties.md)<br/>
 [Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)

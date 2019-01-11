@@ -3,12 +3,12 @@ title: 字串和 I-o 格式化 （現代 c + +）
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: 816eb71dae011f853a6e7ade1a1a2a8144a457c5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c051a7d70042456d30bee0ebb2b362c5d05b8e37
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326182"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220500"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>字串和 I/O 格式化 (現代 C++)
 
@@ -42,11 +42,11 @@ int main()
 
 Boost.Format 的一些優點包括：
 
-- 安全： 類型安全，並擲回例外狀況的錯誤 — 比方說，太少或太多的項目規格。
+- 安全：類型安全，並擲回例外狀況的錯誤 — 比方說，太少或太多的項目規格。
 
-- 可延伸的： 用於串流處理任何類型的詳細資訊。
+- 可延伸：適用於串流處理任何類型。
 
-- 方便： 標準 Posix 和類似的格式字串。
+- 方便：標準 Posix 和類似的格式字串。
 
 雖然 Boost.Format 建置在 c + + [iostreams](../standard-library/iostream-programming.md)，它們是安全且可延伸，並非效能最佳化。 當您需要效能最佳化時，請考慮使用 C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)並[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)，這是快速且容易使用。 不過，不是可延伸或安全性弱點。 （安全版本存在，但它們會造成些微的效能損失。 如需詳細資訊，請參閱 < [printf_s、 _printf_s_l、 wprintf_s、 _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)並[sprintf_s、 _sprintf_s_l、 swprintf_s、 _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md))。
 
@@ -64,7 +64,7 @@ Boost.Format 的一些優點包括：
 
 ## <a name="see-also"></a>另請參閱
 
-[歡迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[歡迎回到 C++ (現代 C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)<br/>
 [\<iostream>](../standard-library/iostream.md)<br/>

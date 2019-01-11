@@ -1,17 +1,17 @@
 ---
-title: 如何：建立和使用 CComPtr 和 CComQIPtr 執行個體
+title: HOW TO：建立和使用 CComPtr 和 CComQIPtr 執行個體
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-ms.openlocfilehash: 8065e0b8782c1c28d83aa6fc9690150793fe51ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bcabfe80185939b899c84fc44f71b98608fc3c7
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518699"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220541"
 ---
-# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>如何：建立和使用 CComPtr 和 CComQIPtr 執行個體
+# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>HOW TO：建立和使用 CComPtr 和 CComQIPtr 執行個體
 
 在傳統的 Windows 程式設計，程式庫通常是實作為 COM 物件 (或更精確地說是 COM 伺服器)。 許多 Windows 作業系統元件都會實作為 COM 伺服器，而且許多參與者提供這種形式的程式庫。 如需 COM 基本概念的資訊，請參閱 [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal)。
 
@@ -39,4 +39,4 @@ ATL 也提供 `CComQIPtr`，查詢 COM 物件以擷取其他介面的語法更�
 
 ## <a name="see-also"></a>另請參閱
 
-[智慧型指標](../cpp/smart-pointers-modern-cpp.md)
+[智慧型指標 (現代 C++)](../cpp/smart-pointers-modern-cpp.md)

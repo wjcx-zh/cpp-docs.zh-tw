@@ -1,17 +1,17 @@
 ---
-title: 如何：建立和使用 unique_ptr 執行個體
+title: HOW TO：建立和使用 unique_ptr 執行個體
 ms.custom: how-to
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
-ms.openlocfilehash: a3e5705b47a4cfdf17b9a4b4829f1e13565dd7ce
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 48e459b69592bf4c231407c2a378a7b7e01ff4ae
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174863"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220578"
 ---
-# <a name="how-to-create-and-use-uniqueptr-instances"></a>如何：建立和使用 unique_ptr 執行個體
+# <a name="how-to-create-and-use-uniqueptr-instances"></a>HOW TO：建立和使用 unique_ptr 執行個體
 
 A [unique_ptr](../standard-library/unique-ptr-class.md)不共用其指標。 無法將它複製到另一個`unique_ptr`、 傳值方式傳遞至函式，或用於任何需要製作複本的 c + + 標準程式庫演算法。 只能移動 `unique_ptr`。 這表示記憶體資源的擁有權轉移到另一個 `unique_ptr`，原始 `unique_ptr` 不再擁有它。 因為多重擁有權會增加程序邏輯的複雜度，建議您將物件限制為一個擁有者。 因此，當您需要一般 c + + 物件的智慧型指標，使用`unique_ptr`，以及當您建構`unique_ptr`，使用[make_unique](../standard-library/memory-functions.md#make_unique) helper 函式。
 
@@ -53,5 +53,5 @@ A [unique_ptr](../standard-library/unique-ptr-class.md)不共用其指標。 無
 
 ## <a name="see-also"></a>另請參閱
 
-[智慧型指標](../cpp/smart-pointers-modern-cpp.md)<br/>
+[智慧型指標 (現代 C++)](../cpp/smart-pointers-modern-cpp.md)<br/>
 [make_unique](../standard-library/memory-functions.md#make_unique)

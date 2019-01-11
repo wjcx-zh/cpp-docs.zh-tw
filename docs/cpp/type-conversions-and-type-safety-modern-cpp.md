@@ -3,12 +3,12 @@ title: 類型轉換和類型安全 (現代 C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-ms.openlocfilehash: 201f09cc9ac17f76634103c9c9b6c0259c8a8637
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 79285e4870b73ff01ed3b230a0162f87c0400aa8
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332617"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220643"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>類型轉換和類型安全 (現代 C++)
 
@@ -178,7 +178,7 @@ C 樣式轉型運算子等同於呼叫運算子 （），因此不起眼在程�
 
 ## <a name="see-also"></a>另請參閱
 
-[C + + 類型系統](../cpp/cpp-type-system-modern-cpp.md)<br/>
-[歡迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++ 型別系統 (現代 C++)](../cpp/cpp-type-system-modern-cpp.md)<br/>
+[歡迎回到 C++ (現代 C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)

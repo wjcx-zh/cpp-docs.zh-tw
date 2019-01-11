@@ -1,17 +1,17 @@
 ---
-title: 如何：例外狀況安全的設計
+title: HOW TO：例外狀況安全的設計
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: f384da3eee0c7bca80d8d6c61f8d8cf0cfaece92
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2dada25ea712b7bb6d48d80525c824a0457b18cf
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327001"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220542"
 ---
-# <a name="how-to-design-for-exception-safety"></a>如何：例外狀況安全的設計
+# <a name="how-to-design-for-exception-safety"></a>HOW TO：例外狀況安全的設計
 
 其中一個例外狀況機制的優點是與例外狀況相關資料一起執行，直接從擲回例外狀況的陳述式跳躍到處理它的第一個 catch 陳述式。 處理常式可能是在呼叫堆疊的任意層級。 在 try 陳述式和 throw 陳述式之間呼叫的函式不必知道任何關於擲回例外狀況的事情。  然而，它們必須經過設計，才能在可能從底下傳播例外狀況的任何點意外地超出範圍，而這麼做並不會留下部分建立的物件、流失的記憶體或在無法使用狀態的資料結構。
 
@@ -95,7 +95,7 @@ public:
 
 無失誤 (或「無擲回」) 保證是函式可提供之最強保證。 它表示函式不會擲回例外狀況，也不會允許散佈。 不過，您無法可靠地提供這類保證，除非 (a) 您知道所有函式，且函式呼叫也是無失誤，或 (b) 您知道在到達這個函式之前擲回的例外狀況都被攔截，或 (c) 您知道如何攔截並正確處理可能會到達這個函式的所有例外狀況。
 
-強烈保證與基本保證都假設解構函式是無誤的。 標準程式庫中的所有容器和類型保證其解構函式不會擲回。 也有相反的需求：標準程式庫會要求所提供的使用者定義類型 (例如範本引數)，必須具有非擲回解構函式。
+強烈保證與基本保證都假設解構函式是無誤的。 標準程式庫中的所有容器和類型保證其解構函式不會擲回。 另外還有相反的需求：標準程式庫需要使用者定義類型，提供給它 — 比方說，做為範本引數，必須具有非擲回解構函式。
 
 ### <a name="strong-guarantee"></a>強力保證
 
@@ -121,5 +121,5 @@ public:
 
 ## <a name="see-also"></a>另請參閱
 
-[錯誤和例外狀況處理](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[錯誤和例外狀況處理 (現代 C++)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [如何：例外狀況和非例外狀況代碼之間的介面](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)

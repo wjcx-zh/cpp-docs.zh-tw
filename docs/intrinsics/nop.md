@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nop instruction
 - __nop intrinsic
 ms.assetid: 7a2a938b-87e0-476d-a348-03ea7635b6b9
-ms.openlocfilehash: 25ba27485990ceaae77e1827f0c74680914e2f40
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0033b0e3a62a16c2856b0e25daeebdb5df0c81f
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651720"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220383"
 ---
 # <a name="nop"></a>__nop
 
@@ -30,7 +30,7 @@ void __nop();
 
 |內建|架構|
 |---------------|------------------|
-|`__nop`|x86、x64|
+|`__nop`|x86、 ARM、 x64、 arm 64|
 
 **標頭檔** \<intrin.h >
 
@@ -38,7 +38,7 @@ void __nop();
 
 ## <a name="remarks"></a>備註
 
-`__nop` 函式相當於 `NOP` 機器指令。 如需詳細資訊，搜尋文件中，「 Intel 架構軟體開發人員的手動、 磁碟區 2： 指令集參考，「 在[Intel Corporation](https://software.intel.com/articles/intel-sdm)站台。
+`__nop` 函式相當於 `NOP` 機器指令。 如需有關 x86 和 x64 的詳細資訊，搜尋文件中，「 Intel 架構軟體開發人員的手動、 磁碟區 2:指令集參考，「 在[Intel Corporation](https://software.intel.com/articles/intel-sdm)站台。
 
 ## <a name="see-also"></a>另請參閱
 

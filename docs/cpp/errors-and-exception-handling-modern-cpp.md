@@ -3,12 +3,12 @@ title: 錯誤和例外狀況處理 (現代 C++)
 ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: d6192ab800667ceb35bf2e18dcbdc0be95ec70f5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523284"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220565"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>錯誤和例外狀況處理 (現代 C++)
 
@@ -60,7 +60,7 @@ int main()
 }
 ```
 
-C + + 中的例外狀況類似 C# 和 Java 等語言中。 中**嘗試**例外狀況是如果封鎖*擲回*會*攔截*之第一個相關聯**攔截**其類型符合該區塊例外狀況。 換句話說，執行會從跳**擲回**陳述式來**攔截**陳述式。 如果找不到任何可用的 catch 區塊，`std::terminate`叫用並結束程式。 在 c + +，任何型別可能會擲回;不過，我們建議您擲回直接或間接衍生自類型`std::exception`。 在上一個範例中，例外狀況型別[invalid_argument](../standard-library/invalid-argument-class.md)中的標準程式庫中定義[ \<stdexcept> >](../standard-library/stdexcept.md)標頭檔。 C + + 不提供，而且不需要，**最後**區塊以確保如果發生例外狀況時釋放所有資源。 「 資源擷取是初始化 (RAII) 慣用語，其使用智慧型指標，提供必要的功能資源清除。 如需詳細資訊，請參閱 <<c0> [ 如何： 例外狀況安全的設計](../cpp/how-to-design-for-exception-safety.md)。 如需 c + + 堆疊回溯機制的資訊，請參閱[例外狀況和堆疊回溯](../cpp/exceptions-and-stack-unwinding-in-cpp.md)。
+C + + 中的例外狀況類似 C# 和 Java 等語言中。 中**嘗試**例外狀況是如果封鎖*擲回*會*攔截*之第一個相關聯**攔截**其類型符合該區塊例外狀況。 換句話說，執行會從跳**擲回**陳述式來**攔截**陳述式。 如果找不到任何可用的 catch 區塊，`std::terminate`叫用並結束程式。 在 c + +，任何型別可能會擲回;不過，我們建議您擲回直接或間接衍生自類型`std::exception`。 在上一個範例中，例外狀況型別[invalid_argument](../standard-library/invalid-argument-class.md)中的標準程式庫中定義[ \<stdexcept> >](../standard-library/stdexcept.md)標頭檔。 C + + 不提供，而且不需要，**最後**區塊以確保如果發生例外狀況時釋放所有資源。 「 資源擷取是初始化 (RAII) 慣用語，其使用智慧型指標，提供必要的功能資源清除。 如需詳細資訊，請參閱[＜How to：例外狀況安全的設計](../cpp/how-to-design-for-exception-safety.md)。 如需 c + + 堆疊回溯機制的資訊，請參閱[例外狀況和堆疊回溯](../cpp/exceptions-and-stack-unwinding-in-cpp.md)。
 
 ## <a name="basic-guidelines"></a>基本的指導方針
 
@@ -70,7 +70,7 @@ C + + 中的例外狀況類似 C# 和 Java 等語言中。 中**嘗試**例外�
 
 - 當處理錯誤的程式碼可能會從偵測到錯誤的程式碼分隔一或多個中間函式呼叫時，請使用例外狀況。 請考慮是否要改用錯誤碼重要效能迴圈中時處理錯誤的程式碼會偵測到它的程式碼緊密結合。
 
-- 針對每個函式可能擲回或傳播例外狀況，提供三個例外狀況保證之一： 強式保證、 基本保證或 nothrow (noexcept) 保證。 如需詳細資訊，請參閱 <<c0> [ 如何： 例外狀況安全的設計](../cpp/how-to-design-for-exception-safety.md)。
+- 針對每個函式可能擲回或傳播例外狀況，提供三個例外狀況保證之一： 強式保證、 基本保證或 nothrow (noexcept) 保證。 如需詳細資訊，請參閱[＜How to：例外狀況安全的設計](../cpp/how-to-design-for-exception-safety.md)。
 
 - 值，所擲回例外狀況，攔截它們的參考。 不會攔截您無法處理。
 
@@ -101,6 +101,6 @@ C 和 c + + 程式可以使用結構化例外狀況處理 (SEH) 機制，在 Win
 ## <a name="see-also"></a>另請參閱
 
 [如何：例外狀況和非例外狀況代碼之間的介面](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
-[歡迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[歡迎回到 C++ (現代 C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)

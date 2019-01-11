@@ -1,17 +1,17 @@
 ---
-title: 如何：建立和使用 shared_ptr 執行個體
+title: HOW TO：建立和使用 shared_ptr 執行個體
 ms.custom: how-to
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 79d85de6859096bdff3e2bc17357b721e5ce5846
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 8363139efddb2fa64057fdb995ab7bd5dfbcfd9b
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176272"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220591"
 ---
-# <a name="how-to-create-and-use-sharedptr-instances"></a>如何：建立和使用 shared_ptr 執行個體
+# <a name="how-to-create-and-use-sharedptr-instances"></a>HOW TO：建立和使用 shared_ptr 執行個體
 
 `shared_ptr` 類型是 C++ 標準程式庫中的一種智慧型指標，是為有一個以上的擁有者可能必須管理物件在記憶體中的存留期之情節而設計。 在您初始化 `shared_ptr` 之後，您可以函式引數中的值予以複製、傳送以及指派至其他 `shared_ptr` 執行個體。 所有執行個體都會指向相同的物件，並共用對一個每當新的 `shared_ptr` 加入、超出範圍或重設時會遞增和遞減參考計數的「控制區塊」的存取。 當參考計數達到零時，控制區塊會刪除記憶體資源和自己本身。
 
@@ -67,4 +67,4 @@ ms.locfileid: "52176272"
 
 ## <a name="see-also"></a>另請參閱
 
-[智慧型指標](../cpp/smart-pointers-modern-cpp.md)
+[智慧型指標 (現代 C++)](../cpp/smart-pointers-modern-cpp.md)

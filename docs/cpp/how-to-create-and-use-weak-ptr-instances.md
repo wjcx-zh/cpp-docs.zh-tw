@@ -1,17 +1,17 @@
 ---
-title: 如何：建立和使用 weak_ptr 執行個體
+title: HOW TO：建立和使用 weak_ptr 執行個體
 ms.custom: how-to
 ms.date: 07/12/2018
 ms.topic: conceptual
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-ms.openlocfilehash: c3f788a23acf30fac84757f8cd4430f128df67af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a0e2880e97a77a0c9975553631a6024072745f0
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478191"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220318"
 ---
-# <a name="how-to-create-and-use-weakptr-instances"></a>如何：建立和使用 weak_ptr 執行個體
+# <a name="how-to-create-and-use-weakptr-instances"></a>HOW TO：建立和使用 weak_ptr 執行個體
 
 有時候物件必須儲存存取的基礎物件的方法`shared_ptr`而不會造成參考計數遞增。 一般而言，這種情況發生時有循環參考之間`shared_ptr`執行個體。
 
@@ -86,4 +86,4 @@ Press any key
 
 ## <a name="see-also"></a>另請參閱
 
-[智慧型指標](../cpp/smart-pointers-modern-cpp.md)
+[智慧型指標 (現代 C++)](../cpp/smart-pointers-modern-cpp.md)

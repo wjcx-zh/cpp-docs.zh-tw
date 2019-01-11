@@ -3,12 +3,12 @@ title: C++ 類型系統 (現代 C++)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 476ebabc4bfc19f995119649d6f012d4b39d8369
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ea4d8da9af10df2fb930daaad8374d70b6704d28
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176337"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220669"
 ---
 # <a name="c-type-system-modern-c"></a>C++ 類型系統 (現代 C++)
 
@@ -16,11 +16,11 @@ ms.locfileid: "52176337"
 
 ## <a name="terminology"></a>用語
 
-**變數**： 的符號名稱的資料數量，讓名稱可用來存取的資料，它會參考在其中定義程式碼的範圍。 C + +*變數*通常用來參考執行個體的純量資料類型，而其他類型的執行個體通常稱為*物件*。
+**變數**:符號名稱的資料數量，讓名稱可用來存取的資料，它會參考在其中定義程式碼的範圍。 C + +*變數*通常用來參考執行個體的純量資料類型，而其他類型的執行個體通常稱為*物件*。
 
-**物件**： 為了簡化和一致性，本文使用的詞彙*物件*來參考任何執行個體的類別或結構，和在一般狀況下使用包含所有類型，甚至純量變數。
+**物件**:為了簡化和一致性，本文使用的字詞*物件*來參考任何執行個體的類別或結構，和在一般狀況下使用包含所有類型，甚至純量變數。
 
-**POD 類型**（一般舊資料）： c + + 中的資料類型的這個非正式類別目錄指的是純量的類型 （請參見基本類型） 或*POD 類別*。 POD 類別的靜態資料成員同時也是 POD，沒有使用者定義的建構函式、使用者定義解構函式或使用者定義的指派運算子。 此外，POD 類別沒有虛擬函式、沒有基底類別，也沒有私用或受保護的非靜態資料成員。 POD 類型通常用於外部資料交換，例如以 C 語言撰寫的模組 (其中只有 POD 類型)。
+**POD 類型**（一般舊資料）：C + + 中的資料類型的這個非正式類別目錄指的是純量的類型 （請參見基本類型） 或*POD 類別*。 POD 類別的靜態資料成員同時也是 POD，沒有使用者定義的建構函式、使用者定義解構函式或使用者定義的指派運算子。 此外，POD 類別沒有虛擬函式、沒有基底類別，也沒有私用或受保護的非靜態資料成員。 POD 類型通常用於外部資料交換，例如以 C 語言撰寫的模組 (其中只有 POD 類型)。
 
 ## <a name="specifying-variable-and-function-types"></a>指定變數和函式類型
 
@@ -170,6 +170,6 @@ void someFunction() {
 
 ## <a name="see-also"></a>另請參閱
 
-[歡迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[歡迎回到 C++ (現代 C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)

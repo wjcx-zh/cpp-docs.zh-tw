@@ -1,17 +1,17 @@
 ---
-title: 如何：例外狀況和非例外狀況代碼之間的介面
+title: HOW TO：例外狀況和非例外狀況代碼之間的介面
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-ms.openlocfilehash: b6da1142ee04668033a516f2c20c4a2354ff5598
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8ff92f965f48faa7954ae0364ec7877428e519c
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576679"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220619"
 ---
-# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>如何：例外狀況和非例外狀況代碼之間的介面
+# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>HOW TO：例外狀況和非例外狀況代碼之間的介面
 
 本文說明如何在 C++ 模組實作一致的例外狀況處理，以及如何將這些例外狀況與在例外狀況界限上的錯誤碼來回轉譯。
 
@@ -19,7 +19,7 @@ ms.locfileid: "50576679"
 
 ## <a name="calling-non-exceptional-functions-from-c"></a>從 C++ 呼叫非例外狀況函式
 
-當您從 C++ 呼叫非例外狀況函式，這個概念是將函式包裝在可偵測所有錯誤然後擲回例外狀況的 C++ 函式中。 當您設計這類包裝函式時，先決定要提供哪種例外狀況保證：不擲回、強式或基本。 其次，設計函式，以致擲回例外狀況時正確地釋放所有資源，例如，檔案控制代碼。 通常，這表示您使用智慧型指標或類似的資源管理員擁有資源。 如需有關設計考量的詳細資訊，請參閱[如何： 例外狀況安全的設計](../cpp/how-to-design-for-exception-safety.md)。
+當您從 C++ 呼叫非例外狀況函式，這個概念是將函式包裝在可偵測所有錯誤然後擲回例外狀況的 C++ 函式中。 當您設計這類包裝函式時，先決定要提供哪種例外狀況保證：不擲回、強式或基本。 其次，設計函式，以致擲回例外狀況時正確地釋放所有資源，例如，檔案控制代碼。 通常，這表示您使用智慧型指標或類似的資源管理員擁有資源。 如需有關設計考量的詳細資訊，請參閱[How to:例外狀況安全的設計](../cpp/how-to-design-for-exception-safety.md)。
 
 ### <a name="example"></a>範例
 
@@ -236,5 +236,5 @@ bool DiffFiles3(const string& file1, const string& file2)
 
 ## <a name="see-also"></a>另請參閱
 
-[錯誤和例外狀況處理](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[錯誤和例外狀況處理 (現代 C++)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [如何：例外狀況安全的設計](../cpp/how-to-design-for-exception-safety.md)<br/>

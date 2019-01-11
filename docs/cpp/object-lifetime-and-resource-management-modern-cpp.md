@@ -3,12 +3,12 @@ title: 物件存留期和資源管理 (現代 C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: d7bf45881ef82ecf0d11892e5ddf3d3c16a437cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5964078960a5b241cb5af369aeddba45a06e48ad
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609933"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220621"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>物件存留期和資源管理 (現代 C++)
 
@@ -22,7 +22,7 @@ C++ 沒有 GC 的主要原因是它不處理非記憶體資源。 只有像 C++ 
 
 另一個存留期管理的重要概念：解構函式。 解構函式封裝資源釋放。  (常用的助憶鍵是 RRID，資源釋放是解構函式)。資源是從「系統」取得，且稍後必須還回的事物。  記憶體是最常見的資源，不過也有檔案、通訊端、材質和其他非記憶體資源。 「擁有」資源表示您可以在需要時使用它，但用完時必須釋放它。  在物件終結時，其解構函式會釋放其擁有的資源。
 
-最終概念是 DAG (導向非循環圖)。  程式中的擁有權結構會形成 DAG。 物件無法擁有本身，而且不僅不可能，本質上也無意義。 但是，兩個物件可以共用第三個物件的擁有權。  DAG 中可能會有數種連結：A 是 B 的成員 (B 擁有 A)，C 儲存 `vector<D>` (C 擁有每個 D 項目)，E 儲存 `shared_ptr<F>` (E 可能與其他物件共用 F 的擁有權)，依此類推。  只要沒有循環，而且 DAG 中的每個連結都由具有解構函式的物件來代表 (而不是原始指標、控制代碼或其他機制)，就不可能發生資源流失，因為語言防止這種情況產生。 當不再需要資源時，就會釋放資源，完全不需執行記憶體回收。 存留期追蹤對於堆疊範圍、基底、成員和相關案例的無負荷的，對於 `shared_ptr` 而言也不昂貴。
+最終概念是 DAG (導向非循環圖)。  程式中的擁有權結構會形成 DAG。 物件無法擁有本身，而且不僅不可能，本質上也無意義。 但是，兩個物件可以共用第三個物件的擁有權。  這類 DAG 中可能有數種連結︰A 是 B 的成員 （B 擁有 A），C 儲存`vector<D>`（C 擁有每個 D 項目），E 儲存`shared_ptr<F>`（E 共用 F 的擁有權可能與其他物件），依此類推。  只要沒有循環，而且 DAG 中的每個連結都由具有解構函式的物件來代表 (而不是原始指標、控制代碼或其他機制)，就不可能發生資源流失，因為語言防止這種情況產生。 當不再需要資源時，就會釋放資源，完全不需執行記憶體回收。 存留期追蹤對於堆疊範圍、基底、成員和相關案例的無負荷的，對於 `shared_ptr` 而言也不昂貴。
 
 ### <a name="heap-based-lifetime"></a>堆疊式存留期
 
@@ -85,6 +85,6 @@ void functionUsingWidget () {
 
 ## <a name="see-also"></a>另請參閱
 
-[歡迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[歡迎回到 C++ (現代 C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)

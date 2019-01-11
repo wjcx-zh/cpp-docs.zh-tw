@@ -2,12 +2,12 @@
 title: 容器 (現代 C++)
 ms.date: 1/18/2018
 ms.topic: conceptual
-ms.openlocfilehash: b25afe6d75147c37b92bf0805858a24f276195fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2da57bfca8b04f50a223dddfb886835c69f746a4
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564654"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220136"
 ---
 # <a name="containers-modern-c"></a>容器 (現代 C++)
 
@@ -40,6 +40,6 @@ apple_color["Granny Smith"] = "Green";
 
 ## <a name="see-also"></a>另請參閱
 
-[歡迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[歡迎回到 C++ (現代 C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)

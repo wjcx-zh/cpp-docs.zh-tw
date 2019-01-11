@@ -3,12 +3,12 @@ title: 演算法 (現代 C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 6f758d3c-a7c7-4a50-92bb-97b2f6d4ab27
-ms.openlocfilehash: 7306b28e255d68d68ad137ebedea414f0ac28744
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b972e575c982ae2523ec560a6237eac76ceaf834
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576510"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220149"
 ---
 # <a name="algorithms-modern-c"></a>演算法 (現代 C++)
 
@@ -75,6 +75,6 @@ auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );
 
 ## <a name="see-also"></a>另請參閱
 
-[歡迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[歡迎回到 C++ (現代 C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)<br/>

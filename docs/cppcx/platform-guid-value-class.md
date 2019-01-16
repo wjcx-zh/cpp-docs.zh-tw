@@ -1,18 +1,18 @@
 ---
 title: Platform::Guid 實值類別
-ms.date: 12/30/2016
+ms.date: 01/15/2019
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Guid
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-ms.openlocfilehash: 0a339de3aec14b6bd1dc461f53c1a7417db738ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad71ed4965a3dd4846c9ba5d8ed2627ed8f7e056
+ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482923"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54334647"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 實值類別
 
@@ -26,18 +26,19 @@ public value struct Guid
 
 ### <a name="members"></a>成員
 
-GUID 具有 Equals()、GetHashCode() 和 ToString() 方法 (衍生自 [Platform::Object Class](../cppcx/platform-object-class.md))，以及 GetTypeCode() 方法 (衍生自 [Platform::Type Class](../cppcx/platform-type-class.md). Guid 也具有下列成員。
+`Platform::Guid` 已`Equals()`， `GetHashCode()`，並`ToString()`方法衍生自[platform:: object 類別](../cppcx/platform-object-class.md)，而`GetTypeCode()`方法衍生自[platform:: type 類別](../cppcx/platform-type-class.md)。 `Platform::Guid` 也具有下列成員。
 
 |成員|描述|
 |------------|-----------------|
-|[Guid](#ctor)|初始化 Guid 結構的新執行個體。|
+|[Guid](#ctor)|初始化 `Platform::Guid` 的新執行個體。|
 |[operator==](#operator-equality)|等於運算子。|
-|[operator!=](#operator-not-equal)|不等於運算子。|
-|[operator()](#operator-call)|將 Guid 轉換成 GUID。|
+|[operator!=](#operator-inequality)|不等於運算子。|
+|[operator&lt;](#operator-less)|Less than 運算子。|
+|[operator()](#operator-call)|將 `Platform::Guid` 轉換成 `GUID`。|
 
 ### <a name="remarks"></a>備註
 
-如需如何使用 Windows 函式 [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid)產生新 Platform::Guid 的範例，請參閱 [WinRT 元件：如何產生 GUID？](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)(英文)
+如需如何產生新的範例`Platform::Guid`使用 Windows 函式[CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid)，請參閱[WinRT 元件：如何產生 GUID？](https://www.eternalcoding.com/?p=383)
 
 ### <a name="requirements"></a>需求
 
@@ -51,7 +52,7 @@ GUID 具有 Equals()、GetHashCode() 和 ToString() 方法 (衍生自 [Platform:
 
 ## <a name="ctor"></a> Guid:: guid 建構函式
 
-初始化 Guid 結構的新執行個體。
+初始化 `Platform::Guid` 的新執行個體。
 
 ### <a name="syntax"></a>語法
 
@@ -81,85 +82,125 @@ Guid(
 ### <a name="parameters"></a>參數
 
 *a*<br/>
-GUID 的前 4 個位元組。
+前 4 個位元組`GUID`。
 
 *b*<br/>
-GUID 接下來的 2 個位元組。
+接下來的 2 個位元組的`GUID`。
 
 *C*<br/>
-GUID 接下來的 2 個位元組。
+接下來的 2 個位元組的`GUID`。
 
 *d*<br/>
-GUID 的下一個位元組。
+下一個位元組`GUID`。
 
 *e*<br/>
-GUID 的下一個位元組。
+下一個位元組`GUID`。
 
 *f*<br/>
-GUID 的下一個位元組。
+下一個位元組`GUID`。
 
 *g*<br/>
-GUID 的下一個位元組。
+下一個位元組`GUID`。
 
 *h*<br/>
-GUID 的下一個位元組。
+下一個位元組`GUID`。
 
 *i*<br/>
-GUID 的下一個位元組。
+下一個位元組`GUID`。
 
 *j*<br/>
-GUID 的下一個位元組。
+下一個位元組`GUID`。
 
 *k*<br/>
-GUID 的下一個位元組。
+下一個位元組`GUID`。
 
 *m*<br/>
-所定義的 GUID。
+A`GUID`形式[GUID 結構](https://msdn.microsoft.com/library/windows/desktop/aa373931)。
 
 *n*<br/>
-GUID 剩餘的 8 個位元組。
+剩餘的 8 個位元組`GUID`。
 
 ## <a name="operator-equality"></a> Guid::operator = = 運算子
 
-比較兩個 guid。
+比較兩個 `Platform::Guid` 執行個體是否相等。
 
 ### <a name="syntax"></a>語法
 
 ```cpp
-Platform::Guid::operator==
+static bool Platform::Guid::operator==(Platform::Guid guid1, Platform::Guid guid2);
 ```
+
+### <a name="parameters"></a>參數
+
+*guid1*<br/>
+要比較的第一個 `Platform::Guid`。
+
+*guid2*<br/>
+要比較的第二個 `Platform::Guid`。
 
 ### <a name="return-value"></a>傳回值
 
-如果兩個 guid 相等，則為 true。
+如果兩個`Platform::Guid`執行個體是否相等。
 
 ## <a name="operator-inequality"></a> Guid::operator ！ = 運算子
 
-比較兩個 guid。
+比較兩個`Platform::Guid`執行個體是否不相等。
 
 ### <a name="syntax"></a>語法
 
 ```cpp
-Platform::Guid::operator!=
+static bool Platform::Guid::operator!=(Platform::Guid guid1, Platform::Guid guid2);
 ```
+
+### <a name="parameters"></a>參數
+
+*guid1*<br/>
+要比較的第一個 `Platform::Guid`。
+
+*guid2*<br/>
+要比較的第二個 `Platform::Guid`。
 
 ### <a name="return-value"></a>傳回值
 
-如果兩個 guid 是否不相等，則為 true。
+如果兩個`Platform::Guid`執行個體不相等。
+
+## <a name="operator-less"></a> Guid::operator&lt;運算子
+
+比較兩個`Platform::Guid`排序的執行個體。
+
+### <a name="syntax"></a>語法
+
+```cpp
+static bool Platform::Guid::operator<(Platform::Guid guid1, Platform::Guid guid2);
+```
+
+### <a name="parameters"></a>參數
+
+*guid1*<br/>
+要比較的第一個 `Platform::Guid`。
+
+*guid2*<br/>
+要比較的第二個 `Platform::Guid`。
+
+### <a name="return-value"></a>傳回值
+
+則為 true *guid1*排序之前*guid2*。 排序是之後將每個字典編撰`Platform::Guid`好像是四個 32 位元不帶正負號值的陣列。 這不是 SQL Server 或.NET Framework 中，所使用的順序，也不是由字串表示詞彙編纂順序相同。
+
+這個運算子會提供讓`Guid`物件可以更輕鬆地使用 c + + 標準程式庫。
 
 ## <a name="operator-call"></a> Guid::operator() 運算子
 
-將隱含轉換[GUID 結構](https://msdn.microsoft.com/library/windows/desktop/aa373931)platform:: GUID。
+將隱含轉換`Platform::Guid`要[GUID 結構](https://msdn.microsoft.com/library/windows/desktop/aa373931)。
 
 ### <a name="syntax"></a>語法
 
 ```cpp
-Platform::Guid operator();
+const GUID& Platform::Guid::operator();
 ```
 
 ### <a name="return-value"></a>傳回值
 
-Guid 結構。
+A [GUID 結構](https://msdn.microsoft.com/library/windows/desktop/aa373931)。
 
 ## <a name="see-also"></a>另請參閱
 

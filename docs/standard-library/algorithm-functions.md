@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 5fdb5a89bc475cf2d6a358768b84b8542da5e0e8
-ms.sourcegitcommit: d94714522428834a02ede6e6884572f0f6ca9824
+ms.openlocfilehash: 260b2ee780956550678fcb01b3a018a60fb58deb
+ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597560"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54334673"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函式
 
@@ -263,7 +263,7 @@ ForwardIterator adjacent_find(
 *first*<br/>
 正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
 *comp*<br/>
@@ -358,7 +358,7 @@ bool all_of(
 *first*<br/>
 輸入迭代器，表示開始檢查條件的位置。 某範圍元素的開始迭代器標記。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，表示檢查條件的某範圍元素結尾。
 
 *comp*<br/>
@@ -389,7 +389,7 @@ bool any_of(
 *first*<br/>
 輸入迭代器，表示檢查條件的某範圍元素開始。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，表示檢查條件的某範圍元素結尾。
 
 *comp*<br/>
@@ -429,10 +429,10 @@ bool binary_search(
 *first*<br/>
 正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*值*<br/>
+*value*<br/>
 必要的值，比對元素值或必須符合條件的元素值與二元述詞所指定的元素值。
 
 *comp*<br/>
@@ -553,7 +553,7 @@ OutputIterator copy(
 *first*<br/>
 輸入迭代器，在來源範圍的第一個項目位置定址。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，用於定址來源範圍中最後一個項目的後面一個位置。
 
 *destBeg*<br/>
@@ -646,7 +646,7 @@ BidirectionalIterator2 copy_backward(
 *first*<br/>
 雙向迭代器，在來源範圍的第一個項目位置定址。
 
-*最後一個*<br/>
+*last*<br/>
 雙向迭代器，在來源範圍中越過最後一個項目的位置定址。
 
 *destEnd*<br/>
@@ -737,7 +737,7 @@ OutputIterator copy_if(
 *first*<br/>
 輸入迭代器，表示檢查條件的範圍開始。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，表示範圍的結尾。
 
 *dest*<br/>
@@ -806,7 +806,7 @@ typename iterator_traits<InputIterator>::difference_type count(
 *first*<br/>
 輸入迭代器，定址要周遊範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，定址要周遊範圍中最後一個元素之後的位置。
 
 *val*<br/>
@@ -876,7 +876,7 @@ typename iterator_traits<InputIterator>::difference_type count_if(
 *first*<br/>
 輸入迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
 *_Pred*<br/>
@@ -973,16 +973,16 @@ bool equal(
 
 ### <a name="parameters"></a>參數
 
-*first1*<br/>
+*First1*<br/>
 輸入迭代器，定址要測試的第一個範圍中第一個項目的位置。
 
-*last1*<br/>
+*Last1*<br/>
 輸入迭代器，定址要測試的第一個範圍中最後一個項目的後面一個位置。
 
-*first2*<br/>
+*First2*<br/>
 輸入迭代器，定址要測試的第二個範圍中第一個項目的位置。
 
-*first2*<br/>
+*First2*<br/>
 輸入迭代器，定址要測試的第二個範圍中最後一個項目的後面一個位置。
 
 *Comp*<br/>
@@ -1057,7 +1057,7 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 *first*<br/>
 正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
 *val*<br/>
@@ -1216,7 +1216,7 @@ void fill(
 *first*<br/>
 正向迭代器，定址要周遊之範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 正向迭代器，定址要周遊之範圍中最後一個元素之後的位置。
 
 *val*<br/>
@@ -1287,7 +1287,7 @@ OutputIterator fill_n(
 *計數*<br/>
 帶正負號或不帶正負號的整數類型，指定要獲指派值的元素數目。
 
-*val*<br/>
+*Val*<br/>
 要指派給範圍中的元素的值 [*第一*， *First + Count*)。
 
 ### <a name="return-value"></a>傳回值
@@ -1363,7 +1363,7 @@ InputIterator find(
 *first*<br/>
 輸入迭代器，其定址要搜尋指定值的範圍中，第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，其定址要搜尋指定值的範圍中，最後一個元素後方的位置。
 
 *val*<br/>
@@ -1402,16 +1402,16 @@ ForwardIterator1 find_end(
 
 ### <a name="parameters"></a>參數
 
-*first1*<br/>
+*First1*<br/>
 正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*last1*<br/>
+*Last1*<br/>
 正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*first2*<br/>
+*First2*<br/>
 正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*last2*<br/>
+*Last2*<br/>
 正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
 *Comp*<br/>
@@ -1687,10 +1687,10 @@ InputIterator find_if(
 *first*<br/>
 輸入迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*預測*<br/>
+*pred*<br/>
 使用者定義的述詞函式物件或 [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)，定義所搜尋的元素所要符合的條件。 述詞會接受單一引數，並傳回**真**（符合） 或**false** （不符合）。 簽章*pred*必須有效地`bool pred(const T& arg);`，其中`T`是要類型`InputIterator`取值時可隱含轉換。 **Const**關鍵字顯示只是為了說明，函式物件或 lambda 不應修改引數。
 
 ### <a name="return-value"></a>傳回值
@@ -1803,10 +1803,10 @@ InputIterator find_if_not(
 *first*<br/>
 輸入迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*預測*<br/>
+*pred*<br/>
 使用者定義的述詞函式物件或 [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)，定義所搜尋的元素不符合的條件。 述詞會接受單一引數，並傳回**真**（符合） 或**false** （不符合）。 簽章*pred*必須有效地`bool pred(const T& arg);`，其中`T`是要類型`InputIterator`取值時可隱含轉換。 **Const**關鍵字顯示只是為了說明，函式物件或 lambda 不應修改引數。
 
 ### <a name="return-value"></a>傳回值
@@ -1836,7 +1836,7 @@ Function for_each(
 *first*<br/>
 輸入迭代器，定址要對其作業之範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，定址要對其作業之範圍中最後一個元素之後的位置。
 
 *_Func*<br/>
@@ -1984,7 +1984,7 @@ void generate(
 *first*<br/>
 正向迭代器，定址要指派值之範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 正向迭代器，定址要指派值之範圍中最後一個元素之後的位置。
 
 *_Gen*<br/>
@@ -2061,7 +2061,7 @@ void generate_n(
 *計數*<br/>
 帶正負號或不帶正負號的整數類型，指定要由產生器函式指派值的項目數。
 
-*一般*<br/>
+*Gen*<br/>
 不搭配引數呼叫的函式物件，用於產生要指派到範圍中每個項目的值。
 
 ### <a name="remarks"></a>備註
@@ -2344,10 +2344,10 @@ void inplace_merge(
 *first*<br/>
 雙向迭代器，定址要結合並排序成單一範圍之兩個連續排序範圍的第一個範圍中第一個元素的位置。
 
-*中間*<br/>
+*middle*<br/>
 雙向迭代器，定址要結合並排序成單一範圍之兩個連續排序範圍的第二個範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 雙向迭代器，定址要結合並排序成單一範圍之兩個連續排序範圍的第二個範圍中最後一個元素之後的位置。
 
 *comp*<br/>
@@ -2494,7 +2494,7 @@ bool is_heap(
 *first*<br/>
 隨機存取迭代器，表示檢查堆積的範圍開始。
 
-*最後一個*<br/>
+*last*<br/>
 隨機存取迭代器，表示範圍結尾。
 
 *comp*<br/>
@@ -2567,7 +2567,7 @@ bool is_partitioned(
 *first*<br/>
 輸入迭代器，表示範圍開始檢查條件的位置。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，表示範圍結尾。
 
 *comp*<br/>
@@ -2618,16 +2618,16 @@ bool is_permutation(
 
 ### <a name="parameters"></a>參數
 
-*first1*<br/>
+*First1*<br/>
 指向範圍的第一個項目的正向迭代器。
 
-*last1*<br/>
+*Last1*<br/>
 指向範圍的最後項目前一個的正向迭代器。
 
-*first2*<br/>
+*First2*<br/>
 指向第二個範圍的第一個項目的正向迭代器，用於比較。
 
-*last2*<br/>
+*Last2*<br/>
 指向第二個範圍的最後一個項目之某個項目的正向迭代器，用於比較。
 
 *預測*<br/>
@@ -2723,7 +2723,7 @@ bool is_sorted(
 *first*<br/>
 正向迭代器，表示要檢查之範圍的開始位置。
 
-*最後一個*<br/>
+*last*<br/>
 正向迭代器，表示範圍結尾。
 
 *comp*<br/>
@@ -2758,7 +2758,7 @@ ForwardIterator is_sorted_until(
 *first*<br/>
 正向迭代器，表示要檢查之範圍的開始位置。
 
-*最後一個*<br/>
+*last*<br/>
 正向迭代器，表示範圍結尾。
 
 *comp*<br/>
@@ -3101,10 +3101,10 @@ ForwardIterator lower_bound(
 *first*<br/>
 正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*值*<br/>
+*value*<br/>
 正在搜尋排序範圍中第一個位置或可能第一個位置的值。
 
 *comp*<br/>
@@ -3238,7 +3238,7 @@ void make_heap(
 *first*<br/>
 隨機存取迭代器，定址要轉換為堆積之範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 隨機存取迭代器，定址要轉換為堆積之範圍中最後一個元素之後的位置。
 
 *comp*<br/>
@@ -3528,7 +3528,7 @@ constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator las
 *first*<br/>
 正向迭代器，定址要搜尋最大元素之範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 正向迭代器，定址要搜尋最大元素之範圍中最後一個元素之後的位置。
 
 *comp*<br/>
@@ -3681,7 +3681,7 @@ OutputIterator merge(
 *last2*<br/>
 輸入迭代器，用於定址要結合並排序成單一範圍之兩個連續排序來源範圍的第二個範圍中，最後一個項目的後面一個位置。
 
-*結果*<br/>
+*result*<br/>
 輸出迭代器，用於定址目的範圍中第一個項目的位置，在此目的範圍中，兩個來源範圍會結合成單一排序範圍。
 
 *comp*<br/>
@@ -4049,7 +4049,7 @@ constexpr ForwardIterator min_element(
 *first*<br/>
 正向迭代器，定址要搜尋最小元素之範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 正向迭代器，定址要搜尋最小元素之範圍中最後一個元素之後的位置。
 
 *comp*<br/>
@@ -4196,7 +4196,7 @@ constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
 *first*<br/>
 正向迭代器，表示範圍開頭。
 
-*最後一個*<br/>
+*last*<br/>
 正向迭代器，表示範圍結尾。
 
 *comp*<br/>
@@ -4310,16 +4310,16 @@ mismatch(
 
 ### <a name="parameters"></a>參數
 
-*first1*<br/>
+*First1*<br/>
 輸入迭代器，定址要測試的第一個範圍中第一個項目的位置。
 
-*last1*<br/>
+*Last1*<br/>
 輸入迭代器，定址要測試的第一個範圍中最後一個項目的後面一個位置。
 
-*first2*<br/>
+*First2*<br/>
 輸入迭代器，定址要測試的第二個範圍中第一個項目的位置。
 
-*last2*<br/>
+*Last2*<br/>
 輸入迭代器，定址要測試的第二個範圍中最後一個項目的後面一個位置。
 
 *Comp*<br/>
@@ -4452,7 +4452,7 @@ OutputIterator move(
 *first*<br/>
 輸入迭代器，表示項目移動範圍的開始位置。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，表示項目移動範圍的結束位置。
 
 *dest*<br/>
@@ -4479,7 +4479,7 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
 *first*<br/>
 迭代器，表示要從中移動元素的範圍開始。
 
-*最後一個*<br/>
+*last*<br/>
 迭代器，表示要從中移動元素的範圍結尾。 這個元素不會進行移動。
 
 *destEnd*<br/>
@@ -4508,7 +4508,7 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
 *first*<br/>
 雙向迭代器，指向要排列之範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 雙向迭代器，指向要排列之範圍中最後一個元素之後的位置。
 
 *comp*<br/>
@@ -4685,7 +4685,7 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
 *_Nth*<br/>
 隨機存取迭代器，定址要在磁碟分割界限上正確排序之元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 隨機存取迭代器，定址要分割之範圍中最後一個元素之後的位置。
 
 *comp*<br/>
@@ -4781,7 +4781,7 @@ bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
 *first*<br/>
 輸入迭代器，表示開始檢查條件之某範圍元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，表示某範圍元素的結尾。
 
 *comp*<br/>
@@ -4822,7 +4822,7 @@ void partial_sort(
 *sortEnd*<br/>
 隨機存取迭代器，定址要排序之子範圍中最後一個元素之後的位置。
 
-*最後一個*<br/>
+*last*<br/>
 隨機存取迭代器，定址要局部排序之範圍中最後一個元素之後的位置。
 
 *comp*<br/>
@@ -5050,7 +5050,7 @@ BidirectionalIterator partition(
 *first*<br/>
 雙向迭代器，定址要分割之範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 雙向迭代器，定址要分割之範圍中最後一個元素之後的位置。
 
 *comp*<br/>
@@ -5127,7 +5127,7 @@ pair<OutputIterator1, OutputIterator2>
 *first*<br/>
 輸入迭代器，表示檢查條件的範圍開始。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，表示範圍結尾。
 
 *dest1*<br/>
@@ -5160,7 +5160,7 @@ ForwardIterator partition_point(
 *first*<br/>
 `ForwardIterator`，表示檢查條件的範圍開始。
 
-*最後一個*<br/>
+*last*<br/>
 `ForwardIterator`，表示範圍結尾。
 
 *comp*<br/>
@@ -5191,7 +5191,7 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
 *first*<br/>
 隨機存取迭代器，定址堆積中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 隨機存取迭代器，定址堆積中最後一個元素之後的位置。
 
 *comp*<br/>
@@ -5299,7 +5299,7 @@ bool prev_permutation(
 *first*<br/>
 雙向迭代器，指向要排列之範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 雙向迭代器，指向要排列之範圍中最後一個元素之後的位置。
 
 *comp*<br/>
@@ -5468,7 +5468,7 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
 *first*<br/>
 隨機存取迭代器，定址堆積中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 隨機存取迭代器，定址要轉換為堆積之範圍中最後一個元素之後的位置。
 
 *comp*<br/>
@@ -5561,7 +5561,7 @@ int main() {
 
 ## <a name="random_shuffle"></a> random_shuffle
 
-Std::random_shuffle() 函式已遭取代，取代[std:: shuffle](../standard-library/algorithm-functions.md#shuffle)。 如需程式碼範例和詳細資訊，請參閱 < [\<隨機 >](../standard-library/random.md)以及 Stackoverflow 文章[std:: random_shuffle 方法為何要取代 C + + 14？](http://go.microsoft.com/fwlink/p/?linkid=397954)。
+Std::random_shuffle() 函式已遭取代，取代[std:: shuffle](../standard-library/algorithm-functions.md#shuffle)。 如需程式碼範例和詳細資訊，請參閱 < [\<隨機 >](../standard-library/random.md)和 Stack Overflow 文章[std:: random_shuffle 方法為何要取代 C + + 14？](http://go.microsoft.com/fwlink/p/?linkid=397954)。
 
 ## <a name="remove"></a>  remove
 
@@ -5577,7 +5577,7 @@ ForwardIterator remove(ForwardIterator first, ForwardIterator last, const Type& 
 *first*<br/>
 轉送迭代器，定址要從中移除元素之範圍中，第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 轉送迭代器，定址要從中移除元素之範圍中，最後一個元素的位置後方。
 
 *val*<br/>
@@ -5659,10 +5659,10 @@ OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterat
 *first*<br/>
 輸入迭代器，用於定址要從中移除元素的範圍中，第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，用於定址要從中移除元素的範圍中，最後一個元素的後面一個位置。
 
-*結果*<br/>
+*result*<br/>
 輸出迭代器，用於定址要移除元素的目的範圍中，第一個元素的位置。
 
 *val*<br/>
@@ -5741,10 +5741,10 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
 *first*<br/>
 輸入迭代器，用於定址要從中移除元素的範圍中，第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，用於定址要從中移除元素的範圍中，最後一個元素的後面一個位置。
 
-*結果*<br/>
+*result*<br/>
 輸出迭代器，用於定址要移除元素的目的範圍中，第一個元素的位置。
 
 *_Pred*<br/>
@@ -5835,7 +5835,7 @@ ForwardIterator remove_if(
 *first*<br/>
 正向迭代器，指向要從中移除元素之範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 正向迭代器，指向要從中移除元素之範圍中最後一個元素之後的位置。
 
 *_Pred*<br/>
@@ -5925,7 +5925,7 @@ void replace(
 *first*<br/>
 正向迭代器，指向要從中取代元素之範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 正向迭代器，指向要從中取代元素之範圍中最後一個元素之後的位置。
 
 *_OldVal*<br/>
@@ -6001,10 +6001,10 @@ OutputIterator replace_copy(
 *first*<br/>
 輸入迭代器，用於指向要從中取代項目的範圍中，第一個項目的位置。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，用於指向要從中取代項目的範圍中，最後一個項目的後面一個位置。
 
-*結果*<br/>
+*result*<br/>
 輸出迭代器，用於指向要複製已更改順序的項目之目的範圍中，第一個項目的位置。
 
 *_OldVal*<br/>
@@ -6103,10 +6103,10 @@ OutputIterator replace_copy_if(
 *first*<br/>
 輸入迭代器，用於指向要從中取代項目的範圍中，第一個項目的位置。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，用於指向要從中取代項目的範圍中，最後一個項目的後面一個位置。
 
-*結果*<br/>
+*result*<br/>
 輸出迭代器，用於指向要複製元素之目的範圍中，第一個元素的位置。
 
 *_Pred*<br/>
@@ -6211,7 +6211,7 @@ void replace_if(
 *first*<br/>
 正向迭代器，指向要從中取代元素之範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 迭代器，指向要從中取代元素之範圍中最後一個元素之後的位置。
 
 *_Pred*<br/>
@@ -6290,7 +6290,7 @@ void reverse(BidirectionalIterator first, BidirectionalIterator last);
 *first*<br/>
 雙向迭代器，指向要排列元素之範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 雙向迭代器，指向要排列元素之範圍中最後一個元素之後的位置。
 
 ### <a name="remarks"></a>備註
@@ -6356,10 +6356,10 @@ OutputIterator reverse_copy(
 *first*<br/>
 雙向迭代器，用於指向要排列的來源範圍中，第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 雙向迭代器，用於指向要排列元素的來源範圍中，最後一個元素的後面一個位置。
 
-*結果*<br/>
+*result*<br/>
 輸出迭代器，用於指向要複製元素之目的範圍中，第一個元素的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -6427,7 +6427,7 @@ void rotate(
 *first*<br/>
 正向迭代器，用於定址要旋轉之範圍中第一個項目的位置。
 
-*中間*<br/>
+*middle*<br/>
 定義範圍內界限的正向迭代器，用於定址第二個範圍部分中第一個項目的位置，該部分的項目會與第一個範圍部分的項目交換。
 
 *最後一個*<br/>
@@ -6532,12 +6532,12 @@ OutputIterator rotate_copy(
 *first*<br/>
 正向迭代器，用於定址要旋轉之範圍中第一個項目的位置。
 
-*中間*<br/>
+*middle*<br/>
 定義範圍內界限的正向迭代器，用於定址第二個範圍部分中第一個項目的位置，該部分的項目會與第一個範圍部分的項目交換。
 
 _*最後一個*正向迭代器定址的後面一個位置，最後一個元素範圍中要被輪替。
 
-*結果*<br/>
+*result*<br/>
 輸出迭代器，用於定址目的範圍中第一個項目的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -6927,7 +6927,7 @@ OutputIterator set_difference(
 *last2*<br/>
 輸入迭代器，用於定址要聯集並排序成單一範圍之兩個連續排序來源範圍的第二個範圍中，最後一個元素的後面一個位置，此聯集範圍代表兩個來源範圍的差異。
 
-*結果*<br/>
+*result*<br/>
 輸出迭代器，用於定址目的範圍中第一個元素的位置，在此目的範圍中，兩個來源範圍會聯集成單一排序範圍，以代表兩個來源範圍的差異。
 
 *comp*<br/>
@@ -7126,7 +7126,7 @@ OutputIterator set_intersection(
 
 這項作業很穩定，因為每個範圍內的元素相對順序會保留在目的範圍中。 演算法不會修改來源範圍。
 
-輸入迭代器的實值類型必須是小於比較才能建立此順序：因此若提供了兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等元素時，目的範圍之第一個來源範圍中的元素會優先於第二個範圍中的元素。 如果來源範圍包含重複的元素，則目的範圍會包含這些元素同時出現在兩個來源範圍中的最大數量元素。
+輸入迭代器的實值類型必須是小於比較才能建立此順序：因此若提供了兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等項目時，目的範圍之第一個來源範圍中的項目會優先於第二個範圍中的項目。 如果來源範圍包含重複的元素，則目的範圍會包含這些元素同時出現在兩個來源範圍中的最大數量元素。
 
 演算法的複雜度為線性，最多有 2 \* (( *last1-first1*) + ( *last2-first2*))-1 次比較非空白來源範圍。
 
@@ -7478,7 +7478,7 @@ OutputIterator set_union(
 
 這項作業很穩定，因為每個範圍內的元素相對順序會保留在目的範圍中。 此演算法不會修改來源範圍`merge`。
 
-輸入迭代器的實值類型必須小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等元素時，目的範圍之第一個來源範圍中的元素會優先於第二個範圍中的元素。 如果來源範圍包含重複的元素，則目的範圍會包含這些元素同時出現在兩個來源範圍中的最大數量元素。
+輸入迭代器的實值類型必須小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等項目時，目的範圍之第一個來源範圍中的項目會優先於第二個範圍中的項目。 如果來源範圍包含重複的元素，則目的範圍會包含這些元素同時出現在兩個來源範圍中的最大數量元素。
 
 演算法的複雜度為線性，最多有 2 \* (( *last1-first1*)-( *last2-first2*))-1 的比較。
 
@@ -7601,7 +7601,7 @@ int main()
 }
 ```
 
-## <a name="shuffle"></a>  隨機播放
+## <a name="shuffle"></a>  shuffle
 
 使用亂數產生器隨機播放 (重新整理) 指定範圍的元素。
 
@@ -7617,10 +7617,10 @@ void shuffle(RandomAccessIterator first,
 *first*<br/>
 範圍中要隨機播放之第一個元素的迭代器，內含。 必須符合 `RandomAccessIterator` 和 `ValueSwappable` 的需求。
 
-*最後一個*<br/>
+*last*<br/>
 範圍中要隨機播放之最後一個元素的迭代器，專用。 必須符合 `RandomAccessIterator` 和 `ValueSwappable` 的需求。
 
-*一般*<br/>
+*gen*<br/>
 `shuffle()` 函式將用於作業的亂數產生器。 必須符合 `UniformRandomNumberGenerator` 的需求。
 
 ### <a name="remarks"></a>備註
@@ -7649,7 +7649,7 @@ template<class RandomAccessIterator, class Predicate>
 *first*<br/>
 隨機存取迭代器，用於定址要排序之範圍中第一個項目的位置。
 
-*最後一個*<br/>
+*last*<br/>
 隨機存取迭代器，用於定址要排序之範圍中越過最後一個項目的第一個位置。
 
 *comp*<br/>
@@ -7753,7 +7753,7 @@ template<class RandomAccessIterator, class Predicate>
 *first*<br/>
 隨機存取迭代器，定址目標堆積中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 隨機存取迭代器，定址目標堆積中最後一個元素之後的位置。
 
 *comp*<br/>
@@ -7844,7 +7844,7 @@ BidirectionalIterator stable_partition(
 *first*<br/>
 雙向迭代器，定址要分割之範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 雙向迭代器，定址要分割之範圍中最後一個元素之後的位置。
 
 *_Pred*<br/>
@@ -7925,7 +7925,7 @@ void stable_sort(
 *first*<br/>
 雙向迭代器，定址要排序之範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 雙向迭代器，定址要排序之範圍中最後一個元素之後的位置。
 
 *comp*<br/>
@@ -8215,7 +8215,7 @@ OutputIterator transform(
 *first2*<br/>
 輸入迭代器，用於定址第二個來源範圍中要執行之第一個項目的位置。
 
-*結果*<br/>
+*result*<br/>
 輸出迭代器，用於定址目的範圍中第一個項目的位置。
 
 *_Func*<br/>
@@ -8342,7 +8342,7 @@ template<class ForwardIterator, class Predicate>
 *first*<br/>
 正向迭代器，定址要掃描重複移除之範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 正向迭代器，定址要掃描重複項目移除之範圍中最後一個元素之後的位置。
 
 *comp*<br/>
@@ -8475,10 +8475,10 @@ OutputIterator unique_copy( InputIterator first,
 *first*<br/>
 正向迭代器，用於定址要複製之來源範圍中第一個項目的位置。
 
-*最後一個*<br/>
+*last*<br/>
 正向迭代器，用於定址要複製之來源範圍中最後一個項目的後面一個位置。
 
-*結果*<br/>
+*result*<br/>
 輸出迭代器，用於定址正在接收所移除的連續重複項目複本之目的範圍中，第一個項目的位置。
 
 *comp*<br/>
@@ -8594,10 +8594,10 @@ template<class ForwardIterator, class Type, class Predicate>
 *first*<br/>
 所搜尋範圍中第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 所搜尋範圍中最後一個元素之後的位置。
 
-*值*<br/>
+*value*<br/>
 需要超出所傳回迭代器定址之元素值的排序範圍中的值。
 
 *comp*<br/>

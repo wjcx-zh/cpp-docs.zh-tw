@@ -3,12 +3,12 @@ title: 歡迎回到 C++ (現代 C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: a7d82a65141e402e779a428ba32d15ddd70016c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08563f6a67ec7105da688d566d71d8ea15cb8cec
+ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454623"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54334621"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>歡迎回到 C++ (現代 C++)
 
@@ -125,7 +125,7 @@ C++ 正在復活，因為功能強大再度成為王道。 當程式設計人員
 
 - [ABI 界限上的可攜性](../cpp/portability-at-abi-boundaries-modern-cpp.md)
 
-如需詳細資訊，請參閱 StackOverflow 文章[在 c++11 中已被取代哪些 c + + 慣用語](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11)。
+如需詳細資訊，請參閱 Stack Overflow 文章[在 c++11 中已被取代的 c + + 慣用語](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11)。
 
 ## <a name="see-also"></a>另請參閱
 

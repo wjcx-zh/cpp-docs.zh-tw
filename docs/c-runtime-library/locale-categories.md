@@ -21,19 +21,18 @@ helpviewer_keywords:
 - LC_NUMERIC constant
 - LC_COLLATE constant
 ms.assetid: 868f1493-fe5d-4722-acab-bfcd374a063a
-ms.openlocfilehash: 4c46f4803c7b6ff226fc41ddce7f8e4493b0db40
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 841ff5a31bfe9ee5513f76970d3b834f698b92cc
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521345"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220188"
 ---
 # <a name="locale-categories"></a>地區設定類別
 
 ## <a name="syntax"></a>語法
 
 ```
-
 #include <locale.h>
 ```
 
@@ -45,7 +44,7 @@ ms.locfileid: "51521345"
 |---------------------|-------------------------------|
 |`LC_ALL`|所有與地區設定相關的行為 (所有類別)|
 |`LC_COLLATE`|`strcoll` 和 `strxfrm` 函式的行為|
-|`LC_CTYPE`|字元處理函式 (除了 **isdigit**、`isxdigit`、`mbstowcs` 和 `mbtowc`，它們不會受到影響) 的行為|
+|`LC_CTYPE`|字元處理函式的行為 (`isdigit`、`isxdigit`、`mbstowcs` 及 `mbtowc` 除外，其不受影響)|
 |`LC_MAX`|與 `LC_TIME` 相同|
 |`LC_MIN`|與 `LC_ALL` 相同|
 |`LC_MONETARY`|`localeconv` 函式傳回的貨幣格式資訊|

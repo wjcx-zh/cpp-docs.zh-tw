@@ -25,19 +25,18 @@ helpviewer_keywords:
 - _A_HIDDEN constant
 - _A_RDONLY constant
 ms.assetid: 8dc8ccb9-99f5-446b-876c-7ebecc2f764f
-ms.openlocfilehash: 9aceef7f9c28da3ed3d0d98f4fc579a3c17480e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90aacc1e1e8c45f739c1f6aec973f55e7fab67d9
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660339"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220175"
 ---
 # <a name="file-attribute-constants"></a>檔案屬性常數
 
 ## <a name="syntax"></a>語法
 
 ```
-
 #include <io.h>
 ```
 
@@ -47,14 +46,14 @@ ms.locfileid: "50660339"
 
 屬性會由下列所示常數來代表：
 
-|常數|描述|
+|常數|說明|
 |-|-|
-|`_A_ARCH`| 封存。 每當 BACKUP 命令變更或清除檔案時即設定。 值：0x20|
-|`_A_HIDDEN`| 隱藏的檔案。 除非您使用 /AH 選項，否則使用 DIR 命令時並不常見。 傳回一般檔案以及具有此屬性之檔案的相關資訊。 值：0x02|
-|`_A_NORMAL`| 一般。 檔案可進行讀取或寫入而不受限制。 值：0x00|
-|`_A_RDONLY`| 唯讀。 無法開啟檔案以進行寫入，也無法建立具有相同名稱的檔案。 值：0x01|
-|`_A_SUBDIR`| 子目錄。 值：0x10|
-|`_A_SYSTEM`| 系統檔案。 除非使用 /AS 選項，否則使用 DIR 命令時並不常見。 值：0x04|
+|`_A_ARCH`| 封存。 每當 BACKUP 命令變更或清除檔案時即設定。 值:0x20|
+|`_A_HIDDEN`| 隱藏的檔案。 除非您使用 /AH 選項，否則使用 DIR 命令時並不常見。 傳回一般檔案以及具有此屬性之檔案的相關資訊。 值:0x02|
+|`_A_NORMAL`| 一般。 檔案可進行讀取或寫入而不受限制。 值:0x00|
+|`_A_RDONLY`| 唯讀。 無法開啟檔案以進行寫入，也無法建立具有相同名稱的檔案。 值:0x01|
+|`_A_SUBDIR`| 子目錄。 值:0x10|
+|`_A_SYSTEM`| 系統檔案。 除非使用 /AS 選項，否則使用 DIR 命令時並不常見。 值:0x04|
 
 可以使用 OR 運算子 (&#124;) 結合多個常數。
 

@@ -41,19 +41,18 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-ms.openlocfilehash: c7c623b81d626b3d653dbd731521ffe2649671ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d092f9c1626f48dcdb006e18ece2a45bfeed36e
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645597"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220604"
 ---
 # <a name="errno-constants"></a>errno 常數
 
 ## <a name="syntax"></a>語法
 
 ```
-
 #include <errno.h>
 ```
 
@@ -67,13 +66,13 @@ ERRNO.H 包含 **errno** 值的定義。 不過，ERRNO.H 中所提供的定義�
 
 支援的 **errno** 值如下：
 
-|常數|描述|
+|常數|說明|
 |-|-|
 |**ECHILD**|沒有繁衍的處理序。|
 |**EAGAIN**|沒有額外的處理序。 建立新處理序的嘗試已失敗，因為已經沒有更多的處理序位置，或是沒有足夠的記憶體，或是已達到最大巢狀層次。|
 |**E2BIG**|引數清單太長。|
 |**EACCES**|權限遭拒。 檔案的權限設定不允許指定的存取。 此錯誤顯示嘗試存取檔案 (或在某些情況下為存取目錄) 的方式不符合檔案的屬性。<br/><br/>例如，在嘗試讀取未開啟的檔案、開啟現有唯讀檔案以進行寫入，或是開啟目錄而非檔案時，便可能會發生該錯誤。 在 MS-DOS 作業系統 3.0 版或更新版本之下，**EACCES** 也可能表示鎖定或共用違規。<br/><br/>在嘗試對檔案或目錄進行重新命名，或是移除現有目錄時，也可能會發生該錯誤。|
-|**EBADF**|檔案編號錯誤。 有兩個可能的原因：1) 指定的檔案描述項不是有效的值，或未參考開啟檔案。 2) 嘗試寫入以唯讀存取方式開啟的檔案或裝置。|
+|**EBADF**|檔案編號錯誤。 可能的原因有二：1) 指定的檔案描述元不是有效的值，或不是開啟的檔案。 2) 嘗試寫入以唯讀存取方式開啟的檔案或裝置。|
 |**EDEADLOCK**|會發生資源死結。 數學函式的引數沒有位於函式的定義域中。|
 |**EDOM**|數學引數。|
 |**EEXIST**|檔案存在。 嘗試建立已存在的檔案。 例如，在 **_open** 呼叫中指定 **_O_CREAT** 和 **_O_EXCL** 旗標，但是命名的檔案已經存在。|

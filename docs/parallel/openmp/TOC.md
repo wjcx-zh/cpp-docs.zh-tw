@@ -1,13 +1,15 @@
+---
+ms.openlocfilehash: 5f74861f75ed3cd431379f26f9802c0fb29a8bea
+ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397312"
+---
 # [Visual C++ 中的 OpenMP](openmp-in-visual-cpp.md)
 # [OpenMP C 和 C++ API](openmp-c-and-cpp-application-program-interface.md)
 ## [內容](contents.md)
 ## [1.簡介](1-introduction.md)
-### [1.1 範圍](1-1-scope.md)
-### [1.2 詞彙定義](1-2-definition-of-terms.md)
-### [1.3 執行模式](1-3-execution-model.md)
-### [1.4 符合標準](1-4-compliance.md)
-### [1.5 規範參考](1-5-normative-references.md)
-### [1.6 組織](1-6-organization.md)
 ## [2.指示詞](2-directives.md)
 ### [2.1 指示詞格式](2-1-directive-format.md)
 ### [2.2 條件式編譯](2-2-conditional-compilation.md)
@@ -61,10 +63,6 @@
 #### [3.3.1 omp_get_wtime 函式](3-3-1-omp-get-wtime-function.md)
 #### [3.3.2 omp_get_wtick 函式](3-3-2-omp-get-wtick-function.md)
 ## [4.環境變數](4-environment-variables.md)
-### [4.1 OMP_SCHEDULE](4-1-omp-schedule.md)
-### [4.2 OMP_NUM_THREADS](4-2-omp-num-threads.md)
-### [4.3 OMP_DYNAMIC](4-3-omp-dynamic.md)
-### [4.4 OMP_NESTED](4-4-omp-nested.md)
 ## [A.範例](a-examples.md)
 ### [A.1 平行執行簡單迴圈](a-1-executing-a-simple-loop-in-parallel.md)
 ### [A.2 指定條件式編譯](a-2-specifying-conditional-compilation.md)
@@ -99,8 +97,6 @@
 ### [A.31 安全執行緒鎖定函式](a-31-thread-safe-lock-functions.md)
 ## [B.執行階段程式庫函式的虛設常式](b-stubs-for-run-time-library-functions.md)
 ## [C.OpenMP C 和 C++ 文法](c-openmp-c-and-cpp-grammar.md)
-### [C.1 標記法](c-1-notation.md)
-### [C.2 規則](c-2-rules.md)
 ## [D.使用 schedule 子句](d-using-the-schedule-clause.md)
 ## [E.OpenMP C/C++ 中的實作定義行為](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
 ## [F.2.0 版中的新功能和釐清的內容](f-new-features-and-clarifications-in-version-2-0.md)

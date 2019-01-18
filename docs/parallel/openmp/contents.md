@@ -2,28 +2,16 @@
 title: 內容
 ms.date: 11/04/2016
 ms.assetid: b7858099-7d7f-4cd9-9fa0-fba4832f2dd2
-ms.openlocfilehash: f9fffab938735421429c53cc760ad0db16484577
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 13f2d0700f4200caee0b87e1923711fef5e7ae14
+ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620580"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397286"
 ---
 # <a name="contents"></a>內容
 
 [1.簡介](../../parallel/openmp/1-introduction.md)
-
-[1.1 範圍](../../parallel/openmp/1-1-scope.md)
-
-[1.2 詞彙定義](../../parallel/openmp/1-2-definition-of-terms.md)
-
-[1.3 執行模式](../../parallel/openmp/1-3-execution-model.md)
-
-[1.4 符合標準](../../parallel/openmp/1-4-compliance.md)
-
-[1.5 規範參考](../../parallel/openmp/1-5-normative-references.md)
-
-[1.6 組織](../../parallel/openmp/1-6-organization.md)
 
 [2.指示詞](../../parallel/openmp/2-directives.md)
 
@@ -131,14 +119,6 @@ ms.locfileid: "50620580"
 
 [4.環境變數](../../parallel/openmp/4-environment-variables.md)
 
-[4.1 OMP_SCHEDULE](../../parallel/openmp/4-1-omp-schedule.md)
-
-[4.2 OMP_NUM_THREADS](../../parallel/openmp/4-2-omp-num-threads.md)
-
-[4.3 OMP_DYNAMIC](../../parallel/openmp/4-3-omp-dynamic.md)
-
-[4.4 OMP_NESTED](../../parallel/openmp/4-4-omp-nested.md)
-
 [A.範例](../../parallel/openmp/a-examples.md)
 
 [A.1 平行執行簡單迴圈](../../parallel/openmp/a-1-executing-a-simple-loop-in-parallel.md)
@@ -206,10 +186,6 @@ ms.locfileid: "50620580"
 [B.執行階段程式庫函式的虛設常式](../../parallel/openmp/b-stubs-for-run-time-library-functions.md)
 
 [C.OpenMP C 和 C++ 文法](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)
-
-[C.1 標記法](../../parallel/openmp/c-1-notation.md)
-
-[C.2 規則](../../parallel/openmp/c-2-rules.md)
 
 [D.使用 schedule 子句](../../parallel/openmp/d-using-the-schedule-clause.md)
 

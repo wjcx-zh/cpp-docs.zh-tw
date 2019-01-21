@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: 7565679c58af83d64fd59419e8e841ee48133edf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec59a02f1302fe4a2149889cf1b48090d061d6b2
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544192"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417612"
 ---
 # <a name="unlink-wunlink"></a>_unlink、_wunlink
 
@@ -61,7 +61,7 @@ int _wunlink(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，所有這些函式都會傳回 0。 否則，函數會傳回-1 和集**errno**來**EACCES**，表示路徑指定唯讀檔案，或**ENOENT**，這表示檔案或路徑找不到或指定目錄的路徑。
+如果成功，所有這些函式都會傳回 0。 否則，函數會傳回-1 和集**errno**來**EACCES**，表示路徑指定唯讀檔案或目錄，或**ENOENT**，這表示檔案或路徑找不到。
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

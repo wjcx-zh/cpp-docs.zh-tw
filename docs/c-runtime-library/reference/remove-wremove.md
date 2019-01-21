@@ -30,12 +30,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: d5636912ea36fd1b1412a556d516ac3e8184e0b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05f1c5b6760520e5a982777faa903b3c5116ad05
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613963"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417599"
 ---
 # <a name="remove-wremove"></a>remove0、_wremove
 
@@ -59,7 +59,7 @@ int _wremove(
 
 ## <a name="return-value"></a>傳回值
 
-如果已成功刪除檔案，這些函式每個都會傳回 0。 否則會傳回-1，並設定**errno**可以是**EACCES** ，表示路徑指定唯讀檔案或檔案已開啟，或**ENOENT**表示找不到檔案名稱或路徑或路徑指定的目錄。
+如果已成功刪除檔案，這些函式每個都會傳回 0。 否則，它會傳回-1，並設定**errno**到**EACCES**表示路徑指定唯讀檔案，指定一個目錄，或檔案已開啟，或**ENOENT**若要指出的檔案名稱或路徑未找到。
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

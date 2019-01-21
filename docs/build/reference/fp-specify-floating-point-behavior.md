@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 78abe5e3b491ec0d658a40628dadc81e334c212f
-ms.sourcegitcommit: d94714522428834a02ede6e6884572f0f6ca9824
+ms.openlocfilehash: 77e6d0c97f1d0381fe32ae23f8d7e8bd02ddf219
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597534"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417638"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp （指定浮點數行為）
 
@@ -24,7 +24,7 @@ ms.locfileid: "51597534"
 
 ## <a name="syntax"></a>語法
 
-> **/fp:**[**精確** | **嚴格** | **快速** | **除了**[**-**]]
+> **/fp:**[**precise** | **strict** | **fast** | **except**[**-**]]
 
 ### <a name="arguments"></a>引數
 
@@ -57,7 +57,7 @@ ms.locfileid: "51597534"
 
 **/fp: fast**適合的程式不需要嚴格的來源的程式碼順序和捨入浮點運算式，並不依賴標準的規則，以便處理特殊的值，例如 NaN。 如果您的浮點程式碼需要保留順序和捨入的原始程式碼，或依賴的特殊值，使用標準行為[/fp： 精確](#precise)。 如果您的程式碼可以存取或修改的浮點環境，若要變更捨入模式，取消遮罩浮點例外狀況，或檢查浮點狀態，請使用[/fp: strict](#strict)。
 
-#### <a name="except"></a>除了
+#### <a name="except"></a>except
 
 **/Fp： 除了**選項會產生可確保在處發生，確切的時間點，會引發任何取消遮罩浮點例外狀況，而且會引發任何其他的浮點例外狀況的程式碼。 根據預設， **/fp: strict**選項可讓 **/fp： 除了**，和 **/fp： 精確**則否。 **/Fp： 除了**選項不相容 **/fp: fast**。 此選項可以明確停用我們的 **/fp： 除了-**。
 
@@ -71,13 +71,13 @@ ms.locfileid: "51597534"
 
 ### <a name="using-pragmas-to-control-floating-point-behavior"></a>使用 Pragma 控制浮點數行為
 
-編譯器會提供三個 pragma directivess 覆寫在命令列上指定的浮點行為： [float_control](../../preprocessor/float-control.md)， [fenv_access](../../preprocessor/fenv-access.md)，和[fp_contract](../../preprocessor/fp-contract.md). 您可以使用這些 pragma 控制函式層級，不會在函式內的浮點數行為。 請注意這些 pragma 並不會直接的對應 **/fp**選項。 下表顯示如何 **/fp**互相對應的選項和 pragma。 如需詳細資訊，請參閱個別選項和 pragma 的文件。
+編譯器會提供三個的 pragma 指示詞，來覆寫在命令列上指定的浮點行為： [float_control](../../preprocessor/float-control.md)， [fenv_access](../../preprocessor/fenv-access.md)，和[fp_contract](../../preprocessor/fp-contract.md). 您可以使用這些 pragma 控制函式層級，不會在函式內的浮點數行為。 請注意這些 pragma 並不會直接的對應 **/fp**選項。 下表顯示如何 **/fp**互相對應的選項和 pragma。 如需詳細資訊，請參閱個別選項和 pragma 的文件。
 
 ||float_control(precise)|float_control(except)|fenv_access|fp_contract|
 |-|-|-|-|-|
-|**/fp: fast**|關閉|關閉|關閉|於|
-|**/fp： 精確**|於|關閉|關閉|於|
-|**/fp： 除外**|於|於|於|關閉|
+|**/fp:fast**|關閉|關閉|關閉|於|
+|**/fp:precise**|於|關閉|關閉|於|
+|**/fp:except**|於|於|於|關閉|
 
 ### <a name="the-default-floating-point-environment"></a>預設浮點環境
 

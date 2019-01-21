@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 429e20c77c2a5715d1d45b74b3d020ee52daec97
+ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397364"
+---
 # [開發 Visual C++ 的 IDE 和工具](ide-and-tools-for-visual-cpp-development.md)
 # [撰寫及重構程式碼 (C++)](writing-and-refactoring-code-cpp.md)
 ## [變更簽章](refactoring/change-signature.md)
@@ -29,12 +37,8 @@
 ### [建立 Makefile 專案](creating-a-makefile-project.md)
 #### [Makefile 專案精靈](makefile-project-wizard.md)
 ##### [Makefile 專案精靈、應用程式設定](application-settings-makefile-project-wizard.md)
-#### [如何：在 Makefile 專案中啟用 IntelliSense](how-to-enable-intellisense-for-makefile-projects.md)
-### [如何：從現有程式碼建立 C++ 專案](how-to-create-a-cpp-project-from-existing-code.md)
-#### [從現有的程式碼檔建立新專案精靈、指定專案位置和原始程式檔](specify-project-location-and-source-files.md)
-#### [從現有的程式碼檔建立新專案精靈、指定專案設定](specify-project-settings-create-new-project-from-existing-code-files-wizard.md)
-#### [從現有的程式碼檔建立新專案精靈、指定偵錯組態設定](specify-debug-configuration-settings.md)
-#### [從現有的程式碼檔建立新專案精靈、指定發行組態設定](specify-release-configuration.md)
+#### [如何：啟用 Makefile 專案的 IntelliSense](how-to-enable-intellisense-for-makefile-projects.md)
+### [如何：從現有的程式碼建立 C++ 專案](how-to-create-a-cpp-project-from-existing-code.md)
 ## [使用專案屬性](working-with-project-properties.md)
 ### [屬性頁 (Visual C++)](property-pages-visual-cpp.md)
 #### [一般屬性頁面 (專案)](general-property-page-project.md)
@@ -61,7 +65,7 @@
 #### [HLSL 屬性頁](hlsl-property-pages.md)
 ##### [HLSL 屬性頁：一般](hlsl-property-pages-general.md)
 ##### [HLSL 屬性頁：進階](hlsl-property-pages-advanced.md)
-##### [HLSL 屬性頁：輸出檔](hlsl-property-pages-output-files.md)
+##### [HLSL 屬性頁：輸出檔案](hlsl-property-pages-output-files.md)
 ## [在 Visual C++ 專案中新增參考](adding-references-in-visual-cpp-projects.md)
 ## [如何：組織組建的專案輸出檔案](how-to-organize-project-output-files-for-builds.md)
 # [部署原生傳統型應用程式 (Visual C++)](deploying-native-desktop-applications-visual-cpp.md)
@@ -78,7 +82,7 @@
 ### [轉散發 ATL 應用程式](redistributing-an-atl-application.md)
 ## [部署範例](deployment-examples.md)
 ### [逐步解說：使用安裝專案部署 Visual C++ 應用程式](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)
-### [逐步解說：將 Visual C++ 應用程式部署至應用程式本機資料夾](walkthrough-deploying-a-visual-cpp-application-to-an-application-local-folder.md)
+### [逐步解說：將 Visual C++ 應用程式部署到應用程式本機資料夾](walkthrough-deploying-a-visual-cpp-application-to-an-application-local-folder.md)
 ### [逐步解說：使用 Visual C++ 可轉散發套件部署 Visual C++ 應用程式](deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)
 ### [準備測試電腦以執行偵錯可執行檔](preparing-a-test-machine-to-run-a-debug-executable.md)
 ## [轉散發 Web 用戶端應用程式](redistributing-web-client-applications.md)
@@ -128,9 +132,9 @@
 ### [格式化自訂建置步驟或建置事件的輸出](formatting-the-output-of-a-custom-build-step-or-build-event.md)
 ## [建置命令和屬性的一般巨集](common-macros-for-build-commands-and-properties.md)
 ## [範例專案檔](project-files.md)
-## [逐步解說：編譯針對 Visual Studio 中 CLR 的 C++ 程式](walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)
+## [逐步解說：在 Visual Studio 中編譯目標為 CLR 的 C++ 程式](walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)
 # [使用 Visual Studio IDE 進行 C++ 桌面程式開發](using-the-visual-studio-ide-for-cpp-desktop-development.md)
-## [逐步解說：使用專案和方案 (C++)](walkthrough-working-with-projects-and-solutions-cpp.md)
+## [逐步解說：使用專案和解決方案 (C++)](walkthrough-working-with-projects-and-solutions-cpp.md)
 ## [逐步解說：建置專案 (C++)](walkthrough-building-a-project-cpp.md)
 ## [逐步解說：測試專案 (C++)](walkthrough-testing-a-project-cpp.md)
 ## [逐步解說：偵錯專案 (C++)](walkthrough-debugging-a-project-cpp.md)

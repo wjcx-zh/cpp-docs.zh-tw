@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 5f74861f75ed3cd431379f26f9802c0fb29a8bea
-ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397312"
----
 # [Visual C++ 中的 OpenMP](openmp-in-visual-cpp.md)
 # [OpenMP C 和 C++ API](openmp-c-and-cpp-application-program-interface.md)
 ## [內容](contents.md)

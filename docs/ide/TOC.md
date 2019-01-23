@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 429e20c77c2a5715d1d45b74b3d020ee52daec97
-ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397364"
----
 # [開發 Visual C++ 的 IDE 和工具](ide-and-tools-for-visual-cpp-development.md)
 # [撰寫及重構程式碼 (C++)](writing-and-refactoring-code-cpp.md)
 ## [變更簽章](refactoring/change-signature.md)

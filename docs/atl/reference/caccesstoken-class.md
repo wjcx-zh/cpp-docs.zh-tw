@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: e8fadb6825bbdc970e952d2ea6c26a27b4837dfc
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e53160860211ba09114f2d4d101a2eaaf7de941f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694526"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894235"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 類別
 
@@ -224,7 +224,7 @@ bool CreateImpersonationToken(
 
 ### <a name="remarks"></a>備註
 
-`CreateImpersonationToken` 呼叫[DuplicateToken](https://msdn.microsoft.com/library/windows/desktop/aa446616)來建立新的模擬語彙基元。
+`CreateImpersonationToken` 呼叫[DuplicateToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetoken)來建立新的模擬語彙基元。
 
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken
 
@@ -661,7 +661,7 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 
 ### <a name="remarks"></a>備註
 
-呼叫[OpenProcessToken](https://msdn.microsoft.com/library/aa379295) Win32 函式。
+呼叫[OpenProcessToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) Win32 函式。
 
 ##  <a name="getprofile"></a>  CAccessToken::GetProfile
 
@@ -1081,7 +1081,7 @@ bool PrivilegeCheck(
 
 ### <a name="parameters"></a>參數
 
-*[Requiredprivileges]*<br/>
+*RequiredPrivileges*<br/>
 指標[PRIVILEGE_SET](/windows/desktop/api/winnt/ns-winnt-_privilege_set)結構。
 
 *pbResult*<br/>
@@ -1093,7 +1093,7 @@ bool PrivilegeCheck(
 
 ### <a name="remarks"></a>備註
 
-當`PrivilegeCheck`會傳回`Attributes`每個成員[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)結構設 SE_PRIVILEGE_USED_FOR_ACCESS，如果已啟用對應的權限。 這個方法會呼叫[PrivilegeCheck](https://msdn.microsoft.com/library/windows/desktop/aa379304) Win32 函式。
+當`PrivilegeCheck`會傳回`Attributes`每個成員[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)結構設 SE_PRIVILEGE_USED_FOR_ACCESS，如果已啟用對應的權限。 這個方法會呼叫[PrivilegeCheck](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-privilegecheck) Win32 函式。
 
 ##  <a name="revert"></a>  CAccessToken::Revert
 

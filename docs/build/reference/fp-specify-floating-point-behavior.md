@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 77e6d0c97f1d0381fe32ae23f8d7e8bd02ddf219
-ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
+ms.openlocfilehash: c571bf104fd7e8f6a287c3dd35c444d904b4b7e8
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/21/2019
-ms.locfileid: "54417638"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894090"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp （指定浮點數行為）
 
@@ -77,7 +77,7 @@ ms.locfileid: "54417638"
 |-|-|-|-|-|
 |**/fp:fast**|關閉|關閉|關閉|於|
 |**/fp:precise**|於|關閉|關閉|於|
-|**/fp:except**|於|於|於|關閉|
+|**/fp:strict**|於|於|於|關閉|
 
 ### <a name="the-default-floating-point-environment"></a>預設浮點環境
 

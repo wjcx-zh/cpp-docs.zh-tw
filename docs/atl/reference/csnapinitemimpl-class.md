@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: 19c957ae80267efda89a3b151f57c453ecb935bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff7336d393ca4680b4d448b9c775888063125b86
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609399"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893609"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl 類別
 
@@ -106,7 +106,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 
 ##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems
 
-這個方法會實作 Win32 函式[IExtendContextMenu::AddMenuItems](https://msdn.microsoft.com/library/aa814841)。
+這個方法會實作 Win32 函式[IExtendContextMenu::AddMenuItems](/windows/desktop/api/mmc/nf-mmc-iextendcontextmenu-addmenuitems)。
 
 ```
 AddMenuItems(
@@ -144,7 +144,7 @@ AddMenuItems(
 
 ##  <a name="command"></a>  CSnapInItemImpl::Command
 
-這個方法會實作 Win32 函式[IExtendContextMenu::Command](https://msdn.microsoft.com/library/aa814842)。
+這個方法會實作 Win32 函式[IExtendContextMenu::Command](/windows/desktop/api/mmc/nf-mmc-iextendcontextmenu-command)。
 
 ```
 Command(long lCommandID, DATA_OBJECT_TYPES type);
@@ -168,7 +168,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 
 ##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages
 
-這個方法會實作 Win32 函式[IExtendPropertySheet::CreatePropertyPages](https://msdn.microsoft.com/library/aa814846)。
+這個方法會實作 Win32 函式[IExtendPropertySheet::CreatePropertyPages](/windows/desktop/api/mmc/nn-mmc-iextendpropertysheet2)。
 
 ```
 CreatePropertyPages(
@@ -183,7 +183,7 @@ CreatePropertyPages(
 *lpProvider*<br/>
 [in]指標`IPropertySheetCallback`介面。
 
-*控制代碼*<br/>
+*handle*<br/>
 [in]指定用來將 MMCN_PROPERTY_CHANGE 通知訊息傳送至適當的資料類別的控制代碼。
 
 *pUnk*<br/>
@@ -294,7 +294,7 @@ SCOPEDATAITEM m_scopeDataItem;
 
 ##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem
 
-[RESULTDATAITEM](https://msdn.microsoft.com/library/aa815165)嵌入式管理單元中的資料物件的結構。
+[RESULTDATAITEM](/windows/desktop/api/mmc/ns-mmc-resultdataitem)嵌入式管理單元中的資料物件的結構。
 
 ```
 RESULTDATAITEM m_resultDataItem;

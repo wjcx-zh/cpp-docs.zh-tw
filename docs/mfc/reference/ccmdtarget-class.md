@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 0415fb98cec6b1d92f6a5a43ff705f1b5a7cd348
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4e93f167b9cb28a83c42220fa58b17d5c4845a75
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523815"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894285"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 類別
 
@@ -92,7 +92,7 @@ class CCmdTarget : public CObject
 |[CCmdTarget::IsInvokeAllowed](#isinvokeallowed)|可讓自動化方法引動過程。|
 |[CCmdTarget::IsResultExpected](#isresultexpected)|傳回非零值，如果 automation 函式應傳回的值。|
 |[CCmdTarget::OnCmdMsg](#oncmdmsg)|路由和分派命令訊息。|
-|[Ccmdtarget:: Onfinalrelease](#onfinalrelease)|清除之後釋放最後一個 OLE 參考。|
+|[CCmdTarget::OnFinalRelease](#onfinalrelease)|清除之後釋放最後一個 OLE 參考。|
 |[CCmdTarget::RestoreWaitCursor](#restorewaitcursor)|還原沙漏游標。|
 
 ## <a name="remarks"></a>備註
@@ -163,7 +163,7 @@ BOOL DoOleVerb(
 動詞命令的數值識別項。
 
 *lpMsg*<br/>
-指標[MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)結構描述 （例如按兩下） 叫用動詞命令的事件。
+指標[MSG](/windows/desktop/api/winuser/ns-winuser-msg)結構描述 （例如按兩下） 叫用動詞命令的事件。
 
 *hWndParent*<br/>
 文件視窗的控制代碼，包含物件。
@@ -461,7 +461,7 @@ virtual BOOL OnCmdMsg(
 *nID*<br/>
 包含命令 id。
 
-*則 nCode*<br/>
+*nCode*<br/>
 識別命令通知程式碼。 請參閱**備註**如需有關值*則 nCode*。
 
 *pExtra*<br/>
@@ -484,7 +484,7 @@ virtual BOOL OnCmdMsg(
 
 如果您覆寫`OnCmdMsg`，您必須提供適當的值*則 nCode*，命令通知程式碼，並*pExtra*，這取決於值*則 nCode*. 下表列出其對應的值：
 
-|*則 nCode*值|*pExtra*值|
+|*nCode* value|*pExtra* value|
 |-------------------|--------------------|
 |CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)\*|
 |CN_EVENT|AFX_EVENT\*|
@@ -498,7 +498,7 @@ virtual BOOL OnCmdMsg(
 
 [!code-cpp[NVC_MFCDocView#45](../../mfc/codesnippet/cpp/ccmdtarget-class_3.cpp)]
 
-##  <a name="onfinalrelease"></a>  Ccmdtarget:: Onfinalrelease
+##  <a name="onfinalrelease"></a>  CCmdTarget::OnFinalRelease
 
 在發行至或從物件的最後一個 OLE 參考時，由架構呼叫。
 

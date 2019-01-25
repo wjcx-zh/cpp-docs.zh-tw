@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CFileFind [MFC], CloseContext
 - CFileFind [MFC], m_pTM
 ms.assetid: 9990068c-b023-4114-9580-a50182d15240
-ms.openlocfilehash: 983c8c46100312947f9b5c357df23b51d6eaabc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9eb192e546bcfbba385beea4f1716ce03bbc8ade
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462149"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894051"
 ---
 # <a name="cfilefind-class"></a>CFileFind 類別
 
@@ -332,7 +332,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>參數
 
 *pTimeStamp*<br/>
-指標[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)結構，其中包含的檔案所建立的時間。
+指標[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)結構，其中包含的檔案所建立的時間。
 
 *refTime*<br/>
 參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。
@@ -473,7 +473,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。
 
 *pTimeStamp*<br/>
-指標[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)結構，其中包含上次存取檔案的時間。
+指標[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)結構，其中包含上次存取檔案的時間。
 
 ### <a name="return-value"></a>傳回值
 
@@ -502,7 +502,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>參數
 
 *pTimeStamp*<br/>
-指標[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)結構，其中包含檔案上次被寫入的時間。
+指標[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)結構，其中包含檔案上次被寫入的時間。
 
 *refTime*<br/>
 參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。

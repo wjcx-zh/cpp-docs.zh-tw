@@ -1,5 +1,5 @@
 ---
-title: main：程式啟動
+title: 主要：程式啟動
 ms.date: 11/04/2016
 f1_keywords:
 - vc.main.startup
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - startup code, main function
 - main function, program startup
 ms.assetid: f9581cd6-93f7-4bcd-99ec-d07c3c107dd4
-ms.openlocfilehash: 76c580d4b48e1651803ae9bf62f0e2346e19e06c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 358ae8ec88281bab741393b1196ee2a1e615e896
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603277"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894298"
 ---
-# <a name="main-program-startup"></a>main：程式啟動
+# <a name="main-program-startup"></a>主要：程式啟動
 
 名為的特殊函式**主要**是執行所有的 C 和 c + + 程式的起點。 如果您是撰寫的程式碼遵守 Unicode 程式設計模型，您可以使用`wmain`，這是寬字元版本**主要**。
 
@@ -51,7 +51,7 @@ int wmain( );
 int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);
 ```
 
-您也可以使用在 TCHAR.h 中定義的 `_tmain`。 `_tmain` 會解析成**主要**除非定義 _UNICODE。 在此情況下，`_tmain` 會解析成 `wmain`。
+您也可以使用`_tmain`，這在 tchar.h 中定義。 `_tmain` 會解析成**主要**除非定義 _UNICODE。 在此情況下，`_tmain` 會解析成 `wmain`。
 
 或者，**主要**並`wmain`函式可以宣告為傳回**void** （沒有傳回值）。 如果您宣告**主要**或是`wmain`傳回**void**，您也無法使用父處理序或作業系統傳回的結束代碼[傳回](../cpp/return-statement-in-program-termination-cpp.md)陳述式。 傳回結束代碼時**主要**或是`wmain`宣告為**void**，您必須使用[結束](../cpp/exit-function.md)函式。
 

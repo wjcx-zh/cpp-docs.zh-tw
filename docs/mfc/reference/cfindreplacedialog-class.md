@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CFindReplaceDialog [MFC], SearchDown
 - CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
-ms.openlocfilehash: e891a6694f0a85715a7d76d196865e3238695753
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: abf230f8c9e68365f8d1db8b654174ad3e152862
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571180"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894402"
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog 類別
 
@@ -81,7 +81,7 @@ class CFindReplaceDialog : public CCommonDialog
 
 ## <a name="remarks"></a>備註
 
-不同於其他 Windows 通用對話方塊，`CFindReplaceDialog`物件會非強制回應，讓使用者能夠與其他 windows 互動，而它們是在螢幕上。 有兩種類型的`CFindReplaceDialog`物件： 尋找對話方塊和 [尋找/取代] 對話方塊。 對話方塊可讓使用者輸入的搜尋，並搜尋/取代字串，雖然它們不會執行任何搜尋或取代函式。 您必須將這些應用程式。
+不同於其他 Windows 通用對話方塊，`CFindReplaceDialog`物件會非強制回應，讓使用者能夠與其他 windows 互動，而它們是在螢幕上。 有兩種類型的`CFindReplaceDialog`物件：尋找對話方塊和尋找/取代 對話方塊。 對話方塊可讓使用者輸入的搜尋，並搜尋/取代字串，雖然它們不會執行任何搜尋或取代函式。 您必須將這些應用程式。
 
 若要建構`CFindReplaceDialog`物件，請使用提供的建構函式 （其有任何引數）。 由於這是強制回應對話方塊時，配置堆積上的物件**新**運算子，而不是在堆疊上。
 
@@ -89,7 +89,7 @@ class CFindReplaceDialog : public CCommonDialog
 
 使用[m_fr](#m_fr)結構，以初始化對話方塊中，然後再呼叫`Create`。 `m_fr`結構的類型是[FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea)。 如需有關此結構的詳細資訊，請參閱 Windows SDK。
 
-為了讓父視窗的 尋找/取代要求通知，您必須使用 Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)函式，並使用[ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message)訊息對應巨集，在您的畫面格處理這個已註冊的訊息的視窗。
+為了讓父視窗的 尋找/取代要求通知，您必須使用 Windows [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)函式，並使用[ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message)訊息對應巨集，在您的畫面格處理這個已註冊的訊息的視窗。
 
 您可以判斷使用者是否已決定要終止的對話方塊`IsTerminating`成員函式。
 
@@ -175,7 +175,7 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>備註
 
-為了讓父視窗的 尋找/取代要求通知，您必須使用 Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)函式的傳回值是應用程式的執行個體唯一的訊息數目。 框架視窗應該會有訊息對應項目宣告回呼函式 (`OnFindReplace`接下來的範例中) 可處理這個已註冊的訊息。 下列程式碼片段是如何執行這項操作，名為框架視窗類別的範例`CMyRichEditView`:
+為了讓父視窗的 尋找/取代要求通知，您必須使用 Windows [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)函式的傳回值是應用程式的執行個體唯一的訊息數目。 框架視窗應該會有訊息對應項目宣告回呼函式 (`OnFindReplace`接下來的範例中) 可處理這個已註冊的訊息。 下列程式碼片段是如何執行這項操作，名為框架視窗類別的範例`CMyRichEditView`:
 
 [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]
 

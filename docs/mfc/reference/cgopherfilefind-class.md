@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CGopherFileFind [MFC], GetScreenName
 - CGopherFileFind [MFC], IsDots
 ms.assetid: 8465a979-6323-496d-ab4b-e81383fb999d
-ms.openlocfilehash: 7d5c8ceeaeb87b2e0f099ac027bbacc744598e8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dafa313d9d2c7aae13e83a891c79d437ac276e08
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662406"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894493"
 ---
 # <a name="cgopherfilefind-class"></a>CGopherFileFind 類別
 
@@ -123,7 +123,7 @@ explicit CGopherFileFind(
 
 ### <a name="remarks"></a>備註
 
-預設值*dwContext* MFC，以便傳送`CGopherFileFind`物件[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立`CGopherFileFind`物件。 當您建構`CGopherFileFind`物件時，您可以覆寫預設值可設定的內容識別碼以您選擇的值。 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供，它識別之物件的狀態。 請參閱文章[網際網路前幾個步驟： WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
+預設值*dwContext* MFC，以便傳送`CGopherFileFind`物件[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立`CGopherFileFind`物件。 當您建構`CGopherFileFind`物件時，您可以覆寫預設值可設定的內容識別碼以您選擇的值。 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供，它識別之物件的狀態。 請參閱文章[網際網路前幾個步驟：WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
 
 ##  <a name="findfile"></a>  CGopherFileFind::FindFile
 
@@ -191,7 +191,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>參數
 
 *pTimeStamp*<br/>
-指標[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)結構，其中包含的檔案所建立的時間。
+指標[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)結構，其中包含的檔案所建立的時間。
 
 *refTime*<br/>
 參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。
@@ -222,7 +222,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。
 
 *pTimeStamp*<br/>
-指標[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)結構，其中包含上次存取檔案的時間。
+指標[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)結構，其中包含上次存取檔案的時間。
 
 ### <a name="return-value"></a>傳回值
 
@@ -247,7 +247,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>參數
 
 *pTimeStamp*<br/>
-指標[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)結構，其中包含檔案上次被寫入的時間。
+指標[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)結構，其中包含檔案上次被寫入的時間。
 
 *refTime*<br/>
 參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。

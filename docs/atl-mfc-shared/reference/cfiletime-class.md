@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFileTime class
 - shared classes, CFileTime
 ms.assetid: 1a358a65-1383-4124-b0d4-59b026e6860f
-ms.openlocfilehash: 5d3c81a31d49a2817b4605f734d5348dc518076a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42c89bcfa064bbb151f9d110cbd25763dbd44185
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614223"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893934"
 ---
 # <a name="cfiletime-class"></a>CFileTime 類別
 
@@ -59,15 +59,15 @@ class CFileTime :  public FILETIME
 
 |名稱|描述|
 |----------|-----------------|
-|[CFileTime::operator-](#operator_-)|此運算子用上執行減法`CFileTime`或`CFileTimeSpan`物件。|
-|[CFileTime::operator ！ =](#operator_neq)|此運算子比較兩個`CFileTime`物件是否不相等。|
+|[CFileTime::operator -](#operator_-)|此運算子用上執行減法`CFileTime`或`CFileTimeSpan`物件。|
+|[CFileTime::operator !=](#operator_neq)|此運算子比較兩個`CFileTime`物件是否不相等。|
 |[CFileTime::operator +](#operator_add)|此運算子用在 `CFileTimeSpan` 物件上執行加法。|
-|[CFileTime::operator + =](#operator_add_eq)|此運算子用在 `CFileTimeSpan` 物件上執行加法並指派結果給目前物件。|
+|[CFileTime::operator +=](#operator_add_eq)|此運算子用在 `CFileTimeSpan` 物件上執行加法並指派結果給目前物件。|
 |[CFileTime::operator &lt;](#operator_lt)|此運算子比較兩個 `CFileTime` 物件來判斷何者較小。|
 |[CFileTime::operator &lt;=](#operator_lt_eq)|此運算子比較兩個 `CFileTime` 物件來判斷是否相等或何者較小。|
 |[CFileTime::operator =](#operator_eq)|指派運算子。|
-|[CFileTime::operator =](#operator_-_eq)|此運算子用上執行減法`CFileTimeSpan`物件，並將結果指派給目前的物件。|
-|[CFileTime::operator = =](#operator_eq_eq)|此運算子比較兩個 `CFileTime` 物件是否相等。|
+|[CFileTime::operator -=](#operator_-_eq)|此運算子用上執行減法`CFileTimeSpan`物件，並將結果指派給目前的物件。|
+|[CFileTime::operator ==](#operator_eq_eq)|此運算子比較兩個 `CFileTime` 物件是否相等。|
 |[CFileTime::operator &gt;](#operator_gt)|此運算子比較兩個 `CFileTime` 物件來判斷何者較大。|
 |[CFileTime::operator &gt;=](#operator_gt_eq)|此運算子比較兩個 `CFileTime` 物件來判斷是否相等或何者較大。|
 
@@ -123,10 +123,10 @@ CFileTime(ULONGLONG nTime) throw();
 
 ### <a name="parameters"></a>參數
 
-*全文檢索*<br/>
-A [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)結構。
+*ft*<br/>
+A [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)結構。
 
-*n*<br/>
+*nTime*<br/>
 表示日期和時間做為 64 位元值。
 
 ### <a name="remarks"></a>備註
@@ -225,7 +225,7 @@ static const ULONGLONG Minute = Second* 60;
 
 範例，請參閱[CFileTime::Millisecond](#millisecond)。
 
-##  <a name="operator_-"></a>  CFileTime::operator-
+##  <a name="operator_-"></a>  CFileTime::operator -
 
 此運算子用上執行減法`CFileTime`或`CFileTimeSpan`物件。
 
@@ -236,10 +236,10 @@ CFileTimeSpan operator-(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*<br/>
+*span*<br/>
 `CFileTimeSpan` 物件。
 
-*全文檢索*<br/>
+*ft*<br/>
 `CFileTime` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -256,7 +256,7 @@ bool operator!=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>參數
 
-*全文檢索*<br/>
+*ft*<br/>
 要比較的 `CFileTime` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -273,7 +273,7 @@ CFileTime operator+(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*<br/>
+*span*<br/>
 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -290,7 +290,7 @@ CFileTime& operator+=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*<br/>
+*span*<br/>
 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -307,7 +307,7 @@ bool operator<(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>參數
 
-*全文檢索*<br/>
+*ft*<br/>
 要比較的 `CFileTime` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -328,7 +328,7 @@ bool operator<=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>參數
 
-*全文檢索*<br/>
+*ft*<br/>
 要比較的 `CFileTime` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -345,14 +345,14 @@ CFileTime& operator=(const FILETIME& ft) throw();
 
 ### <a name="parameters"></a>參數
 
-*全文檢索*<br/>
+*ft*<br/>
 A`CFileTime`物件，其中包含新的時間和日期。
 
 ### <a name="return-value"></a>傳回值
 
 傳回已更新`CFileTime`物件。
 
-##  <a name="operator_-_eq"></a>  CFileTime::operator =
+##  <a name="operator_-_eq"></a>  CFileTime::operator -=
 
 此運算子用上執行減法`CFileTimeSpan`物件，並將結果指派給目前的物件。
 
@@ -362,7 +362,7 @@ CFileTime& operator-=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*<br/>
+*span*<br/>
 A`CFileTimeSpan`物件，其中包含要減去的相對時間。
 
 ### <a name="return-value"></a>傳回值
@@ -379,7 +379,7 @@ bool operator==(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>參數
 
-*全文檢索*<br/>
+*ft*<br/>
 `CFileTime`来比較的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -396,7 +396,7 @@ bool operator>(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>參數
 
-*全文檢索*<br/>
+*ft*<br/>
 要比較的 `CFileTime` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -413,7 +413,7 @@ bool operator>=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>參數
 
-*全文檢索*<br/>
+*ft*<br/>
 要比較的 `CFileTime` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -442,7 +442,7 @@ void SetTime(ULONGLONG nTime) throw();
 
 ### <a name="parameters"></a>參數
 
-*n*<br/>
+*nTime*<br/>
 64 位元值，其代表的日期和時間，請在本機或 Coordinated Universal Time (UTC) 格式。
 
 ##  <a name="utctolocal"></a>  CFileTime::UTCToLocal
@@ -475,7 +475,7 @@ static const ULONGLONG Week = Day* 7;
 
 ## <a name="see-also"></a>另請參閱
 
-[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)<br/>
+[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)<br/>
 [CFileTimeSpan 類別](../../atl-mfc-shared/reference/cfiletimespan-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)

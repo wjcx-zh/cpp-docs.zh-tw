@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: def8334cf0ed9b6b2ee821e1e0f1a717d90f2163
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 67d2be23aa6209c36b1a72eca3322efd1e977447
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694578"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894428"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase 類別
 
@@ -113,7 +113,7 @@ class ATL_NO_VTABLE CComControlBase
 |名稱|描述|
 |----------|-----------------|
 |[CComControlBase::CComControlBase](#ccomcontrolbase)|建構函式。|
-|[CComControlBase:: ~ CComControlBase](#dtor)|解構函式。|
+|[CComControlBase::~CComControlBase](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -124,7 +124,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::DoesVerbUIActivate](#doesverbuiactivate)|確認兩個*iVerb*所使用的參數`IOleObjectImpl::DoVerb`會啟用控制項的使用者介面，並傳回 TRUE。|
 |[CComControlBase::DoVerbProperties](#doverbproperties)|顯示控制項的屬性頁。|
 |[CComControlBase::FireViewChange](#fireviewchange)|呼叫此方法來指示來進行重繪控制項的容器，或通知控制項的檢視已變更的已註冊的通知接收。|
-|[CComControlBase::GetAmbientAppearance](#getambientappearance)|擷取目前設定控制項的外觀，DISPID_AMBIENT_APPEARANCE： 一般和 3d 1 的 0。|
+|[CComControlBase::GetAmbientAppearance](#getambientappearance)|擷取 DISPID_AMBIENT_APPEARANCE，目前設定控制項的外觀：一般和 3d 1 0。|
 |[CComControlBase::GetAmbientAutoClip](#getambientautoclip)|擷取 DISPID_AMBIENT_AUTOCLIP，旗標，指出容器是否支援自動裁剪的控制項顯示區域。|
 |[CComControlBase::GetAmbientBackColor](#getambientbackcolor)|擷取 DISPID_AMBIENT_BACKCOLOR，容器所定義的所有控制項的環境背景色彩。|
 |[CComControlBase::GetAmbientCharSet](#getambientcharset)|擷取 DISPID_AMBIENT_CHARSET，環境設定的容器所定義的所有控制項的字元集。|
@@ -143,7 +143,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::GetAmbientShowGrabHandles](#getambientshowgrabhandles)|擷取 DISPID_AMBIENT_SHOWGRABHANDLES，旗標，指出容器是否允許控制項來顯示為其本身時使用的抓取控點。|
 |[CComControlBase::GetAmbientShowHatching](#getambientshowhatching)|擷取 DISPID_AMBIENT_SHOWHATCHING，旗標，指出容器是否允許控制項本身顯示影線圖樣，啟用 UI 時。|
 |[CComControlBase::GetAmbientSupportsMnemonics](#getambientsupportsmnemonics)|擷取 DISPID_AMBIENT_SUPPORTSMNEMONICS，旗標，指出容器是否支援鍵盤助憶鍵。|
-|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|擷取 DISPID_AMBIENT_TEXTALIGN，容器所慣用的文字對齊方式： 一般對齊 （數字，文字靠左對齊） 為 0，1 表示靠左對齊、 置中對齊，2，靠右對齊的 3。|
+|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|擷取 DISPID_AMBIENT_TEXTALIGN，容器所慣用的文字對齊方式：一般對齊 （數字，文字靠左對齊） 為 0，1 表示靠左對齊、 置中對齊，2，靠右對齊的 3。|
 |[CComControlBase::GetAmbientTopToBottom](#getambienttoptobottom)|擷取 DISPID_AMBIENT_TOPTOBOTTOM，容器所顯示內容的方向。|
 |[CComControlBase::GetAmbientUIDead](#getambientuidead)|擷取 DISPID_AMBIENT_UIDEAD，旗標，指出容器是否想要回應使用者介面動作的控制項。|
 |[CComControlBase::GetAmbientUserMode](#getambientusermode)|擷取 DISPID_AMBIENT_USERMODE，旗標，指出容器是否在執行模式 (TRUE) 或設計模式 (FALSE)。|
@@ -358,7 +358,7 @@ HRESULT FireViewChange();
 
 ##  <a name="getambientappearance"></a>  CComControlBase::GetAmbientAppearance
 
-擷取目前設定控制項的外觀，DISPID_AMBIENT_APPEARANCE： 一般和 3d 1 的 0。
+擷取 DISPID_AMBIENT_APPEARANCE，目前設定控制項的外觀：一般和 3d 1 0。
 
 ```
 HRESULT GetAmbientAppearance(short& nAppearance);
@@ -404,7 +404,7 @@ HRESULT GetAmbientBackColor(OLE_COLOR& BackColor);
 
 ### <a name="parameters"></a>參數
 
-*背景色彩*<br/>
+*BackColor*<br/>
 DISPID_AMBIENT_BACKCOLOR 屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -511,7 +511,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 ### <a name="parameters"></a>參數
 
 *ppFont*<br/>
-指標，容器的環境[IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695)分派介面。
+指標，容器的環境[IFontDisp](/windows/desktop/api/ocidl/nn-ocidl-ifontdisp)分派介面。
 
 ### <a name="return-value"></a>傳回值
 
@@ -531,7 +531,7 @@ HRESULT GetAmbientForeColor(OLE_COLOR& ForeColor);
 
 ### <a name="parameters"></a>參數
 
-*前景色彩*<br/>
+*ForeColor*<br/>
 DISPID_AMBIENT_FORECOLOR 屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -704,7 +704,7 @@ DISPID_AMBIENT_SUPPORTSMNEMONICS 屬性。
 
 ##  <a name="getambienttextalign"></a>  CComControlBase::GetAmbientTextAlign
 
-擷取 DISPID_AMBIENT_TEXTALIGN，容器所慣用的文字對齊方式： 一般對齊 （數字，文字靠左對齊） 為 0，1 表示靠左對齊、 置中對齊，2，靠右對齊的 3。
+擷取 DISPID_AMBIENT_TEXTALIGN，容器所慣用的文字對齊方式：一般對齊 （數字，文字靠左對齊） 為 0，1 表示靠左對齊、 置中對齊，2，靠右對齊的 3。
 
 ```
 HRESULT GetAmbientTextAlign(short& nTextAlign);
@@ -1217,7 +1217,7 @@ CComPtr<IOleInPlaceSiteWindowless>
 
 下表顯示如何`m_spInPlaceSite`指標類型而定[m_bWndLess](#m_bwndless)並[m_bInPlaceSiteEx](#m_binplacesiteex)資料成員旗標：
 
-|m_spInPlaceSite 類型|m_bWndLess 值|m_bInPlaceSiteEx 值|
+|m_spInPlaceSite Type|m_bWndLess Value|m_bInPlaceSiteEx Value|
 |---------------------------|-----------------------|-----------------------------|
 |`IOleInPlaceSiteWindowless`|true|TRUE 或 FALSE|
 |`IOleInPlaceSiteEx`|false|true|

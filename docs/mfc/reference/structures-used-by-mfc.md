@@ -7,12 +7,12 @@ helpviewer_keywords:
 - structures
 - structures, MFC
 ms.assetid: 2168fcc6-e800-4814-aabf-0bca86ff790d
-ms.openlocfilehash: 1b691741338b1fe9ec8296b95ee67f031028d5e3
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 7e531937fc61898a6d2d432f74cb5608ea94fbc9
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178105"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893466"
 ---
 # <a name="structures-used-by-mfc"></a>MFC 使用的結構
 
@@ -34,7 +34,7 @@ ms.locfileid: "53178105"
 |[CDaoQueryDefInfo 結構](../../mfc/reference/cdaoquerydefinfo-structure.md)|[RGNDATA 結構](/windows/desktop/api/wingdi/ns-wingdi-_rgndata)|
 |[CDaoRelationFieldInfo 結構](../../mfc/reference/cdaorelationfieldinfo-structure.md)|[SOCKADDR 結構](/windows/desktop/winsock/sockaddr-2)|
 |[CDaoRelationInfo 結構](../../mfc/reference/cdaorelationinfo-structure.md)|[SOCKADDR_IN 結構](/windows/desktop/winsock/sockaddr-2)|
-|[CDaoTableDefInfo 結構](../../mfc/reference/cdaotabledefinfo-structure.md)|[SYSTEMTIME 結構](https://msdn.microsoft.com/library/windows/desktop/ms724950)
+|[CDaoTableDefInfo 結構](../../mfc/reference/cdaotabledefinfo-structure.md)|[SYSTEMTIME 結構](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)
 |[CDaoWorkspaceInfo 結構](../../mfc/reference/cdaoworkspaceinfo-structure.md)|[WINDOWPLACEMENT 結構](/windows/desktop/api/winuser/ns-winuser-tagwindowplacement)|
 |[CODBCFieldInfo 結構](../../mfc/reference/codbcfieldinfo-structure.md)|[WINDOWPOS 結構](/windows/desktop/api/winuser/ns-winuser-tagwindowpos)
 |[COLORADJUSTMENT 結構](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment)|[WSADATA 結構](/windows/desktop/api/winsock2/ns-winsock2-wsadata)|
@@ -44,7 +44,7 @@ ms.locfileid: "53178105"
 |[DEVNAMES 結構](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)||
 |[DHtmlUrlEventMapEntry 結構](../../mfc/reference/dhtmlurleventmapentry-structure.md)||
 |[DRAWITEMSTRUCT 結構](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)||
-|[FILETIME 結構](https://msdn.microsoft.com/library/windows/desktop/ms724284)||
+|[FILETIME 結構](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)||
 
 ## <a name="see-also"></a>另請參閱
 

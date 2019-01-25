@@ -1,22 +1,22 @@
 ---
-title: 如何：管理排程器執行個體
+title: HOW TO：管理排程器執行個體
 ms.date: 11/04/2016
 helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-ms.openlocfilehash: 8c19eb801c7761b85580526e1ff8bed89112cc5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8e79f7c132abd8e43f661f4dc7c7bb758cb2a6d
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437813"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893986"
 ---
-# <a name="how-to-manage-a-scheduler-instance"></a>如何：管理排程器執行個體
+# <a name="how-to-manage-a-scheduler-instance"></a>HOW TO：管理排程器執行個體
 
 排程器執行個體可讓您關聯各種類型的工作負載的特定排程的原則。 本主題包含兩個基本的範例，示範如何建立和管理排程器執行個體。
 
-範例會建立使用預設排程器原則的排程器。 如需建立排程器的範例會使用自訂原則，請參閱 <<c0> [ 如何： 指定特定的排程器原則](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)。
+範例會建立使用預設排程器原則的排程器。 如需建立排程器的範例會使用自訂原則，請參閱[How to:指定特定排程器原則](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)。
 
 ### <a name="to-manage-a-scheduler-instance-in-your-application"></a>若要管理您的應用程式中的排程器執行個體
 
@@ -38,7 +38,7 @@ ms.locfileid: "50437813"
 
 1. 將控制代碼傳遞至事件，以[WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject)等待關閉的排程器的函式。
 
-1. 呼叫[CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211)函式來關閉事件物件的控制代碼。
+1. 呼叫[CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle)函式來關閉事件物件的控制代碼。
 
 ## <a name="example"></a>範例
 

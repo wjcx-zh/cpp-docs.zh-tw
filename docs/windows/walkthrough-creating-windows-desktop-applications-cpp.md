@@ -1,19 +1,19 @@
 ---
-title: 逐步解說： 建立傳統 Windows 桌面應用程式 （c + +）
+title: 逐步解說：建立傳統 Windows 桌面應用程式 （c + +）
 ms.custom: get-started-article
 ms.date: 09/18/2018
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: da95b1dac2f058de67719b4754d2df6dbeb6f7f0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 07da91ea092b4e7bee974b0387e72ea0cacaec8e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694045"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893895"
 ---
-# <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>逐步解說： 建立傳統 Windows 桌面應用程式 （c + +）
+# <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>逐步解說：建立傳統 Windows 桌面應用程式 （c + +）
 
 本逐步解說示範如何在 Visual Studio 中建立傳統 Windows 桌面應用程式。 您將建立範例應用程式使用 Windows API 來顯示"Hello，Windows desktop"！ 視窗中顯示 "Hello, World!" 的基本 Windows 傳統型應用程式。 您可以使用在這個逐步解說中開發的程式碼作為模式，來建立其他 Windows 傳統型應用程式。
 
@@ -107,7 +107,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
    );
    ```
 
-   參數和傳回值，這個函式的相關資訊，請參閱[WinMain 進入點](https://msdn.microsoft.com/library/windows/desktop/ms633559)。
+   參數和傳回值，這個函式的相關資訊，請參閱[WinMain 進入點](/windows/desktop/api/winbase/nf-winbase-winmain)。
 
    > [!NOTE]
    > 什麼是所有這些額外字詞，例如`CALLBACK`，或`HINSTANCE`，或`_In_`？ 傳統的 Windows API 所使用的 typedef 和廣泛地抽離前置處理器巨集的一些詳細資料類型和特定平台程式碼，呼叫慣例，例如 **__declspec**宣告和編譯器的 pragma。 在 Visual Studio 中，您可以使用 IntelliSense[快速諮詢](/visualstudio/ide/using-intellisense#quick-info)功能，請參閱什麼這些 typedef 和巨集定義。 停留在感興趣的文字或選取它，然後按**Ctrl**+**K**， **Ctrl**+**我**的包含定義的小型快顯視窗。 如需詳細資訊，請參閱[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 參數和傳回型別通常會使用*SAL 註釋*可協助您捕捉程式設計錯誤。 如需詳細資訊，請參閱 <<c0> [ 使用 SAL 註釋減少 C/c + + 程式碼缺失](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
@@ -136,7 +136,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>將功能加入 WinMain 函式中
 
-1. 在 `WinMain`函式中，填入類型的結構[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)。 此結構包含視窗，例如，應用程式圖示、 視窗中，要顯示在標題列中，和重要的是，您的視窗程序的函式指標的名稱的背景色彩的相關資訊。 下列範例會顯示一個典型的 `WNDCLASSEX` 結構。
+1. 在 `WinMain`函式中，填入類型的結構[WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa)。 此結構包含視窗，例如，應用程式圖示、 視窗中，要顯示在標題列中，和重要的是，您的視窗程序的函式指標的名稱的背景色彩的相關資訊。 下列範例會顯示一個典型的 `WNDCLASSEX` 結構。
 
    ```cpp
    WNDCLASSEX wcex;
@@ -155,7 +155,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
    wcex.hIconSm        = LoadIcon(wcex.hInstance, IDI_APPLICATION);
    ```
 
-   上述的結構欄位的詳細資訊，請參閱[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)。
+   上述的結構欄位的詳細資訊，請參閱[WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa)。
 
 1. 註冊`WNDCLASSEX`與 Windows，讓它知道有關您的視窗，以及如何將訊息傳送給它。 請使用 [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa) 函式，並將視窗類別結構當做引數傳遞。 `_T`巨集，因為我們使用`TCHAR`型別。
 
@@ -237,7 +237,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
    return (int) msg.wParam;
    ```
 
-   如需訊息迴圈中之結構和函式的詳細資訊，請參閱 [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)、 [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage)、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)。
+   如需訊息迴圈中之結構和函式的詳細資訊，請參閱 [MSG](/windows/desktop/api/winuser/ns-winuser-msg)、 [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage)、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)。
 
    此時的 `WinMain` 函式應該類似下列程式碼。
 

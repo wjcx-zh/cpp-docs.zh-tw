@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 0a27b78d873b0a561b84b13cc16c67aef9ff2e8b
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ebb0d0abcff069deca4597ffb5a3a2d4e67cab9c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179080"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894532"
 ---
 # <a name="cwnd-class"></a>CWnd 類別
 
@@ -870,7 +870,7 @@ class CWnd : public CCmdTarget
 |[CWnd::ClientToScreen](#clienttoscreen)|將畫面上指定的點或矩形的用戶端座標，轉換為螢幕座標。|
 |[CWnd::CloseWindow](#closewindow)|將視窗最小化。|
 |[CWnd::ContinueModal](#continuemodal)|繼續視窗的強制回應狀態。|
-|[Cwnd:: Create](#create)|建立並初始化 `CWnd` 物件相關聯的子視窗。|
+|[CWnd::Create](#create)|建立並初始化 `CWnd` 物件相關聯的子視窗。|
 |[CWnd::CreateAccessibleProxy](#createaccessibleproxy)|建立指定物件的 Active Accessibility Proxy。|
 |[CWnd::CreateCaret](#createcaret)|建立系統游標的新形狀，並取得插入號的擁有權。|
 |[CWnd::CreateControl](#createcontrol)|建立將由 `CWnd` 物件在 MFC 程式中表示的 ActiveX 控制項。|
@@ -1262,8 +1262,8 @@ class CWnd : public CCmdTarget
 |名稱|描述|
 |----------|-----------------|
 |[HWND cwnd:: Operator](#operator_hwnd)|呼叫以取得視窗的控制代碼。|
-|[Cwnd:: Operator ！ =](#operator_neq)|判斷視窗是否不相同的視窗控制代碼[m_hWnd](#m_hwnd)。|
-|[Cwnd:: Operator = =](#operator_eq_eq)|判斷視窗是否與視窗控制代碼是相同[m_hWnd](#m_hwnd)。|
+|[CWnd::operator !=](#operator_neq)|判斷視窗是否不相同的視窗控制代碼[m_hWnd](#m_hwnd)。|
+|[CWnd::operator ==](#operator_eq_eq)|判斷視窗是否與視窗控制代碼是相同[m_hWnd](#m_hwnd)。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
@@ -1761,7 +1761,7 @@ void CheckDlgButton(
 *nIDButton*<br/>
 指定要修改的按鈕。
 
-*n*<br/>
+*nCheck*<br/>
 指定要採取的動作。 如果*n*為非零值，`CheckDlgButton`成員函式會放置之按鈕旁邊的核取記號; 如果為 0，會移除核取記號。 三種狀態的按鈕，如果*n*為 2，按鈕狀態尚未確定。
 
 ### <a name="remarks"></a>備註
@@ -1816,7 +1816,7 @@ CWnd* ChildWindowFromPoint(
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 指定要測試之點的用戶端座標。
 
 *nflags*<br/>
@@ -1920,7 +1920,7 @@ virtual BOOL Create(
 *lpszWindowName*<br/>
 [in]以 null 終止的字串，包含視窗的指標會顯示欄位名稱。否則為 NULL 的任何視窗的顯示名稱。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]位元組合 (OR)[的視窗樣式](styles-used-by-mfc.md#window-styles)。 WS_POPUP 選項不是有效的樣式。
 
 *rect*<br/>
@@ -2057,7 +2057,7 @@ BOOL CreateControl(
 *pszWindowName*<br/>
 要在控制項中顯示的文字指標。 （如果有的話），請設定控制項的標題或文字屬性的值。 如果是 NULL，不會變更控制項的標題或文字屬性。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 視窗樣式。 < 備註 > 底下列出的可用樣式。
 
 *rect*<br/>
@@ -2151,7 +2151,7 @@ virtual BOOL CreateEx(
 *lpszWindowName*<br/>
 以 null 終止的字串，包含視窗的指標會顯示欄位名稱。否則為 NULL 的任何視窗的顯示名稱。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 位元組合 (OR)[的視窗樣式](styles-used-by-mfc.md#window-styles)，否則為 NULL 的預設視窗樣式。
 
 *x*<br/>
@@ -2655,7 +2655,7 @@ BOOL DragDetect(POINT pt) const;
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pt*<br/>
 螢幕座標中滑鼠的初始位置。 函式會使用此點，以判斷拖曳矩形的座標。
 
 ### <a name="return-value"></a>傳回值
@@ -2951,7 +2951,7 @@ virtual void EndModalLoop(int nResult);
 
 ### <a name="parameters"></a>參數
 
-*n 結果*<br/>
+*nResult*<br/>
 包含要傳回給呼叫端的值[runmodalloop 呼叫](#runmodalloop)。
 
 ### <a name="remarks"></a>備註
@@ -3086,7 +3086,7 @@ static CWnd* FindWindowEx(
 子視窗的控制代碼。 使用下一個子視窗的疊置順序中開始搜尋。 子視窗必須是直接子視窗*hwndParent*，不只是一個子系的視窗。
 
 *lpszClass*<br/>
-以 null 終止的字串，指定類別名稱或由先前呼叫建立類別元素的指標[RegisterClass](https://msdn.microsoft.com/library/windows/desktop/ms633586)或是[RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa)。
+以 null 終止的字串，指定類別名稱或由先前呼叫建立類別元素的指標[RegisterClass](/windows/desktop/api/winuser/nf-winuser-registerclassa)或是[RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa)。
 
 *lpszWindow*<br/>
 以 null 終止的字串，指定視窗名稱 （該視窗的標題） 的指標。 如果此參數為 NULL，則比對所有的視窗名稱。
@@ -4354,7 +4354,7 @@ CWnd* GetNextWindow(UINT nFlag = GW_HWNDNEXT) const;
 
 ### <a name="parameters"></a>參數
 
-*旗*<br/>
+*nFlag*<br/>
 指定的函式是否傳回下一個視窗或上一個視窗的指標。 它可以是任一 GW_HWNDNEXT，傳回接下來的視窗`CWnd`視窗管理員清單中，或 GW_HWNDPREV，傳回上一個視窗的視窗管理員清單的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -5673,7 +5673,7 @@ int MessageBox(
 *lpszCaption*<br/>
 指向`CString`物件或 null 結束的字串，用於訊息方塊標題。 如果*lpszCaption*是 NULL，在使用 「 錯誤 」 的預設標題。
 
-*n*<br/>
+*nType*<br/>
 指定的內容和訊息方塊的行為。
 
 ### <a name="return-value"></a>傳回值
@@ -6022,7 +6022,7 @@ afx_msg void OnCancelMode();
 
 如果`CWnd`物件有焦點，其`OnCancelMode`顯示對話方塊或訊息方塊時，呼叫成員函式。 這可讓`CWnd`取消模式，例如滑鼠捕捉的機會。
 
-預設實作會藉由呼叫回應[ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261) Windows 函式。 覆寫此成員函式，在您處理其他模式的衍生類別中。
+預設實作會藉由呼叫回應[ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) Windows 函式。 覆寫此成員函式，在您處理其他模式的衍生類別中。
 
 ##  <a name="oncapturechanged"></a>  CWnd::OnCaptureChanged
 
@@ -6039,7 +6039,7 @@ afx_msg void OnCaptureChanged(CWnd* pWnd);
 
 ### <a name="remarks"></a>備註
 
-視窗收到這個訊息，即使它會呼叫[ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261)本身。 應用程式不應該嘗試設定這個訊息的回應中的滑鼠捕捉。 當它收到這則訊息時，視窗應該重繪其本身，如有必要，以反映新的滑鼠捕捉狀態。
+視窗收到這個訊息，即使它會呼叫[ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture)本身。 應用程式不應該嘗試設定這個訊息的回應中的滑鼠捕捉。 當它收到這則訊息時，視窗應該重繪其本身，如有必要，以反映新的滑鼠捕捉狀態。
 
 請參閱 Windows SDK 的資訊上`ReleaseCapture`Windows 函式。
 
@@ -6083,7 +6083,7 @@ afx_msg void OnChangeUIState(
 
 ### <a name="parameters"></a>參數
 
-*4%n 動作*<br/>
+*nAction*<br/>
 指定要採取的動作。 可為下列其中一個值：
 
 - UIS_CLEAR UI 狀態項目 (依*nUIElement*) 應該隱藏。
@@ -6118,7 +6118,7 @@ afx_msg void OnChar(
 
 ### <a name="parameters"></a>參數
 
-*NChar*<br/>
+*nChar*<br/>
 包含索引鍵的字元碼值。
 
 *nRepCnt*<br/>
@@ -6161,7 +6161,7 @@ afx_msg int OnCharToItem(
 
 ### <a name="parameters"></a>參數
 
-*NChar*<br/>
+*nChar*<br/>
 指定使用者按下的索引鍵的值。
 
 *pListBox*<br/>
@@ -6533,7 +6533,7 @@ afx_msg void OnDeadChar(
 
 ### <a name="parameters"></a>參數
 
-*NChar*<br/>
+*nChar*<br/>
 指定的索引鍵的寄不出的字元值。
 
 *nRepCnt*<br/>
@@ -6808,7 +6808,7 @@ afx_msg void OnEndSession(BOOL bEnding);
 
 ### <a name="parameters"></a>參數
 
-*彎曲次數*<br/>
+*bEnding*<br/>
 指定要結束工作階段。 它會為 TRUE，如果工作階段正在結束;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
@@ -7119,7 +7119,7 @@ afx_msg void OnHotKey(
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey)通知，Windows SDK 中所述。 此訊息會放在頂端的 已註冊的熱鍵執行緒相關聯的訊息佇列。 使用[RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309)函式，註冊全系統的快速鍵。
+這個方法會接收[WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey)通知，Windows SDK 中所述。 此訊息會放在頂端的 已註冊的熱鍵執行緒相關聯的訊息佇列。 使用[RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey)函式，註冊全系統的快速鍵。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -7377,7 +7377,7 @@ afx_msg void OnKeyDown(
 
 ### <a name="parameters"></a>參數
 
-*NChar*<br/>
+*nChar*<br/>
 指定指定的索引鍵的虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h
 
 *nRepCnt*<br/>
@@ -7422,7 +7422,7 @@ afx_msg void OnKeyUp(
 
 ### <a name="parameters"></a>參數
 
-*NChar*<br/>
+*nChar*<br/>
 指定指定的索引鍵的虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h
 
 *nRepCnt*<br/>
@@ -7497,7 +7497,7 @@ afx_msg void OnLButtonDblClk(
 
 - 如果 SHIFT 按鍵為已關閉，就會設定 MK_SHIFT。
 
-*點*<br/>
+*point*<br/>
 指定資料指標 x 和 y 座標。 這些座標永遠是相對於視窗左上角。
 
 ### <a name="remarks"></a>備註
@@ -7532,7 +7532,7 @@ afx_msg void OnLButtonDown(
 
 - 如果 SHIFT 按鍵為已關閉，就會設定 MK_SHIFT。
 
-*點*<br/>
+*point*<br/>
 指定資料指標 x 和 y 座標。 這些座標永遠是相對於視窗左上角。
 
 ### <a name="remarks"></a>備註
@@ -7563,7 +7563,7 @@ afx_msg void OnLButtonUp(
 
 - 如果 SHIFT 按鍵為已關閉，就會設定 MK_SHIFT。
 
-*點*<br/>
+*point*<br/>
 指定資料指標 x 和 y 座標。 這些座標永遠是相對於視窗左上角。
 
 ### <a name="remarks"></a>備註
@@ -7596,7 +7596,7 @@ afx_msg void OnMButtonDblClk(
 
 - 如果 SHIFT 按鍵為已關閉，就會設定 MK_SHIFT。
 
-*點*<br/>
+*point*<br/>
 指定資料指標 x 和 y 座標。 這些座標永遠是相對於視窗左上角。
 
 ### <a name="remarks"></a>備註
@@ -7631,7 +7631,7 @@ afx_msg void OnMButtonDown(
 
 - 如果 SHIFT 按鍵為已關閉，就會設定 MK_SHIFT。
 
-*點*<br/>
+*point*<br/>
 指定資料指標 x 和 y 座標。 這些座標永遠是相對於視窗左上角。
 
 ### <a name="remarks"></a>備註
@@ -7662,7 +7662,7 @@ afx_msg void OnMButtonUp(
 
 - 如果 SHIFT 按鍵為已關閉，就會設定 MK_SHIFT。
 
-*點*<br/>
+*point*<br/>
 指定資料指標 x 和 y 座標。 這些座標永遠是相對於視窗左上角。
 
 ### <a name="remarks"></a>備註
@@ -7744,7 +7744,7 @@ afx_msg LRESULT OnMenuChar(
 
 ### <a name="parameters"></a>參數
 
-*NChar*<br/>
+*nChar*<br/>
 根據組建設定中，指定使用者按下的 ANSI 或 Unicode 字元。
 
 *nFlags*<br/>
@@ -7964,7 +7964,7 @@ afx_msg void OnMouseHover(
 |參數|描述|
 |---------------|-----------------|
 |*nFlags*|[in]位元組合 (OR) 旗標，表示按下的輔助按鍵。 比方說，MK_CONTROL 旗標表示，按下 CTRL 鍵。|
-|*點*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*並*y*相對於用戶端區域左上角的游標座標。|
+|*point*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*並*y*相對於用戶端區域左上角的游標座標。|
 
 ### <a name="remarks"></a>備註
 
@@ -8002,7 +8002,7 @@ afx_msg void OnMouseHWheel(
 |---------------|-----------------|
 |*nFlags*|[in]位元組合 (OR) 旗標，表示按下的輔助按鍵。 比方說，MK_CONTROL 旗標表示，按下 CTRL 鍵。<br /><br /> 如需旗標的清單，請參閱中的 < 訊息參數 > 子標題[有關滑鼠輸入](/windows/desktop/inputdev/about-mouse-input)。|
 |*zDelta*|[in]表示旋轉的滾輪時，以表示倍數或部門的 WHEEL_DELTA，這是 120 的距離。 正值表示滾輪旋轉至右側;負值表示滾輪已輪到左邊。|
-|*太平洋時間*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*並*y*相對於用戶端區域左上角的游標座標。|
+|*pt*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*並*y*相對於用戶端區域左上角的游標座標。|
 
 ### <a name="remarks"></a>備註
 
@@ -8051,7 +8051,7 @@ afx_msg void OnMouseMove(
 
 - 如果 SHIFT 按鍵為已關閉，就會設定 MK_SHIFT。
 
-*點*<br/>
+*point*<br/>
 指定資料指標 x 和 y 座標。 這些座標永遠是相對於視窗左上角。
 
 ### <a name="remarks"></a>備註
@@ -8090,7 +8090,7 @@ afx_msg BOOL OnMouseWheel(
 *zDelta*<br/>
 表示距離旋轉。 *ZDelta*值以表示倍數或部門的 WHEEL_DELTA，這是 120。 小於零的值，指出旋轉後 （朝向使用者），而大於零，表示向前旋轉 （遠離使用者） 的值。 使用者可以藉由變更滑鼠軟體中的滾輪設定反轉此回應。 請參閱 「 備註 」，如需有關此參數。
 
-*太平洋時間*<br/>
+*pt*<br/>
 指定資料指標 x 和 y 座標。 這些座標永遠是相對於螢幕左上角。
 
 ### <a name="return-value"></a>傳回值
@@ -8257,7 +8257,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 包含資料指標 x 和 y 座標。 這些座標永遠是螢幕座標。
 
 ### <a name="return-value"></a>傳回值
@@ -8284,7 +8284,7 @@ afx_msg void OnNcLButtonDblClk(
 *nHitTest*<br/>
 指定[點擊測試的程式碼](#onnchittest)。 點擊的測試是測試，決定游標的位置。
 
-*點*<br/>
+*point*<br/>
 指定`CPoint`物件，包含 x 和 y 螢幕座標的游標位置。 這些座標永遠是相對於螢幕左上角。
 
 ### <a name="remarks"></a>備註
@@ -8309,7 +8309,7 @@ afx_msg void OnNcLButtonDown(
 *nHitTest*<br/>
 指定[點擊測試的程式碼](#onnchittest)。 點擊的測試是測試，決定游標的位置。
 
-*點*<br/>
+*point*<br/>
 指定`CPoint`物件，包含 x 和 y 螢幕座標的游標位置。 這些座標永遠是相對於螢幕左上角。
 
 ### <a name="remarks"></a>備註
@@ -8334,7 +8334,7 @@ afx_msg void OnNcLButtonUp(
 *nHitTest*<br/>
 指定[點擊測試的程式碼](#onnchittest)。 點擊的測試是測試，決定游標的位置。
 
-*點*<br/>
+*point*<br/>
 指定`CPoint`物件，包含 x 和 y 螢幕座標的游標位置。 這些座標永遠是相對於螢幕左上角。
 
 ### <a name="remarks"></a>備註
@@ -8359,7 +8359,7 @@ afx_msg void OnNcMButtonDblClk(
 *nHitTest*<br/>
 指定[點擊測試的程式碼](#onnchittest)。 點擊的測試是測試，決定游標的位置。
 
-*點*<br/>
+*point*<br/>
 指定`CPoint`物件，包含 x 和 y 螢幕座標的游標位置。 這些座標永遠是相對於螢幕左上角。
 
 ### <a name="remarks"></a>備註
@@ -8382,7 +8382,7 @@ afx_msg void OnNcMButtonDown(
 *nHitTest*<br/>
 指定[點擊測試的程式碼](#onnchittest)。 點擊的測試是測試，決定游標的位置。
 
-*點*<br/>
+*point*<br/>
 指定`CPoint`物件，包含 x 和 y 螢幕座標的游標位置。 這些座標永遠是相對於螢幕左上角。
 
 ### <a name="remarks"></a>備註
@@ -8405,7 +8405,7 @@ afx_msg void OnNcMButtonUp(
 *nHitTest*<br/>
 指定[點擊測試的程式碼](#onnchittest)。 點擊的測試是測試，決定游標的位置。
 
-*點*<br/>
+*point*<br/>
 指定`CPoint`物件，包含 x 和 y 螢幕座標的游標位置。 這些座標永遠是相對於螢幕左上角。
 
 ### <a name="remarks"></a>備註
@@ -8428,7 +8428,7 @@ afx_msg void OnNcMouseHover(
 |參數|描述|
 |---------------|-----------------|
 |*nHitTest*|[in]所傳回的點擊測試值[CWnd::DefWindowProc](#defwindowproc)函式的結果處理[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)訊息。|
-|*點*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*並*y*相對於螢幕左上角的游標座標。|
+|*point*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*並*y*相對於螢幕左上角的游標座標。|
 
 ### <a name="remarks"></a>備註
 
@@ -8467,7 +8467,7 @@ afx_msg void OnNcMouseMove(
 *nHitTest*<br/>
 指定[點擊測試的程式碼](#onnchittest)。 點擊的測試是測試，決定游標的位置。
 
-*點*<br/>
+*point*<br/>
 指定`CPoint`物件，包含 x 和 y 螢幕座標的游標位置。 這些座標永遠是相對於螢幕左上角。
 
 ### <a name="remarks"></a>備註
@@ -8506,7 +8506,7 @@ afx_msg void OnNcRButtonDblClk(
 *nHitTest*<br/>
 指定[點擊測試的程式碼](#onnchittest)。 點擊的測試是測試，決定游標的位置。
 
-*點*<br/>
+*point*<br/>
 指定`CPoint`物件，包含 x 和 y 螢幕座標的游標位置。 這些座標永遠是相對於螢幕左上角。
 
 ### <a name="remarks"></a>備註
@@ -8529,7 +8529,7 @@ afx_msg void OnNcRButtonDown(
 *nHitTest*<br/>
 指定[點擊測試的程式碼](#onnchittest)。 點擊的測試是測試，決定游標的位置。
 
-*點*<br/>
+*point*<br/>
 指定`CPoint`物件，包含 x 和 y 螢幕座標的游標位置。 這些座標永遠是相對於螢幕左上角。
 
 ### <a name="remarks"></a>備註
@@ -8552,7 +8552,7 @@ afx_msg void OnNcRButtonUp(
 *nHitTest*<br/>
 指定[點擊測試的程式碼](#onnchittest)。 點擊的測試是測試，決定游標的位置。
 
-*點*<br/>
+*point*<br/>
 指定`CPoint`物件，包含 x 和 y 螢幕座標的游標位置。 這些座標永遠是相對於螢幕左上角。
 
 ### <a name="remarks"></a>備註
@@ -8597,8 +8597,8 @@ void OnNcXButtonDblClk(
 |參數|描述|
 |---------------|-----------------|
 |*nHitTest*|[in]所傳回的點擊測試值[CWnd::DefWindowProc](#defwindowproc)函式的結果處理[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)訊息。|
-|*n 按鈕*|[in]值，如果第一個 Microsoft Intellimouse X 按鈕是按兩下 XBUTTON1 或 XBUTTON2 如果第二個 X 按鈕按兩下時。|
-|*點*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*並*y*相對於用戶端區域左上角的游標座標。|
+|*nButton*|[in]值，如果第一個 Microsoft Intellimouse X 按鈕是按兩下 XBUTTON1 或 XBUTTON2 如果第二個 X 按鈕按兩下時。|
+|*point*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*並*y*相對於用戶端區域左上角的游標座標。|
 
 ### <a name="remarks"></a>備註
 
@@ -8623,8 +8623,8 @@ afx_msg void OnNcXButtonDown(
 |參數|描述|
 |---------------|-----------------|
 |*nHitTest*|[in]所傳回的點擊測試值[CWnd::DefWindowProc](#defwindowproc)函式的結果處理[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)訊息。|
-|*n 按鈕*|[in]的值如果按下第一個 X 滑鼠鍵的 XBUTTON1 或 XBUTTON2 如果第二個 X 按鈕按下。|
-|*點*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*並*y*相對於螢幕左上角的游標座標。|
+|*nButton*|[in]的值如果按下第一個 X 滑鼠鍵的 XBUTTON1 或 XBUTTON2 如果第二個 X 按鈕按下。|
+|*point*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*並*y*相對於螢幕左上角的游標座標。|
 
 ### <a name="remarks"></a>備註
 
@@ -8649,8 +8649,8 @@ afx_msg void OnNcXButtonUp(
 |參數|描述|
 |---------------|-----------------|
 |*nHitTest*|[in]所傳回的點擊測試值[CWnd::DefWindowProc](#defwindowproc)函式的結果處理[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)訊息。|
-|*n 按鈕*|[in]值為第一個 X 放開滑鼠按鈕時，如果 XBUTTON1 或 XBUTTON2 如果第二個 X 按鈕已釋放。|
-|*點*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*並*y*相對於螢幕左上角的游標座標。|
+|*nButton*|[in]值為第一個 X 放開滑鼠按鈕時，如果 XBUTTON1 或 XBUTTON2 如果第二個 X 按鈕已釋放。|
+|*point*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*並*y*相對於螢幕左上角的游標座標。|
 
 ### <a name="remarks"></a>備註
 
@@ -9043,7 +9043,7 @@ afx_msg void OnRButtonDblClk(
 
 - 如果 SHIFT 按鍵為已關閉，就會設定 MK_SHIFT。
 
-*點*<br/>
+*point*<br/>
 指定的 x 和 y 座標的資料指標。 這些座標永遠是相對於視窗左上角。
 
 ### <a name="remarks"></a>備註
@@ -9078,7 +9078,7 @@ afx_msg void OnRButtonDown(
 
 - 如果 SHIFT 按鍵為已關閉，就會設定 MK_SHIFT。
 
-*點*<br/>
+*point*<br/>
 指定的 x 和 y 座標的資料指標。 這些座標永遠是相對於視窗左上角。
 
 ### <a name="remarks"></a>備註
@@ -9108,7 +9108,7 @@ afx_msg void OnRButtonUp(
 
 - 如果 SHIFT 按鍵為已關閉，就會設定 MK_SHIFT。
 
-*點*<br/>
+*point*<br/>
 指定的 x 和 y 座標的資料指標。 這些座標永遠是相對於視窗左上角。
 
 ### <a name="remarks"></a>備註
@@ -9337,7 +9337,7 @@ afx_msg void OnSize(
 
 ### <a name="parameters"></a>參數
 
-*n*<br/>
+*nType*<br/>
 指定調整大小要求的類型。 這個參數可以是下列值之一：
 
 - SIZE_MAXIMIZED 視窗已經最大化。
@@ -9468,7 +9468,7 @@ afx_msg void OnStyleChanged(
 - GWL_STYLE 視窗的 nonextended 的樣式已變更。
 
 *lpStyleStruct*<br/>
-指向[STYLESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632607)結構，其中包含新的樣式的視窗。 應用程式可以檢查的樣式，但它不可以變更它們。
+指向[STYLESTRUCT](/windows/desktop/api/winuser/ns-winuser-stylestruct)結構，其中包含新的樣式的視窗。 應用程式可以檢查的樣式，但它不可以變更它們。
 
 ### <a name="remarks"></a>備註
 
@@ -9495,7 +9495,7 @@ afx_msg void OnStyleChanging(
 - GWL_STYLE 視窗的 nonextended 的樣式已變更。
 
 *lpStyleStruct*<br/>
-指向[STYLESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632607)結構，其中包含新的樣式的視窗。 應用程式可以檢查的樣式，並加以變更。
+指向[STYLESTRUCT](/windows/desktop/api/winuser/ns-winuser-stylestruct)結構，其中包含新的樣式的視窗。 應用程式可以檢查的樣式，並加以變更。
 
 ### <a name="remarks"></a>備註
 
@@ -9515,7 +9515,7 @@ afx_msg void OnSysChar(
 
 ### <a name="parameters"></a>參數
 
-*NChar*<br/>
+*nChar*<br/>
 指定控制項功能表鍵的 ASCII 字元按鍵的碼。
 
 *nRepCnt*<br/>
@@ -9639,7 +9639,7 @@ afx_msg void OnSysDeadChar(
 
 ### <a name="parameters"></a>參數
 
-*NChar*<br/>
+*nChar*<br/>
 指定的索引鍵的寄不出的字元值。
 
 *nRepCnt*<br/>
@@ -9678,7 +9678,7 @@ afx_msg void OnSysKeyDown(
 
 ### <a name="parameters"></a>參數
 
-*NChar*<br/>
+*nChar*<br/>
 指定的索引鍵，按下的虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h
 
 *nRepCnt*<br/>
@@ -9725,7 +9725,7 @@ afx_msg void OnSysKeyUp(
 
 ### <a name="parameters"></a>參數
 
-*NChar*<br/>
+*nChar*<br/>
 指定的索引鍵，按下的虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h
 
 *nRepCnt*<br/>
@@ -9860,10 +9860,10 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 指定資料指標 x 和 y 座標。 這些座標永遠是相對於視窗左上角
 
-*PTI*<br/>
+*pTI*<br/>
 指標[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)結構。 預設會設定下列的結構值：
 
 - *hwnd*  =  `m_hWnd`視窗的控制代碼
@@ -9902,7 +9902,7 @@ virtual BOOL OnTouchInput(
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pt*<br/>
 畫面已觸及 （在工作區座標中） 的點。
 
 *nInputNumber*<br/>
@@ -9959,9 +9959,9 @@ afx_msg void OnUniChar(
 
 |參數|描述|
 |---------------|-----------------|
-|*NChar*|[in]指定的按鍵的字元碼。|
+|*nChar*|[in]指定的按鍵的字元碼。|
 |*nRepCnt*|[in]指定目前訊息的重複計數。 值是按鍵輸入是因為使用者按住鍵而 autorepeated 的次數。 如果按鍵輸入會保存夠久的時間，會傳送多則訊息。 不過，不是累計的重複計數。|
-|*nFlags*|[in]旗標，指定掃描程式碼、 擴充的索引鍵、 內容程式碼，先前的主要狀態和轉移狀態下, 表所示：<br /><br /> **0-7:** 指定掃描程式碼。 值取決於原始設備製造商 (OEM)。<br /><br /> **8:** 指定擴充的索引鍵，例如增強的 101 或 102-key 鍵盤上出現的右 ALT 和 CTRL 鍵。 旗標為 1，如果金鑰是延伸的金鑰;否則，它會是 0。<br /><br /> **9 至 12:** Windows 內部使用。<br /><br /> **13:** 指定的內容程式碼。 旗標為 1，如果按下按鍵; 時，按住 ALT 鍵否則，值為 0。<br /><br /> **14:** 指定前一個索引鍵的狀態。 旗標是如果金鑰已關閉，再傳送訊息，則為 1 或 0，如果索引鍵已啟動。<br /><br /> **15:** 指定轉換狀態。 旗標會是 1，表示被釋放，索引鍵，則為 0，如果按下索引鍵。|
+|*nFlags*|[in]旗標，指定掃描程式碼、 擴充的索引鍵、 內容程式碼，先前的主要狀態和轉移狀態下, 表所示：<br /><br /> **0-7:** 指定掃描程式碼。 值取決於原始設備製造商 (OEM)。<br /><br /> **8:** 指定擴充的索引鍵，例如增強的 101 或 102-key 鍵盤上出現的右 ALT 和 CTRL 鍵。 旗標為 1，如果金鑰是延伸的金鑰;否則，它會是 0。<br /><br /> **9-12:** Windows 內部使用。<br /><br /> **13:** 指定的內容程式碼。 旗標為 1，如果按下按鍵; 時，按住 ALT 鍵否則，值為 0。<br /><br /> **14:** 指定前一個索引鍵的狀態。 旗標是如果金鑰已關閉，再傳送訊息，則為 1 或 0，如果索引鍵已啟動。<br /><br /> **15:** 指定轉換狀態。 旗標會是 1，表示被釋放，索引鍵，則為 0，如果按下索引鍵。|
 
 ### <a name="remarks"></a>備註
 
@@ -10006,7 +10006,7 @@ afx_msg void OnUpdateUIState(
 
 ### <a name="parameters"></a>參數
 
-*4%n 動作*<br/>
+*nAction*<br/>
 指定要執行的動作。 可為下列其中一個值：
 
 - UIS_CLEAR UI 狀態項目 (依*nUIElement*) 應該隱藏。
@@ -10311,8 +10311,8 @@ afx_msg void OnXButtonDblClk(
 |參數|描述|
 |---------------|-----------------|
 |*nFlags*|[in]位元組合 (OR) 旗標，表示按下的輔助按鍵。 比方說，MK_CONTROL 旗標表示，按下 CTRL 鍵。|
-|*n 按鈕*|[in]值，如果第一個 Microsoft Intellimouse X 按鈕是按兩下 XBUTTON1 或 XBUTTON2 如果第二個 X 按鈕按兩下時。|
-|*點*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*並*y*相對於用戶端區域左上角的游標座標。|
+|*nButton*|[in]值，如果第一個 Microsoft Intellimouse X 按鈕是按兩下 XBUTTON1 或 XBUTTON2 如果第二個 X 按鈕按兩下時。|
+|*point*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*並*y*相對於用戶端區域左上角的游標座標。|
 
 ### <a name="remarks"></a>備註
 
@@ -10349,8 +10349,8 @@ afx_msg void OnXButtonDown(
 |參數|描述|
 |---------------|-----------------|
 |*nFlags*|[in]位元組合 (OR) 旗標，表示按下的輔助按鍵。 比方說，MK_CONTROL 旗標表示，按下 CTRL 鍵。|
-|*n 按鈕*|[in]值為第一個 Microsoft Intellimouse X 按鈕已按下，如果 XBUTTON1 或 XBUTTON2 如果第二個 X 按鈕已按下。|
-|*點*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*並*y*相對於用戶端區域左上角的游標座標。|
+|*nButton*|[in]值為第一個 Microsoft Intellimouse X 按鈕已按下，如果 XBUTTON1 或 XBUTTON2 如果第二個 X 按鈕已按下。|
+|*point*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*並*y*相對於用戶端區域左上角的游標座標。|
 
 ### <a name="remarks"></a>備註
 
@@ -10387,8 +10387,8 @@ afx_msg void OnXButtonUp(
 |參數|描述|
 |---------------|-----------------|
 |*nFlags*|[in]位元組合 (OR) 旗標，表示按下的輔助按鍵。 比方說，MK_CONTROL 旗標表示，按下 CTRL 鍵。|
-|*n 按鈕*|[in]值，如果第一個 Microsoft Intellimouse X 按鈕已按兩下 XBUTTON1 或 XBUTTON2 如果第二個 X 按鈕在已按兩下。|
-|*點*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*並*y*相對於用戶端區域左上角的游標座標。|
+|*nButton*|[in]值，如果第一個 Microsoft Intellimouse X 按鈕已按兩下 XBUTTON1 或 XBUTTON2 如果第二個 X 按鈕在已按兩下。|
+|*point*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*並*y*相對於用戶端區域左上角的游標座標。|
 
 ### <a name="remarks"></a>備註
 
@@ -10449,7 +10449,7 @@ BOOL operator!=(const CWnd& wnd) const;
 
 ### <a name="parameters"></a>參數
 
-*wnd<>*<br/>
+*wnd*<br/>
 對 `CWnd` 物件的參考。
 
 ### <a name="return-value"></a>傳回值
@@ -10466,7 +10466,7 @@ BOOL operator==(const CWnd& wnd) const;
 
 ### <a name="parameters"></a>參數
 
-*wnd<>*<br/>
+*wnd*<br/>
 對 `CWnd` 物件的參考。
 
 ### <a name="return-value"></a>傳回值
@@ -10879,7 +10879,7 @@ void RepositionBars(UINT nIDFirst,
 *nIDLeftOver*<br/>
 指定用來填滿其餘的工作區 窗格的識別碼。
 
-*旗*<br/>
+*nFlag*<br/>
 可以有下列值之一：
 
 - `CWnd::reposDefault` 執行控制列的配置。 *lpRectParam*未使用，而且可以是 NULL。
@@ -11044,7 +11044,7 @@ int ScrollWindowEx(
 
 如果視窗有[WS_CLIPCHILDREN](/windows/desktop/api/winuser/nf-winuser-createwindowa)樣式，傳回所指定的區域*prgnUpdate*並*lpRectUpdate*代表總計必須捲動視窗的區域更新，包括需要更新的子視窗中的任何區域。
 
-如果[SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex)指定旗標，Windows 不會正確更新畫面捲動之子視窗的一部分。 來源矩形外捲動的子視窗的部分並不會清除，且將不會重新繪製正確地在新的目的地。 使用[DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681)並非位於完全內的移動子視窗的 Windows 函式*lpRectScroll*矩形。 如果設定 SW_SCROLLCHILDREN 旗標，且插入號矩形交集捲動矩形，已重新定位到資料指標。
+如果[SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex)指定旗標，Windows 不會正確更新畫面捲動之子視窗的一部分。 來源矩形外捲動的子視窗的部分並不會清除，且將不會重新繪製正確地在新的目的地。 使用[DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos)並非位於完全內的移動子視窗的 Windows 函式*lpRectScroll*矩形。 如果設定 SW_SCROLLCHILDREN 旗標，且插入號矩形交集捲動矩形，已重新定位到資料指標。
 
 所有輸入和輸出的座標 (如*lpRectScroll*， *lpRectClip*， *lpRectUpdate*，以及*prgnUpdate*) 假設為用戶端座標，不論視窗是否有 CS_OWNDC 或 CS_CLASSDC 類別樣式。 使用[LPtoDP](/windows/desktop/api/wingdi/nf-wingdi-lptodp)並[DPtoLP](/windows/desktop/api/wingdi/nf-wingdi-dptolp)來回轉換邏輯座標位置，如有必要的 Windows 函式。
 
@@ -11247,7 +11247,7 @@ CWnd* SetCapture();
 
 ### <a name="remarks"></a>備註
 
-當`CWnd`不再需要所有的滑鼠輸入，應用程式應該呼叫[ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261)函式，以便其他視窗可以接收滑鼠輸入。
+當`CWnd`不再需要所有的滑鼠輸入，應用程式應該呼叫[ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture)函式，以便其他視窗可以接收滑鼠輸入。
 
 擷取滑鼠輸入，而不再 WM_NCHITTEST 或 WM_SETCURSOR 訊息會傳送至作用中視窗中。
 
@@ -11261,7 +11261,7 @@ static void PASCAL SetCaretPos(POINT point);
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 指定新的 x 和 y 座標 （在工作區座標中） 插入號。
 
 ### <a name="remarks"></a>備註
@@ -11331,7 +11331,7 @@ void SetDlgItemInt(
 *nID*<br/>
 指定要變更控制項的整數識別碼。
 
-*n 值*<br/>
+*nValue*<br/>
 指定用來產生項目文字的整數值。
 
 *bSigned*<br/>
@@ -12341,7 +12341,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 指定[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件或[點](/windows/desktop/api/windef/ns-windef-tagpoint)資料結構，定義要檢查點。
 
 ### <a name="return-value"></a>傳回值

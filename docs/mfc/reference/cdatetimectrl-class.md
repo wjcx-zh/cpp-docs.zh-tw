@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: 36ef44534803e35d3544b53dbeeca75a7fb3f475
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 5acac454bd0b22b994b74a052bd3cf0b0eee2614
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178521"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894337"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl 類別
 
@@ -74,14 +74,14 @@ class CDateTimeCtrl : public CWnd
 |[CDateTimeCtrl::GetDateTimePickerInfo](#getdatetimepickerinfo)|擷取目前的日期和時間選擇器控制項的相關資訊。|
 |[CDateTimeCtrl::GetIdealSize](#getidealsize)|傳回，才可顯示目前的日期或時間的日期和時間選擇器控制項的理想大小。|
 |[CDateTimeCtrl::GetMonthCalColor](#getmonthcalcolor)|擷取月份行事曆的日期和時間選擇器控制項中的某一部分的色彩。|
-|[Cdatetimectrl:: Getmonthcalctrl](#getmonthcalctrl)|擷取`CMonthCalCtrl`與日期和時間選擇器控制項關聯的物件。|
+|[CDateTimeCtrl::GetMonthCalCtrl](#getmonthcalctrl)|擷取`CMonthCalCtrl`與日期和時間選擇器控制項關聯的物件。|
 |[CDateTimeCtrl::GetMonthCalFont](#getmonthcalfont)|擷取目前的日期和時間選擇器控制項的子系月曆控制項所使用的字型。|
 |[CDateTimeCtrl::GetMonthCalStyle](#getmonthcalstyle)|取得目前的日期和時間選擇器控制項的樣式。|
 |[CDateTimeCtrl::GetRange](#getrange)|擷取目前的最小和最大允許的日期和時間選擇器控制項的系統時間。|
 |[CDateTimeCtrl::GetTime](#gettime)|擷取日期和時間選擇器控制項中目前選取的時間，並將它放在指定的`SYSTEMTIME`結構。|
-|[Cdatetimectrl:: Setformat](#setformat)|設定符合指定的格式字串的日期和時間選擇器控制項的顯示方式。|
+|[CDateTimeCtrl::SetFormat](#setformat)|設定符合指定的格式字串的日期和時間選擇器控制項的顯示方式。|
 |[CDateTimeCtrl::SetMonthCalColor](#setmonthcalcolor)|設定月曆的日期和時間選擇器控制項內的某一部分的色彩。|
-|[Cdatetimectrl:: Setmonthcalfont](#setmonthcalfont)|設定日期和時間選擇器控制項的子系月曆控制項將使用的字型。|
+|[CDateTimeCtrl::SetMonthCalFont](#setmonthcalfont)|設定日期和時間選擇器控制項的子系月曆控制項將使用的字型。|
 |[CDateTimeCtrl::SetMonthCalStyle](#setmonthcalstyle)|將目前的日期和時間選擇器控制項的樣式設定。|
 |[CDateTimeCtrl::SetRange](#setrange)|設定日期和時間選擇器控制項的最小和最大允許的系統時間。|
 |[CDateTimeCtrl::SetTime](#settime)|日期和時間選擇器控制項中設定的時間。|
@@ -154,7 +154,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定日期時間控制項的樣式的組合。 請參閱[日期和時間選擇器控制項樣式](/windows/desktop/Controls/date-and-time-picker-control-styles)日期和時間選擇器樣式的詳細資訊的 Windows SDK 中。
 
 *rect*<br/>
@@ -243,7 +243,7 @@ COLORREF 值，表示月曆控制項如果是成功的指定部分的色彩設�
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_5.cpp)]
 
-##  <a name="getmonthcalctrl"></a>  Cdatetimectrl:: Getmonthcalctrl
+##  <a name="getmonthcalctrl"></a>  CDateTimeCtrl::GetMonthCalCtrl
 
 擷取`CMonthCalCtrl`與日期和時間選擇器控制項關聯的物件。
 
@@ -353,7 +353,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 在第一個版本中，參考[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)會收到系統時間資訊的物件。 在第二個版本中，參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)會收到系統時間資訊的物件。
 
 *pTimeDest*<br/>
-指標[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)接收系統時間資訊的結構。 必須不是 NULL。
+指標[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)接收系統時間資訊的結構。 必須不是 NULL。
 
 ### <a name="return-value"></a>傳回值
 
@@ -403,7 +403,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_9.cpp)]
 
-##  <a name="setformat"></a>  Cdatetimectrl:: Setformat
+##  <a name="setformat"></a>  CDateTimeCtrl::SetFormat
 
 設定符合指定的格式字串的日期和時間選擇器控制項的顯示方式。
 
@@ -470,7 +470,7 @@ COLORREF 值，表示月曆控制項如果是成功的指定部分的上一個�
 
   範例，請參閱[CDateTimeCtrl::GetMonthCalColor](#getmonthcalcolor)。
 
-##  <a name="setmonthcalfont"></a>  Cdatetimectrl:: Setmonthcalfont
+##  <a name="setmonthcalfont"></a>  CDateTimeCtrl::SetMonthCalFont
 
 設定日期和時間選擇器控制項的子系月曆控制項將使用的字型。
 
@@ -511,7 +511,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
 
 |參數|描述|
 |---------------|-----------------|
-|*cheaderctrl:: Create*|[in]新的月份行事曆月份行事曆控制項樣式位元結合 (OR) 的控制項樣式。 如需詳細資訊，請參閱 <<c0> [ 月份的行事曆控制項樣式](/windows/desktop/Controls/month-calendar-control-styles)。|
+|*dwStyle*|[in]新的月份行事曆月份行事曆控制項樣式位元結合 (OR) 的控制項樣式。 如需詳細資訊，請參閱 <<c0> [ 月份的行事曆控制項樣式](/windows/desktop/Controls/month-calendar-control-styles)。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -583,7 +583,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 參考[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)物件，包含控制項設定。
 
 *pTimeNew*<br/>
-在第二個版本以上的指標[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件，包含控制項設定的時間。 在第三個版本以上的指標[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)結構，包含控制項設定的時間。
+在第二個版本以上的指標[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件，包含控制項設定的時間。 在第三個版本以上的指標[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)結構，包含控制項設定的時間。
 
 ### <a name="return-value"></a>傳回值
 

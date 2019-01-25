@@ -1,5 +1,5 @@
 ---
-title: TN006：訊息對應
+title: TN006:訊息對應
 ms.date: 06/25/2018
 f1_keywords:
 - vc.messages.maps
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: ab08476923f253d666e024d8944aec64ed0af8da
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 3536cb215da04fb7114853d3fa5d764585cbb58e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693649"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894077"
 ---
-# <a name="tn006-message-maps"></a>TN006：訊息對應
+# <a name="tn006-message-maps"></a>TN006:訊息對應
 
 此提示描述 MFC 訊息對應工具。
 
@@ -36,7 +36,7 @@ Microsoft Windows 會使用訊息內的設施的視窗類別中實作虛擬函�
 
 因為系統定莪 Windows 訊息數目隨著時間變更，而且因為應用程式可以定義自己的 Windows 訊息，訊息對應提供防止介面變更中斷現有程式碼的間接取值層級。
 
-## <a name="overview"></a>概觀
+## <a name="overview"></a>總覽
 
 MFC 提供傳統 Windows 程式中使用來處理訊息傳送至視窗的 switch 陳述式的替代方案。 可以定義將訊息對應至方法，以便當視窗收到一則訊息時，會自動呼叫適當的方法。 此訊息對應功能設計類似於虛擬函式，但還有其他好處，具有 c + + 虛擬函式不可能。
 
@@ -121,7 +121,7 @@ pWnd->SendMessage(WM_MYMESSAGE);
 
 ## <a name="registered-windows-messages"></a>已註冊的 Windows 訊息
 
-[RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)函式用來定義新的視窗訊息，保證是唯一在整個系統。 ON_REGISTERED_MESSAGE 巨集用來處理這些訊息。 這個巨集接受名稱*UINT 附近*變數，其中包含已註冊的 windows 訊息識別碼。 例如
+[RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)函式用來定義新的視窗訊息，保證是唯一在整個系統。 ON_REGISTERED_MESSAGE 巨集用來處理這些訊息。 這個巨集接受名稱*UINT 附近*變數，其中包含已註冊的 windows 訊息識別碼。 例如
 
 ```cpp
 class CMyWnd : public CMyParentWndClass
@@ -213,7 +213,7 @@ ON_UPDATE_COMMAND_UI(id, memberFxn)
     }
     ```
 
-進階的使用者可以使用單一命令處理常式處理一組命令： [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)或 ON_COMMAND_RANGE_EX。 請參閱產品文件，如需這些巨集的詳細資訊。
+進階的使用者可以使用單一命令處理常式來處理一組命令：[ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)或 ON_COMMAND_RANGE_EX。 請參閱產品文件，如需這些巨集的詳細資訊。
 
 > [!NOTE]
 > ClassWizard 支援建立的 ON_COMMAND 和 ON_UPDATE_COMMAND_UI 處理常式，但它不支援建立 ON_COMMAND_EX 或 ON_COMMAND_RANGE 處理常式。 不過，類別精靈會剖析，並可讓您瀏覽所有四個命令處理常式的變體。

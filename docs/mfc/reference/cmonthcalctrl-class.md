@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 26a0feadfd6603f74ce222e4850f0da9cf71e7d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48b02843cc957994aa3f3109a82cb2188dd9acff
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509579"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894194"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 類別
 
@@ -148,7 +148,7 @@ class CMonthCalCtrl : public CWnd
 |[CMonthCalCtrl::SetColor](#setcolor)|設定月曆控制項的指定區域的色彩。|
 |[CMonthCalCtrl::SetCurrentView](#setcurrentview)|設定目前的月份行事曆控制，以顯示指定的檢視。|
 |[CMonthCalCtrl::SetCurSel](#setcursel)|設定月曆控制項的目前選取的日期。|
-|[Cmonthcalctrl:: Setdaystate](#setdaystate)|設定月曆控制項中的天數的顯示。|
+|[CMonthCalCtrl::SetDayState](#setdaystate)|設定月曆控制項中的天數的顯示。|
 |[CMonthCalCtrl::SetDecadeView](#setdecadeview)|設定目前的月曆控制項到十年來檢視。|
 |[CMonthCalCtrl::SetFirstDayOfWeek](#setfirstdayofweek)|設定要顯示的行事曆的最左邊資料行中的星期幾。|
 |[CMonthCalCtrl::SetMaxSelCount](#setmaxselcount)|設定月曆控制項中可選取最大天數。|
@@ -223,13 +223,13 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定套用至月曆控制項的 Windows 樣式的組合。 請參閱[月份的行事曆控制項樣式](/windows/desktop/Controls/month-calendar-control-styles)樣式的詳細資訊的 Windows SDK 中。
 
 *rect*<br/>
 參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 包含月曆控制項的大小與位置。
 
-*太平洋時間*<br/>
+*pt*<br/>
 參考[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)結構，辨識月曆控制項的位置。
 
 *pParentWnd*<br/>
@@ -412,7 +412,7 @@ BOOL GetCurSel(LPSYSTEMTIME pDateTime) const;
 參考[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)物件或[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。 接收目前的時間。
 
 *pDateTime*<br/>
-指標[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)會收到將目前選取的日期資訊的結構。 這個參數必須是有效的位址，而且不能是 NULL。
+指標[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)會收到將目前選取的日期資訊的結構。 這個參數必須是有效的位址，而且不能是 NULL。
 
 ### <a name="return-value"></a>傳回值
 
@@ -579,7 +579,7 @@ int GetMonthRange(
 參考`COleDateTime`或`CTime`物件，其中包含允許的最大日期。
 
 *pMinRange*<br/>
-指標[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)結構，包含在最低範圍的結束日期。
+指標[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)結構，包含在最低範圍的結束日期。
 
 *pMaxRange*<br/>
 指標`SYSTEMTIME`結構，其中包含的日期範圍的最高的結尾。
@@ -625,10 +625,10 @@ DWORD GetRange(
 ### <a name="parameters"></a>參數
 
 *pMinRange*<br/>
-指標`COleDateTime`物件，`CTime`物件，或[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)結構，包含在最低範圍的結束日期。
+指標`COleDateTime`物件，`CTime`物件，或[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)結構，包含在最低範圍的結束日期。
 
 *pMaxRange*<br/>
-指標`COleDateTime`物件，`CTime`物件，或[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)結構，其中包含的日期範圍的最高的結尾。
+指標`COleDateTime`物件，`CTime`物件，或[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)結構，其中包含的日期範圍的最高的結尾。
 
 ### <a name="return-value"></a>傳回值
 
@@ -674,7 +674,7 @@ BOOL GetSelRange(
 參考`COleDateTime`或`CTime`物件，其中包含允許的最大日期。
 
 *pMinRange*<br/>
-指標[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)結構，包含在最低範圍的結束日期。
+指標[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)結構，包含在最低範圍的結束日期。
 
 *pMaxRange*<br/>
 指標`SYSTEMTIME`結構，其中包含的日期範圍的最高的結尾。
@@ -705,7 +705,7 @@ BOOL GetToday(LPSYSTEMTIME pDateTime) const;
 參考[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或是[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件，表示目前的日期。
 
 *pDateTime*<br/>
-指標[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)接收日期資訊的結構。 這個參數必須是有效的位址，而且不能是 NULL。
+指標[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)接收日期資訊的結構。 這個參數必須是有效的位址，而且不能是 NULL。
 
 ### <a name="return-value"></a>傳回值
 
@@ -953,7 +953,7 @@ BOOL SetCurrentView(DWORD dwNewView);
 
 |參數|描述|
 |---------------|-----------------|
-|*dwNewView*|[in]指定每月、 年、 十年或世紀檢視下列值之一。<br /><br /> MCMV_MONTH： 每月檢視<br /><br /> MCMV_YEAR： 年度檢視<br /><br /> MCMV_DECADE： 十年來檢視<br /><br /> MCMV_CENTURY： 世紀檢視|
+|*dwNewView*|[in]指定每月、 年、 十年或世紀檢視下列值之一。<br /><br /> MCMV_MONTH:每月檢視<br /><br /> MCMV_YEAR:每年的檢視<br /><br /> MCMV_DECADE:十年來檢視<br /><br /> MCMV_CENTURY:世紀檢視|
 
 ### <a name="return-value"></a>傳回值
 
@@ -979,7 +979,7 @@ BOOL SetCurSel(const CTime& refDateTime);
 參考[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或是[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件，表示目前選取的月份行事曆控制項。
 
 *pDateTime*<br/>
-指標[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)結構，其中包含要設定為目前的選取範圍的日期。
+指標[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)結構，其中包含要設定為目前的選取範圍的日期。
 
 ### <a name="return-value"></a>傳回值
 
@@ -993,7 +993,7 @@ BOOL SetCurSel(const CTime& refDateTime);
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl#5](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_11.cpp)]
 
-##  <a name="setdaystate"></a>  Cmonthcalctrl:: Setdaystate
+##  <a name="setdaystate"></a>  CMonthCalCtrl::SetDayState
 
 設定月曆控制項中的天數的顯示。
 
@@ -1164,7 +1164,7 @@ BOOL SetRange(
 ### <a name="parameters"></a>參數
 
 *pMinRange*<br/>
-指標`COleDateTime`物件，`CTime`物件，或[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)結構，包含在最低範圍的結束日期。
+指標`COleDateTime`物件，`CTime`物件，或[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)結構，包含在最低範圍的結束日期。
 
 *pMaxRange*<br/>
 指標`COleDateTime`物件，`CTime`物件，或`SYSTEMTIME`結構，其中包含的日期範圍的最高的結尾。
@@ -1202,7 +1202,7 @@ BOOL SetSelRange(
 ### <a name="parameters"></a>參數
 
 *pMinRange*<br/>
-指標`COleDateTime`物件，`CTime`物件，或[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)結構，包含在最低範圍的結束日期。
+指標`COleDateTime`物件，`CTime`物件，或[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)結構，包含在最低範圍的結束日期。
 
 *pMaxRange*<br/>
 指標`COleDateTime`物件，`CTime`物件，或`SYSTEMTIME`結構，其中包含的日期範圍的最高的結尾。
@@ -1231,7 +1231,7 @@ void SetToday(const CTime* pDateTime);
 參考[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)物件，包含目前的日期。
 
 *pDateTime*<br/>
-在第二個版本中，指標[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件，包含目前的日期資訊。 在第三個版本中，指標[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)結構，包含目前的日期資訊。
+在第二個版本中，指標[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件，包含目前的日期資訊。 在第三個版本中，指標[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)結構，包含目前的日期資訊。
 
 ### <a name="remarks"></a>備註
 

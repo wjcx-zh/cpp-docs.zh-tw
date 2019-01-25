@@ -64,12 +64,12 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: ff7610d85d73a99d55d6181fad178d0b12be0c32
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: a22a419018f3f4b2b7e6cee2471bf0f162b65f2e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332422"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893999"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl 類別
 
@@ -98,7 +98,7 @@ class ATL_NO_VTABLE CStockPropImpl :
 *T*<br/>
 實作控制項，以及衍生自類別`CStockPropImpl`。
 
-*介面名稱*<br/>
+*InterfaceName*<br/>
 雙重介面，公開內建的屬性。
 
 *piid*<br/>
@@ -114,7 +114,7 @@ class ATL_NO_VTABLE CStockPropImpl :
 類型程式庫的次要版本。 預設值為 0。
 
 *tihclass*<br/>
-用來管理的類型資訊的類別*T*。預設值是 `CComTypeInfoHolder`。
+用來管理的類型資訊的類別*T*。預設值為 `CComTypeInfoHolder`。
 
 ## <a name="members"></a>成員
 
@@ -559,7 +559,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
 ### <a name="parameters"></a>參數
 
 *ppPicture*<br/>
-變數會接收該圖片屬性的指標。 請參閱[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)如需詳細資訊。
+變數會接收該圖片屬性的指標。 請參閱[IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp)如需詳細資訊。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1005,7 +1005,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
 ### <a name="parameters"></a>參數
 
 *pPicture*<br/>
-圖片的內容指標。 請參閱[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)如需詳細資訊。
+圖片的內容指標。 請參閱[IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp)如需詳細資訊。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1153,7 +1153,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 ### <a name="parameters"></a>參數
 
 *pPicture*<br/>
-圖片的內容指標。 請參閱[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)如需詳細資訊。
+圖片的內容指標。 請參閱[IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp)如需詳細資訊。
 
 ### <a name="return-value"></a>傳回值
 

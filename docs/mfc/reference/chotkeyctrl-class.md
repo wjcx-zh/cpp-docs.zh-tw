@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 9a06f3bd8a8c5646f384c3f788518078b121bfe1
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 0b673c873f773844c13894d3f0448536f297dc53
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178131"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894506"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl 類別
 
@@ -67,7 +67,7 @@ class CHotKeyCtrl : public CWnd
 
 當使用者選擇的按鍵組合時，應用程式就可以從控制項擷取指定的按鍵組合，並使用 WM_SETHOTKEY 訊息在系統中設定熱鍵。 每當使用者按下便捷鍵之後，從任何系統的一部分，WM_SETHOTKEY 訊息中所指定視窗就會收到指定 SC_HOTKEY WM_SYSCOMMAND 訊息。 此訊息會啟動所收到的視窗。 熱鍵的應用程式，稱為 WM_SETHOTKEY 結束之前會保持有效。
 
-這項機制是從經常性存取金鑰的支援取決於 WM_HOTKEY 訊息和 Windows 的不同[RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309)並[UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey)函式。
+這項機制是從經常性存取金鑰的支援取決於 WM_HOTKEY 訊息和 Windows 的不同[RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey)並[UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey)函式。
 
 如需有關使用`CHotKeyCtrl`，請參閱 <<c2> [ 控制項](../../mfc/controls-mfc.md)並[使用 CHotKeyCtrl](../../mfc/using-chotkeyctrl.md)。
 
@@ -107,7 +107,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定熱鍵控制項的樣式。 適用於任何控制項樣式的組合。 請參閱[常見的控制項樣式](/windows/desktop/Controls/common-control-styles)Windows sdk for 的詳細資訊。
 
 *rect*<br/>
@@ -147,7 +147,7 @@ virtual BOOL CreateEx(
 *dwExStyle*<br/>
 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定熱鍵控制項的樣式。 適用於任何控制項樣式的組合。 如需詳細資訊，請參閱 <<c0> [ 常見的控制項樣式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。
 
 *rect*<br/>
@@ -306,11 +306,11 @@ void SetRules(
 
 - HKCOMB_S SHIFT
 
-- HKCOMB_SA SHIFT + ALT 鍵
+- HKCOMB_SA SHIFT+ALT
 
-- HKCOMB_SC SHIFT + CTRL
+- HKCOMB_SC SHIFT+CTRL
 
-- HKCOMB_SCA SHIFT + CTRL + ALT
+- HKCOMB_SCA SHIFT+CTRL+ALT
 
 *wModifiers*<br/>
 旗標的陣列，指定在使用者輸入無效的組合時所要使用的按鍵組合。 如需有關輔助鍵旗標的詳細資訊，請參閱[GetHotKey](#gethotkey)。

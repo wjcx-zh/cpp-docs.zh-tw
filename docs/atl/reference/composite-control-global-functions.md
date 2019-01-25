@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 3b4abc1afc99a00d83c25574df06ebfb27141c65
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 26d8d004c933e48833047f85727ae6282c4b43d7
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694175"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893856"
 ---
 # <a name="composite-control-global-functions"></a>複合控制項全域函式
 
@@ -77,7 +77,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in]識別擁有對話方塊的視窗。
 
 *lpDialogProc*<br/>
-[in]指向對話方塊程序。 如需對話方塊程序的詳細資訊，請參閱[DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469)。
+[in]指向對話方塊程序。 如需對話方塊程序的詳細資訊，請參閱[DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc)。
 
 *dwInitParam*<br/>
 [in]指定要傳遞至對話方塊中的值*lParam* WM_INITDIALOG 訊息參數。
@@ -95,7 +95,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-如需有關如何編輯資源指令碼的詳細資訊，請參閱 <<c0> [ 如何： 以文字格式開啟資源指令碼檔](../../windows/how-to-open-a-resource-script-file-in-text-format.md)。 如需有關控制資源定義陳述式的詳細資訊，請參閱[常見的控制參數](/windows/desktop/menurc/common-control-parameters)下 Windows SDK: SDK Tools。
+如需有關如何編輯資源指令碼的詳細資訊，請參閱[How to:以文字格式開啟資源指令碼檔](../../windows/how-to-open-a-resource-script-file-in-text-format.md)。 如需有關控制資源定義陳述式的詳細資訊，請參閱[常見的控制參數](/windows/desktop/menurc/common-control-parameters)下 Windows SDK:SDK Tools。
 
 如需有關一般對話方塊的詳細資訊，請參閱[對話方塊中](/windows/desktop/api/winuser/nf-winuser-dialogboxa)並[CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) Windows SDK 中。
 
@@ -124,7 +124,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in]識別擁有對話方塊的視窗。
 
 *lpDialogProc*<br/>
-[in]指向對話方塊程序。 如需對話方塊程序的詳細資訊，請參閱[DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469)。
+[in]指向對話方塊程序。 如需對話方塊程序的詳細資訊，請參閱[DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc)。
 
 *dwInitParam*<br/>
 [in]指定要傳遞至對話方塊中的值*lParam* WM_INITDIALOG 訊息參數。
@@ -413,7 +413,7 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 *h*<br/>
 [in]裝載控制項的視窗控制代碼。
 
-*前置處理*<br/>
+*pp*<br/>
 [out]`IUnknown`容器的控制項。
 
 ### <a name="return-value"></a>傳回值
@@ -433,7 +433,7 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 *h*<br/>
 [in]裝載控制項的視窗控制代碼。
 
-*前置處理*<br/>
+*pp*<br/>
 [out]`IUnknown`所裝載之控制項。
 
 ### <a name="return-value"></a>傳回值

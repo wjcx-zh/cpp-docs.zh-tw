@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSocketAddr class
 ms.assetid: 2fb2d8a7-899e-4a36-a342-cc9f4fcdd68c
-ms.openlocfilehash: 9ab0367d5a83096c1bb6e9166ee2b43fe2000ab4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc0c5f0abc125138c5068682c828a3438dec5102
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570452"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893349"
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr 類別
 
@@ -204,7 +204,7 @@ addrinfo* const GetAddrInfo(int nIndex = 0) const;
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-中的特定項目的參考[addrinfo](https://msdn.microsoft.com/library/windows/desktop/ms737530)清單。
+中的特定項目的參考[addrinfo](/windows/desktop/api/ws2def/ns-ws2def-addrinfoa)清單。
 
 ### <a name="return-value"></a>傳回值
 
@@ -220,7 +220,7 @@ addrinfo* const GetAddrInfoList() const;
 
 ### <a name="return-value"></a>傳回值
 
-連結清單的一或多個指標`addrinfo`結構，其中包含主機的回應資訊。 如需詳細資訊，請參閱 < [addrinfo 結構](https://msdn.microsoft.com/library/windows/desktop/ms737530)。
+連結清單的一或多個指標`addrinfo`結構，其中包含主機的回應資訊。 如需詳細資訊，請參閱 < [addrinfo 結構](/windows/desktop/api/ws2def/ns-ws2def-addrinfoa)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CAxDialogImpl class
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
-ms.openlocfilehash: 9cb4ec679e26adc32ffc6d68ebff9b1ed73c2f43
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 852656b33eca1a8c87c6931b58cd49c0c41fe3dc
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694227"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893635"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl 類別
 
@@ -135,7 +135,7 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
 *dwInitParam*<br/>
 [in]指定要傳遞至對話方塊中的值*lParam* WM_INITDIALOG 訊息參數。
 
-*RECT （&AMP; S)*<br/>
+*RECT&*<br/>
 不使用這個參數。 此參數的傳入方式`CComControl`。
 
 ### <a name="return-value"></a>傳回值
@@ -255,7 +255,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 ### <a name="parameters"></a>參數
 
 *pMsg*<br/>
-指標[MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)結構，其中包含要檢查的訊息。
+指標[MSG](/windows/desktop/api/winuser/ns-winuser-msg)結構，其中包含要檢查的訊息。
 
 ### <a name="return-value"></a>傳回值
 

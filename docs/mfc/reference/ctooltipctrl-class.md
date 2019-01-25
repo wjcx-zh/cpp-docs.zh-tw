@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 808d8b5f023e88b67458c514e871692aac94ccd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 177f6eeada942440c33f7dd0a0cbc6d9e59d867c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500408"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894142"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -121,7 +121,7 @@ class CToolTipCtrl : public CWnd
 |[CToolTipCtrl::HitTest](#hittest)|測試點，以判斷它是否在指定之工具的週框矩形內。 如果是的話，擷取工具的相關資訊。|
 |[CToolTipCtrl::Pop](#pop)|移除檢視中顯示的工具提示視窗。|
 |[CToolTipCtrl::Popup](#popup)|使目前的工具提示控制項顯示在最後一個滑鼠訊息的座標。|
-|[Relayevent](#relayevent)|將滑鼠訊息傳遞至 工具提示控制項進行處理。|
+|[CToolTipCtrl::RelayEvent](#relayevent)|將滑鼠訊息傳遞至 工具提示控制項進行處理。|
 |[CToolTipCtrl::SetDelayTime](#setdelaytime)|設定初始、 快顯視窗，並重新顯示工具提示控制項的持續時間。|
 |[CToolTipCtrl::SetMargin](#setmargin)|頂端、 左邊、 底部、 與工具提示視窗的左右邊界設定。|
 |[CToolTipCtrl::SetMaxTipWidth](#setmaxtipwidth)|設定工具提示視窗的最大寬度。|
@@ -276,7 +276,7 @@ virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
 *pParentWnd*<br/>
 指定工具提示控制項的父視窗，通常`CDialog`。 它必須不是 NULL。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定工具提示控制項的樣式。 請參閱**備註**節的詳細資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -287,7 +287,7 @@ virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
 
 您建構`CToolTipCtrl`兩個步驟。 首先，呼叫建構函式來建構`CToolTipCtrl`物件，然後再呼叫`Create`建立工具提示控制項，並將其附加至`CToolTipCtrl`物件。
 
-*Cheaderctrl:: Create*參數可以是任何組合[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 此外，工具提示控制項有兩種類別的特定樣式： TTS_ALWAYSTIP 和 TTS_NOPREFIX。
+*Cheaderctrl:: Create*參數可以是任何組合[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 此外，工具提示控制項有兩種類別的特定樣式：TTS_ALWAYSTIP 和 TTS_NOPREFIX。
 
 |樣式|意義|
 |-----------|-------------|
@@ -318,7 +318,7 @@ virtual BOOL CreateEx(
 *pParentWnd*<br/>
 是控制項的父視窗的指標。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定工具提示控制項的樣式。 請參閱**備註**一節[建立](#create)如需詳細資訊。
 
 *dwStyleEx*<br/>
@@ -616,7 +616,7 @@ BOOL HitTest(
 *pWnd*<br/>
 包含此工具視窗的指標。
 
-*太平洋時間*<br/>
+*pt*<br/>
 指標`CPoint`物件，其中包含要測試點的座標。
 
 *lpToolInfo*<br/>
@@ -682,7 +682,7 @@ void Popup();
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#7](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_3.cpp)]
 
-##  <a name="relayevent"></a>  Relayevent
+##  <a name="relayevent"></a>  CToolTipCtrl::RelayEvent
 
 將滑鼠訊息傳遞至 工具提示控制項進行處理。
 
@@ -693,7 +693,7 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="parameters"></a>參數
 
 *lpMsg*<br/>
-指標[MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)結構，其中包含要轉送的訊息。
+指標[MSG](/windows/desktop/api/winuser/ns-winuser-msg)結構，其中包含要轉送的訊息。
 
 ### <a name="remarks"></a>備註
 

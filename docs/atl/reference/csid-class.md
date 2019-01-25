@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 57edb46047021d0ede04164584e79748028e05b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6fcff646a577500fd05b7c938b2c336ebe725957
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465360"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894311"
 ---
 # <a name="csid-class"></a>CSid 類別
 
@@ -85,11 +85,11 @@ class CSid
 |||
 |-|-|
 |[operator ==](#operator_eq_eq)|測試相等的兩個安全性描述元物件|
-|[運算子 ！ =](#operator_neq)|測試兩個安全性描述元物件不相等|
+|[operator !=](#operator_neq)|測試兩個安全性描述元物件不相等|
 |[運算子 \<](#operator_lt_)|比較兩個安全性描述元物件的相對值。|
-|[運算子 >](#operator_gt_)|比較兩個安全性描述元物件的相對值。|
-|[運算子 \<=](#operator_lt__eq)|比較兩個安全性描述元物件的相對值。|
-|[運算子 > =](#operator_gt__eq)|比較兩個安全性描述元物件的相對值。|
+|[operator >](#operator_gt_)|比較兩個安全性描述元物件的相對值。|
+|[operator \<=](#operator_lt__eq)|比較兩個安全性描述元物件的相對值。|
+|[operator >=](#operator_gt__eq)|比較兩個安全性描述元物件的相對值。|
 
 ## <a name="remarks"></a>備註
 
@@ -232,7 +232,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[EqualPrefixSid](https://msdn.microsoft.com/library/windows/desktop/aa446621)在 Windows SDK 中，如需詳細資訊。
+請參閱[EqualPrefixSid](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-equalprefixsid)在 Windows SDK 中，如需詳細資訊。
 
 ##  <a name="getlength"></a>  CSid::GetLength
 

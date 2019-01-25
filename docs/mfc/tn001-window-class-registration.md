@@ -1,5 +1,5 @@
 ---
-title: TN001：視窗類別註冊
+title: TN001:視窗類別註冊
 ms.date: 11/04/2016
 f1_keywords:
 - vc.registration
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-ms.openlocfilehash: 8f16480d238ca2a3e683219984c54d67159f806d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 4ae94d1c9c57f6c315ae482e44576ae25194c00f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693852"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894259"
 ---
-# <a name="tn001-window-class-registration"></a>TN001：視窗類別註冊
+# <a name="tn001-window-class-registration"></a>TN001:視窗類別註冊
 
 本提示描述註冊特殊的 MFC 常式[WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)es 所需的 Microsoft Windows。 特定`WNDCLASS`討論 MFC 與 Windows 所使用的屬性。
 
@@ -31,7 +31,7 @@ ms.locfileid: "51693852"
 
 - 明確地呼叫 MFC [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)或是[AfxRegisterClass](../mfc/reference/application-information-and-management.md#afxregisterclass)。
 
-- 明確地呼叫 Windows 常式[RegisterClass](https://msdn.microsoft.com/library/windows/desktop/ms633586)。
+- 明確地呼叫 Windows 常式[RegisterClass](/windows/desktop/api/winuser/nf-winuser-registerclassa)。
 
 ## <a name="wndclass-fields"></a>WNDCLASS 欄位
 
@@ -59,9 +59,9 @@ ms.locfileid: "51693852"
 
 `CFrameWnd::LoadFrame` 將註冊`WNDCLASS`使用您指定為第一個參數與下列的標準屬性的圖示識別碼：
 
-- 類別樣式： CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW;
+- 類別樣式：CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW;
 
-- 圖示 AFX_IDI_STD_FRAME
+- icon AFX_IDI_STD_FRAME
 
 - 箭號游標
 

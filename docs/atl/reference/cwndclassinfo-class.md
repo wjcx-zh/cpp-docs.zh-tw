@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWndClassInfo class
 ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
-ms.openlocfilehash: 2ffe37059eb6ab81eb9dd67243ba125766b92dfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f831980c803fcbce45e502321e39440b72382f95
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467293"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893739"
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo 類別
 
@@ -61,7 +61,7 @@ class CWndClassInfo
 
 |巨集|描述|
 |-----------|-----------------|
-|[{2&AMP;GT;DECLARE_WND_CLASS&AMP;LT;2](window-class-macros.md#declare_wnd_class)|`CWndClassInfo` 註冊新的視窗類別的資訊。|
+|[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)|`CWndClassInfo` 註冊新的視窗類別的資訊。|
 |[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)|`CWndClassInfo` 註冊新的視窗類別，其中包括類別參數的資訊。|
 |[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)|`CWndClassInfo` 註冊視窗類別以現有的類別為基礎，但使用不同的視窗程序的資訊。 這項技術稱為 superclassing。|
 
@@ -141,7 +141,7 @@ TCHAR m_szAutoName[13];
 
 ##  <a name="m_wc"></a>  CWndClassInfo::m_wc
 
-維護中的視窗類別資訊[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)結構。
+維護中的視窗類別資訊[WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa)結構。
 
 ```
 WNDCLASSEX m_wc;

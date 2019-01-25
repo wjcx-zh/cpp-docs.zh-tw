@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 4012f1f0729ff0f46a8504c44f27a37cd55c77e5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 6c6364dcf5d558bcdd25a2957721df1863d1f73f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327443"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893661"
 ---
 # <a name="message-map-macros-mfc"></a>訊息對應巨集 (MFC)
 
@@ -135,7 +135,7 @@ BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )
 
 在您的類別的方法實作區段，開始訊息對應 BEGIN_TEMPLATE_MESSAGE_MAP 巨集;然後以您平常的標準訊息對應，請針對每個訊息處理常式方法加入巨集項目。 BEGIN_MESSAGE_MAP 巨集完成範本訊息地圖[END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map)巨集。
 
-如需有關如何實作樣板類別的訊息對應的詳細資訊，請參閱[如何： 建立樣板類別的訊息對應](../how-to-create-a-message-map-for-a-template-class.md)。
+如需有關如何實作樣板類別的訊息對應的詳細資訊，請參閱[How to:樣板類別建立的訊息對應](../how-to-create-a-message-map-for-a-template-class.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -252,7 +252,7 @@ ON_COMMAND_EX(id, memberFxn);
 
 擴充的格式的命令訊息處理常式可供進階使用。 ON_COMMAND_EX 巨集用於這類訊息處理常式，並提供的超集合[ON_COMMAND](message-map-macros-mfc.md#on_command)功能。 擴充的命令處理常式成員函式會採用單一參數，包含命令 ID，UINT，並傳回 BOOL。 傳回的值應為 TRUE，表示已處理的命令;否則路由會繼續其他命令目標物件。
 
-如需詳細資訊，請參閱 < 技術提示 [TN006： 訊息對應] tm006-訊息-maps.md)。
+如需詳細資訊，請參閱 < 技術提示 [TN006:訊息對應] tm006-訊息-maps.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -261,7 +261,7 @@ ON_COMMAND_EX(id, memberFxn);
 ### <a name="see-also"></a>另請參閱
 
 [ON_COMMAND](message-map-macros-mfc.md#on_command)<br/>
-[TN006：訊息對應](../tn006-message-maps.md)
+[TN006:訊息對應](../tn006-message-maps.md)
 
 ## <a name="on_control"></a>  ON_CONTROL
 
@@ -383,97 +383,97 @@ OLE 命令識別碼。
 
 `IOleCommandTarget`標準功能表命令已由 MFC 實作中的下列巨集：
 
-**ON_OLECMD_CLEARSELECTION （)**
+**ON_OLECMD_CLEARSELECTION( )**
 
 分派清除編輯命令。 實作為：
 
 `ON_OLECMD(NULL, OLECMDID_CLEARSELECTION, ID_EDIT_CLEAR)`
 
-**ON_OLECMD_COPY （)**
+**ON_OLECMD_COPY( )**
 
 分派編輯複製命令。 實作為：
 
 `ON_OLECMD(NULL, OLECMDID_COPY, ID_EDIT_COPY)`
 
-**ON_OLECMD_CUT （)**
+**ON_OLECMD_CUT( )**
 
 分派編輯剪下 命令。 實作為：
 
 `ON_OLECMD(NULL, OLECMDID_CUT, ID_EDIT_CUT)`
 
-**ON_OLECMD_NEW （)**
+**ON_OLECMD_NEW( )**
 
 分派開新檔案的命令。 實作為：
 
 `ON_OLECMD(NULL, OLECMDID_NEW, ID_FILE_NEW)`
 
-**ON_OLECMD_OPEN （)**
+**ON_OLECMD_OPEN( )**
 
 將分派檔案開啟的命令。 實作為：
 
 `ON_OLECMD(NULL, OLECMDID_OPEN, ID_FILE_OPEN)`
 
-**ON_OLECMD_PAGESETUP （)**
+**ON_OLECMD_PAGESETUP( )**
 
 將分派檔案 [版面設定] 命令。 實作為：
 
 `ON_OLECMD(NULL, OLECMDID_PAGESETUP, ID_FILE_PAGE_SETUP)`
 
-**ON_OLECMD_PASTE （)**
+**ON_OLECMD_PASTE( )**
 
 分派編輯貼上 命令。 實作為：
 
 `ON_OLECMD(NULL, OLECMDID_PASTE, ID_EDIT_PASTE)`
 
-**ON_OLECMD_PASTESPECIAL （)**
+**ON_OLECMD_PASTESPECIAL( )**
 
 分派編輯選擇性貼上命令。 實作為：
 
 `ON_OLECMD(NULL, OLECMDID_PASTESPECIAL, ID_EDIT_PASTE_SPECIAL)`
 
-**ON_OLECMD_PRINT （)**
+**ON_OLECMD_PRINT( )**
 
 將分派檔案列印命令。 實作為：
 
 `ON_OLECMD(NULL, OLECMDID_PRINT, ID_FILE_PRINT)`
 
-**ON_OLECMD_PRINTPREVIEW （)**
+**ON_OLECMD_PRINTPREVIEW( )**
 
 將分派檔案預覽列印 命令。 實作為：
 
 `ON_OLECMD(NULL, OLECMDID_PRINTPREVIEW, ID_FILE_PRINT_PREVIEW)`
 
-**ON_OLECMD_REDO （)**
+**ON_OLECMD_REDO( )**
 
 分派編輯重做命令。 實作為：
 
 `ON_OLECMD(NULL, OLECMDID_REDO, ID_EDIT_REDO)`
 
-**ON_OLECMD_SAVE （)**
+**ON_OLECMD_SAVE( )**
 
 分派儲存檔案的命令。 實作為：
 
 `ON_OLECMD(NULL, OLECMDID_SAVE, ID_FILE_SAVE)`
 
-**ON_OLECMD_SAVE_AS （)**
+**ON_OLECMD_SAVE_AS( )**
 
 將分派檔案另存新檔 命令。 實作為：
 
 `ON_OLECMD(NULL, OLECMDID_SAVEAS, ID_FILE_SAVE_AS)`
 
-**ON_OLECMD_SAVE_COPY_AS （)**
+**ON_OLECMD_SAVE_COPY_AS( )**
 
 分派副本存新檔 命令。 實作為：
 
 `ON_OLECMD(NULL, OLECMDID_SAVECOPYAS, ID_FILE_SAVE_COPY_AS)`
 
-**ON_OLECMD_SELECTALL （)**
+**ON_OLECMD_SELECTALL( )**
 
 分派編輯選取的所有命令。 實作為：
 
 `ON_OLECMD(NULL, OLECMDID_SELECTALL, ID_EDIT_SELECT_ALL)`
 
-**ON_OLECMD_UNDO （)**
+**ON_OLECMD_UNDO( )**
 
 分派編輯 Undo 命令。 實作為：
 
@@ -528,7 +528,7 @@ END_MESSAGE_MAP()
 
 ### <a name="see-also"></a>另請參閱
 
-[RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)<br/>
+[RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)<br/>
 [使用者定義的處理常式](user-defined-handlers.md)
 
 ## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE

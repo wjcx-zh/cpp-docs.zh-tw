@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-ms.openlocfilehash: 1fa1b63ed045c176841565473476185bb15999e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ee92a6cb627cee701b9b98a8a32666a0877f62c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564449"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893648"
 ---
 # <a name="chttpfile-class"></a>CHttpFile 類別
 
@@ -182,7 +182,7 @@ CHttpFile(
 
 您永遠不會建構`CHttpFile`直接物件; 而是呼叫[cinternetsession:: Openurl](../../mfc/reference/cinternetsession-class.md#openurl)或是[chttpconnection::](../../mfc/reference/chttpconnection-class.md#openrequest)改。
 
-預設值`dwContext`傳送至 mfc`CHttpFile`物件[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立`CHttpFile`物件。 當您呼叫`CInternetSession::OpenURL`或是`CHttpConnection`建構`CHttpFile`物件時，您可以覆寫預設值可設定的內容識別碼以您選擇的值。 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供，它識別之物件的狀態。 請參閱文章[網際網路前幾個步驟： WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
+預設值`dwContext`傳送至 mfc`CHttpFile`物件[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立`CHttpFile`物件。 當您呼叫`CInternetSession::OpenURL`或是`CHttpConnection`建構`CHttpFile`物件時，您可以覆寫預設值可設定的內容識別碼以您選擇的值。 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供，它識別之物件的狀態。 請參閱文章[網際網路前幾個步驟：WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
 
 ##  <a name="endrequest"></a>  CHttpFile::EndRequest
 
@@ -212,7 +212,7 @@ BOOL EndRequest(
 
 ### <a name="remarks"></a>備註
 
-預設值*dwContext* MFC，以便傳送`CHttpFile`物件[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立`CHttpFile`物件。 當您呼叫[cinternetsession:: Openurl](../../mfc/reference/cinternetsession-class.md#openurl)或是[CHttpConnection](../../mfc/reference/chttpconnection-class.md)建構`CHttpFile`物件時，您可以覆寫預設值可設定的內容識別碼以您選擇的值。 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供，它識別之物件的狀態。 請參閱文件[網際網路前幾個步驟： WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
+預設值*dwContext* MFC，以便傳送`CHttpFile`物件[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立`CHttpFile`物件。 當您呼叫[cinternetsession:: Openurl](../../mfc/reference/cinternetsession-class.md#openurl)或是[CHttpConnection](../../mfc/reference/chttpconnection-class.md)建構`CHttpFile`物件時，您可以覆寫預設值可設定的內容識別碼以您選擇的值。 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供，它識別之物件的狀態。 請參閱文件[網際網路前幾個步驟：WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
 
 ##  <a name="getfileurl"></a>  CHttpFile::GetFileURL
 
@@ -293,7 +293,7 @@ BOOL QueryInfo(
 
 - 應用程式通常 HTTP_QUERY_FLAG_REQUEST_HEADERS，查詢的回應標頭，但應用程式也可以使用這個旗標來查詢要求標頭。
 
-- 這些標頭，其值是日期/時間字串，例如 「 上次修改時間，「 HTTP_QUERY_FLAG_SYSTEMTIME 這個旗標傳回標頭值做為標準的 Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)不需要應用程式的結構剖析資料。 如果您使用這個旗標時，您可能想要使用`SYSTEMTIME`函式的覆寫。
+- 這些標頭，其值是日期/時間字串，例如 「 上次修改時間，「 HTTP_QUERY_FLAG_SYSTEMTIME 這個旗標傳回標頭值做為標準的 Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)不需要應用程式的結構剖析資料。 如果您使用這個旗標時，您可能想要使用`SYSTEMTIME`函式的覆寫。
 
 - 其值是數字，例如狀態的程式碼，這些標頭的 HTTP_QUERY_FLAG_NUMBER 這個旗標的 32 位元數字傳回的資料。
 
@@ -315,7 +315,7 @@ BOOL QueryInfo(
 索引值。 請參閱*lpdwIndex*。
 
 *pSysTime*<br/>
-指標，Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)結構。
+指標，Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -506,7 +506,7 @@ BOOL SendRequestEx(
 
 內容寫入至檔案之後，呼叫[EndRequest](#endrequest)結束作業。
 
-預設值*dwContext* MFC，以便傳送`CHttpFile`物件[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立`CHttpFile`物件。 當您呼叫[cinternetsession:: Openurl](../../mfc/reference/cinternetsession-class.md#openurl)或是[CHttpConnection](../../mfc/reference/chttpconnection-class.md)建構`CHttpFile`物件時，您可以覆寫預設值可設定的內容識別碼以您選擇的值。 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供，它識別之物件的狀態。 請參閱文章[網際網路前幾個步驟： WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
+預設值*dwContext* MFC，以便傳送`CHttpFile`物件[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立`CHttpFile`物件。 當您呼叫[cinternetsession:: Openurl](../../mfc/reference/cinternetsession-class.md#openurl)或是[CHttpConnection](../../mfc/reference/chttpconnection-class.md)建構`CHttpFile`物件時，您可以覆寫預設值可設定的內容識別碼以您選擇的值。 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供，它識別之物件的狀態。 請參閱文章[網際網路前幾個步驟：WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
 
 ### <a name="example"></a>範例
 

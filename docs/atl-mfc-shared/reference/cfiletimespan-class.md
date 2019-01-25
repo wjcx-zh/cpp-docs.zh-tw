@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared classes, CFileTimeSpan
 - CFileTimeSpan class
 ms.assetid: 5856fb39-9c82-4027-8ccf-8760890491ec
-ms.openlocfilehash: dc59a300fc48f180fb593500ed85ee1a4c34c07e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d384ced5de588a348eb72b9852697694b370ee4
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468922"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894155"
 ---
 # <a name="cfiletimespan-class"></a>CFileTimeSpan 類別
 
@@ -47,15 +47,15 @@ class CFileTimeSpan
 
 |名稱|描述|
 |----------|-----------------|
-|[CFileTimeSpan::operator-](#operator_-)|在上執行減法`CFileTimeSpan`物件。|
-|[CFileTimeSpan::operator ！ =](#operator_neq)|比較兩個 `CFileTimeSpan` 物件是否不相等。|
+|[CFileTimeSpan::operator -](#operator_-)|在上執行減法`CFileTimeSpan`物件。|
+|[CFileTimeSpan::operator !=](#operator_neq)|比較兩個 `CFileTimeSpan` 物件是否不相等。|
 |[CFileTimeSpan::operator +](#operator_add)|在上執行加法`CFileTimeSpan`物件。|
-|[CFileTimeSpan::operator + =](#operator_add_eq)|在上執行加法`CFileTimeSpan`物件，並將結果指派給目前的物件。|
+|[CFileTimeSpan::operator +=](#operator_add_eq)|在上執行加法`CFileTimeSpan`物件，並將結果指派給目前的物件。|
 |[CFileTimeSpan::operator &lt;](#operator_lt)|比較兩個`CFileTimeSpan`物件來判斷較小者。|
 |[CFileTimeSpan::operator &lt;=](#operator_lt_eq)|比較兩個`CFileTimeSpan`物件來判斷是否相等或較小者。|
 |[CFileTimeSpan::operator =](#operator_eq)|指派運算子。|
-|[CFileTimeSpan::operator =](#operator_-_eq)|在上執行減法`CFileTimeSpan`物件，並將結果指派給目前的物件。|
-|[CFileTimeSpan::operator = =](#operator_eq_eq)|比較兩個 `CFileTimeSpan` 物件是否相等。|
+|[CFileTimeSpan::operator -=](#operator_-_eq)|在上執行減法`CFileTimeSpan`物件，並將結果指派給目前的物件。|
+|[CFileTimeSpan::operator ==](#operator_eq_eq)|比較兩個 `CFileTimeSpan` 物件是否相等。|
 |[CFileTimeSpan::operator &gt;](#operator_gt)|比較兩個`CFileTimeSpan`判斷較大的物件。|
 |[CFileTimeSpan::operator &gt;=](#operator_gt_eq)|比較兩個`CFileTimeSpan`來判斷是否相等或較大的物件。|
 
@@ -83,7 +83,7 @@ CFileTimeSpan(LONGLONG nSpan) throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*<br/>
+*span*<br/>
 現有的 `CFileTimeSpan` 物件。
 
 *nSpan*<br/>
@@ -105,7 +105,7 @@ LONGLONG GetTimeSpan() const throw();
 
 傳回的時間範圍，以毫秒為單位。
 
-##  <a name="operator_-"></a>  CFileTimeSpan::operator-
+##  <a name="operator_-"></a>  CFileTimeSpan::operator -
 
 在上執行減法`CFileTimeSpan`物件。
 
@@ -115,14 +115,14 @@ CFileTimeSpan operator-(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*<br/>
+*span*<br/>
 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
 
 傳回`CFileTimeSpan`物件，表示兩個時間範圍之間的差異的結果。
 
-##  <a name="operator_neq"></a>  CFileTimeSpan::operator ！ =
+##  <a name="operator_neq"></a>  CFileTimeSpan::operator !=
 
 比較兩個 `CFileTimeSpan` 物件是否不相等。
 
@@ -132,7 +132,7 @@ bool operator!=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*<br/>
+*span*<br/>
 要比較的 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -149,7 +149,7 @@ CFileTimeSpan operator+(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*<br/>
+*span*<br/>
 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -166,7 +166,7 @@ CFileTimeSpan& operator+=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*<br/>
+*span*<br/>
 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -183,7 +183,7 @@ bool operator<(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*<br/>
+*span*<br/>
 要比較的 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -200,7 +200,7 @@ bool operator<=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*<br/>
+*span*<br/>
 要比較的 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -217,14 +217,14 @@ CFileTimeSpan& operator=(const CFileTimeSpan& span) throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*<br/>
+*span*<br/>
 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
 
 傳回已更新`CFileTimeSpan`物件。
 
-##  <a name="operator_-_eq"></a>  CFileTimeSpan::operator =
+##  <a name="operator_-_eq"></a>  CFileTimeSpan::operator -=
 
 在上執行減法`CFileTimeSpan`物件，並將結果指派給目前的物件。
 
@@ -234,14 +234,14 @@ CFileTimeSpan& operator-=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*<br/>
+*span*<br/>
 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
 
 傳回已更新`CFileTimeSpan`物件。
 
-##  <a name="operator_eq_eq"></a>  CFileTimeSpan::operator = =
+##  <a name="operator_eq_eq"></a>  CFileTimeSpan::operator ==
 
 比較兩個 `CFileTimeSpan` 物件是否相等。
 
@@ -251,7 +251,7 @@ bool operator==(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*<br/>
+*span*<br/>
 要比較的 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -268,7 +268,7 @@ bool operator>(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*<br/>
+*span*<br/>
 要比較的 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -285,7 +285,7 @@ bool operator>=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*<br/>
+*span*<br/>
 要比較的 `CFileTimeSpan` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -307,7 +307,7 @@ void SetTimeSpan(LONGLONG nSpan) throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)<br/>
+[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)<br/>
 [CFileTime 類別](../../atl-mfc-shared/reference/cfiletime-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)

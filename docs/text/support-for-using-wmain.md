@@ -8,12 +8,12 @@ helpviewer_keywords:
 - wWinMain function
 - wmain function
 ms.assetid: 41213c41-668c-40a4-8a1e-77d9eded720d
-ms.openlocfilehash: 4dabb10bc4e0a53b0ad86f72ef7ddc5a5559cc21
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 4ef970174a56361fdbd2102f363b4849ad4af9f3
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331915"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894181"
 ---
 # <a name="support-for-using-wmain"></a>wmain 使用的支援
 
@@ -34,4 +34,4 @@ wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
 
 [Unicode 的支援](../text/support-for-unicode.md)<br/>
 [Unicode 程式設計摘要](../text/unicode-programming-summary.md)<br/>
-[WinMain 函式](https://msdn.microsoft.com/library/windows/desktop/ms633559)
+[WinMain 函式](/windows/desktop/api/winbase/nf-winbase-winmain)

@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 4ce3c93c7cb8c26ae6008516c93faa8c8a5b37fb
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f420715f0e90cbdf811d9a4f731885bd4f382d11
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694591"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894454"
 ---
 # <a name="cwindow-class"></a>CWindow 類別
 
@@ -252,7 +252,7 @@ class CWindow
 |[CWindow::GetWindowRect](#getwindowrect)|擷取視窗的週框的大小。|
 |[CWindow::GetWindowRgn](#getwindowrgn)|取得視窗的視窗區域的複本。|
 |[CWindow::GetWindowText](#getwindowtext)|擷取視窗的文字。|
-|[Cwindow:: Getwindowtextlength](#getwindowtextlength)|擷取視窗的文字的長度。|
+|[CWindow::GetWindowTextLength](#getwindowtextlength)|擷取視窗的文字的長度。|
 |[CWindow::GetWindowThreadID](#getwindowthreadid)|擷取建立指定之的視窗的執行緒的識別項。|
 |[CWindow::GetWindowWord](#getwindowword)|擷取的 16 位元值的指定位移到額外的視窗記憶體。|
 |[CWindow::GotoDlgCtrl](#gotodlgctrl)|設定鍵盤焦點的控制項，在對話方塊中。|
@@ -317,7 +317,7 @@ class CWindow
 |[CWindow::SetWindowPlacement](#setwindowplacement)|設定顯示狀態和位置。|
 |[CWindow::SetWindowPos](#setwindowpos)|設定大小、 位置和疊置順序。|
 |[CWindow::SetWindowRgn](#setwindowrgn)|設定視窗的視窗區域。|
-|[Cwindow:: Setwindowtext](#setwindowtext)|變更視窗的文字。|
+|[CWindow::SetWindowText](#setwindowtext)|變更視窗的文字。|
 |[CWindow::SetWindowWord](#setwindowword)|設定指定之位移的 16 位元值，到額外的視窗記憶體。|
 |[CWindow::ShowCaret](#showcaret)|顯示系統游標。|
 |[CWindow::ShowOwnedPopups](#showownedpopups)|顯示或隱藏視窗所擁有的快顯視窗。|
@@ -349,7 +349,7 @@ class CWindow
 
 |CWindow 方法|Win32 函式|
 |--------------------|--------------------|
-|**BOOL ShowWindow (int** `nCmdShow` **);**|**BOOL ShowWindow (HWND** `hWnd` **，int** `nCmdShow` **);**|
+|**BOOL ShowWindow( int** `nCmdShow` **);**|**BOOL ShowWindow( HWND** `hWnd` **, int** `nCmdShow` **);**|
 
 `CWindow::ShowWindow` 呼叫 Win32 函式`ShowWindow`藉由傳遞`CWindow::m_hWnd`的第一個參數。 每隔`CWindow`直接包裝 Win32 函式的方法會傳遞`m_hWnd`的成員; 因此，大部分`CWindow`文件會請您參考 Windows SDK。
 
@@ -521,7 +521,7 @@ HWND ChildWindowFromPoint(POINT point, UINT uFlags) const throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[ChildWindowFromPointEx](https://msdn.microsoft.com/library/windows/desktop/ms632677) Windows SDK 中。
+請參閱[ChildWindowFromPointEx](/windows/desktop/api/winuser/nf-winuser-childwindowfrompointex) Windows SDK 中。
 
 ##  <a name="clienttoscreen"></a>  CWindow::ClientToScreen
 
@@ -568,7 +568,7 @@ HWND Create(
 *szWindowName*<br/>
 [in]指定視窗的名稱。 預設值是 NULL。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]視窗的樣式。 預設值為 0，這表示沒有樣式會指定。 如需可能值的清單，請參閱 < [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK 中。
 
 *dwExStyle*<br/>
@@ -669,7 +669,7 @@ HDWP DeferWindowPos(
 
 ### <a name="remarks"></a>備註
 
-請參閱[DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) Windows SDK 中。
+請參閱[DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) Windows SDK 中。
 
 ##  <a name="destroywindow"></a>  CWindow::DestroyWindow
 
@@ -1447,7 +1447,7 @@ int GetWindowText(CSimpleString& strText) const;
 *bstrText*<br/>
 用來儲存視窗文字 BSTR。
 
-*先把 strText*<br/>
+*strText*<br/>
 視窗文字儲存所在的 `CString`。
 
 ### <a name="return-value"></a>傳回值
@@ -1456,7 +1456,7 @@ int GetWindowText(CSimpleString& strText) const;
 
 ### <a name="remarks"></a>備註
 
-請參閱[GetWindowText](https://msdn.microsoft.com/library/windows/desktop/ms633520) Windows SDK 中。
+請參閱[GetWindowText](/windows/desktop/api/winuser/nf-winuser-getwindowtexta) Windows SDK 中。
 
 這個方法的第二個版本可讓您將文字儲存在 BSTR;第三個版本可讓您將結果儲存在[CString](../../atl-mfc-shared/reference/cstringt-class.md)，因為`CSimpleString`是基底類別`CString`。
 
@@ -1751,7 +1751,7 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 
 ### <a name="parameters"></a>參數
 
-*區塊*<br/>
+*bLock*<br/>
 [in]如果為 TRUE （預設值），視窗將會遭到鎖定。 否則，它將會解除鎖定。
 
 ### <a name="return-value"></a>傳回值
@@ -2629,7 +2629,7 @@ BOOL SetWindowText(LPCTSTR lpszString) throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[SetWindowText](https://msdn.microsoft.com/library/windows/desktop/ms633546) Windows SDK 中。
+請參閱[SetWindowText](/windows/desktop/api/winuser/nf-winuser-setwindowtexta) Windows SDK 中。
 
 ### <a name="example"></a>範例
 

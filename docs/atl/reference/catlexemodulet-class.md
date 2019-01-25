@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: cec3a0fce1147ca58f2ee2c51b9d728d81dddda4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d31dd9ed1d30633b8f7078794dad06d51ec119f2
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601405"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893429"
 ---
 # <a name="catlexemodulet-class"></a>Catldllmodulet 類別
 
@@ -52,7 +52,7 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 |名稱|描述|
 |----------|-----------------|
 |[CAtlExeModuleT::CAtlExeModuleT](#catlexemodulet)|建構函式。|
-|[CAtlExeModuleT:: ~ CAtlExeModuleT](#dtor)|解構函式。|
+|[CAtlExeModuleT::~CAtlExeModuleT](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -284,7 +284,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>參數
 
 *nShowCmd*<br/>
-指定要顯示的視窗的方式。 這個參數可以是其中一個值所述[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)一節。 預設為 SW_HIDE。
+指定要顯示的視窗的方式。 這個參數可以是其中一個值所述[WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)一節。 預設為 SW_HIDE。
 
 ### <a name="return-value"></a>傳回值
 
@@ -341,7 +341,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>參數
 
 *nShowCmd*<br/>
-指定要顯示的視窗的方式。 這個參數可以是其中一個值所述[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)一節。
+指定要顯示的視窗的方式。 這個參數可以是其中一個值所述[WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)一節。
 
 ### <a name="return-value"></a>傳回值
 

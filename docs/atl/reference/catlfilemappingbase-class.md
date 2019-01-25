@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 71b3b8621f4148f680337e9bce6ef469b90de746
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12a8159cbf28c64efe36357761f4f404ccff9541
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614369"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894012"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase 類別
 
@@ -43,7 +43,7 @@ class CAtlFileMappingBase
 |名稱|描述|
 |----------|-----------------|
 |[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)|建構函式。|
-|[CAtlFileMappingBase:: ~ CAtlFileMappingBase](#dtor)|解構函式。|
+|[CAtlFileMappingBase::~CAtlFileMappingBase](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -193,7 +193,7 @@ HRESULT MapFile(
 在對應檔案時，檔案檢視所需的保護。 請參閱*flProtect*中[CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) Windows SDK 中。
 
 *dwViewDesiredAccess*<br/>
-指定檔案檢視，因此，對應的分頁檔所保護的存取的類型。 請參閱*dwDesiredAccess*中[MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。
+指定檔案檢視，因此，對應的分頁檔所保護的存取的類型。 請參閱*dwDesiredAccess*中[MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) Windows SDK 中。
 
 ### <a name="return-value"></a>傳回值
 
@@ -201,7 +201,7 @@ HRESULT MapFile(
 
 ### <a name="remarks"></a>備註
 
-已建立的檔案對應物件之後，檔案大小不得超過檔案對應物件的大小若是如此，不是所有檔案的內容可供共用。 如需詳細資訊，請參閱 < [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga)並[MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。
+已建立的檔案對應物件之後，檔案大小不得超過檔案對應物件的大小若是如此，不是所有檔案的內容可供共用。 如需詳細資訊，請參閱 < [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga)並[MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) Windows SDK 中。
 
 ### <a name="example"></a>範例
 
@@ -239,7 +239,7 @@ HRESULT MapSharedMem(
 在對應檔案時，針對 [檔案] 檢視中，所需的保護。 請參閱*flProtect*在`CreateFileMapping`Windows SDK 中。
 
 *dwViewDesiredAccess*<br/>
-指定檔案檢視，因此，對應的分頁檔所保護的存取的類型。 請參閱*dwDesiredAccess*中[MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。
+指定檔案檢視，因此，對應的分頁檔所保護的存取的類型。 請參閱*dwDesiredAccess*中[MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) Windows SDK 中。
 
 ### <a name="return-value"></a>傳回值
 
@@ -273,7 +273,7 @@ HRESULT OpenMapping(
 對應到開始的所在檔案位移。 位移的值必須是系統的記憶體配置資料粒度的倍數。
 
 *dwViewDesiredAccess*<br/>
-指定檔案檢視，因此，對應的分頁檔所保護的存取的類型。 請參閱*dwDesiredAccess*中[MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。
+指定檔案檢視，因此，對應的分頁檔所保護的存取的類型。 請參閱*dwDesiredAccess*中[MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) Windows SDK 中。
 
 ### <a name="return-value"></a>傳回值
 
@@ -314,7 +314,7 @@ HRESULT Unmap() throw();
 
 ### <a name="remarks"></a>備註
 
-請參閱[UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/aa366882)在 Windows SDK 中，如需詳細資訊。
+請參閱[UnmapViewOfFile](/windows/desktop/api/memoryapi/nf-memoryapi-unmapviewoffile)在 Windows SDK 中，如需詳細資訊。
 
 ## <a name="see-also"></a>另請參閱
 

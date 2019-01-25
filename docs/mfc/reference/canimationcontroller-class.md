@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: bd0bdd1a3f423257b2f73745d7260d1fac12a0d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93189c5c9301e513cfbdf110cf7753e211420fef
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556659"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894129"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController 類別
 
@@ -127,7 +127,7 @@ class CAnimationController : public CObject;
 |名稱|描述|
 |----------|-----------------|
 |[CAnimationController::CAnimationController](#canimationcontroller)|建構動畫控制器。|
-|[CAnimationController:: ~ CAnimationController](#canimationcontroller__~canimationcontroller)|解構函式。 當動畫控制器物件正在被終結時呼叫。|
+|[CAnimationController::~CAnimationController](#canimationcontroller__~canimationcontroller)|解構函式。 當動畫控制器物件正在被終結時呼叫。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -140,7 +140,7 @@ class CAnimationController : public CObject;
 |[CAnimationController::CreateKeyframe](#createkeyframe)|多載。 建立隨轉換而改變的主要畫面格，將它加入指定的群組。|
 |[CAnimationController::EnableAnimationManagerEvent](#enableanimationmanagerevent)|設定或釋放動畫管理員的狀態變更時要呼叫的處理常式。|
 |[CAnimationController::EnableAnimationTimerEventHandler](#enableanimationtimereventhandler)|設定或釋放計時事件的處理常式和計時更新處理常式。|
-|[Canimationcontroller:: Enableprioritycomparisonhandler](#enableprioritycomparisonhandler)|設定或釋放給呼叫以判斷是否已排程的分鏡腳本可以取消、 結束、 修剪或壓縮的優先順序比較處理常式。|
+|[CAnimationController::EnablePriorityComparisonHandler](#enableprioritycomparisonhandler)|設定或釋放給呼叫以判斷是否已排程的分鏡腳本可以取消、 結束、 修剪或壓縮的優先順序比較處理常式。|
 |[CAnimationController::EnableStoryboardEventHandler](#enablestoryboardeventhandler)|設定或釋放分鏡腳本的狀態和更新事件的處理常式。|
 |[CAnimationController::FindAnimationGroup](#findanimationgroup)|多載。 尋找分鏡腳本動畫群組。|
 |[CAnimationController::FindAnimationObject](#findanimationobject)|找出包含指定的動畫變數的動畫物件。|
@@ -400,7 +400,7 @@ virtual BOOL EnableAnimationTimerEventHandler(
 
 當處理常式設定 （啟用） Windows 動畫 API 呼叫 OnAnimationTimerPreUpdate，OnAnimationTimerPostUpdate，OnRenderingTooSlow 方法。 您必須啟用動畫計時器，以允許 Windows 動畫 API 更新分鏡腳本。 否則，您必須呼叫 CAnimationController::UpdateAnimationManager，若要引導動畫管理員來更新所有動畫變數的值。
 
-##  <a name="enableprioritycomparisonhandler"></a>  Canimationcontroller:: Enableprioritycomparisonhandler
+##  <a name="enableprioritycomparisonhandler"></a>  CAnimationController::EnablePriorityComparisonHandler
 
 設定或釋放給呼叫以判斷是否已排程的分鏡腳本可以取消、 結束、 修剪或壓縮的優先順序比較處理常式。
 
@@ -419,7 +419,7 @@ UI_ANIMATION_PHT_ 的組合加上旗標 （請參閱 < 備註 >），以指定�
 
 ### <a name="remarks"></a>備註
 
-當處理常式的設定 （啟用） Windows 動畫會呼叫下列虛擬方法，根據 dwHandlerType: OnHasPriorityCancel、 OnHasPriorityConclude、 OnHasPriorityTrim、 OnHasPriorityCompress。 dwHandler 可以是下列旗標的組合： UI_ANIMATION_PHT_NONE-發行所有的處理常式 UI_ANIMATION_PHT_CANCEL-設定取消設定 Conclude 比較處理常式 UI_ANIMATION_PHT_COMPRESS 比較處理常式 UI_ANIMATION_PHT_CONCLUDE--設定Compress 比較處理常式 UI_ANIMATION_PHT_TRIM-設定修剪比較處理常式 UI_ANIMATION_PHT_CANCEL_REMOVE-移除取消比較處理常式 UI_ANIMATION_PHT_CONCLUDE_REMOVE-移除 Conclude 比較處理常式 UI_ANIMATION_PHT_COMPRESS_移除-移除壓縮比較處理常式 UI_ANIMATION_PHT_TRIM_REMOVE-移除修剪比較處理常式
+處理常式時設定 （啟用） Windows 動畫呼叫 dwHandlerType 根據下列虛擬方法：OnHasPriorityCancel OnHasPriorityConclude，OnHasPriorityTrim，OnHasPriorityCompress。 dwHandler 可以是下列旗標的組合：UI_ANIMATION_PHT_NONE-發行所有的處理常式 UI_ANIMATION_PHT_CANCEL-設定取消設定 Conclude 比較處理常式 UI_ANIMATION_PHT_CONCLUDE-比較處理常式 UI_ANIMATION_PHT_COMPRESS-設定壓縮比較處理常式 UI_ANIMATION_PHT_TRIM-設定修剪比較處理常式 UI_ANIMATION_PHT_CANCEL_REMOVE-移除取消比較處理常式 UI_ANIMATION_PHT_CONCLUDE_REMOVE-移除 Conclude 比較處理常式 UI_ANIMATION_PHT_COMPRESS_REMOVE-移除壓縮比較處理常式 UI_ANIMATION_PHT_TRIM_REMOVE-移除修剪比較處理常式
 
 ##  <a name="enablestoryboardeventhandler"></a>  CAnimationController::EnableStoryboardEventHandler
 
@@ -716,7 +716,7 @@ virtual void OnAnimationIntegerValueChanged(
 *pObject*<br/>
 包含已變更其值的動畫變數的動畫物件的指標。
 
-*變數*<br/>
+*variable*<br/>
 動畫變數的指標。
 
 *newValue*<br/>
@@ -813,7 +813,7 @@ virtual void OnAnimationValueChanged(
 *pObject*<br/>
 包含已變更其值的動畫變數的動畫物件的指標。
 
-*變數*<br/>
+*variable*<br/>
 動畫變數的指標。
 
 *newValue*<br/>
@@ -871,7 +871,7 @@ virtual BOOL OnHasPriorityCancel(
 
 ### <a name="remarks"></a>備註
 
-如果您使用 CAnimationController::EnablePriorityComparisonHandler 和指定 UI_ANIMATION_PHT_CANCEL 來啟用優先順序比較事件，則會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。 閱讀 Windows 動畫 API 文件，如需詳細資訊[衝突管理](https://msdn.microsoft.com/library/dd371759)。
+如果您使用 CAnimationController::EnablePriorityComparisonHandler 和指定 UI_ANIMATION_PHT_CANCEL 來啟用優先順序比較事件，則會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。 閱讀 Windows 動畫 API 文件，如需詳細資訊[衝突管理](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority)。
 
 ##  <a name="onhasprioritycompress"></a>  CAnimationController::OnHasPriorityCompress
 
@@ -901,7 +901,7 @@ virtual BOOL OnHasPriorityCompress(
 
 ### <a name="remarks"></a>備註
 
-如果您使用 CAnimationController::EnablePriorityComparisonHandler 和指定 UI_ANIMATION_PHT_COMPRESS 來啟用優先順序比較事件，則會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。 閱讀 Windows 動畫 API 文件，如需詳細資訊[衝突管理](https://msdn.microsoft.com/library/dd371759)。
+如果您使用 CAnimationController::EnablePriorityComparisonHandler 和指定 UI_ANIMATION_PHT_COMPRESS 來啟用優先順序比較事件，則會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。 閱讀 Windows 動畫 API 文件，如需詳細資訊[衝突管理](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority)。
 
 ##  <a name="onhaspriorityconclude"></a>  CAnimationController::OnHasPriorityConclude
 
@@ -931,7 +931,7 @@ virtual BOOL OnHasPriorityConclude(
 
 ### <a name="remarks"></a>備註
 
-如果您使用 CAnimationController::EnablePriorityComparisonHandler 和指定 UI_ANIMATION_PHT_CONCLUDE 來啟用優先順序比較事件，則會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。 閱讀 Windows 動畫 API 文件，如需詳細資訊[衝突管理](https://msdn.microsoft.com/library/dd371759)。
+如果您使用 CAnimationController::EnablePriorityComparisonHandler 和指定 UI_ANIMATION_PHT_CONCLUDE 來啟用優先順序比較事件，則會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。 閱讀 Windows 動畫 API 文件，如需詳細資訊[衝突管理](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority)。
 
 ##  <a name="onhasprioritytrim"></a>  CAnimationController::OnHasPriorityTrim
 
@@ -961,7 +961,7 @@ virtual BOOL OnHasPriorityTrim(
 
 ### <a name="remarks"></a>備註
 
-如果您使用 CAnimationController::EnablePriorityComparisonHandler 和指定 UI_ANIMATION_PHT_TRIM 來啟用優先順序比較事件，則會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。 閱讀 Windows 動畫 API 文件，如需詳細資訊[衝突管理](https://msdn.microsoft.com/library/dd371759)。
+如果您使用 CAnimationController::EnablePriorityComparisonHandler 和指定 UI_ANIMATION_PHT_TRIM 來啟用優先順序比較事件，則會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。 閱讀 Windows 動畫 API 文件，如需詳細資訊[衝突管理](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority)。
 
 ##  <a name="onstoryboardstatuschanged"></a>  CAnimationController::OnStoryboardStatusChanged
 

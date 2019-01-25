@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-ms.openlocfilehash: cedd1bfd4ea955f920e13b5d01beb3a478656b69
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: a73baab3e43467b76c1b4e3592314a4323d22ffb
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178118"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893973"
 ---
 # <a name="ctime-class"></a>CTime 類別
 
@@ -57,7 +57,7 @@ class CTime
 |[CTime::Format](#format)|將轉換`CTime`格式化的字串物件 — 根據當地時區。|
 |[CTime::FormatGmt](#formatgmt)|將轉換`CTime`格式化的字串物件 — 根據 UTC。|
 |[CTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|將時間資訊儲存在轉換`CTime`Win32 相容 DBTIMESTAMP 結構的物件。|
-|[CTime::GetAsSystemTime](#getassystemtime)|將時間資訊儲存在轉換`CTime`Win32 相容的物件[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)結構。|
+|[CTime::GetAsSystemTime](#getassystemtime)|將時間資訊儲存在轉換`CTime`Win32 相容的物件[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)結構。|
 |[CTime::GetCurrentTime](#getcurrenttime)|建立`CTime`物件，表示目前的時間 （靜態成員函式）。|
 |[CTime::GetDay](#getday)|傳回由天代表`CTime`物件。|
 |[CTime::GetDayOfWeek](#getdayofweek)|傳回所代表之一週的日`CTime`物件。|
@@ -75,8 +75,8 @@ class CTime
 
 |||
 |-|-|
-|[運算子 +-](#operator_add_-)|這些運算子加法和減法`CTimeSpan`和`CTime`物件。|
-|[運算子 + =、 =](#operator_add_eq_-_eq)|這些運算子加法和減法`CTimeSpan`物件並從這個`CTime`物件。|
+|[operator + -](#operator_add_-)|這些運算子加法和減法`CTimeSpan`和`CTime`物件。|
+|[operator +=, -=](#operator_add_eq_-_eq)|這些運算子加法和減法`CTimeSpan`物件並從這個`CTime`物件。|
 |[operator =](#operator_eq)|指派運算子。|
 |[運算子 = =，<，依此類推。](#ctime_comparison_operators)|比較運算子。|
 
@@ -169,10 +169,10 @@ A`__time64_t`時間值，也就是在 1970 年 1 月 1 日 UTC 之後的秒數�
 MS-DOS 日期和時間值轉換成日期/時間值，並複製到新`CTime`物件。
 
 *st*<br/>
-A [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)轉換成日期/時間值，並複製到新的結構`CTime`物件。
+A [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)轉換成日期/時間值，並複製到新的結構`CTime`物件。
 
-*全文檢索*<br/>
-A [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)轉換成日期/時間值，並複製到新的結構`CTime`物件。
+*ft*<br/>
+A [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)轉換成日期/時間值，並複製到新的結構`CTime`物件。
 
 *dbts*<br/>
 DBTIMESTAMP 結構，包含目前的當地時間的參考。
@@ -193,8 +193,8 @@ DBTIMESTAMP 結構，包含目前的當地時間的參考。
    |---------------|-----------|
    |*nYear*|1970-3000|
    |*nMonth*|1-12|
-   |*n*|1-31|
-   |*當天的時數*|0-23|
+   |*nDay*|1-31|
+   |*nHour*|0-23|
    |*nMin*|0-59|
    |*nSec*|0-59|
 
@@ -209,7 +209,7 @@ DBTIMESTAMP 結構，包含目前的當地時間的參考。
    > [!NOTE]
    > 建構函式使用`DBTIMESTAMP`OLEDB.h 包含在內時，才可用參數。
 
-如需詳細資訊，請參閱 < [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)並[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Windows SDK 中的結構。 另請參閱[MS-DOS 日期和時間](/windows/desktop/SysInfo/ms-dos-date-and-time)Windows SDK 中的項目。
+如需詳細資訊，請參閱 < [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)並[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) Windows SDK 中的結構。 另請參閱[MS-DOS 日期和時間](/windows/desktop/SysInfo/ms-dos-date-and-time)Windows SDK 中的項目。
 
 ### <a name="example"></a>範例
 
@@ -304,7 +304,7 @@ DBTIMESTAMP 結構，包含目前的當地時間的參考。
 
 ##  <a name="getassystemtime"></a>  CTime::GetAsSystemTime
 
-呼叫此成員函式，將時間資訊儲存在轉換`CTime`Win32 相容的物件[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)結構。
+呼叫此成員函式，將時間資訊儲存在轉換`CTime`Win32 相容的物件[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)結構。
 
 ```
 bool GetAsSystemTime(SYSTEMTIME& st) const throw();
@@ -313,7 +313,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
 ### <a name="parameters"></a>參數
 
 *timeDest*<br/>
-參考[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)會保存已轉換的日期/時間值的結構`CTime`物件。
+參考[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)會保存已轉換的日期/時間值的結構`CTime`物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -586,7 +586,7 @@ CTimeSpan operator-(CTime time) const throw();
 
 ### <a name="parameters"></a>參數
 
-*時間範圍*<br/>
+*timeSpan*<br/>
 `CTimeSpan`要加入或減去的物件。
 
 *time*<br/>
@@ -615,7 +615,7 @@ CTime& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*<br/>
+*span*<br/>
 `CTimeSpan`要加入或減去的物件。
 
 ### <a name="return-value"></a>傳回值

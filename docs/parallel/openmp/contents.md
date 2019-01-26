@@ -2,12 +2,12 @@
 title: 內容
 ms.date: 11/04/2016
 ms.assetid: b7858099-7d7f-4cd9-9fa0-fba4832f2dd2
-ms.openlocfilehash: 2cc9ff535939a3da623b99b769e520b739aabc8c
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: ec387a0a4bd30905f27c11dfd66a511e1b0f1b71
+ms.sourcegitcommit: 774db6a005a85e2a1268ca34309b993792701819
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894376"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55064979"
 ---
 # <a name="contents"></a>內容
 
@@ -16,46 +16,6 @@ ms.locfileid: "54894376"
 [2.指示詞](../../parallel/openmp/2-directives.md)
 
 [3.執行階段程式庫函式](../../parallel/openmp/3-run-time-library-functions.md)
-
-[3.1 執行環境函式](../../parallel/openmp/3-1-execution-environment-functions.md)
-
-[3.1.1 omp_set_num_threads 函式](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md)
-
-[3.1.2 omp_get_num_threads 函式](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md)
-
-[3.1.3 omp_get_max_threads 函式](../../parallel/openmp/3-1-3-omp-get-max-threads-function.md)
-
-[3.1.4 omp_get_thread_num 函式](../../parallel/openmp/3-1-4-omp-get-thread-num-function.md)
-
-[3.1.5 omp_get_num_procs 函式](../../parallel/openmp/3-1-5-omp-get-num-procs-function.md)
-
-[3.1.6 omp_in_parallel 函式](../../parallel/openmp/3-1-6-omp-in-parallel-function.md)
-
-[3.1.7 omp_set_dynamic 函式](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)
-
-[3.1.8 omp_get_dynamic 函式](../../parallel/openmp/3-1-8-omp-get-dynamic-function.md)
-
-[3.1.9 omp_set_nested 函式](../../parallel/openmp/3-1-9-omp-set-nested-function.md)
-
-[3.1.10 omp_get_nested 函式](../../parallel/openmp/3-1-10-omp-get-nested-function.md)
-
-[3.2 鎖定函式](../../parallel/openmp/3-2-lock-functions.md)
-
-[3.2.1 omp_init_lock 和 omp_init_nest_lock 函式](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)
-
-[3.2.2 omp_destroy_lock 和 omp_destroy_nest_lock 函式](../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)
-
-[3.2.3 omp_set_lock 和 omp_set_nest_lock 函式](../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)
-
-[3.2.4 omp_unset_lock 和 omp_unset_nest_lock 函式](../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)
-
-[3.2.5 omp_test_lock 和 omp_test_nest_lock 函式](../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)
-
-[3.3 計時常式](../../parallel/openmp/3-3-timing-routines.md)
-
-[3.3.1 omp_get_wtime 函式](../../parallel/openmp/3-3-1-omp-get-wtime-function.md)
-
-[3.3.2 omp_get_wtick 函式](../../parallel/openmp/3-3-2-omp-get-wtick-function.md)
 
 [4.環境變數](../../parallel/openmp/4-environment-variables.md)
 

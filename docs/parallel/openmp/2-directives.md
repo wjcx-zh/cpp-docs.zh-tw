@@ -2,12 +2,12 @@
 title: 2. 指示詞
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
-ms.openlocfilehash: bf96d5ee6963a76c2b2462d5b3a0639c1141ea15
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 125d2d83b277e62d007e3a208e426ea717d52790
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894236"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087336"
 ---
 # <a name="2-directives"></a>2.指示詞
 
@@ -111,12 +111,12 @@ iam = omp_get_thread_num() + index;
 ### <a name="cross-references"></a>交互參照
 
 - `private``firstprivate`， `default`， `shared`， `copyin`，並`reduction`子句 ([區段 2.7.2](#272-data-sharing-attribute-clauses))
-- [OMP_NUM_THREADS](4-2-omp-num-threads.md)環境變數
-- [omp_set_dynamic](3-1-7-omp-set-dynamic-function.md)程式庫函式
-- [OMP_DYNAMIC](4-3-omp-dynamic.md)環境變數
-- [omp_set_nested](3-1-9-omp-set-nested-function.md) function
-- [OMP_NESTED](4-4-omp-nested.md)環境變數
-- [omp_set_num_threads](3-1-1-omp-set-num-threads-function.md)程式庫函式
+- [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads)環境變數
+- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function)程式庫函式
+- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic)環境變數
+- [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) function
+- [OMP_NESTED](4-environment-variables.md#44-omp_nested)環境變數
+- [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function)程式庫函式
 
 ## <a name="24-work-sharing-constructs"></a>2.4 工作共用建構
 
@@ -227,7 +227,7 @@ OpenMP 相容的程式不應該依賴正確執行的特定排程。 程式不應
 #### <a name="cross-references"></a>交互參照
 
 - `private``firstprivate`， `lastprivate`，並`reduction`子句 ([區段 2.7.2](#272-data-sharing-attribute-clauses))
-- [OMP_SCHEDULE](4-1-omp-schedule.md)環境變數
+- [OMP_SCHEDULE](4-environment-variables.md#41-omp_schedule)環境變數
 - [排序](#266-ordered-construct)建構
 - [排程](d-using-the-schedule-clause.md)子句
 
@@ -520,7 +520,7 @@ if (x!=0) {
 
 此章節提供的指示詞和數個子句，如下所示的平行區域，在執行期間控制資料環境：
 
-- A`threadprivate`指示詞 （請參閱下一節） 可讓執行緒本機檔案範圍、 命名空間範圍或靜態的區塊範圍變數。
+- A [threadprivate](#271-threadprivate-directive)指示詞可讓執行緒本機檔案範圍、 命名空間範圍或靜態的區塊範圍變數。
 
 - 您可以在要平行或工作共用建構期間控制變數的共用屬性的指示詞指定的子句中所述[一節 2.7.2](#272-data-sharing-attribute-clauses)。
 
@@ -582,8 +582,8 @@ void f(int n) {
 
 #### <a name="cross-references"></a>交互參照
 
-- [動態的執行緒](3-1-7-omp-set-dynamic-function.md)
-- [OMP_DYNAMIC](4-3-omp-dynamic.md)環境變數
+- [動態的執行緒](3-run-time-library-functions.md#317-omp_set_dynamic-function)
+- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic)環境變數
 
 ### <a name="272-data-sharing-attribute-clauses"></a>2.7.2 資料共用屬性子句
 

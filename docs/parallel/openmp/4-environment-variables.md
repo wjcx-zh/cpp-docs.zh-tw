@@ -2,12 +2,12 @@
 title: 4. 環境變數
 ms.date: 01/16/2019
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
-ms.openlocfilehash: 5d08031c252d1f3c45fc45c021d24476b393fe33
-ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.openlocfilehash: 558b835c36253fb67339fba9b46cb0170dd6d1d0
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397325"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087193"
 ---
 # <a name="4-environment-variables"></a>4.環境變數
 
@@ -46,14 +46,14 @@ setenv OMP_SCHEDULE "dynamic"
 
 ### <a name="cross-references"></a>交互參照
 
-- [針對](2-4-1-for-construct.md)指示詞
-- [針對平行](2-5-1-parallel-for-construct.md)指示詞
+- [針對](2-directives.md#241-for-construct)指示詞
+- [針對平行](2-directives.md#251-parallel-for-construct)指示詞
 
 ## <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
 
 `OMP_NUM_THREADS`環境變數設定的預設執行期間要使用的執行緒數目。 `OMP_NUM_THREADS` 如果明確地藉由呼叫來變更該數字，則會忽略`omp_set_num_threads`程式庫常式。 它也會忽略如果沒有明確`num_threads`上的子句`parallel`指示詞。
 
-值`OMP_NUM_THREADS`環境變數必須是正整數。 其效果取決於是否已啟用動態調整執行緒數目。 針對一組完整的規則之間的互動有關`OMP_NUM_THREADS`環境變數和動態調整的執行緒，請參閱 2.3 節。
+值`OMP_NUM_THREADS`環境變數必須是正整數。 其效果取決於是否已啟用動態調整執行緒數目。 針對一組完整的規則之間的互動`OMP_NUM_THREADS`環境變數和動態調整的執行緒，請參閱[一節 2.3](2-directives.md#23-parallel-construct)。
 
 若要使用的執行緒數目是實作定義如果：
 
@@ -69,9 +69,9 @@ setenv OMP_NUM_THREADS 16
 
 ### <a name="cross-references"></a>交互參照
 
-- [num_threads](2-3-parallel-construct.md)子句
-- [omp_set_num_threads](3-1-1-omp-set-num-threads-function.md)函式
-- [omp_set_dynamic](3-1-7-omp-set-dynamic-function.md) function
+- [num_threads](2-directives.md#23-parallel-construct)子句
+- [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function)函式
+- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) function
 
 ## <a name="43-ompdynamic"></a>4.3 OMP_DYNAMIC
 
@@ -87,8 +87,8 @@ setenv OMP_DYNAMIC TRUE
 
 ### <a name="cross-references"></a>交互參照
 
-- [平行區域](2-3-parallel-construct.md)
-- [omp_set_dynamic](3-1-7-omp-set-dynamic-function.md) function
+- [平行區域](2-directives.md#23-parallel-construct)
+- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) function
 
 ## <a name="44-ompnested"></a>4.4 OMP_NESTED
 
@@ -102,4 +102,4 @@ setenv OMP_NESTED TRUE
 
 ### <a name="cross-reference"></a>交互參照
 
-- [omp_set_nested](3-1-9-omp-set-nested-function.md) function
+- [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) function

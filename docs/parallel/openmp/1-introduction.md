@@ -2,12 +2,12 @@
 title: 1. 簡介
 ms.date: 01/16/2019
 ms.assetid: c42e72bc-0e31-4b1c-b670-cd82673c0c5a
-ms.openlocfilehash: 99020e9cf8c38bcfaeefdf5c31663b3e66352556
-ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.openlocfilehash: 8c735408bdf9f9a13693bd0ad25df185bb1db42a
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397299"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087271"
 ---
 # <a name="1-introduction"></a>1.簡介
 
@@ -31,7 +31,7 @@ ms.locfileid: "54397299"
 
 - 建構
 
-  建構是在陳述式。 它包含一個指示詞，後面接著結構化區塊。 某些指示詞不是一種建構的一部分。 (請參閱*openmp 指示詞*中[旓紵 C](c-openmp-c-and-cpp-grammar.md))。
+  建構是在陳述式。 它包含一個指示詞，後面接著結構化區塊。 某些指示詞不是一種建構的一部分。 (請參閱*openmp 指示詞*中[附錄 C](c-openmp-c-and-cpp-grammar.md))。
 
 - 指示詞
 
@@ -134,4 +134,4 @@ OpenMP C/c + + API 可讓您指定特定的行為是*實作定義。* 若要定�
 - [執行階段程式庫函式](3-run-time-library-functions.md)
 - [環境變數](4-environment-variables.md)
 - [實作定義行為在 OpenMP C/c + +](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
-- [OpenMP C/c + + 2.0 版的新功能](f-new-features-and-clarifications-in-version-2-0.md)
+- [在 OpenMP C/c + + 2.0 版的新功能](f-new-features-and-clarifications-in-version-2-0.md)

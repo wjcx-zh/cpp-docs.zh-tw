@@ -2,12 +2,12 @@
 title: 從 2003 到 2015 的 Visual C++ 新功能
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 6d79406e07b8839e196f15d9bc3aed96cbc3dca8
-ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
+ms.openlocfilehash: bc0092aeb8910f960befc174c1f71ce05c4eb131
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51520172"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894350"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>從 2003 到 2015 的 Visual C++ 新功能
 
@@ -1797,7 +1797,7 @@ Microsoft 特定 **__nullptr** 關鍵字的意義與 **nullptr** 相同，但只
 
 **新的通用語言執行平台 (CLR) 選項 /clr:nostdlib。** 已新增 `/clr` (通用語言執行平台編譯) 的新選項。 如果包含相同程式庫的不同版本，則會發出編譯錯誤。 新的選項可讓您排除預設 CLR 程式庫，以讓您的程式可以使用指定的版本。
 
-**新的 pragma 指示詞 detect_mistmatch。** pragma 指示詞 detect_mismatch 可讓您將標記放在與其他同名的標記進行比較的檔案。 如果相同的名稱有多個值，則連結器會發出錯誤。
+**新增 pragma 指示詞 detect_mistmatch。** pragma 指示詞 detect_mismatch 可讓您將標記放在與其他同名的標記進行比較的檔案。 如果相同的名稱有多個值，則連結器會發出錯誤。
 
 **XOP 內建函式、FMA4 內建函式和 LWP 內建函式。** 已新增新的內建函式，以支援針對 Visual Studio 2010 SP1 所新增的 XOP 內建函式、針對 Visual Studio 2010 SP1 所新增的 FMA4 內建函式，以及針對 Visual Studio 2010 SP1 處理器技術所新增的 LWP 內建函式。 使用 __cpuid、__cpuidex 來判斷特定電腦上支援的處理器技術。
 
@@ -1836,7 +1836,7 @@ Microsoft 特定 **__nullptr** 關鍵字的意義與 **nullptr** 相同，但只
 
 **高 DPI 感知。** 根據預設，MFC 應用程式現在是高 DPI 感知。 如果應用程式是高 DPI (高像素/點) 感知，則作業系統可以將視窗、文字和其他 UI 項目調整為目前螢幕解析度。 這表示縮放的影像更容易正確進行配置，但未裁剪或不美觀。
 
-**重新啟動管理員。** 重新啟動管理員會自動儲存文件，並在文件未預期關閉或重新啟動時重新啟動應用程式。 例如，您可以使用重新啟動管理員，以啟動由自動更新所關閉的應用程式。 如需如何設定應用程式使用重新啟動管理員的詳細資訊，請參閱**如何：新增重新啟動管理員支援**。
+**重新啟動管理員。** 重新啟動管理員會自動儲存文件，並在文件未預期關閉或重新啟動時重新啟動應用程式。 例如，您可以使用重新啟動管理員，以啟動由自動更新所關閉的應用程式。 如需如何將應用程式設定成使用重新啟動管理員的詳細資訊，請參閱**如何：新增重新啟動管理員支援**。
 
 **CTaskDialog。** `CTaskDialog` 類別可以用來取代標準的 `AfxMessageBox` 訊息方塊。 `CTaskDialog` 類別所顯示和收集的資訊，比標準訊息方塊更多。
 
@@ -1854,7 +1854,7 @@ Microsoft 特定 **__nullptr** 關鍵字的意義與 **nullptr** 相同，但只
 
 #### <a name="animation-and-d2d-support"></a>動畫和 D2D 支援
 
-MFC 現在支援動畫和 Direct2D 圖形。 MFC 程式庫有數個新的 MFC 類別和函式來支援這項功能。 還有兩個新的逐步解說，示範如何將 D2D 物件和動畫物件新增至專案。 這些逐步解說是**逐步解說：將 D2D 物件新增至 MFC 專案**和**逐步解說：將動畫新增至 MFC 專案**。
+MFC 現在支援動畫和 Direct2D 圖形。 MFC 程式庫有數個新的 MFC 類別和函式來支援這項功能。 還有兩個新的逐步解說，示範如何將 D2D 物件和動畫物件新增至專案。 這兩份逐步解說是**逐步解說：將 D2D 物件新增到 MFC 專案 (MFC)** 及**逐步解說：將動畫新增到 MFC 專案**。
 
 ### <a name="ide"></a>IDE
 
@@ -2197,7 +2197,7 @@ __sptr、__uptr
 
 - 如何在舊版執行階段上執行使用目前編譯器版本所建置之 Managed Extensions for C++ 應用程式的資訊。
 - Managed Extensions for C++ 常見問題集。
-- 已新增逐步解說，顯示如何移植現有原生應用程式以使用 Managed Extensions for C++：逐步解說：移植現有原生 C++ 應用程式以與 .NET Framework 元件相互操作。
+- 新增的逐步解說將示範如何移植現有的原生應用程式，以使用 Managed Extensions for C++：逐步解說：移植現有的原生 C++ 應用程式與.NET Framework 元件相互搭配運作。
 - 您現在可以在實值型別的方法上建立委派。
 - 針對 Visual C++ .NET 2003，編譯器與 C++ 標準的相符性已大幅加強。
 - 已新增 `/arch` 編譯器選項。

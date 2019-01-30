@@ -821,7 +821,7 @@ BOOL SetTitle(
 ### <a name="parameters"></a>參數
 
 *uIcon*<br/>
-請參閱* 圖示*中[TTM_SETTITLE](/windows/desktop/Controls/ttm-settitle) Windows SDK 中。
+請參閱 *圖示* 中[TTM_SETTITLE](/windows/desktop/Controls/ttm-settitle) Windows SDK 中。
 
 *lpstrTitle*<br/>
 標題字串的指標。

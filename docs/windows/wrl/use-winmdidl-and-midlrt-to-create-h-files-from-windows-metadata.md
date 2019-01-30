@@ -42,7 +42,7 @@ Winmdidl.exe [/nologo] [/suppressversioncheck] [/time] [/outdir:dir] [/banner:fi
 在主控台輸出中顯示總執行時間。
 
 **/outdir:**<em>dir</em><br/>
-指定輸出目錄。 如果路徑包含空格，請使用引號。 預設的輸出目錄*\<磁碟機 >*: \Users\\*\<使用者名稱 >* \AppData\Local\VirtualStore\Program 檔案 (x86) \Microsoft VisualStudio 12.0\\。
+指定輸出目錄。 如果路徑包含空格，請使用引號。 預設的輸出目錄 *\<磁碟機 >*: \Users\\ *\<使用者名稱 >* \AppData\Local\VirtualStore\Program 檔案 (x86) \Microsoft VisualStudio 12.0\\。
 
 **/banner:**<em>file</em><br/>
 指定包含要在預設著作權訊息前面加上自訂文字，以及在產生的 .idl 檔案頂端加上 winmdidl 版本號碼的檔案。 如果路徑包含空格，請使用引號。

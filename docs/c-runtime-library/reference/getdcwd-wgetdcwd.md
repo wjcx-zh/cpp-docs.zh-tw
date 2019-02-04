@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-environment-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - wgetdcwd
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 87cccec82ce648498c2bd3a7ac0ecbe436cb9baf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 464a254775d9a1d2488247d6dafb4b85cd763f10
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677015"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702930"
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd、_wgetdcwd
 
@@ -61,10 +62,10 @@ wchar_t *_wgetdcwd(
 
 ### <a name="parameters"></a>參數
 
-*磁碟機*<br/>
+*drive*<br/>
 指定磁碟機的非負整數 (0 = 預設磁碟機、1 = A、2 = B，依此類推)。
 
-如果指定的磁碟機無法使用，或是無法判斷磁碟機類型 (例如抽取式、固定、CD-ROM、RAM 磁碟或網路磁碟機)，則會叫用無效參數處理常式，如 [Parameter Validation](../../c-runtime-library/parameter-validation.md)中所述。
+如果指定的磁碟機無法使用，或磁碟機的種類 （例如，卸除式、 固定、 CD-ROM、 RAM 磁碟或網路磁碟機） 無法判斷，會叫用無效參數處理常式。 如需詳細資訊，請參閱[參數驗證](../../c-runtime-library/parameter-validation.md)。
 
 *buffer*<br/>
 路徑的儲存位置，或 **NULL**。
@@ -74,13 +75,13 @@ wchar_t *_wgetdcwd(
 *maxlen*<br/>
 非零正整數，以字元為單位指定路徑的最大長度： **char**如 **_getdcwd**並**wchar_t**如 **_wgetdcwd**.
 
-如果*maxlen*不是小於或等於零，無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)，會叫用。
+如果*maxlen*小於或等於零，會叫用無效參數處理常式。 如需詳細資訊，請參閱[參數驗證](../../c-runtime-library/parameter-validation.md)。
 
 ## <a name="return-value"></a>傳回值
 
 表示在指定的磁碟機上的目前工作目錄的完整路徑的字串指標，或是**NULL**，以表示錯誤。
 
-如果*緩衝區*指定為**NULL** ，而且沒有記憶體不足，無法配置*maxlen*字元，則會發生錯誤並**errno**是設定為**ENOMEM**。 如果此路徑，以包含結束的 null 字元，長度超過*maxlen*，則會發生錯誤並**errno**設定為**ERANGE**。 如需這些錯誤碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果*緩衝區*指定為**NULL** ，而且沒有記憶體不足，無法配置*maxlen*字元，則會發生錯誤並**errno**是設定為**ENOMEM**。 如果路徑包含結束的 null 字元的長度超過*maxlen*，發生錯誤，並**errno**設定為**ERANGE**。 如需這些錯誤碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 

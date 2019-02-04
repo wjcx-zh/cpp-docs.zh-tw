@@ -1,9 +1,10 @@
 ---
-title: strcmp、wcscmp、_mbscmp
-ms.date: 11/04/2016
+title: strcmp、 wcscmp、 _mbscmp、 _mbscmp_l
+ms.date: 01/22/2019
 apiname:
 - wcscmp
 - _mbscmp
+- _mbscmp_l
 - strcmp
 apilocation:
 - msvcrt.dll
@@ -23,6 +24,7 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _mbscmp
+- _mbscmp_l
 - wcscmp
 - strcmp
 - _tcscmp
@@ -34,24 +36,25 @@ helpviewer_keywords:
 - mbscmp function
 - string comparison [C++]
 - _mbscmp function
+- _mbscmp_l function
 - wcscmp function
 - _tcscmp function
 - _ftcscmp function
 - ftcscmp function
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
-ms.openlocfilehash: b7d8614fffc96a600c0d1f92b85503259cfc5cbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dae5e04809ac7312097cb418ab5ffd561fdbd1d1
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600521"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703151"
 ---
-# <a name="strcmp-wcscmp-mbscmp"></a>strcmp、wcscmp、_mbscmp
+# <a name="strcmp-wcscmp-mbscmp-mbscmpl"></a>strcmp、 wcscmp、 _mbscmp、 _mbscmp_l
 
 比較字串。
 
 > [!IMPORTANT]
-> **_mbscmp**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbscmp**並 **_mbscmp_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -68,12 +71,20 @@ int _mbscmp(
    const unsigned char *string1,
    const unsigned char *string2
 );
+int _mbscmp_l(
+   const unsigned char *string1,
+   const unsigned char *string2,
+   _locale_t locale
+);
 ```
 
 ### <a name="parameters"></a>參數
 
 *string1*， *string2*<br/>
 以 Null 結束的待比較字串。
+
+*locale*<br/>
+要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
@@ -85,11 +96,11 @@ int _mbscmp(
 |0|*string1*等同於*string2*|
 |> 0|*string1*大於*string2*|
 
-參數驗證錯誤時， **_mbscmp**會傳回 **_NLSCMPERROR**，其定義於\<h > 和\<m >。
+參數驗證錯誤時， **_mbscmp**並 **_mbscmp_l**傳回 **_NLSCMPERROR**，其定義於\<h > 和\<m >。
 
 ## <a name="remarks"></a>備註
 
-**Strcmp**函式會執行序數比較*string1*並*string2*和傳回值，這個值指出其關聯性。 **wcscmp**並 **_mbscmp**分別是寬字元和多位元組字元版本**strcmp**。 **_mbscmp**辨識多位元組字元序列，根據目前的多位元組字碼頁，並傳回 **_NLSCMPERROR**在發生錯誤。 如需詳細資訊，請參閱[字碼頁](../../c-runtime-library/code-pages.md)。 此外，如果*string1*或是*string2*為 null 指標， **_mbscmp**叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md). 如果允許繼續，請執行 **_mbscmp**會傳回 **_NLSCMPERROR**並設定**errno**至**EINVAL**。 **strcmp**並**wcscmp**不會驗證其參數。 除此之外，這三個函式的行為相同。
+**Strcmp**函式會執行序數比較*string1*並*string2*和傳回值，這個值指出其關聯性。 **wcscmp**並 **_mbscmp**分別是寬字元和多位元組字元版本**strcmp**。 **_mbscmp**辨識多位元組字元序列，根據目前的多位元組字碼頁，並傳回 **_NLSCMPERROR**在發生錯誤。 **_mbscmp_l**具有相同的行為，但會使用傳入的地區設定參數，而不是目前的地區設定。 如需詳細資訊，請參閱[字碼頁](../../c-runtime-library/code-pages.md)。 此外，如果*string1*或是*string2*為 null 指標， **_mbscmp**叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md). 如果允許繼續，請執行 **_mbscmp**並 **_mbscmp_l**傳回 **_NLSCMPERROR** ，並設定**errno**到**EINVAL**. **strcmp**並**wcscmp**不會驗證其參數。 除此之外，這些函式的行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -103,7 +114,7 @@ int _mbscmp(
 
 在地區設定中的字元集和詞典編纂字元順序不同，您可以使用**strcoll**而不是**strcmp**為字串的詞典編纂的比較。 或者，您可以使用**strxfrm**原始字串，然後再使用**strcmp**產生的字串。
 
-**Strcmp**函式會區分大小寫。 **_stricmp**， **_wcsicmp**，以及 **_mbsicmp**第一次將它們轉換成其小寫的形式來比較字串。 包含位於 'Z' 之間字元的兩個字串和 'a' ASCII 資料表中 ('['、'\\'，']'，' ^'、 '_' 和 '\`') 比較以不同的方式，根據其大小寫。 例如，兩個字串"ABCDE"和"ABCD ^"比較其中一個方法，如果該比較為小寫 ("abcde">"abcd ^") 以及的其他方式 ("ABCDE"<"ABCD ^") 如果比較為大寫。
+**Strcmp**函式會區分大小寫。 **\_stricmp**，  **\_wcsicmp**，並 **\_mbsicmp**第一次將它們轉換成其小寫的形式來比較字串。 包含位於 'Z' 之間字元的兩個字串和 'a' ASCII 資料表中 ('['、'\\'，']'，' ^'、 '_' 和 '\`') 比較以不同的方式，根據其大小寫。 例如，兩個字串"ABCDE"和"ABCD ^"比較其中一個方法，如果該比較為小寫 ("abcde">"abcd ^") 以及的其他方式 ("ABCDE"<"ABCD ^") 如果比較為大寫。
 
 ## <a name="requirements"></a>需求
 

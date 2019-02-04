@@ -1,9 +1,10 @@
 ---
-title: strcpy_s、wcscpy_s、_mbscpy_s
-ms.date: 03/22/2086
+title: strcpy_s、 wcscpy_s、 _mbscpy_s、 _mbscpy_s_l
+ms.date: 01/22/2019
 apiname:
 - wcscpy_s
 - _mbscpy_s
+- _mbscpy_s_l
 - strcpy_s
 apilocation:
 - msvcrt.dll
@@ -22,30 +23,32 @@ apitype: DLLExport
 f1_keywords:
 - strcpy_s
 - _mbscpy_s
+- _mbscpy_s_l
 - _tcscpy_s
 - wcscpy_s
 helpviewer_keywords:
 - strcpy_s function
 - _tcscpy_s function
 - _mbscpy_s function
+- _mbscpy_s_l function
 - copying strings
 - strings [C++], copying
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: d7deeb2d3286ca20518527df26c4765197f8a087
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5dec0c44519b78a3c4a98c51f8b8ca9bc3f54a7c
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616602"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702709"
 ---
-# <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s、wcscpy_s、_mbscpy_s
+# <a name="strcpys-wcscpys-mbscpys-mbscpysl"></a>strcpy_s、 wcscpy_s、 _mbscpy_s、 _mbscpy_s_l
 
 複製字串。 這些是 [strcpy、wcscpy、_mbscpy](strcpy-wcscpy-mbscpy.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
-> **_mbscpy_s**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbscpy_s**並 **_mbscpy_s_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -64,6 +67,12 @@ errno_t _mbscpy_s(
    unsigned char *dest,
    rsize_t dest_size,
    const unsigned char *src
+);
+errno_t _mbscpy_s_l(
+   unsigned char *dest,
+   rsize_t dest_size,
+   const unsigned char *src,
+   _locale_t locale
 );
 ```
 
@@ -84,6 +93,12 @@ errno_t _mbscpy_s(
    unsigned char (&dest)[size],
    const unsigned char *src
 ); // C++ only
+template <size_t size>
+errno_t _mbscpy_s_l(
+   unsigned char (&dest)[size],
+   const unsigned char *src,
+   _locale_t locale
+); // C++ only
 ```
 
 ### <a name="parameters"></a>參數
@@ -96,6 +111,9 @@ errno_t _mbscpy_s(
 
 *src*<br/>
 以 null 結束的來源字串緩衝區。
+
+*locale*<br/>
+要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
@@ -113,7 +131,7 @@ errno_t _mbscpy_s(
 
 **Strcpy_s**函式會複製內容的地址*src*，包括結束的 null 字元，到所指定的位置*dest*。 目的字串必須大到足以保留來源字串及其結束的 null 字元。 行為**strcpy_s**是未定義的如果來源和目的字串重疊。
 
-**wcscpy_s**是寬字元版本**strcpy_s**，以及 **_mbscpy_s**是多位元組字元版本。 引數**wcscpy_s**是寬字元字串; **_mbscpy_s**是多位元組字元字串。 除此之外，這三個函式的行為相同。
+**wcscpy_s**是寬字元版本**strcpy_s**，以及 **_mbscpy_s**是多位元組字元版本。 引數**wcscpy_s**是寬字元字串; **_mbscpy_s**並 **_mbscpy_s_l**是多位元組字元字串。 除此之外，這些函式的行為相同。 **_mbscpy_s_l**等同於 **_mbscpy_s**不同之處在於它會使用而不是目前的地區設定傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 如果*dest*或是*src*為 null 指標，或者目的地字串大小*dest_size*太小，叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則這些函式會傳回**EINVAL**並設定**errno**來**EINVAL**當*dest*或*src*為 null 指標，以及它們會傳回**ERANGE** ，並設定**errno**來**ERANGE**目的字串太小時。
 
@@ -205,8 +223,8 @@ String = Hello world from wcscpy_s and wcscat_s!
 ## <a name="see-also"></a>另請參閱
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md) <br/>
-[strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md) <br/>
-[strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md) <br/>
+[strcat、 wcscat、 _mbscat、 _mbscat_l](strcat-wcscat-mbscat.md) <br/>
+[strcmp、 wcscmp、 _mbscmp、 _mbscmp_l](strcmp-wcscmp-mbscmp.md) <br/>
 [strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) <br/>
 [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md) <br/>
 [strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md) <br/>

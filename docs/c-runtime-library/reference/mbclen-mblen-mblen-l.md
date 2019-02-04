@@ -1,10 +1,11 @@
 ---
-title: _mbclen、mblen、_mblen_l
-ms.date: 11/04/2016
+title: _mbclen、 mblen、 _mblen_l、 _mbclen_l
+ms.date: 01/22/2019
 apiname:
 - _mbclen
 - mblen
 - _mblen_l
+- _mbclen_l
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,6 +24,7 @@ f1_keywords:
 - mblen
 - ftclen
 - _mbclen
+- _mbclen_l
 - tclen
 - _ftclen
 - _tclen
@@ -33,17 +35,18 @@ helpviewer_keywords:
 - _tclen function
 - mblen_l function
 - _mbclen function
+- _mbclen_l function
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: dddf7d3a1705460d2c8d42cc1b36230d7bdaf942
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7888b0b8c87a632dcbb63f54ade11080c7a309a
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434382"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702956"
 ---
-# <a name="mbclen-mblen-mblenl"></a>_mbclen、mblen、_mblen_l
+# <a name="mbclen-mblen-mblenl-mbclenl"></a>_mbclen、 mblen、 _mblen_l、 _mbclen_l
 
 取得長度，並判斷多位元組字元的有效性。
 
@@ -55,6 +58,10 @@ ms.locfileid: "50434382"
 ```C
 size_t _mbclen(
    const unsigned char *c
+);
+size_t _mbclen_l(
+   unsigned char const* c,
+   _locale_t locale
 );
 int mblen(
    const char *mbstr,
@@ -83,7 +90,7 @@ int _mblen_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_mbclen**傳回 1 或 2，根據多位元組字元*c*為 1 或 2 個位元組長。 不沒有傳回任何錯誤 **_mbclen**。 如果*mbstr*不是**NULL**， **mblen**傳回長度，以位元組為單位的多位元組字元。 如果*mbstr*是**NULL**或是指向寬字元的 null 字元**mblen**會傳回 0。 如果物件的*mbstr*點不會構成有效的多位元組字元，在第一個*計數*字元**mblen**會傳回-1。
+**_mbclen**傳回 1 或 2，根據多位元組字元*c*為 1 或 2 個位元組長。 不沒有傳回任何錯誤 **_mbclen**。 如果*mbstr*不**NULL**， **mblen**傳回長度，以位元組為單位的多位元組字元。 如果*mbstr*是**NULL**或是指向寬字元的 null 字元**mblen**會傳回 0。 當物件的*mbstr*點不會形成有效的多位元組字元，在第一個*計數*字元， **mblen**會傳回-1。
 
 ## <a name="remarks"></a>備註
 
@@ -91,7 +98,7 @@ int _mblen_l(
 
 **mblen**傳回長度以位元組為單位*mbstr*如果它是有效的多位元組字元，並判斷多位元組字元的字碼頁相關聯的有效性。 **mblen**會檢查*計數*或更少個位元組內*mbstr*，但不是能超過**MB_CUR_MAX**位元組。
 
-輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到**LC_CTYPE**地區設定分類設定; 請參閱[setlocale](setlocale-wsetlocale.md)如需詳細資訊。 這些功能，但不包含新版 **_l**尾碼針對此與地區設定相關行為使用目前的地區設定。 **_L**後面加上的版本的行為相同，但是它們使用改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

@@ -1,9 +1,10 @@
 ---
-title: strcat_s、wcscat_s、_mbscat_s
-ms.date: 11/04/2016
+title: strcat_s、 wcscat_s、 _mbscat_s、 _mbscat_s_l
+ms.date: 01/22/2019
 apiname:
 - strcat_s
 - _mbscat_s
+- _mbscat_s_l
 - wcscat_s
 apilocation:
 - msvcrt.dll
@@ -23,27 +24,29 @@ f1_keywords:
 - strcat_s
 - wcscat_s
 - _mbscat_s
+- _mbscat_s_l
 helpviewer_keywords:
 - wcscat_s function
 - strcat_s function
 - mbscat_s function
 - strings [C++], appending
 - _mbscat_s function
+- _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: 7b622fbefc690317a4b57e3fd1bb54712b84f2a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92829421cc0adac0ff9bbd2354fe4438a7b22871
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621308"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702917"
 ---
-# <a name="strcats-wcscats-mbscats"></a>strcat_s、wcscat_s、_mbscat_s
+# <a name="strcats-wcscats-mbscats-mbscatsl"></a>strcat_s、 wcscat_s、 _mbscat_s、 _mbscat_s_l
 
 附加字串。 這些版本的 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md) 具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
-> **_mbscat_s**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbscat_s**並 **_mbscat_s_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -63,6 +66,12 @@ errno_t _mbscat_s(
    size_t numberOfElements,
    const unsigned char *strSource
 );
+errno_t _mbscat_s_l(
+   unsigned char *strDestination,
+   size_t numberOfElements,
+   const unsigned char *strSource,
+   _locale_t locale
+);
 template <size_t size>
 errno_t strcat_s(
    char (&strDestination)[size],
@@ -78,6 +87,12 @@ errno_t _mbscat_s(
    unsigned char (&strDestination)[size],
    const unsigned char *strSource
 ); // C++ only
+template <size_t size>
+errno_t _mbscat_s_l(
+   unsigned char (&strDestination)[size],
+   const unsigned char *strSource,
+   _locale_t locale
+); // C++ only
 ```
 
 ### <a name="parameters"></a>參數
@@ -90,6 +105,9 @@ errno_t _mbscat_s(
 
 *strSource*<br/>
 以 null 結束的來源字串緩衝區。
+
+*locale*<br/>
+要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
@@ -119,6 +137,8 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 **wcscat_s**並 **_mbscat_s**是寬字元和多位元組字元版本的**strcat_s**。 引數和傳回值**wcscat_s**是寬字元字串; **_mbscat_s**是多位元組字元字串。 除此之外，這三個函式的行為相同。
 
 如果*strDestination*為 null 指標，或不是以 null 終止，或如果*strSource*會**NULL**指標，或如果目的字串太小，無效的參數會叫用處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則這些函式會傳回**EINVAL**並設定**errno**來**EINVAL**。
+
+具有函式的版本 **_l**尾碼有相同的行為，但使用而不是目前的地區設定傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

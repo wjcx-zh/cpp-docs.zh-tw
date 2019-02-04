@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: fb5f78411521dcbaddefda6c621b7fe44ce91736
-ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
+ms.openlocfilehash: 9c7a7fed8eabc38f1a0a67587d495e75ba8fa3d8
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031287"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702904"
 ---
 # <a name="fopen-wfopen"></a>fopen、_wfopen
 
@@ -82,7 +82,7 @@ FILE *_wfopen(
 
 **fopen**支援 Unicode 檔案資料流。 若要開啟 Unicode 檔案，請傳遞**ccs**旗標，指定想要的編碼來**fopen**、，如下所示。
 
-> **檔案*fp = fopen (「 newfile.txt"，"rt + ccs =**_編碼_**");**
+> **FILE \*fp = fopen("newfile.txt", "rt+, ccs=**_encoding_**");**
 
 允許的值為*編碼*會**UNICODE**， **utf-8**，以及 **-16LE**。
 
@@ -99,9 +99,9 @@ FILE *_wfopen(
 
 |ccs 旗標|沒有 BOM (或新檔案)|BOM:UTF-8|BOM:UTF-16|
 |----------------|----------------------------|-----------------|------------------|
-|**UNICODE**|**-16LE**|**UTF-8**|**-16LE**|
-|**UTF-8**|**UTF-8**|**UTF-8**|**-16LE**|
-|**-16LE**|**-16LE**|**UTF-8**|**-16LE**|
+|**UNICODE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
+|**UTF-8**|**UTF-8**|**UTF-8**|**UTF-16LE**|
+|**UTF-16LE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 
 開啟以供在 Unicode 模式下寫入的檔案會有 BOM 自動寫入其中。
 
@@ -156,29 +156,29 @@ FILE *_wfopen(
 | **R** | 指定針對但不限於磁碟的隨機存取進行快取最佳化。 |
 | **T** | 指定檔案做為暫存檔。 可能的話，不將其清除至磁碟。 |
 | **D** | 指定檔案做為暫存檔。 當最後一個檔案指標關閉時，將其刪除。 |
-| **ccs =**_編碼_ | 指定要使用的編碼的字元集 (其中**utf-8**， **-16LE**，或**UNICODE**) 此檔案。 如果您想要使用 ANSI 編碼方式，請保持為未指定。 |
+| **ccs=**_encoding_ | 指定要使用的編碼的字元集 (其中**utf-8**， **-16LE**，或**UNICODE**) 此檔案。 如果您想要使用 ANSI 編碼方式，請保持為未指定。 |
 
 有效字元*模式*中所使用的字串**fopen**並 **_fdopen**對應至*oflag* 中所使用的引數[_open](open-wopen.md)並[_sopen](sopen-wsopen.md)、，如下所示。
 
 |中的字元*模式*字串|對等*oflag*值\_開啟 /\_sopen|
 |-------------------------------|----------------------------------------------------|
-|**a**|**\_O\_WRONLY** &#124;  **\_O\_附加**(通常 **\_O\_WRONLY** &#124; **\_O\_CREAT** &#124;  **\_O\_附加**)|
-|**+**|**\_O\_RDWR** &#124;  **\_O\_附加**(通常 **\_O\_RDWR** &#124;  **\_O\_APPEND** &#124;  **\_O\_CREAT** )|
+|**a**|**\_O\_WRONLY** &#124; **\_O\_APPEND** (usually **\_O\_WRONLY** &#124; **\_O\_CREAT** &#124; **\_O\_APPEND**)|
+|**a+**|**\_O\_RDWR** &#124; **\_O\_APPEND** (usually **\_O\_RDWR** &#124; **\_O\_APPEND** &#124; **\_O\_CREAT** )|
 |**r**|**\_O\_RDONLY**|
-|**r +**|**\_O\_RDWR**|
-|**w**|**\_O\_WRONLY** (通常 **\_O\_WRONLY** &#124;  **\_O\_建立** &#124; **\_O\_TRUNC**)|
-|**w +**|**\_O\_RDWR** (通常 **\_O\_RDWR** &#124;  **\_O\_建立** &#124;  **\_O\_TRUNC**)|
+|**r+**|**\_O\_RDWR**|
+|**w**|**\_O\_WRONLY** (usually **\_O\_WRONLY** &#124; **\_O\_CREAT** &#124; **\_O\_TRUNC**)|
+|**w+**|**\_O\_RDWR** (usually **\_O\_RDWR** &#124; **\_O\_CREAT** &#124; **\_O\_TRUNC**)|
 |**b**|**\_O\_BINARY**|
 |**t**|**\_O\_TEXT**|
 |**C**|無|
 |**n**|無|
 |**S**|**\_O\_循序**|
-|**R**|**\_O\_隨機**|
+|**R**|**\_O\_RANDOM**|
 |**T**|**\_O\_SHORTLIVED**|
 |**D**|**\_O\_暫存**|
-|**ccs = UNICODE**|**\_O\_WTEXT**|
-|**ccs = utf-8**|**\_O\_UTF8**|
-|**ccs =-16LE**|**\_O\_UTF16**|
+|**ccs=UNICODE**|**\_O\_WTEXT**|
+|**ccs=UTF-8**|**\_O\_UTF8**|
+|**ccs=UTF-16LE**|**\_O\_UTF16**|
 
 如果您使用**rb**模式中，您不需要移植程式碼，以及如果您打算讀取大部分大型檔案，或不在意網路效能，您也可以考慮是否要使用的記憶體對應 Win32 檔案做為選項。
 

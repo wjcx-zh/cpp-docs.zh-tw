@@ -32,7 +32,7 @@ vcpkg 是命令列套件管理員，可大幅簡化在 Windows、Linux 和 MacOS
 
 ## <a name="installation"></a>安裝
 
-複製 GitHub 的 vcpkg 存放庫： https://github.com/Microsoft/vcpkg。 您可以下載到您偏好的任何資料夾位置。
+複製 GitHub 的 vcpkg 存放庫： https://github.com/Microsoft/vcpkg. 您可以下載到您偏好的任何資料夾位置。
 
 在根資料夾中執行啟動載入器：
 

@@ -12,6 +12,7 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcrt.dll
 - msvcr100.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _getts
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-ms.openlocfilehash: c0133832142f49cfe3674cf651173f1c30dfc0cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 523a295e088fe692eb9abd8dcca6b3919d432c4e
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662835"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702735"
 ---
 # <a name="gets-getws"></a>gets、_getws
 
@@ -74,7 +75,7 @@ wchar_t *_getws(
 
 ## <a name="remarks"></a>備註
 
-`gets` 函式會從標準輸入資料流 `stdin` 讀取一行，並將其儲存在 `buffer`中。 此行包括到第一個新行字元 ('\n') (含) 的所有字元。 `gets` 接著會取代以 null 字元 ('\0') 取代新行字元，然後再傳回該行。 相反地， `fgets` 函式則會保留新行字元。 `_getws` 是寬字元版的 `gets`，其引數與傳回值均為寬字元字串。
+ `gets` 函式會從標準輸入資料流 `stdin` 讀取一行，並將其儲存在 `buffer`中。 此行包括到第一個新行字元 ('\n') (含) 的所有字元。 `gets` 接著會取代以 null 字元 ('\0') 取代新行字元，然後再傳回該行。 相反地， `fgets` 函式則會保留新行字元。 `_getws` 是寬字元版的 `gets`，其引數與傳回值均為寬字元字串。
 
 > [!IMPORTANT]
 >  因為無法限制 get 所能讀取的字元數，所以未經信任的輸入可能很容易就會造成緩衝區溢位。 請改用 `fgets` 。

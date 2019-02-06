@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 6a4320b1f2c5d0c47dac64c486e7fb70ea5991bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a6de35f9e3154b6d182eddcc51fd7a14cbd0dd5
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481818"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55764008"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>CRecordView 和 CDaoRecordView 的對話方塊資料交換函式
 
@@ -124,7 +124,7 @@ void AFXAPI DDX_FieldCBString(
 *nIDC*<br/>
 在控制項的 ID [CRecordView](../../mfc/reference/crecordview-class.md)或是[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)物件。
 
-*值*<br/>
+*value*<br/>
 在相關聯的欄位資料成員的參考`CRecordset`或`CDaoRecordset`物件。
 
 *pRecordset*<br/>
@@ -172,7 +172,7 @@ void AFXAPI DDX_FieldCBStringExact(
 *nIDC*<br/>
 在控制項的 ID [CRecordView](../../mfc/reference/crecordview-class.md)或是[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)物件。
 
-*值*<br/>
+*value*<br/>
 在相關聯的欄位資料成員的參考`CRecordset`或`CDaoRecordset`物件。
 
 *pRecordset*<br/>
@@ -220,7 +220,7 @@ void AFXAPI DDX_FieldCheck(
 *nIDC*<br/>
 核取方塊控制項的控制項屬性相關聯的資源識別碼。
 
-*值*<br/>
+*value*<br/>
 對話方塊、 表單檢視中或用來交換資料的控制項檢視物件的成員變數的參考。
 
 *pRecordset*<br/>
@@ -310,7 +310,7 @@ void AFXAPI DDX_FieldLBString(
 *nIDC*<br/>
 在控制項的 ID [CRecordView](../../mfc/reference/crecordview-class.md)或是[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)物件。
 
-*值*<br/>
+*value*<br/>
 在相關聯的欄位資料成員的參考`CRecordset`或`CDaoRecordset`物件。
 
 *pRecordset*<br/>
@@ -358,7 +358,7 @@ void AFXAPI DDX_FieldLBStringExact(
 *nIDC*<br/>
 在控制項的 ID [CRecordView](../../mfc/reference/crecordview-class.md)或是[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)物件。
 
-*值*<br/>
+*value*<br/>
 在相關聯的欄位資料成員的參考`CRecordset`或`CDaoRecordset`物件。
 
 *pRecordset*<br/>
@@ -406,7 +406,7 @@ void AFXAPI DDX_FieldRadio(
 *nIDC*<br/>
 第一個識別碼在相鄰的選項按鈕控制項中的群組 （使用樣式 WS_GROUP） [CRecordView](../../mfc/reference/crecordview-class.md)或是[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)物件。
 
-*值*<br/>
+*value*<br/>
 在相關聯的欄位資料成員的參考`CRecordset`或`CDaoRecordset`物件。
 
 *pRecordset*<br/>
@@ -454,7 +454,7 @@ void AFXAPI DDX_FieldScroll(
 *nIDC*<br/>
 第一個識別碼在相鄰的選項按鈕控制項中的群組 （使用樣式 WS_GROUP） [CRecordView](../../mfc/reference/crecordview-class.md)或是[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)物件。
 
-*值*<br/>
+*value*<br/>
 在相關聯的欄位資料成員的參考`CRecordset`或`CDaoRecordset`物件。
 
 *pRecordset*<br/>
@@ -476,7 +476,7 @@ void AFXAPI DDX_FieldScroll(
 
   **標頭**afxdao.h
 
-  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name="ddx_fieldslider"></a>  DDX_FieldSlider
+  ## <a name="ddx_fieldslider"></a>  DDX_FieldSlider
 `DDX_FieldSlider`函式會同步處理資料錄檢視中的滑桿控制項捲動方塊位置並**int**與資料錄檢視 （或您選擇將它對應至任何整數變數） 相關聯的資料錄集欄位資料成員。
 
 ### <a name="syntax"></a>語法
@@ -503,7 +503,7 @@ void AFXAPI DDX_FieldSlider(
 *nIDC*<br/>
 滑桿控制項的資源識別碼。
 
-*值*<br/>
+*value*<br/>
 要交換值的參考。 此參數保留或將用來設定滑桿控制項的目前縮圖的位置。
 
 *pRecordset*<br/>
@@ -653,7 +653,7 @@ void AFXAPI DDX_FieldText(
 *nIDC*<br/>
 在控制項的 ID [CRecordView](../../mfc/reference/crecordview-class.md)或是[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)物件。
 
-*值*<br/>
+*value*<br/>
 在相關聯的欄位資料成員的參考`CRecordset`或`CDaoRecordset`物件。 值的資料類型取決於其中一個多載版本`DDX_FieldText`您使用。
 
 *pRecordset*<br/>

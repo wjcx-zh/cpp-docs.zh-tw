@@ -1,6 +1,6 @@
 ---
 title: '&lt;memory&gt; 函式'
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - memory/std::addressof
 - memory/std::align
@@ -74,12 +74,12 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: e0a62b7afd215a9cad62ba1d0469f68459e6f403
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 71cae7bfbb8bfc0bef79a087d4450505c2880e5c
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519174"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763930"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 函式
 
@@ -105,7 +105,7 @@ T* addressof(T& Val);
 
 ### <a name="parameters"></a>參數
 
-*val*<br/>
+*Val*<br/>
 要取得真正位址的物件或函式。
 
 ### <a name="return-value"></a>傳回值
@@ -135,7 +135,7 @@ void* align(
 *Size*<br/>
 對齊儲存體的大小 (位元組)。
 
-*ptr*<br/>
+*Ptr*<br/>
 要使用的可用連續儲存集區的開始位址。 這個參數也是一個 output 參數，並設定為包含新的起始位址，如果對齊成功。 如果 `align()` 不成功，則不會修改這個參數。
 
 *空格鍵*<br/>
@@ -186,7 +186,7 @@ allocate_shared(Allocator Alloc, Types&&... Args);
 
 ### <a name="parameters"></a>參數
 
-*配置*<br/>
+*Alloc*<br/>
 用來建立物件的配置器。
 
 *Args*<br/>
@@ -261,7 +261,7 @@ void declare_no_pointers(
 |參數|描述|
 |---------------|-----------------|
 |*ptr*|已不再包含可追蹤指標的第一個位元位址。|
-|*大小) (_s*|開始區塊的大小*ptr* ，其中包含任何可追蹤指標。|
+|*_Size*|開始區塊的大小*ptr* ，其中包含任何可追蹤指標。|
 
 ### <a name="remarks"></a>備註
 
@@ -299,7 +299,7 @@ struct default_delete {
 
 ### <a name="parameters"></a>參數
 
-*ptr*<br/>
+*Ptr*<br/>
 要刪除的物件指標。
 
 *其他*<br/>
@@ -327,7 +327,7 @@ dynamic_pointer_cast(const shared_ptr<Other>& sp);
 *其他*<br/>
 引數共用指標所控制的類型。
 
-*預存程序*<br/>
+*sp*<br/>
 引數共用指標。
 
 ### <a name="remarks"></a>備註
@@ -387,7 +387,7 @@ D* get_deleter(const shared_ptr<Ty>& sp);
 *Ty*<br/>
 共用指標所控制的類型。
 
-*預存程序*<br/>
+*sp*<br/>
 共用指標。
 
 ### <a name="remarks"></a>備註
@@ -647,7 +647,7 @@ make_unique(Types&&...) = delete;
 
 ### <a name="remarks"></a>備註
 
-第一個多載是用於單一物件，第二個多載是為陣列叫用的，而第三個多載則可防止您在類型引數 (make_unique\<T[N]>) 中指定陣列大小；目前的標準並不支援這個建構。 當您使用 `make_unique` 來建立陣列的 `unique_ptr`，必須將陣列元素個別初始化。 如果您要將這個多載納入考量，較佳的選擇會是使用 [std::vector](../standard-library/vector-class.md)。
+第一個多載用於單一物件、 陣列、 叫用第二個多載和第三個多載可防止您的型別引數中指定陣列大小 (make_unique\<T [N] >); 目前不支援這個建構標準。 當您使用 `make_unique` 來建立陣列的 `unique_ptr`，必須將陣列元素個別初始化。 如果您要將這個多載納入考量，較佳的選擇會是使用 [std::vector](../standard-library/vector-class.md)。
 
 為了例外狀況安全，`make_unique` 實作很謹慎，因此建議您使用 `make_unique`，而不是直接呼叫 `unique_ptr` 建構函式。
 
@@ -956,7 +956,7 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 *first*<br/>
 輸入迭代器，為來源範圍中的第一個項目定址。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，為來源範圍中的最後一個項目定址。
 
 *dest*<br/>
@@ -1101,7 +1101,7 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 *first*<br/>
 正向迭代器，定址對象是要起始之目的範圍中的第一個元素。
 
-*最後一個*<br/>
+*last*<br/>
 正向迭代器，定址對象是要起始之目的範圍中的最後一個元素。
 
 *val*<br/>

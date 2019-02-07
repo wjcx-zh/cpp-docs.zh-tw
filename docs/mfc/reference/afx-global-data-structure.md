@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 9b6a462cf359bbd31958509c4fe7d0d71e490d11
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 0fd8143564beecccd8943f3ceba531e8697151d1
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694305"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850320"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 結構
 
@@ -121,7 +121,7 @@ struct AFX_GLOBAL_DATA
 |----------|-----------------|
 |[AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)|啟用或停用 Microsoft Active Accessibility 支援。 Active Accessibility 提供可靠的方法以公開使用者介面項目的相關資訊。|
 |[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)|指出是否已啟用 Microsoft Active Accessibility 支援。|
-|[Iswindowslayersupportavailable](#iswindowslayersupportavailable)|指出作業系統是否支援層疊的視窗。|
+|[AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable](#iswindowslayersupportavailable)|指出作業系統是否支援層疊的視窗。|
 
 ### <a name="data-members"></a>資料成員
 
@@ -153,11 +153,6 @@ struct AFX_GLOBAL_DATA
 ### <a name="requirements"></a>需求
 
 **Header:** afxglobals.h
-
-### <a name="see-also"></a>另請參閱
-
-[階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
-[結構、樣式、回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 
 ## <a name="bisosalphablendingsupport"></a> AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport
 
@@ -192,13 +187,13 @@ HRESULT D2D1MakeRotateMatrix(
 
 ### <a name="parameters"></a>參數
 
-*角度*<br/>
+*angle*<br/>
 順時針旋轉的角度，以度為單位。
 
-*中心*<br/>
+*center*<br/>
 旋轉中心點。
 
-*矩陣*<br/>
+*matrix*<br/>
 當這個方法傳回時，會包含新的旋轉轉換。 您必須為此參數來配置儲存體。
 
 ### <a name="return-value"></a>傳回值
@@ -264,7 +259,7 @@ BOOL DrawTextOnGlass(
 *iStateId*<br/>
 [in]具有所需的文字外觀的控制項狀態。 如需詳細資訊，請參閱 [Parts and States](/windows/desktop/controls/parts-and-states)(組件和狀態) 表格中的 States 資料行。
 
-*先把 strText*<br/>
+*strText*<br/>
 [in]要繪製的文字。
 
 *rect*<br/>
@@ -289,16 +284,6 @@ BOOL DrawTextOnGlass(
 
 佈景主題會定義應用程式的視覺化樣式。 佈景主題不會用來繪製文字，如果*hTheme*參數為 NULL，或如果[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)不支援方法，或如果[桌面視窗管理員](/windows/desktop/dwm/dwm-overview)(DWM) 組合已停用。
 
-### <a name="see-also"></a>另請參閱
-
-[階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[組件和狀態](/windows/desktop/controls/parts-and-states)<br/>
-[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)<br/>
-[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
-[桌面視窗管理員](/windows/desktop/dwm/dwm-overview)<br/>
-[啟用並控制 DWM 組合](/windows/desktop/dwm/composition-ovw)
-
 ## <a name="enableaccessibilitysupport"></a> AFX_GLOBAL_DATA::EnableAccessibilitySupport
 
 啟用或停用 Microsoft Active Accessibility 支援。
@@ -317,11 +302,6 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 Active Accessibility 是一種 COM 技術，可改善程式與 Windows 作業系統一起與輔助技術產品合作的方式。 它提供用於公開使用者介面項目資訊的可靠方法。 然而，現在已有稱為 Microsoft UI 自動化之較新協助工具模型可供使用。 如需這兩項技術的比較，請參閱 < [UI 自動化和 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)。
 
 使用[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)方法，以判斷是否已啟用 Microsoft Active Accessibility 支援。
-
-### <a name="see-also"></a>另請參閱
-
-[UI 自動化和 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)<br/>
-[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)
 
 ## <a name="excludetag"></a> AFX_GLOBAL_DATA::ExcludeTag
 
@@ -361,13 +341,13 @@ XML 標記組包含名為開頭和結尾指示的開始和結尾指定的緩衝�
 
 |符號|逸出字元|
 |------------|----------------------|
-|_T ("\\\t")|_T("\t")|
-|_T ("\\\n")|_T("\n")|
-|_T ("\\\r")|_T("\r")|
-|_T ("\\\b")|_T("\b")|
-|_T("LT")|_T ("\<")|
-|_T("GT")|_T("&GT;")|
-|_T("AMP")|_T("&AMP;")|
+|_T("\\\t")|_T("\t")|
+|_T("\\\n")|_T("\n")|
+|_T("\\\r")|_T("\r")|
+|_T("\\\b")|_T("\b")|
+|_T("LT")|_T("\<")|
+|_T("GT")|_T(">")|
+|_T("AMP")|_T("&")|
 
 ## <a name="getcolor"></a> AFX_GLOBAL_DATA::GetColor
 
@@ -389,12 +369,6 @@ COLORREF GetColor(int nColor);
 ### <a name="remarks"></a>備註
 
 如果*nColor*參數超出範圍，傳回的值為零。 由於零也是有效的 RGB 值，您無法使用這個方法來判斷目前的作業系統是否支援系統色彩。 請改用[GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)方法，如果不支援的色彩，則傳回 NULL。
-
-### <a name="see-also"></a>另請參閱
-
-[GetSysColor 函式](/windows/desktop/api/winuser/nf-winuser-getsyscolor)<br/>
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)
 
 ## <a name="getdirect2dfactory"></a> AFX_GLOBAL_DATA::GetDirect2dFactory
 
@@ -436,10 +410,6 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ### <a name="return-value"></a>傳回值
 
 如果這個方法成功，則為 TRUE。否則為 FALSE。
-
-### <a name="see-also"></a>另請參閱
-
-[NONCLIENTMETRICS 結構](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 
@@ -538,10 +508,6 @@ Microsoft Active Accessibility 是過去用來讓應用程式成為可存取的�
 
 使用[AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)方法，以啟用或停用 Active Accessibility 支援。
 
-### <a name="see-also"></a>另請參閱
-
-[UI 自動化和 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
-
 ## <a name="isd2dinitialized"></a> AFX_GLOBAL_DATA::IsD2DInitialized
 
 判斷是否已初始化 D2D
@@ -565,11 +531,6 @@ BOOL IsDwmCompositionEnabled();
 ### <a name="return-value"></a>傳回值
 
 則為 TRUE[桌面視窗管理員](/windows/desktop/dwm/dwm-overview)(DWM) 組合已啟用，否則為 FALSE。
-
-### <a name="see-also"></a>另請參閱
-
-[桌面視窗管理員](/windows/desktop/dwm/dwm-overview)<br/>
-[啟用並控制 DWM 組合](/windows/desktop/dwm/composition-ovw)
 
 ## <a name="ishighcontrastmode"></a> AFX_GLOBAL_DATA::IsHighContrastMode
 
@@ -743,11 +704,6 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 
 傳回值是以冒號分隔的清單*lpszClassNamePrefix*參數字串和目前的應用程式執行個體; 的控制代碼的十六進位文字表示應用程式的資料指標，也就是箭號識別項為 IDC_ARROW; 的資料指標和背景筆刷。 如需註冊 MFC 視窗類別的詳細資訊，請參閱[AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)。
 
-### <a name="see-also"></a>另請參閱
-
-[AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)<br/>
-[AfxThrowResourceException](../../mfc/reference/exception-processing.md#afxthrowresourceexception)
-
 ## <a name="resume"></a> AFX_GLOBAL_DATA::Resume
 
 重新初始化內部函式指標，存取支援 Windows 佈景主題和視覺化樣式的方法。
@@ -793,11 +749,6 @@ BOOL SetLayeredAttrib(
 ### <a name="return-value"></a>傳回值
 
 如果這個方法成功，則為 TRUE。否則為 FALSE。
-
-### <a name="see-also"></a>另請參閱
-
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)
 
 ## <a name="setmenufont"></a> AFX_GLOBAL_DATA::SetMenuFont
 
@@ -903,7 +854,7 @@ int GetShellAutohideBars();
 
 ### <a name="return-value"></a>傳回值
 
-整數值與編碼的旗標，指定位置的自動隱藏列。 可以結合下列的值： AFX_AUTOHIDE_BOTTOM、 AFX_AUTOHIDE_TOP、 AFX_AUTOHIDE_LEFT、 AFX_AUTOHIDE_RIGHT。
+整數值與編碼的旗標，指定位置的自動隱藏列。 可以結合下列的值：AFX_AUTOHIDE_RIGHT AFX_AUTOHIDE_BOTTOM，AFX_AUTOHIDE_TOP，AFX_AUTOHIDE_LEFT。
 
 ## <a name="releasetaskbarrefs"></a> AFX_GLOBAL_DATA::ReleaseTaskBarRefs
 
@@ -943,3 +894,20 @@ HRESULT ShellCreateItemFromParsingName(
 
 傳回 S_OK，如果登錄成功。否則為錯誤值。
 
+## <a name="see-also"></a>另請參閱
+
+[階層架構圖表](../hierarchy-chart.md)<br/>
+[結構、樣式、回呼和訊息對應](structures-styles-callbacks-and-message-maps.md)<br/>
+[COLORREF](/windows/desktop/gdi/colorref)<br/>
+[組件和狀態](/windows/desktop/controls/parts-and-states)<br/>
+[CDC::DrawText](cdc-class.md#drawtext)<br/>
+[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
+[桌面視窗管理員](/windows/desktop/dwm/dwm-overview)<br/>
+[啟用並控制 DWM 組合](/windows/desktop/dwm/composition-ovw)<br/>
+[UI 自動化和 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)<br/>
+[GetSysColor 函式](/windows/desktop/api/winuser/nf-winuser-getsyscolor)<br/>
+[GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)<br/>
+[NONCLIENTMETRICS 結構](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)<br/>
+[AfxRegisterClass](application-information-and-management.md#afxregisterclass)<br/>
+[AfxThrowResourceException](exception-processing.md#afxthrowresourceexception)<br/>
+[SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)

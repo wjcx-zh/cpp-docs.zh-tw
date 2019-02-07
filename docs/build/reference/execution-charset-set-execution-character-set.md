@@ -1,6 +1,6 @@
 ---
 title: /execution-charset （設定執行字元集）
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - execution-charset
 - /execution-charset
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /execution-charset compiler option
 - -execution-charset compiler option
 ms.assetid: 0e02f487-2236-45bc-95f3-5760933a8f96
-ms.openlocfilehash: 3535b60d7aad50f7efc5d1f32726560431ac86a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 13ff185cf7026f1b42f732aae26c11e98d13e9a2
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663966"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849605"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/execution-charset （設定執行字元集）
 
@@ -47,9 +47,9 @@ IANA 定義字元集名稱。
 
 1. 依序展開**組態屬性**， **C/c + +**，**命令列**資料夾。
 
-1. 在 **進階選項**，新增 **/execution-charset**選項，並指定您慣用的編碼方式。
+1. 在 **其他選項**，新增 **/execution-charset**選項，並指定您慣用的編碼方式。
 
-1. 選擇**確定**以儲存變更。
+1. 選取 [確定] 儲存您的變更。
 
 ## <a name="see-also"></a>另請參閱
 

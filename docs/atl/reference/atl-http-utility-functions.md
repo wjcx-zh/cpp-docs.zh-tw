@@ -2,12 +2,12 @@
 title: ATL HTTP 公用程式函式
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: 43813d91daf572ad6094a5a9fe070234e5086593
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be38dc8b8547574ea47021f8b14f21060a0755f0
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481706"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849644"
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP 公用程式函式
 
@@ -75,10 +75,6 @@ ATL_URL 旗標來控制此函式的行為。
 ### <a name="remarks"></a>備註
 
 就等於目前的版本[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)但不需要安裝的 WinInet 或 Internet Explorer。
-
-### <a name="see-also"></a>另請參閱
-
-[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)
 
 ## <a name="atlcombineurl"></a> AtlCombineUrl
 
@@ -250,7 +246,7 @@ bool inline RGBToHtml(
 
 ### <a name="parameters"></a>參數
 
-*色彩*<br/>
+*color*<br/>
 RGB 色彩值。
 
 *pbOut*<br/>
@@ -287,5 +283,6 @@ inline void SystemTimeToHttpDate(
 
 ## <a name="see-also"></a>另請參閱
 
-[概念](../../atl/active-template-library-atl-concepts.md)<br/>
-[ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)
+[概念](../active-template-library-atl-concepts.md)<br/>
+[ATL COM 桌面元件](../atl-com-desktop-components.md)<br/>
+[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)

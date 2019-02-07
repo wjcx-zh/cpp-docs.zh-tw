@@ -13,12 +13,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: d44928d9fda20082496df1c475d8b3ab05ba4fc4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8b40afbfcc453a4908b434dc53b7b86959673453
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522072"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55851678"
 ---
 # <a name="exception-processing"></a>例外狀況處理
 
@@ -40,7 +40,7 @@ Microsoft Foundation 類別庫會使用仿造自密切所提議由 ANSI 標準�
 
 |||
 |-|-|
-|[請嘗試](#try)|將指定的例外狀況處理的程式碼區塊。|
+|[TRY](#try)|將指定的例外狀況處理的程式碼區塊。|
 |[CATCH](#catch)|指定的程式碼來攔截來自上述例外狀況區塊**嘗試**區塊。|
 |[CATCH_ALL](#catch_all)|將指定來攔截所有例外狀況，從先前的程式碼區塊**嘗試**區塊。|
 |[AND_CATCH](#and_catch)|將指定來攔截來自上述的其他例外狀況類型的程式碼區塊**嘗試**區塊。|
@@ -88,7 +88,7 @@ MFC 提供下列的終止函式：
 |-|-|
 |[AfxAbort](#afxabort)|呼叫終止應用程式發生嚴重錯誤時，就會發生。|
 
-##  <a name="try"></a>  請嘗試
+##  <a name="try"></a>  TRY
 
 設定**嘗試**區塊。
 
@@ -314,7 +314,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 
 ### <a name="parameters"></a>參數
 
-*原因*<br/>
+*cause*<br/>
 指定一個整數，表示例外狀況的原因。 如需可能的值，請參閱[CArchiveException::m_cause](../../mfc/reference/carchiveexception-class.md#m_cause)。
 
 *lpszArchiveName*<br/>
@@ -337,7 +337,7 @@ void AfxThrowFileException(
 
 ### <a name="parameters"></a>參數
 
-*原因*<br/>
+*cause*<br/>
 指定一個整數，表示例外狀況的原因。 如需可能的值，請參閱[CFileException::m_cause](../../mfc/reference/cfileexception-class.md#m_cause)。
 
 *lOsError*<br/>
@@ -371,12 +371,6 @@ void AfxThrowInvalidArgException( );
 ### <a name="requirements"></a>需求
 
 **標頭：** afx.h
-
-### <a name="see-also"></a>另請參閱
-
-[巨集和全域](mfc-macros-and-globals.md)<br/>
-[CInvalidArgException 類別](cinvalidargexception-class.md)<br/>
-[擲回](#throw)
 
 ##  <a name="afxthrowmemoryexception"></a>  AfxThrowMemoryException
 
@@ -456,7 +450,7 @@ void AFXAPI AfxThrowOleDispatchException(
 
 ### <a name="parameters"></a>參數
 
-*WCode*<br/>
+*wCode*<br/>
 應用程式特定的錯誤碼。
 
 *lpszDescription*<br/>
@@ -527,7 +521,7 @@ void AFXAPI AfxThrowDaoException(
 
 此架構也會呼叫`AfxThrowDaoException`。 在您呼叫中，您可以傳遞參數之一或兩者。 例如，如果您想要引發的其中一個錯誤中定義**CDaoException::nAfxDaoError**但您不在意*scode*參數，傳遞有效的程式碼中*nAfxDaoError*參數並接受預設值*scode*。
 
-如需 MFC DAO 類別相關的例外狀況資訊，請參閱類別`CDaoException`這本書和文件中[例外狀況： 資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)。
+如需 MFC DAO 類別相關的例外狀況資訊，請參閱類別`CDaoException`這本書和發行項中[例外狀況：資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -587,5 +581,6 @@ void  AfxAbort();
 
 ## <a name="see-also"></a>另請參閱
 
-[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)<br/>
-[CException 類別](../../mfc/reference/cexception-class.md)
+[巨集和全域](mfc-macros-and-globals.md)<br/>
+[CException 類別](cexception-class.md)<br/>
+[CInvalidArgException 類別](cinvalidargexception-class.md)

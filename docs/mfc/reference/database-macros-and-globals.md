@@ -13,12 +13,12 @@ helpviewer_keywords:
 - global functions [MFC], database functions
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
-ms.openlocfilehash: d3df96c92c39b9fdc05a019ed1ada033dc36d05e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a546c821690bcbe1afedd4909810317553e3b283
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536548"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849747"
 ---
 # <a name="database-macros-and-globals"></a>資料庫巨集和全域
 
@@ -30,7 +30,7 @@ ms.locfileid: "50536548"
 
 |||
 |-|-|
-|[{2&AMP;GT;AFX_ODBC_CALL&AMP;LT;2}](#afx_odbc_call)|呼叫傳回 `SQL_STILL_EXECUTING` 的 ODBC API 函式。 `AFX_ODBC_CALL` 將會重複呼叫函式，直到它不再傳回 `SQL_STILL_EXECUTING`。|
+|[AFX_ODBC_CALL](#afx_odbc_call)|呼叫傳回 `SQL_STILL_EXECUTING` 的 ODBC API 函式。 `AFX_ODBC_CALL` 將會重複呼叫函式，直到它不再傳回 `SQL_STILL_EXECUTING`。|
 |[AFX_SQL_ASYNC](#afx_sql_async)|呼叫 `AFX_ODBC_CALL`。|
 |[AFX_SQL_SYNC](#afx_sql_sync)|呼叫不傳回 `SQL_STILL_EXECUTING` 的 ODBC API 函式。|
 
@@ -59,11 +59,7 @@ void AFXAPI AfxDbInitModule( );
 
 **標頭：** \<afxdll_.h >
 
-### <a name="see-also"></a>另請參閱
-
-[巨集和全域](mfc-macros-and-globals.md)
-
-##  <a name="afx_odbc_call"></a>  {2&AMP;GT;AFX_ODBC_CALL&AMP;LT;2}
+##  <a name="afx_odbc_call"></a>  AFX_ODBC_CALL
 
 使用這個巨集呼叫可能會傳回任何 ODBC API 函式`SQL_STILL_EXECUTING`。
 
@@ -104,7 +100,7 @@ AFX_SQL_ASYNC(prs, SQLFunc)
 
 ### <a name="parameters"></a>參數
 
-*提取要求*<br/>
+*prs*<br/>
 `CRecordset` 物件或 `CDatabase` 物件指標。 從 MFC 4.2 開始略過這個參數值。
 
 *SQLFunc*<br/>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event map macros [MFC]
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
-ms.openlocfilehash: cd1f38236baf2caca9f2a2a426f28f797291fb13
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8f48b916f7130551fc8d4da5bb2ebc75d8d728d5
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524647"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850199"
 ---
 # <a name="delegate-and-interface-map-macros"></a>委派和介面對應巨集
 
@@ -21,7 +21,7 @@ MFC 支援委派和介面對應這些巨集：
 |-|-|
 |[BEGIN_DELEGATE_MAP](#begin_delegate_map)|開始委派對應。|
 |[BEGIN_INTERFACE_MAP](#begin_interface_map)|開始 interfaced 對應的定義。|
-|[CommandHandler 委派](#commandhandler)|向命令來源註冊回呼方法。  |
+|[CommandHandler Delegate](#commandhandler)|向命令來源註冊回呼方法。  |
 |[END_DELEGATE_MAP](#end_delegate_map)|結束委派對應。|
 |[END_INTERFACE_MAP](#end_interface_map)|結束實作檔中的介面對應。 |
 |[EVENT_DELEGATE_ENTRY](#event_delegate_entry)|建立委派對應中的項目。|
@@ -40,7 +40,7 @@ BEGIN_DELEGATE_MAP(  CLASS );
 
 ### <a name="parameters"></a>參數
 
-*類別*<br/>
+*CLASS*<br/>
 在其中裝載 managed 的控制項類別。
 
 ### <a name="remarks"></a>備註
@@ -50,10 +50,6 @@ BEGIN_DELEGATE_MAP(  CLASS );
 ### <a name="requirements"></a>需求
 
 **標頭：** msclr\event.h
-
-### <a name="see-also"></a>另請參閱
-
-[如何：從原生 C++ 類別接收 Windows Forms 事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
 ##  <a name="begin_interface_map"></a>BEGIN_INTERFACE_MAP
 
@@ -102,17 +98,13 @@ delegate void CommandHandler(  UINT^ cmdID  );
 
 這會向命令來源委派註冊回呼方法。 當您將委派加入命令來源物件時，回呼方法會成為來自指定之來源的命令的處理常式。
 
-如需詳細資訊，請參閱 <<c0> [ 如何： 新增命令傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
+如需詳細資訊，請參閱[＜How to：將命令路由傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
 
 如需有關如何使用 Windows Form 的詳細資訊，請參閱 <<c0> [ 在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
 ### <a name="requirements"></a>需求
 
 **標頭：** afxwinforms.h （定義於組件 atlmfc\lib\mfcmifc80.dll）
-
-### <a name="see-also"></a>另請參閱
-
-[如何：新增命令傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
 
 ##  <a name="commanduihandler"></a>CommandUIHandler
 
@@ -142,11 +134,6 @@ delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
 
 **標頭：** afxwinforms.h （定義於組件 atlmfc\lib\mfcmifc80.dll）
 
-### <a name="see-also"></a>另請參閱
-
-[如何：新增命令傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
-[CommandHandler](#commandhandler)
-
 ##  <a name="end_delegate_map"></a>END_DELEGATE_MAP
 
 結束委派對應。
@@ -164,10 +151,6 @@ END_DELEGATE_MAP();
 ### <a name="requirements"></a>需求
 
 **標頭：** msclr\event.h
-
-### <a name="see-also"></a>另請參閱
-
-[如何：從原生 C++ 類別接收 Windows Forms 事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
 ##  <a name="end_interface_map"></a>END_INTERFACE_MAP
 
@@ -187,11 +170,6 @@ END_INTERFACE_MAP( )
 
 **標題:** afxwin.h
 
-### <a name="see-also"></a>另請參閱
-
-[巨集和全域](mfc-macros-and-globals.md)<br/>
-[BEGIN_INTERFACE_MAP](#begin_interface_map)
-
 ##  <a name="event_delegate_entry"></a>EVENT_DELEGATE_ENTRY
 
 建立委派對應中的項目。
@@ -204,7 +182,7 @@ EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);
 
 ### <a name="parameters"></a>參數
 
-*成員*<br/>
+*MEMBER*<br/>
 要附加到控制項的事件處理常式方法。
 
 *ARG0*<br/>
@@ -219,7 +197,7 @@ EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);
 
 ### <a name="example"></a>範例
 
-下列程式碼範例示範如何建立委派對應中的項目使用 EVENT_DELEGATE_ENTRY`OnClick`事件處理常式; 也請參閱 MAKE_DELEGATE 的程式碼範例。 如需詳細資訊，請參閱 <<c0> [ 如何： 從原生 c + + 類別接收 Windows Form 事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)。
+下列程式碼範例示範如何建立委派對應中的項目使用 EVENT_DELEGATE_ENTRY`OnClick`事件處理常式; 也請參閱 MAKE_DELEGATE 的程式碼範例。 如需詳細資訊，請參閱[＜How to：從原生 c + + 類別接收 Windows Forms 事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)。
 
 ```cpp
 BEGIN_DELEGATE_MAP(CMyView)
@@ -230,12 +208,6 @@ END_DELEGATE_MAP()
 ### <a name="requirements"></a>需求
 
 **標頭：** msclr\event.h
-
-### <a name="see-also"></a>另請參閱
-
-[MAKE_DELEGATE](#make_delegate)<br/>
-[BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
-[END_DELEGATE_MAP](#end_delegate_map)
 
 ##  <a name="interface_part"></a>INTERFACE_PART
 
@@ -278,10 +250,10 @@ MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 
 ### <a name="parameters"></a>參數
 
-*委派*<br/>
+*DELEGATE*<br/>
 委派型別之受管理的事件處理常式，如[事件處理常式](assetId:///T:System.EventHandler?qualifyHint=False&autoUpgrade=True)。
 
-*成員*<br/>
+*MEMBER*<br/>
 要附加至控制項的事件處理常式方法的名稱。
 
 ### <a name="remarks"></a>備註
@@ -290,7 +262,7 @@ MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 
 ### <a name="example"></a>範例
 
-下列程式碼範例示範如何呼叫`MAKE_DELEGATE`附加`OnClick`MFC 控制項的事件處理常式`MyControl`。 如需此巨集的 MFC 應用程式中的運作方式的更廣泛說明，請參閱[如何： 從原生 c + + 類別接收 Windows Form 事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)。
+下列程式碼範例示範如何呼叫`MAKE_DELEGATE`附加`OnClick`MFC 控制項的事件處理常式`MyControl`。 如需此巨集的 MFC 應用程式中的運作方式的更廣泛說明，請參閱[How to:從原生 c + + 類別接收 Windows Forms 事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)。
 
 ```cpp
 // CMyView derives from CWinFormsView.
@@ -306,9 +278,8 @@ void CMyView::OnInitialUpdate()
 
 **標頭：** msclr\event.h
 
-### <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>另請參閱
 
-[BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
-[END_DELEGATE_MAP](#end_delegate_map)<br/>
-[EVENT_DELEGATE_ENTRY](#event_delegate_entry)
-
+[如何：從原生 C++ 類別接收 Windows Forms 事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)<br/>
+[如何：新增命令傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
+[巨集和全域](mfc-macros-and-globals.md)<br/>

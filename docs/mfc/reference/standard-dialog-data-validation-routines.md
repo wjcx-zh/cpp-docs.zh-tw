@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-ms.openlocfilehash: b5813600bbf8eb2a7b25992b3e1b020fcf8dfa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dce982f76e25da424c02d621c1b760ec29e88918
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513941"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850160"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>標準對話方塊資料驗證常式
 
@@ -54,7 +54,7 @@ void AFXAPI DDV_MaxChars(
 *pDX*<br/>
 `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。
 
-*值*<br/>
+*value*<br/>
 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數的參考。
 
 *nChars*<br/>
@@ -85,7 +85,7 @@ void AFXAPI DDV_MinMaxByte(
 *pDX*<br/>
 `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。
 
-*值*<br/>
+*value*<br/>
 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數的參考。
 
 *minVal*<br/>
@@ -159,7 +159,7 @@ void AFXAPI DDV_MinMaxDouble(
 *pDX*<br/>
 `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。
 
-*值*<br/>
+*value*<br/>
 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數的參考。
 
 *minVal*<br/>
@@ -193,7 +193,7 @@ void AFXAPI DDV_MinMaxDWord(
 *pDX*<br/>
 `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。
 
-*值*<br/>
+*value*<br/>
 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數的參考。
 
 *minVal*<br/>
@@ -227,7 +227,7 @@ void AFXAPI DDV_MinMaxFloat(
 *pDX*<br/>
 `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。
 
-*值*<br/>
+*value*<br/>
 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數的參考。
 
 *minVal*<br/>
@@ -261,7 +261,7 @@ void AFXAPI DDV_MinMaxInt(
 *pDX*<br/>
 `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。
 
-*值*<br/>
+*value*<br/>
 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數的參考。
 
 *minVal*<br/>
@@ -295,7 +295,7 @@ void AFXAPI DDV_MinMaxLong(
 *pDX*<br/>
 `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。
 
-*值*<br/>
+*value*<br/>
 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數的參考。
 
 *minVal*<br/>
@@ -329,7 +329,7 @@ void AFXAPI DDV_MinMaxLongLong(
 *pDX*<br/>
 `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。
 
-*值*<br/>
+*value*<br/>
 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數的參考。
 
 *minVal*<br/>
@@ -403,7 +403,7 @@ void AFXAPI DDV_MinMaxShort(
 *pDX*<br/>
 `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。
 
-*值*<br/>
+*value*<br/>
 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數的參考。
 
 *minVal*<br/>
@@ -437,7 +437,7 @@ void AFXAPI DDV_MinMaxSlider(
 *pDX*<br/>
 指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。 架構會提供此物件來建立資料交換的內容，包括其方向。
 
-*值*<br/>
+*value*<br/>
 若要驗證值的參考。 此參數保留或設定滑桿控制項的目前捲動方塊位置。
 
 *minVal*<br/>
@@ -471,7 +471,7 @@ void AFXAPI DDV_MinMaxUInt(
 *pDX*<br/>
 `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。
 
-*值*<br/>
+*value*<br/>
 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數的參考。
 
 *minVal*<br/>
@@ -505,7 +505,7 @@ void AFXAPI DDV_MinMaxULongLong(
 *pDX*<br/>
 `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。
 
-*值*<br/>
+*value*<br/>
 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數的參考。
 
 *minVal*<br/>
@@ -521,11 +521,6 @@ void AFXAPI DDV_MinMaxULongLong(
 ### <a name="requirements"></a>需求
 
   **標頭**afxdd_.h
-
-## <a name="see-also"></a>另請參閱
-
-[標準對話方塊資料交換常式](../../mfc/reference/standard-dialog-data-exchange-routines.md)<br/>
-[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)
 
 ## <a name="ddvminmaxunsigned"></a>DDV_MinMaxUnsigned
 
@@ -546,7 +541,7 @@ void AFXAPI DDV_MinMaxULongLong(
 *pDX*<br/>
 `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。
 
-*值*<br/>
+*value*<br/>
 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數的參考。
 
 *minVal*<br/>
@@ -563,9 +558,10 @@ void AFXAPI DDV_MinMaxULongLong(
 
 **標頭：** afxdd_.h
 
-### <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>另請參閱
 
+[標準對話方塊資料交換常式](standard-dialog-data-exchange-routines.md)<br/>
 [巨集和全域](mfc-macros-and-globals.md)<br/>
-[DDX_Slider](#ddx_slider)<br/>
-[DDX_FieldSlider](#ddx_fieldslider)
+[DDX_Slider](standard-dialog-data-exchange-routines.md#ddx_slider)<br/>
+[DDX_FieldSlider](dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md#ddx_fieldslider)
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-ms.openlocfilehash: 06153a72ce6ed6e5422022255eec333110709778
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 374618aba297fb2c055ce02f93d0c7c93b38dc06
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618305"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850173"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>標準對話方塊資料交換常式
 
@@ -90,7 +90,7 @@ void AFXAPI DDX_CBString(
 *nIDC*<br/>
 下拉式方塊控制項的控制項屬性相關聯的資源識別碼。
 
-*值*<br/>
+*value*<br/>
 對話方塊、 表單檢視中或用來交換資料的控制項檢視物件的成員變數的參考。
 
 ### <a name="remarks"></a>備註
@@ -125,7 +125,7 @@ void AFXAPI DDX_CBStringExact(
 *nIDC*<br/>
 下拉式方塊控制項的控制項屬性相關聯的資源識別碼。
 
-*值*<br/>
+*value*<br/>
 對話方塊、 表單檢視中或用來交換資料的控制項檢視物件的成員變數的參考。
 
 ### <a name="remarks"></a>備註
@@ -160,7 +160,7 @@ void AFXAPI DDX_Check(
 *nIDC*<br/>
 核取方塊控制項的控制項屬性相關聯的資源識別碼。
 
-*值*<br/>
+*value*<br/>
 對話方塊、 表單檢視中或用來交換資料的控制項檢視物件的成員變數的參考。
 
 ### <a name="remarks"></a>備註
@@ -234,7 +234,7 @@ void AFXAPI DDX_DateTimeCtrl(
 *nIDC*<br/>
 成員變數相關聯的日期和時間選擇器控制項的資源識別碼。
 
-*值*<br/>
+*value*<br/>
 在前兩個版本中，參考`CTime`或`COleDateTime`成員變數、 對話方塊、 表單檢視中或用來交換資料的控制項檢視物件。 在第三個版本中，參考`CString`資料成員控制項檢視物件。
 
 ### <a name="remarks"></a>備註
@@ -278,16 +278,11 @@ void DDX_ManagedControl(
 
 `DDX_ManagedControl` 呼叫[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)建立控制項，比對資源的控制項 id。 使用`DDX_ManagedControl`若要從資源識別碼，在建立控制項[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)。 資料交換，您不需要使用 Windows Form 控制項使用 DDX/DDV 函式。
 
-如需詳細資訊，請參閱 <<c0> [ 如何： 使用 Windows Form 執行 DDX/DDV 資料繫](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)。
+如需詳細資訊，請參閱[＜How to：執行 DDX/DDV 資料繫結 Windows form](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)。
 
 ### <a name="requirements"></a>需求
 
 **標頭：** afxwinforms.h
-
-### <a name="see-also"></a>另請參閱
-
-[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
-[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)
 
 ##  <a name="ddx_ipaddress"></a>  DDX_IPAddress
 
@@ -308,7 +303,7 @@ void AFXAPI DDX_IPAddress(
 *nIDC*<br/>
 IP 位址相關聯的控制項與控制項屬性的資源識別碼。
 
-*值*<br/>
+*value*<br/>
 包含四個欄位值的 IP 位址控制項的 DWORD 參考。 欄位會填入，或讀取，如下所示。
 
 |欄位|包含欄位值的位元|
@@ -381,7 +376,7 @@ void AFXAPI DDX_LBString(
 *nIDC*<br/>
 清單方塊控制項的控制項屬性相關聯的資源識別碼。
 
-*值*<br/>
+*value*<br/>
 對話方塊、 表單檢視中或用來交換資料的控制項檢視物件的成員變數的參考。
 
 ### <a name="remarks"></a>備註
@@ -418,7 +413,7 @@ void AFXAPI DDX_LBStringExact(
 *nIDC*<br/>
 清單方塊控制項的控制項屬性相關聯的資源識別碼。
 
-*值*<br/>
+*value*<br/>
 對話方塊、 表單檢視中或用來交換資料的控制項檢視物件的成員變數的參考。
 
 ### <a name="remarks"></a>備註
@@ -460,7 +455,7 @@ void AFXAPI DDX_MonthCalCtrl(
 *nIDC*<br/>
 月曆控制項的資源識別碼相關聯的成員變數。
 
-*值*<br/>
+*value*<br/>
 參考`CTime`或`COleDateTime`對話方塊、 表單檢視中或用來交換資料的控制項檢視物件的成員變數。
 
 ### <a name="remarks"></a>備註
@@ -495,7 +490,7 @@ void AFXAPI DDX_Radio(
 *nIDC*<br/>
 第一個選項控制項群組中的資源識別碼。
 
-*值*<br/>
+*value*<br/>
 對話方塊、 表單檢視中或用來交換資料的控制項檢視物件的成員變數的參考。
 
 ### <a name="remarks"></a>備註
@@ -529,7 +524,7 @@ void AFXAPI DDX_Scroll(
 *nIDC*<br/>
 捲軸控制項的控制項屬性相關聯的資源識別碼。
 
-*值*<br/>
+*value*<br/>
 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。
 
 ### <a name="remarks"></a>備註
@@ -561,7 +556,7 @@ void AFXAPI DDX_Slider(
 *nIDC*<br/>
 滑桿控制項的資源識別碼。
 
-*值*<br/>
+*value*<br/>
 要交換值的參考。 此參數保留或設定滑桿控制項的目前位置。
 
 ### <a name="remarks"></a>備註
@@ -643,7 +638,7 @@ void AFXAPI DDX_Text(
 *nIDC*<br/>
 在對話方塊、 表單檢視或控制項檢視物件中編輯控制項的 ID。
 
-*值*<br/>
+*value*<br/>
 在對話方塊、 表單檢視或控制項檢視物件中的資料成員參考。 資料類型*值*取決於其中一個多載版本`DDX_Text`您使用。
 
 ### <a name="remarks"></a>備註
@@ -656,5 +651,7 @@ void AFXAPI DDX_Text(
 
 ## <a name="see-also"></a>另請參閱
 
-[標準對話方塊資料驗證常式](../../mfc/reference/standard-dialog-data-validation-routines.md)<br/>
-[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)
+[標準對話方塊資料驗證常式](standard-dialog-data-validation-routines.md)<br/>
+[巨集和全域](mfc-macros-and-globals.md)<br/>
+[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
+[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)

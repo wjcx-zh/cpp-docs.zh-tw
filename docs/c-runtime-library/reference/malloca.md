@@ -23,12 +23,12 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: 8c8ce8bdf8ab40cae45ecec9c4b182bdf3d6bc82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22a63002c900d69e8a7706a54acedf0b4b4f6376
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563978"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850406"
 ---
 # <a name="malloca"></a>_malloca
 
@@ -51,13 +51,13 @@ void *_malloca(
 
 **_Malloca**常式會傳回**void**指標至配置的空間保證會適當地對齊任何物件類型的儲存體。 如果*大小*為 0， **_malloca**配置零長度項目，並傳回該項目的有效指標。
 
-如果無法配置空間，則會產生堆疊溢位例外狀況。 堆疊溢位例外狀況不是 C++ 例外狀況，而是結構化例外狀況。 您必須使用[結構化例外狀況處理](../../cpp/structured-exception-handling-c-cpp.md) (SEH)，而不是使用 C++ 例外狀況處理。
+如果*大小*大於 **_ALLOCA_S_THRESHOLD**，然後 **_malloca**嘗試配置到堆積上，並傳回 null 指標，如果無法配置空間。 如果*大小*小於或等於 **_ALLOCA_S_THRESHOLD**，然後 **_malloca**空間無法嘗試配置的堆疊和堆疊溢位例外狀況時產生配置。 堆疊溢位例外狀況不是 c + + 例外狀況;它是結構化例外狀況。 而不是使用 c + + 例外狀況處理，您必須使用[Structured Exception Handling](../../cpp/structured-exception-handling-c-cpp.md) (SEH) 會攔截此例外狀況。
 
 ## <a name="remarks"></a>備註
 
 **_malloca**配置*大小*從程式堆疊或堆積中，如果要求超過特定大小 （位元組） 所指定的位元組 **_ALLOCA_S_THRESHOLD**。 之間的差異 **_malloca**並 **_alloca**在於 **_alloca**一律會配置在堆疊上，不論大小為何。 不同於 **_alloca**，這並不需要或不允許呼叫**免費**釋放配置的記憶體， **_malloca**需要使用[_freea](freea.md)釋放記憶體。 在偵錯模式中， **_malloca**一律從堆積中配置記憶體。
 
-若要明確呼叫的限制 **_malloca**例外狀況處理常式 (EH) 中。 在 x86 等級處理器上執行的 EH 常式會在自己的記憶體框架中運作︰這些常式會在不是根據封入函式之堆疊指標目前位置的記憶體空間中執行其工作。 最常見的實作包括 Windows NT 結構化例外狀況處理 (SEH) 和 C++ catch 子句運算式。 因此，明確呼叫 **_malloca**任何下列案例中的結果傳回給呼叫的 EH 常式期間的程式發生失敗：
+若要明確呼叫的限制 **_malloca**例外狀況處理常式 (EH) 中。 在 x86 等級處理器執行的 EH 常式操作自己的記憶體框架中：它們不根據封入函式之堆疊指標的目前位置的記憶體空間中執行其工作。 最常見的實作包括 Windows NT 結構化例外狀況處理 (SEH) 和 C++ catch 子句運算式。 因此，明確呼叫 **_malloca**任何下列案例中的結果傳回給呼叫的 EH 常式期間的程式發生失敗：
 
 - Windows NT SEH 例外狀況篩選條件運算式： **__except** (`_malloca ()` )
 

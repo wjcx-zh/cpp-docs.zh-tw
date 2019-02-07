@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: fb5d35782e70924605fd344e2c330e18d611f44c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fce6fb938b501da7bc9251de51c71714e4613fd5
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519200"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850281"
 ---
 # <a name="run-time-object-model-services"></a>執行階段物件模型服務
 
@@ -25,7 +25,7 @@ ms.locfileid: "51519200"
 
 下表列出支援的執行階段類別資訊、序列化和動態建立的 MFC 巨集。
 
-如需有關這些執行階段物件服務和序列化的詳細資訊，請參閱文章[CObject 類別： 存取執行階段類別資訊](../../mfc/accessing-run-time-class-information.md)。
+如需有關這些執行階段物件服務和序列化的詳細資訊，請參閱文章[CObject 類別：存取執行階段類別資訊](../../mfc/accessing-run-time-class-information.md)。
 
 ### <a name="run-time-object-model-services-macros"></a>執行階段物件模型服務巨集
 
@@ -34,7 +34,7 @@ ms.locfileid: "51519200"
 |[DECLARE_DYNAMIC](#declare_dynamic)|啟用對於執行階段類別資訊的存取 (必須在類別宣告中使用)。|
 |[DECLARE_DYNCREATE](#declare_dyncreate)|啟用動態建立和存取執行階段類別資訊 (必須在類別宣告中使用)。|
 |[DECLARE_SERIAL](#declare_serial)|啟用序列化和存取執行階段類別資訊 (必須在類別宣告中使用)。|
-|[您的類別](#implement_dynamic)|啟用對執行階段類別資訊的存取 (必須在類別實作中使用)。|
+|[IMPLEMENT_DYNAMIC](#implement_dynamic)|啟用對執行階段類別資訊的存取 (必須在類別實作中使用)。|
 |[IMPLEMENT_DYNCREATE](#implement_dyncreate)|啟用動態建立和存取執行階段資訊 (必須在類別實作中使用)。|
 |[IMPLEMENT_SERIAL](#implement_serial)|允許序列化和存取執行階段類別資訊 (必須在類別實作中使用)。|
 |[RUNTIME_CLASS](#runtime_class)|傳回對應至已命名類別的 `CRuntimeClass` 結構。|
@@ -68,7 +68,7 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 
 ### <a name="parameters"></a>參數
 
-*程序*<br/>
+*proc*<br/>
 包含函式名稱以 Null 結束之字串的指標或指定函式的序數值。 如果這個參數是序數值，它必須是低序位文字；高序位文字必須為零。 這個參數必須是 Unicode 值。
 
 ### <a name="remarks"></a>備註
@@ -78,11 +78,6 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 ### <a name="requirements"></a>需求
 
 afxcomctl32.h、afxcomctl32.inl
-
-### <a name="see-also"></a>另請參閱
-
-[MFC 通用控制項程式庫的隔離](../isolation-of-the-mfc-common-controls-library.md)<br/>
-[AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)
 
 ## <a name="afx_comctl32_if_exists2"></a>  AFX_COMCTL32_IF_EXISTS2
 
@@ -96,7 +91,7 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 
 ### <a name="parameters"></a>參數
 
-*程序*<br/>
+*proc*<br/>
 包含函式名稱以 Null 結束之字串的指標或指定函式的序數值。 如果這個參數是序數值，它必須是低序位文字；高序位文字必須為零。 這個參數必須是 Unicode 值。
 
 ### <a name="remarks"></a>備註
@@ -106,11 +101,6 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 ### <a name="requirements"></a>需求
 
 afxcomctl32.h、afxcomctl32.inl
-
-### <a name="see-also"></a>另請參閱
-
-[MFC 通用控制項程式庫的隔離](../isolation-of-the-mfc-common-controls-library.md)<br/>
-[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
 
 ##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC
 
@@ -200,10 +190,6 @@ DECLARE_OLECTLTYPE( class_name )
 
 **標頭：** afxctl.h
 
-### <a name="see-also"></a>另請參閱
-
-[IMPLEMENT_OLECTLTYPE](#implement_olectltype)
-
 ## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
 
 宣告 OLE 控制項提供一份屬性頁以顯示其屬性。
@@ -223,16 +209,11 @@ DECLARE_PROPPAGEIDS( class_name )
 
 使用`DECLARE_PROPPAGEIDS`巨集，在類別宣告的結尾。 接著，在定義類別的成員函式的.cpp 檔案，使用`BEGIN_PROPPAGEIDS`巨集、 巨集項目，每個控制項的屬性頁，而`END_PROPPAGEIDS`巨集來宣告屬性頁面清單的結尾。
 
-如需有關屬性頁的詳細資訊，請參閱文章[ActiveX 控制項： 屬性頁](../mfc-activex-controls-property-pages.md)。
+如需有關屬性頁的詳細資訊，請參閱文章[ActiveX 控制項：屬性頁](../mfc-activex-controls-property-pages.md)。
 
 ### <a name="requirements"></a>需求
 
 **標頭：** afxctl.h
-
-### <a name="see-also"></a>另請參閱
-
-[BEGIN_PROPPAGEIDS](#begin_proppageids)<br/>
-[END_PROPPAGEIDS](#end_proppageids)
 
 ##  <a name="declare_serial"></a>  DECLARE_SERIAL
 
@@ -271,7 +252,7 @@ DECLARE_SERIAL 巨集包括 DECLARE_DYNAMIC 和 DECLARE_DYNCREATE 的所有功�
 
 **標頭：** afx.h
 
-##  <a name="implement_dynamic"></a>  您的類別
+##  <a name="implement_dynamic"></a>  IMPLEMENT_DYNAMIC
 
 產生的 c + + 程式碼所需的動態`CObject`-衍生類別的執行階段存取的類別名稱與階層內的位置。
 
@@ -355,7 +336,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 *class_name*<br/>
 類別的實際名稱。
 
-*無法使用 external_name*<br/>
+*external_name*<br/>
 物件名稱公開給其他應用程式 （以引號括住）。
 
 *nFlags*<br/>
@@ -381,12 +362,6 @@ OLE 類別 ID 是唯一的 128 位元識別項的物件。 它包含一個**長*
 ### <a name="requirements"></a>需求
 
 **標頭：** afxdisp.h
-
-### <a name="see-also"></a>另請參閱
-
-[巨集和全域](mfc-macros-and-globals.md)<br/>
-[DECLARE_OLECREATE](#declare_olecreate)<br/>
-[CLSID 金鑰](/windows/desktop/com/clsid-key-hklm)
 
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
 
@@ -416,16 +391,11 @@ IMPLEMENT_OLECTLTYPE，除了您就必須在您的控制項類別宣告中加入
 `GetUserTypeNameID`成員函式傳回的資源字串，識別您的控制項類別。 `GetMiscStatus` 傳回 OLEMISC 位元，為您的控制項。 此列舉會指定設定描述控制項的其他特性的集合。 OLEMISC 設定的完整說明，請參閱[OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) Windows SDK 中。
 
 > [!NOTE]
->  ActiveX ControlWizard 所使用的預設值為： OLEMISC_ACTIVATEWHENVISIBLE、 OLEMISC_SETCLIENTSITEFIRST、 OLEMISC_INSIDEOUT、 OLEMISC_CANTLINKINSIDE 和 OLEMISC_RECOMPOSEONRESIZE。
+>  ActiveX ControlWizard 所使用的預設設定如下：OLEMISC_ACTIVATEWHENVISIBLE、 OLEMISC_SETCLIENTSITEFIRST、 OLEMISC_INSIDEOUT、 OLEMISC_CANTLINKINSIDE 和 OLEMISC_RECOMPOSEONRESIZE。
 
 ### <a name="requirements"></a>需求
 
 **標頭：** afxctl.h
-
-### <a name="see-also"></a>另請參閱
-
-[巨集和全域](mfc-macros-and-globals.md)<br/>
-[DECLARE_OLECTLTYPE](#declare_olectltype)
 
 ##  <a name="implement_serial"></a>  IMPLEMENT_SERIAL
 
@@ -529,7 +499,7 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
 *class_name*<br/>
 類別的實際名稱。
 
-*無法使用 external_name*<br/>
+*external_name*<br/>
 物件名稱公開給其他應用程式 （以引號括住）。
 
 *l*， *w1*， *w2*， *b1*， *b2*， *b3*， *b4* *b5*， *b6*， *b7*， *b8*元件之類別的 CLSID。
@@ -549,5 +519,7 @@ OLE 類別 ID 是唯一的 128 位元識別項的物件。 它包含一個**長*
 
 ## <a name="see-also"></a>另請參閱
 
-[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)
+[巨集和全域](mfc-macros-and-globals.md)<br/>
+[MFC 通用控制項程式庫的隔離](../isolation-of-the-mfc-common-controls-library.md)<br/>
+[CLSID 金鑰](/windows/desktop/com/clsid-key-hklm)
 

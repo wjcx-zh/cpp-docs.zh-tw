@@ -2,12 +2,12 @@
 title: __fastfail
 ms.date: 11/04/2016
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
-ms.openlocfilehash: b05c86148014a4a34d852d1a00caeb71ee136548
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e96d981be5c5186d6cc472cc8f4dffcbf1c2b7bf
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521381"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849472"
 ---
 # <a name="fastfail"></a>__fastfail
 
@@ -41,6 +41,7 @@ void __fastfail(unsigned int code);
 |x86|int 0x29|ecx|
 |X64|int 0x29|rcx|
 |ARM|Opcode 0xDEFB|r0|
+|ARM64|Opcode 0xF003|x0|
 
 快速失敗要求是獨立的，通常僅需要執行兩個指令。 執行快速失敗要求後，核心就會採取適當的動作。 在使用者模式程式碼中，當引發快速失敗事件時，沒有超出指令指標本身的記憶體相依性。 即使有嚴重的記憶體損毀，這仍可會使其可靠性達到最大。
 
@@ -56,7 +57,7 @@ void __fastfail(unsigned int code);
 
 |內建|架構|
 |---------------|------------------|
-|`__fastfail`|x86、 x64、 ARM|
+|`__fastfail`|x86、 x64、 ARM、 ARM64|
 
 **標頭檔** \<intrin.h >
 

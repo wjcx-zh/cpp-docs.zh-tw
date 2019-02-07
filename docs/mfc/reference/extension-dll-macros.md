@@ -4,12 +4,12 @@ ms.date: 04/03/2017
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 66c3477c7f2901cd9986a8b52e3d9287191e7b4b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 1d0cbd1f702a1d26dd2eaafd88efcfd61f52ff78
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329588"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850212"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>巨集和管理 Dll 函式
 
@@ -85,10 +85,6 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
 
 **標頭：** afxstat_.h
 
-### <a name="see-also"></a>另請參閱
-
-[AfxGetStaticModuleState](#afxgetstaticmodulestate)
-
 ## <a name="a-nameafxoleinitmodulea-afxoleinitmodule"></a><a name="afxoleinitmodule"><a/> AfxOleInitModule
 
 如需 OLE 支援從動態連結至 MFC 之標準 MFC DLL，呼叫此函式在您的標準 MFC DLL 的`CWinApp::InitInstance`函式來初始化 MFC OLE DLL。
@@ -109,11 +105,6 @@ MFC OLE DLL 是一個 MFC 擴充 DLL;為了讓 MFC 擴充 DLL 連結至`CDynLink
 
 **標頭**: \<afxdll_.h >
 
-### <a name="see-also"></a>另請參閱
-
-[巨集和全域](mfc-macros-and-globals.md)<br/>
-[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)
-
 ## <a name="afxnetinitmodule"></a>  AfxNetInitModule
 
 MFC 通訊端支援從動態連結至 MFC 之標準 MFC DLL，將呼叫此函式新增在您的標準 MFC DLL 的`CWinApp::InitInstance`函式來初始化 MFC 通訊端 DLL。
@@ -131,11 +122,6 @@ MFC 通訊端 DLL 是一個 MFC 擴充 DLL;為了讓 MFC 擴充 DLL 連結至`CD
 ### <a name="requirements"></a>需求
 
 **標頭：** \<afxdll_.h >
-
-### <a name="see-also"></a>另請參閱
-
-[巨集和全域](mfc-macros-and-globals.md)<br/>
-[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)
 
 ## <a name="afxgetambientactctx"></a> AfxGetAmbientActCtx
 
@@ -162,13 +148,6 @@ BOOL AFXAPI AfxGetAmbientActCtx();
 ### <a name="requirements"></a>需求
 
 **標頭：** afxcomctl32.h
-
-### <a name="see-also"></a>另請參閱
-
-[巨集和全域](mfc-macros-and-globals.md)<br/>
-[AFX_MANAGE_STATE](#afx_manage_state)<br/>
-[管理 MFC 模組的狀態資料](../managing-the-state-data-of-mfc-modules.md)<br/>
-[AfxSetAmbientActCtx](#setambientactctx)
 
 ## <a name="afxgetstaticmodulestate"></a> AfxGetStaticModuleState
 
@@ -259,11 +238,6 @@ MFC 擴充 Dll 需要做兩件事，在其`DllMain`函式：
 
 **標頭：** afxdll_.h
 
-### <a name="see-also"></a>另請參閱
-
-[巨集和全域](mfc-macros-and-globals.md)<br/>
-[AfxTermExtensionModule](#afxtermextensionmodule)
-
 ## <a name="afxsetambientactctx"></a>  AfxSetAmbientActCtx
 
 使用這個函式來設定每個模組狀態旗標，這些旗標會影響 MFC 的 WinSxS 行為。
@@ -299,13 +273,6 @@ BOOL CMFCListViewApp::InitInstance()
 
 **標頭：** afxcomctl32.h
 
-### <a name="see-also"></a>另請參閱
-
-[巨集和全域](mfc-macros-and-globals.md)<br/>
-[AfxGetAmbientActCtx](#afxgetambientactctx)<br/>
-[AFX_MANAGE_STATE](#afx_manage_state)<br/>
-[管理 MFC 模組的狀態資料](../managing-the-state-data-of-mfc-modules.md)
-
 ## <a name="afxtermextensionmodule"></a>  AfxTermExtensionModule
 
 呼叫此函式時，允許 MFC 清理 MFC 擴充 DLL 從 DLL 卸離的每個處理序 (或的卸載 DLL 時的處理序結束時，恰好`AfxFreeLibrary`呼叫)。
@@ -321,7 +288,7 @@ void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = 
 *state*<br/>
 參考[AFX_EXTENSION_MODULE](afx-extension-module-structure.md)結構，包含 MFC 擴充 DLL 模組的狀態。
 
-*球*<br/>
+*bAll*<br/>
 如果為 TRUE，清除所有的 MFC 擴充 DLL 模組。 否則，清除目前 DLL 模組。
 
 ### <a name="remarks"></a>備註
@@ -366,7 +333,8 @@ MFC 擴充 Dll 需要呼叫[AfxInitExtensionModule](#afxinitextensionmodule)在�
 
 **標頭：** afxdll_.h
 
-### <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>另請參閱
 
 [巨集和全域](mfc-macros-and-globals.md)<br/>
-[AfxInitExtensionModule](#afxinitextensionmodule)
+[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)<br/>
+[管理 MFC 模組的狀態資料](../managing-the-state-data-of-mfc-modules.md)<br/>

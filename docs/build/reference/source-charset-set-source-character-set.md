@@ -1,18 +1,18 @@
 ---
 title: /source-charset （設定來源字元集）
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - source-charset
 - /source-charset
 helpviewer_keywords:
 - /execution-charset compiler option
 ms.assetid: d3c5bf7f-526d-4ee4-acc5-c1a02a4fc481
-ms.openlocfilehash: 6927c6e54a89f619182916c561dcbe7d1c92a25b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a204000be6e4e434b6ef4aabf6bbc0db1593fb0
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663823"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849713"
 ---
 # <a name="source-charset-set-source-character-set"></a>/source-charset （設定來源字元集）
 
@@ -48,9 +48,9 @@ IANA 定義字元集名稱。
 
 1. 依序展開**組態屬性**， **C/c + +**，**命令列**資料夾。
 
-1. 在 **進階選項**，新增 **/source-charset**選項，並指定您慣用的編碼方式。
+1. 在 **其他選項**，新增 **/source-charset**選項，並指定您慣用的編碼方式。
 
-1. 選擇**確定**以儲存變更。
+1. 選取 [確定] 儲存您的變更。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /utf-8 compiler option
 ms.assetid: f0e1f3cb-6cae-46eb-9483-04ed13d9b504
-ms.openlocfilehash: cb71e1846348adf4cf8a8eb385e6c5f7ac2bac74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efe37f66790832874f7ff2aa9623b07b5fba5371
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636523"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55851631"
 ---
 # <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/utf-8 （將來源和可執行檔字元集設定為 utf-8）
 
@@ -35,9 +35,9 @@ ms.locfileid: "50636523"
 
 1. 依序展開**組態屬性**， **C/c + +**，**命令列**資料夾。
 
-1. 在 **進階選項**，新增 **/utf-8**選項，並指定您慣用的編碼方式。
+1. 在 **其他選項**，新增 **/utf-8**選項來指定您慣用的編碼方式。
 
-1. 選擇**確定**以儲存變更。
+1. 選取 [確定] 儲存您的變更。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,5 +1,5 @@
 ---
-title: MFC：使用具有文件和檢視的資料庫類別
+title: MFC:使用具有文件和檢視資料庫類別
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [C++], database applications
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], documents and views
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
-ms.openlocfilehash: 5e4610af199f1fd19c1edd71a8fd67bd82ab9a8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8bb3be7cdc253f53b50898cfc3ee840e70b2d68
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624831"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849740"
 ---
-# <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC：使用具有文件和檢視的資料庫類別
+# <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC:使用具有文件和檢視資料庫類別
 
 使用或不使用文件/檢視架構，您可以使用 MFC 資料庫類別。 本主題著重在使用文件和檢視。 它會說明：
 
@@ -31,7 +31,7 @@ ms.locfileid: "50624831"
 
 - [其他考量](#_core_other_factors)。
 
-替代項目，請參閱 < [MFC： 使用資料庫類別不具文件和檢視表](../data/mfc-using-database-classes-without-documents-and-views.md)。
+替代項目，請參閱[MFC:使用不具文件和檢視的資料庫類別](../data/mfc-using-database-classes-without-documents-and-views.md)。
 
 ##  <a name="_core_writing_a_form.2d.based_application"></a> 撰寫以 Form 為基礎的應用程式
 
@@ -63,14 +63,14 @@ ms.locfileid: "50624831"
 
 ##  <a name="_core_other_factors"></a> 其他因素
 
-表單架構應用程式通常並沒有任何使用架構的文件序列化機制，因此您可能想要移除、 停用，或取代**的新**並**開啟**命令**檔案**功能表。 請參閱文章[序列化： 序列化 vs。資料庫輸入/輸出](../mfc/serialization-serialization-vs-database-input-output.md)。
+表單架構應用程式通常並沒有任何使用架構的文件序列化機制，因此您可能想要移除、 停用，或取代**的新**並**開啟**命令**檔案**功能表。 請參閱文章[序列化：序列化與資料庫輸入/輸出](../mfc/serialization-serialization-vs-database-input-output.md)。
 
 您也可能會想要使用的架構可支援許多使用者介面可能性。 例如，您可以使用多個`CRecordView`物件在分隔器視窗中，開啟多個資料錄集不同多個文件介面 (MDI) 子視窗，等。
 
 您可能想要實作列印中的檢視，無論是使用實作表單`CRecordView`或其他項目。 類別衍生自`CFormView`，`CRecordView`確實支援列印，但您可以覆寫`OnPrint`成員函式，允許進行列印。 如需詳細資訊，請參閱類別[CFormView](../mfc/reference/cformview-class.md)。
 
-您可能不想要完全使用文件和檢視。 在此情況下，請參閱 < [MFC： 使用資料庫類別不具文件和檢視表](../data/mfc-using-database-classes-without-documents-and-views.md)。
+您可能不想要完全使用文件和檢視。 在此情況下，請參閱[MFC:使用不具文件和檢視的資料庫類別](../data/mfc-using-database-classes-without-documents-and-views.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 資料庫類別 (.../ data/mfc-database-classes-odbc-and-dao.md）
+[MFC 資料庫類別](../data/mfc-database-classes-odbc-and-dao.md)

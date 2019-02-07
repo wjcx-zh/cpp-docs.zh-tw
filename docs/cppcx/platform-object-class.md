@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 6d5f3e21e14c34ffbeb335bc1ec4feebd5148c7f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 00f2b57bdf63f9f8bcfd9e544bebab2805ff7f65
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493609"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850087"
 ---
 # <a name="platformobject-class"></a>Platform::Object 類別
 
@@ -41,9 +41,9 @@ public ref class Object : Object
 
 |名稱|描述|
 |----------|-----------------|
-|[Object:: equals](#equals)|判斷指定的物件是否等於目前的物件。|
+|[Object::Equals](#equals)|判斷指定的物件是否等於目前的物件。|
 |[Object::GetHashCode](#gethashcode)|傳回這個執行個體的雜湊碼。|
-|[Object:: referenceequals](#referenceequals)|判斷指定的物件執行個體是否為相同的執行個體。|
+|[Object::ReferenceEquals](#referenceequals)|判斷指定的物件執行個體是否為相同的執行個體。|
 |[ToString](#tostring)|傳回代表目前物件的字串。 可以被覆寫。|
 |[GetType](#gettype)|取得可描述目前執行個體的 [Platform::Type](../cppcx/platform-type-class.md) 。|
 
@@ -124,12 +124,6 @@ A [platform:: type](../cppcx/platform-type-class.md)描述物件的執行階段�
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
 
-## <a name="see-also"></a>另請參閱
-
-[Platform::Type 類別](../cppcx/platform-type-class.md)<br/>
-[Platform 命名空間](../cppcx/platform-namespace-c-cx.md)<br/>
-[型別系統](../cppcx/type-system-c-cx.md
-
 ## <a name="ctor"></a>  Object:: object 建構函式
 
 初始化 Object 類別的新執行個體。
@@ -191,4 +185,6 @@ public:
 
 ## <a name="see-also"></a>另請參閱
 
-[Platform 命名空間](platform-namespace-c-cx.md)
+[Platform 命名空間](platform-namespace-c-cx.md)<br/>
+[Platform::Type 類別](platform-type-class.md)<br/>
+[類型系統](type-system-c-cx.md)

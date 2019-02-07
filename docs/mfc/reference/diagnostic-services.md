@@ -20,12 +20,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: dbb243453b6d869082a4232b12b27f5510d84aa5
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: a4979ab7bbc0e396de5629fba1b86f3bfb602dcf
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657626"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850436"
 ---
 # <a name="diagnostic-services"></a>診斷服務
 
@@ -320,12 +320,6 @@ ENSURE_VALID 呼叫 ASSERT_VALID 巨集 （這只在偵錯組建中沒有作用�
 
 **標頭：** afx.h
 
-### <a name="see-also"></a>另請參閱
-
-[巨集和全域](mfc-macros-and-globals.md)<br/>
-[VERIFY](#verify)<br/>
-[ATLENSURE](#altensure)
-
 ## <a name="this_file"></a> THIS_FILE
 
 展開要編譯之檔案的名稱。
@@ -355,12 +349,6 @@ static char THIS_FILE[] = __FILE__;
 ### <a name="requirements"></a>需求
 
 **標頭：** afx.h
-
-### <a name="see-also"></a>另請參閱
-
-[巨集和全域](mfc-macros-and-globals.md)<br/>
-[ASSERT](#assert)<br/>
-[VERIFY](#verify)
 
 ##  <a name="trace"></a>  TRACE
 
@@ -464,10 +452,6 @@ void AfxDump(const CObject* pOb);
 ### <a name="requirements"></a>需求
 
 **標頭：** afx.h
-
-### <a name="see-also"></a>另請參閱
-
-[CObject::Dump](cobject-class.md#dump)
 
 ##  <a name="afxmemdf"></a>  afxMemDF
 
@@ -581,10 +565,6 @@ void AfxDump(const CObject* pOb);
 ### <a name="requirements"></a>需求
 
 **標頭：** afx.h
-
-### <a name="see-also"></a>另請參閱
-
-[CObject::Dump](cobject-class.md#dump)
 
 ##  <a name="afxdumpstack"></a>  AfxDumpStack
 
@@ -856,7 +836,7 @@ AFX_ALLOC_HOOK AfxSetAllocHook(AFX_ALLOC_HOOK pfnAllocHook);
 
 Microsoft Foundation 類別庫偵錯記憶體配置器可以呼叫以允許使用者監視記憶體配置，並控制是否允許配置的使用者定義的攔截函式。 配置攔截函式原型如下所示：
 
-**BOOL AFXAPI AllocHook (size_t** `nSize` **，BOOL** `bObject`**完整** `lRequestNumber` **);**
+**BOOL AFXAPI AllocHook( size_t** `nSize`**, BOOL** `bObject`**, LONG** `lRequestNumber` **);**
 
 *nSize*<br/>
 建議的記憶體配置的大小。
@@ -942,4 +922,5 @@ void AfxDoForAllObjects(
 
 ## <a name="see-also"></a>另請參閱
 
-[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)
+[巨集和全域](mfc-macros-and-globals.md)<br/>
+[CObject::Dump](cobject-class.md#dump)

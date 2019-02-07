@@ -25,12 +25,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: a97f914905c2f98bc948b76e1d79d4af0f5dbadd
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2a076b666577920c940413fba4951f7de5f24fc6
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327495"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850255"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL 文字編碼函式
 
@@ -93,7 +93,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 
 ### <a name="parameters"></a>參數
 
-*保留*<br/>
+*pReserved*<br/>
 保留的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -721,7 +721,7 @@ inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();
 
 這個 uuencoding 實作遵循 POSIX P1003.2b/D11 規格。
 
-### <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>另請參閱
 
-[概念](../../atl/active-template-library-atl-concepts.md)<br/>
-[ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)
+[概念](../active-template-library-atl-concepts.md)<br/>
+[ATL COM 桌面元件](../atl-com-desktop-components.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-ms.openlocfilehash: 8765a0712fc79ee60041f9142fbd25f744246ac8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 144ca5cddb70dd04bf25d790c493d15d75b8163a
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477151"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850130"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>網際網路 URL 剖析全域和協助程式
 
@@ -102,13 +102,13 @@ URL 參考的物件 （可能是空的）。
 
 例如，`AfxParseURL`剖析表單的 Url *service://server/dir/dir/object.ext:port* ，並傳回其元件儲存，如下所示：
 
-*strServer* = ="server"
+*strServer* == "server"
 
-*strObject* = ="/ dir/dir/object/object.ext"
+*strObject* == "/dir/dir/object/object.ext"
 
-*nPort* = = #port
+*nPort* == #port
 
-*dwServiceType* = = #service
+*dwServiceType* == #service
 
 > [!NOTE]
 >  若要呼叫此函式，您的專案必須包含 AFXINET。H.
@@ -214,10 +214,6 @@ URL 參考的物件 （可能是空的）。
 
   **標頭**afxinet.h
 
-## <a name="see-also"></a>另請參閱
-
-[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)
-
 ## <a name="afxgetinternethandletype"></a>  AfxGetInternetHandleType
 
 您可以使用此全域函式來判斷的網際網路控制代碼型別。
@@ -274,11 +270,6 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 
 **標頭：** afxinet.h
 
-### <a name="see-also"></a>另請參閱
-
-[巨集和全域](mfc-macros-and-globals.md)<br/>
-[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
-
 ## <a name="afxthrowinternetexception"></a>  AfxThrowInternetException
 
 網際網路例外狀況會擲回。
@@ -308,9 +299,9 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 
 **標頭：** afxinet.h
 
-### <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>另請參閱
 
 [巨集和全域](mfc-macros-and-globals.md)<br/>
 [CInternetException 類別](cinternetexception-class.md)<br/>
-[擲回](#throw)
+[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
 

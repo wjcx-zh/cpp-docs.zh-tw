@@ -1,18 +1,18 @@
 ---
 title: /validate-charset （驗證字元相容)
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - /validate-charset
 - validate-charset
 helpviewer_keywords:
 - /validate-charset compiler option
 ms.assetid: 50360fd0-4d32-4a4f-95d0-53d38c12ad4c
-ms.openlocfilehash: 243d225f5acde0c6099050539687726ea082c898
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69b43b603ef4711e1acc0bd612e0e1c949722dc9
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590485"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850074"
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/validate-charset （驗證字元相容)
 
@@ -38,9 +38,9 @@ Visual Studio 會使用 utf-8，做為原始程式碼字元集和執行字元集
 
 1. 依序展開**組態屬性**， **C/c + +**，**命令列**資料夾。
 
-1. 在 **進階選項**，新增 **/validate-charset**選項，並指定您慣用的編碼方式。
+1. 在 **其他選項**，新增 **/validate-charset**選項，並指定您慣用的編碼方式。
 
-1. 選擇**確定**以儲存變更。
+1. 選取 [確定] 儲存您的變更。
 
 ## <a name="see-also"></a>另請參閱
 

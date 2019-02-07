@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-ms.openlocfilehash: 75ceaf3d0532a557f5227e64edece2155aacb72f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 306fb718e7c333e6ff603b7c6c88c10f03f567b5
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519864"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850333"
 ---
 # <a name="dhtml-event-maps"></a>DHTML 事件對應
 
@@ -93,7 +93,7 @@ BEGIN_DHTML_EVENT_MAP(className)
 
 ### <a name="parameters"></a>參數
 
-*類別名稱*<br/>
+*className*<br/>
 包含 DHTML 事件對應的類別名稱。 這個類別應該直接或間接衍生自[CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md) ，並包含[DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map)其類別定義中的巨集。
 
 ### <a name="remarks"></a>備註
@@ -118,7 +118,7 @@ BEGIN_DHTML_EVENT_MAP_INLINE(className)
 
 ### <a name="parameters"></a>參數
 
-*類別名稱*<br/>
+*className*<br/>
 包含 DHTML 事件對應的類別名稱。 這個類別應該直接或間接衍生自[CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md) ，並包含[DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map)其類別定義中的巨集。
 
 ### <a name="remarks"></a>備註
@@ -979,7 +979,7 @@ BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
 
 ### <a name="parameters"></a>參數
 
-*類別名稱*<br/>
+*className*<br/>
 包含事件對應的類別名稱。 這個類別應該直接或間接衍生自[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)。 內嵌的 DHTML 事件對應都必須位於[DHTML 和 URL 事件對應](#begin_dhtml_url_event_map))。
 
 *mapName*<br/>
@@ -1011,7 +1011,7 @@ BEGIN_URL_ENTRIES(className)
 
 ### <a name="parameters"></a>參數
 
-*類別名稱*<br/>
+*className*<br/>
 包含 URL 事件項目對應之類別的名稱。 這個類別應該直接或間接衍生自[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)。 URL 事件項目對應必須在內部[DHTML 和 URL 事件對應](#begin_dhtml_url_event_map))。
 
 ### <a name="remarks"></a>備註
@@ -1054,7 +1054,7 @@ END_DHTML_URL_EVENT_MAP(className)
 
 ### <a name="parameters"></a>參數
 
-*類別名稱*<br/>
+*className*<br/>
 包含事件對應的類別名稱。 這個類別應該直接或間接衍生自[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)。 這應該符合*className*中的對應[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)巨集。
 
 ### <a name="example"></a>範例
@@ -1107,10 +1107,10 @@ URL_EVENT_ENTRY(className, url,  mapName)
 
 ### <a name="parameters"></a>參數
 
-*類別名稱*<br/>
+*className*<br/>
 包含 URL 事件項目對應之類別的名稱。 這個類別應該直接或間接衍生自[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)。 URL 事件項目對應必須在內部[DHTML 和 URL 事件對應](#begin_dhtml_url_event_map))。
 
-*Url*<br/>
+*url*<br/>
 頁面 URL 或 HTML 資源。
 
 *mapName*<br/>
@@ -1148,6 +1148,6 @@ END_DHTML_EVENT_MAP_INLINE( )
 
 **標頭：** afxdhtml.h
 
-### <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>另請參閱
 
 [巨集和全域](mfc-macros-and-globals.md)

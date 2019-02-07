@@ -1,6 +1,6 @@
 ---
 title: 數學與浮點支援
-ms.date: 04/06/2018
+ms.date: 01/31/2019
 f1_keywords:
 - c.math
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: 9e1baeb7236e5b1144b52df0bd83cc0f4a4b7796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d03333dee12989af5897c34ba96484930a39673
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558232"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703125"
 ---
 # <a name="math-and-floating-point-support"></a>數學與浮點支援
 
@@ -69,7 +69,6 @@ ms.locfileid: "50558232"
 [fesetround](../c-runtime-library/reference/fegetround-fesetround2.md)|設定指定的浮點進位模式
 [fetestexcept](../c-runtime-library/reference/fetestexcept1.md)|決定要設定的浮點例外狀況狀態旗標
 [feupdateenv](../c-runtime-library/reference/feupdateenv.md)|先還原浮點環境再引發前一個例外狀況
-[_finite、_finitef](../c-runtime-library/reference/finite-finitef.md)|判斷值是否有限
 [floor、floorf、floorl](../c-runtime-library/reference/floor-floorf-floorl.md)|計算 floor
 [fma、fmaf、fmal](../c-runtime-library/reference/fma-fmaf-fmal.md)|計算積和熔加
 [fmax、fmaxf、fmaxl](../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)|計算引數的上限
@@ -87,7 +86,11 @@ ms.locfileid: "50558232"
 [ilogb、ilogbf、ilogbl](../c-runtime-library/reference/ilogb-ilogbf-ilogbl2.md)|計算以 2 為底數的整數指數
 [imaxabs](../c-runtime-library/reference/imaxabs.md)|計算任何類型整數的絕對值
 [imaxdiv](../c-runtime-library/reference/imaxdiv.md)|計算兩個整數值的商數和餘數
+[isfinite、_finite、_finitef](../c-runtime-library/reference/finite-finitef.md)|判斷值是否有限
+[isgreater、isgreaterequal、isless、islessequal、islessgreater、isunordered](../c-runtime-library/reference/floating-point-ordering.md)|比較兩個浮點值的順序
+[isinf](../c-runtime-library/reference/isinf.md)|判斷指定的浮點值是否無限
 [isnan、_isnan、_isnanf](../c-runtime-library/reference/isnan-isnan-isnanf.md)|測試 NaN 的浮點值
+[isnormal](../c-runtime-library/reference/isnormal.md)|測試浮點值是否為有限且為次正規數
 [_j0、_j1、_jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|計算 Bessel 函式
 [ldexp、ldexpf、ldexpl](../c-runtime-library/reference/ldexp.md)|計算 x*2<sup>n</sup>
 [lgamma、lgammaf、lgammal](../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)|計算 gamma 函式絕對值的自然對數
@@ -118,6 +121,7 @@ ms.locfileid: "50558232"
 [scalbn、scalbnf、scalbnl、scalbln、scalblnf、scalblnl](../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)|將浮點數與 **FLT_RADIX** 的整數冪相乘
 [_set_controlfp](../c-runtime-library/reference/set-controlfp.md)|設定浮點控制字組
 [_set_SSE2_enable](../c-runtime-library/reference/set-sse2-enable.md)|啟用或停用 SSE2 指令
+[signbit](../c-runtime-library/reference/signbit.md)|測試浮點值的正負號位元
 [sin、sinf、sinl](../c-runtime-library/reference/sin-sinf-sinl.md)|計算正弦值
 [sinh、sinhf、sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|計算雙曲正弦值
 [sqrt、sqrtf、sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|計算平方根
@@ -134,3 +138,4 @@ ms.locfileid: "50558232"
 ## <a name="see-also"></a>另請參閱
 
 [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[浮點數基本](../c-runtime-library/reference/floating-point-primitives.md)<br/>

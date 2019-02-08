@@ -3,6 +3,7 @@ title: HOW TO：建立資源指令碼檔案 （c + +）
 ms.date: 11/04/2016
 f1_keywords:
 - vc.editors.resource
+- vc.resvw.add.MFC
 helpviewer_keywords:
 - rc files [C++], creating
 - .rc files [C++], creating
@@ -14,20 +15,24 @@ helpviewer_keywords:
 - resource script files [C++], opening in text format
 - .rc files [C++], opening in text format
 - rc files [C++], opening in text format
+- rc files [C++], adding MFC support
+- .rc files [C++], adding MFC support
+- MFC, adding support to resource scripts files
+- resource script files [C++], adding MFC support
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: f3f0adff256742c98a672e40e6b31de9bd7a84ed
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 9055e0f787c238276d3134c2fa6a8afae0102433
+ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849954"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55905676"
 ---
 # <a name="how-to-create-a-resource-script-file-c"></a>HOW TO：建立資源指令碼檔案 （c + +）
 
 > [!NOTE]
 > **資源編輯器**不適用於 Express 版本。
 >
-> 這份資料適用於 Windows 桌面應用程式。 以 .NET 語言撰寫的專案不會使用資源指令碼檔。 如需詳細資訊，請參閱 <<c0> [ 資源檔](../windows/resource-files-visual-studio.md)，如需詳細資訊。
+> 這份資料適用於 Windows 桌面應用程式。 以 .NET 語言撰寫的專案不會使用資源指令碼檔。 如需詳細資訊，請參閱 <<c0> [ 資源檔](../windows/resource-files-visual-studio.md)。
 
 ## <a name="to-create-a-new-resource-script-rc-file"></a>建立新的資源指令碼 (.rc) 檔
 
@@ -119,6 +124,34 @@ ms.locfileid: "55849954"
 1. 在 [**方案總管] 中**，以滑鼠右鍵按一下.rc 檔。
 
 1. 從捷徑功能表，選擇 **開啟方式...**，然後選取**原始程式碼 （文字） 編輯器**。
+
+## <a name="to-add-mfc-support-to-resource-script-files"></a>將 MFC 支援新增至資源指令碼檔案
+
+一般來說，當您建置 MFC 應用程式使用 Windows [MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)，精靈會產生一組基本的檔案 （包括資源指令碼 (.rc) 檔），其中包含 Microsoft Foundation 的核心功能類別 (MFC)。 不過，如果您正在編輯.rc 檔，而不以 MFC 為基礎的 Windows 應用程式，無法使用特定 MFC 架構的下列功能：
+
+- MFC 程式碼精靈
+
+- 功能表提示字串
+
+- 下拉式方塊控制項的清單內容
+
+- ActiveX 控制項裝載
+
+不過，您可以將 MFC 支援加入現有的.rc 檔，不需要它。
+
+> [!NOTE]
+> 這些步驟需要 MFC。
+
+### <a name="to-add-mfc-support-to-rc-files"></a>將 MFC 支援加入至 .rc 檔
+
+1. 開啟資源指令碼檔案。
+
+1. 在 [資源檢視](../windows/resource-view-window.md)，反白顯示 [資源] 資料夾 (例如，MFC.rc)。
+
+1. 在 [[屬性] 視窗](/visualstudio/ide/reference/properties-window)，將**MFC 模式**屬性設 **，則為 True**。
+
+   > [!NOTE]
+   > 除了設定這個旗標外，.rc 檔必須是 MFC 專案的一部分。 比方說，就是直接設定**MFC 模式**要 **，則為 True** .rc 檔案是在 Win32 專案將不會提供您任何 MFC 功能。
 
 ## <a name="requirements"></a>需求
 

@@ -2,12 +2,12 @@
 title: 4. 環境變數
 ms.date: 01/16/2019
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
-ms.openlocfilehash: 558b835c36253fb67339fba9b46cb0170dd6d1d0
-ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
+ms.openlocfilehash: b41829fd9cf2f90312f669ef991f56dda02947f7
+ms.sourcegitcommit: 966e4466f10c93fc12faf33d28e03b39489423fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087193"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55987052"
 ---
 # <a name="4-environment-variables"></a>4.環境變數
 
@@ -31,7 +31,7 @@ ksh:
 DOS:  
 `set OMP_SCHEDULE="dynamic"`
 
-## <a name="41-ompschedule"></a>4.1 OMP_SCHEDULE
+## <a name="41-omp_schedule"></a>4.1 OMP_SCHEDULE
 
 `OMP_SCHEDULE` 僅適用於`for`並`parallel for`有排程類型的指示詞`runtime`。 在執行階段，就可以設定所有這類迴圈的排程類型與區塊大小。 設定這個環境變數，任何可辨識的排程類型，並選擇性*chunk_size*。
 
@@ -49,7 +49,7 @@ setenv OMP_SCHEDULE "dynamic"
 - [針對](2-directives.md#241-for-construct)指示詞
 - [針對平行](2-directives.md#251-parallel-for-construct)指示詞
 
-## <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
+## <a name="42-omp_num_threads"></a>4.2 OMP_NUM_THREADS
 
 `OMP_NUM_THREADS`環境變數設定的預設執行期間要使用的執行緒數目。 `OMP_NUM_THREADS` 如果明確地藉由呼叫來變更該數字，則會忽略`omp_set_num_threads`程式庫常式。 它也會忽略如果沒有明確`num_threads`上的子句`parallel`指示詞。
 
@@ -73,7 +73,7 @@ setenv OMP_NUM_THREADS 16
 - [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function)函式
 - [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) function
 
-## <a name="43-ompdynamic"></a>4.3 OMP_DYNAMIC
+## <a name="43-omp_dynamic"></a>4.3 OMP_DYNAMIC
 
 `OMP_DYNAMIC`環境變數啟用或停用動態調整可用的平行區域執行的執行緒數目。 `OMP_DYNAMIC` 動態調整是明確地啟用或停用藉由呼叫時，會忽略`omp_set_dynamic`程式庫常式。 其值必須是`TRUE`或`FALSE`。
 
@@ -90,7 +90,7 @@ setenv OMP_DYNAMIC TRUE
 - [平行區域](2-directives.md#23-parallel-construct)
 - [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) function
 
-## <a name="44-ompnested"></a>4.4 OMP_NESTED
+## <a name="44-omp_nested"></a>4.4 OMP_NESTED
 
 `OMP_NESTED`環境變數啟用或停用巢狀平行處理原則，除非巢狀平行處理原則已啟用或停用藉由呼叫`omp_set_nested`程式庫常式。 如果`OMP_NESTED`設為`TRUE`，巢狀平行處理原則已啟用。 如果`OMP_NESTED`設為`FALSE`巢狀平行處理原則已停用。 預設值為 `FALSE`。
 

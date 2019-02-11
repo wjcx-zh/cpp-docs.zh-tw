@@ -1,5 +1,5 @@
 ---
-title: 變更未指定的符號
+title: 變更或刪除未指定的符號
 ms.date: 11/04/2016
 f1_keywords:
 - vc.editors.symbol.changing.unassigned
@@ -7,28 +7,36 @@ helpviewer_keywords:
 - symbols [C++], unassigned
 - Change Symbol dialog box [C++]
 - unassigned symbols
+- symbols [C++], deleting
 ms.assetid: b6abee4a-3c24-4697-a166-fe6a86cad35f
-ms.openlocfilehash: d4e8fe86e9d95cb128efd2f80f6096fdb6798265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47cc3d7a387092afe77fdbcf4bbdb6d085eeda25
+ms.sourcegitcommit: 966e4466f10c93fc12faf33d28e03b39489423fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432460"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55987010"
 ---
-# <a name="changing-unassigned-symbols"></a>變更未指定的符號
+# <a name="changing-or-deleting-unassigned-symbols"></a>變更或刪除未指定的符號
 
-當您在[資源符號對話方塊](../windows/resource-symbols-dialog-box.md)，您可以編輯或刪除尚未指派給資源或物件的現有符號。
+當您在[資源符號對話方塊](../windows/resource-symbols-dialog-box.md)，您可以編輯或刪除現有的符號不是已指派給資源或物件。
 
-### <a name="to-change-an-unassigned-symbol"></a>變更未指派的符號
+如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。
 
-1. 在 **名稱**方塊中，選取未指派的符號，然後按一下**變更**。
+## <a name="to-change-an-unassigned-symbol"></a>變更未指派的符號
 
-2. 符號的名稱或值中提供的方塊中編輯**變更符號** 對話方塊。
+1. 在 **名稱**，選取 未指派的符號，然後選擇**變更**。
+
+1. 符號的名稱或值中提供的方塊中編輯**變更符號** 對話方塊。
 
    > [!NOTE]
    > 若要變更符號所*已*指派給資源或物件，您必須使用資源編輯器或**屬性**視窗。 如需詳細資訊，請參閱 <<c0> [ 變更符號或符號名稱](../windows/changing-a-symbol-or-symbol-name-id.md)。
 
-如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。
+## <a name="to-delete-an-unassigned-unused-symbol"></a>刪除未指派 (未使用) 的符號
+
+在 [資源符號對話方塊](../windows/resource-symbols-dialog-box.md)，選取您想要刪除，並選擇的符號**刪除**。
+
+   > [!NOTE]
+   > 在刪除資源檔中未使用的符號之前，請確定它未在程式的其他地方使用，或未由編譯時期包含的資源檔使用。
 
 ## <a name="requirements"></a>需求
 

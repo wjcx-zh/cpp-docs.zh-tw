@@ -1,14 +1,14 @@
 ---
 title: 在 Visual Studio 中安裝 C++ Linux 工作負載
 description: 描述如何在 Visual Studio 中下載、安裝和設定 Linux 工作負載。
-ms.date: 10/12/2018
+ms.date: 02/06/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 2fa4036ece6dd161c73a5176740870c5593f4669
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c01c8ddeeb8439a7610c0f6c7c11b608ab3675d8
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441921"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763879"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>下載、安裝和設定 Linux 工作負載
 
@@ -16,7 +16,7 @@ ms.locfileid: "50441921"
 
 ## <a name="visual-studio-setup"></a>Visual Studio 安裝程式
 
-1. 在 Windows 搜尋方塊：![Windows 搜尋方塊](media/visual-studio-installer-search.png) 中輸入「Visual Studio 安裝程式」
+1. 在 Windows 搜尋方塊中鍵入「Visual Studio 安裝程式」：![Windows 搜尋方塊](media/visual-studio-installer-search.png)
 2. 在 [應用程式] 結果下方尋找該安裝程式，然後按兩下。 安裝程式開啟後，選擇 [修改]，然後按一下 [工作負載]標籤。向下捲動至 [其他工具組]，然後選取 [使用 C++ 進行 Linux 開發] 工作負載。
 
    ![適用於 Linux 開發的 Visual C++ 工作負載](media/linuxworkload.png)
@@ -53,7 +53,7 @@ ms.locfileid: "50441921"
 
 1. 在 Linux 電腦的殼層提示字元中，執行︰
 
-   `sudo dnf install openssh-server g++ gdb gdbserver zip`
+   `sudo dnf install openssh-server gcc-g++ gdb gdb-gdbserver zip`
 
    因為是 sudo 命令，所以系統可能會提示您輸入根密碼。  如果是這樣，請輸入它後繼續。 完成後，將會安裝這些必要服務與工具。
 

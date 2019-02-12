@@ -11,12 +11,12 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: a0a5a51bfcb5265f7b415433c3f6b64423840ebe
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a6424f3414d9da17e52c0a9f78290497f5e5e01e
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522455"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56146888"
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16、__popcnt、__popcnt64
 
@@ -40,7 +40,7 @@ unsigned __int64 __popcnt64(
 
 #### <a name="parameters"></a>參數
 
-*值*<br/>
+*value*<br/>
 [in]16、 32 或 64 位元不帶正負號的整數，我們想要的母體擴展的計數。
 
 ## <a name="return-value"></a>傳回值
@@ -59,7 +59,7 @@ unsigned __int64 __popcnt64(
 
 ## <a name="remarks"></a>備註
 
-每個這些內建函式會產生`popcnt`指令。  值的大小，`popcnt`指令會傳回其引數的大小相同。  在 32 位元模式中有無 64 位元一般用途的暫存器，因此沒有 64 位元`popcnt`。
+每個這些內建函式會產生`popcnt`指令。 在 32 位元模式中有無 64 位元一般用途的暫存器，因此沒有 64 位元`popcnt`。
 
 若要判斷硬體支援`popcnt`指示，請呼叫`__cpuid`與內建`InfoType=0x00000001`並檢查位元 23 的`CPUInfo[2] (ECX)`。 此位元可說是支援的指示，則為 1 和 0。 如果您執行程式碼使用此內建在不支援的硬體上`popcnt`指令，結果會無法預測。
 

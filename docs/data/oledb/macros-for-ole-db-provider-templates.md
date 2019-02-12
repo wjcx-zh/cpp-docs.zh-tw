@@ -1,6 +1,6 @@
 ---
 title: OLE DB 提供者樣板的巨集
-ms.date: 11/04/2016
+ms.date: 02/11/2019
 f1_keywords:
 - vc.templates.ole
 - BEGIN_PROPERTY_SET
@@ -51,12 +51,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: 8fbad23d49490f42416dd7e7234776ff1c5ac7bf
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: a2a5bf14da1a39439db67a4fb062fd06763754fc
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557047"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151113"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>OLE DB 提供者樣板的巨集
 
@@ -298,7 +298,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 *dwPropID*<br/>
 [in] [DBPROPID](https://docs.microsoft.com/previous-versions/windows/desktop/ms723882(v=vs.85)) 值，可搭配屬性集 GUID 以識別屬性。
 
-*值*<br/>
+*value*<br/>
 [in] `DWORD`類型的屬性值。
 
 #### <a name="remarks"></a>備註
@@ -359,7 +359,7 @@ PROVIDER_COLUMN_ENTRY (name, ordinal, member)
 *name*<br/>
 [in]資料行名稱。
 
-*序數*<br/>
+*ordinal*<br/>
 [in] 資料行編號。 除非資料行是書籤資料行，資料行數目必須為 0。
 
 *成員*<br/>
@@ -380,7 +380,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 *name*<br/>
 [in]資料行名稱。
 
-*序數*<br/>
+*ordinal*<br/>
 [in] 資料行編號。 除非資料行是書籤資料行，資料行數目必須為 0。
 
 *dbtype*<br/>
@@ -412,7 +412,7 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 *name*<br/>
 [in]資料行名稱。
 
-*序數*<br/>
+*ordinal*<br/>
 [in] 資料行編號。 除非資料行是書籤資料行，資料行數目必須為 0。
 
 *flags*<br/>
@@ -427,7 +427,7 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 *precision*<br/>
 [in]指出如果取得資料時所要使用的有效位數*dbType* DBTYPE_NUMERIC 或 DBTYPE_DECIMAL。 請參閱`bPrecision`中的說明[DBBINDING 結構](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))。
 
-*小數位數*<br/>
+*scale*<br/>
 [in]表示如果 dbType DBTYPE_NUMERIC 或 DBTYPE_DECIMAL 取得資料時所要使用的比例。 請參閱`bScale`中的說明[DBBINDING 結構](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))。
 
 *guid*<br/>
@@ -452,7 +452,7 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 *name*<br/>
 [in]資料行名稱。
 
-*序數*<br/>
+*ordinal*<br/>
 [in] 資料行編號。 除非資料行是書籤資料行，資料行數目必須為 0。
 
 *size*<br/>
@@ -484,7 +484,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 *name*<br/>
 [in]資料行名稱。
 
-*序數*<br/>
+*ordinal*<br/>
 [in] 資料行編號。 除非資料行是書籤資料行，資料行數目必須為 0。
 
 *成員*<br/>
@@ -513,7 +513,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 *name*<br/>
 [in]資料行名稱。
 
-*序數*<br/>
+*ordinal*<br/>
 [in] 資料行編號。 除非資料行是書籤資料行，資料行數目必須為 0。
 
 *dbtype*<br/>
@@ -544,7 +544,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 *name*<br/>
 [in]資料行名稱。
 
-*序數*<br/>
+*ordinal*<br/>
 [in] 資料行編號。 除非資料行是書籤資料行，資料行數目必須為 0。
 
 *成員*<br/>
@@ -583,9 +583,9 @@ BEGIN_SCHEMA_MAP(SchemaClass);
 END_SCHEMA_MAP()
 ```
 
-#### <a name="see-also"></a>另請參閱
+#### <a name="remarks"></a>備註
 
-[IDBSchemaRowsetImpl 類別](../../data/oledb/idbschemarowsetimpl-class.md)
+如需詳細資訊，請參閱 < [IDBSchemaRowsetImpl 類別](../../data/oledb/idbschemarowsetimpl-class.md)。
 
 ### <a name="schema_entry"></a> SCHEMA_ENTRY
 

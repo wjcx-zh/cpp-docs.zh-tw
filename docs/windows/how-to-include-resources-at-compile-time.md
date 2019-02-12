@@ -20,15 +20,17 @@ helpviewer_keywords:
 - directories [C++], specifying include paths for resources
 - include files [C++], specifying for resources
 - resources [C++], including in projects
+- symbols [C++], finding
+- resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: 52145d2a656a7cac0d07a43ceaf298fbebb5ad40
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 8df5a8ee6583b1e9f5c50a428b69babb0d56961b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55764073"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152374"
 ---
-# <a name="how-to-include-resources-at-compile-time"></a>HOW TO：在編譯時期包含資源
+# <a name="how-to-include-resources-at-compile-time-c"></a>HOW TO：包含資源在編譯時期 （c + +）
 
 通常它是簡單且方便使用一個資源指令碼 (.rc) 檔中的所有資源的預設排列方式。 不過，您可以將資源其他檔案中加入目前的專案在編譯時期藉由列出在**編譯時間指示詞**方塊中**Resource Includes**  對話方塊。
 
@@ -42,7 +44,7 @@ ms.locfileid: "55764073"
 
 - 若要包含的資源正在使用由數個不同的專案，或屬於原始程式碼版本控制系統，因此必須有中央位置，讓修改影響所有專案。
 
-- 為了包含自訂格式的資源 (例如 RCDATA 資源)。 RCDATA 資源可能會有特殊需求。 例如，您無法將運算式做為 nameID 欄位的值。 請參閱 Windows SDK 文件，如需詳細資訊。
+- 為了包含自訂格式的資源 (例如 RCDATA 資源)。 RCDATA 資源可能會有特殊需求。 比方說，您不能使用做為值的運算式，為 nameID 欄位。 如需詳細資訊，請參閱 Windows SDK 文件。
 
 如果您將區段在現有的.rc 檔符合下列任一條件時，您應該將該區段置於一或多個個別.rc 檔，並將它們包含在專案中使用**Resource Includes**  對話方塊。 *Projectname*.rc2 檔建立新專案的 \res 子目錄中用於此目的。
 
@@ -59,7 +61,7 @@ ms.locfileid: "55764073"
 > [!NOTE]
 > 這些文字方塊中的項目剢謅.rc 檔餇標示`TEXTINCLUDE 1`， `TEXTINCLUDE 2`，和`TEXTINCLUDE 3`分別。 如需詳細資訊，請參閱[TN035:使用 Visual c + + 中的多個資源檔和標頭檔](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)。
 
-一旦您已使用資源檔案變更**Resource Includes**  對話方塊中，您需要關閉.rc 檔案，然後再重新開啟，讓變更生效。 如需詳細資訊，請參閱 <<c0> [ 在編譯時期包含資源](../windows/how-to-include-resources-at-compile-time.md)。
+一旦您已使用資源檔案變更**Resource Includes**  對話方塊中，您需要關閉.rc 檔案，然後再重新開啟，讓變更生效。
 
 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index) .NET Framework 開發人員指南中。
 
@@ -73,11 +75,27 @@ ms.locfileid: "55764073"
 
    以這種方式包含的檔案中資源，都會在編譯時期成為可執行檔的一部分。 當您正在處理您的專案主要.rc 檔時，它們無法直接使用編輯或修改。 個別開啟包含的.rc 檔。 任何包含但不含.rc 副檔名的檔案不是可編輯的資源編輯器。
 
-## <a name="to-specify-include-directories-for-a-specific-resource-rc-file-c"></a>若要指定特定的資源 （.rc 檔） 的 include 目錄 （c + +）
+## <a name="to-specify-include-directories-for-a-specific-resource-rc-file"></a>若要指定特定的資源 （.rc 檔） 的 include 目錄
 
 1. 以滑鼠右鍵按一下方案總管 中的.rc 檔，然後選取**屬性**從捷徑功能表。
 
 1. 在 **屬性頁**對話方塊中，選取**資源**節點，在左窗格中，然後指定其他的 include 目錄中的**其他 include 目錄**屬性。
+
+## <a name="to-find-symbols-in-resources"></a>若要尋找資源中的符號
+
+1. 從**編輯**功能表上，選擇**尋找符號**。
+
+1. 在 [[尋找符號] 對話方塊中](/visualstudio/ide/go-to)，請在**尋找目標**方塊中，從下拉式清單中選取先前的搜尋字串或輸入您想要尋找 （例如，ID_ACCEL1） 的快速鍵。
+
+   > [!TIP]
+   > 若要使用[規則運算式](/visualstudio/ide/using-regular-expressions-in-visual-studio)進行搜尋，您必須使用[檔案中尋找命令](/visualstudio/ide/reference/find-command)從**編輯**功能表，而不是**尋找符號**命令。 若要啟用的規則運算式，您必須擁有**使用：規則運算式**中選取的核取方塊[尋找對話方塊](/visualstudio/ide/finding-and-replacing-text)。 接著，您可以選取右邊的向右箭號按鈕**Find What**方塊，以顯示規則搜尋運算式的清單。 當您從這份清單中選取運算式時，它會替換成索引中的搜尋文字**Find What**  方塊中。
+
+1. 選取任一**尋找**選項。
+
+1. 選擇 [尋找下一個]。
+
+> [!NOTE]
+> 您無法在字串、快速鍵或二進位資源中搜尋符號。
 
 ## <a name="requirements"></a>需求
 
@@ -87,5 +105,4 @@ Win32
 
 [資源檔](../windows/resource-files-visual-studio.md)<br/>
 [資源編輯器](../windows/resource-editors.md)<br/>
-[TN035:使用 Visual c + + 中的多個資源檔和標頭檔](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)<br/>
 [符號：資源識別碼](../windows/symbols-resource-identifiers.md)<br/>

@@ -1,6 +1,6 @@
 ---
 title: OLE DB 消費者樣板的巨集和全域函式
-ms.date: 11/04/2016
+ms.date: 02/11/2019
 f1_keywords:
 - vc.templates.ole
 - ATL.AtlTraceErrorRecords
@@ -100,12 +100,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 4254c2637c4ed937a3196310ffa83c48504911af
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1826f674e219b850e62fdae07b3a97e8b8cf2d48
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557111"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148994"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>OLE DB 消費者樣板的巨集和全域函式
 
@@ -198,11 +198,7 @@ inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);
 
 #### <a name="remarks"></a>備註
 
-如果*hErr*不是 s_ok 時，`AtlTraceErrorRecords`傾印到傾印裝置的 OLE DB 錯誤記錄資訊 (**偵錯** 索引標籤的 輸出 視窗或檔案)。 錯誤記錄資訊，這取自於提供者，包含每個錯誤記錄項目資料列數、 來源、 描述、 說明檔、 內容和 GUID。 `AtlTraceErrorRecords` 這項資訊只在偵錯組建會傾印。 在發行組建中，它是空白的虛設出最適合。
-
-#### <a name="see-also"></a>另請參閱
-
-[CDBErrorInfo 類別](../../data/oledb/cdberrorinfo-class.md)
+如果*hErr*不是 s_ok 時，`AtlTraceErrorRecords`傾印到傾印裝置的 OLE DB 錯誤記錄資訊 (**偵錯** 索引標籤的 輸出 視窗或檔案)。 錯誤記錄資訊，這取自於提供者，包含每個錯誤記錄項目資料列數、 來源、 描述、 說明檔、 內容和 GUID。 `AtlTraceErrorRecords` 這項資訊只在偵錯組建會傾印。 在發行組建中，它是空白的虛設出最適合。如需詳細資訊，請參閱 < [CDBErrorInfo 類別](../../data/oledb/cdberrorinfo-class.md)。
 
 ### <a name="begin_accessor"></a> BEGIN_ACCESSOR
 
@@ -618,7 +614,7 @@ BOOKMARK_ENTRY(variable)
 
 #### <a name="parameters"></a>參數
 
-*變數*<br/>
+*variable*<br/>
 [in]要繫結至書籤資料行的變數。
 
 #### <a name="example"></a>範例
@@ -669,10 +665,7 @@ END_COLUMN_MAP()
 };
 ```
 
-#### <a name="see-also"></a>另請參閱
-
-[CBookmark 類別](../../data/oledb/cbookmark-class.md)<br/>
-[DBPROP_BOOKMARKS](https://docs.microsoft.com/previous-versions/windows/desktop/ms709728(v=vs.85))
+如需詳細資訊，請參閱 <<c0> [ 使用書籤](using-bookmarks.md)並[CBookmark 類別](../../data/oledb/cbookmark-class.md)。
 
 ### <a name="column_entry"></a> COLUMN_ENTRY
 

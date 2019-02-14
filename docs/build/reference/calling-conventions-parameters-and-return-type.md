@@ -1,19 +1,19 @@
 ---
-title: 呼叫慣例、參數和傳回型別
-ms.date: 11/04/2016
+title: 呼叫慣例、參數和傳回類型
+ms.date: 02/13/2019
 helpviewer_keywords:
 - calling conventions, helper functions
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: 8343c17828040ca36b042cb99e0c51c37548d3b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15631b305246cbfd7dcd8081cb1ee488bf225fec
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654424"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264799"
 ---
-# <a name="calling-conventions-parameters-and-return-type"></a>呼叫慣例、參數和傳回型別
+# <a name="calling-conventions-parameters-and-return-type"></a>呼叫慣例、參數和傳回類型
 
 Helper 常式的原型是：
 
@@ -27,12 +27,12 @@ FARPROC WINAPI __delayLoadHelper2(
 ### <a name="parameters"></a>參數
 
 *pidd*<br/>
-`const` 指標指向 `ImgDelayDescr` (請參閱 delayimp.h)，其中包含各種匯入相關資料的位移、繫結資訊的時間戳記，以及一組提供描述元內容之進一步資訊的屬性。 目前只有一個屬性 `dlattrRva`，它指出描述元中的位址是相對的虛擬位址 (與虛擬位址相反)。
+A`const`指標`ImgDelayDescr`，其中包含各種匯入相關的資料及一組提供描述項內容的進一步資訊的屬性繫結資訊的時間戳記的位移。 目前只有一個屬性`dlattrRva`，指出描述元中的位址是相對虛擬位址。 如需詳細資訊，請參閱中的宣告*delayimp.h*。
 
 定義`PCImgDelayDescr`結構，請參閱[結構和常數定義](../../build/reference/structure-and-constant-definitions.md)。
 
 *ppfnIATEntry*<br/>
-延遲載入匯入位址資料表 (IAT) 中的位置指標，要以匯入的函式位址更新。 Helper 常式需要儲存它將傳回此位置的相同值。
+延遲載入匯入位址表 (IAT) 以匯入的函式位址更新中的位置指標。 Helper 常式需要儲存相同的值，它會傳回此位置。
 
 ## <a name="expected-return-values"></a>預期的傳回值
 
@@ -44,13 +44,14 @@ FARPROC WINAPI __delayLoadHelper2(
 
 - 指定 DLL 上的 `LoadLibrary` 失敗
 
-- `GetProcAddress` 失敗。
+- 
+  `GetProcAddress` 失敗。
 
-您要負責處理這些例外狀況。
+您必須負責處理這些例外狀況。
 
 ## <a name="remarks"></a>備註
 
-Helper 函式的呼叫慣例是 `__stdcall`。 傳回值的類型不相關，因此使用 FARPROC。 此函式具有 C 連結。
+Helper 函式的呼叫慣例是 `__stdcall`。 傳回值的型別無關，因此 farproc。 此函式具有 C 連結。
 
 延遲載入 Helper 的傳回值需要儲存在傳入的函式指標位置，除非您想要讓 Helper 函式用來作為通知攔截函式。 在那種情況下，您的程式碼要負責尋找適合傳回的函式指標。 連結器產生的 Thunk 程式碼便會以該傳回值作為匯入的真實目標，並直接跳到該處。
 
@@ -131,7 +132,7 @@ FARPROC WINAPI delayHook(unsigned dliNotify, PDelayLoadInfo pdli)
 
 /*
 and then at global scope somewhere
-PfnDliHook __pfnDliNotifyHook2 = delayHook;
+const PfnDliHook __pfnDliNotifyHook2 = delayHook;
 */
 ```
 

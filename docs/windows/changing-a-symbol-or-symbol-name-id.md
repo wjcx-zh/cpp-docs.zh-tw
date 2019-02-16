@@ -1,6 +1,6 @@
 ---
 title: HOW TO：管理符號
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.changing
 - vc.editors.symbol.restrictions.name
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 4bc0376b6b5ff402f0cc9f40093e000763ad6656
-ms.sourcegitcommit: bec1480a03e7b4070b469a6c131a69f516bbac70
+ms.openlocfilehash: 4f1c44e8fc2ae34ddcb65ec23ca8d98e11d50ec0
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56226367"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320584"
 ---
 # <a name="how-to-manage-symbols"></a>HOW TO：管理符號
 
@@ -49,8 +49,6 @@ ms.locfileid: "56226367"
 單一資源相關聯的符號，您也可以使用**屬性**視窗變更符號值。 您可以使用[資源符號對話方塊](../windows/resource-symbols-dialog-box.md)來變更目前未指派給資源的符號值。
 
 通常所有符號定義會儲存在`Resource.h`。 不過，您可能需要變更這 Include 檔案名稱，好讓您可以，比方說在相同目錄中處理多個資源檔。
-
-如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。
 
 > [!NOTE]
 > 如果您的專案尚未包含.rc 檔，請參閱[建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。
@@ -142,7 +140,7 @@ ms.locfileid: "56226367"
 
 下一次儲存專案時，會在符號標頭檔中儲存新值。 在 [識別碼] 方塊中，只有符號名稱保持可見它們在驗證之後，不會顯示等號和值。
 
-## <a name="change-or-delete-unassigned-symbols"></a>變更或刪除未指定的符號
+## <a name="change-or-delete-symbols"></a>變更或刪除符號
 
 當您在[資源符號對話方塊](../windows/resource-symbols-dialog-box.md)，您可以編輯或刪除現有的符號不是已指派給資源或物件。
 
@@ -162,7 +160,7 @@ ms.locfileid: "56226367"
    > [!NOTE]
    > 在刪除資源檔中未使用的符號之前，請確定它未在程式的其他地方使用，或未由編譯時期包含的資源檔使用。
 
-## <a name="include-shared-read-only-or-calculated-symbols"></a>包含共用 （唯讀） 或計算符號
+## <a name="include-symbols"></a>包含符號
 
 當開發環境第一次讀取另一個應用程式所建立的資源檔時，會將所有包含的標頭檔標示為唯讀。 雖然您可以使用[資源包含對話方塊](../windows/resource-includes-dialog-box.md)新增額外的唯讀符號標頭檔。
 
@@ -217,6 +215,6 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[符號：資源識別碼](../windows/symbols-resource-identifiers.md)<br/>
+[資源識別項 （符號）](../windows/symbols-resource-identifiers.md)<br/>
+[建立符號](../windows/creating-new-symbols.md)<br/>
 [預先定義的符號識別碼](../windows/predefined-symbol-ids.md)<br/>
-[檢視資源符號](../windows/viewing-resource-symbols.md)<br/>

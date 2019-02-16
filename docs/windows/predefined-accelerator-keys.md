@@ -1,6 +1,6 @@
 ---
 title: 快速鍵 （c + +）
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator
 helpviewer_keywords:
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 1e87d80b8995760eecda34334dab702480bd9669
-ms.sourcegitcommit: 5beace7dcc6bf0e8b8cc96a930e7424f9daa05cb
+ms.openlocfilehash: 6ef8f84564d6fd1957452971cb1e88dc99aa27e9
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55232119"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320506"
 ---
 # <a name="accelerator-keys-c"></a>快速鍵 （c + +）
-
-如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。
 
 ## <a name="predefined-accelerator-keys"></a>預先定義的快速鍵
 
@@ -79,7 +77,7 @@ Windows 應用程式專案中可能包含許多預先定義的快速鍵。 其�
 |VK_XBUTTON1|Windows：X1 滑鼠按鈕|
 |VK_XBUTTON2|Windows：X2 滑鼠按鈕|
 
-## <a name="associating-an-accelerator-key-with-a-menu-item"></a>建立快速鍵與功能表項目的關聯
+## <a name="accelerator-key-association"></a>快速鍵對應鍵的關聯
 
 您經常想要功能表項目和鍵盤的組合，以發出相同的程式命令。 您可以指派相同的資源識別碼 (ID) 給功能表項目以及應用程式的快速鍵對應表中的項目，即可執行這個動作。 然後，您會編輯功能表項目的標題，以顯示快速鍵的名稱。 如需有關的功能表項目和快速鍵的詳細資訊，請參閱[關聯的快速鍵功能表項目](../windows/associating-a-menu-command-with-an-accelerator-key.md)。
 
@@ -90,4 +88,3 @@ Win32
 ## <a name="see-also"></a>另請參閱
 
 [快速鍵編輯器](../windows/accelerator-editor.md)<br/>
-[資源編輯器](../windows/resource-editors.md)

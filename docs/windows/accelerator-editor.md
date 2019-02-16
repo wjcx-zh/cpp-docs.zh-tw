@@ -1,6 +1,6 @@
 ---
 title: 快速鍵編輯器 （c + +）
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator.F1
 - vc.editors.accelerator
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: 5ece5c7e85a3ef59b728474746e9553a751d43c6
-ms.sourcegitcommit: bec1480a03e7b4070b469a6c131a69f516bbac70
+ms.openlocfilehash: 90ef142336cf88c5e40f78f6cc651b2bb35a0f6c
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56226341"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320636"
 ---
 # <a name="accelerator-editor-c"></a>快速鍵編輯器 （c + +）
 
@@ -55,8 +55,6 @@ ms.locfileid: "56226341"
 
    > [!NOTE]
    > Windows 不允許建立空的快速鍵對應表。 如果建立了沒有任何項目的快速鍵對應表，當您儲存資料表時它會自動刪除。
-
-如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
 
 ## <a name="accelerator-properties"></a>快速鍵屬性
 
@@ -123,9 +121,6 @@ ms.locfileid: "56226341"
 在 c + + 專案中，您可以直接使用就地編輯中編輯快速鍵對應表**加速器**編輯器。
 
 使用標準內容頁，請參閱下列程序，不過，就地編輯和屬性頁方法有相同的結果。 使用屬性頁，或使用就地編輯所做的變更會立即反映在快速鍵對應表中。
-
-> [!NOTE]
-> 如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。
 
 ### <a name="to-edit-in-an-accelerator-table"></a>在快速鍵對應表中編輯
 
@@ -211,7 +206,5 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[資源編輯器](../windows/resource-editors.md)
-
-[在快速鍵對應表中編輯](../windows/editing-in-an-accelerator-table.md)<br/>
+[資源編輯器](../windows/resource-editors.md)<br/>
 [預先定義的快速鍵](../windows/predefined-accelerator-keys.md)<br/>

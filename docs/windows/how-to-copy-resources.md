@@ -1,6 +1,6 @@
 ---
 title: HOW TO：管理資源 （c + +）
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.resvw.resource.copying
 - vs.resvw.resource.copying
@@ -30,18 +30,16 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: e8b976f974e397b8012ebf59ede08ee64f4f7191
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 1f176b3fa19374b402039ecca60e690ade5c0cef
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150788"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320623"
 ---
 # <a name="how-to-manage-resources-c"></a>HOW TO：管理資源 （c + +）
 
-如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
-
-## <a name="to-copy-resources"></a>若要複製資源
+## <a name="copy-resources"></a>複製資源
 
 您可以從一個檔案複製的資源，到另一個，而不需要變更它們，或者您可以複製它時變更其語言或條件的資源。
 
@@ -77,7 +75,7 @@ ms.locfileid: "56150788"
    > [!NOTE]
    > 若要避免衝突的符號名稱或現有的檔案中的值，Visual c + + 可能會變更已傳送的資源的符號值或符號名稱和值時將它複製到新的檔案。
 
-### <a name="to-change-the-language-or-condition-of-a-resource-while-copying"></a>若要複製時變更其語言或條件的資源
+### <a name="change-the-language-or-condition-of-a-resource-while-copying"></a>在複製時變更其語言或條件的資源
 
 在資源中複製時，您可以變更其語言屬性或條件屬性，或兩者。
 
@@ -91,23 +89,21 @@ ms.locfileid: "56150788"
 IDD_AboutBox (Finnish - XX33)
 ```
 
-若要複製現有的資源，並變更其語言或條件：
+#### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>複製現有的資源並變更其語言或條件
 
 1. 在.rc 檔中或在[資源檢視](../windows/resource-view-window.md) 視窗中，以滑鼠右鍵按一下您想要複製的資源。
 
-1. 選擇**插入複本**從捷徑功能表。
-
-1. 在 [**插入資源複本**] 對話方塊中：
+1. 選擇**插入複本**從的捷徑功能表，並將下列：
 
    - 針對**語言**清單方塊中，選取的語言。
 
    - 在 **條件**方塊中，輸入條件。
 
-## <a name="to-edit-managed-resource-files"></a>若要編輯 managed 的資源檔
+## <a name="edit-resources"></a>編輯資源
 
 Managed 的資源檔 (.resx) 是 XML 檔案。 當您將受管理的資源檔加入您的專案從**加入新項目** 對話方塊中， **Managed 資源編輯器**預設會開啟。
 
-## <a name="to-import-and-export-resources"></a>匯入和匯出資源
+## <a name="import-and-export-resources"></a>匯入和匯出資源
 
 您可以匯入圖形資源 (點陣圖、圖示、游標和工具列)、HTML 檔案，及在 Visual C++ 中使用的自訂資源。 您可以從 Visual C++ 專案匯出相同類型的檔案，分隔可以在開發環境外部使用的檔案。
 
@@ -131,9 +127,7 @@ Managed 的資源檔 (.resx) 是 XML 檔案。 當您將受管理的資源檔加
 
 1. 在 **資源**檢視中，以滑鼠右鍵按一下您想要匯出的資源。
 
-1. 選取 **匯出**快顯功能表。
-
-1. 在 **匯出資源**對話方塊方塊中，接受目前的檔案名稱或輸入新密碼。
+1. 選取 **匯出**快顯功能表上，接受目前的檔案名稱，或輸入新密碼。
 
 1. 瀏覽至您要儲存檔案，並選擇的資料夾**匯出**。
 
@@ -144,4 +138,5 @@ Win32
 ## <a name="see-also"></a>另請參閱
 
 [資源檔](../windows/resource-files-visual-studio.md)<br/>
-[資源編輯器](../windows/resource-editors.md)
+[建立資源](../windows/how-to-create-a-resource-script-file.md)<br/>
+[在編譯時期包含資源](../windows/how-to-include-resources-at-compile-time.md)<br/>

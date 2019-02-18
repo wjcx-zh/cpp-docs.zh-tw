@@ -1,6 +1,6 @@
 ---
-title: 使用繪圖工具
-ms.date: 11/04/2016
+title: HOW TO：使用繪圖工具
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.drawing
 helpviewer_keywords:
@@ -16,16 +16,18 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-ms.openlocfilehash: 72224581e021a22b31ec5e6fa5940ff5a568a4e0
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 135509626e20044b0d4ec8e63d8916f4c537388e
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320545"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336549"
 ---
-# <a name="using-a-drawing-tool"></a>使用繪圖工具
+# <a name="how-to-use-a-drawing-tool"></a>HOW TO：使用繪圖工具
 
 **映像**編者徒手繪製和清除的工具的運作方式相同： 您選取的工具，並視需要[選取前景和背景色彩](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)和大小和形狀的選項。 然後將指標移至映像並按一下或拖曳來繪製及清除。
+
+## <a name="drawing-tools"></a>繪圖工具
 
 當您選取**橡皮擦**工具**筆刷**工具，或**噴槍**選項選取器 工具，會顯示該工具的選項。
 
@@ -34,7 +36,7 @@ ms.locfileid: "56320545"
 
 您可以選取繪圖工具**影像編輯器**工具列或**映像**功能表。
 
-## <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>選取並使用提供的影像編輯器 工具列上的繪圖工具
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>選取並使用提供的影像編輯器 工具列上的繪圖工具
 
 1. 在 [選取] 按鈕**影像編輯器**工具列。
 
@@ -65,7 +67,7 @@ ms.locfileid: "56320545"
 
 1. 在階層式 子功能表中，選擇您想要使用的工具。
 
-## <a name="drawing-lines-or-closed-figures"></a>繪製線條或封閉圖形
+## <a name="lines-or-closed-figures"></a>線條或封閉的圖形
 
 影像編輯器工具繪製線條和封閉的圖形的運作方式相同： 您將插入點放在一個點，並拖曳到另一個。 線條，這些點會是端點。 封閉圖形，這些點會是相反的邊角的矩形。
 
@@ -97,7 +99,7 @@ ms.locfileid: "56320545"
 
 1. 將指標拖曳至 對角的角落。
 
-## <a name="create-a-custom-brush"></a>建立自訂筆刷
+## <a name="custom-brushes"></a>自訂筆刷
 
 自訂筆刷是您挑選並使用類似的其中一個映像的矩形部分**映像**編者備妥的筆刷。 您可以在 選取項目執行的所有作業，您可以都執行以及自訂筆刷。
 
@@ -105,11 +107,7 @@ ms.locfileid: "56320545"
 
 1. [選取的映像的一部分](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)您想要使用的筆刷。
 
-1. 持有**Shift**向下鍵、 選取範圍中選擇和拖曳影像。
-
-   \-或-
-
-1. 從**映像**功能表上，選擇**將選取範圍當做筆刷**。
+1. 保存**Shift**向下鍵、 選取範圍中選擇和拖曳影像。 或從**映像**功能表上，選擇**將選取範圍當做筆刷**。
 
    您的選取項目會成為自訂筆刷可將選取範圍中的色彩分散到映像。 選取範圍的複本會保留在拖曳的路徑。 您將拖曳的速度變慢，進行更多的複本。
 
@@ -137,8 +135,6 @@ ms.locfileid: "56320545"
 ### <a name="to-cancel-the-custom-brush"></a>若要取消的自訂筆刷
 
 按下**Esc**或選擇另一個繪圖工具。
-
-如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
 
 ## <a name="requirements"></a>需求
 

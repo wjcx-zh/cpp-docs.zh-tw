@@ -1,6 +1,6 @@
 ---
 title: 控制項在對話方塊中 （c + +） |Microsoft Docs
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - Custom Control
 helpviewer_keywords:
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 1f231a376b335d7fb711ef2039c13f49624e6bfb
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: 6360491ebb4478ee4ce22115eced7ed672866565
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264838"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336510"
 ---
 # <a name="controls-in-dialog-boxes-c"></a>控制項在對話方塊中 （c + +）
 
@@ -30,25 +30,11 @@ ms.locfileid: "56264838"
 
 一旦您已將控制項加入對話方塊中，您可以變更屬性，例如其標題[屬性 視窗](/visualstudio/ide/reference/properties-window)。 您可以選取多個控制項，並變更其屬性，全部一次。
 
-- [新增、編輯或刪除控制項](adding-editing-or-deleting-controls.md)
+- [如何：加入、 編輯或刪除控制項](adding-editing-or-deleting-controls.md)
 
-- [選取控制項](../windows/selecting-controls.md)
+- [如何：排列控制項](../windows/arrangement-of-controls-on-dialog-boxes.md)
 
-- [調整個別控制項的大小](../windows/sizing-individual-controls.md)
-
-- [讓控制項同寬、同高或相同大小](../windows/making-controls-the-same-width-height-or-size.md)
-
-- [設定下拉式方塊和下拉式清單的大小](setting-the-size-of-the-combo-box-and-its-drop-down-list.md)
-
-- [將值新增至下拉式方塊控制項](../windows/adding-values-to-a-combo-box-control.md)
-
-- [設定水平捲軸的寬度](../windows/setting-the-width-of-a-horizontal-scroll-bar.md)
-
-- [對話方塊上的控制項排列方式](../windows/arrangement-of-controls-on-dialog-boxes.md)
-
-- [定義助憶鍵 (便捷鍵)](../windows/defining-mnemonics-access-keys.md)
-
-- [指定對話方塊的位置和大小](../windows/specifying-the-location-and-size-of-a-dialog-box.md)
+- [如何：定義控制存取和值](../windows/defining-mnemonics-access-keys.md)
 
 中可用的標準控制項**工具箱**事件是預設值：
 
@@ -110,8 +96,6 @@ ms.locfileid: "56264838"
 - 輸入 32 位元的十六進位值，設定控制項的樣式。
 
 - 設定延伸的樣式。
-
-如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
 
 ## <a name="requirements"></a>需求
 

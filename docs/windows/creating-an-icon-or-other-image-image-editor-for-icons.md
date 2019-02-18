@@ -1,6 +1,6 @@
 ---
-title: 建立圖示或其他影像
-ms.date: 11/04/2016
+title: 如何：建立圖示或其他影像
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
@@ -87,14 +87,14 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 3ce4d10c9ab085973f1ab00dba205c22ff17f42f
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 69fffc71a7b5dfad12e70a9132fc61b11a0914cc
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320727"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336588"
 ---
-# <a name="creating-an-icon-or-other-image"></a>建立圖示或其他影像
+# <a name="how-to-create-an-icon-or-other-image"></a>如何：建立圖示或其他影像
 
 您可以建立新的影像 （點陣圖、 圖示、 游標或工具列），然後使用影像編輯器來自訂其外觀。 您也可以建立新的點陣圖，模仿[範本](../windows/how-to-use-resource-templates.md)。
 
@@ -133,13 +133,9 @@ ms.locfileid: "56320727"
 
 當您開啟中的圖示或游標資源[影像編輯器](../windows/image-editor-for-icons.md)，預設會開啟大部分十分符合目前的顯示裝置的映像。
 
-#### <a name="new-ltdevicegt-image-type-dialog-box"></a>新&lt;裝置&gt;影像類型對話方塊
-
 **的新&lt;裝置&gt;映像類型**對話方塊可讓您建立指定類型的新裝置映像。 若要開啟 **新增\<裝置 > 影像**對話方塊中，選取**新的映像類型**上**映像**功能表。 下列的屬性，包括**目標映像類型**並**自訂**。
 
-##### <a name="target-image-type"></a>目標影像類型
-
-列出可用的映像類型。 選取您想要開啟的映像類型：
+**目標映像類型**屬性會列出可用的影像類型。 選取您想要開啟的映像類型：
 
 ||||
 |-|-|-|
@@ -153,9 +149,7 @@ ms.locfileid: "56320727"
 > [!NOTE]
 > 這份清單中，將不會顯示任何現有的映像。
 
-##### <a name="custom"></a>自訂
-
-會開啟**自訂映像**對話方塊中，您可以在其中建立新的映像使用自訂的大小和色彩數目。
+**自訂**屬性會開啟**自訂映像**對話方塊中，您可以在其中建立新的映像使用自訂的大小和色彩數目。
 
 **自訂映像**對話方塊可讓您建立新的映像的自訂大小和色彩數目。 會包含下列屬性：
 
@@ -164,8 +158,6 @@ ms.locfileid: "56320727"
 |[寬度]|提供空間讓您輸入自訂影像的寬度，單位為像素 （1-512，限制為 2048年）。|
 |[高度]|提供空間讓您輸入高度的像素為單位 （1-512，限制為 2048年） 的自訂映像。|
 |**色彩**|提供空間讓您選擇的自訂映像的色彩數目：2、 16 或 256。|
-
-#### <a name="open-ltdevicegt-image-dialog-box"></a>開啟&lt;裝置&gt;影像對話方塊
 
 使用**開啟&lt;裝置&gt;映像**對話方塊中，以開啟 c + + 專案中的 裝置映像。 它會列出目前的資源 （屬於目前的資源的映像） 的現有裝置映像。 是包含下列屬性：
 
@@ -184,13 +176,13 @@ ms.locfileid: "56320727"
 
    如果一個加號 (**+**) 中的映像資源類型旁邊會出現**插入資源** 對話方塊中，表示工具列範本可供使用。 選取加號，展開 範本清單中的，選取範本，然後選擇**新增**。
 
-### <a name="add-an-image-for-a-different-display-device"></a>加入不同顯示裝置的映像
+### <a name="to-add-an-image-for-a-different-display-device"></a>若要加入不同顯示裝置的影像
 
 1. 在上**映像**功能表上，選取**新的裝置影像**(或以滑鼠右鍵按一下**影像編輯器**窗格，然後選擇 **新裝置映像**從快顯功能表）。
 
 1. 選取您想要新增的映像的類型。 您也可以選取**自訂**來建立其大小無法使用的預設清單中的圖示。
 
-### <a name="copy-a-device-image"></a>複製裝置影像
+### <a name="to-copy-a-device-image"></a>若要複製裝置影像
 
 1. 在上**映像**功能表上，選取**開啟裝置影像**並從目前的映像清單中選擇映像。 例如，選擇 32 × 32、 16 色版圖示。
 
@@ -200,14 +192,14 @@ ms.locfileid: "56320727"
 
 1. 貼上圖示的影像 (**Ctrl**+**V**) 從一個**影像編輯器**其他視窗。 如果您將會貼入較小的大小較大的大小，您可以使用圖示控制代碼來調整影像大小。
 
-### <a name="delete-a-device-image"></a>刪除裝置影像
+### <a name="to-delete-a-device-image"></a>若要刪除裝置影像
 
 雖然圖示的影像會顯示在**映像**編輯器中，選取**刪除裝置影像**從**映像**功能表。 當您刪除資源中的最後一個圖示影像時，則也會刪除資源。
 
    > [!NOTE]
    > 當您按下**Del**索引鍵，映像和您所繪製的圖示色彩會遭到刪除，但會保留圖示; 您可以立即重新設計。 如果您按下**Del**遭，您可以按下**Ctrl**+**Z**復原動作。
 
-### <a name="create-transparent-or-inverse-regions-in-device-images"></a>在裝置影像中建立透明或反向區域
+### <a name="to-create-transparent-or-inverse-regions-in-device-images"></a>若要在裝置影像中建立透明或反向區域
 
 在 [影像編輯器](../windows/image-editor-for-icons.md)，初始的圖示或游標影像具有透明屬性。 圖示和游標影像是矩形，雖然許多不會出現，因為影像的部分是透明的;透過圖示或游標會顯示在螢幕上的基礎映像。 當您拖曳圖示時，影像的部分可能會出現反轉的色彩。 您建立這種效果藉由設定螢幕色彩和中的反向色彩[色彩視窗](../windows/colors-window-image-editor-for-icons.md)。
 
@@ -343,8 +335,6 @@ ms.locfileid: "56320727"
 
    > [!NOTE]
    > 您想要編輯的任何 Managed 資源皆必須為連結的資源。 Visual Studio 資源編輯器並不支援對內嵌資源的編輯功能。 如需詳細資訊，請參閱 <<c0> [ 建立資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)中 *.NET Framework 開發人員指南*。
-
-如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
 
 ## <a name="requirements"></a>需求
 

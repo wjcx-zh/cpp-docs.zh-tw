@@ -1,6 +1,6 @@
 ---
 title: 對話方塊編輯器 （c + +）
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.editors.dialog.F1
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 827a7610aa919d5349313346ac0bfa80bd0647b0
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: fef4a7f0d4c785a40ea946127d8e3c84c797e1aa
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264890"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336692"
 ---
 # <a name="dialog-editor-c"></a>對話方塊編輯器 （c + +）
 
@@ -38,28 +38,18 @@ ms.locfileid: "56264890"
 
 您可以將對話方塊儲存成範本，以便重複使用。 您也可以輕鬆地在設計對話方塊和編輯其實作程式碼之間來回切換。
 
-在對話方塊編輯器中也可以編輯單一或多個控制項的屬性。 您可以變更定位順序，也就是取得控制項的順序聚焦在何時 **索引標籤**按鍵，或者您可以定義便捷鍵 （按鍵組合），可讓使用者選擇使用鍵盤的控制項。 如需預設的便捷鍵清單，請參閱 [對話方塊編輯器的快速鍵](../windows/accelerator-keys-for-the-dialog-editor.md)。
+在對話方塊編輯器中也可以編輯單一或多個控制項的屬性。 您可以變更定位順序，也就是取得控制項的順序聚焦在何時 **索引標籤**按鍵，或者您可以定義便捷鍵 （按鍵組合），可讓使用者選擇使用鍵盤的控制項。
 
 ** 對話方塊**編輯器也可讓您使用自訂控制項，包括 ActiveX 控制項。 此外，您可以編輯 [表單檢視](../mfc/reference/cformview-class.md)、 [資料錄檢視表](../data/record-views-mfc-data-access.md)或 [對話方塊列](../mfc/dialog-bars.md)。
 
 從 Visual Studio 2015 開始，您可以使用對話方塊編輯器定義動態配置，其會指定控制項移動及調整大小，當使用者調整對話方塊的方式。 如需詳細資訊，請參閱 [Dynamic Layout](../mfc/dynamic-layout.md)。
 
-- [建立新的對話方塊](../windows/creating-a-new-dialog-box.md)
-
-- [建立使用者在執行階段無法結束的對話方塊](../windows/creating-a-dialog-box-that-users-cannot-exit.md)
+- [如何：建立對話方塊](../windows/creating-a-new-dialog-box.md)
 
 - [對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)
 
-- [加入對話方塊控制項的事件處理常式](../windows/adding-event-handlers-for-dialog-box-controls.md)
-
-- [測試對話方塊](../windows/testing-a-dialog-box.md)
-
-- [對話方塊編輯器的疑難排解](../windows/troubleshooting-the-dialog-editor.md)
-
    > [!TIP]
-   > 在使用時 **對話方塊**編輯器，在許多情況下，您可以按一下滑鼠右鍵顯示常用命令的捷徑功能表。
-
-如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
+   > 在使用時** 對話方塊**編輯器，在許多情況下，您可以選取滑鼠右鍵顯示常用命令的捷徑功能表。
 
 ## <a name="dialog-editor-toolbar"></a>對話方塊編輯器工具列
 

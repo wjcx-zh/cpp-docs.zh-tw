@@ -1,6 +1,6 @@
 ---
-title: 功能表命令屬性 （c + +）
-ms.date: 11/04/2016
+title: 功能表命令 （c + +）
+ms.date: 02/15/2019
 helpviewer_keywords:
 - menu items, properties
 - keyboard shortcuts [C++], menu association
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: 8989b96640bbb64eb5dcba09d60363dd0989263f
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 9f91973fdf2d5a45c631f24d3eed41482a91a834
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320571"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336601"
 ---
-# <a name="menu-command-properties-c"></a>功能表命令屬性 （c + +）
+# <a name="menu-commands-c"></a>功能表命令 （c + +）
 
 下列資訊會根據組織** 功能表**屬性中出現[屬性 視窗](/visualstudio/ide/reference/properties-window)當您選取功能表命令。 這些字母順序列出雖然**屬性**視窗也可讓您依類別檢視這些屬性。
 
@@ -47,8 +47,6 @@ ms.locfileid: "56320571"
 
 常常會有想讓功能表命令與快速鍵組合發出相同程式命令的時候。 藉由發出相同的命令** 功能表**編輯器，將相同的資源識別碼指派給功能表命令和您的應用程式快速鍵對應表中的項目。 您可以接著編輯功能表命令的 [標題](../windows/menu-command-properties.md) ，以顯示快速鍵的名稱。
 
-如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
-
 ### <a name="to-associate-a-menu-command-with-an-accelerator-key"></a>建立功能表命令和快速鍵的關聯
 
 1. 在 **功能表** 編輯器中，選取您想要的功能表命令。
@@ -59,13 +57,13 @@ ms.locfileid: "56320571"
 
    - 輸入輔助按鍵的名稱 (**Ctrl**， **Alt**，或**Shift**) 後面接著加號 (**+**) 和名稱、 字母，或額外的索引鍵的符號。
 
-       例如，若要指派**Ctrl**+**O**來**開啟**命令**檔案** 功能表中，您可以修改功能表命令**標題**使它看起來類似下列文字：
+   例如，若要指派**Ctrl**+**O**來**開啟**命令**檔案** 功能表中，您可以修改功能表命令**標題**使它看起來類似下列文字：
 
-        ```
-        &Open...\tCtrl+O
-        ```
+   ```
+   &Open...\tCtrl+O
+   ```
 
-       中的功能表命令 **功能表**編輯器會更新以反映新的標題，當您輸入它。
+   中的功能表命令 **功能表**編輯器會更新以反映新的標題，當您輸入它。
 
 1. 在[快速鍵](../windows/adding-an-entry-to-an-accelerator-table.md) 編輯器中 **建立快速鍵對應表項目** ，並為它指派與功能表命令相同的識別項。 請使用您認為容易記住的按鍵組合。
 
@@ -98,5 +96,4 @@ Win32
 ## <a name="see-also"></a>另請參閱
 
 [功能表編輯器](../windows/menu-editor.md)<br/>
-[將命令新增至功能表](../windows/adding-commands-to-a-menu.md)<br/>
 [字串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>

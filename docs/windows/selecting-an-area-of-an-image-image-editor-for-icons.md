@@ -1,6 +1,6 @@
 ---
-title: 編輯映像
-ms.date: 11/04/2016
+title: HOW TO：編輯映像
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.editing
 - vc.editors.image.editing
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 928a37d1b85378c3c50f41dba441259ace2d3af9
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 906244b692253a8423af55eb91d46622087713e3
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320675"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336523"
 ---
-# <a name="editing-an-image"></a>編輯映像
+# <a name="how-to-edit-an-image"></a>HOW TO：編輯映像
 
 您可以使用 選取工具來定義您想要剪下、 複製、 清除、 調整大小、 反轉，或移動之影像的區域。 具有**矩形選取範圍**工具，您可以定義，並選取影像的矩形區域。 具有**不規則的選取項目**工具，您可以繪製徒手畫的外框範圍，您想要選取剪下、 複製或其他作業。
 
@@ -56,9 +56,7 @@ ms.locfileid: "56320675"
 
 您也可以從選取項目建立自訂筆刷。 如需詳細資訊，請參閱 <<c0> [ 建立自訂筆刷](../windows/creating-a-custom-brush-image-editor-for-icons.md)。
 
-如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
-
-## <a name="selecting-an-image"></a>選取影像
+## <a name="select-an-image"></a>選取的映像
 
 1. 上**影像編輯器**工具列 (或從**映像**功能表**工具**命令)，選擇您要的選取範圍工具。
 
@@ -72,7 +70,7 @@ ms.locfileid: "56320675"
 
 1. 選取目前選取範圍外的影像。 選取框線焦點變更，並再次包含整個影像。
 
-## <a name="editing-parts-of-an-image"></a>編輯影像部分範圍
+## <a name="edit-parts-of-an-image"></a>編輯影像部分範圍
 
 您可以執行標準的編輯作業： 剪下、 複製、 清除和移動 — 上[選取項目](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)，不論選取範圍是整個影像或加入其中。 因為**映像**編輯器會使用**Windows 剪貼簿**，您可以在傳輸之間的映像**映像**編輯器和其他 Windows 應用程式。
 
@@ -119,7 +117,7 @@ ms.locfileid: "56320675"
 
 如需有關繪製選取範圍的詳細資訊，請參閱[建立自訂筆刷](../windows/creating-a-custom-brush-image-editor-for-icons.md)。
 
-## <a name="flipping-an-image"></a>翻轉影像
+## <a name="flip-an-image"></a>翻轉影像
 
 您可以翻轉或旋轉影像來建立原始的鏡像映像、 倒置映像，或向右影像 90 度旋轉一次。
 
@@ -132,7 +130,7 @@ ms.locfileid: "56320675"
    > [!NOTE]
    > 您也可以使用[快速鍵 （捷徑）](../windows/accelerator-keys-image-editor-for-icons.md)這些命令或從捷徑功能表 （按一下影像編輯器中的映像之外） 中存取命令。
 
-## <a name="resizing-an-image"></a>調整影像大小
+## <a name="resize-an-image"></a>調整影像大小
 
 行為**映像**編輯器時調整影像大小取決於您是否曾[選](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)只是部分或整個影像。
 
@@ -185,7 +183,7 @@ ms.locfileid: "56320675"
 
 1. 拖曳調整大小控點，直到選取範圍是正確的大小。
 
-## <a name="editing-an-image-outside-of-a-project"></a>編輯專案外的影像
+## <a name="edit-an-image-outside-of-a-project"></a>編輯專案外的影像
 
 您可以開啟和編輯在開發環境中的映像，就如同在任何圖形應用程式。 您使用的映像不需要獨立編輯的 Visual Studio 專案的一部分。
 
@@ -197,7 +195,7 @@ ms.locfileid: "56320675"
 
 1. 找出並開啟您想要編輯映的像。
 
-## <a name="changing-image-properties"></a>變更影像屬性
+## <a name="change-image-properties"></a>變更影像屬性
 
 您可以設定或修改的映像使用的屬性[屬性 視窗](/visualstudio/ide/reference/properties-window)。
 

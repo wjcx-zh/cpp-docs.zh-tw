@@ -1,6 +1,6 @@
 ---
-title: 建立對話方塊 （c + +）
-ms.date: 11/04/2016
+title: 如何：建立對話方塊 （c + +）
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog
 helpviewer_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: a3b8143d3a70906f910a445816a188913a593e5d
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: c757c82978a5107374e6de2f8cff24319ed64f9c
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264812"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336471"
 ---
-# <a name="creating-a-dialog-box-c"></a>建立對話方塊 （c + +）
+# <a name="how-to-create-a-dialog-box-c"></a>如何：建立對話方塊 （c + +）
 
 與位置的大小 [c + +] 對話方塊中，以及位置和大小的控制項，會以對話方塊單位。 個別控制項和對話方塊中的值會出現在右下角的 Visual Studio 狀態列上選取它們。
 
@@ -39,8 +39,6 @@ ms.locfileid: "56264812"
    > 使用精靈連接至對話方塊程式碼，不包含在此模擬中。
 
 當您測試對話方塊時，它通常會在相對於主程式視窗的位置顯示。 如果您已經設定的對話方塊**Absolute Align**屬性設 **，則為 True**，對話方塊會顯示在相對於螢幕左上角的位置。
-
-如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
 
 ## <a name="to-create-a-new-dialog-box"></a>若要建立新的對話方塊
 
@@ -82,7 +80,7 @@ ms.locfileid: "56264812"
 
 1. 當** 對話方塊**編輯器是使用中的視窗，在功能表列上，選擇**格式** > **測試對話方塊**。
 
-1. 若要結束模擬，請按**Esc**，或只選擇**關閉**在對話方塊中，您要測試的按鈕。
+1. 若要結束模擬，請按**Esc**或選取**關閉**在對話方塊中，您要測試的按鈕。
 
 ## <a name="requirements"></a>需求
 

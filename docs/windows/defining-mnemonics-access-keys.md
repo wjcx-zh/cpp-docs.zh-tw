@@ -1,6 +1,6 @@
 ---
 title: 定義控制存取和值
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.combo
 helpviewer_keywords:
@@ -22,16 +22,14 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 3a885ad57ba05304d51cb45d0b498d81ad37a148
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: 20319cd08d6d1e77faef1275e63bf3ffd354356b
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264851"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336484"
 ---
 # <a name="defining-control-access-and-values"></a>定義控制存取和值
-
-如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
 
 ## <a name="change-the-tab-order-of-controls"></a>變更控制項的定位順序
 
@@ -48,11 +46,7 @@ ms.locfileid: "56264851"
 
 ### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>若要檢視在對話方塊中的所有控制項目前的定位順序
 
-在 **格式**功能表上，選取**定位順序**。
-
-\-或-
-
-- 按下**Ctrl** + **D**。
+移至**格式**功能表，然後選取**定位順序**，或按下**Ctrl** + **D**。
 
 ### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>若要變更在對話方塊中的所有控制項的定位順序
 
@@ -60,7 +54,7 @@ ms.locfileid: "56264851"
 
    在左上角的數字，每個控制項目前的定位順序中顯示它的位置。
 
-1. 按一下您想要的順序的每個控制項設定定位順序 **索引標籤**遵循的索引鍵。
+1. 選取您想要的順序的每個控制項設定定位順序** 索引標籤**遵循的索引鍵。
 
 1. 按下**Enter**以結束**定位順序**模式。
 
@@ -90,9 +84,9 @@ ms.locfileid: "56264851"
 
 1. 選取對話方塊上的控制項。
 
-2. 在 [[屬性] 視窗](/visualstudio/ide/reference/properties-window)，請在**標題**屬性，輸入控制項中，輸入 & 符號的新名稱 (`&`) 您想要為該控制項的便捷鍵的字母前面。 例如， `&Radio1` 。
+1. 在 [[屬性] 視窗](/visualstudio/ide/reference/properties-window)，請在**標題**屬性，輸入控制項中，輸入 & 符號的新名稱 (`&`) 您想要為該控制項的便捷鍵的字母前面。 例如， `&Radio1` 。
 
-3. 按 **Enter** 鍵。
+1. 按 **Enter** 鍵。
 
    在顯示的標題中表示的存取金鑰，比方說，就會出現底線**R**adio1。
 
@@ -100,17 +94,14 @@ ms.locfileid: "56264851"
 
 1. 使用時，進行控制項的標題**靜態文字**控制中[工具箱](/visualstudio/ide/reference/toolbox)。
 
-2. 在靜態文字的標題中，輸入連字號 (`&`) 您想要作為便捷鍵的字母前面。
+1. 在靜態文字的標題中，輸入連字號 (`&`) 您想要作為便捷鍵的字母前面。
 
-3. 請確定靜態文字控制項前面的控制項之前的定位順序。
+1. 請確定靜態文字控制項前面的控制項之前的定位順序。
 
-對話方塊中的所有便捷鍵應該都是唯一的。
+> [!NOTE]
+> 對話方塊中的所有便捷鍵應該都是唯一的。 若要檢查重複的便捷鍵，請前往**格式**功能表，然後選取**檢查助憶鍵**。
 
-### <a name="to-check-for-duplicate-access-keys"></a>若要檢查有重複的便捷鍵
-
-1. 在 **格式**功能表上，按一下**檢查助憶鍵**。
-
-## <a name="add-values-to-a-combo-box-control"></a>將值加入至下拉式方塊控制項
+## <a name="combo-box-values"></a>下拉式方塊的值
 
 您可以將值加入下拉式方塊控制項，只要您有 **對話方塊**編輯器中開啟。
 
@@ -119,7 +110,7 @@ ms.locfileid: "56264851"
 
 ### <a name="to-enter-values-into-a-combo-box-control"></a>若要在下拉式方塊控制項中輸入值
 
-1. 按一下並選取下拉式方塊控制項。
+1. 選擇下拉式方塊控制項選取它。
 
 1. 在 [[屬性] 視窗](/visualstudio/ide/reference/properties-window)，向下捲動至**資料**屬性。
 
@@ -129,7 +120,7 @@ ms.locfileid: "56264851"
 1. 選取 [值] 區域，如**資料**屬性並輸入您的資料值，以分號隔開。
 
    > [!NOTE]
-   > 因為空間干擾下拉式清單中的字母排序，請不要將值之間的空格。
+   > 不要將放值之間的空間，因為空間干擾下拉式清單中的字母排序。
 
 1. 按下**Enter**當您完成加入值。
 
@@ -145,6 +136,40 @@ ms.locfileid: "56264851"
    請嘗試整個值清單中向下捲動。 值會出現在輸入中，如同**資料**中的屬性**屬性**視窗。 沒有任何拼字檢查或大小寫。
 
    按下**Esc**以返回 **對話方塊**編輯器。
+
+   您現在可以修改程式碼，指定應該顯示為已選取的按鈕。 比方說，`m_radioBox1 = 0;`會選取第一個選項按鈕群組中。
+您現在可以修改程式碼，指定應該顯示為已選取的按鈕。 比方說，`m_radioBox1 = 0;`會選取第一個選項按鈕群組中。
+
+## <a name="radio-button-values"></a>選項按鈕的值
+
+當您新增到對話方塊中的選項按鈕時，將它們視為一組藉由設定**群組**中的屬性**屬性**群組中的第一個按鈕的視窗。 然後，這個選項按鈕的控制項識別碼就會出現在 [[加入成員變數精靈]](../ide/add-member-variable-wizard.md)中，讓您為選項按鈕群組加入成員變數。
+
+您可以在對話方塊中有多個選項按鈕群組。 加入每個群組，使用下列程序。
+
+### <a name="to-add-a-group-of-radio-buttons-to-a-dialog-box"></a>在對話方塊中加入選項按鈕群組
+
+1. 選取選項按鈕控制項中的[[工具箱] 視窗](/visualstudio/ide/reference/toolbox)和選擇的位置，在對話方塊中控制項的位置。
+
+1. 重複上述步驟來加入多個選項按鈕，視需要。 請確定群組中的選項按鈕是連續的定位順序。
+
+1. 在 [[屬性] 視窗](/visualstudio/ide/reference/properties-window)中，請將定位順序 **第一** 之選項按鈕的 [群組]  屬性設為 **True**。
+
+   變更**群組**屬性設 **，則為 True**對話方塊物件的資源指令碼中的按鈕的項目中加入 WS_GROUP 樣式，並防止該使用者可以一次選取多個選項按鈕（如果使用者選取一個選項按鈕，群組中其他已取消） 按鈕群組。
+
+   > [!NOTE]
+   > 群組中，應該只有第一個選項按鈕的 [群組]  屬性設為 **True**。 如果有不屬於按鈕群組的其他控制項，請將 **群組之外** 第一個控制項的 [群組]  屬性也設成 **True** 。 您可以使用，以快速識別群組之外的第一個控制項**Ctrl**+**D**檢視 索引標籤順序。
+
+### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>加入選項按鈕群組的成員變數
+
+1. 以滑鼠右鍵按一下定位順序中的第一個選項按鈕控制項 (主控項再加上**群組**屬性設定為 **，則為 True**)，然後選擇 **加入變數**從快顯功能表。
+
+1. 在 [[加入成員變數精靈]](../ide/add-member-variable-wizard.md)中，選取 [控制項變數]  核取方塊，然後選取 [值]  選項按鈕。
+
+1. 在 [變數名稱]  方塊中，輸入新成員變數的名稱。
+
+1. 在 [變數類型]  清單方塊中選取 [int]  或輸入 *int*。
+
+   您現在可以修改程式碼，指定應該顯示為已選取的按鈕。 比方說，`m_radioBox1 = 0;`會選取第一個選項按鈕群組中。
 
 ## <a name="requirements"></a>需求
 

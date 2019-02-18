@@ -1,6 +1,6 @@
 ---
-title: 加入、編輯或刪除控制項
-ms.date: 11/04/2016
+title: 如何：加入、 編輯或刪除控制項
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.controls.activex
@@ -43,44 +43,39 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 648ac3329409ba221881f75eaa51e1779091b0f0
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: 87acb2c8356508358f68c1ae4c8d5deaa94ecd9a
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264864"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336562"
 ---
-# <a name="adding-editing-or-deleting-controls"></a>加入、編輯或刪除控制項
+# <a name="how-to-add-edit-or-delete-controls"></a>如何：加入、 編輯或刪除控制項
 
 使用 **對話方塊**編輯器中，您可以新增、 調整大小、 編輯和刪除在對話方塊中的控制項。 您也可以編輯的控制項，例如其識別碼、 屬性或它是否一開始出現在執行階段。
 
 **對話方塊編輯器**索引標籤會出現在[工具箱視窗](/visualstudio/ide/reference/toolbox)當您處理**對話方塊**編輯器。 您也可以自訂**工具箱**，方便使用的視窗。 如需詳細資訊，請參閱 <<c0> [ 使用工具列](/visualstudio/ide/using-the-toolbox)並[顯示或隱藏 [工具箱] 視窗](showing-or-hiding-the-dialog-editor-toolbar.md)。
 
-您可以使用中的捷徑功能表** 對話方塊**編輯器快速加入登錄 ActiveX 控制項加入對話方塊中，而且您可以將 ActiveX 控制項加入**工具箱**快速存取。
+> [!TIP]
+> 在使用時** 對話方塊**編輯器，在許多情況下，您可以選取滑鼠右鍵顯示常用命令的捷徑功能表。
 
-如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
-
-## <a name="to-add-a-control"></a>若要加入控制項
+## <a name="add-controls"></a>加入控制項
 
 若要將控制項加入新的對話方塊中，將控制項從**工具箱**到您要建立的對話方塊。 然後移動控制項，或變更其大小和形狀。
 
 您可以將自訂控制項加入對話方塊中選取**自訂控制項**中的圖示**工具箱**將它拖曳至您的對話方塊。 若要新增**Syslink**控制項，加入自訂控制項，然後變更控制項的**類別**屬性設**Syslink**。 此動作會導致要重新整理和顯示的屬性**Syslink**控制屬性。 如需 MFC 包裝函式類別的資訊，請參閱[CLinkCtrl](../mfc/reference/clinkctrl-class.md)。
 
-### <a name="to-add-a-control-to-a-dialog-box"></a>在對話方塊加入控制項
+### <a name="to-add-a-control"></a>若要加入控制項
 
 1. 確定對話方塊索引標籤式視窗是編輯器框架中的目前文件。 如果對話方塊不是目前的文件，您不會看到**對話方塊編輯器索引標籤**中**工具箱**。
 
 1. 在 [**對話方塊編輯器**索引標籤**工具箱**] 視窗中，選取您想要的控制項，然後：
 
-   選取您想要將控制項放置位置的對話方塊。 控制項中，就會出現您所選取的位置。
+   - 選取您想要將控制項放置位置的對話方塊。 控制項中，就會出現您所選取的位置。
 
-   \-或-
+   - 將拖放控制項**工具箱**視窗至您的對話方塊上的位置。
 
-   將拖放控制項**工具箱**視窗至您的對話方塊上的位置。
-
-   \-或-
-
-   按兩下中的控制項**工具箱**（出現在您的對話方塊） 視窗，然後重新定位控制項以您偏好的位置。
+   - 按兩下中的控制項**工具箱**（出現在您的對話方塊） 視窗，然後調整控制項的位置，以您偏好的位置。
 
 ### <a name="to-add-multiple-controls"></a>若要將多個控制項
 
@@ -106,40 +101,7 @@ ms.locfileid: "56264864"
    > [!TIP]
    > 您可以調整控制項的大小之後它拖放到對話方塊中移動控制項框線的縮放控點。 如需詳細資訊，請參閱 <<c0> [ 調整個別控制項](../windows/sizing-individual-controls.md)。
 
-### <a name="to-add-an-activex-control"></a>若要加入 ActiveX 控制項
-
-Visual Studio 可讓您在您的對話方塊中插入 ActiveX 控制項。 如需詳細資訊，請參閱 < [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)並[ActiveX 控制項容器](../mfc/activex-control-containers.md)。
-
-**插入 ActiveX 控制項**對話方塊可讓您插入您的對話方塊中的 ActiveX 控制項，同時使用[對話方塊編輯器](../windows/dialog-editor.md)。 此對話方塊包含下列屬性：
-
-|屬性|描述|
-|---|---|
-|**ActiveX 控制項**|會顯示一份 Active X 控制項。 從這個對話方塊中插入控制項不會產生包裝函式類別。 如果您需要的包裝函數類別，使用[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)若要建立一個 (如需詳細資訊，請參閱[加入類別](../ide/adding-a-class-visual-cpp.md))。 如果 Active X 控制項不會出現在這個對話方塊中，再次嘗試安裝控制項根據廠商的指示。|
-|**路徑**|顯示 ActiveX 控制項所在的檔案。|
-
-#### <a name="to-see-the-activex-controls-available"></a>若要查看可用的 ActiveX 控制項
-
-1. 在 [對話方塊] 編輯器中開啟對話方塊。
-
-1. 以滑鼠右鍵按一下任何位置 對話方塊中的主體中。
-
-1. 在快速鍵功能表中，選取**插入 ActiveX 控制項**。
-
-   **插入 ActiveX 控制項** 對話方塊隨即出現，顯示您系統上的所有 ActiveX 控制項。 ActiveX 控制項檔案的路徑會顯示在對話方塊的底部。
-
-#### <a name="to-add-an-activex-control-to-a-dialog-box"></a>在對話方塊中加入 ActiveX 控制項
-
-1. 在 **插入 ActiveX 控制項**對話方塊方塊中，選取您想要新增到您的對話方塊中，然後選取的控制**確定**。
-
-   該控制項會出現在對話方塊中。您可以像處理其他控制項般地加以編輯，或為其建立處理常式。
-
-   > [!NOTE]
-   > 您可以將 ActiveX 控制項加入**工具箱**視窗以方便存取。
-
-   > [!CAUTION]
-   > 在您的系統上散發所有的 ActiveX 控制項可能不合法。 請參閱安裝這些控制項之軟體的授權合約，或連絡軟體公司。
-
-## <a name="to-edit-a-control"></a>若要編輯的控制項
+## <a name="edit-controls"></a>編輯控制項
 
 ### <a name="to-edit-the-properties-of-a-control-or-controls"></a>若要編輯的控制項或控制項屬性
 
@@ -158,21 +120,6 @@ Visual Studio 可讓您在您的對話方塊中插入 ActiveX 控制項。 如�
 1. 請確定且焦點在控制項 **對話方塊**編輯器。
 
 1. 選擇**恢復**從**編輯**功能表 (如果焦點在控制項上，不**復原**命令將會無法使用)。
-
-### <a name="to-edit-properties-for-an-activex-control"></a>若要編輯 ActiveX 控制項的屬性
-
-獨立廠商所提供的 ActiveX 控制項可能都配有其自己的屬性和特性的。 適用於 ActiveX 控制項的屬性會顯示在**屬性**視窗。 此外，ActiveX 控制項的寫入器所建立的任何屬性頁面會顯示在**屬性頁** 對話方塊 (若要檢視** 屬性頁**對於特定的 ActiveX 控制項中，按一下 ** 屬性頁**按鈕[屬性 視窗](/visualstudio/ide/reference/properties-window))。
-
-各種索引標籤會顯示在屬性頁面中的 ActiveX 控制項，視屬性工作表做為 ActiveX 控制項的一部分，而定。
-
-> [!NOTE]
-> 下列程序適用於使用屬性頁編輯 ActiveX 控制項。 您也可以瀏覽並編輯 ActiveX 屬性中的新**屬性**視窗。
-
-1. 選取  **ActiveX**控制項。
-
-1. 在上**檢視**功能表上，選取** 屬性頁**檢視內容。
-
-1. 視需要在 [屬性] 頁面中，請進行變更。
 
 ### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>定義對話方塊控制項的成員變數 (非按鈕)
 
@@ -196,22 +143,17 @@ Visual Studio 可讓您在您的對話方塊中插入 ActiveX 控制項。 如�
 
 您也可以使用**成員變數**索引標籤中[MFC 類別精靈](../mfc/reference/mfc-class-wizard.md)，新增新的成員變數，指定的類別，並檢視已定義的成員變數。
 
-## <a name="to-delete-a-control"></a>若要刪除控制項
+## <a name="delete-controls"></a>刪除控制項
 
-在對話方塊中，選取 控制項，然後按**刪除**索引鍵。
+在對話方塊中，選取控制項，然後按**刪除**鍵，或前往**編輯**功能表，然後選取**刪除**。
 
-   \-或-
+## <a name="other-issues"></a>其他問題
 
-在 **編輯**功能表上，選取**刪除**。
-
-   > [!TIP]
-   > 在使用時 **對話方塊**編輯器，在許多情況下，您可以按一下滑鼠右鍵顯示常用命令的捷徑功能表。
-
-## <a name="known-issue"></a>已知問題
+### <a name="troubleshooting"></a>疑難排解
 
 通用控制項或 rich edit 控制項加入對話方塊中之後, 則不會顯示當您測試對話方塊中，或對話方塊本身就不會出現。
 
-若要查看問題的範例：
+如需問題的範例：
 
 1. 建立 Win32 專案中，修改應用程式設定，讓您建立 Windows 應用程式 （而不將主控台應用程式）。
 
@@ -225,7 +167,7 @@ Visual Studio 可讓您在您的對話方塊中插入 ActiveX 控制項。 如�
 
 1. 執行此程式。
 
-1. 在對話方塊中的**幫助** 功能表中，按一下**有關**命令; 沒有對話方塊會顯示。
+1. 在對話方塊中的**幫助**功能表上，選取**有關**命令並觀察沒有對話方塊隨即出現。
 
 目前， ** 對話方塊**編輯器不會自動將程式碼加入您的專案或您拖放的下列通用控制項 rich edit 控制項的對話方塊時。 也沒有 Visual Studio 提供錯誤或警告時就會發生此問題。 若要修正，以手動方式加入控制項的程式碼。
 
@@ -245,6 +187,52 @@ Visual Studio 可讓您在您的對話方塊中插入 ActiveX 控制項。 如�
 > 若要使用 RichEdit 控制項與 MFC，您必須先呼叫[AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2)載入 RichEdit 2.0 控制項 (RICHED20。DLL)，或呼叫[AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit)載入較舊的 RichEdit 1.0 控制項 (RICHED32。DLL)。
 >
 > 您可以使用目前[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)類別與較舊的 RichEdit 1.0 控制項，但`CRichEditCtrl`只設計來支援 RichEdit 2.0 控制項。 RichEdit 1.0 和 RichEdit 2.0 很類似，因為大部分的方法就會運作。 不過請注意有一些差異，因此有些方法可能會無法正確運作，或完全無法運作的 1.0 和 2.0 控制項之間。
+
+### <a name="activex-controls"></a>ActiveX 控制項
+
+Visual Studio 可讓您在您的對話方塊中插入 ActiveX 控制項。 如需詳細資訊，請參閱 < [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)並[ActiveX 控制項容器](../mfc/activex-control-containers.md)。
+
+您可以使用中的捷徑功能表** 對話方塊**編輯器快速加入登錄 ActiveX 控制項加入對話方塊中，而且您可以將 ActiveX 控制項加入**工具箱**快速存取。
+
+**插入 ActiveX 控制項**對話方塊可讓您插入您的對話方塊中的 ActiveX 控制項，同時使用[對話方塊編輯器](../windows/dialog-editor.md)。 此對話方塊包含下列屬性：
+
+|屬性|描述|
+|---|---|
+|**ActiveX 控制項**|會顯示一份 Active X 控制項。 從這個對話方塊中插入控制項不會產生包裝函式類別。 如果您需要的包裝函數類別，使用[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)若要建立一個 (如需詳細資訊，請參閱[加入類別](../ide/adding-a-class-visual-cpp.md))。 如果 Active X 控制項不會出現在這個對話方塊中，再次嘗試安裝控制項根據廠商的指示。|
+|**路徑**|顯示 ActiveX 控制項所在的檔案。|
+
+> [!CAUTION]
+> 在您的系統上散發所有的 ActiveX 控制項可能不合法。 請參閱安裝這些控制項之軟體的授權合約，或連絡軟體公司。
+
+#### <a name="to-add-an-activex-control"></a>若要加入 ActiveX 控制項
+
+1. 開啟對話方塊的 [ **] 對話方塊**編輯器。
+
+1. 以滑鼠右鍵按一下的對話方塊和捷徑功能表上，選取主體中的任何地方**插入 ActiveX 控制項**。
+
+   **插入 ActiveX 控制項** 對話方塊隨即出現，顯示您系統上的所有 ActiveX 控制項。 ActiveX 控制項檔案的路徑會顯示在對話方塊的底部。
+
+1. 選取您想要新增至您的對話方塊中，然後選擇的控制項**確定**。
+
+   該控制項會出現在對話方塊中。您可以像處理其他控制項般地加以編輯，或為其建立處理常式。
+
+> [!NOTE]
+> 您可以將 ActiveX 控制項加入**工具箱**視窗以方便存取。
+
+#### <a name="to-edit-properties-for-an-activex-control"></a>若要編輯 ActiveX 控制項的屬性
+
+獨立廠商所提供的 ActiveX 控制項可能都配有其自己的屬性和特性的。 適用於 ActiveX 控制項的屬性會顯示在**屬性**視窗。 此外，ActiveX 控制項的寫入器所建立的任何屬性頁面會顯示在**屬性頁** 對話方塊 (若要檢視** 屬性頁**對於特定的 ActiveX 控制項中，按一下 ** 屬性頁**按鈕[屬性 視窗](/visualstudio/ide/reference/properties-window))。
+
+各種索引標籤會顯示在屬性頁面中的 ActiveX 控制項，視屬性工作表做為 ActiveX 控制項的一部分，而定。
+
+> [!NOTE]
+> 下列程序適用於使用屬性頁編輯 ActiveX 控制項。 您也可以瀏覽並編輯 ActiveX 屬性中的新**屬性**視窗。
+
+1. 選取  **ActiveX**控制項。
+
+1. 在上**檢視**功能表上，選取** 屬性頁**檢視內容。
+
+1. 視需要在 [屬性] 頁面中，請進行變更。
 
 ## <a name="requirements"></a>需求
 

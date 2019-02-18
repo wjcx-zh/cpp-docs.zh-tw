@@ -1,6 +1,6 @@
 ---
 title: 快速鍵 （c + + 圖示影像編輯器）
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 062b860849d968e18657afb66b568a1bf6f2b6d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 604f97edc8e4e49bad477d76e0e46334b8cf726b
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505101"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336532"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>快速鍵 （c + + 圖示影像編輯器）
 
@@ -36,7 +36,7 @@ ms.locfileid: "50505101"
 |Image.FillTool|**Ctrl** + **F**|填滿某個區域。|
 |Image.FlipHorizontal|**Ctrl** + **H**|水平翻轉影像或選取範圍。|
 |Image.FlipVertical|**Shift**+ **Alt** + **H**|垂直翻轉影像或選取範圍。|
-|Image.LargerBrush|**Ctrl 鍵** + **=**|在每一個方向上增加一個像素的筆刷大小。 若要縮小筆刷的大小，請參閱本表格中的 Image.SmallerBrush。|
+|Image.LargerBrush|**Ctrl** + **=**|在每一個方向上增加一個像素的筆刷大小。 若要縮小筆刷的大小，請參閱本表格中的 Image.SmallerBrush。|
 |Image.LineTool|**Ctrl** + **L**|以選取的形狀、大小和色彩繪製一條直線。|
 |Image.MagnificationTool|**Ctrl** + **M**|啟動**Magnify**工具，可讓您放大您的映像的特定區段。|
 |Image.Magnify|**Ctrl** + **Shift** + **M**|在目前的縮放比例與 1:1 縮放比例之間切換。|
@@ -61,8 +61,6 @@ ms.locfileid: "50505101"
 |Image.UseSelectionAsBrush|**Ctrl** + **U**|使用目前選取的範圍做為筆刷繪製。|
 |Image.ZoomIn|**Ctrl** + **Shift** + **。** （句點）<br /><br /> -或-<br /><br /> **Ctrl** + **向上鍵**|增加目前檢視的縮放比例。|
 |Image.ZoomOut|**Ctrl** + **，** （逗號）<br /><br /> -或-<br /><br /> **Ctrl** + **向下箭號**|降低目前檢視的縮放比率|
-
-如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
 
 ## <a name="requirements"></a>需求
 

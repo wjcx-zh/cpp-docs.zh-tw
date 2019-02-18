@@ -1,17 +1,17 @@
 ---
 title: Win32 預先定義的符號
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 helpviewer_keywords:
 - Win32 [C++], predefined symbols
 - symbols [C++], Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-ms.openlocfilehash: 703e00ebcf50c987fe3a0a9399cd7497bb9c95f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b282db2680b2459fdbece41d3c0e0d15f523e44
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434693"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320441"
 ---
 # <a name="win32-predefined-symbols"></a>Win32 預先定義的符號
 
@@ -19,20 +19,20 @@ ms.locfileid: "50434693"
 
 |||
 |-|-|
-|IDABORT|控制： 對話方塊的 [中止] 按鈕|
-|IDC_STATIC|在對話方塊中的控制項： 靜態文字|
-|IDCANCEL|控制： 對話方塊的 [取消] 按鈕|
-|IDD_ABOUTBOX，而|關於對話方塊 對話方塊中： 產品|
-|IDI_PROJECTNAME|圖示： 目前的專案圖示|
-|IDI_SMALL|圖示︰ 目前專案小圖示|
-|IDIGNORE|使用對話方塊上的 [忽略] 按鈕所使用的控制項：|
-|IDM_ABOUT|功能表項目： 搭配說明...關於...|
-|IDM_EXIT|功能表項目： 搭配檔案...結束...|
-|IDNO|控制： 對話方塊的 [無] 按鈕|
-|IDOK|控制項： 對話方塊 [確定] 按鈕|
-|IDRETRY|控制： 對話方塊的 [重試] 按鈕|
-|IDS_APP_TITLE|字串： 目前的應用程式名稱|
-|IDYES|控制： 對話方塊 [是] 按鈕|
+|IDABORT|控制：對話方塊 [中止] 按鈕|
+|IDC_STATIC|控制：在對話方塊中的靜態文字|
+|IDCANCEL|控制：對話方塊的 [取消] 按鈕|
+|IDD_ABOUTBOX| 對話方塊中：在對話方塊中的相關產品|
+|IDI_PROJECTNAME|圖示: 目前的專案圖示|
+|IDI_SMALL|圖示: 目前專案的小圖示|
+|IDIGNORE|控制：用於對話方塊中的 [忽略] 按鈕|
+|IDM_ABOUT|功能表項目：說明搭配使用...關於...|
+|IDM_EXIT|功能表項目：搭配檔案...結束...|
+|IDNO|控制：對話方塊的 [無] 按鈕|
+|IDOK|控制：對話方塊 [確定] 按鈕|
+|IDRETRY|控制：對話方塊的重試按鈕|
+|IDS_APP_TITLE|字串：目前的應用程式名稱|
+|IDYES|控制：對話方塊的 [是] 按鈕|
 
 ## <a name="requirements"></a>需求
 
@@ -41,4 +41,5 @@ Win32
 ## <a name="see-also"></a>另請參閱
 
 [預先定義的符號識別碼](../windows/predefined-symbol-ids.md)<br/>
-[符號：資源識別項](../windows/symbols-resource-identifiers.md)
+[MFC 預先定義的符號](../windows/mfc-predefined-symbols.md)<br/>
+[ATL 預先定義的符號](../windows/atl-predefined-symbols.md)<br/>

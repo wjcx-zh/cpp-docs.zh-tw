@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: 8d2e298a2e4c6eb16a1851b3a9ce7ddc886a76f2
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: 3b059db877d24f5e4414745ba6c2f9ee4f6591e7
+ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678466"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56418714"
 ---
 # <a name="multiset-class"></a>multiset 類別
 
@@ -114,8 +114,8 @@ class multiset
 
 在 C++14 中，指定沒有類型參數的 `std::less<>` 或 `std::greater<>` 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)。
 
-*配置器*<br/>
-代表預存配置器物件的類型，封裝有關多重集之記憶體配置和解除配置的詳細資訊。 預設值是 `allocator<Key>`。
+*Allocator*<br/>
+代表預存配置器物件的類型，封裝有關多重集之記憶體配置和解除配置的詳細資訊。 預設值為 `allocator<Key>`。
 
 ## <a name="remarks"></a>備註
 
@@ -482,7 +482,7 @@ multiset 中排序索引鍵符合參數索引鍵的項目數。
 
 成員函式會傳回下列範圍中的元素數目 *x*
 
-\[ lower_bound (*金鑰*)，upper_bound (*金鑰*))
+\[ lower_bound(*key*), upper_bound(*key*) )
 
 ### <a name="example"></a>範例
 
@@ -705,7 +705,7 @@ iterator emplace(Args&&... args);
 
 |參數|描述|
 |-|-|
-|*引數*|轉送以建構要插入到 multiset 中之元素的引數。|
+|*args*|轉送以建構要插入到 multiset 中之元素的引數。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -773,7 +773,7 @@ iterator emplace_hint(
 
 |參數|描述|
 |-|-|
-|*引數*|轉送以建構要插入到 multiset 中之元素的引數。|
+|*args*|轉送以建構要插入到 multiset 中之元素的引數。|
 |*where*|要開始搜尋正確的插入點的地方。 (如果該點前面*其中*，可能會在分攤的常數時間，而不是對數時間插入。)|
 
 ### <a name="return-value"></a>傳回值
@@ -1168,7 +1168,7 @@ IList);
 
 |參數|描述|
 |-|-|
-|*val*|要插入至 multiset 的元素值。|
+|*Val*|要插入至 multiset 的元素值。|
 |*Where*|要開始搜尋正確的插入點的地方。 (如果該點前面*其中*，可能會在分攤的常數時間，而不是對數時間插入。)|
 |*ValTy*|範本參數，指定 multiset 可用來建構的項目引數型別[value_type](../standard-library/map-class.md#value_type)，和完美轉送*Val*做為引數。|
 |*第一個*|要複製之第一個元素的位置。|
@@ -1929,7 +1929,7 @@ int main() {
       cout << *ms1_Iter << " ";
    cout << "." << endl;
 
-   // rend can be used to terminate an interation
+   // rend can be used to terminate an iteration
    // through a multiset in a reverse order
    cout << "The reversed multiset is: ";
    for ( ms1_rIter = ms1.rbegin( ) ; ms1_rIter != ms1.rend( ); ms1_rIter++ )

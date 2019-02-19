@@ -1,17 +1,17 @@
 ---
 title: / CETCOMPAT （控制流程強制技術相容）
-ms.date: 02/01/2019
+ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 3adb147804674b52a5d77030c48567ec04da6aa6
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 48eb1e2369e54d855bd19bb1d26ad057c903b9d0
+ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703411"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56418688"
 ---
 # <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/ CETCOMPAT （控制流程強制技術相容）
 
@@ -24,7 +24,7 @@ ms.locfileid: "55703411"
 ## <a name="arguments"></a>引數
 
 **NO**<br/>
-指定 executalbe 應該不會標示為與 CET 相容。
+指定可執行檔應該不會標示為與 CET 相容。
 
 ## <a name="remarks"></a>備註
 
@@ -44,7 +44,7 @@ ms.locfileid: "55703411"
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 
-- 此選項並沒有對等的程式設計。
+此選項並沒有對等的程式設計。
 
 ## <a name="see-also"></a>另請參閱
 

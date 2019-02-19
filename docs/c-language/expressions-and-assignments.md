@@ -11,12 +11,12 @@ helpviewer_keywords:
 - assigning values in C
 - Visual C, assignments
 ms.assetid: 9c72919f-0768-4b47-85ca-afdfec6847f4
-ms.openlocfilehash: 1b76b1efd5e91d8a1c0cb5885131b0b287f9d2df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 30c076bcaf80a0d51a7f8aefc9c1b1806a12e42f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527448"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147213"
 ---
 # <a name="expressions-and-assignments"></a>運算式和指派
 
@@ -38,6 +38,6 @@ ms.locfileid: "50527448"
 
 - [型別轉換](../c-language/type-cast-conversions.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 語言參考](../c-language/c-language-reference.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C, statements
 - statements
 ms.assetid: df3891cd-6195-4663-aecf-7fe7dc3ed9c3
-ms.openlocfilehash: b9fafec9b37499551943b51f55172cf64c97636e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0fb6a9c3742efd414581124e56d01356e4448614
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463722"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151919"
 ---
 # <a name="statements-c"></a>陳述式 (C)
 
@@ -27,6 +27,6 @@ C 程式的陳述式控制程式執行流程。 在 C 中，和其他程式語�
 |[for 陳述式](../c-language/for-statement-c.md)|[try-finally 陳述式](../c-language/try-finally-statement-c.md)|
 |[goto 和標記陳述式](../c-language/goto-and-labeled-statements-c.md)|[while 陳述式](../c-language/while-statement-c.md)|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 語言參考](../c-language/c-language-reference.md)

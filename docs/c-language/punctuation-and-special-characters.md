@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '# preprocessor operator'
 - special characters
 ms.assetid: e239633e-36f6-4967-939c-bf2799323778
-ms.openlocfilehash: 16ed4880bc76bd8ecac09033632a8b45dd42f00c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3594ca0f2dfcc294fa7a3d44268150ac5507e547
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528592"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149566"
 ---
 # <a name="punctuation-and-special-characters"></a>標點符號和特殊字元
 
@@ -25,6 +25,6 @@ C 字元集中的標點符號和特殊字元有許多用途，從組織程式文
 
 這些字元在 C 中有特殊的意義。本書詳細說明其用法。 井字號 (**#**) 只能出現在[前置處理指示詞](../preprocessor/preprocessor-directives.md)中。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 的元素](../c-language/elements-of-c.md)

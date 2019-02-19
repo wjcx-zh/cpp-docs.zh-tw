@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thread-local storage
 - storage, thread local storage
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
-ms.openlocfilehash: 8a20e337cddcc45701f20941ac5d7fea5e4324a5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 4b1aa32b384f3a5db5203883c1cc03bd61de7b19
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330303"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152127"
 ---
 # <a name="thread-local-storage"></a>執行緒區域儲存區
 
@@ -75,7 +75,7 @@ __declspec( thread ) int tls_i = 1;
     int *p = &tls_i;      /* Error */
     ```
 
-- C 允許使用需要自我參考的運算式來初始化變數，但只限於非靜態範圍的物件。 例如: 
+- C 允許使用需要自我參考的運算式來初始化變數，但只限於非靜態範圍的物件。 例如：
 
     ```C
     #define Thread   __declspec( thread )

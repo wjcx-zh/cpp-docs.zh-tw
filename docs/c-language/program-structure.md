@@ -6,12 +6,12 @@ helpviewer_keywords:
 - programs [C++], structure
 - C, program structure
 ms.assetid: b713b5a1-21a2-4e6f-9481-5f8594f1859e
-ms.openlocfilehash: 210c3dcd020de2acd999792b876873478982cfef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 891207ac19da99f2f1b2b651e661560a0ab02d9f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563887"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150190"
 ---
 # <a name="program-structure"></a>程式結構
 
@@ -29,6 +29,6 @@ ms.locfileid: "50563887"
 
 由於本結僅為概觀，因此討論的主題僅包含簡介資料。 如需詳細說明，請參閱交互參考資訊。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 語言參考](../c-language/c-language-reference.md)

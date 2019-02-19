@@ -6,12 +6,12 @@ helpviewer_keywords:
 - function calls, argument type conversions
 - functions [C], argument conversions
 ms.assetid: 04ea0f81-509a-4913-8b12-0937a81babcf
-ms.openlocfilehash: 9fdc9ef467980a079198ca06360766d84a85923f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9f205bbbbac353b57743f8e1211b20fa3d32f05
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441141"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152478"
 ---
 # <a name="function-call-conversions"></a>函式呼叫轉換
 
@@ -21,6 +21,6 @@ ms.locfileid: "50441141"
 
 如果函式原型不存在，則只會在函式呼叫中的引數上執行一般算術轉換。 這些轉換會單獨在呼叫中的各個引數上執行。 這表示 **float** 值會轉換成 **double**；`char` 或 **short** 值會轉換為 `int`；而 `unsigned char` 或 **unsigned short** 會轉換為 `unsigned int`。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [類型轉換](../c-language/type-conversions-c.md)

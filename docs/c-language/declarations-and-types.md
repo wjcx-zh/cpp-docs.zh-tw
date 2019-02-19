@@ -7,12 +7,12 @@ helpviewer_keywords:
 - declarations [C++], C
 - declarations [C++], types
 ms.assetid: 432a2286-cf42-42ce-8baf-c908ffb57ca8
-ms.openlocfilehash: b2caf3022f5a1b23d50d994c3408cf4024c69ea2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75ffbeda8b120b9a1bb9f1bb28c570695ed2c8c8
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607333"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150242"
 ---
 # <a name="declarations-and-types"></a>宣告和類型
 
@@ -40,6 +40,6 @@ ms.locfileid: "50607333"
 
 - [擴充的儲存類別屬性](../c-language/c-extended-storage-class-attributes.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 語言參考](../c-language/c-language-reference.md)

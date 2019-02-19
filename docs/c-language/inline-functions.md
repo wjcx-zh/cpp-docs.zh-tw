@@ -6,12 +6,12 @@ helpviewer_keywords:
 - inline functions, __inline keyword
 - functions [C++], inline functions
 ms.assetid: 00f4b2ff-8ad0-4165-9f4c-2ef157d03f31
-ms.openlocfilehash: 2f2ed8ccff0ecbdeff7f3ebac94d5e19ec8042f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebe0fd3d785903c149999bd4ec8de9eabeabdb05
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452633"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147253"
 ---
 # <a name="inline-functions"></a>內嵌函式
 
@@ -35,9 +35,8 @@ ms.locfileid: "50452633"
 
 使用 `__inline` 的函式不應與內嵌組合語言程式碼混淆。 如需詳細資訊，請參閱[內嵌組合語言](../c-language/inline-assembler-c.md)。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [inline、__inline、\__forceinline](../cpp/inline-functions-cpp.md)
-

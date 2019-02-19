@@ -5,12 +5,12 @@ helpviewer_keywords:
 - bitwise operations
 - signed bitwise operations
 ms.assetid: 1e5cf65b-ee32-41a0-a5c2-82c1854091f6
-ms.openlocfilehash: d178900a25a5d7a080068fb1919fcba2853bef14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43f65fd5d1ea14ef5e15f18d9c8516ccf5fb1e08
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652006"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147590"
 ---
 # <a name="signed-bitwise-operations"></a>帶正負號的位元運算
 
@@ -27,6 +27,6 @@ ms.locfileid: "50652006"
 
 位元 AND 的結果為 96。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [整數](../c-language/integers.md)

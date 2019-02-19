@@ -7,12 +7,12 @@ helpviewer_keywords:
 - expressions [C++], evaluating
 - parentheses, expressions
 ms.assetid: b8636147-6982-408c-9e64-29e40678ee43
-ms.openlocfilehash: 0b58ed2483b404df957b8e9e95e41442403036c9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0105556530161991b46c5ee25cd73f2f995063f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505543"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149345"
 ---
 # <a name="expressions-in-parentheses"></a>括號內的運算式
 
@@ -39,6 +39,6 @@ ms.locfileid: "50505543"
 
 副作用所造成的例外狀況將在[副作用](../c-language/side-effects.md)中討論。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 主要運算式](../c-language/c-primary-expressions.md)

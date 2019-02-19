@@ -6,12 +6,12 @@ helpviewer_keywords:
 - redefining keywords
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-ms.openlocfilehash: 8751889124c7c621ae1d4dad5a523762e7190ebb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1364e0edacd94efa4ade6c6892a57d619635a39
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580722"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150307"
 ---
 # <a name="c-keywords"></a>C 關鍵字
 
@@ -56,6 +56,6 @@ Microsoft 擴充功能預設為啟用。 為了確保您的程式可完整移植
 
 **結束 Microsoft 專屬**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 的元素](../c-language/elements-of-c.md)

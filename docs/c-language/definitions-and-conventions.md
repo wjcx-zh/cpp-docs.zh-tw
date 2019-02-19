@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - nonterminals definition
 ms.assetid: f9b3cf5f-6a7c-4a10-9b18-9d4a43efdaeb
-ms.openlocfilehash: 60806286ff8bbe64440c8b2f3e7af57b4390e2cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ff3f8b447e29f0da59405a7c0286d7a696b4613
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571440"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152465"
 ---
 # <a name="definitions-and-conventions"></a>定義和慣例
 
@@ -34,6 +34,6 @@ ms.locfileid: "50571440"
 
 接著非終端項的冒號 (**:**) 會引入其定義。 除非前面加上「one of」字樣，否則替代定義另列於其他行。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 語言語法摘要](../c-language/c-language-syntax-summary.md)

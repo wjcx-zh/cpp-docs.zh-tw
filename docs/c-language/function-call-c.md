@@ -6,12 +6,12 @@ helpviewer_keywords:
 - functions [C], calling
 - function calls
 ms.assetid: 35c66719-3f15-4d3b-97da-4e19dc97b308
-ms.openlocfilehash: 46e010ed625e23aa6c21b8c78280b714c68582b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d22bdebc8fa832afb14a2cc09e6a441b7b9e8a5a
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478113"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147408"
 ---
 # <a name="function-call-c"></a>函式呼叫 (C)
 
@@ -30,6 +30,6 @@ ms.locfileid: "50478113"
 
 函式呼叫運算式具有函式傳回值的值和類型。 函式不能傳回陣列類型的物件。 如果函式的傳回類型是 `void` (也就是說，函式宣告為永不傳回值)，則函式呼叫運算式也會具有 `void` 類型  (如需詳細資訊，請參閱[函式呼叫](../c-language/function-calls.md))。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [函式呼叫運算子：()](../cpp/function-call-operator-parens.md)

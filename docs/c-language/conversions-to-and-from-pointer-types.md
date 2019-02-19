@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type casts, involving pointers
 - void pointers
 ms.assetid: 3facc56f-06d3-4570-b1a2-7d4927b83086
-ms.openlocfilehash: c7487cb4fd268edf1db7531a2a40b5535cd425f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d907dbcf4f826d364fb68ce65f7d44c6cfe97cd
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623401"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147239"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>指標類型的轉換
 
@@ -36,6 +36,6 @@ ms.locfileid: "50623401"
 
 值為 0 的整數常數運算式或是轉型為 **void** <strong>\*</strong> 等運算式，都可以藉由類型轉換、指派或與任何類型指標比較的方式來進行轉換。 這樣所產生的 null 指標相當於相同類型的另一個 null 指標，但是這個 null 指標不等於任何函式指標或物件指標。 常數 0 以外的整數可以轉換成指標類型，但是結果不可移植。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [指派轉換](../c-language/assignment-conversions.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - tokens
 - translation units
 ms.assetid: 05e5f6f1-b8ea-4f74-af17-c0b9b5dbd3b5
-ms.openlocfilehash: d56f43decef15f9f94049b345b5c12393cf771cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f92692fb19b0eeff2fe9af179fc8fe3fa6c2f7e
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50427387"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149722"
 ---
 # <a name="c-tokens"></a>C 語彙基元
 
@@ -35,6 +35,6 @@ ms.locfileid: "50427387"
 
 本節所述的關鍵字、識別項、常數、字串常值和運算子為語彙基元的範例。 標點符號字元如方括弧 (**[ ]**)、大括弧 (**{ }**)、圓括弧 ( **( )** ) 和逗號 (**,**) 也是語彙基元。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 的元素](../c-language/elements-of-c.md)

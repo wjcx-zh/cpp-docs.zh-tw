@@ -7,12 +7,12 @@ helpviewer_keywords:
 - prolog code
 - epilog code
 ms.assetid: 23b1209b-93ba-46ad-a60f-2327c1933eaf
-ms.openlocfilehash: c79502d1793df2a3340eed26c67cca5d2a8b0d9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 519d7bceb700e9862f0d0025b755cf28fb0fbc0c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537233"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149774"
 ---
 # <a name="naked-c"></a>Naked (C)
 
@@ -24,6 +24,6 @@ naked 儲存類別屬性是 Microsoft 專有的 C 語言擴充功能。 編譯�
 
 **結束 Microsoft 專屬**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 擴充的儲存類別屬性](../c-language/c-extended-storage-class-attributes.md)

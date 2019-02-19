@@ -7,12 +7,12 @@ helpviewer_keywords:
 - source files, specifying in compiler
 - source programs
 ms.assetid: 18bb2826-17da-48e5-92a2-10e649f1bc9f
-ms.openlocfilehash: c9a7c17c5cf52cb263d61fe79baa331c5b4d57a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4562f8397e9d2d3e044086b8da8d56ba25047ebd
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637136"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152530"
 ---
 # <a name="source-files-and-source-programs"></a>原始程式檔和來源程式
 
@@ -39,6 +39,6 @@ C「原始程式」為指示詞、pragma、宣告、定義、陳述式區塊和�
 
 原始程式檔不需要包含可執行的陳述式。 例如，將變數的定義放在某個原始程式檔中，再於使用這些變數的其他原始程式檔中宣告這些變數的參考，可能會對您有幫助。 這項技術在必要時可讓您更容易尋找及更新定義。 基於相同原因，常數和巨集通常會組織為稱為「Include 檔」或「標頭檔」的檔案，這些檔案可在原始程式檔中視需要加以參考。 如需[巨集](../preprocessor/macros-c-cpp.md)和 [include 檔](../preprocessor/hash-include-directive-c-cpp.md)的詳細資訊，請參閱《前置處理器參考》。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [程式結構](../c-language/program-structure.md)

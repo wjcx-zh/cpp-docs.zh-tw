@@ -5,12 +5,12 @@ helpviewer_keywords:
 - compound statements
 - statements, compound
 ms.assetid: 32d1bf86-cbbc-42a9-ba3a-1be1c6c7754c
-ms.openlocfilehash: dc4e13d82c03a30023f72759ecacb798aedec0ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42d4c1d21c3e98dfc0281a47a35e033852f8de18
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532297"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152153"
 ---
 # <a name="compound-statement-c"></a>複合陳述式 (C)
 
@@ -50,6 +50,6 @@ if ( i > 0 )
 
 在這個範例中，如果 `i` 大於 0，則複合陳述式內的所有陳述式會依序執行。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [陳述式](../c-language/statements-c.md)

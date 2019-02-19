@@ -10,12 +10,12 @@ helpviewer_keywords:
 - memory, access using volatile
 - volatile keyword [C], type specifier
 ms.assetid: bb4c6744-1dd7-40a8-b4eb-f5585be30908
-ms.openlocfilehash: 31cfa4d0d443cc6bb854e8010f1e1535cd39b51b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5cb7ab3de8938b77dc95be3ee442f71d3b18b42
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507667"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147304"
 ---
 # <a name="type-qualifiers"></a>類型限定詞
 
@@ -63,6 +63,6 @@ int volatile vint;     /* Volatile integer        */
 
 - 項目可以同時是 **const** 與 `volatile`，在這種情況下，項目就無法由自己的程式合法修改，但是可以由某個非同步處理序進行修改。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [宣告和類型](../c-language/declarations-and-types.md)

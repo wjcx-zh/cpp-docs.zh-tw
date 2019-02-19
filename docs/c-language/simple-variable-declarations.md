@@ -5,12 +5,12 @@ helpviewer_keywords:
 - untyped variables
 - declaring variables, simple
 ms.assetid: b07adf9d-9e79-4b64-8a34-e6fe1c7eccec
-ms.openlocfilehash: be6a60d5765954efbc4a1cc6b991ac989e20b8f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27710dabe512332564ee557a9d022457d9fddc5c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615315"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149982"
 ---
 # <a name="simple-variable-declarations"></a>簡單變數宣告
 
@@ -33,7 +33,7 @@ ms.locfileid: "50615315"
 
 對於算術、結構、等位、列舉和 void 類型，以及 `typedef` 名稱所代表的類型，簡單宣告子可以在宣告中使用，因為類型規範會提供所有類型相關資訊。 指標、陣列和函式類型都需要更複雜的宣告子。
 
-您可以使用以逗號分隔 (**,**) 的識別項清單，在相同的宣告中指定數個變數。 宣告中定義的所有變數都會具有相同的基底類型。 例如: 
+您可以使用以逗號分隔 (**,**) 的識別項清單，在相同的宣告中指定數個變數。 宣告中定義的所有變數都會具有相同的基底類型。 例如：
 
 ```C
 int x, y;        /* Declares two simple variables of type int */
@@ -51,6 +51,6 @@ unsigned long reply, flag; /* Declares two variables
 
 在這個範例中，`reply` 和 `flag` 這兩個變數都具有 `unsigned long` 類型並且保存不帶正負號的整數值。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [宣告子和變數宣告](../c-language/declarators-and-variable-declarations.md)

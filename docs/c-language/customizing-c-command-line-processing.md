@@ -12,12 +12,12 @@ helpviewer_keywords:
 - suppressing environment processing
 - _exec function
 ms.assetid: c20fa11d-b35b-4f3e-93b6-2cd5a1c3c993
-ms.openlocfilehash: 9f7bc78c20aee4b91bf00fefd2615ba1a6611010
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1abdb0c104755efc86543ac4773359078e855999
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623591"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147031"
 ---
 # <a name="customizing-c-command-line-processing"></a>自訂 C 命令列處理
 
@@ -27,6 +27,6 @@ ms.locfileid: "50623591"
 
 如果您的程式會在 C 執行階段程式庫中呼叫 **_spawn** 或 **_exec** 常式系列，則您不應該隱藏環境處理常式，因為此常式的作用是將環境從繁衍處理序傳遞到新的處理序。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [main 函式和程式執行](../c-language/main-function-and-program-execution.md)

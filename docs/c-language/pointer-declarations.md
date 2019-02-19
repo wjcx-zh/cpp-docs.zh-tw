@@ -7,12 +7,12 @@ helpviewer_keywords:
 - const keyword [C]
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
-ms.openlocfilehash: c09e73eec0f020ccc334d443248feb09631a0f7f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ee6e9e78f3793cd1912ece7f8627a4be68e929c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432463"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151997"
 ---
 # <a name="pointer-declarations"></a>指標宣告
 
@@ -114,6 +114,6 @@ struct id
 
 變數 *record* 具有結構類型 *id*。請注意，*pname* 會宣告為另一個名為 *name* 之結構類型的指標。 這個宣告可以在定義 *name* 類型之前出現。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [宣告子和變數宣告](../c-language/declarators-and-variable-declarations.md)

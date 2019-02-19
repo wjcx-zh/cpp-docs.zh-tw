@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ANSI [C++], C standard
 - implementation-defined behavior
 ms.assetid: c9f50670-23cb-401f-8ad7-136972012eb9
-ms.openlocfilehash: e74d4bceee722ced42ccf63e89fe8ad2a4b866e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1eb5e276d8292f67018150427e6c9d8ecf0ccee0
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447095"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147291"
 ---
 # <a name="implementation-defined-behavior"></a>實作定義的行為
 
@@ -23,6 +23,6 @@ ANSI X3.159-1989，美國國家資訊系統標準 - 程式語言 - C，包含一
 > [!NOTE]
 >  本節僅描述美國英文版的 C 編譯器。 其他語言的 Microsoft C 實作可能稍有不同。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 語言參考](../c-language/c-language-reference.md)

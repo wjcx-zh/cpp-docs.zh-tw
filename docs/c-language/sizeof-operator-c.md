@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 70826d03-3451-41e4-bebb-a820ae66d53f
-ms.openlocfilehash: 0b5d25e0316c710ce758479ad9417c92201d929d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bc0de5481cade10f89634d9e4ec78f4ec7b09f6
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577628"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149553"
 ---
 # <a name="sizeof-operator-c"></a>sizeof 運算子 (C)
 
@@ -51,7 +51,7 @@ const int string_no = ( sizeof strings ) / ( sizeof strings[0] );
 
 在下列範例中，`strings` 是 `char` 的指標陣列。 指標的數目是陣列中元素的數目，但尚未指定。 使用 `sizeof` 運算子來計算陣列中元素的數目以判斷指標的數目是很容易的事。 **const** 整數值 `string_no` 會初始化為這個數字。 由於它是 **const** 值，因此不能修改 `string_no`。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 運算子](c-operators.md)<br/>
 [C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

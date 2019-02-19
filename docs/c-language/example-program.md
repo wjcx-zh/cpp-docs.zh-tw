@@ -2,12 +2,12 @@
 title: 範例程式
 ms.date: 11/04/2016
 ms.assetid: fc22ef82-9caa-425f-b201-2891bc123d1f
-ms.openlocfilehash: 31e8f822462dad7b3935548c9c25e7334a82b377
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc00ee391fd845039791b8cec727623074a7aeff
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608608"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147122"
 ---
 # <a name="example-program"></a>範例程式
 
@@ -73,6 +73,6 @@ FILE1.C 會使用定義宣告來初始化全域變數 `a` 和 `b`。 會宣告�
 
 [存留期、範圍、可視性和連結](../c-language/lifetime-scope-visibility-and-linkage.md)中會討論識別項的存留期和可視性。 如需函式的詳細資訊，請參閱[函式](../c-language/functions-c.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [原始程式檔和來源程式](../c-language/source-files-and-source-programs.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
-ms.openlocfilehash: e7bfeccf41b9e4dace49e9ab209a94598c492b41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 52403fc45bbb68d693ef154bf39c5dd366dd10c5
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515527"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56146477"
 ---
 # <a name="considerations-when-writing-prologepilog-code"></a>撰寫初構/終解程式碼時的考量
 
@@ -46,7 +46,7 @@ ret                          ; Return from function
 
 編譯器會提供常數 **__LOCAL_SIZE**，用於函式初構程式碼的內嵌組合語言區塊中。 這個常數是用來配置區域變數在自訂初構程式碼中堆疊框架上的空間。
 
-編譯器會判斷 **__LOCAL_SIZE** 的值。 這個值是所有使用者定義區域變數和編譯器所產生暫存變數的位元組總數。 **__LOCAL_SIZE** 只能作為即時運算元，不能在運算式中使用。 您不可變更或重新定義這個常數的值。 例如: 
+編譯器會判斷 **__LOCAL_SIZE** 的值。 這個值是所有使用者定義區域變數和編譯器所產生暫存變數的位元組總數。 **__LOCAL_SIZE** 只能作為即時運算元，不能在運算式中使用。 您不可變更或重新定義這個常數的值。 例如：
 
 ```
 mov      eax, __LOCAL_SIZE           ;Immediate operand--Okay
@@ -81,6 +81,6 @@ __declspec ( naked ) func()
 
 **結束 Microsoft 專屬**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Naked 函式](../c-language/naked-functions.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - notation in C
 - syntax
 ms.assetid: 6edccdb7-453b-4820-a5d8-075c19fb8926
-ms.openlocfilehash: afb441b8afb66eaa8cf98833cbc68cb473d3e461
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be58b92204526f9426b5873157f06cf2ee558d4a
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507376"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147639"
 ---
 # <a name="c-language-syntax-summary"></a>C 語言語法摘要
 
@@ -21,6 +21,6 @@ ms.locfileid: "50507376"
 > [!NOTE]
 >  這個語法摘要不是 ANSI C 標準的一部分，包括在內僅供參考之用。 Microsoft 專有語法會在語法之後註解中註明。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 語言參考](../c-language/c-language-reference.md)

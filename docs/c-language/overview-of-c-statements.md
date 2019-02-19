@@ -8,12 +8,12 @@ helpviewer_keywords:
 - statements, about statements
 - Visual C, statements
 ms.assetid: 0d49837a-5399-4881-b60c-af5f4e9720de
-ms.openlocfilehash: 906beb7c5c2edfc448daadb1f4c5a111f7877b91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1b5863a021fd74bb80162d589af7c2a1a5b36f9b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613716"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147044"
 ---
 # <a name="overview-of-c-statements"></a>C 陳述式概觀
 
@@ -43,6 +43,6 @@ C 陳述式包含語彙基元、運算式和其他陳述式。 形成另一個�
 
 所有 C 陳述式都可以使用包含名稱和冒號的識別標籤做為開頭。 因為只有 `goto` 陳述式會辨識陳述式標籤，因此將與 `goto` 一起討論陳述式標籤。 如需詳細資訊，請參閱 [goto 和標記陳述式](../c-language/goto-and-labeled-statements-c.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [陳述式](../c-language/statements-c.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data binding [C++], operator precedence
 - operators [C++], precedence
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
-ms.openlocfilehash: 1b14f7a7d0c1d682c641ab441dc3e40c23688392
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88d0256e2ce948fbdfffb24037517690ef4b7cb7
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463254"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152491"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>優先順序和評估順序
 
@@ -81,6 +81,6 @@ C 運算子的優先順序和順序關聯性會影響運算式中運算元的群
 
 `( p == 0 ) ? ( p += 1 ) : ( p += 2 )`
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 運算子](../c-language/c-operators.md)

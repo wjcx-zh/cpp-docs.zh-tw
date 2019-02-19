@@ -17,12 +17,12 @@ helpviewer_keywords:
 - lifetime
 - global variables, lifetime
 ms.assetid: ff0b42cb-3f0f-49a3-a94f-d1d825d8ddfe
-ms.openlocfilehash: 5e5d3b852148284312d2e1fb4cee1df432ac161b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 962e5ef4cae1be142091d2a209b4c60c0b789e74
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665214"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149436"
 ---
 # <a name="lifetime"></a>存留期
 
@@ -42,6 +42,6 @@ ms.locfileid: "50665214"
 
 如果是利用 `malloc` 之類的特殊程式庫常式建立記憶體，則可視需要 (動態) 配置記憶體。 因為動態記憶體配置使用程式庫常式，因此不被視為語言的一部分。 請參閱《執行階段程式庫參考》中的 [malloc](../c-runtime-library/reference/malloc.md) 函式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [存留期、範圍、可見度和連結](../c-language/lifetime-scope-visibility-and-linkage.md)

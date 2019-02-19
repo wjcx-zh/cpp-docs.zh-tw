@@ -7,12 +7,12 @@ helpviewer_keywords:
 - loop structures, continue keyword
 - continue keyword [C]
 ms.assetid: 969f293a-45fe-48a7-b4c6-287ba27a631d
-ms.openlocfilehash: db3ed1d1575a52b8d54466f763f348821c458f31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 983775e6fe9887afa5784358ede1de9583b3afba
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587158"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147135"
 ---
 # <a name="continue-statement-c"></a>continue 陳述式 (C)
 
@@ -43,6 +43,6 @@ while ( i-- > 0 )
 
 在此範例中，如果 `i` 大於 0，就會執行陳述式主體。 第一個 `f(i)` 會指派給 `x`，而如果 `x` 等於 1，就會執行 `continue` 陳述式。 主體中的其餘陳述式都會加以忽略，並且於迴圈的頂端透過評估迴圈的測試繼續執行。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [continue 陳述式](../cpp/continue-statement-cpp.md)

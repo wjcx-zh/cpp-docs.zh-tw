@@ -5,12 +5,12 @@ helpviewer_keywords:
 - operators [C], subtraction
 - subtraction operator, syntax
 ms.assetid: 9cacba7d-20b3-4372-8a63-ba5d8ee64177
-ms.openlocfilehash: 369096025a67c67775584928d1ee3264a5a10d94
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c9510cf3708ef049b5dac213fa3de894fcd4a07
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480050"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147603"
 ---
 # <a name="subtraction--"></a>減法 (-)
 
@@ -20,6 +20,6 @@ ms.locfileid: "50480050"
 
 從指標值減去整數值時，減法運算子會藉由將整數值 (*i*) 乘以指標所定址之值的大小進行整數值轉換。 在轉換之後，整數值代表 *i* 個記憶體位置，其中每個位置的長度都是以指標類型指定。 從指標值中減去轉換的整數值時，結果會是原始位址之前記憶體位址的 *i* 個位置。 新指標會指向原始指標值所定址類型的值。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 加法類運算子](../c-language/c-additive-operators.md)

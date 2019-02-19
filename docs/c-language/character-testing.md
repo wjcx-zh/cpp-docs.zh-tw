@@ -2,12 +2,12 @@
 title: 字元測試
 ms.date: 11/04/2016
 ms.assetid: 376ba061-bae3-427e-9569-33fa5949a199
-ms.openlocfilehash: 31a90f28d710ffc1b58f9c6b3fcfd01fd8d2d00c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b02d07ca2796e5088c3021f1ae8795ea92761943
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523197"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147187"
 ---
 # <a name="character-testing"></a>字元測試
 
@@ -24,6 +24,6 @@ ms.locfileid: "50523197"
 |`isprint`|字元 A-Z、a–z、0-9、標點符號、空格 ASCII 32-126|
 |`isupper`|字元 A-Z ASCII 65-90|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [程式庫函式](../c-language/library-functions.md)

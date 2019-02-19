@@ -6,12 +6,12 @@ helpviewer_keywords:
 - typedef declarations
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
-ms.openlocfilehash: 6493c5240ca66fc1f12c9617e05072f8399d4786
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4bf7bc82cdf792e5a23f6d5533cc4d800fe4252
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468896"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149618"
 ---
 # <a name="typedef-declarations"></a>Typedef 宣告
 
@@ -51,7 +51,7 @@ typedef 宣告的解譯方式和變數或函式宣告相同，但識別項會變
 
 請注意，typedef 宣告不會建立類型。 它會建立現有類型的同義字，或是可透過其他方式指定之類型的名稱。 將 typedef 名稱做為類型指定名稱時，它可以結合特定的類型指定名稱，但不能結合其他類型指定名稱。 可接受的修飾詞包含 **const** 與 `volatile`。
 
-Typedef 名稱和一般識別項共用命名空間 (如需詳細資訊，請參閱[命名空間](../c-language/name-spaces.md))。 因此，程式可以具有相同名稱的 typedef 名稱和區域範圍識別項。 例如: 
+Typedef 名稱和一般識別項共用命名空間 (如需詳細資訊，請參閱[命名空間](../c-language/name-spaces.md))。 因此，程式可以具有相同名稱的 typedef 名稱和區域範圍識別項。 例如：
 
 ```C
 typedef char FlagType;
@@ -146,6 +146,6 @@ DRAWF box;
 void box( int, int );
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [宣告和類型](../c-language/declarations-and-types.md)

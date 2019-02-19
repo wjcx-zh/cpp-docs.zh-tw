@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type casts [C++], about type-cast conversion
 - type-cast conversions [C++]
 ms.assetid: 57ab5902-f12f-4326-a2f6-6282f1d4025a
-ms.openlocfilehash: d2de646d9ad3082c43ce896fdf4bc3c7e55a4405
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d54e4c15f84ccecad629d48341e5d3ae26d8cecf
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505296"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151649"
 ---
 # <a name="type-cast-conversions"></a>類型轉換
 
@@ -54,6 +54,6 @@ ms.locfileid: "50505296"
 
 您可以使用轉換將運算式轉換成類型 `void`，但是產生的運算式只能在不需要值的位置使用。 轉換成 **void** <strong>\*</strong> 的物件指標，再轉換回原始類型將會返回其原始值。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [類型轉換](../c-language/type-conversions-c.md)

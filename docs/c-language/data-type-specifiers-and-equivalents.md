@@ -12,12 +12,12 @@ helpviewer_keywords:
 - simple types, names
 - type names [C++], simple
 ms.assetid: 0d4b515a-4f68-4786-83cf-a5d43c7cb6f3
-ms.openlocfilehash: 778390702cf970fc7c7246402ff0c1396e055770
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4003d9427c160b0e1c725cdc591190bd9777b3de
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520701"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151664"
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>資料類型規範和對應項
 
@@ -48,6 +48,6 @@ ms.locfileid: "50520701"
 
 **結束 Microsoft 專屬**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 類型規範](../c-language/c-type-specifiers.md)

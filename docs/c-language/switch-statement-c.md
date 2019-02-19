@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch keyword [C]
 ms.assetid: fbede014-23bd-4ab1-8094-c8d9d9cb963a
-ms.openlocfilehash: 5bd2f3a4d17f991853de104b9f491b0ba77b07a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f781147bf4ed020cf925ca29c2ba1b0f601cde1
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515371"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148188"
 ---
 # <a name="switch-statement-c"></a>switch 陳述式 (C)
 
@@ -110,6 +110,6 @@ Microsoft C 預設會啟用 Microsoft 擴充功能。 使用 /Za 編譯器選項
 
 **結束 Microsoft 專屬**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [switch 陳述式 (C++)](../cpp/switch-statement-cpp.md)

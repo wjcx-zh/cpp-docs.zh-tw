@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - wmain function
 ms.assetid: d0300812-adc4-40c6-bba3-b2da25468c80
-ms.openlocfilehash: 65efacb76e80dedee13d8e1af017686075c1168e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d467d50a7188cd665f64de8b6f0ce6e6a37df752
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460589"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148487"
 ---
 # <a name="using-wmain"></a>使用 wmain
 
@@ -25,7 +25,7 @@ wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
 
 ## <a name="remarks"></a>備註
 
-您可以使用類似於 **main**的格式將形式參數宣告為 **wmain**。 然後您可以傳遞寬字元引數以及 (選擇性的) 一個指向程式的寬字元環境指標。 **wmain** 的 `argv` 與 `envp` 參數都是 `wchar_t*` 類型。 例如: 
+您可以使用類似於 **main**的格式將形式參數宣告為 **wmain**。 然後您可以傳遞寬字元引數以及 (選擇性的) 一個指向程式的寬字元環境指標。 **wmain** 的 `argv` 與 `envp` 參數都是 `wchar_t*` 類型。 例如：
 
 如果您的程式使用 **main** 函式，則多位元組字元環境就會在程式啟動時由執行階段程式庫建立。 環境的寬字元複本只有在需要時才建立 (例如，藉著呼叫 `_wgetenv` 或 `_wputenv` 函式)。 在第一次呼叫 `_wputenv` 時，或在第一次呼叫 `_wgetenv` 時，如果 MBCS 環境已經存在，則會建立對應的寬字元字串環境，然後再由 `_wenviron` 全域變數 (是 `_environ` 全域變數的寬字元版本) 指向該變數。 此時會同時存在兩個環境 (MBCS 和 Unicode) 的複本，並由作業系統在整個程式存留期裡進行維護。
 
@@ -35,6 +35,6 @@ wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
 
 **結束 Microsoft 專屬**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [main 函式和程式執行](../c-language/main-function-and-program-execution.md)

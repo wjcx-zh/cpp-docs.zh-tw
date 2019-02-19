@@ -8,12 +8,12 @@ helpviewer_keywords:
 - additive operators
 - arithmetic operators [C++], additive operators
 ms.assetid: bb8ac205-b061-41fc-8dd4-dab87c8b900c
-ms.openlocfilehash: af7302adaafc3a91287f6d15a11c8e784f35c33d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29bea87e56aa90a8deab7ad7280b3fbdfb45c82b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650664"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151191"
 ---
 # <a name="c-additive-operators"></a>C 加法類運算子
 
@@ -33,6 +33,6 @@ ms.locfileid: "50650664"
 
 加法類運算子會對整數和浮點運算元執行一般算術轉換。 結果的類型是轉換後的運算元類型。 由於加法類運算子所執行的轉換不提供溢位或反向溢位條件，因此，如果加法類運算的結果無法以運算元轉換後的類型表示，則可能會遺失資訊。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [加法類運算子：+ 和 -](../cpp/additive-operators-plus-and.md)

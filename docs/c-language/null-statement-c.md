@@ -7,12 +7,12 @@ helpviewer_keywords:
 - null statement
 - null values, expressions
 ms.assetid: 72576ce6-26d0-4379-be65-fee522088790
-ms.openlocfilehash: bee044049ed14796a97edc62bbb180ab19700564
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4fdfa2283e40856ccaffd55daacb697b1344134b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503047"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148448"
 ---
 # <a name="null-statement-c"></a>Null 陳述式 (C)
 
@@ -37,6 +37,6 @@ for ( i = 0; i < 10; line[i++] = 0 )
 
 在此範例中，**for** 陳述式的迴圈運算式 `line[i++] = 0` 會將 `line` 的前 10 個元素初始化為 0。 由於不需要進一步的陳述式，因此陳述式主體為 null 陳述式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [陳述式](../c-language/statements-c.md)

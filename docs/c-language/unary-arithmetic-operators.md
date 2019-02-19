@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logical negation
 - '! operator, unary arithmetic operators'
 ms.assetid: 78c91415-d469-499e-9dfe-4435350fd333
-ms.openlocfilehash: fb10bac4a7c0299bccd98249e08a6e270c2c5ffe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f64bc5107cf0df55fd445d04d557e952702deaee
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624990"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150827"
 ---
 # <a name="unary-arithmetic-operators"></a>一元算術運算子
 
@@ -57,6 +57,6 @@ if( !(x < y) )
 
 如果 `x` 的值大於或等於 `y` 的值，則運算式的結果為 1 (true)。 如果 `x` 小於 `y`，則結果為 0 (false)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)

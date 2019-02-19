@@ -2,12 +2,12 @@
 title: 結構、等位、列舉和位元欄位
 ms.date: 11/04/2016
 ms.assetid: 53f72553-c716-41fb-8384-89dc6712ee2a
-ms.openlocfilehash: 08811ecfc682faeb28dccba8531d1779b9ad92d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27f5d919fbbbd96ba87e2ea41b5dcc05cfa80c6a
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462188"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148357"
 ---
 # <a name="structures-unions-enumerations-and-bit-fields"></a>結構、等位、列舉和位元欄位
 
@@ -21,6 +21,6 @@ ms.locfileid: "50462188"
 
 - [列舉類型](../c-language/enum-type.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [實作定義的行為](../c-language/implementation-defined-behavior.md)

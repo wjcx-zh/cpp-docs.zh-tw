@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - sized integer types
 ms.assetid: 0d6199b4-d0ab-4e8c-a769-785f5afb92eb
-ms.openlocfilehash: 3ced46b401296045909f5c812ca09abd3a5887f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 136065466d3adb4017cf18f2baf8c3387ffbd035
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432091"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150684"
 ---
 # <a name="c-sized-integer-types"></a>C 大小的整數類型
 

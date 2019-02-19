@@ -8,12 +8,12 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-ms.openlocfilehash: b424f07fb139e3ece48da7bfb5cff94f7b84334c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c75db3e1550927af57054a2cc1561d9df1567a4
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596803"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148800"
 ---
 # <a name="function-prototypes"></a>函式原型
 
@@ -85,6 +85,6 @@ void func1( struct S * );
 
 在 **/Ze** 下，仍然會在全域範圍輸入該標記。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [函式](../c-language/functions-c.md)

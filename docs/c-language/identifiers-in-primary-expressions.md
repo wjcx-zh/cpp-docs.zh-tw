@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - identifiers, designating objects
 ms.assetid: d4602fe6-e7e6-40cc-9823-3b1ebf5d3d38
-ms.openlocfilehash: 49b5aa2fd895d96f58e24029b86c8b31c24a7758
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 053720bcdf635a7e09363712259b558d93a2972c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499719"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151451"
 ---
 # <a name="identifiers-in-primary-expressions"></a>主要運算式中的識別項
 
@@ -19,6 +19,6 @@ ms.locfileid: "50499719"
 
 宣告為函式的識別項代表指標，其值即為該函式的位址。 該指標會設定傳回指定類型之函式的位址。 因此，函式識別項也不能是指派作業的左值。 如需詳細資訊，請參閱[識別項](../c-language/c-identifiers.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 主要運算式](../c-language/c-primary-expressions.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - if keyword [C], if statement syntax
 - nested statements
 ms.assetid: d7fc16a0-fdbc-4f39-b596-76e1ca4ad4a5
-ms.openlocfilehash: 3561bcb4edde35b72c6db801f5c32f3f0cfdf6fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b6df50d483a6e2958de3100a07c18b89b0c4f12f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555034"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152608"
 ---
 # <a name="if-statement-c"></a>if 陳述式 (C)
 
@@ -70,6 +70,6 @@ else
 
 在這個範例中，括住內部 **if** 陳述式的大括號會使 **else** 子句成為外部 **if** 陳述式的一部分。 如果 `i` 小於或等於 0，會將 `i` 指派給 `x`。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [if-else 陳述式 (C++)](../cpp/if-else-statement-cpp.md)

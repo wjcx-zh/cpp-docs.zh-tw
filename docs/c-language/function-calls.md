@@ -7,12 +7,12 @@ helpviewer_keywords:
 - function calls, about function calls
 - function calls
 ms.assetid: 2cfa897d-3874-4820-933c-e624f75d1712
-ms.openlocfilehash: b79854a88b5bc892aae257461d6b05d7792ed44f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2402f3fef77b19c0420f0c4a52407a730b53b1d5
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487616"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148201"
 ---
 # <a name="function-calls"></a>函式呼叫
 
@@ -91,6 +91,6 @@ work( count, lift );
 
 其中一個引數 `i` 會傳遞至呼叫的函式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [函式](../c-language/functions-c.md)

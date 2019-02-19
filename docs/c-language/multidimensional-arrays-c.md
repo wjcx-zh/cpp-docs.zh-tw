@@ -6,12 +6,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - subscript expressions
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
-ms.openlocfilehash: cd17eb060a6151417cbbe8dfdbfdc42ffe88ce98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34f5c60ba9ba5da869426ae4971808a5d75fee2f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623934"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151009"
 ---
 # <a name="multidimensional-arrays-c"></a>多維陣列 (C)
 
@@ -68,6 +68,6 @@ ipp = prop[2];
 
 同樣地，第二個陳述式 `prop[2]` 中 `ipp = prop[2];` 運算式的結果是定址二維陣列的指標值。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [註標運算子：](../cpp/subscript-operator.md)

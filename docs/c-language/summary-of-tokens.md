@@ -2,12 +2,12 @@
 title: 語彙基元摘要
 ms.date: 11/04/2016
 ms.assetid: 2978cbf6-e66e-46fc-9938-caa052f2ccf7
-ms.openlocfilehash: f295f59ce5767fce5416dde3545188cb0b1d4408
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4fdc1cf4c4e5a89cc9ecf029e64b6eb5422cd6a3
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549535"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149111"
 ---
 # <a name="summary-of-tokens"></a>語彙基元摘要
 
@@ -44,6 +44,6 @@ ms.locfileid: "50549535"
 &nbsp;&nbsp;&nbsp;&nbsp;*pp-number*  **E**  *sign*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pp-number*  **.**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [語彙文法](../c-language/lexical-grammar.md)

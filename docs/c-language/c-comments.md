@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /* */ comment delimiters
 - comments
 ms.assetid: 0f5f2825-e673-49e7-8669-94e2f5294989
-ms.openlocfilehash: 4065ce6396b713decf4a246b54901d44fb21d2f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd2c08855bcc3ef3b4068f3841ce177d8162ff5b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645013"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152725"
 ---
 # <a name="c-comments"></a>C 註解
 
@@ -80,6 +80,6 @@ Microsoft C 預設會啟用 Microsoft 擴充功能。 使用 /Za 可停用這些
 
 **結束 Microsoft 專屬**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 語彙基元](../c-language/c-tokens.md)

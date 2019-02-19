@@ -12,12 +12,12 @@ helpviewer_keywords:
 - automatic storage class
 - types [C], initializing
 ms.assetid: 73c516f5-c3ad-4d56-ab3b-f2a82b621104
-ms.openlocfilehash: f991eff82e5b6919f7960513ae9bc502cad77069
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3cf7eddcf43a65a787de60c391863d6471be7bcf
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641086"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151139"
 ---
 # <a name="initializing-scalar-types"></a>初始化純量類型
 
@@ -104,6 +104,6 @@ int function( void )
 
 全域變數 `GLOBAL` 是在外部層次宣告，因此具有全域存留期。 區域變數 `LOCAL` 具有 **auto** 儲存類別，且在宣告該變數的函式執行期間只具有位址。 因此，不允許使用 `lp` 的位址初始化 **static** 指標變數 `LOCAL`。 因為該位址永遠相同，所以 **static** 指標變數 `gp` 可以初始化至 `GLOBAL` 的位址。 同樣地，您可以初始化 `*rp`，因為 `rp` 是區域變數，並可能具有非常數的初始設定式。 每當進入區塊時，`LOCAL` 會擁有新的位址，接著再將其指派給 `rp`。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [初始化](../c-language/initialization.md)

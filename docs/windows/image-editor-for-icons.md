@@ -1,6 +1,6 @@
 ---
-title: 圖示影像編輯器
-ms.date: 10/17/2018
+title: （c + +） 圖示影像編輯器
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.cursor.F1
 - vc.editors.icon.F1
@@ -42,14 +42,14 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 48b363b7b9021042fe6242be70c74f0daeade0c2
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 782462a4aeba72252c4d6043bd192f6892a3966f
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320701"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336575"
 ---
-# <a name="image-editor-for-icons"></a>圖示影像編輯器
+# <a name="image-editor-for-icons-c"></a>（c + +） 圖示影像編輯器
 
 當您按一下方案總管 中的映像檔 （例如.ico、.bmp、.png） 時，映像會在程式碼檔案的程式碼編輯器中開啟的相同方式中開啟在 影像編輯器 中。 影像編輯器索引標籤作用中時，您會看到與許多工具可用來建立和編輯映像的工具列。 點陣圖、 圖示和游標，以及您可以編輯中使用的命令的 GIF 或 JPEG 格式的映像**映像**功能表，然後在工具**影像編輯器**工具列。
 
@@ -231,8 +231,6 @@ ms.locfileid: "56320701"
 ## <a name="managed-resources"></a>Managed 資源
 
 您可以使用**映像**編輯器並[二進位編輯器](binary-editor.md)來處理 managed 專案中的資源檔。 您想要編輯的任何 Managed 資源皆必須為連結的資源。 Visual Studio 資源編輯器不支援編輯內嵌的資源。
-
-如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
 
 ## <a name="requirements"></a>需求
 

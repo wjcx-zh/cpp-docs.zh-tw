@@ -6,12 +6,12 @@ helpviewer_keywords:
 - decrement operators, syntax
 - decrement operators
 ms.assetid: 9a441bb9-d94a-4b6a-9db2-0d0d76bc480d
-ms.openlocfilehash: 9460d3fda9bca74cd9c95ffa7748a5ddc91e3f78
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 041c44829b8a267ca053dc85da0333e86db6b7b7
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606930"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151295"
 ---
 # <a name="prefix-increment-and-decrement-operators"></a>前置遞增和遞減運算子
 
@@ -32,6 +32,6 @@ if( line[--i] != '\n' )
 
 在這個範例中，`i` 變數會先遞減，再做為 `line` 的註標使用。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 一元運算子](../c-language/c-unary-operators.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - bitwise-shift operators
 - operators [C++], shift
 ms.assetid: d0485785-5c72-47e1-a7c0-0adde03ade23
-ms.openlocfilehash: d0873e3975e69bbfac01d437006561f0bf88ee31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: acf31fbfbe534e3f7eba1492c5aaf173fcb8b31c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485354"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150411"
 ---
 # <a name="bitwise-shift-operators"></a>位元移位運算子
 
@@ -60,6 +60,6 @@ z = ( x << 8 ) + ( y >> 8 );
 
 向右移位會保留正負號位元。 當帶正負號的整數向右移位時，最高有效位元會保持原位。 當不帶正負號的整數向右移位時，會清除最高有效位元。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [左移和右移運算子 (>> 和 <<)](../cpp/left-shift-and-right-shift-operators-input-and-output.md)

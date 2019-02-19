@@ -2,12 +2,12 @@
 title: 陳述式摘要
 ms.date: 11/04/2016
 ms.assetid: ce45d2fe-ec0e-459f-afb1-80ab6a7f0239
-ms.openlocfilehash: ac5452e4b7e3faeff364d9f03ec7b87b3b82bd36
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76a549de7791f8af36fbf150c19cf6ed0de2cbe6
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491961"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152751"
 ---
 # <a name="summary-of-statements"></a>陳述式摘要
 
@@ -62,6 +62,6 @@ ms.locfileid: "50491961"
 *try-finally-statement*:   /\* Microsoft 特定 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__try**  *compound-statement* **__finally**  *compound-statement*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [階段結構文法](../c-language/phrase-structure-grammar.md)

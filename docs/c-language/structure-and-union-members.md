@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operators [C], member selection
 - structure member selection
 ms.assetid: bb1fe304-af49-4f98-808d-afdc99b3e319
-ms.openlocfilehash: 7de6a9c8b72d2beced071939989973d8948cf34f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: db47362096506cf1c00f1ac566565b894253d798
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663888"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151360"
 ---
 # <a name="structure-and-union-members"></a>結構和等位成員
 
@@ -80,6 +80,6 @@ list[8].b = 12;
 
 這個陳述式將說明如何從結構陣列選取個別結構成員。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [成員存取運算子：. 和 ->](../cpp/member-access-operators-dot-and.md)

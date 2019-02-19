@@ -6,12 +6,12 @@ helpviewer_keywords:
 - scalar operators
 - types [C], scalar
 ms.assetid: 56ba218d-65f9-405f-8684-caccc0ca33aa
-ms.openlocfilehash: 8d45ce34457779e668124d9f48b82a5b74da1c56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c2e3ba50ce3e768b377a588cd3e82ad29df79ee
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506833"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150633"
 ---
 # <a name="c-postfix-increment-and-decrement-operators"></a>C 後置遞增和遞減運算子
 
@@ -32,6 +32,6 @@ if( var++ > 0 )
 
 在此範例中，變數 `var` 會與 0 相比，然後再遞增。 如果 `var` 在遞增前是正數，則會執行下一個陳述式。 首先會將 `q` 所指向的物件值指派給 `p` 所指向的物件。 然後再將 `q` 和 `p` 遞增。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [後置遞增和遞減運算子：++ 和 --](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)

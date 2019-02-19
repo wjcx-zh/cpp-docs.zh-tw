@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: 5bb53db4d6bcb9b4694fddd9abd5471c6c6197c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 438dd855fbbfec01a31a8d4a1a53078e3c44658c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474798"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151776"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>存留期和可視性的摘要
 
@@ -18,7 +18,7 @@ ms.locfileid: "50474798"
 
 ### <a name="summary-of-lifetime-and-visibility"></a>存留期和可視性的摘要
 
-|屬性：<br /><br /> 層級|項目|儲存類別<br /><br /> 指定名稱|結果：<br /><br /> 存留期|可視性|
+|屬性: <br /><br /> 層級|項目|儲存類別<br /><br /> 指定名稱|結果：<br /><br /> 存留期|可視性|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
 |檔案範圍|變數定義|**static**|Global|發生之原始程式檔的其餘部分|
 ||變數宣告|**extern**|Global|發生之原始程式檔的其餘部分|
@@ -66,6 +66,6 @@ int main()  // main function defined at external level
 
 在此範例中，可視性共有四個層級：外部層級和三個區塊層級。 值會列印至螢幕，如每個陳述式之後的註解所示。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [存留期、範圍、可見度和連結](../c-language/lifetime-scope-visibility-and-linkage.md)

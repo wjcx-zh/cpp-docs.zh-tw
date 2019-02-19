@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], limitations and rules
 - dllexport attribute [C++]
 ms.assetid: 274b735f-ab9c-4b07-8d0e-fdb65d664634
-ms.openlocfilehash: 123ccf583fe5e07d9f2610ec621b48d8a8c39be8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc83a43fd09299710585fa104dbd4dc847036c68
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622024"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150554"
 ---
 # <a name="rules-and-limitations-for-dllimportdllexport"></a>dllimport/dllexport 的規則和限制
 
@@ -19,7 +19,7 @@ ms.locfileid: "50622024"
 
 - 如果您宣告未具有 **dllimport** 或 `dllexport` 屬性的函式，則不會將此函式視為 DLL 介面的一部分。 因此，函式的定義必須存在該模組中，或是相同程式的另一個模組中。 若要讓函式成為 DLL 介面的一部分，您必須在另一個模組中將函式的定義宣告為 `dllexport`。 否則，在建置用戶端時會產生連結器錯誤。
 
-- 如果您程式中的單一模組包含相同函式的 **dllimport** 和 `dllexport` 宣告，則 `dllexport` 屬性會優先於 **dllimport** 屬性。 不過，這樣會產生編譯器警告。 例如: 
+- 如果您程式中的單一模組包含相同函式的 **dllimport** 和 `dllexport` 宣告，則 `dllexport` 屬性會優先於 **dllimport** 屬性。 不過，這樣會產生編譯器警告。 例如：
 
     ```
     #define DllImport   __declspec( dllimport )
@@ -69,7 +69,7 @@ ms.locfileid: "50622024"
 
     ```
 
-- 由於物件宣告中包含 `dllexport` 屬性的程式必須為該物件提供定義，因此您可以使用 `dllexport` 函式的位址初始化全域或區域靜態函式指標。 同樣地，您可以使用 `dllexport` 資料物件的位址初始化全域或區域靜態資料指標。 例如: 
+- 由於物件宣告中包含 `dllexport` 屬性的程式必須為該物件提供定義，因此您可以使用 `dllexport` 函式的位址初始化全域或區域靜態函式指標。 同樣地，您可以使用 `dllexport` 資料物件的位址初始化全域或區域靜態資料指標。 例如：
 
     ```
     #define DllImport   __declspec( dllimport )
@@ -96,6 +96,6 @@ ms.locfileid: "50622024"
 
 **結束 Microsoft 專屬**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [DLL 匯入及匯出函式](../c-language/dll-import-and-export-functions.md)

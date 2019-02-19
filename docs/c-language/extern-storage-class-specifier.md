@@ -8,12 +8,12 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - external linkage, extern modifier
 ms.assetid: 6e16d927-291f-49e4-986c-9d91a482a441
-ms.openlocfilehash: 426bf816b988730530ba52c3f995aa2b0a8f0140
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6bbae7c778f5196ac0dca387265499b27119a367
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650311"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151386"
 ---
 # <a name="extern-storage-class-specifier"></a>extern 儲存類別指定名稱
 
@@ -63,6 +63,6 @@ void func(void)
 
 在 `func` 函式中，全域變數 `i` 的位址會用來初始化 **static** 指標變數 `external_i`。 因為全域變數具有 **static** 存留期，也就是說它的位址不會在程式執行期間變更，所以才能這樣運作。 接下來，變數 `i` 是定義在 `func` 範圍內的區域變數，且初始值為 16。 這個定義不會影響外部層級 `i` 的值，將其名稱用於區域變數會將之隱藏。 全域 `i` 的值現在只能透過指標 `external_i` 來存取。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [內部層級宣告的儲存類別規範](../c-language/storage-class-specifiers-for-internal-level-declarations.md)

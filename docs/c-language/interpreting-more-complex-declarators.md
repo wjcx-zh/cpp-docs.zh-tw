@@ -5,12 +5,12 @@ helpviewer_keywords:
 - complex declarators
 - interpreting complex declarators
 ms.assetid: dd5b7019-c86d-4645-a5cc-21f834de6f4a
-ms.openlocfilehash: a6049f060a81f75f6c85686a6526b590de688eaa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 13c81728f02963863b641348b58380da099b0013
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581541"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148240"
 ---
 # <a name="interpreting-more-complex-declarators"></a>解譯更複雜的宣告子
 
@@ -126,6 +126,6 @@ union sign *(*var[5])[5]; /* Array of pointers to arrays
 
 這個範例示範括號位置如何改變宣告的意義。 在此範例中，`var` 是等位五個元素陣列指標的五個元素陣列指標。 如需如何使用 `typedef` 避免複雜宣告的範例，請參閱 [Typedef 宣告](../c-language/typedef-declarations.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [宣告和類型](../c-language/declarations-and-types.md)

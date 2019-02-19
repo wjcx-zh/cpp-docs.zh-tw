@@ -7,12 +7,12 @@ helpviewer_keywords:
 - maximum string length
 - strings [C++], length
 ms.assetid: 99a80e4a-6212-47b7-a6bd-bdf99bd44928
-ms.openlocfilehash: f2e5461c433a0d195682c1a0f4312a71a8ff5032
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 650088249e4c6abd515c29b873a9f09dc1d2a60a
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483978"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148305"
 ---
 # <a name="maximum-string-length"></a>字串長度上限
 
@@ -26,6 +26,6 @@ ANSI 相容性要求編譯器在串連後，必須在字串常值中接受最多
 
 **結束 Microsoft 專屬**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 字串常值](../c-language/c-string-literals.md)

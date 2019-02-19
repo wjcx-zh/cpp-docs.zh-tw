@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lexical conventions
 - conventions, lexical
 ms.assetid: 20668a49-cab7-4153-a6d9-7439aac3ff3b
-ms.openlocfilehash: d6aa0e4b8ec3efb0b4212168d05b829e25bf9f69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af220854f71a84902d9ad417242b6d037d4ba0f2
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451632"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148071"
 ---
 # <a name="elements-of-c"></a>C 的元素
 
@@ -38,6 +38,6 @@ ms.locfileid: "50451632"
 
 運算子是指定如何操作值的符號 (單一字元和字元組合)。 每個符號會解譯為單一單位，稱為語彙基元。 如需詳細資訊，請參閱[運算子](../c-language/c-operators.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 語言參考](../c-language/c-language-reference.md)

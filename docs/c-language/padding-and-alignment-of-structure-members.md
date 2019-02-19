@@ -4,12 +4,12 @@ ms.date: 10/18/2018
 helpviewer_keywords:
 - structure members, padding and alignment
 ms.assetid: c999820b-dd47-41fc-b923-e4c7ebbcd30f
-ms.openlocfilehash: a560c7b9491c22d16866c4fa32f80d16ca38d90a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f9c70ed074a11800b707aa48ec8e0e2f8b4f999
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541280"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148110"
 ---
 # <a name="padding-and-alignment-of-structure-members"></a>結構成員的填補和對齊
 
@@ -23,6 +23,6 @@ ms.locfileid: "50541280"
 
 如果整數類資料類型的大小相同，而且下一個位元欄位符合目前配置單位，不需因為位元欄位的一般對齊需求而加上跨越界限，則相鄰的位元欄位會封裝為相同的 1 個、2 個或 4 個位元組配置單位。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [結構、等位、列舉和位元欄位](../c-language/structures-unions-enumerations-and-bit-fields.md)

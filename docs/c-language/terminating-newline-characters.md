@@ -2,12 +2,12 @@
 title: 終止新行字元
 ms.date: 11/04/2016
 ms.assetid: ab145180-a098-41b5-8db0-2520272964ba
-ms.openlocfilehash: 5eff71a0faa80b541245cc602549067722934031
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e600ad6a515965c6ce01280d555e7eab3134b8fd
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519765"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150801"
 ---
 # <a name="terminating-newline-characters"></a>終止新行字元
 
@@ -15,6 +15,6 @@ ms.locfileid: "50519765"
 
 資料流函式可將新行或檔案結尾辨識為一行的終止字元。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [程式庫函式](../c-language/library-functions.md)

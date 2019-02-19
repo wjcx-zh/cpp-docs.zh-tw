@@ -5,12 +5,12 @@ helpviewer_keywords:
 - statements, expression
 - expression statements
 ms.assetid: 1085982b-dc16-4c1e-9ddd-0cd85c8fe2e3
-ms.openlocfilehash: b825e88703e1913d9b6d916360174060854c632a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 736ed4fbbd9f87c675c0bb9566c6c31287e77917
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667463"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148786"
 ---
 # <a name="expression-statement-c"></a>運算陳述式 (C)
 
@@ -35,6 +35,6 @@ y = z = ( f( x ) + 3 );   /* A function-call expression        */
 
 在最後一個陳述式中，函式呼叫運算式、運算式的值 (包括由函式傳回的所有值) 會增加 3，然後指派給變數 `y` 和 `z`。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [陳述式](../c-language/statements-c.md)

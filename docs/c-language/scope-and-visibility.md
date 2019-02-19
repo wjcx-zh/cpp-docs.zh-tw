@@ -6,12 +6,12 @@ helpviewer_keywords:
 - visibility
 - file scope [C++]
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
-ms.openlocfilehash: 4010025a5a80fa513c8f86c41612350b2a23c15e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01b2bc8d75c3c65639a3ff0c57b1a368760eba53
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656725"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151282"
 ---
 # <a name="scope-and-visibility"></a>範圍和可視性
 
@@ -29,6 +29,6 @@ ms.locfileid: "50656725"
 
 有關讓變數在其他原始程式檔中可見的適當宣告，將在[儲存類別](../c-language/c-storage-classes.md)中說明。 不過，在外部層級使用 **static** 儲存類別指定名稱宣告的變數和函式，只有在本身定義所在的原始程式碼內才可見。 所有其他函式都是全域可見。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [存留期、範圍、可見度和連結](../c-language/lifetime-scope-visibility-and-linkage.md)

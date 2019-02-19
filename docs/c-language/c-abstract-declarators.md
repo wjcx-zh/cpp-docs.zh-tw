@@ -5,12 +5,12 @@ helpviewer_keywords:
 - declarators, abstract
 - abstract declarations
 ms.assetid: 6a556ad7-0555-421a-aa02-294d77cda8b5
-ms.openlocfilehash: 5dc58b71c8b2032342b6604112673086dc94649b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2ca0f4a367abf939ed4307611517a883d8b82e0
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429818"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152660"
 ---
 # <a name="c-abstract-declarators"></a>C 抽象宣告子
 
@@ -45,6 +45,6 @@ int (*const []) ( unsigned int, ... )
 > [!NOTE]
 >  由一組空括號 "**( )**" 組成的抽象宣告子會造成模稜兩可的情況，因此不允許使用。 要判斷隱含的識別項是落在括號內部 (在此情況下它是未經修改的類型) 或在括號前面 (在此情況下它是函式類型) 是不可能的。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [宣告子和變數宣告](../c-language/declarators-and-variable-declarations.md)

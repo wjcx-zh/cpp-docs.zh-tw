@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: 0b3ca7c6b09d85cddb519242e63af0b8097e3fec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44566408a3afcfee7a15299a5845b5af385aeef8
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558778"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320688"
 ---
 # <a name="hint-files"></a>提示檔案
 
@@ -175,7 +175,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
    return( pMap ); }
 ```
 
-**策略：** 識別對應項目
+**策略：** 識別對應元素
 
 為對應的開始、中間 (如果有) 和結束項目指定提示。 使用特殊對應取代字串 `@<`、`@=` 和 `@>`。 如需詳細資訊，請參閱本主題中的`Syntax`一節。
 

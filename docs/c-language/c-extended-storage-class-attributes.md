@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extended storage-class attributes
 - storage class specifiers, C storage classes
 ms.assetid: 2580735c-f5bf-46ab-9468-0696893d82be
-ms.openlocfilehash: aa1f1b5d8fa62d12651c32724f06e8bd3f0ec53e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b0c8b60dab3229d5d5c162f7bafc959fa2558f0
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658272"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56146953"
 ---
 # <a name="c-extended-storage-class-attributes"></a>C 擴充的儲存類別屬性
 
@@ -29,11 +29,11 @@ ms.locfileid: "50658272"
 *storage-class-specifier*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl-modifier-seq* **)** /\* Microsoft 專有 \*/
 
-*extended-decl-modifier-seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft 專有 \*/<br/>
+*extended-decl-modifier-seq*：&nbsp;&nbsp;&nbsp;&nbsp;/\*Microsoft 特定的 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft 專有 \*/<br/>
+*extended-decl-modifier*：&nbsp;&nbsp;&nbsp;&nbsp;/\*Microsoft 特定的 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**執行緒**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
@@ -45,6 +45,6 @@ thread、naked、dllimport 和 dllexport 儲存類別屬性 (Attribute) 是只�
 
 **結束 Microsoft 專屬**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [宣告和類型](../c-language/declarations-and-types.md)

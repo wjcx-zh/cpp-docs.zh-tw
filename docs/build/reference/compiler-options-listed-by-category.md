@@ -4,18 +4,18 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: ef61ebbfad62e6a7bf764bad35204247e47d8ddb
-ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
+ms.openlocfilehash: 63b621bf99a1aeada10706badfe19cde417d7233
+ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53248568"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676496"
 ---
 # <a name="compiler-options-listed-by-category"></a>依分類排列的編譯器選項
 
 本文包含編譯器選項的分類清單。 如需依字母順序排列的清單，請參閱 [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md)。
 
-### <a name="optimization"></a>最佳化
+## <a name="optimization"></a>最佳化
 
 |選項|用途|
 |------------|-------------|
@@ -31,7 +31,7 @@ ms.locfileid: "53248568"
 |[/Oy](oy-frame-pointer-omission.md)|省略框架指標。 (僅限 x86)|
 |[/favor](favor-optimize-for-architecture-specifics.md)|產生針對指定之結構或結構範圍進行最佳化的程式碼。|
 
-### <a name="code-generation"></a>程式碼產生
+## <a name="code-generation"></a>程式碼產生
 
 |選項|用途|
 |------------|-------------|
@@ -72,7 +72,7 @@ ms.locfileid: "53248568"
 |[/RTC](rtc-run-time-error-checks.md)|啟用執行階段錯誤檢查。|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|選取 volatile 關鍵字的解譯方式。|
 
-### <a name="output-files"></a>輸出檔案
+## <a name="output-files"></a>輸出檔案
 
 |選項|用途|
 |------------|-------------|
@@ -87,7 +87,7 @@ ms.locfileid: "53248568"
 |[/Fp](fp-name-dot-pch-file.md)|指定先行編譯標頭檔的名稱。|
 |[/FR, /Fr](fr-fr-create-dot-sbr-file.md)|產生瀏覽器的.sbr 檔的名稱。|
 
-### <a name="preprocessor"></a>前置處理器
+## <a name="preprocessor"></a>前置處理器
 
 |選項|用途|
 |------------|-------------|
@@ -105,7 +105,7 @@ ms.locfileid: "53248568"
 |[/u](u-u-undefine-symbols.md)|移除所有預先定義巨集。|
 |[/X](x-ignore-standard-include-paths.md)|忽略標準 Include 目錄。|
 
-### <a name="language"></a>語言
+## <a name="language"></a>語言
 
 |選項|用途|
 |------------|-------------|
@@ -129,7 +129,7 @@ ms.locfileid: "53248568"
 |[/Zs](zs-syntax-check-only.md)|僅檢查語法。|
 |[/ZW](zw-windows-runtime-compilation.md)|產生輸出檔案，在 Windows 執行階段上執行。|
 
-### <a name="linking"></a>連結
+## <a name="linking"></a>連結
 
 |選項|用途|
 |------------|-------------|
@@ -143,7 +143,7 @@ ms.locfileid: "53248568"
 |[/MT](md-mt-ld-use-run-time-library.md)|使用 LIBCMT.lib 編譯以建立多執行緒可執行檔。|
 |[/MTd](md-mt-ld-use-run-time-library.md)|使用 LIBCMTD.lib 編譯以建立偵錯多執行緒可執行檔。|
 
-### <a name="miscellaneous"></a>其他
+## <a name="miscellaneous"></a>其他
 
 |選項|用途|
 |------------|-------------|
@@ -159,7 +159,7 @@ ms.locfileid: "53248568"
 |[/H](h-restrict-length-of-external-names.md)|已取代。 限制外部 (公用) 名稱的長度。|
 |[/HELP](help-compiler-command-line-help.md)|列出編譯器選項。|
 |[/J](j-default-char-type-is-unsigned.md)|變更預設 `char` 類型。|
-|[/ JMC](jmc.md)|支援原生 c + + Just My Code 偵錯。|
+|[/JMC](jmc.md)|支援原生 c + + Just My Code 偵錯。|
 |[/kernel](kernel-create-kernel-mode-binary.md)|編譯器和連結器將會建立可以在 Windows 核心中執行的二進位檔。|
 |[/MP](mp-build-with-multiple-processes.md)|同時建置多重原始程式檔。|
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|隱藏登入程式的啟始資訊。|
@@ -186,7 +186,7 @@ ms.locfileid: "53248568"
 |[/Yu](yu-use-precompiled-header-file.md)|在建置時使用先行編譯標頭檔。|
 |[/Y-](y-ignore-precompiled-header-options.md)|忽略目前組建中所有其他先行編譯標頭編譯器選項。|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|指定先行編譯標頭的記憶體配置上限。|
-|[/ await](await-enable-coroutine-support.md)|啟用協同程式 （可繼續函式） 擴充功能。|
+|[/await](await-enable-coroutine-support.md)|啟用協同程式 （可繼續函式） 擴充功能。|
 |[/source-charset](source-charset-set-source-character-set.md)|設定來源字元集。|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|設定執行字元集。|
 |[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|設定來源和執行字元集為 utf-8。|
@@ -195,7 +195,7 @@ ms.locfileid: "53248568"
 |[/permissive-](permissive-standards-conformance.md)|設定標準一致性模式。|
 |[/std](std-specify-language-standard-version.md)|C + + 標準的版本相容性的選取器。|
 
-### <a name="deprecated-and-removed-compiler-options"></a>已取代及移除的編譯器選項
+## <a name="deprecated-and-removed-compiler-options"></a>已取代及移除的編譯器選項
 
 |選項|用途|
 |------------|-------------|

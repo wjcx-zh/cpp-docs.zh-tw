@@ -52,12 +52,12 @@ ms.locfileid: "56336562"
 ---
 # <a name="how-to-add-edit-or-delete-controls"></a>如何：加入、 編輯或刪除控制項
 
-使用 **對話方塊**編輯器中，您可以新增、 調整大小、 編輯和刪除在對話方塊中的控制項。 您也可以編輯的控制項，例如其識別碼、 屬性或它是否一開始出現在執行階段。
+使用**對話方塊**編輯器中，您可以新增、 調整大小、 編輯和刪除在對話方塊中的控制項。 您也可以編輯的控制項，例如其識別碼、 屬性或它是否一開始出現在執行階段。
 
 **對話方塊編輯器**索引標籤會出現在[工具箱視窗](/visualstudio/ide/reference/toolbox)當您處理**對話方塊**編輯器。 您也可以自訂**工具箱**，方便使用的視窗。 如需詳細資訊，請參閱 <<c0> [ 使用工具列](/visualstudio/ide/using-the-toolbox)並[顯示或隱藏 [工具箱] 視窗](showing-or-hiding-the-dialog-editor-toolbar.md)。
 
 > [!TIP]
-> 在使用時** 對話方塊**編輯器，在許多情況下，您可以選取滑鼠右鍵顯示常用命令的捷徑功能表。
+> 在使用時**對話方塊**編輯器，在許多情況下，您可以選取滑鼠右鍵顯示常用命令的捷徑功能表。
 
 ## <a name="add-controls"></a>加入控制項
 
@@ -113,11 +113,11 @@ ms.locfileid: "56336562"
 1. 在 [[屬性] 視窗](/visualstudio/ide/reference/properties-window)，變更您的控制項的屬性。
 
    > [!NOTE]
-   > 當您設定**點陣圖**按鈕、 選項按鈕或等於的核取方塊控制項內容 **，則為 True**，為您的控制項實作 BS_BITMAP 樣式。 如需詳細資訊，請參閱 <<c0> [ 按鈕樣式](../mfc/reference/styles-used-by-mfc.md#button-styles)。 如需範例的關聯控制項的點陣圖，請參閱[CButton::SetBitmap](../mfc/reference/cbutton-class.md#setbitmap)。 點陣圖不會出現在您的控制項中 **對話方塊**資源編輯器。
+   > 當您設定**點陣圖**按鈕、 選項按鈕或等於的核取方塊控制項內容 **，則為 True**，為您的控制項實作 BS_BITMAP 樣式。 如需詳細資訊，請參閱 <<c0> [ 按鈕樣式](../mfc/reference/styles-used-by-mfc.md#button-styles)。 如需範例的關聯控制項的點陣圖，請參閱[CButton::SetBitmap](../mfc/reference/cbutton-class.md#setbitmap)。 點陣圖不會出現在您的控制項中**對話方塊**資源編輯器。
 
 ### <a name="to-undo-changes-to-the-properties-of-a-control"></a>若要復原變更控制項的屬性
 
-1. 請確定且焦點在控制項 **對話方塊**編輯器。
+1. 請確定且焦點在控制項**對話方塊**編輯器。
 
 1. 選擇**恢復**從**編輯**功能表 (如果焦點在控制項上，不**復原**命令將會無法使用)。
 
@@ -192,7 +192,7 @@ ms.locfileid: "56336562"
 
 Visual Studio 可讓您在您的對話方塊中插入 ActiveX 控制項。 如需詳細資訊，請參閱 < [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)並[ActiveX 控制項容器](../mfc/activex-control-containers.md)。
 
-您可以使用中的捷徑功能表** 對話方塊**編輯器快速加入登錄 ActiveX 控制項加入對話方塊中，而且您可以將 ActiveX 控制項加入**工具箱**快速存取。
+您可以使用中的捷徑功能表**對話方塊**編輯器快速加入登錄 ActiveX 控制項加入對話方塊中，而且您可以將 ActiveX 控制項加入**工具箱**快速存取。
 
 **插入 ActiveX 控制項**對話方塊可讓您插入您的對話方塊中的 ActiveX 控制項，同時使用[對話方塊編輯器](../windows/dialog-editor.md)。 此對話方塊包含下列屬性：
 
@@ -206,7 +206,7 @@ Visual Studio 可讓您在您的對話方塊中插入 ActiveX 控制項。 如�
 
 #### <a name="to-add-an-activex-control"></a>若要加入 ActiveX 控制項
 
-1. 開啟對話方塊的 [ **] 對話方塊**編輯器。
+1. 開啟對話方塊的 **對話方塊**編輯器。
 
 1. 以滑鼠右鍵按一下的對話方塊和捷徑功能表上，選取主體中的任何地方**插入 ActiveX 控制項**。
 
@@ -221,7 +221,7 @@ Visual Studio 可讓您在您的對話方塊中插入 ActiveX 控制項。 如�
 
 #### <a name="to-edit-properties-for-an-activex-control"></a>若要編輯 ActiveX 控制項的屬性
 
-獨立廠商所提供的 ActiveX 控制項可能都配有其自己的屬性和特性的。 適用於 ActiveX 控制項的屬性會顯示在**屬性**視窗。 此外，ActiveX 控制項的寫入器所建立的任何屬性頁面會顯示在**屬性頁** 對話方塊 (若要檢視** 屬性頁**對於特定的 ActiveX 控制項中，按一下 ** 屬性頁**按鈕[屬性 視窗](/visualstudio/ide/reference/properties-window))。
+獨立廠商所提供的 ActiveX 控制項可能都配有其自己的屬性和特性的。 適用於 ActiveX 控制項的屬性會顯示在**屬性**視窗。 此外，ActiveX 控制項的寫入器所建立的任何屬性頁面會顯示在**屬性頁** 對話方塊 (若要檢視**屬性頁**對於特定的 ActiveX 控制項中，按一下 **屬性頁**按鈕[屬性 視窗](/visualstudio/ide/reference/properties-window))。
 
 各種索引標籤會顯示在屬性頁面中的 ActiveX 控制項，視屬性工作表做為 ActiveX 控制項的一部分，而定。
 

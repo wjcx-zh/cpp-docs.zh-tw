@@ -48,7 +48,7 @@ ms.locfileid: "55850031"
 |[DDX_FieldRadio](#ddx_fieldradio)|傳輸整數資料的資料錄集欄位資料成員與一群中選項按鈕之間`CRecordView`或`CDaoRecordView`。|
 |[DDX_FieldScroll](#ddx_fieldscroll)|設定或取得在捲軸控制項的捲動位置`CRecordView`或`CDaoRecordView`。 從呼叫您[DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange)函式。|
 |[DDX_FieldSlider](#ddx_fieldslider)|同步處理資料錄檢視中的滑桿控制項捲動方塊位置和`int`資料錄集的欄位資料成員。 |
-|[DDX_FieldText](#ddx_fieldtext)|多載的版本可供傳輸`int`， **UINT**， **long**， `DWORD`， [CString](../../atl-mfc-shared/reference/cstringt-class.md)， **float****雙**，**簡短**， [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)，以及[COleCurrency](../../mfc/reference/colecurrency-class.md)之間的資料錄集欄位資料成員和編輯資料方塊`CRecordView`或`CDaoRecordView`。|
+|[DDX_FieldText](#ddx_fieldtext)|多載的版本可供傳輸`int`， **UINT**， **long**， `DWORD`， [CString](../../atl-mfc-shared/reference/cstringt-class.md)， **float** **雙**，**簡短**， [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)，以及[COleCurrency](../../mfc/reference/colecurrency-class.md)之間的資料錄集欄位資料成員和編輯資料方塊`CRecordView`或`CDaoRecordView`。|
 
 ##  <a name="ddx_fieldcbindex"></a>  DDX_FieldCBIndex
 

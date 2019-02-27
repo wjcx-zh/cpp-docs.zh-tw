@@ -340,11 +340,11 @@ short __cdecl _fdnorm(unsigned short* ps);
 ### <a name="parameters"></a>參數
 
 *ps*<br/>
-位元表示浮點值，表示為陣列的指標**不帶正負號****簡短**。
+位元表示浮點值，表示為陣列的指標**不帶正負號** **簡短**。
 
 ### <a name="remarks"></a>備註
 
-下列浮點數基本類型標準化 underflowed 的浮點值的小數部分，並調整*特性*，或比對的偏誤的指數。 值會傳遞為位元的浮點數轉換為陣列的型別表示**不帶正負號****簡短**透過`_double_val`， `_ldouble_val`，或`_float_val`類型punning 等位宣告於 math.h 中。 傳回值是結果**fpclassify**輸入浮點數的值是否為 NaN 或無限大，以及輸出值，否則為。
+下列浮點數基本類型標準化 underflowed 的浮點值的小數部分，並調整*特性*，或比對的偏誤的指數。 值會傳遞為位元的浮點數轉換為陣列的型別表示**不帶正負號** **簡短**透過`_double_val`， `_ldouble_val`，或`_float_val`類型punning 等位宣告於 math.h 中。 傳回值是結果**fpclassify**輸入浮點數的值是否為 NaN 或無限大，以及輸出值，否則為。
 
 ## <a name="dpoly-ldpoly-fdpoly"></a>_dpoly _ldpoly _fdpoly
 

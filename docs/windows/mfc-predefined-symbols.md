@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: 2f36f42ce24c2cdf1f3ac4c93248d430ec75f30a
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 329d56f4a8e0e9992cb78987c559f74c7349f681
+ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320857"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56954948"
 ---
 # <a name="mfc-predefined-symbols"></a>MFC 預先定義的符號
 
@@ -23,12 +23,12 @@ MFC 專案一定會包含數個支援 windows 的標頭檔。 透過新增這些
 ```cpp
 #include <afxwin.h>      //MFC core and standard components
 #include <afxext.h>      //MFC extensions
-#include <afxdisp.h      //MFC automation classes
+#include <afxdisp.h>      //MFC automation classes
 #include <afxdtctl.h>   //MFC support for Internet Explorer common controls
 #include <afxcmn.h>      //MFC support for Windows common controls.
 ```
 
-標頭檔包含 MFC 通用值的符號 ID 值。 當您使用 MFC 專案中，將只適用這些符號。 AFX_ 前置詞的後面是標準的符號名稱前置詞。
+標頭檔包含 MFC 通用值的符號 ID 值。 當您使用 MFC 專案中，將只適用這些符號。 `AFX_`首碼後面是標準的符號名稱前置詞。
 
 |||
 |-|-|
@@ -211,7 +211,7 @@ MFC 專案一定會包含數個支援 windows 的標頭檔。 透過新增這些
 |AFX_IDS_UPDATING_ITEMS|AFX_IDS_USER_EXCEPTION|
 |AFX_IDS_VERB_EDIT|AFX_IDS_VERB_PROPERTIES|
 
-## <a name="mfc-database-programming-symbols"></a>MFC 資料庫程式開發符號
+## <a name="mfc-database-programming"></a>MFC 資料庫程式設計
 
 此資料表中的符號只會在已經加入資料庫的支援時，出現在 MFC 專案中。 它們支援 MFC 連接到 SQL server 和資料庫程式設計。
 
@@ -232,9 +232,11 @@ MFC 專案一定會包含數個支援 windows 的標頭檔。 透過新增這些
 |AFX_IDP_SQL_SNAPSHOT_ NOT_SUPPORTED|AFX_IDP_SQL_SQL_CONFORMANCE|
 |AFX_IDP_SQL_SQL_NO_TOTAL|AFX_IDP_SQL_UPDATE_DELETE_FAILED|
 
-## <a name="mfc-windows-programming-symbols"></a>MFC Windows 程式設計符號
+## <a name="mfc-windows-programming"></a>MFC Windows 程式設計
 
-這些符號也是 MFC 支援檔案的一部分，但是它們可以支援標準的 Windows 應用程式函數和動作。 這些符號用於功能表。 當您正在使用中的功能表**功能表編輯器**，這些符號會出現在**屬性視窗**常見的功能表命令相關聯。 比方說，如果您的應用程式**檔案**功能表，其中**結束**命令，命令將會是相關聯的符號 ID_APP_EXIT 中[屬性 視窗](/visualstudio/ide/reference/properties-window)。
+這些符號也是 MFC 支援檔案的一部分，但是它們可以支援標準的 Windows 應用程式函數和動作。 這些符號用於功能表。
+
+當您正在使用中的功能表**功能表編輯器**，這些符號會出現在**屬性視窗**常見的功能表命令相關聯。 比方說，如果您的應用程式**檔案**功能表，其中**結束**命令，命令將會是相關聯的符號 ID_APP_EXIT 中[屬性 視窗](/visualstudio/ide/reference/properties-window)。
 
 ||||
 |-|-|-|

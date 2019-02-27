@@ -35,23 +35,23 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 4f1c44e8fc2ae34ddcb65ec23ca8d98e11d50ec0
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: d3c8a747c1e66490c333ff050c7bfa6e6f723a87
+ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320584"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56954896"
 ---
 # <a name="how-to-manage-symbols"></a>HOW TO：管理符號
 
-當您建立新的資源或資源物件時，開發環境會為其指派預設的符號名稱，例如 IDD_DIALOG1。 您可以使用[屬性 視窗](/visualstudio/ide/reference/properties-window)來變更預設的符號名稱，或變更已與資源相關聯的所有符號的名稱。
+當您建立新的資源或資源物件時，在開發環境將其指派預設的符號名稱，例如`IDD_DIALOG1`。 您可以使用[屬性 視窗](/visualstudio/ide/reference/properties-window)來變更預設的符號名稱，或變更已與資源相關聯的所有符號的名稱。
 
 單一資源相關聯的符號，您也可以使用**屬性**視窗變更符號值。 您可以使用[資源符號對話方塊](../windows/resource-symbols-dialog-box.md)來變更目前未指派給資源的符號值。
 
 通常所有符號定義會儲存在`Resource.h`。 不過，您可能需要變更這 Include 檔案名稱，好讓您可以，比方說在相同目錄中處理多個資源檔。
 
 > [!NOTE]
-> 如果您的專案尚未包含.rc 檔，請參閱[建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。
+> 如果您的專案尚未包含.rc 檔，請參閱[How to:建立資源](../windows/how-to-create-a-resource-script-file.md)。
 
 ## <a name="symbol-name-restrictions"></a>符號名稱限制
 
@@ -67,14 +67,14 @@ ms.locfileid: "56320584"
 
 - 符號名稱不區分大小寫，但會保留第一個符號定義的大小寫。 定義符號的標頭檔是由資源編譯器/編輯器和 C++ 程式用來參考資源檔中定義的資源。 對於只有大小寫不同的兩個符號名稱，C++ 程式會將其視為兩個不同的符號，而資源編譯器/編輯器則會將這兩個名稱視為參考到單一符號。
 
-   > [!NOTE]
-   > 如果您未遵循下列的標準符號名稱配置 (ID*_[keyword])，而且您的符號名稱剛好與資源指令碼編譯器的已知關鍵字相同，則嘗試建置資源指令碼檔案會造成難以診斷的隨機錯誤產生。 若要避免這個問題，請遵守標準命名配置。
+> [!NOTE]
+> 如果您不遵循標準符號名稱配置 （keyword] 中，與您的符號名稱剛好是相同，因為資源指令碼編譯器，嘗試建置資源指令碼檔的關鍵字會導致隨機錯誤產生這是難以診斷。 若要避免這個問題，請遵守標準命名配置。
 
-符號名稱具有描述性前置詞，指出它們所代表的資源或物件種類。 這些描述性前置詞的開頭為文字組合識別碼。 Microsoft Foundation Class 程式庫 (MFC) 使用下表所示的符號命名慣例。
+符號名稱具有描述性前置詞，指出它們所代表的資源或物件種類。 這些描述性前置詞的開頭為文字組合識別碼。 Microsoft Foundation Class 程式庫 (MFC) 會使用下表所示的符號命名慣例：
 
 |分類|前置詞|使用|
 |--------------|------------|---------|
-|資源|IDR_ IDD_ IDC_ IDI_ IDB_|快速鍵或功能表 (和相關或自訂資源) 對話方塊游標圖示點陣圖|
+|資源|IDR_、 IDD_、 IDC_、 IDI_、 IDB_|快速鍵或功能表 （和相關或自訂資源） 對話方塊、 指標、 圖示、 點陣圖|
 |功能表項目|ID_|Menu item|
 |命令|ID_|命令|
 |控制項和子視窗|IDC_|控制項|
@@ -89,11 +89,12 @@ ms.locfileid: "56320584"
 
    如果您輸入新的符號名稱，已自動指派值。
 
-您可以使用[資源符號對話方塊](../windows/resource-symbols-dialog-box.md)變更目前未指派給資源的符號名稱。
+> [!NOTE]
+> 您可以使用[資源符號對話方塊](../windows/resource-symbols-dialog-box.md)變更目前未指派給資源的符號名稱。
 
 ## <a name="symbol-value-restrictions"></a>符號值限制
 
-符號值可以是針對 #define 前置處理器指示詞以正常方式表示的任何整數。 以下是符號值的一些範例：
+符號值可以是任何整數，表示一般的方式，在`#define`前置處理器指示詞。 以下是符號值的一些範例：
 
 ```
 18
@@ -116,15 +117,13 @@ ms.locfileid: "56320584"
     #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported
     ```
 
-- 您無法使用前置處理器巨集引數做為值定義。 例如: 
+- 您無法使用前置處理器巨集引數做為值定義。 下列範例不是有效的運算式，無論什麼`ID`在編譯時期評估為：
 
     ```cpp
     #define   IDD_ABOUT  ID(7) //not supported
     ```
 
-   不是有效的運算式，無論什麼`ID`在編譯時期評估。
-
-- 您的應用程式可能具有現有檔案，包含以運算式定義的符號。 如需有關如何納入符號做為唯讀符號的詳細資訊，請參閱 <<c0> [ 使用共用 （唯讀） 或計算符號](../windows/including-shared-read-only-or-calculated-symbols.md)。
+- 您的應用程式可能具有現有檔案，包含以運算式定義的符號。
 
 如需有關數字範圍的詳細資訊，請參閱[TN023:標準 MFC 資源](../mfc/tn023-standard-mfc-resources.md)。
 
@@ -138,7 +137,7 @@ ms.locfileid: "56320584"
     IDC_EDITNAME=5100
     ```
 
-下一次儲存專案時，會在符號標頭檔中儲存新值。 在 [識別碼] 方塊中，只有符號名稱保持可見它們在驗證之後，不會顯示等號和值。
+   下一次儲存專案時，會在符號標頭檔中儲存新值。 在 [識別碼] 方塊中，只有符號名稱保持可見狀態，它們在驗證之後，則不會顯示等號和值。
 
 ## <a name="change-or-delete-symbols"></a>變更或刪除符號
 
@@ -151,14 +150,14 @@ ms.locfileid: "56320584"
 1. 符號的名稱或值中提供的方塊中編輯**變更符號** 對話方塊。
 
    > [!NOTE]
-   > 若要變更符號所*已*指派給資源或物件，您必須使用資源編輯器或**屬性**視窗。
+   > 若要變更指派給資源或物件的符號，您必須使用資源編輯器或**屬性**視窗。
 
 ### <a name="to-delete-an-unassigned-unused-symbol"></a>刪除未指派 (未使用) 的符號
 
 在 [資源符號對話方塊](../windows/resource-symbols-dialog-box.md)，選取您想要刪除，並選擇的符號**刪除**。
 
-   > [!NOTE]
-   > 在刪除資源檔中未使用的符號之前，請確定它未在程式的其他地方使用，或未由編譯時期包含的資源檔使用。
+> [!NOTE]
+> 在刪除之前未使用的符號，在資源檔，請確定不會使用它在其他地方的程式中或在編譯時期包含資源檔。
 
 ## <a name="include-symbols"></a>包含符號
 
@@ -193,9 +192,9 @@ ms.locfileid: "56320584"
    請不要呼叫檔案`Resource.h`，因為這是通常由主要的符號標頭檔的檔名。
 
    > [!NOTE]
-   > **重要**完全依照您輸入您在唯讀符號指示詞中所輸入的內容包含在資源檔。 請確定您輸入的內容不包含任何拼字或語法錯誤。
+   > 在您輸入的內容**唯讀符號指示詞**完全依照您輸入時，將會包含在資源檔案的方塊。 請確定您輸入的內容不包含任何拼字或語法錯誤。
 
-   使用**唯讀符號指示詞**方塊以包含僅具有符號定義的檔案。 不包含資源定義中;否則，儲存檔案時，會建立重複的資源定義。
+   使用**唯讀符號指示詞**方塊以包含僅具有符號定義的檔案。 不包含資源定義，在儲存檔案時，將會建立其他重複的資源定義。
 
 1. 將符號放在您指定的檔案。
 
@@ -215,6 +214,6 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[資源識別項 （符號）](../windows/symbols-resource-identifiers.md)<br/>
-[建立符號](../windows/creating-new-symbols.md)<br/>
+[資源識別項 (符號)](../windows/symbols-resource-identifiers.md)<br/>
+[如何：建立符號](../windows/creating-new-symbols.md)<br/>
 [預先定義的符號識別碼](../windows/predefined-symbol-ids.md)<br/>

@@ -1,17 +1,16 @@
 ---
 title: C++ 一致性改善
 ms.date: 10/31/2018
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: ad34e2721723e113417b45cf7c1da0da4575837f
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 855322f09c9c8f5292c6e299f946c3cec5d9949a
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694396"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809746"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159update159"></a>Visual Studio 2017 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157)、[15.8](#update_158)、[15.9](#update_159) 版中的 C++ 一致性改善
 
@@ -790,7 +789,7 @@ void f()
 
 在範本類別中成員函式的非正規定義上不可使用預設引數。編譯器會在 **/permissive** 下發出警告，並在 **/permissive-** 下發出硬碟錯誤。
 
-在舊版的 Visual Studio 中，下列語式錯誤的程式碼可能會導致執行階段當機。 Visual Studio 2017 15.3 版會產生警告 C5034：'A\<T>::f': 類別範本成員的非正規定義不可使用預設引數：
+在舊版的 Visual Studio 中，下列語式錯誤的程式碼可能會導致執行階段當機。 Visual Studio 2017 15.3 版會產生警告 C5034：'A\<T>::f'：在程式碼外部定義的類別範本成員，無法使用預設引數：
 
 ```cpp
 template <typename T>
@@ -865,7 +864,7 @@ extern "C" __declspec(noinline) HRESULT __stdcall
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype 和對已刪除之解構函式的呼叫
 
-在舊版的 Visual Studio 中，在與 'decltype' 相關聯的運算式內容中呼叫已刪除的解構函式時，編譯器並不會偵測到。 在 Visual Studio 2017 15.3 版中，下列程式碼會產生「錯誤 C2280: 'A\<T>::~A(void)'：嘗試參考已刪除的函式」：
+在舊版的 Visual Studio 中，在與 'decltype' 相關聯的運算式內容中呼叫已刪除的解構函式時，編譯器並不會偵測到。 在 Visual Studio 2017 15.3 版中，下列程式碼會產生「錯誤 C2280：'A\<T>::~A(void)'：嘗試參考已刪除的函式」：
 
 ```cpp
 template<typename T>
@@ -888,7 +887,7 @@ void h()
 
 ### <a name="uninitialized-const-variables"></a>未初始化的 const 變數
 
-如果 'const' 變數未初始化，C++ 編譯器將不會發出診斷，而 Visual Studio 2017 RTW 版本會發生回歸。 Visual Studio 2017 15.3 版已修正此迴歸。 下列程式碼現在會產生「警告 C4132: 'Value': 應初始化常數物件」：
+如果 'const' 變數未初始化，C++ 編譯器將不會發出診斷，而 Visual Studio 2017 RTW 版本會發生回歸。 Visual Studio 2017 15.3 版已修正此迴歸。 下列程式碼現在會產生「警告 C4132：'Value'：應初始化常數物件」：
 
 ```cpp
 const int Value; //C4132
@@ -1532,7 +1531,7 @@ struct D : B<T*> {
 };
 ```
 
-Visual Studio 2017 15.7 版在 **/std:c++17** 模式中，於 D 內的 `using` 陳述式需要 `typename` 索引鍵。若缺少 `typename`，則編譯器會引發警告 C4346: *'B<T>::type': 相依性名稱不是類型\**，以及錯誤 C2061: 語法錯誤: 識別碼 'type':
+Visual Studio 2017 15.7 版 (**/std:c++17** 模式) 在 D 中的 `using` 陳述式內需要 `typename` 關鍵字。在沒有 `typename` 的情況下，編譯器會引發警告 C4346：*'B<T\*>::type'：相依名稱並非類型*，以及錯誤 C2061：*語法錯誤：識別碼 'type'*：
 
 ```cpp
 template<typename T>
@@ -1563,7 +1562,7 @@ int main() {
 
 在先前的 Visual Studio 版本中，有一個缺少範本引數的 variadic 範本建構函式基底類別初始化清單錯誤地被允許而未產生錯誤。 在 Visual Studio 2017 15.7 版中，會引發編譯器錯誤。
 
-Visual Studio 2017 15.7 版中的下列程式碼範例會引發*錯誤 C2614: D\<int>: 成員初始化不合法: 'B' 不是基底或成員類別*
+下列 Visual Studio 2017 15.7 版的程式碼範例會引發*錯誤 C2614：D\<int>：成員初始化不合規定：'B' 並非基底或成員*
 
 ```cpp
 template<typename T>
@@ -1677,7 +1676,7 @@ struct S : Base<T> {
 
 若要修正此錯誤，請將 `return` 陳述式變更為 `return this->base_value;`。
 
-**注意：** 在 Boost Python 程式庫中，長久以來 [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp) 中就有向前範本宣告的 MSVC 特定因應措施。 從 Visual Studio 2017 15.8 版 (_MSC_VER=1915) 開始，在 [/permissive-](build/reference/permissive-standards-conformance.md) 模式下，MSVC 編譯器就會正確地執行引數相依名稱查閱 (ADL) 且行為與其他編譯器一致，讓此因應措施逐漸變得沒必要。 若要避免此錯誤 *C3861: 'unwind_type': 找不到識別項*，請參閱 Boostorg 存放庫中的 [PR 229](https://github.com/boostorg/python/pull/229) 以更新標頭檔。 我們已修補 [vcpkg](vcpkg.md) Boost 套件，因此若您是從 vcpkg 取得或更新 Boost 來源，則不需要個別套用補充程式。
+**注意：** 在 Boost Python 程式庫中，長久以來 [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp) 中就有範本向前宣告的 MSVC 專屬因應措施。 從 Visual Studio 2017 15.8 版 (_MSC_VER=1915) 開始，在 [/permissive-](build/reference/permissive-standards-conformance.md) 模式下，MSVC 編譯器就會正確地執行引數相依名稱查閱 (ADL) 且行為與其他編譯器一致，讓此因應措施逐漸變得沒必要。 若要避免此錯誤 *C3861: 'unwind_type': 找不到識別項*，請參閱 Boostorg 存放庫中的 [PR 229](https://github.com/boostorg/python/pull/229) 以更新標頭檔。 我們已修補 [vcpkg](vcpkg.md) Boost 套件，因此若您是從 vcpkg 取得或更新 Boost 來源，則不需要個別套用補充程式。
 
 ### <a name="forward-declarations-and-definitions-in-namespace-std"></a>命名空間 std 中的向前宣告和定義
 
@@ -1685,7 +1684,7 @@ C++ 標準不允許使用者將向前宣告或定義新增到命名空間 `std` 
 
 在未來的某個時間，Microsoft 將會移動一些 STL 類型定義所在的位置。 發生這種情況時，它會中斷將向前宣告新增至命名空間 `std` 的現有程式碼。 新警告 C4643 有助於識別這類來源問題。 警告在 **/default** 模式中已啟用且預設為關閉。 它會影響使用 **/Wall** 或 **/WX** 編譯的程式。
 
-下列程式碼現在引發 C4643：「C++ 標準不允許在命名空間 std 中向前宣告 'vector'」。
+下列程式碼現在會引發 C4643：*C++ Standard 不允許命名空間 std 中的出現向前宣告 'vector'*。
 
 ```cpp
 namespace std {
@@ -1701,7 +1700,7 @@ namespace std {
 
 ### <a name="constructors-that-delegate-to-themselves"></a>委派給其本身的建構函式
 
-C++ 標準建議編譯器應該在建構函式委派給其本身時發出診斷。 Microsoft C++ 編譯器在 [/std:c++17](build/reference/std-specify-language-standard-version.md) 和 [/std:c++latest](build/reference/std-specify-language-standard-version.md) 模式中現在會引發 C7535：「'X::X': 委派建構函式呼叫其本身」。
+C++ 標準建議編譯器應該在建構函式委派給其本身時發出診斷。 在 [/std:c++17](build/reference/std-specify-language-standard-version.md) 及 [/std:c++latest](build/reference/std-specify-language-standard-version.md) 模式下的 Microsoft C++ 編譯器，現在會引發 C7535：*'X::X'：委派建構函式呼叫本身*。
 
 若未出現此錯誤，下列程式會進行編譯，但將產生無限迴圈：
 
@@ -1865,9 +1864,9 @@ cl /EHsc /std:c++17 m.ixx /experimental:module
 cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
 ```
 
-編譯器對兩者都引發了 C5050：「警告 C5050: 匯入模組 'm' 時環境可能不相容: 不相符的 C++ 版本。目前的 "201402" 模組版本 "201703"」*。
+編譯器會為以下兩種情況引發*警告 C5050：匯入模組 'm' 時，環境可能不相容：C++ 版本不相符。目前的 "201402" 模組版本 "201703"」*。
 
-此外，每當 .ifc 檔案遭竄改時，編譯器都會引發 C7536。 模組介面的標頭下方會包含內容的 SHA2 雜湊。 匯入時，.ifc 檔案會以相同方式雜湊，然後與標頭中提供的雜湊對照，如果兩者不相符，則會引發 C7536：「ifc 完整性檢查失敗。應為 SHA2: '66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6'」*。
+此外，每當 .ifc 檔案遭竄改時，編譯器都會引發 C7536。 模組介面的標頭下方會包含內容的 SHA2 雜湊。 匯入時，.ifc 檔案會以相同方式雜湊，然後與標頭中提供的雜湊對照，如果兩者不相符，則會引發 C7536：*ifc 完整性檢查失敗。SHA2 應為：'66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6'*。
 
 ### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>涉及別名及非推算內容的部分排序
 

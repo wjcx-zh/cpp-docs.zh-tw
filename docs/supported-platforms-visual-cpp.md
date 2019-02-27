@@ -1,20 +1,19 @@
 ---
 title: 支援的平台 (Visual C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 helpviewer_keywords:
 - Visual C++, platforms supported
 - platforms [C++]
 ms.assetid: 0d893056-4008-411a-b3d1-5f57fd7da95c
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 5a077ae90078e4157c154cae2821e67642eff64a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8bd090acf94876ee7939b5d1d80613f688b89d7
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459432"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809629"
 ---
 # <a name="supported-platforms-visual-c"></a>支援的平台 (Visual C++)
 
@@ -41,7 +40,7 @@ ms.locfileid: "50459432"
 
 \*\*\* 您可在 Visual Studio 2017 安裝程式中，安裝**使用 C++ 進行 Linux 開發**工作負載，以 Linux 平台作為目標。 如需指示，請參閱[下載、安裝及設定 Linux 工作負載](linux/download-install-and-setup-the-linux-development-workload.md)。 因為此工具組會編譯您在目標電腦上的可執行檔，所以可針對任何支援的架構進行建置。
 
-如需如何設定目標平台組態的資訊，請參閱[如何：將 Visual C++ 專案設定為以 64 位元 (x64) 平台為目標](build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)。
+如需如何設定目標平台組態的資訊，請參閱[如何：將 Visual C++ 專案設定為以 64 位元 x64 平台為目標](build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,17 +1,16 @@
 ---
 title: Visual C++ 語言一致性
 ms.date: 11/15/2017
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 78c4be98ecc8e0a42e2cd0967f2bedece9dabc86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 604057753e67d08c12204f9d3b09bce0e1212966
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630408"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809759"
 ---
 # <a name="visual-c-language-conformance"></a>Visual C++ 語言一致性
 
@@ -93,7 +92,7 @@ ms.locfileid: "50630408"
 |__C++17 核心語言功能 (缺失報表)__|__支援__|
 |&nbsp;&nbsp;[P0702R1 修正初始設定式清單 ctor 的類別樣板引數推斷](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html) \(英文\)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0588R1 簡化隱含的 Lambda 擷取](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|否|
-|&nbsp;&nbsp;[CWG 1581：何時定義了 constexpr 成員函式？](https://wg21.cmeerw.net/cwg/issue1581)|否|
+|&nbsp;&nbsp;[CWG 1581：何時會定義 constexpr 成員函式？](https://wg21.cmeerw.net/cwg/issue1581)|否|
 |&nbsp;&nbsp;[P0962R1 放寬結構化繫結的自訂點尋找規則](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html)|否|
 |&nbsp;&nbsp;[P0962R2 放寬 range-for 迴圈的自訂點尋找規則](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html)|否|
 |&nbsp;&nbsp;[P0969R0 允許可存取成員進行結構化繫結](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0969r0.pdf)|否|
@@ -296,7 +295,7 @@ __VS 2017 15.7__ 表示 Visual Studio 2017 15.7 版所支援的功能。<br/>
 
 <a name="note_charconv"></a>__charconv__ 的 from_chars() 和 to_chars() 可用於整數。 我們目前正在處理浮點 from_chars()，接下來會處理浮點 to_chars()。
 
-<a name ="note_parallel"></a> __parallel__ C++17 的平行演算法程式庫已完成。 請注意，這並不表示每個演算法都會在每種情況下進行平行處理；最重要的演算法已進行平行處理，因此即使演算法未進行平行處理，也會提供執行原則的簽章。 我們的 STL 實作的中央內部標頭 yvals.h　包含下列「平行演算法附註」：C++ 允許實作將平行演算法實作為序列演算法的呼叫。   這項實作會平行處理數個常見的演算法呼叫，但並非全部。
+<a name ="note_parallel"></a> __parallel__ C++17 的平行演算法程式庫已完成。 請注意，這並不表示每個演算法都會在每種情況下進行平行處理；最重要的演算法已進行平行處理，因此即使演算法未進行平行處理，也會提供執行原則的簽章。 我們 STL 實作的中央內部標頭 (yvals.h) 包含下列「平行演算法注意事項」：C++ 允許實作在呼叫序列演算法時實作平行演算法。   這項實作會平行處理數個常見的演算法呼叫，但並非全部。
 
 下列演算法已平行處理：
 

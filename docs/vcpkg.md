@@ -3,18 +3,17 @@ title: vcpkg-- 適用於 Windows、Linux 與 MacOS 的 C++ 套件管理員
 description: vcpkg 是命令列套件管理員，大幅簡化在 Windows 上取得和安裝開放原始碼 C++ 程式庫的流程。
 author: mikeblome
 ms.author: mblome
-ms.date: 05/14/2018
-ms.technology:
-- cpp-ide
+ms.date: 02/22/2019
+ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 2f7dc6f1d9c78d894c5cf0e6ba20c8bdfc54e67a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dc07086f271c9789629b335b58758b88e8e3d4e8
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518680"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809707"
 ---
-# <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：適用於 Windows、Linux 和 MacOS 的 C++ 套件管理員
+# <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：A C++ package manager for Windows, Linux and MacOS (適用於 Windows、Linux 與 MacOS 的 C++ 套件管理員)
 
 vcpkg 是命令列套件管理員，可大幅簡化在 Windows、Linux 和 MacOS 上取得和安裝協力廠商程式庫的流程。 如果您的專案使用協力廠商程式庫，我們建議您使用 vcpkg 加以安裝。 vcpkg 支援開放原始碼和專屬程式庫。 vcpkg Windows 目錄中的所有程式庫皆已通過 Visual Studio 2015 和 Visual Studio 2017 的相容性測試。 截至 2018 年 5 月為止，Windows 目錄中有超過 900 個程式庫，而 Linux/MacOS 目錄中有超過 350 個程式庫。 C++ 社群正持續不斷地在兩個目錄中新增更多程式庫。
 
@@ -32,7 +31,7 @@ vcpkg 是命令列套件管理員，可大幅簡化在 Windows、Linux 和 MacOS
 
 ## <a name="installation"></a>安裝
 
-複製 GitHub 的 vcpkg 存放庫： https://github.com/Microsoft/vcpkg. 您可以下載到您偏好的任何資料夾位置。
+從 GitHub 複製 vcpkg 存放庫：[https://github.com/Microsoft/vcpkg](https://github.com/Microsoft/vcpkg)。 您可以下載到您偏好的任何資料夾位置。
 
 在根資料夾中執行啟動載入器：
 
@@ -82,7 +81,7 @@ The following packages will be built and installed:
 Additional packages (*) will be installed to complete this operation.
 ```
 
-若為 CMAKE 專案，請使用 CMAKE_TOOLCHAIN_FILE，以利用 `find_package()` 提供程式庫。 例如: 
+若為 CMAKE 專案，請使用 CMAKE_TOOLCHAIN_FILE，以利用 `find_package()` 提供程式庫。 例如：
 
 ```cmd
 cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
@@ -207,7 +206,7 @@ vcpkg 執行個體的內容如下：
 
 ## <a name="command-line-reference"></a>命令列參考
 
-|命令|描述|
+|命令|說明|
 |---------|---------|
 |**vcpkg search [pat]**|搜尋可安裝的套件|
 |**vcpkg install \<pkg>...**|安裝套件|
@@ -229,7 +228,7 @@ vcpkg 執行個體的內容如下：
 
 ### <a name="options"></a>選項
 
-|選項|描述|
+|選項|說明|
 |---------|---------|
 |**--triplet \<t>**|指定目標架構 triplet。 (預設：`%VCPKG_DEFAULT_TRIPLET%`，另請參閱 **vcpkg help triplet**)|
 |**--vcpkg-root \<path>**|指定 vcpkg 根目錄 (預設：`%VCPKG_ROOT%`)|

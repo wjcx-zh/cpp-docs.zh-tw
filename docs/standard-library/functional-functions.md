@@ -1,21 +1,22 @@
 ---
 title: '&lt;functional&gt; 函式'
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
 - functional/std::bind
-- xfunctional/std::bind1st
-- xfunctional/std::bind2nd
-- xfunctional/std::bit_and
-- xfunctional/std::bit_not
-- xfunctional/std::bit_or
-- xfunctional/std::bit_xor
+- functional/std::bind1st
+- functional/std::bind2nd
+- functional/std::bit_and
+- functional/std::bit_not
+- functional/std::bit_or
+- functional/std::bit_xor
 - functional/std::cref
 - type_traits/std::cref
-- xfunctional/std::mem_fn
-- xfunctional/std::mem_fun_ref
-- xfunctional/std::not1
-- xfunctional/std::not2
-- xfunctional/std::ptr_fun
+- functional/std::mem_fn
+- functional/std::mem_fun_ref
+- functional/std::not1
+- functional/std::not2
+- functional/std::not_fn
+- functional/std::ptr_fun
 - functional/std::ref
 - functional/std::swap
 helpviewer_keywords:
@@ -28,25 +29,36 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: cd89386ff421c199705856b9cf5f6b58ff25f7f5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 559110361b9d3d8c66ff261860f8885ff56d44d5
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519694"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006721"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; 函式
 
 ||||
 |-|-|-|
-|[bind](#bind)|[bind1st](#bind1st)|[bind2nd](#bind2nd)|
-|[bit_and](#bit_and)|[bit_not](#bit_not)|[bit_or](#bit_or)|
-|[bit_xor](#bit_xor)|[cref](#cref)|[mem_fn](#mem_fn)|
-|[mem_fun](#mem_fun)|[mem_fun_ref](#mem_fun_ref)|[not1](#not1)|
-|[not2](#not2)|[ptr_fun](#ptr_fun)|[ref](#ref)|
-|[swap](#swap)|
+| [bind](#bind) | [bit_and](#bit_and) | [bit_not](#bit_not) |
+| [bit_or](#bit_or) | [bit_xor](#bit_xor) | [cref](#cref) |
+| [invoke](#invoke) | [mem_fn](#mem_fn) | [not_fn](#not_fn) |
+| [ref](#ref) | [swap](#swap) | |
 
-## <a name="bind"></a>  bind
+這些函式是在 c++11 中已被取代，並在 c++17 中移除：
+
+||||
+|-|-|-|
+| [bind1st](#bind1st) | [bind2nd](#bind2nd) | [mem_fun](#mem_fun) |
+| [mem_fun_ref](#mem_fun_ref) | [ptr_fun](#ptr_fun) | |
+
+在 c++17 中已取代這些函式：
+
+|||
+|-|-|
+| [not1](#not1) | [not2](#not2) |
+
+## <a name="bind"></a> bind
 
 將引數繫結至可呼叫物件。
 
@@ -69,14 +81,14 @@ unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
 *fn*<br/>
 要呼叫的物件。
 
-*TN*<br/>
+*tN*<br/>
 第 N 個呼叫引數。
 
 ### <a name="remarks"></a>備註
 
 `Fty, T1, T2, ..., TN` 類型必須是複製建構，且對於 `w1, w2, ..., wN` 某些值來說，`INVOKE(fn, t1, ..., tN)` 必須是有效的運算式。
 
-第一個範本函式會傳回含弱式結果類型的轉送呼叫包裝函式 `g`。 效果`g(u1, u2, ..., uM)`已`INVOKE(f, v1, v2, ..., vN, ` [result_of](../standard-library/result-of-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`，其中`cv`是 cv 限定詞`g`的值和類型的繫結的引數`v1, v2, ..., vN`判定為以下指定。 您可以使用它將引數繫結至可呼叫的物件，以利用量身訂做的引數清單來製作可呼叫物件。
+第一個範本函式會傳回含弱式結果類型的轉送呼叫包裝函式 `g`。 效果`g(u1, u2, ..., uM)`已`INVOKE(f, v1, v2, ..., vN, ` [invoke_result](../standard-library/invoke-result-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`，其中`cv`是 cv 限定詞`g`的值和類型的繫結的引數`v1, v2, ..., vN`決定權詳述如下。 您可以使用它將引數繫結至可呼叫的物件，以利用量身訂做的引數清單來製作可呼叫物件。
 
 第二個範本函式會傳回含 `result_type` 巢狀類型的轉送呼叫包裝函式 `g`，該類型與 `Ret` 同義。 `g(u1, u2, ..., uM)` 的效果為 `INVOKE(f, v1, v2, ..., vN, Ret)`，其中 `cv` 是 `g` 的 cv 限定詞，而繫結引數 `v1, v2, ..., vN` 的值和類型則依下列指定方式來判斷。 您可以使用它將引數繫結至可呼叫的物件，以利用量身訂做的引數清單和指定的傳回類型，來製作可呼叫物件。
 
@@ -147,9 +159,9 @@ int main()
 3^2 == 9
 ```
 
-## <a name="bind1st"></a>  bind1st
+## <a name="bind1st"></a> bind1st
 
-協助程式樣板函式，可建立配接器，透過將二元函式的第一個引數繫結至指定值，將二元函式物件轉換成一元函式物件。
+協助程式樣板函式，可建立配接器，透過將二元函式的第一個引數繫結至指定值，將二元函式物件轉換成一元函式物件。 在 C + + 11 中，在 c++17 中移除已被取代。
 
 ```cpp
 template <class Operation, class Type>
@@ -241,9 +253,9 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bind2nd"></a>  bind2nd
+## <a name="bind2nd"></a> bind2nd
 
-協助程式樣板函式，可建立配接器，透過將二元函式的第二個引數繫結至指定值，將二元函式物件轉換成一元函式物件。
+協助程式樣板函式，可建立配接器，透過將二元函式的第二個引數繫結至指定值，將二元函式物件轉換成一元函式物件。 在 C + + 11 中，在 c++17 中移除已被取代。
 
 ```cpp
 template <class Operation, class Type>
@@ -335,7 +347,7 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bit_and"></a>  bit_and
+## <a name="bit_and"></a> bit_and
 
 在其引數執行位元 AND 運算 (二元 `operator&`) 的預先定義函式物件。
 
@@ -375,9 +387,9 @@ struct bit_and<void>
 
 對於基本資料類型，`bit_and` 仿函數僅限於整數類型，或會實作二元 `operator&` 的使用者定義類型。
 
-## <a name="bit_not"></a>  bit_not
+## <a name="bit_not"></a> bit_not
 
-在其引數執行位元補數 (NOT) 運算 (一元 `operator~`) 的預先定義函式物件。
+在其引數執行位元補數 (NOT) 運算 (一元 `operator~`) 的預先定義函式物件。 在 c++14 中新增。
 
 ```cpp
 template <class Type = void>
@@ -391,13 +403,13 @@ template <>
 struct bit_not<void>
 {
     template <class Type>
-    auto operator()(Type&& Right) const  ->  decltype(~std::forward<Type>(Right));
+    auto operator()(Type&& Right) const -> decltype(~std::forward<Type>(Right));
 };
 ```
 
 ### <a name="parameters"></a>參數
 
-*Type*<br/>
+*型別*<br/>
 支援一元 `operator~` 的類型。
 
 *右邊*<br/>
@@ -411,7 +423,7 @@ struct bit_not<void>
 
 對於基本資料類型，`bit_not` 仿函數僅限於整數類型，或會實作二元 `operator~` 的使用者定義類型。
 
-## <a name="bit_or"></a>  bit_or
+## <a name="bit_or"></a> bit_or
 
 在其引數執行位元 OR 運算 (`operator|`) 的預先定義函式物件。
 
@@ -429,7 +441,7 @@ struct bit_or<void>
 {
     template <class T, class U>
     auto operator()(T&& Left, U&& Right) const
-        ->  decltype(std::forward<T>(Left) | std::forward<U>(Right));
+        -> decltype(std::forward<T>(Left) | std::forward<U>(Right));
 };
 ```
 
@@ -451,7 +463,7 @@ struct bit_or<void>
 
 對於基本資料類型，`bit_or` 函式僅限於整數類型，或會實作 `operator|` 的使用者定義類型。
 
-## <a name="bit_xor"></a>  bit_xor
+## <a name="bit_xor"></a> bit_xor
 
 在其引數執行位元 XOR 運算 (二元 `operator^`) 的預先定義函式物件。
 
@@ -491,7 +503,7 @@ struct bit_xor<void>
 
 對於基本資料類型，`bit_xor` 仿函數僅限於整數類型，或會實作二元 `operator^` 的使用者定義類型。
 
-## <a name="cref"></a>  cref
+## <a name="cref"></a> cref
 
 從引數建構常數`reference_wrapper`。
 
@@ -547,7 +559,114 @@ cref(i) = 1
 cref(neg)(i) = -1
 ```
 
-## <a name="mem_fn"></a>  mem_fn
+## <a name="invoke"></a> invoke
+
+叫用任何可呼叫的物件，但指定的引數。 在 C + + 17 中新增。
+
+```cpp
+template <class Callable, class... Args>
+invoke_result_t<Callable, Args...>
+    invoke(Callable&& fn, Args&&... args) noexcept(/* specification */);
+```
+
+### <a name="parameters"></a>參數
+
+*Callable*<br/>
+要呼叫的物件類型。
+
+*Args*<br/>
+呼叫引數型別。
+
+*fn*<br/>
+要呼叫的物件。
+
+*args*<br/>
+呼叫的引數。
+
+*specification*<br/>
+**Noexcept**規格`std::is_nothrow_invocable_v<Callable, Args>)`。
+
+### <a name="remarks"></a>備註
+
+叫用的可呼叫物件*fn*使用的參數*args*。 有效地`INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)`，其中虛擬函式`INVOKE(f, t1, t2, ..., tN)`表示下列事項之一：
+
+- `(t1.*f)(t2, ..., tN)`：當 `f` 是 `T` 類別的成員函式指標，而且 `t1` 是 `T` 類型的物件、`T` 類型的物件參考或衍生自 `T` 之類型的物件參考時。 也就是說，當`std::is_base_of<T, std::decay_t<decltype(t1)>>::value`為 true。
+
+- `(t1.get().*f)(t2, ..., tN)` 當`f`是類別成員函式的指標`T`並`std::decay_t<decltype(t1)>`是特製化的`std::reference_wrapper`。
+
+- `((*t1).*f)(t2, ..., tN)` 當`f`是類別成員函式的指標`T`和`t1`不是其中一個先前的型別。
+
+- `t1.*f`：當 N == 1，`f` 是 `T` 類別的成員資料指標，而且 `t1` 是 `T` 類型的物件、`T` 類型的物件參考或衍生自 `T` 之類型的物件參考時。  也就是說，當`std::is_base_of<T, std::decay_t<decltype(t1)>>::value`為 true。
+
+- `t1.get().*f` 當 N = = 1 和`f`類別的成員資料的指標`T`並`std::decay_t<decltype(t1)>`是特製化的`std::reference_wrapper`。
+
+- `(*t1).*f` 當 N = = 1 及`f`類別的成員資料的指標`T`和`t1`不是其中一個先前的型別。
+
+- `f(t1, t2, ..., tN)`：其他所有情況。
+
+如需可呼叫物件的結果型別資訊，請參閱[invoke_result](invoke-result-class.md)。 可呼叫類型上的述詞，請參閱 < [is_invocable，is_invocable_r，is_nothrow_invocable，is_nothrow_invocable_r 類別](is-invocable-classes.md)。
+
+### <a name="example"></a>範例
+
+```cpp
+// functional_invoke.cpp
+// compile using: cl /EHsc /std:c++17 functional_invoke.cpp
+#include <functional>
+#include <iostream>
+
+struct Demo
+{
+    int n_;
+
+    Demo(int const n) : n_{n} {}
+
+    void operator()(int const i, int const j) const
+    {
+        std::cout << "Demo operator( " << i << ", "
+            << j << " ) is " << i * j << std::endl;
+    }
+
+    void difference(int const i) const 
+    {
+        std::cout << "Demo.difference( " << i << " ) is "
+            << n_ - i << std::endl;
+    }
+};
+
+void divisible_by_3(int const i)
+{
+    std::cout << i;
+    (i % 3) ? std::cout << " isn't divisible by 3."
+        : std::cout << " is divisible by 3.";
+    std::cout << std::endl;
+}
+
+int main()
+{
+    // Invoke a function object (call operator).
+    Demo d{ 42 };
+    std::invoke( d, 3, -7 );
+
+    // Invoke a member function.
+    std::invoke(&Demo::difference, d, 29);
+
+    // Invoke a data member.
+    std::cout << "n_: " << std::invoke(&Demo::n_, d) << '\n';
+
+    // Invoke a stand-alone (free) function.
+    std::invoke( divisible_by_3, 42 );
+
+    // Invoke a lambda.
+    std::invoke( [](int const i){
+        std::cout << i; 
+        (i % 7) ? std::cout << " isn't divisible by 7."
+            : std::cout << " is divisible by 7.";
+        std::cout << std::endl;
+    }, 42 );
+}
+```
+
+## <a name="mem_fn"></a> mem_fn
 
 產生簡單呼叫包裝函式。
 
@@ -558,7 +677,7 @@ unspecified mem_fn(Ret Ty::*pm);
 
 ### <a name="parameters"></a>參數
 
-*ret*<br/>
+*Ret*<br/>
 包裝函式的傳回類型。
 
 *Ty*<br/>
@@ -610,9 +729,9 @@ int main()
 3*2 == 6
 ```
 
-## <a name="mem_fun"></a>  mem_fun
+## <a name="mem_fun"></a> mem_fun
 
-協助程式樣板函式，可用來建構使用指標引數初始化時之成員函式的物件配接器。
+協助程式樣板函式，可用來建構使用指標引數初始化時之成員函式的物件配接器。 支持的 C + + 11 中已被取代[mem_fn](#mem_fn)並[繫結](#bind)，並在 c++17 中移除。
 
 ```cpp
 template <class Result, class Type>
@@ -697,9 +816,9 @@ int main( )
 }
 ```
 
-## <a name="mem_fun_ref"></a>  mem_fun_ref
+## <a name="mem_fun_ref"></a> mem_fun_ref
 
-Helper 範本函式，用以在使用參考引數初始化時建構成員函式的物件配接器。
+Helper 範本函式，用以在使用參考引數初始化時建構成員函式的物件配接器。 在 C + + 11 中，在 c++17 中移除已被取代。
 
 ```cpp
 template <class Result, class Type>
@@ -802,9 +921,9 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 ```
 
-## <a name="not1"></a>  not1
+## <a name="not1"></a> not1
 
-傳回一元述詞的補數。
+傳回一元述詞的補數。 已被取代的益處[not_fn](#not_fn)在 c++17 中。
 
 ```cpp
 template <class UnaryPredicate>
@@ -813,7 +932,7 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
 
 ### <a name="parameters"></a>參數
 
-*預測*<br/>
+*pred*<br/>
 要變為負值的一元述詞。
 
 ### <a name="return-value"></a>傳回值
@@ -874,9 +993,9 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.
 ```
 
-## <a name="not2"></a>  not2
+## <a name="not2"></a> not2
 
-傳回二元述詞的補數。
+傳回二元述詞的補數。 已被取代的益處[not_fn](#not_fn)在 c++17 中。
 
 ```cpp
 template <class BinaryPredicate>
@@ -950,9 +1069,109 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 ```
 
-## <a name="ptr_fun"></a>  ptr_fun
+## <a name="not_fn"></a> not_fn
 
-Helper 範本函式，可用來將一元和二元函式指標分別轉換成一元和二元可調適性函式。
+`not_fn`函式樣板會採用可呼叫物件，並傳回可呼叫物件。 時傳回的可呼叫物件稍後會使用某些引數叫用，它將它們傳送至原始的可呼叫物件，並以邏輯方式執行結果的否定運算。 它會保留已包裝可呼叫物件的 const 限定性條件和值類別行為。 `not_fn` 新 C + + 17，並取代已被取代`std::not1`， `std::not2`，`std::unary_negate`和`std::binary_negate`。
+
+```cpp
+template <class Callable>
+/* unspecified */ not_fn(Callable&& func);
+```
+
+### <a name="parameters"></a>參數
+
+*func*<br/>
+可呼叫物件，用來建構轉送呼叫包裝函式。
+
+### <a name="remarks"></a>備註
+
+範本函式會傳回呼叫包裝函式相當於`return call_wrapper(std::forward<Callable>(func))`根據此 exposition 專用的類別：
+
+```cpp
+class call_wrapper
+{
+   using FD = decay_t<Callable>;
+   explicit call_wrapper(Callable&& func);
+
+public:
+   call_wrapper(call_wrapper&&) = default;
+   call_wrapper(call_wrapper const&) = default;
+
+   template<class... Args>
+     auto operator()(Args&&...) & -> decltype(!declval<invoke_result_t<FD&(Args...)>>());
+
+   template<class... Args>
+     auto operator()(Args&&...) const& -> decltype(!declval<invoke_result_t<FD const&(Args...)>>());
+
+   template<class... Args>
+     auto operator()(Args&&...) && -> decltype(!declval<invoke_result_t<FD(Args...)>>());
+
+   template<class... Args>
+     auto operator()(Args&&...) const&& -> decltype(!declval<invoke_result_t<FD const(Args...)>>());
+
+private:
+  FD fd;
+};
+```
+
+可呼叫物件的明確建構函式*func*需要型別`std::decay_t<Callable>`滿足的需求`MoveConstructible`，和`is_constructible_v<FD, Callable>`必須為 true。 它會初始化被包裝的可呼叫物件`fd`從`std::forward<Callable>(func)`，建構所擲回任何例外狀況擲回`fd`。
+
+包裝函式呼叫運算子的左值或右值參考類別目錄和 const 限定性條件如此處所示，公開 （expose)
+
+```cpp
+template<class... Args> auto operator()(Args&&... args) & -> decltype(!declval<invoke_result_t<FD&(Args...)>>());
+template<class... Args> auto operator()(Args&&... args) const& -> decltype(!declval<invoke_result_t<FD const&(Args...)>>());
+template<class... Args> auto operator()(Args&&... args) && -> decltype(!declval<invoke_result_t<FD(Args...)>>());
+template<class... Args> auto operator()(Args&&... args) const&& -> decltype(!declval<invoke_result_t<FD const(Args...)>>());
+```
+
+前兩個相當於`return !INVOKE(fd, std::forward<Args>(args)...)`，以及兩個相當於`return !INVOKE(std::move(fd), std::forward<Args>(args)...)`。
+
+### <a name="example"></a>範例
+
+```cpp
+// functional_not_fn_.cpp
+// compile with: /EHsc /std:c++17
+#include <vector>
+#include <algorithm>
+#include <functional>
+#include <iostream>
+
+int main()
+{
+    std::vector<int> v1 = { 99, 6264, 41, 18467, 6334, 26500, 19169 };
+    auto divisible_by_3 = [](int i){ return i % 3 == 0; };
+
+    std::cout << "Vector v1 = ( " ;
+    for (const auto& item : v1)
+    {
+        std::cout << item << " ";
+    }
+    std::cout << ")" << std::endl;
+
+    // Count the number of vector elements divisible by 3.
+    int divisible =
+        std::count_if(v1.begin(), v1.end(), divisible_by_3);
+    std::cout << "Elements divisible by three: "
+        << divisible << std::endl;
+
+    // Count the number of vector elements not divisible by 3.
+    int not_divisible =
+        std::count_if(v1.begin(), v1.end(), std::not_fn(divisible_by_3));
+    std::cout << "Elements not divisible by three: "
+        << not_divisible << std::endl;
+}
+```
+
+```Output
+Vector v1 = ( 99 6264 41 18467 6334 26500 19169 )
+Elements divisible by three: 2
+Elements not divisible by three: 5
+```
+
+## <a name="ptr_fun"></a> ptr_fun
+
+Helper 範本函式，可用來將一元和二元函式指標分別轉換成一元和二元可調適性函式。 在 C + + 11 中，在 c++17 中移除已被取代。
 
 ```cpp
 template <class Arg, class Result>
@@ -981,7 +1200,7 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]
 
-## <a name="ref"></a>  ref
+## <a name="ref"></a> ref
 
 從引數建構 `reference_wrapper` 。
 
@@ -1073,7 +1292,7 @@ tiger lion cougar
 tiger cougar
 ```
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a> swap
 
 交換兩個 `function` 物件。
 
@@ -1087,10 +1306,10 @@ void swap(function<Fty>& f1, function<Fty>& f2);
 *Fty*<br/>
 函式物件所控制的類型。
 
-*F1*<br/>
+*f1*<br/>
 第一個函式物件。
 
-*F2*<br/>
+*f2*<br/>
 第二個函式物件。
 
 ### <a name="remarks"></a>備註

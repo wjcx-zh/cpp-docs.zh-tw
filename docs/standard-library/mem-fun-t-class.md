@@ -1,21 +1,21 @@
 ---
 title: mem_fun_t 類別
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::mem_fun_t
+- functional/std::mem_fun_t
 helpviewer_keywords:
 - mem_fun_t class
 ms.assetid: 242566d4-750c-4c87-9d63-2e2c9d19ca2a
-ms.openlocfilehash: 32c66eb20215bc68efd0f0bb43c30f951da1bae9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf1080f5f832bd79a347ee7fd847ff56a7567fdf
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456364"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006509"
 ---
 # <a name="memfunt-class"></a>mem_fun_t 類別
 
-配接器類別，可讓`non_const`接受任何引數，當作一元函式物件的指標引數初始化時要呼叫成員函式。
+配接器類別，可讓`non_const`接受任何引數，當作一元函式物件的指標引數初始化時要呼叫成員函式。 在 C + + 11 中，在 c++17 中移除已被取代。
 
 ## <a name="syntax"></a>語法
 

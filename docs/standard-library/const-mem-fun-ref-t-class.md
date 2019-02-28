@@ -1,21 +1,21 @@
 ---
 title: const_mem_fun_ref_t 類別
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::const_mem_fun_ref_t
+- functional/std::const_mem_fun_ref_t
 helpviewer_keywords:
 - const_mem_fun_ref_t class
 ms.assetid: 316ddbaa-9f46-4931-8eba-ea4ca66360ef
-ms.openlocfilehash: 3f0a87b71f39847590c5fbc4e94038b216ec4b1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16025764cdcf28900c30ef53dced871998f8bd07
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515514"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006574"
 ---
 # <a name="constmemfunreft-class"></a>const_mem_fun_ref_t 類別
 
-配接器類別，這個類別可在使用參考引數初始化 **const** 成員函式 (其不接受任何引數) 時，將其當作一元函式物件來呼叫。
+配接器類別，這個類別可在使用參考引數初始化 **const** 成員函式 (其不接受任何引數) 時，將其當作一元函式物件來呼叫。 在 C + + 11 中，在 c++17 中移除已被取代。
 
 ## <a name="syntax"></a>語法
 

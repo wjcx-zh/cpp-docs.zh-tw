@@ -1,22 +1,22 @@
 ---
 title: '&lt;type_traits&gt;'
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
 - <type_traits>
 helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: f56334cbb25132d45dfabb68cbcd5b832096a87c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c80629fd8771206d193b53aa7c32073de0ba45dd
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514672"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006719"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
-定義提供編譯時間常數的範本，這些常數會提供其類型引數的屬性資訊或產生轉換類型。
+定義提供其型別引數中，屬性的相關資訊，或已轉換的型別會產生編譯時期常數的範本。
 
 ## <a name="syntax"></a>語法
 
@@ -26,29 +26,33 @@ ms.locfileid: "50514672"
 
 ## <a name="remarks"></a>備註
 
-類別和範本\<type_traits > 用來支援型別推斷、 分類及在編譯時期偵測類型相關的錯誤，並協助您最佳化您的一般程式碼的轉換。 這些類別和範本包含描述類型屬性的一元類型特性、描述類型之間關係的二元類型特性，以及修改類型屬性的轉換特性。
+類別和範本\<type_traits > 用來支援型別推斷、 分類及在編譯時期的轉換。 它們也可以用來偵測類型相關的錯誤，並協助您最佳化您的一般程式碼。 一元類型特性描述屬性的型別、 二進位類型特性描述型別之間的關聯性和轉換特性修改類型的屬性。
 
-若要支援類型特性，則定義 Helper 類別 `integral_constant`。 它具有範本特製化 `true_type` 和 `false_type`，可形成類型述詞的基底類別。 「類型述詞」是採用一或兩個類型引數的範本。 當類型述詞「為 True」時，會直接或間接地公開衍生自 [true_type](../standard-library/type-traits-typedefs.md#true_type)。 當類型述詞「為 False」時，會直接或間接地公開衍生自 [false_type](../standard-library/type-traits-typedefs.md#false_type)。
+協助程式類別`integral_constant`和其範本特製化`true_type`和`false_type`形成類型述詞的基底類別。 「類型述詞」是採用一或兩個類型引數的範本。 當類型述詞*成立*，它會公開衍生，直接或間接從[true_type](../standard-library/type-traits-typedefs.md#true_type)。 當類型述詞*會是 false*，它會公開衍生，直接或間接從[false_type](../standard-library/type-traits-typedefs.md#false_type)。
 
 *類型修飾詞*或*轉換特性*是採用一或多個範本引數的範本，且具有一個成員 `type`，這是已修改類型的同義字。
 
 ### <a name="alias-templates"></a>別名範本
 
-為了簡化類型特性運算式，將提供 `typename some_trait<T>::type` 的[別名範本](../cpp/aliases-and-typedefs-cpp.md)，其中 "`some_trait`" 是範本類別名稱。 例如，[add_const](../standard-library/add-const-class.md) 具有其類型 `add_const_t` 的別名範本，定義為：
+為了簡化類型特性運算式，[別名樣板](../cpp/aliases-and-typedefs-cpp.md)for`typename some_trait<T>::type`提供，其中*some_trait*是範本類別名稱。 例如，[add_const](../standard-library/add-const-class.md) 具有其類型 `add_const_t` 的別名範本，定義為：
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-|||||
-|-|-|-|-|
-|add_const_t|aligned_storage_t|make_signed_t|remove_pointer_t|
-|add_cv_t|aligned_union_t|make_unsigned_t|remove_reference_t|
-|add_lvalue_reference_t|common_type_t|remove_all_extents_t|remove_volatile_t|
-|add_pointer_t|conditional_t|remove_const_t|result_of_t|
-|add_rvalue_reference_t|decay_t|remove_cv_t|underlying_type_t|
-|add_volatile_t|enable_if_t|remove_extent_t||
+這些是提供的別名`type`成員：
+
+||||
+|-|-|-|
+| add_const_t | add_cv_t | add_lvalue_reference_t |
+| add_pointer_t | add_rvalue_reference_t | add_volatile_t |
+| aligned_storage_t | aligned_union_t | common_type_t |
+| conditional_t | decay_t | enable_if_t |
+| invoke_result_t | make_signed_t | make_unsigned_t |
+| remove_all_extents_t | remove_const_t | remove_cv_t |
+| remove_extent_t | remove_pointer_t | remove_reference_t |
+| remove_volatile_t | result_of_t | underlying_type_t |
 
 ### <a name="classes"></a>類別
 
@@ -133,6 +137,10 @@ Helper 類別和 typedef
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|測試類型是否可指派移動，且已知指派不會擲回。|
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|測試類型是否可破壞，且已知解構函式不會擲回。|
 |`has_virtual_destructor`|測試類型是否有虛擬解構函式。|
+| [is_invocable](is-invocable-classes.md) | 測試是否可呼叫的型別可以使用來叫用指定的引數型別。<br/> 在 C + + 17 中新增。 |
+| [is_invocable_r](is-invocable-classes.md) | 測試是否可呼叫的型別可以使用叫用指定的引數類型和結果轉換成指定的型別。<br/> 在 C + + 17 中新增。 |
+| [is_nothrow_invocable](is-invocable-classes.md) | 測試是否可呼叫的型別可以使用叫用指定的引數類型，且已知不會擲回例外狀況。<br/> 在 C + + 17 中新增。 |
+| [is_nothrow_invocable_r](is-invocable-classes.md) | 測試是否可以使用指定引數類型來叫用可呼叫的型別，且已知不會擲回例外狀況，而結果會轉換為指定的型別。<br/> 在 C + + 17 中新增。 |
 
 類型屬性的查詢
 
@@ -200,7 +208,8 @@ Helper 類別和 typedef
 |[conditional](../standard-library/conditional-class.md)|如果條件為 true，則產生第一個指定的類型，反之則產生第二個指定的類型。|
 |[decay](../standard-library/decay-class.md)|產生由值傳遞的類型。 建立非參考、非常數或非暫時性的類型，或建立類型的指標。|
 |[enable_if](../standard-library/enable-if-class.md)|如果條件為 true，則產生指定的類型，反之則不產生類型。|
-|[result_of](../standard-library/result-of-class.md)|決定採用指定引數類型之可呼叫類型的傳回類型。|
+|[invoke_result](invoke-result-class.md)|決定採用指定引數類型之可呼叫類型的傳回類型。 <br/>在 C + + 17 中新增。 |
+|[result_of](../standard-library/result-of-class.md)|決定採用指定引數類型之可呼叫類型的傳回類型。 <br/>新增在 c++14 中，在 c++17 中已被取代。 |
 |[underlying_type](../standard-library/underlying-type-class.md)|產生列舉類型的基礎整數類型。|
 
 ## <a name="see-also"></a>另請參閱

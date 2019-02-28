@@ -1,21 +1,21 @@
 ---
 title: binder1st 類別
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::binder1st
+- functional/std::binder1st
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: a8e962e118d162e46e2edfca3ce11e7cbf322e10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f70a1a4a0903b66edf5f42e59788b9a2d97fc967
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439629"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006626"
 ---
 # <a name="binder1st-class"></a>binder1st 類別
 
-提供一個建構函式的樣板類別，這個建構函式透過將二元函式的第一個引數繫結至指定值，將二元函式物件轉換成一元函式物件。
+提供一個建構函式的樣板類別，這個建構函式透過將二元函式的第一個引數繫結至指定值，將二元函式物件轉換成一元函式物件。 支持的 C + + 11 中已被取代[繫結](functional-functions.md#bind)，並在 c++17 中移除。
 
 ## <a name="syntax"></a>語法
 
@@ -29,7 +29,7 @@ public:
     typedef typename Operation::argument_type argument_type;
     typedef typename Operation::result_type result_type;
     binder1st(
-        const Operation& Func,
+        const Operation& binary_fn,
         const typename Operation::first_argument_type& left);
 
     result_type operator()(const argument_type& right) const;
@@ -43,7 +43,7 @@ protected:
 
 ### <a name="parameters"></a>參數
 
-*函式*<br/>
+*binary_fn*<br/>
 要轉換為一元函式物件的二元函式物件。
 
 *left*<br/>
@@ -58,9 +58,9 @@ protected:
 
 ## <a name="remarks"></a>備註
 
-此範本類別會儲存二元函式物件的複本*Func*中`op`，和一份*左*在`value`。 它會在傳回下列項目時定義其成員函式 `operator()`：**op**( **value**, `right`)。
+此範本類別會儲存二元函式物件的複本*binary_fn*中`op`，和一份*左*在`value`。 它會定義其成員函式`operator()`做為傳回`op( value, right )`。
 
-如果*Func*是類型的物件`Operation`並`c`是常數，則[bind1st](../standard-library/functional-functions.md#bind1st) ( `Func`， `c` ) 就相當於`binder1st`類別建構函式`binder1st` \< **作業**> ( `Func`， `c` )、 更方便。
+如果*binary_fn*是類型的物件`Operation`並`c`是常數，則`bind1st( binary_fn, c )`更方便對等項目`binder1st<Operation>( binary_fn, c )`。 如需詳細資訊，請參閱 < [bind1st](../standard-library/functional-functions.md#bind1st)。
 
 ## <a name="example"></a>範例
 

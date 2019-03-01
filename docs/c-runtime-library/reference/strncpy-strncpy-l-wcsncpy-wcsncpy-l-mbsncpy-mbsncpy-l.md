@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _fstrncpy
@@ -61,12 +62,12 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: 5260d120fe1e5826bb4b9ebc8410a8bd1040ff3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04ca1f0b689e68008b3b5a57d01e626ee92a60b9
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507729"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210428"
 ---
 # <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l
 
@@ -207,7 +208,7 @@ unsigned char *_mbsncpy_l(
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用**strncpy**和如何遭誤用，導致程式 bug 和安全性問題。 編譯器會產生警告每次呼叫**strncpy**類似**crt_strncpy_x86.c （15)︰ 警告 C4996: 'strncpy': 這個函式或變數可能不安全。請考慮改用 strncpy_s。若要停用已被取代的警告，請使用 _CRT_SECURE_NO_WARNINGS。如需詳細資料，請參閱線上說明。**
+下列範例示範如何使用**strncpy**和如何遭誤用，導致程式 bug 和安全性問題。 編譯器會產生警告每次呼叫**strncpy**類似**crt_strncpy_x86.c （15)︰ 警告 C4996: 'strncpy':此函式或變數可能不安全。請考慮改用 strncpy_s。若要停用已被取代的警告，請使用 _CRT_SECURE_NO_WARNINGS。如需詳細資料，請參閱線上說明。**
 
 ```C
 // crt_strncpy_x86.c

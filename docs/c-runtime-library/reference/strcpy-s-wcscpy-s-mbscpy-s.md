@@ -19,6 +19,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - strcpy_s
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: 5dec0c44519b78a3c4a98c51f8b8ca9bc3f54a7c
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 9763ba66867faba080ed8729b4fe07b96c56ee0d
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702709"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210519"
 ---
 # <a name="strcpys-wcscpys-mbscpys-mbscpysl"></a>strcpy_s、 wcscpy_s、 _mbscpy_s、 _mbscpy_s_l
 
@@ -224,7 +225,7 @@ String = Hello world from wcscpy_s and wcscat_s!
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [strcat、 wcscat、 _mbscat、 _mbscat_l](strcat-wcscat-mbscat.md) <br/>
-[strcmp、 wcscmp、 _mbscmp、 _mbscmp_l](strcmp-wcscmp-mbscmp.md) <br/>
+[strcmp、wcscmp、_mbscmp、_mbscmp_l](strcmp-wcscmp-mbscmp.md) <br/>
 [strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) <br/>
 [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md) <br/>
 [strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md) <br/>

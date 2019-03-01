@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - wmemcpy_s
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: e7d6cc7abdd5f343bf1482f534f5112eabbc96b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 802d75307096e649df15b1864b99699fba92a3a1
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607151"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210870"
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s、wmemcpy_s
 
@@ -77,7 +78,7 @@ memcpy_s 和寬字元 (wchar_t) 的 wmemcpy_s 之目的緩衝區大小 (以位�
 |any|any|any|0|0|未修改|
 |**NULL**|any|any|非零|**EINVAL**|未修改|
 |any|any|**NULL**|非零|**EINVAL**|*dest*歸零|
-|any|< *計數*|any|非零|**ERANGE**|*dest*歸零|
+|any|< *count*|any|非零|**ERANGE**|*dest*歸零|
 
 ## <a name="remarks"></a>備註
 

@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _wmakepath_s
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-ms.openlocfilehash: 6914299dd7ede97c9004dcc95e01b1a35188f5c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3536569fd3e77a353003e1372d5dc4ee6e4ee3fb
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471912"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210649"
 ---
 # <a name="makepaths-wmakepaths"></a>_makepath_s、_wmakepath_s
 
@@ -88,7 +89,7 @@ errno_t _wmakepath_s(
 *sizeInBytes*<br/>
 以位元組為單位的緩衝區大小。
 
-*磁碟機*<br/>
+*drive*<br/>
 包含對應至所需磁碟機的代號 (A、B 等) 及選擇性後置冒號。 **_makepath_s**冒號自動插入複合路徑中遺失。 如果*磁碟機*是**NULL**或指向空字串，不要的磁碟機代號會出現在複合*路徑*字串。
 
 *dir*<br/>

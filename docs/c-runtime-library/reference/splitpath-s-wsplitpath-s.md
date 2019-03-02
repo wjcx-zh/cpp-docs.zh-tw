@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _wsplitpath_s
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: 5a6770b7f5f0f8ee82cf86757d14e03b33c1f5d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87af8bac525844c06fdfc16d7d13a06eef4d61ab
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602900"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210441"
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s、_wsplitpath_s
 
@@ -89,7 +90,7 @@ errno_t _wsplitpath_s(
 *path*<br/>
 完整路徑。
 
-*磁碟機*<br/>
+*drive*<br/>
 磁碟機代號，後面接著冒號 (**:**)。 您可以傳遞**NULL**此參數，如果您不需要的磁碟機代號。
 
 *driveNumberOfElements*<br/>

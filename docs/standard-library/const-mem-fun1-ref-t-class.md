@@ -1,21 +1,21 @@
 ---
 title: const_mem_fun1_ref_t 類別
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::const_mem_fun1_ref_t
+- functional/std::const_mem_fun1_ref_t
 helpviewer_keywords:
 - const_mem_fun1_ref_t class
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
-ms.openlocfilehash: e90ac09543c0704cf900e0fc5448e295034dcb66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21d53178bf7ed80b5e0b170619e6221826393dab
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516437"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006444"
 ---
 # <a name="constmemfun1reft-class"></a>const_mem_fun1_ref_t 類別
 
-配接器類別，這個類別可在使用參考引數初始化 **const** 成員函式 (其接受單一引數) 時，將其作為二元函式物件來呼叫。
+配接器類別，這個類別可在使用參考引數初始化 **const** 成員函式 (其接受單一引數) 時，將其作為二元函式物件來呼叫。 在 C + + 11 中，在 c++17 中移除已被取代。
 
 ## <a name="syntax"></a>語法
 
@@ -46,7 +46,7 @@ class const_mem_fun1_ref_t
 
 ## <a name="remarks"></a>備註
 
-此範本類別會儲存一份*Pm*，它必須是類別的成員函式的指標`Type`，私用成員物件中。 它會在傳回下列項目時定義其成員函式 `operator()`：( `left`.\*Pm)( `right`) **const**。
+此範本類別會儲存一份*Pm*，它必須是類別的成員函式的指標`Type`，私用成員物件中。 它會在傳回下列項目時定義其成員函式 `operator()`：( `left`.\**Pm*)( `right`) **const**。
 
 ## <a name="example"></a>範例
 

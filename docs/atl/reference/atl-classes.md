@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [C++], ATL
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
-ms.openlocfilehash: 937edb799729005619325cda15f5a720264e9bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 561d6cb41ca066f5a2435b4eb1e8710ccaa99ea1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512537"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265565"
 ---
 # <a name="atl-classes-and-structs"></a>ATL 類別和結構
 
@@ -114,7 +114,7 @@ Active Template Library (ATL) 包含下列類別和結構。 若要依分類尋�
 |[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)|這個類別提供方法來管理使用 CRT 記憶體常式的記憶體。|atlcore.h|
 |[CCRTHeap](../../atl/reference/ccrtheap-class.md)|這個類別會實作[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 CRT 堆積函式。|atlmem.h|
 |[CDacl](../../atl/reference/cdacl-class.md)|這個類別是 DACL （判別存取控制清單） 結構的包裝函式。|atlsecurity.h|
-|[CDebugReportHook 類別](../../atl/reference/cdebugreporthook-class.md)|您可以使用這個類別，將偵錯報表傳送給具名管道。|以及 atlutil.h|
+|[CDebugReportHook 類別](../../atl/reference/cdebugreporthook-class.md)|您可以使用這個類別，將偵錯報表傳送給具名管道。|atlutil.h|
 |[CDefaultCharTraits](../../atl/reference/cdefaultchartraits-class.md)|這個類別提供兩個靜態函式之間大寫和小寫字元轉換。|atlcoll.h|
 |[CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)|這個類別會提供預設項目比較函式。|atlcoll.h|
 |[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)|這個類別會提供預設方法和函式的集合類別。|atlcoll.h|
@@ -135,8 +135,8 @@ Active Template Library (ATL) 包含下列類別和結構。 若要依分類尋�
 |[CInterfaceList](../../atl/reference/cinterfacelist-class.md)|建構 COM 介面指標的清單時，這個類別會提供有用的方法。|atlcoll.h|
 |[CLocalHeap](../../atl/reference/clocalheap-class.md)|這個類別會實作[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 Win32 本機堆積函式。|atlmem.h|
 |[CMessageMap](../../atl/reference/cmessagemap-class.md)|這個類別可讓物件的訊息對應至另一個物件來存取。|atlwin.h|
-|[CNonStatelessWorker 類別](../../atl/reference/cnonstatelessworker-class.md)|會從執行緒集區接收要求，並將其傳遞至會建立並終結背景工作物件中每個要求。|以及 atlutil.h|
-|[CNoWorkerThread 類別](../../atl/reference/cnoworkerthread-class.md)|使用這個類別做為引數`MonitorClass`範本參數快取類別，如果您想要停用動態快取維護。|以及 atlutil.h|
+|[CNonStatelessWorker 類別](../../atl/reference/cnonstatelessworker-class.md)|會從執行緒集區接收要求，並將其傳遞至會建立並終結背景工作物件中每個要求。|atlutil.h|
+|[CNoWorkerThread 類別](../../atl/reference/cnoworkerthread-class.md)|使用這個類別做為引數`MonitorClass`範本參數快取類別，如果您想要停用動態快取維護。|atlutil.h|
 |[CPathT 類別](../../atl/reference/cpatht-class.md)|此類別代表的路徑。|atlpath.h|
 |[CPrimitiveElementTraits](../../atl/reference/cprimitiveelementtraits-class.md)|這個類別會提供預設方法，集合類別的函式是由基本資料類型所組成。|atlcoll.h|
 |[CPrivateObjectSecurityDesc](../../atl/reference/cprivateobjectsecuritydesc-class.md)|此類別代表私用物件安全性描述元物件。|atlsecurity.h|
@@ -162,10 +162,10 @@ Active Template Library (ATL) 包含下列類別和結構。 若要依分類尋�
 |[CStringElementTraits](../../atl/reference/cstringelementtraits-class.md)|這個類別會提供使用儲存的集合類別的靜態函式`CString`物件。|cstringt.h|
 |[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)|這個類別提供靜態的函式與儲存在集合類別物件的字串。 類似於[CStringElementTraits](../../atl/reference/cstringelementtraits-class.md)，但是執行不區分大小寫的比較。|atlcoll.h|
 |[CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)|這個類別提供靜態的函式與儲存在集合類別物件的字串。 做為參考未處理的字串物件。|atlcoll.h|
-|[CThreadPool 類別](../../atl/reference/cthreadpool-class.md)|這個類別會提供處理的工作項目佇列的背景工作執行緒集區。|以及 atlutil.h|
+|[CThreadPool 類別](../../atl/reference/cthreadpool-class.md)|這個類別會提供處理的工作項目佇列的背景工作執行緒集區。|atlutil.h|
 |[CTokenGroups](../../atl/reference/ctokengroups-class.md)|這個類別是包裝函式`TOKEN_GROUPS`結構。|atlsecurity.h|
 |[CTokenPrivileges](../../atl/reference/ctokenprivileges-class.md)|這個類別是包裝函式`TOKEN_PRIVILEGES`結構。|atlsecurity.h|
-|[CUrl 類別](../../atl/reference/curl-class.md)|這個類別表示的 URL。 它可讓您管理的獨立於其他 URL 的每個項目，是否剖析現有的 URL 字串，或從從頭開始建置字串。|以及 atlutil.h|
+|[CUrl 類別](../../atl/reference/curl-class.md)|這個類別表示的 URL。 它可讓您管理的獨立於其他 URL 的每個項目，是否剖析現有的 URL 字串，或從從頭開始建置字串。|atlutil.h|
 |[CW2AEX](../../atl/reference/cw2aex-class.md)|這個類別會使用字串轉換巨集 CT2AEX、 CW2TEX、 CW2CTEX，和 CT2CAEX 和 typedef CW2A。|atlconv.h|
 |[CW2CWEX](../../atl/reference/cw2cwex-class.md)|這個類別會使用字串轉換巨集 CW2CTEX CT2CWEX 和 typedef CW2CW。|atlconv.h|
 |[CW2WEX](../../atl/reference/cw2wex-class.md)|這個類別會使用字串轉換巨集 CW2TEX CT2WEX 和 typedef CW2W。|atlconv.h|
@@ -175,7 +175,7 @@ Active Template Library (ATL) 包含下列類別和結構。 若要依分類尋�
 |[CWinTraits](../../atl/reference/cwintraits-class.md)|這個類別提供的方法標準化建立視窗物件時所使用的樣式。|atlwin.h|
 |[CWinTraitsOR](../../atl/reference/cwintraitsor-class.md)|這個類別提供的方法標準化建立視窗物件時所使用的樣式。|atlwin.h|
 |[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)|這個類別提供方法來註冊視窗類別資訊。|atlwin.h|
-|[CWorkerThread 類別](../../atl/reference/cworkerthread-class.md)|這個類別會建立背景工作執行緒或使用現有工作區、 等候一或多個核心物件控制代碼，而且其中一個控點而收到信號時，執行指定的用戶端函式。|以及 atlutil.h|
+|[CWorkerThread 類別](../../atl/reference/cworkerthread-class.md)|這個類別會建立背景工作執行緒或使用現有工作區、 等候一或多個核心物件控制代碼，而且其中一個控點而收到信號時，執行指定的用戶端函式。|atlutil.h|
 |[IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)|此類別代表介面`CreateInstance`方法。|atlbase.h|
 |[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)|此類別代表記憶體管理員介面。|atlmem.h|
 |[IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)|這個介面會提供方法來指定裝載的控制項或容器的特性。|atlbase ATLIFace.h|
@@ -211,9 +211,9 @@ Active Template Library (ATL) 包含下列類別和結構。 若要依分類尋�
 |[IServiceProviderImpl](../../atl/reference/iserviceproviderimpl-class.md)|這個類別提供的預設實作`IServiceProvider`介面。|atlcom.h|
 |[ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)|這個類別會實作`IUnknown`，並提供的預設實作[ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages)介面。|atlcom.h|
 |[ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md)|這個類別提供的預設實作`ISupportErrorInfo Interface`介面，並可以在只有單一介面產生物件錯誤時使用。|atlcom.h|
-|[IThreadPoolConfig 介面](../../atl/reference/ithreadpoolconfig-interface.md)|這個介面會提供方法，以設定執行緒集區。|以及 atlutil.h|
+|[IThreadPoolConfig 介面](../../atl/reference/ithreadpoolconfig-interface.md)|這個介面會提供方法，以設定執行緒集區。|atlutil.h|
 |[IViewObjectExImpl](../../atl/reference/iviewobjecteximpl-class.md)|這個類別會實作`IUnknown`並提供的預設實作[IViewObject](/windows/desktop/api/oleidl/nn-oleidl-iviewobject)， [IViewObject2](/windows/desktop/api/oleidl/nn-oleidl-iviewobject2)，和[IViewObjectEx](/windows/desktop/api/ocidl/nn-ocidl-iviewobjectex)介面。|atlctl.h|
-|[IWorkerThreadClient 介面](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient` 是用戶端所實作的介面[CWorkerThread](../../atl/reference/cworkerthread-class.md)類別。|以及 atlutil.h|
+|[IWorkerThreadClient 介面](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient` 是用戶端所實作的介面[CWorkerThread](../../atl/reference/cworkerthread-class.md)類別。|atlutil.h|
 |[_U_MENUorID](../../atl/reference/u-menuorid-class.md)|這個類別會提供包裝函式`CreateWindow`和`CreateWindowEx`。|atlwin.h|
 |[_U_RECT](../../atl/reference/u-rect-class.md)|這個引數的配接器類別可讓`RECT`指標或參考傳遞至函式實作方面的指標。|atlwin.h|
 |[_U_STRINGorID](../../atl/reference/u-stringorid-class.md)|資源名稱 (LPCTSTRs)] 或 [資源識別碼 （所） 傳遞至函式，而不需要呼叫者識別碼轉換為使用 MAKEINTRESOURCE 巨集的字串，可讓這個引數的配接器類別。|atlwin.h|
@@ -226,4 +226,3 @@ Active Template Library (ATL) 包含下列類別和結構。 若要依分類尋�
 [全域變數](../../atl/reference/atl-global-variables.md)<br/>
 [Typedefs](../../atl/reference/atl-typedefs.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)
-

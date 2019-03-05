@@ -1,5 +1,5 @@
 ---
-title: 功能表和資源：伺服器新增
+title: 功能表和資源：伺服器新增項目
 ms.date: 11/04/2016
 f1_keywords:
 - IDP_OLE_INIT_FAILED
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-ms.openlocfilehash: 8b4e7787029fc9401ece02860f09b8159f086afe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cf5b495ca1e3f6e7b0ae434c09e014a29eadb00
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592581"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281944"
 ---
-# <a name="menus-and-resources-server-additions"></a>功能表和資源：伺服器新增
+# <a name="menus-and-resources-server-additions"></a>功能表和資源：伺服器新增項目
 
 這篇文章會說明所需對功能表和視覺化編輯伺服器 （元件） 應用程式中的其他資源所做的變更。 伺服器應用程式需要許多新增項目功能表結構及其他資源，因為它可以啟動三個模式之一： 獨立、 內嵌，或在地方。 中所述[功能表和資源 (OLE)](../mfc/menus-and-resources-ole.md)文章，有四組功能表的最大值。 所有的四個用於 MDI 全伺服應用程式，而只有三個適用於迷你伺服程式。 應用程式精靈 會建立功能表配置所需的您想要的伺服器類型。 您可能需要一些自訂。
 
@@ -44,7 +44,7 @@ ms.locfileid: "50592581"
 
 伺服器 （元件） 應用程式必須加入以支援 OLE 視覺化編輯功能表資源。 在獨立模式中執行應用程式時使用的功能表就不需要變更，但之前建置應用程式，您必須新增兩個新的功能表資源： 另一種支援就地啟用，以支援完全開啟伺服器的另一個。 完整和迷你伺服應用程式會使用這兩個功能表資源。
 
-- 若要支援就地啟用，您必須建立功能表資源，非常類似於在獨立模式中執行時所使用的功能表資源。 在此功能表中的差異是檔案和視窗項目 （以及應用程式，並不是資料處理的任何其他功能表項目） 會遺失。 容器應用程式將會提供這些功能表項目。 如需技巧的範例，此功能表合併和等等的詳細資訊，請參閱文章[功能表和資源： 功能表合併](../mfc/menus-and-resources-menu-merging.md)。
+- 若要支援就地啟用，您必須建立功能表資源，非常類似於在獨立模式中執行時所使用的功能表資源。 在此功能表中的差異是檔案和視窗項目 （以及應用程式，並不是資料處理的任何其他功能表項目） 會遺失。 容器應用程式將會提供這些功能表項目。 如需技巧的範例，此功能表合併和等等的詳細資訊，請參閱文章[功能表和資源：功能表合併](../mfc/menus-and-resources-menu-merging.md)。
 
 - 若要支援完全開啟啟動，您必須建立功能表資源幾乎完全相同的功能表資源在獨立模式中執行時。 唯一的修改，此功能表資源時，某些項目會改寫以反映伺服器正在運作的事實，內嵌在複合文件中的項目。
 
@@ -73,5 +73,4 @@ ms.locfileid: "50592581"
 ## <a name="see-also"></a>另請參閱
 
 [功能表和資源 (OLE)](../mfc/menus-and-resources-ole.md)<br/>
-[功能表和資源：功能表合併](../mfc/menus-and-resources-menu-merging.md)
-
+[功能表和資源：合併的功能表](../mfc/menus-and-resources-menu-merging.md)

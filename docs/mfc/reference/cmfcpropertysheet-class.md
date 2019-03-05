@@ -40,16 +40,17 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 1168375606ef86061269454aa361a076efa331a4
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 7e5b553e6a10bee0e5b05bb32b9af3069269ca91
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176402"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294560"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet 類別
 
-`CMFCPropertySheet` 類別支援屬性工作表，其中每個屬性頁是由頁面索引標籤、工具列按鈕、樹狀目錄控制項節點或清單項目所表示。
+
+  `CMFCPropertySheet` 類別支援屬性工作表，其中每個屬性頁是由頁面索引標籤、工具列按鈕、樹狀目錄控制項節點或清單項目所表示。
 
 ## <a name="syntax"></a>語法
 
@@ -70,7 +71,7 @@ class CMFCPropertySheet : public CPropertySheet
 
 |名稱|描述|
 |----------|-----------------|
-|[Cmfcpropertysheet:: Addpage](#addpage)|將頁面新增至屬性工作表。|
+|[CMFCPropertySheet::AddPage](#addpage)|將頁面新增至屬性工作表。|
 |[CMFCPropertySheet::AddPageToTree](#addpagetotree)|將新的屬性頁新增至樹狀目錄控制項。|
 |[CMFCPropertySheet::AddTreeCategory](#addtreecategory)|將新的節點新增至樹狀目錄控制項。|
 |[CMFCPropertySheet::EnablePageHeader](#enablepageheader)|在每個頁面頂端保留空間以繪製自訂標頭。|
@@ -88,11 +89,13 @@ class CMFCPropertySheet : public CPropertySheet
 |[CMFCPropertySheet::RemoveCategory](#removecategory)|從樹狀目錄控制項移除節點。|
 |[CMFCPropertySheet::RemovePage](#removepage)|從屬性工作表中移除屬性頁。|
 |[CMFCPropertySheet::SetIconsList](#seticonslist)|指定在 Outlook 窗格之導覽控制項中使用的映像清單。|
-|[Cmfcpropertysheet:: Setlook](#setlook)|指定屬性工作表的外觀。|
+|[CMFCPropertySheet::SetLook](#setlook)|指定屬性工作表的外觀。|
 
 ## <a name="remarks"></a>備註
 
-`CMFCPropertySheet` 類別表示屬性工作表，也稱為索引標籤對話方塊。 `CMFCPropertySheet` 類別能以各種方式顯示屬性頁。
+
+  `CMFCPropertySheet` 類別表示屬性工作表，也稱為索引標籤對話方塊。 
+  `CMFCPropertySheet` 類別能以各種方式顯示屬性頁。
 
 請執行下列步驟，在應用程式中使用 `CMFCPropertySheet` 類別。
 
@@ -138,7 +141,7 @@ class CMFCPropertySheet : public CPropertySheet
 
 **標頭：** afxpropertysheet.h
 
-##  <a name="addpage"></a>  Cmfcpropertysheet:: Addpage
+##  <a name="addpage"></a>  CMFCPropertySheet::AddPage
 
 將頁面新增至屬性工作表。
 
@@ -383,7 +386,7 @@ virtual void OnDrawPageHeader(
 *pDC*<br/>
 [in]裝置內容指標。
 
-*n 版面*<br/>
+*nPage*<br/>
 [in]以零為起始的屬性頁面的頁碼。
 
 *rectHeader*<br/>
@@ -441,7 +444,7 @@ void RemovePage(int nPage);
 *pPage*<br/>
 [in]屬性頁面物件，表示要移除的屬性頁面的指標。 不可以是 NULL。
 
-*n 版面*<br/>
+*nPage*<br/>
 [in]要移除之頁面的以零為起始索引。
 
 ### <a name="remarks"></a>備註
@@ -484,7 +487,7 @@ void SetIconsList(HIMAGELIST hIcons);
 
 如需有關支援這個方法的方法的詳細資訊，請參閱[CImageList::Create](../../mfc/reference/cimagelist-class.md#create)並[CImageList::Add](../../mfc/reference/cimagelist-class.md#add)。 如需如何將屬性工作表的樣式設定的詳細資訊，請參閱[cmfcpropertysheet:: Setlook](#setlook)。
 
-##  <a name="setlook"></a>  Cmfcpropertysheet:: Setlook
+##  <a name="setlook"></a>  CMFCPropertySheet::SetLook
 
 指定屬性工作表的外觀。
 
@@ -496,7 +499,7 @@ void SetLook(
 
 ### <a name="parameters"></a>參數
 
-*尋找*<br/>
+*look*<br/>
 [in]其中一個列舉值，指定屬性工作表的外觀。 屬性工作表的預設樣式為`CMFCPropertySheet::PropSheetLook_Tabs`。 如需詳細資訊，請參閱本主題的 < 備註 > 一節的表格。
 
 *nNavControlWidth*<br/>

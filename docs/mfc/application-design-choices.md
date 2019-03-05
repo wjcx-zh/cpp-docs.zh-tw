@@ -11,12 +11,12 @@ helpviewer_keywords:
 - server applications [MFC], vs. client applications on Internet
 - client applications [MFC], vs. server applications on Internet
 ms.assetid: 9b96172c-b4d4-4c69-bfb2-226ce0de6d08
-ms.openlocfilehash: b9b794070d1c4ff4f05f33895a7af5532a524ad1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdb294e4ab808a7e4cbcec457f6e744eff9f12cb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602926"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302804"
 ---
 # <a name="application-design-choices"></a>應用程式設計選擇
 
@@ -52,7 +52,7 @@ ms.locfileid: "50602926"
 
 在用戶端電腦或伺服器電腦上，可能會執行您的應用程式。 您的應用程式可能也會儲存在伺服器上，然後透過網際網路下載並執行用戶端電腦上。 MFC WinInet 類別被用戶端應用程式用來下載檔案。 MFC 和非同步 moniker 類別用來下載檔案，並控制屬性中。 用戶端應用程式以及從用戶端上執行的伺服器下載的應用程式，會使用 ActiveX 控制項和主動式文件的類別。
 
-##  <a name="_core_the_web_page"></a> 網頁中： HTML、 作用中的文件，ActiveX 控制項
+##  <a name="_core_the_web_page"></a> 網頁中：HTML，主動式文件，ActiveX 控制項
 
 Microsoft 提供幾個方法可在網頁上提供內容。 網頁可以使用標準 HTML 或 HTML 擴充功能，例如物件標記，以提供動態內容，例如 ActiveX 控制項。
 
@@ -84,7 +84,7 @@ ActiveX 控制項提供網際網路網站上的文件和頁面的動態內容。
 |-----------------------|----------------------------|-------------------------|
 |[網際網路下載使用非同步 Moniker](../mfc/asynchronous-monikers-on-the-internet.md)|使用 COM，ActiveX 控制項的非同步傳送和任何的網際網路通訊協定。|[CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)， [CDataPathProperty](../mfc/reference/cdatapathproperty-class.md)|
 |[WinInet](../mfc/win32-internet-extensions-wininet.md)|HTTP、 FTP 和 gopher 的網際網路通訊協定。 資料可以同步或非同步方式傳輸和儲存在全系統快取。|[CInternetSession](../mfc/reference/cinternetsession-class.md)， [CFtpFileFind](../mfc/reference/cftpfilefind-class.md)， [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)，和其他項目。|
-|[WinSock](../mfc/windows-sockets-in-mfc.md)|適用於最高效率和控制。 需要了解通訊端與 TCP/IP 通訊協定。|[CSocket](../mfc/reference/csocket-class.md)， [CAsyncSocket](../mfc/reference/casyncsocket-class.md)|
+|[WinSock](../mfc/windows-sockets-in-mfc.md)|適用於最高效率和控制。 需要了解通訊端與 TCP/IP 通訊協定。|[CSocket](../mfc/reference/csocket-class.md), [CAsyncSocket](../mfc/reference/casyncsocket-class.md)|
 
 ## <a name="see-also"></a>另請參閱
 
@@ -92,4 +92,3 @@ ActiveX 控制項提供網際網路網站上的文件和頁面的動態內容。
 [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)<br/>
 [Win32 網際網路延伸模組 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [網際網路上的非同步 Moniker](../mfc/asynchronous-monikers-on-the-internet.md)
-

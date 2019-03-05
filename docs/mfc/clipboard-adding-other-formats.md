@@ -9,16 +9,16 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-ms.openlocfilehash: 991736714d52b4b5fb1a001fb17f1daefed5ddb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16e949973ff621b1e4e36475d95763ac47b4a00d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560559"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280214"
 ---
 # <a name="clipboard-adding-other-formats"></a>剪貼簿：加入其他格式
 
-本主題說明如何擴充支援的格式，特別是針對 OLE 支援的清單。 本主題[剪貼簿： 複製和貼上資料](../mfc/clipboard-copying-and-pasting-data.md)說明支援複製並貼上剪貼簿中所需的最小實作。 這是所有您所實作，放在剪貼簿上的唯一格式是否**CF_METAFILEPICT**， **CF_EMBEDSOURCE**， **CF_OBJECTDESCRIPTOR**，且可能**CF_LINKSOURCE**。 大部分的應用程式需要更多格式剪貼簿上的，於這三個。
+本主題說明如何擴充支援的格式，特別是針對 OLE 支援的清單。 本主題[剪貼簿：複製和貼上資料](../mfc/clipboard-copying-and-pasting-data.md)說明支援複製並貼上剪貼簿中所需的最小實作。 這是所有您所實作，放在剪貼簿上的唯一格式是否**CF_METAFILEPICT**， **CF_EMBEDSOURCE**， **CF_OBJECTDESCRIPTOR**，且可能**CF_LINKSOURCE**。 大部分的應用程式需要更多格式剪貼簿上的，於這三個。
 
 ##  <a name="_core_registering_custom_formats"></a> 登錄自訂格式
 
@@ -49,4 +49,3 @@ ms.locfileid: "50560559"
 ## <a name="see-also"></a>另請參閱
 
 [剪貼簿：使用 OLE 剪貼簿機制](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
-

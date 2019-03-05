@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: 10107d7b815f8a3c479a28de8ff07439b5da2fda
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88cc4a433c774dc7767efaaa62edc71ce8b904d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456039"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273032"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler 類別
 
@@ -146,7 +146,7 @@ class CDataRecoveryHandler : public CObject
 
 您可以使用之前`CDataRecoveryHandler`物件，您必須呼叫[CDataRecoveryHandler::Initialize](#initialize)。
 
-因為`CDataRecoveryHandler`類別緊密連接以重新啟動管理員 中，`CDataRecoveryHandler`取決於全域參數`m_dwRestartManagerSupportFlags`。 這個參數會決定重新啟動管理員有哪些權限，以及它如何與您的應用程式互動。 若要重新啟動管理員併入現有的應用程式中，您必須指派`m_dwRestartManagerSupportFlags`中主應用程式的建構函式的適當值。 如需如何使用重新啟動管理員的詳細資訊，請參閱[如何： 加入重新啟動管理員支援](../../mfc/how-to-add-restart-manager-support.md)。
+因為`CDataRecoveryHandler`類別緊密連接以重新啟動管理員 中，`CDataRecoveryHandler`取決於全域參數`m_dwRestartManagerSupportFlags`。 這個參數會決定重新啟動管理員有哪些權限，以及它如何與您的應用程式互動。 若要重新啟動管理員併入現有的應用程式中，您必須指派`m_dwRestartManagerSupportFlags`中主應用程式的建構函式的適當值。 如需如何使用重新啟動管理員的詳細資訊，請參閱[How to:新增重新啟動管理員支援](../../mfc/how-to-add-restart-manager-support.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -690,4 +690,3 @@ virtual BOOL UpdateDocumentInfo(CDocument* pDocument);
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CObject 類別](../../mfc/reference/cobject-class.md)<br/>
 [如何：新增重新啟動管理員支援](../../mfc/how-to-add-restart-manager-support.md)
-

@@ -1,5 +1,5 @@
 ---
-title: 'TN045: Varchar-varbinary 的 MFC 資料庫支援'
+title: TN045:Varchar-varbinary 的 MFC 資料庫支援
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.data
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-ms.openlocfilehash: 286ef403ec4bd51b035945f3ca268b59fee4d9d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d356f094759775f709838de149769b1671fdf9ba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567033"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260110"
 ---
-# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045：Long Varchar/Varbinary 的 MFC/資料庫支援
+# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045:Varchar/Varbinary 的 MFC/資料庫支援
 
 > [!NOTE]
 >  下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
@@ -101,7 +101,7 @@ ClassWizard 會繫結**SQL_LONGVARCHAR**或是**SQL_LONGVARBINARY**到`CLongBina
 
 更新時`CLongBinary`欄位中，資料庫類別使用 ODBC 的**DATA_AT_EXEC**機制 (請參閱 ODBC 文件`SQLSetPos`的 rgbValue 引數)。 當架構準備 insert 或 update 陳述式，而不是指向`HGLOBAL`包含資料，*地址*的`CLongBinary`已設為*值*的資料行相反地，以及長度指標設定為**SQL_DATA_AT_EXEC**。 稍後，當 update 陳述式會傳送至資料來源`SQLExecDirect`會傳回**SQL_NEED_DATA**。 這會提醒架構的參數，此資料行的值是實際的地址`CLongBinary`。 這個架構會呼叫`SQLGetData`一次使用小型緩衝區，必須是要傳回之資料的實際長度的驅動程式。 如果驅動程式會傳回二進位大型物件 (BLOB) 的實際長度，MFC 將一樣多的空間重新配置所需的擷取 BLOB。 如果資料來源會傳回**SQL_NO_TOTAL**，表示它無法判斷 BLOB 的大小，MFC 會建立較小的區塊。 預設的初始大小是 64 K 和後續的區塊都會進行倍;比方說，第二個會為 128k，第三個是 256 KB，依此類推。 初始大小是可設定的。
 
-## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>未繫結： 擷取/傳送資料直接從 ODBC 使用 SQLGetData
+## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>未繫結：直接從 ODBC 使用 SQLGetData 擷取/傳送的資料
 
 使用此方法，完全略過資料庫類別，並自行處理的長資料行。
 
@@ -122,4 +122,3 @@ ClassWizard 會繫結**SQL_LONGVARCHAR**或是**SQL_LONGVARBINARY**到`CLongBina
 
 [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
 [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
-

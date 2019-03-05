@@ -25,16 +25,17 @@ f1_keywords:
 helpviewer_keywords:
 - target_block class
 ms.assetid: 3ce181b4-b94a-4894-bf7b-64fc09821f9f
-ms.openlocfilehash: cb8880b66ebeef12018ef7449c9c383b99ec396c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6033da1347e116b4b68cf719a461a1cf6ff5d04f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656882"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269444"
 ---
 # <a name="targetblock-class"></a>target_block 類別
 
-`target_block` 類別是一種抽象基底類別，可提供基本的連結管理功能和僅限目標區塊的錯誤檢查。
+
+  `target_block` 類別是一種抽象基底類別，可提供基本的連結管理功能和僅限目標區塊的錯誤檢查。
 
 ## <a name="syntax"></a>語法
 
@@ -207,7 +208,8 @@ virtual message_status propagate(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-`message` 物件的指標。
+
+  `message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。
@@ -233,7 +235,8 @@ virtual message_status propagate_message(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-`message` 物件的指標。
+
+  `message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。
@@ -252,7 +255,7 @@ void register_filter(filter_method const& _Filter);
 
 ### <a name="parameters"></a>參數
 
-*篩選 （_f)*<br/>
+*_Filter*<br/>
 篩選方法。
 
 ##  <a name="remove_sources"></a> remove_sources
@@ -280,7 +283,8 @@ virtual message_status send(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-`message` 物件的指標。
+
+  `message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。
@@ -336,7 +340,7 @@ void sync_send(_Inout_opt_ message<_Source_type>* _PMessage);
 target_block();
 ```
 
-##  <a name="dtor"></a> ~ target_block
+##  <a name="dtor"></a> ~target_block
 
 終結`target_block`物件。
 

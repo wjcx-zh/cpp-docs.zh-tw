@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-ms.openlocfilehash: bfe4957312a3e1f5c08768af6fe96eb0c2e8b1f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3788d904bf903481d57dd73a28bf6eafadd5f019
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514392"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289569"
 ---
 # <a name="class-factories-and-licensing"></a>Class Factory 和授權
 
 若要建立 OLE 控制項的執行個體，容器應用程式會呼叫控制項之 Class Factory 的成員函式。 由於您的控制項是一個實際的 OLE 物件，Class Factory 會負責為您的控制項建立執行個體。 每個 OLE 控制項類別必須有一個 Class Factory。
 
-OLE 控制項的另一個重要功能是其強制執行授權的能力。 ControlWizard 可讓您在專案建立控制項期間合併授權。 如需控制項授權的詳細資訊，請參閱文章[ActiveX 控制項： 授權 ActiveX 控制項](../../mfc/mfc-activex-controls-licensing-an-activex-control.md)。
+OLE 控制項的另一個重要功能是其強制執行授權的能力。 ControlWizard 可讓您在專案建立控制項期間合併授權。 如需控制項授權的詳細資訊，請參閱文章[ActiveX 控制項：授權 ActiveX 控制項](../../mfc/mfc-activex-controls-licensing-an-activex-control.md)。
 
 下表列出用於幾個用於宣告和實作控制項的 Class Factory，以及控制項授權的巨集和函式。
 
@@ -82,7 +82,7 @@ IMPLEMENT_OLECREATE_EX(
 *class_name*<br/>
 控制項屬性頁類別的名稱。
 
-*無法使用 external_name*<br/>
+*external_name*<br/>
 對應用程式公開物件名稱。
 
 *l、 w1、 w2、 b1，b2，b3、 b4、 b5、 b6、 b7、 b8*<br/>

@@ -13,16 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-ms.openlocfilehash: 5164d2787c86e6c909418f353c15c876d1397afe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9651a74fdb07ad96d6f01edb6818ea48d697c37c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566097"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271953"
 ---
 # <a name="call-class"></a>call 類別
 
-`call` 傳訊區塊是一個多來源的排序 `target_block`，它在接收訊息時會叫用指定的函式。
+
+  `call` 傳訊區塊是一個多來源的排序 `target_block`，它在接收訊息時會叫用指定的函式。
 
 ## <a name="syntax"></a>語法
 
@@ -45,7 +46,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 
 |名稱|描述|
 |----------|-----------------|
-|[呼叫](#ctor)|多載。 建構 `call` 傳訊區塊。|
+|[call](#ctor)|多載。 建構 `call` 傳訊區塊。|
 |[~ 呼叫解構函式](#dtor)|終結`call`傳訊區塊。|
 
 ### <a name="protected-methods"></a>保護方法
@@ -112,7 +113,7 @@ call(
 *_Func*<br/>
 針對每個接受的訊息將會叫用函式。
 
-*篩選 （_f)*<br/>
+*_Filter*<br/>
 判斷是否應該接受所提供的訊息篩選器函式。
 
 *_PScheduler*<br/>
@@ -129,7 +130,7 @@ call(
 
 型別`filter_method`是仿函式簽章`bool (T const &)`由此叫用的所在`call`傳訊區塊，以判斷是否應該接受接受所提供的訊息。
 
-##  <a name="dtor"></a> ~ 呼叫
+##  <a name="dtor"></a> ~call
 
 終結`call`傳訊區塊。
 
@@ -176,7 +177,8 @@ virtual message_status propagate_message(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-`message` 物件的指標。
+
+  `message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。
@@ -198,7 +200,8 @@ virtual message_status send_message(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-`message` 物件的指標。
+
+  `message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。

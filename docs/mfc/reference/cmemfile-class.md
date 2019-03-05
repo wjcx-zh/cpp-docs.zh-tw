@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMemFile [MFC], Memcpy
 - CMemFile [MFC], Realloc
 ms.assetid: 20e86515-e465-4f73-b2ea-e49789d63165
-ms.openlocfilehash: a7bc54d30df80ec8d56b6a403582ebe4c48858f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a57f4e245ca1e93ec0edd454a7f407aeda5beca4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50634885"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304934"
 ---
 # <a name="cmemfile-class"></a>CMemFile 類別
 
@@ -292,4 +292,3 @@ virtual BYTE* Realloc(
 
 [CFile 類別](../../mfc/reference/cfile-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

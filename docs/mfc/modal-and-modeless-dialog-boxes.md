@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], modal
 - modal dialog boxes [MFC]
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
-ms.openlocfilehash: 7e1dc9c40f60dc46117ee0673a038d5a63df7680
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3a5263736324d7fe25066e8879d13b3a41768de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528358"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268664"
 ---
 # <a name="modal-and-modeless-dialog-boxes"></a>強制回應和非強制回應對話方塊
 
@@ -38,4 +38,3 @@ ms.locfileid: "50528358"
 
 [對話方塊](../mfc/dialog-boxes.md)<br/>
 [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)
-

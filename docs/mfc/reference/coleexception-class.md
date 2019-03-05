@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleException [MFC], Process
 - COleException [MFC], m_sc
 ms.assetid: 2571e9fe-26cc-42f0-9ad9-8ad5b4311ec1
-ms.openlocfilehash: 243ea2028b30d60a2c19b22238914682966d3b69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b5dd2de2924b62dd76d7f16a494566849357de8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599338"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300358"
 ---
 # <a name="coleexception-class"></a>COleException 類別
 
@@ -47,7 +47,7 @@ class COleException : public CException
 
 一般情況下，您不應建立`COleException`物件直接; 相反地，您應該呼叫[AfxThrowOleException](exception-processing.md#afxthrowoleexception)。
 
-如需有關例外狀況的詳細資訊，請參閱文章[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)並[例外狀況： OLE 例外狀況](../../mfc/exceptions-ole-exceptions.md)。
+如需有關例外狀況的詳細資訊，請參閱文章[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)和[例外狀況：OLE 例外狀況](../../mfc/exceptions-ole-exceptions.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -112,4 +112,3 @@ OLE 狀態程式碼中。
 [MFC 範例 CALCDRIV](../../visual-cpp-samples.md)<br/>
 [CException 類別](../../mfc/reference/cexception-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

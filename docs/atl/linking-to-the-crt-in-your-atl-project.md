@@ -12,12 +12,12 @@ helpviewer_keywords:
 - wWinMainCRTStartup method
 - ATL, C Run-Time library (CRT)
 ms.assetid: 650957ae-362c-4ecf-8b03-5d49138e8b5b
-ms.openlocfilehash: fc8c3c591b04d62c6dd7cf72bedde7a668e9f146
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b117165c82e51a59fe691b90f8ef92d0ba802cbc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516444"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287943"
 ---
 # <a name="linking-to-the-crt-in-your-atl-project"></a>連結到 ATL 專案中的 CRT
 
@@ -39,4 +39,3 @@ ms.locfileid: "50516444"
 
 [使用 ATL 和 C 執行階段程式碼進行程式設計](../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [DLL 和 Visual C++ 執行階段程式庫行為](../build/run-time-library-behavior.md)
-

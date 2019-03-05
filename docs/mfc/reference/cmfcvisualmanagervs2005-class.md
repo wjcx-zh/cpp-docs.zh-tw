@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerVS2005 類別
+title: CMFCVisualManagerVS2005 Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCVisualManagerVS2005
@@ -38,14 +38,14 @@ helpviewer_keywords:
 - CMFCVisualManagerVS2005 [MFC], OnFillMiniFrameCaption
 - CMFCVisualManagerVS2005 [MFC], OnUpdateSystemColors
 ms.assetid: ea39b9ae-327e-4a51-bce7-dc84c78f005b
-ms.openlocfilehash: 0b89757380aa50af5092979c3824d3e15f29ca2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 212ef69350fbc85e6e0cc76bd505b2a895e75c8e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526792"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279961"
 ---
-# <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005 類別
+# <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005 Class
 
 `CMFCVisualManagerVS2005` 為應用程式提供 Microsoft Visual Studio 2005 的外觀。
 
@@ -136,7 +136,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 
 ### <a name="parameters"></a>參數
 
-[in]*pPropList*<br/>
+[in] *pPropList*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -159,15 +159,15 @@ virtual void GetTabFrameColors(
 
 ### <a name="parameters"></a>參數
 
-[in]*pTabWnd*<br/>
-[in]*clrDark*<br/>
-[in]*clrBlack*<br/>
-[in]*clrHighlight*<br/>
-[in]*clrFace*<br/>
-[in]*clrDarkShadow*<br/>
-[in]*clrLight*<br/>
-[in]*pbrFace*<br/>
-[in]*pbrBlack*<br/>
+[in] *pTabWnd*<br/>
+[in] *clrDark*<br/>
+[in] *clrBlack*<br/>
+[in] *clrHighlight*<br/>
+[in] *clrFace*<br/>
+[in] *clrDarkShadow*<br/>
+[in] *clrLight*<br/>
+[in] *pbrFace*<br/>
+[in] *pbrBlack*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -193,10 +193,10 @@ virtual void OnDrawAutoHideButtonBorder(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
+[in] *pDC*<br/>
 [in]*rectBounds*<br/>
-[in]*rectBorderSize*<br/>
-[in]*pButton*<br/>
+[in] *rectBorderSize*<br/>
+[in] *pButton*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -215,13 +215,13 @@ virtual void OnDrawCaptionButton(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pButton*<br/>
-[in]*bActive*<br/>
-[in]*bHorz*<br/>
+[in] *pDC*<br/>
+[in] *pButton*<br/>
+[in] *bActive*<br/>
+[in] *bHorz*<br/>
 [in]*bMaximized*<br/>
-[in]*bDisabled*<br/>
-[in]*nImageID*<br/>
+[in] *bDisabled*<br/>
+[in] *nImageID*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -238,10 +238,10 @@ virtual COLORREF OnDrawPaneCaption(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pBar*<br/>
-[in]*bActive*<br/>
-[in]*rectCaption*<br/>
+[in] *pDC*<br/>
+[in] *pBar*<br/>
+[in] *bActive*<br/>
+[in] *rectCaption*<br/>
 [in]*rectButtons*<br/>
 
 ### <a name="return-value"></a>傳回值
@@ -260,10 +260,10 @@ virtual void OnDrawSeparator(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pBar*<br/>
-[in]*rect*<br/>
-[in]*bIsHoriz*<br/>
+[in] *pDC*<br/>
+[in] *pBar*<br/>
+[in] *rect*<br/>
+[in] *bIsHoriz*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -280,11 +280,11 @@ virtual void OnDrawTab(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rectTab*<br/>
-[in]*iTab*<br/>
-[in]*bIsActive*<br/>
-[in]*pTabWnd*<br/>
+[in] *pDC*<br/>
+[in] *rectTab*<br/>
+[in] *iTab*<br/>
+[in] *bIsActive*<br/>
+[in] *pTabWnd*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -298,8 +298,8 @@ virtual void OnDrawToolBoxFrame(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -314,9 +314,9 @@ virtual void OnEraseTabsArea(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*pTabWnd*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *pTabWnd*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -331,9 +331,9 @@ virtual void OnFillAutoHideButtonBackground(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*pButton*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *pButton*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -349,10 +349,10 @@ virtual void OnFillHighlightedArea(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*pBrush*<br/>
-[in]*pButton*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *pBrush*<br/>
+[in] *pButton*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -368,10 +368,10 @@ virtual COLORREF OnFillMiniFrameCaption(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rectCaption*<br/>
-[in]*pFrameWnd*<br/>
-[in]*bActive*<br/>
+[in] *pDC*<br/>
+[in] *rectCaption*<br/>
+[in] *pFrameWnd*<br/>
+[in] *bActive*<br/>
 
 ### <a name="return-value"></a>傳回值
 

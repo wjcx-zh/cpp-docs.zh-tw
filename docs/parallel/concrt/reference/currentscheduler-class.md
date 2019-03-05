@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-ms.openlocfilehash: 46bd55c39e79ca01664c3800d10e4efa8cf7d042
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a27ec7c25962b6addd26e61af8f33130d4c653ba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619176"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326786"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler 類別
 
@@ -75,7 +75,7 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
 
 ### <a name="parameters"></a>參數
 
-*政策 （_p)*<br/>
+*_Policy*<br/>
 排程器原則，告訴您新建立的排程器的行為。
 
 ### <a name="remarks"></a>備註
@@ -100,7 +100,7 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 
 ### <a name="parameters"></a>參數
 
-*放置 （_p)*<br/>
+*_Placement*<br/>
 其中排程群組內的工作將會變成優先執行的位置參考。
 
 ### <a name="return-value"></a>傳回值
@@ -207,7 +207,7 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
 
 ### <a name="parameters"></a>參數
 
-*放置 （_p)*<br/>
+*_Placement*<br/>
 要查詢目前排程器的位置參考。
 
 ### <a name="return-value"></a>傳回值
@@ -257,10 +257,10 @@ static void __cdecl ScheduleTask(
 *_Proc*<br/>
 若要執行的輕量工作主體執行該函式指標。
 
-*資料 （_d)*<br/>
+*_Data*<br/>
 將做為參數傳遞至工作的主體資料的 void 指標。
 
-*放置 （_p)*<br/>
+*_Placement*<br/>
 輕量工作將會變成優先執行的位置參考。
 
 ### <a name="remarks"></a>備註
@@ -273,4 +273,3 @@ static void __cdecl ScheduleTask(
 [Scheduler 類別](scheduler-class.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [工作排程器](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

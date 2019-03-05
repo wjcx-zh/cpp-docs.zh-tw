@@ -13,12 +13,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - OLE events [MFC]
 ms.assetid: e1e57e0c-206b-4923-a0b5-682c26564f74
-ms.openlocfilehash: 76557e64b5b53c32a7d7f63134085e86bf0138df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d8a881d07a3e48673c6dc3298816d165273be0d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540669"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276763"
 ---
 # <a name="mfc-activex-controls-events"></a>MFC ActiveX 控制項：事件
 
@@ -26,7 +26,7 @@ ActiveX 控制項使用事件通知告訴它發生了控制項的容器。 事�
 
 事件也會呼叫訊息。
 
-MFC 支援兩種類型的事件： 內建和自訂。 內建事件是這些類別的事件[COleControl](../mfc/reference/colecontrol-class.md)會自動處理。 內建事件的完整清單，請參閱文章[MFC ActiveX 控制項： 加入內建事件](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)。 自訂事件會讓控制項能夠通知容器，該控制項的特定動作發生時。 某些範例可能是控制項的內部狀態或特定視窗訊息回條的變更。
+MFC 支援兩種類型的事件： 內建和自訂。 內建事件是這些類別的事件[COleControl](../mfc/reference/colecontrol-class.md)會自動處理。 內建事件的完整清單，請參閱文章[MFC ActiveX 控制項：新增內建事件](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)。 自訂事件會讓控制項能夠通知容器，該控制項的特定動作發生時。 某些範例可能是控制項的內部狀態或特定視窗訊息回條的變更。
 
 為您的控制項來正確地引發事件，您的控制項類別必須對應到相關的事件發生時應該呼叫成員函式的控制項的每個事件。 這項對應機制 （稱為 「 事件對應） 集中管理事件的相關資訊，並讓 Visual Studio 輕鬆地存取和操作控制項的事件。 由下列巨集，位於標頭中宣告這個事件對應 (。H） 檔案的控制項類別宣告：
 
@@ -43,9 +43,9 @@ MFC 支援兩種類型的事件： 內建和自訂。 內建事件是這些類�
 
 其他兩篇文章討論事件的細節：
 
-- [MFC ActiveX 控制項： 加入內建事件](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)
+- [MFC ActiveX 控制項：新增內建事件](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)
 
-- [MFC ActiveX 控制項：新增自訂事件](../mfc/mfc-activex-controls-adding-custom-events.md)
+- [MFC ActiveX 控制項：加入自訂事件](../mfc/mfc-activex-controls-adding-custom-events.md)
 
 ## <a name="see-also"></a>另請參閱
 

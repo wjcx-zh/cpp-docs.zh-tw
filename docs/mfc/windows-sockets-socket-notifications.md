@@ -1,31 +1,31 @@
 ---
-title: Windows Sockets：通訊端告知
+title: Windows Sockets:通訊端告知
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], notifications
 - notifications [MFC], socket
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
-ms.openlocfilehash: e49001e9693872d23162284df49f128097e68784
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c08305b8aeeca00eaf41e4f1c24b51a46a8c4254
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476475"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289906"
 ---
-# <a name="windows-sockets-socket-notifications"></a>Windows Sockets：通訊端告知
+# <a name="windows-sockets-socket-notifications"></a>Windows Sockets:通訊端告知
 
 本文說明通知中的函式的通訊端類別。 這些成員函式是在架構呼叫以通知您的通訊端物件的重要事件的回呼函式。 告知函式如下：
 
-- [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive)： 通知此通訊端，才能呼叫擷取緩衝區中沒有資料[接收](../mfc/reference/casyncsocket-class.md#receive)。
+- [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive):它藉由呼叫擷取緩衝區中沒有資料會告知此通訊端[接收](../mfc/reference/casyncsocket-class.md#receive)。
 
-- [OnSend](../mfc/reference/casyncsocket-class.md#onsend)： 通知此通訊端，則它現在可以藉由呼叫傳送資料[傳送](../mfc/reference/casyncsocket-class.md#send)。
+- [OnSend](../mfc/reference/casyncsocket-class.md#onsend):它現在可以傳送資料的呼叫會通知此通訊端[傳送](../mfc/reference/casyncsocket-class.md#send)。
 
-- [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept)： 通知它可以接受暫止連接要求，藉由呼叫這個接聽通訊端[接受](../mfc/reference/casyncsocket-class.md#accept)。
+- [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept):它可以接受暫止連接要求，藉由呼叫這個接聽通訊端會告知[接受](../mfc/reference/casyncsocket-class.md#accept)。
 
-- [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect)： 通知其連線嘗試完成此連線通訊端： 可能是成功或是發生錯誤。
+- [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect):通知其連線嘗試完成此連線通訊端： 可能是成功或是發生錯誤。
 
-- [OnClose](../mfc/reference/casyncsocket-class.md#onclose)： 通知已關閉通訊端連線到此通訊端。
+- [OnClose](../mfc/reference/casyncsocket-class.md#onclose):通知已關閉通訊端連線到此通訊端。
 
     > [!NOTE]
     >  另一個通知函式[OnOutOfBandData](../mfc/reference/casyncsocket-class.md#onoutofbanddata)。 此通知會告知接收通訊端傳送的通訊端具有 「 超出頻外 」 的資料，來傳送。 超出訊號範圍的資料是每一對連接的資料流通訊端相關聯的邏輯上獨立通道。 頻外通道通常用來傳送 「 urgent 」 的資料。 MFC 支援頻外的資料。 進階使用者使用類別[CAsyncSocket](../mfc/reference/casyncsocket-class.md)可能需要使用頻外通道，但類別的使用者[CSocket](../mfc/reference/csocket-class.md)不鼓勵使用它。 更簡單的方法是建立傳遞這類資料的第二個通訊端。 如需頻外資料的詳細資訊，請參閱 Windows Sockets 規格，可在 Windows SDK。
@@ -47,19 +47,18 @@ MFC 呼叫通知函式，讓您自訂您的通訊端行為時，會收到通知�
 
 如需詳細資訊，請參閱:
 
-- [Windows Sockets：使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets:使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets：從通訊端類別衍生](../mfc/windows-sockets-deriving-from-socket-classes.md)
+- [Windows Sockets:衍生自通訊端類別](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
-- [Windows Sockets：如何搭配使用通訊端與封存](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows Sockets:通訊端與封存的運作方式](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows Sockets：封鎖](../mfc/windows-sockets-blocking.md)
+- [Windows Sockets:封鎖](../mfc/windows-sockets-blocking.md)
 
-- [Windows Sockets：位元組順序](../mfc/windows-sockets-byte-ordering.md)
+- [Windows Sockets:位元組順序](../mfc/windows-sockets-byte-ordering.md)
 
-- [Windows Sockets：轉換字串](../mfc/windows-sockets-converting-strings.md)
+- [Windows Sockets:將字串轉換](../mfc/windows-sockets-converting-strings.md)
 
 ## <a name="see-also"></a>另請參閱
 
 [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)
-

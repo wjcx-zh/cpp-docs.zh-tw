@@ -38,16 +38,17 @@ helpviewer_keywords:
 - CMFCAutoHideBar [MFC], UpdateVisibleState
 - CMFCAutoHideBar [MFC], m_nShowAHWndDelay
 ms.assetid: 54c8d84f-de64-4efd-8a47-3ea0ade40a70
-ms.openlocfilehash: 8592a5485afedab075a21215e1ffa140a8c66e28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b40e4d48e8204824375630f7517ff3f5aa5108d3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619449"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291414"
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar 類別
 
-`CMFCAutoHideBar` 類別是實作自動隱藏功能的特殊工具列類別。
+
+  `CMFCAutoHideBar` 類別是實作自動隱藏功能的特殊工具列類別。
 
 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
 
@@ -174,9 +175,9 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>參數
 
-[in]*bStretch*<br/>
+[in] *bStretch*<br/>
 
-[in]*bHorz*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -209,7 +210,7 @@ virtual BOOL Create(
 
 *lpszClassName*<br/>
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 
 *rect*<br/>
 

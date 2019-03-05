@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CGopherConnection [MFC], GetAttribute
 - CGopherConnection [MFC], OpenFile
 ms.assetid: b5b96aea-ac99-430e-bd84-d1372b43f78f
-ms.openlocfilehash: f9c2a99c30213a28f4c20ba0f4a2eebea85bef76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d960d566a63531af211592a7a8ae8f1cb35c5958
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519661"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300714"
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection 類別
 
@@ -54,7 +54,7 @@ class CGopherConnection : public CInternetConnection
 
 Gopher 服務是其中一個 MFC WinInet 類別可辨識的三個網際網路服務。
 
-此類別`CGopherConnection`包含一個建構函式和三個管理 gopher 服務的其他成員函式： [OpenFile](#openfile)， [CreateLocator](#createlocator)，和[GetAttribute](#getattribute).
+此類別`CGopherConnection`包含建構函式和三個管理 gopher 服務的其他成員函式：[OpenFile](#openfile)， [CreateLocator](#createlocator)，以及[GetAttribute](#getattribute)。
 
 若要與 gopher 網際網路伺服器通訊，您必須先建立的執行個體[CInternetSession](../../mfc/reference/cinternetsession-class.md)，然後呼叫[Getgopherconnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)，這會建立`CGopherConnection`物件，並傳回的指標。 您永遠不會建立`CGopherConnection`直接物件。
 
@@ -116,7 +116,7 @@ CGopherConnection(
 |--------------------|--------------------|---------------------------------|---------------------------------|
 |NULL 或""|NULL 或""|「 匿名 」|使用者的電子郵件名稱|
 |非 NULL 字串|NULL 或""|*pstrUserName*|" "|
-|NULL 的非 NULL 字串|錯誤|錯誤||
+|NULL 的非 NULL 字串|ERROR|ERROR||
 |非 NULL 字串|非 NULL 字串|*pstrUserName*|*pstrPassword*|
 
 *nPort*<br/>
@@ -233,7 +233,7 @@ INTERNET_FLAG_ * 旗標的任意組合。 請參閱[cinternetsession:: Openurl](
 
 ### <a name="remarks"></a>備註
 
-覆寫*dwContext*預設可設定的內容識別碼以您選擇的值。 內容識別碼是與這個特定作業的相關聯`CGopherConnection`所建立的物件及其[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件。 若要傳回的值[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供與識別此作業的狀態。 請參閱文章[網際網路前幾個步驟： WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
+覆寫*dwContext*預設可設定的內容識別碼以您選擇的值。 內容識別碼是與這個特定作業的相關聯`CGopherConnection`所建立的物件及其[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件。 若要傳回的值[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供與識別此作業的狀態。 請參閱文章[網際網路前幾個步驟：WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
 
 ## <a name="see-also"></a>另請參閱
 

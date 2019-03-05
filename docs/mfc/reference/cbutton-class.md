@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 26dcf50cc3dc48fec5d6e4957ffd1ef340ad1dbf
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178639"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260136"
 ---
 # <a name="cbutton-class"></a>CButton 類別
 
@@ -216,7 +216,7 @@ virtual BOOL Create(
 *lpszCaption*<br/>
 指定按鈕控制項的文字。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定按鈕控制項的樣式。 套用的任何組合[按鈕樣式](../../mfc/reference/styles-used-by-mfc.md#button-styles)按鈕。
 
 *rect*<br/>
@@ -696,7 +696,7 @@ void SetCheck(int nCheck);
 
 ### <a name="parameters"></a>參數
 
-*n*<br/>
+*nCheck*<br/>
 指定的核取狀態。 這個參數可以是下列其中一項：
 
 |值|意義|

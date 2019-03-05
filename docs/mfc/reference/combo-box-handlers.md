@@ -27,12 +27,12 @@ helpviewer_keywords:
 - ON_CBN_SELENDOK
 - ON_CBN_SELCHANGE
 ms.assetid: 7f092412-01b7-4242-95ec-41ba506b9d71
-ms.openlocfilehash: 44fbf74174df833badd18ee29416ed936ea69293
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed83bcf565ec420d159c73ddfd82827aac88693f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438125"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259434"
 ---
 # <a name="combo-box-handlers"></a>下拉式方塊處理常式
 
@@ -40,19 +40,18 @@ ms.locfileid: "50438125"
 
 |對應項目|函式原型|
 |---------------|------------------------|
-|ON_CBN_CLOSEUP (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （)|
-|ON_CBN_DBLCLK (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
-|ON_CBN_DROPDOWN (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
-|ON_CBN_EDITCHANGE (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
-|ON_CBN_EDITUPDATE (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
-|ON_CBN_ERRSPACE (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
-|ON_CBN_KILLFOCUS (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
-|ON_CBN_SELCHANGE (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
-|ON_CBN_SELENDCANCEL (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
-|ON_CBN_SELENDOK (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
-|ON_CBN_SETFOCUS (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
+|ON_CBN_CLOSEUP( \<id>, \<memberFxn> )|afx_msg void memberFxn （)|
+|ON_CBN_DBLCLK( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_CBN_DROPDOWN( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_CBN_EDITCHANGE( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_CBN_EDITUPDATE( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_CBN_ERRSPACE( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_CBN_KILLFOCUS( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_CBN_SELCHANGE( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_CBN_SELENDCANCEL( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_CBN_SELENDOK( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_CBN_SETFOCUS( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
 
 ## <a name="see-also"></a>另請參閱
 
 [訊息對應](../../mfc/reference/message-maps-mfc.md)
-

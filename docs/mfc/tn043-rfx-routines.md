@@ -1,5 +1,5 @@
 ---
-title: TN043：RFX 常式
+title: TN043:常式
 ms.date: 06/28/2018
 f1_keywords:
 - RFX
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TN043
 - RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
-ms.openlocfilehash: 278351ad1cf81215f4c6033f4cff0b100adedf23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18820c7d17ddea355490ee32679d5d690ec3533e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658857"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294482"
 ---
-# <a name="tn043-rfx-routines"></a>TN043：RFX 常式
+# <a name="tn043-rfx-routines"></a>TN043:常式
 
 > [!NOTE]
 > 下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
@@ -144,15 +144,15 @@ RFX_Custom(pFX, "Col2", m_Col2);
 
 若要撰寫您自己的自訂 RFX 函式，建議您複製現有 RFX 函式，並修改為您的用途。 選取要複製正確的 RFX，可以讓您的工作更輕鬆。 某些 RFX 函式會有一些特有的屬性，決定要複製時，您應該考慮到。
 
-`RFX_Long` 和`RFX_Int`： 這些是最簡單的 RFX 函式。 資料值不需要任何特殊的解譯和資料大小固定的。
+`RFX_Long` 和`RFX_Int`:這些是最簡單的 RFX 函式。 資料值不需要任何特殊的解譯和資料大小固定的。
 
-`RFX_Single` 和`RFX_Double`： 例如 RFX_Long 和 RFX_Int 上述，這些函式很簡單，並可廣泛使用的預設實作。 它們會儲存在 dbflt.cpp 而不是 dbrfx.cpp，不過，若要啟用 載入執行階段的時候才明確參考浮點程式庫。
+`RFX_Single` 和`RFX_Double`:如同 RFX_Long 和 RFX_Int 上述，這些函式很簡單，可廣泛使用的預設實作。 它們會儲存在 dbflt.cpp 而不是 dbrfx.cpp，不過，若要啟用 載入執行階段的時候才明確參考浮點程式庫。
 
-`RFX_Text` 和`RFX_Binary`： 預先配置的靜態緩衝區，以便容納字串/二進位檔的詳細資訊，這兩個函數，並必須以 ODBC SQLBindCol 註冊這些緩衝區而不是註冊 （& v）。 因為這個緣故，這些兩個函式會有許多特殊情況撰寫程式碼。
+`RFX_Text` 和`RFX_Binary`:這兩個函數預先配置的靜態緩衝區，以便容納字串/二進位檔的詳細資訊，並必須向這些緩衝區 ODBC SQLBindCol 而不是註冊 （& v）。 因為這個緣故，這些兩個函式會有許多特殊情況撰寫程式碼。
 
-`RFX_Date`: ODBC 傳回自己 TIMESTAMP_STRUCT 資料結構中的日期和時間資訊。 此函式會動態配置 TIMESTAMP_STRUCT 作為 「 proxy 」 來傳送和接收日期時間資料。 各種作業之間必須傳輸的日期和時間資訊的 c + +`CTime`物件和 TIMESTAMP_STRUCT proxy。 這變得非常複雜此函式相當大，但它是如何使用 proxy 來傳輸資料的理想範例。
+`RFX_Date`：ODBC 會傳回自己 TIMESTAMP_STRUCT 資料結構中的日期和時間資訊。 此函式會動態配置 TIMESTAMP_STRUCT 作為 「 proxy 」 來傳送和接收日期時間資料。 各種作業之間必須傳輸的日期和時間資訊的 c + +`CTime`物件和 TIMESTAMP_STRUCT proxy。 這變得非常複雜此函式相當大，但它是如何使用 proxy 來傳輸資料的理想範例。
 
-`RFX_LongBinary`： 這是唯一的類別庫不會使用資料行繫結接收和傳送資料的 RFX 函式。 此函式會忽略 BindFieldToColumn 作業和相反地，修復作業期間，會配置儲存空間來保存內送 SQL_LONGVARCHAR 或 SQL_LONGVARBINARY 資料，則會執行到配置的儲存體擷取值的 SQLGetData 呼叫。 準備要將資料值送回資料來源 （例如名稱/值和值的作業），則此函數會使用 ODBC 的 DATA_AT_EXEC 功能。 請參閱[技術的附註 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)如需有關使用 SQL_LONGVARBINARY 和 SQL_LONGVARCHARs。
+`RFX_LongBinary`：這是唯一的類別庫不會使用資料行繫結接收和傳送資料的 RFX 函式。 此函式會忽略 BindFieldToColumn 作業和相反地，修復作業期間，會配置儲存空間來保存內送 SQL_LONGVARCHAR 或 SQL_LONGVARBINARY 資料，則會執行到配置的儲存體擷取值的 SQLGetData 呼叫。 準備要將資料值送回資料來源 （例如名稱/值和值的作業），則此函數會使用 ODBC 的 DATA_AT_EXEC 功能。 請參閱[技術的附註 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)如需有關使用 SQL_LONGVARBINARY 和 SQL_LONGVARCHARs。
 
 在撰寫您自己**RFX_** 函式，您通常會使用`CFieldExchange::Default`實作指定的作業。 看看指定的作業的預設實作。 如果它不會執行此作業就需要撰寫您**RFX_** 函式，您可以委派給`CFieldExchange::Default`。 您可以看到呼叫的範例`CFieldExchange::Default`dbrfx.cpp 中
 

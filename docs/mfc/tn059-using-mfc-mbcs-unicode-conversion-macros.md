@@ -1,5 +1,5 @@
 ---
-title: TN059： 使用 MFC Mbcs-unicode 轉換巨集
+title: TN059:使用 MFC Mbcs-unicode 轉換巨集
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.mbcs
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - macros [MFC], MBCS conversion macros
 - TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
-ms.openlocfilehash: e806cea54fcb1559b7d70b2e7672973501fc0adf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 130b459dc87f36325d0f253181a196bea868856f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476436"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262805"
 ---
-# <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059：使用 MFC MBCS/Unicode 轉換巨集
+# <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059:使用 MFC MBCS/Unicode 轉換巨集
 
 > [!NOTE]
 >  下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
@@ -198,4 +198,3 @@ return lpszT; // CString makes copy
 
 [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
 [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
-

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-ms.openlocfilehash: 5cdd3de8f4efcc23f89b81cb61302b5950938800
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 965778fd5d17aa416b198c101edc3a445a39580b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520409"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257286"
 ---
 # <a name="creating-an-active-document-container-application"></a>建立主動式文件容器應用程式
 
@@ -64,4 +64,3 @@ ms.locfileid: "51520409"
 ## <a name="see-also"></a>另請參閱
 
 [主動式文件內含項目](../mfc/active-document-containment.md)
-

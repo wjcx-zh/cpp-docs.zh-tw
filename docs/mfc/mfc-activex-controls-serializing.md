@@ -15,12 +15,12 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-ms.openlocfilehash: fddd09ad7a3dc7d9211480bb21ac434419a48758
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c1c845640be2dfaa6aeda2defb478afb650b83b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522209"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303338"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC ActiveX 控制項：序列化
 
@@ -54,20 +54,20 @@ ms.locfileid: "50522209"
 
 |屬性交換函式|用途|
 |---------------------------------|-------------|
-|**PX_Blob （)**|將序列化的二進位大型物件 (BLOB) 資料屬性的型別。|
-|**PX_Bool （)**|將序列化的類型為布林值屬性。|
-|**PX_Color （)**|將序列化的類型色彩屬性。|
-|**PX_Currency （)**|序列化型別的**CY** （貨幣） 屬性。|
-|**PX_Double （)**|序列化型別的**double**屬性。|
-|**PX_Font （)**|將序列化字型類型的屬性。|
-|**PX_Float （)**|序列化型別的**浮點數**屬性。|
-|**PX_IUnknown （)**|將序列化的型別屬性`LPUNKNOWN`。|
-|**PX_Long （)**|序列化型別的**長**屬性。|
-|**PX_Picture （)**|序列化型別的圖片屬性。|
-|**PX_Short （)**|序列化型別的**簡短**屬性。|
-|**PXstring （)**|序列化型別的`CString`屬性。|
-|**PX_ULong （)**|序列化型別的**ULONG**屬性。|
-|**PX_UShort （)**|序列化型別的**USHORT**屬性。|
+|**PX_Blob( )**|將序列化的二進位大型物件 (BLOB) 資料屬性的型別。|
+|**PX_Bool( )**|將序列化的類型為布林值屬性。|
+|**PX_Color( )**|將序列化的類型色彩屬性。|
+|**PX_Currency( )**|序列化型別的**CY** （貨幣） 屬性。|
+|**PX_Double( )**|序列化型別的**double**屬性。|
+|**PX_Font( )**|將序列化字型類型的屬性。|
+|**PX_Float( )**|序列化型別的**浮點數**屬性。|
+|**PX_IUnknown( )**|將序列化的型別屬性`LPUNKNOWN`。|
+|**PX_Long( )**|序列化型別的**長**屬性。|
+|**PX_Picture( )**|序列化型別的圖片屬性。|
+|**PX_Short( )**|序列化型別的**簡短**屬性。|
+|**PXstring( )**|序列化型別的`CString`屬性。|
+|**PX_ULong( )**|序列化型別的**ULONG**屬性。|
+|**PX_UShort( )**|序列化型別的**USHORT**屬性。|
 
 如需有關這些屬性交換函式的詳細資訊，請參閱 <<c0> [ 持續性的 OLE 控制項](../mfc/reference/persistence-of-ole-controls.md)中*MFC 參考 》*。
 
@@ -96,4 +96,3 @@ ms.locfileid: "50522209"
 ## <a name="see-also"></a>另請參閱
 
 [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)
-

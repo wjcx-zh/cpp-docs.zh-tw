@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 2f28178240f7d17e124970d91ec7eb338ef110e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f36557a4a993e8abd3004dc59372cc5a089e044
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452138"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259746"
 ---
 # <a name="coledocument-class"></a>COleDocument 類別
 
@@ -117,7 +117,7 @@ class COleDocument : public CDocument
 
 如果您正在撰寫一個簡單的容器應用程式，衍生您的文件類別，從`COleDocument`。 如果您正在撰寫支援來內嵌文件所包含的項目連結的容器應用程式，衍生您的文件類別，從[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)。 如果您要撰寫伺服器應用程式或組合容器/伺服器，衍生您的文件類別，從[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)。 `COleLinkingDoc` 並`COleServerDoc`衍生自`COleDocument`，因此這些類別會繼承中所提供的所有服務`COleDocument`和`CDocument`。
 
-若要使用`COleDocument`、 從中衍生的類別，並將功能新增至管理應用程式的非 OLE 資料，以及內嵌或連結的項目。 如果您定義`CDocItem`-衍生的類別來儲存應用程式的原生資料，您可以使用所定義的預設實作`COleDocument`來儲存您的 OLE 和非 OLE 資料。 您也可以設計您自己的資料結構來儲存非 OLE 資料分開 OLE 項目。 如需詳細資訊，請參閱文章[容器： 複合檔案](../../mfc/containers-compound-files.md)...
+若要使用`COleDocument`、 從中衍生的類別，並將功能新增至管理應用程式的非 OLE 資料，以及內嵌或連結的項目。 如果您定義`CDocItem`-衍生的類別來儲存應用程式的原生資料，您可以使用所定義的預設實作`COleDocument`來儲存您的 OLE 和非 OLE 資料。 您也可以設計您自己的資料結構來儲存非 OLE 資料分開 OLE 項目。 如需詳細資訊，請參閱文章[容器：複合檔案](../../mfc/containers-compound-files.md)...
 
 `CDocument` 支援傳送您的文件，透過電子郵件，郵件的支援 (MAPI) 是否存在。 `COleDocument` 已更新[OnFileSendMail](#onfilesendmail)正確處理複合文件。 如需詳細資訊，請參閱文章[MAPI](../../mfc/mapi.md)並[MFC 中的 MAPI 支援](../../mfc/mapi-support-in-mfc.md)...
 
@@ -206,7 +206,7 @@ void EnableCompoundFile(BOOL bEnable = TRUE);
 
 ### <a name="remarks"></a>備註
 
-這也稱為結構化儲存體。 一般都會呼叫此函式的建構函式從您`COleDocument`-衍生的類別。 如需有關複合文件的詳細資訊，請參閱[容器： 複合檔案](../../mfc/containers-compound-files.md)...
+這也稱為結構化儲存體。 一般都會呼叫此函式的建構函式從您`COleDocument`-衍生的類別。 如需有關複合文件的詳細資訊，請參閱[容器：複合檔案](../../mfc/containers-compound-files.md)...
 
 如果您不能呼叫此成員函式，文件會儲存未結構化 （「 一般 」） 的檔案格式。
 
@@ -548,4 +548,3 @@ virtual void UpdateModifiedFlag();
 [MFC 範例 MFCBIND](../../visual-cpp-samples.md)<br/>
 [CDocument 類別](../../mfc/reference/cdocument-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

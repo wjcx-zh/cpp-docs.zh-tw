@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], Widen
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
-ms.openlocfilehash: 929926129ddee0efdee4f1b02494b503755811d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4549b2e7981d5f8493ddf9f24477e75a94ddde8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610687"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271225"
 ---
 # <a name="cd2dgeometry-class"></a>CD2DGeometry 類別
 
@@ -70,7 +70,7 @@ class CD2DGeometry : public CD2DResource;
 |名稱|描述|
 |----------|-----------------|
 |[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|建構 CD2DGeometry 物件。|
-|[CD2DGeometry:: ~ CD2DGeometry](#_dtorcd2dgeometry)|解構函式。 D2D geometry 物件正在被終結時呼叫。|
+|[CD2DGeometry::~CD2DGeometry](#_dtorcd2dgeometry)|解構函式。 D2D geometry 物件正在被終結時呼叫。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -234,7 +234,7 @@ BOOL ComputeArea(
 *worldTransform*<br/>
 要計算其區域之前套用至這個幾何的轉換。
 
-*區域*<br/>
+*area*<br/>
 當這個方法傳回時，包含這個幾何的轉換扁平化版本的區域的指標。 您必須為此參數來配置儲存體。
 
 *flatteningTolerance*<br/>
@@ -291,7 +291,7 @@ BOOL ComputePointAtLength(
 *worldTransform*<br/>
 要計算正切值與指定的點之前套用至幾何的轉換。
 
-*點*<br/>
+*point*<br/>
 指定沿著幾何距離位置。 如果幾何是空的這點就會包含 NaN 作為其 x 和 y 值。
 
 *unitTangentVector*<br/>
@@ -338,13 +338,13 @@ BOOL FillContainsPoint(
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 要測試的點。
 
 *worldTransform*<br/>
 要套用至測試內含項目之前的幾何轉換。
 
-*包含*<br/>
+*contains*<br/>
 當這個方法傳回時，包含幾何的填滿的區域包含點，則為 TRUE 的 bool 值否則為 FALSE。 您必須為此參數來配置儲存體。
 
 *flatteningTolerance*<br/>
@@ -377,7 +377,7 @@ CD2DRectF& bounds) const;
 ### <a name="parameters"></a>參數
 
 *worldTransform*<br/>
-*繫結*
+*bounds*
 
 ### <a name="return-value"></a>傳回值
 
@@ -405,7 +405,7 @@ BOOL GetWidenedBounds(
 *worldTransform*<br/>
 要套用至幾何的幾何轉換之後，而且已將描邊的幾何轉換。
 
-*繫結*<br/>
+*bounds*<br/>
 當這個方法傳回時，包含加寬的幾何的範圍。 您必須為此參數來配置儲存體。
 
 *flatteningTolerance*<br/>
@@ -519,7 +519,7 @@ BOOL StrokeContainsPoint(
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 用來測試內含項目的點。
 
 *strokeWidth*<br/>
@@ -531,7 +531,7 @@ BOOL StrokeContainsPoint(
 *worldTransform*<br/>
 要套用至繪製幾何轉換。
 
-*包含*<br/>
+*contains*<br/>
 當這個方法傳回時，會包含布林值設定為 TRUE，如果幾何筆劃包含指定的點;否則為 FALSE。 您必須為此參數來配置儲存體。
 
 *flatteningTolerance*<br/>

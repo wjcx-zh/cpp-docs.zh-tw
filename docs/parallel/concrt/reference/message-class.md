@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-ms.openlocfilehash: 6b0c37f61ef437662a4e624c3a81edb526e7464c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83cfdb5807581f7092709691a1839052abdd657c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636850"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263074"
 ---
 # <a name="message-class"></a>message 類別
 
@@ -62,7 +62,7 @@ class message : public ::Concurrency::details::_Runtime_object;
 
 |名稱|描述|
 |----------|-----------------|
-|[承載](#payload)|承載`message`物件。|
+|[payload](#payload)|承載`message`物件。|
 
 ## <a name="remarks"></a>備註
 
@@ -114,7 +114,7 @@ message(
 *_P*<br/>
 此訊息的承載。
 
-*識別碼 （_i)*<br/>
+*_Id*<br/>
 這個訊息的唯一 ID。
 
 *_Msg*<br/>
@@ -124,7 +124,7 @@ message(
 
 使用變數的指標，建構函式`message`物件的引數會擲回[invalid_argument](../../../standard-library/invalid-argument-class.md)例外狀況如果參數`_Msg`是`NULL`。
 
-##  <a name="dtor"></a> ~ 訊息
+##  <a name="dtor"></a> ~message
 
 終結`message`物件。
 

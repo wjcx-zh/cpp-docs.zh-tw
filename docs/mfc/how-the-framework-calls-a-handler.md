@@ -7,12 +7,12 @@ helpviewer_keywords:
 - command handling [MFC], calling handlers and code in MFC
 - command routing [MFC], MFC
 ms.assetid: d79bceba-4ff6-417a-9d52-6b6af62a909d
-ms.openlocfilehash: 824b646699fbdd416ec81e795560375d60bff97f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b48d8ac93ca33bd80f9a8a8369291f63fc623f5b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464021"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285109"
 ---
 # <a name="how-the-framework-calls-a-handler"></a>架構如何呼叫處理常式
 
@@ -33,4 +33,3 @@ ms.locfileid: "50464021"
 ## <a name="see-also"></a>另請參閱
 
 [訊息處理和對應](../mfc/message-handling-and-mapping.md)
-

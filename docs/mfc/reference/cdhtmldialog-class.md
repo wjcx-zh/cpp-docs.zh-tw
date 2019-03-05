@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 08db42929fb3c6a7feb79abae5110bd88169f11b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cf01f16fe21d0c5bea34bf168c6ea6bff04c195
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594957"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263607"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog 類別
 
@@ -140,7 +140,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |名稱|描述|
 |----------|-----------------|
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|建構 CDHtmlDialog 物件。|
-|[CDHtmlDialog:: ~ CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|終結 CDHtmlDialog 物件。|
+|[CDHtmlDialog::~CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|終結 CDHtmlDialog 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -402,7 +402,7 @@ void DDX_DHtml_CheckBox(
 *szId*<br/>
 您指定的 HTML 控制項的 ID 參數的值。
 
-*值*<br/>
+*value*<br/>
 在交換元素的值。
 
 ### <a name="example"></a>範例
@@ -468,7 +468,7 @@ void DDX_DHtml_ElementText(
 *dispid*<br/>
 分派識別碼，與您想要交換資料的 HTML 項目。
 
-*值*<br/>
+*value*<br/>
 在交換元素的值。
 
 ##  <a name="ddx_dhtml_radio"></a>  CDHtmlDialog::DDX_DHtml_Radio
@@ -490,7 +490,7 @@ void DDX_DHtml_Radio(
 *szId*<br/>
 您指定的 HTML 控制項的 ID 參數的值。
 
-*值*<br/>
+*value*<br/>
 在交換元素的值。
 
 ##  <a name="ddx_dhtml_selectindex"></a>  CDHtmlDialog::DDX_DHtml_SelectIndex
@@ -512,7 +512,7 @@ void DDX_DHtml_SelectIndex(
 *szId*<br/>
 您指定的 HTML 控制項的 id 參數的值。
 
-*值*<br/>
+*value*<br/>
 在交換元素的值。
 
 ##  <a name="ddx_dhtml_selectstring"></a>  CDHtmlDialog::DDX_DHtml_SelectString
@@ -534,7 +534,7 @@ void DDX_DHtml_SelectString(
 *szId*<br/>
 您指定的 HTML 控制項的 ID 參數的值。
 
-*值*<br/>
+*value*<br/>
 在交換元素的值。
 
 ##  <a name="ddx_dhtml_selectvalue"></a>  CDHtmlDialog::DDX_DHtml_SelectValue
@@ -556,7 +556,7 @@ void DDX_DHtml_SelectValue(
 *szId*<br/>
 您指定的 HTML 控制項的 ID 參數的值。
 
-*值*<br/>
+*value*<br/>
 在交換元素的值。
 
 ### <a name="example"></a>範例
@@ -1296,7 +1296,8 @@ void SetElementHtml(
 HTML 項目的識別碼。
 
 *bstrText*<br/>
-`innerHTML` 屬性的新值。
+
+  `innerHTML` 屬性的新值。
 
 *punkElem*<br/>
 `IUnknown` HTML 項目的指標。
@@ -1343,7 +1344,8 @@ void SetElementText(
 HTML 項目的識別碼。
 
 *bstrText*<br/>
-`innerText` 屬性的新值。
+
+  `innerText` 屬性的新值。
 
 *punkElem*<br/>
 `IUnknown` HTML 項目的指標。
@@ -1527,4 +1529,3 @@ STDMETHOD(UpdateUI)(void);
 [MFC 範例 DHtmlExplore](../../visual-cpp-samples.md)<br/>
 [DDX_DHtml 協助程式巨集](#ddx_dhtml_helper_macros)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

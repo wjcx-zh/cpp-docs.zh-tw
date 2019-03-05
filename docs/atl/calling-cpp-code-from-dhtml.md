@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - DHTML, calling C++ code from
 ms.assetid: 37329acd-4c22-40ca-a85a-b7480748f75f
-ms.openlocfilehash: 0fa4f51f4488be61edb0f01d9fddc956cd7a45b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb63f8671770f57972a4c789d983bdf9658d5ecb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555190"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270172"
 ---
 # <a name="calling-c-code-from-dhtml"></a>從 DHTML 呼叫 c + + 程式碼
 
@@ -44,4 +44,3 @@ DHTML 控制項可以裝載在容器中，例如測試容器或 Internet Explore
 ## <a name="see-also"></a>另請參閱
 
 [DHTML 控制項的支援](../atl/atl-support-for-dhtml-controls.md)
-

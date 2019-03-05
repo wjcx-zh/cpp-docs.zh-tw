@@ -6,12 +6,12 @@ helpviewer_keywords:
 - frame windows [MFC], using
 - MFC, frame windows
 ms.assetid: 4d773238-11f6-4ccf-8114-57310c5aaa2d
-ms.openlocfilehash: 1ce23633310482c52f60a591452e3d20ac10c706
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba304bce5bd0d91f4db8372b087c42c98b9c103d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676378"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259655"
 ---
 # <a name="using-frame-windows"></a>使用框架視窗
 
@@ -44,4 +44,3 @@ MFC 架構會建立文件框架視窗，及其檢視表和文件，做為其實�
 ## <a name="see-also"></a>另請參閱
 
 [框架視窗](../mfc/frame-windows.md)
-

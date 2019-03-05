@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-ms.openlocfilehash: 76c2f303713644c5f78f20d2ea868bd67b9eae71
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 939230753f25db38e6ba2f26340f40ddf74d23bf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175365"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271134"
 ---
 # <a name="frame-windows"></a>框架視窗
 
@@ -71,7 +71,7 @@ MFC 架構會使用框架視窗包含檢視。 兩個元件 — 框架和內容�
 
 - [回應動態資料交換 (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)
 
-- [組織 semimodal 狀態： 即時線上 Windows 說明 （協調其他視窗動作）](../mfc/orchestrating-other-window-actions.md)
+- [組織 semimodal 狀態：即時線上的 Windows 說明 （協調其他視窗動作）](../mfc/orchestrating-other-window-actions.md)
 
 - [組織 semimodal 狀態： 列印和預覽列印 （協調其他視窗動作）](../mfc/orchestrating-other-window-actions.md)
 
@@ -86,4 +86,3 @@ MFC 架構會使用框架視窗包含檢視。 兩個元件 — 框架和內容�
 ## <a name="see-also"></a>另請參閱
 
 [Windows](../mfc/windows.md)
-

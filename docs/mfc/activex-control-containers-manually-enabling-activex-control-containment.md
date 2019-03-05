@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], enabling
 - ActiveX controls [MFC], enabling containers
 ms.assetid: 833bcde9-c9ad-4709-ad12-2fc2150fb6a5
-ms.openlocfilehash: 1fdf27975516715ea350af1f917eb43179f3e6d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80ca25192f3dbda711b0398917cfa68571cd2c55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510113"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302714"
 ---
 # <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>ActiveX 控制項容器：手動啟用 ActiveX 控制項內含項目
 
@@ -39,4 +39,3 @@ ms.locfileid: "50510113"
 ## <a name="see-also"></a>另請參閱
 
 [ActiveX 控制項容器](../mfc/activex-control-containers.md)
-

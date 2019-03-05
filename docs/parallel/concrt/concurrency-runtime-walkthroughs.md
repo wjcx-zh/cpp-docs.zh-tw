@@ -5,12 +5,12 @@ helpviewer_keywords:
 - walkthroughs [Concurrency Runtime]
 - Concurrency Runtime, walkthroughs
 ms.assetid: 7374c5e9-54eb-44bf-9ed9-5e190cfd290b
-ms.openlocfilehash: 2307581dc1cda3ed75ee1cea9fc4ff504a0a98b3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d176049bb3b03ae0f55170e45e20e7c2c0e322ff
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519486"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296406"
 ---
 # <a name="concurrency-runtime-walkthroughs"></a>並行執行階段逐步解說
 
@@ -18,10 +18,10 @@ ms.locfileid: "51519486"
 
 ## <a name="in-this-section"></a>本節內容
 
-[逐步解說：使用工作和 XML HTTP 要求連接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
+[逐步解說：使用工作和 XML HTTP 要求進行連線](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 示範如何使用[IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)並[IXMLHTTPRequest2Callback](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback)介面，以及將 HTTP GET 和 POST 要求傳送至通用 Windows 平台 (UWP) 應用程式中的 web 服務的工作。
 
-[逐步解說：建立代理程式架構應用程式](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
+[逐步解說：建立代理程式型的應用程式](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
 描述如何建立基本的代理程式型應用程式。
 
 [逐步解說：建立資料流程代理程式](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
@@ -30,13 +30,13 @@ ms.locfileid: "51519486"
 [逐步解說：建立影像處理網路](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 示範如何建立執行映像處理的非同步訊息區的網路。
 
-[逐步解說：實作未來](../../parallel/concrt/walkthrough-implementing-futures.md)<br/>
+[逐步解說：實作 Future](../../parallel/concrt/walkthrough-implementing-futures.md)<br/>
 示範如何以非同步方式計算值供日後使用。
 
-[逐步解說：使用聯結以避免死結](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)<br/>
+[逐步解說：使用聯結以預防死結](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)<br/>
 使用哲學家用餐問題，說明如何使用[concurrency:: join](../../parallel/concrt/reference/join-class.md)類別避免應用程式中的死結。
 
-[逐步解說：從使用者介面執行緒中移除工作](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)<br/>
+[逐步解說：從使用者介面執行緒移除工作](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)<br/>
 示範如何改善繪製 Mandelbrot 碎形的 MFC 應用程式的效能。
 
 [逐步解說：在啟用 COM 的應用程式中使用並行執行階段](../../parallel/concrt/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application.md)<br/>
@@ -52,4 +52,3 @@ ms.locfileid: "51519486"
 
 [並行執行階段](../../parallel/concrt/concurrency-runtime.md)<br/>
 介紹 Visual c + + 的並行程式設計架構。
-

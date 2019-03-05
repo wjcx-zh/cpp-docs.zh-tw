@@ -1,18 +1,18 @@
 ---
-title: 如何：使用可組合的類別結合集合
+title: HOW TO：使用 combinable 結合集合
 ms.date: 11/04/2016
 helpviewer_keywords:
 - combinable class, example
 - combining sets with combinable [Concurrency Runtime]
 ms.assetid: 66ffe8e3-6bbb-4e9f-b790-b612922a68a7
-ms.openlocfilehash: c4d245688dd000ea61b538c4f3957246b9852ec5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf8a5bee65ea0ba1718c1d4d436b6af3e0b95961
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571804"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296094"
 ---
-# <a name="how-to-use-combinable-to-combine-sets"></a>如何：使用可組合的類別結合集合
+# <a name="how-to-use-combinable-to-combine-sets"></a>HOW TO：使用 combinable 結合集合
 
 本主題說明如何使用[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)類別來計算一組質數。
 
@@ -43,4 +43,3 @@ parallel time: 78 ms
 [平行容器和物件](../../parallel/concrt/parallel-containers-and-objects.md)<br/>
 [combinable 類別](../../parallel/concrt/reference/combinable-class.md)<br/>
 [combinable:: combine_each 方法](reference/combinable-class.md#combine_each)
-

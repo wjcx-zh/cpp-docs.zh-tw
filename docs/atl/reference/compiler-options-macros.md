@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: d0da6ebcb178735fc25c656241fe23497d941ab6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631149"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258472"
 ---
 # <a name="compiler-options-macros"></a>編譯器選項巨集
 

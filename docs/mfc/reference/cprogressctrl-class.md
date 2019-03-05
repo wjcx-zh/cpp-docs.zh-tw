@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: ba97dd27fbf70c34461d45755fd008e6ad9099b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6d5d3becfd1c1ee4a032c74eb116ede82c42bc4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585896"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260266"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl 類別
 
@@ -71,13 +71,13 @@ class CProgressCtrl : public CWnd
 
 |名稱|描述|
 |----------|-----------------|
-|[Cprogressctrl:: Create](#create)|建立進度列控制項，並將它附加至`CProgressCtrl`物件。|
+|[CProgressCtrl::Create](#create)|建立進度列控制項，並將它附加至`CProgressCtrl`物件。|
 |[CProgressCtrl::CreateEx](#createex)|使用指定的 Windows 延伸樣式中建立進度控制項，並將它附加至`CProgressCtrl`物件。|
 |[CProgressCtrl::GetBarColor](#getbarcolor)|取得目前的進度列控制項的進度指示器列的色彩。|
 |[CProgressCtrl::GetBkColor](#getbkcolor)|取得目前的進度列的背景色彩。|
 |[CProgressCtrl::GetPos](#getpos)|取得進度列目前位置。|
 |[CProgressCtrl::GetRange](#getrange)|取得進度列控制項的範圍的下限和上限限制。|
-|[Cprogressctrl:: Getstate](#getstate)|取得目前的進度列控制項的狀態。|
+|[CProgressCtrl::GetState](#getstate)|取得目前的進度列控制項的狀態。|
 |[CProgressCtrl::GetStep](#getstep)|擷取目前的進度列控制項的進度列的步驟遞增。|
 |[CProgressCtrl::OffsetPos](#offsetpos)|進度列控制項的目前位置往前移，藉由指定的遞增，並重新繪製的列，以反映新的位置。|
 |[CProgressCtrl::SetBarColor](#setbarcolor)|設定目前的進度列控制項中的進度指示器列的色彩。|
@@ -127,7 +127,7 @@ CProgressCtrl();
 
 [!code-cpp[NVC_MFC_CProgressCtrl#1](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_1.cpp)]
 
-##  <a name="create"></a>  Cprogressctrl:: Create
+##  <a name="create"></a>  CProgressCtrl::Create
 
 建立進度列控制項，並將它附加至`CProgressCtrl`物件。
 
@@ -141,7 +141,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定進度列控制項的樣式。 套用上列任何組合中的視窗 stylesdescribed [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)在 Windows SDK 中，除了下列進度列控制項的樣式，來控制：
 
 - PBS_VERTICAL 顯示垂直進度資訊，從上至底部。 沒有這個旗標，進度列控制項會顯示水平、 左到右。
@@ -187,7 +187,7 @@ virtual BOOL CreateEx(
 *dwExStyle*<br/>
 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定進度列控制項的樣式。 套用上列任何組合中所述的視窗樣式[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK 中。
 
 *rect*<br/>
@@ -285,7 +285,7 @@ void GetRange(
 
 [!code-cpp[NVC_MFC_CProgressCtrl#4](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_4.cpp)]
 
-##  <a name="getstate"></a>  Cprogressctrl:: Getstate
+##  <a name="getstate"></a>  CProgressCtrl::GetState
 
 取得目前的進度列控制項的狀態。
 
@@ -442,7 +442,7 @@ BOOL SetMarquee(
 |參數|描述|
 |---------------|-----------------|
 |*fMarqueeMode*|[in]若為 true，則開啟跑馬燈模式，或若要關閉跑馬燈模式，則為 FALSE。|
-|*n 間隔*|[in]以毫秒為單位的跑馬燈動畫的更新之間的時間。|
+|*nInterval*|[in]以毫秒為單位的跑馬燈動畫的更新之間的時間。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -533,7 +533,7 @@ int SetState(int iState);
 
 |參數|描述|
 |---------------|-----------------|
-|*iState*|[in]若要設定進度列狀態。 使用下列其中一個值：<br /><br /> -PBST_NORMAL-進行中<br />-PBST_ERROR-錯誤<br />-PBST_PAUSED-暫停|
+|*iState*|[in]若要設定進度列狀態。 使用下列其中一個值：<br /><br /> -PBST_NORMAL-進行中<br />- PBST_ERROR - Error<br />-PBST_PAUSED-暫停|
 
 ### <a name="return-value"></a>傳回值
 
@@ -607,4 +607,3 @@ int StepIt();
 [MFC 範例 CMNCTRL2](../../visual-cpp-samples.md)<br/>
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

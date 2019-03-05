@@ -118,12 +118,12 @@ helpviewer_keywords:
 - CWinAppEx [MFC], StoreWindowPlacement
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
-ms.openlocfilehash: 57c18ff00cd9e3a1d3156d8214ac78b49ca00c1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c222567703d0e57480c00f6f2bf9e78f16979150
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544413"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288827"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx 類別
 
@@ -176,7 +176,7 @@ class CWinAppEx : public CWinApp
 |[CWinAppEx::InitKeyboardManager](#initkeyboardmanager)|初始化 `CKeyboardManager` 物件。|
 |[CWinAppEx::InitMouseManager](#initmousemanager)|初始化 `CMouseManager` 物件。|
 |[CWinAppEx::InitShellManager](#initshellmanager)|初始化`CShellManager`類別|
-|[Cwinappex:: Inittooltipmanager](#inittooltipmanager)|初始化`CTooltipManager`類別。|
+|[CWinAppEx::InitTooltipManager](#inittooltipmanager)|初始化`CTooltipManager`類別。|
 |[CWinAppEx::IsResourceSmartUpdate](#isresourcesmartupdate)||
 |[CWinAppEx::IsStateExists](#isstateexists)|指出指定的索引鍵是否在登錄中。|
 |[CWinAppEx::LoadState](#loadstate)|從登錄載入應用程式的狀態。|
@@ -222,7 +222,7 @@ MFC 架構所提供的功能大多取決於`CWinAppEx`類別。 您可以將併�
 
 - 主應用程式類別衍生自`CWinAppEx`。
 
-您將併入之後`CWinAppEx`到您的應用程式中，您可以初始化其中一個應用程式管理員。 使用應用程式管理員之前，您必須藉由呼叫適當的 initialize 方法來進行初始化。 若要取得特定經理的指標，呼叫相關聯的 get 方法。 `CWinAppEx`類別會管理下列應用程式管理員： [CMouseManager 類別](../../mfc/reference/cmousemanager-class.md)， [CContextMenuManager 類別](../../mfc/reference/ccontextmenumanager-class.md)， [CKeyboardManager 類別](../../mfc/reference/ckeyboardmanager-class.md)， [CUserToolsManager 類別](../../mfc/reference/cusertoolsmanager-class.md)，並[CMenuTearOffManager 類別](../../mfc/reference/cmenutearoffmanager-class.md)。
+您將併入之後`CWinAppEx`到您的應用程式中，您可以初始化其中一個應用程式管理員。 使用應用程式管理員之前，您必須藉由呼叫適當的 initialize 方法來進行初始化。 若要取得特定經理的指標，呼叫相關聯的 get 方法。 `CWinAppEx`類別會管理下列應用程式管理員：[CMouseManager 類別](../../mfc/reference/cmousemanager-class.md)， [CContextMenuManager 類別](../../mfc/reference/ccontextmenumanager-class.md)， [CKeyboardManager 類別](../../mfc/reference/ckeyboardmanager-class.md)， [CUserToolsManager 類別](../../mfc/reference/cusertoolsmanager-class.md)，以及[CMenuTearOffManager 類別](../../mfc/reference/cmenutearoffmanager-class.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -478,7 +478,7 @@ int GetInt(
 *lpszEntry*<br/>
 [in]包含的登錄項目名稱的字串。
 
-*n 預設*<br/>
+*nDefault*<br/>
 [in]如果指定的登錄項目不存在則方法會傳回預設值。
 
 ### <a name="return-value"></a>傳回值
@@ -643,7 +643,7 @@ int GetSectionInt(
 *lpszEntry*<br/>
 [in]字串，包含要讀取的值。
 
-*n 預設*<br/>
+*nDefault*<br/>
 [in]要傳回如果指定的值不存在的預設值。
 
 ### <a name="return-value"></a>傳回值
@@ -868,7 +868,7 @@ BOOL InitShellManager();
 
 如果您的應用程式中已經有殼層管理員，而且您呼叫`InitShellManager`，您的應用程式會引發[ASSERT](diagnostic-services.md#assert)失敗。 因此，請勿呼叫`InitShellManager`如果您建立`CShellManager`直接物件。 如果您不想要使用自訂`CShellManager`，使用`GetShellManager`建立`CShellManager`物件。
 
-##  <a name="inittooltipmanager"></a>  Cwinappex:: Inittooltipmanager
+##  <a name="inittooltipmanager"></a>  CWinAppEx::InitTooltipManager
 
 初始化[CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)物件。
 
@@ -1031,7 +1031,7 @@ virtual void OnAppContextHelp(
 *pWndControl*<br/>
 [in]使用者叫用內容說明視窗物件的指標。
 
-*dwHelpIDArray]*<br/>
+*dwHelpIDArray[]*<br/>
 [in]保留的值。
 
 ### <a name="remarks"></a>備註
@@ -1089,7 +1089,7 @@ virtual BOOL OnWorkspaceIdle(CWnd*);
 
 ### <a name="parameters"></a>參數
 
-[in]*CWnd&#38;*<br/>
+[in] *CWnd&#38;*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1232,7 +1232,7 @@ virtual BOOL ShowPopupMenu(
 *uiMenuResId*<br/>
 [in]功能表資源識別碼。
 
-*點*<br/>
+*point*<br/>
 [in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)螢幕座標中指定功能表的位置。
 
 *pWnd*<br/>
@@ -1327,7 +1327,7 @@ BOOL WriteInt(
 *lpszEntry*<br/>
 [in]包含的登錄機碼名稱的字串。
 
-*n 值*<br/>
+*nValue*<br/>
 [in]要儲存的資料。
 
 ### <a name="return-value"></a>傳回值
@@ -1421,7 +1421,7 @@ BOOL WriteSectionInt(
 *lpszEntry*<br/>
 [in]字串，包含要設定的值。
 
-*n 值*<br/>
+*nValue*<br/>
 [in]要寫入登錄的資料。
 
 ### <a name="return-value"></a>傳回值

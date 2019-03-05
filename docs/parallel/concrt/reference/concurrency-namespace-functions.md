@@ -33,18 +33,18 @@ f1_keywords:
 - ppltasks/concurrency::when_all
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-ms.openlocfilehash: 7550e6f0ef44abd19b3fab89127ff898c72738f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cb726ccc475d6d08e036229d0d06089e3fac31c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436175"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278206"
 ---
 # <a name="concurrency-namespace-functions"></a>concurrency 命名空間函式
 
 ||||
 |-|-|-|
-|[配置](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|
+|[Alloc](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|
 |[EnableTracing](#enabletracing)|[免費](#free)|[GetExecutionContextId](#getexecutioncontextid)|
 |[GetOSVersion](#getosversion)|[GetProcessorCount](#getprocessorcount)|[GetProcessorNodeCount](#getprocessornodecount)|
 |[GetSchedulerId](#getschedulerid)|[Trace_agents_register_name](#trace_agents_register_name)|[asend](#asend)|
@@ -57,10 +57,10 @@ ms.locfileid: "50436175"
 |[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[receive](#receive)|
 |[run_with_cancellation_token](#run_with_cancellation_token)|[傳送](#send)|[set_ambient_scheduler](#set_ambient_scheduler)|
 |[set_task_execution_resources](#set_task_execution_resources)|[swap](#swap)|[task_from_exception](#task_from_exception)|
-|[task_from_result](#task_from_result)|[try_receive](#try_receive)|[等候](#wait)|
+|[task_from_result](#task_from_result)|[try_receive](#try_receive)|[wait](#wait)|
 |[when_all](#when_all)|[when_any](#when_any)|
 
-##  <a name="alloc"></a>  配置
+##  <a name="alloc"></a>  Alloc
 
 會透過並行執行階段的快取子配置器指定的大小，來配置記憶體區塊。
 
@@ -105,7 +105,7 @@ bool asend(
 *_Trg*<br/>
 指標或參考資料會傳送目標。
 
-*資料 （_d)*<br/>
+*_Data*<br/>
 傳送資料的參考。
 
 ### <a name="return-value"></a>傳回值
@@ -126,7 +126,7 @@ bool asend(
 inline __declspec(noreturn) void __cdecl cancel_current_task();
 ```
 
-##  <a name="clear"></a>  清除
+##  <a name="clear"></a>  clear
 
 清除並行佇列，並終結任何目前已加入佇列的項目。 這個方法不是並行安全。
 
@@ -165,15 +165,16 @@ __declspec(noinline) auto create_async(const _Function& _Func)
 
 ### <a name="remarks"></a>備註
 
-Lambda 的傳回型別決定建構是動作或作業。
+Lambda 的傳回類型決定建構是動作或作業。
 
 傳回 void 的 Lambda 造成動作的建立。 傳回屬於 `TResult` 類型之結果的 Lambda 會造成 TResult 作業的建立。
 
-Lambda 可能也會傳回 `task<TResult>`，將非同步工作封裝在本身內或是表示非同步工作的工作鏈結的接續作業。 在這種情況下，Lambda 本身是內嵌執行，因為工作是非同步執行的工作，而且 Lambda 的傳回型別會解除包裝以產生 `create_async` 所傳回的非同步建構。 這表示，lambda，傳回的工作\<void > 會造成的動作，並傳回工作的 lambda 建立\<TResult > 會導致 TResult 作業的建立。
+Lambda 可能也會傳回 `task<TResult>`，將非同步工作封裝在本身內或是表示非同步工作的工作鏈結的接續作業。 在這種情況下，Lambda 本身是內嵌執行，因為工作是非同步執行的工作，而且 Lambda 的傳回類型會解除包裝以產生 `create_async` 所傳回的非同步建構。 這表示，lambda，傳回的工作\<void > 會造成的動作，並傳回工作的 lambda 建立\<TResult > 會導致 TResult 作業的建立。
 
 Lambda 可以接受零個、一個或兩個引數。 有效的引數為 `progress_reporter<TProgress>` 和 `cancellation_token`，兩者都使用時依此順序。 沒有引數的 Lambda 會導致建立沒有進度報告功能的非同步建構。 接受 progress_reporter lambda\<Tprogress> > 將會導致`create_async`傳回的非同步建構，它會報告 TProgress 類型的進度，每次`report`呼叫 progress_reporter 物件的方法。 接受 cancellation_token 的 Lambda 可能使用該語彙基元來檢查取消的狀態，或是將語彙基元傳遞給所建立的工作，讓非同步建構的取消導致取消這些工作。
 
-如果 lambda 或函式物件的主體傳回結果 (而非 task\<TResult >)，則會以非同步方式執行的工作執行階段內容中的 MTA 隱含為其建立處理序內。 `IAsyncInfo::Cancel` 方法會導致取消隱含工作。
+如果 lambda 或函式物件的主體傳回結果 (而非 task\<TResult >)，則會以非同步方式執行的工作執行階段內容中的 MTA 隱含為其建立處理序內。 
+  `IAsyncInfo::Cancel` 方法會導致取消隱含工作。
 
 如果 Lambda 的主體傳回工作，則 Lambda 會內嵌執行，而且藉由宣告 Lambda 接受屬於類型 `cancellation_token` 的引數，您可以觸發任何工作的取消作業，這些工作是您建立工作時，透過傳入該語彙基元，在 Lambda 建立的。 您也可以在語彙基元使用 `register_callback` 方法，使執行階段在您在非同步作業或產生的動作呼叫 `IAsyncInfo::Cancel` 時叫用回呼。
 
@@ -392,7 +393,7 @@ void concurrent_vector<T, _Ax>::internal_assign_iterators(
 
 *first*<br/>
 
-*最後一個*<br/>
+*last*<br/>
 
 ##  <a name="interruption_point"></a>  interruption_point
 
@@ -669,10 +670,10 @@ C + + 標準程式庫相容的記憶體配置器類型。
 *_Function*<br/>
 二元比較子的型別。
 
-*（_b)*<br/>
+*_Begin*<br/>
 隨機存取迭代器，用於定址要排序之範圍中第一個項目的位置。
 
-*（_e)*<br/>
+*_End*<br/>
 隨機存取迭代器，用於定址要排序之範圍中越過最後一個項目的第一個位置。
 
 *_Alloc*<br/>
@@ -757,7 +758,7 @@ void parallel_for(
 *first*<br/>
 要包含在反覆項目中的第一個索引。
 
-*最後一個*<br/>
+*last*<br/>
 索引一個過去的反覆項目中包含的最後一個索引。
 
 *_Step*<br/>
@@ -775,7 +776,8 @@ Partitioner 物件的參考。 引數可以是其中一個`const` [auto_partitio
 
 ##  <a name="parallel_for_each"></a>  parallel_for_each
 
-`parallel_for_each` 會平行套用指定的函式到範圍內的每個項目。 在語意上，它相當於 `std` 命名空間中的 `for_each` 函式，但項目的反覆項目會平行執行，而且不會指定反覆項目的順序。 `_Func` 引數必須支援 `operator()(T)` 形式的函式呼叫運算子，其中 `T` 參數是要逐一查看之容器的項目類型。
+`parallel_for_each` 會平行套用指定的函式到範圍內的每個項目。 在語意上，它相當於 `std` 命名空間中的 `for_each` 函式，但項目的反覆項目會平行執行，而且不會指定反覆項目的順序。 
+  `_Func` 引數必須支援 `operator()(T)` 形式的函式呼叫運算子，其中 `T` 參數是要逐一查看之容器的項目類型。
 
 ```
 template <typename _Iterator, typename _Function>
@@ -804,7 +806,7 @@ void parallel_for_each(
 *first*<br/>
 迭代器，定址的第一個元素的位置包含平行反覆項目中。
 
-*最後一個*<br/>
+*last*<br/>
 迭代器，定址的後面一個位置，最後一個元素包含平行反覆項目中。
 
 *_Func*<br/>
@@ -1078,10 +1080,10 @@ C + + 標準程式庫相容的記憶體配置器類型。
 *_Function*<br/>
 投影函式的類型。
 
-*（_b)*<br/>
+*_Begin*<br/>
 隨機存取迭代器，用於定址要排序之範圍中第一個項目的位置。
 
-*（_e)*<br/>
+*_End*<br/>
 隨機存取迭代器，用於定址要排序之範圍中越過最後一個項目的第一個位置。
 
 *_Alloc*<br/>
@@ -1147,10 +1149,10 @@ inline _Reduce_type parallel_reduce(
 *_Range_reduce_fun*<br/>
 範圍縮減函式的類型。 這必須是函式類型簽章`_Reduce_type _Range_fun(_Forward_iterator, _Forward_iterator, _Reduce_type)`，_Reduce_type 是相同的識別型別以及縮減的結果型別。
 
-*（_b)*<br/>
+*_Begin*<br/>
 輸入迭代器，定址範圍中的第一個元素會減少。
 
-*（_e)*<br/>
+*_End*<br/>
 輸入迭代器，定址對象是要縮減的範圍內的最後一個項目之後的一個位置的元素。
 
 *_Identity*<br/>
@@ -1202,10 +1204,10 @@ inline void parallel_sort(
 *_Function*<br/>
 二元比較子仿函數 (functor) 的類型。
 
-*（_b)*<br/>
+*_Begin*<br/>
 隨機存取迭代器，用於定址要排序之範圍中第一個項目的位置。
 
-*（_e)*<br/>
+*_End*<br/>
 隨機存取迭代器，用於定址要排序之範圍中越過最後一個項目的第一個位置。
 
 *_Func*<br/>
@@ -1349,7 +1351,7 @@ Partitioner 物件的參考。 引數可以是其中一個`const` [auto_partitio
 
 如需詳細資訊，請參閱 <<c0> [ 平行演算法](../../../parallel/concrt/parallel-algorithms.md)。
 
-##  <a name="receive"></a>  接收
+##  <a name="receive"></a>  receive
 
 一般接收實作，可讓內容等候來自一個來源的資料，並且篩選所接受的值。
 
@@ -1385,7 +1387,7 @@ T receive(
 *_Src*<br/>
 指標或參考的預期資料的來源。
 
-*逾時 _t*<br/>
+*_Timeout*<br/>
 時間上限，此方法應該是資料，以毫秒為單位。
 
 *_Filter_proc*<br/>
@@ -1427,7 +1429,7 @@ void run_with_cancellation_token(
 
 函式物件中的所有中斷點都會在 `cancellation_token` 取消時觸發。 如果父項擁有不同的語彙基元或沒有語彙基元，則明確的語彙基元 `_Ct` 會將這個 `_Func` 與父取消隔離。
 
-##  <a name="send"></a>  傳送
+##  <a name="send"></a>  send
 
 同步傳送作業，其會等候直到目標接受或拒絕訊息。
 
@@ -1447,7 +1449,7 @@ bool send(ITarget<T>& _Trg, const T& _Data);
 *_Trg*<br/>
 指標或參考資料會傳送目標。
 
-*資料 （_d)*<br/>
+*_Data*<br/>
 傳送資料的參考。
 
 ### <a name="return-value"></a>傳回值
@@ -1492,10 +1494,12 @@ void __cdecl set_task_execution_resources(
 要做為並行執行階段背景工作執行緒之限制的同質性遮罩。 只有在您想要將並行執行階段限制於目前處理器群組的子集時，才在有超過 64 個硬體執行緒的系統上使用這個方法。 一般而言，您應該使用接受群組同質性陣列做為參數的方法版本，以便在擁有超過 64 個硬體執行緒的電腦上限制同質性。
 
 *count*<br/>
-`GROUP_AFFINITY` 參數所指定之陣列中 `_PGroupAffinity` 元素的數目。
+
+  `GROUP_AFFINITY` 參數所指定之陣列中 `_PGroupAffinity` 元素的數目。
 
 *_PGroupAffinity*<br/>
-`GROUP_AFFINITY` 元素的陣列。
+
+  `GROUP_AFFINITY` 元素的陣列。
 
 ### <a name="remarks"></a>備註
 
@@ -1527,7 +1531,7 @@ inline void swap(
 *_A*<br/>
 並行向量，其項目利用並行向量來交換`_B`。
 
-*_KM*<br/>
+*_B*<br/>
 提供要交換之元素的並行向量或其項目是利用並行向量來交換的向量`_A`。
 
 ### <a name="remarks"></a>備註
@@ -1600,7 +1604,7 @@ void Trace_agents_register_name(
 *_PObject*<br/>
 要在追蹤中命名的訊息區塊或代理程式的指標。
 
-*名稱 （_n)*<br/>
+*_Name*<br/>
 所指物件的名稱。
 
 ##  <a name="try_receive"></a>  try_receive
@@ -1649,7 +1653,7 @@ A`bool`值，指出是否裝載已置於`_value`。
 
 如需詳細資訊，請參閱 <<c0> [ 訊息傳遞函式](../../../parallel/concrt/message-passing-functions.md)。
 
-##  <a name="wait"></a>  等候
+##  <a name="wait"></a>  wait
 
 暫停目前的內容達指定的時間長度。
 
@@ -1685,10 +1689,10 @@ auto when_all(
 *_Iterator*<br/>
 輸入迭代器的類型。
 
-*（_b)*<br/>
+*_Begin*<br/>
 合併至所產生工作之項目範圍內的第一個項目位置。
 
-*（_e)*<br/>
+*_End*<br/>
 合併至所產生工作之項目範圍外的第一個項目位置。
 
 *_TaskOptions*<br/>
@@ -1708,7 +1712,7 @@ auto when_all(
 
 ##  <a name="when_any"></a>  when_any
 
-建立工作，當成引數來提供的任何工作順利完成時，此工作就會順利成功。
+建立工作，這個工作會在當做引數提供的所有工作都順利完成時，順利完成。
 
 ```
 template<typename _Iterator>
@@ -1737,10 +1741,10 @@ auto when_any(
 *_Iterator*<br/>
 輸入迭代器的類型。
 
-*（_b)*<br/>
+*_Begin*<br/>
 合併至所產生工作之項目範圍內的第一個項目位置。
 
-*（_e)*<br/>
+*_End*<br/>
 合併至所產生工作之項目範圍外的第一個項目位置。
 
 *_TaskOptions*<br/>

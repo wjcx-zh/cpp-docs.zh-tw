@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: dc0e6f75f4794b94d6e94d77f2e427b9c1df9f06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f287b04b32b7bc45342ac7248fbe986a3dcf959e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644141"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289863"
 ---
 # <a name="cfile-class"></a>CFile 類別
 
@@ -89,7 +89,7 @@ class CFile : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[Cfile:: Abort](#abort)|關閉檔案，並忽略所有的警告和錯誤。|
+|[CFile::Abort](#abort)|關閉檔案，並忽略所有的警告和錯誤。|
 |[CFile::Close](#close)|關閉檔案，並刪除物件。|
 |[CFile::Duplicate](#duplicate)|建構此檔案為基礎的重複物件。|
 |[CFile::Flush](#flush)|清除任何尚未要寫入的資料。|
@@ -98,7 +98,7 @@ class CFile : public CObject
 |[CFile::GetFileTitle](#getfiletitle)|擷取所選檔案的標題。|
 |[CFile::GetLength](#getlength)|擷取檔案的長度。|
 |[CFile::GetPosition](#getposition)|擷取目前的檔案指標。|
-|[Cfile](#getstatus)|擷取狀態開啟的檔案，或在靜態版本中，擷取指定的檔案 （靜態，虛擬函式） 的狀態。|
+|[CFile::GetStatus](#getstatus)|擷取狀態開啟的檔案，或在靜態版本中，擷取指定的檔案 （靜態，虛擬函式） 的狀態。|
 |[CFile::LockRange](#lockrange)|鎖定檔案中的位元組的範圍。|
 |[CFile::Open](#open)|安全的錯誤測試的選項來開啟檔案。|
 |[CFile::Read](#read)|讀取從目前的檔案位置的檔案 （無緩衝） 資料。|
@@ -154,7 +154,7 @@ class CFile : public CObject
 
 **標頭：** afx.h
 
-##  <a name="abort"></a>  Cfile:: Abort
+##  <a name="abort"></a>  CFile::Abort
 
 關閉與這個物件相關聯的檔案，並使檔案無法讀取或寫入。
 
@@ -422,7 +422,7 @@ virtual ULONGLONG GetPosition() const;
 
 [!code-cpp[NVC_MFCFiles#8](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_5.cpp)]
 
-##  <a name="getstatus"></a>  Cfile
+##  <a name="getstatus"></a>  CFile::GetStatus
 
 這個方法會擷取相關的狀態資訊指定`CFile`物件執行個體或指定的檔案路徑。
 

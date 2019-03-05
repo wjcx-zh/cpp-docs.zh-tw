@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [MFC], adding to dialog boxes
 - common controls [MFC], adding
 ms.assetid: bc843e59-0c51-4b5b-8bf2-343f716469d2
-ms.openlocfilehash: cf665247dd1ef24bb71d160097fa9514ff8be147
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c70539b49fcf2aa87f0bee375a87b38277b6ed42
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589382"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270757"
 ---
 # <a name="adding-controls-by-hand"></a>以手動方式加入控制項
 
@@ -38,4 +38,3 @@ ms.locfileid: "50589382"
 [建立及使用控制項](../mfc/making-and-using-controls.md)<br/>
 [控制項](../mfc/controls-mfc.md)<br/>
 [CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)
-

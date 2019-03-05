@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：偵錯 C++ AMP 應用程式
+title: 逐步解說：偵錯 c + + AMP 應用程式
 ms.date: 11/19/2018
 helpviewer_keywords:
 - debugging, C++ Accelerated Massive Parallelism
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 610cf317982204715d55d12ece510cb477543f4d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 5312ba7354c28286cafb092711d66d56a920581a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176688"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286908"
 ---
-# <a name="walkthrough-debugging-a-c-amp-application"></a>逐步解說：偵錯 C++ AMP 應用程式
+# <a name="walkthrough-debugging-a-c-amp-application"></a>逐步解說：偵錯 c + + AMP 應用程式
 
 本主題示範如何使用 c + + Accelerated Massive Parallelism (c + + AMP)，以善用圖形處理單元 (GPU) 的應用程式進行偵錯。 它會使用加總大型整數陣列的平行方式來降低程式。 這個逐步解說將說明下列工作：
 
@@ -36,7 +36,7 @@ ms.locfileid: "52176688"
 
 - 讀取[c + + AMP 概觀](../../parallel/amp/cpp-amp-overview.md)。
 
-- 請確定這一行文字編輯器中顯示數字。 如需詳細資訊，請參閱 <<c0> [ 如何： 在編輯器中顯示行號](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor)。
+- 請確定這一行文字編輯器中顯示數字。 如需詳細資訊，請參閱[如何：在編輯器中顯示行號](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor)。
 
 - 請確定您執行 Windows 8 或 Windows Server 2012，以支援在軟體模擬器上偵錯。
 
@@ -220,7 +220,7 @@ ms.locfileid: "52176688"
 
 2. 在 **屬性頁**對話方塊的 **組態屬性**，選擇 **偵錯**。
 
-3. 在 **偵錯工具來啟動**清單中，選取**本機 Windows 偵錯工具**。
+3. 在 [要啟動的偵錯工具] 清單中，選取 [本機 Windows 偵錯工具]。
 
 4. 在 **偵錯工具類型**清單中，確認**自動**已選取。
 
@@ -335,7 +335,7 @@ ms.locfileid: "52176688"
 
 ## <a name="freezing-and-thawing-gpu-threads"></a>凍結和解除凍結 GPU 執行緒
 
-您可以凍結 （暫止） 和解除凍結 （繼續） GPU 執行緒從**GPU 執行緒** 視窗或**平行監看式**視窗。 您可以凍結和解除凍結 CPU 執行緒相同的方式;如需資訊，請參閱[如何： 使用執行緒視窗](/visualstudio/debugger/how-to-use-the-threads-window)。
+您可以凍結 （暫止） 和解除凍結 （繼續） GPU 執行緒從**GPU 執行緒** 視窗或**平行監看式**視窗。 您可以凍結和解除凍結 CPU 執行緒相同的方式;如需資訊，請參閱[How to:使用執行緒視窗](/visualstudio/debugger/how-to-use-the-threads-window)。
 
 ### <a name="to-freeze-and-thaw-gpu-threads"></a>若要凍結和解除凍結 GPU 執行緒
 

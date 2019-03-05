@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: ff29a867a8351a51ad7f09a5ca31d871fc67bab8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 933fcf97c24ed0903395e2c718f8c89d42473494
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589302"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269015"
 ---
 # <a name="framework-mfc"></a>架構 (MFC)
 
@@ -41,7 +41,7 @@ ms.locfileid: "50589302"
 
 [架構如何呼叫您的程式碼](../mfc/how-the-framework-calls-your-code.md)
 
-[CWinApp：應用程式類別](../mfc/cwinapp-the-application-class.md)
+[CWinApp:應用程式類別](../mfc/cwinapp-the-application-class.md)
 
 [文件範本和文件/檢視建立程序](../mfc/document-templates-and-the-document-view-creation-process.md)
 

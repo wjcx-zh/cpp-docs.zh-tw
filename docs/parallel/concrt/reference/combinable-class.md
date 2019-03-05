@@ -12,16 +12,17 @@ f1_keywords:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-ms.openlocfilehash: b392a46c3aafac9ab5f3ca2b626f5f78daebc85d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05256516c0a693a282b8d0de56d6c9e7465f2740
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630746"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299968"
 ---
 # <a name="combinable-class"></a>combinable 類別
 
-`combinable<T>` 物件適用於提供資料的執行緒私用複本，在平行演算法期間執行無鎖定的執行緒-本機子運算。 在平行作業結尾處，可以將執行緒私用子運算合併於最終結果。 這個類別可以用來代替共用變數，而且如果該共用變數有許多爭用情形，則可能可以改進效能。
+
+  `combinable<T>` 物件適用於提供資料的執行緒私用複本，在平行演算法期間執行無鎖定的執行緒-本機子運算。 在平行作業結尾處，可以將執行緒私用子運算合併於最終結果。 這個類別可以用來代替共用變數，而且如果該共用變數有許多爭用情形，則可能可以改進效能。
 
 ## <a name="syntax"></a>語法
 
@@ -41,7 +42,7 @@ class combinable;
 
 |名稱|描述|
 |----------|-----------------|
-|[可組合的類別](#ctor)|多載。 建構新`combinable`物件。|
+|[combinable](#ctor)|多載。 建構新`combinable`物件。|
 |[~ combinable 解構函式](#dtor)|終結 `combinable` 物件。|
 
 ### <a name="public-methods"></a>公用方法
@@ -81,7 +82,7 @@ class combinable;
 void clear();
 ```
 
-##  <a name="ctor"></a> 可組合的類別
+##  <a name="ctor"></a> combinable
 
 建構新`combinable`物件。
 
@@ -102,7 +103,7 @@ combinable(const combinable& _Copy);
 *_FnInitialize*<br/>
 將呼叫來初始化類型的每個新執行緒私用值的函式`T`。 它必須支援具有簽章的函式呼叫運算子`T ()`。
 
-*（_c)*<br/>
+*_Copy*<br/>
 將現有`combinable`要複製到這個物件。
 
 ### <a name="remarks"></a>備註
@@ -113,7 +114,7 @@ combinable(const combinable& _Copy);
 
 第三個建構函式是複製建構函式。
 
-##  <a name="dtor"></a> ~ combinable
+##  <a name="dtor"></a> ~combinable
 
 終結 `combinable` 物件。
 
@@ -121,7 +122,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```
 
-##  <a name="combine"></a> 結合
+##  <a name="combine"></a> combine
 
 藉由呼叫提供的結合仿函式會計算最終的值從執行緒-本機子運算的集合。
 
@@ -159,7 +160,7 @@ void combine_each(_Function _FnCombine) const;
 *_FnCombine*<br/>
 用來結合一個子計算仿函式。 其簽章`void (T)`或`void (const T&)`，而且必須是關聯式和交換式。
 
-##  <a name="local"></a> 本機
+##  <a name="local"></a> local
 
 傳回執行緒私用子運算的參考。
 
@@ -188,7 +189,7 @@ combinable& operator= (const combinable& _Copy);
 
 ### <a name="parameters"></a>參數
 
-*（_c)*<br/>
+*_Copy*<br/>
 將現有`combinable`要複製到這個物件。
 
 ### <a name="return-value"></a>傳回值

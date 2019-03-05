@@ -1,19 +1,19 @@
 ---
-title: 如何：平行執行對應和縮減作業
+title: HOW TO：執行對應和縮減作業以平行方式
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parallel_transform function, example
 - parallel map and reduce, example
 - parallel_reduce function, example
 ms.assetid: 9d19fac0-4ab6-4380-a375-3b18eeb87720
-ms.openlocfilehash: b73e46e63fc1b320a84322bf2b0efd7adf244ccb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba3ffb5cdae7dcc6f108f005fab33f9a1fee6a6f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651841"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258654"
 ---
-# <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>如何：平行執行對應和縮減作業
+# <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>HOW TO：執行對應和縮減作業以平行方式
 
 此範例示範如何使用[concurrency:: parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform)並[concurrency:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)演算法和[concurrency:: concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md)類別，以計算文字在檔案中的出現次數。
 

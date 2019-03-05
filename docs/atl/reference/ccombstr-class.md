@@ -29,12 +29,12 @@ helpviewer_keywords:
 - CComBSTR class
 - CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
-ms.openlocfilehash: 52e8472e315932978af38d405c753b0a62fcbe45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48447b9e6a211927d8e729dd761d2e14ecd89615
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475643"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282353"
 ---
 # <a name="ccombstr-class"></a>CComBSTR 類別
 
@@ -53,7 +53,7 @@ class CComBSTR
 |名稱|描述|
 |----------|-----------------|
 |[CComBSTR::CComBSTR](#ccombstr)|建構函式。|
-|[CComBSTR:: ~ CComBSTR](#dtor)|解構函式。|
+|[CComBSTR::~CComBSTR](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -84,12 +84,12 @@ class CComBSTR
 |----------|-----------------|
 |[CComBSTR::operator BSTR](#operator_bstr)|轉換 （cast) `CComBSTR` bstr 物件。|
 |[CComBSTR::operator ！](#operator_not)|傳回 TRUE 或 FALSE 取決於是否`m_str`是 NULL。|
-|[CComBSTR::operator ！ =](#operator_neq)|比較`CComBSTR`的字串。|
+|[CComBSTR::operator !=](#operator_neq)|比較`CComBSTR`的字串。|
 |[CComBSTR::operator （& s)](#operator_amp)|傳回的位址`m_str`。|
-|[CComBSTR::operator + =](#operator_add_eq)|附加`CComBSTR`物件。|
+|[CComBSTR::operator +=](#operator_add_eq)|附加`CComBSTR`物件。|
 |[CComBSTR::operator <](#operator_lt)|比較`CComBSTR`的字串。|
 |[CComBSTR::operator =](#operator_eq)|將值指派給`m_str`。|
-|[CComBSTR::operator = =](#operator_eq_eq)|比較`CComBSTR`的字串。|
+|[CComBSTR::operator ==](#operator_eq_eq)|比較`CComBSTR`的字串。|
 |[CComBSTR::operator >](#operator_gt)|比較`CComBSTR`的字串。|
 
 ### <a name="public-data-members"></a>公用資料成員
@@ -633,7 +633,7 @@ CComBSTR& operator= (CComBSTR&& src) throw(); // (Visual Studio 2017)
 
 範例，請參閱[CComBSTR::Copy](#copy)。
 
-##  <a name="operator_eq_eq"></a>  CComBSTR::operator = =
+##  <a name="operator_eq_eq"></a>  CComBSTR::operator ==
 
 比較`CComBSTR`的字串。 `CComBSTR`s 賦予比較使用者的預設地區設定的內容中。
 

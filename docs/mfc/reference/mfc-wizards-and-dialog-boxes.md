@@ -2,12 +2,12 @@
 title: MFC 精靈和對話方塊
 ms.date: 11/04/2016
 ms.assetid: 2fae0a2c-d147-4468-a547-f7b85df767a1
-ms.openlocfilehash: a9574b270fdbffc0026d49452adf092fdf87d7cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a82ee0b8eccde65aeffacb05695eed4b1f14cdc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493891"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267468"
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>MFC 精靈和對話方塊
 
@@ -28,4 +28,3 @@ Microsoft Foundation Class (MFC) 精靈會產生各種元件和物件的未定�
 |[MFC 專案中的 ATL 支援](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|建立 Active Template Library (ATL) 所需的標頭和巨集。|
 |[MFC 類別精靈](../../mfc/reference/mfc-class-wizard.md)|建立 .h 檔案和 .cpp 檔案。|
 |[MFC 傳統型應用程式](../../mfc/mfc-desktop-applications.md)|MFC 文件的連結。|
-

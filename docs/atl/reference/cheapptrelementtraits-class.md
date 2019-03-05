@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrElementTraits class
 ms.assetid: 910e0e06-3c8b-4242-bf00-b57eb74fbc77
-ms.openlocfilehash: 4e5d66c3e596383fecfcf730c81c4d41c08d5e2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e535afb3a49a5720c8394cc1ab9186c360527fea
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610131"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257277"
 ---
 # <a name="cheapptrelementtraits-class"></a>CHeapPtrElementTraits 類別
 
@@ -36,7 +36,7 @@ class CHeapPtrElementTraits :
 *T*<br/>
 要儲存在集合類別的物件類型。
 
-*配置器*<br/>
+*Allocator*<br/>
 要使用的記憶體配置類別。 預設值是[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)。
 
 ## <a name="members"></a>成員

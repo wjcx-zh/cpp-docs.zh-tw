@@ -8,12 +8,12 @@ helpviewer_keywords:
 - composite controls, C++
 - composite controls classes
 ms.assetid: 9e8d65c4-d631-4500-a28b-6d42c35aba26
-ms.openlocfilehash: b85cf13da1019f4eb2bf1970a7d775e506819094
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 088f38283b0ecd69c53ee9b973cda1b22f791a59
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458483"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301905"
 ---
 # <a name="composite-controls-classes"></a>複合控制項類別
 
@@ -30,4 +30,3 @@ ms.locfileid: "50458483"
 [類別概觀](../atl/atl-class-overview.md)<br/>
 [複合控制項巨集](../atl/reference/composite-control-macros.md)<br/>
 [複合控制項全域函式](../atl/reference/composite-control-global-functions.md)
-

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-ms.openlocfilehash: a4846fb8ea34a3d6a83ae892eabee74f4a48cd6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04d1fa57e34528f96f505fa20abb9b1131f80689
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586367"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284862"
 ---
 # <a name="cd2dresource-class"></a>CD2DResource 類別
 
@@ -46,7 +46,7 @@ class CD2DResource : public CObject;
 |名稱|描述|
 |----------|-----------------|
 |[CD2DResource::CD2DResource](#cd2dresource)|建構 CD2DResource 物件。|
-|[CD2DResource:: ~ CD2DResource](#cd2dresource__~cd2dresource)|解構函式。 D2D 資源物件正在被終結時呼叫。|
+|[CD2DResource::~CD2DResource](#cd2dresource__~cd2dresource)|解構函式。 D2D 資源物件正在被終結時呼叫。|
 
 ### <a name="public-methods"></a>公用方法
 

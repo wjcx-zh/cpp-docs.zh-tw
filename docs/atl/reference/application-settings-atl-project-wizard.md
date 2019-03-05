@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Project Wizard, application settings
 ms.assetid: d48c9fc5-f439-49fd-884c-8bcfa7d52991
-ms.openlocfilehash: e026db8c1d2caacd9af15fb923d194750c9d8217
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd9d5c6ef1ccb86f2968b1e2d2706092b6db45e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622127"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271810"
 ---
 # <a name="application-settings-atl-project-wizard"></a>應用程式設定, ATL 專案精靈
 
@@ -29,7 +29,7 @@ ms.locfileid: "50622127"
 
    選取即可建立本機的跨處理序伺服器。 此選項不允許對 MFC 或 COM + 1.0 支援。 它不會不允許合併 proxy/stub 程式碼。
 
-- **服務 (EXE)**
+- **Service (EXE)**
 
    選取即可建立 Windows 啟動時，會在背景中執行的 Windows 應用程式。 此選項不允許支援 MFC 或 COM + 1.0，或不允許合併 proxy/stub 程式碼。
 
@@ -61,4 +61,3 @@ ms.locfileid: "50622127"
 [ATL 專案精靈](../../atl/reference/atl-project-wizard.md)<br/>
 [建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)<br/>
 [預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)
-

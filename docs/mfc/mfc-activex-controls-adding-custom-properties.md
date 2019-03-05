@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: 2cc9cfa1886c6ba8e714736e0192b56bf3b154f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e02d5523b894f89aa93c8d2765a128920afa2353
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496417"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284199"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX 控制項：加入自訂屬性
 
@@ -22,7 +22,7 @@ ms.locfileid: "50496417"
 
 - [加入自訂屬性的屬性精靈變更](#_core_classwizard_changes_for_custom_properties)
 
-自訂屬性可分成四個不同的實作： 成員變數、 通知、 Get/Set 方法，與使用參數化變數成員。
+自訂屬性可分成四個不同的實作：成員變數，以通知，Get/Set 方法的成員變數和參數化。
 
 - 成員變數的實作
 
@@ -38,7 +38,7 @@ ms.locfileid: "50496417"
 
 - 參數化的實作
 
-   加入屬性精靈 支援參數化的實作。 參數化的屬性 （有時稱為屬性的陣列） 可用來透過您控制項的單一屬性來存取一組值。 分派對應項目巨集，此實作是 DISP_PROPERTY_PARAM。 如需有關如何實作這種類型的詳細資訊，請參閱 <<c0> [ 實作參數化屬性](../mfc/mfc-activex-controls-advanced-topics.md)文中所 ActiveX 控制項： 進階主題。
+   加入屬性精靈 支援參數化的實作。 參數化的屬性 （有時稱為屬性的陣列） 可用來透過您控制項的單一屬性來存取一組值。 分派對應項目巨集，此實作是 DISP_PROPERTY_PARAM。 如需有關如何實作這種類型的詳細資訊，請參閱 <<c0> [ 實作參數化屬性](../mfc/mfc-activex-controls-advanced-topics.md)ActiveX 控制項 」 文件中：進階的主題。
 
 ##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> 使用加入屬性精靈來加入自訂屬性
 

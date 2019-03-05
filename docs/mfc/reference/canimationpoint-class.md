@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-ms.openlocfilehash: 15f18a43fcda76bb5531434de84d97a349cb7f39
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15f06d2fa3478570d2f784879a13e7b68515e746
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497187"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271264"
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint 類別
 
@@ -73,7 +73,7 @@ class CAnimationPoint : public CAnimationBaseObject;
 |名稱|描述|
 |----------|-----------------|
 |[CAnimationPoint::operator CPoint](#operator_cpoint)|將 CPoint CAnimationPoint。|
-|[CAnimationPoint::operator =](#operator_eq)|給 CAnimationPoint ptSrc。|
+|[CAnimationPoint::operator=](#operator_eq)|給 CAnimationPoint ptSrc。|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
@@ -266,7 +266,7 @@ CAnimationPoint CPoint 為目前值。
 
 此函式會在內部呼叫 GetValue。 如果基於某些原因的 GetValue 失敗，傳回的點將會包含預設值 x 和 Y 座標。
 
-##  <a name="operator_eq"></a>  CAnimationPoint::operator =
+##  <a name="operator_eq"></a>  CAnimationPoint::operator=
 
 給 CAnimationPoint ptSrc。
 

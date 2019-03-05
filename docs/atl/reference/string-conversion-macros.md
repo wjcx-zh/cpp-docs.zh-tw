@@ -11,12 +11,12 @@ f1_keywords:
 - atlconv/ATL::DEVMODEW2A
 - atlconv/ATL::TEXTMETRICW2A
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-ms.openlocfilehash: 1cad89fe065c0827169a22cc9699b677323d8594
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 889f8459e81418197420bc2efd410225d4f220bc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544517"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271758"
 ---
 # <a name="string-conversion-macros"></a>字串轉換巨集
 
@@ -24,7 +24,7 @@ ms.locfileid: "50544517"
 
 ##  <a name="atl_and_mfc_string_conversion_macros"></a>  ATL 和 MFC 字串轉換巨集
 
-這裡討論的字串轉換巨集對於 ATL 及 MFC 而言都有效。 如需有關 MFC 字串轉換的詳細資訊，請參閱[TN059： 使用的 MFC MBCS/Unicode 轉換巨集](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md)並[MFC 巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)。
+這裡討論的字串轉換巨集對於 ATL 及 MFC 而言都有效。 如需有關 MFC 字串轉換的詳細資訊，請參閱[TN059:使用 MFC MBCS/Unicode 轉換巨集](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md)並[MFC 巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)。
 
 ##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  DEVMODE 和 TEXTMETRIC 字串轉換巨集
 
@@ -56,7 +56,7 @@ DEVMODEA2W 因此，複製`DEVMODE`LPSTR 結構字串到`DEVMODE`結構的字串
 
 |作用中的編譯器指示詞|T 變為|OLE 變為|
 |----------------------------------|---------------|-----------------|
-|無|**A**|**W**|
+|none|**A**|**W**|
 |**\_UNICODE**|**W**|**W**|
 |**OLE2ANSI**|**A**|**A**|
 |**\_UNICODE**和**OLE2ANSI**|**W**|**A**|

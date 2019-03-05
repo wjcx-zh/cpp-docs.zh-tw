@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: 21a8e6ed28498756130e6ddb418e93b0e9ad86cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbd2a2d301646b4d3897d9fe4990bdfd1e48325b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662770"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303332"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages 類別
 
@@ -278,7 +278,7 @@ void AdaptColors(
 ### <a name="parameters"></a>參數
 
 [in]*clrBase*<br/>
-[in]*clrTone*<br/>
+[in] *clrTone*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -326,7 +326,7 @@ int AddImage(
 *bSetBitPerPixel*<br/>
 [in]如果`CMFCToolBarImages`物件會使用新的映像; 的色彩深度 （每像素的位元）False`CMFCToolbarImages`物件會保留目前的色彩深度。
 
-*ImageList*<br/>
+*imageList*<br/>
 [in]參考`CMFCToolbarImages`物件，其中包含要加入的影像。
 
 *nIndex*<br/>
@@ -372,7 +372,7 @@ BOOL CopyImageToClipboard(int iImage);
 
 ### <a name="parameters"></a>參數
 
-[in]*iImage*<br/>
+[in] *iImage*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -386,7 +386,7 @@ BOOL CopyTo(CMFCToolBarImages& imageList);
 
 ### <a name="parameters"></a>參數
 
-[in]*imageList*<br/>
+[in] *imageList*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -402,7 +402,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 
 ### <a name="parameters"></a>參數
 
-*ImageList*<br/>
+*imageList*<br/>
 [in]工具列影像，做為來源使用的映像清單。
 
 ### <a name="return-value"></a>傳回值
@@ -423,8 +423,8 @@ static HRGN __stdcall CreateRegionFromImage(
 
 ### <a name="parameters"></a>參數
 
-[in]*bmp*<br/>
-[in]*clrTransparent*<br/>
+[in] *bmp*<br/>
+[in] *clrTransparent*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -516,13 +516,13 @@ BOOL DrawEx(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*iImageIndex*<br/>
-[in]*horzAlign*<br/>
-[in]*vertAlign*<br/>
-[in]*rectSrc*<br/>
-[in]*alphaSrc*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *iImageIndex*<br/>
+[in] *horzAlign*<br/>
+[in] *vertAlign*<br/>
+[in] *rectSrc*<br/>
+[in] *alphaSrc*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -536,7 +536,7 @@ static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bIsRTL*<br/>
+[in] *bIsRTL*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -727,7 +727,7 @@ HBITMAP GetMask(int iImage);
 
 ### <a name="parameters"></a>參數
 
-[in]*iImage*<br/>
+[in] *iImage*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -921,9 +921,9 @@ BOOL LoadStr(
 
 ### <a name="parameters"></a>參數
 
-[in]*lpszResourceName*<br/>
-[in]*hinstRes*<br/>
-[in]*bAdd*<br/>
+[in] *lpszResourceName*<br/>
+[in] *hinstRes*<br/>
+[in] *bAdd*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -939,7 +939,7 @@ static COLORREF __stdcall MapFromSysColor(
 
 ### <a name="parameters"></a>參數
 
-[in]*色彩*<br/>
+[in] *color*<br/>
 [in]*bUseRGBQUAD*<br/>
 
 ### <a name="return-value"></a>傳回值
@@ -958,8 +958,8 @@ BOOL MapTo3dColors(
 ### <a name="parameters"></a>參數
 
 [in]*bUseRGBQUAD*<br/>
-[in]*clrSrc*<br/>
-[in]*clrDest*<br/>
+[in] *clrSrc*<br/>
+[in] *clrDest*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -975,7 +975,7 @@ static COLORREF __stdcall MapToSysColor(
 
 ### <a name="parameters"></a>參數
 
-[in]*色彩*<br/>
+[in] *color*<br/>
 [in]*bUseRGBQUAD*<br/>
 
 ### <a name="return-value"></a>傳回值
@@ -990,7 +990,7 @@ static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
 
 ### <a name="parameters"></a>參數
 
-[in]*色彩*<br/>
+[in] *color*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1048,8 +1048,8 @@ static BOOL __stdcall MirrorBitmapVert(
 
 ### <a name="parameters"></a>參數
 
-[in]*hbmp*<br/>
-[in]*cyImage*<br/>
+[in] *hbmp*<br/>
+[in] *cyImage*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1085,8 +1085,8 @@ BOOL PreMultiplyAlpha(HBITMAP hbmp);
 
 ### <a name="parameters"></a>參數
 
-[in]*hbmp*<br/>
-[in]*bAutoCheckPremlt*<br/>
+[in] *hbmp*<br/>
+[in] *bAutoCheckPremlt*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1166,7 +1166,7 @@ void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bAlwaysLight*<br/>
+[in] *bAlwaysLight*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1180,7 +1180,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 
 ### <a name="parameters"></a>參數
 
-*n 值*<br/>
+*nValue*<br/>
 [in]新的 alpha 色頻值。
 
 ### <a name="remarks"></a>備註
@@ -1195,7 +1195,7 @@ static void __stdcall SetFadedImageAlpha(BYTE nValue);
 
 ### <a name="parameters"></a>參數
 
-[in]*n 值*<br/>
+[in] *nValue*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1226,7 +1226,7 @@ void SetLightPercentage(int nValue);
 
 ### <a name="parameters"></a>參數
 
-[in]*n 值*<br/>
+[in] *nValue*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1238,7 +1238,7 @@ void SetMapTo3DColors(BOOL bMapTo3DColors);
 
 ### <a name="parameters"></a>參數
 
-[in]*bMapTo3DColors*<br/>
+[in] *bMapTo3DColors*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1250,7 +1250,7 @@ void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bAuto*<br/>
+[in] *bAuto*<br/>
 
 ### <a name="remarks"></a>備註
 

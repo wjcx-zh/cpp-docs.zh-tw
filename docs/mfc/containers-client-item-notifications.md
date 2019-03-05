@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE containers [MFC], client-item notifications
 - client items and OLE containers
 ms.assetid: e1f1c427-01f5-45f2-b496-c5bce3d76340
-ms.openlocfilehash: b59ba84c27d9ed4c964bd308cf69f9f729eb3c39
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 583c438820c002a4c192d15358ca98424d02889a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528891"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291050"
 ---
 # <a name="containers-client-item-notifications"></a>容器：用戶端項目通知
 
@@ -40,7 +40,7 @@ ms.locfileid: "50528891"
 |**OLE_CHANGED**|指定 OLE 項目已變更的外觀。|
 |**OLE_CHANGED_STATE**|描述輸入的狀態 (*emptyState*， *loadedState*， *openState*， *activeState*，或*activeUIState*)。|
 
-如需用戶端項目可以假設之狀態的詳細資訊，請參閱[容器： 用戶端項目狀態](../mfc/containers-client-item-states.md)。
+如需用戶端項目可以假設之狀態的詳細資訊，請參閱[容器：用戶端項目狀態](../mfc/containers-client-item-states.md)。
 
 這個架構會呼叫`COleClientItem::OnGetItemPosition`時就地編輯為啟動項目。 支援就地編輯的應用程式需要實作。 MFC 應用程式精靈提供了基本的實作，這會指派至項目的座標`CRect`做為引數傳遞的物件`OnGetItemPosition`。
 
@@ -51,4 +51,3 @@ ms.locfileid: "50528891"
 [容器](../mfc/containers.md)<br/>
 [容器：用戶端項目狀態](../mfc/containers-client-item-states.md)<br/>
 [COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)
-

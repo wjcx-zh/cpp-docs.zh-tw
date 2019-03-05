@@ -1,5 +1,5 @@
 ---
-title: 例外狀況：資料庫例外狀況
+title: '例外狀況: 資料庫例外狀況'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DAO [MFC], exceptions
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 17a52787462301e839cb2e960fad8b480380ba49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f7f3bff9f28968361ecfa7374a235a727443004
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492791"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285551"
 ---
-# <a name="exceptions-database-exceptions"></a>例外狀況：資料庫例外狀況
+# <a name="exceptions-database-exceptions"></a>例外狀況: 資料庫例外狀況
 
 這篇文章說明如何處理資料庫例外狀況。 不論您使用 MFC 類別使用開放式資料庫連接 (ODBC) 或 MFC 類別的資料存取物件 (DAO)，適用於大部分的這篇文章中的資料。 其中一個或另一個模型特有的資料明確標記。 主題包括：
 
@@ -77,4 +77,3 @@ DAO 範例類似於 ODBC 的範例，但您通常可以擷取更多種類的資�
 ## <a name="see-also"></a>另請參閱
 
 [例外狀況處理](../mfc/exception-handling-in-mfc.md)
-

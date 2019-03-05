@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], Show
 - CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
-ms.openlocfilehash: 665de65d64262415e20ca5ac05e1e06b2c1862c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 462a4aa04ddc542db8aba734ed93ab0fae905dad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573377"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283835"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar 類別
 
@@ -52,7 +52,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 |[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|(覆寫 `CMFCPopupMenu::IsRibbonMiniToolBar`。)|
 |[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|設定要顯示在工具列上的命令清單。|
 |[CMFCRibbonMiniToolBar::Show](#show)|顯示位於指定的螢幕座標的迷你工具列。|
-|[CMFCRibbonMiniToolBar::ShowWithContextMenu](#showwithcontextmenu)|顯示迷你工具列以及操作功能表。|
+|[CMFCRibbonMiniToolBar::ShowWithContextMenu](#showwithcontextmenu)|顯示迷你工具列以及內容功能表。|
 
 ## <a name="remarks"></a>備註
 
@@ -134,7 +134,7 @@ BOOL Show(
 
 ##  <a name="showwithcontextmenu"></a>  CMFCRibbonMiniToolBar::ShowWithContextMenu
 
-顯示迷你工具列以及操作功能表。
+顯示迷你工具列以及內容功能表。
 
 ```
 BOOL ShowWithContextMenu(

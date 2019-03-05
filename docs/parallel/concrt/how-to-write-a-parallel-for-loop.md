@@ -1,18 +1,18 @@
 ---
-title: 如何：撰寫 parallel_for 迴圈
+title: HOW TO：撰寫 parallel_for 迴圈
 ms.date: 11/04/2016
 helpviewer_keywords:
 - writing a parallel_for loop [Concurrency Runtime]
 - parallel_for function, example
 ms.assetid: adb4d64e-5514-4b70-8dcb-b9210e6b5a1c
-ms.openlocfilehash: 5caba385304e97bf2e1008a44724c792d56124f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6ac30a5de0ff45adad1064aeab708e6a84f5e9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592700"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283588"
 ---
-# <a name="how-to-write-a-parallelfor-loop"></a>如何：撰寫 parallel_for 迴圈
+# <a name="how-to-write-a-parallelfor-loop"></a>HOW TO：撰寫 parallel_for 迴圈
 
 此範例示範如何使用[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)來計算兩個矩陣的乘積。
 
@@ -53,4 +53,3 @@ parallel: 1311
 
 [平行演算法](../../parallel/concrt/parallel-algorithms.md)<br/>
 [parallel_for 函式](reference/concurrency-namespace-functions.md#parallel_for)
-

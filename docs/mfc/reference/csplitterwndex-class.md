@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSplitterWndEx [MFC], OnDrawSplitter
 ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
-ms.openlocfilehash: fa58dbffc3e6416c18b8124f8e5edfe1ce987815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dedad4e99a37b13dc618859c8e6d8a83a65ea76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538992"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265141"
 ---
 # <a name="csplitterwndex-class"></a>CSplitterWndEx 類別
 
@@ -77,7 +77,7 @@ virtual void OnDrawSplitter(
 *pDC*<br/>
 [in]裝置內容指標。 如果此參數為 NULL，架構會重新繪製作用中視窗。
 
-*n*<br/>
+*nType*<br/>
 [in]其中一個`CSplitterWnd::ESplitType`列舉值，指定要繪製的分隔器視窗項目。 有效值為 `splitBox`、`splitBar`、`splitIntersection` 和 `splitBorder`。
 
 *rect*<br/>

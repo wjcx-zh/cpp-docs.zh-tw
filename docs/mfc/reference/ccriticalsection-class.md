@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CCriticalSection [MFC], Unlock
 - CCriticalSection [MFC], m_sect
 ms.assetid: f776f74b-5b0b-4f32-9c13-2b8e4a0d7b2b
-ms.openlocfilehash: 152efe6b1c5e8be67a3c37cc7e56b12c88c1b4dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c89647afc8a9a8c6564d25afe20d48818a643f2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641454"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291037"
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection 類別
 
@@ -75,7 +75,7 @@ Mutex 不會使用的重要區段 (請參閱[CMutex](../../mfc/reference/cmutex-
 
 - 內嵌方法，您也可以共用多個執行緒的類別，藉由新增`CCriticalSection`-類別和鎖定時所需的資料成員的型別資料成員。
 
-如需有關使用`CCriticalSection`物件，請參閱文章[多執行緒： 如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
+如需有關使用`CCriticalSection`物件，請參閱文章[多執行緒：如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

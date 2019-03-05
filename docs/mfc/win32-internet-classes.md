@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Win32 [MFC], Internet classes
 - Windows API [MFC], Internet classes
 ms.assetid: b49601d5-3025-4068-9408-316b54ee4375
-ms.openlocfilehash: a655759e8e1ffdcfe422305cd39623b9d7a6ca4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c067d0c0067ee13b0e6ce6d84fd97135274c88b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486433"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260552"
 ---
 # <a name="win32-internet-classes"></a>Win32 網際網路類別
 
@@ -65,4 +65,3 @@ MFC 包裝 Win32 Internet (WinInet) 和 ActiveX 技術，以便於網際網路�
 ## <a name="see-also"></a>另請參閱
 
 [類別概觀](../mfc/class-library-overview.md)
-

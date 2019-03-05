@@ -7,12 +7,12 @@ helpviewer_keywords:
 - StringRegister method
 - scripts, invoking registry in ATL
 ms.assetid: eabd41ee-586b-4266-9e92-5aaad04b73a4
-ms.openlocfilehash: 170eb4c29571fcec8797727f54630894c9198442
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a604b6105612ad89a12026121c464028535d7df
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650550"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287813"
 ---
 # <a name="invoking-scripts"></a>叫用指令碼
 
@@ -20,14 +20,14 @@ ms.locfileid: "50650550"
 
 |方法|語法/描述|
 |------------|-------------------------|
-|**ResourceRegister**|**HRESULT ResourceRegister (LPCOLESTR***resFileName* **，UINT** `nID` **，LPCOLESTR** `szType` **);**<br /><br /> 登錄模組的資源中包含的指令碼。 *resFileName*表示模組本身的 UNC 路徑。 *nID*並*szType*分別包含資源的識別碼和類型。|
-|**ResourceUnregister**|**HRESULT ResourceUnregister (LPCOLESTR***resFileName* **，UINT** `nID` **，LPCOLESTR** `szType` **);**<br /><br /> 取消登錄模組的資源中包含的指令碼。 *resFileName*表示模組本身的 UNC 路徑。 *nID*並*szType*分別包含資源的識別碼和類型。|
-|**ResourceRegisterSz**|**HRESULT ResourceRegisterSz (LPCOLESTR***resFileName* **，LPCOLESTR***szID* **，LPCOLESTR** `szType`**);**<br /><br /> 登錄模組的資源中包含的指令碼。 *resFileName*表示模組本身的 UNC 路徑。 *szID*並*szType*分別包含資源的字串識別項和型別。|
-|**ResourceUnregisterSz**|**HRESULT ResourceUnregisterSz (LPCOLESTR***resFileName* **，LPCOLESTR***szID* **，LPCOLESTR** `szType` **);**<br /><br /> 取消登錄模組的資源中包含的指令碼。 *resFileName*表示模組本身的 UNC 路徑。 *szID*並*szType*分別包含資源的字串識別項和型別。|
-|**FileRegister**|**HRESULT FileRegister (LPCOLESTR***檔名***);**<br /><br /> 註冊指令碼檔案中。 *檔名*是包含 （或） 的資源指令碼檔案的 UNC 路徑。|
-|**FileUnregister**|**HRESULT FileUnregister (LPCOLESTR***檔名***);**<br /><br /> 取消註冊的指令碼檔案中。 *檔名*是包含 （或） 的資源指令碼檔案的 UNC 路徑。|
-|**StringRegister**|**HRESULT StringRegister (LPCOLESTR***資料***);**<br /><br /> 註冊指令碼字串中。 *資料*包含指令碼本身。|
-|**StringUnregister**|**HRESULT StringUnregister (LPCOLESTR***資料***);**<br /><br /> 取消註冊的指令碼中的字串。 *資料*包含指令碼本身。|
+|**ResourceRegister**|**HRESULT ResourceRegister( LPCOLESTR**  *resFileName* **, UINT**  `nID` **, LPCOLESTR**  `szType` **);**<br /><br /> 登錄模組的資源中包含的指令碼。 *resFileName*表示模組本身的 UNC 路徑。 *nID*並*szType*分別包含資源的識別碼和類型。|
+|**ResourceUnregister**|**HRESULT ResourceUnregister( LPCOLESTR**  *resFileName* **, UINT**  `nID` **, LPCOLESTR**  `szType` **);**<br /><br /> 取消登錄模組的資源中包含的指令碼。 *resFileName*表示模組本身的 UNC 路徑。 *nID*並*szType*分別包含資源的識別碼和類型。|
+|**ResourceRegisterSz**|**HRESULT ResourceRegisterSz( LPCOLESTR**  *resFileName* **, LPCOLESTR**  *szID* **, LPCOLESTR**  `szType` **);**<br /><br /> 登錄模組的資源中包含的指令碼。 *resFileName*表示模組本身的 UNC 路徑。 *szID*並*szType*分別包含資源的字串識別項和型別。|
+|**ResourceUnregisterSz**|**HRESULT ResourceUnregisterSz( LPCOLESTR**  *resFileName* **, LPCOLESTR**  *szID* **, LPCOLESTR**  `szType` **);**<br /><br /> 取消登錄模組的資源中包含的指令碼。 *resFileName*表示模組本身的 UNC 路徑。 *szID*並*szType*分別包含資源的字串識別項和型別。|
+|**FileRegister**|**HRESULT FileRegister( LPCOLESTR**  *fileName*  **);**<br /><br /> 註冊指令碼檔案中。 *檔名*是包含 （或） 的資源指令碼檔案的 UNC 路徑。|
+|**FileUnregister**|**HRESULT FileUnregister( LPCOLESTR**  *fileName*  **);**<br /><br /> 取消註冊的指令碼檔案中。 *檔名*是包含 （或） 的資源指令碼檔案的 UNC 路徑。|
+|**StringRegister**|**HRESULT StringRegister( LPCOLESTR**  *data*  **);**<br /><br /> 註冊指令碼字串中。 *資料*包含指令碼本身。|
+|**StringUnregister**|**HRESULT StringUnregister( LPCOLESTR**  *data*  **);**<br /><br /> 取消註冊的指令碼中的字串。 *資料*包含指令碼本身。|
 
 **ResourceRegisterSz**並**ResourceUnregisterSz**，類似於**ResourceRegister**並**ResourceUnregister**，但可讓您指定的字串識別項。
 
@@ -36,4 +36,3 @@ ms.locfileid: "50650550"
 ## <a name="see-also"></a>另請參閱
 
 [建立登錄器指令碼](../atl/creating-registrar-scripts.md)
-

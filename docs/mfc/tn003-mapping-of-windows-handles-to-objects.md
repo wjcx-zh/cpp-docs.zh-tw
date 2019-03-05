@@ -1,5 +1,5 @@
 ---
-title: TN003：將 Windows 控制代碼對應到物件
+title: TN003:將 Windows 控制代碼對應到物件
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mapping
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows handles to objects [MFC]
 - mappings [MFC], Windows handles to objects
 ms.assetid: fbea9f38-992c-4091-8dbc-f29e288617d6
-ms.openlocfilehash: 46421016171f61a199e6a0a04f6b9b81e260496e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7844398ebaf5a8fdf8c56ab18b33d8c7717d1ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677145"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326695"
 ---
-# <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003：將 Windows 控制代碼對應到物件
+# <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003:將 Windows 控制代碼對應到物件
 
 本提示描述 MFC 支援對應 Windows 的常式物件的 c + + 物件的控制代碼。
 
@@ -87,4 +87,3 @@ myWnd.Detach();
 
 [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
 [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
-

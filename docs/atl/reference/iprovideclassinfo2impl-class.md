@@ -1,5 +1,5 @@
 ---
-title: IProvideClassInfo2Impl 類別
+title: IProvideClassInfo2Impl Class
 ms.date: 11/04/2016
 f1_keywords:
 - IProvideClassInfo2Impl
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - IProvideClassInfo2 ATL implementation
 - class information, ATL
 ms.assetid: d74956e8-9c69-4cba-b99d-ca1ac031bb9d
-ms.openlocfilehash: a270efa5daac8c8b608f05bdb752195f806b7935
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41a0756250e749a07d48ad4f090c2f1c322aa558
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539642"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289932"
 ---
-# <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl 類別
+# <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl Class
 
 這個類別提供的預設實作[IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo)並[IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2)方法。
 
@@ -53,7 +53,7 @@ Coclass' 預設的傳出 dispinterface 的識別碼指標。
 類型程式庫的次要版本。 預設值為 0。
 
 *tihclass*<br/>
-用來管理 coclass 的型別資訊的類別。 預設值是 `CComTypeInfoHolder`。
+用來管理 coclass 的型別資訊的類別。 預設值為 `CComTypeInfoHolder`。
 
 ## <a name="members"></a>成員
 

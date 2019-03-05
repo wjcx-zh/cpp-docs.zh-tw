@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: 0577788e4ab28139943da4b3bd14914799341213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b442db405ed04c4ebf697089adf3529cd590753a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506128"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57325993"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>將物件和控制項新增至 ATL 專案
 
@@ -37,7 +37,7 @@ ms.locfileid: "50506128"
 
    [加入類別](../../ide/add-class-dialog-box.md) 對話方塊隨即出現。
 
-1. 具有**ATL**中所選取的資料夾**類別**窗格中，選取要從 插入物件**範本**窗格。 按一下 **開啟**。 在所選物件的程式碼精靈隨即出現。
+1. 具有**ATL**中所選取的資料夾**類別**窗格中，選取要從 插入物件**範本**窗格。 按一下 [開啟]。 在所選物件的程式碼精靈隨即出現。
 
    > [!NOTE]
    > 如果您想要將 ATL 物件加入至 MFC 專案，您必須加入 ATL 支援加入現有的專案。 您可以依照下列中的指示[將 ATL 支援加入至 MFC 專案](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)。

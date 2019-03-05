@@ -20,16 +20,17 @@ f1_keywords:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-ms.openlocfilehash: 60b09b674bec58a7d35a9a37d9a8f4c40d8cd522
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: aa4945bb5f9ef28937487ba504e23c461992b263
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522723"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267013"
 ---
 # <a name="choice-class"></a>choice 類別
 
-`choice` 傳訊區塊是多來源的單一目標區塊，代表與一組來源的控制流程互動。 選擇區塊會等候多個來源的其中一個來產生訊息，而且會傳播產生訊息之來源的索引。
+
+  `choice` 傳訊區塊是多來源的單一目標區塊，代表與一組來源的控制流程互動。 選擇區塊會等候多個來源的其中一個來產生訊息，而且會傳播產生訊息之來源的索引。
 
 ## <a name="syntax"></a>語法
 
@@ -75,7 +76,7 @@ A `tuple`-基底類型表示的輸入來源的裝載。
 |[reserve](#reserve)|保留先前由此訊息`choice`傳訊區塊。|
 |[unlink_target](#unlink_target)|取消連結的目標區塊，從這個`choice`傳訊區塊。|
 |[unlink_targets](#unlink_targets)|取消連結所有的目標，從這個`choice`傳訊區塊。 (覆寫[isource:: Unlink_targets](isource-class.md#unlink_targets)。)|
-|[值](#value)|取得索引的所選取的訊息`choice`傳訊區塊。|
+|[value](#value)|取得索引的所選取的訊息`choice`傳訊區塊。|
 
 ## <a name="remarks"></a>備註
 
@@ -174,7 +175,7 @@ choice(
 
 移動建構函式不會在鎖定下執行，這表示使用者必須確認在移動時沒有任何輕量工作在執行中。 否則，可能發生許多競爭情況，導致例外狀況或不一致的狀態。
 
-##  <a name="dtor"></a> ~ 選擇
+##  <a name="dtor"></a> ~choice
 
 終結`choice`傳訊區塊。
 
@@ -220,7 +221,7 @@ bool has_value() const;
 
 **真**區塊已收到的值，如果**false**否則。
 
-##  <a name="index"></a> 索引
+##  <a name="index"></a> index
 
 傳回的索引`tuple`代表所選取的項目`choice`傳訊區塊。
 

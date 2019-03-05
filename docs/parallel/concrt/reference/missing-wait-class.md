@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - missing_wait class
 ms.assetid: ff981875-bd43-47e3-806f-b03c9f418b18
-ms.openlocfilehash: 7e515a33bfa827bba5329182cd3b79764495d728
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68d24d710eec4fd602e64cc3cbde810db2b1a495
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531114"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297635"
 ---
 # <a name="missingwait-class"></a>missing_wait 類別
 
@@ -61,13 +61,13 @@ missing_wait() throw();
 
 ### <a name="parameters"></a>參數
 
-*訊息 （_m)*<br/>
+*_Message*<br/>
 錯誤的描述性訊息。
 
 ## <a name="see-also"></a>另請參閱
 
 [concurrency 命名空間](concurrency-namespace.md)<br/>
 [task_group 類別](task-group-class.md)<br/>
-[等候](task-group-class.md)<br/>
+[wait](task-group-class.md)<br/>
 [run_and_wait](task-group-class.md)<br/>
 [structured_task_group 類別](structured-task-group-class.md)

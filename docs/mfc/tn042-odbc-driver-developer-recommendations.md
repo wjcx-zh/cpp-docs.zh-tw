@@ -1,5 +1,5 @@
 ---
-title: TN042：ODBC 驅動程式開發人員建議
+title: TN042:ODBC 驅動程式開發人員建議
 ms.date: 11/04/2016
 f1_keywords:
 - vc.odbc
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - databases [MFC], ODBC
 - TN042
 ms.assetid: ecc6b5d9-f480-4582-9e22-8309fe561dad
-ms.openlocfilehash: 2140261c2e90eaee7930d4be3282ec31bda29759
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 462f8229d995add79f48f34b7f81257710b4a8b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502036"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276607"
 ---
-# <a name="tn042-odbc-driver-developer-recommendations"></a>TN042：ODBC 驅動程式開發人員建議
+# <a name="tn042-odbc-driver-developer-recommendations"></a>TN042:ODBC 驅動程式開發人員建議
 
 > [!NOTE]
 >  下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
@@ -120,4 +120,3 @@ MFC 資料庫類別呈現給使用者，在許多情況下已超越大部分的�
 
 [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
 [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
-

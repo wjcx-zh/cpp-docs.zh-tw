@@ -6,12 +6,12 @@ f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::make_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-ms.openlocfilehash: c19cc8697820c038875d55b41cde61120bda9df7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 18fb409b033ea14c3a140ea6600fc43cf3a8d603
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518369"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326084"
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::graphics::direct3d 命名空間函式
 
@@ -150,7 +150,7 @@ inline uint4 msad4(
 
 ### <a name="parameters"></a>參數
 
-*（_r)*<br/>
+*_Reference*<br/>
 一個 uint 值的 4 位元組參考陣列
 
 *_Source*<br/>

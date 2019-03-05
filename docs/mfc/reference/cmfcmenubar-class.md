@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: a15291b49127b6c5f1efd97d8102b272c126cc10
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e4b1a7eba31ef28578c515c437978bc59cbd08f1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694357"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267364"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar 類別
 
@@ -262,9 +262,9 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>參數
 
-[in]*bStretch*<br/>
+[in] *bStretch*<br/>
 
-[in]*bHorz*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -280,9 +280,9 @@ virtual CSize CalcLayout(
 
 ### <a name="parameters"></a>參數
 
-[in]*dwMode*<br/>
+[in] *dwMode*<br/>
 
-[in]*nLength*<br/>
+[in] *nLength*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -334,7 +334,7 @@ virtual BOOL Create(
 *pParentWnd*<br/>
 [in]新的父視窗指標`CMFCMenuBar`物件。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]新的功能表列的樣式。
 
 *nID*<br/>
@@ -374,7 +374,7 @@ virtual BOOL CreateEx(
 *dwCtrlStyle*<br/>
 [in]新的功能表列的其他樣式。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]新的功能表列的主樣式。
 
 *rcBorders*<br/>
@@ -531,7 +531,7 @@ int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
 
 ### <a name="parameters"></a>參數
 
-[in]*pButton*<br/>
+[in] *pButton*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -629,9 +629,9 @@ CMFCToolBarMenuButtonsButton* GetSystemButton(
 
 ### <a name="parameters"></a>參數
 
-[in]*uiBtn*<br/>
+[in] *uiBtn*<br/>
 
-[in]*bByCommand*<br/>
+[in] *bByCommand*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -812,7 +812,7 @@ virtual void OnChangeHot(int iHot);
 
 ### <a name="parameters"></a>參數
 
-[in]*iHot*<br/>
+[in] *iHot*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -841,7 +841,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 
 ### <a name="parameters"></a>參數
 
-[in]*pButton*<br/>
+[in] *pButton*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -878,9 +878,9 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>參數
 
-[in]*點*<br/>
+[in] *point*<br/>
 
-[in]*pTI*<br/>
+[in] *pTI*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -894,7 +894,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>參數
 
-[in]*pMsg*<br/>
+[in] *pMsg*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -977,7 +977,7 @@ void SetForceDownArrows(BOOL bValue);
 
 ### <a name="parameters"></a>參數
 
-[in]*bValue*<br/>
+[in] *bValue*<br/>
 
 ### <a name="remarks"></a>備註
 

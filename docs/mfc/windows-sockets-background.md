@@ -1,5 +1,5 @@
 ---
-title: Windows Sockets：背景
+title: Windows Sockets:背景
 ms.date: 11/04/2016
 helpviewer_keywords:
 - record-oriented data [MFC]
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sequenced data flow
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
-ms.openlocfilehash: 93342f734d1e475cbae1b7e3025c59e6e6f73284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ab866609d0b75aaf9d06a01c204433d80e7e3d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468025"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274917"
 ---
-# <a name="windows-sockets-background"></a>Windows Sockets：背景
+# <a name="windows-sockets-background"></a>Windows Sockets:背景
 
 這篇文章說明的性質與用途的 Windows 通訊端。 本文也：
 
@@ -44,7 +44,7 @@ Windows Sockets 規格會定義 Microsoft Windows 的二進位相容網路程式
 
 Microsoft Foundation Class 程式庫 (MFC) 提供兩個類別，以支援使用 Windows Sockets API 進行程式設計。 其中一個類別， `CSocket`，提供高層級的抽象概念，來簡化您的網路通訊程式設計。
 
-Windows Sockets 規格後，Windows Sockets： 網路運算下 Microsoft Windows，現在是在 1.1 版中開啟的介面由個人及公司 TCP/IP 社群的一大群開發為一種開放式網路標準，而且是自由可供使用。 通訊端目前程式模型支援一個 「 通訊網域 」，並透過網際網路通訊協定套件。 使用 Windows SDK 中的規格。
+Windows Sockets 規格後，Windows Sockets:網路運算下 Microsoft Windows，現在是在版本 1.1 中，開啟介面由個人及公司 TCP/IP 社群的一大群開發為一種開放式網路標準，而且可供使用免費。 通訊端目前程式模型支援一個 「 通訊網域 」，並透過網際網路通訊協定套件。 使用 Windows SDK 中的規格。
 
 > [!TIP]
 >  通訊端會使用網際網路通訊協定套件，因為它們是慣用的路由支援 「 information highway。 」 的網際網路通訊的應用程式
@@ -70,7 +70,7 @@ Windows Sockets 規格後，Windows Sockets： 網路運算下 Microsoft Windows
 > [!NOTE]
 >  在某些網路通訊協定，例如 XNS，資料流可以是導向，為資料流的記錄，而不是為位元組資料流的記錄。 不過，較常見的 TCP/IP 通訊協定，在資料流是位元組資料流。 Windows Sockets 提供一個基礎通訊協定無關的抽象層。
 
-如需這些類型的詳細資訊和哪一種通訊端在哪些情況下使用，請參閱[Windows 通訊端： Stream 通訊端](../mfc/windows-sockets-stream-sockets.md)並[Windows Sockets： 資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)。
+如需這些類型的詳細資訊，以及哪種通訊端在哪些情況下使用，請參閱[Windows Sockets:Stream 通訊端](../mfc/windows-sockets-stream-sockets.md)和[Windows Sockets:資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)。
 
 ##  <a name="_core_the_socket_data_type"></a> 通訊端的資料類型
 
@@ -89,17 +89,16 @@ Windows Sockets 規格後，Windows Sockets： 網路運算下 Microsoft Windows
 - 讓接收解譯訊息做為函式呼叫的應用程式進行遠端程序呼叫 (RPC)。
 
 > [!TIP]
->  使用 MFC 通訊端的理想案例是當您撰寫的通訊兩端： 在兩端使用 MFC。 如需有關本主題中，包括如何管理案例，您要與非 MFC 應用程式通訊時，請參閱[Windows Sockets： 位元組順序](../mfc/windows-sockets-byte-ordering.md)。
+>  使用 MFC 通訊端的理想案例是當您撰寫的通訊兩端： 在兩端使用 MFC。 如需有關本主題中，包括如何管理案例，您要與非 MFC 應用程式通訊時，請參閱[Windows Sockets:位元組順序](../mfc/windows-sockets-byte-ordering.md)。
 
 如需詳細資訊，請參閱 Windows Sockets 規格： **ntohs**， **ntohl**， **htons**， **htonl**。 此外，請參閱下列主題：
 
-- [Windows Sockets：搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets:搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets：使用封存的通訊端範例](../mfc/windows-sockets-example-of-sockets-using-archives.md)
+- [Windows Sockets:使用封存的通訊端範例](../mfc/windows-sockets-example-of-sockets-using-archives.md)
 
-- [Windows Sockets：使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets:使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
 ## <a name="see-also"></a>另請參閱
 
 [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)
-

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-ms.openlocfilehash: 323b9a6e2c46bea8d82f0f589d1174041c1f0780
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa9d46b868c1a31729a9590db3b3f67179903881
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480102"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264661"
 ---
 # <a name="event-class"></a>event 類別
 
@@ -43,7 +43,7 @@ class event;
 |----------|-----------------|
 |[reset](#reset)|事件重設為未收到信號狀態。|
 |[set](#set)|通知事件。|
-|[等候](#wait)|等候事件變成收到訊號。|
+|[wait](#wait)|等候事件變成收到訊號。|
 |[wait_for_multiple](#wait_for_multiple)|等候變成已收到訊號的多個事件。|
 
 ### <a name="public-constants"></a>公用常數
@@ -126,7 +126,7 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 
 ### <a name="parameters"></a>參數
 
-*逾時 _t*<br/>
+*_Timeout*<br/>
 等候逾時之前，請指出毫秒的數。值`COOPERATIVE_TIMEOUT_INFINITE`表示沒有逾時。
 
 ### <a name="return-value"></a>傳回值
@@ -159,7 +159,7 @@ static size_t __cdecl wait_for_multiple(
 *_FWaitAll*<br/>
 如果設定為值 **，則為 true**，參數會指定陣列中的所有事件都提供在`_PPEvents`參數必須變成收到訊號，以滿足等候。 如果設為值**假**，它會指定陣列中的任何事件提供在`_PPEvents`變成收到訊號的參數會滿足等候。
 
-*逾時 _t*<br/>
+*_Timeout*<br/>
 等候逾時之前，請指出毫秒的數。值`COOPERATIVE_TIMEOUT_INFINITE`表示沒有逾時。
 
 ### <a name="return-value"></a>傳回值

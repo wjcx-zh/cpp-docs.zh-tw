@@ -72,12 +72,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::rbg
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-ms.openlocfilehash: 169c9ecb0fe68436a05c6c59a75a80a0d02f411c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6423220d8203b0d0fba73a4888f967e159db26de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508910"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326734"
 ---
 # <a name="double3-class"></a>double_3 類別
 
@@ -206,7 +206,7 @@ class double_3;
 
 **標頭：** amp_short_vectors.h
 
-**命名空間：** concurrency:: graphics
+**命名空間：** Concurrency:: graphics
 
 ##  <a name="ctor"></a> double_3
 
@@ -259,10 +259,10 @@ explicit inline double_3(
 *_V1*<br/>
 要初始化項目 1 的值。
 
-*並將 _V2*<br/>
+*_V2*<br/>
 要初始化項目 2 的值。
 
-*（_V)*<br/>
+*_V*<br/>
 初始設定的值。
 
 *_Other*<br/>

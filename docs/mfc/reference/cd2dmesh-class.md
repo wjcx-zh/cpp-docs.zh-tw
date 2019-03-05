@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DMesh [MFC], Open
 - CD2DMesh [MFC], m_pMesh
 ms.assetid: 11a2c78a-1367-40e8-a34f-44aa0509a4c9
-ms.openlocfilehash: 1cc1769f66b54f2a9a23ef9ad94298687fe4d925
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f4ad6fd054eeb8576c2fdb2dc924f70034b3abad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445639"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275105"
 ---
 # <a name="cd2dmesh-class"></a>CD2DMesh 類別
 
@@ -48,7 +48,7 @@ class CD2DMesh : public CD2DResource;
 |名稱|描述|
 |----------|-----------------|
 |[CD2DMesh::CD2DMesh](#cd2dmesh)|建構 CD2DMesh 物件。|
-|[CD2DMesh:: ~ CD2DMesh](#_dtorcd2dmesh)|解構函式。 D2D 網格物件正在被終結時呼叫。|
+|[CD2DMesh::~CD2DMesh](#_dtorcd2dmesh)|解構函式。 D2D 網格物件正在被終結時呼叫。|
 
 ### <a name="public-methods"></a>公用方法
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - child windows [MFC], working with
 - window objects [MFC], working with
 ms.assetid: f73aa254-90e3-46a9-8e9b-d78b7054a331
-ms.openlocfilehash: 66656fceec2005f7e789bf1cd68ffe52651aacc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c696d880ffa69b0a0399c5282621546c5783ebe4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526531"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265635"
 ---
 # <a name="working-with-window-objects"></a>使用視窗物件
 
@@ -39,4 +39,3 @@ ms.locfileid: "50526531"
 ## <a name="see-also"></a>另請參閱
 
 [視窗物件](../mfc/window-objects.md)
-

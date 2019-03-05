@@ -73,12 +73,12 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-ms.openlocfilehash: 094b91bb730f125ee3a159c80626a8724c10f93e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1a8f601c9f5798494ee34d3c3987222c14ecfa7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578902"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292184"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit 類別
 
@@ -187,7 +187,7 @@ CMFCRibbonEdit();
 *lpszLabel*<br/>
 [in]標籤`CMFCRibbonEdit`控制項。
 
-*n*<br/>
+*nImage*<br/>
 [in]要用於小影像的索引`CMFCRibbonEdit`控制項。 小型影像的集合是由父功能區分類維護。
 
 ### <a name="remarks"></a>備註
@@ -526,7 +526,7 @@ virtual void OnDrawOnList(
 *pDC*<br/>
 [in]裝置內容指標`CMFCRibbonEdit`控制項。
 
-*先把 strText*<br/>
+*strText*<br/>
 [in]顯示文字[ ] (../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit 類別")。
 
 *nTextOffset*<br/>
@@ -604,7 +604,7 @@ virtual void OnLButtonDown(CPoint point);
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]未使用此參數。
 
 ### <a name="remarks"></a>備註
@@ -619,7 +619,7 @@ virtual void OnLButtonUp(CPoint point);
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]未使用此參數。
 
 ### <a name="remarks"></a>備註
@@ -700,7 +700,7 @@ void SetEditText(CString strText);
 
 ### <a name="parameters"></a>參數
 
-*先把 strText*<br/>
+*strText*<br/>
 [in]文字方塊的文字。
 
 ##  <a name="settextalign"></a>  CMFCRibbonEdit::SetTextAlign

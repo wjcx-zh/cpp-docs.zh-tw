@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: 98de92a9473d64a87b9b7a9f2891adf4263e1951
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 1f92afa4f40a5a37f32e1bc86418056c8591625f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178963"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283133"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar 類別
 
@@ -365,7 +365,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 |[CMFCToolBar::Create](#create)|建立 `CMFCToolBar` 物件。|
 |[CMFCToolBar::CreateEx](#createex)|建立`CMFCToolBar`使用其他樣式選項，例如大型圖示的物件。|
 |[CMFCToolBar::Deactivate](#deactivate)|停用工具列。|
-|[Cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton)|啟用或停用**新增或移除按鈕**會出現在結尾的工具列的按鈕。|
+|[CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton)|啟用或停用**新增或移除按鈕**會出現在結尾的工具列的按鈕。|
 |[CMFCToolBar::EnableDocking](#enabledocking)|可停駐窗格的回主框架。 (覆寫[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)。)|
 |[CMFCToolBar::EnableLargeIcons](#enablelargeicons)|啟用或停用工具列按鈕上的大圖示。|
 |[CMFCToolBar::EnableQuickCustomization](#enablequickcustomization)|啟用或停用快速自訂的工具列，讓使用者可以按**Alt**鍵，並將按鈕拖曳至新位置。|
@@ -439,14 +439,14 @@ class CMFCToolBar : public CMFCBaseToolBar
 |[CMFCToolBar::IsLargeIcons](#islargeicons)|指定是否在應用程式中的工具列目前顯示大型圖示。|
 |[CMFCToolBar::IsLastCommandFromButton](#islastcommandfrombutton)|判斷最近執行已傳送命令，從指定的工具列按鈕。|
 |[CMFCToolBar::IsLocked](#islocked)|決定是否要鎖定工具列。|
-|[Cmfctoolbar:: Isonerowwithsibling](#isonerowwithsibling)|決定是否工具列和工具列，其同層級位於相同的資料列。|
+|[CMFCToolBar::IsOneRowWithSibling](#isonerowwithsibling)|決定是否工具列和工具列，其同層級位於相同的資料列。|
 |[CMFCToolBar::IsUserDefined](#isuserdefined)|指定工具列是否為使用者定義。|
 |[CMFCToolBar::LoadBitmap](#loadbitmap)|從應用程式資源載入工具列影像。|
 |[CMFCToolBar::LoadBitmapEx](#loadbitmapex)|從應用程式資源載入工具列影像。 包含大型映像。|
 |[CMFCToolBar::LoadParameters](#loadparameters)|從 Windows 登錄載入全域工具列上的選項。|
 |[CMFCToolBar::LoadState](#loadstate)|從 Windows 登錄載入工具列狀態資訊。 (覆寫[CPane::LoadState](../../mfc/reference/cpane-class.md#loadstate)。)|
 |[CMFCToolBar::LoadToolBar](#loadtoolbar)|從應用程式資源載入工具列。|
-|[Cmfctoolbar:: Loadtoolbarex](#loadtoolbarex)|使用從應用程式資源載入工具列`CMFCToolBarInfo`helper 類別，可讓應用程式使用大型映像。|
+|[CMFCToolBar::LoadToolBarEx](#loadtoolbarex)|使用從應用程式資源載入工具列`CMFCToolBarInfo`helper 類別，可讓應用程式使用大型映像。|
 |[CMFCToolBar::OnChangeHot](#onchangehot)|當使用者選取工具列上的按鈕時由架構呼叫。|
 |[CMFCToolBar::OnFillBackground](#onfillbackground)|由架構呼叫[CBasePane::DoPaint](../../mfc/reference/cbasepane-class.md#dopaint)工具列背景填滿。|
 |[CMFCToolBar::OnReset](#onreset)|還原為其原始狀態的工具列。|
@@ -477,14 +477,14 @@ class CMFCToolBar : public CMFCBaseToolBar
 |[CMFCToolBar::SetLockedSizes](#setlockedsizes)|在工具列上設定鎖定的按鈕和鎖定的映像的大小。|
 |[CMFCToolBar::SetMenuSizes](#setmenusizes)|設定工具列功能表按鈕和其映像的大小。|
 |[CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands)|設定使用者無法執行的命令的清單。|
-|[Cmfctoolbar:: Setonerowwithsibling](#setonerowwithsibling)|將工具列和其同層級置於相同的資料列。|
+|[CMFCToolBar::SetOneRowWithSibling](#setonerowwithsibling)|將工具列和其同層級置於相同的資料列。|
 |[CMFCToolBar::SetPermament](#setpermament)|指定使用者是否可以關閉工具列。|
 |[CMFCToolBar::SetRouteCommandsViaFrame](#setroutecommandsviaframe)|指定是否在父框架或擁有者的命令傳送至工具列。|
 |[CMFCToolBar::SetShowTooltips](#setshowtooltips)|指定是否，架構會顯示工具提示。|
-|[Cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)|指定工具列的同層級。|
+|[CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar)|指定工具列的同層級。|
 |[CMFCToolBar::SetSizes](#setsizes)|指定所有的工具列按鈕和映像的大小。|
 |[CMFCToolBar::SetToolBarBtnText](#settoolbarbtntext)|在工具列上，指定按鈕的屬性。|
-|[Cmfctoolbar:: Settworowswithsibling](#settworowswithsibling)|將工具列和其同層級置於個別的資料列。|
+|[CMFCToolBar::SetTwoRowsWithSibling](#settworowswithsibling)|將工具列和其同層級置於個別的資料列。|
 |[CMFCToolBar::SetUserImages](#setuserimages)|應用程式中設定使用者定義的映像的集合。|
 |[CMFCToolBar::StretchPane](#stretchpane)|會自動水平或垂直縮放的工具列。 (覆寫[cbasepane:: Stretchpane](../../mfc/reference/cbasepane-class.md#stretchpane)。)|
 |[CMFCToolBar::TranslateChar](#translatechar)|如果指定的按鍵碼對應至有效的鍵盤快速鍵，請執行按鈕命令。|
@@ -972,7 +972,7 @@ virtual BOOL Create(
 *pParentWnd*<br/>
 [in]工具列的父視窗指標。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]工具列的樣式。 請參閱[工具列控制項和按鈕樣式](/windows/desktop/Controls/toolbar-control-and-button-styles)樣式清單的 Windows SDK 中。
 
 *nID*<br/>
@@ -1010,7 +1010,7 @@ virtual BOOL CreateEx(
 *dwCtrlStyle*<br/>
 [in]建立內嵌的控制列物件的其他樣式。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]工具列的樣式。 請參閱[工具列控制項和按鈕樣式](/windows/desktop/Controls/toolbar-control-and-button-styles)取得一份適當的樣式。
 
 *rcBorders*<br/>
@@ -1135,7 +1135,7 @@ virtual void DrawSeparator(
 
 衍生自的類別中置換此方法[CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)自訂分隔符號 工具列上的外觀。 預設實作會呼叫[CMFCVisualManager::OnDrawSeparator](../../mfc/reference/cmfcvisualmanager-class.md#ondrawseparator)繪製分隔符號，其外觀取決於目前的視覺管理員。
 
-##  <a name="enablecustomizebutton"></a>  Cmfctoolbar:: Enablecustomizebutton
+##  <a name="enablecustomizebutton"></a>  CMFCToolBar::EnableCustomizeButton
 
 啟用或停用會出現在工具列的 [自訂] 按鈕。
 
@@ -2146,7 +2146,7 @@ virtual int HitTest(CPoint point);
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]要測試，在工作區座標的點。
 
 ### <a name="return-value"></a>傳回值
@@ -2169,7 +2169,7 @@ virtual int InsertButton(
 
 ### <a name="parameters"></a>參數
 
-*按鈕*<br/>
+*button*<br/>
 [in]指定要插入的按鈕。
 
 *iInsertAt*<br/>
@@ -2511,7 +2511,7 @@ BOOL IsLocked() const;
 
 鎖定的工具列會使用個別的映像清單。 如需有關這些映像清單的詳細資訊，請參閱 < [CMFCToolBar::LoadBitmapEx](#loadbitmapex)。
 
-##  <a name="isonerowwithsibling"></a>  Cmfctoolbar:: Isonerowwithsibling
+##  <a name="isonerowwithsibling"></a>  CMFCToolBar::IsOneRowWithSibling
 
 決定是否工具列和工具列，其同層級位於相同的資料列。
 
@@ -2586,7 +2586,7 @@ virtual BOOL LoadBitmap(
 *uiMenuResID*<br/>
 [in]參考標準功能表影像之點陣圖的資源識別碼。
 
-*封鎖*<br/>
+*bLocked*<br/>
 [in]True 表示要鎖定工具列，否則為 FALSE。
 
 *uiDisabledResID*<br/>
@@ -2615,8 +2615,8 @@ virtual BOOL LoadBitmapEx(
 
 ### <a name="parameters"></a>參數
 
-[in]*params*<br/>
-[in]*封鎖*<br/>
+[in] *params*<br/>
+[in] *bLocked*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -2630,7 +2630,7 @@ static BOOL __stdcall LoadLargeIconsState(LPCTSTR lpszProfileName = NULL);
 
 ### <a name="parameters"></a>參數
 
-[in]*lpszProfileName*<br/>
+[in] *lpszProfileName*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -2715,7 +2715,7 @@ virtual BOOL LoadToolBar(
 *uiMenuResID*<br/>
 [in]參考標準功能表影像之點陣圖的資源識別碼。
 
-*封鎖*<br/>
+*bLocked*<br/>
 [in]布林值，指定與否，是否要鎖定工具列。 如果這個參數是 *，則為 TRUE*，工具列已被鎖定。 否則工具列不會鎖定。
 
 *uiDisabledResID*<br/>
@@ -2742,7 +2742,7 @@ virtual BOOL LoadToolBar(
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
 
-##  <a name="loadtoolbarex"></a>  Cmfctoolbar:: Loadtoolbarex
+##  <a name="loadtoolbarex"></a>  CMFCToolBar::LoadToolBarEx
 
 使用從應用程式資源載入工具列`CMFCToolBarInfo`helper 類別，可讓應用程式使用大型映像。
 
@@ -2761,7 +2761,7 @@ virtual BOOL LoadToolBarEx(
 *params*<br/>
 [in]參考`CMFCToolBarInfo`物件，其中包含工具列影像的資源識別碼。
 
-*封鎖*<br/>
+*bLocked*<br/>
 [in]布林值，指定與否，是否要鎖定工具列。 如果此參數為 TRUE，則會鎖定工具列。 否則工具列不會鎖定。
 
 ### <a name="return-value"></a>傳回值
@@ -2890,7 +2890,7 @@ virtual BOOL OnSetAccData(long lVal);
 
 ### <a name="parameters"></a>參數
 
-[in]*lVal*<br/>
+[in] *lVal*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -3063,10 +3063,10 @@ int ReplaceButton(
 *uiCmd*<br/>
 [in]要取代按鈕的命令識別碼。
 
-*按鈕*<br/>
+*button*<br/>
 [in]參考`CMFCToolBarButton`插入。
 
-*球*<br/>
+*bAll*<br/>
 [in]布林值，指定是否要取代所有具有所指定的命令 ID 的按鈕*uiCmd*。 如果此參數為 TRUE，會取代所有具有指定的命令 ID 的按鈕。 否則，會取代第一個按鈕。
 
 ### <a name="return-value"></a>傳回值
@@ -3150,7 +3150,7 @@ static BOOL __stdcall SaveParameters(LPCTSTR lpszProfileName = NULL);
 
 ### <a name="parameters"></a>參數
 
-[in]*lpszProfileName*<br/>
+[in] *lpszProfileName*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -3412,7 +3412,7 @@ static void __stdcall SetHelpMode(BOOL bOn = TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bOn*<br/>
+[in] *bOn*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -3424,7 +3424,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 
 ### <a name="parameters"></a>參數
 
-[in]*pMenuButton*<br/>
+[in] *pMenuButton*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -3474,7 +3474,7 @@ void SetIgnoreSetText(BOOL bValue);
 
 ### <a name="parameters"></a>參數
 
-[in]*bValue*<br/>
+[in] *bValue*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -3584,7 +3584,7 @@ static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
 
 這個方法會清除先前的非允許的命令清單。 根據預設，非允許命令的清單是空的。
 
-##  <a name="setonerowwithsibling"></a>  Cmfctoolbar:: Setonerowwithsibling
+##  <a name="setonerowwithsibling"></a>  CMFCToolBar::SetOneRowWithSibling
 
 將工具列和其同層級置於相同的資料列。
 
@@ -3608,7 +3608,7 @@ void SetOrigButtons(const CObList& lstOrigButtons);
 
 ### <a name="parameters"></a>參數
 
-[in]*lstOrigButtons*<br/>
+[in] *lstOrigButtons*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -3667,7 +3667,7 @@ static void SetShowTooltips(BOOL bValue);
 
 呼叫[CMFCToolBar::GetShowTooltips](#getshowtooltips)方法，以判斷是否在架構顯示工具提示。
 
-##  <a name="setsiblingtoolbar"></a>  Cmfctoolbar:: Setsiblingtoolbar
+##  <a name="setsiblingtoolbar"></a>  CMFCToolBar::SetSiblingToolBar
 
 指定工具列的同層級。
 
@@ -3744,7 +3744,7 @@ void SetToolBarBtnText(
 
 在偵錯組建中，這個方法如果會產生判斷提示失敗*nBtnIndex*未參考有效的工具列按鈕或工具列按鈕是分隔符號。
 
-##  <a name="settworowswithsibling"></a>  Cmfctoolbar:: Settworowswithsibling
+##  <a name="settworowswithsibling"></a>  CMFCToolBar::SetTwoRowsWithSibling
 
 將工具列和其同層級置於個別的資料列。
 
@@ -3825,7 +3825,7 @@ virtual BOOL TranslateChar(UINT nChar);
 
 ### <a name="parameters"></a>參數
 
-*NChar*<br/>
+*nChar*<br/>
 [in]指定虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h
 
 ### <a name="return-value"></a>傳回值
@@ -3906,4 +3906,3 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 [CMFCPopupMenuBar 類別](../../mfc/reference/cmfcpopupmenubar-class.md)<br/>
 [CMFCDropDownToolBar 類別](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
 [逐步解說：將放在工具列上的控制項](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-

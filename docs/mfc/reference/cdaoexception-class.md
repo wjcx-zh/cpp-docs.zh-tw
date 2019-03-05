@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CDaoException [MFC], m_pErrorInfo
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
-ms.openlocfilehash: 224ce79094b174d0bd011bd89afbcfe6fb7735d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d49291c51f66ee837f9b31a2ade390cec48c51a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585909"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288996"
 ---
 # <a name="cdaoexception-class"></a>CDaoException 類別
 
@@ -71,7 +71,7 @@ class CDaoException : public CException
 
 DAO 錯誤碼，請參閱 DAOERR 的檔案。H. 如需相關資訊，請參閱 「 可截獲資料存取錯誤 」 DAO [說明] 中。
 
-如需詳細資訊，在一般情況下，或將處理的例外狀況的相關`CDaoException`物件，請參閱文章[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)並[例外狀況： 資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)。 第二篇文章包含說明如何在 DAO 中的例外狀況處理的範例程式碼。
+如需詳細資訊，在一般情況下，或將處理的例外狀況的相關`CDaoException`物件，請參閱文章[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)和[例外狀況：資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)。 第二篇文章包含說明如何在 DAO 中的例外狀況處理的範例程式碼。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -113,7 +113,7 @@ CDaoException();
 
 1. 如果您建構在堆積上的例外狀況物件，將它與刪除**刪除**運算子，當您完成時。
 
-如需在 MFC DAO 類別中處理錯誤的詳細資訊，請參閱文章[例外狀況： 資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)。
+如需在 MFC DAO 類別中處理錯誤的詳細資訊，請參閱文章[例外狀況：資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)。
 
 ##  <a name="geterrorcount"></a>  CDaoException::GetErrorCount
 
@@ -163,7 +163,7 @@ void GetErrorInfo(int nIndex);
 
 `GetErrorInfo` 將資訊儲存在例外狀況物件的`m_pErrorInfo`資料成員。 傳回的資訊的簡短描述，請參閱 < [m_pErrorInfo](#m_perrorinfo)。 如果您攔截例外狀況型別的`CDaoException`MFC 中，所擲回`m_pErrorInfo`成員就會自動填入。 如果您選擇直接呼叫 DAO，您必須呼叫例外狀況物件的`GetErrorInfo`成員函式自行填入`m_pErrorInfo`。 如需更詳細的說明，請參閱[CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)結構。
 
-如需 DAO 例外狀況和範例程式碼，請參閱文章[例外狀況： 資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)。
+如需 DAO 例外狀況和範例程式碼，請參閱文章[例外狀況：資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)。
 
 ##  <a name="m_nafxdaoerror"></a>  CDaoException::m_nAfxDaoError
 

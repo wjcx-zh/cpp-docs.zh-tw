@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: 8fe22924039cc0e2547df2cc07b0c4387ad908bd
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f194879cf4a1388fc156fa4e92f4f9bea5056191
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177052"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296003"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl 類別
 
@@ -329,8 +329,8 @@ virtual HRESULT accSelect(
 
 ### <a name="parameters"></a>參數
 
-[in]*flagsSelect*<br/>
-[in]*varChild*<br/>
+[in] *flagsSelect*<br/>
+[in] *varChild*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -386,7 +386,7 @@ void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bShow*<br/>
+[in] *bShow*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -458,7 +458,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]位元組合 (OR)[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。
 
 *rect*<br/>
@@ -675,7 +675,7 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 
 ### <a name="parameters"></a>參數
 
-[in]*pcountChildren*<br/>
+[in] *pcountChildren*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -689,7 +689,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 
 ### <a name="parameters"></a>參數
 
-[in]*pvarChild*<br/>
+[in] *pvarChild*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -705,8 +705,8 @@ virtual HRESULT get_accHelp(
 
 ### <a name="parameters"></a>參數
 
-[in]*varChild*<br/>
-[in]*pszHelp*<br/>
+[in] *varChild*<br/>
+[in] *pszHelp*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -723,9 +723,9 @@ virtual HRESULT get_accHelpTopic(
 
 ### <a name="parameters"></a>參數
 
-[in]*pszHelpFile*<br/>
-[in]*varChild*<br/>
-[in]*pidTopic*<br/>
+[in] *pszHelpFile*<br/>
+[in] *varChild*<br/>
+[in] *pidTopic*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -741,8 +741,8 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ### <a name="parameters"></a>參數
 
-[in]*varChild*<br/>
-[in]*pszKeyboardShortcut*<br/>
+[in] *varChild*<br/>
+[in] *pszKeyboardShortcut*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -756,7 +756,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 
 ### <a name="parameters"></a>參數
 
-[in]*pvarChildren*<br/>
+[in] *pvarChildren*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1053,7 +1053,7 @@ CMFCPropertyGridProperty* HitTest(
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pt*<br/>
 [in]用戶端座標中的點。
 
 *pnArea*<br/>
@@ -1272,7 +1272,7 @@ virtual void OnClickButton(CPoint point);
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]用戶端座標中的點。
 
 ### <a name="remarks"></a>備註
@@ -1608,7 +1608,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>參數
 
-*色彩*<br/>
+*color*<br/>
 [in]RGB 色彩值。
 
 ### <a name="remarks"></a>備註

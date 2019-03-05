@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 26f24e922769a565c88264032373662116eee290
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: da77e2ba93554cb65d4cc92353d05d54467b50d4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176987"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269639"
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概觀
 
@@ -54,9 +54,9 @@ void StandardMethod() {
 
 重要的部分的程式碼如下所示：
 
-- 資料： 資料包含三個陣列。 所有具有相同陣序 (1) 和長度 (5)。
+- 資料：資料是由三個陣列所組成。 所有具有相同陣序 (1) 和長度 (5)。
 
-- 反覆項目： 第一個`for`迴圈提供一個機制，以逐一查看陣列中的項目。 您想要執行以計算總和的程式碼包含在第一個`for`區塊。
+- 反覆項目:第一個`for`迴圈提供一個機制，以逐一查看陣列中的項目。 您想要執行以計算總和的程式碼包含在第一個`for`區塊。
 
 - 索引：`idx`變數存取陣列的個別項目。
 
@@ -98,9 +98,9 @@ void CppAmpMethod() {
 
 相同的基本項目存在，但是會使用 c + + AMP 建構：
 
-- 資料： 您可使用 c + + 陣列建構三個 c + + AMP [array_view](../../parallel/amp/reference/array-view-class.md)物件。 提供四個值來建構`array_view`物件： 資料值、 陣序規範、 項目類型和長度`array_view`每個維度中的物件。 陣序和型別會當做型別參數傳遞。 做為建構函式參數傳遞的資料和長度。 在此範例中，會傳遞至建構函式的 c + + 陣列是一維的。 順位和長度用來建構中的資料的矩形`array_view`物件和值來填滿此陣列的資料。 執行階段程式庫也包含[array 類別](../../parallel/amp/reference/array-class.md)，其具有類似的介面`array_view`類別，並將在本文稍後討論。
+- 資料：您可以使用 c + + 陣列建構三個 c + + AMP [array_view](../../parallel/amp/reference/array-view-class.md)物件。 提供四個值來建構`array_view`物件： 資料值、 陣序規範、 項目類型和長度`array_view`每個維度中的物件。 陣序和型別會當做型別參數傳遞。 做為建構函式參數傳遞的資料和長度。 在此範例中，會傳遞至建構函式的 c + + 陣列是一維的。 順位和長度用來建構中的資料的矩形`array_view`物件和值來填滿此陣列的資料。 執行階段程式庫也包含[array 類別](../../parallel/amp/reference/array-class.md)，其具有類似的介面`array_view`類別，並將在本文稍後討論。
 
-- 反覆項目： [parallel_for_each 函式 (c + + AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each)提供一個機制，以逐一查看的資料項目，或*計算網域*。 在此範例中，指定 compute domain `sum.extent`。 您想要執行的程式碼包含在 lambda 運算式中，或是*核心功能*。 `restrict(amp)`指示中使用 c + + AMP 可以加速 c + + 語言的子集。
+- 反覆項目:[Parallel_for_each 函式 (c + + AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each)提供一個機制，以逐一查看的資料項目，或*計算網域*。 在此範例中，指定 compute domain `sum.extent`。 您想要執行的程式碼包含在 lambda 運算式中，或是*核心功能*。 `restrict(amp)`指示中使用 c + + AMP 可以加速 c + + 語言的子集。
 
 - 索引：[編製索引類別](../../parallel/amp/reference/index-class.md)變數`idx`，來比對的陣序的其中一個的陣序規範宣告`array_view`物件。 使用索引，您可以存取的個別項目`array_view`物件。
 
@@ -354,7 +354,7 @@ void AddArraysWithFunction() {
 }
 ```
 
-## <a name="accelerating-code-tiles-and-barriers"></a>加速程式碼： 並排和屏障
+## <a name="accelerating-code-tiles-and-barriers"></a>加速程式碼：並排和屏障
 
 您可以使用並排顯示，以獲得額外的加速。 並排顯示會將執行緒分成相等的矩形子集或*圖格*。 您決定您的資料集和您撰寫程式碼的演算法為基礎的適當並排顯示大小。 對於每個執行緒中，您可以存取*全域*相對於整個資料元素的位置`array`或是`array_view`及存取權*本機*相對於 tile 的位置。 使用區域索引值可簡化您的程式碼，因為您不必撰寫程式碼至本機的索引值從全域轉譯。 若要使用並排，呼叫[extent:: tile 方法](reference/extent-class.md#tile)中之計算網域`parallel_for_each`方法，並使用[tiled_index](../../parallel/amp/reference/tiled-index-class.md) lambda 運算式中的物件。
 
@@ -457,11 +457,11 @@ void MathExample() {
 
 C + + AMP 包含針對加速圖形程式設計所設計的圖形程式庫。 此文件庫只適用於支援原生繪圖功能的裝置。 方法會在[concurrency:: graphics 命名空間](../../parallel/amp/reference/concurrency-graphics-namespace.md)且包含在\<amp_graphics.h > 標頭檔。 圖形程式庫的主要元件如下：
 
-- [texture 類別](../../parallel/amp/reference/texture-class.md)： 您可以使用紋理類別從記憶體中或從檔案建立紋理。 紋理類似陣列，因為它們包含資料，而且這些介面類似於指派和複製建構 c + + 標準程式庫中的容器。 如需詳細資訊，請參閱 [C++ 標準程式庫容器](../../standard-library/stl-containers.md)。 樣板參數`texture`類別是項目型別和陣序規範。 順位可以是 1、 2 或 3。 項目類型可以是一種短向量類型在本文稍後所述。
+- [texture 類別](../../parallel/amp/reference/texture-class.md):您可以使用紋理類別從記憶體中或從檔案建立紋理。 紋理類似陣列，因為它們包含資料，而且這些介面類似於指派和複製建構 c + + 標準程式庫中的容器。 如需詳細資訊，請參閱 [C++ 標準程式庫容器](../../standard-library/stl-containers.md)。 樣板參數`texture`類別是項目型別和陣序規範。 順位可以是 1、 2 或 3。 項目類型可以是一種短向量類型在本文稍後所述。
 
-- [writeonly_texture_view 類別](../../parallel/amp/reference/writeonly-texture-view-class.md)： 提供所有材質的唯寫存取。
+- [writeonly_texture_view 類別](../../parallel/amp/reference/writeonly-texture-view-class.md):提供所有材質的唯寫存取。
 
-- 短向量庫： 定義一組長度為 2、 3 和 4 為基礎的短向量類型**int**， `uint`， **float**， **double**，[範數](../../parallel/amp/reference/norm-class.md)，或[unorm](../../parallel/amp/reference/unorm-class.md)。
+- 短向量庫：定義短向量類型，長度為 2、 3 和 4 為基礎的一組**int**， `uint`， **float**， **double**， [norm](../../parallel/amp/reference/norm-class.md)，或[unorm](../../parallel/amp/reference/unorm-class.md)。
 
 ## <a name="universal-windows-platform-uwp-apps"></a>通用 Windows 平台 (UWP) 應用程式
 
@@ -469,7 +469,7 @@ C + + AMP 包含針對加速圖形程式設計所設計的圖形程式庫。 此
 
 - [在 UWP 應用程式中使用 C++ AMP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
 
-- [逐步解說： 在 c + + 建立基本 Windows 執行階段元件，然後從 JavaScript 呼叫該](http://go.microsoft.com/fwlink/p/?linkid=249077)
+- [逐步解說：C + + 建立基本 Windows 執行階段元件，然後從 JavaScript 呼叫該](http://go.microsoft.com/fwlink/p/?linkid=249077)
 
 - [Bing Maps Trip Optimizer、 JavaScript 和 c + + 中的 Windows 市集應用程式](http://go.microsoft.com/fwlink/p/?linkid=249078)
 

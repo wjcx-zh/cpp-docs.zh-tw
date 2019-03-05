@@ -78,12 +78,12 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], SetPaletteID
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
-ms.openlocfilehash: c6ebfc39c3fcfb467774fb898d9188c2dd3e69e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa2996cba7d4839387d5801d2bab70b428134db4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618846"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298629"
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery 類別
 
@@ -363,7 +363,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -482,7 +482,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -568,7 +568,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -580,7 +580,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -626,7 +626,7 @@ virtual void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>參數
 
-[in]*bEnable*<br/>
+[in] *bEnable*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -638,7 +638,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 
 ### <a name="parameters"></a>參數
 
-[in]*bIsRTL*<br/>
+[in] *bIsRTL*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -672,7 +672,7 @@ void SelectItem(int nItemIndex);
 
 ### <a name="parameters"></a>參數
 
-[in]*nItemIndex*<br/>
+[in] *nItemIndex*<br/>
 
 ### <a name="remarks"></a>備註
 

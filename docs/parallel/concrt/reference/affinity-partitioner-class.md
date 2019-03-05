@@ -8,16 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - affinity_partitioner class
 ms.assetid: 31bf7bb1-bd01-491c-9760-d9d60edfccad
-ms.openlocfilehash: 41073aceec5f9b8c3a5ac36a921e29c5270f44e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dac25755c388e5297ce671da09b7938f09f1ef03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499039"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262788"
 ---
 # <a name="affinitypartitioner-class"></a>affinity_partitioner 類別
 
-`affinity_partitioner` 類別與 `static_partitioner` 類別類似，不過，它可依據對應背景工作執行緒子範圍的選擇來改善快取依存性。 當迴圈重複執行相同的資料集，且快取容納得下該資料時，它可以大幅改善效能。 請注意，若要取得資料位置的優勢，必須使用相同的 `affinity_partitioner` 物件來搭配平行迴圈的後續反覆項目，且該平行迴圈應執行於特定資料集上。
+
+  `affinity_partitioner` 類別與 `static_partitioner` 類別類似，不過，它可依據對應背景工作執行緒子範圍的選擇來改善快取依存性。 當迴圈重複執行相同的資料集，且快取容納得下該資料時，它可以大幅改善效能。 請注意，若要取得資料位置的優勢，必須使用相同的 `affinity_partitioner` 物件來搭配平行迴圈的後續反覆項目，且該平行迴圈應執行於特定資料集上。
 
 ## <a name="syntax"></a>語法
 

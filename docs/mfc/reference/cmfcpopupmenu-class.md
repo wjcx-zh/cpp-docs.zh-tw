@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: b52ae91b7ce0111725e5ba21a7f8ca8aaa6779e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b45ac09ff87c191e55e403951fdff18cae33256d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517672"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292272"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu 類別
 
@@ -310,8 +310,8 @@ static BOOL __stdcall ActivatePopupMenu(
 
 ### <a name="parameters"></a>參數
 
-[in]*pTopFrame*<br/>
-[in]*pPopupMenu*<br/>
+[in] *pTopFrame*<br/>
+[in] *pPopupMenu*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -381,7 +381,7 @@ void CloseMenu(BOOL bSetFocusToBar = FALSE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bSetFocusToBar*<br/>
+[in] *bSetFocusToBar*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -435,7 +435,7 @@ virtual BOOL Create(
 *hMenu*<br/>
 [in]功能表資源控制代碼。
 
-*封鎖*<br/>
+*bLocked*<br/>
 [in]布林值參數，指出功能表是否可自訂。 FALSE 表示快顯功能表自訂。
 
 *bOwnMessage*<br/>
@@ -466,9 +466,9 @@ virtual CPane* CreateTearOffBar(
 
 ### <a name="parameters"></a>參數
 
-[in]*pWndMain*<br/>
-[in]*uiID*<br/>
-[in]*lpszName*<br/>
+[in] *pWndMain*<br/>
+[in] *uiID*<br/>
+[in] *lpszName*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -533,7 +533,7 @@ void EnableResize(CSize sizeMinResize);
 
 ### <a name="parameters"></a>參數
 
-[in]*sizeMinResize*<br/>
+[in] *sizeMinResize*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -557,7 +557,7 @@ void EnableVertResize(int nMinResize);
 
 ### <a name="parameters"></a>參數
 
-[in]*nMinResize*<br/>
+[in] *nMinResize*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -569,7 +569,7 @@ CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*uiCmd*<br/>
+[in] *uiCmd*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -754,7 +754,7 @@ virtual CWnd* GetParentArea(CRect& rectParentBtn);
 
 ### <a name="parameters"></a>參數
 
-[in]*rectParentBtn*<br/>
+[in] *rectParentBtn*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -894,7 +894,7 @@ int InsertItem(
 
 ### <a name="parameters"></a>參數
 
-*按鈕*<br/>
+*button*<br/>
 [in]要加入功能表項目參考。
 
 *iInsertAt*<br/>
@@ -1095,7 +1095,7 @@ void MoveTo(const CPoint& pt);
 
 ### <a name="parameters"></a>參數
 
-[in]*pt*<br/>
+[in] *pt*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1107,7 +1107,7 @@ virtual void OnChangeHot(int nHot);
 
 ### <a name="parameters"></a>參數
 
-[in]*nHot*<br/>
+[in] *nHot*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1119,7 +1119,7 @@ virtual void OnChooseItem(UINT uidCmdID);
 
 ### <a name="parameters"></a>參數
 
-[in]*uidCmdID*<br/>
+[in] *uidCmdID*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1135,10 +1135,10 @@ virtual BOOL OnCmdMsg(
 
 ### <a name="parameters"></a>參數
 
-[in]*nID*<br/>
-[in]*則 nCode*<br/>
-[in]*pExtra*<br/>
-[in]*pHandlerInfo*<br/>
+[in] *nID*<br/>
+[in] *nCode*<br/>
+[in] *pExtra*<br/>
+[in] *pHandlerInfo*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1152,7 +1152,7 @@ BOOL PostCommand(UINT uiCommandID);
 
 ### <a name="parameters"></a>參數
 
-[in]*uiCommandID*<br/>
+[in] *uiCommandID*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1166,7 +1166,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>參數
 
-[in]*pMsg*<br/>
+[in] *pMsg*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1180,7 +1180,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bNotify*<br/>
+[in] *bNotify*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1265,7 +1265,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bAutoDestroy*<br/>
+[in] *bAutoDestroy*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1345,7 +1345,7 @@ void SetMessageWnd(CWnd* pMsgWnd);
 
 ### <a name="parameters"></a>參數
 
-[in]*pMsgWnd*<br/>
+[in] *pMsgWnd*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1357,7 +1357,7 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>參數
 
-[in]*pElem*<br/>
+[in] *pElem*<br/>
 
 ### <a name="remarks"></a>備註
 

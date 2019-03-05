@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-ms.openlocfilehash: fd865d888a4ebe4504f19282d3c98ce8d7514e2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be11bcd4cdbcd8448cc54f688d7dab9b61f49a57
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622621"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304076"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar 類別
 
@@ -89,7 +89,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ## <a name="remarks"></a>備註
 
-如需 Outlook 功能區的範例，請參閱 < [OutlookDemo 範例： MFC OutlookDemo 應用程式](../../visual-cpp-samples.md)。
+如需 Outlook 功能區的範例，請參閱[OutlookDemo 範例：MFC OutlookDemo 應用程式](../../visual-cpp-samples.md)。
 
 ## <a name="implementing-the-outlook-bar"></a>實作 Outlook 功能區
 
@@ -273,7 +273,7 @@ virtual BOOL Create(
 *nID*<br/>
 [in]指定控制項 id。 必須是不同於其他控制項的應用程式中使用的 Id。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]指定所要的控制項列樣式。 如需可能的值，請參閱[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。
 
 *dwControlBarStyle*<br/>
@@ -458,7 +458,7 @@ virtual void OnAfterAnimation(int nPage);
 
 ### <a name="parameters"></a>參數
 
-*n 版面*<br/>
+*nPage*<br/>
 [in]已成為作用中的索引標籤頁之以零起始的索引。
 
 ### <a name="remarks"></a>備註
@@ -475,7 +475,7 @@ virtual BOOL OnBeforeAnimation(int nPage);
 
 ### <a name="parameters"></a>參數
 
-*n 版面*<br/>
+*nPage*<br/>
 [in]即將設定作用中的索引標籤頁之以零起始的索引。
 
 ### <a name="return-value"></a>傳回值
@@ -511,7 +511,7 @@ BOOL RemoveCustomPage(
 
 ### <a name="parameters"></a>參數
 
-*之 uiPage*<br/>
+*uiPage*<br/>
 [in]父 Outlook 視窗中頁面的以零為起始的索引。
 
 *pTargetWnd*<br/>

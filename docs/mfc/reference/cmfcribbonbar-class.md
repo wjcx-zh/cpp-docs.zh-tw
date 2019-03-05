@@ -188,16 +188,17 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: 78566eaa15eb695d892471925a9dadcad9655c5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3656b6a135757a4658f2ef08b80a54efffe89012
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640241"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288411"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar 類別
 
-`CMFCRibbonBar` 類別會實作類似於 Office 2007 中使用的功能區列。
+
+  `CMFCRibbonBar` 類別會實作類似於 Office 2007 中使用的功能區列。
 
 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
 
@@ -221,7 +222,7 @@ class CMFCRibbonBar : public CPane
 |----------|-----------------|
 |[CMFCRibbonBar::ActivateContextCategory](#activatecontextcategory)|啟動已經可見的內容分類。|
 |[CMFCRibbonBar::AddCategory](#addcategory)|將新的功能區分類加入至功能區。|
-|[Cmfcribbonbar:: Addcontextcategory](#addcontextcategory)|加入內容分類。|
+|[CMFCRibbonBar::AddContextCategory](#addcontextcategory)|加入內容分類。|
 |[CMFCRibbonBar::AddMainCategory](#addmaincategory)|加入新的主要功能區分類。|
 |[CMFCRibbonBar::AddPrintPreviewCategory](#addprintpreviewcategory)||
 |[CMFCRibbonBar::AddQATOnlyCategory](#addqatonlycategory)||
@@ -277,7 +278,7 @@ class CMFCRibbonBar : public CPane
 |[CMFCRibbonBar::IsToolTipEnabled](#istooltipenabled)|決定功能區列的工具提示是否啟用。|
 |[CMFCRibbonBar::IsTransparentCaption](#istransparentcaption)||
 |[CMFCRibbonBar::IsWindows7Look](#iswindows7look)|指出功能區是否具有 Windows 7 樣式外觀 (小型矩形應用程式按鈕)。|
-|[Cmfcribbonbar:: Loadfromresource](#loadfromresource)|多載。 從應用程式資源載入功能區列。|
+|[CMFCRibbonBar::LoadFromResource](#loadfromresource)|多載。 從應用程式資源載入功能區列。|
 |[CMFCRibbonBar::OnClickButton](#onclickbutton)||
 |[CMFCRibbonBar::OnEditContextMenu](#oneditcontextmenu)||
 |[CMFCRibbonBar::OnRTLChanged](#onrtlchanged)|(覆寫 `CPane::OnRTLChanged`。)|
@@ -319,7 +320,7 @@ Microsoft 在發行 Microsoft Office 2007 的同時，也引進 Office Fluent �
 
 您可以使用 `CMFCRibbonStatusBar` 類別來實作類似於 Office 2007 中使用的狀態列。 功能區分類包含 （並顯示） 一群[功能區面板](../../mfc/reference/cmfcribbonpanel-class.md)。 每個功能區面板包含一或多個功能區項目，衍生自[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)。
 
-如需有關如何將功能區列加入至現有的 MFC 應用程式的資訊，請參閱[逐步解說： 更新 MFC Scribble 應用程式](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)。
+如需有關如何將功能區列加入至現有的 MFC 應用程式的資訊，請參閱[逐步解說：更新 MFC Scribble 應用程式](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -410,7 +411,7 @@ CMFCRibbonCategory* AddCategory(
 
 [!code-cpp[NVC_MFC_RibbonApp#5](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_1.cpp)]
 
-##  <a name="addcontextcategory"></a>  Cmfcribbonbar:: Addcontextcategory
+##  <a name="addcontextcategory"></a>  CMFCRibbonBar::AddContextCategory
 
 建立並初始化新的內容類別，功能區列。
 
@@ -625,7 +626,7 @@ BOOL Create(
 *pParentWnd*<br/>
 [in]功能區列的父視窗的指標。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]新的視窗樣式的邏輯組合。
 
 *nID*<br/>
@@ -663,7 +664,7 @@ BOOL CreateEx(
 *dwCtrlStyle*<br/>
 [in]未使用此參數。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]新的視窗樣式的邏輯組合。
 
 *nID*<br/>
@@ -1305,7 +1306,7 @@ virtual CMFCRibbonBaseElement* HitTest(
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]在 功能區列座標點的位置。
 
 *bCheckActiveCategory*<br/>
@@ -1478,7 +1479,7 @@ virtual void OnClickButton(
 *pButton*<br/>
 [in]已按下按鈕的指標。
 
-*點*<br/>
+*point*<br/>
 [in]未使用此參數。
 
 ### <a name="remarks"></a>備註
@@ -1493,8 +1494,8 @@ virtual void OnEditContextMenu(
 
 ### <a name="parameters"></a>參數
 
-[in]*pEdit*<br/>
-[in]*點*<br/>
+[in] *pEdit*<br/>
+[in] *point*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1545,10 +1546,10 @@ virtual BOOL OnShowRibbonContextMenu(
 
 ### <a name="parameters"></a>參數
 
-[in]*pWnd*<br/>
-[in]*x*<br/>
-[in]*y*<br/>
-[in]*pHit*<br/>
+[in] *pWnd*<br/>
+[in] *x*<br/>
+[in] *y*<br/>
+[in] *pHit*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1566,10 +1567,10 @@ virtual BOOL OnShowRibbonQATMenu(
 
 ### <a name="parameters"></a>參數
 
-[in]*pWnd*<br/>
-[in]*x*<br/>
-[in]*y*<br/>
-[in]*pHit*<br/>
+[in] *pWnd*<br/>
+[in] *x*<br/>
+[in] *y*<br/>
+[in] *pHit*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -2014,7 +2015,7 @@ virtual BOOL TranslateChar(UINT nChar);
 
 ### <a name="parameters"></a>參數
 
-*NChar*<br/>
+*nChar*<br/>
 [in]使用者按鍵輸入字元碼。
 
 ### <a name="return-value"></a>傳回值
@@ -2053,7 +2054,7 @@ BOOL IsWindows7Look() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="loadfromresource"></a>  Cmfcribbonbar:: Loadfromresource
+##  <a name="loadfromresource"></a>  CMFCRibbonBar::LoadFromResource
 
 多載。 從應用程式資源載入功能區列。
 
@@ -2155,5 +2156,4 @@ TRUE 會重新計算的功能區的版面配置。FALSE 否則。
 [CMFCRibbonCategory 類別](../../mfc/reference/cmfcribboncategory-class.md)<br/>
 [CMFCRibbonPanel 類別](../../mfc/reference/cmfcribbonpanel-class.md)<br/>
 [CMFCRibbonBaseElement 類別](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
-[逐步解說： 更新 MFC Scribble 應用程式](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
-
+[逐步解說：更新 MFC Scribble 應用程式](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)

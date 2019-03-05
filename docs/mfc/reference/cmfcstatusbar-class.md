@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: c4891c6bb66fe5e4b737ca9b128a01bcedcf39e7
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 94876dcf6549842a5fedbd96a93ef2cc760225ce
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176571"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326747"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar 類別
 
@@ -194,8 +194,8 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>參數
 
-[in]*bStretch*<br/>
-[in]*bHorz*<br/>
+[in] *bStretch*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -209,7 +209,7 @@ int CommandToIndex(UINT nIDFind) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*nIDFind*<br/>
+[in] *nIDFind*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -226,9 +226,9 @@ BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-[in]*pParentWnd*<br/>
-[in]*cheaderctrl:: Create*<br/>
-[in]*nID*<br/>
+[in] *pParentWnd*<br/>
+[in] *dwStyle*<br/>
+[in] *nID*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -246,10 +246,10 @@ BOOL CreateEx(
 
 ### <a name="parameters"></a>參數
 
-[in]*pParentWnd*<br/>
-[in]*dwCtrlStyle*<br/>
-[in]*cheaderctrl:: Create*<br/>
-[in]*nID*<br/>
+[in] *pParentWnd*<br/>
+[in] *dwCtrlStyle*<br/>
+[in] *dwStyle*<br/>
+[in] *nID*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -354,7 +354,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*rect*<br/>
+[in] *rect*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -368,7 +368,7 @@ UINT GetItemID(int nIndex) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*nIndex*<br/>
+[in] *nIndex*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -384,8 +384,8 @@ void GetItemRect(
 
 ### <a name="parameters"></a>參數
 
-[in]*nIndex*<br/>
-[in]*lpRect*<br/>
+[in] *nIndex*<br/>
+[in] *lpRect*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -401,10 +401,10 @@ void GetPaneInfo(
 
 ### <a name="parameters"></a>參數
 
-[in]*nIndex*<br/>
-[in]*nID*<br/>
-[in]*nStyle*<br/>
-[in]*cxWidth*<br/>
+[in] *nIndex*<br/>
+[in] *nID*<br/>
+[in] *nStyle*<br/>
+[in] *cxWidth*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -416,7 +416,7 @@ long GetPaneProgress(int nIndex) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*nIndex*<br/>
+[in] *nIndex*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -430,7 +430,7 @@ UINT GetPaneStyle(int nIndex) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*nIndex*<br/>
+[in] *nIndex*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -448,8 +448,8 @@ CString GetPaneText(int nIndex) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*nIndex*<br/>
-[in]*s*<br/>
+[in] *nIndex*<br/>
+[in] *s*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -538,7 +538,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
 ### <a name="parameters"></a>參數
 
-[in]*cs*<br/>
+[in] *cs*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -552,7 +552,7 @@ void SetDrawExtendedArea(BOOL bSet = TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bSet*<br/>
+[in] *bSet*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -566,8 +566,8 @@ BOOL SetIndicators(
 
 ### <a name="parameters"></a>參數
 
-[in]*lpIDArray*<br/>
-[in]*nIDCount*<br/>
+[in] *lpIDArray*<br/>
+[in] *nIDCount*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -677,10 +677,10 @@ void SetPaneInfo(
 
 ### <a name="parameters"></a>參數
 
-[in]*nIndex*<br/>
-[in]*nID*<br/>
-[in]*nStyle*<br/>
-[in]*cxWidth*<br/>
+[in] *nIndex*<br/>
+[in] *nID*<br/>
+[in] *nStyle*<br/>
+[in] *cxWidth*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -722,8 +722,8 @@ void SetPaneStyle(
 
 ### <a name="parameters"></a>參數
 
-[in]*nIndex*<br/>
-[in]*nStyle*<br/>
+[in] *nIndex*<br/>
+[in] *nStyle*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -738,9 +738,9 @@ virtual BOOL SetPaneText(
 
 ### <a name="parameters"></a>參數
 
-[in]*nIndex*<br/>
-[in]*lpszNewText*<br/>
-[in]*bUpdate*<br/>
+[in] *nIndex*<br/>
+[in] *lpszNewText*<br/>
+[in] *bUpdate*<br/>
 
 ### <a name="return-value"></a>傳回值
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-ms.openlocfilehash: bd68179be21fec85c0ebb901c2a8c9a4491ff401
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b24d7679edfaab4d4eeb6d59770f30cd4253580
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534819"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303933"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget 類別
 
@@ -98,8 +98,8 @@ virtual DROPEFFECT OnDragEnter(
 |參數|描述|
 |*pWnd*|[in]未使用。|
 |*pDataObject*|[in]在使用者拖曳物件的指標。|
-|*dwKeyState*|[in]包含的輔助按鍵的狀態。 這是任意數目的下列組合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。|
-|*點*|[in]工作區座標中的游標位置。|
+|*dwKeyState*|[in]包含的輔助按鍵的狀態。 這是任意數目的下列組合：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。|
+|*point*|[in]工作區座標中的游標位置。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -159,8 +159,8 @@ virtual DROPEFFECT OnDragOver(
 |參數|描述|
 |*pWnd*|[in]未使用。|
 |*pDataObject*|[in]在使用者拖曳物件的指標。|
-|*dwKeyState*|[in]包含的輔助按鍵的狀態。 這是任意數目的下列組合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。|
-|*點*|[in]在 工作區座標中滑鼠指標的位置。|
+|*dwKeyState*|[in]包含的輔助按鍵的狀態。 這是任意數目的下列組合：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。|
+|*point*|[in]在 工作區座標中滑鼠指標的位置。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -203,8 +203,8 @@ virtual DROPEFFECT OnDropEx(
 |*pWnd*|[in]未使用。|
 |*pDataObject*|[in]在使用者拖曳物件的指標。|
 |*dropEffect*|[in]預設的拖放作業。|
-|*下拉清單*|[in]未使用。|
-|*點*|[in]在 工作區座標中滑鼠指標的位置。|
+|*dropList*|[in]未使用。|
+|*point*|[in]在 工作區座標中滑鼠指標的位置。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -254,4 +254,3 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [類別](../../mfc/reference/mfc-classes.md)<br/>
 [拖放 (OLE)](../../mfc/drag-and-drop-ole.md)
-

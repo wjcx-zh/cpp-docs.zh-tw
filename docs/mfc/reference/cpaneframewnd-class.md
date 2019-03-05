@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CPaneFrameWnd [MFC], OnDrawBorder
 - CPaneFrameWnd [MFC], m_bUseSaveBits
 ms.assetid: ea3423a3-2763-482e-b763-817036ded10d
-ms.openlocfilehash: e31b390d9464b3cbe6babd744e987ce7222e58bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3172556b3b12141aaae45992dee36061aebf2a15
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450163"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278817"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd 類別
 
@@ -422,7 +422,7 @@ virtual BOOL Create(
 *lpszWindowName*<br/>
 [in]指定要顯示在迷你框架上的文字。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]指定的視窗樣式。 如需詳細資訊，請參閱 <<c0> [ 的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。
 
 *rect*<br/>
@@ -464,7 +464,7 @@ virtual BOOL CreateEx(
 *lpszWindowName*<br/>
 [in]指定要顯示在迷你框架上的文字。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]指定的視窗樣式。 如需詳細資訊，請參閱 <<c0> [ 的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。
 
 *rect*<br/>
@@ -532,7 +532,7 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pt*<br/>
 [in]螢幕座標中的點。
 
 *nSensitivity*<br/>
@@ -731,7 +731,7 @@ virtual LRESULT HitTest(
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]要測試的點。
 
 *bDetectCaption*<br/>
@@ -982,7 +982,7 @@ void Pin(BOOL bPin = TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bPin*<br/>
+[in] *bPin*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -999,7 +999,7 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]點使用者點選，以螢幕座標。
 
 *nSensitivity*<br/>
@@ -1131,7 +1131,7 @@ void SetDelayShow(BOOL bDelayShow);
 
 ### <a name="parameters"></a>參數
 
-[in]*bDelayShow*<br/>
+[in] *bDelayShow*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1143,7 +1143,7 @@ void SetDockingManager(CDockingManager* pManager);
 
 ### <a name="parameters"></a>參數
 
-[in]*pManager*<br/>
+[in] *pManager*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1181,7 +1181,7 @@ void SetHotPoint(CPoint& ptNew);
 
 ### <a name="parameters"></a>參數
 
-[in]*ptNew*<br/>
+[in] *ptNew*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1203,7 +1203,7 @@ virtual BOOL SetPreDockState(
 
 - PDS_NOTHING，
 
-- PDS_DOCK_REGULAR，
+- PDS_DOCK_REGULAR,
 
 - PDS_DOCK_TO_TAB
 
@@ -1254,7 +1254,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 
 ### <a name="parameters"></a>參數
 
-[in]*pBar*<br/>
+[in] *pBar*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1268,8 +1268,8 @@ virtual void StoreRecentTabRelatedInfo(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDockingBar*<br/>
-[in]*pTabbedBar*<br/>
+[in] *pDockingBar*<br/>
+[in] *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>備註
 

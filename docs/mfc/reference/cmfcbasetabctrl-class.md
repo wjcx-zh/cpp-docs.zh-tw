@@ -238,12 +238,12 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: d12c7a8c9363e93baf56d53ad7b8d81401984228
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 889bb9c48899691554a22435ffee71d6f68a6409
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51330394"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261852"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
@@ -317,7 +317,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::GetVisibleTabsNum](#getvisibletabsnum)|傳回可見索引標籤的數目。|
 |[CMFCBaseTabCtrl::HasImage](#hasimage)||
 |[CMFCBaseTabCtrl::HideSingleTab](#hidesingletab)|設定隱藏視窗索引標籤的選項，但前提是索引標籤式視窗只顯示一個可見的索引標籤。|
-|[Cmfcbasetabctrl:: Inserttab](#inserttab)|插入新的索引標籤。|
+|[CMFCBaseTabCtrl::InsertTab](#inserttab)|插入新的索引標籤。|
 |[CMFCBaseTabCtrl::InvalidateTab](#invalidatetab)||
 |[CMFCBaseTabCtrl::IsActiveTabCloseButton](#isactivetabclosebutton)||
 |[CMFCBaseTabCtrl::IsAutoColor](#isautocolor)|傳回值，指出索引標籤式視窗是否處於自動色彩模式。|
@@ -436,7 +436,7 @@ void AddIcon(
 *hIcon*<br/>
 [in]要加入圖示控制代碼。
 
-*圖示*<br/>
+*iIcon*<br/>
 [in]以零起始的索引，在受保護的圖示`CImageList m_Images`成員。
 
 ### <a name="remarks"></a>備註
@@ -488,7 +488,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bUseTabIndexes*<br/>
+[in] *bUseTabIndexes*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -500,7 +500,7 @@ void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bAutoDestroy*<br/>
+[in] *bAutoDestroy*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -512,7 +512,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
 
 ### <a name="parameters"></a>參數
 
-[in]*rectEdit*<br/>
+[in] *rectEdit*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -604,7 +604,7 @@ void EnableActivateLastActive(BOOL bLastActive = TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bLastActive*<br/>
+[in] *bLastActive*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -749,7 +749,7 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pt*<br/>
 [in]使用用戶端區域定義的點座標[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)物件。
 
 ### <a name="return-value"></a>傳回值
@@ -768,7 +768,7 @@ virtual void FireChangeActiveTab(int nNewTab);
 
 ### <a name="parameters"></a>參數
 
-[in]*nNewTab*<br/>
+[in] *nNewTab*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -780,7 +780,7 @@ virtual BOOL FireChangingActiveTab(int nNewTab);
 
 ### <a name="parameters"></a>參數
 
-[in]*nNewTab*<br/>
+[in] *nNewTab*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -938,7 +938,7 @@ virtual CWnd* GetLastVisibleTab(int& iTabNum);
 
 ### <a name="parameters"></a>參數
 
-[in]*iTabNum*<br/>
+[in] *iTabNum*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1085,7 +1085,7 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pt*<br/>
 [in]用戶端座標中的索引標籤控制項的點。
 
 ### <a name="return-value"></a>傳回值
@@ -1100,7 +1100,7 @@ virtual int GetTabFullWidth(int iTab) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*iTab*<br/>
+[in] *iTab*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1241,7 +1241,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*rect*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1340,7 +1340,7 @@ virtual BOOL HasImage(int iTab) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*iTab*<br/>
+[in] *iTab*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1363,7 +1363,7 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 
 您的應用程式設定為隱藏單一索引標籤，架構會在第二個索引標籤新增至索引標籤控制項時，自動會顯示索引標籤。
 
-##  <a name="inserttab"></a>  Cmfcbasetabctrl:: Inserttab
+##  <a name="inserttab"></a>  CMFCBaseTabCtrl::InsertTab
 
 插入索引標籤控制項中的索引標籤。
 
@@ -1415,7 +1415,7 @@ void InvalidateTab(int iTab);
 
 ### <a name="parameters"></a>參數
 
-[in]*iTab*<br/>
+[in] *iTab*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1539,9 +1539,9 @@ BOOL IsIconAdded(
 
 ### <a name="parameters"></a>參數
 
-[in]*hIcon*<br/>
+[in] *hIcon*<br/>
 
-[in]*圖示*<br/>
+[in] *iIcon*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1611,7 +1611,7 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]要測試的點。
 
 ### <a name="return-value"></a>傳回值
@@ -1761,9 +1761,9 @@ virtual void MoveTab(
 
 ### <a name="parameters"></a>參數
 
-[in]*n 來源*<br/>
+[in] *nSource*<br/>
 
-[in]*nDest*<br/>
+[in] *nDest*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1790,7 +1790,7 @@ virtual BOOL OnDrop(
 
 ### <a name="parameters"></a>參數
 
-[in]_COleDataObject\*_<br/>
+[in] _COleDataObject\*_<br/>
 
 [in]*DROPEFFECT*<br/>
 
@@ -1811,9 +1811,9 @@ virtual DROPEFFECT OnDragOver(
 
 ### <a name="parameters"></a>參數
 
-[in]_COleDataObject\*_<br/>
+[in] _COleDataObject\*_<br/>
 
-[in]*DWORD*<br/>
+[in] *DWORD*<br/>
 
 [in]*CPoint*<br/>
 
@@ -1840,9 +1840,9 @@ virtual DROPEFFECT OnDragEnter(
 
 ### <a name="parameters"></a>參數
 
-[in]_COleDataObject\*_<br/>
+[in] _COleDataObject\*_<br/>
 
-[in]*DWORD*<br/>
+[in] *DWORD*<br/>
 
 [in]*CPoint*<br/>
 
@@ -1858,7 +1858,7 @@ virtual BOOL OnRenameTab(int, CString&);
 
 ### <a name="parameters"></a>參數
 
-[in]*int*<br/>
+[in] *int*<br/>
 
 [in]*CString （& s)*<br/>
 
@@ -1874,7 +1874,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>參數
 
-[in]*pMsg*<br/>
+[in] *pMsg*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1956,7 +1956,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>參數
 
-[in]*ar*<br/>
+[in] *ar*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -2120,7 +2120,7 @@ virtual void SetLocation(Location location);
 
 ### <a name="parameters"></a>參數
 
-[in]*位置*<br/>
+[in] *location*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -2139,7 +2139,7 @@ virtual BOOL SetTabBkColor(
 *iTab*<br/>
 [in]索引標籤的以零為起始的索引。
 
-*色彩*<br/>
+*color*<br/>
 [in]若要設定色彩。
 
 ### <a name="return-value"></a>傳回值
@@ -2304,7 +2304,7 @@ virtual BOOL SetTabTextColor(
 *iTab*<br/>
 [in]索引標籤的以零為起始的索引。
 
-*色彩*<br/>
+*color*<br/>
 [in]A [COLORREF](/windows/desktop/gdi/colorref)參數，指出新的文字色彩。
 
 ### <a name="return-value"></a>傳回值
@@ -2353,7 +2353,7 @@ virtual BOOL StartRenameTab(int iTab);
 
 ### <a name="parameters"></a>參數
 
-[in]*iTab*<br/>
+[in] *iTab*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -2369,9 +2369,9 @@ virtual void SwapTabs(
 
 ### <a name="parameters"></a>參數
 
-[in]*nFisrtTabID*<br/>
+[in] *nFisrtTabID*<br/>
 
-[in]*nSecondTabID*<br/>
+[in] *nSecondTabID*<br/>
 
 ### <a name="remarks"></a>備註
 

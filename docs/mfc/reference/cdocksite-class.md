@@ -86,12 +86,12 @@ helpviewer_keywords:
 - CDockSite [MFC], ShowRow
 - CDockSite [MFC], SwapRows
 ms.assetid: 0fcfff79-5f50-4281-b2de-a55653bbea40
-ms.openlocfilehash: 08acf9e47a26d4cbc5bcb96cbff086b19768e972
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccd1bc115f92e0c2605fe5f587a0567f672c6c09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486303"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259798"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 
@@ -184,9 +184,9 @@ CDockingPanesRow* AddRow(
 
 ### <a name="parameters"></a>參數
 
-[in]*pos*<br/>
+[in] *pos*<br/>
 
-[in]*nHeight*<br/>
+[in] *nHeight*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -219,11 +219,11 @@ void AlignDockSite(
 
 ### <a name="parameters"></a>參數
 
-[in]*rectToAlignBy*<br/>
+[in] *rectToAlignBy*<br/>
 
-[in]*rectResult*<br/>
+[in] *rectResult*<br/>
 
-[in]*bMoveImmediately*<br/>
+[in] *bMoveImmediately*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -237,9 +237,9 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>參數
 
-[in]*bStretch*<br/>
+[in] *bStretch*<br/>
 
-[in]*bHorz*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -253,7 +253,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*pBar*<br/>
+[in] *pBar*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -273,17 +273,17 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>參數
 
-[in]*dwStyleEx*<br/>
+[in] *dwStyleEx*<br/>
 
-[in]*cheaderctrl:: Create*<br/>
+[in] *dwStyle*<br/>
 
-[in]*rect*<br/>
+[in] *rect*<br/>
 
-[in]*pParentWnd*<br/>
+[in] *pParentWnd*<br/>
 
-[in]*dwControlBarStyle*<br/>
+[in] *dwControlBarStyle*<br/>
 
-[in]*pContext*<br/>
+[in] *pContext*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -300,11 +300,11 @@ virtual CDockingPanesRow* CreateRow(
 
 ### <a name="parameters"></a>參數
 
-[in]*pParentDockBar*<br/>
+[in] *pParentDockBar*<br/>
 
-[in]*nOffset*<br/>
+[in] *nOffset*<br/>
 
-[in]*nRowHeight*<br/>
+[in] *nRowHeight*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -321,11 +321,11 @@ virtual void DockPane(
 
 ### <a name="parameters"></a>參數
 
-[in]*pWnd*<br/>
+[in] *pWnd*<br/>
 
 [in]*dockMethod*<br/>
 
-[in]*lpRect*<br/>
+[in] *lpRect*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -390,7 +390,7 @@ int FindRowIndex(CDockingPanesRow* pRow);
 
 ### <a name="parameters"></a>參數
 
-[in]*pRow*<br/>
+[in] *pRow*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -464,7 +464,7 @@ bool IsLastRow(CDockingPanesRow* pRow) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*pRow*<br/>
+[in] *pRow*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -480,9 +480,9 @@ BOOL IsRectWithinDockSite(
 
 ### <a name="parameters"></a>參數
 
-[in]*rect*<br/>
+[in] *rect*<br/>
 
-[in]*ptDelta*<br/>
+[in] *ptDelta*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -509,11 +509,11 @@ virtual BOOL MovePane(
 
 ### <a name="parameters"></a>參數
 
-[in]*pWnd*<br/>
+[in] *pWnd*<br/>
 
-[in]*nFlags*<br/>
+[in] *nFlags*<br/>
 
-[in]*ptOffset*<br/>
+[in] *ptOffset*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -527,7 +527,7 @@ virtual void OnInsertRow(POSITION pos);
 
 ### <a name="parameters"></a>參數
 
-[in]*pos*<br/>
+[in] *pos*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -541,9 +541,9 @@ virtual void OnRemoveRow(
 
 ### <a name="parameters"></a>參數
 
-[in]*pos*<br/>
+[in] *pos*<br/>
 
-[in]*bByShow*<br/>
+[in] *bByShow*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -557,9 +557,9 @@ virtual int OnResizeRow(
 
 ### <a name="parameters"></a>參數
 
-[in]*pRowToResize*<br/>
+[in] *pRowToResize*<br/>
 
-[in]*nOffset*<br/>
+[in] *nOffset*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -577,13 +577,13 @@ virtual void OnSizeParent(
 
 ### <a name="parameters"></a>參數
 
-[in]*rectAvailable*<br/>
+[in] *rectAvailable*<br/>
 
-[in]*nSide*<br/>
+[in] *nSide*<br/>
 
-[in]*bExpand*<br/>
+[in] *bExpand*<br/>
 
-[in]*nOffset*<br/>
+[in] *nOffset*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -598,11 +598,11 @@ virtual BOOL OnSetWindowPos(
 
 ### <a name="parameters"></a>參數
 
-[in]*pWndInsertAfter*<br/>
+[in] *pWndInsertAfter*<br/>
 
-[in]*rectWnd*<br/>
+[in] *rectWnd*<br/>
 
-[in]*nFlags*<br/>
+[in] *nFlags*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -618,9 +618,9 @@ virtual void OnShowRow(
 
 ### <a name="parameters"></a>參數
 
-[in]*pos*<br/>
+[in] *pos*<br/>
 
-[in]*bShow*<br/>
+[in] *bShow*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -634,7 +634,7 @@ virtual CPane* PaneFromPoint(CPoint pt);
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pt*<br/>
 [in]中的 [擷取] 窗格的螢幕座標的點。
 
 ### <a name="return-value"></a>傳回值
@@ -653,9 +653,9 @@ static int __stdcall RectSideFromPoint(
 
 ### <a name="parameters"></a>參數
 
-[in]*rect*<br/>
+[in] *rect*<br/>
 
-[in]*點*<br/>
+[in] *point*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -671,7 +671,7 @@ virtual void RemovePane(
 
 ### <a name="parameters"></a>參數
 
-[in]*pWnd*<br/>
+[in] *pWnd*<br/>
 
 [in]*dockMethod*<br/>
 
@@ -685,7 +685,7 @@ void RemoveRow(CDockingPanesRow* pRow);
 
 ### <a name="parameters"></a>參數
 
-[in]*pRow*<br/>
+[in] *pRow*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -699,9 +699,9 @@ BOOL ReplacePane(
 
 ### <a name="parameters"></a>參數
 
-[in]*pOldBar*<br/>
+[in] *pOldBar*<br/>
 
-[in]*pNewBar*<br/>
+[in] *pNewBar*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -715,7 +715,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 
 ### <a name="parameters"></a>參數
 
-[in]*rectNewClientArea*<br/>
+[in] *rectNewClientArea*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -729,9 +729,9 @@ void ResizeDockSite(
 
 ### <a name="parameters"></a>參數
 
-[in]*nNewWidth*<br/>
+[in] *nNewWidth*<br/>
 
-[in]*nNewHeight*<br/>
+[in] *nNewHeight*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -746,11 +746,11 @@ int ResizeRow(
 
 ### <a name="parameters"></a>參數
 
-[in]*pRow*<br/>
+[in] *pRow*<br/>
 
-[in]*nNewSize*<br/>
+[in] *nNewSize*<br/>
 
-[in]*bAdjustLayout*<br/>
+[in] *bAdjustLayout*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -801,11 +801,11 @@ void ShowRow(
 
 ### <a name="parameters"></a>參數
 
-[in]*pRow*<br/>
+[in] *pRow*<br/>
 
-[in]*bShow*<br/>
+[in] *bShow*<br/>
 
-[in]*bAdjustLayout*<br/>
+[in] *bAdjustLayout*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -819,9 +819,9 @@ void SwapRows(
 
 ### <a name="parameters"></a>參數
 
-[in]*pFirstRow*<br/>
+[in] *pFirstRow*<br/>
 
-[in]*pSecondRow*<br/>
+[in] *pSecondRow*<br/>
 
 ### <a name="remarks"></a>備註
 

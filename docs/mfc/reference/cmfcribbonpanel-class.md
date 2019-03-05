@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: a679ca48b054a545752483ff5349442e7c4a0ddd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 438fc753e91092502c84acfc491ec64c15133023
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505387"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305051"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel 類別
 
@@ -145,7 +145,7 @@ class CMFCRibbonPanel : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[Cmfcribbonpanel:: Add](#add)|將功能區項目的加入面板。|
+|[CMFCRibbonPanel::Add](#add)|將功能區項目的加入面板。|
 |[CMFCRibbonPanel::AddSeparator](#addseparator)|將功能區面板中的分隔符號。|
 |[CMFCRibbonPanel::AddToolBar](#addtoolbar)|將工具列加入至功能區面板中。|
 |[CMFCRibbonPanel::FindByData](#findbydata)||
@@ -221,7 +221,7 @@ class CMFCRibbonPanel : public CObject
 
 **標頭：** afxRibbonPanel.h
 
-##  <a name="add"></a>  Cmfcribbonpanel:: Add
+##  <a name="add"></a>  CMFCRibbonPanel::Add
 
 將指定的功能區項目附加至功能區項目的陣列，包含在功能區面板中。
 
@@ -642,7 +642,7 @@ CPoint point);
 *bHighlight*<br/>
 [in]若要反白顯示功能區面板;，則為 TRUEUnhighlight 功能區面板，則為 FALSE。
 
-*點*<br/>
+*point*<br/>
 [in]指標，相對於視窗左上角的 x 和 y 座標。
 
 ### <a name="remarks"></a>備註
@@ -659,7 +659,7 @@ BOOL bCheckPanelCaption = FALSE);
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]指標，相對於視窗左上角的 x 和 y 座標。
 
 *bCheckPanelCaption*<br/>
@@ -683,7 +683,7 @@ virtual int HitTestEx(CPoint point) const;
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]指標，相對於視窗左上角的 x 和 y 座標。
 
 ### <a name="return-value"></a>傳回值
@@ -833,7 +833,7 @@ virtual BOOL OnKey(UINT nChar);
 
 ### <a name="parameters"></a>參數
 
-[in]*nChar*<br/>
+[in] *nChar*<br/>
 
 ### <a name="return-value"></a>傳回值
 

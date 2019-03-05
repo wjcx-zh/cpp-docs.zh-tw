@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 9b92c9689749dca1ab4eebcade1c4f7e71d25a76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 625104ecddd9e14ac77aa05ac54cb578c4d62f85
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541540"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293417"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 類別
 
@@ -201,7 +201,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 
 ## <a name="example"></a>範例
 
-下列範例衍生的類別`CMDIChildWndEx`。 此程式碼片段來自[VisualStudioDemo 範例： Visual Studio 應用程式的 MFC](../../visual-cpp-samples.md)。
+下列範例衍生的類別`CMDIChildWndEx`。 此程式碼片段來自[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]
 
@@ -431,7 +431,7 @@ virtual LPCTSTR GetDocumentName(CObject** pObj);
 
 ### <a name="example"></a>範例
 
-下列範例示範 `GetDocumentName` 方法的用法。 此程式碼片段來自[VisualStudioDemo 範例： Visual Studio 應用程式的 MFC](../../visual-cpp-samples.md)。
+下列範例示範 `GetDocumentName` 方法的用法。 此程式碼片段來自[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]
 
@@ -567,7 +567,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]指定的點。
 
 *dwBarAlignment*<br/>
@@ -602,7 +602,7 @@ virtual BOOL IsReadOnly();
 
 ### <a name="example"></a>範例
 
-下列範例示範如何覆寫`IsReadOnly`方法。 此程式碼片段來自[VisualStudioDemo 範例： Visual Studio 應用程式的 MFC](../../visual-cpp-samples.md)。
+下列範例示範如何覆寫`IsReadOnly`方法。 此程式碼片段來自[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]
 
@@ -686,7 +686,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]指定的點，若要檢查的螢幕座標。
 
 *nSensitivity*<br/>
@@ -762,7 +762,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 
 ### <a name="parameters"></a>參數
 
-[in]*p*<br/>
+[in] *p*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -778,13 +778,13 @@ void ShowPane(
 
 ### <a name="parameters"></a>參數
 
-[in]*pBar*<br/>
+[in] *pBar*<br/>
 
-[in]*bShow*<br/>
+[in] *bShow*<br/>
 
-[in]*bDelay*<br/>
+[in] *bDelay*<br/>
 
-[in]*bActivate*<br/>
+[in] *bActivate*<br/>
 
 ### <a name="remarks"></a>備註
 

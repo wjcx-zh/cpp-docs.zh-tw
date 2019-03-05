@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerOffice2003 類別
+title: CMFCVisualManagerOffice2003 Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCVisualManagerOffice2003
@@ -92,14 +92,14 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerOffice2003 Class [MFC]
 ms.assetid: 115482cd-e349-450a-8dc4-c6023d092aab
-ms.openlocfilehash: 1b811de23b4a049bd462ddbb3f9b96e80ae25be0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3b0a031db8ff843bb43f7dfa69f046d6ae99a96
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558804"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273266"
 ---
-# <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 類別
+# <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 Class
 
 `CMFCVisualManagerOffice2003` 為應用程式提供 Microsoft Office 2003 的外觀。
 
@@ -586,7 +586,7 @@ virtual BOOL GetToolTipInfo(
 *params*<br/>
 [out]參考[CMFCToolTipInfo 類別](../../mfc/reference/cmfctooltipinfo-class.md)其中這個方法會傳回工具提示資訊的物件。
 
-*n*<br/>
+*nType*<br/>
 [in]輸入要傳回的工具提示資訊的資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -793,11 +793,11 @@ virtual BOOL OnDrawBrowseButton(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*pEdit*<br/>
-[in]*狀態*<br/>
-[in]*clrText*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *pEdit*<br/>
+[in] *state*<br/>
+[in] *clrText*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -892,7 +892,7 @@ virtual void OnDrawCheckBoxEx(
 [in]週框的核取方塊。
 
 *nState*<br/>
-[in]核取方塊的狀態： 0，如果未選取，1，若選取此選項，2 如果已核取 混合。
+[in]核取方塊狀態：如果未選取 0，1，否則檢查，2 如果已核取 混合式。
 
 *bHighlighted*<br/>
 [in]如果核取方塊反白顯示，或如果沒有，則為 FALSE，則為 TRUE。
@@ -1048,7 +1048,7 @@ virtual void OnDrawHeaderCtrlBorder(
 *rect*<br/>
 [in]指定的標頭控制項界限的矩形。
 
-[in]*bIsPressed*<br/>
+[in] *bIsPressed*<br/>
 [in]*bIsHighlighted*<br/>
 布林值參數，指出是否按下標題控制項。
 
@@ -1709,9 +1709,9 @@ virtual void OnDrawStatusBarProgress(
 *clrBar*<br/>
 [in]進度列的初始色彩。 值是色彩漸層的開始或完成的進度列的色彩。
 
-[in]*clrProgressBarDest*<br/>
-[in]*clrProgressText*<br/>
-[in]*bProgressText*<br/>
+[in] *clrProgressBarDest*<br/>
+[in] *clrProgressText*<br/>
+[in] *bProgressText*<br/>
 
 ### <a name="remarks"></a>備註
 

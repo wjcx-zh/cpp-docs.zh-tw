@@ -1,18 +1,18 @@
 ---
-title: 剪貼簿：複製和貼上資料
+title: 剪貼簿：複製並貼上資料
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: 7f22418b4006bcb9fac1d4430660c8721bc7e903
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da589743e98b2ac020e006aedb0ccc0415998f17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437033"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270731"
 ---
-# <a name="clipboard-copying-and-pasting-data"></a>剪貼簿：複製和貼上資料
+# <a name="clipboard-copying-and-pasting-data"></a>剪貼簿：複製並貼上資料
 
 本主題說明實作複製和貼上從剪貼簿 OLE 應用程式所需的最少工作。 建議您閱讀[資料物件和資料來源 (OLE)](../mfc/data-objects-and-data-sources-ole.md)主題後再繼續。
 
@@ -70,4 +70,3 @@ ms.locfileid: "50437033"
 ## <a name="see-also"></a>另請參閱
 
 [剪貼簿：使用 OLE 剪貼簿機制](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
-

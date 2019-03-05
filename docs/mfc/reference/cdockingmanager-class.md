@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: e1cc4a4a0d6841523aaafcc1865173ba5402948c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 268a46e1bdecc1ea468c152fd0ed480873c36591
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519972"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260383"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager 類別
 
@@ -521,7 +521,7 @@ void BuildPanesMenu(
 
 ### <a name="parameters"></a>參數
 
-*功能表*<br/>
+*menu*<br/>
 [in]若要新增的停駐窗格和工具列名稱功能表。
 
 *bToolbarsOnly*<br/>
@@ -594,7 +594,7 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pt*<br/>
 [in]若要檢查窗格的位置。
 
 *nSensitivity*<br/>
@@ -698,7 +698,7 @@ BOOL EnableAutoHidePanes(DWORD dwStyle);
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]停駐的對齊方式。
 
 ### <a name="return-value"></a>傳回值
@@ -715,7 +715,7 @@ BOOL EnableDocking(DWORD dwStyle);
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]停駐的對齊方式。
 
 ### <a name="return-value"></a>傳回值
@@ -863,7 +863,7 @@ virtual CPaneFrameWnd* FrameFromPoint(
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pt*<br/>
 [in]指定的點，若要檢查的螢幕座標。
 
 *pFrameToExclude*<br/>
@@ -1170,7 +1170,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]指定的點。
 
 *dwBarAlignment*<br/>
@@ -1227,7 +1227,7 @@ void LockUpdate(BOOL bLock);
 
 ### <a name="parameters"></a>參數
 
-*區塊*<br/>
+*bLock*<br/>
 [in]如果視窗已鎖定，則為 TRUEFALSE 否則。
 
 ### <a name="remarks"></a>備註
@@ -1346,7 +1346,7 @@ void OnPaneContextMenu(CPoint point);
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]指定功能表的位置。
 
 ##  <a name="panefrompoint"></a>  CDockingManager::PaneFromPoint
@@ -1372,7 +1372,7 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]指定的點，若要檢查的螢幕座標。
 
 *nSensitivity*<br/>
@@ -1418,7 +1418,7 @@ BOOL ProcessPaneContextMenuCommand(
 *nID*<br/>
 [in]在功能表中的控制列識別碼。
 
-*則 nCode*<br/>
+*nCode*<br/>
 [in]命令通知程式碼。
 
 *pExtra*<br/>
@@ -1639,8 +1639,8 @@ static void SetDockingMode(
 *dockMode*<br/>
 指定新的停駐模式。 如需詳細資訊，請參閱＜備註＞一節。
 
-*佈景主題*<br/>
-指定要用於智慧停駐標記的佈景主題。 它可以是下列的列舉值之一： AFX_SDT_DEFAULT，AFX_SDT_VS2005，AFX_SDT_VS2008。
+*theme*<br/>
+指定要用於智慧停駐標記的佈景主題。 它可以是下列的列舉值之一：AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>備註
 
@@ -1760,7 +1760,7 @@ static AFX_SMARTDOCK_THEME __stdcall GetSmartDockingTheme();
 
 ### <a name="return-value"></a>傳回值
 
-傳回下列的列舉值之一： AFX_SDT_DEFAULT，AFX_SDT_VS2005，AFX_SDT_VS2008。
+會傳回下列的列舉值之一：AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>備註
 

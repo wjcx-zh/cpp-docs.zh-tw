@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], SetDefaultCommand
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
-ms.openlocfilehash: 3544bbd65b5e0c754552f93b45263f768b73fe69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b33e50328fd3c8997774515f248780edda6bcc75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625312"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275489"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton 類別
 
@@ -202,7 +202,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>參數
 
-*MenuButton*<br/>
+*menuButton*<br/>
 [in][目標] 功能表按鈕的參考。
 
 ### <a name="return-value"></a>傳回值
@@ -391,7 +391,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 
 此方法擴充的基底類別實作 ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) 藉由呼叫[CMFCDropDownToolbarButton::OnClick](#onclick)方法*bDelay*設為 FALSE。 這個方法會傳回所傳回的值[CMFCDropDownToolbarButton::OnClick](#onclick)。
 
-如需有關 WM_HELPHITTEST 訊息的詳細資訊，請參閱[TN028： 即時線上說明支援](../../mfc/tn028-context-sensitive-help-support.md)。
+如需有關 WM_HELPHITTEST 訊息的詳細資訊，請參閱[TN028:即時線上說明支援](../../mfc/tn028-context-sensitive-help-support.md)。
 
 ##  <a name="oncustomizemenu"></a>  CMFCDropDownToolbarButton::OnCustomizeMenu
 
@@ -545,5 +545,4 @@ void SetDefaultCommand(UINT uiCmd);
 [CMFCDropDownToolBar 類別](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
 [CMFCToolBar 類別](../../mfc/reference/cmfctoolbar-class.md)<br/>
 [CMFCToolBarMenuButton 類別](../../mfc/reference/cmfctoolbarmenubutton-class.md)<br/>
-[逐步解說：將控制項放在工具列上](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[逐步解說：將放在工具列上的控制項](../../mfc/walkthrough-putting-controls-on-toolbars.md)

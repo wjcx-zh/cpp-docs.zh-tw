@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: 026c7392c3eb93b37a712059939683e3e0ab852c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4aaede3eb2d5c922c196e2bdfbbe533c4e65e47
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628991"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295028"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog 類別
 
 非強制回應對話方塊 ( [CPropertySheet 類別](../../mfc/reference/cpropertysheet-class.md))，可讓使用者自訂工具列、 功能表、 鍵盤快速鍵、 使用者定義的工具和應用程式中的視覺化樣式。 使用者通常會選取 [ **工具** ] 功能表中的 [ **自訂** ]，以存取這個對話方塊。
 
-**自訂** 對話方塊中有六個索引標籤：**命令**，**工具列**，**工具**，**鍵盤**， **功能表**，並**選項**。
+**自訂**對話方塊有六個索引標籤：**命令**，**工具列**，**工具**，**鍵盤**，**功能表**，以及**選項**。
 
 ## <a name="syntax"></a>語法
 
@@ -137,7 +137,7 @@ void AddButton(
 *uiCategoryId*<br/>
 [in]指定要插入的按鈕的類別目錄識別碼。
 
-*按鈕*<br/>
+*button*<br/>
 [in]指定要插入的按鈕。
 
 *iInsertBefore*<br/>
@@ -586,7 +586,7 @@ virtual BOOL OnEditToolbarMenuImage(
 *pWndParent*<br/>
 [in]父視窗的指標。
 
-*點陣圖*<br/>
+*bitmap*<br/>
 [in]若要編輯點陣圖物件的參考。
 
 *nBitsPerPixel*<br/>
@@ -716,7 +716,7 @@ void ReplaceButton(
 *uiCmd*<br/>
 [in]指定按鈕的命令，來取代。
 
-*按鈕*<br/>
+*button*<br/>
 [in]A **const**取代舊的按鈕的工具列按鈕物件的參考。
 
 ### <a name="remarks"></a>備註

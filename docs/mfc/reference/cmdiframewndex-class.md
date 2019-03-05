@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 7ed2d1de2a91f90cd4e7efecac728e66f86d95a6
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 81d227c241adf0ce72ccd4a554134d7d858b4a6d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178626"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275424"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx 類別
 
@@ -197,7 +197,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|顯示或隱藏主功能表以全螢幕模式。|
 |[CMDIFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|啟用全螢幕模式，框架視窗。|
 |[CMDIFrameWndEx::EnableLoadDockState](#enableloaddockstate)|啟用或停用的銜接狀態的載入。|
-|[Cmdiframewndex:: Enablemditabbedgroups](#enablemditabbedgroups)|啟用或停用 MDI 索引標籤式群組功能。|
+|[CMDIFrameWndEx::EnableMDITabbedGroups](#enablemditabbedgroups)|啟用或停用 MDI 索引標籤式群組功能。|
 |[CMDIFrameWndEx::EnableMDITabs](#enablemditabs)|啟用或停用 MDI 索引標籤功能。 啟用時，框架視窗會顯示每個 MDI 子視窗的索引標籤。|
 |[CMDIFrameWndEx::EnableMDITabsLastActiveActivation](#enablemditabslastactiveactivation)|指定當使用者關閉目前的索引標籤時，是否啟用 最後一個使用中索引標籤。|
 |[CMDIFrameWndEx::EnablePaneMenu](#enablepanemenu)|啟用或停用自動建立及管理的快顯窗格功能表顯示的應用程式窗格清單。  。|
@@ -221,7 +221,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::IsPointNearDockSite](#ispointneardocksite)|判斷指定的點是否停駐位置附近。|
 |[CMDIFrameWndEx::IsPrintPreview](#isprintpreview)|決定框架視窗是否處於預覽列印模式。|
 |[CMDIFrameWndEx::LoadFrame](#loadframe)|從資源資訊，請建立框架視窗。 (覆寫 `CMDIFrameWnd::LoadFrame`。)|
-|[Cmdiframewndex:: Loadmdistate](#loadmdistate)|載入 MDI 索引標籤式群組的指定的配置和先前開啟的文件清單。|
+|[CMDIFrameWndEx::LoadMDIState](#loadmdistate)|載入 MDI 索引標籤式群組的指定的配置和先前開啟的文件清單。|
 |[CMDIFrameWndEx::MDITabMoveToNextGroup](#mditabmovetonextgroup)|從目前使用中的索引標籤式視窗的作用中的索引標籤移至一個或下一個索引標籤式群組中。|
 |[CMDIFrameWndEx::MDITabNewGroup](#mditabnewgroup)|建立新的索引標籤式的群組具有單一的視窗。|
 |[CMDIFrameWndEx::NegotiateBorderSpace](#negotiateborderspace)|會在框架視窗的框線空間交涉期間 OLE 就地啟用。|
@@ -525,7 +525,7 @@ BOOL DockPaneLeftOf(
 [in]若要停駐窗格的指標。
 
 *pLeftOf*<br/>
-[in]窗格，做為 停駐位置的指標。 。
+[in][窗格]，做為 停駐位置的指標。 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1132,7 +1132,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]螢幕座標中指定的點。
 
 *dwBarAlignment*<br/>
@@ -1193,7 +1193,7 @@ virtual BOOL LoadFrame(
 
 如果方法成功，否則為 FALSE，則為 TRUE。
 
-##  <a name="loadmdistate"></a>  Cmdiframewndex:: Loadmdistate
+##  <a name="loadmdistate"></a>  CMDIFrameWndEx::LoadMDIState
 
 載入 MDI 索引標籤式群組的指定的配置和先前開啟的文件清單。
 
@@ -1412,7 +1412,7 @@ virtual BOOL OnCmdMsg(
 *nID*<br/>
 [in]命令 id。
 
-*則 nCode*<br/>
+*nCode*<br/>
 [in]識別命令通知程式碼。 請參閱[CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg)如需有關值*則 nCode*。
 
 *pExtra*<br/>
@@ -1501,7 +1501,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 *pButton*<br/>
 [in]工具列按鈕。
 
-*PTI*<br/>
+*pTI*<br/>
 [out]指標[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)結構。
 
 ### <a name="return-value"></a>傳回值
@@ -1592,7 +1592,7 @@ virtual BOOL OnShowMDITabContextMenu(
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]螢幕座標中功能表的位置。
 
 *dwAllowedItems*<br/>
@@ -1745,7 +1745,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]（在螢幕座標表示） 的點。
 
 *nSensitivity*<br/>
@@ -1888,7 +1888,7 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>參數
 
-*功能表*<br/>
+*menu*<br/>
 [in]參考[CMenu 類別](../../mfc/reference/cmenu-class.md)要修改的物件。
 
 *uiViewUserToolbarCmdFirst*<br/>

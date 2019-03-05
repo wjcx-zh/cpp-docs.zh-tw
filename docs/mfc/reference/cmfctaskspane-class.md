@@ -194,18 +194,19 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: aaf0e68391dd1273c3f973315ac58fe0d6bd1c24
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 137f30262ce01ad82c075302b6e85bf67ae7b9be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176805"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293767"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane 類別
 
 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
 
-`CMFCTasksPane` 類別會實作可點選式項目 (工作) 清單。
+
+  `CMFCTasksPane` 類別會實作可點選式項目 (工作) 清單。
 
 ## <a name="syntax"></a>語法
 
@@ -225,19 +226,19 @@ class CMFCTasksPane : public CDockablePane
 
 |名稱|描述|
 |----------|-----------------|
-|[Cmfctaskspane:: Addgroup](#addgroup)|將新的工作群組加入至工作窗格控制項。|
-|[Cmfctaskspane:: Addlabel](#addlabel)|將新的靜態標籤加入至指定的工作群組。|
-|[Cmfctaskspane:: Addmrufileslist](#addmrufileslist)|將最近使用的 (MRU) 檔案清單所指定的工作加入到群組。|
+|[CMFCTasksPane::AddGroup](#addgroup)|將新的工作群組加入至工作窗格控制項。|
+|[CMFCTasksPane::AddLabel](#addlabel)|將新的靜態標籤加入至指定的工作群組。|
+|[CMFCTasksPane::AddMRUFilesList](#addmrufileslist)|將最近使用的 (MRU) 檔案清單所指定的工作加入到群組。|
 |[CMFCTasksPane::AddPage](#addpage)|將新頁面加入工作窗格。|
 |[CMFCTasksPane::AddSeparator](#addseparator)||
-|[Cmfctaskspane:: Addtask](#addtask)|將新工作加入至指定的工作群組。|
+|[CMFCTasksPane::AddTask](#addtask)|將新工作加入至指定的工作群組。|
 |[CMFCTasksPane::AddWindow](#addwindow)|將子視窗加入工作窗格。|
 |[CMFCTasksPane::CollapseAllGroups](#collapseallgroups)||
 |[CMFCTasksPane::CollapseGroup](#collapsegroup)|以程式設計方式摺疊群組。|
 |[CMFCTasksPane::CreateDefaultMiniframe](#createdefaultminiframe)|(覆寫[cpane:: Createdefaultminiframe](../../mfc/reference/cpane-class.md#createdefaultminiframe)。)|
 |[CMFCTasksPane::CreateMenu](#createmenu)|由架構呼叫以建立功能表**其他工作窗格**功能表按鈕。|
 |[CMFCTasksPane::EnableAnimation](#enableanimation)|啟用或停用摺疊或展開工作群組時的動畫。|
-|[Cmfctaskspane:: Enablegroupcollapse](#enablegroupcollapse)|指定是否可以摺疊工作群組。|
+|[CMFCTasksPane::EnableGroupCollapse](#enablegroupcollapse)|指定是否可以摺疊工作群組。|
 |[CMFCTasksPane::EnableHistoryMenuButtons](#enablehistorymenubuttons)|啟用或停用下拉式清單中的功能表**下一步**並**Previous**瀏覽按鈕。|
 |[CMFCTasksPane::EnableNavigationToolbar](#enablenavigationtoolbar)|啟用或停用導覽工具列。|
 |[CMFCTasksPane::EnableOffsetCustomControls](#enableoffsetcustomcontrols)||
@@ -326,7 +327,8 @@ class CMFCTasksPane : public CDockablePane
 
 ## <a name="remarks"></a>備註
 
-`CMFCTasksPane` 類別會實作下列功能：
+
+  `CMFCTasksPane` 類別會實作下列功能：
 
 - 項目可以組成群組，而且每個項目群組可以有相關聯的標題。
 
@@ -420,7 +422,7 @@ int AddGroup(
 
 在工作窗格控制項的頂端或底端，架構就會顯示工作群組。 架構可以底部; 顯示只有一個群組此群組必須新增上一次。
 
-##  <a name="addlabel"></a>  Cmfctaskspane:: Addlabel
+##  <a name="addlabel"></a>  CMFCTasksPane::AddLabel
 
 將標籤加入至指定的工作群組中。
 
@@ -434,7 +436,7 @@ int AddLabel(
 
 ### <a name="parameters"></a>參數
 
-*n 群組*<br/>
+*nGroup*<br/>
 [in]指定的索引標籤就會加入其中的群組。
 
 *lpszLabelName*<br/>
@@ -466,7 +468,7 @@ int AddMRUFilesList(
 
 ### <a name="parameters"></a>參數
 
-*n 群組*<br/>
+*nGroup*<br/>
 [in]指定群組的索引。 這個方法會將此參數所指定的群組中的 MRU 檔案清單。
 
 *nMaxFiles*<br/>
@@ -501,7 +503,7 @@ int AddSeparator(int nGroup);
 
 ### <a name="parameters"></a>參數
 
-[in]*n 群組*<br/>
+[in] *nGroup*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -522,7 +524,7 @@ int AddTask(
 
 ### <a name="parameters"></a>參數
 
-*n 群組*<br/>
+*nGroup*<br/>
 [in]指定工作會加入其中的群組索引。
 
 *lpszTaskName*<br/>
@@ -556,7 +558,7 @@ int AddWindow(
 
 ### <a name="parameters"></a>參數
 
-*n 群組*<br/>
+*nGroup*<br/>
 [in]指定視窗會加入其中的群組索引。
 
 *hwndTask*<br/>
@@ -599,8 +601,8 @@ void CollapseAllGroups(
 
 ### <a name="parameters"></a>參數
 
-[in]*bCollapse*<br/>
-[in]*nPageIdx*<br/>
+[in] *bCollapse*<br/>
+[in] *nPageIdx*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -626,7 +628,7 @@ BOOL CollapseGroup(
 *bCollapse*<br/>
 [in]若要摺疊群組，則為 TRUE展開群組，則為 FALSE。
 
-*n 群組*<br/>
+*nGroup*<br/>
 [in]指定以零為起始的索引，要摺疊的群組內部的清單中的群組。
 
 ### <a name="return-value"></a>傳回值
@@ -645,7 +647,7 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 
 ### <a name="parameters"></a>參數
 
-[in]*rectInitial*<br/>
+[in] *rectInitial*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -686,7 +688,7 @@ void EnableAnimation(BOOL bEnable = TRUE);
 
 根據預設，會啟用工作群組展開或摺疊時所發生的動畫。
 
-##  <a name="enablegroupcollapse"></a>  Cmfctaskspane:: Enablegroupcollapse
+##  <a name="enablegroupcollapse"></a>  CMFCTasksPane::EnableGroupCollapse
 
 指定使用者是否可以摺疊工作群組。
 
@@ -764,7 +766,7 @@ void EnableOffsetCustomControls(BOOL bEnable);
 
 ### <a name="parameters"></a>參數
 
-[in]*bEnable*<br/>
+[in] *bEnable*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -898,7 +900,7 @@ BOOL GetGroupLocation(
 *pGroup*<br/>
 [in]指定工作群組中，擷取其位置。
 
-*n 群組*<br/>
+*nGroup*<br/>
 [out]包含工作群組的以零為起始的索引。
 
 ### <a name="return-value"></a>傳回值
@@ -941,7 +943,7 @@ void GetNextPages(CStringList& lstNextPages) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*lstNextPages*<br/>
+[in] *lstNextPages*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -957,10 +959,10 @@ BOOL GetPageByGroup(
 
 ### <a name="parameters"></a>參數
 
-*n 群組*<br/>
+*nGroup*<br/>
 [in]指定工作群組的以零為起始的索引。
 
-*n 版面*<br/>
+*nPage*<br/>
 [out]包含指定之群組的頁面索引。 如果工作群組只包含預設的網頁，則傳回的值為 0。
 
 ### <a name="return-value"></a>傳回值
@@ -987,7 +989,7 @@ void GetPreviousPages(CStringList& lstPrevPages) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*lstPrevPages*<br/>
+[in] *lstPrevPages*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -999,7 +1001,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*nBar*<br/>
+[in] *nBar*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1017,10 +1019,10 @@ CMFCTasksPaneTask* GetTask(
 
 ### <a name="parameters"></a>參數
 
-*n 群組*<br/>
+*nGroup*<br/>
 [in]指定包含工作群組的以零為起始的索引。
 
-*n*<br/>
+*nTask*<br/>
 [in]在所指定的清單中指定工作的以零為起始的索引*n 群組*。
 
 ### <a name="return-value"></a>傳回值
@@ -1037,7 +1039,7 @@ int GetTaskCount(int nGroup) const;
 
 ### <a name="parameters"></a>參數
 
-*n 群組*<br/>
+*nGroup*<br/>
 [in]指定工作群組的索引。
 
 ### <a name="return-value"></a>傳回值
@@ -1054,7 +1056,7 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 
 ### <a name="parameters"></a>參數
 
-*n 群組*<br/>
+*nGroup*<br/>
 [in]指定要擷取之群組的以零為起始的索引。
 
 ### <a name="return-value"></a>傳回值
@@ -1087,10 +1089,10 @@ BOOL GetTaskLocation(
 *uiCommandID*<br/>
 [in]指定要尋找工作的命令識別碼。
 
-*n 群組*<br/>
+*nGroup*<br/>
 [out]包含工作的群組索引。
 
-*n*<br/>
+*nTask*<br/>
 [out]包含工作的工作群組中的索引。
 
 *hwndTask*<br/>
@@ -1296,9 +1298,9 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>參數
 
-[in]*lpszProfileName*<br/>
-[in]*nIndex*<br/>
-[in]*uiID*<br/>
+[in] *lpszProfileName*<br/>
+[in] *nIndex*<br/>
+[in] *uiID*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1416,8 +1418,8 @@ virtual void OnPressOtherButton(
 
 ### <a name="parameters"></a>參數
 
-[in]*pbtn*<br/>
-[in]*pWndOwner*<br/>
+[in] *pbtn*<br/>
+[in] *pWndOwner*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1429,7 +1431,7 @@ virtual BOOL OnSetAccData(long lVal);
 
 ### <a name="parameters"></a>參數
 
-[in]*lVal*<br/>
+[in] *lVal*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1445,8 +1447,8 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>參數
 
-[in]*pTarget*<br/>
-[in]*bDisableIfNoHndler*<br/>
+[in] *pTarget*<br/>
+[in] *bDisableIfNoHndler*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1458,7 +1460,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>參數
 
-[in]*pMsg*<br/>
+[in] *pMsg*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1472,7 +1474,7 @@ void RecalcLayout(BOOL bRedraw = TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bRedraw*<br/>
+[in] *bRedraw*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1511,7 +1513,7 @@ void RemoveAllTasks(int nGroup);
 
 ### <a name="parameters"></a>參數
 
-*n 群組*<br/>
+*nGroup*<br/>
 [in]指定群組的以零為起始的索引。
 
 ##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup
@@ -1524,7 +1526,7 @@ void RemoveGroup(int nGroup);
 
 ### <a name="parameters"></a>參數
 
-*n 群組*<br/>
+*nGroup*<br/>
 [in]指定要移除之群組的以零為起始的索引。
 
 ### <a name="remarks"></a>備註
@@ -1559,10 +1561,10 @@ BOOL RemoveTask(
 
 ### <a name="parameters"></a>參數
 
-*n 群組*<br/>
+*nGroup*<br/>
 [in]指定包含要移除之工作的工作群組的以零為起始的索引。
 
-*n*<br/>
+*nTask*<br/>
 [in]指定的以零為起始的索引，要移除的工作。
 
 *bRedraw*<br/>
@@ -1583,9 +1585,9 @@ virtual BOOL SaveState(
 
 ### <a name="parameters"></a>參數
 
-[in]*lpszProfileName*<br/>
-[in]*nIndex*<br/>
-[in]*uiID*<br/>
+[in] *lpszProfileName*<br/>
+[in] *nIndex*<br/>
+[in] *uiID*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1599,7 +1601,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>參數
 
-[in]*ar*<br/>
+[in] *ar*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1694,7 +1696,7 @@ BOOL SetGroupName(
 
 ### <a name="parameters"></a>參數
 
-*n 群組*<br/>
+*nGroup*<br/>
 [in]指定群組的以零為起始的索引。
 
 *lpszGroupName*<br/>
@@ -1717,10 +1719,10 @@ BOOL SetGroupTextColor(
 
 ### <a name="parameters"></a>參數
 
-*n 群組*<br/>
+*nGroup*<br/>
 [in]指定群組的以零為起始的索引。
 
-*色彩*<br/>
+*color*<br/>
 [in]指定的文字色彩。
 
 *colorHot*<br/>
@@ -1836,10 +1838,10 @@ BOOL SetTaskName(
 
 ### <a name="parameters"></a>參數
 
-*n 群組*<br/>
+*nGroup*<br/>
 [in]指定工作群組的以零為起始的索引。
 
-*n*<br/>
+*nTask*<br/>
 [in]指定工作的以零為起始的索引。
 
 *lpszTaskName*<br/>
@@ -1878,7 +1880,7 @@ void SetTasksIconHorzOffset(int n = -1);
 
 ### <a name="parameters"></a>參數
 
-[in]*n*<br/>
+[in] *n*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1890,7 +1892,7 @@ void SetTasksIconVertOffset(int n = -1);
 
 ### <a name="parameters"></a>參數
 
-[in]*n*<br/>
+[in] *n*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1908,13 +1910,13 @@ BOOL SetTaskTextColor(
 
 ### <a name="parameters"></a>參數
 
-*n 群組*<br/>
+*nGroup*<br/>
 [in]指定工作群組，其中包含工作的以零為起始的索引。
 
-*n*<br/>
+*nTask*<br/>
 [in]指定工作的以零為起始的索引。
 
-*色彩*<br/>
+*color*<br/>
 [in]指定工作的文字色彩。
 
 *colorHot*<br/>
@@ -1960,7 +1962,7 @@ BOOL SetWindowHeight(
 
 ### <a name="parameters"></a>參數
 
-*n 群組*<br/>
+*nGroup*<br/>
 [in]指定以零為起始的索引包含視窗控制項的群組。
 
 *hwndTask*<br/>
@@ -1985,7 +1987,7 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 
 ### <a name="parameters"></a>參數
 
-[in]*uiCmdId*<br/>
+[in] *uiCmdId*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -2003,10 +2005,10 @@ BOOL ShowTask(
 
 ### <a name="parameters"></a>參數
 
-*n 群組*<br/>
+*nGroup*<br/>
 [in]指定群組的以零為起始的索引。
 
-*n*<br/>
+*nTask*<br/>
 [in]指定的以零為起始的索引，要顯示或隱藏的工作。
 
 *bShow*<br/>

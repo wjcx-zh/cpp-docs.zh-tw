@@ -133,12 +133,12 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: 1c485d1b6f2b0557243973774bf9dfb382c2595b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b660d181aada8abeb61b397fb30b097897e74f65
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550432"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326773"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -173,9 +173,9 @@ class CPane : public CBasePane
 |[CPane::CanBeTabbedDocument](#canbetabbeddocument)|判斷窗格是否可以轉換成索引標籤式文件。|
 |[CPane::ConvertToTabbedDocument](#converttotabbeddocument)|將索引標籤式文件中的可停駐窗格。|
 |[CPane::CopyState](#copystate)|複製一個窗格的狀態。 (覆寫[CBasePane::CopyState](../../mfc/reference/cbasepane-class.md#copystate)。)|
-|[Cpane:: Create](#create)|會建立一種控制列，並將它附加至`CPane`物件。|
-|[Cpane:: Createdefaultminiframe](#createdefaultminiframe)|建立浮動窗格的迷你框架視窗。|
-|[Cpane:: Createex](#createex)|會建立一種控制列，並將它附加至`CPane`物件。|
+|[CPane::Create](#create)|會建立一種控制列，並將它附加至`CPane`物件。|
+|[CPane::CreateDefaultMiniframe](#createdefaultminiframe)|建立浮動窗格的迷你框架視窗。|
+|[CPane::CreateEx](#createex)|會建立一種控制列，並將它附加至`CPane`物件。|
 |`CPane::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|
 |[CPane::DockByMouse](#dockbymouse)|使用滑鼠停駐方法停駐窗格。|
 |[CPane::DockPane](#dockpane)|浮動窗格停駐於基底的窗格。|
@@ -208,12 +208,12 @@ class CPane : public CBasePane
 |[CPane::OnBeforeChangeParent](#onbeforechangeparent)|若要變更窗格的父代時，由架構呼叫。|
 |[CPane::OnPressCloseButton](#onpressclosebutton)|當使用者選擇 [] 窗格的標題上的 [關閉] 按鈕時由架構呼叫。|
 |`CPane::OnProcessDblClk`|在內部使用。|
-|[Cpane:: Onshowcontrolbarmenu](#onshowcontrolbarmenu)|當特殊窗格功能表即將顯示時由架構呼叫。|
-|[Cpane:: Onshowcontrolbarmenu](#onshowcontrolbarmenu)|當特殊窗格功能表即將顯示時由架構呼叫。|
+|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|當特殊窗格功能表即將顯示時由架構呼叫。|
+|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|當特殊窗格功能表即將顯示時由架構呼叫。|
 |`CPane::PrepareToDock`|在內部使用。|
-|[Cpane:: Recalclayout](#recalclayout)|重新計算窗格的配置資訊。 (覆寫[CBasePane::RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout)。)|
+|[CPane::RecalcLayout](#recalclayout)|重新計算窗格的配置資訊。 (覆寫[CBasePane::RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout)。)|
 |[CPane::SaveState](#savestate)|將窗格的狀態儲存至登錄中。 (覆寫[CBasePane::SaveState](../../mfc/reference/cbasepane-class.md#savestate)。)|
-|[Cpane:: Setactiveingroup](#setactiveingroup)|旗標為作用中 窗格。|
+|[CPane::SetActiveInGroup](#setactiveingroup)|旗標為作用中 窗格。|
 |[CPane::SetBorders](#setborders)|設定窗格的邊界值。|
 |[CPane::SetClientHotSpot](#setclienthotspot)|設定作用點的窗格。|
 |[CPane::SetDockState](#setdockstate)|還原停駐窗格的狀態資訊。|
@@ -240,7 +240,7 @@ class CPane : public CBasePane
 |名稱|描述|
 |----------|-----------------|
 |[CPane::m_bHandleMinSize](#m_bhandleminsize)|可讓一致的處理方式窗格的最小大小。|
-|[Cpane:: M_recentdockinfo](#m_recentdockinfo)|包含最新的停駐資訊。|
+|[CPane::m_recentDockInfo](#m_recentdockinfo)|包含最新的停駐資訊。|
 
 ## <a name="remarks"></a>備註
 
@@ -484,7 +484,7 @@ virtual BOOL Create(
 *lpszClassName*<br/>
 [in]指定 Windows 類別的名稱。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]指定視窗的樣式屬性。 如需詳細資訊，請參閱 <<c0> [ 的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。
 
 *rect*<br/>
@@ -512,7 +512,7 @@ virtual BOOL Create(
 
 如果您有未明確初始化[cpane:: M_recentdockinfo](#m_recentdockinfo)再呼叫`Create`，參數*rect*用作浮點或停駐窗格時的矩形。
 
-##  <a name="createdefaultminiframe"></a>  Cpane:: Createdefaultminiframe
+##  <a name="createdefaultminiframe"></a>  CPane::CreateDefaultMiniframe
 
 建立浮動窗格的迷你框架視窗。
 
@@ -559,7 +559,7 @@ virtual BOOL CreateEx(
 *lpszClassName*<br/>
 [in]指定 Windows 類別的名稱。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]指定視窗的樣式屬性。 如需詳細資訊，請參閱 <<c0> [ 的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。
 
 *rect*<br/>
@@ -1070,7 +1070,7 @@ AFX_IMPORT_DATA static BOOL m_bHandleMinSize;
 
 如果此值設為 TRUE 時，其大小應該縮小到低於最小大小的所有窗格會被都裁剪，不會自動縮放。 架構會使用視窗區域，基於窗格調整大小，因為不會變更此值設定為 TRUE，如果停駐窗格的視窗區域的大小。
 
-##  <a name="m_recentdockinfo"></a>  Cpane:: M_recentdockinfo
+##  <a name="m_recentdockinfo"></a>  CPane::m_recentDockInfo
 
 包含最新的停駐資訊。
 
@@ -1289,7 +1289,7 @@ virtual void OnPressCloseButton();
 
 由架構呼叫這個方法，是在使用者按下**關閉**按鈕窗格的標題。 若要接收通知的相關**關閉**事件，您可以覆寫這個方法在衍生類別中的。
 
-##  <a name="onshowcontrolbarmenu"></a>  Cpane:: Onshowcontrolbarmenu
+##  <a name="onshowcontrolbarmenu"></a>  CPane::OnShowControlBarMenu
 
 當特殊窗格功能表即將顯示時由架構呼叫。
 
@@ -1299,7 +1299,7 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]指定功能表的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -1308,9 +1308,9 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 
 ### <a name="remarks"></a>備註
 
-[] 功能表包含數個項目可讓您指定 [] 窗格中的行為，也就是：**浮動**，**停駐**，**自動隱藏**，和**隱藏**. 您可以藉由呼叫啟用此功能表中的所有窗格[CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu)。
+[] 功能表包含數個項目可讓您指定 [] 窗格中的行為，也就是：**浮動**，**停駐**，**自動隱藏**，和**隱藏**。 您可以藉由呼叫啟用此功能表中的所有窗格[CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu)。
 
-##  <a name="recalclayout"></a>  Cpane:: Recalclayout
+##  <a name="recalclayout"></a>  CPane::RecalcLayout
 
 重新計算窗格的配置資訊。
 
@@ -1356,7 +1356,7 @@ virtual BOOL SaveState(
 
 當您覆寫這個方法時，也呼叫基底方法，並傳回 FALSE 如果基底方法會傳回 FALSE。
 
-##  <a name="setactiveingroup"></a>  Cpane:: Setactiveingroup
+##  <a name="setactiveingroup"></a>  CPane::SetActiveInGroup
 
 旗標為作用中 窗格。
 

@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: 657f71e5d89f7d91d8b44836b4d478b41d041f88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c78634c93bda94940b2834a61d276f63522e4aeb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623011"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271902"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -161,7 +161,7 @@ class CDockablePane : public CPane
 
 |名稱|描述|
 |----------|-----------------|
-|[Cdockablepane:: Attachtotabwnd](#attachtotabwnd)|將一個窗格附加到另一個窗格。 這會建立索引標籤式的窗格。|
+|[CDockablePane::AttachToTabWnd](#attachtotabwnd)|將一個窗格附加到另一個窗格。 這會建立索引標籤式的窗格。|
 |[CDockablePane::CalcFixedLayout](#calcfixedlayout)|傳回窗格矩形的大小。|
 |[CDockablePane::CanAcceptMiniFrame](#canacceptminiframe)|判斷指定的迷你框架是否可以停駐窗格。|
 |[CDockablePane::CanAcceptPane](#canacceptpane)|判斷另一個窗格是否可以固定到目前的窗格。|
@@ -171,7 +171,7 @@ class CDockablePane : public CPane
 |[CDockablePane::CopyState](#copystate)|複製可停駐窗格的狀態。|
 |[CDockablePane::Create](#create)|建立 Windows 控制項，並將它附加至`CDockablePane`物件。|
 |[CDockablePane::CreateDefaultPaneDivider](#createdefaultpanedivider)|它所停駐在框架視窗將會建立預設分割線的窗格。|
-|[Cdockablepane:: Createex](#createex)|建立 Windows 控制項，並將它附加至`CDockablePane`物件。|
+|[CDockablePane::CreateEx](#createex)|建立 Windows 控制項，並將它附加至`CDockablePane`物件。|
 |[CDockablePane::CreateTabbedPane](#createtabbedpane)|從目前的窗格中建立索引標籤式的窗格。|
 |[CDockablePane::DockPaneContainer](#dockpanecontainer)|窗格停駐的容器。|
 |[CDockablePane::DockPaneStandard](#dockpanestandard)|使用 外框 （標準） 的停駐停駐窗格。|
@@ -204,12 +204,12 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|指定是否位在頂端或底部窗格的索引標籤。|
 |[CDockablePane::IsTracked](#istracked)|指定一個窗格由使用者拖曳。|
 |[CDockablePane::IsVisible](#isvisible)|判斷目前的窗格是否可見。|
-|[Cdockablepane:: Loadstate](#loadstate)|在內部使用。|
+|[CDockablePane::LoadState](#loadstate)|在內部使用。|
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|當一個窗格的父代變更時由架構呼叫。 (覆寫[CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent)。)|
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|在框架視窗停駐浮動的停駐列時，由架構呼叫。|
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|若要變更窗格的父代時，由架構呼叫。 (覆寫[CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent)。)|
 |[CDockablePane::OnBeforeFloat](#onbeforefloat)|當窗格即將浮點數時，由架構呼叫。 (覆寫[CPane::OnBeforeFloat](../../mfc/reference/cpane-class.md#onbeforefloat)。)|
-|[為 Cdockablepane](#removefromdefaultpanedividier)|當窗格能卸除時，架構會呼叫這個方法。|
+|[CDockablePane::RemoveFromDefaultPaneDividier](#removefromdefaultpanedividier)|當窗格能卸除時，架構會呼叫這個方法。|
 |[CDockablePane::ReplacePane](#replacepane)|取代指定的窗格中的窗格。|
 |[CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider)|還原預設的窗格分割線的窗格是還原序列化，架構會呼叫這個方法。|
 |`CDockablePane::SaveState`|在內部使用。|
@@ -220,7 +220,7 @@ class CDockablePane : public CPane
 |[CDockablePane::SetLastPercentInPaneContainer](#setlastpercentinpanecontainer)|設定其容器中的窗格所佔用的空間百分比。|
 |`CDockablePane::SetResizeMode`|在內部使用。|
 |[CDockablePane::SetRestoredDefaultPaneDivider](#setrestoreddefaultpanedivider)|設定還原的預設的窗格分割線。|
-|[Cdockablepane:: Settabbedpanertc](#settabbedpanertc)|設定兩個窗格停駐在一起時，會建立索引標籤式視窗的執行階段類別資訊。|
+|[CDockablePane::SetTabbedPaneRTC](#settabbedpanertc)|設定兩個窗格停駐在一起時，會建立索引標籤式視窗的執行階段類別資訊。|
 |[CDockablePane::ShowPane](#showpane)|顯示或隱藏窗格。|
 |[CDockablePane::Slide](#slide)|顯示或隱藏窗格中的，滑動動畫顯示] 窗格處於 [自動隱藏模式時，才使用。|
 |[CDockablePane::ToggleAutoHide](#toggleautohide)|切換自動隱藏模式。 (覆寫[CPane::ToggleAutoHide](../../mfc/reference/cpane-class.md#toggleautohide) 。)|
@@ -313,7 +313,7 @@ class CDockablePane : public CPane
 
 **標頭：** afxDockablePane.h
 
-##  <a name="attachtotabwnd"></a>  Cdockablepane:: Attachtotabwnd
+##  <a name="attachtotabwnd"></a>  CDockablePane::AttachToTabWnd
 
 將目前的窗格附加至 [目標] 窗格中，建立索引標籤式的窗格。
 
@@ -604,7 +604,7 @@ virtual BOOL Create(
 *nID*<br/>
 [in]指定的子視窗的識別碼。 此值必須是唯一，如果您想要儲存此停駐窗格的停駐狀態。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]指定視窗的樣式屬性。
 
 *dwTabbedStyle*<br/>
@@ -671,7 +671,7 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 |CBRS_ALIGN_LEFT|正在工作區框架視窗的左側停駐窗格。|
 |CBRS_ALIGN_RIGHT|要到右邊，框架視窗的工作區的停駐窗格。|
 
-##  <a name="createex"></a>  Cdockablepane:: Createex
+##  <a name="createex"></a>  CDockablePane::CreateEx
 
 建立 Windows 控制項，並將它附加至[CDockablePane](../../mfc/reference/cdockablepane-class.md)物件。
 
@@ -709,7 +709,7 @@ virtual BOOL CreateEx(
 *nID*<br/>
 [in]指定的子視窗的識別碼。 此值必須是唯一，如果您想要儲存此停駐窗格的停駐狀態。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]指定視窗的樣式屬性。
 
 *dwTabbedStyle*<br/>
@@ -987,7 +987,7 @@ virtual AFX_CS_STATUS GetDockingStatus(
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pt*<br/>
 [in]螢幕座標中指標的位置。
 
 *nSensitivity*<br/>
@@ -1108,7 +1108,7 @@ virtual int HitTest(
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]指定要測試的點。
 
 *bDetectCaption*<br/>
@@ -1276,7 +1276,7 @@ virtual BOOL IsVisible() const;
 
 如果可停駐窗格不是處於自動隱藏模式中，有的可見性狀態會由[CBasePane::IsVisible](../../mfc/reference/cbasepane-class.md#isvisible)方法。
 
-## ##  <a name="loadstate"></a>  Cdockablepane:: Loadstate
+## ##  <a name="loadstate"></a>  CDockablePane::LoadState
 
 僅供內部使用。 如需詳細資訊，請參閱 Visual Studio 安裝位置下之 VC\atlmfc\src\mfc 資料夾中的原始程式碼。
 
@@ -1334,7 +1334,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>參數
 
-[in]*pWndOldParent*<br/>
+[in] *pWndOldParent*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1434,7 +1434,7 @@ virtual void OnSlide(BOOL bSlideOut);
 
 覆寫此方法在衍生類別來實作自訂的自動隱藏效果。
 
-##  <a name="removefromdefaultpanedividier"></a>  為 Cdockablepane
+##  <a name="removefromdefaultpanedividier"></a>  CDockablePane::RemoveFromDefaultPaneDividier
 
 當窗格能卸除時，架構會呼叫這個方法。
 
@@ -1572,7 +1572,7 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 
 還原序列化的窗格時，會取得還原的預設的窗格分割線。 如需詳細資訊，請參閱 < [CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider)。
 
-##  <a name="settabbedpanertc"></a>  Cdockablepane:: Settabbedpanertc
+##  <a name="settabbedpanertc"></a>  CDockablePane::SetTabbedPaneRTC
 
 設定兩個窗格停駐在一起時，會建立索引標籤式視窗的執行階段類別資訊。
 

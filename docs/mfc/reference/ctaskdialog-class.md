@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: 7b95252c830e27a0602f149f880258511ec24e64
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 04c8a60f546700be8eeb2ec8a948e0ea321d12f8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177065"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265011"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -159,7 +159,7 @@ class CTaskDialog : public CObject
 |[CTaskDialog::GetVerificationCheckboxState](#getverificationcheckboxstate)|擷取驗證 核取方塊的狀態。|
 |[CTaskDialog::IsCommandControlEnabled](#iscommandcontrolenabled)|判斷是否已啟用的命令按鈕控制項或一般的按鈕。|
 |[CTaskDialog::IsRadioButtonEnabled](#isradiobuttonenabled)|判斷是否已啟用的選項按鈕。|
-|[Issupported](#issupported)|判斷是否正在執行的應用程式的電腦支援`CTaskDialog`。|
+|[CTaskDialog::IsSupported](#issupported)|判斷是否正在執行的應用程式的電腦支援`CTaskDialog`。|
 |[CTaskDialog::LoadCommandControls](#loadcommandcontrols)|使用字串資料表中的資料，以新增命令按鈕控制項。|
 |[CTaskDialog::LoadRadioButtons](#loadradiobuttons)|使用字串資料表中的資料，以新增選項按鈕。|
 |[CTaskDialog::NavigateTo](#navigateto)|將焦點轉移到另一個`CTaskDialog`。|
@@ -247,7 +247,7 @@ CTaskDialog 範例
 
 ## <a name="requirements"></a>需求
 
-**最小必要作業系統：** Windows Vista
+**最小必要的作業系統：** Windows Vista
 
 **標頭：** afxtaskdialog.h
 
@@ -489,7 +489,7 @@ int GetCommonButtonId(int nFlag);
 
 ### <a name="parameters"></a>參數
 
-*旗*<br/>
+*nFlag*<br/>
 [in]一般的按鈕類型相關聯`CTaskDialog`類別。
 
 ### <a name="return-value"></a>傳回值
@@ -1604,7 +1604,7 @@ HRESULT TaskDialogCallback(
 
 值*wParam*並*lParam*取決於特定產生的訊息。 您有一個或兩個這些值為空白。 下表列出支援的預設通知和功能的值*wParam*並*lParam*代表。 如果您覆寫這個方法在衍生類別中的，您應該實作下表中的每個訊息的回呼程式碼。
 
-|通知訊息|*wParam*值|*lParam*值|
+|通知訊息|*wParam* Value|*lParam*值|
 |--------------------------|--------------------|--------------------|
 |TDN_CREATED|未使用。|未使用。|
 |TDN_NAVIGATED|未使用。|未使用。|
@@ -1623,4 +1623,4 @@ HRESULT TaskDialogCallback(
 [類別](../../mfc/reference/mfc-classes.md)<br/>
 [CObject 類別](../../mfc/reference/cobject-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
-[逐步解說：將 CTaskDialog 新增至應用程式](../../mfc/walkthrough-adding-a-ctaskdialog-to-an-application.md)
+[逐步解說：新增 CTaskDialog 至應用程式](../../mfc/walkthrough-adding-a-ctaskdialog-to-an-application.md)

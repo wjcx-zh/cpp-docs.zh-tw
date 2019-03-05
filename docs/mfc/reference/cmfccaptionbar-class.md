@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 857427c12dd0f763bf88c99a65d5f9cf3eca1270
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a18e235c9f5875a977f740c26b917a3567a678d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429350"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264985"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar 類別
 
@@ -186,7 +186,7 @@ BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 邏輯 OR 運算子組合的標題列的樣式。
 
 *pParentWnd*<br/>
@@ -246,7 +246,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 
 ### <a name="parameters"></a>參數
 
-*Elem*<br/>
+*elem*<br/>
 [in]要擷取對齊標題列項目。
 
 ### <a name="return-value"></a>傳回值
@@ -460,7 +460,7 @@ virtual void OnDrawText(
 *rect*<br/>
 [in]文字的週框。
 
-*先把 strText*<br/>
+*strText*<br/>
 [in]要顯示的文字字串。
 
 ### <a name="remarks"></a>備註
@@ -711,7 +711,7 @@ void SetText(
 
 ### <a name="parameters"></a>參數
 
-*先把 strText*<br/>
+*strText*<br/>
 [in]若要設定文字字串。
 
 *textAlignment*<br/>

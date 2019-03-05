@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CMFCToolBarEditBoxButton [MFC], SetContextMenuID
 - CMFCToolBarEditBoxButton [MFC], SetFlatMode
 ms.assetid: b21d9b67-6bf7-4ca9-bd62-b237756e0ab3
-ms.openlocfilehash: bf71bb508bf0327a7fdf34b128bdb825323cd3a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac07ff4e6bf97518e2c659a9d6df9bd721b6b806
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525709"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291609"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton 類別
 
@@ -127,7 +127,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 
 3. 在處理 AFX_WM_RESETTOOLBAR 訊息的訊息處理常式，假的按鈕與新的下拉式方塊按鈕使用取代[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)。
 
-如需詳細資訊，請參閱 <<c0> [ 逐步解說： 將工具列控制項](../../mfc/walkthrough-putting-controls-on-toolbars.md)。
+如需詳細資訊，請參閱[逐步解說：將工具列上的控制項加入](../../mfc/walkthrough-putting-controls-on-toolbars.md)。
 
 ## <a name="example"></a>範例
 
@@ -183,7 +183,7 @@ CMFCToolBarEditBoxButton(
 *iImage*<br/>
 [in]指定工具列按鈕影像的以零為起始的索引。 映像位於[CMFCToolBarImages 類別](../../mfc/reference/cmfctoolbarimages-class.md)物件[CMFCToolBar 類別](../../mfc/reference/cmfctoolbar-class.md)類別會負責維護。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]指定編輯控制項樣式。
 
 *iWidth*<br/>
@@ -692,5 +692,4 @@ virtual void SetStyle(UINT nStyle);
 [CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [CEdit 類別](../../mfc/reference/cedit-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[逐步解說：將控制項放在工具列上](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[逐步解說：將放在工具列上的控制項](../../mfc/walkthrough-putting-controls-on-toolbars.md)

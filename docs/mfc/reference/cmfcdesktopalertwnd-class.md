@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: 759f4cdb66c1e16f022731e9d3183ad1192e0975
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b7d72b048d9f44233f96a3af859315ea20e9747
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585129"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291635"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 
@@ -68,7 +68,7 @@ class CMFCDesktopAlertWnd : public CWnd
 
 |名稱|描述|
 |----------|-----------------|
-|[Cmfcdesktopalertwnd:: Create](#create)|建立並初始化桌面警示視窗。|
+|[CMFCDesktopAlertWnd::Create](#create)|建立並初始化桌面警示視窗。|
 |[CMFCDesktopAlertWnd::GetAnimationSpeed](#getanimationspeed)|會傳回動畫的速度。|
 |[CMFCDesktopAlertWnd::GetAnimationType](#getanimationtype)|傳回的動畫類型。|
 |[CMFCDesktopAlertWnd::GetAutoCloseTime](#getautoclosetime)|傳回自動關閉逾時。|
@@ -138,7 +138,7 @@ class CMFCDesktopAlertWnd : public CWnd
 
 **標頭：** afxDesktopAlertWnd.h
 
-##  <a name="create"></a>  Cmfcdesktopalertwnd:: Create
+##  <a name="create"></a>  CMFCDesktopAlertWnd::Create
 
 建立並初始化桌面警示視窗。
 
@@ -352,9 +352,9 @@ virtual BOOL OnCommand(
 
 ### <a name="parameters"></a>參數
 
-[in]*wParam*<br/>
+[in] *wParam*<br/>
 
-[in]*lParam*<br/>
+[in] *lParam*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -368,7 +368,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -380,7 +380,7 @@ BOOL ProcessCommand(HWND hwnd);
 
 ### <a name="parameters"></a>參數
 
-[in]*hwnd*<br/>
+[in] *hwnd*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -440,7 +440,7 @@ void SetAutoCloseTime(int nTime);
 
 ### <a name="parameters"></a>參數
 
-*n*<br/>
+*nTime*<br/>
 [in]時間 （毫秒），經過之前會自動關閉警示 視窗。
 
 ### <a name="remarks"></a>備註

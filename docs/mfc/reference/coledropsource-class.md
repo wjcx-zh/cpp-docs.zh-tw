@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-ms.openlocfilehash: 51d524054b67a5cecc5aa7791b0aeea0cc076813
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 587aa0730502d5e8f90c4fec57bb87886b79fb3f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457771"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304973"
 ---
 # <a name="coledropsource-class"></a>COleDropSource 類別
 
@@ -147,7 +147,7 @@ virtual SCODE QueryContinueDrag(
 指出是否有已按下 ESC 鍵自上次呼叫`COleDropSource::QueryContinueDrag`。
 
 *dwKeyState*<br/>
-包含在鍵盤上的輔助按鍵的狀態。 這是任意數目的下列組合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
+包含在鍵盤上的輔助按鍵的狀態。 這是任意數目的下列組合：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
 
 ### <a name="return-value"></a>傳回值
 
@@ -167,4 +167,3 @@ DRAGDROP_S_CANCEL 如果 ESC 鍵或向右按鈕已按下，還是保留按鈕就
 [MFC 範例 OCLIENT](../../visual-cpp-samples.md)<br/>
 [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

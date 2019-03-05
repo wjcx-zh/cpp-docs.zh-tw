@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CD2DBrush [MFC], m_pBrush
 - CD2DBrush [MFC], m_pBrushProperties
 ms.assetid: 0d2c0857-2261-48a8-8ee0-a88cbf08499a
-ms.openlocfilehash: 9e0be4b3b4f39d8fcf32f713bc8765d1f344babe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d079ec6c96f96919fde39b73297580ed2a0ac75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517880"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270978"
 ---
 # <a name="cd2dbrush-class"></a>CD2DBrush 類別
 
@@ -54,7 +54,7 @@ class CD2DBrush : public CD2DResource;
 |名稱|描述|
 |----------|-----------------|
 |[CD2DBrush::CD2DBrush](#cd2dbrush)|建構 CD2DBrush 物件。|
-|[CD2DBrush:: ~ CD2DBrush](#_dtorcd2dbrush)|解構函式。 D2D 筆刷物件正在被終結時呼叫。|
+|[CD2DBrush::~CD2DBrush](#_dtorcd2dbrush)|解構函式。 D2D 筆刷物件正在被終結時呼叫。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -245,7 +245,7 @@ void SetOpacity(FLOAT opacity);
 
 ### <a name="parameters"></a>參數
 
-*不透明度*<br/>
+*opacity*<br/>
 介於 0 到 1，指出筆刷的不透明度值。 這個值是以線性方式調整所有填滿筆刷的像素的 alpha 值的常數倍數。 不透明度值會限制在 0 到 1 的範圍之前一起相乘。
 
 ##  <a name="settransform"></a>  CD2DBrush::SetTransform

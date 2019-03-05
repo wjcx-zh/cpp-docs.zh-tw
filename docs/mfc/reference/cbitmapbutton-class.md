@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-ms.openlocfilehash: 6bff87cd7648e1e5f4e0391a0a7fc1a1455a51f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c800b40fcf2bb3008b35614390e4aafcb43a54f5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599650"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296757"
 ---
 # <a name="cbitmapbutton-class"></a>CBitmapButton 類別
 
@@ -179,7 +179,7 @@ BOOL LoadBitmaps(
 ### <a name="parameters"></a>參數
 
 *lpszBitmapResource*<br/>
-指向以 null 結束的字串，其中包含點陣圖按鈕的標準模式或 「 向上 」 狀態的點陣圖名稱。 必要。
+指向以 null 結束的字串，其中包含點陣圖按鈕的標準模式或 「 向上 」 狀態的點陣圖名稱。 必要項。
 
 *lpszBitmapResourceSel*<br/>
 以 null 終止的字串，其中包含點陣圖的名稱的點陣圖按鈕的選取，或 「 關機 」 狀態的點。 可以是 NULL。
@@ -191,7 +191,7 @@ BOOL LoadBitmaps(
 指向以 null 結束的字串，其中包含的點陣圖按鈕已停用狀態的點陣圖的名稱。 可以是 NULL。
 
 *nIDBitmapResource*<br/>
-指定的點陣圖按鈕的標準模式或 「 向上 」 狀態的點陣圖資源的資源識別碼。 必要。
+指定的點陣圖按鈕的標準模式或 「 向上 」 狀態的點陣圖資源的資源識別碼。 必要項。
 
 *nIDBitmapResourceSel*<br/>
 點陣圖按鈕的選取，或 「 關機 」 狀態，請指定點陣圖資源的資源識別碼。 可能是 0。
@@ -227,4 +227,3 @@ void SizeToContent();
 [MFC 範例 CTRLTEST](../../visual-cpp-samples.md)<br/>
 [CButton 類別](../../mfc/reference/cbutton-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

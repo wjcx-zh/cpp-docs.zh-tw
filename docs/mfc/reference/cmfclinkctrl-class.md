@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], SizeToContent
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
-ms.openlocfilehash: bc43dcaf077bc97e3ff589a12bee6a8eac6aeed1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a4324fad7668907600cbaebeb5c9de4ad0e7c1e4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608581"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302713"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl 類別
 

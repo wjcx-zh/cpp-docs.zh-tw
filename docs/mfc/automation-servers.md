@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dispatch maps [MFC], Automation servers
 - servers, Automation
 ms.assetid: 523fd155-51ce-4f91-b986-b74bdbdd7d92
-ms.openlocfilehash: 0c7f3a3bd37c5f7f5696de363aa646f5376f4e75
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39e870db2f5476a630a8ed3bc68944dbb164d469
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468792"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305129"
 ---
 # <a name="automation-servers"></a>Automation 伺服程式
 
@@ -55,4 +55,3 @@ Visual C++ 和 MFC 架構為 Automation 伺服器提供廣泛的支援。 其中
 
 [Automation](../mfc/automation.md)<br/>
 [MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)
-

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - GetLicenseKey method [MFC]
 - licensing ActiveX controls
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
-ms.openlocfilehash: 35ca5d410f642f2557d9ee797eda2d9529f7f4d1
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: eda2ea08c6bd3526befb71c704aa20eba6935b04
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176353"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304622"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC ActiveX 控制項：授權 ActiveX 控制項
 
@@ -25,7 +25,7 @@ ms.locfileid: "52176353"
 > [!IMPORTANT]
 > ActiveX 是舊版的技術，不應用於新的開發。 如需有關取代 ActiveX 的現代技術的詳細資訊，請參閱[ActiveX 控制項](activex-controls.md)。
 
-這篇文章討論下列主題：
+本文討論下列主題：
 
 - [授權的 ActiveX 控制項的概觀](#_core_overview_of_activex_control_licensing)
 
@@ -126,4 +126,3 @@ ActiveX 控制項精靈會將下列程式碼置於控制項實作檔來定義控
 
 [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)<br/>
 [MFC ActiveX 控制項精靈](../mfc/reference/mfc-activex-control-wizard.md)
-

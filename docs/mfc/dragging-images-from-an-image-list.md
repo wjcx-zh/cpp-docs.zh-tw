@@ -7,12 +7,12 @@ helpviewer_keywords:
 - image lists [MFC], dragging images from
 - images [MFC], dragging from image lists
 ms.assetid: af691db8-e4f0-4046-b7b9-9acc68d3713d
-ms.openlocfilehash: 9d42e9cdd8e2711fc6ed6aa0d08a19b8bc55d5f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba56a38cfc5ccf808c7d95f24666fff0313ecc43
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562197"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294508"
 ---
 # <a name="dragging-images-from-an-image-list"></a>從影像清單拖曳影像
 
@@ -34,4 +34,3 @@ ms.locfileid: "50562197"
 
 [使用 CImageList](../mfc/using-cimagelist.md)<br/>
 [控制項](../mfc/controls-mfc.md)
-

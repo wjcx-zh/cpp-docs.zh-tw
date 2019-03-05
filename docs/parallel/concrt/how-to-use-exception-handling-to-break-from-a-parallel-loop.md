@@ -1,18 +1,18 @@
 ---
-title: 如何：使用例外狀況處理來中斷平行迴圈
+title: HOW TO：使用例外狀況處理來中斷平行迴圈
 ms.date: 11/04/2016
 helpviewer_keywords:
 - search algorithm, writing [Concurrency Runtime]
 - writing a search algorithm [Concurrency Runtime]
 ms.assetid: 16d7278c-2d10-4014-9f58-f1899e719ff9
-ms.openlocfilehash: a9557f2fc809647215dbb5fd928f5c638af6ed62
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19d732d98f24172471d96cd5e2962b2a99ab0203
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532882"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262307"
 ---
-# <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>如何：使用例外狀況處理來中斷平行迴圈
+# <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>HOW TO：使用例外狀況處理來中斷平行迴圈
 
 本主題說明如何撰寫基本樹狀的搜尋演算法。
 
@@ -77,4 +77,3 @@ Did not find node with value 17522.
 [task_group 類別](reference/task-group-class.md)<br/>
 [structured_task_group 類別](../../parallel/concrt/reference/structured-task-group-class.md)<br/>
 [parallel_for_each 函式](reference/concurrency-namespace-functions.md#parallel_for_each)
-

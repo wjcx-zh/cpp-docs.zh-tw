@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-ms.openlocfilehash: 53e802e973ca78619252fcc4100a7cc50009f2ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1081a831cc2b9fc0ab22e2c80a4f657466534d86
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618501"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270887"
 ---
 # <a name="dialog-boxes-in-ole"></a>OLE 中的對話方塊
 
@@ -30,7 +30,7 @@ ms.locfileid: "50618501"
 *變更圖示*<br/>
 此對話方塊可讓使用者選取的圖示會顯示，表示連結或內嵌的項目。 顯示此對話方塊中，當使用者從 編輯 功能表中選擇 變更圖示或 選擇性貼上或轉換對話方塊中選擇 變更圖示 按鈕。 也會顯示它時使用者會開啟 [插入物件] 對話方塊中，並選擇顯示為圖示。 使用[COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md)類別，以顯示此對話方塊。
 
-*轉換*<br/>
+*Convert*<br/>
 此對話方塊可讓使用者變更內嵌或連結項目的類型。 例如，如果您有內嵌在複合文件中的中繼檔，而稍後想要使用另一個應用程式來修改內嵌中繼檔，您可以使用 [轉換] 對話方塊。 這個對話方塊通常會依序按一下*項目類型*物件 [編輯] 功能表，然後在階層式功能表中，按一下轉換。 使用[COleConvertDialog](../mfc/reference/coleconvertdialog-class.md)類別，以顯示此對話方塊。 如需範例，執行 MFC OLE 範例[OCLIENT](../visual-cpp-samples.md)。
 
 *編輯連結或更新連結*<br/>
@@ -44,4 +44,3 @@ ms.locfileid: "50618501"
 [對話方塊](../mfc/dialog-boxes.md)<br/>
 [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [OLE](../mfc/ole-in-mfc.md)
-

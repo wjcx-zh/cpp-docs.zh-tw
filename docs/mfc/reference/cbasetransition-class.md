@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: b4c15be574700730e847bce06aaa4a6f82aed4b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f9bc3708974511506741a35c11676df2b0be592
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539122"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258368"
 ---
 # <a name="cbasetransition-class"></a>CBaseTransition 類別
 
@@ -90,7 +90,7 @@ class CBaseTransition : public CObject;
 |[CBaseTransition::GetTransition](#gettransition)|多載。 傳回基礎 COM 轉換物件的指標。|
 |[CBaseTransition::GetType](#gettype)|傳回轉換類型。|
 |[CBaseTransition::IsAdded](#isadded)|會指示轉換是否已加入至分鏡腳本。|
-|[Cbasetransition::](#setkeyframes)|設定轉換的主要畫面格。|
+|[CBaseTransition::SetKeyframes](#setkeyframes)|設定轉換的主要畫面格。|
 |[CBaseTransition::SetRelatedVariable](#setrelatedvariable)|建立動畫變數，並轉換之間的關聯性。|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
@@ -370,7 +370,7 @@ ATL::CComPtr<IUIAnimationTransition> m_transition;
 TRANSITION_TYPE m_type;
 ```
 
-##  <a name="setkeyframes"></a>  Cbasetransition::
+##  <a name="setkeyframes"></a>  CBaseTransition::SetKeyframes
 
 設定轉換的主要畫面格。
 
@@ -385,7 +385,7 @@ void SetKeyframes(
 *pStart*<br/>
 主要畫面格，指定轉換的開頭。
 
-*暫止*<br/>
+*pEnd*<br/>
 指定轉換的最後一個主要畫面格。
 
 ### <a name="remarks"></a>備註

@@ -2,12 +2,12 @@
 title: 自動平行處理和自訂向量化
 ms.date: 11/04/2016
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
-ms.openlocfilehash: 06ab255e7769bfa56d5a8d22cdbe19d415ce6b31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 018289bc9499aee8d1739ebeed0c1cb847769a08
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618334"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276620"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>自動平行處理和自訂向量化
 
@@ -107,7 +107,7 @@ for (int i = 0; i < 1000; ++i)
 
 如需原因代碼和訊息的詳細資訊，請參閱[向量化工具和平行化工具訊息](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)。
 
-如需示範在實務上的向量化工具的運作方式的範例，請參閱[Project Austin 第 2 部分 6： 頁面捲曲](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)
+如需示範在實務上的向量化工具的運作方式的範例，請參閱[Project Austin 第 2 部分 6:Curling 頁面](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)
 
 ## <a name="see-also"></a>另請參閱
 

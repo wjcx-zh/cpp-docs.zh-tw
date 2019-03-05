@@ -1,18 +1,18 @@
 ---
-title: 如何：在已完成的工作之中選取
+title: HOW TO：在已完成的工作之中選取
 ms.date: 11/04/2016
 helpviewer_keywords:
 - selecting among completed tasks [Concurrency Runtime]
 - completed tasks, selecting among [Concurrency Runtime]
 ms.assetid: c8ccc160-043f-4599-847b-32ed270bb257
-ms.openlocfilehash: c9137c3d1e354a5e3f50f0d281ecbbd247642597
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d31f9bd16aaa70cc773e60e4f1193e66ec520f0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551628"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278024"
 ---
-# <a name="how-to-select-among-completed-tasks"></a>如何：在已完成的工作之中選取
+# <a name="how-to-select-among-completed-tasks"></a>HOW TO：在已完成的工作之中選取
 
 此範例示範如何使用[concurrency:: choice](../../parallel/concrt/reference/choice-class.md)並[concurrency:: join](../../parallel/concrt/reference/join-class.md)類別選取第一個工作完成搜尋演算法。
 

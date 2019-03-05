@@ -6,12 +6,12 @@ helpviewer_keywords:
 - month calendar controls [MFC], creating
 - month calendar controls [MFC]
 ms.assetid: 185cc642-85e9-4365-8a4c-d90b75b010f7
-ms.openlocfilehash: f98ce6c0272b64442d42cb0ba78b10affe5ede8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 809bc9fdf6b4477363d0a43d007a2884bb43a049
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523757"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258745"
 ---
 # <a name="creating-the-month-calendar-control"></a>建立月曆控制項
 
@@ -39,4 +39,3 @@ ms.locfileid: "50523757"
 
 [使用 CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)<br/>
 [控制項](../mfc/controls-mfc.md)
-

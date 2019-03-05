@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtr class
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
-ms.openlocfilehash: b328d58116d3b26645a2b3a3981c11fa705878ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f4f446aa97f2bf3843b830bd7fb4c4a5d74ffdb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615250"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259785"
 ---
 # <a name="cautoptr-class"></a>CAutoPtr 類別
 
@@ -45,7 +45,7 @@ class CAutoPtr
 |名稱|描述|
 |----------|-----------------|
 |[CAutoPtr::CAutoPtr](#cautoptr)|建構函式。|
-|[CAutoPtr:: ~ CAutoPtr](#dtor)|解構函式。|
+|[CAutoPtr::~CAutoPtr](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -59,9 +59,9 @@ class CAutoPtr
 
 |名稱|描述|
 |----------|-----------------|
-|[CAutoPtr::operator T *](#operator_t_star)|轉換運算子。|
+|[CAutoPtr::operator T*](#operator_t_star)|轉換運算子。|
 |[CAutoPtr::operator =](#operator_eq)|指派運算子。|
-|[CAutoPtr::operator->](#operator_ptr)|成員指標運算子中。|
+|[CAutoPtr::operator ->](#operator_ptr)|成員指標運算子中。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
@@ -143,7 +143,7 @@ CAutoPtr(CAutoPtr<T>& p) throw();
 
 請參閱中的範例[CAutoPtr 概觀](../../atl/reference/cautoptr-class.md)。
 
-##  <a name="dtor"></a>  CAutoPtr:: ~ CAutoPtr
+##  <a name="dtor"></a>  CAutoPtr::~CAutoPtr
 
 解構函式。
 
@@ -231,7 +231,7 @@ CAutoPtr<T>& operator= (CAutoPtr<TSrc>& p);
 
 請參閱中的範例[CAutoPtr 概觀](../../atl/reference/cautoptr-class.md)。
 
-##  <a name="operator_ptr"></a>  CAutoPtr::operator-&gt;
+##  <a name="operator_ptr"></a>  CAutoPtr::operator -&gt;
 
 成員指標運算子中。
 
@@ -251,7 +251,7 @@ T* operator->() const throw();
 
 請參閱中的範例[CAutoPtr 概觀](../../atl/reference/cautoptr-class.md)。
 
-##  <a name="operator_t_star"></a>  CAutoPtr::operator T *
+##  <a name="operator_t_star"></a>  CAutoPtr::operator T*
 
 轉換運算子。
 

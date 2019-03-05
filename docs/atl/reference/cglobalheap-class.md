@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CGlobalHeap class
 ms.assetid: e348d838-3aa7-4bee-a1b3-cd000c99f834
-ms.openlocfilehash: a4bc8b18a1c29049e17576082a30de4a8704eaee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cba15421fd0329df7a66a35979ed54b863b7cca0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468948"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278297"
 ---
 # <a name="cglobalheap-class"></a>CGlobalHeap 類別
 
@@ -37,10 +37,10 @@ class CGlobalHeap : public IAtlMemMgr
 
 |名稱|描述|
 |----------|-----------------|
-|[Cglobalheap:: Allocate](#allocate)|呼叫這個方法來配置記憶體區塊。|
-|[Cglobalheap:: Free](#free)|呼叫這個方法來釋放此記憶體管理員所配置的記憶體區塊。|
+|[CGlobalHeap::Allocate](#allocate)|呼叫這個方法來配置記憶體區塊。|
+|[CGlobalHeap::Free](#free)|呼叫這個方法來釋放此記憶體管理員所配置的記憶體區塊。|
 |[CGlobalHeap::GetSize](#getsize)|呼叫這個方法，以取得此記憶體管理員所配置的記憶體區塊配置的大小。|
-|[Cglobalheap:: Reallocate](#reallocate)|呼叫這個方法來重新配置此記憶體管理員所配置的記憶體。|
+|[CGlobalHeap::Reallocate](#reallocate)|呼叫這個方法來重新配置此記憶體管理員所配置的記憶體。|
 
 ## <a name="remarks"></a>備註
 
@@ -63,7 +63,7 @@ class CGlobalHeap : public IAtlMemMgr
 
 **標頭：** atlmem.h
 
-##  <a name="allocate"></a>  Cglobalheap:: Allocate
+##  <a name="allocate"></a>  CGlobalHeap::Allocate
 
 呼叫這個方法來配置記憶體區塊。
 
@@ -124,7 +124,7 @@ virtual size_t GetSize(void* p) throw();
 
 使用實作[GlobalSize](/windows/desktop/api/winbase/nf-winbase-globalsize)。
 
-##  <a name="reallocate"></a>  Cglobalheap:: Reallocate
+##  <a name="reallocate"></a>  CGlobalHeap::Reallocate
 
 呼叫這個方法來重新配置此記憶體管理員所配置的記憶體。
 

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleObjectFactory [MFC], VerifyLicenseKey
 - COleObjectFactory [MFC], VerifyUserLicense
 ms.assetid: ab179c1e-4af2-44aa-a576-37c48149b427
-ms.openlocfilehash: 4aa6d688de59884c7279b441d12dda9dcdf2ff6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25dce92f49ba9de08fcf33d54db8e97d520f5ea4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476007"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266376"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory 類別
 
@@ -74,7 +74,7 @@ class COleObjectFactory : public CCmdTarget
 |[COleObjectFactory::RevokeAll](#revokeall)|撤銷具有 OLE 系統 Dll 的應用程式的物件 factory 的註冊。|
 |[COleObjectFactory::UnregisterAll](#unregisterall)|取消註冊所有的應用程式的物件 factory。|
 |[COleObjectFactory::UpdateRegistry](#updateregistry)|使用 OLE 系統登錄中註冊這個物件 factory。|
-|[登錄下列項目](#updateregistryall)|使用 OLE 系統登錄，註冊所有的應用程式的物件 factory。|
+|[COleObjectFactory::UpdateRegistryAll](#updateregistryall)|使用 OLE 系統登錄，註冊所有的應用程式的物件 factory。|
 
 ### <a name="protected-methods"></a>保護方法
 
@@ -97,7 +97,7 @@ class COleObjectFactory : public CCmdTarget
 
 - 使用 OLE 系統登錄中註冊控制項的物件 factory。
 
-如需有關建立物件的詳細資訊，請參閱文章[資料物件和資料來源 (OLE)](../../mfc/data-objects-and-data-sources-ole.md)並[的資料物件和資料來源： 建立和解構](../../mfc/data-objects-and-data-sources-creation-and-destruction.md)。 如需有關註冊的詳細資訊，請參閱文章[註冊](../../mfc/registration.md)。
+如需有關建立物件的詳細資訊，請參閱文章[資料物件和資料來源 (OLE)](../../mfc/data-objects-and-data-sources-ole.md)和[資料物件和資料來源：建立和解構](../../mfc/data-objects-and-data-sources-creation-and-destruction.md)。 如需有關註冊的詳細資訊，請參閱文章[註冊](../../mfc/registration.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -340,7 +340,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
 
    如果您要建立您的專案使用 MFC ActiveX ControlWizard，ControlWizard 提供覆寫，此純虛擬函式。
 
-##  <a name="updateregistryall"></a>  登錄下列項目
+##  <a name="updateregistryall"></a>  COleObjectFactory::UpdateRegistryAll
 
 使用 OLE 系統登錄，註冊所有的應用程式的物件 factory。
 

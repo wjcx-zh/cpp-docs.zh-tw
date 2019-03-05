@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CD2DLinearGradientBrush [MFC], m_LinearGradientBrushProperties
 - CD2DLinearGradientBrush [MFC], m_pLinearGradientBrush
 ms.assetid: d4be9ff9-0ea8-45e6-9b8d-f3bc5673cbac
-ms.openlocfilehash: 03c370be5bcfc61e1dd398604f27313d3de15f8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d86235893d1f238f4cba9c927fad17f29060e591
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635816"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258720"
 ---
 # <a name="cd2dlineargradientbrush-class"></a>CD2DLinearGradientBrush 類別
 
@@ -54,7 +54,7 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 |名稱|描述|
 |----------|-----------------|
 |[CD2DLinearGradientBrush::CD2DLinearGradientBrush](#cd2dlineargradientbrush)|建構 CD2DLinearGradientBrush 物件。|
-|[CD2DLinearGradientBrush:: ~ CD2DLinearGradientBrush](#_dtorcd2dlineargradientbrush)|解構函式。 D2D 線性漸層筆刷物件正在被終結時呼叫。|
+|[CD2DLinearGradientBrush::~CD2DLinearGradientBrush](#_dtorcd2dlineargradientbrush)|解構函式。 D2D 線性漸層筆刷物件正在被終結時呼叫。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -74,7 +74,7 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush *](#operator_id2d1lineargradientbrush_star)|傳回 ID2D1LinearGradientBrush 介面|
+|[CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush*](#operator_id2d1lineargradientbrush_star)|傳回 ID2D1LinearGradientBrush 介面|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
@@ -251,7 +251,7 @@ ID2D1LinearGradientBrush 指標。
 ID2D1LinearGradientBrush* m_pLinearGradientBrush;
 ```
 
-##  <a name="operator_id2d1lineargradientbrush_star"></a>  CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush *
+##  <a name="operator_id2d1lineargradientbrush_star"></a>  CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush*
 
 傳回 ID2D1LinearGradientBrush 介面
 
@@ -273,7 +273,7 @@ void SetEndPoint(CD2DPointF point);
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 筆刷的座標空間中的線性漸層的結束二維座標
 
 ##  <a name="setstartpoint"></a>  CD2DLinearGradientBrush::SetStartPoint
@@ -286,7 +286,7 @@ void SetStartPoint(CD2DPointF point);
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 線性漸層，筆刷的座標空間中的起始二維座標
 
 ## <a name="see-also"></a>另請參閱

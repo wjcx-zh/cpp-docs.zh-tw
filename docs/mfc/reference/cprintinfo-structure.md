@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrintInfo structure [MFC]
 ms.assetid: 0b3de849-d050-4386-9a14-f4c1a25684f7
-ms.openlocfilehash: 259dfd6808a5e975fb22d11d0a8c569237733eae
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e08885fc9893d175e819c0acbf571d96d425a2c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524510"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273357"
 ---
 # <a name="cprintinfo-structure"></a>CPrintInfo 結構
 
@@ -67,7 +67,7 @@ A`CPrintInfo`物件架構與您的檢視類別之間傳遞列印程序期間，�
 
 另一個範例是以文件的長度不知道會在列印之前的情況。 在此情況下，檢視類別測試文件結尾的每個列印頁面的時間。 當到達結尾時，檢視類別設定`m_bContinuePrinting`隸屬`CPrintInfo`為 FALSE，這會通知架構，來停止列印迴圈。
 
-`CPrintInfo` 成員函式會使用`CView`列在 「 另請參閱。 」 如需 Microsoft Foundation Class Library 所提供的列印架構的詳細資訊，請參閱[框架 Windows](../../mfc/frame-windows.md)並[文件/檢視架構](../../mfc/document-view-architecture.md)以及文件[列印](../../mfc/printing.md)並[列印： 多頁文件](../../mfc/multipage-documents.md)。
+`CPrintInfo` 成員函式會使用`CView`列在 「 另請參閱。 」 如需 Microsoft Foundation Class Library 所提供的列印架構的詳細資訊，請參閱[框架 Windows](../../mfc/frame-windows.md)並[文件/檢視架構](../../mfc/document-view-architecture.md)以及文件[列印](../../mfc/printing.md)和[列印：多頁文件](../../mfc/multipage-documents.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -325,4 +325,3 @@ void SetMinPage(UINT nMinPage);
 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)<br/>
 [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)<br/>
 [CView::OnPrint](../../mfc/reference/cview-class.md#onprint)
-

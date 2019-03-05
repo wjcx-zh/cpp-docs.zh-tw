@@ -1,5 +1,5 @@
 ---
-title: Windows Sockets：搭配使用通訊端與封存
+title: Windows Sockets:搭配使用通訊端與封存
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], archives
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - archives [MFC], and Windows Sockets
 - CSocket class [MFC], programming model
 ms.assetid: 17e71a99-a09e-4e1a-9fda-13d62805c824
-ms.openlocfilehash: 64c5c058404b977254ca54d5595193654b3f4479
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71a7ed1f1b67bed157805328679a18ceabf201d3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615381"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261501"
 ---
-# <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets：搭配使用通訊端與封存
+# <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets:搭配使用通訊端與封存
 
 這篇文章說明[CSocket 程式設計模型](#_core_the_csocket_programming_model)。 類別[CSocket](../mfc/reference/csocket-class.md)提供通訊端支援，在較高層級的抽象類別比[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。 `CSocket` 使用 MFC 序列化通訊協定版本，將資料從經由 MFC 通訊端物件來回傳遞[CArchive](../mfc/reference/carchive-class.md)物件。 `CSocket` 會提供封鎖 (同時管理 Windows 訊息的背景處理)，並且可讓您存取 `CArchive`，它可管理有關通訊的多個層面，否則您必須使用原始 API 或 `CAsyncSocket` 類別才能自行管理這些層面。
 
 > [!TIP]
 >  您可以單獨使用 `CSocket` 類別做為更方便的 `CAsyncSocket` 版本，不過，最簡單的程式設計模型是使用 `CSocket` 搭配 `CArchive` 物件。
 
-如需實作的通訊端與封存的運作方式的詳細資訊，請參閱[Windows Sockets： 如何通訊端與封存工作](../mfc/windows-sockets-how-sockets-with-archives-work.md)。 取得範例程式碼，請參閱[Windows Sockets： 作業的順序](../mfc/windows-sockets-sequence-of-operations.md)和[Windows Sockets： 通訊端使用封存的範例](../mfc/windows-sockets-example-of-sockets-using-archives.md)。 如需某些功能的資訊就能藉由從通訊端類別衍生您自己的類別，請參閱[Windows Sockets： 從通訊端類別衍生](../mfc/windows-sockets-deriving-from-socket-classes.md)。
+如需實作的通訊端與封存的運作方式的詳細資訊，請參閱[Windows Sockets:通訊端與封存的運作方式](../mfc/windows-sockets-how-sockets-with-archives-work.md)。 取得範例程式碼，請參閱[Windows Sockets:作業的順序](../mfc/windows-sockets-sequence-of-operations.md)和[Windows Sockets:使用封存的通訊端範例](../mfc/windows-sockets-example-of-sockets-using-archives.md)。 如需某些功能的資訊就能藉由從通訊端類別衍生您自己的類別，請參閱[Windows Sockets:從通訊端類別衍生](../mfc/windows-sockets-deriving-from-socket-classes.md)。
 
 > [!NOTE]
->  如果您要撰寫 MFC 用戶端程式與所建立的 (非 MFC) 伺服器進行通訊，請不要透過封存傳送 C++ 物件。 除非伺服器是 MFC 應用程式並且了解您想要傳送的物件種類，否則它將無法接收和還原序列化您的物件。 非 MFC 應用程式通訊之主題的相關資料，也請參閱文章[Windows Sockets： 位元組順序](../mfc/windows-sockets-byte-ordering.md)。
+>  如果您要撰寫 MFC 用戶端程式與所建立的 (非 MFC) 伺服器進行通訊，請不要透過封存傳送 C++ 物件。 除非伺服器是 MFC 應用程式並且了解您想要傳送的物件種類，否則它將無法接收和還原序列化您的物件。 非 MFC 應用程式通訊之主題的相關資料，也請參閱文章[Windows Sockets:位元組順序](../mfc/windows-sockets-byte-ordering.md)。
 
 ##  <a name="_core_the_csocket_programming_model"></a> CSocket 程式設計模型
 
@@ -68,18 +68,18 @@ ms.locfileid: "50615381"
 1. 終結封存、通訊端檔案和通訊端物件。
 
     > [!NOTE]
-    >  `CArchive` 類別明確提供了 `IsBufferEmpty` 成員函式搭配 `CSocket` 類別使用。 例如，如果緩衝區包含多個資料訊息，您就需要執行迴圈，直到所有訊息都已讀且緩衝區已清除。 否則，告知您有資料要接收的下一個通知可能會無限期延遲。 使用 `IsBufferEmpty` 可確保擷取所有資料。
+    >  
+  `CArchive` 類別明確提供了 `IsBufferEmpty` 成員函式搭配 `CSocket` 類別使用。 例如，如果緩衝區包含多個資料訊息，您就需要執行迴圈，直到所有訊息都已讀且緩衝區已清除。 否則，告知您有資料要接收的下一個通知可能會無限期延遲。 使用 `IsBufferEmpty` 可確保擷取所有資料。
 
-發行項[Windows Sockets： 作業的順序](../mfc/windows-sockets-sequence-of-operations.md)說明範例程式碼使用此程序的兩面。
+發行項[Windows Sockets:作業順序](../mfc/windows-sockets-sequence-of-operations.md)說明範例程式碼使用此程序的兩面。
 
 如需詳細資訊，請參閱:
 
-- [Windows Sockets：資料流通訊端](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets:Stream 通訊端](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets：資料通訊端](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets:資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>另請參閱
 
 [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)<br/>
 [CSocket::Create](../mfc/reference/csocket-class.md#create)
-

@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 310a7edb-263c-4bd2-ac43-0bfbfddc5a33
-ms.openlocfilehash: 29865e7986e435a4cce1ac1abb2027bc8513231e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f31adc77f50191191ffbc4f7eac89cc8c9caf439
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498985"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263230"
 ---
 # <a name="cstringlist-class"></a>CStringList 類別
 
@@ -142,4 +142,3 @@ class CStringList : public CObject
 [MFC 範例收集](../../visual-cpp-samples.md)<br/>
 [CObject 類別](../../mfc/reference/cobject-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

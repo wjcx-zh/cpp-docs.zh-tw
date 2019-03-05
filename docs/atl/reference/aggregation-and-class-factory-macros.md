@@ -17,12 +17,12 @@ helpviewer_keywords:
 - class factories, ATL macros
 - aggregation [C++], ATL macros
 ms.assetid: d99d379a-0eec-481f-8daa-252dac18f163
-ms.openlocfilehash: c0e3b6903e382ad56be9500792bec895a7641f00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 889ed4bbfc21209a64cfd9e4fee4b2335ce62010
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497173"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274891"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>彙總與 Class Factory 巨集
 
@@ -144,7 +144,7 @@ DECLARE_CLASSFACTORY2( lic )
 
 ### <a name="parameters"></a>參數
 
-*授權*<br/>
+*lic*<br/>
 [in]類別若實作`VerifyLicenseKey`， `GetLicenseKey`，和`IsLicenseValid`。
 
 ### <a name="remarks"></a>備註
@@ -155,7 +155,7 @@ DECLARE_CLASSFACTORY2( lic )
 
 [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]
 
-##  <a name="ccomclassfactory2_class"></a>  CComClassFactory2 類別
+##  <a name="ccomclassfactory2_class"></a>  CComClassFactory2 Class
 
 這個類別會實作[IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2)介面。
 
@@ -168,7 +168,7 @@ class  CComClassFactory2 : public IClassFactory2,
 
 ### <a name="parameters"></a>參數
 
-*授權*<br/>
+*license*<br/>
 類別若實作下列靜態函式：
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`

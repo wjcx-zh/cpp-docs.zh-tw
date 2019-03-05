@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
-ms.openlocfilehash: a9653225f3057d6c5ba9fd49cf64487e766ca8d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05d9d5fe9cc344be3f903f247f34003056404c9d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491542"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258563"
 ---
 # <a name="cacl-class"></a>CAcl 類別
 
@@ -57,7 +57,7 @@ class CAcl
 |名稱|描述|
 |----------|-----------------|
 |[CAcl::CAcl](#cacl)|建構函式。|
-|[CAcl:: ~ CAcl](#dtor)|解構函式。|
+|[CAcl::~CAcl](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -158,7 +158,7 @@ CAcl(const CAcl& rhs) throw(...);
 
 `CAcl`物件可以選擇性地建立使用現有`CAcl`物件。
 
-##  <a name="dtor"></a>  CAcl:: ~ CAcl
+##  <a name="dtor"></a>  CAcl::~CAcl
 
 解構函式。
 

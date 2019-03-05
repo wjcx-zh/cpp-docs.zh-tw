@@ -1,19 +1,19 @@
 ---
-title: MFC ActiveX 控制項：進階屬性實作
+title: MFC ActiveX 控制項：進階的屬性實作
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-ms.openlocfilehash: d26dbcb1c18c3c939214051d9010cb5b6db90929
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 438c95c56961cc587b64e494678ade191f18ab6b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568021"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266961"
 ---
-# <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX 控制項：進階屬性實作
+# <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX 控制項：進階的屬性實作
 
 本文說明實作進階的 ActiveX 控制項中的屬性與相關的主題。
 
@@ -62,14 +62,14 @@ ms.locfileid: "50568021"
 
 ##  <a name="_core_returning_error_codes_from_a_property"></a> 從屬性中傳回的錯誤碼
 
-若要指出錯誤發生時嘗試取得或設定屬性，請使用`COleControl::ThrowError`函式，其採用 SCODE （狀態碼） 做為參數。 您可以使用預先定義的 SCODE 或定義您自己的其中一個。 如需預先定義的 SCODEs 及定義自訂 SCODEs 指示的清單，請參閱[處理您的 ActiveX 控制項中的錯誤](../mfc/mfc-activex-controls-advanced-topics.md)中發行項的 ActiveX 控制項： 進階主題。
+若要指出錯誤發生時嘗試取得或設定屬性，請使用`COleControl::ThrowError`函式，其採用 SCODE （狀態碼） 做為參數。 您可以使用預先定義的 SCODE 或定義您自己的其中一個。 如需預先定義的 SCODEs 及定義自訂 SCODEs 指示的清單，請參閱 <<c0> [ 處理您的 ActiveX 控制項中的錯誤](../mfc/mfc-activex-controls-advanced-topics.md)中發行項的 ActiveX 控制項：進階的主題。
 
 Helper 函式存在的最常見預先定義的 SCODEs，例如[colecontrol:: Setnotsupported](../mfc/reference/colecontrol-class.md#setnotsupported)， [colecontrol:: Getnotsupported](../mfc/reference/colecontrol-class.md#getnotsupported)，和[colecontrol:: Setnotpermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).
 
 > [!NOTE]
 >  `ThrowError` 適用於只做為傳回從錯誤中屬性的 Get 或 Set 函式或自動化方法。 這些只適用於適當的例外狀況處理常式會出現在堆疊上的時候。
 
-如需有關報告的程式碼在其他區域中的例外狀況的詳細資訊，請參閱[colecontrol:: Fireerror](../mfc/reference/colecontrol-class.md#fireerror)和區段[處理您的 ActiveX 控制項中的錯誤](../mfc/mfc-activex-controls-advanced-topics.md)文中所 ActiveX 控制項： 進階主題。
+如需有關報告的程式碼在其他區域中的例外狀況的詳細資訊，請參閱[colecontrol:: Fireerror](../mfc/reference/colecontrol-class.md#fireerror)和 [] 區段[處理您的 ActiveX 控制項中的錯誤](../mfc/mfc-activex-controls-advanced-topics.md)ActiveX 控制項 」 文件中：進階的主題。
 
 ## <a name="see-also"></a>另請參閱
 

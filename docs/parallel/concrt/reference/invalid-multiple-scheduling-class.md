@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_multiple_scheduling class
 ms.assetid: e9a47cb7-a778-4df7-92b0-3752119fd4c7
-ms.openlocfilehash: aa22c9b218b88a8834e8ba474c2aa2c203ea89dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c8ce0aefc12097a71e79933d34a116997c8105f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517113"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276356"
 ---
 # <a name="invalidmultiplescheduling-class"></a>invalid_multiple_scheduling 類別
 
@@ -57,7 +57,7 @@ invalid_multiple_scheduling() throw();
 
 ### <a name="parameters"></a>參數
 
-*訊息 （_m)*<br/>
+*_Message*<br/>
 錯誤的描述性訊息。
 
 ## <a name="see-also"></a>另請參閱
@@ -66,6 +66,6 @@ invalid_multiple_scheduling() throw();
 [task_handle 類別](task-handle-class.md)<br/>
 [task_group 類別](task-group-class.md)<br/>
 [run](task-group-class.md)<br/>
-[等候](task-group-class.md)<br/>
+[wait](task-group-class.md)<br/>
 [run_and_wait](task-group-class.md)<br/>
 [structured_task_group 類別](structured-task-group-class.md)

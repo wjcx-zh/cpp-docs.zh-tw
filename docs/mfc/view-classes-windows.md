@@ -8,12 +8,12 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-ms.openlocfilehash: 5fc08ec23e0a2b2ba105aa3a633ee862dc452450
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad58fd6fa2548c2cf320baf75b8fc33a835ddd55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462292"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267091"
 ---
 # <a name="view-classes-windows"></a>檢視類別 (Windows)
 
@@ -61,7 +61,7 @@ Windows 控制項相關聯的所有檢視的基底類別。 根據控制項的�
 [CListView](../mfc/reference/clistview-class.md)<br/>
 包含 Windows 清單控制項的檢視 (請參閱[CListCtrl](../mfc/reference/clistctrl-class.md))。 清單控制項中顯示項目的集合，每個組成的圖示和標籤，以類似方式右窗格的 [檔案總管] 中。
 
-[Ctreeview 比較](../mfc/reference/ctreeview-class.md)<br/>
+[CTreeView](../mfc/reference/ctreeview-class.md)<br/>
 包含 Windows 樹狀目錄控制項的檢視 (請參閱[CTreeCtrl](../mfc/reference/ctreectrl-class.md))。 樹狀目錄控制項顯示圖示和標籤排列在類似的左窗格的 [檔案總管] 中的階層式清單。
 
 ## <a name="related-classes"></a>相關的類別
@@ -86,4 +86,3 @@ Windows 控制項相關聯的所有檢視的基底類別。 根據控制項的�
 ## <a name="see-also"></a>另請參閱
 
 [類別概觀](../mfc/class-library-overview.md)
-

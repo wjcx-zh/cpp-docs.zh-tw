@@ -4,12 +4,12 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-ms.openlocfilehash: b8a08919ce6792babb9b8b1b809e242465a200f9
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 75491130e8e5fc426116685332490efd2c5fe60b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176441"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262866"
 ---
 # <a name="parallel-algorithms"></a>平行演算法
 
@@ -31,7 +31,7 @@ ms.locfileid: "52176441"
 
     - [Parallel_reduce 演算法](#parallel_reduce)
 
-    - [範例： 執行 Map 和 Reduce 平行](#map_reduce_example)
+    - [例如：執行撰寫對應和歸納以平行方式](#map_reduce_example)
 
 - [資料分割的運作](#partitions)
 
@@ -78,7 +78,7 @@ ms.locfileid: "52176441"
 
 因為`parallel_for`每個項目，以平行方式處理演算法，可能會不同值列印至主控台的順序。
 
-如需使用的完整範例`parallel_for`演算法，請參閱 <<c2> [ 如何： 撰寫 parallel_for 迴圈](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)。
+如需使用的完整範例`parallel_for`演算法，請參閱[How to:撰寫 parallel_for 迴圈](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)。
 
 [[靠上](#top)]
 
@@ -104,7 +104,7 @@ ms.locfileid: "52176441"
 
 因為`parallel_for_each`每個項目，以平行方式處理演算法，可能會不同值列印至主控台的順序。
 
-如需使用的完整範例`parallel_for_each`演算法，請參閱 <<c2> [ 如何： 撰寫 parallel_for_each 迴圈](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)。
+如需使用的完整範例`parallel_for_each`演算法，請參閱[How to:撰寫 parallel_for_each 迴圈](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)。
 
 [[靠上](#top)]
 
@@ -128,7 +128,7 @@ ms.locfileid: "52176441"
 108 11.2 HelloHello
 ```
 
-如需使用的完整範例`parallel_invoke`演算法，請參閱 <<c2> [ 如何： 使用 parallel_invoke 撰寫平行排序常式](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)並[如何： 使用 parallel_invoke 執行平行作業](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)。
+如需使用的完整範例`parallel_invoke`演算法，請參閱[How to:使用 parallel_invoke 撰寫平行排序常式](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)和[How to:使用 parallel_invoke 執行平行作業](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)。
 
 [[靠上](#top)]
 
@@ -181,7 +181,7 @@ ms.locfileid: "52176441"
 
 在許多情況下，您可以將`parallel_reduce`使用的簡略形式`parallel_for_each`搭配使用的演算法[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)類別。
 
-###  <a name="map_reduce_example"></a> 範例： 執行 Map 和 Reduce 平行
+###  <a name="map_reduce_example"></a> 範例：執行撰寫對應和歸納以平行方式
 
 A*地圖*作業函式套用至序列中每個值。 A*減少*作業結合成單一值序列的元素。 您可以使用 c + + 標準程式庫[std:: transform](../../standard-library/algorithm-functions.md#transform)並[std:: accumulate](../../standard-library/numeric-functions.md#accumulate)函式來執行對應和縮減作業。 不過，對於許多的問題，您可以使用`parallel_transform`演算法以平行方式執行 「 對應 」 作業和`parallel_reduce`演算法以平行方式執行縮減作業。
 
@@ -189,7 +189,7 @@ A*地圖*作業函式套用至序列中每個值。 A*減少*作業結合成單�
 
 [!code-cpp[concrt-parallel-map-reduce-sum-of-primes#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_7.cpp)]
 
-如需其他範例，會執行對應，並減少作業以平行方式，請參閱[如何： 執行對應和縮減作業，以平行方式](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)。
+如需其他範例，會執行對應，並減少作業以平行方式，請參閱[How to:執行對應和縮減作業以平行方式](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)。
 
 [[靠上](#top)]
 
@@ -317,7 +317,7 @@ PPL 提供三種排序演算法： [concurrency:: parallel_sort](reference/concu
 |[如何：撰寫 parallel_for_each 迴圈](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)|示範如何使用`parallel_for_each`演算法來計算中質數的計數[std:: array](../../standard-library/array-class-stl.md)以平行方式的物件。|
 |[如何：使用 parallel_invoke 撰寫平行排序常式](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|顯示如何使用 `parallel_invoke` 演算法，以改善 bitonic 排序演算法的效能。|
 |[如何：使用 parallel_invoke 執行平行作業](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|顯示如何使用 `parallel_invoke` 演算法，以改善在共用資料來源上執行多個作業的程式效能。|
-|[如何：平行執行對應和縮減作業](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|示範如何使用`parallel_transform`和`parallel_reduce`演算法來執行對應和縮減作業，以計算文字在檔案中的出現次數。|
+|[如何：平行執行對應和簡化運算](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|示範如何使用`parallel_transform`和`parallel_reduce`演算法來執行對應和縮減作業，以計算文字在檔案中的出現次數。|
 |[平行模式程式庫 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|描述 PPL，其提供命令式程式設計模型，可提升延展性和輕鬆使用開發並存應用程式。|
 |[PPL 中的取消](cancellation-in-the-ppl.md)|說明 PPL、 如何取消平行工作，以及如何判斷當取消工作群組中的取消作業的角色。|
 |[例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|說明並行執行階段的例外狀況處理的角色。|
@@ -343,4 +343,3 @@ PPL 提供三種排序演算法： [concurrency:: parallel_sort](reference/concu
 [parallel_buffered_sort 函式](reference/concurrency-namespace-functions.md#parallel_buffered_sort)
 
 [parallel_radixsort 函式](reference/concurrency-namespace-functions.md#parallel_radixsort)
-

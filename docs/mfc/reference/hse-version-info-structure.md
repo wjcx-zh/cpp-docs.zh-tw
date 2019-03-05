@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - HSE_VERSION_INFO structure [MFC]
 ms.assetid: 4837312d-68c8-4d05-9afa-1934d7d49b20
-ms.openlocfilehash: 6bdb668be037dfaa07e1121e4b61ea332e430e31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 97f34bebae8a486a825d04b23c5a92fbd4aefa42
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577279"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267832"
 ---
 # <a name="hseversioninfo-structure"></a>HSE_VERSION_INFO 結構
 
@@ -41,4 +41,3 @@ ISA 的文字描述。 預設實作提供預留位置文字；覆寫 `CHttpServe
 ## <a name="see-also"></a>另請參閱
 
 [結構、樣式、回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
-

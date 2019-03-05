@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-ms.openlocfilehash: 1022d05265fc7c2b349dec22e41984e7d41820b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8abd03ff2b133eb6040799eff6879a19a64783ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586052"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274657"
 ---
 # <a name="cpalette-class"></a>CPalette 類別
 
@@ -55,7 +55,7 @@ class CPalette : public CGdiObject
 
 |名稱|描述|
 |----------|-----------------|
-|[Cpalette:: Animatepalette](#animatepalette)|取代項目中所識別的邏輯調色盤`CPalette`物件。 應用程式並沒有要更新其工作區中，因為 Windows 立即對應到系統調色盤的新項目。|
+|[CPalette::AnimatePalette](#animatepalette)|取代項目中所識別的邏輯調色盤`CPalette`物件。 應用程式並沒有要更新其工作區中，因為 Windows 立即對應到系統調色盤的新項目。|
 |[CPalette::CreateHalftonePalette](#createhalftonepalette)|建立 半色調調色盤的 裝置內容，並將它附加至`CPalette`物件。|
 |[CPalette::CreatePalette](#createpalette)|建立 Windows 的色板，並將它附加至`CPalette`物件。|
 |[CPalette::FromHandle](#fromhandle)|將指標傳回至`CPalette`物件控制代碼提供給 Windows 調色盤物件時。|
@@ -91,7 +91,7 @@ A`CPalette`物件提供成員函式物件所操作的調色盤參考。 建構`C
 
 **標題:** afxwin.h
 
-##  <a name="animatepalette"></a>  Cpalette:: Animatepalette
+##  <a name="animatepalette"></a>  CPalette::AnimatePalette
 
 取代附加至邏輯調色盤中的項目`CPalette`物件。
 
@@ -331,4 +331,3 @@ UINT SetPaletteEntries(
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CPalette::GetPaletteEntries](#getpaletteentries)<br/>
 [CPalette::SetPaletteEntries](#setpaletteentries)
-

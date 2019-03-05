@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
-ms.openlocfilehash: e0f68f48867510c270c7c69e325a796f274198d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 045e64504707fa8978c8236b376037d9f57bf12c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606995"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261228"
 ---
 # <a name="ccomcritseclock-class"></a>CComCritSecLock 類別
 
@@ -39,7 +39,7 @@ template<class TLock> class CComCritSecLock
 |名稱|描述|
 |----------|-----------------|
 |[CComCritSecLock::CComCritSecLock](#ctor)|建構函式。|
-|[CComCritSecLock:: ~ CComCritSecLock](#dtor)|解構函式。|
+|[CComCritSecLock::~CComCritSecLock](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 

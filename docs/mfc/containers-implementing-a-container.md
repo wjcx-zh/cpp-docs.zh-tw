@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: 89bb8b483dba6e635eef5d9857bb558eca8e8fec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ab91316c9ee07296fbc46f9f17b3c46c71ee96f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546701"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271420"
 ---
 # <a name="containers-implementing-a-container"></a>容器：實作容器
 
@@ -46,7 +46,7 @@ ms.locfileid: "50546701"
 
 應用程式精靈 將衍生類別，但您可能需要覆寫`OnChange`和其他函式在之前程序中的步驟 2 一起列出。 因為這些函式的實作每個應用程式都不同，需要對大部分的應用程式自訂基本架構實作。 這個範例，請參閱 MFC 範例[DRAWCLI](../visual-cpp-samples.md)並[容器](../visual-cpp-samples.md)。
 
-您必須將多個項目加入至容器應用程式的功能表結構以支援 OLE。 如需這些的詳細資訊，請參閱[功能表和資源： 容器新增](../mfc/menus-and-resources-container-additions.md)。
+您必須將多個項目加入至容器應用程式的功能表結構以支援 OLE。 如需這些的詳細資訊，請參閱[功能表和資源：容器新增](../mfc/menus-and-resources-container-additions.md)。
 
 您可能也要在您的容器應用程式中支援下列某些功能：
 
@@ -60,10 +60,9 @@ ms.locfileid: "50546701"
 
 - 內嵌物件或組合容器/伺服器應用程式的連結。
 
-   如需詳細資訊，請參閱 <<c0> [ 容器： 進階功能](../mfc/containers-advanced-features.md)。
+   如需詳細資訊，請參閱[容器：進階功能](../mfc/containers-advanced-features.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [容器](../mfc/containers.md)<br/>
 [容器：用戶端項目](../mfc/containers-client-items.md)
-

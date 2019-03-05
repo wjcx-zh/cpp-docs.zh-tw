@@ -7,12 +7,12 @@ helpviewer_keywords:
 - printing [MFC], from framework
 - printing [MFC]
 ms.assetid: be465e8d-b0c9-4fc5-9fa8-d10486064f76
-ms.openlocfilehash: 88b89ee54ec6270b01859d0f0baeea0efebd9ad6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0cd2d6d85cb9820b23495a003068994b13f9c85
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589383"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278076"
 ---
 # <a name="printing"></a>列印
 
@@ -59,4 +59,3 @@ Microsoft Windows 中，會實作與裝置無關的顯示。 在 MFC 中，這�
 ## <a name="see-also"></a>另請參閱
 
 [列印和預覽列印](../mfc/printing-and-print-preview.md)
-

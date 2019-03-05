@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSemaphore [MFC], CSemaphore
 ms.assetid: 385fc7e4-8f86-4be2-85e1-d23b38c12f7f
-ms.openlocfilehash: e8e71af6fa33dc748bfb8d19266a72495f216502
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2a05963f39393bcc73650beb44c5dbb8e5535ee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447017"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274215"
 ---
 # <a name="csemaphore-class"></a>CSemaphore 類別
 
@@ -45,7 +45,7 @@ class CSemaphore : public CSyncObject
 
 或者，您可以建立`CSemaphore`物件獨立的並嘗試存取受控制的資源之前明確地存取它。 此方法，並清楚給其他人讀取您的原始程式碼，是更容易發生錯誤。
 
-如需有關如何使用`CSemaphore`物件，請參閱文章[多執行緒： 如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
+如需有關如何使用`CSemaphore`物件，請參閱文章[多執行緒：如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -96,4 +96,3 @@ CSemaphore(
 
 [CSyncObject 類別](../../mfc/reference/csyncobject-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

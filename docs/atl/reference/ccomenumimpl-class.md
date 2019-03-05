@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
-ms.openlocfilehash: 2104d98cbc068eb5d8f1408cdda0898fd55c9473
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccd083f3bfd9ae694c97e466fcb40b348fec0c27
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467141"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273766"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl 類別
 
@@ -58,14 +58,14 @@ COM 列舉值介面。 請參閱[IEnumString](/windows/desktop/api/objidl/nn-obj
 |名稱|描述|
 |----------|-----------------|
 |[CComEnumImpl::CComEnumImpl](#ccomenumimpl)|建構函式。|
-|[CComEnumImpl:: ~ CComEnumImpl](#dtor)|解構函式。|
+|[CComEnumImpl::~CComEnumImpl](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
 |[CComEnumImpl::Clone](#clone)|實作**複製品**列舉型別介面方法。|
-|[CComEnumImpl::Init](#init)|初始化列舉值。|
+|[CComEnumImpl::Init](#init)|初始化列舉程式。|
 |[CComEnumImpl::Next](#next)|實作**下一步**。|
 |[CComEnumImpl::Reset](#reset)|實作**重設**。|
 |[CComEnumImpl::Skip](#skip)|實作**略過**。|

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
-ms.openlocfilehash: 823f38a6292152774f72c97963b9add5d429d2f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f85e562af9d048503be20d1ab5d219fe8d2d039f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508780"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273292"
 ---
 # <a name="cmutex-class"></a>CMutex 類別
 
@@ -43,7 +43,7 @@ class CMutex : public CSyncObject
 
 存取控制的資源`CMutex`物件，如此一來，在第一次建立的其中一種類型的變數[CSingleLock](../../mfc/reference/csinglelock-class.md)或型別[CMultiLock](../../mfc/reference/cmultilock-class.md)在您的資源存取成員函式。 然後呼叫之鎖定物件的`Lock`成員函式 (例如[CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock))。 此時，您的執行緒會取得資源的存取權，等待資源釋出，並存取應用程式，或等候的資源釋出和逾時，無法取得資源的存取權。 在任何情況下，您的資源已存取具備執行緒安全的方式。 若要釋放資源，使用 鎖定物件的`Unlock`成員函式 (例如[CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock))，或允許超出範圍的鎖定物件。
 
-如需有關使用`CMutex`物件，請參閱文章[多執行緒： 如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
+如需有關使用`CMutex`物件，請參閱文章[多執行緒：如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -74,7 +74,8 @@ CMutex(
 指定如果執行緒建立`CMutex`物件一開始會有由 mutex 控制資源的存取權。
 
 *lpszName*<br/>
-`CMutex` 物件的名稱。 另一個具有相同名稱的 mutex 已存在，如果*lpszName*必須提供，如果該物件會使用跨處理序界限。 如果**NULL**，mutex 會是未命名。 如果名稱符合現有的 mutex，建構函式會建置新`CMutex`參考該名稱的 mutex 物件。 如果名稱符合現有的同步處理物件，都不是 mutex，建構將會失敗。
+
+  `CMutex` 物件的名稱。 另一個具有相同名稱的 mutex 已存在，如果*lpszName*必須提供，如果該物件會使用跨處理序界限。 如果**NULL**，mutex 會是未命名。 如果名稱符合現有的 mutex，建構函式會建置新`CMutex`參考該名稱的 mutex 物件。 如果名稱符合現有的同步處理物件，都不是 mutex，建構將會失敗。
 
 *lpsaAttribute*<br/>
 Mutex 物件的安全性屬性。 如需這個結構的完整說明，請參閱[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。
@@ -90,4 +91,3 @@ Mutex 物件的安全性屬性。 如需這個結構的完整說明，請參閱[
 
 [CSyncObject 類別](../../mfc/reference/csyncobject-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

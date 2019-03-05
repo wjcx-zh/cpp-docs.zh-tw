@@ -5,12 +5,12 @@ helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-ms.openlocfilehash: d8e79f7c132abd8e43f661f4dc7c7bb758cb2a6d
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: bc7adfaeb4c96245488bbcb5cd70cdae9daf9e26
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893986"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276154"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>HOW TO：管理排程器執行個體
 
@@ -79,4 +79,3 @@ Current scheduler id: 0
 
 [排程器執行個體](../../parallel/concrt/scheduler-instances.md)<br/>
 [如何：指定特定排程器原則](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)
-

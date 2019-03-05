@@ -1,18 +1,18 @@
 ---
-title: 如何：撰寫 parallel_for_each 迴圈
+title: HOW TO：撰寫 parallel_for_each 迴圈
 ms.date: 11/04/2016
 helpviewer_keywords:
 - writing a parallel_for_each loop [Concurrency Runtime]
 - parallel_for_each function, example
 ms.assetid: fa9c0ba6-ace0-4f88-8681-c7c1f52aff20
-ms.openlocfilehash: e3b19ec180f9f4e75a2f280a0ecd159e5b932565
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19af9be8ef6d9c38a0942e7c85caa0a8bc4e6813
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610505"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272213"
 ---
-# <a name="how-to-write-a-parallelforeach-loop"></a>如何：撰寫 parallel_for_each 迴圈
+# <a name="how-to-write-a-parallelforeach-loop"></a>HOW TO：撰寫 parallel_for_each 迴圈
 
 此範例示範如何使用[concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)演算法來計算中質數的計數[std:: array](../../standard-library/array-class-stl.md)以平行方式的物件。
 
@@ -42,10 +42,9 @@ took 1653 ms
 
 ## <a name="robust-programming"></a>穩固程式設計
 
-此範例會傳遞至 lambda 運算式`parallel_for_each`演算法會使用`InterlockedIncrement`函式可讓同時遞增計數器迴圈的平行反覆項目。 如果您使用函式，例如`InterlockedIncrement`進行同步處理共用資源的存取權，您可以在程式碼中呈現效能瓶頸。 您可以使用無鎖定同步處理機制，比方說，則[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)類別，以消除同時存取共用資源。 如需使用的範例`combinable`類別以這種方式，請參閱[如何： 使用 combinable 改善效能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)。
+此範例會傳遞至 lambda 運算式`parallel_for_each`演算法會使用`InterlockedIncrement`函式可讓同時遞增計數器迴圈的平行反覆項目。 如果您使用函式，例如`InterlockedIncrement`進行同步處理共用資源的存取權，您可以在程式碼中呈現效能瓶頸。 您可以使用無鎖定同步處理機制，比方說，則[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)類別，以消除同時存取共用資源。 如需使用的範例`combinable`類別以這種方式，請參閱[How to:使用 combinable 改善效能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [平行演算法](../../parallel/concrt/parallel-algorithms.md)<br/>
 [parallel_for_each 函式](reference/concurrency-namespace-functions.md#parallel_for_each)
-

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-ms.openlocfilehash: 7c8915b8d82f96ed0bd1fad11e1a4f0687b40493
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c21f89215e08523188eb32490d7b1d5506299fb5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530165"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259447"
 ---
 # <a name="cwordarray-class"></a>CWordArray 類別
 
@@ -101,7 +101,7 @@ class CWordArray : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CObArray::operator&#91;&#93;](../../mfc/reference/cobarray-class.md#operator_at)|設定或取得指定索引處的項目。|
+|[CObArray::operator &#91;&#93;](../../mfc/reference/cobarray-class.md#operator_at)|設定或取得指定索引處的項目。|
 
 ## <a name="remarks"></a>備註
 
@@ -124,7 +124,7 @@ class CWordArray : public CObject
 
 **標頭：** afxcoll.h
 
-##  <a name="icommandsource_interface"></a>  ICommandSource 介面
+##  <a name="icommandsource_interface"></a>  ICommandSource Interface
 
 管理從命令來源物件傳送至使用者控制項的命令。
 
@@ -136,7 +136,7 @@ interface class ICommandSource
 
 當您裝載在 MFC 檢視中，使用者控制項時[CWinFormsView 類別](../../mfc/reference/cwinformsview-class.md)路由命令和更新命令 UI 訊息至使用者控制項讓它處理 MFC 命令 （例如，框架功能表項目和工具列按鈕）。 藉由實作，您提供的使用者控制項的參考`ICommandSource`物件。
 
-請參閱[如何： 新增命令傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用的範例`ICommandTarget`。
+請參閱[如何：將命令路由新增至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用的範例`ICommandTarget`。
 
 如需有關如何使用 Windows Form 的詳細資訊，請參閱 <<c0> [ 在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
@@ -162,7 +162,7 @@ void AddCommandHandler(
 
 此方法會將命令處理常式*cmdHandler*命令來源物件，並將對應的處理常式*cmdID*。
 
-請參閱[如何： 新增命令傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用的範例`AddCommandHandler`。
+請參閱[如何：將命令路由新增至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用的範例`AddCommandHandler`。
 
 ##  <a name="addcommandrangehandler"></a>  ICommandSource::AddCommandRangeHandler
 
@@ -350,7 +350,7 @@ void SendCommand(unsigned int command);
 
 這個方法以同步方式傳送的訊息對應到所指定的識別碼*命令*。 它會呼叫[CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage)來將訊息放在視窗的訊息佇列並等候，直到該視窗程序已傳回之前處理訊息。
 
-##  <a name="icommandtarget_interface"></a>  ICommandTarget 介面
+##  <a name="icommandtarget_interface"></a>  ICommandTarget Interface
 
 提供介面，以接收來自命令來源物件的命令中的使用者控制項。
 
@@ -362,7 +362,7 @@ interface class ICommandTarget
 
 當您裝載在 MFC 檢視中，使用者控制項時[CWinFormsView](../../mfc/reference/cwinformsview-class.md)路由命令和更新命令 UI 訊息至使用者控制項讓它處理 MFC 命令 （例如，框架功能表項目和工具列按鈕）。 藉由實作`ICommandTarget`，讓使用者控制物件的參考。
 
-請參閱[如何： 新增命令傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用的範例`ICommandTarget`。
+請參閱[如何：將命令路由新增至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用的範例`ICommandTarget`。
 
 如需有關如何使用 Windows Form 的詳細資訊，請參閱 <<c0> [ 在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
@@ -383,7 +383,7 @@ void Initialize(ICommandSource^ cmdSource);
 
 當您裝載在 MFC 檢視中，使用者控制項時[CWinFormsView](../../mfc/reference/cwinformsview-class.md)路由命令和更新命令 UI 訊息至使用者控制項讓它處理 MFC 命令。
 
-這個方法會初始化命令目標物件，並將它與指定的命令來源物件相關聯*cmdSource*。 使用者控制項類別實作中，應該呼叫它。 在初始化時，您應該向命令處理常式的命令來源物件呼叫[ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md)在`Initialize`實作。 請參閱[如何： 新增命令傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用的範例`Initialize`若要這樣做。
+這個方法會初始化命令目標物件，並將它與指定的命令來源物件相關聯*cmdSource*。 使用者控制項類別實作中，應該呼叫它。 在初始化時，您應該向命令處理常式的命令來源物件呼叫[ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md)在`Initialize`實作。 請參閱[如何：將命令路由新增至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用的範例`Initialize`若要這樣做。
 
 ##  <a name="icommandui_interface"></a>  ICommandUI 介面
 
@@ -399,7 +399,7 @@ interface class ICommandUI
 
 `ICommandUI` 用於`ON_UPDATE_COMMAND_UI`處理常式-衍生的類別中。 功能表中，每個功能表項目時 （選取或按下滑鼠），就會啟動應用程式的使用者會顯示為已啟用或停用。 每個功能表命令的目標是提供這項資訊藉由實作`ON_UPDATE_COMMAND_UI`處理常式。 針對每個命令使用者介面物件，在您的應用程式中，使用 [屬性] 視窗來建立訊息對應項目和每個處理常式的函式原型。
 
-如需有關如何`ICommandUI`介面會在命令路由，請參閱 <<c2> [ 如何： 新增命令傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
+如需有關如何`ICommandUI`介面會在命令路由，請參閱[How to:將命令路由傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
 
 如需有關如何使用 Windows Form 的詳細資訊，請參閱 <<c0> [ 在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
@@ -433,7 +433,7 @@ void ContinueRouting();
 
 ### <a name="remarks"></a>備註
 
-這是進階的成員函式，應該用於搭配[ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex)處理常式，會傳回 FALSE。 如需詳細資訊，請參閱 < 技術提示[TN006： 訊息對應](../../mfc/tn006-message-maps.md)。
+這是進階的成員函式，應該用於搭配[ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex)處理常式，會傳回 FALSE。 如需詳細資訊，請參閱 < 技術提示[TN006:訊息對應](../../mfc/tn006-message-maps.md)。
 
 ##  <a name="enabled"></a>  ICommandUI::Enabled
 
@@ -521,7 +521,7 @@ void OnActivateView(bool activate);
 
 ### <a name="parameters"></a>參數
 
-*啟用*<br/>
+*activate*<br/>
 表示正在檢視是否啟用或停用。
 
 ##  <a name="oninitialupdate"></a>  IView::OnInitialUpdate
@@ -549,4 +549,3 @@ void OnUpdate();
 [MFC 範例收集](../../visual-cpp-samples.md)<br/>
 [CObject 類別](../../mfc/reference/cobject-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

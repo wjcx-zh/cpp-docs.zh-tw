@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlComModule class
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
-ms.openlocfilehash: 270e6ca4dcb5c7701281cc2ac6c04e1d60093db3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 09adcb33ca9e6f8524063130d6aedca044d6ecb5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499798"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275866"
 ---
 # <a name="catlcommodule-class"></a>CAtlComModule 類別
 
@@ -36,7 +36,7 @@ class CAtlComModule : public _ATL_COM_MODULE
 |名稱|描述|
 |----------|-----------------|
 |[CAtlComModule::CAtlComModule](#catlcommodule)|建構函式。|
-|[CAtlComModule:: ~ CAtlComModule](#dtor)|解構函式。|
+|[CAtlComModule::~CAtlComModule](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -100,7 +100,7 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 *bRegTypeLib*<br/>
 如果型別程式庫是要註冊，則為 TRUE。 預設值為 FALSE。
 
-*Createtable*<br/>
+*pCLSID*<br/>
 要註冊之物件的 clsid 點。 若要註冊 NULL （預設值），在物件對應中的所有物件。
 
 ### <a name="return-value"></a>傳回值
@@ -148,7 +148,7 @@ HRESULT UnregisterServer(
 *bRegTypeLib*<br/>
 如果型別程式庫是要移除註冊，則為 TRUE。 預設值為 FALSE。
 
-*Createtable*<br/>
+*pCLSID*<br/>
 要移除註冊物件的 clsid 點。 如果 NULL （預設值），在物件對應中的所有物件就會取消註冊。
 
 ### <a name="return-value"></a>傳回值

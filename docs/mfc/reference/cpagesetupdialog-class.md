@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: d3fdcfa664de93f62b8b4dbcbc6184d08fdf591c
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 9a8940aa23b23281a6de6ce7e75bb1e43341b14a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178078"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277881"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog 類別
 
@@ -325,7 +325,7 @@ virtual UINT OnDrawPage(
 *pDC*<br/>
 印表機裝置內容指標。
 
-*n 訊息*<br/>
+*nMessage*<br/>
 指定的訊息，指出頁面目前所繪製的區域。 可以是下列其中一項：
 
 - WM_PSD_FULLPAGERECT 整個頁面區域。
@@ -408,4 +408,3 @@ virtual UINT PreDrawPage(
 [MFC 範例 WORDPAD](../../visual-cpp-samples.md)<br/>
 [CCommonDialog 類別](../../mfc/reference/ccommondialog-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

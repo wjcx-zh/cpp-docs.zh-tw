@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CRecentDockSiteInfo [MFC], SetInfo
 - CRecentDockSiteInfo [MFC], StoreDockInfo
 ms.assetid: 2dd14f95-d5a2-4461-a7a5-2c6c36a3a165
-ms.openlocfilehash: aee66ea9893325921c62bfaef9cd501ef40e817a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a522d4dc88e7d1937ffa5b859aec32615939f21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615276"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275242"
 ---
 # <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo 類別
 
@@ -75,7 +75,8 @@ class CRecentDockSiteInfo : public CObject
 
 ## <a name="remarks"></a>備註
 
-`CRecentDockSiteInfo` 類別是資料管理類別。 它會追蹤 `CPane` 在停駐和浮動之間轉換時的最後狀態。 當使用者按兩下浮動可停駐窗格時，它會變成停駐。 按兩下停駐窗格會使其返回至先前的位置、大小及狀態。 同樣地，重新停駐窗格時，它會返回至其先前的停駐位置。 這個資料類別可以使其成行。 由於此類別的成員會儲存停駐窗格的狀態資訊，所以它們不應該由您的應用程式直接修改。
+
+  `CRecentDockSiteInfo` 類別是資料管理類別。 它會追蹤 `CPane` 在停駐和浮動之間轉換時的最後狀態。 當使用者按兩下浮動可停駐窗格時，它會變成停駐。 按兩下停駐窗格會使其返回至先前的位置、大小及狀態。 同樣地，重新停駐窗格時，它會返回至其先前的停駐位置。 這個資料類別可以使其成行。 由於此類別的成員會儲存停駐窗格的狀態資訊，所以它們不應該由您的應用程式直接修改。
 
 每次建立窗格式就會建立 `CRecentDockSiteInfo` 物件。 每個`CPane`物件具有成員變數， [cpane:: M_recentdockinfo](../../mfc/reference/cpane-class.md#m_recentdockinfo)來儲存這項資訊。
 
@@ -105,7 +106,7 @@ CRecentDockSiteInfo(CPane* pBar);
 
 ### <a name="parameters"></a>參數
 
-[in]*pBar*<br/>
+[in] *pBar*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -127,7 +128,7 @@ int GetRecentDockedPercent(BOOL bForSlider);
 
 ### <a name="parameters"></a>參數
 
-[in]*bForSlider*<br/>
+[in] *bForSlider*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -141,7 +142,7 @@ CRect& GetRecentDockedRect(BOOL bForSlider);
 
 ### <a name="parameters"></a>參數
 
-[in]*bForSlider*<br/>
+[in] *bForSlider*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -155,7 +156,7 @@ CList<HWND, HWND>& GetRecentListOfPanes(BOOL bForSlider);
 
 ### <a name="parameters"></a>參數
 
-[in]*bForSlider*<br/>
+[in] *bForSlider*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -169,7 +170,7 @@ CPaneContainer* GetRecentPaneContainer(BOOL bForSlider);
 
 ### <a name="parameters"></a>參數
 
-[in]*bForSlider*<br/>
+[in] *bForSlider*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -183,7 +184,7 @@ CPaneContainer* GetRecentTabContainer(BOOL bForSlider);
 
 ### <a name="parameters"></a>參數
 
-[in]*bForSlider*<br/>
+[in] *bForSlider*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -205,7 +206,7 @@ BOOL IsRecentLeftPane(BOOL bForSlider);
 
 ### <a name="parameters"></a>參數
 
-[in]*bForSlider*<br/>
+[in] *bForSlider*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -219,7 +220,7 @@ CRecentDockSiteInfo& operator=(CRecentDockSiteInfo& src);
 
 ### <a name="parameters"></a>參數
 
-[in]*src*<br/>
+[in] *src*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -235,9 +236,9 @@ void SaveListOfRecentPanes(CList<HWND,
 
 ### <a name="parameters"></a>參數
 
-[in]*CList < HWND*<br/>
-[in]*lstOrg*<br/>
-[in]*bForSlider*<br/>
+[in] *CList<HWND*<br/>
+[in] *lstOrg*<br/>
+[in] *bForSlider*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -251,8 +252,8 @@ virtual void SetInfo(
 
 ### <a name="parameters"></a>參數
 
-[in]*bForSlider*<br/>
-[in]*srcInfo*<br/>
+[in] *bForSlider*<br/>
+[in] *srcInfo*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -266,8 +267,8 @@ virtual void StoreDockInfo(
 
 ### <a name="parameters"></a>參數
 
-[in]*pRecentContainer*<br/>
-[in]*pTabbedBar*<br/>
+[in] *pRecentContainer*<br/>
+[in] *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>備註
 

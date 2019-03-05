@@ -5,12 +5,12 @@ helpviewer_keywords:
 - servers, implementing
 - OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
-ms.openlocfilehash: a5c89ff1256d557ef417b9e53ce76bbf1b5d6196
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 953d157f4bbad0b460947740a2622074dfc90f4f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518953"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267559"
 ---
 # <a name="servers-implementing-a-server"></a>伺服器：實作伺服器
 
@@ -26,13 +26,13 @@ ms.locfileid: "51518953"
 
   - 使用的伺服器時作用中就地功能表和工具列資源。
 
-  如需有關這些資源的詳細資訊，請參閱 <<c0> [ 功能表和資源： 伺服器加入](../mfc/menus-and-resources-server-additions.md)。
+  如需有關這些資源的詳細資訊，請參閱[功能表和資源：伺服器加入](../mfc/menus-and-resources-server-additions.md)。
 
-- 定義項目類別衍生自`COleServerItem`。 如需伺服器項目的的詳細資訊，請參閱 <<c0> [ 伺服器： 伺服器項目](../mfc/servers-server-items.md)。
+- 定義項目類別衍生自`COleServerItem`。 如需伺服器項目的的詳細資訊，請參閱[伺服器：伺服器項目](../mfc/servers-server-items.md)。
 
-- 變更的文件類別的基底類別`COleServerDoc`。 如需詳細資訊，請參閱 <<c0> [ 伺服器： 實作伺服器文件](../mfc/servers-implementing-server-documents.md)。
+- 變更的文件類別的基底類別`COleServerDoc`。 如需詳細資訊，請參閱[伺服器：實作伺服器文件](../mfc/servers-implementing-server-documents.md)。
 
-- 定義框架視窗類別衍生自`COleIPFrameWnd`。 如需詳細資訊，請參閱 <<c0> [ 伺服器： 實作就地框架 Windows](../mfc/servers-implementing-in-place-frame-windows.md)。
+- 定義框架視窗類別衍生自`COleIPFrameWnd`。 如需詳細資訊，請參閱[伺服器：實作就地編輯框架 Windows](../mfc/servers-implementing-in-place-frame-windows.md)。
 
 - 在 Windows 註冊資料庫中建立伺服器應用程式的項目，並向 OLE 系統中的伺服器的新執行個體。 如需本主題的資訊，請參閱 <<c0> [ 註冊](../mfc/registration.md)。
 
@@ -46,4 +46,3 @@ ms.locfileid: "51518953"
 [容器](../mfc/containers.md)<br/>
 [功能表和資源 (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [註冊](../mfc/registration.md)
-

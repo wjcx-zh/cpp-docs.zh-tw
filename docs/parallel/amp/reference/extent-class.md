@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-ms.openlocfilehash: 3b6803b0ddfe09feb37a6e0d3072d8afa422de8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2236b1a1b72f307dae1efa0cfe197e222820c460
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476642"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270185"
 ---
 # <a name="extent-class-c-amp"></a>extent 類別 (C++ AMP)
 
@@ -53,7 +53,7 @@ class extent;
 
 |名稱|描述|
 |----------|-----------------|
-|[包含](#contains)|確認指定`extent`物件具有指定的陣序。|
+|[contains](#contains)|確認指定`extent`物件具有指定的陣序。|
 |[size](#size)|傳回範圍 （以單位的項目） 的總線性大小。|
 |[tile](#tile)|會產生`tiled_extent`指定維度的所指定的 tile 的物件。|
 
@@ -162,7 +162,7 @@ extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 
 `extent` 物件。
 
-##  <a name="operator_star_eq"></a> 運算子 * =
+##  <a name="operator_star_eq"></a> operator*=
 
 乘以指定的數值 '範圍' 物件中每個項目。
 
@@ -270,7 +270,7 @@ extent<_Rank> operator--(int)restrict(amp,cpu);
 
 前置運算子，如`extent`物件 (`*this`)。 為後置運算子中，新`extent`物件。
 
-##  <a name="operator_div_eq"></a> operator / =
+##  <a name="operator_div_eq"></a> operator/=
 
 '範圍' 物件中的每個項目除以指定數字。
 
@@ -289,7 +289,7 @@ extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
 
 `extent` 物件。
 
-##  <a name="operator_min_eq"></a> 運算子 =
+##  <a name="operator_min_eq"></a> operator-=
 
 減去 '範圍' 物件的每個項目指定的數值。
 
@@ -329,7 +329,7 @@ extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 
 此參考`extent`物件。
 
-##  <a name="operator_at"></a> extent:: operator \[\]
+##  <a name="operator_at"></a> extent::operator \[\]
 
 傳回位於指定索引處的項目。
 

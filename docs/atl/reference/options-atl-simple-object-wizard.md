@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-ms.openlocfilehash: efd79c877fcf71ae33b1539e41d3d13379b834de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 327c78b00cbe69fcce4f055b0ae63c4dc2e5a7d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650500"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273386"
 ---
 # <a name="options-atl-simple-object-wizard"></a>選項, ATL 簡單物件精靈
 
@@ -49,7 +49,7 @@ ms.locfileid: "50650500"
 
    |選項|描述|
    |------------|-----------------|
-   |**雙重**|指定物件是否支援雙重介面 (其 vtable 具有自訂介面函式，再加上晚期繫結`IDispatch`方法)。 可讓兩個 COM 用戶端和[Automation 控制器](../../mfc/automation-clients.md)來存取物件。 預設值。|
+   |**Dual**|指定物件是否支援雙重介面 (其 vtable 具有自訂介面函式，再加上晚期繫結`IDispatch`方法)。 可讓兩個 COM 用戶端和[Automation 控制器](../../mfc/automation-clients.md)來存取物件。 預設值。|
    |**自訂**|指定物件支援自訂介面 （其 vtable 有自訂介面函式）。 自訂介面可以是較快，雙重介面，尤其是跨處理序界限。<br /><br /> - **Automation 相容**可讓 Automation 控制器，若要存取具有自訂介面支援的物件。|
 
 - **支援**
@@ -68,4 +68,3 @@ ms.locfileid: "50650500"
 [ATL 簡單物件精靈](../../atl/reference/atl-simple-object-wizard.md)<br/>
 [ATL 簡單物件](../../atl/reference/adding-an-atl-simple-object.md)<br/>
 [處理序中的執行緒問題的伺服器](/windows/desktop/com/in-process-server-threading-issues)
-

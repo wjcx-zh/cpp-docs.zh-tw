@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-ms.openlocfilehash: ff68cc737f28763e5545b0ccaf2c0122e78cb051
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48c88f0b837b2e49e4c87f07a9aa28c16a66c1e3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654664"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271199"
 ---
 # <a name="cd2dgeometrysink-class"></a>CD2DGeometrySink 類別
 
@@ -62,7 +62,7 @@ class CD2DGeometrySink;
 |名稱|描述|
 |----------|-----------------|
 |[CD2DGeometrySink::CD2DGeometrySink](#cd2dgeometrysink)|建構 CD2DGeometrySink 物件從 CD2DPathGeometry 物件。|
-|[CD2DGeometrySink:: ~ CD2DGeometrySink](#_dtorcd2dgeometrysink)|解構函式。 D2D geometry 接收器物件正在被終結時呼叫。|
+|[CD2DGeometrySink::~CD2DGeometrySink](#_dtorcd2dgeometrysink)|解構函式。 D2D geometry 接收器物件正在被終結時呼叫。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -121,7 +121,7 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
 
 ### <a name="parameters"></a>參數
 
-*弧形*<br/>
+*arc*<br/>
 若要加入圖此圓弧線段
 
 ##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier
@@ -134,7 +134,7 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 
 ### <a name="parameters"></a>參數
 
-*貝茲*<br/>
+*bezier*<br/>
 結構描述的控制點和結束點將貝茲曲線。
 
 ##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers
@@ -149,7 +149,7 @@ void AddBeziers(
 
 ### <a name="parameters"></a>參數
 
-*貝茲曲線*<br/>
+*beziers*<br/>
 描述建立貝茲曲線的貝茲區段陣列。 曲線至陣列中的第一個貝茲區段的結束點繪製從幾何接收的目前點 （結束點繪製的最後一個區段或 BeginFigure 所指定的位置）。 如果陣列包含額外的貝茲區段，每個後續的貝茲區段會使用上述的貝茲線段的結束點為其開始點。
 
 ##  <a name="addline"></a>  CD2DGeometrySink::AddLine
@@ -162,7 +162,7 @@ void AddLine(CD2DPointF point);
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 若要繪製線條結束點。
 
 ##  <a name="addlines"></a>  CD2DGeometrySink::AddLines
@@ -177,7 +177,7 @@ void AddLines(
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*points*<br/>
 描述要繪製線條的一或多個點的陣列。 一條線取自幾何接收目前的點 （結束點繪製的最後一個區段或 BeginFigure 所指定的位置） 中，陣列中的第一個點。 如果陣列包含額外的點，會一條線繪製的第一個點到第二個點陣列中從第二個點到第三個點，以此類推。 繪製線條的終點序列的陣列。
 
 ##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier
@@ -190,7 +190,7 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 
 ### <a name="parameters"></a>參數
 
-*貝茲*<br/>
+*bezier*<br/>
 結構描述的控制點和結束點的二次方貝茲曲線加入。
 
 ##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers
@@ -205,7 +205,7 @@ void AddQuadraticBeziers(
 
 ### <a name="parameters"></a>參數
 
-*貝茲曲線*<br/>
+*beziers*<br/>
 陣列的二次方貝茲線段序列。
 
 ##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-ms.openlocfilehash: 16e97b994ad30fdd4c255dac45e8b56fd04f663a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8c8d3f170803a792ca2ea8c7a37a18fd2cebd48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583309"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259200"
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback 類別
 
@@ -67,7 +67,7 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx <T ::_ThreadMo
 |名稱|描述|
 |----------|-----------------|
 |[CBindStatusCallback::CBindStatusCallback](#cbindstatuscallback)|建構函式。|
-|[CBindStatusCallback:: ~ CBindStatusCallback](#dtor)|解構函式。|
+|[CBindStatusCallback::~CBindStatusCallback](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -162,13 +162,13 @@ static HRESULT Download(
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pT*<br/>
 [in]要求非同步資料傳輸物件的指標。 `CBindStatusCallback`物件這個物件的類別樣板化。
 
 *pFunc*<br/>
 [in]接收資料讀取函式的指標。 函式是物件的類別型別的成員`T`。 請參閱[StartAsyncDownload](#startasyncdownload)如語法和範例。
 
-*Ibttransportconfig*<br/>
+*bstrURL*<br/>
 [in]若要取得資料的 URL。 可以是任何有效的 URL 或檔案名稱。 不可以是 NULL。 例如: 
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`
@@ -357,7 +357,7 @@ STDMETHOD(
 ### <a name="parameters"></a>參數
 
 *grfBSCF*<br/>
-[in]BSCF 列舉值。 一或多個項目： BSCF_FIRSTDATANOTIFICATION、 BSCF_INTERMEDIARYDATANOTIFICATION 或 BSCF_LASTDATANOTIFICATION。
+[in]BSCF 列舉值。 一或多個項目：BSCF_FIRSTDATANOTIFICATION、 BSCF_INTERMEDIARYDATANOTIFICATION 或 BSCF_LASTDATANOTIFICATION。
 
 *dwSize*<br/>
 [in]（以位元組為單位） 的繫結開始之後，您可以使用資料的累積數量。 可以是零，表示的資料量無關，或特定數量變成可用。
@@ -494,13 +494,13 @@ HRESULT StartAsyncDownload(
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pT*<br/>
 [in]要求非同步資料傳輸物件的指標。 `CBindStatusCallback`物件這個物件的類別樣板化。
 
 *pFunc*<br/>
 [in]函式來接收所讀取的資料指標。 函式是物件的類別型別的成員`T`。 請參閱**備註**如語法和範例。
 
-*Ibttransportconfig*<br/>
+*bstrURL*<br/>
 [in]若要取得資料的 URL。 可以是任何有效的 URL 或檔案名稱。 不可以是 NULL。 例如: 
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`

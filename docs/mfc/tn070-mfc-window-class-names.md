@@ -1,5 +1,5 @@
 ---
-title: TN070：MFC 視窗類別名稱
+title: TN070:MFC 視窗類別名稱
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.classes
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - window class names [MFC]
 - TN070 [MFC]
 ms.assetid: 90617912-dd58-4a7c-9082-ced71736d7cd
-ms.openlocfilehash: 609cfade60b1b7b51fb2fd5597c4d491d3eb861c
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 8b06f7b3656284de18632185877fdbe382343f95
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692656"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260566"
 ---
-# <a name="tn070-mfc-window-class-names"></a>TN070：MFC 視窗類別名稱
+# <a name="tn070-mfc-window-class-names"></a>TN070:MFC 視窗類別名稱
 
 > [!NOTE]
 >  下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
@@ -46,5 +46,4 @@ Afx:%x:%x:%x:%x:%x
 
 [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
 [依分類區分的技術提示](../mfc/technical-notes-by-category.md)<br/>
-[TN020：識別碼命名和編號慣例](../mfc/tn020-id-naming-and-numbering-conventions.md)
-
+[TN020:識別碼命名和編號慣例](../mfc/tn020-id-naming-and-numbering-conventions.md)

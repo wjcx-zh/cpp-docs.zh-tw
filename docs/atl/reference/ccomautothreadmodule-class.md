@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CComAutoThreadModule class
 - apartment model modules
 ms.assetid: 13063ea5-a57e-4aac-97d3-227137262811
-ms.openlocfilehash: 805227144887b29d85b1948f62060ffe9eb2d0e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b0fa685bf9a7de94b158bd62b00161c1b58562d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435684"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271992"
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule 類別
 
@@ -52,8 +52,8 @@ class CComAutoThreadModule : public CComModule
 |[CreateInstance](#createinstance)|選取一個執行緒，然後在相關聯的 apartment 中建立的物件。|
 |[GetDefaultThreads](#getdefaultthreads)|（靜態）動態計算模組，根據處理器數目的執行緒的數目。|
 |[Init](#init)|建立模組的執行緒。|
-|[鎖定](#lock)|模組與目前執行緒的鎖定計數會遞增。|
-|[解除鎖定](#unlock)|減量鎖定計數模組與目前的執行緒。|
+|[Lock](#lock)|模組與目前執行緒的鎖定計數會遞增。|
+|[Unlock](#unlock)|減量鎖定計數模組與目前的執行緒。|
 
 ### <a name="data-members"></a>資料成員
 

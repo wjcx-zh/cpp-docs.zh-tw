@@ -1,5 +1,5 @@
 ---
-title: TN024：MFC 定義的訊息和資源
+title: TN024:定義的訊息和資源
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.messages
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-ms.openlocfilehash: 26f6effbafd8136661f0b1dc9a6b22138a23e547
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 029177821d37d5d26abe0b39ea1581e8a5ad602b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639630"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278128"
 ---
-# <a name="tn024-mfc-defined-messages-and-resources"></a>TN024：MFC 定義的訊息和資源
+# <a name="tn024-mfc-defined-messages-and-resources"></a>TN024:定義的訊息和資源
 
 > [!NOTE]
 >  下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
@@ -162,7 +162,7 @@ MFC 私人資源類型是在範圍內 0xF0]-> [0xFF。
 
 ## <a name="mfc-private-resource-formats"></a>MFC 私用的格式建置資源
 
-目前，MFC 會定義兩個私用資源的格式： RT_TOOLBAR 和 RT_DLGINIT。
+目前，MFC 會定義兩個私用資源的格式：RT_TOOLBAR 和 RT_DLGINIT。
 
 ## <a name="rttoolbar-resource-format"></a>RT_TOOLBAR 資源格式
 
@@ -197,10 +197,9 @@ RT_DLGINIT 資源的基本結構如下所示：
 SendDlgItemMessage(<Control ID>, <Message #>, 0, &<Data>);
 ```
 
-這是非常一般的格式，並允許任何 Windows 訊息和資料內容。 MFC 與 Visual c + + 資源編輯器僅支援 Windows 訊息的有限的子集： CB_ADDSTRING 的初始清單-選項 （資料是文字字串） 的下拉式方塊。
+這是非常一般的格式，並允許任何 Windows 訊息和資料內容。 MFC 與 Visual c + + 資源編輯器僅支援 Windows 訊息的有限的子集：如需初始 （資料是文字字串） 的下拉式方塊清單-選擇 CB_ADDSTRING。
 
 ## <a name="see-also"></a>另請參閱
 
 [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
 [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
-

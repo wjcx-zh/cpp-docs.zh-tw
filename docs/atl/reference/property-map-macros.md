@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
-ms.openlocfilehash: 7422c38bd21a458dccafa6d34fd4d6522f96132a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e2e7235dd924467d9d5e0613a704fedf8340ae4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513811"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264894"
 ---
 # <a name="property-map-macros"></a>屬性對應巨集
 
@@ -27,7 +27,7 @@ ms.locfileid: "50513811"
 |[BEGIN_PROP_MAP](#begin_prop_map)|標記的 ATL 屬性對應的開頭。|
 |[PROP_DATA_ENTRY](#prop_data_entry)|表示範圍或 ActiveX 控制項的維度。|
 |[PROP_ENTRY_TYPE](#prop_entry_type)|輸入屬性對應中的屬性描述、 屬性的 DISPID，與屬性頁 CLSID。|
-|[改用 PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)|輸入屬性描述，屬性的 DISPID，屬性頁 CLSID、 和`IDispatch`屬性對應至 IID。|
+|[PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)|輸入屬性描述，屬性的 DISPID，屬性頁 CLSID、 和`IDispatch`屬性對應至 IID。|
 |[PROP_PAGE](#prop_page)|輸入屬性對應中的屬性頁 CLSID。|
 |[END_PROP_MAP](#end_prop_map)|結束標記的 ATL 屬性對應。|
 
@@ -125,7 +125,7 @@ PROP_ENTRY 巨集已受到保護，且已被取代。 已被取代 PROP_ENTRY_TY
 
 範例，請參閱[BEGIN_PROP_MAP](#begin_prop_map)。
 
-##  <a name="prop_entry_type_ex"></a>  改用 PROP_ENTRY_TYPE_EX
+##  <a name="prop_entry_type_ex"></a>  PROP_ENTRY_TYPE_EX
 
 類似於[PROP_ENTRY_TYPE](#prop_entry_type)，但可讓您指定特定的 IID，如果物件支援多個雙重介面。
 

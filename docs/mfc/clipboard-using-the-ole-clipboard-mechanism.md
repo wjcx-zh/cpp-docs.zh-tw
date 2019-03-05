@@ -8,12 +8,12 @@ helpviewer_keywords:
 - OLE Clipboard, formats
 - formats [MFC], Clipboard for OLE
 ms.assetid: 229cc610-5bb1-435e-bd20-2c8b9964d1af
-ms.openlocfilehash: 3dadd2ae6774c684fe751e02fb3a80570accd30a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8ef93b306c0968adf2c23c841c792d2f7af5de3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661444"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262248"
 ---
 # <a name="clipboard-using-the-ole-clipboard-mechanism"></a>剪貼簿：使用 OLE 剪貼簿機制
 
@@ -46,4 +46,3 @@ Windows 會定義數種標準格式，可用於透過剪貼簿傳輸資料。 �
 ## <a name="see-also"></a>另請參閱
 
 [剪貼簿](../mfc/clipboard.md)
-

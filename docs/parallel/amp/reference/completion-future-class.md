@@ -13,12 +13,12 @@ f1_keywords:
 - AMPRT/Concurrency::completion_future::wait_for
 - AMPRT/Concurrency::completion_future::wait_until
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-ms.openlocfilehash: d121477cf63236ee40df826a63dd7c7c9880d142
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 663122c2d8cd430e921773e75dfd7975e4a41516
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535287"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272915"
 ---
 # <a name="completionfuture-class"></a>completion_future 類別
 
@@ -47,7 +47,7 @@ class completion_future;
 |[then](#then)|鏈結的回呼函式物件`completion_future`執行相關聯的非同步作業完成時要執行的物件。|
 |[to_task](#to_task)|傳回`task`對應至相關聯的非同步作業的物件。|
 |[valid](#valid)|取得布林值，指出物件是否與非同步作業相關聯。|
-|[等候](#wait)|封鎖直到相關聯的非同步作業完成為止。|
+|[wait](#wait)|封鎖直到相關聯的非同步作業完成為止。|
 |[wait_for](#wait_for)|封鎖，直到相關聯的非同步作業完成或所指定的時間`_Rel_time`已過。|
 |[wait_until](#wait_until)|封鎖直到相關聯的非同步作業完成或直到目前的時間超過指定的值`_Abs_time`。|
 
@@ -277,7 +277,7 @@ std::future_status::future_status wait_until(
 
 1. `std::future_status::timeout` 如果指定的時間期間已過。
 
-## <a name="dtor"></a> ~ completion_future
+## <a name="dtor"></a> ~completion_future
 
 終結`completion_future`物件。
 

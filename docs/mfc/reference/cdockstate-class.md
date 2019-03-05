@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDockState [MFC], SaveState
 - CDockState [MFC], m_arrBarInfo
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
-ms.openlocfilehash: 56be735aa99cfebe4ec64ff76f53d28cc9b9779e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8c4b80d7182795d8919adb64491d506325976ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443598"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262684"
 ---
 # <a name="cdockstate-class"></a>CDockState 類別
 
@@ -58,7 +58,7 @@ class CDockState : public CObject
 
 [CFrameWnd::GetDockState](../../mfc/reference/cframewnd-class.md#getdockstate)擷取所有框架視窗的狀態資訊`CControlBar`物件，並將其放入`CDockState`物件。 然後，您可以撰寫的內容`CDockState`至儲存體使用的物件[Serialize](../../mfc/reference/cobject-class.md#serialize)或是[CDockState::SaveState](#savestate)。 如果您稍後想要還原在框架視窗中的控制列的狀態，您可以載入的狀態與`Serialize`或是[CDockState::LoadState](#loadstate)，然後使用[CFrameWnd::SetDockState](../../mfc/reference/cframewnd-class.md#setdockstate)套用已儲存框架視窗的控制列的狀態。
 
-如需有關如何停駐控制列的詳細資訊，請參閱文章[控制列](../../mfc/control-bars.md)，[工具列： 停駐和浮動](../../mfc/docking-and-floating-toolbars.md)，並[框架 Windows](../../mfc/frame-windows.md)。
+如需有關如何停駐控制列的詳細資訊，請參閱文章[控制列](../../mfc/control-bars.md)，[工具列：停駐和浮動](../../mfc/docking-and-floating-toolbars.md)，並[框架 Windows](../../mfc/frame-windows.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -144,4 +144,3 @@ void SaveState(LPCTSTR lpszProfileName);
 
 [CObject 類別](../../mfc/reference/cobject-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

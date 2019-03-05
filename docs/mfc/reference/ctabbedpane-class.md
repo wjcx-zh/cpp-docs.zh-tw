@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CTabbedPane [MFC], m_bTabsAlwaysTop
 - CTabbedPane [MFC], m_pTabWndRTC
 ms.assetid: f4dc5215-b789-4f2d-8c62-477aceda3578
-ms.openlocfilehash: d345d7a5aef53ac7975564a580f1353157a01376
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af9c65e51f7230b0fc6a59d0eed42eca08d24837
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645714"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263347"
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane 類別
 
@@ -173,9 +173,9 @@ virtual BOOL DetachPane(
 
 ### <a name="parameters"></a>參數
 
-[in]*pBar*<br/>
+[in] *pBar*<br/>
 
-[in]*bHide*<br/>
+[in] *bHide*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -214,10 +214,10 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>參數
 
-[in]*pBar*<br/>
-[in]*nTabID*<br/>
+[in] *pBar*<br/>
+[in] *nTabID*<br/>
 [in]*dockMethod*<br/>
-[in]*bHide*<br/>
+[in] *bHide*<br/>
 
 ### <a name="return-value"></a>傳回值
 

@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: b1cf1dfc623edbb2b6e71aa6476a2fe0cccbc20b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d363de0d787ecc5015093005b39a379acd82e71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677184"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262697"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool 類別
 
@@ -40,7 +40,7 @@ class CThreadPool : public IThreadPoolConfig
 
 #### <a name="parameters"></a>參數
 
-*背景工作角色*<br/>
+*Worker*<br/>
 符合類別[背景工作原型](../../atl/reference/worker-archetype.md)提供用來處理的工作項目加入執行緒集區佇列的程式碼。
 
 *ThreadTraits*<br/>
@@ -53,7 +53,7 @@ class CThreadPool : public IThreadPoolConfig
 |名稱|描述|
 |----------|-----------------|
 |[CThreadPool::CThreadPool](#cthreadpool)|執行緒集區建構函式。|
-|[CThreadPool:: ~ CThreadPool](#dtor)|執行緒集區的解構函式。|
+|[CThreadPool::~CThreadPool](#dtor)|執行緒集區的解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -254,7 +254,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 
 ### <a name="parameters"></a>參數
 
-*要求*<br/>
+*request*<br/>
 要排入佇列的要求。
 
 ### <a name="return-value"></a>傳回值

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CRecordView [MFC], OnMove
 - CRecordView [MFC], OnMove
 ms.assetid: 9b4b0897-bd50-4d48-a0b4-f3323f5ccc55
-ms.openlocfilehash: c7013fb53562fd76744bff19d1d37ce972a52d52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a91a9e320b4221b04bbcf996ffa60f1de4b35ec5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643857"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262463"
 ---
 # <a name="crecordview-class"></a>CRecordView 類別
 
@@ -62,7 +62,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 檢視是表單檢視，直接連線到`CRecordset`物件。 檢視從對話方塊範本資源建立，並顯示的欄位`CRecordset`對話方塊範本的控制項中的物件。 `CRecordView`物件用來自動化的表單上的控制項和資料錄集的欄位之間的資料移動的對話方塊資料交換 (DDX) 和資料錄欄位交換 (RFX)。 `CRecordView` 也提供移動的預設實作第一筆、 下一步 上, 一個或最後一筆和更新目前的檢視記錄的介面。
 
 > [!NOTE]
->  如果您正在使用的資料存取物件 (DAO) 類別，而不是開放式資料庫連接 (ODBC) 類別，使用類別[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)改。 如需詳細資訊，請參閱文章[概觀： 資料庫程式設計](../../data/data-access-programming-mfc-atl.md)。
+>  如果您正在使用的資料存取物件 (DAO) 類別，而不是開放式資料庫連接 (ODBC) 類別，使用類別[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)改。 如需詳細資訊，請參閱文章[概觀：資料庫程式設計](../../data/data-access-programming-mfc-atl.md)。
 
 若要建立您的資料錄檢視的最常見方式是使用應用程式精靈。 Tge 應用程式精靈 建立資料錄檢視類別和其相關聯的資料錄集類別，做為您的基本架構的入門應用程式的一部分。 如果您未建立資料錄檢視類別與應用程式精靈，可以使用 ClassWizard 稍後建立它。 如果您只需要單一的表單時，應用程式精靈 的方法是更容易。 ClassWizard 可讓您決定使用資料錄檢視稍後在開發程序。 分別建立資料錄檢視和資料錄集，然後將它們連接至使用 ClassWizard 是最具彈性的方法，因為它讓您更能控制中命名的資料錄集類別和其。H /。CPP 檔案。 這種方法也可讓您有多個資料錄檢視上相同的資料錄集類別。
 
@@ -180,7 +180,7 @@ virtual CRecordset* OnGetRecordset() = 0;
 
 您必須覆寫此成員函式，來建構或取得資料錄集物件和傳回的指標。 如果您宣告您的資料錄檢視類別與 ClassWizard，精靈會為您撰寫的預設覆寫。 ClassWizard 的預設實作會傳回資料錄集指標儲存在記錄檢視中，如果有的話。 您如果不是，它會建構類型的資料錄集物件指定 ClassWizard 並呼叫其`Open`成員函式以開啟資料表或執行查詢，並再傳回物件的指標。
 
-如需詳細資訊和範例，請參閱文章[資料錄檢視： 使用資料錄檢視](../../data/using-a-record-view-mfc-data-access.md)。
+如需詳細資訊和範例，請參閱文章[資料錄檢視：使用資料錄檢視](../../data/using-a-record-view-mfc-data-access.md)。
 
 ##  <a name="onmove"></a>  CRecordView::OnMove
 

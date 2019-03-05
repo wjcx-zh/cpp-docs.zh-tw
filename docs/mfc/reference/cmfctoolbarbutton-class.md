@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: ec5b6692197dc224f503be050a537e6fa265f6d5
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 94d7ba14e01b2965a0fe788162726d1019e847de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694656"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275229"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton 類別
 
@@ -390,7 +390,7 @@ CMFCToolBarButton(
 *bUserButton*<br/>
 [in]布林值，判斷是否為使用者定義的按鈕。 如果此參數為 TRUE 時，按鈕是使用者定義的。 否則，從資源載入按鈕影像。
 
-*封鎖*<br/>
+*bLocked*<br/>
 [in]布林值，決定是否可以自訂按鈕。 如果此參數為 TRUE，則無法自訂按鈕。 否則，可以自訂按鈕。
 
 ##  <a name="comparewith"></a>  CMFCToolBarButton::CompareWith
@@ -479,7 +479,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>參數
 
-*MenuButton*<br/>
+*menuButton*<br/>
 [in][目標] 功能表按鈕的參考。
 
 ### <a name="return-value"></a>傳回值
@@ -1201,7 +1201,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 
 這個方法的預設實作不做任何動作，且會傳回 FALSE。 覆寫此方法以傳回非零值，如果按鈕處理說明訊息。
 
-如需有關 WM_HELPHITTEST 訊息的詳細資訊，請參閱[TN028： 即時線上說明支援](../../mfc/tn028-context-sensitive-help-support.md)。
+如需有關 WM_HELPHITTEST 訊息的詳細資訊，請參閱[TN028:即時線上說明支援](../../mfc/tn028-context-sensitive-help-support.md)。
 
 ##  <a name="onctlcolor"></a>  CMFCToolBarButton::OnCtlColor
 
@@ -1449,7 +1449,7 @@ virtual BOOL OnToolHitTest(
 *pWnd*<br/>
 [in]按鈕的父視窗。 可以是 NULL。
 
-*PTI*<br/>
+*pTI*<br/>
 [in]A`TOOLINFO`結構，其中包含一項工具的工具提示控制項的相關資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -1582,7 +1582,7 @@ virtual void Serialize(CArchive& ar);
 
 這個方法支援資料傳輸程序，例如剪貼簿或拖放作業。 讀取或寫入的按鈕，例如識別碼、 文字標籤和映像識別碼的屬性，或以提供`CArchive`物件。
 
-如需序列化的範例，請參閱[序列化： 序列化物件](../../mfc/serialization-serializing-an-object.md)。
+如需序列化的範例，請參閱[序列化：將物件序列化為](../../mfc/serialization-serializing-an-object.md)。
 
 ##  <a name="setaccdata"></a>  CMFCToolBarButton::SetACCData
 

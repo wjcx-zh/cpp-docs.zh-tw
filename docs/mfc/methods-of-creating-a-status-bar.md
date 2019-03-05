@@ -9,16 +9,16 @@ helpviewer_keywords:
 - methods [MFC]
 - status bars [MFC], creating
 ms.assetid: 9aeaf290-7099-4762-a5ba-9c26705333c9
-ms.openlocfilehash: 1156f8bdeafb71dc9e6dbd9fc5b85607542918f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a2301301d0012bd93ffedd0452dec140174402e0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587966"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276880"
 ---
 # <a name="methods-of-creating-a-status-bar"></a>建立狀態列的方法
 
-MFC 提供建立狀態列的兩個類別： [CStatusBar](../mfc/reference/cstatusbar-class.md)並[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) （包裝 Windows 通用控制項 API）。 `CStatusBar` 提供的所有功能的通用控制項狀態列，它會自動與互動功能表和工具列，以及處理許多必要的通用控制項設定和結構的資料。不過，產生可執行檔通常會大於使用建立`CStatusBarCtrl`。
+MFC 提供建立狀態列的兩個類別：[CStatusBar](../mfc/reference/cstatusbar-class.md)並[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) （包裝 Windows 通用控制項 API）。 `CStatusBar` 提供的所有功能的通用控制項狀態列，它會自動與互動功能表和工具列，以及處理許多必要的通用控制項設定和結構的資料。不過，產生可執行檔通常會大於使用建立`CStatusBarCtrl`。
 
 `CStatusBarCtrl` 通常會導致較小的可執行檔，並且可能會想要使用`CStatusBarCtrl`如果您不想要整合的 MFC 架構中的 [狀態] 列。 如果您打算使用`CStatusBarCtrl`並整合到 MFC 架構的 [狀態] 列，您必須另花心思將傳達至 MFC 的控制項操作的狀態列。 這項通訊並不困難;不過，就是不必要的當您使用的其他工作`CStatusBar`。
 
@@ -34,4 +34,3 @@ Visual c + + 提供兩種方式可利用通用狀態列。
 
 [使用 CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
 [控制項](../mfc/controls-mfc.md)
-

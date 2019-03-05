@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: 87f99b4f037c8cc881b33e1d07b4f07596ee9a1b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: aaa05fc3e97fe690e8d6a0cd9eba826c482b410d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694539"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262099"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 類別
 
@@ -204,7 +204,7 @@ class CFileDialog : public CCommonDialog
 |[CFileDialog::SetControlLabel](#setcontrollabel)|設定控制項，例如按鈕文字或編輯方塊標籤相關聯的文字。|
 |[CFileDialog::SetControlState](#setcontrolstate)|設定目前的可見性，並啟用指定的控制項狀態。|
 |[CFileDialog::SetControlText](#setcontroltext)|設定指定之控制項的文字在檔案總管樣式**開放**或是**另存新檔**通用對話方塊。|
-|[Setdefext](#setdefext)|設定預設的檔案名稱副檔名的檔案總管樣式**開放**或是**另存新檔**通用對話方塊。|
+|[CFileDialog::SetDefExt](#setdefext)|設定預設的檔案名稱副檔名的檔案總管樣式**開放**或是**另存新檔**通用對話方塊。|
 |[CFileDialog::SetEditBoxText](#seteditboxtext)|設定目前的文字編輯方塊控制項中。|
 |[CFileDialog::SetProperties](#setproperties)|提供屬性儲存區，可定義要用於所儲存之項目的預設值。|
 |[CFileDialog::SetSelectedControlItem](#setselectedcontrolitem)|設定中的選項按鈕群組或下拉式方塊的對話方塊中找到的特定項目的選取的狀態。|
@@ -251,7 +251,7 @@ class CFileDialog : public CCommonDialog
 
 - [CDialog::OnSetFont](../../mfc/reference/cdialog-class.md#onsetfont)
 
-Windows 訊息`CFileDialog`類別視您正在使用哪個作業系統。 比方說，不支援 Windows XP [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel)並[CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok)如`CFileDialog`類別。 不過，Windows Vista 和更新版本的作業系統並支援它們。 如需有關不同所產生的訊息並接收它們的順序的詳細資訊，請參閱[CFileDialog 範例： 記錄事件順序](../../visual-cpp-samples.md)。
+Windows 訊息`CFileDialog`類別視您正在使用哪個作業系統。 比方說，不支援 Windows XP [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel)並[CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok)如`CFileDialog`類別。 不過，Windows Vista 和更新版本的作業系統並支援它們。 如需有關不同所產生的訊息並接收它們的順序的詳細資訊，請參閱[CFileDialog 範例：記錄事件順序](../../visual-cpp-samples.md)。
 
 若要使用`CFileDialog`物件，請先建立物件，使用`CFileDialog`建構函式。 在建構對話方塊之後，您可以設定或修改中的任何值[CFileDialog::m_ofn](#m_ofn)結構初始化的值或對話方塊控制項的狀態。 `m_ofn`結構的類型是`OPENFILENAME`。 如需詳細資訊，請參閱 < [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) Windows SDK 中的結構。
 
@@ -380,7 +380,7 @@ HRESULT AddEditBox(
 *dwIDCtl*<br/>
 要新增 [編輯] 方塊的識別碼。
 
-*先把 strText*<br/>
+*strText*<br/>
 編輯方塊名稱。
 
 ### <a name="remarks"></a>備註
@@ -497,7 +497,7 @@ HRESULT AddText(
 *dwIDCtl*<br/>
 要新增的文字識別碼。
 
-*先把 strText*<br/>
+*strText*<br/>
 文字名稱。
 
 ### <a name="remarks"></a>備註
@@ -730,7 +730,7 @@ HRESULT GetEditBoxText(
 *dwIDCtl*<br/>
 編輯方塊的識別碼。
 
-*先把 strText*<br/>
+*strText*<br/>
 文字值。
 
 ### <a name="remarks"></a>備註
@@ -1275,7 +1275,7 @@ virtual void OnLBSelChangedNotify(
 *iCurSel*<br/>
 目前的選取範圍的索引。
 
-*則 nCode*<br/>
+*nCode*<br/>
 控制項通知程式碼。 這個參數必須要有下列值之一：
 
 - 指定 CD_LBSELCHANGE *iCurSel*是單一選取清單方塊中選取的項目。
@@ -1489,7 +1489,7 @@ void SetControlText(
 
 若要使用這個方法，您必須建立對話方塊 OFN_EXPLORER 樣式。 否則，函式將會失敗的判斷提示。
 
-##  <a name="setdefext"></a>  Setdefext
+##  <a name="setdefext"></a>  CFileDialog::SetDefExt
 
 呼叫此函式來設定 檔案總管樣式開啟 或 另存新檔通用的對話方塊中的預設檔案名稱副檔名。
 
@@ -1521,7 +1521,7 @@ HRESULT SetEditBoxText(
 *dwIDCtl*<br/>
 編輯方塊的識別碼。
 
-*先把 strText*<br/>
+*strText*<br/>
 文字值。
 
 ### <a name="remarks"></a>備註
@@ -1642,4 +1642,3 @@ Windows Vista 中，成員之前的 Windows 版本中[OPENFILENAME](https://msdn
 
 [CCommonDialog 類別](../../mfc/reference/ccommondialog-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

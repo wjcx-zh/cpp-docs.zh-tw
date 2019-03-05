@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], access to controls
 - dialog box controls [MFC], accessing
 ms.assetid: b8874393-ee48-4124-8d78-e3648a7e29b9
-ms.openlocfilehash: 5f0bf03adff83ef25f3537291516368151a31a03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf3ecf3016fcc15bd4ada7a15208acd9a04ca0a8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436281"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263802"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>使用程式碼精靈的控制項類型安全存取
 
@@ -38,4 +38,3 @@ ms.locfileid: "50436281"
 [對話方塊中之控制項的型別安全存取](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)<br/>
 [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [不使用程式碼精靈的控制項型別安全存取](../mfc/type-safe-access-to-controls-without-code-wizards.md)
-

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 9fb7668f65b04372b87059034c3ec6cd20abc48d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ce1e913bb3bd1c3b74db43dc02d9d360b9cfd00c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175817"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271303"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX 控制項：使用字型
 
@@ -42,7 +42,7 @@ ms.locfileid: "52175817"
 
 存取字型物件，可透過[GetFont](../mfc/reference/colecontrol-class.md#getfont)， [SetFont](../mfc/reference/colecontrol-class.md#setfont)，並[InternalGetFont](../mfc/reference/colecontrol-class.md#internalgetfont)函式的`COleControl`。 控制使用者會存取字型物件，透過`GetFont`和`SetFont`函式中任何其他的 Get/Set 屬性相同的方式。 從控制項內需要字型物件的存取權時，使用`InternalGetFont`函式。
 
-中所述[MFC ActiveX 控制項： 屬性](../mfc/mfc-activex-controls-properties.md)，將新增內建屬性是讓您輕鬆[加入屬性精靈](../ide/names-add-property-wizard.md)。 選擇 字型 屬性中，並加入屬性精靈 會自動插入控制項的分派對應內建字型項目。
+中所述[MFC ActiveX 控制項：屬性](../mfc/mfc-activex-controls-properties.md)，將新增內建屬性是讓您輕鬆[加入屬性精靈](../ide/names-add-property-wizard.md)。 選擇 字型 屬性中，並加入屬性精靈 會自動插入控制項的分派對應內建字型項目。
 
 #### <a name="to-add-the-stock-font-property-using-the-add-property-wizard"></a>若要加入使用 [新增屬性精靈] 的內建字型屬性
 
@@ -238,4 +238,3 @@ DISP_PROPERTY_EX 巨集產生關聯`HeadingFont`與其對應的屬性名稱`CSam
 [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)<br/>
 [MFC ActiveX 控制項：在 ActiveX 控制項中使用圖片](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
 [MFC ActiveX 控制項：使用內建屬性頁](../mfc/mfc-activex-controls-using-stock-property-pages.md)
-

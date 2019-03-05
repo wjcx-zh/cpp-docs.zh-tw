@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: 07e507f0546849a64625ccd67a0f7463cd510841
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 0833dca9311689063c2ebeadd3942d9f5ce376e2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525401"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267156"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray 類別
 
@@ -103,7 +103,7 @@ class COleSafeArray : public tagVARIANT
 |[COleSafeArray::Detach](#detach)|中斷連結的變數陣列`COleSafeArray`物件 （如此將不會釋放資料）。|
 |[COleSafeArray::GetByteArray](#getbytearray)|複製到的安全陣列的內容[CByteArray](../../mfc/reference/cbytearray-class.md)。|
 |[COleSafeArray::GetDim](#getdim)|傳回陣列中的維度數目。|
-|[Colesafearray:: Getelement](#getelement)|擷取安全陣列的單一項目。|
+|[COleSafeArray::GetElement](#getelement)|擷取安全陣列的單一項目。|
 |[COleSafeArray::GetElemSize](#getelemsize)|傳回大小，以位元組為單位的安全陣列中的一個項目。|
 |[COleSafeArray::GetLBound](#getlbound)|會傳回任何維度的安全陣列的下限。|
 |[COleSafeArray::GetOneDimSize](#getonedimsize)|傳回一維的元素數目`COleSafeArray`物件。|
@@ -123,7 +123,7 @@ class COleSafeArray : public tagVARIANT
 |[COleSafeArray::operator LPCVARIANT](#operator_lpcvariant)|存取基礎`VARIANT`結構`COleSafeArray`物件。|
 |[COleSafeArray::operator LPVARIANT](#operator_lpvariant)|存取基礎`VARIANT`結構`COleSafeArray`物件。|
 |[COleSafeArray::operator =](#operator_eq)|將值插入`COleSafeArray`物件 (`SAFEARRAY`， `VARIANT`， `COleVariant`，或`COleSafeArray`陣列)。|
-|[COleSafeArray::operator = =](#operator_eq_eq)|比較兩個 variant 的陣列 (`SAFEARRAY`， `VARIANT`， `COleVariant`，或`COleSafeArray`陣列)。|
+|[COleSafeArray::operator ==](#operator_eq_eq)|比較兩個 variant 的陣列 (`SAFEARRAY`， `VARIANT`， `COleVariant`，或`COleSafeArray`陣列)。|
 |[COleSafeArray::operator &lt;&lt;](#operator_lt_lt)|輸出的內容`COleSafeArray`傾印內容的物件。|
 
 ## <a name="remarks"></a>備註
@@ -426,7 +426,7 @@ void GetByteArray(CByteArray& bytes);
 
 ### <a name="parameters"></a>參數
 
-*位元組*<br/>
+*bytes*<br/>
 參考[CByteArray](../../mfc/reference/cbytearray-class.md)物件。
 
 ##  <a name="getdim"></a>  COleSafeArray::GetDim

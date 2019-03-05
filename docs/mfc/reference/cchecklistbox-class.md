@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: b1e64e947f798becef32fa4d99f21e61133cc8fc
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b34891c4f46679e43aea36a9b52d6399e020ef71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177832"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273058"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox 類別
 
@@ -142,7 +142,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定的檢查清單方塊的樣式。 樣式必須是 LBS_HASSTRINGS 和 LBS_OWNERDRAWFIXED （清單中的所有項目都有相同的高度） 或 LBS_OWNERDRAWVARIABLE （清單中的項目都是不同高度的）。 這個樣式可以結合其他[清單方塊樣式](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)除了 LBS_USETABSTOPS。
 
 *rect*<br/>
@@ -337,7 +337,7 @@ void SetCheck(
 *nIndex*<br/>
 包含在清單方塊的核取方塊以零為起始的索引。
 
-*n*<br/>
+*nCheck*<br/>
 指定的核取方塊，按鈕狀態。 請參閱 < 備註 > 一節，如需可能值。
 
 ### <a name="remarks"></a>備註

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: 9d0ffba2e8b682a33dc435b0968c59844a858c72
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 22ba71bc0abaefd20cb68d82d4fefe06ab7fa929
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524933"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274569"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 類別
 
@@ -56,10 +56,10 @@ class COleDispatchDriver
 |名稱|描述|
 |----------|-----------------|
 |[COleDispatchDriver::AttachDispatch](#attachdispatch)|附加`IDispatch`連線`COleDispatchDriver`物件。|
-|[Coledispatchdriver:: Createdispatch](#createdispatch)|會建立`IDispatch`連線並將它附加至`COleDispatchDriver`物件。|
+|[COleDispatchDriver::CreateDispatch](#createdispatch)|會建立`IDispatch`連線並將它附加至`COleDispatchDriver`物件。|
 |[COleDispatchDriver::DetachDispatch](#detachdispatch)|卸離`IDispatch`連線，但未釋放它。|
 |[COleDispatchDriver::GetProperty](#getproperty)|取得自動化屬性。|
-|[Coledispatchdriver:: Invokehelper](#invokehelper)|呼叫 automation 方法的協助程式。|
+|[COleDispatchDriver::InvokeHelper](#invokehelper)|呼叫 automation 方法的協助程式。|
 |[COleDispatchDriver::ReleaseDispatch](#releasedispatch)|版本`IDispatch`連接。|
 |[COleDispatchDriver::SetProperty](#setproperty)|設定自動化屬性。|
 
@@ -158,7 +158,7 @@ COleDispatchDriver(const COleDispatchDriver& dispatchSrc);
 
   請參閱 [COleDispatchDriver::CreateDispatch](#createdispatch)的範例。
 
-##  <a name="createdispatch"></a>  Coledispatchdriver:: Createdispatch
+##  <a name="createdispatch"></a>  COleDispatchDriver::CreateDispatch
 
 建立 [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) 介面物件並將它附加至 `COleDispatchDriver` 物件。
 
@@ -239,7 +239,7 @@ void GetProperty(
 
 [!code-cpp[NVC_MFCOleContainer#6](../../mfc/codesnippet/cpp/coledispatchdriver-class_4.cpp)]
 
-##  <a name="invokehelper"></a>  Coledispatchdriver:: Invokehelper
+##  <a name="invokehelper"></a>  COleDispatchDriver::InvokeHelper
 
 呼叫物件方法或屬性所指定*dwDispID*，在所指定的內容中*wFlags*。
 

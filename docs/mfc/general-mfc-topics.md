@@ -6,12 +6,12 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: ceedf5c02d92059058bc72942a74852eb8146d38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a55bfae8599e2b221cb853cb17bd4113839fb9c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564719"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270965"
 ---
 # <a name="general-mfc-topics"></a>一般 MFC 主題
 
@@ -33,7 +33,7 @@ MFC 架構可讓您使用 Windows 專業程式設計人員所提供的功能建�
 
 [在架構上建置](../mfc/building-on-the-framework.md)
 
-[CWinApp：應用程式類別](../mfc/cwinapp-the-application-class.md)
+[CWinApp:應用程式類別](../mfc/cwinapp-the-application-class.md)
 
 [文件範本和文件/檢視建立程序](../mfc/document-templates-and-the-document-view-creation-process.md)
 
@@ -58,4 +58,3 @@ MFC 架構可讓您使用 Windows 專業程式設計人員所提供的功能建�
 ## <a name="see-also"></a>另請參閱
 
 [使用視窗物件](../mfc/working-with-window-objects.md)
-

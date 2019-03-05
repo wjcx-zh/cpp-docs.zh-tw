@@ -1,5 +1,5 @@
 ---
-title: Windows Sockets：封鎖
+title: Windows Sockets:封鎖
 ms.date: 11/04/2016
 helpviewer_keywords:
 - sockets [MFC], blocking mode
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - sockets [MFC], behavior on different Windows platforms
 - blocking mode sockets
 ms.assetid: 10aca9b1-bfba-41a8-9c55-ea8082181e63
-ms.openlocfilehash: 7b41f034e08570e418bf24d9d720795eafc37932
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26a361bc63da5f6e75144cc91fe837498a7f656b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610570"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272343"
 ---
-# <a name="windows-sockets-blocking"></a>Windows Sockets：封鎖
+# <a name="windows-sockets-blocking"></a>Windows Sockets:封鎖
 
-本文和兩個方針手冊說明了 Windows Sockets 程式設計的幾個問題。 本文包含封鎖問題。 文章中所涵蓋的其他問題： [Windows Sockets： 位元組順序](../mfc/windows-sockets-byte-ordering.md)並[Windows Sockets： 轉換字串](../mfc/windows-sockets-converting-strings.md)。
+本文和兩個方針手冊說明了 Windows Sockets 程式設計的幾個問題。 本文包含封鎖問題。 其他問題涵蓋在文章中：[Windows Sockets:位元組順序](../mfc/windows-sockets-byte-ordering.md)和[Windows Sockets:將字串轉換](../mfc/windows-sockets-converting-strings.md)。
 
 如果您使用或衍生自類別[CAsyncSocket](../mfc/reference/casyncsocket-class.md)，您必須自行管理這些問題。 如果您使用或衍生自類別[CSocket](../mfc/reference/csocket-class.md)，MFC 會為您管理它們。
 
@@ -36,22 +36,21 @@ ms.locfileid: "50610570"
 
 在視窗中不建議採用封鎖呼叫。 根據預設， [CAsyncSocket](../mfc/reference/casyncsocket-class.md)支援非同步呼叫，而且您必須管理封鎖自行使用回呼通知。 類別[CSocket](../mfc/reference/csocket-class.md)，相反地，是同步的。 它會提取 Windows 訊息並為您管理封鎖。
 
-如需封鎖的詳細資訊，請參閱 Windows Sockets 規格。 "On"函式的相關資訊，請參閱[Windows Sockets： 通訊端告知](../mfc/windows-sockets-socket-notifications.md)並[Windows Sockets： 從通訊端類別衍生](../mfc/windows-sockets-deriving-from-socket-classes.md)。
+如需封鎖的詳細資訊，請參閱 Windows Sockets 規格。 "On"函式的相關資訊，請參閱[Windows Sockets:通訊端通知](../mfc/windows-sockets-socket-notifications.md)和[Windows Sockets:從通訊端類別衍生](../mfc/windows-sockets-deriving-from-socket-classes.md)。
 
 如需詳細資訊，請參閱:
 
-- [Windows Sockets：使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets:使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets：搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets:搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets：背景](../mfc/windows-sockets-background.md)
+- [Windows Sockets:背景](../mfc/windows-sockets-background.md)
 
-- [Windows Sockets：資料流通訊端](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets:Stream 通訊端](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets：資料通訊端](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets:資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>另請參閱
 
 [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)<br/>
 [CAsyncSocket::OnSend](../mfc/reference/casyncsocket-class.md#onsend)
-

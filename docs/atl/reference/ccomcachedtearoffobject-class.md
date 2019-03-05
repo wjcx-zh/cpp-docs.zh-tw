@@ -15,12 +15,12 @@ helpviewer_keywords:
 - cache, ATL cached tear-off objects
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
-ms.openlocfilehash: 009bc1e20693a9e45490c58ea29ff9d28b6aa6ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb7821da03e1ca69c850fa1a295851faf4af4c5b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582716"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277530"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject 類別
 
@@ -49,7 +49,7 @@ public CComObjectRootEx<contained
 |名稱|描述|
 |----------|-----------------|
 |[CComCachedTearOffObject::CComCachedTearOffObject](#ccomcachedtearoffobject)|建構函式。|
-|[CComCachedTearOffObject:: ~ CComCachedTearOffObject](#dtor)|解構函式。|
+|[CComCachedTearOffObject::~CComCachedTearOffObject](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 

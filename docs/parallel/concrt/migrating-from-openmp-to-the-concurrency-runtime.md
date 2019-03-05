@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 78fa83c30bc55d82ffa5d2ba1e7d65472643f86b
-ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
+ms.openlocfilehash: 16b0f175867e18e127997749098cce998674b3d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53737620"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259499"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>從 OpenMP 移轉至並行執行階段
 
@@ -48,17 +48,17 @@ OpenMP 程式設計模型是以開放標準定義的，具有定義完善的 For
 
 ## <a name="related-topics"></a>相關主題
 
-[如何：轉換 OpenMP parallel for 迴圈來使用並行執行階段](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
+[如何：轉換 OpenMP parallel for 迴圈以使用並行執行階段](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
 
 指定使用 OpenMP 基本迴圈[平行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)並[如](../../parallel/openmp/reference/for-openmp.md)指示詞，示範如何將它轉換成使用並行執行階段[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)演算法。
 
-[如何：轉換使用並行執行階段使用取消的 OpenMP 迴圈](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
+[如何：轉換使用取消的 OpenMP 迴圈以使用並行執行階段](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
 指定 OpenMP[平行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[如](../../parallel/openmp/reference/for-openmp.md)迴圈，不需要所有的反覆項目，若要執行，示範如何將它轉換成使用並行執行階段取消機制。
 
-[如何：轉換的 OpenMP 迴圈來使用並行執行階段使用例外狀況處理](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
+[如何：轉換使用例外狀況處理的 OpenMP 迴圈以使用並行執行階段](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
 指定 OpenMP[平行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[如](../../parallel/openmp/reference/for-openmp.md)執行例外狀況處理的迴圈會示範如何將它轉換成使用並行執行階段例外狀況處理機制。
 
-[如何：轉換使用削減變數來使用並行執行階段的 OpenMP 迴圈](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
+[如何：轉換使用削減變數的 OpenMP 迴圈以使用並行執行階段](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
 指定 OpenMP[平行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[如](../../parallel/openmp/reference/for-openmp.md)使用迴圈[減少](../../parallel/openmp/reference/reduction.md)子句中，示範如何將它轉換成使用並行執行階段。
 
 ## <a name="see-also"></a>另請參閱
@@ -67,4 +67,3 @@ OpenMP 程式設計模型是以開放標準定義的，具有定義完善的 For
 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)<br/>
 [平行模式程式庫 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 [非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)
-

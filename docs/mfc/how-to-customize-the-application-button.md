@@ -1,17 +1,17 @@
 ---
-title: 如何：自訂應用程式按鈕
+title: HOW TO：自訂的應用程式按鈕
 ms.date: 11/19/2018
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: ba29e9ad65e0bb1d2163e4051c7c7b53664d8817
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: d45ceaf1cce21f77871e966e0e8f525f95cb4c37
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175323"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269528"
 ---
-# <a name="how-to-customize-the-application-button"></a>如何：自訂應用程式按鈕
+# <a name="how-to-customize-the-application-button"></a>HOW TO：自訂的應用程式按鈕
 
 當您按一下 [應用程式] 按鈕時，會顯示命令的功能表。 通常，功能表會包含檔案相關命令這類**開放**，**儲存**，**列印**，以及**結束**。
 
@@ -46,7 +46,7 @@ ms.locfileid: "52175323"
 |**MRU 標題**|指定最近使用清單的面板上顯示的文字。|
 |**小型影像**|指定包含一系列的 16x16 圖示的映像的識別碼。 圖示會使用 「 按鈕 」 集合中的按鈕。|
 |**使用**|啟用或停用 [最近使用清單] 面板。 最近使用清單 面板會顯示在應用程式 功能表上。|
-|**寬度**|指定像素為單位的最新的清單 面板的寬度。|
+|[寬度]|指定像素為單位的最新的清單 面板的寬度。|
 
 應用程式功能表不會出現在設計介面上。 若要檢視它，您必須預覽功能區，或執行應用程式。
 

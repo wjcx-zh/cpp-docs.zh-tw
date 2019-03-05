@@ -46,12 +46,12 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::tanhf
 - amp_math/Concurrency::fast_math::trunc
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-ms.openlocfilehash: fa024c781804d404870a0362a027e1bc436902ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96178ee72073e5063fc009f17ab21565f3cf1ab5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667632"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259857"
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Concurrency:: fast_math 命名空間函式
 
@@ -611,7 +611,7 @@ inline float frexp(
 *_X*<br/>
 浮點值。
 
-*2^_exp*<br/>
+*_Exp*<br/>
 傳回整數的指數 _X 中的浮點值
 
 ### <a name="return-value"></a>傳回值
@@ -633,7 +633,7 @@ inline float frexpf(
 *_X*<br/>
 浮點值。
 
-*2^_exp*<br/>
+*_Exp*<br/>
 傳回整數的指數 _X 中的浮點值
 
 ### <a name="return-value"></a>傳回值
@@ -706,7 +706,7 @@ inline float ldexp(
 *_X*<br/>
 浮點值 mentissa
 
-*2^_exp*<br/>
+*_Exp*<br/>
 整數指數
 
 ### <a name="return-value"></a>傳回值
@@ -728,7 +728,7 @@ inline float ldexpf(
 *_X*<br/>
 浮點值 mentissa
 
-*2^_exp*<br/>
+*_Exp*<br/>
 整數指數
 
 ### <a name="return-value"></a>傳回值
@@ -852,7 +852,7 @@ inline float modf(
 *_X*<br/>
 浮點值。
 
-*（_i)*<br/>
+*_Ip*<br/>
 接收值的整數部分
 
 ### <a name="return-value"></a>傳回值
@@ -874,7 +874,7 @@ inline float modff(
 *_X*<br/>
 浮點值。
 
-*（_i)*<br/>
+*_Ip*<br/>
 接收值的整數部分
 
 ### <a name="return-value"></a>傳回值
@@ -1275,7 +1275,7 @@ inline float truncf(float _X) restrict(amp);
 
 ## <a name="requirements"></a>需求
 
-**標頭：** amp_math.h**命名空間：** concurrency:: fast_math
+**標頭：** amp_math.h**命名空間：** Concurrency::fast_math
 
 ## <a name="see-also"></a>另請參閱
 

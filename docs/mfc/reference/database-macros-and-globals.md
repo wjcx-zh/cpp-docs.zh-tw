@@ -13,12 +13,12 @@ helpviewer_keywords:
 - global functions [MFC], database functions
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
-ms.openlocfilehash: a546c821690bcbe1afedd4909810317553e3b283
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 47a1bb434801c24ab8eee048d9ef8f93793101cc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849747"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268716"
 ---
 # <a name="database-macros-and-globals"></a>資料庫巨集和全域
 
@@ -101,7 +101,8 @@ AFX_SQL_ASYNC(prs, SQLFunc)
 ### <a name="parameters"></a>參數
 
 *prs*<br/>
-`CRecordset` 物件或 `CDatabase` 物件指標。 從 MFC 4.2 開始略過這個參數值。
+
+  `CRecordset` 物件或 `CDatabase` 物件指標。 從 MFC 4.2 開始略過這個參數值。
 
 *SQLFunc*<br/>
 ODBC API 函式。 如需有關 ODBC API 函式的詳細資訊，請參閱 Windows SDK。

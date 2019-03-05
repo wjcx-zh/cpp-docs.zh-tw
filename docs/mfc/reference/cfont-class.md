@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-ms.openlocfilehash: f925940f0813e1912be9f2382b676e80db8240c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60a717136f69b29df48dd8f449ddaffe5c15ccbf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607892"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271862"
 ---
 # <a name="cfont-class"></a>CFont 類別
 
@@ -50,7 +50,7 @@ class CFont : public CGdiObject
 |名稱|描述|
 |----------|-----------------|
 |[CFont::CreateFont](#createfont)|初始化`CFont`具有指定特性。|
-|[Cfont:: Createfontindirect](#createfontindirect)|初始化`CFont`物件中指定的特性`LOGFONT`結構。|
+|[CFont::CreateFontIndirect](#createfontindirect)|初始化`CFont`物件中指定的特性`LOGFONT`結構。|
 |[CFont::CreatePointFont](#createpointfont)|初始化`CFont`與指定的高度，測量中的點，以及字樣的十分之一秒。|
 |[CFont::CreatePointFontIndirect](#createpointfontindirect)|與相同`CreateFontIndirect`不同之處在於字型高度以一個點，而不是邏輯單元的十分之一秒。|
 |[CFont::FromHandle](#fromhandle)|將指標傳回至`CFont`物件時指定 Windows HFONT。|
@@ -192,7 +192,7 @@ A`CString`或以 null 終止的字串，指定字型的字樣名稱的指標。 
 
 [!code-cpp[NVC_MFCDocView#71](../../mfc/codesnippet/cpp/cfont-class_2.cpp)]
 
-##  <a name="createfontindirect"></a>  Cfont:: Createfontindirect
+##  <a name="createfontindirect"></a>  CFont::CreateFontIndirect
 
 初始化`CFont`物件中指定的特性[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)結構。
 
@@ -362,4 +362,3 @@ Windows GDI 字型物件的控制代碼附加至`CFont`如果成功，否則為 
 [MFC 範例 HIERSVR](../../visual-cpp-samples.md)<br/>
 [CGdiObject 類別](../../mfc/reference/cgdiobject-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

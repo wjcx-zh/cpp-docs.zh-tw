@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleCmdUI [MFC], SetCheck
 - COleCmdUI [MFC], SetText
 ms.assetid: a2d5ce08-6657-45d3-8673-2a9f32d50eec
-ms.openlocfilehash: 30caf7b42cf570a5dcd92d48817ef3743cf63811
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5dc4e9504805146a9eff0f5ab937868226e4516e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677431"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270850"
 ---
 # <a name="colecmdui-class"></a>COleCmdUI 類別
 
@@ -114,7 +114,7 @@ virtual void SetCheck(int nCheck);
 
 ### <a name="parameters"></a>參數
 
-*n*<br/>
+*nCheck*<br/>
 值，判斷要設定的開啟/關閉切換狀態命令。 值為：
 
 |值|描述|
@@ -140,4 +140,3 @@ virtual void SetText(LPCTSTR lpszText);
 
 [CCmdUI 類別](../../mfc/reference/ccmdui-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

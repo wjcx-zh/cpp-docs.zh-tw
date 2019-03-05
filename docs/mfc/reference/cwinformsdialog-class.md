@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-ms.openlocfilehash: 3baa9f99a5a1ecefc0ad9bc9f0c56f0f67dc2e80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d0731e40a622f0d360cabc03b68b0fe74c1ebc9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573484"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277114"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog 類別
 
@@ -58,8 +58,8 @@ class CWinFormsDialog :
 
 |名稱||
 |----------|-|
-|[CWinFormsDialog::operator-&gt;](#operator_-_gt)|會取代[CWinFormsDialog::GetControl](#getcontrol)運算式中。|
-|[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|將類型轉換成的 Windows Forms 使用者控制項的參考。|
+|[CWinFormsDialog::operator -&gt;](#operator_-_gt)|會取代[CWinFormsDialog::GetControl](#getcontrol)運算式中。|
+|[CWinFormsDialog::operator TManagedControl^](#operator_tmanagedcontrol)|將類型轉換成的 Windows Forms 使用者控制項的參考。|
 
 ## <a name="remarks"></a>備註
 
@@ -126,7 +126,7 @@ virtual BOOL OnInitDialog();
 
 如果您需要執行特殊處理，初始化對話方塊時，請覆寫此成員函式。 如需有關如何使用此方法的詳細資訊，請參閱 < [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)。
 
-##  <a name="operator_-_gt"></a>  CWinFormsDialog::operator-&gt;
+##  <a name="operator_-_gt"></a>  CWinFormsDialog::operator -&gt;
 
 會取代[CWinFormsDialog::GetControl](#getcontrol)運算式中。
 
@@ -140,7 +140,7 @@ inline TManagedControl^  operator->() const throw();
 
 如需使用 Windows Form 的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
-##  <a name="operator_tmanagedcontrol_xor"></a>  CWinFormsDialog::operator TManagedControl ^
+##  <a name="operator_tmanagedcontrol_xor"></a>  CWinFormsDialog::operator TManagedControl^
 
 將類型轉換成的 Windows Forms 使用者控制項的參考。
 

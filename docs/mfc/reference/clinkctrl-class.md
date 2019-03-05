@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: b24b92006b73dff2ae9f091256ef8401efc64fe9
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 38f529f46623bc7095879b29fba09427626073ec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178041"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260396"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl 類別
 
@@ -130,7 +130,7 @@ virtual BOOL Create(DWORD dwStyle,
 *lpszLinkMarkup*<br/>
 要顯示的文字包含標示的零結尾字串的指標。 如需詳細資訊，請參閱主題中的 「 標記和連結存取 」 一節[SysLink 控制項概觀](/windows/desktop/Controls/syslink-overview)。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定連結控制項的樣式。 適用於任何控制項樣式的組合。 請參閱[常見的控制項樣式](/windows/desktop/Controls/common-control-styles)在`Windows SDK`如需詳細資訊。
 
 *rect*<br/>
@@ -192,7 +192,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 *dwExStyle*<br/>
 指定連結控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定連結控制項的樣式。 適用於任何控制項樣式的組合。 如需詳細資訊，請參閱 <<c0> [ 常見的控制項樣式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。
 
 *rect*<br/>
@@ -245,7 +245,7 @@ int GetIdealSize(
 |參數|描述|
 |---------------|-----------------|
 |*cxMaxWidth*|[in]連結，像素為單位的最大寬度。|
-|[out]\* *pSize*|Windows 的指標[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構。 當這個方法傳回時， *cy*隸屬`SIZE`結構中包含所指定的連結文字寬度的理想的連結文字高度*cxMaxWidth*。 *Cx*結構成員會包含實際所需的連結文字寬度。|
+|[out] \* *pSize*|Windows 的指標[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構。 當這個方法傳回時， *cy*隸屬`SIZE`結構中包含所指定的連結文字寬度的理想的連結文字高度*cxMaxWidth*。 *Cx*結構成員會包含實際所需的連結文字寬度。|
 
 ### <a name="return-value"></a>傳回值
 

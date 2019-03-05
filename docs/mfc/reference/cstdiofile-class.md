@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-ms.openlocfilehash: dd1a13e7cef066350f8409782b0efeba11b9d11e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd42934107591905a1bbc273ee9eec4b37e58ea7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456208"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258784"
 ---
 # <a name="cstdiofile-class"></a>CStdioFile 類別
 
@@ -240,11 +240,11 @@ virtual ULONGLONG Seek(
 *nFrom*<br/>
 指標移動模式。 必須是下列值之一：
 
-- `CFile::begin`： 移動檔案指標*lOff*轉送從檔案開頭的位元組。
+- `CFile::begin`：檔案指標移到*lOff*轉送從檔案開頭的位元組。
 
-- `CFile::current`： 移動檔案指標*lOff*位元組從目前位置在檔案中。
+- `CFile::current`：檔案指標移到*lOff*位元組從目前位置在檔案中。
 
-- `CFile::end`： 移動檔案指標*lOff*從檔案結尾的位元組。 請注意， *lOff*必須是要搜尋到現有的負數檔案; 正整數值將會搜尋超過檔案結尾。
+- `CFile::end`：檔案指標移到*lOff*從檔案結尾的位元組。 請注意， *lOff*必須是要搜尋到現有的負數檔案; 正整數值將會搜尋超過檔案結尾。
 
 ### <a name="return-value"></a>傳回值
 

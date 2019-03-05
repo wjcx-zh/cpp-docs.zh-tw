@@ -9,12 +9,12 @@ helpviewer_keywords:
 - COM objects, ATL
 - ATL property pages
 ms.assetid: 663c7caa-2e5e-4b5c-b8ea-fd434ceb1654
-ms.openlocfilehash: 5bc17bfc415576d50c84e880bef955e49d926c86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90dafc411f3262dc458c5158df049740a9d7a683
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595555"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266896"
 ---
 # <a name="atl-com-property-pages"></a>ATL COM 屬性頁
 
@@ -45,4 +45,3 @@ ATLPages 範例中，實作屬性頁，使用的範例摘要`IPropertyPageImpl`�
 ## <a name="see-also"></a>另請參閱
 
 [概念](../atl/active-template-library-atl-concepts.md)
-

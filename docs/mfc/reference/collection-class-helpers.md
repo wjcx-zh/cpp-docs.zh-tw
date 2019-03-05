@@ -10,16 +10,16 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-ms.openlocfilehash: 639c4f7952abcf18c29aa3cb0d9fee45b50430af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3992e6c0cf25925e01858016e4bac93d5552fe8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567462"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266142"
 ---
 # <a name="collection-class-helpers"></a>集合類別 Helper
 
-集合類別`CMap`， `CList`，和`CArray`樣板化的全域 helper 函式用於這些用途，做為比較、 複製和序列化項目。 為您的基礎類別的實作的一部分`CMap`， `CList`，和`CArray`，您必須使用的資料儲存在您的對應、 清單或陣列類型量身打造的版本覆寫視這些函式。 如需覆寫協助程式函式時，這類`SerializeElements`，請參閱文章[集合： 如何製作類型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。 請注意，`ConstructElements`和`DestructElements`已被取代。
+集合類別`CMap`， `CList`，和`CArray`樣板化的全域 helper 函式用於這些用途，做為比較、 複製和序列化項目。 為您的基礎類別的實作的一部分`CMap`， `CList`，和`CArray`，您必須使用的資料儲存在您的對應、 清單或陣列類型量身打造的版本覆寫視這些函式。 如需覆寫協助程式函式時，這類`SerializeElements`，請參閱文章[集合：如何建立類型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。 請注意，`ConstructElements`和`DestructElements`已被取代。
 
 Microsoft Foundation 類別庫提供 afxtempl.h 來協助您自訂您的集合類別中的下列全域函式：
 
@@ -53,7 +53,7 @@ CompareElements(
 *pElement1*<br/>
 要比較的第一個元素的指標。
 
-*ARG_TYPE 這個*<br/>
+*ARG_TYPE*<br/>
 要比較的第二個項目類型。
 
 *pElement2*<br/>
@@ -105,7 +105,7 @@ void AFXAPI CopyElements(
 
 預設實作會使用簡單指派運算子 ( **=** ) 來執行複製作業。 如果要複製的類型沒有多載的 operator=，則預設實作會執行位元複製。
 
-如需實作這個和其他 helper 函式的資訊，請參閱文章[集合： 如何製作類型安全集合](../how-to-make-a-type-safe-collection.md)。
+如需實作這個和其他 helper 函式的資訊，請參閱文章[集合：如何建立類型安全集合](../how-to-make-a-type-safe-collection.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -216,11 +216,11 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
 
 預設實作會位元讀取或寫入。
 
-如需實作這個和其他 helper 函式的資訊，請參閱文章[集合： 如何製作類型安全集合](../how-to-make-a-type-safe-collection.md)。
+如需實作這個和其他 helper 函式的資訊，請參閱文章[集合：如何建立類型安全集合](../how-to-make-a-type-safe-collection.md)。
 
 ### <a name="example"></a>範例
 
-請參閱本文的範例[集合： 如何製作類型安全集合](../how-to-make-a-type-safe-collection.md)。
+請參閱本文的範例[集合：如何建立類型安全集合](../how-to-make-a-type-safe-collection.md)。
 
 ### <a name="requirements"></a>需求
 

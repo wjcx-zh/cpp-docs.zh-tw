@@ -10,12 +10,12 @@ helpviewer_keywords:
 - IDispatchImpl class, multiple dual interfaces
 - COM_INTERFACE_ENTRY_IID macro
 ms.assetid: 7fea86e6-247f-4063-be6e-85588a9e3719
-ms.openlocfilehash: c2ec6c89ab6f54dbcd7433a0f7fedcebd7962b6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ed0e9e8c74e02917e852b8f95ebff1b048afaef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434732"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257354"
 ---
 # <a name="multiple-dual-interfaces"></a>多個雙重介面
 
@@ -40,4 +40,3 @@ ATL 不提供任何支援的單一實作中結合多個雙重介面`IDispatch`�
 ## <a name="see-also"></a>另請參閱
 
 [雙重介面和 ATL](../atl/dual-interfaces-and-atl.md)
-

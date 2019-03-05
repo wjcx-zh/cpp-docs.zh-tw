@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-ms.openlocfilehash: 25d3da4ac9092fe53e84e446e93ff7aa030e6709
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bc943c74f456302b13db77bf28b6e4b21a5524b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577537"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258726"
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile 類別
 
@@ -62,7 +62,7 @@ class COleStreamFile : public CFile
 
 `COleStreamFile` 物件完全相同的操作[CFile](../../mfc/reference/cfile-class.md)物件。
 
-如需有關如何管理資料流和儲存體的詳細資訊，請參閱[容器： 複合檔案](../../mfc/containers-compound-files.md)...
+如需有關如何管理資料流和儲存體的詳細資訊，請參閱[容器：複合檔案](../../mfc/containers-compound-files.md)...
 
 如需詳細資訊，請參閱 < [IStream](/windows/desktop/api/objidl/nn-objidl-istream)並[IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) Windows SDK 中。
 
@@ -245,4 +245,3 @@ BOOL OpenStream(
 
 [CFile 類別](../../mfc/reference/cfile-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

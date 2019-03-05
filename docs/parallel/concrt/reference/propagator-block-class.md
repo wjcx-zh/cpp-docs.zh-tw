@@ -20,16 +20,17 @@ f1_keywords:
 helpviewer_keywords:
 - propagator_block class
 ms.assetid: 86aa75fd-eda5-42aa-aadf-25c0c1c9742d
-ms.openlocfilehash: 38b7c920f8ffcab6d709d9484f308a56cd6b8425
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f466ad8f474ddb73d2235d9999c3dbeae627672
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613274"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272941"
 ---
 # <a name="propagatorblock-class"></a>propagator_block 類別
 
-`propagator_block` 類別是同時為來源和目標之訊息區塊的抽象基底類別。 它結合 `source_block` 和 `target_block` 類別的功能。
+
+  `propagator_block` 類別是同時為來源和目標之訊息區塊的抽象基底類別。 它結合 `source_block` 和 `target_block` 類別的功能。
 
 ## <a name="syntax"></a>語法
 
@@ -177,7 +178,8 @@ virtual message_status propagate(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-`message` 物件的指標。
+
+  `message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。
@@ -205,7 +207,8 @@ virtual message_status propagate_message(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-`message` 物件的指標。
+
+  `message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。
@@ -222,7 +225,7 @@ A [message_status](concurrency-namespace-enums.md)表示決定之訊息的目標
 propagator_block();
 ```
 
-##  <a name="dtor"></a> ~ propagator_block
+##  <a name="dtor"></a> ~propagator_block
 
 終結 `propagator_block` 物件。
 
@@ -240,7 +243,7 @@ void register_filter(filter_method const& _Filter);
 
 ### <a name="parameters"></a>參數
 
-*篩選 （_f)*<br/>
+*_Filter*<br/>
 篩選方法。
 
 ##  <a name="remove_network_links"></a> remove_network_links
@@ -264,7 +267,8 @@ virtual message_status send(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-`message` 物件的指標。
+
+  `message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。

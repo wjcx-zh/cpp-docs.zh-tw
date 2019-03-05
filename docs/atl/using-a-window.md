@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CWindow class, about CWindow class
 - windows [C++], ATL
 ms.assetid: b3b9cc8e-4287-486b-b080-38852bc2943a
-ms.openlocfilehash: 7446196e9eec4b9d9236d4ab55afd9fcf859254b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a1843bfedc30e7d3b47c2916af08c8b53aaa965
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568648"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268859"
 ---
 # <a name="using-a-window"></a>使用視窗
 
@@ -19,9 +19,8 @@ ms.locfileid: "50568648"
 
 因為`CWindow`只有兩個資料成員 （視窗控制代碼和預設大小），它不會造成您的程式碼的負荷。 此外，許多`CWindow`方法只會包裝對應的 Win32 API 函式。 使用`CWindow`，HWND 成員會自動傳遞給 Win32 函式。
 
-除了使用`CWindow`直接，您也可以衍生自以將資料或程式碼新增到您的類別。 ATL 本身衍生中的三個類別`CWindow`: [CWindowImpl](../atl/implementing-a-window.md)， [CDialogImpl](../atl/implementing-a-dialog-box.md)，和[CContainedWindowT](../atl/using-contained-windows.md)。
+除了使用`CWindow`直接，您也可以衍生自以將資料或程式碼新增到您的類別。 ATL 本身衍生中的三個類別`CWindow`:[CWindowImpl](../atl/implementing-a-window.md)， [CDialogImpl](../atl/implementing-a-dialog-box.md)，以及[CContainedWindowT](../atl/using-contained-windows.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [視窗類別](../atl/atl-window-classes.md)
-

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Asynchronous Agents Library, practices to avoid
 - practices to avoid, Asynchronous Agents Library
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
-ms.openlocfilehash: 70c979be0d37817cf199af0b6a3cbf114fced265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61393957a63895a9ecbdaaae8d83a5fbd710de3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494574"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266415"
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>非同步代理程式程式庫中的最佳做法
 
@@ -42,7 +42,7 @@ ms.locfileid: "50494574"
 
 [!code-cpp[concrt-simple-agent#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_1.cpp)]
 
-如需有關如何定義及使用代理程式的完整範例，請參閱[逐步解說： 建立代理程式為基礎的應用程式](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)並[逐步解說： 建立資料流程代理程式](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)。
+如需有關如何定義及使用代理程式的完整範例，請參閱[逐步解說：建立代理程式為基礎的應用程式](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)和[逐步解說：建立資料流程代理程式](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)。
 
 [[靠上](#top)]
 
@@ -58,7 +58,7 @@ ms.locfileid: "50494574"
 
 在此範例中的產生者會將相對較少的訊息傳送至取用者。 因此，此範例不示範可能的記憶體太少或記憶體不足的狀況。 不過，這項機制時，資料管線中包含的訊息數量相對高。
 
-如需如何建立號誌類別，可在此範例的詳細資訊，請參閱[如何： 使用內容類別實作合作式信號](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)。
+如需如何建立號誌類別，可在此範例的詳細資訊，請參閱[How to:使用內容類別實作合作式信號](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)。
 
 [[靠上](#top)]
 
@@ -66,7 +66,7 @@ ms.locfileid: "50494574"
 
 資料管線所執行的工作相當廣泛時，代理程式庫是最有用。 比方說，一個應用程式元件可能會從檔案或網路連線讀取資料，以及偶爾會將該資料傳送至另一個元件。 若要將訊息傳播的代理程式庫使用的通訊協定會造成有更多的額外負荷比所提供的工作平行建構的訊息傳遞機制[平行模式程式庫](../../parallel/concrt/parallel-patterns-library-ppl.md)(PPL)。 因此，請確定資料管線所執行的工作是夠長，這個額外負荷。
 
-雖然資料管線是最有效的粗略其工作時，資料管線各階段可以使用 PPL 建構，例如工作群組和平行演算法來執行更細部的工作。 如需在每個處理階段所使用的細部平行處理原則的廣泛的資料網路的範例，請參閱 <<c0> [ 逐步解說： 建立影像處理網路](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)。
+雖然資料管線是最有效的粗略其工作時，資料管線各階段可以使用 PPL 建構，例如工作群組和平行演算法來執行更細部的工作。 如需在每個處理階段所使用的細部平行處理原則的廣泛的資料網路的範例，請參閱[逐步解說：建立映像處理網路](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)。
 
 [[靠上](#top)]
 
@@ -118,9 +118,8 @@ Destroying resource 64...
 
 [並行執行階段最佳做法](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)<br/>
-[逐步解說：建立代理程式架構應用程式](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
+[逐步解說：建立代理程式型的應用程式](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
 [逐步解說：建立資料流程代理程式](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
 [逐步解說：建立影像處理網路](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 [平行模式程式庫中的最佳做法](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
 [並行執行階段中的一般最佳做法](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
-

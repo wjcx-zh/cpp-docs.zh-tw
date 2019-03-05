@@ -1,5 +1,5 @@
 ---
-title: 逐步解說： 更新 MFC Scribble 應用程式 （第 1 部分）
+title: 逐步解說：更新 MFC Scribble 應用程式 （第 1 部分）
 ms.date: 09/20/2018
 helpviewer_keywords:
 - examples [MFC], update existing application
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 85ff0c17f8ec523fc5cb52101fb44cfc37dd9b50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 213bc8087b58eac232cc8fcfccc88e13785a807e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481844"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258758"
 ---
-# <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>逐步解說： 更新 MFC Scribble 應用程式 （第 1 部分）
+# <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>逐步解說：更新 MFC Scribble 應用程式 （第 1 部分）
 
 本逐步解說示範如何修改現有的 MFC 應用程式使用功能區使用者介面。 Visual Studio 支援 Office 2007 功能區和 Windows 7 Scenic Ribbon。 如需有關功能區使用者介面的詳細資訊，請參閱 <<c0> [ 功能區](/windows/desktop/uxguide/cmd-ribbons)。
 
@@ -24,7 +24,7 @@ ms.locfileid: "50481844"
 
 ## <a name="prerequisites"></a>必要條件
 
-[Scribble 1.0 MFC 範例](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe)。 如需將轉換成 Visual Studio 2017 說明，請參閱[移植指南： MFC Scribble](../porting/porting-guide-mfc-scribble.md)。
+[Scribble 1.0 MFC 範例](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe)。 如需將轉換成 Visual Studio 2017 說明，請參閱[移植指南：MFC Scribble](../porting/porting-guide-mfc-scribble.md)。
 
 ##  <a name="top"></a> 章節
 
@@ -113,7 +113,7 @@ ms.locfileid: "50481844"
 
 - 為適當的資源檔複製到您的專案的另一個應用程式，然後從該檔案匯入點陣圖。
 
-本逐步解說會複製中建立的範例中的資源檔[逐步解說： 建立功能區應用程式使用 MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md)。
+本逐步解說會複製中建立的範例中的資源檔[逐步解說：使用 MFC 建立功能區應用程式](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md)。
 
 ### <a name="to-add-bitmaps-to-the-project"></a>將點陣圖新增至專案
 
@@ -169,7 +169,7 @@ ms.locfileid: "50481844"
 
 1. 您可以自訂**應用程式**按鈕修改其屬性。 [] 功能表中已定義此程式碼中使用的訊息識別碼 Scribble 1.0。
 
-1. 在 設計 檢視中，按一下**應用程式** 按鈕以顯示其屬性。 變更屬性值，如下所示：**映像**要`IDB_RIBBON_MAIN`，**提示**來`File`，**金鑰**到`f`， **Large Images**要`IDB_RIBBON_FILELARGE`，並**小型影像**到`IDB_RIBBON_FILESMALL`。
+1. 在 設計 檢視中，按一下**應用程式** 按鈕以顯示其屬性。 請變更屬性值，如下所示：**映像**來`IDB_RIBBON_MAIN`，**提示**來`File`，**金鑰**至`f`，**大型影像**來`IDB_RIBBON_FILELARGE`，及**Small Images**至`IDB_RIBBON_FILESMALL`。
 
 1. 下列修改建立當使用者按一下出現的功能表**應用程式** 按鈕。 按一下省略符號 (**...**) 旁**主要項目**以開啟**項目編輯器**。
 
@@ -238,7 +238,7 @@ ms.locfileid: "50481844"
 
 ### <a name="to-add-a-home-category-and-edit-panel"></a>將首頁分類加入和編輯面板
 
-1. Scribble 程式需要一種類別。 在 [設計] 檢視中，在**工具箱**，按兩下**分類**加入一個，並顯示其屬性。 變更屬性值，如下所示：**標題**要`&Home`，**大型影像**來`IDB_RIBBON_HOMELARGE`，**小型影像**到`IDB_RIBBON_HOMESMALL`。
+1. Scribble 程式需要一種類別。 在 [設計] 檢視中，在**工具箱**，按兩下**分類**加入一個，並顯示其屬性。 請變更屬性值，如下所示：**標題**要`&Home`，**大型映像**來`IDB_RIBBON_HOMELARGE`，**小型影像**至`IDB_RIBBON_HOMESMALL`。
 
 1. 每個功能區分類會組織成具名的面板。 每個面板包含一組控制項，完整的相關的作業。 此類別目錄具有一個面板。 按一下 **面板**，然後變更**標題**到`Edit`。
 
@@ -269,4 +269,4 @@ A*視覺化管理員*會控制所有活動，抽獎獲得應用程式的全域�
 ## <a name="see-also"></a>另請參閱
 
 [逐步解說](../mfc/walkthroughs-mfc.md)<br/>
-[逐步解說：更新 MFC Scribble 應用程式 (第 2 部分)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)
+[逐步解說：更新 MFC Scribble 應用程式 （第 2 部分）](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

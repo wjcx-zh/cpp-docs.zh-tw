@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-ms.openlocfilehash: 97302504303a540eb691f7af15f7d346d0d50ce3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63dbc38fd4c5c6d668dda525416ec4ff2f05b50f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459770"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275203"
 ---
 # <a name="float4-class"></a>float_4 類別
 
@@ -600,7 +600,7 @@ class float_4;
 
 **標頭：** amp_short_vectors.h
 
-**命名空間：** concurrency:: graphics
+**命名空間：** Concurrency:: graphics
 
 ##  <a name="ctor"></a> float_4
 
@@ -654,13 +654,13 @@ explicit inline float_4(
 *_V1*<br/>
 要初始化項目 1 的值。
 
-*並將 _V2*<br/>
+*_V2*<br/>
 要初始化項目 2 的值。
 
 *_V3*<br/>
 要初始化項目 3 的值。
 
-*（_V)*<br/>
+*_V*<br/>
 初始設定的值。
 
 *_Other*<br/>

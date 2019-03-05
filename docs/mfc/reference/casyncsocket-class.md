@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: b138c4f84a10823d9c340218baefd530c016027a
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ef486e653eaf78914ea25663e0c1ab744ab30cd4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179028"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260006"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket 類別
 
@@ -146,7 +146,7 @@ class CAsyncSocket : public CObject
 |名稱|描述|
 |----------|-----------------|
 |[CAsyncSocket::operator =](#operator_eq)|指派新值到`CAsyncSocket`物件。|
-|[CAsyncSocket::operator 通訊端](#operator_socket)|若要擷取的通訊端控制代碼使用這個運算子`CAsyncSocket`物件。|
+|[CAsyncSocket::operator SOCKET](#operator_socket)|若要擷取的通訊端控制代碼使用這個運算子`CAsyncSocket`物件。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
@@ -1125,7 +1125,7 @@ void operator=(const CAsyncSocket& rSrc);
 
 呼叫此函式，可複製現有`CAsyncSocket`物件與另一個`CAsyncSocket`物件。
 
-##  <a name="operator_socket"></a>  CAsyncSocket::operator 通訊端
+##  <a name="operator_socket"></a>  CAsyncSocket::operator SOCKET
 
 若要擷取的通訊端控制代碼使用這個運算子`CAsyncSocket`物件。
 
@@ -1755,11 +1755,11 @@ BOOL ShutDown(int nHow = sends);
 *nHow*<br/>
 旗標，告訴您哪些類型的作業將不再允許，請使用下列的列舉的值：
 
-- **接收 = 0**
+- **receives = 0**
 
-- **傳送 = 1**
+- **sends = 1**
 
-- **同時 = 2**
+- **both = 2**
 
 ### <a name="return-value"></a>傳回值
 

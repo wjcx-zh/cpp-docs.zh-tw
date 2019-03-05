@@ -1,5 +1,5 @@
 ---
-title: MFC ActiveX 控制項：在 ActiveX 控制項中使用資料繫結
+title: MFC ActiveX 控制項：使用 ActiveX 控制項中的資料繫結
 ms.date: 11/19/2018
 f1_keywords:
 - bindable
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: a5cb73496cd6678e3f45500d9d53c2127b0fb17c
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: e21a31b71e681cdffed555c10079c2598967543f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175800"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265947"
 ---
-# <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX 控制項：在 ActiveX 控制項中使用資料繫結
+# <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX 控制項：使用 ActiveX 控制項中的資料繫結
 
 ActiveX 控制項的功能更強大的用途之一是資料繫結，可讓資料庫中的特定欄位繫結控制項的屬性。 當使用者修改這個繫結的屬性中的資料時，控制會通知資料庫和要求，更新資料錄的欄位。 然後資料庫就會通知控制的成功或失敗的要求。
 
@@ -136,4 +136,3 @@ ActiveX 控制項的功能更強大的用途之一是資料繫結，可讓資料
 ## <a name="see-also"></a>另請參閱
 
 [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)
-

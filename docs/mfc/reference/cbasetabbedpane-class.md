@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], SetAutoHideMode
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
-ms.openlocfilehash: 51344a8cd0e5671f81e608b74363ed06c9200324
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7ffaa7274a8ed12944cdbc5dcbbdcb8fd3fd2b9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640891"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259291"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane 類別
 
@@ -91,19 +91,19 @@ class CBaseTabbedPane : public CDockablePane
 
 |名稱|描述|
 |----------|-----------------|
-|[Cbasetabbedpane:: Addtab](#addtab)|將新的索引標籤加入至索引標籤式窗格中。|
+|[CBaseTabbedPane::AddTab](#addtab)|將新的索引標籤加入至索引標籤式窗格中。|
 |[CBaseTabbedPane::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|指定空的索引標籤式的窗格是否可以終結。|
 |[CBaseTabbedPane::ApplyRestoredTabInfo](#applyrestoredtabinfo)|適用於定位點設定，會從登錄中，載入至索引標籤式窗格。|
 |[CBaseTabbedPane::CanFloat](#canfloat)|判斷是否可以浮動窗格。 (覆寫[CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat)。)|
 |[CBaseTabbedPane::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|決定索引標籤式窗格的標題是否應該為作用中的索引標籤會顯示相同的文字。|
 |[CBaseTabbedPane::ConvertToTabbedDocument](#converttotabbeddocument)|(覆寫[CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument)。)|
-|[Cbasetabbedpane:: Detachpane](#detachpane)|MDI 索引標籤式文件會將一或多個可停駐窗格。|
+|[CBaseTabbedPane::DetachPane](#detachpane)|MDI 索引標籤式文件會將一或多個可停駐窗格。|
 |[CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname)|啟用或停用索引標籤式窗格的重新同步處理與作用中的索引標籤上的標籤文字的標題文字。|
 |[CBaseTabbedPane::FillDefaultTabsOrderArray](#filldefaulttabsorderarray)|將內部的定位順序還原成預設狀態。|
 |[CBaseTabbedPane::FindBarByTabNumber](#findbarbytabnumber)|傳回位於索引標籤時 [] 索引標籤是索引所識別之以零起始的索引標籤, 的窗格。|
 |||
 |[CBaseTabbedPane::FindPaneByID](#findpanebyid)|傳回窗格識別碼所識別的窗格|
-|[Cbasetabbedpane:: Floattab](#floattab)|讓窗格浮動，但僅限於窗格目前位於可卸離的索引標籤時。|
+|[CBaseTabbedPane::FloatTab](#floattab)|讓窗格浮動，但僅限於窗格目前位於可卸離的索引標籤時。|
 |[CBaseTabbedPane::GetDefaultTabsOrder](#getdefaulttabsorder)|傳回在窗格中的索引標籤的預設順序。|
 |[CBaseTabbedPane::GetFirstVisibleTab](#getfirstvisibletab)|擷取第一個顯示索引標籤的指標。|
 |[CBaseTabbedPane::GetMinSize](#getminsize)|擷取最小允許大小的窗格。 (覆寫[CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize)。)|
@@ -113,7 +113,7 @@ class CBaseTabbedPane : public CDockablePane
 |[CBaseTabbedPane::GetTabsNum](#gettabsnum)|傳回索引標籤 視窗中的索引標籤的計數。|
 |[CBaseTabbedPane::GetUnderlyingWindow](#getunderlyingwindow)|取得基礎 （包裝） 索引標籤視窗。|
 |[CBaseTabbedPane::GetVisibleTabsNum](#getvisibletabsnum)|傳回顯示索引標籤的計數。|
-|[Cbasetabbedpane:: Hasautohidemode](#hasautohidemode)|決定索引標籤式的窗格是否可以切換為自動隱藏模式。|
+|[CBaseTabbedPane::HasAutoHideMode](#hasautohidemode)|決定索引標籤式的窗格是否可以切換為自動隱藏模式。|
 |[CBaseTabbedPane::IsHideSingleTab](#ishidesingletab)|決定索引標籤式的窗格是否會隱藏如果只有一個索引標籤會顯示。|
 |`CBaseTabbedPane::LoadSiblingPaneIDs`|在序列化期間，在內部使用。|
 |[CBaseTabbedPane::RecalcLayout](#recalclayout)|重新計算窗格的配置資訊。 (覆寫[cpane:: Recalclayout](../../mfc/reference/cpane-class.md#recalclayout)。)|
@@ -129,7 +129,7 @@ class CBaseTabbedPane : public CDockablePane
 
 這個類別是抽象類別，而且無法具現化。 它會實作服務通用於所有類型的索引標籤式窗格。
 
-目前，此程式庫包含兩個衍生的索引標籤式的窗格的類別： [CTabbedPane 類別](../../mfc/reference/ctabbedpane-class.md)並[CMFCOutlookBar 類別](../../mfc/reference/cmfcoutlookbar-class.md)。
+目前，此程式庫包含兩個衍生的索引標籤式的窗格的類別：[CTabbedPane 類別](../../mfc/reference/ctabbedpane-class.md)並[CMFCOutlookBar 類別](../../mfc/reference/cmfcoutlookbar-class.md)。
 
 A`CBaseTabbedPane`物件會包裝的指標[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)物件。 [CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)就會變成索引標籤式窗格的子視窗。
 
@@ -155,7 +155,7 @@ A`CBaseTabbedPane`物件會包裝的指標[CMFCBaseTabCtrl 類別](../../mfc/ref
 
 **標頭：** afxBaseTabbedPane.h
 
-##  <a name="addtab"></a>  Cbasetabbedpane:: Addtab
+##  <a name="addtab"></a>  CBaseTabbedPane::AddTab
 
 將新的索引標籤加入至索引標籤式窗格中。
 
@@ -263,7 +263,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 *bActiveTabOnly*<br/>
 [in]當您將轉換的索引標籤式的窗格時，指定 TRUE 會轉換是使用索引標籤。指定為 FALSE，則轉換在窗格中的所有索引標籤。
 
-##  <a name="detachpane"></a>  Cbasetabbedpane:: Detachpane
+##  <a name="detachpane"></a>  CBaseTabbedPane::DetachPane
 
 中斷連結從索引標籤式窗格的窗格。
 
@@ -361,7 +361,7 @@ virtual CWnd* FindBarByTabNumber(
 
 呼叫這個方法來擷取位於指定索引標籤的窗格*nTabNum*參數。
 
-##  <a name="floattab"></a>  Cbasetabbedpane:: Floattab
+##  <a name="floattab"></a>  CBaseTabbedPane::FloatTab
 
 讓窗格浮動，但僅限於窗格目前位於可卸離的索引標籤時。
 

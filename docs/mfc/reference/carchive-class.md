@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-ms.openlocfilehash: f1e5701e95ec080845f3d2422da5d6ce4b9c906b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f169964c6a313f37b5ea50a5105af29af7b59b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465607"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266324"
 ---
 # <a name="carchive-class"></a>CArchive 類別
 
@@ -90,7 +90,7 @@ class CArchive
 |[CArchive::IsLoading](#isloading)|判斷封存是否正在載入。|
 |[CArchive::IsStoring](#isstoring)|決定是否要儲存封存。|
 |[CArchive::MapObject](#mapobject)|置於的對應，不會序列化至檔案，但卻是可供參考的子物件的物件。|
-|[Carchive:: Read](#read)|讀取未經處理位元組。|
+|[CArchive::Read](#read)|讀取未經處理位元組。|
 |[CArchive::ReadClass](#readclass)|與先前儲存的類別參考的讀取`WriteClass`。|
 |[CArchive::ReadObject](#readobject)|呼叫物件的`Serialize`載入函式。|
 |[CArchive::ReadString](#readstring)|讀取一行文字。|
@@ -98,7 +98,7 @@ class CArchive
 |[CArchive::SetLoadParams](#setloadparams)|設定負載陣列成長時的大小。 載入的任何物件之前，或之前，必須呼叫`MapObject`或`ReadObject`呼叫。|
 |[CArchive::SetObjectSchema](#setobjectschema)|設定封存物件中儲存的物件結構描述。|
 |[CArchive::SetStoreParams](#setstoreparams)|設定雜湊資料表大小和用來識別唯一的物件在序列化程序對應的區塊大小。|
-|[Carchive:: Write](#write)|寫入未經處理位元組。|
+|[CArchive::Write](#write)|寫入未經處理位元組。|
 |[CArchive::WriteClass](#writeclass)|寫入的參考`CRuntimeClass`至`CArchive`。|
 |[CArchive::WriteObject](#writeobject)|呼叫物件的`Serialize`函式，來儲存。|
 |[CArchive::WriteString](#writestring)|寫入單一文字行。|
@@ -132,7 +132,7 @@ class CArchive
 
 `CArchive` 也支援使用 MFC Windows 通訊端類別進行程式設計[CSocket](../../mfc/reference/csocket-class.md)並[CSocketFile](../../mfc/reference/csocketfile-class.md)。 [IsBufferEmpty](#isbufferempty)成員函式支援這種用法。
 
-如需詳細資訊`CArchive`，請參閱文章[序列化](../../mfc/serialization-in-mfc.md)並[Windows Sockets： 使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)。
+如需詳細資訊`CArchive`，請參閱文章[序列化](../../mfc/serialization-in-mfc.md)和[Windows Sockets:搭配使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -298,7 +298,7 @@ BOOL IsBufferEmpty() const;
 
 使用的原因`IsBufferEmpty`與相關聯的封存`CSocketFile`物件是封存的緩衝區可能包含多個訊息或記錄。 之後收到一則訊息，您應該使用`IsBufferEmpty`控制一個迴圈持續執行直到緩衝區是空的接收資料。 如需詳細資訊，請參閱 <<c0> [ 接收](../../mfc/reference/casyncsocket-class.md#receive)類別成員函式`CAsyncSocket`，但會示範如何使用`IsBufferEmpty`。
 
-如需詳細資訊，請參閱 < [Windows Sockets： 使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)。
+如需詳細資訊，請參閱[Windows Sockets:搭配使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)。
 
 ##  <a name="isloading"></a>  CArchive::IsLoading
 

@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 9c2b393354f65195e0d0060a08b83e321e3d5b1d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 0e02f123580696519e59d828ec590456cbd2a81c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178417"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270122"
 ---
 # <a name="cwinthread-class"></a>CWinThread 類別
 
@@ -91,8 +91,8 @@ class CWinThread : public CCmdTarget
 |[CWinThread::ProcessMessageFilter](#processmessagefilter)|到達應用程式之前，會攔截特定訊息。|
 |[CWinThread::ProcessWndProcException](#processwndprocexception)|攔截所有執行緒的訊息和命令處理常式所擲回的未處理例外狀況。|
 |[CWinThread::PumpMessage](#pumpmessage)|包含執行緒的訊息迴圈。|
-|[Cwinthread:: Resumethread](#resumethread)|遞減執行緒的暫停計數。|
-|[Cwinthread:: Run](#run)|使用訊息幫浦執行緒的控制函式。 若要自訂預設訊息迴圈會覆寫。|
+|[CWinThread::ResumeThread](#resumethread)|遞減執行緒的暫停計數。|
+|[CWinThread::Run](#run)|使用訊息幫浦執行緒的控制函式。 若要自訂預設訊息迴圈會覆寫。|
 |[CWinThread::SetThreadPriority](#setthreadpriority)|設定目前執行緒的優先權。|
 |[CWinThread::SuspendThread](#suspendthread)|增加的執行緒的暫停計數。|
 
@@ -311,7 +311,8 @@ BOOL m_bAutoDelete;
 
 `m_bAutoDelete`資料成員是型別 BOOL 的公用變數。
 
-`m_bAutoDelete` 的值不會影響基礎執行緒控制代碼如何關閉。 在 `CWinThread` 物件終結時，執行緒控制代碼永遠關閉。
+
+  `m_bAutoDelete` 的值不會影響基礎執行緒控制代碼如何關閉。 在 `CWinThread` 物件終結時，執行緒控制代碼永遠關閉。
 
 ##  <a name="m_hthread"></a>  CWinThread::m_hThread
 

@@ -1,5 +1,5 @@
 ---
-title: TN020：ID 命名和編號慣例
+title: TN020:識別碼命名和編號慣例
 ms.date: 11/04/2016
 f1_keywords:
 - vc.id
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - resource identifiers, naming and numbering
 - resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
-ms.openlocfilehash: 9e575ee99b78b8efa75096cac4559eb9aea7fd21
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: f1cd44ed448cc4c0fc60d490a613f0ad91071376
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518667"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267390"
 ---
-# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020：ID 命名和編號慣例
+# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020:識別碼命名和編號慣例
 
 此提示描述的識別碼命名和編號慣例 MFC 2.0 使用的資源、 命令、 字串、 控制項和子視窗。
 
@@ -76,7 +76,7 @@ MFC 程式庫也會使用"IDW_"前置詞為一種特殊形式的控制項 Id （
 |------------|-------------------|-----------------|
 |IDR_|多個|1 至 0x6FFF|
 |IDD_|對話方塊範本|1 至 0x6FFF|
-|IDC_、 IDI_，IDB_|游標、 圖示、 點陣圖|1 至 0x6FFF|
+|IDC_,IDI_,IDB_|游標、 圖示、 點陣圖|1 至 0x6FFF|
 |IDS_ IDP_|一般的字串|1 到 0x7FFF|
 |ID_|命令|0x8000 到 0xDFFF|
 |IDC_|控制項|8 至 0xDFFF|
@@ -107,4 +107,3 @@ MFC 程式庫也會使用"IDW_"前置詞為一種特殊形式的控制項 Id （
 
 [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
 [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
-

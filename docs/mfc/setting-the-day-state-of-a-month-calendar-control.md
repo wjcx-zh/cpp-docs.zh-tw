@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MCN_GETDAYSTATE notification [MFC]
 - month calendar controls [MFC], day state info
 ms.assetid: 435d1b11-ec0e-4121-9e25-aaa6af812a3c
-ms.openlocfilehash: a07808819e1cb049de7438c9e7964436e8c83802
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c75b560509738e071accdc3dba31dfdea35a14aa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464762"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262359"
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>設定月曆控制項的日期狀態
 
@@ -49,4 +49,3 @@ MCN_GETDAYSTATE 訊息會傳送控制項，來判斷應如何顯示項目內顯�
 
 [使用 CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)<br/>
 [控制項](../mfc/controls-mfc.md)
-

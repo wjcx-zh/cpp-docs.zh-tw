@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-ms.openlocfilehash: b2f431b250da4b791c06a629315d59bbc7935802
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579228"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270224"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef 類別
 
@@ -315,7 +315,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 *lpszName*<br/>
 指向的字串運算式，指定這個欄位的名稱。
 
-*n*<br/>
+*nType*<br/>
 值，指出欄位的資料類型。 設定可以是下列值之一：
 
 |類型|大小 (位元組)|描述|
@@ -582,9 +582,9 @@ void GetFieldInfo(
 
 - `AFX_DAO_PRIMARY_INFO` （預設值）屬性名稱、 類型、 大小。 使用此選項，以最快的效能。
 
-- `AFX_DAO_SECONDARY_INFO` 主要的資訊，再加上： 序數位置，有需要，可允許零長度、 定序順序，外部索引名稱、 來源欄位中，來源資料表
+- `AFX_DAO_SECONDARY_INFO` 主要的資訊，再加上：序數位置，所需，允許的長度為零，定序順序、 外部索引的名稱、 來源欄位、 來源資料表
 
-- `AFX_DAO_ALL_INFO` 主要和次要的資訊，再加上： 驗證規則，驗證文字，預設值
+- `AFX_DAO_ALL_INFO` 主要和次要的資訊，再加上：驗證規則，驗證文字的預設值
 
 *lpszName*<br/>
 物件的名稱欄位，依名稱查閱的指標。 最多 64 個字元的字串可唯一地命名欄位的名稱。
@@ -644,9 +644,9 @@ void GetIndexInfo(
 
 - `AFX_DAO_PRIMARY_INFO` 名稱欄位資訊欄位。 使用此選項，以最快的效能。
 
-- `AFX_DAO_SECONDARY_INFO` 主要的資訊，再加上： 主要、 Unique、 叢集、 忽略 null 值，有需要，外部
+- `AFX_DAO_SECONDARY_INFO` 主要的資訊，再加上：主要、 唯一的叢集化，忽略 null 值，需要的外部索引
 
-- `AFX_DAO_ALL_INFO` 主要和次要的資訊，再加上： 相異計數
+- `AFX_DAO_ALL_INFO` 主要和次要的資訊，再加上：相異計數
 
 *lpszName*<br/>
 依名稱查閱的索引物件的名稱指標。
@@ -864,11 +864,11 @@ void SetConnect(LPCTSTR lpszConnect);
 |-------------------|---------------|----------|
 |使用 Jet 資料庫引擎的資料庫|"[ `database`];"|「 `drive`:\\\ *路徑*\\\ *filename*。MDB"|
 |dBASE III|「 dBASE III;"|「 `drive`:\\\ *路徑*"|
-|dBASE IV|「 dBASE IV;"|「 `drive`:\\\ *路徑*"|
-|dBASE 5|「 dBASE 5.0;"|「 `drive`:\\\ *路徑*"|
-|Paradox 3.x|「 Paradox 3.x;"|「 `drive`:\\\ *路徑*"|
-|Paradox 4.x|「 Paradox 4.x;"|「 `drive`:\\\ *路徑*"|
-|Paradox 5.x|「 Paradox 5.x;"|「 `drive`:\\\ *路徑*"|
+|dBASE IV|"dBASE IV;"|「 `drive`:\\\ *路徑*"|
+|dBASE 5|"dBASE 5.0;"|「 `drive`:\\\ *路徑*"|
+|Paradox 3.x|"Paradox 3.x;"|「 `drive`:\\\ *路徑*"|
+|Paradox 4.x|"Paradox 4.x;"|「 `drive`:\\\ *路徑*"|
+|Paradox 5.x|"Paradox 5.x;"|「 `drive`:\\\ *路徑*"|
 |Excel 3.0|「 Excel 3.0";|「 `drive`:\\\ *路徑*\\\ *filename*。XLS"|
 |Excel 4.0|「 Excel 4.0;"|「 `drive`:\\\ *路徑*\\\ *filename*。XLS"|
 |Excel 5.0 或 Excel 95|「 Excel 5.0 」;|「 `drive`:\\\ *路徑*\\\ *filename*。XLS"|
@@ -877,7 +877,7 @@ void SetConnect(LPCTSTR lpszConnect);
 |HTML 匯出|[匯出 HTML];|「 `drive`:\\\ *路徑*"|
 |文字|"Text";|「 磁碟機：\\\path"|
 |ODBC|"ODBC;DATABASE = `database`;UID =*使用者*;PWD =*密碼*;資料來源名稱 = *datasourcename;* LOGINTIMEOUT =*秒;*"（這可能不是所有伺服器的完整連接字串，而只是範例。 它是非常重要有參數之間的空格。）|無|
-|Exchange|「 交換;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE = {0 &AMP;#124; 1};]<br /><br /> [設定檔 =*設定檔*;]<br /><br /> [PWD =*密碼*;]<br /><br /> [DATABASE = `database`;] 」|*「 磁碟機*:\\\ *路徑*\\\ *filename*。MDB"|
+|Exchange|「 交換;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE={ 0 &#124; 1 };]<br /><br /> [PROFILE= *profile*;]<br /><br /> [PWD= *password*;]<br /><br /> [DATABASE= `database`;]"|*「 磁碟機*:\\\ *路徑*\\\ *filename*。MDB"|
 
 > [!NOTE]
 >  從 DAO 3.5 開始，已不再支援 Btrieve。

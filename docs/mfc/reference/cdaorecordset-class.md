@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 6b3e3fac575d6a1308a9f61b3bf827d76785e94d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639318"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273890"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset 類別
 
@@ -250,7 +250,7 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::MoveLast](#movelast)|您可以將目前資料錄置於資料錄集的最後一筆記錄。|
 |[CDaoRecordset::MoveNext](#movenext)|您可以將目前資料錄置於資料錄集的下一個記錄。|
 |[CDaoRecordset::MovePrev](#moveprev)|您可以將目前資料錄置於資料錄集中的前一筆記錄。|
-|[Cdaorecordset:: Open](#open)|從資料表、 動態集或快照集建立新的資料錄集。|
+|[CDaoRecordset::Open](#open)|從資料表、 動態集或快照集建立新的資料錄集。|
 |[CDaoRecordset::Requery](#requery)|執行一次重新整理選取的資料錄的資料錄集的查詢。|
 |[CDaoRecordset::Seek](#seek)|尋找符合指定之準則的記錄目前的記錄會與目前的索引之索引的資料表類型資料錄集物件中的記錄。|
 |[CDaoRecordset::SetAbsolutePosition](#setabsoluteposition)|設定資料錄集物件的目前記錄中記錄的數目。|
@@ -272,7 +272,7 @@ class CDaoRecordset : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[Cdaorecordset:: M_bcheckcachefordirtyfields](#m_bcheckcachefordirtyfields)|包含旗標，指出是否欄位會自動標示為已變更。|
+|[CDaoRecordset::m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)|包含旗標，指出是否欄位會自動標示為已變更。|
 |[CDaoRecordset::m_nFields](#m_nfields)|包含資料錄集類別中的欄位資料成員的數目和資料來源的資料錄集選取資料行數目。|
 |[CDaoRecordset::m_nParams](#m_nparams)|包含資料錄集類別中的參數資料成員的數目 — 伴隨資料錄集的查詢所傳遞的參數數目|
 |[CDaoRecordset::m_pDAORecordset](#m_pdaorecordset)|基礎資料錄集物件 DAO 介面的指標。|
@@ -637,7 +637,7 @@ void FillCache(
 *pSize*<br/>
 指定要快取中填滿資料列數目。 如果您省略此參數，值會取決於基礎的 DAO 物件的 CacheSize 屬性設定。
 
-*Findnextrow*<br/>
+*pBookmark*<br/>
 A [COleVariant](../../mfc/reference/colevariant-class.md)指定書籤。 快取填滿從這個書籤所指定的記錄。 如果您省略此參數，快取會填入從基礎的 DAO 物件 CacheStart 屬性所指定的記錄。
 
 ### <a name="remarks"></a>備註
@@ -1130,9 +1130,9 @@ void GetFieldInfo(
 
 - `AFX_DAO_PRIMARY_INFO` （預設值）名稱、 類型、 大小屬性
 
-- `AFX_DAO_SECONDARY_INFO` 主要的資訊，再加上： 序數位置，有需要，可允許零長度、 定序順序，外部索引名稱、 來源欄位中，來源資料表
+- `AFX_DAO_SECONDARY_INFO` 主要的資訊，再加上：序數位置，所需，允許的長度為零，定序順序、 外部索引的名稱、 來源欄位、 來源資料表
 
-- `AFX_DAO_ALL_INFO` 主要和次要的資訊，再加上： 預設值，驗證規則驗證文字
+- `AFX_DAO_ALL_INFO` 主要和次要的資訊，再加上：預設值，驗證規則驗證文字
 
 *lpszName*<br/>
 欄位的名稱。
@@ -1237,9 +1237,9 @@ void GetIndexInfo(
 
 - `AFX_DAO_PRIMARY_INFO` （預設值）名稱欄位資訊欄位
 
-- `AFX_DAO_SECONDARY_INFO` 主要的資訊，再加上： 主要、 Unique、 叢集、 忽略 Null，有需要，外部
+- `AFX_DAO_SECONDARY_INFO` 主要的資訊，再加上：主要資料庫，唯一的叢集，忽略 Null，有需要，外部索引
 
-- `AFX_DAO_ALL_INFO` 主要和次要的資訊，再加上： 相異計數
+- `AFX_DAO_ALL_INFO` 主要和次要的資訊，再加上：相異計數
 
 *lpszName*<br/>
 依名稱查閱的索引物件的名稱指標。
@@ -1498,10 +1498,10 @@ BOOL IsBOF() const;
 
 下表顯示移動所允許的作業使用不同的組合`IsBOF` /  `IsEOF`。
 
-||MoveFirst、 MoveLast|MovePrev，<br /><br /> 移動 < 0|移動 0|MoveNext，<br /><br /> 移動 > 0|
+||MoveFirst、 MoveLast|MovePrev,<br /><br /> 移動 < 0|移動 0|MoveNext，<br /><br /> 移動 > 0|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
-|`IsBOF`= 非零值，<br /><br /> `IsEOF`=0|Allowed|例外|例外|Allowed|
-|`IsBOF`=0,<br /><br /> `IsEOF`= 非零值|Allowed|Allowed|例外|例外|
+|`IsBOF`=nonzero,<br /><br /> `IsEOF`=0|Allowed|例外|例外|Allowed|
+|`IsBOF`=0,<br /><br /> `IsEOF`=nonzero|Allowed|Allowed|例外|例外|
 |兩者都是非零值|例外|例外|例外|例外|
 |這兩個 0|Allowed|Allowed|Allowed|Allowed|
 
@@ -1513,8 +1513,8 @@ BOOL IsBOF() const;
 |------|-----------|-----------|
 |`MoveFirst`、 `MoveLast`|非零值|非零值|
 |`Move` 0|沒有變更|沒有變更|
-|`MovePrev``Move` < 0|非零值|沒有變更|
-|`MoveNext``Move` > 0|沒有變更|非零值|
+|`MovePrev`, `Move` < 0|非零值|沒有變更|
+|`MoveNext`, `Move` > 0|沒有變更|非零值|
 
 如需相關資訊，請參閱本主題 「 BOF、 EOF 屬性 」 DAO [說明] 中。
 
@@ -1571,10 +1571,10 @@ BOOL IsEOF() const;
 
 下表顯示移動所允許的作業使用不同的組合`IsBOF` /  `IsEOF`。
 
-||MoveFirst、 MoveLast|MovePrev，<br /><br /> 移動 < 0|移動 0|MoveNext，<br /><br /> 移動 > 0|
+||MoveFirst、 MoveLast|MovePrev,<br /><br /> 移動 < 0|移動 0|MoveNext，<br /><br /> 移動 > 0|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
-|`IsBOF`= 非零值，<br /><br /> `IsEOF`=0|Allowed|例外|例外|Allowed|
-|`IsBOF`=0,<br /><br /> `IsEOF`= 非零值|Allowed|Allowed|例外|例外|
+|`IsBOF`=nonzero,<br /><br /> `IsEOF`=0|Allowed|例外|例外|Allowed|
+|`IsBOF`=0,<br /><br /> `IsEOF`=nonzero|Allowed|Allowed|例外|例外|
 |兩者都是非零值|例外|例外|例外|例外|
 |這兩個 0|Allowed|Allowed|Allowed|Allowed|
 
@@ -1586,8 +1586,8 @@ BOOL IsEOF() const;
 |------|-----------|-----------|
 |`MoveFirst`、 `MoveLast`|非零值|非零值|
 |`Move` 0|沒有變更|沒有變更|
-|`MovePrev``Move` < 0|非零值|沒有變更|
-|`MoveNext``Move` > 0|沒有變更|非零值|
+|`MovePrev`, `Move` < 0|非零值|沒有變更|
+|`MoveNext`, `Move` > 0|沒有變更|非零值|
 
 如需相關資訊，請參閱本主題 「 BOF、 EOF 屬性 」 DAO [說明] 中。
 
@@ -1678,7 +1678,7 @@ BOOL IsOpen() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="m_bcheckcachefordirtyfields"></a>  Cdaorecordset:: M_bcheckcachefordirtyfields
+##  <a name="m_bcheckcachefordirtyfields"></a>  CDaoRecordset::m_bCheckCacheForDirtyFields
 
 包含旗標，指出是否快取的欄位會自動標示為已變更 （變更） 和 Null。
 
@@ -1908,7 +1908,7 @@ void MovePrev();
 
 如需相關資訊，請參閱 < 移動方法 > 的主題和 「 MoveFirst、 MoveLast、 MoveNext、 MovePrevious 方法 」 DAO [說明] 中。
 
-##  <a name="open"></a>  Cdaorecordset:: Open
+##  <a name="open"></a>  CDaoRecordset::Open
 
 您必須呼叫此成員函式，來擷取資料錄集的記錄。
 
@@ -2006,7 +2006,8 @@ virtual void Open(
 
 第一個版本的`Open`使用`lpszSQL`參數，記錄會根據選取下表所示的準則。
 
-|`lpszSQL` 參數的值|取決於選取的記錄|範例|
+|
+  `lpszSQL` 參數的值|取決於選取的記錄|範例|
 |--------------------------------------|----------------------------------------|-------------|
 |NULL|所傳回的字串`GetDefaultSQL`。||
 |一或多個 tabledefs 及/或 querydef 名稱的逗號分隔清單。|在中的所有資料行表示`DoFieldExchange`。|`"Customer"`|
@@ -2084,7 +2085,7 @@ BOOL Seek(
 下列字串運算式的其中一個:"<"，"\<="，"="、"> = 」，或">"。
 
 *pKey1*<br/>
-指標[COleVariant](../../mfc/reference/colevariant-class.md)其值會對應到索引中的第一個欄位。 必要。
+指標[COleVariant](../../mfc/reference/colevariant-class.md)其值會對應到索引中的第一個欄位。 必要項。
 
 *pKey2*<br/>
 指標`COleVariant`其值會對應到索引中的第二個欄位，如果有的話。 預設值是 NULL。

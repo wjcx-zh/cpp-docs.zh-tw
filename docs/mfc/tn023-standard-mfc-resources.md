@@ -1,5 +1,5 @@
 ---
-title: TN023：標準 MFC 資源
+title: TN023:標準 MFC 資源
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.resources
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-ms.openlocfilehash: 04789ba85a9f7c193a88ba1a0d097b3671808e9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4edc00f77152b8d677f3113e0ed6386569b0988
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559909"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277673"
 ---
-# <a name="tn023-standard-mfc-resources"></a>TN023：標準 MFC 資源
+# <a name="tn023-standard-mfc-resources"></a>TN023:標準 MFC 資源
 
 這個附註說明 MFC 程式庫提供和需要的標準資源。
 
@@ -25,7 +25,7 @@ MFC 提供兩種預先定義的資源類別，可讓您在應用程式中使用�
 
 美工圖案資源是與架構無關的額外資源，但您有可能會想要將它加入至您應用程式的使用者介面中。 下列美工圖案資源包含在 MFC 一般範例[美工圖案](../visual-cpp-samples.md):
 
-- Common.rc：資源的單一檔案，其中包含：
+- Common.rc:單一檔案的資源，其中包含：
 
    - 表示各種商務和資料處理工作圖示的大型集合。
 
@@ -35,23 +35,23 @@ MFC 提供兩種預先定義的資源類別，可讓您在應用程式中使用�
 
    - Commdlg.dll 使用的點陣圖和圖示資源。
 
-- Indicate.rc：包含狀態列索引鍵狀態指示器的字串資源，例如 Caps Lock 的「CAP」。
+- Indicate.rc:包含狀態列索引鍵狀態指標，例如 Caps lock 的 「 上限 」 的字串資源。
 
-- Prompts.rc： 包含 ID_FILE_NEW 的每個預先定義的命令，例如 [建立新的文件] 功能表提示字串資源。
+- Prompts.rc:ID_FILE_NEW 包含每個預先定義的命令，例如 [建立新的文件] 的功能表提示字串資源。
 
-- Commdlg.rc：包含標準 COMMDLG 對話方塊範本的 Visual C++ 相容 .rc 檔案。
+- Commdlg.rc:Visual c + + 相容.rc 檔案，其中包含標準 COMMDLG 對話方塊範本。
 
 標準架構資源為架構依存於內部實作，具有 AFX 定義之 ID 的資源。 您很少需要變更這些 AFX 定義的資源。 如果要進行變更，您應該遵循本主題稍後概述的程序進行。
 
 下列架構資源位於 MFC\INCLUDE 目錄中：
 
-- Afxres.rc：架構使用的通用資源。
+- Afxres.rc:Framework 所使用的通用資源。
 
-- Afxprint.rc：與列印相關的資源。
+- Afxprint.rc:列印與資源。
 
-- Afxolecl.rc：與 OLE 用戶端應用程式相關的資源。
+- Afxolecl.rc:與 OLE 用戶端應用程式的資源。
 
-- Afxolev.rc：與完整 OLE 伺服器應用程式相關的資源。
+- Afxolev.rc:與完整 OLE 伺服器應用程式的資源。
 
 ## <a name="using-clip-art-resources"></a>使用美工圖案資源
 
@@ -73,7 +73,7 @@ MFC 提供兩種預先定義的資源類別，可讓您在應用程式中使用�
 
 ### <a name="customizing-standard-framework-resources"></a>自訂標準架構資源
 
-在應用程式的資源檔中使用 #include 命令，通常可將標準架構資源包含到應用程式中。 AppWizard 將會產生一個資源檔。 這個檔案包含適當的標準架構資源，視您選取的 AppWizard 選項而定。 藉由變更編譯時間指示詞，您可以檢閱、加入或移除已包含的資源。 若要這樣做，請開啟**Resource**功能表，然後選取**Set Includes**。 請參閱「編譯時間指示詞」編輯項目。 例如: 
+在應用程式的資源檔中使用 #include 命令，通常可將標準架構資源包含到應用程式中。 AppWizard 將會產生一個資源檔。 這個檔案包含適當的標準架構資源，視您選取的 AppWizard 選項而定。 藉由變更編譯時期指示詞，您可以檢閱、加入或移除已包含的資源。 若要這樣做，請開啟**Resource**功能表，然後選取**Set Includes**。 請參閱「編譯時期指示詞」編輯項目。 例如: 
 
 ```
 #include "afxres.rc"
@@ -103,4 +103,3 @@ MFC 提供兩種預先定義的資源類別，可讓您在應用程式中使用�
 
 [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
 [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
-

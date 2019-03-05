@@ -8,12 +8,12 @@ helpviewer_keywords:
 - notifications [MFC], CTreeCtrl
 - tree controls [MFC], notification messages
 ms.assetid: ac7013b4-91dd-4668-bd75-439ca0680ef9
-ms.openlocfilehash: e187e08f894eeac37c8ad27aea45a1c8568c8a9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90e2e112d7862dfed7d8af31cfb72ff45633a2c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508170"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278391"
 ---
 # <a name="tree-control-notification-messages"></a>樹狀目錄控制項通知訊息
 
@@ -38,4 +38,3 @@ ms.locfileid: "50508170"
 
 [使用 CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [控制項](../mfc/controls-mfc.md)
-

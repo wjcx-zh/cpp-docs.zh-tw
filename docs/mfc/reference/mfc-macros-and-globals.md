@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Afx naming convention
 - macros
 ms.assetid: add4e33f-0e62-4d27-be14-896cb8675d22
-ms.openlocfilehash: 2dfb2c1c5062f742b728ea651a292be84e33f6d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27664d4e48c0c4e09439f9e970ded9f2a630d90d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566773"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268183"
 ---
 # <a name="mfc-macros-and-globals"></a>MFC 巨集和全域
 
-Microsoft Foundation 類別程式庫可以分成兩個主要區段: （1） 的 MFC 類別和 （2） 巨集和全域變數。 如果函式或變數不是類別的成員，它是全域函式或變數。
+Microsoft Foundation 類別程式庫可以分成兩個主要章節：（1） 的 MFC 類別和 （2） 巨集和全域變數。 如果函式或變數不是類別的成員，它是全域函式或變數。
 
 MFC 程式庫和 Active Template Library (ATL) 共用字串轉換巨集。 如需詳細資訊，請參閱 <<c0> [ 字串轉換巨集](../../atl/reference/string-conversion-macros.md)ATL 文件中。
 
@@ -128,4 +128,3 @@ MFC 巨集和全域變數提供以下類別的功能。
 ## <a name="see-also"></a>另請參閱
 
 [類別概觀](../../mfc/class-library-overview.md)
-

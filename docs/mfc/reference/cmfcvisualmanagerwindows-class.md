@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCVisualManagerWindows [MFC], SetOfficeStyleMenus
 - CMFCVisualManagerWindows [MFC], m_b3DTabsXPTheme
 ms.assetid: 568b6e9e-8e67-4477-9a3d-2981cbd09861
-ms.openlocfilehash: e9f083f37c2e92172b05b907d733f9dbdb27ce45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3219de7f90d76e18b52efab8d8601b848427fca7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559740"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275957"
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>CMFCVisualManagerWindows 類別
 
@@ -290,7 +290,7 @@ CMFCVisualManagerWindows(BOOL bIsTemporary = FALSE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bIsTemporary*<br/>
+[in] *bIsTemporary*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -307,10 +307,10 @@ virtual BOOL DrawComboBorderWinXP(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*bDisabled*<br/>
-[in]*bIsDropped*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bDisabled*<br/>
+[in] *bIsDropped*<br/>
 [in]*bIsHighlighted*<br/>
 
 ### <a name="return-value"></a>傳回值
@@ -330,10 +330,10 @@ virtual BOOL DrawComboDropButtonWinXP(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*bDisabled*<br/>
-[in]*bIsDropped*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bDisabled*<br/>
+[in] *bIsDropped*<br/>
 [in]*bIsHighlighted*<br/>
 
 ### <a name="return-value"></a>傳回值
@@ -352,10 +352,10 @@ virtual BOOL DrawPushButtonWinXP(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*pButton*<br/>
-[in]*uiState*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *pButton*<br/>
+[in] *uiState*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -399,7 +399,7 @@ virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton)
 
 ### <a name="parameters"></a>參數
 
-[in]*pButton*<br/>
+[in] *pButton*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -425,8 +425,8 @@ virtual COLORREF GetToolbarButtonTextColor(
 
 ### <a name="parameters"></a>參數
 
-[in]*pButton*<br/>
-[in]*狀態*<br/>
+[in] *pButton*<br/>
+[in] *state*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -440,7 +440,7 @@ virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton* pButton) const
 
 ### <a name="parameters"></a>參數
 
-[in]*pButton*<br/>
+[in] *pButton*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -526,10 +526,10 @@ virtual void OnDrawBarGripper(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rectGripper*<br/>
-[in]*bHorz*<br/>
-[in]*pBar*<br/>
+[in] *pDC*<br/>
+[in] *rectGripper*<br/>
+[in] *bHorz*<br/>
+[in] *pBar*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -546,11 +546,11 @@ virtual BOOL OnDrawBrowseButton(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*pEdit*<br/>
-[in]*狀態*<br/>
-[in]*clrText*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *pEdit*<br/>
+[in] *state*<br/>
+[in] *clrText*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -568,10 +568,10 @@ virtual void OnDrawButtonBorder(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pButton*<br/>
-[in]*rect*<br/>
-[in]*狀態*<br/>
+[in] *pDC*<br/>
+[in] *pButton*<br/>
+[in] *rect*<br/>
+[in] *state*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -588,11 +588,11 @@ virtual void OnDrawButtonSeparator(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pButton*<br/>
-[in]*rect*<br/>
-[in]*狀態*<br/>
-[in]*bHorz*<br/>
+[in] *pDC*<br/>
+[in] *pButton*<br/>
+[in] *rect*<br/>
+[in] *state*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -611,13 +611,13 @@ virtual void OnDrawCaptionButton(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pButton*<br/>
-[in]*bActive*<br/>
-[in]*bHorz*<br/>
+[in] *pDC*<br/>
+[in] *pButton*<br/>
+[in] *bActive*<br/>
+[in] *bHorz*<br/>
 [in]*bMaximized*<br/>
-[in]*bDisabled*<br/>
-[in]*nImageID*<br/>
+[in] *bDisabled*<br/>
+[in] *nImageID*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -635,12 +635,12 @@ virtual void OnDrawCaptionButtonIcon(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pButton*<br/>
-[in]*識別碼*<br/>
-[in]*bActive*<br/>
-[in]*bDisabled*<br/>
-[in]*ptImage*<br/>
+[in] *pDC*<br/>
+[in] *pButton*<br/>
+[in] *id*<br/>
+[in] *bActive*<br/>
+[in] *bDisabled*<br/>
+[in] *ptImage*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -658,12 +658,12 @@ virtual void OnDrawCheckBoxEx(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*nState*<br/>
-[in]*bHighlighted*<br/>
-[in]*bPressed*<br/>
-[in]*bEnabled*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *nState*<br/>
+[in] *bHighlighted*<br/>
+[in] *bPressed*<br/>
+[in] *bEnabled*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -681,12 +681,12 @@ virtual void OnDrawComboBorder(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*bDisabled*<br/>
-[in]*bIsDropped*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bDisabled*<br/>
+[in] *bIsDropped*<br/>
 [in]*bIsHighlighted*<br/>
-[in]*pButton*<br/>
+[in] *pButton*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -704,12 +704,12 @@ virtual void OnDrawComboDropButton(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*bDisabled*<br/>
-[in]*bIsDropped*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bDisabled*<br/>
+[in] *bIsDropped*<br/>
 [in]*bIsHighlighted*<br/>
-[in]*pButton*<br/>
+[in] *pButton*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -721,7 +721,7 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 
 ### <a name="parameters"></a>參數
 
-[in]*pWndCtrl*<br/>
+[in] *pWndCtrl*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -738,11 +738,11 @@ virtual void OnDrawEditBorder(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*bDisabled*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bDisabled*<br/>
 [in]*bIsHighlighted*<br/>
-[in]*pButton*<br/>
+[in] *pButton*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -758,10 +758,10 @@ virtual void OnDrawExpandingBox(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*bIsOpened*<br/>
-[in]*colorBox*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bIsOpened*<br/>
+[in] *colorBox*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -777,10 +777,10 @@ virtual void OnDrawFloatingToolbarBorder(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pToolBar*<br/>
-[in]*rectBorder*<br/>
-[in]*rectBorderSize*<br/>
+[in] *pDC*<br/>
+[in] *pToolBar*<br/>
+[in] *rectBorder*<br/>
+[in] *rectBorderSize*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -797,10 +797,10 @@ virtual void OnDrawHeaderCtrlBorder(
 
 ### <a name="parameters"></a>參數
 
-[in]*pCtrl*<br/>
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*bIsPressed*<br/>
+[in] *pCtrl*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bIsPressed*<br/>
 [in]*bIsHighlighted*<br/>
 
 ### <a name="remarks"></a>備註
@@ -817,10 +817,10 @@ virtual void OnDrawHeaderCtrlSortArrow(
 
 ### <a name="parameters"></a>參數
 
-[in]*pCtrl*<br/>
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*bIsUp*<br/>
+[in] *pCtrl*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bIsUp*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -835,9 +835,9 @@ virtual void OnDrawMenuBorder(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pMenu*<br/>
-[in]*rect*<br/>
+[in] *pDC*<br/>
+[in] *pMenu*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -854,11 +854,11 @@ virtual void OnDrawMenuSystemButton(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*uiSystemCommand*<br/>
-[in]*nStyle*<br/>
-[in]*bHighlight*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *uiSystemCommand*<br/>
+[in] *nStyle*<br/>
+[in] *bHighlight*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -874,10 +874,10 @@ virtual void OnDrawMiniFrameBorder(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pFrameWnd*<br/>
-[in]*rectBorder*<br/>
-[in]*rectBorderSize*<br/>
+[in] *pDC*<br/>
+[in] *pFrameWnd*<br/>
+[in] *rectBorder*<br/>
+[in] *rectBorderSize*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -893,10 +893,10 @@ virtual void OnDrawOutlookPageButtonBorder(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rectBtn*<br/>
+[in] *pDC*<br/>
+[in] *rectBtn*<br/>
 [in]*bIsHighlighted*<br/>
-[in]*bIsPressed*<br/>
+[in] *bIsPressed*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -911,9 +911,9 @@ virtual void OnDrawPaneBorder(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pBar*<br/>
-[in]*rect*<br/>
+[in] *pDC*<br/>
+[in] *pBar*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -930,10 +930,10 @@ virtual COLORREF OnDrawPaneCaption(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pBar*<br/>
-[in]*bActive*<br/>
-[in]*rectCaption*<br/>
+[in] *pDC*<br/>
+[in] *pBar*<br/>
+[in] *bActive*<br/>
+[in] *rectCaption*<br/>
 [in]*rectButtons*<br/>
 
 ### <a name="return-value"></a>傳回值
@@ -951,9 +951,9 @@ virtual void OnDrawPopupWindowButtonBorder(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rectClient*<br/>
-[in]*pButton*<br/>
+[in] *pDC*<br/>
+[in] *rectClient*<br/>
+[in] *pButton*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -970,11 +970,11 @@ virtual void OnDrawScrollButtons(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*nBorderSize*<br/>
-[in]*iImage*<br/>
-[in]*bHilited*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *nBorderSize*<br/>
+[in] *iImage*<br/>
+[in] *bHilited*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -990,10 +990,10 @@ virtual void OnDrawSeparator(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pBar*<br/>
-[in]*rect*<br/>
-[in]*bIsHoriz*<br/>
+[in] *pDC*<br/>
+[in] *pBar*<br/>
+[in] *rect*<br/>
+[in] *bIsHoriz*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1010,11 +1010,11 @@ virtual void OnDrawSpinButtons(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rectSpin*<br/>
-[in]*nState*<br/>
+[in] *pDC*<br/>
+[in] *rectSpin*<br/>
+[in] *nState*<br/>
 [in]*bOrientation*<br/>
-[in]*pSpinCtrl*<br/>
+[in] *pSpinCtrl*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1031,11 +1031,11 @@ virtual void OnDrawStatusBarPaneBorder(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pBar*<br/>
-[in]*rectPane*<br/>
-[in]*uiID*<br/>
-[in]*nStyle*<br/>
+[in] *pDC*<br/>
+[in] *pBar*<br/>
+[in] *rectPane*<br/>
+[in] *uiID*<br/>
+[in] *nStyle*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1056,15 +1056,15 @@ virtual void OnDrawStatusBarProgress(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pStatusBar*<br/>
-[in]*rectProgress*<br/>
-[in]*nProgressTotal*<br/>
-[in]*nProgressCurr*<br/>
-[in]*clrBar*<br/>
-[in]*clrProgressBarDest*<br/>
-[in]*clrProgressText*<br/>
-[in]*bProgressText*<br/>
+[in] *pDC*<br/>
+[in] *pStatusBar*<br/>
+[in] *rectProgress*<br/>
+[in] *nProgressTotal*<br/>
+[in] *nProgressCurr*<br/>
+[in] *clrBar*<br/>
+[in] *clrProgressBarDest*<br/>
+[in] *clrProgressText*<br/>
+[in] *bProgressText*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1079,9 +1079,9 @@ virtual void OnDrawStatusBarSizeBox(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pStatBar*<br/>
-[in]*rectSizeBox*<br/>
+[in] *pDC*<br/>
+[in] *pStatBar*<br/>
+[in] *rectSizeBox*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1098,11 +1098,11 @@ virtual void OnDrawTab(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rectTab*<br/>
-[in]*iTab*<br/>
-[in]*bIsActive*<br/>
-[in]*pTabWnd*<br/>
+[in] *pDC*<br/>
+[in] *rectTab*<br/>
+[in] *iTab*<br/>
+[in] *bIsActive*<br/>
+[in] *pTabWnd*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1120,12 +1120,12 @@ virtual void OnDrawTabCloseButton(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*pTabWnd*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *pTabWnd*<br/>
 [in]*bIsHighlighted*<br/>
-[in]*bIsPressed*<br/>
-[in]*bIsDisabled*<br/>
+[in] *bIsPressed*<br/>
+[in] *bIsDisabled*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1142,11 +1142,11 @@ virtual void OnDrawTabsButtonBorder(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*pButton*<br/>
-[in]*uiState*<br/>
-[in]*pWndTab*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *pButton*<br/>
+[in] *uiState*<br/>
+[in] *pWndTab*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1163,11 +1163,11 @@ virtual void OnDrawTask(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pTask*<br/>
-[in]*pIcons*<br/>
+[in] *pDC*<br/>
+[in] *pTask*<br/>
+[in] *pIcons*<br/>
 [in]*bIsHighlighted*<br/>
-[in]*bIsSelected*<br/>
+[in] *bIsSelected*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1183,10 +1183,10 @@ virtual void OnDrawTasksGroupAreaBorder(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*bSpecial*<br/>
-[in]*bNoTitle*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bSpecial*<br/>
+[in] *bNoTitle*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1203,11 +1203,11 @@ virtual void OnDrawTasksGroupCaption(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pGroup*<br/>
+[in] *pDC*<br/>
+[in] *pGroup*<br/>
 [in]*bIsHighlighted*<br/>
-[in]*bIsSelected*<br/>
-[in]*bCanCollapse*<br/>
+[in] *bIsSelected*<br/>
+[in] *bCanCollapse*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1222,9 +1222,9 @@ virtual void OnDrawTearOffCaption(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*bIsActive*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bIsActive*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1239,9 +1239,9 @@ virtual void OnErasePopupWindowButton(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rectClient*<br/>
-[in]*pButton*<br/>
+[in] *pDC*<br/>
+[in] *rectClient*<br/>
+[in] *pButton*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1256,9 +1256,9 @@ virtual void OnEraseTabsArea(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*pTabWnd*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *pTabWnd*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1274,10 +1274,10 @@ virtual void OnEraseTabsButton(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*pButton*<br/>
-[in]*pWndTab*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *pButton*<br/>
+[in] *pWndTab*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1292,9 +1292,9 @@ virtual BOOL OnEraseTabsFrame(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*pTabWnd*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *pTabWnd*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1313,11 +1313,11 @@ virtual void OnFillBarBackground(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pBar*<br/>
-[in]*rectClient*<br/>
-[in]*rectClip*<br/>
-[in]*bNCArea*<br/>
+[in] *pDC*<br/>
+[in] *pBar*<br/>
+[in] *rectClient*<br/>
+[in] *rectClip*<br/>
+[in] *bNCArea*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1333,10 +1333,10 @@ virtual void OnFillButtonInterior(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pButton*<br/>
-[in]*rect*<br/>
-[in]*狀態*<br/>
+[in] *pDC*<br/>
+[in] *pButton*<br/>
+[in] *rect*<br/>
+[in] *state*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1351,9 +1351,9 @@ virtual COLORREF OnFillCommandsListBackground(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*bIsSelected*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bIsSelected*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1371,10 +1371,10 @@ virtual COLORREF OnFillMiniFrameCaption(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rectCaption*<br/>
-[in]*pFrameWnd*<br/>
-[in]*bActive*<br/>
+[in] *pDC*<br/>
+[in] *rectCaption*<br/>
+[in] *pFrameWnd*<br/>
+[in] *bActive*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1393,11 +1393,11 @@ virtual void OnFillOutlookPageButton(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
 [in]*bIsHighlighted*<br/>
-[in]*bIsPressed*<br/>
-[in]*clrText*<br/>
+[in] *bIsPressed*<br/>
+[in] *clrText*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1412,9 +1412,9 @@ virtual void OnFillTasksGroupInterior(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*bSpecial*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bSpecial*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1428,8 +1428,8 @@ virtual void OnFillTasksPaneBackground(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rectWorkArea*<br/>
+[in] *pDC*<br/>
+[in] *rectWorkArea*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1445,10 +1445,10 @@ virtual void OnHighlightMenuItem(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pButton*<br/>
-[in]*rect*<br/>
-[in]*clrText*<br/>
+[in] *pDC*<br/>
+[in] *pButton*<br/>
+[in] *rect*<br/>
+[in] *clrText*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1462,8 +1462,8 @@ virtual void OnHighlightRarelyUsedMenuItems(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rectRarelyUsed*<br/>
+[in] *pDC*<br/>
+[in] *rectRarelyUsed*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1483,7 +1483,7 @@ void SetOfficeStyleMenus(BOOL bOn = TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bOn*<br/>
+[in] *bOn*<br/>
 
 ### <a name="remarks"></a>備註
 

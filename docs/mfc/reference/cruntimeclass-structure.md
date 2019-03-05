@@ -9,12 +9,12 @@ helpviewer_keywords:
 - runtime [MFC], class information
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
-ms.openlocfilehash: 83c10d5a87c7d5782505fcd93e46c678a97b8b5d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 92979a10c18d9759e0ecc9f0785e56a97c0f0642
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521954"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274293"
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass 結構
 
@@ -88,7 +88,7 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 
 ### <a name="remarks"></a>備註
 
-類別衍生自`CObject`可支援動態建立，也就是能夠在執行階段建立指定之類別的物件。 文件、 檢視和框架類別，例如，應該支援動態建立。 如需有關動態建立而`CreateObject`成員，請參閱 < [CObject 類別](../../mfc/using-cobject.md)並[CObject 類別： 指定功能層級](../../mfc/specifying-levels-of-functionality.md)。
+類別衍生自`CObject`可支援動態建立，也就是能夠在執行階段建立指定之類別的物件。 文件、 檢視和框架類別，例如，應該支援動態建立。 如需有關動態建立而`CreateObject`成員，請參閱 < [CObject 類別](../../mfc/using-cobject.md)和[CObject 類別：指定功能層級](../../mfc/specifying-levels-of-functionality.md)。
 
 ### <a name="example"></a>範例
 
@@ -141,7 +141,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 > [!NOTE]
 >  若要使用`CRuntimeClass`結構中，您必須在您要擷取的執行階段物件資訊類別的實作包含 IMPLEMENT_DYNAMIC、 IMPLEMENT_DYNCREATE 或 IMPLEMENT_SERIAL 巨集。
 
-如需有關使用`CRuntimeClass`，請參閱文章[CObject 類別： 存取執行階段類別資訊](../../mfc/accessing-run-time-class-information.md)。
+如需有關使用`CRuntimeClass`，請參閱文章[CObject 類別：存取執行階段類別資訊](../../mfc/accessing-run-time-class-information.md)。
 
 ### <a name="example"></a>範例
 
@@ -219,9 +219,8 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CObject::GetRuntimeClass](../../mfc/reference/cobject-class.md#getruntimeclass)<br/>
-[Cobject:: Iskindof](../../mfc/reference/cobject-class.md#iskindof)<br/>
+[CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)<br/>
 [RUNTIME_CLASS](run-time-object-model-services.md#runtime_class)<br/>
-[您的類別](run-time-object-model-services.md#implement_dynamic)<br/>
+[IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)<br/>
 [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)<br/>
 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)
-

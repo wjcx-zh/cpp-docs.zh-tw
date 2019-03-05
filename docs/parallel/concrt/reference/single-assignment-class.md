@@ -19,16 +19,17 @@ f1_keywords:
 helpviewer_keywords:
 - single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-ms.openlocfilehash: 5a27fb6cdc13fbbd3ceb8a85adacf5491ddc3ce1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 436d0d4cc16ee18449178782b775a25bb1d8592a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593475"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268952"
 ---
 # <a name="singleassignment-class"></a>single_assignment 類別
 
-`single_assignment` 傳訊區塊是多目標、多來源的排序 `propagator_block`，能夠儲存寫入一次的單一 `message`。
+
+  `single_assignment` 傳訊區塊是多目標、多來源的排序 `propagator_block`，能夠儲存寫入一次的單一 `message`。
 
 ## <a name="syntax"></a>語法
 
@@ -56,7 +57,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 |名稱|描述|
 |----------|-----------------|
 |[has_value](#has_value)|檢查是否這`single_assignment`傳訊區塊已使用值尚未初始化。|
-|[值](#value)|取得儲存在訊息的目前內容的參考`single_assignment`傳訊區塊。|
+|[value](#value)|取得儲存在訊息的目前內容的參考`single_assignment`傳訊區塊。|
 
 ### <a name="protected-methods"></a>保護方法
 
@@ -176,7 +177,8 @@ virtual message_status propagate_message(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-`message` 物件的指標。
+
+  `message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。
@@ -253,7 +255,8 @@ virtual message_status send_message(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-`message` 物件的指標。
+
+  `message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。
@@ -289,7 +292,7 @@ single_assignment(
 
 ### <a name="parameters"></a>參數
 
-*篩選 （_f)*<br/>
+*_Filter*<br/>
 判斷是否應該接受所提供的訊息篩選器函式。
 
 *_PScheduler*<br/>
@@ -304,7 +307,7 @@ single_assignment(
 
 型別`filter_method`是仿函式簽章`bool (T const &)`由此叫用的所在`single_assignment`傳訊區塊，以判斷是否應該接受接受所提供的訊息。
 
-##  <a name="dtor"></a> ~ single_assignment
+##  <a name="dtor"></a> ~single_assignment
 
 終結`single_assignment`傳訊區塊。
 
@@ -333,4 +336,3 @@ T const& value();
 [concurrency 命名空間](concurrency-namespace.md)<br/>
 [overwrite_buffer 類別](overwrite-buffer-class.md)<br/>
 [unbounded_buffer 類別](unbounded-buffer-class.md)
-

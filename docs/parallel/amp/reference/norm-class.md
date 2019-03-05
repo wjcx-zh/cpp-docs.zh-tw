@@ -6,12 +6,12 @@ f1_keywords:
 - AMP_SHORT_VECTORS/norm
 - AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
-ms.openlocfilehash: 2d37dcb430be9941444a90ac0a4ba34f3ee30515
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56f879ef2fc0d3010ab4f64fedaf2570dac565d1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630759"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272421"
 ---
 # <a name="norm-class"></a>norm 類別
 
@@ -53,7 +53,7 @@ class norm;
 
 **標頭：** amp_short_vectors.h
 
-**命名空間：** concurrency:: graphics
+**命名空間：** Concurrency:: graphics
 
 ##  <a name="ctor"></a> norm
 
@@ -91,7 +91,7 @@ norm(
 
 ### <a name="parameters"></a>參數
 
-*（_V)*<br/>
+*_V*<br/>
 用來初始化的值。
 
 *_Other*<br/>

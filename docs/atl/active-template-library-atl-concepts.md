@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: 9b8c293bc92071509607e8496a5601d0c6ef2018
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90fd096f15f185feebc6f6ae8b73b010fe3c1813
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523731"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265336"
 ---
 # <a name="active-template-library-atl-concepts"></a>Active Template Library (ATL) 概念
 
@@ -101,4 +101,3 @@ ATL 7.0 討論新的模組類別。 模組類別會實作基本功能所需的 A
 
 [ATL 類別概觀](../atl/atl-class-overview.md)<br/>
 提供參考資訊和連結至 ATL 類別。
-

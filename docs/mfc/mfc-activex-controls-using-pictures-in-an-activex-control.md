@@ -10,12 +10,12 @@ helpviewer_keywords:
 - OnResetState method [MFC]
 - CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
-ms.openlocfilehash: fe239f864f4b7730d28372ee3fc9d298131d28d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86e9bd220d06e714030f7d44888b210ba35fd345
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462097"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264556"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX 控制項：在 ActiveX 控制項中使用圖片
 
@@ -31,7 +31,7 @@ ms.locfileid: "50462097"
 
 圖片類型在某些 ActiveX 控制項群組中是很常見的一種類型。 圖片類型可以處理中繼檔、點陣圖或圖示，並且讓使用者指定要在 ActiveX 控制項中顯示的圖片。 自訂圖片屬性是以圖片物件和允許控制項使用者存取圖片屬性的 Get/Set 函式來進行實作。 控制項使用者可利用內建圖片屬性頁來存取自訂圖片屬性。
 
-除了標準圖片類型，尚可使用字型和色彩類型。 如需在 ActiveX 控制項中使用標準 Font 類型的詳細資訊，請參閱 [MFC ActiveX 控制項：使用字型](../mfc/mfc-activex-controls-using-fonts.md)一文。
+除了標準圖片類型，尚可使用字型和色彩類型。 如需有關如何在 ActiveX 控制項中使用標準 Font 類型的詳細資訊，請參閱文章[MFC ActiveX 控制項：使用字型](../mfc/mfc-activex-controls-using-fonts.md)。
 
 ActiveX 控制項類別提供許多您可以用來在控制項內實作圖片屬性的元件。 這些元件包括：
 
@@ -41,11 +41,11 @@ ActiveX 控制項類別提供許多您可以用來在控制項內實作圖片屬
 
 - 支援 **LPPICTUREDISP**類型屬性，此由 Get/Set 函式完成實作。
 
-   您可以使用 [類別檢視] 快速加入一個支援圖片類型的自訂屬性或屬性。 如需使用 [類別檢視] 加入 ActiveX 控制項屬性的詳細資訊，請參閱 [MFC ActiveX 控制項：屬性](../mfc/mfc-activex-controls-properties.md)一文。
+   您可以使用 [類別檢視] 快速加入一個支援圖片類型的自訂屬性或屬性。 如需有關如何加入 ActiveX 控制項屬性，使用 類別檢視的詳細資訊，請參閱文章[MFC ActiveX 控制項：屬性](../mfc/mfc-activex-controls-properties.md)。
 
 - 操作控制項圖片屬性的屬性頁。
 
-   這個屬性頁是 ActiveX 控制項可以使用的內建屬性頁的一部分。 如需 ActiveX 控制項屬性頁的詳細資訊，請參閱 [MFC ActiveX 控制項：使用內建屬性頁](../mfc/mfc-activex-controls-using-stock-property-pages.md)一文。
+   這個屬性頁是 ActiveX 控制項可以使用的內建屬性頁的一部分。 如需 ActiveX 控制項屬性頁的詳細資訊，請參閱文章[MFC ActiveX 控制項：使用內建屬性頁](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
 ##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> 在 ActiveX 控制項中實作自訂圖片屬性
 
@@ -152,4 +152,3 @@ ActiveX 控制項類別提供許多您可以用來在控制項內實作圖片屬
 [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)<br/>
 [MFC ActiveX 控制項：使用字型](../mfc/mfc-activex-controls-using-fonts.md)<br/>
 [MFC ActiveX 控制項：屬性頁](../mfc/mfc-activex-controls-property-pages.md)
-

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - OLE IMoniker interface
 - OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
-ms.openlocfilehash: 6372f28c78be99af9e329ff83ef531d18ad2480f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f793c7d7303a49057e46c32eb658ea7eea8e9ccc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476670"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267269"
 ---
 # <a name="ole-background-mfc-implementation"></a>OLE 背景：MFC 實作
 
@@ -35,7 +35,7 @@ IMoniker 介面`IMoniker`介面由類別庫實作 (例如`COleServerItem`類別)
 
 IUnknown 和 IMarshal 介面`IUnknown`介面由類別庫所實作，但不是會公開給程式設計人員。 `IMarshal`介面不會實作類別庫，但會在內部使用。 使用類別庫所建置的 Automation 伺服器，已經內建封送處理功能。
 
-Docfiles （複合檔案） 複合檔案部分類別程式庫所支援。 直接操作建立範圍外之複合檔案的函式都不受支援。 MFC 會使用類別`COleFileStream`來支援標準檔案函式的資料流的操作。 如需詳細資訊，請參閱文章[容器： 複合檔案](../mfc/containers-compound-files.md)。
+Docfiles （複合檔案） 複合檔案部分類別程式庫所支援。 直接操作建立範圍外之複合檔案的函式都不受支援。 MFC 會使用類別`COleFileStream`來支援標準檔案函式的資料流的操作。 如需詳細資訊，請參閱文章[容器：複合檔案](../mfc/containers-compound-files.md)。
 
 同處理序伺服器和物件處理常式中的處理序伺服器和物件處理常式可讓實作視覺編輯資料或動態連結程式庫 (DLL) 中的完整元件物件模型 (COM) 物件。 若要這樣做，您可以直接呼叫 OLE API 實作您的 DLL。 然而，如果您正在撰寫 Automation 伺服程式，且您的伺服程式沒有使用者介面，您可以使用 AppWizard 將您的伺服器製作成同處理序伺服器，並將其完整地置入 DLL。 如需有關這些主題的詳細資訊，請參閱 < [Automation 伺服程式](../mfc/automation-servers.md)。
 
@@ -48,4 +48,3 @@ Docfiles （複合檔案） 複合檔案部分類別程式庫所支援。 直接
 
 [OLE 背景](../mfc/ole-background.md)<br/>
 [OLE 背景：實作策略](../mfc/ole-background-implementation-strategies.md)
-

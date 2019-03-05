@@ -7,12 +7,12 @@ helpviewer_keywords:
 - noncreatable ATL objects
 - ATL projects, noncreatable objects
 ms.assetid: 80d0bca2-dea0-4801-9a85-6243124437f6
-ms.openlocfilehash: c92d049d95a2eacf3389c49d0b1561c2374b0c3c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da1d5c43d86d95d7eff9b6830b83b61737d3030f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650628"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267065"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>讓 ATL 物件變成無法建立
 

@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-ms.openlocfilehash: d33c54e82e9bc228b97bff4802c9231a98f51033
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: e73639ffd11e08edb2fdb03471f2c6c88730f02d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657483"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268465"
 ---
 # <a name="arrayview-class"></a>array_view 類別
 
@@ -153,7 +153,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 
 **命名空間：** 並行
 
-##  <a name="dtor"></a> ~ array_view
+##  <a name="dtor"></a> ~array_view
 
 終結`array_view`物件。
 
@@ -330,7 +330,7 @@ array_view(
 *_Arr_type*<br/>
 提供資料之 c-style 陣列的項目型別。
 
-*即 _Container*<br/>
+*_Container*<br/>
 必須指定支援的線性容器的樣板引數`data()`和`size()`成員。
 
 *_E0*<br/>
@@ -348,7 +348,7 @@ array_view(
 *_Other*<br/>
 型別的物件`array_view<T,N>`從中初始化新`array_view`。
 
-*大小) (_s*<br/>
+*_Size*<br/>
 提供資料之 c-style 陣列的大小。
 
 *_Src*<br/>
@@ -371,7 +371,7 @@ void copy_to(
 *_Dest*<br/>
 要複製到的物件。
 
-##  <a name="data"></a> 資料
+##  <a name="data"></a> data
 
 傳回的未經處理資料的指標`array_view`。
 
@@ -443,7 +443,7 @@ accelerator_view get_source_accelerator_view() const;
 
 ### <a name="return-value"></a>傳回值
 
-##  <a name="operator_call"></a> operator （)
+##  <a name="operator_call"></a> operator()
 
 傳回的值或多個參數所指定的項目。
 
@@ -488,7 +488,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 
 元素所指定的參數或參數的值。
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 傳回參數所指定的項目。
 

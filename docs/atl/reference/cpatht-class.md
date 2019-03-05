@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: cf845d04c008e83d0e9851718c995036bc810b55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36d8710bd7bb055d8629dec57ec4d8c3602c8f79
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449344"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273019"
 ---
 # <a name="cpatht-class"></a>CPathT 類別
 
@@ -140,7 +140,7 @@ ATL/MFC 字串類別使用的路徑 (請參閱[CStringT](../../atl-mfc-shared/re
 |[CPathT::operator const StringType （& s)](#operator_const_stringtype_amp)|此運算子可讓被視為字串的物件。|
 |[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|此運算子可讓被視為字串的物件。|
 |[CPathT::operator StringType （& s)](#operator_stringtype)|此運算子可讓被視為字串的物件。|
-|[CPathT::operator + =](#operator_add_eq)|這個運算子會將字串附加至路徑。|
+|[CPathT::operator +=](#operator_add_eq)|這個運算子會將字串附加至路徑。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
@@ -284,7 +284,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 
 ### <a name="remarks"></a>備註
 
-前置詞是其中一種類型:"c:\\\\"，"。"，"..."，"...\\\\". 如需詳細資訊，請參閱 < [PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa)。
+前置詞是其中一種類型："C:\\\\", ".", "..", "..\\\\". 如需詳細資訊，請參閱 < [PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa)。
 
 ##  <a name="compactpath"></a>  CPathT::CompactPath
 
@@ -471,7 +471,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 ### <a name="parameters"></a>參數
 
 *pszPrefix*<br/>
-要搜尋的前置詞。 前置詞是其中一種類型:"c:\\\\"，"。"，"..."，"...\\\\".
+要搜尋的前置詞。 前置詞是其中一種類型："C:\\\\", ".", "..", "..\\\\".
 
 ### <a name="return-value"></a>傳回值
 

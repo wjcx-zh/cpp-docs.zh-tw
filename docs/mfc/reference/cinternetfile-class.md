@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetFile [MFC], WriteString
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
-ms.openlocfilehash: 309d4210f72f7ecd83ed6a8eb79874a1c8170d59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65bc36856e253d086cc430a600daa9255e21ea75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586871"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279974"
 ---
 # <a name="cinternetfile-class"></a>CInternetFile 類別
 
@@ -65,7 +65,7 @@ class CInternetFile : public CStdioFile
 |[CInternetFile::Close](#close)|關閉`CInternetFile`並釋放其資源。|
 |[CInternetFile::Flush](#flush)|排清寫入緩衝區的內容，並確保記憶體中的資料會寫入到目標電腦。|
 |[CInternetFile::GetLength](#getlength)|傳回檔案的大小。|
-|[Cinternetfile:: Read](#read)|讀取指定的位元組數。|
+|[CInternetFile::Read](#read)|讀取指定的位元組數。|
 |[CInternetFile::ReadString](#readstring)|讀取字元資料流。|
 |[CInternetFile::Seek](#seek)|指標重新置放在開啟的檔案。|
 |[CInternetFile::SetReadBufferSize](#setreadbuffersize)|設定緩衝區的大小會讀取資料。|
@@ -216,7 +216,7 @@ HINTERNET m_hFile;
 operator HINTERNET() const;
 ```
 
-##  <a name="read"></a>  Cinternetfile:: Read
+##  <a name="read"></a>  CInternetFile::Read
 
 呼叫此成員函式，讀取至指定的記憶體，起價*lpvBuf*，則指定的位元組數目*nCount*。
 

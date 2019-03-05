@@ -13,12 +13,12 @@ helpviewer_keywords:
 - threading [MFC]
 - user interface threads [C++]
 ms.assetid: 979605f8-3988-44b5-ac9c-b8cce7fcce14
-ms.openlocfilehash: c707c1c117bbc0005b2b3da4ed39f083ae407b27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcffc2964d8e15fd47f437366863748175e12622
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643413"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258342"
 ---
 # <a name="multithreading-with-c-and-mfc"></a>使用 C++ 和 MFC 進行多執行緒處理
 
@@ -32,7 +32,7 @@ Microsoft Foundation Class (MFC) 程式庫會提供支援多執行緒應用程�
 
 MFC 會分辨兩種類型的執行緒： 使用者介面執行緒和背景工作執行緒。 使用者介面執行緒通常用來處理使用者輸入，並回應事件和使用者所產生的訊息。 背景工作執行緒通常用來完成工作，例如重新計算，不需要使用者輸入。 Win32 API 不會區分的執行緒; 的類型它只需要知道執行緒的開始位址，就可以開始執行執行緒。 MFC 處理使用者介面執行緒，特別是藉由提供使用者介面中的事件訊息幫浦。 `CWinApp` 是使用者介面執行緒物件的範例，因為它衍生自`CWinThread`和處理事件和使用者所產生的訊息。
 
-其中多個執行緒可能會需要存取相同物件的情況下，應該會提供特別注意。 [多執行緒： 程式設計提示](multithreading-programming-tips.md)說明技巧，您可以使用來解決在這些情況下可能發生的問題。 [多執行緒： 如何使用同步類別](multithreading-how-to-use-the-synchronization-classes.md)描述如何使用可用來同步處理從多個執行緒存取單一物件的類別。
+其中多個執行緒可能會需要存取相同物件的情況下，應該會提供特別注意。 [多執行緒：程式設計提示](multithreading-programming-tips.md)說明技巧，您可以使用來解決在這些情況下可能發生的問題。 [多執行緒：如何使用同步類別](multithreading-how-to-use-the-synchronization-classes.md)描述如何使用可用來同步處理從多個執行緒存取單一物件的類別。
 
 撰寫和偵錯多執行緒的程式設計是原本就複雜並難以處理的工作，因為您必須確定一次不由多個執行緒存取的物件。 多執行緒主題不會教導多執行緒程式設計，如何在多執行緒程式中使用 MFC 基本的概念。 包含 Visual c + + 中的多執行緒的 MFC 範例說明幾個多執行緒的新增功能和 Win32 Api 的 MFC; 不包含不過，它們只主要做為起點。
 

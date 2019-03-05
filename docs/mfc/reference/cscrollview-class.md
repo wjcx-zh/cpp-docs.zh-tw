@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: 9ec6177b1f2cb071a6aa284c2936f3af4dbe4634
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea95de2bceab290f94bb7c0e7bbc94a90048ee13
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468272"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259252"
 ---
 # <a name="cscrollview-class"></a>CScrollView 類別
 
@@ -285,7 +285,7 @@ void ScrollToPosition(POINT pt);
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pt*<br/>
 要捲動，以邏輯單位表示的點。 `x`成員必須是正值 （大於或等於 0，最多總檢視的大小）。 這也適用於`y`MM_TEXT 對應模式時的成員。 `y`成員是負數 MM_TEXT 以外的對應模式。
 
 ### <a name="remarks"></a>備註
@@ -340,7 +340,7 @@ void SetScrollSizes(
 |MM_HIMETRIC|0.01 公釐|向上|
 |MM_TWIPS|中的 1/1440|向上|
 |MM_HIENGLISH|0.001 英|向上|
-|MM_LOMETRIC|0.1 公釐|向上|
+|MM_LOMETRIC|0.1 mm|向上|
 |MM_LOENGLISH|0.01 英吋|向上|
 
 所有這些模式是由 Windows 進行定義。 不會使用兩種標準的對應模式，MM_ISOTROPIC 和 MM_ANISOTROPIC， `CScrollView`。 類別庫會提供`SetScaleToFitSize`調整成視窗大小檢視的成員函式。 上表中的三個資料行描述的座標的方向。

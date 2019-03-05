@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 4f8e56ed4be6bf4c7a5283894493ee46c4ed2ff4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2f75044c7cfbc1f9d2af1d9bda5c108f9afa881
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620905"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269210"
 ---
 # <a name="property-pages-mfc"></a>屬性頁 (MFC)
 
@@ -35,7 +35,7 @@ ms.locfileid: "50620905"
 |[DDP_Radio](#ddp_radio)|在控制項的屬性頁面中包含的控制項屬性的選項按鈕群組的連結。|
 |[DDP_Text](#ddp_text)|將控制項連結在控制項的屬性頁面中包含之控制項的屬性。 此函式會處理許多不同類型的屬性，例如**雙**，**簡短**，BSTR，並**長**。|
 
-如需詳細資訊`DoDataExchange`函式] 和 [屬性頁面，請參閱文章[ActiveX 控制項： 屬性頁](../../mfc/mfc-activex-controls-property-pages.md)。
+如需詳細資訊`DoDataExchange`函式] 和 [屬性頁面，請參閱文章[ActiveX 控制項：屬性頁](../../mfc/mfc-activex-controls-property-pages.md)。
 
 以下是用來建立和管理 OLE 控制項的屬性頁的巨集的清單：
 
@@ -438,7 +438,7 @@ Control 類別所使用的屬性頁面數目。
 
 在實作 (.cpp) 檔案中定義您的類別成員函式，屬性頁面清單開頭 BEGIN_PROPPAGEIDS 巨集，然後新增巨集項目針對每個屬性頁中，並完成 END_PROPPAGEIDS 屬性頁面清單巨集。
 
-如需有關屬性頁的詳細資訊，請參閱文章[ActiveX 控制項： 屬性頁](../../mfc/mfc-activex-controls-property-pages.md)。
+如需有關屬性頁的詳細資訊，請參閱文章[ActiveX 控制項：屬性頁](../../mfc/mfc-activex-controls-property-pages.md)。
 
 ### <a name="requirements"></a>需求
 

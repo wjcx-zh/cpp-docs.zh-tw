@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class information, retrieving
 ms.assetid: 39365025-f24a-41ae-87ab-4ae8ed085b98
-ms.openlocfilehash: ed3ede88b285f5c6a5209126e83f5364102ee154
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1963c1906f3e261e0b1fc091f54c145c896d0011
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596855"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265622"
 ---
 # <a name="class-information-classes"></a>類別資訊類別
 
@@ -23,4 +23,3 @@ ms.locfileid: "50596855"
 ## <a name="see-also"></a>另請參閱
 
 [類別概觀](../atl/atl-class-overview.md)
-

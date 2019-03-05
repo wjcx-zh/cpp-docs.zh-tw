@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: dd5f79b8ecd65428ce1231777fa6632777859a00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31157ba2445a432af274650011b839fb3df9b3c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467089"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268170"
 ---
 # <a name="icommandui-interface"></a>ICommandUI 介面
 
@@ -51,7 +51,7 @@ interface class ICommandUI
 
 `ICommandUI` 中的 ON_UPDATE_COMMAND_UI 處理常式內使用，且[ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-衍生的類別。 功能表中，每個功能表項目時 （選取或按下滑鼠），就會啟動應用程式的使用者會顯示為已啟用或停用。 每個功能表命令的目標會提供這項資訊藉由實作 ON_UPDATE_COMMAND_UI 處理常式。 針對每個命令使用者介面物件，在您的應用程式中，使用 [屬性] 視窗來建立訊息對應項目和每個處理常式的函式原型。
 
-如需有關如何`ICommandUI`介面會在命令路由，請參閱 <<c2> [ 如何： 新增命令傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
+如需有關如何`ICommandUI`介面會在命令路由，請參閱[How to:將命令路由傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
 
 如需有關如何使用 Windows Form 的詳細資訊，請參閱 <<c0> [ 在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
@@ -80,7 +80,7 @@ void ContinueRouting();
 
 ## <a name="remarks"></a>備註
 
-這是進階的成員函式，應該會傳回 FALSE 的 ON_COMMAND_EX 處理常式搭配使用。 如需詳細資訊，請參閱技術附註 TN006： 訊息對應。
+這是進階的成員函式，應該會傳回 FALSE 的 ON_COMMAND_EX 處理常式搭配使用。 如需詳細資訊，請參閱技術附註 TN006:訊息對應。
 
 ## <a name="enabled"></a> ICommandUI::Enabled
 

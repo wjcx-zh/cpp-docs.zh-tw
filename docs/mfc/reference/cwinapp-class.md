@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 3f9afdf18fcaff0d3613b4204d8690f915079e7d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6366638ebfd5e78ad517a8913e4276d5cd820670
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178937"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264668"
 ---
 # <a name="cwinapp-class"></a>CWinApp 類別
 
@@ -248,7 +248,7 @@ class CWinApp : public CWinThread
 |[CWinApp::GetSectionKey](#getsectionkey)|傳回機碼 hkey_current_user\\\RegistryKey\AppName\lpszSection 「 軟體 」。|
 |[CWinApp::HideApplication](#hideapplication)|隱藏應用程式前關閉所有文件。|
 |[CWinApp::HtmlHelp](#htmlhelp)|呼叫`HTMLHelp`Windows 函式。|
-|[Cwinapp:: Initinstance](#initinstance)|覆寫以執行 Windows 的執行個體初始化，例如建立視窗物件。|
+|[CWinApp::InitInstance](#initinstance)|覆寫以執行 Windows 的執行個體初始化，例如建立視窗物件。|
 |[CWinApp::IsTaskbarInteractionEnabled](#istaskbarinteractionenabled)|會告知是否已啟用 Windows 7 工作列互動。|
 |[CWinApp::LoadCursor](#loadcursor)|載入資料指標的資源。|
 |[CWinApp::LoadIcon](#loadicon)|載入圖示資源。|
@@ -269,7 +269,7 @@ class CWinApp : public CWinThread
 |[CWinApp::ReopenPreviousFilesAtRestart](#reopenpreviousfilesatrestart)|決定是否重新啟動管理員會重新開啟應用程式意外結束時所開啟的檔案。|
 |[CWinApp::RestartInstance](#restartinstance)|處理重新啟動管理員啟動應用程式重新啟動。|
 |[CWinApp::RestoreAutosavedFilesAtRestart](#restoreautosavedfilesatrestart)|決定是否重新啟動管理員會將檔案還原重新啟動應用程式時。|
-|[Cwinapp:: Run](#run)|會執行預設訊息迴圈。 覆寫以自訂訊息迴圈。|
+|[CWinApp::Run](#run)|會執行預設訊息迴圈。 覆寫以自訂訊息迴圈。|
 |[CWinApp::RunAutomated](#runautomated)|測試應用程式的命令列 **/Automation**選項。 已過時。 相反地，使用中的值[CCommandLineInfo::m_bRunAutomated](../../mfc/reference/ccommandlineinfo-class.md#m_brunautomated)之後呼叫[ParseCommandLine](#parsecommandline)。|
 |[CWinApp::RunEmbedded](#runembedded)|測試應用程式的命令列 **/內嵌**選項。 已過時。 相反地，使用中的值[CCommandLineInfo::m_bRunEmbedded](../../mfc/reference/ccommandlineinfo-class.md#m_brunembedded)之後呼叫[ParseCommandLine](#parsecommandline)。|
 |[CWinApp::SaveAllModified](#saveallmodified)|會提示使用者儲存所有已修改的文件。|
@@ -282,7 +282,7 @@ class CWinApp : public CWinThread
 |[CWinApp::Unregister](#unregister)|取消註冊已知由註冊的所有項目`CWinApp`物件。|
 |[CWinApp::WinHelp](#winhelp)|呼叫`WinHelp`Windows 函式。|
 |[CWinApp::WriteProfileBinary](#writeprofilebinary)|寫入二進位資料的應用程式中的項目。INI 檔案。|
-|[Cwinapp:: Writeprofileint](#writeprofileint)|將整數寫入至應用程式的項目。INI 檔案。|
+|[CWinApp::WriteProfileInt](#writeprofileint)|將整數寫入至應用程式的項目。INI 檔案。|
 |[CWinApp::WriteProfileString](#writeprofilestring)|將字串寫入應用程式中的項目。INI 檔案。|
 
 ### <a name="protected-methods"></a>保護方法
@@ -549,7 +549,7 @@ virtual int DoMessageBox(
 *lpszPrompt*<br/>
 在訊息方塊文字的位址。
 
-*n*<br/>
+*nType*<br/>
 訊息方塊[樣式](../../mfc/reference/styles-used-by-mfc.md#message-box-styles)。
 
 *nIDPrompt*<br/>
@@ -575,7 +575,7 @@ virtual void DoWaitCursor(int nCode);
 
 ### <a name="parameters"></a>參數
 
-*則 nCode*<br/>
+*nCode*<br/>
 如果這個參數是 1，則會顯示等待游標。 如果為 0，將等待游標會還原不遞增參考計數。 如果為-1，將等待游標就會結束。
 
 ### <a name="remarks"></a>備註
@@ -929,7 +929,7 @@ UINT GetProfileInt(
 *lpszEntry*<br/>
 指向以 null 終止的字串，其中包含要擷取其值的項目。
 
-*n 預設*<br/>
+*nDefault*<br/>
 指定架構找不到項目時要傳回的預設值。
 
 ### <a name="return-value"></a>傳回值
@@ -1044,7 +1044,7 @@ virtual void HtmlHelp(
 
 您的應用程式終止時，架構會自動關閉 HTMLHelp 應用程式。
 
-##  <a name="initinstance"></a>  Cwinapp:: Initinstance
+##  <a name="initinstance"></a>  CWinApp::InitInstance
 
 Windows 可讓在相同時間執行的相同程式的多個複本。
 
@@ -1307,15 +1307,15 @@ DWORD m_dwRestartManagerSupportFlags;
 |-|-|
 |旗標|描述|
 |AFX_RESTART_MANAGER_SUPPORT_RESTART|使用註冊該應用程式[CWinApp::RegisterWithRestartManager](#registerwithrestartmanager)。 重新啟動管理員會負責重新啟動應用程式，如果非預期地結束。|
-|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY|重新啟動管理員與註冊應用程式，並重新啟動應用程式時，重新啟動管理員會呼叫復原回呼函式。 預設復原回呼函式[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|
-|-AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|啟用 自動儲存並重新啟動管理員時，自動儲存任何開啟的文件時重新啟動應用程式。|
-|-AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|啟用 自動儲存並重新啟動管理員時，自動儲存任何開啟的文件以固定間隔。 所定義的間隔[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)。|
-|-AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|重新啟動管理員重新啟動非預期的結束應用程式之後，開啟先前開啟的文件。 [CDataRecoveryHandler 類別](../../mfc/reference/cdatarecoveryhandler-class.md)處理儲存開啟的文件的清單，以及還原它們。|
-|-AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|重新啟動管理員會提示使用者將會檔案還原之後重新啟動應用程式。 `CDataRecoveryHandler`類別向使用者查詢。|
-|-AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|AFX_RESTART_MANAGER_SUPPORT_RESTART AFX_RESTART_MANAGER_SUPPORT_RECOVER 及 AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 的聯集。|
-|-AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE 及 AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART、 AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL，AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES 的聯集。|
-|-AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|AFX_RESTART_MANAGER_SUPPORT_RESTART 及 AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART、 AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES，AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES 的聯集。|
-|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|等位的 ofAFX_RESTART_MANAGER_SUPPORT_RECOVERY、 AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL、 AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 和 AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES。|
+|- AFX_RESTART_MANAGER_SUPPORT_RECOVERY|重新啟動管理員與註冊應用程式，並重新啟動應用程式時，重新啟動管理員會呼叫復原回呼函式。 預設復原回呼函式[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|
+|- AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|啟用 自動儲存並重新啟動管理員時，自動儲存任何開啟的文件時重新啟動應用程式。|
+|- AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|啟用 自動儲存並重新啟動管理員時，自動儲存任何開啟的文件以固定間隔。 所定義的間隔[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)。|
+|- AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|重新啟動管理員重新啟動非預期的結束應用程式之後，開啟先前開啟的文件。 [CDataRecoveryHandler 類別](../../mfc/reference/cdatarecoveryhandler-class.md)處理儲存開啟的文件的清單，以及還原它們。|
+|- AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|重新啟動管理員會提示使用者將會檔案還原之後重新啟動應用程式。 `CDataRecoveryHandler`類別向使用者查詢。|
+|- AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|AFX_RESTART_MANAGER_SUPPORT_RESTART AFX_RESTART_MANAGER_SUPPORT_RECOVER 及 AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 的聯集。|
+|- AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE 及 AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART、 AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL，AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES 的聯集。|
+|- AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|AFX_RESTART_MANAGER_SUPPORT_RESTART 及 AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART、 AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES，AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES 的聯集。|
+|- AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|等位的 ofAFX_RESTART_MANAGER_SUPPORT_RECOVERY、 AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL、 AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 和 AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES。|
 
 ##  <a name="m_ehelptype"></a>  CWinApp::m_eHelpType
 
@@ -2038,7 +2038,7 @@ virtual BOOL RestoreAutosavedFilesAtRestart() const;
 
 TRUE 表示重新啟動管理員會將檔案還原;FALSE 表示不重新啟動管理員。
 
-##  <a name="run"></a>  Cwinapp:: Run
+##  <a name="run"></a>  CWinApp::Run
 
 提供預設訊息迴圈。
 
@@ -2310,7 +2310,7 @@ BOOL WriteProfileBinary(
 
 如需其他範例，請參閱範例[CWinApp::GetProfileBinary](#getprofilebinary)。
 
-##  <a name="writeprofileint"></a>  Cwinapp:: Writeprofileint
+##  <a name="writeprofileint"></a>  CWinApp::WriteProfileInt
 
 呼叫此成員函式，將指定的值寫入指定的區段的應用程式的登錄或。INI 檔案。
 
@@ -2329,7 +2329,7 @@ BOOL WriteProfileInt(
 *lpszEntry*<br/>
 指向以 null 結束的字串，其中包含的值是要寫入至其中的項目。 如果項目不存在於指定的區段中，它會建立它。
 
-*n 值*<br/>
+*nValue*<br/>
 包含要寫入的值。
 
 ### <a name="return-value"></a>傳回值
@@ -2395,4 +2395,4 @@ void SetAppID(LPCTSTR lpcszAppID);
 
 [CWinThread 類別](../../mfc/reference/cwinthread-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
-[操作說明：新增重新啟動管理員支援](../../mfc/how-to-add-restart-manager-support.md)
+[如何：新增重新啟動管理員支援](../../mfc/how-to-add-restart-manager-support.md)

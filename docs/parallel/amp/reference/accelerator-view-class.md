@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-ms.openlocfilehash: e17284ef8652e5d08b2305dc07d27f080ec64239
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f95efb17b95dc55cb6f6977439760fa7ea1afe9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568037"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264843"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view 類別
 
@@ -58,7 +58,7 @@ class accelerator_view;
 |[get_is_debug](#get_is_debug)|傳回布林值，指出是否`accelerator_view`物件具有擴充錯誤報告啟用偵錯層級。|
 |[get_queuing_mode](#get_queuing_mode)|傳回的佇列模式`accelerator_view`物件。|
 |[get_version](#get_version)|傳回的版本`accelerator_view`。|
-|[等候](#wait)|等候所有的命令送出至`accelerator_view`完成的物件。|
+|[wait](#wait)|等候所有的命令送出至`accelerator_view`完成的物件。|
 
 ### <a name="public-operators"></a>公用運算子
 
@@ -135,7 +135,7 @@ concurrency::completion_future create_marker();
 
 若要追蹤的所有目前提交至此的命令完成的未來`accelerator_view`物件。
 
-## <a name="flush"></a> 排清
+## <a name="flush"></a> flush
 
 送出至加速器以執行 accelerator_view 物件的所有暫止命令排入佇列。
 
@@ -333,7 +333,7 @@ void wait();
 
 如果[queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode)是`immediate`，這個方法會立即傳回而不會封鎖。
 
-##  <a name="dtor"></a> ~ accelerator_view
+##  <a name="dtor"></a> ~accelerator_view
 
 終結 accelerator_view 物件。
 

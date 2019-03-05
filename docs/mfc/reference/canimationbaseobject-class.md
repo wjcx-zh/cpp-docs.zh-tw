@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-ms.openlocfilehash: 6527abf5c91cf440bbbe76d0d5fe49ce2c5dbef7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18b2319ea3c51edf79b6a90095b8363db830d66c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430436"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258914"
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject 類別
 
@@ -74,7 +74,7 @@ class CAnimationBaseObject : public CObject;
 |名稱|描述|
 |----------|-----------------|
 |[CAnimationBaseObject::CAnimationBaseObject](#canimationbaseobject)|多載。 建構的動畫物件。|
-|[CAnimationBaseObject:: ~ CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|解構函式。 當動畫物件正在被終結時呼叫。|
+|[CAnimationBaseObject::~CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|解構函式。 當動畫物件正在被終結時呼叫。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -315,7 +315,7 @@ virtual void GetAnimationVariableList(
 
 ### <a name="remarks"></a>備註
 
-這是必須在衍生類別中覆寫的純虛擬方法。 動畫物件，根據其類型，包含一或多個動畫變數。 比方說，CAnimationPoint 都包含兩個變數的 X 和 Y 座標分別。 CAnimationBaseObject 的基底類別會實作某些泛型的方法，處理動畫變數的清單： ApplyTransitions、 ClearTransitions、 EnableValueChangedEvent、 EnableIntegerValueChangedEvent。 這些方法會呼叫 GetAnimationVariableList，其中會填入在衍生類別中的特定動畫物件中包含的實際動畫變數，然後使用迴圈處理清單並執行必要的動作。 如果您建立自訂動畫物件時，您必須加入 lst 該物件中包含的所有動畫變數。
+這是必須在衍生類別中覆寫的純虛擬方法。 動畫物件，根據其類型，包含一或多個動畫變數。 比方說，CAnimationPoint 都包含兩個變數的 X 和 Y 座標分別。 CAnimationBaseObject 的基底類別會實作某些泛型的方法，處理動畫變數的清單：ApplyTransitions ClearTransitions，EnableValueChangedEvent，EnableIntegerValueChangedEvent。 這些方法會呼叫 GetAnimationVariableList，其中會填入在衍生類別中的特定動畫物件中包含的實際動畫變數，然後使用迴圈處理清單並執行必要的動作。 如果您建立自訂動畫物件時，您必須加入 lst 該物件中包含的所有動畫變數。
 
 ##  <a name="getautodestroytransitions"></a>  CAnimationBaseObject::GetAutodestroyTransitions
 

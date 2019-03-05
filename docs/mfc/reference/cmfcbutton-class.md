@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: a82793ce29765bf01e8c52c94257bd3150187505
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 804c3219356d36f6a0a733937c5e354822a4be83
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178456"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269808"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton 類別
 
@@ -511,7 +511,7 @@ AlignStyle m_nAlignStyle;
 
 `CMFCButton`建構函式初始化這個成員為 ALIGN_CENTER。
 
-##  <a name="m_bWasDblClk"></a>  CMFCButton::m_bWasDblClk](#m_bWasDblClk) |
+##  <a name="m_bWasDblClk"></a>  CMFCButton::m_bWasDblClk](#m_bWasDblClk)|
 
 指出事件是否按一下最後一個按兩下。 |
 
@@ -642,7 +642,7 @@ virtual void OnDrawText(
 *rect*<br/>
 [in]參考之按鈕的界限的矩形。
 
-*先把 strText*<br/>
+*strText*<br/>
 [in]要繪製的文字。
 
 *uiDTFlags*<br/>
@@ -925,7 +925,7 @@ void SetStdImage(
 [in]其中一個按鈕映像識別碼中所定義`CMenuImage::IMAGES_IDS`列舉型別。 指定的映像值，例如箭號、 pin 和選項按鈕的影像。
 
 *state*<br/>
-[in]其中一個按鈕映像的狀態識別碼中所定義`CMenuImages::IMAGE_STATE`列舉型別。 映像狀態指定例如黑色、 灰色、 淺灰色，白色和暗灰色的按鈕色彩。 預設值是 `CMenuImages::ImageBlack`。
+[in]其中一個按鈕映像的狀態識別碼中所定義`CMenuImages::IMAGE_STATE`列舉型別。 映像狀態指定例如黑色、 灰色、 淺灰色，白色和暗灰色的按鈕色彩。 預設值為 `CMenuImages::ImageBlack`。
 
 *idDisabled*<br/>
 [in]其中一個按鈕映像識別碼中所定義`CMenuImage::IMAGES_IDS`列舉型別。 映像表示按鈕已停用。 預設值是第一個按鈕影像 ( `CMenuImages::IdArrowDown`)。

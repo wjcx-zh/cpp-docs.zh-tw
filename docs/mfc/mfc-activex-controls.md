@@ -15,12 +15,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
-ms.openlocfilehash: 10ad0645e873a1a745168be9b839bbf97a1c05a6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: a33273c46562e8beba12910702d9ddc1a092575d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174860"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262606"
 ---
 # <a name="mfc-activex-controls"></a>MFC ActiveX 控制項
 
@@ -42,7 +42,7 @@ ActiveX 控制項會實作為可用於任何 OLE 容器同處理序伺服器 （
 ![ActiveX 控制項容器和控制項相互作用](../mfc/media/vc37221.gif "相互作用的 ActiveX 控制項容器和控制項") <br/>
 ActiveX 控制項容器與視窗型 ActiveX 控制項之間的互動
 
-最佳化您的 ActiveX 控制項的一些新資訊，請參閱[MFC ActiveX 控制項： 最佳化](../mfc/mfc-activex-controls-optimization.md)。
+最佳化您的 ActiveX 控制項的一些新資訊，請參閱[MFC ActiveX 控制項：最佳化](../mfc/mfc-activex-controls-optimization.md)。
 
 若要建立 MFC ActiveX 控制項，請參閱[建立 ActiveX 控制項專案](../mfc/reference/mfc-activex-control-wizard.md)。
 
@@ -62,9 +62,9 @@ ActiveX 控制項會同時使用數個程式設計項目，在控制項容器與
 
 您所開發的每個 ActiveX 控制項物件會繼承其 MFC 基底類別中的一組強大的功能`COleControl`。 這些功能包括在就地啟用，以及自動化邏輯。 `COleControl` 可以提供相同的功能，為 MFC 視窗物件，還能夠引發事件的控制項物件。 `COleControl` 也可以提供[無視窗控制項](../mfc/providing-windowless-activation.md)，其依賴其容器的某些功能的相關說明 視窗提供 (擷取滑鼠、 鍵盤焦點捲動)，但提供更快速的顯示。
 
-因為控制項類別衍生自`COleControl`、 它所繼承的功能，若要傳送，或 「 觸發 」、 訊息，稱為 「 事件，以符合特定條件時的控制項容器。 這些事件用來通知控制項容器時重要的項目控制項中發生。 您可以將參數附加至事件至控制項容器的檔案，以傳送事件的其他資訊。 如需 ActiveX 控制項事件的詳細資訊，請參閱文章[MFC ActiveX 控制項： 事件](../mfc/mfc-activex-controls-events.md)。
+因為控制項類別衍生自`COleControl`、 它所繼承的功能，若要傳送，或 「 觸發 」、 訊息，稱為 「 事件，以符合特定條件時的控制項容器。 這些事件用來通知控制項容器時重要的項目控制項中發生。 您可以將參數附加至事件至控制項容器的檔案，以傳送事件的其他資訊。 如需 ActiveX 控制項事件的詳細資訊，請參閱文章[MFC ActiveX 控制項：事件](../mfc/mfc-activex-controls-events.md)。
 
-最後一個項目是用來公開一組函式 （稱為方法） 和屬性 （稱為屬性） 來控制使用者的分派對應。 屬性可讓控制項容器或控制使用者操作控制項，以各種方式。 使用者可以變更控制項的外觀、 變更控制項的特定值或提出要求的控制項，例如存取特定的一種控制項會維護的資料。 這個介面由控制項開發人員，並使用**類別檢視**。 如需有關 ActiveX 控制項方法和屬性的詳細資訊，請參閱文章[MFC ActiveX 控制項： 方法](../mfc/mfc-activex-controls-methods.md)並[屬性](../mfc/mfc-activex-controls-properties.md)。
+最後一個項目是用來公開一組函式 （稱為方法） 和屬性 （稱為屬性） 來控制使用者的分派對應。 屬性可讓控制項容器或控制使用者操作控制項，以各種方式。 使用者可以變更控制項的外觀、 變更控制項的特定值或提出要求的控制項，例如存取特定的一種控制項會維護的資料。 這個介面由控制項開發人員，並使用**類別檢視**。 如需有關 ActiveX 控制項方法和屬性的詳細資訊，請參閱文章[MFC ActiveX 控制項：方法](../mfc/mfc-activex-controls-methods.md)並[屬性](../mfc/mfc-activex-controls-properties.md)。
 
 ##  <a name="_core_interaction_between_controls_with_windows_and_activex_control_containers"></a> 使用 Windows 控制項和 ActiveX 控制項容器之間的互動
 
@@ -92,7 +92,7 @@ Windows 中的訊息處理視窗型 ActiveX 控制項 （當使用中時）
 
 能夠序列化資料，有時稱為持續性，可讓您控制其屬性的值寫入永續性儲存體。 然後可以藉由從儲存體讀取物件的狀態重新建立控制項。
 
-請注意，控制項不負責取得之儲存媒體的存取。 相反地，控制項的容器會負責在適當的時間使用的儲存媒體提供給控制項。 如需有關序列化的詳細資訊，請參閱文章[MFC ActiveX 控制項： 序列化](../mfc/mfc-activex-controls-serializing.md)。 如需序列化最佳化，請參閱[最佳化持續性和初始化](../mfc/optimizing-persistence-and-initialization.md)在 ActiveX 控制項： 最佳化。
+請注意，控制項不負責取得之儲存媒體的存取。 相反地，控制項的容器會負責在適當的時間使用的儲存媒體提供給控制項。 如需有關序列化的詳細資訊，請參閱文章[MFC ActiveX 控制項：序列化](../mfc/mfc-activex-controls-serializing.md)。 如需序列化最佳化，請參閱[最佳化持續性和初始化](../mfc/optimizing-persistence-and-initialization.md)ActiveX 控制項中：最佳化。
 
 ##  <a name="_core_installing_activex_control_classes_and_tools"></a> 安裝 ActiveX 控制項類別和工具
 
@@ -116,7 +116,7 @@ Windows 中的訊息處理視窗型 ActiveX 控制項 （當使用中時）
 
    包含開發 ActiveX 控制項與 MFC 所需的程式庫
 
-另外還有範例 MFC ActiveX 控制項。 如需有關這些範例的詳細資訊，請參閱[控制項範例： MFC-Based ActiveX 控制項](../visual-cpp-samples.md)
+另外還有範例 MFC ActiveX 控制項。 如需有關這些範例的詳細資訊，請參閱[控制項範例：以 MFC 為基礎的 ActiveX 控制項](../visual-cpp-samples.md)
 
 ## <a name="see-also"></a>另請參閱
 

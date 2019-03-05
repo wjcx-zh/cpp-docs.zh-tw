@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
-ms.openlocfilehash: 5ddafe5dd821fb21eb6dd03d63122fa98a56af51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0870eb046f1cec091a72d49c94a2fea41484340
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635366"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278687"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Concurrency 命名空間 (C++ AMP)
 
@@ -66,8 +66,8 @@ namespace Concurrency;
 
 |運算子|描述|
 |--------------|-----------------|
-|[運算子 = = 運算子 (c + + AMP)](concurrency-namespace-operators-amp.md#operator_eq_eq)|判斷指定的資料結構是否相等。|
-|[運算子 ！ = 運算子 (c + + AMP)](concurrency-namespace-operators-amp.md#operator_neq)|判斷指定的資料結構是否不相等。|
+|[operator== Operator (C++ AMP)](concurrency-namespace-operators-amp.md#operator_eq_eq)|判斷指定的資料結構是否相等。|
+|[operator!= Operator (C++ AMP)](concurrency-namespace-operators-amp.md#operator_neq)|判斷指定的資料結構是否不相等。|
 |[operator + 運算子 (c + + AMP)](concurrency-namespace-operators-amp.md#operator_add)|計算指定的引數的整體元件總和。|
 |[operator-運算子 (c + + AMP)](concurrency-namespace-operators-amp.md#operator-)|計算指定的引數之間的整體元件差值。|
 |[運算子 * 運算子 (c + + AMP)](concurrency-namespace-operators-amp.md#operator_star)|計算指定的引數的整體元件乘積。|
@@ -114,4 +114,3 @@ namespace Concurrency;
 ## <a name="see-also"></a>另請參閱
 
 [參考 (C++ AMP)](reference-cpp-amp.md)
-

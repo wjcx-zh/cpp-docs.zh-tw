@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: 8341061ba6365beb97f4413aab8bfbbfdc25e035
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: ed2b8445a0f13b82338d2904d43fd17688d05b9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693916"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276373"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY 巨集
 
@@ -397,4 +397,3 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 您可以使用這個巨集，以防止在特定情況下使用的介面。 例如，您可以將這個巨集插入之前防止介面的查詢轉送到彙總的內部未知 COM_INTERFACE_ENTRY_AGGREGATE_BLIND COM 對應。
 
 介面的 IID 將建構附加*x*至`IID_`。 例如，如果*x*是`IPersistStorage`，將 IID `IID_IPersistStorage`。
-

@@ -8,12 +8,12 @@ f1_keywords:
 - atlbase/ATL::AtlComModuleRevokeClassObjects
 - atlbase/ATL::AtlComModuleGetClassObject
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-ms.openlocfilehash: f97a4ff0dc28077d42fe0f8ca4992946db4082f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2088bd938aeac70193165cdbd43bd10203ecc49e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441781"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275303"
 ---
 # <a name="server-registration-global-functions"></a>伺服器註冊全域函式
 
@@ -53,7 +53,7 @@ COM 模組指標。
 *bRegTypeLib*<br/>
 如果型別程式庫是要註冊，則為 TRUE。
 
-*Createtable*<br/>
+*pCLSID*<br/>
 要註冊之物件的 clsid 點。 如果是 NULL，將會登錄在物件對應中的所有物件。
 
 ### <a name="return-value"></a>傳回值
@@ -85,7 +85,7 @@ COM 模組指標。
 *bUnRegTypeLib*<br/>
 如果型別程式庫是要註冊，則為 TRUE。
 
-*Createtable*<br/>
+*pCLSID*<br/>
 要移除註冊物件的 clsid 點。 如果 NULL 物件對應中的所有物件將都會取消註冊。
 
 ### <a name="return-value"></a>傳回值

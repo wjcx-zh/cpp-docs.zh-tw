@@ -1,18 +1,18 @@
 ---
-title: 如何：使用可組合的類別改善效能
+title: HOW TO：使用 combinable 改善效能
 ms.date: 11/04/2016
 helpviewer_keywords:
 - combinable class, example
 - improving parallel performance with combinable [Concurrency Runtime]
 ms.assetid: fa730580-1c94-4b2d-8aec-57c91dc0497e
-ms.openlocfilehash: 5d68335046b08aa41028be11d833b334c1dc0055
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8f4c40be84b2204e5b5632fe6d3d5a5d22b8719
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455259"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258121"
 ---
-# <a name="how-to-use-combinable-to-improve-performance"></a>如何：使用可組合的類別改善效能
+# <a name="how-to-use-combinable-to-improve-performance"></a>HOW TO：使用 combinable 改善效能
 
 此範例示範如何使用[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)類別來計算中的數字的總和[std:: array](../../standard-library/array-class-stl.md)是質數的物件。 `combinable`類別可以藉由消除共用的狀態來改善效能。
 

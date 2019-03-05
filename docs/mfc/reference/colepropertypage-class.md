@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: 905f92ef7875dac984b6c0d537e4687dcc779f49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55f4b7304d0b50004585b55142804e0bb4234c16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605708"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271251"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage 類別
 
@@ -76,7 +76,7 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 |[COlePropertyPage::OnHelp](#onhelp)|當使用者叫用說明時，由架構呼叫。|
 |[COlePropertyPage::OnInitDialog](#oninitdialog)|初始化的屬性頁時由架構呼叫。|
 |[COlePropertyPage::OnObjectsChanged](#onobjectschanged)|選擇另一個 OLE 控制項，使用新的屬性時，由架構呼叫。|
-|[Colepropertypage:: Onsetpagesite](#onsetpagesite)|當屬性框架提供網頁的網站時由架構呼叫。|
+|[COlePropertyPage::OnSetPageSite](#onsetpagesite)|當屬性框架提供網頁的網站時由架構呼叫。|
 |[COlePropertyPage::SetControlStatus](#setcontrolstatus)|設定旗標，指出使用者是否已修改控制項中的值。|
 |[COlePropertyPage::SetDialogResource](#setdialogresource)|設定屬性頁的對話方塊資源。|
 |[COlePropertyPage::SetHelpInfo](#sethelpinfo)|設定屬性頁的簡短說明文字，其說明檔和其說明內容的名稱。|
@@ -89,7 +89,7 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 
 每個自訂或內建的控制項屬性可以有對話方塊的控制項，可讓控制項的使用者檢視目前的屬性值，並視需要修改該值。
 
-如需有關使用`COlePropertyPage`，請參閱文章[ActiveX 控制項： 屬性頁](../../mfc/mfc-activex-controls-property-pages.md)。
+如需有關使用`COlePropertyPage`，請參閱文章[ActiveX 控制項：屬性頁](../../mfc/mfc-activex-controls-property-pages.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -284,7 +284,7 @@ virtual void OnObjectsChanged();
 
 覆寫這個函式來接收通知，此動作，並執行任何特殊動作。
 
-##  <a name="onsetpagesite"></a>  Colepropertypage:: Onsetpagesite
+##  <a name="onsetpagesite"></a>  COlePropertyPage::OnSetPageSite
 
 當屬性框架提供屬性頁的頁面網站時，架構會呼叫此函式。
 

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - objects [MFC], graphic objects
 - one-stage and two-stage construction of objects [MFC]
 ms.assetid: 5a1c410c-4a4b-4dd9-a2ec-ced831aa7f21
-ms.openlocfilehash: bdfb7879bc926435bdcd72d6776646c449ffef80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 871db7abd2682d557bf2e80e9cb97624f0dc53a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623310"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263633"
 ---
 # <a name="one-stage-and-two-stage-construction-of-objects"></a>一階段和兩階段的物件建構
 
 您可以建立畫筆和筆刷等圖形物件的兩個技術之間選擇：
 
-- *一階段建構*： 建構和初始化此物件在一個階段中，都可以透過建構函式。
+- *一階段建構*:建構，並在一個階段，所有的建構函式中初始化的物件。
 
-- *兩階段建構*： 建構和初始化物件的兩個不同的階段。 建構函式會建立物件，並初始化函式加以初始化。
+- *兩階段建構*:建構並初始化物件的兩個不同的階段。 建構函式會建立物件，並初始化函式加以初始化。
 
 兩階段建構永遠是更安全的。 一階段建構中建構函式可能擲回例外狀況，如果您提供不正確的引數或記憶體配置失敗。 透過兩階段建構，避免這個問題，雖然您需要檢查有錯誤。 在任一情況下，終止此物件是相同的程序。
 
@@ -46,4 +46,3 @@ ms.locfileid: "50623310"
 ## <a name="see-also"></a>另請參閱
 
 [圖形物件](../mfc/graphic-objects.md)
-

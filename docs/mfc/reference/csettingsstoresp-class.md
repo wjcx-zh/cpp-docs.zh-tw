@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CSettingsStoreSP [MFC], Create
 - CSettingsStoreSP [MFC], SetRuntimeClass
 ms.assetid: bcd37f40-cfd4-4d17-a5ce-3bfabe995dcc
-ms.openlocfilehash: f6bcbce291aec1941359504518e26ca936edb9e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c7a992b983552340ebe21e59d2ee9a667841ec0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604473"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275190"
 ---
 # <a name="csettingsstoresp-class"></a>CSettingsStoreSP 類別
 
@@ -53,7 +53,7 @@ class CSettingsStoreSP
 
 ## <a name="remarks"></a>備註
 
-您可以使用`CSettingsStoreSP`類別，以將所有的 MFC 登錄作業重新導向至其他位置，例如 XML 檔案或資料庫。 若要執行這項操作，請依照下列步驟執行：
+您可以使用`CSettingsStoreSP`類別，以將所有的 MFC 登錄作業重新導向至其他位置，例如 XML 檔案或資料庫。 若要執行此動作，請依照下列步驟執行：
 
 1. 建立類別 (例如`CMyStore`)，並從它衍生`CSettingsStore`。
 

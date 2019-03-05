@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlDllModuleT class
 ms.assetid: 351d5767-8257-4878-94be-45a85e31a72d
-ms.openlocfilehash: 37f57240322c6f69fe25416866cb1b356f3c9909
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be42915c6c2e941bc5fc1de78c5c7ac26ccca6e2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515865"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259213"
 ---
 # <a name="catldllmodulet-class"></a>CAtlDllModuleT 類別
 
@@ -44,7 +44,7 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 |名稱|描述|
 |----------|-----------------|
 |[CAtlDllModuleT::CAtlDllModuleT](#catldllmodulet)|建構函式。|
-|[CAtlDllModuleT:: ~ CAtlDllModuleT](#dtor)|解構函式。|
+|[CAtlDllModuleT::~CAtlDllModuleT](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -85,7 +85,7 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 CAtlDllModuleT() throw();
 ```
 
-##  <a name="dtor"></a>  CAtlDllModuleT:: ~ CAtlDllModuleT
+##  <a name="dtor"></a>  CAtlDllModuleT::~CAtlDllModuleT
 
 解構函式。
 
@@ -144,7 +144,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 *dwReason*<br/>
 如果設為 DLL_PROCESS_ATTACH、 DLL_THREAD_ATTACH 和 DLL_THREAD_DETACH 通知呼叫已停用。
 
-*lpreserved，請*<br/>
+*lpReserved*<br/>
 保留的。
 
 ### <a name="return-value"></a>傳回值

@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 74ee046e81e0f55e5550220166c957317c2bf6cd
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 54018c3d59fe3d7e3d7a5062cda9b40da4f5d586
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178547"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279351"
 ---
 # <a name="crgn-class"></a>CRgn 類別
 
@@ -705,7 +705,7 @@ int OffsetRgn(POINT point);
 *y*<br/>
 指定要上移或下移的單位數。
 
-*點*<br/>
+*point*<br/>
 X 座標*點*指定要向左移動或向右的單位數目。 Y 座標*點*指定要上移或下移的單位數。 *點*參數可以是`POINT`結構或`CPoint`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -768,7 +768,7 @@ BOOL PtInRegion(POINT point) const;
 *y*<br/>
 指定要測試的點的邏輯 y 座標。
 
-*點*<br/>
+*point*<br/>
 X 和 y 座標的*點*指定要測試的值的點 x 和 y 座標。 *點*參數可以是`POINT`結構或`CPoint`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -842,4 +842,3 @@ void SetRectRgn(LPCRECT lpRect);
 
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

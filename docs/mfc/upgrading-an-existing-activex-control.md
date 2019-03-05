@@ -12,12 +12,12 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-ms.openlocfilehash: 18641c6e25aaccd6b5d0bcbbddbf8fc73b2a3c52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc7313c862d3536326894c947fa371d833e8fab8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525797"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276975"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>升級現有的 ActiveX 控制項
 
@@ -28,7 +28,7 @@ ms.locfileid: "50525797"
 
 當使用您在網頁上的控制項，還有其他考量。 .Ocx 檔案和所有支援的檔案必須是目標電腦上，或透過網際網路下載。 這可讓程式碼大小和下載時間很重要的考量。 下載項目可以封裝在簽署的.cab 檔案中。 您可以標示為安全的指令碼，以及用於初始化安全控制項。
 
-這篇文章討論下列主題：
+本文討論下列主題：
 
 - [下載的程式碼封裝](#_core_packaging_code_for_downloading)
 
@@ -42,7 +42,7 @@ ms.locfileid: "50525797"
 
 - [Internet Explorer 瀏覽器安全性層級和控制行為](#_core_internet_explorer_browser_safety_levels_and_control_behavior)
 
-您也可以如中所述新增最佳化[ActiveX 控制項： 最佳化](../mfc/mfc-activex-controls-optimization.md)。 Moniker 可以用來下載內容，和大型 Blob 以非同步方式中所述[網際網路上的 ActiveX 控制項](../mfc/activex-controls-on-the-internet.md)。
+您也可以在中所述新增最佳化， [ActiveX 控制項：最佳化](../mfc/mfc-activex-controls-optimization.md)。 Moniker 可以用來下載內容，和大型 Blob 以非同步方式中所述[網際網路上的 ActiveX 控制項](../mfc/activex-controls-on-the-internet.md)。
 
 ##  <a name="_core_packaging_code_for_downloading"></a> 下載的程式碼封裝
 
@@ -220,7 +220,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 </OBJECT>
 ```
 
-如需控制項授權的詳細資訊，請參閱[ActiveX 控制項： 授權 ActiveX 控制項](../mfc/mfc-activex-controls-licensing-an-activex-control.md)。
+如需控制項授權的詳細資訊，請參閱[ActiveX 控制項：授權 ActiveX 控制項](../mfc/mfc-activex-controls-licensing-an-activex-control.md)。
 
 ##  <a name="_core_signing_code"></a> 簽署程式碼
 
@@ -275,4 +275,3 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 [MFC 網際網路程式設計工作](../mfc/mfc-internet-programming-tasks.md)<br/>
 [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)<br/>
 [MFC ActiveX 控制項：授權 ActiveX 控制項](../mfc/mfc-activex-controls-licensing-an-activex-control.md)
-

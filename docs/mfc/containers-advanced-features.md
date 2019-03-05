@@ -1,5 +1,5 @@
 ---
-title: 容器：進階功能
+title: 容器：進階的功能
 ms.date: 11/04/2016
 helpviewer_keywords:
 - links [MFC], to embedded OLE objects
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 95606818cf5673ef5d4a70361a8e79a9ed28d11b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d83ba601766f4b6fb84576571239a250169abb1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506076"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278700"
 ---
-# <a name="containers-advanced-features"></a>容器：進階功能
+# <a name="containers-advanced-features"></a>容器：進階的功能
 
 本文描述將選擇性進階功能合併至現有容器應用程式中的必要步驟。 這些功能包括：
 
@@ -31,7 +31,7 @@ ms.locfileid: "50506076"
 
 容器/伺服器應用程式是可同時做為容器和伺服器的應用程式。 Microsoft Word for Windows 就是這種應用程式的範例。 您可以將 Word for Windows 文件內嵌於其他應用程式中，也可以在 Word for Windows 文件中內嵌項目。 將您的容器應用程式修改成可同時做為容器和完整伺服器的程序 (您無法建立容器/迷你伺服器應用程式的組合)，類似建立完整伺服器的程序。
 
-發行項[伺服器： 實作伺服器](../mfc/servers-implementing-a-server.md)列出實作伺服器應用程式所需的工作數目。 如果您將容器應用程式轉換成容器/伺服器應用程式，則需要執行一些相同的工作，將程式碼加入至容器。 以下列出一些重要的考量：
+發行項[伺服器：實作伺服器](../mfc/servers-implementing-a-server.md)列出實作伺服器應用程式所需的工作數目。 如果您將容器應用程式轉換成容器/伺服器應用程式，則需要執行一些相同的工作，將程式碼加入至容器。 以下列出一些重要的考量：
 
 - 應用程式精靈所建立的容器程式碼已初始化 OLE 子系統。 您不需要變更或加入任何提供支援的項目。
 
@@ -41,7 +41,7 @@ ms.locfileid: "50506076"
 
    例如，MFC OLE 範例[OCLIENT](../visual-cpp-samples.md)有內嵌的容器/伺服器應用程式所建立的項目。 您開啟 OCLIENT 應用程式，並且就地編輯您的容器/伺服器應用程式所建立的項目。 在編輯您的應用程式項目時，您決定您想要內嵌 MFC OLE 範例所建立的項目[HIERSVR](../visual-cpp-samples.md)。 若要這樣做，就無法使用就地啟用。 您必須完全開啟 HIERSVR 才能啟用這個項目。 因為 MFC 程式庫不支援這項 OLE 功能，因此覆寫 `COleClientItem::CanActivate` 可讓您檢查是否有這種情況，並防止應用程式中出現可能的執行階段錯誤。
 
-如果您要建立新的應用程式，並且希望將它當做容器/伺服器應用程式執行，請在應用程式精靈的 [OLE 選項] 對話方塊中選擇該選項，如此就會自動建立這項支援。 如需詳細資訊，請參閱文章[概觀： 建立 ActiveX 控制項容器](../mfc/reference/creating-an-mfc-activex-control-container.md)。 如需有關 MFC 範例的詳細資訊，請參閱「MFC 範例」。
+如果您要建立新的應用程式，並且希望將它當做容器/伺服器應用程式執行，請在應用程式精靈的 [OLE 選項] 對話方塊中選擇該選項，如此就會自動建立這項支援。 如需詳細資訊，請參閱文章[概觀：建立 ActiveX 控制項容器](../mfc/reference/creating-an-mfc-activex-control-container.md)。 如需有關 MFC 範例的詳細資訊，請參閱「MFC 範例」。
 
 請注意，您無法將 MDI 應用程式插入至本身。 做為容器/伺服器的應用程式無法插入至本身，除非它是 SDI 應用程式。
 
@@ -75,4 +75,3 @@ MFC OLE 範例[OCLIENT](../visual-cpp-samples.md)實作這項功能。 如需如
 
 [容器](../mfc/containers.md)<br/>
 [伺服器](../mfc/servers.md)
-

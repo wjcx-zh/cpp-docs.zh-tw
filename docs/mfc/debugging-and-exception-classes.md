@@ -7,12 +7,12 @@ helpviewer_keywords:
 - debugging [MFC], exception classes
 - debugging [MFC], classes for debugging
 ms.assetid: 0d158efd-2e62-452e-9d2a-d3c30dfee7f9
-ms.openlocfilehash: 5549ea3e67f06e82e441c1ca5afc4a1b859dd410
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 328d7a38c544b56f83ea3e8b1136b1122c4dfa14
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587964"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271407"
 ---
 # <a name="debugging-and-exception-classes"></a>偵錯和例外狀況類別
 
@@ -23,4 +23,3 @@ ms.locfileid: "50587964"
 ## <a name="see-also"></a>另請參閱
 
 [類別概觀](../mfc/class-library-overview.md)
-

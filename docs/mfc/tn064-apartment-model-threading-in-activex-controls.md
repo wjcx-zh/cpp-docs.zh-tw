@@ -1,5 +1,5 @@
 ---
-title: TN064：ActiveX 控制項中的 Apartment Model 執行緒
+title: TN064:Apartment Model 執行緒在 ActiveX 控制項
 ms.date: 11/04/2016
 f1_keywords:
 - vc.controls.activex
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - multithread container [MFC]
 - apartment model threading [MFC]
 ms.assetid: b2ab4c88-6954-48e2-9a74-01d4a60df073
-ms.openlocfilehash: 37f8af1e4bd0fedf0b1ab14a90afdda3916c5391
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6f02b2106693226f6380e935a54e04e10d5b4f8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665552"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261163"
 ---
-# <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064：ActiveX 控制項中的 Apartment Model 執行緒
+# <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064:Apartment Model 執行緒在 ActiveX 控制項
 
 > [!NOTE]
 >  下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
@@ -111,4 +111,3 @@ else
 
 [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
 [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
-

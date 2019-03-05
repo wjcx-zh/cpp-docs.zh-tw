@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSingleLock [MFC], Lock
 - CSingleLock [MFC], Unlock
 ms.assetid: 7dae7288-8066-4a3e-85e0-78d28bfc6bc8
-ms.openlocfilehash: 2d65af79971aab88884efe1f92d1090194b737d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31bd43f7f7a6fbccd4680db013ac5c654123061e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459562"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259889"
 ---
 # <a name="csinglelock-class"></a>CSingleLock 類別
 
@@ -55,7 +55,7 @@ class CSingleLock
 
 若要使用`CSingleLock`物件，請在受控制的資源類別中呼叫其建構函式內的成員函式。 然後呼叫[IsLocked](#islocked)成員函式來判斷資源是否可用。 如果是，繼續進行此成員函式的其餘部分。 如果資源無法使用時，等候指定的發行，資源的時間量，或傳回失敗。 使用的資源完成之後，呼叫[Unlock](#unlock)函式`CSingleLock`物件是使用一次，或允許`CSingleLock`来終結物件。
 
-`CSingleLock` 物件，可能需要從衍生的物件是否存在[CSyncObject](../../mfc/reference/csyncobject-class.md)。 這通常是受控制的資源類別的資料成員。 如需有關如何使用`CSingleLock`物件，請參閱文章[多執行緒： 如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
+`CSingleLock` 物件，可能需要從衍生的物件是否存在[CSyncObject](../../mfc/reference/csyncobject-class.md)。 這通常是受控制的資源類別的資料成員。 如需有關如何使用`CSingleLock`物件，請參閱文章[多執行緒：如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

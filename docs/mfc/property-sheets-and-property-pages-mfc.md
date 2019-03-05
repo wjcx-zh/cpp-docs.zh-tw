@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CPropertySheet class [MFC], property sheets and pages
 - property sheets, propert pages
 ms.assetid: de8fea12-6c35-4cef-8625-b8073a379446
-ms.openlocfilehash: 971b8cde1560e54f87269e8b85a41cdec55c091d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ff2851cc4ed04a64f1a49d68b6e3143b5edccd8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445392"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278754"
 ---
 # <a name="property-sheets-and-property-pages-mfc"></a>屬性工作表和屬性頁 (MFC)
 
@@ -33,4 +33,3 @@ MFC [ 對話方塊](../mfc/dialog-boxes.md)可對透過加入屬性工作表和�
 [交換資料](../mfc/exchanging-data.md)<br/>
 [建立非強制回應屬性工作表](../mfc/creating-a-modeless-property-sheet.md)<br/>
 [處理套用按鈕](../mfc/handling-the-apply-button.md)
-

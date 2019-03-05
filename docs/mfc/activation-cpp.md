@@ -18,12 +18,12 @@ helpviewer_keywords:
 - activation [MFC], embedded OLE items
 - OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
-ms.openlocfilehash: ba3c705227e6ca189527d29d4f3ae0f21c71eb72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6009e5209ce71c6eed28faff2f55792a64de408
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493505"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276945"
 ---
 # <a name="activation-c"></a>啟用 (C++)
 
@@ -40,11 +40,10 @@ ms.locfileid: "50493505"
 
 MFC 不支援巢狀的就地啟用。 如果您建立容器/伺服器應用程式和容器/伺服器內嵌在另一個容器和就地啟用，它無法就地啟用內嵌在它的物件。
 
-當使用者按兩下它，在內嵌項目會發生什麼情況取決於項目中定義的動詞命令。 如需資訊，請參閱[啟用： 動詞命令](../mfc/activation-verbs.md)。
+當使用者按兩下它，在內嵌項目會發生什麼情況取決於項目中定義的動詞命令。 如需資訊，請參閱[啟用：動詞](../mfc/activation-verbs.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [容器](../mfc/containers.md)<br/>
 [伺服器](../mfc/servers.md)
-

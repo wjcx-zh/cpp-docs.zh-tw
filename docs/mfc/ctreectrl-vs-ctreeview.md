@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CTreeView class [MFC], vs. CTreeCtrl class [MFC]
 - tree controls [MFC], and tree view
 ms.assetid: bba5af25-103f-4b53-84d3-071bc9bd6494
-ms.openlocfilehash: 97997a57a02ee258a50d405f7f61ed9994ccf734
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29349e169e5ad8475001235d9b355da52156d683
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540409"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271628"
 ---
 # <a name="ctreectrl-vs-ctreeview"></a>CTreeCtrl 和CTreeView
 
-MFC 提供封裝樹狀目錄控制項的兩個類別： [CTreeCtrl](../mfc/reference/ctreectrl-class.md)並[CTreeView](../mfc/reference/ctreeview-class.md)。 每個類別是在不同的情況下很有用。
+MFC 提供封裝樹狀目錄控制項的兩個類別：[CTreeCtrl](../mfc/reference/ctreectrl-class.md)並[CTreeView](../mfc/reference/ctreeview-class.md)。 每個類別是在不同的情況下很有用。
 
 使用`CTreeCtrl`時需要純文字的子視窗控制項; 比方說，在對話方塊中。 特別是要使用`CTreeCtrl`如果在視窗中，如同一般的對話方塊中會有其他子控制項。
 
@@ -29,4 +29,3 @@ MFC 提供封裝樹狀目錄控制項的兩個類別： [CTreeCtrl](../mfc/refer
 
 [使用 CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [控制項](../mfc/controls-mfc.md)
-

@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: cd3eed89753031de64d35a2b3602b1fb42356123
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c782d5761323129eccf7ee129d877128c400d93a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613534"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270717"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl 類別
 
@@ -148,7 +148,7 @@ virtual BOOL Create(
 
 |參數|描述|
 |---------------|-----------------|
-|*cheaderctrl:: Create*|[in]位元組合 (OR)[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)並[頁面巡覽區控制項的樣式](/windows/desktop/Controls/pager-control-styles)来套用至控制項。|
+|*dwStyle*|[in]位元組合 (OR)[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)並[頁面巡覽區控制項的樣式](/windows/desktop/Controls/pager-control-styles)来套用至控制項。|
 |*rect*|[in]參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，其中包含的位置和大小的工作區座標中的控制項。|
 |*pParentWnd*|[in]指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。 這個參數不能是 NULL。|
 |*nID*|[in]控制項的 ID。|
@@ -185,7 +185,7 @@ virtual BOOL CreateEx(
 |參數|描述|
 |---------------|-----------------|
 |*dwExStyle*|[in]要套用至控制項的延伸樣式的位元組合。 如需詳細資訊，請參閱 < *dwExStyle*的參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)函式。|
-|*cheaderctrl:: Create*|[in]位元組合 (OR)[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)並[頁面巡覽區控制項的樣式](/windows/desktop/Controls/pager-control-styles)来套用至控制項。|
+|*dwStyle*|[in]位元組合 (OR)[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)並[頁面巡覽區控制項的樣式](/windows/desktop/Controls/pager-control-styles)来套用至控制項。|
 |*rect*|[in]參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，其中包含的位置和大小的工作區座標中的控制項。|
 |*pParentWnd*|[in]指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。 這個參數不能是 NULL。|
 |*nID*|[in]控制項的 ID。|
@@ -617,4 +617,3 @@ void SetScrollPos(int iPos);
 [CPagerCtrl 類別](../../mfc/reference/cpagerctrl-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [頁面巡覽區控制項](/windows/desktop/Controls/pager-controls)
-

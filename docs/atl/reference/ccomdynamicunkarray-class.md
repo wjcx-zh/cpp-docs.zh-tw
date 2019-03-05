@@ -18,12 +18,12 @@ helpviewer_keywords:
 - connection points [C++], managing
 - CComDynamicUnkArray class
 ms.assetid: 202470d7-9a1b-498f-b96d-659d681acd65
-ms.openlocfilehash: c18f28cac89288096b812635e77194bfb5dd224b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39f137f199db1d7519801c19375baea6cd08db93
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448681"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274150"
 ---
 # <a name="ccomdynamicunkarray-class"></a>CComDynamicUnkArray 類別
 
@@ -42,7 +42,7 @@ class CComDynamicUnkArray
 |名稱|描述|
 |----------|-----------------|
 |[CComDynamicUnkArray::CComDynamicUnkArray](#ccomdynamicunkarray)|建構函式。 會初始化為 NULL 的集合值和集合大小為零。|
-|[CComDynamicUnkArray:: ~ CComDynamicUnkArray](#dtor)|解構函式。|
+|[CComDynamicUnkArray::~CComDynamicUnkArray](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Primary verb [MFC]
 - OLE activation {MFC]
 ms.assetid: eb56ff23-1de8-43ad-abeb-dc7346ba7b70
-ms.openlocfilehash: f6774f1de1e7abd318e5cd38fed1a2c805270c15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baf8e0ac3527407b2e5ba77dfdf3921419217fd7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443321"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267910"
 ---
 # <a name="activation-verbs"></a>啟用：動詞命令
 
@@ -29,7 +29,7 @@ ms.locfileid: "50443321"
 
 經常使用的另一個指令動詞為 Open。 Open 動詞等同於編輯，但在另一個視窗中啟動伺服器應用程式。 當容器應用程式或伺服器應用程式不支援就地啟用，則應該使用此動詞命令。
 
-必須透過子功能表命令叫用主要的動詞命令以外的任何動作，選取項目時。 此子功能表包含項目所支援的所有動詞命令，且通常是達到所*typename* **物件**命令**編輯**功能表。 如需*typename* **物件**命令，請參閱本文[功能表和資源： 容器新增](../mfc/menus-and-resources-container-additions.md)。
+必須透過子功能表命令叫用主要的動詞命令以外的任何動作，選取項目時。 此子功能表包含項目所支援的所有動詞命令，且通常是達到所*typename* **物件**命令**編輯**功能表。 如需*typename* **物件**命令，請參閱文章[功能表和資源：容器新增](../mfc/menus-and-resources-container-additions.md)。
 
 伺服器應用程式支援的動詞會列在 Windows 註冊資料庫。 如果您的伺服器應用程式撰寫 Mfc 程式庫，它將在伺服器啟動時自動註冊所有動詞命令。 如果沒有，您應該在伺服器應用程式的初始化階段期間進行註冊。 如需詳細資訊，請參閱文章[註冊](../mfc/registration.md)。
 
@@ -38,4 +38,3 @@ ms.locfileid: "50443321"
 [啟動](../mfc/activation-cpp.md)<br/>
 [容器](../mfc/containers.md)<br/>
 [伺服器](../mfc/servers.md)
-

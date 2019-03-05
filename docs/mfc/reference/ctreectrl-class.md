@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: cc98a2e24fbb3eaff94e4c941986080d0bdbd7ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bc31cc9cff12146e6f5fe227e0e191d1c555063
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477944"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271394"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -311,7 +311,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定樹狀檢視控制項的樣式。 套用樣式視窗中所述[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)，及任何組合[樹狀檢視控制項的樣式](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK 中所述。
 
 *rect*<br/>
@@ -357,7 +357,7 @@ virtual BOOL CreateEx(
 *dwExStyle*<br/>
 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定樹狀檢視控制項的樣式。 套用樣式視窗中所述[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)，及任何組合[樹狀檢視控制項的樣式](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK 中所述。
 
 *rect*<br/>
@@ -534,7 +534,7 @@ BOOL Expand(
 *hItem*<br/>
 要展開的樹狀結構項目控點。
 
-*則 nCode*<br/>
+*nCode*<br/>
 旗標，指出要採取的動作類型。 這個旗標可以有下列值之一：
 
 - TVE_COLLAPSE 摺疊清單。
@@ -850,7 +850,7 @@ BOOL GetItemImage(
 *hItem*<br/>
 要擷取其映像的項目控制代碼。
 
-*n*<br/>
+*nImage*<br/>
 整數，接收在樹狀檢視控制項的影像清單內的項目影像的索引。
 
 *nSelectedImage*<br/>
@@ -1069,7 +1069,7 @@ HTREEITEM GetNextItem(
 *hItem*<br/>
 樹狀目錄中項目的控制代碼。
 
-*則 nCode*<br/>
+*nCode*<br/>
 旗標，指出關聯性的型別*hItem*。 這個旗標可以是下列值之一：
 
 - TVGN_CARET 擷取目前選取的項目。
@@ -1347,7 +1347,7 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pt*<br/>
 要測試 用戶端端點的座標。
 
 *pFlags*<br/>
@@ -1427,7 +1427,7 @@ HTREEITEM InsertItem(
 *lpszItem*<br/>
 字串，包含的項目文字的位址。
 
-*n*<br/>
+*nImage*<br/>
 樹狀檢視控制項的影像清單中的項目影像的索引。
 
 *nSelectedImage*<br/>
@@ -1572,7 +1572,7 @@ BOOL Select(
 *hItem*<br/>
 樹狀目錄中項目的控制代碼。
 
-*則 nCode*<br/>
+*nCode*<br/>
 要採取的動作類型。 這個參數可以是下列值之一：
 
 - TVGN_CARET 會將選取項目設定為指定的項目。
@@ -1925,7 +1925,7 @@ BOOL SetItem(
 *lpszItem*<br/>
 字串，包含的項目文字的位址。
 
-*n*<br/>
+*nImage*<br/>
 樹狀檢視控制項的影像清單中的項目影像的索引。 請參閱`iImage`隸屬`TVITEM`結構。
 
 *nSelectedImage*<br/>
@@ -2054,7 +2054,7 @@ BOOL SetItemImage(
 *hItem*<br/>
 若要設定其映像的項目控制代碼。
 
-*n*<br/>
+*nImage*<br/>
 樹狀檢視控制項的影像清單中的項目影像的索引。
 
 *nSelectedImage*<br/>

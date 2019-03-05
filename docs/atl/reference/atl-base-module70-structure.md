@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ATL_BASE_MODULE70 structure
 - _ATL_BASE_MODULE70 structure
 ms.assetid: 4539282f-15b8-4d7c-aafa-a85dc56f4980
-ms.openlocfilehash: 806ed86076d8b27662bcd9a328d43cabf5df5c86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4fddd4b3af6155d0663b9c01edfab4fcf4a60426
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667541"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261450"
 ---
 # <a name="atlbasemodule70-structure"></a>_ATL_BASE_MODULE70 結構
 
@@ -72,4 +72,3 @@ ATL 的內部 GUID。
 ## <a name="see-also"></a>另請參閱
 
 [類別和結構](../../atl/reference/atl-classes.md)
-

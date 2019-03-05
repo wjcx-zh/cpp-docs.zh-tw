@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: 11faec19160ccc6028bdb294f37a51d7fe26dc15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cea1ac1d500a9cf3bcbdc1f5dde33a0002cbd363
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619826"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257900"
 ---
 # <a name="tiledindex-class"></a>tiled_index 類別
 
@@ -133,7 +133,7 @@ tiled_index(
 *_Global*<br/>
 全域[index](index-class.md)建構`tiled_index`。
 
-*（_l)*<br/>
+*_Local*<br/>
 本機[index](index-class.md)建構 `tiled_index`
 
 *_Tile*<br/>
@@ -180,7 +180,7 @@ extent<rank> get_tile_extent()restrict(amp,cpu);
 const tile_barrier barrier;
 ```
 
-## <a name="tiled_index__global"></a>  全域
+## <a name="tiled_index__global"></a>  global
 
 存放區[index](index-class.md)物件的陣序規範 1、 2 或 3，表示物件的全域索引。
 
@@ -190,7 +190,7 @@ const tile_barrier barrier;
 const index<rank> global;
 ```
 
-## <a name="tiled_index__local"></a>  本機
+## <a name="tiled_index__local"></a>  local
 
 存放區[index](index-class.md)物件的陣序規範 1、 2 或 3，表示相對於索引中之目前磚[tiled_extent](tiled-extent-class.md)物件。
 
@@ -210,7 +210,7 @@ const index<rank> local;
 static const int rank = _Rank;
 ```
 
-## <a name="tiled_index__tile"></a>  圖格
+## <a name="tiled_index__tile"></a>  tile
 
 存放區[index](index-class.md)物件的陣序規範 1、 2 或 3，表示目前的圖格的座標[tiled_extent](tiled-extent-class.md)物件。
 

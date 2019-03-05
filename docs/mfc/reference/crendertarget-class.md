@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 3066f3308d0c7e5c9a04f7746585be9a9dd5bc9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 112bd4422a1fa6b9b97239228dc586a0555ddc96
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588635"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259876"
 ---
 # <a name="crendertarget-class"></a>CRenderTarget 類別
 
@@ -138,7 +138,7 @@ class CRenderTarget : public CObject;
 |名稱|描述|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|建構 CRenderTarget 物件。|
-|[CRenderTarget:: ~ CRenderTarget](#crendertarget__~crendertarget)|解構函式。 呈現目標物件正在被終結時呼叫。|
+|[CRenderTarget::~CRenderTarget](#crendertarget__~crendertarget)|解構函式。 呈現目標物件正在被終結時呼叫。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -204,7 +204,7 @@ class CRenderTarget : public CObject;
 
 |名稱|描述|
 |----------|-----------------|
-|[CRenderTarget::operator ID2D1RenderTarget *](#operator_id2d1rendertarget_star)|傳回 ID2D1RenderTarget 介面|
+|[CRenderTarget::operator ID2D1RenderTarget*](#operator_id2d1rendertarget_star)|傳回 ID2D1RenderTarget 介面|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
@@ -224,7 +224,7 @@ class CRenderTarget : public CObject;
 
 **標頭：** afxrendertarget.h
 
-##  <a name="_dtorcrendertarget"></a>  CRenderTarget:: ~ CRenderTarget
+##  <a name="_dtorcrendertarget"></a>  CRenderTarget::~CRenderTarget
 
 解構函式。 呈現目標物件正在被終結時呼叫。
 
@@ -263,7 +263,7 @@ void Clear(D2D1_COLOR_F color);
 
 ### <a name="parameters"></a>參數
 
-*色彩*<br/>
+*color*<br/>
 要清除的繪圖區域的色彩。
 
 ##  <a name="colorref_to_d2dcolor"></a>  CRenderTarget::COLORREF_TO_D2DCOLOR
@@ -278,7 +278,7 @@ static D2D1_COLOR_F COLORREF_TO_D2DCOLOR(
 
 ### <a name="parameters"></a>參數
 
-*色彩*<br/>
+*color*<br/>
 RGB 值。
 
 *nAlpha*
@@ -402,7 +402,7 @@ void DrawEllipse(
 
 ### <a name="parameters"></a>參數
 
-*橢圓形*<br/>
+*ellipse*<br/>
 位置與裝置無關的像素繪製橢圓形的半徑。
 
 *pBrush*<br/>
@@ -564,7 +564,7 @@ void DrawText(
 
 ### <a name="parameters"></a>參數
 
-*先把 strText*<br/>
+*strText*<br/>
 要繪製的 Unicode 字元陣列指標。
 
 *rect*<br/>
@@ -573,7 +573,7 @@ void DrawText(
 *pForegroundBrush*<br/>
 用來繪製文字的筆刷。
 
-*TextFormat*<br/>
+*textFormat*<br/>
 物件，描述要繪製的文字，例如字型、 字型大小及文字方向的詳細資料的格式。
 
 *options*<br/>
@@ -632,7 +632,7 @@ void FillEllipse(
 
 ### <a name="parameters"></a>參數
 
-*橢圓形*<br/>
+*ellipse*<br/>
 位置和半徑，以與裝置無關的像素，來繪製橢圓形。
 
 *pBrush*<br/>
@@ -955,7 +955,7 @@ CD2DTextFormat 物件，其中包含預設的文字格式的指標。
 CD2DTextFormat* m_pTextFormatDefault;
 ```
 
-##  <a name="operator_id2d1rendertarget_star"></a>  CRenderTarget::operator ID2D1RenderTarget *
+##  <a name="operator_id2d1rendertarget_star"></a>  CRenderTarget::operator ID2D1RenderTarget*
 
 傳回 ID2D1RenderTarget 介面
 
@@ -1016,7 +1016,7 @@ void PushLayer(
 *layerParameters*<br/>
 內容繫結、 幾何的遮罩、 不透明度、 不透明度遮罩和圖層的消除鋸齒選項。
 
-*圖層*<br/>
+*layer*<br/>
 接收後續的繪圖作業的圖層。
 
 ##  <a name="restoredrawingstate"></a>  CRenderTarget::RestoreDrawingState

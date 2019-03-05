@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE applications [MFC], MFC application framework
 - database applications [MFC], creating
 ms.assetid: 73f63470-857d-43dd-9a54-b38b7be0f1b7
-ms.openlocfilehash: eaa1c178a8d93315d5477efa1213ed0698cd460c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8b3d7061c0ef06063d9c6993f24d23fc2e1f92e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517321"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265297"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>使用類別來編寫 Windows 應用程式
 
@@ -38,7 +38,7 @@ ms.locfileid: "50517321"
 
 架構的其他部分包括：
 
-- [視窗物件： 概觀](../mfc/window-objects.md)
+- [視窗物件：概觀](../mfc/window-objects.md)
 
 - [訊息處理和對應](../mfc/message-handling-and-mapping.md)
 
@@ -73,4 +73,3 @@ MFC 文件的一般指引，請參閱 <<c0> [ 一般 MFC 主題](../mfc/general-
 ## <a name="see-also"></a>另請參閱
 
 [一般 MFC 主題](../mfc/general-mfc-topics.md)
-

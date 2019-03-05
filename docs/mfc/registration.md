@@ -11,12 +11,12 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-ms.openlocfilehash: 1c8c0d32db202b8ba26afec708bcc8bab8e3282c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bc606acfba26d27d0ab36045e4772593e760e98
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461954"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272162"
 ---
 # <a name="registration"></a>註冊
 
@@ -46,7 +46,7 @@ RegEdit 會合併 .reg 文字檔的內容至註冊資料庫。 若要驗證或�
 
 當您使用應用程式精靈建立伺服器應用程式時，精靈自動為您完成所有初始化工作。 本節說明手動撰寫伺服器應用程式時必須做的事情。
 
-當容器應用程式啟動伺服器應用程式時，OLE 系統 DLL 會將「/Embedding」選項加入至伺服器的命令列中。 伺服器應用程式的行為會視其由容器啟動與否而有所不同，因此，應用程式開始執行時應做的第一件事就是檢查命令列的「/Embedding」或「-Embedding」選項。 如果此參數存在，請載入一組將伺服器顯示為就地啟動或完全開啟的不同資源。 如需詳細資訊，請參閱 <<c0> [ 功能表和資源： 伺服器加入](../mfc/menus-and-resources-server-additions.md)。
+當容器應用程式啟動伺服器應用程式時，OLE 系統 DLL 會將「/Embedding」選項加入至伺服器的命令列中。 伺服器應用程式的行為會視其由容器啟動與否而有所不同，因此，應用程式開始執行時應做的第一件事就是檢查命令列的「/Embedding」或「-Embedding」選項。 如果此參數存在，請載入一組將伺服器顯示為就地啟動或完全開啟的不同資源。 如需詳細資訊，請參閱[功能表和資源：伺服器加入](../mfc/menus-and-resources-server-additions.md)。
 
 您的伺服器應用程式也應該呼叫其 `CWinApp::RunEmbedded` 函式來剖析命令列。 如果傳回非零的值，則應用程式不應該顯示其視窗，因為其是從容器應用程式而非獨立的應用程式執行。 此函式會更新在系統註冊資料庫中的伺服器項目，並為您呼叫 `RegisterAll` 成員函式，以執行執行個體註冊。
 

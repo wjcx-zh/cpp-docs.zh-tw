@@ -1,5 +1,5 @@
 ---
-title: TN035：在 Visual C++ 中使用多個資源檔和標頭檔
+title: TN035:使用 Visual c + + 中的多個資源檔和標頭檔
 ms.date: 11/04/2016
 f1_keywords:
 - vc.resources
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 6f89e10c2a05d1352dc2347af0aa0215079ea56c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d97e4536c2a43e7e224e9056aa39df5480daeca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567657"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279911"
 ---
-# <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035：在 Visual C++ 中使用多個資源檔和標頭檔
+# <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035:使用 Visual c + + 中的多個資源檔和標頭檔
 
 > [!NOTE]
 >  下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
@@ -111,7 +111,7 @@ AFXRES.H 會定義標準符號，例如 Framework 所使用 (特別是用在 AFX
 
 ## <a name="_mfcnotes_tn035_including"></a> 包含其他標頭檔
 
-AppWizard 建立的應用程式只會包含兩個標頭檔：RESOURCE.H 和 AFXRES.H。 只有 RESOURCE.H 是應用程式專用的。 您可能需要在下列情況中包含其他唯讀標頭檔：
+AppWizard 建立的應用程式會包含只有兩個標頭檔：資源。H 和 AFXRES。H. 只有 RESOURCE.H 是應用程式專用的。 您可能需要在下列情況中包含其他唯讀標頭檔：
 
 標頭檔是由外部來源提供，或者您想要在多個專案之間或相同專案的多個組件之間共用標頭檔。
 
@@ -179,7 +179,7 @@ Visual C++ 和資源編譯器透過 .RC 檔中另一個資源檔的 #include 支
 
 - 如果您需要以其他特定資料編輯器可解譯的二進位或文字格式來保留使用者定義的資源，那麼就必須在個別 .RC 檔中保留此資源，這樣 Visual C++ 才不會將格式變更為十六進位資料。 。MFC 進階概念範例中的 WAV （聲音） 檔案資源[SPEAKN](../visual-cpp-samples.md)是理想的範例。
 
-您可以在 [Set Includes] 對話方塊中，使用 #include 將 SECOND.RC 包含在編譯時間指示詞中：
+您可以在 [Set Includes] 對話方塊中，使用 #include 將 SECOND.RC 包含在編譯時期指示詞中：
 
 ```
 #include "res\myapp.rc2"  // non-Visual C++ edited resources
@@ -300,7 +300,7 @@ Visual C++ 永遠會在儲存檔案時，將 //{{NO_DEPENDENCIES}} 註解行加�
 
 以下將說明 Visual C++ 如何在 .RC 檔案中維護這個資訊。 您不需要此項資訊也可以使用 Visual C++，但是這可以增進您的理解，讓自己有更多的把握使用 [Set Includes] 功能。
 
-上述三種類型的 Set Includes 資訊都個別以兩種形式儲存於 .RC 檔：(1) 為 #include 或其他可由資源編譯器解譯的指示詞，以及 (2) 為只能由 Visual C++ 解譯的特殊 TEXTINCLUDE 資源。
+每個上述三種 Set Includes 資訊儲存在。RC 檔，以兩種形式：（1） 為 #include 或其他指示詞可解譯由資源編譯器，以及 （2） 的特殊 TEXTINCLUDE 資源可解譯只能由 Visual c + +。
 
 TEXTINCLUDE 資源的目的是要安全地儲存在被輕易地呈現 Visual c + + 中的表單中的 [Set Includes 資訊**Set Includes** ] 對話方塊。 TEXTINCLUDE 是*資源類型*Visual c + + 所定義。 Visual C++ 可以辨認資源識別碼為 1、2 和 3 的三個特定 TEXTINCLUDE 資源：
 
@@ -308,7 +308,7 @@ TEXTINCLUDE 資源的目的是要安全地儲存在被輕易地呈現 Visual c +
 |-----------------------------|--------------------------------------|
 |1|符號標頭檔|
 |2|唯讀符號指示詞|
-|3|編譯時間指示詞|
+|3|編譯時期指示詞|
 
 AppWizard 建立的預設 MYAPP.RC 和 RESOURCE.H 檔案會示例說明三種 Set Includes 資訊中的每一個類型，如下所述。 BEGIN 和 END 區塊之間的額外 \0 和 "" 語彙基元是基於 RC 語法的需求，分別用來指定以零結尾的字串和雙引號字元。
 
@@ -347,7 +347,7 @@ BEGIN
 END
 ```
 
-## <a name="compile-time-directives"></a>編譯時間指示詞
+## <a name="compile-time-directives"></a>編譯時期指示詞
 
 編譯時期指示詞是以資源編譯器可解譯的下列形式包含在 MYAPP.RC 結尾：
 
@@ -383,4 +383,3 @@ END
 
 [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
 [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
-

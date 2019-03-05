@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-ms.openlocfilehash: 93ef654bb71a342a6215ce5cd60786f36cadedf7
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 16d18d23c370a8a603ab6150fcee18455ae47c48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657548"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259018"
 ---
 # <a name="array-class"></a>array 類別
 
@@ -123,7 +123,7 @@ friend class array;
 
 **命名空間：** 並行
 
-##  <a name="dtor"></a> ~ 陣列
+##  <a name="dtor"></a> ~array
 
 終結`array`物件。
 
@@ -475,7 +475,7 @@ void copy_to(
 __declspec(property(get= get_cpu_access_type)) access_type cpu_access_type;
 ```
 
-##  <a name="data"></a> 資料
+##  <a name="data"></a> data
 
 傳回的未經處理資料的指標`array`。
 
@@ -543,7 +543,7 @@ Concurrency::extent<_Rank> get_extent() const restrict(amp,cpu);
 
 `extent`物件的`array`。
 
-##  <a name="operator_vec"></a> 運算子 std:: vector&lt;value_type&gt;
+##  <a name="operator_vec"></a> operator std::vector&lt;value_type&gt;
 
 使用`copy(*this, vector)`來隱含地轉換成 std:: vector 物件的陣列。
 
@@ -560,7 +560,7 @@ operator std::vector<value_type>() const restrict(cpu);
 
 型別的物件`vector<T>`包含陣列中所包含的資料複本。
 
-##  <a name="operator_call"></a> operator （)
+##  <a name="operator_call"></a> operator()
 
 傳回參數所指定的項目值。
 
@@ -603,7 +603,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 
 參數所指定項目值。
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 傳回位於指定索引處的項目。
 

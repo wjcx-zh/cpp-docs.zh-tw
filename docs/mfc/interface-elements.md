@@ -5,12 +5,12 @@ helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-ms.openlocfilehash: 9cf38d3d469da181d15a10434525b3aca63969f0
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: fa6dc78c95717f9201e18346f1cbe573fa3c48d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175895"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262879"
 ---
 # <a name="interface-elements"></a>介面項目
 
@@ -46,7 +46,7 @@ ms.locfileid: "52175895"
 
 ## <a name="mini-frame-windows"></a>迷你框架 Windows
 
-浮動窗格位於迷你框架視窗。 迷你框架視窗由兩個類別： [CMDITabInfo 類別](../mfc/reference/cmditabinfo-class.md)（其中包含只有一個窗格） 和[CMultiPaneFrameWnd 類別](../mfc/reference/cmultipaneframewnd-class.md)（可以包含多個窗格）。 若要在程式碼中浮動窗格，呼叫[CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane)。 浮動窗格之後，架構會自動建立迷你框架視窗，而該迷你框架視窗變成浮動窗格的父代。 當停駐在浮動窗格時，架構會重設其父代，，而且浮動窗格會變成停駐列 （適用於工具列） 或 （適用於可調整大小的窗格） 與停駐位置。
+浮動窗格位於迷你框架視窗。 迷你框架視窗會以兩個類別：[CMDITabInfo 類別](../mfc/reference/cmditabinfo-class.md)（其中包含只有一個窗格） 和[CMultiPaneFrameWnd 類別](../mfc/reference/cmultipaneframewnd-class.md)（可以包含多個窗格）。 若要在程式碼中浮動窗格，呼叫[CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane)。 浮動窗格之後，架構會自動建立迷你框架視窗，而該迷你框架視窗變成浮動窗格的父代。 當停駐在浮動窗格時，架構會重設其父代，，而且浮動窗格會變成停駐列 （適用於工具列） 或 （適用於可調整大小的窗格） 與停駐位置。
 
 ## <a name="pane-dividers"></a>窗格分割線
 
@@ -69,4 +69,3 @@ Outlook 功能區控制項也根據索引標籤式的橫條圖。 [CMFCOutlookBa
 ## <a name="see-also"></a>另請參閱
 
 [概念](../mfc/mfc-concepts.md)
-

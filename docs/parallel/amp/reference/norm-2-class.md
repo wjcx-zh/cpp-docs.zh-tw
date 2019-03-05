@@ -28,12 +28,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2
 - amp_short_vectors/Concurrency::graphics::norm_2::operator--
 ms.assetid: 80703f9b-61f4-414a-93fd-bc774f7d3393
-ms.openlocfilehash: ebf1a80a695f1d25652f239f66d8d40c0e1099ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c48e6dd573e3303307cc8a0247a955aba62d809e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542206"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271173"
 ---
 # <a name="norm2-class"></a>norm_2 類別
 
@@ -116,7 +116,7 @@ class norm_2;
 
 **標頭：** amp_short_vectors.h
 
-**命名空間：** concurrency:: graphics
+**命名空間：** Concurrency:: graphics
 
 ##  <a name="ctor"></a> norm_2
 
@@ -182,7 +182,7 @@ explicit inline norm_2(
 *_V1*<br/>
 要初始化項目 1 的值。
 
-*（_V)*<br/>
+*_V*<br/>
 初始設定的值。
 
 *_Other*<br/>

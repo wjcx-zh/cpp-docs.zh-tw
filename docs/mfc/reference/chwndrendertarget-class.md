@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHwndRenderTarget [MFC], Resize
 - CHwndRenderTarget [MFC], m_pHwndRenderTarget
 ms.assetid: aa65b69f-7202-46ea-af81-ef325da0b840
-ms.openlocfilehash: 439ff0152ec69575f21faa332d8fac4bbe779a16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf446cdf1ea064943ff92d66ac89b0e4177e6910
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551862"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270316"
 ---
 # <a name="chwndrendertarget-class"></a>CHwndRenderTarget 類別
 
@@ -68,7 +68,7 @@ class CHwndRenderTarget : public CRenderTarget;
 
 |名稱|描述|
 |----------|-----------------|
-|[CHwndRenderTarget::operator ID2D1HwndRenderTarget *](#operator_id2d1hwndrendertarget_star)|傳回 ID2D1HwndRenderTarget 介面。|
+|[CHwndRenderTarget::operator ID2D1HwndRenderTarget*](#operator_id2d1hwndrendertarget_star)|傳回 ID2D1HwndRenderTarget 介面。|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
@@ -187,7 +187,7 @@ ID2D1HwndRenderTarget 物件的指標。
 ID2D1HwndRenderTarget* m_pHwndRenderTarget;
 ```
 
-##  <a name="operator_id2d1hwndrendertarget_star"></a>  CHwndRenderTarget::operator ID2D1HwndRenderTarget *
+##  <a name="operator_id2d1hwndrendertarget_star"></a>  CHwndRenderTarget::operator ID2D1HwndRenderTarget*
 
 傳回 ID2D1HwndRenderTarget 介面。
 

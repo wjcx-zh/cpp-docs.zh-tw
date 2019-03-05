@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-ms.openlocfilehash: 344886ca4af45d55b85cc7471c1e558d73cbebf6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 4216898e85ebbec748598e10ebb31ce5510f7908
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175882"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267780"
 ---
 # <a name="crebar-class"></a>CReBar 類別
 
@@ -37,7 +37,7 @@ class CReBar : public CControlBar
 |----------|-----------------|
 |[CReBar::AddBar](#addbar)|將 rebar 群組列。|
 |[CReBar::Create](#create)|建立 rebar 控制項，並將它附加至`CReBar`物件。|
-|[Crebar:: Getrebarctrl](#getrebarctrl)|允許直接存取基礎的通用控制項。|
+|[CReBar::GetReBarCtrl](#getrebarctrl)|允許直接存取基礎的通用控制項。|
 
 ## <a name="remarks"></a>備註
 
@@ -100,7 +100,7 @@ BOOL AddBar(
 *pbmp*<br/>
 指標`CBitmap`rebar 背景上顯示的物件。 預設為 NULL。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 DWORD 包含樣式来套用至 rebar。 請參閱`fStyle`函數在 Win32 結構描述[REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa)的寬線樣式的完整清單。
 
 *clrFore*<br/>
@@ -137,7 +137,7 @@ virtual BOOL Create(
 *dwCtrlStyle*<br/>
 Rebar 控制項樣式。 根據預設，RBS_BANDBORDERS，它會顯示有限的幾行，以分隔相鄰的群組列的 rebar 控制項中。 請參閱[Rebar 控制項的樣式](/windows/desktop/Controls/rebar-control-styles)Windows SDK，如需樣式的清單中。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 Rebar 的視窗樣式。
 
 *nID*<br/>
@@ -151,7 +151,7 @@ Rebar 的子視窗識別碼。
 
   範例，請參閱[CReBar::AddBar](#addbar)。
 
-##  <a name="getrebarctrl"></a>  Crebar:: Getrebarctrl
+##  <a name="getrebarctrl"></a>  CReBar::GetReBarCtrl
 
 此成員函式允許直接存取基礎的通用控制項。
 
@@ -178,4 +178,3 @@ CReBarCtrl& GetReBarCtrl() const;
 [MFC 範例 MFCIE](../../visual-cpp-samples.md)<br/>
 [CControlBar 類別](../../mfc/reference/ccontrolbar-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

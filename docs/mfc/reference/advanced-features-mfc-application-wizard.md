@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: 1af16f7009ceb97ea86d641f47cf56ea5a398c26
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 5643e1e9f4f558163c1c2a3b65070f90afdc7dba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694290"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278219"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>MFC 應用程式精靈、進階功能
 
@@ -21,7 +21,7 @@ ms.locfileid: "51694290"
 
    會產生一組即時線上說明，請使用 F1 和說明 功能表中，或按一下可用的說明檔案**協助**對話方塊上的按鈕。 必須有說明編譯器才能支援 [說明]。 如果沒有說明編譯器，可重新執行安裝程式進行安裝。
 
-   請參閱[HTML 說明： 程式的即時線上說明](../../mfc/html-help-context-sensitive-help-for-your-programs.md)並[的說明 」 檔案 （HTML 說明）](../../ide/help-files-html-help.md)如需詳細資訊。
+   請參閱[HTML 說明：您的程式的即時線上說明](../../mfc/html-help-context-sensitive-help-for-your-programs.md)並[說明 」 檔案 （HTML 說明）](../../ide/help-files-html-help.md)如需詳細資訊。
 
 - **列印和預覽列印**
 
@@ -57,7 +57,7 @@ ms.locfileid: "51694290"
 
 - **支援重新啟動管理員**
 
-   新增對[Windows 重新啟動管理員](/windows/desktop/RstMgr/using-restart-manager)。 這段影片示範如何使用 MFC 的重新啟動管理員：[如何： 使用新的重新啟動管理員](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100))。
+   新增對[Windows 重新啟動管理員](/windows/desktop/RstMgr/using-restart-manager)。 這段影片示範如何使用 MFC 的重新啟動管理員：[How Do i:使用新的重新啟動管理員](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100))。
 
 - **進階的框架窗格**
 
@@ -76,4 +76,3 @@ ms.locfileid: "51694290"
 ## <a name="see-also"></a>另請參閱
 
 [MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)
-

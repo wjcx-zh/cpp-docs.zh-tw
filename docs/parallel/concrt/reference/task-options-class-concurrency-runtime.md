@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - ppltasks/concurrency::task_options
 ms.assetid: f93d146b-70f7-46ec-8c2f-c33b8bb0af69
-ms.openlocfilehash: 78005e500e9fefae7fed6085e061af7ee4264d14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c832ce759c556765fa412b2ef77333bc6612b8c3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633099"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265206"
 ---
 # <a name="taskoptions-class-concurrency-runtime"></a>task_options 類別 (並行執行階段)
 
-表示用於建立工作的允許選項
+代表可用來建立工作的選項。
 
 ## <a name="syntax"></a>語法
 

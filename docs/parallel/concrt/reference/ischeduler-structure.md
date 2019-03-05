@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-ms.openlocfilehash: dd280884ab106bcf878b06c94e2ea3d0d99be2e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54db5d664a48f95a952eb1b409839d8ac3421e30
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603212"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274072"
 ---
 # <a name="ischeduler-structure"></a>IScheduler 結構
 
@@ -37,13 +37,13 @@ struct IScheduler;
 
 |名稱|描述|
 |----------|-----------------|
-|[Ischeduler:: Addvirtualprocessors](#addvirtualprocessors)|提供一組的虛擬處理器根排程器，供其使用。 每個`IVirtualProcessorRoot`介面代表執行單一執行緒可以執行排程器代表工作的權限。|
+|[IScheduler::AddVirtualProcessors](#addvirtualprocessors)|提供一組的虛擬處理器根排程器，供其使用。 每個`IVirtualProcessorRoot`介面代表執行單一執行緒可以執行排程器代表工作的權限。|
 |[IScheduler::GetId](#getid)|排程器傳回的唯一識別碼。|
 |[IScheduler::GetPolicy](#getpolicy)|傳回排程器原則的複本。 如需有關排程器原則的詳細資訊，請參閱 < [SchedulerPolicy](schedulerpolicy-class.md)。|
 |[IScheduler::NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|這個陣列中的虛擬處理器根物件的集合所代表的硬體執行緒的排程器會通知`ppVirtualProcessorRoots`現在正由其他排程器。|
 |[IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|這個陣列中的虛擬處理器根物件的集合所代表的硬體執行緒的排程器會通知`ppVirtualProcessorRoots`不正由其他排程器。|
 |[IScheduler::RemoveVirtualProcessors](#removevirtualprocessors)|起始移除的先前配置給這個排程器的虛擬處理器根。|
-|[Ischeduler:: Statistics](#statistics)|提供工作從抵達到完成率，以及變更佇列長度的排程器的相關資訊。|
+|[IScheduler::Statistics](#statistics)|提供工作從抵達到完成率，以及變更佇列長度的排程器的相關資訊。|
 
 ## <a name="remarks"></a>備註
 

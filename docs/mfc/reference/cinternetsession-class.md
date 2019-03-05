@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 216f3bf0ce62eb6e69ad0650289c4c2d91f95159
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 5ad1a1a0dde32358828d58a8f237337c4f62f3e5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178157"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261293"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 類別
 
@@ -66,11 +66,11 @@ class CInternetSession : public CObject
 |[CInternetSession::GetContext](#getcontext)|網際網路工作階段終止時，請關閉網際網路連線。|
 |[CInternetSession::GetCookie](#getcookie)|傳回指定的 URL 和所有其父代 Url 的 cookie。|
 |[CInternetSession::GetCookieLength](#getcookielength)|擷取指定的 cookie 儲存在緩衝區長度的變數。|
-|[Cinternetsession:: Getftpconnection](#getftpconnection)|開啟伺服器的 FTP 工作階段。 使用者登入。|
-|[Getgopherconnection](#getgopherconnection)|開啟應用程式嘗試開啟連線 gopher 伺服器。|
-|[Cinternetsession:: Gethttpconnection](#gethttpconnection)|開啟應用程式嘗試開啟連線的 HTTP 伺服器。|
+|[CInternetSession::GetFtpConnection](#getftpconnection)|開啟伺服器的 FTP 工作階段。 使用者登入。|
+|[CInternetSession::GetGopherConnection](#getgopherconnection)|開啟應用程式嘗試開啟連線 gopher 伺服器。|
+|[CInternetSession::GetHttpConnection](#gethttpconnection)|開啟應用程式嘗試開啟連線的 HTTP 伺服器。|
 |[CInternetSession::OnStatusCallback](#onstatuscallback)|啟用狀態回呼時更新作業的狀態。|
-|[Cinternetsession:: Openurl](#openurl)|剖析，並開啟的 URL。|
+|[CInternetSession::OpenURL](#openurl)|剖析，並開啟的 URL。|
 |[CInternetSession::SetCookie](#setcookie)|設定指定之 url 的 cookie。|
 |[CInternetSession::SetOption](#setoption)|設定網際網路工作階段選項。|
 
@@ -294,7 +294,7 @@ DWORD 值，指出 cookie，長度會儲存在緩衝區中。 如果沒有 cooki
 
 這個值由[GetCookie](#getcookie)。
 
-## <a name="getftpconnection"></a>  Cinternetsession:: Getftpconnection
+## <a name="getftpconnection"></a>  CInternetSession::GetFtpConnection
 
 呼叫此成員函式，以建立 FTP 連線，並取得的指標`CFtpConnection`物件。
 
@@ -343,7 +343,7 @@ CFtpConnection* GetFtpConnection(
 
 範例，請參閱[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)。
 
-## <a name="getgopherconnection"></a>  Getgopherconnection
+## <a name="getgopherconnection"></a>  CInternetSession::GetGopherConnection
 
 呼叫此成員函式，以建立新的 gopher 連線並取得的指標`CGopherConnection`物件。
 
@@ -377,7 +377,7 @@ CGopherConnection* GetGopherConnection(
 
 `GetGopherConnection` 連線至 gopher 伺服器，並會建立並將指標傳回至`CGopherConnection`物件。 它不會執行任何伺服器上的特定作業。 如果您想要讀取或寫入資料，例如，您就必須執行這些作業分開的步驟。 請參閱類別[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)， [CGopherFile](../../mfc/reference/cgopherfile-class.md)，並[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)有關搜尋檔案，開啟檔案，並讀取或寫入檔案。 如需瀏覽 FTP 站台資訊，請參閱成員函式[OpenURL](#openurl)。 請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)中執行一般 gopher 連接工作的步驟。
 
-## <a name="gethttpconnection"></a>  Cinternetsession:: Gethttpconnection
+## <a name="gethttpconnection"></a>  CInternetSession::GetHttpConnection
 
 呼叫此成員函式，以建立 HTTP 連線，並取得的指標`CHttpConnection`物件。
 
@@ -477,7 +477,7 @@ virtual void OnStatusCallback(
 
 如需有關非同步作業的詳細資訊，請參閱文章[網際網路前幾個步驟：WinInet](../../mfc/wininet-basics.md)。
 
-## <a name="openurl"></a>  Cinternetsession:: Openurl
+## <a name="openurl"></a>  CInternetSession::OpenURL
 
 呼叫此成員函式將指定的要求傳送至 HTTP 伺服器，並允許用戶端指定其他的 RFC822 MIME 或 HTTP 標頭，連同要求一起傳送。
 
@@ -532,7 +532,7 @@ CStdioFile* OpenURL(
 |file://|`CStdioFile*`|
 |http://|`CHttpFile*`|
 |gopher://|`CGopherFile*`|
-|ftp: / /|`CInternetFile*`|
+|ftp://|`CInternetFile*`|
 
 ### <a name="remarks"></a>備註
 

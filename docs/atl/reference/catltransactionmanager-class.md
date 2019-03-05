@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: e69ea2b7446e784bb643050bd122c93ea53a0676
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031d72903d72af77f6929072e4605d32d81585a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463774"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270198"
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager 類別
 
@@ -51,7 +51,7 @@ class CAtlTransactionManager;
 
 |名稱|描述|
 |----------|-----------------|
-|[~ CAtlTransactionManager](#dtor)|CAtlTransactionManager 解構函式。|
+|[~CAtlTransactionManager](#dtor)|CAtlTransactionManager 解構函式。|
 |[CAtlTransactionManager](#catltransactionmanager)|CAtlTransactionManager 建構函式。|
 
 ### <a name="public-methods"></a>公用方法
@@ -59,7 +59,7 @@ class CAtlTransactionManager;
 |名稱|描述|
 |----------|-----------------|
 |[關閉](#close)|其中一個關閉交易控制代碼。|
-|[認可](#commit)|要求交易被認可。|
+|[Commit](#commit)|要求交易被認可。|
 |[建立](#create)|建立交易控制代碼。|
 |[CreateFile](#createfile)|建立或開啟檔案、 檔案資料流或與交易的作業目錄。|
 |[DeleteFile](#deletefile)|為交易的作業會刪除現有的檔案。|
@@ -72,7 +72,7 @@ class CAtlTransactionManager;
 |[RegCreateKeyEx](#regcreatekeyex)|建立指定的登錄機碼，並將它與交易產生關聯。 如果索引鍵已經存在，此函式會開啟它。|
 |[RegDeleteKey](#regdeletekey)|從指定的平台特定的登錄檢視中刪除子機碼和其值為交易的作業。|
 |[RegOpenKeyEx](#regopenkeyex)|開啟指定的登錄機碼，並將它與交易產生關聯。|
-|[復原](#rollback)|交易回復的要求。|
+|[Rollback](#rollback)|交易回復的要求。|
 |[SetFileAttributes](#setfileattributes)|將檔案或目錄的屬性設定為交易的作業。|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
@@ -92,7 +92,7 @@ class CAtlTransactionManager;
 
 **標頭：** atltransactionmanager.h
 
-##  <a name="dtor"></a>  ~ CAtlTransactionManager
+##  <a name="dtor"></a>  ~CAtlTransactionManager
 
 CAtlTransactionManager 解構函式。
 
@@ -191,16 +191,16 @@ inline HANDLE CreateFile(
 若要建立或開啟物件的名稱。
 
 *dwDesiredAccess*<br/>
-存取的物件，可總結為讀取、 寫入、 兩者或兩者都關閉 （零）。 最常使用的值為 GENERIC_READ、 GENERIC_WRITE，或兩者： GENERIC_READ &#124; GENERIC_WRITE。
+存取的物件，可總結為讀取、 寫入、 兩者或兩者都關閉 （零）。 最常使用的值是 GENERIC_READ、 GENERIC_WRITE，或兩者：GENERIC_READ &#124; GENERIC_WRITE.
 
 *dwShareMode*<br/>
-物件，該物件可以是讀取、 寫入、 兩者、 delete、 none 或所有這些項目，共用的模式： 0，FILE_SHARE_DELETE FILE_SHARE_READ、 FILE_SHARE_WRITE。
+物件，該物件可以是讀取、 寫入、 兩者，刪除所有的這些項目，或無共用的模式：0，FILE_SHARE_DELETE，FILE_SHARE_READ，FILE_SHARE_WRITE。
 
 *lpSecurityAttributes*<br/>
 包含選擇性的安全性描述元，而且也會決定子處理序可以繼承傳回的控制代碼 SECURITY_ATTRIBUTES 結構的指標。 參數可以是 NULL。
 
 *dwCreationDisposition*<br/>
-要存在，且不存在的檔案上採取的動作。 這個參數必須是下列值，無法合併的其中一個： CREATE_ALWAYS、 CREATE_NEW、 OPEN_ALWAYS、 OPEN_EXISTING，還是 TRUNCATE_EXISTING。
+要存在，且不存在的檔案上採取的動作。 這個參數必須是下列值，無法合併的其中一個：CREATE_ALWAYS、 CREATE_NEW，OPEN_ALWAYS、 OPEN_EXISTING 或 TRUNCATE_EXISTING。
 
 *dwFlagsAndAttributes*<br/>
 檔案屬性和旗標。 這個參數可以包含任何可用的檔案屬性組合 （FILE_ATTRIBUTE_ *）。 所有其他檔案屬性覆寫 FILE_ATTRIBUTE_NORMAL。 這個參數也可以包含旗標的組合 (FILE_FLAG_\*) 的緩衝行為的控制項，存取模式，以及其他的特殊用途旗標。 這些結合任何 FILE_ATTRIBUTE_\*值。
@@ -402,7 +402,7 @@ inline LSTATUS RegCreateKeyEx(
 此機碼的使用者定義的類別。 可能會忽略這個參數。 這個參數可以是 NULL。
 
 *dwOptions*<br/>
-這個參數可以是下列值之一： REG_OPTION_BACKUP_RESTORE、 REG_OPTION_NON_VOLATILE 或 REG_OPTION_VOLATILE。
+這個參數可以是下列值之一：REG_OPTION_BACKUP_RESTORE、 REG_OPTION_NON_VOLATILE 或 REG_OPTION_VOLATILE。
 
 *samDesired*<br/>
 遮罩，指定索引鍵的存取權限。
@@ -414,7 +414,7 @@ SECURITY_ATTRIBUTES 建構可判斷子處理序是否可以繼承傳回的控制
 收到的開啟或建立金鑰的控制代碼變數的指標。 如果索引鍵不是其中一個預先定義的登錄機碼，呼叫`RegCloseKey`函式之後您完成使用控制代碼。
 
 *lpdwDisposition*<br/>
-此變數會接收其中一個下列的配置值的指標： REG_CREATED_NEW_KEY 或 REG_OPENED_EXISTING_KEY。
+此變數會接收下列配置值的其中一個指標：REG_CREATED_NEW_KEY 或 REG_OPENED_EXISTING_KEY。
 
 ### <a name="return-value"></a>傳回值
 
@@ -485,7 +485,7 @@ inline LSTATUS RegOpenKeyEx(
 
 這個包裝函式呼叫`RegOpenKeyTransacted`函式。
 
-##  <a name="rollback"></a>  復原
+##  <a name="rollback"></a>  Rollback
 
 交易回復的要求。
 

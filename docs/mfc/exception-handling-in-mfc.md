@@ -33,12 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: 4b520072bd0c07e261f2cf4baf51d7ea3d14a5ab
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: cb11a74932e44f94f481a2fdc48b8d6ee359f9e8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694552"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260539"
 ---
 # <a name="exception-handling-in-mfc"></a>MFC 中的例外狀況處理
 
@@ -50,9 +50,9 @@ ms.locfileid: "51694552"
 
 如果您要撰寫使用 MFC 的新應用程式，您應該使用 c + + 機制。 如果您現有的應用程式已廣泛使用此機制，您可以使用巨集為基礎的機制。
 
-您可以輕易地轉換現有的程式碼，而非 MFC 例外狀況巨集使用 c + + 例外狀況。 一文中說明轉換您的程式碼和指導方針這樣的好處[例外狀況： 從 MFC 例外狀況巨集轉換](../mfc/exceptions-converting-from-mfc-exception-macros.md)。
+您可以輕易地轉換現有的程式碼，而非 MFC 例外狀況巨集使用 c + + 例外狀況。 轉換您的程式碼和指導方針，這項操作的優點文章中說明[例外狀況：從 MFC 例外狀況巨集轉換](../mfc/exceptions-converting-from-mfc-exception-macros.md)。
 
-如果您已開發的應用程式使用 MFC 例外狀況巨集，您可以繼續在新的程式碼中使用 c + + 例外狀況時，您現有的程式碼中使用這些巨集。 發行項[例外狀況： 3.0 版例外狀況巨集變更](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)這樣會提供指導方針。
+如果您已開發的應用程式使用 MFC 例外狀況巨集，您可以繼續在新的程式碼中使用 c + + 例外狀況時，您現有的程式碼中使用這些巨集。 發行項[例外狀況：變更為 3.0 版中的例外狀況巨集](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)這樣會提供指導方針。
 
 > [!NOTE]
 >  若要啟用 c + + 例外狀況處理程式碼中，選取 C/c + + 專案的資料夾中的 [程式碼產生] 頁面上的 啟用 c + + 例外狀況[屬性頁](../ide/property-pages-visual-cpp.md)對話方塊中或使用[/EHsc](../build/reference/eh-exception-handling-model.md)編譯器選項。
@@ -119,7 +119,7 @@ ms.locfileid: "51694552"
 
 - [例外狀況：資料庫例外狀況](../mfc/exceptions-database-exceptions.md)
 
-- [例外狀況：OLE 例外狀況](../mfc/exceptions-ole-exceptions.md)
+- [例外狀況：OLE Exceptions](../mfc/exceptions-ole-exceptions.md)
 
 下列文件比較 MFC 例外狀況巨集，以 c + + 例外狀況關鍵字，並說明如何能夠調整您的程式碼：
 
@@ -127,10 +127,9 @@ ms.locfileid: "51694552"
 
 - [例外狀況：從 MFC 例外狀況巨集轉換](../mfc/exceptions-converting-from-mfc-exception-macros.md)
 
-- [例外狀況：使用 MFC 巨集和 C++ 例外狀況](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
+- [例外狀況：使用 MFC 巨集和 c + + 例外狀況](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
 
 ## <a name="see-also"></a>另請參閱
 
 [C++ 例外狀況處理](../cpp/cpp-exception-handling.md)<br/>
-[如何： 建立我自己的自訂例外狀況類別](http://go.microsoft.com/fwlink/p/?linkid=128045)
-
+[How Do i:建立我自己的自訂例外狀況類別](http://go.microsoft.com/fwlink/p/?linkid=128045)

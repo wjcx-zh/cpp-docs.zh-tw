@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 8cfaef2c8b064cb9faa8c0f6bf65a8868eed7cc7
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 9cedcfbfb662d7d4d635a02b82ea45828c54b958
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178736"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259512"
 ---
 # <a name="cricheditview-class"></a>CRichEditView 類別
 
@@ -143,7 +143,7 @@ class CRichEditView : public CCtrlView
 |[CRichEditView::GetParaFormatSelection](#getparaformatselection)|擷取段落格式化目前選取範圍的屬性。|
 |[CRichEditView::GetPrintRect](#getprintrect)|擷取此 rich edit 檢視表的列印矩形。|
 |[CRichEditView::GetPrintWidth](#getprintwidth)|擷取此 rich edit 檢視表的列印寬度。|
-|[Cricheditview:: Getricheditctrl](#getricheditctrl)|擷取的 rich edit 控制項。|
+|[CRichEditView::GetRichEditCtrl](#getricheditctrl)|擷取的 rich edit 控制項。|
 |[CRichEditView::GetSelectedItem](#getselecteditem)|Rich edit 檢視表中擷取選取的項目。|
 |[CRichEditView::GetTextLength](#gettextlength)|擷取 rich edit 檢視表中的文字的長度。|
 |[CRichEditView::GetTextLengthEx](#gettextlengthex)|擷取字元或在 rich edit 檢視表中的位元組的數目。 方法來決定長度的展開旗標清單。|
@@ -573,7 +573,7 @@ int GetPrintWidth() const;
 
 列印的區域中，以 MM_TWIPS 寬度。
 
-##  <a name="getricheditctrl"></a>  Cricheditview:: Getricheditctrl
+##  <a name="getricheditctrl"></a>  CRichEditView::GetRichEditCtrl
 
 呼叫此函式來擷取[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)相關聯的物件`CRichEditView`物件。
 

@@ -51,12 +51,12 @@ helpviewer_keywords:
 - CD2DBitmap [MFC], m_strPath
 - CD2DBitmap [MFC], m_uiResID
 ms.assetid: 2b3686f1-812c-462b-b449-9f0cb6949bf6
-ms.openlocfilehash: 869d8c9cffae1a257de04cf82446025be33ef7de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 288ba5e1503a4e3eefe83624cf9a489274a10823
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605864"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264712"
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap 類別
 
@@ -75,7 +75,7 @@ class CD2DBitmap : public CD2DResource;
 |名稱|描述|
 |----------|-----------------|
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|多載。 建構 HBITMAP CD2DBitmap 物件。|
-|[CD2DBitmap:: ~ CD2DBitmap](#_dtorcd2dbitmap)|解構函式。 D2D 點陣圖物件正在被終結時呼叫。|
+|[CD2DBitmap::~CD2DBitmap](#_dtorcd2dbitmap)|解構函式。 D2D 點陣圖物件正在被終結時呼叫。|
 
 ### <a name="protected-constructors"></a>受保護的建構函式
 
@@ -137,7 +137,7 @@ class CD2DBitmap : public CD2DResource;
 
 **標頭：** afxrendertarget.h
 
-##  <a name="_dtorcd2dbitmap"></a>  CD2DBitmap:: ~ CD2DBitmap
+##  <a name="_dtorcd2dbitmap"></a>  CD2DBitmap::~CD2DBitmap
 
 解構函式。 D2D 點陣圖物件正在被終結時呼叫。
 
@@ -260,7 +260,7 @@ HRESULT CopyFromMemory(
 *srcData*<br/>
 要複製的資料。
 
-*音調*<br/>
+*pitch*<br/>
 分散的音調、 儲存在 srcData 來源點陣圖。 分散是掃瞄線 （在記憶體中的像素為單位的一個資料列） 的位元組計數。 Stride 可以從下列公式計算： 像素寬度\*每像素 + 記憶體填補位元組。
 
 *destRect*<br/>

@@ -1,5 +1,5 @@
 ---
-title: Windows Sockets：作業順序
+title: Windows Sockets:作業序列
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], operations
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - sockets [MFC], operations
 - stream sockets [MFC]
 ms.assetid: 43ce76f5-aad3-4247-b8a6-16cc7d012796
-ms.openlocfilehash: 98d06e005a09825d53f22330d6b0b58ccb2069fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f9fd339fdbdfee9381ea693568f40473c2397e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578631"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265544"
 ---
-# <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets：作業順序
+# <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets:作業序列
 
 這篇文章並存，說明伺服器通訊端和用戶端通訊端的作業順序。 因為使用通訊端`CArchive`物件，它們是一定[串流處理通訊端](../mfc/windows-sockets-stream-sockets.md)。
 
@@ -36,7 +36,7 @@ ms.locfileid: "50578631"
 |`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> -或-<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> （或兩者）|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> -或-<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> （或兩者）|
 |`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> -或-<br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> -或-<br /><br /> `arOut << dwValue;`6|
 
-1. 何處*nPort*是連接埠號碼。 請參閱[Windows Sockets： 連接埠和通訊端位址](../mfc/windows-sockets-ports-and-socket-addresses.md)如需連接埠的詳細資訊。
+1. 何處*nPort*是連接埠號碼。 請參閱[Windows Sockets:連接埠和通訊端位址](../mfc/windows-sockets-ports-and-socket-addresses.md)如需連接埠的詳細資訊。
 
 2. 讓用戶端可以連線的 server 一定要指定連接埠。 `Create`呼叫有時也會指定的位址。 在用戶端，使用預設參數，這會要求使用任何可用的連接埠的 MFC。
 
@@ -56,15 +56,15 @@ ms.locfileid: "50578631"
 
 如需詳細資訊，請參閱:
 
-- [Windows Sockets：搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets:搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets：使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets:使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets：連接埠和通訊端位址](../mfc/windows-sockets-ports-and-socket-addresses.md)
+- [Windows Sockets:連接埠和通訊端位址](../mfc/windows-sockets-ports-and-socket-addresses.md)
 
-- [Windows Sockets：資料流通訊端](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets:Stream 通訊端](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets：資料通訊端](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets:資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>另請參閱
 
@@ -72,4 +72,3 @@ ms.locfileid: "50578631"
 [CSocket 類別](../mfc/reference/csocket-class.md)<br/>
 [CAsyncSocket::Create](../mfc/reference/casyncsocket-class.md#create)<br/>
 [CAsyncSocket::Close](../mfc/reference/casyncsocket-class.md#close)
-

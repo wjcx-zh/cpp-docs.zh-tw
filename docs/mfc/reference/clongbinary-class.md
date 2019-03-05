@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CLongBinary class [MFC]
 ms.assetid: f4320059-aeb4-4ee5-bc2b-25f19d898ef5
-ms.openlocfilehash: a7dbb7e38ec01743d994dafd6c7945e306de51ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed3a153ec89785a9c9da43037d20f7d88b5661ff
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656026"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260708"
 ---
 # <a name="clongbinary-class"></a>CLongBinary 類別
 
@@ -53,7 +53,7 @@ class CLongBinary : public CObject
 
 當您終結資料錄集，內嵌`CLongBinary`物件終結時也，和其解構函式會取消配置`HGLOBAL`資料控制代碼。
 
-如需大型物件，以及善用`CLongBinary`，請參閱文章[資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)並[資料錄集： 使用大型資料的項目 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)。
+如需大型物件，以及善用`CLongBinary`，請參閱文章[資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)和[資料錄集：使用大型的資料項目 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-ms.openlocfilehash: 8d7c96ff047a6340511ee1d67f025db0ad7c5368
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bb599b88671447e219421efacac7a2d8a5f7b06
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452685"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261696"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 類別
 
@@ -69,7 +69,8 @@ class CComPtrBase
 |[CComPtrBase::operator T *](#operator_t_star)|轉換運算子。|
 |[CComPtrBase::operator ！](#operator_not)|NOT 運算子。|
 |[CComPtrBase::operator （& s)](#operator_amp)|& 運算子。|
-|[CComPtrBase::operator *](#operator_star)|\* 運算子。|
+|[CComPtrBase::operator *](#operator_star)|
+  \* 運算子。|
 |[CComPtrBase::operator <](#ccomptrbase__operator lt)|小於-than 運算子。|
 |[CComPtrBase::operator = =](#operator_eq_eq)|等號比較運算子。|
 |[CComPtrBase::operator->](#operator_ptr)|指標至成員運算子中。|
@@ -236,7 +237,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
 
 ### <a name="parameters"></a>參數
 
-*其他*<br/>
+*pOther*<br/>
 要比較的 `IUnknown *`。
 
 ### <a name="return-value"></a>傳回值
@@ -269,7 +270,8 @@ T** operator&() throw();
 
 ##  <a name="operator_star"></a>  CComPtrBase::operator \*
 
-\* 運算子。
+
+  \* 運算子。
 
 ```
 T& operator*() const throw();
@@ -291,7 +293,7 @@ bool operator== (T* pT) const throw();
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pT*<br/>
 物件的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -324,7 +326,7 @@ bool operator<(T* pT) const throw();
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pT*<br/>
 物件的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -369,7 +371,7 @@ template <class Q> HRESULT QueryInterface(Q
 *Q*<br/>
 介面指標是必要的物件型別。
 
-*前置處理*<br/>
+*pp*<br/>
 接收要求的介面指標的輸出變數位址。
 
 ### <a name="return-value"></a>傳回值

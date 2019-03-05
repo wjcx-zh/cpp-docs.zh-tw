@@ -1,5 +1,5 @@
 ---
-title: 範例：透過功能表命令顯示對話方塊
+title: 範例：顯示對話方塊，透過功能表命令
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC dialog boxes [MFC], examples
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 830ba27945ce8da2abd52c7f29d786d098113151
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c60469747c24b4c295348a14cb569c4118c76d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483482"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260474"
 ---
-# <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>範例：透過功能表命令顯示對話方塊
+# <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>範例：顯示對話方塊，透過功能表命令
 
 本主題包含的程序：
 

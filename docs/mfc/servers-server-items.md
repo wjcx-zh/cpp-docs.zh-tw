@@ -8,24 +8,25 @@ helpviewer_keywords:
 - server items
 - OLE server applications [MFC], server items
 ms.assetid: 28ba81a1-726a-4728-a52d-68bc7efd5a3c
-ms.openlocfilehash: ea04a3eefff0f127873ffbf67ea39ade3a6b9b85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0adaea1c4f1dd0525ead82dfffdf267326ac865c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453686"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262281"
 ---
 # <a name="servers-server-items"></a>伺服器：伺服器項目
 
 當容器啟動伺服器以便使用者可以編輯內嵌或連結的 OLE 項目時，伺服器應用程式會建立「伺服器項目」。 伺服器項目是其類別衍生自 `COleServerItem` 的物件，在伺服器文件和容器應用程式之間提供介面。
 
-`COleServerItem` 類別通常會定義由 OLE 呼叫的數個可覆寫成員函式，以回應容器的要求。 伺服器項目可代表伺服器文件的一部分或整個文件。 當 OLE 項目內嵌於容器文件中時，伺服器項目代表整個伺服器文件。 當 OLE 項目為連結時，伺服器項目可能表示伺服器文件或整份文件的一部分，視連結是連至一部分或整體。
+
+  `COleServerItem` 類別通常會定義由 OLE 呼叫的數個可覆寫成員函式，以回應容器的要求。 伺服器項目可代表伺服器文件的一部分或整個文件。 當 OLE 項目內嵌於容器文件中時，伺服器項目代表整個伺服器文件。 當 OLE 項目為連結時，伺服器項目可能表示伺服器文件或整份文件的一部分，視連結是連至一部分或整體。
 
 在  [HIERSVR](../visual-cpp-samples.md)範例，例如，伺服器項目類別`CServerItem`，有一個為類別的物件指標的成員`CServerNode`。 `CServerNode`物件是 HIERSVR 應用程式的文件，也就是樹狀結構中的節點。 當`CServerNode`物件是根節點，`CServerItem`物件代表整份文件。 當`CServerNode`物件是一個子節點，`CServerItem`物件都代表在文件的一部分。 請參閱 MFC OLE 範例[HIERSVR](../visual-cpp-samples.md)如需這種互動的範例。
 
 ##  <a name="_core_implementing_server_items"></a> 實作伺服器項目
 
-如果您使用應用程式精靈產生應用程式的「起始」程式碼，則要在起始程式碼中包含伺服器項目的話，您只要從 [OLE 選項] 頁面選擇其中一個伺服器選項即可。 如果您將伺服器項目加入至現有的應用程式，請執行下列步驟：
+如果您使用應用程式精靈產生應用程式的起始程式碼，則要在起始程式碼中包含伺服器項目的話，您只要從 [OLE 選項] 頁面選擇其中一個伺服器選項即可。 如果您將伺服器項目加入至現有的應用程式，請執行下列步驟：
 
 #### <a name="to-implement-a-server-item"></a>實作伺服器項目
 
@@ -35,7 +36,7 @@ ms.locfileid: "50453686"
 
    這個架構會呼叫 `OnDraw` 以轉譯 OLE 項目為中繼檔。 容器應用程式會使用此中繼檔轉譯項目。 您的應用程式的檢視類別也有一個 `OnDraw` 成員函式，用來在伺服器應用程式作用中時轉譯項目。
 
-1. 為您的伺服器文件類別實作 `OnGetEmbeddedItem` 的覆寫。 如需詳細資訊，請參閱文章[伺服器： 實作伺服器文件](../mfc/servers-implementing-server-documents.md)和 MFC OLE 範例[HIERSVR](../visual-cpp-samples.md)。
+1. 為您的伺服器文件類別實作 `OnGetEmbeddedItem` 的覆寫。 如需詳細資訊，請參閱文章[伺服器：實作伺服器文件](../mfc/servers-implementing-server-documents.md)和 MFC OLE 範例[HIERSVR](../visual-cpp-samples.md)。
 
 1. 實作您的伺服器項目類別的 `OnGetExtent` 成員函式。 架構會呼叫這個函式以擷取項目的大小。 預設實作不做任何動作。
 
@@ -52,4 +53,3 @@ ms.locfileid: "50453686"
 ## <a name="see-also"></a>另請參閱
 
 [伺服器](../mfc/servers.md)
-

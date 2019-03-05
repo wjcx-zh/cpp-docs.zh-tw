@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-ms.openlocfilehash: ea4159f8eb60f43f60eacd5831ce148c81aeb572
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad3431f78d3637bcdfdb0266c8abdb43047ca28d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546610"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279330"
 ---
 # <a name="menus-and-resources-container-additions"></a>功能表和資源：容器新增
 
@@ -47,12 +47,12 @@ ms.locfileid: "50546610"
 |----------|-------------|
 |**插入新的物件**|開啟 [OLE 插入物件] 對話方塊中，若要插入的文件中的連結或內嵌的項目。|
 |**貼上連結**|剪貼簿上貼文件項目的連結。|
-|**OLE 指令動詞**|會呼叫選取的項目主要動詞命令。 此功能表項目變更，以反映選取項目的主要的動詞命令的文字。|
+|**OLE Verb**|會呼叫選取的項目主要動詞命令。 此功能表項目變更，以反映選取項目的主要的動詞命令的文字。|
 |**Links**|開啟 OLE 編輯連結 對話方塊中，若要變更現有連結的項目。|
 
 這篇文章中所列的變更，除了原始程式檔必須包含 AFXOLECL。RC 中，也就是 Microsoft Foundation 類別庫實作所需。 插入新的物件是唯一需要的功能表。 可以新增其他項目，但此處所列的最常見。
 
-如果您想要支援就地啟用包含的項目，您必須建立新的功能表容器應用程式。 這個功能表包含相同的 [檔案] 功能表和視窗檔案已開啟，但它有兩個它們之間的分隔符號時，使用的快顯功能表。 這些分隔符號來表示伺服器 （元件） 項目 （應用程式） 應該放置其功能表時就地啟用。 如需有關這個功能表合併的技巧的詳細資訊，請參閱[功能表和資源： 功能表合併](../mfc/menus-and-resources-menu-merging.md)。
+如果您想要支援就地啟用包含的項目，您必須建立新的功能表容器應用程式。 這個功能表包含相同的 [檔案] 功能表和視窗檔案已開啟，但它有兩個它們之間的分隔符號時，使用的快顯功能表。 這些分隔符號來表示伺服器 （元件） 項目 （應用程式） 應該放置其功能表時就地啟用。 如需有關這個功能表合併的技巧的詳細資訊，請參閱[功能表和資源：功能表合併](../mfc/menus-and-resources-menu-merging.md)。
 
 ##  <a name="_core_container_application_accelerator_table_additions"></a> 新增容器應用程式快速鍵對應表
 
@@ -71,7 +71,7 @@ ms.locfileid: "50546610"
 |ID_FILE_SAVE|CTRL+S|**VIRTKEY**|
 |ID_FILE_PRINT|CTRL+P|**VIRTKEY**|
 |ID_NEXT_PANE|VK_F6|**VIRTKEY**|
-|ID_PREV_PANE|SHIFT + VK_F6|**VIRTKEY**|
+|ID_PREV_PANE|SHIFT+VK_F6|**VIRTKEY**|
 |ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|
 
 ##  <a name="_core_string_table_additions_for_container_applications"></a> 字串資料表加入容器應用程式
@@ -86,5 +86,4 @@ ms.locfileid: "50546610"
 ## <a name="see-also"></a>另請參閱
 
 [功能表和資源 (OLE)](../mfc/menus-and-resources-ole.md)<br/>
-[功能表和資源：伺服器新增](../mfc/menus-and-resources-server-additions.md)
-
+[功能表和資源：伺服器新增項目](../mfc/menus-and-resources-server-additions.md)

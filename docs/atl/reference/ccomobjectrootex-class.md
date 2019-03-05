@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: 63547405791f7f0391138dd2d23020c62c8a4a28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06a0c0e4b650945e10015c3220b926399ec9c6fd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655802"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280637"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 類別
 
@@ -52,14 +52,14 @@ class CComObjectRootEx : public CComObjectRootBase
 |[CComObjectRootEx](#ccomobjectrootex)|建構函式。|
 |[InternalAddRef](#internaladdref)|非彙總物件的參考計數會遞增。|
 |[InternalRelease](#internalrelease)|遞減參考計數為非彙總的物件。|
-|[鎖定](#lock)|如果多執行緒的執行緒模型，取得重要區段物件的擁有權。|
-|[解除鎖定](#unlock)|如果執行緒模型為多執行緒，釋放重要區段物件的擁有權。|
+|[Lock](#lock)|如果多執行緒的執行緒模型，取得重要區段物件的擁有權。|
+|[Unlock](#unlock)|如果執行緒模型為多執行緒，釋放重要區段物件的擁有權。|
 
 ### <a name="ccomobjectrootbase-methods"></a>CComObjectRootBase 方法
 
 |||
 |-|-|
-|[跖](#finalconstruct)|若要執行您的物件所需的任何初始化類別中覆寫。|
+|[FinalConstruct](#finalconstruct)|若要執行您的物件所需的任何初始化類別中覆寫。|
 |[FinalRelease](#finalrelease)|在您執行您的物件所需的任何清除作業的類別中覆寫。|
 |[OuterAddRef](#outeraddref)|遞增參考計數的彙總的物件。|
 |[OuterQueryInterface](#outerqueryinterface)|會委派到外部`IUnknown`的彙總的物件。|

@@ -17,12 +17,12 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: 8e427206379f1e7d094362411f074ad9cafb43fd
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: cfcb65fa23fe4593e7dcf11da3b5da4b1785ce71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657535"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279740"
 ---
 # <a name="texture-class"></a>texture 類別
 
@@ -105,7 +105,7 @@ class texture;
 
 **命名空間：** Concurrency:: graphics
 
-##  <a name="dtor"></a> ~ 紋理
+##  <a name="dtor"></a> ~texture
 
 終結`texture`物件。
 
@@ -141,7 +141,7 @@ void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
 *value_type*<br/>
 材質中項目的類型。
 
-##  <a name="data"></a> 資料
+##  <a name="data"></a> data
 
 傳回此材質的未經處理資料的 CPU 指標。
 
@@ -216,7 +216,7 @@ unsigned int get_row_pitch() const restrict(cpu);
 
 2d 預備環境材質中，每個資料列或 3d 預備環境材質中深度切割每一列之間的位元組數目。
 
-##  <a name="operator_call"></a> operator （)
+##  <a name="operator_call"></a> operator()
 
 傳回參數所指定的項目值。
 
@@ -258,7 +258,7 @@ const value_type operator() (
 
 參數所指定項目值。
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 傳回位於指定索引處的項目。
 

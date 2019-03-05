@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 6a22c88e1a19cd1aef1bbfacd7f255adc2b19d0e
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 8c8a6d3e83534cd5670e43a9009b8919a2e57f92
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178250"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281369"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl 類別
 
@@ -148,7 +148,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定動畫控制項的樣式。 適用於的 windows 中的 < 備註 > 一節和動畫控制項的樣式中所述的樣式所述的任何組合[動畫控制項的樣式](/windows/desktop/Controls/animation-control-styles)Windows SDK 中。
 
 *rect*<br/>
@@ -202,7 +202,7 @@ virtual BOOL CreateEx(
 *dwExStyle*<br/>
 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定動畫控制項的樣式。 套用視窗的任意組合和動畫控制項的樣式中所述[動畫控制項的樣式](/windows/desktop/Controls/animation-control-styles)Windows SDK 中。
 
 *rect*<br/>
@@ -291,7 +291,7 @@ BOOL Play(
 *nFrom*<br/>
 框架播放開始處的以零為起始的索引。 值必須小於 65536。 值為 0 表示開頭為 AVI 短片中的第一個框架。
 
-*若要*<br/>
+*nTo*<br/>
 畫面格的以零為起始的索引位置播放結束。 值必須小於 65536。 值為-1 表示結尾為 AVI 短片中的最後一個畫面格。
 
 *nRep*<br/>
@@ -319,7 +319,7 @@ BOOL Seek(UINT nTo);
 
 ### <a name="parameters"></a>參數
 
-*若要*<br/>
+*nTo*<br/>
 要顯示的框架的以零為起始索引。 值必須小於 65536。 值為 0 表示顯示在播放 AVI 短片中的第一個畫面格。 -1 值表示顯示在播放 AVI 短片中的最後一個畫面格。
 
 ### <a name="return-value"></a>傳回值
@@ -356,4 +356,3 @@ BOOL Stop();
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CAnimateCtrl::Create](#create)<br/>
 [ON_CONTROL](message-map-macros-mfc.md#on_control)
-

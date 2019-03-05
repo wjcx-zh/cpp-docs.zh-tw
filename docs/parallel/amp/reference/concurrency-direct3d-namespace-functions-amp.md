@@ -21,12 +21,12 @@ f1_keywords:
 - amp/Concurrency::direct3d::step
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-ms.openlocfilehash: b721d19cd51a9eb1d07de8898b18728854decb4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0a2977faf094aafb6290063e39e062ffaeaaec81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519727"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281326"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency::direct3d 命名空間函式 (AMP)
 
@@ -37,14 +37,14 @@ ms.locfileid: "50519727"
 |[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|[firstbithigh](#firstbithigh)|
 |[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|[get_device](#get_device)|
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|
-|[mad](#mad)|[make_array](#make_array)|[雜訊](#noise)|
-|[弧度為單位](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|
+|[mad](#mad)|[make_array](#make_array)|[noise](#noise)|
+|[radians](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|
 |[saturate](#saturate)|[簽署](#sign)|[smoothstep](#smoothstep)|
 |[step](#step)|[umax](#umax)|[umin](#umin)|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** amp.h**命名空間：** 並行存取
+**標頭：** amp.h**命名空間：** 並行
 
 ##  <a name="abs"></a>  abs
 
@@ -156,7 +156,7 @@ C + + AMP 執行階段會提供詳細的錯誤資訊，偵錯模式中使用 D3D
 
 ##  <a name="d3d_access_lock"></a>  d3d_access_lock
 
-取得對 accelerator_view 來安全地執行與 accelerator_view 共用的資源執行 D3D 作業鎖定。 Accelerator_view 和內部與這個 accelerator_view 相關聯的所有 c + + AMP 資源取得這個鎖定執行作業時，會封鎖，而另一個執行緒持有 D3D 存取鎖定。 這個鎖定是非遞迴： 它是未定義的行為，可從已經保留鎖定的執行緒呼叫此函式。 它是未定義的行為，來執行對 accelerator_view 或任何與 accelerator_view，要從保持 D3D 存取鎖定的執行緒相關聯的資料容器的作業。 另請參閱 scoped_d3d_access_lock，範圍為基礎的 D3D 存取鎖定的 RAII 式類別。
+取得對 accelerator_view 來安全地執行與 accelerator_view 共用的資源執行 D3D 作業鎖定。 Accelerator_view 和內部與這個 accelerator_view 相關聯的所有 c + + AMP 資源取得這個鎖定執行作業時，會封鎖，而另一個執行緒持有 D3D 存取鎖定。 這個鎖定是非遞迴：它是未定義的行為，從已經保留鎖定的執行緒呼叫此函式。 它是未定義的行為，來執行對 accelerator_view 或任何與 accelerator_view，要從保持 D3D 存取鎖定的執行緒相關聯的資料容器的作業。 另請參閱 scoped_d3d_access_lock，範圍為基礎的 D3D 存取鎖定的 RAII 式類別。
 
 ```
 void __cdecl d3d_access_lock(accelerator_view& _Av);
@@ -414,7 +414,7 @@ array<value_type, _Rank> make_array(
 
 使用提供的 Direct3D 緩衝區建立陣列。
 
-##  <a name="noise"></a>  雜訊
+##  <a name="noise"></a>  noise
 
 產生使用 Perlin 雜訊演算法的隨機值
 
@@ -501,7 +501,7 @@ inline float saturate(float _X) restrict(amp);
 
 傳回 _X 限制在 0 到 1 的範圍內
 
-##  <a name="sign"></a>  符號
+##  <a name="sign"></a>  sign
 
 判斷指定的引數的正負號。
 
@@ -544,7 +544,7 @@ inline float smoothstep(
 
 會傳回 0，如果 _X 小於 _Min;1 如果 _X 大於 _Max;否則，值介於 0 和 1，如果 _X 的範圍 [_Min，_Max]
 
-##  <a name="step"></a>  步驟
+##  <a name="step"></a>  step
 
 比較兩個值，傳回 0 或 1 為基礎的值大於
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleDBRecordView [MFC], OnGetRowset
 - COleDBRecordView [MFC], OnMove
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
-ms.openlocfilehash: fbbaaae72c7b58f898735d768c019a02cdb7d7e5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1b09599479010f87e396e6f576c9524651923f9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518576"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280365"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView 類別
 
@@ -51,7 +51,7 @@ class COleDBRecordView : public CFormView
 您可以使用 DDX 函式與`COleDbRecordView`直接從資料庫資料錄集取得資料，並顯示在對話方塊控制項。 您應該使用`DDX_*`方法 (例如`DDX_Text`)，而非`DDX_Field*`函式 (例如`DDX_FieldText`) 與`COleDbRecordView`。 `DDX_FieldText` 不適用於`COleDbRecordView`因為`DDX_FieldText`採用其他引數的型別`CRecordset*`(如`CRecordView`) 或`CDaoRecordset*`(針對`CDaoRecordView`)。
 
 > [!NOTE]
->  如果您正在使用的資料存取物件 (DAO) 類別，而不是 OLE DB 消費者範本類別，使用類別[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)改。 如需詳細資訊，請參閱文章[概觀： 資料庫程式設計](../../data/data-access-programming-mfc-atl.md)。
+>  如果您正在使用的資料存取物件 (DAO) 類別，而不是 OLE DB 消費者範本類別，使用類別[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)改。 如需詳細資訊，請參閱文章[概觀：資料庫程式設計](../../data/data-access-programming-mfc-atl.md)。
 
 `COleDBRecordView` 會追蹤的資料列集中的使用者的位置，以便資料錄檢視可以更新使用者介面。 當使用者移至任一端的資料列集時，資料錄檢視停用使用者介面物件，例如功能表項目或工具列按鈕 — 移動中相同的方向。
 
@@ -124,7 +124,7 @@ virtual CRowset<>* OnGetRowset() = 0;
 
 [!code-cpp[NVC_MFCDatabase#38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]
 
-如需詳細資訊和範例，請參閱文章[資料錄檢視： 使用資料錄檢視](../../data/using-a-record-view-mfc-data-access.md)。
+如需詳細資訊和範例，請參閱文章[資料錄檢視：使用資料錄檢視](../../data/using-a-record-view-mfc-data-access.md)。
 
 ##  <a name="onmove"></a>  COleDBRecordView::OnMove
 
@@ -164,4 +164,3 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ## <a name="see-also"></a>另請參閱
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

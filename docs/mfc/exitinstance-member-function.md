@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CWinApp class [MFC], ExitInstance
 - ExitInstance method [MFC]
 ms.assetid: 5bb597bd-8dab-4d49-8bcf-9c45aa8be4a2
-ms.openlocfilehash: b1c5b3a20f25f909188023ab1650bc41316d7a9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c76f588b22ad8ffd1d3dae954c5113feffb62a3f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637732"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279428"
 ---
 # <a name="exitinstance-member-function"></a>ExitInstance 成員函式
 
@@ -22,4 +22,4 @@ ms.locfileid: "50637732"
 
 ## <a name="see-also"></a>另請參閱
 
-[CWinApp：應用程式類別](../mfc/cwinapp-the-application-class.md)
+[CWinApp:應用程式類別](../mfc/cwinapp-the-application-class.md)

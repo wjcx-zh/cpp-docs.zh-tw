@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 861fdefe19a0c5b78a7874be3386873d6c253a3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 0262764c950b01acdb610873a995a9a6fd912997
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521410"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280676"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray 類別
 
@@ -58,7 +58,7 @@ class CComSafeArray
 |名稱|描述|
 |----------|-----------------|
 |[CComSafeArray::CComSafeArray](#ccomsafearray)|建構函式。|
-|[CComSafeArray:: ~ CComSafeArray](#dtor)|解構函式。|
+|[CComSafeArray::~CComSafeArray](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -154,7 +154,7 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
 *ulCount*<br/>
 若要加入至陣列的物件數目。
 
-*太平洋時間*<br/>
+*pT*<br/>
 要加入至陣列的一個或多個物件指標。
 
 *t*<br/>
@@ -210,8 +210,9 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>參數
 
-*繫結*<br/>
-`SAFEARRAYBOUND` 結構。
+*bound*<br/>
+
+  `SAFEARRAYBOUND` 結構。
 
 *ulCount*<br/>
 陣列中的項目數。
@@ -561,7 +562,7 @@ T& operator[]int nindex) const;
 
 ### <a name="parameters"></a>參數
 
-*lIndex nIndex*<br/>
+*lIndex, nIndex*<br/>
 陣列中的必要項目索引編號。
 
 ### <a name="return-value"></a>傳回值

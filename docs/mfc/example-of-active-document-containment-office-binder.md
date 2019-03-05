@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office Binder [MFC]
 - MFC COM, active document containment
 ms.assetid: 70dd8568-e8bc-44ac-bf5e-678767efe8e3
-ms.openlocfilehash: 032b2cb39d75c108239d882039f7c797a357a6bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b06bc0f22ee71c8afbbc8feadca68895fc24a50b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616646"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279181"
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>主動式文件內含項目範例：Office 文件夾
 
@@ -31,4 +31,3 @@ Microsoft Office Binder 是現用文件容器的範例。 Office Binder 如一�
 ## <a name="see-also"></a>另請參閱
 
 [主動式文件內含項目](../mfc/active-document-containment.md)
-

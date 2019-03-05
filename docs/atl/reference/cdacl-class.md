@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-ms.openlocfilehash: 63eaa9fe21b9d920aa3615f76be5822194d19b66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: edfa7a47fa94e659d6529706d04021dfc800c269
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462890"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280117"
 ---
 # <a name="cdacl-class"></a>CDacl 類別
 
@@ -264,7 +264,7 @@ void RemoveAllAces() throw();
 
 [安全性範例](../../visual-cpp-samples.md)<br/>
 [CAcl 類別](../../atl/reference/cacl-class.md)<br/>
-[Acl](/windows/desktop/SecAuthZ/access-control-lists)<br/>
-[Ace](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[ACLs](/windows/desktop/SecAuthZ/access-control-lists)<br/>
+[ACEs](/windows/desktop/SecAuthZ/access-control-entries)<br/>
 [類別概觀](../../atl/atl-class-overview.md)<br/>
 [安全性全域函式](../../atl/reference/security-global-functions.md)

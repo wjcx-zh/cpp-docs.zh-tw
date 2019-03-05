@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-ms.openlocfilehash: 7b4da7df691837b47daa35c4b474711062d4e5c7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 98bb4de2f6d1a43fc1958a0fcbaafa1ac0af82a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523165"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282548"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>文件/檢視架構的替代方案
 
@@ -62,9 +62,8 @@ Visual C++ 精靈以及原始檔和對話方塊編輯器都可處理產生的應
 
 - 覆寫 MFC 架構中建立文件和檢視的部分，就可以完全排除建立它們。 文件建立程序是從呼叫 `CWinApp::AddDocTemplate` 開始。 請從應用程式類別的 `InitInstance` 成員函式中排除該呼叫，並且改成在 `InitInstance` 中自行建立框架視窗。 將資料管理程式碼放入框架視窗類別中。 在文件/檢視建立程序所示[文件/檢視建立](../mfc/document-view-creation.md)。 雖然這樣做多了一些工作並且需要對架構有更深入的了解，但是卻可以完全排除文件/檢視的額外負荷。
 
-發行項[MFC： 使用資料庫類別不具文件和檢視表](../data/mfc-using-database-classes-without-documents-and-views.md)資料庫應用程式的內容中會提供更具體的範例文件/檢視的替代項目。
+發行項[MFC:使用資料庫類別不具文件和檢視](../data/mfc-using-database-classes-without-documents-and-views.md)資料庫應用程式的內容中會提供更具體的範例文件/檢視的替代項目。
 
 ## <a name="see-also"></a>另請參閱
 
 [文件/檢視架構](../mfc/document-view-architecture.md)
-

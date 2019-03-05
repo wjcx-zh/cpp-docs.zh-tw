@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-ms.openlocfilehash: 6a6ad49533028dbcb8c45b63c55a51090533137e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6be05b52b96ada7871f955c687036a83b4e0b493
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522479"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281092"
 ---
 # <a name="ccomvariant-class"></a>CComVariant 類別
 
@@ -44,7 +44,7 @@ class CComVariant : public tagVARIANT
 |名稱|描述|
 |----------|-----------------|
 |[CComVariant::CComVariant](#ccomvariant)|建構函式。|
-|[CComVariant:: ~ CComVariant](#dtor)|解構函式。|
+|[CComVariant::~CComVariant](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -67,7 +67,7 @@ class CComVariant : public tagVARIANT
 |-|-|
 |[CComVariant::operator <](#operator_lt)|指出是否`CComVariant`物件是否小於指定的變數。|
 |[CComVariant::operator >](#operator_gt)|指出是否`CComVariant`物件是否大於指定的變數。|
-|[運算子 ！ =](#operator_neq)|指出是否`CComVariant`物件不等於指定的變數。|
+|[operator !=](#operator_neq)|指出是否`CComVariant`物件不等於指定的變數。|
 |[operator =](#operator_eq)|將值指派給`CComVariant`物件。|
 |[operator ==](#operator_eq_eq)|指出是否`CComVariant`的物件等於指定的變數。|
 
@@ -460,7 +460,7 @@ void SetByRef(T* pT) throw();
 *T*<br/>
 VARIANT，例如 BSTR 類型**int**，或**char**。
 
-*太平洋時間*<br/>
+*pT*<br/>
 用來初始化指標`CComVariant`物件。
 
 ### <a name="remarks"></a>備註

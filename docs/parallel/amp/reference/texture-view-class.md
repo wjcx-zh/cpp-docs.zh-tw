@@ -14,12 +14,12 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-ms.openlocfilehash: c76f1f9b00ea6e44f69f98286b83d4a84f12cac1
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 0f2b627afa216f03592fe913afece1a80f5bd5a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657496"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275658"
 ---
 # <a name="textureview-class"></a>texture_view 類別
 
@@ -74,7 +74,7 @@ class texture_view<const value_type, _Rank>
 |[gather_green](#gather_green)|多載。 在指定座標的材質取樣使用指定的取樣組態，並傳回四個取樣材質的綠色 (y) 元件。|
 |[gather_red](#gather_red)|多載。 在指定座標的材質取樣使用指定的取樣組態，並傳回四個取樣材質的紅色 (x) 元件。|
 |[get](#get)|多載。 依索引取得項目值。|
-|[範例](#sample)|多載。 使用指定的取樣組態範例在指定的座標和詳細程度。|
+|[sample](#sample)|多載。 使用指定的取樣組態範例在指定的座標和詳細程度。|
 |[set](#set)|依索引設定元素的值。|
 
 ### <a name="public-operators"></a>公用運算子
@@ -103,7 +103,7 @@ class texture_view<const value_type, _Rank>
 
 **命名空間：** concurrency:: graphics
 
-##  <a name="dtor"></a> ~ texture_view
+##  <a name="dtor"></a> ~texture_view
 
 終結`texture_view`執行個體。
 
@@ -339,7 +339,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 
 此參考`texture_view`執行個體。
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 依索引傳回的項目值。
 
@@ -365,7 +365,7 @@ value_type operator[] (int _I0) const restrict(amp);
 
 以編製索引的項目值`_Index`。
 
-##  <a name="operator_call"></a> operator （)
+##  <a name="operator_call"></a> operator()
 
 依索引傳回的項目值。
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - modeless dialog boxes [MFC], initializing
 - MFC dialog boxes [MFC], initializing
 ms.assetid: 968142f5-19f9-4b34-a1d4-8e6412d4379b
-ms.openlocfilehash: 2312a158835b28e7a17a6c30bb1fa148a63c07fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87b3405f1441e730cf5c9ce7fc03d2c7372e55db
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507961"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289529"
 ---
 # <a name="initializing-the-dialog-box"></a>初始化對話方塊
 
@@ -24,4 +24,3 @@ ms.locfileid: "50507961"
 ## <a name="see-also"></a>另請參閱
 
 [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)
-

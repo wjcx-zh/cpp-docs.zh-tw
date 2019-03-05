@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Fields collection
 - CDaoFieldInfo structure [MFC]
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
-ms.openlocfilehash: 80a541028a6ba7daf60a8d1afbd6cf7ba3557202
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5c4013a323c85ad19a3fade20f76852e053362a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629420"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275138"
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo 結構
 
@@ -50,7 +50,7 @@ struct CDaoFieldInfo
 
 - `dbBoolean` 是/否，相同一個 TRUE/FALSE
 
-- `dbByte` 位元組
+- `dbByte` Byte
 
 - `dbInteger` 簡短
 
@@ -144,7 +144,7 @@ DAO 欄位物件的預設值。 建立新的記錄時，預設值 屬性設定�
 
 主要、 次要資料庫，且上述所有的參考會指出所傳回的資訊是如何`GetFieldInfo`類別中的成員函式[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)， [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)，和[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)。
 
-欄位的物件不以 MFC 類別來表示。 相反地，下列類別的 MFC 物件的 DAO 物件包含的欄位物件的集合： [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)， [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)，並[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)。 這些類別提供成員函式，若要存取的欄位資訊，一些個別項目，或是您可以存取它們全部一次與`CDaoFieldInfo`藉由呼叫物件`GetFieldInfo`包含物件的成員函式。
+欄位的物件不以 MFC 類別來表示。 相反地，下列類別的 MFC 物件的 DAO 物件包含的欄位物件的集合：[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)， [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)，以及[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)。 這些類別提供成員函式，若要存取的欄位資訊，一些個別項目，或是您可以存取它們全部一次與`CDaoFieldInfo`藉由呼叫物件`GetFieldInfo`包含物件的成員函式。
 
 除了檢查物件屬性使用，您也可以使用`CDaoFieldInfo`建構 tabledef 中建立新欄位的輸入的參數。 這項工作，有更簡單的選項，但如果想要更細微的控制，您可以使用新版[CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)採用`CDaoFieldInfo`參數。
 
@@ -160,4 +160,3 @@ DAO 欄位物件的預設值。 建立新的記錄時，預設值 屬性設定�
 [CDaoTableDef::GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
 [CDaoRecordset::GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
 [CDaoQueryDef::GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)
-

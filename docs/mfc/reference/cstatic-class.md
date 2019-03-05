@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CStatic [MFC], SetEnhMetaFile
 - CStatic [MFC], SetIcon
 ms.assetid: e7c94cd9-5ebd-428a-aa30-b3e51f8efb95
-ms.openlocfilehash: ab25cad77ee0f11167661bb27b408dd5e92b51f9
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 02e2f20cc568e8846923f7189da3ea45478fc289
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178690"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284433"
 ---
 # <a name="cstatic-class"></a>CStatic 類別
 
@@ -110,7 +110,7 @@ virtual BOOL Create(
 *lpszText*<br/>
 指定要放置在控制項中的文字。 如果是 NULL，則不會顯示任何文字。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定靜態控制項的視窗樣式。 套用的任何組合[靜態控制項的樣式](../../mfc/reference/styles-used-by-mfc.md#static-styles)至控制項。
 
 *rect*<br/>

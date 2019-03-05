@@ -1,5 +1,5 @@
 ---
-title: _AtlCreateWndData 結構
+title: _AtlCreateWndData Structure
 ms.date: 11/04/2016
 f1_keywords:
 - ATL::_AtlCreateWndData
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - _AtlCreateWndData structure
 - AtlCreateWndData structure
 ms.assetid: 76ed5382-bfbf-4b8b-8a29-912688dfd2ae
-ms.openlocfilehash: 860d5772279d0ca0581a8cac1e0ef224f829586d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6e3168b5c86de5bce3c3b9d3b0fbdea28ae604f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534182"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286924"
 ---
-# <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData 結構
+# <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData Structure
 
 此結構包含在 ATL 中的視窗化程式碼中的類別執行個體資料
 
@@ -48,4 +48,3 @@ ms.locfileid: "50534182"
 ## <a name="see-also"></a>另請參閱
 
 [類別和結構](../../atl/reference/atl-classes.md)
-

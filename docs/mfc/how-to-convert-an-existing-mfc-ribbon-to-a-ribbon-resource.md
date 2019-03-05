@@ -1,18 +1,18 @@
 ---
-title: 如何：將現有的 MFC 功能區轉換為功能區資源
+title: HOW TO：將現有的 MFC 功能區轉換為功能區資源
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ribbon resource, converting from an MFC ribbon
 - MFC ribbon, converting to a ribbon resource
 ms.assetid: 324b7ff6-58f9-4691-96a9-9836a79d0fb6
-ms.openlocfilehash: 627c50758b10ad18e45fc1432340c0eb2dad7b19
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b4265a7bf3ebe2c4926f21572d802b75bd525990
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524348"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295484"
 ---
-# <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>如何：將現有的 MFC 功能區轉換為功能區資源
+# <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>HOW TO：將現有的 MFC 功能區轉換為功能區資源
 
 功能區資源比手動撰寫功能區程式碼更容易視覺化、修改和維護。 本主題說明如何將 MFC 專案中手動撰寫的功能區程式碼轉換為功能區資源。
 
@@ -47,4 +47,3 @@ ms.locfileid: "51524348"
 ## <a name="see-also"></a>另請參閱
 
 [功能區設計工具 (MFC)](../mfc/ribbon-designer-mfc.md)
-

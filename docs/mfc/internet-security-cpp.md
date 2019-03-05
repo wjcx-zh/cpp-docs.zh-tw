@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Internet applications [MFC], security
 - Web application security [MFC], Internet security approaches
 ms.assetid: bf0da697-81bc-41f0-83fa-d7f82ed83df8
-ms.openlocfilehash: e7892793a82f2b030a99465a712e33e1b9ef4673
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 184c8edf3e4a81be1f8b2a282a0db9758a75253f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486095"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259525"
 ---
 # <a name="internet-security-c"></a>網際網路安全性 (C++)
 
@@ -32,4 +32,3 @@ ms.locfileid: "50486095"
 
 [MFC 網際網路程式設計工作](../mfc/mfc-internet-programming-tasks.md)<br/>
 [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)
-

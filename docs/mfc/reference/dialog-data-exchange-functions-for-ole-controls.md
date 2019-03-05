@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-ms.openlocfilehash: 5d330d8dd423927a3f4abbe6475a8d6219fa9af2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df96d44cefeb15d89653538c3006d109a97a21a7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531244"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298252"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>OLE 控制項的對話方塊資料交換函式
 
@@ -69,7 +69,7 @@ void AFXAPI DDX_OCBool(
 *dispid*<br/>
 控制項屬性的分派識別碼。
 
-*值*<br/>
+*value*<br/>
 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。
 
 ### <a name="remarks"></a>備註
@@ -103,7 +103,7 @@ void AFXAPI DDX_OCBoolRO(
 *dispid*<br/>
 控制項屬性的分派識別碼。
 
-*值*<br/>
+*value*<br/>
 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。
 
 ### <a name="remarks"></a>備註
@@ -137,7 +137,7 @@ void AFXAPI DDX_OCColor(
 *dispid*<br/>
 控制項屬性的分派識別碼。
 
-*值*<br/>
+*value*<br/>
 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。
 
 ### <a name="remarks"></a>備註
@@ -171,7 +171,7 @@ void AFXAPI DDX_OCColorRO(
 *dispid*<br/>
 控制項屬性的分派識別碼。
 
-*值*<br/>
+*value*<br/>
 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。
 
 ### <a name="remarks"></a>備註
@@ -211,7 +211,7 @@ void AFXAPI DDX_OCFloat(
 *dispid*<br/>
 控制項屬性的分派識別碼。
 
-*值*<br/>
+*value*<br/>
 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。
 
 ### <a name="remarks"></a>備註
@@ -251,7 +251,7 @@ void AFXAPI DDX_OCFloatRO(
 *dispid*<br/>
 控制項屬性的分派識別碼。
 
-*值*<br/>
+*value*<br/>
 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。
 
 ### <a name="remarks"></a>備註
@@ -291,7 +291,7 @@ void AFXAPI DDX_OCInt(
 *dispid*<br/>
 控制項屬性的分派識別碼。
 
-*值*<br/>
+*value*<br/>
 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。
 
 ### <a name="remarks"></a>備註
@@ -331,7 +331,7 @@ void AFXAPI DDX_OCIntRO(
 *dispid*<br/>
 控制項屬性的分派識別碼。
 
-*值*<br/>
+*value*<br/>
 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。
 
 ### <a name="remarks"></a>備註
@@ -365,7 +365,7 @@ void AFXAPI DDX_OCShort(
 *dispid*<br/>
 控制項屬性的分派識別碼。
 
-*值*<br/>
+*value*<br/>
 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。
 
 ### <a name="remarks"></a>備註
@@ -399,7 +399,7 @@ void AFXAPI DDX_OCShortRO(
 *dispid*<br/>
 控制項屬性的分派識別碼。
 
-*值*<br/>
+*value*<br/>
 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。
 
 ### <a name="remarks"></a>備註
@@ -433,7 +433,7 @@ void AFXAPI DDX_OCText(
 *dispid*<br/>
 控制項屬性的分派識別碼。
 
-*值*<br/>
+*value*<br/>
 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。
 
 ### <a name="remarks"></a>備註
@@ -467,7 +467,7 @@ void AFXAPI DDX_OCTextRO(
 *dispid*<br/>
 控制項屬性的分派識別碼。
 
-*值*<br/>
+*value*<br/>
 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。
 
 ### <a name="remarks"></a>備註

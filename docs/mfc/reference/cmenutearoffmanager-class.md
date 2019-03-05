@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMenuTearOffManager [MFC], SetInUse
 - CMenuTearOffManager [MFC], SetupTearOffMenus
 ms.assetid: ab7ca272-ce42-4678-95f7-6ad75038f5a0
-ms.openlocfilehash: 60e89967d139a3f5bc7b96cc1823b31b98a57fb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6bdbb18c2d1b40423457b4cf07d0a747138b99b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558843"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266194"
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager 類別
 
@@ -94,9 +94,9 @@ void Build(
 
 ### <a name="parameters"></a>參數
 
-[in]*uiTearOffBarID*<br/>
+[in] *uiTearOffBarID*<br/>
 
-[in]*先把 strText*<br/>
+[in] *strText*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -160,7 +160,7 @@ BOOL IsDynamicID(UINT uiID) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*uiID*<br/>
+[in] *uiID*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -174,7 +174,7 @@ UINT Parse(CString& str);
 
 ### <a name="parameters"></a>參數
 
-[in]*str*<br/>
+[in] *str*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -202,9 +202,9 @@ void SetInUse(
 
 ### <a name="parameters"></a>參數
 
-[in]*uiCmdId*<br/>
+[in] *uiCmdId*<br/>
 
-[in]*bUse*<br/>
+[in] *bUse*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -216,7 +216,7 @@ void SetupTearOffMenus(HMENU hMenu);
 
 ### <a name="parameters"></a>參數
 
-[in]*hMenu*<br/>
+[in] *hMenu*<br/>
 
 ### <a name="remarks"></a>備註
 

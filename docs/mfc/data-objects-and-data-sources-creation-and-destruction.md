@@ -15,12 +15,12 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-ms.openlocfilehash: a46cc15a101618699b9e7fa988155517de673fdb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74119d7ea33eef68f0cb4a67c8419514cbb73c10
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614964"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304428"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>資料物件和資料來源：建立和解構
 
@@ -70,7 +70,7 @@ ms.locfileid: "50614964"
 
 此案例中藉由 MFC OLE 範例[OCLIENT](../visual-cpp-samples.md)並[HIERSVR](../visual-cpp-samples.md)。 針對每個應用程式的 `CView` 衍生類別查看除了 `GetClipboardData` 和 `OnGetClipboardData` 函式之外的原始程式碼。 這兩個函式會位於 `COleClientItem` 或 `COleServerItem` 衍生類別的實作中。 這些範例程式為如何實作這些概念提供了良好的範例。
 
-如果要修改拖放作業的預設行為，會發生另一種您可能想要建立 `COleDataSource` 物件的情況。 如需詳細資訊，請參閱 <<c0> [ 拖放： 自訂](../mfc/drag-and-drop-customizing.md)文章。
+如果要修改拖放作業的預設行為，會發生另一種您可能想要建立 `COleDataSource` 物件的情況。 如需詳細資訊，請參閱[將拖放：自訂](../mfc/drag-and-drop-customizing.md)文章。
 
 ##  <a name="_core_destroying_data_sources"></a> 終結資料來源
 

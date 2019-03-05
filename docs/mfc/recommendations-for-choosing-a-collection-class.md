@@ -16,12 +16,12 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-ms.openlocfilehash: 2c8cb323feb44618909895a4ee536ad3b7832173
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c72a57385b0036d98629d1ee24111500b9d2f8ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446731"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288034"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>選擇集合類別的建議
 
@@ -66,17 +66,17 @@ ms.locfileid: "50446731"
 |`CDWordArray`|否|是|是|是 3|
 |`CList`|是|是 1|是 1|否|
 |`CMap`|是|是 1|是 1|否|
-|`CMapPtrToPtr`|否|否|是|否|
-|`CMapPtrToWord`|否|否|是|否|
+|`CMapPtrToPtr`|否|否|[是]|否|
+|`CMapPtrToWord`|否|否|[是]|否|
 |`CMapStringToOb`|否|是|是|否|
-|`CMapStringToPtr`|否|否|是|否|
+|`CMapStringToPtr`|否|否|[是]|否|
 |`CMapStringToString`|否|是|是|是 3|
 |`CMapWordToOb`|否|是|是|否|
-|`CMapWordToPtr`|否|否|是|否|
+|`CMapWordToPtr`|否|否|[是]|否|
 |`CObArray`|否|是|是|否|
 |`CObList`|否|是|是|否|
-|`CPtrArray`|否|否|是|否|
-|`CPtrList`|否|否|是|否|
+|`CPtrArray`|否|否|[是]|否|
+|`CPtrList`|否|否|[是]|否|
 |`CStringArray`|否|是|是|是 3|
 |`CStringList`|否|是|是|是 3|
 |`CTypedPtrArray`|是|不一定 2|是|是|
@@ -87,14 +87,13 @@ ms.locfileid: "50446731"
 
 1. 若要序列化，您必須明確呼叫集合物件的 `Serialize` 函式；若要傾印，您必須明確呼叫其 `Dump` 函式。 您不能使用 `ar << collObj` 格式進行序列化，也不能使用 `dmp` `<< collObj` 格式進行傾印。
 
-2. 能否序列化取決於基礎集合類型。 例如，如果具類型的指標陣列是以 `CObArray` 為基礎，則可以序列化；如果是以 `CPtrArray` 為基礎，則無法序列化。 一般而言，您無法序列化 "Ptr" 類別。
+2. 能否序列化取決於基礎集合類型。 例如，如果具類型的指標陣列是以 `CObArray`為基礎，則可以序列化；如果是以 `CPtrArray`為基礎，則無法序列化。 一般而言，您無法序列化 "Ptr" 類別。
 
-3. 如果在此欄中標示為 [是]，則非範本集合類別為型別安全 (但前提是您必須如預期般使用它)。 例如，如果您將位元組儲存在 `CByteArray` 中，則陣列為型別安全。 但是，如果您用來儲存字元，就不一定是型別安全。
+3. 如果在此欄中標示為 [是]，則非範本集合類別為型別安全 (但前提是您必須如預期般使用它)。 例如，如果您將位元組儲存在 `CByteArray`中，則陣列為型別安全。 但是，如果您用來儲存字元，就不一定是型別安全。
 
 ## <a name="see-also"></a>另請參閱
 
 [集合](../mfc/collections.md)<br/>
 [樣板架構類別](../mfc/template-based-classes.md)<br/>
-[如何：建立型別安全集合](../mfc/how-to-make-a-type-safe-collection.md)<br/>
+[如何：建立類型安全集合](../mfc/how-to-make-a-type-safe-collection.md)<br/>
 [存取集合的所有成員](../mfc/accessing-all-members-of-a-collection.md)
-

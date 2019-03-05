@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectNoLock class
 ms.assetid: 288c6506-7da8-4127-8d58-7f4bd779539a
-ms.openlocfilehash: 85a5a71e330b8171a8e0e239d9afab43a6df1512
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50dc4505c1da8df9efc0c9d0028461ef49c0840e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467352"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301957"
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock 類別
 

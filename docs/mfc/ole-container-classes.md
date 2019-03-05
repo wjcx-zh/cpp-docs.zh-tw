@@ -11,12 +11,12 @@ helpviewer_keywords:
 - OLE [MFC], classes
 - containers [MFC], OLE container applications
 ms.assetid: 1e27e1ab-4c22-41eb-8547-6915c72668ae
-ms.openlocfilehash: 518ae4889a2c5d9dae10e5b5cba6845010ba883c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87db824e5ab4daec15870b245ea8341be7442109
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517139"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292549"
 ---
 # <a name="ole-container-classes"></a>OLE 容器類別
 
@@ -51,4 +51,3 @@ ms.locfileid: "50517139"
 ## <a name="see-also"></a>另請參閱
 
 [類別概觀](../mfc/class-library-overview.md)
-

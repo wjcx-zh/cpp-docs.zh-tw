@@ -3,12 +3,12 @@ title: 建立專案 (ATL 教學課程，第 1 部分)
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: dab9bdab75bb710bf73314aae7283611d9a3b5cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a608fb3a096dee2420ef652ba213c534d8fb426
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539577"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273921"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>建立專案 (ATL 教學課程，第 1 部分)
 
@@ -72,7 +72,7 @@ ms.locfileid: "50539577"
 
 1. 按一下 **連結器**。 變更**每個 UserRedirection**選項設定為**是**。
 
-1. 按一下 [確定 **Deploying Office Solutions**]。
+1. 按一下 [確定] 。
 
 在下一個步驟中，您會將控制項加入您的專案。
 

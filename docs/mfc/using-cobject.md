@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MFC, base class
 - CObject class [MFC]
 ms.assetid: d0cd19bb-2856-4b41-abbc-620fd64cb223
-ms.openlocfilehash: 443a381c33458e61ba49eb10724d31614831f422
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15b5bebb8e75d24b769cd29971d08b3fbf92fcf8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564823"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302126"
 ---
 # <a name="using-cobject"></a>使用 CObject
 
@@ -46,4 +46,3 @@ ms.locfileid: "50564823"
 [CRuntimeClass 結構](../mfc/reference/cruntimeclass-structure.md)<br/>
 [檔案](../mfc/files-in-mfc.md)<br/>
 [序列化](../mfc/serialization-in-mfc.md)
-

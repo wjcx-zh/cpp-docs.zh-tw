@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: 9d9a2d33f61aa9033bb17c090989b4f08ee82bd7
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: d3fc71c3e294b26aea405b8800199cf88120fa08
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178378"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282444"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd 類別
 
@@ -194,7 +194,7 @@ CMDIChildWnd* CreateNewChild(
 *pClass*<br/>
 若要建立子視窗的執行階段類別。
 
-*資源*<br/>
+*nResource*<br/>
 子視窗相關聯的共用資源的識別碼。
 
 *hMenu*<br/>
@@ -275,7 +275,7 @@ void MDICascade(int nType);
 
 ### <a name="parameters"></a>參數
 
-*n*<br/>
+*nType*<br/>
 指定 cascade 旗標。 您可以指定下列旗標：MDITILE_SKIPDISABLED，防止已停用的 MDI 子視窗正在串聯。
 
 ### <a name="remarks"></a>備註
@@ -440,7 +440,7 @@ void MDITile(int nType);
 
 ### <a name="parameters"></a>參數
 
-*n*<br/>
+*nType*<br/>
 指定的並排顯示旗標。 這個參數可以是下列旗標的任一項：
 
 - MDITILE_HORIZONTAL 磚的 MDI 子視窗以便顯示上述另一個視窗。

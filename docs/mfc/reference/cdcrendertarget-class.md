@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], GetDCRenderTarget
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
-ms.openlocfilehash: e172d175bba5b4c379f7cd29451d7ad4215d9c68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70169d2b89d9ea657898f7a96dea27556023d4e2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541709"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268274"
 ---
 # <a name="cdcrendertarget-class"></a>CDCRenderTarget 類別
 
@@ -59,7 +59,7 @@ class CDCRenderTarget : public CRenderTarget;
 
 |名稱|描述|
 |----------|-----------------|
-|[CDCRenderTarget::operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|傳回 ID2D1DCRenderTarget 介面|
+|[CDCRenderTarget::operator ID2D1DCRenderTarget*](#operator_id2d1dcrendertarget_star)|傳回 ID2D1DCRenderTarget 介面|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
@@ -132,7 +132,7 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 
 ### <a name="parameters"></a>參數
 
-*屬性*<br/>
+*props*<br/>
 轉譯模式、 像素格式，遠端選項、 DPI 的詳細資訊，以及硬體呈現所需的最小的 DirectX 支援。
 
 ### <a name="return-value"></a>傳回值
@@ -171,7 +171,7 @@ ID2D1DCRenderTarget 物件的指標。
 ID2D1DCRenderTarget* m_pDCRenderTarget;
 ```
 
-##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget *
+##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget*
 
 傳回 ID2D1DCRenderTarget 介面
 

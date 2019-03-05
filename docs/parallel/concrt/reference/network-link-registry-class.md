@@ -12,16 +12,17 @@ f1_keywords:
 helpviewer_keywords:
 - network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-ms.openlocfilehash: 1d0aa8b3b5409659dee08b4e4365beac1a3a92be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2537ed857651b5210b104a270b3d827246b8339a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492258"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273344"
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry 類別
 
-`network_link_registry` 抽象基底類別會管理來源和目標區塊之間的連結。
+
+  `network_link_registry` 抽象基底類別會管理來源和目標區塊之間的連結。
 
 ## <a name="syntax"></a>語法
 
@@ -32,7 +33,7 @@ class network_link_registry;
 
 #### <a name="parameters"></a>參數
 
-*區塊 （_b)*<br/>
+*_Block*<br/>
 區塊資料類型儲存在`network_link_registry`。
 
 ## <a name="members"></a>成員
@@ -52,7 +53,7 @@ class network_link_registry;
 |----------|-----------------|
 |[add](#add)|當在衍生類別中覆寫時，將加入的連結`network_link_registry`物件。|
 |[begin](#begin)|當在衍生類別中覆寫時，會傳回迭代器中的第一個項目`network_link_registry`物件。|
-|[包含](#contains)|當在衍生類別中覆寫時，會搜尋`network_link_registry`物件指定的區塊。|
+|[contains](#contains)|當在衍生類別中覆寫時，會搜尋`network_link_registry`物件指定的區塊。|
 |[count](#count)|當在衍生類別中覆寫時，會傳回中的項目數`network_link_registry`物件。|
 |[remove](#remove)|當在衍生類別中覆寫時，會移除指定的區塊，從`network_link_registry`物件。|
 
@@ -70,7 +71,7 @@ class network_link_registry;
 
 **命名空間：** concurrency
 
-##  <a name="add"></a> 新增
+##  <a name="add"></a> add
 
 當在衍生類別中覆寫時，將加入的連結`network_link_registry`物件。
 
@@ -80,10 +81,10 @@ virtual void add(_EType _Link) = 0;
 
 ### <a name="parameters"></a>參數
 
-*連結 （_l)*<br/>
+*_Link*<br/>
 要加入的區塊的指標。
 
-##  <a name="begin"></a> 開始
+##  <a name="begin"></a> begin
 
 當在衍生類別中覆寫時，會傳回迭代器中的第一個項目`network_link_registry`物件。
 
@@ -109,14 +110,14 @@ virtual bool contains(_EType _Link) = 0;
 
 ### <a name="parameters"></a>參數
 
-*連結 （_l)*<br/>
+*_Link*<br/>
 在搜尋區塊的指標`network_link_registry`物件。
 
 ### <a name="return-value"></a>傳回值
 
 **真**找不到此區塊，如果**false**否則。
 
-##  <a name="count"></a> 計數
+##  <a name="count"></a> count
 
 當在衍生類別中覆寫時，會傳回中的項目數`network_link_registry`物件。
 
@@ -138,7 +139,7 @@ virtual bool remove(_EType _Link) = 0;
 
 ### <a name="parameters"></a>參數
 
-*連結 （_l)*<br/>
+*_Link*<br/>
 要移除，如果區塊的指標找到。
 
 ### <a name="return-value"></a>傳回值

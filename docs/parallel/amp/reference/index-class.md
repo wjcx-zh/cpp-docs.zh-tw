@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-ms.openlocfilehash: 921d87de72c13e1971d9b40474bf3d91033c0580
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 054db83e4d8e140af37dcff9a7664ffdf7902325
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529307"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284641"
 ---
 # <a name="index-class"></a>index 類別
 
@@ -124,7 +124,7 @@ explicit index(
 *_Other*<br/>
 新的索引物件所依據的索引物件。
 
-## <a name="operator--"></a>  operator-
+## <a name="operator--"></a>  operator--
 
 遞減索引物件的每個項目。
 ```
@@ -139,7 +139,7 @@ index operator--(
 
 為前置運算子，index 物件 (* 這)。 為後置運算子，新的索引物件。
 
-## <a name="operator_mod_eq"></a>  operator(mod) =
+## <a name="operator_mod_eq"></a>  operator(mod)=
 
 項目除以指定數字時，會計算的每個項目中的索引物件的模數 （餘數）。
 
@@ -171,7 +171,7 @@ index<_Rank>& operator*=(
 *_Rhs*<br/>
 要相乘的數字。
 
-## <a name="operator_div_eq"></a>  operator / =
+## <a name="operator_div_eq"></a>  operator/=
 
 索引物件中的每個項目除以指定數字。
 
@@ -275,7 +275,7 @@ index<_Rank>& operator=(
 
 此索引物件的參考。
 
-## <a name="operator_-_eq"></a>  運算子 =
+## <a name="operator_-_eq"></a>  operator-=
 
 減去指定的數值索引物件的每個項目。
 ```

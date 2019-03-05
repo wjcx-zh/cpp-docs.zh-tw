@@ -1,23 +1,23 @@
 ---
-title: Windows Sockets：從通訊端類別衍生
+title: Windows Sockets:衍生自通訊端類別
 ms.date: 11/04/2016
 helpviewer_keywords:
 - derived classes [MFC], from socket classes
 - Windows Sockets [MFC], deriving from socket classes
 - sockets [MFC], deriving from socket classes
 ms.assetid: 3a26e67a-e323-433b-9b05-eca018799801
-ms.openlocfilehash: d860aacef164155f87db33355211b1a8e598c91b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12ab66cfd9212cd79752e2f6359b857194c6428c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648808"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270295"
 ---
-# <a name="windows-sockets-deriving-from-socket-classes"></a>Windows Sockets：從通訊端類別衍生
+# <a name="windows-sockets-deriving-from-socket-classes"></a>Windows Sockets:衍生自通訊端類別
 
 本文說明一些您可以取得其中一個通訊端類別衍生您自己的類別的功能。
 
-您可以將您自己的通訊端類別衍生自[CAsyncSocket](../mfc/reference/casyncsocket-class.md)或是[CSocket](../mfc/reference/csocket-class.md)新增您自己的功能。 特別是，這些類別會提供一些您可以覆寫的虛擬成員函式。 這些函式包含[OnReceive](../mfc/reference/casyncsocket-class.md#onreceive)， [OnSend](../mfc/reference/casyncsocket-class.md#onsend)， [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept)， [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect)，以及[OnClose](../mfc/reference/casyncsocket-class.md#onclose)。 您可以在您的衍生通訊端類別，以善用網路事件發生時提供通知，以覆寫函式。 架構會呼叫以通知您重要的通訊端的事件，例如收到資料，您可以開始讀取這些通知回撥函式。 如需通知函式的詳細資訊，請參閱[Windows Sockets： 通訊端告知](../mfc/windows-sockets-socket-notifications.md)。
+您可以將您自己的通訊端類別衍生自[CAsyncSocket](../mfc/reference/casyncsocket-class.md)或是[CSocket](../mfc/reference/csocket-class.md)新增您自己的功能。 特別是，這些類別會提供一些您可以覆寫的虛擬成員函式。 這些函式包含[OnReceive](../mfc/reference/casyncsocket-class.md#onreceive)， [OnSend](../mfc/reference/casyncsocket-class.md#onsend)， [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept)， [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect)，以及[OnClose](../mfc/reference/casyncsocket-class.md#onclose)。 您可以在您的衍生通訊端類別，以善用網路事件發生時提供通知，以覆寫函式。 架構會呼叫以通知您重要的通訊端的事件，例如收到資料，您可以開始讀取這些通知回撥函式。 如需通知函式的詳細資訊，請參閱[Windows Sockets:通訊端通知](../mfc/windows-sockets-socket-notifications.md)。
 
 此外，類別`CSocket`提供[OnMessagePending](../mfc/reference/csocket-class.md#onmessagepending)成員函式 (一種進階可覆寫)。 MFC 通訊端會提取 Windows 為基礎的訊息時，呼叫此函式。 您可以覆寫`OnMessagePending`從 Windows 中尋找特定的訊息並加以回應。
 
@@ -27,17 +27,16 @@ ms.locfileid: "50648808"
 
 如需詳細資訊，請參閱:
 
-- [Windows Sockets：搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets:搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets：使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets:使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets：封鎖](../mfc/windows-sockets-blocking.md)
+- [Windows Sockets:封鎖](../mfc/windows-sockets-blocking.md)
 
-- [Windows Sockets：位元組順序](../mfc/windows-sockets-byte-ordering.md)
+- [Windows Sockets:位元組順序](../mfc/windows-sockets-byte-ordering.md)
 
-- [Windows Sockets：轉換字串](../mfc/windows-sockets-converting-strings.md)
+- [Windows Sockets:將字串轉換](../mfc/windows-sockets-converting-strings.md)
 
 ## <a name="see-also"></a>另請參閱
 
 [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)
-

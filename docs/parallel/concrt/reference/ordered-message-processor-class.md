@@ -14,16 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - ordered_message_processor class
 ms.assetid: 787adfb7-7f79-4a70-864a-80e3b64088cd
-ms.openlocfilehash: c6e09ff862f0725cc508e3e390dbfa3cc12f7daa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b88544f399031a5f770fa39aa1f3300306158511
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545960"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270744"
 ---
 # <a name="orderedmessageprocessor-class"></a>ordered_message_processor 類別
 
-`ordered_message_processor` 是 `message_processor`，可讓訊息區塊按照接收順序處理訊息。
+
+  `ordered_message_processor` 是 `message_processor`，可讓訊息區塊按照接收順序處理訊息。
 
 ## <a name="syntax"></a>語法
 
@@ -57,10 +58,10 @@ class ordered_message_processor : public message_processor<T>;
 |名稱|描述|
 |----------|-----------------|
 |[async_send](#async_send)|非同步訊息排入佇列並啟動的處理工作，如果這已經不做。 (覆寫[message_processor:: async_send](message-processor-class.md#async_send)。)|
-|[初始化](#initialize)|初始化`ordered_message_processor`與適當的回呼函式、 排程器和排程群組的物件。|
+|[initialize](#initialize)|初始化`ordered_message_processor`與適當的回呼函式、 排程器和排程群組的物件。|
 |[initialize_batched_processing](#initialize_batched_processing)|初始化批次訊息處理|
 |[sync_send](#sync_send)|同步訊息排入佇列並啟動的處理工作，如果這已經不做。 (覆寫[message_processor:: sync_send](message-processor-class.md#sync_send)。)|
-|[等候](#wait)|特定處理器的旋轉等待，用於訊息區塊的解構函式，以確定所有的非同步處理工作已完成，然後再終結該區塊的時間。 (覆寫[message_processor:: wait](message-processor-class.md#wait)。)|
+|[wait](#wait)|特定處理器的旋轉等待，用於訊息區塊的解構函式，以確定所有的非同步處理工作已完成，然後再終結該區塊的時間。 (覆寫[message_processor:: wait](message-processor-class.md#wait)。)|
 
 ### <a name="protected-methods"></a>保護方法
 

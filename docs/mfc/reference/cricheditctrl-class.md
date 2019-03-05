@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: c42f7b77c04b2c94923908fa8b9542bea313b154
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ca6185e7ee41726c7bf583056cb66eeb1be7021c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178989"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303430"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl 類別
 
@@ -360,7 +360,7 @@ int CharFromPos(CPoint pt) const;
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pt*<br/>
 A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，其中包含指定點的座標。
 
 ### <a name="return-value"></a>傳回值
@@ -423,7 +423,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定編輯控制項的樣式。 適用於所列出的視窗樣式的組合 **< 備註 > 一**一節，以及[編輯控制項的樣式](/windows/desktop/Controls/edit-control-styles)Windows SDK 中所述。
 
 *rect*<br/>
@@ -485,7 +485,7 @@ virtual BOOL CreateEx(
 *dwExStyle*<br/>
 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定編輯控制項的樣式。 適用於所列出的視窗樣式的組合 **< 備註 > 一**一節[建立](#create)並[編輯控制項的樣式](/windows/desktop/Controls/edit-control-styles)Windows SDK 中所述。
 
 *rect*<br/>
@@ -632,10 +632,10 @@ DWORD FindWordBreak(
 
 ### <a name="parameters"></a>參數
 
-*則 nCode*<br/>
+*nCode*<br/>
 表示要採取的動作。 如需可能值的清單，請參閱參數的描述*程式碼*EM_FINDWORDBREAK Windows sdk 中。
 
-*n*<br/>
+*nStart*<br/>
 從要啟動的以零為起始的字元位置。
 
 ### <a name="return-value"></a>傳回值
@@ -1204,7 +1204,7 @@ int GetTextRange(
 *nFirst*<br/>
 立即在範圍中之前的第一個字元的字元位置的索引。
 
-*n 上次*<br/>
+*nLast*<br/>
 緊接在範圍內的最後一個字元的字元位置。
 
 *refString*<br/>
@@ -1343,7 +1343,7 @@ int LineIndex(int nLine = -1) const;
 
 ### <a name="parameters"></a>參數
 
-*n 行*<br/>
+*nLine*<br/>
 包含編輯控制項的文字行的索引值，或包含-1。 如果*n 行*為-1，它會指定目前這一行，也就是包含插入號的行。
 
 ### <a name="return-value"></a>傳回值
@@ -1370,7 +1370,7 @@ int LineLength(int nLine = -1) const;
 
 ### <a name="parameters"></a>參數
 
-*n 行*<br/>
+*nLine*<br/>
 其長度是要擷取列中指定字元的字元索引。 如果這個參數是-1，會傳回目前的行 （包含插入號的行） 的長度，不包括任何選取的行內的文字。 當`LineLength`稱為單行編輯控制項，會忽略這個參數。
 
 ### <a name="return-value"></a>傳回值
@@ -1477,7 +1477,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 ### <a name="parameters"></a>參數
 
-*NChar*<br/>
+*nChar*<br/>
 字元的以零為起始的索引。
 
 ### <a name="return-value"></a>傳回值

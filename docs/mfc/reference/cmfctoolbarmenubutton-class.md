@@ -92,12 +92,12 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: ed786f3449f172f1aa4255a4ca677a400b767e83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 775d977fa1c995c42cc85660b1c9d13aea40a01e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429363"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281517"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton 類別
 
@@ -123,10 +123,10 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 |名稱|描述|
 |----------|-----------------|
 |[CMFCToolBarMenuButton::CompareWith](#comparewith)|比較這個執行個體與提供`CMFCToolBarButton`物件。 (覆寫[CMFCToolBarButton::CompareWith](../../mfc/reference/cmfctoolbarbutton-class.md#comparewith)。)|
-|[Cmfctoolbarmenubutton:: Copyfrom](#copyfrom)|另一個工具列按鈕的屬性複製到目前的按鈕。 (覆寫[CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom)。)|
+|[CMFCToolBarMenuButton::CopyFrom](#copyfrom)|另一個工具列按鈕的屬性複製到目前的按鈕。 (覆寫[CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom)。)|
 |[CMFCToolBarMenuButton::CreateFromMenu](#createfrommenu)|初始化 Windows 功能表控制代碼的工具列功能表。|
 |[CMFCToolBarMenuButton::CreateMenu](#createmenu)|建立工具列功能表中的命令所組成的 Windows 功能表。 傳回的 Windows 功能表的控制代碼。|
-|[Cmfctoolbarmenubutton:: Createpopupmenu](#createpopupmenu)|建立快顯功能表物件 ( [CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)) 以顯示 [工具列] 功能表。|
+|[CMFCToolBarMenuButton::CreatePopupMenu](#createpopupmenu)|建立快顯功能表物件 ( [CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)) 以顯示 [工具列] 功能表。|
 |[CMFCToolBarMenuButton::EnableQuickCustomize](#enablequickcustomize)||
 |[CMFCToolBarMenuButton::GetCommands](#getcommands)|可唯讀存取權，讓 [工具列] 功能表中的命令清單。|
 |[CMFCToolBarMenuButton::GetImageRect](#getimagerect)|擷取按鈕影像的周框矩形。|
@@ -137,7 +137,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 |[CMFCToolBarMenuButton::IsBorder](#isborder)||
 |[CMFCToolBarMenuButton::IsClickedOnMenu](#isclickedonmenu)||
 |[CMFCToolBarMenuButton::IsDroppedDown](#isdroppeddown)|決定是否要顯示快顯功能表。|
-|[Cmfctoolbarmenubutton:: Isemptymenuallowed](#isemptymenuallowed)|由架構呼叫以判斷使用者是否可以從選取的功能表項目開啟子功能表。|
+|[CMFCToolBarMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|由架構呼叫以判斷使用者是否可以從選取的功能表項目開啟子功能表。|
 |[CMFCToolBarMenuButton::IsExclusive](#isexclusive)|決定是否 按鈕以獨佔模式，也就是快顯功能表是否保持開啟即使使用者將指標移至另一個工具列或按鈕上方。|
 |[CMFCToolBarMenuButton::IsMenuPaletteMode](#ismenupalettemode)|判斷是否在調色盤模式中的快顯功能表。|
 |[CMFCToolBarMenuButton::IsQuickMode](#isquickmode)||
@@ -253,13 +253,13 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*其他*<br/>
+[in] *other*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="copyfrom"></a>  Cmfctoolbarmenubutton:: Copyfrom
+##  <a name="copyfrom"></a>  CMFCToolBarMenuButton::CopyFrom
 
 ```
 virtual void CopyFrom(const CMFCToolBarButton& src);
@@ -267,7 +267,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 
 ### <a name="parameters"></a>參數
 
-[in]*src*<br/>
+[in] *src*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -306,7 +306,7 @@ virtual HMENU CreateMenu() const;
 
 您可以覆寫中自訂功能表的產生的方式衍生的類別，這個方法。
 
-##  <a name="createpopupmenu"></a>  Cmfctoolbarmenubutton:: Createpopupmenu
+##  <a name="createpopupmenu"></a>  CMFCToolBarMenuButton::CreatePopupMenu
 
 建立`CMFCPopupMenu`物件，以顯示 [工具列] 功能表。
 
@@ -481,7 +481,7 @@ virtual BOOL IsDroppedDown() const;
 
 如果工具列功能表按鈕會顯示其功能表;，則為 TRUE。否則為 FALSE。
 
-##  <a name="isemptymenuallowed"></a>  Cmfctoolbarmenubutton:: Isemptymenuallowed
+##  <a name="isemptymenuallowed"></a>  CMFCToolBarMenuButton::IsEmptyMenuAllowed
 
 指定功能表項目是否顯示空的子功能表。
 
@@ -590,9 +590,9 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*sizeDefault*<br/>
-[in]*bHorz*<br/>
+[in] *pDC*<br/>
+[in] *sizeDefault*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -614,7 +614,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 
 ### <a name="parameters"></a>參數
 
-[in]*pWndParent*<br/>
+[in] *pWndParent*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -628,8 +628,8 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>參數
 
-[in]*pWnd*<br/>
-[in]*bDelay*<br/>
+[in] *pWnd*<br/>
+[in] *bDelay*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -661,7 +661,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 
 ### <a name="parameters"></a>參數
 
-[in]*pWnd*<br/>
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -683,14 +683,14 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*pImages*<br/>
-[in]*bHorz*<br/>
-[in]*bCustomizeMode*<br/>
-[in]*bHighlight*<br/>
-[in]*bDrawBorder*<br/>
-[in]*bGrayDisabledButtons*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *pImages*<br/>
+[in] *bHorz*<br/>
+[in] *bCustomizeMode*<br/>
+[in] *bHighlight*<br/>
+[in] *bDrawBorder*<br/>
+[in] *bGrayDisabledButtons*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -705,9 +705,9 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*bSelected*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bSelected*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -760,7 +760,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>參數
 
-[in]*ar*<br/>
+[in] *ar*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -837,7 +837,7 @@ void SetMessageWnd(CWnd* pWndMessage);
 
 ### <a name="parameters"></a>參數
 
-[in]*pWndMessage*<br/>
+[in] *pWndMessage*<br/>
 
 ### <a name="remarks"></a>備註
 

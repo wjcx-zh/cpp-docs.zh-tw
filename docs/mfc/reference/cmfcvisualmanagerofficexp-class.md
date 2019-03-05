@@ -1,19 +1,19 @@
 ---
-title: CMFCVisualManagerOfficeXP 類別
+title: CMFCVisualManagerOfficeXP Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCVisualManagerOfficeXP
 helpviewer_keywords:
 - CMFCVisualManagerOfficeXP class [MFC]
 ms.assetid: 46b6f854-37c2-4836-8f56-5cb6ff63c9af
-ms.openlocfilehash: c3b198698b4404976842466dc9b830f72c08a72f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6bfde7e241e16584254c956125208efc5c2a405a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586365"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292233"
 ---
-# <a name="cmfcvisualmanagerofficexp-class"></a>CMFCVisualManagerOfficeXP 類別
+# <a name="cmfcvisualmanagerofficexp-class"></a>CMFCVisualManagerOfficeXP Class
 
 `CMFCVisualManagerOfficeXP`為應用程式提供 Microsoft Office XP 外觀。
 

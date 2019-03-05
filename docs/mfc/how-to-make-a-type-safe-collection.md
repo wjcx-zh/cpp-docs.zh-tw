@@ -1,5 +1,5 @@
 ---
-title: 如何：建立類型安全集合
+title: HOW TO：建立類型安全集合
 ms.date: 11/04/2016
 helpviewer_keywords:
 - type-safe collections [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: 12ecec7562a9241fab30b859727a22e467e6eeb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4241a77184458f5253b6d8987c310604310683c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581788"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295184"
 ---
-# <a name="how-to-make-a-type-safe-collection"></a>如何：建立類型安全集合
+# <a name="how-to-make-a-type-safe-collection"></a>HOW TO：建立類型安全集合
 
 本文說明如何進行資料類型的類型安全集合。 主題包括：
 
@@ -51,9 +51,11 @@ MFC 程式庫提供以 C++ 範本為基礎的預先定義類型安全集合。 �
 
 ###  <a name="_core_serializing_elements"></a> 序列化項目
 
-`CArray`、`CList` 和 `CMap` 類別會呼叫 `SerializeElements` 將集合項目儲存至封存或從封存讀取集合項目。
 
-`SerializeElements` helper 函式的預設實作，會根據是將物件儲存至封存還是從封存擷取物件，進行物件到封存的位元寫入，或從封存到物件的位元讀取。 如果此動作不適合，則覆寫 `SerializeElements`。
+  `CArray`、`CList` 和 `CMap` 類別會呼叫 `SerializeElements` 將集合項目儲存至封存或從封存讀取集合項目。
+
+
+  `SerializeElements` helper 函式的預設實作，會根據是將物件儲存至封存還是從封存擷取物件，進行物件到封存的位元寫入，或從封存到物件的位元讀取。 如果此動作不適合，則覆寫 `SerializeElements`。
 
 如果您的集合會儲存衍生自 `CObject` 的物件，而且您在實作集合項目類別時使用 `IMPLEMENT_SERIAL` 巨集，您可以利用內建於 `CArchive` 和 `CObject` 的序列化功能：
 
@@ -100,4 +102,3 @@ MFC 也支援使用 MFC 1.0 版導入的集合類別。 這些類別不是以範
 ## <a name="see-also"></a>另請參閱
 
 [集合](../mfc/collections.md)
-

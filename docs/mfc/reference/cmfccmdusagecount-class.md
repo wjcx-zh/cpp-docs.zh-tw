@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: af48451bcba9bf0d5f07cd96da99be4c2a6ae99b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4ad9a60831feb6fa1147ea3f8bcfd5c6badd06c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549392"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275359"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount 類別
 
@@ -55,7 +55,7 @@ class CMFCCmdUsageCount : public CObject
 |[CMFCCmdUsageCount::AddCmd](#addcmd)|一個指定的命令相關聯的計數器遞增。|
 |[CMFCCmdUsageCount::GetCount](#getcount)|擷取與指定的命令識別碼相關聯的使用計數|
 |[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)|判斷這個物件是否已收集追蹤資料的最小數量。|
-|[Isfreqeuntlyusedcmd](#isfreqeuntlyusedcmd)|判斷是否經常使用指定的命令。|
+|[CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd)|判斷是否經常使用指定的命令。|
 |[CMFCCmdUsageCount::Reset](#reset)|清除所有命令的使用計數。|
 |[CMFCCmdUsageCount::Serialize](#serialize)|從封存讀取這個物件，或將其寫入至封存。 (覆寫 [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)。)|
 |[CMFCCmdUsageCount::SetOptions](#setoptions)|設定的值共用`CMFCCmdUsageCount`類別資料成員。|
@@ -150,7 +150,7 @@ BOOL HasEnoughInformation() const;
 
 這個方法由[CMFCMenuBar::IsShowAllCommands](../../mfc/reference/cmfcmenubar-class.md#isshowallcommands)來判斷是否要顯示所有可用的功能表命令。
 
-##  <a name="isfreqeuntlyusedcmd"></a>  Isfreqeuntlyusedcmd
+##  <a name="isfreqeuntlyusedcmd"></a>  CMFCCmdUsageCount::IsFreqeuntlyUsedCmd
 
 判斷是否經常使用指定的命令。
 
@@ -206,7 +206,7 @@ virtual void Serialize(CArchive& ar);
 
 這個方法會序列化的指令計數的對應結構`m_CmdUsage`，和 總命令的用法， `m_nTotalUsage`、 計數器或指定的封存。
 
-如需序列化的範例，請參閱[序列化： 序列化物件](../../mfc/serialization-serializing-an-object.md)。
+如需序列化的範例，請參閱[序列化：將物件序列化為](../../mfc/serialization-serializing-an-object.md)。
 
 ##  <a name="setoptions"></a>  CMFCCmdUsageCount::SetOptions
 

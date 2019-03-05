@@ -19,12 +19,12 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - memory allocation [MFC], data structures
 ms.assetid: f10240f8-b698-4c83-9288-97a54318930b
-ms.openlocfilehash: a236dbda9baca7bf7e165edf63a61ffb6eb92a2d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ed50bfba03f29fdd16e6f615b193109656f3ce6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548118"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294339"
 ---
 # <a name="memory-management-examples"></a>記憶體管理：範例
 
@@ -101,4 +101,3 @@ ms.locfileid: "50548118"
 ## <a name="see-also"></a>另請參閱
 
 [記憶體管理：堆積配置](../mfc/memory-management-heap-allocation.md)
-

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - bad_target class
 ms.assetid: e6dcddbf-9217-4fac-ac7f-7b8b4781d2f5
-ms.openlocfilehash: 0440955718bee3b426f5e4625b5eb3fc559a5d28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04489151cedf1a47aeebd883e76b8d26b51031ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434479"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298616"
 ---
 # <a name="badtarget-class"></a>bad_target 類別
 
@@ -61,11 +61,10 @@ bad_target() throw();
 
 ### <a name="parameters"></a>參數
 
-*訊息 （_m)*<br/>
+*_Message*<br/>
 錯誤的描述性訊息。
 
 ## <a name="see-also"></a>另請參閱
 
 [concurrency 命名空間](concurrency-namespace.md)<br/>
 [非同步訊息區](../../../parallel/concrt/asynchronous-message-blocks.md)
-

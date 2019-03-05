@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Active document classes [MFC]
 ms.assetid: cc20af37-b658-406d-8148-7670737f4c03
-ms.openlocfilehash: 7dc8068dc36a5f2d8014b5d9cc2cdbae54e75097
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4087d8e223e08842d5b402bdf063a908d1e22bc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567995"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268868"
 ---
 # <a name="active-document-classes"></a>主動式文件類別
 
@@ -29,4 +29,3 @@ ms.locfileid: "50567995"
 ## <a name="see-also"></a>另請參閱
 
 [類別概觀](../mfc/class-library-overview.md)
-

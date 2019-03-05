@@ -1,5 +1,5 @@
 ---
-title: 例外狀況：3.0 版例外狀況巨集的變更
+title: '例外狀況: 3.0 版例外狀況巨集的變更'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - C++ exception handling [MFC], upgrade considerations
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-ms.openlocfilehash: 54826ee7a7ac129ae69715b45770a0a66596a2a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb51ad91e001f0ed153bf4fdb5aa598ab5ba5042
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607983"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291219"
 ---
-# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>例外狀況：3.0 版例外狀況巨集的變更
+# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>例外狀況: 3.0 版例外狀況巨集的變更
 
 這是進階的主題。
 
@@ -58,9 +58,8 @@ ms.locfileid: "50607983"
 
 使用**擲回**在 catch 區塊會導致指標`e`要刪除，以便在外部 catch 站台將會收到無效的指標。 使用**THROW_LAST**重新擲回`e`。
 
-如需詳細資訊，請參閱 <<c0> [ 例外狀況： 攔截及刪除例外狀況](../mfc/exceptions-catching-and-deleting-exceptions.md)。
+如需詳細資訊，請參閱[例外狀況：攔截及刪除例外狀況](../mfc/exceptions-catching-and-deleting-exceptions.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [例外狀況處理](../mfc/exception-handling-in-mfc.md)
-

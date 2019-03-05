@@ -4,14 +4,14 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: a76a0f49e8b0ec7458b781785cd5030d2c523f0b
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: a86393954cdebec59bd2c6a50cd5e547ef06acb7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176467"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267234"
 ---
-# <a name="example-implementing-a-property-page"></a>範例： 實作屬性頁
+# <a name="example-implementing-a-property-page"></a>範例：實作屬性頁
 
 此範例示範如何建置會顯示 （並可讓您變更） 的屬性的屬性頁[文件類別](../mfc/document-classes.md)介面。
 
@@ -45,7 +45,7 @@ ms.locfileid: "52176467"
 |----------|-----------|
 |標題|TextDocument|
 |文件字串|VCUE TextDocument 屬性|
-|Helpfile|*\<空白 >*|
+|Helpfile|*\<blank>*|
 
 您在精靈的這個頁面設定的值會傳回至屬性頁的容器時它會呼叫`IPropertyPage::GetPageInfo`。 會發生什麼事字串之後，仍取決於容器中，但通常用來識別您使用者的頁面。 標題通常會在您的頁面上方的索引標籤中，文件字串可能會顯示在狀態列上或工具提示 （儘管標準屬性框架完全不使用此字串）。
 

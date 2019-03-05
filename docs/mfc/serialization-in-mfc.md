@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization [MFC], MFC
 - serialization [MFC], bypassing
 ms.assetid: fb596a18-4522-47e0-96e0-192732d24c12
-ms.openlocfilehash: d439f5e13148d4359394739ec56048f00ceb35ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c7dec140635b6d83bdae936d1bb0cef144f825b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462760"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262138"
 ---
 # <a name="serialization-in-mfc"></a>MFC 中的序列化
 
@@ -27,7 +27,7 @@ MFC 提供序列化的類別中的內建支援`CObject`。 因此，所有類別
 
 MFC 使用的物件`CArchive`做為媒介之間進行序列化的物件 」 和 「 儲存體中的類別。 這個物件會永遠與相關聯`CFile`物件，而取得必要的資訊進行序列化，包括檔案名稱，以及要求的作業是讀取或寫入。 執行序列化作業的物件可以使用`CArchive`物件而不是儲存媒體的本質。
 
-A`CArchive`物件使用多載的插入 (**<\<**) 和擷取 (**>>**) 運算子，以執行寫入和讀取作業。 如需詳細資訊，請參閱 <<c0> [ 中儲存及載入 CObjects，透過封存](../mfc/storing-and-loading-cobjects-via-an-archive.md)文中所序列化： 序列化物件。
+A`CArchive`物件使用多載的插入 (**<\<**) 和擷取 (**>>**) 運算子，以執行寫入和讀取作業。 如需詳細資訊，請參閱 <<c0> [ 中儲存及載入 CObjects，透過封存](../mfc/storing-and-loading-cobjects-via-an-archive.md)序列化 」 文件中：序列化物件。
 
 > [!NOTE]
 >  請勿混淆`CArchive`類別與一般用途的 iostream 類別，適用於格式化的純文字。 `CArchive`類別適用於二進位格式序列化的物件。
@@ -40,7 +40,7 @@ A`CArchive`物件使用多載的插入 (**<\<**) 和擷取 (**>>**) 運算子，
 
 - [序列化：序列化物件](../mfc/serialization-serializing-an-object.md)
 
-發行項[序列化： 序列化 vs。資料庫輸入/輸出](../mfc/serialization-serialization-vs-database-input-output.md)描述序列化時已適當輸入/輸出的技術資料庫應用程式。
+發行項[序列化：序列化與資料庫輸入/輸出](../mfc/serialization-serialization-vs-database-input-output.md)描述序列化時已適當輸入/輸出的技術資料庫應用程式。
 
 ## <a name="see-also"></a>另請參閱
 

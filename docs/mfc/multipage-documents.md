@@ -25,12 +25,12 @@ helpviewer_keywords:
 - printing [MFC], pagination
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
-ms.openlocfilehash: b4ec9f456443b9cd180f1558946829281bc10a36
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 81e03657977d31827c5c7c3d3272e3d4255a4a8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176376"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295002"
 ---
 # <a name="multipage-documents"></a>多頁文件
 
@@ -73,7 +73,8 @@ ms.locfileid: "52176376"
 
 ##  <a name="_core_pagination"></a> 分頁
 
-架構會儲存中的列印工作的相關資訊的大部分[CPrintInfo](../mfc/reference/cprintinfo-structure.md)結構。 `CPrintInfo` 中有多個值與分頁有關，這些值的存取方式如下表所示。
+架構會儲存中的列印工作的相關資訊的大部分[CPrintInfo](../mfc/reference/cprintinfo-structure.md)結構。 
+  `CPrintInfo` 中有多個值與分頁有關，這些值的存取方式如下表所示。
 
 ### <a name="page-number-information-stored-in-cprintinfo"></a>在 CPrintInfo 中儲存頁碼資訊。
 
@@ -99,7 +100,7 @@ ms.locfileid: "52176376"
 
 [OnPrint](../mfc/reference/cview-class.md#onprint)成員函式會執行實際列印的頁面。 發行項[如何完成預設列印](../mfc/how-default-printing-is-done.md)顯示架構如何呼叫[OnDraw](../mfc/reference/cview-class.md#ondraw)印表機裝置內容執行列印。 更明確地說，架構會以 `OnPrint` 結構和裝置內容呼叫 `CPrintInfo`，而 `OnPrint` 會傳遞裝置內容至 `OnDraw`。 覆寫 `OnPrint` 以執行應該只有在列印期間完成且不進行螢幕顯示的所有轉譯。 例如，若要列印頁首或頁尾 (請參閱文章[頁首和頁尾](../mfc/headers-and-footers.md)如需詳細資訊)。 接著再從 `OnDraw` 的覆寫呼叫 `OnPrint` 來轉譯螢幕顯示和列印的常用部分。
 
-事實上，`OnDraw` 為螢幕顯示和列印進行轉譯表示您的應用程式是 WYSIWYG：「所見即所得 (WYSIWYG)」。 不過，假設您撰寫的不是 WYSIWYG 應用程式。 例如，考慮一個使用以粗體字型來列印，但是在螢幕上顯示表示粗體文字之控制碼的文字編輯器。 在這種情況下，您只會使用 `OnDraw` 進行螢幕顯示。 當您覆寫 `OnPrint` 時，會使用不同繪圖函式的呼叫取代 `OnDraw` 的呼叫。 該函式會使用您未顯示在螢幕上的屬性，以在紙張上顯示的方式繪製文件。
+事實上，`OnDraw`執行轉譯，如螢幕顯示和列印表示您的應用程式是 WYSIWYG:「 所見即所得。 」 不過，假設您撰寫的不是 WYSIWYG 應用程式。 例如，考慮一個使用以粗體字型來列印，但是在螢幕上顯示表示粗體文字之控制碼的文字編輯器。 在這種情況下，您只會使用 `OnDraw` 進行螢幕顯示。 當您覆寫 `OnPrint` 時，會使用不同繪圖函式的呼叫取代 `OnDraw` 的呼叫。 該函式會使用您未顯示在螢幕上的屬性，以在紙張上顯示的方式繪製文件。
 
 ##  <a name="_core_printer_pages_vs.._document_pages"></a> 印表機頁面與文件頁面
 

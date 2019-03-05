@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: ae3daff2582b9e58cc325304fac449423fb673a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62d42995a3d1b4a61dbd3ff38c48d9b300177798
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621425"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259538"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl 類別
 
@@ -120,7 +120,7 @@ class CTabCtrl : public CWnd
 |[CTabCtrl::GetToolTips](#gettooltips)|擷取索引標籤控制項相關聯的工具提示控制項的控制代碼。|
 |[CTabCtrl::HighlightItem](#highlightitem)|設定反白顯示項目的狀態 索引標籤。|
 |[CTabCtrl::HitTest](#hittest)|判斷哪一個索引標籤上，如果有的話，位於指定的螢幕位置。|
-|[Ctabctrl:: Insertitem](#insertitem)|在索引標籤控制項中插入新的索引標籤。|
+|[CTabCtrl::InsertItem](#insertitem)|在索引標籤控制項中插入新的索引標籤。|
 |[CTabCtrl::RemoveImage](#removeimage)|移除映像 索引標籤控制項的影像清單中。|
 |[CTabCtrl::SetCurFocus](#setcurfocus)|將焦點設在索引標籤控制項中指定的索引標籤。|
 |[CTabCtrl::SetCurSel](#setcursel)|選取索引標籤控制項中的索引標籤。|
@@ -190,7 +190,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定的索引標籤控制項的樣式。 套用的任何組合[索引標籤控制項的樣式](/windows/desktop/Controls/tab-control-styles)、 Windows SDK 中所述。 請參閱**備註**取得一份您也可以套用至控制項的視窗樣式。
 
 *rect*<br/>
@@ -246,7 +246,7 @@ virtual BOOL CreateEx(
 *dwExStyle*<br/>
 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定的索引標籤控制項的樣式。 套用的任何組合[索引標籤控制項的樣式](/windows/desktop/Controls/tab-control-styles)、 Windows SDK 中所述。 請參閱**備註**中[建立](#create)取得一份您也可以套用至控制項的視窗樣式。
 
 *rect*<br/>
@@ -599,7 +599,7 @@ int HitTest(TCHITTESTINFO* pHitTestInfo) const;
 
 如果沒有索引標籤位於指定的位置，則傳回 [] 索引標籤或-1 為起始的索引。
 
-##  <a name="insertitem"></a>  Ctabctrl:: Insertitem
+##  <a name="insertitem"></a>  CTabCtrl::InsertItem
 
 將新的索引標籤插入現有的索引標籤控制項。
 
@@ -645,7 +645,7 @@ LONG InsertItem(
 *lpszItem*<br/>
 包含文字的索引標籤的 null 終止字串的位址。
 
-*n*<br/>
+*nImage*<br/>
 要插入的影像清單中的影像以零為起始的索引。
 
 *nMask*<br/>
@@ -688,7 +688,7 @@ void RemoveImage(int nImage);
 
 ### <a name="parameters"></a>參數
 
-*n*<br/>
+*nImage*<br/>
 要移除之影像的以零為起始的索引。
 
 ### <a name="remarks"></a>備註

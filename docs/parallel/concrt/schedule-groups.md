@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - schedule groups
 ms.assetid: 03523572-5891-4d17-89ce-fa795605f28b
-ms.openlocfilehash: 60d6bdaf863e60fa9923f7d7447309338c5dbed2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: febcc0a9c7af75801962ea6be687ce87cc5501d4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453517"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295966"
 ---
 # <a name="schedule-groups"></a>排程群組
 
@@ -20,7 +20,7 @@ ms.locfileid: "50453517"
 
 每個`Scheduler`物件已排程的每個節點的預設排程群組。 A*排程節點*對應至基礎的系統拓撲。 執行階段會建立一個排程的節點，對於每個處理器套件或非統一記憶體架構 (NUMA) 節點，大於任何數字。 如果您不使用排程群組明確關聯的工作，排程器會選擇要加入至工作群組。
 
-`SchedulingProtocol`排程器原則會影響排程器執行所在的每個排程群組中的工作順序。 當`SchedulingProtocol`設為`EnhanceScheduleGroupLocality`（此為預設值），工作排程器從它正在進行時目前的工作完成，或以合作方式會產生排程群組中選擇 下一項工作。 工作排程器會搜尋目前排程群組的工作之前就會移至下一個可用的群組。 相反地，當`SchedulingProtocol`設為`EnhanceForwardProgress`之後每個工作完成或產生, 排程器將移至下一個排程群組。 如需比較這些原則的範例，請參閱 <<c0> [ 如何： 使用排程群組的執行順序影響](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)。
+`SchedulingProtocol`排程器原則會影響排程器執行所在的每個排程群組中的工作順序。 當`SchedulingProtocol`設為`EnhanceScheduleGroupLocality`（此為預設值），工作排程器從它正在進行時目前的工作完成，或以合作方式會產生排程群組中選擇 下一項工作。 工作排程器會搜尋目前排程群組的工作之前就會移至下一個可用的群組。 相反地，當`SchedulingProtocol`設為`EnhanceForwardProgress`之後每個工作完成或產生, 排程器將移至下一個排程群組。 如需比較這些原則的範例，請參閱[How to:使用排程群組來影響執行順序](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)。
 
 執行階段會使用[concurrency:: schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)類別來代表排程群組。 若要建立`ScheduleGroup`物件，請呼叫[concurrency::CurrentScheduler::CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup)或是[concurrency::Scheduler::CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup)方法。 執行階段會使用參考計數機制來控制的存留期`ScheduleGroup`物件，就如同使用`Scheduler`物件。 當您建立`ScheduleGroup`物件，其中一個計數器的執行階段設定的參考。 [Concurrency::ScheduleGroup::Reference](reference/schedulegroup-class.md#reference)方法的參考計數器遞增一。 [Schedulegroup](reference/schedulegroup-class.md#release)方法遞減一個參考計數器。
 
@@ -30,11 +30,10 @@ ms.locfileid: "50453517"
 
 ## <a name="example"></a>範例
 
-如需範例，會使用排程群組來控制工作執行的順序，請參閱[如何： 使用排程群組的執行順序影響](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)。
+如需範例，會使用排程群組來控制工作執行的順序，請參閱[How to:使用排程群組來影響執行順序](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [排程器執行個體](../../parallel/concrt/scheduler-instances.md)<br/>
-[如何：使用排程群組來影響執行順序](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)
-
+[如何：使用排程群組影響執行順序](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)

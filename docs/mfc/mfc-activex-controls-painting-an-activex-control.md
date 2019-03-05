@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], painting
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
-ms.openlocfilehash: 4a7cff57213cf9ba234ead9880207fd93592614f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b90aa331c289caf827785af2eeba037e70f686ab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549522"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281926"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX 控制項：繪製 ActiveX 控制項
 
@@ -31,7 +31,7 @@ ms.locfileid: "50549522"
 
 ##  <a name="_core_the_painting_process_of_an_activex_control"></a> ActiveX 控制項繪製程序
 
-當 ActiveX 控制項最初顯示或重繪時，所採取的繪製程序類似使用 MFC 所開發的其他應用程式，但其中有一項重要的差異：ActiveX 控制項可以處於現用或非現用狀態。
+當 ActiveX 控制項最初顯示或重繪時，他們會遵循類似於其他重要的區別在於使用 MFC 開發的應用程式的繪製程序：ActiveX 控制項可以處於現用或非作用中狀態。
 
 現用控制項在 ActiveX 控制項容器中是以子視窗表示。 像其他視窗中，它會負責繪製本身，在接收 WM_PAINT 訊息時項目。 控制項的基底類別[COleControl](../mfc/reference/colecontrol-class.md)，會處理此訊息在其`OnPaint`函式。 這個預設實作會呼叫控制項的 `OnDraw` 函式。
 
@@ -39,7 +39,8 @@ ms.locfileid: "50549522"
 
 如前段中所討論，ActiveX 控制項的更新方式取決於控制項的狀態。 不過，由於架構在兩種情況下都會呼叫 `OnDraw` 成員函式，因此您會將大部分的繪製程式碼加入這個成員函式中。
 
-`OnDraw` 成員函式會處理控制項繪製。 當控制項處於非現用狀態時，控制項容器就會呼叫 `OnDraw`，以傳遞控制項容器的裝置內容和控制項佔據的矩形區域座標。
+
+  `OnDraw` 成員函式會處理控制項繪製。 當控制項處於非現用狀態時，控制項容器就會呼叫 `OnDraw`，以傳遞控制項容器的裝置內容和控制項佔據的矩形區域座標。
 
 架構傳遞至 `OnDraw` 成員函式的矩形包含控制項佔據的區域。 如果控制項處於現用狀態，則左上角為 (0, 0)，而且傳遞的裝置內容會是包含控制項的子視窗。 如果控制項處於非現用狀態，則左上角座標不一定是 (0, 0)，而且傳遞的裝置內容會是包含控制項的控制項容器。
 
@@ -88,9 +89,9 @@ ActiveX 控制項繪製的預設實作會繪製整個控制項範圍。 這對�
 |`SetViewportOrg`|`SetWindowExt`|`SetWindowORg`|
 |`StretchBlt`|`TextOut`||
 
-除了 `CDC` 成員函式之外，中繼檔 DC 中還有其他幾個相容的函式。 其中包括[cpalette:: Animatepalette](../mfc/reference/cpalette-class.md#animatepalette)， [cfont:: Createfontindirect](../mfc/reference/cfont-class.md#createfontindirect)，和的三個成員函式`CBrush`: [CreateBrushIndirect](../mfc/reference/cbrush-class.md#createbrushindirect)， [CreateDIBPatternBrush](../mfc/reference/cbrush-class.md#createdibpatternbrush)，並[CreatePatternBrush](../mfc/reference/cbrush-class.md#createpatternbrush)。
+除了 `CDC` 成員函式之外，中繼檔 DC 中還有其他幾個相容的函式。 其中包括[cpalette:: Animatepalette](../mfc/reference/cpalette-class.md#animatepalette)， [cfont:: Createfontindirect](../mfc/reference/cfont-class.md#createfontindirect)，和三個成員函式的`CBrush`:[CreateBrushIndirect](../mfc/reference/cbrush-class.md#createbrushindirect)， [CreateDIBPatternBrush](../mfc/reference/cbrush-class.md#createdibpatternbrush)，以及[CreatePatternBrush](../mfc/reference/cbrush-class.md#createpatternbrush)。
 
-不會在中繼檔中記錄的函式： [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect)， [DrawIcon](../mfc/reference/cdc-class.md#drawicon)， [DrawText](../mfc/reference/cdc-class.md#drawtext)， [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn)， [FillRect](../mfc/reference/cdc-class.md#fillrect)， [FrameRect](../mfc/reference/cdc-class.md#framerect)， [GrayString](../mfc/reference/cdc-class.md#graystring)， [InvertRect](../mfc/reference/cdc-class.md#invertrect)， [ScrollDC](../mfc/reference/cdc-class.md#scrolldc)，與[TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout)。 由於中繼檔 DC 實際上並未與裝置相關聯，因此您無法在中繼檔 DC 中使用 SetDIBits、GetDIBits 和 CreateDIBitmap。 您可以在中繼檔 DC 中使用 SetDIBitsToDevice 和 StretchDIBits 做為目的端。 [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc)， [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap)，以及[CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap)而言沒有意義的中繼檔 DC。
+不會在中繼檔中記錄的函式為：[DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect)， [DrawIcon](../mfc/reference/cdc-class.md#drawicon)， [DrawText](../mfc/reference/cdc-class.md#drawtext)， [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn)， [FillRect](../mfc/reference/cdc-class.md#fillrect)， [FrameRect](../mfc/reference/cdc-class.md#framerect)， [GrayString](../mfc/reference/cdc-class.md#graystring)， [InvertRect](../mfc/reference/cdc-class.md#invertrect)， [ScrollDC](../mfc/reference/cdc-class.md#scrolldc)，並[TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout)。 由於中繼檔 DC 實際上並未與裝置相關聯，因此您無法在中繼檔 DC 中使用 SetDIBits、GetDIBits 和 CreateDIBitmap。 您可以在中繼檔 DC 中使用 SetDIBitsToDevice 和 StretchDIBits 做為目的端。 [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc)， [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap)，以及[CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap)而言沒有意義的中繼檔 DC。
 
 使用中繼檔 DC 時要考慮的另一點是，座標系統不一定會以像素為單位測量。 基於這個理由，所有應該調整的繪圖程式碼，以便容納在矩形中傳遞給`OnDraw`中*rcbounds 就*參數。 這可避免不小心在控制項之外繪製，因為*rcbounds 就*代表控制項的視窗大小。
 
@@ -111,4 +112,3 @@ ActiveX 控制項繪製的預設實作會繪製整個控制項範圍。 這對�
 ## <a name="see-also"></a>另請參閱
 
 [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)
-

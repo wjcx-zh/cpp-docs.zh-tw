@@ -1,5 +1,5 @@
 ---
-title: OLE 背景：連結與內嵌
+title: OLE 背景：連結和內嵌
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE embedded items [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - embedded objects [MFC]
 - OLE items [MFC], types
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
-ms.openlocfilehash: 7595d87ce54b0a34dd4e5f3489dd36e3918fd8a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02607df2a8fa086c5751f2b446e349a3efdbcd20
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465477"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280962"
 ---
-# <a name="ole-background-linking-and-embedding"></a>OLE 背景：連結與內嵌
+# <a name="ole-background-linking-and-embedding"></a>OLE 背景：連結和內嵌
 
 在容器應用程式中使用 [貼上] 命令可以建立內嵌元件或內嵌項目。 內嵌項目的來源資料會儲存為包含該項目之 OLE 文件的一部分。 如此一來，文書處理器文件的文件檔案就可以包含文字，也可以包含點陣圖、圖表、公式，或任何其他類型的資料。
 
@@ -33,4 +33,3 @@ OLE 提供另一種方式來合併來自另一個應用程式的資料：建立�
 [OLE 背景：容器和伺服器](../mfc/ole-background-containers-and-servers.md)<br/>
 [容器：用戶端項目](../mfc/containers-client-items.md)<br/>
 [伺服器：伺服器項目](../mfc/servers-server-items.md)
-

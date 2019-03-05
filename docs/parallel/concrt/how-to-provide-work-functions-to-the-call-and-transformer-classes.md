@@ -1,25 +1,25 @@
 ---
-title: 如何：為呼叫和轉換程式類別提供工作函式
+title: HOW TO：為呼叫和轉換程式類別提供工作函式
 ms.date: 11/04/2016
 helpviewer_keywords:
 - call class, example
 - using the transformer class [Concurrency Runtime]
 - using the call class [Concurrency Runtime]
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
-ms.openlocfilehash: d9d472ddd8d5c7baf3cb16e1df33a2bdb74c5381
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c41c29dae277105f268171503e662e2a02e3857e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500994"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277684"
 ---
-# <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>如何：為呼叫和轉換程式類別提供工作函式
+# <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>HOW TO：為呼叫和轉換程式類別提供工作函式
 
 本主題將說明數種方式可提供工作函式，來[concurrency:: call](../../parallel/concrt/reference/call-class.md)並[concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md)類別。
 
 第一個範例示範如何將傳遞至 lambda 運算式`call`物件。 第二個範例示範如何將傳遞至函式物件`call`物件。 第三個範例示範如何繫結類別方法，以`call`物件。
 
-舉例來說，本主題中的每個範例會使用`call`類別。 如需使用的範例`transformer`類別，請參閱[如何： 在資料管線中的使用轉換程式](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)。
+舉例來說，本主題中的每個範例會使用`call`類別。 如需使用的範例`transformer`類別，請參閱[How to:資料管線中的使用轉換程式](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)。
 
 ## <a name="example"></a>範例
 
@@ -61,6 +61,6 @@ ms.locfileid: "50500994"
 
 [非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [非同步訊息區](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
-[如何：在資料管線中使用轉換程式](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br/>
+[如何：使用資料管線中的轉換程式](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br/>
 [call 類別](../../parallel/concrt/reference/call-class.md)<br/>
 [transformer 類別](../../parallel/concrt/reference/transformer-class.md)

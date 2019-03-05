@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: 38fe09b5fdde85dad485e126f6c094196fe68ff4
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 048430c78dfed4158f6fb84eacc07972b79d8a51
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176919"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276005"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl 類別
 
@@ -193,13 +193,13 @@ void GetHLS(
 
 ### <a name="parameters"></a>參數
 
-*Hue*<br/>
+*hue*<br/>
 [out]Double，接收 hue 資訊類型的變數的指標。
 
-*亮度*<br/>
+*luminance*<br/>
 [out]Double，接收明亮度資訊類型的變數的指標。
 
-*飽和度*<br/>
+*saturation*<br/>
 [out]Double，接收到的飽和度資訊類型的變數的指標。
 
 ### <a name="remarks"></a>備註
@@ -298,7 +298,7 @@ void SetColor(COLORREF Color);
 
 ### <a name="parameters"></a>參數
 
-*色彩*<br/>
+*Color*<br/>
 [in]RGB 色彩值。
 
 ### <a name="remarks"></a>備註
@@ -317,13 +317,13 @@ void SetHLS(
 
 ### <a name="parameters"></a>參數
 
-*Hue*<br/>
+*hue*<br/>
 [in]色調值。
 
-*亮度*<br/>
+*luminance*<br/>
 [in]亮度值。
 
-*飽和度*<br/>
+*saturation*<br/>
 [in]飽和度值。
 
 *bInvalidate*<br/>

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComContainedObject class
 ms.assetid: e8616b41-c200-47b8-bf2c-fb9f713ebdad
-ms.openlocfilehash: 289174fbfc61b0bbca65233fe24d93537627e17d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15ea9be2a3576081901c9e744d89d33688fe838a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492569"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273578"
 ---
 # <a name="ccomcontainedobject-class"></a>CComContainedObject 類別
 
@@ -47,7 +47,7 @@ class CComContainedObject : public Base
 |名稱|描述|
 |----------|-----------------|
 |[CComContainedObject::CComContainedObject](#ccomcontainedobject)|建構函式。 初始化擁有者物件的成員指標`IUnknown`。|
-|[CComContainedObject:: ~ CComContainedObject](#dtor)|解構函式。|
+|[CComContainedObject::~CComContainedObject](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -147,7 +147,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 *ppvObject*<br/>
 [out]所識別之介面指標的指標*iid*。 如果物件不支援這個介面， *ppvObject*設為 NULL。
 
-*前置處理*<br/>
+*pp*<br/>
 [out]依類型識別之介面指標的指標`Q`。 如果物件不支援這個介面， *pp*設為 NULL。
 
 ### <a name="return-value"></a>傳回值

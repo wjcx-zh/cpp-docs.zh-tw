@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: e97a50b2687029ddff3d946f634e145f6709aa48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 342eea1d5bcf8adfe9a9ff0e8d915c9155b413ca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557670"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266129"
 ---
 # <a name="carray-class"></a>CArray 類別
 
@@ -65,7 +65,7 @@ class CArray : public CObject
 *型別*<br/>
 指定儲存在陣列中的物件類型的樣板參數。 *型別*是參數，由`CArray`。
 
-*ARG_TYPE 這個*<br/>
+*ARG_TYPE*<br/>
 指定用來存取儲存在陣列中的物件的引數類型的樣板參數。 通常參考*型別*。 *Arg_type 這個*是參數，傳遞至`CArray`。
 
 ## <a name="members"></a>成員
@@ -81,8 +81,8 @@ class CArray : public CObject
 |名稱|描述|
 |----------|-----------------|
 |[CArray::Add](#add)|將項目加入至陣列結尾；必要時讓陣列增長。|
-|[Carray:: Append](#append)|將其他陣列附加至的陣列;必要時讓陣列成長|
-|[Carray:: Copy](#copy)|將其他陣列複製到該陣列；必要時讓陣列成長。|
+|[CArray::Append](#append)|將其他陣列附加至的陣列;必要時讓陣列成長|
+|[CArray::Copy](#copy)|將其他陣列複製到該陣列；必要時讓陣列成長。|
 |[CArray::ElementAt](#elementat)|傳回陣列中項目指標的臨時參考。|
 |[CArray::FreeExtra](#freeextra)|釋放超過目前上限的所有未使用記憶體。|
 |[CArray::GetAt](#getat)|傳回給定索引的值。|
@@ -144,7 +144,7 @@ INT_PTR Add(ARG_TYPE newElement);
 
 ### <a name="parameters"></a>參數
 
-*ARG_TYPE 這個*<br/>
+*ARG_TYPE*<br/>
 指定的引數參考此陣列中的項目類型的樣板參數。
 
 *newElement*<br/>
@@ -205,7 +205,7 @@ CArray();
 
 [!code-cpp[NVC_MFCCollections#24](../../mfc/codesnippet/cpp/carray-class_3.cpp)]
 
-##  <a name="copy"></a>  Carray:: Copy
+##  <a name="copy"></a>  CArray::Copy
 
 使用此成員函式複製到另一個陣列的項目。
 
@@ -401,7 +401,7 @@ void InsertAt(
 *nIndex*<br/>
 可能會大於所傳回的值的整數索引`GetUpperBound`。
 
-*ARG_TYPE 這個*<br/>
+*ARG_TYPE*<br/>
 此陣列中指定的項目類型的樣板參數。
 
 *newElement*<br/>
@@ -555,7 +555,7 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 *nIndex*<br/>
 一個整數的索引大於或等於 0 且小於或等於所傳回的值[GetUpperBound](#getupperbound)。
 
-*ARG_TYPE 這個*<br/>
+*ARG_TYPE*<br/>
 指定用來參考陣列元素的引數的類型樣板參數。
 
 *newElement*<br/>
@@ -584,7 +584,7 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 *nIndex*<br/>
 大於或等於 0 的整數索引。
 
-*ARG_TYPE 這個*<br/>
+*ARG_TYPE*<br/>
 指定陣列中的項目類型的樣板參數。
 
 *newElement*<br/>

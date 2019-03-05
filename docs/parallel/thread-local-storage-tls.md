@@ -9,12 +9,12 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: 02c699ec64fe03a1f892fc3c7e8bf9f6b9c05dfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5a75f7964b0291a980b22d36e7ce6a0a87d3dc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507584"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293455"
 ---
 # <a name="thread-local-storage-tls"></a>執行緒區域儲存區
 
@@ -22,7 +22,7 @@ ms.locfileid: "50507584"
 
 ##  <a name="_core_compiler_implementation_for_tls"></a> TLS 的編譯器實作
 
-**C + + 11:** `thread_local`儲存類別規範是建議用來指定物件的執行緒區域儲存區和類別成員。 如需詳細資訊，請參閱 <<c0> [ 儲存類別 （c + +）](../cpp/storage-classes-cpp.md)。
+**C + + 11:**`thread_local`儲存類別規範是建議用來指定物件的執行緒區域儲存區和類別成員。 如需詳細資訊，請參閱 <<c0> [ 儲存類別 （c + +）](../cpp/storage-classes-cpp.md)。
 
 Visual c + + 也提供 Microsoft 特定屬性，[執行緒](../cpp/thread.md)，以擴充的儲存類別修飾詞。 使用 **__declspec**關鍵字來宣告**執行緒**變數。 例如，下列程式碼宣告整數執行緒區域變數，並使用值將它初始化：
 

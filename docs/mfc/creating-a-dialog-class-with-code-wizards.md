@@ -7,12 +7,12 @@ helpviewer_keywords:
 - code wizards
 - dialog classes [MFC], creating
 ms.assetid: a7157b9d-f1a8-4381-a4cf-180cd2c7f1b2
-ms.openlocfilehash: 6fb1b941e4c813d13a14f4c8870d9013d3987f74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d99188a3a70965f33a8038eb904f606e74c1591b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578538"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258212"
 ---
 # <a name="creating-a-dialog-class-with-code-wizards"></a>使用程式碼精靈建立對話方塊類別
 
@@ -40,4 +40,3 @@ ms.locfileid: "50578538"
 
 [對話方塊](../mfc/dialog-boxes.md)<br/>
 [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)
-

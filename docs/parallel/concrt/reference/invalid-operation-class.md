@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_operation class
 ms.assetid: 26ba07dc-fcdf-44cb-b748-a31d35205b52
-ms.openlocfilehash: 594c09ebedd2be55b288a7f31d55930244d80959
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b971a12ff83753546cfea7b90288d1bc43400c0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473966"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279678"
 ---
 # <a name="invalidoperation-class"></a>invalid_operation 類別
 
@@ -61,7 +61,7 @@ invalid_operation() throw();
 
 ### <a name="parameters"></a>參數
 
-*訊息 （_m)*<br/>
+*_Message*<br/>
 錯誤的描述性訊息。
 
 ## <a name="see-also"></a>另請參閱

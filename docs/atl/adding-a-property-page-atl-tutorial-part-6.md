@@ -3,12 +3,12 @@ title: 加入屬性頁 (ATL 教學課程，第 6 部分)
 ms.custom: get-started-article
 ms.date: 09/27/2018
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-ms.openlocfilehash: bd9386395b0655eab68a6c772c8d6216b7eeafe5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9287b7a15e3653212ed6a5428cdfe5a530ececc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519479"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264753"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>加入屬性頁 (ATL 教學課程，第 6 部分)
 

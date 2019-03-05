@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 450699d001ee7246742fe23d9bf89d03c2d61cb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42913ddea7818636dce8d630ed2d79d13c19ce81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600504"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302100"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd 類別
 
@@ -263,7 +263,7 @@ virtual BOOL Create(
 *pContext*<br/>
 指標[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)結構。 在大部分情況下，這可以是*pContext*傳遞給父框架視窗。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定的視窗樣式。
 
 *nID*<br/>
@@ -305,7 +305,7 @@ virtual BOOL CreateScrollBarCtrl(
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定的視窗樣式。
 
 *nID*<br/>
@@ -343,7 +343,7 @@ virtual BOOL CreateStatic(
 *nCols*<br/>
 行數。 此值不可超過 16。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定的視窗樣式。
 
 *nID*<br/>
@@ -388,10 +388,10 @@ virtual BOOL CreateView(
 
 ### <a name="parameters"></a>參數
 
-*資料列*<br/>
+*row*<br/>
 指定分隔器視窗資料列，在其中放置新的檢視。
 
-*資料行*<br/>
+*col*<br/>
 指定分隔器視窗資料行，在其中放置新的檢視。
 
 *pViewClass*<br/>
@@ -475,10 +475,10 @@ virtual void DeleteView(
 
 ### <a name="parameters"></a>參數
 
-*資料列*<br/>
+*row*<br/>
 指定要刪除檢視的分隔器視窗的資料列。
 
-*資料行*<br/>
+*col*<br/>
 指定要刪除檢視的分隔器視窗資料行。
 
 ### <a name="remarks"></a>備註
@@ -628,7 +628,7 @@ void GetColumnInfo(
 
 ### <a name="parameters"></a>參數
 
-*資料行*<br/>
+*col*<br/>
 指定資料行。
 
 *cxCur*<br/>
@@ -649,10 +649,10 @@ CWnd* GetPane(
 
 ### <a name="parameters"></a>參數
 
-*資料列*<br/>
+*row*<br/>
 指定資料列。
 
-*資料行*<br/>
+*col*<br/>
 指定資料行。
 
 ### <a name="return-value"></a>傳回值
@@ -684,7 +684,7 @@ void GetRowInfo(
 
 ### <a name="parameters"></a>參數
 
-*資料列*<br/>
+*row*<br/>
 指定資料列。
 
 *cyCur*<br/>
@@ -727,10 +727,10 @@ int IdFromRowCol(
 
 ### <a name="parameters"></a>參數
 
-*資料列*<br/>
+*row*<br/>
 指定分隔器視窗資料列。
 
-*資料行*<br/>
+*col*<br/>
 指定分隔器視窗資料行。
 
 ### <a name="return-value"></a>傳回值
@@ -807,7 +807,7 @@ virtual void OnDrawSplitter(
 *pDC*<br/>
 若要在其中繪製的裝置內容指標。 如果*pDC*是 NULL，則[CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow)稱為架構並沒有分割繪製視窗。
 
-*n*<br/>
+*nType*<br/>
 值為`enum ESplitType`，它可以是下列其中一項：
 
     - `splitBox` 分隔器拖曳方塊中。
@@ -877,10 +877,10 @@ virtual void SetActivePane(
 
 ### <a name="parameters"></a>參數
 
-*資料列*<br/>
+*row*<br/>
 如果*pWnd*為 NULL 時，會是作用中 窗格中指定的資料列。
 
-*資料行*<br/>
+*col*<br/>
 如果*pWnd*為 NULL 時，會是作用中 窗格中指定的資料行。
 
 *pWnd*<br/>
@@ -905,7 +905,7 @@ void SetColumnInfo(
 
 ### <a name="parameters"></a>參數
 
-*資料行*<br/>
+*col*<br/>
 指定分隔器視窗資料行。
 
 *cxIdeal*<br/>
@@ -937,7 +937,7 @@ void SetRowInfo(
 
 ### <a name="parameters"></a>參數
 
-*資料列*<br/>
+*row*<br/>
 指定分隔器視窗資料列。
 
 *cyIdeal*<br/>
@@ -962,7 +962,7 @@ void SetScrollStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 新的捲軸樣式分隔器視窗共用捲軸的支援，它可以是下列值之一：
 
 - WS_HSCROLL 建立/顯示水平共用的捲軸。

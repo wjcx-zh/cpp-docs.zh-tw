@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: 96a3351656807fa841661ec9f082bb4255d5136a
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 14ce057c141f22c14361bafd55fce3ccd345d4dd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176610"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279467"
 ---
 # <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory 類別
 
@@ -219,7 +219,7 @@ class CMFCRibbonCategory : public CObject
 |[CMFCRibbonCategory::SetData](#setdata)|使用者定義將資料儲存在功能區分類。|
 |[CMFCRibbonCategory::SetKeys](#setkeys)|指派 keytip 的功能區分類。|
 |[CMFCRibbonCategory::SetName](#setname)||
-|[Cmfcribboncategory:: Settabcolor](#settabcolor)|設定功能區分類的色彩。|
+|[CMFCRibbonCategory::SetTabColor](#settabcolor)|設定功能區分類的色彩。|
 
 ## <a name="remarks"></a>備註
 
@@ -717,7 +717,7 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]指標，相對於視窗左上角的 x 和 y 座標。
 
 ### <a name="return-value"></a>傳回值
@@ -909,7 +909,7 @@ CMFCRibbonPanel* HighlightPanel(
 *pHLPanel*<br/>
 [in]若要反白顯示功能區面板的指標。
 
-*點*<br/>
+*point*<br/>
 [in]指標，相對於視窗左上角的 x 和 y 座標。
 
 ### <a name="return-value"></a>傳回值
@@ -932,7 +932,7 @@ CMFCRibbonBaseElement* HitTest(
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]滑鼠指標，相對於視窗左上角的 x 和 y 座標。
 
 *bCheckPanelCaption*<br/>
@@ -956,7 +956,7 @@ int HitTestEx(CPoint point) const;
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]滑鼠指標，相對於視窗左上角的 x 和 y 座標。
 
 ### <a name="return-value"></a>傳回值
@@ -977,7 +977,7 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]要測試的點。
 
 ### <a name="return-value"></a>傳回值
@@ -1161,7 +1161,7 @@ virtual BOOL OnKey(UINT nChar);
 
 ### <a name="parameters"></a>參數
 
-*NChar*<br/>
+*nChar*<br/>
 使用者按下的按鍵虛擬按鍵碼。
 
 ### <a name="remarks"></a>備註
@@ -1176,7 +1176,7 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]滑鼠指標，相對於視窗左上角的 x 和 y 座標。
 
 ### <a name="return-value"></a>傳回值
@@ -1195,7 +1195,7 @@ virtual void OnLButtonUp(CPoint point);
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]指標，相對於視窗左上角的 x 和 y 座標。
 
 ### <a name="remarks"></a>備註
@@ -1210,7 +1210,7 @@ virtual void OnMouseMove(CPoint point);
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]指標，相對於視窗左上角的 x 和 y 座標。
 
 ### <a name="remarks"></a>備註
@@ -1351,7 +1351,7 @@ void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 
 當類別偵測到它已摺疊功能區面板時，它會尋找指定的清單中的下一個項目。 如果清單是空的或您沒有指定足夠的項目，類別目錄會使用內部演算法。
 
-例如，類別有三個功能區面板，並且可以摺疊數次直到所有面板完全摺疊狀態。 您可以設定下列的摺疊順序： 0、 0、 2、 2。 在此情況下，類別目錄會摺疊面板 0 兩次，面板 2 2 倍。 索引為 1 的面板會保持展開項目。
+例如，類別有三個功能區面板，並且可以摺疊數次直到所有面板完全摺疊狀態。 您可以設定下列的摺疊順序：0, 0, 2, 2. 在此情況下，類別目錄會摺疊面板 0 兩次，面板 2 2 倍。 索引為 1 的面板會保持展開項目。
 
 ### <a name="example"></a>範例
 
@@ -1406,7 +1406,7 @@ void SetName(LPCTSTR lpszName);
 
 若要設定的功能區分類 keytip，附加的 keytip 字元後面接著新行逸出序列*lpszName*。
 
-##  <a name="settabcolor"></a>  Cmfcribboncategory:: Settabcolor
+##  <a name="settabcolor"></a>  CMFCRibbonCategory::SetTabColor
 
 設定功能區分類的色彩。
 
@@ -1416,7 +1416,7 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 
 ### <a name="parameters"></a>參數
 
-*色彩*<br/>
+*color*<br/>
 [in]指定新的功能區分類的色彩。
 
 ### <a name="remarks"></a>備註

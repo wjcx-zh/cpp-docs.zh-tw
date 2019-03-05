@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 3259780d73004c9d1654c26434b55627923cfe23
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 7bdb681754a500ab86538f3397b4c07284b850d0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178788"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300880"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 類別
 
@@ -162,7 +162,7 @@ class CFrameWnd : public CWnd
 |[CFrameWnd::NegotiateBorderSpace](#negotiateborderspace)|會在框架視窗的框線空間的交涉。|
 |[CFrameWnd::OnBarCheck](#onbarcheck)|只要指定的控制列上執行動作時呼叫。|
 |[CFrameWnd::OnContextHelp](#oncontexthelp)|處理 shift+f1 說明就地項目。|
-|[Cframewnd:: Onsetpreviewmode](#onsetpreviewmode)|傳入和傳出預覽列印模式，請設定應用程式的主框架視窗。|
+|[CFrameWnd::OnSetPreviewMode](#onsetpreviewmode)|傳入和傳出預覽列印模式，請設定應用程式的主框架視窗。|
 |[CFrameWnd::OnUpdateControlBarMenu](#onupdatecontrolbarmenu)|更新相關聯的功能表時，由架構呼叫。|
 |[CFrameWnd::RecalcLayout](#recalclayout)|重新置放控制列的`CFrameWnd`物件。|
 |[CFrameWnd::SaveBarState](#savebarstate)|呼叫以儲存控制列的設定。|
@@ -326,7 +326,7 @@ virtual BOOL Create(
 *lpszWindowName*<br/>
 指向以 null 結束的字元字串，表示視窗名稱。 用來作為文字的標題列。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定時間範圍[樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)屬性。 如果您想要的標題列，以自動顯示在視窗中表示文件的名稱，請包含 FWS_ADDTOTITLE 樣式。
 
 *rect*<br/>
@@ -475,10 +475,10 @@ void FloatControlBar(
 *pBar*<br/>
 將控制列浮動點。
 
-*點*<br/>
+*point*<br/>
 位置，在螢幕座標中放置控制列的左上的角。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定是否要將控制列水平或垂直對齊其新的框架視窗內。 它可以是下列其中一項動作：
 
 - CBRS_ALIGN_TOP 是控制列的垂直方向。
@@ -901,7 +901,7 @@ virtual BOOL OnCreateClient(
 
 ### <a name="parameters"></a>參數
 
-*lpc*<br/>
+*lpcs*<br/>
 Windows 的指標[CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)結構。
 
 *pContext*<br/>
@@ -934,7 +934,7 @@ virtual void OnHideMenuBar();
 
 這個事件處理常式可讓您的應用程式，以執行自訂動作，當系統即將隱藏功能表。 無法防止 [] 功能表中隱藏，但比方說，您可以呼叫其他方法來擷取功能表樣式或狀態。
 
-##  <a name="onsetpreviewmode"></a>  Cframewnd:: Onsetpreviewmode
+##  <a name="onsetpreviewmode"></a>  CFrameWnd::OnSetPreviewMode
 
 呼叫這個成員函式，在預覽列印模式裡外設定應用程式的主框架視窗。
 
@@ -1115,7 +1115,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 |參數|描述|
 |---------------|-----------------|
-|*nStyle*|[in]指定功能表預設隱藏此項目，或為可見和具有焦點。 *NStyle*參數可以是下列值：<br /><br />-AFX_MBV_KEEPVISIBLE (0X01)-<br />     功能表會顯示任何時間，而且依預設未取得焦點。<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     預設為隱藏功能表。 如果功能表隱藏的請按 ALT 鍵以顯示功能表，並給予焦點。 如果會顯示功能表，請按 alt 鍵或 ESC 鍵以隱藏功能表。<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     （合 (OR)）-預設為隱藏功能表。 如果功能表隱藏的請按 F10 鍵，可顯示功能表，並給予焦點。 如果會顯示功能表，請按 F10 鍵來切換開啟或關閉功能表的焦點。 直到您按 alt 鍵或 ESC 鍵以將其隱藏，則會顯示功能表。|
+|*nStyle*|[in]指定功能表預設隱藏此項目，或為可見和具有焦點。 *NStyle*參數可以是下列值：<br /><br />-AFX_MBV_KEEPVISIBLE (0X01)-<br />     功能表會顯示任何時間，而且依預設未取得焦點。<br />- AFX_MBV_DISPLAYONFOCUS (0x02) -<br />     預設為隱藏功能表。 如果功能表隱藏的請按 ALT 鍵以顯示功能表，並給予焦點。 如果會顯示功能表，請按 alt 鍵或 ESC 鍵以隱藏功能表。<br />- AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     （合 (OR)）-預設為隱藏功能表。 如果功能表隱藏的請按 F10 鍵，可顯示功能表，並給予焦點。 如果會顯示功能表，請按 F10 鍵來切換開啟或關閉功能表的焦點。 直到您按 alt 鍵或 ESC 鍵以將其隱藏，則會顯示功能表。|
 
 ### <a name="remarks"></a>備註
 

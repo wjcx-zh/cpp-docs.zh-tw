@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: 5006a648729e1fc561855fcb8cba1d658a9c82cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2501373c2ff5904343a6522e4fb18663f5de3843
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619046"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294417"
 ---
 # <a name="ole-background"></a>OLE 背景
 
@@ -26,7 +26,7 @@ OLE 整合了許多不同的概念，其目標是要在應用程式之間進行�
 
 - 連結和內嵌
 
-   連結和內嵌是儲存在由其他應用程式所建立 OLE 文件內建立之項目的兩種方法。 如需兩者之間差異的一般資訊，請參閱文章[OLE 背景： 連結和內嵌](../mfc/ole-background-linking-and-embedding.md)。 如需詳細資訊，請參閱文章[容器](../mfc/containers.md)並[伺服器](../mfc/servers.md)。
+   連結和內嵌是儲存在由其他應用程式所建立 OLE 文件內建立之項目的兩種方法。 如需兩者之間差異的一般資訊，請參閱文章[OLE 背景：連結和內嵌](../mfc/ole-background-linking-and-embedding.md)。 如需詳細資訊，請參閱文章[容器](../mfc/containers.md)並[伺服器](../mfc/servers.md)。
 
 - 就地啟用 (視覺化編輯)
 
@@ -42,7 +42,7 @@ OLE 整合了許多不同的概念，其目標是要在應用程式之間進行�
 
 - 複合檔案
 
-   複合檔案提供的標準檔案格式簡化了 OLE 應用程式的複合文件結構化儲存。 在複合檔案內，儲存體具有許多目錄的功能，而資料流則具有許多檔案的功能。 這項技術也稱為結構化儲存體。 如需有關複合檔案的詳細資訊，請參閱文章[容器： 複合檔案](../mfc/containers-compound-files.md)。
+   複合檔案提供的標準檔案格式簡化了 OLE 應用程式的複合文件結構化儲存。 在複合檔案內，儲存體具有許多目錄的功能，而資料流則具有許多檔案的功能。 這項技術也稱為結構化儲存體。 如需有關複合檔案的詳細資訊，請參閱文章[容器：複合檔案](../mfc/containers-compound-files.md)。
 
 - 制式資料傳輸
 
@@ -58,7 +58,7 @@ OLE 整合了許多不同的概念，其目標是要在應用程式之間進行�
 
 一些更重要的 OLE 主題會包含在下列文件中：
 
-- [OLE 背景：連結與內嵌](../mfc/ole-background-linking-and-embedding.md)
+- [OLE 背景：連結和內嵌](../mfc/ole-background-linking-and-embedding.md)
 
 - [OLE 背景：容器和伺服器](../mfc/ole-background-containers-and-servers.md)
 
@@ -71,4 +71,3 @@ OLE 整合了許多不同的概念，其目標是要在應用程式之間進行�
 ## <a name="see-also"></a>另請參閱
 
 [OLE](../mfc/ole-in-mfc.md)
-

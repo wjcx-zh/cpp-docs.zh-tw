@@ -6,12 +6,12 @@ helpviewer_keywords:
 - merging Help menus [MFC]
 - Help [MFC], for active document containers
 ms.assetid: 9d615999-79ba-471a-9288-718f0c903d49
-ms.openlocfilehash: 3db635cfdc39f9c4166bbf3d6958f52e535d91f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1e8f9af696b6ea4cd485f4215e1c8425098e987
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578525"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296838"
 ---
 # <a name="help-menu-merging"></a>說明功能表合併
 
@@ -37,7 +37,7 @@ ms.locfileid: "50578525"
 
 若要建構這個已合併**協助** 功能表中，使用中文件內含項目架構會修改標準 OLE 文件程序。 根據 OLE 文件，合併的功能表列可以有六個功能表群組 namely**檔案**，**編輯**，**容器**，**物件**， **視窗**，**協助**，依此順序。 在每個群組中，可以是零或多個功能表。 群組**檔案**，**容器**，並**視窗**所屬的容器和群組**編輯**，**物件時，** 並**協助**屬於的物件。 當物件要進行功能表合併時，它會建立一個空白的功能表列並且將其傳遞至容器。 然後藉由呼叫插入其功能表的容器`IOleInPlaceFrame::InsertMenus`。 物件也會傳遞六個 LONG 值陣列的結構 (**OLEMENUGROUPWIDTHS**)。 在插入功能表之後，容器會標示其每個群組中新增了多少功能表，然後傳回。 接著，物件插入其功能表，並請注意各個容器群組中的功能表計數。 最後，物件會將合併的功能表列和陣列 (包含每個群組中的功能表計數) 傳遞至 OLE，而其會傳回不透明「功能表描述元」控制代碼。 稍後物件會傳遞該控制代碼和合併的功能表列至容器，透過`IOleInPlaceFrame::SetMenu`。 此時，容器會顯示合併的功能表列並且將控制代碼傳遞至 OLE，因此 OLE 可以適當分派功能表訊息。
 
-在修改過的現用文件程序中，物件必須先初始化**OLEMENUGROUPWIDTHS**為零，再將它傳遞至容器的項目。 然後，容器執行一般功能表插入，有一個例外狀況： 容器會插入**幫助**功能表作為最後一個項目，並將值為 1 中的最後一個 （第六個） 的項目**OLEMENUGROUPWIDTHS**陣列（亦即，寬度 [5]，所屬物件的 Help 群組）。 這**幫助**功能表中會有子功能表中，只有一個項目 」**容器說明**> 」 串聯功能表如先前所述。
+在修改過的現用文件程序中，物件必須先初始化**OLEMENUGROUPWIDTHS**為零，再將它傳遞至容器的項目。 然後容器會執行一般功能表插入，但有一個例外：容器會插入**幫助**功能表作為最後一個項目，並將值為 1 中的最後一個 （第六個） 的項目**OLEMENUGROUPWIDTHS**陣列 （亦即，寬度 [5]，所屬物件的 Help 群組）。 這**幫助**功能表中會有子功能表中，只有一個項目 」**容器說明**> 」 串聯功能表如先前所述。
 
 物件接著會執行其一般功能表插入程式碼，不過這在之前插入其**幫助** 功能表中，它會檢查的第六個項目**OLEMENUGROUPWIDTHS**陣列。 如果值為 1，而且最後一級的功能表名稱是**幫助**（或適當的當地語系化字串），則物件插入其**協助**作為容器的子功能表的功能表**協助**功能表。
 
@@ -52,4 +52,3 @@ ms.locfileid: "50578525"
 ## <a name="see-also"></a>另請參閱
 
 [主動式文件容器](../mfc/active-document-containers.md)
-

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ToolBar control styles [MFC]
 ms.assetid: 0f717eb9-fa32-4263-b852-809238863feb
-ms.openlocfilehash: f26edc6c0ce4a19528a9a8754428411318e9b9d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ad85ca19235478e6a5aa1d917ebe75e62308be5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648990"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277569"
 ---
 # <a name="toolbar-control-styles"></a>ToolBar 控制項樣式
 
@@ -57,4 +57,3 @@ ms.locfileid: "50648990"
 [巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [視覺化管理員](../../mfc/visualization-manager.md)
-

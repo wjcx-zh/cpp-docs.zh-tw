@@ -11,16 +11,18 @@ helpviewer_keywords:
 - CDocTemplate class [MFC]
 - templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
-ms.openlocfilehash: 29575166a188b0691465bef0a72810d2e3d97624
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 79d24ef4b6687bce61295a92cdb90f4ce4a0d619
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174864"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289997"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>文件範本和文件/檢視建立流程
 
-若要管理複雜的程序建立文件及其相關聯的檢視和框架視窗，架構會使用兩個文件範本類別： [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) SDI 應用程式和[CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) MDI 應用程式。 `CSingleDocTemplate` 一次可以建立和儲存一種類型的文件。 `CMultiDocTemplate` 可保留一種類型的多個開啟文件清單。
+若要管理複雜的程序建立文件及其相關聯的檢視和框架視窗，架構會使用兩個文件範本類別：[CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) SDI 應用程式及[CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) MDI 應用程式。 
+  `CSingleDocTemplate` 一次可以建立和儲存一種類型的文件。 
+  `CMultiDocTemplate` 可保留一種類型的多個開啟文件清單。
 
 某些應用程式支援多種文件類型。 例如，某些應用程式可能支援文字文件和圖形文件。 在這種應用程式中，當使用者選擇 [檔案] 功能表上的 [新增] 命令時會顯示一個對話方塊，其中會顯示可供開啟的新文件類型清單。 對於每種支援的文件類型，應用程式會使用不同的文件範本物件。 下圖說明支援兩種文件類型以及顯示多種開啟文件的 MDI 應用程式組態。
 
@@ -42,4 +44,3 @@ ms.locfileid: "52174864"
 [文件/檢視建立](../mfc/document-view-creation.md)<br/>
 [MFC 物件關聯性](../mfc/relationships-among-mfc-objects.md)<br/>
 [建立新文件、視窗和檢視](../mfc/creating-new-documents-windows-and-views.md)
-

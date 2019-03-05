@@ -18,16 +18,17 @@ f1_keywords:
 helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-ms.openlocfilehash: cc35a4e2de2b29bb6d437dfcbf48ef361fefdfa3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c07017539bc0125e9e8c27e208480a50ccc7a719
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618279"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299175"
 ---
 # <a name="transformer-class"></a>transformer 類別
 
-`transformer` 傳訊區塊是多來源的單一目標排序 `propagator_block`，可以存放無限個不同類型訊息。
+
+  `transformer` 傳訊區塊是多來源的單一目標排序 `propagator_block`，可以存放無限個不同類型訊息。
 
 ## <a name="syntax"></a>語法
 
@@ -39,10 +40,10 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
 
 #### <a name="parameters"></a>參數
 
-*（_i)*<br/>
+*_Input*<br/>
 緩衝區所接受之訊息的裝載類型。
 
-*（_o)*<br/>
+*_Output*<br/>
 儲存及緩衝區所傳播之訊息的裝載類型。
 
 ## <a name="members"></a>成員
@@ -150,7 +151,8 @@ virtual message_status propagate_message(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-`message` 物件的指標。
+
+  `message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。
@@ -222,7 +224,8 @@ virtual message_status send_message(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-`message` 物件的指標。
+
+  `message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。
@@ -288,7 +291,7 @@ transformer(
 *_PTarget*<br/>
 要連結的轉換程式的目標區塊的指標。
 
-*篩選 （_f)*<br/>
+*_Filter*<br/>
 判斷是否應該接受所提供的訊息篩選器函式。
 
 *_PScheduler*<br/>
@@ -305,7 +308,7 @@ transformer(
 
 型別`filter_method`是仿函式簽章`bool (_Input const &)`由此叫用的所在`transformer`傳訊區塊，以判斷是否應該接受接受所提供的訊息。
 
-##  <a name="dtor"></a> ~ transformer
+##  <a name="dtor"></a> ~transformer
 
 終結`transformer`傳訊區塊。
 

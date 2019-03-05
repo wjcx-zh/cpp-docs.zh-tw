@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serialization [MFC], role of framework
 - serialization [MFC], overriding
 ms.assetid: 48d4a279-b51c-4ba5-81cd-ed043312b582
-ms.openlocfilehash: 4c76be874752a577aaeb4c3641818f8a2850b465
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1937098de30884be327c67a698dbb0023be248bb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556594"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276113"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>略過序列化機制
 
@@ -32,4 +32,3 @@ ms.locfileid: "50556594"
 ## <a name="see-also"></a>另請參閱
 
 [使用文件](../mfc/using-documents.md)
-

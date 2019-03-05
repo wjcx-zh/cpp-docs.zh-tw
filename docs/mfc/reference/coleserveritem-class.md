@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: e0d48d37d8262c4e82a8532333bbd12f193087b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f774a8db1121dd293db8e58f7cd92aaabaeabada
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604104"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270549"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem 類別
 
@@ -116,7 +116,7 @@ class COleServerItem : public CDocItem
 |[COleServerItem::IsLinkedItem](#islinkeditem)|表示項目是否表示連結的 OLE 項目。|
 |[COleServerItem::NotifyChanged](#notifychanged)|使用自動連結更新來更新所有容器。|
 |[COleServerItem::OnDoVerb](#ondoverb)|呼叫以執行動詞命令。|
-|[Coleserveritem:: Ondraw](#ondraw)|繪製項目; 要求的容器時呼叫所需的實作。|
+|[COleServerItem::OnDraw](#ondraw)|繪製項目; 要求的容器時呼叫所需的實作。|
 |[COleServerItem::OnDrawEx](#ondrawex)|針對特定的項目繪製呼叫。|
 |[COleServerItem::OnGetClipboardData](#ongetclipboarddata)|由架構呼叫以取得的資料，將會複製到剪貼簿。|
 |[COleServerItem::OnGetExtent](#ongetextent)|由架構呼叫以擷取 OLE 項目的大小。|
@@ -155,7 +155,7 @@ class COleServerItem : public CDocItem
 
 若要使用`COleServerItem`，從它衍生的類別並實作[OnDraw](#ondraw)並[序列化](../../mfc/reference/cobject-class.md#serialize)成員函式。 `OnDraw`函式會提供項目，讓它可以將容器應用程式會開啟 複合文件時要顯示的中繼檔表示。 `Serialize`函式的`CObject`提供項目，讓內嵌項目之間的伺服器和容器應用程式傳輸的原生表示法。 [OnGetExtent](#ongetextent)提供自然的容器，並啟用調整大小的項目容器的項目大小。
 
-如需有關伺服器和相關的主題的詳細資訊，請參閱文章[伺服器： 實作伺服器](../../mfc/servers-implementing-a-server.md)和 「 建立容器/伺服器應用程式 」 一文中[容器： 進階功能](../../mfc/containers-advanced-features.md)。
+如需有關伺服器和相關的主題的詳細資訊，請參閱文章[伺服器：實作伺服器](../../mfc/servers-implementing-a-server.md)和 「 建立容器/伺服器應用程式 」 一文中[容器：進階功能](../../mfc/containers-advanced-features.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -527,7 +527,7 @@ virtual void OnDoVerb(LONG iVerb);
 
 如需詳細資訊，請參閱 < [IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK 中。
 
-##  <a name="ondraw"></a>  Coleserveritem:: Ondraw
+##  <a name="ondraw"></a>  COleServerItem::OnDraw
 
 由架構呼叫以轉譯 OLE 項目為中繼檔。
 
@@ -542,7 +542,7 @@ virtual BOOL OnDraw(
 *pDC*<br/>
 指標[CDC](../../mfc/reference/cdc-class.md)物件在其上繪製項目。 顯示內容會自動連接到的屬性顯示的內容讓您可以呼叫屬性的函式，雖然這樣做會限制之中繼檔裝置特有。
 
-*rsize 則*<br/>
+*rSize*<br/>
 以 himetric 為單位，在其中繪製中繼檔的大小。
 
 ### <a name="return-value"></a>傳回值
@@ -580,7 +580,7 @@ virtual BOOL OnDrawEx(
 
 - DVASPECT_DOCPRINT 項目被表示，如同它已列印使用從 [檔案] 功能表的 [列印] 命令。
 
-*rsize 則*<br/>
+*rSize*<br/>
 項目，以 himetric 為單位的大小。
 
 ### <a name="return-value"></a>傳回值
@@ -646,7 +646,7 @@ virtual BOOL OnGetExtent(
 
 - DVASPECT_DOCPRINT 項目被表示，如同它已列印使用從 [檔案] 功能表的 [列印] 命令。
 
-*rsize 則*<br/>
+*rSize*<br/>
 若要參考`CSize`物件，將會收到 OLE 項目的大小。
 
 ### <a name="return-value"></a>傳回值

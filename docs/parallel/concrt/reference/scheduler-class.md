@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-ms.openlocfilehash: 1b2b4de2a0aa844f9450af9d853b11ea6f485274
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f27dace61b0764962a78695c2a4c6b180b09d7a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638265"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287893"
 ---
 # <a name="scheduler-class"></a>Scheduler 類別
 
@@ -81,7 +81,7 @@ class Scheduler;
 
 **命名空間：** concurrency
 
-##  <a name="attach"></a> 附加
+##  <a name="attach"></a> Attach
 
 將排程器附加至呼叫的內容。 這個方法傳回之後，呼叫的內容由排程器和排程器會變成目前的排程器。
 
@@ -109,7 +109,7 @@ static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
 
 ### <a name="parameters"></a>參數
 
-*政策 （_p)*<br/>
+*_Policy*<br/>
 排程器原則，告訴您新建立的排程器的行為。
 
 ### <a name="return-value"></a>傳回值
@@ -136,7 +136,7 @@ virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
 
 ### <a name="parameters"></a>參數
 
-*放置 （_p)*<br/>
+*_Placement*<br/>
 排程群組內的工作將會優先於執行的位置參考。
 
 ### <a name="return-value"></a>傳回值
@@ -195,7 +195,7 @@ virtual bool IsAvailableLocation(const location& _Placement) const = 0;
 
 ### <a name="parameters"></a>參數
 
-*放置 （_p)*<br/>
+*_Placement*<br/>
 若要查詢有關的排程器的位置參考。
 
 ### <a name="return-value"></a>傳回值
@@ -234,7 +234,7 @@ virtual void RegisterShutdownEvent(HANDLE _Event) = 0;
 
 ### <a name="parameters"></a>參數
 
-*（_e)*<br/>
+*_Event*<br/>
 這個信號會在執行階段時，排程器關閉並終結本身的 Windows 事件物件的控制代碼。
 
 ##  <a name="release"></a> 版本
@@ -279,7 +279,7 @@ Scheduler();
 
 您也可以建立明確透過排程器`CurrentScheduler::Create`方法或`Scheduler::Create`方法。
 
-##  <a name="dtor"></a> ~ 排程器
+##  <a name="dtor"></a> ~Scheduler
 
 物件的`Scheduler`不再存在於所有外部參考時，將以隱含方式終結類別。
 
@@ -307,10 +307,10 @@ virtual void ScheduleTask(
 *_Proc*<br/>
 若要執行的輕量工作主體執行該函式指標。
 
-*資料 （_d)*<br/>
+*_Data*<br/>
 將做為參數傳遞至工作的主體資料的 void 指標。
 
-*放置 （_p)*<br/>
+*_Placement*<br/>
 輕量工作將會變成優先執行的位置參考。
 
 ##  <a name="setdefaultschedulerpolicy"></a> SetDefaultSchedulerPolicy
@@ -323,7 +323,7 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 
 ### <a name="parameters"></a>參數
 
-*政策 （_p)*<br/>
+*_Policy*<br/>
 要設定為預設的排程器原則的原則。
 
 ### <a name="remarks"></a>備註
@@ -336,4 +336,3 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 [Scheduler 類別](scheduler-class.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [工作排程器](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

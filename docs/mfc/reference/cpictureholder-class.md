@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CPictureHolder [MFC], SetPictureDispatch
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
-ms.openlocfilehash: 14ffcbc043d80bfd296bcf52d125d288039f0501
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5386240114550826e4bf557b63310a91590afb55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509558"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284212"
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder 類別
 
@@ -64,7 +64,7 @@ class CPictureHolder
 |[CPictureHolder::GetDisplayString](#getdisplaystring)|擷取控制項容器的屬性瀏覽器中顯示的字串。|
 |[CPictureHolder::GetPictureDispatch](#getpicturedispatch)|傳回`CPictureHolder`物件的`IDispatch`介面。|
 |[CPictureHolder::GetType](#gettype)|會告知是否`CPictureHolder`物件是點陣圖、 中繼檔或圖示。|
-|[Cpictureholder:: Render](#render)|呈現圖片。|
+|[CPictureHolder::Render](#render)|呈現圖片。|
 |[CPictureHolder::SetPictureDispatch](#setpicturedispatch)|設定組`CPictureHolder`物件的`IDispatch`介面。|
 
 ### <a name="public-data-members"></a>公用資料成員
@@ -79,7 +79,7 @@ class CPictureHolder
 
 使用內建的 [圖片] 屬性中，開發人員可以指定點陣圖、 圖示或顯示的中繼檔。
 
-如需建立自訂圖片屬性的詳細資訊，請參閱文章[MFC ActiveX 控制項： 使用 ActiveX 控制項中的圖片](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)。
+如需建立自訂圖片屬性的詳細資訊，請參閱文章[MFC ActiveX 控制項：在 ActiveX 控制項中使用圖片](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -283,7 +283,7 @@ short GetType();
 LPPICTURE m_pPict;
 ```
 
-##  <a name="render"></a>  Cpictureholder:: Render
+##  <a name="render"></a>  CPictureHolder::Render
 
 呈現的圖片中所參考的矩形*rcRender*。
 

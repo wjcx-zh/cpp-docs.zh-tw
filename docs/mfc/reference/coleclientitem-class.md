@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: 80d28aa6a71adb72b8a3e0f5cd997577d61d0a52
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: ec3048e7bd033e5c296b558dd2083c648bc377e7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678583"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295353"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem 類別
 
@@ -287,7 +287,7 @@ OLE 項目可以內嵌或連結。 如果它內嵌的其資料會儲存為複合
 
 `COleClientItem` 可以搭配[COleDocument](../../mfc/reference/coledocument-class.md)， [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)，或[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)類別。 若要使用`COleClientItem`，從它衍生的類別並實作[OnChange](#onchange)成員函式，其定義的容器項目所做變更的回應方式。 若要支援就地啟用，覆寫[OnGetItemPosition](#ongetitemposition)成員函式。 此函式會提供 OLE 項目顯示位置的相關資訊。
 
-如需使用容器介面的詳細資訊，請參閱文章[容器： 實作容器](../../mfc/containers-implementing-a-container.md)並[啟用](../../mfc/activation-cpp.md)。
+如需使用容器介面的詳細資訊，請參閱文章[容器：實作容器](../../mfc/containers-implementing-a-container.md)並[啟用](../../mfc/activation-cpp.md)。
 
 > [!NOTE]
 >  內嵌和連結的項目，為 「 物件 」 是指 Windows SDK，並將類型的項目稱為 「 類別 」。 此參考會使用"item"的詞彙來區別 OLE 實體從對應的 c + + 物件和詞彙來區別 OLE 類別目錄從 c + + 類別的 「 類型 」。
@@ -627,7 +627,7 @@ BOOL CreateFromClipboard(
 
 ### <a name="parameters"></a>參數
 
-*轉譯*<br/>
+*render*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -663,7 +663,7 @@ BOOL CreateFromData(
 *pDataObject*<br/>
 指標[COleDataObject](../../mfc/reference/coledataobject-class.md)從中 OLE 項目是要建立的物件。
 
-*轉譯*<br/>
+*render*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -703,7 +703,7 @@ BOOL CreateFromFile(
 *clsid*<br/>
 保留供未來使用。
 
-*轉譯*<br/>
+*render*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -735,7 +735,7 @@ BOOL CreateLinkFromClipboard(
 
 ### <a name="parameters"></a>參數
 
-*轉譯*<br/>
+*render*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -771,7 +771,7 @@ BOOL CreateLinkFromData(
 *pDataObject*<br/>
 指標[COleDataObject](../../mfc/reference/coledataobject-class.md)從中 OLE 項目是要建立的物件。
 
-*轉譯*<br/>
+*render*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -807,7 +807,7 @@ BOOL CreateLinkFromFile(
 *lpszFileName*<br/>
 建立 OLE 項目檔案名稱的指標。
 
-*轉譯*<br/>
+*render*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -843,7 +843,7 @@ BOOL CreateNewItem(
 *clsid*<br/>
 可唯一識別建立的 OLE 項目類型的識別碼。
 
-*轉譯*<br/>
+*render*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -875,7 +875,7 @@ BOOL CreateStaticFromClipboard(
 
 ### <a name="parameters"></a>參數
 
-*轉譯*<br/>
+*render*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -911,7 +911,7 @@ BOOL CreateStaticFromData(
 *pDataObject*<br/>
 指標[COleDataObject](../../mfc/reference/coledataobject-class.md)從中 OLE 項目是要建立的物件。
 
-*轉譯*<br/>
+*render*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -1328,13 +1328,13 @@ UINT GetItemState() const;
 
 ### <a name="return-value"></a>傳回值
 
-A`COleClientItem::ItemState`列舉值，這個值可以是下列其中之一： `emptyState`， `loadedState`， `openState`， `activeState`， `activeUIState`。 如需這些狀態的資訊，請參閱文章[容器： 用戶端項目狀態](../../mfc/containers-client-item-states.md)。
+A`COleClientItem::ItemState`列舉值，這個值可以是下列其中之一： `emptyState`， `loadedState`， `openState`， `activeState`， `activeUIState`。 如需這些狀態的資訊，請參閱文章[容器：用戶端項目狀態](../../mfc/containers-client-item-states.md)。
 
 ### <a name="remarks"></a>備註
 
 若要收到 OLE 項目的狀態變更時，使用[OnChange](#onchange)成員函式。
 
-如需詳細資訊，請參閱文章[容器： 用戶端項目狀態](../../mfc/containers-client-item-states.md)。
+如需詳細資訊，請參閱文章[容器：用戶端項目狀態](../../mfc/containers-client-item-states.md)。
 
 ##  <a name="getlaststatus"></a>  COleClientItem::GetLastStatus
 
@@ -1552,7 +1552,7 @@ virtual void OnChange(
 
 ### <a name="parameters"></a>參數
 
-*則 nCode*<br/>
+*nCode*<br/>
 伺服器的原因變更此項目。 它可以包含下列值之一：
 
 - OLE_CHANGED OLE 項目外觀已變更。
@@ -1780,7 +1780,7 @@ virtual void OnInsertMenus(
 指向空的功能表。
 
 *lpMenuWidths*<br/>
-指向陣列的六個 LONG 值，表示了多少功能表位於每個群組的下列功能表： 檔案、 編輯、 容器物件，視窗中，說明。 容器應用程式會負責檔、 容器和視窗 功能表群組，對應至 0、 2 和 4，這個陣列的項目。
+指向陣列的六個 LONG 值，表示了多少功能表位於每個群組的下列功能表：檔案、 編輯、 容器物件，視窗中，說明。 容器應用程式會負責檔、 容器和視窗 功能表群組，對應至 0、 2 和 4，這個陣列的項目。
 
 ### <a name="remarks"></a>備註
 

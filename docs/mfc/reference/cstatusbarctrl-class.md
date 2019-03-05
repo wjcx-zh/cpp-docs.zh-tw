@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 71ae39cb62da7938880973dc48b65ed69b9c8b92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a5adc5ae6b1981d7f8260d684a33d8bd7918e40
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569725"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272837"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl 類別
 
@@ -80,9 +80,9 @@ class CStatusBarCtrl : public CWnd
 |[CStatusBarCtrl::GetIcon](#geticon)|擷取目前狀態列控制項中的組件 （也稱為窗格） 圖示。|
 |[CStatusBarCtrl::GetParts](#getparts)|擷取狀態列控制項中的組件的計數。|
 |[CStatusBarCtrl::GetRect](#getrect)|擷取狀態列控制項中的組件的週框矩形。|
-|[Cstatusbarctrl:: Gettext](#gettext)|狀態列控制項的指定部分從擷取的文字。|
-|[Cstatusbarctrl:: Gettextlength](#gettextlength)|擷取的長度，以從狀態列控制項的指定部分文字的字元為單位。|
-|[Cstatusbarctrl:: Gettiptext](#gettiptext)|擷取中的狀態列窗格的工具提示文字。|
+|[CStatusBarCtrl::GetText](#gettext)|狀態列控制項的指定部分從擷取的文字。|
+|[CStatusBarCtrl::GetTextLength](#gettextlength)|擷取的長度，以從狀態列控制項的指定部分文字的字元為單位。|
+|[CStatusBarCtrl::GetTipText](#gettiptext)|擷取中的狀態列窗格的工具提示文字。|
 |[CStatusBarCtrl::IsSimple](#issimple)|檢查以判斷它是否在簡單模式下的狀態視窗控制項。|
 |[CStatusBarCtrl::SetBkColor](#setbkcolor)|在狀態列中設定的背景色彩。|
 |[CStatusBarCtrl::SetIcon](#seticon)|在狀態列中設定窗格圖示。|
@@ -90,7 +90,7 @@ class CStatusBarCtrl : public CWnd
 |[CStatusBarCtrl::SetParts](#setparts)|設定組件中的狀態列控制項，而每個部分的右邊緣的座標。|
 |[CStatusBarCtrl::SetSimple](#setsimple)|指定狀態列控制項是否會顯示簡單的文字，或顯示所有先前呼叫所設定的控制項組件`SetParts`。|
 |[CStatusBarCtrl::SetText](#settext)|在狀態列控制項的指定部分設定文字。|
-|[Cstatusbarctrl:: Settiptext](#settiptext)|設定工具提示文字窗格的 [狀態] 列中。|
+|[CStatusBarCtrl::SetTipText](#settiptext)|設定工具提示文字窗格的 [狀態] 列中。|
 
 ## <a name="remarks"></a>備註
 
@@ -128,7 +128,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定狀態列控制項的樣式。 套用狀態列控制項的樣式中所列的任何組合[常見的控制項樣式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。 這個參數必須包含 WS_CHILD 樣式。 它也應該包括 WS_VISIBLE 樣式。
 
 *rect*<br/>
@@ -174,7 +174,7 @@ virtual BOOL CreateEx(
 *dwExStyle*<br/>
 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定狀態列控制項的樣式。 套用狀態列控制項的樣式中所列的任何組合[常見的控制項樣式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。 這個參數必須包含 WS_CHILD 樣式。 它也應該包括 WS_VISIBLE 樣式。
 
 *rect*<br/>
@@ -354,7 +354,7 @@ BOOL GetRect(
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#4](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_6.cpp)]
 
-##  <a name="gettext"></a>  Cstatusbarctrl:: Gettext
+##  <a name="gettext"></a>  CStatusBarCtrl::GetText
 
 狀態列控制項的指定部分從擷取的文字。
 
@@ -396,7 +396,7 @@ int GetText(
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#5](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_7.cpp)]
 
-##  <a name="gettextlength"></a>  Cstatusbarctrl:: Gettextlength
+##  <a name="gettextlength"></a>  CStatusBarCtrl::GetTextLength
 
 擷取長度，以從狀態列控制項的指定部分文字的字元為單位。
 
@@ -430,7 +430,7 @@ int GetTextLength(
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#6](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_8.cpp)]
 
-##  <a name="gettiptext"></a>  Cstatusbarctrl:: Gettiptext
+##  <a name="gettiptext"></a>  CStatusBarCtrl::GetTipText
 
 擷取中的狀態列窗格的工具提示文字。
 
@@ -613,7 +613,7 @@ BOOL SetText(
 *nPane*<br/>
 要設定之部分的以零為起始的索引。 如果此值為 255，則假設狀態列控制項是只有一個部分的簡單控制項。
 
-*n*<br/>
+*nType*<br/>
 繪圖作業的類型。 請參閱[SB_SETTEXT 訊息](/windows/desktop/Controls/sb-settext)取得一份可能的值。
 
 ### <a name="return-value"></a>傳回值
@@ -628,7 +628,7 @@ BOOL SetText(
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#11](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_13.cpp)]
 
-##  <a name="settiptext"></a>  Cstatusbarctrl:: Settiptext
+##  <a name="settiptext"></a>  CStatusBarCtrl::SetTipText
 
 設定工具提示文字窗格的 [狀態] 列中。
 

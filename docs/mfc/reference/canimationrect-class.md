@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-ms.openlocfilehash: 4e782a9325360b69e33dfaf6a3b0649d9368b32b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 84c4cf92894a9ece2021417445c9d7ab94ee6bdf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540175"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259486"
 ---
 # <a name="canimationrect-class"></a>CAnimationRect 類別
 
@@ -87,7 +87,7 @@ class CAnimationRect : public CAnimationBaseObject;
 |名稱|描述|
 |----------|-----------------|
 |[CAnimationRect::operator RECT](#operator_rect)|CAnimationRect 將就是 RECT。|
-|[CAnimationRect::operator =](#operator_eq)|給 CAnimationRect rect。|
+|[CAnimationRect::operator=](#operator_eq)|給 CAnimationRect rect。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
@@ -195,7 +195,7 @@ CAnimationRect(
 *dwUserData*<br/>
 指定使用者定義的資料。
 
-*太平洋時間*<br/>
+*pt*<br/>
 左上角座標。
 
 *sz*<br/>
@@ -401,7 +401,7 @@ operator RECT();
 
 此函式會在內部呼叫 GetValue。 如果基於某些原因的 GetValue 失敗，傳回的矩形會包含所有的矩形座標的預設值。
 
-##  <a name="operator_eq"></a>  CAnimationRect::operator =
+##  <a name="operator_eq"></a>  CAnimationRect::operator=
 
 給 CAnimationRect rect。
 

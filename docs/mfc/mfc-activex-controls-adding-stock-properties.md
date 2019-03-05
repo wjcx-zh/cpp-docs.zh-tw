@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreground colors, ActiveX controls
 - foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
-ms.openlocfilehash: b27979b5492ed03b93aa0d8990c9c0b699242c86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 940f61c9ce6ccb57843333582455e61c1f7ac73b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607827"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289685"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC ActiveX 控制項：加入內建屬性
 
@@ -75,15 +75,15 @@ ms.locfileid: "50607827"
 
 |屬性|分派對應項目|如何存取值|
 |--------------|------------------------|-------------------------|
-|`Appearance`|DISP_STOCKPROP_APPEARANCE （)|值為可存取`m_sAppearance`。|
-|`BackColor`|DISP_STOCKPROP_BACKCOLOR （)|值，藉由呼叫可存取`GetBackColor`。|
-|`BorderStyle`|DISP_STOCKPROP_BORDERSTYLE （)|值為可存取`m_sBorderStyle`。|
-|`Caption`|DISP_STOCKPROP_CAPTION （)|值，藉由呼叫可存取`InternalGetText`。|
-|`Enabled`|DISP_STOCKPROP_ENABLED （)|值為可存取`m_bEnabled`。|
-|`Font`|DISP_STOCKPROP_FONT （)|請參閱文章[MFC ActiveX 控制項： 使用字型](../mfc/mfc-activex-controls-using-fonts.md)使用量。|
-|`ForeColor`|DISP_STOCKPROP_FORECOLOR （)|值，藉由呼叫可存取`GetForeColor`。|
+|`Appearance`|DISP_STOCKPROP_APPEARANCE( )|值為可存取`m_sAppearance`。|
+|`BackColor`|DISP_STOCKPROP_BACKCOLOR( )|值，藉由呼叫可存取`GetBackColor`。|
+|`BorderStyle`|DISP_STOCKPROP_BORDERSTYLE( )|值為可存取`m_sBorderStyle`。|
+|`Caption`|DISP_STOCKPROP_CAPTION( )|值，藉由呼叫可存取`InternalGetText`。|
+|`Enabled`|DISP_STOCKPROP_ENABLED( )|值為可存取`m_bEnabled`。|
+|`Font`|DISP_STOCKPROP_FONT( )|請參閱文章[MFC ActiveX 控制項：使用字型](../mfc/mfc-activex-controls-using-fonts.md)使用量。|
+|`ForeColor`|DISP_STOCKPROP_FORECOLOR( )|值，藉由呼叫可存取`GetForeColor`。|
 |`hWnd`|DISP_STOCKPROP_HWND （)|值為可存取`m_hWnd`。|
-|`Text`|DISP_STOCKPROP_TEXT （)|值，藉由呼叫可存取`InternalGetText`。 這個屬性等同於`Caption`，除了屬性的名稱。|
+|`Text`|DISP_STOCKPROP_TEXT( )|值，藉由呼叫可存取`InternalGetText`。 這個屬性等同於`Caption`，除了屬性的名稱。|
 |`ReadyState`|DISP_STOCKPROP_READYSTATE()|值為可存取`m_lReadyState`或 `GetReadyState`|
 
 ##  <a name="_core_stock_properties_and_notification"></a> 內建屬性和通知

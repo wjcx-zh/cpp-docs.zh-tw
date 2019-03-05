@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: 8b2d554cb6b4eaeb7ee1ddd884aefb3ab6da0f2e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 75d62eb5ce3d24322d7af5030fb8d723ffa8fedb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523412"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259928"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>MFC ODBC 消費者精靈
 
@@ -66,9 +66,9 @@ ms.locfileid: "51523412"
 
    指定資料錄集是動態 （預設值） 或快照集。
 
-   - **動態集**： 指定資料錄集是動態集。 動態集是可查詢的資料庫資料的索引檢視表查詢的結果。 動態集快取的整數索引的原始資料，並因此提供了一效能中取得快照集。 直接到每一筆記錄的索引點找到為查詢的結果，並指出是否要移除記錄。 您也會有查詢記錄中的更新資訊的存取權。 這是預設值。
+   - **動態集**:指定資料錄集是動態集。 動態集是可查詢的資料庫資料的索引檢視表查詢的結果。 動態集快取的整數索引的原始資料，並因此提供了一效能中取得快照集。 直接到每一筆記錄的索引點找到為查詢的結果，並指出是否要移除記錄。 您也會有查詢記錄中的更新資訊的存取權。 這是預設值。
 
-   - **快照集**： 指定資料錄集是快照集。 快照是查詢的結果，而且時間是在某個時間點的資料庫的檢視。 快取查詢結果所發現的所有記錄，因此您不會看到原始記錄的任何變更。
+   - **快照集**:指定資料錄集是快照集。 快照是查詢的結果，而且時間是在某個時間點的資料庫的檢視。 快取查詢結果所發現的所有記錄，因此您不會看到原始記錄的任何變更。
 
 - **所有的資料行繫結**
 
@@ -78,4 +78,3 @@ ms.locfileid: "51523412"
 
 [MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)
-

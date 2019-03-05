@@ -1,5 +1,5 @@
 ---
-title: TN011：將 MFC 當成 DLL 的一部分來使用
+title: TN011:將 MFC 當成 DLL 的一部分來使用
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.dll
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: f1c98056d5a5e2565e57044b1fb551db4f354f34
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 63e97c3b9260465259d76cf6996d1d389f65ee41
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326195"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326448"
 ---
-# <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011：將 MFC 當成 DLL 的一部分來使用
+# <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011:將 MFC 當成 DLL 的一部分來使用
 
 此提示說明標準 MFC Dll，可以讓您使用 MFC 程式庫做為 Windows 動態連結程式庫 (DLL) 的一部分。 它假設您熟悉 Windows DLL 並知道如何建置它們。 如需詳細資訊 MFC 擴充 Dll，您可以建立使用 MFC 程式庫中，延伸模組[MFC 的 DLL 版本](../mfc/tn033-dll-version-of-mfc.md)。
 
@@ -115,4 +115,3 @@ API 所使用的結構不是從 MFC 類別衍生，而是在 API 標頭中定義
 
 [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
 [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
-

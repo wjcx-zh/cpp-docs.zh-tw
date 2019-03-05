@@ -6,12 +6,12 @@ f1_keywords:
 - atlwin/ATL::DECLARE_WND_SUPERCLASS
 - atlwin/ATL::DECLARE_WND_CLASS_EX
 ms.assetid: ce18681a-2bab-4453-9895-0f3ea47c2b24
-ms.openlocfilehash: 75a6a769770c9de8b26c08fae852197cdb99248e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4617a04c199741b97316122456e417a94275e89
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503139"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260994"
 ---
 # <a name="window-class-macros"></a>視窗類別巨集
 
@@ -19,7 +19,7 @@ ms.locfileid: "50503139"
 
 |||
 |-|-|
-|[{2&AMP;GT;DECLARE_WND_CLASS&AMP;LT;2](#declare_wnd_class)|可讓您指定新的視窗類別名稱。|
+|[DECLARE_WND_CLASS](#declare_wnd_class)|可讓您指定新的視窗類別名稱。|
 |[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017)可讓您指定新的視窗類別，並在封入類別的新類別會使用其視窗程序的名稱。|
 |[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|可讓您指定的現有視窗類別為基礎的新的視窗類別名稱。|
 |[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|可讓您指定類別的參數。|
@@ -28,7 +28,7 @@ ms.locfileid: "50503139"
 
 **標頭：** atlwin.h
 
-##  <a name="declare_wnd_class"></a>  {2&AMP;GT;DECLARE_WND_CLASS&AMP;LT;2
+##  <a name="declare_wnd_class"></a>  DECLARE_WND_CLASS
 
 可讓您指定新的視窗類別名稱。 將這個巨集放在 ATL ActiveX 控制項的控制項類別。
 
@@ -130,7 +130,7 @@ DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
 *style*<br/>
 [in]視窗的樣式。
 
-*背景*<br/>
+*bkgnd*<br/>
 [in]視窗的背景色彩。
 
 ### <a name="remarks"></a>備註
@@ -144,4 +144,3 @@ DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
 ## <a name="see-also"></a>另請參閱
 
 [巨集](atl-macros.md)
-

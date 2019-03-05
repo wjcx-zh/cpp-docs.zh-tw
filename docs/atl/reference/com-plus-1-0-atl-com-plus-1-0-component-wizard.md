@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-ms.openlocfilehash: 014193f4017aa47b819558cbd4753e6abcffcaaf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0fa649ba41a684be6ed18bd05d48954503c5db16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562054"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295967"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, ATL COM+ 1.0 元件精靈
 
@@ -23,7 +23,7 @@ ms.locfileid: "50562054"
 
    |選項|描述|
    |------------|-----------------|
-   |**雙重**|指定物件是否支援雙重介面 (其 vtable 具有自訂介面函式和晚期繫結`IDispatch`方法)。 可讓 COM 用戶端和 Automation 控制器存取的物件。|
+   |**Dual**|指定物件是否支援雙重介面 (其 vtable 具有自訂介面函式和晚期繫結`IDispatch`方法)。 可讓 COM 用戶端和 Automation 控制器存取的物件。|
    |**自訂**|指定物件支援自訂介面 （其 vtable 有自訂介面函式）。 自訂介面可以是較快，雙重介面，尤其是跨處理序界限。<br /><br /> - **Automation 相容**自動化支援加入自訂的介面。 針對屬性化專案，設定**oleautomation**中 coclass 的屬性。|
 
 - **Queueable**
@@ -37,7 +37,7 @@ ms.locfileid: "50562054"
    |選項|描述|
    |------------|-----------------|
    |**ISupportErrorInfo**|建立支援[ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md)介面讓物件可以將錯誤資訊傳回給用戶端。|
-   |**IObjectControl**|提供三個您物件的存取[IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol)方法： [Activate](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate)， [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled)，以及[停用](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate)。|
+   |**IObjectControl**|提供三個您物件的存取[IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol)方法：[啟用](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate)， [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled)，以及[停用](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate)。|
    |**IObjectConstruct**|建立支援[IObjectConstruct](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectconstruct)介面，以管理傳遞中的其他方法或物件中的參數。|
 
 - **異動**
@@ -55,4 +55,3 @@ ms.locfileid: "50562054"
 
 [ATL COM+ 1.0 元件精靈](../../atl/reference/atl-com-plus-1-0-component-wizard.md)<br/>
 [ATL COM + 1.0 元件](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
-

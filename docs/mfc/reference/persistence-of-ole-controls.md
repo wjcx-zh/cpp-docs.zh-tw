@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE controls [MFC], persistence
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
-ms.openlocfilehash: e510cdb2ae64b5b3ed5f8b69bc8ad9c22800a167
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8bcba63c8e09873fe7f30e4fd07d652850be1f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609405"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299643"
 ---
 # <a name="persistence-of-ole-controls"></a>OLE 控制項的持續性
 
@@ -294,7 +294,7 @@ BOOL PX_Font(
 *pszPropName*<br/>
 在交換元素的屬性名稱。
 
-*字型*<br/>
+*font*<br/>
 參考`CFontHolder`物件，包含字型屬性。
 
 *pFontDesc*<br/>
@@ -413,7 +413,7 @@ BOOL PX_Long(
 *pszPropName*<br/>
 在交換元素的屬性名稱。
 
-*左值*<br/>
+*lValue*<br/>
 儲存屬性的變數參考 （通常是您的類別成員變數）。
 
 *lDefault*<br/>
@@ -637,7 +637,7 @@ BOOL PX_VBXFontConvert(
 *pPX*<br/>
 指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常是當做參數傳遞給`DoPropExchange`)。
 
-*字型*<br/>
+*font*<br/>
 將包含已轉換的 VBX 與字型相關屬性的 OLE 控制項的字型屬性。
 
 ### <a name="return-value"></a>傳回值

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ODBC [MFC], data source information
 - CODBCFieldInfo structure [MFC]
 ms.assetid: 92598b4f-facc-4108-b282-63a179ff79ab
-ms.openlocfilehash: 5ad7d8f710c763b25771e3d1fa8839b5b64802ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc2ad0c8319a60b773211dbd6b52b57bb2dbcafb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655269"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272759"
 ---
 # <a name="codbcfieldinfo-structure"></a>CODBCFieldInfo 結構
 
@@ -46,7 +46,7 @@ SQL 資料類型的欄位。 這可以是 ODBC SQL 資料類型或驅動程式�
 欄位的小數位數。 如需詳細資訊，請參閱 Windows SDK 中的 「 有效位數、 小數位數、 長度和顯示大小 」。
 
 *m_nNullability*<br/>
-是否欄位可接受 Null 值。 這可以是兩個值之一： SQL_NULLABLE 欄位可接受 Null 值，則 SQL_NO_NULLS 如果欄位不接受 Null 值。
+是否欄位可接受 Null 值。 這可以是兩個值之一：SQL_NULLABLE 欄位可接受 Null 值，則 SQL_NO_NULLS 如果欄位不接受 Null 值。
 
 ## <a name="remarks"></a>備註
 
@@ -61,4 +61,3 @@ SQL 資料類型的欄位。 這可以是 ODBC SQL 資料類型或驅動程式�
 [結構、樣式、回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)<br/>
 [CRecordset::GetFieldValue](../../mfc/reference/crecordset-class.md#getfieldvalue)
-

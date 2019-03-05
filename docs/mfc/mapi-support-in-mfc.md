@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MAPI, MFC
 - OnFileSendMail method [MFC]
 ms.assetid: cafbecb1-0427-4077-b4b8-159bae5b49b8
-ms.openlocfilehash: 564ce185758d25682a88f18a23b0b11afc84a4d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b873ca1b3384adab6487fb3af9dc1401aaad12c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567138"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281638"
 ---
 # <a name="mapi-support-in-mfc"></a>MFC 中的 MAPI 支援
 
@@ -63,4 +63,3 @@ MAPI 需要讀取要傳送附件的檔案。 如果應用程式保持其資料�
 ## <a name="see-also"></a>另請參閱
 
 [MAPI](../mfc/mapi.md)
-

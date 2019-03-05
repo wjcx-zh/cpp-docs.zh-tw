@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 072fcec4944088ab087a6a39c7d8b916c3bc80e2
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f1e9c6e4505c67b881d479817ec8b45e4ae5dc8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177026"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304546"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl 類別
 
@@ -152,7 +152,7 @@ class CReBarCtrl : public CWnd
 |[CReBarCtrl::GetToolTips](#gettooltips)|擷取與 rebar 控制項相關聯的任何工具提示控制項的控制代碼。|
 |[CReBarCtrl::HitTest](#hittest)|判斷哪一部分 rebar 群組列在指定的時間點，在畫面上，如果此時 rebar 群組列存在。|
 |[CReBarCtrl::IDToIndex](#idtoindex)|Rebar 控制項中的頻外索引會將群組列識別碼 (ID)。|
-|[Crebarctrl:: Insertband](#insertband)|Rebar 控制項中插入新的群組列。|
+|[CReBarCtrl::InsertBand](#insertband)|Rebar 控制項中插入新的群組列。|
 |[CReBarCtrl::MaximizeBand](#maximizeband)|調整成最大大小的 rebar 控制項中的頻外的大小。|
 |[CReBarCtrl::MinimizeBand](#minimizeband)|調整成最小大小 rebar 控制項中的頻外的大小。|
 |[CReBarCtrl::MoveBand](#moveband)|將群組列從一個索引移到另一個。|
@@ -251,7 +251,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定 rebar 控制項的樣式套用至控制項的組合。 請參閱[Rebar 控制項的樣式](/windows/desktop/Controls/rebar-control-styles)Windows SDK，如需支援的樣式的清單中。
 
 *rect*<br/>
@@ -299,7 +299,7 @@ virtual BOOL CreateEx(
 *dwExStyle*<br/>
 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定 rebar 控制項的樣式套用至控制項的組合。 如需支援的樣式清單，請參閱 < [Rebar 控制項的樣式](/windows/desktop/Controls/rebar-control-styles)Windows SDK 中。
 
 *rect*<br/>
@@ -388,7 +388,7 @@ void GetBandBorders(
 *uBand*<br/>
 框線將擷取群組列的以零為起始索引。
 
-*中華人民共和國*<br/>
+*prc*<br/>
 指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構將會接收頻外框線。 如果 rebar 控制項有 RBS_BANDBORDERS 樣式，這個結構的每個成員會收到的像素數，一端對應的頻外，構成框線。 如果 rebar 控制項並沒有 RBS_BANDBORDERS 樣式，這個結構的左的成員會收到有效的資訊。 如需 rebar 控制項的樣式的描述，請參閱 < [Rebar 控制項的樣式](/windows/desktop/Controls/rebar-control-styles)Windows SDK 中。
 
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount
@@ -493,7 +493,7 @@ BOOL GetColorScheme(COLORSCHEME* lpcs);
 
 ### <a name="parameters"></a>參數
 
-*lpc*<br/>
+*lpcs*<br/>
 指標[新增的色彩配置](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme)結構，在 Windows SDK 中所述。
 
 ### <a name="return-value"></a>傳回值
@@ -583,7 +583,7 @@ BOOL GetRect(
 *uBand*<br/>
 在 rebar 控制項寬線的以零為起始索引。
 
-*中華人民共和國*<br/>
+*prc*<br/>
 指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，將會收到 rebar 群組列的界限。
 
 ### <a name="return-value"></a>傳回值
@@ -693,7 +693,7 @@ int IDToIndex(UINT uBandID) const;
 
 以零為起始的頻外索引，如果成功，則為-1 則。 如果存在重複的群組列索引，則會傳回第一個。
 
-##  <a name="insertband"></a>  Crebarctrl:: Insertband
+##  <a name="insertband"></a>  CReBarCtrl::InsertBand
 
 實作 Win32 訊息的行為[RB_INSERTBAND](/windows/desktop/Controls/rb-insertband)、 Windows SDK 中所述。
 
@@ -937,7 +937,7 @@ void SetColorScheme(const COLORSCHEME* lpcs);
 
 ### <a name="parameters"></a>參數
 
-*lpc*<br/>
+*lpcs*<br/>
 指標[新增的色彩配置](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme)結構，在 Windows SDK 中所述。
 
 ### <a name="remarks"></a>備註
@@ -958,7 +958,7 @@ DWORD SetExtendedStyle(
 
 |參數|描述|
 |---------------|-----------------|
-|*dwMask*|[in]位元組合 (OR) 旗標，指定在的旗標*dwStyleEx*參數套用。 使用一或多個下列值：<br /><br /> RBS_EX_SPLITTER： 根據預設，顯示分隔器下方在水平模式中，和右邊垂直的模式。<br /><br /> RBS_EX_TRANSPARENT： 轉寄[WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)父視窗的訊息。|
+|*dwMask*|[in]位元組合 (OR) 旗標，指定在的旗標*dwStyleEx*參數套用。 使用一或多個下列值：<br /><br /> RBS_EX_SPLITTER:根據預設，顯示分隔器下方在水平模式中，和右邊垂直的模式。<br /><br /> RBS_EX_TRANSPARENT:向前[WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)父視窗的訊息。|
 |*dwStyleEx*|[in]位元組合 (OR) 旗標，指定要套用的樣式。 若要設定樣式，指定會在相同的旗標*dwMask*參數。 若要重設的樣式，請指定二進位零。|
 
 ### <a name="return-value"></a>傳回值
@@ -1137,4 +1137,3 @@ BOOL SizeToRect(CRect& rect);
 
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

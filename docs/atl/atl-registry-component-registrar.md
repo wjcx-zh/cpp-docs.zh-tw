@@ -10,12 +10,12 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: 106752ae-4cfc-4030-8cb2-d36a1d635a2e
-ms.openlocfilehash: 70e3a5334730b75100cc4084344c46d73399f4f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c64d47be6df515a0bd4a8d2cfef51f8d56311f4a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467257"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258966"
 ---
 # <a name="atl-registry-component-registrar"></a>ATL 登錄元件 (登錄器)
 
@@ -36,4 +36,3 @@ ATL 登錄器提供最佳化的存取系統登錄的自訂介面。 在註冊機
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 提供有關如何使用 Active Template Library 進行程式設計的概念性主題連結。
-

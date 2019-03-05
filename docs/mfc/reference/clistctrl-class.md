@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 4bc50a8a77a4964cf92d003ed1e06213398f401c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 850c16420606452414cbe284c5f9f25031859c93
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525544"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304518"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 類別
 
@@ -309,7 +309,7 @@ class CListCtrl : public CWnd
 |[CListCtrl::FindItem](#finditem)|搜尋具有指定特性的清單檢視項目。|
 |[CListCtrl::GetBkColor](#getbkcolor)|擷取清單檢視控制項的背景色彩。|
 |[CListCtrl::GetBkImage](#getbkimage)|擷取目前的背景影像的清單檢視控制項。|
-|[Clistctrl:: Getcallbackmask](#getcallbackmask)|擷取清單檢視控制項的回呼遮罩。|
+|[CListCtrl::GetCallbackMask](#getcallbackmask)|擷取清單檢視控制項的回呼遮罩。|
 |[CListCtrl::GetCheck](#getcheck)|擷取目前的項目相關聯之狀態影像的顯示狀態。|
 |[CListCtrl::GetColumn](#getcolumn)|擷取控制項的資料行的屬性。|
 |[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)|擷取清單檢視控制項的資料行順序 （由左到右）。|
@@ -334,7 +334,7 @@ class CListCtrl : public CWnd
 |[CListCtrl::GetInsertMark](#getinsertmark)|擷取目前的插入標記的位置。|
 |[CListCtrl::GetInsertMarkColor](#getinsertmarkcolor)|擷取目前的插入標記的色彩。|
 |[CListCtrl::GetInsertMarkRect](#getinsertmarkrect)|擷取矩形界限的插入點。|
-|[Clistctrl:: Getitem](#getitem)|擷取清單檢視項目的屬性。|
+|[CListCtrl::GetItem](#getitem)|擷取清單檢視項目的屬性。|
 |[CListCtrl::GetItemCount](#getitemcount)|擷取清單檢視控制項中的項目數。|
 |[CListCtrl::GetItemData](#getitemdata)|擷取項目相關聯的應用程式特定值。|
 |[CListCtrl::GetItemIndexRect](#getitemindexrect)|擷取週框的全部或部分中目前的清單檢視控制項的子項目。|
@@ -382,7 +382,7 @@ class CListCtrl : public CWnd
 |[CListCtrl::Scroll](#scroll)|捲動清單檢視控制項的內容。|
 |[CListCtrl::SetBkColor](#setbkcolor)|設定清單檢視控制項的背景色彩。|
 |[CListCtrl::SetBkImage](#setbkimage)|設定目前的背景影像的清單檢視控制項。|
-|[Clistctrl:: Setcallbackmask](#setcallbackmask)|設定清單檢視控制項的回呼遮罩。|
+|[CListCtrl::SetCallbackMask](#setcallbackmask)|設定清單檢視控制項的回呼遮罩。|
 |[CListCtrl::SetCheck](#setcheck)|設定目前顯示的項目相關聯之狀態影像的狀態。|
 |[CListCtrl::SetColumn](#setcolumn)|設定清單檢視資料行的屬性。|
 |[CListCtrl::SetColumnOrderArray](#setcolumnorderarray)|設定清單檢視控制項的資料行順序 （由左到右）。|
@@ -398,7 +398,7 @@ class CListCtrl : public CWnd
 |[CListCtrl::SetInfoTip](#setinfotip)|設定工具提示文字。|
 |[CListCtrl::SetInsertMark](#setinsertmark)|將插入點設定為定義的位置。|
 |[CListCtrl::SetInsertMarkColor](#setinsertmarkcolor)|將插入點的色彩設定。|
-|[Clistctrl:: Setitem](#setitem)|設定部分或全部的清單檢視項目的屬性。|
+|[CListCtrl::SetItem](#setitem)|設定部分或全部的清單檢視項目的屬性。|
 |[CListCtrl::SetItemCount](#setitemcount)|準備新增大量的項目清單檢視控制項。|
 |[CListCtrl::SetItemCountEx](#setitemcountex)|設定虛擬清單檢視控制項的項目計數。|
 |[CListCtrl::SetItemData](#setitemdata)|設定項目的應用程式特定值。|
@@ -446,9 +446,9 @@ class CListCtrl : public CWnd
 
 - 報表檢視
 
-   排列在右邊的資料行中的其他資訊的那一行中，會顯示每個項目。 最左邊的資料行包含的小圖示和標籤，而且後續的資料行包含應用程式所指定的子項目。 為內嵌的標題控制項 (類別[CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) 會實作這些資料行。 如需有關標題控制項和報表檢視中的資料行的詳細資訊，請參閱[使用 CListCtrl： 新增資料行加入至控制項 （報表檢視）](../../mfc/adding-columns-to-the-control-report-view.md)。
+   排列在右邊的資料行中的其他資訊的那一行中，會顯示每個項目。 最左邊的資料行包含的小圖示和標籤，而且後續的資料行包含應用程式所指定的子項目。 為內嵌的標題控制項 (類別[CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) 會實作這些資料行。 如需有關標題控制項和報表檢視中的資料行的詳細資訊，請參閱[使用 CListCtrl:將資料行加入至控制項 （報表檢視）](../../mfc/adding-columns-to-the-control-report-view.md)。
 
-目前清單檢視控制項的樣式會判斷目前的檢視。 如需有關這些樣式和其使用方式的詳細資訊，請參閱 <<c0> [ 使用 CListCtrl： 變更清單控制項樣式](../../mfc/changing-list-control-styles.md)。
+目前清單檢視控制項的樣式會判斷目前的檢視。 如需有關這些樣式和其使用方式的詳細資訊，請參閱[使用 CListCtrl:變更清單控制項樣式](../../mfc/changing-list-control-styles.md)。
 
 ## <a name="extended-styles"></a>延伸的樣式
 
@@ -460,7 +460,7 @@ class CListCtrl : public CWnd
 
 - 虛擬清單檢視
 
-   啟用時，可讓您控制，可支援最多 DWORD 項目。 這可能是加上管理應用程式上的項目資料的額外負荷。 除了項目選取範圍和焦點的資訊，必須由應用程式管理所有項目資訊。 如需詳細資訊，請參閱 <<c0> [ 使用 CListCtrl： 虛擬清單控制項](../../mfc/virtual-list-controls.md)。
+   啟用時，可讓您控制，可支援最多 DWORD 項目。 這可能是加上管理應用程式上的項目資料的額外負荷。 除了項目選取範圍和焦點的資訊，必須由應用程式管理所有項目資訊。 如需詳細資訊，請參閱[使用 CListCtrl:虛擬清單控制項](../../mfc/virtual-list-controls.md)。
 
 - 按一下一個和兩個啟用
 
@@ -470,7 +470,7 @@ class CListCtrl : public CWnd
 
    啟用時，可讓拖放時重新排列清單檢視控制項中的資料行。 只有在報表檢視中。
 
-如需使用這些新的資訊延伸樣式，請參閱 <<c0> [ 使用 CListCtrl： 變更清單控制項樣式](../../mfc/changing-list-control-styles.md)。
+如需使用這些新的資訊延伸樣式，請參閱[使用 CListCtrl:變更清單控制項樣式](../../mfc/changing-list-control-styles.md)。
 
 ## <a name="items-and-subitems"></a>項目和子項目
 
@@ -478,7 +478,7 @@ class CListCtrl : public CWnd
 
 類別`CListCtrl`插入、 刪除、 尋找、 及修改這些項目提供數個函數。 如需詳細資訊，請參閱 < [clistctrl:: Getitem](#getitem)， [CListCtrl::InsertItem](#insertitem)，並[CListCtrl::FindItem](#finditem)，[將項目加入至控制項](../adding-items-to-the-control.md)，並[捲動、 排列、 排序和尋找在清單控制項中](../scrolling-arranging-sorting-and-finding-in-list-controls.md)。
 
-根據預設，清單檢視控制項負責儲存項目的圖示和文字屬性。 不過，這些項目類型中，除了類別`CListCtrl`支援 「 回呼項目。 」 「 回呼項目 」 是清單檢視項目，為其應用程式，而不是控制項 — 儲存文字、 圖示或兩者。 回呼遮罩用來指定應用程式所提供的項目屬性 （文字及/或圖示）。 如果應用程式會使用回呼項目，它必須能夠提供隨選的文字及/或圖示的屬性。 當您的應用程式已經會維護某幾項資訊很有幫助回呼項目。 如需詳細資訊，請參閱 <<c0> [ 使用 CListCtrl： 回呼項目和回呼遮罩](../callback-items-and-the-callback-mask.md)。
+根據預設，清單檢視控制項負責儲存項目的圖示和文字屬性。 不過，這些項目類型中，除了類別`CListCtrl`支援 「 回呼項目。 」 「 回呼項目 」 是清單檢視項目，為其應用程式，而不是控制項 — 儲存文字、 圖示或兩者。 回呼遮罩用來指定應用程式所提供的項目屬性 （文字及/或圖示）。 如果應用程式會使用回呼項目，它必須能夠提供隨選的文字及/或圖示的屬性。 當您的應用程式已經會維護某幾項資訊很有幫助回呼項目。 如需詳細資訊，請參閱[使用 CListCtrl:回呼項目和回呼遮罩](../callback-items-and-the-callback-mask.md)。
 
 ## <a name="image-lists"></a>影像清單
 
@@ -500,7 +500,7 @@ class CListCtrl : public CWnd
 
    在 [報表] 檢視用於每個標頭控制項項目中出現的小型影像。
 
-根據預設，清單檢視控制項終結時終結; 指派給它的映像清單不過，開發人員可以自訂此行為由終結每個映像清單，不會再使用時，由應用程式。 如需詳細資訊，請參閱 <<c0> [ 使用 CListCtrl： 清單項目和影像清單](../list-items-and-image-lists.md)。
+根據預設，清單檢視控制項終結時終結; 指派給它的映像清單不過，開發人員可以自訂此行為由終結每個映像清單，不會再使用時，由應用程式。 如需詳細資訊，請參閱[使用 CListCtrl:清單項目和影像清單](../list-items-and-image-lists.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -553,7 +553,7 @@ BOOL Arrange(UINT nCode);
 
 ### <a name="parameters"></a>參數
 
-*則 nCode*<br/>
+*nCode*<br/>
 指定項目的對齊樣式。 它可以是下列值之一：
 
 - LVA_ALIGNLEFT 對齊項目左邊緣處的視窗。
@@ -615,7 +615,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定清單控制項的樣式。 套用至控制項的清單控制項樣式的任何組合。 請參閱[清單檢視的視窗樣式](/windows/desktop/Controls/list-view-window-styles)如需完整清單，這些樣式的 Windows SDK 中。 設定擴充特定控制項使用的樣式[SetExtendedStyle](#setextendedstyle)。
 
 *rect*<br/>
@@ -663,7 +663,7 @@ virtual BOOL CreateEx(
 *dwExStyle*<br/>
 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定清單控制項的樣式。 套用至控制項的清單控制項樣式的任何組合。 這些樣式的完整清單，請參閱[清單檢視的視窗樣式](/windows/desktop/Controls/list-view-window-styles)Windows SDK 中。
 
 *rect*<br/>
@@ -930,7 +930,7 @@ int FindItem(
 *pFindInfo*<br/>
 指標[LVFINDINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvfindinfoa)結構，其中包含要搜尋項目的相關資訊。
 
-*n*<br/>
+*nStart*<br/>
 若要開始，搜尋的項目或是-1，從頭開始的索引。 在項目*n*如果從搜尋結果中排除*n*不等於-1。
 
 ### <a name="return-value"></a>傳回值
@@ -1009,7 +1009,7 @@ BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
         }
 ```
 
-## <a name="getcallbackmask"></a>  Clistctrl:: Getcallbackmask
+## <a name="getcallbackmask"></a>  CListCtrl::GetCallbackMask
 
 擷取清單檢視控制項的回呼遮罩。
 
@@ -1700,7 +1700,7 @@ int GetInsertMarkRect(LPRECT pRect) const;
 
 此成員函式會模擬[LVM_GETINSERTMARKRECT](/windows/desktop/Controls/lvm-getinsertmarkrect)訊息、 Windows SDK 中所述。
 
-## <a name="getitem"></a>  Clistctrl:: Getitem
+## <a name="getitem"></a>  CListCtrl::GetItem
 
 擷取部分或全部的清單檢視項目的屬性。
 
@@ -1885,7 +1885,7 @@ BOOL GetItemRect(
 *lpRect*<br/>
 位址[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收的週框的結構。
 
-*則 nCode*<br/>
+*nCode*<br/>
 清單檢視項目，要擷取周框的部分。 它可以是下列值之一：
 
 - LVIR_BOUNDS 傳回整個項目，包括圖示和標籤的週框矩形。
@@ -2556,7 +2556,7 @@ void GetWorkAreas(
 *nWorkAreas*<br/>
 數目`RECT`中所包含的結構*中華人民共和國*陣列。
 
-*中華人民共和國*<br/>
+*prc*<br/>
 陣列的指標`RECT`結構 (或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件)，接收工作區域的清單檢視控制項。 在這些架構中的值為在工作區座標。
 
 ### <a name="remarks"></a>備註
@@ -2605,7 +2605,7 @@ int HitTest(
 *pHitTestInfo*<br/>
 位址`LVHITTESTINFO`結構，其中包含要進行點擊測試，位置接收的點擊測試結果的相關資訊。
 
-*太平洋時間*<br/>
+*pt*<br/>
 要測試的點。
 
 *pFlags*<br/>
@@ -2672,7 +2672,7 @@ int InsertColumn(
 字串，包含資料行標題的位址。
 
 *nFormat*<br/>
-整數，指定資料行的對齊方式。 它可以是下列值之一： LVCFMT_LEFT、 LVCFMT_RIGHT 或 LVCFMT_CENTER。
+整數，指定資料行的對齊方式。 它可以是下列值之一：LVCFMT_LEFT、 LVCFMT_RIGHT 或 LVCFMT_CENTER。
 
 *nWidth*<br/>
 資料行，單位為像素寬度。 此參數為-1，如果未設定資料行寬度。
@@ -2774,7 +2774,7 @@ int InsertItem(
 *lpszItem*<br/>
 字串，包含項目的標籤或 LPSTR_TEXTCALLBACK，如果項目回呼項目的位址。 回呼項目上的資訊，請參閱[clistctrl:: Getcallbackmask](#getcallbackmask)。
 
-*n*<br/>
+*nImage*<br/>
 項目的映像，或 I_IMAGECALLBACK 如果項目回呼項目的索引。 回呼項目上的資訊，請參閱[clistctrl:: Getcallbackmask](#getcallbackmask)。
 
 *nMask*<br/>
@@ -3043,7 +3043,7 @@ BOOL RedrawItems(
 *nFirst*<br/>
 要重新繪製的第一個項目索引。
 
-*n 上次*<br/>
+*nLast*<br/>
 要重新繪製的最後一個項目索引。
 
 ### <a name="return-value"></a>傳回值
@@ -3183,7 +3183,7 @@ BOOL SetBkImage(
 
   範例，請參閱[CListCtrl::GetBkImage](#getbkimage)。
 
-## <a name="setcallbackmask"></a>  Clistctrl:: Setcallbackmask
+## <a name="setcallbackmask"></a>  CListCtrl::SetCallbackMask
 
 設定清單檢視控制項的回呼遮罩。
 
@@ -3598,7 +3598,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 
 ### <a name="parameters"></a>參數
 
-*色彩*<br/>
+*color*<br/>
 A [COLORREF](/windows/desktop/gdi/colorref)結構，指定要設定插入點的色彩。
 
 ### <a name="return-value"></a>傳回值
@@ -3609,7 +3609,7 @@ A [COLORREF](/windows/desktop/gdi/colorref)結構，指定要設定插入點的�
 
 此成員函式會模擬[LVM_SETINSERTMARKCOLOR](/windows/desktop/Controls/lvm-setinsertmarkcolor)訊息、 Windows SDK 中所述。
 
-## <a name="setitem"></a>  Clistctrl:: Setitem
+## <a name="setitem"></a>  CListCtrl::SetItem
 
 設定部分或全部的清單檢視項目的屬性。
 
@@ -3655,7 +3655,7 @@ BOOL SetItem(
 *lpszItem*<br/>
 指定項目的標籤的 null 終止字串的位址。
 
-*n*<br/>
+*nImage*<br/>
 映像清單中的項目影像的索引。
 
 *nState*<br/>
@@ -3853,7 +3853,7 @@ BOOL SetItemPosition(
 *nItem*<br/>
 若要設定其位置的項目索引。
 
-*太平洋時間*<br/>
+*pt*<br/>
 A[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)結構，指定檢視中的新位置座標，此項目的左上角。
 
 ### <a name="return-value"></a>傳回值
@@ -3955,7 +3955,7 @@ COLORREF SetOutlineColor(COLORREF color);
 
 ### <a name="parameters"></a>參數
 
-*色彩*<br/>
+*color*<br/>
 新[COLORREF](/windows/desktop/gdi/colorref)結構，其中包含外框色彩。
 
 ### <a name="return-value"></a>傳回值
@@ -4426,4 +4426,3 @@ BOOL Update(int nItem);
 [CWnd 類別](cwnd-class.md)<br/>
 [階層架構圖表](../hierarchy-chart.md)<br/>
 [CImageList 類別](cimagelist-class.md)
-

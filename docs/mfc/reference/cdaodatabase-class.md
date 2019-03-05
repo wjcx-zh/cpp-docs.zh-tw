@@ -58,12 +58,12 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: 6bdabafc905b1ae5d6ed9a1fcd83ab1982871c3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1e9db1ddebe05d42cbb8c4ba242938d6d86cc81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439272"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272891"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase 類別
 
@@ -104,8 +104,8 @@ class CDaoDatabase : public CObject
 |[CDaoDatabase::GetRecordsAffected](#getrecordsaffected)|傳回的記錄數目會受到最新的更新中，編輯或新增作業或藉由呼叫`Execute`。|
 |[CDaoDatabase::GetRelationCount](#getrelationcount)|傳回定義資料庫中資料表之間的關聯性數目。|
 |[CDaoDatabase::GetRelationInfo](#getrelationinfo)|傳回指定的關聯資料庫中的資料表之間定義的相關資訊。|
-|[Cdaodatabase:: Gettabledefcount](#gettabledefcount)|傳回資料庫中定義的資料表數目。|
-|[Cdaodatabase:: Gettabledefinfo](#gettabledefinfo)|傳回資料庫中的指定資料表的相關資訊。|
+|[CDaoDatabase::GetTableDefCount](#gettabledefcount)|傳回資料庫中定義的資料表數目。|
+|[CDaoDatabase::GetTableDefInfo](#gettabledefinfo)|傳回資料庫中的指定資料表的相關資訊。|
 |[CDaoDatabase::GetVersion](#getversion)|傳回與資料庫相關聯的 database engine 版本。|
 |[CDaoDatabase::IsOpen](#isopen)|傳回非零值如果`CDaoDatabase`物件目前連接到資料庫。|
 |[CDaoDatabase::Open](#open)|建立與資料庫的連接。|
@@ -257,7 +257,7 @@ virtual void Create(
 字串運算式，這是您所建立的資料庫檔案的名稱。 它可以是完整路徑和檔案名稱，例如"c:\\\MYDB。MDB"。 您必須提供名稱。 如果您未提供檔案的副檔名。MDB 會附加。 如果您的網路支援的統一命名慣例 (UNC)，您也可以指定網路路徑，例如"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB"。 只有 Microsoft Jet (。MDB) 資料庫檔案，可以使用此成員函式來建立。 (字串常值中會需要兩個反斜線，因為 「\\」 是 c + + 逸出字元。)
 
 *lpszLocale*<br/>
-字串運算式，用來指定用於建立資料庫的定序順序。 預設值是 `dbLangGeneral`。 可能的值為：
+字串運算式，用來指定用於建立資料庫的定序順序。 預設值為 `dbLangGeneral`。 可能的值為：
 
 - `dbLangGeneral` 英文、 德文、 法文、 葡萄牙文、 義大利文、 和現代的西班牙文
 
@@ -587,9 +587,9 @@ void GetQueryDefInfo(
 
 - AFX_DAO_PRIMARY_INFO （預設值） 名稱、 類型
 
-- AFX_DAO_SECONDARY_INFO 主要資訊加上： 建立日期、 上次更新日期，傳回資料錄、 可更新
+- AFX_DAO_SECONDARY_INFO 主要資訊加上：建立日期、 上次更新，傳回記錄，可更新的日期
 
-- AFX_DAO_ALL_INFO 主要和次要資料庫資訊加上： SQL 連接，odbc 逾時
+- AFX_DAO_ALL_INFO 主要和次要資料庫資訊加上：SQL 連接，odbc 逾時
 
 *lpszName*<br/>
 字串，包含定義在資料庫中，依名稱查閱查詢的名稱。
@@ -699,7 +699,7 @@ void GetRelationInfo(
 > [!NOTE]
 >  如果您設定關聯性啟用串聯作業物件的屬性 (`dbRelationUpdateCascades`或`dbRelationDeleteCascades`)、 Microsoft Jet database engine 會自動更新或刪除記錄檔中一個或多個其他資料表時變更相關主索引鍵資料表。 例如，假設您建立串聯刪除客戶資料表和 Orders 資料表之間的關聯性。 當您從 [客戶] 資料表刪除記錄時，也會一併刪除與該客戶的 Orders 資料表中的記錄。 此外，如果您建立 「 訂單 」 資料表與其他資料表之間的串聯刪除關聯性，這些資料表的資料會自動刪除當您在 Customers 資料表中刪除記錄。
 
-##  <a name="gettabledefcount"></a>  Cdaodatabase:: Gettabledefcount
+##  <a name="gettabledefcount"></a>  CDaoDatabase::GetTableDefCount
 
 呼叫此成員函式可擷取的資料庫中定義的資料表數目。
 
@@ -715,7 +715,7 @@ short GetTableDefCount();
 
 `GetTableDefCount` 如果您需要資料庫的 TableDefs 集合中的所有 tabledefs 執行都迴圈，非常有用。 若要取得集合中指定資料表的相關資訊，請參閱[GetTableDefInfo](#gettabledefinfo)。
 
-##  <a name="gettabledefinfo"></a>  Cdaodatabase:: Gettabledefinfo
+##  <a name="gettabledefinfo"></a>  CDaoDatabase::GetTableDefInfo
 
 呼叫此成員函式，以取得不同種類的資料庫中定義資料表的相關資訊。
 
@@ -744,9 +744,9 @@ void GetTableDefInfo(
 
 - AFX_DAO_PRIMARY_INFO （預設值） 的名稱，可更新屬性
 
-- AFX_DAO_SECONDARY_INFO 主要資訊加上： 建立日期、 上次更新日期，來源資料表名稱，連接
+- AFX_DAO_SECONDARY_INFO 主要資訊加上：建立日期、 上次更新日期來源資料表名稱，連接
 
-- AFX_DAO_ALL_INFO 主要和次要資料庫資訊加上： 驗證規則，驗證文字記錄計數
+- AFX_DAO_ALL_INFO 主要和次要資料庫資訊加上：驗證規則，驗證文字記錄計數
 
 *lpszName*<br/>
 依名稱查閱 tabledef 物件的名稱。

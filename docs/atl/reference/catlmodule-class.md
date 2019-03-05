@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
-ms.openlocfilehash: 4d1c8dbfc7606efda50637ba17790ecafc80a976
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f01734d4ec9de323325dc793756f421388542ef2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456819"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302009"
 ---
 # <a name="catlmodule-class"></a>CAtlModule 類別
 
@@ -44,7 +44,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 |名稱|描述|
 |----------|-----------------|
 |[CAtlModule::CAtlModule](#catlmodule)|建構函式。|
-|[CAtlModule:: ~ CAtlModule](#dtor)|解構函式。|
+|[CAtlModule::~CAtlModule](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 

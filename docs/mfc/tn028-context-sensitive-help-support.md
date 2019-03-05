@@ -1,5 +1,5 @@
 ---
-title: TN028：即時線上說明支援
+title: TN028:即時線上說明支援
 ms.date: 11/04/2016
 f1_keywords:
 - vc.help
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-ms.openlocfilehash: 580046810243593c17dbf7e1c3ca427b37bd14a8
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e3ac2742f2c57c01c645c72c933234a96ece773a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520152"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288281"
 ---
-# <a name="tn028-context-sensitive-help-support"></a>TN028：即時線上說明支援
+# <a name="tn028-context-sensitive-help-support"></a>TN028:即時線上說明支援
 
 此提示描述在 MFC 中指派 [說明] 內容 ID 和其他說明議題的規則。 即時線上說明支援需要可用於 Visual C++ 的說明編譯器。
 
 > [!NOTE]
->  除了使用 WinHelp 實作即時線上說明之外，MFC 也支援使用 HTML [說明]。 如需有關這項支援和 HTML 說明使用程式設計的詳細資訊，請參閱 < [HTML 說明： 程式的即時線上說明](../mfc/html-help-context-sensitive-help-for-your-programs.md)。
+>  除了使用 WinHelp 實作即時線上說明之外，MFC 也支援使用 HTML [說明]。 如需有關這項支援和 HTML 說明使用程式設計的詳細資訊，請參閱[HTML 說明：程式的即時線上說明](../mfc/html-help-context-sensitive-help-for-your-programs.md)。
 
 ## <a name="types-of-help-supported"></a>支援的說明類型
 
@@ -158,7 +158,8 @@ MAKEHM 的原始程式碼位於 MFC 程式設計的公用程式範例[MAKEHM](..
 
 訊息方塊的說明 (有時稱為警示) 可透過 `AfxMessageBox` 函式 (`MessageBox` Windows API 的包裝函式) 來提供相關支援。
 
-`AfxMessageBox` 有兩種版本，一種與字串 ID 搭配使用，另一種則與字串指標 (`LPCSTR`) 搭配使用：
+
+  `AfxMessageBox` 有兩種版本，一種與字串 ID 搭配使用，另一種則與字串指標 (`LPCSTR`) 搭配使用：
 
 ```
 int AFXAPI AfxMessageBox(LPCSTR lpszText,
@@ -180,4 +181,3 @@ int AFXAPI AfxMessageBox(UINT nIDPrompt,
 
 [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
 [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
-

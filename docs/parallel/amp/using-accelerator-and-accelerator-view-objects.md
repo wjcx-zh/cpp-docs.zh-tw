@@ -2,12 +2,12 @@
 title: 使用 accelerator 和 accelerator_view 物件
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-ms.openlocfilehash: 4144adf288ddefd7f7dd00ada91f97aea94e6bce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05ca53d075867fefa43f7471bb795040d075274e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668594"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272892"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>使用 accelerator 和 accelerator_view 物件
 
@@ -168,11 +168,11 @@ bool pick_accelerator()
 
 三個特殊加速器的裝置路徑會當作屬性`accelerator`類別：
 
-- [accelerator::direct3d_ref 資料成員](reference/accelerator-class.md#direct3d_ref)： 此單一執行緒加速器在 CPU 上使用軟體來模擬一般圖形卡。 它預設會使用偵錯，但它並不適用於生產環境因為比硬體加速器慢。 此外，它是僅適用於 DirectX SDK 和 Windows SDK，並不太可能安裝在您客戶的電腦上。 如需詳細資訊，請參閱 <<c0> [ 偵錯 GPU 程式碼](/visualstudio/debugger/debugging-gpu-code)。
+- [accelerator::direct3d_ref 資料成員](reference/accelerator-class.md#direct3d_ref):此單一執行緒加速器會使用模擬一般圖形卡在 CPU 上的軟體。 它預設會使用偵錯，但它並不適用於生產環境因為比硬體加速器慢。 此外，它是僅適用於 DirectX SDK 和 Windows SDK，並不太可能安裝在您客戶的電腦上。 如需詳細資訊，請參閱 <<c0> [ 偵錯 GPU 程式碼](/visualstudio/debugger/debugging-gpu-code)。
 
-- [accelerator::direct3d_warp 資料成員](reference/accelerator-class.md#direct3d_warp)： 此加速器提供後援解決方案，來使用 Streaming SIMD Extensions (SSE) 的多核心 Cpu 上執行 c + + AMP 程式碼。
+- [accelerator::direct3d_warp 資料成員](reference/accelerator-class.md#direct3d_warp):此加速器提供後援解決方案，來使用 Streaming SIMD Extensions (SSE) 的多核心 Cpu 上執行 c + + AMP 程式碼。
 
-- [accelerator:: cpu_accelerator 資料成員](reference/accelerator-class.md#cpu_accelerator)： 您可以使用這個加速器來設定預備環境陣列。 它無法執行 c + + AMP 程式碼。 如需詳細資訊，請參閱 < [c + + AMP 中的預備環境陣列](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/)上平行程式設計的原生程式碼的部落格文章。
+- [accelerator:: cpu_accelerator 資料成員](reference/accelerator-class.md#cpu_accelerator):您可以使用這個加速器來設定預備環境陣列。 它無法執行 c + + AMP 程式碼。 如需詳細資訊，請參閱 < [c + + AMP 中的預備環境陣列](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/)上平行程式設計的原生程式碼的部落格文章。
 
 ## <a name="interoperability"></a>互通性
 

@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 5bcf815fce4123ca1014e1679fd810c1ce321be4
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 3e8c524a95730282d0e35e5f791ebf229725e282
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178586"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298915"
 ---
 # <a name="cimagelist-class"></a>CImageList 類別
 
@@ -115,7 +115,7 @@ class CImageList : public CObject
 |[CImageList::DragLeave](#dragleave)|解除鎖定 視窗，並隱藏拖曳影像，以便可以更新  視窗。|
 |[CImageList::DragMove](#dragmove)|將拖放作業期間被拖曳的影像。|
 |[CImageList::DragShowNolock](#dragshownolock)|顯示或隱藏在拖曳作業時，拖曳影像，而不需要鎖定的視窗。|
-|[Cimagelist:: Draw](#draw)|繪製拖放作業期間被拖曳的影像。|
+|[CImageList::Draw](#draw)|繪製拖放作業期間被拖曳的影像。|
 |[CImageList::DrawEx](#drawex)|在指定的裝置內容中繪製的映像清單項目。 函式會使用指定的繪製樣式，並混合的映像，以指定的色彩。|
 |[CImageList::DrawIndirect](#drawindirect)|從影像清單中繪製影像。|
 |[CImageList::EndDrag](#enddrag)|結束拖曳作業。|
@@ -133,7 +133,7 @@ class CImageList : public CObject
 |[CImageList::SetBkColor](#setbkcolor)|設定影像清單的背景色彩。|
 |[CImageList::SetDragCursorImage](#setdragcursorimage)|建立新的拖曳影像。|
 |[CImageList::SetImageCount](#setimagecount)|重設影像清單中的映像的計數。|
-|[Cimagelist:: Setoverlayimage](#setoverlayimage)|將映像當做覆疊遮罩清單中的影像之以零為起始的索引。|
+|[CImageList::SetOverlayImage](#setoverlayimage)|將映像當做覆疊遮罩清單中的影像之以零為起始的索引。|
 |[CImageList::Write](#write)|寫入封存中的影像清單。|
 
 ### <a name="public-operators"></a>公用運算子
@@ -241,7 +241,7 @@ BOOL BeginDrag(
 
 ### <a name="parameters"></a>參數
 
-*n*<br/>
+*nImage*<br/>
 要拖曳之影像的以零為起始的索引。
 
 *ptHotSpot*<br/>
@@ -479,7 +479,7 @@ static BOOL PASCAL DragEnter(
 *pWndLock*<br/>
 主控視窗的拖曳影像的指標。
 
-*點*<br/>
+*point*<br/>
 用來顯示拖曳影像的位置。 座標是相對於視窗 （而非工作區） 的左上角。
 
 ### <a name="return-value"></a>傳回值
@@ -529,7 +529,7 @@ static BOOL PASCAL DragMove(CPoint pt);
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pt*<br/>
 新的拖曳位置。
 
 ### <a name="return-value"></a>傳回值
@@ -565,7 +565,7 @@ static BOOL PASCAL DragShowNolock(BOOL bShow);
 
 [CImageList::DragEnter](#dragenter)函式在拖曳作業期間會鎖定至視窗的所有更新。 不過，此函式，不會鎖定視窗。
 
-##  <a name="draw"></a>  Cimagelist:: Draw
+##  <a name="draw"></a>  CImageList::Draw
 
 呼叫此函式可繪製拖放作業期間被拖曳的影像。
 
@@ -582,10 +582,10 @@ BOOL Draw(
 *pDC*<br/>
 目的地裝置內容指標。
 
-*n*<br/>
+*nImage*<br/>
 要繪製影像的以零為起始索引。
 
-*太平洋時間*<br/>
+*pt*<br/>
 在其中繪製指定的裝置內容中的位置。
 
 *nStyle*<br/>
@@ -594,7 +594,7 @@ BOOL Draw(
 |值|意義|
 |-----------|-------------|
 |ILD_BLEND25 ILD_FOCUS|繪製影像，混合使用系統醒目提示色彩的 25%。 如果影像清單不包含遮罩，這個值會有任何作用。|
-|ILD_BLEND50 ILD_SELECTED ILD_BLEND|繪製影像，混用 50%的系統反白顯示色彩。 如果影像清單不包含遮罩，這個值會有任何作用。|
+|ILD_BLEND50, ILD_SELECTED, ILD_BLEND|繪製影像，混用 50%的系統反白顯示色彩。 如果影像清單不包含遮罩，這個值會有任何作用。|
 |ILD_MASK|繪製遮罩。|
 |ILD_NORMAL|繪製影像的影像清單中使用的背景色彩。 如果背景色彩為 CLR_NONE 值，以透明的方式使用遮罩繪製影像。|
 |ILD_TRANSPARENT|使用影像繪製無障礙地遮罩，不論的背景色彩。|
@@ -627,10 +627,10 @@ BOOL DrawEx(
 *pDC*<br/>
 目的地裝置內容指標。
 
-*n*<br/>
+*nImage*<br/>
 要繪製影像的以零為起始索引。
 
-*太平洋時間*<br/>
+*pt*<br/>
 在其中繪製指定的裝置內容中的位置。
 
 *sz*<br/>
@@ -687,10 +687,10 @@ BOOL DrawIndirect(
 *pDC*<br/>
 目的地裝置內容指標。 您必須刪除這[CDC](../../mfc/reference/cdc-class.md)物件時完成它。
 
-*n*<br/>
+*nImage*<br/>
 要繪製之影像的以零為起始的索引。
 
-*太平洋時間*<br/>
+*pt*<br/>
 A[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)結構，包含 x 和 y 座標會繪製影像的位置。
 
 *sz*<br/>
@@ -780,7 +780,7 @@ HICON ExtractIcon(int nImage);
 
 ### <a name="parameters"></a>參數
 
-*n*<br/>
+*nImage*<br/>
 影像的以零為起始的索引。
 
 ### <a name="return-value"></a>傳回值
@@ -911,7 +911,7 @@ BOOL GetImageInfo(
 
 ### <a name="parameters"></a>參數
 
-*n*<br/>
+*nImage*<br/>
 影像的以零為起始的索引。
 
 *pImageInfo*<br/>
@@ -1006,7 +1006,7 @@ BOOL Remove(int nImage);
 
 ### <a name="parameters"></a>參數
 
-*n*<br/>
+*nImage*<br/>
 要移除之影像的以零為起始的索引。
 
 ### <a name="return-value"></a>傳回值
@@ -1038,7 +1038,7 @@ int Replace(
 
 ### <a name="parameters"></a>參數
 
-*n*<br/>
+*nImage*<br/>
 要取代之影像的以零為起始的索引。
 
 *pbmImage*<br/>
@@ -1097,7 +1097,7 @@ BOOL SetDragCursorImage(
 
 ### <a name="parameters"></a>參數
 
-*網格*<br/>
+*nDrag*<br/>
 新的映像，以結合拖曳影像的索引。
 
 *ptHotSpot*<br/>
@@ -1138,7 +1138,7 @@ BOOL SetImageCount(UINT uNewCount);
 
 [!code-cpp[NVC_MFC_CImageList#21](../../mfc/reference/codesnippet/cpp/cimagelist-class_21.cpp)]
 
-##  <a name="setoverlayimage"></a>  Cimagelist:: Setoverlayimage
+##  <a name="setoverlayimage"></a>  CImageList::SetOverlayImage
 
 呼叫此函式可用於覆疊遮罩的映像清單中加入影像之以零為起始的索引。
 
@@ -1150,7 +1150,7 @@ BOOL SetOverlayImage(
 
 ### <a name="parameters"></a>參數
 
-*n*<br/>
+*nImage*<br/>
 要使用作為覆疊遮罩的影像的以零為起始索引。
 
 *nOverlay*<br/>

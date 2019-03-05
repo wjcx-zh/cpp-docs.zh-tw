@@ -1,18 +1,18 @@
 ---
-title: 如何：加入重新啟動管理員支援
+title: HOW TO：新增重新啟動管理員支援
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Restart manager [MFC]
 - C++, application crash support
 ms.assetid: 7f3f5867-d4bc-4ba8-b3c9-dc1e7be93642
-ms.openlocfilehash: 77267cdad1fa976d73381ca798ca5002c09dc7ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23f860c43c63e3153f4b87f8eaf05d61709af82f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565125"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279779"
 ---
-# <a name="how-to-add-restart-manager-support"></a>如何：加入重新啟動管理員支援
+# <a name="how-to-add-restart-manager-support"></a>HOW TO：新增重新啟動管理員支援
 
 重新啟動管理員是功能加入至 Visual Studio for Windows Vista 或更新版本的作業系統。 重新啟動管理員會在應用程式意外關閉或重新啟動時加入支援。 重新啟動管理員的行為，取決於應用程式的類型。 如果應用程式是文件編輯器，重新啟動管理員可讓應用程式自動儲存任何已開啟文件的狀態和內容，而且在意外關閉之後重新啟動應用程式。 如果應用程式不是文件編輯器，則重新啟動管理員預設會重新啟動應用程式，但不會儲存應用程式的狀態。
 
@@ -37,7 +37,7 @@ ms.locfileid: "50565125"
     m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;
 ```
 
-1. 確保應用程式的 `InitInstance` 方法會呼叫其父 `InitInstance` 方法： [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) 或 `CWinAppEx::InitInstance`的功能。 `InitInstance`方法負責檢查*m_dwRestartManagerSupportFlags*參數。
+1. 請確定`InitInstance`應用程式的方法會呼叫其父代`InitInstance`方法：[Cwinapp:: Initinstance](../mfc/reference/cwinapp-class.md#initinstance)或`CWinAppEx::InitInstance`。 `InitInstance`方法負責檢查*m_dwRestartManagerSupportFlags*參數。
 
 1. 編譯並執行您的應用程式。
 
@@ -48,4 +48,3 @@ ms.locfileid: "50565125"
 [CWinApp 類別](../mfc/reference/cwinapp-class.md)<br/>
 [CWinApp::m_nAutosaveInterval](../mfc/reference/cwinapp-class.md#m_nautosaveinterval)<br/>
 [CDocument::OnDocumentEvent](../mfc/reference/cdocument-class.md#ondocumentevent)
-

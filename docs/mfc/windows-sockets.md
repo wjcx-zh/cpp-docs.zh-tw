@@ -8,12 +8,12 @@ helpviewer_keywords:
 - sockets [MFC]
 - Windows Sockets [MFC]
 ms.assetid: c077ec53-540d-4bfb-a1e0-bd6482ab9e19
-ms.openlocfilehash: 2bdc2a4016a09572dc433aa4ce03ec43f9059d57
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 460a8fd4dcb0bb998e57aa6b77406c842c3078c9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499024"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278037"
 ---
 # <a name="windows-sockets"></a>Windows Sockets
 
@@ -22,4 +22,3 @@ ms.locfileid: "50499024"
 ## <a name="in-this-section"></a>本節內容
 
 [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)
-

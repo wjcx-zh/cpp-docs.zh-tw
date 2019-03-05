@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCRibbonQuickAccessToolBarDefaultState [MFC], CopyFrom
 - CMFCRibbonQuickAccessToolBarDefaultState [MFC], RemoveAll
 ms.assetid: eca99200-b87b-47ba-b2e8-2f3f2444b176
-ms.openlocfilehash: 07af26c78cc3316dbfcd33a5b28e5230a82a2e10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ea9ec8de0b657fa4e7c601f9c3e676f550defa9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445093"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302477"
 ---
 # <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>CMFCRibbonQuickAccessToolBarDefaultState 類別
 
@@ -77,10 +77,10 @@ void AddCommand(
 
 ### <a name="parameters"></a>參數
 
-*[] in uiCmd*<br/>
+*[in] uiCmd*<br/>
 指定命令識別碼。
 
-*[] in bIsVisible*<br/>
+*[in] bIsVisible*<br/>
 快速存取工具列中的預設狀態時，請設定命令的可見性。
 
 ### <a name="remarks"></a>備註

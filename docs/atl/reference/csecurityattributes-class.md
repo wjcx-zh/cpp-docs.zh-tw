@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: 0b39109bd97e2bb83b7a51fdd6e626b63c4c8798
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef0756ee1dd0aa7d82caf218aa2c417df0c2778c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604976"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269249"
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes 類別
 
@@ -41,7 +41,7 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 |名稱|描述|
 |----------|-----------------|
-|[Csecurityattributes:: Set](#set)|呼叫這個方法來設定的屬性`CSecurityAttributes`物件。|
+|[CSecurityAttributes::Set](#set)|呼叫這個方法來設定的屬性`CSecurityAttributes`物件。|
 
 ## <a name="remarks"></a>備註
 
@@ -76,7 +76,7 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 *bInheritsHandle*<br/>
 指定是否在建立新處理序時繼承傳回的控制代碼。 如果此成員為 true，新處理序會繼承控制代碼。
 
-##  <a name="set"></a>  Csecurityattributes:: Set
+##  <a name="set"></a>  CSecurityAttributes::Set
 
 呼叫這個方法來設定的屬性`CSecurityAttributes`物件。
 
@@ -99,7 +99,7 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 ## <a name="see-also"></a>另請參閱
 
 [安全性範例](../../visual-cpp-samples.md)<br/>
-[ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)<br/>
+[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)<br/>
 [安全性描述元](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
 [類別概觀](../../atl/atl-class-overview.md)<br/>
 [安全性全域函式](../../atl/reference/security-global-functions.md)

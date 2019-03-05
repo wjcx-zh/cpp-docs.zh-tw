@@ -1,18 +1,18 @@
 ---
-title: 如何：使用過度訂閱使延遲產生位移
+title: HOW TO：若要位移延遲使用過度訂閱
 ms.date: 11/04/2016
 helpviewer_keywords:
 - oversubscription, using [Concurrency Runtime]
 - using oversubscription [Concurrency Runtime]
 ms.assetid: a1011329-2f0a-4afb-b599-dd4043009a10
-ms.openlocfilehash: fc16fa5cfeddf82b9fcb0164796fb7f4c90aef15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d74a081f71f044cab90a8e6fdc64530eaaf87ed8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653072"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257939"
 ---
-# <a name="how-to-use-oversubscription-to-offset-latency"></a>如何：使用過度訂閱使延遲產生位移
+# <a name="how-to-use-oversubscription-to-offset-latency"></a>HOW TO：若要位移延遲使用過度訂閱
 
 過度訂閱可以改善整體的某些應用程式包含具有大量延遲的工作效率。 本主題說明如何使用過度訂閱位移從網路連線讀取資料所造成的延遲。
 
@@ -82,4 +82,3 @@ Downloaded 1801040 bytes in 3276 ms.
 
 [內容](../../parallel/concrt/contexts.md)<br/>
 [Context:: oversubscribe 方法](reference/context-class.md#oversubscribe)
-

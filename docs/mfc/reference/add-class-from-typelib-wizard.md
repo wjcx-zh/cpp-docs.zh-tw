@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-ms.openlocfilehash: c0423ac06aa46b65c1fb0ffb3935d4bb54821ee9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a2c291e1c9e78d288bdb2d15f224520d764dfa1b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654333"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273877"
 ---
 # <a name="add-class-from-typelib-wizard"></a>從 Typelib 加入類別精靈
 
@@ -34,7 +34,7 @@ ms.locfileid: "50654333"
 
    列出目前已登錄在系統中的類型程式庫。 選取從這份清單，以便顯示在其介面的型別程式庫**介面**清單。
 
-   請參閱 < 內分散式 COM:: 類型程式庫和語言整合 > MSDN library，如需有關註冊類型程式庫中。
+   請參閱 「 內部 Distributed COM:類型程式庫和語言整合 」 中註冊類型程式庫的詳細資訊在 MSDN library。
 
 - **位置**
 
@@ -70,5 +70,4 @@ ms.locfileid: "50654333"
 ## <a name="see-also"></a>另請參閱
 
 [從類型程式庫的 MFC 類別](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)<br/>
-[Automation 用戶端：使用型別程式庫](../../mfc/automation-clients-using-type-libraries.md)
-
+[Automation 用戶端：使用類型程式庫](../../mfc/automation-clients-using-type-libraries.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - PBS_VERTICAL style
 - CProgressCtrl class [MFC], styles
 ms.assetid: 39eb8081-bc20-4552-91b9-e7cdd1b7d8ae
-ms.openlocfilehash: 5d33e9306c1d70bb58ad628297360bc6e34e6ce2
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3adbd32456b1375bd2dc8574220e083ca3d83ee9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174950"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296328"
 ---
 # <a name="styles-for-the-progress-control"></a>進度控制項的樣式
 
@@ -45,4 +45,3 @@ PBS_SMOOTH 和 PBS_VERTICAL 樣式：
 ## <a name="see-also"></a>另請參閱
 
 [使用 CProgressCtrl](../mfc/using-cprogressctrl.md)
-

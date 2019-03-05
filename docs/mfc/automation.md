@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: de376c6c5ab2be0da5f6b9495c6adb61e19d6622
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b26a08bbe9ef9b9151910871201abe05a44d2f6c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572753"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265558"
 ---
 # <a name="automation"></a>Automation
 
@@ -49,7 +49,7 @@ Automation 伺服器和用戶端使用的 COM 介面一定是衍生自 `IDispatc
 
 ##  <a name="_core_passing_parameters_in_automation"></a> 在 Automation 內傳遞參數
 
-建立 Automation 方法的其中一項困難點是，要在 Automation 伺服器和用戶端之間傳遞資料時，提供一致的「安全」機制。 Automation 使用 **VARIANT** 類型來傳遞資料。 **VARIANT** 類型是一個標記的 union。 它具有一個值的資料成員 (為匿名 C++ union) 和一個表示儲存在 union 中資訊之類型的資料成員。 **VARIANT** 類型支援許多標準的資料類型：2 位元和 4 位元的整數、4 位元和 8 位元的浮點數、字串和布林值。 此外，它支援**HRESULT** （OLE 錯誤碼）、**貨幣**（固定點數字類型），並**日期**（絕對日期和時間） 類型，以及指標`IUnknown`和`IDispatch`介面。
+建立 Automation 方法的其中一項困難點是，要在 Automation 伺服器和用戶端之間傳遞資料時，提供一致的「安全」機制。 Automation 使用 **VARIANT** 類型來傳遞資料。 **VARIANT** 類型是一個標記的 union。 它具有一個值的資料成員 (為匿名 C++ union) 和一個表示儲存在 union 中資訊之類型的資料成員。 **VARIANT**類型支援許多標準的資料類型：2 與 4 位元組整數、 4 和 8 位元組浮點數、 字串和布林值。 此外，它支援**HRESULT** （OLE 錯誤碼）、**貨幣**（固定點數字類型），並**日期**（絕對日期和時間） 類型，以及指標`IUnknown`和`IDispatch`介面。
 
 **VARIANT** 類型封裝在 [COleVariant](../mfc/reference/colevariant-class.md) 類別中。 支援 **CURRENCY** 和 **DATE** 的類別封裝在 [COleCurrency](../mfc/reference/colecurrency-class.md) 和 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) 類別中。
 

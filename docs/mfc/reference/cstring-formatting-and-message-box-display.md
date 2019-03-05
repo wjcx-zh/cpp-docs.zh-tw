@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
-ms.openlocfilehash: b22eea0a20623bb6dfbbf60703b3db25ac4065d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fee8ba89605e6425b511407dab62be1f32e94a9d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487928"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272642"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>CString 格式和訊息方塊顯示
 
@@ -90,7 +90,8 @@ void  AfxFormatString1(
 ### <a name="parameters"></a>參數
 
 *rString*<br/>
-`CString` 物件的參考，在執行替代之後將會包含結果字串。
+
+  `CString` 物件的參考，在執行替代之後將會包含結果字串。
 
 *nIDS*<br/>
 要執行替代作業之範本字串的資源 ID。
@@ -173,7 +174,7 @@ int AFXAPI AfxMessageBox(
 *lpszText*<br/>
 指向`CString`物件或 null 結束的字串，包含要在訊息方塊中顯示的訊息。
 
-*n*<br/>
+*nType*<br/>
 訊息方塊的樣式。 套用的任何[訊息方塊樣式](../../mfc/reference/styles-used-by-mfc.md#message-box-styles)至方塊。
 
 *nIDHelp*<br/>

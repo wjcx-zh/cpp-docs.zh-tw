@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: a16d7508f273fc444be65c1e6cc176911fd28e03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d1f603f8439815c92360af40ccb807446d0e84a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643296"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273279"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl 類別
 
@@ -56,7 +56,7 @@ class CMFCEditBrowseCtrl : public CEdit
 
 |名稱|描述|
 |----------|-----------------|
-|[Enablebrowsebutton](#enablebrowsebutton)|啟用或停用 （隱藏） [瀏覽] 按鈕。|
+|[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|啟用或停用 （隱藏） [瀏覽] 按鈕。|
 |[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|啟用 [瀏覽] 按鈕，然後將編輯瀏覽控制項放入*檔案瀏覽*模式。|
 |[CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton)|啟用 [瀏覽] 按鈕，然後將編輯瀏覽控制項放入*瀏覽資料夾*模式。|
 |[CMFCEditBrowseCtrl::GetMode](#getmode)|傳回目前的瀏覽模式。|
@@ -88,7 +88,7 @@ class CMFCEditBrowseCtrl : public CEdit
 
    當使用者按一下 瀏覽 按鈕時，會顯示標準的資料夾選項 對話方塊。
 
-## <a name="how-to-specify-an-edit-browse-control"></a>如何： 指定編輯瀏覽控制項
+## <a name="how-to-specify-an-edit-browse-control"></a>操作說明：指定編輯瀏覽控制項
 
 執行下列步驟，以納入您的應用程式中編輯瀏覽控制項：
 
@@ -129,7 +129,7 @@ class CMFCEditBrowseCtrl : public CEdit
 
 **標頭：** afxeditbrowsectrl.h
 
-##  <a name="enablebrowsebutton"></a>  Enablebrowsebutton
+##  <a name="enablebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableBrowseButton
 
 顯示或不會顯示目前編輯瀏覽控制項上的 [瀏覽] 按鈕。
 
@@ -271,7 +271,7 @@ virtual void OnDrawBrowseButton(
 *pDC*<br/>
 裝置內容的指標。
 
-*rect*<br/>
+[週框]<br/>
 瀏覽按鈕的週框。
 
 *bIsButtonPressed*<br/>

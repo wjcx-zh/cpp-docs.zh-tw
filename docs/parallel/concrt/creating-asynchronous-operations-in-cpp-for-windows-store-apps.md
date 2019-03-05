@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 59630c7702dffc4b606943e174e44fdba6aecfe8
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0284970d57cf4cde65b4fb77338423cb81d5d54b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176948"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302269"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>為 UWP 應用程式，建立 c + + 中的非同步作業
 
@@ -37,11 +37,11 @@ ms.locfileid: "52176948"
 
 - [建立非同步作業](#create-async)
 
-- [範例：產生 C++ 的 Windows 執行階段元件](#example-component)
+- [例如：建立 c + + Windows 執行階段元件](#example-component)
 
 - [控制執行緒](#exethread)
 
-- [範例： 控制使用 c + + 和 XAML 的 Windows 執行階段應用程式中執行](#example-app)
+- [例如：控制使用 c + + 和 XAML 的 Windows 執行階段應用程式中執行](#example-app)
 
 ##  <a name="create-async"></a> 建立非同步作業
 
@@ -60,7 +60,7 @@ Windows 執行階段是可用來建立只在特殊作業系統環境中執行的
 [Windows::Foundation::IAsyncOperation\<TResult>](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)<br/>
 表示傳回結果的非同步作業。
 
-[Windows\<Iasyncoperationwithprogress<tresult，Tprogress> >](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)<br/>
+[Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress>](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)<br/>
 表示傳回結果和報告進度的非同步作業。
 
 「 *動作* 」(Action) 的概念表示，非同步工作沒有產生值 (想像傳回 `void`的函式)。 「 *作業* 」(Operation) 的概念表示，非同步工作會產生值。 「 *進度* 」(Progress) 的概念表示，工作可以向呼叫端報告進度訊息。 JavaScript、.NET Framework 和 Visual C++ 各提供了自己建立這些介面執行個體的方式，以供跨 ABI 界限使用。 針對 Visual C++，PPL 提供了 [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) 函式。 此函式會建立 Windows 執行階段非同步動作或作業，代表已完成的工作。 `create_async`函式會將工作函式 （通常是 lambda 運算式），會在內部建立`task`物件，並將其中一種四個非同步 Windows 執行階段介面工作包裝。
@@ -70,7 +70,7 @@ Windows 執行階段是可用來建立只在特殊作業系統環境中執行的
 
 `create_async` 的傳回類型取決於其引數的類型。 例如，如果您的工作函式不會傳回值，而且不會報告進度，則 `create_async` 會傳回 `IAsyncAction`。 如果您的工作函式不會傳回值，但是會報告進度，則 `create_async` 會傳回 `IAsyncActionWithProgress`。 若要報告進度，請提供 [concurrency::progress_reporter](../../parallel/concrt/reference/progress-reporter-class.md) 物件做為工作函式的參數。 報告進度的功能可讓您報告已執行多少工作，以及仍剩多少工作 (例如，以百分比表示)。 另外也可在結果產生時讓您報告結果。
 
-`IAsyncAction`、 `IAsyncActionWithProgress<TProgress>`、 `IAsyncOperation<TResult>`和 `IAsyncActionOperationWithProgress<TProgress, TProgress>` 介面各提供了一個 `Cancel` 方法，可讓您取消非同步作業。 `task` 類別可與取消語彙基元一起使用。 當您使用取消語彙基元取消工作時，執行階段就不會啟動訂閱這個語彙基元的新工作。 已在進行的工作可以監視自己的取消語彙基元，並且在可以停止時停止。 這個機制將在 [Cancellation in the PPL](cancellation-in-the-ppl.md)文件中進行詳細說明。 您可以使用 Windows 執行階段來連線工作取消`Cancel`有兩種方法。 一種方式是定義傳遞至 `create_async` 以採用 [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) 物件的工作函式。 當呼叫 `Cancel` 方法時，這個取消語彙基元就會取消，而且一般取消規則就會套用至支援 `task` 呼叫的基礎 `create_async` 物件。 如果您未提供 `cancellation_token` 物件，則基礎 `task` 物件會隱含定義該物件。 當您需要以合作方式回應工作函式中的取消時，請定義 `cancellation_token` 物件。 一節[範例： c + + 和 XAML 的 Windows 執行階段應用程式中的控制執行](#example-app)顯示如何使用 C# 和 XAML 使用自訂的 Windows 執行階段 c + + 通用 Windows 平台 (UWP) 應用程式中執行取消的範例元件。
+`IAsyncAction`、 `IAsyncActionWithProgress<TProgress>`、 `IAsyncOperation<TResult>`和 `IAsyncActionOperationWithProgress<TProgress, TProgress>` 介面各提供了一個 `Cancel` 方法，可讓您取消非同步作業。 `task` 類別可與取消語彙基元一起使用。 當您使用取消語彙基元取消工作時，執行階段就不會啟動訂閱這個語彙基元的新工作。 已在進行的工作可以監視自己的取消語彙基元，並且在可以停止時停止。 這個機制將在 [Cancellation in the PPL](cancellation-in-the-ppl.md)文件中進行詳細說明。 您可以使用 Windows 執行階段來連線工作取消`Cancel`有兩種方法。 一種方式是定義傳遞至 `create_async` 以採用 [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) 物件的工作函式。 當呼叫 `Cancel` 方法時，這個取消語彙基元就會取消，而且一般取消規則就會套用至支援 `task` 呼叫的基礎 `create_async` 物件。 如果您未提供 `cancellation_token` 物件，則基礎 `task` 物件會隱含定義該物件。 當您需要以合作方式回應工作函式中的取消時，請定義 `cancellation_token` 物件。 區段[範例：控制使用 c + + 和 XAML 的 Windows 執行階段應用程式中執行](#example-app)示範如何使用通用 Windows 平台 (UWP) 應用程式中執行取消作業的C#和使用自訂的 Windows 執行階段 c + + 元件的 XAML。
 
 > [!WARNING]
 >  在工作接續鏈結中，當取消語彙基元已取消時，一律先清除狀態，再呼叫 [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) 。 如果您提早傳回而不是呼叫 `cancel_current_task`，則作業會轉換成已完成狀態，而不是已取消狀態。
@@ -90,7 +90,7 @@ Windows 執行階段是可用來建立只在特殊作業系統環境中執行的
 
 [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]
 
-##  <a name="example-component"></a> 範例: 建立 C ++ Windows 執行階段元件並從 C# 使用它
+##  <a name="example-component"></a> 範例：建立 c + + Windows 執行階段元件，並使用它從C#
 
 請考慮使用 XAML 和 C# 定義 UI 和 c + + Windows 執行階段元件來執行運算密集作業的應用程式。 在這個範例中，C++ 元件會計算某個範圍中哪些數字是質數。 為了說明四個 Windows 執行階段非同步工作介面之間的差異，請從在 Visual Studio 中，建立**空白方案**並將它命名`Primes`。 然後在方案中新增 [Windows 執行階段元件]  專案，並將它命名為 `PrimesLibrary`。 將下列程式碼加入至產生的 C++ 標頭檔 (這個範例會將 Class1.h 重新命名為 Primes.h)。 每個 `public` 方法都會定義四個非同步介面的其中一個。 方法會傳回值[ivector&lt\<int >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx)物件。 報告進度的方法會產生 `double` 值，用以定義整體工作已完成的百分比。
 
@@ -153,7 +153,7 @@ Windows 執行階段會使用 COM 執行緒模型。 在這個模型中，物件
 > [!IMPORTANT]
 > 不要在 STA 上執行的接續主體中呼叫 [concurrency::task::wait](reference/task-class.md#wait) 。 否則，因為這個方法會封鎖目前的執行緒，而且可能會導致應用程式沒有回應，所以執行階段會擲回 [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) 。 不過，您可以呼叫 [concurrency::task::get](reference/task-class.md#get) 方法來以工作為基礎連續的形式接收前項工作的結果。
 
-##  <a name="example-app"></a> 範例： 控制使用 c + + 和 XAML 的 Windows 執行階段應用程式中執行
+##  <a name="example-app"></a> 範例：控制使用 c + + 和 XAML 的 Windows 執行階段應用程式中執行
 
 假設有一個 C++ XAML 應用程式，它會從硬碟讀取檔案、尋找該檔案中最常見的字詞，然後在 UI 中顯示結果。 若要建立此應用程式，首先，在 Visual Studio 中，建立**空白應用程式 (通用 Windows)** 專案，然後將它命名為`CommonWords`。 在您的應用程式資訊清單中指定 [ **文件庫** ] 功能，讓應用程式能夠存取 [我的文件] 資料夾。 另外在應用程式資訊清單的宣告區段中加入 [文字 (.txt)] 檔案類型。 如需應用程式功能和宣告的詳細資訊，請參閱 [應用程式套件與部署 (Windows 執行階段應用程式)](https://msdn.microsoft.com/library/windows/apps/hh464929.aspx)。
 

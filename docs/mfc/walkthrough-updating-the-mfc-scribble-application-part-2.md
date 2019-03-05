@@ -1,17 +1,17 @@
 ---
-title: 逐步解說：更新 MFC Scribble 應用程式 (第 2 部分)
+title: 逐步解說：更新 MFC Scribble 應用程式 （第 2 部分）
 ms.date: 09/20/2018
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-ms.openlocfilehash: 6a52486658307f001001e91772dad1167730def2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c4c4ecce92bce3fbd2cb37f69b9aa02a9af4d7c3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519265"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291427"
 ---
-# <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>逐步解說：更新 MFC Scribble 應用程式 (第 2 部分)
+# <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>逐步解說：更新 MFC Scribble 應用程式 （第 2 部分）
 
 [第 1 部分](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)本逐步解說示範如何將 Office Fluent 功能區新增至傳統的 Scribble 應用程式。 此組件會示範如何加入功能區面板和控制項，使用者可以使用而不是功能表和命令。
 
@@ -338,4 +338,4 @@ ms.locfileid: "51519265"
 ## <a name="see-also"></a>另請參閱
 
 [逐步解說](../mfc/walkthroughs-mfc.md)<br/>
-[逐步解說：更新 MFC Scribble 應用程式 (第 1 部分)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
+[逐步解說：更新 MFC Scribble 應用程式 （第 1 部分）](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)

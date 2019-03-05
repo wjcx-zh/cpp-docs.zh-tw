@@ -5,12 +5,12 @@ helpviewer_keywords:
 - BNF notation
 - Backus Nauer Form (BNF) syntax
 ms.assetid: 994bbef0-9077-4aa8-bdfe-b7e830af9acc
-ms.openlocfilehash: b14e2a4f1c29860b9a624b09805959a9f6b550f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b48e0b4abc8601b5173c3c7d2748c726646fbc5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596725"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267104"
 ---
 # <a name="understanding-backus-nauer-form-bnf-syntax"></a>了解 Backus Nauer Form (BNF) 語法
 
@@ -20,7 +20,7 @@ ATL 註冊機構所使用的指令碼以使用 backus-naur form，BNF 語法，�
 |------------------------|-------------|
 |::=|對等項目|
 |&#124;|OR|
-|X +|一或多個 Xs。|
+|X+|一或多個 Xs。|
 |[X]|X 是選擇性的。 表示選擇性的分隔符號\[]。|
 |任何**粗體**文字|字串常值。|
 |任何*斜體*文字|如何建構字串常值。|
@@ -101,4 +101,3 @@ val 'testhex' = d '&H55'
 ## <a name="see-also"></a>另請參閱
 
 [建立登錄器指令碼](../atl/creating-registrar-scripts.md)
-

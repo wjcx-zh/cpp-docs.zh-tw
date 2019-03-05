@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, Common Controls library
 ms.assetid: 7471e6f0-49b0-47f7-86e7-8d6bc3541694
-ms.openlocfilehash: fd47854c7073565fbe0c15ca6be7a9843af5f387
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94700f850be62404f22974a1d5e76acad711555c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583608"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278739"
 ---
 # <a name="isolation-of-the-mfc-common-controls-library"></a>MFC 通用控制項程式庫的隔離
 
@@ -22,4 +22,3 @@ MFC 應用程式 （或 MFC 呼叫的使用者程式碼） 會呼叫 Api 的包�
 技術上來說，您是透過包裝函式類別 `CComCtlWrapper` (在 afxcomctl32.h 中定義) 呼叫通用控制項程式庫 API。 `CComCtlWrapper` 也負責載入和卸載 comctl32.dll。 MFC 模組狀態包含 `CComCtlWrapper` 執行個體的指標。 您可以使用 `afxComCtlWrapper` 巨集來存取包裝函式類別。
 
 請注意，直接從 MFC 應用程式或使用者 DLL 呼叫通用控制項 API (不使用 MFC 包裝函式) 在許多情況下可以運作，因為 MFC 應用程式或使用者 DLL 是繫結至其在資訊清單中要求的通用控制項程式庫。 不過，因為 MFC 程式碼可能是以不同的通用控制項程式庫版本從使用者 DLL 呼叫，所以 MFC 程式碼本身必須使用包裝函式。
-

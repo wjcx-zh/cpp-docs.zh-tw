@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: 92b2827d556583524b46f88f8bd9efeb57a5d83a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6aa404c5eb543db198043dba68d55a4b925739c8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472861"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263451"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace 類別
 
@@ -462,9 +462,9 @@ void GetDatabaseInfo(
 
 - AFX_DAO_PRIMARY_INFO （預設值） 的名稱，可更新的交易
 
-- AFX_DAO_SECONDARY_INFO 主要資訊加上： 版本、 定序順序，查詢逾時
+- AFX_DAO_SECONDARY_INFO 主要資訊加上：版本，其排序順序，查詢逾時
 
-- AFX_DAO_ALL_INFO 主要和次要資料庫資訊加上： 連線
+- AFX_DAO_ALL_INFO 主要和次要資料庫資訊加上：連線
 
 *lpszName*<br/>
 依名稱查閱資料庫物件名稱。 最多 14 個字元字串，可唯一地命名新的 workspace 物件的名稱。
@@ -632,9 +632,9 @@ void GetWorkspaceInfo(
 
 - AFX_DAO_PRIMARY_INFO （預設值） 的名稱
 
-- AFX_DAO_SECONDARY_INFO 主要資訊加上： 使用者名稱
+- AFX_DAO_SECONDARY_INFO 主要資訊加上：使用者名稱
 
-- AFX_DAO_ALL_INFO 主要和次要資料庫資訊加上： 隔離 ODBCTrans
+- AFX_DAO_ALL_INFO 主要和次要資料庫資訊加上：隔離 ODBCTrans
 
 *lpszName*<br/>
 依名稱查閱工作區中物件的名稱。 最多 14 個字元字串，可唯一地命名新的 workspace 物件的名稱。
@@ -653,7 +653,7 @@ static void PASCAL Idle(int nAction = dbFreeLocks);
 
 ### <a name="parameters"></a>參數
 
-*4%n 動作*<br/>
+*nAction*<br/>
 要在閒置處理期間所採取的動作。 目前唯一有效的動作是`dbFreeLocks`。
 
 ### <a name="remarks"></a>備註
@@ -723,7 +723,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 ||||
 |-|-|-|
 |[建立](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
-|[GetIniPath](#getinipath)|[閒置](#idle)|[SetIniPath](#setinipath)|
+|[GetIniPath](#getinipath)|[Idle](#idle)|[SetIniPath](#setinipath)|
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|
 
 ##  <a name="repairdatabase"></a>  CDaoWorkspace::RepairDatabase

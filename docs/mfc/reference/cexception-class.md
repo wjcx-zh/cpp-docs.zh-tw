@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: 53dac18b2ee0176eba0a869a0af254ff2978cffd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 689afa2ffbc27feec6f9e1704a6b295d5eabfaee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562223"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270419"
 ---
 # <a name="cexception-class"></a>CException 類別
 
@@ -180,7 +180,7 @@ virtual int ReportError(
 
 ### <a name="parameters"></a>參數
 
-*n*<br/>
+*nType*<br/>
 指定訊息方塊的樣式。 套用的任何組合[訊息方塊樣式](styles-used-by-mfc.md#message-box-styles)至方塊。 如果您未指定此參數，預設會為 MB_OK。
 
 *nMessageID*<br/>
@@ -231,5 +231,4 @@ else
 [CObject 類別](cobject-class.md)<br/>
 [階層架構圖表](../hierarchy-chart.md)<br/>
 [例外狀況處理](exception-processing.md)<br/>
-[如何： 建立我自己的自訂例外狀況類別](http://go.microsoft.com/fwlink/p/?linkid=128045)
-
+[How Do i:建立我自己的自訂例外狀況類別](http://go.microsoft.com/fwlink/p/?linkid=128045)

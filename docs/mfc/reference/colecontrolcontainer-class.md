@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: e89096b553814285f61093af81e31b294e3ad2bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e97f7ceafb92098d701cba64b4ec01d26d3991a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603004"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274982"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer 類別
 
@@ -218,7 +218,7 @@ virtual void CheckDlgButton(
 *nIDButton*<br/>
 修改按鈕的識別碼。
 
-*n*<br/>
+*nCheck*<br/>
 指定按鈕的狀態。 可以是下列其中一項：
 
 - BST_CHECKED 集按鈕的狀態，若要檢查。
@@ -308,7 +308,7 @@ BOOL CreateControl(
 *lpszWindowName*<br/>
 要在控制項中顯示的文字指標。 （如果有的話），請設定控制項的標題或文字屬性的值。 如果是 NULL，不會變更控制項的標題或文字屬性。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 視窗樣式。 底下會列出可用的樣式**備註**一節。
 
 *rect*<br/>
@@ -785,7 +785,7 @@ virtual void SetDlgItemInt(
 *nID*<br/>
 控制項的識別項。
 
-*n 值*<br/>
+*nValue*<br/>
 要顯示的整數值。
 
 *bSigned*<br/>

@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-ms.openlocfilehash: c99aba319df6f84dbda7b9cf90a1abebdc3757f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6afbd7b3a3f4280ad658c1cb9d8802cc3251d0ed
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570348"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291330"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d 命名空間
 
@@ -60,8 +60,8 @@ namespace direct3d;
 |[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|傳回布林值旗標，指出是否停用指定的 accelerator_view 的逾時。|
 |[mad](concurrency-direct3d-namespace-functions-amp.md#mad)|多載。 執行三個引數的算術乘法/加法運算： _X \* _Y + _Z|
 |[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|從 D3D 緩衝區介面指標建立陣列。|
-|[雜訊](concurrency-direct3d-namespace-functions-amp.md#noise)|使用 Perlin 雜訊演算法產生隨機值|
-|[弧度為單位](concurrency-direct3d-namespace-functions-amp.md#radians)|將 _X 從角度轉換為弧度|
+|[noise](concurrency-direct3d-namespace-functions-amp.md#noise)|使用 Perlin 雜訊演算法產生隨機值|
+|[radians](concurrency-direct3d-namespace-functions-amp.md#radians)|將 _X 從角度轉換為弧度|
 |[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|計算引數快速近似倒數|
 |[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|反轉 _X 的位元組順序|
 |[saturate](concurrency-direct3d-namespace-functions-amp.md#saturate)|將 _X 介於 0 到 1 的限制|

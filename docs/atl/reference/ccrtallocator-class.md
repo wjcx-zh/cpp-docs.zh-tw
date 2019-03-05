@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCRTAllocator class
 ms.assetid: 3e1b8cb0-859a-41ab-8e93-6f0b5ceca49d
-ms.openlocfilehash: 5d9ab804478dbf72ec51265a851f62d025ebfba5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c08d594e1c0f4d532f46961e266bf6ced98c51b2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428063"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287358"
 ---
 # <a name="ccrtallocator-class"></a>CCRTAllocator 類別
 
@@ -33,9 +33,9 @@ class ATL::CCRTAllocator
 
 |名稱|描述|
 |----------|-----------------|
-|[Ccrtallocator:: Allocate](#allocate)|（靜態）呼叫這個方法來配置記憶體。|
-|[Ccrtallocator:: Free](#free)|（靜態）呼叫這個方法來釋放記憶體。|
-|[Ccrtallocator:: Reallocate](#reallocate)|（靜態）呼叫這個方法來重新配置記憶體。|
+|[CCRTAllocator::Allocate](#allocate)|（靜態）呼叫這個方法來配置記憶體。|
+|[CCRTAllocator::Free](#free)|（靜態）呼叫這個方法來釋放記憶體。|
+|[CCRTAllocator::Reallocate](#reallocate)|（靜態）呼叫這個方法來重新配置記憶體。|
 
 ## <a name="remarks"></a>備註
 
@@ -45,7 +45,7 @@ class ATL::CCRTAllocator
 
 **標頭：** atlcore.h
 
-##  <a name="allocate"></a>  Ccrtallocator:: Allocate
+##  <a name="allocate"></a>  CCRTAllocator::Allocate
 
 呼叫此靜態函式以配置記憶體。
 
@@ -66,7 +66,7 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 配置記憶體。 請參閱[malloc](../../c-runtime-library/reference/malloc.md)如需詳細資訊。
 
-##  <a name="free"></a>  Ccrtallocator:: Free
+##  <a name="free"></a>  CCRTAllocator::Free
 
 呼叫此靜態函式來釋放記憶體。
 
@@ -83,7 +83,7 @@ static void Free(void* p) throw();
 
 釋放配置的記憶體。 請參閱[免費](../../c-runtime-library/reference/free.md)如需詳細資訊。
 
-##  <a name="reallocate"></a>  Ccrtallocator:: Reallocate
+##  <a name="reallocate"></a>  CCRTAllocator::Reallocate
 
 呼叫此靜態函式以重新配置記憶體。
 

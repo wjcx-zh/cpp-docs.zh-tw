@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], adding items
 - header controls [MFC], adding items to
 ms.assetid: 2e9a28b1-7302-4a93-8037-c5a4183e589a
-ms.openlocfilehash: c751458a3a2e7e049364ef22a161a3dc9f81df13
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 897612c6d5ac96704cc0a945df65146e6a01480a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483560"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264374"
 ---
 # <a name="adding-items-to-the-header-control"></a>將項目加入至標題控制項
 
@@ -31,4 +31,3 @@ ms.locfileid: "50483560"
 
 [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
 [控制項](../mfc/controls-mfc.md)
-

@@ -11,16 +11,17 @@ f1_keywords:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-ms.openlocfilehash: 0d1c28501abc86d09b683b0ed91f831fe8697306
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2eff40b11e4e9a5981ad85c37c8345abefb13fed
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462047"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265531"
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy 類別
 
-`SchedulerPolicy` 類別包含一組索引鍵/值組，每個原則項目一個，可控制排程器執行個體的行為。
+
+  `SchedulerPolicy` 類別包含一組索引鍵/值組，每個原則項目一個，可控制排程器執行個體的行為。
 
 ## <a name="syntax"></a>語法
 
@@ -138,7 +139,7 @@ SchedulerPolicy(
 
 第三個建構函式是複製建構函式。 通常，定義新的排程器原則最方便的方法是複製現有的原則，並使用 `SetPolicyValue` 或 `SetConcurrencyLimits` 方法修改。
 
-##  <a name="dtor"></a> ~ SchedulerPolicy
+##  <a name="dtor"></a> ~SchedulerPolicy
 
 終結排程器原則。
 
@@ -185,7 +186,7 @@ unsigned int SetPolicyValue(
 *key*<br/>
 原則機碼設定的值。
 
-*值*<br/>
+*value*<br/>
 若要設定原則機碼值。
 
 ### <a name="return-value"></a>傳回值
@@ -207,4 +208,3 @@ unsigned int SetPolicyValue(
 [CurrentScheduler 類別](currentscheduler-class.md)<br/>
 [Scheduler 類別](scheduler-class.md)<br/>
 [工作排程器](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
-ms.openlocfilehash: 1e47e45efe27c9562cf8500f8941bcf0e259448a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29cb0d6f53d4e8fbbce12a83b2eecb8658c82697
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585025"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305207"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC ActiveX 控制項：加入內建方法
 
@@ -20,12 +20,12 @@ ms.locfileid: "50585025"
 >[!IMPORTANT]
 > ActiveX 是舊版的技術，不應用於新的開發。 如需有關取代 ActiveX 的現代技術的詳細資訊，請參閱[ActiveX 控制項](activex-controls.md)。
 
-`COleControl` 支援兩個內建的方法： DoClick 和重新整理。 若要立即更新控制項的外觀，控制項的使用者叫用重新整理叫用 DoClick 引發控制項的 Click 事件。
+`COleControl` 支援兩個內建的方法：DoClick 和重新整理。 若要立即更新控制項的外觀，控制項的使用者叫用重新整理叫用 DoClick 引發控制項的 Click 事件。
 
 |方法|分派對應項目|註解|
 |------------|------------------------|-------------|
-|`DoClick`|**DISP_STOCKPROP_DOCLICK （)**|就會引發 Click 事件。|
-|`Refresh`|**DISP_STOCKPROP_REFRESH （)**|立即更新控制項的外觀。|
+|`DoClick`|**DISP_STOCKPROP_DOCLICK( )**|就會引發 Click 事件。|
+|`Refresh`|**DISP_STOCKPROP_REFRESH( )**|立即更新控制項的外觀。|
 
 ##  <a name="_core_adding_a_stock_method_using_classwizard"></a> 新增內建方法，使用加入方法精靈
 
@@ -64,4 +64,3 @@ ms.locfileid: "50585025"
 ## <a name="see-also"></a>另請參閱
 
 [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)
-

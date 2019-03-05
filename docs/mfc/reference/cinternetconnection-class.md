@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CInternetConnection [MFC], GetServerName
 - CInternetConnection [MFC], GetSession
 ms.assetid: 62a5d1c3-8471-4e36-a064-48831829b2a7
-ms.openlocfilehash: da11f62cfb453e31d3cacc1d4bc5b8a26f5b3764
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f17c3ade53ec45ddde654e83c77fe1d817d8495
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564797"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275346"
 ---
 # <a name="cinternetconnection-class"></a>CInternetConnection 類別
 
@@ -101,13 +101,13 @@ CInternetConnection(
 
 您永遠不會呼叫`CInternetConnection`自行; 相反地，呼叫[CInternetSession](../../mfc/reference/cinternetsession-class.md)您想要建立的連線類型的成員函式：
 
-- [Cinternetsession:: Getftpconnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)
+- [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)
 
-- [Cinternetsession:: Gethttpconnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)
+- [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)
 
-- [Getgopherconnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)
+- [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)
 
-預設值*dwContext* MFC，以便傳送`CInternetConnection`-衍生的物件，從[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立**InternetConnection**-在衍生的物件。 預設值設為 1。不過，您可以明確指派的特定內容識別項[CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession)建構函式的連接。 物件，而且它沒有任何工作將會與該內容識別碼相關聯 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供，它識別之物件的狀態。 請參閱文章[網際網路前幾個步驟： WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
+預設值*dwContext* MFC，以便傳送`CInternetConnection`-衍生的物件，從[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立**InternetConnection**-在衍生的物件。 預設值設為 1。不過，您可以明確指派的特定內容識別項[CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession)建構函式的連接。 物件，而且它沒有任何工作將會與該內容識別碼相關聯 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供，它識別之物件的狀態。 請參閱文章[網際網路前幾個步驟：WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
 
 ##  <a name="getcontext"></a>  CInternetConnection::GetContext
 
@@ -125,7 +125,7 @@ DWORD_PTR GetContext() const;
 
 中原本指定的內容 ID [CInternetSession](../../mfc/reference/cinternetsession-class.md)並將傳播到`CInternetConnection`-並[CInternetFile](../../mfc/reference/cinternetfile-class.md)-除非開啟函式呼叫中所指定以不同的方式衍生的類別，連接。 內容識別碼是否與指定任何的物件作業相關聯，以及識別傳回作業的狀態資訊[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。
 
-如需有關如何`GetContext`適用於其他 WinInet 類別，以提供使用者的狀態資訊，請參閱文章[網際網路前幾個步驟： WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
+如需有關如何`GetContext`適用於其他 WinInet 類別，以提供使用者的狀態資訊，請參閱文章[網際網路前幾個步驟：WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
 
 ##  <a name="getservername"></a>  CInternetConnection::GetServerName
 
@@ -163,4 +163,3 @@ operator HINTERNET() const;
 
 [CObject 類別](../../mfc/reference/cobject-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-ms.openlocfilehash: 374618aba297fb2c055ce02f93d0c7c93b38dc06
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 05eaa86133bb55cfbf62ec68f81e7ca7d9ab169b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850173"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274926"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>標準對話方塊資料交換常式
 
@@ -278,7 +278,7 @@ void DDX_ManagedControl(
 
 `DDX_ManagedControl` 呼叫[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)建立控制項，比對資源的控制項 id。 使用`DDX_ManagedControl`若要從資源識別碼，在建立控制項[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)。 資料交換，您不需要使用 Windows Form 控制項使用 DDX/DDV 函式。
 
-如需詳細資訊，請參閱[＜How to：執行 DDX/DDV 資料繫結 Windows form](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)。
+如需詳細資訊，請參閱[如何：執行 DDX/DDV 資料繫結 Windows form](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)。
 
 ### <a name="requirements"></a>需求
 

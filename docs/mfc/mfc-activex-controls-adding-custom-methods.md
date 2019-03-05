@@ -1,18 +1,18 @@
 ---
-title: MFC ActiveX 控制項：加入自訂方法
+title: MFC ActiveX 控制項：新增自訂方法
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - PtInCircle custom method [MFC]
 ms.assetid: 8f8dc344-44a0-4021-8db5-4cdd3d700e18
-ms.openlocfilehash: bd67e5f248f389755b1bf25854867322af60878e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f5a7dc844d80ae94df8af7c0b2eea141376f9e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554553"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278843"
 ---
-# <a name="mfc-activex-controls-adding-custom-methods"></a>MFC ActiveX 控制項：加入自訂方法
+# <a name="mfc-activex-controls-adding-custom-methods"></a>MFC ActiveX 控制項：新增自訂方法
 
 自訂方法與不同的內建方法透過未已經實作`COleControl`。 您必須提供每個您新增至您的控制項的自訂方法的實作。
 
@@ -26,7 +26,7 @@ ActiveX 控制項使用者可以在任何時間執行的特定控制項的動作
 下列程序示範如何將 PtInCircle 自訂方法新增至 ActiveX 控制項的基本架構程式碼。 PtInCircle 判斷傳遞給控制項的座標是否內部或外部的圓形。 這個相同的程序也可用來新增其他自訂方法。 替代成您的自訂方法名稱和其 PtInCircle 方法名稱和參數的參數。
 
 > [!NOTE]
->  這個範例會使用`InCircle`函式，從發行項的事件。 如需有關這個函式的詳細資訊，請參閱文章[MFC ActiveX 控制項： 加入至 ActiveX 控制項的自訂事件](../mfc/mfc-activex-controls-adding-custom-events.md)。
+>  這個範例會使用`InCircle`函式，從發行項的事件。 如需有關這個函式的詳細資訊，請參閱文章[MFC ActiveX 控制項：將自訂事件加入至 ActiveX 控制項](../mfc/mfc-activex-controls-adding-custom-events.md)。
 
 #### <a name="to-add-the-ptincircle-custom-method-using-the-add-method-wizard"></a>若要加入使用加入方法精靈 PtInCircle 自訂方法
 
@@ -80,4 +80,3 @@ DISP_FUNCTION 巨集對應方法`PtInCircle`控制項的處理常式函式，以
 
 [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)<br/>
 [類別檢視和物件瀏覽器圖示](/visualstudio/ide/class-view-and-object-browser-icons)
-

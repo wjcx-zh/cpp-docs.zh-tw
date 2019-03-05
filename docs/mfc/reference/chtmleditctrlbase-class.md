@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: 11bfa8304b51ed25b934a97109db7da7bb39f49a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebc296c66ee818e5c72207e0ca7b436f386fb68d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590134"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293936"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase 類別
 
@@ -395,10 +395,10 @@ HRESULT AddToGlyphTable(
 影像 URL。
 
 *nTagType*<br/>
-標記類型： 0 表示映像的開頭標記。 1 表示映像做為結尾標記。 2 表示映像的開頭和結尾標記。 單一的標記，例如巴西和註解必須新增標記類型設定為 0。
+標記類型：0 表示映像做為開頭標記。 1 表示映像做為結尾標記。 2 表示映像的開頭和結尾標記。 單一的標記，例如巴西和註解必須新增標記類型設定為 0。
 
 *nAlignment*<br/>
-對齊方式 （僅矩形項目）： 這個參數會指出影像是否為具有對齊屬性的項目。 剩餘 = 0，center = 1，右 = 2，和未定義 = 3。 左、 右或置屬性必須明確設定項目上。
+對齊方式 （僅矩形項目）：這個參數會指出影像為具有對齊屬性的項目。 剩餘 = 0，center = 1，右 = 2，和未定義 = 3。 左、 右或置屬性必須明確設定項目上。
 
 *nPosInfo*<br/>
 位置資訊。 決定哪些的階層式樣式表 (CSS) 位置的值，其中靜態圖像 （glyph） 會套用，位置 = 0 時，絕對位置 = 1，相對位置 = 2，且所有 = 3。 此欄位可讓您指定的標記時不位於一個圖像 （glyph） 和另一個圖像 （glyph），以顯示錨點標籤定位時。
@@ -2566,4 +2566,3 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [HTMLEdit 範例](../../visual-cpp-samples.md)
-

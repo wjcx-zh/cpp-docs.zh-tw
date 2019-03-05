@@ -6,19 +6,18 @@ helpviewer_keywords:
 - servers, user-interface issues
 - user interface issues
 ms.assetid: 7ef55702-b439-43fa-8ced-c69b96239a89
-ms.openlocfilehash: b940be912827abf3c6c6d07a6a9add10a3bef7ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0744c7404d9a06d49514bccd186dd0518266173c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574794"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279012"
 ---
 # <a name="servers-user-interface-issues"></a>伺服器：使用者介面問題
 
-伺服器應用程式都會一些必須加入使用者介面的功能，以提供 OLE 項目給容器應用程式。 如需功能表和加入伺服器應用程式需要的其他資源的詳細資訊，請參閱[功能表和資源： 伺服器加入](../mfc/menus-and-resources-server-additions.md)。
+伺服器應用程式都會一些必須加入使用者介面的功能，以提供 OLE 項目給容器應用程式。 如需功能表和加入伺服器應用程式需要的其他資源的詳細資訊，請參閱[功能表和資源：伺服器加入](../mfc/menus-and-resources-server-additions.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [伺服器](../mfc/servers.md)<br/>
 [功能表和資源 (OLE)](../mfc/menus-and-resources-ole.md)
-

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous agents
 - agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-ms.openlocfilehash: a99400e4df49e36e1cddda7068f315485b976cde
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ff6fa851519066c3c399a28557fd8f103d0e94be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176532"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268937"
 ---
 # <a name="asynchronous-agents"></a>非同步代理程式
 
@@ -46,10 +46,10 @@ ms.locfileid: "52176532"
 |------------|-----------------|
 |[start](reference/agent-class.md#start)|排程`agent`執行的物件並將它設定為`agent_runnable`狀態。|
 |[run](reference/agent-class.md#run)|執行所要執行的工作`agent`物件。|
-|[完成](reference/agent-class.md#done)|移至代理程式`agent_done`狀態。|
-|[[取消]](../../parallel/concrt/cancellation-in-the-ppl.md#cancel)|如果代理程式未啟動，這個方法會取消執行代理程式，並將它設定為`agent_canceled`狀態。|
+|[done](reference/agent-class.md#done)|移至代理程式`agent_done`狀態。|
+|[cancel](../../parallel/concrt/cancellation-in-the-ppl.md#cancel)|如果代理程式未啟動，這個方法會取消執行代理程式，並將它設定為`agent_canceled`狀態。|
 |[status](reference/agent-class.md#status)|擷取目前的狀態`agent`物件。|
-|[等候](reference/agent-class.md#wait)|等候`agent`物件以輸入`agent_done`或`agent_canceled`狀態。|
+|[wait](reference/agent-class.md#wait)|等候`agent`物件以輸入`agent_done`或`agent_canceled`狀態。|
 |[wait_for_all](reference/agent-class.md#wait_for_all)|等待所有提供`agent`輸入的物件`agent_done`或`agent_canceled`狀態。|
 |[wait_for_one](reference/agent-class.md#wait_for_one)|等候至少其中一個提供`agent`輸入的物件`agent_done`或`agent_canceled`狀態。|
 
@@ -59,9 +59,8 @@ ms.locfileid: "52176532"
 
 ## <a name="example"></a>範例
 
-如需示範如何建立基本的代理程式型應用程式的範例，請參閱 <<c0> [ 逐步解說： 建立代理程式為基礎的應用程式](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)。
+如需示範如何建立基本的代理程式型應用程式的範例，請參閱[逐步解說：建立代理程式為基礎的應用程式](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)
-

@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBMultiMap class
 ms.assetid: 94d3ec0c-3e30-4ab7-a101-d8da4fb8add3
-ms.openlocfilehash: f421848a87ea3cc38309e85eb39c9453530ce4fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 03a9639e8b0b3d11a414e5db0ce874d7ca8f2d45
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659091"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267481"
 ---
 # <a name="crbmultimap-class"></a>CRBMultiMap 類別
 
@@ -55,7 +55,7 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 |名稱|描述|
 |----------|-----------------|
 |[CRBMultiMap::CRBMultiMap](#crbmultimap)|建構函式。|
-|[CRBMultiMap:: ~ CRBMultiMap](#dtor)|解構函式。|
+|[CRBMultiMap::~CRBMultiMap](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -234,7 +234,7 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 *key*<br/>
 若要加入的索引鍵值`CRBMultiMap`物件。
 
-*值*<br/>
+*value*<br/>
 要加入至值`CRBMultiMap`相關聯的物件*金鑰*。
 
 ### <a name="return-value"></a>傳回值

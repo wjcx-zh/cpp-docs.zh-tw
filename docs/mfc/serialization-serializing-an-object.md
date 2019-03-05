@@ -6,16 +6,16 @@ helpviewer_keywords:
 - serialization [MFC], objects
 - objects [MFC], serializing
 ms.assetid: 1db772b1-ad55-4fcf-b133-126cca082510
-ms.openlocfilehash: 10a7c52e6187f4db8345e1eadb88faeefa50b419
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c1106f180c587894283575a82a88e9e18b5c01a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588518"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290487"
 ---
 # <a name="serialization-serializing-an-object"></a>序列化：序列化物件
 
-發行項[序列化： 建立可序列化的類別](../mfc/serialization-making-a-serializable-class.md)示範如何使類別可序列化。 一旦您擁有可序列化的類別，您可以將序列化與檔案，以透過該類別的物件[CArchive](../mfc/reference/carchive-class.md)物件。 本文說明：
+發行項[序列化：建立可序列化的類別](../mfc/serialization-making-a-serializable-class.md)示範如何使類別可序列化。 一旦您擁有可序列化的類別，您可以將序列化與檔案，以透過該類別的物件[CArchive](../mfc/reference/carchive-class.md)物件。 本文說明：
 
 - [什麼是 CArchive 物件是](../mfc/what-is-a-carchive-object.md)。
 
@@ -30,4 +30,3 @@ ms.locfileid: "50588518"
 ## <a name="see-also"></a>另請參閱
 
 [序列化](../mfc/serialization-in-mfc.md)
-

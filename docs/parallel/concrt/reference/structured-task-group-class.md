@@ -13,16 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-ms.openlocfilehash: 486829b7d990aab7860059feed78b26207d0074d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27610539ab500a113ea41021744c55425fe9cd9b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600664"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299288"
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group 類別
 
-`structured_task_group` 類別代表平行工作的高度結構化集合。 您可以使用 `task_handle` 物件，將個別平行工作佇列到 `structured_task_group` 中並等候這些工作完成，也可以在工作完成執行前取消工作群組，這樣會中止所有尚未開始執行的工作。
+
+  `structured_task_group` 類別代表平行工作的高度結構化集合。 您可以使用 `task_handle` 物件，將個別平行工作佇列到 `structured_task_group` 中並等候這些工作完成，也可以在工作完成執行前取消工作群組，這樣會中止所有尚未開始執行的工作。
 
 ## <a name="syntax"></a>語法
 
@@ -43,11 +44,11 @@ class structured_task_group;
 
 |名稱|描述|
 |----------|-----------------|
-|[[取消]](#cancel)|會盡力嘗試取消子樹狀結構的根目錄位於此工作群組的工作。 排定的工作群組上的每項工作將會取消間接的話。|
+|[cancel](#cancel)|會盡力嘗試取消子樹狀結構的根目錄位於此工作群組的工作。 排定的工作群組上的每項工作將會取消間接的話。|
 |[is_canceling](#is_canceling)|通知呼叫端工作群組是目前在取消作業。 這不一定表示所`cancel`上呼叫方法`structured_task_group`物件 (雖然這類當然限定此方法以傳回 **，則為 true**)。 它可能會發生情況的`structured_task_group`物件以內嵌方式執行及工作群組的進一步設定工作樹狀目錄中已取消。 在這些位置等的情況下，執行階段可以判斷事先取消將會流經這`structured_task_group`物件， **，則為 true**會一併傳回。|
 |[run](#run)|多載。 排程工作上`structured_task_group`物件。 呼叫端管理的存留期`task_handle`傳入物件`_Task_handle`參數。 採用 `_Placement` 參數的版本會造成工作在該參數指定的位置變成優先執行。|
 |[run_and_wait](#run_and_wait)|多載。 排程工作將內嵌在環境中執行呼叫的協助`structured_task_group`完整的取消支援的物件。 如果`task_handle`物件會傳遞做為參數`run_and_wait`，呼叫端會負責管理的存留期`task_handle`物件。 函式，然後等待直到所有處理`structured_task_group`物件已完成或已取消。|
-|[等候](#wait)|等待所有工作`structured_task_group`已完成或取消。|
+|[wait](#wait)|等待所有工作`structured_task_group`已完成或取消。|
 
 ## <a name="remarks"></a>備註
 
@@ -124,7 +125,7 @@ void run(
 *_Task_handle*<br/>
 這排程的工作控制代碼。 請注意，呼叫端負責此物件的存留期。 執行階段會繼續直到存留預期`wait`或是`run_and_wait`呼叫此方法`structured_task_group`物件。
 
-*放置 （_p)*<br/>
+*_Placement*<br/>
 位置的參考，這是 `_Task_handle` 參數代表的工作應該執行的位置。
 
 ### <a name="remarks"></a>備註

@@ -17,16 +17,17 @@ f1_keywords:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-ms.openlocfilehash: 881b4f15c7238e69a91def08e5d20ad8955ec4e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4979eaf9065183be646be72cfdd5a94500edf55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545986"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295197"
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager 類別
 
-`source_link_manager` 物件會管理 `ISource` 區塊與傳訊區塊網路的連結。
+
+  `source_link_manager` 物件會管理 `ISource` 區塊與傳訊區塊網路的連結。
 
 ## <a name="syntax"></a>語法
 
@@ -64,7 +65,7 @@ class source_link_manager;
 |----------|-----------------|
 |[add](#add)|新增來源連結`source_link_manager`物件。|
 |[begin](#begin)|傳回迭代器中的第一個項目`source_link_manager`物件。|
-|[包含](#contains)|搜尋`network_link_registry`在這個`source_link_manager`物件指定的區塊。|
+|[contains](#contains)|搜尋`network_link_registry`在這個`source_link_manager`物件指定的區塊。|
 |[count](#count)|計算連結中的區塊數目`source_link_manager`物件。|
 |[reference](#reference)|在參考取得`source_link_manager`物件。|
 |[register_target_block](#register_target_block)|註冊擁有此目標區塊`source_link_manager`物件。|
@@ -86,7 +87,7 @@ class source_link_manager;
 
 **命名空間：** concurrency
 
-##  <a name="add"></a> 新增
+##  <a name="add"></a> add
 
 新增來源連結`source_link_manager`物件。
 
@@ -96,10 +97,10 @@ void add(_EType _Link);
 
 ### <a name="parameters"></a>參數
 
-*連結 （_l)*<br/>
+*_Link*<br/>
 要加入的區塊的指標。
 
-##  <a name="begin"></a> 開始
+##  <a name="begin"></a> begin
 
 傳回迭代器中的第一個項目`source_link_manager`物件。
 
@@ -125,14 +126,14 @@ bool contains(_EType _Link);
 
 ### <a name="parameters"></a>參數
 
-*連結 （_l)*<br/>
+*_Link*<br/>
 要搜尋中的區塊的指標`source_link_manager`物件。
 
 ### <a name="return-value"></a>傳回值
 
 **真**找不到指定的區塊，如果**false**否則。
 
-##  <a name="count"></a> 計數
+##  <a name="count"></a> count
 
 計算連結中的區塊數目`source_link_manager`物件。
 
@@ -183,7 +184,7 @@ bool remove(_EType _Link);
 
 ### <a name="parameters"></a>參數
 
-*連結 （_l)*<br/>
+*_Link*<br/>
 要移除，如果區塊的指標找到。
 
 ### <a name="return-value"></a>傳回值

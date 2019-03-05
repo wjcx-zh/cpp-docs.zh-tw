@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 9c9bcd76-456f-4cf9-b03c-dd28b49d5e4f
-ms.openlocfilehash: c449fd6e2d2dc1b8d912724d9888b432a2809427
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 42c41407b86705e46d43113326d15f1ef3271d1b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657301"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300696"
 ---
 # <a name="cmapwordtoob-class"></a>CMapWordToOb 類別
 
@@ -115,4 +115,3 @@ class CMapWordToOb : public CObject
 
 [CObject 類別](../../mfc/reference/cobject-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

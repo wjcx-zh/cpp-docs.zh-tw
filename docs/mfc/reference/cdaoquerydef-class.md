@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDAOQueryDef
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
-ms.openlocfilehash: 07c508dcf4bd57855d09be5a305847d0b2981305
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08fb2909a4fd2e5bda3dfc63d19224a515c7c699
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664525"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283640"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef 類別
 
@@ -435,9 +435,9 @@ void GetFieldInfo(
 
 - AFX_DAO_PRIMARY_INFO （預設值） 名稱、 類型、 大小屬性
 
-- 加上主要 AFX_DAO_SECONDARY_INFO 資訊： 所需的序數位置、 允許長度為零、 來源欄位、 外部索引的名稱、 來源資料表、 定序順序
+- AFX_DAO_SECONDARY_INFO 主要資訊加上：序數位置，所需，允許零長度、 來源欄位、 外部索引的名稱、 來源資料表，其排序順序
 
-- AFX_DAO_ALL_INFO 主要和次要資料庫資訊加上： 預設值，驗證文字驗證規則
+- AFX_DAO_ALL_INFO 主要和次要資料庫資訊加上：預設值，驗證文字驗證規則
 
 *lpszName*<br/>
 字串，包含依名稱查閱所需的欄位名稱。 您可以使用[CString](../../atl-mfc-shared/reference/cstringt-class.md)。
@@ -520,7 +520,7 @@ void GetParameterInfo(
 *nIndex*<br/>
 在 querydef 的參數集合中，依索引查閱所需的參數以零為起始的索引。
 
-*paraminfo 曲線等等*<br/>
+*paraminfo*<br/>
 參考[CDaoParameterInfo](../../mfc/reference/cdaoparameterinfo-structure.md)傳回要求之資訊的物件。
 
 *dwInfoOptions*<br/>

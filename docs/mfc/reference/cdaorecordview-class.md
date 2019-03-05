@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDaoRecordView [MFC], OnGetRecordset
 - CDaoRecordView [MFC], OnMove
 ms.assetid: 5aa7d0e2-bd05-413e-b216-80c404ce18ac
-ms.openlocfilehash: db1636bebd0cc29124018b5fad2c0535079706d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f63aa8ed17619a9eef36e36bcc9243a3b973889a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541202"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277766"
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView 類別
 
@@ -173,7 +173,7 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
 
 您必須覆寫此成員函式，來建構或取得資料錄集物件和傳回的指標。 如果您宣告您的資料錄檢視類別與 ClassWizard，精靈會為您撰寫的預設覆寫。 ClassWizard 的預設實作會傳回資料錄集指標儲存在記錄檢視中，如果有的話。 您如果不是，它會建構類型的資料錄集物件指定 ClassWizard 並呼叫其`Open`成員函式以開啟資料表或執行查詢，並再傳回物件的指標。
 
-如需詳細資訊和範例，請參閱文章[資料錄檢視： 使用資料錄檢視](../../data/using-a-record-view-mfc-data-access.md)。
+如需詳細資訊和範例，請參閱文章[資料錄檢視：使用資料錄檢視](../../data/using-a-record-view-mfc-data-access.md)。
 
 ##  <a name="onmove"></a>  CDaoRecordView::OnMove
 

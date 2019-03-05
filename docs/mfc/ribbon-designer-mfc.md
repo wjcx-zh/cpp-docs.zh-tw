@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 903adc96f4c9bc092ac23787781a76c0e7e3714c
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0972cdfbb80129b0c87c96fa7daf6768d18aa0c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175830"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288775"
 ---
 # <a name="ribbon-designer-mfc"></a>功能區設計工具 (MFC)
 
@@ -56,11 +56,11 @@ ms.locfileid: "52175830"
 
 下列兩個方法可將功能區資源新增至您的 MFC 專案中：
 
-- 建立 MFC 應用程式並設定 MFC 專案精靈以建立功能區。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 建立功能區應用程式使用 MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md)。
+- 建立 MFC 應用程式並設定 MFC 專案精靈以建立功能區。 如需詳細資訊，請參閱[逐步解說：使用 MFC 建立功能區應用程式](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md)。
 
-- 在現有的 MFC 專案中，建立功能區資源並將其載入。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 更新 MFC Scribble 應用程式 (第 1 部分)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)。
+- 在現有的 MFC 專案中，建立功能區資源並將其載入。 如需詳細資訊，請參閱[逐步解說：更新 MFC Scribble 應用程式 （第 1 部分）](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)。
 
-如果您的專案已經以手動方式為功能區編碼，MFC 會具有函式，可用來將現有的功能區轉換為功能區資源。 如需詳細資訊，請參閱 <<c0> [ 如何： 將現有的 MFC 功能區轉換為功能區資源](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md)。
+如果您的專案已經以手動方式為功能區編碼，MFC 會具有函式，可用來將現有的功能區轉換為功能區資源。 如需詳細資訊，請參閱[如何：將現有的 MFC 功能區轉換為功能區資源](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md)。
 
 > [!NOTE]
 >  在對話方塊架構應用程式中，無法建立功能區。 如需詳細資訊，請參閱 <<c0> [ 應用程式類型、 MFC 應用程式精靈](../mfc/reference/application-type-mfc-application-wizard.md)。
@@ -77,15 +77,15 @@ ms.locfileid: "52175830"
 
 - **設計工具介面：** 包含功能區資源的視覺表示法。
 
-- **屬性 視窗：** 列出在設計工具介面上選取之項目的屬性。
+- **屬性 視窗中：** 列出在設計工具介面上選取之項目的屬性。
 
-- **資源檢視視窗：** 會顯示在專案中包含功能區資源的資源。
+- **資源檢視 視窗中：** 顯示專案中加入功能區資源的資源。
 
-- **Ribbon 編輯器工具列：** Contains 命令，可讓您預覽功能區，並變更其視覺化佈景主題。
+- **Ribbon 編輯器工具列：** 包含可讓您預覽功能區，並變更其視覺化佈景主題的命令。
 
 下列主題描述如何在功能區設計工具中使用這些功能。
 
-- [如何：自訂應用程式按鈕](../mfc/how-to-customize-the-application-button.md)
+- [如何：自訂的應用程式按鈕](../mfc/how-to-customize-the-application-button.md)
 
 - [如何：自訂快速存取工具列](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
@@ -101,16 +101,15 @@ ms.locfileid: "52175830"
 
 - **快速存取工具列：** 小型、 可自訂的工具列，會顯示經常使用的命令。
 
-- **類別目錄**： 代表功能區索引標籤內容的邏輯群組。
+- **類別目錄**:代表功能區索引標籤內容的邏輯群組。
 
-- **分類預設按鈕：** 功能區最小化時，會出現在 功能區的按鈕。 按一下按鈕時，分類會以功能表的形式出現。
+- **分類預設按鈕：** 功能區最小化時，會出現在功能區按鈕。 按一下按鈕時，分類會以功能表的形式出現。
 
 - **面板：** 會顯示相關的控制項群組的功能區列區域。 每個功能區分類包含一或多個功能區面板。
 
-- **功能區項目：** 面板中的控制項，例如按鈕和下拉式方塊。 若要查看可以裝載各種控制項的功能區上，請參閱[RibbonGadgets 範例： 功能區小工具應用程式](../visual-cpp-samples.md)。
+- **功能區項目：** 面板中的控制項，例如按鈕和下拉式方塊。 若要查看可以裝載各種控制項的功能區上，請參閱[RibbonGadgets 範例：功能區小工具應用程式](../visual-cpp-samples.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [使用者介面項目](../mfc/user-interface-elements-mfc.md)<br/>
 [使用資源檔](../windows/working-with-resource-files.md)
-

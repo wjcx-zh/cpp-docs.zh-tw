@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICollectionOnSTLImpl class
 ms.assetid: 683c88b0-0d97-4779-a762-e493334ba7f9
-ms.openlocfilehash: 1b76ec9840fbee53a9003ca3a6064021a0f8d751
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc1e4988237cb839cca9421b56dbcdd04067059d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452477"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266454"
 ---
 # <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl 類別
 

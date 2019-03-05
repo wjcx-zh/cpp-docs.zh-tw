@@ -33,16 +33,17 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-ms.openlocfilehash: e8036b0942600e5d47254583e2675c525010a5c1
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 7c2ca35239dfb3ce4c0f710259f54005ff9f3c94
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657561"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283172"
 ---
 # <a name="concurrentvector-class"></a>concurrent_vector 類別
 
-`concurrent_vector` 類別是一種序列容器類別，允許以隨機方式存取任何項目。 它會啟用並行安全附加、項目存取、迭代器存取及迭代器周遊作業。
+
+  `concurrent_vector` 類別是一種序列容器類別，允許以隨機方式存取任何項目。 它會啟用並行安全附加、項目存取、迭代器存取及迭代器周遊作業。
 
 ## <a name="syntax"></a>語法
 
@@ -167,10 +168,10 @@ void assign(_InputIterator _Begin,
 *_Item*<br/>
 用來填滿並行向量的值參考。
 
-*（_b)*<br/>
+*_Begin*<br/>
 來源範圍的第一個項目的迭代器。
 
-*（_e)*<br/>
+*_End*<br/>
 迭代器，其中一個來源範圍的最後一個元素。
 
 ### <a name="remarks"></a>備註
@@ -202,7 +203,7 @@ const_reference at(size_type _Index) const;
 
 方法會擲回`out_of_range`如果`_Index`大於或等於並行向量的大小和`range_error`如果索引是中斷的向量部分。 如需如何向量可以而損毀的詳細資訊，請參閱[平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)。
 
-##  <a name="back"></a> 上一步
+##  <a name="back"></a> back
 
 傳回的參考或`const`參考到最後一個並行向量中的項目。 如果並行向量是空的則傳回的值會是未定義。 這個方法是並行安全的。
 
@@ -216,7 +217,7 @@ const_reference back() const;
 
 參考或`const`參考到最後一個並行向量中的項目。
 
-##  <a name="begin"></a> 開始
+##  <a name="begin"></a> begin
 
 傳回迭代器的型別`iterator`或`const_iterator`並行向量的開頭。 這個方法是並行安全的。
 
@@ -331,15 +332,16 @@ concurrent_vector(_InputIterator _Begin,
 要從中複製或移動項目的來源 `concurrent_vector` 物件。
 
 *_N*<br/>
-`concurrent_vector` 物件的初始容量。
+
+  `concurrent_vector` 物件的初始容量。
 
 *_Item*<br/>
 建構的物件中的項目值。
 
-*（_b)*<br/>
+*_Begin*<br/>
 項目範圍中要複製的第一個項目位置。
 
-*（_e)*<br/>
+*_End*<br/>
 項目範圍之外要複製的第一個項目位置。
 
 ### <a name="remarks"></a>備註
@@ -390,7 +392,7 @@ const_reverse_iterator crend() const;
 
 迭代器的型別`const_reverse_iterator`並行向量的結尾。
 
-##  <a name="empty"></a> 空白
+##  <a name="empty"></a> empty
 
 測試如果並行向量是空的時呼叫這個方法。 這個方法是並行安全的。
 
@@ -528,7 +530,7 @@ concurrent_vector& operator= (
 
 此參考`concurrent_vector`物件。
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 提供存取並行向量中的指定索引處的項目。 這個方法是並行安全的讀取作業，以及同時成長，只要確定之值的向量，`_Index`小於並行向量的大小。
 
@@ -672,7 +674,7 @@ size_type size() const;
 
 在傳回的大小一定會包含所有的項目所呼叫函式附加`push_back`，或成長之前叫用這個方法已完成的作業。 不過，它也可能包含項目的已配置但仍在並行呼叫的任何成長方法建構。
 
-##  <a name="swap"></a> 交換
+##  <a name="swap"></a> swap
 
 交換兩個的並行向量的內容。 這個方法不是並行安全。
 
@@ -689,4 +691,3 @@ void swap(concurrent_vector& _Vector);
 
 [concurrency 命名空間](concurrency-namespace.md)<br/>
 [平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)
-

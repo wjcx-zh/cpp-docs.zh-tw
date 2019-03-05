@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: ad9f945a91a96c40afe614240a847a028ba5b5d9
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 17ff89fde3ef893c2cfcd8beeb8482722af60358
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178612"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280312"
 ---
 # <a name="clistbox-class"></a>CListBox 類別
 
@@ -139,7 +139,7 @@ class CListBox : public CWnd
 |[CListBox::DeleteString](#deletestring)|從清單方塊中，刪除字串。|
 |[CListBox::Dir](#dir)|將檔案名稱、 磁碟機，或從目前的目錄加入至清單方塊中。|
 |[CListBox::DrawItem](#drawitem)|當主控描繪清單方塊中變更的視覺外觀時，架構呼叫。|
-|[Clistbox:: Findstring](#findstring)|搜尋清單方塊中的字串。|
+|[CListBox::FindString](#findstring)|搜尋清單方塊中的字串。|
 |[CListBox::FindStringExact](#findstringexact)|尋找符合指定的字串的第一個清單方塊字串。|
 |[CListBox::GetAnchorIndex](#getanchorindex)|擷取清單方塊中目前的錨點項目的以零為起始的索引。|
 |[CListBox::GetCaretIndex](#getcaretindex)|判斷具有焦點矩形的多重選擇清單方塊中的項目索引。|
@@ -371,7 +371,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定清單方塊的樣式。 套用的任何組合[清單方塊樣式](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)至方塊。
 
 *rect*<br/>
@@ -525,7 +525,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 [!code-cpp[NVC_MFC_CListBox#9](../../mfc/codesnippet/cpp/clistbox-class_9.cpp)]
 
-##  <a name="findstring"></a>  Clistbox:: Findstring
+##  <a name="findstring"></a>  CListBox::FindString
 
 尋找第一個字串，而不需要變更清單方塊選取項目包含指定的前置詞的清單方塊中。
 
@@ -1039,7 +1039,7 @@ UINT ItemFromPoint(
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pt*<br/>
 要尋找最接近的項目，指定相對於清單方塊的用戶端區域左上角的點。
 
 *bOutside*<br/>
@@ -1242,7 +1242,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>參數
 
-*n 請選取*<br/>
+*nSelect*<br/>
 指定要選取字串之以零為起始索引。 如果*n 請選取*為-1，清單方塊設定成有沒有選取項目。
 
 ### <a name="return-value"></a>傳回值

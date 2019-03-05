@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 8388a79bf7c85f3d603bd4ef234947e872534cba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dc8c51cc1847d29b76e2017db4c1368b35b9a9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505115"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281677"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -874,9 +874,9 @@ virtual DROPEFFECT OnDragEnter(
 [in]資料物件，其中包含使用者拖曳的資料點。
 
 *dwKeyState*<br/>
-[in]包含的輔助按鍵的狀態。 這個參數是的位元組合 (OR) 的下列值： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。 如需詳細資訊，請參閱 <<c0>  **訊息參數**一節[有關滑鼠輸入](/windows/desktop/inputdev/about-mouse-input)。
+[in]包含的輔助按鍵的狀態。 這個參數是的位元組合 (OR) 的下列值：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。 如需詳細資訊，請參閱 <<c0>  **訊息參數**一節[有關滑鼠輸入](/windows/desktop/inputdev/about-mouse-input)。
 
-*點*<br/>
+*point*<br/>
 [in]包含工作區座標中的資料指標的目前的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -908,7 +908,7 @@ virtual DROPEFFECT OnDragOver(
 *dwKeyState*<br/>
 [in]這是的位元組合 (OR) MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON 輔助按鍵，狀態。 如需詳細資訊，請參閱 < 訊息參數 」 中[有關滑鼠輸入](/windows/desktop/inputdev/about-mouse-input)。
 
-*點*<br/>
+*point*<br/>
 [in]目前的滑鼠位置。
 
 ### <a name="return-value"></a>傳回值
@@ -929,7 +929,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]如何顯示快顯功能表的座標。
 
 ### <a name="remarks"></a>備註

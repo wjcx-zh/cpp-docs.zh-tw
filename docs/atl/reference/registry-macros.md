@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-ms.openlocfilehash: bced900cd7bac666daf415d91a4540828c769025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e05d6a47ea67138e8d1d456077526dd3178cc44
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660378"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292910"
 ---
 # <a name="registry-macros"></a>登錄巨集
 
@@ -108,7 +108,7 @@ DECLARE_REGISTRY(
 [in]UINT，是在登錄做為該程式的說明中的資源字串的索引。
 
 *flags*<br/>
-[in]DWORD，其中包含程式的登錄中的執行緒模型。 必須是下列值之一： THREADFLAGS_APARTMENT、 THREADFLAGS_BOTH 或 AUTPRXFLAG。
+[in]DWORD，其中包含程式的登錄中的執行緒模型。 必須是下列值之一：THREADFLAGS_APARTMENT、 THREADFLAGS_BOTH 或 AUTPRXFLAG。
 
 ### <a name="remarks"></a>備註
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CToolBar class [MFC], control bars
 - CStatusBar class [MFC], control bars
 ms.assetid: 31831910-3d23-4d70-9e71-03cc02f01ec4
-ms.openlocfilehash: 13d457350a6a75357752556bb08a582e8a59f333
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b75d9a96f091d0424592f34bdb1ed7ce76c2372
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519701"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283575"
 ---
 # <a name="control-bars"></a>控制列
 
@@ -42,7 +42,8 @@ ms.locfileid: "50519701"
 
 ## <a name="control-bars"></a>控制列
 
-控制列藉由提供快速的單一步驟命令動作，大幅提高程式的可用性。 `CControlBar` 類別提供所有工具列、狀態列和對話方塊列的一般功能。 `CControlBar` 提供在其父框架視窗中放置控制列的功能。 由於控制列通常是父框架視窗的子視窗，因此與框架視窗的工作區檢視或 MDI 工作區屬於「同層級」。 控制列物件會使用父視窗工作區矩形的相關資訊來決定本身的位置。 然後它會修改父視窗的其他工作區視窗矩形，讓工作區檢視或 MDI 工作區視窗填滿工作區視窗的其餘部分。
+控制列藉由提供快速的單一步驟命令動作，大幅提高程式的可用性。 
+  `CControlBar` 類別提供所有工具列、狀態列和對話方塊列的一般功能。 `CControlBar` 提供在其父框架視窗中放置控制列的功能。 由於控制列通常是父框架視窗的子視窗，因此與框架視窗的工作區檢視或 MDI 工作區屬於「同層級」。 控制列物件會使用父視窗工作區矩形的相關資訊來決定本身的位置。 然後它會修改父視窗的其他工作區視窗矩形，讓工作區檢視或 MDI 工作區視窗填滿工作區視窗的其餘部分。
 
 > [!NOTE]
 >  如果控制列上的按鈕沒有**命令**或是**UPDATE_COMMAND_UI**處理常式，架構會自動停用按鈕。

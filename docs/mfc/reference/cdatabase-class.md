@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: d152153ac4e379f4159c4ade5dfc044288f69720
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e523b2a145254cd9b7adf2b066605a679349f6c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541397"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273440"
 ---
 # <a name="cdatabase-class"></a>CDatabase 類別
 
@@ -86,15 +86,15 @@ class CDatabase : public CObject
 |[CDatabase::CanUpdate](#canupdate)|傳回非零值如果`CDatabase`是可更新的物件 （不唯讀）。|
 |[CDatabase::Close](#close)|關閉資料來源連接。|
 |[CDatabase::CommitTrans](#committrans)|完成交易開始時`BeginTrans`。 在交易中改變資料來源的命令會執行。|
-|[Cdatabase:: Executesql](#executesql)|執行 SQL 陳述式。 會傳回資料錄。|
+|[CDatabase::ExecuteSQL](#executesql)|執行 SQL 陳述式。 會傳回資料錄。|
 |[CDatabase::GetBookmarkPersistence](#getbookmarkpersistence)|識別透過此書籤會保存在資料錄集物件的作業。|
-|[Getconnect](#getconnect)|傳回用來連接的 ODBC 連接字串`CDatabase`到資料來源的物件。|
+|[CDatabase::GetConnect](#getconnect)|傳回用來連接的 ODBC 連接字串`CDatabase`到資料來源的物件。|
 |[CDatabase::GetCursorCommitBehavior](#getcursorcommitbehavior)|識別的認可交易，以開啟資料錄集物件上的效果。|
 |[CDatabase::GetCursorRollbackBehavior](#getcursorrollbackbehavior)|識別開啟的資料錄集物件上回復交易的效果。|
 |[CDatabase::GetDatabaseName](#getdatabasename)|傳回目前使用中資料庫的名稱。|
 |[CDatabase::IsOpen](#isopen)|傳回非零值如果`CDatabase`物件目前連接到資料來源。|
 |[CDatabase::OnSetOptions](#onsetoptions)|由架構呼叫以設定標準的連接選項。 預設實作會設定查詢逾時值。 您可以藉由呼叫來建立這些事先`SetQueryTimeout`。|
-|[Openex](#open)|建立與資料來源 （透過 ODBC 驅動程式） 的連接。|
+|[CDatabase::Open](#open)|建立與資料來源 （透過 ODBC 驅動程式） 的連接。|
 |[CDatabase::OpenEx](#openex)|建立與資料來源 （透過 ODBC 驅動程式） 的連接。|
 |[CDatabase::Rollback](#rollback)|反轉目前交易期間所做的變更。 資料來源會傳回其先前的狀態，在定義`BeginTrans`呼叫時，不變。|
 |[CDatabase::SetLoginTimeout](#setlogintimeout)|設定之後，資料來源的連線嘗試會逾時秒數。|
@@ -111,11 +111,11 @@ class CDatabase : public CObject
 資料來源是由一些資料庫管理系統 (DBMS) 所裝載的資料的特定執行個體。 範例包括 Microsoft SQL Server、 Microsoft Access、 Borland dBASE 和 xBASE。 您可以有一或多個`CDatabase`作用一次在您的應用程式中的物件。
 
 > [!NOTE]
->  如果您正在使用的資料存取物件 (DAO) 類別，而不是開放式資料庫連接 (ODBC) 類別，使用類別[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)改。 如需詳細資訊，請參閱文章[概觀： 資料庫程式設計](../../data/data-access-programming-mfc-atl.md)。
+>  如果您正在使用的資料存取物件 (DAO) 類別，而不是開放式資料庫連接 (ODBC) 類別，使用類別[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)改。 如需詳細資訊，請參閱文章[概觀：資料庫程式設計](../../data/data-access-programming-mfc-atl.md)。
 
 若要使用`CDatabase`，建構`CDatabase`物件並呼叫其`OpenEx`成員函式。 這會開啟連接。 當您然後建構`CRecordset`物件來操作連線的資料來源中，傳遞的資料錄集建構函式的指標，您`CDatabase`物件。 當您完成使用連接時，呼叫`Close`成員函式，並終結`CDatabase`物件。 `Close` 關閉先前未關閉任何資料錄集。
 
-如需詳細資訊`CDatabase`，請參閱文章[資料來源 (ODBC)](../../data/odbc/data-source-odbc.md)並[概觀： 資料庫程式設計](../../data/data-access-programming-mfc-atl.md)。
+如需詳細資訊`CDatabase`，請參閱文章[資料來源 (ODBC)](../../data/odbc/data-source-odbc.md)和[概觀：資料庫程式設計](../../data/data-access-programming-mfc-atl.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -146,7 +146,7 @@ BOOL BeginTrans();
 > [!CAUTION]
 >  根據您的 ODBC 驅動程式，開啟資料錄集，然後再呼叫`BeginTrans`呼叫時可能會造成問題`Rollback`。 您應該檢查您正在使用的特定驅動程式。 比方說，當包含 Microsoft ODBC Desktop Driver Pack 3.0 在 Microsoft Access 驅動程式，您必須負責 Jet 資料庫引擎的需求，您應該不會開始上已開啟的資料指標的任何資料庫的交易。 在 MFC 資料庫類別中，開啟的資料指標表示開啟`CRecordset`物件。 如需詳細資訊，請參閱 <<c0> [ 技術提示 68](../../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md)。
 
-`BeginTrans` 可能也會鎖定資料錄在伺服器上，視要求的並行處理和資料來源的功能而定。 鎖定資料的相關資訊，請參閱文章[資料錄集： 鎖定資料錄 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)。
+`BeginTrans` 可能也會鎖定資料錄在伺服器上，視要求的並行處理和資料來源的功能而定。 鎖定資料的相關資訊，請參閱本文[資料錄集：鎖定資料錄 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)。
 
 本文會說明使用者定義的交易[異動 (ODBC)](../../data/odbc/transaction-odbc.md)。
 
@@ -161,7 +161,7 @@ BOOL BeginTrans();
 
 ### <a name="example"></a>範例
 
-  請參閱文章[異動： 資料錄集 (ODBC) 中執行異動](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。
+  請參閱文章[交易：執行異動 (ODBC) 資料錄集中](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。
 
 ##  <a name="bindparameters"></a>  CDatabase::BindParameters
 
@@ -288,9 +288,9 @@ BOOL CommitTrans();
 
 ### <a name="example"></a>範例
 
-  請參閱文章[異動： 資料錄集 (ODBC) 中執行異動](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。
+  請參閱文章[交易：執行異動 (ODBC) 資料錄集中](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。
 
-##  <a name="executesql"></a>  Cdatabase:: Executesql
+##  <a name="executesql"></a>  CDatabase::ExecuteSQL
 
 當您需要直接執行 SQL 命令時，請呼叫此成員函式。
 
@@ -341,9 +341,9 @@ DWORD GetBookmarkPersistence() const;
 |SQL_BP_UPDATE|之後的資料列的書籤無效`Update`該資料列上的作業。|
 |SQL_BP_OTHER_HSTMT|與一個記錄集物件相關聯的書籤在第二個記錄集上有效。|
 
-如需有關這個傳回值的詳細資訊，請參閱 ODBC API 函式`SQLGetInfo`Windows SDK 中。 如需書籤的詳細資訊，請參閱文章[資料錄集： 書籤和絕對位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。
+如需有關這個傳回值的詳細資訊，請參閱 ODBC API 函式`SQLGetInfo`Windows SDK 中。 如需有關書籤的詳細資訊，請參閱[資料錄集：書籤和絕對位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。
 
-##  <a name="getconnect"></a>  Getconnect
+##  <a name="getconnect"></a>  CDatabase::GetConnect
 
 呼叫此成員函式，來擷取在呼叫期間所使用的連接字串`OpenEx`或是`Open`連線`CDatabase`到資料來源的物件。
 
@@ -600,7 +600,7 @@ BOOL Rollback();
 
 ### <a name="example"></a>範例
 
-  請參閱文章[異動： 資料錄集 (ODBC) 中執行異動](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。
+  請參閱文章[交易：執行異動 (ODBC) 資料錄集中](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。
 
 ##  <a name="setlogintimeout"></a>  CDatabase::SetLoginTimeout
 

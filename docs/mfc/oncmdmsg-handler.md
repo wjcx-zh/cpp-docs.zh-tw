@@ -10,12 +10,12 @@ helpviewer_keywords:
 - handlers, OnCmdMessage [MFC]
 - OnCmdMessage method [MFC]
 ms.assetid: 8df07024-506f-47e7-bba9-1c3bc5ad8ab6
-ms.openlocfilehash: 37b3d5ffa3e6492c8c00b8b22eba58d09fad51f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ed2e4c09e2fe413d29ad9953dbb8a03c106e86c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643166"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274592"
 ---
 # <a name="oncmdmsg-handler"></a>OnCmdMsg 處理常式
 
@@ -23,9 +23,9 @@ ms.locfileid: "50643166"
 
 每個命令目標類別可能會覆寫 `OnCmdMsg` 成員函式。 覆寫會讓每個類別將命令路由傳送到下一個特定目標。 框架視窗中，比方說，一律將命令路由至其目前的子視窗或 檢視表中所示[標準命令路由](../mfc/command-routing.md)。
 
-`CCmdTarget` 的預設 `OnCmdMsg` 實作會使用命令目標類別的訊息對應，搜尋每一個接收到的命令訊息的處理函式，其與搜尋標準訊息的方式相同。 如果找到符合的項目，便會呼叫處理常式。 搜尋訊息對應中會說明[如何架構搜尋訊息對應](../mfc/how-the-framework-searches-message-maps.md)。
+
+  `CCmdTarget` 的預設 `OnCmdMsg` 實作會使用命令目標類別的訊息對應，搜尋每一個接收到的命令訊息的處理函式，其與搜尋標準訊息的方式相同。 如果找到符合的項目，便會呼叫處理常式。 搜尋訊息對應中會說明[如何架構搜尋訊息對應](../mfc/how-the-framework-searches-message-maps.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [架構如何呼叫處理常式](../mfc/how-the-framework-calls-a-handler.md)
-

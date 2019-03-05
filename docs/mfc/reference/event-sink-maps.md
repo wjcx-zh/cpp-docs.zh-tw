@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - event sink maps [MFC]
 ms.assetid: a9757eb2-5f4a-45ec-a2cd-ce5eec85b16f
-ms.openlocfilehash: 3e75f1d880ce767b6fdbb61b4877f0748ba779f4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8e33636253b269692f87f99980b9da0cd60867ee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518927"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285577"
 ---
 # <a name="event-sink-maps"></a>事件接收對應
 

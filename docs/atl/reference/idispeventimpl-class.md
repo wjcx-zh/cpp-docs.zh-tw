@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
-ms.openlocfilehash: 75946005acc22874b17ee806cd89ec99095f9c35
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8de620cd6e2433375284f6493b5117c40a356603
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524296"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283198"
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl 類別
 
@@ -203,7 +203,7 @@ VARTYPE GetUserDefinedType(
 
 ### <a name="parameters"></a>參數
 
-*PTI*<br/>
+*pTI*<br/>
 [in]指標[ITypeInfo](/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)包含使用者定義類型的介面。
 
 *hrt*<br/>

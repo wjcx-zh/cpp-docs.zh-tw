@@ -1,21 +1,21 @@
 ---
-title: 如何：在資料管線中使用轉換程式
+title: HOW TO：資料管線中使用轉換程式
 ms.date: 11/04/2016
 helpviewer_keywords:
 - transformer class, example
 - data pipelines, using transformer [Concurrency Runtime]
 - using transformer in data pipelines [Concurrency Runtime]
 ms.assetid: ca49cb3f-4dab-4b09-a9c9-d3a109ae4c29
-ms.openlocfilehash: b94cf3fb7554ba32c03a404fa6616ef1b187e008
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59c4854eea985b3c91fad6e7dc6c47ca9b07d333
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461421"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291466"
 ---
-# <a name="how-to-use-transformer-in-a-data-pipeline"></a>如何：在資料管線中使用轉換程式
+# <a name="how-to-use-transformer-in-a-data-pipeline"></a>HOW TO：資料管線中使用轉換程式
 
-本主題包含基本範例，示範如何使用[concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md)資料管線中的類別。 使用資料管線執行映像處理的更完整範例，請參閱 <<c0> [ 逐步解說： 建立影像處理網路](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)。
+本主題包含基本範例，示範如何使用[concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md)資料管線中的類別。 使用資料管線執行映像處理的更完整範例，請參閱[逐步解說：建立映像處理網路](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)。
 
 *資料管線*是並行程式設計中常見的模式。 資料管線是由一系列的階段，其中每個階段會執行工作，並接著將該工作的結果傳遞至下一個階段所組成。 `transformer`類別資料中的主要元件管線因為它會接收輸入的值，該值，在執行工作，然後產生的結果，若要使用的另一個元件。
 
@@ -59,4 +59,3 @@ The result is -42.
 [非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [非同步訊息區](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [逐步解說：建立影像處理網路](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)
-

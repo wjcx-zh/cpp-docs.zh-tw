@@ -1,25 +1,26 @@
 ---
-title: Windows Sockets：資料流通訊端
+title: Windows Sockets:Stream 通訊端
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], stream sockets
 - sockets [MFC], stream sockets
 - stream sockets [MFC]
 ms.assetid: 31faaa34-a995-493f-a30b-b8115293d619
-ms.openlocfilehash: 298428bd5e81d11eb62907dfbac39acda24524f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91f06c4a36e76638708edf085987e51418913fd6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560221"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271290"
 ---
-# <a name="windows-sockets-stream-sockets"></a>Windows Sockets：資料流通訊端
+# <a name="windows-sockets-stream-sockets"></a>Windows Sockets:Stream 通訊端
 
 本文說明資料流通訊端 (其中一種可以使用的 Windows Socket 類型)。 (另一個型別是[資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)。)
 
 資料流通訊端提供不含記錄界限的資料流：可以是雙向的位元組資料流 (應用程式是全雙工的：它可以透過通訊端進行傳送和接收)。 資料流可以是循序傳送的不重複的資料。 (「循序」表示封包會依傳送的順序傳送。 「不重複」是指您一次只能取得一個特定封包)。其中保證會收到資料流訊息的回應，因此資料流相當適合處理大量的資料。
 
-網路傳輸層可能會將資料拆開或分組為適當大小的封包。 `CSocket` 類別會為您處理封裝和解除封裝的步驟。
+網路傳輸層可能會將資料拆開或分組為適當大小的封包。 
+  `CSocket` 類別會為您處理封裝和解除封裝的步驟。
 
 資料流採用明確的連線：通訊端 A 要求與通訊端 B 進行連線，通訊端 B 接受或拒絕連線要求。
 
@@ -43,5 +44,4 @@ ms.locfileid: "50560221"
 ## <a name="see-also"></a>另請參閱
 
 [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)<br/>
-[Windows Sockets：背景](../mfc/windows-sockets-background.md)
-
+[Windows Sockets:背景](../mfc/windows-sockets-background.md)

@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - progress_reporter class
 ms.assetid: b836efab-2d05-4649-b6fa-d15236f1f813
-ms.openlocfilehash: 5fc433beea560001badf919f55dbff45428ef876
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dac74085278418153ddec502f6257ce13885704d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464853"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282535"
 ---
 # <a name="progressreporter-class"></a>progress_reporter 類別
 
-進度報告程式類別允許報告特定類型的進度通知。 每個 progress_reporter 物件都會繫結至特定非同步動作或作業。
+進度報告程式類別可供報告特定類型的進度通知。 每個 progress_reporter 物件都會繫結至特定非同步動作或作業。
 
 ## <a name="syntax"></a>語法
 

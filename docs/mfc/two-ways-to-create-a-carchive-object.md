@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-ms.openlocfilehash: a97223602e9994647a8af16cc68de5394494c1ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80e3e73840bce53691c3f5fdafb62c60bdb8f832
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659923"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273799"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>建立 CArchive 物件的兩種方式
 
@@ -60,7 +60,7 @@ ms.locfileid: "50659923"
 
    第二個引數`CArchive`建構函式是一個列舉的值，指定是否會對檔案中儲存或載入資料或使用封存。 `Serialize`函式，物件會檢查此狀態，藉由呼叫`IsStoring`封存物件的函式。
 
-當您完成儲存或載入資料或從`CArchive`物件、 將它關閉。 雖然`CArchive`(和`CFile`) 封存 （和檔案），將會自動關閉物件，它是很好的作法明確因為讓從錯誤復原更為容易。 如需錯誤處理的詳細資訊，請參閱文章[例外狀況： 攔截及刪除例外狀況](../mfc/exceptions-catching-and-deleting-exceptions.md)。
+當您完成儲存或載入資料或從`CArchive`物件、 將它關閉。 雖然`CArchive`(和`CFile`) 封存 （和檔案），將會自動關閉物件，它是很好的作法明確因為讓從錯誤復原更為容易。 如需有關錯誤處理的詳細資訊，請參閱[例外狀況：攔截及刪除例外狀況](../mfc/exceptions-catching-and-deleting-exceptions.md)。
 
 #### <a name="to-close-the-carchive-object"></a>關閉 CArchive 物件
 
@@ -71,4 +71,3 @@ ms.locfileid: "50659923"
 ## <a name="see-also"></a>另請參閱
 
 [序列化：序列化物件](../mfc/serialization-serializing-an-object.md)
-

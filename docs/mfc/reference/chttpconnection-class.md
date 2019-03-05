@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CHttpConnection [MFC], CHttpConnection
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
-ms.openlocfilehash: 7d11420ca48bfcecbd2534123a36364314b9651c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7a91454b9a8619cda155f33391e5d02ae7653b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610999"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273604"
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection 類別
 
@@ -39,7 +39,7 @@ class CHttpConnection : public CInternetConnection
 
 |名稱|描述|
 |----------|-----------------|
-|[Chttpconnection::](#openrequest)|會開啟 HTTP 要求。|
+|[CHttpConnection::OpenRequest](#openrequest)|會開啟 HTTP 要求。|
 
 ## <a name="remarks"></a>備註
 
@@ -119,7 +119,7 @@ CHttpConnection(
 |--------------------|--------------------|---------------------------------|---------------------------------|
 |NULL 或""|NULL 或""|「 匿名 」|使用者的電子郵件名稱|
 |非 NULL 字串|NULL 或""|*pstrUserName*|" "|
-|NULL 的非 NULL 字串|錯誤|錯誤||
+|NULL 的非 NULL 字串|ERROR|ERROR||
 |非 NULL 字串|非 NULL 字串|*pstrUserName*|*pstrPassword*|
 
 *dwFlags*<br/>
@@ -129,7 +129,7 @@ CHttpConnection(
 
 您永遠不會建立`CHttpConnection`直接。 相反地，您藉由呼叫，會在建立物件時[cinternetsession:: Gethttpconnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)。
 
-##  <a name="openrequest"></a>  Chttpconnection::
+##  <a name="openrequest"></a>  CHttpConnection::OpenRequest
 
 呼叫此成員函式可開啟 HTTP 連線。
 
@@ -179,7 +179,7 @@ INTERNET_ FLAG_ * 旗標的任意組合。 請參閱 < 備註 > 一節，如需�
 *nVerb*<br/>
 與 HTTP 要求類型相關聯的數字。 可以是下列其中一項：
 
-|HTTP 要求類型|*nVerb*值|
+|HTTP 要求類型|*nVerb* value|
 |-----------------------|-------------------|
 |HTTP_VERB_POST|0|
 |HTTP_VERB_GET|1|
@@ -205,7 +205,7 @@ INTERNET_ FLAG_ * 旗標的任意組合。 請參閱 < 備註 > 一節，如需�
 |INTERNET_FLAG_SECURE|使用安全的交易語意。 這會轉譯成使用 SSL/百分比，才有意義的 HTTP 要求|
 |INTERNET_FLAG_NO_AUTO_REDIRECT|只適用於 HTTP、 指定的重新導向應該不會自動以處理[CHttpFile::SendRequest](../../mfc/reference/chttpfile-class.md#sendrequest)。|
 
-覆寫`dwContext`預設可設定的內容識別碼以您選擇的值。 內容識別碼是與這個特定作業的相關聯`CHttpConnection`所建立的物件及其[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件。 若要傳回的值[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供與識別此作業的狀態。 請參閱文章[網際網路前幾個步驟： WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
+覆寫`dwContext`預設可設定的內容識別碼以您選擇的值。 內容識別碼是與這個特定作業的相關聯`CHttpConnection`所建立的物件及其[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件。 若要傳回的值[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供與識別此作業的狀態。 請參閱文章[網際網路前幾個步驟：WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
 
 此函式可能擲回例外狀況。
 

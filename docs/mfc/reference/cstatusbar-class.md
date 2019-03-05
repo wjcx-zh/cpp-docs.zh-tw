@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: 70d700197e3d249812e8b09a2cba744a0fbc9803
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7aa577d237c1800ca9df3f0af4c44acdaae9ae2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649276"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279493"
 ---
 # <a name="cstatusbar-class"></a>CStatusBar 類別
 
@@ -108,7 +108,7 @@ class CStatusBar : public CControlBar
 
 呼叫[SetPaneStyle](#setpanestyle)更新狀態列窗格的樣式。
 
-如需有關使用`CStatusBar`，請參閱文章[MFC 中的狀態列實作](../../mfc/status-bar-implementation-in-mfc.md)並[技術提示 31： 控制列](../../mfc/tn031-control-bars.md)。
+如需有關使用`CStatusBar`，請參閱文章[MFC 中的狀態列實作](../../mfc/status-bar-implementation-in-mfc.md)和[技術提示 31:控制列](../../mfc/tn031-control-bars.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -163,7 +163,7 @@ virtual BOOL Create(
 *pParentWnd*<br/>
 指標[CWnd](../../mfc/reference/cwnd-class.md)其 Windows 視窗是 [狀態] 列的父代的物件。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 狀態列樣式。 除了標準的 Windows[樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)，支援這些樣式。
 
 - CBRS_TOP 控制列是在框架視窗的頂端。
@@ -209,7 +209,7 @@ virtual BOOL CreateEx(
 
 如需這些樣式的詳細資訊，請參閱[CStatusBarCtrl 的設定](../../mfc/settings-for-the-cstatusbarctrl.md)。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 狀態列樣式。 預設值會指定顯示狀態列，建立框架視窗的底部。 套用狀態列控制項的樣式中所列的任何組合[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)並[CDialogBar::Create](../../mfc/reference/cdialogbar-class.md#create)。 不過，此參數應該一律包含 WS_CHILD 和 WS_VISIBLE 樣式。
 
 *nID*<br/>

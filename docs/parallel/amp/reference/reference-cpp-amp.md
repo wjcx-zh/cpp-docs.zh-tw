@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, reference
 ms.assetid: 372a8aed-8a53-48c9-996f-9c3cf09c9fa8
-ms.openlocfilehash: 5e6905adee6e6cad0c0c49488352f4a039aa27eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a334c7873675183dc06abfc2fe51472190996bf3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630029"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257503"
 ---
 # <a name="reference-c-amp"></a>參考 (C++ AMP)
 
@@ -41,4 +41,3 @@ ms.locfileid: "50630029"
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 C + + AMP 利用通常是獨立圖形顯示卡上的圖形處理單元 (GPU) 的資料平行硬體來加速您的 c + + 程式碼的執行。
-

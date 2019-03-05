@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 88ca218d4cb4e70dcc46ba04bbdfb7a9d12eb808
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 81b52d6876b0691c09db0e9dcf7fa7d491f999ca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657574"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305168"
 ---
 # <a name="cmap-class"></a>CMap 類別
 
@@ -63,7 +63,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 *ARG_KEY*<br/>
 用於資料類型*金鑰*引數; 通常參考*金鑰*。
 
-*值*<br/>
+*VALUE*<br/>
 在對應中儲存之物件的類別。
 
 *ARG_VALUE*<br/>
@@ -229,7 +229,7 @@ void GetNextAssoc(
 *rKey*<br/>
 指定傳回的索引鍵的擷取的項目。
 
-*值*<br/>
+*VALUE*<br/>
 指定的對應值的類型樣板參數。
 
 *rValue*<br/>
@@ -341,7 +341,7 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 *key*<br/>
 指定識別的項目，是要查閱的索引鍵。
 
-*值*<br/>
+*VALUE*<br/>
 指定要查閱之值的類型。
 
 *rValue*<br/>
@@ -359,7 +359,7 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 
 [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]
 
-##  <a name="operator_at"></a>  CMap::operator]
+##  <a name="operator_at"></a>  CMap::operator [ ]
 
 方便替代`SetAt`成員函式。
 
@@ -369,7 +369,7 @@ VALUE& operator[](arg_key key);
 
 ### <a name="parameters"></a>參數
 
-*值*<br/>
+*VALUE*<br/>
 指定的對應值的類型樣板參數。
 
 *ARG_KEY*<br/>

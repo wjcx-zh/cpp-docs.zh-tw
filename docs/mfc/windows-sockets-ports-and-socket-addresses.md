@@ -1,5 +1,5 @@
 ---
-title: Windows Sockets：連接埠和通訊端位址
+title: Windows Sockets:連接埠和通訊端位址
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ports [MFC], definition
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - sockets [MFC], addresses
 - sockets [MFC], ports
 ms.assetid: e050261a-9285-4f31-a1c5-6c8033af5b4a
-ms.openlocfilehash: d132001cb792877e3d476508a6a5bb456dfb5987
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c33ec1376c1898272cf80e8d77c5cc273e16f9de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631353"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277767"
 ---
-# <a name="windows-sockets-ports-and-socket-addresses"></a>Windows Sockets：連接埠和通訊端位址
+# <a name="windows-sockets-ports-and-socket-addresses"></a>Windows Sockets:連接埠和通訊端位址
 
 這篇文章說明條款"port"和"address"做為與 Windows 通訊端搭配使用。
 
@@ -40,17 +40,16 @@ ms.locfileid: "50631353"
 
 如需詳細資訊，請參閱:
 
-- [Windows Sockets：使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets:使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets：搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets:搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets：如何搭配使用通訊端與封存](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows Sockets:通訊端與封存的運作方式](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows Sockets：資料流通訊端](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets:Stream 通訊端](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets：資料通訊端](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets:資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>另請參閱
 
 [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)
-

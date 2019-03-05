@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-ms.openlocfilehash: 9635b7e045812cc90c5d6e9662b8475e411a0b48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1e0519e1351a48bbd969168d62f163c9dde7e7e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654203"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259954"
 ---
 # <a name="database-support-mfc-application-wizard"></a>MFC 應用程式精靈、資料庫支援
 
@@ -24,7 +24,7 @@ ms.locfileid: "50654203"
    |選項|描述|
    |------------|-----------------|
    |**無**|不會提供資料庫支援。 這是預設選項。|
-   |**僅限標頭檔**|提供您的應用程式的資料庫支援基本的層級。 如果您選取 ODBC 支援底下**用戶端類型**，包含專案中的標頭檔 AFXDB 的 MFC 應用程式精靈。H. 它會新增連結程式庫，但它不會建立任何資料庫特有類別。 您可以稍後再建立資料錄集，並使用它們來檢查和更新記錄。 如果您選取 OLE DB 支援底下**用戶端類型**，會包含下列標頭檔： ATLBASE。H AFXOLEDB。H ATLPLUS。H|
+   |**僅限標頭檔**|提供您的應用程式的資料庫支援基本的層級。 如果您選取 ODBC 支援底下**用戶端類型**，包含專案中的標頭檔 AFXDB 的 MFC 應用程式精靈。H. 它會新增連結程式庫，但它不會建立任何資料庫特有類別。 您可以稍後再建立資料錄集，並使用它們來檢查和更新記錄。 如果您選取 OLE DB 支援底下**用戶端類型**，會包含下列標頭檔：ATLBASE。H AFXOLEDB。H ATLPLUS。H|
    |**不附檔案支援的資料庫檢視**|包含資料庫標頭檔、 連結程式庫、 資料錄檢視和資料錄集。 (僅適用於應用程式**文件/檢視架構支援**中選取選項[應用程式類型](../../mfc/reference/application-type-mfc-application-wizard.md)頁面。)這個選項會包含文件支援，但沒有序列化支援。 如果您選擇要包含的資料庫檢視，您必須指定資料的來源。|
    |**附檔案支援的資料庫檢視**|包含資料庫標頭檔、 連結程式庫、 資料錄檢視和資料錄集。 (僅適用於應用程式**文件/檢視架構支援**中選取選項**應用程式類型**頁面。)此選項支援文件序列化，您可以使用，例如，若要更新的使用者設定檔。 資料庫應用程式通常會對各個記錄而不是每個檔案為基礎，因此不需要序列化。 不過，您可能必須序列化的特殊用途。 如果您選擇要包含的資料庫檢視，您必須指定資料的來源。|
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CommandHandler function
 ms.assetid: 662bc7bf-4a10-42b3-986d-d8bae4f63551
-ms.openlocfilehash: 8259dfe8ead608876b3637d1dca9c3e808bb419d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c8ae2ae3b68b01c00ce1c6441fa9a3150d4c334b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694630"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285057"
 ---
 # <a name="commandhandler"></a>CommandHandler
 
@@ -55,4 +55,3 @@ LRESULT CommandHandler(
 [實作視窗](../atl/implementing-a-window.md)<br/>
 [訊息對應](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](/windows/desktop/controls/wm-notify)
-

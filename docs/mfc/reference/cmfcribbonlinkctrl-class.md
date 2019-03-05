@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCRibbonLinkCtrl [MFC], OpenLink
 - CMFCRibbonLinkCtrl [MFC], SetLink
 ms.assetid: 77ae1941-e0ab-4a9d-911e-1752d34c079b
-ms.openlocfilehash: 6e20b8fd2c8b40f907301c36f2aa3acef144d7b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f47e5a3a25120370bd618ac3a89de76761fa61a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559142"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287787"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl 類別
 
@@ -125,7 +125,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 
 ### <a name="parameters"></a>參數
 
-[in]*src*<br/>
+[in] *src*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -137,7 +137,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -165,7 +165,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -189,8 +189,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 
 ### <a name="parameters"></a>參數
 
-[in]*CDC&#42;*<br/>
-[in]*CRect*<br/>
+[in] *CDC&#42;*<br/>
+[in] *CRect*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -214,7 +214,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -226,7 +226,7 @@ virtual void OnMouseMove(CPoint point);
 
 ### <a name="parameters"></a>參數
 
-[in]*點*<br/>
+[in] *point*<br/>
 
 ### <a name="remarks"></a>備註
 

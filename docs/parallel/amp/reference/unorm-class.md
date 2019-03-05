@@ -6,12 +6,12 @@ f1_keywords:
 - AMP_SHORT_VECTORS/unorm
 - AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
-ms.openlocfilehash: b485d5efbfbcedbb1e11a3e212465340f0413ee4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 059cd3a388d67e540a91146f2a287c375fb02bd1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491555"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300800"
 ---
 # <a name="unorm-class"></a>unorm 類別
 
@@ -52,7 +52,7 @@ class unorm;
 
 **標頭：** amp_short_vectors.h
 
-**命名空間：** concurrency:: graphics
+**命名空間：** Concurrency:: graphics
 
 ##  <a name="ctor"></a> unorm
 
@@ -90,7 +90,7 @@ inline explicit unorm(
 
 ### <a name="parameters"></a>參數
 
-*（_V)*<br/>
+*_V*<br/>
 用來初始化的值。
 
 *_Other*<br/>

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - operators [ATL]
 ms.assetid: 58ccd252-2869-45ee-8a5c-3ca40ee7f8a2
-ms.openlocfilehash: 361b0316e27ee06c64b3ed5e11c6aab10210596f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f1bd4f88b8d3a37f051a208a887c5264f61955a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476254"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293494"
 ---
 # <a name="atl-operators"></a>ATL 運算子
 
@@ -18,11 +18,11 @@ ms.locfileid: "50476254"
 |運算子|描述|
 |--------------|-----------------|
 |[operator ==](#operator_eq_eq)|比較兩個`CSid`物件或`SID`結構是否相等。|
-|[運算子 ！ =](#operator_neq)|比較兩個`CSid`物件或`SID`結構是否不相等。|
-|[運算子 <](#operator_lt)|測試是否`CSid`物件或`SID`運算子左邊的結構是否小於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。|
-|[運算子 >](#operator_gt)|測試是否`CSid`物件或`SID`運算子左邊的結構是否大於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。|
-|[運算子 < =](#operator_lt__eq)|測試是否`CSid`物件或`SID`運算子左邊的結構是否小於或等於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。|
-|[運算子 > =](#operator_gt__eq)|測試是否`CSid`物件或`SID`運算子左邊的結構是否大於或等於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。|
+|[operator !=](#operator_neq)|比較兩個`CSid`物件或`SID`結構是否不相等。|
+|[operator <](#operator_lt)|測試是否`CSid`物件或`SID`運算子左邊的結構是否小於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。|
+|[operator >](#operator_gt)|測試是否`CSid`物件或`SID`運算子左邊的結構是否大於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。|
+|[operator <=](#operator_lt__eq)|測試是否`CSid`物件或`SID`運算子左邊的結構是否小於或等於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。|
+|[operator >=](#operator_gt__eq)|測試是否`CSid`物件或`SID`運算子左邊的結構是否大於或等於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。|
 
 ## <a name="requirements"></a>需求
 
@@ -92,7 +92,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 此運算子處理程式碼的地址`CSid`物件或`SID`結構，並實作以提供與 c + + 標準程式庫集合類別的相容性。
 
-##  <a name="operator_gt"></a>  運算子 >
+##  <a name="operator_gt"></a>  operator >
 
 測試是否`CSid`物件或`SID`運算子左邊的結構是否大於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。
 
@@ -140,7 +140,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 此運算子處理程式碼的地址`CSid`物件或`SID`結構，並實作以提供與 c + + 標準程式庫集合類別的相容性。
 
-##  <a name="operator_gt__eq"></a>  運算子 > =
+##  <a name="operator_gt__eq"></a>  operator >=
 
 測試是否`CSid`物件或`SID`運算子左邊的結構是否大於或等於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。
 
@@ -163,4 +163,3 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>備註
 
 此運算子處理程式碼的地址`CSid`物件或`SID`結構，並實作以提供與 c + + 標準程式庫集合類別的相容性。
-

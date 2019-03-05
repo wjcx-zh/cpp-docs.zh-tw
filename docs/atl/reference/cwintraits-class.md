@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CFrameWinTraits class
 - CControlWinTraits class
 ms.assetid: f78f486e-6d9c-42c6-8e86-371e05aa7e59
-ms.openlocfilehash: 9e60eb773573142d0a4498c42a98f6e9c4c49a7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 840433ffb325a4f181848371306607b62373e75a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532596"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280457"
 ---
 # <a name="cwintraits-class"></a>CWinTraits 類別
 
@@ -60,15 +60,15 @@ ATL 提供三個預先定義的樣板的特製化此常用的視窗樣式的組�
 
 - `CControlWinTraits`
 
-   專為標準控制項的視窗。 使用下列標準樣式： WS_CHILD、 WS_VISIBLE、 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS。 沒有延伸的樣式。
+   專為標準控制項的視窗。 使用下列標準樣式：WS_CHILD、 WS_VISIBLE、 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS。 沒有延伸的樣式。
 
 - `CFrameWinTraits`
 
-   專為標準的框架視窗。 包含所使用的標準樣式： WS_OVERLAPPEDWINDOW、 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS。 包含用於延伸的樣式： WS_EX_APPWINDOW 和 WS_EX_WINDOWEDGE。
+   專為標準的框架視窗。 使用標準樣式包括：WS_OVERLAPPEDWINDOW、 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS。 使用延伸的樣式包括：WS_EX_APPWINDOW 和 WS_EX_WINDOWEDGE。
 
 - `CMDIChildWinTraits`
 
-   專為標準的 MDI 子視窗。 包含所使用的標準樣式： WS_OVERLAPPEDWINDOW、 WS_CHILD、 WS_VISIBLE、 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS。 包含用於延伸的樣式： WS_EX_MDICHILD。
+   專為標準的 MDI 子視窗。 使用標準樣式包括：WS_OVERLAPPEDWINDOW、 WS_CHILD、 WS_VISIBLE、 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS。 使用延伸的樣式包括：WS_EX_MDICHILD.
 
 如果您想要確保特定樣式所設定的所有執行個體同時允許要在每個執行個體為基礎，設定其他樣式的視窗類別使用[CWinTraitsOR](../../atl/reference/cwintraitsor-class.md)改。
 
@@ -86,7 +86,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 用來建立視窗的標準的樣式。 如果*cheaderctrl:: Create*為 0，範本的樣式值 (`t_dwStyle`) 會傳回。 如果*cheaderctrl:: Create*為非零值， *cheaderctrl:: Create*會傳回。
 
 ### <a name="return-value"></a>傳回值

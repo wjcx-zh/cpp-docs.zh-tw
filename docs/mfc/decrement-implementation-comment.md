@@ -7,16 +7,17 @@ helpviewer_keywords:
 - MFC source files, Implementation comment
 - comments, Implementation comments
 ms.assetid: 4d799c07-8e71-4a6b-90ab-8282d6ff48ce
-ms.openlocfilehash: ab69fa25cc8dece635097f17bae97f831f7ec87f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 377997b66c5b9c005d1e1bee24890b756621b672
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552889"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261042"
 ---
 # <a name="-implementation-comment"></a>// 實作註解
 
-`// Implementation` 區段是所有 MFC 類別宣告最重要的部分。
+
+  `// Implementation` 區段是所有 MFC 類別宣告最重要的部分。
 
 此區段包含所有實作詳細資料。 成員變數和成員函式二者可能都會出現在此區段中。 這一行以下的所有內容在 MFC 的未來版本中會有所變更。 除非您無法避開它，否則不應該依賴 `// Implementation` 這一行下方的詳細資料。 此外，雖然有些實作技術提示中曾討論過，但在實作行下宣告的成員並未記載。 因為事實上是函式會覆寫被視為實作詳細資料的基底類別實作，所以無論基底類別函式是在哪個區段定義的，覆寫基底類別中的虛擬函式都會包含在此區段中。 一般來說，這些成員是受到保護的，不過並不是始終受保護。
 
@@ -33,4 +34,3 @@ ms.locfileid: "50552889"
 [屬性註解](../mfc/decrement-attributes-comment.md)<br/>
 [作業註解](../mfc/decrement-operations-comment.md)<br/>
 [可覆寫註解](../mfc/decrement-overridables-comment.md)
-

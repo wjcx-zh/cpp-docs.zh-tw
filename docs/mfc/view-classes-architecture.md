@@ -9,12 +9,12 @@ helpviewer_keywords:
 - control views [MFC]
 - view classes [MFC], architecture
 ms.assetid: 8894579a-1436-441e-b985-83711061e495
-ms.openlocfilehash: 7855f152e340b488d64f01dbf290034e1bdbc9b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15b120f0354c483480351b8d3abf995334779411
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647290"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299409"
 ---
 # <a name="view-classes-architecture"></a>檢視類別 (架構)
 
@@ -65,10 +65,9 @@ Windows 控制項相關聯的所有檢視的基底類別。 根據控制項的�
 [CListView](../mfc/reference/clistview-class.md)<br/>
 包含 Windows 清單控制項的檢視 (請參閱[CListCtrl](../mfc/reference/clistctrl-class.md))。 清單控制項的方式類似於右窗格的 [檔案總管] 中顯示圖示和字串。
 
-[Ctreeview 比較](../mfc/reference/ctreeview-class.md)<br/>
+[CTreeView](../mfc/reference/ctreeview-class.md)<br/>
 包含 Windows 樹狀目錄控制項的檢視 (請參閱[CTreeCtrl](../mfc/reference/ctreectrl-class.md))。 樹狀目錄控制項顯示圖示和類似的左窗格的 [檔案總管] 中的階層排列的字串。
 
 ## <a name="see-also"></a>另請參閱
 
 [類別概觀](../mfc/class-library-overview.md)
-

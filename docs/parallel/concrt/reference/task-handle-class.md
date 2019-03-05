@@ -8,16 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-ms.openlocfilehash: 060be8614fc3a0a93d446c747b65de82b863ab3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4193c2d1e08c1b5a43dc728edd24efd19be87268
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518875"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298083"
 ---
 # <a name="taskhandle-class"></a>task_handle 類別
 
-`task_handle` 類別代表個別的平行工作項目。 它會封裝執行工作所需的指示和資料。
+
+  `task_handle` 類別代表個別的平行工作項目。 它會封裝執行工作所需的指示和資料。
 
 ## <a name="syntax"></a>語法
 
@@ -68,7 +69,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 
 **命名空間：** concurrency
 
-##  <a name="task_handle__operator_call"></a> operator （)
+##  <a name="task_handle__operator_call"></a> operator()
 
 若要執行的工作控制代碼的工作的執行階段叫用函式呼叫運算子。
 
@@ -93,7 +94,7 @@ task_handle(const _Function& _Func);
 
 執行階段會建立一份您傳遞給建構函式的工作函式。 因此，函式中發生的任何狀態變更的物件，您將傳遞給`task_handle`物件不會出現在您的函式物件的複本。
 
-##  <a name="dtor"></a> ~ task_handle
+##  <a name="dtor"></a> ~task_handle
 
 終結`task_handle`物件。
 

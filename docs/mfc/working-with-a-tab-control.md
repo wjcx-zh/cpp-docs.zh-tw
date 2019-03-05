@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tab controls [MFC], working with
 - tab controls [MFC], using
 ms.assetid: 819488e3-4944-44b7-9483-195edb8e0aed
-ms.openlocfilehash: faf6494fe9a1d7e5a089c4bea91b8cc4abdc590d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ff4d57f9968f79a964a57b26fc79d68245c1a3e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470807"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262957"
 ---
 # <a name="working-with-a-tab-control"></a>使用索引標籤控制項
 
@@ -29,4 +29,3 @@ ms.locfileid: "50470807"
 
 [使用 CTabCtrl](../mfc/using-ctabctrl.md)<br/>
 [控制項](../mfc/controls-mfc.md)
-

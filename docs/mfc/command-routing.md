@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: add047984f5a32e505e8a739922daa137b5e671d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae9741a66e944b60dc38c1366353e43977e1ee7a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541696"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278390"
 ---
 # <a name="command-routing"></a>命令傳送
 
@@ -46,4 +46,3 @@ Windows 訊息通常會傳送至主框架視窗，但命令訊息會接著路由
 ## <a name="see-also"></a>另請參閱
 
 [架構如何呼叫處理常式](../mfc/how-the-framework-calls-a-handler.md)
-

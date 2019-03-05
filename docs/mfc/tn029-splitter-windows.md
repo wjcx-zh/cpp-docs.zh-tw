@@ -1,5 +1,5 @@
 ---
-title: TN029：分隔視窗
+title: TN029:分隔視窗
 ms.date: 11/04/2016
 f1_keywords:
 - vc.windows.splitter
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 245ad33dd7bc7d3b6365463d4d2ae9538a12bfdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c27545c6f425eda952e87c80ed1d37de9e1093a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501981"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294989"
 ---
-# <a name="tn029-splitter-windows"></a>TN029：分隔視窗
+# <a name="tn029-splitter-windows"></a>TN029:分隔視窗
 
 本提示描述 MFC [CSplitterWnd 類別](../mfc/reference/csplitterwnd-class.md)，其中提供視窗分割，並管理的其他窗格視窗調整大小。
 
@@ -54,17 +54,17 @@ A`CSplitterWnd`支援分割 windows 的兩個不同的樣式。
 
 以下是專屬於分隔視窗的詞彙的清單：
 
-`CSplitterWnd`: 提供窗格分割控制項和所有窗格上的資料列或資料行之間共用的捲軸的視窗。 您可以指定資料列和資料行之以零起始的數字 (第一個窗格是資料列 = 0 且資料行 = 0)。
+`CSplitterWnd`：提供窗格分割控制項和所有窗格上的資料列或資料行之間共用的捲軸的視窗。 您可以指定資料列和資料行之以零起始的數字 (第一個窗格是資料列 = 0 且資料行 = 0)。
 
-窗格中： 為特定應用程式視窗，`CSplitterWnd`管理。 一個窗格，通常是物件衍生自[CView 類別](../mfc/reference/cview-class.md)，但可以是任何[CWnd](../mfc/reference/cwnd-class.md)物件，具有適當的子視窗識別碼。
+窗格中：特定應用程式視窗，`CSplitterWnd`管理。 一個窗格，通常是物件衍生自[CView 類別](../mfc/reference/cview-class.md)，但可以是任何[CWnd](../mfc/reference/cwnd-class.md)物件，具有適當的子視窗識別碼。
 
 若要使用`CWnd`-衍生物件，則會傳遞至物件的 RUNTIME_CLASS`CreateView`函式，如果您使用如同`CView`-衍生的類別。 您的類別必須使用 DECLARE_DYNCREATE 和 IMPLEMENT_DYNCREATE，因為架構會在執行階段中使用動態建立。 雖然有很多的程式碼`CSplitterWnd`專屬於`CView`類別[cobject:: Iskindof](../mfc/reference/cobject-class.md#iskindof)永遠會執行這些動作之前使用。
 
-分隔器列： 資料列和資料行的窗格之間放置控制項。 它可用來調整大小的資料列或資料行的窗格。
+分隔器列：控制項之間的資料列和資料行 窗格放置。 它可用來調整大小的資料列或資料行的窗格。
 
-分隔器方塊： 控制項中動態`CSplitterWnd`可用來建立新的資料列或資料行的窗格。 它是位於最上方的垂直捲軸或水平捲軸的左邊。
+分隔器方塊：在動態控制項`CSplitterWnd`可用來建立新的資料列或資料行的窗格。 它是位於最上方的垂直捲軸或水平捲軸的左邊。
 
-分隔器交集： 垂直分割列和水平分割列的交集。 您可以將它拖曳至同時調整的資料列和資料行 窗格的大小。
+分隔器交集：垂直分割列和水平分割列的交集。 您可以將它拖曳至同時調整的資料列和資料行 窗格的大小。
 
 ## <a name="shared-scroll-bars"></a>共用的捲軸
 
@@ -140,4 +140,3 @@ A`CSplitterWnd`支援分割 windows 的兩個不同的樣式。
 
 [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
 [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
-

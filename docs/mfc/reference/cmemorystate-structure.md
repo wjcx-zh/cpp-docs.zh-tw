@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory leaks [MFC], detecting
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
-ms.openlocfilehash: 5aee7bc2f44e4c2e7851baea554d3069c928088c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a110e1345cb970c117de125bd8105e1bc86eaf94
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523425"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288125"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 結構
 
@@ -37,10 +37,10 @@ struct CMemoryState
 
 |名稱|描述|
 |----------|-----------------|
-|[Cmemorystate:: Checkpoint](#checkpoint)|取得目前的記憶體狀態快照 （檢查點）。|
-|[Cmemorystate:: Difference](#difference)|計算兩個物件的型別之間的差異`CMemoryState`。|
-|[Cmemorystate:: Dumpallobjectssince](#dumpallobjectssince)|自上一個檢查點之後，傾印目前配置的所有物件的摘要。|
-|[Cmemorystate:: Dumpstatistics](#dumpstatistics)|列印記憶體配置的統計資料`CMemoryState`物件。|
+|[CMemoryState::Checkpoint](#checkpoint)|取得目前的記憶體狀態快照 （檢查點）。|
+|[CMemoryState::Difference](#difference)|計算兩個物件的型別之間的差異`CMemoryState`。|
+|[CMemoryState::DumpAllObjectsSince](#dumpallobjectssince)|自上一個檢查點之後，傾印目前配置的所有物件的摘要。|
+|[CMemoryState::DumpStatistics](#dumpstatistics)|列印記憶體配置的統計資料`CMemoryState`物件。|
 
 ## <a name="remarks"></a>備註
 
@@ -75,7 +75,7 @@ struct CMemoryState
 
 **標頭：** afx.h
 
-##  <a name="checkpoint"></a>  Cmemorystate:: Checkpoint
+##  <a name="checkpoint"></a>  CMemoryState::Checkpoint
 
 快照摘要的記憶體，並將它儲存在這個`CMemoryState`物件。
 
@@ -133,7 +133,7 @@ BOOL Difference(
 
   範例，請參閱[CMemoryState](#cmemorystate)建構函式。
 
-##  <a name="dumpallobjectssince"></a>  Cmemorystate:: Dumpallobjectssince
+##  <a name="dumpallobjectssince"></a>  CMemoryState::DumpAllObjectsSince
 
 呼叫`Dump`類型的所有物件的函式衍生自類別`CObject`所配置 （，仍配置） 自上次[檢查點](#checkpoint)呼叫這個`CMemoryState`物件。
 
@@ -149,7 +149,7 @@ void DumpAllObjectsSince() const;
 
   範例，請參閱[CMemoryState](#cmemorystate)建構函式。
 
-##  <a name="dumpstatistics"></a>  Cmemorystate:: Dumpstatistics
+##  <a name="dumpstatistics"></a>  CMemoryState::DumpStatistics
 
 會從精簡的記憶體統計資料報表的列印`CMemoryState`會填入的物件[差異](#difference)成員函式。
 
@@ -198,4 +198,3 @@ void DumpStatistics() const;
 ## <a name="see-also"></a>另請參閱
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

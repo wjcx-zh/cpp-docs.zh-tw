@@ -22,12 +22,12 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: 96e279e8ab3080c0239f1e41895142ba23c5a7c9
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 7fd9a941210407edc3424454b3375040717a05a2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693969"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261657"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT 類別
 
@@ -90,7 +90,8 @@ class CContainedWindowT : public TBase
 
 `CContainedWindowT` 可讓您建立新的視窗由 superclassing 現有視窗類別。 `Create`方法會先註冊視窗類別以現有的類別為基礎，但使用`CContainedWindowT::WindowProc`。 `Create` 接著會建立這個新的視窗類別為基礎的視窗。 每個執行個體`CContainedWindowT`可以超級類別不同的視窗類別。
 
-`CContainedWindowT` 也支援視窗子類別化。 `SubclassWindow` 方法會將現有視窗附加至 `CContainedWindowT` 物件，並將視窗程序變更至 `CContainedWindowT::WindowProc`。 每個 `CContainedWindowT` 執行個體都可以子類別化為不同的視窗。
+`CContainedWindowT` 也支援視窗子類別化。 
+  `SubclassWindow` 方法會將現有視窗附加至 `CContainedWindowT` 物件，並將視窗程序變更至 `CContainedWindowT::WindowProc`。 每個 `CContainedWindowT` 執行個體都可以子類別化為不同的視窗。
 
 > [!NOTE]
 >  針對任何給定`CContainedWindowT`物件，呼叫`Create`或`SubclassWindow`。 您不應該叫用的相同物件上的這兩種方法。
@@ -219,7 +220,7 @@ HWND Create(
 *szWindowName*<br/>
 [in]指定視窗的名稱。 預設值是 NULL。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]視窗的樣式。 預設值是 WS_CHILD &#124; WS_VISIBLE。 如需可能值的清單，請參閱 < [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK 中。
 
 *dwExStyle*<br/>

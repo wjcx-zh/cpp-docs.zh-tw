@@ -7,20 +7,20 @@ helpviewer_keywords:
 - DCOMCNFG utility
 - DCOM, configuring in ATL
 ms.assetid: 5a8126e9-ef27-40fb-a66e-9dce8d1a7e80
-ms.openlocfilehash: 8bf85c32093051b124d007a04eed2bbf10a56039
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4845093d3343e899a18c707846145c2630d7ac1d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552642"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261488"
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG
 
-DCOMCNFG 是 Windows NT 4.0 公用程式，可讓您在登錄中設定各種 DCOM 特有的設定。 [DCOMCNFG] 視窗有三個頁面： 預設的安全性、 預設的內容和應用程式。 在 Windows 2000 第四個頁面上，預設的通訊協定，會出現。
+DCOMCNFG 是 Windows NT 4.0 公用程式，可讓您在登錄中設定各種 DCOM 特有的設定。 [DCOMCNFG] 視窗有三個頁面：預設的安全性、 預設屬性和應用程式。 在 Windows 2000 第四個頁面上，預設的通訊協定，會出現。
 
 ## <a name="default-security-page"></a>預設 [安全性] 頁面
 
-您可以使用 [預設的安全性] 頁面來指定物件的預設權限的系統上。 預設安全性 頁面有三個區段： 存取、 啟動和組態。 若要變更區段的預設值，請按一下 [對應**編輯預設**] 按鈕。 這些預設安全性設定會儲存在登錄中`HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`。
+您可以使用 [預設的安全性] 頁面來指定物件的預設權限的系統上。 預設安全性 頁面有三個區段：存取、 啟動和組態。 若要變更區段的預設值，請按一下 [對應**編輯預設**] 按鈕。 這些預設安全性設定會儲存在登錄中`HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`。
 
 ## <a name="default-protocols-page"></a>預設通訊協定 頁面
 
@@ -47,4 +47,3 @@ DCOMCNFG 是 Windows NT 4.0 公用程式，可讓您在登錄中設定各種 DCO
 ## <a name="see-also"></a>另請參閱
 
 [服務](../atl/atl-services.md)
-

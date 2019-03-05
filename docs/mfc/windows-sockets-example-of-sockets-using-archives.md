@@ -1,19 +1,19 @@
 ---
-title: Windows Sockets：使用封存的通訊端範例
+title: Windows Sockets:使用封存的通訊端範例
 ms.date: 11/04/2016
 helpviewer_keywords:
 - sockets [MFC], with archives
 - examples [MFC], Windows Sockets
 - Windows Sockets [MFC], with archives
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
-ms.openlocfilehash: 285053c79b13ebea23aedc7dae52eabe85f55a12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ea1e2911b156066360da09993fa7302db79f12b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436266"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295251"
 ---
-# <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets：使用封存的通訊端範例
+# <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets:使用封存的通訊端範例
 
 本文提供使用類別的範例[CSocket](../mfc/reference/csocket-class.md)。 此範例會採用`CArchive`將透過通訊端的資料序列化的物件。 請注意，這不是文件序列化到或檔案。
 
@@ -43,15 +43,15 @@ ms.locfileid: "50436266"
 在此通訊模型中，「 已接收 」 這個字，訊息傳送*strText*變數，並不是位於另一端的通訊，因此它會指定要接收的使用者特定數目的資料封包已被收到。 接收者會以類似的字串，表示在原始寄件者 畫面上的 「 傳送 」，以顯示回覆。 兩個字串的回條指出發生成功進行通訊。
 
 > [!CAUTION]
->  如果您要撰寫 MFC 用戶端程式與所建立的 (非 MFC) 伺服器進行通訊，請不要透過封存傳送 C++ 物件。 除非伺服器是 MFC 應用程式了解您想要傳送的物件類型，它將無法接收和還原序列化物件。 一文中的舉例[Windows Sockets： 位元組順序](../mfc/windows-sockets-byte-ordering.md)顯示此類型的通訊。
+>  如果您要撰寫 MFC 用戶端程式與所建立的 (非 MFC) 伺服器進行通訊，請不要透過封存傳送 C++ 物件。 除非伺服器是 MFC 應用程式了解您想要傳送的物件類型，它將無法接收和還原序列化物件。 一文中的舉例[Windows Sockets:位元組順序](../mfc/windows-sockets-byte-ordering.md)顯示此類型的通訊。
 
 如需詳細資訊，請參閱 Windows Sockets 規格： **htonl**， **htons**， **ntohl**， **ntohs**。 此外，如需詳細資訊，請參閱：
 
-- [Windows Sockets：從通訊端類別衍生](../mfc/windows-sockets-deriving-from-socket-classes.md)
+- [Windows Sockets:衍生自通訊端類別](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
-- [Windows Sockets：如何搭配使用通訊端與封存](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows Sockets:通訊端與封存的運作方式](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows Sockets：背景](../mfc/windows-sockets-background.md)
+- [Windows Sockets:背景](../mfc/windows-sockets-background.md)
 
 ## <a name="see-also"></a>另請參閱
 
@@ -60,5 +60,4 @@ ms.locfileid: "50436266"
 [CArchive::operator <<](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
 [CArchive::operator >>](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
 [CArchive::Flush](../mfc/reference/carchive-class.md#flush)<br/>
-[Cobject:: Serialize](../mfc/reference/cobject-class.md#serialize)
-
+[CObject::Serialize](../mfc/reference/cobject-class.md#serialize)

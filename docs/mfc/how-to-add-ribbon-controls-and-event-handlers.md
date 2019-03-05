@@ -1,18 +1,18 @@
 ---
-title: 如何：加入功能區控制項和事件處理常式
+title: HOW TO：新增功能區控制項和事件處理常式
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event handlers [MFC], adding
 - ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
-ms.openlocfilehash: 356358e5fd5ac4f3f7511f178ca304e9ab7eff86
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8a164101dc42241a2cc76c91a3baa66e02e4dc90
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518394"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291128"
 ---
-# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>如何：加入功能區控制項和事件處理常式
+# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>HOW TO：新增功能區控制項和事件處理常式
 
 功能區控制項是項目，例如按鈕和下拉式方塊中，您加入至面板。 面板會顯示相關的控制項群組的功能區列區域。
 
@@ -40,6 +40,5 @@ ms.locfileid: "51518394"
 
 ## <a name="see-also"></a>另請參閱
 
-[RibbonGadgets 範例： 功能區小工具應用程式](../visual-cpp-samples.md)<br/>
+[RibbonGadgets 範例：功能區小工具應用程式](../visual-cpp-samples.md)<br/>
 [功能區設計工具 (MFC)](../mfc/ribbon-designer-mfc.md)
-

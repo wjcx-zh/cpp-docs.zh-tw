@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ActiveX controls [MFC], property pages
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
-ms.openlocfilehash: ac72258e881d10723a02b5103c602ac5cec6a1f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87b71fdddc5b52f66c34cdbcdb234c83616d0850
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465308"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289542"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC ActiveX 控制項：加入另一個自訂屬性頁
 
 有時候，ActiveX 控制項必須超過可合理地容納在單一的屬性頁面上的更多屬性。 在此情況下，您可以將屬性頁加入 ActiveX 控制項來顯示這些屬性。
 
-本文討論將新的屬性頁加入至 ActiveX 控制項已經有至少一個屬性頁面。 如需有關新增內建屬性頁 （字型、 圖片或色彩），請參閱文章[MFC ActiveX 控制項： 使用內建屬性頁](../mfc/mfc-activex-controls-using-stock-property-pages.md)。
+本文討論將新的屬性頁加入至 ActiveX 控制項已經有至少一個屬性頁面。 如需有關新增內建屬性頁 （字型、 圖片或色彩），請參閱文章[MFC ActiveX 控制項：使用內建屬性頁](../mfc/mfc-activex-controls-using-stock-property-pages.md)。
 
 下列程序會使用 ActiveX 控制項精靈所建立的範例 ActiveX 控制項架構。 因此，類別名稱和識別碼是此範例中唯一的。
 
@@ -110,4 +110,3 @@ ms.locfileid: "50465308"
 ## <a name="see-also"></a>另請參閱
 
 [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)
-

@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 56c694283c5143174b0ce7370d98a244c056bc1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a683c877b67f4eae1a7411f5916987c9789b6817
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496010"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261345"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl 類別
 
@@ -95,8 +95,8 @@ class CHeaderCtrl : public CWnd
 |----------|-----------------|
 |[CHeaderCtrl::ClearAllFilters](#clearallfilters)|清除所有篩選器標題控制項。|
 |[CHeaderCtrl::ClearFilter](#clearfilter)|清除標頭控制項的篩選。|
-|[Dwstyle](#create)|會建立標題控制項，並將它附加至`CHeaderCtrl`物件。|
-|[Cheaderctrl:: Createdragimage](#createdragimage)|建立標題控制項內的項目影像的透明的版本。|
+|[CHeaderCtrl::Create](#create)|會建立標題控制項，並將它附加至`CHeaderCtrl`物件。|
+|[CHeaderCtrl::CreateDragImage](#createdragimage)|建立標題控制項內的項目影像的透明的版本。|
 |[CHeaderCtrl::CreateEx](#createex)|使用指定的 Windows 延伸樣式中建立標題控制項，並將它附加至`CListCtrl`物件。|
 |[CHeaderCtrl::DeleteItem](#deleteitem)|刪除的項目從標頭中的控制項。|
 |[CHeaderCtrl::DrawItem](#drawitem)|繪製標題控制項的指定項目。|
@@ -104,14 +104,14 @@ class CHeaderCtrl : public CWnd
 |[CHeaderCtrl::GetBitmapMargin](#getbitmapmargin)|擷取控制項中的點陣圖邊界的寬度。|
 |[CHeaderCtrl::GetFocusedItem](#getfocuseditem)|取得目前具有焦點的標題控制項中的項目的識別碼。|
 |[CHeaderCtrl::GetImageList](#getimagelist)|擷取映像清單控制項中繪製的標頭項目使用的控制代碼。|
-|[Cheaderctrl:: Getitem](#getitem)|擷取控制項中項目的資訊。|
+|[CHeaderCtrl::GetItem](#getitem)|擷取控制項中項目的資訊。|
 |[CHeaderCtrl::GetItemCount](#getitemcount)|擷取控制項中的項目計數。|
 |[CHeaderCtrl::GetItemDropDownRect](#getitemdropdownrect)|取得指定的下拉式按鈕的週框矩形資訊標頭控制項中。|
 |[CHeaderCtrl::GetItemRect](#getitemrect)|擷取指定的項目控制項中指定的週框。|
-|[Cheaderctrl:: Getorderarray](#getorderarray)|擷取由左到右的順序標頭控制項中的項目。|
+|[CHeaderCtrl::GetOrderArray](#getorderarray)|擷取由左到右的順序標頭控制項中的項目。|
 |[CHeaderCtrl::GetOverflowRect](#getoverflowrect)|取得目前的標頭控制溢位按鈕的週框矩形。|
 |[CHeaderCtrl::HitTest](#hittest)|判斷哪一個標頭項目，如果有的話，位於指定的點。|
-|[Cheaderctrl:: Insertitem](#insertitem)|將新的項目插入至標題控制項中。|
+|[CHeaderCtrl::InsertItem](#insertitem)|將新的項目插入至標題控制項中。|
 |[CHeaderCtrl::Layout](#layout)|擷取給定矩形內的標頭控制項的位置與大小。|
 |[CHeaderCtrl::OrderToIndex](#ordertoindex)|擷取的項目，其標題控制項中的順序為基礎的索引值。|
 |[CHeaderCtrl::SetBitmapMargin](#setbitmapmargin)|設定控制項中的點陣圖的邊界的寬度。|
@@ -119,8 +119,8 @@ class CHeaderCtrl : public CWnd
 |[CHeaderCtrl::SetFocusedItem](#setfocuseditem)|將焦點設定至目前的標題控制項中指定的標頭項目。|
 |[CHeaderCtrl::SetHotDivider](#sethotdivider)|變更標頭項目，以表示手動之間的分隔線拖曳和置放標頭項目。|
 |[CHeaderCtrl::SetImageList](#setimagelist)|指派至標題控制項的影像清單。|
-|[Cheaderctrl:: Setitem](#setitem)|設定控制項中的指定項目的屬性。|
-|[Cheaderctrl:: Setorderarray](#setorderarray)|設定控制項中的項目的左到右的順序。|
+|[CHeaderCtrl::SetItem](#setitem)|設定控制項中的指定項目的屬性。|
+|[CHeaderCtrl::SetOrderArray](#setorderarray)|設定控制項中的項目的左到右的順序。|
 
 ## <a name="remarks"></a>備註
 
@@ -213,7 +213,7 @@ BOOL ClearFilter(int nColumn);
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_3.cpp)]
 
-##  <a name="create"></a>  Dwstyle
+##  <a name="create"></a>  CHeaderCtrl::Create
 
 會建立標題控制項，並將它附加至`CHeaderCtrl`物件。
 
@@ -227,7 +227,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定標題控制項的樣式。 如需標頭控制項樣式的描述，請參閱 <<c0> [ 標頭控制項樣式](/windows/desktop/Controls/header-control-styles)Windows SDK 中。
 
 *rect*<br/>
@@ -297,7 +297,7 @@ virtual BOOL CreateEx(
 *dwExStyle*<br/>
 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 標題控制項的樣式。 如需標頭控制項樣式的描述，請參閱 <<c0> [ 標頭控制項樣式](/windows/desktop/Controls/header-control-styles)Windows SDK 中。 請參閱[建立](#create)如需其他樣式的清單。
 
 *rect*<br/>
@@ -317,7 +317,7 @@ virtual BOOL CreateEx(
 
 使用`CreateEx`而非`Create`套用延伸的 Windows 樣式，由 Windows 延伸的樣式前置詞**WS_EX_**。
 
-##  <a name="createdragimage"></a>  Cheaderctrl:: Createdragimage
+##  <a name="createdragimage"></a>  CHeaderCtrl::CreateDragImage
 
 建立標題控制項內的項目影像的透明的版本。
 
@@ -486,7 +486,7 @@ CImageList* GetImageList() const;
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#9](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]
 
-##  <a name="getitem"></a>  Cheaderctrl:: Getitem
+##  <a name="getitem"></a>  CHeaderCtrl::GetItem
 
 擷取標頭的控制項項目的相關資訊。
 
@@ -591,7 +591,7 @@ BOOL GetItemRect(
 
 這個方法會實作 Win32 訊息的行為[HDM_GETITEMRECT](/windows/desktop/Controls/hdm-getitemrect)、 Windows SDK 中所述。
 
-##  <a name="getorderarray"></a>  Cheaderctrl:: Getorderarray
+##  <a name="getorderarray"></a>  CHeaderCtrl::GetOrderArray
 
 擷取由左到右的順序標頭控制項中的項目。
 
@@ -691,7 +691,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_16.cpp)]
 
-##  <a name="insertitem"></a>  Cheaderctrl:: Insertitem
+##  <a name="insertitem"></a>  CHeaderCtrl::InsertItem
 
 新的項目插入位於指定索引處的標頭控制項。
 
@@ -858,7 +858,7 @@ int SetHotDivider(int nIndex);
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pt*<br/>
 指標的位置。 標題控制項反白顯示適當的分割線，根據指標的位置。
 
 *nIndex*<br/>
@@ -901,7 +901,7 @@ CImageList* SetImageList(CImageList* pImageList);
 
   範例，請參閱[CHeaderCtrl::GetImageList](#getimagelist)。
 
-##  <a name="setitem"></a>  Cheaderctrl:: Setitem
+##  <a name="setitem"></a>  CHeaderCtrl::SetItem
 
 設定控制項中的指定項目的屬性。
 
@@ -927,7 +927,7 @@ BOOL SetItem(
 
   範例，請參閱[cheaderctrl:: Getitem](#getitem)。
 
-##  <a name="setorderarray"></a>  Cheaderctrl:: Setorderarray
+##  <a name="setorderarray"></a>  CHeaderCtrl::SetOrderArray
 
 設定控制項中的項目的左到右的順序。
 

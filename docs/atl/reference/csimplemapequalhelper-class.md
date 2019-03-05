@@ -1,5 +1,5 @@
 ---
-title: CSimpleMapEqualHelper 類別
+title: CSimpleMapEqualHelper Class
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleMapEqualHelper
@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMapEqualHelper class
 ms.assetid: 9bb2968a-d609-405c-8272-ff3b42df6164
-ms.openlocfilehash: a530254bbaabce723b97d21313abb81e1b375833
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c614cbb11376c5ae338762c0feaa54c8f1bb3e27
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527383"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282769"
 ---
-# <a name="csimplemapequalhelper-class"></a>CSimpleMapEqualHelper 類別
+# <a name="csimplemapequalhelper-class"></a>CSimpleMapEqualHelper Class
 
 這個類別是 helper [CSimpleMap](../../atl/reference/csimplemap-class.md)類別。
 
@@ -62,7 +62,7 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 
 ### <a name="parameters"></a>參數
 
-*版 k1 的 powerapps*<br/>
+*k1*<br/>
 第一個索引鍵。
 
 *k2*<br/>

@@ -27,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-ms.openlocfilehash: a0f66e888220fbc5a4a484ddd37a3f28dff66065
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59416000eecf4be25746d9dedd86ea2af116087a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583270"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281335"
 ---
 # <a name="crbtree-class"></a>CRBTree 類別
 
@@ -188,7 +188,7 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
 *key*<br/>
 變數會接收索引鍵。
 
-*值*<br/>
+*value*<br/>
 接收值的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -291,7 +291,7 @@ void GetNextAssoc(
 *key*<br/>
 指定樹狀目錄中的索引鍵的類型樣板參數。
 
-*值*<br/>
+*value*<br/>
 指定的樹狀目錄值的類型樣板參數。
 
 ### <a name="remarks"></a>備註
@@ -467,7 +467,7 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
 *pos*<br/>
 位置的計數器，例如由先前呼叫方法[CRBTree::GetHeadPosition](#getheadposition)或是[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)。
 
-*值*<br/>
+*value*<br/>
 要加入至值`CRBTree`物件。
 
 ### <a name="remarks"></a>備註

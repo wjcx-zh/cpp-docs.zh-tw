@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCurrency class
 ms.assetid: a1c3d10a-bba6-40cc-8bcf-aed9023c8a9e
-ms.openlocfilehash: 5a619eef33a60dc1a34d31c3d51614de20fc8f28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2c07bc9c0b1e96f34798b20207dc0eb0362e534
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451151"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277714"
 ---
 # <a name="ccomcurrency-class"></a>CComCurrency 類別
 
@@ -45,7 +45,7 @@ class CComCurrency
 |名稱|描述|
 |----------|-----------------|
 |[CComCurrency::GetCurrencyPtr](#getcurrencyptr)|傳回 `m_currency` 資料成員的位址。|
-|[Ccomcurrency:: Getfraction](#getfraction)|呼叫此方法以傳回 `CComCurrency` 物件的小數部分。|
+|[CComCurrency::GetFraction](#getfraction)|呼叫此方法以傳回 `CComCurrency` 物件的小數部分。|
 |[CComCurrency::GetInteger](#getinteger)|呼叫此方法以傳回 `CComCurrency` 物件的整數部分。|
 |[CComCurrency::Round](#round)|呼叫此方法將 `CComCurrency` 物件四捨五入到最接近的整數值。|
 |[CComCurrency::SetFraction](#setfraction)|呼叫此方法以設定 `CComCurrency` 物件的小數部分。|
@@ -55,21 +55,21 @@ class CComCurrency
 
 |名稱|描述|
 |----------|-----------------|
-|[CComCurrency::operator-](#operator_-)|此運算子用在 `CComCurrency` 物件上執行減法。|
-|[CComCurrency::operator ！ =](#operator_neq)|比較兩個 `CComCurrency` 物件是否不相等。|
+|[CComCurrency::operator -](#operator_-)|此運算子用在 `CComCurrency` 物件上執行減法。|
+|[CComCurrency::operator !=](#operator_neq)|比較兩個 `CComCurrency` 物件是否不相等。|
 |[CComCurrency::operator *](#operator_star)|此運算子用在 `CComCurrency` 物件上執行乘法。|
-|[CComCurrency::operator * =](#operator_star_eq)|此運算子用在 `CComCurrency` 物件上執行乘法並指派結果。|
+|[CComCurrency::operator *=](#operator_star_eq)|此運算子用在 `CComCurrency` 物件上執行乘法並指派結果。|
 |[CComCurrency::operator /](#operator_div)|此運算子用在 `CComCurrency` 物件上執行除法。|
-|[CComCurrency::operator / =](#operator_div_eq)|此運算子用在 `CComCurrency` 物件上執行除法並指派結果。|
+|[CComCurrency::operator /=](#operator_div_eq)|此運算子用在 `CComCurrency` 物件上執行除法並指派結果。|
 |[CComCurrency::operator +](#operator_add)|此運算子用在 `CComCurrency` 物件上執行加法。|
-|[CComCurrency::operator + =](#operator_add_eq)|此運算子用在 `CComCurrency` 物件上執行加法並指派結果給目前物件。|
+|[CComCurrency::operator +=](#operator_add_eq)|此運算子用在 `CComCurrency` 物件上執行加法並指派結果給目前物件。|
 |[CComCurrency::operator <](#operator_lt)|此運算子比較兩個 `CComCurrency` 物件來判斷何者較小。|
-|[CComCurrency::operator < =](#operator_lt_eq)|此運算子比較兩個 `CComCurrency` 物件來判斷是否相等或何者較小。|
+|[CComCurrency::operator <=](#operator_lt_eq)|此運算子比較兩個 `CComCurrency` 物件來判斷是否相等或何者較小。|
 |[CComCurrency::operator =](#operator_eq)|此運算子將 `CComCurrency` 物件指派給新的值。|
-|[CComCurrency::operator =](#operator_-_eq)|此運算子用在 `CComCurrency` 物件上執行減法並指派結果。|
-|[CComCurrency::operator = =](#operator_eq_eq)|此運算子比較兩個 `CComCurrency` 物件是否相等。|
+|[CComCurrency::operator -=](#operator_-_eq)|此運算子用在 `CComCurrency` 物件上執行減法並指派結果。|
+|[CComCurrency::operator ==](#operator_eq_eq)|此運算子比較兩個 `CComCurrency` 物件是否相等。|
 |[CComCurrency::operator >](#operator_gt)|此運算子比較兩個 `CComCurrency` 物件來判斷何者較大。|
-|[CComCurrency::operator > =](#operator_gt_eq)|此運算子比較兩個 `CComCurrency` 物件來判斷是否相等或何者較大。|
+|[CComCurrency::operator >=](#operator_gt_eq)|此運算子比較兩個 `CComCurrency` 物件來判斷是否相等或何者較大。|
 |[CComCurrency::operator 貨幣](#operator_currency)|將轉換貨幣物件。|
 
 ### <a name="public-data-members"></a>公用資料成員
@@ -90,8 +90,8 @@ class CComCurrency
 
 |值|可能的 CComCurrency 指派|
 |-----------|---------------------------------------|
-|$10.50|CComCurrency(10,5000)*或*CComCurrency(10.50)|
-|$10.05|CComCurrency(10,500)*或*CComCurrency(10.05)|
+|$10.50|CComCurrency(10,5000) *or* CComCurrency(10.50)|
+|$10.05|CComCurrency(10,500) *or* CComCurrency(10.05)|
 
 Atlcur.h 中定義 CY_MIN_FRACTION、 CY_MAX_FRACTION 和 CY_SCALE 的值。
 
@@ -169,7 +169,7 @@ CURRENCY* GetCurrencyPtr() throw();
 
 傳回的位址`m_currency`資料成員
 
-##  <a name="getfraction"></a>  Ccomcurrency:: Getfraction
+##  <a name="getfraction"></a>  CComCurrency::GetFraction
 
 呼叫此方法以傳回的小數部分`CComCurrency`物件。
 
@@ -217,7 +217,7 @@ CURRENCY m_currency;
 
 此成員包含貨幣存取和操作這個類別的方法。
 
-##  <a name="operator_-"></a>  CComCurrency::operator-
+##  <a name="operator_-"></a>  CComCurrency::operator -
 
 此運算子用在 `CComCurrency` 物件上執行減法。
 
@@ -331,7 +331,7 @@ CComCurrency operator/(long nOperand) const;
 
 [!code-cpp[NVC_ATL_Utilities#59](../../atl/codesnippet/cpp/ccomcurrency-class_7.cpp)]
 
-##  <a name="operator_div_eq"></a>  CComCurrency::operator / =
+##  <a name="operator_div_eq"></a>  CComCurrency::operator /=
 
 此運算子用在 `CComCurrency` 物件上執行除法並指派結果。
 
@@ -462,7 +462,7 @@ const CComCurrency& operator= (DECIMAL dSrc);
 *cySrc*<br/>
 貨幣類型的變數。
 
-*sSrc*， *fSrc*， *lSrc*， *bSrc*， *usSrc*， *dSrc*， *cSrc*， *ulSrc*， *dSrc*<br/>
+*sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc*, *ulSrc*, *dSrc*<br/>
 若要指派給數值`CComCurrency`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -473,7 +473,7 @@ const CComCurrency& operator= (DECIMAL dSrc);
 
 [!code-cpp[NVC_ATL_Utilities#65](../../atl/codesnippet/cpp/ccomcurrency-class_13.cpp)]
 
-##  <a name="operator_-_eq"></a>  CComCurrency::operator =
+##  <a name="operator_-_eq"></a>  CComCurrency::operator -=
 
 此運算子用在 `CComCurrency` 物件上執行減法並指派結果。
 

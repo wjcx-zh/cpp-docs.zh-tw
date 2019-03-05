@@ -24,16 +24,17 @@ helpviewer_keywords:
 - CMFCRibbonCheckBox [MFC], OnDrawOnList
 - CMFCRibbonCheckBox [MFC], SetACCData
 ms.assetid: 3a6c3891-c8d1-4af0-b954-7b9ab048782a
-ms.openlocfilehash: 067f38522c1be112d6e12200c2c10e1d439e5057
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34af1ae818125abd51b9eaf04cd98f9ac24addb3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612416"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281430"
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox 類別
 
-`CMFCRibbonCheckBox` 類別實作可以加入至功能區面板、快速存取工具列或快顯功能表的核取方塊。
+
+  `CMFCRibbonCheckBox` 類別實作可以加入至功能區面板、快速存取工具列或快顯功能表的核取方塊。
 
 ## <a name="syntax"></a>語法
 
@@ -217,7 +218,7 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 
 ### <a name="parameters"></a>參數
 
-[in]*CDC&#42;*<br/>
+[in] *CDC&#42;*<br/>
 核取方塊相關聯的 CDC 的指標。
 
 *CRect*<br/>
@@ -250,7 +251,7 @@ virtual void OnDrawOnList(
 *pDC*<br/>
 [in]在其中繪製核取方塊的裝置內容指標。
 
-*先把 strText*<br/>
+*strText*<br/>
 [in]顯示文字。
 
 *nTextOffset*<br/>

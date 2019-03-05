@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: a9d6823a5f82e3d52f82f568d3e3c00b68236fef
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2af1898312a4f448d618fcfc4e43ea93f5f0bc76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329211"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302776"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>平行診斷工具 (並行執行階段)
 
@@ -17,7 +17,7 @@ Visual Studio 可廣泛支援多執行緒應用程式的偵錯與分析。
 
 ## <a name="debugging"></a>偵錯
 
-Visual Studio 偵錯工具包含**平行堆疊** 視窗中，**平行工作**視窗中，並**平行監看式**視窗。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 偵錯平行應用程式](/visualstudio/debugger/walkthrough-debugging-a-parallel-application)並[如何： 使用平行監看式視窗](/visualstudio/debugger/how-to-use-the-parallel-watch-window)。
+Visual Studio 偵錯工具包含**平行堆疊** 視窗中，**平行工作**視窗中，並**平行監看式**視窗。 如需詳細資訊，請參閱[逐步解說：偵錯平行應用程式](/visualstudio/debugger/walkthrough-debugging-a-parallel-application)和[How to:使用 [平行監看式] 視窗](/visualstudio/debugger/how-to-use-the-parallel-watch-window)。
 
 ## <a name="profiling"></a>程式碼剖析
 
@@ -66,4 +66,3 @@ Visual Studio 偵錯工具包含**平行堆疊** 視窗中，**平行工作**視
 ## <a name="see-also"></a>另請參閱
 
 [並行執行階段](../../parallel/concrt/concurrency-runtime.md)
-

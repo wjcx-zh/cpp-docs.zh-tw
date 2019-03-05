@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: c82b06903f0705a79a15b263b1dbdfc6aee4c8ca
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 1834c378246835314002cdf05fe9a294b609c4e4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176506"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259577"
 ---
 # <a name="crecttracker-class"></a>CRectTracker 類別
 
@@ -77,7 +77,7 @@ class CRectTracker
 |[CRectTracker::OnChangedRect](#onchangedrect)|已調整大小或移動矩形時呼叫。|
 |[CRectTracker::SetCursor](#setcursor)|設定資料指標，根據透過矩形位置。|
 |[CRectTracker::Track](#track)|可讓使用者管理的矩形。|
-|[Crecttracker:: Trackrubberband](#trackrubberband)|可讓使用者 「 拖放矩形 」 選取項目。|
+|[CRectTracker::TrackRubberBand](#trackrubberband)|可讓使用者 「 拖放矩形 」 選取項目。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
@@ -85,7 +85,7 @@ class CRectTracker
 |----------|-----------------|
 |[CRectTracker::m_nHandleSize](#m_nhandlesize)|決定調整大小控點大小。|
 |[CRectTracker::m_nStyle](#m_nstyle)|目前追蹤程式 style(s)。|
-|[Crecttracker:: M_rect](#m_rect)|目前位置 （以像素為單位） 的矩形。|
+|[CRectTracker::m_rect](#m_rect)|目前位置 （以像素為單位） 的矩形。|
 |[CRectTracker::m_sizeMin](#m_sizemin)|判斷最小的矩形寬度和高度。|
 
 ## <a name="remarks"></a>備註
@@ -270,7 +270,7 @@ int HitTest(CPoint point) const;
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 若要測試的裝置座標點。
 
 ### <a name="return-value"></a>傳回值
@@ -309,7 +309,7 @@ int m_nHandleSize;
 
 初始化使用預設系統值。
 
-##  <a name="m_rect"></a>  Crecttracker:: M_rect
+##  <a name="m_rect"></a>  CRectTracker::m_rect
 
 目前的位置矩形在工作區座標 （像素為單位）。
 
@@ -424,7 +424,7 @@ BOOL Track(
 *pWnd*<br/>
 包含矩形的視窗物件。
 
-*點*<br/>
+*point*<br/>
 裝置目前的滑鼠位置，相對於用戶端區域的座標。
 
 *bAllowInvert*<br/>
@@ -445,7 +445,7 @@ BOOL Track(
 
 如果*bAllowInvert*為 TRUE 時，追蹤矩形可以反轉 x 軸或 y 軸上。
 
-##  <a name="trackrubberband"></a>  Crecttracker:: Trackrubberband
+##  <a name="trackrubberband"></a>  CRectTracker::TrackRubberBand
 
 呼叫此函式來進行拖放矩形選取範圍。
 
@@ -461,7 +461,7 @@ BOOL TrackRubberBand(
 *pWnd*<br/>
 包含矩形的視窗物件。
 
-*點*<br/>
+*point*<br/>
 裝置目前的滑鼠位置，相對於用戶端區域的座標。
 
 *bAllowInvert*<br/>

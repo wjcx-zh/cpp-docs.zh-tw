@@ -6,12 +6,12 @@ helpviewer_keywords:
 - message handling [MFC]
 - message maps [MFC]
 ms.assetid: 62fe2a1b-944c-449d-a0f0-63c11ee0a3cb
-ms.openlocfilehash: f76e9b2ef25c8a6c046cb6c47f0f5761854453c9
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 41f3432b3741019a787ee24b0f508fe8e65e0470
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694708"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279662"
 ---
 # <a name="message-handling-and-mapping"></a>訊息處理和對應
 
@@ -41,7 +41,7 @@ WM_COMMAND 訊息 — 通常是由功能表、 工具列按鈕或快速鍵產生
 
 - [動態更新的使用者介面物件](../mfc/how-to-update-user-interface-objects.md)
 
-- [如何：建立樣板類別的訊息對應](../mfc/how-to-create-a-message-map-for-a-template-class.md)
+- [如何：樣板類別建立的訊息對應](../mfc/how-to-create-a-message-map-for-a-template-class.md)
 
 ## <a name="see-also"></a>另請參閱
 

@@ -16,16 +16,17 @@ f1_keywords:
 helpviewer_keywords:
 - join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
-ms.openlocfilehash: 23fc005a0c679576507c3a39ae37ce6c4545036b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d04ef90750c609d77fc8bf963bb996a90444f079
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668246"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281586"
 ---
 # <a name="join-class"></a>join 類別
 
-`join` 傳訊區塊是單一目標、多來源的排序 `propagator_block`，會與來自其每個來源的 `T` 類型訊息合併。
+
+  `join` 傳訊區塊是單一目標、多來源的排序 `propagator_block`，會與來自其每個來源的 `T` 類型訊息合併。
 
 ## <a name="syntax"></a>語法
 
@@ -126,7 +127,7 @@ virtual message<_OutputType>* consume_message(runtime_object_identity _MsgId);
 
 類似於`accept`，但一律置於呼叫`reserve`。
 
-##  <a name="ctor"></a> 聯結
+##  <a name="ctor"></a> join
 
 建構 `join` 傳訊區塊。
 
@@ -162,7 +163,7 @@ join(
 *_NumInputs*<br/>
 數字輸入這樣`join`將允許的區塊。
 
-*篩選 （_f)*<br/>
+*_Filter*<br/>
 判斷是否應該接受所提供的訊息篩選器函式。
 
 *_PScheduler*<br/>
@@ -177,7 +178,7 @@ join(
 
 型別`filter_method`是仿函式簽章`bool (T const &)`由此叫用的所在`join`傳訊區塊，以判斷是否應該接受接受所提供的訊息。
 
-##  <a name="dtor"></a> ~ 聯結
+##  <a name="dtor"></a> ~join
 
 終結`join`區塊。
 
@@ -206,7 +207,8 @@ message_status propagate_message(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-`message` 物件的指標。
+
+  `message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。

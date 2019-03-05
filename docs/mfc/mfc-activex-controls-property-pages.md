@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-ms.openlocfilehash: 7027a58960e07903c9d774e07379c8050bc489b8
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3fe092e412cf11f7bf8600e8d0d7d43abb0e11c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176454"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303894"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX 控制項：屬性頁
 
@@ -45,7 +45,7 @@ ActiveX 控制項屬性頁會顯示在兩種方式：
 
 如需有關如何使用 ActiveX 控制項中的 屬性頁的詳細資訊，請參閱下列文章：
 
-- [MFC ActiveX 控制項：新增另一個自訂屬性頁](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [MFC ActiveX 控制項：加入另一個自訂屬性頁](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
 - [MFC ActiveX 控制項：使用內建屬性頁](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
@@ -53,7 +53,7 @@ ActiveX 控制項屬性頁會顯示在兩種方式：
 
 ##  <a name="_core_implementing_the_default_property_page"></a> 實作 [預設] 屬性頁
 
-如果您使用 ActiveX 控制項精靈來建立您的控制項專案時，ActiveX 控制項精靈提供的預設屬性頁類別控制項衍生自[COlePropertyPage 類別](../mfc/reference/colepropertypage-class.md)。 一開始，此屬性頁面是空白的但您可以將任何對話方塊控制項或一組控制項新增至它。 由於 ActiveX 控制項精靈會建立只有一個屬性頁類別，根據預設，其他的屬性頁面類別 (也衍生自`COlePropertyPage`) 必須使用 類別檢視中建立。 如需有關此程序的詳細資訊，請參閱 < [MFC ActiveX 控制項： 加入另一個自訂屬性頁](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)。
+如果您使用 ActiveX 控制項精靈來建立您的控制項專案時，ActiveX 控制項精靈提供的預設屬性頁類別控制項衍生自[COlePropertyPage 類別](../mfc/reference/colepropertypage-class.md)。 一開始，此屬性頁面是空白的但您可以將任何對話方塊控制項或一組控制項新增至它。 由於 ActiveX 控制項精靈會建立只有一個屬性頁類別，根據預設，其他的屬性頁面類別 (也衍生自`COlePropertyPage`) 必須使用 類別檢視中建立。 如需有關此程序的詳細資訊，請參閱[MFC ActiveX 控制項：加入另一個自訂屬性頁](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)。
 
 實作的屬性頁面 （在此情況下，預設值） 是一個三步驟程序：
 

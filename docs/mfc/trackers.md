@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 - OLE server applications [MFC], trackers
 ms.assetid: dcd09399-6637-4621-80e5-d12670429787
-ms.openlocfilehash: 74e70f989d3803b11f05150f9b55c6dfe79ed876
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6dffb5b4326d08daf59098e1888169c2353dafe2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481948"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262710"
 ---
 # <a name="trackers"></a>追蹤器
 
@@ -24,7 +24,7 @@ ms.locfileid: "50481948"
 
 MFC OLE 範例[OCLIENT](../visual-cpp-samples.md)示範使用追蹤器與 OLE 用戶端項目從觀點來看的容器應用程式的通用介面。 如需示範不同的樣式以及追蹤器物件的能力，請參閱 MFC 一般範例[TRACKER](../visual-cpp-samples.md)。
 
-如需有關在 OLE 應用程式中實作追蹤器的詳細資訊，請參閱[追蹤器： 在 OLE 應用程式中實作的追蹤器](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
+如需有關在 OLE 應用程式中實作追蹤器的詳細資訊，請參閱[追蹤器：在 OLE 應用程式中實作追蹤器](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
 
 ## <a name="see-also"></a>另請參閱
 

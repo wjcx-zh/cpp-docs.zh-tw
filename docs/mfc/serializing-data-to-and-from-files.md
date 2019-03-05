@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data [MFC], serializing
 - document data [MFC]
 ms.assetid: b42a0c68-4bc4-4012-9938-5433a26d2c24
-ms.openlocfilehash: 87e216f1959a7c169673822ffa7041ed511817d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af3cde9445ae4b128e7e54a5f154db01b2eecd3b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473615"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279259"
 ---
 # <a name="serializing-data-to-and-from-files"></a>將資料序列化至檔案以及從檔案序列化資料
 
@@ -48,4 +48,3 @@ MFC 應用程式精靈會的骨架的覆寫`CDocument`成員函式`Serialize`它
 ## <a name="see-also"></a>另請參閱
 
 [使用文件](../mfc/using-documents.md)
-

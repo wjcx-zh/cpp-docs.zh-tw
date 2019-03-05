@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: 4c6d20279792788c1013df8540080b2715ade1f2
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 05689001f8c385191057a8dc824a508189a43f05
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657379"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266051"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap 類別
 
@@ -40,7 +40,7 @@ class CTypedPtrMap : public BASE_CLASS
 *KEY*<br/>
 做為對應索引鍵之物件的類別。
 
-*值*<br/>
+*VALUE*<br/>
 在對應中儲存之物件的類別。
 
 ## <a name="members"></a>成員
@@ -100,7 +100,7 @@ void GetNextAssoc(
 *rKey*<br/>
 指定傳回的索引鍵的擷取的項目。
 
-*值*<br/>
+*VALUE*<br/>
 指定的對應值的類型樣板參數。
 
 *rValue*<br/>
@@ -130,7 +130,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 *key*<br/>
 要查閱之項目的索引鍵。
 
-*值*<br/>
+*VALUE*<br/>
 指定此對應中所儲存值的類型樣板參數。
 
 *rValue*<br/>
@@ -144,7 +144,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 
 此內嵌函式會呼叫`BASE_CLASS` **:: 查閱**。
 
-##  <a name="operator_at"></a>  CTypedPtrMap::operator]
+##  <a name="operator_at"></a>  CTypedPtrMap::operator [ ]
 
 此運算子可用僅左邊的指派陳述式 （左值）。
 
@@ -154,7 +154,7 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 
 ### <a name="parameters"></a>參數
 
-*值*<br/>
+*VALUE*<br/>
 指定此對應中所儲存值的類型樣板參數。
 
 *BASE_CLASS*<br/>

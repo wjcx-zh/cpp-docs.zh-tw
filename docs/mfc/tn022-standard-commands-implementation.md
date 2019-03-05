@@ -1,5 +1,5 @@
 ---
-title: TN022：標準命令實作
+title: TN022:標準命令實作
 ms.date: 11/04/2016
 f1_keywords:
 - vc.commands
@@ -59,14 +59,14 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-ms.openlocfilehash: 0f79aaaf59f12e226220e51681f64d0bf1131303
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c066521ba2b5be9ac24a8abaece42e57b8ad85f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504334"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279345"
 ---
-# <a name="tn022-standard-commands-implementation"></a>TN022：標準命令實作
+# <a name="tn022-standard-commands-implementation"></a>TN022:標準命令實作
 
 > [!NOTE]
 >  下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
@@ -468,30 +468,29 @@ MFC 的標準命令落在範圍內以 0xEFFF 0xE000。 請不要依賴這些識�
 
 數個標準命令 Id 做為在狀態列中的指標。 這些使用的相同處理機制的更新命令 UI 以顯示其目前的視覺狀態在應用程式閒置時間。 因為使用者無法選取 （也就是說，您無法發送狀態列窗格），則它沒有任何意義有 ON_COMMAND 處理常式，這些命令識別碼。
 
-- ID_INDICATOR_CAPS: CAP 鎖定指示器。
+- ID_INDICATOR_CAPS:CAP 鎖定指示器。
 
-- ID_INDICATOR_NUM: NUM lock 指標。
+- ID_INDICATOR_NUM:NUM lock 指標。
 
-- ID_INDICATOR_SCRL: SCRL 鎖定指示器。
+- ID_INDICATOR_SCRL:SCRL 鎖定指示器。
 
-- ID_INDICATOR_KANA： 假名鎖定 （僅適用於日文的系統） 的指標。
+- ID_INDICATOR_KANA:假名鎖定 （僅適用於日文的系統） 的指標。
 
 在中實作這三種`CFrameWnd::OnUpdateKeyIndicator`，對應至適當的虛擬機碼中使用的命令 ID 的實作協助程式。 常見的實作啟用或停用 （停用的狀態窗格 = 沒有文字）`CCmdUI`取決於是否適當的虛擬按鍵目前已鎖定的物件。
 
 不建議使用此命令處理常式的自訂。
 
-- ID_INDICATOR_EXT： 擴充選取指標。
+- ID_INDICATOR_EXT:擴充選取的指標。
 
-- ID_INDICATOR_OVR： 覆寫指標。
+- ID_INDICATOR_OVR:覆寫指標。
 
-- ID_INDICATOR_REC： 記錄指標。
+- ID_INDICATOR_REC:記錄指標。
 
 目前沒有任何標準的實作，這些指標。
 
-如果您選擇實作這些指示器，我們建議您使用這些指示器識別碼及維護自己的狀態列的指示器的順序 (也就是依此順序： EXT、 CAP、 NUM、 SCRL、 OVR、 REC)。
+如果您選擇實作這些指示器，我們建議您使用這些指標的識別碼，並維護自己的狀態列的指示器的順序 (也就是依此順序：EXT、 CAP、 NUM、 SCRL、 OVR、 REC）。
 
 ## <a name="see-also"></a>另請參閱
 
 [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
 [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
-

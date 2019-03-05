@@ -20,16 +20,17 @@ f1_keywords:
 helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
-ms.openlocfilehash: 680c07015538a2eacc9480d3cd22da9a36071e32
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: adac6e220a60a49a2b9bfa9463f16f8956b08d2e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455990"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299305"
 ---
 # <a name="overwritebuffer-class"></a>overwrite_buffer 類別
 
-`overwrite_buffer` 傳訊區塊是多目標、多來源的排序 `propagator_block`，一次能夠存放一個訊息。 新訊息會覆寫先前保留的訊息。
+
+  `overwrite_buffer` 傳訊區塊是多目標、多來源的排序 `propagator_block`，一次能夠存放一個訊息。 新訊息會覆寫先前保留的訊息。
 
 ## <a name="syntax"></a>語法
 
@@ -57,7 +58,7 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
 |名稱|描述|
 |----------|-----------------|
 |[has_value](#has_value)|檢查是否這`overwrite_buffer`傳訊區塊尚未值。|
-|[值](#value)|取得儲存在訊息的目前內容的參考`overwrite_buffer`傳訊區塊。|
+|[value](#value)|取得儲存在訊息的目前內容的參考`overwrite_buffer`傳訊區塊。|
 
 ### <a name="protected-methods"></a>保護方法
 
@@ -165,7 +166,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 *_PTarget*<br/>
 新連結的目標指標。
 
-##  <a name="dtor"></a> ~ overwrite_buffer
+##  <a name="dtor"></a> ~overwrite_buffer
 
 終結`overwrite_buffer`傳訊區塊。
 
@@ -200,7 +201,7 @@ overwrite_buffer(
 
 ### <a name="parameters"></a>參數
 
-*篩選 （_f)*<br/>
+*_Filter*<br/>
 判斷是否應該接受所提供的訊息篩選器函式。
 
 *_PScheduler*<br/>
@@ -228,7 +229,8 @@ virtual message_status propagate_message(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-`message` 物件的指標。
+
+  `message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。
@@ -267,7 +269,8 @@ virtual message_status send_message(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-`message` 物件的指標。
+
+  `message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。

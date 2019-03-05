@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: 1816e6ee2dc0f358cb2da4c8bab572daa33a29c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef46001e230813afb0abb857b7aee39bf5fba05d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561235"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260747"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage 類別
 
@@ -74,16 +74,16 @@ class CPropertyPage : public CDialog
 |[CPropertyPage::GetPSP](#getpsp)|擷取 Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2)相關聯的結構`CPropertyPage`物件。|
 |[CPropertyPage::OnApply](#onapply)|按一下 [立即套用] 按鈕時由架構呼叫。|
 |[CPropertyPage::OnCancel](#oncancel)|按一下 [取消] 按鈕時由架構呼叫。|
-|[Cpropertypage:: Onkillactive](#onkillactive)|當目前的頁面已不再使用中的頁面時，由架構呼叫。 執行資料驗證。|
+|[CPropertyPage::OnKillActive](#onkillactive)|當目前的頁面已不再使用中的頁面時，由架構呼叫。 執行資料驗證。|
 |[CPropertyPage::OnOK](#onok)|按一下 確定，立即套用 或 關閉 按鈕時由架構呼叫。|
 |[CPropertyPage::OnQueryCancel](#onquerycancel)|按一下 [取消] 按鈕時，並取消動作發生之前由架構呼叫。|
 |[CPropertyPage::OnReset](#onreset)|按一下 [取消] 按鈕時由架構呼叫。|
-|[Cpropertypage:: Onsetactive](#onsetactive)|頁面進行作用中的頁面時，由架構呼叫。|
+|[CPropertyPage::OnSetActive](#onsetactive)|頁面進行作用中的頁面時，由架構呼叫。|
 |[CPropertyPage::OnWizardBack](#onwizardback)|當使用精靈類型的屬性工作表，按一下 [上一頁] 按鈕時由架構呼叫。|
 |[CPropertyPage::OnWizardFinish](#onwizardfinish)|當使用精靈類型的屬性工作表，按一下 [完成] 按鈕時由架構呼叫。|
 |[CPropertyPage::OnWizardNext](#onwizardnext)|當使用精靈類型的屬性工作表，按一下 [下一步] 按鈕時由架構呼叫。|
 |[CPropertyPage::QuerySiblings](#querysiblings)|轉寄訊息到每一頁的屬性工作表。|
-|[Cpropertypage:: Setmodified](#setmodified)|呼叫以啟用或停用立即套用 按鈕。|
+|[CPropertyPage::SetModified](#setmodified)|呼叫以啟用或停用立即套用 按鈕。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
@@ -333,7 +333,7 @@ virtual void OnCancel();
 
 [!code-cpp[NVC_MFCDocView#114](../../mfc/codesnippet/cpp/cpropertypage-class_4.cpp)]
 
-##  <a name="onkillactive"></a>  Cpropertypage:: Onkillactive
+##  <a name="onkillactive"></a>  CPropertyPage::OnKillActive
 
 此成員函式是由架構呼叫，當頁面不再使用中的頁面。
 
@@ -419,7 +419,7 @@ virtual void OnReset();
 
   範例，請參閱[CPropertyPage::OnCancel](#oncancel)。
 
-##  <a name="onsetactive"></a>  Cpropertypage:: Onsetactive
+##  <a name="onsetactive"></a>  CPropertyPage::OnSetActive
 
 此成員函式是由架構呼叫，當頁面由使用者選擇而變成使用中的頁面。
 
@@ -551,7 +551,7 @@ LRESULT QuerySiblings(
 
 [!code-cpp[NVC_MFCDocView#126](../../mfc/codesnippet/cpp/cpropertypage-class_16.cpp)]
 
-##  <a name="setmodified"></a>  Cpropertypage:: Setmodified
+##  <a name="setmodified"></a>  CPropertyPage::SetModified
 
 呼叫此成員函式可啟用或停用 [立即套用] 按鈕，根據是否在屬性頁中的設定應該套用到適當的外部物件。
 

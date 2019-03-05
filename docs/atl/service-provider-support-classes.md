@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - service provider support classes
 ms.assetid: 190f598e-fb32-4d37-adf1-21de395b04d9
-ms.openlocfilehash: 87c6d4c2ccc31ef060aba82ef33aa6fb785d88b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 504dcb51db9596148463019bd982e1c7b21e6bcf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442610"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276126"
 ---
 # <a name="service-provider-support-classes"></a>服務提供者支援類別
 
@@ -23,4 +23,3 @@ ms.locfileid: "50442610"
 ## <a name="see-also"></a>另請參閱
 
 [類別概觀](../atl/atl-class-overview.md)
-

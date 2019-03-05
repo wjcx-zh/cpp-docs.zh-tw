@@ -28,12 +28,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_2::g
 - amp_short_vectors/Concurrency::graphics::double_2::set_y
 ms.assetid: c19c2d21-3cbf-4ce5-b460-3b8253688f82
-ms.openlocfilehash: 1c23906c3d7bcad0e538cea8484e42ea8e89400e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9482c2839c4963d533eb643fa0ef86a5c66636a4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649068"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289646"
 ---
 # <a name="double2-class"></a>double_2 類別
 
@@ -116,7 +116,7 @@ class double_2;
 
 **標頭：** amp_short_vectors.h
 
-**命名空間：** concurrency:: graphics
+**命名空間：** Concurrency:: graphics
 
 ##  <a name="ctor"></a> double_2
 
@@ -168,7 +168,7 @@ explicit inline double_2(
 *_V1*<br/>
 要初始化項目 1 的值。
 
-*（_V)*<br/>
+*_V*<br/>
 初始設定的值。
 
 *_Other*<br/>

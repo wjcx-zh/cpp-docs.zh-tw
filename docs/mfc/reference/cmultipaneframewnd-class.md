@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMultiPaneFrameWnd [MFC], StoreRecentDockSiteInfo
 - CMultiPaneFrameWnd [MFC], StoreRecentTabRelatedInfo
 ms.assetid: 989a548e-0d70-46b7-a513-8cf740e1be3e
-ms.openlocfilehash: edd7fcf24302de8ded4f3adda933c783c6997757
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb420021ec5b9839091c42b5eae6e1d5b9f7f977
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504347"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281235"
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd 類別
 
@@ -183,7 +183,7 @@ virtual void AddPane(CBasePane* pWnd);
 
 ### <a name="parameters"></a>參數
 
-[in]*pWnd*<br/>
+[in] *pWnd*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -195,7 +195,7 @@ virtual BOOL AddRecentPane(CDockablePane* pBar);
 
 ### <a name="parameters"></a>參數
 
-[in]*pBar*<br/>
+[in] *pBar*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -230,11 +230,11 @@ virtual void CalcExpectedDockedRect(
 
 ### <a name="parameters"></a>參數
 
-[in]*pWndToDock*<br/>
-[in]*ptMouse*<br/>
-[in]*rectResult*<br/>
-[in]*bDrawTab*<br/>
-[in]*ppTargetBar*<br/>
+[in] *pWndToDock*<br/>
+[in] *ptMouse*<br/>
+[in] *rectResult*<br/>
+[in] *bDrawTab*<br/>
+[in] *ppTargetBar*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -256,7 +256,7 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*pDockingBar*<br/>
+[in] *pDockingBar*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -296,7 +296,7 @@ virtual BOOL DockFrame(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDockedFrame*<br/>
+[in] *pDockedFrame*<br/>
 [in]*dockMethod*<br/>
 
 ### <a name="return-value"></a>傳回值
@@ -311,7 +311,7 @@ virtual BOOL DockPane(CDockablePane* pDockedBar);
 
 ### <a name="parameters"></a>參數
 
-[in]*pDockedBar*<br/>
+[in] *pDockedBar*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -325,7 +325,7 @@ virtual void DockRecentPaneToMainFrame(CDockablePane* pBar);
 
 ### <a name="parameters"></a>參數
 
-[in]*pBar*<br/>
+[in] *pBar*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -406,9 +406,9 @@ virtual BOOL InsertPane(
 
 ### <a name="parameters"></a>參數
 
-[in]*pControlBar*<br/>
-[in]*pTarget*<br/>
-[in]*bAfter*<br/>
+[in] *pControlBar*<br/>
+[in] *pTarget*<br/>
+[in] *bAfter*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -424,8 +424,8 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>參數
 
-[in]*lpszProfileName*<br/>
-[in]*uiID*<br/>
+[in] *lpszProfileName*<br/>
+[in] *uiID*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -473,8 +473,8 @@ virtual void OnShowPane(
 
 ### <a name="parameters"></a>參數
 
-[in]*pBar*<br/>
-[in]*bShow*<br/>
+[in] *pBar*<br/>
+[in] *bShow*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -489,9 +489,9 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>參數
 
-[in]*點*<br/>
-[in]*nSensitivity*<br/>
-[in]*bCheckVisibility*<br/>
+[in] *point*<br/>
+[in] *nSensitivity*<br/>
+[in] *bCheckVisibility*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -516,9 +516,9 @@ virtual void RemovePane(
 
 ### <a name="parameters"></a>參數
 
-[in]*pBar*<br/>
-[in]*bDestroy*<br/>
-[in]*bNoDelayedDestroy*<br/>
+[in] *pBar*<br/>
+[in] *bDestroy*<br/>
+[in] *bNoDelayedDestroy*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -532,8 +532,8 @@ virtual void ReplacePane(
 
 ### <a name="parameters"></a>參數
 
-[in]*pBarOrg*<br/>
-[in]*pBarReplaceWith*<br/>
+[in] *pBarOrg*<br/>
+[in] *pBarReplaceWith*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -547,8 +547,8 @@ virtual BOOL SaveState(
 
 ### <a name="parameters"></a>參數
 
-[in]*lpszProfileName*<br/>
-[in]*uiID*<br/>
+[in] *lpszProfileName*<br/>
+[in] *uiID*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -562,7 +562,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>參數
 
-[in]*ar*<br/>
+[in] *ar*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -574,7 +574,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
 
 ### <a name="parameters"></a>參數
 
-[in]*pDockManager*<br/>
+[in] *pDockManager*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -586,7 +586,7 @@ void SetLastFocusedPane(HWND hwnd);
 
 ### <a name="parameters"></a>參數
 
-[in]*hwnd*<br/>
+[in] *hwnd*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -601,8 +601,8 @@ virtual BOOL SetPreDockState(
 
 ### <a name="parameters"></a>參數
 
-[in]*preDockState*<br/>
-[in]*pBarToDock*<br/>
+[in] *preDockState*<br/>
+[in] *pBarToDock*<br/>
 [in]*dockMethod*<br/>
 
 ### <a name="return-value"></a>傳回值
@@ -617,7 +617,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 
 ### <a name="parameters"></a>參數
 
-[in]*pBar*<br/>
+[in] *pBar*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -631,8 +631,8 @@ virtual void StoreRecentTabRelatedInfo(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDockingBar*<br/>
-[in]*pTabbedBar*<br/>
+[in] *pDockingBar*<br/>
+[in] *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>備註
 

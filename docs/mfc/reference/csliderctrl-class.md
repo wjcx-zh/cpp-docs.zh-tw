@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: c8c8971e467b2b8063bb5bb5d8e953fc48bcc42e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fcdddd27437f57ba800a602873d9bb3ae26e82f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666098"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283601"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl 類別
 
@@ -205,7 +205,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定滑桿控制項的樣式。 套用的任何組合[滑桿控制項樣式](/windows/desktop/Controls/trackbar-control-styles)，Windows SDK，控制項中所述。
 
 *rect*<br/>
@@ -247,7 +247,7 @@ virtual BOOL CreateEx(
 *dwExStyle*<br/>
 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定滑桿控制項的樣式。 套用的任何組合[滑桿控制項樣式](/windows/desktop/Controls/trackbar-control-styles)，Windows SDK，控制項中所述。
 
 *rect*<br/>
@@ -771,7 +771,7 @@ int SetTipSide(int nLocation);
 
 ### <a name="parameters"></a>參數
 
-*n 位置*<br/>
+*nLocation*<br/>
 值，表示要顯示工具提示控制項的位置。 如需可能值的清單，請參閱 Win32 訊息[TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside)、 Windows SDK 中所述。
 
 ### <a name="return-value"></a>傳回值

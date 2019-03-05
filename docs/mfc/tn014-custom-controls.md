@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: 1f04029e47ee7d262cdc5e2eab463799acd7d943
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: d529b235daa1c6aa889b69e8d6bb2f02a58436bb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178404"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297485"
 ---
 # <a name="tn014-custom-controls"></a>TN014:自訂控制項
 
@@ -116,7 +116,8 @@ MFC 一般範例[CTRLTEST](../visual-cpp-samples.md)提供了自繪功能表和�
 
 子類別化不應與 C++ 類別衍生混淆。 進一步釐清，c + + 詞彙*基底類別*並*衍生類別*類似*超級類別*和*子類別*在 Windows 中物件模型。 使用 MFC 的 C++ 衍生和 Windows 子類別化在功能上很類似，但 C++ 不支援動態子類別化。
 
-`CWnd` 類別提供了 C++ 物件 (衍生自 `CWnd`) 與 Windows 視窗物件 (稱為 `HWND`) 之間的連接。
+
+  `CWnd` 類別提供了 C++ 物件 (衍生自 `CWnd`) 與 Windows 視窗物件 (稱為 `HWND`) 之間的連接。
 
 有三種在這些物件之間產生關聯的常見方式：
 

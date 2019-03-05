@@ -1,5 +1,5 @@
 ---
-title: TN017：終結視窗物件
+title: TN017:終結視窗物件
 ms.date: 11/04/2016
 f1_keywords:
 - vc.objects
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TN017
 - PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
-ms.openlocfilehash: 06553677e67a4314116077e7942381bd847c64d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e52112bed0f583a3f5652f9213bd5049d543a80
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502228"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294106"
 ---
-# <a name="tn017-destroying-window-objects"></a>TN017：終結視窗物件
+# <a name="tn017-destroying-window-objects"></a>TN017:終結視窗物件
 
 此附註將描述使用[CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy)方法。 如果您想要執行的自訂的配置，請使用這個方法`CWnd`-衍生物件。 此提示也會說明為什麼您應該使用[cwnd:: Destroywindow](../mfc/reference/cwnd-class.md#destroywindow)終結的 c + + Windows 物件而非**刪除**運算子。
 
@@ -97,4 +97,3 @@ Warning: calling DestroyWindow in CWnd::~CWnd
 
 [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
 [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
-

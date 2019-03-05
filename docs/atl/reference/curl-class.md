@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
-ms.openlocfilehash: ed42461af50fa83ca142127587d334cc7e75d914
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 913365e2b20015b22480dfd364d75b2be3c6355b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471509"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295652"
 ---
 # <a name="curl-class"></a>CUrl 類別
 
@@ -62,7 +62,7 @@ class CUrl
 |名稱|描述|
 |----------|-----------------|
 |[CUrl::CUrl](#curl)|建構函式。|
-|[CUrl:: ~ CUrl](#dtor)|解構函式。|
+|[CUrl::~CUrl](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -122,7 +122,7 @@ class CUrl
 
 - 主機名稱:"`www.microsoft.com`」
 
-- 連接埠號碼： 80
+- 連接埠號碼：80
 
 - UrlPath: 「 visualc/stuff.htm"
 
@@ -147,17 +147,17 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
 *dwFlags*<br/>
 控制規範化旗標。 如果未不指定任何旗標 (*dwFlags* = 0)，方法將所有 unsafe 字元和中繼序列 (例如\\。，\...，和\\...) 來逸出序列。 *dwFlags*可以是下列值之一：
 
-- ATL_URL_BROWSER_MODE： 不會進行編碼或解碼字元之後"#"或""並不會移除尾端空白字元之後""。 如果未指定此值，編碼整個 URL，並移除尾端空白字元。
+- ATL_URL_BROWSER_MODE:不會進行編碼或解碼字元之後"#"或""並不會移除尾端空白字元之後""。 如果未指定此值，編碼整個 URL，並移除尾端空白字元。
 
-- ATL_URL _DECODE： 將所有 %xx 序列都轉換為字元，才會剖析 URL，包括逸出序列。
+- ATL_URL _DECODE:將所有 %xx 序列都轉換為字元，才會剖析 URL，包括逸出序列。
 
-- ATL_URL _ENCODE_PERCENT： 編碼任何發現的百分比符號。 根據預設，不被編碼百分比符號。
+- ATL_URL _ENCODE_PERCENT:將編碼任何發現的百分比符號。 根據預設，不被編碼百分比符號。
 
-- ATL_URL _ENCODE_SPACES_ONLY： 空間只會將編碼。
+- ATL_URL _ENCODE_SPACES_ONLY:將編碼只能顯示空格。
 
-- ATL_URL _NO_ENCODE： 不會轉換成逸出序列的不安全字元。
+- ATL_URL _NO_ENCODE:不會轉換成逸出序列的不安全字元。
 
-- ATL_URL _NO_META： 不會移除中繼序列 (例如"。"和"..") 從 URL。
+- ATL_URL _NO_META:不會移除中繼序列 (例如"。"和"..") 從 URL。
 
 ### <a name="return-value"></a>傳回值
 
@@ -225,7 +225,7 @@ inline BOOL CreateUrl(
 
 這個方法會附加其個別的欄位，才能建構完整的 URL 字串使用下列格式：
 
-**\<配置 >://\<使用者 >:\<傳遞 >\@\<網域 >:\<連接埠 >\<路徑 >\<額外 >**
+**\<scheme>://\<user>:\<pass>\@\<domain>:\<port>\<path>\<extra>**
 
 呼叫這個方法時*pdwMaxLength*參數應該一開始會包含所參考的字串緩衝區的最大長度*lpszUrl*參數。 值*pdwMaxLength*參數將會更新的 URL 字串的實際長度。
 
@@ -246,10 +246,10 @@ CUrl(const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>參數
 
-*Url*<br/>
+*urlThat*<br/>
 `CUrl`複製來建立 URL 的物件。
 
-##  <a name="dtor"></a>  CUrl:: ~ CUrl
+##  <a name="dtor"></a>  CUrl::~CUrl
 
 解構函式。
 
@@ -447,7 +447,7 @@ CUrl& operator= (const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>參數
 
-*Url*<br/>
+*urlThat*<br/>
 `CUrl`物件複製到目前的物件。
 
 ### <a name="return-value"></a>傳回值

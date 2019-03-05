@@ -8,12 +8,12 @@ helpviewer_keywords:
 - control classes [MFC], variables
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
-ms.openlocfilehash: f79ecb6edec58d26042818d647a0ea121dd41a55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3b1a168619c1c111db3e71e1a9562d441cc710d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595685"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302074"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>根據新控制項類別來宣告變數
 
@@ -41,7 +41,7 @@ ms.locfileid: "50595685"
 
 9. 在 **註解**方塊中，新增您想要出現在程式碼中的任何註解。
 
-10. 按一下 [確定 **Deploying Office Solutions**]。
+10. 按一下 [確定] 。
 
 ## <a name="see-also"></a>另請參閱
 

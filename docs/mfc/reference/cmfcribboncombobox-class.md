@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCRibbonComboBox [MFC], SelectItem
 - CMFCRibbonComboBox [MFC], SetDropDownHeight
 ms.assetid: 9b29a6a4-cf17-4152-9b13-0bf90784b30d
-ms.openlocfilehash: 5c9e6c43c4e87508dc9ab66976309f80cdf09adc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89007ea3eb7fd0aef28caadf439195b4090a05d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541423"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294431"
 ---
 # <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox 類別
 
@@ -165,7 +165,7 @@ CMFCRibbonComboBox();
 *lpszLabel*<br/>
 [in]下拉式方塊的顯示標籤。
 
-*n*<br/>
+*nImage*<br/>
 [in]下拉式方塊的小型影像索引。
 
 ### <a name="remarks"></a>備註

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 177f6eeada942440c33f7dd0a0cbc6d9e59d867c
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 7750b7335b99bbfaa02c1f310c70bb868ef56573
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894142"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300956"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -140,7 +140,8 @@ class CToolTipCtrl : public CWnd
 
 `CToolTipCtrl` 提供控制項的初始時間和持續時間的工具提示中，功能的工具提示文字、 本身，工具提示視窗的寬度和工具提示的背景和文字色彩的邊界寬度。 一個工具提示控制項可以提供多個工具的資訊。
 
-`CToolTipCtrl` 類別提供 Windows 通用工具提示控制項的功能。 這個控制項 (並因此`CToolTipCtrl`類別) 僅適用於 Windows 95/98 和 Windows NT 的版本 3.51 下執行的程式和更新版本。
+
+  `CToolTipCtrl` 類別提供 Windows 通用工具提示控制項的功能。 這個控制項 (並因此`CToolTipCtrl`類別) 僅適用於 Windows 95/98 和 Windows NT 的版本 3.51 下執行的程式和更新版本。
 
 如需啟用工具提示的詳細資訊，請參閱[在 Windows 中的工具提示不會衍生自 cframewnd 之](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)。
 

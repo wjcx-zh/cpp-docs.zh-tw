@@ -1,18 +1,18 @@
 ---
-title: 如何：使用排程群組來影響執行順序
+title: HOW TO：使用排程群組來影響執行順序
 ms.date: 11/04/2016
 helpviewer_keywords:
 - schedule groups, using [Concurrency Runtime]
 - using schedule groups [Concurrency Runtime]
 ms.assetid: 73124194-fc3a-491e-a23f-fbd7b5a4455c
-ms.openlocfilehash: 1117e0d24aae023fbb4dec4fbb9721e6da2ad768
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99e0383fc8d16f3eeb6e43e59424ab0984ee5c14
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642291"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284355"
 ---
-# <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>如何：使用排程群組來影響執行順序
+# <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>HOW TO：使用排程群組來影響執行順序
 
 並行執行階段，工作會排程的順序是不具決定性的。 不過，您可以使用排程的原則來影響執行工作順序。 本主題說明如何使用排程群組，並搭配[concurrency::SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey)排程器原則來影響執行工作順序。
 
@@ -112,4 +112,3 @@ group 1,
 
 [排程群組](../../parallel/concrt/schedule-groups.md)<br/>
 [非同步代理程式](../../parallel/concrt/asynchronous-agents.md)
-

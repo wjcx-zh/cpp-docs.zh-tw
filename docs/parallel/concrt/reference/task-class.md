@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: c2ac1df322a2778356ce8acca90392fc9f6a17f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1dc146f03b4ed5c0d9d82736959df3097f41199
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482068"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289295"
 ---
 # <a name="task-class-concurrency-runtime"></a>task 類別 (並行執行階段)
 
@@ -69,7 +69,7 @@ class task;
 |[is_done](#is_done)|判定工作是否完成。|
 |[scheduler](#scheduler)|傳回此工作的排程器|
 |[then](#then)|多載。 將接續工作加入至此工作。|
-|[等候](#wait)|等候這個工作到達終止狀態。 如果符合所有的工作相依性，而且未經選取供背景工作執行，則 `wait` 可以執行內嵌工作。|
+|[wait](#wait)|等候這個工作到達終止狀態。 如果符合所有的工作相依性，而且未經選取供背景工作執行，則 `wait` 可以執行內嵌工作。|
 
 ### <a name="public-operators"></a>公用運算子
 

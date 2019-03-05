@@ -4,12 +4,12 @@ ms.date: 09/12/2018
 helpviewer_keywords:
 - Internet applications [MFC], Active technology
 ms.assetid: 6f782aa1-5c2f-47a2-9e63-ddd0829d5a08
-ms.openlocfilehash: 04444ca1318eaf52f05c05a251baf120c16eec29
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9f09715f53247cc8a3abf0fbc63517e76d810c3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453377"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296315"
 ---
 # <a name="active-technology-on-the-internet"></a>網際網路上的 Active 技術
 
@@ -24,7 +24,7 @@ ActiveX 控制項 (先前稱為 OLE 控制項) 是一些物件，可以插入 We
 
 ## <a name="internet-data-download-services"></a>網際網路資料下載服務
 
-使用常見的通訊協定可以透過網際網路下載資料：HTTP、FTP 和 Gopher。 MFC WinInet 類別藉由抽象化 TCP/IP 和 WinSock 通訊協定，可讓您輕鬆地使用 HTTP、FTP 和 Gopher 通訊協定傳輸資料。 MFC 非同步 Moniker 類別提供一種以非同步方式，不造成封鎖下載檔案以及呈現大型物件的方式。 如需詳細資訊，請參閱 < [Win32 網際網路擴充功能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)。
+您可以透過網際網路使用常用的通訊協定下載資料：HTTP、 FTP 和 gopher。 MFC WinInet 類別藉由抽象化 TCP/IP 和 WinSock 通訊協定，可讓您輕鬆地使用 HTTP、FTP 和 Gopher 通訊協定傳輸資料。 MFC 非同步 Moniker 類別提供一種以非同步方式，不造成封鎖下載檔案以及呈現大型物件的方式。 如需詳細資訊，請參閱 < [Win32 網際網路擴充功能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)。
 
 ## <a name="active-scripts"></a>動態指令碼
 
@@ -39,4 +39,3 @@ HTML 擴充方法 (例如物件標記) 已加入以支援控制項和指令碼�
 [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)<br/>
 [網際網路上的 ActiveX 控制項](../mfc/activex-controls-on-the-internet.md)<br/>
 [Win32 網際網路延伸模組 (WinInet)](../mfc/win32-internet-extensions-wininet.md)
-

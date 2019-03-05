@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-ms.openlocfilehash: ac6315d1b450fa41158f1393471d723627ecec24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76acbfa9625fe6cb9a575244b0ed6954eeaaf3f2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509379"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301684"
 ---
 # <a name="using-property-sheets-in-your-application"></a>在應用程式中使用屬性工作表
 
@@ -42,7 +42,7 @@ ms.locfileid: "50509379"
 
 1. 建立成員變數來保存此屬性頁的值。 因為屬性頁是特別的對話方塊，將成員變數加入屬性頁的程序與將成員變數加入對話方塊的程序完全相同。 如需詳細資訊，請參閱 <<c0> [ 定義對話方塊控制項的成員變數](../windows/defining-member-variables-for-dialog-controls.md)。
 
-1. 建構[CPropertySheet](../mfc/reference/cpropertysheet-class.md)在原始程式碼中的物件。 通常，您會針對顯示屬性工作表的命令，在處理常式中建構 `CPropertySheet` 物件。 這個物件代表整個屬性工作表。 如果您建立的強制回應屬性工作表[DoModal](../mfc/reference/cpropertysheet-class.md#domodal)函式，此架構提供預設的三個命令按鈕: [確定]、 [取消]，並套用。 此架構會建立沒有命令按鈕，使用建立非強制回應屬性工作表[建立](../mfc/reference/cpropertysheet-class.md#create)函式。 除非您要加入其他控制項 (例如預覽視窗) 或顯示非強制回應屬性工作表，否則不需要從 `CPropertySheet` 衍生類別。 對於非強制回應屬性工作表此步驟是必要的，因為它們不含可以用來關閉屬性工作表的任何預設控制項。
+1. 建構[CPropertySheet](../mfc/reference/cpropertysheet-class.md)在原始程式碼中的物件。 通常，您會針對顯示屬性工作表的命令，在處理常式中建構 `CPropertySheet` 物件。 這個物件代表整個屬性工作表。 如果您建立的強制回應屬性工作表[DoModal](../mfc/reference/cpropertysheet-class.md#domodal)函式，此架構提供預設的三個命令按鈕：好，取消，並套用。 此架構會建立沒有命令按鈕，使用建立非強制回應屬性工作表[建立](../mfc/reference/cpropertysheet-class.md#create)函式。 除非您要加入其他控制項 (例如預覽視窗) 或顯示非強制回應屬性工作表，否則不需要從 `CPropertySheet` 衍生類別。 對於非強制回應屬性工作表此步驟是必要的，因為它們不含可以用來關閉屬性工作表的任何預設控制項。
 
 1. 對於要加入至屬性工作表的每個頁面，請執行下列步驟：
 
@@ -63,4 +63,3 @@ ms.locfileid: "50509379"
 ## <a name="see-also"></a>另請參閱
 
 [屬性工作表](../mfc/property-sheets-mfc.md)
-

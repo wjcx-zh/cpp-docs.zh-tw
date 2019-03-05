@@ -1,24 +1,24 @@
 ---
-title: 如何：建立樣板類別的訊息對應
+title: HOW TO：樣板類別建立的訊息對應
 ms.date: 11/04/2016
 helpviewer_keywords:
 - template classes [MFC], creating message maps
 - message maps [MFC], template classes
 ms.assetid: 4e7e24f8-06df-4b46-82aa-7435c8650de3
-ms.openlocfilehash: 437fdf59ae9c9d3428654fc412fd78bf1348a701
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 676e698a899327eee8305731b5d609b5b95ece76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586234"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296770"
 ---
-# <a name="how-to-create-a-message-map-for-a-template-class"></a>如何：建立樣板類別的訊息對應
+# <a name="how-to-create-a-message-map-for-a-template-class"></a>HOW TO：樣板類別建立的訊息對應
 
 MFC 中的訊息對應提供有效方法將 Windows 訊息導向到適當的 C++ 物件執行個體。 MFC 訊息對應目標的範例，包括應用程式類別、文件和檢視類別、控制項類別等等。
 
 傳統的 MFC 訊息對應使用宣告[BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map)巨集以宣告訊息對應巨集項目，每個訊息處理常式類別方法的開頭和最後[END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map)巨集以宣告訊息對應的結尾。
 
-有一項限制[BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map)包含樣板引數的類別一起使用時，就會發生巨集。 當搭配使用樣板類別，此巨集會因為在巨集展開期間缺少樣板參數而導致編譯時間錯誤。 [BEGIN_TEMPLATE_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_template_message_map)巨集的設計是允許類別包含單一樣板引數來宣告其本身的訊息對應。
+有一項限制[BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map)包含樣板引數的類別一起使用時，就會發生巨集。 當搭配使用樣板類別，此巨集會因為在巨集展開期間缺少樣板參數而導致編譯時期錯誤。 [BEGIN_TEMPLATE_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_template_message_map)巨集的設計是允許類別包含單一樣板引數來宣告其本身的訊息對應。
 
 ## <a name="example"></a>範例
 
@@ -64,4 +64,3 @@ END_MESSAGE_MAP()
 
 [BEGIN_TEMPLATE_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_template_message_map)<br/>
 [訊息處理和對應](../mfc/message-handling-and-mapping.md)
-

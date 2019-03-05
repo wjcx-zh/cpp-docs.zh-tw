@@ -4,12 +4,12 @@ ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC, Internet applications
 ms.assetid: da078bf5-53c3-4167-b1ef-509b5a544ad9
-ms.openlocfilehash: a3f1dca05eee7710d07818fb660e35be535fbb78
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94bc17f59e0d0a7ed5627d0ed20d31e471c22fd9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432782"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294495"
 ---
 # <a name="internet-information-by-task"></a>依工作分類的網際網路資訊
 
@@ -51,4 +51,3 @@ ms.locfileid: "50432782"
 ## <a name="see-also"></a>另請參閱
 
 [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)
-

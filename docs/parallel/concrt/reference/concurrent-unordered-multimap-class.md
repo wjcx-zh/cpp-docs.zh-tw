@@ -13,16 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_multimap class
 ms.assetid: 4dada5d7-15df-4382-b9c9-348e75b2f3c1
-ms.openlocfilehash: e1a477e278de2e8ba0f1af43dfdb6081206d86e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 446060656a79380f85d3faac560bd48910bfb2db
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450904"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294352"
 ---
 # <a name="concurrentunorderedmultimap-class"></a>concurrent_unordered_multimap 類別
 
-`concurrent_unordered_multimap` 類別是一種並行安全容器，可控制 `std::pair<const K, _Element_type>` 類型項目的不同長度序列。 序列的表示方式導致啟用並行安全附加、項目存取、迭代器存取及迭代器周遊作業。
+
+  `concurrent_unordered_multimap` 類別是一種並行安全容器，可控制 `std::pair<const K, _Element_type>` 類型項目的不同長度序列。 序列的表示方式導致啟用並行安全附加、項目存取、迭代器存取及迭代器周遊作業。
 
 ## <a name="syntax"></a>語法
 
@@ -125,7 +126,7 @@ true>>;
 
 **命名空間：** concurrency
 
-##  <a name="begin"></a> 開始
+##  <a name="begin"></a> begin
 
 傳回迭代器，指向 並行容器中的第一個項目。 這個方法是並行安全。
 
@@ -221,10 +222,10 @@ concurrent_unordered_multimap(
 *_Allocator*<br/>
 這個未排序多重對應的配置器。
 
-*（_b)*<br/>
+*_Begin*<br/>
 要複製的元素範圍中第一個元素的位置。
 
-*（_e)*<br/>
+*_End*<br/>
 超出要複製之元素範圍的第一個元素的位置。
 
 *_Umap*<br/>
@@ -244,7 +245,7 @@ concurrent_unordered_multimap(
 
 最後一個建構函式會指定並行未排序之多重對應 `_Umap` 的移動作業。
 
-##  <a name="count"></a> 計數
+##  <a name="count"></a> count
 
 計算符合指定索引鍵的項目數目。 此函式是安全的並行存取。
 
@@ -261,7 +262,7 @@ size_type count(const key_type& KVal) const;
 
 出現在容器中的機碼次數時次數。
 
-##  <a name="empty"></a> 空白
+##  <a name="empty"></a> empty
 
 測試項目是否不存在。 這個方法是並行安全。
 
@@ -318,7 +319,7 @@ A[配對](../../../standard-library/pair-structure.md)其中的第一個元素�
 
 就可能會造成額外的金鑰之後開始迭代器，以及結尾迭代器之前，要插入的並行插入。
 
-##  <a name="find"></a> 尋找
+##  <a name="find"></a> find
 
 尋找符合指定之索引鍵的元素。 此函式是安全的並行存取。
 
@@ -361,7 +362,7 @@ hasher hash_function() const;
 
 儲存的雜湊函式物件。
 
-##  <a name="insert"></a> 插入
+##  <a name="insert"></a> insert
 
 將項目來加入`concurrent_unordered_multimap`物件。
 
@@ -397,7 +398,7 @@ typename std::enable_if<!std::is_same<const_iterator,
 *V*<br/>
 值插入到對應的型別。
 
-*值*<br/>
+*value*<br/>
 要插入的值。
 
 *_Where*<br/>
@@ -406,7 +407,7 @@ typename std::enable_if<!std::is_same<const_iterator,
 *first*<br/>
 要插入之範圍的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 要插入之範圍的結尾。
 
 ### <a name="return-value"></a>傳回值
@@ -539,7 +540,7 @@ size_type size() const;
 
 有並行插入存在時，並行容器中的項目數可能會在呼叫這個函式之後立即變更，甚至會是在尚未讀取傳回值的情況下。
 
-##  <a name="swap"></a> 交換
+##  <a name="swap"></a> swap
 
 交換兩個內容`concurrent_unordered_multimap`物件。 這個方法不是並行安全。
 
@@ -564,7 +565,7 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 
 ### <a name="parameters"></a>參數
 
-*（_b)*<br/>
+*_Bucket*<br/>
 貯體的索引。
 
 ### <a name="return-value"></a>傳回值
@@ -610,7 +611,7 @@ size_type unsafe_bucket_size(size_type _Bucket);
 
 ### <a name="parameters"></a>參數
 
-*（_b)*<br/>
+*_Bucket*<br/>
 若要搜尋的貯體。
 
 ### <a name="return-value"></a>傳回值
@@ -627,7 +628,7 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 
 ### <a name="parameters"></a>參數
 
-*（_b)*<br/>
+*_Bucket*<br/>
 貯體的索引。
 
 ### <a name="return-value"></a>傳回值
@@ -644,7 +645,7 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 
 ### <a name="parameters"></a>參數
 
-*（_b)*<br/>
+*_Bucket*<br/>
 貯體的索引。
 
 ### <a name="return-value"></a>傳回值
@@ -663,7 +664,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 
 ### <a name="parameters"></a>參數
 
-*（_b)*<br/>
+*_Bucket*<br/>
 貯體的索引。
 
 ### <a name="return-value"></a>傳回值
@@ -695,7 +696,7 @@ iterator unsafe_erase(
 要清除的索引鍵的值。
 
 *first*<br/>
-*最後一個*<br/>
+*last*<br/>
 迭代器。
 
 ### <a name="return-value"></a>傳回值
@@ -724,4 +725,3 @@ size_type unsafe_max_bucket_count() const;
 
 [concurrency 命名空間](concurrency-namespace.md)<br/>
 [平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)
-

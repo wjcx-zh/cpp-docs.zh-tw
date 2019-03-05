@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL projects, MFC support
 ms.assetid: f90b4276-cb98-4c11-902c-9ebcfe6f954b
-ms.openlocfilehash: 21e3305ce2d2968a3809793eb487317e224351f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0aece6805f1de987b0164f405e50b99fd706fef4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489384"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297303"
 ---
 # <a name="mfc-support-in-atl-projects"></a>ATL 專案中的 MFC 支援
 
@@ -55,4 +55,3 @@ int CProjNameApp::ExitInstance()
 [新增類別](../../ide/adding-a-class-visual-cpp.md)<br/>
 [建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)<br/>
 [預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)
-

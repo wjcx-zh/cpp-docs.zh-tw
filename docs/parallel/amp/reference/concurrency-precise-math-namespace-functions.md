@@ -90,12 +90,12 @@ f1_keywords:
 - amp_math/Concurrency::precise_math::trunc
 - amp_math/Concurrency::precise_math::truncf
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-ms.openlocfilehash: ccbb9bdda3132626a6bf76161104c9716a9b5c89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7690c0629e7035d0130f0a7dbdcabf3e959ae7b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469351"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297342"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Concurrency:: precise_math 命名空間函式
 
@@ -831,7 +831,7 @@ inline double expm1(double exponent) restrict(amp);
 
 ### <a name="parameters"></a>參數
 
-*指數*<br/>
+*exponent*<br/>
 指數詞彙*n*數學運算式`e` <sup>n</sup>，其中`e`是自然對數的底數。
 
 ### <a name="return-value"></a>傳回值
@@ -848,7 +848,7 @@ inline float expm1f(float exponent) restrict(amp);
 
 ### <a name="parameters"></a>參數
 
-*指數*<br/>
+*exponent*<br/>
 指數詞彙*n*數學運算式`e` <sup>n</sup>，其中`e`是自然對數的底數。
 
 ### <a name="return-value"></a>傳回值
@@ -1279,7 +1279,7 @@ inline double frexp(
 *_X*<br/>
 浮點值。
 
-*2^_exp*<br/>
+*_Exp*<br/>
 傳回整數的指數 _X 中的浮點值
 
 ### <a name="return-value"></a>傳回值
@@ -1301,7 +1301,7 @@ inline float frexpf(
 *_X*<br/>
 浮點值。
 
-*2^_exp*<br/>
+*_Exp*<br/>
 傳回整數的指數 _X 中的浮點值
 
 ### <a name="return-value"></a>傳回值
@@ -1487,7 +1487,7 @@ inline double ldexp(
 *_X*<br/>
 浮點值、 尾數
 
-*2^_exp*<br/>
+*_Exp*<br/>
 整數值指數
 
 ### <a name="return-value"></a>傳回值
@@ -1509,7 +1509,7 @@ inline float ldexpf(
 *_X*<br/>
 浮點值、 尾數
 
-*2^_exp*<br/>
+*_Exp*<br/>
 整數值指數
 
 ### <a name="return-value"></a>傳回值
@@ -1535,7 +1535,7 @@ inline double lgamma(
 *_X*<br/>
 浮點值。
 
-*登 （_s)*<br/>
+*_Sign*<br/>
 傳回正負號
 
 ### <a name="return-value"></a>傳回值
@@ -1557,7 +1557,7 @@ inline float lgammaf(
 *_X*<br/>
 浮點值。
 
-*登 （_s)*<br/>
+*_Sign*<br/>
 傳回正負號
 
 ### <a name="return-value"></a>傳回值
@@ -2062,7 +2062,7 @@ inline float rcbrtf(float _X) restrict(amp);
 
 傳回的立方根引數的倒數
 
-##  <a name="remainder"></a>  其餘部分
+##  <a name="remainder"></a>  remainder
 
 計算餘數： _X REM _Y
 

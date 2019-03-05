@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-ms.openlocfilehash: 6132ec6623a009c09a37b7d704ce683a58956a04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce7734a1330f2d6e495565338879764482439d09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518712"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283848"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup 類別
 
@@ -121,7 +121,7 @@ virtual unsigned int Release() = 0;
 
 排程群組是特定的排程器執行個體相關聯。 您必須先確定已釋放排程群組的所有參考，才能釋放排程器的所有參考，因為後者可能會使排程器遭到終結。 在進行其他方式導致未定義的行為。
 
-##  <a name="dtor"></a> ~ ScheduleGroup
+##  <a name="dtor"></a> ~ScheduleGroup
 
 ```
 virtual ~ScheduleGroup();
@@ -142,7 +142,7 @@ virtual void ScheduleTask(
 *_Proc*<br/>
 若要執行的輕量工作主體執行該函式指標。
 
-*資料 （_d)*<br/>
+*_Data*<br/>
 將做為參數傳遞至工作的主體資料的 void 指標。
 
 ### <a name="remarks"></a>備註
@@ -155,4 +155,3 @@ virtual void ScheduleTask(
 [CurrentScheduler 類別](currentscheduler-class.md)<br/>
 [Scheduler 類別](scheduler-class.md)<br/>
 [工作排程器](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

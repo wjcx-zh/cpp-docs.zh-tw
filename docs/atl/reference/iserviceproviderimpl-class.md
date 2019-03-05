@@ -9,12 +9,12 @@ helpviewer_keywords:
 - IServiceProviderImpl class
 - IServiceProvider interface, ATL implementation
 ms.assetid: 251254d3-c4ce-40d7-aee0-3d676d1d72f2
-ms.openlocfilehash: 231c65d92ff287e35d5475109e70d21f5a047baa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e52c28d528e187713d2d0925fed23bd8cd4493d5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609877"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298668"
 ---
 # <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl 類別
 
@@ -44,11 +44,11 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 
 `IServiceProvider`介面會找出其 GUID 指定的服務，並傳回服務所要求介面的介面指標。 類別`IServiceProviderImpl`提供此介面的預設實作。
 
-`IServiceProviderImpl` 指定一種方法： [QueryService](#queryservice)，這會建立或存取指定的服務，並傳回服務的指定介面的介面指標。
+`IServiceProviderImpl` 指定一種方法：[QueryService](#queryservice)，這會建立或存取指定的服務，並傳回服務的指定介面的介面指標。
 
 `IServiceProviderImpl` 會使用服務對應，開頭[BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map)起[END_SERVICE_MAP](service-map-macros.md#end_service_map)。
 
-服務對應包含兩個項目： [SERVICE_ENTRY](service-map-macros.md#service_entry)，表示支援的物件，指定的服務識別碼 (SID) 和[SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain)，其會呼叫`QueryService`鏈結至另一個物件。
+服務對應會包含兩個項目：[SERVICE_ENTRY](service-map-macros.md#service_entry)，表示支援的物件，指定的服務識別碼 (SID) 和[SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain)，其會呼叫`QueryService`鏈結至另一個物件。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

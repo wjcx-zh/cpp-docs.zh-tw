@@ -17,16 +17,17 @@ f1_keywords:
 helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-ms.openlocfilehash: 2fd94ef072fcab9af076fcdfa1b5c094d77f89c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a0c68c2c017eedfa23548bee1d17177e8eaaa1e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547383"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289022"
 ---
 # <a name="multitypejoin-class"></a>multitype_join 類別
 
-`multitype_join` 傳訊區塊是多來源的單一目標傳訊區塊，會與來自其來源的不同類型訊息合併，並且為其目標提供 Tuple 合併的訊息。
+
+  `multitype_join` 傳訊區塊是多來源的單一目標傳訊區塊，會與來自其來源的不同類型訊息合併，並且為其目標提供 Tuple 合併的訊息。
 
 ## <a name="syntax"></a>語法
 
@@ -209,7 +210,7 @@ multitype_join(
 
 移動建構函式不會在鎖定下執行，這表示使用者必須確認在移動時沒有任何輕量工作在執行中。 否則，可能發生許多競爭情況，導致例外狀況或不一致的狀態。
 
-##  <a name="dtor"></a> ~ multitype_join
+##  <a name="dtor"></a> ~multitype_join
 
 終結`multitype_join`傳訊區塊。
 

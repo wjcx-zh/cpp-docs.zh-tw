@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-ms.openlocfilehash: 6ae0ebb94952408aa2576d4320ce4e00308c458f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8a5195d4d2a3662d79d515c28dc66d1b0a27b24
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549509"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295015"
 ---
 # <a name="cdbexception-class"></a>CDBException 類別
 
@@ -44,13 +44,13 @@ class CDBException : public CException
 類別包含兩個公用資料成員，您可以使用以判斷造成例外狀況，或顯示描述例外狀況的文字訊息。 `CDBException` 物件是建構，而且資料庫類別的成員函式所擲回。
 
 > [!NOTE]
->  這個類別是其中一個 MFC 的開放式資料庫連接 (ODBC) 類別。 如果您改為使用較新的資料存取物件 (DAO) 類別，使用[CDaoException](../../mfc/reference/cdaoexception-class.md)改。 所有的 DAO 類別名稱有"CDao 」 做為前置詞。 如需詳細資訊，請參閱文章[概觀： 資料庫程式設計](../../data/data-access-programming-mfc-atl.md)。
+>  這個類別是其中一個 MFC 的開放式資料庫連接 (ODBC) 類別。 如果您改為使用較新的資料存取物件 (DAO) 類別，使用[CDaoException](../../mfc/reference/cdaoexception-class.md)改。 所有的 DAO 類別名稱有"CDao 」 做為前置詞。 如需詳細資訊，請參閱文章[概觀：資料庫程式設計](../../data/data-access-programming-mfc-atl.md)。
 
 例外狀況會涉及外部程式的控制項，例如資料來源的條件不正常執行的情況下，或網路 I/O 錯誤。 您可能會在執行程式的正常過程中看到的錯誤通常不考慮例外狀況。
 
 您可以存取這些物件的範圍內**攔截**運算式。 您也可以擲回`CDBException`從您自己的程式碼的物件`AfxThrowDBException`全域函式。
 
-如需詳細資訊，在一般情況下，或將處理的例外狀況的相關`CDBException`物件，請參閱文章[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)並[例外狀況： 資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)。
+如需詳細資訊，在一般情況下，或將處理的例外狀況的相關`CDBException`物件，請參閱文章[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)和[例外狀況：資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -132,9 +132,9 @@ ODBC 所定義的 SQL 前置碼。 AFX 前面的程式碼會定義在 AFXDB。H�
 
 字串為形式 」 狀態: %s，原生: %ld，來源: %s"，其中的格式化程式碼，依序會取代的值，描述：
 
-- 在傳回的 SQLSTATE、 null 結束的字串，包含五個字元的錯誤碼*szSqlState*參數的 ODBC 函數`SQLError`。 SQLSTATE 值會列在附錄 A [ODBC 錯誤碼](/previous-versions/windows/desktop/ms714687)，請在*ODBC 程式設計人員參考*。 範例:"S0022 」。
+- 在傳回的 SQLSTATE、 null 結束的字串，包含五個字元的錯誤碼*szSqlState*參數的 ODBC 函數`SQLError`。 SQLSTATE 值會列在附錄 A [ODBC 錯誤碼](/previous-versions/windows/desktop/ms714687)，請在*ODBC 程式設計人員參考*。 範例：「 S0022"。
 
-- 中的原生錯誤特有的程式碼，資料來源，傳回*pfNativeError*參數`SQLError`函式。 範例： 207。
+- 中的原生錯誤特有的程式碼，資料來源，傳回*pfNativeError*參數`SQLError`函式。 範例：207.
 
 - 傳回的錯誤訊息文字*szErrorMsg*參數`SQLError`函式。 此訊息是由數個以括弧括住的名稱所組成。 因為錯誤從其來源傳遞給使用者，每個 ODBC 元件 （驅動程式、 驅動程式管理員中的 資料來源） 將附加自己的名稱。 這項資訊可協助找出錯誤的來源。 範例: [Microsoft] [SQL Server Driver] [SQL Server]
 
@@ -144,11 +144,11 @@ ODBC 所定義的 SQL 前置碼。 AFX 前面的程式碼會定義在 AFXDB。H�
 
 ### <a name="example"></a>範例
 
-  從 ODBC: 「 狀態： S0022，原生： 207，來源: [Microsoft] [SQL Server Driver] [SQL Server] 資料行名稱無效 'ColName' 」
+  從 ODBC:"State:S0022,Native:207,Origin:[Microsoft][ODBC SQL Server Driver][SQL Server] Invalid column name 'ColName'"
 
-在`m_strStateNativeOrigin`: 「 狀態： S0022，原生： 207，來源: [Microsoft] [SQL Server Driver] [SQL Server] 」
+在 `m_strStateNativeOrigin`中："State:S0022,Native:207,Origin:[Microsoft][ODBC SQL Server Driver][SQL Server]"
 
-在  `m_strError`: 「 無效的資料行名稱 'ColName' 」
+在 `m_strError`中：「 無效的資料行名稱 'ColName' 」
 
 ## <a name="see-also"></a>另請參閱
 

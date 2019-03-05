@@ -8,12 +8,12 @@ f1_keywords:
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-ms.openlocfilehash: 0da45fa18d12b3f1c93df6b8c8736ed1bfb58ade
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2373fe3bc8cac501d1b6b32ca66996eff47ba6f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524991"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295041"
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr 結構
 
@@ -43,7 +43,7 @@ struct scheduler_ptr;
 
 |名稱|描述|
 |----------|-----------------|
-|[scheduler_ptr:: operator bool](#operator_bool)|測試排程器指標是否為非 null|
+|[scheduler_ptr::operator bool](#operator_bool)|測試排程器指標是否為非 null|
 |[scheduler_ptr::operator-&gt;](#operator_ptr)|作用如同指標|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
@@ -66,7 +66,7 @@ scheduler_interface* get() const;
 
 ### <a name="return-value"></a>傳回值
 
-##  <a name="operator_bool"></a>  scheduler_ptr:: operator bool
+##  <a name="operator_bool"></a>  scheduler_ptr::operator bool
 
 測試排程器指標是否為非 null。
 
@@ -74,7 +74,7 @@ scheduler_interface* get() const;
 operator bool() const;
 ```
 
-##  <a name="operator_ptr"></a>  scheduler_ptr:: operator-&gt;
+##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;
 
 如同指標的行為。
 

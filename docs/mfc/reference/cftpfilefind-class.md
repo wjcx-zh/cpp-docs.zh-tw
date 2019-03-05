@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-ms.openlocfilehash: 72d1eb147f8d7387a04f25cc008cc4d4638ba691
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5da739cac1ab852ce64526b24ee2b4f66d40d570
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548222"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284823"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind 類別
 
@@ -43,8 +43,8 @@ class CFtpFileFind : public CFileFind
 
 |名稱|描述|
 |----------|-----------------|
-|[Cftpfilefind:: Findfile](#findfile)|尋找 FTP 伺服器上的檔案。|
-|[Cftpfilefind:: Findnextfile](#findnextfile)|會繼續從先前呼叫檔案搜尋[FindFile](#findfile)。|
+|[CFtpFileFind::FindFile](#findfile)|尋找 FTP 伺服器上的檔案。|
+|[CFtpFileFind::FindNextFile](#findnextfile)|會繼續從先前呼叫檔案搜尋[FindFile](#findfile)。|
 |[CFtpFileFind::GetFileURL](#getfileurl)|取得 URL，包括路徑，找到的檔案。|
 
 ## <a name="remarks"></a>備註
@@ -93,13 +93,13 @@ explicit CFtpFileFind(
 
 ### <a name="remarks"></a>備註
 
-預設值*dwContext* MFC，以便傳送`CFtpFileFind`物件[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立`CFtpFileFind`物件。 您可以覆寫預設值可設定的內容識別碼以您選擇的值。 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供，它識別之物件的狀態。 請參閱文章[網際網路前幾個步驟： WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
+預設值*dwContext* MFC，以便傳送`CFtpFileFind`物件[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立`CFtpFileFind`物件。 您可以覆寫預設值可設定的內容識別碼以您選擇的值。 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供，它識別之物件的狀態。 請參閱文章[網際網路前幾個步驟：WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
 
 ### <a name="example"></a>範例
 
   請參閱稍早在本主題中的類別概觀中的範例。
 
-##  <a name="findfile"></a>  Cftpfilefind:: Findfile
+##  <a name="findfile"></a>  CFtpFileFind::FindFile
 
 呼叫此成員函式，來尋找 FTP 檔案。
 
@@ -139,7 +139,7 @@ virtual BOOL FindFile(
 
   請參閱本主題中先前的範例。
 
-##  <a name="findnextfile"></a>  Cftpfilefind:: Findnextfile
+##  <a name="findnextfile"></a>  CFtpFileFind::FindNextFile
 
 呼叫此成員函式，以繼續檔案搜尋，開始藉由呼叫[FindFile](#findfile)成員函式。
 

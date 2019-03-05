@@ -18,16 +18,17 @@ f1_keywords:
 helpviewer_keywords:
 - timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
-ms.openlocfilehash: beb374efe26c25fed490b7407e087e2cc46043c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e36441f53c9b53c9826ee92b2892142a522d7243
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659832"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298148"
 ---
 # <a name="timer-class"></a>timer 類別
 
-`timer` 傳訊區塊是單一目標 `source_block`，能夠在經過指定的時間長度或在特定時間間隔，將訊息傳送至它的目標。
+
+  `timer` 傳訊區塊是單一目標 `source_block`，能夠在經過指定的時間長度或在特定時間間隔，將訊息傳送至它的目標。
 
 ## <a name="syntax"></a>語法
 
@@ -205,7 +206,7 @@ virtual void resume_propagation();
 void start();
 ```
 
-##  <a name="stop"></a> 停止
+##  <a name="stop"></a> stop
 
 停駐點`timer`傳訊區塊。
 
@@ -244,7 +245,7 @@ timer(
 *_Ms*<br/>
 在下游傳播到指定的訊息啟動的呼叫必須經過的毫秒數。
 
-*值*<br/>
+*value*<br/>
 計時器耗盡時下游傳播值。
 
 *_PTarget*<br/>
@@ -263,7 +264,7 @@ timer(
 
 如果您未指定 `_Scheduler` 或 `_ScheduleGroup` 參數，執行階段會使用預設排程器。
 
-##  <a name="dtor"></a> ~ 計時器
+##  <a name="dtor"></a> ~timer
 
 終結`timer`傳訊區塊。
 

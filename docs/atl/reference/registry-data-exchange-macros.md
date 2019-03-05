@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, macros
 ms.assetid: c1bc5e79-2307-43d2-9d10-3a62ffadf473
-ms.openlocfilehash: c1a746487b799979cd83f2900a0f7a12d21a6837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69b823cbcd85ebaaeb05979283ea4f8fea80f4b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524813"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290686"
 ---
 # <a name="registry-data-exchange-macros"></a>登錄資料交換巨集
 
@@ -79,10 +79,10 @@ RDX_BINARY(
 
 ### <a name="parameters"></a>參數
 
-*Rootkey*<br/>
+*rootkey*<br/>
 登錄機碼的根目錄中。
 
-*子機碼*<br/>
+*subkey*<br/>
 登錄子機碼。
 
 *valuename*<br/>
@@ -113,10 +113,10 @@ RDX_CSTRING_TEXT(
 
 ### <a name="parameters"></a>參數
 
-*Rootkey*<br/>
+*rootkey*<br/>
 登錄機碼的根目錄中。
 
-*子機碼*<br/>
+*subkey*<br/>
 登錄子機碼。
 
 *valuename*<br/>
@@ -147,10 +147,10 @@ RDX_DWORD(
 
 ### <a name="parameters"></a>參數
 
-*Rootkey*<br/>
+*rootkey*<br/>
 登錄機碼的根目錄中。
 
-*子機碼*<br/>
+*subkey*<br/>
 登錄子機碼。
 
 *valuename*<br/>
@@ -181,10 +181,10 @@ RDX_TEXT(
 
 ### <a name="parameters"></a>參數
 
-*Rootkey*<br/>
+*rootkey*<br/>
 登錄機碼的根目錄中。
 
-*子機碼*<br/>
+*subkey*<br/>
 登錄子機碼。
 
 *valuename*<br/>
@@ -204,4 +204,3 @@ RDX_TEXT(
 
 [巨集](../../atl/reference/atl-macros.md)<br/>
 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)
-

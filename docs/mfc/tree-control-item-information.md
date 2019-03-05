@@ -5,12 +5,12 @@ helpviewer_keywords:
 - tree controls [MFC], item information
 - CTreeCtrl class [MFC], item information
 ms.assetid: 8dcab855-27de-49e9-95d8-f78ba963ea71
-ms.openlocfilehash: f33d9616b04abfe442471705b6d1a42333648a69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0eb8af4fbbb6f59c0dda75ec3705183ce916350
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506089"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288892"
 ---
 # <a name="tree-control-item-information"></a>樹狀目錄控制項目資訊
 
@@ -18,7 +18,7 @@ ms.locfileid: "50506089"
 
 [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate)， [GetItemText](../mfc/reference/ctreectrl-class.md#getitemtext)， [GetItemData](../mfc/reference/ctreectrl-class.md#getitemdata)，以及[GetItemImage](../mfc/reference/ctreectrl-class.md#getitemimage)成員函式會擷取個別的屬性項目。 這些函式都具有用於設定項目屬性的有對應 Set 函式。
 
-[GetNextItem](../mfc/reference/ctreectrl-class.md#getnextitem)成員函式會擷取與目前的項目指定的關聯性樹狀目錄控制項目。 這個函式會擷取項目的父代、下一個或上一個可見項目、第一個子項目等等，依此類推。 也有周遊樹狀結構的成員函式： [GetRootItem](../mfc/reference/ctreectrl-class.md#getrootitem)， [GetFirstVisibleItem](../mfc/reference/ctreectrl-class.md#getfirstvisibleitem)， [GetNextVisibleItem](../mfc/reference/ctreectrl-class.md#getnextvisibleitem)， [GetPrevVisibleItem](../mfc/reference/ctreectrl-class.md#getprevvisibleitem)， [GetChildItem](../mfc/reference/ctreectrl-class.md#getchilditem)， [GetNextSiblingItem](../mfc/reference/ctreectrl-class.md#getnextsiblingitem)， [GetPrevSiblingItem](../mfc/reference/ctreectrl-class.md#getprevsiblingitem)， [GetParentItem](../mfc/reference/ctreectrl-class.md#getparentitem)， [GetSelectedItem](../mfc/reference/ctreectrl-class.md#getselecteditem)，並[GetDropHilightItem](../mfc/reference/ctreectrl-class.md#getdrophilightitem)。
+[GetNextItem](../mfc/reference/ctreectrl-class.md#getnextitem)成員函式會擷取與目前的項目指定的關聯性樹狀目錄控制項目。 這個函式會擷取項目的父代、下一個或上一個可見項目、第一個子項目等等，依此類推。 也有周遊樹狀結構的成員函式：[GetRootItem](../mfc/reference/ctreectrl-class.md#getrootitem)， [GetFirstVisibleItem](../mfc/reference/ctreectrl-class.md#getfirstvisibleitem)， [GetNextVisibleItem](../mfc/reference/ctreectrl-class.md#getnextvisibleitem)， [GetPrevVisibleItem](../mfc/reference/ctreectrl-class.md#getprevvisibleitem)， [GetChildItem](../mfc/reference/ctreectrl-class.md#getchilditem)，[GetNextSiblingItem](../mfc/reference/ctreectrl-class.md#getnextsiblingitem)， [GetPrevSiblingItem](../mfc/reference/ctreectrl-class.md#getprevsiblingitem)， [GetParentItem](../mfc/reference/ctreectrl-class.md#getparentitem)， [GetSelectedItem](../mfc/reference/ctreectrl-class.md#getselecteditem)，和[GetDropHilightItem](../mfc/reference/ctreectrl-class.md#getdrophilightitem)。
 
 [GetItemRect](../mfc/reference/ctreectrl-class.md#getitemrect)成員函式會擷取樹狀目錄控制項目的週框。 [GetCount](../mfc/reference/ctreectrl-class.md#getcount)並[GetVisibleCount](../mfc/reference/ctreectrl-class.md#getvisiblecount)成員函式擷取樹狀結構控制項中的項目計數和目前顯示在樹狀目錄控制項的視窗中，分別是項目計數。 您可以確保特定的項目為可見，藉由呼叫[EnsureVisible](../mfc/reference/ctreectrl-class.md#ensurevisible)成員函式。
 
@@ -26,4 +26,3 @@ ms.locfileid: "50506089"
 
 [使用 CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [控制項](../mfc/controls-mfc.md)
-

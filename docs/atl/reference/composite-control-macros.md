@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
-ms.openlocfilehash: 10965fed5aac2eb037cf9894998688e3e7c2bffa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c6d3e350755ef4a0cf4a84561e34619ab3974be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498966"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299110"
 ---
 # <a name="composite-control-macros"></a>複合控制項巨集
 
@@ -43,7 +43,7 @@ BEGIN_SINK_MAP(_class)
 
 ### <a name="parameters"></a>參數
 
-*（_c)*<br/>
+*_class*<br/>
 [in]指定的控制項。
 
 ### <a name="example"></a>範例

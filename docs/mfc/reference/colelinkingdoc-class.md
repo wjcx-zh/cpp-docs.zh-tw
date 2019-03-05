@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-ms.openlocfilehash: ed96d0a88755827bff27255326db8262698fcfb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 275119b2343c4d13b6a32f939fc8c3b2b5d5890c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544309"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300399"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc 類別
 
@@ -77,7 +77,7 @@ class COleLinkingDoc : public COleDocument
 
 如需相關範例`CWinApp`-衍生類別定義和`InitInstance`函式中，請參閱 OCLIENT。H 和 OCLIENT。MFC 範例中的 CPP [OCLIENT](../../visual-cpp-samples.md)。
 
-如需有關使用`COleLinkingDoc`，請參閱文章[容器： 實作容器](../../mfc/containers-implementing-a-container.md)並[容器： 進階功能](../../mfc/containers-advanced-features.md)。
+如需有關使用`COleLinkingDoc`，請參閱文章[容器：實作容器](../../mfc/containers-implementing-a-container.md)和[容器：進階功能](../../mfc/containers-advanced-features.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

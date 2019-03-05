@@ -19,16 +19,17 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::send_message
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-ms.openlocfilehash: b4a54e80067c5bc4cea9cd0dac0e24a66e1858e0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 1474381a2d1c0947b2428ab4cf0b4683198eef84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694747"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288138"
 ---
 # <a name="unboundedbuffer-class"></a>unbounded_buffer 類別
 
-`unbounded_buffer` 傳訊區塊是多目標、多來源的排序 `propagator_block`，能夠存放無限個訊息。
+
+  `unbounded_buffer` 傳訊區塊是多目標、多來源的排序 `propagator_block`，能夠存放無限個訊息。
 
 ## <a name="syntax"></a>語法
 
@@ -41,7 +42,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 
 #### <a name="parameters"></a>參數
 
-*類型 （_t)*<br/>
+*_Type*<br/>
 儲存及緩衝區所傳播之訊息的裝載類型。
 
 ## <a name="members"></a>成員
@@ -138,7 +139,7 @@ virtual message<_Type> * consume_message(
 
 類似於`accept`，但一律置於呼叫`reserve`。
 
-##  <a name="dequeue"></a> 清除佇列
+##  <a name="dequeue"></a> dequeue
 
 移除項目從`unbounded_buffer`傳訊區塊。
 
@@ -150,7 +151,7 @@ _Type dequeue();
 
 移除訊息的承載`unbounded_buffer`。
 
-##  <a name="enqueue"></a> 加入佇列
+##  <a name="enqueue"></a> enqueue
 
 將項目加入`unbounded_buffer`傳訊區塊。
 
@@ -198,7 +199,8 @@ virtual message_status propagate_message(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-`message` 物件的指標。
+
+  `message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。
@@ -294,7 +296,8 @@ virtual message_status send_message(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-`message` 物件的指標。
+
+  `message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。
@@ -347,7 +350,7 @@ unbounded_buffer(
 
 ### <a name="parameters"></a>參數
 
-*篩選 （_f)*<br/>
+*_Filter*<br/>
 判斷是否應該接受所提供的訊息篩選器函式。
 
 *_PScheduler*<br/>
@@ -362,7 +365,7 @@ unbounded_buffer(
 
 型別`filter_method`是仿函式簽章`bool (_Type const &)`由此叫用的所在`unbounded_buffer`傳訊區塊，以判斷是否應該接受接受所提供的訊息。
 
-##  <a name="dtor"></a> ~ unbounded_buffer
+##  <a name="dtor"></a> ~unbounded_buffer
 
 終結`unbounded_buffer`傳訊區塊。
 
@@ -375,4 +378,3 @@ unbounded_buffer(
 [concurrency 命名空間](concurrency-namespace.md)<br/>
 [overwrite_buffer 類別](overwrite-buffer-class.md)<br/>
 [single_assignment 類別](single-assignment-class.md)
-

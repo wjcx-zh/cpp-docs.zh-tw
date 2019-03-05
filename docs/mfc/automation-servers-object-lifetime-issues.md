@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Automation servers, object lifetime
 - servers, lifetime of Automation
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
-ms.openlocfilehash: 904c3023d7f27bd144c306d9d92810a91a48ecfa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f9dbc6e4f321ba10fdffa013c158d53b84331e30
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637641"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293572"
 ---
 # <a name="automation-servers-object-lifetime-issues"></a>Automation 伺服程式：物件存留期問題
 
@@ -32,4 +32,3 @@ ms.locfileid: "50637641"
 
 [Automation 伺服程式](../mfc/automation-servers.md)<br/>
 [AfxOleCanExitApp](../mfc/reference/application-control.md#afxolecanexitapp)
-

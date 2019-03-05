@@ -8,16 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - simple_partitioner class
 ms.assetid: d7e997af-54d1-43f5-abe0-def72df6edb3
-ms.openlocfilehash: f3c5792a13d9e63a05ce6710dea77828f2510f0d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 372773926903da32f1690904b34cd143a04940dd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522443"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301268"
 ---
 # <a name="simplepartitioner-class"></a>simple_partitioner 類別
 
-`simple_partitioner` 類別表示由 `parallel_for` 逐一查看之範圍的靜態分割。 Partitioner 會將這個範圍分割成區塊，每個區塊都有由區塊大小指定之反覆項目的最少次數。
+
+  `simple_partitioner` 類別表示由 `parallel_for` 逐一查看之範圍的靜態分割。 Partitioner 會將這個範圍分割成區塊，每個區塊都有由區塊大小指定之反覆項目的最少次數。
 
 ## <a name="syntax"></a>語法
 

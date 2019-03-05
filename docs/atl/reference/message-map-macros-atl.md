@@ -37,12 +37,12 @@ f1_keywords:
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_HANDLER
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
-ms.openlocfilehash: a246e907d401167011b5a3e1306c146a338e233a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: bedef3a8563e27f72017720530e3b7addb78ec3d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694370"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290374"
 ---
 # <a name="message-map-macros-atl"></a>訊息對應巨集 (ATL)
 
@@ -588,7 +588,7 @@ MESSAGE_HANDLER( msg, func )
 
 ### <a name="parameters"></a>參數
 
-*訊息*<br/>
+*msg*<br/>
 [in]Windows 訊息。
 
 *func*<br/>

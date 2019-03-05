@@ -1,5 +1,5 @@
 ---
-title: 多執行緒： MFC 程式設計提示
+title: 多執行緒：MFC 程式設計提示
 ms.date: 08/27/2018
 helpviewer_keywords:
 - multithreading [C++], programming tips
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - troubleshooting [C++], multithreading
 - Windows handle maps [C++]
 ms.assetid: ad14cc70-c91c-4c24-942f-13a75e58bf8a
-ms.openlocfilehash: 0fbee2e836c2e898488da348e4dec9ea00ac4370
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e89d0d534638f7216f142bc3f86633a59b8b0ff7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494274"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290792"
 ---
-# <a name="multithreading-mfc-programming-tips"></a>多執行緒： MFC 程式設計提示
+# <a name="multithreading-mfc-programming-tips"></a>多執行緒：MFC 程式設計提示
 
 多執行緒應用程式需要更嚴格的注意，比單一執行緒應用程式以確保作業發生預期的順序，並由多個執行緒存取的任何資料未損毀。 本主題說明使用 Microsoft Foundation Class (MFC) 程式庫的多執行緒應用程式進行程式設計時，避免發生潛在問題的技術。
 
@@ -43,7 +43,7 @@ MFC 物件不是安全執行緒本身。 兩個個別的執行緒不能操作相
 
 ##  <a name="_core_accessing_mfc_objects_from_non.2d.mfc_threads"></a> 從非 MFC 執行緒存取 MFC 物件
 
-如果您有多執行緒的應用程式，以建立執行緒以外使用方式[CWinThread](../mfc/reference/cwinthread-class.md)物件時，您無法從該執行緒來存取其他 MFC 物件。 換句話說，如果您想要從次要執行緒存取任何 MFC 物件時，您必須建立該執行緒中所述的方法之一[多執行緒： 建立使用者介面執行緒](multithreading-creating-user-interface-threads.md)或[多執行緒：建立背景工作執行緒](multithreading-creating-worker-threads.md)。 這些方法是唯一可讓類別庫，來初始化內部處理多執行緒應用程式所需的變數。
+如果您有多執行緒的應用程式，以建立執行緒以外使用方式[CWinThread](../mfc/reference/cwinthread-class.md)物件時，您無法從該執行緒來存取其他 MFC 物件。 換句話說，如果您想要從次要執行緒存取任何 MFC 物件時，您必須建立該執行緒中所述的方法之一[多執行緒：建立使用者介面執行緒](multithreading-creating-user-interface-threads.md)或[多執行緒：建立背景工作執行緒](multithreading-creating-worker-threads.md)。 這些方法是唯一可讓類別庫，來初始化內部處理多執行緒應用程式所需的變數。
 
 ##  <a name="_core_windows_handle_maps"></a> Windows 控制代碼對應
 
@@ -57,7 +57,7 @@ MFC 物件不是安全執行緒本身。 兩個個別的執行緒不能操作相
 
 ##  <a name="_core_communicating_between_threads"></a> 執行緒之間進行通訊
 
-MFC 提供類別，可讓同步處理以維護執行緒安全性物件的存取權的執行緒數目。 這些類別的用法所述[多執行緒： 如何使用同步類別](multithreading-how-to-use-the-synchronization-classes.md)並[多執行緒： 何時使用同步類別](multithreading-when-to-use-the-synchronization-classes.md)。 如需有關這些物件的詳細資訊，請參閱 <<c0> [ 同步處理](/windows/desktop/Sync/synchronization)Windows SDK 中。
+MFC 提供類別，可讓同步處理以維護執行緒安全性物件的存取權的執行緒數目。 這些類別的用法述[多執行緒：如何使用同步類別](multithreading-how-to-use-the-synchronization-classes.md)和[多執行緒：何時使用同步類別](multithreading-when-to-use-the-synchronization-classes.md)。 如需有關這些物件的詳細資訊，請參閱 <<c0> [ 同步處理](/windows/desktop/Sync/synchronization)Windows SDK 中。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-ms.openlocfilehash: e428478f2f437654ea2f0890993245afc53c01f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 379aa5607e459ad8acfd99c5899315afb84ac4a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541462"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302282"
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase 類別
 
@@ -145,7 +145,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 
 ### <a name="parameters"></a>參數
 
-*持續時間*<br/>
+*duration*<br/>
 輸出。 轉換，以秒為單位的持續時間。
 
 ### <a name="return-value"></a>傳回值
@@ -162,7 +162,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 
 ### <a name="parameters"></a>參數
 
-*值*<br/>
+*value*<br/>
 輸出。 在轉換結束變數最終的值。
 
 ### <a name="return-value"></a>傳回值
@@ -184,7 +184,7 @@ IFACEMETHOD(InterpolateValue)(
 *offset*<br/>
 從轉換的開始位移。 位移一律是大於或等於零且小於轉換的持續時間。 如果轉換的時間長度為零，不會呼叫這個方法。
 
-*值*<br/>
+*value*<br/>
 輸出。 插補的值。
 
 ### <a name="return-value"></a>傳回值
@@ -206,7 +206,7 @@ IFACEMETHOD(InterpolateVelocity)(
 *offset*<br/>
 從轉換的開始位移。 位移一律是大於或等於零且小於或等於轉換的持續時間。 如果轉換的時間長度為零，不會呼叫這個方法。
 
-*速度*<br/>
+*velocity*<br/>
 輸出。 在位移變數的速度。
 
 ### <a name="return-value"></a>傳回值
@@ -236,7 +236,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 
 ### <a name="parameters"></a>參數
 
-*持續時間*<br/>
+*duration*<br/>
 轉換的持續時間。
 
 ### <a name="return-value"></a>傳回值

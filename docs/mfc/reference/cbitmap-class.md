@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 6722011bf343a391fcc7180558eead5c039afc59
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 97d4561da12492c158673c4cc79c2baefd973c75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178170"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296719"
 ---
 # <a name="cbitmap-class"></a>CBitmap 類別
 
@@ -64,14 +64,14 @@ class CBitmap : public CGdiObject
 |名稱|描述|
 |----------|-----------------|
 |[CBitmap::CreateBitmap](#createbitmap)|初始化具有指定的寬度、 高度和位元模式的裝置而異的記憶體點陣圖物件。|
-|[Createbitmapindirect](#createbitmapindirect)|初始化物件的點陣圖寬度、 高度和位元模式 （如果已指定） 列入`BITMAP`結構。|
+|[CBitmap::CreateBitmapIndirect](#createbitmapindirect)|初始化物件的點陣圖寬度、 高度和位元模式 （如果已指定） 列入`BITMAP`結構。|
 |[CBitmap::CreateCompatibleBitmap](#createcompatiblebitmap)|初始化與點陣圖物件，使其與指定的裝置相容。|
 |[CBitmap::CreateDiscardableBitmap](#creatediscardablebitmap)|初始化具有指定裝置相容的可捨棄點陣圖物件。|
 |[CBitmap::FromHandle](#fromhandle)|將指標傳回至`CBitmap`物件時控制代碼給 Windows`HBITMAP`點陣圖。|
 |[CBitmap::GetBitmap](#getbitmap)|填滿`BITMAP`點陣圖的相關資訊的結構。|
 |[CBitmap::GetBitmapBits](#getbitmapbits)|將指定的點陣圖的位元複製到指定的緩衝區。|
 |[CBitmap::GetBitmapDimension](#getbitmapdimension)|傳回點陣圖的高度與寬度。 高度和寬度會假設已設定先前[SetBitmapDimension](#setbitmapdimension)成員函式。|
-|[Cbitmap:: Loadbitmap](#loadbitmap)|從應用程式的可執行檔載入具名的點陣圖資源，並附加至物件的點陣圖，初始化物件。|
+|[CBitmap::LoadBitmap](#loadbitmap)|從應用程式的可執行檔載入具名的點陣圖資源，並附加至物件的點陣圖，初始化物件。|
 |[CBitmap::LoadMappedBitmap](#loadmappedbitmap)|載入點陣圖，並將對應至目前的系統色彩的色彩。|
 |[CBitmap::LoadOEMBitmap](#loadoembitmap)|藉由載入預先定義的 Windows 點陣圖和附加至物件的點陣圖，初始化物件。|
 |[CBitmap::SetBitmapBits](#setbitmapbits)|將點陣圖的位元設定為指定的位元值。|
@@ -157,7 +157,7 @@ BOOL CreateBitmap(
 
 如需詳細資訊，請參閱說明`bmBits`欄位中`BITMAP`結構。 [CBitmap::CreateBitmapIndirect](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) 成員函式下提供 [BITMAP](#createbitmapindirect) 結構的說明。
 
-##  <a name="createbitmapindirect"></a>  Createbitmapindirect
+##  <a name="createbitmapindirect"></a>  CBitmap::CreateBitmapIndirect
 
 初始化具有寬度、 高度和位元模式 （如果已指定） 中所指向的結構指定的點陣圖*lpBitmap*。
 
@@ -336,7 +336,7 @@ CSize GetBitmapDimension() const;
 
 高度和寬度會假設已使用先前設定[SetBitmapDimension](#setbitmapdimension)成員函式。
 
-##  <a name="loadbitmap"></a>  Cbitmap:: Loadbitmap
+##  <a name="loadbitmap"></a>  CBitmap::LoadBitmap
 
 載入所命名的點陣圖資源*lpszResourceName*或識別中的 ID 編號*nIDResource*從應用程式的可執行檔。
 
@@ -524,4 +524,3 @@ GDI 中不會使用這些值，但若要傳回其應用程式呼叫時[GetBitmap
 [MFC 範例 MDI](../../visual-cpp-samples.md)<br/>
 [CGdiObject 類別](../../mfc/reference/cgdiobject-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

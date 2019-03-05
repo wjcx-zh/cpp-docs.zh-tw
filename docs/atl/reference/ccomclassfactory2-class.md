@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactory2 class
 ms.assetid: 19b66fd6-b9ed-47a0-822c-8132184f5a3e
-ms.openlocfilehash: ba5bda2e73964e7195c4955806e897f9496c244a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3b14fa59765aa72a1142e0eef41aa84abea35de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460199"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301842"
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2 類別
 
@@ -34,7 +34,7 @@ class CComClassFactory2 : public IClassFactory2,
 
 #### <a name="parameters"></a>參數
 
-*授權*<br/>
+*license*<br/>
 類別若實作下列靜態函式：
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -132,7 +132,7 @@ STDMETHOD(CreateInstanceLic)(
 [in]如果物件過程中建立的彙總，然後*pUnkOuter*必須是外部未知。 否則，請*pUnkOuter*必須是 NULL。
 
 *pUnkReserved*<br/>
-[in]不使用。 必須是 NULL。
+[in]不使用。 必須是 Null。
 
 *riid*<br/>
 [in]要求的介面 IID。 如果*pUnkOuter*為非 NULL *riid*必須是`IID_IUnknown`。

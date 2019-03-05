@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-ms.openlocfilehash: 7becf4d4f579fa4b9b954935f55a06b2fed78593
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c019c922a5690d4ead861c40bed3c0c1c76cea28
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603706"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282999"
 ---
 # <a name="activex-controls-on-the-internet"></a>網際網路上的 ActiveX 控制項
 
@@ -49,7 +49,7 @@ ActiveX 控制項不限於網際網路。 只要控制項支援容器所需的�
 
 若要提高控制項的效能，考量效率時請遵循這些提示：
 
-- 實作本文所述的技巧[ActiveX 控制項： 最佳化](../mfc/mfc-activex-controls-optimization.md)。
+- 實作本文所述的技巧[ActiveX 控制項：最佳化](../mfc/mfc-activex-controls-optimization.md)。
 
 - 思考將控制項具現化的方式。
 
@@ -89,7 +89,7 @@ ActiveX 控制項不限於網際網路。 只要控制項支援容器所需的�
 
 1. 在 **控制設定**頁面上，選取**非同步載入屬性**。 選取此選項會為您設定就緒狀態屬性和就緒狀態變更的事件。
 
-   您可以也選取其他最佳化，例如**無視窗啟用**，，用來說明這[ActiveX 控制項： 最佳化](../mfc/mfc-activex-controls-optimization.md)。
+   您可以也選取其他最佳化，例如**無視窗啟用**，，用來說明這[ActiveX 控制項：最佳化](../mfc/mfc-activex-controls-optimization.md)。
 
 1. 選擇**完成**建立專案。
 
@@ -183,7 +183,7 @@ ActiveX 控制項不限於網際網路。 只要控制項支援容器所需的�
 
 ## <a name="updating-an-existing-ole-control-to-use-new-activex-control-features"></a>更新現有的 OLE 控制項以使用新的 ActiveX 控制項功能
 
-如果您的 OLE 控制項是以 Visual C++ 4.2 之前的版本建立，則有些步驟是您可以採取，以改善其效能和增強其功能。 如需這些變更的詳細討論，請參閱 < [ActiveX 控制項： 最佳化](../mfc/mfc-activex-controls-optimization.md)。
+如果您的 OLE 控制項是以 Visual C++ 4.2 之前的版本建立，則有些步驟是您可以採取，以改善其效能和增強其功能。 如需這些變更的詳細討論，請參閱[ActiveX 控制項：最佳化](../mfc/mfc-activex-controls-optimization.md)。
 
 如果您將非同步屬性支援加入至現有的控制項，您將需要自行加入就緒狀態屬性和 `ReadyStateChange` 事件。 在您的控制項的建構函式中，加入：
 
@@ -195,4 +195,3 @@ ActiveX 控制項不限於網際網路。 只要控制項支援容器所需的�
 
 [MFC 網際網路程式設計工作](../mfc/mfc-internet-programming-tasks.md)<br/>
 [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)
-

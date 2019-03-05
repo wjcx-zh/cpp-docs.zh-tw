@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: 3752e8b58560e522aecc3689e2a5c3be2649b1e1
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 2e4a9b585ed653927c87eaf82dfae8ce8f982dfc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694162"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290699"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl 類別
 
@@ -93,7 +93,8 @@ A [traits 類別](../../atl/understanding-window-traits.md)定義視窗樣式。
 > [!NOTE]
 >  由於 `CWndClassInfo` 只會管理一個視窗類別的資訊，因此每個透過 `CWindowImpl` 執行個體所建立的視窗都是以相同的視窗類別為基礎。
 
-`CWindowImpl` 也支援視窗子類別化。 `SubclassWindow` 方法會將現有視窗附加至 `CWindowImpl` 物件，並將視窗程序變更至 `CWindowImpl::WindowProc`。 每個 `CWindowImpl` 執行個體都可以子類別化為不同的視窗。
+`CWindowImpl` 也支援視窗子類別化。 
+  `SubclassWindow` 方法會將現有視窗附加至 `CWindowImpl` 物件，並將視窗程序變更至 `CWindowImpl::WindowProc`。 每個 `CWindowImpl` 執行個體都可以子類別化為不同的視窗。
 
 > [!NOTE]
 >  針對任何給定`CWindowImpl`物件，呼叫`Create`或`SubclassWindow`。 不要對同一物件叫用兩種方法。
@@ -152,7 +153,7 @@ HWND Create(
 *szWindowName*<br/>
 [in]指定視窗的名稱。 預設值是 NULL。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]視窗的樣式。 這個值會結合 traits 類別所提供之視窗的樣式。 預設值可讓類別完全控制樣式特性。 如需可能值的清單，請參閱 < [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK 中。
 
 *dwExStyle*<br/>

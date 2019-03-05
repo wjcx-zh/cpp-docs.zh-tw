@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - improper_scheduler_detach class
 ms.assetid: 30132102-c900-4951-a470-b63b4e3aa2d2
-ms.openlocfilehash: b2fc90656051be62528d0aac600fad67485c81f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e85ff8ea7ffb817c141094649cd39b8becccf53
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643283"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285031"
 ---
 # <a name="improperschedulerdetach-class"></a>improper_scheduler_detach 類別
 
@@ -57,7 +57,7 @@ improper_scheduler_detach() throw();
 
 ### <a name="parameters"></a>參數
 
-*訊息 （_m)*<br/>
+*_Message*<br/>
 錯誤的描述性訊息。
 
 ## <a name="see-also"></a>另請參閱

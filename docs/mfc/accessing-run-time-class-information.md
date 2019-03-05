@@ -16,12 +16,12 @@ helpviewer_keywords:
 - run-time class [MFC]
 - RUNTIME_CLASS macro, using
 ms.assetid: 3445a9af-0bd6-4496-95c3-aa59b964570b
-ms.openlocfilehash: 061cc04857b0d1763fb4ee975912bcca1b9d014f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e4f8685033fc7a8a2f49dafa7ef4e4e019d8989
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455268"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298824"
 ---
 # <a name="accessing-run-time-class-information"></a>存取執行階段類別資訊
 
@@ -34,7 +34,9 @@ ms.locfileid: "50455268"
 
 當需要檢查函式引數的實際類型時，以及當您必須根據物件的類別撰寫特殊用途的程式碼時，這項功能十分實用。 不過，通常不建議使用這種作法，因為這會使虛擬函式的功能重複。
 
-`CObject` 成員函式 `IsKindOf` 可以用來判斷特定物件是否屬於指定的類別，或是否衍生自特定類別。 `IsKindOf` 的引數是一個 `CRuntimeClass` 物件，您可以使用 `RUNTIME_CLASS` 巨集透過類別的名稱來取得該物件。
+
+  `CObject` 成員函式 `IsKindOf` 可以用來判斷特定物件是否屬於指定的類別，或是否衍生自特定類別。 
+  `IsKindOf` 的引數是一個 `CRuntimeClass` 物件，您可以使用 `RUNTIME_CLASS` 巨集透過類別的名稱來取得該物件。
 
 ### <a name="to-use-the-runtimeclass-macro"></a>使用 RUNTIME_CLASS 巨集
 
@@ -42,7 +44,8 @@ ms.locfileid: "50455268"
 
    [!code-cpp[NVC_MFCCObjectSample#4](../mfc/codesnippet/cpp/accessing-run-time-class-information_1.cpp)]
 
-您很少需要直接存取執行階段類別物件。 一般用法是將執行階段類別物件傳遞至 `IsKindOf` 函式，如下一個程序所示。 `IsKindOf` 函式會測試物件是否屬於特定類別。
+您很少需要直接存取執行階段類別物件。 一般用法是將執行階段類別物件傳遞至 `IsKindOf` 函式，如下一個程序所示。 
+  `IsKindOf` 函式會測試物件是否屬於特定類別。
 
 #### <a name="to-use-the-iskindof-function"></a>使用 IsKindOf 函式
 
@@ -64,4 +67,3 @@ ms.locfileid: "50455268"
 ## <a name="see-also"></a>另請參閱
 
 [使用 CObject](../mfc/using-cobject.md)
-

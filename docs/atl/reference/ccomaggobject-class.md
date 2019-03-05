@@ -17,12 +17,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-ms.openlocfilehash: 3598e625351f80a1a183b3128bf46a72143a02f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 52cdddb1d922ca21e24122422ca14d9c12d13a83
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626833"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301658"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject 類別
 
@@ -48,7 +48,7 @@ class CComAggObject : public IUnknown,
 |名稱|描述|
 |----------|-----------------|
 |[CComAggObject::CComAggObject](#ccomaggobject)|建構函式。|
-|[CComAggObject:: ~ CComAggObject](#dtor)|解構函式。|
+|[CComAggObject::~CComAggObject](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -142,7 +142,7 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>參數
 
-*前置處理*<br/>
+*pp*<br/>
 [out]指標**CComAggObject\<**<em>包含</em>**>** 指標。 如果`CreateInstance`不成功， *pp*設為 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -210,7 +210,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 *ppvObject*<br/>
 [out]所識別之介面指標的指標*iid*。 如果物件不支援這個介面， *ppvObject*設為 NULL。
 
-*前置處理*<br/>
+*pp*<br/>
 [out]依類型識別之介面指標的指標`Q`。 如果物件不支援這個介面， *pp*設為 NULL。
 
 ### <a name="return-value"></a>傳回值

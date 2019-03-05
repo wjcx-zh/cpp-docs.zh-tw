@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-ms.openlocfilehash: df045f7df9d0640b96ae1227c65c65aa7e432350
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2acfc199e7ad9edf3965dc8ccb4103eb615a66b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668737"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298125"
 ---
 # <a name="scheduler-policies"></a>排程器原則
 
@@ -49,11 +49,10 @@ ms.locfileid: "50668737"
 
 ## <a name="example"></a>範例
 
-若要檢查使用特定排程器原則來控制的排程器行為的範例，請參閱[如何： 指定特定的排程器原則](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)和[How to： 建立代理程式，使用特定排程器原則](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
+若要檢查使用特定排程器原則來控制的排程器行為的範例，請參閱[How to:指定特定排程器原則](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)和[How to:建立使用特定排程器原則的代理程式](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [如何：指定特定排程器原則](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)<br/>
 [如何：建立使用特定排程器原則的代理程式](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
-

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows messages [MFC], routing
 - message handling [MFC], noncommand messages
 ms.assetid: e7df8aef-9fae-41f4-9c11-881d8465f602
-ms.openlocfilehash: f64eb97315b41a314c791e1a4c5bc7721b329fca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b9fb0a72b330380f0207db9968199a7e4c3d9b3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545453"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295054"
 ---
 # <a name="how-noncommand-messages-reach-their-handlers"></a>非命令訊息如何連接其處理常式
 
@@ -23,4 +23,3 @@ ms.locfileid: "50545453"
 ## <a name="see-also"></a>另請參閱
 
 [架構如何呼叫處理常式](../mfc/how-the-framework-calls-a-handler.md)
-

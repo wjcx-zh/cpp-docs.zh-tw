@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCToolBarFontComboBox [MFC], GetFontDesc
 - CMFCToolBarFontComboBox [MFC], SetFont
 ms.assetid: 25f8e08c-aadd-4cb5-9581-a99d49d444b1
-ms.openlocfilehash: 28b2b77ed28453f148786ba7109743a0b7baf598
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ab4eece67406b1c5a52669beafc9bfd8acd32e6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429252"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283718"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox 類別
 
@@ -124,7 +124,7 @@ TRUETYPE_FONTTYPE
 *nCharSet*<br/>
 [in]如果設為 DEFAULT_CHARSET，下拉式方塊包含所有字元集中的所有唯一名稱的字型。 （如果有具有相同名稱的兩種字型，下拉式方塊包含其中一個）。如果設為有效的字元組值，而下拉式方塊包含只在指定的字元集的字型。 請參閱[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)的可能字元清單的設定。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]下拉式方塊的樣式。 (請參閱[下拉式方塊樣式](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))
 
 *iWidth*<br/>
@@ -214,5 +214,4 @@ BOOL SetFont(
 [CMFCToolBarComboBoxButton 類別](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)<br/>
 [CMFCFontInfo 類別](../../mfc/reference/cmfcfontinfo-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[逐步解說：將控制項放在工具列上](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[逐步解說：將放在工具列上的控制項](../../mfc/walkthrough-putting-controls-on-toolbars.md)

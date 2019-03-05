@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dual interfaces, classes
 - dual interfaces
 ms.assetid: c2b1b165-ff39-4e4a-a683-91eca9158304
-ms.openlocfilehash: 494ce694a4b328b5fb161444457de2ef085c81a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3ed6c347fc85504b06ce464dd479142c3bc05f2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429662"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298837"
 ---
 # <a name="dual-interfaces-classes"></a>雙重介面類別
 
@@ -24,4 +24,3 @@ ms.locfileid: "50429662"
 ## <a name="see-also"></a>另請參閱
 
 [類別概觀](../atl/atl-class-overview.md)
-

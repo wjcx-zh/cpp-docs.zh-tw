@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CA2AEX class
 ms.assetid: 57dc65df-d9cf-4a84-99d3-6e031dde3664
-ms.openlocfilehash: 77bb49ab87c20b6df317282d8f5e6e228deb3a11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 712e663ab58e2c9de4e2f25090b84b35d0bced71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639203"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293819"
 ---
 # <a name="ca2aex-class"></a>CA2AEX 類別
 
@@ -43,7 +43,7 @@ class CA2AEX
 |名稱|描述|
 |----------|-----------------|
 |[CA2AEX::CA2AEX](#ca2aex)|建構函式。|
-|[CA2AEX:: ~ CA2AEX](#dtor)|解構函式。|
+|[CA2AEX::~CA2AEX](#dtor)|解構函式。|
 
 ### <a name="public-operators"></a>公用運算子
 
@@ -109,7 +109,7 @@ CA2AEX(LPCSTR psz) throw(...);
 
 建立做為轉換所需的緩衝區。
 
-##  <a name="dtor"></a>  CA2AEX:: ~ CA2AEX
+##  <a name="dtor"></a>  CA2AEX::~CA2AEX
 
 解構函式。
 

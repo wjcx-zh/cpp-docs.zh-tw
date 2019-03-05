@@ -1,18 +1,18 @@
 ---
-title: 逐步解說：建立代理程式架構應用程式
+title: 逐步解說：建立代理程式為基礎的應用程式
 ms.date: 11/04/2016
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 1d5e7ed085481b714423760cebf2984084626645
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d55c9879a3dd90bb4a40b61a3bf958dbe960bc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509340"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290062"
 ---
-# <a name="walkthrough-creating-an-agent-based-application"></a>逐步解說：建立代理程式架構應用程式
+# <a name="walkthrough-creating-an-agent-based-application"></a>逐步解說：建立代理程式為基礎的應用程式
 
 本主題描述如何建立基本的代理程式型應用程式。 在本逐步解說中，您可以建立以非同步方式從文字檔讀取資料的代理程式。 應用程式會使用 Adler-32 總和檢查碼演算法來計算總和檢查碼，該檔案的內容。
 
@@ -180,7 +180,7 @@ Adler-32 sum is fefb0d75
 
 ## <a name="next-steps"></a>後續步驟
 
-如需代理程式為基礎的應用程式的其他範例，請參閱[逐步解說： 使用聯結以避免死結](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)。
+如需代理程式為基礎的應用程式的其他範例，請參閱[逐步解說：使用聯結以避免死結](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -188,5 +188,4 @@ Adler-32 sum is fefb0d75
 [非同步訊息區](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [訊息傳遞函式](../../parallel/concrt/message-passing-functions.md)<br/>
 [同步處理資料結構](../../parallel/concrt/synchronization-data-structures.md)<br/>
-[逐步解說：使用聯結以避免死結](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)
-
+[逐步解說：使用聯結以預防死結](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)

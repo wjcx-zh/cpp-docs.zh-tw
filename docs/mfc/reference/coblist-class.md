@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
-ms.openlocfilehash: 66cc4d28e20ced498e4a434efbe41c3f5db59370
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fc3a3643c675394de555f1411030e278bcee775
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605201"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293728"
 ---
 # <a name="coblist-class"></a>CObList 類別
 
@@ -157,8 +157,8 @@ void AddHead(CObList* pNewList);
 
 |類別|成員函式|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置 AddHead (void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddHead (CPtrList** <strong>\*</strong> `pNewList` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 AddHead (const CString &** `newElement` **);**<br /><br /> **位置 AddHead (LPCTSTR** `newElement` **);**<br /><br /> **void AddHead (CStringList** <strong>\*</strong> `pNewList` **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION AddHead( void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddHead( CPtrList** <strong>\*</strong> `pNewList` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION AddHead(const CString&** `newElement` **);**<br /><br /> **POSITION AddHead(LPCTSTR** `newElement` **);**<br /><br /> **void AddHead(CStringList** <strong>\*</strong> `pNewList` **);**|
 
 ### <a name="remarks"></a>備註
 
@@ -207,8 +207,8 @@ void AddTail(CObList* pNewList);
 
 |類別|成員函式|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置 AddTail (void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddTail (CPtrList** <strong>\*</strong> `pNewList` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 AddTail (const CString &** `newElement` **);**<br /><br /> **位置 AddTail (LPCTSTR** `newElement` **);**<br /><br /> **void AddTail (CStringList** <strong>\*</strong> `pNewList` **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION AddTail( void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddTail( CPtrList** <strong>\*</strong> `pNewList` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION AddTail( const CString&** `newElement` **);**<br /><br /> **POSITION AddTail( LPCTSTR** `newElement` **);**<br /><br /> **void AddTail( CStringList** <strong>\*</strong> `pNewList` **);**|
 
 ### <a name="example"></a>範例
 
@@ -245,8 +245,8 @@ CObList(INT_PTR nBlockSize = 10);
 
 |類別|成員函式|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**CPtrList (INT_PTR** `nBlockSize` **= 10);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**CStringList (INT_PTR** `nBlockSize` **= 10);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**CPtrList( INT_PTR** `nBlockSize` **= 10 );**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**CStringList( INT_PTR** `nBlockSize` **= 10 );**|
 
 ### <a name="example"></a>範例
 
@@ -289,7 +289,7 @@ POSITION Find(
 |類別|成員函式|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置尋找 (void** <strong>\*</strong> `searchValue` **，位置** `startAfter` **= NULL) const;**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置尋找 (LPCTSTR** `searchValue` **，位置** `startAfter` **= NULL) const;**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION Find( LPCTSTR** `searchValue` **, POSITION** `startAfter` **= NULL ) const;**|
 
 ### <a name="example"></a>範例
 
@@ -322,8 +322,8 @@ POSITION FindIndex(INT_PTR nIndex) const;
 
 |類別|成員函式|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置 FindIndex (INT_PTR** `nIndex` **) const;**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 FindIndex (INT_PTR** `nIndex` **) const;**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION FindIndex( INT_PTR** `nIndex` **) const;**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION FindIndex( INT_PTR** `nIndex` **) const;**|
 
 ### <a name="example"></a>範例
 
@@ -342,7 +342,7 @@ const CObject*& GetAt(POSITION position) const;
 
 ### <a name="parameters"></a>參數
 
-*位置*<br/>
+*position*<br/>
 傳回先前的位置值`GetHeadPosition`或`Find`成員函式呼叫。
 
 ### <a name="return-value"></a>傳回值
@@ -359,8 +359,8 @@ const CObject*& GetAt(POSITION position) const;
 
 |類別|成員函式|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetAt (位置***位置* **) const;**<br /><br /> **void\*& GetAt (位置***位置* **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetAt (位置***位置* **) const;**<br /><br /> **CString & GetAt (位置***位置* **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetAt (位置***位置* **) const;**<br /><br /> **void\*& GetAt( POSITION** *position* **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetAt (位置***位置* **) const;**<br /><br /> **CString& GetAt( POSITION** *position* **);**|
 
 ### <a name="example"></a>範例
 
@@ -382,8 +382,8 @@ INT_PTR GetCount() const;
 
 |類別|成員函式|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Const; 的 INT_PTR GetCount （)**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**Const; 的 INT_PTR GetCount （)**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**INT_PTR GetCount( ) const;**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**INT_PTR GetCount( ) const;**|
 
 ### <a name="example"></a>範例
 
@@ -414,8 +414,8 @@ const CObject*& GetHead() const;
 
 |類別|成員函式|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetHead （) const; void\*& GetHead （);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetHead （) const;CString & GetHead （);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetHead( ) const; void\*& GetHead( );**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString& GetHead( ) const; CString& GetHead( );**|
 
 ### <a name="example"></a>範例
 
@@ -441,8 +441,8 @@ POSITION GetHeadPosition() const;
 
 |類別|成員函式|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Const; 的位置 GetHeadPosition （)**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**Const; 的位置 GetHeadPosition （)**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION GetHeadPosition( ) const;**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION GetHeadPosition( ) const;**|
 
 ### <a name="example"></a>範例
 
@@ -570,8 +570,8 @@ INT_PTR GetSize() const;
 
 |類別|成員函式|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Const; 的 INT_PTR GetSize （)**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**Const; 的 INT_PTR GetSize （)**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**INT_PTR GetSize( ) const;**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**INT_PTR GetSize( ) const;**|
 
 ### <a name="example"></a>範例
 
@@ -600,7 +600,7 @@ const CObject*& GetTail() const;
 
 |類別|成員函式|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetTail （) const; void\*& GetTail （);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetTail( ) const; void\*& GetTail( );**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetTail （) const;CString & GetTail （);**|
 
 ### <a name="example"></a>範例
@@ -625,8 +625,8 @@ POSITION GetTailPosition() const;
 
 |類別|成員函式|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Const; 的位置 GetTailPosition （)**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**Const; 的位置 GetTailPosition （)**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION GetTailPosition( ) const;**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION GetTailPosition( ) const;**|
 
 ### <a name="example"></a>範例
 
@@ -646,7 +646,7 @@ POSITION InsertAfter(
 
 ### <a name="parameters"></a>參數
 
-*位置*<br/>
+*position*<br/>
 傳回先前的位置值`GetNext`， `GetPrev`，或`Find`成員函式呼叫。
 
 *newElement*<br/>
@@ -656,8 +656,8 @@ POSITION InsertAfter(
 
 |類別|成員函式|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置 InsertAfter (位置***位置* **，void** <strong>\*</strong> `newElement` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 InsertAfter (位置***位置* **，const CString &** `newElement` **);**<br /><br /> **位置 InsertAfter (位置***位置* **，LPCTSTR** `newElement` **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION InsertAfter( POSITION** *position* **, void** <strong>\*</strong> `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION InsertAfter( POSITION** *position* **, const CString&** `newElement` **);**<br /><br /> **POSITION InsertAfter( POSITION** *position* **, LPCTSTR** `newElement` **);**|
 
 ### <a name="return-value"></a>傳回值
 
@@ -690,7 +690,7 @@ POSITION InsertBefore(
 
 ### <a name="parameters"></a>參數
 
-*位置*<br/>
+*position*<br/>
 傳回先前的位置值`GetNext`， `GetPrev`，或`Find`成員函式呼叫。
 
 *newElement*<br/>
@@ -704,8 +704,8 @@ POSITION InsertBefore(
 
 |類別|成員函式|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置 InsertBefore (位置***位置* **，void** <strong>\*</strong> `newElement` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 InsertBefore (位置***位置* **，const CString &** `newElement` **);**<br /><br /> **位置 InsertBefore (位置***位置* **，LPCTSTR** `newElement` **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION InsertBefore( POSITION** *position* **, void** <strong>\*</strong> `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION InsertBefore( POSITION** *position* **, const CString&** `newElement` **);**<br /><br /> **POSITION InsertBefore( POSITION** *position* **, LPCTSTR** `newElement` **);**|
 
 ### <a name="example"></a>範例
 
@@ -738,8 +738,8 @@ BOOL IsEmpty() const;
 
 |類別|成員函式|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Const; 的 BOOL IsEmpty （)**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**Const; 的 BOOL IsEmpty （)**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**BOOL IsEmpty( ) const;**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**BOOL IsEmpty( ) const;**|
 
 ### <a name="example"></a>範例
 
@@ -763,8 +763,8 @@ void RemoveAll();
 
 |類別|成員函式|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void RemoveAll （);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**void RemoveAll （);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void RemoveAll( );**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**void RemoveAll( );**|
 
 ### <a name="example"></a>範例
 
@@ -782,7 +782,7 @@ void RemoveAt(POSITION position);
 
 ### <a name="parameters"></a>參數
 
-*位置*<br/>
+*position*<br/>
 要從清單中移除之項目的位置。
 
 ### <a name="remarks"></a>備註
@@ -795,8 +795,8 @@ void RemoveAt(POSITION position);
 
 |類別|成員函式|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void RemoveAt (位置***位置* **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**void RemoveAt (位置***位置* **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void RemoveAt( POSITION** *position* **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**void RemoveAt( POSITION** *position* **);**|
 
 ### <a name="example"></a>範例
 
@@ -834,8 +834,8 @@ CObject* RemoveHead();
 
 |類別|成員函式|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveHead （);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveHead （);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveHead( );**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveHead( );**|
 
 ### <a name="example"></a>範例
 
@@ -863,8 +863,8 @@ CObject* RemoveTail();
 
 |類別|成員函式|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveTail （);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveTail （);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveTail( );**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveTail( );**|
 
 ### <a name="example"></a>範例
 
@@ -900,8 +900,8 @@ void SetAt(
 
 |類別|成員函式|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void SetAt (位置** `pos` **，const CString &** `newElement` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**void SetAt (位置** `pos` **，LPCTSTR** `newElement` **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void SetAt( POSITION** `pos` **, const CString&** `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**void SetAt( POSITION** `pos` **, LPCTSTR** `newElement` **);**|
 
 ### <a name="example"></a>範例
 

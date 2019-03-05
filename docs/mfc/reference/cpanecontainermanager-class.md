@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CPaneContainerManager [MFC], SetResizeMode
 - CPaneContainerManager [MFC], StoreRecentDockSiteInfo
 ms.assetid: 3d974c15-a62f-4648-bb5b-cc31ab7950af
-ms.openlocfilehash: 598ad7fd3573928d1915d01d889910c13d9cb00c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e0c55981b895540d490e2e38f43eb68abf48e32
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530009"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294651"
 ---
 # <a name="cpanecontainermanager-class"></a>CPaneContainerManager 類別
 
@@ -211,7 +211,7 @@ virtual void AddPane(CDockablePane* pControlBarToAdd);
 
 ### <a name="parameters"></a>參數
 
-[in]*pControlBarToAdd*<br/>
+[in] *pControlBarToAdd*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -231,11 +231,11 @@ virtual BOOL AddPaneContainerManager(
 
 ### <a name="parameters"></a>參數
 
-[in]*srcManager*<br/>
-[in]*bOuterEdge*<br/>
-[in]*pTargetControlBar*<br/>
-[in]*dwAlignment*<br/>
-[in]*bCopy*<br/>
+[in] *srcManager*<br/>
+[in] *bOuterEdge*<br/>
+[in] *pTargetControlBar*<br/>
+[in] *dwAlignment*<br/>
+[in] *bCopy*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -251,8 +251,8 @@ virtual BOOL AddPaneContainerManagerToDockablePane(
 
 ### <a name="parameters"></a>參數
 
-[in]*pTargetControlBar*<br/>
-[in]*srcManager*<br/>
+[in] *pTargetControlBar*<br/>
+[in] *srcManager*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -268,8 +268,8 @@ void AddPanesToList(
 
 ### <a name="parameters"></a>參數
 
-[in]*plstControlBars*<br/>
-[in]*plstSliders*<br/>
+[in] *plstControlBars*<br/>
+[in] *plstSliders*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -281,7 +281,7 @@ void AddPaneToList(CDockablePane* pControlBarToAdd);
 
 ### <a name="parameters"></a>參數
 
-[in]*pControlBarToAdd*<br/>
+[in] *pControlBarToAdd*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -295,8 +295,8 @@ virtual CDockablePane* AddPaneToRecentPaneContainer(
 
 ### <a name="parameters"></a>參數
 
-[in]*pBarToAdd*<br/>
-[in]*pRecentContainer*<br/>
+[in] *pBarToAdd*<br/>
+[in] *pRecentContainer*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -317,13 +317,13 @@ void CalcRects(
 
 ### <a name="parameters"></a>參數
 
-[in]*rectOriginal*<br/>
-[in]*rectInserted*<br/>
-[in]*rectSlider*<br/>
-[in]*dwSliderStyle*<br/>
-[in]*dwAlignment*<br/>
-[in]*sizeMinOriginal*<br/>
-[in]*sizeMinInserted*<br/>
+[in] *rectOriginal*<br/>
+[in] *rectInserted*<br/>
+[in] *rectSlider*<br/>
+[in] *dwSliderStyle*<br/>
+[in] *dwAlignment*<br/>
+[in] *sizeMinOriginal*<br/>
+[in] *sizeMinInserted*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -345,7 +345,7 @@ BOOL CheckAndRemoveNonValidPane(CWnd* pWnd);
 
 ### <a name="parameters"></a>參數
 
-[in]*pWnd*<br/>
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -361,8 +361,8 @@ virtual BOOL CheckForMiniFrameAndCaption(
 
 ### <a name="parameters"></a>參數
 
-[in]*點*<br/>
-[in]*ppTargetControlBar*<br/>
+[in] *point*<br/>
+[in] *ppTargetControlBar*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -379,9 +379,9 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-[in]*pParentWnd*<br/>
-[in]*pDefaultSlider*<br/>
-[in]*pContainerRTC*<br/>
+[in] *pParentWnd*<br/>
+[in] *pDefaultSlider*<br/>
+[in] *pContainerRTC*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -415,7 +415,7 @@ virtual void EnableGrippers(BOOL bEnable);
 
 ### <a name="parameters"></a>參數
 
-[in]*bEnable*<br/>
+[in] *bEnable*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -429,8 +429,8 @@ virtual CPaneContainer* FindPaneContainer(
 
 ### <a name="parameters"></a>參數
 
-[in]*pBar*<br/>
-[in]*bLeftBar*<br/>
+[in] *pBar*<br/>
+[in] *bLeftBar*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -444,7 +444,7 @@ CDockablePane* FindTabbedPane(UINT nID);
 
 ### <a name="parameters"></a>參數
 
-[in]*nID*<br/>
+[in] *nID*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -458,7 +458,7 @@ virtual void GetAvailableSpace(CRect& rect) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*rect*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -514,10 +514,10 @@ virtual void GetMinMaxOffset(
 
 ### <a name="parameters"></a>參數
 
-[in]*pSlider*<br/>
-[in]*nMinOffset*<br/>
-[in]*nMaxOffset*<br/>
-[in]*nStep*<br/>
+[in] *pSlider*<br/>
+[in] *nMinOffset*<br/>
+[in] *nMaxOffset*<br/>
+[in] *nStep*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -529,7 +529,7 @@ virtual void GetMinSize(CSize& size);
 
 ### <a name="parameters"></a>參數
 
-[in]*大小*<br/>
+[in] *size*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -591,7 +591,7 @@ virtual void GetWindowRect(CRect& rect) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*rect*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -616,10 +616,10 @@ virtual BOOL InsertPane(
 
 ### <a name="parameters"></a>參數
 
-[in]*pControlBarToInsert*<br/>
-[in]*pTargetControlBar*<br/>
-[in]*dwAlignment*<br/>
-[in]*lpRect*<br/>
+[in] *pControlBarToInsert*<br/>
+[in] *pTargetControlBar*<br/>
+[in] *dwAlignment*<br/>
+[in] *lpRect*<br/>
 [in]*dockMethod*<br/>
 
 ### <a name="return-value"></a>傳回值
@@ -676,10 +676,10 @@ virtual int OnPaneDividerMove(
 
 ### <a name="parameters"></a>參數
 
-[in]*pSlider*<br/>
-[in]*uFlags*<br/>
-[in]*nOffset*<br/>
-[in]*hdwp*<br/>
+[in] *pSlider*<br/>
+[in] *uFlags*<br/>
+[in] *nOffset*<br/>
+[in] *hdwp*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -695,8 +695,8 @@ virtual BOOL OnShowPane(
 
 ### <a name="parameters"></a>參數
 
-[in]*pBar*<br/>
-[in]*bShow*<br/>
+[in] *pBar*<br/>
+[in] *bShow*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -715,11 +715,11 @@ virtual CDockablePane* PaneFromPoint(
 
 ### <a name="parameters"></a>參數
 
-[in]*點*<br/>
-[in]*nSensitivity*<br/>
-[in]*bExactBar*<br/>
-[in]*bIsTabArea*<br/>
-[in]*bCaption*<br/>
+[in] *point*<br/>
+[in] *nSensitivity*<br/>
+[in] *bExactBar*<br/>
+[in] *bIsTabArea*<br/>
+[in] *bCaption*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -757,7 +757,7 @@ virtual void RemovePaneDivider(CPaneDivider* pSlider);
 
 ### <a name="parameters"></a>參數
 
-[in]*pSlider*<br/>
+[in] *pSlider*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -769,7 +769,7 @@ virtual BOOL RemovePaneFromPaneContainer(CDockablePane* pControlBar);
 
 ### <a name="parameters"></a>參數
 
-[in]*pControlBar*<br/>
+[in] *pControlBar*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -785,8 +785,8 @@ virtual BOOL ReplacePane(
 
 ### <a name="parameters"></a>參數
 
-[in]*pBarOld*<br/>
-[in]*pBarNew*<br/>
+[in] *pBarOld*<br/>
+[in] *pBarNew*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -808,11 +808,11 @@ virtual void ResizePaneContainers(
 
 ### <a name="parameters"></a>參數
 
-[in]*nSide*<br/>
-[in]*bExpand*<br/>
-[in]*nOffset*<br/>
-[in]*hdwp*<br/>
-[in]*rect*<br/>
+[in] *nSide*<br/>
+[in] *bExpand*<br/>
+[in] *nOffset*<br/>
+[in] *hdwp*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -824,7 +824,7 @@ void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>參數
 
-[in]*ar*<br/>
+[in] *ar*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -836,7 +836,7 @@ void SetDefaultPaneDividerForPanes(CPaneDivider* pSlider);
 
 ### <a name="parameters"></a>參數
 
-[in]*pSlider*<br/>
+[in] *pSlider*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -848,7 +848,7 @@ void SetPaneContainerRTC(CRuntimeClass* pContainerRTC);
 
 ### <a name="parameters"></a>參數
 
-[in]*pContainerRTC*<br/>
+[in] *pContainerRTC*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -860,7 +860,7 @@ virtual void SetResizeMode(BOOL bResize);
 
 ### <a name="parameters"></a>參數
 
-[in]*bResize*<br/>
+[in] *bResize*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -872,7 +872,7 @@ virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
 
 ### <a name="parameters"></a>參數
 
-[in]*pBar*<br/>
+[in] *pBar*<br/>
 
 ### <a name="remarks"></a>備註
 

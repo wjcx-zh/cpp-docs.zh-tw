@@ -31,12 +31,12 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 73d25f15aaeed15e3972c48e682c70f0b8c505c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d95460902c44ff058a4c7b90c810ab44489d952
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589445"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298928"
 ---
 # <a name="ccommodule-class"></a>CComModule 類別
 
@@ -61,13 +61,13 @@ class CComModule : public _ATL_MODULE
 |[CComModule::GetModuleInstance](#getmoduleinstance)|傳回 `m_hInst`。|
 |[CComModule::GetResourceInstance](#getresourceinstance)|傳回 `m_hInstResource`。|
 |[CComModule::GetTypeLibInstance](#gettypelibinstance)|傳回 `m_hInstTypeLib`。|
-|[Init](#init)|初始化資料成員。|
+|[CComModule::Init](#init)|初始化資料成員。|
 |[CComModule::RegisterClassHelper](#registerclasshelper)|輸入物件的標準的類別註冊系統登錄中。|
 |[CComModule::RegisterClassObjects](#registerclassobjects)|註冊類別物件。 針對只有 Exe。|
 |[CComModule::RegisterServer](#registerserver)|更新系統登錄的物件對應中每個物件。|
 |[CComModule::RegisterTypeLib](#registertypelib)|註冊類型程式庫。|
 |[CComModule::RevokeClassObjects](#revokeclassobjects)|撤銷類別物件。 針對只有 Exe。|
-|[Ccommodule:: Term](#term)|釋放資料成員。|
+|[CComModule::Term](#term)|釋放資料成員。|
 |[CComModule::UnregisterClassHelper](#unregisterclasshelper)|從系統登錄中移除物件的標準類別註冊。|
 |[CComModule::UnregisterServer](#unregisterserver)|取消註冊物件對應中的每個物件。|
 |[CComModule::UpdateRegistryClass](#updateregistryclass)|註冊或取消註冊物件的標準的類別註冊。|
@@ -404,7 +404,7 @@ HRESULT RegisterServer(
 *bRegTypeLib*<br/>
 [in]表示是否將已註冊型別程式庫。 預設值為 FALSE。
 
-*Createtable*<br/>
+*pCLSID*<br/>
 [in]要註冊之物件的 clsid 點。 若要註冊 NULL （預設值），在物件對應中的所有物件。
 
 ### <a name="return-value"></a>傳回值
@@ -519,7 +519,7 @@ inline HRESULT UnregisterServer(BOOL bUnRegTypeLib, const CLSID* pCLSID = NULL) 
 *bUnRegTypeLib*<br/>
 如果為 TRUE，類型程式庫還有未註冊。
 
-*Createtable*<br/>
+*pCLSID*<br/>
 要移除註冊物件的 clsid 點。 如果 NULL （預設值），在物件對應中的所有物件就會取消註冊。
 
 ### <a name="return-value"></a>傳回值

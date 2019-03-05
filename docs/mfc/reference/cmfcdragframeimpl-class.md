@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDragFrameImpl class [MFC]
 ms.assetid: 500cd824-8188-43c2-8754-b7bb46b5648a
-ms.openlocfilehash: 2769b52e03d8d3de14fdbf431279dd9226323b0c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05b4426da6bee0443a407cff583f47bee60262e4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640696"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301203"
 ---
 # <a name="cmfcdragframeimpl-class"></a>CMFCDragFrameImpl 類別
 
@@ -46,7 +46,7 @@ void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bClearInternalRects*<br/>
+[in] *bClearInternalRects*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -58,7 +58,7 @@ void Init(CWnd* pDraggedWnd);
 
 ### <a name="parameters"></a>參數
 
-[in]*pDraggedWnd*<br/>
+[in] *pDraggedWnd*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -70,7 +70,7 @@ void MoveDragFrame(BOOL bForceMove = FALSE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bForceMove*<br/>
+[in] *bForceMove*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -86,11 +86,11 @@ void PlaceTabPreDocking(CWnd* pCBarToPlaceOn);
 
 ### <a name="parameters"></a>參數
 
-[in]*pTabbedBar*<br/>
+[in] *pTabbedBar*<br/>
 
-[in]*bFirstTime*<br/>
+[in] *bFirstTime*<br/>
 
-[in]*pCBarToPlaceOn*<br/>
+[in] *pCBarToPlaceOn*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -102,7 +102,7 @@ void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
 
 ### <a name="parameters"></a>參數
 
-[in]*pOldTargetBar*<br/>
+[in] *pOldTargetBar*<br/>
 
 ### <a name="remarks"></a>備註
 

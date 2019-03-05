@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CCachedDataPathProperty [MFC], CCachedDataPathProperty
 - CCachedDataPathProperty [MFC], m_Cache
 ms.assetid: 0d81356b-4fe5-43f6-aed2-2eb5a5485706
-ms.openlocfilehash: 1605d5fe1549ba5172f61583cce586a353c2ab56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7394250c93bcc718d50f2ea9b3522256df7c820
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485653"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296706"
 ---
 # <a name="ccacheddatapathproperty-class"></a>CCachedDataPathProperty 類別
 
@@ -51,9 +51,9 @@ class CCachedDataPathProperty : public CDataPathProperty
 
 如需如何在網際網路應用程式中使用非同步 moniker 和 ActiveX 控制項的詳細資訊，請參閱下列主題：
 
-- [網際網路的第一個步驟： ActiveX 控制項](../../mfc/activex-controls-on-the-internet.md)
+- [網際網路的第一個步驟：ActiveX 控制項](../../mfc/activex-controls-on-the-internet.md)
 
-- [非同步 Moniker 的網際網路第一個步驟：](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [網際網路的第一個步驟：非同步 Moniker](../../mfc/asynchronous-monikers-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

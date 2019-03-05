@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandTarget interface [MFC]
 ms.assetid: dd9927f6-3479-4e7c-8ef9-13206cf901f3
-ms.openlocfilehash: 830802f960cba1789c21c53efbf0ed05de3ac4cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a224b868ea1923bb4f84b0d682c71fadb63da572
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557448"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299924"
 ---
 # <a name="icommandtarget-interface"></a>ICommandTarget 介面
 
@@ -37,7 +37,7 @@ interface class ICommandTarget
 
 當您裝載在 MFC 檢視中，使用者控制項時[CWinFormsView](../../mfc/reference/cwinformsview-class.md)路由命令和更新命令 UI 訊息至使用者控制項讓它處理 MFC 命令 （例如，框架功能表項目和工具列按鈕）。 藉由實作`ICommandTarget`，讓使用者控制項的參考[ICommandSource](../../mfc/reference/icommandsource-interface.md)物件。
 
-請參閱[如何： 新增命令傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用的範例`ICommandTarget`。
+請參閱[如何：將命令路由新增至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用的範例`ICommandTarget`。
 
 如需有關如何使用 Windows Form 的詳細資訊，請參閱 <<c0> [ 在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
@@ -62,10 +62,9 @@ void Initialize(ICommandSource^ cmdSource);
 
 當您裝載在 MFC 檢視的使用者控制項時，CWinFormsView 會將命令和更新命令 UI 訊息路由至使用者控制項，以允許它處理 MFC 命令。
 
-這個方法會初始化命令目標物件，並將它與指定的命令來源物件 cmdSource 產生關聯。 使用者控制項類別實作中，應該呼叫它。 在初始化時，您應該在初始化實作中呼叫 ICommandSource::AddCommandHandler 命令來源物件與註冊命令處理常式。 請參閱 < 如何： 將命令路由新增至 Windows Forms 控制項，如需如何執行這項操作時，用以初始化的範例。
+這個方法會初始化命令目標物件，並將它與指定的命令來源物件 cmdSource 產生關聯。 使用者控制項類別實作中，應該呼叫它。 在初始化時，您應該在初始化實作中呼叫 ICommandSource::AddCommandHandler 命令來源物件與註冊命令處理常式。 請參閱操作說明：將命令路由新增至 Windows Forms 控制項，如需如何執行這項操作時，用以初始化的範例。
 
 ## <a name="see-also"></a>另請參閱
 
 [如何：新增命令傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
 [ICommandSource 介面](../../mfc/reference/icommandsource-interface.md)
-

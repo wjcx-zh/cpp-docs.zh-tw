@@ -46,16 +46,16 @@ helpviewer_keywords:
 - OCM_NOTIFY message [MFC]
 - reflected messages
 ms.assetid: 3417ff51-ff9f-458c-bff4-17c200f00d96
-ms.openlocfilehash: 238fafee5201ec01e24be21512c73d1b33b706f1
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 2f6aea30fbf86865b5d42ea8da364685010c95c0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693551"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302087"
 ---
 # <a name="reflected-window-message-ids"></a>反映視窗訊息 ID
 
-一種較快建立 ActiveX 控制項或其他特殊控制項的方法是子類別化一個視窗。 如需詳細資訊，請參閱 < [MFC ActiveX 控制項： 子類別化 Windows 控制項](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)。
+一種較快建立 ActiveX 控制項或其他特殊控制項的方法是子類別化一個視窗。 如需詳細資訊，請參閱[MFC ActiveX 控制項：子類別化 Windows 控制項](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)。
 
 若要防止控制項的容器接收視窗訊息，由子類別化 Windows 控制項，傳送[COleControl](../mfc/reference/colecontrol-class.md)建立攔截某些視窗訊息，並將其傳回給控制項的"reflector"視窗。 控制項 (在其視窗程序中) 接著可以針對 ActiveX 控制項採取適當的動作，然後再處理這些反映訊息。
 
@@ -76,7 +76,7 @@ ms.locfileid: "51693551"
 |[WM_VKEYTOITEM](/windows/desktop/Controls/wm-vkeytoitem)|OCM_VKEYTOITEM|
 |[WM_CHARTOITEM](/windows/desktop/Controls/wm-chartoitem)|OCM_CHARTOITEM|
 |[WM_COMPAREITEM](/windows/desktop/Controls/wm-compareitem)|OCM_COMPAREITEM|
-|[時傳遞 WM_HSCROLL](/windows/desktop/Controls/wm-hscroll)|OCM_HSCROLL|
+|[WM_HSCROLL](/windows/desktop/Controls/wm-hscroll)|OCM_HSCROLL|
 |[WM_VSCROLL](/windows/desktop/Controls/wm-vscroll)|OCM_VSCROLL|
 |[WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|
 |[WM_NOTIFY](/windows/desktop/controls/wm-notify)|OCM_NOTIFY|
@@ -87,5 +87,4 @@ ms.locfileid: "51693551"
 ## <a name="see-also"></a>另請參閱
 
 [MFC ActiveX 控制項：子類別化 Windows 控制項](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
-[TN062：Windows 控制項的訊息反映](../mfc/tn062-message-reflection-for-windows-controls.md)
-
+[TN062:Windows 控制項的訊息反映](../mfc/tn062-message-reflection-for-windows-controls.md)

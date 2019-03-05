@@ -1,5 +1,5 @@
 ---
-title: 例外狀況：釋放例外狀況中的物件
+title: '例外狀況: 釋放例外狀況中的物件'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - throwing exceptions [MFC], freeing objects in exceptions
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: 6e03d46a2600458f3107efa6e0b6b0d643c9b160
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23fe85018d1bc2c41371afec2ad6931755e4e682
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442467"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298124"
 ---
-# <a name="exceptions-freeing-objects-in-exceptions"></a>例外狀況：釋放例外狀況中的物件
+# <a name="exceptions-freeing-objects-in-exceptions"></a>例外狀況: 釋放例外狀況中的物件
 
 這篇文章會說明需要和例外狀況發生時釋放物件的方法。 主題包括：
 
@@ -62,9 +62,8 @@ ms.locfileid: "50442467"
 
 如果您呼叫可能會擲回例外狀況的函式時，您可以使用**try/catch**區塊，藉此確定您攔截的例外狀況，並有機會摧毀任何您已建立的物件。 特別是，請注意，許多 MFC 函式可以擲回例外狀況。
 
-如需詳細資訊，請參閱 <<c0> [ 例外狀況： 攔截及刪除例外狀況](../mfc/exceptions-catching-and-deleting-exceptions.md)。
+如需詳細資訊，請參閱[例外狀況：攔截及刪除例外狀況](../mfc/exceptions-catching-and-deleting-exceptions.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [例外狀況處理](../mfc/exception-handling-in-mfc.md)
-

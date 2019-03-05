@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 83ac810538bf189d026c0cb9b2a76ded49fdd86c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80975047b300f270c0ac58c8b8abfc59ff2b17ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499669"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293780"
 ---
 # <a name="catlmap-class"></a>CAtlMap 類別
 
@@ -101,7 +101,7 @@ class CAtlMap
 |名稱|描述|
 |----------|-----------------|
 |[CAtlMap::CAtlMap](#catlmap)|建構函式。|
-|[CAtlMap:: ~ CAtlMap](#dtor)|解構函式。|
+|[CAtlMap::~CAtlMap](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -221,7 +221,7 @@ CAtlMap(
 
 [!code-cpp[NVC_ATL_Utilities#72](../../atl/codesnippet/cpp/catlmap-class_1.cpp)]
 
-##  <a name="dtor"></a>  CAtlMap:: ~ CAtlMap
+##  <a name="dtor"></a>  CAtlMap::~CAtlMap
 
 解構函式。
 
@@ -294,7 +294,7 @@ CPair* GetAt(POSITION& pos) throw();
 *key*<br/>
 指定對應的索引鍵的類型樣板參數。
 
-*值*<br/>
+*value*<br/>
 指定的對應值的類型樣板參數。
 
 ### <a name="return-value"></a>傳回值
@@ -391,7 +391,7 @@ void GetNextAssoc(
 *key*<br/>
 指定對應的索引鍵的類型樣板參數。
 
-*值*<br/>
+*value*<br/>
 指定的對應值的類型樣板參數。
 
 ### <a name="remarks"></a>備註
@@ -561,7 +561,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 *key*<br/>
 指定識別的項目，是要查閱的索引鍵。
 
-*值*<br/>
+*value*<br/>
 收到的查閱值的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -675,7 +675,7 @@ POSITION SetAt(
 *key*<br/>
 若要加入的索引鍵值`CAtlMap`物件。
 
-*值*<br/>
+*value*<br/>
 要加入至值`CAtlMap`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -731,7 +731,7 @@ void SetValueAt(
 *pos*<br/>
 先前呼叫所傳回的位置計數器[CAtlMap::GetNextAssoc](#getnextassoc)或是[CAtlMap::GetStartPosition](#getstartposition)。
 
-*值*<br/>
+*value*<br/>
 要加入至值`CAtlMap`物件。
 
 ### <a name="remarks"></a>備註

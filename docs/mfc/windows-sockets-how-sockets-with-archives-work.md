@@ -1,5 +1,5 @@
 ---
-title: Windows Sockets：如何搭配使用通訊端與封存
+title: Windows Sockets:通訊端與封存的運作方式
 ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows Sockets [MFC], synchronous
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-ms.openlocfilehash: f6101193c85e41fbf82681b0b2ae1e09e4162f87
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3af94bc881276238f1a8d2dbeeee4dca1f173a4b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174908"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300683"
 ---
-# <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets：如何搭配使用通訊端與封存
+# <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets:通訊端與封存的運作方式
 
 這篇文章說明如何[CSocket](../mfc/reference/csocket-class.md)物件， [CSocketFile](../mfc/reference/csocketfile-class.md)物件，並[CArchive](../mfc/reference/carchive-class.md)物件組合來簡化傳送和接收資料，透過 Windows通訊端。
 
-發行項[Windows Sockets： 通訊端使用封存的範例](../mfc/windows-sockets-example-of-sockets-using-archives.md)呈現`PacketSerialize`函式。 中的封存物件`PacketSerialize`範例運作方式十分類似封存物件傳遞至 MFC [Serialize](../mfc/reference/cobject-class.md#serialize)函式。 重要的差異是，通訊端，封存附加不到標準[CFile](../mfc/reference/cfile-class.md)物件 （通常與相關聯的磁碟檔案） 但為`CSocketFile`物件。 而不是連接到磁碟檔案`CSocketFile`物件連接到`CSocket`物件。
+發行項[Windows Sockets:通訊端使用封存的範例](../mfc/windows-sockets-example-of-sockets-using-archives.md)呈現`PacketSerialize`函式。 中的封存物件`PacketSerialize`範例運作方式十分類似封存物件傳遞至 MFC [Serialize](../mfc/reference/cobject-class.md#serialize)函式。 重要的差異是，通訊端，封存附加不到標準[CFile](../mfc/reference/cfile-class.md)物件 （通常與相關聯的磁碟檔案） 但為`CSocketFile`物件。 而不是連接到磁碟檔案`CSocketFile`物件連接到`CSocket`物件。
 
 A`CArchive`物件會管理一個緩衝區。 儲存 （傳送） 的封存的緩衝區已滿時，相關聯`CFile`物件寫出緩衝區的內容。 排清的封存檔附加到通訊端緩衝區就相當於傳送訊息。 當載入 （接收） 封存的緩衝區已滿，`CFile`物件會停止讀取，直到緩衝區恢復可用性為止。
 
@@ -46,9 +46,9 @@ A`CSocket`物件是一個兩階段物件： 有時候非同步 （一般狀態�
 
 在 「 封存相容 」 模式下，`CSocketFile`物件提供更佳的效能，並減少產生風險的 < 死結 >。 當您等候彼此，或等待的常見資源傳送和接收通訊端時，就會發生死結。 如果發生這種情況，可能`CArchive`物件所從事`CSocketFile`一樣的方式`CFile`物件。 使用`CFile`，封存會假設它收到較少的位元組，比要求時，如果有已到達檔案結尾。 使用`CSocketFile`，不過，資料為基礎的訊息緩衝區中可以包含多個訊息，因此接收少於所要求的位元組數目，並不表示檔案結尾。 應用程式不會封鎖在此情況下，它可能與`CFile`，因此能夠繼續從緩衝區讀取訊息，直到緩衝區是空的。 [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty)函式中`CArchive`適合用來監視這種情況的封存的緩衝區的狀態。
 
-如需詳細資訊，請參閱[Windows Sockets： 使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)
+如需詳細資訊，請參閱[Windows Sockets:搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)
 
 ## <a name="see-also"></a>另請參閱
 
 [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)<br/>
-[Cobject:: Serialize](../mfc/reference/cobject-class.md#serialize)
+[CObject::Serialize](../mfc/reference/cobject-class.md#serialize)

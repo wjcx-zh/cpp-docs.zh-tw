@@ -1,18 +1,18 @@
 ---
-title: 如何：轉換使用取消的 OpenMP 迴圈來使用並行執行階段
+title: HOW TO：轉換使用並行執行階段使用取消的 OpenMP 迴圈
 ms.date: 11/04/2016
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, cancellation
 - cancellation, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 4b0b3c33-bfa9-4e96-ae08-aef245a39cbb
-ms.openlocfilehash: f3a53113952a12b6b25839deb20548c56a9b7e1c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 618e93c18173bfe3e5f5b5f3058a8bb3d61e98ec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569568"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300670"
 ---
-# <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>如何：轉換使用取消的 OpenMP 迴圈來使用並行執行階段
+# <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>HOW TO：轉換使用並行執行階段使用取消的 OpenMP 迴圈
 
 部分平行迴圈不需要執行的所有反覆項目。 例如，搜尋值的演算法可以終止之後找到的值。 OpenMP 不提供一個機制來中斷平行迴圈。 不過，您可以使用布林值或旗標，若要啟用以指出已找到方案迴圈的反覆項目。 並行執行階段提供可讓取消尚未開始的其他工作的一項工作的功能。
 
@@ -45,11 +45,10 @@ Using the Concurrency Runtime...
 
 複製範例程式碼，並將它貼在 Visual Studio 專案中，或貼入名為的檔案中`concrt-omp-parallel-any-of.cpp`，然後在 Visual Studio 命令提示字元 視窗中執行下列命令。
 
-**cl.exe /EHsc /openmp concrt-omp-並行-any-of.cpp**
+**cl.exe /EHsc /openmp concrt-omp-parallel-any-of.cpp**
 
 ## <a name="see-also"></a>另請參閱
 
 [從 OpenMP 移轉至並行執行階段](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [PPL 中的取消](cancellation-in-the-ppl.md)<br/>
 [平行演算法](../../parallel/concrt/parallel-algorithms.md)
-

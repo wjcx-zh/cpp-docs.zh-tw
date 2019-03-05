@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - contexts [Concurrency Runtime]
 ms.assetid: 10c1d861-8fbb-4ba0-b2ec-61876b11176e
-ms.openlocfilehash: b7d1a5bbc63781e865be8053cb4365d6a8590935
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d511f8fa751d61c3c490a184dae660096dd9f76f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529164"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285902"
 ---
 # <a name="contexts"></a>內容
 
@@ -26,7 +26,7 @@ ms.locfileid: "50529164"
 
 ### <a name="example"></a>範例
 
-如需使用的範例`wait`函式以產生目前的內容，並因此可提供其他內容中執行，請參閱[如何： 使用排程群組的執行順序影響](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)。
+如需使用的範例`wait`函式以產生目前的內容，並因此可提供其他內容中執行，請參閱[How to:使用排程群組來影響執行順序](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)。
 
 ## <a name="the-context-class"></a>Context 類別
 
@@ -46,7 +46,7 @@ ms.locfileid: "50529164"
 
 #### <a name="example"></a>範例
 
-如需使用的範例`Context::Block`， `Context::Unblock`，並`Context::Yield`方法來實作合作式信號類別，請參閱[如何： 使用內容類別實作合作式信號](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)。
+如需使用的範例`Context::Block`， `Context::Unblock`，和`Context::Yield`方法來實作合作式信號類別，請參閱[How to:使用內容類別實作合作式信號](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)。
 
 ##### <a name="oversubscription"></a>過度訂閱
 
@@ -66,12 +66,11 @@ ms.locfileid: "50529164"
 
 ###### <a name="example"></a>範例
 
-如需使用過度訂閱位移的延遲所造成的網路連線讀取資料的範例，請參閱[如何： 使用過度訂閱位移延遲](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)。
+如需使用過度訂閱位移的延遲所造成的網路連線讀取資料的範例，請參閱[How to:若要位移延遲使用過度訂閱](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
-[如何：使用排程群組來影響執行順序](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)<br/>
+[如何：使用排程群組影響執行順序](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)<br/>
 [如何：使用內容類別實作合作式信號](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
-[如何：使用過度訂閱使延遲產生位移](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)
-
+[如何：使用過度訂閱以讓延遲位移](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)

@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: ef44c917411efefeb6719af95185ddf7993fbab1
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 8587eb76f38c07d54234c810dfd6ab79f487e740
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179015"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283419"
 ---
 # <a name="colecontrol-class"></a>COleControl 類別
 
@@ -970,7 +970,7 @@ void DoSuperclassPaint(
 *pDC*<br/>
 控制項容器的裝置內容指標。
 
-*rcbounds 就*<br/>
+*rcBounds*<br/>
 要繪製控制項的區域。
 
 ### <a name="remarks"></a>備註
@@ -1192,7 +1192,7 @@ void AFX_CDECL FireEvent(
 |VTS_FONT|`IFontDisp*`|
 |VTS_HANDLE|HWND|
 |VTS_PICTURE|`IPictureDisp*`|
-|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE *|
+|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE*|
 |VTS_TRISTATE|OLE_TRISTATE|
 |VTS_XPOS_HIMETRIC|OLE_XPOS_HIMETRIC|
 |VTS_YPOS_HIMETRIC|OLE_YPOS_HIMETRIC|
@@ -1301,7 +1301,7 @@ void FireMouseDown(
 
 ### <a name="parameters"></a>參數
 
-*n 按鈕*<br/>
+*nButton*<br/>
 按下滑鼠按鈕的數值。 它可以包含下列值之一：
 
 - LEFT_BUTTON 滑鼠左鍵已按下。
@@ -1345,7 +1345,7 @@ void FireMouseMove(
 
 ### <a name="parameters"></a>參數
 
-*n 按鈕*<br/>
+*nButton*<br/>
 按下滑鼠按鈕的數值。 包含下列值的組合：
 
 - LEFT_BUTTON 滑鼠左鍵已按下動作期間。
@@ -1389,7 +1389,7 @@ void FireMouseUp(
 
 ### <a name="parameters"></a>參數
 
-*n 按鈕*<br/>
+*nButton*<br/>
 放開滑鼠按鈕的數值。 它可以包含下列值之一：
 
 - 已發行 LEFT_BUTTON 滑鼠左的按鈕。
@@ -2166,7 +2166,7 @@ BOOL IsModified();
 
 屬性值變更時，會修改控制項的狀態。
 
-##  <a name="isoptimizeddraw"></a>  Colecontrol:: Isoptimizeddraw
+##  <a name="isoptimizeddraw"></a>  COleControl::IsOptimizedDraw
 
 判斷容器是否支援目前的繪圖作業最佳化的繪圖。
 
@@ -2224,7 +2224,7 @@ BOOL LockInPlaceActive(BOOL bLock);
 
 ### <a name="parameters"></a>參數
 
-*區塊*<br/>
+*bLock*<br/>
 如果鎖定，則為控制項的就地使用中狀態，則為 TRUE。如果要解除鎖定，則為 FALSE。
 
 ### <a name="return-value"></a>傳回值
@@ -2386,7 +2386,7 @@ virtual void OnDraw(
 *pDC*<br/>
 繪圖發生在哪個裝置內容。
 
-*rcbounds 就*<br/>
+*rcBounds*<br/>
 控制項，包括框線的矩形區域。
 
 *rcInvalid*<br/>
@@ -2411,7 +2411,7 @@ virtual void OnDrawMetafile(
 *pDC*<br/>
 繪圖發生在哪個裝置內容。
 
-*rcbounds 就*<br/>
+*rcBounds*<br/>
 控制項，包括框線的矩形區域。
 
 ### <a name="remarks"></a>備註
@@ -2936,7 +2936,7 @@ virtual void OnKeyDownEvent(
 
 ### <a name="parameters"></a>參數
 
-*NChar*<br/>
+*nChar*<br/>
 按下的按鍵虛擬按鍵碼值。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h
 
 *nShiftState*<br/>
@@ -2962,7 +2962,7 @@ virtual void OnKeyPressEvent(USHORT nChar);
 
 ### <a name="parameters"></a>參數
 
-*NChar*<br/>
+*nChar*<br/>
 包含虛擬按鍵碼值的按鍵。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h
 
 ### <a name="remarks"></a>備註
@@ -2983,7 +2983,7 @@ virtual void OnKeyUpEvent(
 
 ### <a name="parameters"></a>參數
 
-*NChar*<br/>
+*nChar*<br/>
 按下的按鍵虛擬按鍵碼值。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h
 
 *nShiftState*<br/>
@@ -3409,7 +3409,7 @@ virtual BOOL OnWindowlessMessage(
 
 ### <a name="parameters"></a>參數
 
-*訊息*<br/>
+*msg*<br/>
 Windows 所傳送的訊息識別碼。
 
 *wParam*<br/>
@@ -4067,7 +4067,7 @@ void SetText(LPCTSTR pszText);
 
 請注意，內建的標題和文字屬性都對應到相同的值。 這表示，其中一個屬性所做的變更會自動將變更這兩個屬性。 一般情況下，控制項應該支援股票標題或文字屬性，但非兩者。
 
-##  <a name="throwerror"></a>  Colecontrol:: Throwerror
+##  <a name="throwerror"></a>  COleControl::ThrowError
 
 表示在控制項中錯誤的相符項目。
 

@@ -13,16 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-ms.openlocfilehash: fed6f6c9b93869602eb43dabfef4743fbce3a3d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59a0f66a0ba3b10c3307a835ff6ccaa216596538
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430000"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295320"
 ---
 # <a name="itarget-class"></a>ITarget 類別
 
-`ITarget` 類別是所有目標區塊的介面。 目標區塊會使用 `ISource` 區塊提供給它們的訊息。
+
+  `ITarget` 類別是所有目標區塊的介面。 目標區塊會使用 `ISource` 區塊提供給它們的訊息。
 
 ## <a name="syntax"></a>語法
 
@@ -81,7 +82,7 @@ class ITarget;
 
 **命名空間：** concurrency
 
-##  <a name="dtor"></a> ~ ITarget
+##  <a name="dtor"></a> ~ITarget
 
 終結`ITarget`物件。
 
@@ -119,7 +120,8 @@ virtual message_status propagate(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-`message` 物件的指標。
+
+  `message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。
@@ -145,7 +147,8 @@ virtual message_status send(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-`message` 物件的指標。
+
+  `message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。

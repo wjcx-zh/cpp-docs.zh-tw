@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 9e2df5117f6cbb96c69f54fe9e21f85b45218d6d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 61cbcbd2a64e8648c6467ebbc0d86d6f89953442
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178976"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302492"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl 類別
 
@@ -623,7 +623,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定工具列控制項的樣式。 工具列一定要有 WS_CHILD 樣式。 此外，指定 toolbar 樣式和視窗樣式的任意組合，如底下所述**備註**。
 
 *rect*<br/>
@@ -677,7 +677,7 @@ virtual BOOL CreateEx(
 *dwExStyle*<br/>
 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定工具列控制項的樣式。 工具列一定要有 WS_CHILD 樣式。 此外，您可以指定 toolbar 樣式和視窗樣式的任何組合中所述**備註**一節[建立](#create)。
 
 *rect*<br/>
@@ -1266,7 +1266,7 @@ int GetString(
 
 ### <a name="parameters"></a>參數
 
-*字串*<br/>
+*nString*<br/>
 字串的索引。
 
 *lpstrString*<br/>
@@ -2347,7 +2347,7 @@ void SetStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 DWORD，其中包含組成[toolbar 控制項樣式](/windows/desktop/Controls/toolbar-control-and-button-styles)、 Windows SDK 中所述。
 
 ##  <a name="settooltips"></a>  CToolBarCtrl::SetToolTips

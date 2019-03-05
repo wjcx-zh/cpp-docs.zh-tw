@@ -307,12 +307,12 @@ helpviewer_keywords:
 - CMenuImages class [MFC]
 - CleanUp method [MFC]
 ms.assetid: 3e2276aa-b02a-4781-97ba-ea074045e9e2
-ms.openlocfilehash: 706ba4cdd1a8f9d77857c52898058aa62fcca8c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae35aefefe548990eeb7fbe637839e475036c2bc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435486"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300085"
 ---
 # <a name="internal-classes"></a>內部類別
 
@@ -325,7 +325,7 @@ ms.locfileid: "50435486"
 |`CCommandManager Class`|`CCommandManager`類別會管理命令和其關聯與映像。|
 |`CDialogImpl Class (MFC)`|提供實作詳細資料 對話方塊方塊為基礎的類別，例如`CDialogEx`。|
 |`CDocumentAdapter Class`|搜尋和組織的處理常式所需的實作 IDocument 介面。|
-|`CFrameImpl Class`|`CFrameImpl`類別會處理下列的框架視窗類別的工具列自訂： [CFrameWndEx 類別](../../mfc/reference/cframewndex-class.md)， [CMDIFrameWndEx 類別](../../mfc/reference/cmdiframewndex-class.md)，和[COleIPFrameWndEx 類別](../../mfc/reference/coleipframewndex-class.md).|
+|`CFrameImpl Class`|`CFrameImpl`類別會處理下列的框架視窗類別的工具列自訂：[CFrameWndEx 類別](../../mfc/reference/cframewndex-class.md)， [CMDIFrameWndEx 類別](../../mfc/reference/cmdiframewndex-class.md)，以及[COleIPFrameWndEx 類別](../../mfc/reference/coleipframewndex-class.md)。|
 |`CFullScreenImpl Class`|實作全螢幕功能通用於 SDI 和 MDI 應用程式。|
 |`CMDIClientAreaWnd Class`|`CMDIClientAreaWnd`類別是一個 helper 類別，可簡化 MDI 索引標籤和 MDI 索引群組的實作。|
 |`CMemDC Class`|協助程式類別記憶體裝置內容。 記憶體裝置內容支援螢幕的繪圖。|
@@ -412,4 +412,3 @@ ms.locfileid: "50435486"
 ## <a name="see-also"></a>另請參閱
 
 [MFC 傳統型應用程式](../../mfc/mfc-desktop-applications.md)
-

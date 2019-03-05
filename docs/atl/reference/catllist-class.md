@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: 9e657bbf375a8babf1c03cc7254310956131d62b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: faed99197eb14da8ea095bef81d0d1a9845b18ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449360"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285499"
 ---
 # <a name="catllist-class"></a>CAtlList 類別
 
@@ -76,7 +76,7 @@ class CAtlList
 |名稱|描述|
 |----------|-----------------|
 |[CAtlList::CAtlList](#catllist)|建構函式。|
-|[CAtlList:: ~ CAtlList](#dtor)|解構函式。|
+|[CAtlList::~CAtlList](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -134,7 +134,7 @@ POSITION AddHead(INARGTYPE element);
 
 ### <a name="parameters"></a>參數
 
-*項目*<br/>
+*element*<br/>
 新的項目。
 
 ### <a name="return-value"></a>傳回值
@@ -181,7 +181,7 @@ POSITION AddTail(INARGTYPE element);
 
 ### <a name="parameters"></a>參數
 
-*項目*<br/>
+*element*<br/>
 要加入的項目。
 
 ### <a name="return-value"></a>傳回值
@@ -254,7 +254,7 @@ CAtlList(UINT nBlockSize = 10) throw();
 
 [!code-cpp[NVC_ATL_Utilities#18](../../atl/codesnippet/cpp/catllist-class_6.cpp)]
 
-##  <a name="dtor"></a>  CAtlList:: ~ CAtlList
+##  <a name="dtor"></a>  CAtlList::~CAtlList
 
 解構函式。
 
@@ -278,7 +278,7 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 
 ### <a name="parameters"></a>參數
 
-*項目*<br/>
+*element*<br/>
 要在清單中找到的項目。
 
 *posStartAfter*<br/>
@@ -536,7 +536,7 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
 *pos*<br/>
 位置值之後，將會插入新項目。
 
-*項目*<br/>
+*element*<br/>
 要插入的項目。
 
 ### <a name="return-value"></a>傳回值
@@ -564,7 +564,7 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 *pos*<br/>
 新的項目會插入在這個位置值的清單。
 
-*項目*<br/>
+*element*<br/>
 要插入的項目。
 
 ### <a name="return-value"></a>傳回值
@@ -761,7 +761,7 @@ void SetAt(POSITION pos, INARGTYPE element);
 *pos*<br/>
 位置值，對應至要變更的項目。
 
-*項目*<br/>
+*element*<br/>
 新的項目值。
 
 ### <a name="remarks"></a>備註

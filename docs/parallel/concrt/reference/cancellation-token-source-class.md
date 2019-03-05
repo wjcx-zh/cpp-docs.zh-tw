@@ -11,16 +11,17 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-ms.openlocfilehash: e0b636d22eede9eb6a9d9268241f912bb80fcbf9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 330473db1011af661e2cfa2c5861987bce786e40
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446744"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296783"
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source 類別
 
-`cancellation_token_source` 類別代表取消某個可取消作業的能力。
+
+  `cancellation_token_source` 類別代表取消某個可取消作業的能力。
 
 ## <a name="syntax"></a>語法
 
@@ -41,7 +42,7 @@ class cancellation_token_source;
 
 |名稱|描述|
 |----------|-----------------|
-|[[取消]](#cancel)|取消語彙基元。 任何使用語彙基元的 `task_group`、`structured_task_group` 或 `task` 都會在進行這個呼叫時取消，並在下一個中斷點擲回例外狀況。|
+|[cancel](#cancel)|取消語彙基元。 任何使用語彙基元的 `task_group`、`structured_task_group` 或 `task` 都會在進行這個呼叫時取消，並在下一個中斷點擲回例外狀況。|
 |[create_linked_source](#create_linked_source)|多載。 建立 `cancellation_token_source`，其會在提供的語彙基元已取消時取消。|
 |[get_token](#get_token)|傳回與此來源相關聯的取消語彙基元。 傳回的語彙基元可用於輪詢取消或在發生取消時提供回呼。|
 
@@ -114,15 +115,16 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
 *_Src*<br/>
 語彙基元，其取消作業將會導致取消傳回的語彙基元來源。 請注意，傳回的語彙基元來源也可以獨立取消，不受此參數包含的來源影響。
 
-*（_b)*<br/>
+*_Begin*<br/>
 C + + 標準程式庫迭代器，對應的語彙基元範圍的開頭到接聽的取消。
 
-*（_e)*<br/>
+*_End*<br/>
 C + + 標準程式庫迭代器，對應至權杖的範圍結尾接聽的取消。
 
 ### <a name="return-value"></a>傳回值
 
-`cancellation_token_source`，其會在 `_Src` 參數提供的語彙基元已取消時取消。
+
+  `cancellation_token_source`，其會在 `_Src` 參數提供的語彙基元已取消時取消。
 
 ##  <a name="get_token"></a> get_token
 

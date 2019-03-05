@@ -1,19 +1,19 @@
 ---
-title: OLE 背景：實作策略
+title: OLE 背景：Implementation Strategies
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE [MFC], development strategy
 - OLE applications [MFC], implementing OLE
 - applications [OLE], implementing OLE
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
-ms.openlocfilehash: a9bcbc16b08f16953df92efe5a83db39f9a33cc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40c74d48b76921f770740602a39d28804a7e3c09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624389"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284810"
 ---
-# <a name="ole-background-implementation-strategies"></a>OLE 背景：實作策略
+# <a name="ole-background-implementation-strategies"></a>OLE 背景：Implementation Strategies
 
 視您的應用程式而定，實作新增 OLE 支援的可行策略有四種：
 
@@ -41,4 +41,3 @@ ms.locfileid: "50624389"
 [容器：實作容器](../mfc/containers-implementing-a-container.md)<br/>
 [伺服器：實作伺服器](../mfc/servers-implementing-a-server.md)<br/>
 [MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)
-

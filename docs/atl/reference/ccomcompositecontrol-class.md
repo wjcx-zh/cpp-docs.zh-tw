@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CComCompositeControl class
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
-ms.openlocfilehash: 370f0bb2fc76e1377dce6ae4616861085ad44562
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1a9a2d0628b3683f047ce9858d809040438db03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429038"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301996"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl 類別
 
@@ -49,7 +49,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 |名稱|描述|
 |----------|-----------------|
 |[CComCompositeControl::CComCompositeControl](#ccomcompositecontrol)|建構函式。|
-|[CComCompositeControl:: ~ CComCompositeControl](#dtor)|解構函式。|
+|[CComCompositeControl::~CComCompositeControl](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -193,7 +193,7 @@ CComCompositeControl();
 
 初始化[CComCompositeControl::m_hbrBackground](#m_hbrbackground)並[CComCompositeControl::m_hWndFocus](#m_hwndfocus)為 NULL 的資料成員。
 
-##  <a name="dtor"></a>  CComCompositeControl:: ~ CComCompositeControl
+##  <a name="dtor"></a>  CComCompositeControl::~CComCompositeControl
 
 解構函式。
 

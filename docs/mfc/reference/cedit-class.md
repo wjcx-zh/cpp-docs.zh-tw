@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: f18866dca3610db275c629bbb2ac885c21cbdcb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6af054ea27233de2cc3b551bbec69c0ab3b4be9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455805"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289958"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -181,13 +181,13 @@ class CEdit : public CWnd
 
 每個訊息對應項目都會使用下列格式：
 
-  **ON_**_通知_**(** _識別碼_**，** _memberFxn_ **)**
+  **ON_**_NOTIFICATION_**(** _id_**,** _memberFxn_ **)**
 
 何處`id`指定傳送通知，編輯控制項的子視窗識別碼和`memberFxn`是您撰寫來處理通知的父成員函式的名稱。
 
 父代的函式原型如下所示：
 
-**afx_msg** void memberFxn **（);**
+**afx_msg** void memberFxn **( );**
 
 以下是一份潛在的訊息對應項目並在其中它們就會傳送到父代的案例的描述：
 
@@ -277,7 +277,7 @@ int CharFromPos(CPoint pt) const;
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pt*<br/>
 工作區中此點的座標`CEdit`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -345,7 +345,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定編輯控制項的樣式。 套用的任何組合[編輯樣式](styles-used-by-mfc.md#edit-styles)至控制項。
 
 *rect*<br/>
@@ -854,7 +854,7 @@ int LineIndex(int nLine = -1) const;
 
 ### <a name="parameters"></a>參數
 
-*n 行*<br/>
+*nLine*<br/>
 包含編輯控制項的文字行的索引值，或包含-1。 如果*n 行*為-1，它會指定目前這一行，也就是包含插入號的行。
 
 ### <a name="return-value"></a>傳回值
@@ -883,7 +883,7 @@ int LineLength(int nLine = -1) const;
 
 ### <a name="parameters"></a>參數
 
-*n 行*<br/>
+*nLine*<br/>
 其長度是要擷取的行中的字元以零為起始的索引。 預設值為 -1。
 
 ### <a name="return-value"></a>傳回值
@@ -966,7 +966,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 ### <a name="parameters"></a>參數
 
-*NChar*<br/>
+*nChar*<br/>
 指定的字元以零為起始的索引。
 
 ### <a name="return-value"></a>傳回值

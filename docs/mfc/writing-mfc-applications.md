@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application wizards [MFC], Internet applications
 - MFC, application development
 ms.assetid: 6a8d8a03-abfa-4976-86c2-c5773a4b7179
-ms.openlocfilehash: 09d337f2b2a137c997665b6fad4f2fef7235f723
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63636e8c5738eb3823de0befa6237f7ae5b3491d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428531"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288164"
 ---
 # <a name="writing-mfc-applications"></a>撰寫 MFC 應用程式
 
@@ -46,4 +46,3 @@ ms.locfileid: "50428531"
 
 [MFC 網際網路程式設計工作](../mfc/mfc-internet-programming-tasks.md)<br/>
 [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)
-

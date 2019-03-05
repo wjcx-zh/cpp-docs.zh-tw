@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCRibbonSlider [MFC], SetZoomButtons
 - CMFCRibbonSlider [MFC], SetZoomIncrement
 ms.assetid: 9351ac34-f234-4e42-91e2-763f1989c8ff
-ms.openlocfilehash: 8db8165325c7bcd1e626b6707c35b69ebd211073
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85c646e2fa524268e4559b587f90c5e06971b765
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585103"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300321"
 ---
 # <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider 類別
 
@@ -112,7 +112,7 @@ CMFCRibbonSlider(
 *nID*<br/>
 [in]滑桿的識別碼。
 
-[in]。 *nWidth*滑桿的寬度，以像素為單位。
+[in]. *nWidth*滑桿的寬度，以像素為單位。
 
 ### <a name="remarks"></a>備註
 
@@ -164,7 +164,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -204,7 +204,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -258,7 +258,7 @@ void SetZoomButtons(BOOL bSet=TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in]。 *bSet* true 會顯示顯示比例按鈕;若要隱藏它們，則為 FALSE。
+[in]. *bSet* true 會顯示顯示比例按鈕;若要隱藏它們，則為 FALSE。
 
 ##  <a name="setzoomincrement"></a>  CMFCRibbonSlider::SetZoomIncrement
 

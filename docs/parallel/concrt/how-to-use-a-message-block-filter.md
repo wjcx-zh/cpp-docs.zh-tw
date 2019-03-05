@@ -1,18 +1,18 @@
 ---
-title: 如何：使用訊息區篩選條件
+title: HOW TO：使用訊息區篩選條件
 ms.date: 11/04/2016
 helpviewer_keywords:
 - message-block filters, using [Concurrency Runtime]
 - using message-block filters [Concurrency Runtime]
 ms.assetid: db6b99fb-288d-4477-96dc-b9751772ebb2
-ms.openlocfilehash: 512dda6503d5980dbdcc20a55ca0ee836d4d08e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1bfa11953d27dc7e013e715b3f58111f124caeaf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660131"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284290"
 ---
-# <a name="how-to-use-a-message-block-filter"></a>如何：使用訊息區篩選條件
+# <a name="how-to-use-a-message-block-filter"></a>HOW TO：使用訊息區篩選條件
 
 本文件將示範如何使用篩選函數，讓非同步訊息區塊接受或拒絕訊息，以根據該訊息的承載。
 
@@ -20,7 +20,7 @@ ms.locfileid: "50660131"
 
 篩選函式很重要，因為它們可讓您連接訊息區塊組成*資料流程網路*。 在資料流程網路中，訊息區塊控制資料流處理只有在符合特定準則的訊息。 這與控制流程模型中，使用控制結構，例如條件陳述式、 迴圈、 受管制的資料流量等等。
 
-本文件提供如何使用訊息篩選條件的基本範例。 如需使用訊息篩選條件和資料流程模型來將訊息區連接的其他範例，請參閱[逐步解說： 建立資料流程代理程式](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)並[逐步解說： 建立影像處理網路](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+本文件提供如何使用訊息篩選條件的基本範例。 如需使用訊息篩選條件和資料流程模型來將訊息區連接的其他範例，請參閱[逐步解說：建立資料流程代理程式](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)和[逐步解說：建立映像處理網路](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)。
 
 ## <a name="example"></a>範例
 

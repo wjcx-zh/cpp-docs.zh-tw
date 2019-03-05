@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-ms.openlocfilehash: 7902ba2315fe348789527e755e124e7fc0ba965f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4336a4cc317344c881f60e5ed4c5bdf8328a34b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509043"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301164"
 ---
 # <a name="tilebarrier-class"></a>tile_barrier 類別
 
@@ -41,7 +41,7 @@ class tile_barrier;
 
 |名稱|描述|
 |----------|-----------------|
-|[等候](#wait)|指示要停止執行，直至 tile 中的所有執行緒均已都完成等待執行緒群組 (tile) 中的所有執行緒。|
+|[wait](#wait)|指示要停止執行，直至 tile 中的所有執行緒均已都完成等待執行緒群組 (tile) 中的所有執行緒。|
 |[wait_with_all_memory_fence](#wait_with_all_memory_fence)|封鎖執行，直到所有記憶體存取都已經都完成的所有執行緒和 tile 中的所有執行緒到達這個呼叫為止。|
 |[wait_with_global_memory_fence](#wait_with_global_memory_fence)|封鎖直到所有全域記憶體存取的所有執行緒的執行已經完成，且 tile 中的所有執行緒都到達這個呼叫為止。|
 |[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|封鎖 tile 中的所有執行緒的執行，直到所有`tile_static`記憶體存取已經完成，且 tile 中的所有執行緒都到達這個呼叫為止。|
@@ -72,7 +72,7 @@ tile_barrier(
 *_Other*<br/>
 `tile_barrier`来複製的物件。
 
-## <a name="wait"></a>  等候
+## <a name="wait"></a>  wait
 
 指示來停止執行，直到磚中的所有執行緒均已都完成等待執行緒群組 (tile) 中的所有執行緒。
 

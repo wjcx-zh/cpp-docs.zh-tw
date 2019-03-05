@@ -7,16 +7,17 @@ f1_keywords:
 - PPL/concurrency::task_group::task_group
 helpviewer_keywords:
 - task_group class
-ms.openlocfilehash: 1ba7251afca80c561bd8861968c35e3242c1507a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 545b368b3042da74a42db5a6ea30e97054d5fd03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588847"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294131"
 ---
 # <a name="taskgroup-class"></a>task_group 類別
 
-`task_group` 類別表示可以等候或取消的平行工作集合。
+
+  `task_group` 類別表示可以等候或取消的平行工作集合。
 
 ## <a name="syntax"></a>語法
 
@@ -37,11 +38,11 @@ class task_group;
 
 |名稱|描述|
 |----------|-----------------|
-|[[取消]](#cancel)|會盡力嘗試取消子樹狀結構的根目錄位於此工作群組的工作。 排定的工作群組上的每項工作將會取消間接的話。|
+|[cancel](#cancel)|會盡力嘗試取消子樹狀結構的根目錄位於此工作群組的工作。 排定的工作群組上的每項工作將會取消間接的話。|
 |[is_canceling](#is_canceling)|通知呼叫端工作群組是目前在取消作業。 這不一定表示所`cancel`上呼叫方法`task_group`物件 (雖然這類當然限定此方法以傳回`true`)。 它可能會發生情況的`task_group`物件以內嵌方式執行及工作群組的進一步設定工作樹狀目錄中已取消。 在這些位置等的情況下，執行階段可以判斷事先取消將會流經這`task_group`物件，`true`會一併傳回。|
 |[run](#run)|多載。 排程工作上`task_group`物件。 如果`task_handle`物件會傳遞做為參數`run`，呼叫端會負責管理的存留期`task_handle`物件。 函式物件的參考當成參數包含堆積配置，這可能是在執行階段內方法之版本的執行效能比使用會參考的版本不佳`task_handle`物件。 採用 `_Placement` 參數的版本會造成工作在該參數指定的位置變成優先執行。|
 |[run_and_wait](#run_and_wait)|多載。 排程工作將內嵌在環境中執行呼叫的協助`task_group`完整的取消支援的物件。 函式，然後等待直到所有處理`task_group`物件已完成或已取消。 如果`task_handle`物件會傳遞做為參數`run_and_wait`，呼叫端會負責管理的存留期`task_handle`物件。|
-|[等候](#wait)|等待所有工作`task_group`物件已完成或已取消。|
+|[wait](#wait)|等待所有工作`task_group`物件已完成或已取消。|
 
 ## <a name="remarks"></a>備註
 
@@ -131,7 +132,7 @@ void run(
 *_Func*<br/>
 要叫用工作的主體所呼叫函式。 這可能是 lambda 運算式或其他物件支援的版本與簽章的函式呼叫運算子`void operator()()`。
 
-*放置 （_p)*<br/>
+*_Placement*<br/>
 位置的參考，這是 `_Func` 參數代表的工作應該執行的位置。
 
 *_Task_handle*<br/>
@@ -211,7 +212,7 @@ task_group(
 
 使用取消語彙基元的建構函式會建立 `task_group`，當與語彙基元相關聯的來源取消時，它也會一併取消。 提供明確的取消語彙基元也會將這個工作群組隔離，使其無法參與具有不同語彙基元或沒有語彙基元之父群組的隱含取消。
 
-##  <a name="dtor"></a> ~ task_group
+##  <a name="dtor"></a> ~task_group
 
 終結 `task_group` 物件。 您應該呼叫`wait`或`run_and_wait`解構函式執行之前，除非解構函式執行時的堆疊回溯，因為發生例外狀況結果的物件上的方法。
 

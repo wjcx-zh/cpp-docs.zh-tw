@@ -11,18 +11,18 @@ helpviewer_keywords:
 - stack collections
 - collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
-ms.openlocfilehash: 082308acaeddcb173a0d873c0f50e2e40fd8fe12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed0ad9b98a69e56df4e66b25bc6ca08cdaaad413
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569205"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301463"
 ---
 # <a name="creating-stack-and-queue-collections"></a>建立堆疊和佇列集合
 
 這篇文章說明如何建立其他資料結構，例如[堆疊](#_core_stacks)並[佇列](#_core_queues)，從 MFC 清單類別。 這些範例會使用衍生自 `CList` 的類別，不過除非您需要新增其他功能，否則您可以直接使用 `CList`。
 
-##  <a name="_core_stacks"></a> 堆疊
+##  <a name="_core_stacks"></a> Stacks
 
 因為標準的清單集合具有一個頭部和尾部，建立模擬後進先出的堆疊行為之衍生清單集合是很容易的。 堆疊就像自助餐廳的一疊盤子。 當餐盤加入堆疊時，它們會位於堆疊的上方。 最後加入的盤子是第一個被移除的盤子。 清單集合成員函式 `AddHead` 和 `RemoveHead` 可用來從清單的開頭明確地加入和移除項目；因此，最新加入的項目會最先被移除。
 
@@ -51,4 +51,3 @@ ms.locfileid: "50569205"
 ## <a name="see-also"></a>另請參閱
 
 [集合](../mfc/collections.md)
-

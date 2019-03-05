@@ -14,12 +14,12 @@ helpviewer_keywords:
 - files [MFC], manipulating
 - binary access [MFC]
 ms.assetid: ae25e2c5-2859-4679-ab97-438824e93ce1
-ms.openlocfilehash: 815239b0d4de1938a810153cb98f39b2642b6e2d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf53c498e61bdf0a233d7638649b30e498e27cc5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459328"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297927"
 ---
 # <a name="files-in-mfc"></a>MFC 中的檔案
 
@@ -28,7 +28,8 @@ ms.locfileid: "50459328"
 > [!NOTE]
 >  當您使用 MFC`CDocument`物件時，架構會為您做許多序列化工作。 特別是，架構會建立並使用 `CFile` 物件。 您只需要撰寫程式碼中的覆寫`Serialize`類別成員函式`CDocument`。
 
-`CFile` 類別提供一般目的二進位檔案作業介面。 從 `CStdioFile` 衍生的 `CMemFile` 和 `CFile` 類別以及從 `CSharedFile` 衍生的 `CMemFile` 類別提供更為特製化的檔案服務。
+
+  `CFile` 類別提供一般目的二進位檔案作業介面。 從 `CStdioFile` 衍生的 `CMemFile` 和 `CFile` 類別以及從 `CSharedFile` 衍生的 `CMemFile` 類別提供更為特製化的檔案服務。
 
 如需 MFC 檔案處理的替代方案的詳細資訊，請參閱[檔案處理](../c-runtime-library/file-handling.md)中*執行階段程式庫參考*。
 

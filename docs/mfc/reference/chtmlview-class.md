@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: b37cff8bd3eb3bd05bc7030c4cc12b9b84568b1f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 69a04b49cf82c2b30ece3a32f76fbb2bc9a65f01
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333637"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295990"
 ---
 # <a name="chtmlview-class"></a>CHtmlView 類別
 
@@ -386,7 +386,7 @@ virtual BOOL Create(
 *lpszWindowName*<br/>
 指向以 null 結束的字元字串，表示視窗名稱。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定視窗的樣式屬性。 根據預設，會設定 WS_VISIBLE 和 WS_CHILD Windows 樣式。
 
 *rect*<br/>
@@ -1861,13 +1861,13 @@ void PutProperty(
 *dValue*<br/>
 屬性的新值。
 
-*左值*<br/>
+*lValue*<br/>
 屬性的新值。
 
 *lpszValue*<br/>
 包含屬性的新值的字串指標。
 
-*n 值*<br/>
+*nValue*<br/>
 屬性的新值。
 
 ### <a name="remarks"></a>備註
@@ -2237,4 +2237,3 @@ void Stop();
 [CFormView 類別](../../mfc/reference/cformview-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx)
-

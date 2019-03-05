@@ -24,12 +24,12 @@ helpviewer_keywords:
 - views [MFC], overriding default behavior
 - initializing views [MFC]
 ms.assetid: 88aa1f5f-2078-4603-b16b-a2b4c7b4a2a3
-ms.openlocfilehash: 57e558848ce76a7c74b5715529661ad24c9cbb8e
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3d4ca55a9bff6ec42643db745896a2cea96dcefb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175388"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297799"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>建立新文件、視窗和檢視
 
@@ -60,4 +60,3 @@ ms.locfileid: "52175388"
 [文件樣板建立](../mfc/document-template-creation.md)<br/>
 [文件/檢視建立](../mfc/document-view-creation.md)<br/>
 [MFC 物件關聯性](../mfc/relationships-among-mfc-objects.md)
-

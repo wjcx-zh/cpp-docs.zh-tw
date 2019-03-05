@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: cf2f97c1c3b389d0ee2b3d4bcdd2d9da2dbb3c8d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 56a3289d5546db21c42d22b5e8544913bdaa78cf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694851"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283653"
 ---
 # <a name="cregkey-class"></a>CRegKey 類別
 
@@ -69,7 +69,7 @@ class CRegKey
 |名稱|描述|
 |----------|-----------------|
 |[CRegKey::CRegKey](#cregkey)|建構函式。|
-|[CRegKey:: ~ CRegKey](#dtor)|解構函式。|
+|[CRegKey::~CRegKey](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 

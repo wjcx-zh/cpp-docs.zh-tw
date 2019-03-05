@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CDocTemplate [MFC], SetPreviewInfo
 - CDocTemplate [MFC], SetServerInfo
 ms.assetid: 14b41a1f-bf9d-4eac-b6a8-4c54ffcc77f6
-ms.openlocfilehash: 8044af41a3176d58c09f2c91c52497fa7f59de05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b2d84af9be8e5c606cde8794b51e12207dcdec9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658584"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289620"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate 類別
 
@@ -93,7 +93,7 @@ class CDocTemplate : public CCmdTarget
 |[CDocTemplate::SetContainerInfo](#setcontainerinfo)|編輯就地 OLE 項目時，請決定適用於 OLE 容器資源。|
 |[CDocTemplate::SetDefaultTitle](#setdefaulttitle)|文件視窗的標題列中顯示的預設標題。|
 |[CDocTemplate::SetPreviewInfo](#setpreviewinfo)|跨處理序的設定預覽處理常式。|
-|[Coleresizebar](#setserverinfo)|伺服器文件內嵌或特殊處理時，請決定資源與類別。|
+|[CDocTemplate::SetServerInfo](#setserverinfo)|伺服器文件內嵌或特殊處理時，請決定資源與類別。|
 
 ## <a name="remarks"></a>備註
 
@@ -236,7 +236,7 @@ virtual CFrameWnd* CreateNewFrame(
 *pDoc*<br/>
 新的框架視窗應參考的文件。 可以是 NULL。
 
-*其他*<br/>
+*pOther*<br/>
 隨著新的框架視窗所在的框架視窗。 可以是 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -353,7 +353,7 @@ virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;
 
 ### <a name="parameters"></a>參數
 
-*Rpo*<br/>
+*rPos*<br/>
 先前呼叫所傳回的位置值的參考[GetFirstDocPosition](#getfirstdocposition)或`GetNextDoc`。
 
 ### <a name="remarks"></a>備註
@@ -543,7 +543,7 @@ virtual void SetDefaultTitle(CDocument* pDocument) = 0;
 
 在預設標題上的資訊，請參閱 popis`CDocTemplate::docName`中[CDocTemplate::GetDocString](#getdocstring)。
 
-##  <a name="setserverinfo"></a>  Coleresizebar
+##  <a name="setserverinfo"></a>  CDocTemplate::SetServerInfo
 
 伺服器文件內嵌或特殊處理時，請決定資源與類別。
 

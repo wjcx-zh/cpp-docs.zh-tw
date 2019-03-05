@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: f8d93362f9e341087e9213d07475501a26d79d44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f1fd2435222b33d0dfb188d2a51442c2f6aa82a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492596"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288879"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane 類別
 
@@ -257,7 +257,7 @@ virtual BOOL Create(
 *pParentWnd*<br/>
 [in]指定 Outlook 功能區窗格控制項的父視窗。 必須不是 NULL。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]視窗樣式。  如需視窗樣式的清單，請參閱 <<c0> [ 的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。
 
 *uiID*<br/>
@@ -401,7 +401,7 @@ void SetBackColor(COLORREF color);
 
 ### <a name="parameters"></a>參數
 
-*色彩*<br/>
+*color*<br/>
 [in]指定新的背景色彩。
 
 ### <a name="remarks"></a>備註
@@ -473,7 +473,7 @@ void SetTransparentColor(COLORREF color);
 
 ### <a name="parameters"></a>參數
 
-*色彩*<br/>
+*color*<br/>
 指定新的透明色彩。
 
 ### <a name="remarks"></a>備註

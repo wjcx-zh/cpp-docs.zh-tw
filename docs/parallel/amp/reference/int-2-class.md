@@ -28,12 +28,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_2::operator+=
 - amp_short_vectors/Concurrency::graphics::int_2::operator--
 ms.assetid: 258b02e9-f1ee-46c2-8edd-dc9f69184846
-ms.openlocfilehash: e71cc1d253d3c280f6004d99c4906610dc7f98bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c5aefbfd1a4b06274fac0f56c1e1e45ef9dc5bd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603013"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288918"
 ---
 # <a name="int2-class"></a>int_2 類別
 
@@ -123,7 +123,7 @@ class int_2;
 
 **標頭：** amp_short_vectors.h
 
-**命名空間：** concurrency:: graphics
+**命名空間：** Concurrency:: graphics
 
 ##  <a name="ctor"></a> int_2
 
@@ -175,7 +175,7 @@ explicit inline int_2(
 *_V1*<br/>
 要初始化項目 1 的值。
 
-*（_V)*<br/>
+*_V*<br/>
 初始設定的值。
 
 *_Other*<br/>

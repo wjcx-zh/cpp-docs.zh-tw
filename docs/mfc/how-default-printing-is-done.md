@@ -6,18 +6,19 @@ helpviewer_keywords:
 - printing [MFC], default
 - defaults, printing
 ms.assetid: 0f698459-0fc9-4d43-97da-29cf0f65daa2
-ms.openlocfilehash: 8fb47aadd2389438f8d2f48a26cd3aea8d871d81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f7971b48c9050e315b2fd57d2f3449517afa07e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518972"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295301"
 ---
 # <a name="how-default-printing-is-done"></a>如何完成預設列印
 
 本文說明 MFC 架構的 Windows 預設列印處理序。
 
-在 MFC 應用程式中，檢視類別具有一個名為 `OnDraw` 的成員函式，其中包含所有繪圖程式碼。 `OnDraw` 接受的指標[CDC](../mfc/reference/cdc-class.md)物件做為參數。 `CDC` 物件表示用於接收由 `OnDraw` 所產生影像的裝置內容。 當顯示文件視窗收到[WM_PAINT](/windows/desktop/gdi/wm-paint)訊息時，架構會呼叫`OnDraw`並將它傳遞螢幕裝置內容 ( [CPaintDC](../mfc/reference/cpaintdc-class.md)要特定的物件)。 因此，`OnDraw` 會輸出至螢幕。
+在 MFC 應用程式中，檢視類別具有一個名為 `OnDraw` 的成員函式，其中包含所有繪圖程式碼。 `OnDraw` 接受的指標[CDC](../mfc/reference/cdc-class.md)物件做為參數。 
+  `CDC` 物件表示用於接收由 `OnDraw` 所產生影像的裝置內容。 當顯示文件視窗收到[WM_PAINT](/windows/desktop/gdi/wm-paint)訊息時，架構會呼叫`OnDraw`並將它傳遞螢幕裝置內容 ( [CPaintDC](../mfc/reference/cpaintdc-class.md)要特定的物件)。 因此，`OnDraw` 會輸出至螢幕。
 
 在 Windows 程式設計中，將輸出傳送至印表機與將輸出傳送至螢幕非常類似。 這是因為 Windows 繪圖裝置介面 (Graphics Device，GDI) 不受到硬體影響。 您只需使用適當的裝置內容，即可使用相同的 GDI 函式在螢幕上顯示或進行列印。 如果 `CDC` 所接收的 `OnDraw` 物件表示印表機，`OnDraw` 便會輸出到印表機。
 
@@ -30,4 +31,3 @@ ms.locfileid: "50518972"
 ## <a name="see-also"></a>另請參閱
 
 [列印](../mfc/printing.md)
-

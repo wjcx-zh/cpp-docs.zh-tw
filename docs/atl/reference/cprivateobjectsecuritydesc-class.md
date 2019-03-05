@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: 2617113f2805f8d1c56e7fa6cbebfe669709c100
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 99b47c15af4cdb87fb35d5c7342ea2719d341868
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694032"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284381"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc 類別
 
@@ -160,7 +160,7 @@ bool Create(
 *bIsDirectoryObject*<br/>
 指定新的物件是否可以包含其他物件。 如果為 true 值表示新的物件是容器。 False 值表示新的物件不是容器。
 
-*語彙基元*<br/>
+*Token*<br/>
 若要參考[CAccessToken](../../atl/reference/caccesstoken-class.md)用戶端處理序，其代表建立物件的物件。
 
 *GenericMapping*<br/>
@@ -261,7 +261,7 @@ bool Set(
 *GenericMapping*<br/>
 指標[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping)結構，指定每個物件的特定權限的一般權限的對應。
 
-*語彙基元*<br/>
+*Token*<br/>
 若要參考[CAccessToken](../../atl/reference/caccesstoken-class.md)用戶端處理序，其代表建立物件的物件。
 
 *AutoInheritFlags*<br/>

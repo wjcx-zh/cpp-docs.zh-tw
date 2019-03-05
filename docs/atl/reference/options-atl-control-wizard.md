@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-ms.openlocfilehash: e607e35b2b3970f329692ba8d2c612d7f6a6591b
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1dd136739162c72d8064deb9b1498794f1985e1b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522307"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282977"
 ---
 # <a name="options-atl-control-wizard"></a>選項, ATL 控制項精靈
 
@@ -23,9 +23,9 @@ ms.locfileid: "51522307"
 
 您想要建立的控制項種類。
 
-- **標準控制項**: ActiveX 控制項。
+- **標準控制項**:ActiveX 控制項。
 
-- **複合控制項**: ActiveX 控制項，它可以包含 （類似於對話方塊中） 其他 ActiveX 控制項或 Windows 控制項。 複合控制項包含下列項目：
+- **複合控制項**:ActiveX 控制項可以包含 （類似於對話方塊中） 的其他 ActiveX 控制項或 Windows 控制項。 複合控制項包含下列項目：
 
   - 實作複合控制項的對話方塊範本。
 
@@ -39,7 +39,7 @@ ms.locfileid: "51522307"
 
     根據預設，設定這個控制項[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)為 true，表示視窗化控制項。 它會實作接收對應。 如需詳細資訊，請參閱 < [DHTML 控制項的支援](../../atl/atl-support-for-dhtml-controls.md)。
 
-- **DHTML 控制項**: ATL DHTML 控制項指定的使用者介面，使用 HTML。 DHTML UI 類別包含 COM 對應。 根據預設，設定這個控制項[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)為 true，表示視窗化控制項。
+- **DHTML 控制項**:ATL DHTML 控制項指定的使用者介面，使用 HTML。 DHTML UI 類別包含 COM 對應。 根據預設，設定這個控制項[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)為 true，表示視窗化控制項。
 
    如需詳細資訊，請參閱 <<c0> [ 識別 DHTML 控制項專案的項目](../../atl/identifying-the-elements-of-the-dhtml-control-project.md)。
 
@@ -51,27 +51,27 @@ ms.locfileid: "51522307"
 
 新增彙總支援您所建立的控制項。 如需詳細資訊，請參閱 <<c0> [ 彙總](../../atl/aggregation.md)。
 
-- **是**： 建立可彙總的控制項。
+- **是**:建立可彙總的控制項。
 
-- **否**： 建立無法彙總的控制項。
+- **否**:建立無法彙總的控制項。
 
-- **只有**： 建立只能透過彙總具現化的控制項。
+- **只有**:建立只具現化彙總的控制項。
 
 ### <a name="threading-model"></a>執行緒模型
 
 指定控制項所使用的執行緒模型。
 
-- **單一**： 控制項只在主要 COM 執行緒中執行。
+- **單一**:控制項只在主要 COM 執行緒中執行。
 
-- **Apartment**： 可以在任何單一執行緒 apartment 中建立控制項。 預設值。
+- **Apartment**:可以在任何單一執行緒 apartment 中建立控制項。 預設值。
 
 ### <a name="interface"></a>介面
 
 這個控制項的容器所公開的介面的型別。
 
-- **雙重**： 建立公開屬性和方法，透過介面`IDispatch`和直接透過 VTBL。
+- **雙重**:建立介面，公開屬性和方法，透過`IDispatch`和直接透過 VTBL。
 
-- **自訂**： 建立公開 VTBL 透過直接方法的介面。
+- **自訂**：建立介面，公開 VTBL 透過直接的方法。
 
    如果您選取**自訂**，則您可以指定控制項是**自動化相容**。 如果您選取**自動化相容**，然後精靈會新增[oleautomation](../../windows/oleautomation.md)屬性在介面中的 IDL 和介面可以封送處理由 oleaut32.dll 中通用封送處理器。 請參閱[封送處理的詳細資料](/windows/desktop/com/marshaling-details)Windows sdk for 的詳細資訊。
 
@@ -81,11 +81,10 @@ ms.locfileid: "51522307"
 
 設定控制項的其他支援。
 
-- **連接點**： 藉由衍生自物件的類別讓您為物件的連接點[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)並讓它公開 （expose） 的來源介面。
+- **連接點**:藉由衍生自物件的類別讓您為物件的連接點[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)並讓它公開 （expose） 的來源介面。
 
-- **授權**： 將支援新增至的控制項[授權](/windows/desktop/com/licensing)。 如果用戶端電腦具有正確的授權，就只能裝載授權的控制項。
+- **授權**:將支援的控制項加入[授權](/windows/desktop/com/licensing)。 如果用戶端電腦具有正確的授權，就只能裝載授權的控制項。
 
 ## <a name="see-also"></a>另請參閱
 
 [ATL 控制項精靈](../../atl/reference/atl-control-wizard.md)
-

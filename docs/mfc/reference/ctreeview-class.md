@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CTreeView [MFC], CTreeView
 - CTreeView [MFC], GetTreeCtrl
 ms.assetid: 5df583a6-d69f-42ca-9d8d-57e04558afff
-ms.openlocfilehash: db899b58c68dabc25e571c390db0575a2d2ebb58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fec8379a3944d981672754274f50dd4e60f71b61
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496329"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288866"
 ---
 # <a name="ctreeview-class"></a>CTreeView 類別
 
@@ -39,7 +39,7 @@ class CTreeView : public CCtrlView
 
 |名稱|描述|
 |----------|-----------------|
-|[Ctreeview:: Gettreectrl](#gettreectrl)|傳回與檢視相關聯的樹狀目錄控制項。|
+|[CTreeView::GetTreeCtrl](#gettreectrl)|傳回與檢視相關聯的樹狀目錄控制項。|
 
 ## <a name="remarks"></a>備註
 
@@ -71,7 +71,7 @@ class CTreeView : public CCtrlView
 CTreeView();
 ```
 
-##  <a name="gettreectrl"></a>  Ctreeview:: Gettreectrl
+##  <a name="gettreectrl"></a>  CTreeView::GetTreeCtrl
 
 傳回與檢視相關聯的樹狀目錄控制項的參考。
 

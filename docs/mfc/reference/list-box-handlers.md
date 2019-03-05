@@ -15,12 +15,12 @@ helpviewer_keywords:
 - ON_LBN_SETFOCUS
 - ON_LBN_DBLCLK
 ms.assetid: e4e54412-2167-436a-883b-5dcad01820b8
-ms.openlocfilehash: fc126e1bd26da00608bbb7f1239999ca20eb1727
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a104e6a8b3ed40c65b704738461c083a745464b7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637654"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292589"
 ---
 # <a name="list-box-handlers"></a>清單方塊處理常式
 
@@ -28,13 +28,12 @@ ms.locfileid: "50637654"
 
 |對應項目|函式原型|
 |---------------|------------------------|
-|ON_LBN_DBLCLK (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
-|ON_LBN_ERRSPACE (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
-|ON_LBN_KILLFOCUS (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
-|ON_LBN_SELCHANGE (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
-|ON_LBN_SETFOCUS (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|
+|ON_LBN_DBLCLK( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_LBN_ERRSPACE( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_LBN_KILLFOCUS( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_LBN_SELCHANGE( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_LBN_SETFOCUS( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
 
 ## <a name="see-also"></a>另請參閱
 
 [訊息對應](../../mfc/reference/message-maps-mfc.md)
-

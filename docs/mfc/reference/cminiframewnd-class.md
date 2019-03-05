@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-ms.openlocfilehash: a6fdef34ba5873718caed509100cbe7e905d880d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 70f090e2d9830ccfdd98640b54ff07440064d542
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693519"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293260"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd 類別
 
@@ -114,7 +114,7 @@ virtual BOOL Create(
 *lpWindowName*<br/>
 指向以 null 結束的字元字串，包含視窗的名稱。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定視窗的樣式屬性。 這些可以包括標準的視窗樣式和一或多個下列特殊的樣式：
 
 - MFS_MOVEFRAME 可讓要移動的任何視窗，而不只是標題的邊緣上的 迷你框架視窗。
@@ -172,7 +172,7 @@ virtual BOOL CreateEx(
 *lpWindowName*<br/>
 指向以 null 結束的字元字串，包含視窗的名稱。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定視窗的樣式屬性。 請參閱[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)並[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)如需可能值的描述。
 
 *rect*<br/>

@@ -1,5 +1,5 @@
 ---
-title: TN031：控制列
+title: TN031:控制列
 ms.date: 11/04/2016
 f1_keywords:
 - vc.controls.bars
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 9029b8c0fb6aa20de62dbdf21aedeae6d8a15994
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07178597e66975a006a0ea5293192ee7ea099e42
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463296"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286461"
 ---
-# <a name="tn031-control-bars"></a>TN031：控制列
+# <a name="tn031-control-bars"></a>TN031:控制列
 
 > [!NOTE]
 >  下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
@@ -120,9 +120,9 @@ MFC 私人 Windows 訊息，包括 WM_SIZEPARENT，都記載於[技術提示 24]
 
 ON_UPDATE_COMMAND_UI 處理常式可以呼叫：
 
-- `Enable`： 若要啟用或停用窗格。 停用的窗格看起來與啟用的窗格完全相同，但會隱藏文字 (亦即關閉文字指標)。
+- `Enable`：若要啟用或停用窗格。 停用的窗格看起來與啟用的窗格完全相同，但會隱藏文字 (亦即關閉文字指標)。
 
-- `SetText`： 若要變更的文字。 如果使用此選項，請務必小心，因為窗格不會自動調整大小。
+- `SetText`：若要變更的文字。 如果使用此選項，請務必小心，因為窗格不會自動調整大小。
 
 如需 [建立和自訂 API 的詳細資訊，請參閱＜類別庫參考＞](../mfc/reference/cstatusbar-class.md)*中的* CStatusBar `CStatusBar` 類別。 狀態列的大部分自訂應該在初始顯示狀態列之前完成。
 
@@ -165,11 +165,11 @@ ON_UPDATE_COMMAND_UI 處理常式可以呼叫：
 
 ON_UPDATE_COMMAND_UI 處理常式可以呼叫：
 
-- `Enable`： 若要啟用或停用按鈕。 這對按鈕和核取方塊按鈕的作用相同。
+- `Enable`：若要啟用或停用按鈕。 這對按鈕和核取方塊按鈕的作用相同。
 
-- `SetCheck`：若要設定按鈕的選取狀態。 為工具列按鈕呼叫此選項會將其轉換成核取方塊按鈕。 `SetCheck` 接受參數為 0 (未選取)、1 (已選取) 或 2 (不定)
+- `SetCheck`：若要設定按鈕的核取狀態。 為工具列按鈕呼叫此選項會將其轉換成核取方塊按鈕。 `SetCheck` 接受參數為 0 (未選取)、1 (已選取) 或 2 (不定)
 
-- `SetRadio`︰ `SetCheck`的速記。
+- `SetRadio`：速記`SetCheck`。
 
 核取方塊按鈕是「自動」核取方塊按鈕；也就是說，當使用者按下按鈕時，這些按鈕會立即變更狀態。 「已選取」是向下或壓下的狀態。 沒有內建使用者介面方法可將按鈕變更為「不定」狀態，您必須透過程式碼來完成。
 
@@ -179,13 +179,13 @@ ON_UPDATE_COMMAND_UI 處理常式可以呼叫：
 
 用於顯示狀態的工具列按鈕樣式 (TBBS_ 值) 有四種︰
 
-- TBBS_CHECKED：核取方塊目前為按下 (向下)。
+- TBBS_CHECKED: （下） 目前已核取方塊。
 
-- TBBS_INDETERMINATE：核取方塊目前為不定。
+- TBBS_INDETERMINATE: 核取方塊目前為不定。
 
-- TBBS_DISABLED：按鈕目前為停用。
+- TBBS_DISABLED: 目前已停用按鈕。
 
-- TBBS_PRESSED：按鈕目前為按下。
+- TBBS_PRESSED: 目前為按下按鈕。
 
 官方《Windows 介面應用程式設計指南》的六個按鈕樣式分別以下列 TBBS 值來表示︰
 
@@ -197,7 +197,7 @@ ON_UPDATE_COMMAND_UI 處理常式可以呼叫：
 
 - 向下 = TBBS_CHECKED
 
-- 向下停用 = TBBS_CHECKED &#124; TBBS_DISABLED
+- Down Disabled = TBBS_CHECKED &#124; TBBS_DISABLED
 
 - 不定 = TBBS_INDETERMINATE
 
@@ -227,4 +227,3 @@ ON_UPDATE_COMMAND_UI 處理常式可以呼叫：
 
 [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
 [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
-

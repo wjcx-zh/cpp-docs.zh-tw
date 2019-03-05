@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CAnimationVariableIntegerChangeHandler [MFC], OnIntegerValueChanged
 - CAnimationVariableIntegerChangeHandler [MFC], SetAnimationController
 ms.assetid: 6ac8e91b-e514-4ff6-babd-33f77c4b2b61
-ms.openlocfilehash: 66d740d7042ed2e19b6fe3a87345d7abb096f12c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1c3dc080c23ba4ac05539674047a66059ce52d0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449630"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296575"
 ---
 # <a name="canimationvariableintegerchangehandler-class"></a>CAnimationVariableIntegerChangeHandler 類別
 
@@ -108,10 +108,10 @@ IFACEMETHOD(OnIntegerValueChanged) (
 
 ### <a name="parameters"></a>參數
 
-*分鏡腳本*<br/>
+*storyboard*<br/>
 分鏡腳本，以動畫顯示的變數。
 
-*變數*<br/>
+*variable*<br/>
 已更新動畫變數。
 
 *newValue*<br/>

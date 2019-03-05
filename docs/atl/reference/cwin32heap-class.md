@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWin32Heap class
 ms.assetid: 69176022-ed98-4e3b-96d8-116b0c58ac95
-ms.openlocfilehash: 8ab0d7b8a0eda44adc900884ef5337b22e621806
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35c12a58adc846e0db6d7ee23f19984acbcfa861
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508304"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297251"
 ---
 # <a name="cwin32heap-class"></a>CWin32Heap 類別
 
@@ -157,7 +157,8 @@ CWin32Heap(
 
 [!code-cpp[NVC_ATL_Utilities#92](../../atl/codesnippet/cpp/cwin32heap-class_1.cpp)]
 
-另外也可以提供現有的堆積處理代碼給建構函式，在此情況下，新物件不會接收堆積的擁有權。 `CWin32Heap` 物件刪除後，原始堆積控制代碼仍然有效。
+另外也可以提供現有的堆積處理代碼給建構函式，在此情況下，新物件不會接收堆積的擁有權。 
+  `CWin32Heap` 物件刪除後，原始堆積控制代碼仍然有效。
 
 也可以將現有的堆積附加至新物件，使用[CWin32Heap::Attach](#attach)。
 

@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: 2834de457ce9e2a71537e706f0fdf84463b16a8d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: bdc5f2ebf20949f63b3892ee8e8c6eedf05e2838
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178914"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293858"
 ---
 # <a name="cmenu-class"></a>CMenu 類別
 
@@ -157,7 +157,7 @@ class CMenu : public CObject
 |----------|-----------------|
 |[CMenu::operator HMENU](#operator_hmenu)|擷取功能表物件的控制代碼。|
 |[CMenu::operator ！ =](#operator_neq)|判斷兩個功能表物件是否不相等。|
-|[CMenu::operator = =](#operator_eq_eq)|判斷兩個功能表物件是否相等。|
+|[CMenu::operator ==](#operator_eq_eq)|判斷兩個功能表物件是否相等。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
@@ -309,7 +309,7 @@ UINT CheckMenuItem(
 *nIDCheckItem*<br/>
 指定要檢查功能表項目，由*n*。
 
-*n*<br/>
+*nCheck*<br/>
 指定如何檢查功能表項目以及如何判斷在功能表中的項目的位置。 *n*參數可以是 MF_CHECKED 或 MF_UNCHECKED 中的結合 MF_BYPOSITION 或 MF_BYCOMMAND 旗標。 使用位元的 OR 運算子，可以結合這些旗標。 它們具有下列意義：
 
 - MF_BYCOMMAND 指定此參數可讓現有的功能表項目的命令識別碼。 這是預設值。
@@ -459,7 +459,7 @@ BOOL DeleteMenu(
 
 ### <a name="parameters"></a>參數
 
-*只有*<br/>
+*nPosition*<br/>
 指定的功能表項目會被刪除，由*nFlags*。
 
 *nFlags*<br/>
@@ -929,7 +929,7 @@ BOOL InsertMenu(
 
 ### <a name="parameters"></a>參數
 
-*只有*<br/>
+*nPosition*<br/>
 指定功能表項目是插入新的功能表項目之前。 *NFlags*參數可以用來解譯*只有*如下：
 
 |nFlags|只有的解譯|
@@ -1118,7 +1118,7 @@ BOOL ModifyMenu(
 
 ### <a name="parameters"></a>參數
 
-*只有*<br/>
+*nPosition*<br/>
 指定要變更功能表項目。 *NFlags*參數可以用來解譯*只有*如下：
 
 |nFlags|只有的解譯|
@@ -1186,7 +1186,7 @@ BOOL operator!=(const CMenu& menu) const;
 
 ### <a name="parameters"></a>參數
 
-*功能表*<br/>
+*menu*<br/>
 A`CMenu`進行比較的物件。
 
 ### <a name="remarks"></a>備註
@@ -1203,7 +1203,7 @@ BOOL operator==(const CMenu& menu) const;
 
 ### <a name="parameters"></a>參數
 
-*功能表*<br/>
+*menu*<br/>
 A`CMenu`進行比較的物件。
 
 ### <a name="remarks"></a>備註
@@ -1222,7 +1222,7 @@ BOOL RemoveMenu(
 
 ### <a name="parameters"></a>參數
 
-*只有*<br/>
+*nPosition*<br/>
 指定要移除功能表項目。 *NFlags*參數可以用來解譯*只有*如下：
 
 |nFlags|只有的解譯|
@@ -1337,7 +1337,7 @@ BOOL SetMenuItemBitmaps(
 
 ### <a name="parameters"></a>參數
 
-*只有*<br/>
+*nPosition*<br/>
 指定要變更功能表項目。 *NFlags*參數可以用來解譯*只有*如下：
 
 |nFlags|只有的解譯|

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMultiLock [MFC], Lock
 - CMultiLock [MFC], Unlock
 ms.assetid: c5b7c78b-1f81-4387-b7dd-2c813c5b6b61
-ms.openlocfilehash: 27c0eb396ac1384b691f51bf7089f6820157cf8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 107ed227c5515cbf2fcb08e957a64a4a17d8287a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613417"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288656"
 ---
 # <a name="cmultilock-class"></a>CMultiLock 類別
 
@@ -57,7 +57,7 @@ class CMultiLock
 
 `CMultiLock` 物件是最有用的當執行緒必須一大堆`CEvent`它可以回應的物件。 建立陣列，包含所有`CEvent`指標，並呼叫`Lock`。 這會導致執行緒等候，直到其中一個事件收到信號。
 
-如需有關如何使用`CMultiLock`物件，請參閱文章[多執行緒： 如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
+如需有關如何使用`CMultiLock`物件，請參閱文章[多執行緒：如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -191,4 +191,3 @@ BOOL Unlock(
 ## <a name="see-also"></a>另請參閱
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

@@ -6,33 +6,33 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-ms.openlocfilehash: 3eedf24fa4b0bb527b374dbc9f538408f20de953
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34cc49fff88399a6c3cf5f7db71410c88e5c9bab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548235"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289633"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>MFC ActiveX 控制項精靈、控制項設定
 
 您可以使用精靈的這個頁面來指定您要的控制項行為的方式。 比方說，您可以將基底上標準的 Windows 控制項類型的控制項、 最佳化其行為和外觀，或表示控制項可做為其他控制項的容器。
 
-如需如何選取此頁面上將控制項的效率最大化的選項的詳細資訊，請參閱[MFC ActiveX 控制項： 最佳化](../../mfc/mfc-activex-controls-optimization.md)。
+如需如何選取此頁面上將控制項的效率最大化的選項的詳細資訊，請參閱[MFC ActiveX 控制項：最佳化](../../mfc/mfc-activex-controls-optimization.md)。
 
 ## <a name="uielement-list"></a>UIElement 清單
 
 - **建立控制項**
 
-   在這份清單中，您可以選取控制項應該繼承的控制項的種類。 清單是可供控制項類別的子集`CreateWindowEx`和其他常見的控制項於 commctrl.h 中所指定。 您的選擇會決定在控制項的樣式`PreCreateWindow`函式中*ProjName*Ctrl.cpp 檔。 如需詳細資訊，請參閱 < [MFC ActiveX 控制項： 子類別化 Windows 控制項](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md)。
+   在這份清單中，您可以選取控制項應該繼承的控制項的種類。 清單是可供控制項類別的子集`CreateWindowEx`和其他常見的控制項於 commctrl.h 中所指定。 您的選擇會決定在控制項的樣式`PreCreateWindow`函式中*ProjName*Ctrl.cpp 檔。 如需詳細資訊，請參閱[MFC ActiveX 控制項：子類別化 Windows 控制項](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md)。
 
    |控制項|描述|
    |-------------|-----------------|
    |**按鈕**|Windows 按鈕控制項|
    |**下拉式方塊**|Windows 下拉式方塊控制項|
-   |**編輯**|Windows 編輯方塊控制項|
-   |**清單方塊**|Windows 清單方塊控制項|
-   |**捲軸**|Windows 捲軸控制項|
-   |**靜態**|Windows 靜態控制項|
+   |**EDIT**|Windows 編輯方塊控制項|
+   |**LISTBOX**|Windows 清單方塊控制項|
+   |**SCROLLBAR**|Windows 捲軸控制項|
+   |**STATIC**|Windows 靜態控制項|
    |**msctls_hotkey32**|熱鍵通用控制項|
    |**msctls_progress32**|進度列，通用控制項|
    |**msctls_statusbar32**|狀態列通用控制項|
@@ -98,4 +98,3 @@ ms.locfileid: "50548235"
 [MFC ActiveX 控制項精靈](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
 [MFC ActiveX 控制項精靈、應用程式設定](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
 [MFC ActiveX 控制項精靈、控制項名稱](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
-

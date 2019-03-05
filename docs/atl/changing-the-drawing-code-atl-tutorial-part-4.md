@@ -5,12 +5,12 @@ ms.date: 09/26/2018
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
-ms.openlocfilehash: ce6492eb2e4da04b261c7a88154674d036bb578a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ea7a0ae0c0a9be87fe507e6b934bd046c9ffe4e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481415"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295860"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>變更繪圖程式碼 (ATL 教學課程，第 4 部分)
 
@@ -106,7 +106,7 @@ ms.locfileid: "50481415"
 
 ### <a name="to-use-the-activex-control-test-container"></a>若要使用 ActiveX 控制項測試容器
 
-1. 建置和啟動 ActiveX 控制項測試容器。 [TSTCON 範例： ActiveX 控制項測試容器](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole/TstCon)可以在 GitHub 上找到。
+1. 建置和啟動 ActiveX 控制項測試容器。 [TSTCON 範例：ActiveX 控制項測試容器](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole/TstCon)可以在 GitHub 上找到。
 
     > [!NOTE]
     > 錯誤涉及`ATL::CW2AEX`，在 Script.Cpp、 取代一行`TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT );`具有`TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT.m_psz );`，和行`TRACE( "Source Text: %s\n", COLE2CT( bstrSourceLineText ) );`與`TRACE( "Source Text: %s\n", bstrSourceLineText );`。<br/>

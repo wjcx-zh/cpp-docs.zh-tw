@@ -31,12 +31,12 @@ helpviewer_keywords:
 - IPropertyPage ATL implementation
 - IPropertyPageImpl class
 ms.assetid: f9b7c8b1-7a04-4eab-aa63-63efddb740fa
-ms.openlocfilehash: bf97699917732f8ce94d1541b6a93e00325b28c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3b92e3d2f72ca48238eb22404947d2eafde0378
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605808"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297329"
 ---
 # <a name="ipropertypageimpl-class"></a>IPropertyPageImpl 類別
 

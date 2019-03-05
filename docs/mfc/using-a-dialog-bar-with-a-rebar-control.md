@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rebar controls [MFC], dialog bars
 - dialog bars [MFC], using with rebar bands
 ms.assetid: e528cea0-6b81-4bdf-9643-7c03b6176590
-ms.openlocfilehash: fdef763db5085d6419f082ecd4dddca27a5b39b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33ca3d0a7bf2e60511ea0048ad91b1f0930a2894
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554361"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287171"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>搭配使用對話方塊列與 Rebar 控制項
 
@@ -45,4 +45,3 @@ ms.locfileid: "50554361"
 
 [使用 CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
 [控制項](../mfc/controls-mfc.md)
-

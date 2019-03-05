@@ -13,12 +13,12 @@ f1_keywords:
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-ms.openlocfilehash: 43be1fc3a5df52f6edcc05b501b1463bd5da7e6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7baae51480c273ca023856253af7963ac83d7c92
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481792"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284836"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Concurrency 命名空間函式 (AMP)
 
@@ -79,7 +79,7 @@ inline bool atomic_compare_exchange(
 *_Expected_value*<br/>
 要從中讀取要比較的第二個值的位置。
 
-*值*<br/>
+*value*<br/>
 要儲存至指定的記憶體位置的值`_Dest`如果`_Dest`等於`_Expected_value`。
 
 ### <a name="return-value"></a>傳回值
@@ -112,7 +112,7 @@ inline float atomic_exchange(
 *_Dest*<br/>
 目的地位置的指標。
 
-*值*<br/>
+*value*<br/>
 新值。
 
 ### <a name="return-value"></a>傳回值
@@ -140,7 +140,7 @@ inline unsigned int atomic_fetch_add(
 *_Dest*<br/>
 記憶體位置指標。
 
-*值*<br/>
+*value*<br/>
 要加入的值。
 
 ### <a name="return-value"></a>傳回值
@@ -168,7 +168,7 @@ inline unsigned int atomic_fetch_and(
 *_Dest*<br/>
 記憶體位置指標。
 
-*值*<br/>
+*value*<br/>
 要使用位元的 AND 計算中的值。
 
 ### <a name="return-value"></a>傳回值
@@ -235,7 +235,7 @@ inline unsigned int atomic_fetch_max(
 *_Dest*<br/>
 其中一個要比較的值讀取自，以及位置這兩個值的最大值是儲存。
 
-*值*<br/>
+*value*<br/>
 要在指定位置的值相比較的值。
 
 ### <a name="return-value"></a>傳回值
@@ -263,7 +263,7 @@ inline unsigned int atomic_fetch_min(
 *_Dest*<br/>
 其中一個要比較的值讀取自，以及位置這兩個值的最小值是儲存。
 
-*值*<br/>
+*value*<br/>
 要在指定位置的值相比較的值。
 
 ### <a name="return-value"></a>傳回值
@@ -291,7 +291,7 @@ inline unsigned int atomic_fetch_or(
 *_Dest*<br/>
 記憶體位置指標。
 
-*值*<br/>
+*value*<br/>
 要使用位元的 OR 計算中的值。
 
 ### <a name="return-value"></a>傳回值
@@ -319,7 +319,7 @@ inline unsigned int atomic_fetch_sub(
 *_Dest*<br/>
 目的地位置的指標。
 
-*值*<br/>
+*value*<br/>
 要減去的值。
 
 ### <a name="return-value"></a>傳回值
@@ -347,7 +347,7 @@ inline unsigned int atomic_fetch_xor(
 *_Dest*<br/>
 記憶體位置指標。
 
-*值*<br/>
+*value*<br/>
 要在 XOR 計算中使用的值。
 
 ### <a name="return-value"></a>傳回值
@@ -546,7 +546,7 @@ A`future<void>`可以等候。
 
 ##  <a name="direct3d_abort"></a>  direct3d_abort
 
-使用 `restrict(amp)` 限制子句中止函式執行。 當 AMP 執行階段偵測到呼叫時，會引發 [runtime_exception](runtime-exception-class.md) 例外狀況，並顯示錯誤訊息 "Reference Rasterizer: Shader abort instruction hit"。
+使用 `restrict(amp)` 限制子句中止函式執行。 當 AMP 執行階段偵測到呼叫時，會引發[runtime_exception](runtime-exception-class.md)例外狀況，並出現錯誤訊息"Reference Rasterizer:Shader abort instruction hit"。
 
 ```
 void direct3d_abort() restrict(amp);

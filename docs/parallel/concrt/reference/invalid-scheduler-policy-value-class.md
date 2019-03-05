@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_value class
 ms.assetid: 8c533e3f-2774-4192-8616-b2313b859bf7
-ms.openlocfilehash: 53a4ee37c28cd7d45552cfe4dd7d25ce9fa37a70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b8e233769d859aac102d0554a6987e9b7201473
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439574"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301437"
 ---
 # <a name="invalidschedulerpolicyvalue-class"></a>invalid_scheduler_policy_value 類別
 
@@ -55,7 +55,7 @@ invalid_scheduler_policy_value() throw();
 
 ### <a name="parameters"></a>參數
 
-*訊息 （_m)*<br/>
+*_Message*<br/>
 錯誤的描述性訊息。
 
 ## <a name="see-also"></a>另請參閱

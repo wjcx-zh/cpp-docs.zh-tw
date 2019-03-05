@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CD2DSolidColorBrush [MFC], m_colorSolid
 - CD2DSolidColorBrush [MFC], m_pSolidColorBrush
 ms.assetid: d4506637-acce-4f74-8a9b-f0a45571a735
-ms.openlocfilehash: fa2114df914af07dd9baa140cc96cc94eaea6a91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41d1d1b8c28335ae6207e41d696359295a83e646
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521767"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291232"
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>CD2DSolidColorBrush 類別
 
@@ -50,7 +50,7 @@ class CD2DSolidColorBrush : public CD2DBrush;
 |名稱|描述|
 |----------|-----------------|
 |[CD2DSolidColorBrush::CD2DSolidColorBrush](#cd2dsolidcolorbrush)|多載。 建構 CD2DSolidColorBrush 物件。|
-|[CD2DSolidColorBrush:: ~ CD2DSolidColorBrush](#cd2dsolidcolorbrush__~cd2dsolidcolorbrush)|解構函式。 D2D 實心筆刷物件正在被終結時呼叫。|
+|[CD2DSolidColorBrush::~CD2DSolidColorBrush](#cd2dsolidcolorbrush__~cd2dsolidcolorbrush)|解構函式。 D2D 實心筆刷物件正在被終結時呼叫。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -136,7 +136,7 @@ CD2DSolidColorBrush(
 *pParentTarget*<br/>
 到轉譯目標的指標。
 
-*色彩*<br/>
+*color*<br/>
 筆刷的色彩紅色、 綠色、 藍色和 alpha 值。
 
 *pBrushProperties*<br/>
@@ -247,7 +247,7 @@ void SetColor(D2D1_COLOR_F color);
 
 ### <a name="parameters"></a>參數
 
-*色彩*<br/>
+*color*<br/>
 此單色筆刷的色彩
 
 ## <a name="see-also"></a>另請參閱

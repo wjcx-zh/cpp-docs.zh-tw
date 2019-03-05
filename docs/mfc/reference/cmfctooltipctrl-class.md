@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCToolTipCtrl [MFC], SetLocation
 - CMFCToolTipCtrl [MFC], SetParams
 ms.assetid: 9fbfcfb1-a8ab-417f-ae29-9a9ca85ee58f
-ms.openlocfilehash: e8ab9485cb2613e88ef136b3c470af9915bf7725
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaf9d9570906b7886d8ec78575c39db5d62099f7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564862"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293195"
 ---
 # <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl 類別
 
@@ -164,7 +164,7 @@ CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
 
 ### <a name="parameters"></a>參數
 
-[in]*pParams*<br/>
+[in] *pParams*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -229,9 +229,9 @@ virtual CSize OnDrawDescription(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*bCalcOnly*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bCalcOnly*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -384,8 +384,8 @@ void SetFixedWidth(
 
 ### <a name="parameters"></a>參數
 
-[in]*nWidthRegular*<br/>
-[in]*nWidthLargeImage*<br/>
+[in] *nWidthRegular*<br/>
+[in] *nWidthLargeImage*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -397,7 +397,7 @@ void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
 
 ### <a name="parameters"></a>參數
 
-[in]*pRibbonButton*<br/>
+[in] *pRibbonButton*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -409,7 +409,7 @@ void SetLocation(CPoint pt);
 
 ### <a name="parameters"></a>參數
 
-[in]*pt*<br/>
+[in] *pt*<br/>
 
 ### <a name="remarks"></a>備註
 

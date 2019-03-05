@@ -1,5 +1,5 @@
 ---
-title: 資料物件和資料來源：管理
+title: 資料物件和資料來源：操作
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data objects [MFC], manipulating
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-ms.openlocfilehash: ee5cb320cb07a656675bd6735d6761cb69573d0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81dfe911866c4d1ba1720ee2c9854076c499f0a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636146"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286747"
 ---
-# <a name="data-objects-and-data-sources-manipulation"></a>資料物件和資料來源：管理
+# <a name="data-objects-and-data-sources-manipulation"></a>資料物件和資料來源：操作
 
 建立資料物件或資料來源之後，您可以執行上的資料，例如插入和移除資料，列舉資料所在的格式，以及其他常見作業的數量。 這篇文章描述完成最常見的作業所需的方法。 主題包括：
 
@@ -67,7 +67,7 @@ ms.locfileid: "50636146"
 
    - 呼叫資料物件的`BeginEnumFormats`成員函式來開始列舉剪貼簿上可用的格式。 然後呼叫`GetNextFormat`直到剪貼簿傳回應用程式所支援的格式，或有沒有更多的格式。
 
-如果您使用**ON_UPDATE_COMMAND_UI**，您現在可以啟用貼上和，可能的話，[編輯] 功能表上的選擇性貼上項目。 若要這樣做，請呼叫`CMenu::EnableMenuItem`或`CCmdUI::Enable`。 如需有關哪些容器應用程式應該使用功能表項目進行，請參閱 <<c0> [ 功能表和資源： 容器新增](../mfc/menus-and-resources-container-additions.md)。
+如果您使用**ON_UPDATE_COMMAND_UI**，您現在可以啟用貼上和，可能的話，[編輯] 功能表上的選擇性貼上項目。 若要這樣做，請呼叫`CMenu::EnableMenuItem`或`CCmdUI::Enable`。 如需有關哪些容器應用程式應該使用功能表項目進行，請參閱 <<c0> [ 功能表和資源：容器新增](../mfc/menus-and-resources-container-additions.md)。
 
 ##  <a name="_core_retrieving_data_from_a_data_object"></a> 從資料物件擷取資料
 

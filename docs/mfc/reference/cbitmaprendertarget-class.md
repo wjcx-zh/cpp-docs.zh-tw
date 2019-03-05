@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CBitmapRenderTarget [MFC], GetBitmapRenderTarget
 - CBitmapRenderTarget [MFC], m_pBitmapRenderTarget
 ms.assetid: c89a4437-812e-4943-acb2-b429a04cc4d2
-ms.openlocfilehash: ffead8d1f4a903fba79e4b22eefbf0a2955f56fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c110ec8f7c232180bf054e8e4ba90a18f1902c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562236"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283549"
 ---
 # <a name="cbitmaprendertarget-class"></a>CBitmapRenderTarget 類別
 
@@ -56,7 +56,7 @@ class CBitmapRenderTarget : public CRenderTarget;
 
 |名稱|描述|
 |----------|-----------------|
-|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *](#operator_id2d1bitmaprendertarget_star)|傳回 ID2D1BitmapRenderTarget 介面|
+|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget*](#operator_id2d1bitmaprendertarget_star)|傳回 ID2D1BitmapRenderTarget 介面|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
@@ -119,7 +119,7 @@ BOOL GetBitmap(CD2DBitmap& bitmap);
 
 ### <a name="parameters"></a>參數
 
-*點陣圖*<br/>
+*bitmap*<br/>
 當這個方法傳回時，包含此轉譯目標的有效點陣圖。 此點陣圖可以用於繪製作業。
 
 ### <a name="return-value"></a>傳回值
@@ -146,7 +146,7 @@ ID2D1BitmapRenderTarget 物件的指標。
 ID2D1BitmapRenderTarget* m_pBitmapRenderTarget;
 ```
 
-##  <a name="operator_id2d1bitmaprendertarget_star"></a>  CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *
+##  <a name="operator_id2d1bitmaprendertarget_star"></a>  CBitmapRenderTarget::operator ID2D1BitmapRenderTarget*
 
 傳回 ID2D1BitmapRenderTarget 介面
 

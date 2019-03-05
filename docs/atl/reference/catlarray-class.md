@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: c6a4d522a05885468a0dfec3889fb950b16b847f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca4b0f4c8ffc3382984660caec7ae04107c8797a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442675"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301843"
 ---
 # <a name="catlarray-class"></a>CAtlArray 類別
 
@@ -58,10 +58,10 @@ class CAtlArray
 |||
 |-|-|
 |[[新增]](#add)|呼叫這個方法來新增元素至陣列物件。|
-|[附加](#append)|呼叫這個方法，以加入另一個陣列的內容。|
+|[Append](#append)|呼叫這個方法，以加入另一個陣列的內容。|
 |[AssertValid](#assertvalid)|呼叫這個方法來確認陣列物件有效。|
 |[CAtlArray](#catlarray)|建構函式。|
-|[~ CAtlArray](#dtor)|解構函式。|
+|[~CAtlArray](#dtor)|解構函式。|
 |[複製](#copy)|呼叫這個方法來複製到另一個陣列的項目。|
 |[FreeExtra](#freeextra)|呼叫這個方法，以從陣列中移除任何空的項目。|
 |[GetAt](#getat)|呼叫這個方法來擷取陣列物件中的單一項目。|
@@ -80,7 +80,7 @@ class CAtlArray
 
 |||
 |-|-|
-|[運算子&#91;&#93;](#operator_at)|呼叫此運算子來傳回陣列中項目的參考。|
+|[operator &#91;&#93;](#operator_at)|呼叫此運算子來傳回陣列中項目的參考。|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -114,7 +114,7 @@ size_t Add();
 
 ### <a name="parameters"></a>參數
 
-*項目*<br/>
+*element*<br/>
 要加入至陣列的項目。
 
 ### <a name="return-value"></a>傳回值
@@ -190,7 +190,7 @@ CAtlArray() throw();
 
 [!code-cpp[NVC_ATL_Utilities#4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]
 
-##  <a name="dtor"></a>  CAtlArray:: ~ CAtlArray
+##  <a name="dtor"></a>  CAtlArray::~CAtlArray
 
 解構函式。
 
@@ -357,7 +357,7 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 *iElement*<br/>
 索引中的項目或項目會插入。
 
-*項目*<br/>
+*element*<br/>
 要插入的元素值。
 
 *nCount*<br/>
@@ -393,7 +393,7 @@ bool IsEmpty() const throw();
 
 [!code-cpp[NVC_ATL_Utilities#10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]
 
-##  <a name="operator_at"></a>  CAtlArray::operator]
+##  <a name="operator_at"></a>  CAtlArray::operator []
 
 呼叫此運算子來傳回陣列中項目的參考。
 
@@ -482,7 +482,7 @@ void SetAt(size_t iElement, INARGTYPE element);
 *iElement*<br/>
 指向要設定之陣列元素的索引。
 
-*項目*<br/>
+*element*<br/>
 指定的項目新值。
 
 ### <a name="remarks"></a>備註
@@ -536,7 +536,7 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 *iElement*<br/>
 指向要設定之陣列元素的索引。
 
-*項目*<br/>
+*element*<br/>
 指定的項目新值。
 
 ### <a name="remarks"></a>備註

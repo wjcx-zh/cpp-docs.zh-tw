@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: e9fba929017edfe547f2cc20105ea4f4bcdc9c33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ac9ad66a076202113f0c59dafae243b6951ee4c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644388"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291622"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -107,7 +107,7 @@ class CControlBar : public CWnd
 
 - [控制列](../../mfc/control-bars.md)
 
-- [技術提示 31： 控制列](../../mfc/tn031-control-bars.md)。
+- [技術提示 31:控制列](../../mfc/tn031-control-bars.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -456,7 +456,7 @@ void SetBarStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 控制列所需的樣式。 可以是下列其中一個或多個項目：
 
 - CBRS_ALIGN_TOP 可讓被停駐在框架視窗的工作區頂端控制列。

@@ -1,5 +1,5 @@
 ---
-title: 功能表和資源：功能表合併
+title: 功能表和資源：合併的功能表
 ms.date: 11/04/2016
 helpviewer_keywords:
 - status bars [MFC], OLE document applications
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: 30663afae0bfd30b42f99daf95cb8ff35979ee50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e00464e59de5e20627fd2423c101c23629d7c4d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438437"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300345"
 ---
-# <a name="menus-and-resources-menu-merging"></a>功能表和資源：功能表合併
+# <a name="menus-and-resources-menu-merging"></a>功能表和資源：合併的功能表
 
 本文詳細說明 OLE 文件的應用程式來處理視覺化編輯，並就地啟用正確的必要步驟。 在就地啟用造成容器和伺服器的挑戰 （元件） 的應用程式。 使用者會保留在同一個框架視窗 （在容器文件的內容），但實際上正在執行另一個應用程式 （伺服器）。 這需要協調的容器和伺服器應用程式的資源。
 
@@ -105,7 +105,7 @@ END
 
 伺服器應用程式應該建立新的工具列，並將其點陣圖儲存在個別的檔案。 應用程式精靈產生應用程式會將此點陣圖儲存在稱為 ITOOLBAR 的檔案。BMP。 當您的伺服器項目啟動的位置，並應該包含相同的項目，和一般工具列，但請移除圖示，它代表在 檔案 和 視窗功能表上的項目時，新的工具列取代容器應用程式的工具列。
 
-這個工具列載入您`COleIPFrameWnd`-衍生的類別，為您建立應用程式精靈。 [狀態] 列是由容器應用程式處理。 如需有關實作的就地框架視窗的詳細資訊，請參閱[伺服器： 實作伺服器](../mfc/servers-implementing-a-server.md)。
+這個工具列載入您`COleIPFrameWnd`-衍生的類別，為您建立應用程式精靈。 [狀態] 列是由容器應用程式處理。 如需有關實作的就地框架視窗的詳細資訊，請參閱[伺服器：實作伺服器](../mfc/servers-implementing-a-server.md)。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -113,4 +113,3 @@ END
 [啟動](../mfc/activation-cpp.md)<br/>
 [伺服器](../mfc/servers.md)<br/>
 [容器](../mfc/containers.md)
-

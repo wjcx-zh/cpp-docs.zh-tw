@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-ms.openlocfilehash: 5b4afabe2c12dff048bc6a6fb904a82b3cea4d01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae91921ecd5f53f4551e46e1d03cf027ce3e1f3b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539434"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292394"
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>IAxWinAmbientDispatchEx 介面
 
@@ -38,7 +38,7 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
 
 ## <a name="remarks"></a>備註
 
-在靜態連結至 ATL 和主機 ActiveX 控制項，尤其是 ActiveX 控制項有環境屬性的 ATL 應用程式中包含這個介面。 不包含這個介面會產生這個判斷提示: 「 您是否忘記將 LIBID 傳遞給 Init 」
+在靜態連結至 ATL 和主機 ActiveX 控制項，尤其是 ActiveX 控制項有環境屬性的 ATL 應用程式中包含這個介面。 不包含這個介面會產生這個判斷提示：「 您忘記將 LIBID 傳遞給 Init 」
 
 這個介面會公開由裝載物件的 ATL 的 ActiveX 控制項。 衍生自[IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)，`IAxWinAmbientDispatchEx`將可讓您增補 ATL 提供與您自己的環境屬性介面的方法。
 

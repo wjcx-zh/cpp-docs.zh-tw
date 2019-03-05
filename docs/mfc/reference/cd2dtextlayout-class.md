@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CD2DTextLayout [MFC], SetLocaleName
 - CD2DTextLayout [MFC], m_pTextLayout
 ms.assetid: 724bd13c-f2ef-4e55-a775-8cb04b7b7908
-ms.openlocfilehash: 378c96622144a4acac27785cef844f0c1d21b98b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa51b050543b6a027e354afa18b5e9c002c6bca1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630941"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283965"
 ---
 # <a name="cd2dtextlayout-class"></a>CD2DTextLayout 類別
 
@@ -52,7 +52,7 @@ class CD2DTextLayout : public CD2DResource;
 |名稱|描述|
 |----------|-----------------|
 |[CD2DTextLayout::CD2DTextLayout](#cd2dtextlayout)|建構 CD2DTextLayout 物件。|
-|[CD2DTextLayout:: ~ CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|解構函式。 D2D 文字版面配置物件正在被終結時呼叫。|
+|[CD2DTextLayout::~CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|解構函式。 D2D 文字版面配置物件正在被終結時呼叫。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -72,7 +72,7 @@ class CD2DTextLayout : public CD2DResource;
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DTextLayout::operator IDWriteTextLayout *](#operator_idwritetextlayout_star)|傳回 IDWriteTextLayout 介面|
+|[CD2DTextLayout::operator IDWriteTextLayout*](#operator_idwritetextlayout_star)|傳回 IDWriteTextLayout 介面|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
@@ -118,10 +118,10 @@ CD2DTextLayout(
 *pParentTarget*<br/>
 到轉譯目標的指標。
 
-*先把 strText*<br/>
+*strText*<br/>
 CString 物件，其中包含要建立的新 CD2DTextLayout 物件的字串。
 
-*TextFormat*<br/>
+*textFormat*<br/>
 CString 物件，其中包含要套用至字串的格式。
 
 *sizeMax*<br/>
@@ -177,7 +177,7 @@ CString GetFontFamilyName(
 *currentPosition*<br/>
 若要檢查文字的位置。
 
-*TextRange*<br/>
+*textRange*<br/>
 具有相同的文字範圍格式化為文字在 currentPosition 所指定的位置。 這表示執行結果為確切的格式為指定的位置，包括但不是限於字型家族名稱。
 
 ### <a name="return-value"></a>傳回值
@@ -199,7 +199,7 @@ CString GetLocaleName(
 *currentPosition*<br/>
 要檢查的文字位置。
 
-*TextRange*<br/>
+*textRange*<br/>
 具有相同的文字範圍格式化為文字在 currentPosition 所指定的位置。 這表示執行結果為確切的格式為指定的位置，包括但不是限於的地區設定名稱。
 
 ### <a name="return-value"></a>傳回值
@@ -226,7 +226,7 @@ IDWriteTextLayout 指標。
 IDWriteTextLayout* m_pTextLayout;
 ```
 
-##  <a name="operator_idwritetextlayout_star"></a>  CD2DTextLayout::operator IDWriteTextLayout *
+##  <a name="operator_idwritetextlayout_star"></a>  CD2DTextLayout::operator IDWriteTextLayout*
 
 傳回 IDWriteTextLayout 介面
 
@@ -265,7 +265,7 @@ BOOL SetFontFamilyName(
 *pwzFontFamilyName*<br/>
 適用於整個文字字串出現在 textRange 所指定之範圍的字型系列名稱
 
-*TextRange*<br/>
+*textRange*<br/>
 要套用這項變更的文字範圍
 
 ### <a name="return-value"></a>傳回值
@@ -287,7 +287,7 @@ BOOL SetLocaleName(
 *pwzLocaleName*<br/>
 以 null 結尾的地區設定名稱字串
 
-*TextRange*<br/>
+*textRange*<br/>
 要套用這項變更的文字範圍
 
 ### <a name="return-value"></a>傳回值

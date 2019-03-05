@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frame windows [MFC], semimodal states
 - context-sensitive Help [MFC]
 ms.assetid: 5f34eea8-2bf8-4479-95c7-45e8f443db8f
-ms.openlocfilehash: ab034f8c22f99c166f41bb47107bda83eef439b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b767ac8899217761cfcca8e24da841a694ead1c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657284"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299189"
 ---
 # <a name="orchestrating-other-window-actions"></a>協調其他視窗動作
 
@@ -23,4 +23,3 @@ ms.locfileid: "50657284"
 ## <a name="see-also"></a>另請參閱
 
 [使用框架視窗](../mfc/using-frame-windows.md)
-

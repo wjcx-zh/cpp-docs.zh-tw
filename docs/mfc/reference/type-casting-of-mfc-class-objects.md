@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-ms.openlocfilehash: 42b668287905fc5f6e05a09949d53acc51c79026
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3107b860747bc2434ae9afca39b517d8dcc9eb01
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584133"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299357"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>MFC 類別物件的類型轉換
 
@@ -72,7 +72,7 @@ STATIC_DOWNCAST(class_name, pobject)
 
 *pobject*必須是 NULL，或指向物件的類別衍生，直接或間接從*class_name*。 在您的應用程式，以定義 _DEBUG 前置處理器符號的組建中，如果，將 ASSERT 巨集*pobject*不是 NULL，或如果它指向的物件不是 「 種類 」 中指定的類別*class_name*參數 (請參閱[cobject:: Iskindof](../../mfc/reference/cobject-class.md#iskindof))。 在非 **_DEBUG**巨集的組建執行不含任何類型檢查的轉換。
 
-中指定的類別*class_name*參數必須衍生自`CObject`，而且必須使用 DECLARE_DYNAMIC 和您的類別、 DECLARE_DYNCREATE IMPLEMENT_DYNCREATE，或 DECLARE_SERIAL 和 IMPLEMENT_一文中所述的序列的巨集，也[CObject 類別： 從 CObject 衍生類別](../../mfc/deriving-a-class-from-cobject.md)。
+中指定的類別*class_name*參數必須衍生自`CObject`，而且必須使用 DECLARE_DYNAMIC 和您的類別、 DECLARE_DYNCREATE IMPLEMENT_DYNCREATE，或 DECLARE_SERIAL 和 IMPLEMENT_一文中所述的序列的巨集做為[CObject 類別：從 CObject 衍生類別](../../mfc/deriving-a-class-from-cobject.md)。
 
 例如，您可能會轉型的指標`CMyDoc`，稱為`pMyDoc`，指標`CDocument`使用下列運算式：
 

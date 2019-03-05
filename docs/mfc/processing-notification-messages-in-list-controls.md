@@ -5,12 +5,12 @@ helpviewer_keywords:
 - processing notifications [MFC]
 - CListCtrl class [MFC], processing notifications
 ms.assetid: 1f0e296e-d2a3-48fc-ae38-51d7fb096f51
-ms.openlocfilehash: 427abe5259334588b566656abd70acf22b923809
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a7899c74bfcddcdc8d54f7d9eb894553115ad66
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490086"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288063"
 ---
 # <a name="processing-notification-messages-in-list-controls"></a>處理清單控制項中的通知訊息
 
@@ -24,4 +24,3 @@ ms.locfileid: "50490086"
 
 [使用 CListCtrl](../mfc/using-clistctrl.md)<br/>
 [控制項](../mfc/controls-mfc.md)
-

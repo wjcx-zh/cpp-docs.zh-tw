@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDragListBox [MFC], Dropped
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
-ms.openlocfilehash: 739bf08139c56992af883b5cefa5c235bf08f551
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6574ffaf8c4b8c0414c00ef2f4a31f6ed74ebe9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623648"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294937"
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox 類別
 
@@ -92,7 +92,7 @@ virtual BOOL BeginDrag(CPoint pt);
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pt*<br/>
 A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，其中包含要拖曳之項目的座標。
 
 ### <a name="return-value"></a>傳回值
@@ -113,7 +113,7 @@ virtual void CancelDrag(CPoint pt);
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pt*<br/>
 A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，其中包含要拖曳之項目的座標。
 
 ### <a name="remarks"></a>備註
@@ -138,7 +138,7 @@ virtual UINT Dragging(CPoint pt);
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pt*<br/>
 A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，包含 x 和 y 螢幕座標的資料指標。
 
 ### <a name="return-value"></a>傳回值
@@ -187,7 +187,7 @@ virtual void Dropped(
 *nSrcIndex*<br/>
 指定已卸除的字串之以零為起始索引。
 
-*太平洋時間*<br/>
+*pt*<br/>
 A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，包含放置站台的座標。
 
 ### <a name="remarks"></a>備註
@@ -206,7 +206,7 @@ int ItemFromPt(
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pt*<br/>
 A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，包含在清單方塊內的點的座標。
 
 *bAutoScroll*<br/>

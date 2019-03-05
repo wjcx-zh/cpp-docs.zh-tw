@@ -232,12 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: dee5d8c57bfff99e1b558f09c8df53c73e844f3c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4fe7c84981d116d5915013cb466c3e91119f20e1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514357"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289971"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement 類別
 
@@ -265,18 +265,18 @@ class CMFCRibbonBaseElement : public CObject
 |[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|將功能區項目加入至指定的功能區命令清單方塊中。|
 |[CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar](#canbeaddedtoquickaccesstoolbar)|表示功能區項目是否可以加入至快速存取工具列。|
 |[CMFCRibbonBaseElement::CanBeCompacted](#canbecompacted)|指出是否可壓縮功能區項目的大小。|
-|[Cmfcribbonbaseelement:: Canbestretched](#canbestretched)|指出功能區項目的高度是否可以垂直增加至功能區列的高度。|
+|[CMFCRibbonBaseElement::CanBeStretched](#canbestretched)|指出功能區項目的高度是否可以垂直增加至功能區列的高度。|
 |[CMFCRibbonBaseElement::CanBeStretchedHorizontally](#canbestretchedhorizontally)|指出是否可以變更功能區項目的寬度。|
-|[Cmfcribbonbaseelement:: Cleanupsizes](#cleanupsizes)|清除的維度設定的功能區項目。|
-|[Cmfcribbonbaseelement:: Closepopupmenu](#closepopupmenu)|關閉快顯功能表功能區項目。|
+|[CMFCRibbonBaseElement::CleanUpSizes](#cleanupsizes)|清除的維度設定的功能區項目。|
+|[CMFCRibbonBaseElement::ClosePopupMenu](#closepopupmenu)|關閉快顯功能表功能區項目。|
 |[CMFCRibbonBaseElement::CopyFrom](#copyfrom)|複製指定的狀態`CMFCRibbonBaseElement`目前的物件。|
 |[CMFCRibbonBaseElement::DestroyCtrl](#destroyctrl)|終結的功能區項目。|
-|[Cmfcribbonbaseelement:: Drawimage](#drawimage)|繪製影像的功能區項目。|
+|[CMFCRibbonBaseElement::DrawImage](#drawimage)|繪製影像的功能區項目。|
 |[CMFCRibbonBaseElement::Find](#find)|如果它指向目前物件，則您可以返回功能區項目指定的指標。|
 |[CMFCRibbonBaseElement::FindByData](#findbydata)|如果它包含指定的資料，請擷取功能區項目的指標。|
 |[CMFCRibbonBaseElement::FindByID](#findbyid)|擷取功能區元素的指標，如果該元素由指定的命令識別碼。|
 |[CMFCRibbonBaseElement::FindByOriginal](#findbyoriginal)|如果其原始的功能區項目符合指定的功能區項目，請擷取功能區項目的指標。|
-|[Cmfcribbonbaseelement:: Getcompactsize](#getcompactsize)|傳回功能區項目的壓縮大小。|
+|[CMFCRibbonBaseElement::GetCompactSize](#getcompactsize)|傳回功能區項目的壓縮大小。|
 |[CMFCRibbonBaseElement::GetData](#getdata)|擷取的功能區項目相關聯的使用者定義資料。|
 |[CMFCRibbonBaseElement::GetDescription](#getdescription)|傳回功能區項目的描述。|
 |[CMFCRibbonBaseElement::GetDroppedDown](#getdroppeddown)|如果其快顯功能表拉下時，會擷取功能區項目的指標。|
@@ -284,8 +284,8 @@ class CMFCRibbonBaseElement : public CObject
 |[CMFCRibbonBaseElement::GetElementsByID](#getelementsbyid)|將目前的功能區項目加入至指定的陣列，如果目前的功能區項目包含指定的命令識別碼。|
 |[CMFCRibbonBaseElement::GetHighlighted](#gethighlighted)|如果會反白顯示，請擷取功能區項目的指標。|
 |[CMFCRibbonBaseElement::GetID](#getid)|傳回功能區項目的命令識別碼。|
-|[Cmfcribbonbaseelement:: Getimagesize](#getimagesize)|傳回功能區項目的影像大小。|
-|[Cmfcribbonbaseelement:: Getintermediatesize](#getintermediatesize)|傳回中繼狀態之功能區項目的大小。|
+|[CMFCRibbonBaseElement::GetImageSize](#getimagesize)|傳回功能區項目的影像大小。|
+|[CMFCRibbonBaseElement::GetIntermediateSize](#getintermediatesize)|傳回中繼狀態之功能區項目的大小。|
 |[CMFCRibbonBaseElement::GetKeys](#getkeys)|傳回功能區項目相關聯的 keytip。|
 |[CMFCRibbonBaseElement::GetKeyTipRect](#getkeytiprect)|擷取 keytip 的邊界矩形，功能區項目。|
 |[CMFCRibbonBaseElement::GetKeyTipSize](#getkeytipsize)|擷取 keytip 的文字大小。|
@@ -300,19 +300,19 @@ class CMFCRibbonBaseElement : public CObject
 |[CMFCRibbonBaseElement::GetPressed](#getpressed)|如果使用者目前按下它會擷取功能區項目的指標。|
 |[CMFCRibbonBaseElement::GetQuickAccessToolBarID](#getquickaccesstoolbarid)|位於快速存取工具列時，請擷取功能區項目的命令 ID。|
 |[CMFCRibbonBaseElement::GetRect](#getrect)|傳回功能區項目的週框。|
-|[Cmfcribbonbaseelement:: Getregularsize](#getregularsize)|傳回功能區項目的一般大小。|
+|[CMFCRibbonBaseElement::GetRegularSize](#getregularsize)|傳回功能區項目的一般大小。|
 |[CMFCRibbonBaseElement::GetSize](#getsize)|傳回目前的功能區項目的大小。|
 |[CMFCRibbonBaseElement::GetText](#gettext)|傳回功能區項目相關聯的文字。|
-|[Cmfcribbonbaseelement:: Gettooltiptext](#gettooltiptext)|傳回功能區項目的工具提示文字。|
+|[CMFCRibbonBaseElement::GetToolTipText](#gettooltiptext)|傳回功能區項目的工具提示文字。|
 |[CMFCRibbonBaseElement::GetTopLevelRibbonBar](#gettoplevelribbonbar)|擷取的功能區項目之上方層級的功能區列。|
-|[Cmfcribbonbaseelement:: Hascompactmode](#hascompactmode)|指定功能區項目是否有精簡模式。|
+|[CMFCRibbonBaseElement::HasCompactMode](#hascompactmode)|指定功能區項目是否有精簡模式。|
 |[CMFCRibbonBaseElement::HasFocus](#hasfocus)|指出父項目是否具有鍵盤焦點。|
-|[Cmfcribbonbaseelement:: Hasintermediatemode](#hasintermediatemode)|指定功能區項目是否有中繼模式。|
-|[Cmfcribbonbaseelement:: Haslargemode](#haslargemode)|指定功能區項目是否有大型模式。|
-|[Cmfcribbonbaseelement:: Hasmenu](#hasmenu)|指出功能區項目是否有一個功能表。|
+|[CMFCRibbonBaseElement::HasIntermediateMode](#hasintermediatemode)|指定功能區項目是否有中繼模式。|
+|[CMFCRibbonBaseElement::HasLargeMode](#haslargemode)|指定功能區項目是否有大型模式。|
+|[CMFCRibbonBaseElement::HasMenu](#hasmenu)|指出功能區項目是否有一個功能表。|
 |[CMFCRibbonBaseElement::HitTest](#hittest)|如果指定的點位於會擷取功能區項目的指標。|
 |[CMFCRibbonBaseElement::IsAlignByColumn](#isalignbycolumn)|表示功能區項目是否會垂直對齊與其他功能區項目。|
-|[Cmfcribbonbaseelement:: Isalwayslargeimage](#isalwayslargeimage)|表示功能區項目影像大小是否永遠大型。|
+|[CMFCRibbonBaseElement::IsAlwaysLargeImage](#isalwayslargeimage)|表示功能區項目影像大小是否永遠大型。|
 |[CMFCRibbonBaseElement::IsAutoRepeatMode](#isautorepeatmode)|指出功能區項目是否以自動重複模式。|
 |[CMFCRibbonBaseElement::IsChecked](#ischecked)|指定是否要檢查的功能區項目。|
 |[CMFCRibbonBaseElement::IsCompactMode](#iscompactmode)|指定功能區項目是否精簡模式。|
@@ -339,11 +339,11 @@ class CMFCRibbonBaseElement : public CObject
 |[CMFCRibbonBaseElement::OnAddToQAToolbar](#onaddtoqatoolbar)|將指定的快速存取工具列功能區項目。|
 |[CMFCRibbonBaseElement::OnAfterChangeRect](#onafterchangerect)|更新功能區項目的工具提示。|
 |[CMFCRibbonBaseElement::OnAutoRepeat](#onautorepeat)|更新功能區中的項目持續的使用者輸入的回應。|
-|[Cmfcribbonbaseelement:: Oncalctextsize](#oncalctextsize)|計算功能區項目文字的大小。|
+|[CMFCRibbonBaseElement::OnCalcTextSize](#oncalctextsize)|計算功能區項目文字的大小。|
 |[CMFCRibbonBaseElement::OnChangeMenuHighlight](#onchangemenuhighlight)|功能區項目的功能表中的反白顯示的變更時由架構呼叫。|
-|[Cmfcribbonbaseelement:: Ondraw](#ondraw)|由架構呼叫以繪製功能區項目。|
+|[CMFCRibbonBaseElement::OnDraw](#ondraw)|由架構呼叫以繪製功能區項目。|
 |[CMFCRibbonBaseElement::OnDrawKeyTip](#ondrawkeytip)|由架構呼叫以繪製功能區項目的 keytip。|
-|[Cmfcribbonbaseelement:: Ondrawmenuimage](#ondrawmenuimage)|繪製功能表圖像，功能區項目時，由架構呼叫。|
+|[CMFCRibbonBaseElement::OnDrawMenuImage](#ondrawmenuimage)|繪製功能表圖像，功能區項目時，由架構呼叫。|
 |[CMFCRibbonBaseElement::OnDrawOnList](#ondrawonlist)|由架構呼叫以繪製命令的清單方塊中的功能區項目。|
 |[CMFCRibbonBaseElement::OnKey](#onkey)|當使用者按下 keytip 和功能區項目取得焦點時，由架構呼叫。|
 |[CMFCRibbonBaseElement::OnMenuKey](#onmenukey)||
@@ -352,20 +352,20 @@ class CMFCRibbonBaseElement : public CObject
 |[CMFCRibbonBaseElement::OnShowPopupMenu](#onshowpopupmenu)|當功能區項目便會顯示快顯功能表時，由架構呼叫。|
 |[CMFCRibbonBaseElement::PostMenuCommand](#postmenucommand)||
 |[CMFCRibbonBaseElement::Redraw](#redraw)|更新的顯示功能區項目。|
-|[Cmfcribbonbaseelement:: Setaccdata](#setaccdata)|設定功能區項目的協助工具資料。|
+|[CMFCRibbonBaseElement::SetACCData](#setaccdata)|設定功能區項目的協助工具資料。|
 |[CMFCRibbonBaseElement::SetCompactMode](#setcompactmode)|設定功能區元素的顯示大小。|
 |[CMFCRibbonBaseElement::SetData](#setdata)|關聯的功能區項目中的資料項目。|
 |[CMFCRibbonBaseElement::SetDefaultMenuLook](#setdefaultmenulook)||
-|[Cmfcribbonbaseelement:: Setdescription](#setdescription)|設定功能區項目的描述。|
+|[CMFCRibbonBaseElement::SetDescription](#setdescription)|設定功能區項目的描述。|
 |[CMFCRibbonBaseElement::SetID](#setid)|設定功能區項目的命令識別碼。|
 |[CMFCRibbonBaseElement::SetInitialMode](#setinitialmode)|設定功能區項目的初始的顯示大小。|
 |[CMFCRibbonBaseElement::SetKeys](#setkeys)|設定功能區項目的 keytip。|
 |[CMFCRibbonBaseElement::SetOriginal](#setoriginal)|設定功能區項目的原始的功能區項目。|
-|[Cmfcribbonbaseelement:: Setparentcategory](#setparentcategory)|設定功能區項目的父類別。|
+|[CMFCRibbonBaseElement::SetParentCategory](#setparentcategory)|設定功能區項目的父類別。|
 |[CMFCRibbonBaseElement::SetParentMenu](#setparentmenu)|設定父功能表功能區項目的容器。|
 |[CMFCRibbonBaseElement::SetParentRibbonBar](#setparentribbonbar)|設定功能區項目之父功能區列。|
 |[CMFCRibbonBaseElement::SetRect](#setrect)|設定他顯示功能區項目的矩形維度受。|
-|[Cmfcribbonbaseelement:: Settext](#settext)|設定功能區項目的文字。|
+|[CMFCRibbonBaseElement::SetText](#settext)|設定功能區項目的文字。|
 |[CMFCRibbonBaseElement::SetTextAlwaysOnRight](#settextalwaysonright)|設定功能區項目，以在右側顯示的文字。|
 |[CMFCRibbonBaseElement::SetToolTipText](#settooltiptext)|設定功能區項目的工具提示文字。|
 |[CMFCRibbonBaseElement::SetVisible](#setvisible)|設定功能區項目的可見性狀態。|
@@ -515,7 +515,7 @@ virtual BOOL CanBeStretchedHorizontally();
 
 依預設這個方法一律會傳回 FALSE。 覆寫這個方法，以指出是否可以變更功能區項目的寬度。
 
-##  <a name="cleanupsizes"></a>  Cmfcribbonbaseelement:: Cleanupsizes
+##  <a name="cleanupsizes"></a>  CMFCRibbonBaseElement::CleanUpSizes
 
 清除的維度設定的功能區項目。
 
@@ -527,7 +527,7 @@ virtual void CleanUpSizes();
 
 依預設這個方法沒有任何作用。 覆寫此方法來重設的維度設定的功能區項目在衍生類別中。
 
-##  <a name="closepopupmenu"></a>  Cmfcribbonbaseelement:: Closepopupmenu
+##  <a name="closepopupmenu"></a>  CMFCRibbonBaseElement::ClosePopupMenu
 
 關閉快顯功能表功能區項目。
 
@@ -564,7 +564,7 @@ virtual void DestroyCtrl();
 
 依預設這個方法沒有任何作用。 要終結的功能區項目在衍生類別中，這個方法會覆寫。
 
-##  <a name="drawimage"></a>  Cmfcribbonbaseelement:: Drawimage
+##  <a name="drawimage"></a>  CMFCRibbonBaseElement::DrawImage
 
 繪製影像的功能區項目。
 
@@ -675,7 +675,7 @@ virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 
 功能區項目複製到另一個容器，保留原始的功能區項目的指標。
 
-##  <a name="getcompactsize"></a>  Cmfcribbonbaseelement:: Getcompactsize
+##  <a name="getcompactsize"></a>  CMFCRibbonBaseElement::GetCompactSize
 
 傳回功能區項目的壓縮大小。
 
@@ -795,7 +795,7 @@ UINT GetID() const;
 
 功能區項目的命令 ID。
 
-##  <a name="getimagesize"></a>  Cmfcribbonbaseelement:: Getimagesize
+##  <a name="getimagesize"></a>  CMFCRibbonBaseElement::GetImageSize
 
 傳回功能區項目的影像大小。
 
@@ -807,7 +807,7 @@ virtual CSize GetImageSize(RibbonImageType R) const;
 
 功能區項目的映像大小。
 
-##  <a name="getintermediatesize"></a>  Cmfcribbonbaseelement:: Getintermediatesize
+##  <a name="getintermediatesize"></a>  CMFCRibbonBaseElement::GetIntermediateSize
 
 傳回中繼狀態之功能區項目的大小。
 
@@ -1049,7 +1049,7 @@ CRect GetRect() const;
 
 功能區項目的週框。 矩形的位置是在功能區控制項之父代的座標。
 
-##  <a name="getregularsize"></a>  Cmfcribbonbaseelement:: Getregularsize
+##  <a name="getregularsize"></a>  CMFCRibbonBaseElement::GetRegularSize
 
 傳回功能區項目的一般大小。
 
@@ -1100,7 +1100,7 @@ LPCTSTR GetText() const;
 
 使用功能區項目相關聯的文字。
 
-##  <a name="gettooltiptext"></a>  Cmfcribbonbaseelement:: Gettooltiptext
+##  <a name="gettooltiptext"></a>  CMFCRibbonBaseElement::GetToolTipText
 
 傳回功能區項目的工具提示文字。
 
@@ -1126,7 +1126,7 @@ CMFCRibbonBar* GetTopLevelRibbonBar() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="hascompactmode"></a>  Cmfcribbonbaseelement:: Hascompactmode
+##  <a name="hascompactmode"></a>  CMFCRibbonBaseElement::HasCompactMode
 
 指定功能區項目是否有精簡模式。
 
@@ -1157,7 +1157,7 @@ virtual BOOL HasIntermediateMode() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="haslargemode"></a>  Cmfcribbonbaseelement:: Haslargemode
+##  <a name="haslargemode"></a>  CMFCRibbonBaseElement::HasLargeMode
 
 指定功能區項目是否有大型模式。
 
@@ -1199,7 +1199,7 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 [in]未使用此參數。
 
 ### <a name="return-value"></a>傳回值
@@ -1226,7 +1226,7 @@ virtual BOOL IsAlignByColumn() const;
 
 依預設此方法一律會傳回 TRUE。 覆寫此方法在衍生類別，表示衍生的功能區項目是否會垂直對齊與其他功能區項目。
 
-##  <a name="isalwayslargeimage"></a>  Cmfcribbonbaseelement:: Isalwayslargeimage
+##  <a name="isalwayslargeimage"></a>  CMFCRibbonBaseElement::IsAlwaysLargeImage
 
 表示功能區項目影像大小是否永遠大型。
 
@@ -1629,7 +1629,7 @@ virtual BOOL OnAutoRepeat();
 
 依預設這個方法一定會傳回 FALSE。 覆寫這個方法，以處理持續性的使用者輸入。
 
-##  <a name="oncalctextsize"></a>  Cmfcribbonbaseelement:: Oncalctextsize
+##  <a name="oncalctextsize"></a>  CMFCRibbonBaseElement::OnCalcTextSize
 
 計算功能區項目文字的大小。
 
@@ -1667,7 +1667,7 @@ virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
 
 依預設這個方法沒有任何作用。 覆寫這個方法，以更新功能區項目，反白顯示的變更時，它位於功能表。
 
-##  <a name="ondraw"></a>  Cmfcribbonbaseelement:: Ondraw
+##  <a name="ondraw"></a>  CMFCRibbonBaseElement::OnDraw
 
 由架構呼叫以繪製功能區項目。
 
@@ -1708,7 +1708,7 @@ virtual void OnDrawKeyTip(
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawmenuimage"></a>  Cmfcribbonbaseelement:: Ondrawmenuimage
+##  <a name="ondrawmenuimage"></a>  CMFCRibbonBaseElement::OnDrawMenuImage
 
 繪製功能表圖像，功能區項目時，由架構呼叫。
 
@@ -1751,7 +1751,7 @@ virtual void OnDrawOnList(
 *pDC*<br/>
 [in]功能區項目的裝置內容指標。
 
-*先把 strText*<br/>
+*strText*<br/>
 [in]顯示文字。
 
 *nTextOffset*<br/>
@@ -1820,7 +1820,7 @@ virtual BOOL OnProcessKey(UINT nChar);
 
 ### <a name="parameters"></a>參數
 
-*NChar*<br/>
+*nChar*<br/>
 [in]未使用此參數。
 
 ### <a name="return-value"></a>傳回值
@@ -1918,7 +1918,7 @@ virtual void Redraw();
 
 藉由呼叫這個方法重新繪製的功能區元素的顯示矩形[CWnd::RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) RDW_INVALIDATE、 RDW_ERASE 和 RDW_UPDATENOW 旗標設定。
 
-##  <a name="setaccdata"></a>  Cmfcribbonbaseelement:: Setaccdata
+##  <a name="setaccdata"></a>  CMFCRibbonBaseElement::SetACCData
 
 設定功能區項目的協助工具資料。
 
@@ -1996,7 +1996,7 @@ void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setdescription"></a>  Cmfcribbonbaseelement:: Setdescription
+##  <a name="setdescription"></a>  CMFCRibbonBaseElement::SetDescription
 
 設定功能區項目的描述。
 
@@ -2078,7 +2078,7 @@ virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 
 功能區項目複製到另一個容器，保留原始的功能區項目的指標。
 
-##  <a name="setparentcategory"></a>  Cmfcribbonbaseelement:: Setparentcategory
+##  <a name="setparentcategory"></a>  CMFCRibbonBaseElement::SetParentCategory
 
 設定功能區項目的父類別。
 
@@ -2140,7 +2140,7 @@ void SetRect(CRect rect);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="settext"></a>  Cmfcribbonbaseelement:: Settext
+##  <a name="settext"></a>  CMFCRibbonBaseElement::SetText
 
 設定文字和 keytip 的功能區項目。
 

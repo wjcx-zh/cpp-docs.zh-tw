@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
-ms.openlocfilehash: f183bb21d6a23b4e8ac4284894cfa2fcc7bb1dfd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 558c9bd78257a06e123d47a0110375e7f448f90d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538147"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290079"
 ---
 # <a name="cheapptrbase-class"></a>CHeapPtrBase 類別
 
@@ -39,7 +39,7 @@ class CHeapPtrBase
 *T*<br/>
 要儲存在堆積上的物件類型。
 
-*配置器*<br/>
+*Allocator*<br/>
 要使用的記憶體配置類別。 根據預設 CRT 常式用來配置和釋放記憶體。
 
 ## <a name="members"></a>成員

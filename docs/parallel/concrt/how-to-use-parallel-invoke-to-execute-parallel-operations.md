@@ -1,18 +1,18 @@
 ---
-title: 如何：使用 parallel_invoke 執行平行作業
+title: HOW TO：使用 parallel_invoke 執行平行作業
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parallel_invoke function, example
 - calling multiple functions in parallel [Concurrency Runtime]
 ms.assetid: a6aea69b-d647-4b7e-bf3b-e6a6a9880072
-ms.openlocfilehash: 2d4cd19a3cbb02b9c18b1733f8df6f64eb956803
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d618b5f202c6aaf454a60f4f37211d9000600562
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473680"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293520"
 ---
-# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>如何：使用 parallel_invoke 執行平行作業
+# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>HOW TO：使用 parallel_invoke 執行平行作業
 
 此範例示範如何使用[concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)演算法，以改善程式執行共用的資料來源上的多個作業的效能。 沒有作業修改的來源，因為它們可以平行執行簡單的方式。
 
@@ -68,16 +68,15 @@ The following palindromes appear in the text:
 
 此範例會以平行方式執行三項工作，因為您不應預期有三個以上處理器的電腦上調整規模的效能。 若要改善效能的更多，您可以最長執行的工作分成較小的工作，並以平行方式執行這些工作。
 
-您可以使用`parallel_invoke`演算法，而非[concurrency:: task_group](reference/task-group-class.md)並[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)類別，如果您不需要支援取消。 如需比較的使用方式的範例`parallel_invoke`演算法，與工作群組，請參閱[如何： 使用 parallel_invoke 撰寫平行排序常式](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)。
+您可以使用`parallel_invoke`演算法，而非[concurrency:: task_group](reference/task-group-class.md)並[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)類別，如果您不需要支援取消。 如需比較的使用方式的範例`parallel_invoke`演算法，與工作群組，請參閱[How to:使用 parallel_invoke 撰寫平行排序常式](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)。
 
 ## <a name="compiling-the-code"></a>編譯程式碼
 
 若要編譯程式碼，將它複製然後將它貼在 Visual Studio 專案中，或將它貼在檔案，稱為`parallel-word-mining.cpp`，然後在 Visual Studio 命令提示字元 視窗中執行下列命令。
 
-**cl.exe /EHsc /MD/DUNICODE /D_AFXDLL 平行 word mining.cpp**
+**cl.exe /EHsc /MD /DUNICODE /D_AFXDLL parallel-word-mining.cpp**
 
 ## <a name="see-also"></a>另請參閱
 
 [平行演算法](../../parallel/concrt/parallel-algorithms.md)<br/>
 [parallel_invoke 函式](reference/concurrency-namespace-functions.md#parallel_invoke)
-

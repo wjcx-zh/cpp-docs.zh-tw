@@ -1,5 +1,5 @@
 ---
-title: 如何：轉換 OpenMP parallel for 迴圈來使用並行執行階段
+title: HOW TO：轉換 OpenMP parallel for 迴圈來使用並行執行階段
 ms.date: 11/04/2016
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, parallel for loops
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - parallel for loops, converting from OpenMP to the Concurrency Runtime
 - parallel loops, converting from OpenMP to the Concurrency Runtime
 ms.assetid: d8a7b656-f86c-456e-9c5d-a7d52f94646e
-ms.openlocfilehash: 9ab80df8bfe4c06ee36e0a60db4800be68576909
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc408465f34f0558e9f426ae35b83d4610898414
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488553"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296133"
 ---
-# <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>如何：轉換 OpenMP parallel for 迴圈來使用並行執行階段
+# <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>HOW TO：轉換 OpenMP parallel for 迴圈來使用並行執行階段
 
 這個範例示範如何將基本迴圈使用 OpenMP[平行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)並[的](../../parallel/openmp/reference/for-openmp.md)來使用並行執行階段指示詞[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)演算法。
 
@@ -49,11 +49,10 @@ found 107254 prime numbers.
 
 複製範例程式碼，並將它貼在 Visual Studio 專案中，或貼入名為的檔案中`concrt-omp-count-primes.cpp`，然後在 Visual Studio 命令提示字元 視窗中執行下列命令。
 
-**cl.exe /EHsc /openmp concrt-omp-計數-primes.cpp**
+**cl.exe /EHsc /openmp concrt-omp-count-primes.cpp**
 
 ## <a name="see-also"></a>另請參閱
 
 [從 OpenMP 移轉至並行執行階段](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [平行演算法](../../parallel/concrt/parallel-algorithms.md)<br/>
 [平行容器和物件](../../parallel/concrt/parallel-containers-and-objects.md)
-

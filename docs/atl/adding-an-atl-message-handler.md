@@ -8,12 +8,12 @@ helpviewer_keywords:
 - windows [C++], ATL
 - ATL, message handlers
 ms.assetid: cdea38a1-0d9b-4f8d-bbd5-b4f063fb3eeb
-ms.openlocfilehash: 6d812c70e7cec4739ee9477d30ad9744b4fddc50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc7631ac9e02891cee725b47133a273e756759d6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565489"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302451"
 ---
 # <a name="adding-an-atl-message-handler"></a>新增 ATL 訊息處理常式
 
@@ -30,4 +30,3 @@ ms.locfileid: "50565489"
 ## <a name="see-also"></a>另請參閱
 
 [實作視窗](../atl/implementing-a-window.md)
-

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - document objects [MFC], life cycle of
 - initializing views [MFC]
 ms.assetid: 95d6f09b-a047-4079-856a-ae7d0548e9d2
-ms.openlocfilehash: 7bfc80e636a3018e52dec411f17bdf25073cf4c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59e86f4000e2da588749ca48887d34c3effdfc3a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584635"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286843"
 ---
 # <a name="initializing-and-cleaning-up-documents-and-views"></a>初始化及清除文件和檢視
 
@@ -52,4 +52,3 @@ ms.locfileid: "50584635"
 ## <a name="see-also"></a>另請參閱
 
 [文件/檢視架構](../mfc/document-view-architecture.md)
-

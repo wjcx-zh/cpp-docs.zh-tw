@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CComCoClass class
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
-ms.openlocfilehash: 51da70cc1972e6a69e28d7699703f803b6fa8701
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c52e1a95483807f9c842b0b904cd2314258f0e26
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630694"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282639"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass 類別
 
@@ -87,7 +87,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
 *punkOuter*<br/>
 [in]外部未知或彙總的控制未知。
 
-*前置處理*<br/>
+*pp*<br/>
 [out]如果建立成功接收的要求的介面指標的指標變數的位址。
 
 ### <a name="return-value"></a>傳回值

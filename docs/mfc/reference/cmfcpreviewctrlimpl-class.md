@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], m_font
 - CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
-ms.openlocfilehash: 3ec1acd1872bc0e51117602ef723116170458afd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f66ed8478023bd42e185da4f21740d1de2536140
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636731"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295743"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl 類別
 
@@ -59,7 +59,7 @@ class CMFCPreviewCtrlImpl : public CWnd;
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl](#dtor)|Destructs 預覽控制項物件。|
+|[CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl](#dtor)|Destructs 預覽控制項物件。|
 |[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|建構預覽控制項物件。|
 
 ### <a name="public-methods"></a>公用方法
@@ -136,7 +136,7 @@ virtual BOOL Create(
 *hWndParent*<br/>
 提供由 Shell for Rich Preview 主機視窗的控制代碼。
 
-*中華人民共和國*<br/>
+*prc*<br/>
 指定的初始大小和視窗的位置。
 
 *pContext*<br/>
@@ -319,7 +319,7 @@ virtual void SetRect(
 
 ### <a name="parameters"></a>參數
 
-*中華人民共和國*<br/>
+*prc*<br/>
 指定新的大小和預覽控制項的位置。
 
 *bRedraw*<br/>
@@ -329,7 +329,7 @@ virtual void SetRect(
 
 通常主控制項調整大小時，會設定新的週框矩形。
 
-## <a name="dtor"></a> CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl
+## <a name="dtor"></a> CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl
 
 Destructs 預覽控制項物件。
 
@@ -338,4 +338,3 @@ Destructs 預覽控制項物件。
 ```
 virtual ~CMFCPreviewCtrlImpl();
 ```
-

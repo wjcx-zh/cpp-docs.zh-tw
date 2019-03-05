@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 8d77175b271d144983aecd1168eb0d66eb46d6ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c973d92550469804a5389b84f53005e4f2c154f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526380"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290426"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 類別
 
@@ -72,7 +72,7 @@ class CSpinButtonCtrl : public CWnd
 |[CSpinButtonCtrl::SetBase](#setbase)|設定為使用微調按鈕控制項的基底。|
 |[CSpinButtonCtrl::SetBuddy](#setbuddy)|設定使用微調按鈕控制項的協同視窗。|
 |[CSpinButtonCtrl::SetPos](#setpos)|設定控制項的目前位置。|
-|[Cspinbuttonctrl:: Setrange](#setrange)|設定上限與下限 （範圍） 的使用微調按鈕控制項。|
+|[CSpinButtonCtrl::SetRange](#setrange)|設定上限與下限 （範圍） 的使用微調按鈕控制項。|
 
 ## <a name="remarks"></a>備註
 
@@ -116,7 +116,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定微調按鈕控制項的樣式。 套用至控制項的任何微調按鈕控制項的樣式的組合。 這些樣式所述[上下按鈕控制項的樣式](/windows/desktop/Controls/up-down-control-styles)Windows SDK 中。
 
 *rect*<br/>
@@ -156,7 +156,7 @@ virtual BOOL CreateEx(
 *dwExStyle*<br/>
 指定正在建立之控制項的延伸的樣式。 如需擴充的 windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定微調按鈕控制項的樣式。 套用至控制項的任何微調按鈕控制項的樣式的組合。 這些樣式所述[上下按鈕控制項的樣式](/windows/desktop/Controls/up-down-control-styles)Windows SDK 中。
 
 *rect*<br/>
@@ -271,10 +271,10 @@ void GetRange32(
 
 ### <a name="parameters"></a>參數
 
-*較低*<br/>
+*lower*<br/>
 接收控制項的下限為整數的參考。
 
-*上限*<br/>
+*upper*<br/>
 接收控制項的最高上限的整數的參考。
 
 ### <a name="return-value"></a>傳回值
@@ -371,7 +371,7 @@ int SetPos32(int nPos);
 
 `SetPos32` 設定 32 位元位置。
 
-##  <a name="setrange"></a>  Cspinbuttonctrl:: Setrange
+##  <a name="setrange"></a>  CSpinButtonCtrl::SetRange
 
 設定上限與下限 （範圍） 的使用微調按鈕控制項。
 

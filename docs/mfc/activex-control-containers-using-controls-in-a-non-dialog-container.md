@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], non-dialog containers
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
-ms.openlocfilehash: b31581b77743104a92236336c4db380f1693ea55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70a67a6952d5361177b89e3ba514d7036b5799b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538784"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284238"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX 控制項容器：在非對話方塊容器中使用控制項
 
@@ -24,7 +24,7 @@ ms.locfileid: "50538784"
 *lpszWindowName*<br/>
 要在控制項的 Text 或 Caption 屬性 (如果有的話) 中顯示的文字指標。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 視窗樣式。 如需完整清單，請參閱 < [cwnd:: Createcontrol](../mfc/reference/cwnd-class.md#createcontrol)。
 
 *rect*<br/>
@@ -64,4 +64,3 @@ ms.locfileid: "50538784"
 ## <a name="see-also"></a>另請參閱
 
 [ActiveX 控制項容器](../mfc/activex-control-containers.md)
-

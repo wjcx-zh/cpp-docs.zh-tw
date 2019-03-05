@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ISpecifyPropertyPages method
 - property pages, specifying
 ms.assetid: ee8678cf-c708-49ab-b0ad-fc2db31f1ac3
-ms.openlocfilehash: c78a48d369f25f5432158ee6f09ee4cda499e7c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d738759dfba50f26b788ee1b0761baf8bc4b00ab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642227"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287123"
 ---
 # <a name="specifying-property-pages"></a>指定屬性頁
 

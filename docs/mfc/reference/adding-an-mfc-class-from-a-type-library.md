@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, adding classes from type libraries
 - type libraries, adding MFC classes from
 ms.assetid: aba40476-3cfb-47af-990e-ae2e9e0d79cf
-ms.openlocfilehash: 5cd94ad6d400cf2db60131e822f430f87a129cbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8264de2c717c874da157cb29ad5e336e3ecbd0f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548014"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301580"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>從類型程式庫加入 MFC 類別
 
@@ -20,7 +20,7 @@ ms.locfileid: "50548014"
 > [!NOTE]
 >  您不需要將類別加入從類型程式庫啟用自動化以建立您的 MFC 專案。
 
-類型程式庫包含元件，其定義的方法，以及其參數和傳回型別所公開之介面的二進位的描述。 您必須針對會顯示在中註冊類型程式庫**可用的型別程式庫**Typelib 精靈加入類別中的清單。 請參閱 < 在分散式 COM:: 類型程式庫和語言整合 > MSDN library，如需詳細資訊。
+類型程式庫包含元件，其定義的方法，以及其參數和傳回型別所公開之介面的二進位的描述。 您必須針對會顯示在中註冊類型程式庫**可用的型別程式庫**Typelib 精靈加入類別中的清單。 請參閱 「 內部 Distributed COM:類型程式庫和語言整合 」 在 MSDN library，如需詳細資訊。
 
 ### <a name="to-add-an-mfc-class-from-a-type-library"></a>若要從型別程式庫新增 MFC 類別
 
@@ -37,5 +37,4 @@ ms.locfileid: "50548014"
 ## <a name="see-also"></a>另請參閱
 
 [Automation 用戶端](../../mfc/automation-clients.md)<br/>
-[Automation 用戶端：使用型別程式庫](../../mfc/automation-clients-using-type-libraries.md)
-
+[Automation 用戶端：使用類型程式庫](../../mfc/automation-clients-using-type-libraries.md)

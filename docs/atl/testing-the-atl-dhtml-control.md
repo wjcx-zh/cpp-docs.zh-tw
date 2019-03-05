@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DHTML controls
 - DHTML controls, testing
 ms.assetid: 0e4b4358-80ce-4505-8b06-ef4f30b1d1f0
-ms.openlocfilehash: e808a21fe890db6e711bc66adf02b3e71f801dba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 510b24b383f6ae0489a1c54d701c632159140c2a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522521"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289945"
 ---
 # <a name="testing-the-atl-dhtml-control"></a>測試 ATL DHTML 控制項
 
@@ -26,7 +26,7 @@ ms.locfileid: "50522521"
 
 1. 在 **測試容器**，從**編輯**功能表上，按一下 **插入新控制項**。
 
-1. 在 **插入控制項**對話方塊方塊中，從清單方塊中選取您的控制項。 請記住，其名稱根據您在 ATL 控制項精靈中指示的簡短名稱。 按一下 [確定 **Deploying Office Solutions**]。
+1. 在 **插入控制項**對話方塊方塊中，從清單方塊中選取您的控制項。 請記住，其名稱根據您在 ATL 控制項精靈中指示的簡短名稱。 按一下 [確定] 。
 
 1. 檢查控制項。 請注意，它會有捲軸。 您可以使用控制項的控點來調整啟用捲軸控制項的大小。
 

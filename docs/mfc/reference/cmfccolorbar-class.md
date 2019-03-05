@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 6e6ce3f48e2b0a7b0aa8396047eb4a52015f364d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f1f7610fc315da65145798058fdcf9752e7873d0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694838"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283250"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar 類別
 
@@ -330,10 +330,10 @@ CMFCColorBar(
 
 ### <a name="parameters"></a>參數
 
-*色彩*<br/>
+*colors*<br/>
 [in]陣列，架構會顯示色軸控制項的色彩。
 
-*色彩*<br/>
+*color*<br/>
 [in]一開始選取的色彩。
 
 *lpszAutoColor*<br/>
@@ -415,7 +415,7 @@ virtual BOOL Create(
 *pParentWnd*<br/>
 [in]父視窗的指標。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in]位元組合 (OR)[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。
 
 *nID*<br/>
@@ -494,7 +494,7 @@ static BOOL CreatePalette(
 |參數|描述|
 |---------------|-----------------|
 |*arColors*|[in]色彩的陣列。|
-|*調色盤*|[in]色的調色盤。|
+|*palette*|[in]色的調色盤。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -701,7 +701,7 @@ virtual BOOL OnKey(UINT nChar);
 
 ### <a name="parameters"></a>參數
 
-*NChar*<br/>
+*nChar*<br/>
 [in]使用者按下的按鍵虛擬按鍵碼。
 
 ### <a name="return-value"></a>傳回值
@@ -808,7 +808,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>參數
 
-*色彩*<br/>
+*color*<br/>
 [in]RGB 色彩值。
 
 ##  <a name="setcolorname"></a>  CMFCColorBar::SetColorName
@@ -823,7 +823,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>參數
 
-*色彩*<br/>
+*color*<br/>
 [in]色彩的 RGB 值。
 
 *strName*<br/>

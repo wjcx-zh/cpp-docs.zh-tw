@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 5bb6a1d379ed754ed96637dfe5b3e4da983edb9f
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 37fe5486d6d41ad182779a3a15b0aca3af51d04b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175583"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288437"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC 網際網路程式設計基本概念
 
@@ -81,4 +81,3 @@ MFC 提供支援網際網路程式設計的類別。 您可以使用[COleControl
 Windows SDK 的 OLE 部分包含 OLE 程式設計的其他資訊。 這項資訊提供有關使用 Win32 WinInet 函式，直接管理，而不是透過 MFC 類別的詳細資料。 它也包含網際網路技術的概觀資訊。
 
 ## <a name="see-also"></a>另請參閱
-

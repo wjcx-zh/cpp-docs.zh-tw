@@ -16,12 +16,12 @@ helpviewer_keywords:
 - scheduler policies [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], wait function
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
-ms.openlocfilehash: 91ef4ed14fa1ddc25ff494f6666a50f5b39b8a54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5d37d320344d2ebf83be2c939f5a7372d4af306
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676703"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286805"
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>工作排程器 (並行執行階段)
 
@@ -57,4 +57,3 @@ ms.locfileid: "50676703"
 |[平行模式程式庫 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|描述如何在您的應用程式中使用不同的平行模式，例如平行演算法。|
 |[非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)|描述如何在您的應用程式中使用非同步代理程式。|
 |[並行執行階段](../../parallel/concrt/concurrency-runtime.md)|說明並行執行階段，它可簡化平行程式設計，並包含相關主題的連結。|
-

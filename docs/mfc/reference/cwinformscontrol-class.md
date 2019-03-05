@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: e8728c876badcf6648740cc842a1f289789bf0f4
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 91691203f88f07f597aaad6a5db32b03e7ad11c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178235"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289308"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl 類別
 
@@ -110,7 +110,7 @@ inline BOOL CreateManagedControl(
 *pType*<br/>
 要建立之控制項的資料型別。 必須是[型別](https://msdn.microsoft.com/library/system.type)資料型別。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 要套用至控制項的視窗樣式。 指定的組合[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 目前支援下列樣式：WS_TABSTOP、 WS_VISIBLE、 WS_DISABLED 和 WS_GROUP。
 
 *rect*<br/>
@@ -190,7 +190,7 @@ inline HWND GetControlHandle() const;
 
 `GetControlHandle` 是 helper 方法會傳回儲存在.NET Framework 控制項屬性的視窗控制代碼。 視窗控制代碼值複製到[CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd)的呼叫期間[CWnd::Attach](../../mfc/reference/cwnd-class.md#attach)。
 
-##  <a name="operator_-_gt"></a>  CWinFormsControl::operator-&gt;
+##  <a name="operator_-_gt"></a>  CWinFormsControl::operator -&gt;
 
 會取代[CWinFormsControl::GetControl](#getcontrol)運算式中。
 
@@ -204,7 +204,7 @@ inline TManagedControl^  operator->() const;
 
 如需有關 Windows Form 的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
-##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl ^
+##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl^
 
 將類型轉換至 Windows Form 控制項的指標。
 

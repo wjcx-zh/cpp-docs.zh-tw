@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-ms.openlocfilehash: 535bd1a3129bab15f546f6a82d77cf4e152fc605
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24d81506f1518f980576899a4a104bbfdc0a1438
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452750"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296341"
 ---
 # <a name="atl-copy-policy-classes"></a>ATL 複製原則類別
 
@@ -82,4 +82,3 @@ VCUE_Copy.h 也包含此類別的下列特製化： `GenericCopy<BSTR>`， `Gene
 
 [實作 C++ 標準程式庫架構集合](../atl/implementing-an-stl-based-collection.md)<br/>
 [ATLCollections 範例](../visual-cpp-samples.md)
-

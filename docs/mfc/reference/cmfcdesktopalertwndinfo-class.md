@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndInfo [MFC], m_strText
 - CMFCDesktopAlertWndInfo [MFC], m_strURL
 ms.assetid: 5c9bb84e-6c96-4748-8e74-6951b6ae8e84
-ms.openlocfilehash: d815abbd48e1744900853fcf81dc05b6af62788c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c40424a1aba81a7048ba89781fe6c4324f86ccd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509059"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301632"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>CMFCDesktopAlertWndInfo 類別
 
@@ -43,7 +43,7 @@ class CMFCDesktopAlertWndInfo
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCDesktopAlertWndInfo::operator =](#operator_eq)||
+|[CMFCDesktopAlertWndInfo::operator=](#operator_eq)||
 
 ### <a name="data-members"></a>資料成員
 
@@ -80,7 +80,7 @@ class CMFCDesktopAlertWndInfo
 
 **標頭：** afxDesktopAlertDialog.h
 
-##  <a name="operator_eq"></a>  CMFCDesktopAlertWndInfo::operator =
+##  <a name="operator_eq"></a>  CMFCDesktopAlertWndInfo::operator=
 
 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
 
@@ -90,7 +90,7 @@ CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
 
 ### <a name="parameters"></a>參數
 
-[in]*src*<br/>
+[in] *src*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -145,5 +145,5 @@ CString m_strURL;
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [類別](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCDesktopAlertWnd 類別](../../mfc/reference/cmfcdesktopalertwnd-class.md)<br/>
-[Cmfcdesktopalertwnd:: Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)<br/>
+[CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)<br/>
 [CMFCDesktopAlertDialog 類別](../../mfc/reference/cmfcdesktopalertdialog-class.md)

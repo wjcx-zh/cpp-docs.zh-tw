@@ -7,12 +7,12 @@ helpviewer_keywords:
 - database applications [MFC], creating
 - MFC, database applications
 ms.assetid: 9371da59-8536-43cd-8314-706ad320e2ec
-ms.openlocfilehash: 0f512408b54d6aa9cc5c2b44dbd359e31e8bc57f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efd6b12b186ce0ef1c0caf57f313f6aa50425fec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624896"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283666"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>建立資料庫應用程式的作業順序
 
@@ -31,7 +31,7 @@ ms.locfileid: "50624896"
 |視需要建立額外的資料錄檢視和資料錄集類別。|您可以使用 類別檢視來建立類別和對話方塊編輯器設計檢視。|類別檢視 中建立額外的檔案，為您的新類別。|
 |視您的程式碼，請建立資料錄集物件。 您可以使用每個資料錄集來操作記錄...|資料錄集根據衍生自類別[CRecordset](../mfc/reference/crecordset-class.md)精靈。|ODBC 會使用資料錄欄位交換 (RFX)，資料庫和資料錄集的欄位資料成員之間交換資料。 如果您使用資料錄檢視時，對話方塊資料交換 (DDX) 之間交換資料的資料錄集和資料錄檢視上的控制項。|
 |...或建立明確[CDatabase](../mfc/reference/cdatabase-class.md)在您的程式碼，為您想要開啟每個資料庫中。|資料錄集物件為基礎的資料庫物件。|資料庫物件提供資料來源的介面。|
-|將繫結資料行資料錄集動態。|在 ODBC 中，加入您的衍生的資料錄集類別，來管理繫結中的程式碼。 請參閱文章[資料錄集： 動態地繫結資料行 (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。||
+|將繫結資料行資料錄集動態。|在 ODBC 中，加入您的衍生的資料錄集類別，來管理繫結中的程式碼。 請參閱文章[資料錄集：動態繫結資料行 (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。||
 
 ## <a name="see-also"></a>另請參閱
 

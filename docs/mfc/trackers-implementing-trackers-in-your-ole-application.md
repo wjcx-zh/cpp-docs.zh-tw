@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE containers [MFC], trackers
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: 5103a517-65bd-441a-8a53-02915ff3ef08
-ms.openlocfilehash: 19ffa94b7be4b96c57317f63d9cfd9242bff061f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f42ba8f8aa987225c6b545b60e92f00a4f7e3071
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613092"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287969"
 ---
 # <a name="trackers-implementing-trackers-in-your-ole-application"></a>追蹤器：在 OLE 應用程式中實作追蹤器
 
@@ -29,4 +29,3 @@ ms.locfileid: "50613092"
 ## <a name="see-also"></a>另請參閱
 
 [追蹤器](../mfc/trackers.md)
-

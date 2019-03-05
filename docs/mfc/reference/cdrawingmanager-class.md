@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: c7295d8003b364b36a84fcb5b2c5921ae9899b51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a729c8d32c851c4401a0af7dd7323912a476530f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465984"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293442"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager 類別
 
@@ -91,7 +91,7 @@ class CDrawingManager : public CObject
 |[CDrawingManager::DrawRotated](#drawrotated)|旋轉的來源 DC + /-90 度，將所指定之矩形內部的內容|
 |[CDrawingManager::DrawEllipse](#drawellipse)|繪製橢圓形使用提供的填滿和框線色彩。|
 |[CDrawingManager::DrawGradientRing](#drawgradientring)|繪製通道和其填滿漸層色彩。|
-|[CDrawingManager::DrawLine CDrawingManager::DrawLineA](#drawline_cdrawingmanager__drawlinea)|繪製一條線。|
+|[CDrawingManager::DrawLine, CDrawingManager::DrawLineA](#drawline_cdrawingmanager__drawlinea)|繪製一條線。|
 |[CDrawingManager::DrawRect](#drawrect)|繪製矩形與所提供的填滿和框線色彩。|
 |[CDrawingManager::DrawShadow](#drawshadow)|繪製一個陰影的矩形區域。|
 |[CDrawingManager::Fill4ColorsGradient](#fill4colorsgradient)|會使用兩個色彩漸層，填滿的矩形區域。|
@@ -159,7 +159,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 |參數|描述|
 |*size*|[in]A [CSize](../../atl-mfc-shared/reference/csize-class.md)參數，表示點陣圖的大小。|
 |*pBits*|[out]指向資料指標所收到的 DIB 位置的位元值。|
-|*點陣圖*|原始點陣圖控制代碼|
+|*bitmap*|原始點陣圖控制代碼|
 |*clrTransparent*|指定的原始點陣圖的透明色彩的 RGB 值。|
 
 ### <a name="return-value"></a>傳回值
@@ -272,7 +272,7 @@ BOOL DrawGradientRing(
 
 所定義的矩形*rect*必須至少 5 個像素寬和 5 個像素高。
 
-##  <a name="drawline_cdrawingmanager__drawlinea"></a>  CDrawingManager::DrawLine CDrawingManager::DrawLineA
+##  <a name="drawline_cdrawingmanager__drawlinea"></a>  CDrawingManager::DrawLine, CDrawingManager::DrawLineA
 
 繪製一條線。
 
@@ -699,10 +699,10 @@ static BYTE __stdcall HueToRGB(
 
 ### <a name="parameters"></a>參數
 
-*M1*<br/>
+*m1*<br/>
 [in]請參閱 < 備註 >。
 
-*M2*<br/>
+*m2*<br/>
 [in]請參閱 < 備註 >。
 
 *h*<br/>
@@ -781,7 +781,7 @@ static COLORREF __stdcall PixelAlpha(
 *srcPixel*<br/>
 [in]像素的初始色彩。
 
-*百分比*<br/>
+*percent*<br/>
 [in]表示數字介於 0 到 100 之間的透明度百分比。 值為 100 表示的初始色彩是完全透明的。
 
 *percentR*<br/>
@@ -930,7 +930,7 @@ static void __stdcall SetAlphaPixel(
 *y*<br/>
 [in]像素色彩的垂直座標。
 
-*百分比*<br/>
+*percent*<br/>
 [in]透明度百分比。
 
 *iShadowSize*<br/>
@@ -972,7 +972,7 @@ static void __stdcall SetPixel(
 |*cy*|[in]點陣圖的高度總計。|
 |*x*|[in]若要變更點陣圖與像素 x 座標。|
 |*y*|[in]若要變更點陣圖與像素的 y 座標。|
-|*色彩*|[in]新提供的座標所識別的像素色彩。|
+|*color*|[in]新提供的座標所識別的像素色彩。|
 
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors
 
@@ -993,9 +993,9 @@ static COLORREF __stdcall SmartMixColors(
 |-|-|
 |參數|描述|
 |*color1*|[in]混合的第一個色彩。|
-|*色 2*|[in]混用第二個色彩。|
+|*color2*|[in]混用第二個色彩。|
 |*dblLumRatio*|[in]新的色彩亮度的比例。 `SmartMixColors` 乘以此比率的混合色彩的亮度然後再判斷完稿色彩。|
-|*版 k1 的 powerapps*|[in]第一個色彩加權的比例。|
+|*k1*|[in]第一個色彩加權的比例。|
 |*k2*|[in]第二個色彩的加權的比例。|
 
 ### <a name="return-value"></a>傳回值

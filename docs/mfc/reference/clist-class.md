@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CList [MFC], RemoveTail
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
-ms.openlocfilehash: 10991745fb5ccdac145f4b1d589e7d59c6ed6f4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 722c38de100f2f1ff00e6589573a76bcdd9f3e84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513954"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297381"
 ---
 # <a name="clist-class"></a>CList 類別
 
@@ -107,7 +107,7 @@ class CList : public CObject
 *型別*<br/>
 儲存在清單中的物件型別。
 
-*ARG_TYPE 這個*<br/>
+*ARG_TYPE*<br/>
 用來參考儲存在清單中的物件類型。 可以是參考。
 
 ## <a name="remarks"></a>備註
@@ -149,7 +149,7 @@ void AddHead(CList* pNewList);
 
 ### <a name="parameters"></a>參數
 
-*ARG_TYPE 這個*<br/>
+*ARG_TYPE*<br/>
 指定清單項目 (可以是參考) 之類型的樣板參數。
 
 *newElement*<br/>
@@ -181,7 +181,7 @@ void AddTail(CList* pNewList);
 
 ### <a name="parameters"></a>參數
 
-*ARG_TYPE 這個*<br/>
+*ARG_TYPE*<br/>
 指定清單項目 (可以是參考) 之類型的樣板參數。
 
 *newElement*<br/>
@@ -235,7 +235,7 @@ POSITION Find(
 
 ### <a name="parameters"></a>參數
 
-*ARG_TYPE 這個*<br/>
+*ARG_TYPE*<br/>
 指定清單項目 (可以是參考) 之類型的樣板參數。
 
 *searchValue*<br/>
@@ -291,7 +291,7 @@ const TYPE& GetAt(POSITION position) const;
 *型別*<br/>
 樣板參數清單中指定的物件類型。
 
-*位置*<br/>
+*position*<br/>
 要取得的項目清單中的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -515,10 +515,10 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>參數
 
-*位置*<br/>
+*position*<br/>
 傳回先前的位置值`GetNext`， `GetPrev`，或`Find`成員函式呼叫。
 
-*ARG_TYPE 這個*<br/>
+*ARG_TYPE*<br/>
 指定的清單項目類型的樣板參數。
 
 *newElement*<br/>
@@ -542,10 +542,10 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>參數
 
-*位置*<br/>
+*position*<br/>
 傳回先前的位置值`GetNext`， `GetPrev`，或`Find`成員函式呼叫。
 
-*ARG_TYPE 這個*<br/>
+*ARG_TYPE*<br/>
 指定清單項目 (可以是參考) 之類型的樣板參數。
 
 *newElement*<br/>
@@ -605,7 +605,7 @@ void RemoveAt(POSITION position);
 
 ### <a name="parameters"></a>參數
 
-*位置*<br/>
+*position*<br/>
 要從清單中移除之項目的位置。
 
 ### <a name="remarks"></a>備註
@@ -679,7 +679,7 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
 *pos*<br/>
 要設定之項目的位置。
 
-*ARG_TYPE 這個*<br/>
+*ARG_TYPE*<br/>
 指定清單項目 (可以是參考) 之類型的樣板參數。
 
 *newElement*<br/>

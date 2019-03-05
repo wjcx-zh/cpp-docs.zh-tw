@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-ms.openlocfilehash: f4294bbbf9563b55f2047f297eac1a33ca55141f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 127245385ebd89e51a1cc77d1efaa16729d73fe7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502891"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300114"
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget 類別
 
@@ -115,9 +115,9 @@ virtual DROPEFFECT OnDragEnter(
 加入資料物件，其中包含可以卸除的資料點。
 
 *dwKeyState*<br/>
-包含的輔助按鍵的狀態。 這是任意數目的下列組合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
+包含的輔助按鍵的狀態。 這是任意數目的下列組合：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
 
-*點*<br/>
+*point*<br/>
 包含工作區座標中的資料指標的目前的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -180,9 +180,9 @@ virtual DROPEFFECT OnDragOver(
 指向包含要卸除之資料的資料物件。
 
 *dwKeyState*<br/>
-包含的輔助按鍵的狀態。 這是任意數目的下列組合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
+包含的輔助按鍵的狀態。 這是任意數目的下列組合：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
 
-*點*<br/>
+*point*<br/>
 包含工作區座標中的資料指標的目前的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -226,9 +226,9 @@ virtual DROPEFFECT OnDragScroll(
 游標位於目前視窗的點。
 
 *dwKeyState*<br/>
-包含的輔助按鍵的狀態。 這是任意數目的下列組合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
+包含的輔助按鍵的狀態。 這是任意數目的下列組合：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
 
-*點*<br/>
+*point*<br/>
 包含的資料指標，像素為單位，相對於畫面的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -278,7 +278,7 @@ virtual BOOL OnDrop(
 
 - 會建立已卸除的資料從原始資料的 DROPEFFECT_LINK 的連結。
 
-*點*<br/>
+*point*<br/>
 包含的資料指標，像素為單位，相對於畫面的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -317,10 +317,10 @@ virtual DROPEFFECT OnDropEx(
 *dropDefault*<br/>
 使用者選擇針對根據目前的索引鍵狀態預設拖放作業效果。 它可以是 DROPEFFECT_NONE。 置放效果是 < 備註 > 一節所述。
 
-*下拉清單*<br/>
+*dropList*<br/>
 拖曳來源所支援的拖放效果的清單。 可以使用的位元 OR 組合置放效果值 (**&#124;**) 作業。 置放效果是 < 備註 > 一節所述。
 
-*點*<br/>
+*point*<br/>
 包含的資料指標，像素為單位，相對於畫面的位置。
 
 ### <a name="return-value"></a>傳回值

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - forms-based applications [MFC]
 - forms [MFC], adding to applications
 ms.assetid: efbe73c1-4ca4-4613-aac2-30d916e92c0e
-ms.openlocfilehash: d5bb61aaad767b1322c12f57ec16ae59cb75148c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: f93f65e949c18ddb1ad5dba859ba8c4832abac8f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331538"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289269"
 ---
 # <a name="form-views-mfc"></a>表單檢視 (MFC)
 
@@ -32,13 +32,13 @@ ms.locfileid: "51331538"
 
    如果您選擇現有的對話方塊資源，您可能需要使用 [屬性] 頁面對話方塊來設定這些樣式。 必須包含 [樣式] 對話方塊中：
 
-     **WS_CHILD**= On
+     **WS_CHILD**=On
 
-     **WS_BORDER**= 關閉
+     **WS_BORDER**=Off
 
-     **WS_VISIBLE**= 關閉
+     **WS_VISIBLE**=Off
 
-     **WS_CAPTION**= 關閉
+     **WS_CAPTION**=Off
 
 文件/檢視架構，為基礎的應用程式**新型**命令 （以滑鼠右鍵按一下 類別檢視） 也：
 

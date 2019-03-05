@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CNonStatelessWorker class
 ms.assetid: d00936c6-9e7d-49fb-b87d-417b963367d1
-ms.openlocfilehash: 7aaae3728113cfd91c0655d2eac445cdd4b34246
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: abfd3e585c843fcc4ed4ad273c8ed217eaaccb7d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619618"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283146"
 ---
 # <a name="cnonstatelessworker-class"></a>CNonStatelessWorker 類別
 
@@ -34,7 +34,7 @@ class CNonStatelessWorker
 
 #### <a name="parameters"></a>參數
 
-*背景工作角色*<br/>
+*Worker*<br/>
 若要符合的背景工作執行緒類別[背景工作原型](../../atl/reference/worker-archetype.md)適當的處理要求排入佇列[CThreadPool](../../atl/reference/cthreadpool-class.md)。
 
 ## <a name="members"></a>成員

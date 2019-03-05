@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-ms.openlocfilehash: 4fca5a2ffef7e8da4f6dd79fcd99c72e92cfdf6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21c4f4544a6ccf2342580bc5859739fc1f50d0c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538433"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296016"
 ---
 # <a name="icommandsource-interface"></a>ICommandSource 介面
 
@@ -55,7 +55,7 @@ interface class ICommandSource
 
 當您裝載在 MFC 檢視中，使用者控制項時[CWinFormsView 類別](../../mfc/reference/cwinformsview-class.md)路由命令和更新命令 UI 訊息至使用者控制項讓它處理 MFC 命令 （例如，框架功能表項目和工具列按鈕）。 藉由實作[ICommandTarget 介面](../../mfc/reference/icommandtarget-interface.md)，讓使用者控制項的參考`ICommandSource`物件。
 
-請參閱[如何： 新增命令傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用的範例`ICommandTarget`。
+請參閱[如何：將命令路由新增至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用的範例`ICommandTarget`。
 
 如需有關如何使用 Windows Form 的詳細資訊，請參閱 <<c0> [ 在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
@@ -82,7 +82,7 @@ void AddCommandHandler(
 ### <a name="remarks"></a>備註
 
 這個方法會將命令來源物件的命令處理常式 cmdHandler，並將處理常式對應至 cmdID。
-請參閱[如何： 新增命令傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用 AddCommandHandler 的範例。
+請參閱[如何：將命令路由新增至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用 AddCommandHandler 的範例。
 
 ## <a name="addcommandrangehandler"></a> ICommandSource::AddCommandRangeHandler
 

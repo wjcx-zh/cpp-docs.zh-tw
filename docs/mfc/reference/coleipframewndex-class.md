@@ -94,12 +94,12 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: c30ced2f19602dca17badeec6e1b27ad1e90bf5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ebf63e6cf31f3852434926c3559774e7b4b46d3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612728"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285343"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx 類別
 
@@ -210,8 +210,8 @@ BOOL AddPane(
 
 ### <a name="parameters"></a>參數
 
-[in]*pControlBar*<br/>
-[in]*bTail*<br/>
+[in] *pControlBar*<br/>
+[in] *bTail*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -225,7 +225,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 
 ### <a name="parameters"></a>參數
 
-[in]*hdwp*<br/>
+[in] *hdwp*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -240,9 +240,9 @@ void DockPane(
 
 ### <a name="parameters"></a>參數
 
-[in]*pBar*<br/>
-[in]*nDockBarID*<br/>
-[in]*lpRect*<br/>
+[in] *pBar*<br/>
+[in] *nDockBarID*<br/>
+[in] *lpRect*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -280,7 +280,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>參數
 
-[in]*dwDockStyle*<br/>
+[in] *dwDockStyle*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -294,7 +294,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>參數
 
-[in]*dwDockStyle*<br/>
+[in] *dwDockStyle*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -314,12 +314,12 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>參數
 
-[in]*bEnable*<br/>
-[in]*uiCustomizeCmd*<br/>
-[in]*strCustomizeLabel*<br/>
-[in]*uiViewToolbarsMenuEntryID*<br/>
-[in]*bContextMenuShowsToolbarsOnly*<br/>
-[in]*bViewMenuShowsToolbarsOnly*<br/>
+[in] *bEnable*<br/>
+[in] *uiCustomizeCmd*<br/>
+[in] *strCustomizeLabel*<br/>
+[in] *uiViewToolbarsMenuEntryID*<br/>
+[in] *bContextMenuShowsToolbarsOnly*<br/>
+[in] *bViewMenuShowsToolbarsOnly*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -419,7 +419,7 @@ CBasePane* GetPane(UINT nID);
 
 ### <a name="parameters"></a>參數
 
-[in]*nID*<br/>
+[in] *nID*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -504,9 +504,9 @@ BOOL InsertPane(
 
 ### <a name="parameters"></a>參數
 
-[in]*pControlBar*<br/>
-[in]*pTarget*<br/>
-[in]*bAfter*<br/>
+[in] *pControlBar*<br/>
+[in] *pTarget*<br/>
+[in] *bAfter*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -539,9 +539,9 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>參數
 
-[in]*點*<br/>
-[in]*dwBarAlignment*<br/>
-[in]*bOuterEdge*<br/>
+[in] *point*<br/>
+[in] *dwBarAlignment*<br/>
+[in] *bOuterEdge*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -559,10 +559,10 @@ virtual BOOL LoadFrame(
 
 ### <a name="parameters"></a>參數
 
-[in]*nIDResource*<br/>
-[in]*dwDefaultStyle*<br/>
-[in]*pParentWnd*<br/>
-[in]*pContext*<br/>
+[in] *nIDResource*<br/>
+[in] *dwDefaultStyle*<br/>
+[in] *pParentWnd*<br/>
+[in] *pContext*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -576,7 +576,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane*);
 
 ### <a name="parameters"></a>參數
 
-[in]*CDockablePane&#42;*<br/>
+[in] *CDockablePane&#42;*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -590,7 +590,7 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 
 ### <a name="parameters"></a>參數
 
-[in]*CPaneFrameWnd&#42;*<br/>
+[in] *CPaneFrameWnd&#42;*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -625,10 +625,10 @@ virtual BOOL OnCmdMsg(
 
 ### <a name="parameters"></a>參數
 
-[in]*nID*<br/>
-[in]*則 nCode*<br/>
-[in]*pExtra*<br/>
-[in]*pHandlerInfo*<br/>
+[in] *nID*<br/>
+[in] *nCode*<br/>
+[in] *pExtra*<br/>
+[in] *pHandlerInfo*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -722,7 +722,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 
 ### <a name="parameters"></a>參數
 
-[in]*pFrame*<br/>
+[in] *pFrame*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -738,8 +738,8 @@ virtual void OnSetPreviewMode(
 
 ### <a name="parameters"></a>參數
 
-[in]*bPreview*<br/>
-[in]*pState*<br/>
+[in] *bPreview*<br/>
+[in] *pState*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -753,8 +753,8 @@ virtual BOOL OnShowCustomizePane(
 
 ### <a name="parameters"></a>參數
 
-[in]*pMenuPane*<br/>
-[in]*uiToolbarID*<br/>
+[in] *pMenuPane*<br/>
+[in] *uiToolbarID*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -768,7 +768,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
 
 ### <a name="parameters"></a>參數
 
-[in]*bShow*<br/>
+[in] *bShow*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -839,11 +839,11 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>參數
 
-[in]*點*<br/>
-[in]*nSensitivity*<br/>
-[in]*bExactBar*<br/>
-[in]*pRTCBarType*<br/>
-[in]*dwAlignment*<br/>
+[in] *point*<br/>
+[in] *nSensitivity*<br/>
+[in] *bExactBar*<br/>
+[in] *pRTCBarType*<br/>
+[in] *dwAlignment*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -857,7 +857,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>參數
 
-[in]*pMsg*<br/>
+[in] *pMsg*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -871,7 +871,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bNotify*<br/>
+[in] *bNotify*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -888,11 +888,11 @@ void RemovePaneFromDockManager(
 
 ### <a name="parameters"></a>參數
 
-[in]*pControlBar*<br/>
-[in]*bDestroy*<br/>
-[in]*bAdjustLayout*<br/>
-[in]*bAutoHide*<br/>
-[in]*pBarReplacement*<br/>
+[in] *pControlBar*<br/>
+[in] *bDestroy*<br/>
+[in] *bAdjustLayout*<br/>
+[in] *bAutoHide*<br/>
+[in] *pBarReplacement*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -926,7 +926,7 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>參數
 
-*功能表*<br/>
+*menu*<br/>
 [in]參考[CMenu](../../mfc/reference/cmenu-class.md)要修改的物件。
 
 *uiViewUserToolbarCmdFirst*<br/>
@@ -949,10 +949,10 @@ void ShowPane(
 
 ### <a name="parameters"></a>參數
 
-[in]*pBar*<br/>
-[in]*bShow*<br/>
-[in]*bDelay*<br/>
-[in]*bActivate*<br/>
+[in] *pBar*<br/>
+[in] *bShow*<br/>
+[in] *bDelay*<br/>
+[in] *bActivate*<br/>
 
 ### <a name="remarks"></a>備註
 

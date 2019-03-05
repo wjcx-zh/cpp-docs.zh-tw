@@ -14,16 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-ms.openlocfilehash: 50868d020224e7bade9766f7307bfcc46ce4be47
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 43ad777b0dfb1285a82d662f37329c079410c78d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657587"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284342"
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map 類別
 
-`concurrent_unordered_map` 類別是一種並行安全容器，可控制 `std::pair<const K, _Element_type>` 類型項目的不同長度序列。 序列的表示方式導致啟用並行安全附加、項目存取、迭代器存取及迭代器周遊作業。
+
+  `concurrent_unordered_map` 類別是一種並行安全容器，可控制 `std::pair<const K, _Element_type>` 類型項目的不同長度序列。 序列的表示方式導致啟用並行安全附加、項目存取、迭代器存取及迭代器周遊作業。
 
 ## <a name="syntax"></a>語法
 
@@ -151,7 +152,7 @@ const mapped_type& at(const key_type& KVal) const;
 
 如果找不到引數索引鍵值，函式會擲回 `out_of_range` 類別的物件。
 
-##  <a name="begin"></a> 開始
+##  <a name="begin"></a> begin
 
 傳回迭代器，指向 並行容器中的第一個項目。 這個方法是並行安全。
 
@@ -247,10 +248,10 @@ concurrent_unordered_map(
 *_Allocator*<br/>
 這個未排序對應的配置器。
 
-*（_b)*<br/>
+*_Begin*<br/>
 要複製的元素範圍中第一個元素的位置。
 
-*（_e)*<br/>
+*_End*<br/>
 超出要複製之元素範圍的第一個元素的位置。
 
 *_Umap*<br/>
@@ -270,7 +271,7 @@ concurrent_unordered_map(
 
 最後一個建構函式會指定並行未排序之對應 `_Umap` 的移動作業。
 
-##  <a name="count"></a> 計數
+##  <a name="count"></a> count
 
 計算符合指定索引鍵的項目數目。 此函式是安全的並行存取。
 
@@ -287,7 +288,7 @@ size_type count(const key_type& KVal) const;
 
 出現在容器中的機碼次數時次數。
 
-##  <a name="empty"></a> 空白
+##  <a name="empty"></a> empty
 
 測試項目是否不存在。 這個方法是並行安全。
 
@@ -344,7 +345,7 @@ A[配對](../../../standard-library/pair-structure.md)其中的第一個元素�
 
 就可能會造成額外的金鑰之後開始迭代器，以及結尾迭代器之前，要插入的並行插入。
 
-##  <a name="find"></a> 尋找
+##  <a name="find"></a> find
 
 尋找符合指定之索引鍵的元素。 此函式是安全的並行存取。
 
@@ -387,7 +388,7 @@ hasher hash_function() const;
 
 儲存的雜湊函式物件。
 
-##  <a name="insert"></a> 插入
+##  <a name="insert"></a> insert
 
 將項目來加入`concurrent_unordered_map`物件。
 
@@ -434,7 +435,7 @@ typename std::enable_if<!std::is_same<const_iterator,
 *first*<br/>
 要插入之範圍的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 要插入之範圍的結尾。
 
 ### <a name="return-value"></a>傳回值
@@ -443,7 +444,7 @@ typename std::enable_if<!std::is_same<const_iterator,
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式會判斷其索引鍵具有對等順序的序列中是否存在的項目 X `value`。 如果沒有，會建立這類項目 X，並將它與初始化`value`。 此函式接著會判斷迭代器`where`，其中指定 X。如果執行插入將會發生，則此函數會傳回`std::pair(where, true)`。 否則它會傳回 `std::pair(where, false)`。
+第一個成員函式會判斷其索引鍵具有對等順序的序列中是否存在的項目 X `value`。 如果沒有，會建立這類項目 X，並將它與初始化`value`。 此函式接著會判斷迭代器`where`，其中指定 X。如果執行插入將會發生，則此函數會傳回`std::pair(where, true)`。 否則，它會傳回 `std::pair(where, false)`。
 
 第二個成員函式會傳回 insert ( `value`)，並使用`_Where`做為起始的位置，在受控制序列中要搜尋插入點。
 
@@ -509,7 +510,7 @@ size_type max_size() const;
 
 此上限值實際上可能會高於什麼容器可以實際保留的。
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 尋找或插入具有指定索引鍵的項目。 這個方法是並行安全的。
 
@@ -596,7 +597,7 @@ size_type size() const;
 
 有並行插入存在時，並行容器中的項目數可能會在呼叫這個函式之後立即變更，甚至會是在尚未讀取傳回值的情況下。
 
-##  <a name="swap"></a> 交換
+##  <a name="swap"></a> swap
 
 交換兩個內容`concurrent_unordered_map`物件。 這個方法不是並行安全。
 
@@ -621,7 +622,7 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 
 ### <a name="parameters"></a>參數
 
-*（_b)*<br/>
+*_Bucket*<br/>
 貯體的索引。
 
 ### <a name="return-value"></a>傳回值
@@ -667,7 +668,7 @@ size_type unsafe_bucket_size(size_type _Bucket);
 
 ### <a name="parameters"></a>參數
 
-*（_b)*<br/>
+*_Bucket*<br/>
 若要搜尋的貯體。
 
 ### <a name="return-value"></a>傳回值
@@ -684,7 +685,7 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 
 ### <a name="parameters"></a>參數
 
-*（_b)*<br/>
+*_Bucket*<br/>
 貯體的索引。
 
 ### <a name="return-value"></a>傳回值
@@ -701,7 +702,7 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 
 ### <a name="parameters"></a>參數
 
-*（_b)*<br/>
+*_Bucket*<br/>
 貯體的索引。
 
 ### <a name="return-value"></a>傳回值
@@ -720,7 +721,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 
 ### <a name="parameters"></a>參數
 
-*（_b)*<br/>
+*_Bucket*<br/>
 貯體的索引。
 
 ### <a name="return-value"></a>傳回值
@@ -748,10 +749,10 @@ size_type unsafe_erase(
 *_Where*<br/>
 若要清除從迭代器位置。
 
-*（_b)*<br/>
+*_Begin*<br/>
 項目範圍中要清除的第一個項目的位置。
 
-*（_e)*<br/>
+*_End*<br/>
 超出要清除之項目範圍的第一個項目的位置。
 
 *KVal*<br/>
@@ -783,4 +784,3 @@ size_type unsafe_max_bucket_count() const;
 
 [concurrency 命名空間](concurrency-namespace.md)<br/>
 [平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)
-

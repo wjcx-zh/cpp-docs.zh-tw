@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DateTimePicker control [MFC], display styles
 - DateTimePicker control [MFC]
 ms.assetid: 7d577f03-6ca0-4597-9093-50b78f304719
-ms.openlocfilehash: 2e3e980649264a6842abcc9491171e5105dbab17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8da5ecaf473d6d3c35ddc1b95ac856ce8c12f163
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557482"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286882"
 ---
 # <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>在日期時間選擇器控制項中使用自訂格式字串
 
@@ -35,4 +35,3 @@ ms.locfileid: "50557482"
 
 [使用 CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
 [控制項](../mfc/controls-mfc.md)
-

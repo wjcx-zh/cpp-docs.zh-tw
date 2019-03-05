@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: bbfe75ad996841cd4ea78adab56c7cf91ac55f3c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 790cf064fcffe1f0cd3c191c28ed0a0614062406
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565551"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283445"
 ---
 # <a name="worker-archetype"></a>背景工作原型
 
@@ -47,8 +47,8 @@ ms.locfileid: "50565551"
 
 |參數名稱|使用對象|
 |--------------------|-------------|
-|*背景工作角色*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|
-|*背景工作角色*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|
+|*Worker*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|
+|*Worker*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|
 
 ### <a name="requirements"></a>需求
 
@@ -67,7 +67,7 @@ void Execute(
 
 #### <a name="parameters"></a>參數
 
-*要求*<br/>
+*request*<br/>
 處理工作項目。 工作項目屬於相同的型別`RequestType`。
 
 *pvWorkerParam*<br/>
@@ -121,4 +121,3 @@ void Terminate(void* pvParam) throw();
 
 [概念](../../atl/active-template-library-atl-concepts.md)<br/>
 [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)
-

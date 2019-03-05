@@ -1,17 +1,17 @@
 ---
-title: 如何：在您的程式碼中實作追蹤
+title: HOW TO：在您的程式碼中實作追蹤
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: baaeca2c-5114-485f-bf58-8807db1bc973
-ms.openlocfilehash: 0a6a8313c02566c4d1cde82b288b42e150651b02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af8e1b72bde268a15012515065853daa617936e4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428677"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283978"
 ---
-# <a name="how-to-implement-tracking-in-your-code"></a>如何：在您的程式碼中實作追蹤
+# <a name="how-to-implement-tracking-in-your-code"></a>HOW TO：在您的程式碼中實作追蹤
 
 若要追蹤 OLE 項目，您必須處理相關的項目，例如按一下項目或更新文件檢視特定事件。 在所有情況下，就足以宣告暫存[CRectTracker](../mfc/reference/crecttracker-class.md)物件，並管理透過此物件的項目。
 
@@ -56,4 +56,3 @@ ms.locfileid: "50428677"
 ## <a name="see-also"></a>另請參閱
 
 [追蹤器：在 OLE 應用程式中實作追蹤器](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
-

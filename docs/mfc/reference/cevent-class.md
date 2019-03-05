@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-ms.openlocfilehash: 883f3065c9d15ad793e6c0d548b911f10d166c0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7731c87c6d6b0ebdec9a0c72c24b04334aa0662
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667892"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300267"
 ---
 # <a name="cevent-class"></a>CEvent 類別
 
@@ -66,7 +66,7 @@ class CEvent : public CSyncObject
 
 若要存取所控制的資源`CEvent`物件以這種方式，請先建立兩種類型的變數[CSingleLock](../../mfc/reference/csinglelock-class.md)或型別[CMultiLock](../../mfc/reference/cmultilock-class.md)您資源的存取方法中。 然後呼叫`Lock`之鎖定物件的方法 (例如[CMultiLock::Lock](../../mfc/reference/cmultilock-class.md#lock))。 此時，您的執行緒會存取資源、 釋出，並存取應用程式，或等待資源釋出資源等候、 逾時，並無法取得資源的存取權。 在任何情況下，您的資源已存取具備執行緒安全的方式。 若要釋放資源，呼叫`SetEvent`訊號事件物件，然後使用`Unlock`之鎖定物件的方法 (比方說， [CMultiLock::Unlock](../../mfc/reference/cmultilock-class.md#unlock))，或讓超出範圍的鎖定物件。
 
-如需有關如何使用`CEvent`物件，請參閱[多執行緒： 如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
+如需有關如何使用`CEvent`物件，請參閱[多執行緒：如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
 
 ## <a name="example"></a>範例
 
@@ -107,7 +107,8 @@ CEvent(
 如果為 TRUE，會指定事件的物件為手動事件，否則為事件物件是自動的事件。
 
 *lpszName*<br/>
-`CEvent` 物件的名稱。 如果該物件會使用跨處理序界限，必須提供。 如果名稱符合現有的事件，建構函式會建置新`CEvent`物件會參考該名稱的事件。 如果名稱符合現有的同步處理物件，不是事件，建構將會失敗。 如果是 NULL，則會有名稱為 null。
+
+  `CEvent` 物件的名稱。 如果該物件會使用跨處理序界限，必須提供。 如果名稱符合現有的事件，建構函式會建置新`CEvent`物件會參考該名稱的事件。 如果名稱符合現有的同步處理物件，不是事件，建構將會失敗。 如果是 NULL，則會有名稱為 null。
 
 *lpsaAttribute*<br/>
 事件物件的安全性屬性。 如需這個結構的完整說明，請參閱[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。
@@ -195,4 +196,3 @@ BOOL Unlock();
 
 [CSyncObject 類別](../../mfc/reference/csyncobject-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: 415dae4a54b71a901a7976bda92361690c150e5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e335c20464d8ea71fd75ce2e67f67ca14edacb0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543308"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299318"
 ---
 # <a name="implementing-property-pages"></a>實作屬性頁
 
@@ -36,11 +36,11 @@ ms.locfileid: "50543308"
    |IPropertyPageImpl 方法|當您想要覆寫...|注意|
    |------------------------------|----------------------------------|-----------|
    |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|執行基本的例行性檢查傳遞至您的頁面和其所支援的介面的物件數目。|執行您自己的程式碼，然後再呼叫基底類別實作。 如果所設定的物件不符合您的預期，您應儘速失敗呼叫。|
-   |[啟用](../atl/reference/ipropertypageimpl-class.md#activate)|初始化您的頁面使用者介面 （例如，從物件中設定 最新的屬性值的對話方塊控制項、 控制項動態建立，或執行其他的初始設定）。|呼叫基底類別實作，您的程式碼之前，因此基底類別有機會建立對話方塊視窗中，所有控制項，然後再加以更新。|
-   |[適用於](../atl/reference/ipropertypageimpl-class.md#apply)|驗證的屬性設定，並更新的物件。|就不需要呼叫基底類別實作，因為它不會執行任何除了追蹤呼叫。|
+   |[Activate](../atl/reference/ipropertypageimpl-class.md#activate)|初始化您的頁面使用者介面 （例如，從物件中設定 最新的屬性值的對話方塊控制項、 控制項動態建立，或執行其他的初始設定）。|呼叫基底類別實作，您的程式碼之前，因此基底類別有機會建立對話方塊視窗中，所有控制項，然後再加以更新。|
+   |[Apply](../atl/reference/ipropertypageimpl-class.md#apply)|驗證的屬性設定，並更新的物件。|就不需要呼叫基底類別實作，因為它不會執行任何除了追蹤呼叫。|
    |[停用](../atl/reference/ipropertypageimpl-class.md#deactivate)|清除與視窗相關的項目。|基底類別實作會終結代表屬性頁的對話方塊。 如果您需要清除，再終結對話方塊中，您應該加入程式碼，然後再呼叫基底類別。|
 
-範例屬性頁面上實作，請參閱[範例： 實作屬性頁](../atl/example-implementing-a-property-page.md)。
+範例屬性頁面上實作，請參閱[範例：實作屬性頁](../atl/example-implementing-a-property-page.md)。
 
 > [!NOTE]
 > 如果您想要裝載 ActiveX 控制項屬性頁中，您必須變更您精靈產生的類別衍生。 取代**CDialogImpl\<CYourClass >** 具有**CAxDialogImpl\<CYourClass >** 的基底類別清單中。

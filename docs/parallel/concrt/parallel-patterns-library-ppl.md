@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Patterns Library (PPL)
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
-ms.openlocfilehash: deeede132a919084399be54d5559605b99c4e4fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11440d56b9618d4763e1b7e47a21b365bbdc0c15
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459406"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290712"
 ---
 # <a name="parallel-patterns-library-ppl"></a>平行模式程式庫 (PPL)
 
@@ -27,7 +27,8 @@ PPL 提供下列功能：
 
 PPL 提供類似於 c + + 標準程式庫的程式設計模型。 下列範例示範 PPL 的許多功能。 它會循序和平行計算數個 Fibonacci 數字。 這兩項計算作[std:: array](../../standard-library/array-class-stl.md)物件。 這個範例也會將執行這兩項計算所需的時間列印到主控台。
 
-序列版會使用 c + + 標準程式庫[std:: for_each](../../standard-library/algorithm-functions.md#for_each)演算法來周遊陣列，並將結果[std:: vector](../../standard-library/vector-class.md)物件。 平行處理的版本會執行相同的工作，但會使用 PPL [concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)演算法，並將結果[concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)物件。 `concurrent_vector` 類別可讓每個迴圈反覆項目並行加入項目，而不需要同步處理對容器的寫入權限。
+序列版會使用 c + + 標準程式庫[std:: for_each](../../standard-library/algorithm-functions.md#for_each)演算法來周遊陣列，並將結果[std:: vector](../../standard-library/vector-class.md)物件。 平行處理的版本會執行相同的工作，但會使用 PPL [concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)演算法，並將結果[concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)物件。 
+  `concurrent_vector` 類別可讓每個迴圈反覆項目並行加入項目，而不需要同步處理對容器的寫入權限。
 
 因為 `parallel_for_each` 會並行作用，所以此範例的平行版本必須將 `concurrent_vector` 物件排序，以產生與序列版相同的結果。
 
@@ -58,4 +59,3 @@ fib(42): 267914296
 |[平行容器和物件](../../parallel/concrt/parallel-containers-and-objects.md)|說明 PPL 提供的各種平行容器和物件。|
 |[PPL 中的取消](cancellation-in-the-ppl.md)|說明如何取消平行演算法正在執行的工作。|
 |[並行執行階段](../../parallel/concrt/concurrency-runtime.md)|說明並行執行階段，它可簡化平行程式設計，並包含相關主題的連結。|
-

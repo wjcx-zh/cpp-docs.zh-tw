@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sequence [MFC]
 - windows [MFC], destroying
 ms.assetid: 2d819196-6240-415f-a308-db43745e616c
-ms.openlocfilehash: 07312d6c7bba219cebcfa2c73a8d66c9c97ec08e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4592e6ac0077d6bc335b50f2d67b140402b4fe2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571349"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287657"
 ---
 # <a name="window-destruction-sequence"></a>視窗解構序列
 
@@ -29,4 +29,3 @@ ms.locfileid: "50571349"
 ## <a name="see-also"></a>另請參閱
 
 [終結視窗物件](../mfc/destroying-window-objects.md)
-

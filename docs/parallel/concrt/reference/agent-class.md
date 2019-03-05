@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-ms.openlocfilehash: ad096eea3467346d85ce4249e910915cbd73488d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98ad5f817361d8410e5a60648fb23baec06c42d7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560247"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289139"
 ---
 # <a name="agent-class"></a>agent 類別
 
@@ -47,11 +47,11 @@ class agent;
 
 |名稱|描述|
 |----------|-----------------|
-|[[取消]](#cancel)|將代理程式從`agent_created`或是`agent_runnable`狀態來`agent_canceled`狀態。|
+|[cancel](#cancel)|將代理程式從`agent_created`或是`agent_runnable`狀態來`agent_canceled`狀態。|
 |[start](#start)|將代理程式`agent_created`狀態`agent_runnable`狀態，以及排程執行。|
 |[status](#status)|從代理程式的狀態資訊的同步來源。|
 |[status_port](#status_port)|從代理程式的狀態資訊的非同步來源。|
-|[等候](#wait)|等候代理程式，以完成其工作。|
+|[wait](#wait)|等候代理程式，以完成其工作。|
 |[wait_for_all](#wait_for_all)|等待所有指定的代理程式，以完成其工作。|
 |[wait_for_one](#wait_for_one)|等候任何一個指定的代理程式，以完成其工作。|
 
@@ -59,7 +59,7 @@ class agent;
 
 |名稱|描述|
 |----------|-----------------|
-|[完成](#done)|移至代理程式`agent_done`狀態，表示代理程式已完成。|
+|[done](#done)|移至代理程式`agent_done`狀態，表示代理程式已完成。|
 |[run](#run)|表示代理程式的主要工作。 `run` 在衍生類別中，則應覆寫，並指定應該執行的代理程式已啟動之後。|
 
 ## <a name="remarks"></a>備註
@@ -100,7 +100,7 @@ agent(ScheduleGroup& _PGroup);
 
 如果您未指定 `_PScheduler` 或 `_PGroup` 參數，執行階段會使用預設排程器。
 
-##  <a name="dtor"></a> ~ 代理程式
+##  <a name="dtor"></a> ~agent
 
 終結代理程式。
 
@@ -203,7 +203,7 @@ static agent_status __cdecl wait(
 *_PAgent*<br/>
 等候代理程式 」 指標。
 
-*逾時 _t*<br/>
+*_Timeout*<br/>
 要等待，以毫秒為單位的最大時間。
 
 ### <a name="return-value"></a>傳回值
@@ -239,7 +239,7 @@ static void __cdecl wait_for_all(
 *_PStatus*<br/>
 代理程式狀態的陣列指標。 方法傳回時，每個狀態值會代表對應的代理程式的狀態。
 
-*逾時 _t*<br/>
+*_Timeout*<br/>
 要等待，以毫秒為單位的最大時間。
 
 ### <a name="remarks"></a>備註
@@ -275,7 +275,7 @@ static void __cdecl wait_for_one(
 *_Index*<br/>
 代理程式索引放置變數的參考。
 
-*逾時 _t*<br/>
+*_Timeout*<br/>
 要等待，以毫秒為單位的最大時間。
 
 ### <a name="remarks"></a>備註

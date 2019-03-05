@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - window classes
 ms.assetid: 503efc2c-a269-495d-97cf-3fb300d52f3d
-ms.openlocfilehash: 987e2eab5fe4eec32d88b7c1528f1e3189fc925a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c3bc70b5edfb089a6276003625b876d8c553dcb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459796"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301645"
 ---
 # <a name="introduction-to-atl-window-classes"></a>ATL 視窗類別簡介
 
@@ -40,4 +40,3 @@ ms.locfileid: "50459796"
 ## <a name="see-also"></a>另請參閱
 
 [視窗類別](../atl/atl-window-classes.md)
-

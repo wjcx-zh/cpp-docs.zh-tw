@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CGdiObject [MFC], UnrealizeObject
 - CGdiObject [MFC], m_hObject
 ms.assetid: 1cba3ba5-3d49-4e43-8293-209299f2f6f4
-ms.openlocfilehash: 87545d67addb6a1f0931007d8912989968f7a74a
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 1b2b87173bf504455ba314fdd89ffae298cae6a8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177845"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301216"
 ---
 # <a name="cgdiobject-class"></a>CGdiObject 類別
 
@@ -74,8 +74,8 @@ class CGdiObject : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CGdiObject::operator ！ =](#operator_neq)|判斷兩個的 GDI 物件是否以邏輯方式不相等。|
-|[CGdiObject::operator = =](#operator_eq_eq)|判斷兩個的 GDI 物件是否在邏輯上相等。|
+|[CGdiObject::operator !=](#operator_neq)|判斷兩個的 GDI 物件是否以邏輯方式不相等。|
+|[CGdiObject::operator ==](#operator_eq_eq)|判斷兩個的 GDI 物件是否在邏輯上相等。|
 |[CGdiObject::operator HGDIOBJ](#operator_hgdiobj)|擷取附加的 Windows GDI 物件的控制代碼。|
 
 ### <a name="public-data-members"></a>公用資料成員
@@ -250,7 +250,7 @@ int GetObject(
 |`CPen`|[LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen)|
 |`CBrush`|[LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)|
 |`CFont`|[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)|
-|`CBitmap`|[點陣圖](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)|
+|`CBitmap`|[BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)|
 |`CPalette`|WORD|
 |`CRgn`|不支援|
 
@@ -270,7 +270,7 @@ UINT GetObjectType() const;
 
 如果成功則物件類型否則為 0。 值可以是下列其中一項：
 
-- OBJ_BITMAP 點陣圖
+- OBJ_BITMAP Bitmap
 
 - OBJ_BRUSH 筆刷
 
@@ -341,7 +341,7 @@ BOOL operator!=(const CGdiObject& obj) const;
 
 判斷左側的 GDI 物件是否不等於右邊的 GDI 物件。
 
-##  <a name="operator_eq_eq"></a>  CGdiObject::operator = =
+##  <a name="operator_eq_eq"></a>  CGdiObject::operator ==
 
 判斷兩個的 GDI 物件是否在邏輯上相等。
 

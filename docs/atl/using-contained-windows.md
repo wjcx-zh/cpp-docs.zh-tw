@@ -6,12 +6,12 @@ helpviewer_keywords:
 - windows [C++], ATL
 - contained windows in ATL
 ms.assetid: 7b3d79e5-b569-413f-9b98-df4f14efbe2b
-ms.openlocfilehash: 800ae7cab5fd99bfa140b481f87b1615ff5b2a13
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b9a36c6aac80a7c77cde102d6da93c51788e4e1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485367"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295145"
 ---
 # <a name="using-contained-windows"></a>使用包含的 Windows
 
@@ -37,4 +37,3 @@ ATL 實作使用自主的視窗[CContainedWindowT](../atl/reference/ccontainedwi
 ## <a name="see-also"></a>另請參閱
 
 [視窗類別](../atl/atl-window-classes.md)
-

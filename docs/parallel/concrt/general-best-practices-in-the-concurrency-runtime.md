@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-ms.openlocfilehash: 445e985117929cae2ec9a26a1e148b3eff55c2a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e25011e2466d76c946cc55421ed228c8ea174161
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647690"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285603"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>並行執行階段中的一般最佳作法
 
@@ -49,7 +49,7 @@ ms.locfileid: "50647690"
 
 這個範例會產生下列輸出：
 
-1: 250000000 1: 500000000 1: 750000000 1: 1000000000 2: 250000000 2: 500000000 2: 750000000 2: 1000000000
+1:250000000 1:500000000 1:750000000 1:1000000000 2:250000000 2:500000000 2:750000000 2:1000000000
 
 有數種方式可啟用兩個工作之間的合作。 其中一個方法是偶爾會產生工作排程器在長時間執行工作。 下列範例會修改`task`呼叫的函式[concurrency](reference/context-class.md#yield)方法來產生工作排程器的執行，以便在執行另一項工作。
 
@@ -84,7 +84,7 @@ ms.locfileid: "50647690"
 
 [!code-cpp[concrt-download-oversubscription#4](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_3.cpp)]
 
-因為`GetHttpFile`函式會執行可能潛伏的作業、 過度訂閱可以讓目前的工作等候資料執行其他工作。 如本範例的完整版本，請參閱 <<c0> [ 如何： 使用過度訂閱位移延遲](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)。
+因為`GetHttpFile`函式會執行可能潛伏的作業、 過度訂閱可以讓目前的工作等候資料執行其他工作。 如本範例的完整版本，請參閱[How to:若要位移延遲使用過度訂閱](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)。
 
 [[靠上](#top)]
 
@@ -92,7 +92,7 @@ ms.locfileid: "50647690"
 
 使用記憶體管理函式中， [concurrency:: alloc](reference/concurrency-namespace-functions.md#alloc)並[concurrency:: free](reference/concurrency-namespace-functions.md#free)，當您的精細工作經常配置的相對較短的存留期的小型物件。 並行執行階段會保留每個執行中的執行緒不同的記憶體快取。 `Alloc`和`Free`函式配置和釋放記憶體，從這些快取，而不使用鎖定或記憶體屏障。
 
-如需有關這些記憶體管理函式的詳細資訊，請參閱 <<c0> [ 工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。 如需使用這些函式的範例，請參閱 <<c0> [ 如何： 使用 Alloc 和 Free 改善記憶體效能](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)。
+如需有關這些記憶體管理函式的詳細資訊，請參閱 <<c0> [ 工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。 如需使用這些函式的範例，請參閱[How to:使用 Alloc 和 Free 改善記憶體效能](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)。
 
 [[靠上](#top)]
 
@@ -124,7 +124,7 @@ Error details:
     negative balance: -76
 ```
 
-如需使用 RAII 模式來管理並行存取物件的存留期的其他範例，請參閱[逐步解說： 從使用者介面執行緒中移除工作](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)， [How to： 使用內容類別實作合作式號誌](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)，並[如何： 使用過度訂閱位移延遲](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)。
+如需使用 RAII 模式來管理並行存取物件的存留期的其他範例，請參閱[逐步解說：從使用者介面執行緒中移除工作](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)， [How to:使用內容類別實作合作式信號](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)，和[How to:若要位移延遲使用過度訂閱](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)。
 
 [[靠上](#top)]
 
@@ -157,8 +157,8 @@ Error details:
 [同步處理資料結構](../../parallel/concrt/synchronization-data-structures.md)<br/>
 [比較同步處理資料結構與 Windows API](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)<br/>
 [如何：使用 Alloc 和 Free 改善記憶體效能](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)<br/>
-[如何：使用過度訂閱使延遲產生位移](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)<br/>
+[如何：使用過度訂閱以讓延遲位移](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)<br/>
 [如何：使用內容類別實作合作式信號](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
-[逐步解說：從使用者介面執行緒中移除工作](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)<br/>
+[逐步解說：從使用者介面執行緒移除工作](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)<br/>
 [平行模式程式庫中的最佳做法](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
 [非同步代理程式程式庫中的最佳做法](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)

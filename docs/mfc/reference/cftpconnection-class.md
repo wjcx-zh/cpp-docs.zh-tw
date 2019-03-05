@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 71e5c8629a1aa1c489cc51224f9d008c4cdd3397
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12ef4de16279c5c2033a95df5928a6dfb7a2a652
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504243"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295119"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection 類別
 
@@ -61,15 +61,15 @@ class CFtpConnection : public CInternetConnection
 |----------|-----------------|
 |[CFtpConnection::Command](#command)|將命令直接傳送至 FTP 伺服器。|
 |[CFtpConnection::CreateDirectory](#createdirectory)|在伺服器上建立目錄。|
-|[Cftpconnection:: Getcurrentdirectory](#getcurrentdirectory)|取得此連線目前的目錄。|
-|[Cftpconnection:: Getcurrentdirectoryasurl](#getcurrentdirectoryasurl)|取得目前的目錄做為 URL 的此連線。|
+|[CFtpConnection::GetCurrentDirectory](#getcurrentdirectory)|取得此連線目前的目錄。|
+|[CFtpConnection::GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl)|取得目前的目錄做為 URL 的此連線。|
 |[CFtpConnection::GetFile](#getfile)|從連接的伺服器取得檔案|
 |[CFtpConnection::OpenFile](#openfile)|開啟連接的伺服器上的檔案。|
 |[CFtpConnection::PutFile](#putfile)|將放在伺服器上的檔案。|
-|[Findfile](#remove)|從伺服器移除檔案。|
+|[CFtpConnection::Remove](#remove)|從伺服器移除檔案。|
 |[CFtpConnection::RemoveDirectory](#removedirectory)|從伺服器中移除指定的目錄。|
 |[CFtpConnection::Rename](#rename)|重新命名的伺服器上的檔案。|
-|[Cftpconnection:: Setcurrentdirectory](#setcurrentdirectory)|設定目前的 FTP 目錄。|
+|[CFtpConnection::SetCurrentDirectory](#setcurrentdirectory)|設定目前的 FTP 目錄。|
 
 ## <a name="remarks"></a>備註
 
@@ -140,7 +140,7 @@ CFtpConnection(
 |--------------------|--------------------|---------------------------------|---------------------------------|
 |NULL 或""|NULL 或""|「 匿名 」|使用者的電子郵件名稱|
 |非 NULL 字串|NULL 或""|*pstrUserName*|" "|
-|NULL 的非 NULL 字串|錯誤|錯誤||
+|NULL 的非 NULL 字串|ERROR|ERROR||
 |非 NULL 字串|非 NULL 字串|*pstrUserName*|*pstrPassword*|
 
 *nPort*<br/>
@@ -216,7 +216,7 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
 
 `pstrDirName`參數可以是部分或完整的檔名，相對於目前的目錄。 反斜線 (\\) 或斜線 （/） 可用來當做任一名稱的目錄分隔符號。 `CreateDirectory` 在使用前，請將轉譯成適當的字元的目錄名稱分隔符號。
 
-##  <a name="getcurrentdirectory"></a>  Cftpconnection:: Getcurrentdirectory
+##  <a name="getcurrentdirectory"></a>  CFtpConnection::GetCurrentDirectory
 
 呼叫此成員函式，以取得目前目錄的名稱。
 
@@ -354,7 +354,7 @@ BOOL GetFile(
 
 兩者*pstrRemoteFile*並*pstrLocalFile*可以是相對於目前的目錄是不完整的檔名或完整限定。 反斜線 (\\) 或斜線 （/） 可用來當做任一名稱的目錄分隔符號。 `GetFile` 在使用前，請將轉譯成適當的字元的目錄名稱分隔符號。
 
-覆寫*dwContext*預設可設定的內容識別碼以您選擇的值。 內容識別碼是與這個特定作業的相關聯`CFtpConnection`所建立的物件及其[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件。 若要傳回的值[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供與識別此作業的狀態。 請參閱文章[網際網路前幾個步驟： WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
+覆寫*dwContext*預設可設定的內容識別碼以您選擇的值。 內容識別碼是與這個特定作業的相關聯`CFtpConnection`所建立的物件及其[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件。 若要傳回的值[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供與識別此作業的狀態。 請參閱文章[網際網路前幾個步驟：WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
 
 ##  <a name="openfile"></a>  CFtpConnection::OpenFile
 
@@ -404,7 +404,7 @@ CInternetFile* OpenFile(
 
 *PstrFileName*參數可以是任一個不完整的檔名為目前的目錄的相對或完整。 反斜線 (\\) 或斜線 （/） 可用來當做任一名稱的目錄分隔符號。 `OpenFile` 然後再將它轉譯成適當的字元的目錄名稱分隔符號。
 
-覆寫*dwContext*預設可設定的內容識別碼以您選擇的值。 內容識別碼是與這個特定作業的相關聯`CFtpConnection`所建立的物件及其[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件。 若要傳回的值[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供與識別此作業的狀態。 請參閱文章[網際網路前幾個步驟： WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
+覆寫*dwContext*預設可設定的內容識別碼以您選擇的值。 內容識別碼是與這個特定作業的相關聯`CFtpConnection`所建立的物件及其[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件。 若要傳回的值[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供與識別此作業的狀態。 請參閱文章[網際網路前幾個步驟：WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
 
 ##  <a name="putfile"></a>  CFtpConnection::PutFile
 
@@ -440,9 +440,9 @@ BOOL PutFile(
 
 `PutFile` 是一個高層級的常式來處理所有儲存在 FTP 伺服器上的檔案相關聯的作業。 應用程式，只傳送資料，或需要更進一步控制透過 檔案傳輸應使用[OpenFile](#openfile)並[CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write)。
 
-覆寫`dwContext`預設可設定的內容識別碼以您選擇的值。 內容識別碼是與這個特定作業的相關聯`CFtpConnection`所建立的物件及其[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件。 若要傳回的值[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供與識別此作業的狀態。 請參閱文章[網際網路前幾個步驟： WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
+覆寫`dwContext`預設可設定的內容識別碼以您選擇的值。 內容識別碼是與這個特定作業的相關聯`CFtpConnection`所建立的物件及其[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件。 若要傳回的值[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供與識別此作業的狀態。 請參閱文章[網際網路前幾個步驟：WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。
 
-##  <a name="remove"></a>  Findfile
+##  <a name="remove"></a>  CFtpConnection::Remove
 
 呼叫此成員函式可從連接的伺服器中刪除指定的檔案。
 
@@ -512,7 +512,7 @@ BOOL Rename(
 
 *PstrExisting*並*pstrNew*參數可以是任一個不完整的檔名為目前的目錄的相對或完整。 反斜線 (\\) 或斜線 （/） 可用來當做任一名稱的目錄分隔符號。 `Rename` 在使用前，請將轉譯成適當的字元的目錄名稱分隔符號。
 
-##  <a name="setcurrentdirectory"></a>  Cftpconnection:: Setcurrentdirectory
+##  <a name="setcurrentdirectory"></a>  CFtpConnection::SetCurrentDirectory
 
 呼叫此成員函式，若要變更為不同的目錄，FTP 伺服器上。
 

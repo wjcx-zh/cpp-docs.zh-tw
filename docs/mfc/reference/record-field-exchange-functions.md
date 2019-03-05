@@ -45,12 +45,12 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-ms.openlocfilehash: 2970a722f79e9707f8721c1c8595bfd1d133f898
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 865c67b88c37e32ef33fa410ef178b81b7a6ecac
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525940"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297069"
 ---
 # <a name="record-field-exchange-functions"></a>資料錄欄位交換函式
 
@@ -62,9 +62,9 @@ ms.locfileid: "50525940"
 
 每次架構呼叫 `DoFieldExchange` 或 `DoBulkFieldExchange`時，資料錄欄位交換函式都會傳輸資料。 每個函式會傳輸特定資料類型。
 
-如需這些函式使用方式的詳細資訊，請參閱 [資料錄欄位交換：RFX 的運作方式 (ODBC)](../../data/odbc/record-field-exchange-how-rfx-works.md)一文。 如需大量資料列擷取的詳細資訊，請參閱 [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+如需如何使用這些函數的詳細資訊，請參閱文章[資料錄欄位交換：RFX (ODBC) 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。 如需有關大量資料列擷取的詳細資訊，請參閱[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
-針對您動態繫結的資料行，您也可以自行呼叫 RFX 或 DFX 函式，如 [資料錄集：動態地繫結資料行 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)一文中所述。 此外，您可以撰寫自己的自訂 RFX 或 DFX 常式，如技術提示 [43](../../mfc/tn043-rfx-routines.md) (適用於 ODBC) 和技術提示 [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) (適用於 DAO) 中所述。
+動態繫結的資料的資料行，您也可以呼叫 RFX 或 DFX 函式，在文章中所述[資料錄集：動態繫結資料行 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。 此外，您可以撰寫自己的自訂 RFX 或 DFX 常式，如技術提示 [43](../../mfc/tn043-rfx-routines.md) (適用於 ODBC) 和技術提示 [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) (適用於 DAO) 中所述。
 
 如需 RFX 和 Bulk RFX 函式濆婞剢謅`DoFieldExchange`並`DoBulkFieldExchange`函式，請參閱[RFX_Text](#rfx_text)和 [RFX_Text_Bulk] #rfx_text_bulk)。 DFX 函式與 RFX 函式很類似。
 
@@ -132,12 +132,12 @@ void RFX_Binary(
 ### <a name="parameters"></a>參數
 
 *pFX*<br/>
-類別的物件的指標[CFieldExchange](cfieldexchange-class.md)。 這個物件包含定義函式的每個呼叫內容的資訊。 如需作業的詳細資訊`CFieldExchange`可以指定物件，請參閱文章[資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+類別的物件的指標[CFieldExchange](cfieldexchange-class.md)。 這個物件包含定義函式的每個呼叫內容的資訊。 如需作業的詳細資訊`CFieldExchange`可以指定物件，請參閱文章[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 資料行的名稱。
 
-*值*<br/>
+*value*<br/>
 儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源，類型的值，如[CByteArray](cbytearray-class.md)，取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。
 
 *nMaxLength*<br/>
@@ -171,12 +171,12 @@ void RFX_Bool(
 ### <a name="parameters"></a>參數
 
 *pFX*<br/>
-類別的物件的指標[CFieldExchange](cfieldexchange-class.md)。 這個物件包含定義函式的每個呼叫內容的資訊。 如需作業的詳細資訊`CFieldExchange`可以指定物件，請參閱文章[資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+類別的物件的指標[CFieldExchange](cfieldexchange-class.md)。 這個物件包含定義函式的每個呼叫內容的資訊。 如需作業的詳細資訊`CFieldExchange`可以指定物件，請參閱文章[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 資料行的名稱。
 
-*值*<br/>
+*value*<br/>
 儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源，型別 BOOL，值是取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。
 
 ### <a name="example"></a>範例
@@ -203,12 +203,12 @@ void RFX_Byte(
 ### <a name="parameters"></a>參數
 
 *pFX*<br/>
-類別的物件的指標[CFieldExchange](cfieldexchange-class.md)。 這個物件包含定義函式的每個呼叫內容的資訊。 如需作業的詳細資訊`CFieldExchange`可以指定物件，請參閱文章[資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+類別的物件的指標[CFieldExchange](cfieldexchange-class.md)。 這個物件包含定義函式的每個呼叫內容的資訊。 如需作業的詳細資訊`CFieldExchange`可以指定物件，請參閱文章[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 資料行的名稱。
 
-*值*<br/>
+*value*<br/>
 儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源，位元組，類型的值是取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。
 
 ### <a name="example"></a>範例
@@ -245,12 +245,12 @@ void RFX_Date(
 ### <a name="parameters"></a>參數
 
 *pFX*<br/>
-類別的物件的指標[CFieldExchange](cfieldexchange-class.md)。 這個物件包含定義函式的每個呼叫內容的資訊。 如需作業的詳細資訊`CFieldExchange`可以指定物件，請參閱文章[資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+類別的物件的指標[CFieldExchange](cfieldexchange-class.md)。 這個物件包含定義函式的每個呼叫內容的資訊。 如需作業的詳細資訊`CFieldExchange`可以指定物件，請參閱文章[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 資料行的名稱。
 
-*值*<br/>
+*value*<br/>
 指定的資料成員; 中儲存的值要傳送的值。 函式的各種版本採取不同的資料類型的值：
 
 函式的第一個版本會參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。 從資料錄集傳輸至資料來源，這個值是取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。
@@ -285,12 +285,12 @@ void RFX_Double(
 ### <a name="parameters"></a>參數
 
 *pFX*<br/>
-類別的物件的指標[CFieldExchange](cfieldexchange-class.md)。 這個物件包含定義函式的每個呼叫內容的資訊。 如需作業的詳細資訊`CFieldExchange`可以指定物件，請參閱文章[資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+類別的物件的指標[CFieldExchange](cfieldexchange-class.md)。 這個物件包含定義函式的每個呼叫內容的資訊。 如需作業的詳細資訊`CFieldExchange`可以指定物件，請參閱文章[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 資料行的名稱。
 
-*值*<br/>
+*value*<br/>
 儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源，類型的值，如**double**，取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。
 
 ### <a name="example"></a>範例
@@ -317,12 +317,12 @@ void RFX_Int(
 ### <a name="parameters"></a>參數
 
 *pFX*<br/>
-類別的物件的指標[CFieldExchange](cfieldexchange-class.md)。 這個物件包含定義函式的每個呼叫內容的資訊。 如需作業的詳細資訊`CFieldExchange`可以指定物件，請參閱文章[資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+類別的物件的指標[CFieldExchange](cfieldexchange-class.md)。 這個物件包含定義函式的每個呼叫內容的資訊。 如需作業的詳細資訊`CFieldExchange`可以指定物件，請參閱文章[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 資料行的名稱。
 
-*值*<br/>
+*value*<br/>
 儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源，類型的值，如**int**，取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。
 
 ### <a name="example"></a>範例
@@ -350,12 +350,12 @@ value );
 ### <a name="parameters"></a>參數
 
 *pFX*<br/>
-類別的物件的指標[CFieldExchange](cfieldexchange-class.md)。 這個物件包含定義函式的每個呼叫內容的資訊。 如需作業的詳細資訊`CFieldExchange`可以指定物件，請參閱文章[資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+類別的物件的指標[CFieldExchange](cfieldexchange-class.md)。 這個物件包含定義函式的每個呼叫內容的資訊。 如需作業的詳細資訊`CFieldExchange`可以指定物件，請參閱文章[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 資料行的名稱。
 
-*值*<br/>
+*value*<br/>
 儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源，類型的值，如**長**，取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。
 
 ### <a name="example"></a>範例
@@ -382,12 +382,12 @@ void RFX_LongBinary(
 ### <a name="parameters"></a>參數
 
 *pFX*<br/>
-類別的物件的指標[CFieldExchange](cfieldexchange-class.md)。 這個物件包含定義函式的每個呼叫內容的資訊。 如需作業的詳細資訊`CFieldExchange`可以指定物件，請參閱文章[資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+類別的物件的指標[CFieldExchange](cfieldexchange-class.md)。 這個物件包含定義函式的每個呼叫內容的資訊。 如需作業的詳細資訊`CFieldExchange`可以指定物件，請參閱文章[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 資料行的名稱。
 
-*值*<br/>
+*value*<br/>
 儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸到資料來源，類型的值， `CLongBinary`，取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。
 
 ### <a name="example"></a>範例
@@ -414,12 +414,12 @@ void RFX_Single(
 ### <a name="parameters"></a>參數
 
 *pFX*<br/>
-類別的物件的指標[CFieldExchange](cfieldexchange-class.md)。 這個物件包含定義函式的每個呼叫內容的資訊。 如需作業的詳細資訊`CFieldExchange`可以指定物件，請參閱文章[資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+類別的物件的指標[CFieldExchange](cfieldexchange-class.md)。 這個物件包含定義函式的每個呼叫內容的資訊。 如需作業的詳細資訊`CFieldExchange`可以指定物件，請參閱文章[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 資料行的名稱。
 
-*值*<br/>
+*value*<br/>
 儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源，類型的值，如**浮點數**，取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。
 
 ### <a name="example"></a>範例
@@ -449,12 +449,12 @@ void RFX_Text(
 ### <a name="parameters"></a>參數
 
 *pFX*<br/>
-類別的物件指標`CFieldExchange`。 這個物件包含定義函式的每個呼叫內容的資訊。 如需作業的詳細資訊`CFieldExchange`可以指定物件，請參閱文章[資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+類別的物件指標`CFieldExchange`。 這個物件包含定義函式的每個呼叫內容的資訊。 如需作業的詳細資訊`CFieldExchange`可以指定物件，請參閱文章[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 資料行的名稱。
 
-*值*<br/>
+*value*<br/>
 儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸到資料來源，類型的值， `CString`，取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。
 
 *nMaxLength*<br/>
@@ -514,7 +514,7 @@ void RFX_Binary_Bulk(
 ### <a name="parameters"></a>參數
 
 *pFX*<br/>
-指標[CFieldExchange](cfieldexchange-class.md)物件。 這個物件包含定義函式的每個呼叫內容的資訊。 如需詳細資訊，請參閱文章[資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+指標[CFieldExchange](cfieldexchange-class.md)物件。 這個物件包含定義函式的每個呼叫內容的資訊。 如需詳細資訊，請參閱文章[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 資料行的名稱。
@@ -537,7 +537,7 @@ void RFX_Binary_Bulk(
 > [!NOTE]
 >  大量資料錄欄位交換只從資料來源，資料傳輸的資料錄集物件。 為了讓您的資料錄集更新，您必須使用 ODBC API 函式`SQLSetPos`。
 
-如需詳細資訊，請參閱文章[資料錄集： 擷取記錄中大量 (ODBC) 所](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)並[資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
+如需詳細資訊，請參閱文章[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)並[資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
 
 ### <a name="example"></a>範例
 
@@ -564,7 +564,7 @@ void RFX_Bool_Bulk(
 ### <a name="parameters"></a>參數
 
 *pFX*<br/>
-指標[CFieldExchange](cfieldexchange-class.md)物件。 這個物件包含定義函式的每個呼叫內容的資訊。 如需詳細資訊，請參閱文章[資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+指標[CFieldExchange](cfieldexchange-class.md)物件。 這個物件包含定義函式的每個呼叫內容的資訊。 如需詳細資訊，請參閱文章[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 資料行的名稱。
@@ -584,7 +584,7 @@ void RFX_Bool_Bulk(
 > [!NOTE]
 >  大量資料錄欄位交換只從資料來源，資料傳輸的資料錄集物件。 若要讓您的資料錄集更新，您必須使用 ODBC API 函式`SQLSetPos`。
 
-如需詳細資訊，請參閱文章[資料錄集： 擷取記錄中大量 (ODBC) 所](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)並[資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
+如需詳細資訊，請參閱文章[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)並[資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
 
 ### <a name="example"></a>範例
 
@@ -611,7 +611,7 @@ void RFX_Byte_Bulk(
 ### <a name="parameters"></a>參數
 
 *pFX*<br/>
-指標[CFieldExchange](cfieldexchange-class.md)物件。 這個物件包含定義函式的每個呼叫內容的資訊。 如需詳細資訊，請參閱文章[資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+指標[CFieldExchange](cfieldexchange-class.md)物件。 這個物件包含定義函式的每個呼叫內容的資訊。 如需詳細資訊，請參閱文章[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 資料行的名稱。
@@ -631,7 +631,7 @@ void RFX_Byte_Bulk(
 > [!NOTE]
 >  大量資料錄欄位交換只從資料來源，資料傳輸的資料錄集物件。 若要讓您的資料錄集更新，您必須使用 ODBC API 函式`SQLSetPos`。
 
-如需詳細資訊，請參閱文章[資料錄集： 擷取記錄中大量 (ODBC) 所](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)並[資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
+如需詳細資訊，請參閱文章[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)並[資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
 
 ### <a name="example"></a>範例
 
@@ -658,7 +658,7 @@ void RFX_Date_Bulk(
 ### <a name="parameters"></a>參數
 
 *pFX*<br/>
-指標[CFieldExchange](cfieldexchange-class.md)物件。 這個物件包含定義函式的每個呼叫內容的資訊。 如需詳細資訊，請參閱文章[資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+指標[CFieldExchange](cfieldexchange-class.md)物件。 這個物件包含定義函式的每個呼叫內容的資訊。 如需詳細資訊，請參閱文章[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 資料行的名稱。
@@ -678,7 +678,7 @@ TIMESTAMP_STRUCT 值的陣列指標。 這個陣列會儲存在資料錄集，�
 > [!NOTE]
 >  大量資料錄欄位交換只從資料來源，資料傳輸的資料錄集物件。 若要讓您的資料錄集更新，您必須使用 ODBC API 函式`SQLSetPos`。
 
-如需詳細資訊，請參閱文章[資料錄集： 擷取記錄中大量 (ODBC) 所](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)並[資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
+如需詳細資訊，請參閱文章[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)並[資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
 
 ### <a name="example"></a>範例
 
@@ -705,7 +705,7 @@ void RFX_Double_Bulk(
 ### <a name="parameters"></a>參數
 
 *pFX*<br/>
-指標[CFieldExchange](cfieldexchange-class.md)物件。 這個物件包含定義函式的每個呼叫內容的資訊。 如需詳細資訊，請參閱文章[資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+指標[CFieldExchange](cfieldexchange-class.md)物件。 這個物件包含定義函式的每個呼叫內容的資訊。 如需詳細資訊，請參閱文章[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 資料行的名稱。
@@ -725,7 +725,7 @@ void RFX_Double_Bulk(
 > [!NOTE]
 >  大量資料錄欄位交換只從資料來源，資料傳輸的資料錄集物件。 若要讓您的資料錄集更新，您必須使用 ODBC API 函式`SQLSetPos`。
 
-如需詳細資訊，請參閱文章[資料錄集： 擷取記錄中大量 (ODBC) 所](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)並[資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
+如需詳細資訊，請參閱文章[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)並[資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
 
 ### <a name="example"></a>範例
 
@@ -751,12 +751,12 @@ void RFX_Int(
 ### <a name="parameters"></a>參數
 
 *pFX*<br/>
-類別的物件的指標[CFieldExchange](cfieldexchange-class.md)。 這個物件包含定義函式的每個呼叫內容的資訊。 如需作業的詳細資訊`CFieldExchange`可以指定物件，請參閱文章[資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+類別的物件的指標[CFieldExchange](cfieldexchange-class.md)。 這個物件包含定義函式的每個呼叫內容的資訊。 如需作業的詳細資訊`CFieldExchange`可以指定物件，請參閱文章[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 資料行的名稱。
 
-*值*<br/>
+*value*<br/>
 儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源，類型的值，如**int**，取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。
 
 ### <a name="example"></a>範例
@@ -784,7 +784,7 @@ void RFX_Long_Bulk(
 ### <a name="parameters"></a>參數
 
 *pFX*<br/>
-指標[CFieldExchange](cfieldexchange-class.md)物件。 這個物件包含定義函式的每個呼叫內容的資訊。 如需詳細資訊，請參閱文章[資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+指標[CFieldExchange](cfieldexchange-class.md)物件。 這個物件包含定義函式的每個呼叫內容的資訊。 如需詳細資訊，請參閱文章[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 資料行的名稱。
@@ -804,7 +804,7 @@ void RFX_Long_Bulk(
 > [!NOTE]
 >  大量資料錄欄位交換只從資料來源，資料傳輸的資料錄集物件。 若要讓您的資料錄集更新，您必須使用 ODBC API 函式`SQLSetPos`。
 
-如需詳細資訊，請參閱文章[資料錄集： 擷取記錄中大量 (ODBC) 所](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)並[資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
+如需詳細資訊，請參閱文章[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)並[資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
 
 ### <a name="example"></a>範例
 
@@ -831,7 +831,7 @@ void RFX_Single_Bulk(
 ### <a name="parameters"></a>參數
 
 *pFX*<br/>
-指標[CFieldExchange](cfieldexchange-class.md)物件。 這個物件包含定義函式的每個呼叫內容的資訊。 如需詳細資訊，請參閱文章[資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+指標[CFieldExchange](cfieldexchange-class.md)物件。 這個物件包含定義函式的每個呼叫內容的資訊。 如需詳細資訊，請參閱文章[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 資料行的名稱。
@@ -851,7 +851,7 @@ void RFX_Single_Bulk(
 > [!NOTE]
 >  大量資料錄欄位交換只從資料來源，資料傳輸的資料錄集物件。 若要讓您的資料錄集更新，您必須使用 ODBC API 函式`SQLSetPos`。
 
-如需詳細資訊，請參閱文章[資料錄集： 擷取記錄中大量 (ODBC) 所](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)並[資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
+如需詳細資訊，請參閱文章[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)並[資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
 
 ### <a name="example"></a>範例
 
@@ -879,7 +879,7 @@ void RFX_Text_Bulk(
 ### <a name="parameters"></a>參數
 
 *pFX*<br/>
-指標[CFieldExchange](cfieldexchange-class.md)物件。 這個物件包含定義函式的每個呼叫內容的資訊。 如需詳細資訊，請參閱文章[資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+指標[CFieldExchange](cfieldexchange-class.md)物件。 這個物件包含定義函式的每個呼叫內容的資訊。 如需詳細資訊，請參閱文章[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 *szName*<br/>
 資料行的名稱。
@@ -902,7 +902,7 @@ LPSTR 值的陣列指標。 這個陣列會儲存在資料錄集，從資料來�
 > [!NOTE]
 >  大量資料錄欄位交換只從資料來源，資料傳輸的資料錄集物件。 若要讓您的資料錄集更新，您必須使用 ODBC API 函式`SQLSetPos`。
 
-如需詳細資訊，請參閱文章[資料錄集： 擷取記錄中大量 (ODBC) 所](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)並[資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
+如需詳細資訊，請參閱文章[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)並[資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。
 
 ### <a name="example"></a>範例
 
@@ -950,7 +950,7 @@ void AFXAPI DFX_Binary(
 *szName*<br/>
 資料行的名稱。
 
-*值*<br/>
+*value*<br/>
 儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源，類型的值，如[CByteArray](cbytearray-class.md)，取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。
 
 *nPreAllocSize*<br/>
@@ -996,7 +996,7 @@ void AFXAPI DFX_Bool(
 *szName*<br/>
 資料行的名稱。
 
-*值*<br/>
+*value*<br/>
 儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源，型別 BOOL，值是取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。
 
 *dwBindOptions*<br/>
@@ -1039,7 +1039,7 @@ void AFXAPI DFX_Byte(
 *szName*<br/>
 資料行的名稱。
 
-*值*<br/>
+*value*<br/>
 儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源，位元組，類型的值是取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。
 
 *dwBindOptions*<br/>
@@ -1082,7 +1082,7 @@ void AFXAPI DFX_Currency(
 *szName*<br/>
 資料行的名稱。
 
-*值*<br/>
+*value*<br/>
 儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源，這個值取自指定的資料成員型別[COleCurrency](colecurrency-class.md)。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。
 
 *dwBindOptions*<br/>
@@ -1125,7 +1125,7 @@ void AFXAPI DFX_DateTime(
 *szName*<br/>
 資料行的名稱。
 
-*值*<br/>
+*value*<br/>
 儲存在指定資料成員中的值，即要傳輸的值。 此函式會參考[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)物件。 從資料錄集傳輸至資料來源，這個值是取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。
 
 *dwBindOptions*<br/>
@@ -1171,7 +1171,7 @@ void AFXAPI DFX_Double(
 *szName*<br/>
 資料行的名稱。
 
-*值*<br/>
+*value*<br/>
 儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源，類型的值，如**double**，取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。
 
 *dwBindOptions*<br/>
@@ -1214,7 +1214,7 @@ void AFXAPI DFX_Long(
 *szName*<br/>
 資料行的名稱。
 
-*值*<br/>
+*value*<br/>
 儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源，類型的值，如**長**，取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。
 
 *dwBindOptions*<br/>
@@ -1258,7 +1258,7 @@ void AFXAPI DFX_LongBinary(
 *szName*<br/>
 資料行的名稱。
 
-*值*<br/>
+*value*<br/>
 儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源，類型的值，如[CLongBinary](clongbinary-class.md)，取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。
 
 *dwPreAllocSize*<br/>
@@ -1304,7 +1304,7 @@ void AFXAPI DFX_Short(
 *szName*<br/>
 資料行的名稱。
 
-*值*<br/>
+*value*<br/>
 儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源，類型的值，如**簡短**，取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。
 
 *dwBindOptions*<br/>
@@ -1350,7 +1350,7 @@ void AFXAPI DFX_Single(
 *szName*<br/>
 資料行的名稱。
 
-*值*<br/>
+*value*<br/>
 儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源，類型的值，如**浮點數**，取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。
 
 *dwBindOptions*<br/>
@@ -1394,7 +1394,7 @@ void AFXAPI DFX_Text(
 *szName*<br/>
 資料行的名稱。
 
-*值*<br/>
+*value*<br/>
 儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源，類型的值，如[CString](../../atl-mfc-shared/reference/cstringt-class.md)，取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。
 
 *nPreAllocSize*<br/>
@@ -1440,4 +1440,3 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 [CRecordset::DoFieldExchange](crecordset-class.md#dofieldexchange)<br/>
 [CRecordset::DoBulkFieldExchange](crecordset-class.md#dobulkfieldexchange)<br/>
 [CDaoRecordset::DoFieldExchange](cdaorecordset-class.md#dofieldexchange)
-

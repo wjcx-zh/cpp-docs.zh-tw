@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: 938df6599ca3bfec3e08e77d7a60106133f54324
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ee1820601f80ed270221b3186188793f7fdcbe08
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178534"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301450"
 ---
 # <a name="ctoolbar-class"></a>CToolBar 類別
 
@@ -192,7 +192,7 @@ virtual BOOL Create(
 *pParentWnd*<br/>
 工具列的父視窗的指標。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 工具列的樣式。 支援的其他工具列樣式如下：
 
 - CBRS_TOP 控制列是在框架視窗的頂端。
@@ -253,7 +253,7 @@ virtual BOOL CreateEx(
 *dwCtrlStyle*<br/>
 建立內嵌的其他樣式[CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)物件。 根據預設，此值設為 TBSTYLE_FLAT。 Toolbar 樣式的完整清單，請參閱 < *cheaderctrl:: Create*。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 工具列的樣式。 請參閱[工具列控制項和按鈕樣式](/windows/desktop/Controls/toolbar-control-and-button-styles)Windows SDK 中針對適當的樣式清單。
 
 *rcBorders*<br/>

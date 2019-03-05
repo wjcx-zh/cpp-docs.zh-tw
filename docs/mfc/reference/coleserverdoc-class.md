@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: b9d339b11b3e1fa8452c845cfa8a8f41c5194f8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3069c5f53b37984cbeae8bee1379bb8b0c36ccc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604941"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285278"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc 類別
 
@@ -148,7 +148,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 |[COleServerDoc::OnClose](#onclose)|當容器要求關閉的文件時，由架構呼叫。|
 |[COleServerDoc::OnExecOleCmd](#onexecolecmd)|執行指定的命令，則會顯示命令的說明。|
 |[COleServerDoc::OnFrameWindowActivate](#onframewindowactivate)|容器的框架視窗啟用或停用時由架構呼叫。|
-|[Coleserveritem](#ongetembeddeditem)|呼叫以取得`COleServerItem`，表示整個文件，用來取得內嵌項目。 所需的實作。|
+|[COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem)|呼叫以取得`COleServerItem`，表示整個文件，用來取得內嵌項目。 所需的實作。|
 |[COleServerDoc::OnReactivateAndUndo](#onreactivateandundo)|由架構呼叫以復原期間就地編輯所做的變更。|
 |[COleServerDoc::OnSetHostNames](#onsethostnames)|當容器設定內嵌物件的視窗標題時，由架構呼叫。|
 |[COleServerDoc::OnSetItemRects](#onsetitemrects)|由架構呼叫以放就地編輯框架視窗內的容器應用程式視窗。|
@@ -168,7 +168,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 
 您需要一個`COleServerDoc`-衍生的每一種伺服器文件的應用程式支援的類別。 例如，如果您的伺服器應用程式支援的工作表和圖表，您需要兩個`COleServerDoc`-衍生的類別。
 
-如需有關伺服器的詳細資訊，請參閱文章[伺服器： 實作伺服器](../../mfc/servers-implementing-a-server.md)。
+如需有關伺服器的詳細資訊，請參閱文章[伺服器：實作伺服器](../../mfc/servers-implementing-a-server.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -684,7 +684,7 @@ virtual void OnFrameWindowActivate(BOOL bActivate);
 
 如需詳細資訊，請參閱文章[啟用](../../mfc/activation-cpp.md)...
 
-##  <a name="ongetembeddeditem"></a>  Coleserveritem
+##  <a name="ongetembeddeditem"></a>  COleServerDoc::OnGetEmbeddedItem
 
 當容器應用程式呼叫伺服器應用程式建立或編輯內嵌項目時，由架構呼叫。
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - vc.appwiz.mfc.exe.compdoc
 ms.assetid: 42e1af83-12c4-438d-92eb-13835afdb148
-ms.openlocfilehash: 97443d4846141f4402e18bb19893fcac9b4f46da
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b2ff4f312132b690223f124fd8790d0e2c172b7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524049"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289672"
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>MFC 應用程式精靈、複合文件支援
 
@@ -28,7 +28,7 @@ ms.locfileid: "51524049"
   |選項|描述|
   |------------|-----------------|
   |**無**|表示物件連結與嵌入 (OLE) 不支援。 根據預設，應用程式精靈 建立不含 ActiveX 支援應用程式。|
-  |**容器**|包含連結和內嵌的物件。|
+  |**Container**|包含連結和內嵌的物件。|
   |**迷你伺服器**|表示應用程式可以建立和管理複合文件物件。 請注意，迷你伺服器無法執行獨立存在，而且只支援內嵌的項目。|
   |**完整伺服器**|表示應用程式可以建立和管理複合文件物件。 完整的伺服器可執行獨立和同時支援連結與內嵌項目。|
   |**容器/全功能伺服器**|指出應用程式可以同時為容器和伺服器。 容器是可以將內嵌或連結的項目併入本身的文件的應用程式。 可以建立使用的自動化項目由容器應用程式的應用程式伺服器。|
@@ -46,4 +46,3 @@ ms.locfileid: "51524049"
 ## <a name="see-also"></a>另請參閱
 
 [MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)
-

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CArchiveException [MFC], m_cause
 - CArchiveException [MFC], m_strFileName
 ms.assetid: da31a127-e86c-41d1-b0b6-bed0865b1b49
-ms.openlocfilehash: 6fe475ebd90ff13fec6a2835b6fdd4cf3d6034a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 731735bccf9225e67d82b1fe90336c92a630b368
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476877"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283562"
 ---
 # <a name="carchiveexception-class"></a>CArchiveException 類別
 
@@ -74,7 +74,7 @@ CArchiveException(
 
 ### <a name="parameters"></a>參數
 
-*原因*<br/>
+*cause*<br/>
 表示例外狀況原因的列舉型別變數。 如需列舉值的清單，請參閱 < [m_cause](#m_cause)資料成員。
 
 *lpszArchiveName*<br/>
@@ -135,4 +135,3 @@ CString m_strFileName;
 [CArchive 類別](../../mfc/reference/carchive-class.md)<br/>
 [AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception)<br/>
 [例外狀況處理](../../mfc/reference/exception-processing.md)
-

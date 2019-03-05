@@ -7,12 +7,12 @@ helpviewer_keywords:
 - styles [MFC], CSliderCtrl
 - styles [MFC], slider controls
 ms.assetid: 64c491fc-5af1-4f97-ae30-854071b3dc02
-ms.openlocfilehash: 7b143d0d27bcb8ee975d4056cf0a307db7b330c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6765445552826b71cca278c1fbbc66e500cb75a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588730"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296839"
 ---
 # <a name="slider-control-styles"></a>滑桿控制項樣式
 
@@ -32,4 +32,3 @@ TBS_AUTOTICKS 樣式會建立在其範圍值中有針對每個增量有刻度記
 
 [使用 CSliderCtrl](../mfc/using-csliderctrl.md)<br/>
 [控制項](../mfc/controls-mfc.md)
-

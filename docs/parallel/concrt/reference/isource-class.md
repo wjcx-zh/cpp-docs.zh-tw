@@ -16,16 +16,17 @@ f1_keywords:
 helpviewer_keywords:
 - ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-ms.openlocfilehash: 4e96dc11455015a83af9be545ba15c96b5e2f779
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b0704f3d666eca08bafb33f9236709478d347d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620515"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288762"
 ---
 # <a name="isource-class"></a>ISource 類別
 
-`ISource` 類別是所有來源區塊的介面。 來源區塊會將訊息傳播至 `ITarget` 區塊。
+
+  `ISource` 類別是所有來源區塊的介面。 來源區塊會將訊息傳播至 `ITarget` 區塊。
 
 ## <a name="syntax"></a>語法
 
@@ -150,7 +151,7 @@ virtual message<T>* consume(
 
 `consume`方法是類似`accept`，但必須一律加上呼叫`reserve`傳回**true**。
 
-##  <a name="dtor"></a> ~ ISource
+##  <a name="dtor"></a> ~ISource
 
 終結`ISource`物件。
 

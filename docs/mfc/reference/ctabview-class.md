@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTabView [MFC], IsScrollBar
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
-ms.openlocfilehash: 38c56cd5d6f464cd560c6671f4ebf0a9c118d020
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ac62d04c38dbddda90d2f33a9c14c9c131fcd9c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443781"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326591"
 ---
 # <a name="ctabview-class"></a>CTabView 類別
 
@@ -65,7 +65,7 @@ class CTabbedView : public CView
 
 例如，您可能可以用不同的方式表示的文件： 為試算表、 圖表、 可編輯的表單等等。 您可以建立繪圖的資料，視需要的個別檢視、 插入到您`CTabView`-衍生的物件，並讓它們而不需要任何額外的程式碼索引標籤。
 
-[TabbedView 範例： MFC 索引標籤式檢視應用程式](../../visual-cpp-samples.md)說明的使用方式`CTabView`。
+[TabbedView 範例：MFC 索引標籤式檢視應用程式](../../visual-cpp-samples.md)說明的使用方式`CTabView`。
 
 ## <a name="example"></a>範例
 
@@ -186,7 +186,7 @@ virtual void OnActivateView(CView* view);
 
 ### <a name="parameters"></a>參數
 
-*檢視*<br/>
+*view*<br/>
 [in]若要檢視的指標。
 
 ### <a name="remarks"></a>備註

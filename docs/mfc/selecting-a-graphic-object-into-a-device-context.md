@@ -9,12 +9,12 @@ helpviewer_keywords:
 - device contexts, selecting graphic objects into
 - device contexts, graphic objects [MFC]
 ms.assetid: cf54a330-63ef-421f-83eb-90ec7bd82eef
-ms.openlocfilehash: c879369d445a9330139eff89be4ad8153252bfa1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7fb1507c1200da4cdf44627557ff6993e927d51e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438816"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304804"
 ---
 # <a name="selecting-a-graphic-object-into-a-device-context"></a>選取圖形物件放入裝置內容中
 
@@ -39,4 +39,3 @@ ms.locfileid: "50438816"
 ## <a name="see-also"></a>另請參閱
 
 [圖形物件](../mfc/graphic-objects.md)
-

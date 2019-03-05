@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: 679cdc5b5a0a85ade09fe1999e8de40300a8ae8e
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: fe9b282fd248f8dd03a6a7f078c03866d1b14b2d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694383"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305012"
 ---
 # <a name="cview-class"></a>CView 類別
 
@@ -90,7 +90,7 @@ class AFX_NOVTABLE CView : public CWnd
 |[CView::OnDragScroll](#ondragscroll)|呼叫以判斷是否要將資料指標拖曳至視窗的捲軸的區域。|
 |[CView::OnDrop](#ondrop)|已經卸除檢視時，預設處理常式的拖放區域到的項目時呼叫。|
 |[CView::OnDropEx](#ondropex)|已經卸除到檢視中，主要的處理常式的拖放區域的項目時呼叫。|
-|[Cview:: Oninitialupdate](#oninitialupdate)|檢視第一次附加至文件之後呼叫。|
+|[CView::OnInitialUpdate](#oninitialupdate)|檢視第一次附加至文件之後呼叫。|
 |[CView::OnPrepareDC](#onpreparedc)|之前呼叫`OnDraw`螢幕上的呼叫成員函式或`OnPrint`成員函式稱為列印或預覽列印。|
 |[CView::OnScroll](#onscroll)|當 OLE 項目拖曳超出檢視的邊界時呼叫。|
 |[CView::OnScrollBy](#onscrollby)|捲動檢視，其中包含作用中的就地 OLE 項目時呼叫。|
@@ -102,7 +102,7 @@ class AFX_NOVTABLE CView : public CWnd
 |[CView::OnActivateFrame](#onactivateframe)|包含檢視的框架視窗啟用或停用時呼叫。|
 |[CView::OnActivateView](#onactivateview)|檢視啟動時呼叫。|
 |[CView::OnBeginPrinting](#onbeginprinting)|列印工作開始; 時呼叫覆寫，以配置圖形裝置介面 (GDI) 資源。|
-|[Cview:: Ondraw](#ondraw)|呼叫以呈現螢幕顯示、 列印或預覽列印文件中的影像。 所需的實作。|
+|[CView::OnDraw](#ondraw)|呼叫以呈現螢幕顯示、 列印或預覽列印文件中的影像。 所需的實作。|
 |[CView::OnEndPrinting](#onendprinting)|當列印工作結束; 時呼叫若要解除配置 GDI 資源覆寫。|
 |[CView::OnEndPrintPreview](#onendprintpreview)|結束 [預覽] 模式時呼叫。|
 |[CView::OnPreparePrinting](#onprepareprinting)|在列印或預覽; 文件之前呼叫覆寫以初始化 [列印] 對話方塊。|
@@ -334,9 +334,9 @@ virtual DROPEFFECT OnDragEnter(
 指向[COleDataObject](../../mfc/reference/coledataobject-class.md)被拖曳到檢視的卸除區域。
 
 *dwKeyState*<br/>
-包含的輔助按鍵的狀態。 這是任意數目的下列組合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
+包含的輔助按鍵的狀態。 這是任意數目的下列組合：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
 
-*點*<br/>
+*point*<br/>
 目前滑鼠位置相對於用戶端區域的檢視。
 
 ### <a name="return-value"></a>傳回值
@@ -357,7 +357,7 @@ DROPEFFECT 值的列舉型別，這表示如果使用者在這個位置卸除該
 
 預設實作是不執行任何動作，並傳回 DROPEFFECT_NONE。
 
-覆寫這個函式來準備進行後續的呼叫來[OnDragOver](#ondragover)成員函式。 從其中擷取從資料物件所需的任何資料，在此階段供稍後用於`OnDragOver`成員函式。 檢視也應該更新目前使用者的視覺化回饋提供。 如需詳細資訊，請參閱文章[拖放： 實作置放目標](../../mfc/drag-and-drop-implementing-a-drop-target.md)。
+覆寫這個函式來準備進行後續的呼叫來[OnDragOver](#ondragover)成員函式。 從其中擷取從資料物件所需的任何資料，在此階段供稍後用於`OnDragOver`成員函式。 檢視也應該更新目前使用者的視覺化回饋提供。 如需詳細資訊，請參閱文章[將拖放：實作置放目標](../../mfc/drag-and-drop-implementing-a-drop-target.md)。
 
 ##  <a name="ondragleave"></a>  CView::OnDragLeave
 
@@ -388,9 +388,9 @@ virtual DROPEFFECT OnDragOver(
 指向[COleDataObject](../../mfc/reference/coledataobject-class.md)被拖曳到置放目標。
 
 *dwKeyState*<br/>
-包含的輔助按鍵的狀態。 這是任意數目的下列組合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
+包含的輔助按鍵的狀態。 這是任意數目的下列組合：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
 
-*點*<br/>
+*point*<br/>
 目前的滑鼠位置相對於檢視用戶端區域。
 
 ### <a name="return-value"></a>傳回值
@@ -411,7 +411,7 @@ DROPEFFECT 值的列舉型別，這表示如果使用者在這個位置卸除該
 
 預設實作是不執行任何動作，並傳回 DROPEFFECT_NONE。
 
-此函式以使用者的視覺化回饋提供拖曳作業期間會覆寫。 因為連續呼叫此函式，其內所含的任何程式碼應該最佳化盡量。 如需詳細資訊，請參閱文章[拖放： 實作置放目標](../../mfc/drag-and-drop-implementing-a-drop-target.md)。
+此函式以使用者的視覺化回饋提供拖曳作業期間會覆寫。 因為連續呼叫此函式，其內所含的任何程式碼應該最佳化盡量。 如需詳細資訊，請參閱文章[將拖放：實作置放目標](../../mfc/drag-and-drop-implementing-a-drop-target.md)。
 
 ##  <a name="ondragscroll"></a>  CView::OnDragScroll
 
@@ -426,9 +426,9 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="parameters"></a>參數
 
 *dwKeyState*<br/>
-包含的輔助按鍵的狀態。 這是任意數目的下列組合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
+包含的輔助按鍵的狀態。 這是任意數目的下列組合：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
 
-*點*<br/>
+*point*<br/>
 包含的資料指標，像素為單位，相對於畫面的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -449,9 +449,9 @@ DROPEFFECT 值的列舉型別，這表示如果使用者在這個位置卸除該
 
 ### <a name="remarks"></a>備註
 
-當您想要提供特殊的行為，這個事件時，請覆寫這個函式。 預設實作會自動捲動 windows 游標拖曳到 預設的捲動區域內的每個視窗的框線時。如需詳細資訊，請參閱文章[拖放： 實作置放目標](../../mfc/drag-and-drop-implementing-a-drop-target.md)。
+當您想要提供特殊的行為，這個事件時，請覆寫這個函式。 預設實作會自動捲動 windows 游標拖曳到 預設的捲動區域內的每個視窗的框線時。如需詳細資訊，請參閱文章[將拖放：實作置放目標](../../mfc/drag-and-drop-implementing-a-drop-target.md)。
 
-##  <a name="ondraw"></a>  Cview:: Ondraw
+##  <a name="ondraw"></a>  CView::OnDraw
 
 由架構呼叫以呈現文件的影像。
 
@@ -496,7 +496,7 @@ virtual BOOL OnDrop(
 
 - DROPEFFECT_LINK 建立資料物件與其伺服器之間的連結。
 
-*點*<br/>
+*point*<br/>
 目前的滑鼠位置相對於檢視用戶端區域。
 
 ### <a name="return-value"></a>傳回值
@@ -532,10 +532,10 @@ virtual DROPEFFECT OnDropEx(
 *dropDefault*<br/>
 使用者選擇針對根據目前的索引鍵狀態預設拖放作業效果。 它可能是 DROPEFFECT_NONE。 置放效果是 < 備註 > 一節所述。
 
-*下拉清單*<br/>
+*dropList*<br/>
 拖曳來源所支援的拖放效果的清單。 可以使用的位元 OR 組合置放效果值 ( **&#124;**) 作業。 置放效果是 < 備註 > 一節所述。
 
-*點*<br/>
+*point*<br/>
 目前的滑鼠位置相對於檢視用戶端區域。
 
 ### <a name="return-value"></a>傳回值
@@ -618,7 +618,7 @@ virtual void OnEndPrintPreview(
 *pInfo*<br/>
 指向描述目前列印工作的 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 結構。
 
-*點*<br/>
+*point*<br/>
 上次在預覽模式中顯示的頁面上指定的點。
 
 *pView*<br/>

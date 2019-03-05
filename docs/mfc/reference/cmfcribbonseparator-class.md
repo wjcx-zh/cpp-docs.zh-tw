@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: 05ac8b26cb6b6e7d8e622ecbaac1d4a81bfd35e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4806582a226590459a104f64499ab6ae541570e7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565928"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302763"
 ---
 # <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator 類別
 
@@ -152,7 +152,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 
 ### <a name="parameters"></a>參數
 
-*src*<br/>
+*Src*<br/>
 [in]要複製的來源功能區項目。
 
 ##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize
@@ -233,7 +233,7 @@ virtual void OnDrawOnList(
 |-|-|
 |參數|描述|
 |*pDC*|[in]裝置內容指標。|
-|*先把 strText*|[in]在清單上顯示的文字。|
+|*strText*|[in]在清單上顯示的文字。|
 |*nTextOffset*|[in]與文字之間的週框矩形左邊的間距。|
 |*rect*|[in]指定週框矩形。|
 |*bIsSelected*|[in]略過。|

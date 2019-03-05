@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-ms.openlocfilehash: f66936c597b8c595dc21ae6994d7af0477e8d2aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcc79f781be3a0292398e4f211ea55f5403b6b8f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528644"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302876"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer 類別
 
@@ -53,7 +53,7 @@ class COleTemplateServer : public COleObjectFactory
 
 `COleTemplateServer` 覆寫`OnCreateInstance`所定義的成員函式`COleObjectFactory`。 此成員函式是由建立適當類型的 c + + 物件架構呼叫。
 
-如需有關伺服器的詳細資訊，請參閱[伺服器： 實作伺服器](../../mfc/servers-implementing-a-server.md)。
+如需有關伺服器的詳細資訊，請參閱[伺服器：實作伺服器](../../mfc/servers-implementing-a-server.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

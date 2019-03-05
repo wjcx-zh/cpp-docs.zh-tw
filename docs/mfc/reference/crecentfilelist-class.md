@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CRecentFileList [MFC], UpdateMenu
 - CRecentFileList [MFC], WriteList
 ms.assetid: a77f0524-7584-4582-849a-7e97b76d186e
-ms.openlocfilehash: e38f63090e3de2a73c60618a36d25a397d595dac
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 30536d91d057de4e551b5a28200dd903e12713b3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657418"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304830"
 ---
 # <a name="crecentfilelist-class"></a>CRecentFileList 類別
 
@@ -137,7 +137,7 @@ CRecentFileList(
 
 ### <a name="parameters"></a>參數
 
-*n*<br/>
+*nStart*<br/>
 在功能表顯示的 MRU （最近使用的） 檔案清單編號的位移。
 
 *lpszSection*<br/>
@@ -206,7 +206,7 @@ int GetSize() const;
 
 在目前的檔案數目最常使用 (MRU) 檔案清單。
 
-##  <a name="operator_at"></a>  CRecentFileList::operator]
+##  <a name="operator_at"></a>  CRecentFileList::operator [ ]
 
 多載註標 (`[]`) 運算子會傳回單一`CString`中以零為起始的索引所指定*nIndex*。
 
@@ -264,4 +264,3 @@ virtual void WriteList();
 ## <a name="see-also"></a>另請參閱
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

@@ -40,12 +40,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-ms.openlocfilehash: 2045d2d1c6a848378ac55114b61177d386b14fab
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 31008b398d17ac0c226f9359745067c4fefc08a9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523919"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326610"
 ---
 # <a name="accelerator-class"></a>accelerator 類別
 
@@ -133,7 +133,7 @@ class accelerator;
 
 **命名空間：** 並行
 
-##  <a name="dtor"></a> </a> ~ accelerator
+##  <a name="dtor"></a> </a> ~accelerator
 
 終結`accelerator`物件。
 
@@ -505,7 +505,7 @@ static inline bool set_default(std::wstring _Path);
 
 ### <a name="parameters"></a>參數
 
-*路徑 （_p)*<br/>
+*_Path*<br/>
 要在加速器的路徑。
 
 ### <a name="return-value"></a>傳回值
@@ -561,7 +561,7 @@ __declspec(property(get= get_supports_limited_double_precision)) bool supports_l
 __declspec(property(get= get_version)) unsigned int version;
 ```
 
-##  <a name="dtor"></a> </a> ~ accelerator_view
+##  <a name="dtor"></a> </a> ~accelerator_view
 
 終結[accelerator_view](accelerator-view-class.md)物件。
 
@@ -604,7 +604,7 @@ concurrency::completion_future create_marker();
 
 若要追蹤的所有目前提交至此的命令完成的未來`accelerator_view`物件。
 
-##  <a name="flush"></a> 排清
+##  <a name="flush"></a> flush
 
 提交所有暫止命令排入佇列[accelerator_view](accelerator-view-class.md)至加速器以執行的物件。
 

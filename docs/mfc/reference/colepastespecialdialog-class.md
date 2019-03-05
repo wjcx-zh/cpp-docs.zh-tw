@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 247514c37ef62987baa31be83efc73e05735904a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d135a2a254f71a4123a8bd338e1d6e9f87b74c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530022"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303309"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog 類別
 
@@ -146,12 +146,12 @@ void AddFormat(
 *bEnableIcon*<br/>
 旗標，決定是否要在清單方塊中選擇這種格式時，啟用以圖示顯示核取方塊。
 
-*閃爍*<br/>
+*bLink*<br/>
 旗標，決定是否要在清單方塊中選擇這種格式時，啟用 [貼上連結] 選項按鈕。
 
 ### <a name="remarks"></a>備註
 
-在呼叫此函式時，可以新增 CF_TEXT 或 CF_TIFF 之類的標準格式，或是自訂的格式，您的應用程式已向系統。 如需有關如何將資料物件貼到您的應用程式的詳細資訊，請參閱[資料物件和資料來源： 操作](../../mfc/data-objects-and-data-sources-manipulation.md)。
+在呼叫此函式時，可以新增 CF_TEXT 或 CF_TIFF 之類的標準格式，或是自訂的格式，您的應用程式已向系統。 如需有關如何將資料物件貼到您的應用程式的詳細資訊，請參閱[資料物件和資料來源：操作](../../mfc/data-objects-and-data-sources-manipulation.md)。
 
 如需詳細資訊，請參閱 < [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed)列舉型別並[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中的結構。
 
@@ -195,7 +195,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
 
 - CF_METAFILEPICT
 
-- **「 內嵌的物件 」**
+- **"Embedded Object"**
 
 - （選擇性）**[連結來源]**
 

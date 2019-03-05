@@ -8,12 +8,12 @@ helpviewer_keywords:
 - screen output classes [MFC]
 - output classes [MFC]
 ms.assetid: e907bd89-38b5-47c9-b76a-95e0bf3bb41d
-ms.openlocfilehash: 6b1e51e2d4c8e8bed39fe9076124879c02f1ffb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96bda696a310fdd59a124abea2d29bc5001c3ab1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614986"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303207"
 ---
 # <a name="drawing-tool-classes"></a>繪圖工具類別
 
@@ -43,4 +43,3 @@ GDI 繪圖工具基底類別。
 ## <a name="see-also"></a>另請參閱
 
 [類別概觀](../mfc/class-library-overview.md)
-

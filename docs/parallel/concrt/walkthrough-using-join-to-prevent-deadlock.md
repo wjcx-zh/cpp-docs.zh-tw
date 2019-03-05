@@ -7,12 +7,12 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: b62f4007a79faaff479e4e8ff998a8b48e4d5dd1
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 2f9e0f50866ed0635fbaa4b700dbf522f09458d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175908"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303049"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>逐步解說：使用聯結以避免死結
 
@@ -26,7 +26,7 @@ ms.locfileid: "52175908"
 
 - [非同步代理程式](../../parallel/concrt/asynchronous-agents.md)
 
-- [逐步解說：建立代理程式架構應用程式](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
+- [逐步解說：建立代理程式型的應用程式](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
 
 - [非同步訊息區](../../parallel/concrt/asynchronous-message-blocks.md)
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: ffaf560361da2fd54febb5e38af121ad5149f012
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 810d77abd37ff2c6f29e980b84645d16526744d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176662"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305233"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>並行執行階段概觀
 
@@ -143,4 +143,3 @@ Lambda 運算式是一項重要的新 Visual C++ 語言功能，因為此運算�
 並行執行階段被提供為 C 執行階段程式庫 (CRT) 的一部分。 如需如何建置使用 CRT 的應用程式的詳細資訊，請參閱[CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。
 
 [[靠上](#top)]
-

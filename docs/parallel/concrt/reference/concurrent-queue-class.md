@@ -16,16 +16,17 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-ms.openlocfilehash: 36e4b5956e0739b44481fbabe6114c9648e7b229
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5bbd361dc2dedc24c2a59050ffa680517186494
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477086"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304687"
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue 類別
 
-`concurrent_queue` 類別是一種序列容器類別，允許以先進先出的方式存取其項目。 它會啟用一組有限的並行安全作業，例如 `push` 和 `try_pop` 等。
+
+  `concurrent_queue` 類別是一種序列容器類別，允許以先進先出的方式存取其項目。 它會啟用一組有限的並行安全作業，例如 `push` 和 `try_pop` 等。
 
 ## <a name="syntax"></a>語法
 
@@ -131,10 +132,10 @@ concurrent_queue(_InputIterator _Begin,
 *_OtherQ*<br/>
 要從中複製或移動項目的來源 `concurrent_queue` 物件。
 
-*（_b)*<br/>
+*_Begin*<br/>
 項目範圍中要複製的第一個項目位置。
 
-*（_e)*<br/>
+*_End*<br/>
 項目範圍之外要複製的第一個項目位置。
 
 ### <a name="remarks"></a>備註
@@ -157,7 +158,7 @@ concurrent_queue(_InputIterator _Begin,
 ~concurrent_queue();
 ```
 
-##  <a name="empty"></a> 空白
+##  <a name="empty"></a> empty
 
 如果目前的並行佇列是空的測試會呼叫這個方法。 這個方法是並行安全的。
 
@@ -185,7 +186,7 @@ allocator_type get_allocator() const;
 
 一份用來建構並行佇列的配置器。
 
-##  <a name="push"></a> 推播
+##  <a name="push"></a> push
 
 加入佇列的並行佇列在尾端項目。 這個方法是並行安全的。
 

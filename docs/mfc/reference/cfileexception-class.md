@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: e6b1b25f9125701a212f379c925a80ff888d58f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3514c76d4136fe2bc0b096cc382e6f7f4dd3392
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485812"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305116"
 ---
 # <a name="cfileexception-class"></a>CFileException 類別
 
@@ -98,7 +98,7 @@ CFileException(
 
 ### <a name="parameters"></a>參數
 
-*原因*<br/>
+*cause*<br/>
 表示例外狀況原因的列舉型別變數。 請參閱[CFileException::m_cause](#m_cause)取得一份可能的值。
 
 *lOsError*<br/>
@@ -187,35 +187,35 @@ int m_cause;
 
 此資料成員是公用類型的變數**int**。列舉程式及其意義如下：
 
-- `CFileException::none` 0： 未發生任何錯誤。
+- `CFileException::none` 0:不發生任何錯誤。
 
-- `CFileException::genericException` 1： 發生意外的錯誤。
+- `CFileException::genericException` 1:發生未指定的錯誤。
 
-- `CFileException::fileNotFound` 2： 找不到檔案。
+- `CFileException::fileNotFound` 2:找不到檔案。
 
-- `CFileException::badPath` 3： 全部或部分路徑無效。
+- `CFileException::badPath` 3:全部或部分路徑無效。
 
-- `CFileException::tooManyOpenFiles` 4： 已超過允許的開啟檔案數目。
+- `CFileException::tooManyOpenFiles` 4:已超過允許的開啟檔案數目。
 
-- `CFileException::accessDenied` 5： 無法存取檔案。
+- `CFileException::accessDenied` 5:無法存取檔案。
 
-- `CFileException::invalidFile` 6： 嘗試使用無效的檔案控制代碼。
+- `CFileException::invalidFile` 6:嘗試使用無效的檔案控制代碼。
 
-- `CFileException::removeCurrentDir` 7： 無法移除目前工作目錄。
+- `CFileException::removeCurrentDir` 7:無法移除目前工作目錄。
 
-- `CFileException::directoryFull` 8： 有沒有更多的目錄項目。
+- `CFileException::directoryFull` 8:沒有更多的目錄項目。
 
-- `CFileException::badSeek` 9： 嘗試設定檔案指標時發生錯誤。
+- `CFileException::badSeek` 9:嘗試設定檔案指標時發生錯誤。
 
-- `CFileException::hardIO` 10： 硬體錯誤。
+- `CFileException::hardIO` 10:發生硬體錯誤。
 
-- `CFileException::sharingViolation` 11： 共用。未載入 EXE，或共用的區域被鎖定。
+- `CFileException::sharingViolation` 11:共用。未載入 EXE，或共用的區域被鎖定。
 
-- `CFileException::lockViolation` 12： 嘗試鎖定先前已鎖定的區域。
+- `CFileException::lockViolation` 12:嘗試鎖定先前已鎖定的區域。
 
-- `CFileException::diskFull` 14： 磁碟已滿。
+- `CFileException::diskFull` 14:磁碟已滿。
 
-- `CFileException::endOfFile` 15： 已達到檔案結尾。
+- `CFileException::endOfFile` 15:已達到檔案結尾。
 
     > [!NOTE]
     >  這些 `CFileException` 原因列舉程式不同於 `CArchiveException` 原因列舉程式。
@@ -313,4 +313,3 @@ static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 [CException 類別](../../mfc/reference/cexception-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [例外狀況處理](../../mfc/reference/exception-processing.md)
-

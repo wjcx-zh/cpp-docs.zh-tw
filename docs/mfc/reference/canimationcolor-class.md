@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CAnimationColor [MFC], m_gValue
 - CAnimationColor [MFC], m_rValue
 ms.assetid: 88bfabd4-efeb-4652-87e8-304253d8e48c
-ms.openlocfilehash: 6037dd11ddef10500d9468bdf9fa188901aad739
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee6003a22db78c2a510579c3d717fec887f8a6ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536681"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304326"
 ---
 # <a name="canimationcolor-class"></a>CAnimationColor 類別
 
@@ -78,7 +78,7 @@ class CAnimationColor : public CAnimationBaseObject;
 |名稱|描述|
 |----------|-----------------|
 |[CAnimationColor::operator COLORREF](#operator_colorref)||
-|[CAnimationColor::operator =](#operator_eq)|將色彩指派給 CAnimationColor 中。|
+|[CAnimationColor::operator=](#operator_eq)|將色彩指派給 CAnimationColor 中。|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
@@ -146,7 +146,7 @@ CAnimationColor(
 
 ### <a name="parameters"></a>參數
 
-*色彩*<br/>
+*color*<br/>
 指定預設色彩。
 
 *nGroupID*<br/>
@@ -249,7 +249,7 @@ BOOL GetValue(COLORREF& color);
 
 ### <a name="parameters"></a>參數
 
-*色彩*<br/>
+*color*<br/>
 輸出。 這個方法傳回時，包含目前的值。
 
 ### <a name="return-value"></a>傳回值
@@ -292,7 +292,7 @@ operator COLORREF();
 
 ### <a name="return-value"></a>傳回值
 
-##  <a name="operator_eq"></a>  CAnimationColor::operator =
+##  <a name="operator_eq"></a>  CAnimationColor::operator=
 
 將色彩指派給 CAnimationColor 中。
 
@@ -302,7 +302,7 @@ void operator=(COLORREF color);
 
 ### <a name="parameters"></a>參數
 
-*色彩*<br/>
+*color*<br/>
 指定新值動畫的色彩。
 
 ### <a name="remarks"></a>備註
@@ -319,7 +319,7 @@ void SetDefaultValue(COLORREF color);
 
 ### <a name="parameters"></a>參數
 
-*色彩*<br/>
+*color*<br/>
 指定新的預設值為紅色、 綠色和藍色元件。
 
 ### <a name="remarks"></a>備註

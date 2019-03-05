@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CLSID_CPicturePropPage [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
-ms.openlocfilehash: f31bf245e35231b6cc62497e7bbc57ff7f0e6af1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b73a027422cfe9cbf03afece400c1b513cace151
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545388"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304700"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>MFC ActiveX 控制項：使用內建屬性頁
 
@@ -33,7 +33,7 @@ ms.locfileid: "50545388"
 
 - [MFC ActiveX 控制項：屬性頁](../mfc/mfc-activex-controls-property-pages.md)
 
-- [MFC ActiveX 控制項：新增另一個自訂屬性頁](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [MFC ActiveX 控制項：加入另一個自訂屬性頁](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
 MFC ActiveX 控制項用於提供三個內建屬性頁： `CLSID_CColorPropPage`， `CLSID_CFontPropPage`，和`CLSID_CPicturePropPage`。 這些頁面會分別顯示內建的色彩、 字型和圖片屬性的使用者介面。
 
@@ -54,5 +54,4 @@ MFC ActiveX 控制項用於提供三個內建屬性頁： `CLSID_CColorPropPage`
 ## <a name="see-also"></a>另請參閱
 
 [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)<br/>
-[MFC ActiveX 控制項：新增內建屬性](../mfc/mfc-activex-controls-adding-stock-properties.md)
-
+[MFC ActiveX 控制項：加入內建屬性](../mfc/mfc-activex-controls-adding-stock-properties.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: f0886f364637c8844aceb5d5d7b6b2ed7175225d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ec933d29474695c1b94b72e712d68a9b3a08bd4e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176844"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326576"
 ---
 # <a name="documentview-architecture"></a>文件/檢視架構
 
@@ -90,4 +90,3 @@ MFC 架構給使用者和程式設計人員，最明顯的部分是文件和檢�
 [文件範本和文件/檢視建立程序](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
 [文件/檢視建立](../mfc/document-view-creation.md)<br/>
 [建立新文件、視窗和檢視](../mfc/creating-new-documents-windows-and-views.md)
-

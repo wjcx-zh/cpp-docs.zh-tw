@@ -7,12 +7,12 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: 549fd0409929beaefd24cceaa91370bb1df41aa0
-ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
+ms.openlocfilehash: 83a652192d2d9055fddffdec96eb91a2ebdd68a7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031248"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304219"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>HOW TO：各種字串類型之間轉換
 
@@ -152,8 +152,8 @@ int main()
     wcout << orig << _T(" (wchar_t *)") << endl;
 
     // Convert the wchar_t string to a char* string. Record
-    //.the length of the original string and add 1 to it to
-    //.account for the terminating null character.
+    // the length of the original string and add 1 to it to
+    // account for the terminating null character.
     size_t origsize = wcslen(orig) + 1;
     size_t convertedChars = 0;
 
@@ -198,7 +198,7 @@ int main()
         cout << printstr << endl;
         // The following line of code is an easier way to
         // display wide character strings:
-        // wcout << (LPCTSTR) ccombstr << endl;
+        wcout << (LPCTSTR) ccombstr << endl;
     }
 
     // Convert a wide wchar_t string to a multibyte CStringA,
@@ -525,7 +525,7 @@ int main()
     bstrt += _T(" (_bstr_t)");
     wcout << bstrt << endl;
 
-    // Convert to a wide character_bstr_t string from
+    // Convert to a wide character _bstr_t string from
     // a wide character CStringW string.
     bstr_t bstrtw(origw);
     bstrtw += " (_bstr_t)";
@@ -545,8 +545,8 @@ int main()
     // Convert to a wide character CComBSTR string from
     // a wide character CStringW string.
     CComBSTR ccombstrw(origw);
+    
     // Append the type of string to it, and display the result.
-
     if (ccombstrw.Append(_T(" (CComBSTR)")) == S_OK)
     {
         CW2A printstrw(ccombstrw);
@@ -628,7 +628,7 @@ int main()
     string orig("Hello, World!");
     cout << orig << " (basic_string)" << endl;
 
-    // Convert a wide char basic_string string to a multibyte char*
+    // Convert a wide character basic_string string to a multibyte char*
     // string. To be safe, we allocate two bytes for each character
     // in the original string, including the terminating null.
     const size_t newsize = (strlen(orig.c_str()) + 1)*2;
@@ -804,8 +804,8 @@ Hello, World! (basic_string)
 
 [ATL 和 MFC 字串轉換巨集](../atl/reference/string-conversion-macros.md)<br/>
 [與 C 樣式字串相關的 CString 作業](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
-[如何：將標準字串轉換為 system:: string](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
-[如何：將 system:: string 轉換為標準字串](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
+[如何：將標準字串轉換為 System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
+[如何：將 System::String 轉換為標準字串](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
 [如何：將 system:: string 轉換為 wchar_t * 或 char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
 [使用 ccombstr 進行程式設計](../atl/programming-with-ccombstr-atl.md)<br/>
 [mbstowcs_s、_mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)<br/>

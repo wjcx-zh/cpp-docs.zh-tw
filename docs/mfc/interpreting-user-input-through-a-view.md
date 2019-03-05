@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CView class [MFC], interpreting user input
 - user input [MFC], interpreting through view class [MFC]
 ms.assetid: f0302a70-661f-4781-8fe7-78f082bef2a5
-ms.openlocfilehash: fe64f7c499b4a7c93f628fa0dff0855c379cbd58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ef23ad74e1ff53d947453faa5682c5ecc1f4e43
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552560"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304443"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>透過檢視解譯使用者輸入
 
@@ -42,4 +42,3 @@ Windows 訊息，您的檢視會處理會取決於您的應用程式需求。
 ## <a name="see-also"></a>另請參閱
 
 [使用檢視](../mfc/using-views.md)
-

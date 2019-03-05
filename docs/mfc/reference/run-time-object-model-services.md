@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: fce6fb938b501da7bc9251de51c71714e4613fd5
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 45ad85e5b85674be957320ef6fdb7f5a81db6503
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850281"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304674"
 ---
 # <a name="run-time-object-model-services"></a>執行階段物件模型服務
 
@@ -522,4 +522,3 @@ OLE 類別 ID 是唯一的 128 位元識別項的物件。 它包含一個**長*
 [巨集和全域](mfc-macros-and-globals.md)<br/>
 [MFC 通用控制項程式庫的隔離](../isolation-of-the-mfc-common-controls-library.md)<br/>
 [CLSID 金鑰](/windows/desktop/com/clsid-key-hklm)
-

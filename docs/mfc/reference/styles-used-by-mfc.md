@@ -196,12 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: b47fa90fff6753b805d7fd0495050e45bc915d5d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: eb5123c347fdb847cade54f15764f175ee0ab799
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694773"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304895"
 ---
 # <a name="styles-used-by-mfc"></a>MFC 使用的樣式
 
@@ -217,11 +217,11 @@ ms.locfileid: "51694773"
 
 |類型|描述|
 |----------|-----------------|
-|BS_3STATE|建立具有三種狀態的核取方塊按鈕： BST_CHECKED、 BST_INDETERMINATE 和 BST_UNCHECKED。 按一下這個按鈕會 BN_CLICKED 通知傳送給主控視窗，但不會變更按鈕的狀態。 根據預設，相關聯的文字會顯示右邊的核取方塊。 若要顯示文字左邊的核取方塊，請使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 樣式。|
-|BS_AUTO3STATE|建立具有三種狀態的核取方塊按鈕： BST_CHECKED、 BST_INDETERMINATE 和 BST_UNCHECKED。 按一下這個按鈕會 BN_CLICKED 通知傳送給主控視窗，並變更按鈕的狀態。 按鈕狀態 BST_CHECKED、 BST_INDETERMINATE 和 BST_UNCHECKED 順序循環。 根據預設，相關聯的文字會顯示右邊的核取方塊。 若要顯示文字左邊的核取方塊，請使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 樣式。|
-|BS_AUTOCHECKBOX|建立具有兩個狀態的核取方塊按鈕： BST_CHECKED 和 BST_UNCHECKED。 按一下這個按鈕會 BN_CLICKED 通知傳送給主控視窗，並變更按鈕的狀態。 根據預設，相關聯的文字會顯示右邊的核取方塊。 若要顯示文字左邊的核取方塊，請使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 樣式。|
-|BS_AUTORADIOBUTTON|建立具有兩種狀態的選項按鈕： BST_CHECKED 和 BST_UNCHECKED。 選項按鈕通常用在群組中，而其中一個選取的選項，一次最多每個群組。 按一下這個按鈕會 BN_CLICKED 通知傳送給主控視窗、 按下的選項按鈕的狀態設定為 BST_CHECKED，和設定 BST_UNCHECKED 按鈕群組中的所有其他選項按鈕的狀態。 根據預設，相關聯的文字會顯示選項按鈕的右邊。 左邊的選項按鈕的顯示文字，請使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 樣式。|
-|BS_CHECKBOX|建立具有兩個狀態的核取方塊按鈕： BST_CHECKED 和 BST_UNCHECKED。 按一下這個按鈕會 BN_CLICKED 通知傳送給主控視窗，但不會變更按鈕的狀態。 根據預設，相關聯的文字會顯示右邊的核取方塊。 若要顯示文字左邊的核取方塊，請使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 樣式。|
+|BS_3STATE|建立具有三種狀態的核取方塊按鈕：BST_CHECKED、 BST_INDETERMINATE 和 BST_UNCHECKED。 按一下這個按鈕會 BN_CLICKED 通知傳送給主控視窗，但不會變更按鈕的狀態。 根據預設，相關聯的文字會顯示右邊的核取方塊。 若要顯示文字左邊的核取方塊，請使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 樣式。|
+|BS_AUTO3STATE|建立具有三種狀態的核取方塊按鈕：BST_CHECKED、 BST_INDETERMINATE 和 BST_UNCHECKED。 按一下這個按鈕會 BN_CLICKED 通知傳送給主控視窗，並變更按鈕的狀態。 按鈕狀態 BST_CHECKED、 BST_INDETERMINATE 和 BST_UNCHECKED 順序循環。 根據預設，相關聯的文字會顯示右邊的核取方塊。 若要顯示文字左邊的核取方塊，請使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 樣式。|
+|BS_AUTOCHECKBOX|建立具有兩種狀態的核取方塊按鈕：BST_CHECKED 和 BST_UNCHECKED。 按一下這個按鈕會 BN_CLICKED 通知傳送給主控視窗，並變更按鈕的狀態。 根據預設，相關聯的文字會顯示右邊的核取方塊。 若要顯示文字左邊的核取方塊，請使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 樣式。|
+|BS_AUTORADIOBUTTON|建立具有兩種狀態的選項按鈕：BST_CHECKED 和 BST_UNCHECKED。 選項按鈕通常用在群組中，而其中一個選取的選項，一次最多每個群組。 按一下這個按鈕會 BN_CLICKED 通知傳送給主控視窗、 按下的選項按鈕的狀態設定為 BST_CHECKED，和設定 BST_UNCHECKED 按鈕群組中的所有其他選項按鈕的狀態。 根據預設，相關聯的文字會顯示選項按鈕的右邊。 左邊的選項按鈕的顯示文字，請使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 樣式。|
+|BS_CHECKBOX|建立具有兩種狀態的核取方塊按鈕：BST_CHECKED 和 BST_UNCHECKED。 按一下這個按鈕會 BN_CLICKED 通知傳送給主控視窗，但不會變更按鈕的狀態。 根據預設，相關聯的文字會顯示右邊的核取方塊。 若要顯示文字左邊的核取方塊，請使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 樣式。|
 |BS_COMMANDLINK|建立命令連結按鈕。 命令連結按鈕是專屬 Windows Vista 的主要文字下方，記下主要文字左邊顯示一個綠色箭號的命令按鈕。 您可以設定附註文字使用[CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote)。|
 |BS_DEFCOMMANDLINK|建立命令連結按鈕。 命令連結按鈕是專屬 Windows Vista 的主要文字下方，記下主要文字左邊顯示一個綠色箭號的命令按鈕。 您可以設定附註文字使用[CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote)。 如果按鈕在對話方塊中，按下 ENTER 鍵傳送 BN_CLICKED 通知給對話方塊即使按鈕沒有輸入的焦點。|
 |BS_DEFPUSHBUTTON|建立具有沉重黑色框線的命令按鈕。 如果按鈕在對話方塊中，按下 ENTER 鍵傳送 BN_CLICKED 通知給對話方塊即使按鈕沒有輸入的焦點。|
@@ -229,7 +229,7 @@ ms.locfileid: "51694773"
 |BS_GROUPBOX|建立其他按鈕可以群組的矩形。 此樣式相關聯的文字會顯示在矩形的左上角。|
 |BS_OWNERDRAW|建立主控描繪按鈕。 這個架構會呼叫`DrawItem`當按鈕的視覺外觀的方法已經變更。 當您使用時，就必須設定此樣式`CBitmapButton`類別。|
 |BS_PUSHBUTTON|建立使用者按一下按鈕時，傳送 BN_CLICKED 通知給主控視窗的命令按鈕。|
-|BS_RADIOBUTTON|建立具有兩種狀態的選項按鈕： BST_CHECKED 和 BST_UNCHECKED。 選項按鈕通常用在群組中，而其中一個選取的選項，一次最多每個群組。 按一下這個按鈕會 BN_CLICKED 通知傳送給主控視窗，但不會自動變更群組中的任何按鈕的狀態。 根據預設，相關聯的文字會顯示選項按鈕的右邊。 左邊的選項按鈕的顯示文字，請使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 樣式。|
+|BS_RADIOBUTTON|建立具有兩種狀態的選項按鈕：BST_CHECKED 和 BST_UNCHECKED。 選項按鈕通常用在群組中，而其中一個選取的選項，一次最多每個群組。 按一下這個按鈕會 BN_CLICKED 通知傳送給主控視窗，但不會自動變更群組中的任何按鈕的狀態。 根據預設，相關聯的文字會顯示選項按鈕的右邊。 左邊的選項按鈕的顯示文字，請使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 樣式。|
 |BS_SPLITBUTTON|建立分割按鈕。 分割按鈕是專屬 Windows Vista 包含相鄰的下拉式箭號按鈕的命令按鈕。 當您按一下按鈕時，會執行預設命令。 當您按一下下拉箭號時，則會顯示其他命令的功能表。|
 |BS_USERBUTTON|已淘汰，但會提供給與 16 位元版本的 Windows 相容性。 Win32 應用程式應該改用 BS_OWNERDRAW。|
 
@@ -336,7 +336,8 @@ MFC 中提供下列下拉式方塊樣式。 如需有關在 Windows 中的下拉
 |LBS_DISABLENOSCROLL|清單方塊會顯示已停用的垂直捲軸當清單方塊中未包含足夠的項目捲動。 若沒有這個樣式，在清單方塊中未包含足夠的項目時，捲軸會隱藏。|
 |LBS_EXTENDEDSEL|使用者可以選取多個項目，使用 SHIFT 鍵和滑鼠或特殊按鍵組合。|
 |LBS_HASSTRINGS|指定主控描繪清單方塊包含由字串組成的項目。 清單方塊會維護記憶體和字串的指標，讓應用程式可以使用 `GetText` 成員函式來擷取特定項目的文字。|
-|LBS_MULTICOLUMN|指定多重資料行的清單方塊水平捲動。 `SetColumnWidth` 成員函式可設定資料行的寬度。|
+|LBS_MULTICOLUMN|指定多重資料行的清單方塊水平捲動。 
+  `SetColumnWidth` 成員函式可設定資料行的寬度。|
 |LBS_MULTIPLESEL|每次使用者按一下或按兩下字串切換字串選取範圍。 您可以選取任何數目的字串。|
 |LBS_NODATA|指定無資料清單方塊。 當清單方塊的項目計數會超過一千時，請指定此樣式。 無資料清單方塊也必須擁有 LBS_OWNERDRAWFIXED 樣式，但不是能有 LBS_SORT 或 LBS_HASSTRINGS 樣式。<br/><br/> 無資料清單方塊類似於主控描繪清單方塊，但它的項目不包含字串或點陣圖資料。 加入、插入或刪除項目的命令永遠會忽略任何指定的項目資料；在清單方塊尋找字串的要求永遠會失敗。 必須繪製項目時，系統會傳送 WM_DRAWITEM 訊息給主控視窗。 ItemID 成員`DRAWITEMSTRUCT`WM_DRAWITEM 訊息傳遞的結構指定的項目要繪製的行號。 無資料清單方塊不會傳送 WM_DELETEITEM 訊息。|
 |LBS_NOINTEGRALHEIGHT|清單方塊的大小是建立清單方塊時，應用程式所指定的大小相同。 通常，Windows 會調整清單方塊的大小，使清單方塊不會只顯示一部分的項目。|
@@ -360,12 +361,12 @@ MFC 中提供下列下拉式方塊樣式。 如需有關在 Windows 中的下拉
 
 |樣式|描述|
 |-----------|-----------------|
-|MB_ABORTRETRYIGNORE|訊息方塊包含三個按鈕： 中止，請重試，並忽略。|
-|MB_OK|訊息方塊包含一個按鈕: [確定]。|
-|MB_OKCANCEL|訊息方塊包含兩個按鈕: [確定]，並取消。|
-|MB_RETRYCANCEL|訊息方塊包含兩個按鈕： 重試] 和 [取消。|
-|MB_YESNO|訊息方塊包含兩個按鈕: [是] 和 [否]。|
-|MB_YESNOCANCEL|訊息方塊包含三個按鈕: 是、 否 和 取消。|
+|MB_ABORTRETRYIGNORE|訊息方塊包含三個按鈕：中止、 重試一次，並忽略。|
+|MB_OK|訊息方塊包含一個按鈕：OK。|
+|MB_OKCANCEL|訊息方塊包含兩個按鈕：[確定] 和 [取消]。|
+|MB_RETRYCANCEL|訊息方塊包含兩個按鈕：重試和取消。|
+|MB_YESNO|訊息方塊包含兩個按鈕：[是] 和 [否]。|
+|MB_YESNOCANCEL|訊息方塊包含三個按鈕：Yes、 No 和取消。|
 
 ### <a name="message-box-modality"></a>訊息方塊樣式
 
@@ -431,7 +432,7 @@ MFC 中提供下列下拉式方塊樣式。 如需有關在 Windows 中的下拉
 |SS_LEFT|指定一個簡單的矩形，並顯示指定的文字的矩形中排清左。 文字格式顯示。 會延伸超過行尾的字組自動包裝至下一步 的左排清一行的開頭。|
 |SS_LEFTNOWORDWRAP|指定一個簡單的矩形，並顯示指定的文字的矩形中排清左。 索引標籤會展開，但未包裝的字。 擴充超出了一行結尾的文字會被裁剪。|
 |SS_NOPREFIX|除非指定此樣式時，Windows 將解譯任何連字號 (&) 是對應鍵前置字元的控制項的文字中的字元。 在此情況下，已移除連字號，並在字串中的下一個字元會加上底線。 如果靜態控制項，以包含文字不需要這項功能時，則可能會新增 SS_NOPREFIX。 這個靜態控制項樣式可能包含任何已定義的靜態控制項。 您可以具有其他樣式結合 SS_NOPREFIX，方法是使用位元的 OR 運算子。 這最常使用時要顯示在對話方塊中的靜態控制項中需要的檔案名稱或其他可能包含連字號的字串。|
-|呼叫 SS_NOTIFY|當使用者按一下或按兩下控制項時傳送的父視窗 STN_CLICKED、 STN_DBLCLK、 STN_DISABLE 和 STN_ENABLE 通知訊息。|
+|SS_NOTIFY|當使用者按一下或按兩下控制項時傳送的父視窗 STN_CLICKED、 STN_DBLCLK、 STN_DISABLE 和 STN_ENABLE 通知訊息。|
 |SS_OWNERDRAW|指定靜態控制項的擁有者會負責繪製控制項。 每當控制項需要繪製主控視窗會收到 WM_DRAWITEM 訊息。|
 |SS_REALSIZEIMAGE|正在調整大小是載入或繪製，所以可避免靜態圖示或點陣圖控制項 （也就是靜態控制項具有 SS_ICON 或 SS_BITMAP 樣式的）。 如果圖示或點陣圖大於目的區域，則會裁剪影像。|
 |SS_RIGHT|指定一個簡單的矩形，並顯示指定的文字的矩形中排清權限。 文字格式顯示。 會延伸超過行尾的字組自動包裝至下一步 的清除權限列的開頭。|
@@ -509,7 +510,7 @@ MFC 中提供下列下拉式方塊樣式。 如需有關在 Windows 中的下拉
 ## <a name="see-also"></a>另請參閱
 
 [MFC 類別概觀](../../mfc/class-library-overview.md)<br/>
-[Cwnd:: Create](../../mfc/reference/cwnd-class.md#create)<br/>
+[CWnd::Create](../../mfc/reference/cwnd-class.md#create)<br/>
 [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)<br/>
 [CEdit::Create](../../mfc/reference/cedit-class.md#create)<br/>
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)<br/>

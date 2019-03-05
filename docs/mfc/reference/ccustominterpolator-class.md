@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CCustomInterpolator [MFC], m_initialValue
 - CCustomInterpolator [MFC], m_initialVelocity
 ms.assetid: 28d85595-989a-40a3-b003-e0e38437a94d
-ms.openlocfilehash: 49685d079e367449ee5973ab37f0bbc7ea44da14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d3f2ed95cfb9e7e885713252171c98834ae5c0a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431899"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303088"
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator 類別
 
@@ -111,7 +111,7 @@ CCustomInterpolator(
 
 ### <a name="parameters"></a>參數
 
-*持續時間*<br/>
+*duration*<br/>
 轉換的持續時間。
 
 *finalValue*
@@ -156,7 +156,7 @@ virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
 
 ### <a name="parameters"></a>參數
 
-*持續時間*<br/>
+*duration*<br/>
 輸出。 轉換，以秒為單位的持續時間。
 
 ### <a name="return-value"></a>傳回值
@@ -173,7 +173,7 @@ virtual BOOL GetFinalValue(DOUBLE* value);
 
 ### <a name="parameters"></a>參數
 
-*值*<br/>
+*value*<br/>
 輸出。 在轉換結束變數最終的值。
 
 ### <a name="return-value"></a>傳回值
@@ -192,7 +192,7 @@ void Init(
 
 ### <a name="parameters"></a>參數
 
-*持續時間*<br/>
+*duration*<br/>
 轉換的持續時間。
 
 *finalValue*<br/>
@@ -210,7 +210,7 @@ virtual BOOL InterpolateValue(
 
 ### <a name="parameters"></a>參數
 
-*值*<br/>
+*value*<br/>
 輸出。 插補的值。
 
 ### <a name="return-value"></a>傳回值
@@ -229,7 +229,7 @@ virtual BOOL InterpolateVelocity(
 
 ### <a name="parameters"></a>參數
 
-*速度*<br/>
+*velocity*<br/>
 輸出。 在位移變數的速度。
 
 ### <a name="return-value"></a>傳回值
@@ -294,7 +294,7 @@ virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
 
 ### <a name="parameters"></a>參數
 
-*持續時間*<br/>
+*duration*<br/>
 轉換的持續時間。
 
 ### <a name="return-value"></a>傳回值

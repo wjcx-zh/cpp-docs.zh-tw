@@ -14,12 +14,12 @@ helpviewer_keywords:
 - mutex [C++]
 - threading [C++], thread stacks
 ms.assetid: 1415f47d-417f-4f42-949b-946fb28aab0e
-ms.openlocfilehash: c7d9790cfee39fbddd9ab545d48fa375d56f3a05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8536505882ca9a87aec385ca1c42d652ea84ff7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561326"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326530"
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>撰寫多執行緒 Win32 程式
 
@@ -28,7 +28,7 @@ ms.locfileid: "50561326"
 ##  <a name="_core_sharing_common_resources_between_threads"></a> 一般執行緒之間共用資源
 
 > [!NOTE]
->  從 MFC 的觀點來看類似的討論，請參閱[多執行緒： 程式設計提示](multithreading-programming-tips.md)並[多執行緒： 何時使用同步類別](multithreading-when-to-use-the-synchronization-classes.md)。
+>  從 MFC 的觀點來看類似的討論，請參閱[多執行緒：程式設計提示](multithreading-programming-tips.md)和[多執行緒：何時使用同步類別](multithreading-when-to-use-the-synchronization-classes.md)。
 
 每個執行緒都有它自己的堆疊，以及它自己的複本的 CPU 暫存器。 其他資源，例如檔案、 靜態資料和堆積記憶體中所共用的所有執行緒程序。 使用這些常見資源的執行緒必須進行同步處理。 Win32 提供數種方式來同步處理資源，包括信號、 關鍵區段、 事件和 mutex。
 

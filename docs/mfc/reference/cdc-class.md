@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 0c8944846e249e4f752183b057bf8d2857022ab5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179054"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305077"
 ---
 # <a name="cdc-class"></a>CDC 類別
 
@@ -1580,7 +1580,7 @@ BOOL DrawFrameControl(
 *lpRect*<br/>
 指標`RECT`結構，其中包含矩形的邏輯座標。
 
-*n*<br/>
+*nType*<br/>
 指定要繪製的畫面格控制項類型。 請參閱*uType*中的參數[DrawFrameControl](/windows/desktop/api/winuser/nf-winuser-drawframecontrol) Windows SDK，如需此參數的可能值的清單中。
 
 *nState*<br/>
@@ -1674,7 +1674,7 @@ BOOL DrawIcon(
 *hIcon*<br/>
 識別要繪製的圖示的控制代碼。
 
-*點*<br/>
+*point*<br/>
 指定邏輯 x 和 y 座標的左上角的圖示。 您可以傳遞[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)此參數的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -1764,7 +1764,7 @@ BOOL DrawState(
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*<br/>
+*pt*<br/>
 指定映像的位置。
 
 *size*<br/>
@@ -3171,7 +3171,7 @@ DWORD GetGlyphOutline(
 
 ### <a name="parameters"></a>參數
 
-*NChar*<br/>
+*nChar*<br/>
 指定要傳回資訊的字元。
 
 *nFormat*<br/>
@@ -3565,7 +3565,7 @@ COLORREF GetPixel(POINT point) const;
 *y*<br/>
 指定要檢查點的邏輯 y 座標。
 
-*點*<br/>
+*point*<br/>
 指定邏輯 x 和 y 座標的檢查點。
 
 ### <a name="return-value"></a>傳回值
@@ -4278,7 +4278,7 @@ BOOL LineTo(POINT point);
 *y*<br/>
 指定線條的端點的邏輯 y 座標。
 
-*點*<br/>
+*point*<br/>
 指定線條的端點。 您可以傳遞`POINT`結構或`CPoint`此參數的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -4485,7 +4485,7 @@ CPoint MoveTo(POINT point);
 *y*<br/>
 指定新位置的邏輯 y 座標。
 
-*點*<br/>
+*point*<br/>
 指定新的位置。 您可以傳遞`POINT`結構或`CPoint`此參數的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -5115,7 +5115,7 @@ BOOL PtVisible(POINT point) const;
 *y*<br/>
 指定點的邏輯 y 座標。
 
-*點*<br/>
+*point*<br/>
 指定要檢查的邏輯座標的點。 您可以傳遞`POINT`結構或`CPoint`此參數的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -5331,7 +5331,7 @@ BOOL RoundRect(
 *lpRect*<br/>
 指定週框矩形以邏輯單位表示。 您可以傳遞`CRect`物件的指標或`RECT`結構為此參數。
 
-*點*<br/>
+*point*<br/>
 X 座標*點*指定的寬度 （以邏輯單位表示） 繪製圓的角的省略符號。 Y 座標*點*指定的高度 （以邏輯單位表示） 繪製圓的角的省略符號。 您可以傳遞`POINT`結構或`CPoint`此參數的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -5908,7 +5908,7 @@ CPoint SetBrushOrg(POINT point);
 *y*<br/>
 指定新原點的 y 座標 （以裝置為單位）。 此值必須是範圍 0-7。
 
-*點*<br/>
+*point*<br/>
 指定新原點的 x 和 y 座標。 每個值必須是範圍 0-7。 您可以傳遞`POINT`結構或`CPoint`此參數的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -6179,7 +6179,7 @@ COLORREF SetPixel(
 *crColor*<br/>
 COLORREF RGB 值，指定用來繪製點的色彩。 請參閱[COLORREF](/windows/desktop/gdi/colorref) Windows SDK 中針對此值的描述。
 
-*點*<br/>
+*point*<br/>
 指定邏輯 x 和 y 座標點設定。 您可以傳遞`POINT`結構或`CPoint`此參數的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -6218,7 +6218,7 @@ BOOL SetPixelV(
 *crColor*<br/>
 指定要用來繪製點的色彩。
 
-*點*<br/>
+*point*<br/>
 指定邏輯 x 和 y 座標點設定。 您可以傳遞[點](/windows/desktop/api/windef/ns-windef-tagpoint)資料結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)此參數的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -6537,7 +6537,7 @@ CPoint SetViewportOrg(POINT point);
 *y*<br/>
 指定的檢視區原點的 y 座標 （以裝置為單位）。 值必須是裝置座標系統的範圍內。
 
-*點*<br/>
+*point*<br/>
 指定檢視區的來源。 值必須是裝置座標系統的範圍內。 您可以傳遞`POINT`結構或`CPoint`此參數的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -6625,7 +6625,7 @@ CPoint SetWindowOrg(POINT point);
 *y*<br/>
 指定視窗的新來源的邏輯 y 座標。
 
-*點*<br/>
+*point*<br/>
 指定新來源 視窗的邏輯座標。 您可以傳遞`POINT`結構或`CPoint`此參數的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -6816,7 +6816,8 @@ BOOL StretchBlt(
 
 `StretchBlt`函式會建立點陣圖的鏡像映像，如果的跡象*nSrcWidth*並*nWidth*或是*nSrcHeight*和*nHeight*參數不同。 如果*nSrcWidth*並*nWidth*的符號不同，此函數便會沿著 x 軸點陣圖的鏡像映像。 如果*nSrcHeight*並*nHeight*的符號不同，此函數便會沿著 y 軸點陣圖的鏡像映像。
 
-`StretchBlt` 函式會延伸或壓縮記憶體中的來源點陣圖，然後將結果複製到目的地。 如果要合併模式和結果，除非將延伸的來源點陣圖複製到目的地，否則不會進行合併。 如果使用筆刷，會使用在目的地裝置內容中選取的筆刷。 目的地座標會根據目的地裝置內容而轉換；來源座標會根據來源裝置內容而轉換。
+
+  `StretchBlt` 函式會延伸或壓縮記憶體中的來源點陣圖，然後將結果複製到目的地。 如果要合併模式和結果，除非將延伸的來源點陣圖複製到目的地，否則不會進行合併。 如果使用筆刷，會使用在目的地裝置內容中選取的筆刷。 目的地座標會根據目的地裝置內容而轉換；來源座標會根據來源裝置內容而轉換。
 
 如果目的地、來源和模式點陣圖的色彩格式不同，`StretchBlt` 會轉換來源和模式點陣圖以符合目的地點陣圖。 轉換中會使用目的地裝置内容的前景和背景色彩。
 
@@ -6949,7 +6950,8 @@ BOOL TextOut(
 指定字串中的字元數。
 
 *str*<br/>
-`CString` 物件，其中包含要繪製的字元。
+
+  `CString` 物件，其中包含要繪製的字元。
 
 ### <a name="return-value"></a>傳回值
 

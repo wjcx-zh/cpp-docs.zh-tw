@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: 50fb7da1a59d35d96f1f65428b3a361e3a226607
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: efcf5057481345c001cc48224f53c666623d0780
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694450"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304986"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd 類別
 
@@ -147,7 +147,7 @@ virtual BOOL Create(
 *lpszWindowName*<br/>
 指向以 null 結束的字元字串，表示視窗名稱。 用來作為文字的標題列。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定時間範圍[樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)屬性。 WS_CHILD 樣式是必要的。
 
 *rect*<br/>
@@ -171,13 +171,13 @@ virtual BOOL Create(
 
 ### <a name="example"></a>範例
 
-範例 1:
+範例 1：
 
 [!code-cpp[NVC_MFCWindowing#7](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_1.cpp)]
 
 ### <a name="example"></a>範例
 
-範例 2:
+範例 2：
 
 [!code-cpp[NVC_MFCWindowing#8](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_2.cpp)]
 

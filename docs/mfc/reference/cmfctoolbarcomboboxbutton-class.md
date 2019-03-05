@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: 2dd300e4bbf63ed59554d5722c716f8a3f795570
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fae70e44657023b7a7b93f72599bef4ba6faf307
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561417"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303166"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton 類別
 
@@ -132,7 +132,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 
 3. 在處理 AFX_WM_RESETTOOLBAR 訊息的訊息處理常式，假的按鈕與新的下拉式方塊按鈕使用取代[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)。
 
-如需詳細資訊，請參閱 <<c0> [ 逐步解說： 將工具列控制項](../../mfc/walkthrough-putting-controls-on-toolbars.md)。 如需下拉式方塊的工具列按鈕的範例，請參閱範例專案 VisualStudioDemo。
+如需詳細資訊，請參閱[逐步解說：將工具列上的控制項加入](../../mfc/walkthrough-putting-controls-on-toolbars.md)。 如需下拉式方塊的工具列按鈕的範例，請參閱範例專案 VisualStudioDemo。
 
 ## <a name="example"></a>範例
 
@@ -239,7 +239,7 @@ CMFCToolBarComboBoxButton(
 *iImage*<br/>
 [in][新增] 按鈕相關聯的映像的映像索引。
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 [in][新增] 按鈕的樣式。
 
 *iWidth*<br/>
@@ -430,7 +430,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>參數
 
-*MenuButton*<br/>
+*menuButton*<br/>
 [out]功能表按鈕的參考。
 
 ### <a name="return-value"></a>傳回值
@@ -1335,5 +1335,4 @@ void SetText(LPCTSTR lpszText);
 [CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [CComboBox 類別](../../mfc/reference/ccombobox-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[逐步解說：將控制項放在工具列上](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[逐步解說：將放在工具列上的控制項](../../mfc/walkthrough-putting-controls-on-toolbars.md)

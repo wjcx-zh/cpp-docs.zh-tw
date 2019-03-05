@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CCustomTransition [MFC], m_initialVelocity
 - CCustomTransition [MFC], m_pInterpolator
 ms.assetid: 5bd3f492-940f-4290-a38b-fa68eb8f8401
-ms.openlocfilehash: af600704f82a0cad402948286fa0d4b11dca0c71
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0e5250b27ce6b902939ebcbfa03bf022a202788
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578369"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304011"
 ---
 # <a name="ccustomtransition-class"></a>CCustomTransition 類別
 
@@ -69,7 +69,7 @@ class CCustomTransition : public CBaseTransition;
 
 ## <a name="remarks"></a>備註
 
-CCustomTransitions 類別可讓開發人員實作自訂的轉換。 建立和做為標準的轉換，但其建構函式做為參數會接受自訂 interpolator 的指標。 執行下列步驟，以使用自訂的轉換： 1。 CCustomInterpolator 從衍生類別，並至少會實作 InterpolateValue 方法。 2. 請確定，自訂 interpolator 物件的存留期必須超過的動畫的持續時間使用的位置。 3. 具現化 （使用運算子 new） CCustomTransition 物件並將指標傳遞給建構函式中的自訂 interpolator。 4. 如果這些參數所需的自訂內插補點，請呼叫 CCustomTransition::SetInitialValue 和 CCustomTransition::SetInitialVelocity。 5. 將指標傳遞自訂轉換動畫物件，其值應該使用自訂的演算法建立動畫的方法。 6. 當動畫之物件的值應該變更 Windows 動畫 API 會在 CCustomInterpolator 中呼叫 InterpolateValue （和其他相關的方法）。
+CCustomTransitions 類別可讓開發人員實作自訂的轉換。 建立和做為標準的轉換，但其建構函式做為參數會接受自訂 interpolator 的指標。 執行下列步驟，以使用自訂的轉換：1. CCustomInterpolator 從衍生類別，並至少會實作 InterpolateValue 方法。 2. 請確定，自訂 interpolator 物件的存留期必須超過的動畫的持續時間使用的位置。 3. 具現化 （使用運算子 new） CCustomTransition 物件並將指標傳遞給建構函式中的自訂 interpolator。 4. 如果這些參數所需的自訂內插補點，請呼叫 CCustomTransition::SetInitialValue 和 CCustomTransition::SetInitialVelocity。 5. 將指標傳遞自訂轉換動畫物件，其值應該使用自訂的演算法建立動畫的方法。 6. 當動畫之物件的值應該變更 Windows 動畫 API 會在 CCustomInterpolator 中呼叫 InterpolateValue （和其他相關的方法）。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

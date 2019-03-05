@@ -15,16 +15,17 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-ms.openlocfilehash: a75d413874056d57f0d474f44e514cf93f273626
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5804675ffdaf6de2e73327103398316566b41627
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492275"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304778"
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue 類別
 
-`concurrent_priority_queue` 類別允許多個執行緒同時推入和彈出項目。 項目會以優先權順序做為彈出依據，而優先權由函式提供的樣板引數決定。
+
+  `concurrent_priority_queue` 類別允許多個執行緒同時推入和彈出項目。 項目會以優先權順序做為彈出依據，而優先權由函式提供的樣板引數決定。
 
 ## <a name="syntax"></a>語法
 
@@ -150,12 +151,13 @@ concurrent_priority_queue(
 搭配這個物件使用的配置器類別。
 
 *_Init_capacity*<br/>
-`concurrent_priority_queue` 物件的初始容量。
 
-*（_b)*<br/>
+  `concurrent_priority_queue` 物件的初始容量。
+
+*_Begin*<br/>
 要複製的元素範圍中第一個元素的位置。
 
-*（_e)*<br/>
+*_End*<br/>
 超出要複製之元素範圍的第一個元素的位置。
 
 *_Src*<br/>
@@ -175,7 +177,7 @@ concurrent_priority_queue(
 
 第六個和第七個建構函式指定的優先順序佇列移動`_Src`。
 
-##  <a name="empty"></a> 空白
+##  <a name="empty"></a> empty
 
 測試呼叫這個方法時並行優先權佇列是否是空的。 這個方法是並行安全的。
 
@@ -218,7 +220,7 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 
 此參考`concurrent_priority_queue`物件。
 
-##  <a name="push"></a> 推播
+##  <a name="push"></a> push
 
 將項目加入至並行優先權佇列。 這個方法是並行安全的。
 
@@ -249,7 +251,7 @@ size_type size() const;
 
 在傳回的大小一定會包含新增的函式呼叫的所有項目`push`。 不過，它可能無法反映的暫止的並行作業的結果。
 
-##  <a name="swap"></a> 交換
+##  <a name="swap"></a> swap
 
 將兩個並行優先權佇列的內容交換。 這個方法不是並行安全。
 
@@ -259,7 +261,7 @@ void swap(concurrent_priority_queue& _Queue);
 
 ### <a name="parameters"></a>參數
 
-*（_q)*<br/>
+*_Queue*<br/>
 `concurrent_priority_queue`来交換內容的物件。
 
 ##  <a name="try_pop"></a> try_pop
@@ -283,4 +285,3 @@ bool try_pop(reference _Elem);
 
 [concurrency 命名空間](concurrency-namespace.md)<br/>
 [平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)
-

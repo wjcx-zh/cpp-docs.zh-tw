@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CObject [MFC], IsSerializable
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
-ms.openlocfilehash: eb0580f6fef39df29d66e15cfd051a0460cb8d56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 515c4e90ee6ab77a6c7c1ae108393ea1aafb7c17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584011"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304063"
 ---
 # <a name="cobject-class"></a>CObject 類別
 
@@ -52,9 +52,9 @@ class AFX_NOVTABLE CObject
 |[CObject::AssertValid](#assertvalid)|會驗證此物件的完整性。|
 |[CObject::Dump](#dump)|會產生此物件的診斷傾印。|
 |[CObject::GetRuntimeClass](#getruntimeclass)|傳回`CRuntimeClass`結構，其對應至這個物件的類別。|
-|[Cobject:: Iskindof](#iskindof)|測試指定類別的這個物件的關聯性。|
+|[CObject::IsKindOf](#iskindof)|測試指定類別的這個物件的關聯性。|
 |[CObject::IsSerializable](#isserializable)|若要查看是否可以序列化此物件的測試。|
-|[Cobject:: Serialize](#serialize)|載入或儲存的物件，或將封存檔。|
+|[CObject::Serialize](#serialize)|載入或儲存的物件，或將封存檔。|
 
 ### <a name="public-operators"></a>公用運算子
 
@@ -217,7 +217,7 @@ virtual CRuntimeClass* GetRuntimeClass() const;
 
 [!code-cpp[NVC_MFCCObjectSample#10](../../mfc/codesnippet/cpp/cobject-class_4.cpp)]
 
-##  <a name="iskindof"></a>  Cobject:: Iskindof
+##  <a name="iskindof"></a>  CObject::IsKindOf
 
 測試指定類別的這個物件的關聯性。
 
@@ -343,7 +343,7 @@ void* PASCAL operator new(
 
 [!code-cpp[NVC_MFCCObjectSample#16](../../mfc/codesnippet/cpp/cobject-class_9.h)]
 
-##  <a name="serialize"></a>  Cobject:: Serialize
+##  <a name="serialize"></a>  CObject::Serialize
 
 從封存中讀取或寫入此物件。
 
@@ -366,7 +366,7 @@ A`CArchive`来序列化或從物件。
 
 `Serialize` 會呼叫[CArchive::ReadObject](../../mfc/reference/carchive-class.md#readobject)並[CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject)。 這些函式相關聯`CArchive`插入運算子 ( **< \<**) 和擷取運算子 ( **>>**)。
 
-如需序列化的範例，請參閱文章[序列化： 序列化物件](../../mfc/serialization-serializing-an-object.md)。
+如需序列化的範例，請參閱文章[序列化：將物件序列化為](../../mfc/serialization-serializing-an-object.md)。
 
 ### <a name="example"></a>範例
 
@@ -377,4 +377,3 @@ A`CArchive`来序列化或從物件。
 ## <a name="see-also"></a>另請參閱
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)
-

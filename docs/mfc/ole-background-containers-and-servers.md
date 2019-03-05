@@ -14,16 +14,16 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - server applications [MFC]
 ms.assetid: dafbb31d-096c-4654-b774-12900d832919
-ms.openlocfilehash: 3c696f1e99a73cbce6f1ff749de937297b28d88b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c154562e58cf8f37d77df61556fe25b19ca54c70
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616921"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304817"
 ---
 # <a name="ole-background-containers-and-servers"></a>OLE 背景：容器和伺服器
 
-容器應用程式是一種應用程式，可以將內嵌或連結項目加入到本身的文件中。 管理容器應用程式的文件必須能夠儲存及顯示 OLE 文件元件，以及建立應用程式本身的資料。 容器應用程式也必須允許插入新項目或編輯現有的項目，藉由啟用伺服器應用程式時所需的使用者。 文章中會列出容器應用程式的使用者介面需求[容器： 使用者介面問題](../mfc/containers-user-interface-issues.md)。
+容器應用程式是一種應用程式，可以將內嵌或連結項目加入到本身的文件中。 管理容器應用程式的文件必須能夠儲存及顯示 OLE 文件元件，以及建立應用程式本身的資料。 容器應用程式也必須允許插入新項目或編輯現有的項目，藉由啟用伺服器應用程式時所需的使用者。 文章中會列出容器應用程式的使用者介面需求[容器：使用者介面問題](../mfc/containers-user-interface-issues.md)。
 
 伺服器應用程式或元件應用程式是可以建立容器應用程式使用的 OLE 文件元件的應用程式。 伺服器應用程式通常會支援拖放作業或是將其資料複製到剪貼簿，使容器應用程式可以插入的資料做為內嵌或連結的項目。 應用程式可以同時為容器和伺服器。
 
@@ -41,4 +41,3 @@ ms.locfileid: "50616921"
 [伺服器](../mfc/servers.md)<br/>
 [容器：用戶端項目](../mfc/containers-client-items.md)<br/>
 [伺服器：伺服器項目](../mfc/servers-server-items.md)
-

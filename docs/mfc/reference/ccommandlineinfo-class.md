@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCommandLineInfo [MFC], m_strPrinterName
 - CCommandLineInfo [MFC], m_strRestartIdentifier
 ms.assetid: 3e313ddb-0a82-4991-87ac-a27feff4668c
-ms.openlocfilehash: 60c0ae66234d5fb3be61d9249cf61ee77dff41ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e4b535da00fdcecf4ce52fad696cb5d2bc55efa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481467"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303023"
 ---
 # <a name="ccommandlineinfo-class"></a>CCommandLineInfo 類別
 
@@ -83,13 +83,13 @@ MFC 應用程式通常會建立這個類別中的本機執行個體[InitInstance
 |----------------------------|----------------------|
 |*app*|新的檔案。|
 |*應用程式*檔名|開啟檔案。|
-|*應用程式*`/p`檔名|列印到預設印表機的檔案。|
+|*app* `/p` filename|列印到預設印表機的檔案。|
 |*應用程式* `/pt` filename 印表機驅動程式連接埠|指定的印表機來列印檔案。|
-|*應用程式* `/dde`|啟動，並等候 DDE 命令。|
-|*應用程式* `/Automation`|為 OLE automation 伺服器啟動。|
-|*應用程式* `/Embedding`|啟動編輯內嵌的 OLE 項目。|
-|*應用程式* `/Register`<br /><br /> *應用程式* `/Regserver`|會通知應用程式執行任何註冊的工作。|
-|*應用程式* `/Unregister`<br /><br /> *應用程式* `/Unregserver`|會通知應用程式執行任何取消註冊的工作。|
+|*app* `/dde`|啟動，並等候 DDE 命令。|
+|*app* `/Automation`|為 OLE automation 伺服器啟動。|
+|*app* `/Embedding`|啟動編輯內嵌的 OLE 項目。|
+|*app* `/Register`<br /><br /> *app* `/Regserver`|會通知應用程式執行任何註冊的工作。|
+|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|會通知應用程式執行任何取消註冊的工作。|
 
 衍生新類別從`CCommandLineInfo`來處理其他旗標和參數值。 覆寫[ParseParam](#parseparam)來處理新的旗標。
 
@@ -293,7 +293,7 @@ virtual void ParseParam(
 *bFlag*<br/>
 指出是否*pszParam*參數或是的旗標。
 
-*我*<br/>
+*bLast*<br/>
 指出這是否為最後一個參數或命令列上的旗標。
 
 ### <a name="remarks"></a>備註
@@ -306,13 +306,13 @@ virtual void ParseParam(
 |----------------------------|----------------------|
 |*app*|新的檔案。|
 |*應用程式*檔名|開啟檔案。|
-|*應用程式*`/p`檔名|列印到預設印表機的檔案。|
+|*app* `/p` filename|列印到預設印表機的檔案。|
 |*應用程式* `/pt` filename 印表機驅動程式連接埠|指定的印表機來列印檔案。|
-|*應用程式* `/dde`|啟動，並等候 DDE 命令。|
-|*應用程式* `/Automation`|為 OLE automation 伺服器啟動。|
-|*應用程式* `/Embedding`|啟動編輯內嵌的 OLE 項目。|
-|*應用程式* `/Register`<br /><br /> *應用程式* `/Regserver`|會通知應用程式執行任何註冊的工作。|
-|*應用程式* `/Unregister`<br /><br /> *應用程式* `/Unregserver`|會通知應用程式執行任何取消註冊的工作。|
+|*app* `/dde`|啟動，並等候 DDE 命令。|
+|*app* `/Automation`|為 OLE automation 伺服器啟動。|
+|*app* `/Embedding`|啟動編輯內嵌的 OLE 項目。|
+|*app* `/Register`<br /><br /> *app* `/Regserver`|會通知應用程式執行任何註冊的工作。|
+|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|會通知應用程式執行任何取消註冊的工作。|
 
 這項資訊會儲存在[m_bRunAutomated](#m_brunautomated)， [m_bRunEmbedded](#m_brunembedded)，並[m_nShellCommand](#m_nshellcommand)。 正斜線標記旗標的其中一個 ' **/**'或連字號' **-**'。
 
@@ -328,4 +328,3 @@ virtual void ParseParam(
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)<br/>
 [CWinApp::ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)
-

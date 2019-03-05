@@ -1,5 +1,5 @@
 ---
-title: 多執行緒： 結束在 MFC 中的執行緒
+title: 多執行緒：MFC 中的終止執行緒
 ms.date: 08/27/2018
 f1_keywords:
 - CREATE_SUSPENDED
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-ms.openlocfilehash: 37a7a6fc443e172f80cc7c30c462ec4d69b3e8de
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: dd11f5db646e172d7ea2c2cc646841249d95ef31
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693291"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303627"
 ---
-# <a name="multithreading-terminating-threads-in-mfc"></a>多執行緒： 結束在 MFC 中的執行緒
+# <a name="multithreading-terminating-threads-in-mfc"></a>多執行緒：MFC 中的終止執行緒
 
 兩種正常情況會造成執行緒結束： 結束控制函式，或不允許執行緒執行到完成為止。 如果文書處理器使用執行緒來進行背景列印，控制函式就會在列印成功完成正常結束。 如果使用者想要取消列印，不過，有必須不當結束背景列印執行緒。 本主題說明如何實作每種情況，以及如何終止之後取得執行緒的結束代碼。
 
@@ -32,13 +32,13 @@ ms.locfileid: "51693291"
 
 ##  <a name="_core_normal_thread_termination"></a> 正常的執行緒終止
 
-對於背景工作執行緒，正常的執行緒終止很簡單： 結束控制函式，並傳回值，表示終止的原因。 您可以使用[AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread)函式或**傳回**陳述式。 一般而言，0 表示順利完成，但這由您決定。
+對於背景工作執行緒，正常的執行緒終止很簡單：結束控制函式，並傳回值，表示終止的原因。 您可以使用[AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread)函式或**傳回**陳述式。 一般而言，0 表示順利完成，但這由您決定。
 
 使用者介面執行緒，程序也一樣簡單： 從使用者介面執行緒內呼叫[PostQuitMessage](/windows/desktop/api/winuser/nf-winuser-postquitmessage) Windows SDK 中。 唯一的參數，`PostQuitMessage`會是執行緒的結束代碼。 至於背景工作執行緒，0 通常表示順利完成。
 
 ##  <a name="_core_premature_thread_termination"></a> 過早的執行緒終止
 
-提早結束執行緒也是一樣簡單： 呼叫[AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread)從執行緒內。 傳遞所需的結束代碼當做唯一的參數。 這會停止執行執行緒、 解除配置執行緒的堆疊、 中斷連結所有附加至執行緒，Dll 和從記憶體刪除執行緒物件。
+提早結束執行緒也是一樣簡單：呼叫[AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread)從執行緒內。 傳遞所需的結束代碼當做唯一的參數。 這會停止執行執行緒、 解除配置執行緒的堆疊、 中斷連結所有附加至執行緒，Dll 和從記憶體刪除執行緒物件。
 
 `AfxEndThread` 必須從內呼叫的執行緒終止。 如果您想要終止其他執行緒的執行緒，您必須設定兩個執行緒之間的通訊方法。
 

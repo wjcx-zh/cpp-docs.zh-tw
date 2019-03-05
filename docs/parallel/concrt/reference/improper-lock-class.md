@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - improper_lock class
 ms.assetid: 8f494942-7748-4a2a-8de2-23414bfe6346
-ms.openlocfilehash: de7393c9186a1572040acd18854b5b3046b239f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c10a7f302b63c33869425c4e5bddb36a15373ea8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552785"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326556"
 ---
 # <a name="improperlock-class"></a>improper_lock 類別
 
@@ -61,7 +61,7 @@ improper_lock() throw();
 
 ### <a name="parameters"></a>參數
 
-*訊息 （_m)*<br/>
+*_Message*<br/>
 錯誤的描述性訊息。
 
 ## <a name="see-also"></a>另請參閱

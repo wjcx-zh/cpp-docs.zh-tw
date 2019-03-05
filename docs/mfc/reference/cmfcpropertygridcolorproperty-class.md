@@ -20,16 +20,17 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-ms.openlocfilehash: c284906a85ec93c5c5419acb783f6f46ebcf03e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65c2c22c93dc3acb50fc4627c3710a3f0c86aeb0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575730"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303959"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty 類別
 
-`CMFCPropertyGridColorProperty` 類別支援開啟色彩選取對話方塊的屬性清單控制項項目。
+
+  `CMFCPropertyGridColorProperty` 類別支援開啟色彩選取對話方塊的屬性清單控制項項目。
 
 ## <a name="syntax"></a>語法
 
@@ -65,7 +66,8 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 
 ## <a name="remarks"></a>備註
 
-`CMFCPropertyGridColorProperty` 類別支援的色彩屬性可以加入至屬性清單控制項。 如需詳細資訊，請參閱 < [CMFCPropertyGridCtrl 類別](../../mfc/reference/cmfcpropertygridctrl-class.md)。
+
+  `CMFCPropertyGridColorProperty` 類別支援的色彩屬性可以加入至屬性清單控制項。 如需詳細資訊，請參閱 < [CMFCPropertyGridCtrl 類別](../../mfc/reference/cmfcpropertygridctrl-class.md)。
 
 ## <a name="example"></a>範例
 
@@ -103,7 +105,7 @@ CMFCPropertyGridColorProperty(
 *strName*<br/>
 [in]屬性的名稱。
 
-*色彩*<br/>
+*color*<br/>
 [in]屬性的色彩值。
 
 *pPalette*<br/>
@@ -187,7 +189,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>參數
 
-*色彩*<br/>
+*color*<br/>
 [in]RGB 色彩值。
 
 ### <a name="remarks"></a>備註

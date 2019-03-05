@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: e7472b808d8b5d743d884d9e3806df7ffe499836
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 847927a36bac8540dd95307ae3c0259d0adba12a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178775"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304466"
 ---
 # <a name="ccombobox-class"></a>CComboBox 類別
 
@@ -147,7 +147,7 @@ class CComboBox : public CWnd
 |[CComboBox::DeleteString](#deletestring)|從下拉式方塊的清單方塊中，刪除字串。|
 |[CComboBox::Dir](#dir)|將下拉式方塊的清單方塊中的檔案名稱的清單。|
 |[CComboBox::DrawItem](#drawitem)|由架構呼叫時變更為主控描繪下拉式方塊的視覺外觀。|
-|[Ccombobox:: Findstring](#findstring)|尋找包含下拉式方塊的清單方塊中指定的前置詞的第一個字串。|
+|[CComboBox::FindString](#findstring)|尋找包含下拉式方塊的清單方塊中指定的前置詞的第一個字串。|
 |[CComboBox::FindStringExact](#findstringexact)|尋找第一個清單方塊中的字串 （下拉式方塊），符合指定的字串。|
 |[CComboBox::GetComboBoxInfo](#getcomboboxinfo)|擷取有關的資訊`CComboBox`物件。|
 |[CComboBox::GetCount](#getcount)|擷取在下拉式方塊的清單方塊中的項目數。|
@@ -214,7 +214,7 @@ class CComboBox : public CWnd
 
 父代的函式原型如下所示：
 
-**afx_msg** `void` `memberFxn` **（);**
+**afx_msg** `void` `memberFxn` **( );**
 
 無法預測特定通知會傳送的順序。 特別是之前, 或之後 CBN_CLOSEUP 通知，可能會發生 CBN_SELCHANGE 通知。
 
@@ -379,7 +379,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*<br/>
+*dwStyle*<br/>
 指定下拉式方塊的樣式。 套用的任何組合[下拉式方塊樣式](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)至方塊。
 
 *rect*<br/>
@@ -554,7 +554,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 [!code-cpp[NVC_MFC_CComboBox#11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]
 
-##  <a name="findstring"></a>  Ccombobox:: Findstring
+##  <a name="findstring"></a>  CComboBox::FindString
 
 找到，但不會選取第一個字串，其中包含下拉式方塊的清單方塊中指定的前置詞。
 
@@ -1227,7 +1227,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>參數
 
-*n 請選取*<br/>
+*nSelect*<br/>
 指定要選取之字串的以零為起始的索引。 如果為-1，會移除任何目前的選取範圍的清單方塊中，並清除編輯控制項。
 
 ### <a name="return-value"></a>傳回值

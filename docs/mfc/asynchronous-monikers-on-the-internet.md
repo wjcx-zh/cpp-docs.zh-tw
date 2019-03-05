@@ -10,12 +10,12 @@ helpviewer_keywords:
 - optimization [MFC], asynchronous downloading across Internet
 - Internet [MFC], asynchronous downloading
 ms.assetid: 418b0c64-0046-4dae-8118-c9c762b5822e
-ms.openlocfilehash: 63bdc8372223075804d8c710909909382167b2c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7a7ea51bca134e965747db8aac7f8a62822c9eb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591287"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305025"
 ---
 # <a name="asynchronous-monikers-on-the-internet"></a>網際網路上的非同步 Moniker
 
@@ -41,7 +41,8 @@ ms.locfileid: "50591287"
 
 ## <a name="mfc-classes-for-asynchronous-monikers"></a>非同步 Moniker 的 MFC 類別
 
-[CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)衍生自[CMonikerFile](../mfc/reference/cmonikerfile-class.md)，而後者又衍生自[COleStreamFile](../mfc/reference/colestreamfile-class.md)。 `COleStreamFile` 物件表示一種資料流；`CMonikerFile` 物件會使用 `IMoniker` 取得資料，而 `CAsyncMonikerFile` 也會以非同步方式如此做。
+[CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)衍生自[CMonikerFile](../mfc/reference/cmonikerfile-class.md)，而後者又衍生自[COleStreamFile](../mfc/reference/colestreamfile-class.md)。 
+  `COleStreamFile` 物件表示一種資料流；`CMonikerFile` 物件會使用 `IMoniker` 取得資料，而 `CAsyncMonikerFile` 也會以非同步方式如此做。
 
 非同步 Moniker 主要在支援網際網路的應用程式和 ActiveX 控制項中使用，用於在檔案傳輸期間提供反應靈敏的使用者介面。 主要範例是使用[CDataPathProperty](../mfc/reference/cdatapathproperty-class.md)為 ActiveX 控制項提供非同步屬性。
 
@@ -67,4 +68,3 @@ MFC 類別`CDataPathProperty`並[CCachedDataPathProperty](../mfc/reference/ccach
 
 [MFC 網際網路程式設計工作](../mfc/mfc-internet-programming-tasks.md)<br/>
 [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)
-

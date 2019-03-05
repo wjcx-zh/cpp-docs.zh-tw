@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], properties
 - controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
-ms.openlocfilehash: abddda015a80b21d941409044524e2f526b26f08
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0a03acfd880bcf63017eec9796315b98e5d5f4d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454935"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326357"
 ---
 # <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX 控制項容器：檢視和修改控制項屬性
 
@@ -21,7 +21,7 @@ ms.locfileid: "50454935"
 
 如果 ActiveX 控制項容器應用程式使用內嵌控制項，您可以在資源編輯器中檢視和修改控制項的屬性。 您也可以在設計階段使用資源編輯器來設定屬性值。 資源編輯器會自動將這些值儲存在專案的資源檔中。 控制項的所有執行個體接著會將其屬性初始化為這些值。
 
-這個程序假設您已將控制項插入專案中。 如需資訊，請參閱[ActiveX 控制項容器： 插入控制項至控制項容器應用程式中](../mfc/inserting-a-control-into-a-control-container-application.md)。
+這個程序假設您已將控制項插入專案中。 如需資訊，請參閱[ActiveX 控制項容器：將控制項插入控制項容器應用程式](../mfc/inserting-a-control-into-a-control-container-application.md)。
 
 檢視控制項屬性的第一步是將控制項的執行個體加入至專案的對話方塊範本。
 
@@ -42,4 +42,3 @@ ms.locfileid: "50454935"
 ## <a name="see-also"></a>另請參閱
 
 [ActiveX 控制項容器](../mfc/activex-control-containers.md)
-

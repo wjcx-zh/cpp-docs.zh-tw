@@ -1,19 +1,19 @@
 ---
-title: 如何：使用訊息對應交互參考
+title: HOW TO：使用訊息對應交互參考
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.messages
 helpviewer_keywords:
 - windows [MFC], message maps
 ms.assetid: 2e863d23-9e58-45ba-b5e4-a8ceefccd0c8
-ms.openlocfilehash: 71c46e7c30eab414534012c2fe314999568d2bd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9467dce943da8c5fb447dcd3c83d044218fa183d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457794"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326097"
 ---
-# <a name="how-to-use-the-message-map-cross-reference"></a>如何：使用訊息對應交互參考
+# <a name="how-to-use-the-message-map-cross-reference"></a>HOW TO：使用訊息對應交互參考
 
 在標示的項目\<memberFxn >，撰寫您自己的成員函式，針對衍生[CWnd](../../mfc/reference/cwnd-class.md)類別。 您可以自行為函式命名。 其他函式如 `OnActivate`，是 `CWnd` 類別的成員函式。 如果呼叫這些函式，它們就會將訊息傳遞至 `DefWindowProc` Windows 函式。 若要處理 Windows 通知訊息，請覆寫衍生類別中對應的 `CWnd` 函式。 您的函式應該呼叫基底類別中被覆寫的函式，讓基底類別和 Windows 回應訊息。
 
@@ -30,4 +30,3 @@ ms.locfileid: "50457794"
 ## <a name="see-also"></a>另請參閱
 
 [訊息對應](../../mfc/reference/message-maps-mfc.md)
-

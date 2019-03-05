@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC Add Class Wizard
 - wizards [MFC]
 ms.assetid: ad3b0989-d307-43b2-9417-3f9a78889024
-ms.openlocfilehash: 245963d4222188f16fd334d6950e04584ac1e978
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fa9b947ae6fc0e48aaecde61e35a5f4152c85f27
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520838"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304089"
 ---
 # <a name="mfc-add-class-wizard"></a>MFC 加入類別精靈
 
@@ -109,7 +109,7 @@ ms.locfileid: "51520838"
 
 - **類型識別碼**
 
-  設定類別的型別 ID。 **型別 ID**  方塊會串連專案名稱和新的類別名稱，如下所示： *MFCProj.MFCClass*。 此識別碼是您選取時，才可變更**自動化**選項**Creatable 的類型識別碼**。
+  設定類別的型別 ID。 **型別 ID**方塊會串連專案名稱和新的類別名稱，如下所示：*MFCProj.MFCClass*。 此識別碼是您選取時，才可變更**自動化**選項**Creatable 的類型識別碼**。
 
 - **產生 DocTemplate 資源**
 

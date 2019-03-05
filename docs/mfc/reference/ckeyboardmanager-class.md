@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: d144731d05e861f4b462c4d58022b5155fdeb79b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c953958b3e0112997423376d42b62953b936049a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694266"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303603"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager 類別
 
@@ -69,7 +69,7 @@ class CKeyboardManager : public CObject
 |[CKeyboardManager::LoadState](#loadstate)|從 Windows 登錄載入快速鍵資料表。|
 |[CKeyboardManager::ResetAll](#resetall)|重新載入應用程式資源的快顯索引鍵資料表。|
 |[CKeyboardManager::SaveState](#savestate)|將 Windows 登錄捷徑索引鍵的資料表。|
-|[Showallaccelerators](#showallaccelerators)|指定是否，架構會顯示所有命令，所有的快速鍵或每個命令的單一快速鍵。 這個方法不會影響有只有一個相關聯的快速鍵的命令。|
+|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|指定是否，架構會顯示所有命令，所有的快速鍵或每個命令的單一快速鍵。 這個方法不會影響有只有一個相關聯的快速鍵的命令。|
 |[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|將字元轉換至其上方的暫存器。|
 |[CKeyboardManager::UpdateAccelTable](#updateacceltable)|更新快顯的索引鍵資料表與新的快顯索引鍵的資料表。|
 
@@ -198,7 +198,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||
 |-|-|
 |參數|描述|
-|*NChar*|[in]這個方法會檢查的字元。|
+|*nChar*|[in]這個方法會檢查的字元。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -326,7 +326,7 @@ static UINT TranslateCharToUpper(const UINT nChar);
 
 ### <a name="parameters"></a>參數
 
-*NChar*<br/>
+*nChar*<br/>
 [in]要轉換的字元。
 
 ### <a name="return-value"></a>傳回值
@@ -382,4 +382,3 @@ BOOL UpdateAccelTable(
 [CWinAppEx 類別](../../mfc/reference/cwinappex-class.md)<br/>
 [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)<br/>
 [鍵盤和滑鼠自訂](../../mfc/keyboard-and-mouse-customization.md)
-

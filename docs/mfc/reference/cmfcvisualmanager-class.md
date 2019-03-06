@@ -344,12 +344,12 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 000f5229c14699c80e2ce18e4125d0c2ac6e382b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 594e727a091cbb7b2999e540ae8da7ddec2a7a14
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653046"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294326"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager 類別
 
@@ -538,7 +538,7 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 |[CMFCVisualManager::OnUpdateSystemColors](#onupdatesystemcolors)|當系統色彩設定變更時由架構呼叫。|
 |[CMFCVisualManager::RedrawAll](#redrawall)|應用程式中，重新繪製所有控制列。|
 |[CMFCVisualManager::RibbonCategoryColorToRGB](#ribboncategorycolortorgb)||
-|[Cmfcvisualmanager:: Setdefaultmanager](#setdefaultmanager)|設定的預設視覺管理員。|
+|[CMFCVisualManager::SetDefaultManager](#setdefaultmanager)|設定的預設視覺管理員。|
 |[CMFCVisualManager::SetEmbossDisabledImage](#setembossdisabledimage)|啟用或停用已停用的工具列影像的浮凸的模式。|
 |[CMFCVisualManager::SetFadeInactiveImage](#setfadeinactiveimage)|啟用或停用非使用中的映像的光源效果功能表或工具列上。|
 |[CMFCVisualManager::SetMenuFlatLook](#setmenuflatlook)|設定旗標，指出應用程式功能表按鈕是否具有簡維的外觀。|
@@ -643,7 +643,7 @@ CMFCVisualManager(BOOL bTemporary = FALSE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bTemporary*<br/>
+[in] *bTemporary*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -655,7 +655,7 @@ static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bAutoDestroyOnly*<br/>
+[in] *bAutoDestroyOnly*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -671,10 +671,10 @@ void DoDrawHeaderSortArrow(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*bIsUp*<br/>
-[in]*bDlgCtrl*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bIsUp*<br/>
+[in] *bDlgCtrl*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -690,8 +690,8 @@ virtual BOOL DrawComboBorderWinXP(CDC*,
 
 ### <a name="parameters"></a>參數
 
-[in]*CDC&#42;*<br/>
-[in]*CRect*<br/>
+[in] *CDC&#42;*<br/>
+[in] *CRect*<br/>
 [in]*BOOL*<br/>
 
 ### <a name="return-value"></a>傳回值
@@ -710,8 +710,8 @@ virtual BOOL DrawComboDropButtonWinXP(CDC*,
 
 ### <a name="parameters"></a>參數
 
-[in]*CDC&#42;*<br/>
-[in]*CRect*<br/>
+[in] *CDC&#42;*<br/>
+[in] *CRect*<br/>
 [in]*BOOL*<br/>
 
 ### <a name="return-value"></a>傳回值
@@ -729,10 +729,10 @@ virtual BOOL DrawPushButtonWinXP(CDC*,
 
 ### <a name="parameters"></a>參數
 
-[in]*CDC&#42;*<br/>
-[in]*CRect*<br/>
-[in]*CMFCButton&#42;*<br/>
-[in]*UINT*<br/>
+[in] *CDC&#42;*<br/>
+[in] *CRect*<br/>
+[in] *CMFCButton&#42;*<br/>
+[in] *UINT*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -752,12 +752,12 @@ virtual BOOL DrawTextOnGlass(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*先把 strText*<br/>
-[in]*rect*<br/>
-[in]*dwFlags*<br/>
-[in]*nGlowSize*<br/>
-[in]*clrText*<br/>
+[in] *pDC*<br/>
+[in] *strText*<br/>
+[in] *rect*<br/>
+[in] *dwFlags*<br/>
+[in] *nGlowSize*<br/>
+[in] *clrText*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -771,7 +771,7 @@ void EnableToolbarButtonFill(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bEnable*<br/>
+[in] *bEnable*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -879,7 +879,7 @@ virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton)
 
 ### <a name="parameters"></a>參數
 
-[in]*pButton*<br/>
+[in] *pButton*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -938,9 +938,9 @@ virtual COLORREF GetMenuItemTextColor(
 
 ### <a name="parameters"></a>參數
 
-[in]*pButton*<br/>
-[in]*bHighlighted*<br/>
-[in]*bDisabled*<br/>
+[in] *pButton*<br/>
+[in] *bHighlighted*<br/>
+[in] *bDisabled*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1059,7 +1059,7 @@ virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
 
 ### <a name="parameters"></a>參數
 
-[in]*pHyperLink*<br/>
+[in] *pHyperLink*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1073,7 +1073,7 @@ virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu*) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*CMFCRibbonPanelMenu&#42;*<br/>
+[in] *CMFCRibbonPanelMenu&#42;*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1107,7 +1107,7 @@ virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bDisabled*<br/>
+[in] *bDisabled*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1127,12 +1127,12 @@ virtual void GetRibbonSliderColors(
 
 ### <a name="parameters"></a>參數
 
-[in]*pSlider*<br/>
+[in] *pSlider*<br/>
 [in]*bIsHighlighted*<br/>
-[in]*bIsPressed*<br/>
-[in]*bIsDisabled*<br/>
-[in]*clrLine*<br/>
-[in]*clrFill*<br/>
+[in] *bIsPressed*<br/>
+[in] *bIsDisabled*<br/>
+[in] *clrLine*<br/>
+[in] *clrFill*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1144,7 +1144,7 @@ virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
 
 ### <a name="parameters"></a>參數
 
-[in]*pStatusBar*<br/>
+[in] *pStatusBar*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1160,8 +1160,8 @@ virtual int GetShowAllMenuItemsHeight(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*sizeDefault*<br/>
+[in] *pDC*<br/>
+[in] *sizeDefault*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1177,8 +1177,8 @@ virtual void GetSmartDockingBaseGuideColors(
 
 ### <a name="parameters"></a>參數
 
-[in]*clrBaseGroupBackground*<br/>
-[in]*clrBaseGroupBorder*<br/>
+[in] *clrBaseGroupBackground*<br/>
+[in] *clrBaseGroupBorder*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1202,7 +1202,7 @@ virtual AFX_SMARTDOCK_THEME GetSmartDockingTheme();
 
 ### <a name="return-value"></a>傳回值
 
-傳回下列的列舉值之一： AFX_SDT_DEFAULT，AFX_SDT_VS2005，AFX_SDT_VS2008。
+會傳回下列的列舉值之一：AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>備註
 
@@ -1216,8 +1216,8 @@ virtual COLORREF GetStatusBarPaneTextColor(
 
 ### <a name="parameters"></a>參數
 
-[in]*pStatusBar*<br/>
-[in]*pPane*<br/>
+[in] *pStatusBar*<br/>
+[in] *pPane*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1281,7 +1281,7 @@ virtual int GetTabHorzMargin(const CMFCBaseTabCtrl*);
 
 ### <a name="parameters"></a>參數
 
-[in]*CMFCBaseTabCtrl&#42;*<br/>
+[in] *CMFCBaseTabCtrl&#42;*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1298,8 +1298,8 @@ virtual COLORREF GetTabTextColor(
 
 ### <a name="parameters"></a>參數
 
-[in]*CMFCBaseTabCtrl&#42;*<br/>
-[in]*int*<br/>
+[in] *CMFCBaseTabCtrl&#42;*<br/>
+[in] *int*<br/>
 [in]*BOOL*<br/>
 
 ### <a name="return-value"></a>傳回值
@@ -1480,8 +1480,8 @@ virtual BOOL GetToolTipInfo(
 
 ### <a name="parameters"></a>參數
 
-[in]*params*<br/>
-[in]*n*<br/>
+[in] *params*<br/>
+[in] *nType*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1517,7 +1517,7 @@ virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton*) const;
 
 ### <a name="parameters"></a>參數
 
-[in]*CMFCDesktopAlertWndButton&#42;*<br/>
+[in] *CMFCDesktopAlertWndButton&#42;*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1705,7 +1705,7 @@ virtual BOOL IsToolbarRoundShape(CMFCToolBar*);
 
 ### <a name="parameters"></a>參數
 
-[in]*CMFCToolBar&#42;*<br/>
+[in] *CMFCToolBar&#42;*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1731,8 +1731,8 @@ virtual void OnActivateApp(
 
 ### <a name="parameters"></a>參數
 
-[in]*pWnd*<br/>
-[in]*bActive*<br/>
+[in] *pWnd*<br/>
+[in] *bActive*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1881,11 +1881,11 @@ virtual void OnDrawButtonSeparator(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pButton*<br/>
-[in]*rect*<br/>
-[in]*狀態*<br/>
-[in]*bHorz*<br/>
+[in] *pDC*<br/>
+[in] *pButton*<br/>
+[in] *rect*<br/>
+[in] *state*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1939,14 +1939,14 @@ virtual void OnDrawCaptionBarButtonBorder(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pBar*<br/>
-[in]*rect*<br/>
-[in]*bIsPressed*<br/>
+[in] *pDC*<br/>
+[in] *pBar*<br/>
+[in] *rect*<br/>
+[in] *bIsPressed*<br/>
 [in]*bIsHighlighted*<br/>
-[in]*bIsDisabled*<br/>
-[in]*bHasDropDownArrow*<br/>
-[in]*bIsSysButton*<br/>
+[in] *bIsDisabled*<br/>
+[in] *bHasDropDownArrow*<br/>
+[in] *bIsSysButton*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -1961,9 +1961,9 @@ virtual void OnDrawCaptionBarInfoArea(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pBar*<br/>
-[in]*rect*<br/>
+[in] *pDC*<br/>
+[in] *pBar*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -2024,11 +2024,11 @@ virtual void OnDrawCheckBox(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*bHighlighted*<br/>
-[in]*bChecked*<br/>
-[in]*bEnabled*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bHighlighted*<br/>
+[in] *bChecked*<br/>
+[in] *bEnabled*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -2046,12 +2046,12 @@ virtual void OnDrawCheckBoxEx(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*nState*<br/>
-[in]*bHighlighted*<br/>
-[in]*bPressed*<br/>
-[in]*bEnabled*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *nState*<br/>
+[in] *bHighlighted*<br/>
+[in] *bPressed*<br/>
+[in] *bEnabled*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -2139,7 +2139,7 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 
 ### <a name="parameters"></a>參數
 
-[in]*pWndCtrl*<br/>
+[in] *pWndCtrl*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -2223,10 +2223,10 @@ virtual void OnDrawExpandingBox(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*bIsOpened*<br/>
-[in]*colorBox*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bIsOpened*<br/>
+[in] *colorBox*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -2339,9 +2339,9 @@ virtual void OnDrawMenuArrowOnCustomizeList(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rectCommand*<br/>
-[in]*bSelected*<br/>
+[in] *pDC*<br/>
+[in] *rectCommand*<br/>
+[in] *bSelected*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -2384,11 +2384,11 @@ virtual void OnDrawMenuCheck(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pButton*<br/>
-[in]*rect*<br/>
-[in]*bHighlight*<br/>
-[in]*bIsRadio*<br/>
+[in] *pDC*<br/>
+[in] *pButton*<br/>
+[in] *rect*<br/>
+[in] *bHighlight*<br/>
+[in] *bIsRadio*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -2405,11 +2405,11 @@ virtual void OnDrawMenuItemButton(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pButton*<br/>
-[in]*rectButton*<br/>
-[in]*bHighlight*<br/>
-[in]*bDisabled*<br/>
+[in] *pDC*<br/>
+[in] *pButton*<br/>
+[in] *rectButton*<br/>
+[in] *bHighlight*<br/>
+[in] *bDisabled*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -2423,8 +2423,8 @@ virtual COLORREF OnDrawMenuLabel(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -2441,9 +2441,9 @@ virtual void OnDrawMenuResizeBar(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*nResizeFlags*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *nResizeFlags*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -2502,15 +2502,15 @@ virtual void OnDrawMenuShadow(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rectClient*<br/>
-[in]*rectExclude*<br/>
-[in]*nDepth*<br/>
-[in]*iMinBrightness*<br/>
-[in]*iMaxBrightness*<br/>
-[in]*pBmpSaveBottom*<br/>
-[in]*pBmpSaveRight*<br/>
-[in]*bRTL*<br/>
+[in] *pDC*<br/>
+[in] *rectClient*<br/>
+[in] *rectExclude*<br/>
+[in] *nDepth*<br/>
+[in] *iMinBrightness*<br/>
+[in] *iMaxBrightness*<br/>
+[in] *pBmpSaveBottom*<br/>
+[in] *pBmpSaveRight*<br/>
+[in] *bRTL*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -2562,10 +2562,10 @@ virtual void OnDrawMiniFrameBorder(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pFrameWnd*<br/>
-[in]*rectBorder*<br/>
-[in]*rectBorderSize*<br/>
+[in] *pDC*<br/>
+[in] *pFrameWnd*<br/>
+[in] *rectBorder*<br/>
+[in] *rectBorderSize*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -2697,10 +2697,10 @@ virtual void OnDrawPaneDivider(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pSlider*<br/>
-[in]*rect*<br/>
-[in]*bAutoHideMode*<br/>
+[in] *pDC*<br/>
+[in] *pSlider*<br/>
+[in] *rect*<br/>
+[in] *bAutoHideMode*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -2714,8 +2714,8 @@ virtual void OnDrawPopupWindowBorder(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -2730,9 +2730,9 @@ virtual void OnDrawPopupWindowButtonBorder(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rectClient*<br/>
-[in]*pButton*<br/>
+[in] *pDC*<br/>
+[in] *rectClient*<br/>
+[in] *pButton*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -2747,9 +2747,9 @@ virtual COLORREF OnDrawPopupWindowCaption(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rectCaption*<br/>
-[in]*pPopupWnd*<br/>
+[in] *pDC*<br/>
+[in] *rectCaption*<br/>
+[in] *pPopupWnd*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -2945,8 +2945,8 @@ virtual void OnDrawRibbonCategoryScroll(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pScroll*<br/>
+[in] *pDC*<br/>
+[in] *pScroll*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -2993,11 +2993,11 @@ virtual void OnDrawRibbonCheckBoxOnList(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pCheckBox*<br/>
-[in]*rect*<br/>
-[in]*bIsSelected*<br/>
-[in]*bHighlighted*<br/>
+[in] *pDC*<br/>
+[in] *pCheckBox*<br/>
+[in] *rect*<br/>
+[in] *bIsSelected*<br/>
+[in] *bHighlighted*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -3019,16 +3019,16 @@ virtual void OnDrawRibbonColorPaletteBox(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pColorButton*<br/>
-[in]*pIcon*<br/>
-[in]*色彩*<br/>
-[in]*rect*<br/>
-[in]*bDrawTopEdge*<br/>
-[in]*bDrawBottomEdge*<br/>
+[in] *pDC*<br/>
+[in] *pColorButton*<br/>
+[in] *pIcon*<br/>
+[in] *color*<br/>
+[in] *rect*<br/>
+[in] *bDrawTopEdge*<br/>
+[in] *bDrawBottomEdge*<br/>
 [in]*bIsHighlighted*<br/>
-[in]*bIsChecked*<br/>
-[in]*bIsDisabled*<br/>
+[in] *bIsChecked*<br/>
+[in] *bIsDisabled*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -3066,8 +3066,8 @@ virtual void OnDrawRibbonDefaultPaneButtonContext(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pButton*<br/>
+[in] *pDC*<br/>
+[in] *pButton*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -3084,11 +3084,11 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pButton*<br/>
-[in]*rect*<br/>
-[in]*bIsSelected*<br/>
-[in]*bHighlighted*<br/>
+[in] *pDC*<br/>
+[in] *pButton*<br/>
+[in] *rect*<br/>
+[in] *bIsSelected*<br/>
+[in] *bHighlighted*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -3103,9 +3103,9 @@ virtual void OnDrawRibbonGalleryBorder(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pButton*<br/>
-[in]*rectBorder*<br/>
+[in] *pDC*<br/>
+[in] *pButton*<br/>
+[in] *rectBorder*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -3119,8 +3119,8 @@ virtual void OnDrawRibbonGalleryButton(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pButton*<br/>
+[in] *pDC*<br/>
+[in] *pButton*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -3136,10 +3136,10 @@ virtual void OnDrawRibbonKeyTip(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
+[in] *pDC*<br/>
 [in]*pElement*<br/>
-[in]*rect*<br/>
-[in]*str*<br/>
+[in] *rect*<br/>
+[in] *str*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -3228,9 +3228,9 @@ virtual void OnDrawRibbonMenuCheckFrame(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pButton*<br/>
-[in]*rect*<br/>
+[in] *pDC*<br/>
+[in] *pButton*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -3559,11 +3559,11 @@ virtual void OnDrawScrollButtons(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*nBorderSize*<br/>
-[in]*iImage*<br/>
-[in]*bHilited*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *nBorderSize*<br/>
+[in] *iImage*<br/>
+[in] *bHilited*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -3608,9 +3608,9 @@ virtual void OnDrawShowAllMenuItems(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
-[in]*狀態*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *state*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -4084,12 +4084,12 @@ virtual void OnDrawTasksGroupIcon(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pGroup*<br/>
-[in]*nIconHOffset*<br/>
+[in] *pDC*<br/>
+[in] *pGroup*<br/>
+[in] *nIconHOffset*<br/>
 [in]*bIsHighlighted*<br/>
-[in]*bIsSelected*<br/>
-[in]*bCanCollapse*<br/>
+[in] *bIsSelected*<br/>
+[in] *bCanCollapse*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -4131,8 +4131,8 @@ virtual void OnDrawToolBoxFrame(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rect*<br/>
+[in] *pDC*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -4173,9 +4173,9 @@ virtual void OnErasePopupWindowButton(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*rectClient*<br/>
-[in]*pButton*<br/>
+[in] *pDC*<br/>
+[in] *rectClient*<br/>
+[in] *pButton*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -4383,14 +4383,14 @@ virtual COLORREF OnFillCaptionBarButton(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pBar*<br/>
-[in]*rect*<br/>
-[in]*bIsPressed*<br/>
+[in] *pDC*<br/>
+[in] *pBar*<br/>
+[in] *rect*<br/>
+[in] *bIsPressed*<br/>
 [in]*bIsHighlighted*<br/>
-[in]*bIsDisabled*<br/>
-[in]*bHasDropDownArrow*<br/>
-[in]*bIsSysButton*<br/>
+[in] *bIsDisabled*<br/>
+[in] *bHasDropDownArrow*<br/>
+[in] *bIsSysButton*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -4709,9 +4709,9 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
 
 ### <a name="parameters"></a>參數
 
-[in]*pDC*<br/>
-[in]*pMenuBar*<br/>
-[in]*rect*<br/>
+[in] *pDC*<br/>
+[in] *pMenuBar*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -4891,8 +4891,8 @@ virtual BOOL OnNcActivate(
 
 ### <a name="parameters"></a>參數
 
-[in]*pWnd*<br/>
-[in]*bActive*<br/>
+[in] *pWnd*<br/>
+[in] *bActive*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -4982,13 +4982,13 @@ virtual COLORREF RibbonCategoryColorToRGB(AFX_RibbonCategoryColor color);
 
 ### <a name="parameters"></a>參數
 
-[in]*色彩*<br/>
+[in] *color*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setdefaultmanager"></a>  Cmfcvisualmanager:: Setdefaultmanager
+##  <a name="setdefaultmanager"></a>  CMFCVisualManager::SetDefaultManager
 
 設定預設的管理員。
 
@@ -5098,4 +5098,3 @@ void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 [類別](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCVisualManager::GetInstance](#getinstance)<br/>
 [視覺化管理員](../../mfc/visualization-manager.md)
-

@@ -1,6 +1,6 @@
 ---
 title: 提示檔案
-ms.date: 11/04/2016
+ms.date: 02/26/2019
 f1_keywords:
 - cpp.hint
 - vc.hint.file
@@ -11,53 +11,104 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: 44566408a3afcfee7a15299a5845b5af385aeef8
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: ca250849a0bcd150a6359abdad996b72c4372713
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320688"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006745"
 ---
 # <a name="hint-files"></a>提示檔案
 
-「提示檔案」可協助 Visual Studio 整合式開發環境 (IDE) 解譯 Visual C++ 識別項，例如函式和巨集的名稱。 當您開啟 Visual C++ 專案時，IDE 的「剖析系統」會分析專案之每個原始程式檔中的程式碼，並收集每個識別項的相關資訊。 然後，IDE 會使用該資訊來支援 [類別檢視] 瀏覽器和**導覽列**等功能。
+「提示檔案」包含巨集，可能會另外造成 C++ 瀏覽資料庫剖析器跳過程式碼區域。 當您開啟 Visual C++ 專案時，剖析器會分析專案內每個來源檔案中的程式碼，以及建置含有所有識別項資訊的資料庫。 IDE 會使用該資訊來支援程式碼瀏覽功能，例如 [類別檢視] 瀏覽器和 [導覽列] 等功能。
 
-剖析系統是在 Visual C++ 2010 中引進，其理解 C/C++ 語法，但可能會誤譯包含巨集的陳述式。 如果巨集導致以不正確的語法撰寫原始程式碼，則可能會誤譯陳述式。 當原始程式碼經過編譯且前置處理器將[巨集識別項](../preprocessor/hash-define-directive-c-cpp.md)取代成其定義時，陳述式的語法可能會變得正確。 剖析系統不需要建置專案即可運作，因為它會使用提示檔案來解譯巨集。 因此，[類別檢視] 等瀏覽功能可立即使用。
+C++ 瀏覽資料庫剖析器為模糊剖析器，可在短時間內剖析大量程式碼。 他速度快的其中一個原因是它會跳過區塊的內容。 比方說，它僅會記錄函式的位置及參數，並略過其內容。 某些巨集會導致用來判斷區塊起訖位置的啟發學習法發生問題。 而這些問題會造成不正確地記錄程式碼區域。
 
-提示檔案包含使用者可自訂的「提示」，其語法與 C/C++ 巨集定義相同。 Visual C++ 包含的內建提示檔案對於大多數專案便已足夠，但您可以建立自己的提示檔案，以改善 Visual Studio 處理識別項的方式。
+這些跳過的區域會以不同方式呈現：
+
+- [類別檢視]、[前往] 及 [導覽列] 中遺漏的類型及函式
+
+- [導覽列] 中的錯誤範圍
+
+- 對已定義函式之 [建立宣告/定義] 的建議
+
+提示檔案包含使用者可自訂的提示，其語法與 C/C++ 巨集定義相同。 Visual C++ 包含足夠供大部分專案使用的內建提示檔案。 不過，您可建立自己的提示檔案，來專門為您的專案改進剖析器。
 
 > [!IMPORTANT]
-> 如果您修改或新增提示檔案，您必須刪除方案中的 .sdf 檔案及 (或) VC.db 檔案，變更才會生效。
+> 若您修改或新增提示檔案，則必須採取額外的步驟才能讓變更生效：
+> - 在 Visual Studio 2017 15.6 版以前的版本中：刪除所有變更之解決方案中的 .sdf 檔案及 (或) VC.db 檔案。
+> - 在 Visual Studio 2017 15.6 到 15.9 版中：新增提示檔案後，關閉再重新開啟解決方案。
 
 ## <a name="scenario"></a>情節
 
-假設下列程式碼位於您可以使用 [類別檢視] 瀏覽器檢查的原始程式檔中。 `STDMETHOD` 巨集宣告名為 `myMethod` 的方法，該方法接受一個參數，並將指標傳回至 **HRESULT**。
-
 ```cpp
-// Source code file.
-STDMETHOD(myMethod)(int parameter1);
+#define NOEXCEPT noexcept
+void Function() NOEXCEPT
+{
+}
 ```
 
-下列巨集定義位於不同的標頭檔中。
+若沒有提示檔案，`Function` 就不會在 [類別檢視]、[前往] 或 [導覽列] 中顯示。 新增具有此巨集定義的提示檔案後，剖析器現在可了解及取代 `NOEXCEPT` 巨集，讓其能夠正確地剖析函式：
 
-```cpp
-// Header file.
-#define STDMETHOD(method) HRESULT (STDMETHODCALLTYPE * method)
-#define STDMETHODCALLTYPE __stdcall
-#define HRESULT void*
+```cpp.hint
+#define NOEXCEPT
 ```
 
-剖析系統無法解譯原始程式碼，因為似乎宣告了名為 `STDMETHOD` 的函式，由於該宣告具有兩個參數清單，因此語法不正確。 剖析系統不會開啟標頭檔來探索 `STDMETHOD`、`STDMETHODCALLTYPE` 和 `HRESULT` 巨集的定義。 由於剖析系統無法解譯 `STDMETHOD` 巨集，因此會忽略整個陳述式，然後繼續剖析。
+## <a name="disruptive-macros"></a>造成干擾的巨集
 
-剖析系統不會使用標頭檔，因為您的專案可能相依於一或多個重要的標頭檔。 如有任何標頭檔變更，剖析系統可能必須重新檢查專案中的所有標頭檔，導致 IDE 的效能變慢。 相反地，剖析系統會使用指定如何處理 `STDMETHOD`、`STDMETHODCALLTYPE` 和 `HRESULT` 巨集的提示。
+中斷剖析器的巨集有兩種：
 
-如何知道您需要提示？ 如果您需要提示，應該建立哪種提示？ 需要提示的一個徵兆是，如果 [類別檢視] 中的識別項檢視與**編輯器**中的檢視不一致。 例如，[類別檢視] 可能不會顯示您已知的類別成員存在，或成員的名稱不正確。 如需解決常見問題之提示類型的詳細資訊，請參閱本主題稍後的＜哪些巨集需要提示？＞一節。
+- 封裝會修飾函式之關鍵字的巨集
+
+   ```cpp
+   #define NOEXCEPT noexcept
+   #define STDMETHODCALLTYPE __stdcall
+   ```
+
+   對於這些類型的巨集，提示檔案中僅需要其巨集名稱：
+
+   ```cpp.hint
+   #define NOEXCEPT
+   #define STDMETHODCALLTYPE
+   ```
+
+- 包含不對稱括弧的巨集
+
+   ```cpp
+   #define BEGIN {
+   ```
+
+   對於這些類型的巨集，提示檔案中需要同時有該巨集的名稱及其內容：
+
+   ```cpp.hint
+   #define BEGIN {
+   ```
+
+## <a name="editor-support"></a>編輯器支援
+
+從 Visual Studio 2017 15.8 版起，皆包含可找出干擾性巨集的數個功能：
+
+- 醒目提示區域內剖析器所跳過的巨集。
+
+- 您可使用快速動作建立包含醒目提示巨集的提示檔案，如果有現有的提示檔案，也可將巨集新增到該提示檔案。
+
+![醒目提示的巨集。](../ide/media/hint-squiggle-and-actions.png "提示波浪線及快速動作")
+
+在執行其中一個快速動作後，剖析器就會重新剖析提示檔案所影響的檔案。
+
+根據預設，會將問題巨集醒目提示為建議。 醒目提示可變更為更顯眼的樣式，例如紅色或綠色波浪線。 使用 [工具] > [選項] > [文字編輯器] > [C/C++] > [檢視] 下 [程式碼波浪線] 區段中的 [已跳過瀏覽區域中的巨集] 選項。
+
+![[已跳過瀏覽區域中的巨集] 選項。](../ide/media/skipped-regions-squiggle-option.png "已跳過區域波浪線選項。")
+
+## <a name="display-browsing-database-errors"></a>顯示瀏覽資料庫錯誤
+
+[專案] > [顯示瀏覽資料庫錯誤] 功能表命令，會在 [錯誤清單] 中顯示無法剖析的所有區域。 此命令用來簡化建置初始提示檔案的過程。 不過，剖析器無法判斷錯誤是否為干擾性巨集所致，因此您必須評估每個錯誤。 執行 [顯示瀏覽資料庫錯誤] 命令，然後巡覽至各個錯誤，以在編輯器中載入受影響的檔案。 檔案載入後，若區域內有巨集，就會予以醒目提示。 您可叫用快速動作將其新增至提示檔案。 更新提示檔案後，就會自動更新錯誤清單。 或者，若您要手動修改提示檔案，可使用 [重新掃描解決方案] 命令來觸發更新。
 
 ## <a name="architecture"></a>架構
 
-提示檔案屬於實體目錄，而不是 [方案總管] 中描述的邏輯目錄。 您不需要將提示檔案新增至專案，才能讓提示檔案生效。 剖析系統只有在剖析原始程式檔時，才會使用提示檔案。
+提示檔案與實體目錄相關，而非顯示於 [方案總管] 中的邏輯目錄。 您不必將提示檔案新增至專案，就能讓提示檔案生效。 剖析系統只有在剖析原始程式檔時，才會使用提示檔案。
 
-每個提示檔案都會命名為 **cpp.hint**。 因此，多個目錄可能包含一個提示檔案，但每個特定目錄中只能有一個提示檔案。
+每個提示檔案都會命名為 **cpp.hint**。 多個目錄可能包含一個提示檔案，但特定目錄中只能有一個提示檔案。
 
 零或多個提示檔案都會影響您的專案。 如果沒有提示檔案，剖析系統會使用錯誤復原技術來忽略無法解讀的原始程式碼。 否則，剖析系統會使用下列策略來尋找及收集提示。
 
@@ -69,33 +120,33 @@ STDMETHOD(myMethod)(int parameter1);
 
 - 從原始程式檔根目錄到包含原始程式檔本身之目錄的路徑。 在一般 Visual C++ 專案中，根目錄會包含方案或專案檔。
 
-   此規則的例外是，如果「停止檔案」位於原始程式檔的路徑中。 停止檔案可讓您進一步控制搜尋順序，而且是名為 **cpp.stop** 的任何檔案。 剖析系統會搜尋包含停止檔案的目錄到包含原始程式檔的目錄，而不需要從根目錄開始。 在一般專案中，您不需要停止檔案。
+   此規則的例外是，如果「停止檔案」位於原始程式檔的路徑中。 停止檔案是任何名為 **cpp.stop** 的檔案。 停止檔案可讓您進一步控制搜尋順序。 剖析系統會搜尋包含停止檔案的目錄到包含原始程式檔的目錄，而不需要從根目錄開始。 在一般專案中，您不需要停止檔案。
 
 ### <a name="hint-gathering"></a>提示收集
 
 一個提示檔案包含零或多個「提示」。 如同 C/C++ 巨集，您可以定義或刪除提示。 也就是說，`#define` 前置處理器指示詞會建立或重新定義提示，而 `#undef` 指示詞會刪除提示。
 
-剖析系統會依稍早所述的搜尋順序開啟每個提示檔案，將每個檔案的提示累積成一組「有效提示」，然後使用有效提示來解譯您程式碼中的識別項。
+剖析系統會以上述的搜尋順序開啟各提示檔案。 其會將每個檔案的提示累積成一組「有效提示」，然後使用該有效提示解譯您程式碼中的識別項。
 
-剖析系統使用下列規則來累積提示。
+剖析系統會使用這些規則來累積提示：
 
-- 如果新提示指定尚未定義的名稱，新提示會將該名稱新增至有效提示。
+- 如果新提示指定尚未定義的名稱，則新提示會將該名稱新增至有效提示。
 
 - 如果新提示指定已定義的名稱，新提示會重新定義現有的提示。
 
 - 如果新提示是指定現有有效提示的 `#undef` 指示詞，新提示會刪除現有的提示。
 
-第一項規則表示有效提示繼承自先前開啟的提示檔案。 後兩項規則表示出現在搜尋順序後面的提示，可以覆寫出現在前面的提示。 例如，如果您在包含原始程式檔的目錄中建立提示檔案，您可以覆寫任何先前的提示。
+第一項規則表示有效提示繼承自先前開啟的提示檔案。 後兩項規則表示在搜尋順序後面的提示，可以覆寫前面的提示。 例如，如果您在包含原始程式檔的目錄中建立提示檔案，您可以覆寫任何先前的提示。
 
-如需如何收集提示的描述，請參閱本主題稍後的 `Example`一節。
+如需如何收集提示的描述，請參閱[範例](#example)一節。
 
 ### <a name="syntax"></a>語法
 
-建立及刪除提示的語法，與用來建立及刪除巨集的前置處理器指示詞語法相同。 事實上，剖析系統會使用 C/C++ 前置處理器來評估提示。 如需前置處理器指示詞的詳細資訊，請參閱 [#define 指示詞 (C/C++)](../preprocessor/hash-define-directive-c-cpp.md) 和 [#undef 指示詞 (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)。
+您用來建立及刪除提示的語法，與前置處理器指示詞用來建立及刪除巨集的語法相同。 事實上，剖析系統會使用 C/C++ 前置處理器來評估提示。 如需前置處理器指示詞的詳細資訊，請參閱 [#define 指示詞 (C/C++)](../preprocessor/hash-define-directive-c-cpp.md) 和 [#undef 指示詞 (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)。
 
-唯一不尋常的語法項目是 `@<`、`@=` 和 `@>` 取代字串。 這些是提示檔案特定的取代字串，只能搭配「對應」巨集使用。 對應是將資料、函式或事件關聯到其他資料、函式或事件處理常式的一組巨集。 例如，`MFC` 使用對應來建立[訊息對應](../mfc/reference/message-maps-mfc.md)，而 `ATL` 使用對應來建立[物件對應](../atl/reference/object-map-macros.md)。 提示檔案特定的取代字串表示對應的開始、中間和結束項目。 唯一重要的是對應巨集的名稱。 因此，每個取代字串會刻意隱藏巨集的實作。
+唯一不尋常的語法項目是 `@<`、`@=` 和 `@>` 取代字串。 這些提示檔案專用的取代字串僅能在「對應」巨集中使用。 對應是將資料、函式或事件關聯到其他資料、函式或事件處理常式的一組巨集。 例如，`MFC` 使用對應來建立[訊息對應](../mfc/reference/message-maps-mfc.md)，而 `ATL` 使用對應來建立[物件對應](../atl/reference/object-map-macros.md)。 提示檔案專用的取代字串會標記對應的開始、中間和結束元素。 唯一重要的是對應巨集的名稱。 因此，每個取代字串會刻意隱藏巨集的實作。
 
-提示使用下列語法。
+提示會使用此語法：
 
 |語法|意義|
 |------------|-------------|
@@ -107,140 +158,11 @@ STDMETHOD(myMethod)(int parameter1);
 |`//` *comment*|單行註解。|
 |`/*` *註解* `*/`|多行註解。|
 
-## <a name="what-macros-require-a-hint"></a>哪些巨集需要提示？
-
-某些巨集類型可能會干擾剖析系統。 本節描述可能造成問題的巨集類型，以及您可以建立來解決該問題的提示類型。
-
-### <a name="disruptive-macros"></a>造成干擾的巨集
-
-某些巨集會導致剖析系統誤譯原始程式碼，但可以忽略而不影響您的瀏覽體驗。 例如，原始程式碼註釋語言 ([SAL](../c-runtime-library/sal-annotations.md)) 巨集會解析為 C++ 屬性，以協助您找出程式設計 Bug。 如果您想要在瀏覽程式碼時忽略 SAL 註釋，可能需要建立隱藏註釋的提示檔案。
-
-在下列原始程式碼中，`FormatWindowClassName()` 函式的參數類型為 `PXSTR`，而參數名稱為 `szBuffer`。 不過，剖析系統將 `_Pre_notnull_` 和 `_Post_z_` SAL 註釋誤認為參數類型或參數名稱。
-
-**原始程式碼：**
-
-```cpp
-static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
-```
-
-**策略：** Null 定義
-
-此情況的策略是將 SAL 註釋視為不存在。 若要這樣做，請指定取代字串為 Null 的提示。 如此一來，剖析系統就會忽略註釋，而且 [類別檢視] 瀏覽器不會顯示這些註釋 (Visual C++ 包含隱藏 SAL 註釋的內建提示檔案)。
-
-**提示檔案：**
-
-```cpp.hint
-#define _Pre_notnull_
-```
-
-### <a name="concealed-cc-language-elements"></a>隱藏的 C/C++ 語言項目
-
-剖析系統誤譯原始程式碼的典型原因是，如果巨集隱藏 C/C++ [標點符號](../cpp/punctuators-cpp.md)或[關鍵字](../cpp/keywords-cpp.md)語彙基元。 也就是說，巨集可能包含成對標點符號的一半，例如 `<>`、`[]`、`{}` 和 `()`。
-
-在下列原始程式碼中，`START_NAMESPACE` 巨集會隱藏不成對的左大括弧 (`{`)。
-
-**原始程式碼：**
-
-```cpp
-#define START_NAMESPACE namespace MyProject {
-```
-
-**策略：** 直接複製
-
-如果巨集的語意對瀏覽體驗很重要，請建立相當於巨集的提示。 剖析系統會將巨集解析為提示檔案中的定義。
-
-請注意，如果原始程式檔中的巨集包含其他巨集，這些巨集只有在已位於一組有效提示時才會解譯。
-
-**提示檔案：**
-
-```cpp.hint
-#define START_NAMESPACE namespace MyProject {
-```
-
-### <a name="maps"></a>地圖
-
-對應是由指定一個開始項目、一個結束項目及零或多個中間項目的巨集所組成。 剖析系統誤譯對應的原因，是因為每個對應巨集隱藏 C/C++ 語言項目，並將完整的 C/C++ 陳述式語法分散到許多不同的巨集。
-
-下列原始程式碼會定義 `BEGIN_CATEGORY_MAP`、`IMPLEMENTED_CATEGORY` 和 `END_CATEGORY_MAP` 巨集。
-
-**原始程式碼：**
-
-```cpp
-#define BEGIN_CATEGORY_MAP(x)\
-static const struct ATL::_ATL_CATMAP_ENTRY* GetCategoryMap() throw() {\
-static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
-#define IMPLEMENTED_CATEGORY( catid ) { _ATL_CATMAP_ENTRY_IMPLEMENTED, &catid },
-#define END_CATEGORY_MAP()\
-   { _ATL_CATMAP_ENTRY_END, NULL } };\
-   return( pMap ); }
-```
-
-**策略：** 識別對應元素
-
-為對應的開始、中間 (如果有) 和結束項目指定提示。 使用特殊對應取代字串 `@<`、`@=` 和 `@>`。 如需詳細資訊，請參閱本主題中的`Syntax`一節。
-
-**提示檔案：**
-
-```cpp.hint
-// Start of the map.
-#define BEGIN_CATEGORY_MAP(x) @<
-// Intermediate map element.
-#define IMPLEMENTED_CATEGORY( catid ) @=
-// Intermediate map element.
-#define REQUIRED_CATEGORY( catid ) @=
-// End of the map.
-#define END_CATEGORY_MAP() @>
-```
-
-### <a name="composite-macros"></a>複合巨集
-
-複合巨集包含使剖析系統混淆的一或多種巨集類型。
-
-下列原始程式碼包含指定命名空間範圍開頭的 `START_NAMESPACE` 巨集，以及指定對應開頭的 `BEGIN_CATEGORY_MAP` 巨集。
-
-**原始程式碼：**
-
-```cpp
-#define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
-```
-
-**策略：** 直接複製
-
-建立 `START_NAMESPACE` 和 `BEGIN_CATEGORY_MAP` 巨集的提示，然後建立 `NSandMAP` 巨集的提示，如同稍早的原始程式碼所示。 或者，如果複合巨集只包含造成干擾的巨集和空白字元，您可以定義取代字串為 Null 定義的提示。
-
-在此範例中，假設 `START_NAMESPACE` 已有提示，如本主題中的 `Concealed C/C++ Language Elements`子標題所述。 另外假設 `BEGIN_CATEGORY_MAP` 具有 `Maps`中稍早所述的提示。
-
-**提示檔案：**
-
-```cpp.hint
-#define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
-```
-
-### <a name="inconvenient-macros"></a>不便的巨集
-
-某些巨集可以透過剖析系統解譯，但由於巨集很長或很複雜，因此原始程式碼難以閱讀。 為了可讀性，您可以提供簡化巨集顯示的提示。
-
-**原始程式碼：**
-
-```cpp
-#define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)
-```
-
-**策略：** 簡化
-
-建立顯示更簡單巨集定義的提示。
-
-**提示檔案：**
-
-```cpp.hint
-#define STDMETHOD(methodName) void* methodName
-```
-
 ## <a name="example"></a>範例
 
-下列範例說明如何從提示檔案累積提示。 此範例不會使用停止檔案。
+此範例說明如何從提示檔案累積提示。 此範例不會使用停止檔案。
 
-下圖描述 Visual C++ 專案中的一些實體目錄。 提示檔案位於 `vcpackages`、`Debug`、`A1` 和 `A2` 目錄。
+此圖說明 Visual C++ 專案中的一些實體目錄。 提示檔案位於 `vcpackages`、`Debug`、`A1` 和 `A2` 目錄。
 
 ### <a name="hint-file-directories"></a>提示檔案目錄
 
@@ -248,7 +170,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 ### <a name="directories-and-hint-file-contents"></a>目錄和提示檔案內容
 
-下列清單顯示此專案中包含提示檔案的目錄，以及這些提示檔案的內容。 只會列出 `vcpackages` 目錄提示檔案中許多提示的一部分。
+這個清單顯示此專案中包含提示檔案的目錄，以及這些提示檔案的內容。 僅列出 `vcpackages` 目錄提示檔案中，許多提示的一部分：
 
 - vcpackages
 
@@ -290,7 +212,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 ### <a name="effective-hints"></a>有效提示
 
-下表列出此專案中原始程式檔的有效提示。
+此表列出這個專案中來源檔案的有效提示：
 
 - 原始程式檔：A1_A2_B.cpp
 
@@ -310,7 +232,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
     #define END_NAMESPACE }
     ```
 
-下列注意事項適用於上述清單。
+這些注意事項適用於上述清單：
 
 - 有效提示來自於 `vcpackages`、`Debug`、`A1` 和 `A2` 目錄。
 
@@ -325,7 +247,3 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 [為 Visual C++ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)<br>
 [#define 指示詞 (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)<br>
 [#undef 指示詞 (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)<br>
-[SAL 註釋](../c-runtime-library/sal-annotations.md)<br>
-[訊息對應](../mfc/reference/message-maps-mfc.md)<br>
-[訊息對應巨集](../atl/reference/message-map-macros-atl.md)<br>
-[物件對應巨集](../atl/reference/object-map-macros.md)

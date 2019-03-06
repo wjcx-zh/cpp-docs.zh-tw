@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 7427d8b50dadd9694112ad27c2892ee228a93864
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 493fe04f34f615d9113196e3db8bc744f420d4a2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276542"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426260"
 ---
 # <a name="cwnd-class"></a>CWnd 類別
 
@@ -2685,10 +2685,10 @@ BOOL DrawAnimatedRects(
 指定動畫的類型。 如果您指定 IDANI_CAPTION，視窗標題會從所指定的位置建立動畫*lprcFrom*所指定的位置來*lprcTo*。 效果就類似於最小化或最大化視窗。
 
 *lprcFrom*<br/>
-指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定最小化的視窗之圖示的大小與位置。
+指標[RECT](/previous-versions/dd162897\(v=vs.85\))結構，指定最小化的視窗之圖示的大小與位置。
 
 *lprcTo*<br/>
-指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定已還原視窗的大小與位置
+指標[RECT](/previous-versions/dd162897\(v=vs.85\))結構，指定已還原視窗的大小與位置
 
 ### <a name="return-value"></a>傳回值
 

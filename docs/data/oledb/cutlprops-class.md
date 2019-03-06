@@ -30,12 +30,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: db0976ecd3e3af76640a56ebc1e07e9ade2e3815
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1c45e28e0e74d7216023f06ad22896c53c9226b8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556773"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423049"
 ---
 # <a name="cutlprops-class"></a>CUtlProps 類別
 
@@ -73,11 +73,11 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 
 此類別大部分是實作細節。
 
-`CUtlProps` 在內部設定屬性包含兩個成員： [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md)並[SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)。
+`CUtlProps` 在內部設定屬性中包含兩個成員：[GetPropValue](../../data/oledb/cutlprops-getpropvalue.md)並[SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)。
 
 如需有關在屬性集對應中使用的巨集的詳細資訊，請參閱[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)並[END_PROPSET_MAP](../../data/oledb/end-propset-map.md)。
 
-## <a name="getpropvalue"></a> Cutlprops:: Getpropvalue
+## <a name="getpropvalue"></a> CUtlProps::GetPropValue
 
 從屬性集合中取得的屬性。
 
@@ -104,7 +104,7 @@ OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,
 
 `Failure` 上失敗，以及如果成功，為 S_OK。
 
-## <a name="isvalidvalue"></a> Cutlprops:: Isvalidvalue
+## <a name="isvalidvalue"></a> CUtlProps::IsValidValue
 
 用來驗證之前先設定屬性的值。
 
@@ -121,7 +121,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 陣列中的索引屬性集;如果只有一個屬性組，則為零。
 
 *pDBProp*<br/>
-中的新值與屬性 ID [DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85))結構。
+中的新值與屬性 ID [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -183,7 +183,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 陣列中的索引屬性集;如果只有一個屬性組，則為零。
 
 *pDBProp*<br/>
-中的新值與屬性 ID [DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85))結構。
+中的新值與屬性 ID [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -199,7 +199,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 
 [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]
 
-## <a name="setpropvalue"></a> Cutlprops:: Setpropvalue
+## <a name="setpropvalue"></a> CUtlProps::SetPropValue
 
 在屬性集中設定的屬性。
 

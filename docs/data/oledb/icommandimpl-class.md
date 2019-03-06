@@ -52,16 +52,16 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: c5e599b437f7660801a1eb40618eb49bee84a918
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: e1f461cc850a2122af7902babfad8f1e14ac3e33
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556812"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424843"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl 類別
 
-提供實作[ICommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms709737(v=vs.85))介面。
+提供實作[ICommand](/previous-versions/windows/desktop/ms709737(v=vs.85))介面。
 
 ## <a name="syntax"></a>語法
 
@@ -119,7 +119,7 @@ STDMETHOD(Cancel)();
 
 ### <a name="remarks"></a>備註
 
-請參閱[ICommand::Cancel](https://docs.microsoft.com/previous-versions/windows/desktop/ms714402(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[ICommand::Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ## <a name="cancelexecution"></a> Icommandimpl:: Cancelexecution
 
@@ -131,7 +131,7 @@ STDMETHOD(Cancel)();
 HRESULT CancelExecution();
 ```
 
-## <a name="createrowset"></a> Icommandimpl:: Createrowset
+## <a name="createrowset"></a> ICommandImpl::CreateRowset
 
 由呼叫[Execute](../../data/oledb/icommandimpl-execute.md)建立單一資料列集。
 
@@ -178,7 +178,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 
 若要建立多個資料列集，或提供您自己的建立不同的資料列集的條件，將不同的呼叫置於`CreateRowset`內在`Execute`。
 
-請參閱[icommand:: Execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85))在*OLE DB 程式設計人員參考。*
+請參閱[icommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85))在*OLE DB 程式設計人員參考。*
 
 ## <a name="execute"></a> Icommandimpl:: Execute
 
@@ -196,7 +196,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>參數
 
-請參閱[icommand:: Execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[icommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ### <a name="remarks"></a>備註
 
@@ -217,7 +217,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 #### <a name="parameters"></a>參數
 
-請參閱[ICommand::GetDBSession](https://docs.microsoft.com/previous-versions/windows/desktop/ms719622(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ### <a name="remarks"></a>備註
 
@@ -233,7 +233,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 ICommandImpl();
 ```
 
-## <a name="bcancel"></a> Icommandimpl:: M_bcancel
+## <a name="bcancel"></a> ICommandImpl::m_bCancel
 
 指出是否可以取消命令為止。
 

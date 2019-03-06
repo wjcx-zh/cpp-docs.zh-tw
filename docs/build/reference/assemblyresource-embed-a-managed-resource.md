@@ -11,12 +11,12 @@ helpviewer_keywords:
 - assemblies [C++], linking resource files
 - /ASSEMBLYRESOURCE linker option
 ms.assetid: 0ce6e1fb-921b-4b1b-a59c-d35388d789f2
-ms.openlocfilehash: 566a667ababaa67c7aff71861b111416abbbd878
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c18a014ca645cceb3196fb7efefd227e96f8e1fa
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486594"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416212"
 ---
 # <a name="assemblyresource-embed-a-managed-resource"></a>/ASSEMBLYRESOURCE (內嵌 Managed 資源)
 
@@ -40,7 +40,7 @@ ms.locfileid: "50486594"
 
 資源是公用的組件時使用連結器建立的。 連結器不允許您重新命名的組件中的資源。
 
-如果*檔名*是.NET Framework 資源 (.resources) 建立的檔案，例如，藉由[資源檔產生器 (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator)或在開發環境中，它可以存取使用中的成員**System.Resources**命名空間 (請參閱[System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx)如需詳細資訊)。 如需其他資源，請使用**GetManifestResource** \*中的方法**System.Reflection.Assembly**類別，以在執行階段存取資源。
+如果*檔名*是.NET Framework 資源 (.resources) 建立的檔案，例如，藉由[資源檔產生器 (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator)或在開發環境中，它可以存取使用中的成員**System.Resources**命名空間 (請參閱[System.Resources.ResourceManager](/dotnet/api/system.resources.resourcemanager)如需詳細資訊)。 如需其他資源，請使用**GetManifestResource** \*中的方法**System.Reflection.Assembly**類別，以在執行階段存取資源。
 
 其他會影響產生組件連結器選項如下：
 

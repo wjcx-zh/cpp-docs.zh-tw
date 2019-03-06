@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: bf8ced746b70f64b83733152d845aa0291f07310
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a68f3570f0e8c3315e8b0716cddcd37563894e76
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302497"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422490"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl 類別
 
@@ -158,7 +158,7 @@ virtual BOOL Create(
 指定日期時間控制項的樣式的組合。 請參閱[日期和時間選擇器控制項樣式](/windows/desktop/Controls/date-and-time-picker-control-styles)日期和時間選擇器樣式的詳細資訊的 Windows SDK 中。
 
 *rect*<br/>
-參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，也就是日期和時間選擇器控制項的大小與位置。
+參考[RECT](/previous-versions/dd162897\(v=vs.85\))結構，也就是日期和時間選擇器控制項的大小與位置。
 
 *pParentWnd*<br/>
 指標[CWnd](../../mfc/reference/cwnd-class.md)是日期和時間選擇器控制項的父視窗的物件。 它必須不是 NULL。

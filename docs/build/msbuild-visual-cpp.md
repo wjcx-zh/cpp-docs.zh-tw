@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
-ms.openlocfilehash: 4e0a82602cdeb775569099c559eef5aed51b431f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6ca3ac46a4d84c9513ba4f7fd34a15f667cb6ed
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429428"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423218"
 ---
 # <a name="msbuild-visual-c"></a>MSBuild (Visual C++)
 
@@ -23,7 +23,7 @@ ms.locfileid: "50429428"
 |----------|----------------|
 |[MSBuild (Visual C++) 概觀](../build/msbuild-visual-cpp-overview.md)|描述如何使用 Visual c + + **MSBuild**系統。|
 |[建置系統變更](../build/build-system-changes.md)|討論一些目前的建置系統與舊版之間的差異。|
-|[逐步解說：使用 MSBuild 來建立 Visual C++ 專案](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|示範如何建立 Visual c + + 專案，使用**MSBuild**。|
+|[逐步解說：使用 MSBuild 建立 Visual C++ 專案](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|示範如何建立 Visual c + + 專案，使用**MSBuild**。|
 |[如何：在 MSBuild 專案中使用建置事件](../build/how-to-use-build-events-in-msbuild-projects.md)|示範如何指定在組建中 particuler 階段，就會發生的動作： 在建置開始之前;連結步驟開始; 之前或在建置結束後。|
 |[如何：將自訂建置步驟新增至 MSBuild 專案](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)|示範如何將使用者定義的階段新增至組建順序。|
 |[如何：將自訂建置工具新增至 MSBuild 專案](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)|示範如何建置工具相關聯的特定檔案。|

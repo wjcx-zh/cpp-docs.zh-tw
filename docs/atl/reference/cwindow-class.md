@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: b27d6bb01b9e94ebe38be5455ffcc870806ac33b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2767770e354c81e5a34a0d6e9105a27ecb361ddc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298343"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425064"
 ---
 # <a name="cwindow-class"></a>CWindow 類別
 
@@ -536,7 +536,7 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
 
 請參閱[ClientToScreen](/windows/desktop/api/winuser/nf-winuser-clienttoscreen) Windows SDK 中。
 
-這個方法的第二個版本可讓您將轉換的座標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。
+這個方法的第二個版本可讓您將轉換的座標[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
 
 ##  <a name="create"></a>  CWindow::Create
 
@@ -1789,7 +1789,7 @@ int MapWindowPoints(
 
 請參閱[MapWindowPoints](/windows/desktop/api/winuser/nf-winuser-mapwindowpoints) Windows SDK 中。
 
-這個方法的第二個版本可讓您將轉換的座標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。
+這個方法的第二個版本可讓您將轉換的座標[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
 
 ##  <a name="messagebox"></a>  CWindow::MessageBox
 
@@ -1923,7 +1923,7 @@ BOOL MoveWindow(
 
 最上層的視窗物件、 x 和 y 的參數包括相對於螢幕左上角。 子視窗物件，它們是相對於父視窗的用戶端區域左上角。
 
-這個方法的第二個版本會使用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，以決定視窗的新位置、 寬度和高度。
+這個方法的第二個版本會使用[RECT](/previous-versions/dd162897\(v=vs.85\))結構，以決定視窗的新位置、 寬度和高度。
 
 ##  <a name="nextdlgctrl"></a>  CWindow::NextDlgCtrl
 
@@ -2134,7 +2134,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 
 請參閱[ScreenToClient](/windows/desktop/api/winuser/nf-winuser-screentoclient) Windows SDK 中。
 
-這個方法的第二個版本可讓您將轉換的座標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。
+這個方法的第二個版本可讓您將轉換的座標[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
 
 ##  <a name="scrollwindow"></a>  CWindow::ScrollWindow
 
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
 
 請參閱[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 中。
 
-這個方法的第二個版本會使用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構來設定視窗的新位置、 寬度和高度。
+這個方法的第二個版本會使用[RECT](/previous-versions/dd162897\(v=vs.85\))結構來設定視窗的新位置、 寬度和高度。
 
 ##  <a name="setwindowrgn"></a>  CWindow::SetWindowRgn
 

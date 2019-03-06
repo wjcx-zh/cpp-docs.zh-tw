@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-ms.openlocfilehash: 3d808f86a9ea3b34da0dccae18ecc000ca364f0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b6a8a841cefcd519cbeeae9f3355d72e1bbf286
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518387"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417004"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (指定子系統)
 
@@ -41,7 +41,7 @@ Win32 字元模式應用程式。 作業系統會提供主控台的主控台應�
 **EFI_RUNTIME_DRIVER**<br/>
 可延伸韌體介面子系統中。 如需詳細資訊的 EFI 規格，請參閱。 如需範例，請參閱 Intel 網站。 最小值及預設的版本為 1.0。
 
-**原生**<br/>
+**NATIVE**<br/>
 針對 Windows NT 核心模式驅動程式。 此選項通常保留給 Windows 系統元件。 如果[/driver: wdm](../../build/reference/driver-windows-nt-kernel-mode-driver.md)指定，則原生是預設值。
 
 **POSIX**<br/>
@@ -64,12 +64,12 @@ Win32 字元模式應用程式。 作業系統會提供主控台的主控台應�
 |子系統|最低|預設|
 |---------------|-------------|-------------|
 |BOOT_APPLICATION|1.0|1.0|
-|主控台|5.01 (x86) (x64) 5.02 6.02 (ARM)|（x86、 x64） 的 6.00 6.02 (ARM)|
-|視窗|5.01 (x86) (x64) 5.02 6.02 (ARM)|（x86、 x64） 的 6.00 6.02 (ARM)|
+|主控台|5.01 (x86) 5.02 (x64) 6.02 (ARM)|（x86、 x64） 的 6.00 6.02 (ARM)|
+|視窗|5.01 (x86) 5.02 (x64) 6.02 (ARM)|（x86、 x64） 的 6.00 6.02 (ARM)|
 |（與驅動程式： WDM) 的原生|(x86) 1.00 1.10 (x64、 ARM)|(x86) 1.00 1.10 (x64、 ARM)|
-|（不含 /driver: wdm) 的原生|4.00 (x86) (x64) 5.02 6.02 (ARM)|4.00 (x86) (x64) 5.02 6.02 (ARM)|
+|（不含 /driver: wdm) 的原生|4.00 (x86) 5.02 (x64) 6.02 (ARM)|4.00 (x86) 5.02 (x64) 6.02 (ARM)|
 |POSIX|1.0|19.90|
-|EFI_APPLICATION，EFI_BOOT_SERVICE_DRIVER，EFI_ROM EFI_RUNTIME_DRIVER|1.0|1.0|
+|EFI_APPLICATION, EFI_BOOT_SERVICE_DRIVER, EFI_ROM, EFI_RUNTIME_DRIVER|1.0|1.0|
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 

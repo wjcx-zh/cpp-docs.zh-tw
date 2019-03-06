@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: 9e9867e5cea8d45aefa0901798b86557b05693f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a908fc49776eaca68d9a79fb679b759155853d9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528033"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418850"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Common Language Runtime 編譯)
 
@@ -26,18 +26,18 @@ ms.locfileid: "50528033"
 
 ## <a name="syntax"></a>語法
 
-> **/clr**[**:**_選項_]
+> **/clr**[**:**_options_]
 
 ## <a name="arguments"></a>引數
 
 *options*<br/>
 下列一或多個以逗號分隔的參數。
 
-- 無
+- none
 
    不含選項中， **/clr**建立應用程式的中繼資料。 中繼資料可供其他 CLR 應用程式使用，並且讓您的應用程式使用其他 CLR 元件之中繼資料內的類型和資料。 如需詳細資訊，請參閱 <<c0> [ 混合 （原生和 Managed） 組件](../../dotnet/mixed-native-and-managed-assemblies.md)。
 
-- **純虛擬**
+- **pure**
 
    **/clr: pure 已被取代**。 Visual Studio 2017 中已移除的選項。 建議您將必須是純 MSIL 的程式碼移植到 C#。
 

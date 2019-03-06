@@ -13,12 +13,12 @@ helpviewer_keywords:
 - suppress frame pointer creation
 - /Oy compiler option [C++]
 ms.assetid: c451da86-5297-4c5a-92bc-561d41379853
-ms.openlocfilehash: 343b0e026c2932e97d4a8d4472ba2035d6302661
-ms.sourcegitcommit: 3da2cb3ec85e77ddfd4d2a55edb133d580ce4f18
+ms.openlocfilehash: 7eb30a758f6888aa866620e8b419c9b4124475b0
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52330386"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418110"
 ---
 # <a name="oy-frame-pointer-omission"></a>/Oy (框架指標省略)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52330386"
 
 ## <a name="syntax"></a>語法
 
-> /Oy [-]
+> /Oy[-]
 
 ## <a name="remarks"></a>備註
 

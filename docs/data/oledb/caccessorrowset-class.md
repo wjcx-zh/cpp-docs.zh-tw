@@ -30,12 +30,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 6f870cf6c079786c49846bcf7c3010998ccdbe00
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: dd7156575f551af1643dd3d1f8238ee1e3fe86f4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556464"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420150"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset 類別
 
@@ -71,13 +71,13 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 |[CAccessorRowset](#caccessorrowset)|建構函式。|
 |[關閉](#close)|關閉資料列集和任何存取子。|
 |[FreeRecordMemory](#freerecordmemory)|釋出任何需要先釋放目前記錄中的資料行。|
-|[GetColumnInfo](#getcolumninfo)|Implements [icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))。|
+|[GetColumnInfo](#getcolumninfo)|Implements [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))。|
 
 ## <a name="remarks"></a>備註
 
 類別`TAccessor`管理存取子。 類別*TRowset*管理資料列集。
 
-## <a name="bind"></a> Caccessorrowset:: Bind
+## <a name="bind"></a> CAccessorRowset::Bind
 
 建立繫結，如果您指定`bBind`作為**假**中[ccommand:: Open](../../data/oledb/ccommand-open.md)。
 
@@ -91,7 +91,7 @@ HRESULT Bind();
 
 標準的 HRESULT。
 
-## <a name="caccessorrowset"></a> Caccessorrowset:: Caccessorrowset
+## <a name="caccessorrowset"></a> CAccessorRowset::CAccessorRowset
 
 初始化 `CAccessorRowset` 物件。
 
@@ -101,7 +101,7 @@ HRESULT Bind();
 CAccessorRowset();
 ```
 
-## <a name="close"></a> Caccessorrowset:: Close
+## <a name="close"></a> CAccessorRowset::Close
 
 釋放使用中的任何存取子和資料列集。
 
@@ -115,7 +115,7 @@ void Close();
 
 釋放任何相關聯的記憶體。
 
-## <a name="freerecordmemory"></a> Caccessorrowset:: Freerecordmemory
+## <a name="freerecordmemory"></a> CAccessorRowset::FreeRecordMemory
 
 釋出任何需要先釋放目前記錄中的資料行。
 
@@ -125,7 +125,7 @@ void Close();
 void FreeRecordMemory();
 ```
 
-## <a name="getcolumninfo"></a> Caccessorrowset:: Getcolumninfo
+## <a name="getcolumninfo"></a> CAccessorRowset::GetColumnInfo
 
 從開啟的資料列集取得資料行資訊。
 
@@ -142,7 +142,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 #### <a name="parameters"></a>參數
 
-請參閱[icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程式設計人員參考*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -152,7 +152,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 使用者必須釋放字串緩衝區與傳回的資料行資訊。 使用此方法的第二個版本，當您使用[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)和需要覆寫繫結。
 
-如需詳細資訊，請參閱 < [icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))中*OLE DB 程式設計人員參考*。
+如需詳細資訊，請參閱 < [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程式設計人員參考*。
 
 ## <a name="see-also"></a>另請參閱
 

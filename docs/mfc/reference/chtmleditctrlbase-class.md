@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: ebc296c66ee818e5c72207e0ca7b436f386fb68d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 09d4c4f1fde563d82fa007a96723f078eb31dc1b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293936"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423231"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase 類別
 
@@ -418,9 +418,9 @@ HRESULT AddToGlyphTable(
 
 ### <a name="remarks"></a>備註
 
-如需有關參數的詳細資訊，請參閱 「 圖像 （glyph） 資料表的字串格式 」 中[使用編輯字符](https://msdn.microsoft.com/library/aa969614.aspx)。
+如需有關參數的詳細資訊，請參閱 「 圖像 （glyph） 資料表的字串格式 」 中[使用編輯字符](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa969614\(v=vs.85\))。
 
-這個方法會傳送[IDM_ADDTOGLYPHTABLE 命令 ID](https://msdn.microsoft.com/library/aa769891.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_ADDTOGLYPHTABLE 命令 ID](/previous-versions/aa769891\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="bold"></a>  CHtmlEditCtrlBase::Bold
 
@@ -436,7 +436,7 @@ HRESULT Bold() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_BOLD 命令 ID](https://msdn.microsoft.com/library/aa769861.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_BOLD 命令 ID](/previous-versions/aa769861\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="button"></a>  CHtmlEditCtrlBase::Button
 
@@ -457,7 +457,7 @@ HRESULT Button(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_BUTTON 命令 ID](https://msdn.microsoft.com/library/aa769966.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_BUTTON 命令 ID](/previous-versions/aa769966\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="checkbox"></a>  CHtmlEditCtrlBase::CheckBox
 
@@ -478,7 +478,7 @@ HRESULT CheckBox(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_CHECKBOX 命令 ID](https://msdn.microsoft.com/library/aa769972.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_CHECKBOX 命令 ID](/previous-versions/aa769972\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="clearselection"></a>  CHtmlEditCtrlBase::ClearSelection
 
@@ -494,7 +494,7 @@ HRESULT ClearSelection() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_CLEARSELECTION 命令 ID](https://msdn.microsoft.com/library/aa770038.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_CLEARSELECTION 命令 ID](/previous-versions/aa770038\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="copy"></a>  CHtmlEditCtrlBase::Copy
 
@@ -510,7 +510,7 @@ HRESULT Copy() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[2&gt;idm_copy&lt;2 命令 ID](https://msdn.microsoft.com/library/aa769872.aspx) WebBrowser 控制項。
+這個方法會傳送[2&gt;idm_copy&lt;2 命令 ID](/previous-versions/aa769872\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="cut"></a>  CHtmlEditCtrlBase::Cut
 
@@ -526,7 +526,7 @@ HRESULT Cut() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_CUT 命令 ID](https://msdn.microsoft.com/library/aa769875.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_CUT 命令 ID](/previous-versions/aa769875\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="delete"></a>  CHtmlEditCtrlBase::Delete
 
@@ -542,7 +542,7 @@ HRESULT Delete() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_DELETE 命令 ID](https://msdn.microsoft.com/library/aa769876.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_DELETE 命令 ID](/previous-versions/aa769876\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="dropdownbox"></a>  CHtmlEditCtrlBase::DropDownBox
 
@@ -563,7 +563,7 @@ HRESULT DropDownBox(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_DROPDOWNBOX 命令 ID](https://msdn.microsoft.com/library/aa769984.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_DROPDOWNBOX 命令 ID](/previous-versions/aa769984\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="emptyglyphtable"></a>  CHtmlEditCtrlBase::EmptyGlyphTable
 
@@ -579,7 +579,7 @@ HRESULT EmptyGlyphTable() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_EMPTYGLYPHTABLE 命令 ID](https://msdn.microsoft.com/library/aa769907.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_EMPTYGLYPHTABLE 命令 ID](/previous-versions/aa769907\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="execcommand"></a>  CHtmlEditCtrlBase::ExecCommand
 
@@ -603,7 +603,7 @@ HRESULT ExecCommand(
 ### <a name="parameters"></a>參數
 
 *cmdID*<br/>
-要執行的命令識別碼。 如需清單，請參閱[MSHTML 命令識別碼](https://msdn.microsoft.com/library/aa741315.aspx)。
+要執行的命令識別碼。 如需清單，請參閱[MSHTML 命令識別碼](/previous-versions/aa741315\(v=vs.85\))。
 
 *cmdExecOpt*<br/>
 值取自[OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt)列舉型別，其會描述物件如何執行此命令。
@@ -639,7 +639,7 @@ HRESULT Font() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_FONT 命令 ID](https://msdn.microsoft.com/library/aa769913.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_FONT 命令 ID](/previous-versions/aa769913\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="getabsoluteposition"></a>  CHtmlEditCtrlBase::GetAbsolutePosition
 
@@ -660,7 +660,7 @@ HRESULT GetAbsolutePosition(bool& bCurValue) const;
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [IDM_ABSOLUTE_POSITION 命令 ID](https://msdn.microsoft.com/library/aa769889.aspx)。
+如需詳細資訊，請參閱 < [IDM_ABSOLUTE_POSITION 命令 ID](/previous-versions/aa769889\(v=vs.85\))。
 
 ##  <a name="getbackcolor"></a>  CHtmlEditCtrlBase::GetBackColor
 
@@ -681,7 +681,7 @@ HRESULT GetBackColor(int& nColor) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_BACKCOLOR 命令 ID](https://msdn.microsoft.com/library/aa769858.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_BACKCOLOR 命令 ID](/previous-versions/aa769858\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="getblockformat"></a>  CHtmlEditCtrlBase::GetBlockFormat
 
@@ -702,7 +702,7 @@ HRESULT GetBlockFormat(CString& strFormat) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_BLOCKFMT 命令 ID](https://msdn.microsoft.com/library/aa769883.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_BLOCKFMT 命令 ID](/previous-versions/aa769883\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="getblockformatnames"></a>  CHtmlEditCtrlBase::GetBlockFormatNames
 
@@ -723,7 +723,7 @@ HRESULT GetBlockFormatNames(CStringArray& sa) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_GETBLOCKFMTS 命令 ID](https://msdn.microsoft.com/library/aa769884.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_GETBLOCKFMTS 命令 ID](/previous-versions/aa769884\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="getbookmark"></a>  CHtmlEditCtrlBase::GetBookMark
 
@@ -744,7 +744,7 @@ HRESULT GetBookMark(CString& strAnchor) const;
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [IDM_BOOKMARK 命令 ID](https://msdn.microsoft.com/library/aa769873.aspx)。
+如需詳細資訊，請參閱 < [IDM_BOOKMARK 命令 ID](/previous-versions/aa769873\(v=vs.85\))。
 
 ##  <a name="getdocument"></a>  CHtmlEditCtrlBase::GetDocument
 
@@ -852,7 +852,7 @@ HRESULT GetFontFace(CString& strFace) const;
 
 如果目前的選取範圍使用多個字型*strFace*會是空字串。
 
-這個方法會傳送[IDM_FONTNAME 命令 ID](https://msdn.microsoft.com/library/aa769880.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_FONTNAME 命令 ID](/previous-versions/aa769880\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="getfontsize"></a>  CHtmlEditCtrlBase::GetFontSize
 
@@ -873,7 +873,7 @@ HRESULT GetFontSize(short& nSize) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_FONTSIZE 命令 ID](https://msdn.microsoft.com/library/aa769881.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_FONTSIZE 命令 ID](/previous-versions/aa769881\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="getforecolor"></a>  CHtmlEditCtrlBase::GetForeColor
 
@@ -894,7 +894,7 @@ HRESULT GetForeColor(int& nColor);
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_FORECOLOR 命令 ID](https://msdn.microsoft.com/library/aa769882.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_FORECOLOR 命令 ID](/previous-versions/aa769882\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="getframezone"></a>  CHtmlEditCtrlBase::GetFrameZone
 
@@ -915,7 +915,7 @@ HRESULT GetFrameZone(short& nZone) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_GETFRAMEZONE 命令 ID](https://msdn.microsoft.com/library/aa769916.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_GETFRAMEZONE 命令 ID](/previous-versions/aa769916\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="getisdirty"></a>  CHtmlEditCtrlBase::GetIsDirty
 
@@ -948,7 +948,7 @@ HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [IDM_SHOWALIGNEDSITETAGS 命令 ID](https://msdn.microsoft.com/library/aa769947.aspx)。
+如需詳細資訊，請參閱 < [IDM_SHOWALIGNEDSITETAGS 命令 ID](/previous-versions/aa769947\(v=vs.85\))。
 
 ##  <a name="getshowalltags"></a>  CHtmlEditCtrlBase::GetShowAllTags
 
@@ -969,7 +969,7 @@ HRESULT GetShowAllTags(bool& bCurValue) const;
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [IDM_SHOWALLTAGS 命令 ID](https://msdn.microsoft.com/library/aa769948.aspx)。
+如需詳細資訊，請參閱 < [IDM_SHOWALLTAGS 命令 ID](/previous-versions/aa769948\(v=vs.85\))。
 
 ##  <a name="getshowareatags"></a>  CHtmlEditCtrlBase::GetShowAreaTags
 
@@ -990,7 +990,7 @@ HRESULT GetShowAreaTags(bool& bCurValue) const;
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [IDM_SHOWAREATAGS 命令 ID](https://msdn.microsoft.com/library/aa769949.aspx)。
+如需詳細資訊，請參閱 < [IDM_SHOWAREATAGS 命令 ID](/previous-versions/aa769949\(v=vs.85\))。
 
 ##  <a name="getshowbrtags"></a>  CHtmlEditCtrlBase::GetShowBRTags
 
@@ -1011,7 +1011,7 @@ HRESULT GetShowBRTags(bool& bCurValue) const;
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [IDM_SHOWWBRTAGS 命令 ID](https://msdn.microsoft.com/library/aa769956.aspx)。
+如需詳細資訊，請參閱 < [IDM_SHOWWBRTAGS 命令 ID](/previous-versions/aa769956\(v=vs.85\))。
 
 ##  <a name="getshowcommenttags"></a>  CHtmlEditCtrlBase::GetShowCommentTags
 
@@ -1032,7 +1032,7 @@ HRESULT GetShowCommentTags(bool& bCurValue) const;
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [IDM_SHOWCOMMENTTAGS 命令 ID](https://msdn.microsoft.com/library/aa769950.aspx)。
+如需詳細資訊，請參閱 < [IDM_SHOWCOMMENTTAGS 命令 ID](/previous-versions/aa769950\(v=vs.85\))。
 
 ##  <a name="getshowmisctags"></a>  CHtmlEditCtrlBase::GetShowMiscTags
 
@@ -1053,7 +1053,7 @@ WebBrowser 顯示顯示 Microsoft Internet Explorer 4.0 中，如果沒有，則
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [IDM_SHOWMISCTAGS 命令 ID](https://msdn.microsoft.com/library/aa769952.aspx)。
+如需詳細資訊，請參閱 < [IDM_SHOWMISCTAGS 命令 ID](/previous-versions/aa769952\(v=vs.85\))。
 
 ##  <a name="getshowscripttags"></a>  CHtmlEditCtrlBase::GetShowScriptTags
 
@@ -1074,7 +1074,7 @@ HRESULT GetShowScriptTags(bool& bCurValue) const;
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [IDM_SHOWSCRIPTTAGS 命令 ID](https://msdn.microsoft.com/library/aa769953.aspx)。
+如需詳細資訊，請參閱 < [IDM_SHOWSCRIPTTAGS 命令 ID](/previous-versions/aa769953\(v=vs.85\))。
 
 ##  <a name="getshowstyletags"></a>  CHtmlEditCtrlBase::GetShowStyleTags
 
@@ -1095,7 +1095,7 @@ HRESULT GetShowStyleTags(bool& bCurValue) const;
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [IDM_SHOWSTYLETAGS 命令 ID](https://msdn.microsoft.com/library/aa769954.aspx)。
+如需詳細資訊，請參閱 < [IDM_SHOWSTYLETAGS 命令 ID](/previous-versions/aa769954\(v=vs.85\))。
 
 ##  <a name="getshowunknowntags"></a>  CHtmlEditCtrlBase::GetShowUnknownTags
 
@@ -1116,7 +1116,7 @@ HRESULT GetShowUnknownTags(bool& bCurValue) const;
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [IDM_SHOWUNKNOWNTAGS 命令 ID](https://msdn.microsoft.com/library/aa769955.aspx)。
+如需詳細資訊，請參閱 < [IDM_SHOWUNKNOWNTAGS 命令 ID](/previous-versions/aa769955\(v=vs.85\))。
 
 ##  <a name="horizontalline"></a>  CHtmlEditCtrlBase::HorizontalLine
 
@@ -1137,7 +1137,7 @@ HRESULT HorizontalLine(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_HORIZONTALLINE 命令 ID](https://msdn.microsoft.com/library/aa769968.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_HORIZONTALLINE 命令 ID](/previous-versions/aa769968\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="hyperlink"></a>  CHtmlEditCtrlBase::HyperLink
 
@@ -1158,7 +1158,7 @@ HRESULT HyperLink(LPCTSTR szUrl = NULL) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_HYPERLINK 命令 ID](https://msdn.microsoft.com/library/aa769874.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_HYPERLINK 命令 ID](/previous-versions/aa769874\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="ie50paste"></a>  CHtmlEditCtrlBase::IE50Paste
 
@@ -1179,7 +1179,7 @@ HRESULT IE50Paste(LPCTSTR szData) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_IE50_PASTE 命令 ID](https://msdn.microsoft.com/library/aa769922.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_IE50_PASTE 命令 ID](/previous-versions/aa769922\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="iframe"></a>  CHtmlEditCtrlBase::Iframe
 
@@ -1200,7 +1200,7 @@ HRESULT Iframe(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_IFRAME 命令 ID](https://msdn.microsoft.com/library/aa769969.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_IFRAME 命令 ID](/previous-versions/aa769969\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="image"></a>  CHtmlEditCtrlBase::Image
 
@@ -1221,7 +1221,7 @@ HRESULT Image(LPCTSTR szUrl = NULL) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_IMAGE 命令 ID](https://msdn.microsoft.com/library/aa769970.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_IMAGE 命令 ID](/previous-versions/aa769970\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="indent"></a>  CHtmlEditCtrlBase::Indent
 
@@ -1237,7 +1237,7 @@ HRESULT Indent() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_INDENT 命令 ID](https://msdn.microsoft.com/library/aa769963.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_INDENT 命令 ID](/previous-versions/aa769963\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="insfieldset"></a>  CHtmlEditCtrlBase::InsFieldSet
 
@@ -1258,7 +1258,7 @@ HRESULT InsFieldSet(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_INSFIELDSET 命令 ID](https://msdn.microsoft.com/library/aa769967.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_INSFIELDSET 命令 ID](/previous-versions/aa769967\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="insinputbutton"></a>  CHtmlEditCtrlBase::InsInputButton
 
@@ -1279,7 +1279,7 @@ Button 控制項的 ID。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_INSINPUTBUTTON 命令 ID](https://msdn.microsoft.com/library/aa769971.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_INSINPUTBUTTON 命令 ID](/previous-versions/aa769971\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="insinputhidden"></a>  CHtmlEditCtrlBase::InsInputHidden
 
@@ -1300,7 +1300,7 @@ HRESULT InsInputHidden(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_INSINPUTHIDDEN 命令 ID](https://msdn.microsoft.com/library/aa769974.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_INSINPUTHIDDEN 命令 ID](/previous-versions/aa769974\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="insinputimage"></a>  CHtmlEditCtrlBase::InsInputImage
 
@@ -1321,7 +1321,7 @@ HRESULT InsInputImage(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_INSINPUTIMAGE 命令 ID](https://msdn.microsoft.com/library/aa769975.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_INSINPUTIMAGE 命令 ID](/previous-versions/aa769975\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="insinputpassword"></a>  CHtmlEditCtrlBase::InsInputPassword
 
@@ -1342,7 +1342,7 @@ Password 控制項的 ID。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_INSINPUTPASSWORD 命令 ID](https://msdn.microsoft.com/library/aa769976.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_INSINPUTPASSWORD 命令 ID](/previous-versions/aa769976\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="insinputreset"></a>  CHtmlEditCtrlBase::InsInputReset
 
@@ -1363,7 +1363,7 @@ HRESULT InsInputReset(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_INSINPUTRESET 命令 ID](https://msdn.microsoft.com/library/aa769978.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_INSINPUTRESET 命令 ID](/previous-versions/aa769978\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="insinputsubmit"></a>  CHtmlEditCtrlBase::InsInputSubmit
 
@@ -1384,7 +1384,7 @@ HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_INSINPUTSUBMIT 命令 ID](https://msdn.microsoft.com/library/aa769979.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_INSINPUTSUBMIT 命令 ID](/previous-versions/aa769979\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="insinputupload"></a>  CHtmlEditCtrlBase::InsInputUpload
 
@@ -1405,7 +1405,7 @@ HRESULT InsInputUpload(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_INSINPUTUPLOAD 命令 ID](https://msdn.microsoft.com/library/aa769973.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_INSINPUTUPLOAD 命令 ID](/previous-versions/aa769973\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="is1delement"></a>  CHtmlEditCtrlBase::Is1DElement
 
@@ -1426,7 +1426,7 @@ HRESULT Is1DElement(bool& bValue) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_1D_ELEMENT 命令 ID](https://msdn.microsoft.com/library/aa769885.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_1D_ELEMENT 命令 ID](/previous-versions/aa769885\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="is2delement"></a>  CHtmlEditCtrlBase::Is2DElement
 
@@ -1447,7 +1447,7 @@ HRESULT Is2DElement(bool& bValue) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_2D_ELEMENT 命令 ID](https://msdn.microsoft.com/library/aa769886.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_2D_ELEMENT 命令 ID](/previous-versions/aa769886\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="italic"></a>  CHtmlEditCtrlBase::Italic
 
@@ -1463,7 +1463,7 @@ HRESULT Italic() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_ITALIC 命令 ID](https://msdn.microsoft.com/library/aa769988.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_ITALIC 命令 ID](/previous-versions/aa769988\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="justifycenter"></a>  CHtmlEditCtrlBase::JustifyCenter
 
@@ -1479,7 +1479,7 @@ HRESULT JustifyCenter() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_JUSTIFYCENTER 命令 ID](https://msdn.microsoft.com/library/aa769989.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_JUSTIFYCENTER 命令 ID](/previous-versions/aa769989\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="justifyleft"></a>  CHtmlEditCtrlBase::JustifyLeft
 
@@ -1495,7 +1495,7 @@ HRESULT JustifyLeft() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_JUSTIFYLEFT 命令 ID](https://msdn.microsoft.com/library/aa770011.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_JUSTIFYLEFT 命令 ID](/previous-versions/aa770011\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="justifyright"></a>  CHtmlEditCtrlBase::JustifyRight
 
@@ -1511,7 +1511,7 @@ HRESULT JustifyRight() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_JUSTIFYRIGHT 命令 ID](https://msdn.microsoft.com/library/aa770013.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_JUSTIFYRIGHT 命令 ID](/previous-versions/aa770013\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="listbox"></a>  CHtmlEditCtrlBase::ListBox
 
@@ -1532,7 +1532,7 @@ HRESULT ListBox(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_LISTBOX 命令 ID](https://msdn.microsoft.com/library/aa769985.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_LISTBOX 命令 ID](/previous-versions/aa769985\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="marquee"></a>  CHtmlEditCtrlBase::Marquee
 
@@ -1553,7 +1553,7 @@ HRESULT Marquee(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_MARQUEE 命令 ID](https://msdn.microsoft.com/library/aa769981.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_MARQUEE 命令 ID](/previous-versions/aa769981\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="newdocument"></a>  CHtmlEditCtrlBase::NewDocument
 
@@ -1586,7 +1586,7 @@ HRESULT OrderList(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_ORDERLIST 命令 ID](https://msdn.microsoft.com/library/aa769982.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_ORDERLIST 命令 ID](/previous-versions/aa769982\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="outdent"></a>  CHtmlEditCtrlBase::Outdent
 
@@ -1602,7 +1602,7 @@ HRESULT Outdent() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_OUTDENT 命令 ID](https://msdn.microsoft.com/library/aa770015.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_OUTDENT 命令 ID](/previous-versions/aa770015\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="paragraph"></a>  CHtmlEditCtrlBase::Paragraph
 
@@ -1623,7 +1623,7 @@ HRESULT Paragraph(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_PARAGRAPH 命令 ID](https://msdn.microsoft.com/library/aa769983.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_PARAGRAPH 命令 ID](/previous-versions/aa769983\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="paste"></a>  CHtmlEditCtrlBase::Paste
 
@@ -1639,7 +1639,7 @@ HRESULT Paste() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_PASTE 命令 ID](https://msdn.microsoft.com/library/aa770017.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_PASTE 命令 ID](/previous-versions/aa770017\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="printdocument"></a>  CHtmlEditCtrlBase::PrintDocument
 
@@ -1665,7 +1665,7 @@ HRESULT PrintDocument(bool bShowPrintDialog) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_PRINT 命令 ID](https://msdn.microsoft.com/library/aa769937.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_PRINT 命令 ID](/previous-versions/aa769937\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="printpreview"></a>  CHtmlEditCtrlBase::PrintPreview
 
@@ -1687,7 +1687,7 @@ HRESULT PrintPreview(LPCTSTR szPrintTemplate) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_PRINTPREVIEW 命令 ID](https://msdn.microsoft.com/library/aa769938.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_PRINTPREVIEW 命令 ID](/previous-versions/aa769938\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="querystatus"></a>  CHtmlEditCtrlBase::QueryStatus
 
@@ -1725,7 +1725,7 @@ HRESULT RadioButton(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_RADIOBUTTON 命令 ID](https://msdn.microsoft.com/library/aa769977.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_RADIOBUTTON 命令 ID](/previous-versions/aa769977\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="refreshdocument"></a>  CHtmlEditCtrlBase::RefreshDocument
 
@@ -1741,7 +1741,7 @@ HRESULT RefreshDocument() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_REFRESH 命令 ID](https://msdn.microsoft.com/library/aa770020.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_REFRESH 命令 ID](/previous-versions/aa770020\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="removeformat"></a>  CHtmlEditCtrlBase::RemoveFormat
 
@@ -1757,7 +1757,7 @@ HRESULT RemoveFormat() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_REMOVEFORMAT 命令 ID](https://msdn.microsoft.com/library/aa770021.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_REMOVEFORMAT 命令 ID](/previous-versions/aa770021\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="saveas"></a>  CHtmlEditCtrlBase::SaveAs
 
@@ -1778,7 +1778,7 @@ HRESULT SaveAs(LPCTSTR szPath = NULL) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_SAVEAS 命令 ID](https://msdn.microsoft.com/library/aa770024.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_SAVEAS 命令 ID](/previous-versions/aa770024\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="selectall"></a>  CHtmlEditCtrlBase::SelectAll
 
@@ -1794,7 +1794,7 @@ HRESULT SelectAll() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_SELECTALL 命令 ID](https://msdn.microsoft.com/library/aa770025.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_SELECTALL 命令 ID](/previous-versions/aa770025\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="set2dposition"></a>  CHtmlEditCtrlBase::Set2DPosition
 
@@ -1815,7 +1815,7 @@ HRESULT Set2DPosition(bool bNewValue) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_2D_POSITION 命令 ID](https://msdn.microsoft.com/library/aa769887.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_2D_POSITION 命令 ID](/previous-versions/aa769887\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setabsoluteposition"></a>  CHtmlEditCtrlBase::SetAbsolutePosition
 
@@ -1836,7 +1836,7 @@ HRESULT SetAbsolutePosition(bool bNewValue) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_ABSOLUTE_POSITION 命令 ID](https://msdn.microsoft.com/library/aa769889.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_ABSOLUTE_POSITION 命令 ID](/previous-versions/aa769889\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setatomicselection"></a>  CHtmlEditCtrlBase::SetAtomicSelection
 
@@ -1857,7 +1857,7 @@ HRESULT SetAtomicSelection(bool bNewValue) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_ATOMICSELECTION 命令 ID](https://msdn.microsoft.com/library/aa769892.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_ATOMICSELECTION 命令 ID](/previous-versions/aa769892\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setautourldetectmode"></a>  CHtmlEditCtrlBase::SetAutoURLDetectMode
 
@@ -1878,7 +1878,7 @@ HRESULT SetAutoURLDetectMode(bool bNewValue) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_AUTOURLDETECT_MODE 命令 ID](https://msdn.microsoft.com/library/aa769893.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_AUTOURLDETECT_MODE 命令 ID](/previous-versions/aa769893\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setbackcolor"></a>  CHtmlEditCtrlBase::SetBackColor
 
@@ -1892,10 +1892,10 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
 ### <a name="parameters"></a>參數
 
 *nColor*<br/>
-色彩。 請參閱*pvaIn*中[IDM_BACKCOLOR 命令 ID](https://msdn.microsoft.com/library/aa769858.aspx)。
+色彩。 請參閱*pvaIn*中[IDM_BACKCOLOR 命令 ID](/previous-versions/aa769858\(v=vs.85\))。
 
 *szColor*<br/>
-色彩。 請參閱*pvaIn*中[IDM_BACKCOLOR 命令 ID](https://msdn.microsoft.com/library/aa769858.aspx)。
+色彩。 請參閱*pvaIn*中[IDM_BACKCOLOR 命令 ID](/previous-versions/aa769858\(v=vs.85\))。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1903,7 +1903,7 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_BACKCOLOR_ 命令 ID](https://msdn.microsoft.com/library/aa769858.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_BACKCOLOR_ 命令 ID](/previous-versions/aa769858\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setblockformat"></a>  CHtmlEditCtrlBase::SetBlockFormat
 
@@ -1924,7 +1924,7 @@ HRESULT SetBlockFormat(LPCTSTR szFormat) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_BLOCKFMT_command 識別碼](https://msdn.microsoft.com/library/aa769883.aspx)WebBrowser 控制項。
+這個方法會傳送[IDM_BLOCKFMT_command 識別碼](/previous-versions/aa769883\(v=vs.85\))WebBrowser 控制項。
 
 ##  <a name="setbookmark"></a>  CHtmlEditCtrlBase::SetBookMark
 
@@ -1945,7 +1945,7 @@ HRESULT SetBookMark(LPCTSTR szAnchorName) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_BOOKMARK 命令 ID](https://msdn.microsoft.com/library/aa769873.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_BOOKMARK 命令 ID](/previous-versions/aa769873\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setcsseditinglevel"></a>  CHtmlEditCtrlBase::SetCSSEditingLevel
 
@@ -1966,7 +1966,7 @@ CSS 層級。 如果不想讓 CSS 支援，請傳遞 0。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_CSSEDITING_LEVEL 命令 ID](https://msdn.microsoft.com/library/aa769903.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_CSSEDITING_LEVEL 命令 ID](/previous-versions/aa769903\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setdefaultcomposesettings"></a>  CHtmlEditCtrlBase::SetDefaultComposeSettings
 
@@ -2012,7 +2012,7 @@ HRESULT SetDefaultComposeSettings(
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_COMPOSESETTINGS 命令 ID](https://msdn.microsoft.com/library/aa769901.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_COMPOSESETTINGS 命令 ID](/previous-versions/aa769901\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setdesignmode"></a>  CHtmlEditCtrlBase::SetDesignMode
 
@@ -2050,7 +2050,7 @@ HRESULT SetDisableEditFocusUI(bool bNewValue) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM_DISABLE_EDITFOCUS_UI 命令 ID](https://msdn.microsoft.com/library/aa769905.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM_DISABLE_EDITFOCUS_UI 命令 ID](/previous-versions/aa769905\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setdocumenthtml"></a>  CHtmlEditCtrlBase::SetDocumentHTML
 
@@ -2088,7 +2088,7 @@ HRESULT SetFontFace(LPCTSTR szFace) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM FONTNAME 命令 ID](https://msdn.microsoft.com/library/aa769880.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM FONTNAME 命令 ID](/previous-versions/aa769880\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setfontsize"></a>  CHtmlEditCtrlBase::SetFontSize
 
@@ -2109,7 +2109,7 @@ HTML 字型大小 (1-7)。 值為 0 會將字型大小設為 1。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM FONTSIZE 命令 ID](https://msdn.microsoft.com/library/aa769881.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM FONTSIZE 命令 ID](/previous-versions/aa769881\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setforecolor"></a>  CHtmlEditCtrlBase::SetForeColor
 
@@ -2134,7 +2134,7 @@ HRESULT SetForeColor(int nColor) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM FORECOLOR 命令 ID](https://msdn.microsoft.com/library/aa769882.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM FORECOLOR 命令 ID](/previous-versions/aa769882\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setie5pastemode"></a>  CHtmlEditCtrlBase::SetIE5PasteMode
 
@@ -2155,7 +2155,7 @@ HRESULT SetIE5PasteMode(bool bNewValue) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM IE50_PASTE_MODE 命令 ID](https://msdn.microsoft.com/library/aa769923.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM IE50_PASTE_MODE 命令 ID](/previous-versions/aa769923\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setliveresize"></a>  CHtmlEditCtrlBase::SetLiveResize
 
@@ -2176,7 +2176,7 @@ HRESULT SetLiveResize(bool bNewValue) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM LIVERESIZE 命令 ID](https://msdn.microsoft.com/library/aa769928.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM LIVERESIZE 命令 ID](/previous-versions/aa769928\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setmultiselect"></a>  CHtmlEditCtrlBase::SetMultiSelect
 
@@ -2197,7 +2197,7 @@ HRESULT SetMultiSelect(bool bNewValue) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM MULTIPLESELECTION 命令 ID](https://msdn.microsoft.com/library/aa769929.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM MULTIPLESELECTION 命令 ID](/previous-versions/aa769929\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setoverridecursor"></a>  CHtmlEditCtrlBase::SetOverrideCursor
 
@@ -2218,7 +2218,7 @@ HRESULT SetOverrideCursor(bool bNewValue) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM OVERRIDE_CURSOR 命令 ID](https://msdn.microsoft.com/library/aa769932.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM OVERRIDE_CURSOR 命令 ID](/previous-versions/aa769932\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setoverwritemode"></a>  CHtmlEditCtrlBase::SetOverwriteMode
 
@@ -2239,7 +2239,7 @@ HRESULT SetOverwriteMode(bool bMode) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM 覆寫命令 ID](https://msdn.microsoft.com/library/aa770016.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM 覆寫命令 ID](/previous-versions/aa770016\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setrespectvisindesign"></a>  CHtmlEditCtrlBase::SetRespectVisInDesign
 
@@ -2260,7 +2260,7 @@ HRESULT SetRespectVisInDesign(bool bNewValue) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM RESPECTVISIBILITY_INDESIGN 命令 ID](https://msdn.microsoft.com/library/aa770023.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM RESPECTVISIBILITY_INDESIGN 命令 ID](/previous-versions/aa770023\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setshowalignedsitetags"></a>  CHtmlEditCtrlBase::SetShowAlignedSiteTags
 
@@ -2281,7 +2281,7 @@ HRESULT SetShowAlignedSiteTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM SHOWALIGNEDSITETAGS 命令 ID](https://msdn.microsoft.com/library/aa769947.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM SHOWALIGNEDSITETAGS 命令 ID](/previous-versions/aa769947\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setshowalltags"></a>  CHtmlEditCtrlBase::SetShowAllTags
 
@@ -2302,7 +2302,7 @@ HRESULT SetShowAllTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM SHOWALLTAGS 命令 ID](https://msdn.microsoft.com/library/aa769948.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM SHOWALLTAGS 命令 ID](/previous-versions/aa769948\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setshowareatags"></a>  CHtmlEditCtrlBase::SetShowAreaTags
 
@@ -2323,7 +2323,7 @@ HRESULT SetShowAreaTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM SHOWAREATAGS 命令 ID](https://msdn.microsoft.com/library/aa769949.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM SHOWAREATAGS 命令 ID](/previous-versions/aa769949\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setshowbrtags"></a>  CHtmlEditCtrlBase::SetShowBRTags
 
@@ -2344,7 +2344,7 @@ HRESULT SetShowBRTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM SHOWWBRTAGS 命令 ID](https://msdn.microsoft.com/library/aa769956.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM SHOWWBRTAGS 命令 ID](/previous-versions/aa769956\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setshowcommenttags"></a>  CHtmlEditCtrlBase::SetShowCommentTags
 
@@ -2365,7 +2365,7 @@ HRESULT SetShowCommentTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM SHOWCOMMENTTAGS 命令 ID](https://msdn.microsoft.com/library/aa769950.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM SHOWCOMMENTTAGS 命令 ID](/previous-versions/aa769950\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setshowmisctags"></a>  CHtmlEditCtrlBase::SetShowMiscTags
 
@@ -2386,7 +2386,7 @@ HRESULT SetShowMiscTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM SHOWMISCTAGS 命令 ID](https://msdn.microsoft.com/library/aa769952.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM SHOWMISCTAGS 命令 ID](/previous-versions/aa769952\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setshowscripttags"></a>  CHtmlEditCtrlBase::SetShowScriptTags
 
@@ -2407,7 +2407,7 @@ HRESULT SetShowScriptTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM SHOWSCRIPTTAGS 命令 ID](https://msdn.microsoft.com/library/aa769953.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM SHOWSCRIPTTAGS 命令 ID](/previous-versions/aa769953\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setshowstyletags"></a>  CHtmlEditCtrlBase::SetShowStyleTags
 
@@ -2428,7 +2428,7 @@ HRESULT SetShowStyleTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM SHOWSTYLETAGS 命令 ID](https://msdn.microsoft.com/library/aa769954.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM SHOWSTYLETAGS 命令 ID](/previous-versions/aa769954\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="setshowunknowntags"></a>  CHtmlEditCtrlBase::SetShowUnknownTags
 
@@ -2449,7 +2449,7 @@ HRESULT SetShowUnknownTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM SHOWUNKNOWNTAGS 命令 ID](https://msdn.microsoft.com/library/aa769955.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM SHOWUNKNOWNTAGS 命令 ID](/previous-versions/aa769955\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="textarea"></a>  CHtmlEditCtrlBase::TextArea
 
@@ -2470,7 +2470,7 @@ HRESULT TextArea(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM TEXTAREA 命令 ID](https://msdn.microsoft.com/library/aa769986.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM TEXTAREA 命令 ID](/previous-versions/aa769986\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="textbox"></a>  CHtmlEditCtrlBase::TextBox
 
@@ -2491,7 +2491,7 @@ HRESULT TextBox(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM 文字方塊命令 ID](https://msdn.microsoft.com/library/aa769980.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM 文字方塊命令 ID](/previous-versions/aa769980\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="unbookmark"></a>  CHtmlEditCtrlBase::UnBookmark
 
@@ -2507,7 +2507,7 @@ HRESULT UnBookmark() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM UNBOOKMARK 命令 ID](https://msdn.microsoft.com/library/aa770034.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM UNBOOKMARK 命令 ID](/previous-versions/aa770034\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="underline"></a>  CHtmlEditCtrlBase::Underline
 
@@ -2523,7 +2523,7 @@ HRESULT Underline() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM 加上底線的命令 ID](https://msdn.microsoft.com/library/aa770035.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM 加上底線的命令 ID](/previous-versions/aa770035\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="unlink"></a>  CHtmlEditCtrlBase::Unlink
 
@@ -2539,7 +2539,7 @@ HRESULT Unlink() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM 取消連結的命令 ID](https://msdn.microsoft.com/library/aa770037.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM 取消連結的命令 ID](/previous-versions/aa770037\(v=vs.85\)) WebBrowser 控制項。
 
 ##  <a name="unorderlist"></a>  CHtmlEditCtrlBase::UnorderList
 
@@ -2560,7 +2560,7 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[IDM UNORDERLIST 命令 ID](https://msdn.microsoft.com/library/aa769987.aspx) WebBrowser 控制項。
+這個方法會傳送[IDM UNORDERLIST 命令 ID](/previous-versions/aa769987\(v=vs.85\)) WebBrowser 控制項。
 
 ## <a name="see-also"></a>另請參閱
 

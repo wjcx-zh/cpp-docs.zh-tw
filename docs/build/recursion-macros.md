@@ -6,12 +6,12 @@ helpviewer_keywords:
 - recursion macros
 - macros, recursion
 ms.assetid: c53e5ae7-619e-46b1-bdc2-86d8c7798b1d
-ms.openlocfilehash: 0005a4be0422ed83816eabc7b55932a81441ae25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c04b23d4c8116fdf898c2f732b63c5e02adf5661
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451255"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416406"
 ---
 # <a name="recursion-macros"></a>遞迴巨集
 
@@ -19,7 +19,7 @@ ms.locfileid: "50451255"
 
 |巨集|定義|
 |-----------|----------------|
-|**請**|原先用來叫用 NMAKE 命令。<br /><br /> $(MAKE) 巨集可讓 nmake.exe 的完整路徑。|
+|**MAKE**|原先用來叫用 NMAKE 命令。<br /><br /> $(MAKE) 巨集可讓 nmake.exe 的完整路徑。|
 |**MAKEDIR**|NMAKE 叫用時的目前目錄。|
 |**MAKEFLAGS**|目前作用中的選項。 做為`/$(MAKEFLAGS)`。  請注意，就不會包含 /F。|
 

@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadata
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-ms.openlocfilehash: 3a59dd770d9429f23a4f401c6e1f5b13b9f743ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83d22a0114b26f53fa9df9d2470c71cd80465d64
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656101"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426678"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (產生 Windows 中繼資料)
 
 可讓產生的 Windows 執行階段中繼資料 (.winmd) 檔。
 
-> **/ WINMD**\[**:**{**NO**\|**只**}]
+> **/WINMD**\[**:**{**NO**\|**ONLY**}]
 
 ## <a name="arguments"></a>引數
 
@@ -25,7 +25,7 @@ ms.locfileid: "50656101"
 **/WINMD:NO**<br/>
 連結器會產生只有二進位可執行檔，但不是.winmd 檔案。
 
-**/ WINMD： 只有**<br/>
+**/WINMD:ONLY**<br/>
 連結器會產生只有.winmd 檔案，但不是二進位可執行檔的檔案。
 
 ## <a name="remarks"></a>備註
@@ -44,7 +44,7 @@ ms.locfileid: "50656101"
 
 ## <a name="see-also"></a>另請參閱
 
-[逐步解說： 建立簡單的 Windows 執行階段元件，然後從 JavaScript 呼叫該](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)<br/>
+[逐步解說：建立簡單的 Windows 執行階段元件，然後從 JavaScript 呼叫該](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)<br/>
 [簡介 Microsoft 介面定義語言 3.0](/uwp/midl-3/intro)<br/>
 [/WINMDFILE (指定 winmd 檔案)](winmdfile-specify-winmd-file.md)<br/>
 [/WINMDKEYFILE (指定 winmd 金鑰檔)](winmdkeyfile-specify-winmd-key-file.md)<br/>

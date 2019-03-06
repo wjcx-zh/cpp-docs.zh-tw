@@ -7,12 +7,12 @@ helpviewer_keywords:
 - special characters, in NMAKE macros
 - macros, special characters
 ms.assetid: 92c34ab5-ca6b-4fc0-bcf4-3172eaeda9f0
-ms.openlocfilehash: 18fa83fcfd0c70ac4e8b9bf5be08ac1922998ecb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2703adbbdba392b1a317e2656c6f3dba30a36b6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443726"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420749"
 ---
 # <a name="special-characters-in-a-makefile"></a>Makefile 中的特殊字元
 
@@ -24,7 +24,7 @@ ms.locfileid: "50443726"
 
 在巨集中，反斜線 (\\) 接著新行字元取代空格。
 
-在命令中，百分比符號 （%） 會是檔案規範。 若要表示 %解譯為常值中的命令，請指定雙百分比符號 （%） 來取代一個。 在其他情況下，NMAKE 解譯單一 %解譯為常值，但一律會解譯雙精度浮點數 %%做為單一 %。 因此，來代表常值 %%，指定任一個的三個百分比符號，%%%，或四個百分比符號 %%%。
+在命令中，百分比符號 （%）為檔案指定名稱。 若要表示 %命令解譯為常值中的，指定雙百分比符號 （%）取代一個。 在其他情況下，NMAKE 解譯單一 %解譯為常值，但一律會解譯雙精度浮點數 %%做為單一 %。 因此，來代表常值 %%，指定任一個的三個百分比符號，%%%，或四個百分比符號 %%%。
 
 若要使用貨幣符號 （$），在命令中的常值字元，指定兩個貨幣符號 （$$）。 這個方法也可用在其他情況下，^ $ 運作。
 

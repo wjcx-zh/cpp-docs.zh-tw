@@ -1,19 +1,19 @@
 ---
-title: 如何： 設定 Visual c + + 專案，以 64 位元、 x64 平台
+title: HOW TO：設定 Visual c + + 專案，以 64 位元、 x64 平台
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platforms [C++], 64-bit
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: c0c734648b084c3f58577cb56984e3ea003a6a8e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 17255a5671880063f030ed0087c1fa839c5a14ef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523933"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421364"
 ---
-# <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>如何： 設定 Visual c + + 專案，以 64 位元、 x64 平台
+# <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>HOW TO：設定 Visual c + + 專案，以 64 位元、 x64 平台
 
 您可以使用 Visual Studio IDE 中的專案組態設定 c + + 應用程式鎖定 64 位元、 x64 平台。 您也可以將 Win32 專案設定移轉至 64 位元專案組態。
 
@@ -47,9 +47,9 @@ ms.locfileid: "51523933"
 
   - [登錄輸出] 已關閉。 如需詳細資訊，請參閱 [Linker Property Pages](../ide/linker-property-pages.md)。
 
-  - [目標環境] 設為 **/env x64**。 如需詳細資訊，請參閱 [MIDL Property Pages: General](../ide/midl-property-pages-general.md)。
+  - [目標環境] 設為 **/env x64**。 如需詳細資訊，請參閱[MIDL 屬性頁：一般](../ide/midl-property-pages-general.md)。
 
-  - [驗證參數] 已清除並重設為預設值。 如需詳細資訊，請參閱 [MIDL Property Pages: Advanced](../ide/midl-property-pages-advanced.md)。
+  - [驗證參數] 已清除並重設為預設值。 如需詳細資訊，請參閱[MIDL 屬性頁：進階](../ide/midl-property-pages-advanced.md)。
 
   - 如果 [偵錯資訊格式]  在 Win32 專案組態中設為 **/ZI** ，則在 64 位元專案組態中就會設為 **/Zi** 。 如需詳細資訊，請參閱 [/Z7、/Zi、/ZI (偵錯資訊格式)](../build/reference/z7-zi-zi-debug-information-format.md)。
 

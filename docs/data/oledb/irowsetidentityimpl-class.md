@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IRowsetIdentityImpl class
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-ms.openlocfilehash: b70ebdaa44331d9fa545763f0dd19e6320dd652b
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: e70330a023dc48b7e763bfb874da5290f2fa519f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556214"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424518"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl 類別
 
-實作 OLE DB [IRowsetIdentity](https://docs.microsoft.com/previous-versions/windows/desktop/ms715913(v=vs.85))介面，可讓資料列識別測試。
+實作 OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913(v=vs.85))介面，可讓資料列識別測試。
 
 ## <a name="syntax"></a>語法
 
@@ -53,7 +53,7 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 |-|-|
 |[IsSameRow](#issamerow)|比較兩個資料列控點，以查看它們是否參考相同的資料列。|
 
-## <a name="issamerow"></a> Irowsetidentityimpl:: Issamerow
+## <a name="issamerow"></a> IRowsetIdentityImpl::IsSameRow
 
 比較兩個資料列控點，以查看它們是否參考相同的資料列。
 
@@ -66,7 +66,7 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 
 #### <a name="parameters"></a>參數
 
-請參閱[IRowsetIdentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ### <a name="remarks"></a>備註
 

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - OLE DB providers, properties
 - properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
-ms.openlocfilehash: 149e6f37de64a1133258f5bbc550896a4fb22a9f
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 04f6f046451a5347dbd2a911ce9fbd1a67e39bba
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556656"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414157"
 ---
 # <a name="setting-properties-in-your-provider"></a>在提供者內設定屬性
 
-尋找您想要的屬性的屬性群組和屬性識別碼。 如需詳細資訊，請參閱 < [OLE DB 屬性](https://docs.microsoft.com/previous-versions/windows/desktop/ms722734(v=vs.85))中**OLE DB 程式設計人員參考**。
+尋找您想要的屬性的屬性群組和屬性識別碼。 如需詳細資訊，請參閱 < [OLE DB 屬性](/previous-versions/windows/desktop/ms722734(v=vs.85))中**OLE DB 程式設計人員參考**。
 
 在精靈產生的提供者程式碼的情況下，找到對應至屬性群組的屬性對應。 屬性群組的名稱通常會對應到物件的名稱。 命令和資料列集屬性可在命令或資料列集;資料來源物件中可以找到資料來源初始化屬性。
 
@@ -22,7 +22,7 @@ ms.locfileid: "51556656"
 
 - 屬性 ID 對應至您的屬性。 從屬性名稱的前面移除的前七個字元 ("DBPROP_ 」)。 例如，如果您想要新增`DBPROP_MAXROWS`，傳遞`MAXROWS`的第一個元素。 如果這是自訂的屬性，傳遞完整的 GUID 名稱 (例如`DBMYPROP_MYPROPERTY`)。
 
-- 屬性的 variant 型別 (在[OLE DB 屬性](https://docs.microsoft.com/previous-versions/windows/desktop/ms722734(v=vs.85))中**OLE DB 程式設計人員參考**)。 輸入 VT_ 類型 （例如 VT_BOOL 或 VT_I2） 對應到資料類型。
+- 屬性的 variant 型別 (在[OLE DB 屬性](/previous-versions/windows/desktop/ms722734(v=vs.85))中**OLE DB 程式設計人員參考**)。 輸入 VT_ 類型 （例如 VT_BOOL 或 VT_I2） 對應到資料類型。
 
 - 加上旗標以指出屬性是否可讀取和寫入，且其所屬的群組。 例如，下列程式碼表示屬於資料列群組的讀取/寫入屬性：
 

@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 69a04b49cf82c2b30ece3a32f76fbb2bc9a65f01
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 251a1f9f6773363955ac374aa8714bc616137a31
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295990"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424999"
 ---
 # <a name="chtmlview-class"></a>CHtmlView 類別
 
@@ -390,7 +390,7 @@ virtual BOOL Create(
 指定視窗的樣式屬性。 根據預設，會設定 WS_VISIBLE 和 WS_CHILD Windows 樣式。
 
 *rect*<br/>
-參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定的大小和視窗的位置。 *RectDefault*值允許指定的大小和位置的新視窗中的 Windows。
+參考[RECT](/previous-versions/dd162897\(v=vs.85\))結構，指定的大小和視窗的位置。 *RectDefault*值允許指定的大小和位置的新視窗中的 Windows。
 
 *pParentWnd*<br/>
 控制項的父視窗指標。
@@ -1045,7 +1045,7 @@ void Navigate(
 呼叫端配置的字串，包含要瀏覽至的 URL 或要顯示之檔案的完整路徑。
 
 *dwFlags*<br/>
-此變數會指定是否要將資源新增至歷程記錄清單、 是否要從快取中，若要讀取或寫入以及是否要在新視窗顯示資源的旗標。 變數可以是所定義之值的組合[BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx)列舉型別。
+此變數會指定是否要將資源新增至歷程記錄清單、 是否要從快取中，若要讀取或寫入以及是否要在新視窗顯示資源的旗標。 變數可以是所定義之值的組合[BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\))列舉型別。
 
 *lpszTargetFrameName*<br/>
 包含要在其中顯示該資源的框架名稱的字串指標。
@@ -1095,7 +1095,7 @@ void Navigate2(
 指標[ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist)結構。
 
 *dwFlags*<br/>
-此變數會指定是否要將資源新增至歷程記錄清單、 是否要從快取中，若要讀取或寫入以及是否要在新視窗顯示資源的旗標。 變數可以是所定義之值的組合[BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx)列舉型別。
+此變數會指定是否要將資源新增至歷程記錄清單、 是否要從快取中，若要讀取或寫入以及是否要在新視窗顯示資源的旗標。 變數可以是所定義之值的組合[BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\))列舉型別。
 
 *lpszTargetFrameName*<br/>
 包含要在其中顯示該資源的框架名稱的字串指標。
@@ -1215,7 +1215,7 @@ virtual HRESULT OnDocWindowActivate(BOOL fActivate);
 
 ### <a name="remarks"></a>備註
 
-覆寫`OnDocWindowActivate`回應`OnDocWindowActivate`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx) Windows sdk for 的詳細資訊。
+覆寫`OnDocWindowActivate`回應`OnDocWindowActivate`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)) Windows sdk for 的詳細資訊。
 
 ##  <a name="ondownloadbegin"></a>  CHtmlView::OnDownloadBegin
 
@@ -1256,7 +1256,7 @@ virtual HRESULT OnEnableModeless(BOOL fEnable);
 
 ### <a name="remarks"></a>備註
 
-啟用或停用非強制回應對話方塊，當容器建立或終結強制回應對話方塊。 覆寫`OnEnableModeless`回應`EnableModeless`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx) Windows sdk for 的詳細資訊。
+啟用或停用非強制回應對話方塊，當容器建立或終結強制回應對話方塊。 覆寫`OnEnableModeless`回應`EnableModeless`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)) Windows sdk for 的詳細資訊。
 
 ##  <a name="onfilterdataobject"></a>  CHtmlView::OnFilterDataObject
 
@@ -1282,7 +1282,7 @@ virtual HRESULT OnFilterDataObject(
 
 ### <a name="remarks"></a>備註
 
-覆寫`OnFilterDataObject`回應`FilterDataObject`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx) Windows sdk for 的詳細資訊。
+覆寫`OnFilterDataObject`回應`FilterDataObject`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)) Windows sdk for 的詳細資訊。
 
 ##  <a name="onframewindowactivate"></a>  CHtmlView::OnFrameWindowActivate
 
@@ -1303,7 +1303,7 @@ virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
 
 ### <a name="remarks"></a>備註
 
-覆寫`OnFrameWindowActivate`回應`OnFrameWindowActivate`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx) Windows sdk for 的詳細資訊。
+覆寫`OnFrameWindowActivate`回應`OnFrameWindowActivate`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)) Windows sdk for 的詳細資訊。
 
 ##  <a name="onfullscreen"></a>  CHtmlView::OnFullScreen
 
@@ -1338,11 +1338,11 @@ virtual HRESULT OnGetDropTarget(
 
 ### <a name="return-value"></a>傳回值
 
-請參閱[IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) Windows SDK，如需傳回碼的清單中。
+請參閱[IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) Windows SDK，如需傳回碼的清單中。
 
 ### <a name="remarks"></a>備註
 
-覆寫`OnGetDropTarget`回應`GetDropTarget`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) Windows sdk for 的詳細資訊。
+覆寫`OnGetDropTarget`回應`GetDropTarget`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) Windows sdk for 的詳細資訊。
 
 ##  <a name="ongetexternal"></a>  CHtmlView::OnGetExternal
 
@@ -1363,7 +1363,7 @@ virtual HRESULT OnGetExternal(LPDISPATCH* lppDispatch);
 
 ### <a name="remarks"></a>備註
 
-覆寫`OnGetExternal`回應`GetExternal`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx) Windows sdk for 的詳細資訊。
+覆寫`OnGetExternal`回應`GetExternal`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)) Windows sdk for 的詳細資訊。
 
 ##  <a name="ongethostinfo"></a>  CHtmlView::OnGetHostInfo
 
@@ -1376,7 +1376,7 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
 ### <a name="parameters"></a>參數
 
 *pInfo*<br/>
-位址[DOCHOSTUIINFO](https://msdn.microsoft.com/library/aa770044.aspx)接收主機的 UI 功能的結構。
+位址[DOCHOSTUIINFO](/previous-versions/aa770044\(v=vs.85\))接收主機的 UI 功能的結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1384,7 +1384,7 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
 
 ### <a name="remarks"></a>備註
 
-覆寫`OnGetHostInfo`回應`GetHostInfo`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx) Windows sdk for 的詳細資訊。
+覆寫`OnGetHostInfo`回應`GetHostInfo`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)) Windows sdk for 的詳細資訊。
 
 ##  <a name="ongetoptionkeypath"></a>  CHtmlView::OnGetOptionKeyPath
 
@@ -1410,7 +1410,7 @@ virtual HRESULT OnGetOptionKeyPath(
 
 ### <a name="remarks"></a>備註
 
-覆寫`OnGetOptionKeyPath`回應`GetOptionKeyPath`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) Windows sdk for 的詳細資訊。
+覆寫`OnGetOptionKeyPath`回應`GetOptionKeyPath`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)) Windows sdk for 的詳細資訊。
 
 ##  <a name="onhideui"></a>  CHtmlView::OnHideUI
 
@@ -1426,7 +1426,7 @@ virtual HRESULT OnHideUI();
 
 ### <a name="remarks"></a>備註
 
-覆寫`OnHideUI`回應`HideUI`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::HideUI](https://msdn.microsoft.com/library/aa753259.aspx) Windows sdk for 的詳細資訊。
+覆寫`OnHideUI`回應`HideUI`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\)) Windows sdk for 的詳細資訊。
 
 ##  <a name="onmenubar"></a>  CHtmlView::OnMenuBar
 
@@ -1585,7 +1585,7 @@ virtual HRESULT OnResizeBorder(
 
 ### <a name="remarks"></a>備註
 
-覆寫`OnResizeBorder`回應`ResizeBorder`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx) Windows sdk for 的詳細資訊。
+覆寫`OnResizeBorder`回應`ResizeBorder`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\)) Windows sdk for 的詳細資訊。
 
 ##  <a name="onshowcontextmenu"></a>  CHtmlView::OnShowContextMenu
 
@@ -1615,11 +1615,11 @@ virtual HRESULT OnShowContextMenu(
 
 ### <a name="return-value"></a>傳回值
 
-請參閱[IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)值清單的 Windows SDK 中。
+請參閱[IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\))值清單的 Windows SDK 中。
 
 ### <a name="remarks"></a>備註
 
-覆寫`OnShowContextMenu`回應`ShowContextMenu`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) Windows sdk for 的詳細資訊。
+覆寫`OnShowContextMenu`回應`ShowContextMenu`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) Windows sdk for 的詳細資訊。
 
 ##  <a name="onshowui"></a>  CHtmlView::OnShowUI
 
@@ -1653,11 +1653,11 @@ virtual HRESULT OnShowUI(
 
 ### <a name="return-value"></a>傳回值
 
-請參閱[IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)值清單的 Windows SDK 中。
+請參閱[IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\))值清單的 Windows SDK 中。
 
 ### <a name="remarks"></a>備註
 
-覆寫`OnShowUI`回應`ShowUI`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) Windows sdk for 的詳細資訊。
+覆寫`OnShowUI`回應`ShowUI`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) Windows sdk for 的詳細資訊。
 
 ##  <a name="onstatusbar"></a>  CHtmlView::OnStatusBar
 
@@ -1756,7 +1756,7 @@ virtual HRESULT OnTranslateAccelerator(
 
 ### <a name="remarks"></a>備註
 
-覆寫`OnTranslateAccelerator`回應`TranslateAccelerator`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx) Windows sdk for 的詳細資訊。
+覆寫`OnTranslateAccelerator`回應`TranslateAccelerator`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)) Windows sdk for 的詳細資訊。
 
 ##  <a name="ontranslateurl"></a>  CHtmlView::OnTranslateUrl
 
@@ -1786,7 +1786,7 @@ virtual HRESULT OnTranslateUrl(
 
 ### <a name="remarks"></a>備註
 
-覆寫`OnTranslateUrl`回應`TranslateUrl`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx) Windows sdk for 的詳細資訊。
+覆寫`OnTranslateUrl`回應`TranslateUrl`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)) Windows sdk for 的詳細資訊。
 
 ##  <a name="onupdateui"></a>  CHtmlView::OnUpdateUI
 
@@ -2236,4 +2236,4 @@ void Stop();
 [MFC 範例 MFCIE](../../visual-cpp-samples.md)<br/>
 [CFormView 類別](../../mfc/reference/cformview-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
-[IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx)
+[IWebBrowser2](/windows/desktop/api/exdisp/nn-exdisp-iwebbrowser2)

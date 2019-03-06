@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditCtrl [MFC], GetDHtmlDocument
 - CHtmlEditCtrl [MFC], GetStartDocument
 ms.assetid: 0fc4a238-b05f-4874-9edc-6a6701f064d9
-ms.openlocfilehash: 6c1447c3157bceb4540007eca5c3eb85e8269bd2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6f5c465a8ec9c8f54af5545e66fb849a08d241af
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285304"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420917"
 ---
 # <a name="chtmleditctrl-class"></a>CHtmlEditCtrl 類別
 
@@ -45,7 +45,7 @@ class CHtmlEditCtrl: public CWnd,
 |名稱|描述|
 |----------|-----------------|
 |[CHtmlEditCtrl::Create](#create)|建立 WebBrowser ActiveX 控制項，並將它附加至`CHtmlEditCtrl`物件。 此函式會自動會將 WebBrowser ActiveX 控制項進入編輯模式。|
-|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|擷取[IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)內含的 WebBrowser 控制項中目前載入文件上的介面。|
+|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|擷取[IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))內含的 WebBrowser 控制項中目前載入文件上的介面。|
 |[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|擷取預設文件載入所包含的 WebBrowser 控制項中的 URL。|
 
 ## <a name="remarks"></a>備註
@@ -116,7 +116,7 @@ virtual BOOL Create(
 
 ##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument
 
-擷取[IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)內含的 WebBrowser 控制項中目前載入文件上的介面
+擷取[IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))內含的 WebBrowser 控制項中目前載入文件上的介面
 
 ```
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;

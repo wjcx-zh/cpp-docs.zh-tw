@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - NMAKE program, options
 ms.assetid: 00ba1aec-ef27-44cf-8d82-c5c095e45bae
-ms.openlocfilehash: 84130afea6cc73c480b46f065d6d85e365101b38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dca7b94935f385971b8d9bff53ece3b86f2885b8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455331"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417069"
 ---
 # <a name="nmake-options"></a>NMAKE 選項
 
@@ -17,13 +17,13 @@ NMAKE 選項是下表中所述。 選項會加上斜線 （/） 或破折號 （
 
 |選項|用途|
 |------------|-------------|
-|/ A|強制建置所有評估的目標，即使不過期，相對於相依性。 不會強制建置不相關的目標。|
-|B|即使時間戳記相等，就會建置強制。 建議只適用於非常快速的系統 （解決方式的兩秒或更少）。|
+|/A|強制建置所有評估的目標，即使不過期，相對於相依性。 不會強制建置不相關的目標。|
+|/B|即使時間戳記相等，就會建置強制。 建議只適用於非常快速的系統 （解決方式的兩秒或更少）。|
 |/C|隱藏預設輸出，包括非嚴重的 NMAKE 錯誤或警告，時間戳記，以及 NMAKE 著作權訊息。 隱藏 /k 所發出的警告|
 |/D|顯示評估時間戳記的每個目標和相依性和一則訊息時的目標不存在。 用於/P 與偵錯 makefile。 使用 **！CMDSWITCHES**設定或清除 /D 的 makefile 的一部分。|
 |/E|會導致環境變數，以覆寫 makefile 巨集定義。|
-|/ERRORREPORT [NONE &AMP;#124; PROMPT&AMP;#124;佇列&AMP;#124;傳送]|如果在執行階段失敗 nmake.exe，您可以使用 /ERRORREPORT 有關這些內部錯誤，傳送給 Microsoft 的資訊。<br /><br /> 如需 /ERRORREPORT 的詳細資訊，請參閱[/errorReport （回報編譯器內部錯誤）](../build/reference/errorreport-report-internal-compiler-errors.md)。|
-|/F*檔名*|指定*filename*為 makefile。 可以在前面的空格或定位字元*filename*。 指定一次的每個 makefile /F。 若要提供從標準輸入 makefile，指定虛線 （-） *filename*，且結尾使用 f6 鍵或 CTRL + Z 的鍵盤輸入。|
+|/ERRORREPORT[NONE &#124; PROMPT &#124; QUEUE &#124; SEND ]|如果在執行階段失敗 nmake.exe，您可以使用 /ERRORREPORT 有關這些內部錯誤，傳送給 Microsoft 的資訊。<br /><br /> 如需 /ERRORREPORT 的詳細資訊，請參閱[/errorReport （回報編譯器內部錯誤）](../build/reference/errorreport-report-internal-compiler-errors.md)。|
+|/F *filename*|指定*filename*為 makefile。 可以在前面的空格或定位字元*filename*。 指定一次的每個 makefile /F。 若要提供從標準輸入 makefile，指定虛線 （-） *filename*，且結尾使用 f6 鍵或 CTRL + Z 的鍵盤輸入。|
 |/G|顯示包含使用 ！INCLUDE 指示詞。  請參閱[Makefile 前置處理指示詞](../build/makefile-preprocessing-directives.md)如需詳細資訊。|
 |/HELP、 /？|顯示 NMAKE 命令列語法的簡短摘要。|
 |/I|會忽略所有命令的結束代碼。 若要設定或清除 /I 的 makefile 的一部分，請使用 **！CMDSWITCHES**。 若要忽略的 makefile 一部分的結束代碼，使用破折號 （-） 命令修飾詞或[。忽略](../build/dot-directives.md)。 如果同時指定，會覆寫 /K。|
@@ -36,7 +36,7 @@ NMAKE 選項是下表中所述。 選項會加上斜線 （/） 或破折號 （
 |/S|隱藏顯示執行的命令。 若要抑制顯示部分的 makefile，請使用**\@** 命令修飾詞或[。無訊息](../build/dot-directives.md)。 若要設定或清除 /S 的 makefile 的一部分，請使用 **！CMDSWITCHES**。|
 |/T|更新的命令列目標 （或第一個的 makefile 目標） 的時間戳記和執行前置處理命令但不會執行組建。|
 |/U|必須用於搭配 /N. 傾印 inline NMAKE 檔案，以便 /N 輸出可用來當做批次檔。|
-|/X*檔名*|傳送至的 NMAKE 錯誤輸出*filename*而不是標準錯誤。 可以在前面的空格或定位字元*filename*。 若要將錯誤輸出傳送至標準輸出中，指定虛線 （-） *filename*。 不會影響命令標準錯誤的輸出。|
+|/X *filename*|傳送至的 NMAKE 錯誤輸出*filename*而不是標準錯誤。 可以在前面的空格或定位字元*filename*。 若要將錯誤輸出傳送至標準輸出中，指定虛線 （-） *filename*。 不會影響命令標準錯誤的輸出。|
 |/Y|停用批次模式推斷規則。 選取此選項時，所有的批次模式推斷規則都視為一般的推斷規則。|
 
 ## <a name="see-also"></a>另請參閱

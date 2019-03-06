@@ -35,12 +35,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: dba86b310dcd9b89026d95732f9ca542e6995146
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: b7284ace73d80eff6337e1d71cafef26094455f0
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556630"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414016"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow 類別
 
@@ -78,7 +78,7 @@ class CSimpleRow
 
 資料列控制代碼在邏輯上的結果資料列的唯一標籤。 `IRowsetImpl` 建立新`CSimpleRow`的要求中的每個資料列[irowsetimpl:: Getnextrows](../../data/oledb/irowsetimpl-getnextrows.md)。 `CSimpleRow` 可以也將取代為您自己的資料列控制代碼的實作的預設樣板引數後，即`IRowsetImpl`。 取代這個類別的唯一需求是將提供的建構函式接受單一參數的類型取代類別**長**。
 
-## <a name="addrefrow"></a> Csimplerow:: Addrefrow
+## <a name="addrefrow"></a> CSimpleRow::AddRefRow
 
 將現有的資料列控制代碼的參考計數以執行緒安全的方式。
 
@@ -88,7 +88,7 @@ class CSimpleRow
 DWORD AddRefRow();
 ```
 
-## <a name="compare"></a> Csimplerow:: Compare
+## <a name="compare"></a> CSimpleRow::Compare
 
 比較兩個資料列，以查看它們是否參考相同的資料列執行個體。
 
@@ -105,7 +105,7 @@ HRESULT Compare(CSimpleRow* pRow);
 
 ### <a name="return-value"></a>傳回值
 
-HRESULT 值，通常是 s_ok 時，指出兩個資料列有相同的資料列執行個體，或不同 S_FALSE，指出兩個資料列。 請參閱[IRowsetIdentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85))中*OLE DB 程式設計人員參考*如需其他可能的傳回值。
+HRESULT 值，通常是 s_ok 時，指出兩個資料列有相同的資料列執行個體，或不同 S_FALSE，指出兩個資料列。 請參閱[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85))中*OLE DB 程式設計人員參考*如需其他可能的傳回值。
 
 ## <a name="csimplerow"></a> Csimplerow:: Csimplerow
 
@@ -126,7 +126,7 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 
 設定組[m_iRowset](../../data/oledb/csimplerow-m-irowset.md)要*iRowsetCur*。
 
-## <a name="releaserow"></a> Csimplerow:: Releaserow
+## <a name="releaserow"></a> CSimpleRow::ReleaseRow
 
 釋放資料列以執行緒安全的方式。
 
@@ -136,7 +136,7 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 DWORD ReleaseRow();
 ```
 
-## <a name="dwref"></a> Csimplerow:: M_dwref
+## <a name="dwref"></a> CSimpleRow::m_dwRef
 
 現有的資料列控制代碼的參考計數。
 
@@ -146,7 +146,7 @@ DWORD ReleaseRow();
 DWORD m_dwRef;
 ```
 
-## <a name="irowset"></a> Csimplerow:: M_irowset
+## <a name="irowset"></a> CSimpleRow::m_iRowset
 
 表示資料指標的資料列集的索引。
 

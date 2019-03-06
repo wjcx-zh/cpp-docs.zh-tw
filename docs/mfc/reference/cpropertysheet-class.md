@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: c5fd3a682aa649091712a09a9131081c06d29ca6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 03f9e5e0cac9cc71080bfe97d6a3115fd3cc99b5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300618"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418993"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet 類別
 
@@ -607,7 +607,7 @@ void MapDialogRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)協調要轉換的物件，其中包含對話方塊。
+指向[RECT](/previous-versions/dd162897\(v=vs.85\))結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)協調要轉換的物件，其中包含對話方塊。
 
 ### <a name="remarks"></a>備註
 

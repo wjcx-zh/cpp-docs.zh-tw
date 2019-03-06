@@ -51,12 +51,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: a2a5bf14da1a39439db67a4fb062fd06763754fc
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: f5cf5e8ebadcc48dbd040225496f0a437b92555c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151113"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415184"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>OLE DB 提供者樣板的巨集
 
@@ -158,11 +158,11 @@ BEGIN_PROPSET_MAP(Class)
 *類別*<br/>
 [in]指定設定這個屬性的類別。 屬性集，請指定下列的 OLE DB 物件：
 
-- [資料來源物件](https://docs.microsoft.com/previous-versions/windows/desktop/ms721278(v=vs.85))
+- [資料來源物件](/previous-versions/windows/desktop/ms721278(v=vs.85))
 
-- [工作階段物件](https://docs.microsoft.com/previous-versions/windows/desktop/ms711572(v=vs.85))
+- [工作階段物件](/previous-versions/windows/desktop/ms711572(v=vs.85))
 
-- [命令](https://docs.microsoft.com/previous-versions/windows/desktop/ms724608(v=vs.85))
+- [命令](/previous-versions/windows/desktop/ms724608(v=vs.85))
 
 #### <a name="example"></a>範例
 
@@ -238,11 +238,11 @@ PROPERTY_INFO_ENTRY(dwPropID)
 #### <a name="parameters"></a>參數
 
 *dwPropID*<br/>
-[in] [DBPROPID](https://docs.microsoft.com/previous-versions/windows/desktop/ms723882(v=vs.85)) 值，可搭配屬性集 GUID 以識別屬性。
+[in] [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) 值，可搭配屬性集 GUID 以識別屬性。
 
 #### <a name="remarks"></a>備註
 
-此巨集會將 `DWORD` 類型的屬性值設定為 ATLDB 中定義的預設值。 若要將屬性設定為您選擇的值，請使用 [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)。 若要設定`VARTYPE`並[DBPROPFLAGS](https://docs.microsoft.com/previous-versions/windows/desktop/ms724342(v=vs.85))同時屬性，使用[PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)。
+此巨集會將 `DWORD` 類型的屬性值設定為 ATLDB 中定義的預設值。 若要將屬性設定為您選擇的值，請使用 [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)。 若要設定`VARTYPE`並[DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85))同時屬性，使用[PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)。
 
 #### <a name="example"></a>範例
 
@@ -261,13 +261,13 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
 #### <a name="parameters"></a>參數
 
 *dwPropID*<br/>
-[in] [DBPROPID](https://docs.microsoft.com/previous-versions/windows/desktop/ms723882(v=vs.85)) 值，可搭配屬性集 GUID 以識別屬性。
+[in] [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) 值，可搭配屬性集 GUID 以識別屬性。
 
 *vt*<br/>
 [in] 此屬性項目的 `VARTYPE`。 （wtypes.h 中所定義）
 
 *dwFlags*<br/>
-[in] 描述此屬性項目的 [DBPROPFLAGS](https://docs.microsoft.com/previous-versions/windows/desktop/ms724342(v=vs.85)) 值。
+[in] 描述此屬性項目的 [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) 值。
 
 *值*<br/>
 [in] `DWORD`類型的屬性值。
@@ -296,7 +296,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 #### <a name="parameters"></a>參數
 
 *dwPropID*<br/>
-[in] [DBPROPID](https://docs.microsoft.com/previous-versions/windows/desktop/ms723882(v=vs.85)) 值，可搭配屬性集 GUID 以識別屬性。
+[in] [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) 值，可搭配屬性集 GUID 以識別屬性。
 
 *value*<br/>
 [in] `DWORD`類型的屬性值。
@@ -384,7 +384,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 [in] 資料行編號。 除非資料行是書籤資料行，資料行數目必須為 0。
 
 *dbtype*<br/>
-[in]中的資料類型[DBTYPE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85))。
+[in]中的資料類型[DBTYPE](/previous-versions/windows/desktop/ms711251(v=vs.85))。
 
 *成員*<br/>
 [in]中的成員變數`dataClass`，儲存資料。
@@ -416,22 +416,22 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 [in] 資料行編號。 除非資料行是書籤資料行，資料行數目必須為 0。
 
 *flags*<br/>
-[in]指定傳回資料的方式。 請參閱`dwFlags`中的說明[DBBINDING 結構](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))。
+[in]指定傳回資料的方式。 請參閱`dwFlags`中的說明[DBBINDING 結構](/previous-versions/windows/desktop/ms716845(v=vs.85))。
 
 *colSize*<br/>
 [in]資料行大小。
 
 *dbtype*<br/>
-[in]表示值的資料類型。 請參閱`wType`中的說明[DBBINDING 結構](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))。
+[in]表示值的資料類型。 請參閱`wType`中的說明[DBBINDING 結構](/previous-versions/windows/desktop/ms716845(v=vs.85))。
 
 *precision*<br/>
-[in]指出如果取得資料時所要使用的有效位數*dbType* DBTYPE_NUMERIC 或 DBTYPE_DECIMAL。 請參閱`bPrecision`中的說明[DBBINDING 結構](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))。
+[in]指出如果取得資料時所要使用的有效位數*dbType* DBTYPE_NUMERIC 或 DBTYPE_DECIMAL。 請參閱`bPrecision`中的說明[DBBINDING 結構](/previous-versions/windows/desktop/ms716845(v=vs.85))。
 
 *scale*<br/>
-[in]表示如果 dbType DBTYPE_NUMERIC 或 DBTYPE_DECIMAL 取得資料時所要使用的比例。 請參閱`bScale`中的說明[DBBINDING 結構](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))。
+[in]表示如果 dbType DBTYPE_NUMERIC 或 DBTYPE_DECIMAL 取得資料時所要使用的比例。 請參閱`bScale`中的說明[DBBINDING 結構](/previous-versions/windows/desktop/ms716845(v=vs.85))。
 
 *guid*<br/>
-結構描述資料列集的 GUID。 請參閱[IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))中*OLE DB 程式設計人員參考*取得一份結構描述資料列集和其 Guid。
+結構描述資料列集的 GUID。 請參閱[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))中*OLE DB 程式設計人員參考*取得一份結構描述資料列集和其 Guid。
 
 #### <a name="remarks"></a>備註
 
@@ -492,7 +492,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 
 #### <a name="remarks"></a>備註
 
-當資料行的資料皆必須使用這個巨集[DBTYPE_STR](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85))。
+當資料行的資料皆必須使用這個巨集[DBTYPE_STR](/previous-versions/windows/desktop/ms711251(v=vs.85))。
 
 #### <a name="example"></a>範例
 
@@ -517,7 +517,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 [in] 資料行編號。 除非資料行是書籤資料行，資料行數目必須為 0。
 
 *dbtype*<br/>
-[in]中的資料類型[DBTYPE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85))。
+[in]中的資料類型[DBTYPE](/previous-versions/windows/desktop/ms711251(v=vs.85))。
 
 *size*<br/>
 [in]資料行大小 （位元組）。
@@ -552,7 +552,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 
 #### <a name="remarks"></a>備註
 
-使用這個巨集，資料行的資料是以 null 結束的 Unicode 字元字串，當[DBTYPE_WSTR](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85))。
+使用這個巨集，資料行的資料是以 null 結束的 Unicode 字元字串，當[DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251(v=vs.85))。
 
 ### <a name="begin_schema_map"></a> BEGIN_SCHEMA_MAP
 
@@ -571,7 +571,7 @@ BEGIN_SCHEMA_MAP(SchemaClass);
 
 #### <a name="remarks"></a>備註
 
-請參閱[IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))結構描述資料列集的詳細資訊的 Windows SDK 中。
+請參閱[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))結構描述資料列集的詳細資訊的 Windows SDK 中。
 
 ### <a name="end_schema_map"></a> END_SCHEMA_MAP
 
@@ -601,7 +601,7 @@ SCHEMA_ENTRY(guid,
 #### <a name="parameters"></a>參數
 
 *guid*<br/>
-結構描述資料列集的 GUID。 請參閱[IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))中*OLE DB 程式設計人員參考*取得一份結構描述資料列集和其 Guid。
+結構描述資料列集的 GUID。 請參閱[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))中*OLE DB 程式設計人員參考*取得一份結構描述資料列集和其 Guid。
 
 *rowsetClass*<br/>
 將建立來代表結構描述資料列集類別。
@@ -616,7 +616,7 @@ HRESULT Execute (LONG* pcRowsAffected,
     const VARIANT* rgRestrictions);
 ```
 
-這`Execute`函式會將資料列集的資料填入。 [ATL 專案精靈] 建立，如中所述[IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))中*OLE DB 程式設計人員參考*，三個初始的三個必要的 OLE DB 結構描述的每個專案中的結構描述資料列：
+這`Execute`函式會將資料列集的資料填入。 [ATL 專案精靈] 建立，如中所述[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))中*OLE DB 程式設計人員參考*，三個初始的三個必要的 OLE DB 結構描述的每個專案中的結構描述資料列：
 
 - DBSCHEMA_TABLES
 

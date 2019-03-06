@@ -22,12 +22,12 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: 7fd9a941210407edc3424454b3375040717a05a2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 660c6c047bb700e531fd941ac8ed19d638866070
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261657"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421567"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT 類別
 
@@ -215,7 +215,7 @@ HWND Create(
 [in]父系或擁有者的視窗控制代碼。
 
 *rect*<br/>
-[in]A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定視窗的位置。 `RECT`可以傳遞指標或參考。
+[in]A [RECT](/previous-versions/dd162897\(v=vs.85\))結構，指定視窗的位置。 `RECT`可以傳遞指標或參考。
 
 *szWindowName*<br/>
 [in]指定視窗的名稱。 預設值是 NULL。

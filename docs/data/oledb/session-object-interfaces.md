@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interfaces, session object
 - interfaces, list of
 ms.assetid: ac01a958-6dde-4bd7-8b63-94459e488335
-ms.openlocfilehash: 284f93d96b974a616e957a65ef0c8aa39b33a564
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 7e8a9cd204a07afc2b14c6a1e31e7c970c27cfc2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176896"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423374"
 ---
 # <a name="session-object-interfaces"></a>工作階段物件介面
 
@@ -21,24 +21,24 @@ ms.locfileid: "52176896"
 
 |介面|是否為必要項？|實作 OLE DB 範本嗎？|
 |---------------|---------------|--------------------------------------|
-|[IGetDataSource](https://docs.microsoft.com/previous-versions/windows/desktop/ms709721(v=vs.85))|強制|是|
-|[IOpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716946(v=vs.85))|強制|是|
-|[ISessionProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms713721(v=vs.85))|強制|是|
-|[IAlterIndex](https://docs.microsoft.com/previous-versions/windows/desktop/ms714943(v=vs.85))|Optional|否|
-|[IAlterTable](https://docs.microsoft.com/previous-versions/windows/desktop/ms719764(v=vs.85))|Optional|否|
-|[IBindResource](https://docs.microsoft.com/previous-versions/windows/desktop/ms714936(v=vs.85))|Optional|否|
-|[ICreateRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms716832(v=vs.85))|Optional|否|
-|[IDBCreateCommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms711625(v=vs.85))|Optional|是|
-|[IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))|Optional|是|
-|[IIndexDefinition](https://docs.microsoft.com/previous-versions/windows/desktop/ms711593(v=vs.85))|Optional|否|
-|[ISupportErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms715816(v=vs.85))|Optional|是|
-|[ITableCreation](https://docs.microsoft.com/previous-versions/windows/desktop/ms713639(v=vs.85))|Optional|否|
-|[ITableDefinition](https://docs.microsoft.com/previous-versions/windows/desktop/ms714277(v=vs.85))|Optional|否|
-|[ITableDefinitionWithConstraints](https://docs.microsoft.com/previous-versions/windows/desktop/ms720947(v=vs.85))|Optional|否|
-|[ITransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms723053(v=vs.85))|Optional|否|
-|[ITransactionJoin](https://docs.microsoft.com/previous-versions/windows/desktop/ms718071(v=vs.85))|Optional|否|
-|[ITransactionLocal](https://docs.microsoft.com/previous-versions/windows/desktop/ms714893(v=vs.85))|Optional|否|
-|[ITransactionObject](https://docs.microsoft.com/previous-versions/windows/desktop/ms713659(v=vs.85))|Optional|否|
+|[IGetDataSource](/previous-versions/windows/desktop/ms709721(v=vs.85))|強制|是|
+|[IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85))|強制|是|
+|[ISessionProperties](/previous-versions/windows/desktop/ms713721(v=vs.85))|強制|是|
+|[IAlterIndex](/previous-versions/windows/desktop/ms714943(v=vs.85))|Optional|否|
+|[IAlterTable](/previous-versions/windows/desktop/ms719764(v=vs.85))|Optional|否|
+|[IBindResource](/previous-versions/windows/desktop/ms714936(v=vs.85))|Optional|否|
+|[ICreateRow](/previous-versions/windows/desktop/ms716832(v=vs.85))|Optional|否|
+|[IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85))|Optional|是|
+|[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))|Optional|是|
+|[IIndexDefinition](/previous-versions/windows/desktop/ms711593(v=vs.85))|Optional|否|
+|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816(v=vs.85))|Optional|是|
+|[ITableCreation](/previous-versions/windows/desktop/ms713639(v=vs.85))|Optional|否|
+|[ITableDefinition](/previous-versions/windows/desktop/ms714277(v=vs.85))|Optional|否|
+|[ITableDefinitionWithConstraints](/previous-versions/windows/desktop/ms720947(v=vs.85))|Optional|否|
+|[ITransaction](/previous-versions/windows/desktop/ms723053(v=vs.85))|Optional|否|
+|[ITransactionJoin](/previous-versions/windows/desktop/ms718071(v=vs.85))|Optional|否|
+|[ITransactionLocal](/previous-versions/windows/desktop/ms714893(v=vs.85))|Optional|否|
+|[ITransactionObject](/previous-versions/windows/desktop/ms713659(v=vs.85))|Optional|否|
 
 工作階段物件建立資料列集物件。 如果提供者支援的命令，在工作階段也會建立命令物件 (`CCommand`，實作 OLE DB `TCommand`)。 命令物件會實作`ICommand`介面並使用`ICommand::Execute`方法，以在資料列集上執行命令，如下圖所示。
 

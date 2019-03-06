@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-ms.openlocfilehash: 21836d2842427581cc5019a42c563a78356d1ec2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 089f34f6daa606ed2869852a04ee76c6bda8fe25
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620502"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424674"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (前置處理器定義)
 
@@ -46,7 +46,7 @@ ms.locfileid: "50620502"
 
 此命令會移除 TEST.c 中所有出現的關鍵字 `__far`：
 
-**CL /D__far = TEST。C**
+**CL /D__far=  TEST.C**
 
 **CL**環境變數不能設為字串，包含等號。 若要使用 **/D**連同**CL**環境變數，您必須指定數字的符號，而不是等號：
 
@@ -54,7 +54,7 @@ ms.locfileid: "50620502"
 SET CL=/DTEST#0
 ```
 
-在命令提示字元定義前置處理符號時，請考慮編譯器剖析規則及殼層剖析規則。 例如，若要在您的程式中定義百分比前置處理符號 (%)，請在命令提示字元指定兩個百分比符號字元 (%%)：如果您只指定一個，則會發出剖析錯誤。
+在命令提示字元定義前置處理符號時，請考慮編譯器剖析規則及殼層剖析規則。 例如，若要定義百分比前置處理符號 （%）在程式中，指定兩個百分比符號字元 （%）在命令提示字元中：如果您指定只有一個，就會發出剖析錯誤。
 
 ```
 CL /DTEST=%% TEST.C
@@ -68,7 +68,7 @@ CL /DTEST=%% TEST.C
 
 1. 在右窗格的右邊資料行**前置處理器定義**屬性，開啟下拉式選單，然後選擇**編輯**。
 
-1. 在 [**前置處理器定義**] 對話方塊中，加入 （每行一個）、 修改或刪除一個或多個定義。 選擇**確定**以儲存變更。
+1. 在 [**前置處理器定義**] 對話方塊中，加入 （每行一個）、 修改或刪除一個或多個定義。 選取 [確定] 儲存您的變更。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 

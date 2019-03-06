@@ -23,12 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: 43ffbe76092b9675be1610e58c65c0034955634f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8aadca14f52432e3fccb168c213ae566b1baae2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479036"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421433"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7、/Zi、/ZI (偵錯資訊格式)
 
@@ -83,7 +83,7 @@ ms.locfileid: "50479036"
 
 1. 開啟**組態屬性** > **C/c + +** > **一般**屬性頁。
 
-1. 修改**偵錯資訊格式**屬性。 選擇**確定**以儲存變更。
+1. 修改**偵錯資訊格式**屬性。 選取 [確定] 儲存您的變更。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
@@ -93,4 +93,3 @@ ms.locfileid: "50479036"
 
 [編譯器選項](../../build/reference/compiler-options.md)<br/>
 [設定編譯器選項](../../build/reference/setting-compiler-options.md)
-

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], features that affect linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
-ms.openlocfilehash: 21d0baccaf74fc08bb110b0ae9f8b7dc108abd6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fed75b18ead80b8367eb1254793d632629efeff
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561566"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426702"
 ---
 # <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
 
@@ -24,11 +24,11 @@ CL 編譯器會自動呼叫連結，除非您指定 /c 選項。 CL 提供某些
 |CL 規格|CL 動作會影響連結|
 |----------------------|---------------------------------|
 |.C、.cxx、.cpp 或.def 以外的任何檔案名稱副檔名|傳遞做為輸入至連結的檔案名稱|
-|*檔名*.def|將傳遞 /DEF:*filename*.def|
-|/F*數目*|傳遞 /STACK:*數目*|
-|/Fd*檔名*|將傳遞 /PDB:*檔名*|
-|/Fe*檔名*|將傳遞 /out:*檔名*|
-|/Fm*檔名*|傳遞 /MAP:*檔名*|
+|*filename*.def|將傳遞 /DEF:*filename*.def|
+|/F*number*|傳遞 /STACK:*數目*|
+|/Fd*filename*|將傳遞 /PDB:*檔名*|
+|/Fe*filename*|將傳遞 /out:*檔名*|
+|/Fm*filename*|傳遞 /MAP:*檔名*|
 |/Gy|建立函式 (Comdat);可讓函式層級連結|
 |/LD|將傳遞 /DLL|
 |/LDd|將傳遞 /DLL|

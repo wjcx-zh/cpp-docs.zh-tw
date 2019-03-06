@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /NODEFAULTLIB linker option
 - ignore libraries linker option
 ms.assetid: 7270b673-6711-468e-97a7-c2925ac2be6e
-ms.openlocfilehash: 12a6e988828d1e4e2dbdc46d49da5ff2fe9e9d8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2bac6f62f7b1a692e5fc40fcf6dea1e10a50927
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473771"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424349"
 ---
 # <a name="nodefaultlib-ignore-libraries"></a>/NODEFAULTLIB (忽略程式庫)
 
@@ -28,7 +28,7 @@ ms.locfileid: "50473771"
 
 ## <a name="arguments"></a>引數
 
-*程式庫*<br/>
+*library*<br/>
 您想要略過 lib.exe 解析外部參考時，連結器程式庫。
 
 ## <a name="remarks"></a>備註

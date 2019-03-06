@@ -1,19 +1,19 @@
 ---
-title: 如何：在 MSBuild 專案中使用建置事件
+title: HOW TO：在 MSBuild 專案中使用建置事件
 ms.date: 11/04/2016
 f1_keywords:
 - msbuild.cpp.howto.usebuildevents
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 60e26b5cab77bb56f0574a91ad69a7df4d73fa1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea9ff51066c09e1e4a783b622248d9774a023172
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570270"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417574"
 ---
-# <a name="how-to-use-build-events-in-msbuild-projects"></a>如何：在 MSBuild 專案中使用建置事件
+# <a name="how-to-use-build-events-in-msbuild-projects"></a>HOW TO：在 MSBuild 專案中使用建置事件
 
 建置事件是在建置流程中的特定階段中執行 MSBuild 的命令。 *建置前*在建置開始前，就會發生事件，而*連結前*連結步驟開始; 之前發生的事件和*建置後*建置之後所發生的事件已成功結束。 只有在相關聯的建置步驟發生時，才會發生建置事件。 例如，連結前事件不會發生連結步驟不會執行。
 
@@ -39,7 +39,7 @@ ms.locfileid: "50570270"
 
 ## <a name="example"></a>範例
 
-下列範例可以 myproject.vcxproj 檔案中建立的專案項目內新增[逐步解說： 使用 MSBuild 來建立 Visual c + + 專案](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)。 A*建置前*事件會的 main.cpp;*連結前*main.obj; 的複本和 「 事件 」 可讓*建置後*事件會建立一份 myproject.exe。 如果使用發行組態來建置專案時，會執行建置事件。 如果使用的偵錯組態來建置專案時，不會執行建置事件。
+下列範例可以 myproject.vcxproj 檔案中建立的專案項目內新增[逐步解說：使用 MSBuild 來建立 Visual c + + 專案](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)。 A*建置前*事件會的 main.cpp;*連結前*main.obj; 的複本和 「 事件 」 可讓*建置後*事件會建立一份 myproject.exe。 如果使用發行組態來建置專案時，會執行建置事件。 如果使用的偵錯組態來建置專案時，不會執行建置事件。
 
 ```
 <ItemDefinitionGroup>
@@ -73,4 +73,4 @@ ms.locfileid: "50570270"
 ## <a name="see-also"></a>另請參閱
 
 [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
-[逐步解說：使用 MSBuild 來建立 Visual C++ 專案](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[逐步解說：使用 MSBuild 建立 Visual C++ 專案](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

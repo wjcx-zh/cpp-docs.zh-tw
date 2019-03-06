@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /FC compiler option [C++]
 - -FC compiler option [C++]
 ms.assetid: 1f11414e-cb42-421b-be68-9d369aab036b
-ms.openlocfilehash: 3629ec35f0be5ebfd384b949acb2910dcbea3318
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96809f09efd068b80f04a70d4356c1ceaf5f113c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624905"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422477"
 ---
 # <a name="fc-full-path-of-source-code-file-in-diagnostics"></a>/FC (診斷中的原始程式碼檔之完整路徑)
 
@@ -36,11 +36,11 @@ int main( ) {
 
 不含 **/FC**，診斷文字看起來會類似以下的診斷文字：
 
-- compiler_option_FC.cpp(5)： 錯誤 C2143： 語法錯誤： 遺漏 ';' 之前 '}'
+- compiler_option_FC.cpp(5) : error C2143: syntax error : missing ';' before '}'
 
 具有 **/FC**，診斷文字看起來會類似以下的診斷文字：
 
-- c:\test\compiler_option_fc.cpp(5)： 錯誤 C2143： 語法錯誤： 遺漏 ';' 之前 '}'
+- c:\test\compiler_option_fc.cpp(5) : error C2143: syntax error : missing ';' before '}'
 
 **/FC**如果您想要使用時，請參閱檔案名稱的完整路徑，也需要&#95;&#95;檔案&#95;&#95;巨集。 請參閱[Predefined Macros](../../preprocessor/predefined-macros.md)如需詳細資訊&#95;&#95;檔案&#95;&#95;。
 

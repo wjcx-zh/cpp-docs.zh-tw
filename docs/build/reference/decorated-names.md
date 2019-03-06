@@ -6,12 +6,12 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: c7821fc9fca1c9a965ea83584415b9baf17ec683
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9d3db9a3db1943581e5fd603ba85777cb49b863
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579100"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423309"
 ---
 # <a name="decorated-names"></a>裝飾名稱
 
@@ -23,7 +23,7 @@ C 和 C++ 程式中的函式、資料和物件在內部以其裝飾名稱表示�
 
 通常，您在撰寫程式碼時不必知道裝飾名稱，也能成功編譯和連結。 裝飾名稱是編譯器和連結器內部的實作詳細資料。 這些工具通常能夠處理未裝飾的名稱。 不過，當您指定函式名稱給連結器和其他工具時，有時需要裝飾名稱。 比方說，若要符合多載 C++ 函式、命名空間的成員、類別建構函式、解構函式和特殊成員函式，您必須指定裝飾名稱。 如需選項旗標和其他需要裝飾名稱的情況的詳細資訊，請參閱您要使用的工具和選項的文件。
 
-如果您變更函式名稱、類別、呼叫慣例、傳回類型或任何參數，裝飾名稱也會變更。 在此情況下，您必須取得新的裝飾名稱，並在指定裝飾名稱的每個地方使用。
+如果您變更函式名稱、類別、呼叫慣例、傳回型別或任何參數，裝飾名稱也會變更。 在此情況下，您必須取得新的裝飾名稱，並在指定裝飾名稱的每個地方使用。
 
 在連結至以其他程式設計語言撰寫的程式碼或使用其他編譯器時，名稱裝飾也很重要。 不同編譯器會使用不同的名稱裝飾慣例。 當您的執行檔連結至以另一種語言撰寫的程式碼時，必須特別注意符合匯出和匯入的名稱和呼叫慣例。 組件語言程式碼必須使用 Visual C++ 裝飾名稱和呼叫慣例，才能連結至使用 Visual C++ 撰寫的原始程式碼。
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - HTML controls, ATL support
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-ms.openlocfilehash: 3cb250c68d5ba36dc3cf502b871f62eec8f1861c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 32b1c00e3ad3ed15fa56f7718789fe1a2e3ecbab
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283874"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424375"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>識別 DHTML 控制項專案的項目
 
@@ -22,7 +22,7 @@ DHTML 控制項是類似於任何 ATL 的控制項，除了：
 
 - 它會建立 UI 控制項的 HTML 資源。
 
-- 它可讓 DHTML 物件模型，透過成員變數的存取權`m_spBrowser`，這是類型的智慧型指標[IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx)。 您可以使用這個指標來存取 DHTML 物件模型的任何部分。
+- 它可讓 DHTML 物件模型，透過成員變數的存取權`m_spBrowser`，這是類型的智慧型指標[IWebBrowser2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752127\(v=vs.85\))。 您可以使用這個指標來存取 DHTML 物件模型的任何部分。
 
 下圖說明您的 DLL、 DHTML 控制項、 網頁瀏覽器和 HTML 資源之間的關聯性。
 

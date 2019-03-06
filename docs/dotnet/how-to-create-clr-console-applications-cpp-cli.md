@@ -1,18 +1,18 @@
 ---
-title: 如何：建立 CLR 主控台應用程式 (C++/CLI)
+title: HOW TO：建立 CLR 主控台應用程式 (C + + /cli CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
-ms.openlocfilehash: fa45578b1e773e954fe692bd1c49e311626c35de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ce50266eeb17ad858891149489db85b03855aec
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525640"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426327"
 ---
-# <a name="how-to-create-clr-console-applications-ccli"></a>如何：建立 CLR 主控台應用程式 (C++/CLI)
+# <a name="how-to-create-clr-console-applications-ccli"></a>HOW TO：建立 CLR 主控台應用程式 (C + + /cli CLI)
 
 您可以使用主控台應用程式範本，建立已經有基本專案參考及檔案的主控台應用程式專案。
 
@@ -22,7 +22,7 @@ ms.locfileid: "50525640"
 
 - 這些 .NET Framework 命名空間的參考：
 
-   - [System](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)—這個命名空間包含了基本類別和基底類別，而這些類別會定義最常使用的值和參考資料類型、事件和事件處理常式、介面、屬性以及處理例外狀況。
+   - <xref:System.AppDomainManager>包含主要類別和基底類別，定義常用的值和參考資料型別、 事件和事件處理常式、 介面、 屬性和處理例外狀況。
 
    - mscorlib—支援 .NET Framework 開發的組件 DLL。
 

@@ -1,5 +1,5 @@
 ---
-title: 擴充 DLL：概觀
+title: 擴充 Dll:總覽
 ms.date: 11/04/2016
 helpviewer_keywords:
 - AFXDLL library
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
-ms.openlocfilehash: 1967370f587b0b78c4e68ebff14804b20f158bd0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ad5c82d72a3cd9b4801274aefd40d96afdbcdd1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498198"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425051"
 ---
-# <a name="mfc-extension-dlls-overview"></a>MFC 擴充 Dll： 概觀
+# <a name="mfc-extension-dlls-overview"></a>MFC 擴充 Dll:總覽
 
 MFC 擴充 DLL 是 DLL，通常會實作衍生自現有 Mfc 程式庫類別的可重複使用類別。 MFC 擴充 Dll 是建置使用 MFC （也稱為 MFC 的共用版本） 的動態連結程式庫版本。 只有 MFC 可執行檔 （應用程式或 MFC 的標準 Dll） 建立的 MFC 的共用版本可以使用 MFC 擴充 DLL。 使用 MFC 擴充 DLL，您可以從 MFC 衍生新的自訂類別，並接著提供這個擴充的版本的 MFC 呼叫 DLL 的應用程式。
 

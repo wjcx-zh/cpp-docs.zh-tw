@@ -1,18 +1,18 @@
 ---
-title: 如何：偵錯發行的組建
+title: HOW TO：偵錯發行組建
 ms.date: 11/04/2016
 helpviewer_keywords:
 - debugging [C++], release builds
 - release builds, debugging
 ms.assetid: d333e4d1-4e6c-4384-84a9-cb549702da25
-ms.openlocfilehash: 4ee99bb76d3af4339e065a3ed4d4809acfe23507
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61baaa827feb1abcc03a0296574e56c993ce1681
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649250"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412558"
 ---
-# <a name="how-to-debug-a-release-build"></a>如何：偵錯發行的組建
+# <a name="how-to-debug-a-release-build"></a>HOW TO：偵錯發行組建
 
 您可以偵錯應用程式的發行組建。
 

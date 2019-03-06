@@ -25,12 +25,12 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: 77dc97ee07499b7df37a115dafafddd71acb7bb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ac70904332f5f05463b317f02a2ab8d3bfc7bb3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654996"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424609"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (執行階段錯誤檢查)
 
@@ -95,7 +95,7 @@ c = a;  // No run-time error with /RTCu
 
 ## <a name="remarks"></a>備註
 
-執行階段錯誤檢查是在您執行的程式碼; 中找出問題的方式如需詳細資訊，請參閱 <<c0> [ 如何： 使用原生的執行階段檢查](/visualstudio/debugger/how-to-use-native-run-time-checks)。
+執行階段錯誤檢查是在您執行的程式碼; 中找出問題的方式如需詳細資訊，請參閱[How to:使用原生執行階段檢查](/visualstudio/debugger/how-to-use-native-run-time-checks)。
 
 如果您編譯您的程式，在命令列使用任一 **/RTC**編譯器選項、 任何 pragma[最佳化](../../preprocessor/optimize.md)中您的程式碼指示將會以無訊息模式失敗。 這是因為執行階段錯誤檢查 （最佳化） 的發行組建中無效。
 
@@ -111,7 +111,7 @@ c = a;  // No run-time error with /RTCu
 
 1. 按一下 **程式碼產生**屬性頁。
 
-1. 修改一或兩個下列屬性：**基本執行階段會檢查**或是**較小類型檢查**。
+1. 修改一個或多個下列屬性：**基本的執行階段檢查**或是**較小類型檢查**。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-ms.openlocfilehash: 1ccda218a2bccc261653016ad6a47d419ddacfd9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59522b462f2393dd3fd4d8afefe9cbbe0e519203
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624441"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413039"
 ---
 # <a name="u-u-undefine-symbols"></a>/U、/u (取消定義符號)
 
@@ -33,7 +33,7 @@ ms.locfileid: "50624441"
 
 ## <a name="arguments"></a>引數
 
-*符號*<br/>
+*symbol*<br/>
 若要取消定義前置處理器符號。
 
 ## <a name="remarks"></a>備註

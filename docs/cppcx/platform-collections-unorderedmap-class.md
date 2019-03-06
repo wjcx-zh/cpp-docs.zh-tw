@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: d3e6069f4bf7b0c23d5db5844821524ee80589da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7790b363ef3f30b0ad0602568190ab443a2c1401
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648327"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423608"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap 類別
 
@@ -106,7 +106,7 @@ virtual void Clear();
 
 ## <a name="first"></a>  Unorderedmap:: First 方法
 
-傳回迭代器，指定第一個[Windows::Foundation::Collections::IKeyValuePair\<K，V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) unorderedmap 中的項目。
+傳回迭代器，指定第一個[Windows::Foundation::Collections::IKeyValuePair\<K，V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) unorderedmap 中的項目。
 
 ### <a name="syntax"></a>語法
 
@@ -177,7 +177,7 @@ virtual bool Insert(
 *key*<br/>
 機碼值組的機碼部分。 型別*金鑰*為 typename *K*。
 
-*值*<br/>
+*value*<br/>
 機碼值組的值部分。 型別*值*為 typename *V*。
 
 ### <a name="return-value"></a>傳回值
@@ -217,7 +217,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>屬性值/傳回值
 
-A [Mapchangedeventhandler<k\<K，V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) ，包含引發事件，以及發生的變更類型的物件相關資訊。 另請參閱[Imapchangedeventargs<k\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx)並[CollectionChange 列舉](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx)。
+A [Mapchangedeventhandler<k\<K，V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) ，包含引發事件，以及發生的變更類型的物件相關資訊。 另請參閱[Imapchangedeventargs<k\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_)並[CollectionChange 列舉](/uwp/api/windows.foundation.collections.collectionchange)。
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 同等
 
@@ -241,7 +241,7 @@ virtual void Remove(
 
 ## <a name="size"></a>  Unorderedmap:: Size 方法
 
-傳回的數目[Windows::Foundation::Collections::IKeyValuePair\<K，V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) UnorderedMap 中的項目。
+傳回的數目[Windows::Foundation::Collections::IKeyValuePair\<K，V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) UnorderedMap 中的項目。
 
 ### <a name="syntax"></a>語法
 
@@ -358,7 +358,7 @@ A [std:: initializer_list](../standard-library/initializer-list-class.md)的[std
 *first*<br/>
 用來初始化目前 UnorderedMap 的元素範圍中第一個元素的輸入迭代器。
 
-*最後一個*<br/>
+*last*<br/>
 用來初始化目前 UnorderedMap 的元素範圍以外第一個元素的輸入迭代器。
 
 ## <a name="see-also"></a>另請參閱

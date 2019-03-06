@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 61cbcbd2a64e8648c6467ebbc0d86d6f89953442
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 97854a554be729b75d50f09b0627ffc94b1b093f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302492"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424479"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl 類別
 
@@ -627,7 +627,7 @@ virtual BOOL Create(
 指定工具列控制項的樣式。 工具列一定要有 WS_CHILD 樣式。 此外，指定 toolbar 樣式和視窗樣式的任意組合，如底下所述**備註**。
 
 *rect*<br/>
-選擇性地指定工具列控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。
+選擇性地指定工具列控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
 
 *pParentWnd*<br/>
 指定工具列控制項的父視窗。 它必須不是 NULL。
@@ -681,7 +681,7 @@ virtual BOOL CreateEx(
 指定工具列控制項的樣式。 工具列一定要有 WS_CHILD 樣式。 此外，您可以指定 toolbar 樣式和視窗樣式的任何組合中所述**備註**一節[建立](#create)。
 
 *rect*<br/>
-參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。
+參考[RECT](/previous-versions/dd162897\(v=vs.85\))結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。
 
 *pParentWnd*<br/>
 是控制項的父視窗的指標。
@@ -1085,7 +1085,7 @@ BOOL GetItemRect(
 要擷取資訊的按鈕之以零起始索引。
 
 *lpRect*<br/>
-位址[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件接收指定的週框的座標。
+位址[RECT](/previous-versions/dd162897\(v=vs.85\))結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件接收指定的週框的座標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1202,7 +1202,7 @@ BOOL GetRect(
 按鈕的識別項。
 
 *lpRect*<br/>
-指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收的週框矩形資訊的結構。
+指標[RECT](/previous-versions/dd162897\(v=vs.85\))接收的週框矩形資訊的結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1325,7 +1325,7 @@ int HitTest(LPPOINT ppt) const;
 ### <a name="parameters"></a>參數
 
 *ppt*<br/>
-指標[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)結構，包含點擊測試中的 x 座標`x`成員和 y 座標的點擊測試中`y`成員。 座標是相對於工具列的工作區。
+指標[點](/previous-versions/dd162805\(v=vs.85\))結構，包含點擊測試中的 x 座標`x`成員和 y 座標的點擊測試中`y`成員。 座標是相對於工具列的工作區。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1428,7 +1428,7 @@ BOOL InsertMarkHitTest(
 ### <a name="parameters"></a>參數
 
 *ppt*<br/>
-指標[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)結構，包含點擊的測試的座標，相對於用戶端區域的工具列。
+指標[點](/previous-versions/dd162805\(v=vs.85\))結構，包含點擊的測試的座標，相對於用戶端區域的工具列。
 
 *ptbim*<br/>
 指標[TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark)接收插入標記資訊的結構。
@@ -2295,7 +2295,7 @@ void SetRows(
 會指示是否要使用多個資料列或較少的資料列，如果無法調整大小的工具列，為要求的資料列數目。
 
 *lpRect*<br/>
-指向[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，將會收到工具列的新週框矩形。
+指向[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構，將會收到工具列的新週框矩形。
 
 ### <a name="remarks"></a>備註
 

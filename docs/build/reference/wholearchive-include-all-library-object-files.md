@@ -2,12 +2,12 @@
 title: /WHOLEARCHIVE （包括所有的程式庫目的檔）
 ms.date: 11/04/2016
 ms.assetid: ee92d12f-18af-4602-9683-d6223be62ac9
-ms.openlocfilehash: 26bd720a2ecd07bccb1317e1540cb071e7027078
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc260f139a9312bbac7fed34471481401db770d4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494220"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412909"
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/WHOLEARCHIVE （包括所有的程式庫目的檔）
 
@@ -15,7 +15,7 @@ Force 連結器在連結的可執行檔中的靜態程式庫中包含物件的�
 
 ## <a name="syntax"></a>語法
 
-> /WHOLEARCHIVE [:*程式庫*]
+> /WHOLEARCHIVE[:*library*]
 
 ## <a name="remarks"></a>備註
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-ms.openlocfilehash: daf042f742a9c4b7757813fc73eeb4b6d1a87413
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb63814161fb72121a34d2857b6fada3866e505a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441115"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424804"
 ---
 # <a name="kinds-of-dlls"></a>DLL 的類型
 
@@ -55,7 +55,7 @@ ms.locfileid: "50441115"
 
 如果您的 DLL 動態連結至 MFC，可能會與您的 DLL 轉散發 MFC Dll。 此架構是特別適用於共用類別庫，以節省磁碟空間和記憶體使用量降到最低的多個可執行檔之間。
 
-版本 4.0 之前的 Visual c + + 只支援兩種使用 MFC 的 Dll: Usrdll 和 Afxdll。 靜態連結至 MFC 的標準 MFC Dll 有相同的特性，與之前的 usrdll。 MFC 擴充 Dll 有相同的特性，與之前的 Afxdll。
+之前的版本 4.0，Visual c + + 只支援兩種使用 MFC 的 Dll:Usrdll 和 Afxdll。 靜態連結至 MFC 的標準 MFC Dll 有相同的特性，與之前的 usrdll。 MFC 擴充 Dll 有相同的特性，與之前的 Afxdll。
 
 ### <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 

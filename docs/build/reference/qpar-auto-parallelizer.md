@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableParallelCodeGeneration
 ms.assetid: 33ecf49d-c0d5-4f34-bce3-84ff03f38918
-ms.openlocfilehash: c75770f834abcf17862e173e692129a43a5155c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8563382f9a95d9b7da49efdf1f12d517eae3da3d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588691"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416627"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar (自動平行化工具)
 
@@ -25,7 +25,8 @@ ms.locfileid: "50588691"
 
 當編譯器自動平行化程式碼中的迴圈時，它會將計算分散到多個處理器核心。 只有在編譯器判斷這是合法的做法，且平行處理會改善效能時，才會進行迴圈平行化。
 
-`#pragma loop()` 指示詞可以協助最佳化平行處理特定的迴圈。 如需詳細資訊，請參閱 <<c0> [ 迴圈](../../preprocessor/loop.md)。
+
+  `#pragma loop()` 指示詞可以協助最佳化平行處理特定的迴圈。 如需詳細資訊，請參閱 <<c0> [ 迴圈](../../preprocessor/loop.md)。
 
 如需如何啟用 auto-parallelizer 輸出訊息的詳細資訊，請參閱[/Qpar-report （自動平行化工具報告層級）](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)。
 
@@ -47,5 +48,5 @@ ms.locfileid: "50588691"
 [/Qpar-report (自動平行化工具報告層級)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
 [編譯器選項](../../build/reference/compiler-options.md)<br/>
 [設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
-[#pragma loop （)](../../preprocessor/loop.md)<br/>
+[#pragma loop()](../../preprocessor/loop.md)<br/>
 [以原生程式碼進行平行程式設計](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

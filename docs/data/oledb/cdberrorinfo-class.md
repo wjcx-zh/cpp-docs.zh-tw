@@ -44,16 +44,16 @@ helpviewer_keywords:
 - GetErrorParameters method
 - GetErrorRecords method
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-ms.openlocfilehash: 4249fb7c6ac05a925ace34ade30aa50ffe3503e7
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: e523f299831ee67d994a693e5357de96eba968aa
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556825"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413897"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo 類別
 
-支援使用 OLE DB 的 OLE DB 錯誤處理[IErrorRecords](https://docs.microsoft.com/previous-versions/windows/desktop/ms718112(v=vs.85))介面。
+支援使用 OLE DB 的 OLE DB 錯誤處理[IErrorRecords](/previous-versions/windows/desktop/ms718112(v=vs.85))介面。
 
 ## <a name="syntax"></a>語法
 
@@ -72,10 +72,10 @@ class CDBErrorInfo
 |||
 |-|-|
 |[GetAllErrorInfo](#getallerrorinfo)|傳回包含錯誤記錄中的所有錯誤資訊。|
-|[GetBasicErrorInfo](#getbasicerrorinfo)|呼叫[IErrorRecords::GetBasicErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms723907(v=vs.85))來傳回指定的錯誤相關的基本資訊。|
-|[GetCustomErrorObject](#getcustomerrorobject)|呼叫[IErrorRecords::GetCustomErrorObject](https://docs.microsoft.com/previous-versions/windows/desktop/ms725417(v=vs.85))介面的指標，傳回自訂錯誤物件。|
-|[GetErrorInfo](#geterrorinfo)|呼叫[ierrorrecords:: Geterrorinfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms711230(v=vs.85))返回`IErrorInfo`介面指標，以指定的記錄。|
-|[GetErrorParameters](#geterrorparameters)|呼叫[IErrorRecords::GetErrorParameters](https://docs.microsoft.com/previous-versions/windows/desktop/ms715793(v=vs.85))傳回錯誤的參數。|
+|[GetBasicErrorInfo](#getbasicerrorinfo)|呼叫[IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85))來傳回指定的錯誤相關的基本資訊。|
+|[GetCustomErrorObject](#getcustomerrorobject)|呼叫[IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85))介面的指標，傳回自訂錯誤物件。|
+|[GetErrorInfo](#geterrorinfo)|呼叫[ierrorrecords:: Geterrorinfo](/previous-versions/windows/desktop/ms711230(v=vs.85))返回`IErrorInfo`介面指標，以指定的記錄。|
+|[GetErrorParameters](#geterrorparameters)|呼叫[IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85))傳回錯誤的參數。|
 |[GetErrorRecords](#geterrorrecords)|取得指定的物件中的錯誤記錄。|
 
 ## <a name="remarks"></a>備註
@@ -122,7 +122,7 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
 
 ### <a name="return-value"></a>傳回值
 
-如果成功傳回 S_OK。 請參閱[ierrorrecords:: Geterrorinfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms711230(v=vs.85))中*OLE DB 程式設計人員參考*其他傳回值。
+如果成功傳回 S_OK。 請參閱[ierrorrecords:: Geterrorinfo](/previous-versions/windows/desktop/ms711230(v=vs.85))中*OLE DB 程式設計人員參考*其他傳回值。
 
 ### <a name="remarks"></a>備註
 
@@ -132,9 +132,9 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
 
 1. 值*lcid*不是等於 GetUserDefaultLCID 所傳回的值。
 
-## <a name="getbasicerrorinfo"></a> Cdberrorinfo:: Getbasicerrorinfo
+## <a name="getbasicerrorinfo"></a> CDBErrorInfo::GetBasicErrorInfo
 
-呼叫[IErrorRecords::GetBasicErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms723907(v=vs.85))傳回錯誤，例如傳回碼和提供者特定錯誤號碼的相關基本資訊。
+呼叫[IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85))傳回錯誤，例如傳回碼和提供者特定錯誤號碼的相關基本資訊。
 
 ### <a name="syntax"></a>語法
 
@@ -145,7 +145,7 @@ HRESULT GetBasicErrorInfo(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>參數
 
-請參閱[IErrorRecords::GetBasicErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms723907(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -153,7 +153,7 @@ HRESULT GetBasicErrorInfo(ULONG ulRecordNum,
 
 ## <a name="getcustomerrorobject"></a> Cdberrorinfo:: Getcustomerrorobject
 
-呼叫[IErrorRecords::GetCustomErrorObject](https://docs.microsoft.com/previous-versions/windows/desktop/ms725417(v=vs.85))介面的指標，傳回自訂錯誤物件。
+呼叫[IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85))介面的指標，傳回自訂錯誤物件。
 
 ### <a name="syntax"></a>語法
 
@@ -164,7 +164,7 @@ HRESULT GetCustomErrorObject(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>參數
 
-請參閱[IErrorRecords::GetCustomErrorObject](https://docs.microsoft.com/previous-versions/windows/desktop/ms725417(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -172,7 +172,7 @@ HRESULT GetCustomErrorObject(ULONG ulRecordNum,
 
 ## <a name="geterrorinfo"></a> Cdberrorinfo:: Geterrorinfo
 
-呼叫[ierrorrecords:: Geterrorinfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms711230(v=vs.85))返回[IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms718112(v=vs.85))介面指標，以指定的記錄。
+呼叫[ierrorrecords:: Geterrorinfo](/previous-versions/windows/desktop/ms711230(v=vs.85))返回[IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85))介面指標，以指定的記錄。
 
 ### <a name="syntax"></a>語法
 
@@ -183,7 +183,7 @@ HRESULT GetErrorInfo(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>參數
 
-請參閱[ierrorrecords:: Geterrorinfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms711230(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[ierrorrecords:: Geterrorinfo](/previous-versions/windows/desktop/ms711230(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -191,7 +191,7 @@ HRESULT GetErrorInfo(ULONG ulRecordNum,
 
 ## <a name="geterrorparameters"></a> Cdberrorinfo:: Geterrorparameters
 
-呼叫[IErrorRecords::GetErrorParameters](https://docs.microsoft.com/previous-versions/windows/desktop/ms715793(v=vs.85))傳回錯誤的參數。
+呼叫[IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85))傳回錯誤的參數。
 
 ### <a name="syntax"></a>語法
 
@@ -202,7 +202,7 @@ HRESULT GetErrorParameters(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>參數
 
-請參閱[IErrorRecords::GetErrorParameters](https://docs.microsoft.com/previous-versions/windows/desktop/ms715793(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ### <a name="return-value"></a>傳回值
 

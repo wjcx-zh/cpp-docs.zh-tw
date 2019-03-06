@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 5a5adc5ae6b1981d7f8260d684a33d8bd7918e40
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8db2be9b14f9d60f2103ce0b63b772962b079bbe
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272837"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426130"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl 類別
 
@@ -132,7 +132,7 @@ virtual BOOL Create(
 指定狀態列控制項的樣式。 套用狀態列控制項的樣式中所列的任何組合[常見的控制項樣式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。 這個參數必須包含 WS_CHILD 樣式。 它也應該包括 WS_VISIBLE 樣式。
 
 *rect*<br/>
-指定狀態列控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。
+指定狀態列控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
 
 *pParentWnd*<br/>
 指定狀態列控制項的父視窗，通常`CDialog`。 它必須不是 NULL。
@@ -178,7 +178,7 @@ virtual BOOL CreateEx(
 指定狀態列控制項的樣式。 套用狀態列控制項的樣式中所列的任何組合[常見的控制項樣式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。 這個參數必須包含 WS_CHILD 樣式。 它也應該包括 WS_VISIBLE 樣式。
 
 *rect*<br/>
-參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。
+參考[RECT](/previous-versions/dd162897\(v=vs.85\))結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。
 
 *pParentWnd*<br/>
 是控制項的父視窗的指標。
@@ -344,7 +344,7 @@ BOOL GetRect(
 以零為起始索引是要擷取的周框的部分。
 
 *lpRect*<br/>
-位址[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收的週框的結構。
+位址[RECT](/previous-versions/dd162897\(v=vs.85\))接收的週框的結構。
 
 ### <a name="return-value"></a>傳回值
 

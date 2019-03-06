@@ -20,12 +20,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
-ms.openlocfilehash: 49467b9c59d8f8861011f0f36009f4e3951871f9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 87fdceea4ac71fe4bf0a53d7ae8e473bc97a01d7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329848"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416744"
 ---
 # <a name="base-base-address"></a>/BASE (基底位址)
 
@@ -33,7 +33,7 @@ ms.locfileid: "51329848"
 
 ## <a name="syntax"></a>語法
 
-> **/ 基底：**{*地址*[**，**<em>大小</em>] |**\@** <em>filename</em>**，**<em>鍵</em>}
+> **/BASE:**{*address*[**,**<em>size</em>] | **\@**<em>filename</em>**,**<em>key</em>}
 
 ## <a name="remarks"></a>備註
 

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-ms.openlocfilehash: 74945f712fed68548e3853d231a586ec0c70d84b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2d4cc4f3b82bd3082ba3b4eac635ea91c19691f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587521"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421203"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>使用 MFC 的標準 Dll 中的資料庫、 OLE 和通訊端 MFC 延伸模組 Dll
 
 當使用 MFC 擴充 DLL 從 MFC DLL，如果 MFC 擴充 DLL 未連結至**CDynLinkLibrary**物件鏈結的標準 MFC DLL 中，您可能會遇到一或多個一組相關的問題。 因為 MFC 資料庫、 OLE 和通訊端的偵錯版本所支援的 Dll 會實作為 MFC 擴充 Dll，您可能會看到類似的問題，如果您使用這些 MFC 功能，即使您未明確地使用任何您自己的 MFC 擴充 Dll。 某些徵狀：
 
-- 當嘗試還原序列化的類別類型的物件定義中 MFC 擴充 DLL，訊息 「 警告： 無法載入 CYourClass 從封存。 類別未定義 」。 出現在追蹤偵錯視窗和物件序列化會失敗。
+- 當嘗試還原序列化的類別類型的物件定義中 MFC 擴充 DLL，訊息 「 警告：無法載入 CYourClass 從封存。 類別未定義 」。 出現在追蹤偵錯視窗和物件序列化會失敗。
 
 - 可能會擲回例外狀況，指出不正確的類別。
 

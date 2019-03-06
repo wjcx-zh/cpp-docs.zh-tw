@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 1a9a5704-f02f-46ae-ad65-f0f2b6dbabc3
-ms.openlocfilehash: b143b2ead1165382d0959f4e4c90f1d2e7ea936a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 852538396627a3005fe20a2e66bbb6995842e4a9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487161"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422269"
 ---
 # <a name="new-new-slot-in-vtable--ccli-and-ccx"></a>新 (新 vtable 中的位置） (C + + /cli 和 C + + /CX)
 
@@ -32,9 +32,9 @@ ms.locfileid: "50487161"
 
 **新**導致 newslot 修飾詞新增至函式的 IL。  如需 newslot 的詳細資訊，請參閱：
 
-- [MethodInfo.GetBaseDefinition 方法](https://msdn.microsoft.com/library/system.reflection.methodinfo.getbasedefinition.aspx)
+- <xref:System.Reflection.MethodInfo.GetBaseDefinition?displayProperty=nameWithType>
 
-- [MethodAttributes 列舉](https://msdn.microsoft.com/library/system.reflection.methodattributes.aspx)
+- <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType>
 
 ### <a name="requirements"></a>需求
 
@@ -105,6 +105,6 @@ E::f() called
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[適用於.NET 和 UWP 的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)<br/>
 
 [覆寫規範](../windows/override-specifiers-cpp-component-extensions.md)

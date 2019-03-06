@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 9bc31cc9cff12146e6f5fe227e0e191d1c555063
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 92666e10d82d96b76ad43b652ed90e0e41b8f853
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271394"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418928"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -315,7 +315,7 @@ virtual BOOL Create(
 指定樹狀檢視控制項的樣式。 套用樣式視窗中所述[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)，及任何組合[樹狀檢視控制項的樣式](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK 中所述。
 
 *rect*<br/>
-指定樹狀檢視控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。
+指定樹狀檢視控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
 
 *pParentWnd*<br/>
 指定樹狀檢視控制項的父視窗，通常`CDialog`。 它必須不是 NULL。
@@ -361,7 +361,7 @@ virtual BOOL CreateEx(
 指定樹狀檢視控制項的樣式。 套用樣式視窗中所述[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)，及任何組合[樹狀檢視控制項的樣式](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK 中所述。
 
 *rect*<br/>
-參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。
+參考[RECT](/previous-versions/dd162897\(v=vs.85\))結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。
 
 *pParentWnd*<br/>
 是控制項的父視窗的指標。
@@ -887,7 +887,7 @@ BOOL GetItemPartRect(
 |---------------|-----------------|
 |*hItem*|[in]控制代碼的樹狀檢視控制項項目。|
 |*nPart*|[in]組件的識別碼。 必須設定為 TVGIPR_BUTTON。|
-|*lpRect*|[out]指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 如果這個方法成功，結構就會收到所指定的部分的矩形座標*hItem*並*nPart*。|
+|*lpRect*|[out]指標[RECT](/previous-versions/dd162897\(v=vs.85\))結構。 如果這個方法成功，結構就會收到所指定的部分的矩形座標*hItem*並*nPart*。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -928,7 +928,7 @@ BOOL GetItemRect(
 樹狀檢視控制項項目的控制代碼。
 
 *lpRect*<br/>
-指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收的週框的結構。 座標是相對於樹狀檢視控制項的左上角。
+指標[RECT](/previous-versions/dd162897\(v=vs.85\))接收的週框的結構。 座標是相對於樹狀檢視控制項的左上角。
 
 *bTextOnly*<br/>
 如果這個參數不是零，週框矩形會包含項目的文字。 否則它會在樹狀檢視控制項中包含項目所佔用的整行。

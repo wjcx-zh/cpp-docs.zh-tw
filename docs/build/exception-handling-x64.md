@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 33206dfb885239839c3a64436b6b540fc7d4e6e5
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 7dab7f3b6593bf4eaed1b8c804deb915677ccf5b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627536"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422971"
 ---
 # <a name="x64-exception-handling"></a>x64 例外狀況處理
 
@@ -182,21 +182,21 @@ UNWIND_INFO 結構必須是在記憶體中的對齊的 DWORD。 以下是每個�
 
   |||
   |-|-|
-  |RSP + 32|SS|
-  |RSP + 24|舊 RSP|
-  |RSP + 16|EFLAGS|
-  |RSP + 8|CS|
-  |RSP|擷取|
+  |RSP+32|SS|
+  |RSP+24|舊 RSP|
+  |RSP+16|EFLAGS|
+  |RSP+8|CS|
+  |RSP|RIP|
 
   如果作業資訊會等於 1，然後這些框架的其中一個已推送：
 
   |||
   |-|-|
-  |RSP + 40|SS|
-  |RSP + 32|舊 RSP|
-  |RSP + 24|EFLAGS|
-  |RSP + 16|CS|
-  |RSP + 8|擷取|
+  |RSP+40|SS|
+  |RSP+32|舊 RSP|
+  |RSP+24|EFLAGS|
+  |RSP+16|CS|
+  |RSP+8|RIP|
   |RSP|錯誤碼|
 
   此回溯程式碼永遠會出現在空的初構，永遠不會實際執行，但改為出現之前的插斷常式，實際的進入點和存在只是為了提供一個位置來模擬電腦畫面格的推播。 `UWOP_PUSH_MACHFRAME` 會記錄該模擬，表示電腦已在概念上完成這項作業：
@@ -330,12 +330,12 @@ typedef struct _DISPATCHER_CONTEXT {
 |虛擬作業|描述|
 |-|-|
 |處理序框架\[:*ehandler*]|原因產生函式的 MASM 表項目中的.pdata 和回溯.xdata 中的資訊的函式的結構化例外狀況處理回溯行為。  如果*ehandler*已存在，此程序輸入中做為語言特定處理常式.xdata。<br /><br /> 使用框架屬性時，它必須後面。ENDPROLOG 指示詞。  如果函式的分葉函式 (如同[函式類型](../build/stack-usage.md#function-types)) 框架屬性是不必要的因為這些虛擬作業的其餘部分。|
-|.PUSHREG*註冊*|產生使用目前的位移在序言中指定的暫存器編號 UWOP_PUSH_NONVOL 回溯程式碼項目。<br /><br /> 這應該只用於靜態整數暫存器。  動態暫存器的推播，使用。ALLOCSTACK 8，改為|
+|.PUSHREG *register*|產生使用目前的位移在序言中指定的暫存器編號 UWOP_PUSH_NONVOL 回溯程式碼項目。<br /><br /> 這應該只用於靜態整數暫存器。  動態暫存器的推播，使用。ALLOCSTACK 8，改為|
 |.SETFRAME*註冊*，*位移*|在 框架填滿欄位位移在中註冊和使用指定的暫存器和位移的回溯資訊。 位移必須是 16 的倍數，且小於或等於 240。 這個指示詞也會產生使用目前的序言位移指定的暫存器的 UWOP_SET_FPREG 回溯程式碼項目。|
 |.ALLOCSTACK*大小*|產生 UWOP_ALLOC_SMALL 或與目前的位移的指定大小的 UWOP_ALLOC_LARGE 序言中。<br /><br /> *大小*運算元必須是 8 的倍數。|
 |.SAVEREG*註冊*，*位移*|產生 UWOP_SAVE_NONVOL 或指定的註冊和使用目前的序言位移的位移 UWOP_SAVE_NONVOL_FAR 回溯程式碼項目。 MASM 會選擇最有效率的編碼方式。<br /><br /> *位移*必須是正數且 8 的倍數。 *位移*相對於基底的程序的框架，通常是 RSP，或者，如果使用框架指標時，未調整的框架指標。|
 |.SAVEXMM128*註冊*，*位移*|產生 UWOP_SAVE_XMM128 或使用目前的序言位移的位移與指定的 XMM 暫存器的 UWOP_SAVE_XMM128_FAR 回溯程式碼項目。 MASM 會選擇最有效率的編碼方式。<br /><br /> *位移*必須是正數且 16 的倍數。  *位移*相對於基底的程序的框架，通常是 RSP，或者，如果使用框架指標時，未調整的框架指標。|
-|.PUSHFRAME \[*程式碼*]|產生 UWOP_PUSH_MACHFRAME 回溯程式碼項目。 如果選擇性*程式碼*指定，則回溯程式碼項目指定為 1 的修飾詞。 否則修飾詞為 0。|
+|.PUSHFRAME \[*code*]|產生 UWOP_PUSH_MACHFRAME 回溯程式碼項目。 如果選擇性*程式碼*指定，則回溯程式碼項目指定為 1 的修飾詞。 否則修飾詞為 0。|
 |.ENDPROLOG|結束的信號序言宣告。  必須存在於函式的第一個的 255 個位元組。|
 
 以下是範例函式初構與大部分的作業碼的正確用法：

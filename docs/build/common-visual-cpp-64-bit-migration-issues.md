@@ -12,18 +12,19 @@ helpviewer_keywords:
 - 64-bit compiler [C++], porting 32-bit code
 - Win64 [C++]
 ms.assetid: d17fb838-7513-4e2d-8b27-a1666f17ad76
-ms.openlocfilehash: 1eb5a7f8d708d16241f1637269f31563378f084d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c74766c86048f6dd7358d16b8d5d1f2b493450c1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468766"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414417"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Visual C++ 64 位元移轉時常見的問題
 
 當您使用 Visual c++ 建立在 64 位元 Windows 作業系統上執行的應用程式時，您應注意下列問題：
 
-- `int` 和 `long` 是 64 位元 Windows 作業系統上的 32 位元值。 對於您要為 64 位元平台進行編譯的程式，您應小心不要將指標指派給 32 位元變數。 指標在 64 位元平台上是 64 位元的，如果您將指標指派給 32 位元變數，將會截斷指標值。
+- 
+  `int` 和 `long` 是 64 位元 Windows 作業系統上的 32 位元值。 對於您要為 64 位元平台進行編譯的程式，您應小心不要將指標指派給 32 位元變數。 指標在 64 位元平台上是 64 位元的，如果您將指標指派給 32 位元變數，將會截斷指標值。
 
 - `size_t``time_t`，和`ptrdiff_t`是在 64 位元 Windows 作業系統上的 64 位元值。
 

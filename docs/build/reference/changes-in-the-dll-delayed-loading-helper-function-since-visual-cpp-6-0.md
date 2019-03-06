@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __delayLoadHelper2 function
 - helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-ms.openlocfilehash: 8d50962bf66e07d6238be4a1a973c9d9ff06a556
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25c59d37b753c80014b566fd925363cae71798be
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613768"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426520"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Visual C++ 6.0 之後 DLL 延遲載入 Helper 函式的變更
 
@@ -47,7 +47,7 @@ ms.locfileid: "50613768"
 
 - 重新命名的協助程式函式 **__delayLoadHelper2**。
 
-- 因為延遲描述項 (ImgDelayDescr 中 delayimp.h) 中的指標已經從絕對位址 (VAs) 變更為相對位址 (Rva)，如預期般運作，在這兩個 32 位元和 64 位元程式，您需要將這些回轉換成指標。 已引進新的函式： PFromRva，delayhlp.cpp 中找到。 您可以使用此函式上每個描述元中的欄位，將它們轉換回 32 位元或 64 位元指標。 預設的延遲載入 helper 函式仍然是很好的範本，以做為範例。
+- 因為延遲描述項 (ImgDelayDescr 中 delayimp.h) 中的指標已經從絕對位址 (VAs) 變更為相對位址 (Rva)，如預期般運作，在這兩個 32 位元和 64 位元程式，您需要將這些回轉換成指標。 導入了新的函式：PFromRva，delayhlp.cpp 中找到。 您可以使用此函式上每個描述元中的欄位，將它們轉換回 32 位元或 64 位元指標。 預設的延遲載入 helper 函式仍然是很好的範本，以做為範例。
 
 ## <a name="load-all-imports-for-a-delay-loaded-dll"></a>延遲載入 DLL 的載入所有匯入
 

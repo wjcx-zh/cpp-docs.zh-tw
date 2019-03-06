@@ -7,7 +7,6 @@ f1_keywords:
 - C2125
 - C2126
 - C2127
-- C2131
 - C2136
 - C2176
 - C2187
@@ -24,12 +23,12 @@ helpviewer_keywords:
 - C2187
 - C2189
 ms.assetid: 1ccab076-0954-4386-b959-d3112a6793ae
-ms.openlocfilehash: 98e804b7c53eddf239e752f120854439cc3a0b01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31974bb830364b2ef41a7da17cb0ad95d931f771
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546548"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423530"
 ---
 # <a name="compiler-errors-c2100-through-c2199"></a>編譯器錯誤s C2100 through C2199
 
@@ -46,7 +45,7 @@ ms.locfileid: "50546548"
 |[編譯器錯誤 C2102](compiler-error-c2102.md)|'&' 需要左值 (l-value)|
 |[編譯器錯誤 C2103](compiler-error-c2103.md)|不可在暫存器變數上使用 '&'|
 |[編譯器錯誤 C2104](compiler-error-c2104.md)|在位元欄位上使用 '&' 將被忽略|
-|[編譯器錯誤 C2105](compiler-error-c2105.md)|'*運算子*' 需要左值|
+|[編譯器錯誤 C2105](compiler-error-c2105.md)|'*operator*' needs l-value|
 |[編譯器錯誤 C2106](compiler-error-c2106.md)|'*運算子*': 左的運算元必須是左值|
 |[編譯器錯誤 C2107](compiler-error-c2107.md)|不合法的索引，不允許間接取值|
 |[編譯器錯誤 C2108](compiler-error-c2108.md)|註標不是整數類資料類型|
@@ -72,7 +71,7 @@ ms.locfileid: "50546548"
 |[編譯器錯誤 C2128](compiler-error-c2128.md)|'*函式*': alloc_text/same_seg 僅適用使用 C 連結的函式|
 |[編譯器錯誤 C2129](compiler-error-c2129.md)|靜態函式 '*識別碼*' 宣告但未定義|
 |[編譯器錯誤 C2130](compiler-error-c2130.md)|#line 必須有包含檔名，找到字串 '*語彙基元*'|
-|編譯器錯誤 C2131|運算式未評估為常數|
+|[編譯器錯誤 C2131](compiler-error-c2131.md)|運算式未評估為常數|
 |[編譯器錯誤 C2132](compiler-error-c2132.md)|語法錯誤： 未預期的識別項|
 |[編譯器錯誤 C2133](compiler-error-c2133.md)|'*識別碼*': 未知的大小|
 |[編譯器錯誤 C2134](compiler-error-c2134.md)|'*函式*': 呼叫不會產生常數運算式|

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-ms.openlocfilehash: 0dc1769924880d8cb1b5dc173dd614e87584cac9
-ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
+ms.openlocfilehash: 72f871b99602c63e3edaea719faf5de6d4451515
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750388"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412844"
 ---
 # <a name="i-additional-include-directories"></a>/I (其他 include 目錄)
 
@@ -27,11 +27,11 @@ ms.locfileid: "50750388"
 
 ## <a name="syntax"></a>語法
 
-> **/I**[]*目錄*
+> **/I**[ ]*directory*
 
 ### <a name="arguments"></a>引數
 
-*目錄*<br/>
+*directory*<br/>
 要加入的目錄清單中的目錄中搜尋 include 檔。
 
 ## <a name="remarks"></a>備註
@@ -62,7 +62,7 @@ ms.locfileid: "50750388"
 
 ## <a name="example"></a>範例
 
-下列命令會依下列順序由 MAIN.c include 檔： 首先，如果使用雙引號來指定，會搜尋本機檔案。 接下來，搜尋會繼續在 \INCLUDE 目錄中，然後在 \MY\INCLUDE 目錄中，以及最後在目錄中指派給 INCLUDE 環境變數。
+下列命令會尋找 MAIN.c 要求依下列順序的 include 檔案：首先，如果使用雙引號來指定，就會搜尋本機檔案。 接下來，搜尋會繼續在 \INCLUDE 目錄中，然後在 \MY\INCLUDE 目錄中，以及最後在目錄中指派給 INCLUDE 環境變數。
 
 ```
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C

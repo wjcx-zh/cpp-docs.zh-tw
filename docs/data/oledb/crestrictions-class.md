@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 95517931f3156c4850e07c78910ccbffff424faa
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 3ade541e5418799f525a08d3fc868f07d2bdfe6a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556513"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412818"
 ---
 # <a name="crestrictions-class"></a>CRestrictions 類別
 
@@ -55,7 +55,7 @@ class CRestrictions :
 |-|-|
 |[開啟](#open)|傳回結果集，根據使用者提供的限制。|
 
-## <a name="open"></a> Crestrictions:: Open
+## <a name="open"></a> CRestrictions::Open
 
 傳回結果集，根據使用者提供的限制。
 
@@ -75,7 +75,7 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>參數
 
-*工作階段*<br/>
+*session*<br/>
 [in]指定用來連接到資料來源的現有工作階段物件。
 
 *lpszParam*<br/>
@@ -92,7 +92,7 @@ HRESULT Open(const CSession& session,
 
 您可以指定最多七個限制的結構描述資料列集。
 
-請參閱[IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))如每個結構描述資料列集上定義的限制相關資訊。
+請參閱[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))如每個結構描述資料列集上定義的限制相關資訊。
 
 ## <a name="see-also"></a>另請參閱
 

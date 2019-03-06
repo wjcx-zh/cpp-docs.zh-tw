@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 3e8c524a95730282d0e35e5f791ebf229725e282
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2fc92858f84826e2b953fcbc9de020741e97b007
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298915"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416003"
 ---
 # <a name="cimagelist-class"></a>CImageList 類別
 
@@ -691,13 +691,13 @@ BOOL DrawIndirect(
 要繪製之影像的以零為起始的索引。
 
 *pt*<br/>
-A[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)結構，包含 x 和 y 座標會繪製影像的位置。
+A[點](/previous-versions/dd162805\(v=vs.85\))結構，包含 x 和 y 座標會繪製影像的位置。
 
 *sz*<br/>
 A[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構表示要繪製影像的大小。
 
 *ptOrigin*<br/>
-A[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)結構，包含 x 和 y 座標指定相對於映像本身繪圖作業的左上的角。 不會繪製像素的影像左側的 x 座標和 y 軸上方。
+A[點](/previous-versions/dd162805\(v=vs.85\))結構，包含 x 和 y 座標指定相對於映像本身繪圖作業的左上的角。 不會繪製像素的影像左側的 x 座標和 y 軸上方。
 
 *fStyle*<br/>
 旗標，指定繪製樣式，並選擇性地覆疊影像。 在覆疊影像，請參閱 < 備註 > 小節，以取得資訊。 MFC 的預設實作，ILD_NORMAL，繪製影像的影像清單中使用的背景色彩。 如果背景色彩為 CLR_NONE 值，以透明的方式使用遮罩繪製影像。
@@ -874,7 +874,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="parameters"></a>參數
 
 *lpPoint*<br/>
-位址[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)結構會接收目前拖曳位置。
+位址[點](/previous-versions/dd162805\(v=vs.85\))結構會接收目前拖曳位置。
 
 *lpPointHotSpot*<br/>
 位址`POINT`結構會接收拖曳影像相對於拖曳位置的位移。

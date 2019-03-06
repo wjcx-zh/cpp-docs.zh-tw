@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-ms.openlocfilehash: aa404641a42b0209e8436ca206e59a3b5f425133
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2abf23c15e6550a6d115f2e2b41a9c59de5fa3a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565954"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424635"
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os、/Ot (偏好小的程式碼、偏好快的程式碼)
 
@@ -46,7 +46,7 @@ ms.locfileid: "50565954"
 > [!NOTE]
 >  從分析測試回合所收集的資訊將會覆寫才會作用中您指定的最佳化 **/Ob**， **/Os**，或 **/Ot**。 如需詳細資訊，[特性指引最佳化](../../build/reference/profile-guided-optimizations.md)。
 
-**x86 特定**
+**x86 Specific**
 
 下列程式碼範例示範偏好小的程式碼之間的差異 (**/Os**) 選項和偏好快的程式碼 (**/Ot**) 選項：
 

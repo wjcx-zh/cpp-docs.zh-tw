@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 850c16420606452414cbe284c5f9f25031859c93
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fdfc0888e7d6213fb7c04a5257358da8f5dae138
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304518"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425090"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 類別
 
@@ -619,7 +619,7 @@ virtual BOOL Create(
 指定清單控制項的樣式。 套用至控制項的清單控制項樣式的任何組合。 請參閱[清單檢視的視窗樣式](/windows/desktop/Controls/list-view-window-styles)如需完整清單，這些樣式的 Windows SDK 中。 設定擴充特定控制項使用的樣式[SetExtendedStyle](#setextendedstyle)。
 
 *rect*<br/>
-指定清單控制項的大小和位置。 它可以是`CRect`物件或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。
+指定清單控制項的大小和位置。 它可以是`CRect`物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
 
 *pParentWnd*<br/>
 指定清單控制項的父視窗，通常`CDialog`。 它必須不是 NULL。
@@ -667,7 +667,7 @@ virtual BOOL CreateEx(
 指定清單控制項的樣式。 套用至控制項的清單控制項樣式的任何組合。 這些樣式的完整清單，請參閱[清單檢視的視窗樣式](/windows/desktop/Controls/list-view-window-styles)Windows SDK 中。
 
 *rect*<br/>
-參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。
+參考[RECT](/previous-versions/dd162897\(v=vs.85\))結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。
 
 *pParentWnd*<br/>
 是控制項的父視窗的指標。
@@ -701,7 +701,7 @@ CImageList* CreateDragImage(
 若要建立其拖曳影像清單的項目索引。
 
 *lpPoint*<br/>
-位址[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)接收的映像，左上角的初始位置的結構檢視中協調。
+位址[點](/previous-versions/dd162805\(v=vs.85\))接收的映像，左上角的初始位置的結構檢視中協調。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1442,7 +1442,7 @@ BOOL GetGroupRect(
 |參數|描述|
 |---------------|-----------------|
 |*iGroupId*|[in]指定群組。|
-|*lpRect*|[in、 out]指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 如果這個方法成功，結構會接收群組所指定的矩形座標*iGroupId*。|
+|*lpRect*|[in、 out]指標[RECT](/previous-versions/dd162897\(v=vs.85\))結構。 如果這個方法成功，結構會接收群組所指定的矩形座標*iGroupId*。|
 |*iCoords*|[in]指定要擷取的矩形座標。 使用下列值之一：<br /><br /> -LVGGR_GROUP-整個已展開群組 （預設值） 座標。<br />-LVGGR_HEADER-僅標頭 （摺疊的群組） 的座標。<br />-LVGGR_SUBSETLINK-座標只子集連結 （標記子集）。|
 
 ### <a name="return-value"></a>傳回值
@@ -1451,7 +1451,7 @@ BOOL GetGroupRect(
 
 ### <a name="remarks"></a>備註
 
-呼叫端會負責配置[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)所指向結構*pRect*參數。
+呼叫端會負責配置[RECT](/previous-versions/dd162897\(v=vs.85\))所指向結構*pRect*參數。
 
 這個方法會傳送[LVM_GETGROUPRECT](/windows/desktop/Controls/lvm-getgrouprect)訊息，Windows SDK 中所述。
 
@@ -1790,7 +1790,7 @@ BOOL GetItemIndexRect(
 |*pItemIndex*|[in]指標[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)結構子項目的父項目。<br /><br /> 呼叫端會負責配置和設定的成員[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)結構。 這個參數不能是 NULL。|
 |*iColumn*|[in]控制項中的資料行的以零為起始索引。|
 |*rectType*|[in]要為其擷取周框的清單檢視子項目的部分。 指定下列其中一個值：<br /><br /> LVIR_BOUNDS-傳回整個子項目，包括圖示和標籤的週框矩形。<br /><br /> LVIR_ICON-傳回圖示或小圖示子項目的週框。<br /><br /> LVIR_LABEL-傳回子項目文字的週框矩形。|
-|*pRect*|[out]指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收子項目的週框矩形的相關資訊的結構。<br /><br /> 呼叫端會負責配置[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 這個參數不能是 NULL。|
+|*pRect*|[out]指標[RECT](/previous-versions/dd162897\(v=vs.85\))接收子項目的週框矩形的相關資訊的結構。<br /><br /> 呼叫端會負責配置[RECT](/previous-versions/dd162897\(v=vs.85\))結構。 這個參數不能是 NULL。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -1844,7 +1844,7 @@ BOOL GetItemPosition(
 要擷取其位置的項目索引。
 
 *lpPoint*<br/>
-位址[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)檢視中協調收到的項目左上角的位置的結構。
+位址[點](/previous-versions/dd162805\(v=vs.85\))檢視中協調收到的項目左上角的位置的結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1883,7 +1883,7 @@ BOOL GetItemRect(
 要擷取其位置的項目索引。
 
 *lpRect*<br/>
-位址[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收的週框的結構。
+位址[RECT](/previous-versions/dd162897\(v=vs.85\))接收的週框的結構。
 
 *nCode*<br/>
 清單檢視項目，要擷取周框的部分。 它可以是下列值之一：
@@ -2220,7 +2220,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ### <a name="parameters"></a>參數
 
 *lpPoint*<br/>
-位址[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)接收檢視原始的結構。
+位址[點](/previous-versions/dd162805\(v=vs.85\))接收檢視原始的結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2531,7 +2531,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-位址[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。
+位址[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2834,7 +2834,7 @@ int InsertMarkHitTest(
 ### <a name="parameters"></a>參數
 
 *pPoint*<br/>
-指標[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)結構，包含點擊的測試的座標，相對於清單控制項的用戶端區域。
+指標[點](/previous-versions/dd162805\(v=vs.85\))結構，包含點擊的測試的座標，相對於清單控制項的用戶端區域。
 
 *lvim*<br/>
 指標[LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark)結構，指定最接近座標點參數所定義的插入點。
@@ -3854,7 +3854,7 @@ BOOL SetItemPosition(
 若要設定其位置的項目索引。
 
 *pt*<br/>
-A[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)結構，指定檢視中的新位置座標，此項目的左上角。
+A[點](/previous-versions/dd162805\(v=vs.85\))結構，指定檢視中的新位置座標，此項目的左上角。
 
 ### <a name="return-value"></a>傳回值
 

@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: a683c877b67f4eae1a7411f5916987c9789b6817
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 51cdfb481892ba5057d4ca26ff4d6e51665557e5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261345"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415613"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl 類別
 
@@ -231,7 +231,7 @@ virtual BOOL Create(
 指定標題控制項的樣式。 如需標頭控制項樣式的描述，請參閱 <<c0> [ 標頭控制項樣式](/windows/desktop/Controls/header-control-styles)Windows SDK 中。
 
 *rect*<br/>
-指定標題控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。
+指定標題控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
 
 *pParentWnd*<br/>
 指定標題控制項的父視窗，通常`CDialog`。 它必須不是 NULL。
@@ -301,7 +301,7 @@ virtual BOOL CreateEx(
 標題控制項的樣式。 如需標頭控制項樣式的描述，請參閱 <<c0> [ 標頭控制項樣式](/windows/desktop/Controls/header-control-styles)Windows SDK 中。 請參閱[建立](#create)如需其他樣式的清單。
 
 *rect*<br/>
-參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。
+參考[RECT](/previous-versions/dd162897\(v=vs.85\))結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。
 
 *pParentWnd*<br/>
 是控制項的父視窗的指標。
@@ -543,7 +543,7 @@ BOOL GetItemDropDownRect(
 |參數|描述|
 |---------------|-----------------|
 |*iItem*|[in]其樣式為 HDF_SPLITBUTTON 標頭項目的以零為起始的索引。 如需詳細資訊，請參閱 <<c0> `fmt` 隸屬[HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)結構。|
-|*lpRect*|[out]指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收的週框矩形資訊的結構。|
+|*lpRect*|[out]指標[RECT](/previous-versions/dd162897\(v=vs.85\))接收的週框矩形資訊的結構。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -581,7 +581,7 @@ BOOL GetItemRect(
 標題控制項項目以零為起始的索引。
 
 *lpRect*<br/>
-位址指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收到的週框矩形資訊的結構。
+位址指標[RECT](/previous-versions/dd162897\(v=vs.85\))接收到的週框矩形資訊的結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -633,7 +633,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 |參數|描述|
 |---------------|-----------------|
-|*lpRect*|[out]指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收到的週框矩形資訊的結構。|
+|*lpRect*|[out]指標[RECT](/previous-versions/dd162897\(v=vs.85\))接收到的週框矩形資訊的結構。|
 
 ### <a name="return-value"></a>傳回值
 

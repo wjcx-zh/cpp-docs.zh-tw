@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -Oi compiler option [C++]
 - generate intrinsic functions compiler option [C++]
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
-ms.openlocfilehash: 067b8b11b716935c684a127632a8fadaf3d9a447
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1dc7f5f183e7dffb65c31ebb9bc47b30776b81e3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646058"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422113"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (產生內建函式)
 
@@ -37,7 +37,7 @@ ms.locfileid: "50646058"
 
 **/Oi**只是要求編譯器內建函式，以取代某些函式呼叫，編譯器可能會呼叫函式 （和取代函式呼叫內建） 如果會產生較佳的效能。
 
-**x86 特定**
+**x86 Specific**
 
 內建函式的浮點函式不執行任何特殊的檢查輸入值並因此用於限制範圍的輸入，且不同的例外狀況處理與具有相同名稱的程式庫常式比界限條件。 使用真正的內建形式表示遺失的 IEEE 例外狀況處理，而失去`_matherr`和`errno`功能; 後者表示遺失的 ANSI 合規性。 不過，這些內建形式可以顯著地加快浮點密集的程式，且對於許多程式，一致性問題有一些實用的值。
 

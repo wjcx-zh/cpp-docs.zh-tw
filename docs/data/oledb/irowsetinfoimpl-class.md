@@ -26,16 +26,16 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: 61544658f2aef4b59b2b70baa310dcc09e2740fe
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: ca22f16cf22cabc4c508df053d49d862fef70bce
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556201"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414612"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl 類別
 
-提供實作[IRowsetInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms724541(v=vs.85))介面。
+提供實作[IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))介面。
 
 ## <a name="syntax"></a>語法
 
@@ -72,7 +72,7 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 
 在 資料列集上必要的介面。 這個類別會實作所使用的資料列集屬性[屬性集對應](../../data/oledb/begin-propset-map.md)命令類別中定義。 雖然所出現的資料列集類別，使用命令類別的屬性集，資料列集提供它自己的複本，執行階段內容中的命令或工作階段的物件建立時。
 
-## <a name="getproperties"></a> Irowsetinfoimpl:: Getproperties
+## <a name="getproperties"></a> IRowsetInfoImpl::GetProperties
 
 傳回屬性的目前設定`DBPROPSET_ROWSET`群組。
 
@@ -87,9 +87,9 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>參數
 
-請參閱[irowsetinfo:: Getproperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms719611(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[irowsetinfo:: Getproperties](/previous-versions/windows/desktop/ms719611(v=vs.85))中*OLE DB 程式設計人員參考*。
 
-## <a name="getreferencedrowset"></a> Irowsetinfoimpl:: Getreferencedrowset
+## <a name="getreferencedrowset"></a> IRowsetInfoImpl::GetReferencedRowset
 
 要套用書籤的資料列集傳回的介面指標。
 
@@ -103,9 +103,9 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 
 #### <a name="parameters"></a>參數
 
-請參閱[IRowsetInfo::GetReferencedRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms721145(v=vs.85))中*OLE DB 程式設計人員參考*。 *IOrdinal*參數必須是書籤資料行。
+請參閱[IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145(v=vs.85))中*OLE DB 程式設計人員參考*。 *IOrdinal*參數必須是書籤資料行。
 
-## <a name="getspecification"></a> Irowsetinfoimpl:: Getspecification
+## <a name="getspecification"></a> IRowsetInfoImpl::GetSpecification
 
 建立此資料列集物件 （命令或工作階段） 上傳回的介面指標。
 
@@ -118,7 +118,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
 
 #### <a name="parameters"></a>參數
 
-請參閱[IRowsetInfo::GetSpecification](https://docs.microsoft.com/previous-versions/windows/desktop/ms716746(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ### <a name="remarks"></a>備註
 

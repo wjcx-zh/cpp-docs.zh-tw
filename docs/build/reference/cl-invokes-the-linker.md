@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], compiling without linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-ms.openlocfilehash: e071209bd09fea17082379bf3f2486866b52c548
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e65801fcddef739f3fabe88b2b940602fde965a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447199"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412727"
 ---
 # <a name="cl-invokes-the-linker"></a>CL 叫用連結器
 
@@ -26,13 +26,13 @@ CL 自動叫用編譯除非使用 /c 選項之後的連結器。 編譯期間建
 |/c|編譯而不要連結|
 |/ E，/EP，/P|前置處理，而不編譯或連結|
 |/Zg|產生函式原型|
-|/Zs|請檢查語法|
+|/Zs|檢查語法|
 
 如需連結的進一步詳細資訊，請參閱 <<c0> [ 連結器選項](../../build/reference/linker-options.md)。
 
 ## <a name="example"></a>範例
 
-假設您正在編譯三個 C 原始程式檔： MAIN.c、 MOD1.c 和 MOD2.c。 每個檔案包含定義另一個檔案中的函式呼叫：
+假設您正在編譯三個 C 原始程式檔：在 MAIN.c、 MOD1.c 和 MOD2.c。 每個檔案包含定義另一個檔案中的函式呼叫：
 
 - MAIN.c 呼叫函式`func1`MOD1.c 和函式中`func2`MOD2.c 中。
 

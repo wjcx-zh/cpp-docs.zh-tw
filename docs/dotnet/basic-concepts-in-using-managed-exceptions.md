@@ -10,12 +10,12 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: 45244ace414fc073956684088ac43eb9b92f1e5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4eb74fe3e485f12ac7f43b0a8a56800ef0535e7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588236"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423842"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>使用 Managed 例外狀況中的基本概念
 
@@ -29,7 +29,7 @@ ms.locfileid: "50588236"
 
 ## <a name="remarks"></a>備註
 
-如果您使用編譯 **/clr**選項，您可以處理 CLR 例外狀況，以及標準[c + + 例外狀況處理](../cpp/cpp-exception-handling.md)並[結構化例外狀況處理](../cpp/structured-exception-handling-c-cpp.md)(SEH)。 CLR 例外狀況是由 managed 型別擲回任何例外狀況。 [System:: exception](https://msdn.microsoft.com/library/system.exception.aspx)類別提供許多有用的方法，來處理 CLR 例外狀況，並建議為使用者定義的例外狀況類別的基底類別。
+如果您使用編譯 **/clr**選項，您可以處理 CLR 例外狀況，以及標準<xref:System.Exception>類別提供許多有用的方法，來處理 CLR 例外狀況，並建議為使用者定義的例外狀況的基底類別類別。
 
 攔截例外狀況衍生自介面的型別不受 **/clr**。 此外，通用語言執行平台不允許您攔截堆疊溢位例外狀況;堆疊溢位例外狀況將會終止處理序。
 
@@ -140,7 +140,7 @@ In 'catch(MyStruct^ catchException)'
 
 ### <a name="catching-unmanaged-types"></a>攔截 Unmanaged 的類型
 
-擲回的未受管理的物件型別時，它會包裝類型的例外狀況[System::Runtime.InteropServices::SEHException](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx)。 當搜尋適當**攔截**子句中，有兩種可能性。
+擲回的未受管理的物件型別時，它會包裝的例外狀況型別的<xref:System.Runtime.InteropServices.SEHException>。 當搜尋適當**攔截**子句中，有兩種可能性。
 
 - 如果遇到原生的 c + + 型別時，會解除包裝例外狀況，並將其相較於遇到的型別。 這項比較可讓您以一般方式攔截原生 c + + 型別。
 

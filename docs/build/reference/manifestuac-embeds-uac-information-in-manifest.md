@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MANIFESTUAC linker option
 - -MANIFESTUAC linker option
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
-ms.openlocfilehash: 702dae41f873218dab0d3fb24e46dacd710bc20f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ae9d18bb0fe2172886ef24250d53cf76851bbba
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625082"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420423"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (將 UAC 資訊內嵌在資訊清單中)
 
@@ -33,7 +33,7 @@ ms.locfileid: "50625082"
 
 ### <a name="parameters"></a>參數
 
-*片段*<br/>
+*fragment*<br/>
 字串，其中包含`level`和`uiAccess`值。 如需詳細資訊，請參閱本主題稍後的 < 備註 > 一節。
 
 *_level*<br/>
@@ -48,11 +48,11 @@ ms.locfileid: "50625082"
 
 /MANIFESTUAC:level 的選項如下所示：
 
-- `asInvoker`： 應用程式會使用相同的權限啟動它的處理序執行。 應用程式可以提升為較高的權限層級，方法是選取**系統管理員身分執行**。
+- `asInvoker`：應用程式會使用相同的權限啟動它的處理序執行。 應用程式可以提升為較高的權限層級，方法是選取**系統管理員身分執行**。
 
-- highestAvailable： 具有最高的權限等級，它可以將執行應用程式。 啟動應用程式的使用者是 Administrators 群組的成員，此選項與 requireAdministrator 相同。 最高可用的權限層級高於的開啟處理序層級時，系統會提示輸入認證。
+- highestAvailable:應用程式會使用最高的權限等級，它可以執行。 啟動應用程式的使用者是 Administrators 群組的成員，此選項與 requireAdministrator 相同。 最高可用的權限層級高於的開啟處理序層級時，系統會提示輸入認證。
 
-- requireAdministrator: 應用程式會執行系統管理員權限。 啟動應用程式的使用者必須是 Administrators 群組的成員。 如果開啟處理序不以系統管理權限執行，系統會提示輸入認證。
+- requireAdministrator:應用程式會使用系統管理員權限執行。 啟動應用程式的使用者必須是 Administrators 群組的成員。 如果開啟處理序不以系統管理權限執行，系統會提示輸入認證。
 
 您可以使用 /MANIFESTUAC:fragment 選項，在一個步驟中指定的層級和 uiAccess 值。 片段必須以下列形式：
 

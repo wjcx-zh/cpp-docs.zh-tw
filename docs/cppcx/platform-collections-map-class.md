@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: c6edd8cdd089e24011df41db09f3c1bb5d6465f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a41f2012b4ee5441bcb9aa7d99cd0d0e97b6acc7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481454"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423699"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 類別
 
@@ -93,7 +93,7 @@ Map 基本上是 [std::map](../standard-library/map-class.md)的包裝函式。 
 |||
 |-|-|
 |名稱|描述|
-|[Map:: mapchanged](#mapchanged-event.md) `event`|發生於 Map 變更時。|
+|[Map::MapChanged](#mapchanged-event.md) `event`|發生於 Map 變更時。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -132,7 +132,7 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
 
 ### <a name="remarks"></a>備註
 
-若要保留 first （） 所傳回的迭代器的方便作法是將傳回的值指派給宣告的變數**自動**類型推斷關鍵字。 例如，`auto x = myMap->First();`。
+若要保留 first （） 所傳回的迭代器的方便作法是將傳回的值指派給宣告的變數**自動**類型推斷關鍵字。 例如， `auto x = myMap->First();` 。
 
 ## <a name="getview"></a>  Map:: getview 方法
 
@@ -182,7 +182,7 @@ virtual bool Insert(K key, V value);
 *key*<br/>
 機碼值組的機碼部分。 型別*金鑰*為 typename *K*。
 
-*值*<br/>
+*value*<br/>
 機碼值組的值部分。 型別*值*為 typename *V*。
 
 ### <a name="return-value"></a>傳回值
@@ -243,7 +243,7 @@ Map(
 *first*<br/>
 用來初始化目前 Map 的項目範圍中，第一個項目的輸入迭代器。
 
-*最後一個*<br/>
+*last*<br/>
 用來初始化目前 Map 的項目範圍以外第一個項目的輸入迭代器。
 
 ## <a name="mapchanged"></a>  Map:: mapchanged 事件
@@ -258,7 +258,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>屬性值/傳回值
 
-A [Mapchangedeventhandler<k\<K，V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) ，包含引發事件，以及發生的變更類型的物件相關資訊。 另請參閱[Imapchangedeventargs<k\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx)並[CollectionChange 列舉](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx)。
+A [Mapchangedeventhandler<k\<K，V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) ，包含引發事件，以及發生的變更類型的物件相關資訊。 另請參閱[Imapchangedeventargs<k\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_)並[CollectionChange 列舉](/uwp/api/windows.foundation.collections.collectionchange)。
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 同等
 
@@ -281,7 +281,7 @@ virtual void Remove(K key);
 
 ## <a name="size"></a>  Map:: size 方法
 
-傳回的數目[Windows::Foundation::Collections::IKeyValuePair\<K，V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx)對應中的項目。
+傳回的數目[Windows::Foundation::Collections::IKeyValuePair\<K，V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)對應中的項目。
 
 ### <a name="syntax"></a>語法
 

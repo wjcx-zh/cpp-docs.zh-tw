@@ -2,12 +2,12 @@
 title: /arch (ARM)
 ms.date: 11/04/2016
 ms.assetid: 4f1406ff-f174-487c-a126-8ab06cf447c1
-ms.openlocfilehash: bf12abd140a56b1b914156083ecbbd3e61e7285a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7fd396f4ed9c02daff5363342d7c851d022919ac
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495554"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424986"
 ---
 # <a name="arch-arm"></a>/arch (ARM)
 
@@ -21,10 +21,10 @@ ms.locfileid: "50495554"
 
 ## <a name="arguments"></a>引數
 
-**/ arch:armv7ve**<br/>
+**/arch:ARMv7VE**<br/>
 啟用 ARMv7VE 虛擬擴充功能指令。
 
-**/ arch:vfpv4**<br/>
+**/arch:VFPv4**<br/>
 啟用 ARM VFPv4 指令。 如果未指定此選項，VFPv3 就是預設值。
 
 ## <a name="remarks"></a>備註

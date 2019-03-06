@@ -1,17 +1,17 @@
 ---
-title: 如何：在 C++/CLI 中使用陣列
+title: HOW TO：使用陣列，在 C + + /cli CLI
 ms.date: 11/04/2016
 helpviewer_keywords:
 - arrays [C++], single-dimension
 ms.assetid: 301cfb3e-199f-42c8-8151-629dce9e87f3
-ms.openlocfilehash: e38e15cffbf623f629f57243923ddae273801bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0a13441bc3532884dbbd32f28d57c15e352c3ef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596244"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414599"
 ---
-# <a name="how-to-use-arrays-in-ccli"></a>如何：在 C++/CLI 中使用陣列
+# <a name="how-to-use-arrays-in-ccli"></a>HOW TO：使用陣列，在 C + + /cli CLI
 
 本文說明如何使用陣列，在 C + + /cli CLI。
 
@@ -503,7 +503,7 @@ int main() {
 
 不同於標準 c + + 陣列，managed 的陣列隱含衍生自其繼承的通用行為陣列基底類別。 例如，`Sort`方法，可用來排序任何陣列中的項目。
 
-對於包含基本的內建類型的陣列，您可以呼叫`Sort`方法。 您可以覆寫的排序準則，這動作需要時您想要排序陣列的複雜型別。 在此情況下，陣列項目類型必須實作[IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx)方法。
+對於包含基本的內建類型的陣列，您可以呼叫`Sort`方法。 您可以覆寫的排序準則，這動作需要時您想要排序陣列的複雜型別。 在此情況下，陣列項目類型必須實作<xref:System.IComparable.CompareTo%2A>方法。
 
 ```cpp
 // array_sort.cpp
@@ -520,7 +520,7 @@ int main() {
 
 ## <a name="sorting-arrays-by-using-custom-criteria"></a>藉由使用自訂準則排序陣列
 
-若要排序陣列，其中包含基本的內建類型，只要呼叫`Array::Sort`方法。 不過，以排序陣列，包含複雜型別，或若要覆寫預設的排序準則，覆寫[IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx)方法。
+若要排序陣列，其中包含基本的內建類型，只要呼叫`Array::Sort`方法。 不過，以排序陣列，包含複雜型別，或若要覆寫預設的排序準則，覆寫<xref:System.IComparable.CompareTo%2A>方法。
 
 在下列範例中，結構名為`Element`衍生自<xref:System.IComparable>，並提供寫入<xref:System.IComparable.CompareTo%2A>兩個整數的平均值做為排序準則的方法。
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -constexpr control constexpr evaluation [C++]
 - constexpr control constexpr evaluation [C++]
 ms.assetid: 76d56784-f5ad-401d-841d-09d1059e8b8c
-ms.openlocfilehash: ea55a2686c2cdd7f4e0a6b558d3cd456fe87cb9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49a9566ec0725b63330af3a41afb871c3be3cc27
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544244"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414644"
 ---
 # <a name="constexpr-control-constexpr-evaluation"></a>/constexpr （控制 constexpr 評估）
 
@@ -23,8 +23,8 @@ ms.locfileid: "50544244"
 ## <a name="syntax"></a>語法
 
 > **/constexpr:depth**<em>N</em>
->  **/constexpr:**<em>N</em>
->  **/constexpr:** <em>N</em>
+>  **/constexpr:backtrace**<em>N</em>
+>  **/constexpr:steps**<em>N</em>
 
 ## <a name="arguments"></a>引數
 

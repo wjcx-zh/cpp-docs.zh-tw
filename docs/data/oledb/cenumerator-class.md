@@ -22,16 +22,16 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: bb44af102f08e05edddc2fb692d1e30dd7e31717
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 3333c624affd2afb61b8828250bf1c2c168c9207
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556669"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422083"
 ---
 # <a name="cenumerator-class"></a>CEnumerator 類別
 
-使用 OLE DB 列舉值物件，它會公開[ISourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms715969(v=vs.85))介面，以傳回描述所有的資料來源和列舉值的資料列集。
+使用 OLE DB 列舉值物件，它會公開[ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85))介面，以傳回描述所有的資料來源和列舉值的資料列集。
 
 ## <a name="syntax"></a>語法
 
@@ -79,7 +79,7 @@ bool Find(TCHAR* szSearchName) throw();
 
 ### <a name="remarks"></a>備註
 
-此名稱會對應到`SOURCES_NAME`隸屬[ISourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms715969(v=vs.85))介面。
+此名稱會對應到`SOURCES_NAME`隸屬[ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85))介面。
 
 ## <a name="getmoniker"></a> Cenumerator:: Getmoniker
 
@@ -108,7 +108,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 
 ## <a name="open"></a> Cenumerator:: Open
 
-會將繫結之 moniker 的列舉值，如果其中一個指定，則擷取資料列集列舉值，藉由呼叫[isourcesrowset:: Getsourcesrowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85))。
+會將繫結之 moniker 的列舉值，如果其中一個指定，則擷取資料列集列舉值，藉由呼叫[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85))。
 
 ### <a name="syntax"></a>語法
 

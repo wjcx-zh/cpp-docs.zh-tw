@@ -8,16 +8,16 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: ec771efcd8fffd1aa1825f2c500404dc0b2a4965
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5fda93951918357de5441022f1cc6ea81a522ef6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638733"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415132"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
-指定可執行映像所需的執行環境。
+指定可執行檔影像所需的執行環境。
 
 ```
 /SUBSYSTEM:{BOOT_APPLICATION|CONSOLE|EFI_APPLICATION|
@@ -43,9 +43,9 @@ Windows 字元模式應用程式。 作業系統會提供主控台的主控台�
 **EFI_RUNTIME_DRIVER**<br/>
 可延伸韌體介面 (EFI) 影像
 
-EFI 子系統選項說明可延伸韌體介面環境中執行的可執行檔影像。 這種環境通常提供硬體，並在載入作業系統之前執行。 EFI 影像類型之間的主要差異是載入影像的記憶體位置，和呼叫影像時傳回時所採取的動作。 控制權傳回時會卸載 EFI_APPLICATION 影像。 只有當控制項傳回錯誤碼時，EFI_BOOT_SERVICE_DRIVER 或 EFI_RUNTIME_DRIVER 才會卸載。 從 ROM 執行 EFI_ROM 影像。 如需詳細資訊，請參閱規格上[統一 EFI 論壇](http://www.uefi.org/)網站。
+EFI 子系統選項說明可延伸韌體介面環境中執行的可執行映像。 這種環境通常提供硬體，並在載入作業系統之前執行。 EFI 影像類型之間的主要差異是載入影像的記憶體位置，和呼叫影像時傳回時所採取的動作。 控制權傳回時會卸載 EFI_APPLICATION 影像。 只有當控制項傳回錯誤碼時，EFI_BOOT_SERVICE_DRIVER 或 EFI_RUNTIME_DRIVER 才會卸載。 從 ROM 執行 EFI_ROM 影像。 如需詳細資訊，請參閱規格上[統一 EFI 論壇](http://www.uefi.org/)網站。
 
-**原生**<br/>
+**NATIVE**<br/>
 在沒有子系統環境中執行的程式碼 — 例如，核心模式裝置驅動程式和原生系統處理序。 這個選項通常保留給 Windows 系統功能。
 
 **POSIX**<br/>

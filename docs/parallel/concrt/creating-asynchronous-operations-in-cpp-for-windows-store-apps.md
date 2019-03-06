@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 0284970d57cf4cde65b4fb77338423cb81d5d54b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8815861e525a2824bb1bc7a7d0e40f96b053c6a4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302269"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426780"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>為 UWP 應用程式，建立 c + + 中的非同步作業
 
@@ -51,7 +51,7 @@ Windows 執行階段是可用來建立只在特殊作業系統環境中執行的
 
 藉由使用 Windows 執行階段，您可以使用各種程式設計語言的最佳功能，並將它們結合到單一應用程式。 例如，您可能在 JavaScript 中建立 UI，並且在 C++ 元件中執行密集運算的應用程式邏輯。 在背景執行這些密集運算作業的能力，就是讓 UI 保持回應的主要因素。 因為`task`類別是 c + + 專屬，您必須使用 Windows 執行階段介面進行通訊 （這可能以 c + + 以外的語言撰寫） 的其他元件的非同步作業。 Windows 執行階段會提供您可用來表示非同步作業的四個介面：
 
-[Windows::Foundation::IAsyncAction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)<br/>
+[Windows::Foundation::IAsyncAction](/uwp/api/windows.foundation.iasyncaction)<br/>
 表示非同步動作。
 
 [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)<br/>
@@ -92,7 +92,7 @@ Windows 執行階段是可用來建立只在特殊作業系統環境中執行的
 
 ##  <a name="example-component"></a> 範例：建立 c + + Windows 執行階段元件，並使用它從C#
 
-請考慮使用 XAML 和 C# 定義 UI 和 c + + Windows 執行階段元件來執行運算密集作業的應用程式。 在這個範例中，C++ 元件會計算某個範圍中哪些數字是質數。 為了說明四個 Windows 執行階段非同步工作介面之間的差異，請從在 Visual Studio 中，建立**空白方案**並將它命名`Primes`。 然後在方案中新增 [Windows 執行階段元件]  專案，並將它命名為 `PrimesLibrary`。 將下列程式碼加入至產生的 C++ 標頭檔 (這個範例會將 Class1.h 重新命名為 Primes.h)。 每個 `public` 方法都會定義四個非同步介面的其中一個。 方法會傳回值[ivector&lt\<int >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx)物件。 報告進度的方法會產生 `double` 值，用以定義整體工作已完成的百分比。
+請考慮使用 XAML 和 C# 定義 UI 和 c + + Windows 執行階段元件來執行運算密集作業的應用程式。 在這個範例中，C++ 元件會計算某個範圍中哪些數字是質數。 為了說明四個 Windows 執行階段非同步工作介面之間的差異，請從在 Visual Studio 中，建立**空白方案**並將它命名`Primes`。 然後在方案中新增 [Windows 執行階段元件]  專案，並將它命名為 `PrimesLibrary`。 將下列程式碼加入至產生的 C++ 標頭檔 (這個範例會將 Class1.h 重新命名為 Primes.h)。 每個 `public` 方法都會定義四個非同步介面的其中一個。 方法會傳回值[ivector&lt\<int >](/uwp/api/Windows.Foundation.Collections.IVector_T_)物件。 報告進度的方法會產生 `double` 值，用以定義整體工作已完成的百分比。
 
 [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]
 
@@ -117,7 +117,7 @@ Windows 執行階段是可用來建立只在特殊作業系統環境中執行的
 
 在非同步作業完成後，這些方法會使用 `async` 和 `await` 關鍵字更新 UI。 如需非同步 UWP 應用程式中撰寫程式碼的資訊，請參閱[執行緒和非同步程式設計](/windows/uwp/threading-async)。
 
-`getPrimesCancellation` 和 `cancelGetPrimes` 方法可一起使用，讓使用者取消作業。 當使用者選擇**取消** 按鈕，`cancelGetPrimes`方法呼叫[IAsyncOperationWithProgress\<Iasyncoperationwithprogress<tresult，Tprogress> >:: 取消](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel.aspx)取消作業。 並行執行階段，用來管理基礎的非同步作業，會擲回內部例外狀況類型攔截的 Windows 執行階段，以傳達取消已完成。 如需有關取消模型的詳細資訊，請參閱[取消](../../parallel/concrt/cancellation-in-the-ppl.md)。
+`getPrimesCancellation` 和 `cancelGetPrimes` 方法可一起使用，讓使用者取消作業。 當使用者選擇**取消** 按鈕，`cancelGetPrimes`方法呼叫[IAsyncOperationWithProgress\<Iasyncoperationwithprogress<tresult，Tprogress> >:: 取消](/uwp/api/windows.foundation.iasyncinfo.cancel)取消作業。 並行執行階段，用來管理基礎的非同步作業，會擲回內部例外狀況類型攔截的 Windows 執行階段，以傳達取消已完成。 如需有關取消模型的詳細資訊，請參閱[取消](../../parallel/concrt/cancellation-in-the-ppl.md)。
 
 > [!IMPORTANT]
 >  若要讓 PPL 正確回報給 Windows 執行階段，它已取消作業，不會攔截這個內部例外狀況類型。 這表示，您不應該攔截所有例外狀況 (`catch (...)`)。 如果您必須攔截所有例外狀況重新擲回的例外狀況，以確保 Windows 執行階段能夠完成取消作業。

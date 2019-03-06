@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: 0eac756824b3da6352c60ec69e9d6e679732522c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 072bc15cc931c2fd50cf8a2a1ff0c9145da8b7be
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484795"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414690"
 ---
 # <a name="msbuild-visual-c-overview"></a>MSBuild (Visual C++) 概觀
 
@@ -27,13 +27,13 @@ MSBuild 是標準建置 Visual c + + 專案系統。 當您建置 Visual Studio 
 
 - [命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)說明的命令列引數和選項可供您使用 msbuild.exe。
 
-- [工作參考](/visualstudio/msbuild/msbuild-task-reference)描述 MSBuild 工作。 特別注意這些工作，也就是特定 Visual c + +: [BscMake 工作](/visualstudio/msbuild/bscmake-task)， [CL 工作](/visualstudio/msbuild/cl-task)， [CPPClean 工作](/visualstudio/msbuild/cppclean-task)， [LIB 工作](/visualstudio/msbuild/lib-task)， [連結工作](/visualstudio/msbuild/link-task)， [MIDL 工作](/visualstudio/msbuild/midl-task)， [MT 工作](/visualstudio/msbuild/mt-task)， [RC 工作](/visualstudio/msbuild/rc-task)， [SetEnv 工作](/visualstudio/msbuild/setenv-task)， [VCMessage 工作](/visualstudio/msbuild/vcmessage-task)， [XDCMake 工作](/visualstudio/msbuild/xdcmake-task)， [XSD 工作](/visualstudio/msbuild/xsd-task)。
+- [工作參考](/visualstudio/msbuild/msbuild-task-reference)描述 MSBuild 工作。 特別注意這些工作，也就是特定 Visual c + +:[BscMake 工作](/visualstudio/msbuild/bscmake-task)， [CL 工作](/visualstudio/msbuild/cl-task)， [CPPClean 工作](/visualstudio/msbuild/cppclean-task)， [LIB 工作](/visualstudio/msbuild/lib-task)，[連結工作](/visualstudio/msbuild/link-task)， [MIDL 工作](/visualstudio/msbuild/midl-task)， [MT 工作](/visualstudio/msbuild/mt-task)， [RC 工作](/visualstudio/msbuild/rc-task)， [SetEnv 工作](/visualstudio/msbuild/setenv-task)， [VCMessage 工作](/visualstudio/msbuild/vcmessage-task)， [XDCMake 工作](/visualstudio/msbuild/xdcmake-task)， [XSD 工作](/visualstudio/msbuild/xsd-task)。
 
 ## <a name="msbuild-on-the-command-line"></a>在命令列上的 MSBuild
 
 下列陳述式，從[MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)說明 msbuild.exe 工具使用隱含或明確*project_file*引數 （Visual c + + 專案的.vcxproj 檔案）以及零或多個命令列*選項*引數。
 
-> **msbuild.exe** [ *project_file* ] [*選項*]
+> **msbuild.exe** [ *project_file* ] [ *options* ]
 
 使用 **/target** (或 **/t**) 和 **/property** (或 **/p**) 命令列選項來覆寫特定的屬性和目標在專案檔中指定。
 
@@ -65,9 +65,9 @@ MSBuild 系統可以有條件地目標之前或之後執行另一個目標。 �
 
 |Directory|描述|
 |---------------|-----------------|
-|*磁碟機*: \Program Files *(x86)* \Microsoft Visual Studio\\*年*\\*edition*\Common7\IDE\VC\VCTargets\ <br /><br />*磁碟機*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp (x86) \v4.0\\*版本*\ |包含主要的目標檔案 (.targets) 和屬性檔案 (.props) 所使用的目標。 根據預設，$ （vctargetspath） 巨集，請參考這個目錄。|
-|*磁碟機*: \Program Files *(x86)* \Microsoft Visual Studio\\*年*\\*edition*\Common7\IDE\VC\VCTargets\平台\\*平台*\ <br /><br />*磁碟機*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*版本*\Platforms\\*平台*\ |包含目標和其父目錄中的屬性會覆寫的平台特定目標和屬性檔案。 這個目錄也包含定義工作所使用的目標，此目錄中的 DLL。<br /><br /> *平台*預留位置代表 ARM，Win32 或 x64 子目錄。|
-|*磁碟機*: \Program Files *(x86)* \Microsoft Visual Studio\\*年*\\*edition*\Common7\IDE\VC\VCTargets\平台\\*平台*\PlatformToolsets\\*工具組*\ <br /><br />*磁碟機*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*版本*\Platforms\\*平台*\PlatformToolsets\\*工具組*\ <br /><br />*磁碟機*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*平台*\PlatformToolsets\\*工具組*\ |包含可讓組件產生 Visual c + + 應用程式，使用指定的目錄*工具組*。<br /><br /> *年份*並*edition* Visual Studio 2017 和更新版本中所使用的預留位置。 *版本*預留位置是 V110 適用於 Visual Studio 2012、 V120 適用於 Visual Studio 2013 或適用於 Visual Studio 2015 的 V140。 *平台*預留位置代表 ARM，Win32 或 x64 子目錄。 *工具組*預留位置代表的 toolset 子目錄，例如，用於建置 Windows 應用程式，使用 Visual Studio 2015 工具組，建置適用於 Windows XP 使用 Visual Studio 2013 的工具組或以 v110_wp80 v120_xp v140使用 Visual Studio 2012 的工具組，以建置 Windows Phone 8.0 的應用程式。<br /><br />包含可讓組件產生 Visual c + + 2008年或 Visual c + + 2010年的應用程式的目錄的路徑不包含*版本*，而*平台*預留位置代表在 Itanium、 Win32、 或 x64 子目錄。 *工具組*預留位置代表 v90 或 v100 的 toolset 子目錄。|
+|*drive*:\Program Files *(x86)* \Microsoft Visual Studio\\*year*\\*edition*\Common7\IDE\VC\VCTargets\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp (x86)\v4.0\\*version*\ |包含主要的目標檔案 (.targets) 和屬性檔案 (.props) 所使用的目標。 根據預設，$ （vctargetspath） 巨集，請參考這個目錄。|
+|*drive*:\Program Files *(x86)* \Microsoft Visual Studio\\*year*\\*edition*\Common7\IDE\VC\VCTargets\Platforms\\*platform*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\ |包含目標和其父目錄中的屬性會覆寫的平台特定目標和屬性檔案。 這個目錄也包含定義工作所使用的目標，此目錄中的 DLL。<br /><br /> *平台*預留位置代表 ARM，Win32 或 x64 子目錄。|
+|*drive*:\Program Files *(x86)* \Microsoft Visual Studio\\*year*\\*edition*\Common7\IDE\VC\VCTargets\Platforms\\*platform*\PlatformToolsets\\*toolset*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\PlatformToolsets\\*toolset*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*platform*\PlatformToolsets\\*toolset*\ |包含可讓組件產生 Visual c + + 應用程式，使用指定的目錄*工具組*。<br /><br /> *年份*並*edition* Visual Studio 2017 和更新版本中所使用的預留位置。 *版本*預留位置是 V110 適用於 Visual Studio 2012、 V120 適用於 Visual Studio 2013 或適用於 Visual Studio 2015 的 V140。 *平台*預留位置代表 ARM，Win32 或 x64 子目錄。 *工具組*預留位置代表的 toolset 子目錄，例如，用於建置 Windows 應用程式，使用 Visual Studio 2015 工具組，建置適用於 Windows XP 使用 Visual Studio 2013 的工具組或以 v110_wp80 v120_xp v140使用 Visual Studio 2012 的工具組，以建置 Windows Phone 8.0 的應用程式。<br /><br />包含可讓組件產生 Visual c + + 2008年或 Visual c + + 2010年的應用程式的目錄的路徑不包含*版本*，而*平台*預留位置代表在 Itanium、 Win32、 或 x64 子目錄。 *工具組*預留位置代表 v90 或 v100 的 toolset 子目錄。|
 
 ### <a name="support-files"></a>支援檔案
 
@@ -124,7 +124,7 @@ MSBuild 系統可以有條件地目標之前或之後執行另一個目標。 �
 |重建|清除，並建立您的專案。|
 |ResourceCompile|執行 Microsoft Windows 資源編譯器工具 rc.exe。|
 |XdcMake|執行 XML 文件工具 xdcmake.exe。|
-|xsd|執行 XML 結構描述定義工具 xsd.exe。 請參閱下列注意事項。|
+|Xsd|執行 XML 結構描述定義工具 xsd.exe。 請參閱下列注意事項。|
 
 > [!NOTE]
 > 在 Visual Studio 2017 中，c + + 專案的支援**xsd**檔案已被取代。 您仍然可以使用**Microsoft.VisualC.CppCodeProvider**加上**CppCodeProvider.dll**手動加入 GAC。

@@ -57,12 +57,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: 53e9305dd308e77afbd8d53754614c1cfb559f94
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: ed2c0b11dfdc6882352c87166b74b2fab327fcd3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557072"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418603"
 ---
 # <a name="cdatasource-class"></a>CDataSource 類別
 
@@ -100,7 +100,7 @@ class CDataSource
 
 如需如何使用的範例`CDataSource`，請參閱 < [CatDB](../../visual-cpp-samples.md)範例。
 
-## <a name="close"></a> Cdatasource:: Close
+## <a name="close"></a> CDataSource::Close
 
 關閉連接時釋放`m_spInit`指標。
 
@@ -110,7 +110,7 @@ class CDataSource
 void Close() throw();
 ```
 
-## <a name="getinitializationstring"></a> Cdatasource:: Getinitializationstring
+## <a name="getinitializationstring"></a> CDataSource::GetInitializationString
 
 擷取目前已開啟的資料來源初始化字串。
 
@@ -152,7 +152,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 
 #### <a name="parameters"></a>參數
 
-請參閱[idbproperties:: Getproperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms714344(v=vs.85))中*OLE DB 程式設計人員參考*Windows SDK 中。
+請參閱[idbproperties:: Getproperties](/previous-versions/windows/desktop/ms714344(v=vs.85))中*OLE DB 程式設計人員參考*Windows SDK 中。
 
 ### <a name="return-value"></a>傳回值
 
@@ -244,10 +244,10 @@ HRESULT Open(LPCSTR szProgID,
 [in]`CLSID`的資料提供者。
 
 *pPropSet*<br/>
-[in]陣列的指標[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85))中*OLE DB 程式設計人員參考*Windows SDK 中。
+[in]陣列的指標[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](/previous-versions/windows/desktop/ms713696(v=vs.85))中*OLE DB 程式設計人員參考*Windows SDK 中。
 
 *nPropertySets*<br/>
-[in]數目[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))結構傳入*Dbpropset*引數。
+[in]數目[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構傳入*Dbpropset*引數。
 
 *pName*<br/>
 [in] 要連接的資料庫名稱。
@@ -259,7 +259,7 @@ HRESULT Open(LPCSTR szProgID,
 [in] 使用者的密碼。
 
 *nInitMode*<br/>
-[in] 資料庫初始化模式。 請參閱[初始化屬性](https://docs.microsoft.com/previous-versions/windows/desktop/ms723127(v=vs.85))中*OLE DB 程式設計人員參考*Windows SDK，如需有效初始化模式的清單中。 如果*nInitMode*是零、 任何初始化模式會包含用來開啟連接的屬性集。
+[in] 資料庫初始化模式。 請參閱[初始化屬性](/previous-versions/windows/desktop/ms723127(v=vs.85))中*OLE DB 程式設計人員參考*Windows SDK，如需有效初始化模式的清單中。 如果*nInitMode*是零、 任何初始化模式會包含用來開啟連接的屬性集。
 
 *szProgID*<br/>
 [in] 程式識別碼。
@@ -289,7 +289,7 @@ HRESULT Open(LPCSTR szProgID,
 
 [!code-cpp[NVC_OLEDB_Consumer#7](../../data/oledb/codesnippet/cpp/cdatasource-open_1.cpp)]
 
-## <a name="openfromfilename"></a> Cdatasource:: Openfromfilename
+## <a name="openfromfilename"></a> CDataSource::OpenFromFileName
 
 從以使用者提供的檔名指定的檔案，開啟資料來源。
 
@@ -304,7 +304,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 *szFileName*<br/>
 [in] 檔案的名稱，通常是資料來源連接 (.UDL) 檔案。
 
-如需詳細資料連結檔案 （.udl 檔案） 的詳細資訊，請參閱[資料連結 API 概觀](https://docs.microsoft.com/previous-versions/windows/desktop/ms718102(v=vs.85))Windows SDK 中。
+如需詳細資料連結檔案 （.udl 檔案） 的詳細資訊，請參閱[資料連結 API 概觀](/previous-versions/windows/desktop/ms718102(v=vs.85))Windows SDK 中。
 
 ### <a name="return-value"></a>傳回值
 
@@ -343,7 +343,7 @@ HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString,
 
 這個方法會使用 oledb32.dll 中的服務元件開啟資料來源物件；此 DLL 包含服務元件功能的實作，例如資源集中化、自動交易登記等。
 
-## <a name="openwithpromptfilename"></a> Cdatasource:: Openwithpromptfilename
+## <a name="openwithpromptfilename"></a> CDataSource::OpenWithPromptFileName
 
 此方法會以對話方塊提示使用者，然後使用使用者所指定的檔案開啟資料來源。
 
@@ -398,11 +398,11 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 *szProgID*<br/>
 [in] 資料提供者的程式識別碼。
 
-*Dbpropset*<br/>
-[in]陣列的指標[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85))中*OLE DB 程式設計人員參考*Windows SDK 中。 如果資料來源物件已初始化，屬性必須屬於資料來源屬性群組。 如果相同的屬性中指定了一次以上*Dbpropset*，則會使用哪些值是特定提供者。 如果*ulPropSets*為零，會忽略這個參數。
+*pPropset*<br/>
+[in]陣列的指標[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](/previous-versions/windows/desktop/ms713696(v=vs.85))中*OLE DB 程式設計人員參考*Windows SDK 中。 如果資料來源物件已初始化，屬性必須屬於資料來源屬性群組。 如果相同的屬性中指定了一次以上*Dbpropset*，則會使用哪些值是特定提供者。 如果*ulPropSets*為零，會忽略這個參數。
 
 *ulPropSets*<br/>
-[in]數目[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))結構傳入*Dbpropset*引數。 如果這是零，提供者會忽略*Dbpropset*。
+[in]數目[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構傳入*Dbpropset*引數。 如果這是零，提供者會忽略*Dbpropset*。
 
 ### <a name="return-value"></a>傳回值
 

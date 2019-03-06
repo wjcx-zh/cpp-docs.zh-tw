@@ -1,19 +1,19 @@
 ---
-title: 如何：在 C/C++ 應用程式中嵌入資訊清單
+title: HOW TO：嵌入 C/c + + 應用程式資訊清單
 ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: c3557d22f51207687c6c0adde80b4cd5b3293afd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1bff23c91b465d697cc52a2b893ece5be3764b1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624850"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412896"
 ---
-# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>如何：在 C/C++ 應用程式中嵌入資訊清單
+# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>HOW TO：嵌入 C/c + + 應用程式資訊清單
 
 建議您使用 C/c + + 應用程式 （或程式庫） 已內嵌於最終二進位檔，因為這可確保正確的執行階段行為，在大部分情況下其資訊清單。 根據預設，Visual Studio 會嘗試建立從原始程式檔; 專案時嵌入資訊清單請參閱[Visual Studio 中的資訊清單產生](../build/manifest-generation-in-visual-studio.md)如需詳細資訊。 不過如果使用 nmake 來建置應用程式時，不需要現有 makefile 的某些變更。 本節示範如何變更現有的 makefiles 自動內嵌於最終二進位檔的資訊清單。
 
@@ -23,11 +23,11 @@ ms.locfileid: "50624850"
 
 - 如果您不想要執行累加建置您可以將直接內嵌資訊清單做為建置後步驟中使用命令列如下所示：
 
-   **mt.exe-manifest MyApp.exe.manifest-outputresource:MyApp.exe;1**
+   **mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1**
 
    或
 
-   **mt.exe-manifest MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**
+   **mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2**
 
    (1 exe，dll 2)。
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: 73a259faa57d74fbe535bfa329dfc2a39cb6bbad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fdfeb16d41f51262cbd3a3814699a7b8dbc5fe4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656972"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413325"
 ---
 # <a name="running-lib"></a>執行 LIB
 
@@ -62,7 +62,7 @@ ms.locfileid: "50656972"
 
 下列選項適用於所有模式的程式庫：
 
-> **/ERRORREPORT** [**NONE** &AMP;#124; **提示** &AMP;#124; **佇列** &AMP;#124; **傳送**]
+> **/ERRORREPORT** [**NONE** &#124; **PROMPT** &#124; **QUEUE** &#124; **SEND**]
 
 如果 lib.exe 在執行階段失敗，您可以使用 **/ERRORREPORT**有關這些內部錯誤，傳送給 Microsoft 的資訊。
 
@@ -88,7 +88,7 @@ ms.locfileid: "50656972"
 
 顯示進度的工作階段，包括所加入之.obj 檔的名稱相關的詳細資料。 資訊會傳送至標準輸出，並且可重新導向至檔案。
 
-> **/WX**[**: NO**]
+> **/WX**[**:NO**]
 
 將警告視為錯誤。 請參閱[/WX （連結器警告視為錯誤）](../../build/reference/wx-treat-linker-warnings-as-errors.md)如需詳細資訊。
 

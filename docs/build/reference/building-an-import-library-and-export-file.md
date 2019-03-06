@@ -25,18 +25,18 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-ms.openlocfilehash: e5e7a60bf4607be55525b587df4942875126b50e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31570b1e6680b5af5f0a774c290eba20f3b5fdb0
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556672"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413182"
 ---
 # <a name="building-an-import-library-and-export-file"></a>建置匯入程式庫和匯出檔案
 
 若要建置匯入程式庫和匯出檔案，使用下列語法：
 
-> **LIB /DEF**[**:**<em>deffile</em>] [*選項*] [*objfiles*] [*程式庫*]
+> **LIB /DEF**[**:**<em>deffile</em>] [*options*] [*objfiles*] [*libraries*]
 
 /DEF 指定時，程式庫會從 LIB 命令中傳遞的匯出規格建立的輸出檔。 有三種方法來指定匯出，建議使用的順序中所列：
 

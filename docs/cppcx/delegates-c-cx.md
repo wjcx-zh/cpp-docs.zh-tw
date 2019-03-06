@@ -2,12 +2,12 @@
 title: 委派 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-ms.openlocfilehash: 8153ac6ffc48b43fc218ee786cdb3f64504d825e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb23c5d1ae35a56a827bc2436dbdd81b53dd1224
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635236"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415275"
 ---
 # <a name="delegates-ccx"></a>委派 (C++/CX)
 
@@ -23,7 +23,7 @@ public delegate void PrimeFoundHandler(int result);
 event PrimeFoundHandler^ primeFoundEvent;
 ```
 
-當宣告透過 Windows 執行階段應用程式二進位介面會公開的委派對用戶端，使用[Windows::Foundation::TypedEventHandler\<，TResult >](https://msdn.microsoft.com/library/windows/apps/br225997.aspx)。 此委派具有預先定義的 Proxy 與 Stub 二進位檔，使其能夠供 Javascript 用戶端使用。
+當宣告透過 Windows 執行階段應用程式二進位介面會公開的委派對用戶端，使用[Windows::Foundation::TypedEventHandler\<，TResult >](/uwp/api/windows.foundation.typedeventhandler)。 此委派具有預先定義的 Proxy 與 Stub 二進位檔，使其能夠供 Javascript 用戶端使用。
 
 ## <a name="consuming-delegates"></a>使用委派
 

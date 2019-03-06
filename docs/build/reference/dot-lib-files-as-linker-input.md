@@ -14,12 +14,12 @@ helpviewer_keywords:
 - defaults [C++], libraries
 - .lib files
 ms.assetid: dc5d2b1c-2487-41fa-aa71-ad1e0647958b
-ms.openlocfilehash: 0bf791d682b66d9d0da968fb0bfd5229e912e84c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3b2ae0d82e682cc89243b7b527ee6e0b51d4c3d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505338"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426767"
 ---
 # <a name="lib-files-as-linker-input"></a>.Lib 檔做為連結器輸入
 
@@ -37,7 +37,7 @@ ms.locfileid: "50505338"
 
 ## <a name="to-programmatically-add-lib-files-as-linker-input"></a>若要以程式設計方式將.lib 檔新增為連結器輸入
 
-- 請參閱[AdditionalDependencies](https://msdn.microsoft.com/library/microsoft.visualstudio.vcprojectengine.vclinkertool.additionaldependencies.aspx)。
+- 請參閱[AdditionalDependencies](/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.additionaldependencies)。
 
 ## <a name="example"></a>範例
 

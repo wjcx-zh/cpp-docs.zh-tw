@@ -10,12 +10,12 @@ helpviewer_keywords:
 - external names
 - -H compiler option [C++]
 ms.assetid: de701dd3-ed04-4c88-8195-960d2520ec2e
-ms.openlocfilehash: 194f8d2c87eb6aa307f417ff022e7975edf2ccc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb7821587d6c0bbe06eb6baa02227955582eb76d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489826"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420410"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (限制外部名稱的長度)
 
@@ -23,11 +23,11 @@ ms.locfileid: "50489826"
 
 ## <a name="syntax"></a>語法
 
-> **/H**<em>數目</em>
+> **/H**<em>number</em>
 
 ## <a name="arguments"></a>引數
 
-*數字*<br/>
+*number*<br/>
 指定在程式中所允許的外部名稱的最大長度。
 
 ## <a name="remarks"></a>備註

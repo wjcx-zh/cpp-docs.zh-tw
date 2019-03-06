@@ -5,12 +5,12 @@ helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-ms.openlocfilehash: 4898ff7893ec327495e757f2ffa0eb37ae051875
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fea928fc293ef916d560e51ecb27aee452b6a4c3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551329"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414625"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>在 /CLR 之下例外狀況處理行為的差異
 
@@ -97,7 +97,7 @@ We should execute this handler if compiled to native
 
 ##  <a name="vccondisassociatedrethrows"></a> 取消關聯重新擲回
 
-**/clr**不支援外部 catch 處理常式 （又稱為取消關聯重新擲回） 例外狀況重新擲回。 這個類型的例外狀況會視為標準 C++ 重新擲回。 若在發生作用中 Managed 例外狀況時遇到取消關聯重新擲回，例外狀況會包裝為 C ++. 例外狀況，然後重新擲回。 此類型的例外狀況可能只會攔截為類型的例外狀況[system:: sehexception](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx)。
+**/clr**不支援外部 catch 處理常式 （又稱為取消關聯重新擲回） 例外狀況重新擲回。 這個類型的例外狀況會視為標準 C++ 重新擲回。 若在發生作用中 Managed 例外狀況時遇到取消關聯重新擲回，例外狀況會包裝為 C ++. 例外狀況，然後重新擲回。 此類型的例外狀況可能只會攔截例外狀況的類型為<xref:System.Runtime.InteropServices.SEHException>。
 
 下列範例示範 Managed 例外狀況重新擲回為 C ++. 例外狀況：
 

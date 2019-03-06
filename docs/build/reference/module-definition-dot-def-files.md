@@ -6,12 +6,12 @@ helpviewer_keywords:
 - module definition files
 - .def files
 ms.assetid: 08c0bc28-c5d2-47aa-9624-7fc68bcaa4d8
-ms.openlocfilehash: a882d71e76b961fefb7059bee8634507f12f7986
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 041894fa88527061d90399540bc29762bff66f81
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460433"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424531"
 ---
 # <a name="module-definition-def-files"></a>模組定義檔案 (.Def)
 
@@ -33,7 +33,7 @@ ms.locfileid: "50460433"
 
 - [LIBRARY](../../build/reference/library.md)
 
-- [名稱](../../build/reference/name-c-cpp.md)
+- [NAME](../../build/reference/name-c-cpp.md)
 
 - [區段](../../build/reference/sections-c-cpp.md)
 
@@ -41,7 +41,7 @@ ms.locfileid: "50460433"
 
 - [STUB](../../build/reference/stub.md)
 
-- [版本](../../build/reference/version-c-cpp.md)
+- [VERSION](../../build/reference/version-c-cpp.md)
 
 - [保留的字](../../build/reference/reserved-words.md)
 

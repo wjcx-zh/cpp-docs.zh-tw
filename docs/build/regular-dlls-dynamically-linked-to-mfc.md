@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
-ms.openlocfilehash: 550391d51560ff0beca8252ffb6193dd1e4d89b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 548fbde379937ab4d915f08a43a8b865e071d688
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632384"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413169"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>動態連結至 MFC 的標準 MFC Dll
 
@@ -33,7 +33,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 
 - 不同於以靜態方式連結的標準 MFC DLL，這種類型的 DLL 動態連結至 MFC DLL (也稱為共用 MFC DLL)。
 
-- MFC 匯入程式庫，連結到這種類型的 DLL 是 MFC 擴充 Dll 或使用 MFC DLL 的應用程式所使用的相同：.lib MFCxx (D)。
+- MFC 匯入程式庫，連結到這種類型的 DLL 是 MFC 擴充 Dll 或使用 MFC DLL 的應用程式所使用的相同：MFCxx (D).lib。
 
 一般 MFC DLL 動態連結至 MFC 的需求如下：
 

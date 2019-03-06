@@ -3,12 +3,12 @@ title: 列舉類別 (C + + /cli 和 C + + /CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: 5bc850831e961a500ae71ce90e3ca39b3aabd159
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aee3d4f44c18074ca536ff028565bbbd0e37d04c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592513"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417420"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>列舉類別 (C + + /cli 和 C + + /CX)
 
@@ -55,7 +55,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊與範例，請參閱 [列舉](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx)。
+如需詳細資訊與範例，請參閱 [列舉](../cppcx/enums-c-cx.md)。
 
 請注意，如果定義列舉程式值的常數運算式無法以 *基礎類型*表示，編譯器將會發出錯誤訊息。  不過，編譯器不會報告不適合基礎類型之值的錯誤。 例如: 
 
@@ -221,4 +221,4 @@ convert to int: 1
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)
+[適用於.NET 和 UWP 的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

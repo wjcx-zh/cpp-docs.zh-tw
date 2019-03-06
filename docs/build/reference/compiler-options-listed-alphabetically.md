@@ -3,12 +3,12 @@ title: 依字母順序排列的編譯器選項
 ms.date: 08/20/2018
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: fa5ae089e112c147fb5e18b13af2ef5b95a7fda3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73236485026b82895426a2651b48a83fc35ce8b7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646728"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415873"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>依字母順序排列的編譯器選項
 
@@ -21,7 +21,7 @@ ms.locfileid: "50646728"
 |[/AI](ai-specify-metadata-directories.md)|指定一個要搜尋的目錄，以解析傳遞給 [#using](../../preprocessor/hash-using-directive-cpp.md) 指示詞的檔案參考。|
 |[/analyze](analyze-code-analysis.md)|啟用程式碼分析|
 |[/arch](arch-minimum-cpu-architecture.md)|為程式碼產生指定架構。|
-|[/ await](await-enable-coroutine-support.md)|啟用協同程式 （可繼續函式） 擴充功能。|
+|[/await](await-enable-coroutine-support.md)|啟用協同程式 （可繼續函式） 擴充功能。|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|增加 .obj 檔案中可定址區段的數目。|
 |[/C](c-preserve-comments-during-preprocessing.md)|在前置處理過程中保留註解。|
 |[/c](c-compile-without-linking.md)|編譯而不連結。|
@@ -79,7 +79,7 @@ ms.locfileid: "50646728"
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|建立可線上修補的影像。|
 |[/I](i-additional-include-directories.md)|搜尋包含檔的目錄。|
 |[/J](j-default-char-type-is-unsigned.md)|變更預設 `char` 類型。|
-|[/ JMC](jmc.md)|支援原生 c + + Just My Code 偵錯。|
+|[/JMC](jmc.md)|支援原生 c + + Just My Code 偵錯。|
 |[/kernel](kernel-create-kernel-mode-binary.md)|編譯器和連結器將會建立可以在 Windows 核心中執行的二進位檔。|
 |[/LD](md-mt-ld-use-run-time-library.md)|建立動態連結程式庫。|
 |[/LDd](md-mt-ld-use-run-time-library.md)|建立偵錯動態連結程式庫。|

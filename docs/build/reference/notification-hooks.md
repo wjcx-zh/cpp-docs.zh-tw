@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, notification hooks
 ms.assetid: e9c291ed-2f2d-4319-a171-09800625256f
-ms.openlocfilehash: 9205791995bc113e4f560ab6085fc3acf47c8182
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e4dc6331e2a957c0268e686fff7dbb3f7eb0b24
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549821"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426546"
 ---
 # <a name="notification-hooks"></a>告知攔截
 

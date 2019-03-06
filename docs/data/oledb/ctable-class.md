@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: 7605d78a140a0f5353a16b9e22d5d618d29ff327
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: ff2a139c16b6678bedf38c64a16dce28fa53c5fe
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556675"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425194"
 ---
 # <a name="ctable-class"></a>CTable 類別
 
@@ -82,7 +82,7 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>參數
 
-*工作階段*<br/>
+*session*<br/>
 [in]開啟該表格中的工作階段。
 
 *wszTableName*<br/>
@@ -95,10 +95,10 @@ HRESULT Open(const CSession& session,
 [in]`DBID`来開啟的資料表。
 
 *pPropSet*<br/>
-[in]陣列的指標[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85))中*OLE DB 程式設計人員參考*Windows SDK 中。 預設值是 NULL 指定任何屬性。
+[in]陣列的指標[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](/previous-versions/windows/desktop/ms713696(v=vs.85))中*OLE DB 程式設計人員參考*Windows SDK 中。 預設值是 NULL 指定任何屬性。
 
 *ulPropSets*<br/>
-[in]數目[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))結構傳入*Dbpropset*引數。
+[in]數目[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構傳入*Dbpropset*引數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -106,7 +106,7 @@ HRESULT Open(const CSession& session,
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [iopenrowset:: Openrowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85))中*OLE DB 程式設計人員參考*。
+如需詳細資訊，請參閱 < [iopenrowset:: Openrowset](/previous-versions/windows/desktop/ms716724(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ## <a name="see-also"></a>另請參閱
 

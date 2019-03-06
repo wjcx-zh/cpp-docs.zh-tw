@@ -16,12 +16,12 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-ms.openlocfilehash: 6bb5e18c5a174c9e48b253031daad195e6132375
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 610c94646b82783a49ca6de6bc443e99a3c137bc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507290"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420904"
 ---
 # <a name="fa-fa-listing-file"></a>/FA、/Fa (清單檔)
 
@@ -29,7 +29,7 @@ ms.locfileid: "50507290"
 
 ## <a name="syntax"></a>語法
 
-> **/FA**[**c**\][**s**\][**u**] **/Fa**_路徑名稱_
+> **/FA**[**c**\][**s**\][**u**] **/Fa**_pathname_
 
 ## <a name="remarks"></a>備註
 
@@ -39,7 +39,7 @@ ms.locfileid: "50507290"
 
 ### <a name="fa-arguments"></a>/FA 引數
 
-無<br/>
+none<br/>
 只有組合器語言包含在清單中。
 
 **C**<br/>
@@ -55,7 +55,7 @@ ms.locfileid: "50507290"
 
 ### <a name="fa-argument"></a>/Fa 引數
 
-無<br/>
+none<br/>
 一*來源*.asm 檔建立的編譯過程中每個原始程式碼檔案。
 
 *filename*<br/>
@@ -64,13 +64,13 @@ ms.locfileid: "50507290"
 *filename.extension*<br/>
 清單檔名為*filename.extension*放在目前的目錄。 編譯單一原始程式碼檔案時，這是才有效。
 
-*目錄*__\\__<br/>
+*directory*__\\__<br/>
 一*source_file*.asm 檔會建立並放置在指定*directory*的編譯過程中每個原始程式碼檔案。 請注意所需的尾端有反斜線。 允許只在目前的磁碟上的路徑。
 
-*目錄*__\\__*檔名*<br/>
+*directory*__\\__*filename*<br/>
 清單檔名為*檔名*.asm 會置於指定*directory*。 編譯單一原始程式碼檔案時，這是才有效。
 
-*目錄*__\\__*filename.extension*<br/>
+*directory*__\\__*filename.extension*<br/>
 清單檔名為*filename.extension*放在指定*directory*。 編譯單一原始程式碼檔案時，這是才有效。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項

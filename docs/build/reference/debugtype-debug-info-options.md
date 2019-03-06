@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DEBUGTYPE linker option
 - -DEBUGTYPE linker option
 ms.assetid: 1ddcb718-7fec-4f92-a319-3f70f04fe742
-ms.openlocfilehash: f730e485b7dc29cb8fe98bdcc7ea50f5e8c622d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4a24d79295c1f7dbbe645c4a6e52f58b4a08807
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676989"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423492"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE (偵錯資訊選項)
 
@@ -31,7 +31,7 @@ ms.locfileid: "50676989"
 **PDATA**<br/>
 通知連結器將 .pdata 和 .xdata 項目加入至 PDB 檔案中的偵錯資料流資訊。 根據預設，會啟用此選項時同時 **/偵錯**並 **/DRIVER**指定選項。 如果 **/DEBUGTYPE:PDATA**自行指定，連結器會自動包含偵錯 PDB 檔案中的符號。 如果 **/DEBUGTYPE:PDATA，修復**指定，連結器不會包含偵錯 PDB 檔案中的符號。
 
-**修復**<br/>
+**FIXUP**<br/>
 通知連結器將重新配置資料表項目加入至 PDB 檔案中的偵錯資料流資訊。 根據預設，會啟用此選項時同時 **/偵錯**並 **/設定檔**指定選項。 如果 **/DEBUGTYPE:FIXUP**或是 **/DEBUGTYPE:FIXUP，PDATA**指定，連結器不會包含偵錯 PDB 檔案中的符號。
 
 引數 **/DEBUGTYPE**可能以任何順序結合，以逗號分隔。 **/DEBUGTYPE**選項和其引數不區分大小寫。

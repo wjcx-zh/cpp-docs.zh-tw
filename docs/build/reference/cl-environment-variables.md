@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-ms.openlocfilehash: 4c9643e977c707f7e7fd99ccc48d0475e2dc7837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47d6966cdc821cee4bd9ffd61b36c0c79143b6c2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535764"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412454"
 ---
 # <a name="cl-environment-variables"></a>CL 環境變數
 
@@ -46,11 +46,11 @@ CL 工具使用下列環境變數：
 
 當此環境變數設定時，如果您輸入`CL INPUT.C`在命令列中，這是有效的命令：
 
-> CL /Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE。OBJ 輸入。C
+> CL /Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE.OBJ INPUT.C
 
 下列範例會造成一般 CL 命令編譯原始程式檔 FILE1.c 和 FILE2.c，然後再連結物件檔案 FILE1.obj、FILE2.obj 和 FILE3.obj：
 
-> 設定 CL = FILE1。C FILE2。C 組\_CL\_= FILE3。OBJ CL
+> SET CL=FILE1.C FILE2.C SET \_CL\_=FILE3.OBJ CL
 
 這個範例具有與下列命令列相同的效果：
 

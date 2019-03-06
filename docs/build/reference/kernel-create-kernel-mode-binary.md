@@ -5,12 +5,12 @@ f1_keywords:
 - /kernel
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-ms.openlocfilehash: 0df133922af90a91d5c1ae1ad3caebe11d854b8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33a0f4019d8ad278f5850c499ee552ee72279455
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509653"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414749"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (建立核心模式二進位檔)
 
@@ -40,7 +40,7 @@ ms.locfileid: "50509653"
 
 下表列出的編譯器行為的變更時 **/kernel**指定。
 
-|行為型別|**/kernel**行為|
+|行為型別|**/kernel** Behavior|
 |-------------------|---------------------------|
 |C++ 例外狀況處理|已停用。 所有執行個體`throw`並`try`關鍵字會發出編譯器錯誤 (除了例外狀況規格`throw()`)。 否 **/EH**的選項為相容於 **/kernel**，除了 **/EH-**。|
 |RTTI|已停用。 所有執行個體`dynamic_cast`並`typeid`關鍵字會發出編譯器錯誤，除非`dynamic_cast`以靜態方式使用。|
@@ -79,8 +79,8 @@ class NONPAGESECTION MyNonPagedClass
 
    ||**/kernel** obj|**/kernel-** obj，MASM obj 或 cvtresed|「 混合 **/kernel**並 **/kernel-** obj|
    |-|----------------------|-----------------------------------------------|-------------------------------------------------|
-   |**連結 /kernel**|是|是|是，但有警告 LNK4257|
-   |**連結**|是|是|是|
+   |**link /kernel**|是|是|是，但有警告 LNK4257|
+   |**link**|是|是|是|
 
    **/Kernel; 未編譯的 LNK4257 連結物件映像可能無法執行**
 

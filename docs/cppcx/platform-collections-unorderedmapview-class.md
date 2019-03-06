@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: 9564904fa77ae6a7355119e83bdfa3ac65a4050c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a60d962d79684cb16d8d5a5139b9b65df8148052
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560832"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414404"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView 類別
 
@@ -71,7 +71,7 @@ UnorderedMapView 是具象 c + + 實作[Windows::Foundation::Collections::IMapVi
 
 ## <a name="first"></a>  UnorderedMapView::First 方法
 
-傳回迭代器，指定第一個[Windows::Foundation::Collections::IKeyValuePair\<K，V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) unorderedmap 中的項目。
+傳回迭代器，指定第一個[Windows::Foundation::Collections::IKeyValuePair\<K，V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) unorderedmap 中的項目。
 
 ### <a name="syntax"></a>語法
 
@@ -87,7 +87,7 @@ virtual Windows::Foundation::Collections::IIterator<
 
 ### <a name="remarks"></a>備註
 
-若要保留 first （） 所傳回的迭代器的方便作法是將傳回的值指派給宣告的變數**自動**類型推斷關鍵字。 例如，`auto x = myMapView->First();`。
+若要保留 first （） 所傳回的迭代器的方便作法是將傳回的值指派給宣告的變數**自動**類型推斷關鍵字。 例如， `auto x = myMapView->First();` 。
 
 ## <a name="haskey"></a>  UnorderedMapView::HasKey 方法
 
@@ -129,7 +129,7 @@ V Lookup(K key);
 
 ## <a name="size"></a>  UnorderedMapView::Size 方法
 
-傳回的數目[Windows::Foundation::Collections::IKeyValuePair\<K，V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) UnorderedMapView 中的項目。
+傳回的數目[Windows::Foundation::Collections::IKeyValuePair\<K，V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) UnorderedMapView 中的項目。
 
 ### <a name="syntax"></a>語法
 
@@ -236,7 +236,7 @@ UnorderedMapView 的 typename。
 *first*<br/>
 用來初始化 UnorderedMapView 的項目範圍中，第一個元素的輸入迭代器。
 
-*最後一個*<br/>
+*last*<br/>
 用來初始化 UnorderedMapView 的項目範圍以外第一個元素的輸入迭代器。
 
 ## <a name="see-also"></a>另請參閱

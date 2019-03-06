@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-ms.openlocfilehash: ae91921ecd5f53f4551e46e1d03cf027ce3e1f3b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 638152d8c49bd20742a586bc665efcdb662b6f3a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292394"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413884"
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>IAxWinAmbientDispatchEx 介面
 
@@ -42,7 +42,7 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
 
 這個介面會公開由裝載物件的 ATL 的 ActiveX 控制項。 衍生自[IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)，`IAxWinAmbientDispatchEx`將可讓您增補 ATL 提供與您自己的環境屬性介面的方法。
 
-[AXHost](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx)會嘗試載入的型別資訊的相關`IAxWinAmbientDispatch`和`IAxWinAmbientDispatchEx`從類型程式庫包含程式碼。
+<xref:System.Windows.Forms.AxHost> 系統將嘗試載入的型別資訊的相關`IAxWinAmbientDispatch`和`IAxWinAmbientDispatchEx`從類型程式庫包含程式碼。
 
 如果您要連結至 ATL90.dll， **AXHost**會從類型程式庫 DLL 中載入的型別資訊。
 

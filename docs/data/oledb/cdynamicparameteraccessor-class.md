@@ -90,12 +90,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: c2cc67e6e837844356a071aa362dcca85eca24e4
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: a655d95cf165ab2c5cba3a391b81d6f420f8322f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556968"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418512"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor 類別
 
@@ -139,7 +139,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 
 如需示範如何使用這個類別來執行 SQL Server 預存程序，並取得輸出參數值的範例，請參閱[DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)中的程式碼範例[Microsoft： 位](https://github.com/Microsoft/VCSamples)在 GitHub 上的存放庫。
 
-## <a name="cdynamicparameteraccessor"></a> Cdynamicparameteraccessor:: Cdynamicparameteraccessor
+## <a name="cdynamicparameteraccessor"></a> CDynamicParameterAccessor::CDynamicParameterAccessor
 
 建構函式。
 
@@ -165,7 +165,7 @@ CDynamicParameterAccessor(
 
 請參閱[cdynamicaccessor:: Cdynamicaccessor](../../data/oledb/cdynamicaccessor-cdynamicaccessor.md)建構函式，如需 BLOB 處理的詳細資訊。
 
-## <a name="getparam"></a> Cdynamicparameteraccessor:: Getparam
+## <a name="getparam"></a> CDynamicParameterAccessor::GetParam
 
 從參數緩衝區中擷取指定參數的非字串資料。
 
@@ -203,7 +203,7 @@ void* GetParam(TCHAR* pParamName) const throw();
 
 使用`GetParam`擷取非字串參數的資料緩衝區。 使用[GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md)來擷取緩衝區的字串參數資料。
 
-## <a name="getparamcount"></a> Cdynamicparameteraccessor:: Getparamcount
+## <a name="getparamcount"></a> CDynamicParameterAccessor::GetParamCount
 
 擷取儲存在緩衝區中的參數數目。
 
@@ -217,7 +217,7 @@ DB_UPARAMS GetParamCount() const throw();
 
 參數的數目。
 
-## <a name="getparamio"></a> Cdynamicparameteraccessor:: Getparamio
+## <a name="getparamio"></a> CDynamicParameterAccessor::GetParamIO
 
 判斷指定的參數為輸入或輸出參數。
 
@@ -250,7 +250,7 @@ enum DBPARAMIOENUM {
 
 傳回**真**成功或**false**失敗。
 
-## <a name="getparamlength"></a> Cdynamicparameteraccessor:: Getparamlength
+## <a name="getparamlength"></a> CDynamicParameterAccessor::GetParamLength
 
 擷取儲存在緩衝區中的指定參數的長度。
 
@@ -275,7 +275,7 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 
 第一個覆寫會傳回**真**成功或**false**失敗。 第二個覆寫會指向含有參數長度的記憶體。
 
-## <a name="getparamname"></a> Cdynamicparameteraccessor:: Getparamname
+## <a name="getparamname"></a> CDynamicParameterAccessor::GetParamName
 
 擷取指定參數的名稱。
 
@@ -294,7 +294,7 @@ LPOLESTR GetParamName(DBORDINAL nParam) const throw();
 
 指定參數的名稱。
 
-## <a name="getparamstatus"></a> Cdynamicparameteraccessor:: Getparamstatus
+## <a name="getparamstatus"></a> CDynamicParameterAccessor::GetParamStatus
 
 擷取儲存在緩衝區中的指定參數的狀態。
 
@@ -313,13 +313,13 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 [in] 參數編號 (從 1 開始位移)。 參數 0 保留作為傳回值。 參數編號是根據參數在 SQL 或預存程序呼叫中的順序編制的索引。 請參閱[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)的範例。
 
 *pStatus*<br/>
-[out]包含指定的參數 DBSTATUS 狀態變數的指標。 如需 DBSTATUS 值的資訊，請參閱[狀態](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。
+[out]包含指定的參數 DBSTATUS 狀態變數的指標。 如需 DBSTATUS 值的資訊，請參閱[狀態](/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。
 
 ### <a name="remarks"></a>備註
 
 第一個覆寫會傳回**真**成功或**false**失敗。 第二個覆寫會指向包含狀態的指定參數的記憶體。
 
-## <a name="getparamstring"></a> Cdynamicparameteraccessor:: Getparamstring
+## <a name="getparamstring"></a> CDynamicParameterAccessor::GetParamString
 
 擷取儲存在緩衝區中的指定參數的字串資料。
 
@@ -367,7 +367,7 @@ bool GetParamString(DBORDINAL nParam,
 
 使用`GetParamString`來擷取緩衝區的字串參數資料。 使用[GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md)擷取非字串參數的資料緩衝區。
 
-## <a name="getparamtype"></a> Cdynamicparameteraccessor:: Getparamtype
+## <a name="getparamtype"></a> CDynamicParameterAccessor::GetParamType
 
 擷取指定參數的資料類型。
 
@@ -390,7 +390,7 @@ bool GetParamType(DBORDINAL nParam,
 
 傳回**真**成功或**false**失敗。
 
-## <a name="setparam"></a> Cdynamicparameteraccessor:: Setparam
+## <a name="setparam"></a> CDynamicParameterAccessor::SetParam
 
 設定使用指定的 （非字串） 資料的參數緩衝區。
 
@@ -425,7 +425,7 @@ bool SetParam(TCHAR* pParamName,
 [in]要包含的資料寫入緩衝區記憶體的指標。
 
 *status*<br/>
-[in] DBSTATUS 資料行狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。
+[in] DBSTATUS 資料行狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。
 
 ### <a name="return-value"></a>傳回值
 
@@ -433,7 +433,7 @@ bool SetParam(TCHAR* pParamName,
 
 使用`SetParam`設定緩衝區中的非字串參數的資料。 使用[SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md)設定緩衝區中的字串參數的資料。
 
-## <a name="setparamlength"></a> Cdynamicparameteraccessor:: Setparamlength
+## <a name="setparamlength"></a> CDynamicParameterAccessor::SetParamLength
 
 設定儲存在緩衝區中的指定參數的長度。
 
@@ -456,7 +456,7 @@ bool SetParamLength(DBORDINAL nParam,
 
 傳回**真**成功或**false**失敗。
 
-## <a name="setparamstatus"></a> Cdynamicparameteraccessor:: Setparamstatus
+## <a name="setparamstatus"></a> CDynamicParameterAccessor::SetParamStatus
 
 設定儲存在緩衝區中的指定參數的狀態。
 
@@ -473,13 +473,13 @@ bool SetParamStatus(DBORDINAL nParam,
 [in] 參數編號 (從 1 開始位移)。 參數 0 保留作為傳回值。 參數編號是根據參數在 SQL 或預存程序呼叫中的順序編制的索引。 請參閱[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)的範例。
 
 *status*<br/>
-[in]指定的參數 DBSTATUS 狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。
+[in]指定的參數 DBSTATUS 狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。
 
 ### <a name="remarks"></a>備註
 
 傳回**真**成功或**false**失敗。
 
-## <a name="setparamstring"></a> Cdynamicparameteraccessor:: Setparamstring
+## <a name="setparamstring"></a> CDynamicParameterAccessor::SetParamString
 
 設定儲存在緩衝區中的指定參數的字串資料。
 
@@ -502,7 +502,7 @@ bool SetParamString(DBORDINAL nParam,
 [in]ANSI 的指標 (**CHAR**) 或 Unicode (**WCHAR**) 字串的指定參數的資料。 請參閱 oledb.h DBSTATUS。
 
 *status*<br/>
-[in]指定的參數 DBSTATUS 狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。
+[in]指定的參數 DBSTATUS 狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。
 
 ### <a name="remarks"></a>備註
 

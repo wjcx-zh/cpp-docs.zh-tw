@@ -16,16 +16,16 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: c6736eac040b2186ddb1b1dc1c5c3a5b6b957d20
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: b9d6c9aab2b12859462abfa2a842754128e72306
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556149"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416653"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl 類別
 
-提供實作[ICommandProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723044(v=vs.85))介面。
+提供實作[ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85))介面。
 
 ## <a name="syntax"></a>語法
 
@@ -75,7 +75,7 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>參數
 
-請參閱[icommandproperties:: Getproperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723119(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[icommandproperties:: Getproperties](/previous-versions/windows/desktop/ms723119(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ### <a name="remarks"></a>備註
 
@@ -94,7 +94,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>參數
 
-請參閱[icommandproperties:: Setproperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms711497(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[icommandproperties:: Setproperties](/previous-versions/windows/desktop/ms711497(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ## <a name="see-also"></a>另請參閱
 

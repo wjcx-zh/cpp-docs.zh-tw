@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: ca6185e7ee41726c7bf583056cb66eeb1be7021c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 634aa4adbe4e7084266be43ef932074373835c10
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303430"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414287"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl 類別
 
@@ -489,7 +489,7 @@ virtual BOOL CreateEx(
 指定編輯控制項的樣式。 適用於所列出的視窗樣式的組合 **< 備註 > 一**一節[建立](#create)並[編輯控制項的樣式](/windows/desktop/Controls/edit-control-styles)Windows SDK 中所述。
 
 *rect*<br/>
-參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。
+參考[RECT](/previous-versions/dd162897\(v=vs.85\))結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。
 
 *pParentWnd*<br/>
 是控制項的父視窗的指標。

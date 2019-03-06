@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MIDL linker option
 - MIDL, command line options
 ms.assetid: 22dc259e-b34c-4ed3-a380-4beb734482c1
-ms.openlocfilehash: 273e4ea5776c0de5af16eba235c5775d6f4c4b54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e1025f4ce5bfd7dfff40a53472ad71870c694e6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525563"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412948"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (指定 MIDL 命令列引數的選項)
 
@@ -24,7 +24,7 @@ ms.locfileid: "50525563"
 
 ## <a name="syntax"></a>語法
 
-> **/MIDL:\@**<em>檔案</em>
+> **/MIDL:\@**<em>file</em>
 
 ## <a name="arguments"></a>引數
 

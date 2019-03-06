@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-ms.openlocfilehash: 75f8fcae2a51e4e8296f6f3c252888b6ca55ad20
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69e1868990358aeb4d790366b3a0bfa8d8999823
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520350"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414743"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>在 Visual Studio 中產生資訊清單
 
@@ -31,7 +31,7 @@ ms.locfileid: "50520350"
 
 ## <a name="see-also"></a>另請參閱
 
-[如何：在 C/C++ 應用程式中嵌入資訊清單](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md)<br/>
+[如何：在 C/C++ 應用程式中內嵌資訊清單](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md)<br/>
 [關於私用組件](/windows/desktop/SbsCs/about-private-assemblies-)<br/>
 [資訊清單工具](/windows/desktop/SbsCs/mt-exe)<br/>
 [了解 C/C++ 程式的資訊清單產生過程](../build/understanding-manifest-generation-for-c-cpp-programs.md)

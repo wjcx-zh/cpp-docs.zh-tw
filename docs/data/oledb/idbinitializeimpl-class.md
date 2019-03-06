@@ -39,16 +39,16 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 4d9499262d0b4167d7c3941113f49bfa23e0467b
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 18145f3dc9545f79b08d9d92cacdafad0520c992
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556760"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418738"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl 類別
 
-提供實作[IDBInitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms713706(v=vs.85))介面。
+提供實作[IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85))介面。
 
 ## <a name="syntax"></a>語法
 
@@ -106,7 +106,7 @@ IDBInitializeImpl();
 
 所有資料成員都初始化。
 
-## <a name="initialize"></a> Idbinitializeimpl:: Initialize
+## <a name="initialize"></a> IDBInitializeImpl::Initialize
 
 您可以透過準備資料來源物件的屬性支援來初始化該物件。
 
@@ -118,9 +118,9 @@ STDMETHOD(Initialize)(void);
 
 ### <a name="remarks"></a>備註
 
-請參閱[idbinitialize:: Initialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms718026(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[idbinitialize:: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85))中*OLE DB 程式設計人員參考*。
 
-## <a name="uninitialize"></a> Idbinitializeimpl:: Uninitialize
+## <a name="uninitialize"></a> IDBInitializeImpl::Uninitialize
 
 位置的資料來源物件處於未初始化狀態，釋出內部的資源，例如屬性支援。
 
@@ -132,9 +132,9 @@ STDMETHOD(Uninitialize)(void);
 
 ### <a name="remarks"></a>備註
 
-請參閱[Uninitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms719648(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[Uninitialize](/previous-versions/windows/desktop/ms719648(v=vs.85))中*OLE DB 程式設計人員參考*。
 
-## <a name="dwstatus"></a> Idbinitializeimpl:: M_dwstatus
+## <a name="dwstatus"></a> IDBInitializeImpl::m_dwStatus
 
 資料來源的旗標。
 
@@ -162,7 +162,7 @@ enum DATASOURCE_FLAGS {
 |`DSF_PERSIST_DIRTY`|如果資料來源物件 （亦即，如果已有變更），需要持續性，設定。|
 |`DSF_INITIALIZED`|如果已初始化資料來源，設定。|
 
-## <a name="pcutlpropinfo"></a> Idbinitializeimpl:: M_pcutlpropinfo
+## <a name="pcutlpropinfo"></a> IDBInitializeImpl::m_pCUtlPropInfo
 
 實作物件，如 DB 內容的詳細資訊的指標。
 

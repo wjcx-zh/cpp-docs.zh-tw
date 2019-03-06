@@ -2,12 +2,12 @@
 title: /APPCONTAINER （UWP/Microsoft Store 應用程式）
 ms.date: 11/04/2016
 ms.assetid: 9a432db5-7640-460b-ab18-6f61fa7daf6f
-ms.openlocfilehash: 306ffc7cda7cc6045b5decd6824fdc3848233824
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c58559a908a9281507c74c2dd3ff7e56490cb6e3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541319"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418668"
 ---
 # <a name="appcontainer-microsoft-store-app"></a>/APPCONTAINER （Microsoft Store 應用程式）
 

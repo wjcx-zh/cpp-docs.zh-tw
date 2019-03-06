@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: b570b76328ee9824610aac495d97cede19189cf9
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 75ebc466b55cdc2221783531024eefece2e976bb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176428"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413767"
 ---
 # <a name="creating-precompiled-header-files"></a>建立先行編譯標頭檔
 
@@ -69,11 +69,11 @@ Microsoft C 和 C++ 編譯器提供對任何 C 或 C++ 程式碼進行先行編�
 
 編譯器選項參考主題 **/Yu**並 **/Yc**討論如何存取這項功能在開發環境中的。
 
-## <a name="precompiled-header-consistency-rules"></a>先行編譯標頭檔的一致性規則
+## <a name="precompiled-header-consistency-rules"></a>先行編譯標頭的一致性規則
 
 因為 PCH 檔案包含電腦環境的相關資訊，以及關於此計畫的記憶體位址資訊，您應該只使用 PCH 檔案在電腦上的，建立位置。
 
-## <a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>針對每個檔案使用的先行編譯標頭檔的一致性規則
+## <a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>針對每個檔案使用的先行編譯標頭的一致性規則
 
 [/Yu](../../build/reference/yu-use-precompiled-header-file.md)編譯器選項可讓您指定要使用哪一個 PCH 檔案。
 
@@ -145,7 +145,7 @@ PCH 檔案並不會包含已在作用中建立時的 include 路徑的相關資�
 > [!NOTE]
 >  先行編譯標頭設備適合只有在 C 和 c + + 原始程式檔。
 
-## <a name="using-precompiled-headers-in-a-project"></a>在專案中使用先行編譯標頭檔
+## <a name="using-precompiled-headers-in-a-project"></a>在專案中使用先行編譯的標頭
 
 前幾節會提供的先行編譯標頭： /Yc 和 /Yu，/Fp 選項中，而[hdrstop](../../preprocessor/hdrstop.md) pragma。 本章節描述的專案中; 中使用手動先行編譯標頭選項的方法範例 makefile 與它所管理的程式碼結束。
 

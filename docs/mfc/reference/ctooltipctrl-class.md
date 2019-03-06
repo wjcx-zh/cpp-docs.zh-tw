@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 7750b7335b99bbfaa02c1f310c70bb868ef56573
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6055926e05f8a7f9fbecec113e859d08e6b6e636
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300956"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420839"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -211,7 +211,7 @@ BOOL AddTool(
 包含此工具的文字的字串資源的識別碼。
 
 *lpRectTool*<br/>
-指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，其中包含工具的座標的週框矩形。 座標是相對於視窗所識別的工作區的左上角*pWnd*。
+指標[RECT](/previous-versions/dd162897\(v=vs.85\))結構，其中包含工具的座標的週框矩形。 座標是相對於視窗所識別的工作區的左上角*pWnd*。
 
 *nIDTool*<br/>
 此工具的識別碼。
@@ -249,7 +249,7 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>參數
 
 *lprc*<br/>
-指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，其中包含工具提示視窗矩形或文字的顯示矩形。
+指標[RECT](/previous-versions/dd162897\(v=vs.85\))結構，其中包含工具提示視窗矩形或文字的顯示矩形。
 
 *bLarger*<br/>
 如果為 TRUE， *lprc*用來指定文字顯示矩形，並且會收到對應的視窗矩形。 如果為 FALSE， *lprc*用來指定視窗的矩形中，並且會收到對應的文字顯示矩形。
@@ -454,7 +454,7 @@ void GetMargin(LPRECT lprc) const;
 ### <a name="parameters"></a>參數
 
 *lprc*<br/>
-位址`RECT`結構，將會收到邊界資訊。 成員[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構未定義的周框。 此訊息，請以結構成員解譯，如下所示：
+位址`RECT`結構，將會收到邊界資訊。 成員[RECT](/previous-versions/dd162897\(v=vs.85\))結構未定義的周框。 此訊息，請以結構成員解譯，如下所示：
 
 |成員|表示法|
 |------------|--------------------|
@@ -868,7 +868,7 @@ void SetToolRect(
 此工具的識別碼。
 
 *lpRect*<br/>
-指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定新的週框矩形。
+指標[RECT](/previous-versions/dd162897\(v=vs.85\))結構，指定新的週框矩形。
 
 ##  <a name="setwindowtheme"></a>  CToolTipCtrl::SetWindowTheme
 

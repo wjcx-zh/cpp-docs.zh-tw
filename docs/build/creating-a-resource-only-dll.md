@@ -5,16 +5,16 @@ helpviewer_keywords:
 - resource-only DLLs [C++], creating
 - DLLs [C++], creating
 ms.assetid: e6b1d4da-7275-467f-a58c-a0a8a5835199
-ms.openlocfilehash: 9a31d4197e71fb6cf20a0ecfce778552357d7e06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2854c9ca993e9f1f27cab60cdd09e28ce2985f1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612910"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412640"
 ---
 # <a name="creating-a-resource-only-dll"></a>建立僅含資源的 DLL
 
-資源專用 DLL 是包含資源，例如圖示、 點陣圖、 字串和對話方塊而不是包含的 DLL。 使用資源專用 DLL 是共用相同的多個程式間的資源集的好方法。 它也會提供多種語言的當地語系化資源的應用程式的好方法 (請參閱[MFC 應用程式中的當地語系化資源： 附屬 Dll](../build/localized-resources-in-mfc-applications-satellite-dlls.md))。
+資源專用 DLL 是包含資源，例如圖示、 點陣圖、 字串和對話方塊而不是包含的 DLL。 使用資源專用 DLL 是共用相同的多個程式間的資源集的好方法。 它也會提供多種語言的當地語系化資源的應用程式的好方法 (請參閱[MFC 應用程式中的當地語系化資源：附屬 Dll](../build/localized-resources-in-mfc-applications-satellite-dlls.md))。
 
 若要建立資源專用 DLL 時，您會建立新的 (非 MFC) 的 Win32 DLL 專案，並將您的資源新增至專案。
 

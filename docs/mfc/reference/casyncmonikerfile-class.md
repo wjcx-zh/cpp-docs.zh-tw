@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStartBinding
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
-ms.openlocfilehash: 48d7c3b5dd1b43c7a1639c6d5c56979b422d7017
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b86cba0c2e8f7991902a552d404355d6c1474138
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262619"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425818"
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile 類別
 
@@ -158,7 +158,7 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
 
 [CAsyncMonikerFile::Open](#open)呼叫`CreateBindStatusCallback`。
 
-如需有關非同步 moniker 和非同步繫結的詳細資訊，請參閱 < [IBindStatusCallback](https://msdn.microsoft.com/library/ie/ms775060)介面並[如何在非同步繫結和儲存體工作](/windows/desktop/Stg/how-asynchronous-binding-and-storage-work)。 如需彙總的討論，請參閱 <<c0> [ 彙總](/windows/desktop/com/aggregation)。 所有的三個主題都在 Windows SDK 中。
+如需有關非同步 moniker 和非同步繫結的詳細資訊，請參閱 < [IBindStatusCallback](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775060\(v=vs.85\))介面並[如何在非同步繫結和儲存體工作](/windows/desktop/Stg/how-asynchronous-binding-and-storage-work)。 如需彙總的討論，請參閱 <<c0> [ 彙總](/windows/desktop/com/aggregation)。 所有的三個主題都在 Windows SDK 中。
 
 ##  <a name="getbindinfo"></a>  CAsyncMonikerFile::GetBindInfo
 

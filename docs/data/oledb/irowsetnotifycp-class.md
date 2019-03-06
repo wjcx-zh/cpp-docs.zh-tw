@@ -24,16 +24,16 @@ helpviewer_keywords:
 - Fire_OnRowChange method
 - Fire_OnRowsetChange method
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-ms.openlocfilehash: 119cc79cf0f3ed5784e1b3b291fce52f06695d36
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: e3c85092b4abf074107eadb73ca0d589742c6ecd
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556279"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420852"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP 類別
 
-實作連接點介面的提供者站台[IRowsetNotify](https://docs.microsoft.com/previous-versions/windows/desktop/ms712959(v=vs.85))。
+實作連接點介面的提供者站台[IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85))。
 
 ## <a name="syntax"></a>語法
 
@@ -56,7 +56,7 @@ class IRowsetNotifyCP :
 支援重新進入的 mutex 類別 (預設值是`CComSharedMutex`)。 Mutex 是同步處理物件，可讓一個執行緒互斥資源的存取權。
 
 *piid*<br/>
-介面識別碼指標 (`IID*`) 的`IRowsetNotify`連接點的介面。 預設值是 `&__uuidof(IRowsetNotify)`。
+介面識別碼指標 (`IID*`) 的`IRowsetNotify`連接點的介面。 預設值為 `&__uuidof(IRowsetNotify)`。
 
 *DynamicUnkArray*<br/>
 類型的陣列[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)，這是動態配置的陣列的`IUnknown`指標給用戶端接收器介面。
@@ -83,9 +83,9 @@ class IRowsetNotifyCP :
 
 實作通知的詳細資訊，請參閱 「 支援通知 」，在[建立可更新的提供者](../../data/oledb/creating-an-updatable-provider.md)。
 
-## <a name="onfieldchange"></a> Irowsetnotifycp:: Fire_onfieldchange
+## <a name="onfieldchange"></a> IRowsetNotifyCP::Fire_OnFieldChange
 
-廣播[OnFieldChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715961(v=vs.85))事件來通知取用者的資料行的值變更。
+廣播[OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85))事件來通知取用者的資料行的值變更。
 
 ### <a name="syntax"></a>語法
 
@@ -101,11 +101,11 @@ HRESULT Fire_OnFieldChange(IRowset* pRowset,
 
 #### <a name="parameters"></a>參數
 
-請參閱[IRowsetNotify::OnFieldChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715961(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85))中*OLE DB 程式設計人員參考*。
 
-## <a name="onrowchange"></a> Irowsetnotifycp:: Fire_onrowchange
+## <a name="onrowchange"></a> IRowsetNotifyCP::Fire_OnRowChange
 
-廣播[OnRowChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722694(v=vs.85))事件，以連接點上的所有接聽程式`IID_IRowsetNotify`來通知取用者的變更會影響資料列。
+廣播[OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85))事件，以連接點上的所有接聽程式`IID_IRowsetNotify`來通知取用者的變更會影響資料列。
 
 ### <a name="syntax"></a>語法
 
@@ -120,11 +120,11 @@ HRESULT Fire_OnRowChange(IRowset* pRowset,
 
 #### <a name="parameters"></a>參數
 
-請參閱[irowsetnotify:: Onrowchange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722694(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[irowsetnotify:: Onrowchange](/previous-versions/windows/desktop/ms722694(v=vs.85))中*OLE DB 程式設計人員參考*。
 
-## <a name="onrowsetchange"></a> Irowsetnotifycp:: Fire_onrowsetchange
+## <a name="onrowsetchange"></a> IRowsetNotifyCP::Fire_OnRowsetChange
 
-廣播[OnRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722669(v=vs.85))事件，以連接點上的所有接聽程式`IID_IRowsetNotify`來通知取用者的變更會影響整個資料列集。
+廣播[OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85))事件，以連接點上的所有接聽程式`IID_IRowsetNotify`來通知取用者的變更會影響整個資料列集。
 
 ### <a name="syntax"></a>語法
 
@@ -137,7 +137,7 @@ HRESULT Fire_OnRowsetChange(IRowset* pRowset,
 
 #### <a name="parameters"></a>參數
 
-請參閱[IRowsetNotify::OnRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722669(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ## <a name="see-also"></a>另請參閱
 

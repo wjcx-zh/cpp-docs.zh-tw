@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 0042fffb0eaa383909edd6647bcdb4375341d8dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a62919ebd6b2aba54aa8003743b0006571cdedf4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605851"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419665"
 ---
 # <a name="cimage-class"></a>CImage 類別
 
@@ -86,14 +86,14 @@ class CImage
 
 |名稱|描述|
 |----------|-----------------|
-|[Cimage:: Alphablend](#alphablend)|顯示具有透明或半透明的像素的點陣圖。|
+|[CImage::AlphaBlend](#alphablend)|顯示具有透明或半透明的像素的點陣圖。|
 |[CImage::Attach](#attach)|附加至 HBITMAP`CImage`物件。 可以搭配非 DIB 區段點陣圖或 DIB 區段點陣圖。|
 |[CImage::BitBlt](#bitblt)|來源裝置內容的點陣圖複製到這個目前的裝置內容。|
 |[CImage::Create](#create)|建立 DIB 區段點陣圖，並將它附加至先前建構`CImage`物件。|
 |[CImage::CreateEx](#createex)|建立 DIB 區段點陣圖 （與其他參數），並將它附加至先前建構`CImage`物件。|
 |[CImage::Destroy](#destroy)|卸離點陣圖`CImage`物件，並終結點陣圖。|
 |[CImage::Detach](#detach)|卸離點陣圖`CImage`物件。|
-|[Cimage](#draw)|來源矩形的點陣圖複製到目的地矩形。 `Draw` 會自動縮放或壓縮點陣圖以符合目的地矩形的維度，如有必要，並處理 alpha 透明混色和透明的色彩。|
+|[CImage::Draw](#draw)|來源矩形的點陣圖複製到目的地矩形。 `Draw` 會自動縮放或壓縮點陣圖以符合目的地矩形的維度，如有必要，並處理 alpha 透明混色和透明的色彩。|
 |[CImage::GetBits](#getbits)|擷取點陣圖的實際像素值的指標。|
 |[CImage::GetBPP](#getbpp)|擷取每個像素的位元。|
 |[CImage::GetColorTable](#getcolortable)|從範圍的色彩表中的項目擷取紅、 綠、 藍 (RGB) 色彩值。|
@@ -258,7 +258,7 @@ Y 軸座標，以邏輯單位，目的地矩形左上角。
 Alpha 透明混色函式的來源和目的地點陣圖、 全域的 alpha 值，要套用至整個來源點陣圖和來源點陣圖的格式資訊。 來源和目的地 blend 函式是目前僅限於 AC_SRC_OVER。
 
 *pointDest*<br/>
-參考[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)識別目的地矩形，以邏輯單位表示的左上的角的結構。
+參考[點](/previous-versions/dd162805\(v=vs.85\))識別目的地矩形，以邏輯單位表示的左上的角的結構。
 
 *nDestWidth*<br/>
 以邏輯單位，目的地矩形的寬度。
@@ -279,7 +279,7 @@ Alpha 透明混色函式的來源和目的地點陣圖、 全域的 alpha 值，
 以邏輯單位，來源矩形的高度。
 
 *rectDest*<br/>
-參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，用來識別目的地。
+參考[RECT](/previous-versions/dd162897\(v=vs.85\))結構，用來識別目的地。
 
 *rectSrc*<br/>
 參考`RECT`結構，來識別來源。
@@ -368,7 +368,7 @@ BOOL BitBlt(
 要執行的點陣作業。 點陣作業程式碼會定義如何結合以形成目的地的來源、 目的地和模式的位元 （如目前選取的筆刷所定義）。 請參閱[BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) Windows SDK 中針對其他的點陣作業程式碼及其描述的清單。
 
 *pointDest*<br/>
-A[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)指出目的地矩形左上的角的結構。
+A[點](/previous-versions/dd162805\(v=vs.85\))指出目的地矩形左上的角的結構。
 
 *nDestWidth*<br/>
 以邏輯單位，目的地矩形的寬度。
@@ -383,7 +383,7 @@ A[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)指出目的�
 邏輯 y 座標的來源矩形左上角。
 
 *rectDest*<br/>
-A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)指出目的地矩形的結構。
+A [RECT](/previous-versions/dd162897\(v=vs.85\))指出目的地矩形的結構。
 
 *pointSrc*<br/>
 A`POINT`指出來源矩形左上的角的結構。
@@ -523,7 +523,7 @@ HBITMAP Detach() throw();
 
 卸離後，點陣圖的控制代碼或如果沒有點陣圖會附加 NULL。
 
-##  <a name="draw"></a>  Cimage
+##  <a name="draw"></a>  CImage::Draw
 
 來源裝置內容的點陣圖複製到目前的裝置內容。
 
@@ -595,13 +595,13 @@ Y 軸座標，以邏輯單位，來源矩形左上角。
 以邏輯單位，來源矩形的高度。
 
 *rectDest*<br/>
-參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，用來識別目的地。
+參考[RECT](/previous-versions/dd162897\(v=vs.85\))結構，用來識別目的地。
 
 *rectSrc*<br/>
 參考`RECT`結構，來識別來源。
 
 *pointDest*<br/>
-參考[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)識別目的地矩形，以邏輯單位表示的左上的角的結構。
+參考[點](/previous-versions/dd162805\(v=vs.85\))識別目的地矩形，以邏輯單位表示的左上的角的結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -763,7 +763,7 @@ _T("All Image Files"));
 
 參數*strExporter*格式：
 
-檔案 description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;....file 描述*n*&#124;\*.ext *n*&#124;&#124;
+file description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;...file description *n*&#124;\*.ext *n*&#124;&#124;
 
 位置 '&#124;' 分隔符號字元由`chSeparator`。 例如: 
 
@@ -854,7 +854,7 @@ _T("All Image Files"));
 
 參數*strImporter*格式：
 
-檔案 description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;....file 描述*n*&#124;\*.ext *n*&#124;&#124;
+file description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;...file description *n*&#124;\*.ext *n*&#124;&#124;
 
 位置 '&#124;' 所指定的分隔符號字元*chSeparator*。 例如: 
 
@@ -1259,10 +1259,10 @@ Y 軸座標，以邏輯單位，來源矩形左上角。
 單色點陣圖左上角的 y 座標。
 
 *rectSrc*<br/>
-參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定來源矩形的座標。
+參考[RECT](/previous-versions/dd162897\(v=vs.85\))結構，指定來源矩形的座標。
 
 *pointMask*<br/>
-A[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)表示遮罩點陣圖左上的角的結構。
+A[點](/previous-versions/dd162805\(v=vs.85\))表示遮罩點陣圖左上的角的結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1384,7 +1384,7 @@ void SetPixel(int x, int y, COLORREF color) throw();
 *y*<br/>
 要設定之像素垂直位置。
 
-*色彩*<br/>
+*color*<br/>
 要設定像素的色彩。
 
 ### <a name="remarks"></a>備註
@@ -1519,7 +1519,7 @@ Y 軸座標，以邏輯單位，目的地矩形左上角。
 要執行的點陣作業。 點陣作業程式碼會定義如何結合以形成目的地的來源、 目的地和模式的位元 （如目前選取的筆刷所定義）。 請參閱[BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) Windows SDK 中針對其他的點陣作業程式碼及其描述的清單。
 
 *rectDest*<br/>
-參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，用來識別目的地。
+參考[RECT](/previous-versions/dd162897\(v=vs.85\))結構，用來識別目的地。
 
 *xSrc*<br/>
 X 軸座標，以邏輯單位，來源矩形左上角。
@@ -1544,7 +1544,7 @@ Y 軸座標，以邏輯單位，來源矩形左上角。
 
 如需詳細資訊，請參閱 < [StretchBlt](/windows/desktop/api/wingdi/nf-wingdi-stretchblt) Windows SDK 中。
 
-##  <a name="transparentblt"></a>  Transparentblt
+##  <a name="transparentblt"></a>  CImage::TransparentBlt
 
 來源裝置內容的點陣圖複製到這個目前的裝置內容。
 
@@ -1602,7 +1602,7 @@ Y 軸座標，以邏輯單位，目的地矩形左上角。
 中要視為透明的來源點陣圖的色彩。 依預設，CLR_INVALID，表示應該使用目前設定為影像的透明色彩的色彩。
 
 *rectDest*<br/>
-參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，用來識別目的地。
+參考[RECT](/previous-versions/dd162897\(v=vs.85\))結構，用來識別目的地。
 
 *xSrc*<br/>
 X 軸座標，以邏輯單位，來源矩形左上角。

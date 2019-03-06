@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 2ce9f3fa18d2a17d499b65258cfda52783ce46c5
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 13c41b97190ff13b87361b6e8344b8f17798708a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556942"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413338"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl 類別
 
@@ -62,9 +62,9 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 
 ## <a name="remarks"></a>備註
 
-[IDBProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms719607(v=vs.85))是資料來源物件的強制介面和列舉值的選用介面。 不過，如果列舉程式會公開[IDBInitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms713706(v=vs.85))，它必須公開`IDBProperties`。 `IDBPropertiesImpl` 會實作`IDBProperties`使用所定義的靜態函式[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
+[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85))是資料來源物件的強制介面和列舉值的選用介面。 不過，如果列舉程式會公開[IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85))，它必須公開`IDBProperties`。 `IDBPropertiesImpl` 會實作`IDBProperties`使用所定義的靜態函式[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
 
-## <a name="getproperties"></a> Idbpropertiesimpl:: Getproperties
+## <a name="getproperties"></a> IDBPropertiesImpl::GetProperties
 
 傳回目前所設定的資料來源物件初始化屬性群組中目前所設定的屬性值的資料來源、 資料來源資訊，並初始化屬性群組中的屬性值列舉值。
 
@@ -79,7 +79,7 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>參數
 
-請參閱[idbproperties:: Getproperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms714344(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[idbproperties:: Getproperties](/previous-versions/windows/desktop/ms714344(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 某些參數會對應至*OLE DB 程式設計人員參考*參數中所述的不同名稱的`IDBProperties::GetProperties`:
 
@@ -94,7 +94,7 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 
 如果提供者初始化時，這個方法會傳回 DBPROPSET_DATASOURCE，DBPROPSET_DATASOURCEINFO、 的屬性值的資料來源物件目前所設定的 DBPROPSET_DBINIT 屬性群組。 如果尚未初始化提供者，它會傳回僅限 DBPROPSET_DBINIT 群組屬性。
 
-## <a name="getpropertyinfo"></a> Idbpropertiesimpl:: Getpropertyinfo
+## <a name="getpropertyinfo"></a> IDBPropertiesImpl::GetPropertyInfo
 
 傳回資料來源所支援的屬性資訊。
 
@@ -110,7 +110,7 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>參數
 
-請參閱[idbproperties:: Getpropertyinfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms718175(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[idbproperties:: Getpropertyinfo](/previous-versions/windows/desktop/ms718175(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 某些參數會對應至*OLE DB 程式設計人員參考*參數中所述的不同名稱的`IDBProperties::GetPropertyInfo`:
 
@@ -123,7 +123,7 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 
 會使用[idbinitializeimpl:: M_pcutlpropinfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md)來實作這項功能。
 
-## <a name="setproperties"></a> Idbpropertiesimpl:: Setproperties
+## <a name="setproperties"></a> IDBPropertiesImpl::SetProperties
 
 列舉值的資料來源，並初始化屬性群組，針對資料來源物件或初始化屬性群組中，設定屬性。
 
@@ -136,7 +136,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>參數
 
-請參閱[idbproperties:: Setproperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723049(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[idbproperties:: Setproperties](/previous-versions/windows/desktop/ms723049(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ### <a name="remarks"></a>備註
 

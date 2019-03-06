@@ -43,12 +43,12 @@ helpviewer_keywords:
 - registry, writing to
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
-ms.openlocfilehash: d23eef1d48674751a725e076d1b652b304ad40a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1075c70b10ca8c59272e9a9de8a9a3fd7aa248e6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508390"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415080"
 ---
 # <a name="windows-operations-ccli"></a>Windows 作業 (C++/CLI)
 
@@ -144,7 +144,7 @@ int main( )
 
 <xref:Microsoft.Win32.Registry>類別是只是靜態的執行個體的容器<xref:Microsoft.Win32.RegistryKey>。 每個執行個體表示的根登錄節點。 執行個體<xref:Microsoft.Win32.Registry.ClassesRoot>， <xref:Microsoft.Win32.Registry.CurrentConfig>， <xref:Microsoft.Win32.Registry.CurrentUser>， <xref:Microsoft.Win32.Registry.LocalMachine>，和<xref:Microsoft.Win32.Registry.Users>。
 
-此外若要在靜態的中的物件<xref:Microsoft.Win32.Registry>類別是唯讀。 此外，執行個體的<xref:Microsoft.Win32.RegistryKey>類別來存取登錄的內容建立的物件也是唯讀。 如需如何覆寫這個行為的範例，請參閱 <<c0> [ 如何： 將資料寫入至 Windows 登錄 (C + + /cli CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)。
+此外若要在靜態的中的物件<xref:Microsoft.Win32.Registry>類別是唯讀。 此外，執行個體的<xref:Microsoft.Win32.RegistryKey>類別來存取登錄的內容建立的物件也是唯讀。 如需如何覆寫這個行為的範例，請參閱[How to:將資料寫入至 Windows 登錄 (C + + /cli CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)。
 
 有兩個額外的物件中<xref:Microsoft.Win32.Registry>類別：<xref:Microsoft.Win32.Registry.DynData>和<xref:Microsoft.Win32.Registry.PerformanceData>。 兩者都是執行個體<xref:Microsoft.Win32.RegistryKey>類別。 <xref:Microsoft.Win32.Registry.DynData>物件包含動態登錄資訊，只支援 Windows 98 和 Windows me。 <xref:Microsoft.Win32.Registry.PerformanceData>物件可以用來存取使用 Windows 效能監視系統的應用程式的效能計數器資訊。 <xref:Microsoft.Win32.Registry.PerformanceData>節點表示資訊不會實際儲存在登錄中，因此無法檢視使用 Regedit.exe。
 
@@ -503,7 +503,7 @@ int main()
 
 ### <a name="remarks"></a>備註
 
-您可用來存取登錄中的以.NET Framework<xref:Microsoft.Win32.Registry>並[RegistryKey](https://msdn.microsoft.com/library/microsoft.win32.registrykey.aspx)類別，這兩者都定義在<xref:Microsoft.Win32>命名空間。 **登錄**類別是靜態的執行個體的容器<xref:Microsoft.Win32.RegistryKey>類別。 每個執行個體表示的根登錄節點。 執行個體<xref:Microsoft.Win32.Registry.ClassesRoot>， <xref:Microsoft.Win32.Registry.CurrentConfig>， <xref:Microsoft.Win32.Registry.CurrentUser>， <xref:Microsoft.Win32.Registry.LocalMachine>，和<xref:Microsoft.Win32.Registry.Users>。
+您可用來存取登錄中的以.NET Framework<xref:Microsoft.Win32.Registry>並<xref:Microsoft.Win32.RegistryKey>類別，這兩者都定義在<xref:Microsoft.Win32>命名空間。 **登錄**類別是靜態的執行個體的容器<xref:Microsoft.Win32.RegistryKey>類別。 每個執行個體表示的根登錄節點。 執行個體<xref:Microsoft.Win32.Registry.ClassesRoot>， <xref:Microsoft.Win32.Registry.CurrentConfig>， <xref:Microsoft.Win32.Registry.CurrentUser>， <xref:Microsoft.Win32.Registry.LocalMachine>，和<xref:Microsoft.Win32.Registry.Users>。
 
 ## <a name="related-sections"></a>相關章節
 

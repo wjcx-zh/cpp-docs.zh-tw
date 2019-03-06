@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IDBCreateSessionImpl class
 - CreateSession method
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
-ms.openlocfilehash: ecc06bf5e3514ea87c86de17dbafd59b9da9f8b6
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 36f5a359051dbd5035a73514f84fb2c61ff13176
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556418"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412922"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl 類別
 
-提供實作[IDBCreateSession](https://docs.microsoft.com/previous-versions/windows/desktop/ms724076(v=vs.85))介面。
+提供實作[IDBCreateSession](/previous-versions/windows/desktop/ms724076(v=vs.85))介面。
 
 ## <a name="syntax"></a>語法
 
@@ -55,7 +55,7 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
 
 在 資料來源物件上的強制介面。
 
-## <a name="createsession"></a> Idbcreatesessionimpl:: Createsession
+## <a name="createsession"></a> IDBCreateSessionImpl::CreateSession
 
 從資料來源物件建立新的工作階段，並傳回新建立的工作階段上的要求的介面。
 
@@ -69,7 +69,7 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
 
 #### <a name="parameters"></a>參數
 
-請參閱[idbcreatesession:: Createsession](https://docs.microsoft.com/previous-versions/windows/desktop/ms714942(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[idbcreatesession:: Createsession](/previous-versions/windows/desktop/ms714942(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ## <a name="see-also"></a>另請參閱
 

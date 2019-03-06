@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -IDLOUT linker option
 - IDLOUT linker option
 ms.assetid: 10d00a6a-85b4-4de1-8732-e422c6931509
-ms.openlocfilehash: b21e8eb266de9a0baa0512a82acb0ae8a9f650a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91c1a3642f157390e5a0d5c7e2f36d7adf3ca118
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500421"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417628"
 ---
 # <a name="idlout-name-midl-output-files"></a>/IDLOUT (命名 MIDL 輸出檔)
 
@@ -42,11 +42,11 @@ ms.locfileid: "50500421"
 
 /IDLOUT 也會指定其他 MIDL 編譯器與相關聯的輸出檔的檔案名稱：
 
-- *檔名*.tlb
+- *filename*.tlb
 
-- *檔名*_p.c
+- *filename*_p.c
 
-- *檔名*_i.c
+- *filename*_i.c
 
 - *檔名*.h
 

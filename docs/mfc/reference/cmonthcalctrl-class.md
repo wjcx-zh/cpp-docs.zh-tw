@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 9807d45f12b5336ebbb80ea9718af77cf8d38188
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 440d158774a716db9fba351200f2760783925cc6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303666"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413923"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 類別
 
@@ -227,10 +227,10 @@ virtual BOOL Create(
 指定套用至月曆控制項的 Windows 樣式的組合。 請參閱[月份的行事曆控制項樣式](/windows/desktop/Controls/month-calendar-control-styles)樣式的詳細資訊的 Windows SDK 中。
 
 *rect*<br/>
-參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 包含月曆控制項的大小與位置。
+參考[RECT](/previous-versions/dd162897\(v=vs.85\))結構。 包含月曆控制項的大小與位置。
 
 *pt*<br/>
-參考[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)結構，辨識月曆控制項的位置。
+參考[點](/previous-versions/dd162805\(v=vs.85\))結構，辨識月曆控制項的位置。
 
 *pParentWnd*<br/>
 指標[CWnd](../../mfc/reference/cwnd-class.md)是月曆控制項的父視窗的物件。 它必須不是 NULL。
@@ -523,7 +523,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ### <a name="parameters"></a>參數
 
 *pRect*<br/>
-指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，將會收到週框矩形的資訊。 這個參數必須是有效的位址，而且不能是 NULL。
+指標[RECT](/previous-versions/dd162897\(v=vs.85\))結構，將會收到週框矩形的資訊。 這個參數必須是有效的位址，而且不能是 NULL。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1290,11 +1290,11 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 |參數|描述|
 |---------------|-----------------|
-|*lpRect*|[in]指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，定義包含行事曆所需的數目的矩形。|
+|*lpRect*|[in]指標[RECT](/previous-versions/dd162897\(v=vs.85\))結構，定義包含行事曆所需的數目的矩形。|
 
 ### <a name="return-value"></a>傳回值
 
-指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)所定義的結構，定義的矩形，其大小小於或等於矩形*lpRect*參數。
+指標[RECT](/previous-versions/dd162897\(v=vs.85\))所定義的結構，定義的矩形，其大小小於或等於矩形*lpRect*參數。
 
 ### <a name="remarks"></a>備註
 

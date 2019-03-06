@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: d7a39dd19a51bc5bab0f924d360d594bddf89b44
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 44943803fdb422ccbf77302e7c81f23c34cc7433
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265934"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420753"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx 類別
 
@@ -150,7 +150,7 @@ virtual BOOL Create(
 指定套用至下拉式方塊的下拉式方塊樣式的組合。 請參閱**備註**如下如需樣式的詳細資訊。
 
 *rect*<br/>
-參考[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，也就是位置和下拉式方塊的大小。
+參考[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構，也就是位置和下拉式方塊的大小。
 
 *pParentWnd*<br/>
 指標[CWnd](../../mfc/reference/cwnd-class.md)物件，為下拉式方塊的父視窗 (通常`CDialog`)。 它必須不是 NULL。
@@ -210,7 +210,7 @@ virtual BOOL CreateEx(
 下拉式方塊控制項的樣式。 請參閱[建立](#create)如需樣式的清單。
 
 *rect*<br/>
-參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。
+參考[RECT](/previous-versions/dd162897\(v=vs.85\))結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。
 
 *pParentWnd*<br/>
 是控制項的父視窗的指標。

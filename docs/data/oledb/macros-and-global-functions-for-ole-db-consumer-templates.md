@@ -100,12 +100,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 1826f674e219b850e62fdae07b3a97e8b8cf2d48
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: d4ed6b86d99cdfc272b5df10ede6af6bd05ed366
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148994"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426286"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>OLE DB 消費者樣板的巨集和全域函式
 
@@ -362,7 +362,7 @@ BEGIN_COLUMN_MAP 巨集完成 END_COLUMN_MAP 巨集。 當使用者資料錄中�
 
 ### <a name="blob_entry"></a> BLOB_ENTRY
 
-BEGIN_COLUMN_MAP 與 END_COLUMN_MAP 用以繫結的二進位大型物件 ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85)))。
+BEGIN_COLUMN_MAP 與 END_COLUMN_MAP 用以繫結的二進位大型物件 ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85)))。
 
 #### <a name="syntax"></a>語法
 
@@ -390,7 +390,7 @@ BLOB_ENTRY(nOrdinal, IID, flags, data)
 
 ### <a name="blob_entry_length"></a> BLOB_ENTRY_LENGTH
 
-BEGIN_COLUMN_MAP 與 END_COLUMN_MAP 用以繫結的二進位大型物件 ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85)))。 類似於[BLOB_ENTRY](../../data/oledb/blob-entry.md)，只不過這個巨集也會取得長度以位元組為單位的 BLOB 資料行。
+BEGIN_COLUMN_MAP 與 END_COLUMN_MAP 用以繫結的二進位大型物件 ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85)))。 類似於[BLOB_ENTRY](../../data/oledb/blob-entry.md)，只不過這個巨集也會取得長度以位元組為單位的 BLOB 資料行。
 
 #### <a name="syntax"></a>語法
 
@@ -421,7 +421,7 @@ BLOB_ENTRY_LENGTH(nOrdinal, IID, flags, data, length)
 
 ### <a name="blob_entry_length_status"></a> BLOB_ENTRY_LENGTH_STATUS
 
-BEGIN_COLUMN_MAP 與 END_COLUMN_MAP 用以繫結的二進位大型物件 ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85)))。 類似於[BLOB_ENTRY](../../data/oledb/blob-entry.md)，只不過這個巨集也會取得的長度和 BLOB 資料行的狀態。
+BEGIN_COLUMN_MAP 與 END_COLUMN_MAP 用以繫結的二進位大型物件 ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85)))。 類似於[BLOB_ENTRY](../../data/oledb/blob-entry.md)，只不過這個巨集也會取得的長度和 BLOB 資料行的狀態。
 
 #### <a name="syntax"></a>語法
 
@@ -461,7 +461,7 @@ BLOB_ENTRY_LENGTH_STATUS(
 
 ### <a name="blob_entry_status"></a> BLOB_ENTRY_STATUS
 
-BEGIN_COLUMN_MAP 或 BEGIN_ACCESSOR_MAP 用以繫結的二進位大型物件 ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85)))。 類似於[BLOB_ENTRY](../../data/oledb/blob-entry.md)，只不過這個巨集也會取得 BLOB 資料行的狀態。
+BEGIN_COLUMN_MAP 或 BEGIN_ACCESSOR_MAP 用以繫結的二進位大型物件 ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85)))。 類似於[BLOB_ENTRY](../../data/oledb/blob-entry.md)，只不過這個巨集也會取得 BLOB 資料行的狀態。
 
 #### <a name="syntax"></a>語法
 
@@ -492,7 +492,7 @@ BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)
 
 ### <a name="blob_name"></a> BLOB_NAME
 
-BEGIN_COLUMN_MAP 與 END_COLUMN_MAP 用以繫結的二進位大型物件 ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85)))。 類似於[BLOB_ENTRY](../../data/oledb/blob-entry.md)，只不過這個巨集接受的資料行名稱，而不是資料行編號。
+BEGIN_COLUMN_MAP 與 END_COLUMN_MAP 用以繫結的二進位大型物件 ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85)))。 類似於[BLOB_ENTRY](../../data/oledb/blob-entry.md)，只不過這個巨集接受的資料行名稱，而不是資料行編號。
 
 #### <a name="syntax"></a>語法
 
@@ -520,7 +520,7 @@ BLOB_NAME(pszName, IID, flags, data )
 
 ### <a name="blob_name_length"></a> BLOB_NAME_LENGTH
 
-BEGIN_COLUMN_MAP 與 END_COLUMN_MAP 用以繫結的二進位大型物件 ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85)))。 類似於[BLOB_NAME](../../data/oledb/blob-name.md)，只不過這個巨集也會取得長度以位元組為單位的 BLOB 資料行。
+BEGIN_COLUMN_MAP 與 END_COLUMN_MAP 用以繫結的二進位大型物件 ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85)))。 類似於[BLOB_NAME](../../data/oledb/blob-name.md)，只不過這個巨集也會取得長度以位元組為單位的 BLOB 資料行。
 
 #### <a name="syntax"></a>語法
 
@@ -547,7 +547,7 @@ BLOB_NAME_LENGTH(pszName, IID, flags, data, length )
 
 ### <a name="blob_name_length_status"></a> BLOB_NAME_LENGTH_STATUS
 
-BEGIN_COLUMN_MAP 與 END_COLUMN_MAP 用以繫結的二進位大型物件 ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85)))。 類似於[BLOB_NAME](../../data/oledb/blob-name.md)，只不過這個巨集也會取得的長度和 BLOB 資料行的狀態。
+BEGIN_COLUMN_MAP 與 END_COLUMN_MAP 用以繫結的二進位大型物件 ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85)))。 類似於[BLOB_NAME](../../data/oledb/blob-name.md)，只不過這個巨集也會取得的長度和 BLOB 資料行的狀態。
 
 #### <a name="syntax"></a>語法
 
@@ -577,7 +577,7 @@ BLOB_NAME_LENGTH_STATUS(pszName, IID, flags, data, length, status )
 
 ### <a name="blob_name_status"></a> BLOB_NAME_STATUS
 
-BEGIN_COLUMN_MAP 與 END_COLUMN_MAP 用以繫結的二進位大型物件 ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85)))。 類似於[BLOB_NAME](../../data/oledb/blob-name.md)，只不過這個巨集也會取得 BLOB 資料行的狀態。
+BEGIN_COLUMN_MAP 與 END_COLUMN_MAP 用以繫結的二進位大型物件 ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85)))。 類似於[BLOB_NAME](../../data/oledb/blob-name.md)，只不過這個巨集也會取得 BLOB 資料行的狀態。
 
 #### <a name="syntax"></a>語法
 
@@ -679,7 +679,7 @@ COLUMN_ENTRY(nOrdinal, data)
 
 #### <a name="parameters"></a>參數
 
-請參閱[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 *nOrdinal*<br/>
 [in] 資料行編號。
@@ -713,7 +713,7 @@ COLUMN_ENTRY_EX(nOrdinal, wType, nLength, nPrecision, nScale, data, length, stat
 
 #### <a name="parameters"></a>參數
 
-請參閱[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 *nOrdinal*<br/>
 [in] 資料行編號。
@@ -765,7 +765,7 @@ COLUMN_ENTRY_LENGTH(nOrdinal, data, length)
 
 #### <a name="parameters"></a>參數
 
-請參閱[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 *nOrdinal*<br/>
 [in]資料行編號，從一開始。 書籤會對應至零的資料行。
@@ -798,7 +798,7 @@ COLUMN_ENTRY_LENGTH_STATUS(nOrdinal, data, length, status)
 
 #### <a name="parameters"></a>參數
 
-請參閱[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 *nOrdinal*<br/>
 [in] 資料行編號。
@@ -834,7 +834,7 @@ COLUMN_ENTRY_PS(nOrdinal, nPrecision, nScale, data)
 
 #### <a name="parameters"></a>參數
 
-請參閱[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 *nOrdinal*<br/>
 [in] 資料行編號。
@@ -870,7 +870,7 @@ COLUMN_ENTRY_PS_LENGTH(nOrdinal, nPrecision, nScale, data, length)
 
 #### <a name="parameters"></a>參數
 
-請參閱[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 *nOrdinal*<br/>
 [in]資料行編號，從一開始。 書籤會對應至零的資料行。
@@ -909,7 +909,7 @@ COLUMN_ENTRY_PS_LENGTH_STATUS(nOrdinal, nPrecision, nScale, data, length, status
 
 #### <a name="parameters"></a>參數
 
-請參閱[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 *nOrdinal*<br/>
 [in] 資料行編號。
@@ -951,7 +951,7 @@ COLUMN_ENTRY_PS_STATUS(nOrdinal, nPrecision, nScale, data, status)
 
 #### <a name="parameters"></a>參數
 
-請參閱[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 *nOrdinal*<br/>
 [in] 資料行編號。
@@ -990,7 +990,7 @@ COLUMN_ENTRY_STATUS(nOrdinal, data, status)
 
 #### <a name="parameters"></a>參數
 
-請參閱[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 *nOrdinal*<br/>
 [in] 資料行編號。
@@ -1540,7 +1540,7 @@ BEGIN_PARAM_MAP(x)
 
 #### <a name="remarks"></a>備註
 
-使用的參數[命令](https://docs.microsoft.com/previous-versions/windows/desktop/ms724608(v=vs.85))。
+使用的參數[命令](/previous-versions/windows/desktop/ms724608(v=vs.85))。
 
 #### <a name="example"></a>範例
 
@@ -1577,7 +1577,7 @@ SET_PARAM_TYPE(type)
 
 #### <a name="remarks"></a>備註
 
-提供者只支援基礎資料來源支援的參數輸入/輸出類型。 類型是由一或多個組成`DBPARAMIO`值 (請參閱 < [DBBINDING 結構](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程式設計人員參考*):
+提供者只支援基礎資料來源支援的參數輸入/輸出類型。 類型是由一或多個組成`DBPARAMIO`值 (請參閱 < [DBBINDING 結構](/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程式設計人員參考*):
 
 - `DBPARAMIO_NOTPARAM` 存取子沒有任何參數。 一般而言，您將設定`eParamIO`中資料列存取子，以提醒使用者參數被忽略此值。
 

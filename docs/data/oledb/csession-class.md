@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: f3b77823608376fdfc12beacf7cab5dd810c415e
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 86ac5984f5d21e0077c15027ac7a8d8daab08945
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556786"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414001"
 ---
 # <a name="csession-class"></a>CSession 類別
 
@@ -69,7 +69,7 @@ class CSession
 |-|-|
 |[Abort](#abort)|取消 （終止） 交易。|
 |[關閉](#close)|關閉工作階段。|
-|[認可](#commit)|認可的交易。|
+|[Commit](#commit)|認可的交易。|
 |[GetTransactionInfo](#gettransactioninfo)|傳回交易的相關資訊。|
 |[開啟](#open)|開啟資料來源物件的新工作階段。|
 |[StartTransaction](#starttransaction)|開始新的交易，此工作階段。|
@@ -92,7 +92,7 @@ HRESULT Abort(BOID* pboidReason = NULL,
 
 #### <a name="parameters"></a>參數
 
-請參閱[itransaction:: Abort](https://docs.microsoft.com/previous-versions/windows/desktop/ms709833(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[itransaction:: Abort](/previous-versions/windows/desktop/ms709833(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -112,7 +112,7 @@ void Close() throw();
 
 版本`m_spOpenRowset`指標。
 
-## <a name="commit"></a> Csession:: Commit
+## <a name="commit"></a> CSession::Commit
 
 認可的交易。
 
@@ -126,7 +126,7 @@ HRESULT Commit(BOOL bRetaining = FALSE,
 
 #### <a name="parameters"></a>參數
 
-請參閱[itransaction:: Commit](https://docs.microsoft.com/previous-versions/windows/desktop/ms713008(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[itransaction:: Commit](/previous-versions/windows/desktop/ms713008(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -134,9 +134,9 @@ HRESULT Commit(BOOL bRetaining = FALSE,
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [itransaction:: Commit](https://docs.microsoft.com/previous-versions/windows/desktop/ms713008(v=vs.85))。
+如需詳細資訊，請參閱 < [itransaction:: Commit](/previous-versions/windows/desktop/ms713008(v=vs.85))。
 
-## <a name="gettransactioninfo"></a> Csession:: Gettransactioninfo
+## <a name="gettransactioninfo"></a> CSession::GetTransactionInfo
 
 傳回交易的相關資訊。
 
@@ -148,7 +148,7 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 
 #### <a name="parameters"></a>參數
 
-請參閱[ITransaction::GetTransactionInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms714975(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -156,7 +156,7 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [ITransaction::GetTransactionInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms714975(v=vs.85))中*OLE DB 程式設計人員參考*。
+如需詳細資訊，請參閱 < [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ## <a name="open"></a> Csession:: Open
 
@@ -176,10 +176,10 @@ HRESULT Open(const CDataSource& ds,
 [in]若要開啟工作階段的資料來源。
 
 *pPropSet*<br/>
-[in]陣列的指標[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85))中*OLE DB 程式設計人員參考*Windows SDK 中。
+[in]陣列的指標[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](/previous-versions/windows/desktop/ms713696(v=vs.85))中*OLE DB 程式設計人員參考*Windows SDK 中。
 
 *ulPropSets*<br/>
-[in]數目[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))結構傳入*Dbpropset*引數。
+[in]數目[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構傳入*Dbpropset*引數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -189,7 +189,7 @@ HRESULT Open(const CDataSource& ds,
 
 您必須開啟資料來源物件使用[cdatasource:: Open](../../data/oledb/cdatasource-open.md)再傳遞給`CSession::Open`。
 
-## <a name="starttransaction"></a> Csession:: Starttransaction
+## <a name="starttransaction"></a> CSession::StartTransaction
 
 開始新的交易，此工作階段。
 
@@ -204,7 +204,7 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 #### <a name="parameters"></a>參數
 
-請參閱[itransactionlocal:: Starttransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms709786(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[itransactionlocal:: Starttransaction](/previous-versions/windows/desktop/ms709786(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -212,7 +212,7 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [itransactionlocal:: Starttransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms709786(v=vs.85))中*OLE DB 程式設計人員參考*。
+如需詳細資訊，請參閱 < [itransactionlocal:: Starttransaction](/previous-versions/windows/desktop/ms709786(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ## <a name="see-also"></a>另請參閱
 

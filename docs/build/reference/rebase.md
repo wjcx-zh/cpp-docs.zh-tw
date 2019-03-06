@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - /REBASE editbin option [C++]
 ms.assetid: 3f89d874-af5c-485b-974b-fd205f6e1a4b
-ms.openlocfilehash: de8b648c6bca02c71a9cfedd92bfbe7e6ca56b70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0b581dfc116e25228a9aa9133c4de027e194799
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463644"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422035"
 ---
 # <a name="rebase"></a>/REBASE
 
@@ -32,7 +32,7 @@ ms.locfileid: "50463644"
 
 |修飾詞|動作|
 |--------------|------------|
-|**基底 =**<em>位址</em>|提供的起始位址重新指派基底位址的檔案。 指定*地址*以十進位數或 C 語言表示法。 如果未指定基底，啟動基底地址的預設值為 0x400000。 如果清單已使用的基底必須指定，並*地址*設定的基底的位址範圍的結尾。|
+|**BASE=**<em>address</em>|提供的起始位址重新指派基底位址的檔案。 指定*地址*以十進位數或 C 語言表示法。 如果未指定基底，啟動基底地址的預設值為 0x400000。 如果清單已使用的基底必須指定，並*地址*設定的基底的位址範圍的結尾。|
 |**BASEFILE**|建立名為 COFFBASE 的檔案。TXT，這是文字檔案中所連結的預期的格式/基底選項。|
 |**向下**|會告知 EDITBIN 重新指派基底位址則是往下的從結束位址。 指定時，使用位於以下位址範圍的結尾可能最高的位址中的第一個檔案的順序重新指派檔案。 基底必須搭配下，以確保足夠的位址空間為基礎的檔案。 若要判斷指定的檔案所需的位址空間，/REBASE EDITBIN 執行的檔案，並加入顯示的總大小 64KB。|
 

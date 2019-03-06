@@ -1,19 +1,19 @@
 ---
-title: 逐步解說： 建立和使用您自己動態連結程式庫 （c + +）
+title: 逐步解說：建立並使用您自己動態連結程式庫 （c + +）
 ms.custom: conceptual
 ms.date: 09/24/2018
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: c09fa369cd4e0b726d809fa709518574d4fdbc6e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fb77230d5cc27c1fba1f7df1404150fada36d43a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330537"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416445"
 ---
-# <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>逐步解說： 建立和使用您自己動態連結程式庫 （c + +）
+# <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>逐步解說：建立並使用您自己動態連結程式庫 （c + +）
 
 此逐步解說示範如何使用 Visual Studio IDE 來建立以 c + +，撰寫您自己的動態連結程式庫 (DLL)，並使用它從另一個 c + + 應用程式。 Dll 是其中一個最有用的一種 Windows 元件。 您可以使用它們來共用程式碼和資源，把您的應用程式的大小，並讓服務，並擴充您的應用程式變得更加容易。 在本逐步解說中，您會建立 DLL 實作一些數學函式，，然後再建立使用從 DLL 函式的主控台應用程式。 過程中，您會取得一些程式設計技術和 Windows Dll 中使用慣例的簡介。
 

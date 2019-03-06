@@ -29,12 +29,12 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-ms.openlocfilehash: 669f1fc3ef151ee76ab6b057798f33f5b3cc1287
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7727f433ae68f26075645b35ff5edad43159ec67
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464905"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415405"
 ---
 # <a name="bscmake-options"></a>BSCMAKE 選項
 
@@ -48,7 +48,7 @@ ms.locfileid: "50464905"
 **/El**<br/>
 不包括本機符號。 預設值是包含本機符號。 如需有關本機符號的詳細資訊，請參閱[建立.sbr 檔](../../build/reference/creating-an-dot-sbr-file.md)。
 
-**/ E m**<br/>
+**/Em**<br/>
 排除的巨集主體中的符號。 使用 **/e m**瀏覽資訊檔中包含的巨集名稱。 預設值是包含巨集名稱和巨集展開的結果。
 
 **/Er (** *符號*...**)**<br/>
@@ -57,7 +57,7 @@ ms.locfileid: "50464905"
 **/Es**<br/>
 從瀏覽資訊檔中排除指定的絕對路徑，或在 INCLUDE 環境變數中指定的絕對路徑中找到每個 include 檔案。 (這些通常是系統 include 檔案，其中包含許多您可能不需要在您瀏覽資訊檔的資訊。)此選項不會排除沒有路徑或相對路徑或檔案中包含的相對路徑中找到指定的檔案。 您可以使用 **/Ei**連同選項 **/Es**排除的檔案 **/Es**不會排除。 如果您想要排除部分一個檔案， **/Es**排除，使用 **/Ei**而非 **/Es**並列出您想要排除的檔案。
 
-**/errorreport:**[**無** &#124; **提示** &#124; **佇列** &#124; **傳送**]<br/>
+**/errorreport:**[**none** &#124; **prompt** &#124; **queue** &#124; **send**]<br/>
 可讓您傳送給 Microsoft 的資訊，關於 bscmake.exe 中的內部錯誤。
 
 如需詳細資訊 **/errorreport**，請參閱[/errorReport （回報編譯器內部錯誤）](../../build/reference/errorreport-report-internal-compiler-errors.md)。
@@ -74,7 +74,7 @@ ms.locfileid: "50464905"
 **/NOLOGO**<br/>
 隱藏 BSCMAKE 著作權訊息。
 
-**/o** *檔名*<br/>
+**/o** *filename*<br/>
 指定瀏覽資訊檔的名稱。 根據預設，BSCMAKE 會提供瀏覽資訊檔的第一個的.sbr 檔案以及.bsc 延伸模組的基底名稱。
 
 **/S (** *filename*...**)**<br/>

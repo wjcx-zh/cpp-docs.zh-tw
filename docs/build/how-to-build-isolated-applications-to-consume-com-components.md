@@ -1,17 +1,17 @@
 ---
-title: 如何：建置隔離的應用程式以使用 COM 元件
+title: HOW TO：建置隔離的應用程式以使用 COM 元件
 ms.date: 11/04/2016
 helpviewer_keywords:
 - isolated applications [C++]
 ms.assetid: 04587547-1174-44ab-bd99-1292358fba20
-ms.openlocfilehash: ba35c016996604e2b433083c2de7b9ddc807d52c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01b5c7056bd10a7c1f88df74b5c6b4aa78ff3fde
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587534"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417875"
 ---
-# <a name="how-to-build-isolated-applications-to-consume-com-components"></a>如何：建置隔離的應用程式以使用 COM 元件
+# <a name="how-to-build-isolated-applications-to-consume-com-components"></a>HOW TO：建置隔離的應用程式以使用 COM 元件
 
 隔離的應用程式是內建於程式資訊清單的應用程式。 您可以建立隔離的應用程式以使用 COM 元件。
 
@@ -23,7 +23,7 @@ ms.locfileid: "50587534"
 
 1. 選取 **隔離的 COM**屬性頁面中，然後再把**元件的檔案名稱**屬性設為您想要隔離的應用程式使用之 COM 元件的名稱。
 
-1. 按一下 [確定 **Deploying Office Solutions**]。
+1. 按一下 [確定] 。
 
 ### <a name="to-build-manifests-into-isolated-applications"></a>若要在隔離的應用程式中建置資訊清單
 
@@ -33,7 +33,7 @@ ms.locfileid: "50587534"
 
 1. 選取 **輸入和輸出**屬性頁面中，然後再把**內嵌資訊清單**屬性等於**是**。
 
-1. 按一下 [確定 **Deploying Office Solutions**]。
+1. 按一下 [確定] 。
 
 1. 建置方案。
 

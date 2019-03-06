@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /Zo compiler option [C++]
 - -Zo compiler option [C++]
 ms.assetid: eea8d89a-7fe0-4fe1-86b2-7689bbebbd7f
-ms.openlocfilehash: 7524a8a8c509470030a1850c3995e5997b61caca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dfc9a0311714d0680316d2d375c92d7902432fcb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497496"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422022"
 ---
 # <a name="zo-enhance-optimized-debugging"></a>/Zo (增強最佳化的偵錯)
 

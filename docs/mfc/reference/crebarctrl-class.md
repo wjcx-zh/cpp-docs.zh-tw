@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: f1e9c6e4505c67b881d479817ec8b45e4ae5dc8b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: db72dbab14db69f14d7c3d813562ec661df4b424
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304546"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417654"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl 類別
 
@@ -255,7 +255,7 @@ virtual BOOL Create(
 指定 rebar 控制項的樣式套用至控制項的組合。 請參閱[Rebar 控制項的樣式](/windows/desktop/Controls/rebar-control-styles)Windows SDK，如需支援的樣式的清單中。
 
 *rect*<br/>
-參考[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，也就是位置和 rebar 控制項的大小。
+參考[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構，也就是位置和 rebar 控制項的大小。
 
 *pParentWnd*<br/>
 指標[CWnd](../../mfc/reference/cwnd-class.md) rebar 控制項的父視窗物件。 它必須不是 NULL。
@@ -303,7 +303,7 @@ virtual BOOL CreateEx(
 指定 rebar 控制項的樣式套用至控制項的組合。 如需支援的樣式清單，請參閱 < [Rebar 控制項的樣式](/windows/desktop/Controls/rebar-control-styles)Windows SDK 中。
 
 *rect*<br/>
-參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。
+參考[RECT](/previous-versions/dd162897\(v=vs.85\))結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。
 
 *pParentWnd*<br/>
 是控制項的父視窗的指標。
@@ -389,7 +389,7 @@ void GetBandBorders(
 框線將擷取群組列的以零為起始索引。
 
 *prc*<br/>
-指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構將會接收頻外框線。 如果 rebar 控制項有 RBS_BANDBORDERS 樣式，這個結構的每個成員會收到的像素數，一端對應的頻外，構成框線。 如果 rebar 控制項並沒有 RBS_BANDBORDERS 樣式，這個結構的左的成員會收到有效的資訊。 如需 rebar 控制項的樣式的描述，請參閱 < [Rebar 控制項的樣式](/windows/desktop/Controls/rebar-control-styles)Windows SDK 中。
+指標[RECT](/previous-versions/dd162897\(v=vs.85\))結構將會接收頻外框線。 如果 rebar 控制項有 RBS_BANDBORDERS 樣式，這個結構的每個成員會收到的像素數，一端對應的頻外，構成框線。 如果 rebar 控制項並沒有 RBS_BANDBORDERS 樣式，這個結構的左的成員會收到有效的資訊。 如需 rebar 控制項的樣式的描述，請參閱 < [Rebar 控制項的樣式](/windows/desktop/Controls/rebar-control-styles)Windows SDK 中。
 
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount
 
@@ -584,7 +584,7 @@ BOOL GetRect(
 在 rebar 控制項寬線的以零為起始索引。
 
 *prc*<br/>
-指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，將會收到 rebar 群組列的界限。
+指標[RECT](/previous-versions/dd162897\(v=vs.85\))結構，將會收到 rebar 群組列的界限。
 
 ### <a name="return-value"></a>傳回值
 

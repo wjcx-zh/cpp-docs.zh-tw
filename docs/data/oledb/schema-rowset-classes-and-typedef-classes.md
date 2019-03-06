@@ -1072,12 +1072,12 @@ helpviewer_keywords:
 - m_szTableCatalog
 - m_szTableName
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
-ms.openlocfilehash: f6899f6edf87f2d81f31fac40ac78ba5798d8d8c
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 2ba593447b96f8fd5550a5e3ba64c20ca582afb8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557098"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420644"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>結構描述資料列集類別和 Typedef 類別
 
@@ -1085,44 +1085,44 @@ ms.locfileid: "51557098"
 
 結構描述資料列集是預先定義的資料列集表示中繼資料。 結構描述資料列通常可在動態程式設計中，不在編譯時期已知的資料庫結構。 您可以使用這些結構描述資料列集，以取得在執行階段資料庫的相關資訊。
 
-您可以使用 typedef 類別來具現化結構描述資料列。 如下所示的相對應的 typedef 和結構描述資料列集類別。 您必須呼叫[crestrictions:: Open](../../data/oledb/crestrictions-open.md)建立結構描述資料列集的執行個體之後。 這個方法會傳回結果集，根據您指定的限制。 請參閱[IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))如需有關與每個結構描述資料列相關聯的限制資料行資訊。
+您可以使用 typedef 類別來具現化結構描述資料列。 如下所示的相對應的 typedef 和結構描述資料列集類別。 您必須呼叫[crestrictions:: Open](../../data/oledb/crestrictions-open.md)建立結構描述資料列集的執行個體之後。 這個方法會傳回結果集，根據您指定的限制。 請參閱[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))如需有關與每個結構描述資料列相關聯的限制資料行資訊。
 
 下表顯示每個 OLE DB 結構描述資料列和其對應的 OLE DB 樣板 typedef 類別和資訊的類別。
 
-|OLE DB 結構描述資料列集|Typedef 類別|資訊類別|
+|OLE DB Schema Rowset|Typedef 類別|資訊類別|
 |--------------------------|-------------------|----------------|
-|[判斷提示](https://docs.microsoft.com/previous-versions/windows/desktop/ms719776(v=vs.85))|[CAssertions](#assertion)|[CAssertionInfo](#assertion)|
-|[類別目錄](https://docs.microsoft.com/previous-versions/windows/desktop/ms721241(v=vs.85))|[CCatalogs](#catalog)|[CCatalogInfo](#catalog)|
-|[CHARACTER_SETS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722638(v=vs.85))|[CCharacterSets](#characterset)|[CCharacterSetInfo](#characterset)|
-|[定序](https://docs.microsoft.com/previous-versions/windows/desktop/ms715783(v=vs.85))|[CCollations](#collation)|[CCollationInfo](#collation)|
-|[COLUMN_PRIVILEGES](https://docs.microsoft.com/previous-versions/windows/desktop/ms715800(v=vs.85))|[CColumnPrivileges](#columnprivilege)|[CColumnPrivilegeInfo](#columnprivilege)|
-|[資料行](https://docs.microsoft.com/previous-versions/windows/desktop/ms723052(v=vs.85))|[CColumns](#columns)|[CColumnsInfo](#columns)|
-|[CONSTRAINT_COLUMN_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms724522(v=vs.85))|[CConstraintColumnUsage](#constraintcolumnusage)|[CConstraintColumnUsageInfo](#constraintcolumnusage)|
-|[CONSTRAINT_TABLE_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms713710(v=vs.85))|[CConstraintTableUsage](#constrainttableusage)|[CConstraintTableUsageInfo](#constrainttableusage)|
-|[CHECK_CONSTRAINTS](https://docs.microsoft.com/previous-versions/windows/desktop/ms712845(v=vs.85))|[CCheckConstraints](#checkconstraint)|[CCheckConstraintInfo](#checkconstraint)|
-|[COLUMN_DOMAIN_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711240(v=vs.85))|[CColumnDomainUsage](#columndomainusage)|[CColumnDomainUsageInfo](#columndomainusage)|
-|[FOREIGN_KEYS](https://docs.microsoft.com/previous-versions/windows/desktop/ms711276(v=vs.85))|[CForeignKeys](#foreignkeys)|[CForeignKeysInfo](#foreignkeys)|
-|[INDEXES](https://docs.microsoft.com/previous-versions/windows/desktop/ms709712(v=vs.85))|[CIndexes](#index)|[CIndexInfo](#index)|
-|[KEY_COLUMN_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms712990(v=vs.85))|[CKeyColumn](#keycolumn)|[CKeyColumnInfo](#keycolumn)|
-|[PRIMARY_KEYS](https://docs.microsoft.com/previous-versions/windows/desktop/ms714362(v=vs.85))|[CPrimaryKeys](#primarykey)|[CPrimaryKeyInfo](#primarykey)|
-|[程序](https://docs.microsoft.com/previous-versions/windows/desktop/ms724021(v=vs.85))|[CProcedures](#procedure)|[CProcedureInfo](#procedure)|
-|[PROCEDURE_COLUMNS](https://docs.microsoft.com/previous-versions/windows/desktop/ms723092(v=vs.85))|[CProcedureColumns](#procedurecolumn)|[CProcedureColumnInfo](#procedurecolumn)|
-|[PROCEDURE_PARAMETERS](https://docs.microsoft.com/previous-versions/windows/desktop/ms713623(v=vs.85))|[CProcedureParameters](#procedureparam)|[CProcedureParameterInfo](#procedureparam)|
-|[PROVIDER_TYPES](https://docs.microsoft.com/previous-versions/windows/desktop/ms709785(v=vs.85))|[CProviderTypes](#provider)|[CProviderInfo](#provider)|
-|[REFERENTIAL_CONSTRAINTS](https://docs.microsoft.com/previous-versions/windows/desktop/ms719737(v=vs.85))|[CReferentialConstraints](#referentialconstraint)|[CReferentialConstraintInfo](#referentialconstraint)|
-|[結構描述](https://docs.microsoft.com/previous-versions/windows/desktop/ms716887(v=vs.85))|[CSchemata](#schemata)|[CSchemataInfo](#schemata)|
-|[SQL_LANGUAGES](https://docs.microsoft.com/previous-versions/windows/desktop/ms714374(v=vs.85))|[CSQLLanguages](#sqllanguage)|[CSQLLanguageInfo](#sqllanguage)|
-|[STATISTICS](https://docs.microsoft.com/previous-versions/windows/desktop/ms715957(v=vs.85))|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|
-|[TABLE_CONSTRAINTS](https://docs.microsoft.com/previous-versions/windows/desktop/ms715921(v=vs.85))|[CTableConstraints](#tableconstraint)|[CTableConstraintInfo](#tableconstraint)|
-|[資料表](https://docs.microsoft.com/previous-versions/windows/desktop/ms716980(v=vs.85))|[CTables](#table)|[CTableInfo](#table)|
-|[TABLE_PRIVILEGES](https://docs.microsoft.com/previous-versions/windows/desktop/ms725428(v=vs.85))|[CTablePrivileges](#tableprivilege)|[CTablePrivilegeInfo](#tableprivilege)|
-|[翻譯](https://docs.microsoft.com/previous-versions/windows/desktop/ms725365(v=vs.85))|[CTranslations](#translation)|[CTranslationInfo](#translation)|
-|[USAGE_PRIVILEGES](https://docs.microsoft.com/previous-versions/windows/desktop/ms722743(v=vs.85))|[CUsagePrivileges](#usageprivilege)|[CUsagePrivilegeInfo](#usageprivilege)|
-|[VIEW_COLUMN_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms714896(v=vs.85))|[CViewColumnUsage](#viewcolumn)|[CViewColumnInfo](#viewcolumn)|
-|[VIEWS](https://docs.microsoft.com/previous-versions/windows/desktop/ms723122(v=vs.85))|[CViews](#view)|[CViewInfo](#view)|
-|[VIEW_TABLE_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms719727(v=vs.85))|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|
+|[判斷提示](/previous-versions/windows/desktop/ms719776(v=vs.85))|[CAssertions](#assertion)|[CAssertionInfo](#assertion)|
+|[CATALOGS](/previous-versions/windows/desktop/ms721241(v=vs.85))|[CCatalogs](#catalog)|[CCatalogInfo](#catalog)|
+|[CHARACTER_SETS](/previous-versions/windows/desktop/ms722638(v=vs.85))|[CCharacterSets](#characterset)|[CCharacterSetInfo](#characterset)|
+|[定序](/previous-versions/windows/desktop/ms715783(v=vs.85))|[CCollations](#collation)|[CCollationInfo](#collation)|
+|[COLUMN_PRIVILEGES](/previous-versions/windows/desktop/ms715800(v=vs.85))|[CColumnPrivileges](#columnprivilege)|[CColumnPrivilegeInfo](#columnprivilege)|
+|[COLUMNS](/previous-versions/windows/desktop/ms723052(v=vs.85))|[CColumns](#columns)|[CColumnsInfo](#columns)|
+|[CONSTRAINT_COLUMN_USAGE](/previous-versions/windows/desktop/ms724522(v=vs.85))|[CConstraintColumnUsage](#constraintcolumnusage)|[CConstraintColumnUsageInfo](#constraintcolumnusage)|
+|[CONSTRAINT_TABLE_USAGE](/previous-versions/windows/desktop/ms713710(v=vs.85))|[CConstraintTableUsage](#constrainttableusage)|[CConstraintTableUsageInfo](#constrainttableusage)|
+|[CHECK_CONSTRAINTS](/previous-versions/windows/desktop/ms712845(v=vs.85))|[CCheckConstraints](#checkconstraint)|[CCheckConstraintInfo](#checkconstraint)|
+|[COLUMN_DOMAIN_USAGE](/previous-versions/windows/desktop/ms711240(v=vs.85))|[CColumnDomainUsage](#columndomainusage)|[CColumnDomainUsageInfo](#columndomainusage)|
+|[FOREIGN_KEYS](/previous-versions/windows/desktop/ms711276(v=vs.85))|[CForeignKeys](#foreignkeys)|[CForeignKeysInfo](#foreignkeys)|
+|[INDEXES](/previous-versions/windows/desktop/ms709712(v=vs.85))|[CIndexes](#index)|[CIndexInfo](#index)|
+|[KEY_COLUMN_USAGE](/previous-versions/windows/desktop/ms712990(v=vs.85))|[CKeyColumn](#keycolumn)|[CKeyColumnInfo](#keycolumn)|
+|[PRIMARY_KEYS](/previous-versions/windows/desktop/ms714362(v=vs.85))|[CPrimaryKeys](#primarykey)|[CPrimaryKeyInfo](#primarykey)|
+|[程序](/previous-versions/windows/desktop/ms724021(v=vs.85))|[CProcedures](#procedure)|[CProcedureInfo](#procedure)|
+|[PROCEDURE_COLUMNS](/previous-versions/windows/desktop/ms723092(v=vs.85))|[CProcedureColumns](#procedurecolumn)|[CProcedureColumnInfo](#procedurecolumn)|
+|[PROCEDURE_PARAMETERS](/previous-versions/windows/desktop/ms713623(v=vs.85))|[CProcedureParameters](#procedureparam)|[CProcedureParameterInfo](#procedureparam)|
+|[PROVIDER_TYPES](/previous-versions/windows/desktop/ms709785(v=vs.85))|[CProviderTypes](#provider)|[CProviderInfo](#provider)|
+|[REFERENTIAL_CONSTRAINTS](/previous-versions/windows/desktop/ms719737(v=vs.85))|[CReferentialConstraints](#referentialconstraint)|[CReferentialConstraintInfo](#referentialconstraint)|
+|[SCHEMATA](/previous-versions/windows/desktop/ms716887(v=vs.85))|[CSchemata](#schemata)|[CSchemataInfo](#schemata)|
+|[SQL_LANGUAGES](/previous-versions/windows/desktop/ms714374(v=vs.85))|[CSQLLanguages](#sqllanguage)|[CSQLLanguageInfo](#sqllanguage)|
+|[STATISTICS](/previous-versions/windows/desktop/ms715957(v=vs.85))|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|
+|[TABLE_CONSTRAINTS](/previous-versions/windows/desktop/ms715921(v=vs.85))|[CTableConstraints](#tableconstraint)|[CTableConstraintInfo](#tableconstraint)|
+|[TABLES](/previous-versions/windows/desktop/ms716980(v=vs.85))|[CTables](#table)|[CTableInfo](#table)|
+|[TABLE_PRIVILEGES](/previous-versions/windows/desktop/ms725428(v=vs.85))|[CTablePrivileges](#tableprivilege)|[CTablePrivilegeInfo](#tableprivilege)|
+|[翻譯](/previous-versions/windows/desktop/ms725365(v=vs.85))|[CTranslations](#translation)|[CTranslationInfo](#translation)|
+|[USAGE_PRIVILEGES](/previous-versions/windows/desktop/ms722743(v=vs.85))|[CUsagePrivileges](#usageprivilege)|[CUsagePrivilegeInfo](#usageprivilege)|
+|[VIEW_COLUMN_USAGE](/previous-versions/windows/desktop/ms714896(v=vs.85))|[CViewColumnUsage](#viewcolumn)|[CViewColumnInfo](#viewcolumn)|
+|[VIEWS](/previous-versions/windows/desktop/ms723122(v=vs.85))|[CViews](#view)|[CViewInfo](#view)|
+|[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727(v=vs.85))|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|
 
-## <a name="assertion"></a> CAssertions、 CAssertionInfo
+## <a name="assertion"></a> CAssertions, CAssertionInfo
 
 呼叫 typedef 類別`CAssertions`來實作其參數類別`CAssertionInfo`。
 
@@ -1132,7 +1132,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別由指定使用者所擁有的判斷提示在目錄中定義。
 
-下表列出的類別資料成員`CAssertionInfo`及其對應 OLE DB 資料行。 請參閱[判斷提示的資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms719776(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出的類別資料成員`CAssertionInfo`及其對應 OLE DB 資料行。 請參閱[判斷提示的資料列集](/previous-versions/windows/desktop/ms719776(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1143,7 +1143,7 @@ ms.locfileid: "51557098"
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
 |m_szDescription|DESCRIPTION|
 
-## <a name="catalog"></a> CCatalogs、 CCatalogInfo
+## <a name="catalog"></a> CCatalogs, CCatalogInfo
 
 呼叫 typedef 類別`CCatalogs`來實作其參數類別`CCatalogInfo`。
 
@@ -1153,14 +1153,14 @@ ms.locfileid: "51557098"
 
 這個類別會識別可從 DBMS 存取資料庫目錄相關聯的實體屬性。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[目錄的資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms721241(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[目錄的資料列集](/previous-versions/windows/desktop/ms721241(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
 |m_szName|CATALOG_NAME|
 |m_szDescription|DESCRIPTION|
 
-## <a name="characterset"></a> CCharacterSets、 CCharacterSetInfo
+## <a name="characterset"></a> CCharacterSets, CCharacterSetInfo
 
 呼叫 typedef 類別`CCharacterSets`來實作其參數類別`CCharacterSetInfo`。
 
@@ -1170,7 +1170,7 @@ ms.locfileid: "51557098"
 
 此類別會識別出在指定的使用者可存取的目錄中所定義的字元集。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[CHARACTER_SETS 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms722638(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[CHARACTER_SETS 資料列集](/previous-versions/windows/desktop/ms722638(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1183,7 +1183,7 @@ ms.locfileid: "51557098"
 |m_szCollateSchema|DEFAULT_COLLATE_SCHEMA|
 |m_szCollateName|DEFAULT_COLLATE_NAME|
 
-## <a name="checkconstraint"></a> CCheckConstraints、 CCheckConstraintInfo
+## <a name="checkconstraint"></a> CCheckConstraints, CCheckConstraintInfo
 
 呼叫 typedef 類別`CCheckConstraints`來實作其參數類別`CCheckConstraintInfo`。
 
@@ -1193,7 +1193,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別定義檢查條件約束，在目錄中，指定使用者所擁有。 檢查條件約束指定的資料值或資料表中的一或多個資料行中可接受的格式。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[CHECK_CONSTRAINTS 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms712845(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[CHECK_CONSTRAINTS 資料列集](/previous-versions/windows/desktop/ms712845(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1203,7 +1203,7 @@ ms.locfileid: "51557098"
 |m_szCheckClause|CHECK_CLAUSE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="collation"></a> CCollations、 CCollationInfo
+## <a name="collation"></a> CCollations, CCollationInfo
 
 呼叫 typedef 類別`CCollations`來實作其參數類別`CCollationInfo`。
 
@@ -1213,7 +1213,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別字元定序，在目錄中，定義所指定的使用者進行存取。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[定序的資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms715783(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[定序的資料列集](/previous-versions/windows/desktop/ms715783(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1225,7 +1225,7 @@ ms.locfileid: "51557098"
 |m_szCharSetName|CHARACTER_SET_NAME|
 |m_szPadAttribute|PAD_ATTRIBUTE|
 
-## <a name="columndomainusage"></a> CColumnDomainUsage、 CColumnDomainUsageInfo
+## <a name="columndomainusage"></a> CColumnDomainUsage, CColumnDomainUsageInfo
 
 呼叫 typedef 類別`CColumnDomainUsage`來實作其參數類別`CColumnDomainUsageInfo`。
 
@@ -1235,7 +1235,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別定義的資料行，在目錄中，相依於目錄中所定義且由指定使用者擁有的網域。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[COLUMN_DOMAIN_USAGE 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms711240(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[COLUMN_DOMAIN_USAGE 資料列集](/previous-versions/windows/desktop/ms711240(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1249,7 +1249,7 @@ ms.locfileid: "51557098"
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 
-## <a name="columnprivilege"></a> CColumnPrivileges、 CColumnPrivilegeInfo
+## <a name="columnprivilege"></a> CColumnPrivileges, CColumnPrivilegeInfo
 
 呼叫 typedef 類別`CColumnPrivileges`來實作其參數類別`CColumnPrivilegeInfo`。
 
@@ -1259,7 +1259,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別資料行的資料表，定義在目錄中，可以取得或授與的指定使用者的權限。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[COLUMN_PRIVILEGES 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms715800(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[COLUMN_PRIVILEGES 資料列集](/previous-versions/windows/desktop/ms715800(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1274,7 +1274,7 @@ ms.locfileid: "51557098"
 |m_szPrivilegeType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="columns"></a> CColumns、 CColumnsInfo
+## <a name="columns"></a> CColumns, CColumnsInfo
 
 呼叫 typedef 類別`CColumns`來實作其參數類別`CColumnsInfo`。
 
@@ -1284,7 +1284,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別在目錄中定義的資料表由指定使用者可存取的資料行。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[COLUMNS 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms723052(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[COLUMNS 資料列集](/previous-versions/windows/desktop/ms723052(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1317,7 +1317,7 @@ ms.locfileid: "51557098"
 |m_szDomainName|DOMAIN_NAME|
 |m_szDescription|DESCRIPTION|
 
-## <a name="constraintcolumnusage"></a> CConstraintColumnUsage、 CConstraintColumnUsageInfo
+## <a name="constraintcolumnusage"></a> CConstraintColumnUsage, CConstraintColumnUsageInfo
 
 呼叫 typedef 類別`CConstraintColumnUsage`來實作其參數類別`CConstraintColumnUsageInfo`。
 
@@ -1327,7 +1327,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別參考條件約束、 唯一條件約束、 check 條件約束和判斷提示所使用、 在目錄中定義及所指定的使用者擁有的資料行。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[CONSTRAINT_COLUMN_USAGE 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms724522(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[CONSTRAINT_COLUMN_USAGE 資料列集](/previous-versions/windows/desktop/ms724522(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1341,7 +1341,7 @@ ms.locfileid: "51557098"
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
 |m_szConstraintName|CONSTRAINT_NAME|
 
-## <a name="constrainttableusage"></a> CConstraintTableUsage、 CConstraintTableUsageInfo
+## <a name="constrainttableusage"></a> CConstraintTableUsage, CConstraintTableUsageInfo
 
 呼叫 typedef 類別`CConstraintTableUsage`來實作其參數類別`CConstraintTableUsageInfo`。
 
@@ -1351,7 +1351,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別參考條件約束、 唯一條件約束、 check 條件約束和判斷提示所使用、 在目錄中定義及所指定的使用者擁有的資料表。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[CONSTRAINT_TABLE_USAGE 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms724522(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[CONSTRAINT_TABLE_USAGE 資料列集](/previous-versions/windows/desktop/ms724522(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1362,7 +1362,7 @@ ms.locfileid: "51557098"
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
 |m_szConstraintName|CONSTRAINT_NAME|
 
-## <a name="foreignkeys"></a> CForeignKeys、 CForeignKeysInfo
+## <a name="foreignkeys"></a> CForeignKeys, CForeignKeysInfo
 
 呼叫 typedef 類別`CForeignKeys`來實作其參數類別`CForeignKeysInfo`。
 
@@ -1372,7 +1372,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別在目錄中由指定使用者定義的外部索引鍵資料行。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[FOREIGN_KEYS 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms711276(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[FOREIGN_KEYS 資料列集](/previous-versions/windows/desktop/ms711276(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1392,7 +1392,7 @@ ms.locfileid: "51557098"
 |m_szUpdateRule|UPDATE_RULE|
 |m_szDeleteRule|DELETE_RULE|
 
-## <a name="index"></a> CIndexes、 CIndexInfo
+## <a name="index"></a> CIndexes, CIndexInfo
 
 呼叫 typedef 類別`CIndexes`來實作其參數類別`CIndexInfo`。
 
@@ -1402,7 +1402,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別定義的索引，在目錄中，指定使用者所擁有。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[INDEXES 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms709712(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[INDEXES 資料列集](/previous-versions/windows/desktop/ms709712(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1431,7 +1431,7 @@ ms.locfileid: "51557098"
 |m_nPages|PAGES|
 |m_szFilterCondition|FILTER_CONDITION|
 
-## <a name="keycolumn"></a> CKeyColumns、 CKeyColumnInfo
+## <a name="keycolumn"></a> CKeyColumns, CKeyColumnInfo
 
 呼叫 typedef 類別`CKeyColumns`來實作其參數類別`CKeyColumnInfo`。
 
@@ -1441,7 +1441,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別資料行，定義在目錄中，會受限於做為索引鍵指定的使用者。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[KEY_COLUMN_USAGE 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms712990(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[KEY_COLUMN_USAGE 資料列集](/previous-versions/windows/desktop/ms712990(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1456,7 +1456,7 @@ ms.locfileid: "51557098"
 |m_nColumnPropID|COLUMN_PROPID|
 |m_nOrdinalPosition|ORDINAL_POSITION|
 
-## <a name="primarykey"></a> CPrimaryKeys、 CPrimaryKeyInfo
+## <a name="primarykey"></a> CPrimaryKeys, CPrimaryKeyInfo
 
 呼叫 typedef 類別`CPrimaryKeys`來實作其參數類別`CPrimaryKeyInfo`。
 
@@ -1466,7 +1466,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別在目錄中由指定使用者定義的主索引鍵資料行。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[PRIMARY_KEYS 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms714362(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[PRIMARY_KEYS 資料列集](/previous-versions/windows/desktop/ms714362(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1478,7 +1478,7 @@ ms.locfileid: "51557098"
 |m_nColumnPropID|COLUMN_PROPID|
 |m_nOrdinal|序數|
 
-## <a name="procedurecolumn"></a> CProcedureColumns、 CProcedureColumnInfo
+## <a name="procedurecolumn"></a> CProcedureColumns, CProcedureColumnInfo
 
 呼叫 typedef 類別`CProcedureColumns`來實作其參數類別`CProcedureColumnInfo`。
 
@@ -1488,7 +1488,7 @@ ms.locfileid: "51557098"
 
 這個類別會傳回有關的程序所傳回的資料列集資料行資訊。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[PROCEDURE_COLUMNS 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms723092(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[PROCEDURE_COLUMNS 資料列集](/previous-versions/windows/desktop/ms723092(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1509,7 +1509,7 @@ ms.locfileid: "51557098"
 |m_nScale|NUMERIC_SCALE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="procedureparam"></a> CProcedureParameters、 CProcedureParamInfo
+## <a name="procedureparam"></a> CProcedureParameters CProcedureParamInfo
 
 呼叫 typedef 類別`CProcedureParameters`來實作其參數類別`CProcedureParamInfo`。
 
@@ -1519,7 +1519,7 @@ ms.locfileid: "51557098"
 
 這個類別會傳回參數和傳回碼的程序的相關資訊。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[PROCEDURE_PARAMETERS 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms713623(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[PROCEDURE_PARAMETERS 資料列集](/previous-versions/windows/desktop/ms713623(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1539,7 +1539,7 @@ ms.locfileid: "51557098"
 |m_nScale|NUMERIC_SCALE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="procedure"></a> CProcedures、 CProcedureInfo
+## <a name="procedure"></a> CProcedures, CProcedureInfo
 
 呼叫 typedef 類別`CProcedures`來實作其參數類別`CProcedureInfo`。
 
@@ -1549,7 +1549,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別定義的程序，在目錄中，指定使用者所擁有。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[程序的資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms724021(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[程序的資料列集](/previous-versions/windows/desktop/ms724021(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1560,7 +1560,7 @@ ms.locfileid: "51557098"
 |m_szDefinition|PROCEDURE_DEFINITION|
 |m_szDescription|DESCRIPTION|
 
-## <a name="provider"></a> CProviderTypes、 CProviderInfo
+## <a name="provider"></a> CProviderTypes, CProviderInfo
 
 呼叫 typedef 類別`CProviderTypes`來實作其參數類別`CProviderInfo`。
 
@@ -1570,7 +1570,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別資料提供者所支援的 （基底） 的資料類型。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[PROVIDER_TYPES 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms709785(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[PROVIDER_TYPES 資料列集](/previous-versions/windows/desktop/ms709785(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1583,7 +1583,7 @@ ms.locfileid: "51557098"
 |m_bIsNullable|IS_NULLABLE|
 |m_bCaseSensitive|CASE_SENSITIVE|
 |m_nSearchable|可搜尋|
-|m_bUnsignedAttribute|UNSIGNED_ATTRIBUTE 設|
+|m_bUnsignedAttribute|UNSIGNED_ATTRIBUTE|
 |m_bFixedPrecScale|FIXED_PREC_SCALE|
 |m_bAutoUniqueValue|AUTO_UNIQUE_VALUE|
 |m_szLocalTypeName|LOCAL_TYPE_NAME|
@@ -1595,7 +1595,7 @@ ms.locfileid: "51557098"
 |m_bIsLong|IS_LONG|
 |m_bBestMatch|BEST_MATCH|
 
-## <a name="referentialconstraint"></a> CReferentialConstraints、 CReferentialConstraintInfo
+## <a name="referentialconstraint"></a> CReferentialConstraints, CReferentialConstraintInfo
 
 呼叫 typedef 類別`CReferentialConstraints`來實作其參數類別`CReferentialConstraintInfo`。
 
@@ -1605,7 +1605,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別參考條件約束，定義在目錄中，指定使用者所擁有。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[REFERENTIAL_CONSTRAINTS 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms719737(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[REFERENTIAL_CONSTRAINTS 資料列集](/previous-versions/windows/desktop/ms719737(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1620,7 +1620,7 @@ ms.locfileid: "51557098"
 |m_szDeleteRule|DELETE_RULE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="schemata"></a> CSchemata、 CSchemataInfo
+## <a name="schemata"></a> CSchemata, CSchemataInfo
 
 呼叫 typedef 類別`CSchemata`來實作其參數類別`CSchemataInfo`。
 
@@ -1630,7 +1630,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別由指定使用者所擁有的結構描述。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[結構描述資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms716887(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[結構描述資料列集](/previous-versions/windows/desktop/ms716887(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1641,7 +1641,7 @@ ms.locfileid: "51557098"
 |m_szCharSchema|DEFAULT_CHARACTER_SET_SCHEMA|
 |m_szCharName|DEFAULT_CHARACTER_SET_NAME|
 
-## <a name="sqllanguage"></a> CSQLLanguages、 CSQLLanguageInfo
+## <a name="sqllanguage"></a> CSQLLanguages, CSQLLanguageInfo
 
 呼叫 typedef 類別`CSQLLanguages`來實作其參數類別`CSQLLanguageInfo`。
 
@@ -1651,7 +1651,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別的一致性層級、 選項，以及定義在目錄中的 SQL 實作處理資料所支援的方言。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[SQL_LANGUAGES 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms714374(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[SQL_LANGUAGES 資料列集](/previous-versions/windows/desktop/ms714374(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1663,7 +1663,7 @@ ms.locfileid: "51557098"
 |m_szBindingStyle|SQL_LANGUAGE_BINDING_STYLE|
 |m_szProgrammingLanguage|SQL_LANGUAGE_PROGRAMMING_LANGUAGE|
 
-## <a name="statistic"></a> CStatistics、 CStatisticInfo
+## <a name="statistic"></a> CStatistics, CStatisticInfo
 
 呼叫 typedef 類別`CStatistics`來實作其參數類別`CStatisticInfo`。
 
@@ -1673,7 +1673,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別定義的統計資料，在目錄中，指定使用者所擁有。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[統計資料資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms715957(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[統計資料資料列集](/previous-versions/windows/desktop/ms715957(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1682,7 +1682,7 @@ ms.locfileid: "51557098"
 |m_szTableName|TABLE_NAME|
 |m_nCardinality|CARDINALITY|
 
-## <a name="tableconstraint"></a> CTableConstraints、 CTableConstraintInfo
+## <a name="tableconstraint"></a> CTableConstraints, CTableConstraintInfo
 
 呼叫 typedef 類別`CTableConstraints`來實作其參數類別`CTableConstraintInfo`。
 
@@ -1692,7 +1692,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別資料表定義的條件約束，在目錄中，指定使用者所擁有。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[TABLE_CONSTRAINTS 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms715921(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[TABLE_CONSTRAINTS 資料列集](/previous-versions/windows/desktop/ms715921(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1707,7 +1707,7 @@ ms.locfileid: "51557098"
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
 |m_szDescription|DESCRIPTION|
 
-## <a name="tableprivilege"></a> CTablePrivileges、 CTablePrivilegeInfo
+## <a name="tableprivilege"></a> CTablePrivileges, CTablePrivilegeInfo
 
 呼叫 typedef 類別`CTablePrivileges`來實作其參數類別`CTablePrivilegeInfo`。
 
@@ -1717,7 +1717,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別定義在目錄中由指定使用者可存取的資料表。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[TABLE_PRIVILEGES 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms725428(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[TABLE_PRIVILEGES 資料列集](/previous-versions/windows/desktop/ms725428(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1729,7 +1729,7 @@ ms.locfileid: "51557098"
 |m_szType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="table"></a> CTables、 CTableInfo
+## <a name="table"></a> CTables, CTableInfo
 
 呼叫 typedef 類別`CTables`來實作其參數類別`CTableInfo`。
 
@@ -1739,7 +1739,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別在資料表上，定義在目錄中，以使用或所指定的使用者授與的權限。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[TABLES 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms716980(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[TABLES 資料列集](/previous-versions/windows/desktop/ms716980(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1750,7 +1750,7 @@ ms.locfileid: "51557098"
 |m_guidTable|TABLE_GUID|
 |m_szDescription|DESCRIPTION|
 
-## <a name="translation"></a> CTranslations、 CTranslationInfo
+## <a name="translation"></a> CTranslations, CTranslationInfo
 
 呼叫 typedef 類別`CTranslations`來實作其參數類別`CTranslationInfo`。
 
@@ -1760,7 +1760,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別由指定使用者可存取的字元轉譯在目錄中定義。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[翻譯的資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms725365(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[翻譯的資料列集](/previous-versions/windows/desktop/ms725365(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1774,7 +1774,7 @@ ms.locfileid: "51557098"
 |m_szTargetSchema|TARGET_CHARACTER_SET_SCHEMA|
 |m_szTargetName|TARGET_CHARACTER_SET_NAME|
 
-## <a name="usageprivilege"></a> CUsagePrivileges、 CUsagePrivilegeInfo
+## <a name="usageprivilege"></a> CUsagePrivileges, CUsagePrivilegeInfo
 
 呼叫 typedef 類別`CUsagePrivileges`來實作其參數類別`CUsagePrivilegeInfo`。
 
@@ -1784,7 +1784,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別在目錄中所定義的物件，可用於或所指定的使用者授與的使用量權限。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[USAGE_PRIVILEGES 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms722743(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[USAGE_PRIVILEGES 資料列集](/previous-versions/windows/desktop/ms722743(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1797,7 +1797,7 @@ ms.locfileid: "51557098"
 |m_szPrivilegeType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="viewcolumn"></a> CViewColumnUsage、 CViewColumnInfo
+## <a name="viewcolumn"></a> CViewColumnUsage, CViewColumnInfo
 
 呼叫 typedef 類別`CViewColumnUsage`來實作其參數類別`CViewColumnInfo`。
 
@@ -1807,7 +1807,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別資料行上檢視目錄中定義的資料表，而且所指定的使用者，擁有相依。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[VIEW_COLUMN_USAGE 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms714896(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[VIEW_COLUMN_USAGE 資料列集](/previous-versions/windows/desktop/ms714896(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1821,7 +1821,7 @@ ms.locfileid: "51557098"
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 
-## <a name="view"></a> CViews、 CViewInfo
+## <a name="view"></a> CViews, CViewInfo
 
 呼叫 typedef 類別`CViews`來實作其參數類別`CViewInfo`。
 
@@ -1831,7 +1831,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別資料表在檢視定義在目錄中的資料表而且所指定的使用者，擁有相依。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[檢視資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms723122(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[檢視資料列集](/previous-versions/windows/desktop/ms723122(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|
@@ -1843,7 +1843,7 @@ ms.locfileid: "51557098"
 |m_bIsUpdatable|IS_UPDATABLE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="viewtable"></a> CViewTableUsage、 CViewTableInfo
+## <a name="viewtable"></a> CViewTableUsage, CViewTableInfo
 
 呼叫 typedef 類別`CViewTableUsage`來實作其參數類別`CViewTableInfo`。
 
@@ -1853,7 +1853,7 @@ ms.locfileid: "51557098"
 
 這個類別會識別檢視定義的資料表，在目錄中，由指定使用者可存取。
 
-下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[VIEW_TABLE_USAGE 資料列集](https://docs.microsoft.com/previous-versions/windows/desktop/ms719727(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
+下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[VIEW_TABLE_USAGE 資料列集](/previous-versions/windows/desktop/ms719727(v=vs.85))中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。
 
 |資料成員|OLE DB 資料行|
 |------------------|--------------------|

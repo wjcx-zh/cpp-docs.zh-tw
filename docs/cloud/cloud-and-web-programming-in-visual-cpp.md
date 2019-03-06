@@ -2,12 +2,12 @@
 title: 以 Visual C++ 進行雲端和 Web 程式設計
 ms.date: 11/04/2016
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 197d3d344d4be809c81f52f30e2462d35ebefbbe
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: ec5999a90701c427a3b7166803ee79a4a5cd19b2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519629"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414482"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>以 Visual C++ 進行雲端和 Web 程式設計
 
@@ -17,7 +17,7 @@ ms.locfileid: "51519629"
 
 - [Windows Azure 行動服務](http://www.windowsazure.com/develop/mobile/)
 
-  提供您可以使用通用 Windows 平台 (UWP) 應用程式或 Windows 桌面應用程式中，連接到 Windows Azure 行動服務的原生 Api。 雖然網站上的大部分範例是採用 C#，您也可以使用 C++。 如需詳細資訊，請參閱 [快速入門：使用 C++ 新增行動服務](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx)。
+  提供您可以使用通用 Windows 平台 (UWP) 應用程式或 Windows 桌面應用程式中，連接到 Windows Azure 行動服務的原生 Api。 雖然網站上的大部分範例是採用 C#，您也可以使用 C++。 如需詳細資訊，請參閱[快速入門：新增行動服務使用 c + +](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx)。
 
 - [C + + 的 Microsoft Azure 儲存體用戶端程式庫](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
 
@@ -44,13 +44,13 @@ ms.locfileid: "51519629"
 
   支援 Windows Desktop （7 +）、 Windows Server （2012年 +）、 通用 Windows 平台、 Linux、 OSX、 Android 和 iOS。
 
-- [Windows::Web::Http::HttpClient](https://msdn.microsoft.com/library/windows/apps/windows.web.http.httpclient.aspx)
+- [Windows::Web::Http::HttpClient](/uwp/api/windows.web.http.httpclient)
 
   Windows 執行階段 HTTP 用戶端類別會在 System.Web 命名空間中相同名稱的 .NET Framework 類別上建立模型。 `HttpClient` 完全支援透過 HTTP 的非同步上傳和下載，以及可讓自訂 HTTP 處理常式插入管線的管線篩選器。 Windows SDK 包含計量網路、OAuth 驗證等等的範例篩選條件。 對於只有通用 Windows 平台為目標的應用程式，我們建議您使用`Windows::Web:HttpClient`類別。
 
 - [IXMLHTTPRequest2 介面](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)
 
-  提供您可以使用 Windows 執行階段應用程式或 Windows 桌面應用程式中，透過 HTTP 連線到網際網路，並發出 GET、 PUT 和其他 HTTP 命令的原生 COM 介面。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 使用工作和 XML HTTP 要求](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)。
+  提供您可以使用 Windows 執行階段應用程式或 Windows 桌面應用程式中，透過 HTTP 連線到網際網路，並發出 GET、 PUT 和其他 HTTP 命令的原生 COM 介面。 如需詳細資訊，請參閱[逐步解說：使用工作和 XML HTTP 要求連線](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)。
 
 - [Windows 網際網路 (WinInet)](/windows/desktop/WinInet/portal)
 

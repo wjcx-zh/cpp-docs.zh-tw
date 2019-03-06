@@ -49,12 +49,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: f25c552001411565e4ad370c6e454b4c0ae4ae48
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 7db2d3d71deecda06e39772541658dfada72ae3b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556994"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415262"
 ---
 # <a name="ccommand-class"></a>CCommand 類別
 
@@ -81,7 +81,7 @@ class CCommand :
 資料列集類別的型別 (例如`CArrayRowset`或`CNoRowset`) 您想要使用的命令。 預設為 `CRowset`。
 
 *TMultiple*<br/>
-若要使用 OLE DB 命令可傳回多個結果，請指定[CMultipleResults](../../data/oledb/cmultipleresults-class.md)。 否則，請使用[CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)。 如需詳細資訊，請參閱 < [IMultipleResults](https://docs.microsoft.com/previous-versions/windows/desktop/ms721289(v=vs.85))。
+若要使用 OLE DB 命令可傳回多個結果，請指定[CMultipleResults](../../data/oledb/cmultipleresults-class.md)。 否則，請使用[CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)。 如需詳細資訊，請參閱 < [IMultipleResults](/previous-versions/windows/desktop/ms721289(v=vs.85))。
 
 ## <a name="requirements"></a>需求
 
@@ -209,17 +209,17 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 
 #### <a name="parameters"></a>參數
 
-*工作階段*<br/>
+*session*<br/>
 [in]要在其中執行命令的工作階段。
 
 *wszCommand*<br/>
-[in]若要執行，此命令傳遞 Unicode 字串。 使用時，可以是 NULL `CAccessor`，在此情況下命令將會從傳遞給的值擷取[DEFINE_COMMAND](../../data/oledb/define-command.md)巨集。 請參閱[icommand:: Execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85))中*OLE DB 程式設計人員參考*如需詳細資訊。
+[in]若要執行，此命令傳遞 Unicode 字串。 使用時，可以是 NULL `CAccessor`，在此情況下命令將會從傳遞給的值擷取[DEFINE_COMMAND](../../data/oledb/define-command.md)巨集。 請參閱[icommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85))中*OLE DB 程式設計人員參考*如需詳細資訊。
 
 *szCommand*<br/>
 [in]與相同*wszCommand*不同之處在於此參數採用 ANSI 命令字串。 此方法的第四個形式可以接受 NULL 值。 本章稍後如需詳細資訊，請參閱 < 備註 >。
 
 *pPropSet*<br/>
-[in]陣列的指標[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85))中*OLE DB 程式設計人員參考*Windows SDK 中。
+[in]陣列的指標[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](/previous-versions/windows/desktop/ms713696(v=vs.85))中*OLE DB 程式設計人員參考*Windows SDK 中。
 
 *pRowsAffected*<br/>
 [輸入/輸出]受命令影響的資料列計數會傳回其中的記憶體指標。 如果 *\*pRowsAffected*為 NULL，就會傳回任何資料列計數。 否則，請`Open`設定 *\*pRowsAffected*根據下列條件：
@@ -231,13 +231,13 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 |此命令不會更新、 刪除或插入資料列|*\*pRowsAffected*是未定義。|
 
 *guidCommand*<br/>
-[in]剖析命令文字中指定的語法和一般的規則，若要使用的提供者 GUID。 請參閱[ICommandText::GetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709825(v=vs.85))並[icommandtext:: Setcommandtext](https://docs.microsoft.com/previous-versions/windows/desktop/ms709757(v=vs.85))中*OLE DB 程式設計人員參考*如需詳細資訊。
+[in]剖析命令文字中指定的語法和一般的規則，若要使用的提供者 GUID。 請參閱[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85))並[icommandtext:: Setcommandtext](/previous-versions/windows/desktop/ms709757(v=vs.85))中*OLE DB 程式設計人員參考*如需詳細資訊。
 
 *bBind*<br/>
 [in]指定是否自動繫結命令之後執行。 預設值是 **，則為 true**，因而導致命令來自動繫結。 設定*bBind*要**false**可防止自動繫結的命令，讓您以手動方式可以繫結。 （手動繫結是 OLAP 使用者特別感興趣的）。
 
 *ulPropSets*<br/>
-[in]數目[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))結構傳入*Dbpropset*引數。
+[in]數目[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構傳入*Dbpropset*引數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -260,7 +260,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 
 ## <a name="create"></a> Ccommand:: Create
 
-呼叫[ccommand:: Createcommand](../../data/oledb/ccommand-createcommand.md)建立命令指定的工作階段，然後呼叫[icommandtext:: Setcommandtext](https://docs.microsoft.com/previous-versions/windows/desktop/ms709825(v=vs.85))指定的命令文字。
+呼叫[ccommand:: Createcommand](../../data/oledb/ccommand-createcommand.md)建立命令指定的工作階段，然後呼叫[icommandtext:: Setcommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85))指定的命令文字。
 
 ### <a name="syntax"></a>語法
 
@@ -276,7 +276,7 @@ HRESULT CCommandBase::Create(const CSession& session,
 
 #### <a name="parameters"></a>參數
 
-*工作階段*<br/>
+*session*<br/>
 [in]要在其中建立命令的工作階段。
 
 *wszCommand*<br/>
@@ -286,7 +286,7 @@ HRESULT CCommandBase::Create(const CSession& session,
 [in]ANSI 文字命令字串的指標。
 
 *guidCommand*<br/>
-[in]剖析命令文字中指定的語法和一般的規則，若要使用的提供者 GUID。 如需方言的說明，請參閱 < [ICommandText::GetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709825(v=vs.85))中*OLE DB 程式設計人員參考*。
+[in]剖析命令文字中指定的語法和一般的規則，若要使用的提供者 GUID。 如需方言的說明，請參閱 < [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -296,7 +296,7 @@ HRESULT CCommandBase::Create(const CSession& session,
 
 第一種形式的`Create`採用 Unicode 命令字串。 第二個形式`Create`採用 ANSI 命令字串 （提供與現有的 ANSI 應用程式的回溯相容性）。
 
-## <a name="createcommand"></a> Ccommand:: Createcommand
+## <a name="createcommand"></a> CCommand::CreateCommand
 
 建立新的命令。
 
@@ -308,7 +308,7 @@ HRESULT CCommandBase::CreateCommand(const CSession& session) throw ();
 
 #### <a name="parameters"></a>參數
 
-*工作階段*<br/>
+*session*<br/>
 [in]A`CSession`要與新的命令相關聯的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -333,7 +333,7 @@ HRESULT CCommandBase::GetParameterInfo(DB_UPARAMS* pParams,
 
 #### <a name="parameters"></a>參數
 
-請參閱[icommandwithparameters:: Getparameterinfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms714917(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[icommandwithparameters:: Getparameterinfo](/previous-versions/windows/desktop/ms714917(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -360,7 +360,7 @@ HRESULT CCommandBase::Prepare(ULONG cExpectedRuns = 0) throw();
 
 ### <a name="remarks"></a>備註
 
-這個方法會包裝的 OLE DB 方法[icommandprepare:: Prepare](https://docs.microsoft.com/previous-versions/windows/desktop/ms718370(v=vs.85))。
+這個方法會包裝的 OLE DB 方法[icommandprepare:: Prepare](/previous-versions/windows/desktop/ms718370(v=vs.85))。
 
 ## <a name="releasecommand"></a> Ccommand:: Releasecommand
 
@@ -376,7 +376,7 @@ void CCommandBase::ReleaseCommand() throw();
 
 `ReleaseCommand` 用於搭配`Close`。 請參閱[關閉](../../data/oledb/ccommand-close.md)使用方式詳細資料。
 
-## <a name="setparameterinfo"></a> Ccommand:: Setparameterinfo
+## <a name="setparameterinfo"></a> CCommand::SetParameterInfo
 
 指定每一個命令參數的原生類型。
 
@@ -390,13 +390,13 @@ HRESULT CCommandBase::SetParameterInfo(DB_UPARAMS ulParams,
 
 #### <a name="parameters"></a>參數
 
-請參閱[icommandwithparameters:: Setparameterinfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms725393(v=vs.85))中*OLE DB 程式設計人員參考*。
+請參閱[icommandwithparameters:: Setparameterinfo](/previous-versions/windows/desktop/ms725393(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 ### <a name="return-value"></a>傳回值
 
 標準的 HRESULT。
 
-## <a name="unprepare"></a> Ccommand:: Unprepare
+## <a name="unprepare"></a> CCommand::Unprepare
 
 捨棄目前的命令執行計畫。
 
@@ -412,7 +412,7 @@ HRESULT CCommandBase::Unprepare() throw();
 
 ### <a name="remarks"></a>備註
 
-這個方法會包裝的 OLE DB 方法[Icommandprepare](https://docs.microsoft.com/previous-versions/windows/desktop/ms719635(v=vs.85))。
+這個方法會包裝的 OLE DB 方法[Icommandprepare](/previous-versions/windows/desktop/ms719635(v=vs.85))。
 
 ## <a name="see-also"></a>另請參閱
 

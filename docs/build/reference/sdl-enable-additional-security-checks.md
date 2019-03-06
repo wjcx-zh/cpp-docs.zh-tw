@@ -4,12 +4,12 @@ ms.date: 11/26/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-ms.openlocfilehash: 49ac57f81ef07eb2a9c1e11280e160f0c48fce73
-ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
+ms.openlocfilehash: dd37dae4927531b86cfdac274493b945b066760a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389938"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413091"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (啟用其他安全性檢查)
 
@@ -25,7 +25,7 @@ ms.locfileid: "52389938"
 
 **/sdl**可讓所提供的基準安全性檢查的超集[/GS](../../build/reference/gs-buffer-security-check.md) ，並覆寫 **/GS-**。 根據預設， **/sdl**已關閉。 **/sdl-** 停用其他安全性檢查。
 
-## <a name="compile-time-checks"></a>編譯時間檢查
+## <a name="compile-time-checks"></a>編譯時期檢查
 
 **/sdl**可讓這些警告視為錯誤：
 

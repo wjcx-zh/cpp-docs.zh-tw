@@ -1,19 +1,19 @@
 ---
-title: 如何：將自訂建置工具加入至 MSBuild 專案
+title: HOW TO：新增自訂建置工具至 MSBuild 專案
 ms.date: 11/04/2016
 f1_keywords:
 - msbuild.cpp.howto.addcustombuildtools
 helpviewer_keywords:
 - 'msbuild (c++), howto: add custom build tools'
 ms.assetid: de03899a-371d-4396-9bf9-34f45a65e909
-ms.openlocfilehash: 48923c997c881e8786a8c20b00077161cf470195
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d07c8de3405791e94193368e921c0f594845a418
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543464"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413845"
 ---
-# <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>如何：將自訂建置工具加入至 MSBuild 專案
+# <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>HOW TO：新增自訂建置工具至 MSBuild 專案
 
 自訂建置工具是與特定的檔案相關聯的使用者定義的命令列工具。
 
@@ -50,6 +50,6 @@ ms.locfileid: "50543464"
 
 ## <a name="see-also"></a>另請參閱
 
-[逐步解說：使用 MSBuild 來建立 Visual C++ 專案](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[逐步解說：使用 MSBuild 建立 Visual C++ 專案](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
 [如何：在 MSBuild 專案中使用建置事件](../build/how-to-use-build-events-in-msbuild-projects.md)<br/>
 [如何：將自訂建置步驟新增至 MSBuild 專案](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)

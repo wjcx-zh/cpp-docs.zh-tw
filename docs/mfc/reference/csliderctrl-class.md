@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 3fcdddd27437f57ba800a602873d9bb3ae26e82f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0179d69726f49f2df02979264da4966b35178434
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283601"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421996"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl 類別
 
@@ -209,7 +209,7 @@ virtual BOOL Create(
 指定滑桿控制項的樣式。 套用的任何組合[滑桿控制項樣式](/windows/desktop/Controls/trackbar-control-styles)，Windows SDK，控制項中所述。
 
 *rect*<br/>
-指定滑桿控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。
+指定滑桿控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
 
 *pParentWnd*<br/>
 指定滑桿控制項的父視窗，通常`CDialog`。 它必須不是 NULL。
@@ -251,7 +251,7 @@ virtual BOOL CreateEx(
 指定滑桿控制項的樣式。 套用的任何組合[滑桿控制項樣式](/windows/desktop/Controls/trackbar-control-styles)，Windows SDK，控制項中所述。
 
 *rect*<br/>
-參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。
+參考[RECT](/previous-versions/dd162897\(v=vs.85\))結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。
 
 *pParentWnd*<br/>
 是控制項的父視窗的指標。

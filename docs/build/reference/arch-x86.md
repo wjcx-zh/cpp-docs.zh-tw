@@ -2,12 +2,12 @@
 title: /arch (x86)
 ms.date: 11/04/2016
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
-ms.openlocfilehash: fb115d564ca24ff29e120e0d8c25e0dbe28024cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2aba6dc18db621710b5293f9f970fa5f453b8a9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549704"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421803"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 
@@ -21,19 +21,19 @@ ms.locfileid: "50549704"
 
 ## <a name="arguments"></a>引數
 
-**/ arch:ia32**<br/>
+**/arch:IA32**<br/>
 指定沒有增強的指令，同時指定用於浮點數計算的 x87。
 
 **/arch:SSE**<br/>
 啟用 SSE 指令的使用。
 
-**/ arch:sse2**<br/>
+**/arch:SSE2**<br/>
 啟用 SSE2 指令的使用。 這是預設指示，在 x86 平台，如果沒有 **/arch**指定選項。
 
-**/arch: avx**<br/>
+**/arch:AVX**<br/>
 啟用 Intel Advanced Vector Extensions 指令的使用。
 
-**/ arch:avx2**<br/>
+**/arch:AVX2**<br/>
 啟用 Intel Advanced Vector Extensions 2 指令的使用。
 
 ## <a name="remarks"></a>備註

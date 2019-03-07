@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: d040c09b36c2b46036744c8a263802da48cd8e60
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: bea53c33ef723cf8c98d0c542d24389e730c092a
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210792"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563299"
 ---
 # <a name="string-editor-c"></a>字串編輯器 （c + +）
 
@@ -56,7 +56,7 @@ ms.locfileid: "57210792"
 
 ### <a name="to-find-a-string-resource-in-the-string-table"></a>若要在字串中尋找的字串資源
 
-1. 開啟字串資料表，其在圖示上按兩下[資源檢視](../windows/resource-view-window.md)。
+1. 開啟字串資料表，其在圖示上按兩下[資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)。
 
 1. 移至功能表**編輯** > **尋找和取代**，然後選擇**尋找**。
 
@@ -77,9 +77,9 @@ ms.locfileid: "57210792"
 
 **字串值編輯器**可確保您不使用已在使用的識別碼。 如果您選取的識別碼已經在使用中，**字串值編輯器**會通知您，然後指派一個泛用的唯一識別碼，例如`IDS_STRING58113`。
 
-若要新增的字串資料表項目：
+#### <a name="to-add-a-string-table-entry"></a>若要加入的字串資料表項目
 
-1. 開啟字串資料表，其在圖示上按兩下[資源檢視](../windows/resource-view-window.md)。
+1. 開啟字串資料表，其在圖示上按兩下[資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)。
 
 1. 字串資料表中按一下滑鼠右鍵，然後選擇 **新的字串**。
 
@@ -92,7 +92,7 @@ ms.locfileid: "57210792"
    > [!NOTE]
    > Windows 字串資料表中不得包含 null 的字串。 如果您是 null 字串的字串資料表中建立項目，您會收到訊息，詢問是否要**請輸入字串，此資料表項目的**。
 
-若要刪除的字串資料表項目：
+#### <a name="to-delete-a-string-table-entry"></a>若要刪除的字串資料表項目
 
 選取您想要刪除，然後執行下列其中一項的項目：
 
@@ -110,7 +110,7 @@ ms.locfileid: "57210792"
 
 1. 將游標放在目標**字串值編輯器**視窗。
 
-1. 在.rc 檔案中您要移動的字串，以滑鼠右鍵按一下，然後選擇 **貼上**。
+1. 在  *.rc*您想要移動的字串，以滑鼠右鍵按一下並選擇的檔案**貼上**。
 
 > [!NOTE]
 > 如果**識別碼**或**值**移動的字串衝突與現有的**識別碼**或是**值**在目的地檔案中，可能是該**識別碼**或**值**移動的字串的變更。
@@ -122,9 +122,9 @@ ms.locfileid: "57210792"
 > [!NOTE]
 >  您也可以編輯中的字串屬性[屬性 視窗](/visualstudio/ide/reference/properties-window)。
 
-若要變更字串或其識別項：
+#### <a name="to-change-a-string-or-its-identifier"></a>若要變更字串或其識別碼
 
-1. 開啟字串資料表，其在圖示上按兩下[資源檢視](../windows/resource-view-window.md)。
+1. 開啟字串資料表，其在圖示上按兩下[資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)。
 
 1. 選取您想要編輯，然後按兩下的字串**識別碼**，**值**，或**標題**資料行，則您可以：
 
@@ -134,9 +134,9 @@ ms.locfileid: "57210792"
 
    - 輸入中的編輯**標題**資料行。
 
-若要變更多個字串資源的標題屬性：
+#### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>若要變更多個字串資源的標題屬性
 
-1. 開啟字串資料表，其在圖示上按兩下[資源檢視](../windows/resource-view-window.md)。
+1. 開啟字串資料表，其在圖示上按兩下[資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)。
 
 1. 選取您想要變更按住的字串**Ctrl**當您選取每個索引鍵。
 
@@ -146,7 +146,7 @@ ms.locfileid: "57210792"
 
 ### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>若要加入的字串資源的格式或特殊字元
 
-1. 開啟字串資料表，其在圖示上按兩下[資源檢視](../windows/resource-view-window.md)。
+1. 開啟字串資料表，其在圖示上按兩下[資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)。
 
 1. 選取您想要修改的字串。
 

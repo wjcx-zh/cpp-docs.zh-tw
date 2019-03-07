@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: bd73db481659573d51e4abd56da9689e2e8ade25
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 3de2010cca04d007bf61bf8c139cbc69d790e579
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676431"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563000"
 ---
 # <a name="resource-files-c"></a>資源檔 (C++)
 
@@ -121,9 +121,9 @@ Windows XP 或 Windows Vista 應用程式資訊清單資源應該指定應用程
 
 1. 依序展開**資源檔**資料夾，然後：
 
-   - 若要在文字編輯器中開啟，按兩下.manifest 檔案。
+   - 若要在文字編輯器中開啟，按兩下 *.manifest*檔案。
 
-   - 若要開啟在其他編輯器中，以滑鼠右鍵按一下.manifest 檔案，然後選取**開啟方式...**.指定編輯器使用，並選擇**開啟**。
+   - 若要開啟在其他編輯器中，以滑鼠右鍵按一下 *.manifest*檔案，然後選取**開啟**。 指定編輯器使用，並選取**開啟**。
 
 ## <a name="requirements"></a>需求
 

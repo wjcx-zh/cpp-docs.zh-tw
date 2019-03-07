@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: 329d56f4a8e0e9992cb78987c559f74c7349f681
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: c60c75275ca565b332c33848d27c134deb90a5c6
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954948"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563197"
 ---
 # <a name="mfc-predefined-symbols"></a>MFC 預先定義的符號
 
@@ -236,7 +236,7 @@ MFC 專案一定會包含數個支援 windows 的標頭檔。 透過新增這些
 
 這些符號也是 MFC 支援檔案的一部分，但是它們可以支援標準的 Windows 應用程式函數和動作。 這些符號用於功能表。
 
-當您正在使用中的功能表**功能表編輯器**，這些符號會出現在**屬性視窗**常見的功能表命令相關聯。 比方說，如果您的應用程式**檔案**功能表，其中**結束**命令，命令將會是相關聯的符號 ID_APP_EXIT 中[屬性 視窗](/visualstudio/ide/reference/properties-window)。
+當您正在使用中的功能表**功能表編輯器**，這些符號會出現在**屬性**常見的功能表命令相關聯的視窗。 比方說，如果您的應用程式**檔案**功能表，其中**結束**命令，命令將會是相關聯的符號 ID_APP_EXIT 中[屬性 視窗](/visualstudio/ide/reference/properties-window)。
 
 ||||
 |-|-|-|

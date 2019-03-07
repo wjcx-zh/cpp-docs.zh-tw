@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 5aadb00e6e010467ee9c70dc357916d3c4f81853
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: a138eb5aa40429696ca2efa4a67e1a1c5490f4fa
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211078"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563247"
 ---
 # <a name="toolbar-editor-c"></a>工具列編輯器 （c + +）
 
@@ -103,7 +103,7 @@ ms.locfileid: "57211078"
 
 ### <a name="to-create-new-toolbars"></a>若要建立新的工具列
 
-1. 在  **Resource**檢視，以滑鼠右鍵按一下.rc 檔，然後選擇**加入資源**。 如果您將現有工具列在.rc 檔時，您可以以滑鼠右鍵按一下** 工具列**資料夾，然後選取**插入工具列**。
+1. 在 **資源檢視**，以滑鼠右鍵按一下您 *.rc*檔案，然後選擇**加入資源**。 如果您在現有工具列您 *.rc*檔案中，您可以以滑鼠右鍵按一下**工具列**資料夾，然後選取**插入工具列**。
 
 1. 在 **加入資源**對話方塊中，選取**工具列**中**資源類型**清單，然後選擇**新增**。
 
@@ -111,7 +111,7 @@ ms.locfileid: "57211078"
 
 ### <a name="to-convert-bitmaps-to-toolbar-resources"></a>若要將點陣圖轉換成工具列資源
 
-1. 開啟現有的點陣圖資源中[影像編輯器](../windows/image-editor-for-icons.md)。 如果點陣圖沒有.rc 檔，以滑鼠右鍵按一下.rc 檔，然後選擇 **匯入**，然後瀏覽至您想要新增到您的.rc 檔，然後選取點陣圖**開啟**。
+1. 開啟現有的點陣圖資源中[影像編輯器](../windows/image-editor-for-icons.md)。 如果點陣圖還未在您 *.rc*檔案中，以滑鼠右鍵按一下 *.rc*檔案，然後選擇**匯入**，然後瀏覽至您想要加入的點陣圖您 *.rc*檔案，然後選取**開啟**。
 
 1. 移至功能表**映像** > **工具列編輯器**。
 
@@ -126,7 +126,7 @@ ms.locfileid: "57211078"
 
 ### <a name="to-manage-toolbar-buttons"></a>若要管理工具列按鈕
 
-若要建立新的工具列按鈕：
+#### <a name="to-create-a-new-toolbar-button"></a>若要建立新的工具列按鈕
 
 1. 在 [資源檢視](../windows/resource-view-window.md)展開 [資源] 資料夾 (例如*Project1.rc*)。
 
@@ -134,36 +134,34 @@ ms.locfileid: "57211078"
 
    - 空白的按鈕，工具列的右端指派識別碼。 則可以藉由編輯**識別碼**中的屬性[屬性 視窗](/visualstudio/ide/reference/properties-window)。 比方說，您可以為工具列按鈕提供相同的 ID 為功能表選項。 在此情況下，使用下拉式清單方塊來選取**識別碼**的功能表選項。
 
-   - 選取 [空白] 按鈕的工具列的右端 (在**工具列檢視**窗格)，並開始繪圖。 指派的預設按鈕的命令識別碼 (ID_BUTTON\<n >)。
+   - 選取 [空白] 按鈕的工具列中的右端**工具列檢視**窗格，並開始繪圖。 指派的預設按鈕的命令識別碼 (ID_BUTTON\<n >)。
 
-您也可以複製並貼上到做為新按鈕的工具列上的映像。
-
-若要為按鈕加入工具列影像：
+#### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>若要將影像加入為按鈕的工具列
 
 1. 在 [資源檢視](../windows/resource-view-window.md)，按兩下 [開啟] 工具列。
 
 1. 接下來，開啟您想要新增至您的工具列影像。
 
    > [!NOTE]
-   > 如果您在 Visual Studio 中開啟映像，即會開啟在**映像**編輯器。 您也可以開啟在其他圖形程式中的映像。
+   > 如果您在 Visual Studio 中開啟映像，即會開啟在**影像編輯器**。 您也可以開啟在其他圖形程式中的映像。
 
-1. 從**編輯**功能表上，選擇**複製**。
+1. 移至功能表**編輯** > **複製**。
 
 1. 選取 [來源] 視窗頂端的索引標籤切換至您的工具列。
 
-1. 從**編輯**功能表上，選擇**貼上**。
+1. 移至功能表**編輯** > **貼上**。
 
    映像會出現在工具列中，為新的按鈕。
 
-若要移動的工具列按鈕：
+#### <a name="to-move-a-toolbar-button"></a>若要移動的工具列按鈕
 
 在 **工具列檢視** 窗格中，拖曳您想要移到其新的位置 工具列上的按鈕。
 
-若要從工具列複製按鈕，按住**Ctrl**機碼並在**工具列檢視** 窗格中，將拖曳按鈕到其新位置工具列上或位置在另一個工具列上。
+- 若要從工具列複製按鈕，按住**Ctrl**機碼並在**工具列檢視** 窗格中，將拖曳按鈕到其新位置工具列上或位置在另一個工具列上。
 
-若要刪除的工具列按鈕，選取工具列按鈕，並將它拖曳出工具列。
+- 若要刪除的工具列按鈕，選取工具列按鈕，並將它拖曳出工具列。
 
-若要插入或移除工具列按鈕之間的空間，請將它們拖曳以外的位置，或針對另一個工具列上。
+- 若要插入或移除工具列按鈕之間的空間，請將它們拖曳以外的位置，或針對另一個工具列上。
 
 |動作|步驟|
 |------|------|
@@ -175,19 +173,19 @@ ms.locfileid: "57211078"
 > [!NOTE]
 > 如果沒有空間旁邊的按鈕，您所拖曳的以外的位置，而且您將按鈕拖曳多個中間時，[相鄰] 按鈕，過去**工具列編輯器**插入見所拖曳的按鈕上的另一端的空間。
 
-若要變更工具列按鈕的屬性：
+#### <a name="to-change-the-properties-of-a-toolbar-button"></a>若要變更工具列按鈕的屬性
 
 1. 在 c + + 專案中，選取工具列按鈕。
 
 1. 輸入中的新識別碼**識別碼**中的屬性[屬性視窗](/visualstudio/ide/reference/properties-window)，或使用下拉式清單選取新**識別碼**。
 
-若要建立工具列按鈕的工具提示：
+#### <a name="to-create-a-tool-tip-for-a-toolbar-button"></a>若要建立工具列按鈕的工具提示
 
 1. 選取工具列按鈕。
 
 1. 在 [[屬性] 視窗](/visualstudio/ide/reference/properties-window)，請在**提示**欄位中，新增按鈕的狀態列和訊息之後的描述、 新增`\n`和工具提示名稱。
 
-例如，請參閱的工具提示**列印**按鈕**WordPad**:
+例如，若要查看的工具提示**列印**按鈕**WordPad**:
 
 1. 開啟**WordPad**。
 

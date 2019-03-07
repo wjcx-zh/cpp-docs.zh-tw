@@ -8,19 +8,19 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 604f97edc8e4e49bad477d76e0e46334b8cf726b
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: 0b29f435ab91b10e010e956d26fb8d2d116edc6e
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336532"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563117"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>快速鍵 （c + + 圖示影像編輯器）
 
-以下是預設繫結至索引鍵的影像編輯器命令的快速鍵。 若要變更的快速鍵，請按一下**選項**上**工具**功能表，然後選擇 **鍵盤**下**環境**資料夾。 如需詳細資訊，請參閱[識別及自訂鍵盤快速鍵](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)。
+以下是預設繫結至索引鍵的影像編輯器命令的快速鍵。 若要變更的快速鍵，請移至功能表**工具** > **選項**，然後選擇**鍵盤**下**環境**資料夾。 如需詳細資訊，請參閱[識別及自訂鍵盤快速鍵](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)。
 
 > [!NOTE]
-> 根據您目前使用的設定或版本，您所看到的對話方塊可用選項，以及功能表命令的名稱和位置，可能會與 [說明] 中描述的有所不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。
+> 根據您目前使用的設定或版本，您所看到的對話方塊可用選項，以及功能表命令的名稱和位置，可能會與 [說明] 中描述的有所不同。 若要變更您的設定，請移至功能表**工具** > **匯入和匯出設定**。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。
 
 |命令|按鍵|描述|
 |-------------|----------|-----------------|
@@ -68,4 +68,8 @@ ms.locfileid: "56336532"
 
 ## <a name="see-also"></a>另請參閱
 
-[圖示影像編輯器](../windows/image-editor-for-icons.md)
+[圖示影像編輯器](../windows/image-editor-for-icons.md)<br/>
+[如何：建立圖示或其他影像](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[如何：複製影像](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[如何：使用繪圖工具](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[如何：使用色彩](../windows/working-with-color-image-editor-for-icons.md)<br/>

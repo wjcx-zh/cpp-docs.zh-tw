@@ -21,23 +21,23 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 420c5ecf44f8e8b264d9eafd93de58c0db3bedf4
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: df693e87bc9a370409eb43155d3f976a9f00cdac
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210714"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562857"
 ---
 # <a name="binary-editor-c"></a>二進位編輯器 （c + +）
 
 > [!CAUTION]
 > 編輯資源，例如對話方塊、 影像或中的功能表**二進位編輯器**非常危險。 不正確的編輯可能會損毀資源，讓它在原生編輯器中無法讀取。
 
-**二進位編輯器**可讓您在二進位層級，以十六進位或 ASCII 格式編輯的資源。 您也可以使用 [[尋找命令]](/visualstudio/ide/reference/find-command) 搜尋 ASCII 字串或十六進位位元組。 使用**二進位編輯器**只有當您需要檢視或進行次要變更為自訂資源 」 或 「 不支援的 Visual Studio 環境的資源類型。
+**二進位編輯器**可讓您在二進位層級，以十六進位或 ASCII 格式編輯的資源。 您也可以使用 [[尋找命令]](/visualstudio/ide/reference/find-command) 搜尋 ASCII 字串或十六進位位元組。 使用**二進位編輯器**只有當您需要檢視或進行次要變更為自訂資源 」 或 「 不支援的 Visual Studio 環境的資源類型。 **二進位編輯器**不適用於 Express 版本。
 
-若要開啟 **二進位編輯器**的新檔案，請移至功能表**檔案** > **新增** > **檔案**，選取的類型您想要編輯，然後選取旁邊的向下箭號的檔案**開放**按鈕，然後選擇**開啟** > **二進位編輯器**。
+- 若要開啟 **二進位編輯器**的新檔案，請移至功能表**檔案** > **新增** > **檔案**，選取的類型您想要編輯，然後選取旁邊的向下箭號的檔案**開放**按鈕，然後選擇**開啟** > **二進位編輯器**。
 
-若要開啟 **二進位編輯器**對現有的檔案，請移至功能表**檔案** > **開啟** > **檔案**，選取您想要編輯，然後選取旁邊的向下箭號的檔案**開放**按鈕，然後選擇**開啟** > **二進位編輯器**。
+- 若要開啟 **二進位編輯器**對現有的檔案，請移至功能表**檔案** > **開啟** > **檔案**，選取您想要編輯，然後選取旁邊的向下箭號的檔案**開放**按鈕，然後選擇**開啟** > **二進位編輯器**。
 
    ![二進位編輯器](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
    顯示在對話方塊中的二進位資料**二進位編輯器**
@@ -45,9 +45,7 @@ ms.locfileid: "57210714"
 只有特定的 ASCII 值都表示**二進位編輯器**(0x20 到 0x7E)。 擴充的字元的右方面板 ASCII 值區段中，會顯示為句號**二進位編輯器**。 可列印的字元是 ASCII 值 32 到 126。
 
 > [!TIP]
-> 在使用時**二進位編輯器**，在許多情況下您可以按一下滑鼠右鍵以顯示資源特定命令的捷徑功能表。 可用的命令取決於游標所指項目。 例如，如果您按一下指向時**二進位編輯器**快顯功能表會顯示含有所選十六進位值，**剪下**，**複製**，和**貼上**命令。
-
-**二進位編輯器**不適用於 Express 版本。
+> 在使用時**二進位編輯器**，在許多情況下您可以按一下滑鼠右鍵以顯示資源特定命令的捷徑功能表。 可用的命令取決於游標所指項目。 例如，如果您以滑鼠右鍵按一下指向時**二進位編輯器**快顯功能表會顯示含有所選十六進位值，**剪下**，**複製**，以及**貼上**命令。
 
 ## <a name="how-to"></a>如何
 
@@ -55,12 +53,12 @@ ms.locfileid: "57210714"
 
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>開啟 Windows 桌面資源進行二進位編輯
 
-1. 在 [[資源檢視]](../windows/resource-view-window.md)中，選取您要編輯的特定資源檔。
+1. 在 [[資源檢視]](/windows/how-to-create-a-resource-script-file#create-resources)中，選取您要編輯的特定資源檔。
 
 1. 以滑鼠右鍵按一下資源，然後選取**開啟二進位資料**。
 
 > [!NOTE]
-> 如果您使用[資源檢視](../windows/resource-view-window.md)視窗中開啟資源的格式，Visual Studio 無法辨識，例如 RCDATA 或自訂的資源，資源會自動以開啟**二進位編輯器**。
+> 如果您使用**資源檢視**視窗中開啟資源的格式，Visual Studio 無法辨識，例如 RCDATA 或自訂的資源，資源會自動以開啟**二進位編輯器**。
 
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>開啟 Managed 資源進行二進位編輯
 
@@ -75,8 +73,7 @@ ms.locfileid: "57210714"
 
 ### <a name="to-edit-a-resource"></a>編輯資源
 
-> [!NOTE]
-> 如果您想要使用**二進位編輯器**資源已在另一個編輯器視窗中編輯，關閉其他編輯器視窗第一次。
+如果您想要使用**二進位編輯器**資源已在另一個編輯器視窗中編輯，關閉其他編輯器視窗第一次。
 
 1. 選取您想要編輯的位元組。
 
@@ -93,7 +90,7 @@ ms.locfileid: "57210714"
 
 您可以搜尋 ASCII 字串或十六進位位元組。 例如，若要尋找*Hello*，您可以搜尋字串*Hello*或其十六進位值時， *48 65 6C 6c 6F*。
 
-1. 從**編輯**功能表上，選擇[尋找](/visualstudio/ide/reference/find-command)。
+1. 移至功能表**編輯** > [尋找](/visualstudio/ide/reference/find-command)。
 
 1. 在  **Find What**方塊中，從下拉式清單中選取先前的搜尋字串或輸入您想要尋找的資料。
 

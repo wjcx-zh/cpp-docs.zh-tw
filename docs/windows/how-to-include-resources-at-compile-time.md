@@ -23,16 +23,16 @@ helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: 5768347c32b1856da16310f29e7a4257e18b6a93
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 74c70db5c04a6b56ec7bb2630c8d829151ec4225
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676457"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562831"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>HOW TO：包含資源在編譯時期 （c + +）
 
-根據預設中的所有資源都位於一個資源指令碼 (.rc) 檔，不過有許多原因會放置在主要.rc 檔以外的檔案中的資源：
+根據預設，所有的資源位於一個資源指令碼 (.rc) 檔，不過有許多原因會放置在主要.rc 檔以外的檔案中的資源：
 
 - 若要儲存.rc 檔時不會刪除的資源陳述式中加入註解。
 
@@ -48,32 +48,32 @@ ms.locfileid: "56676457"
 
 您可以將資源從其他檔案加入您的專案在編譯時期藉由列出在**編譯時間指示詞**方塊中**Resource Includes**  對話方塊。 使用**Resource Includes**對話方塊來修改專案.rc 檔，以及所有儲存的所有資源的專案環境的一般工作安排[符號](../windows/symbols-resource-identifiers.md)在`Resource.h`。
 
-若要開始，開啟**Resource Includes**對話方塊中，以滑鼠右鍵按一下.rc 檔中的[資源檢視](../windows/resource-view-window.md)，選取**Resource Includes**並記下下列屬性：
+若要開始，開啟**Resource Includes**對話方塊中，以滑鼠右鍵按一下.rc 檔中的[資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)，選取**Resource Includes**並記下下列屬性：
 
 | 屬性 | 描述 |
 |---|---|
 | **符號標頭檔** | 可讓您變更儲存您的資源檔的符號定義的標頭檔的名稱。<br/><br/>如需詳細資訊，請參閱 <<c0> [ 變更符號標頭檔的名稱](../windows/changing-the-names-of-symbol-header-files.md)。 |
-| **唯讀符號指示詞** | 可讓您包含標頭檔包含不應該修改的符號。 比方說，符號檔案與其他專案共用。 這也可以包含 mfc.h 檔案。<br/><br/>如需詳細資訊，請參閱 <<c0> [ 包含共用 （唯讀） 或計算符號](../windows/including-shared-read-only-or-calculated-symbols.md)。 |
-| **編譯時間指示詞** | 可讓您包含會個別建立和編輯從您的主要資源檔中的資源的資源檔包含編譯時間指示詞 （例如這些指示詞有條件地包含資源），或包含自訂格式的資源。 您也可以使用**編譯時間指示詞方塊**包含標準 MFC 資源檔。 |
+| **唯讀符號指示詞** | 可讓您包含標頭檔包含不應該修改的符號。<br/><br/>比方說，符號檔案與其他專案共用。 這也可以包含 mfc.h 檔案。 如需詳細資訊，請參閱 <<c0> [ 包含共用 （唯讀） 或計算符號](../windows/including-shared-read-only-or-calculated-symbols.md)。 |
+| **編譯時間指示詞** | 可讓您包含會個別建立和編輯從您的主要資源檔中的資源的資源檔包含編譯時間指示詞 （例如這些指示詞有條件地包含資源），或包含自訂格式的資源。<br/><br/>您也可以使用**編譯時間指示詞方塊**包含標準 MFC 資源檔。 |
 
 > [!NOTE]
 > 這些文字方塊中的項目剢謅.rc 檔餇標示`TEXTINCLUDE 1`， `TEXTINCLUDE 2`，和`TEXTINCLUDE 3`分別。 如需詳細資訊，請參閱[TN035:使用 Visual c + + 中的多個資源檔和標頭檔](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)。
 
-使用資源檔案進行變更之後**Resource Includes**  對話方塊中，您必須關閉再重新開啟.rc 檔案，變更才會生效。
+使用資源檔案進行變更之後**Resource Includes**  對話方塊中，您必須關閉再重新開啟 *.rc*檔案，變更才會生效。
 
 ### <a name="to-include-resources-in-your-project-at-compile-time"></a>在編譯時期，於專案中包含資源
 
-1. 將資源放在包含唯一檔案名稱的資源指令碼檔案。 不用*projectname*.rc，因為這是用於主要資源指令碼檔案的檔案名稱。
+1. 將資源放在包含唯一檔案名稱的資源指令碼檔案。 不用*projectname.rc*，因為這是用於主要資源指令碼檔案的檔案名稱。
 
-1. 中的.rc 檔上按一下滑鼠右鍵[資源檢視](../windows/resource-view-window.md)，然後選擇**Resource Includes**從捷徑功能表。
+1. 以滑鼠右鍵按一下 *.rc*中的檔案[資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)，然後選取**Resource Includes**。
 
 1. 在 **編譯時間指示詞**方塊中，加入[#include](../preprocessor/hash-include-directive-c-cpp.md)編譯器指示詞，以在開發環境中的主要資源檔中納入新的資源檔。
 
-   包含這種方式的檔案中的資源在編譯時期皆可執行檔的一部分，並不適用於編輯或修改時您正在處理您的專案主要.rc 檔。 包含的.rc 檔需要個別開啟，而且任何包含不含.rc 副檔名的檔案不是可編輯的資源編輯器。
+包含這種方式的檔案中的資源在編譯時期皆可執行檔的一部分，並不適用於編輯或修改時您正在處理您的專案主要.rc 檔。 包含的.rc 檔需要個別開啟，而且任何包含不含.rc 副檔名的檔案不是可編輯的資源編輯器。
 
-### <a name="to-specify-include-directories-for-a-specific-resource-rc-file"></a>若要指定特定的資源 （.rc 檔） 的 include 目錄
+### <a name="to-specify-include-directories-for-a-specific-resource-rc-file"></a>若要指定特定資源 (.rc) 檔的 include 目錄
 
-1. 中的.rc 檔上按一下滑鼠右鍵**方案總管**，然後選取**屬性**。
+1. 以滑鼠右鍵按一下 *.rc*中的檔案**方案總管**，然後選取**屬性**。
 
 1. 選取 **資源**的左窗格中的節點，並指定任何其他 include 目錄中的**其他 include 目錄**屬性。
 
@@ -84,7 +84,7 @@ ms.locfileid: "56676457"
    > [!TIP]
    > 若要使用[規則運算式](/visualstudio/ide/using-regular-expressions-in-visual-studio)在搜尋中，選取[檔案中尋找](/visualstudio/ide/reference/find-command)中**編輯**功能表，而不是**尋找符號**。 選取**使用：規則運算式**中的核取方塊[尋找對話方塊](/visualstudio/ide/finding-and-replacing-text)然後在**尋找目標**方塊，您可以從下拉式清單中選擇規則搜尋運算式。 當您從這份清單中選取運算式時，它會替換成索引中的搜尋文字**Find What**  方塊中。
 
-1. 在  **Find What**方塊中，從下拉式清單中選取先前的搜尋字串或輸入您想要尋找的快速鍵 (例如`ID_ACCEL1`)。
+1. 在  **Find What**方塊中，從下拉式清單中選取先前的搜尋字串或輸入您想要尋找此項目，例如的快速鍵`ID_ACCEL1`。
 
 1. 選取任一**尋找**選項，然後選擇**尋找下一個**。
 

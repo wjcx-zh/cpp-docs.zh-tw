@@ -1,5 +1,5 @@
 ---
-title: 如何：加入、 編輯或刪除控制項
+title: 如何：加入、 編輯或刪除控制項 （c + +）
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.dialog
@@ -43,27 +43,23 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 87acb2c8356508358f68c1ae4c8d5deaa94ecd9a
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: f27e325a8d766fbaf95037db669e0829671cb104
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336562"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562909"
 ---
-# <a name="how-to-add-edit-or-delete-controls"></a>如何：加入、 編輯或刪除控制項
+# <a name="how-to-add-edit-or-delete-controls-c"></a>如何：加入、 編輯或刪除控制項 （c + +）
 
-使用**對話方塊**編輯器中，您可以新增、 調整大小、 編輯和刪除在對話方塊中的控制項。 您也可以編輯的控制項，例如其識別碼、 屬性或它是否一開始出現在執行階段。
+使用**對話方塊編輯器**、 您可以新增、 調整大小、 編輯和刪除在對話方塊中的控制項。 您也可以編輯的控制項，例如其識別碼、 屬性或它是否一開始出現在執行階段。
 
-**對話方塊編輯器**索引標籤會出現在[工具箱視窗](/visualstudio/ide/reference/toolbox)當您處理**對話方塊**編輯器。 您也可以自訂**工具箱**，方便使用的視窗。 如需詳細資訊，請參閱 <<c0> [ 使用工具列](/visualstudio/ide/using-the-toolbox)並[顯示或隱藏 [工具箱] 視窗](showing-or-hiding-the-dialog-editor-toolbar.md)。
+**對話方塊編輯器**索引標籤會出現在[工具箱視窗](/visualstudio/ide/reference/toolbox)當您處理**對話方塊編輯器**。 您也可以自訂**工具箱**，方便使用的視窗。 如需詳細資訊，請參閱 <<c0> [ 使用工具列](/visualstudio/ide/using-the-toolbox)並[顯示或隱藏 [工具箱] 視窗](showing-or-hiding-the-dialog-editor-toolbar.md)。
 
 > [!TIP]
-> 在使用時**對話方塊**編輯器，在許多情況下，您可以選取滑鼠右鍵顯示常用命令的捷徑功能表。
+> 在使用時**對話方塊編輯器**，在許多情況下，您可以選取滑鼠右鍵顯示常用命令的捷徑功能表。
 
 ## <a name="add-controls"></a>加入控制項
-
-若要將控制項加入新的對話方塊中，將控制項從**工具箱**到您要建立的對話方塊。 然後移動控制項，或變更其大小和形狀。
-
-您可以將自訂控制項加入對話方塊中選取**自訂控制項**中的圖示**工具箱**將它拖曳至您的對話方塊。 若要新增**Syslink**控制項，加入自訂控制項，然後變更控制項的**類別**屬性設**Syslink**。 此動作會導致要重新整理和顯示的屬性**Syslink**控制屬性。 如需 MFC 包裝函式類別的資訊，請參閱[CLinkCtrl](../mfc/reference/clinkctrl-class.md)。
 
 ### <a name="to-add-a-control"></a>若要加入控制項
 
@@ -71,11 +67,11 @@ ms.locfileid: "56336562"
 
 1. 在 [**對話方塊編輯器**索引標籤**工具箱**] 視窗中，選取您想要的控制項，然後：
 
-   - 選取您想要將控制項放置位置的對話方塊。 控制項中，就會出現您所選取的位置。
+   - 選取您想要將控制項放置位置的對話方塊中，控制項就會出現您所選取的位置。
 
-   - 將拖放控制項**工具箱**視窗至您的對話方塊上的位置。
+   - 將拖放控制項**工具箱**視窗的位置，在您的對話方塊中，您可以再移動控制項或變更其大小和形狀。
 
-   - 按兩下中的控制項**工具箱**（出現在您的對話方塊） 視窗，然後調整控制項的位置，以您偏好的位置。
+   - 按兩下中的控制項**工具箱**視窗中，而且會出現在對話方塊中，然後調整控制項的位置，以您偏好的位置。
 
 ### <a name="to-add-multiple-controls"></a>若要將多個控制項
 
@@ -89,17 +85,21 @@ ms.locfileid: "56336562"
 
 1. 選取的控制項**工具箱**視窗。
 
-1. 將游標放 （這會顯示當十字） 您想要在您的對話方塊上的新控制項的左上角的位置。
+1. 將游標顯示交叉線，為您想要在您的對話方塊上的新控制項的左上角的位置。
 
 1. 選取並按住滑鼠按鈕，即可在對話方塊中，控制項的左上角的錨點，然後將游標拖曳至右和向下直到控制項是您想要的大小。
 
    > [!NOTE]
-   > 您可以實際上錨定在任何您正在繪製之控制項的四個邊角。 此程序會使用左上角，做為範例。
+   > 您可以錨定任何您正在繪製之控制項的四個邊角。 此程序會使用左上角，做為範例。
 
 1. 放開滑鼠按鈕。 控制項置於對話方塊中，您所指定的大小。
 
-   > [!TIP]
-   > 您可以調整控制項的大小之後它拖放到對話方塊中移動控制項框線的縮放控點。 如需詳細資訊，請參閱 <<c0> [ 調整個別控制項](../windows/sizing-individual-controls.md)。
+> [!TIP]
+> 您可以調整控制項的大小之後它拖放到對話方塊中移動控制項框線的縮放控點。 如需詳細資訊，請參閱 <<c0> [ 調整個別控制項](../windows/sizing-individual-controls.md)。
+
+### <a name="to-add-a-custom-control"></a>若要加入自訂控制項
+
+您可以將自訂控制項加入對話方塊中選取**自訂控制項**中的圖示**工具箱**將它拖曳至您的對話方塊。 若要新增**Syslink**控制項，加入自訂控制項，然後變更控制項的**類別**屬性設**Syslink**。 此動作會導致要重新整理和顯示的屬性**Syslink**控制屬性。 如需 MFC 包裝函式類別的資訊，請參閱[CLinkCtrl](../mfc/reference/clinkctrl-class.md)。
 
 ## <a name="edit-controls"></a>編輯控制項
 
@@ -113,17 +113,15 @@ ms.locfileid: "56336562"
 1. 在 [[屬性] 視窗](/visualstudio/ide/reference/properties-window)，變更您的控制項的屬性。
 
    > [!NOTE]
-   > 當您設定**點陣圖**按鈕、 選項按鈕或等於的核取方塊控制項內容 **，則為 True**，為您的控制項實作 BS_BITMAP 樣式。 如需詳細資訊，請參閱 <<c0> [ 按鈕樣式](../mfc/reference/styles-used-by-mfc.md#button-styles)。 如需範例的關聯控制項的點陣圖，請參閱[CButton::SetBitmap](../mfc/reference/cbutton-class.md#setbitmap)。 點陣圖不會出現在您的控制項中**對話方塊**資源編輯器。
+   > 當您設定**點陣圖**按鈕、 選項按鈕或等於的核取方塊控制項內容 **，則為 True**，為您的控制項實作 BS_BITMAP 樣式。 如需詳細資訊，請參閱 <<c0> [ 按鈕樣式](../mfc/reference/styles-used-by-mfc.md#button-styles)。 如需範例的關聯控制項的點陣圖，請參閱[CButton::SetBitmap](../mfc/reference/cbutton-class.md#setbitmap)。 點陣圖不會出現在您的控制項中**對話方塊編輯器**。
 
 ### <a name="to-undo-changes-to-the-properties-of-a-control"></a>若要復原變更控制項的屬性
 
-1. 請確定且焦點在控制項**對話方塊**編輯器。
+1. 請確定且焦點在控制項**對話方塊編輯器**。
 
-1. 選擇**恢復**從**編輯**功能表 (如果焦點在控制項上，不**復原**命令將會無法使用)。
+1. 移至功能表**編輯** > **復原**。 如果焦點在控制項上，不**復原**命令將會無法使用。
 
 ### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>定義對話方塊控制項的成員變數 (非按鈕)
-
-若要定義任何對話方塊控制項 (按鈕除外) 的成員變數，您可以使用下列方法。
 
 > [!NOTE]
 > 此程序只適用於 MFC 專案中的對話方塊控制項。 ATL 專案應使用**新的 Windows 訊息和事件處理常式** 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 使用者介面物件與相關聯的訊息類型](../mfc/reference/message-types-associated-with-user-interface-objects.md)，[編輯訊息處理常式](../mfc/reference/editing-a-message-handler.md)，和[訊息處理常式定義反映訊息](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
@@ -136,28 +134,26 @@ ms.locfileid: "56336562"
 
 1. 輸入中的相關資訊**加入成員變數**精靈。 如需詳細資訊，請參閱 <<c0> [ 對話資料交換](../mfc/dialog-data-exchange.md)。
 
-1. 選取  **確定**以返回**對話方塊**編輯器。
+1. 選取  **確定**以返回**對話方塊編輯器**。
 
-   > [!TIP]
-   > 若要從任何對話方塊控制項跳至其現有的處理常式，請按兩下控制項。
+> [!TIP]
+> 若要從任何對話方塊控制項跳至其現有的處理常式，請按兩下控制項。
 
 您也可以使用**成員變數**索引標籤中[MFC 類別精靈](../mfc/reference/mfc-class-wizard.md)，新增新的成員變數，指定的類別，並檢視已定義的成員變數。
 
 ## <a name="delete-controls"></a>刪除控制項
 
-在對話方塊中，選取控制項，然後按**刪除**鍵，或前往**編輯**功能表，然後選取**刪除**。
+在對話方塊中，選取控制項，然後按**刪除**鍵，或移至功能表**編輯** > **刪除**。
 
 ## <a name="other-issues"></a>其他問題
 
 ### <a name="troubleshooting"></a>疑難排解
 
-通用控制項或 rich edit 控制項加入對話方塊中之後, 則不會顯示當您測試對話方塊中，或對話方塊本身就不會出現。
-
-如需問題的範例：
+通用控制項或 rich edit 控制項加入對話方塊中之後, 則不會顯示當您測試對話方塊中，或本身不會出現對話方塊，例如：
 
 1. 建立 Win32 專案中，修改應用程式設定，讓您建立 Windows 應用程式 （而不將主控台應用程式）。
 
-1. 在 [資源檢視](../windows/resource-view-window.md)，按兩下.rc 檔案。
+1. 在 [資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)，按兩下 *.rc*檔案。
 
 1. 在 對話方塊 選項中，按兩下**關於** 方塊中。
 
@@ -169,7 +165,7 @@ ms.locfileid: "56336562"
 
 1. 在對話方塊中的**幫助**功能表上，選取**有關**命令並觀察沒有對話方塊隨即出現。
 
-目前， **對話方塊**編輯器不會自動將程式碼加入您的專案或您拖放的下列通用控制項 rich edit 控制項的對話方塊時。 也沒有 Visual Studio 提供錯誤或警告時就會發生此問題。 若要修正，以手動方式加入控制項的程式碼。
+目前，**對話方塊編輯器**不會自動將程式碼加入您的專案時或您拖放的下列通用控制項 rich edit 控制項的對話方塊。 也沒有 Visual Studio 提供錯誤或警告時就會發生此問題。 若要修正，以手動方式加入控制項的程式碼。
 
 ||||
 |-|-|-|
@@ -186,19 +182,17 @@ ms.locfileid: "56336562"
 > [!NOTE]
 > 若要使用 RichEdit 控制項與 MFC，您必須先呼叫[AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2)載入 RichEdit 2.0 控制項 (RICHED20。DLL)，或呼叫[AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit)載入較舊的 RichEdit 1.0 控制項 (RICHED32。DLL)。
 >
-> 您可以使用目前[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)類別與較舊的 RichEdit 1.0 控制項，但`CRichEditCtrl`只設計來支援 RichEdit 2.0 控制項。 RichEdit 1.0 和 RichEdit 2.0 很類似，因為大部分的方法就會運作。 不過請注意有一些差異，因此有些方法可能會無法正確運作，或完全無法運作的 1.0 和 2.0 控制項之間。
+> 您可以使用目前[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)類別與較舊的 RichEdit 1.0 控制項，但`CRichEditCtrl`只設計來支援 RichEdit 2.0 控制項。 RichEdit 1.0 和 RichEdit 2.0 很類似，因為大部分的方法就會運作。 不過，有一些差異 1.0 及 2.0 控制項，因此有些方法可能會無法正確運作，或完全無法運作。
 
 ### <a name="activex-controls"></a>ActiveX 控制項
 
 Visual Studio 可讓您在您的對話方塊中插入 ActiveX 控制項。 如需詳細資訊，請參閱 < [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)並[ActiveX 控制項容器](../mfc/activex-control-containers.md)。
 
-您可以使用中的捷徑功能表**對話方塊**編輯器快速加入登錄 ActiveX 控制項加入對話方塊中，而且您可以將 ActiveX 控制項加入**工具箱**快速存取。
-
 **插入 ActiveX 控制項**對話方塊可讓您插入您的對話方塊中的 ActiveX 控制項，同時使用[對話方塊編輯器](../windows/dialog-editor.md)。 此對話方塊包含下列屬性：
 
 |屬性|描述|
 |---|---|
-|**ActiveX 控制項**|會顯示一份 Active X 控制項。 從這個對話方塊中插入控制項不會產生包裝函式類別。 如果您需要的包裝函數類別，使用[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)若要建立一個 (如需詳細資訊，請參閱[加入類別](../ide/adding-a-class-visual-cpp.md))。 如果 Active X 控制項不會出現在這個對話方塊中，再次嘗試安裝控制項根據廠商的指示。|
+|**ActiveX 控制項**|顯示 ActiveX 控制項的清單。<br/><br/>從這個對話方塊中插入控制項不會產生包裝函式類別。 如果您需要的包裝函數類別，使用[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)若要建立一個，請參閱[加入類別](../ide/adding-a-class-visual-cpp.md)。<br/><br/>如果 ActiveX 控制項未出現在這個對話方塊中，再次嘗試安裝控制項根據廠商的指示。|
 |**路徑**|顯示 ActiveX 控制項所在的檔案。|
 
 > [!CAUTION]
@@ -206,9 +200,9 @@ Visual Studio 可讓您在您的對話方塊中插入 ActiveX 控制項。 如�
 
 #### <a name="to-add-an-activex-control"></a>若要加入 ActiveX 控制項
 
-1. 開啟對話方塊的 **對話方塊**編輯器。
+1. 開啟對話方塊的 **對話方塊編輯器**。
 
-1. 以滑鼠右鍵按一下的對話方塊和捷徑功能表上，選取主體中的任何地方**插入 ActiveX 控制項**。
+1. 以滑鼠右鍵按一下 [] 對話方塊中的主體中的任何位置，然後選取**插入 ActiveX 控制項**。
 
    **插入 ActiveX 控制項** 對話方塊隨即出現，顯示您系統上的所有 ActiveX 控制項。 ActiveX 控制項檔案的路徑會顯示在對話方塊的底部。
 
@@ -216,23 +210,19 @@ Visual Studio 可讓您在您的對話方塊中插入 ActiveX 控制項。 如�
 
    該控制項會出現在對話方塊中。您可以像處理其他控制項般地加以編輯，或為其建立處理常式。
 
-> [!NOTE]
-> 您可以將 ActiveX 控制項加入**工具箱**視窗以方便存取。
+> [!TIP]
+> 您可以使用中的捷徑功能表**對話方塊編輯器**快速已註冊的 ActiveX 控制項加入對話方塊中，或嘗試加入 ActiveX 控制項，以**工具箱**視窗以方便存取。
 
 #### <a name="to-edit-properties-for-an-activex-control"></a>若要編輯 ActiveX 控制項的屬性
 
-獨立廠商所提供的 ActiveX 控制項可能都配有其自己的屬性和特性的。 適用於 ActiveX 控制項的屬性會顯示在**屬性**視窗。 此外，ActiveX 控制項的寫入器所建立的任何屬性頁面會顯示在**屬性頁** 對話方塊 (若要檢視**屬性頁**對於特定的 ActiveX 控制項中，按一下 **屬性頁**按鈕[屬性 視窗](/visualstudio/ide/reference/properties-window))。
+獨立廠商所提供的 ActiveX 控制項可能都配有其自己的屬性和特性的。 這些屬性會顯示在**屬性**視窗中，包括 ActiveX 控制項的寫入器所建立的頁面會顯示在任何屬性**屬性頁**對話方塊 （若要檢視**屬性頁**特定的 ActiveX 控制項中，選取** 屬性頁**按鈕[屬性 視窗](/visualstudio/ide/reference/properties-window))。
 
-各種索引標籤會顯示在屬性頁面中的 ActiveX 控制項，視屬性工作表做為 ActiveX 控制項的一部分，而定。
+- 選取 [ **ActiveX**控制項，並移至功能表**檢視** > **] 屬性頁**來檢視屬性。 視需要在 [屬性] 頁面中，請進行變更。
+
+   各種索引標籤會顯示在屬性頁面中的 ActiveX 控制項，視屬性工作表做為 ActiveX 控制項的一部分，而定。
 
 > [!NOTE]
-> 下列程序適用於使用屬性頁編輯 ActiveX 控制項。 您也可以瀏覽並編輯 ActiveX 屬性中的新**屬性**視窗。
-
-1. 選取  **ActiveX**控制項。
-
-1. 在上**檢視**功能表上，選取**屬性頁**檢視內容。
-
-1. 視需要在 [屬性] 頁面中，請進行變更。
+> 此程序適用於使用屬性頁編輯 ActiveX 控制項。 您也可以瀏覽並編輯 ActiveX 屬性中的新**屬性**視窗。
 
 ## <a name="requirements"></a>需求
 
@@ -240,9 +230,9 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[對話方塊編輯器](../windows/dialog-editor.md)<br/>
-[對話方塊中的控制項](controls-in-dialog-boxes.md)<br/>
-[資源檔](../windows/resource-files-visual-studio.md)<br/>
+[管理對話方塊控制項](controls-in-dialog-boxes.md)<br/>
+[如何：版面配置控制項](arrangement-of-controls-on-dialog-boxes.md)<br/>
+[如何：定義控制項存取與值](defining-mnemonics-access-keys.md)<br/>
 
 <!-- excluded links
 [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)<br/>

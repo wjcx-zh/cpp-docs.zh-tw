@@ -5,12 +5,12 @@ helpviewer_keywords:
 - symbols [C++], predefined IDs
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
-ms.openlocfilehash: 7d3581a9f6f2a2080f72634a01d3417ffecf82a4
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: 22337e812936a90f8d7c4ead33989e1e0c4d39f0
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954909"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562753"
 ---
 # <a name="predefined-symbol-ids"></a>預先定義的符號 ID
 
@@ -18,7 +18,7 @@ ms.locfileid: "56954909"
 
 使用資源時，這些符號 ID 變得重要。 編輯快速鍵對應表，其中有些已與虛擬按鍵相關聯時，它們會出現。 它們也可供您透過[屬性 視窗](/visualstudio/ide/reference/properties-window)。 您可以將任何預先定義的符號 Id 指派給新的資源，或您可以將快速鍵指派為 them 與的符號 ID 會自動關聯該按鍵組合相關聯的功能。
 
-這些程式庫有預先定義的符號，將顯示為專案的一部分：
+程式庫有預先定義的符號，將顯示為專案的一部分：
 
 - [ATL 預先定義的符號](../windows/atl-predefined-symbols.md)
 

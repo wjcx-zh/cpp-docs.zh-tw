@@ -30,20 +30,14 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: ce1cf1f6d0010475192ecf7ef3ce2416fac51dfd
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 28127ea89fdba1b70988ced1d6004c0f914c66e2
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676405"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563039"
 ---
 # <a name="how-to-manage-resources-c"></a>HOW TO：管理資源 （c + +）
-
-您可以為您的專案管理資源：
-
-- 複製和編輯資源。
-
-- 匯入及匯出資源。
 
 ## <a name="copy-and-edit-resources"></a>複製和編輯資源
 
@@ -54,7 +48,7 @@ ms.locfileid: "56676405"
 > [!NOTE]
 > Visual c + + 包含您可以使用自己的應用程式中的範例資源檔案。 如需詳細資訊，請參閱[美工圖案：通用資源](https://github.com/Microsoft/VCSamples)。
 
-您可以使用拖放方法，開啟專案外部的.rc 檔之間。
+您無法拖放、 複製、 剪下，或在專案中的資源檔案之間貼上 (**資源檢視**) 和獨立的.rc 檔在文件視窗中開啟。 您可以在舊版的產品來這麼做。 只能使用已開啟專案外部的.rc 檔之間的拖放方法。
 
 ### <a name="to-copy-resources"></a>若要複製資源
 
@@ -78,9 +72,6 @@ ms.locfileid: "56676405"
       1. 以滑鼠右鍵按一下您想要貼上資源所在的資源檔 (例如*Source2.rc*)，然後選擇**貼上**。
 
 > [!NOTE]
-> 您無法拖放、 複製、 剪下，或在專案中的資源檔案之間貼上 (**資源檢視**) 和獨立的.rc 檔的檔案 （在文件視窗中開啟）。 您可以在舊版的產品來這麼做。
-
-> [!NOTE]
 > 若要避免衝突的符號名稱或現有的檔案中的值，Visual c + + 可能會變更已傳送的資源的符號值或符號名稱和值時將它複製到新的檔案。
 
 在資源中複製時，您可以變更其語言屬性或條件屬性，或兩者。
@@ -95,17 +86,17 @@ ms.locfileid: "56676405"
 IDD_AboutBox (Finnish - XX33)
 ```
 
-複製現有的資源並變更其語言或條件
+### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>複製現有的資源並變更其語言或條件
 
-1. 在.rc 檔中或在[資源檢視](../windows/resource-view-window.md) 視窗中，以滑鼠右鍵按一下您想要複製，然後選擇的資源**插入複本**。 然後設定下列項目：
+在  *.rc*檔案或在[資源檢視](../windows/resource-view-window.md)視窗中，以滑鼠右鍵按一下您想要複製，然後選擇 的資源**插入複本**。 然後設定下列項目：
 
-   - 針對**語言**清單方塊中，選取的語言。
+- 針對**語言**清單方塊中，選取的語言。
 
-   - 在 **條件**方塊中，輸入條件。
+- 在 **條件**方塊中，輸入條件。
 
 ### <a name="to-edit-resources"></a>若要編輯資源
 
-Managed 的資源檔 (.resx) 是 XML 檔案。 當您將受管理的資源檔加入您的專案從**加入新項目** 對話方塊中， **Managed 資源編輯器**預設會開啟。
+受管理的資源 (.resx) 檔案是 XML 檔案。 當您將受管理的資源檔加入您的專案從**加入新項目** 對話方塊中， **Managed 資源編輯器**預設會開啟。
 
 ## <a name="import-and-export-resources"></a>匯入和匯出資源
 

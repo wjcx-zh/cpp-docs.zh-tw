@@ -87,27 +87,24 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 69fffc71a7b5dfad12e70a9132fc61b11a0914cc
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: 92eac69e6802a824c4b6e107d2ff3393e931a542
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336588"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563052"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>如何：建立圖示或其他影像
 
-您可以建立新的影像 （點陣圖、 圖示、 游標或工具列），然後使用影像編輯器來自訂其外觀。 您也可以建立新的點陣圖，模仿[範本](../windows/how-to-use-resource-templates.md)。
+您可以建立新的映像、 點陣圖、 圖示、 游標或工具列中，並用**影像編輯器**以自訂其外觀。 您也可以建立新的點陣圖，模仿[資源範本](../windows/how-to-use-resource-templates.md)。
 
 ## <a name="icons-and-cursors-image-resources-for-display-devices"></a>圖示和游標：顯示裝置的影像資源
 
-圖示和游標為圖形化資源，可包含不同類型之顯示裝置的多種影像 (不同的大小和色彩配置)。 此外，游標具有 「 作用點，「 Windows 用來追蹤其位置的位置。 圖示和游標會建立和使用編輯**映像**編輯器中，當點陣圖和其他映像。
+圖示和游標為圖形化資源，可包含不同類型之顯示裝置的多種影像 (不同的大小和色彩配置)。 資料指標也會有作用點，位置 Windows 用來追蹤它的位置。 圖示和游標會建立和使用編輯**影像編輯器**，如點陣圖和其他映像。
 
-當您建立新的圖示或游標**映像**編輯器會先建立一個標準類型的映像。 而且一開始會以螢幕 (透明) 色彩填滿影像。 如果影像是游標，其作用點一開始會在左上角 (座標 0,0)。
+當您建立新的圖示或游標**影像編輯器**首先會建立一個標準類型的映像。 而且一開始會以螢幕 (透明) 色彩填滿影像。 如果影像是游標，作用點一開始是左上角座標`0,0`。
 
-根據預設，**映像**編輯器支援下表所示的裝置建立額外的映像。 您可以在 [[自訂影像]](custom-image-dialog-box-image-editor-for-icons.md)對話方塊中輸入寬度、高度和色彩計數等參數，為其他裝置建立影像。
-
-> [!NOTE]
-> 使用**影像編輯器**，您可以檢視 32 位元映像，但無法加以編輯。
+根據預設，**影像編輯器**支援下表所示的裝置建立額外的映像。 您可以輸入寬度、 高度和色彩計數等參數，以建立其他裝置的映像**自訂映像** 對話方塊。
 
 |色彩|寬度 (像素)|高度 (像素)|
 |-----------|----------------------|-----------------------|
@@ -129,13 +126,16 @@ ms.locfileid: "56336588"
 
 ### <a name="create-a-device-image-icon-or-cursor"></a>建立裝置影像 （圖示或游標）
 
-當您建立新的圖示或游標資源**映像**先在特定的樣式 （32 × 32，16 種色彩圖示和 32 × 32，資料指標的單色） 中建立映像的編輯器。 然後將映像不同大小和樣式加入初始的圖示或游標，並視需要編輯每個額外的映像，適用於不同的顯示裝置。 您也可以使用剪下和貼上作業，從現有的映像類型，或從圖形程式中建立點陣圖，以編輯映像。
+當您建立新的圖示或游標資源**影像編輯器**特定的樣式 （32 × 32，16 種色彩圖示和 32 × 32，資料指標的單色） 會先建立映像。 然後將映像不同大小和樣式加入初始的圖示或游標，並視需要編輯每個額外的映像，適用於不同的顯示裝置。 您也可以使用剪下和貼上作業，從現有的映像類型，或從圖形程式中建立點陣圖，以編輯映像。
 
 當您開啟中的圖示或游標資源[影像編輯器](../windows/image-editor-for-icons.md)，預設會開啟大部分十分符合目前的顯示裝置的映像。
 
-**的新&lt;裝置&gt;映像類型**對話方塊可讓您建立指定類型的新裝置映像。 若要開啟 **新增\<裝置 > 影像**對話方塊中，選取**新的映像類型**上**映像**功能表。 下列的屬性，包括**目標映像類型**並**自訂**。
+> [!NOTE]
+> 如果您的專案尚未包含.rc 檔，請參閱[建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。
 
-**目標映像類型**屬性會列出可用的影像類型。 選取您想要開啟的映像類型：
+**的新&lt;裝置&gt;映像類型**對話方塊可讓您建立指定類型的新裝置映像。 若要開啟 **新增\<裝置 > 影像**對話方塊中，移至功能表**映像** > **新增影像類型**。 下列的屬性，包括**目標映像類型**並**自訂**。
+
+**目標映像類型**屬性會列出您用來選取映像的可用映像類型您想要開啟的類型：
 
 ||||
 |-|-|-|
@@ -167,10 +167,7 @@ ms.locfileid: "56336588"
 
 #### <a name="to-create-a-new-icon-or-cursor"></a>若要建立新的圖示或游標
 
-1. 在 [資源檢視](../windows/resource-view-window.md)，以滑鼠右鍵按一下.rc 檔，然後選擇**插入資源**從捷徑功能表。 (如果您已經有現有的映像資源在.rc 檔案中，例如資料指標中，您可以以滑鼠右鍵按一下**游標**資料夾，然後選取**插入游標**從捷徑功能表。)
-
-   > [!NOTE]
-   > 如果您的專案尚未包含.rc 檔，請參閱[建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。
+1. 在 [資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)，以滑鼠右鍵按一下您 *.rc*檔案，然後選擇**插入資源**。 如果您已經有現有的映像資源您 *.rc*檔案，例如資料指標中，您可以以滑鼠右鍵按一下**游標**資料夾，然後選取**插入游標**。
 
 1. 在 [插入資源對話方塊](../windows/add-resource-dialog-box.md)，選取**圖示**或**游標**，然後選擇 **新增**。 圖示，此動作會建立具有 32 × 32、 16 色圖示的圖示資源。 資料指標，32 × 32，會建立單色 （2-色彩） 映像。
 
@@ -178,13 +175,13 @@ ms.locfileid: "56336588"
 
 ### <a name="to-add-an-image-for-a-different-display-device"></a>若要加入不同顯示裝置的影像
 
-1. 在上**映像**功能表上，選取**新的裝置影像**(或以滑鼠右鍵按一下**影像編輯器**窗格，然後選擇 **新裝置映像**從快顯功能表）。
+1. 移至功能表**映像** > **新的裝置影像**，或以滑鼠右鍵按一下**影像編輯器**窗格，然後選擇 **新裝置映像**。
 
 1. 選取您想要新增的映像的類型。 您也可以選取**自訂**來建立其大小無法使用的預設清單中的圖示。
 
 ### <a name="to-copy-a-device-image"></a>若要複製裝置影像
 
-1. 在上**映像**功能表上，選取**開啟裝置影像**並從目前的映像清單中選擇映像。 例如，選擇 32 × 32、 16 色版圖示。
+1. 移至功能表**映像** > **開啟裝置影像**並從目前的映像清單中選擇映像。 例如，選擇 32 × 32、 16 色版圖示。
 
 1. 複製目前顯示的圖示的圖像 (**Ctrl**+**C**)。
 
@@ -194,23 +191,23 @@ ms.locfileid: "56336588"
 
 ### <a name="to-delete-a-device-image"></a>若要刪除裝置影像
 
-雖然圖示的影像會顯示在**映像**編輯器中，選取**刪除裝置影像**從**映像**功能表。 當您刪除資源中的最後一個圖示影像時，則也會刪除資源。
+雖然圖示的影像會顯示在**影像編輯器**，請移至功能表**映像** > **刪除裝置影像**。 當您刪除資源中的最後一個圖示影像時，則也會刪除資源。
 
-   > [!NOTE]
-   > 當您按下**Del**索引鍵，映像和您所繪製的圖示色彩會遭到刪除，但會保留圖示; 您可以立即重新設計。 如果您按下**Del**遭，您可以按下**Ctrl**+**Z**復原動作。
+> [!NOTE]
+> 當您按下**Del**索引鍵，您所繪製的圖示的色彩與影像會刪除但圖示會保留，而且您可以立即重新設計。 如果您按下**Del**不慎按下**Ctrl**+**Z**復原動作。
 
 ### <a name="to-create-transparent-or-inverse-regions-in-device-images"></a>若要在裝置影像中建立透明或反向區域
 
-在 [影像編輯器](../windows/image-editor-for-icons.md)，初始的圖示或游標影像具有透明屬性。 圖示和游標影像是矩形，雖然許多不會出現，因為影像的部分是透明的;透過圖示或游標會顯示在螢幕上的基礎映像。 當您拖曳圖示時，影像的部分可能會出現反轉的色彩。 您建立這種效果藉由設定螢幕色彩和中的反向色彩[色彩視窗](../windows/colors-window-image-editor-for-icons.md)。
+在 [影像編輯器](../windows/image-editor-for-icons.md)，初始的圖示或游標影像具有透明屬性。 圖示和游標影像是矩形，雖然許多不會出現，因為而言是透明的映像的組件，並在螢幕上的基礎映像顯示透過圖示或游標。 當您拖曳圖示時，影像的部分可能會出現反轉的色彩。 您建立這種效果藉由設定螢幕色彩和中的反向色彩[色彩視窗](../windows/colors-window-image-editor-for-icons.md)。
 
 套用至圖示的螢幕及反向色彩和資料指標不是圖形色彩衍生的映像就是將反向區域指派。 色彩表示影像的部分，具有這些屬性。 您可以變更，表示在編輯畫面色彩及反向色彩屬性的色彩。 這些變更不會影響您的應用程式中的資料指標之圖示的外觀。
 
 > [!NOTE]
-> 根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。
+> 根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更您的設定，請移至功能表**工具** > **匯入和匯出設定**。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。
 
 #### <a name="to-create-transparent-or-inverse-regions"></a>若要建立透明或反向區域
 
-1. 在 **色彩**視窗中，選取**螢幕色彩**選取器或**反向色彩**選取器。
+1. 在 [**色彩**] 視窗中，選擇選取器**螢幕色彩**或**反向色彩**。
 
 1. 適用於反向色彩拖曳至您的映像使用繪圖工具的螢幕。 如需有關繪圖工具的詳細資訊，請參閱 <<c0> [ 使用繪圖工具](using-a-drawing-tool-image-editor-for-icons.md)。
 
@@ -227,20 +224,15 @@ ms.locfileid: "56336588"
 
 ### <a name="use-the-256-color-palette"></a>使用 256 色調色盤
 
-使用**映像**編輯器、 圖示和游標，則可以是大小大 (64 × 64) 與 256 色調色盤可從中選擇。 建立資源之後，請選取裝置影像樣式。
+使用**影像編輯器**、 圖示和游標可以是大小大 (64 × 64) 與 256 色調色盤選擇。 建立資源之後，請選取裝置影像樣式。
 
 #### <a name="to-create-a-256-color-icon-or-cursor"></a>若要建立 256 色圖示或游標
 
-1. 在 [資源檢視](../windows/resource-view-window.md)，以滑鼠右鍵按一下.rc 檔，然後選擇**插入資源**從捷徑功能表。 (如果您已經有現有的映像資源在.rc 檔案中，例如資料指標中，您可以以滑鼠右鍵按一下**游標**資料夾，然後選取**插入游標**從捷徑功能表。)
-
-   > [!NOTE]
-   > 如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。
+1. 在 [資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)，以滑鼠右鍵按一下您 *.rc*檔案，然後選擇**插入資源**。 如果您已經有現有的映像資源您 *.rc*檔案，例如資料指標中，您可以以滑鼠右鍵按一下**游標**資料夾，然後選取**插入游標**。
 
 1. 在 [插入資源對話方塊](../windows/add-resource-dialog-box.md)，選取**圖示**或**游標**，然後選擇 **新增**。
 
-1. 在 **映像**功能表上，選取**新的裝置影像**。
-
-1. 選取您想要的 256 色影像樣式。
+1. 移至功能表**映像** > **新的裝置影像**，然後選取您要的 256 色影像樣式。
 
 #### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>若要從大圖示的 256 色調色盤選擇色彩
 
@@ -255,11 +247,9 @@ ms.locfileid: "56336588"
    > [!NOTE]
    > 256 色的映像所使用的初始調色盤比對所傳回的調色盤`CreateHalftonePalette`Windows API。 適用於 Windows shell 的所有圖示應該都使用這個調色盤來防止重繪閃動期間調色盤實現。
 
-### <a name="set-a-cursor39s-hot-spot"></a>將游標設定為&#39;s 作用點
+### <a name="to-set-a-cursors-hot-spot"></a>若要設定游標的作用點
 
-資料指標的作用點是點至 Windows 追蹤游標的位置參考。 根據預設，作用點設定為資料指標 （座標 0，0） 的左上角。 **熱點**中的屬性[屬性 視窗](/visualstudio/ide/reference/properties-window)顯示作用點座標。
-
-#### <a name="to-set-a-cursors-hot-spot"></a>若要設定游標的作用點
+資料指標的作用點是點至 Windows 追蹤游標的位置參考。 根據預設，設定作用點游標座標的左上角`0,0`。 **熱點**中的屬性[屬性 視窗](/visualstudio/ide/reference/properties-window)顯示作用點座標。
 
 1. 在 [[影像編輯器] 工具列](../windows/toolbar-image-editor-for-icons.md)，選擇**設定作用點**工具。
 
@@ -267,27 +257,22 @@ ms.locfileid: "56336588"
 
    **熱點**中的屬性**屬性**視窗會顯示新的座標。
 
-   > [!TIP]
-   > 將游標停留在工具列按鈕時，就會出現工具提示。 這些提示可協助您識別每個按鈕的功能。
-
-## <a name="saving-bitmaps-as-gifs-or-jpegs"></a>將點陣圖儲存為 GIF 或 JPEG
+### <a name="to-create-and-save-a-bitmap-as-a-gif-or-jpeg"></a>若要建立，並將點陣圖儲存為.gif 或.jpeg
 
 當您建立點陣圖時，格式為點陣圖 (.bmp) 建立映像。 您不過，可以將影像儲存為 GIF 或 JPEG 或其他圖形的格式。
 
 > [!NOTE]
 > 此程序不適用於圖示和游標。
 
-### <a name="to-create-and-save-a-bitmap-as-a-gif-or-jpeg"></a>若要建立，並將點陣圖儲存為.gif 或.jpeg
-
-1. 從**檔案**功能表上，選擇**開放**，然後選取**檔案**。
+1. 移至功能表**檔案** > **Open**，然後選取**檔案**。
 
 1. 在**新的檔案] 對話方塊中**，選擇**Visual c + +** 資料夾，然後選取**點陣圖檔 (.bmp)** 中**範本**方塊，然後選取 [ **開啟**。
 
-   在中開啟點陣圖**映像**編輯器。
+   在中開啟點陣圖**影像編輯器**。
 
 1. 視需要進行變更，新的點陣圖。
 
-1. 與仍在中開啟點陣圖**映像**編輯器中，選擇**儲存*filename*為.bmp**上**檔案**功能表。
+1. 與仍在中開啟點陣圖**影像編輯器**，請移至功能表**檔案** > **儲存*filename*為.bmp**。
 
 1. 在 [**另存新檔**對話方塊方塊中，輸入您想要提供檔案，代表您要的檔案格式的延伸模組的名稱**檔案名稱**] 方塊中。 例如， *myfile.gif*。
 
@@ -296,34 +281,29 @@ ms.locfileid: "56336588"
 
 1. 選取 [儲存]。
 
-## <a name="converting-an-image-from-one-format-to-another"></a>轉換影像的格式
-
-您可以開啟中的 GIF 或 JPEG 影像**映像**編輯器並將它們儲存為點陣圖。 此外，您可以開啟點陣圖檔案，並將它儲存為 GIF 或 JPEG。 您使用的映像不需要在開發環境中編輯專案的一部分 (請參閱[獨立的影像編輯](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md))。
-
 ### <a name="to-convert-an-image-from-one-format-to-another"></a>若要將影像轉換成另一種格式
 
-1. 開啟中的映像**映像**編輯器。
+您可以開啟中的 GIF 或 JPEG 影像**影像編輯器**並將它們儲存為點陣圖。 此外，您可以開啟點陣圖檔案，並將它儲存為 GIF 或 JPEG。 您使用的映像不需要在開發環境中編輯專案的一部分 (請參閱[獨立的影像編輯](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md))。
 
-1. 從**檔案**功能表上，選擇**儲存*filename*為**。
+1. 開啟中的映像**影像編輯器**。
+
+1. 移至功能表**檔案** > **儲存*檔名*為**。
 
 1. 在 **另存新檔**對話方塊中，於**檔案名稱**方塊中，輸入檔案名稱和副檔名，表示您想要的格式。
 
 1. 選取 [儲存]。
 
-## <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>若要將新的映像資源新增至未受管理的 c + + 專案
+### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>若要將新的映像資源新增至未受管理的 c + + 專案
 
-1. 在 [資源檢視](../windows/resource-view-window.md)，以滑鼠右鍵按一下.rc 檔，然後選擇**插入資源**從捷徑功能表。 (如果您已經有現有的映像資源在.rc 檔案中，例如資料指標中，您可以直接以滑鼠右鍵按一下**游標**資料夾，然後選取**插入游標**從捷徑功能表。)
-
-   > [!NOTE]
-   > 如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。
+1. 在 [資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)，以滑鼠右鍵按一下您 *.rc*檔案，然後選擇**插入資源**。 如果您已經有現有的映像資源您 *.rc*檔案，例如資料指標，您可以直接以滑鼠右鍵按一下**游標**資料夾，然後選取**插入游標**。
 
 1. 在 [插入資源對話方塊](../windows/add-resource-dialog-box.md)，選取您想要建立的映像資源的類型 (**點陣圖**，例如) 然後選擇**新增**。
 
    如果一個加號 (**+**) 中的映像資源類型旁邊會出現**插入資源** 對話方塊中，表示工具列範本可供使用。 選取加號，展開 範本清單中的，選取範本，然後選擇**新增**。
 
-## <a name="to-add-a-new-image-resource-to-a-project-in-a-net-programming-language"></a>若要將新的映像資源新增至.NET 程式設計語言中的專案
+### <a name="to-add-a-new-image-resource-to-a-project-in-a-net-programming-language"></a>若要將新的映像資源新增至.NET 程式設計語言中的專案
 
-1. 在 [**方案總管] 中**，以滑鼠右鍵按一下專案資料夾 (例如`WindowsApplication1`)。
+1. 在 [**方案總管] 中**，以滑鼠右鍵按一下專案資料夾 (例如*WindowsApplication1*)。
 
 1. 從捷徑功能表，選取**新增**，然後選擇**加入新項目**。
 
@@ -331,10 +311,7 @@ ms.locfileid: "56336588"
 
 1. 在 [**範本**] 窗格中，選擇您想要新增至專案的資源類型。
 
-   資源便會加入至您的專案中**方案總管**並在中開啟資源[影像編輯器](../windows/image-editor-for-icons.md)。 您現在可以使用影像編輯器中可用的所有工具，修改您的映像。 如需有關如何將影像加入至 managed 專案的詳細資訊，請參閱[在設計階段載入圖片](/dotnet/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms)。
-
-   > [!NOTE]
-   > 您想要編輯的任何 Managed 資源皆必須為連結的資源。 Visual Studio 資源編輯器並不支援對內嵌資源的編輯功能。 如需詳細資訊，請參閱 <<c0> [ 建立資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)中 *.NET Framework 開發人員指南*。
+   資源便會加入至您的專案中**方案總管**並在中開啟資源[影像編輯器](../windows/image-editor-for-icons.md)。 您現在可以使用提供的所有工具**影像編輯器**修改您的映像。 如需有關如何將影像加入至 managed 專案的詳細資訊，請參閱[在設計階段載入圖片](/dotnet/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms)。
 
 ## <a name="requirements"></a>需求
 
@@ -342,11 +319,13 @@ ms.locfileid: "56336588"
 
 ## <a name="see-also"></a>另請參閱
 
-[轉換點陣圖為工具列](../windows/converting-bitmaps-to-toolbars.md)<br/>
-[建立新的工具列](../windows/creating-new-toolbars.md)<br/>
-[編輯圖形資源](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [圖示影像編輯器](../windows/image-editor-for-icons.md)<br/>
-[影像功能表](../windows/image-menu-image-editor-for-icons.md)<br/>
-[圖示](/windows/desktop/menurc/icons)<br/>
-[游標](/windows/desktop/menurc/cursors)<br/>
+[如何：複製影像](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[如何：使用繪圖工具](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[如何：使用色彩](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+<!--
+[Converting Bitmaps to Toolbars](../windows/converting-bitmaps-to-toolbars.md)<br/>
+[Creating New Toolbars](../windows/creating-new-toolbars.md)<br/>
+[Icons](/windows/desktop/menurc/icons)<br/>
+[Cursors](/windows/desktop/menurc/cursors)<br/>-->

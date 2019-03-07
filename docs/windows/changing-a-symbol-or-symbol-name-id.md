@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: d3c8a747c1e66490c333ff050c7bfa6e6f723a87
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: 0de53b102cf06d8b4541f54f961f84408664caed
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954896"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562792"
 ---
 # <a name="how-to-manage-symbols"></a>HOW TO：管理符號
 
@@ -57,7 +57,7 @@ ms.locfileid: "56954896"
 
 符號名稱限制如下所示：
 
-- 所有[符號](../windows/symbols-resource-identifiers.md)必須是唯一的應用程式範圍內。 這可避免標頭檔中出現衝突的符號定義。
+- 所有[符號](../windows/symbols-resource-identifiers.md)必須是唯一的應用程式，以避免衝突的符號定義在標頭檔範圍內。
 
 - 符號名稱的有效字元包括 A-Z、a-z、0-9 和底線 ( _ )。
 
@@ -65,12 +65,14 @@ ms.locfileid: "56954896"
 
 - 符號名稱不能包含空格。
 
-- 符號名稱不區分大小寫，但會保留第一個符號定義的大小寫。 定義符號的標頭檔是由資源編譯器/編輯器和 C++ 程式用來參考資源檔中定義的資源。 對於只有大小寫不同的兩個符號名稱，C++ 程式會將其視為兩個不同的符號，而資源編譯器/編輯器則會將這兩個名稱視為參考到單一符號。
+- 符號名稱不區分大小寫，但會保留第一個符號定義的大小寫。
+
+   定義符號的標頭檔是由資源編譯器/編輯器和 C++ 程式用來參考資源檔中定義的資源。 對於只有大小寫不同的兩個符號名稱，C++ 程式會將其視為兩個不同的符號，而資源編譯器/編輯器則會將這兩個名稱視為參考到單一符號。
 
 > [!NOTE]
 > 如果您不遵循標準符號名稱配置 （keyword] 中，與您的符號名稱剛好是相同，因為資源指令碼編譯器，嘗試建置資源指令碼檔的關鍵字會導致隨機錯誤產生這是難以診斷。 若要避免這個問題，請遵守標準命名配置。
 
-符號名稱具有描述性前置詞，指出它們所代表的資源或物件種類。 這些描述性前置詞的開頭為文字組合識別碼。 Microsoft Foundation Class 程式庫 (MFC) 會使用下表所示的符號命名慣例：
+符號名稱具有描述性前置詞，指出它們所代表的資源或物件種類。 這些描述性前置詞的開頭為文字組合識別碼。 Microsoft Foundation Class (MFC) 程式庫會使用命名慣例下表所示的符號：
 
 |分類|前置詞|使用|
 |--------------|------------|---------|
@@ -83,7 +85,7 @@ ms.locfileid: "56954896"
 
 ### <a name="to-change-a-symbol-name-id"></a>若要變更符號名稱 (ID)
 
-1. 在 [資源檢視](../windows/resource-view-window.md)，選取的資源。
+1. 在 [資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)，選取的資源。
 
 1. 在 **屬性** 視窗中，輸入新的符號名稱，或從現有的符號清單中選取**識別碼** 方塊中。
 
@@ -103,11 +105,11 @@ ms.locfileid: "56954896"
 -3456
 ```
 
-資源 (加速器、點陣圖、游標、對話方塊、圖示、功能表、字串資料表及版本資訊) 的符號值必須是介於 0 到 32767 的十進位數字 (但是不能為十六進位)。 資源組件 (例如對話方塊控制項或字串資料表中的個別字串) 的符號值可以從 0 到 65,534 或從 -32,768 到 32,767。
+符號資源，例如加速器、 點陣圖、 游標、 對話方塊、 圖示、 功能表、 字串資料表及版本的詳細資訊，必須是介於 0 到 32767 的十進位數字，但不能為十六進位的值。 資源組件 (例如對話方塊控制項或字串資料表中的個別字串) 的符號值可以從 0 到 65,534 或從 -32,768 到 32,767。 如需有關數字範圍的詳細資訊，請參閱[TN023:標準 MFC 資源](../mfc/tn023-standard-mfc-resources.md)。
 
-資源符號是 16 位元數字。 您可以為帶正負號或不帶正負號輸入它們，不過，它們是供內部使用為不帶正負號的整數。 因此負數會轉換成對應的正數。
+資源符號是 16 位元數字。 您可以為帶正負號或不帶正負號輸入它們，不過，它們使用在內部為不帶正負號的整數，因此負數的數字會轉換成對應的正數。
 
-以下是符號值的一些限制：
+符號值的一些限制如下：
 
 - Visual Studio 開發環境和 MFC 將一些數字範圍用於特殊用途。 MFC 會保留最大顯著性位元的所有數字 (-32,768 到 -1 或 32,768 到 65,534，根據正負號)。
 
@@ -125,11 +127,9 @@ ms.locfileid: "56954896"
 
 - 您的應用程式可能具有現有檔案，包含以運算式定義的符號。
 
-如需有關數字範圍的詳細資訊，請參閱[TN023:標準 MFC 資源](../mfc/tn023-standard-mfc-resources.md)。
-
 ### <a name="to-change-a-symbol-value"></a>若要變更符號值
 
-1. 在 [資源檢視](../windows/resource-view-window.md)，選取的資源。
+1. 在 [資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)，選取的資源。
 
 1. 在 **屬性**視窗中，輸入符號名稱，後面接著等號和整數**識別碼**方塊中，例如：
 
@@ -149,12 +149,12 @@ ms.locfileid: "56954896"
 
 1. 符號的名稱或值中提供的方塊中編輯**變更符號** 對話方塊。
 
-   > [!NOTE]
-   > 若要變更指派給資源或物件的符號，您必須使用資源編輯器或**屬性**視窗。
+> [!NOTE]
+> 若要變更指派給資源或物件的符號，您必須使用資源編輯器或**屬性**視窗。
 
 ### <a name="to-delete-an-unassigned-unused-symbol"></a>刪除未指派 (未使用) 的符號
 
-在 [資源符號對話方塊](../windows/resource-symbols-dialog-box.md)，選取您想要刪除，並選擇的符號**刪除**。
+在 **資源符號**對話方塊方塊中，選取您想要刪除，並選擇的符號**刪除**。
 
 > [!NOTE]
 > 在刪除之前未使用的符號，在資源檔，請確定不會使用它在其他地方的程式中或在編譯時期包含資源檔。
@@ -185,7 +185,7 @@ ms.locfileid: "56954896"
 
 ### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>在資源檔中包含共用 (唯讀) 符號
 
-1. 在 [資源檢視](../windows/resource-view-window.md)，以滑鼠右鍵按一下.rc 檔，然後選擇[Resource Includes](../windows/resource-includes-dialog-box.md)從捷徑功能表。
+1. 在 [資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)，以滑鼠右鍵按一下您 *.rc*檔案，然後選取[Resource Includes](../windows/resource-includes-dialog-box.md)。
 
 1. 在 **唯讀符號指示詞**方塊中，使用`#include`編譯器指示詞來指定您想要保存唯讀符號的檔案。
 
@@ -204,7 +204,7 @@ ms.locfileid: "56954896"
 
 ### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>變更資源符號標頭檔名稱
 
-1. 在 [資源檢視](../windows/resource-view-window.md)，以滑鼠右鍵按一下.rc 檔，然後選擇[Resource Includes](../windows/resource-includes-dialog-box.md)從捷徑功能表。
+1. 在 [資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)，以滑鼠右鍵按一下您 *.rc*檔案，然後選擇[Resource Includes](../windows/resource-includes-dialog-box.md)。
 
 1. 在 **符號標頭檔**方塊中，輸入 include 檔案的新名稱。
 

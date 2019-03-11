@@ -9,16 +9,16 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-ms.openlocfilehash: 9f309f6d7147b37691564d3d72c151da90055c6a
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: a642fd136c104b621b83ab6db5a3704ea94fdae1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627341"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741981"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>多位元組字元集 (MBCS) 的支援
 
-多位元組字元集 (Multibyte Character Set，MBCS) 是支援字元集的舊方法，例如不能以單一位元組表示的日文和中文。 如果您進行新開發，除了使用者看不見的系統字串之外，您應該對所有文字字串使用 Unicode。 MBCS 是舊版技術，不建議用於新開發。
+多位元組字元集 (Multibyte Character Set，MBCS) 是支援字元集的舊方法，例如不能以單一位元組表示的日文和中文。 如果您進行新開發，除了終端使用者看不見的系統字串之外，您應該對所有文字字串使用 Unicode。 MBCS 是舊版技術，不建議用於新開發。
 
 最常見的 MBCS 實作是雙位元組字元集 (DBCS)。 一般而言，Visual C++ 尤其是 MFC，已完全支援 DBCS。
 

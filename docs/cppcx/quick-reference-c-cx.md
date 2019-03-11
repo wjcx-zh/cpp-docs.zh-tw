@@ -2,12 +2,12 @@
 title: 快速參考 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: ba457195-26e5-43aa-b99d-24a871e550f4
-ms.openlocfilehash: eb407a0264a68f9b89e4a180c8b151076fdd109a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0526c9083d177688146926598b79e66ca2f9723c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445327"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742074"
 ---
 # <a name="quick-reference-ccx"></a>快速參考 (C++/CX)
 

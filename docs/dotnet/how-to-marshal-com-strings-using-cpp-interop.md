@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 C++ Interop 封送處理 COM 字串
+title: HOW TO：使用 c + + Interop 封送處理 COM 字串
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-ms.openlocfilehash: 664c9ed973e2dff4467d13742390da8a944eb87a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baf3a2e6720cd2f72606cf5089e0409df602fee6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559116"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751510"
 ---
-# <a name="how-to-marshal-com-strings-using-c-interop"></a>如何：使用 C++ Interop 封送處理 COM 字串
+# <a name="how-to-marshal-com-strings-using-c-interop"></a>HOW TO：使用 c + + Interop 封送處理 COM 字串
 
 本主題示範如何 BSTR （偏好在 COM 程式設計中的基本字串格式） 傳遞從 managed 至 unmanaged 函式，反之亦然。 與其他字串類型的交互操作，請參閱下列主題：
 

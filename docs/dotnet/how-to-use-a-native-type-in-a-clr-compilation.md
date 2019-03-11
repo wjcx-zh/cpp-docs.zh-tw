@@ -1,19 +1,19 @@
 ---
-title: 如何： 在-clr 編譯中使用原生類型
+title: HOW TO：在-clr 編譯中使用原生類型
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compilation, native types in /clr
 - /clr compiler option [C++], using native types
 ms.assetid: 3a505c90-4adb-4942-9cf9-7d1fdcbc01e7
-ms.openlocfilehash: 0079be21b474858684e1abaaeb363820764a701d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9979113ac4ffc062ddfe8654279af03036984f38
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459946"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746028"
 ---
-# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>如何：在 /clr 編譯中使用原生類型
+# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>HOW TO：在 /clr 編譯中使用原生類型
 
 您可以定義中的原生型別 **/clr**編譯和任何使用組件中該原生類型無效。 不過，原生型別將無法供使用，從參考的中繼資料。
 

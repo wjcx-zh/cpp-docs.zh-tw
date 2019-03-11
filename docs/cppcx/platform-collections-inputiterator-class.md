@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: d01519870d52a51a18e25f73d5caa853d90a8792
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5cd6afa591ba2a03fbfe492e566b0fc938ae396
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455233"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745797"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator 類別
 
@@ -81,7 +81,7 @@ explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
 
 ### <a name="parameters"></a>參數
 
-*Iter*<br/>
+*iter*<br/>
 迭代器物件。
 
 ## <a name="operator-arrow"></a>  Inputiterator:: Operator-&gt;運算子

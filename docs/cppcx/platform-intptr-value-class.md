@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-ms.openlocfilehash: eda65255aa76d6a801bdc0f80c437a9dc975d8f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8101fa2c82a0ac3e3b573384d14d9a7eff6ecf61
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449136"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747108"
 ---
 # <a name="platformintptr-value-class"></a>Platform::IntPtr 實值類別
 
@@ -58,7 +58,7 @@ IntPtr( __int64 handle-or-pointer );   IntPtr( void* value );   IntPtr( int 32-b
 
 ### <a name="parameters"></a>參數
 
-*值*<br/>
+*value*<br/>
 64 位元控制代碼或指標、64 位元值的指標、或是可轉換為 64 位元值的 32 位元值。
 
 ## <a name="op-explicit"> </a> IntPtr::op_explicit 運算子
@@ -73,10 +73,10 @@ static IntPtr::operator IntPtr( void* value1);   static IntPtr::operator IntPtr(
 
 ### <a name="parameters"></a>參數
 
-*Value1*<br/>
+*value1*<br/>
 控制代碼的指標或 IntPtr。
 
-*Value2*<br/>
+*value2*<br/>
 可以轉換為 IntPtr 的 32 位元整數。
 
 *value3*<br/>

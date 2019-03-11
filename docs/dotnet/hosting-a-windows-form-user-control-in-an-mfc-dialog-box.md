@@ -6,12 +6,12 @@ helpviewer_keywords:
 - hosting Windows Forms control [C++]
 - Windows Forms [C++], MFC support
 ms.assetid: 9f66ee52-b7cb-4ffd-8306-392a5da990d8
-ms.openlocfilehash: 921e6fac32d37f8976d53d49adab72fb27ab5e99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56cf00da71fe6c47e39de2a8fc06df572a301a61
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632215"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748563"
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>將 Windows Form 使用者控制項裝載至 MFC 對話方塊中
 
@@ -26,13 +26,13 @@ MFC ActiveX 控制項是特殊類型裝載的 Windows Form 控制項和使用 Ac
 
 [如何：建立使用者控制項並裝載至對話方塊中](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)
 
-[如何： 執行 DDX/DDV 資料繫結 Windows form](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)
+[如何：執行 DDX/DDV 資料繫結搭配 Windows Form](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)
 
 [如何：從原生 C++ 類別接收 Windows Forms 事件](../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
 ## <a name="reference"></a>參考資料
 
-[CWinFormsControl 類別](../mfc/reference/cwinformscontrol-class.md) &#124; [CDialog 類別](../mfc/reference/cdialog-class.md) &#124; [CWnd 類別](../mfc/reference/cwnd-class.md)&#124; <xref:System.Windows.Forms.Control>
+[CWinFormsControl Class](../mfc/reference/cwinformscontrol-class.md) &#124; [CDialog Class](../mfc/reference/cdialog-class.md) &#124; [CWnd Class](../mfc/reference/cwnd-class.md) &#124; <xref:System.Windows.Forms.Control>
 
 ## <a name="see-also"></a>另請參閱
 

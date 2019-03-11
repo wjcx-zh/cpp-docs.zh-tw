@@ -22,12 +22,12 @@ helpviewer_keywords:
 - SAFEARRAY, marshaling
 - ADO.NET [C++], marshaling SAFEARRAY types
 ms.assetid: b0cd987d-1ea7-4f76-ba01-cbd52503d06d
-ms.openlocfilehash: 896cad4d3a679cd1832b073f4b1f355a70a608d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b258e574b912b1c32e5ffae7ba29cfc5f9903685
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638473"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749343"
 ---
 # <a name="data-access-using-adonet-ccli"></a>使用 ADO.NET 進行資料存取 (C++/CLI)
 
@@ -43,7 +43,7 @@ ADO.NET 會執行在 Common Language Runtime (CLR)。 因此，任何與 ADO.NET
 
 在此範例中，類別 DatabaseClass 建立互動使用 ADO.NET<xref:System.Data.DataTable>物件。 請注意，這個類別是原生 c + + `class` (相較`ref class`或`value class`)。 這是必要的因為我們想要使用原生程式碼，這個類別，而且您無法在原生程式碼中使用 managed 的類型。 這個類別將會編譯為 CLR 為目標的會以`#pragma managed`類別宣告之前的指示詞。 如需有關這個指示詞的詳細資訊，請參閱 < [managed、 unmanaged](../preprocessor/managed-unmanaged.md)。
 
-請注意 DatabaseClass 類別的私用成員： `gcroot<DataTable ^> table`。 由於原生類型不能包含 managed 型別，`gcroot`是必要的關鍵字。 如需詳細資訊`gcroot`，請參閱 <<c2> [ 如何： 以原生類型宣告處理](../dotnet/how-to-declare-handles-in-native-types.md)。
+請注意 DatabaseClass 類別的私用成員： `gcroot<DataTable ^> table`。 由於原生類型不能包含 managed 型別，`gcroot`是必要的關鍵字。 如需詳細資訊`gcroot`，請參閱[How to:以原生類型宣告控制代碼](../dotnet/how-to-declare-handles-in-native-types.md)。
 
 在此範例中的程式碼的其餘部分會是原生 c + + 程式碼，會以`#pragma unmanaged`指示詞前面`main`。 在此範例中，我們會建立 DatabaseClass 的新執行個體，並呼叫其方法來建立資料表，並填入資料表中的某些資料列。 請注意，原生 c + + 字串傳遞做為資料庫資料行將 StringCol 的值。 內 DatabaseClass，這些字串會封送處理為使用中的封送處理功能的 managed 字串<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空間。 具體來說，此方法<xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A>用來封送處理`char *`要<xref:System.String>，和方法<xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>用以封送處理<xref:System.String>至`char *`。
 
@@ -169,7 +169,7 @@ StringCol: This is string 2.
 
 在此範例中，類別 DatabaseClass 建立互動使用 ADO.NET<xref:System.Data.DataTable>物件。 請注意，這個類別是原生 c + + `class` (相較`ref class`或`value class`)。 這是必要的因為我們想要使用原生程式碼，這個類別，而且您無法在原生程式碼中使用 managed 的類型。 這個類別將會編譯為 CLR 為目標的會以`#pragma managed`類別宣告之前的指示詞。 如需有關這個指示詞的詳細資訊，請參閱 < [managed、 unmanaged](../preprocessor/managed-unmanaged.md)。
 
-請注意 DatabaseClass 類別的私用成員： `gcroot<DataTable ^> table`。 由於原生類型不能包含 managed 型別，`gcroot`是必要的關鍵字。 如需詳細資訊`gcroot`，請參閱 <<c2> [ 如何： 以原生類型宣告處理](../dotnet/how-to-declare-handles-in-native-types.md)。
+請注意 DatabaseClass 類別的私用成員： `gcroot<DataTable ^> table`。 由於原生類型不能包含 managed 型別，`gcroot`是必要的關鍵字。 如需詳細資訊`gcroot`，請參閱[How to:以原生類型宣告控制代碼](../dotnet/how-to-declare-handles-in-native-types.md)。
 
 在此範例中的程式碼的其餘部分會是原生 c + + 程式碼，會以`#pragma unmanaged`指示詞前面`main`。 在此範例中，我們會建立 DatabaseClass 的新執行個體，並呼叫其方法來建立資料表，並填入資料表中的某些資料列。 請注意，COM 字串會傳遞做為資料庫資料行將 StringCol 的值。 內 DatabaseClass，這些字串會封送處理為使用中的封送處理功能的 managed 字串<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空間。 具體來說，此方法<xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A>用來封送處理`BSTR`要<xref:System.String>，和方法<xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A>用以封送處理<xref:System.String>至`BSTR`。
 
@@ -303,7 +303,7 @@ StringCol: This is string 2.
 
 在此範例中，類別 DatabaseClass 建立互動使用 ADO.NET<xref:System.Data.DataTable>物件。 請注意，這個類別是原生 c + + `class` (相較`ref class`或`value class`)。 這是必要的因為我們想要使用原生程式碼，這個類別，而且您無法在原生程式碼中使用 managed 的類型。 這個類別將會編譯為 CLR 為目標的會以`#pragma managed`類別宣告之前的指示詞。 如需有關這個指示詞的詳細資訊，請參閱 < [managed、 unmanaged](../preprocessor/managed-unmanaged.md)。
 
-請注意 DatabaseClass 類別的私用成員： `gcroot<DataTable ^> table`。 由於原生類型不能包含 managed 型別，`gcroot`是必要的關鍵字。 如需詳細資訊`gcroot`，請參閱 <<c2> [ 如何： 以原生類型宣告處理](../dotnet/how-to-declare-handles-in-native-types.md)。
+請注意 DatabaseClass 類別的私用成員： `gcroot<DataTable ^> table`。 由於原生類型不能包含 managed 型別，`gcroot`是必要的關鍵字。 如需詳細資訊`gcroot`，請參閱[How to:以原生類型宣告控制代碼](../dotnet/how-to-declare-handles-in-native-types.md)。
 
 在此範例中的程式碼的其餘部分會是原生 c + + 程式碼，會以`#pragma unmanaged`指示詞前面`main`。 在此範例中，我們會建立 DatabaseClass 的新執行個體，並呼叫其方法來建立資料表，並填入資料表中的某些資料列。 請注意，Unicode c + + 字串傳遞做為資料庫資料行將 StringCol 的值。 內 DatabaseClass，這些字串會封送處理為使用中的封送處理功能的 managed 字串<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空間。 具體來說，此方法<xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A>用來封送處理`wchar_t *`要<xref:System.String>，和方法<xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A>用以封送處理<xref:System.String>至`wchar_t *`。
 
@@ -429,7 +429,7 @@ StringCol: This is string 2.
 
 在此範例中，類別 DatabaseClass 建立互動使用 ADO.NET<xref:System.Data.DataTable>物件。 請注意，這個類別是原生 c + + `class` (相較`ref class`或`value class`)。 這是必要的因為我們想要使用原生程式碼，這個類別，而且您無法在原生程式碼中使用 managed 的類型。 這個類別將會編譯為 CLR 為目標的會以`#pragma managed`類別宣告之前的指示詞。 如需有關這個指示詞的詳細資訊，請參閱 < [managed、 unmanaged](../preprocessor/managed-unmanaged.md)。
 
-請注意 DatabaseClass 類別的私用成員： `gcroot<DataTable ^> table`。 由於原生類型不能包含 managed 型別，`gcroot`是必要的關鍵字。 如需詳細資訊`gcroot`，請參閱 <<c2> [ 如何： 以原生類型宣告處理](../dotnet/how-to-declare-handles-in-native-types.md)。
+請注意 DatabaseClass 類別的私用成員： `gcroot<DataTable ^> table`。 由於原生類型不能包含 managed 型別，`gcroot`是必要的關鍵字。 如需詳細資訊`gcroot`，請參閱[How to:以原生類型宣告控制代碼](../dotnet/how-to-declare-handles-in-native-types.md)。
 
 在此範例中的程式碼的其餘部分會是原生 c + + 程式碼，會以`#pragma unmanaged`指示詞前面`main`。 在此範例中，我們會建立 DatabaseClass 的新執行個體，並呼叫其方法來建立資料表，並填入資料表中的某些資料列。 請注意，原生`VARIANT`類型傳遞做為資料庫資料行將 ObjectCol 的值。 內 DatabaseClass，這些`VARIANT`類型會封送處理至使用中的封送處理功能的 managed 物件<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空間。 具體來說，此方法<xref:System.Runtime.InteropServices.Marshal.GetObjectForNativeVariant%2A>用來封送處理`VARIANT`要<xref:System.Object>，和方法<xref:System.Runtime.InteropServices.Marshal.GetNativeVariantForObject%2A>用以封送處理<xref:System.Object>至`VARIANT`。
 
@@ -570,7 +570,7 @@ ObjectCol: 42
 
 在此範例中，類別 DatabaseClass 建立互動使用 ADO.NET<xref:System.Data.DataTable>物件。 請注意，這個類別是原生 c + + `class` (相較`ref class`或`value class`)。 這是必要的因為我們想要使用原生程式碼，這個類別，而且您無法在原生程式碼中使用 managed 的類型。 這個類別將會編譯為 CLR 為目標的會以`#pragma managed`類別宣告之前的指示詞。 如需有關這個指示詞的詳細資訊，請參閱 < [managed、 unmanaged](../preprocessor/managed-unmanaged.md)。
 
-請注意 DatabaseClass 類別的私用成員： `gcroot<DataTable ^> table`。 由於原生類型不能包含 managed 型別，`gcroot`是必要的關鍵字。 如需詳細資訊`gcroot`，請參閱 <<c2> [ 如何： 以原生類型宣告處理](../dotnet/how-to-declare-handles-in-native-types.md)。
+請注意 DatabaseClass 類別的私用成員： `gcroot<DataTable ^> table`。 由於原生類型不能包含 managed 型別，`gcroot`是必要的關鍵字。 如需詳細資訊`gcroot`，請參閱[How to:以原生類型宣告控制代碼](../dotnet/how-to-declare-handles-in-native-types.md)。
 
 在此範例中的程式碼的其餘部分會是原生 c + + 程式碼，會以`#pragma unmanaged`指示詞前面`main`。 在此範例中，我們會建立 DatabaseClass 的新執行個體，並呼叫其方法來建立資料表，並填入資料表中的某些資料列。 請注意，原生`SAFEARRAY`類型傳遞做為資料庫資料行將 ArrayIntsCol 的值。 內 DatabaseClass，這些`SAFEARRAY`類型會封送處理至使用中的封送處理功能的 managed 物件<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空間。 具體來說，此方法<xref:System.Runtime.InteropServices.Marshal.Copy%2A>用來封送處理`SAFEARRAY`整數和方法的 managed 陣列<xref:System.Runtime.InteropServices.Marshal.Copy%2A>用來封送處理 managed 的陣列的整數以`SAFEARRAY`。
 

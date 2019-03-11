@@ -1,5 +1,5 @@
 ---
-title: 格式化時間值： 一般用途類別
+title: 格式化時間值：一般用途類別
 ms.date: 11/04/2016
 helpviewer_keywords:
 - dates, calculating intervals
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - time [C++], formatting
 - formatting [C++], time
 ms.assetid: 7fcfee24-f874-4a4d-95b3-adc19a0f2df0
-ms.openlocfilehash: 48290adbc3e0e7f3cbe9a5a8e0569a5b61833e8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bab93638d81e8e4e5d6f7ce71bf6a3180fa7f7e5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478659"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739179"
 ---
-# <a name="formatting-time-values-general-purpose-classes"></a>格式化時間值： 一般用途類別
+# <a name="formatting-time-values-general-purpose-classes"></a>格式化時間值：一般用途類別
 
 下列程序示範如何格式化時間值。
 
@@ -31,4 +31,3 @@ ms.locfileid: "50478659"
 - [使用 SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)
 
 - [日期與時間程式設計的自動化支援](../atl-mfc-shared/date-and-time-automation-support.md)
-

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: b2d2d5991f7b52727b366214b8ca9ed4d8e14956
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ba17a56c5274295c44cdc5aa651380d1e6c83d3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607854"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740932"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>參考類型的 C++ 堆疊語意
 
@@ -27,7 +27,7 @@ Visual C++ 2005 之前只能使用 `new` 運算子建立參考類型的執行個
 
 編譯器不會為參考類型產生預設指派運算子。 指派運算子可讓您建立使用堆疊語意的物件，並以使用堆疊語意建立的現有物件對其進行初始化。 參考類型的指派運算子具有下列形式的簽章：`void operator=( R% ){}`。
 
-如果類型的解構函式會釋放重要的資源，而您使用參考類型的堆疊語意，則不需要明確呼叫解構函式 (或呼叫 `delete`)。 如需有關參考類型中的解構函式的詳細資訊，請參閱[解構函式和完成項中如何： 定義和使用類別和結構 (C + + /cli CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。
+如果類型的解構函式會釋放重要的資源，而您使用參考類型的堆疊語意，則不需要明確呼叫解構函式 (或呼叫 `delete`)。 如需有關參考類型中的解構函式的詳細資訊，請參閱[解構函式和完成項中如何：定義和使用類別和結構 (C + + /cli CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。
 
 由編譯器產生的指派運算子會遵循一般的標準 C++ 規則，並提供下列新增功能：
 

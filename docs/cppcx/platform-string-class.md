@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: ef9838fa8a6a34eac1d2d3531ff93fb124c81d4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac9ee843f5f11d4a42377b16ec77b266238fc461
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607034"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746184"
 ---
 # <a name="platformstring-class"></a>Platform::String 類別
 
@@ -72,7 +72,7 @@ public ref class String sealed : Object,
 |[String::Data](#data)|讓指標回到目前字串的開頭。|
 |[String::Dispose](#dispose)|釋放或釋出資源。|
 |[String::End](#end)|讓指標回到目前字串的結尾之後。|
-|[String:: equals](#equals)|指出指定的物件是否等同於目前的物件。|
+|[String::Equals](#equals)|指出指定的物件是否等同於目前的物件。|
 |[String::GetHashCode](#gethashcode)|傳回這個執行個體的雜湊碼。|
 |[String::IsEmpty](#isempty)|指出目前 String 物件是否為空。|
 |[String::IsFastPass](#isfastpass)|指出目前 String 物件會參與*快速傳遞*作業。 在快速傳遞作業時，參考計數會暫停。|

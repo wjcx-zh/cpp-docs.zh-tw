@@ -1,17 +1,17 @@
 ---
-title: 如何：在 C++/CLI 中使用事件
+title: HOW TO：使用事件在 C + + /cli CLI
 ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-ms.openlocfilehash: eb18922b998db6b959921c8d786e0d558a9c5ce1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63bac664afad2852a7b5e70c1c23335c75d0ad3b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513902"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748758"
 ---
-# <a name="how-to-use-events-in-ccli"></a>如何：在 C++/CLI 中使用事件
+# <a name="how-to-use-events-in-ccli"></a>HOW TO：使用事件在 C + + /cli CLI
 
 本文說明如何使用宣告的事件並叫用該事件中，函式的介面和實作介面的類別和事件處理常式。
 

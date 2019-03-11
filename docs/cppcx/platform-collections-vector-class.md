@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: fb03f7a00dfabe9d082ca761552af99e552d3190
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5466f1d1c8987724aa0768cd8915e06b62b031ad
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499860"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747121"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 類別
 
@@ -45,7 +45,7 @@ template <typename T, typename E>
 Vector 物件中包含的元素型別。
 
 *E*<br/>
-指定二元述詞，來測試是否與類型的值相等*T*。預設值是 `std::equal_to<T>`。
+指定二元述詞，來測試是否與類型的值相等*T*。預設值為 `std::equal_to<T>`。
 
 ### <a name="remarks"></a>備註
 
@@ -149,7 +149,7 @@ virtual Windows::Foundation::Collections::IIterator <T>^ First();
 
 ### <a name="remarks"></a>備註
 
-若要保留 first （） 所傳回的迭代器的方便作法是將傳回的值指派給宣告的變數**自動**類型推斷關鍵字。 例如，`auto x = myVector->First();`。 此迭代器知道集合的長度。
+若要保留 first （） 所傳回的迭代器的方便作法是將傳回的值指派給宣告的變數**自動**類型推斷關鍵字。 例如， `auto x = myVector->First();` 。 此迭代器知道集合的長度。
 
 當您需要一對迭代器，要傳遞至 STL 函式時，使用免費的函式[collections:: begin](../cppcx/begin-function.md)和[不](../cppcx/end-function.md)
 
@@ -226,7 +226,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>參數
 
-*值*<br/>
+*value*<br/>
 要尋找的項目。
 
 *index*<br/>
@@ -257,7 +257,7 @@ virtual void InsertAt(unsigned int index, T item)
 *index*<br/>
 以零起始、不帶正負號的整數，在 Vector 物件中指定特別項目。
 
-*項目*<br/>
+*item*<br/>
 要在指定的項目之後插入向量的項目*index*。 型別*項目*由此*T*類型名稱。
 
 ## <a name="removeat"></a>  Vector:: removeat 方法
@@ -315,7 +315,7 @@ virtual void SetAt(unsigned int index, T item);
 *index*<br/>
 以零起始、不帶正負號的整數，在 Vector 物件中指定特別項目。
 
-*項目*<br/>
+*item*<br/>
 要指派給指定項目的值。 型別*項目*由此*T*類型名稱。
 
 ## <a name="size"></a>  Vector:: size 方法
@@ -375,7 +375,7 @@ A [std:: initializer_list](../standard-library/initializer-list-class.md)之物�
 *size*<br/>
 Vector 中的項目數。
 
-*值*<br/>
+*value*<br/>
 用來初始化目前 Vector 中各個項目的值。
 
 *v*<br/>
@@ -387,7 +387,7 @@ Vector 中的項目數。
 *first*<br/>
 用來初始化目前 Vector 之物件序列中的第一個項目。 型別*第一*藉由傳遞*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-*最後一個*<br/>
+*last*<br/>
 用來初始化目前 Vector 之物件序列中的最後一個項目。 型別*上次*藉由傳遞*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ## <a name="see-also"></a>另請參閱

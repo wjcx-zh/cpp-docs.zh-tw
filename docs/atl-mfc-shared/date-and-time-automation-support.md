@@ -1,5 +1,5 @@
 ---
-title: 日期和時間： Automation 支援
+title: 日期和時間：自動化支援
 ms.date: 11/04/2016
 helpviewer_keywords:
 - adding dates
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - calculations, date and time
 - time [Visual Studio], Automation support
 ms.assetid: 6eee94c4-943d-4ffc-bf7c-bdda89337ab0
-ms.openlocfilehash: 5aeefe2594fcb71e8b399e017fc10f8c1c5650a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c26534189c7b6f904611e78c5d2d6d0b1d6d7382
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552681"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750199"
 ---
-# <a name="date-and-time-automation-support"></a>日期和時間： Automation 支援
+# <a name="date-and-time-automation-support"></a>日期和時間：自動化支援
 
 本文說明如何利用的日期和時間的管理相關的類別程式庫服務。 所述的程序包括：
 

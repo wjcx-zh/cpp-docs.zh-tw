@@ -1,19 +1,19 @@
 ---
-title: 如何：建立使用者控制項並裝載至對話方塊中
+title: HOW TO：在對話方塊中建立使用者控制項並裝載
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: 03a53032-2f03-4fa2-b567-031615a26011
-ms.openlocfilehash: ccb7219b9c7b3a64da61a77097b147424a92a701
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bdf7e2f4961a16e6538c7bbcc690ef44ba87fcaf
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649991"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751488"
 ---
-# <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>如何：建立使用者控制項並裝載至對話方塊中
+# <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>HOW TO：在對話方塊中建立使用者控制項並裝載
 
 這篇文章中的步驟假設您要建立對話方塊架構 ([CDialog 類別](../mfc/reference/cdialog-class.md)) Microsoft Foundation Classes (MFC) 專案，但是您也可以將支援的 Windows Form 控制項加入至現有的 MFC 對話方塊。
 
@@ -45,7 +45,7 @@ ms.locfileid: "50649991"
 
    在 [檔案]  功能表上，按一下 [新增]  及 [專案] 。 在  **Visual c + +** 資料夾中，選取**MFC 應用程式**。
 
-   在 [名稱]  方塊中，輸入 `MFC01`。 將方案設定變更為**加入至方案**。 按一下 [確定 **Deploying Office Solutions**]。
+   在 [名稱]  方塊中，輸入 `MFC01`。 將方案設定變更為**加入至方案**。 按一下 [確定] 。
 
    在  **MFC 應用程式精靈**，針對應用程式類型，選取**採用對話方塊**。 接受其餘的預設設定，然後按**完成**。 這會建立具有 MFC 對話方塊的 MFC 應用程式。
 

@@ -1,27 +1,27 @@
 ---
-title: CFixedStringT︰ 範例自訂字串管理員
+title: CFixedStringT:自訂字串管理員範例
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CFixedStringT class, using a custom string manager
 ms.assetid: 1cf11fd7-51b8-4b94-87af-02bc25f47dd6
-ms.openlocfilehash: d35c4c998a6e5913cd972312c511b2a102480c81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b6da5d4166b220ef63500d0154ab32dc72b40f4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663155"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740698"
 ---
-# <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT︰ 範例自訂字串管理員
+# <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT:自訂字串管理員範例
 
 ATL 程式庫會實作一個類別所使用的自訂字串管理員範例[CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md)稱為**CFixedStringMgr**。 `CFixedStringT` 衍生自[CStringT](../atl-mfc-shared/reference/cstringt-class.md)並實作的一部分配置其字元資料字串`CFixedStringT`物件本身，只要該字串是所指定的長度小於`t_nChars`的範本參數`CFixedStringT`. 使用此方法時，不需要字串堆積，除非字串的長度超過的固定緩衝區的大小。 因為`CFixedStringT`並非永遠不使用的堆積配置其字串資料，它不能使用`CAtlStringMgr`為其字串管理員。 它會使用自訂字串管理員 (`CFixedStringMgr`)，它會實作[IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md)介面。 這個介面會討論[的自訂字串管理員實作 （進階方法）](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)。
 
 建構函式`CFixedStringMgr`採用三個參數：
 
-- *pData:* 指標固定的`CStringData`要使用的結構。
+- *pData:* 固定的指標`CStringData`要使用的結構。
 
-- *nChars:* 的字元數上限`CStringData`結構可以保存。
+- *nChars:* 最大字元數`CStringData`結構可以保存。
 
-- *pMgr:* 指向的`IAtlStringMgr`介面的 「 備份字串 manager 」。
+- *pMgr:* 指標`IAtlStringMgr`介面的 「 備份字串 manager 」。
 
 建構函式儲存的值*pData*並*pMgr*在其各自的成員變數 (`m_pData`和`m_pMgr`)。 然後，它會設定為零，就會有可用的長度等於最大的大小固定的緩衝區，並為-1 的參考計數的緩衝區的長度。 參考計數值，指出緩衝區已鎖定，並將這個執行個體`CFixedStringMgr`作為字串的經理。
 
@@ -64,4 +64,3 @@ ATL 程式庫會實作一個類別所使用的自訂字串管理員範例[CFixed
 ## <a name="see-also"></a>另請參閱
 
 [使用 CStringT 管理記憶體](../atl-mfc-shared/memory-management-with-cstringt.md)
-

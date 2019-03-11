@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ClassNotRegisteredException
 ms.assetid: 8f8871d8-51b9-46e8-902e-ae023c9f1de9
-ms.openlocfilehash: a295331dd91768f1732a40a07837ba93a6e9fdfa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9276561b4291ac25c1d623bc308b7fae40b9ab81
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464645"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745025"
 ---
 # <a name="platformclassnotregisteredexception-class"></a>Platform::ClassNotRegisteredException 類別
 

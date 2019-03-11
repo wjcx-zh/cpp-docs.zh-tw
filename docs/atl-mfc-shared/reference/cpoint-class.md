@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: 4f6ab15f80ac448b4e7383e2db92f22262c20d08
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: cab7aef6fab025174dedb0bf75ee43c49ead0d88
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178065"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740398"
 ---
 # <a name="cpoint-class"></a>CPoint 類別
 
@@ -47,11 +47,11 @@ class CPoint : public tagPOINT
 |名稱|描述|
 |----------|-----------------|
 |[CPoint::operator-](#operator_-)|傳回的差異`CPoint`和大小或一個點，或兩個點或以負值大小的位移大小差異的負值。|
-|[CPoint::operator ！ =](#operator_neq)|檢查兩個點之間的不等比較。|
+|[CPoint::operator !=](#operator_neq)|檢查兩個點之間的不等比較。|
 |[CPoint::operator +](#operator_add)|傳回的總和`CPoint`和大小或點，或`CRect`位移大小。|
-|[CPoint::operator + =](#operator_add_eq)|位移`CPoint`加上大小或點。|
-|[CPoint::operator =](#operator_-_eq)|位移`CPoint`減去大小或點。|
-|[CPoint::operator = =](#operator_eq_eq)|檢查兩個點之間相等。|
+|[CPoint::operator +=](#operator_add_eq)|位移`CPoint`加上大小或點。|
+|[CPoint::operator -=](#operator_-_eq)|位移`CPoint`減去大小或點。|
+|[CPoint::operator ==](#operator_eq_eq)|檢查兩個點之間相等。|
 
 ## <a name="remarks"></a>備註
 
@@ -153,7 +153,7 @@ void Offset(SIZE size) throw();
 *yOffset*<br/>
 指定的位移數量`y`隸屬`CPoint`。
 
-*點*<br/>
+*point*<br/>
 指定的數量 ([點](/windows/desktop/api/windef/ns-windef-tagpoint)或是`CPoint`) 位移`CPoint`。
 
 *size*<br/>
@@ -173,7 +173,7 @@ BOOL operator==(POINT point) const throw();
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 包含[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或`CPoint`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -194,7 +194,7 @@ BOOL operator!=(POINT point) const throw();
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 包含[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或`CPoint`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -219,7 +219,7 @@ void operator+=(POINT point) throw();
 *size*<br/>
 包含[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
 
-*點*<br/>
+*point*<br/>
 包含[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
 
 ### <a name="remarks"></a>備註
@@ -234,7 +234,7 @@ void operator+=(POINT point) throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#31](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_4.cpp)]
 
-##  <a name="operator_-_eq"></a>  CPoint::operator =
+##  <a name="operator_-_eq"></a>  CPoint::operator -=
 
 第一個多載減去大小`CPoint`。
 
@@ -248,7 +248,7 @@ void operator-=(POINT point) throw();
 *size*<br/>
 包含[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
 
-*點*<br/>
+*point*<br/>
 包含[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
 
 ### <a name="remarks"></a>備註
@@ -278,7 +278,7 @@ CRect operator+(const RECT* lpRect) const throw();
 *size*<br/>
 包含[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
 
-*點*<br/>
+*point*<br/>
 包含[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
 
 *lpRect*<br/>
@@ -298,7 +298,7 @@ A`CPoint`大小，位移`CPoint`的位移點，或`CRect`點位移。
 
 [!code-cpp[NVC_ATLMFC_Utilities#33](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_6.cpp)]
 
-##  <a name="operator_-"></a>  CPoint::operator-
+##  <a name="operator_-"></a>  CPoint::operator -
 
 使用其中一種的前兩個多載減法`CPoint`或是`CSize`物件從`CPoint`。
 
@@ -311,7 +311,7 @@ CPoint operator-() const throw();
 
 ### <a name="parameters"></a>參數
 
-*點*<br/>
+*point*<br/>
 A[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
 
 *size*<br/>
@@ -347,4 +347,3 @@ A`CSize`也就是兩個點之間的差異`CPoint`的大小，負位移`CRect`位
 [POINT 結構](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
 [CRect 類別](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CSize 類別](../../atl-mfc-shared/reference/csize-class.md)
-

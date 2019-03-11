@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 PInvoke 封送處理結構
+title: HOW TO：封送處理結構使用 PInvoke
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-ms.openlocfilehash: e79eb343f81cf2d66e394be7561d2c9727c4c9ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5c64a3e93cd85d7e38bac7c0ea3fa3c3301abc9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429106"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747991"
 ---
-# <a name="how-to-marshal-structures-using-pinvoke"></a>如何：使用 PInvoke 封送處理結構
+# <a name="how-to-marshal-structures-using-pinvoke"></a>HOW TO：封送處理結構使用 PInvoke
 
 本文件說明如何在原生函式會接受 C 樣式結構可以從呼叫 managed 函式，藉由使用 P/Invoke。 雖然我們建議您使用 c + + Interop 功能，而不是 P/Invoke P/Invoke 提供極少的編譯時期錯誤，報告，因為不是類型安全，並可能會非常繁瑣，若要實作，如果未受管理的 API 會封裝成 DLL，而且沒有原始程式碼可用，P/Invoke 是唯一的選項。 否則，請參閱下列文件：
 

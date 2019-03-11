@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 C++ Interop 封送處理結構
+title: HOW TO：使用 c + + Interop 封送處理結構
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: c2080200-f983-4d6e-a557-cd870f060a54
-ms.openlocfilehash: c44b23bf0f73191b86b4970c57313d9bc38c8b7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93aeabc3fe984bee8a9281281320d61dccd182bf
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521325"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739392"
 ---
-# <a name="how-to-marshal-structures-using-c-interop"></a>如何：使用 C++ Interop 封送處理結構
+# <a name="how-to-marshal-structures-using-c-interop"></a>HOW TO：使用 c + + Interop 封送處理結構
 
 本主題會示範一個 facet 的 Visual c + + 的互通性。 如需詳細資訊，請參閱 <<c0> [ 使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。
 
@@ -24,7 +24,7 @@ ms.locfileid: "50521325"
 
 ## <a name="example"></a>範例
 
-下列範例會示範將傳遞結構從 managed 至 unmanaged 函式，值和傳址。 因為此範例中的結構包含只是簡單、 內建資料型別 (請參閱[Blittable 和非 Blittable 類型](/dotnet/framework/interop/blittable-and-non-blittable-types))，沒有特殊的封送處理為必要。 若要封送處理非 blittable 結構，例如那些包含指標，請參閱[如何： 封送處理內嵌指標使用 c + + Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。
+下列範例會示範將傳遞結構從 managed 至 unmanaged 函式，值和傳址。 因為此範例中的結構包含只是簡單、 內建資料型別 (請參閱[Blittable 和非 Blittable 類型](/dotnet/framework/interop/blittable-and-non-blittable-types))，沒有特殊的封送處理為必要。 若要封送處理非 blittable 結構，例如那些包含指標，請參閱[How to:封送處理內嵌指標使用 c + + Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。
 
 ```
 // PassStruct1.cpp
@@ -82,7 +82,7 @@ int main() {
 
 ## <a name="example"></a>範例
 
-下列範例示範傳遞結構從 unmanaged，受管理的函式值和傳址。 因為此範例中的結構包含只是簡單、 內建資料型別 (請參閱[Blittable 和非 Blittable 類型](/dotnet/framework/interop/blittable-and-non-blittable-types))，沒有特殊的封送處理為必要。 若要封送處理非 blittable 結構，例如那些包含指標，請參閱[如何： 封送處理內嵌指標使用 c + + Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。
+下列範例示範傳遞結構從 unmanaged，受管理的函式值和傳址。 因為此範例中的結構包含只是簡單、 內建資料型別 (請參閱[Blittable 和非 Blittable 類型](/dotnet/framework/interop/blittable-and-non-blittable-types))，沒有特殊的封送處理為必要。 若要封送處理非 blittable 結構，例如那些包含指標，請參閱[How to:封送處理內嵌指標使用 c + + Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。
 
 ```
 // PassStruct2.cpp

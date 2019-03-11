@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Box
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-ms.openlocfilehash: 29cbe852dcd606ea5cf2953c709fc8e47b89e1f1
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ca8c9229d0ef5fa654f462282f257b1684984102
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327027"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742935"
 ---
 # <a name="platformbox-class"></a>Platform::Box 類別
 
@@ -35,8 +35,8 @@ ref class Box abstract;
 |[Box](#ctor) | 建立可封裝指定類型之值的 `Box`。 |
 |[運算子方塊&lt;const T&gt;^](#box-const-t) | 可以透過 Boxing 處理，從 `const` 實值類別 `T` 或 `enum` 類別 `T` 轉換為 `Box<T>`。 |
 |[運算子方塊&lt;const volatile T>&gt;^](#box-const-volatile-t) | 可以透過 Boxing 處理，從 `const volatile` 實值類別 `T` 或 `enum` 類型 `T` 轉換為 `Box<T>`。 |
-|[運算子方塊&lt;T&gt;^](#box-t) | 可以透過 Boxing 處理，從 `T` 實值類別轉換為 `Box<T>`。 |
-|[運算子方塊&lt;volatile T&gt;^](#box-volatile-t) | 可以透過 Boxing 處理，從 `volatile` 實值類別 `T` 或 `enum` 類型 `T` 轉換為 `Box<T>`。 |
+|[operator Box&lt;T&gt;^](#box-t) | 可以透過 Boxing 處理，從 `T` 實值類別轉換為 `Box<T>`。 |
+|[operator Box&lt;volatile T&gt;^](#box-volatile-t) | 可以透過 Boxing 處理，從 `volatile` 實值類別 `T` 或 `enum` 類型 `T` 轉換為 `Box<T>`。 |
 |[Box:: operator T](#t) | 可以透過 Boxing 處理，從 `T` 實值類別或 `enum` 類別 `T` 轉換為 `Box<T>`。 |
 |[Value 屬性](#value) | 傳回 `Box` 物件中封裝的值。 |
 

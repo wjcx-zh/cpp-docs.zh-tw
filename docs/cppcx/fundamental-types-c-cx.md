@@ -2,12 +2,12 @@
 title: 基本類型 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-ms.openlocfilehash: a6c068d58f0d7c173bff34726873b7a0f4f1d74c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bd5be01b868fd3086c2064edfd4ca343db425be
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529125"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752359"
 ---
 # <a name="fundamental-types-ccx"></a>基本類型 (C++/CX)
 
@@ -34,7 +34,7 @@ ms.locfileid: "50529125"
 |uint16|16 位元不帶正負號的整數。|unsigned short|0 到 65,535|
 |int32|32 位元帶正負號的整數。|int|-2,147,483,648 到 2,147,483,647|
 |uint32|32 位元不帶正負號的整數。|unsigned int|0 到 4,294,967,295|
-|int64|64 位元帶正負號的整數。|long long-或者-__int64|-9,223,372,036,854、 透過 9,223,372,036,854,775,807 775,808|
+|int64|64 位元帶正負號的整數。|long long  -or- __int64|-9,223,372,036,854、 透過 9,223,372,036,854,775,807 775,808|
 |uint64|64 位元不帶正負號的整數。|不帶正負號的 long long-或-不帶正負號的 __int64|0 到 18,446,744,073,709,551,615|
 |float32|32 位元 IEEE 754 浮點數。|float|3.4E +/- 38 (7 位數)|
 |float64|64 位元 IEEE 754 浮點數。|double|1.7E +/- 308 (15 位數)|

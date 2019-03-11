@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: bd8fefd3424ab5ec422adb352972ba846e45139d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9566830de4d3af8f34e8efa5e5ef468acae1fba5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525492"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750867"
 ---
 # <a name="cstringt-class"></a>CStringT 類別
 
@@ -114,19 +114,19 @@ class CStringT :
 *StringTraits*<br/>
 判斷字串類別是否需要 C 執行階段 (CRT) 程式庫支援和字串資源位於何處。 可以是下列其中一項：
 
-- **StrTraitATL < wchar_t** &#124; **char** &#124; **TCHAR、 ChTraitsCRT < wchar_t** &#124; **char** &#124; **TCHAR >>**
+- **StrTraitATL< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
    類別需要 CRT 支援並搜尋所指定的模組中的資源字串`m_hInstResource`（應用程式的模組類別的成員）。
 
-- **StrTraitATL < wchar_t** &#124; **char** &#124; **TCHAR、 ChTraitsOS < wchar_t** &#124; **char** &#124; **TCHAR >>**
+- **StrTraitATL< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
    類別不需要 CRT 支援及搜尋所指定的模組中的資源字串`m_hInstResource`（應用程式的模組類別的成員）。
 
-- **StrTraitMFC < wchar_t** &#124; **char** &#124; **TCHAR、 ChTraitsCRT < wchar_t** &#124; **char** &#124; **TCHAR >>**
+- **StrTraitMFC< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
    類別需要 CRT 支援和搜尋的資源字串使用標準的 MFC 搜尋演算法。
 
-- **StrTraitMFC < wchar_t** &#124; **char** &#124; **TCHAR、 ChTraitsOS < wchar_t** &#124; **char** &#124; **TCHAR >>**
+- **StrTraitMFC< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
    CRT 支援並使用標準的 MFC 搜尋演算法的資源字串搜尋，不需要的類別。
 
@@ -137,7 +137,7 @@ class CStringT :
 |名稱|描述|
 |----------|-----------------|
 |[CStringT::CStringT](#cstringt)|建構`CStringT`以各種方式的物件。|
-|[CStringT:: ~ CStringT](#_dtorcstringt)|終結 `CStringT` 物件。|
+|[CStringT::~CStringT](#_dtorcstringt)|終結 `CStringT` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -184,9 +184,9 @@ class CStringT :
 |-|-|
 |[operator =](#operator_eq)|指派新值到`CStringT`物件。|
 |[CStringT::operator +](#operator_add)|串連兩個字串或字元和字串。|
-|[CStringT::operator + =](#operator_add_eq)|串連至現有的字串結尾的新字串。|
-|[CStringT::operator = =](#operator_eq_eq)|判斷兩個字串是否以邏輯方式相等。|
-|[CStringT::operator ！ =](#operator_neq)|判斷兩個字串是否以邏輯方式不相等。|
+|[CStringT::operator +=](#operator_add_eq)|串連至現有的字串結尾的新字串。|
+|[CStringT::operator ==](#operator_eq_eq)|判斷兩個字串是否以邏輯方式相等。|
+|[CStringT::operator !=](#operator_neq)|判斷兩個字串是否以邏輯方式不相等。|
 |[CStringT::operator &lt;](#operator_lt)|判斷運算子左邊的字串是否小於右邊的字串。|
 |[CStringT::operator &gt;](#operator_gt)|判斷運算子左邊的字串是否大於右邊的字串。|
 |[CStringT::operator &lt;=](#operator_lt_eq)|決定是否運算子左邊的字串是否小於或等於右邊的字串。|
@@ -271,10 +271,10 @@ A`CStringT`物件包含一連串可變長度的字元。 `CStringT` 提供函式
 
 ## <a name="requirements"></a>需求
 
-|頁首|用於|
+|標頭|用於|
 |------------|-------------|
 |cstringt.h|僅限 MFC 字串物件|
-|和|非 MFC 字串物件|
+|atlstr.h|非 MFC 字串物件|
 
 ##  <a name="allocsysstring"></a>  CStringT::AllocSysString
 
@@ -335,7 +335,7 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 *nFormatID*<br/>
 包含格式控制字串的字串資源識別碼。
 
-*引數*<br/>
+*argument*<br/>
 選擇性引數。
 
 ### <a name="remarks"></a>備註
@@ -558,7 +558,7 @@ TCHAR （適用於 ANSI 和 Unicode 字元字串）。
 *bMFCDLL*<br/>
 布林值，指定專案是否 MFC DLL (TRUE) 與否 (FALSE)。
 
-*[Systemstring]*<br/>
+*SystemString*<br/>
 必須是`System::String`，並必須以 /clr 編譯專案。
 
 *pString*<br/>
@@ -568,11 +568,11 @@ TCHAR （適用於 ANSI 和 Unicode 字元字串）。
 
 因為建構函式會將輸入的資料複製到新配置的儲存體，您應該注意可能會造成例外狀況，該記憶體。 請注意，部分這些建構函式做為轉換函式。 這可讓您取代，比方說，LPTSTR 其中`CStringT`預期物件。
 
-- `CStringT`( `LPCSTR` `lpsz` ): 建構 Unicode`CStringT`從 ANSI 字串。 您也可以使用這個建構函式來載入字串資源，如下列範例所示。
+- `CStringT`( `LPCSTR` `lpsz` ):建構 Unicode`CStringT`從 ANSI 字串。 您也可以使用這個建構函式來載入字串資源，如下列範例所示。
 
-- `CStringT(` `LPCWSTR` `lpsz` ): 建構`CStringT`從 Unicode 字串。
+- `CStringT(` `LPCWSTR` `lpsz` ):建構`CStringT`從 Unicode 字串。
 
-- `CStringT`( `const unsigned char*` `psz` ): 可讓您建構`CStringT`從指標到**unsigned char**。
+- `CStringT`( `const unsigned char*` `psz` ):可讓您建構`CStringT`的指標**unsigned char**。
 
 > [!NOTE]
 >  定義 _CSTRING_DISABLE_NARROW_WIDE_CONVERSION 巨集，若要關閉 ANSI 和 Unicode 字串之間的隱含的字串轉換。 巨集排除編譯建構函式支援轉換。
@@ -588,7 +588,7 @@ TCHAR （適用於 ANSI 和 Unicode 字元字串）。
 
 [!code-cpp[NVC_ATLMFC_Utilities#112](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_7.cpp)]
 
-##  <a name="_dtorcstringt"></a>  CStringT:: ~ CStringT
+##  <a name="_dtorcstringt"></a>  CStringT::~CStringT
 
 終結`CStringT`物件。
 
@@ -709,7 +709,7 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 *pszFormat*<br/>
 格式控制字串。
 
-*引數*<br/>
+*argument*<br/>
 選擇性引數。
 
 ### <a name="remarks"></a>備註
@@ -743,7 +743,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 *pszFormat*<br/>
 指向格式控制字串。 它會掃描有插入並據以格式化。 格式字串是類似於執行階段函式*printf*-樣式格式字串，但它可讓您插入以任意順序的參數。
 
-*引數*<br/>
+*argument*<br/>
 選擇性引數。
 
 ### <a name="remarks"></a>備註
@@ -797,7 +797,7 @@ void FormatV(PCXSTR pszFormat, va_list args);
 *pszFormat*<br/>
 指向格式控制字串。 它會掃描有插入並據以格式化。 格式字串會與執行階段函式類似`printf`-樣式格式字串，但它可讓您插入以任意順序的參數。
 
-*引數*<br/>
+*args*<br/>
 引數清單的指標。
 
 ### <a name="remarks"></a>備註
@@ -882,7 +882,8 @@ CStringT Left(int nCount) const;
 
 ### <a name="return-value"></a>傳回值
 
-`CStringT` 物件，該物件中包含所指定字元範圍的複本。 傳回的 `CStringT` 物件可以是空的。
+
+  `CStringT` 物件，該物件中包含所指定字元範圍的複本。 傳回的 `CStringT` 物件可以是空的。
 
 ### <a name="remarks"></a>備註
 
@@ -996,7 +997,8 @@ CStringT Mid(int iFirst) const;
 
 ### <a name="return-value"></a>傳回值
 
-`CStringT` 物件，該物件中包含所指定字元範圍的複本。 請注意，傳回`CStringT`可能是空的物件。
+
+  `CStringT` 物件，該物件中包含所指定字元範圍的複本。 請注意，傳回`CStringT`可能是空的物件。
 
 ### <a name="remarks"></a>備註
 
@@ -1125,7 +1127,7 @@ A`CStringT`来串連到此字串。
 
 [!code-cpp[NVC_ATLMFC_Utilities#141](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_25.cpp)]
 
-##  <a name="operator_eq_eq"></a>  CStringT::operator = =
+##  <a name="operator_eq_eq"></a>  CStringT::operator ==
 
 判斷兩個字串是否以邏輯方式相同。
 
@@ -1167,7 +1169,7 @@ A`CStringT`進行比較。
 
 [!code-cpp[NVC_ATLMFC_Utilities#142](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_26.cpp)]
 
-##  <a name="operator_neq"></a>  CStringT::operator ！ =
+##  <a name="operator_neq"></a>  CStringT::operator !=
 
 判斷兩個字串是否以邏輯方式不相等。
 
@@ -1428,7 +1430,7 @@ int Replace(XCHAR chOld, XCHAR chNew);
 |_UNICODE|寬字元|
 |_MBCS|多位元組字元|
 |既不|單一位元組字元|
-|兩種模式|未定義|
+|兩者|未定義|
 
 ### <a name="example"></a>範例
 
@@ -1474,7 +1476,8 @@ CStringT Right(int nCount) const;
 
 ### <a name="return-value"></a>傳回值
 
-`CStringT` 物件，該物件中包含所指定字元範圍的複本。 請注意，傳回`CStringT`物件可以是空白。
+
+  `CStringT` 物件，該物件中包含所指定字元範圍的複本。 請注意，傳回`CStringT`物件可以是空白。
 
 ### <a name="remarks"></a>備註
 
@@ -1733,4 +1736,3 @@ CStringT& TrimRight();
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 [CSimpleStringT 類別](../../atl-mfc-shared/reference/csimplestringt-class.md)
-

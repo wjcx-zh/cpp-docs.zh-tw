@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: 64ab7da9-47c1-4c4a-9cd7-4cc37e7f3f57
-ms.openlocfilehash: 824e9b1b71615bd3fc488052d5e713dee2e0d015
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3854ffe205aa8e6cb9cfb800b9aa1473094fffaf
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524805"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743399"
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>自訂字串管理員實作 （進階方法）
 
@@ -32,4 +32,3 @@ ms.locfileid: "50524805"
 ## <a name="see-also"></a>另請參閱
 
 [使用 CStringT 管理記憶體](../atl-mfc-shared/memory-management-with-cstringt.md)
-

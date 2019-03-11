@@ -1,28 +1,28 @@
 ---
-title: 如何：建立使用者控制項並裝載 MDI 檢視
+title: HOW TO：建立使用者控制項並裝載 MDI 檢視
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], Windows Forms Controls
 - Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
-ms.openlocfilehash: c2705ef1938684d8521316436fccaae367629584
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d535fce47be5504f6f521cda1267344206287da
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509118"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738768"
 ---
-# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>如何：建立使用者控制項並裝載 MDI 檢視
+# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>HOW TO：建立使用者控制項並裝載 MDI 檢視
 
 下列步驟示範如何建立.NET Framework 使用者控制項，撰寫使用者控制項中的控制項類別程式庫 （具體而言，是 Windows 控制項程式庫專案），然後將專案編譯成組件。 控制項可以使用從 MFC 應用程式，會使用衍生自[CView 類別](../mfc/reference/cview-class.md)並[CWinFormsView 類別](../mfc/reference/cwinformsview-class.md)。
 
-如需如何建立 Windows Forms 使用者控制項和撰寫控制項類別程式庫的詳細資訊，請參閱[如何： 撰寫使用者控制項](/dotnet/framework/winforms/controls/how-to-author-composite-controls)。
+如需如何建立 Windows Forms 使用者控制項和撰寫控制項類別程式庫的詳細資訊，請參閱[How to:撰寫使用者控制項](/dotnet/framework/winforms/controls/how-to-author-composite-controls)。
 
 > [!NOTE]
 >  在某些情況下，Windows Forms 控制項，例如協力廠商的方格控制項，可能無法正常運作時裝載於 MFC 應用程式。 建議的解決方法是將 Windows Form 使用者控制項放在 MFC 應用程式，並將協力廠商的方格控制項，在使用者控制項。
 
-此程序假設您建立名為 WindowsFormsControlLibrary1，中的程序的 Windows Form 控制項程式庫專案[如何： 在對話方塊中建立使用者控制項並裝載](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)。
+此程序假設您建立 Windows Form 控制項程式庫專案中的程序命名 WindowsFormsControlLibrary1， [How to:在對話方塊中建立使用者控制項並裝載](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)。
 
 ### <a name="to-create-the-mfc-host-application"></a>若要建立 MFC 主應用程式
 
@@ -30,7 +30,7 @@ ms.locfileid: "50509118"
 
    在上**檔案**功能表上，選取**新增**，然後按一下**專案**。 在  **Visual c + +** 資料夾中，選取**MFC 應用程式**。
 
-   在**名稱**方塊中，輸入`MFC02`並將變更**解決方案**設為**新增至方案**。 按一下 [確定 **Deploying Office Solutions**]。
+   在**名稱**方塊中，輸入`MFC02`並將變更**解決方案**設為**新增至方案**。 按一下 [確定] 。
 
    在  **MFC 應用程式精靈**，接受所有預設值，然後按一下 **完成**。 這會建立多個的文件介面的 MFC 應用程式。
 

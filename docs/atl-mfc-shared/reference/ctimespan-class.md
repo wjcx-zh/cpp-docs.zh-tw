@@ -23,12 +23,12 @@ helpviewer_keywords:
 - shared classes, CTimeSpan
 - time, elapsed
 ms.assetid: ee1e42f6-1839-477a-8435-fb26ad475140
-ms.openlocfilehash: 6ab22b9a093a1aa9c8ae0249c036ea2bf89065f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c80260c1f57e49a34b4e9f3331f4d0d69ab30ce
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641868"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752320"
 ---
 # <a name="ctimespan-class"></a>CTimeSpan 類別
 
@@ -67,9 +67,9 @@ class CTimeSpan
 
 |||
 |-|-|
-|[運算子 +-](#operator_add_-)|加入和減去`CTimeSpan`物件。|
-|[operator + = =](#operator_add_eq_-_eq)|加入和減去`CTimeSpan`物件並從這個`CTimeSpan`。|
-|[運算子 = = < 等。](#ctimespan_comparison_operators)|比較兩個相對時間值。|
+|[operator + -](#operator_add_-)|加入和減去`CTimeSpan`物件。|
+|[operator += -=](#operator_add_eq_-_eq)|加入和減去`CTimeSpan`物件並從這個`CTimeSpan`。|
+|[operator == < etc.](#ctimespan_comparison_operators)|比較兩個相對時間值。|
 
 ## <a name="remarks"></a>備註
 
@@ -104,7 +104,7 @@ bool operator>=(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*<br/>
+*span*<br/>
 要比較的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -178,7 +178,7 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>參數
 
-*pFormat*， *pszFormat*<br/>
+*pFormat*, *pszFormat*<br/>
 格式化字串類似於`printf`格式化字串。 格式化程式碼，加上百分比 (`%`) 登入，會取代對應`CTimeSpan`元件。 格式化字串中的其他字元會複製到傳回的字串不變。 值和格式化的程式碼的意義`Format`如下所示：
 
 - **%D**總天數，在此 `CTimeSpan`
@@ -334,7 +334,7 @@ LONGLONG GetTotalSeconds() const throw();
 
 範例，請參閱[GetTotalHours](#gettotalhours)。
 
-##  <a name="operator_add_-"></a>  CTimeSpan::operator +、-
+##  <a name="operator_add_-"></a>  CTimeSpan::operator +, -
 
 加入和減去`CTimeSpan`物件。
 
@@ -345,7 +345,7 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*<br/>
+*span*<br/>
 要加入至值`CTimeSpan`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -360,7 +360,7 @@ A`CTimeSpan`物件，表示作業的結果。
 
 [!code-cpp[NVC_ATLMFC_Utilities#167](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_7.cpp)]
 
-##  <a name="operator_add_eq_-_eq"></a>  CTimeSpan::operator + =、 =
+##  <a name="operator_add_eq_-_eq"></a>  CTimeSpan::operator +=, -=
 
 加入和減去`CTimeSpan`物件並從這個`CTimeSpan`。
 
@@ -371,7 +371,7 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>參數
 
-*範圍*<br/>
+*span*<br/>
 要加入至值`CTimeSpan`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -416,4 +416,3 @@ CArchive& Serialize64(CArchive& ar);
 [time、_time32、_time64](../../c-runtime-library/reference/time-time32-time64.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

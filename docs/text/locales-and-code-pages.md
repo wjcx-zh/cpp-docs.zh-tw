@@ -15,16 +15,16 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-ms.openlocfilehash: 0015e0a7a81abbd3472a8c845a9b8c0d8caf4618
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0cfc7f192b65738984feb1933ea720fdf18fc6d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610532"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750711"
 ---
 # <a name="locales-and-code-pages"></a>地區設定和字碼頁
 
-地區設定 ID，反映的本機慣例和語言特定的地理區域。 一種指定語言可以在一個以上的國家/地區使用，例如巴西和葡萄牙都說葡萄牙語。 反過來說，一個國家/地區可能有一種以上的官方語言。 例如，加拿大會有兩種語言： 英文和法文。 因此，加拿大會有兩個不同的地區設定： 加拿大英文和加拿大法文。 有些與地區設定相關的類別含有日期格式和貨幣值的顯示格式。
+地區設定 ID，反映的本機慣例和語言特定的地理區域。 一種指定語言可以在一個以上的國家/地區使用，例如巴西和葡萄牙都說葡萄牙語。 反過來說，一個國家/地區可能有一種以上的官方語言。 例如，加拿大會有兩種語言：英文與法文。 因此，加拿大會有兩個不同的地區設定：加拿大英文和加拿大法文。 有些與地區設定相關的類別含有日期格式和貨幣值的顯示格式。
 
 語言決定文字和日期格式的轉換，而國家/地區決定當地慣例。 每個語言都有唯一的對應，由 字碼頁，其中包含英文字母 （例如標點符號和數字） 以外的字元。 字碼頁是字元集，以及與語言相關。 因此，[地區設定](../c-runtime-library/locale.md)是語言、 國家/地區和字碼頁的唯一組合。 將地區設定和程式碼 頁面設定可以在執行階段變更，藉由呼叫[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)函式。
 

@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 PInvoke 封送處理函式指標
+title: HOW TO：封送處理函式指標使用 PInvoke
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - platform invoke [C++], callbacks and delegates
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-ms.openlocfilehash: 2f12c86b7e32955622a4a2c598d01057e303a329
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031bda0f93d6a95aa3c774553aefca0647d0518c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435603"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742877"
 ---
-# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>如何：使用 PInvoke 封送處理函式指標
+# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>HOW TO：封送處理函式指標使用 PInvoke
 
 本主題說明如何在受管理的委派時與相互操作 unmanaged 函式使用.NET Framework P/Invoke 功能可用來取代函式指標。 不過，Visual c + + 程式設計師都建議改為使用 c + + Interop 功能 （如果可能），因為 P/Invoke 提供極少的編譯時期錯誤，報告，不是類型安全，而且可能會非常繁瑣，來實作。 如果未受管理的 API 會封裝成 DLL，而且沒有可用的原始程式碼，P/Invoke 就會是唯一的選項。 否則，請參閱下列主題：
 

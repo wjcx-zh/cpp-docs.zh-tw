@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: eac5d13e-cbb4-4e82-b01e-f5f2dbcb962a
-ms.openlocfilehash: 4e3ffcdcd034fea81734aaeb87e4c33d81647f66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c30c08217a09f600f8801bec9f50c4341e983a6b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537809"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752346"
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>自訂字串管理員實作 （基本方法）
 
@@ -19,11 +19,11 @@ ms.locfileid: "50537809"
 
 - [CWin32Heap](../atl/reference/cwin32heap-class.md)包裝 Win32 堆積處理，請使用[HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc)， [HeapFree](/windows/desktop/api/heapapi/nf-heapapi-heapfree)，和[HeapRealloc](/windows/desktop/api/heapapi/nf-heapapi-heaprealloc)
 
-- [CLocalHeap](../atl/reference/clocalheap-class.md)包裝 Win32 Api: [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc)， [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree)，和[LocalRealloc](/windows/desktop/api/winbase/nf-winbase-localrealloc)
+- [CLocalHeap](../atl/reference/clocalheap-class.md)包裝 Win32 Api:[LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc)， [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree)，和[LocalRealloc](/windows/desktop/api/winbase/nf-winbase-localrealloc)
 
-- [CGlobalHeap](../atl/reference/cglobalheap-class.md)包裝 Win32 Api: [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc)， [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree)，和[GlobalRealloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc)。
+- [CGlobalHeap](../atl/reference/cglobalheap-class.md)包裝 Win32 Api:[GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc)， [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree)，以及[GlobalRealloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc)。
 
-- [CComHeap](../atl/reference/ccomheap-class.md)包裝 COM 工作配置器 Api: [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)， [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)，和[CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc)
+- [CComHeap](../atl/reference/ccomheap-class.md)包裝 COM 工作配置器 Api:[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)， [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)，和[CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc)
 
 最有用的類別是以字串的記憶體管理、`CWin32Heap`因為它可讓您建立多個獨立的堆積。 例如，如果您想要只針對字串使用不同堆積，您可以執行下列項目：
 
@@ -36,4 +36,3 @@ ms.locfileid: "50537809"
 ## <a name="see-also"></a>另請參閱
 
 [使用 CStringT 管理記憶體](../atl-mfc-shared/memory-management-with-cstringt.md)
-

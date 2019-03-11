@@ -2,12 +2,12 @@
 title: Ref 類別與結構 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-ms.openlocfilehash: a817529f24f1df3a3258b4596cd4d14533356a02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9ac14762dba580967fbecd245a81a4ff4356b64
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456221"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741838"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Ref 類別與結構 (C++/CX)
 

@@ -1,5 +1,5 @@
 ---
-title: 如何：將 char * 字串轉換為 System::Byte 陣列
+title: 'HOW TO：將轉換的 char * 字串 system:: byte 陣列'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - character arrays, converting to System::Byte arrays
 - examples [C++], arrays
 ms.assetid: de9bc4eb-773c-4796-a496-9b90ca986503
-ms.openlocfilehash: 26ef83533e7da1d272c31a54165626f513a5508a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ef84e31ee3db703857e3b28ef70dda8d5d01229
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594723"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741720"
 ---
-# <a name="how-to-convert-char--string-to-systembyte-array"></a>如何： 將 char 轉換\*system:: byte 陣列的字串
+# <a name="how-to-convert-char--string-to-systembyte-array"></a>HOW TO：轉換 char \* system:: byte 陣列的字串
 
 要轉換的最有效方式`char *`字串<xref:System.Byte>陣列是使用<xref:System.Runtime.InteropServices.Marshal>類別。
 

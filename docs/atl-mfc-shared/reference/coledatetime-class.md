@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: a49b886bcf9c25642b1f7b8e843be11baf2d2d00
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 6644e4e10916068a91e48611338d79bbb9d0d75b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894103"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740525"
 ---
 # <a name="coledatetime-class"></a>COleDateTime 類別
 
@@ -108,7 +108,7 @@ class COleDateTime
 
 `DATE`實作類型為浮點值。 天被測量從 1899 年 12 月 30 日，在午夜。 下表顯示一些日期和其相關聯的值：
 
-|日期|值|
+|Date|值|
 |----------|-----------|
 |1899 年 12 月 29日日午夜|-1.0|
 |1899 年 12 月 29日日 6 點|-1.25|
@@ -1231,4 +1231,3 @@ int SetTime(
 [CTimeSpan 類別](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

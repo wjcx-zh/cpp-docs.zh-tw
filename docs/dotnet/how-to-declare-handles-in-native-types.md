@@ -1,5 +1,5 @@
 ---
-title: 如何：以原生類型宣告控制代碼
+title: HOW TO：以原生類型宣告控制代碼
 ms.custom: get-started-article
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-ms.openlocfilehash: 4b5cd212589be04f5f9f3a5dd6d4496a8f5add2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5d6d31be9f3c10e1a56639ccf20663ce59d7941
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464918"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745981"
 ---
-# <a name="how-to-declare-handles-in-native-types"></a>如何：以原生類型宣告控制代碼
+# <a name="how-to-declare-handles-in-native-types"></a>HOW TO：以原生類型宣告控制代碼
 
 您無法宣告原生類型中的控制代碼型別。 vcclr.h 提供型別安全包裝函式範本`gcroot`來參考 c + + 堆積的 CLR 物件。 此範本可讓您在原生類型中嵌入虛擬控制代碼，並將它視為基礎型別。 在大部分情況下，您可以使用`gcroot`物件做為內嵌的型別，而不需要任何轉換。 不過，透過[針對每個，在](../dotnet/for-each-in.md)，您必須使用`static_cast`擷取基礎受管理的參考。
 

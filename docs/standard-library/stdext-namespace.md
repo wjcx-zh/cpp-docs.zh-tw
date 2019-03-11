@@ -7,12 +7,12 @@ helpviewer_keywords:
 - _DEFINE_DEPRECATED_HASH_CLASSES symbol
 - stdext namespace
 ms.assetid: 3e94fc89-0584-424f-bc09-081b73379545
-ms.openlocfilehash: aeba486393e6b45481108f967f3de8eb73a0adea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d40f3f7a99db72784cc9a32a9c37064228597d34
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468480"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750529"
 ---
 # <a name="stdext-namespace"></a>stdext 命名空間
 
@@ -31,4 +31,3 @@ ms.locfileid: "50468480"
 ## <a name="see-also"></a>另請參閱
 
 [C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)
-

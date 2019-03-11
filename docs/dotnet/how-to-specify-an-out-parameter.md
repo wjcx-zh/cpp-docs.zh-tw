@@ -1,19 +1,19 @@
 ---
-title: 如何：指定 out 參數
+title: HOW TO：指定 out 參數
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - function parameters
 - out parameters
 ms.assetid: 02862448-603c-4e9d-a5c5-b45fe38446e3
-ms.openlocfilehash: 8c3499a2916eda7ab96f7958df190c803206741e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 901257b92aaa5e13e6e79d612ca590b734e15881
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437065"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747481"
 ---
-# <a name="how-to-specify-an-out-parameter"></a>如何：指定 out 參數
+# <a name="how-to-specify-an-out-parameter"></a>HOW TO：指定 out 參數
 
 此範例示範如何指定函式參數是輸出參數以及如何從 C# 程式呼叫該函式。
 

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: 4f4a5cbd2f1b6c06b339950307dbb333fc6392ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02b5e15a816ec057bfb0a8201b7591e628c3ea2c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658181"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745293"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView 類別
 
@@ -36,7 +36,7 @@ template <typename T, typename E>
 `VectorView` 物件中包含的元素類型。
 
 *E*<br/>
-指定二元述詞，以測試是否與 `T`型別的值相等。 預設值是 `std::equal_to<T>`。
+指定二元述詞，以測試是否與 `T`型別的值相等。 預設值為 `std::equal_to<T>`。
 
 ### <a name="remarks"></a>備註
 
@@ -110,7 +110,8 @@ T GetAt(
 
 ### <a name="return-value"></a>傳回值
 
-`index` 參數指定的項目。 VectorView 範本參數所指定的項目類型*T*。
+
+  `index` 參數指定的項目。 VectorView 範本參數所指定的項目類型*T*。
 
 ## <a name="getmany"></a>  Vectorview:: Getmany 方法
 
@@ -154,7 +155,7 @@ virtual bool IndexOf(
 
 ### <a name="parameters"></a>參數
 
-*值*<br/>
+*value*<br/>
 要尋找的項目。
 
 *index*<br/>
@@ -253,7 +254,7 @@ A [std:: initializer_list](../standard-library/initializer-list-class.md)其項�
 *size*<br/>
 VectorView 中的項目數。
 
-*值*<br/>
+*value*<br/>
 用來初始化目前 VectorView 中各個項目的值。
 
 *v*<br/>
@@ -271,7 +272,7 @@ A [std:: array](../standard-library/array-class-stl.md)用來初始化目前 Vec
 *first*<br/>
 用來初始化目前 VectorView 之物件序列中的第一個項目。 型別`first`藉由傳遞*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-*最後一個*<br/>
+*last*<br/>
 用來初始化目前 VectorView 之物件序列中的最後一個項目。 型別`last`藉由傳遞*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ## <a name="see-also"></a>另請參閱

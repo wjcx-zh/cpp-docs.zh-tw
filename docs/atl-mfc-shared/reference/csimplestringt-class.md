@@ -36,12 +36,12 @@ helpviewer_keywords:
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-ms.openlocfilehash: 93cb3ae0b2f358f64f0d6de26899d1b08f275b7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ec28ed5b2f5428cabcf7570c7ac53904e9a64f0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579279"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748225"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT 類別
 
@@ -79,7 +79,7 @@ class CSimpleStringT
 |名稱|描述|
 |----------|-----------------|
 |[CSimpleStringT::CSimpleStringT](#ctor)|建構`CSimpleStringT`以各種方式的物件。|
-|[CSimpleStringT:: ~ CSimpleStringT](#dtor)|解構函式。|
+|[CSimpleStringT::~CSimpleStringT](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -116,7 +116,7 @@ class CSimpleStringT
 |----------|-----------------|
 |[CSimpleStringT::operator PCXSTR](#operator_pcxstr)|直接存取儲存在字元`CSimpleStringT`為 C 樣式字串的物件。|
 |[CSimpleStringT::operator\[\]](#operator_at)|傳回指定位置處的字元 — 運算子替代`GetAt`。|
-|[CSimpleStringT::operator + =](#operator_add_eq)|串連至現有的字串結尾的新字串。|
+|[CSimpleStringT::operator +=](#operator_add_eq)|串連至現有的字串結尾的新字串。|
 |[CSimpleStringT::operator =](#operator_eq)|指派新值到`CSimpleStringT`物件。|
 
 ### <a name="remarks"></a>備註
@@ -322,7 +322,7 @@ void Empty() throw();
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 <<c0> [ 字串： CString 例外狀況清除](../cstring-exception-cleanup.md)。
+如需詳細資訊，請參閱[字串：CString 例外狀況清除](../cstring-exception-cleanup.md)。
 
 ### <a name="example"></a>範例
 
@@ -740,7 +740,7 @@ XCHAR operator[](int iChar) const;
 > [!NOTE]
 >  您可以使用註標 (**[]**) 來取得中的字元值的運算子`CSimpleStringT`，但您無法使用它來變更中的字元值`CSimpleStringT`。
 
-##  <a name="operator_add_eq"></a>  CSimpleStringT::operator + =
+##  <a name="operator_add_eq"></a>  CSimpleStringT::operator +=
 
 加入現有的字串結尾的新字串或字元。
 
@@ -1175,7 +1175,7 @@ void UnlockBuffer() throw();
 
 `CSimpleStringT`解構函式會自動呼叫`UnlockBuffer`以確保呼叫解構函式時，未鎖定緩衝區。 如需這個方法的範例，請參閱 < [LockBuffer](#lockbuffer)。
 
-##  <a name="dtor"></a>  CSimpleStringT:: ~ CSimpleStringT
+##  <a name="dtor"></a>  CSimpleStringT::~CSimpleStringT
 
 終結 `CSimpleStringT` 物件。
 

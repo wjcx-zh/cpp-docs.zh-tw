@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-ms.openlocfilehash: dcb194c72ca2a64317cddda8a1559e78edc0978f
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 62801cfc2386cf2aee7fd35a5e589d73b4f91918
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626665"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742029"
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>使用含有 _MBCS 程式碼的 TCHAR.H 資料類型
 
@@ -68,4 +68,4 @@ ms.locfileid: "53626665"
 
 ## <a name="see-also"></a>另請參閱
 
-[在 tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)
+[tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)

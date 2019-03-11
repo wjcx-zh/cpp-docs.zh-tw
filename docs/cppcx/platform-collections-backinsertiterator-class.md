@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: 33397ed7061f14d9aeb9c8b5c3d561865ad91cad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7478555b19bbe5c984fcbe531d2d8be1a0b865a9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638083"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739535"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator 類別
 
@@ -81,7 +81,8 @@ IVector\<T > 物件。
 
 ### <a name="remarks"></a>備註
 
-`BackInsertIterator` 在參數 `v` 所指定的物件的最後一個元素之後插入元素。
+
+  `BackInsertIterator` 在參數 `v` 所指定的物件的最後一個元素之後插入元素。
 
 ## <a name="operator-assign"></a>  Backinsertiterator:: Operator = 運算子
 

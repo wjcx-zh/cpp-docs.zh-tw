@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: cd1865320d56d71481cdaf7055f796bfab26eeab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e38865f1d43edac4fc895052f1ea1b5a54a34ab
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496369"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749252"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView 類別
 
@@ -54,16 +54,16 @@ MapView 是具象 c + + 實作[Windows::Foundation::Collections::IMapView \<K，
 
 |名稱|描述|
 |----------|-----------------|
-|[Mapview:: Mapview](#ctor)|初始化 MapView 類別的新執行個體。|
+|[MapView::MapView](#ctor)|初始化 MapView 類別的新執行個體。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[Mapview:: First](#first)|傳回迭代器，初始化為對應檢視中的第一個元素。|
-|[Mapview:: Haskey](#haskey)|判斷目前 MapView 是否包含指定的機碼。|
-|[Mapview:: Lookup](#lookup)|在目前 MapView 物件中擷取位於指定機碼的元素。|
-|[Mapview:: Size](#size)|傳回目前 MapView 物件中的項目數。|
+|[MapView::First](#first)|傳回迭代器，初始化為對應檢視中的第一個元素。|
+|[MapView::HasKey](#haskey)|判斷目前 MapView 是否包含指定的機碼。|
+|[MapView::Lookup](#lookup)|在目前 MapView 物件中擷取位於指定機碼的元素。|
+|[MapView::Size](#size)|傳回目前 MapView 物件中的項目數。|
 |[MapView::Split](#split)|將原始 MapView 物件分割為兩個 MapView 物件。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
@@ -93,7 +93,7 @@ virtual Windows::Foundation::Collections::IIterator<
 
 ### <a name="remarks"></a>備註
 
-若要保留 first （） 所傳回的迭代器的方便作法是將傳回的值指派給宣告的變數**自動**類型推斷關鍵字。 例如，`auto x = myMapView->First();`。
+若要保留 first （） 所傳回的迭代器的方便作法是將傳回的值指派給宣告的變數**自動**類型推斷關鍵字。 例如， `auto x = myMapView->First();` 。
 
 ## <a name="haskey"></a>  Mapview:: Haskey 方法
 
@@ -171,7 +171,7 @@ MapView(
 *first*<br/>
 用來初始化目前 MapView 的項目範圍中，第一個項目的輸入迭代器。
 
-*最後一個*<br/>
+*last*<br/>
 用來初始化目前 MapView 的項目範圍以外第一個項目的輸入迭代器。
 
 *il*<br/>

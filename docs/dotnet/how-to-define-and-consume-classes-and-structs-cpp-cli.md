@@ -1,18 +1,18 @@
 ---
-title: 如何：定義與使用類別和結構 (C++/CLI)
+title: HOW TO：定義和使用類別和結構 (C + + /cli CLI)
 ms.date: 09/12/2018
 helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 028e8622c034920e993444458c52536d2e3ec6de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c43234ca05c661d8f3d920b1129256a7550a5e2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436140"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751826"
 ---
-# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>如何：定義與使用類別和結構 (C++/CLI)
+# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>HOW TO：定義和使用類別和結構 (C + + /cli CLI)
 
 這篇文章示範如何定義和使用使用者定義的參考型別和實值型別，在 C + + /cli CLI。
 
@@ -455,7 +455,7 @@ CLR 型別，例如類別或結構，可以有可以用來初始化靜態資料�
 
 定義靜態建構函式為私用成員函式，因為它旨在只能由 CLR 呼叫。
 
-如需靜態建構函式的詳細資訊，請參閱[如何： 定義介面靜態建構函式 (C + + /cli CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) 。
+如需靜態建構函式的詳細資訊，請參閱[How to:定義介面靜態建構函式 (C + + /cli CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) 。
 
 ```cpp
 // compile with: /clr

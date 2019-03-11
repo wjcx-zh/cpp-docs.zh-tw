@@ -9,12 +9,12 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-ms.openlocfilehash: 97b0221a4ec73be41bb5ba052607dfb5ced233c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 285bfabbd5935df303a39ada11c388713ae24f34
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462034"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743255"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>從 Managed 程式碼呼叫原生函式
 
@@ -196,7 +196,7 @@ int main() {
 
 在本主題稍早所示的範例中，DllImport 的 CharSet 參數指定了解受管理的字串應該封送處理;在此情況下，它們應封送處理原生端的 ANSI 字串。
 
-您可以使用 MarshalAs 屬性指定原生函式個別引數封送處理的資訊。 有數種選擇來封送處理字串\*引數： BStr、 ANSIBStr、 TBStr、 LPStr、 LPWStr 和 LPTStr。 預設值為 LPStr。
+您可以使用 MarshalAs 屬性指定原生函式個別引數封送處理的資訊。 有數種選擇來封送處理字串\*引數：BStr、 ANSIBStr、 TBStr、 LPStr、 LPWStr 和 LPTStr。 預設值為 LPStr。
 
 在此範例中，字串會封送處理為雙位元組 Unicode 字元字串 LPWStr。 輸出是 Hello World 的第一個字母 ！ 因為封送處理字串的第二個位元組是 null，而且 puts 會將此視為字串結尾標記。
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms controls [C++], hosting as an MFC view
 - hosting Windows Forms control [C++]
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
-ms.openlocfilehash: c041ae941858184245879ced972c19e6e998b677
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c59f28739ab94210c16bd800a48997f3f2282df
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544556"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739793"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>將 Windows Form 使用者控制項裝載為 MFC 檢視
 
@@ -34,4 +34,4 @@ MFC Windows Form 檢視是 ActiveX 控制項，因為它們並沒有相同`hwnd`
 ## <a name="see-also"></a>另請參閱
 
 [在 MFC 中使用 Windows Forms 使用者控制項](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
-[操作說明：撰寫複合控制項](/dotnet/framework/winforms/controls/how-to-author-composite-controls)
+[如何：撰寫複合控制項](/dotnet/framework/winforms/controls/how-to-author-composite-controls)

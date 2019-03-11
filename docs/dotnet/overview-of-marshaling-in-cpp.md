@@ -10,18 +10,18 @@ helpviewer_keywords:
 - C++ Support Library, marshaling
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
-ms.openlocfilehash: 9b4bdcb8a6e691d8f9f0f0f0c2e7d852b4885ea6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e3b8f561ce6609eb2afedb527a16c4803f69c53
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486277"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746821"
 ---
 # <a name="overview-of-marshaling-in-c"></a>C++ 中封送處理的概觀
 
 在混合模式中，您有時必須封送處理原生和 managed 型別之間資料。 Visual Studio 2008 中引進*封送處理程式庫*為了封送處理，並將資料轉換的簡單方式。  封送處理程式庫包含一組函式和`marshal_context`執行封送處理的常見類型的類別。 在這些標頭中所定義的程式庫**msclr 包含**目錄，您的 Visual Studio 版本：
 
-|頁首|描述|
+|標頭|描述|
 |---------------|-----------------|
 |marshal.h|`marshal_context` 類別和內容免費封送處理函式|
 |marshal_atl.h| ATL 類型封送處理函式|
@@ -38,28 +38,28 @@ C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools
 
 |從型別|若要輸入|封送處理方法|包含檔案|
 |---------------|-------------|--------------------|------------------|
-|System:: string ^|const char \*|marshal_context|marshal.h|
-|const char \*|System:: string ^|marshal_as|marshal.h|
-|Char \*|System:: string ^|marshal_as|marshal.h|
-|System:: string ^|const wchar_t\*|marshal_context|marshal.h|
-|const wchar_t \*|System:: string ^|marshal_as|marshal.h|
-|wchar_t \*|System:: string ^|marshal_as|marshal.h|
+|System::String^|const char \*|marshal_context|marshal.h|
+|const char \*|System::String^|marshal_as|marshal.h|
+|Char \*|System::String^|marshal_as|marshal.h|
+|System::String^|const wchar_t\*|marshal_context|marshal.h|
+|const wchar_t \*|System::String^|marshal_as|marshal.h|
+|wchar_t \*|System::String^|marshal_as|marshal.h|
 |System::IntPtr|HANDLE|marshal_as|marshal_windows.h|
 |HANDLE|System::IntPtr|marshal_as|marshal_windows.h|
-|System:: string ^|BSTR|marshal_context|marshal_windows.h|
-|BSTR|System:: string ^|marshal_as|marshal.h|
-|System:: string ^|bstr_t|marshal_as|marshal_windows.h|
-|bstr_t|System:: string ^|marshal_as|marshal_windows.h|
-|System:: string ^|std:: string|marshal_as|marshal_cppstd.h|
-|std:: string|System:: string ^|marshal_as|marshal_cppstd.h|
-|System:: string ^|std:: wstring|marshal_as|marshal_cppstd.h|
-|std:: wstring|System:: string ^|marshal_as|marshal_cppstd.h|
-|System:: string ^|CStringT\<char >|marshal_as|marshal_atl.h|
-|CStringT\<char >|System:: string ^|marshal_as|marshal_atl.h|
-|System:: string ^|CStringT < wchar_t >|marshal_as|marshal_atl.h|
-|CStringT < wchar_t >|System:: string ^|marshal_as|marshal_atl.h|
-|System:: string ^|CComBSTR|marshal_as|marshal_atl.h|
-|CComBSTR|System:: string ^|marshal_as|marshal_atl.h|
+|System::String^|BSTR|marshal_context|marshal_windows.h|
+|BSTR|System::String^|marshal_as|marshal.h|
+|System::String^|bstr_t|marshal_as|marshal_windows.h|
+|bstr_t|System::String^|marshal_as|marshal_windows.h|
+|System::String^|std:: string|marshal_as|marshal_cppstd.h|
+|std:: string|System::String^|marshal_as|marshal_cppstd.h|
+|System::String^|std:: wstring|marshal_as|marshal_cppstd.h|
+|std:: wstring|System::String^|marshal_as|marshal_cppstd.h|
+|System::String^|CStringT\<char>|marshal_as|marshal_atl.h|
+|CStringT\<char>|System::String^|marshal_as|marshal_atl.h|
+|System::String^|CStringT<wchar_t>|marshal_as|marshal_atl.h|
+|CStringT<wchar_t>|System::String^|marshal_as|marshal_atl.h|
+|System::String^|CComBSTR|marshal_as|marshal_atl.h|
+|CComBSTR|System::String^|marshal_as|marshal_atl.h|
 
 只有在您封送處理為原生受管理的資料類型，並清除您要將它轉換成原生型別沒有自動的解構函式時，封送處理需要內容。 封送處理的內容會終結其解構函式中的已配置的原生資料類型。 因此，需要內容的轉換是有效的內容會被刪除時，才。 若要儲存任何封送處理的值，您必須將值複製到自己的變數。
 
@@ -70,7 +70,7 @@ C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools
 
 `#include "msclr\marshal_cppstd.h"`
 
-封送處理程式庫是可延伸，以便您可以新增您自己的封送處理類型。 如需有關擴充封送處理程式庫的詳細資訊，請參閱[如何： 擴充封送處理程式庫](../dotnet/how-to-extend-the-marshaling-library.md)。
+封送處理程式庫是可延伸，以便您可以新增您自己的封送處理類型。 如需有關擴充封送處理程式庫的詳細資訊，請參閱[How to:擴充封送處理程式庫](../dotnet/how-to-extend-the-marshaling-library.md)。
 
 在舊版中，您無法封送處理資料使用[平台叫用](/dotnet/framework/interop/consuming-unmanaged-dll-functions)。 如需詳細資訊`PInvoke`，請參閱 <<c2> [ 從 Managed 程式碼呼叫原生函數](../dotnet/calling-native-functions-from-managed-code.md)。
 

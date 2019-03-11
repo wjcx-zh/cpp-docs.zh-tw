@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: e0df3359a27a216692f0127ab7f17e1e1fce469a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d0de31a20e06d9b8ff3789cc7ae1928c9a7b6b7d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519850"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743074"
 ---
 # <a name="normaldistribution-class"></a>normal_distribution 類別
 
@@ -209,7 +209,7 @@ explicit normal_distribution(const param_type& parm);
 
 ### <a name="remarks"></a>備註
 
-**前置條件︰**`0.0 ≤ stddev`
+**前置條件︰**`0.0 < stddev`
 
 第一個建構函式會建構預存 `mean` 值具有 *mean* 值而預存 `stddev` 值具有 *stddev* 值的物件。
 
@@ -244,7 +244,7 @@ struct param_type {
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 ≤ stddev`
+**前置條件：**`0.0 < stddev`
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 

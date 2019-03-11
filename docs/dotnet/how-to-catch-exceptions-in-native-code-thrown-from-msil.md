@@ -1,19 +1,19 @@
 ---
-title: 如何：攔截 MSIL 擲回之機器碼的例外狀況
+title: HOW TO：從 MSIL 擲回的原生程式碼中攔截例外狀況
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions, catching
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: 73c9a9af66a6e292c76b96ec47a5853684e602f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: acb3ba1ab6d10decba10b899861007abfff03359
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635601"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748719"
 ---
-# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>如何：攔截 MSIL 擲回之機器碼的例外狀況
+# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>HOW TO：從 MSIL 擲回的原生程式碼中攔截例外狀況
 
 原生程式碼，您可以攔截從 MSIL 的原生 c + + 例外狀況。  您可以攔截與 CLR 例外狀況`__try`和`__except`。
 

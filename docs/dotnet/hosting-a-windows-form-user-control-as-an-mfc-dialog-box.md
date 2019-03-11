@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-ms.openlocfilehash: f6b7b7b3d1cb5ed9f3cd2b3655b45aaac8d8d195
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4c4ee8c8b4570b598ba20b3bd5e1cf4c706ee885
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524920"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740788"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>將 Windows Form 使用者控制項裝載成 MFC 對話方塊
 
@@ -35,7 +35,7 @@ MFC 提供樣板類別[CWinFormsDialog](../mfc/reference/cwinformsdialog-class.m
 
    在 **方案總管**，以滑鼠右鍵按一下**MFC03**專案節點，然後選擇**屬性**。 **屬性頁** 對話方塊隨即出現。
 
-   在 **屬性頁**對話方塊中，於**組態屬性**樹狀結構控制項中選取**一般**，然後在**專案預設值**區段中，將**Common Language Runtime 支援**要**Common Language Runtime 支援 (/ clr)**。 按一下 [確定 **Deploying Office Solutions**]。
+   在 **屬性頁**對話方塊中，於**組態屬性**樹狀結構控制項中選取**一般**，然後在**專案預設值**區段中，將**Common Language Runtime 支援**要**Common Language Runtime 支援 (/ clr)**。 按一下 [確定] 。
 
 1. 新增.NET 控制項的參考。
 

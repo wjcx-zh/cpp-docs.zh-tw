@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Unmanaged 記憶體中存放物件參考
+title: HOW TO：在 Unmanaged 記憶體中存放物件參考
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - references, to objects in native functions
 - gcroot keyword [C++], object reference in native function
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
-ms.openlocfilehash: 50afaa16f2e0976cf6a90bef09e652b4dc54582a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d8dc341d1fe2c61eba098abec9258a2c6dade79
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478074"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747978"
 ---
-# <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>如何：在 Unmanaged 記憶體中存放物件參考
+# <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>HOW TO：在 Unmanaged 記憶體中存放物件參考
 
 您可以使用 gcroot.h，包裝<xref:System.Runtime.InteropServices.GCHandle>，以在 unmanaged 記憶體中保留 CLR 物件參考。 或者，您可以使用`GCHandle`直接。
 

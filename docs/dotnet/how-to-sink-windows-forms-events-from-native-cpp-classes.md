@@ -1,5 +1,5 @@
 ---
-title: 如何：從原生 C++ 類別接收 Windows Form 事件
+title: HOW TO：從原生 c + + 類別接收 Windows Forms 事件
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - event handling, .NET/native interop
 - event handling, Windows Forms in C++
 ms.assetid: 6e30ddee-d058-4c8d-9956-2a43d86f19d5
-ms.openlocfilehash: 1bc601a4dbd7a51695b6964ab4d0ee47531c1b2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d02bcea4efce03c8fb11650d344468236737cfbd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555901"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738775"
 ---
-# <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>如何：從原生 C++ 類別接收 Windows Form 事件
+# <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>HOW TO：從原生 c + + 類別接收 Windows Forms 事件
 
 您可以啟用原生 c + + 類別，以從受管理的 Windows Form 控制項或其他使用 MFC 巨集對應格式的形式引發的事件接收回撥。 檢視和對話方塊中的接收事件是類似於在控制項相同的工作。
 
@@ -25,7 +25,7 @@ ms.locfileid: "50555901"
 
 - 建立委派對應 using [BEGIN_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map)， [END_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map)，並[EVENT_DELEGATE_ENTRY](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry)。
 
-此範例會繼續在您執行的工作[如何： 使用 Windows Form 執行 DDX/DDV 資料繫](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)。
+此範例會繼續在您執行的工作[How to:執行 DDX/DDV 資料繫結 Windows form](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)。
 
 現在，您將建立 MFC 控制項的關聯 (`m_MyControl`) 使用稱為 「 受管理的事件處理常式委派`OnClick`managed<xref:System.Windows.Forms.Control.Click>事件。
 

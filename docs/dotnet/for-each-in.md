@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: 61ddf4f8dd4042f7be0b892b4fe239caa932a85e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5ee72e557c62e3db2eeb5dac4811133719183f6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532728"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746300"
 ---
 # <a name="for-each-in"></a>for each, in
 
@@ -37,15 +37,16 @@ ms.locfileid: "50532728"
 *identifier*<br/>
 表示集合項目的反覆項目變數。  當`identifier`已[追蹤參考運算子](../windows/tracking-reference-operator-cpp-component-extensions.md)，您可以修改項目。
 
-*運算式*<br/>
+*expression*<br/>
 陣列運算式或集合。 集合項目必須如此，編譯器才能將其轉換為 `identifier` 類型。
 
-*陳述式*<br/>
+*statements*<br/>
 要執行的一個或多個陳述式。
 
 ### <a name="remarks"></a>備註
 
-`for each` 陳述式可用來逐一查看集合。 您可以修改集合中的項目，不過，您無法加入或刪除項目。
+
+  `for each` 陳述式可用來逐一查看集合。 您可以修改集合中的項目，不過，您無法加入或刪除項目。
 
 *陳述式*會針對陣列或集合中的每個項目執行。 在完成集合中所有項目的反覆項目之後，程式控制權會轉移到 `for each` 區塊之後的下一個陳述式。
 
@@ -55,11 +56,11 @@ ms.locfileid: "50532728"
 
 - [使用 for each 反覆查看 C++ 標準程式庫集合](../dotnet/iterating-over-stl-collection-by-using-for-each.md)
 
-- [如何：使用 for each 反覆查看陣列](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
+- [如何：每個逐一查看陣列](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
 
-- [如何：使用 for each 反覆查看泛型集合](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
+- [如何：每個反覆查看泛型集合與](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
 
-- [如何：使用 for each 反覆查看使用者定義的集合](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
+- [如何：每個反覆查看使用者定義的集合，與](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
 
 ## <a name="windows-runtime"></a>Windows 執行階段
 
@@ -111,7 +112,7 @@ Testing
 
 CLR 語法是相同**所有執行階段**語法中，除非，如下所示。
 
-*運算式*<br/>
+*expression*<br/>
 Managed 陣列運算式或集合。 集合項目必須如此，編譯器可以將它從轉換<xref:System.Object>要*識別碼*型別。
 
 *運算式*評估為類型可實作<xref:System.Collections.IEnumerable>， <xref:System.Collections.Generic.IEnumerable%601>，或定義的類型`GetEnumerator`方法會傳回型別實作<xref:System.Collections.IEnumerator>宣告所有中所定義的方法或`IEnumerator`.

@@ -1,19 +1,19 @@
 ---
-title: 如何： 執行 DDX-DDV 資料繫結 Windows form
+title: HOW TO：執行 DDX-DDV 資料繫結搭配 Windows Form
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
-ms.openlocfilehash: 793d6728c7726028c02b885784f122792d84dd2e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 558c763fd18cd1569ff23435bf6156b3117f117d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456429"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740945"
 ---
-# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>如何：使用 Windows Form 執行 DDX/DDV 資料繫結
+# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>HOW TO：執行 DDX/DDV 資料繫結搭配 Windows Form
 
 [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)呼叫[CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol)建立控制項，比對資源的控制項 id。 如果您使用`DDX_ManagedControl`for`CWinFormsControl`控制項 （在精靈產生的程式碼），您不應該呼叫`CreateManagedControl`明確針對相同的控制項。
 
@@ -27,7 +27,7 @@ ms.locfileid: "50456429"
 
 控制項時，會建立[CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)呼叫`CMyDlg::DoDataExchange`第一次，因此任何程式碼，會參考`m_UserControl`必須緊跟在後`DDX_ManagedControl`呼叫。
 
-您可以在您建立的 MFC01 應用程式中實作此程式碼[如何： 在對話方塊中建立使用者控制項並裝載](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)。
+您可以在您建立的 MFC01 應用程式中實作此程式碼[How to:在對話方塊中建立使用者控制項並裝載](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)。
 
 下列程式碼置於 CMFC01Dlg 的宣告：
 

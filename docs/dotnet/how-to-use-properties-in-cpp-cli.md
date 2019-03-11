@@ -1,18 +1,18 @@
 ---
-title: 如何：在 C++/CLI 中使用屬性
+title: HOW TO：使用屬性在 C + + /cli CLI
 ms.date: 07/21/2017
 helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: 546c729245fb0c941f07e9222b71670278c44fde
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f29bf419ca19ce1bbe45e36adb08d7f4e5629f5a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617486"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739289"
 ---
-# <a name="how-to-use-properties-in-ccli"></a>如何：在 C++/CLI 中使用屬性
+# <a name="how-to-use-properties-in-ccli"></a>HOW TO：使用屬性在 C + + /cli CLI
 
 本文說明如何使用屬性在 C + + /cli CLI。
 
@@ -88,7 +88,7 @@ int main() {
 
 如果您使用預設索引屬性，您可以存取的資料結構，只是藉由參考類別名稱，但如果您使用使用者定義的索引的屬性，您必須指定要存取的資料結構的屬性名稱。
 
-如需如何使用索引子以 C# 撰寫的資訊，請參閱[如何： 使用 C# 索引子 (C + + /cli CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)。
+如需如何使用索引子中撰寫C#，請參閱[如何：使用C#索引子 (C + + /cli CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)。
 
 此程式碼範例示範如何使用預設和使用者定義索引的屬性：
 

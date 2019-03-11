@@ -5,12 +5,12 @@ helpviewer_keywords:
 - CString objects, exceptions
 - exception handling, cleanup code
 ms.assetid: 28b9ce70-be63-4a0d-92a8-44bbfbc95e83
-ms.openlocfilehash: f1950553e3bf3a43f029478e00b177f5cbfe121f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d131ce8ebe5158d7f3a567580064068742b63707
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492543"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746223"
 ---
 # <a name="cstring-exception-cleanup"></a>CString 例外狀況清除
 
@@ -22,4 +22,3 @@ ms.locfileid: "50492543"
 
 [字串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [例外狀況處理](../mfc/exception-handling-in-mfc.md)
-

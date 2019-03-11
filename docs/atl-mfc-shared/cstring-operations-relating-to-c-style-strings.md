@@ -15,12 +15,12 @@ helpviewer_keywords:
 - strings [C++], class CString
 - casting CString objects
 ms.assetid: 5048de8a-5298-4891-b8a0-c554b5a3ac1b
-ms.openlocfilehash: f68f021d16de7ad701ce20c3be59ed6958aa6893
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eee23296d9aac40849dacf58c3b3d9bdf583d1df
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528392"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743295"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>與 C 樣式字串相關的 CString
 
@@ -50,7 +50,8 @@ char myString[256];
 strcpy(myString, (LPCTSTR)aCString);
 ```
 
-您可以使用 `CString` 方法，例如 `SetAt`，來修改字串物件中的個別字元。 不過，LPCTSTR 指標是暫時的若要進行任何變更時變為無效`CString`。 `CString` 也可能超出範圍而自動遭刪除。 我們建議您取得的全新 LPCTSTR 指標`CString`物件每次您使用其中一個。
+您可以使用 `CString` 方法，例如 `SetAt`，來修改字串物件中的個別字元。 不過，LPCTSTR 指標是暫時的若要進行任何變更時變為無效`CString`。 
+  `CString` 也可能超出範圍而自動遭刪除。 我們建議您取得的全新 LPCTSTR 指標`CString`物件每次您使用其中一個。
 
 有時候您可能需要一份 `CString` 資料以便直接修改。 請使用更安全的函式 `strcpy_s` (或 Unicode/MBCS 可攜式 `_tcscpy_s`) 將 `CString` 物件複製到個別的緩衝區。 在這裡，字元可以安全地修改，如下列範例所示。
 

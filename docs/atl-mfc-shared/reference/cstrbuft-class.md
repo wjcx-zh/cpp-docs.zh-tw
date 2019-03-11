@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CStrBufT class
 - shared classes, CStrBufT
 ms.assetid: 6b50fa8f-87e8-4ed4-a229-157ce128710f
-ms.openlocfilehash: e33bea159d2915b86fc77381f69dc2a745af68f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81c3b429089eab3ba95c178e3fc7cf2bf55783a2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492817"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747446"
 ---
 # <a name="cstrbuft-class"></a>CStrBufT 類別
 
@@ -228,4 +228,3 @@ typedef CSimpleStringT<TCharType> StringType;
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

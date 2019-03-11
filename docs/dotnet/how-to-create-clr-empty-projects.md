@@ -1,18 +1,18 @@
 ---
-title: 如何：建立 CLR 空專案
+title: HOW TO：建立 CLR 空專案
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR empty projects
 - CLR empty projects, creating
 ms.assetid: edb4574f-fea7-426d-9b5c-fa4ecad2befb
-ms.openlocfilehash: 0acfa073d0aa11dec63ad26f1fac4ec206cda6c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3779887a91b69848d767c15af4a53ff2e87b760c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612130"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740488"
 ---
-# <a name="how-to-create-clr-empty-projects"></a>如何：建立 CLR 空專案
+# <a name="how-to-create-clr-empty-projects"></a>HOW TO：建立 CLR 空專案
 
 若要建立 CLR 空專案時，使用**CLR 空專案**範本，可從**新的專案** 對話方塊。
 
@@ -32,7 +32,7 @@ ms.locfileid: "50612130"
     > [!NOTE]
     >  您也可以指定其他專案和方案的設定，從**新的專案** 對話方塊中，但這些設定並非必要項。
 
-1. 按一下 [確定 **Deploying Office Solutions**]。
+1. 按一下 [確定] 。
 
 ## <a name="see-also"></a>另請參閱
 

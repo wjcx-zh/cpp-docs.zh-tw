@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC
 - ATL
 ms.assetid: 4d973f56-8730-4e0b-9522-b5f43bc4548d
-ms.openlocfilehash: b014245caa1302999b2c111f0a3e2c74d4818369
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1107a82cc4bb66e35620cb8c4d6c4cd711241f3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593514"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750581"
 ---
 # <a name="atlmfc-concepts"></a>ATL/MFC 概念
 
@@ -24,4 +24,3 @@ ms.locfileid: "50593514"
 ## <a name="see-also"></a>另請參閱
 
 [ATL/MFC 共用類別](../atl-mfc-shared/atl-mfc-shared-classes.md)
-

@@ -1,19 +1,19 @@
 ---
-title: 如何：新增命令傳送至 Windows Form 控制項
+title: HOW TO：將命令路由傳送至 Windows Forms 控制項
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - command routing [C++], adding to Windows Forms controls
 - Windows Forms controls [C++], command routing
 ms.assetid: bf138ece-b463-442a-b0a0-de7063a760c0
-ms.openlocfilehash: b3f93574e007fdb1b7d4009d85c573223091adf9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f633cf744314833409a3ffeacf8c850429e099c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447108"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750294"
 ---
-# <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>如何：新增命令傳送至 Windows Form 控制項
+# <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>HOW TO：將命令路由傳送至 Windows Forms 控制項
 
 [CWinFormsView](../mfc/reference/cwinformsview-class.md)路由命令和更新命令 UI 訊息傳送至使用者控制項，以允許它處理 MFC 命令 （例如，框架功能表項目和工具列按鈕）。
 
@@ -21,11 +21,11 @@ ms.locfileid: "50447108"
 
 `CWinFormsView` 處理數個常見的 MFC 檢視告知轉寄給受管理的使用者控制項。 這些通知會包含[OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate)， [OnUpdate](../mfc/reference/iview-interface.md#onupdate)並[OnActivateView](../mfc/reference/iview-interface.md#onactivateview)方法。
 
-本主題假設您先前已完成[如何： 建立使用者控制項並裝載在對話方塊中](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)並[如何： 建立使用者控制項和主應用程式 MDI 檢視](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。
+本主題假設您先前已完成[How to:在對話方塊中建立使用者控制項並裝載](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)和[How to:建立使用者控制項並裝載 MDI 檢視](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。
 
 ### <a name="to-create-the-mfc-host-application"></a>若要建立 MFC 主應用程式
 
-1. 開啟您在中建立的 Windows Form 控制項程式庫[如何： 在對話方塊中建立使用者控制項並裝載](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)。
+1. 開啟您在中建立的 Windows Form 控制項程式庫[How to:在對話方塊中建立使用者控制項並裝載](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)。
 
 1. 將參考加入 mfcmifc80.dll 的參考，您可以以滑鼠右鍵按一下專案節點，在這麼做**方案總管**，並選取**新增**，**參考**，然後瀏覽至Microsoft Visual Studio 10.0\VC\atlmfc\lib。
 
@@ -41,7 +41,7 @@ ms.locfileid: "50447108"
     partial class UserControl1
     ```
 
-   為此值：
+   轉換為：
 
     ```
     partial class UserControl1 : System.Windows.Forms.UserControl, ICommandTarget
@@ -70,7 +70,7 @@ ms.locfileid: "50447108"
     }
     ```
 
-1. 開啟您建立的 MFC 應用程式[如何： 建立使用者控制項和主應用程式 MDI 檢視](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。
+1. 開啟您建立的 MFC 應用程式[How to:建立使用者控制項並裝載 MDI 檢視](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。
 
 1. 加入功能表選項將會叫用`singleMenuHandler`。
 

@@ -1,19 +1,19 @@
 ---
-title: 如何：包裝原生類別以便讓 C# 使用
+title: HOW TO：包裝原生類別以便讓使用C#
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - native code [C++], Visual C# and
 - classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-ms.openlocfilehash: dc61c9749492f2f0dbe0c6b60abc2a9030cab4d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e58530577fdcc87f4ca168b6976a848cba29b372
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588093"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751631"
 ---
-# <a name="how-to-wrap-native-class-for-use-by-c"></a>如何：包裝原生類別以便讓 C# 使用
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>HOW TO：包裝原生類別以便讓使用C#
 
 此範例示範如何包裝原生 c + + 類別，因此它可供 C# 中，或其他.NET 語言撰寫的程式碼。
 

@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 C++ Interop 封送處理回呼和委派
+title: HOW TO：封送處理回呼和委派使用 c + + Interop
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - marshaling [C++], callbacks and delegates
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
-ms.openlocfilehash: b72b99798a2c719f1ba919478132c7133fd71ca1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3814ffbcd23168a9727b1b1d73e2c825639a9c5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615718"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739226"
 ---
-# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>如何：使用 C++ Interop 封送處理回呼和委派
+# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>HOW TO：封送處理回呼和委派使用 c + + Interop
 
 本主題示範回呼的封送處理，並使用 Visual c + + 中的 managed 和 unmanaged 程式碼之間會委派 （回呼的受管理的版本）。
 

@@ -1,19 +1,19 @@
 ---
-title: 如何：以原生類型存放實值類型的參考
+title: HOW TO：保存參考實值型別的原生型別
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - value type reference in native type
 - reference to value type in native type
 ms.assetid: 1eabf8be-7d4f-4339-9027-48d5c4244483
-ms.openlocfilehash: 1219dbac5ba78229554aeb29cf9422e835ea8343
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b1dfdc5a519bf51f16b7afbc25d49dc38b8f076
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470440"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749005"
 ---
-# <a name="how-to-hold-reference-to-value-type-in-native-type"></a>如何：以原生類型存放實值類型的參考
+# <a name="how-to-hold-reference-to-value-type-in-native-type"></a>HOW TO：保存參考實值型別的原生型別
 
 使用`gcroot`上要在原生類型存放實值類型的參考的 boxed 型別。
 

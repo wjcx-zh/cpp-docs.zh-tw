@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-ms.openlocfilehash: 9350d94fdff615056fca193d654b2bb001d78d72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86a535bc106e17b276dc5f42a59773aa0de8c361
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471197"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749267"
 ---
 # <a name="platformagile-class"></a>Platform::Agile 類別
 
@@ -135,7 +135,7 @@ T^ Get() const;
 
 目前 Agile 物件所代表的物件控制代碼。
 
-傳回值的類型實際上是不公開的內部類型。 保留傳回值的便利方式是將它指派給宣告的變數**自動**類型推斷關鍵字。 例如，`auto x = myAgileTvariable->Get();`。
+傳回值的類型實際上是不公開的內部類型。 保留傳回值的便利方式是將它指派給宣告的變數**自動**類型推斷關鍵字。 例如， `auto x = myAgileTvariable->Get();` 。
 
 ## <a name="getaddressof"></a>  Agile:: getaddressof 方法
 
@@ -154,7 +154,8 @@ T^* GetAddressOf() throw();
 
 ### <a name="return-value"></a>傳回值
 
-`T` 類型物件的控制代碼位址。
+
+  `T` 類型物件的控制代碼位址。
 
 ### <a name="remarks"></a>備註
 
@@ -239,7 +240,8 @@ typename 樣板指定的類型。
 
 ### <a name="return-value"></a>傳回值
 
-`T` 類型物件的控制代碼
+
+  `T` 類型物件的控制代碼
 
 ### <a name="remarks"></a>備註
 

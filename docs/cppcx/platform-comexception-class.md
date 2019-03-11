@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: 6ba387b8d3be0e3f91a844bb7633bedfdb7ee9d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a74184a8cbc4126988da2ba0be61d9f5b2bb71c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607801"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745207"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException 類別
 

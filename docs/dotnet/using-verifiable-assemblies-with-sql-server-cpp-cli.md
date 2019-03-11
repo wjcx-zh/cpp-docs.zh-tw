@@ -4,12 +4,12 @@ ms.date: 10/17/2018
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-ms.openlocfilehash: a977aa81a598e1698dfbc1c5679b85378b7ba6fc
-ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
+ms.openlocfilehash: 27dec67cc0932a784cdd041ba346bb8c635b280d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389925"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747692"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>使用可驗證的組件搭配 SQL Server (C++/CLI)
 
@@ -19,9 +19,9 @@ ms.locfileid: "52389925"
 
 SQL Server transact-sql (T-SQL) 可讓您可驗證的組件安裝到 SQL Server 提供延伸模組。 SQL Server 權限集合指定的安全性內容，含有下列層級的安全性：
 
-- 不受限制的模式： 自行承擔風險; 來執行程式碼程式碼可能沒有可驗證的型別安全。
+- 不受限制的模式：執行程式碼自行承擔風險;程式碼可能沒有可驗證的型別安全。
 
-- 安全模式： 執行可驗證的型別安全程式碼。使用 /clr: safe 編譯。
+- 安全模式：執行可驗證的型別安全程式碼。使用 /clr: safe 編譯。
 
 > [!IMPORTANT]
 > 已被取代的 visual Studio 2015 和 Visual Studio 2017 不支援 **/clr: pure**並 **/clr: safe**建立可驗證的專案。 如果您需要可驗證程式碼，我們建議您將轉譯成 C# 程式碼。

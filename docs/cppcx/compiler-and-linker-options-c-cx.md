@@ -2,12 +2,12 @@
 title: 編譯器和連結器選項 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-ms.openlocfilehash: 2165d802e6ff4bd530acac7c1ba6185c732a6499
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc1964c57d6700995bb283c245e4c63c8e9e313b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577280"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750906"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>編譯器和連結器選項 (C++/CX)
 
@@ -31,7 +31,7 @@ ms.locfileid: "50577280"
 |選項|描述|
 |------------|-----------------|
 |/APPCONTAINER[:NO]|將可執行檔標記為可在 appcontainer 中執行 (僅限)。|
-|/ WINMD [: {無&AMP;#124;僅限}]|發出 .winmd 檔案和相關聯的二進位檔。 這個選項必須傳遞至連結器，才能發出 .winmd。<br /><br /> **NO**- 不發出 .winmd 檔案，但發出二進位檔案。<br /><br /> **ONLY**- 發出 .winmd 檔案，但不發出二進位檔案。|
+|/WINMD[:{NO&#124;ONLY}]|發出 .winmd 檔案和相關聯的二進位檔。 這個選項必須傳遞至連結器，才能發出 .winmd。<br /><br /> **NO**- 不發出 .winmd 檔案，但發出二進位檔案。<br /><br /> **ONLY**- 發出 .winmd 檔案，但不發出二進位檔案。|
 |/WINMDFILE:*檔案名稱*|要發出的 .winmd 檔案名稱，而不是預設 .winmd 檔案名稱。 如果命令列上指定多個檔案名稱，則會使用最後一個名稱。|
 |/WINMDDELAYSIGN[:NO]|部分簽署 .winmd 檔案，並將公開金鑰放在二進位檔中。<br /><br /> **NO**- (預設值) 不簽署 .winmd 檔案。<br /><br /> 除非同時指定 /WINMDKEYFILE 或 /WINMDKEYCONTAINER，否則 /WINMDDELAYSIGN 沒有作用。|
 |/WINMDKEYCONTAINER:*name*|指定用於簽署組件的金鑰容器。 *name* 參數對應至用於簽署中繼資料檔的金鑰容器。|

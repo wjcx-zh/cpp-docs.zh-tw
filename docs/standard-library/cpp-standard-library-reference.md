@@ -7,12 +7,12 @@ helpviewer_keywords:
 - template libraries
 - libraries, Standard C++
 ms.assetid: a37d3ba3-58af-47c7-9ee2-441ccd7b77ee
-ms.openlocfilehash: b6886f87aefdf57706a1850595986b779c1f2357
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea8bae08def17093a2e663bb21dfe617ae851651
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575941"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752294"
 ---
 # <a name="c-standard-library-reference"></a>C++ 標準程式庫參考
 
@@ -30,4 +30,3 @@ C++ 程式可以透過 C++ 標準程式庫的這個合格實作呼叫大量函�
 
 [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
 提供 C++ 標準程式庫標頭檔之參考主題的說明連結與程式碼範例。
-

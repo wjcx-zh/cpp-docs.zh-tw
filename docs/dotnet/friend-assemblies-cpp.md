@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: 8aa0b47c1de520693f43794df3ee10fea131c963
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c09e0c29aacbf655652446caf90ab21d92103e8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652617"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748201"
 ---
 # <a name="friend-assemblies-c"></a>Friend 組件 (C++)
 
@@ -157,15 +157,15 @@ public:
 
 請注意，該元件必須指定其公開金鑰。 建議您依序在命令提示字元執行下列命令，以建立金鑰組，並取得公開金鑰：
 
-**sn-d friend_assemblies.snk**
+**sn -d friend_assemblies.snk**
 
-**sn-k friend_assemblies.snk**
+**sn -k friend_assemblies.snk**
 
-**sn-i friend_assemblies.snk friend_assemblies.snk**
+**sn -i friend_assemblies.snk friend_assemblies.snk**
 
-**sn-pc friend_assemblies.snk key.publickey**
+**sn -pc friend_assemblies.snk key.publickey**
 
-**sn-tp key.publickey**
+**sn -tp key.publickey**
 
 下一個程式碼範例會存取在強式名稱元件中的私用類型。
 

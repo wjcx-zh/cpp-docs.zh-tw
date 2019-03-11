@@ -1,19 +1,19 @@
 ---
-title: 如何：取得位元組陣列的指標
+title: HOW TO：取得位元組陣列的指標
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - pointers, to Byte array
 - Byte arrays
 ms.assetid: aea18073-3341-47f4-9f0e-04e03327037e
-ms.openlocfilehash: ad17dd0049f83fd753af0f9d7a565f28c6681a59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28feb039cf7b91bbf12d94b1abebe0e5b9501d7f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638890"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738870"
 ---
-# <a name="how-to-obtain-a-pointer-to-byte-array"></a>如何：取得位元組陣列的指標
+# <a name="how-to-obtain-a-pointer-to-byte-array"></a>HOW TO：取得位元組陣列的指標
 
 您可以取得區塊的指標陣列中<xref:System.Byte>所採用的第一個元素的位址，並將它指派給指標的陣列。
 

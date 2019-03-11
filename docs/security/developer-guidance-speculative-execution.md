@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: 94e55f08e4ff427aef0c93bf74c711a6fd935d0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20e6d45c088fe92fa736539e485d6807802b368a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631013"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750542"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>理論式執行端通道的 c + + 開發人員指引
 
@@ -310,7 +310,7 @@ A*投機屏障*用手動方式插入由開發人員若要避免繼續進行非�
 
 |架構|投機屏障 CVE 2017-5753 的內建函式|內建的 CVE-2018年-3639 投機屏障|
 |----------------|----------------|----------------|
-|x86 x64|_mm_lfence()|_mm_lfence()|
+|x86/x64|_mm_lfence()|_mm_lfence()|
 |ARM|目前無法使用|__dsb(0)|
 |ARM64|目前無法使用|__dsb(0)|
 

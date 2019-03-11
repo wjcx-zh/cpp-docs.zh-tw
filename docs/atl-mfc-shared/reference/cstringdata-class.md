@@ -19,12 +19,12 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-ms.openlocfilehash: 24d1321c66fb6cebbd2e86da3e85fdb8e1a3d33d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5977d26cade89f2e70453d5184323958e99e54c4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589512"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748511"
 ---
 # <a name="cstringdata-class"></a>CStringData 類別
 
@@ -46,9 +46,9 @@ struct CStringData
 |[data](#data)|擷取字元資料的字串物件。|
 |[IsLocked](#islocked)|決定是否鎖定相關聯的 string 物件的緩衝區。|
 |[IsShared](#isshared)|決定是否相關聯的 string 物件的緩衝區目前的共用。|
-|[鎖定](#lock)|鎖定相關聯的 string 物件的緩衝區。|
+|[Lock](#lock)|鎖定相關聯的 string 物件的緩衝區。|
 |[發行](#release)|釋放指定的字串物件。|
-|[解除鎖定](#unlock)|解除鎖定相關聯的 string 物件的緩衝區。|
+|[Unlock](#unlock)|解除鎖定相關聯的 string 物件的緩衝區。|
 
 ### <a name="data-members"></a>資料成員
 
@@ -253,4 +253,3 @@ void Unlock() throw();
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - platform invoke [C++], marshaling in C++
 - data marshaling [C++], platform invoke
 ms.assetid: 18e5218c-6916-48a1-a127-f66e22ef15fc
-ms.openlocfilehash: 8ac9dac3ea90062b632358ade2cd99e9c67e446f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee9d77920f04f7eba5112c66a906b02b7fc4a658
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588704"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740533"
 ---
 # <a name="using-explicit-pinvoke-in-c-dllimport-attribute"></a>在 C++ 中使用明確的 PInvoke (DllImport 屬性)
 
@@ -27,7 +27,7 @@ PInvoke 的運作方式是使用<xref:System.Runtime.InteropServices.DllImportAt
 
 - [從 Managed 程式碼呼叫原生函式](../dotnet/calling-native-functions-from-managed-code.md)
 
-- [如何：使用 PInvoke 從 Managed 程式碼呼叫原生 DLL](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)
+- [如何：使用 PInvoke 從受控程式碼呼叫原生 DLL](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)
 
 - [如何：使用 PInvoke 封送處理字串](../dotnet/how-to-marshal-strings-using-pinvoke.md)
 

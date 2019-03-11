@@ -1,18 +1,18 @@
 ---
-title: 如何：擴充封送處理程式庫
+title: HOW TO：擴充封送處理程式庫
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: 697a246012544e6be1189b6cc40d6185e5ec26d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f289539807b1e9499cef51427d3f6a494545cc60
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569842"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750359"
 ---
-# <a name="how-to-extend-the-marshaling-library"></a>如何：擴充封送處理程式庫
+# <a name="how-to-extend-the-marshaling-library"></a>HOW TO：擴充封送處理程式庫
 
 本主題說明如何擴充封送處理程式庫，以提供更多資料型別之間的轉換。 使用者可以擴充程式庫目前不支援任何資料轉換的封送處理程式庫。
 

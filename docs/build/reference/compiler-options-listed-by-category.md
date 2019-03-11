@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 63b621bf99a1aeada10706badfe19cde417d7233
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 128b477a2c4252c841990e2a2462029abe5a3bbb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676496"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746965"
 ---
 # <a name="compiler-options-listed-by-category"></a>依分類排列的編譯器選項
 
@@ -118,9 +118,9 @@ ms.locfileid: "56676496"
 |[/vms](vmm-vms-vmv-general-purpose-representation.md)|宣告單一繼承。|
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|宣告虛擬繼承。|
 |[/Z7](z7-zi-zi-debug-information-format.md)|產生 C 7.0 相容的偵錯資訊。|
-|[/Za](za-ze-disable-language-extensions.md)|停用語言擴充功能。|
+|[/Za](za-ze-disable-language-extensions.md)|C89 語言擴充功能會停用。|
 |[/Zc](zc-conformance.md)|指定 [/Ze](za-ze-disable-language-extensions.md)下的標準行為。|
-|[/Ze](za-ze-disable-language-extensions.md)|已取代。 啟用語言擴充功能。|
+|[/Ze](za-ze-disable-language-extensions.md)|已取代。 啟用 C89 語言擴充功能。|
 |[/Zf](zf.md)|在平行建置中產生時間改善 PDB。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|將偵錯資訊包括在與「編輯後繼續」相容的程式資料庫中。 (僅限 x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|產生完整偵錯資訊。|

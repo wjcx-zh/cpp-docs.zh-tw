@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 PInvoke 封送處理字串
+title: HOW TO：封送處理字串使用 PInvoke
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-ms.openlocfilehash: 86ce065da5c214c0da803ad53d19eaec3de5efb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f316e33f1711ea0053fb68c0af7e89f90b793e05
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598116"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739241"
 ---
-# <a name="how-to-marshal-strings-using-pinvoke"></a>如何：使用 PInvoke 封送處理字串
+# <a name="how-to-marshal-strings-using-pinvoke"></a>HOW TO：封送處理字串使用 PInvoke
 
 本主題說明如何在原生函式會接受 C 樣式字串可使用的 CLR 字串呼叫輸入使用.NET Framework 平台叫用支援的 system:: string。 Visual c + + 程式設計人員會建議改為使用 c + + Interop 功能 （如果可能），因為 P/Invoke 提供極少的編譯時期錯誤，報告，不是類型安全，而且可能會非常繁瑣的實作。 如果未受管理的 API 會封裝為 DLL，而且沒有可用的原始程式碼，P/Invoke 是唯一的選項，但否則看到[使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。
 

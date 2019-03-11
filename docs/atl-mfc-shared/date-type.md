@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, date and time
 - hour values representation
 ms.assetid: 695853ed-b614-4575-b793-b8c287372038
-ms.openlocfilehash: b8460d50a0c6cbd4b213e45c62d8d6cadae68544
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd63b400cad6efc3b3899c17a3bf835596b4008c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548183"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750386"
 ---
 # <a name="date-type"></a>日期類型
 
@@ -62,10 +62,9 @@ ms.locfileid: "50548183"
 > [!CAUTION]
 >  請注意，因為上午 6:00 一律由分數值 0.25 不論代表日期的整數是正數 （之後 1899 年 12 月 30 日) 或負數 （之前 1899 年 12 月 30 日)，簡單的浮動點比較會錯誤地排序代表早於 12/30/1899 做為一天上午 6:00 的任何日期*稍後*比代表上午 7:00 該同一天的日期。
 
-日期相關的問題的詳細資訊和`COleDateTime`可以找到類型[COleDateTime 類別](../atl-mfc-shared/reference/coledatetime-class.md)和[日期和時間： Automation 支援](../atl-mfc-shared/date-and-time-automation-support.md)。
+在日期相關的問題的詳細資訊和`COleDateTime`可以找到類型[COleDateTime 類別](../atl-mfc-shared/reference/coledatetime-class.md)和[日期和時間：自動化支援](../atl-mfc-shared/date-and-time-automation-support.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [日期和時間](../atl-mfc-shared/date-and-time.md)<br/>
 [COleDateTime 類別](../atl-mfc-shared/reference/coledatetime-class.md)
-

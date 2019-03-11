@@ -9,16 +9,16 @@ helpviewer_keywords:
 - MBCS [C++], programming
 - multibyte characters [C++]
 ms.assetid: d8ad36b8-917f-474e-8adb-69462adecd17
-ms.openlocfilehash: 70669f67b78ee4ea4f8073b78d2b9589e56a6356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4d063538339f55fa326163a400b9a7bf2c8bdfe
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552616"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751905"
 ---
 # <a name="mbcs-programming-tips"></a>MBCS 程式設計提示
 
-在新的開發，您應該為終端使用者可能看到的所有字串使用 Unicode 字元編碼。 MBCS 是舊版的技術，已由 Unicode 取代。 本節為必須維護使用 MBCS 且不適合轉換為 Unicode 之現有程式的開發人員提供提示。 建議也適用於 MFC 應用程式和撰寫不以 MFC 應用程式。 主題包括：
+在新的開發，您應該為使用者可能看到的所有字串使用 Unicode 字元編碼。 MBCS 是舊版的技術，已由 Unicode 取代。 本節為必須維護使用 MBCS 且不適合轉換為 Unicode 之現有程式的開發人員提供提示。 建議也適用於 MFC 應用程式和撰寫不以 MFC 應用程式。 主題包括：
 
 - [一般 MBCS 程式設計的建議](../text/general-mbcs-programming-advice.md)
 

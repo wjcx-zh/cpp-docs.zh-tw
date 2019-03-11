@@ -2,12 +2,12 @@
 title: 事件 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: 68b9e70b13f0996c43c24e6670c4d0a052c194cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e7e8616831e66a7f59ed849fc92ef2553aadb5b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579123"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745089"
 ---
 # <a name="events-ccx"></a>事件 (C++/CX)
 

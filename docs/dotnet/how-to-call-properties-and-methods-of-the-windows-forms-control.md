@@ -1,5 +1,5 @@
 ---
-title: 如何：呼叫 Windows Form 控制項的屬性和方法
+title: HOW TO：呼叫控制項屬性和方法的 Windows Form
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - calling properties
 - Windows Forms controls [C++], properties
 ms.assetid: 6e647d8a-fdaa-4aa1-b3fe-04f15cff8eb3
-ms.openlocfilehash: 809fa428172dffb5f53e7339e04882b451c8562f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61b565839b3f3c24670819fdcf2dde558e3461ac
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561482"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743775"
 ---
-# <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>如何：呼叫 Windows Form 控制項的屬性和方法
+# <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>HOW TO：呼叫控制項屬性和方法的 Windows Form
 
 因為[CWinFormsView::GetControl](../mfc/reference/cwinformsview-class.md#getcontrol)傳回的指標<xref:System.Windows.Forms.Control?displayProperty=fullName>，並不是指標`WindowsControlLibrary1::UserControl1`，建議您新增的使用者控制項類型的成員，並將它在初始化[IView::OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate). 現在您可以呼叫方法和屬性使用`m_ViewControl`。
 
-本主題假設您先前已完成[如何： 建立使用者控制項並裝載在對話方塊中](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)並[如何： 建立使用者控制項和主應用程式 MDI 檢視](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。
+本主題假設您先前已完成[How to:在對話方塊中建立使用者控制項並裝載](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)和[How to:建立使用者控制項並裝載 MDI 檢視](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。
 
 ### <a name="to-create-the-mfc-host-application"></a>若要建立 MFC 主應用程式
 
-1. 開啟您建立的 MFC 應用程式[如何： 建立使用者控制項和主應用程式 MDI 檢視](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。
+1. 開啟您建立的 MFC 應用程式[How to:建立使用者控制項並裝載 MDI 檢視](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。
 
 1. 將下行新增到公用的覆寫區段`CMFC02View`類別在 MFC02View.h 中的宣告。
 

@@ -2,12 +2,12 @@
 title: Microsoft 專有的修飾詞
 ms.date: 08/16/2018
 ms.assetid: 22c7178c-f854-47fa-9de6-07d23fda58e1
-ms.openlocfilehash: be126e90ca6f77ef43b49ccd5b83c0f307f7f307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 119e4d06d0235bbf637eefe8754668d3e90b0c52
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646026"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749720"
 ---
 # <a name="microsoft-specific-modifiers"></a>Microsoft 專有的修飾詞
 

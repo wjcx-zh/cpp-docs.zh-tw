@@ -17,12 +17,12 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: fe3b5e3a887e4a440c3570750c569ec6c71ea611
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61f3fdd434a1b746c024b1a98d1d71f04df7e5b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595952"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746913"
 ---
 # <a name="managed-types-ccli"></a>Managed 類型 (C++/CLI)
 
@@ -125,7 +125,7 @@ S.i = 11
 
 不過，如果您新增另一個成員，才能`struct S`nested_value_types.cpp，在 (例如`double d;`) 並重新編譯元件，不需要重新編譯用戶端，結果就是未處理的例外狀況 (型別的<xref:System.IO.FileLoadException?displayProperty=fullName>)。
 
-## <a name="test_equality"></a> 如何： 測試是否相等
+## <a name="test_equality"></a>如何：測試相等
 
 在下列範例中，使用 Managed Extensions for c + + 的相等測試為基礎的控制代碼的參考。
 
@@ -150,7 +150,7 @@ IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,
                                                                string)
 ```
 
-## <a name="diagnose_fix"></a> 如何： 診斷和修正組件相容性問題
+## <a name="diagnose_fix"></a>如何：診斷和修正組件相容性問題
 
 本主題說明在編譯時期參考的組件的版本不符合在執行階段，參考的組件的版本時，會發生什麼情況，以及如何避免發生問題。
 

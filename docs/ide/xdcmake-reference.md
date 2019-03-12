@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - xdcmake program
 ms.assetid: 14e65747-d000-4343-854b-8393bf01cbac
-ms.openlocfilehash: 85c7ef351e6e91bfd51a7f1e87ecec4186986505
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: adbb06b5100850aac0cfd191a530d5c98b380738
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450267"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740441"
 ---
 # <a name="xdcmake-reference"></a>XDCMake 參考
 
@@ -40,7 +40,7 @@ xdcmake `input_filename options`
 *options*<br/>
 下列零或多項：
 
-|選項|描述|
+|選項|說明|
 |------------|-----------------|
 |/?、/help|顯示 xdcmake.exe 的說明。|
 |/assembly:*filename*|讓您指定 .xml 檔案中 \<assembly> 標籤的值。  根據預設，\<assembly> 標籤的值與 .xml 檔案的檔名相同。|
@@ -53,6 +53,6 @@ xdcmake `input_filename options`
 
 如需將文件註解新增至原始程式碼檔的詳細資訊，請參閱[建議使用的文件註解標籤](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [XML 文件](../ide/xml-documentation-visual-cpp.md)

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - LC_NUMERIC constant
 - LC_COLLATE constant
 ms.assetid: 868f1493-fe5d-4722-acab-bfcd374a063a
-ms.openlocfilehash: 841ff5a31bfe9ee5513f76970d3b834f698b92cc
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 434500dab0c68aa9475f54e930b91da0b1cd2fc9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220188"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749798"
 ---
 # <a name="locale-categories"></a>地區設定類別
 
@@ -53,7 +53,7 @@ ms.locfileid: "54220188"
 
 請參閱 [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 以取得範例。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [localeconv](../c-runtime-library/reference/localeconv.md)<br/>
 [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>

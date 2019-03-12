@@ -47,12 +47,12 @@ helpviewer_keywords:
 - ecount annotation
 - bcount annotation
 ms.assetid: 81893638-010c-41a0-9cb3-666fe360f3e0
-ms.openlocfilehash: b25a3a7d0c44667bcceb2d04cf6024aa6173daed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a50e37b41c6e90428bed5ae113d2d9f064e042d0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617135"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741749"
 ---
 # <a name="sal-annotations"></a>SAL 註釋
 
@@ -60,6 +60,6 @@ ms.locfileid: "50617135"
 
 如需在 Visual Studio 中使用 SAL 註釋的詳細資訊，請參閱[使用 SAL 註釋減少 C/C++ 程式碼缺失](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

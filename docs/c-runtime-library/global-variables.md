@@ -8,18 +8,18 @@ helpviewer_keywords:
 - variables, global
 - global variables, Microsoft run-time library
 ms.assetid: 01d1551c-2f0c-4f72-935c-6442caccf84f
-ms.openlocfilehash: b66d77285cb601b30a89a313fa21b815f42775b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dfa78bd2c7aae7cc6059443066cbef58512755ce
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522534"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744362"
 ---
 # <a name="global-variables"></a>全域變數
 
 Microsoft C 執行階段程式庫會提供下列全域變數或巨集。 這些全域變數或巨集中，有一部分已被更安全的功能版本所取代，建議您使用這些版本而不使用全域變數。
 
-|變數|描述|
+|變數|說明|
 |--------------|-----------------|
 |[__argc, \__argv, \__wargv](../c-runtime-library/argc-argv-wargv.md)|包含命令列引數。|
 |[_daylight、_dstbias、_timezone 和 _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)|已取代。 請改用 `_get_daylight`、`_get_dstbias`、`_get_timezone` 和 `_get_tzname`。<br /><br /> 針對當地時間進行調整；用於部分日期和時間函式。|
@@ -30,7 +30,7 @@ Microsoft C 執行階段程式庫會提供下列全域變數或巨集。 這些�
 |[_pctype、_pwctype、_wctype、_mbctype、_mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)|包含字元類別函式使用的資訊。|
 |[_pgmptr、_wpgmptr](../c-runtime-library/pgmptr-wpgmptr.md)|已取代。 請改用 `_get_pgmptr` 或 `_get_wpgmptr`。<br /><br /> 程式啟動時初始化為程式的完整或相對路徑、完整程式名稱或不帶副檔名的程式名稱，具體取決於如何叫用程式。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 執行階段程式庫參考](../c-runtime-library/c-run-time-library-reference.md)<br/>
 [全域常數](../c-runtime-library/global-constants.md)<br/>

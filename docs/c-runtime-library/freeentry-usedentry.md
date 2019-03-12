@@ -12,12 +12,12 @@ helpviewer_keywords:
 - FREEENTRY constant
 - USEDENTRY constant
 ms.assetid: 26f658e6-6846-4a4e-9984-262cfe392770
-ms.openlocfilehash: 3bf05807930373a905a5bf71cf4ebc1f119056a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8aa11173dcc76089a916d19fd319e0d317724ce
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513980"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751931"
 ---
 # <a name="freeentry-usedentry"></a>_FREEENTRY, _USEDENTRY
 
@@ -31,7 +31,7 @@ ms.locfileid: "50513980"
 
 這些常數代表由 `_heapwalk` 常式指派給 **_HEAPINFO** 結構 **_useflag** 元素的值。 這些代表堆積項目的狀態。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [_heapwalk](../c-runtime-library/reference/heapwalk.md)<br/>
 [全域常數](../c-runtime-library/global-constants.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - __wargv
 - __argc
 ms.assetid: 17001b0a-04ad-4762-b3a6-c54847f02d7c
-ms.openlocfilehash: de0c4783b30764350eea35007583c1481ab01024
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f428d81215193361a409473a411eb5c4d91fa997
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575314"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743305"
 ---
 # <a name="argc-argv-wargv"></a>__argc、__argv、__wargv
 
@@ -56,8 +56,8 @@ extern wchar_t ** __wargv;
 
 `__argc`、`__argv` 和 `__wargv` 是 Microsoft 擴充功能。 如需相容性資訊，請參閱 [相容性](../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [全域變數](../c-runtime-library/global-variables.md)<br/>
-[main：程式啟動](../cpp/main-program-startup.md)<br/>
+[主要：程式啟動](../cpp/main-program-startup.md)<br/>
 [使用 wmain 取代 main](../cpp/using-wmain-instead-of-main.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - searching [C++], CRT search functions
 - searching [C++]
 ms.assetid: 15e984f0-e155-46f5-8542-51c458792f54
-ms.openlocfilehash: 7bdef8712d729195a948f616b2bde07c6be975c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a58526f65be4951b57804c08359c349e78d622fc
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497068"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741766"
 ---
 # <a name="searching-and-sorting"></a>搜尋和排序
 
@@ -33,6 +33,6 @@ ms.locfileid: "50497068"
 |[qsort](../c-runtime-library/reference/qsort.md)|快速排序|
 |[qsort_s](../c-runtime-library/reference/qsort-s.md)|更安全的 **qsort** 版本|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

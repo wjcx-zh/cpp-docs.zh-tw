@@ -8,12 +8,12 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.OutputDocumentFile
 - VC.Project.VCXDCMakeTool.AdditionalDocumentFiles
 ms.assetid: 645912b5-197a-4c36-ba58-64df09444ca0
-ms.openlocfilehash: 3e97aa61715f0cda8e339a1aabc8e947170b2e90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 411bc96f00215ff9f90d8601387ab6bec5a7dc78
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594229"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740904"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>XML 文件產生器工具屬性頁
 
@@ -40,7 +40,7 @@ XML 文件產生器工具屬性頁會公開 xdcmake.exe 的功能。 當您的�
 
    如果您的專案相依於方案中的 .lib 專案，您可以將 .lib 專案中的 .xdc 檔案處理到目前專案中的 .xml 檔案。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [屬性頁](../ide/property-pages-visual-cpp.md)<br>
 [屬性頁](../ide/property-pages-visual-cpp.md)

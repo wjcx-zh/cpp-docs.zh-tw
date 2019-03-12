@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: 2c3722fe9da764a578c255e50120fa2770555665
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e511ef597e64a3782ce7a3ce650db065e9299cdd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553175"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744333"
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>建立和管理以 MSBuild 為基礎的 Visual C++ 專案
 
@@ -61,6 +61,6 @@ MSBuild 是 Visual C++ 的原生建置系統，通常也是最適合用於 UWP �
 [建置 C/C++ 程式](../build/building-c-cpp-programs.md)<br>
 提供描述如何從命令列或 Visual Studio 整合式開發環境建置程式等主題的連結。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Visual Studio SDK](https://msdn.microsoft.com/vstudio/extend)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - include files, required in run time
 - header files, required in run time
 ms.assetid: f64d0bf5-e2c3-4b42-97d0-443b3d901d9f
-ms.openlocfilehash: db3b05edf1496d92eaed5c7f07b9961cdde351c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06f7ced45f8def05219d8869708f555a78f73cd3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539408"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744531"
 ---
 # <a name="required-and-optional-header-files"></a>必要和選擇性標頭檔
 
@@ -26,6 +26,6 @@ ms.locfileid: "50539408"
 
 執行階段程式庫標頭檔會以 ANSI/ISO C 標準的建議樣式提供函式宣告。 編譯器會針對在和常式參考相關聯的函式宣告之後發生的任何常式參考執行類型檢查。 函式宣告對於傳回值的類型不是 `int` (預設值) 的常式格外重要。 對於在其宣告中沒有指定適當傳回值的常式，編譯器會將其傳回值視為 `int`，這可能會造成非預期的結果。 如需詳細資訊，請參閱[類型檢查](../c-runtime-library/type-checking-crt.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

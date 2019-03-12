@@ -9,12 +9,12 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: cb7d99077a082323a6662d29c0386cd1d416297c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bccbe435d926a75990a4ca35b98c9b352dd40e8b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665331"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740312"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>格式規格語法：printf 和 wprintf 函式
 
@@ -74,7 +74,7 @@ ms.locfileid: "50665331"
 |**p**|指標類型|顯示引數為十六進位數字的位址。|
 |**s**|String|當搭配 `printf` 函式使用時，會指定單一位元組或多位元組字元字串；當搭配 `wprintf` 函式使用時，會指定寬字元字串。 字元會顯示，直到第一個 null 字元或達到 *precision* 值為止。|
 |**S**|String|當搭配 `printf` 函式使用時，會指定寬字元字串；當搭配 `wprintf` 函式使用時，會指定單一位元組或多位元組字元字串。 字元會顯示，直到第一個 null 字元或達到 *precision* 值為止。|
-|**Z**|`ANSI_STRING` 或 `UNICODE_STRING` 結構|當 [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) 或 [UNICODE_STRING](https://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) 結構的位址作為引數傳遞時，顯示結構的 `Buffer` 欄位所指向之緩衝區中所包含的字串。 使用 **w** 的 *size* 修飾詞前置來指定 `UNICODE_STRING` 引數，例如 `%wZ`。 該結構的 `Length` 欄位必須設定為此字串的長度，以位元組為單位。 該結構的 `MaximumLength` 欄位必須設定為此緩衝區的長度，以位元組為單位。<br /><br /> 通常，**Z** 類型字元只在驅動程式偵錯函式中使用，該函式使用像是 `dbgPrint` 和 `kdPrint` 的轉換規格。|
+|**Z**|`ANSI_STRING` 或 `UNICODE_STRING` 結構|當 [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) 或 [UNICODE_STRING](/windows-hardware/drivers/ddi/content/wudfwdm/ns-wudfwdm-_unicode_string) 結構的位址作為引數傳遞時，顯示結構的 `Buffer` 欄位所指向之緩衝區中所包含的字串。 使用 **w** 的 *size* 修飾詞前置來指定 `UNICODE_STRING` 引數，例如 `%wZ`。 該結構的 `Length` 欄位必須設定為此字串的長度，以位元組為單位。 該結構的 `MaximumLength` 欄位必須設定為此緩衝區的長度，以位元組為單位。<br /><br /> 通常，**Z** 類型字元只在驅動程式偵錯函式中使用，該函式使用像是 `dbgPrint` 和 `kdPrint` 的轉換規格。|
 
 自 Visual Studio 2015 起，如果對應於浮點轉換規範 (**a**、**A**、**e**、**E**、**f**、**F**、**g**、**G**) 的引數是無限大、不確定或 NAN，則格式化輸出符合 C99 標準。 下表列出格式化輸出︰
 
@@ -121,7 +121,7 @@ ms.locfileid: "50665331"
 |**+**|如果輸出值是帶正負號的類型，則使用正負號 (+ 或 -) 作為其前置詞。|僅為帶負號 (-) 的值顯示符號。|
 |**0**|如果 *width* 前面加上 **0**，則會新增前置字元為零，直到達到最小寬度為止。 如果 **0** 和 **-** 同時出現，則會略過 **0**。 如果整數格式 (**i** **u** **x**、**X**、**o**、**d**) 指定為 **0**，且精確度規格也同時出現 (例如，`%04.d`) 則會略過 **0**。 如果為 **a** 或 **A** 浮點格式指定 **0**，則尾數前面會加上前置字元為零 (在 `0x` 或 `0X` 前置詞之後)。|無填補。|
 |**blank** (' ')|如果輸出值帶有正負號且為正值，則在該輸出值前面加上空白字元。 如果空白字元及 + 旗標同時出現，則會略過空白字元。|不會出現空白字元。|
-|**#**|與 **o** **x** 或 **X** 格式搭配使用時，**#**  旗標分別會使用 0、0 x 或 0X，作為任何非零輸出值的前置詞。|不會出現空白字元。|
+|**#**|與 **o****x** 或 **X** 格式搭配使用時，**#**  旗標分別會使用 0、0 x 或 0X，作為任何非零輸出值的前置詞。|不會出現空白字元。|
 ||與 **e**、**E**、**f**、**F**、**a** 或 **A** 格式搭配使用時，**#**  旗標會強制輸出值包含小數點。|小數點只有在後面有數字時才會顯示。|
 ||與 **g** 或 **G** 格式搭配使用時，**#** 旗標會強制輸出值包含小數點，並避免截斷行尾零。<br /><br /> 與 **c**、**d**、**i**、**u**或 **s** 搭配使用時會予以略過。|小數點只有在後面有數字時才會顯示。 行尾零會被截斷。|
 
@@ -203,7 +203,7 @@ ms.locfileid: "50665331"
 > [!NOTE]
 > **Microsoft 特定**：**I** (大寫 i)、**I32**、**I64** 及 **w** 引數大小修飾詞前置詞為 Microsoft 延伸模組，且與 ISO C 不相容。 **h** 前置詞與類型 `char` 的資料搭配使用時，以及 **l** (小寫 L) 前置詞與類型 `double` 的資料搭配使用時，這些前置詞都是 Microsoft 副檔名。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
 [printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>

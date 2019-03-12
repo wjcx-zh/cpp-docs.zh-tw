@@ -22,19 +22,19 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-ms.openlocfilehash: 3c4e4de7dc7161c033f07cfb02ef90ad5db559c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 173c1bbae3009ffb4ee10b7b32ec7751f47c56c8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492153"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749226"
 ---
 # <a name="setoutputformat"></a>_set_output_format
 
 自訂格式化 I/O 函式所使用的輸出格式。
 
 > [!IMPORTANT]
->  此函式已被取代。 自 Visual Studio 2015 起，此函式即無法在 CRT 中使用。
+>  此函式已過時。 自 Visual Studio 2015 起，此函式即無法在 CRT 中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -119,7 +119,7 @@ int main()
 1.211E-005  2.306E-112
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
 [_get_output_format](../c-runtime-library/get-output-format.md)

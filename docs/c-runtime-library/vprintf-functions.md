@@ -15,12 +15,12 @@ helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-ms.openlocfilehash: da4f2c8586085e57925d277c452d6ed28db467d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c45197c9008c2d0b6a0519d947ca75f55a7960fd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573234"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747842"
 ---
 # <a name="vprintf-functions"></a>vprintf 函式
 
@@ -83,7 +83,7 @@ ms.locfileid: "50573234"
 > [!IMPORTANT]
 >  確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。 若使用這些函式的安全版本 (不論是 **_s** 或 **_p** 尾碼)，使用者提供的格式字串可能觸發無效的參數例外狀況 (若使用者提供的字串包含無效的格式設定字元)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [資料流 I/O](../c-runtime-library/stream-i-o.md)<br/>
 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>

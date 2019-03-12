@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - commit-to-disk constants
 ms.assetid: 0b903b23-b4fa-431e-a937-51d95f695ecf
-ms.openlocfilehash: f4da66c913cd8a046257158e837e5bdb20ed71c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c02b18e5a4a731957a7c74cc45e6e181fe23fad8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581387"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750607"
 ---
 # <a name="commit-to-disk-constants"></a>認可到磁碟常數
 
@@ -48,7 +48,7 @@ ms.locfileid: "50581387"
 
 **結束 Microsoft 專屬**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [資料流 I/O](../c-runtime-library/stream-i-o.md)<br/>
 [_fdopen、wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)<br/>

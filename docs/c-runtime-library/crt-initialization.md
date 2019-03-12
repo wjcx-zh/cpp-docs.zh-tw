@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CRT initialization [C++]
 ms.assetid: e7979813-1856-4848-9639-f29c86b74ad7
-ms.openlocfilehash: 615c113082e2ef0dbfc40bafbfa040c06e628da5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 980d94b29d31d8eea910fbdb171a0ae8df1dccca
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656946"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750032"
 ---
 # <a name="crt-initialization"></a>CRT 初始化
 
@@ -93,6 +93,6 @@ CRT 會定義兩個指標：
 
 因此，基於全域初始設定式清單項目於載入映像後在記憶體中的排列方式，CRT 程式庫將能使用 `__xc_a` 和 `__xc_z` 來判斷全域初始設定式清單的開頭和結尾。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

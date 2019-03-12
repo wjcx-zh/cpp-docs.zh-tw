@@ -7,12 +7,12 @@ helpviewer_keywords:
 - functions [CRT], vs. macros
 - macros, vs. functions
 ms.assetid: 18a633d6-cf1c-470c-a649-fa7677473e2b
-ms.openlocfilehash: ab3ac2e59e61e15ae1f309ac26fe30d1557185c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 234fcd8a0439240bc7585414254c5687dcb8f21b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637693"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749304"
 ---
 # <a name="recommendations-for-choosing-between-functions-and-macros"></a>在函式和巨集之間選擇的建議
 
@@ -42,6 +42,6 @@ ms.locfileid: "50637693"
 
 - **類型檢查**：當您宣告函式時，編譯器可以檢查引數類型。 由於您無法宣告巨集，所以編譯器無法檢查巨集的引數類型，雖然它可以檢查傳遞至巨集的引數數目。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

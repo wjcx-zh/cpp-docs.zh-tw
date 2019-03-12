@@ -7,12 +7,12 @@ helpviewer_keywords:
 - <c> C++ XML tag
 - c C++ XML tag
 ms.assetid: 3b23fc0f-e10d-4dd0-b197-48a46cbddd9f
-ms.openlocfilehash: 1efb411537e07ae9a5c2e4a70b5fa3ac319d79c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5eb88be4cb5be8c4e970c285bad712093fdbb51
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431092"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742599"
 ---
 # <a name="ltcgt-visual-c"></a>&lt;c&gt; (Visual C++)
 
@@ -54,6 +54,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [XML 文件](../ide/xml-documentation-visual-cpp.md)

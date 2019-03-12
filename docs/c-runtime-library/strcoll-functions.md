@@ -17,12 +17,12 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: c09eeff3-8aba-4cfb-a524-752436d85573
-ms.openlocfilehash: c6b4b45184ea4cc3320f3de069884ac084c7cfcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2acfaafbe15f065dbac924ce72a5ca3a5275537b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450228"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751384"
 ---
 # <a name="strcoll-functions"></a>strcoll 函式
 
@@ -30,7 +30,7 @@ ms.locfileid: "50450228"
 
 ### <a name="strcoll-functions"></a>strcoll 函式
 
-|SBCS|Unicode|MBCS|描述|
+|SBCS|Unicode|MBCS|說明|
 |----------|-------------|----------|-----------------|
 |[strcoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[wcscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[_mbscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|比較兩個字串|
 |[_stricoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_wcsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_mbsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|比較兩個字串 (不區分大小寫)|
@@ -47,7 +47,7 @@ ms.locfileid: "50450228"
 
 因為 `coll` 函式會以詞典編纂方式對照字串以進行比較，而 `cmp` 函式只會測試字串是否相等，所以 `coll` 函式比對應的 `cmp` 版本慢很多。 因此，只有在目前字碼頁中字元集順序與字母字元順序 (亦即字母在字典中的順序) 不同，且想要比較此字串差異時，才應該使用 `coll` 函式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [地區設定](../c-runtime-library/locale.md)<br/>
 [字串操作](../c-runtime-library/string-manipulation-crt.md)<br/>

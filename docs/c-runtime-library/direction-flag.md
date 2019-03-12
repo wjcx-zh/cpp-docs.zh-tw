@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - direction flag
 ms.assetid: 0836b4af-dbbb-4ab8-a4b2-156f2e2099e2
-ms.openlocfilehash: e5177f206e46227fa693ef8d4bd1848b06374af7
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: ead32fa7f09e9dd98130855ecd87ba3b3d454ef5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849902"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740151"
 ---
 # <a name="direction-flag"></a>方向旗標
 
@@ -21,6 +21,6 @@ C 執行階段常式會假設方向旗標已清除。 如果您是以其他函�
 
 C 執行階段程式庫函式 (例如字串操作和緩衝區操作常式) 將會預期方向旗標已清除。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

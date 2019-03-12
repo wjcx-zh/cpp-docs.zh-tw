@@ -10,12 +10,12 @@ helpviewer_keywords:
 - setlocale function
 - locale routines
 ms.assetid: 442f8112-9288-44d7-be3c-15d22652093a
-ms.openlocfilehash: b5096d0b0f0990a89789993a12f383d060b91b3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89ff4b694137c7002ecb5f6a844c75ab403e6e2f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571479"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744375"
 ---
 # <a name="locale"></a>地區設定
 
@@ -69,7 +69,7 @@ ms.locfileid: "50571479"
 > [!NOTE]
 > 針對多位元組常式，多位元組字碼頁必須等同於使用 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 所設定的地區設定。 引數為 **_MB_CP_LOCALE** 的 [_setmbcp](../c-runtime-library/reference/setmbcp.md) 可讓多位元組字碼頁與 **setlocale** 字碼頁相同。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [國際化](../c-runtime-library/internationalization.md)<br/>
 [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

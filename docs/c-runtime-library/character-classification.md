@@ -7,12 +7,12 @@ helpviewer_keywords:
 - character classification routines
 - characters, testing
 ms.assetid: 3b6c8f0b-9701-407a-b384-9086698773f5
-ms.openlocfilehash: b1516aaa5cdb22ecee3895978f1e9c085367a935
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 757eeac41ecd4e300b7aabef122a8dbdd7e79e11
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326442"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739760"
 ---
 # <a name="character-classification"></a>字元分類
 

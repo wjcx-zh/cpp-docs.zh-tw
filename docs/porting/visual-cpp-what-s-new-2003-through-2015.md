@@ -2,12 +2,12 @@
 title: 從 2003 到 2015 的 Visual C++ 新功能
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: bc0092aeb8910f960befc174c1f71ce05c4eb131
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: fdd1d2c2183d06defe413340b8aef05c5bd61750
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894350"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749148"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>從 2003 到 2015 的 Visual C++ 新功能
 
@@ -1570,7 +1570,8 @@ Microsoft Visual C++ 編譯器支援下列 ISO C++11 語言功能：
 - 自動向量化工具現在可以辨識並最佳化更多 C++ 模式，讓程式碼更快速地執行。
 - ARM 平台和 Atom 微架構程式碼品質改善。
 - 已新增 __vectorcall 呼叫慣例。 使用 __vectorcall 呼叫慣例傳遞向量類型引數，以使用向量暫存器。
-- 新的連結器選項。 `/Gw` (編譯器) 和 `/Gy` (組譯工具) 參數會啟用連結器最佳化以產生更精簡的二進位檔。
+- 新的連結器選項。 
+  `/Gw` (編譯器) 和 `/Gy` (組譯工具) 參數會啟用連結器最佳化以產生更精簡的二進位檔。
 - C++ AMP 共用記憶體支援，可降低或排除 CPU 與 GPU 之間的資料複製。
 
 ### <a name="profile-guided-optimization-pgo-enhancements"></a>特性指引最佳化 (PGO) 加強功能
@@ -2233,6 +2234,6 @@ __sptr、__uptr
 
 已新增 .SAFESEH 指示詞和 `/safeseh` ml.exe 選項。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Visual C++ 移植和升級指南](visual-cpp-porting-and-upgrading-guide.md)

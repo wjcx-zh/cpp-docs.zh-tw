@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DEBUG macro
 - _DEBUG macro
 ms.assetid: a9901568-4846-4731-a404-399d947e2e7a
-ms.openlocfilehash: eeffbd207c4e5b4fdcaaca6f47a2b69ba641a46e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 754be1d8e676a8fc600ee5af66cab6217f015e59
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510821"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741709"
 ---
 # <a name="debug"></a>_DEBUG
 
@@ -21,6 +21,6 @@ ms.locfileid: "50510821"
 
 如需詳細資訊，請參閱 [CRT 偵錯技術](/visualstudio/debugger/crt-debugging-techniques)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [控制旗標](../c-runtime-library/control-flags.md)

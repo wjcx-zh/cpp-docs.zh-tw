@@ -11,12 +11,12 @@ helpviewer_keywords:
 - common language runtime [C++], version specified
 - deploying applications [C++], runtime version specified
 ms.assetid: 940171b7-6937-4b14-8e87-c199e23f4f2e
-ms.openlocfilehash: effcda9de1cb1005855f5752060dc61e28dcebf4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af20e7bdb34675b26acc7369c4d37100b796562d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581515"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748238"
 ---
 # <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>在舊版執行階段版本上執行 C++ /clr 應用程式
 
@@ -28,6 +28,6 @@ ms.locfileid: "50581515"
 
 如果您指定多個執行階段版本，而且應用程式在具有多個已安裝執行階段版本的電腦上執行，則應用程式會使用 config 檔中所指定且已安裝的第一個版本。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [部署傳統型應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)

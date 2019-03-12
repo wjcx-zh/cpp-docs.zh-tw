@@ -13,12 +13,12 @@ helpviewer_keywords:
 - process environment
 - wenviron function
 ms.assetid: 7e639962-6536-47cd-8095-0cbe44a56e03
-ms.openlocfilehash: 5982aa367aa043dbe7a5c41128c3646f520d3b4a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56f6f1d06d834ccab68daf859fac065cf215582c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666904"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748919"
 ---
 # <a name="environ-wenviron"></a>_environ、_wenviron
 
@@ -74,7 +74,7 @@ j = _wputenv( "env_var_y=string2" );  // also results in implicit call:
 
 因此，在多位元組環境中，在第一次對 `putenv` 的隱含呼叫後，"`env_var_z`" 的值可能是 "`string1`"，但是當 "`env_var_z`" 的值設定為 "`string2`" 時，可能會在第二次對 `putenv` 的隱含呼叫時覆寫這個值。 因此 Unicode 環境 (在 `_wenviron` 中) 和多位元組環境 (在 `_environ` 中) 可能會在這一系列的呼叫後有所不同。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [全域變數](../c-runtime-library/global-variables.md)<br/>
 [getenv、_wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)<br/>

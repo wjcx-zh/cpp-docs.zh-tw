@@ -15,12 +15,12 @@ helpviewer_keywords:
 - translation modes (file I/O)
 - binary access
 ms.assetid: 3196e321-8b87-4609-b302-cd6f3c516051
-ms.openlocfilehash: 54b095913ea4ec25fe5bd077d38a6bba303a7b72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c875350aedadb55d8f96fb682d6215030be2198
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546285"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738577"
 ---
 # <a name="text-and-binary-mode-file-io"></a>文字和二進位模式檔案 I/O
 
@@ -34,7 +34,7 @@ ms.locfileid: "50546285"
 
 當您呼叫 file-open 函式 (例如 [_open](../c-runtime-library/reference/open-wopen.md)、[fopen](../c-runtime-library/reference/fopen-wfopen.md)、[fopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)、[freopen](../c-runtime-library/reference/freopen-wfreopen.md)、[freopen_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md)[_fsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 或 [_sopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md)) 時，可以透過為函式 [_set_fmode](../c-runtime-library/reference/set-fmode.md) 指定適當的引數來覆寫 **_fmode** 的目前預設設定。 **stdin**、**stdout** 和 **stderr** 資料流預設一律會在文字模式中開啟，但您也可以在開啟這些檔案時覆寫此預設值。 在檔案開啟後，使用 [_setmode](../c-runtime-library/reference/setmode.md) 利用檔案描述項來變更轉譯模式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [輸入和輸出](../c-runtime-library/input-and-output.md)<br/>
 [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

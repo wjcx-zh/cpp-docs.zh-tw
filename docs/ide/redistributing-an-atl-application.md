@@ -7,12 +7,12 @@ helpviewer_keywords:
 - redistributing OLE DB templates
 - OLE DB templates, redistributing
 ms.assetid: 9a696b22-2345-43ec-826b-be7cb8cfd676
-ms.openlocfilehash: 183363f7e69fc6d14ce3f9e681992e774b198928
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6db81064db5e83ed4ba58fd5d800215dd93eb6c9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517100"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745038"
 ---
 # <a name="redistributing-an-atl-application"></a>轉散發 ATL 應用程式
 
@@ -42,6 +42,6 @@ filename /regserver
 
 其中 `filename` 是可執行檔案的名稱。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [轉散發 Visual C++ 檔案](../ide/redistributing-visual-cpp-files.md)

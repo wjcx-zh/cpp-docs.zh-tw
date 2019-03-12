@@ -9,12 +9,12 @@ helpviewer_keywords:
 - character sets [C++], multibyte
 - character sets [C++], single byte
 ms.assetid: 2cbc78ea-33c0-4cfb-b0df-7ce2458431ce
-ms.openlocfilehash: 1870fed732e5b940edb7690f9c3b58bb39c24572
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e2d3f26891257101b4a9511f4e0b10f03113309
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645376"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745335"
 ---
 # <a name="single-byte-and-multibyte-character-sets"></a>單位元組和多位元組字元集
 
@@ -25,7 +25,7 @@ ASCII 字元集定義 0x00 - 0x7F 範圍內的字元。 有數個其他字元集
 
 多位元組字元集可能包含單位元組和雙位元組字元。 因此，多位元組字元字串可能混合單一位元組和雙位元組字元。 雙位元組多位元組字元會有一個前導位元組和一個後隨位元組。 在特定多位元組字元集中，前導位元組落在特定範圍內，後隨位元組也是如此。 這些範圍重疊時，可能需要評估特定內容，以決定指定的位元組是否作為前導位元組或後隨位元組。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [國際化](../c-runtime-library/internationalization.md)<br/>
 [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

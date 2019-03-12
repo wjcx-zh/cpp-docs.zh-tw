@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [C++], redistributing
 - controls [C++], distributing
 ms.assetid: eefbb7e4-d28c-4c35-98bf-d9540cfaae83
-ms.openlocfilehash: 6c1f75665d43d927e21a1fd7d365e1bde46c57a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb4ef7b58f5ef596ac6484761ab891ceb8bb85ad
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551394"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744636"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>轉散發 Visual C++ ActiveX 控制項
 
@@ -39,6 +39,6 @@ Visual C++ 6.0 提供您可以在後來要轉散發的應用程式中使用的 A
 
 某些可轉散發 ActiveX 控制項有其他相依性。 針對 Visual C++ 6.0 產品 CD 上 Os\System 資料夾中的每個 .ocx 檔，另外還有一個 .dep 檔。 針對您想要轉散發的每個 .ocx 檔，在對應的 .dep 檔中尋找一或多個 USES 項目。 如果已列出檔案，您必須確定檔案是在目標電腦上。 直接支援 .ocx 檔的任何 DLL 都必須註冊。 (Regsvr32.exe 若要成功，目標電腦必須先包含控制項以靜態方式載入的所有 DLL。)此外，如果列為相依性的 DLL 在 Visual C++ 6.0 CD 上的 Os\System 資料夾中也有 .dep 檔，則您也必須為 USES 項目調查該 .dep 檔。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [轉散發 Visual C++ 檔案](../ide/redistributing-visual-cpp-files.md)

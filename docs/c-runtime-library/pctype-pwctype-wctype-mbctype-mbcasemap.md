@@ -43,12 +43,12 @@ helpviewer_keywords:
 - mbctype function
 - _mbcasemap function
 ms.assetid: 7f5e1107-c43b-4b9b-b387-781e6d2373cb
-ms.openlocfilehash: 75dc6bf07513133670ea182a23fb2b4d30c0cdd5
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 7ef2b06aef8314b38ce26872d4a337358ee2dec9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702813"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749161"
 ---
 # <a name="pctype-pwctype-wctype-mbctype-mbcasemap"></a>_pctype、_pwctype、_wctype、_mbctype、_mbcasemap
 
@@ -74,7 +74,7 @@ extern unsigned char _mbcasemap[];
 
 不提供公開使用。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [is、isw 常式](../c-runtime-library/is-isw-routines.md)<br/>
 [__pctype_func](../c-runtime-library/pctype-func.md)

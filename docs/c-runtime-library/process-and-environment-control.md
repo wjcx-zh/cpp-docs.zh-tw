@@ -11,12 +11,12 @@ helpviewer_keywords:
 - environment control routines
 - process control routines
 ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
-ms.openlocfilehash: df080d1ed8c5a00711468a159acb07159ad31930
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c837739d4954c65d45a590bd5c7f904e2375102e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329406"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742104"
 ---
 # <a name="process-and-environment-control"></a>處理序控制和環境控制
 
@@ -79,13 +79,13 @@ ms.locfileid: "51329406"
 |---------------|--------------------------------------|----------------------------------|--------------------------|
 |**_execl**、**_spawnl**|否|清單|繼承自呼叫處理序|
 |**_execle**、**_spawnle**|否|清單|新處理序的環境表格指標，以最後一個引數傳遞|
-|**_execlp**、**_spawnlp**|[是]|清單|繼承自呼叫處理序|
-|**_execvpe**、**_spawnvpe**|[是]|陣列|新處理序的環境表格指標，以最後一個引數傳遞|
-|**_execlpe**、**_spawnlpe**|[是]|清單|新處理序的環境表格指標，以最後一個引數傳遞|
+|**_execlp**、**_spawnlp**|是|清單|繼承自呼叫處理序|
+|**_execvpe**、**_spawnvpe**|是|陣列|新處理序的環境表格指標，以最後一個引數傳遞|
+|**_execlpe**、**_spawnlpe**|是|清單|新處理序的環境表格指標，以最後一個引數傳遞|
 |**_execv**、**_spawnv**|否|陣列|繼承自呼叫處理序|
 |**_execve**、**_spawnve**|否|陣列|新處理序的環境表格指標，以最後一個引數傳遞|
-|**_execvp**、**_spawnvp**|[是]|陣列|繼承自呼叫處理序|
+|**_execvp**、**_spawnvp**|是|陣列|繼承自呼叫處理序|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

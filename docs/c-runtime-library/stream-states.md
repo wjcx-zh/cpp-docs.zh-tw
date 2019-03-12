@@ -4,12 +4,12 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - streams, states
 ms.assetid: 5f28c968-f132-403f-968c-8417ff315e52
-ms.openlocfilehash: 43d28fa504c64fcb25d5c7cd3ee2c6ed906acd7e
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f725fa16e8d669975dbc02c6eefd727085bbeb7c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175557"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743358"
 ---
 # <a name="stream-states"></a>資料流狀態
 
@@ -41,6 +41,6 @@ ms.locfileid: "52175557"
 
 最後，狀態圖表顯示位置作業永遠不會減少後續可能發生的有效函式呼叫數。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [檔案和資料流](../c-runtime-library/files-and-streams.md)

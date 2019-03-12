@@ -16,12 +16,12 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-ms.openlocfilehash: 65dc5bbfbaeab59e91cdca23c4f0f01b5ef7ebbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 961ad52070928ba755625747546c8dc7b1c215ba
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620166"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750816"
 ---
 # <a name="is-isw-routines"></a>is、isw 常式
 
@@ -335,7 +335,7 @@ int main( void )
 7f            AS  C                              .
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [字元分類](../c-runtime-library/character-classification.md)<br/>
 [地區設定](../c-runtime-library/locale.md)<br/>

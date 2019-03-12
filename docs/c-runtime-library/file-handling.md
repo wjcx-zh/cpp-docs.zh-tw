@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [C++], opening
 - files [C++], manipulating
 ms.assetid: 48119e2e-e94f-4602-b08b-b72440f731d8
-ms.openlocfilehash: 085fc03677b4353aeb515a2f25dd0734935be442
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bbd64b27a760969635d70ae7689d09afed2d729
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511874"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740426"
 ---
 # <a name="file-handling"></a>檔案處理
 
@@ -82,9 +82,9 @@ C 執行階段程式庫同時開啟檔案數目的上限為 512。 嘗試開啟�
 
 - [CreatePipe](https://msdn.microsoft.com/library/windows/desktop/aa365152.aspx) (CreatePipe 函式)
 
-- [CreateNamedPipe](/windows/desktop/api/winbase/nf-winbase-createnamedpipea) (CreateNamedPipe 函式)
+- [CreateNamedPipe](/windows/desktop/api/winbase/nf-winbase-createnamedpipea)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [目錄控制](../c-runtime-library/directory-control.md)<br/>

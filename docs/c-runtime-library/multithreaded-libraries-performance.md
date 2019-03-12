@@ -7,12 +7,12 @@ helpviewer_keywords:
 - performance, multithreading
 - multithreaded libraries
 ms.assetid: faa5d808-087c-463d-8f0d-8c478d137296
-ms.openlocfilehash: f73aa99d1800fc81408b739e556bc7845b348a80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48f491b6d82acb566669302e4d607e85faf9012a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587560"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748356"
 ---
 # <a name="multithreaded-libraries-performance"></a>多執行緒程式庫效能
 
@@ -34,6 +34,6 @@ ms.locfileid: "50587560"
 
 - 公開 CRT 堆積控制代碼可讓您針對 CRT 堆積啟用 Windows 低分散堆積 (LFH)，這可以大幅提升高度調整案例的效能。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

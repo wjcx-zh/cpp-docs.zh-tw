@@ -4,12 +4,12 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 7758905f6db537260ec9e8b6e516bfa409e97ad2
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 4b64f79ea5a9566d2ad28216fbc5e736b622fe00
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809733"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740241"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>如何回報 Visual C++ 工具組或文件的問題
 
@@ -398,4 +398,3 @@ Visual Studio 開發人員社群頁面提供另一種方便的途徑，讓您回
 我們使用 GitHub 問題來追蹤文件中所回報的問題。 您現在可以直接從內容頁建立 GitHub 問題，這可讓您以更豐富的方式與作者和產品小組互動。 如果您發現文件問題、錯誤的程式碼範例、造成混淆的說明、嚴重遺漏，或甚至只是錯字，，都可以輕鬆地通知我們。 請捲動至頁面底部，並選取 [登入以提供文件應見反應]。 如果您還沒有 GitHub 帳戶，則必須建立一個 GitHub 帳戶，但是一旦完成，您就可以查看所有文件問題及其狀態，並在您所回報的問題有所變更時收到通知。 如需詳細資訊，請參閱[即將在 docs.microsoft.com 推出新的意見反應系統](/teamblog/a-new-feedback-system-is-coming-to-docs)。
 
 當您使用 [文件意見反應] 按鈕在 GitHub 上建立文件問題時，該問題會自動填入有關建立問題來源頁面的一些資訊，以便讓我們知道問題所在位置。 請不要編輯此資訊。 只需要附加有關錯誤的詳細資料，如有必要，還可以提供建議的修正程式。 [我們的文件是開放原始碼](https://github.com/MicrosoftDocs/cpp-docs/)，因此如果您想要實際進行修正並自行提出建議，就可以這樣做。 如需您可以如何參與文件的詳細資訊，請參閱我們在 GitHub 上的[參與指南](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md) (英文)。
-

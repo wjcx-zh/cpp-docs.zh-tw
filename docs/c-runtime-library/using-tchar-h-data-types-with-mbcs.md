@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MBCS data type
 - _MBCS data type
 ms.assetid: 48f471e7-9d2b-4a39-b841-16a0e15c0a18
-ms.openlocfilehash: 487a73fae9380683e06e863f133e5e470635e0da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2c5031f0f1114bb7706dd8816729f661b78144d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432678"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743920"
 ---
 # <a name="using-tcharh-data-types-with-mbcs"></a>搭配 _MBCS 使用 TCHAR.H 資料類型
 
@@ -66,7 +66,7 @@ ms.locfileid: "50432678"
 
 **結束 Microsoft 專屬**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [國際化](../c-runtime-library/internationalization.md)<br/>
 [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

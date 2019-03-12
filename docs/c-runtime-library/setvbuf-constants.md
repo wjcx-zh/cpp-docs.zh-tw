@@ -13,12 +13,12 @@ helpviewer_keywords:
 - IOLBF constant
 - _IONBF constant
 ms.assetid: a6ec4dd5-1f24-498c-871a-e874cd28d33c
-ms.openlocfilehash: 8936789f4e3c9349e9d79616c8506c044dc79f70
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 28c9debf7e51d06cb9a625bb0a52d578ce3142c6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220396"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742650"
 ---
 # <a name="setvbuf-constants"></a>setvbuf 常數
 
@@ -40,7 +40,7 @@ ms.locfileid: "54220396"
 |`_IOLBF`|與 `_IOFBF` 相同。|
 |`_IONBF`|不使用緩衝區，不論 `setvbuf` 呼叫中的引數為何。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [setbuf](../c-runtime-library/reference/setbuf.md)<br/>
 [全域常數](../c-runtime-library/global-constants.md)

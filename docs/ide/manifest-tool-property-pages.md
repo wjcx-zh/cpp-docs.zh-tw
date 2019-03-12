@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Manifest Tool property pages
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: 734a34be11ec9ede78a9d5d3f434a949e438d5fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27612c93da6ad77ae7a787cbc0f4d9b18119bd4c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587911"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749995"
 ---
 # <a name="manifest-tool-property-pages"></a>資訊清單工具屬性頁
 
@@ -25,6 +25,6 @@ ms.locfileid: "50587911"
 
 [進階、資訊清單工具、組態屬性、\<Projectname> 屬性頁對話方塊](../ide/advanced-manifest-tool.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [屬性頁](../ide/property-pages-visual-cpp.md)

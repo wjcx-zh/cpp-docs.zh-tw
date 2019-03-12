@@ -9,12 +9,12 @@ helpviewer_keywords:
 - date functions
 - time functions
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
-ms.openlocfilehash: 67b993325c7f9c649d1509ce2c1ecf09a2404bc8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b763361d2cdd732025e492a25ac63fc01f06c2b8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328925"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739737"
 ---
 # <a name="time-management"></a>時間管理
 
@@ -49,6 +49,6 @@ ms.locfileid: "51328925"
 > [!NOTE]
 > 在 Visual C++ 2005 之前的 Visual C++ 與 Microsoft C/C++ 版本中，**time_t** 是 **long** **int** (32 位元)，因此自 2038 年 1 月 19 日 3:14:07 UTC 之後就無法使用。 **time_t** 現在預設等同於 **__time64_t**，但定義 **_USE_32BIT_TIME_T** 會將 **time_t** 變更為 **__time32_t**，並強制許多時間函式呼叫接受 32 位元 **time_t** 的版本。 如需詳細資訊，請參閱[標準類型](../c-runtime-library/standard-types.md)與個別時間函式文件中的註解。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

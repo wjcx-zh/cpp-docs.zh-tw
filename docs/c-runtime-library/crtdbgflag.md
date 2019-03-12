@@ -13,12 +13,12 @@ helpviewer_keywords:
 - enable memory allocation tracking flag
 - memory, tracking on the debug heap
 ms.assetid: 9e7adb47-8ab9-4e19-81d5-e2f237979973
-ms.openlocfilehash: 5abb0418b5ffb1f95bf7b362f621f99f411094d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a967b436d53acab6d76fa36fdf9b13c7c24d49c3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435291"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746978"
 ---
 # <a name="crtdbgflag"></a>_CRTDBG_CHECK_CRT_DF
 
@@ -26,6 +26,6 @@ ms.locfileid: "50435291"
 
 如需搭配其他偵錯函式使用此旗標的詳細資訊，請參閱[堆積狀態報告函式](/visualstudio/debugger/crt-debug-heap-details)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [控制旗標](../c-runtime-library/control-flags.md)

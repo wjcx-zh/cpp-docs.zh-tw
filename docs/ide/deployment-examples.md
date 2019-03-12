@@ -6,12 +6,12 @@ helpviewer_keywords:
 - deploying applications [C++], examples
 - examples [C++], deployment
 ms.assetid: a2904fea-2703-48dc-881b-5bfc1f11b67f
-ms.openlocfilehash: 2ad60966ca97d2c997856801c0a97c3d187538a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e31046a8ec7067d9a173e7d3970b5e6eaf5848e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653902"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740356"
 ---
 # <a name="deployment-examples"></a>部署範例
 
@@ -21,13 +21,13 @@ ms.locfileid: "50653902"
 
 [逐步解說：使用安裝專案部署 Visual C++ 應用程式](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)
 
-[逐步解說：將 Visual C++ 應用程式部署至應用程式本機資料夾](../ide/walkthrough-deploying-a-visual-cpp-application-to-an-application-local-folder.md)
+[逐步解說：將 Visual C++ 應用程式部署到應用程式本機資料夾](../ide/walkthrough-deploying-a-visual-cpp-application-to-an-application-local-folder.md)
 
 [逐步解說：使用 Visual C++ 可轉散發套件部署 Visual C++ 應用程式](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)
 
 [準備測試電腦以執行偵錯可執行檔](../ide/preparing-a-test-machine-to-run-a-debug-executable.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)<br>
 [部署傳統型應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)

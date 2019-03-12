@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-ms.openlocfilehash: fdca832810312d2f36697da8fbaac539c5ce951c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee81fb1560133b2777a33e80d32c0e2e55c01bf4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452594"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749083"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>決定要轉散發哪些 DLL
 
@@ -37,7 +37,7 @@ ms.locfileid: "50452594"
 
 下表描述您的應用程式可能依賴的部分 Visual C++ DLL。
 
-|Visual C++ 程式庫|描述|適用於|
+|Visual C++ 程式庫|說明|適用於|
 |--------------------------|-----------------|----------------|
 |vcruntime*version*.dll|機器碼的執行階段程式庫。|使用一般 C 和 C++ 語言啟動和終止服務的應用程式。|
 |vccorlib*version*.dll|受控碼的執行階段程式庫。|針對受控碼使用 C++ 語言服務的應用程式。|
@@ -59,7 +59,7 @@ ms.locfileid: "50452594"
 
 一般而言，您並不需要轉散發系統 Dll，因為它們是作業系統的一部分。 但是，還是有一些例外情形，例如當應用程式會在數個版本的 Microsoft 作業系統上執行時。 在此情況下，請務必閱讀對應的授權條款。 另外，請嘗試透過 Windows Update、Service Pack 或 Microsoft 提供的可轉散發套件，將系統 DLL 升級。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [選擇部署方法](../ide/choosing-a-deployment-method.md)
 

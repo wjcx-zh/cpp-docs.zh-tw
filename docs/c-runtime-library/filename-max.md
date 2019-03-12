@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - FILENAME_MAX constant
 ms.assetid: fe368d24-3f31-42d6-859c-cbd84f446ee5
-ms.openlocfilehash: 2283adaacb8e49d13799b7dd9f6f4199fadcde88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28ebee819bc8a9b6370f67210881a561c9629ab4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532011"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742736"
 ---
 # <a name="filenamemax"></a>FILENAME_MAX
 
@@ -23,7 +23,7 @@ ms.locfileid: "50532011"
 #include <stdio.h>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [路徑欄位限制](../c-runtime-library/path-field-limits.md)<br/>
 [全域常數](../c-runtime-library/global-constants.md)

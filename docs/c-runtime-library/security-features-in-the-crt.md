@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-ms.openlocfilehash: a6ebbb09bc724fe1d3b2f06a27cb6708acb7566b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf8bee39d6ec0f41049586d3861dcf450b7b2aaa
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538355"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746939"
 ---
 # <a name="security-features-in-the-crt"></a>CRT 中的安全性功能
 
@@ -86,7 +86,7 @@ strcpy(szBuf, "test"); // warning: deprecated
 
 - `Format string syntax checking`. 偵測到無效字串，例如在 `printf` 格式字串中使用不正確的類型欄位字元。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [參數驗證](../c-runtime-library/parameter-validation.md)<br/>
 [安全範本多載](../c-runtime-library/secure-template-overloads.md)<br/>

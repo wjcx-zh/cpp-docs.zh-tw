@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: ca250849a0bcd150a6359abdad996b72c4372713
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.openlocfilehash: c08b45bddaed23bf5d1bf82fd6d27d1078fc84a6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006745"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740982"
 ---
 # <a name="hint-files"></a>提示檔案
 
@@ -242,7 +242,7 @@ void Function() NOEXCEPT
 
 - `A2` 目錄中的 `#undef` 提示已移除 `Debug` 目錄提示檔案中的 `OBRACE` 和 `CBRACE` 提示。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [為 Visual C++ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)<br>
 [#define 指示詞 (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)<br>

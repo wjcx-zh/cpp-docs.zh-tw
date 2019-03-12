@@ -21,12 +21,12 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-ms.openlocfilehash: 50b44c659aac66dbaddad711cceef635f277d2c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57d04fe5867c6a969b6aeca40f26b18b5dcd7a61
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487720"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750776"
 ---
 # <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno、_doserrno、_sys_errlist 和 _sys_nerr
 
@@ -111,7 +111,7 @@ ms.locfileid: "50487720"
 
 `_doserrno`、`_sys_errlist` 和 `_sys_nerr` 是 Microsoft 擴充功能。 如需相容性的詳細資訊，請參閱 [相容性](../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [全域變數](../c-runtime-library/global-variables.md)<br/>
 [errno 常數](../c-runtime-library/errno-constants.md)<br/>

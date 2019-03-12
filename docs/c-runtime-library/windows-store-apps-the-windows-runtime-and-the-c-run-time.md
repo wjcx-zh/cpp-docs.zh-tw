@@ -2,12 +2,12 @@
 title: UWP 應用程式、Windows 執行階段和 C 執行階段
 ms.date: 02/02/2019
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-ms.openlocfilehash: ae57390dc916116b8d799b9f937ff882abaef970
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 932b5388f2d1bf87f0d77ae1330fa3e613c9dca7
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55763882"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738672"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>UWP 應用程式、Windows 執行階段和 C 執行階段
 
@@ -39,7 +39,7 @@ ms.locfileid: "55763882"
 
 如需於 UWP 應用程式中無法使用的 CRT 函式完整清單與替代函式建議，請參閱 [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [相容性](../c-runtime-library/compatibility.md)<br/>
 [Windows 執行階段不支援的 CRT 函式](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>

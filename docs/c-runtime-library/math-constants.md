@@ -22,12 +22,12 @@ helpviewer_keywords:
 - M_SQRT2 constant
 - M_LN2 constant
 ms.assetid: db533c3f-6ae8-4520-9d35-c8fabbef3529
-ms.openlocfilehash: dae30ca5e44d00f5480431d5de2ea856047e0590
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd17004585e0238f36b939b19379ef62e349fac9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531957"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744161"
 ---
 # <a name="math-constants"></a>Math 常數
 
@@ -65,6 +65,6 @@ ms.locfileid: "50531957"
 
 當您的專案是以發行模式建置時，ATLComTime.h 檔案會包含 math.h。 如果您在同時包含 ATLComTime.h 的專案中使用一或多個數學常數，則必須在包含 ATLComTime.h 之前定義 `_USE_MATH_DEFINES`。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [全域常數](../c-runtime-library/global-constants.md)

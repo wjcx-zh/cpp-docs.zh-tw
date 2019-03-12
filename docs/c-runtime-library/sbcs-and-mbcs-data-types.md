@@ -8,12 +8,12 @@ helpviewer_keywords:
 - SBCS and MBCS data types
 - data types [C], MBCS and SBCS
 ms.assetid: 4c3ef9da-e397-48d4-800e-49dba36db171
-ms.openlocfilehash: 9f45d888e10ad1f86d0ba395155c7fd5c6c1bf0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d73155e36909efb1a7261f9fe45c2431525437a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633450"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742915"
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>SBCS 和 MBCS 資料類型
 
@@ -32,7 +32,7 @@ ms.locfileid: "50633450"
 
 1. 在 TCHAR.H 中使用型別安全的靜態連結程式庫函式。 若要這樣做，請在命令列上定義常數 **_NO_INLINING**。 這是最慢、但類型最安全的方法。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [國際化](../c-runtime-library/internationalization.md)<br/>
 [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

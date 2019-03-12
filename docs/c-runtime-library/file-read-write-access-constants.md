@@ -10,12 +10,12 @@ helpviewer_keywords:
 - constants [C++], file attributes
 - file read/write access constants
 ms.assetid: 56cd1d22-39a5-4fcf-bea2-7046d249e8ee
-ms.openlocfilehash: 7bf16271c0d58e3d87e4c24795ec0bd1ee1ccb89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0dfbc925c5252724cbb1caad58470849915242a9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666165"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746067"
 ---
 # <a name="file-readwrite-access-constants"></a>檔案讀取/寫入存取常數
 
@@ -31,7 +31,7 @@ ms.locfileid: "50666165"
 
 存取類型如下表所述：
 
-|存取類型|描述|
+|存取類型|說明|
 |----------|----------------|
 |**"r"**|開啟以讀取。 如果檔案不存在或找不到，開啟檔案的呼叫就會失敗。|
 |**"w"**|開啟空白檔案以寫入。 如果指定的檔案已存在，其內容將被終結。|
@@ -42,7 +42,7 @@ ms.locfileid: "50666165"
 
 指定 "r+"、"w+"或 "a+" 類型時，會同時允許讀取和寫入 (表示檔案是要開啟以供「更新」之用)。 不過，當您在讀取和寫入之間切換時，必須有中間的 `fflush`、`fsetpos`、`fseek` 或 `rewind` 作業。 可以針對 `fsetpos` 或 `fseek` 作業指定目前位置。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [_fdopen、wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)<br/>
 [fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md)<br/>

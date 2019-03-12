@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _TEXT type
 - _T type
 ms.assetid: 4e573c05-8800-468b-ae5f-76ff7409835e
-ms.openlocfilehash: 3d6e43d8d39cb208efbb6010ef2591a2880fd584
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60dc4329ae4c908b9bd168584c71c42c12634bb2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647888"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749096"
 ---
 # <a name="data-type-mappings"></a>資料類型對應
 
@@ -56,7 +56,7 @@ ms.locfileid: "50647888"
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|
 |`_T` 或 `_TEXT`|無效果 (已由前置處理器移除)|無效果 (已由前置處理器移除)|`L` (將下列字元或字串轉換成其 Unicode 對應項目)|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [泛型文字對應](../c-runtime-library/generic-text-mappings.md)<br/>
 [常數和全域變數對應](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], MFC source and header
 ms.assetid: f61419a8-bf69-4bbb-8f7c-1734be5e6db6
-ms.openlocfilehash: c60c00772005efc0402cdeba9d710548c6412b15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c49a17802e0c7c43cae58153a6df6c4f70f69980
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639149"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743851"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>MFC 程式或控制項原始程式檔和標頭檔
 
@@ -17,7 +17,7 @@ ms.locfileid: "50639149"
 
 這些檔案全都位於 *Projname* 目錄下，以及 [方案總管] 的標頭檔 (.h 檔案) 資料夾或原始程式檔 (.cpp 檔) 資料夾中。
 
-|檔案名稱|描述|
+|檔案名稱|說明|
 |---------------|-----------------|
 |*Projname*.h|程式或 DLL 的主要包含檔。 它包含所有全域符號和其他標頭檔的 `#include` 指示詞。 它會從 `CWinApp` 衍生 `CPrjnameApp` 類別，並宣告 `InitInstance` 成員函式。 若為控制項，`CPrjnameApp` 類別是衍生自 `COleControlModule`。|
 |*Projname*.cpp|主要原始程式檔。 它會針對衍生自 `CWinApp` 的 `CPrjnameApp` 類別建立一個物件，並覆寫 `InitInstance` 成員函式。<br /><br /> 若為可執行檔，`CPrjnameApp::InitInstance` 會執行數個作業。 它會註冊文件範本以作為文件與檢視之間的連線、建立主框架視窗，以及建立空白文件 (如果文件指定為應用程式的命令列引數，則會開啟文件)。<br /><br /> 若為 DLL 和 ActiveX (先前稱為 OLE) 控制項，`CProjNameApp::InitInstance` 會藉由呼叫 `COleObjectFactory::RegisterAll` 向 OLE 註冊控制項的物件 Factory，並呼叫 `AfxOLEInit`。 此外，成員函式 `CProjNameApp::ExitInstance` 可用來透過 **AfxOleTerm** 呼叫從記憶體卸載控制項。<br /><br /> 這個檔案也會藉由實作 `DllRegisterServer` 和 `DllUnregisterServer` 函式，在 Windows 系統註冊資料庫中註冊和取消註冊控制項。|
@@ -32,7 +32,7 @@ ms.locfileid: "50639149"
 |Mainfrm.cpp、Mainfrm.h|從 [CFrameWnd](../mfc/reference/cframewnd-class.md) (適用於 SDI 應用程式) 或 [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) (適用於 MDI 應用程式) 衍生 **CMainFrame** 類別。 如果在應用程式精靈的 [應用程式選項] 頁面 (步驟 6 之 4) 中選取對應的選項，**CMainFrame** 類別就會負責建立工具列按鈕和狀態列。 如需使用 **CMainFrame** 的資訊，請參閱[應用程式精靈所建立的框架視窗類別](../mfc/frame-window-classes-created-by-the-application-wizard.md)。|
 |Childfrm.cpp、Childfrm.h|從 [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) 衍生 **CChildFrame** 類別。 **CChildFrame** 類別用於 MDI 文件框架視窗。 如果您選取 MDI 選項，則一律會建立這些檔案。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [為 Visual C++ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)<br>
 [ATL 程式或控制項原始程式檔和標頭檔](../ide/atl-program-or-control-source-and-header-files.md)<br>

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: cb1369515db91187d182cd6c6ea49b938ebdee77
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ad6a2835eb0b885d0761d027fcd6bf3d8c799ba
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459159"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746291"
 ---
 # <a name="project-files"></a>專案檔
 
@@ -118,7 +118,7 @@ Visual C++ 專案檔是以 XML 為基礎的檔案，副檔名為 .vcxproj，並�
 </Project>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [在 Visual Studio 中建置 C++ 專案](../ide/building-cpp-projects-in-visual-studio.md)<br>
 [使用專案屬性](../ide/working-with-project-properties.md)

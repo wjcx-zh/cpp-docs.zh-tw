@@ -10,12 +10,12 @@ f1_keywords:
 - VC.Project.VCManifestTool.OutputResourceManifest
 - VC.Project.VCManifestTool.GenerateCatalogFiles
 ms.assetid: a8bb20f6-7ace-45ca-bab0-b4f4a5caf170
-ms.openlocfilehash: 8aa007e41cdabe0bf548f1184b801c1f81655596
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b9af50e6dca2dafa4dabd356a868405dfacc958
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624691"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741185"
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>輸入和輸出、資訊清單工具、組態屬性、&lt;Projectname&gt; 屬性頁對話方塊
 
@@ -29,7 +29,7 @@ ms.locfileid: "50624691"
 使用 **/manifest** 選項來指定資訊清單工具將處理或合併之其他資訊清單檔的完整路徑。 完整路徑以分號分隔。
 
 **輸入資源資訊清單**<br/>
-使用 **/inputresource** 選項來指定型別為 RT_MANIFEST 的資源完整路徑，以輸入至資訊清單工具。 路徑後面可以接著指定的資源識別碼。 例如: 
+使用 **/inputresource** 選項來指定型別為 RT_MANIFEST 的資源完整路徑，以輸入至資訊清單工具。 路徑後面可以接著指定的資源識別碼。 例如：
 
 `dll_with_manifest.dll;#1`
 
@@ -61,7 +61,7 @@ ms.locfileid: "50624691"
 **啟用 DPI 感知**<br/>
 指定是否為 DPI 感知應用程式。 根據預設，對於 MFC 專案此設定為 [是]，其他則為 [否]，因為只有 MFC 專案有內建的 DPI 感知。 如果您新增程式碼來處理不同 DPI 設定，可以將設定覆寫為 [是]。 如果您將非 DPI 感知的應用程式設定為 DPI 感知，您的應用程式可能顯得模糊或變小。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [ndptecclick](/visualstudio/deployment/clickonce-application-manifest)<br/>
 [資訊清單工具屬性頁](../ide/manifest-tool-property-pages.md)<br/>

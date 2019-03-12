@@ -12,12 +12,12 @@ helpviewer_keywords:
 - code pages [C++], types of
 - locale code pages [C++]
 ms.assetid: 4a26fc42-185a-4add-98bf-a7b314ae6186
-ms.openlocfilehash: 707aec51b0a244fe305205b9b098f3f67a90de1b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83c54a3d624ddad4de6c359c44c3b4be80c95a6e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521044"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738564"
 ---
 # <a name="code-pages"></a>字碼頁
 
@@ -41,7 +41,7 @@ Microsoft 執行階段程式庫使用下列類型的字碼頁：
 
 - "C" 地區設定是透過 ANSI 所定義，以對應至 C 程式傳統上會執行的地區設定。 "C" 地區設定的字碼頁 ("C" 字碼頁) 對應至 ASCII 字元集。 例如，在 "C" 地區設定中，**islower** 只會針對值 0x61 - 0x7A 傳回 true。 在另一個地區設定中，**islower** 可能會針對這些項目傳回 true 以及該地區設定所定義的其他值。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [國際化](../c-runtime-library/internationalization.md)<br/>
 [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

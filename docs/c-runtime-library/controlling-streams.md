@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controlling streams
 - streams
 ms.assetid: 267e9013-9afc-45f6-91e3-ca093230d9d9
-ms.openlocfilehash: ac584e36154d0035ce3408b1302513dd7e960bf8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85c7e1b22519287fbd03d89487d6639f197a8b63
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525915"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743321"
 ---
 # <a name="controlling-streams"></a>控制資料流
 
@@ -37,6 +37,6 @@ ms.locfileid: "50525915"
 
 請不要變更儲存在 `FILE` 物件中，或是您指定搭配該物件使用之檔案緩衝區中的任何值。 您不能複製 `FILE` 物件，並改為使用該複本的位址作為針對程式庫函式的 `stream` 引數。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [檔案和資料流](../c-runtime-library/files-and-streams.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - parsing, numeric strings
 - string conversion, to numeric values
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
-ms.openlocfilehash: d3e53c665378efdd63a373027f4edd6b7fb90ad3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f24b75c2fdb3aa0d84b16874d2d01f1cb96d4b9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544566"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743881"
 ---
 # <a name="string-to-numeric-value-functions"></a>字串轉換為數值函式
 
@@ -39,7 +39,7 @@ ms.locfileid: "50544566"
 
 **strtod** 系列中的每個函式都會將以 null 終止的字串轉換為數值。 下表列出可用的函式。
 
-|功能|描述|
+|功能|說明|
 |--------------|-----------------|
 |`strtod`|將字串轉換為雙精確度浮點值|
 |`strtol`|將字串轉換為 long 整數|
@@ -88,7 +88,7 @@ ms.locfileid: "50544566"
 
 `wcstod`、`wcstol`、`wcstoul`、`_wcstoi64` 和 `_wcstoui64` 分別是寬字元版本的 `strtod`、`strtol`、`strtoul`、`_strtoi64` 和 `_strtoui64`；所有這些寬字元函式之轉換結束引數的指標是寬字元字串。 否則，所有這些寬字元函式與其單一位元組字元對應項目的行為完全相同。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [資料轉換](../c-runtime-library/data-conversion.md)<br/>
 [地區設定](../c-runtime-library/locale.md)<br/>

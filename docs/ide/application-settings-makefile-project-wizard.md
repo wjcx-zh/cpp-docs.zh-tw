@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Makefile Project Wizard, application settings
 ms.assetid: e0cbce59-5984-4f68-8a1d-f7fb2007c9b4
-ms.openlocfilehash: a57b3343064494c16b140e4bd4a9127350e022ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b34ca8b36390f6a18935a2da5c2a7924a737f711
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540032"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752398"
 ---
 # <a name="application-settings-makefile-project-wizard"></a>Makefile 專案精靈、應用程式設定
 
@@ -33,7 +33,7 @@ ms.locfileid: "50540032"
 
    指定當使用者從 [建置] 功能表選取 [重建] 時要執行的命令列。 顯示在專案屬性頁之 [Nmake] 頁面的 [Rebuild All 命令列] 欄位。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Makefile 專案精靈](../ide/makefile-project-wizard.md)<br>
 [建立 Makefile 專案](../ide/creating-a-makefile-project.md)<br>

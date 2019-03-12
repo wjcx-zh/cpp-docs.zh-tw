@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, allocation
 ms.assetid: b4470556-a128-4782-9943-2ccf7a7d9979
-ms.openlocfilehash: e77548e9f85057f8e8a1c92e4a0aa904a58e14a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcc9865b149c2289f99f6ee13f31179ae58a15e1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618773"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742800"
 ---
 # <a name="memory-allocation"></a>記憶體配置
 
@@ -52,6 +52,6 @@ ms.locfileid: "50618773"
 |[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)|當 **new** 運算子 (為了配置記憶體) 失敗時，啟用錯誤處理機制，並啟用 C++ 標準程式庫的編譯|
 |[_set_new_mode](../c-runtime-library/reference/set-new-mode.md)|為 **malloc** 設定新處理常式模式|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Unicode, stream I/O routines
 - Unicode stream I/O
 ms.assetid: 68be0c3e-a9e6-4fd5-b34a-1b5207f0e7d6
-ms.openlocfilehash: e54f29292ae9e202cf27c354374132dda267aff8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c16d2f74856bb42dfd6ffc4e1af7306f6edd97fb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469769"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745987"
 ---
 # <a name="unicode-stream-io-in-text-and-binary-modes"></a>文字和二進位模式的 Unicode 資料流 I/O
 
@@ -26,7 +26,7 @@ Unicode 資料流 I/O 常式 (例如 **fwprintf**、**fwscanf**、**fgetwc**、*
 
 不過，Unicode 資料流 I/O 函式以二進位模式運作時，會假設檔案為 Unicode，而且在輸入或輸出期間不會進行 CR-LF 轉譯或字元轉換。 使用 _setmode(_fileno(stdin), _O_BINARY); 指令，以在 UNICODE 文字檔上正確地使用 wcin。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [輸入和輸出](../c-runtime-library/input-and-output.md)<br/>

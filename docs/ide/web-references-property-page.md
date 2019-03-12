@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Web references, properties
 ms.assetid: b80f7c77-af88-4551-9943-99748ebacf09
-ms.openlocfilehash: 36c6ab609aaee5e77dd7ed2aa4b53b5690c5c90a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d11849f5a7b835f58cc805471be90b3afa4dd85
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447966"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741363"
 ---
 # <a name="web-references-property-page"></a>Web 參考屬性頁
 
@@ -40,6 +40,6 @@ ms.locfileid: "50447966"
 
 如需如何存取 [Web 參考] 屬性頁的詳細資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [屬性頁](../ide/property-pages-visual-cpp.md)

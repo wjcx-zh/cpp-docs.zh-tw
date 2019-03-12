@@ -20,12 +20,12 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: 8a6a1a69147c135ce539393e535f0e1f2d03ccfa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17d80507462b3eb0fdfb5d9e41da6162947bd3de
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580743"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742529"
 ---
 # <a name="to-functions"></a>to 函式
 
@@ -40,7 +40,7 @@ ms.locfileid: "50580743"
 
 **to** 函式和巨集轉換如下。
 
-|常式傳回的值|巨集|描述|
+|常式傳回的值|巨集|說明|
 |-------------|-----------|-----------------|
 |`__toascii`|`__toascii`|將 `c` 轉換為 ASCII 字元|
 |`tolower`|`tolower`|適用時，將 `c` 轉換為小寫|
@@ -112,7 +112,7 @@ Some of THESE letters are Capitals.
 sOME OF these LETTERS ARE cAPITALS.
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [資料轉換](../c-runtime-library/data-conversion.md)<br/>
 [地區設定](../c-runtime-library/locale.md)<br/>

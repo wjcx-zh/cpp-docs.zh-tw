@@ -10,12 +10,12 @@ helpviewer_keywords:
 - builds [C++], troubleshooting
 - custom build steps [C++], troubleshooting
 ms.assetid: e4ceb177-fbee-4ed3-a7d7-80f0d78c1d07
-ms.openlocfilehash: 52f4e37a2321cbd19fc85e7036cb8882e9399ac5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 495fff3d39c13515aca6f642d1a9626c490aadb4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480897"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745534"
 ---
 # <a name="troubleshooting-build-customizations"></a>疑難排解組建自訂
 
@@ -35,6 +35,6 @@ ms.locfileid: "50480897"
 
 - 個別地執行自訂建置步驟和建置事件，以檢查其行為。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [了解自訂建置步驟和建置事件](../ide/understanding-custom-build-steps-and-build-events.md)

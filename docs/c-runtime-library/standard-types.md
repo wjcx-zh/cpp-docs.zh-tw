@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: dd508095508cf9d0d04778b06d6296296649f710
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85ebe9052d9e8bd18dfc9b3b123871e2e5acda4e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565317"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740468"
 ---
 # <a name="standard-types"></a>標準類型
 
@@ -189,7 +189,7 @@ Microsoft 執行階段程式庫定義下列標準類型和 Typedefs。
 |int_fast64_t、uint_fast64_t|long long、unsigned long long|
 |intmax_t、uintmax_t|long long、unsigned long long|
 
-|類型|描述|宣告於|
+|類型|說明|宣告於|
 |----------|-----------------|-----------------|
 |`clock_t` (long)|儲存時間值，由[時鐘](../c-runtime-library/reference/clock.md)使用。|TIME.H|
 |`_complex` 結構|儲存複數的實數和虛數部分，由 [_cabs](../c-runtime-library/reference/cabs.md) 使用。|MATH.H|
@@ -253,6 +253,6 @@ Microsoft 執行階段程式庫定義下列標準類型和 Typedefs。
 |`wctype_t` 整數|可以表示任何語言字元集的所有字元。|WCHAR.H,<br /><br /> CRTDEFS.H|
 |`wint_t` 整數|可以保留任何寬字元或寬檔案結尾值的資料物件類型。|WCHAR.H,<br /><br /> CRTDEFS.H|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 執行階段程式庫參考](../c-runtime-library/c-run-time-library-reference.md)

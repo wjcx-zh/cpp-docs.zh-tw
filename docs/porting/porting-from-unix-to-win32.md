@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: 70cbff207931ada378a89b978acf13fadb3a8744
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 1cf5660d1ad2f0fdde02837eeffb642c4a74e5ea
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694084"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744497"
 ---
 # <a name="porting-from-unix-to-win32"></a>從 UNIX 移植到 Win32
 
@@ -77,7 +77,7 @@ Windows 和 UNIX 圖形模型差異極大。 UNIX 使用 X Window 系統 GUI，�
 
 UNIX 程式設計人員還會考慮的另一個做法是使用 Windows POSIX 子系統。 不過，它只支援 POSIX 1003.1，這是建立 Windows NT 時唯一標準化的 POSIX 版本。 在這之後，由於大多數應用程式已轉換成 Win32，因此對於擴充這個子系統的需求很少。 完整功能的應用程式對 1003.1 系統不感興趣，因為它未包含許多功能 (例如 1003.2 的功能、網路支援等)。 在 Windows POSIX 子系統下執行之完整功能的應用程式無法存取 Win32 應用程式可用的 Windows 功能，例如記憶體對應檔案、網路和圖形。 VI、LS 和 GREP 等應用程式都是 Windows POSIX 子系統的主要目標。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Visual C++ 移植和升級指南](visual-cpp-change-history-2003-2015.md)<br/>
 [UNIX](../c-runtime-library/unix.md)<br/>

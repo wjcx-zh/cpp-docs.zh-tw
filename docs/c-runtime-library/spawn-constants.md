@@ -20,12 +20,12 @@ helpviewer_keywords:
 - P_WAIT constant
 - _P_WAIT constant
 ms.assetid: e0533e88-d362-46fc-b53c-5f193226d879
-ms.openlocfilehash: 1bfb13309ae4bd667a5e128300740f4c903f08be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 988cc5e1b982f0c5577db77ae94f1df46c95ec0e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580943"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742750"
 ---
 # <a name="spawn-constants"></a>spawn 常數
 
@@ -46,7 +46,7 @@ ms.locfileid: "50580943"
 |`_P_NOWAIT`、 `_P_NOWAITO`|同時繼續執行呼叫處理序與新的處理序 (非同步的 `_spawn`)。|
 |`_P_DETACH`|繼續執行呼叫處理序，新處理序在背景執行，但無法存取主控台或鍵盤。 針對新處理序呼叫 `_cwait` 將會失敗。 這是非同步 `_spawn`。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [_spawn、_wspawn 函式](../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [全域常數](../c-runtime-library/global-constants.md)

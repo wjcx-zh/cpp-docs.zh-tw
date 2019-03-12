@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中建立新 C++ Linux 專案
 ms.date: 09/12/2018
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: 394fc5727035dd5a65b67ebf26a925fd3484582e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd5ab1d2bc1077f366082bf8767f8f690173ac8b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623024"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745155"
 ---
 # <a name="create-a-new-linux-project"></a>建立新的 Linux 專案
 
@@ -22,10 +22,9 @@ ms.locfileid: "50623024"
 
    ![新的 Linux 專案](media/newproject.png)
 
-   | 專案類型 | 描述
+   | 專案類型 | 說明
    | ------------ | ---
    | **閃爍 (Raspberry)**           | 以 Raspberry Pi 裝置為目標的專案，並撰寫範例程式碼讓 LED 閃爍
    | **主控台應用程式 (Linux)** | 以任何 Linux 電腦為目標的專案，並撰寫範例程式碼以將文字輸出至主控台
    | **空專案 (Linux)**       | 以任何 Linux 電腦為目標的專案，但未撰寫任何範例程式碼
    | **Makefile 專案 (Linux)**    | 以任何使用標準 Makefile 建置系統所建置之 Linux 電腦為目標的專案
-

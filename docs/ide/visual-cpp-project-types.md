@@ -10,12 +10,12 @@ helpviewer_keywords:
 - applications [C++], projects
 - Visual C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: 456fdb5ec2025b3085332eced3a0c7f33e117918
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a81d73100ef52b61f834f7bffe4467bd296c079
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658012"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744548"
 ---
 # <a name="visual-c-project-types"></a>Visual C++ 專案類型
 
@@ -32,7 +32,7 @@ Visual Studio 中包含的專案範本取決於您已安裝的產品版本和工
 
 ### <a name="windows-desktop"></a>Windows 桌面
 
-|專案範本|描述|
+|專案範本|說明|
 |----------------------|-----------------------------|
 |[Windows 主控台應用程式](../windows/creating-a-console-application.md)|用於建立 Windows 主控台應用程式的專案。|
 |[Windows 傳統型應用程式](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|用於建立 Windows 傳統型 (Win32) 應用程式的專案。|
@@ -42,7 +42,7 @@ Visual Studio 中包含的專案範本取決於您已安裝的產品版本和工
 
 ### <a name="general"></a>一般
 
-|專案範本|描述|
+|專案範本|說明|
 |----------------------|-----------------------------|
 |空專案|用於建立應用程式、程式庫或 DLL 的空白專案。 您必須新增任何所需的程式碼或資源。|
 |[Makefile 專案](../ide/creating-a-makefile-project.md)|用於使用外部建置系統的專案。|
@@ -50,13 +50,13 @@ Visual Studio 中包含的專案範本取決於您已安裝的產品版本和工
 
 ### <a name="atl"></a>ATL
 
-|專案範本|描述|
+|專案範本|說明|
 |----------------------|-----------------------------|
 |[ATL 專案](../atl/reference/creating-an-atl-project.md)|使用 Active Template Library 的專案。|
 
 ### <a name="test"></a>測試
 
-|專案範本|描述|
+|專案範本|說明|
 |----------------------|-----------------------------|
 |[原生單元測試專案](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|包含原生 C++ 單元測試的專案。|
 
@@ -64,7 +64,7 @@ Visual Studio 中包含的專案範本取決於您已安裝的產品版本和工
 
 如果您將 MFC 和 ATL 支援元件新增至 Visual Studio 安裝環境，這些專案範本就會新增至 Visual Studio。
 
-|專案範本|描述|
+|專案範本|說明|
 |----------------------|-----------------------------|
 |[MFC 應用程式](../mfc/reference/creating-an-mfc-application.md)|用於建立使用 MFC 程式庫之應用程式的專案。|
 |[MFC ActiveX 控制項](../mfc/reference/creating-an-mfc-activex-control.md)|用於建立使用 MFC 程式庫之 ActiveX 控制項的專案。|
@@ -76,7 +76,7 @@ Visual Studio 中包含的專案範本取決於您已安裝的產品版本和工
 
 如需 C++ 的 Windows 通用應用程式的概觀，請參閱[通用 Windows 應用程式 (C++)](../windows/universal-windows-apps-cpp.md)。
 
-|專案範本|描述|
+|專案範本|說明|
 |----------------------|-----------------------------|
 |空白應用程式|不具預先定義的控制項或配置之單一頁面通用 Windows 平台 (UWP) 應用程式的專案。|
 |DirectX 11 應用程式|使用 DirectX 11 之通用 Windows 平台應用程式的專案。|
@@ -92,6 +92,6 @@ Visual Studio 中包含的專案範本取決於您已安裝的產品版本和工
 
 專案範本產生的許多檔案都包含 TODO 註解，以協助您識別您可以提供自己原始程式碼的位置。 如需如何新增程式碼的詳細資訊，請參閱[使用程式碼精靈新增功能](../ide/adding-functionality-with-code-wizards-cpp.md)和[使用資源檔](../windows/working-with-resource-files.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [使用應用程式精靈建立桌面專案](../ide/creating-desktop-projects-by-using-application-wizards.md)

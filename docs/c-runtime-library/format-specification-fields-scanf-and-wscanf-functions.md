@@ -21,12 +21,12 @@ helpviewer_keywords:
 - format specification fields for scanf function
 - type fields
 ms.assetid: 7e95de1b-0b71-4de3-9f81-c9560c78e039
-ms.openlocfilehash: 83c380adc1a8985bb232d70c6d7c4cb4a885e789
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b45de9af3642825f1fddf3a1560b2fc1dbc4ffc
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625936"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748459"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>格式規格欄位：scanf 和 wscanf 函式
 
@@ -58,7 +58,7 @@ ms.locfileid: "50625936"
 
 `scanf` 系列函式的安全版本 (具有 `_s` 尾碼的版本)，需要在每個 `c`、`C`、`s`、`S` 或 `[` 類型參數之後，立即傳遞緩衝區大小參數。 如需 `scanf` 函式系列安全版本的詳細資訊，請參閱 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [scanf 寬度規格](../c-runtime-library/scanf-width-specification.md)<br/>
 [scanf 類型欄位字元](../c-runtime-library/scanf-type-field-characters.md)<br/>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O [CRT], routines
 - output routines
 ms.assetid: 1c177301-e341-4ca0-aedc-0a87fe1c75ae
-ms.openlocfilehash: 26d527f7afad544b051a2ad765af09c430782083
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2669ed3437fe0eea7dd648367feabe66ae6ed6d4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590381"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738524"
 ---
 # <a name="input-and-output"></a>輸入和輸出
 
@@ -30,6 +30,6 @@ I/O 函式會針對檔案和裝置進行讀取和寫入。 檔案 I/O 作業會�
    > [!NOTE]
    > 由於資料流函式會進行緩衝處理，而低層級函式不會，因此這兩種類型的函式通常不會相容。 處理特定檔案時，請不要同時使用資料流和低層級函式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

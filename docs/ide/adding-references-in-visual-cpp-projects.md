@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: c50a726b0e5b6e175bd7256ab5a5d93d6b172601
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d227490944232e04c533b06a08f04a378d0239e0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583790"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741789"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>在 Visual C++ 專案中加入參考
 
@@ -140,7 +140,7 @@ ActiveX 參考屬性僅適用於 COM 元件的參考。 這些屬性僅在 [參�
 
    顯示參考組件的版本。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [屬性頁](../ide/property-pages-visual-cpp.md)<br>
 [使用專案屬性](../ide/working-with-project-properties.md)

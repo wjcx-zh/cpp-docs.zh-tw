@@ -11,12 +11,12 @@ helpviewer_keywords:
 - I/O [CRT], port
 - I/O routines, console and port I/O
 ms.assetid: 0eee1c92-9b3d-41e0-a43a-257e546eeec8
-ms.openlocfilehash: 728ff6fa36d21e869c65db705b25bbe7c9d711ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55f97a70f2ce12f6363d234e9bbc9384d7ee9fe1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446757"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752372"
 ---
 # <a name="console-and-port-io"></a>主控台和連接埠 I/O
 
@@ -42,7 +42,7 @@ ms.locfileid: "50446757"
 |[_putch、_putwch](../c-runtime-library/reference/putch-putwch.md)|將字元寫入主控台|
 |[_ungetch、_ungetwch](../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)|「取消取得」從主控台讀取的最後一個字元，使它成為要讀取的下一個字元|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [輸入和輸出](../c-runtime-library/input-and-output.md)<br/>
 [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

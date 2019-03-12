@@ -19,12 +19,12 @@ helpviewer_keywords:
 - _except_handler3 function
 - except_handler3 function
 ms.assetid: b0c64898-0ae5-48b7-9724-80135a0813e2
-ms.openlocfilehash: 144bf25495d803a4db42ab45fcb0b101b09fe7cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0dfe007d7b444401accbf547674f96f7f7d54ac1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613859"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741311"
 ---
 # <a name="excepthandler3"></a>_except_handler3
 
@@ -63,6 +63,6 @@ int _except_handler3(
 
 若此方法找到適當的例外狀況處理常式，會將例外狀況傳遞至處理常式。 在此情況中，此方法不會回復至呼叫它的程式碼，且傳回值亦不相關。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [依字母順序排列的函式參考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

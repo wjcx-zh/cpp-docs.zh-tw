@@ -5,12 +5,12 @@ helpviewer_keywords:
 - files [C++]
 - streams
 ms.assetid: f61e712b-eac9-4c28-bb18-97c3786ef387
-ms.openlocfilehash: 329a3209f09d2a4cebde067f38e702684ac9e404
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea11ea76ade8a68c2d8a92e08d3652035c996d3d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503390"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750789"
 ---
 # <a name="files-and-streams"></a>檔案和資料流
 
@@ -40,7 +40,7 @@ ms.locfileid: "50503390"
 
 © 1989-2001 P.J. Plauger 與 Jim Brodie 著。 著作權所有，並保留一切權利。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [文字和二進位資料流](../c-runtime-library/text-and-binary-streams.md)<br/>
 [位元組和寬資料流](../c-runtime-library/byte-and-wide-streams.md)<br/>

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - ___setlc_active_func
 - ___unguarded_readlc_active_add_func
 ms.assetid: 605ec4e3-81e5-4ece-935a-f434768cc702
-ms.openlocfilehash: 23095bb13108ec9fde2b168035009f440e9d96f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 244bb5b0bd6a15dab2de1ad2d6b71c2ae2f850bb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525772"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743986"
 ---
 # <a name="setlcactivefunc-unguardedreadlcactiveaddfunc"></a>___setlc_active_func、___unguarded_readlc_active_add_func
 
@@ -50,8 +50,8 @@ int * ___unguarded_readlc_active_add_func(void);
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|`___setlc_active_func`、 `___unguarded_readlc_active_add_func`|無|
+|`___setlc_active_func`、 `___unguarded_readlc_active_add_func`|none|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)

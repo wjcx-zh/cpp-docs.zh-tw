@@ -9,12 +9,12 @@ f1_keywords:
 - VC.Project.VCManifestTool.VerboseOutput
 - VC.Project.VCManifestTool.AssemblyIdentity
 ms.assetid: b99368a5-6819-482c-a06e-f2409290cfd1
-ms.openlocfilehash: 5706a67ac3f6be7a916d6f4f0ee8ccfafdfb9475
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bd2f0bb67e06fbf462ea6a7779de07b2cc54592
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565213"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745120"
 ---
 # <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>一般、資訊清單工具、組態屬性、&lt;Projectname&gt; 屬性頁對話方塊
 
@@ -40,7 +40,7 @@ ms.locfileid: "50565213"
 
    `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [ndptecclick](/visualstudio/deployment/clickonce-application-manifest)<br>
 [資訊清單工具屬性頁](../ide/manifest-tool-property-pages.md)<br>

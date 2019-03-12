@@ -9,12 +9,12 @@ helpviewer_keywords:
 - internationalization routines
 - international applications, run-time routines for
 ms.assetid: ee536a04-3558-4729-8e10-6dabcde055fd
-ms.openlocfilehash: 32ac86804ac4701dfeca20fb03071198f0291f81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0066fe2b17425695cefc648acc7479172067e885
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460485"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57737980"
 ---
 # <a name="internationalization"></a>國際化
 
@@ -22,6 +22,6 @@ Microsoft 執行階段程式庫會提供許多可用於針對國際市場建立�
 
 其中也包含 ISO646 運算子替代項目。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

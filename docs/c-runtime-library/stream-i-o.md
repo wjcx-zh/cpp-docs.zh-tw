@@ -8,12 +8,12 @@ helpviewer_keywords:
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 097019b2299ad4d2563b5e0df1b943d190b16197
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8bf81d1969fcbcfd255f3d4f9878bd3aab421703
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442636"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746249"
 ---
 # <a name="stream-io"></a>資料流 I/O
 
@@ -95,7 +95,7 @@ ms.locfileid: "50442636"
 
 只有在具有 **fflush** 或是檔案定位函式 (**fseek**、**fsetpos** 或 **rewind**) 的介入呼叫時，輸入才能直接遵循輸出。 如果輸入作業遇到檔案結尾，則輸出可以遵循輸入，而沒有檔案定位函式的中間呼叫。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [輸入和輸出](../c-runtime-library/input-and-output.md)<br/>
 [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - _SH_DENYNO constant
 - SH_COMPAT constant
 ms.assetid: 95fadc3a-55dc-473d-98b5-e8211900465d
-ms.openlocfilehash: 5bcebc4f9321ebf3f85bdd757118f779a759fc62
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: dc27b3af0d430aedb8159b4591004f46d197ccd5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220513"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751540"
 ---
 # <a name="sharing-constants"></a>共用常數
 
@@ -51,7 +51,7 @@ ms.locfileid: "54220513"
 |`_SH_DENYNO`|允許讀取和寫入存取|
 |`_SH_SECURE`|設定安全模式 (共用讀取、獨佔寫入存取)。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [_sopen、_wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>
 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)<br/>

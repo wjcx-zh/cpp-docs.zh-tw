@@ -25,12 +25,12 @@ helpviewer_keywords:
 - O_RDONLY constant
 - _O_WRONLY constant
 ms.assetid: c8fa5548-9ac2-4217-801d-eb45e86f2fa4
-ms.openlocfilehash: 2dc473db50b1835d4e1495ce255c0a826563b70a
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: f0bf85dc8f27fca1720cde7f5a8b2029a791849c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220435"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739972"
 ---
 # <a name="file-constants"></a>檔案常數
 
@@ -56,7 +56,7 @@ ms.locfileid: "54220435"
 | `_O_TRUNC`  | 開啟檔案並將現有檔案截斷為零長度。檔案必須具有寫入權限。 檔案的內容會遭到銷毀。 如果指定此旗標，則無法指定 `_O_RDONLY`。  |
 | `_O_WRONLY`  | 開啟檔案以僅供寫入。如果已指定此旗標，則無法指定 `_O_RDONLY` 或 `_O_RDWR`。  |
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [_open、_wopen](../c-runtime-library/reference/open-wopen.md)<br/>
 [_sopen、_wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>

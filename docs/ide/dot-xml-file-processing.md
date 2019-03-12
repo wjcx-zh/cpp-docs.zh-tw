@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-ms.openlocfilehash: bc9aa57ffd68630d0a4209f8f8611882f8f36fc3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 75b58b7ce2b5c96e853c99f0827ee4de605a6f3d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524166"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748472"
 ---
 # <a name="xml-file-processing"></a>.XML 檔案處理
 
@@ -23,7 +23,7 @@ ms.locfileid: "51524166"
 
 - 識別碼字串的第一個部分會識別所識別的成員種類，格式為單一字元後面接著一個冒號。 使用的成員類型如下：
 
-  | 字元 | 描述 |
+  | 字元 | 說明 |
   |---------------|-----------------|
   | N | namespace<br /><br /> 您無法將文件註解新增至命名空間，但可以使用命名空間的 cref 參考。 |
   | T | 型別︰類別、介面、建構、列舉、委派 |
@@ -178,6 +178,6 @@ namespace N {
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [XML 文件](../ide/xml-documentation-visual-cpp.md)

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - _PLOSS constant
 - math error constants
 ms.assetid: 4be933a6-674e-45a5-8ac9-090023542f5b
-ms.openlocfilehash: b159d5dbe434f4ce63b7b93f60aca89b51437812
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 3267a5053cb2cd18cfcb07473bbcc4d6f8295f5d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220019"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751852"
 ---
 # <a name="math-error-constants"></a>運算錯誤常數
 
@@ -53,7 +53,7 @@ ms.locfileid: "54220019"
 |`_TLOSS`|發生精確度完全遺失。|
 |`_UNDERFLOW`|結果太小而無法表示。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [_matherr](../c-runtime-library/reference/matherr.md)<br/>
 [全域常數](../c-runtime-library/global-constants.md)

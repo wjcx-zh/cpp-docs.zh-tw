@@ -11,18 +11,18 @@ helpviewer_keywords:
 - browsing database file, .sdf
 - file types [C++], project files
 ms.assetid: 5823b954-36cf-42d3-8fd5-25bab3ef63d9
-ms.openlocfilehash: ea7fc0fa7ea57de9f12f30804ace2cecccaa4bff
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: f09c9912fa3c7de96f18458bc9823e6302ebe418
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330888"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743725"
 ---
 # <a name="project-and-solution-files"></a>專案和方案檔
 
 當您在 Visual Studio 中建立專案時，會建立下列檔案。 它們可用來管理方案中的專案檔案。
 
-|Filename|目錄位置|方案總管位置|描述|
+|Filename|目錄位置|方案總管位置|說明|
 |--------------|------------------------|--------------------------------|-----------------|
 |*Solname*.sln|*Projname*|不會顯示在方案總管中|*「方案」* 檔。 它會將專案的所有項目或多個專案組織成一個方案。|
 |*Projname*.suo|*Projname*|不會顯示在方案總管中|「方案選項」檔。 它會儲存您的方案自訂，如此每當您在方案中開啟專案或檔案時，它會呈現您所要的外觀和行為。|

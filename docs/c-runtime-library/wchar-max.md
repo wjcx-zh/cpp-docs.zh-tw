@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - WCHAR_MAX constant
 ms.assetid: 2b5f8bfd-9098-47fc-be8f-598a0c975ed4
-ms.openlocfilehash: 7e638839d652297dc866f1974aaae9a3c8d7e2f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c8c0906ff026419c10f1affa4db74191ee6e9f5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462158"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738621"
 ---
 # <a name="wcharmax"></a>WCHAR_MAX
 
@@ -23,6 +23,6 @@ ms.locfileid: "50462158"
 #include <wchar.h>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [全域常數](../c-runtime-library/global-constants.md)

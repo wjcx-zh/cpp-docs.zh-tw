@@ -9,12 +9,12 @@ helpviewer_keywords:
 - L_tmpnam constant
 - TMP_MAX constant
 ms.assetid: ab19fd0c-b5b7-49f7-b23d-da9dfbcf0c1f
-ms.openlocfilehash: 21b56a05b60067e04d0d3864a135ed5eccacfddc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 680ce31065711684dcbe3077e3114ed6efec5704
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609712"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743778"
 ---
 # <a name="tmpmax-ltmpnam"></a>TMP_MAX、L_tmpnam
 
@@ -28,6 +28,6 @@ ms.locfileid: "50609712"
 
 `TMP_MAX` 是 `tmpnam` 函式可以產生的唯一檔案名稱數目。 `L_tmpnam` 是 `tmpnam` 產生的暫存檔案名稱長度。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [全域常數](../c-runtime-library/global-constants.md)

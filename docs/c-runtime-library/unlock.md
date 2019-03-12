@@ -20,12 +20,12 @@ helpviewer_keywords:
 - unlock function
 - _unlock function
 ms.assetid: 2eda2507-a134-4997-aa12-f2f8cb319e14
-ms.openlocfilehash: 6fc9287df16ef2310121ced64622f6aadea5926b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aceac01608a3d62fc4ac9c3aaf1f530584e1a3fa
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533568"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740410"
 ---
 # <a name="unlock"></a>_unlock
 
@@ -51,7 +51,7 @@ void __cdecl _unlock(
 
 **來源：** mlock.c
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [依字母順序排列的函式參考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [_lock](../c-runtime-library/lock.md)

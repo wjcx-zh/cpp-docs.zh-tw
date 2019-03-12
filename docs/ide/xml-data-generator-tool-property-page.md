@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - XML Data Generator Tool property page
 ms.assetid: b2ef1c12-3419-429d-bb9d-bd7d9ffe1ffb
-ms.openlocfilehash: a5df028a809fa9dae623ec8023b7c107c5ff095b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e194b73d11a4ca57030e86ec009db3bd31403ad9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554088"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751957"
 ---
 # <a name="xml-data-generator-tool-property-page"></a>XML 資料產生器工具屬性頁
 
@@ -37,6 +37,6 @@ ms.locfileid: "50554088"
 
 如需如何以程式設計方式存取此物件成員的資訊，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [屬性頁](../ide/property-pages-visual-cpp.md)

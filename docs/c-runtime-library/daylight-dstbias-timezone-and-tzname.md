@@ -21,12 +21,12 @@ helpviewer_keywords:
 - tzname function
 - time-zone variables
 ms.assetid: d06c7292-6b99-4aba-b284-16a96570c856
-ms.openlocfilehash: ad28ce701a4c6aa60208ed0cefe8f7dc06ef55a7
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 3f9f78d0798140399960cade7ead408f958450ba
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325897"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748251"
 ---
 # <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight、_dstbias、_timezone 和 _tzname
 
@@ -62,7 +62,7 @@ extern char *_tzname[2];
 |`_tzname[0]`|時區名稱衍生自 `TZ` 環境變數。 預設值是 "PST"。|
 |`_tzname[1]`|DST 時區名稱衍生自 `TZ` 環境變數。 預設值是 "PDT" (太平洋日光節約時間)。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [全域變數](../c-runtime-library/global-variables.md)<br/>
 [_get_daylight](../c-runtime-library/reference/get-daylight.md)<br/>

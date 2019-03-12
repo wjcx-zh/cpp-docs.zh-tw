@@ -19,12 +19,12 @@ helpviewer_keywords:
 - _LK_RLCK constant
 - LK_LOCK constant
 ms.assetid: c3dc92c8-60e3-4d29-9f50-5d217627c8ad
-ms.openlocfilehash: 721e2433a6d7a76ad73b0f52f033c3e04cab8f6d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d559a68e8fede6e0b6dd40505a041b14da703681
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526305"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738498"
 ---
 # <a name="locking-constants"></a>_locking 常數
 
@@ -48,7 +48,7 @@ ms.locfileid: "50526305"
 | `_LK_NBRLCK`  | 與 `_LK_NBLCK` 相同。  |
 | `_LK_UNLCK`  | 解除指定位元組的鎖定。 (位元組先前必須為已鎖定)。  |
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [_locking](../c-runtime-library/reference/locking.md)<br/>
 [全域常數](../c-runtime-library/global-constants.md)

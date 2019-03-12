@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - 32-bit Windows
 ms.assetid: ef1589db-84d7-4b24-8799-7c7a22cfe2bf
-ms.openlocfilehash: 55fe44fc48ee69633b45580fede555db24b205d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4827f82df08273dfa369d6242b9fe2be84875128
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439543"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746353"
 ---
 # <a name="32-bit-windows-timedate-formats"></a>32 位元 Windows 日期/時間格式
 
@@ -34,6 +34,6 @@ ms.locfileid: "50439543"
 |數值範圍：|0-119|1-12|1-31|
 ||(相對於 1980)|||
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [全域常數](../c-runtime-library/global-constants.md)

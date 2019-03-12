@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - global constants
 ms.assetid: 778d86fd-3ca6-4d2b-b4c5-aee6dc1efe6b
-ms.openlocfilehash: a23f45b7208899e31d755e17dad4ef1a184746f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f5d4093cccdc3a7ddf11fc48503b01161b04c5c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546368"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748589"
 ---
 # <a name="global-constants"></a>全域常數
 
@@ -43,7 +43,7 @@ Microsoft 執行階段程式庫包含程式庫常式所使用之全域常數的�
 |[TZNAME_MAX](../c-runtime-library/tzname-max.md)|[_WAIT_CHILD、_WAIT_GRANDCHILD](../c-runtime-library/wait-child-wait-grandchild.md)|
 |[WCHAR_MAX](../c-runtime-library/wchar-max.md)|[WCHAR_MIN](../c-runtime-library/wchar-min.md)|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 執行階段程式庫參考](../c-runtime-library/c-run-time-library-reference.md)<br/>
 [全域變數](../c-runtime-library/global-variables.md)<br/>

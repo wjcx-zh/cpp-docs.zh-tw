@@ -41,12 +41,12 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-ms.openlocfilehash: 2d092f9c1626f48dcdb006e18ece2a45bfeed36e
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 0e11c11b468ff6e058ccf5c75b000396e0473bfa
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220604"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747633"
 ---
 # <a name="errno-constants"></a>errno 常數
 
@@ -171,6 +171,6 @@ ERRNO.H 包含 **errno** 值的定義。 不過，ERRNO.H 中所提供的定義�
 #define EXDEV /* cross device link */
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [全域常數](../c-runtime-library/global-constants.md)

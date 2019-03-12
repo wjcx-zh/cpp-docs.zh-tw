@@ -14,12 +14,12 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: 78ba4afd8a7fad87f09c2a403d25d3c6d52cc0c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 30a1b57a12d5a238c80f9bb8f0a069385911a8e1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573468"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746900"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>為 Visual C++ 專案建立的檔案類型
 
@@ -91,7 +91,7 @@ ms.locfileid: "50573468"
 
 當您將項目加入專案時，您會將該項目加入該專案的所有組態中，不論項目是否可建置。 例如，如果您有名稱為 MyProject 的專案，加入項目會將其加入偵錯和發行專案組態。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [建立和管理 Visual C++ 專案](../ide/creating-and-managing-visual-cpp-projects.md)<br>
 [Visual C++ 專案類型](../ide/visual-cpp-project-types.md)<br>

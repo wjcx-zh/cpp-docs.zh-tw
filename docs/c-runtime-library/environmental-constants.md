@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MAX_ENV constant
 - _MAX_ENV constant
 ms.assetid: 5224f540-231c-47aa-be9a-467efd1db281
-ms.openlocfilehash: 49da6e50649905257b126c0c4d5f6746d3f330a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 789d4e27de5b21a76bfd6155ec7f49135a21593a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587625"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739229"
 ---
 # <a name="environmental-constants"></a>環境常數
 
@@ -28,6 +28,6 @@ ms.locfileid: "50587625"
 |--------------|-------------|
 |`_MAX_ENV`|環境字串的最大字串大小。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [全域常數](../c-runtime-library/global-constants.md)

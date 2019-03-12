@@ -12,12 +12,12 @@ helpviewer_keywords:
 - _S_IWRITE constant
 - _S_IREAD constant
 ms.assetid: 593cad33-31d1-44d2-8941-8af7d210c88c
-ms.openlocfilehash: c0c5e02458fa6b5436b029392a40bd2f54f22c0c
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 0e042cddce6edf079aa54f114130f9750412e327
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220279"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742699"
 ---
 # <a name="file-permission-constants"></a>檔案使用權限常數
 
@@ -47,7 +47,7 @@ ms.locfileid: "54220279"
 |`_S_IWRITE`|不允許讀取 (檔案為唯寫)|
 |`_S_IREAD` &#124; `_S_IWRITE`|不允許讀取和寫入|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [_open、_wopen](../c-runtime-library/reference/open-wopen.md)<br/>
 [_sopen、_wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>

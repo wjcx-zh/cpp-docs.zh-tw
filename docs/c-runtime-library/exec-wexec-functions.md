@@ -53,12 +53,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: 4974571764c22b26e84e93c68d679afc8a1cea73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72300f754015e54daf14863ca2ae677bde8f7d1a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573364"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746197"
 ---
 # <a name="exec-wexec-functions"></a>_exec、_wexec 函式
 
@@ -73,7 +73,7 @@ ms.locfileid: "50573364"
 
 函式名稱結尾的字母決定了變化。
 
-|_exec 函式後置字元|描述|
+|_exec 函式後置字元|說明|
 |----------------------------|-----------------|
 |`e`|`envp`，環境設定的指標陣列，會傳遞至新執行緒。|
 |`l`|命令列引數會分別傳遞至 `_exec` 函式。 一般而言用於已預先知道新處理序的參數數目時。|
@@ -233,7 +233,7 @@ int main( int ac, char* av[] )
 
 **標頭：** process.h
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [流程控制和環境控制](../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](../c-runtime-library/reference/abort.md)<br/>

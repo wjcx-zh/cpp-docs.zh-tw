@@ -29,12 +29,12 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: 56587455b1b5246be361afc131786d85dbc9a1a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0915b7a98b10137b37025eb59161bc98c27ae7b3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469848"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748342"
 ---
 # <a name="inp-inpw-inpd"></a>_inp、_inpw、_inpd
 
@@ -89,7 +89,7 @@ I/O 連接埠號碼。
 
 所有版本的 [C 執行階段程式庫](../c-runtime-library/crt-library-features.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [主控台和連接埠 I/O ](../c-runtime-library/console-and-port-i-o.md)<br/>
 [_outp、_outpw、_outpd](../c-runtime-library/outp-outpw-outpd.md)

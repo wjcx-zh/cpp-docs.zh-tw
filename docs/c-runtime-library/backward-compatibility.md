@@ -9,12 +9,12 @@ helpviewer_keywords:
 - compatibility, C run-time libraries
 - backward compatibility
 ms.assetid: cc3175cf-97fd-492f-b329-5791aea63090
-ms.openlocfilehash: d418a3450f22e53c8cb320f0a1a27c9f2e434c54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f672f0601a9d20a726f90963265d08ec212dedce
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460550"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744467"
 ---
 # <a name="backward-compatibility"></a>回溯相容性
 
@@ -26,6 +26,6 @@ ms.locfileid: "50460550"
 
 如需編譯器命令列選項的詳細資訊，請參閱[編譯器參考](../build/reference/compiler-options.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [相容性](../c-runtime-library/compatibility.md)

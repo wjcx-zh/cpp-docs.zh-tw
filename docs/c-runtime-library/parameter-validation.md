@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - parameters, validation
 ms.assetid: 019dd5f0-dc61-4d2e-b4e9-b66409ddf1f2
-ms.openlocfilehash: b0ccc589809fc5204659ad5af28ece0096855d30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c7b2ae50fdcbf59cd23cc309a4ddc4c0803e24e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677587"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748420"
 ---
 # <a name="parameter-validation"></a>參數驗證
 
@@ -25,7 +25,7 @@ ms.locfileid: "50677587"
 
 使用函式 [_set_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) 或 [_set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) 將無效的參數處理常式設成您自己的函式，可以變更此行為。 如果您指定的函式不終止應用程式，控制權就會回到接收了無效參數的函式。 在 CRT 中，這些函式通常會停止執行函數，將 `errno` 設為錯誤碼，並傳回錯誤碼。 在許多情況下，`errno` 值和傳回值都是指出無效參數的 `EINVAL`。 在某些情況下，會傳回更具體的錯誤碼，例如不正確檔案指標的 `EBADF` 傳入為參數。 如需 `errno` 的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [CRT 中的安全性功能](../c-runtime-library/security-features-in-the-crt.md)<br/>
 [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

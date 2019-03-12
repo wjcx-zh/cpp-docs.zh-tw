@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Makefile projects, Makefile Project Wizard
 - MakeFile Project Wizard [Visual Studio]
 ms.assetid: 38219802-320d-4c48-a118-4792de8f3b2d
-ms.openlocfilehash: 00514ceb32e6ea80e493bb61eecc40a32bcad86e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b5158cca3663ea41f22550241da4e873287a1d0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624493"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741779"
 ---
 # <a name="makefile-project-wizard"></a>Makefile 專案精靈
 
@@ -24,7 +24,7 @@ ms.locfileid: "50624493"
 
 若要變更這些預設值，請按一下精靈左欄的 [[應用程式設定]](../ide/application-settings-makefile-project-wizard.md) 索引標籤，進行必要的變更。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [建立 Makefile 專案](../ide/creating-a-makefile-project.md)<br>
 [NMAKE 參考](../build/nmake-reference.md)<br>

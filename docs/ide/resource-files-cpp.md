@@ -6,12 +6,12 @@ helpviewer_keywords:
 - resources [C++]
 - file types [C++], resource files
 ms.assetid: 338a4a0f-0c62-4ef1-a34f-5d86262d93a4
-ms.openlocfilehash: f9ead50c1c8761968ebad65f6a5289cfeea8fdaf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e19ad88a52467cd7ad2d5fa17dd964fd1bb38429
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622998"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747043"
 ---
 # <a name="resource-files-c"></a>資源檔 (C++)
 
@@ -19,7 +19,7 @@ ms.locfileid: "50622998"
 
 如需詳細資訊，請參閱[使用資源](../windows/working-with-resource-files.md)。
 
-|檔案名稱|目錄位置|方案總管位置|描述|
+|檔案名稱|目錄位置|方案總管位置|說明|
 |---------------|------------------------|--------------------------------|-----------------|
 |*Projname*.rc|*Projname*|原始程式檔|專案的資源指令檔。 根據專案類型，以及針對專案選取的支援 (例如工具列、對話方塊或 HTML)，資源指令檔會包含下列項目：<br /><br />- 預設功能表定義。<br />- 快速鍵和字串資料表。<br />- 預設的 [關於] 對話方塊。<br />- 其他對話方塊。<br />- 圖示檔 (res\\*Projname*.ico)。<br />- 版本資訊。<br />- 點陣圖。<br />- 工具列。<br />- HTML 檔案。<br /><br /> 資源檔包含標準 MFC 資源的 Afxres.rc 檔案。|
 |偵錯工具|*Projname*|標頭檔|資源標頭檔，其中包含專案所使用之資源的定義。|
@@ -30,6 +30,6 @@ ms.locfileid: "50622998"
 |Toolbar.bmp|*Projname*\res|資源檔|點陣圖檔，代表工具列或選擇區中的應用程式或控制項。 此點陣圖會包含在專案的資源檔中。 初始工具列和狀態列是在 **CMainFrame** 類別中建構。|
 |ribbon.mfcribbon-ms|*Projname*\res|資源檔|資源檔，其中包含定義功能區按鈕、控制項和屬性的 XML 程式碼。 如需詳細資訊，請參閱 [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [為 Visual C++ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)

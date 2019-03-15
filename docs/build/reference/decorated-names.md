@@ -6,12 +6,12 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: d9d3db9a3db1943581e5fd603ba85777cb49b863
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3fae232e6ca886195315002f4e65063d8a23ddc8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423309"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815415"
 ---
 # <a name="decorated-names"></a>裝飾名稱
 
@@ -67,7 +67,7 @@ C 函式的裝飾形式取決於它的宣告中所使用的呼叫慣例，如下
 
 #### <a name="to-use-a-listing-to-view-decorated-names"></a>使用清單檢視裝飾名稱
 
-1. 編譯包含資料、 物件或函式定義或原型的原始程式檔，以產生清單[列出檔案類型](../../build/reference/fa-fa-listing-file.md)編譯器選項設定為含有原始程式碼的組件 (**/FAs**)。
+1. 編譯包含資料、 物件或函式定義或原型的原始程式檔，以產生清單[列出檔案類型](fa-fa-listing-file.md)編譯器選項設定為含有原始程式碼的組件 (**/FAs**)。
 
    例如，輸入`cl /c /FAs example.cpp`開發人員命令提示字元來產生清單檔 example.asm。
 
@@ -94,5 +94,5 @@ is :- "private: void __thiscall a::func1(int)"
 
 ## <a name="see-also"></a>另請參閱
 
-[C/C++ 建置工具](../../build/reference/c-cpp-build-tools.md)<br/>
+[其他 MSVC 建置工具](c-cpp-build-tools.md)<br/>
 [使用 extern 指定連結](../../cpp/using-extern-to-specify-linkage.md)

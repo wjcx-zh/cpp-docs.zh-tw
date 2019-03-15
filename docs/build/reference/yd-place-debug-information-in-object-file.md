@@ -9,16 +9,16 @@ helpviewer_keywords:
 - debugging [C++], debug information files
 - Yd compiler option [C++]
 ms.assetid: c5a699fe-65ce-461e-964c-7f5eb2a8320a
-ms.openlocfilehash: 55bb8197cd15243f65c90d7fbd2724f91fce23b4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e6719226d28088d10da6c4f0e6caf3bdb78bea27
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414872"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820152"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (將偵錯資訊置入目的檔)
 
-從先行編譯標頭 (.pch) 檔案搭配使用時建立完整的偵錯資訊置於所有目的檔的步調[/Yc](../../build/reference/yc-create-precompiled-header-file.md)並[/z7](../../build/reference/z7-zi-zi-debug-information-format.md)選項。 已取代。
+從先行編譯標頭 (.pch) 檔案搭配使用時建立完整的偵錯資訊置於所有目的檔的步調[/Yc](yc-create-precompiled-header-file.md)並[/z7](z7-zi-zi-debug-information-format.md)選項。 已取代。
 
 ## <a name="syntax"></a>語法
 
@@ -28,9 +28,9 @@ ms.locfileid: "57414872"
 
 ## <a name="remarks"></a>備註
 
-**/Yd**已被取代;Visual c + + 現在支援多個物件寫入至單一的.pdb 檔案，請使用 **/Zi**改。 如需已被取代的編譯器選項的清單，請參閱 <<c0>  **已取代及移除的編譯器選項**中[依分類排列的編譯器選項](../../build/reference/compiler-options-listed-by-category.md)。
+**/Yd**已被取代;Visual c + + 現在支援多個物件寫入至單一的.pdb 檔案，請使用 **/Zi**改。 如需已被取代的編譯器選項的清單，請參閱 <<c0>  **已取代及移除的編譯器選項**中[依分類排列的編譯器選項](compiler-options-listed-by-category.md)。
 
-除非您要散發程式庫包含偵錯資訊，請使用[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)選項而非 **/z7**並 **/Yd**。
+除非您要散發程式庫包含偵錯資訊，請使用[/Zi](z7-zi-zi-debug-information-format.md)選項而非 **/z7**並 **/Yd**。
 
 將完整的偵錯資訊儲存在每個.obj 檔案，則只需要將包含偵錯資訊的程式庫分散。 它會減緩編譯，而且需要大量磁碟空間。 當 **/Yc**並 **/z7**不會使用 **/Yd**，編譯器將常見的偵錯資訊儲存在從.pch 檔案建立的第一個.obj 檔案。 編譯器不會將這項資訊插入.pch 檔案，從後續建立的.obj 檔案它會插入交互參照的資訊。 無論多少的.obj 檔案使用.pch 檔案，只能有一個.obj 檔案會包含常見的偵錯資訊。
 
@@ -38,13 +38,13 @@ ms.locfileid: "57414872"
 
 如需有關先行編譯標頭的詳細資訊，請參閱：
 
-- [/Y (先行編譯標頭檔)](../../build/reference/y-precompiled-headers.md)
+- [/Y (先行編譯標頭檔)](y-precompiled-headers.md)
 
-- [建立先行編譯標頭檔](../../build/reference/creating-precompiled-header-files.md)
+- [先行編譯標頭檔](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -83,5 +83,5 @@ CL /YuETC.H /Z7 G.CPP
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: 48592fd6162ee354d82e73228e8b144ef0f354ed
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420580"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810233"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>使用 __declspec(dllexport) 從 DLL 匯出
 
@@ -49,7 +49,7 @@ class __declspec(dllexport) CExampleExport : public CObject
 #define DllExport   __declspec( dllexport )
 ```
 
-**__declspec （dllexport)** 存放區函式的 DLL 匯出表中的名稱。 如果您想要最佳化的資料表大小，請參閱[從根據序數而非依名稱的 DLL 匯出函式](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)。
+**__declspec （dllexport)** 存放區函式的 DLL 匯出表中的名稱。 如果您想要最佳化的資料表大小，請參閱[從根據序數而非依名稱的 DLL 匯出函式](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)。
 
 > [!NOTE]
 >  當將 DLL 原始程式碼從 win16 移植到 Win32，取代每個執行個體 **__export**具有 **__declspec （dllexport)**。
@@ -58,28 +58,28 @@ class __declspec(dllexport) CExampleExport : public CObject
 
 ## <a name="what-do-you-want-to-do"></a>請您指定選項。
 
-- [使用.def 檔從 DLL 匯出](../build/exporting-from-a-dll-using-def-files.md)
+- [使用.def 檔從 DLL 匯出](exporting-from-a-dll-using-def-files.md)
 
-- [匯出和匯入使用 AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [匯出和匯入使用 AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [匯出 c + + 函式，以用於 C 語言可執行檔](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [匯出 c + + 函式，以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [匯出 C 函式，以用於 C 或 c + + 語言可執行檔](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [匯出 C 函式，以用於 C 或 c + + 語言可執行檔](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [判斷要使用哪一個匯出方法](../build/determining-which-exporting-method-to-use.md)
+- [判斷要使用哪一個匯出方法](determining-which-exporting-method-to-use.md)
 
-- [將應用程式使用 __declspec （dllimport） 匯入](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [將應用程式使用 __declspec （dllimport） 匯入](importing-into-an-application-using-declspec-dllimport.md)
 
-- [初始化 DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [初始化 DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
 - [__Declspec 關鍵字](../cpp/declspec.md)
 
-- [匯入和匯出內嵌函式](../build/importing-and-exporting-inline-functions.md)
+- [匯入和匯出內嵌函式](importing-and-exporting-inline-functions.md)
 
-- [交互匯入](../build/mutual-imports.md)
+- [交互匯入](mutual-imports.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[從 DLL 匯出](../build/exporting-from-a-dll.md)
+[從 DLL 匯出](exporting-from-a-dll.md)

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - -INTEGRITYCHECK editbin options
 - /INTEGRITYCHECK editbin options
 - INTEGRITYCHECK editbin options
-ms.openlocfilehash: b3f6622e3628db53c363b239c59accd94f708ab0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4174e22dcdadb3b3319998614285c13741fe3a88
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617265"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814237"
 ---
 # <a name="integritycheck"></a>/INTEGRITYCHECK
 
 指定必須檢查在載入時間的二進位檔映像的數位簽章。
 
-> **/INTEGRITYCHECK**[**: NO**]
+> **/INTEGRITYCHECK**[**:NO**]
 
 ## <a name="remarks"></a>備註
 
@@ -26,4 +26,4 @@ ms.locfileid: "50617265"
 
 ## <a name="see-also"></a>另請參閱
 
-[EDITBIN 選項](../../build/reference/editbin-options.md)
+[EDITBIN 選項](editbin-options.md)

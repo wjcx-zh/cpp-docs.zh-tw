@@ -1,5 +1,5 @@
 ---
-title: 設定 Visual c + + 64 位元 x64 目標
+title: 設定適用於 64 位元、 x64 的 c + + 專案的目標
 ms.date: 11/04/2016
 helpviewer_keywords:
 - 64-bit compiler [C++], options
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - programming [C++], 64-bit
 - Visual C++, 64-bit hardware
 ms.assetid: cb99f72b-8c74-48f4-846a-8921b37b97e9
-ms.openlocfilehash: c0c3620f4e5fea864fda1fd3d6b046fa3f485085
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c56cd34ecbc6615b0acebde6c40c658ca0c436a4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417537"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818111"
 ---
-# <a name="configure-visual-c-for-64-bit-x64-targets"></a>設定 Visual c + + 64 位元 x64 目標
+# <a name="configure-c-projects-for-64-bit-x64-targets"></a>設定適用於 64 位元、 x64 的 c + + 專案的目標
 
 此章節包含有關鎖定為目標的 64 位元 x64 硬體使用 Visual c + + 建置工具。
 
 ## <a name="in-this-section"></a>本節內容
 
-- [如何：將 Visual C++ 專案設定為以 64 位元 x64 平台為目標](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
+- [如何：將 Visual C++ 專案設定為以 64 位元 x64 平台為目標](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
 
-- [如何：在命令列啟用 64 位元 Visual C++ 工具組](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
+- [如何：在命令列啟用 64 位元 Visual C++ 工具組](how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
 
-- [Visual C++ 64 位元移轉時常見的問題](../build/common-visual-cpp-64-bit-migration-issues.md)
+- [Visual C++ 64 位元移轉時常見的問題](common-visual-cpp-64-bit-migration-issues.md)
 
-- [x64 軟體慣例](../build/x64-software-conventions.md)
+- [x64 軟體慣例](x64-software-conventions.md)
 
 ## <a name="related-sections"></a>相關章節
 
@@ -35,9 +35,9 @@ ms.locfileid: "57417537"
 
 [align](../cpp/align-cpp.md)
 
-[/clr (通用語言執行平台編譯)](../build/reference/clr-common-language-runtime-compilation.md)
+[/clr (通用語言執行平台編譯)](reference/clr-common-language-runtime-compilation.md)
 
-[/favor (專為架構最佳化)](../build/reference/favor-optimize-for-architecture-specifics.md)
+[/favor (專為架構最佳化)](reference/favor-optimize-for-architecture-specifics.md)
 
 [64 位元 Windows 程式設計指南](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows)
 
@@ -47,4 +47,4 @@ ms.locfileid: "57417537"
 
 ## <a name="see-also"></a>另請參閱
 
-[建置 C/C++ 程式](building-c-cpp-programs.md)
+[專案和組建系統](projects-and-build-systems-cpp.md)

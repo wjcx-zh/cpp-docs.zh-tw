@@ -1,22 +1,19 @@
 ---
-title: 逐步解說：在命令列上編譯 C++/CLI 程式
+title: 逐步解說：編譯 C + + /cli 程式命令列上
 ms.date: 09/24/2018
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
-ms.openlocfilehash: e8841600fd61aacfe5b942ac4a4305619dff7e90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c90d2c915db7264dc1b4e4807803e063c2a24fc7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451021"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811923"
 ---
-# <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>逐步解說：在命令列上編譯 C++/CLI 程式
+# <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>逐步解說：編譯 C + + /cli 程式命令列上
 
 您可以建立以通用語言執行階段 (CLR) 為目標且使用 .NET Framework 的 Visual C++ 程式，並在命令列上建置它們。 Visual C++ 支援 C++/CLI 程式設計語言，其具有其他類型及運算子，以將 .NET 程式設計模型設定為目標。 取得的一般資訊的 C + + 語言，請參閱[.NET 程式設計使用 C + + /cli （Visual c + +）](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)。
 
 在此逐步解說中，您可以使用文字編輯器來建立基本的 C++/CLI 程式，然後在命令列上進行編譯。 (您可以使用自己的 C++/CLI 程式，而不是輸入所顯示的程式，或者您可以使用其他說明文章中的 C++/CLI 程式碼範例。 這項技術可用於建置和測試沒有任何 UI 元素的小模組。）
-
-> [!NOTE]
-> 您還可以使用 Visual Studio IDE，來編譯 C++/CLI 程式。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 編譯 Visual Studio 中 Clr 的 c + + 程式](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -26,11 +23,11 @@ ms.locfileid: "50451021"
 
 下列步驟顯示如何編譯使用 .NET Framework 類別的 C++/CLI 主控台應用程式。
 
-若要啟用編譯 C + /cli，您必須使用[/clr](../build/reference/clr-common-language-runtime-compilation.md)編譯器選項。 Visual C++ 編譯器會產生包含 MSIL 程式碼或混合的 MSIL 和機器碼的 .exe 檔案，並會連結至所需的 .NET Framework 程式庫。
+若要啟用編譯 C + /cli，您必須使用[/clr](reference/clr-common-language-runtime-compilation.md)編譯器選項。 MSVC 編譯器會產生包含 MSIL 程式碼的.exe 檔案 — 或混合的 MSIL 和原生程式碼，以及所需的.NET Framework 程式庫的連結。
 
 ### <a name="to-compile-a-ccli-application-on-the-command-line"></a>在命令列上編譯 C++/CLI 應用程式
 
-1. 開啟**開發人員命令提示字元**視窗。 特定的指示，請參閱[若要開啟 開發人員命令提示字元視窗](../build/building-on-the-command-line.md#developer_command_prompt)。
+1. 開啟**開發人員命令提示字元**視窗。 特定的指示，請參閱[若要開啟 開發人員命令提示字元視窗](building-on-the-command-line.md#developer_command_prompt)。
 
    若要成功編譯程式碼，需要系統管理員認證，具體取決於電腦的作業系統及組態。 若要以系統管理員身分執行命令提示字元視窗，以滑鼠右鍵按一下要開啟命令提示字元的捷徑功能表，然後選擇**更多** > **系統管理員身分執行**。
 
@@ -64,5 +61,5 @@ ms.locfileid: "50451021"
 ## <a name="see-also"></a>另請參閱
 
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
-[建置 C/C++ 程式](../build/building-c-cpp-programs.md)<br/>
-[編譯器選項](../build/reference/compiler-options.md)
+[專案和組建系統](projects-and-build-systems-cpp.md)<br/>
+[MSVC 編譯器選項](reference/compiler-options.md)

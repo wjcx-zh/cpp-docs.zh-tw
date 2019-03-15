@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, notification hooks
 ms.assetid: e9c291ed-2f2d-4319-a171-09800625256f
-ms.openlocfilehash: 1e4dc6331e2a957c0268e686fff7dbb3f7eb0b24
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 884d8e8479b7cad28d99e19adfac4d05dbeec5f5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426546"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818306"
 ---
 # <a name="notification-hooks"></a>告知攔截
 
@@ -77,8 +77,8 @@ ExternC
 PfnDliHook   __pfnDliFailureHook2;
 ```
 
-通知傳入**DelayLoadInfo**攔截函式，以及通知值的結構。 這項資料等同於使用延遲載入 helper 常式。 通知值將會是其中一個定義中的值[結構和常數定義](../../build/reference/structure-and-constant-definitions.md)。
+通知傳入**DelayLoadInfo**攔截函式，以及通知值的結構。 這項資料等同於使用延遲載入 helper 常式。 通知值將會是其中一個定義中的值[結構和常數定義](structure-and-constant-definitions.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[錯誤處理和通知](../../build/reference/error-handling-and-notification.md)
+[錯誤處理和通知](error-handling-and-notification.md)

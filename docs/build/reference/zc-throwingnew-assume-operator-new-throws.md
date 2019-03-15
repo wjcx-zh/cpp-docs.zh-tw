@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 20ff0101-9677-4d83-8c7b-8ec9ca49f04f
-ms.openlocfilehash: 782cb55d30bfb11f55a0074a5c3245dd389323ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8c7b4e7246cc3bb1b3a73cde4f6830eb7178dd2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561222"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813509"
 ---
 # <a name="zcthrowingnew-assume-operator-new-throws"></a>/Zc: throwingnew （假設擲回運算子 new）
 
@@ -30,7 +30,7 @@ ms.locfileid: "50561222"
 
 因為 ISO C + + 98，標準已指定，預設值[new 運算子](../../standard-library/new-operators.md#op_new)就會擲回`std::bad_alloc`當記憶體配置失敗。 Visual Studio 6.0 到 Visual c + + 版本上配置失敗，傳回 null 指標。 從 Visual Studio 2002`operator new`符合標準，並在失敗時擲回。 若要支援使用較舊的配置樣式的程式碼，Visual Studio 提供可連結實作`operator new`中在失敗時傳回 null 指標的 nothrownew.obj 連結。 根據預設，編譯器也會產生防禦性的 null 檢查，以防止這些舊樣式的配置器失敗造成立即的損毀。 **/Zc: throwingnew**選項會告訴編譯器將省略這些 null 檢查，假設所有連結的記憶體配置器符合標準。 這不適用於明確非擲回`operator new`多載，其會使用其他的型別參數宣告`std::nothrow_t`還有明確`noexcept`規格。
 
-就概念而言，若要建立可用的存放區的物件，則編譯器會產生配置其記憶體的程式碼，然後叫用其建構函式初始化的記憶體。 因為 Visual c + + 編譯器通常無法分辨是否此程式碼將會連結到不合格，非擲回的配置器，依預設它也會產生 null 檢查，再呼叫建構函式。 這可防止將 null 指標取值 （dereference) 的建構函式呼叫中如果非擲回的配置失敗。 在大部分情況下，這些檢查是不必要的因為預設`operator new`配置器會擲回，而不是傳回 null 指標。 檢查也會有太妙的副作用。 它們膨脹的程式碼大小、 它們填滿分支預測工具和他們禁止其他有用的編譯器最佳化，例如 devirtualization 或 const 傳播出初始化的物件。 檢查的目的是為了支援程式碼連結至*nothrownew.obj 連結*，或有自訂不合格`operator new`實作。 如果您不要使用不合格`operator new`，我們建議您使用 **/zc: throwingnew**最佳化程式碼。
+就概念而言，若要建立可用的存放區的物件，則編譯器會產生配置其記憶體的程式碼，然後叫用其建構函式初始化的記憶體。 MSVC 編譯器通常無法分辨是否此程式碼將會連結到不合格，非擲回的配置器，因為依預設它也會產生 null 檢查，再呼叫建構函式。 這可防止將 null 指標取值 （dereference) 的建構函式呼叫中如果非擲回的配置失敗。 在大部分情況下，這些檢查是不必要的因為預設`operator new`配置器會擲回，而不是傳回 null 指標。 檢查也會有太妙的副作用。 它們膨脹的程式碼大小、 它們填滿分支預測工具和他們禁止其他有用的編譯器最佳化，例如 devirtualization 或 const 傳播出初始化的物件。 檢查的目的是為了支援程式碼連結至*nothrownew.obj 連結*，或有自訂不合格`operator new`實作。 如果您不要使用不合格`operator new`，我們建議您使用 **/zc: throwingnew**最佳化程式碼。
 
 **/Zc: throwingnew**選項預設為關閉，並不會受到[/permissive--](permissive-standards-conformance.md)選項。
 
@@ -44,7 +44,7 @@ ms.locfileid: "50561222"
 
 ## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 從**組態**下拉式功能表中，選擇**所有組態**。
 
@@ -54,9 +54,9 @@ ms.locfileid: "50561222"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
-[/Zc (一致性)](../../build/reference/zc-conformance.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[/Zc (一致性)](zc-conformance.md)<br/>
 [noexcept (C++)](../../cpp/noexcept-cpp.md)<br/>
 [例外狀況規格 (throw) (C++)](../../cpp/exception-specifications-throw-cpp.md)<br/>
-[終止 （例外狀況）](../../standard-library/exception-functions.md#terminate)<br/>
+[terminate (exception)](../../standard-library/exception-functions.md#terminate)<br/>

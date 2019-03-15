@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -FIXED linker option
 - FIXED linker option
 ms.assetid: 929bba5e-b7d8-40ed-943e-056aa3710fc5
-ms.openlocfilehash: ccb89b7dfed78ddebf73aaf6e2a1a8529b065042
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6cc89df76e48ee258a7c6608aab12573ab11729b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423036"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811520"
 ---
 # <a name="fixed-fixed-base-address"></a>/FIXED (固定基底位址)
 
@@ -25,7 +25,7 @@ ms.locfileid: "57423036"
 
 ## <a name="remarks"></a>備註
 
-告知作業系統只載入位於慣用基底位址的程式。 如果無法使用慣用的基底位址，作業系統就不會載入檔案。 如需詳細資訊，請參閱 [/BASE (基底位址)](../../build/reference/base-base-address.md)。
+告知作業系統只載入位於慣用基底位址的程式。 如果無法使用慣用的基底位址，作業系統就不會載入檔案。 如需詳細資訊，請參閱 [/BASE (基底位址)](base-base-address.md)。
 
 /FIXED:NO 是 DLL 的預設值，而 /FIXED 則是其他專案類型的預設值。
 
@@ -35,7 +35,7 @@ ms.locfileid: "57423036"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **連結器**資料夾。
 
@@ -49,5 +49,5 @@ ms.locfileid: "57423036"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

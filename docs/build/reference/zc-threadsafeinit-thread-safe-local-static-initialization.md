@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: a0fc4b34-2cf0-45a7-a642-b8afc4ca19f2
-ms.openlocfilehash: a0a5edda3d0d178a03fa98cf689b257cd5ab3f53
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92a1bfa5ec3bab2814397d51e35e617b7666c706
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605825"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808335"
 ---
 # <a name="zcthreadsafeinit-thread-safe-local-static-initialization"></a>/Zc:threadSafeInit （安全執行緒本機靜態初始設定）
 
@@ -40,7 +40,7 @@ C + + 11 標準，在區塊範圍變數與靜態或執行緒儲存期必須是�
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 從**組態**下拉式功能表中，選擇**所有組態**。
 
@@ -50,6 +50,6 @@ C + + 11 標準，在區塊範圍變數與靜態或執行緒儲存期必須是�
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
-[/Zc (一致性)](../../build/reference/zc-conformance.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[/Zc (一致性)](zc-conformance.md)<br/>

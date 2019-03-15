@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /NXCOMPAT linker option
 - -NXCOMPAT linker option
 - NXCOMPAT linker option
-ms.openlocfilehash: 815719468e7dcf9325d19efe879b8f4ace040094
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8550337189f9c92a1c8a8d86f2f9b2b829bbc3e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490489"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813314"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (與資料執行防止相容)
 
@@ -20,7 +20,7 @@ ms.locfileid: "50490489"
 
 ## <a name="syntax"></a>語法
 
-> **/NXCOMPAT**[**: NO**]
+> **/NXCOMPAT**[**:NO**]
 
 ## <a name="remarks"></a>備註
 
@@ -38,7 +38,7 @@ ms.locfileid: "50490489"
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>在 Visual Studio 中設定這個連結器選項
 
-1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選擇**組態屬性** > **連結器** > **命令列**屬性頁。
 
@@ -50,5 +50,5 @@ ms.locfileid: "50490489"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

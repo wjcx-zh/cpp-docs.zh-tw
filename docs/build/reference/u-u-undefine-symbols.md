@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-ms.openlocfilehash: 59522b462f2393dd3fd4d8afefe9cbbe0e519203
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bfc03ebd5c900bf8bf81b4a50eed02111baf85ee
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413039"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822480"
 ---
 # <a name="u-u-undefine-symbols"></a>/U、/u (取消定義符號)
 
@@ -46,18 +46,18 @@ ms.locfileid: "57413039"
 
 |符號|功能|
 |------------|--------------|
-|_CHAR_UNSIGNED|預設 char 類型不帶正負號。 定義何時[/J](../../build/reference/j-default-char-type-is-unsigned.md)指定選項。|
-|_CPPRTTI|針對以編譯程式碼定義[/GR](../../build/reference/gr-enable-run-time-type-information.md)選項。|
-|_CPPUNWIND|針對以編譯程式碼定義[/EHsc](../../build/reference/eh-exception-handling-model.md)選項。|
-|_DLL|定義何時[/MD](../../build/reference/md-mt-ld-use-run-time-library.md)指定選項。|
+|_CHAR_UNSIGNED|預設 char 類型不帶正負號。 定義何時[/J](j-default-char-type-is-unsigned.md)指定選項。|
+|_CPPRTTI|針對以編譯程式碼定義[/GR](gr-enable-run-time-type-information.md)選項。|
+|_CPPUNWIND|針對以編譯程式碼定義[/EHsc](eh-exception-handling-model.md)選項。|
+|_DLL|定義何時[/MD](md-mt-ld-use-run-time-library.md)指定選項。|
 |_M_IX86|根據預設，定義為 600，適用於 x86 的目標。|
 |_MSC_VER|如需詳細資訊，請參閱 [Predefined Macros](../../preprocessor/predefined-macros.md)。|
 |_WIN32|定義 WIN32 應用程式。 永遠會定義。|
-|_MT|定義何時[/MD 或 /MT](../../build/reference/md-mt-ld-use-run-time-library.md)指定選項。|
+|_MT|定義何時[/MD 或 /MT](md-mt-ld-use-run-time-library.md)指定選項。|
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -71,9 +71,9 @@ ms.locfileid: "57413039"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
-[/J (預設 char 類型為 unsigned)](../../build/reference/j-default-char-type-is-unsigned.md)<br/>
-[/GR (啟用執行階段類型資訊)](../../build/reference/gr-enable-run-time-type-information.md)<br/>
-[/EH (例外狀況處理模型)](../../build/reference/eh-exception-handling-model.md)<br/>
-[/MD、/MT、/LD (使用執行階段程式庫)](../../build/reference/md-mt-ld-use-run-time-library.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[/J (預設 char 類型為 unsigned)](j-default-char-type-is-unsigned.md)<br/>
+[/GR (啟用執行階段類型資訊)](gr-enable-run-time-type-information.md)<br/>
+[/EH (例外狀況處理模型)](eh-exception-handling-model.md)<br/>
+[/MD、/MT、/LD (使用執行階段程式庫)](md-mt-ld-use-run-time-library.md)

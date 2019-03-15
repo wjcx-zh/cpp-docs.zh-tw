@@ -6,12 +6,12 @@ ms.date: 12/12/2017
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
-ms.openlocfilehash: 09780d5823190eb4cb3b4ad13bb60e33808e4987
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.openlocfilehash: 59813a553a9034503d8bf432400db31e6e3d9478
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977728"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813541"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>建置並執行 c + + 主控台應用程式專案
 
@@ -19,23 +19,23 @@ ms.locfileid: "52977728"
 
 ## <a name="prerequisites"></a>必要條件
 
-- 具有 c + + 工作負載中，使用您的電腦上安裝和執行 Visual Studio 中使用的桌面開發。 如果它尚未安裝，請依照下列中的步驟[Visual Studio 中的安裝 c + + 支援](../build/vscpp-step-0-installation.md)。
+- 具有 c + + 工作負載中，使用您的電腦上安裝和執行 Visual Studio 中使用的桌面開發。 如果它尚未安裝，請依照下列中的步驟[Visual Studio 中的安裝 c + + 支援](vscpp-step-0-installation.md)。
 
-- 建立"Hello，World ！" 專案，然後輸入其原始程式碼。 如果您還沒有這麼做，請依照下列中的步驟[建立 c + + 主控台應用程式專案](../build/vscpp-step-1-create.md)。
+- 建立"Hello，World ！" 專案，然後輸入其原始程式碼。 如果您還沒有這麼做，請依照下列中的步驟[建立 c + + 主控台應用程式專案](vscpp-step-1-create.md)。
 
 如果 Visual Studio 看起來像這樣，您就可以建置並執行您的應用程式項目：
 
-   ![準備好要建置新的專案](../build/media/vscpp-ready-to-build.png "準備好要建置新的專案")
+   ![準備好要建置新的專案](media/vscpp-ready-to-build.png "準備好要建置新的專案")
 
 ## <a name="build-and-run-your-code-in-visual-studio"></a>建置並執行 Visual Studio 中的程式碼
 
 1. 若要建置專案時，選擇**建置方案**從**建置**功能表。 **輸出**視窗會顯示在建置程序的結果。
 
-   ![建置專案](../build/media/vscpp-build-solution.gif "建置專案")
+   ![建置專案](media/vscpp-build-solution.gif "建置專案")
 
 1. 若要執行的程式碼，在功能表列上，選擇**偵錯**，**啟動但不偵錯**。
 
-   ![啟動專案](../build/media/vscpp-start-without-debugging.gif "啟動專案")
+   ![啟動專案](media/vscpp-start-without-debugging.gif "啟動專案")
 
    主控台視窗隨即開啟，然後再執行您的應用程式。 當您在 Visual Studio 啟動主控台應用程式時，它會執行您的程式碼，則會列印 「 按任意鍵繼續。 。 ." 若要讓您以查看輸出的機率。
 
@@ -55,7 +55,7 @@ ms.locfileid: "52977728"
 
 1. 在 命令提示字元 視窗中，以滑鼠右鍵按一下要將您的應用程式的路徑貼到 命令提示字元。 按下 Enter，執行您的應用程式。
 
-   ![在命令提示字元中執行應用程式](../build/media/vscpp-run-in-cmd.gif "在命令提示字元中執行應用程式")
+   ![在命令提示字元中執行應用程式](media/vscpp-run-in-cmd.gif "在命令提示字元中執行應用程式")
 
 恭喜，您已經建立，並在 Visual Studio 中執行主控台應用程式 ！
 

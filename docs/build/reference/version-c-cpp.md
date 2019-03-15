@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - VERSION .def file statement
 ms.assetid: 3533b97c-5183-45f9-9ca8-4e63462b5d26
-ms.openlocfilehash: 6d275e1e191e0550143dd5e7a828b734bba0fc96
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: abc0b751440d09dcaad7e449d7b151b479c51911
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414053"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815147"
 ---
 # <a name="version-cc"></a>VERSION (C/C++)
 
@@ -25,8 +25,8 @@ VERSION major[.minor]
 
 *主要*並*次要*引數是介於 0 到 65535 的十進位數字。 預設值是版本 0.0。
 
-指定的版本號碼的對等方法是使用[版本資訊](../../build/reference/version-version-information.md)(/ 版本) 選項。
+指定的版本號碼的對等方法是使用[版本資訊](version-version-information.md)(/ 版本) 選項。
 
 ## <a name="see-also"></a>另請參閱
 
-[模組定義陳述式的規則](../../build/reference/rules-for-module-definition-statements.md)
+[模組定義陳述式的規則](rules-for-module-definition-statements.md)

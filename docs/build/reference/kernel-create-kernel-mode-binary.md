@@ -5,12 +5,12 @@ f1_keywords:
 - /kernel
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-ms.openlocfilehash: 33a0f4019d8ad278f5850c499ee552ee72279455
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d065364cf6d3ae824098634c070f3651324aa52a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414749"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816447"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (建立核心模式二進位檔)
 
@@ -46,7 +46,7 @@ ms.locfileid: "57414749"
 |RTTI|已停用。 所有執行個體`dynamic_cast`並`typeid`關鍵字會發出編譯器錯誤，除非`dynamic_cast`以靜態方式使用。|
 |`new` 和 `delete`|您必須明確地定義`new()`或`delete()`運算子; 沒有編譯器或執行階段會提供預設定義。|
 
-呼叫慣例，自訂[/GS](../../build/reference/gs-buffer-security-check.md)當您使用允許組建選項，以及所有最佳化 **/kernel**選項。 內嵌多半不會受到 **/kernel**，利用相同的語意，編譯器接受。 如果您想要確定`__forceinline`內嵌的限定詞會接受，您必須確定該警告[C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md)會啟用，以便您知道某一特定`__forceinline`函式不是內嵌。
+呼叫慣例，自訂[/GS](gs-buffer-security-check.md)當您使用允許組建選項，以及所有最佳化 **/kernel**選項。 內嵌多半不會受到 **/kernel**，利用相同的語意，編譯器接受。 如果您想要確定`__forceinline`內嵌的限定詞會接受，您必須確定該警告[C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md)會啟用，以便您知道某一特定`__forceinline`函式不是內嵌。
 
 當傳遞編譯器 **/kernel**參數，它會預先定義前置處理器巨集，稱為`_KERNEL_MODE`且具有值**1**。 您可以使用這有條件地編譯為基礎的執行環境是在使用者模式或核心模式程式碼。 例如，下列程式碼會指定類別應該是在非可分頁記憶體區段中，編譯核心模式執行時。
 
@@ -88,7 +88,7 @@ class NONPAGESECTION MyNonPagedClass
 
 ### <a name="to-set-the-kernel-compiler-option-in-visual-studio"></a>若要在 Visual Studio 中設定 /kernel 編譯器選項
 
-1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取  **C/c + +** 資料夾。
 
@@ -98,5 +98,5 @@ class NONPAGESECTION MyNonPagedClass
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

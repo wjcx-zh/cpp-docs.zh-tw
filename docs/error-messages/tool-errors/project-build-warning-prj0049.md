@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - PRJ0049
 ms.assetid: 8b38afa1-e080-4efd-ae89-776cfd044413
-ms.openlocfilehash: a451b7fe7b2f7cd89f8898232badf0d3b7e9f138
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fba3de0be764aa56b56ed22c6a9fde9366295456
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447212"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816226"
 ---
 # <a name="project-build-warning-prj0049"></a>專案建置警告 PRJ0049
 
@@ -21,7 +21,7 @@ ms.locfileid: "50447212"
 
 1. 選擇下列其中一項：
 
-   - 變更在專案的目標的 framework**屬性頁**對話方塊讓您可晚於或等於最小 framework 版本的所有參考的組件和專案。 如需詳細資訊，請參閱 <<c0> [ 將參考加入](../../ide/adding-references-in-visual-cpp-projects.md)。
+   - 變更在專案的目標的 framework**屬性頁**對話方塊讓您可晚於或等於最小 framework 版本的所有參考的組件和專案。 如需詳細資訊，請參閱 <<c0> [ 將參考加入](../../build/adding-references-in-visual-cpp-projects.md)。
 
    - 移除參考的組件或晚於目標 framework 的最小 framework 版本的專案。 這些項目會標示警告圖示，在專案的**屬性頁**。
 

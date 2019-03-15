@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -GA compiler option [C++]
 - Optimize for Windows compiler options
 ms.assetid: be97323e-15a0-4836-862c-95980b51926a
-ms.openlocfilehash: bd6c4a3464762a24c9079bb79318ad3b0f05b74a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a5eb6a10f3c4833ecc3e9d9c8451894788ebd938
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420709"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817376"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (針對 Windows 應用程式最佳化)
 
@@ -35,7 +35,7 @@ ms.locfileid: "57420709"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -49,5 +49,5 @@ ms.locfileid: "57420709"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

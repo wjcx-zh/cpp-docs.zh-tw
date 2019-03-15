@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /F compiler option [C++]
 - stack, setting size
 ms.assetid: 17320b6f-8305-445b-9ec2-75833f4b29e0
-ms.openlocfilehash: 31d694c176afd3c79cde172248bfcd93d1346b54
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9db595daa7de7820b594a8515ece7481b4382c98
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414443"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820412"
 ---
 # <a name="f-set-stack-size"></a>/F (設定堆疊大小)
 
@@ -38,13 +38,13 @@ ms.locfileid: "57414443"
 
 您也可以藉由設定堆疊大小：
 
-- 使用 **/堆疊**連結器選項。 如需詳細資訊，請參閱 < [/堆疊](../../build/reference/stack.md)。
+- 使用 **/堆疊**連結器選項。 如需詳細資訊，請參閱 < [/堆疊](stack.md)。
 
-- 使用 EDITBIN 的.exe 檔案。 如需詳細資訊，請參閱 < [EDITBIN 參考](../../build/reference/editbin-reference.md)。
+- 使用 EDITBIN 的.exe 檔案。 如需詳細資訊，請參閱 < [EDITBIN 參考](editbin-reference.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **C/c + +** > **命令列**屬性頁。
 
@@ -56,5 +56,5 @@ ms.locfileid: "57414443"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

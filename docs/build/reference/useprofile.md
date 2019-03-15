@@ -3,12 +3,12 @@ title: /USEPROFILE （使用 LTCG 使用 PGO 資料）
 ms.date: 03/14/2018
 f1_keywords:
 - USEPROFILE
-ms.openlocfilehash: 4b780bed3b92b874f2bf18fb0235e8e2baf95ae9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bc0033ae5ef512cbd2e2063c5cb9bd9b061c180
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550627"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816525"
 ---
 # <a name="useprofile-run-pgo-in-thread-safe-mode"></a>/USEPROFILE (執行緒安全模式中的執行 PGO)
 
@@ -16,14 +16,14 @@ ms.locfileid: "50550627"
 
 ## <a name="syntax"></a>語法
 
-> **/USEPROFILE**[**:**{**激進**|**PGD =**_filename_}]
+> **/USEPROFILE**[**:**{**AGGRESSIVE**|**PGD=**_filename_}]
 
 ### <a name="arguments"></a>引數
 
-**積極**<br/>
+**AGGRESSIVE**<br/>
 這個選擇性的引數會指定在最佳化程式碼產生期間，應該使用積極的速度最佳化。
 
-**PGD**=*檔名*<br/>
+**PGD**=*filename*<br/>
 指定 .pgd 檔的主檔名。 根據預設，連結器會使用副檔名為.pgd 的基底的可執行檔名稱。
 
 ## <a name="remarks"></a>備註
@@ -38,7 +38,7 @@ ms.locfileid: "50550627"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **連結器** > **最佳化**屬性頁。
 
@@ -46,7 +46,7 @@ ms.locfileid: "50550627"
 
 1. 選取 **組態屬性** > **連結器** > **命令列**屬性頁。
 
-1. 請輸入 **/USEPROFILE**選項，並選擇性引數**其他選項** 方塊中。 選擇**確定**以儲存變更。
+1. 請輸入 **/USEPROFILE**選項，並選擇性引數**其他選項** 方塊中。 選取 [確定] 儲存您的變更。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 
@@ -56,5 +56,5 @@ ms.locfileid: "50550627"
 
 [/GENPROFILE 和 /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/LTCG](ltcg-link-time-code-generation.md)<br/>
-[特性指引最佳化](../../build/reference/profile-guided-optimizations.md)<br/>
-[特性指引最佳化的環境變數](../../build/reference/environment-variables-for-profile-guided-optimizations.md)<br/>
+[特性指引最佳化](../profile-guided-optimizations.md)<br/>
+[特性指引最佳化的環境變數](../environment-variables-for-profile-guided-optimizations.md)<br/>

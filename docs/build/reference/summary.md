@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /SUMMARY dumpbin option
 - SUMMARY dumpbin option
 ms.assetid: f33f244c-1f23-4e94-bd85-b26c97a19e6a
-ms.openlocfilehash: f5bc5a6e2b16280016de4943be984a448fe565ec
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: fd9923e22b5cb11981a3037ae3f30ef541445e98
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424141"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812170"
 ---
 # <a name="summary"></a>/SUMMARY
 
@@ -25,8 +25,8 @@ ms.locfileid: "57424141"
 
 此選項會顯示各區段，包括大小總計的基本資訊。 如果未不指定任何其他選項，此選項會是預設值。
 
-只有[/HEADERS](../../build/reference/headers.md) DUMPBIN 選項只適用於所產生的檔案上[/GL](../../build/reference/gl-whole-program-optimization.md)編譯器選項。
+只有[/HEADERS](headers.md) DUMPBIN 選項只適用於所產生的檔案上[/GL](gl-whole-program-optimization.md)編譯器選項。
 
 ## <a name="see-also"></a>另請參閱
 
-[DUMPBIN 選項](../../build/reference/dumpbin-options.md)
+[DUMPBIN 選項](dumpbin-options.md)

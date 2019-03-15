@@ -57,14 +57,13 @@ f1_keywords:
 - C4767
 - C4770
 - C4792
-- C4794
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
-ms.openlocfilehash: 02b679e3cfb91b09db381b014ba2f3d3d0e5b02a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4acc36fcf7508bdcfcc1bd936110df4c32c47ae2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553149"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810077"
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>編譯器警告 C4600 到 C4799
 
@@ -147,7 +146,7 @@ ms.locfileid: "50553149"
 |編譯器警告 （層級 4） C4681|'class': coclass 不指定為事件來源的預設介面|
 |編譯器警告 （層級 4） C4682|'parameter': 沒有方向參數屬性指定，預設為 [in]|
 |[編譯器警告 (層級 1) C4683](../../error-messages/compiler-warnings/compiler-warning-level-1-c4683.md)|'function': 事件來源有 'out'-參數;連結多個事件處理常式時請小心|
-|[編譯器警告 (層級 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|'attribute': 警告!! 屬性可能造成無效的程式碼產生： 請小心使用|
+|[編譯器警告 (層級 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|' attribute':警告!! 屬性可能造成無效的程式碼產生： 請小心使用|
 |編譯器警告 （層級 1） C4685|剖析樣板參數時需要 '> >'，但卻找到 '>>'|
 |[編譯器警告 (層級 3) C4686](../../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)|'user-defined type': 行為可能有變更，在 UDT 傳回呼叫慣例中發生變更|
 |[編譯器警告 （錯誤） C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'class': 密封抽象類別無法實作介面 'interface'|
@@ -194,7 +193,7 @@ ms.locfileid: "50553149"
 |[編譯器警告 (層級 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|'type' 具有 'file1' 和 'file2' 的不同大小： 數字和位元組數|
 |[編譯器警告 (層級 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|'var' 具有 'file1' 和 'file2' 中的不同類型: 'type1' 和 'type2'|
 |[編譯器警告 C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|暫時性存取的 '*運算式*' 受限於 /volatile:\<iso&#124;ms > 設定; 請考慮使用 __iso_volatile_load/store 內建函式|
-|[編譯器警告 (層級 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|呼叫受控 '進入點': Managed 程式碼可能不會執行載入器鎖定，包括 DLL 進入點和從 DLL 進入點到達的呼叫下|
+|[編譯器警告 (層級 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|呼叫受控 ' 進入點 ':Managed 程式碼可能不會執行載入器鎖定，包括 DLL 進入點和從 DLL 進入點到達的呼叫下|
 |編譯器警告 （層級 4） C4749|有條件地支援： offsetof 套用至非標準配置類型 '*型別*'|
 |編譯器警告 （層級 1） C4750|'identifier': 函式中有 _alloca() 內嵌成迴圈|
 |編譯器警告 （層級 4） C4751|/arch: avx 不適用於 intel （) Streaming SIMD Extensions 內嵌 ASM 中，|

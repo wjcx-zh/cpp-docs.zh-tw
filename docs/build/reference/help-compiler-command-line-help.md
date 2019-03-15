@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -? compiler option [C++]
 - cl.exe compiler, command-line syntax
 ms.assetid: 192533e7-86f2-48e0-a08f-b5e4e3a4e784
-ms.openlocfilehash: 871bbd8fe69b390acb7c3ee29a7ae2d73200f648
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6cd015211a7a8039c5a1a2db696bf2160e282cd1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424180"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813990"
 ---
 # <a name="help-compiler-command-line-help"></a>/HELP (編譯器命令列說明)
 
@@ -43,5 +43,5 @@ ms.locfileid: "57424180"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

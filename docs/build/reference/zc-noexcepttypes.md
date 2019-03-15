@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Zc:noexceptTypes
 - -Zc:noexceptTypes
 ms.assetid: 1cbf7e3c-0f82-4f91-84dd-612bcf26d2c6
-ms.openlocfilehash: f5f2fa3ef85e7ff15b28188e45a4ec397878873c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28e06f54049d36262134b6be7eadb0e6e5349a45
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462227"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812105"
 ---
 # <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc: noexcepttypes （c++17 noexcept 規則）
 
@@ -73,7 +73,7 @@ struct B : A
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **C/c + +** > **命令列**屬性頁。
 
@@ -81,6 +81,6 @@ struct B : A
 
 ## <a name="see-also"></a>另請參閱
 
-[/Zc (一致性)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (一致性)](zc-conformance.md)<br/>
 [noexcept](../../cpp/noexcept-cpp.md)<br/>
 [例外狀況規格 (throw)](../../cpp/exception-specifications-throw-cpp.md)

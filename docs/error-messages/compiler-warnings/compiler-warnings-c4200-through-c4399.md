@@ -31,14 +31,13 @@ f1_keywords:
 - C4380
 - C4387
 - C4388
-- C4396
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-ms.openlocfilehash: 02340234fc504773a29b3d83ae606cd1eb4e09f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cca32973ead1d7d88e37c4745491c8d5f181e0b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455988"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810506"
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>編譯器警告 s C4200 到 C4399
 
@@ -104,7 +103,7 @@ ms.locfileid: "50455988"
 |[編譯器警告 (層級 1) C4269](../../error-messages/compiler-warnings/compiler-warning-level-1-c4269.md)|'*識別碼*': 'const' 編譯器產生預設建構函式初始化的自動資料會產生不可靠的結果|
 |[編譯器警告 (層級 1) C4272](../../error-messages/compiler-warnings/compiler-warning-level-1-c4272.md)|'*函式*': __declspec （dllimport） 標示為; 匯入函式時，必須指定原生呼叫慣例。|
 |[編譯器警告 (層級 1) C4273](../../error-messages/compiler-warnings/compiler-warning-level-1-c4273.md)|'*函式*': 不一致的 dll 連結|
-|編譯器警告 （層級 1） C4274|#ident 忽略;請參閱 #pragma 註解 （exestr，'string'） 的文件|
+|編譯器警告 （層級 1） C4274|#ident ignored; see documentation for #pragma comment(exestr, 'string')|
 |[編譯器警告 (層級 2) C4275](../../error-messages/compiler-warnings/compiler-warning-level-2-c4275.md)|沒有 dll 介面 '*classkey*' '*identifier1*'做為基底 dll 介面'*classkey*' '*identifier2*'|
 |[編譯器警告 (層級 1) C4276](../../error-messages/compiler-warnings/compiler-warning-level-1-c4276.md)|'*函式*': 未提供原型; 假設沒有參數|
 |編譯器警告 （層級 1） C4277|匯入的項目 '*classname*::*成員*' 存在做為資料成員和函式成員; 已忽略資料成員|
@@ -116,7 +115,7 @@ ms.locfileid: "50455988"
 |[編譯器警告 (層級 3) C4283](../../error-messages/compiler-warnings/compiler-warning-level-3-c4283.md)|也透過類型 '*typeN*'|
 |[編譯器警告 (層級 2) C4285](../../error-messages/compiler-warnings/compiler-warning-level-2-c4285.md)|傳回型別 '*識別碼*:: operator->' 是遞迴，如果套用使用中置標記法|
 |[編譯器警告 (層級 1) C4286](../../error-messages/compiler-warnings/compiler-warning-level-1-c4286.md)|'*derived_type*': 基底類別會攔截 ('*base_type*') 在行'*line_number*'|
-|[編譯器警告 (層級 3) C4287](../../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md)|'*運算子*': unsigned 和負常數不相符|
+|[編譯器警告 (層級 3) C4287](../../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md)|'*operator*': unsigned/negative constant mismatch|
 |[編譯器警告 (層級 1) C4288](../../error-messages/compiler-warnings/compiler-warning-level-1-c4288.md)|使用非標準擴充: '*變數*': for 迴圈範圍外使用 for-loop 中所宣告的迴圈控制變數; 與外部範圍中宣告衝突|
 |[編譯器警告 (層級 4) C4289](../../error-messages/compiler-warnings/compiler-warning-level-4-c4289.md)|使用非標準擴充: '*變數*': for 迴圈範圍外使用 for-loop 中所宣告的迴圈控制變數|
 |[編譯器警告 (層級 3) C4290](../../error-messages/compiler-warnings/compiler-warning-level-3-c4290.md)|忽略除了將函式的 c + + 例外狀況規格不是 __declspec （nothrow）|
@@ -153,7 +152,7 @@ ms.locfileid: "50455988"
 |[編譯器警告 (層級 1) C4326](../../error-messages/compiler-warnings/compiler-warning-level-1-c4326.md)|傳回的類型 '*函式*'應該是'*type1*' 而不是 '*type2*'|
 |編譯器警告 C4327|'*指派*': LHS 的間接取值對齊 ('*alignment1*') 大於 RHS ('*alignment2*')|
 |編譯器警告 C4328|'*函式*': 型式參數的間接取值對齊*parameter_number* (*parameter_alignment*) 大於實際的引數的對齊 (*argument_alignment*)|
-|[編譯器警告 (層級 1) C4329](../../error-messages/compiler-warnings/compiler-warning-level-1-c4329.md)|列舉時會忽略 __declspec(align())|
+|[編譯器警告 (層級 1) C4329](../../error-messages/compiler-warnings/compiler-warning-level-1-c4329.md)|__declspec(align()) is ignored on enum|
 |編譯器警告 （層級 1） C4330|屬性 '*屬性*'for ' 區段*一節*' 略過|
 |[編譯器警告 (層級 1) C4333](../../error-messages/compiler-warnings/compiler-warning-level-1-c4333.md)|'*shift_operator*': 向右位移量太大，資料遺失|
 |[編譯器警告 (層級 3) C4334](../../error-messages/compiler-warnings/compiler-warning-level-3-c4334.md)|'*shift_operator*': 32 位元移位的結果會隱含地轉換為 64 位元 （是 64 位元位移？）|
@@ -175,7 +174,7 @@ ms.locfileid: "50455988"
 |[編譯器警告 (層級 2) C4356](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)|'*成員*': 無法透過衍生類別初始化靜態資料成員|
 |[編譯器警告 (層級 3) C4357](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)|委派的型式引數清單中找到的 param 陣列引數 '*委派*'產生時，忽略'*函式*'|
 |[編譯器警告 (層級 1) C4358](../../error-messages/compiler-warnings/compiler-warning-level-1-c4358.md)|'*運算子*': 組合委派的傳回類型不是 'void'，傳回的值未定義|
-|[編譯器警告 (層級 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|'*型別*': 對齊規範小於實際對齊 ('*對齊*')，且會被忽略。|
+|[編譯器警告 (層級 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|'*型別*':對齊規範小於實際對齊 ('*對齊*')，且會被忽略。|
 |編譯器警告 （層級 2） C4362|'*型別*': CLR 不支援大於 8 個位元組的對齊方式|
 |[編譯器警告 (層級 1) C4364](../../error-messages/compiler-warnings/compiler-warning-level-1-c4364.md)|#using 組件 '*組件*'先前出現在'*位置*' ('*line_number*') 而不需要為\_friend 屬性; 做為\_friend 不套用|
 |[編譯器警告 (層級 4) C4365](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)|'*運算式*': 從轉換'*type1*'to'*type2*'，signed/unsigned 不相符|
@@ -192,7 +191,7 @@ ms.locfileid: "50455988"
 |[編譯器警告 (層級 1) C4377](../../error-messages/compiler-warnings/compiler-warning-level-1-c4377.md)|原生型別是私用的預設值;-d1PrivateNativeTypes 已被取代|
 |[編譯器警告 (層級 1) C4378](../../error-messages/compiler-warnings/compiler-warning-level-1-c4378.md)|必須取得函式指標才能執行初始設定式;請考慮 System::ModuleHandle::ResolveMethodHandle|
 |[編譯器警告 (層級 1) C4379](../../error-messages/compiler-warnings/compiler-warning-level-1-c4379.md)|版本 '*version_number*' common language runtime 不支援此編譯器。 使用此版本可能會導致非預期的結果|
-|編譯器警告 （層級 1，錯誤） C4380|'*類別*': 預設建構函式不能被取代|
+|編譯器警告 （層級 1，錯誤） C4380|'*類別*':預設建構函式不能被取代|
 |[編譯器警告 (層級 1) C4381](../../error-messages/compiler-warnings/compiler-warning-level-1-c4381.md)|'*function1*': 非公用方法將不會實作介面方法'*function2*'|
 |[編譯器警告 (層級 1) C4382](../../error-messages/compiler-warnings/compiler-warning-level-1-c4382.md)|擲回 '*型別*': 具有 __clrcall 解構函式或複製建構函式的型別可能只會攔截在 /clr: pure 模組|
 |[編譯器警告 (層級 1) C4383](../../error-messages/compiler-warnings/compiler-warning-level-1-c4383.md)|'*instance_dereference_operator*': 控制代碼取值的意義可以變更，當使用者定義'*instance_dereference_operator*' 運算子存在; 撰寫該運算子作為靜態運算元的明確宣告的函式|

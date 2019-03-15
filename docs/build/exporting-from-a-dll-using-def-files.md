@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: bed47c2c69b154c6bab996299eaeb4173c8298f3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 35f55ea525bd03c5b0b1b1750d25c1223bc608fc
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416545"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816992"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>使用 .DEF 檔從 DLL 匯出
 
@@ -21,7 +21,7 @@ ms.locfileid: "57416545"
 
 - 在檔案中的第一個陳述式必須是 LIBRARY 陳述式。 此陳述式會識別為屬於某一個 DLL DEF 檔案。 LIBRARY 陳述式後面的 DLL 名稱。 連結器會將這個名稱置於 DLL 的匯入程式庫。
 
-- EXPORTS 陳述式會列出名稱並選擇性地由 DLL 匯出的函式序數值。 您所使用的函式的名稱之後指派函式的序數值 at 符號 (@) 和數字。 當您指定序數的值時，它們必須位於範圍 1 到 N，其中 N 是由 DLL 匯出的函式數目。 如果您想要依序數匯出函式，請參閱[從根據序數而非依名稱的 DLL 匯出函式](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)以及這個主題。
+- EXPORTS 陳述式會列出名稱並選擇性地由 DLL 匯出的函式序數值。 您所使用的函式的名稱之後指派函式的序數值 at 符號 (@) 和數字。 當您指定序數的值時，它們必須位於範圍 1 到 N，其中 N 是由 DLL 匯出的函式數目。 如果您想要依序數匯出函式，請參閱[從根據序數而非依名稱的 DLL 匯出函式](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)以及這個主題。
 
 例如，包含實作二進位搜尋樹狀結構的程式碼的 DLL 會看起來可能如下所示：
 
@@ -56,32 +56,32 @@ EXPORTS
 
 ## <a name="what-do-you-want-to-do"></a>請您指定選項。
 
-- [使用 __declspec （dllexport） 從 DLL 匯出](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [使用 __declspec （dllexport） 從 DLL 匯出](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [匯出和匯入使用 AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [匯出和匯入使用 AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [匯出 c + + 函式，以用於 C 語言可執行檔](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [匯出 c + + 函式，以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [匯出 C 函式，以用於 C 或 c + + 語言可執行檔](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [匯出 C 函式，以用於 C 或 c + + 語言可執行檔](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [判斷要使用哪一個匯出方法](../build/determining-which-exporting-method-to-use.md)
+- [判斷要使用哪一個匯出方法](determining-which-exporting-method-to-use.md)
 
-- [將應用程式使用 __declspec （dllimport） 匯入](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [將應用程式使用 __declspec （dllimport） 匯入](importing-into-an-application-using-declspec-dllimport.md)
 
-- [初始化 DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [初始化 DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
-- [.def 檔](../build/reference/module-definition-dot-def-files.md)
+- [.def 檔](reference/module-definition-dot-def-files.md)
 
-- [模組定義陳述式的規則](../build/reference/rules-for-module-definition-statements.md)
+- [模組定義陳述式的規則](reference/rules-for-module-definition-statements.md)
 
-- [裝飾的名稱](../build/reference/decorated-names.md)
+- [裝飾的名稱](reference/decorated-names.md)
 
-- [匯入和匯出內嵌函式](../build/importing-and-exporting-inline-functions.md)
+- [匯入和匯出內嵌函式](importing-and-exporting-inline-functions.md)
 
-- [交互匯入](../build/mutual-imports.md)
+- [交互匯入](mutual-imports.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[從 DLL 匯出](../build/exporting-from-a-dll.md)
+[從 DLL 匯出](exporting-from-a-dll.md)

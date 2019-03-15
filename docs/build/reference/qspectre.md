@@ -5,12 +5,12 @@ f1_keywords:
 - /Qspectre
 helpviewer_keywords:
 - /Qspectre
-ms.openlocfilehash: af04a905fdb3b509a90249c6d55a28ccdaa39318
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42adff6564dc1c2ef47abffe9f9e6e630279ea7d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507311"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812456"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -28,7 +28,7 @@ ms.locfileid: "50507311"
 
 在其初始版本中， **/Qspectre**選項只適用於在最佳化程式碼。 在 Visual Studio 2017 15.7 版及更新版本 **/Qspectre**選項支援所有的最佳化層級。
 
-Microsoft Visual c + + 程式庫也可用於與 Spectre 風險降低的版本。 Visual Studio 安裝程式中，您可以下載 Visual Studio 2017 的 Spectre 降低程式庫。 中找到**個別元件**索引標籤下**編譯器、 建置工具和執行階段**，並在名稱中有 「 程式庫的 Spectre"。 DLL 和靜態執行階段程式庫，啟用的風險降低與可供 Visual c + + 執行階段的子集： VC + + 啟動程式碼、 vcruntime140、 msvcp140、 concrt140 和 vcamp140。 Dll 支援; 應用程式本機部署Visual c + + 2017年執行階段程式庫可轉散發套件的內容有不修改。 您也可以安裝 Spectre 降低程式庫的 MFC 和 ATL，位於**個別元件**索引標籤下**Sdk、 程式庫和架構**。
+Microsoft Visual c + + 程式庫也可用於與 Spectre 風險降低的版本。 Visual Studio 安裝程式中，您可以下載 Visual Studio 2017 的 Spectre 降低程式庫。 中找到**個別元件**索引標籤下**編譯器、 建置工具和執行階段**，並在名稱中有 「 程式庫的 Spectre"。 DLL 和靜態執行階段程式庫，啟用的風險降低與可供 Visual c + + 執行階段的子集：VC + + 啟動程式碼、 vcruntime140、 msvcp140、 concrt140 和 vcamp140。 Dll 支援; 應用程式本機部署Visual c + + 2017年執行階段程式庫可轉散發套件的內容有不修改。 您也可以安裝 Spectre 降低程式庫的 MFC 和 ATL，位於**個別元件**索引標籤下**Sdk、 程式庫和架構**。
 
 ### <a name="applicability"></a>適用性
 
@@ -36,7 +36,7 @@ Microsoft Visual c + + 程式庫也可用於與 Spectre 風險降低的版本。
 
 ### <a name="availability"></a>可用性
 
-**/Qspectre**選項是適用於 Visual Studio 2017 15.5.5 版中，以及在 2018 年 1 月 23 日之後或 Microsoft Visual c + + 編譯器 (MSVC) 的所有更新。 若要更新編譯器，並作為個別的元件安裝 Spectre 降低程式庫，請使用 Visual Studio 安裝程式。 **/Qspectre**選項也會適用於 Visual Studio 2015 Update 3 透過修補程式。 如需詳細資訊，請參閱 < [KB 4338871](https://support.microsoft.com/help/4338871)。
+**/Qspectre**選項是適用於 Visual Studio 2017 15.5.5 版中，以及在或之後 2018 年 1 月 23 日 Microsoft MSVC 編譯器 (MSVC) 的所有更新。 若要更新編譯器，並作為個別的元件安裝 Spectre 降低程式庫，請使用 Visual Studio 安裝程式。 **/Qspectre**選項也會適用於 Visual Studio 2015 Update 3 透過修補程式。 如需詳細資訊，請參閱 < [KB 4338871](https://support.microsoft.com/help/4338871)。
 
 所有版本的 Visual Studio 2017 版本 15.5 版及所有預覽的 Visual Studio 2017 15.6 版包含了未記載的選項， **/d2guardspecload**，它就相當於初始行為 **/Qspectre**. 您可以使用 **/d2guardspecload**到您的程式碼，在這些版本的編譯器中套用相同的緩和措施。 請更新您要使用的組建 **/Qspectre**中的支援選項，編譯器 **/Qspectre**選項也可在更新版本的編譯器支援新的緩和措施。
 
@@ -58,7 +58,7 @@ Microsoft Visual c + + 程式庫也可用於與 Spectre 風險降低的版本。
 - 適用於 visual c + + ATL \[(x86 x64) |ARM |ARM64] 與 Spectre 風險降低
 - 適用於 visual c + + MFC \[x86 x64 |ARM |ARM64] 與 Spectre 風險降低
 
-如果您使用建置您的程式碼 **/Qspectre**並不是這些程式庫安裝，建置系統報告**警告 MSB8038： 已啟用 Spectre 風險降低，但找不到 spectre 風險降低程式庫**。 MFC 或 ATL 程式碼無法建置，而這類連結器回報的錯誤**嚴重錯誤 LNK1104： 無法開啟檔案 'oldnames.lib'**，這些遺漏的程式庫的可能原因。
+如果您使用建置您的程式碼 **/Qspectre**並不是這些程式庫安裝，建置系統報告**警告 MSB8038:已啟用 spectre 風險降低，但找不到 spectre 風險降低程式庫**。 MFC 或 ATL 程式碼無法建置，而這類連結器回報的錯誤**嚴重錯誤 LNK1104： 無法開啟檔案 'oldnames.lib'**，這些遺漏的程式庫的可能原因。
 
 ### <a name="additional-information"></a>其他資訊
 
@@ -66,7 +66,7 @@ Microsoft Visual c + + 程式庫也可用於與 Spectre 風險降低的版本。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **C/c + +** > **命令列**屬性頁。
 
@@ -78,6 +78,6 @@ Microsoft Visual c + + 程式庫也可用於與 Spectre 風險降低的版本。
 
 ## <a name="see-also"></a>另請參閱
 
-[/Q 選項 (低階運算)](../../build/reference/q-options-low-level-operations.md)<br/>
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[/Q 選項 (低階運算)](q-options-low-level-operations.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - -Qimprecise_fwaits compiler option (C++)
 - /Qimprecise_fwaits compiler option (C++)
 ms.assetid: b1501f21-7e08-4fea-95e8-176ec03a635b
-ms.openlocfilehash: 3f2a0e6bc28fb812e087a689716be6119640ffca
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 40683382686ea64a80563f3f29b7d3523f4144a8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422131"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819710"
 ---
 # <a name="qimprecisefwaits-remove-fwaits-inside-try-blocks"></a>/Qimprecise_fwaits (移除 Try 區域內的 fwaits)
 
-移除`fwait`命令的內部`try`當您使用時封鎖[/fp： 除了](../../build/reference/fp-specify-floating-point-behavior.md)編譯器選項。
+移除`fwait`命令的內部`try`當您使用時封鎖[/fp： 除了](fp-specify-floating-point-behavior.md)編譯器選項。
 
 ## <a name="syntax"></a>語法
 
@@ -30,7 +30,7 @@ ms.locfileid: "57422131"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -44,6 +44,6 @@ ms.locfileid: "57422131"
 
 ## <a name="see-also"></a>另請參閱
 
-[/Q 選項 (低階運算)](../../build/reference/q-options-low-level-operations.md)<br/>
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[/Q 選項 (低階運算)](q-options-low-level-operations.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

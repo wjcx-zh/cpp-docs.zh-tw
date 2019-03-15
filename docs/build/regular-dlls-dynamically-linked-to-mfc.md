@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
-ms.openlocfilehash: 548fbde379937ab4d915f08a43a8b865e071d688
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3bfed5f75dab4c501708950fdb99f53c40ec142c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413169"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821296"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>動態連結至 MFC 的標準 MFC Dll
 
@@ -83,18 +83,18 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 
 ## <a name="what-do-you-want-to-do"></a>請您指定選項。
 
-- [初始化 MFC 的標準 Dll](../build/run-time-library-behavior.md#initializing-regular-dlls)
+- [初始化 MFC 的標準 Dll](run-time-library-behavior.md#initializing-regular-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
-- [動態連結至 MFC 的標準 MFC DLL 的模組狀態](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
+- [動態連結至 MFC 的標準 MFC DLL 的模組狀態](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
 
 - [管理 MFC 模組的狀態資料](../mfc/managing-the-state-data-of-mfc-modules.md)
 
-- [在 MFC DLL 中使用資料庫、OLE 和通訊端 MFC 延伸模組 DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [在 MFC DLL 中使用資料庫、OLE 和通訊端 MFC 延伸模組 DLL](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
 - [將 MFC 當成 DLL 的一部分使用](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[DLL 的種類](../build/kinds-of-dlls.md)
+[DLL 的種類](kinds-of-dlls.md)

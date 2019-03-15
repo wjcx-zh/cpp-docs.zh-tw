@@ -1,12 +1,12 @@
 ---
 title: ARM64 ABI 慣例概觀
 ms.date: 07/11/2018
-ms.openlocfilehash: c5c928dcb77729f5b79433d3be1b552664a0d211
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 537f8cf5bb8db61854bea7f4624e3dd3176c6a59
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599780"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816538"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>ARM64 ABI 慣例概觀
 
@@ -58,11 +58,11 @@ AArch64 架構支援 32 的整數暫存器，摘要如下：
 |登錄|動態？|角色|
 |-|-|-|
 x0|動態|參數/從頭開始註冊 1，結果註冊
-x1 x7|動態|參數/從頭開始註冊 2-8
-x8 x15|動態|臨時暫存器
-x16 x17|動態|內部程序呼叫臨時暫存器
+x1-x7|動態|參數/從頭開始註冊 2-8
+x8-x15|動態|臨時暫存器
+x16-x17|動態|內部程序呼叫臨時暫存器
 x18|靜態|平台註冊： 在核心模式中，指向 KPCR 目前的處理器。在使用者模式中，指向 TEB
-x19 x28|靜態|臨時暫存器
+x19-x28|靜態|臨時暫存器
 x29/fp|靜態|框架指標
 x30/lr|靜態|連結暫存器
 
@@ -81,9 +81,9 @@ AArch64 架構也支援 32 浮點點對點/SIMD 暫存器，摘要如下：
 登錄|動態？|角色
 |-|-|-|
 v0|動態|參數/從頭開始註冊 1，結果註冊
-v1 v7|動態|參數/從頭開始註冊 2-8
-v8-第 15 版|靜態|臨時暫存器 （請注意，只有 64 低位元是靜態）
-v16 v31|動態|臨時暫存器
+v1-v7|動態|參數/從頭開始註冊 2-8
+v8-v15|靜態|臨時暫存器 （請注意，只有 64 低位元是靜態）
+v16-v31|動態|臨時暫存器
 
 每個註冊存取做為完整 128 位元值 （透過 v0 v31 或 q0 q31） 為 64 位元值 （透過 d0-d31) （透過 s0-s31) 的 32 位元值為 16 位元值 （透過 h0-h31)，或為 8 位元值 （透過 b0 b31)。 小於 128 位元的存取存取完整的 128 位元暫存器中，較低位元，並將其餘的位元不變，除非另有指定。 （請注意，這是明顯不同於 AArch32，其中較小的暫存器已封裝上的較大的暫存器）。
 
@@ -95,7 +95,7 @@ Bits|意義|動態？|角色
 25|DN|非 Volatile|預設 NaN 模式控制
 24|FZ|靜態|清除為零模式控制
 23-22|RMode|靜態|捨入模式控制
-15,12 8|IDE/IXE 等|非 Volatile|例外狀況截取啟用位元，必須一律為 0
+15,12-8|IDE/IXE/etc|非 Volatile|例外狀況截取啟用位元，必須一律為 0
 
 ## <a name="system-registers"></a>系統暫存器
 
@@ -171,7 +171,7 @@ TPIDR_EL1|指向目前處理器的 KPCR 結構
 
 1. 引數會複製到已調整的 nsaa 的記憶體。 NSAA 會增加引數的大小。 現在已配置的引數。
 
-### <a name="addendum-variadic-functions"></a>附錄： Variadic 函式
+### <a name="addendum-variadic-functions"></a>附錄：Variadic 函式
 
 接受可變數目的引數的函式的處理方式不同於上述，如下所示：
 
@@ -203,7 +203,7 @@ X0 會傳回整數值。 S0/d0/v0 視中，會傳回浮點值。
 
 ## <a name="stack-walking"></a>堆疊查核行程
 
-在 Windows 內的程式碼會編譯啟用框架指標 ([/Oy-](../build/reference/oy-frame-pointer-omission.md)) 若要啟用快速堆疊查核行程。 這個結論是 x29 (fp) 一般指向下一個連結，在鏈結中，也就是 {fp，lr} 配對表示前一個框架在堆疊上，傳回的位址指標。 您可以建議協力廠商程式碼也啟用框架指標，以便提供改良的程式碼剖析和追蹤。
+在 Windows 內的程式碼會編譯啟用框架指標 ([/Oy-](reference/oy-frame-pointer-omission.md)) 若要啟用快速堆疊查核行程。 這個結論是 x29 (fp) 一般指向下一個連結，在鏈結中，也就是 {fp，lr} 配對表示前一個框架在堆疊上，傳回的位址指標。 您可以建議協力廠商程式碼也啟用框架指標，以便提供改良的程式碼剖析和追蹤。
 
 ## <a name="exception-unwinding"></a>例外狀況回溯
 
@@ -221,5 +221,5 @@ ARM EABI 也會指定使用回溯程式碼的例外狀況回溯模型。 不過�
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual C++ ARM 移轉時常見的問題](../build/common-visual-cpp-arm-migration-issues.md)<br/>
-[ARM64 例外狀況處理](../build/arm64-exception-handling.md)
+[Visual C++ ARM 移轉時常見的問題](common-visual-cpp-arm-migration-issues.md)<br/>
+[ARM64 例外狀況處理](arm64-exception-handling.md)

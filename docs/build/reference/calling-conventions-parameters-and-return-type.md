@@ -6,12 +6,12 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: 15631b305246cbfd7dcd8081cb1ee488bf225fec
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: a85825eb49b1f8faab7862e902b226c1c1fb6d58
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264799"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812963"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>呼叫慣例、參數和傳回類型
 
@@ -29,7 +29,7 @@ FARPROC WINAPI __delayLoadHelper2(
 *pidd*<br/>
 A`const`指標`ImgDelayDescr`，其中包含各種匯入相關的資料及一組提供描述項內容的進一步資訊的屬性繫結資訊的時間戳記的位移。 目前只有一個屬性`dlattrRva`，指出描述元中的位址是相對虛擬位址。 如需詳細資訊，請參閱中的宣告*delayimp.h*。
 
-定義`PCImgDelayDescr`結構，請參閱[結構和常數定義](../../build/reference/structure-and-constant-definitions.md)。
+定義`PCImgDelayDescr`結構，請參閱[結構和常數定義](structure-and-constant-definitions.md)。
 
 *ppfnIATEntry*<br/>
 延遲載入匯入位址表 (IAT) 以匯入的函式位址更新中的位置指標。 Helper 常式需要儲存相同的值，它會傳回此位置。
@@ -138,4 +138,4 @@ const PfnDliHook __pfnDliNotifyHook2 = delayHook;
 
 ## <a name="see-also"></a>另請參閱
 
-[了解協助協助程式函式](../../build/reference/understanding-the-helper-function.md)
+[了解協助協助程式函式](understanding-the-helper-function.md)

@@ -29,24 +29,24 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-ms.openlocfilehash: 7727f433ae68f26075645b35ff5edad43159ec67
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bf4c3648079dff16481dbdd56b9a70093fd22d8d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415405"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812053"
 ---
 # <a name="bscmake-options"></a>BSCMAKE 選項
 
 本節說明可用來控制 BSCMAKE 選項。 數個選項可控制瀏覽資訊檔的內容所排除或包含特定資訊。 排除選項可讓執行速度更快的 BSCMAKE，可能會導致較小的.bsc 檔案。 選項名稱會區分大小寫 (除了 **/help**並 **/NOLOGO**)。
 
-只有 **/NOLOGO**並 **/o**都是從 Visual Studio 開發環境中。  請參閱[設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)如需存取 專案屬性頁。
+只有 **/NOLOGO**並 **/o**都是從 Visual Studio 開發環境中。  請參閱[在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)如需存取 專案屬性頁。
 
 **/Ei (** *filename*...**)**<br/>
 瀏覽資訊檔中排除指定的 include 檔案的內容。 若要指定多個檔案，以空格分隔的名稱，並以括弧括住的清單。 括號不需要，如果您只指定一個*filename*。 使用 **/Ei**連同 **/Es**選項來排除檔案未排除 **/Es**。
 
 **/El**<br/>
-不包括本機符號。 預設值是包含本機符號。 如需有關本機符號的詳細資訊，請參閱[建立.sbr 檔](../../build/reference/creating-an-dot-sbr-file.md)。
+不包括本機符號。 預設值是包含本機符號。 如需有關本機符號的詳細資訊，請參閱[建立.sbr 檔](creating-an-dot-sbr-file.md)。
 
 **/Em**<br/>
 排除的巨集主體中的符號。 使用 **/e m**瀏覽資訊檔中包含的巨集名稱。 預設值是包含巨集名稱和巨集展開的結果。
@@ -60,7 +60,7 @@ ms.locfileid: "57415405"
 **/errorreport:**[**none** &#124; **prompt** &#124; **queue** &#124; **send**]<br/>
 可讓您傳送給 Microsoft 的資訊，關於 bscmake.exe 中的內部錯誤。
 
-如需詳細資訊 **/errorreport**，請參閱[/errorReport （回報編譯器內部錯誤）](../../build/reference/errorreport-report-internal-compiler-errors.md)。
+如需詳細資訊 **/errorreport**，請參閱[/errorReport （回報編譯器內部錯誤）](errorreport-report-internal-compiler-errors.md)。
 
 **/HELP**<br/>
 顯示 BSCMAKE 命令列語法摘要。
@@ -69,7 +69,7 @@ ms.locfileid: "57415405"
 包含未參考的符號。 根據預設，BSCMAKE 就不會記錄已定義但未參考任何符號。 如果封裝的.sbr 檔，此選項會有任何作用，該輸入檔案，因為編譯器可能移除未參考的符號。
 
 **/n**<br/>
-會強制執行非累加建置。 使用 **/n**強制.bsc 檔案是否存在的瀏覽資訊檔的完整建置，並防止.sbr 檔被截斷。 請參閱[BSCMAKE 如何建置.bsc 檔](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md)。
+會強制執行非累加建置。 使用 **/n**強制.bsc 檔案是否存在的瀏覽資訊檔的完整建置，並防止.sbr 檔被截斷。 請參閱[BSCMAKE 如何建置.bsc 檔](how-bscmake-builds-a-dot-bsc-file.md)。
 
 **/NOLOGO**<br/>
 隱藏 BSCMAKE 著作權訊息。
@@ -94,4 +94,4 @@ BSCMAKE /n /S toolbox.h /o main.bsc file1.sbr file2.sbr file3.sbr
 
 ## <a name="see-also"></a>另請參閱
 
-[BSCMAKE 參考](../../build/reference/bscmake-reference.md)
+[BSCMAKE 參考](bscmake-reference.md)

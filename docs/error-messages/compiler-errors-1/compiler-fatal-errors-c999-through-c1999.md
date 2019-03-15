@@ -160,14 +160,13 @@ helpviewer_keywords:
 - C1852
 - C1901
 - C1903
-- C1904
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: edf2227bd0a542ce9ca5e8a6a3f908347bd816e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1159a635f0c7a61e591b4d96c4e55bd2baf44782
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677327"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814445"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>編譯器嚴重錯誤 C999 至 C1999
 
@@ -224,7 +223,7 @@ ms.locfileid: "50677327"
 |嚴重錯誤 C1063|編譯器限制: 編譯器堆疊溢位|
 |[嚴重錯誤 C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md)|編譯器限制: 語彙基元於內部緩衝區溢位，請縮短名稱|
 |[嚴重錯誤 C1065](../../error-messages/compiler-errors-1/fatal-error-c1065.md)|編譯器限制: 標記不足|
-|[嚴重錯誤 C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|編譯器限制: 已超過類型記錄的 64K 大小限制|
+|[嚴重錯誤 C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|編譯器限制：已超過類型記錄的大小的 64k 限制|
 |嚴重錯誤 C1068|無法開啟檔案 '*file*'|
 |嚴重錯誤 C1069|無法讀取編譯器命令列|
 |嚴重錯誤 C1070|檔案 '*file*' 中 #if/#endif 的組合不相符|
@@ -234,7 +233,7 @@ ms.locfileid: "50677327"
 |[嚴重錯誤 C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|檔案結尾的左 *token* 不相符|
 |[嚴重錯誤 C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)|編譯器限制: 已達到內部堆積上限; 請改用 /Zm 指定更高的上限|
 |嚴重錯誤 C1077|編譯器限制: 不能有超過 *number* 個的命令列選項|
-|[嚴重錯誤 C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|編譯器限制: 超過 PCH 檔案大小上限|
+|[嚴重錯誤 C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|編譯器限制：超過 PCH 檔案大小上限|
 |[嚴重錯誤 C1080](../../error-messages/compiler-errors-1/fatal-error-c1080.md)|編譯器限制: 命令列選項超過 *number* 個字元的限制|
 |[嚴重錯誤 C1081](../../error-messages/compiler-errors-1/fatal-error-c1081.md)|'*file*': 檔名太長|
 |嚴重錯誤 C1082|無法關閉 *type* 檔案: '*file*': *message*|
@@ -265,7 +264,7 @@ ms.locfileid: "50677327"
 |嚴重錯誤 C1111|太多範本/泛型參數|
 |嚴重錯誤 C1112|編譯器限制: `'number`' 的巨集引數太多，僅允許 *number* 個|
 |[嚴重錯誤 C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#using 不能用於 '*file*'|
-|嚴重錯誤 C1114|'*file*': WinRT 不支援 Managed 組件的 #using|
+|嚴重錯誤 C1114|'*檔案*':WinRT 不支援 #using managed 組件|
 |[嚴重錯誤 C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|'*function*' 呼叫 GetProcAddress 失敗|
 |[嚴重錯誤 C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|呼叫 CryptoAPI 失敗，請重新安裝 Visual Studio 或作業系統|
 |[嚴重錯誤 C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|自動配置超過 *size*|

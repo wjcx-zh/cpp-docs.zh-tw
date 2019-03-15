@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /BIND editbin option
 - import address table
 ms.assetid: 3772b330-1868-4c90-857d-c31faa867982
-ms.openlocfilehash: eb364f951e97da6a3c4950290669d835e4c24be4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e8ba0a5f0235c8771567e4e43172bdf8c81c99a2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418915"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818475"
 ---
 # <a name="bind"></a>/BIND
 
@@ -34,4 +34,4 @@ ms.locfileid: "57418915"
 
 ## <a name="see-also"></a>另請參閱
 
-[EDITBIN 選項](../../build/reference/editbin-options.md)
+[EDITBIN 選項](editbin-options.md)

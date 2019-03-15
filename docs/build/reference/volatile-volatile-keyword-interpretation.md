@@ -13,12 +13,12 @@ helpviewer_keywords:
 - volatile compiler option
 - -volatile compiler option [C++]
 ms.assetid: 9d08fcc6-5bda-44c8-8151-8d8d54f164b8
-ms.openlocfilehash: da2d981d9fcca6be66a7fd495e7c76670ed8e3ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02871622242930d7419fda16f4d106fccb2056f0
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502514"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819489"
 ---
 # <a name="volatile-volatile-keyword-interpretation"></a>/volatile (volatile 關鍵字轉譯)
 
@@ -33,7 +33,7 @@ ms.locfileid: "50502514"
 **/volatile:iso**<br/>
 選取嚴格`volatile`ISO 標準 c + + 語言所定義的語意。 暫時性存取時不保證 acquire/release 語意。 如果編譯器以 ARM 為目標，這是預設解譯`volatile`。
 
-**/volatile: ms**<br/>
+**/volatile:ms**<br/>
 選取 Microsoft 擴充`volatile`記憶體順序保證超越 ISO 標準 c + + 語言的語意。 暫時性存取時保證 acquire/release 語意。 不過，此選項也會強制編譯器產生硬體記憶體屏障，可能會在 ARM 和其他弱式記憶體順序架構增加重大額外負荷。 如果編譯器以除了 ARM 以外的任何平台為目標，這是預設解譯`volatile`。
 
 ## <a name="remarks"></a>備註
@@ -46,7 +46,7 @@ ms.locfileid: "50502514"
 
 ### <a name="to-set-the-volatile-compiler-option-in-visual-studio"></a>若要設定 /volatile 編譯器選項在 Visual Studio 中
 
-1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **C/c + +** > **命令列**屬性頁。
 
@@ -55,5 +55,5 @@ ms.locfileid: "50502514"
 ## <a name="see-also"></a>另請參閱
 
 [volatile](../../cpp/volatile-cpp.md)<br/>
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: e8032d7dbd771ca1527c6515a779b0f532a2c658
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5e45273b6b609f1bf78504a519c1fb98e2147f76
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420865"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818527"
 ---
 # <a name="og-global-optimizations"></a>/Og (全域最佳化)
 
-已取代。 提供本機和全域最佳化自動暫存器配置，以及迴圈最佳化。 我們建議您改用其中一個[/o1 （最小大小）](../../build/reference/o1-o2-minimize-size-maximize-speed.md)或是[/o2 （最快速度）](../../build/reference/o1-o2-minimize-size-maximize-speed.md)改。
+已取代。 提供本機和全域最佳化自動暫存器配置，以及迴圈最佳化。 我們建議您改用其中一個[/o1 （最小大小）](o1-o2-minimize-size-maximize-speed.md)或是[/o2 （最快速度）](o1-o2-minimize-size-maximize-speed.md)改。
 
 ## <a name="syntax"></a>語法
 
@@ -30,7 +30,7 @@ ms.locfileid: "57420865"
 
 ## <a name="remarks"></a>備註
 
-**/Og**已被取代。 這些最佳化現在通常預設會啟用。 如需有關最佳化的詳細資訊，請參閱 < [/o1，/o2 （最小大小、 最快速度）](../../build/reference/o1-o2-minimize-size-maximize-speed.md)或是[/Ox （啟用最速度最佳化）](../../build/reference/ox-full-optimization.md)。
+**/Og**已被取代。 這些最佳化現在通常預設會啟用。 如需有關最佳化的詳細資訊，請參閱 < [/o1，/o2 （最小大小、 最快速度）](o1-o2-minimize-size-maximize-speed.md)或是[/Ox （啟用最速度最佳化）](ox-full-optimization.md)。
 
 下列最佳化會位於 **/Og**:
 
@@ -76,11 +76,11 @@ ms.locfileid: "57420865"
    > [!NOTE]
    > 您可以啟用或停用根據函式的函式使用的全域最佳化`optimize`pragma 搭配`g`選項。
 
-如需相關資訊，請參閱[/Oi （產生內建函式）](../../build/reference/oi-generate-intrinsic-functions.md)並[/Ox （啟用最速度最佳化）](../../build/reference/ox-full-optimization.md)。
+如需相關資訊，請參閱[/Oi （產生內建函式）](oi-generate-intrinsic-functions.md)並[/Ox （啟用最速度最佳化）](ox-full-optimization.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -94,8 +94,4 @@ ms.locfileid: "57420865"
 
 ## <a name="see-also"></a>另請參閱
 
-[/O 選項 (最佳化程式碼)](../../build/reference/o-options-optimize-code.md)
-
-[編譯器選項](../../build/reference/compiler-options.md)
-
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

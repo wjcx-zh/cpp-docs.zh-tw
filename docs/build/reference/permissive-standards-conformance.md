@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 85439598ae4c3e0f9ef923f21e701e0399aefa70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5590996c7598016365bb122977084835830f95ab
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619293"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820789"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive--（標準一致性）
 
@@ -29,21 +29,21 @@ ms.locfileid: "50619293"
 
 在 Visual Studio 2017 和更新版本支援此選項。
 
-您可以使用 **/permissive--** 編譯器選項以指定且符合標準的編譯器行為。 此選項會停用 寬鬆的行為，並設定[/Zc](../../build/reference/zc-conformance.md)嚴格相容性的編譯器選項。 在 IDE 中，這個選項也會讓 IntelliSense 引擎底線不合格的程式碼。
+您可以使用 **/permissive--** 編譯器選項以指定且符合標準的編譯器行為。 此選項會停用 寬鬆的行為，並設定[/Zc](zc-conformance.md)嚴格相容性的編譯器選項。 在 IDE 中，這個選項也會讓 IntelliSense 引擎底線不合格的程式碼。
 
 根據預設， **/permissive--** 選項設定新建立的 Visual Studio 2017 15.5 版和更新版本的專案中。 它不是在舊版的預設設定。 當設定此選項、 編譯器會產生診斷錯誤或警告非標準語言建構時偵測到您的程式碼中時，包括一些常見的錯誤，在前置-C + + 11 程式碼。
 
 **/Permissive--** 選項適用於幾乎所有的標頭檔，從最新的 Windows 套件，例如軟體開發套件 (SDK) 或 Windows Driver Kit (WDK)，以 Windows Fall Creators SDK (10.0.16299.0) 啟動。 較舊版本的 SDK 可能無法編譯底下 **/permissive--** 各種來源的程式碼合規性原因。 編譯器和 Sdk 的出貨上不同的版本時間軸，因此有一些剩餘問題。 如需特定的標頭檔問題，請參閱[Windows 標頭問題](#windows-header-issues)如下。
 
-**/Permissive--** 選項組[/zc: strictstrings](../../build/reference/zc-conformance.md)並[/zc: rvaluecast](../../build/reference/zc-conformance.md)合格行為的選項。 它們會預設為不符合標準的行為。 您可以傳遞特定 **/Zc**後選項 **/permissive--** 覆寫這個行為在命令列上。
+**/Permissive--** 選項組[/zc: strictstrings](zc-conformance.md)並[/zc: rvaluecast](zc-conformance.md)合格行為的選項。 它們會預設為不符合標準的行為。 您可以傳遞特定 **/Zc**後選項 **/permissive--** 覆寫這個行為在命令列上。
 
-在 Visual Studio 2017 15.3 版中，編譯器開始的版本中 **/permissive--** 選項組[/zc: ternary](../../build/reference/zc-ternary.md)選項。 編譯器也會實作多個兩階段名稱查閱的需求。 當 **/permissive--** 設定選項，編譯器會剖析函式和類別樣板定義，用來識別相依和非相依名稱用於範本。 在此版本中，會執行名稱相依性分析。
+在 Visual Studio 2017 15.3 版中，編譯器開始的版本中 **/permissive--** 選項組[/zc: ternary](zc-ternary.md)選項。 編譯器也會實作多個兩階段名稱查閱的需求。 當 **/permissive--** 設定選項，編譯器會剖析函式和類別樣板定義，用來識別相依和非相依名稱用於範本。 在此版本中，會執行名稱相依性分析。
 
 環境特定擴充功能和標準保留最多實作的語言區域不會受到 **/permissive--**。 例如，Microsoft 專有`__declspec`，呼叫慣例和結構化例外狀況處理關鍵字和特定編譯器的 pragma 指示詞或屬性未標示在編譯器 **/permissive--** 模式。
 
-**/Permissive--** 選項會使用一致性支援目前的編譯器版本以判斷哪些語言建構會不合格。 此選項不會判斷您的程式碼是否符合特定版本的 c + + 標準。 若要啟用之最新草稿標準的所有實作的編譯器支援，請使用[/std:latest](../../build/reference/std-specify-language-standard-version.md)選項。 若要限制目前已實作 c++17 標準的編譯器支援，請使用[/std: c + + 17](../../build/reference/std-specify-language-standard-version.md)選項。 若要限制為更符合 C + + 14 標準的編譯器支援，請使用[/std: c + + 14](../../build/reference/std-specify-language-standard-version.md)選項，這是預設值。
+**/Permissive--** 選項會使用一致性支援目前的編譯器版本以判斷哪些語言建構會不合格。 此選項不會判斷您的程式碼是否符合特定版本的 c + + 標準。 若要啟用之最新草稿標準的所有實作的編譯器支援，請使用[/std:latest](std-specify-language-standard-version.md)選項。 若要限制目前已實作 c++17 標準的編譯器支援，請使用[/std: c + + 17](std-specify-language-standard-version.md)選項。 若要限制為更符合 C + + 14 標準的編譯器支援，請使用[/std: c + + 14](std-specify-language-standard-version.md)選項，這是預設值。
 
-不所有 C + + 11、 C + + 14 或 C + + 17 且符合標準的 Visual Studio 2017 中 Visual c + + 編譯器支援程式碼。 根據 Visual Studio 版本而定 **/permissive--** 選項可能無法偵測出關於兩階段名稱查閱的某些層面、 繫結到暫存非 const 的參考、 複製 init 視為直接 init、 允許的問題多個使用者定義轉換在初始化或替代語彙基元中的邏輯運算子，以及其他不受支援的一致性區域。 如需 Visual C++ 中一致性問題的詳細資訊，請參閱 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。 若要取得充分利用 **/permissive--**，更新為最新版本的 Visual Studio。
+不所有 C + + 11、 C + + 14 或 C + + 17 且符合標準的 Visual Studio 2017 中的 MSVC 編譯器支援程式碼。 根據 Visual Studio 版本而定 **/permissive--** 選項可能無法偵測出關於兩階段名稱查閱的某些層面、 繫結到暫存非 const 的參考、 複製 init 視為直接 init、 允許的問題多個使用者定義轉換在初始化或替代語彙基元中的邏輯運算子，以及其他不受支援的一致性區域。 如需 Visual C++ 中一致性問題的詳細資訊，請參閱 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。 若要取得充分利用 **/permissive--**，更新為最新版本的 Visual Studio。
 
 ### <a name="how-to-fix-your-code"></a>如何修正您的程式碼
 
@@ -425,7 +425,7 @@ int main()
    typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
    ```
 
-   不限範圍列舉的向前宣告是 Microsoft 擴充功能。 若要解決此問題，編譯檔案，包括不含 cellularapi_oem.h **/permissive--** 選項，或使用[/wd](../../build/reference/compiler-option-warning-level.md) play C4471 警告的選項。
+   不限範圍列舉的向前宣告是 Microsoft 擴充功能。 若要解決此問題，編譯檔案，包括不含 cellularapi_oem.h **/permissive--** 選項，或使用[/wd](compiler-option-warning-level.md) play C4471 警告的選項。
 
 - Um/omscript.h 的問題
 
@@ -464,5 +464,5 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-- [編譯器選項](../../build/reference/compiler-options.md)
-- [設定編譯器選項](../../build/reference/setting-compiler-options.md)
+- [MSVC 編譯器選項](compiler-options.md)
+- [MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

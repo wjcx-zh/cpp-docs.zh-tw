@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Ox compiler option [C++]
 - -Ox compiler option [C++]
 ms.assetid: 3ad7c30b-c615-428c-b1d0-2e024f81c760
-ms.openlocfilehash: 9f93d67a24f254dff1604c11635c9fa2da7e4557
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e39905608087425fe5a445f4ef88434d73bb2ded
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414534"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811273"
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/Ox （啟用大多數速度最佳化）
 
@@ -28,35 +28,35 @@ ms.locfileid: "57414534"
 
 ## <a name="remarks"></a>備註
 
-**/Ox**編譯器選項會啟用 **/O**編譯器選項的偏好速度。 **/Ox**編譯器選項不包含額外[/GF （消除重複字串）](../../build/reference/gf-eliminate-duplicate-strings.md)並[/Gy （啟用函式階層連結）](../../build/reference/gy-enable-function-level-linking.md) 所啟用的選項[/O1 或/o2 （最小大小、 最快速度）](../../build/reference/o1-o2-minimize-size-maximize-speed.md)。 所套用的其他選項 **/o1**並 **/o2**可能會導致字串或共用的目標位址，可能會影響偵錯和嚴格的語言一致性的函式的指標。 **/Ox**選項是用來啟用大多數最佳化，但不包括 **/GF**並 **/Gy**。 如需詳細資訊，請參閱的描述[/GF](../../build/reference/gf-eliminate-duplicate-strings.md)並[/Gy](../../build/reference/gy-enable-function-level-linking.md)選項。
+**/Ox**編譯器選項會啟用 **/O**編譯器選項的偏好速度。 **/Ox**編譯器選項不包含額外[/GF （消除重複字串）](gf-eliminate-duplicate-strings.md)並[/Gy （啟用函式階層連結）](gy-enable-function-level-linking.md) 所啟用的選項[/O1 或/o2 （最小大小、 最快速度）](o1-o2-minimize-size-maximize-speed.md)。 所套用的其他選項 **/o1**並 **/o2**可能會導致字串或共用的目標位址，可能會影響偵錯和嚴格的語言一致性的函式的指標。 **/Ox**選項是用來啟用大多數最佳化，但不包括 **/GF**並 **/Gy**。 如需詳細資訊，請參閱的描述[/GF](gf-eliminate-duplicate-strings.md)並[/Gy](gy-enable-function-level-linking.md)選項。
 
 **/Ox**編譯器選項相當於搭配使用下列選項：
 
-- [/Ob （內嵌函式展開）](../../build/reference/ob-inline-function-expansion.md)，其中的 option 參數是 2 (**/ob2**)
+- [/Ob （內嵌函式展開）](ob-inline-function-expansion.md)，其中的 option 參數是 2 (**/ob2**)
 
-- [/Og (全域最佳化)](../../build/reference/og-global-optimizations.md)
+- [/Og (全域最佳化)](og-global-optimizations.md)
 
-- [/Oi (產生內建函式)](../../build/reference/oi-generate-intrinsic-functions.md)
+- [/Oi (產生內建函式)](oi-generate-intrinsic-functions.md)
 
-- [/Ot （偏好快的程式碼）](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)
+- [/Ot （偏好快的程式碼）](os-ot-favor-small-code-favor-fast-code.md)
 
-- [/Oy （框架指標省略）](../../build/reference/oy-frame-pointer-omission.md)
+- [/Oy （框架指標省略）](oy-frame-pointer-omission.md)
 
 **/Ox**是互斥的：
 
-- [/ O1 （最小大小）](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
+- [/ O1 （最小大小）](o1-o2-minimize-size-maximize-speed.md)
 
-- [/ O2 （最快速度）](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
+- [/ O2 （最快速度）](o1-o2-minimize-size-maximize-speed.md)
 
-- [/Od (停用 (偵錯))](../../build/reference/od-disable-debug.md)
+- [/Od (停用 (偵錯))](od-disable-debug.md)
 
-您可以取消的速度偏差 **/Ox**編譯器選項，如果您指定 **/Oxs**，哪一個結合 **/Ox**編譯器選項和[（偏好小的 /Os程式碼）](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)。 合併的選項，而非較小的程式碼大小。  **/Oxs**選項是完全如同指定 **/Ox** **/Os**時的選項會顯示依此順序。
+您可以取消的速度偏差 **/Ox**編譯器選項，如果您指定 **/Oxs**，哪一個結合 **/Ox**編譯器選項和[（偏好小的 /Os程式碼）](os-ot-favor-small-code-favor-fast-code.md)。 合併的選項，而非較小的程式碼大小。  **/Oxs**選項是完全如同指定 **/Ox** **/Os**時的選項會顯示依此順序。
 
-若要套用所有可用的發行組建的檔案層級最佳化，我們建議您指定[/o2 （最快速度）](../../build/reference/o1-o2-minimize-size-maximize-speed.md)而不是 **/Ox**，並[/o1 （最小大小）](../../build/reference/o1-o2-minimize-size-maximize-speed.md)改為 **/Oxs**。 在版本中的更多最佳化組建，也請考慮[/GL （整個程式最佳化）](../../build/reference/gl-whole-program-optimization.md)編譯器選項和[/LTCG （連結時間程式碼產生）](../../build/reference/ltcg-link-time-code-generation.md)連結器選項。
+若要套用所有可用的發行組建的檔案層級最佳化，我們建議您指定[/o2 （最快速度）](o1-o2-minimize-size-maximize-speed.md)而不是 **/Ox**，並[/o1 （最小大小）](o1-o2-minimize-size-maximize-speed.md)改為 **/Oxs**。 在版本中的更多最佳化組建，也請考慮[/GL （整個程式最佳化）](gl-whole-program-optimization.md)編譯器選項和[/LTCG （連結時間程式碼產生）](ltcg-link-time-code-generation.md)連結器選項。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 底下**組態屬性**，開啟**C/c + +** ，然後選擇**最佳化**屬性頁。
 
@@ -68,6 +68,6 @@ ms.locfileid: "57414534"
 
 ## <a name="see-also"></a>另請參閱
 
-[/O 選項 (最佳化程式碼)](../../build/reference/o-options-optimize-code.md)<br/>
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[/O 選項 (最佳化程式碼)](o-options-optimize-code.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

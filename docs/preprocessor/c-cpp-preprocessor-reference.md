@@ -5,12 +5,12 @@ helpviewer_keywords:
 - preprocessor
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-ms.openlocfilehash: 1ad46a1a3006cbca52336bf65bcfbafd37e59752
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9e5be5895d8a90d93d0060e2bd2a7d0a9f84dbd
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607658"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814419"
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++ 前置處理器參考
 *C/c + + 前置處理器參考 》* 說明前置處理器，因為它實作在 Microsoft C/c + +。 前置處理器會先對 C 和 C++ 檔案執行初步作業，再將檔案傳遞至編譯器。 您可以使用前置處理器，有條件地編譯程式碼、插入檔案、指定編譯時間錯誤訊息，以及將電腦特定規則加入至程式碼區段。
@@ -40,5 +40,5 @@ ms.locfileid: "50607658"
 [建置 C/c + + 程式](../build/reference/c-cpp-building-reference.md)<br/>
 提供討論編譯器和連結器選項的主題連結。
 
-[建立和管理 Visual C++ 專案](../ide/creating-and-managing-visual-cpp-projects.md)<br/>
+[建立和管理 Visual C++ 專案](../build/creating-and-managing-visual-cpp-projects.md)<br/>
 說明 Visual Studio 使用者介面，可讓您指定專案系統將搜尋的目錄，以尋找您的 C++ 專案的檔案。

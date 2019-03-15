@@ -23,12 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: d8aadca14f52432e3fccb168c213ae566b1baae2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1beab7cb1e8e654d25620eb59a9326f5628ce047
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421433"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816317"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7、/Zi、/ZI (偵錯資訊格式)
 
@@ -50,15 +50,15 @@ ms.locfileid: "57421433"
 
 **/Z7**選項會產生目的檔也包含完整符號偵錯資訊用於偵錯工具。 這些物件檔案和內建的可執行檔可以大幅超過任何偵錯資訊的檔案。 符號偵錯資訊包含了變數的名稱和類型，以及函式與行號。 會不產生任何 PDB 檔案。
 
-協力廠商程式庫的偵錯版本的散發者，還有沒有 PDB 檔案的優點。 不過，任何先行編譯標頭的物件檔案所需的程式庫連結階段期間，並進行偵錯。 如果只輸入.pch 目的檔中的資訊 （和任何程式碼） 時，您也必須使用[/Yl （插入偵錯程式庫的 PCH 參考）](../../build/reference/yl-inject-pch-reference-for-debug-library.md)選項，當您建置程式庫時，根據預設，已啟用。
+協力廠商程式庫的偵錯版本的散發者，還有沒有 PDB 檔案的優點。 不過，任何先行編譯標頭的物件檔案所需的程式庫連結階段期間，並進行偵錯。 如果只輸入.pch 目的檔中的資訊 （和任何程式碼） 時，您也必須使用[/Yl （插入偵錯程式庫的 PCH 參考）](yl-inject-pch-reference-for-debug-library.md)選項，當您建置程式庫時，根據預設，已啟用。
 
-[/Gm （啟用最少重建）](../../build/reference/gm-enable-minimal-rebuild.md)選項時，不提供 **/z7**指定。
+[/Gm （啟用最少重建）](gm-enable-minimal-rebuild.md)選項時，不提供 **/z7**指定。
 
 ### <a name="zi"></a>/ZI
 
 **/Zi**選項會產生個別的 PDB 檔案，其中包含所有符號偵錯資訊用於偵錯工具。 偵錯資訊不包含在目的檔或可執行檔，使其更小。
 
-利用 **/Zi**並不會影響最佳化。 不過， **/Zi**的確 **/ 偵錯**; 請參閱[/DEBUG （產生偵錯資訊）](../../build/reference/debug-generate-debug-info.md)如需詳細資訊。
+利用 **/Zi**並不會影響最佳化。 不過， **/Zi**的確 **/ 偵錯**; 請參閱[/DEBUG （產生偵錯資訊）](debug-generate-debug-info.md)如需詳細資訊。
 
 當您同時指定兩者 **/Zi**並 **/clr**，則<xref:System.Diagnostics.DebuggableAttribute>屬性不放在組件中繼資料。 如果您想要它，您必須在原始程式碼中指定它。 這個屬性可能影響應用程式的執行階段效能。 如需有關如何**Debuggable**屬性會影響效能，以及如何在您可以修改的效能影響，請參閱[使映像更容易偵錯](/dotnet/framework/debug-trace-profile/making-an-image-easier-to-debug)。
 
@@ -70,16 +70,16 @@ ms.locfileid: "57421433"
 
 **/ZI**選項很相似 **/Zi**，但它會產生的 PDB 檔案格式可支援[編輯後繼續](/visualstudio/debugger/edit-and-continue-visual-cpp)功能。 若要使用 編輯後繼續 」 偵錯功能，您必須使用此選項。 [編輯後繼續] 功能可用於開發人員生產力，但可能會導致程式碼大小、 效能和編譯器一致性問題。 由於大部分最佳化都與 編輯後繼續不相容，使用 **/ZI**停用任何`#pragma optimize`程式碼中的陳述式。 **/ZI**也會使用與不相容選項[ &#95;&#95;行&#95;&#95;預先定義的巨集](../../preprocessor/predefined-macros.md); 使用程式碼編譯 **/ZI**不能使用 **&#95;&#95;行&#95;&#95;** 當做非類型樣板引數，雖然 **&#95;&#95;行&#95;&#95;** 可用巨集展開中。
 
-**/ZI**選項會強制兩者[/Gy （啟用函式階層連結）](../../build/reference/gy-enable-function-level-linking.md)並[/FC （完整路徑的來源診斷中原始程式碼檔）](../../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md)使用您所編譯的選項。
+**/ZI**選項會強制兩者[/Gy （啟用函式階層連結）](gy-enable-function-level-linking.md)並[/FC （完整路徑的來源診斷中原始程式碼檔）](fc-full-path-of-source-code-file-in-diagnostics.md)使用您所編譯的選項。
 
-**/ZI**與不相容[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)。
+**/ZI**與不相容[/clr （Common Language Runtime 編譯）](clr-common-language-runtime-compilation.md)。
 
 > [!NOTE]
 > **/ZI**選項僅供以 x86 和 x64 處理器為目標的編譯器以; 這個編譯器選項不適用於以 ARM 處理器為目標的編譯器。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 開啟**組態屬性** > **C/c + +** > **一般**屬性頁。
 
@@ -91,5 +91,6 @@ ms.locfileid: "57421433"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+

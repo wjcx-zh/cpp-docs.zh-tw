@@ -11,16 +11,16 @@ helpviewer_keywords:
 - executable files [C++], importing classes
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
-ms.openlocfilehash: 1451b452c5e2dc62e83e5b8f473248fa7c231877
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bcfdc94e8db80daec227d77c20ecec6b14d5af11
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421190"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821218"
 ---
 # <a name="exporting-and-importing-using-afxextclass"></a>使用 AFX_EXT_CLASS 匯出和匯入
 
-[MFC 延伸模組 Dll](../build/extension-dlls-overview.md)使用巨集**AFX_EXT_CLASS**匯出的類別，可執行檔連結至 MFC 擴充 DLL 的匯入類別使用巨集。 具有**AFX_EXT_CLASS**巨集，用來建置 MFC 擴充功能 DLL 可以搭配連結至 DLL 的可執行檔的相同標頭檔。
+[MFC 延伸模組 Dll](extension-dlls-overview.md)使用巨集**AFX_EXT_CLASS**匯出的類別，可執行檔連結至 MFC 擴充 DLL 的匯入類別使用巨集。 具有**AFX_EXT_CLASS**巨集，用來建置 MFC 擴充功能 DLL 可以搭配連結至 DLL 的可執行檔的相同標頭檔。
 
 在您的 DLL 的標頭檔，新增**AFX_EXT_CLASS**關鍵字加入類別的宣告，如下所示：
 
@@ -104,28 +104,28 @@ class CExampleView : public CView
 
 ### <a name="what-do-you-want-to-do"></a>請您指定選項。
 
-- [使用.def 檔從 DLL 匯出](../build/exporting-from-a-dll-using-def-files.md)
+- [使用.def 檔從 DLL 匯出](exporting-from-a-dll-using-def-files.md)
 
-- [使用 __declspec （dllexport） 從 DLL 匯出](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [使用 __declspec （dllexport） 從 DLL 匯出](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [匯出 c + + 函式，以用於 C 語言可執行檔](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [匯出 c + + 函式，以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [匯出 C 函式，以用於 C 或 c + + 語言可執行檔](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [匯出 C 函式，以用於 C 或 c + + 語言可執行檔](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [判斷要使用哪一個匯出方法](../build/determining-which-exporting-method-to-use.md)
+- [判斷要使用哪一個匯出方法](determining-which-exporting-method-to-use.md)
 
-- [將應用程式使用 __declspec （dllimport） 匯入](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [將應用程式使用 __declspec （dllimport） 匯入](importing-into-an-application-using-declspec-dllimport.md)
 
-- [初始化 DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [初始化 DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
-- [裝飾的名稱](../build/reference/decorated-names.md)
+- [裝飾的名稱](reference/decorated-names.md)
 
-- [匯入和匯出內嵌函式](../build/importing-and-exporting-inline-functions.md)
+- [匯入和匯出內嵌函式](importing-and-exporting-inline-functions.md)
 
-- [交互匯入](../build/mutual-imports.md)
+- [交互匯入](mutual-imports.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[從 DLL 匯出](../build/exporting-from-a-dll.md)
+[從 DLL 匯出](exporting-from-a-dll.md)

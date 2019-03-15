@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __delayLoadHelper2 function
 - helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-ms.openlocfilehash: 25c59d37b753c80014b566fd925363cae71798be
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: cd6e842fd6d35e05f2d5a9f906713f0d85d3b80d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426520"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807997"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Visual C++ 6.0 之後 DLL 延遲載入 Helper 函式的變更
 
@@ -33,7 +33,7 @@ ms.locfileid: "57426520"
 
 如果您在電腦上有多個版本的 Visual c + +，請確定連結器符合 delayimp.lib。 如果不相符，就會報告其中一個連結器錯誤`___delayLoadHelper2@8`或`___delayLoadHelper@8`為無法解析的外部符號。 前者表示舊的 delayimp.lib 之新連結器，後者表示新的 delayimp.lib 舊連結器。
 
-如果您收到無法解析的連結器錯誤，執行[dumpbin /linkermember](../../build/reference/linkermember.md)： 在您要包含 helper 函式，以查看哪一個協助程式函式改為定義 delayimp.lib 1。 在物件的檔案中; 也可定義 helper 函式執行[dumpbin /symbols](../../build/reference/symbols.md)並尋找`delayLoadHelper(2)`。
+如果您收到無法解析的連結器錯誤，執行[dumpbin /linkermember](linkermember.md)： 在您要包含 helper 函式，以查看哪一個協助程式函式改為定義 delayimp.lib 1。 在物件的檔案中; 也可定義 helper 函式執行[dumpbin /symbols](symbols.md)並尋找`delayLoadHelper(2)`。
 
 如果您知道您有 Visual c + + 6.0 連結器，然後：
 
@@ -51,7 +51,7 @@ ms.locfileid: "57426520"
 
 ## <a name="load-all-imports-for-a-delay-loaded-dll"></a>延遲載入 DLL 的載入所有匯入
 
-連結器可以從您指定要延遲載入的 DLL 載入所有匯入。 請參閱[載入延遲載入 dll 的所有匯入](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md)如需詳細資訊。
+連結器可以從您指定要延遲載入的 DLL 載入所有匯入。 請參閱[載入延遲載入 dll 的所有匯入](loading-all-imports-for-a-delay-loaded-dll.md)如需詳細資訊。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - local symbols in browse information
 - symbols
 ms.assetid: bdb4b93c-a88a-441a-84fd-01087d03be25
-ms.openlocfilehash: 54cf19a7024f6f0a1db33e1f1ccde15cde95301b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 75c3b926a605de66c876e9350218807031cd9a43
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418525"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810402"
 ---
 # <a name="creating-an-sbr-file"></a>建立 .Sbr 檔
 
 BSCMAKE 的輸入的檔是.sbr 檔案。 編譯器會建立.sbr 檔案以供編譯每個目的檔 (.obj)。 當您建立或更新您的瀏覽資訊檔時，為您的專案的所有.sbr 檔必須都是在磁碟上使用。
 
-若要建立的.sbr 檔案與所有可能的資訊，請指定[/FR](../../build/reference/fr-fr-create-dot-sbr-file.md)。
+若要建立的.sbr 檔案與所有可能的資訊，請指定[/FR](fr-fr-create-dot-sbr-file.md)。
 
-若要建立的.sbr 檔案中不含本機符號，指定[/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md)。 如果的.sbr 檔案包含本機符號，您可以仍然從省略.bsc 檔使用 BSCMAKE 的[/El 選項](../../build/reference/bscmake-options.md)`.`
+若要建立的.sbr 檔案中不含本機符號，指定[/Fr](fr-fr-create-dot-sbr-file.md)。 如果的.sbr 檔案包含本機符號，您可以仍然從省略.bsc 檔使用 BSCMAKE 的[/El 選項](bscmake-options.md)`.`
 
 您可以建立的.sbr 檔案，而不執行完整的編譯。 例如，您可以在其中指定 /Zs 選擇編譯器執行語法檢查，並仍產生的.sbr 檔案，如果您指定 /FR 的話。
 
@@ -30,4 +30,4 @@ BSCMAKE 的輸入的檔是.sbr 檔案。 編譯器會建立.sbr 檔案以供編�
 
 ## <a name="see-also"></a>另請參閱
 
-[建置 .Bsc 檔](../../build/reference/building-a-dot-bsc-file.md)
+[建置 .Bsc 檔](building-a-dot-bsc-file.md)

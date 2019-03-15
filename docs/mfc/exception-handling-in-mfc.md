@@ -33,12 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: cb11a74932e44f94f481a2fdc48b8d6ee359f9e8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: afa49a4d54397cf79a3bd0af28e4a0f0a4c7639e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260539"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818631"
 ---
 # <a name="exception-handling-in-mfc"></a>MFC 中的例外狀況處理
 
@@ -55,7 +55,7 @@ ms.locfileid: "57260539"
 如果您已開發的應用程式使用 MFC 例外狀況巨集，您可以繼續在新的程式碼中使用 c + + 例外狀況時，您現有的程式碼中使用這些巨集。 發行項[例外狀況：變更為 3.0 版中的例外狀況巨集](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)這樣會提供指導方針。
 
 > [!NOTE]
->  若要啟用 c + + 例外狀況處理程式碼中，選取 C/c + + 專案的資料夾中的 [程式碼產生] 頁面上的 啟用 c + + 例外狀況[屬性頁](../ide/property-pages-visual-cpp.md)對話方塊中或使用[/EHsc](../build/reference/eh-exception-handling-model.md)編譯器選項。
+>  若要啟用 c + + 例外狀況處理程式碼中，選取 C/c + + 專案的資料夾中的 [程式碼產生] 頁面上的 啟用 c + + 例外狀況[屬性頁](../build/reference/property-pages-visual-cpp.md)對話方塊中或使用[/EHsc](../build/reference/eh-exception-handling-model.md)編譯器選項。
 
 本文章涵蓋下列主題：
 

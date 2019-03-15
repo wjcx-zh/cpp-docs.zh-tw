@@ -9,12 +9,12 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-ms.openlocfilehash: 86e2dadbfcdc31d5d5f5fe3121c33f9011c14ab5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7c4f4621bbccd4285bcf4eca07d2544d53d14f6c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414379"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819846"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (匯出函式)
 
@@ -36,7 +36,7 @@ ms.locfileid: "57414379"
 
 1. [__declspec （dllexport)](../../cpp/dllexport-dllimport.md)原始程式碼中
 
-1. [匯出](../../build/reference/exports.md).def 檔案中的陳述式
+1. [匯出](exports.md).def 檔案中的陳述式
 
 1. LINK 命令中的 /EXPORT 規格
 
@@ -44,7 +44,7 @@ ms.locfileid: "57414379"
 
 所有這些方法可以用於相同的程式。 當組建的程式包含匯出的連結時，它也會建立匯入程式庫，除非在組建中使用.exp 檔。
 
-連結使用裝飾形式的識別項。 建立的.obj 檔案時，編譯器就會裝飾識別項。 如果*entryname*指定連結器在其未裝飾形成 （因為它會出現在原始程式碼中），連結會嘗試比對的名稱。 如果它找不到所需的唯一相符項目，連結就會發出錯誤訊息。 使用[DUMPBIN](../../build/reference/dumpbin-reference.md)工具，以取得[裝飾名稱](../../build/reference/decorated-names.md)時您必須指定至連結器識別項格式。
+連結使用裝飾形式的識別項。 建立的.obj 檔案時，編譯器就會裝飾識別項。 如果*entryname*指定連結器在其未裝飾形成 （因為它會出現在原始程式碼中），連結會嘗試比對的名稱。 如果它找不到所需的唯一相符項目，連結就會發出錯誤訊息。 使用[DUMPBIN](dumpbin-reference.md)工具，以取得[裝飾名稱](decorated-names.md)時您必須指定至連結器識別項格式。
 
 > [!NOTE]
 > 未指定 C 識別項宣告的裝飾的形式`__cdecl`或`__stdcall`。
@@ -58,7 +58,7 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **連結器** > **命令列**屬性頁。
 
@@ -70,5 +70,5 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

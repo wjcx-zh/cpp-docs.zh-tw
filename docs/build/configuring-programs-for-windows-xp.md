@@ -2,16 +2,16 @@
 title: 為 Windows XP 設定程式
 ms.date: 02/02/2018
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 73fc66c358f2bfa390177557da2f114f225cec1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 989a4e2c7e91c05498902bf1c5cb9d838ee47c3b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582737"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814289"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>為 Windows XP 設定程式
 
-由於 Visual Studio 支援多個平台工具組，您可以針對作業系統和預設工具組不支援的執行階段程式庫。 例如，藉由切換平台工具組，您可以使用 C + + 11、 C + + 14 和在 Visual Studio 中 Visual c + + 編譯器支援的 C + + 17 語言增強功能來建立以 Windows XP 和 Windows Server 2003 為目標的應用程式。 您可以也會使用舊版平台工具組來維護的二進位檔相容的舊版程式碼，同時仍然利用 Visual Studio IDE 的最新的功能。
+由於 Visual Studio 支援多個平台工具組，您可以針對作業系統和預設工具組不支援的執行階段程式庫。 例如，藉由切換平台工具組，您可以使用 C + + 11、 C + + 14 和支援的 Visual Studio 中的 MSVC 編譯器的 C + + 17 語言增強功能來建立以 Windows XP 和 Windows Server 2003 為目標的應用程式。 您可以也會使用舊版平台工具組來維護的二進位檔相容的舊版程式碼，同時仍然利用 Visual Studio IDE 的最新的功能。
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>安裝 Windows XP 平台工具組
 

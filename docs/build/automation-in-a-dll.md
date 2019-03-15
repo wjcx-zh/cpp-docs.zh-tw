@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DLLs [C++], Automation
 - Automation [C++], DLLs
 ms.assetid: 2728ecd1-14e2-4ae0-a946-e749e11dbb74
-ms.openlocfilehash: 3cc5ca456842707a2c3de7b2fd74abc73d9a5307
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4ac60c44348ea21f490cb312285ae88ac682cf7d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422282"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821244"
 ---
 # <a name="automation-in-a-dll"></a>DLL 中的 Automation
 
@@ -32,4 +32,4 @@ ms.locfileid: "57422282"
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)
+[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)

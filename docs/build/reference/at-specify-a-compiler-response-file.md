@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '@ compiler option'
 - cl.exe compiler, specifying response files
 ms.assetid: 400fffee-909d-4f60-bf76-45833e822685
-ms.openlocfilehash: dc61477da9547204acfce93bbedcd077787162c2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c2b5578e1ce1db590bdf5abbff0c91e858803ad7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416952"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808075"
 ---
 # <a name="-specify-a-compiler-response-file"></a>@ (指定編譯器回應檔)
 
@@ -46,5 +46,5 @@ ms.locfileid: "57416952"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - preprocessor output, copy to stdout
 - preprocessor output
 ms.assetid: ddbb1725-d950-4978-ab2f-30a5cd7b778c
-ms.openlocfilehash: f0a0d692cd7eaf59aa0c53ecf4436b4c507439a3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 710be7e1dfc4de89bc1eed3e23e4803c561da10c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425480"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817348"
 ---
 # <a name="e-preprocess-to-stdout"></a>/E (前置處理至 stdout)
 
@@ -28,15 +28,15 @@ ms.locfileid: "57425480"
 
 ## <a name="remarks"></a>備註
 
-在此程序，執行所有的前置處理器指示詞、 巨集展開會執行，而且會移除註解。 若要保留的前置處理過的輸出中的註解，請使用[/C （保留註解在前置處理期間）](../../build/reference/c-preserve-comments-during-preprocessing.md)以及編譯器選項。
+在此程序，執行所有的前置處理器指示詞、 巨集展開會執行，而且會移除註解。 若要保留的前置處理過的輸出中的註解，請使用[/C （保留註解在前置處理期間）](c-preserve-comments-during-preprocessing.md)以及編譯器選項。
 
 **/E**加入`#line`開頭和結尾的每個包含的檔案，以及條件式編譯的前置處理器指示詞所移除的行環繞輸出指示詞。 這些指示詞重新編號前置處理過的檔案的行。 如此一來，後續階段的處理期間產生的錯誤，請參閱原始程式檔，而不是前置處理過的檔案中的行的行號。
 
-**/E**選項會抑制編譯。 您必須重新提交編譯的前置處理過的檔案。 **/E**也會隱藏輸出檔案，從 **/FA**， **/Fa**，和 **/Fm**選項。 如需詳細資訊，請參閱 < [/FA、 /Fa （清單檔）](../../build/reference/fa-fa-listing-file.md)並[/Fm （命名對應檔）](../../build/reference/fm-name-mapfile.md)。
+**/E**選項會抑制編譯。 您必須重新提交編譯的前置處理過的檔案。 **/E**也會隱藏輸出檔案，從 **/FA**， **/Fa**，和 **/Fm**選項。 如需詳細資訊，請參閱 < [/FA、 /Fa （清單檔）](fa-fa-listing-file.md)並[/Fm （命名對應檔）](fm-name-mapfile.md)。
 
-若要抑制`#line`指示詞，使用[/EP （前置處理至 stdout 不 #line 指示詞）](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)選項。
+若要抑制`#line`指示詞，使用[/EP （前置處理至 stdout 不 #line 指示詞）](ep-preprocess-to-stdout-without-hash-line-directives.md)選項。
 
-若要將前置處理過的輸出傳送到的檔案，而非`stdout`，使用[/P （前置處理至檔案）](../../build/reference/p-preprocess-to-a-file.md)選項。
+若要將前置處理過的輸出傳送到的檔案，而非`stdout`，使用[/P （前置處理至檔案）](p-preprocess-to-a-file.md)選項。
 
 若要隱藏`#line`指示詞和傳送前置處理過的輸出至檔案，使用 **/P**並 **/EP**一起。
 
@@ -62,7 +62,7 @@ cl -E test.cpp > test2.cpp
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -84,5 +84,5 @@ CL /E /C ADD.C
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

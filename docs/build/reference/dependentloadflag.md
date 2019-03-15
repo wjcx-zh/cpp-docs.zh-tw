@@ -10,12 +10,12 @@ helpviewer_keywords:
 - linker [C++], DEPENDENTLOADFLAG
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
-ms.openlocfilehash: 0bdf2542d641f751f40757079eb576f2c97540dc
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 94998e06f23a7e70524221d3cb75166b5d3f2c44
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326156"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815966"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/ DEPENDENTLOADFLAG （設定預設相依載入旗標）
 
@@ -23,7 +23,7 @@ ms.locfileid: "51326156"
 
 ## <a name="syntax"></a>語法
 
-> **/ DEPENDENTLOADFLAG**[**:**_loadflags_]
+> **/DEPENDENTLOADFLAG**[**:**_loadflags_]
 
 ### <a name="arguments"></a>引數
 
@@ -42,7 +42,7 @@ ms.locfileid: "51326156"
 
 ### <a name="to-set-the-dependentloadflag-linker-option-in-the-visual-studio-development-environment"></a>若要在 Visual Studio 開發環境中設定 DEPENDENTLOADFLAG 連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **連結器** > **命令列**屬性頁。
 
@@ -54,9 +54,9 @@ ms.locfileid: "51326156"
 
 ## <a name="see-also"></a>另請參閱
 
-- [設定連結器選項](setting-linker-options.md)
-- [連結器選項](linker-options.md)
-- [如何以隱含方式連結至 DLL](../linking-an-executable-to-a-dll.md#linking-implicitly)
-- [判斷要使用哪一個連結方法](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [MSVC 連結器參考](linking.md)
+- [MSVC 連結器選項](linker-options.md)
+- [將可執行檔連結至 DLL](../linking-an-executable-to-a-dll.md#linking-implicitly)
+- [將可執行檔連結至 DLL](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 - [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)
 - [動態連結程式庫搜尋順序](/windows/desktop/Dlls/dynamic-link-library-search-order)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 48eb1e2369e54d855bd19bb1d26ad057c903b9d0
-ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
+ms.openlocfilehash: 1a01dd45667f64dbcbe11acaf1180835bd0d6e31
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2019
-ms.locfileid: "56418688"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809843"
 ---
 # <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/ CETCOMPAT （控制流程強制技術相容）
 
@@ -36,7 +36,7 @@ ms.locfileid: "56418688"
 
 ### <a name="to-set-the-cetcompat-linker-option-in-visual-studio"></a>若要在 Visual Studio 中設定 /CETCOMPAT 連結器選項
 
-1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **連結器** > **命令列**屬性頁。
 
@@ -48,5 +48,4 @@ ms.locfileid: "56418688"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[連結器選項](linker-options.md)

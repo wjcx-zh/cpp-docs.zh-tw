@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /STACK linker option
 - stack, setting size
 ms.assetid: 73283660-e4bd-47cc-b5ca-04c5d739034c
-ms.openlocfilehash: 34d764f88b1dccb60c7d9a006be119e3800ac2d9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 27de554e1933b2753f641be358461c8d7ff4fffa
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412766"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813795"
 ---
 # <a name="stack-stack-allocations"></a>/STACK (堆疊配置)
 
@@ -35,11 +35,11 @@ ms.locfileid: "57412766"
 
 以十進位數或 C 語言標記法指定 `reserve` 和 `commit` 值。
 
-若要設定的堆疊大小的另一個方法是使用[STACKSIZE](../../build/reference/stacksize.md)模組定義 (.def) 檔中的陳述式。 **STACKSIZE**覆寫堆疊配置 (/stack) 選項時如果同時指定這兩者。 您可以使用建置的.exe 檔案之後，變更堆疊大小[EDITBIN](../../build/reference/editbin-reference.md)工具。
+若要設定的堆疊大小的另一個方法是使用[STACKSIZE](stacksize.md)模組定義 (.def) 檔中的陳述式。 **STACKSIZE**覆寫堆疊配置 (/stack) 選項時如果同時指定這兩者。 您可以使用建置的.exe 檔案之後，變更堆疊大小[EDITBIN](editbin-reference.md)工具。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **連結器**資料夾。
 
@@ -57,5 +57,5 @@ ms.locfileid: "57412766"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LIBRARY .def file statement
 ms.assetid: 1d7ccc92-e088-4ef7-9ef0-25c3862cc051
-ms.openlocfilehash: 73609be698719da05fff357ba80200c49f598add
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b43f269726e8925abeefd41aab0edfd57b071035
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422660"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811780"
 ---
 # <a name="library"></a>LIBRARY
 
@@ -23,12 +23,12 @@ LIBRARY [library][BASE=address]
 
 ## <a name="remarks"></a>備註
 
-*程式庫*引數會指定 DLL 的名稱。 您也可以使用[/out](../../build/reference/out-output-file-name.md)連結器選項來指定 DLL 的輸出名稱。
+*程式庫*引數會指定 DLL 的名稱。 您也可以使用[/out](out-output-file-name.md)連結器選項來指定 DLL 的輸出名稱。
 
-基底 =*地址*引數設定作業系統使用載入的 DLL 的基底位址。 這個引數會覆寫預設的 DLL 位置 0x10000000。 請參閱的說明[基底/](../../build/reference/base-base-address.md)基底位址的詳細資料的選項。
+基底 =*地址*引數設定作業系統使用載入的 DLL 的基底位址。 這個引數會覆寫預設的 DLL 位置 0x10000000。 請參閱的說明[基底/](base-base-address.md)基底位址的詳細資料的選項。
 
-請務必使用[/DLL](../../build/reference/dll-build-a-dll.md)建置 DLL 時，連結器選項。
+請務必使用[/DLL](dll-build-a-dll.md)建置 DLL 時，連結器選項。
 
 ## <a name="see-also"></a>另請參閱
 
-[模組定義陳述式的規則](../../build/reference/rules-for-module-definition-statements.md)
+[模組定義陳述式的規則](rules-for-module-definition-statements.md)

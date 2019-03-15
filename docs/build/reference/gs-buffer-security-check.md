@@ -14,12 +14,12 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
-ms.openlocfilehash: 6681ff09b846011af1b500f88a535c208d0bc1c1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 10afa874092eb563903ba5f49c6add136afc869c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417572"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820230"
 ---
 # <a name="gs-buffer-security-check"></a>/GS (緩衝區安全性檢查)
 
@@ -96,7 +96,7 @@ struct { int a; int b; };
 
 - 沒有 GS 緩衝區的函式。
 
-- 最佳化 ([/O 選項](../../build/reference/o-options-optimize-code.md)) 不會啟用。
+- 最佳化 ([/O 選項](o-options-optimize-code.md)) 不會啟用。
 
 - 具有變數引數清單 （...） 的函式。
 
@@ -116,7 +116,7 @@ struct { int a; int b; };
 
 1. 在 **方案總管**，以滑鼠右鍵按一下專案，然後按一下**屬性**。
 
-   如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+   如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 在 [**屬性頁**] 對話方塊中，按一下**C/c + +** 資料夾。
 
@@ -157,5 +157,5 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

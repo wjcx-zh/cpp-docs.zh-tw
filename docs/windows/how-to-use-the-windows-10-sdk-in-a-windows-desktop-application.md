@@ -1,16 +1,16 @@
 ---
-title: 如何：在 Windows 桌面應用程式中使用 Windows 10 SDK
+title: HOW TO：使用 Windows 10 SDK，在 Windows 桌面應用程式
 ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-ms.openlocfilehash: ed860a229866991b01266093058b71cc2ae84986
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25ef3674a7ab741f20a07d6e65d1b5524fb88d5f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669114"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809921"
 ---
-# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>如何：在 Windows 桌面應用程式中使用 Windows 10 SDK
+# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>HOW TO：使用 Windows 10 SDK，在 Windows 桌面應用程式
 
 當您在 Visual Studio 2017 中建立傳統 Windows 桌面專案時，它會設定預設為使用已安裝 c + + 桌面工作負載，或上次更新時所安裝的 Windows 10 sdk 版本來建置。 這個版本的 Windows SDK 是相容的 Windows 7 和更新版本。 請參閱[使用 Windows 標頭](/windows/desktop/WinProg/using-the-windows-headers)的目標設為特定的 Windows 版本的詳細資訊。
 
@@ -38,7 +38,7 @@ ms.locfileid: "50669114"
 
    `Retargeting End: 1 completed, 0 failed, 0 skipped`
 
-4. 開啟專案屬性，在 [組態屬性]、[一般]  區段中，注意 [Windows 目標平台版本] 的值。 變更此處的值，會與遵循這個程序有相同的效果。 請參閱 [General Property Page (Project)](../ide/general-property-page-project.md)。
+4. 開啟專案屬性，在 [組態屬性]、[一般]  區段中，注意 [Windows 目標平台版本] 的值。 變更此處的值，會與遵循這個程序有相同的效果。 請參閱 [General Property Page (Project)](../build/reference/general-property-page-project.md)。
 
    ![平台版本為目標](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - AI compiler option [C++]
 - -AI compiler option [C++]
 ms.assetid: fb9c1846-504c-4a3b-bb39-c8696de32f6f
-ms.openlocfilehash: a2d87039e2195c96e4209c7b5098473a6f52c486
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3633cfe34a4f9c627f84cf401cb559f02f8c8229
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424440"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810207"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (指定中繼資料目錄)
 
@@ -37,7 +37,7 @@ ms.locfileid: "57424440"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **C/c + +** > **一般**屬性頁。
 
@@ -49,6 +49,6 @@ ms.locfileid: "57424440"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
 [#using 指示詞](../../preprocessor/hash-using-directive-cpp.md)

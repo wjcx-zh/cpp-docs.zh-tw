@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - error handling, and notification
 ms.assetid: b621cf60-d869-451a-b05e-dc86d78addaa
-ms.openlocfilehash: 7aae4d68b272a6c12233f283d4b263648062b7c1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 29fe46e15712609ec0c4f268749aaefed103117e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418941"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812937"
 ---
 # <a name="error-handling-and-notification"></a>錯誤處理和告知
 
 如需有關錯誤處理和通知的詳細資訊，請參閱 <<c0> [ 了解 Helper 函式](understanding-the-helper-function.md)。
 
-如需有關攔截函式的詳細資訊，請參閱[結構和常數定義](../../build/reference/structure-and-constant-definitions.md)。
+如需有關攔截函式的詳細資訊，請參閱[結構和常數定義](structure-and-constant-definitions.md)。
 
 如果您的程式使用延遲載入 Dll，它必須處理錯誤，強行因為程式執行過程中發生的失敗會導致未處理例外狀況。 處理失敗是由兩個部分組成：
 
@@ -27,12 +27,12 @@ ms.locfileid: "57418941"
 
 下列主題討論的錯誤處理和通知：
 
-- [通知攔截](../../build/reference/notification-hooks.md)
+- [通知攔截](notification-hooks.md)
 
-- [失敗攔截](../../build/reference/failure-hooks.md)
+- [失敗攔截](failure-hooks.md)
 
-- [例外狀況](../../build/reference/exceptions-c-cpp.md)
+- [例外狀況](exceptions-c-cpp.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[延遲載入 DLL 的連結器支援](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[延遲載入 DLL 的連結器支援](linker-support-for-delay-loaded-dlls.md)

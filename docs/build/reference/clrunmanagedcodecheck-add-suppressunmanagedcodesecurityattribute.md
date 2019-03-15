@@ -1,5 +1,5 @@
 ---
-title: /CLRUNMANAGEDCODECHECK (移除 SuppressUnmanagedCodeSecurityAttribute)
+title: /CLRUNMANAGEDCODECHECK (Remove SuppressUnmanagedCodeSecurityAttribute)
 ms.date: 09/27/2018
 ms.topic: reference
 f1_keywords:
@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: 73abc426-dab0-45e2-be85-0f9a14206cc2
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 3cefe34eef1a30274ba2e9e362e2f61458f10e38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb23106648e3325755a857d0b962112e9bdcfac4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565915"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822596"
 ---
-# <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (移除 SuppressUnmanagedCodeSecurityAttribute)
+# <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (Remove SuppressUnmanagedCodeSecurityAttribute)
 
 **/CLRUNMANAGEDCODECHECK**指定連結器不會套用<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>至連結器產生`PInvoke`從 managed 程式碼呼叫原生 Dll。
 
 ## <a name="syntax"></a>語法
 
-> **/CLRUNMANAGEDCODECHECK**[**: NO**]
+> **/CLRUNMANAGEDCODECHECK**[**:NO**]
 
 ## <a name="remarks"></a>備註
 
@@ -39,7 +39,7 @@ A`PInvoke`呼叫時，所產生連結器連結器找不到受管理的符號，�
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 展開 [組態屬性] 節點。
 
@@ -55,5 +55,5 @@ A`PInvoke`呼叫時，所產生連結器連結器找不到受管理的符號，�
 
 ## <a name="see-also"></a>另請參閱
 
-- [設定連結器選項](../../build/reference/setting-linker-options.md)
-- [連結器選項](../../build/reference/linker-options.md)
+- [MSVC 連結器參考](linking.md)
+- [MSVC 連結器選項](linker-options.md)

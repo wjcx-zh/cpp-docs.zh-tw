@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ERRORREPORT linker option
 - -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
-ms.openlocfilehash: 97d36e9db342e5873fc76a156b879e03af880dbf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26cc157cb7247a3a2ea7c10b415df1160540c9ad
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447233"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818020"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (回報內部連結器錯誤)
 
@@ -42,7 +42,7 @@ ms.locfileid: "50447233"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 開啟**組態屬性** > **連結器** > **進階**屬性頁。
 
@@ -54,6 +54,6 @@ ms.locfileid: "50447233"
 
 ## <a name="see-also"></a>另請參閱
 
-[/errorReport (回報編譯器內部錯誤)](../../build/reference/errorreport-report-internal-compiler-errors.md)<br/>
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[/errorReport (回報編譯器內部錯誤)](errorreport-report-internal-compiler-errors.md)<br/>
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4634
 ms.assetid: 3e3496ce-2ac7-43d0-a48a-f514c950e81d
-ms.openlocfilehash: a26356dd32f1513eadf4ef2b82175cf71aed13a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d0e2af13128a201d96aa905d85621e14441a673
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536661"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818254"
 ---
 # <a name="compiler-warning-level-4-c4634"></a>編譯器警告 (層級 4) C4634
 
@@ -19,7 +19,7 @@ XML 文件註解: 無法套用: 原因
 
 XML 文件標記無法套用至所有 C++ 建構。  例如，您無法將文件註解加入命名空間或範本。
 
-如需詳細資訊，請參閱 [XML Documentation](../../ide/xml-documentation-visual-cpp.md)。
+如需詳細資訊，請參閱 [XML Documentation](../../build/reference/xml-documentation-visual-cpp.md)。
 
 ## <a name="example"></a>範例
 

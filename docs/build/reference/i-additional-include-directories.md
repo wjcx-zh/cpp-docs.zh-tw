@@ -14,12 +14,12 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-ms.openlocfilehash: 72f871b99602c63e3edaea719faf5de6d4451515
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6ec8b15e77fec5214013c484e617904ed29e8197
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412844"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807633"
 ---
 # <a name="i-additional-include-directories"></a>/I (其他 include 目錄)
 
@@ -38,7 +38,7 @@ ms.locfileid: "57412844"
 
 若要新增多個目錄，請多次使用此選項。 找到指定的 include 檔時，才會搜尋目錄。
 
-您可以使用這個選項搭配 ([/X （忽略標準 Include 路徑）](../../build/reference/x-ignore-standard-include-paths.md)) 選項。
+您可以使用這個選項搭配 ([/X （忽略標準 Include 路徑）](x-ignore-standard-include-paths.md)) 選項。
 
 編譯器會將目前目錄中搜尋以下列順序：
 
@@ -50,7 +50,7 @@ ms.locfileid: "57412844"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **C/c + +** > **一般**屬性頁。
 
@@ -70,5 +70,5 @@ CL /I \INCLUDE /I\MY\INCLUDE MAIN.C
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

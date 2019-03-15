@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ATL projects, compiler optimization
 - ATL_NO_VTABLE macro
 ms.assetid: 7f379318-66d5-43dd-a53d-530758d3a228
-ms.openlocfilehash: 6e6fe09aaa0726a39aae8b85cb6581c5d0cd24e1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5b6620b73713886301e4efc29754cf407d9576f4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280013"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812339"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>指定 ATL 專案的編譯器最佳化
 
@@ -54,8 +54,7 @@ ATL 然後 _ATL_NO_VTABLE 會，如下所示的定義：
 ## <a name="see-also"></a>另請參閱
 
 [ATL 專案精靈](../../atl/reference/atl-project-wizard.md)<br/>
-[Visual C++ 專案類型](../../ide/visual-cpp-project-types.md)<br/>
-[使用應用程式精靈建立桌面專案](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Visual C++ 專案類型](../../build/reference/visual-cpp-project-types.md)<br/>
 [使用 ATL 和 C 執行階段程式碼進行程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [novtable](../../cpp/novtable.md)<br/>

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enable exception handling compiler option [C++]
 - GX compiler option [C++]
 ms.assetid: 933b43ba-de77-4ff8-a48b-7074de90bc1c
-ms.openlocfilehash: 4ac2b86c19845a092c743c484ad48d0cd0b6fb35
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 43be8f6d0f080f0d85568ce5b089751fc68f0e8e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416029"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815459"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX (啟用例外狀況處理)
 
@@ -30,7 +30,7 @@ ms.locfileid: "57416029"
 
 ## <a name="remarks"></a>備註
 
-**/GX**已被取代。 使用對等[/EHsc](../../build/reference/eh-exception-handling-model.md)選項。 如需已被取代的編譯器選項的清單，請參閱 <<c0>  **已取代及移除的編譯器選項**一節[依分類排列的編譯器選項](../../build/reference/compiler-options-listed-by-category.md)。
+**/GX**已被取代。 使用對等[/EHsc](eh-exception-handling-model.md)選項。 如需已被取代的編譯器選項的清單，請參閱 <<c0>  **已取代及移除的編譯器選項**一節[依分類排列的編譯器選項](compiler-options-listed-by-category.md)。
 
 根據預設， **/EHsc**，則相當於 **/GX**，是使用 Visual Studio 開發環境進行編譯時作用中。 使用命令列工具時，會指定沒有例外狀況處理。 這相當於 **/GX-**。
 
@@ -38,7 +38,7 @@ ms.locfileid: "57416029"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 在 [導覽] 窗格中，選擇**組態屬性**， **C/c + +**，**命令列**。
 
@@ -50,6 +50,6 @@ ms.locfileid: "57416029"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
-[/EH (例外狀況處理模型)](../../build/reference/eh-exception-handling-model.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[/EH (例外狀況處理模型)](eh-exception-handling-model.md)

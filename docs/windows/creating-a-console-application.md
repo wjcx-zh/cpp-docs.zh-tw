@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32, console applications
 - console applications, Win32
 ms.assetid: aedfb6b3-ca1f-4e8e-8439-1b680810ee47
-ms.openlocfilehash: b66117f64445c47cc37c25c6713815bd7daa0950
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3644878e0562f535489a64a8c490c8c755054ff6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538836"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820763"
 ---
 # <a name="creating-a-console-application"></a>建立主控台應用程式
 
@@ -20,7 +20,7 @@ ms.locfileid: "50538836"
 
 ### <a name="to-create-a-win32-console-application"></a>建立 Win32 主控台應用程式
 
-1. 請遵循說明主題[使用 Visual C++ 應用程式精靈建立專案](../ide/creating-desktop-projects-by-using-application-wizards.md)中的指示操作。
+1. 請依照下列說明主題中的指示[建立 c + + 主控台應用程式專案](../get-started/tutorial-console-cpp.md)。
 
 2. 在 **新的專案**對話方塊方塊中，選取**Win32 主控台專案**中**範本**窗格，即可開啟精靈。
 
@@ -35,4 +35,4 @@ ms.locfileid: "50538836"
 
 [主控台專案](/visualstudio/debugger/debugging-preparation-console-projects)<br/>
 [使用程式碼精靈新增功能](../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[屬性頁](../ide/property-pages-visual-cpp.md)
+[屬性頁](../build/reference/property-pages-visual-cpp.md)

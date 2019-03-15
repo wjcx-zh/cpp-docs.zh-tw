@@ -2,16 +2,16 @@
 title: /arch (x86)
 ms.date: 11/04/2016
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
-ms.openlocfilehash: e2aba6dc18db621710b5293f9f970fa5f453b8a9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a429824a7c22aa9aba460481394785d31b92a5ef
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421803"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812248"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 
-在 x86 上，為程式碼產生指定架構。 另請參閱[/arch (x64)](../../build/reference/arch-x64.md)並[/arch (ARM)](../../build/reference/arch-arm.md)。
+在 x86 上，為程式碼產生指定架構。 另請參閱[/arch (x64)](arch-x64.md)並[/arch (ARM)](arch-arm.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -48,9 +48,9 @@ SSE 及 SSE2 指令在各種 Intel 及 AMD 處理器上存在。 AVX 指令在 I
 
 因為的 x86 編譯器會產生程式碼該使用 SSE2 指令，根據預設，您必須指定 **/arch:ia32**停用 SSE 及 SSE2 指令產生適用於 x86 處理器。
 
-**/arch**只會影響程式碼產生原生函式。 當您使用[/clr](../../build/reference/clr-common-language-runtime-compilation.md)進行編譯， **/arch**不有 managed 函式的程式碼產生任何影響。
+**/arch**只會影響程式碼產生原生函式。 當您使用[/clr](clr-common-language-runtime-compilation.md)進行編譯， **/arch**不有 managed 函式的程式碼產生任何影響。
 
-**/arch**並[/QIfist](../../build/reference/qifist-suppress-ftol.md)不能在相同的編譯模組。 具體來說，如果您未使用 `_controlfp` 來修改 FP 控制字組，則執行階段啟始程式碼會將 x87 FPU 控制字組精確度控制欄位，設定為 53 個位元。 因此，運算式中的每一個浮點數及雙精度浮點數運算都會使用 53 個位元的有效位數及 15 個位元的指數。 不過，每一個 SSE 單精確度運算會使用 24 個位元的有效位數及 8 個位元的指數，而 SSE2 雙精確度運算會使用 53 個位元的有效位數及 11 個位元的指數。 如需詳細資訊，請參閱 [_control87、_controlfp、\__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)。 在一個運算式樹狀架構可能存在這些差異，但在每一個子運算式之後涉及使用者指派的情況下除外。 請考慮下列事項：
+**/arch**並[/QIfist](qifist-suppress-ftol.md)不能在相同的編譯模組。 具體來說，如果您未使用 `_controlfp` 來修改 FP 控制字組，則執行階段啟始程式碼會將 x87 FPU 控制字組精確度控制欄位，設定為 53 個位元。 因此，運算式中的每一個浮點數及雙精度浮點數運算都會使用 53 個位元的有效位數及 15 個位元的指數。 不過，每一個 SSE 單精確度運算會使用 24 個位元的有效位數及 8 個位元的指數，而 SSE2 雙精確度運算會使用 53 個位元的有效位數及 11 個位元的指數。 如需詳細資訊，請參閱 [_control87、_controlfp、\__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)。 在一個運算式樹狀架構可能存在這些差異，但在每一個子運算式之後涉及使用者指派的情況下除外。 請考慮下列事項：
 
 ```cpp
 r = f1 * f2 + d;  // Different results are possible on SSE/SSE2.
@@ -66,7 +66,7 @@ r = t + d;     // This should produce the same overall result
 
 ### <a name="to-set-this-compiler-option-for-avx-avx2-ia32-sse-or-sse2-in-visual-studio"></a>在 Visual Studio 中設定 AVX、AVX2、IA32、SSE 或 SSE2 的這個編譯器選項
 
-1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性**， **C/c + +** 資料夾。
 
@@ -80,6 +80,6 @@ r = t + d;     // This should produce the same overall result
 
 ## <a name="see-also"></a>另請參閱
 
-[/arch (最小 CPU 架構)](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[/arch (最小 CPU 架構)](arch-minimum-cpu-architecture.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

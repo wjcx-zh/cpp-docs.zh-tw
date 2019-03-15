@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 4a37542bd69926572e44322c406862117560affe
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175765"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820737"
 ---
 # <a name="c-attributes-for-com-and-net"></a>適用於 COM 和.NET 的 c + + 屬性
 
@@ -49,7 +49,7 @@ class CMyReceiver
 
 ## <a name="basic-mechanics-of-attributes"></a>屬性的基本機制
 
-有三種方式，將屬性插入您的專案。 首先，您可以將它們插入以手動方式插入原始程式碼中。 第二，您可以將它們插入在專案中使用物件的屬性方格。 最後，您可以將它們插入使用各種不同的精靈。 如需有關使用**屬性** 視窗和各種精靈，請參閱[Creating and Managing Visual c + + Projects](../../ide/creating-and-managing-visual-cpp-projects.md)。
+有三種方式，將屬性插入您的專案。 首先，您可以將它們插入以手動方式插入原始程式碼中。 第二，您可以將它們插入在專案中使用物件的屬性方格。 最後，您可以將它們插入使用各種不同的精靈。 如需有關使用**屬性** 視窗和各種精靈，請參閱[Creating and Managing Visual c + + Projects](../../build/creating-and-managing-visual-cpp-projects.md)。
 
 為之前，先建置專案時，編譯器會剖析每個 c + + 原始程式檔，產生的物件檔案。 不過，當編譯器發現屬性，它會剖析並語法驗證。 然後編譯器動態地呼叫插入程式碼，或在編譯時期進行其他修改的屬性提供者。 提供者的實作是根據屬性的類型而有所不同。 比方說，ATL 相關屬性的實作方式 Atlprov.dll。
 

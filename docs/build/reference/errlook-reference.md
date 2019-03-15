@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ErrLook tool
 - Error lookup tool
 ms.assetid: 6040ffc1-2355-4a45-8998-84cbcba4ca91
-ms.openlocfilehash: 598e3d938645e3d024b2409d97b4b8f082ee2d85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8afcafa7d1b8cd666eb5b02f09a14782f8621ca
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621464"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813366"
 ---
 # <a name="errlook-reference"></a>ERRLOOK 參考
 
@@ -20,19 +20,19 @@ ERRLOOK 公用程式，可從 [工具] 功能表做**錯誤查詢**，擷取系�
 
 ## <a name="in-this-section"></a>本節內容
 
-[值編輯控制項](../../build/reference/value-edit-control.md)<br/>
+[值編輯控制項](value-edit-control.md)<br/>
 描述在 ERRLOOK 值編輯控制項。
 
-[錯誤訊息編輯控制項](../../build/reference/error-message-edit-control.md)<br/>
+[錯誤訊息編輯控制項](error-message-edit-control.md)<br/>
 描述 ERRLOOK 的錯誤訊息編輯控制項。
 
-[模組按鈕](../../build/reference/modules-button.md)<br/>
+[模組按鈕](modules-button.md)<br/>
 描述 ERRLOOK 中的 [模組] 按鈕。
 
-[查詢按鈕](../../build/reference/look-up-button.md)<br/>
+[查詢按鈕](look-up-button.md)<br/>
 描述在 ERRLOOK 中的 [查閱] 按鈕。
 
 ## <a name="related-sections"></a>相關章節
 
-[C/C++ 建置工具](../../build/reference/c-cpp-build-tools.md)<br/>
+[其他 MSVC 建置工具](c-cpp-build-tools.md)<br/>
 提供主題連結，討論 C/c + + 建置 Visual c + + 中提供的工具。

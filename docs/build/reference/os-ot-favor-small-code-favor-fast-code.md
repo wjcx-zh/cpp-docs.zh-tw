@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-ms.openlocfilehash: c2abf23c15e6550a6d115f2e2b41a9c59de5fa3a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d4e8d062685a543c428f0c86a22c17c8faf017ad
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424635"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814246"
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os、/Ot (偏好小的程式碼、偏好快的程式碼)
 
@@ -39,12 +39,12 @@ ms.locfileid: "57424635"
 
 **/Os** （偏好小的程式碼） 將 Exe 和 Dll 的大小指示編譯器大小最佳化優先於速度降到最低。 編譯器可以減少許多 C 和 c + + 建構至機器碼的功能類似的序列。 有時候這些差異，提供大小與速度的權衡的取捨。 **/Os**並 **/Ot**選項可讓您指定哪一個喜好設定：
 
-**/Ot** （偏好快的程式碼） 透過指示編譯器將優先於大小最大化的 Exe 和 Dll 的速度。 （這是預設值）。編譯器可以減少許多 C 和 c + + 建構至機器碼的功能類似的序列。 有時候，這些差異，提供大小與速度的權衡的取捨。 /Ot 選項隱含的最快速度 ([/o2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)) 選項。 **/O2**選項結合數個選項可產生極快速的程式碼。
+**/Ot** （偏好快的程式碼） 透過指示編譯器將優先於大小最大化的 Exe 和 Dll 的速度。 （這是預設值）。編譯器可以減少許多 C 和 c + + 建構至機器碼的功能類似的序列。 有時候，這些差異，提供大小與速度的權衡的取捨。 /Ot 選項隱含的最快速度 ([/o2](o1-o2-minimize-size-maximize-speed.md)) 選項。 **/O2**選項結合數個選項可產生極快速的程式碼。
 
-如果您使用 **/Os**或是 **/Ot**，則您也必須指定[/Og](../../build/reference/og-global-optimizations.md)最佳化程式碼。
+如果您使用 **/Os**或是 **/Ot**，則您也必須指定[/Og](og-global-optimizations.md)最佳化程式碼。
 
 > [!NOTE]
->  從分析測試回合所收集的資訊將會覆寫才會作用中您指定的最佳化 **/Ob**， **/Os**，或 **/Ot**。 如需詳細資訊，[特性指引最佳化](../../build/reference/profile-guided-optimizations.md)。
+>  從分析測試回合所收集的資訊將會覆寫才會作用中您指定的最佳化 **/Ob**， **/Os**，或 **/Ot**。 如需詳細資訊，[特性指引最佳化](../profile-guided-optimizations.md)。
 
 **x86 Specific**
 
@@ -86,7 +86,7 @@ sub    eax, ecx
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -100,6 +100,6 @@ sub    eax, ecx
 
 ## <a name="see-also"></a>另請參閱
 
-[/O 選項 (最佳化程式碼)](../../build/reference/o-options-optimize-code.md)<br/>
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[/O 選項 (最佳化程式碼)](o-options-optimize-code.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

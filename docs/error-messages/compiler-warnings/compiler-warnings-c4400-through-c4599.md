@@ -30,7 +30,6 @@ f1_keywords:
 - C4455
 - C4456
 - C4457
-- C4458
 - C4459
 - C4472
 - C4474
@@ -99,7 +98,6 @@ helpviewer_keywords:
 - C4455
 - C4456
 - C4457
-- C4458
 - C4459
 - C4472
 - C4474
@@ -140,12 +138,12 @@ helpviewer_keywords:
 - C4594
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
-ms.openlocfilehash: 14195271fa0e5e399b801fd36803db4731e690f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 990560e2c05f66a010382f736735c19c17d4dc28
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491291"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816616"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>編譯器警告 C4400 到 C4599
 
@@ -173,7 +171,7 @@ ms.locfileid: "50491291"
 |[編譯器警告 (層級 2) C4412](../../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md)|'*函式*': 函式簽章含有類型'*型別*';C + + 物件是純程式碼之間傳遞的不安全和混合或原生。|
 |編譯器警告 C4413|'classname::member': 參考成員已初始化成建構函式結束後就不存在的暫存區|
 |[編譯器警告 (層級 3) C4414](../../error-messages/compiler-warnings/compiler-warning-level-3-c4414.md)|'*函式*': 函式的 short 跳躍指令被轉換為 near|
-|編譯器警告 （層級 1） C4415|重複的 __declspec (code_seg ('*名稱*'))|
+|編譯器警告 （層級 1） C4415|duplicate __declspec(code_seg('*name*'))|
 |編譯器警告 （層級 1） C4416|__declspec(code_seg(...)) 包含空字串： 已忽略|
 |編譯器警告 （層級 1） C4417|明確樣板具現化不能有 __declspec(code_seg(...))： 已忽略|
 |編譯器警告 （層級 1） C4418|在列舉上忽略的 __declspec(code_seg(...))|
@@ -186,10 +184,10 @@ ms.locfileid: "50491291"
 |編譯器警告 （層級 1） C4426|變更包含標頭之後最佳化旗標可能會因為 #pragma optimize （）|
 |編譯器警告 （層級 1） C4427|'*運算子*': 常數相除，未定義的行為溢位|
 |[編譯器警告 (層級 4) C4429](../../error-messages/compiler-warnings/compiler-warning-level-4-c4429.md)|可能不完整或格式不正確通用字元名稱|
-|[編譯器警告 （錯誤） C4430](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|遺漏類型規範 - 假設為 int。 注意： C + + 不支援 default-int|
-|[編譯器警告 (層級 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|遺漏類型規範 - 假設為 int。 注意: C 已不再支援 default-int|
+|[編譯器警告 （錯誤） C4430](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|遺漏類型規範 - 假設為 int。 注意:C + + 不支援預設 int|
+|[編譯器警告 (層級 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|遺漏類型規範 - 假設為 int。 注意:C 不再支援 default-int|
 |[編譯器警告 (層級 4) C4434](../../error-messages/compiler-warnings/compiler-warning-level-4-c4434.md)|靜態建構函式必須有私用存取範圍;變更為私用存取|
-|[編譯器警告 (層級 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|'*derived_class*': / vd2 底下的物件配置將因虛擬基底'*base_class*'|
+|[編譯器警告 (層級 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|'*derived_class*':/ Vd2 底下的物件配置將因虛擬基底 '*base_class*'|
 |[編譯器警告 (層級 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)|動態\_轉型從虛擬基底 '*base_class*'到'*derived_class*' 建構函式或解構函式中無法使用部分建構的物件|
 |[編譯器警告 (層級 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)|動態\_轉型從虛擬基底 '*base_class*'到'*derived_class*' 無法在某些內容中|
 |編譯器警告 C4438|'*函式*': 無法安全地呼叫 /await: clrcompat 模式。 如果 '*函式*' 呼叫 CLR 可能會導致 CLR 標頭損毀|
@@ -205,9 +203,9 @@ ms.locfileid: "50491291"
 |編譯器警告 C4448|'*型別*1' 沒有中繼資料中指定的預設介面。 挑選: '*type2*'，這可能會在執行階段失敗。|
 |編譯器警告 C4449|'*型別*': 非密封的類型應標記為 '[WebHostHidden]'|
 |編譯器警告 C4450|'*type1*'應該標示為 '[WebHostHidden]' 因為其衍生自'*type2*'|
-|編譯器警告 （層級 4） C4451|'classname1::member': ref 類別 'classname2::member' 在這個內容內的使用方式可能會導致不正確的封送處理物件跨內容|
+|編譯器警告 （層級 4） C4451|' classname1::member':Ref 類別 'classname2::member' 在這個內容內的使用方式可能會導致不正確的封送處理物件跨內容|
 |編譯器警告 （層級 1） C4452|'*識別碼*': 公用類型不能在全域範圍。 它必須是輸出.winmd 檔案名稱的子系的命名空間中。|
-|編譯器警告 （層級 1） C4453|'*型別*': '[WebHostHidden]' 類型不應該不是公用類型的已發行介面上使用 '[WebHostHidden]'|
+|編譯器警告 （層級 1） C4453|'*型別*':'[WebHostHidden]' 類型不應該不是公用類型的已發行介面上使用 '[WebHostHidden]'|
 |編譯器警告 （層級 1） C4454|'*函式*' 由多個輸入參數數目 [defaultoverload] 指定多載。 挑選 '*宣告*' 為預設多載|
 |編譯器警告 （層級 1） C4455|' 運算子*運算子*': 開頭不是以底線的常值後置字元識別項保留|
 |[編譯器警告 (層級 4) C4456](compiler-warning-level-4-c4456.md)|宣告的 '*識別碼*' 會隱藏先前的區域宣告|
@@ -242,7 +240,7 @@ ms.locfileid: "50491291"
 |編譯器警告 （層級 1） C4491|'*名稱*': 不合法的 IDL 版本格式|
 |編譯器警告 （層級 1，錯誤） C4492|'*function1*': 符合基底 ref 類別方法'*function2*'，但未標示為 'override'|
 |編譯器警告 （層級 3，錯誤） C4493|刪除運算式沒有任何作用的解構函式為 '*型別*' 沒有 'public' 可及性|
-|編譯器警告 （層級 1） C4494|'*函式*': 忽略 __declspec （allocator），因為函式傳回類型不是指標或參考|
+|編譯器警告 （層級 1） C4494|'*函式*':忽略 __declspec （allocator），因為函式傳回類型不是指標或參考|
 |編譯器警告 C4495|使用非標準擴充 ' __super ': 取代為明確的基底類別名稱|
 |編譯器警告 C4496|使用非標準擴充 'for each': 取代為 ranged-for 陳述式|
 |編譯器警告 C4497|使用非標準擴充 ' sealed ': 取代為 'final'|
@@ -306,7 +304,7 @@ ms.locfileid: "50491291"
 |編譯器警告 （層級 3） C4569|'*函式*': 沒有任何成員符合明確覆寫的簽章|
 |[編譯器警告 (層級 3) C4570](../../error-messages/compiler-warnings/compiler-warning-level-3-c4570.md)|'*型別*': 未明確宣告為抽象，但是擁有抽象函式|
 |[編譯器警告 (層級 4) C4571](../../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)|Visual c + + 7.1; 以來變更的告知性： catch 語意不再攔截結構化例外狀況 (SEH)|
-|[編譯器警告 (層級 1) C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|在 /clr 下的 [ParamArray] 屬性已被取代的工作，請使用 '...' 改為|
+|[編譯器警告 (層級 1) C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|[ParamArray] 屬性之下已被取代 /clr，使用 '...'改為|
 |編譯器警告 （層級 1） C4573|使用 '*lambda 函式*' 需要編譯器擷取 'this'，但目前的預設擷取模式不允許使用它|
 |編譯器警告 （層級 4） C4574|'*識別碼*'定義為' 0': 您是否想要使用 '#if identifier'？|
 |編譯器警告 （層級 1） C4575|'__vectorcall' 不以 '/ /clr' 選項： 將轉換為 '__stdcall'|
@@ -318,8 +316,8 @@ ms.locfileid: "50491291"
 |編譯器警告 （層級 4） C4582|'*型別*': 未隱含呼叫建構函式|
 |編譯器警告 （層級 4） C4583|'*型別*': 未隱含呼叫解構函式|
 |[編譯器警告 (層級 1) C4584](../../error-messages/compiler-warnings/compiler-warning-level-1-c4584.md)|'*class1*': 基底類別'*class2*'已經是基底類別的'*class3 移*'|
-|編譯器警告 （層級 1，錯誤） C4585|'*類別*': WinRT 'public ref class' 必須密封的或衍生自現有未密封的類別|
-|編譯器警告 （層級 1，錯誤） C4586|'*型別*': 無法在稱為 'Windows' 的最上層命名空間宣告的公用型別|
+|編譯器警告 （層級 1，錯誤） C4585|'*類別*':WinRT 'public ref class' 必須密封的或衍生自現有的未密封類別|
+|編譯器警告 （層級 1，錯誤） C4586|'*型別*':無法在稱為 'Windows' 的最上層命名空間宣告的公用型別|
 |編譯器警告 （層級 1） C4587|'*anonymous_structure*': 行為變更： 不再隱含呼叫建構函式|
 |編譯器警告 （層級 1） C4588|'*anonymous_structure*': 行為變更： 不再隱含呼叫解構函式|
 |編譯器警告 （層級 1） C4591|'constexpr' 呼叫深度限制*數字*超過 (/ constexpr:depth\<數字 >)|

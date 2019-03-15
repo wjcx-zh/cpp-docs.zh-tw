@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: 8029adfd5b4f27e097df693c85ee0d711a13dc4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7dc30d3e5869e9b0f534a4769d4517a0514c144
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612364"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822622"
 ---
 # <a name="import-directive-c"></a>#import 指示詞 (C++)
 
@@ -121,16 +121,16 @@ ms.locfileid: "50612364"
 
 - 當 **#import**是處理，編譯器會先檢查標頭是否存在，且是最新狀態。 如果是，就不需要重新建立。
 
-**#Import**指示詞也參與最少重建，並可以放置在先行編譯標頭檔。 請參閱[建立先行編譯標頭檔](../build/reference/creating-precompiled-header-files.md)如需詳細資訊。
+**#Import**指示詞也參與最少重建，並可以放置在先行編譯標頭檔。 請參閱[建立先行編譯標頭檔](../build/creating-precompiled-header-files.md)如需詳細資訊。
 
 ###  <a name="_predir_the_primary_type_library_header_file"></a> 主要類型程式庫標頭檔
 主要類型程式庫標頭檔包含七個區段：
 
-- 標題重複使用區段：包含註解、COMDEF.H 的 `#include` 陳述式 (會定義標題中使用的一些標準巨集)，以及其他設定資訊。
+- 標題重複使用區段：包含註解、 `#include` COMDEF 陳述式。H （會定義使用一些標準巨集的標頭中），和其他設定資訊。
 
-- 向前參考和 typedef：包含結構宣告，例如 `struct IMyInterface` 和 Typedef。
+- 向前參考和 typedef:例如，包含結構宣告`struct IMyInterface`和 typedef。
 
-- 智慧型指標宣告： 樣板類別`_com_ptr_t`是一個智慧型指標實作，封裝介面指標，而且不需要呼叫`AddRef`， `Release`，`QueryInterface`函式。 此外，還會在建立新的 COM 物件時隱藏 `CoCreateInstance` 呼叫。 本節使用巨集陳述式`_COM_SMARTPTR_TYPEDEF`以建立要的樣板特製化的 COM 介面的 typedef [_com_ptr_t](../cpp/com-ptr-t-class.md)範本類別。 例如，對於介面`IMyInterface`、。TLH 檔案會包含：
+- 智慧型指標宣告：此範本類別`_com_ptr_t`是一個智慧型指標實作，封裝介面指標，而且不需要呼叫`AddRef`， `Release`，`QueryInterface`函式。 此外，還會在建立新的 COM 物件時隱藏 `CoCreateInstance` 呼叫。 本節使用巨集陳述式`_COM_SMARTPTR_TYPEDEF`以建立要的樣板特製化的 COM 介面的 typedef [_com_ptr_t](../cpp/com-ptr-t-class.md)範本類別。 例如，對於介面`IMyInterface`、。TLH 檔案會包含：
 
     ```TLH
     _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
@@ -144,13 +144,13 @@ ms.locfileid: "50612364"
 
    然後就可以將類型 `IMyInterfacePtr` 用來取代原始介面指標 `IMyInterface*`。 因此，就不需要呼叫各種`IUnknown`成員函式
 
-- Typeinfo 宣告： 主要包含的類別定義和其他項目公開所傳回之個別 typeinfo 項`ITypeLib:GetTypeInfo`。 在本節中，類型程式庫中的每個 typeinfo 會反映在相依於 `TYPEKIND` 資訊之表單的標頭中。
+- Typeinfo 宣告：主要包含的類別定義和其他項目公開所傳回之個別 typeinfo 項`ITypeLib:GetTypeInfo`。 在本節中，類型程式庫中的每個 typeinfo 會反映在相依於 `TYPEKIND` 資訊之表單的標頭中。
 
 - 選擇性舊樣式 GUID 定義：包含具名 GUID 常數的初始化。 這些是名稱格式`CLSID_CoClass`和`IID_Interface`，類似於 MIDL 編譯器所產生。
 
 - 次要類型程式庫標頭的 `#include` 陳述式。
 
-- 頁尾重複使用區段：目前包含 `#pragma pack(pop)`。
+- 頁尾重複使用區段：目前包含`#pragma pack(pop)`。
 
 所有的區段，除了標題重複使用和頁尾重複使用區段上，會以所指定的名稱括住命名空間`library`原始 IDL 檔案中的陳述式。 您可以明確限定命名空間或包含下列陳述式，來使用類型程式庫標頭中的名稱：
 

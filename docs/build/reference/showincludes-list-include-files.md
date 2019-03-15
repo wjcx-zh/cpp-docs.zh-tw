@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -showIncludes compiler option [C++]
 - showIncludes compiler option [C++]
 ms.assetid: 0b74b052-f594-45a6-a7c7-09e1a319547d
-ms.openlocfilehash: 0c968f406043f5c0b5fd04c18e22a77cd640d873
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d454054c132976a899fcc4a56a63be427e79beec
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424154"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819230"
 ---
 # <a name="showincludes-list-include-files"></a>/showIncludes (列示包含檔)
 
@@ -50,7 +50,7 @@ Note: including file:  d:\temp\2.h
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -64,5 +64,5 @@ Note: including file:  d:\temp\2.h
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

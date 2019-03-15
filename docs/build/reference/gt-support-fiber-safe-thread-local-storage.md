@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -GT compiler option [C++]
 - fiber-safe static thread-local storage compiler option [C++]
 ms.assetid: 071fec79-c701-432b-9970-457344133159
-ms.openlocfilehash: 14d2f66401b7b7ed324b79b12b6de26c7ee450b2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 417ac00a446f773a424553e42478a4f0cf58efc6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420254"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822512"
 ---
 # <a name="gt-support-fiber-safe-thread-local-storage"></a>/GT (支援 Fiber-Safe 執行緒區域儲存區)
 
@@ -33,11 +33,11 @@ ms.locfileid: "57420254"
 
 使用宣告資料`__declspec(thread)`參考透過執行緒區域儲存區 (TLS) 陣列。 TLS 陣列是的系統會維護每個執行緒的位址陣列。 此陣列中的每個位址可讓執行緒區域儲存區資料的位置。
 
-Fiber 是輕量型的物件，包含堆疊和暫存器內容，並可在各種不同的執行緒上排程。 Fiber 可以在任何執行緒上執行。 由於 fiber 可能取得交換，而且稍後重新啟動不同的執行緒，TLS 陣列的位址必須不是快取或最佳化的通用子運算式為跨函式呼叫 (請參閱[/Og （全域最佳化）](../../build/reference/og-global-optimizations.md)選項詳細資料）。 **/GT**可避免這種最佳化。
+Fiber 是輕量型的物件，包含堆疊和暫存器內容，並可在各種不同的執行緒上排程。 Fiber 可以在任何執行緒上執行。 由於 fiber 可能取得交換，而且稍後重新啟動不同的執行緒，TLS 陣列的位址必須不是快取或最佳化的通用子運算式為跨函式呼叫 (請參閱[/Og （全域最佳化）](og-global-optimizations.md)選項詳細資料）。 **/GT**可避免這種最佳化。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -51,5 +51,5 @@ Fiber 是輕量型的物件，包含堆疊和暫存器內容，並可在各種�
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

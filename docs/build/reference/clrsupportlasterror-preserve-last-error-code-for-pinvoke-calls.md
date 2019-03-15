@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /CLRSUPPORTLASTERROR linker option
 - -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
-ms.openlocfilehash: 8be1ca08ae219202ad7b7f19ac693dd2123553b6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5e4a5c86e53d74c8b704ee3780991d496fc1802a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417732"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807672"
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR (保留最後的 PInvoke 呼叫錯誤碼)
 
@@ -64,11 +64,11 @@ ms.locfileid: "57417732"
 > [!NOTE]
 >  Unmanaged 函式所使用的 CLR 程式碼，在相同的模組中不支援保留的最後一個錯誤。
 
-- 如需詳細資訊，請參閱 [/clr (Common Language Runtime 編譯)](../../build/reference/clr-common-language-runtime-compilation.md)。
+- 如需詳細資訊，請參閱 [/clr (Common Language Runtime 編譯)](clr-common-language-runtime-compilation.md)。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 **連結器**資料夾。
 
@@ -152,5 +152,5 @@ GetLastError for system call succeeded (183).
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

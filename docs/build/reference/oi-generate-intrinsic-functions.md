@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -Oi compiler option [C++]
 - generate intrinsic functions compiler option [C++]
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
-ms.openlocfilehash: 1dc7f5f183e7dffb65c31ebb9bc47b30776b81e3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f3afedade6f99129c21069e5117daa4ceb616cc2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422113"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811884"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (產生內建函式)
 
@@ -41,7 +41,7 @@ ms.locfileid: "57422113"
 
 內建函式的浮點函式不執行任何特殊的檢查輸入值並因此用於限制範圍的輸入，且不同的例外狀況處理與具有相同名稱的程式庫常式比界限條件。 使用真正的內建形式表示遺失的 IEEE 例外狀況處理，而失去`_matherr`和`errno`功能; 後者表示遺失的 ANSI 合規性。 不過，這些內建形式可以顯著地加快浮點密集的程式，且對於許多程式，一致性問題有一些實用的值。
 
-您可以使用[Za](../../build/reference/za-ze-disable-language-extensions.md)覆寫產生真正的內建浮點選項的編譯器選項。 在這種情況下，函式會產生為程式庫常式，將引數直接傳遞至浮點晶片，而不是將引數推送至程式堆疊。
+您可以使用[Za](za-ze-disable-language-extensions.md)覆寫產生真正的內建浮點選項的編譯器選項。 在這種情況下，函式會產生為程式庫常式，將引數直接傳遞至浮點晶片，而不是將引數推送至程式堆疊。
 
 **結束 x86 特定**
 
@@ -49,7 +49,7 @@ ms.locfileid: "57422113"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -63,7 +63,7 @@ ms.locfileid: "57422113"
 
 ## <a name="see-also"></a>另請參閱
 
-[/O 選項 (最佳化程式碼)](../../build/reference/o-options-optimize-code.md)<br/>
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
+[/O 選項 (最佳化程式碼)](o-options-optimize-code.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
 [編譯器內建](../../intrinsics/compiler-intrinsics.md)

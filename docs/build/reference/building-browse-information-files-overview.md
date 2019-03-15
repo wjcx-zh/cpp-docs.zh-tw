@@ -7,12 +7,12 @@ helpviewer_keywords:
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-ms.openlocfilehash: 02f2107469e2fbbc4ea3591e1211e600d16fb9e9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4f12bd25ca3ab718a845dbb04aba3169cc6d4b19
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413013"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820601"
 ---
 # <a name="building-browse-information-files-overview"></a>建置瀏覽資訊檔：總覽
 
@@ -20,18 +20,18 @@ ms.locfileid: "57413013"
 
 讓 Visual c + + 會關閉這些函式，根據預設，產生.sbr 和.bsc 檔案需要時間。 如果您想要瀏覽目前的資訊，您必須開啟的瀏覽選項，並再次建置您的專案。
 
-使用[/FR](../../build/reference/fr-fr-create-dot-sbr-file.md)或是[/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md)告訴編譯器建立.sbr 檔案。 若要建立.bsc 檔案，您可以呼叫[BSCMAKE](../../build/reference/bscmake-command-line.md)從命令列。 從命令列使用 BSCMAKE，讓您更精確地控制瀏覽資訊檔的操作。 請參閱[BSCMAKE 參考](../../build/reference/bscmake-reference.md)如需詳細資訊。
+使用[/FR](fr-fr-create-dot-sbr-file.md)或是[/Fr](fr-fr-create-dot-sbr-file.md)告訴編譯器建立.sbr 檔案。 若要建立.bsc 檔案，您可以呼叫[BSCMAKE](bscmake-command-line.md)從命令列。 從命令列使用 BSCMAKE，讓您更精確地控制瀏覽資訊檔的操作。 請參閱[BSCMAKE 參考](bscmake-reference.md)如需詳細資訊。
 
 > [!TIP]
 >  您可以開啟產生的.sbr 檔，但保留已關閉的.bsc 檔產生。 這提供快速的組建，但也可讓您藉由開啟產生的.bsc 檔及建置專案，快速建立新的.bsc 檔。
 
 您可以減少時間、 記憶體和磁碟空間才能建置.bsc 檔藉由減少.bsc 檔的大小。
 
-請參閱[一般屬性頁 （專案）](../../ide/general-property-page-project.md)如需有關如何建立開發環境中的瀏覽器檔案資訊。
+請參閱[一般屬性頁 （專案）](general-property-page-project.md)如需有關如何建立開發環境中的瀏覽器檔案資訊。
 
 ### <a name="to-create-a-smaller-bsc-file"></a>若要建立較小的.bsc 檔案
 
-1. 使用[BSCMAKE 命令列選項](../../build/reference/bscmake-options.md)以排除瀏覽資訊檔的資訊。
+1. 使用[BSCMAKE 命令列選項](bscmake-options.md)以排除瀏覽資訊檔的資訊。
 
 1. 略過一或多個.sbr 檔時編譯或組合中的本機符號。
 
@@ -45,5 +45,5 @@ ms.locfileid: "57413013"
 
 ## <a name="see-also"></a>另請參閱
 
-[C/C++ 建置工具](../../build/reference/c-cpp-build-tools.md)<br/>
-[BSCMAKE 參考](../../build/reference/bscmake-reference.md)
+[其他 MSVC 建置工具](c-cpp-build-tools.md)<br/>
+[BSCMAKE 參考](bscmake-reference.md)

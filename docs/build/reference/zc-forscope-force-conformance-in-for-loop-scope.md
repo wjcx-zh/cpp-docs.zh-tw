@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
-ms.openlocfilehash: b800bdcc36c82dabe13418244782e82737ad9171
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f98667d3a771994d1b4e54b429f42cb566c102c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502020"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810246"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (強制 for 迴圈範圍中的一致性)
 
-用來搭配 Microsoft 擴充功能 ( [/Ze](../../cpp/for-statement-cpp.md) ) 實作[for](../../build/reference/za-ze-disable-language-extensions.md)迴圈的標準 C++ 行為。
+用來搭配 Microsoft 擴充功能 ( [/Ze](../../cpp/for-statement-cpp.md) ) 實作[for](za-ze-disable-language-extensions.md)迴圈的標準 C++ 行為。
 
 ## <a name="syntax"></a>語法
 
@@ -28,7 +28,7 @@ ms.locfileid: "50502020"
 
 ## <a name="remarks"></a>備註
 
-標準行為是讓 **for** 迴圈的初始設定式在 **for** 迴圈之後時超出範圍。 在 **/Zc:forScope-** 與 [/Ze](../../build/reference/za-ze-disable-language-extensions.md)下， **for** 迴圈的初始設定式會維持在範圍內，直到本機範圍結束為止。
+標準行為是讓 **for** 迴圈的初始設定式在 **for** 迴圈之後時超出範圍。 在 **/Zc:forScope-** 與 [/Ze](za-ze-disable-language-extensions.md)下， **for** 迴圈的初始設定式會維持在範圍內，直到本機範圍結束為止。
 
 **/Zc: forscope**選項預設為開啟。 **/Zc: forscope**不會受到影響時[/permissive--](permissive-standards-conformance.md)指定選項。
 
@@ -55,13 +55,13 @@ int main() {
 
 您可使用 **conform** pragma 來修改 [/Zc:forScope](../../preprocessor/conform.md) 的執行階段行為。
 
-若在具備現有 .pch 檔的專案中使用 **/Zc:forScope-** ，會產生警告、忽略 **/Zc:forScope-** ，並使用現有的 .pch 檔案繼續編譯。 如果您想要產生新的.pch 檔案，使用[/Yc （建立先行編譯標頭檔）](../../build/reference/yc-create-precompiled-header-file.md)。
+若在具備現有 .pch 檔的專案中使用 **/Zc:forScope-** ，會產生警告、忽略 **/Zc:forScope-** ，並使用現有的 .pch 檔案繼續編譯。 如果您想要產生新的.pch 檔案，使用[/Yc （建立先行編譯標頭檔）](yc-create-precompiled-header-file.md)。
 
 如需 Visual C++ 中一致性問題的詳細資訊，請參閱 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **C/c + +** > **語言**屬性頁。
 
@@ -73,5 +73,5 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[/Zc (一致性)](../../build/reference/zc-conformance.md)<br/>
-[/Za、/Ze (停用語言延伸模組)](../../build/reference/za-ze-disable-language-extensions.md)<br/>
+[/Zc (一致性)](zc-conformance.md)<br/>
+[/Za、/Ze (停用語言延伸模組)](za-ze-disable-language-extensions.md)<br/>

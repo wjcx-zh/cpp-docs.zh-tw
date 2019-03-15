@@ -5,12 +5,12 @@ helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
-ms.openlocfilehash: d325bdc4122d85383ecaa49ca41c7709be869463
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: ba0fa81aa42f946dbaf005c00380573e44312c5a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747900"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816356"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>HOW TO：建立 CLR 主控台應用程式 (C + + /cli CLI)
 
@@ -62,4 +62,5 @@ ms.locfileid: "57747900"
 
 ## <a name="see-also"></a>另請參閱
 
-[CLR 專案](../ide/files-created-for-clr-projects.md)
+[CLR 專案](../build/reference/files-created-for-clr-projects.md)
+

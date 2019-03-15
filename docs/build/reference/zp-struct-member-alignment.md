@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: d1821d8dc5eab202a918893a1e7895151629b551
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: d30e61137fc5ff8f6a5501ac7815edafc18f7680
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627523"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807685"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (結構成員對齊)
 
@@ -24,7 +24,7 @@ ms.locfileid: "53627523"
 
 ## <a name="syntax"></a>語法
 
-> **/Zp**[**1**|**2**|**4**|**8** | **16**]
+> **/Zp**[**1**|**2**|**4**|**8**|**16**]
 
 ## <a name="remarks"></a>備註
 
@@ -53,11 +53,11 @@ ms.locfileid: "53627523"
 
 - [__unaligned](../../cpp/unaligned.md)
 
-- [結構對齊範例](../../build/x64-software-conventions.md#examples-of-structure-alignment)(x64 專用)
+- [/ALIGN (區段記憶體對齊)](align-section-alignment.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取  **C/c + +** > **程式碼產生**屬性頁。
 
@@ -69,5 +69,5 @@ ms.locfileid: "53627523"
 
 ## <a name="see-also"></a>另請參閱
 
-- [編譯器選項](../../build/reference/compiler-options.md)
-- [設定編譯器選項](../../build/reference/setting-compiler-options.md)
+- [MSVC 編譯器選項](compiler-options.md)
+- [MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

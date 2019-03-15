@@ -40,12 +40,12 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-ms.openlocfilehash: fb06fdf0298d627f289448930b490fb0660e381d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 74b8cf198d46f83de327c68ac5f883bd75e5db80
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419602"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812040"
 ---
 # <a name="managing-a-library"></a>管理程式庫
 
@@ -64,7 +64,7 @@ LIB [options...] files...
 下列選項適用於建立和修改文件庫：
 
 **/LIBPATH:** *dir*<br/>
-覆寫環境程式庫路徑。 如需詳細資訊，請參閱連結描述[/LIBPATH](../../build/reference/libpath-additional-libpath.md)選項。
+覆寫環境程式庫路徑。 如需詳細資訊，請參閱連結描述[/LIBPATH](libpath-additional-libpath.md)選項。
 
 **/LIST**<br/>
 標準輸出中顯示輸出程式庫的相關資訊。 輸出可以重新導向至檔案。 您可以使用 /LIST 來判斷現有的程式庫的內容，而不需要修改它。
@@ -73,7 +73,7 @@ LIB [options...] files...
 當建置匯入程式庫時，指定正在建置匯入程式庫 DLL 的名稱。
 
 **/NODEFAULTLIB**<br/>
-解析外部參考時，它會搜尋程式庫清單中移除一或多個預設程式庫。 請參閱[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)如需詳細資訊。
+解析外部參考時，它會搜尋程式庫清單中移除一或多個預設程式庫。 請參閱[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)如需詳細資訊。
 
 **/ OUT:** *檔名*<br/>
 覆寫預設的輸出檔案名稱。 預設情況下，輸出程式庫會建立在目前目錄中，使用命令列] 和 [延伸模組上的第一個文件庫或物件檔案的基底名稱。 lib。
@@ -82,7 +82,7 @@ LIB [options...] files...
 省略指定*物件*從輸出程式庫。 LIB 會合併所有的物件 （不論位於目的檔或程式庫），然後再將其刪除以 /REMOVE 指定的任何物件建立輸出程式庫。
 
 **/SUBSYSTEM:**{**主控台** &AMP;#124; **EFI_APPLICATION** &AMP;#124; **EFI_BOOT_SERVICE_DRIVER** &AMP;#124; **EFI_ROM**&AMP;#124; **EFI_RUNTIME_DRIVER** &AMP;#124; **原生** &AMP;#124; **POSIX** &AMP;#124; **WINDOWS** &AMP;#124; **WINDOWSCE**} [，#[。 # #]]<br/>
-告知作業系統如何執行程式，建立連結至輸出程式庫。 如需詳細資訊，請參閱連結描述[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)選項。
+告知作業系統如何執行程式，建立連結至輸出程式庫。 如需詳細資訊，請參閱連結描述[/SUBSYSTEM](subsystem-specify-subsystem.md)選項。
 
 在命令列上指定的 LIB 選項不區分大小寫。
 
@@ -101,4 +101,4 @@ LIB [options...] files...
 
 ## <a name="see-also"></a>另請參閱
 
-[LIB 參考](../../build/reference/lib-reference.md)
+[LIB 參考](lib-reference.md)

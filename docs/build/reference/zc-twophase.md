@@ -9,12 +9,12 @@ helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: d5a53db5a5c0ae9c4cfec76e57f628499c8955c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebd577bc25a2789e3a6b328a4c9cd2e1596d04da
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648756"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821397"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc: twophase-（停用兩階段名稱查閱）
 
@@ -162,7 +162,7 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **C/c + +** > **命令列**屬性頁。
 
@@ -170,4 +170,4 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 
 ## <a name="see-also"></a>另請參閱
 
-[/Zc (一致性)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (一致性)](zc-conformance.md)<br/>

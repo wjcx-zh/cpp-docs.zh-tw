@@ -7,12 +7,12 @@ helpviewer_keywords:
 - module definition files, statement syntax
 - module definition files
 ms.assetid: f65cd3a7-65d7-4d06-939f-a8b1ecd50f2d
-ms.openlocfilehash: 6d6528b81777711e52153e19a656619a2895b0d6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f6269ad2d5bf3952e485f2ca5e5d1f411c5f1e0c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424752"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821268"
 ---
 # <a name="rules-for-module-definition-statements"></a>模組定義陳述式的規則
 
@@ -34,8 +34,8 @@ ms.locfileid: "57424752"
 
 - 數值引數會指定基底 10 或十六進位。
 
-- 如果字串引數符合[保留字](../../build/reference/reserved-words.md)，就必須括在雙引號 （"）。
+- 如果字串引數符合[保留字](reserved-words.md)，就必須括在雙引號 （"）。
 
 ## <a name="see-also"></a>另請參閱
 
-[模組定義檔 (.Def)](../../build/reference/module-definition-dot-def-files.md)
+[模組定義檔 (.Def)](module-definition-dot-def-files.md)

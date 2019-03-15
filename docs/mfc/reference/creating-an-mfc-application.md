@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: 30fac6579d05eed276b60918b2417cd96044359a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 251275fd866ce7c9d697787c35c6207ef77862db
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292623"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818592"
 ---
 # <a name="creating-an-mfc-application"></a>建立 MFC 應用程式
 
@@ -36,7 +36,7 @@ MFC 應用程式精靈可根據您在精靈中選取的選項，為任意類型�
 
 ### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>若要使用 MFC 應用程式精靈建立 MFC 應用程式
 
-1. 請遵循說明主題[使用 Visual C++ 應用程式精靈建立專案](../../ide/creating-desktop-projects-by-using-application-wizards.md)中的指示操作。
+1. 請依照下列說明主題中的指示[建立 c + + 主控台應用程式專案](../../get-started/tutorial-console-cpp.md)。
 
 1. 在 **新的專案**對話方塊中，選取**MFC 應用程式**以開啟精靈的 範本 窗格中。
 
@@ -47,9 +47,10 @@ MFC 應用程式精靈可根據您在精靈中選取的選項，為任意類型�
 
 1. 按一下 **完成**以關閉精靈，並在開發環境中開啟新專案。
 
-您的專案建立之後，您可以檢視中建立的檔案**方案總管 中**。 如需精靈建立之專案檔案的詳細資訊，請參閱專案所產生的 ReadMe.txt 檔案。 如需檔案類型的詳細資訊，請參閱[Visual c + + 專案建立的檔案類型](../../ide/file-types-created-for-visual-cpp-projects.md)。
+您的專案建立之後，您可以檢視中建立的檔案**方案總管 中**。 如需精靈建立之專案檔案的詳細資訊，請參閱專案所產生的 ReadMe.txt 檔案。 如需檔案類型的詳細資訊，請參閱[Visual c + + 專案建立的檔案類型](../../build/reference/file-types-created-for-visual-cpp-projects.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[屬性頁](../../ide/property-pages-visual-cpp.md)
+[屬性頁](../../build/reference/property-pages-visual-cpp.md)
+

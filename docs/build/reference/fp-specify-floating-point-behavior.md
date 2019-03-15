@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: c571bf104fd7e8f6a287c3dd35c444d904b4b7e8
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 616efc0980c6ddadfee078dbe7a382372c5636ec
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894090"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818163"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp （指定浮點數行為）
 
@@ -51,7 +51,7 @@ ms.locfileid: "54894090"
 
 #### <a name="fast"></a>快速
 
-**/Fp: fast**選項可讓編譯器重新排列、 合併或簡化以最佳化浮點程式碼的速度和空間的浮點運算。 編譯器可能會省略捨入在指派陳述式、 類型轉換或函式呼叫。 它可能重新排列運算或執行代數轉換，例如，使用關聯和分散的法規，即使這類轉換會導致明顯不同的捨入行為。 此增強的最佳化，因為某些浮點運算的結果可能與不同所產生的其他 **/fp**選項。 特殊值 （NaN、 + infinity、-infinity，-0.0） 不會傳播，或根據 IEEE 754 標準嚴格的行為。 下，可能會產生浮點數的縮寫 **/fp: fast**。 編譯器仍受限於基礎架構底下 **/fp: fast**，和其他最佳化可透過善用[/arch](../../build/reference/arch-minimum-cpu-architecture.md)選項。
+**/Fp: fast**選項可讓編譯器重新排列、 合併或簡化以最佳化浮點程式碼的速度和空間的浮點運算。 編譯器可能會省略捨入在指派陳述式、 類型轉換或函式呼叫。 它可能重新排列運算或執行代數轉換，例如，使用關聯和分散的法規，即使這類轉換會導致明顯不同的捨入行為。 此增強的最佳化，因為某些浮點運算的結果可能與不同所產生的其他 **/fp**選項。 特殊值 （NaN、 + infinity、-infinity，-0.0） 不會傳播，或根據 IEEE 754 標準嚴格的行為。 下，可能會產生浮點數的縮寫 **/fp: fast**。 編譯器仍受限於基礎架構底下 **/fp: fast**，和其他最佳化可透過善用[/arch](arch-minimum-cpu-architecture.md)選項。
 
 底下 **/fp: fast**，編譯器會產生要在預設的浮點環境中執行的程式碼，並假設不存取的浮點環境，或在執行階段修改。 也就是說，它會假設，程式碼未取消遮罩浮點例外狀況、 讀取或寫入浮點狀態暫存器，或變更捨入模式。
 
@@ -67,7 +67,7 @@ ms.locfileid: "54894090"
 
 多個 **/fp**相同的編譯器命令列中，您可以指定選項。 只有其中一個 **/fp: strict**， **/fp: fast**，並 **/fp： 精確**選項可以實際上是一次。 如果以上其中一個選項指定命令列上，更新版本的選項會優先，編譯器會產生警告。 **/Fp: strict**並 **/fp： 除了**選項不相容於 **/clr**。
 
-[/Za](../../build/reference/za-ze-disable-language-extensions.md) （ANSI 相容性） 選項不相容 **/fp**。
+[/Za](za-ze-disable-language-extensions.md) （ANSI 相容性） 選項不相容 **/fp**。
 
 ### <a name="using-pragmas-to-control-floating-point-behavior"></a>使用 Pragma 控制浮點數行為
 
@@ -256,7 +256,7 @@ float casting(float a, float b)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **C/c + +** > **程式碼產生**屬性頁。
 
@@ -268,6 +268,6 @@ float casting(float a, float b)
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](compiler-options.md)<br/>
-[設定編譯器選項](setting-compiler-options.md)<br/>
-[Microsoft Visual c + + 浮點最佳化](floating-point-optimization.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[MSVC 浮點最佳化](floating-point-optimization.md)<br/>

@@ -3,12 +3,12 @@ title: / POGOSAFEMODE (執行緒安全模式中的執行 PGO)
 ms.date: 03/14/2018
 f1_keywords:
 - POGOSAFEMODE
-ms.openlocfilehash: f210884d693ef0d778943580b9c5a7b2ec2ea336
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbb328bf67d7823305a43f1d61252747cf5ea29e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544426"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821283"
 ---
 # <a name="pogosafemode-run-pgo-in-thread-safe-mode"></a>/ POGOSAFEMODE (執行緒安全模式中的執行 PGO)
 
@@ -26,11 +26,11 @@ ms.locfileid: "50544426"
 
 根據預設，PGO 程式碼剖析以快速模式運作。 **/ POGOSAFEMODE**是如果您想要使用安全模式下，才需要。
 
-若要執行 PGO 程式碼剖析在安全模式中，您必須使用 **/GENPROFILE： 確切**（偏好選項），或使用環境變數[PogoSafeMode](environment-variables-for-profile-guided-optimizations.md)或 連結器參數 **/POGOSAFEMODE**，這取決於系統。 如果您正在執行分析使用 x64 電腦，您必須使用連結器參數。 如果您正在執行 x86 程式碼剖析的電腦，您可能會使用連結器參數，或環境變數定義為任何值，再啟動 PGO 檢測程序。
+若要執行 PGO 程式碼剖析在安全模式中，您必須使用 **/GENPROFILE： 確切**（偏好選項），或使用環境變數[PogoSafeMode](../environment-variables-for-profile-guided-optimizations.md)或 連結器參數 **/POGOSAFEMODE**，這取決於系統。 如果您正在執行分析使用 x64 電腦，您必須使用連結器參數。 如果您正在執行 x86 程式碼剖析的電腦，您可能會使用連結器參數，或環境變數定義為任何值，再啟動 PGO 檢測程序。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **連結器** > **最佳化**屬性頁。
 
@@ -38,7 +38,7 @@ ms.locfileid: "50544426"
 
 1. 選取 **組態屬性** > **連結器** > **命令列**屬性頁。
 
-1. 請輸入 **/POGOSAFEMODE**到選項**其他選項** 方塊中。 選擇**確定**以儲存變更。
+1. 請輸入 **/POGOSAFEMODE**到選項**其他選項** 方塊中。 選取 [確定] 儲存您的變更。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 
@@ -48,5 +48,5 @@ ms.locfileid: "50544426"
 
 [/GENPROFILE 和 /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/LTCG](ltcg-link-time-code-generation.md)<br/>
-[特性指引最佳化](../../build/reference/profile-guided-optimizations.md)<br/>
-[特性指引最佳化的環境變數](../../build/reference/environment-variables-for-profile-guided-optimizations.md)<br/>
+[特性指引最佳化](../profile-guided-optimizations.md)<br/>
+[特性指引最佳化的環境變數](../environment-variables-for-profile-guided-optimizations.md)<br/>

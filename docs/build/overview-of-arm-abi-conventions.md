@@ -2,12 +2,12 @@
 title: ARM ABI 慣例概觀
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: d25cba2800348ca1ae45c5bb59163816a4eefa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17f2598912879d0eb54fd189e1fae541ba2f874f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436019"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810454"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>ARM32 ABI 慣例概觀
 
@@ -23,7 +23,7 @@ ARM 上的 Windows 會假設其始終在 ARMv7 架構上執行。 硬體中必�
 
 ## <a name="endianness"></a>位元組序
 
-Windows on ARM 在由小到大的格式模式下執行。 Visual C++ 編譯器和 Windows 執行階段始終預期由小到大格式的資料。 雖然 ARM 指令集架構 (ISA) 中的 SETEND 指令甚至容許以使用者模式程式碼，來變更目前的位元組序，但不建議這樣做，因為這對應用程式而言太過危險。 如果在由大到小格式的模式下產生例外狀況，則行為不可預期，且可能會在使用者模式中導致應用程式錯誤，或在核心模式中導致檢查錯誤。
+Windows on ARM 在由小到大的格式模式下執行。 MSVC 編譯器和 Windows 執行階段預期由小到大資料在所有的時間。 雖然 ARM 指令集架構 (ISA) 中的 SETEND 指令甚至容許以使用者模式程式碼，來變更目前的位元組序，但不建議這樣做，因為這對應用程式而言太過危險。 如果在由大到小格式的模式下產生例外狀況，則行為不可預期，且可能會在使用者模式中導致應用程式錯誤，或在核心模式中導致檢查錯誤。
 
 ## <a name="alignment"></a>對齊方式
 
@@ -137,7 +137,7 @@ Windows 僅支援具有 VFPv3-D32 副處理器支援的 ARM 變異。 這表示�
 
 對於非 variadic 函式，Windows on ARM ABI 會遵循 ARM 規則進行參數傳遞，這包括 VFP 和進階 SIMD 擴充功能。 這些規則遵循[程序呼叫標準適用於 ARM 架構](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf)、 彙總，與 VFP 擴充功能。 根據預設，前四個整數引數及多達八個浮點或向量引數會在暫存器中傳遞，其他引數會在堆疊中傳遞。 使用下列程序，將引數指派給暫存器或堆疊：
 
-### <a name="stage-a-initialization"></a>階段 a： 初始化
+### <a name="stage-a-initialization"></a>階段 a:初始化
 
 初始化在開始處理引數之前，僅執行一次：
 
@@ -149,7 +149,7 @@ Windows 僅支援具有 VFPv3-D32 副處理器支援的 ARM 變異。 這表示�
 
 1. 如果呼叫在記憶體中傳回結果的函式，則結果的位址會置於 r0，且 NCRN 會設定為 r1。
 
-### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>階段 b： 預先填補和擴充功能的引數
+### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>階段 b:預先填補和擴充功能的引數
 
 對於清單中的每一個引數，下列清單的第一個相符規則適用：
 
@@ -159,7 +159,7 @@ Windows 僅支援具有 VFPv3-D32 副處理器支援的 ARM 變異。 這表示�
 
 1. 如果該引數是複合類型，則其大小會四捨五入至最近的 4 個倍數。
 
-### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>階段 c： 引數指派給暫存器和堆疊
+### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>階段 c:引數指派給暫存器和堆疊
 
 對於清單中的每一個引數，下列規則輪流適用，直到已配置該引數為止：
 
@@ -205,13 +205,13 @@ Windows 中預設核心模式堆疊是三個頁面 (12 KB)。 請注意，在核
 
 ## <a name="stack-walking"></a>堆疊查核行程
 
-啟用框架指標編譯 Windows 程式碼 ([/Oy （框架指標省略）](../build/reference/oy-frame-pointer-omission.md)) 若要啟用快速堆疊查核行程。 一般而言，r11 暫存器會指向鏈結中的下一個連結，即 {r11, lr} 配對，其會指定堆疊上前一個框架的指標，並傳回位址。 我們建議您的程式碼也啟用框架指標，以改進分析和追蹤。
+啟用框架指標編譯 Windows 程式碼 ([/Oy （框架指標省略）](reference/oy-frame-pointer-omission.md)) 若要啟用快速堆疊查核行程。 一般而言，r11 暫存器會指向鏈結中的下一個連結，即 {r11, lr} 配對，其會指定堆疊上前一個框架的指標，並傳回位址。 我們建議您的程式碼也啟用框架指標，以改進分析和追蹤。
 
 ## <a name="exception-unwinding"></a>例外狀況回溯
 
 例外狀況處理期間的堆疊回溯透過使用回溯程式碼啟用。 回溯程式碼是儲存在可執行映像檔 .xdata 區段的位元組序列。 它們以抽象方法描述函式序言和結尾程式碼的作業，因此函式序言的影響可以在準備回溯至呼叫者堆疊框架時復原。
 
-ARM EABI 會指定使用回溯程式碼的例外狀況回溯模型。 不過，此規格在 Windows 中不足以進行回溯，因為在 Windows 中必須處理處理器位於函式序言或結尾中間的情況。 如需 ARM 例外狀況資料及回溯 Windows 的相關詳細資訊，請參閱[ARM 例外狀況處理](../build/arm-exception-handling.md)。
+ARM EABI 會指定使用回溯程式碼的例外狀況回溯模型。 不過，此規格在 Windows 中不足以進行回溯，因為在 Windows 中必須處理處理器位於函式序言或結尾中間的情況。 如需 ARM 例外狀況資料及回溯 Windows 的相關詳細資訊，請參閱[ARM 例外狀況處理](arm-exception-handling.md)。
 
 我們建議動態產生的程式碼使用 `RtlAddFunctionTable` 及相關聯函式呼叫中指定的動態函式表格描述，以便所產生的程式碼可以參與例外狀況處理。
 
@@ -223,5 +223,5 @@ ARM EABI 會指定使用回溯程式碼的例外狀況回溯模型。 不過，�
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual C++ ARM 移轉時常見的問題](../build/common-visual-cpp-arm-migration-issues.md)<br/>
-[ARM 例外狀況處理](../build/arm-exception-handling.md)
+[Visual C++ ARM 移轉時常見的問題](common-visual-cpp-arm-migration-issues.md)<br/>
+[ARM 例外狀況處理](arm-exception-handling.md)

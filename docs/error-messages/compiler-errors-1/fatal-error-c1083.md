@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: ae4c6a9f6c41d94aa1e36ba4a79226b49df08b49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 522bc4a36be59d4e2c9425e50b1238eb9f4aba61
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628003"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822193"
 ---
 # <a name="fatal-error-c1083"></a>嚴重錯誤 C1083
 
@@ -71,11 +71,11 @@ ms.locfileid: "50628003"
 
 若要修正此問題，請修正編譯器用來搜尋包含或匯入之檔案的路徑。 新的專案會使用預設值會包含搜尋路徑。 您可能必須修改包含搜尋路徑，以加入您專案的目錄。 如果您在命令列上編譯，請將路徑加入至**INCLUDE**環境變數或 **/I**編譯器選項以指定檔案的路徑。
 
-若要在 Visual Studio 中設定 include 目錄路徑，開啟專案的**屬性頁** 對話方塊。 選取  **VC + + 目錄**下方**組態屬性**左的窗格中，然後編輯**Include 目錄**屬性。 如需有關在 Visual Studio 中編譯器所搜尋的每位使用者及每個專案目錄的詳細資訊，請參閱[VC + + Directories Property Page](../../ide/vcpp-directories-property-page.md)。 如需詳細資訊 **/I**編譯器選項，請參閱[/I （其他 Include 目錄）](../../build/reference/i-additional-include-directories.md)。
+若要在 Visual Studio 中設定 include 目錄路徑，開啟專案的**屬性頁** 對話方塊。 選取  **VC + + 目錄**下方**組態屬性**左的窗格中，然後編輯**Include 目錄**屬性。 如需有關在 Visual Studio 中編譯器所搜尋的每位使用者及每個專案目錄的詳細資訊，請參閱[VC + + Directories Property Page](../../build/reference/vcpp-directories-property-page.md)。 如需詳細資訊 **/I**編譯器選項，請參閱[/I （其他 Include 目錄）](../../build/reference/i-additional-include-directories.md)。
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>命令列包含或 LIB 環境未設定
 
-在命令列叫用編譯器時，通常會使用環境變數指定搜尋路徑。 如果所描述的搜尋路徑**INCLUDE**或是**LIB**未正確設定環境變數，可以產生 C1083 錯誤。 我們強烈建議使用開發人員命令提示字元捷徑設定基本的環境，供命令列組建。 如需詳細資訊，請參閱 <<c0> [ 建置 C/c + + 命令列上](../../build/building-on-the-command-line.md)。 如需如何使用環境變數的詳細資訊，請參閱[如何： 在組建中使用環境變數](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build)。
+在命令列叫用編譯器時，通常會使用環境變數指定搜尋路徑。 如果所描述的搜尋路徑**INCLUDE**或是**LIB**未正確設定環境變數，可以產生 C1083 錯誤。 我們強烈建議使用開發人員命令提示字元捷徑設定基本的環境，供命令列組建。 如需詳細資訊，請參閱 <<c0> [ 建置 C/c + + 命令列上](../../build/building-on-the-command-line.md)。 如需如何使用環境變數的詳細資訊，請參閱[How to:在組建中使用環境變數](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build)。
 
 ## <a name="the-file-may-be-locked-or-in-use"></a>檔案可能已鎖定或在使用中
 
@@ -87,7 +87,7 @@ C1083 錯誤也可能表示包含了錯誤版本的檔案。 包含錯誤檔案�
 
 ## <a name="the-precompiled-headers-are-not-yet-precompiled"></a>先行編譯標頭檔未經先行編譯
 
-當專案已設定為使用先行編譯標頭檔時，必須已建立相關的 .pch 檔案，才能編譯用到標頭內容的檔案。 例如，在新專案的專案目錄中會自動建立 stdafx.cpp 檔案。 請先編譯該檔案以建立先行編譯標頭檔  在標準的建置程序設計中，這會自動完成。 如需詳細資訊，請參閱 <<c0> [ 建立先行編譯標頭檔](../../build/reference/creating-precompiled-header-files.md)。
+當專案已設定為使用先行編譯標頭檔時，必須已建立相關的 .pch 檔案，才能編譯用到標頭內容的檔案。 例如，在新專案的專案目錄中會自動建立 stdafx.cpp 檔案。 請先編譯該檔案以建立先行編譯標頭檔  在標準的建置程序設計中，這會自動完成。 如需詳細資訊，請參閱 <<c0> [ 建立先行編譯標頭檔](../../build/creating-precompiled-header-files.md)。
 
 ## <a name="additional-causes"></a>其他原因
 
@@ -116,7 +116,7 @@ C1083 錯誤也可能表示包含了錯誤版本的檔案。 包含錯誤檔案�
 #include "stdio.h"  // OK
 ```
 
-如需如何建置 C/c + + 專案，在 IDE 中或命令列上的相關資訊和設定環境變數的相關資訊，請參閱[建置 C/c + + 程式](../../build/building-c-cpp-programs.md)。
+如需如何建置 C/c + + 專案，在 IDE 中或命令列上的相關資訊和設定環境變數的詳細資訊，請參閱[的專案和組建系統](../../build/projects-and-build-systems-cpp.md)。
 
 ## <a name="see-also"></a>另請參閱
 

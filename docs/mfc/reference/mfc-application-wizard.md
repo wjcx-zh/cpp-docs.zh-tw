@@ -7,19 +7,19 @@ helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-ms.openlocfilehash: 3cdaba750060290fa25007d4097b6782d6f20fbf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 808e8364764dd826ee82e445627ba21b06946ed6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258628"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822661"
 ---
 # <a name="mfc-application-wizard"></a>MFC 應用程式精靈
 
 MFC 應用程式精靈產生應用程式，編譯時，會實作 Windows 可執行檔 (.exe) 應用程式的基本功能。 MFC 的入門應用程式包含 c + + 原始檔 (.cpp) 檔案、 資源 (.rc) 檔、 標頭 (.h) 檔案和專案 (.vcxproj) 檔案。 這些入門檔案中產生的程式碼是以 MFC 為基礎。
 
 > [!NOTE]
->  根據您選取的選項，精靈會建立其他檔案專案中。 例如，如果您選取**即時線上說明**上[進階功能](../../mfc/reference/advanced-features-mfc-application-wizard.md) 頁面上，精靈會建立編譯專案的說明檔所需的檔案。 如需有關此精靈會建立檔案的詳細資訊，請參閱[Visual c + + 專案建立的檔案類型](../../ide/file-types-created-for-visual-cpp-projects.md)，並查看專案的 Readme.txt 檔案。
+>  根據您選取的選項，精靈會建立其他檔案專案中。 例如，如果您選取**即時線上說明**上[進階功能](../../mfc/reference/advanced-features-mfc-application-wizard.md) 頁面上，精靈會建立編譯專案的說明檔所需的檔案。 如需有關此精靈會建立檔案的詳細資訊，請參閱[Visual c + + 專案建立的檔案類型](../../build/reference/file-types-created-for-visual-cpp-projects.md)，並查看專案的 Readme.txt 檔案。
 
 ## <a name="overview"></a>總覽
 

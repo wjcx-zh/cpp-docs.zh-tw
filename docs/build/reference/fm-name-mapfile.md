@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Fm compiler option [C++]
 - /Fm compiler option [C++]
 ms.assetid: 8154448a-93a7-4546-8e4c-5c44d0aff45d
-ms.openlocfilehash: 9f6290d3dfa4aaadfc9247fd8453d378851328a1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eebb1bc0c553dba1934aea75e2e63edc0f222fff
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418723"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815393"
 ---
 # <a name="fm-name-mapfile"></a>/Fm (命名對應檔)
 
@@ -31,15 +31,15 @@ ms.locfileid: "57418723"
 
 根據預設，對應檔會指定與對應的 C 或 c + + 原始程式檔的基底名稱。副檔名對應。
 
-指定 **/Fm**有相同的效果，您必須指定[/MAP （產生對應檔）](../../build/reference/map-generate-mapfile.md)連結器選項。
+指定 **/Fm**有相同的效果，您必須指定[/MAP （產生對應檔）](map-generate-mapfile.md)連結器選項。
 
-如果您指定[/c （編譯而不連結）](../../build/reference/c-compile-without-linking.md)隱藏連結 **/Fm**沒有任何作用。
+如果您指定[/c （編譯而不連結）](c-compile-without-linking.md)隱藏連結 **/Fm**沒有任何作用。
 
 在對應檔的全域符號通常具有一或多個前置底線，因為編譯器會將變數名稱中的前置底線。 許多的全域符號出現在對應檔會在內部使用，由編譯器和標準程式庫。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -53,7 +53,7 @@ ms.locfileid: "57418723"
 
 ## <a name="see-also"></a>另請參閱
 
-[輸出檔 (/F) 選項](../../build/reference/output-file-f-options.md)<br/>
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
-[指定路徑名稱](../../build/reference/specifying-the-pathname.md)
+[輸出檔 (/F) 選項](output-file-f-options.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[指定路徑名稱](specifying-the-pathname.md)

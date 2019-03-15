@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableParallelCodeGeneration
 ms.assetid: 33ecf49d-c0d5-4f34-bce3-84ff03f38918
-ms.openlocfilehash: 8563382f9a95d9b7da49efdf1f12d517eae3da3d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c1ddea73c5aa8d3e7e70b45834cb04154bf3b4bb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416627"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809557"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar (自動平行化工具)
 
@@ -28,7 +28,7 @@ ms.locfileid: "57416627"
 
   `#pragma loop()` 指示詞可以協助最佳化平行處理特定的迴圈。 如需詳細資訊，請參閱 <<c0> [ 迴圈](../../preprocessor/loop.md)。
 
-如需如何啟用 auto-parallelizer 輸出訊息的詳細資訊，請參閱[/Qpar-report （自動平行化工具報告層級）](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)。
+如需如何啟用 auto-parallelizer 輸出訊息的詳細資訊，請參閱[/Qpar-report （自動平行化工具報告層級）](qpar-report-auto-parallelizer-reporting-level.md)。
 
 ### <a name="to-set-the-qpar-compiler-option-in-visual-studio"></a>若要在 Visual Studio 中設定 /Qpar 編譯器選項
 
@@ -44,9 +44,9 @@ ms.locfileid: "57416627"
 
 ## <a name="see-also"></a>另請參閱
 
-[/Q 選項 (低階運算)](../../build/reference/q-options-low-level-operations.md)<br/>
-[/Qpar-report (自動平行化工具報告層級)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
+[/Q 選項 (低階運算)](q-options-low-level-operations.md)<br/>
+[/Qpar-report (自動平行化工具報告層級)](qpar-report-auto-parallelizer-reporting-level.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
 [#pragma loop()](../../preprocessor/loop.md)<br/>
 [以原生程式碼進行平行程式設計](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

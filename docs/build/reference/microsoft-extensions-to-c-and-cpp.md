@@ -29,12 +29,12 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-ms.openlocfilehash: b4025413fcf6389249fc011da020c0cd7c6f4519
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dab8ac23be8b66ca84c57514c6c04e94dddebaae
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447433"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813886"
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>對 C 和 c + + 的 Microsoft 擴充功能
 
@@ -274,7 +274,7 @@ void func ()
 
 - ! (not)
 
-- ！ = (not_eq)
+- != (not_eq)
 
 - &#124;&#124;（或者）
 
@@ -300,6 +300,6 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-- [/Za、/Ze (停用語言延伸模組)](../../build/reference/za-ze-disable-language-extensions.md)
-- [編譯器選項](../../build/reference/compiler-options.md)
-- [設定編譯器選項](../../build/reference/setting-compiler-options.md)
+- [/Za、/Ze (停用語言延伸模組)](za-ze-disable-language-extensions.md)
+- [MSVC 編譯器選項](compiler-options.md)
+- [MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

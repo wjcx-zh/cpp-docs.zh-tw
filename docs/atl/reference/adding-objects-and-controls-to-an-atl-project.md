@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: b442db405ed04c4ebf697089adf3529cd590753a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 94478f01655ff68b6b8067771eb3fdab42d1af01
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57325993"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807568"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>將物件和控制項新增至 ATL 專案
 
@@ -47,8 +47,7 @@ ms.locfileid: "57325993"
 ## <a name="see-also"></a>另請參閱
 
 [ATL 專案精靈](../../atl/reference/atl-project-wizard.md)<br/>
-[Visual C++ 專案類型](../../ide/visual-cpp-project-types.md)<br/>
-[使用應用程式精靈建立桌面專案](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Visual C++ 專案類型](../../build/reference/visual-cpp-project-types.md)<br/>
 [ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [使用 ATL 和 C 執行階段程式碼進行程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)

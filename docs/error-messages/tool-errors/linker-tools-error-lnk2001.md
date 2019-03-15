@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-ms.openlocfilehash: dba197be71fc77af6d95c2ec62053928ac1627cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 824fa9108e6322b1bcf77d6c28c7fb843b743833
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631656"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808101"
 ---
 # <a name="linker-tools-error-lnk2001"></a>連結器工具錯誤 LNK2001
 
@@ -47,9 +47,9 @@ ms.locfileid: "50631656"
 
 當您建置發行版本的 ATL 專案，產生 CRT 啟始程式碼是必要的訊息時，會發生此錯誤。 若要修正此問題，請執行下列命令，其中一項
 
-- 移除`_ATL_MIN_CRT`從清單中的前置處理器定義以允許要包含的 CRT 啟始程式碼。 請參閱[一般屬性頁 （專案）](../../ide/general-property-page-project.md)如需詳細資訊。
+- 移除`_ATL_MIN_CRT`從清單中的前置處理器定義以允許要包含的 CRT 啟始程式碼。 請參閱[一般屬性頁 （專案）](../../build/reference/general-property-page-project.md)如需詳細資訊。
 
-- 可能的話，請移除對需要 CRT 啟始程式碼的 CRT 函式的呼叫。 請改用 Win32 的對應項。 例如，使用`lstrcmp`而不是`strcmp`。 已知的函式需要 CRT 啟始程式碼是一些字串和浮點函式。
+- 可能的話，請移除對需要 CRT 啟始程式碼的 CRT 函式的呼叫。 請改用 Win32 的對應項。 例如，使用 `lstrcmp` 而不是 `strcmp`。 已知的函式需要 CRT 啟始程式碼是一些字串和浮點函式。
 
 ### <a name="compilation-and-link-issues"></a>編譯和連結的問題
 

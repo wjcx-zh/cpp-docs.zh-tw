@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DELAYSIGN linker option
 - -DELAYSIGN linker option
 ms.assetid: 15244d30-3ecb-492f-a408-ffe81f38de20
-ms.openlocfilehash: 753c4d2a2a81803c3b52759b560248d0f4dbe2eb
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 65585b856627ad9fda5a8f8bfad6ad81fef0f81c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425675"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807646"
 ---
 # <a name="delaysign-partially-sign-an-assembly"></a>/DELAYSIGN (部分簽署組件)
 
@@ -31,7 +31,7 @@ ms.locfileid: "57425675"
 
 使用 **/DELAYSIGN**如果您只想要的公開金鑰置於組件。 預設值是 **/delaysign: no**。
 
-**/DELAYSIGN**選項沒有任何作用，除非搭配[/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)或是[/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)。
+**/DELAYSIGN**選項沒有任何作用，除非搭配[/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)或是[/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)。
 
 當您要求完整簽署的組件時，編譯器會雜湊包含資訊清單 (組件中繼資料) 的檔案，並使用私密金鑰簽署該雜湊。 所產生的數位簽章會儲存在包含資訊清單的檔案中。 延遲簽署組件時，連結器不會計算和簽章，但保留空間儲存在檔案中，以便可以稍後再加入簽章。
 
@@ -41,19 +41,19 @@ ms.locfileid: "57425675"
 
 其他會影響產生組件連結器選項如下：
 
-- [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)
+- [/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)
 
-- [/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)
+- [/ASSEMBLYLINKRESOURCE](assemblylinkresource-link-to-dotnet-framework-resource.md)
 
-- [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)
+- [/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md)
 
-- [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)
+- [/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md)
 
-- [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)
+- [/NOASSEMBLY](noassembly-create-a-msil-module.md)
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 **連結器**資料夾。
 
@@ -67,5 +67,5 @@ ms.locfileid: "57425675"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

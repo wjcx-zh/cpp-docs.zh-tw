@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], features that affect linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
-ms.openlocfilehash: 3fed75b18ead80b8367eb1254793d632629efeff
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bc7a6cc596f138daa373042abca51642c24cf737
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426702"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822323"
 ---
 # <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
 
@@ -40,9 +40,9 @@ CL 編譯器會自動呼叫連結，除非您指定 /c 選項。 CL 提供某些
 |/Zi 或/z7|傳遞 /DEBUG|
 |/Zl|省略預設程式庫名稱，從.obj 檔案|
 
-如需詳細資訊，請參閱[編譯器選項](../../build/reference/compiler-options.md)。
+如需詳細資訊，請參閱 < [MSVC 編譯器選項](compiler-options.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

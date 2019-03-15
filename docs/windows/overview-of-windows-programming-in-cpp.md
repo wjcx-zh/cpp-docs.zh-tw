@@ -2,12 +2,12 @@
 title: 使用 C++ 設計 Windows 應用程式概觀
 ms.date: 11/15/2018
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: b33236df6e4c7f679ff1dd9f9f8bc409c86e011a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 6338b390b11c58f3ebac2af1bb568ea3c3470cd1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693853"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810441"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>使用 C++ 設計 Windows 應用程式概觀
 
@@ -21,7 +21,7 @@ C + + 主控台應用程式從命令列主控台視窗中執行，並且可以�
 
 詞彙*原生桌面用戶端應用程式*指的 C 或 c + + 視窗型應用程式會使用原始 Windows Win32 Api 來存取作業系統。 這些 Api 大部分是以 c 撰寫本身就是在建立這類應用程式時，您可以選擇直接對 C 樣式的訊息迴圈處理作業系統事件進行程式設計，或使用*Microsoft Foundation Classes* (MFC)，包裝 Win32 的 c + + 程式庫已比較的物件導向的方式。 這兩種方法會被視為 「 現代化 」 相較於通用 Windows 平台 （請參閱下文），但同時仍可完全支援，以及數以百萬計的世界中目前執行的程式碼行。
 
-若要開始使用傳統 Windows c + + 程式設計，請參閱[開始使用 Win32 和 c + +](/windows/desktop/LearnWin32/learn-to-program-for-windows)。 取得 Win32 有一些了解之後，它能夠更輕鬆地了解[MFC Desktop Applications](/mfc/mfc-desktop-applications)。 如需傳統 c + + 桌面應用程式使用複雜的圖形的範例，請參閱[Hilo： 開發 c + + 應用程式的 Windows](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)。
+若要開始使用傳統 Windows c + + 程式設計，請參閱[開始使用 Win32 和 c + +](/windows/desktop/LearnWin32/learn-to-program-for-windows)。 取得 Win32 有一些了解之後，它能夠更輕鬆地了解[MFC Desktop Applications](/mfc/mfc-desktop-applications)。 如需傳統 c + + 桌面應用程式使用複雜的圖形的範例，請參閱[Hilo:開發 Windows 的 c + + 應用程式](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)。
 
 ### <a name="c-or-net"></a>C + + 或.NET 嗎？ 
 
@@ -73,13 +73,13 @@ Visual Studio 包含 C 執行階段程式庫 (CRT)、 c + + 標準程式庫和�
 
 Microsoft 程式庫包括：
 
-- Microsoft Foundation Classes (MFC)：一種物件導向架構，用於建立具有豐富使用者介面 (例如按鈕、清單方塊、樹狀檢視和其他控制項) 的傳統 Windows 程式 (特別是企業應用程式)。 如需詳細資訊，請參閱 [MFC Desktop Applications](../mfc/mfc-desktop-applications.md)。
+- Microsoft Foundation Classes (MFC):物件導向的架構，用於建立傳統 Windows 程式 — 尤其是企業應用程式，這些功能的按鈕、 清單方塊、 樹狀檢視，以及其他控制項具有豐富的使用者介面。 如需詳細資訊，請參閱 [MFC Desktop Applications](../mfc/mfc-desktop-applications.md)。
 
-- Active Template Library (ATL)：用於建立 COM 元件的強大協助程式庫。 如需詳細資訊，請參閱 [ATL COM Desktop Components](../atl/atl-com-desktop-components.md)。
+- Active Template Library (ATL):用來建立 COM 元件的功能強大的協助程式程式庫。 如需詳細資訊，請參閱 [ATL COM Desktop Components](../atl/atl-com-desktop-components.md)。
 
-- C++ AMP (C++ Accelerated Massive Parallelism)：可讓您在 GPU 上執行高效能通用計算工作的程式庫。 如需詳細資訊，請參閱 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)。
+- C + + AMP (c + + Accelerated Massive Parallelism):文件庫，可讓高效能通用計算的工作在 GPU 上。 如需詳細資訊，請參閱 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)。
 
-- 並行執行階段：可簡化多核心 (multicore) 和數個核心 (many-core) 裝置的平行和非同步程式設計工作的程式庫。 如需詳細資訊，請參閱 [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md)。
+- 並行執行階段：文件庫，可簡化多核心和多核心裝置的平行和非同步程式設計的工作。 如需詳細資訊，請參閱 [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md)。
 
 許多 Windows 程式設計案例也需要使用 Windows SDK，它包含了可讓您存取 Windows 作業系統元件的標頭檔。 根據預設，Visual Studio 會安裝 Windows SDK 的 c + + 桌面工作負載，讓您能夠開發通用 Windows 應用程式的元件。 若要開發 UWP 應用程式，您需要 Windows 10 的 Windows SDK 版本。 如需資訊，請參閱[Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)。 (如需舊版 Windows 的 Windows Sdk 的詳細資訊，請參閱[Windows SDK 封存](https://developer.microsoft.com/windows/downloads/sdk-archive))。
 
@@ -89,7 +89,7 @@ Microsoft 程式庫包括：
 
 ## <a name="development-tools"></a>開發工具
 
-Visual Studio 含有功能強大的機器碼偵錯工具、靜態分析工具、圖形偵錯工具、全功能的程式碼編輯器、單元測試支援，以及許多其他工具和公用程式。 如需詳細資訊，請參閱 <<c0> [ 開始使用 Visual Studio 進行開發](/visualstudio/ide/get-started-developing-with-visual-studio)，並[IDE 和開發工具](../ide/ide-and-tools-for-visual-cpp-development.md)。
+Visual Studio 含有功能強大的機器碼偵錯工具、靜態分析工具、圖形偵錯工具、全功能的程式碼編輯器、單元測試支援，以及許多其他工具和公用程式。 如需詳細資訊，請參閱 <<c0> [ 開始使用 Visual Studio 進行開發](/visualstudio/ide/get-started-developing-with-visual-studio)，並[在 Visual Studio 中開發的 c + + 的概觀](../overview-of-cpp-development.md)。
 
 ## <a name="in-this-section"></a>本節內容
 |標題|描述|

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
-ms.openlocfilehash: 0ad5c82d72a3cd9b4801274aefd40d96afdbcdd1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ab9b980cbb3e89eebee945e90c54f23d6717a1a4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425051"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816473"
 ---
 # <a name="mfc-extension-dlls-overview"></a>MFC 擴充 Dll:總覽
 
@@ -27,22 +27,22 @@ MFC 擴充 DLL 是 DLL，通常會實作衍生自現有 Mfc 程式庫類別的�
 
 ## <a name="what-do-you-want-to-do"></a>請您指定選項。
 
-- [初始化 MFC 擴充 DLL](../build/run-time-library-behavior.md#initializing-extension-dlls)
+- [初始化 MFC 擴充 DLL](run-time-library-behavior.md#initializing-extension-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
-- [MFC 延伸模組 DLL](../build/extension-dlls.md)
+- [MFC 延伸模組 DLL](extension-dlls.md)
 
-- [在 MFC DLL 中使用資料庫、OLE 和通訊端 MFC 延伸模組 DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [在 MFC DLL 中使用資料庫、OLE 和通訊端 MFC 延伸模組 DLL](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
-- [非 MFC DLL：概觀](../build/non-mfc-dlls-overview.md)
+- [非 MFC DLL：概觀](non-mfc-dlls-overview.md)
 
-- [靜態連結至 MFC 的標準 MFC Dll](../build/regular-dlls-statically-linked-to-mfc.md)
+- [靜態連結至 MFC 的標準 MFC Dll](regular-dlls-statically-linked-to-mfc.md)
 
-- [動態連結至 MFC 的標準 MFC Dll](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [動態連結至 MFC 的標準 MFC Dll](regular-dlls-dynamically-linked-to-mfc.md)
 
 - [建立 MFC DLL](../mfc/reference/mfc-dll-wizard.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[DLL 的種類](../build/kinds-of-dlls.md)
+[DLL 的種類](kinds-of-dlls.md)

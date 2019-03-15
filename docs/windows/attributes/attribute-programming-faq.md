@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: b273ad71c3c6eaed69fc715401219200f26f87eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89c37b2fe81a414bdd02d73e3c3dfd5205a03831
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434979"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815875"
 ---
 # <a name="attribute-programming-faq"></a>屬性程式設計常見問題集
 
@@ -122,7 +122,7 @@ class CMyClass
 
 ##  <a name="vcconattributeprogrammmingfaqanchor6"></a> 如何使用屬性化專案中的.idl 檔案？
 
-您可能想要使用屬性化 ATL 專案中的.idl 檔案。 在此案例中，您會使用[importidl](importidl.md)屬性的編譯.h 檔案的.idl 檔案 (請參閱[MIDL 屬性頁](../../ide/midl-property-pages.md)中的專案**屬性頁**對話方塊)，和然後在專案中包含的.h 檔案。
+您可能想要使用屬性化 ATL 專案中的.idl 檔案。 在此案例中，您會使用[importidl](importidl.md)屬性的編譯.h 檔案的.idl 檔案 (請參閱[MIDL 屬性頁](../../build/reference/midl-property-pages.md)中的專案**屬性頁**對話方塊)，和然後在專案中包含的.h 檔案。
 
 ##  <a name="vcconattributeprogrammmingfaqanchor7"></a> 我是否可以修改屬性所插入的程式碼？
 

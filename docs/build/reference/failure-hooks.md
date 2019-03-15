@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, failure hooks
 ms.assetid: 12bb303b-ffe6-4471-bffe-9ef4f8bb2d30
-ms.openlocfilehash: 2cd691ed4514ac4073f90691ed731670fbd22477
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2fc22ae77d729868adbf8c37d40e450e35a8e866
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417940"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811988"
 ---
 # <a name="failure-hooks"></a>錯誤攔截
 
-失敗攔截程序已啟用以相同的方式[通知攔截](../../build/reference/notification-hooks.md)。 攔截的例行工作必須傳回適當的值，以便處理可以繼續 （HINSTANCE 或 FARPROC） 或 0 表示應該擲回例外狀況。
+失敗攔截程序已啟用以相同的方式[通知攔截](notification-hooks.md)。 攔截的例行工作必須傳回適當的值，以便處理可以繼續 （HINSTANCE 或 FARPROC） 或 0 表示應該擲回例外狀況。
 
 指標變數會參考使用者定義函式是：
 
@@ -39,4 +39,4 @@ PfnDliHook   __pfnDliFailureHook2;
 
 ## <a name="see-also"></a>另請參閱
 
-[錯誤處理和通知](../../build/reference/error-handling-and-notification.md)
+[錯誤處理和通知](error-handling-and-notification.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: 5fda93951918357de5441022f1cc6ea81a522ef6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b13313d57226719086cb73584543488f842057c1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415132"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820490"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -65,10 +65,10 @@ WINDOWSCE 子系統指出應用程式應在有 Windows CE 核心版本的裝置�
 
 - 值 `major` 和 `minor` 必須是從 0 到 65535。
 
-子系統的選擇會影響程式的預設開始位址。 如需詳細資訊，請參閱 < [/ENTRY （進入點符號）](../../build/reference/entry-entry-point-symbol.md)，連結器 /ENTRY:*函式*選項。
+子系統的選擇會影響程式的預設開始位址。 如需詳細資訊，請參閱 < [/ENTRY （進入點符號）](entry-entry-point-symbol.md)，連結器 /ENTRY:*函式*選項。
 
-如需詳細資訊，包括每個子系統，主要和次要版本號碼的最小值和預設值[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)連結器選項。
+如需詳細資訊，包括每個子系統，主要和次要版本號碼的最小值和預設值[/SUBSYSTEM](subsystem-specify-subsystem.md)連結器選項。
 
 ## <a name="see-also"></a>另請參閱
 
-[EDITBIN 選項](../../build/reference/editbin-options.md)
+[EDITBIN 選項](editbin-options.md)

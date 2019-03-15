@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /CLRTHREADATTRIBUTE linker option
 - -CLRTHREADATTRIBUTE linker option
 ms.assetid: 4907e9ef-5031-446c-aecf-0a0b32fae1e8
-ms.openlocfilehash: f1a637f74cf1da608149779821a25340d35f8739
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ad07c84a5c470cd5fa1ac10ff6d2baed5c35c025
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417147"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57806775"
 ---
 # <a name="clrthreadattribute-set-clr-thread-attribute"></a>/CLRTHREADATTRIBUTE (設定 CLR 執行緒屬性)
 
@@ -41,7 +41,7 @@ ms.locfileid: "57417147"
 
 如果您使用的預設進入點 （main 或 wmain，例如） 執行緒模型使用指定 /CLRTHREADATTRIBUTE 或加上就會忽略執行緒屬性 （STAThreadAttribute 或 MTAThreadAttribute） 上的預設進入函式。
 
-如果您使用非預設進入點時，指定使用 /CLRTHREADATTRIBUTE，或放置執行緒非預設項目函式屬性，然後再指定非預設進入點的執行緒模型[/ENTRY](../../build/reference/entry-entry-point-symbol.md).
+如果您使用非預設進入點時，指定使用 /CLRTHREADATTRIBUTE，或放置執行緒非預設項目函式屬性，然後再指定非預設進入點的執行緒模型[/ENTRY](entry-entry-point-symbol.md).
 
 如果指定 /CLRTHREADATTRIBUTE 的執行緒模型不一致的原始程式碼中指定的執行緒模型，連結器將會忽略 /CLRTHREADATTRIBUTE，並套用在原始程式碼中指定的執行緒模型。
 
@@ -49,7 +49,7 @@ ms.locfileid: "57417147"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 展開 [組態屬性] 節點。
 
@@ -65,5 +65,5 @@ ms.locfileid: "57417147"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

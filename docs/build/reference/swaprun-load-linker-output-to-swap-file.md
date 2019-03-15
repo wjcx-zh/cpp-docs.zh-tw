@@ -15,12 +15,12 @@ helpviewer_keywords:
 - /SWAPRUN linker option
 - SWAPRUN linker option
 ms.assetid: 4a1e7f46-4399-4161-8dfc-d6a71beaf683
-ms.openlocfilehash: 085be83bf73288871c71bef00378ddd494cd6f8d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bd0b3a46f52ec9b5a292e2f45671523d8c5cdf5e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424869"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817487"
 ---
 # <a name="swaprun-load-linker-output-to-swap-file"></a>/SWAPRUN (將連結器輸出載入至交換檔)
 
@@ -36,7 +36,7 @@ ms.locfileid: "57424869"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 **連結器**資料夾。
 
@@ -54,5 +54,5 @@ ms.locfileid: "57424869"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

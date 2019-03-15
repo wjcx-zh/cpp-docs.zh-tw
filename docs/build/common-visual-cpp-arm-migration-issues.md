@@ -2,12 +2,12 @@
 title: Visual C++ ARM 移轉時常見的問題
 ms.date: 11/04/2016
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-ms.openlocfilehash: 6aea623bc9f096265decbe91ccdc5d5f1f6ecef1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a39e1d5e26a62cafa093067bb42f33178a1af6af
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618503"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816252"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Visual C++ ARM 移轉時常見的問題
 
@@ -92,7 +92,7 @@ Handle::acquire(operator->(memory_handle), operator*(p));
 
 ### <a name="volatile-keyword-default-behavior"></a>volatile 關鍵字的預設行為
 
-MSVC 編譯器支援的兩個不同的方式解讀`volatile`您可以使用編譯器參數指定的儲存體限定詞。 [/Volatile: ms](../build/reference/volatile-volatile-keyword-interpretation.md)切換選取 Microsoft 擴充變動性保證強式排序的語意，因為這些架構的強式的記憶體模型已經傳統的情況下，適用於 x86 和 x64。 [/Volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md)切換選取的嚴格 c + + 標準 volatile 語意，不保證強式的順序。
+MSVC 編譯器支援的兩個不同的方式解讀`volatile`您可以使用編譯器參數指定的儲存體限定詞。 [/Volatile: ms](reference/volatile-volatile-keyword-interpretation.md)切換選取 Microsoft 擴充變動性保證強式排序的語意，因為這些架構的強式的記憶體模型已經傳統的情況下，適用於 x86 和 x64。 [/Volatile:iso](reference/volatile-volatile-keyword-interpretation.md)切換選取的嚴格 c + + 標準 volatile 語意，不保證強式的順序。
 
 在 ARM 架構中，預設值是 **/volatile:iso**因為 ARM 處理器需要弱式排序記憶體模型，以及因為 ARM 軟體沒有舊版的信賴憑證者的擴充語意 **/volatile: ms**和通常沒有以便與軟體。 不過，它是仍然有時方便或甚至必須編譯 ARM 程式使用擴充的語意。 比方說，它可能是移植程式以使用 ISO c + + 語意，代價太高，或驅動程式軟體可能要遵守的傳統的語意，才能正確運作。 在這些情況下，您可以使用 **/volatile: ms**交換器; 不過，若要重新建立 ARM 目標上的傳統變動性的語意，編譯器必須插入每個讀取或寫入的周圍的記憶體屏障`volatile`變數，以強制執行強式的順序，這可能對效能造成負面影響。
 
@@ -100,4 +100,4 @@ MSVC 編譯器支援的兩個不同的方式解讀`volatile`您可以使用編�
 
 ## <a name="see-also"></a>另請參閱
 
-[針對 ARM 處理器設定 Visual C++](../build/configuring-programs-for-arm-processors-visual-cpp.md)
+[針對 ARM 處理器設定 Visual C++](configuring-programs-for-arm-processors-visual-cpp.md)

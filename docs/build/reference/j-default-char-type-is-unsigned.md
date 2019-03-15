@@ -13,12 +13,12 @@ helpviewer_keywords:
 - J compiler option [C++]
 - default char type is unsigned
 ms.assetid: 50973667-6638-491e-9c41-bff73acae19f
-ms.openlocfilehash: 931253b0a50e8b8f96a385400b2afbb1894c9d47
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ed296d339949814dbd796bb5d8e23a406be71c69
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417693"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814159"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (預設 char 類型為 unsigned)
 
@@ -55,6 +55,6 @@ ANSI C 和 c + + 不需要的特定實作`char`型別。 當您使用將最終�
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
-[使用專案屬性](../../ide/working-with-project-properties.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[設定 c + + 編譯器和建置在 Visual Studio 中的屬性](../working-with-project-properties.md)

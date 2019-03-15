@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ordinal exports [C++]
 - GetProcAddress method
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
-ms.openlocfilehash: e20c9ad913744879dcc15a9b4c177799cc59f654
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5ee985da29e38bfb262c72315a57c0b588b2e82e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421333"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810168"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
@@ -55,18 +55,18 @@ if (hDLL != NULL)
 
 ## <a name="what-do-you-want-to-do"></a>請您指定選項。
 
-- [如何以隱含方式連結至 DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)
+- [將可執行檔連結至 DLL](linking-an-executable-to-a-dll.md#linking-implicitly)
 
-- [判斷要使用哪一個連結方法](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [將可執行檔連結至 DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
-- [LoadLibrary 和 AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)
+- [LoadLibrary 和 AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)
 
 - [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
 
-- [使用 DEF 檔從 DLL 匯出](../build/exporting-from-a-dll-using-def-files.md)
+- [使用 DEF 檔從 DLL 匯出](exporting-from-a-dll-using-def-files.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)
+[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)

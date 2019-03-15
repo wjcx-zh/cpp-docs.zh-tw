@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Ob0 compiler option [C++]
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
-ms.openlocfilehash: 6406b604ab74d29d8bc6c9bc0920fd0cf0bd055b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6bf16e5725916e81e64d80c0a1f96bf502c8826c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426143"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807491"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (內嵌函式展開)
 
@@ -50,7 +50,7 @@ ms.locfileid: "57426143"
 **2**<br/>
 預設值。 可展開標記為 `inline`、`__inline` 或 `__forceinline` 的函式，以及編譯器所選擇的其他任何函式。
 
-**/ Ob2**是何時生效[/o1，/o2 （最小大小、 最快速度）](../../build/reference/o1-o2-minimize-size-maximize-speed.md)或是[/Ox （啟用最速度最佳化）](../../build/reference/ox-full-optimization.md)用。
+**/ Ob2**是何時生效[/o1，/o2 （最小大小、 最快速度）](o1-o2-minimize-size-maximize-speed.md)或是[/Ox （啟用最速度最佳化）](ox-full-optimization.md)用。
 
 這個選項需要您啟用使用的最佳化 **/o1**， **/o2**， **/Ox**，或 **/Og**。
 
@@ -61,11 +61,11 @@ ms.locfileid: "57426143"
 您可以使用`#pragma` [auto_inline](../../preprocessor/auto-inline.md)指示詞，以從內嵌展開的候選考量中排除的函式。 另請參閱`#pragma`[內建](../../preprocessor/intrinsic.md)指示詞。
 
 > [!NOTE]
-> 從分析測試回合所收集的資訊會覆寫才會作用中您指定的最佳化 **/Ob**， **/Os**，或 **/Ot**。 如需詳細資訊，請參閱 <<c0> [ 特性指引最佳化](../../build/reference/profile-guided-optimizations.md)。
+> 從分析測試回合所收集的資訊會覆寫才會作用中您指定的最佳化 **/Ob**， **/Os**，或 **/Ot**。 如需詳細資訊，請參閱 <<c0> [ 特性指引最佳化](../profile-guided-optimizations.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 依序展開**組態屬性**， **C/c + +**，然後選取**最佳化**。
 
@@ -77,6 +77,6 @@ ms.locfileid: "57426143"
 
 ## <a name="see-also"></a>另請參閱
 
-[/O 選項 (最佳化程式碼)](../../build/reference/o-options-optimize-code.md)<br/>
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[/O 選項 (最佳化程式碼)](o-options-optimize-code.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

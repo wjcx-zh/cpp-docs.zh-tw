@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dependencies [C++], dependency information in linker output
 - VERBOSE linker option
 ms.assetid: 9c347d98-4c37-4724-a39e-0983934693ab
-ms.openlocfilehash: 290d2e5c5c5a87042ee805cdaed90cce4418a389
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7aed1e17034b40ffdad4da4136fc5a64361b3d77
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423747"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809141"
 ---
 # <a name="verbose-print-progress-messages"></a>/VERBOSE (列印進度訊息)
 
@@ -33,16 +33,16 @@ ms.locfileid: "57423747"
 |選項|描述|
 |------------|-----------------|
 |/VERBOSE|顯示關於連結的程序的詳細資料。|
-|/VERBOSE:ICF|顯示使用產生的連結器活動的相關資訊[/opt: icf](../../build/reference/opt-optimizations.md)。|
+|/VERBOSE:ICF|顯示使用產生的連結器活動的相關資訊[/opt: icf](opt-optimizations.md)。|
 |/VERBOSE:INCR|顯示有關累加連結程序的資訊。|
 |/VERBOSE:LIB|只顯示表示所搜尋之程式庫的進度訊息。<br /><br /> 顯示的資訊包括文件庫搜尋程序，並列出每個程式庫和物件名稱 （具有完整路徑），從程式庫，以及參考該符號的物件清單解析的符號。|
-|/VERBOSE:REF|顯示使用產生的連結器活動的相關資訊[/opt: ref](../../build/reference/opt-optimizations.md)。|
-|/VERBOSE:SAFESEH|顯示與安全例外狀況時處理不相容的模組的相關資訊[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)未指定。|
+|/VERBOSE:REF|顯示使用產生的連結器活動的相關資訊[/opt: ref](opt-optimizations.md)。|
+|/VERBOSE:SAFESEH|顯示與安全例外狀況時處理不相容的模組的相關資訊[/SAFESEH](safeseh-image-has-safe-exception-handlers.md)未指定。|
 |/VERBOSE:UNUSEDLIBS|顯示建立映像時未使用的所有程式庫檔案的相關資訊。|
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 依序展開**連結器**資料夾。
 
@@ -56,5 +56,5 @@ ms.locfileid: "57423747"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

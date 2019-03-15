@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], compiling without linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-ms.openlocfilehash: 4e65801fcddef739f3fabe88b2b940602fde965a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f8d8c5e1b0ca4d2a35a57683fea2e6de12747860
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412727"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821478"
 ---
 # <a name="cl-invokes-the-linker"></a>CL 叫用連結器
 
@@ -28,7 +28,7 @@ CL 自動叫用編譯除非使用 /c 選項之後的連結器。 編譯期間建
 |/Zg|產生函式原型|
 |/Zs|檢查語法|
 
-如需連結的進一步詳細資訊，請參閱 <<c0> [ 連結器選項](../../build/reference/linker-options.md)。
+如需連結的進一步詳細資訊，請參閱 < [MSVC 連結器選項](linker-options.md)。
 
 ## <a name="example"></a>範例
 
@@ -46,7 +46,7 @@ CL 自動叫用編譯除非使用 /c 選項之後的連結器。 編譯期間建
 CL MAIN.c MOD1.C MOD2.C MYGRAPH.lib
 ```
 
-CL 第一次會編譯 C 原始程式檔，並建立 MAIN.obj、 MOD1.obj 和 MOD2.obj 物件檔案。編譯器會置於每個.obj 檔案中的標準程式庫的名稱。 如需詳細資訊，請參閱 <<c0> [ 使用執行階段程式庫](../../build/reference/md-mt-ld-use-run-time-library.md)。
+CL 第一次會編譯 C 原始程式檔，並建立 MAIN.obj、 MOD1.obj 和 MOD2.obj 物件檔案。編譯器會置於每個.obj 檔案中的標準程式庫的名稱。 如需詳細資訊，請參閱 <<c0> [ 使用執行階段程式庫](md-mt-ld-use-run-time-library.md)。
 
 CL 傳遞.obj 檔案，以及名稱 MYGRAPH.lib，名稱為連結器。 連結器會解析外部參考，如下所示：
 
@@ -58,5 +58,5 @@ CL 傳遞.obj 檔案，以及名稱 MYGRAPH.lib，名稱為連結器。 連結�
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[設定編譯器選項](compiler-command-line-syntax.md)

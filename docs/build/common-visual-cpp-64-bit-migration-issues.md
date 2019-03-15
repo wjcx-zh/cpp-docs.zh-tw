@@ -12,12 +12,12 @@ helpviewer_keywords:
 - 64-bit compiler [C++], porting 32-bit code
 - Win64 [C++]
 ms.assetid: d17fb838-7513-4e2d-8b27-a1666f17ad76
-ms.openlocfilehash: c74766c86048f6dd7358d16b8d5d1f2b493450c1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 937c00b7d3c40d9a5b92d53582ab1ebf4418ebc7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414417"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816109"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Visual C++ 64 位元移轉時常見的問題
 
@@ -42,11 +42,11 @@ ms.locfileid: "57414417"
 
 如需詳細資訊，請參閱:
 
-- [編譯器選項](../build/reference/compiler-options.md)
+- [MSVC 編譯器選項](reference/compiler-options.md)
 
 - [移轉提示](/windows/desktop/WinProg64/migration-tips)
 
 ## <a name="see-also"></a>另請參閱
 
-[針對 64 位元 x64 目標設定 Visual C++](../build/configuring-programs-for-64-bit-visual-cpp.md)<br/>
+[設定適用於 64 位元、 x64 的 c + + 專案的目標](configuring-programs-for-64-bit-visual-cpp.md)<br/>
 [Visual C++ 移植和升級指南](../porting/visual-cpp-porting-and-upgrading-guide.md)

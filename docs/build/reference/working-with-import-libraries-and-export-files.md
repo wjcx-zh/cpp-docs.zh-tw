@@ -8,12 +8,12 @@ helpviewer_keywords:
 - export files
 - import libraries, creating
 ms.assetid: d8175596-9773-4c2f-959d-b05b065a5161
-ms.openlocfilehash: fa759482d6949b27f5076643d83e92cddc1d8fac
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6f6f2d5c48c63ba6d8a8a7f67a98b949b32a8afa
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416562"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810103"
 ---
 # <a name="working-with-import-libraries-and-export-files"></a>與匯入程式庫和匯出檔案一起使用
 
@@ -27,4 +27,4 @@ ms.locfileid: "57416562"
 
 ## <a name="see-also"></a>另請參閱
 
-[LIB 參考](../../build/reference/lib-reference.md)
+[LIB 參考](lib-reference.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '#include directive'
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
-ms.openlocfilehash: da68f71d2a3830cdd86870d8ef072c3fb04933db
-ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
+ms.openlocfilehash: 67a44574a5a72a7b7addc0ed3d7b51cd3eb5b984
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750401"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821382"
 ---
 # <a name="include-directive-cc"></a>#include 指示詞 (C/C++)
 
@@ -49,7 +49,7 @@ Include 檔可以 「 巢狀 」;亦即 **#include**指示詞可以出現在另�
 
 當 Include 檔形成巢狀包含時，以及在命令列進行編譯時，目錄搜尋會先從父檔案的目錄開始，繼續進行到所有上層檔案的目錄。 也就是說，搜尋會相對於包含目前處理中原始檔的目錄開始進行。 如果找不到檔案，則搜尋會移至所指定的目錄[/I (其他 include 目錄)](../build/reference/i-additional-include-directories.md)編譯器選項。 最後，搜尋 INCLUDE 環境變數所指定的目錄。
 
-從 Visual Studio 開發環境中，會忽略 INCLUDE 環境變數。 如需有關如何設定搜尋 include 檔的目錄資訊 — 這也適用於 LIB 環境變數，請參閱[VC + + Directories Property Page](../ide/vcpp-directories-property-page.md)。
+從 Visual Studio 開發環境中，會忽略 INCLUDE 環境變數。 如需有關如何設定搜尋 include 檔的目錄資訊 — 這也適用於 LIB 環境變數，請參閱[VC + + Directories Property Page](../build/reference/vcpp-directories-property-page.md)。
 
 此範例使用角括弧示範檔案包含：
 

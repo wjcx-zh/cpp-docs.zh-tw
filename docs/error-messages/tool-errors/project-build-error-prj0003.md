@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: 9a116f41efc791ed90fbac8065bc339172c9ea9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6530045870573921cf626ceeec4c1dca10cdbfb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572378"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816174"
 ---
 # <a name="project-build-error-prj0003"></a>專案建置錯誤 PRJ0003
 
@@ -27,7 +27,7 @@ ms.locfileid: "50572378"
 
 - 安全性權限不足。 請確認您有足夠的安全性權限。
 
-- 可執行檔中指定的路徑**VC + + 目錄**不包含您嘗試執行此工具的路徑。 如需資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)
+- 可執行檔中指定的路徑**VC + + 目錄**不包含您嘗試執行此工具的路徑。 如需資訊，請參閱[設定編譯器和組建屬性](../../build/working-with-project-properties.md)
 
 - Makefile 專案中，您沒有要在其中執行的命令**建置命令列**或是**重建命令列**。
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -IDLOUT linker option
 - IDLOUT linker option
 ms.assetid: 10d00a6a-85b4-4de1-8732-e422c6931509
-ms.openlocfilehash: 91c1a3642f157390e5a0d5c7e2f36d7adf3ca118
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3816bb85cb3c711075e3fefeec2d706c2f8cc2ff
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417628"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821465"
 ---
 # <a name="idlout-name-midl-output-files"></a>/IDLOUT (命名 MIDL 輸出檔)
 
@@ -38,7 +38,7 @@ ms.locfileid: "57417628"
 
 /IDLOUT 選項會指定.idl 檔的副檔名與名稱。
 
-連結有的專案時，將會呼叫 Visual c + + 連結器的 MIDL 編譯器[模組](../../windows/module-cpp.md)屬性。
+連結有的專案時，將會呼叫 MSVC 連結器的 MIDL 編譯器[模組](../../windows/module-cpp.md)屬性。
 
 /IDLOUT 也會指定其他 MIDL 編譯器與相關聯的輸出檔的檔案名稱：
 
@@ -50,13 +50,13 @@ ms.locfileid: "57417628"
 
 - *檔名*.h
 
-*檔名*是您傳遞給 /IDLOUT 的參數。 如果[/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)會指定.tlb 檔會收到其名稱從 /TLBOUT *filename*。
+*檔名*是您傳遞給 /IDLOUT 的參數。 如果[/TLBOUT](tlbout-name-dot-tlb-file.md)會指定.tlb 檔會收到其名稱從 /TLBOUT *filename*。
 
 如果您指定不 /IDLOUT，也不 /TLBOUT，連結器將建立 vc70.tlb、 vc70.idl、 vc70_p.c、 vc70_i.c 和 vc70.h。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 **連結器**資料夾。
 
@@ -70,8 +70,8 @@ ms.locfileid: "57417628"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)<br/>
-[/IGNOREIDL (不要將屬性處理至 MIDL 中)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)<br/>
-[/MIDL (指定 MIDL 命令列選項)](../../build/reference/midl-specify-midl-command-line-options.md)<br/>
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)<br/>
+[/IGNOREIDL (不要將屬性處理至 MIDL 中)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/MIDL (指定 MIDL 命令列選項)](midl-specify-midl-command-line-options.md)<br/>
 [建置屬性化程式](../../windows/building-an-attributed-program.md)

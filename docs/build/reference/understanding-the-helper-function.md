@@ -10,12 +10,12 @@ helpviewer_keywords:
 - delayimp.h
 - helper functions
 ms.assetid: 6279c12c-d908-4967-b0b3-cabfc3e91d3d
-ms.openlocfilehash: 955ae0ed8feac22da19eb13218e2332849477e29
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3ad193d0101507f43145c6af9f8e6200ab6fcdb5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421374"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817985"
 ---
 # <a name="understanding-the-helper-function"></a>了解 Helper 函式
 
@@ -53,16 +53,16 @@ Helper 函式可以回呼通知攔截在程式中每個下列動作：
 
 下列主題說明的協助程式函式：
 
-- [Visual C++ 6.0 之後 DLL 延遲載入協助程式函式的變更](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
+- [Visual C++ 6.0 之後 DLL 延遲載入協助程式函式的變更](changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
 
-- [呼叫慣例、參數和傳回型別](../../build/reference/calling-conventions-parameters-and-return-type.md)
+- [呼叫慣例、參數和傳回型別](calling-conventions-parameters-and-return-type.md)
 
-- [結構和常數定義](../../build/reference/structure-and-constant-definitions.md)
+- [結構和常數定義](structure-and-constant-definitions.md)
 
-- [計算需要的值](../../build/reference/calculating-necessary-values.md)
+- [計算需要的值](calculating-necessary-values.md)
 
-- [卸載延遲載入的 DLL](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)
+- [卸載延遲載入的 DLL](explicitly-unloading-a-delay-loaded-dll.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[延遲載入 DLL 的連結器支援](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[延遲載入 DLL 的連結器支援](linker-support-for-delay-loaded-dlls.md)

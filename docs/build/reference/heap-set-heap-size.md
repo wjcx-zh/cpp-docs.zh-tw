@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /HEAP linker option
 - HEAP linker option
 ms.assetid: a3f71927-7f1d-492c-9fdb-dfccb1a043da
-ms.openlocfilehash: 500e1eca9385697829edca46e5e703a5238684a7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 715eaa358d052d4ae646f38f2e784f0235dffccb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422366"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813289"
 ---
 # <a name="heap-set-heap-size"></a>/HEAP (設定堆積大小)
 
@@ -34,11 +34,11 @@ ms.locfileid: "57422366"
 
 指定*保留*和`commit`十進位或 C 語言標記法中的值。
 
-這項功能也會提供模組定義檔與透過[HEAPSIZE](../../build/reference/heapsize.md)。
+這項功能也會提供模組定義檔與透過[HEAPSIZE](heapsize.md)。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 **連結器**資料夾。
 
@@ -52,5 +52,5 @@ ms.locfileid: "57422366"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

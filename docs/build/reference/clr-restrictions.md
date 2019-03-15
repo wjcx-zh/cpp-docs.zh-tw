@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: 205345a4261f5db8eb80b3bda6e5ea55544a33d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2205740aea5a2e557b8d93c3c60045435c4b71d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639330"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816096"
 ---
 # <a name="clr-restrictions"></a>/clr 限制
 
@@ -37,36 +37,36 @@ ms.locfileid: "50639330"
 
 - 不支援下列編譯器選項 **/clr**:
 
-  - **/ /Ehsc**並 **/EHs** (**/clr**意指 **/EHa** (請參閱[/EH （例外狀況處理模型）](../../build/reference/eh-exception-handling-model.md))
+  - **/ /Ehsc**並 **/EHs** (**/clr**意指 **/EHa** (請參閱[/EH （例外狀況處理模型）](eh-exception-handling-model.md))
 
-  - **/fp: strict**並 **/fp： 除了**(請參閱[/fp （指定浮點行為）](../../build/reference/fp-specify-floating-point-behavior.md))
+  - **/fp: strict**並 **/fp： 除了**(請參閱[/fp （指定浮點行為）](fp-specify-floating-point-behavior.md))
 
-  - [/Zd](../../build/reference/z7-zi-zi-debug-information-format.md)
+  - [/Zd](z7-zi-zi-debug-information-format.md)
 
-  - [/Gm](../../build/reference/gm-enable-minimal-rebuild.md)
+  - [/Gm](gm-enable-minimal-rebuild.md)
 
-  - [/MT](../../build/reference/md-mt-ld-use-run-time-library.md)
+  - [/MT](md-mt-ld-use-run-time-library.md)
 
-  - [/RTC](../../build/reference/rtc-run-time-error-checks.md)
+  - [/RTC](rtc-run-time-error-checks.md)
 
-  - [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)
+  - [/ZI](z7-zi-zi-debug-information-format.md)
 
-- 組合`_STATIC_CPPLIB`前置處理器定義 (`/D_STATIC_CPPLIB`) 和 **/clr**編譯器選項不支援。 這是因為定義會導致您的應用程式連結到靜態多執行緒 c + + 標準程式庫，不受支援。 如需詳細資訊，請參閱 < [/MD、 /MT、 /LD （使用執行階段程式庫）](../../build/reference/md-mt-ld-use-run-time-library.md)主題。
+- 組合`_STATIC_CPPLIB`前置處理器定義 (`/D_STATIC_CPPLIB`) 和 **/clr**編譯器選項不支援。 這是因為定義會導致您的應用程式連結到靜態多執行緒 c + + 標準程式庫，不受支援。 如需詳細資訊，請參閱 < [/MD、 /MT、 /LD （使用執行階段程式庫）](md-mt-ld-use-run-time-library.md)主題。
 
-- 使用時 **/Zi**具有 **/clr**，對效能的影響。 如需詳細資訊，請參閱 < [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)。
+- 使用時 **/Zi**具有 **/clr**，對效能的影響。 如需詳細資訊，請參閱 < [/Zi](z7-zi-zi-debug-information-format.md)。
 
-- 將寬字元傳遞至.NET Framework 但沒有同時指定輸出常式[/zc: wchar_t](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)或不含轉換的字元`__wchar_t`會顯示為輸出`unsigned short int`。 例如: 
+- 將寬字元傳遞至.NET Framework 但沒有同時指定輸出常式[/zc: wchar_t](zc-wchar-t-wchar-t-is-native-type.md)或不含轉換的字元`__wchar_t`會顯示為輸出`unsigned short int`。 例如: 
 
     ```cpp
     Console::WriteLine(L' ')              // Will output 32.
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.
     ```
 
-- [/GS](../../build/reference/gs-buffer-security-check.md)進行編譯時，會忽略 **/clr**，除非您的函式則位於`#pragma` [unmanaged](../../preprocessor/managed-unmanaged.md)或必須以原生編譯函式，在此情況下，編譯器會產生警告 C4793，預設為關閉。
+- [/GS](gs-buffer-security-check.md)進行編譯時，會忽略 **/clr**，除非您的函式則位於`#pragma` [unmanaged](../../preprocessor/managed-unmanaged.md)或必須以原生編譯函式，在此情況下，編譯器會產生警告 C4793，預設為關閉。
 
-- 請參閱[/ENTRY](../../build/reference/entry-entry-point-symbol.md)的受管理的應用程式的函式簽章需求。
+- 請參閱[/ENTRY](entry-entry-point-symbol.md)的受管理的應用程式的函式簽章需求。
 
-- 應用程式編譯 **/openmp**並 **/clr**只能在單一 appdomain 程序中執行。  請參閱[/openmp （啟用 OpenMP 2.0 支援）](../../build/reference/openmp-enable-openmp-2-0-support.md)如需詳細資訊。
+- 應用程式編譯 **/openmp**並 **/clr**只能在單一 appdomain 程序中執行。  請參閱[/openmp （啟用 OpenMP 2.0 支援）](openmp-enable-openmp-2-0-support.md)如需詳細資訊。
 
 - 接受可變數目的引數 (varargs) 數的函式就會產生做為原生函式。 變數引數位置中的任何 managed 的資料類型會封送處理成原生類型。 請注意，<xref:System.String?displayProperty=fullName>類型實際上的寬字元字串，但是它們會封送處理至單一位元組字元字串。 因此如果 printf 規範 %S （wchar_t *），它會封送處理為 %s 字串改為。
 
@@ -88,4 +88,4 @@ ms.locfileid: "50639330"
 
 ## <a name="see-also"></a>另請參閱
 
-- [/clr (通用語言執行平台編譯)](../../build/reference/clr-common-language-runtime-compilation.md)
+- [/clr (通用語言執行平台編譯)](clr-common-language-runtime-compilation.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -QIfist compiler option [C++]
 - /QIfist compiler option [C++]
 ms.assetid: 1afd32a5-f658-4b66-85f4-e0ce4cb955bd
-ms.openlocfilehash: 0b0dba0fec21b3c0ab03555ae90497f212ab6315
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7af88c91793688d23cf35177ae7a5250b04832a8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422204"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816590"
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (抑制 _ftol)
 
@@ -42,16 +42,16 @@ ms.locfileid: "57422204"
 
 您可以使用[_control87、 _controlfp， \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) C 執行階段函式來修改 FPU 捨入行為。 捨入模式的 FPU 預設值是"趨向最接近。 」 使用 **/QIfist**可以改善效能，您的應用程式，但不是沒有風險。 您應該徹底測試您的程式碼所依賴的程式碼以在建置之前，捨入模式的部分 **/QIfist**在生產環境中。
 
-[/arch (x86)](../../build/reference/arch-x86.md)並 **/QIfist**不適用於在相同的編譯模組。
+[/arch (x86)](arch-x86.md)並 **/QIfist**不適用於在相同的編譯模組。
 
 > [!NOTE]
 >  **/Qifist**是不作用中預設因為捨入位元也會影響浮點數到浮點數會指向捨入 （發生於每次計算之後），因此當您設定的旗標 （趨近於零） 的 C 樣式捨入，您的浮點數計算可能會不同。 **/Qifist**不應在截斷的小數部分的浮點數的預期行為取決於您的程式碼。 如果您不確定，請不要使用 **/QIfist**。
 
-**/QIfist**選項已被取代，在 Visual Studio 2005 中啟動。 編譯器已對有長足的改進在 float int 轉換速度。 如需已被取代的編譯器選項的清單，請參閱 <<c0>  **已取代及移除的編譯器選項**中[依分類排列的編譯器選項](../../build/reference/compiler-options-listed-by-category.md)。
+**/QIfist**選項已被取代，在 Visual Studio 2005 中啟動。 編譯器已對有長足的改進在 float int 轉換速度。 如需已被取代的編譯器選項的清單，請參閱 <<c0>  **已取代及移除的編譯器選項**中[依分類排列的編譯器選項](compiler-options-listed-by-category.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -65,6 +65,6 @@ ms.locfileid: "57422204"
 
 ## <a name="see-also"></a>另請參閱
 
-[/Q 選項 (低階運算)](../../build/reference/q-options-low-level-operations.md)<br/>
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[/Q 選項 (低階運算)](q-options-low-level-operations.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

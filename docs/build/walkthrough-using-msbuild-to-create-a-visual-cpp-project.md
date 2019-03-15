@@ -1,19 +1,19 @@
 ---
-title: 逐步解說：使用 MSBuild 來建立 Visual C++ 專案
+title: 逐步解說：使用 MSBuild 來建立 Visual c + + 專案
 ms.date: 09/24/2018
 f1_keywords:
 - msbuild.cpp.walkthrough.createproject
 helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
-ms.openlocfilehash: c5ccacb5e68c4f950d4ffa731fbc83decc4f10fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c7b038ede8c03f7016c5e9f81a9db785c49da448
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677210"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57813912"
 ---
-# <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>逐步解說：使用 MSBuild 來建立 Visual C++ 專案
+# <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>逐步解說：使用 MSBuild 來建立 Visual c + + 專案
 
 本逐步解說示範如何使用 MSBuild 來建置 Visual c + + 專案，在命令提示字元。 您將了解如何建立 c + + 原始程式檔和 Visual c + + 主控台應用程式的 XML 專案檔。 建置專案之後, 您將了解如何自訂建置流程。
 
@@ -265,8 +265,8 @@ A*建置目標*是一組具名的預先定義或使用者定義可以在建置�
 
 MSBuild 會提供各種自訂建置流程。 下列主題顯示如何將自訂建置步驟、 工具和事件新增至您的 MSBuild 專案：
 
-- [如何：將自訂建置步驟新增至 MSBuild 專案](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)
+- [如何：將自訂建置步驟新增至 MSBuild 專案](how-to-add-a-custom-build-step-to-msbuild-projects.md)
 
-- [如何：將自訂建置工具新增至 MSBuild 專案](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)
+- [如何：將自訂建置工具新增至 MSBuild 專案](how-to-add-custom-build-tools-to-msbuild-projects.md)
 
-- [如何：在 MSBuild 專案中使用建置事件](../build/how-to-use-build-events-in-msbuild-projects.md)
+- [如何：在 MSBuild 專案中使用建置事件](how-to-use-build-events-in-msbuild-projects.md)

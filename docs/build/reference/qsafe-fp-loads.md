@@ -1,12 +1,12 @@
 ---
 title: /Qsafe_fp_loads
 ms.date: 01/24/2018
-ms.openlocfilehash: e1ef4237fe3af39e76777609a06f90bd585ca422
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57aece79dfab617121371e0489aa80f18e143372
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504415"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57819686"
 ---
 # <a name="qsafefploads"></a>/Qsafe_fp_loads
 
@@ -22,13 +22,13 @@ ms.locfileid: "50504415"
 
 **/Qsafe_fp_loads**強制編譯器使用整數移動指令而非浮點移動指令，來移動之間的記憶體和 MMX 暫存器。 這個選項也會停用浮點數值的暫存器載入最佳化，當值在載入時可能會導致例外狀況 (例如 NaN 值)，可在多個控制路徑中載入。
 
-此選項會覆寫[/fp： 除了](../../build/reference/fp-specify-floating-point-behavior.md)。 **/Qsafe_fp_loads**指定所指定的編譯器行為的子集 **/fp： 除了**。
+此選項會覆寫[/fp： 除了](fp-specify-floating-point-behavior.md)。 **/Qsafe_fp_loads**指定所指定的編譯器行為的子集 **/fp： 除了**。
 
-**/Qsafe_fp_loads**與不相容[/clr](../../build/reference/clr-common-language-runtime-compilation.md)並[/fp: fast](../../build/reference/fp-specify-floating-point-behavior.md)。 如需浮點編譯器選項的詳細資訊，請參閱[/fp （指定浮點行為）](../../build/reference/fp-specify-floating-point-behavior.md)。
+**/Qsafe_fp_loads**與不相容[/clr](clr-common-language-runtime-compilation.md)並[/fp: fast](fp-specify-floating-point-behavior.md)。 如需浮點編譯器選項的詳細資訊，請參閱[/fp （指定浮點行為）](fp-specify-floating-point-behavior.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **C/c + +** > **命令列**屬性頁。
 
@@ -40,6 +40,6 @@ ms.locfileid: "50504415"
 
 ## <a name="see-also"></a>另請參閱
 
-[/Q 選項 (低階運算)](../../build/reference/q-options-low-level-operations.md)<br/>
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[/Q 選項 (低階運算)](q-options-low-level-operations.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

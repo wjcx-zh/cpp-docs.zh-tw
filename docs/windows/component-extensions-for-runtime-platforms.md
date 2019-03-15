@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: 3b29b2e8b00aa436d1687cdbbd5f299f4787c71b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9586244c9e2293ba6b484efb158fc3a2529c0ea
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432353"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57814484"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>適用於.NET 和 UWP 的元件擴充功能
 
@@ -49,7 +49,7 @@ C + + /CX 延伸模組是子集的 C + + /cli CLI。 雖然延伸語法完全相
 
 ## <a name="override-specifiers"></a>覆寫規範
 
-您可以使用下列關鍵字限定衍生的覆寫行為。 雖然**新**關鍵字無效的 c + + 延伸模組，它列在這裡，因為它可以用於其他內容。 某些規範對於原生程式設計也有效。 如需詳細資訊，請參閱 <<c0> [ 如何： 在原生編譯中宣告 「 覆寫規範 (C + + /cli CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)。
+您可以使用下列關鍵字限定衍生的覆寫行為。 雖然**新**關鍵字無效的 c + + 延伸模組，它列在這裡，因為它可以用於其他內容。 某些規範對於原生程式設計也有效。 如需詳細資訊，請參閱[如何：宣告在原生編譯中的覆寫規範 (C + + /cli CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)。
 
 |關鍵字|視內容而有所區別|用途|參考資料|
 |-------------|-----------------------|-------------|---------------|
@@ -64,7 +64,7 @@ C + + /CX 延伸模組是子集的 C + + /cli CLI。 雖然延伸語法完全相
 
 |關鍵字|視內容而有所區別|用途|
 |-------------|-----------------------|-------------|
-|**泛型**|否|宣告泛型類型。|
+|**generic**|否|宣告泛型類型。|
 |**where**|是|指定套用至泛型類型參數的條件約束。|
 
 ## <a name="miscellaneous-keywords"></a>其他關鍵字
@@ -111,7 +111,7 @@ C + + /CX 延伸模組是子集的 C + + /cli CLI。 雖然延伸語法完全相
 |[__identifier (C++/CLI)](../windows/identifier-cpp-cli.md)|（Windows 執行階段和 CLR）啟用使用的關鍵字當做識別項。|
 |[變數引數清單 (...) (C++/CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)|（Windows 執行階段和 CLR）可讓函式接受可變數目的引數。|
 |[C++ 原生類型的 .NET Framework 對等項 (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|列出用來取代 C++ 整數類型的 CLR 類型。|
-|[appdomain](../cpp/appdomain.md) **__declspec**修飾詞|**__declspec**修飾詞，要求每個 appdomain 都有靜態和全域變數。|
+|[appdomain](../cpp/appdomain.md) **__declspec** modifier|**__declspec**修飾詞，要求每個 appdomain 都有靜態和全域變數。|
 |[使用 /clr 進行 C-style 轉換 (C + + /cli CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)|描述 C-style 轉換的解譯方式。|
 |[__clrcall](../cpp/clrcall.md)呼叫慣例|表示 CLR 相容的呼叫慣例。|
 |`__cplusplus_cli`|[預先定義的巨集](../preprocessor/predefined-macros.md)|
@@ -122,13 +122,13 @@ C + + /CX 延伸模組是子集的 C + + /cli CLI。 雖然延伸語法完全相
 |[Boxing](../windows/boxing-cpp-component-extensions.md)|示範 boxed 處理值類型的條件。|
 |[類型特性的編譯器支援](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)|討論如何在編譯時偵測類型的特性。|
 |[managed、 unmanaged](../preprocessor/managed-unmanaged.md) pragma|示範 Managed 和 Unmanaged 函式如何共存於相同的模組。|
-|[處理程序](../cpp/process.md) **__declspec**修飾詞|**__declspec**修飾詞，要求每個處理序都有靜態和全域變數。|
+|[process](../cpp/process.md) **__declspec** modifier|**__declspec**修飾詞，要求每個處理序都有靜態和全域變數。|
 |[反映 (C++/CLI)](../dotnet/reflection-cpp-cli.md)|示範執行階段類型資訊的 CLR 版本。|
 |[String](../windows/string-cpp-component-extensions.md)|討論字串常值到 <xref:System.String> 的編譯器轉換。|
 |[類型轉送 (C++/CLI)](../windows/type-forwarding-cpp-cli.md)|在傳送組件中讓類型移動到另一個組件，讓用戶端程式碼不需要重新編譯。|
 |[使用者定義的屬性](../windows/user-defined-attributes-cpp-component-extensions.md)|示範使用者定義屬性。|
 |[#using 指示詞](../preprocessor/hash-using-directive-cpp.md)|匯入外部組件。|
-|[XML 文件](../ide/xml-documentation-visual-cpp.md)|說明以 XML 為基礎的程式碼文件使用[/doc （處理文件註解） （C/c + +）](../build/reference/doc-process-documentation-comments-c-cpp.md)|
+|[XML 文件](../build/reference/xml-documentation-visual-cpp.md)|說明以 XML 為基礎的程式碼文件使用[/doc （處理文件註解） （C/c + +）](../build/reference/doc-process-documentation-comments-c-cpp.md)|
 
 ## <a name="see-also"></a>另請參閱
 

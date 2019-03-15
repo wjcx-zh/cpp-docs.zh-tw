@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: 057fabe9612f84af07649d7a4f7bbf6d83e01f6c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 63cfd2bd206a361301c75110a684e1d2c642a1f2
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426208"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57819502"
 ---
 # <a name="analyze-code-analysis"></a>/analyze (程式碼分析)
 
@@ -32,7 +32,7 @@ ms.locfileid: "57426208"
 
 / 分析會在分析中的預設模式。 分析會輸出至**輸出**等其他錯誤訊息的視窗。 使用 **/ 分析-** 來明確關閉分析。
 
-/analyze: WX-指定 **/analyze: WX-** 程式碼分析警告的方法不要視為錯誤當您使用編譯 **/WX**。 如需詳細資訊，請參閱 [/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX (警告層級)](../../build/reference/compiler-option-warning-level.md)。
+/analyze: WX-指定 **/analyze: WX-** 程式碼分析警告的方法不要視為錯誤當您使用編譯 **/WX**。 如需詳細資訊，請參閱 [/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX (警告層級)](compiler-option-warning-level.md)。
 
 /analyze: log`filename`詳細的分析器結果會寫入為 XML 檔案所指定`filename`。
 
@@ -79,7 +79,7 @@ set Esp.Extensions=CppCoreCheck.dll
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 展開 [組態屬性] 節點。
 
@@ -95,5 +95,5 @@ set Esp.Extensions=CppCoreCheck.dll
 
 ## <a name="see-also"></a>另請參閱
 
-- [編譯器選項](../../build/reference/compiler-options.md)
-- [設定編譯器選項](../../build/reference/setting-compiler-options.md)
+- [MSVC 編譯器選項](compiler-options.md)
+- [MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

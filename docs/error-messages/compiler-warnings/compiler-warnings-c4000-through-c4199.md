@@ -3,98 +3,29 @@ title: 編譯器警告 C4000 到 C4199
 ms.date: 11/17/2017
 f1_keywords:
 - C4000
-- C4002
-- C4006
-- C4008
-- C4019
-- C4023
-- C4025
-- C4026
-- C4027
-- C4030
-- C4033
 - C4035
-- C4036
-- C4038
-- C4041
-- C4045
-- C4051
-- C4052
-- C4053
-- C4057
 - C4060
 - C4063
 - C4064
 - C4065
 - C4066
-- C4068
 - C4069
-- C4075
-- C4076
-- C4077
-- C4080
-- C4081
-- C4085
-- C4086
-- C4087
-- C4097
-- C4102
-- C4109
-- C4112
-- C4115
-- C4117
-- C4119
-- C4120
-- C4122
 - C4123
-- C4125
-- C4130
-- C4131
-- C4132
 - C4137
-- C4138
-- C4141
-- C4143
-- C4145
-- C4152
-- C4153
-- C4155
-- C4158
-- C4160
-- C4161
-- C4163
-- C4164
-- C4165
-- C4166
-- C4167
-- C4168
-- C4174
-- C4175
-- C4176
-- C4177
-- C4178
-- C4179
-- C4180
 - C4181
-- C4182
-- C4185
-- C4186
-- C4187
 - C4188
-- C4189
-- C4191
 - C4193
 - C4194
 - C4195
 - C4196
 - C4199
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
-ms.openlocfilehash: 6f9c69f0e6835513facf101be8f61c6e1c6430ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f764cfca3ea3ae39a1598aa39029925b9edcc80c
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617694"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57988189"
 ---
 # <a name="compiler-warnings-c4000-through-c4199"></a>編譯器警告 C4000 到 C4199
 
@@ -219,7 +150,7 @@ ms.locfileid: "50617694"
 |編譯器警告 （層級 1） C4155|刪除陣列運算式沒有使用陣列形式的 'delete'|
 |[編譯器警告 (層級 2) C4156](../../error-messages/compiler-warnings/compiler-warning-level-2-c4156.md)|刪除陣列運算式沒有使用陣列形式的 'delete';改用陣列形式|
 |[編譯器警告 (層級 1) C4157](../../error-messages/compiler-warnings/compiler-warning-level-1-c4157.md)|C 編譯器忽略 pragma|
-|編譯器警告 （層級 1） C4158|假設 #pragma pointers_to_members （full_generality，'inheritance_type'）|
+|編譯器警告 （層級 1） C4158|assuming #pragma pointers_to_members(full_generality, 'inheritance_type')|
 |[編譯器警告 (層級 3) C4159](../../error-messages/compiler-warnings/compiler-warning-level-3-c4159.md)|#pragma ' pragma'(pop,...)： 已經推出之前推入的識別項 'identifier'|
 |編譯器警告 （層級 1） C4160|#pragma ' pragma'(pop,...)： 未發現之前推入的識別項 'identifier'|
 |編譯器警告 （層級 3） C4161|#pragma ' pragma'(pop...): pop 數目比 push|
@@ -249,7 +180,7 @@ ms.locfileid: "50617694"
 |[編譯器警告 (層級 1) C4190](../../error-messages/compiler-warnings/compiler-warning-level-1-c4190.md)|'identifier1' 具有 C 連結指定，但傳回 UDT 與 C 不相容的 ' identifier2'|
 |編譯器警告 （層級 3） C4191|' 運算子/operation ': 從 'type_of_expression' 不安全的轉換至 'type_required' \nCalling 透過結果指標此函式可能會導致您的程式失敗|
 |[編譯器警告 (層級 3) C4192](../../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md)|自動匯入類型程式庫 'library' 時排除 'identifier'|
-|編譯器警告 （層級 3） C4193|#pragma warning （pop): 不符合 '#pragma warning （push)'|
+|編譯器警告 （層級 3） C4193|#pragma warning(pop): no matching '#pragma warning(push)'|
 |編譯器警告 （層級 1） C4194|不可為巢狀 #pragma start_map_region;已忽略|
 |編譯器警告 （層級 1） C4195|比對的 #pragma start_map_region; 若不使用 #pragma stop_map_region.已忽略|
 |編譯器警告 （層級 1） C4196|必須是 '%$L' 或 '%$L';找到 '%$L'|

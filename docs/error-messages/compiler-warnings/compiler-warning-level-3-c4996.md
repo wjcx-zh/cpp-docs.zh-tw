@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: cbb93bdba5853ed47bc3326d47bbb3c65ad7ce41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472172"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57816421"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>編譯器警告 （層級 3） C4996
 
@@ -45,7 +45,7 @@ ms.locfileid: "50472172"
 
 若要關閉 Visual Studio IDE 中的整個專案的警告：
 
-- 開啟**屬性頁**為您的專案 對話方塊。 如需如何使用 [屬性頁] 對話方塊的資訊，請參閱[屬性頁](../../ide/property-pages-visual-cpp.md)。
+- 開啟**屬性頁**為您的專案 對話方塊。 如需如何使用 [屬性頁] 對話方塊的資訊，請參閱[屬性頁](../../build/reference/property-pages-visual-cpp.md)。
 - 選取 **組態屬性**， **C/c + +**，**進階**頁面。
 - 編輯**停用特定警告**屬性，即可加入`4996`。 選擇**確定**以套用變更。
 
@@ -53,7 +53,7 @@ ms.locfileid: "50472172"
 
 若要在 Visual Studio 中定義前置處理器巨集：
 
-- 開啟**屬性頁**為您的專案 對話方塊。 如需如何使用 [屬性頁] 對話方塊的資訊，請參閱[屬性頁](../../ide/property-pages-visual-cpp.md)。
+- 開啟**屬性頁**為您的專案 對話方塊。 如需如何使用 [屬性頁] 對話方塊的資訊，請參閱[屬性頁](../../build/reference/property-pages-visual-cpp.md)。
 - 依序展開**組態屬性 > C/c + + > 前置處理器**。
 - 在 **前置處理器定義**屬性新增巨集名稱。 選擇 [確定]  加以儲存，然後重建您的專案。
 
@@ -81,7 +81,7 @@ Microsoft 已取代一些 CRT 與 c + + 標準程式庫函式和全域變數，�
 
 若要修正此問題，我們建議您使用函式或變數*safe_version*改。 如果您已經確認它並不適用緩衝區覆寫，或 overread 出現在您的程式碼，而且您無法變更的程式碼可攜性的理由，您可以關閉此警告。
 
-若要關閉 CRT 中這些函式已被取代警告，請定義 **\_CRT\_SECURE\_無\_警告**。 若要關閉已被取代的全域變數的相關警告，請定義 **\_CRT\_SECURE\_無\_警告\_GLOBALS**。 如需有關這些已被取代的函式和全域變數的詳細資訊，請參閱 < [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)並[安全程式庫： c + + 標準程式庫](../../standard-library/safe-libraries-cpp-standard-library.md)。
+若要關閉 CRT 中這些函式已被取代警告，請定義 **\_CRT\_SECURE\_無\_警告**。 若要關閉已被取代的全域變數的相關警告，請定義 **\_CRT\_SECURE\_無\_警告\_GLOBALS**。 如需有關這些已被取代的函式和全域變數的詳細資訊，請參閱 < [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)和[安全程式庫：C + + 標準程式庫](../../standard-library/safe-libraries-cpp-standard-library.md)。
 
 ### <a name="unsafe-standard-library-functions"></a>不安全的標準程式庫函式
 
@@ -279,7 +279,7 @@ int main() {
 }
 ```
 
-## <a name="example-user-defined-deprecated-function"></a>範例： 使用者已被取代函式
+## <a name="example-user-defined-deprecated-function"></a>範例：使用者已被取代的函式
 
 警告的呼叫端，當您不再建議使用的特定函式時，您可以在自己的程式碼中使用已被取代的屬性。 在此範例中，使用函數的程式行及列上已被取代的函式宣告，會產生 C4996。
 

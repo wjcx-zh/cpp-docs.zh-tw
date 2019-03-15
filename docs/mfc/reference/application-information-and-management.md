@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 6bdcf97c921dc45939ab9ddf18f1d624c2fd83b8
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 78b9ae467d3504f3922c540a3e4cd100322d8f4e
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850294"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57808387"
 ---
 # <a name="application-information-and-management"></a>應用程式資訊和管理
 
@@ -208,7 +208,8 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 
 ##  <a name="afxfreelibrary"></a>  AfxFreeLibrary
 
-`AfxFreeLibrary` 和 `AfxLoadLibrary` 會保留每個載入的程式庫模組的參考計數。
+
+  `AfxFreeLibrary` 和 `AfxLoadLibrary` 會保留每個載入的程式庫模組的參考計數。
 
 ```
 BOOL AFXAPI AfxFreeLibrary(HINSTANCE hInstLib);
@@ -711,7 +712,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 在 Windows Vista，存取通常會用來登錄應用程式之前**HKEY_CLASSES_ROOT**節點。 不過，Windows Vista 或更新版本的作業系統，您必須執行應用程式將寫入 HKCR 提升權限模式。
 
-這個方法可讓您的應用程式來讀取和寫入登錄，而不需要提高權限模式執行的重新導向從 HKCR HKCU 登錄存取。 如需詳細資訊，請參閱 [Linker Property Pages](../../ide/linker-property-pages.md)。
+這個方法可讓您的應用程式來讀取和寫入登錄，而不需要提高權限模式執行的重新導向從 HKCR HKCU 登錄存取。 如需詳細資訊，請參閱 [Linker Property Pages](../../build/reference/linker-property-pages.md)。
 
 如果您啟用登錄重新導向時，架構會將重新導向從 HKCR 來存取**HKEY_CURRENT_USER\Software\Classes**。 只有 MFC 和 ATL 架構會受到重新導向。
 

@@ -57,12 +57,12 @@ helpviewer_keywords:
 - -w compiler option [C++]
 - /W2 compiler option [C++]
 - /Wv compiler option [C++]
-ms.openlocfilehash: 4842e845013bf69a7bc033ba7b6abf5ecc7d5079
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 997a73541ab95a393bda4ebf5412c11f025b03a3
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441739"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57820685"
 ---
 # <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>/w、 /W0、 /W1、 /W2、 / w3、 / w4、 /w1、 /w2、 / w3、 / w4、 /Wall、 /wd，/ /wo，我們 （警告層級）
 
@@ -98,13 +98,13 @@ ms.locfileid: "50441739"
 |**/W0**<br /><br /> **/W1**<br /><br /> **/W2**<br /><br /> **/W3**<br /><br /> **/W4**|指定要由編譯器所產生的警告層級。 有效的警告層級的範圍從 0 到 4:<br />**/ W0**隱藏所有警告。 這相當於 **/w**。<br />**/ W1**顯示層級 1 （嚴重） 警告。 **/ W1**是命令列編譯器中的預設設定。<br />**/ W2**顯示層級 1 和 2 （重大） 的警告層級。<br />**/ W3**顯示層級 1、 層級 2 和 3 （實際執行品質） 警告層級。 **/ W3**是在 IDE 中的預設設定。<br />**/ W4**和顯示層級 1，層級 2 和 3 的警告層級 4 （資訊） 的警告不預設關閉的所有層級。 我們建議您使用此選項，來提供類似 lint 的警告。 對於新專案時，可能最好使用 **/w4**在所有編譯; 中，這可確保可能難找到的程式碼缺失數最少。|
 |**/Wall**|顯示所顯示的所有警告 **/w4**以及所有其他警告會 **/w4**不包含 — 比方說，都預設為關閉的警告。 如需詳細資訊，請參閱 <<c0> [ 編譯器警告，是 Off By Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。|
 |**/Wv**\[**:**_version_]|會顯示在編譯器版本中引進的警告*版本*及更早版本。 您可以使用此選項，隱藏在程式碼中的新警告，當您移轉至較新版本的編譯器，和維護您現有的建置程序，而加以修正。 選擇性參數*版本*形式*nn*[。*mm*[。*bbbbb*]] 其中*nn*是主要版本號碼， *mm*是選用的次要版本號碼，以及*bbbbb*是選擇性的組建編號編譯器。 例如，使用 */Wv:17*来顯示在 Visual Studio 2012 （也就是編譯器主要版本編號的 17 的任何版本） 或更早版本，引進的警告，但是隱藏在 Visual Studio 2013 （主要版本中引進的警告18） 及更新版本。 根據預設， **/Wv**會使用目前的編譯器版本號碼和警告會隱藏。 如需依編譯器版本隱藏警告的詳細資訊，請參閱 <<c0> [ 依編譯器版本的編譯器警告](../../error-messages/compiler-warnings/compiler-warnings-by-compiler-version.md)。|
-|**/WX**|將所有編譯器警告視為錯誤。 對於新專案時，可能最好使用 **/WX**在所有編譯; 解決所有警告可確保可能難找到的程式碼缺失數最少。<br /><br /> 連結器也有 **/WX**選項。 如需詳細資訊，請參閱 [/WX (將連結器警告視為錯誤)](../../build/reference/wx-treat-linker-warnings-as-errors.md)。|
-|**/w1**_nnnn_<br /><br /> **/w2**_nnnn_<br /><br /> **/ w3**_nnnn_<br /><br /> **/ w4**_nnnn_|設定所指定的警告編號的警告層級_nnnn_。 這可讓您設定特定的警告層級時，變更該警告的編譯器行為。 您可以使用這些選項中結合其他警告的選項，來強制執行自己的程式碼撰寫標準的警告，而不是 Visual Studio 所提供的預設值。<br /><br /> 例如， **/w34326**會使 C4326 當做層級 3 警告層級 1 而產生。 如果您使用同時編譯 **/w34326**選項並 **/W2**選項時，警告 C4326 就不會產生。|
+|**/WX**|將所有編譯器警告視為錯誤。 對於新專案時，可能最好使用 **/WX**在所有編譯; 解決所有警告可確保可能難找到的程式碼缺失數最少。<br /><br /> 連結器也有 **/WX**選項。 如需詳細資訊，請參閱 [/WX (將連結器警告視為錯誤)](wx-treat-linker-warnings-as-errors.md)。|
+|**/w1**_nnnn_<br /><br /> **/w2**_nnnn_<br /><br /> **/w3**_nnnn_<br /><br /> **/w4**_nnnn_|設定所指定的警告編號的警告層級_nnnn_。 這可讓您設定特定的警告層級時，變更該警告的編譯器行為。 您可以使用這些選項中結合其他警告的選項，來強制執行自己的程式碼撰寫標準的警告，而不是 Visual Studio 所提供的預設值。<br /><br /> 例如， **/w34326**會使 C4326 當做層級 3 警告層級 1 而產生。 如果您使用同時編譯 **/w34326**選項並 **/W2**選項時，警告 C4326 就不會產生。|
 |**/wd**_nnnn_|隱藏編譯器警告所指定_nnnn_。<br /><br /> 例如， **/wd4326 會**會隱藏編譯器警告 C4326。|
 |**/we**_nnnn_|將所指定的編譯器警告_nnnn_視為錯誤。<br /><br /> 例如， **/we4326**導致 C4326 被視為錯誤，編譯器的警告編號。|
 |**/wo**_nnnn_|編譯器警告也就所指定的報表_nnnn_一次。<br /><br /> 例如， **/wo4326**警告 C4326 只報告的原因，第一次時發現編譯器。|
 
-如果您使用的任何警告的選項時使用建立先行編譯標頭[/Yc](../../build/reference/yc-create-precompiled-header-file.md)選項，使用先行編譯標頭使用的任何[/Yu](../../build/reference/yu-use-precompiled-header-file.md)選項可讓這些相同的警告選項才會生效一次。 您可以覆寫使用命令列上的另一個警告選項在先行編譯標頭中設定的警告選項。
+如果您使用的任何警告的選項時使用建立先行編譯標頭[/Yc](yc-create-precompiled-header-file.md)選項，使用先行編譯標頭使用的任何[/Yu](yu-use-precompiled-header-file.md)選項可讓這些相同的警告選項才會生效一次。 您可以覆寫使用命令列上的另一個警告選項在先行編譯標頭中設定的警告選項。
 
 您可以使用[#pragma 警告](../../preprocessor/warning.md)指示詞，以控制層級的警告，在編譯時期報告特定的原始程式檔中。
 
@@ -114,7 +114,7 @@ ms.locfileid: "50441739"
 
 ### <a name="to-set-the-compiler-options-in-the-visual-studio-development-environment"></a>若要在 Visual Studio 開發環境中設定編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 若要設定 **/W0**， **/W1**， **/W2**， **/w3**， **/w4**， **/wall**m **/Wv**， **/WX**或是 **/WX-** 選項中，選取**組態屬性** > **C /C + +** > **一般**屬性頁。
 
@@ -132,7 +132,7 @@ ms.locfileid: "50441739"
 
 1. 若要設定 **/wo**選項中，選取**組態屬性** > **C/c + +** > **命令列**屬性頁。 輸入中的編譯器選項**其他選項** 方塊中。
 
-1. 選擇**確定**以儲存變更。
+1. 選取 [確定] 儲存您的變更。
 
 ### <a name="to-set-the-compiler-option-programmatically"></a>若要以程式設計方式設定編譯器選項
 
@@ -140,5 +140,5 @@ ms.locfileid: "50441739"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-ms.openlocfilehash: b2d4cc4f3b82bd3082ba3b4eac635ea91c19691f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d08822a04abe5a01883ad8aa1bd6d94269e810cc
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421203"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57807971"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>使用 MFC 的標準 Dll 中的資料庫、 OLE 和通訊端 MFC 延伸模組 Dll
 
@@ -132,17 +132,17 @@ BOOL CYourRegularDLL::InitInstance()
 
 ### <a name="what-do-you-want-to-do"></a>請您指定選項。
 
-- [初始化 MFC 擴充 DLL](../build/run-time-library-behavior.md#initializing-extension-dlls)
+- [初始化 MFC 擴充 DLL](run-time-library-behavior.md#initializing-extension-dlls)
 
-- [初始化 MFC 的標準 Dll](../build/run-time-library-behavior.md#initializing-regular-dlls)
+- [初始化 MFC 的標準 Dll](run-time-library-behavior.md#initializing-regular-dlls)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
-- [MFC 延伸模組 DLL](../build/extension-dlls.md)
+- [MFC 延伸模組 DLL](extension-dlls.md)
 
-- [靜態連結至 MFC 的標準 MFC DLL](../build/regular-dlls-statically-linked-to-mfc.md)
+- [靜態連結至 MFC 的標準 MFC DLL](regular-dlls-statically-linked-to-mfc.md)
 
-- [動態連結至 MFC 的標準 MFC DLL](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [動態連結至 MFC 的標準 MFC DLL](regular-dlls-dynamically-linked-to-mfc.md)
 
 - [將 MFC 當成 DLL 的一部分使用](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
@@ -150,4 +150,4 @@ BOOL CYourRegularDLL::InitInstance()
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 延伸模組 DLL](../build/extension-dlls.md)
+[MFC 延伸模組 DLL](extension-dlls.md)

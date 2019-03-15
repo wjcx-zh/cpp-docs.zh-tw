@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: 998ec23d2d0f16069783529aebafc8b91bb15834
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: fc7a676059af17e7a42189c7c15ca157a081e08a
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418800"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57818358"
 ---
 # <a name="link-an-executable-to-a-dll"></a>連結至 DLL 的可執行檔
 
@@ -30,7 +30,7 @@ ms.locfileid: "57418800"
 
 <a name="determining-which-linking-method-to-use"></a>
 
-## <a name="determine-which-linking-method-to-use"></a>判斷要使用哪一個連結方法
+## <a name="link-an-executable-to-a-dll"></a>連結至 DLL 的可執行檔
 
 是否要使用隱含連結，或明確連結是您必須對您的應用程式的架構決策。 有優點和缺點，每個方法。
 
@@ -70,13 +70,13 @@ ms.locfileid: "57418800"
 
 <a name="linking-implicitly"></a>
 
-## <a name="how-to-link-implicitly-to-a-dll"></a>如何以隱含方式連結至 DLL
+## <a name="link-an-executable-to-a-dll"></a>連結至 DLL 的可執行檔
 
 若要使用的隱含連結的 DLL，用戶端可執行檔必須從該 DLL 的提供者取得這些檔案：
 
 - 一或多個標頭檔 （.h 檔案） 包含匯出的資料、 函數和/或 DLL 中的 c + + 類別的宣告。 類別、 函式，以及由 DLL 匯出的資料必須全部標示為`__declspec(dllimport)`標頭檔。 如需詳細資訊，請參閱 < [dllexport、 dllimport](../cpp/dllexport-dllimport.md)。
 
-- 若要連結到可執行檔匯入程式庫。 建置 DLL 時，連結器會建立匯入程式庫。 如需詳細資訊，請參閱[。LIB 檔案](../build/reference/dot-lib-files-as-linker-input.md)。
+- 若要連結到可執行檔匯入程式庫。 建置 DLL 時，連結器會建立匯入程式庫。 如需詳細資訊，請參閱[。LIB 檔案](reference/dot-lib-files-as-linker-input.md)。
 
 - 實際的 DLL 檔案。
 
@@ -139,10 +139,10 @@ HRESULT LoadAndCallSomeFunction(DWORD dwParam1, UINT * puParam2)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
-- [與匯入程式庫和匯出檔案一起使用](../build/reference/working-with-import-libraries-and-export-files.md)
+- [與匯入程式庫和匯出檔案一起使用](reference/working-with-import-libraries-and-export-files.md)
 
 - [動態連結程式庫搜尋順序](/windows/desktop/Dlls/dynamic-link-library-search-order)
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)
+[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)

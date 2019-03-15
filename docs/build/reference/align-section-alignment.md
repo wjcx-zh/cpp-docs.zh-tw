@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -ALIGN linker option
 - section alignment
 - sections
-ms.openlocfilehash: b68ec42db9c927fe8f56dad8f5670059359a1843
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8d2e6a859c68af473d49dc04b76f0a15056aa56
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665786"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57809466"
 ---
 # <a name="align-section-alignment"></a>/ALIGN (區段對齊)
 
@@ -26,7 +26,7 @@ ms.locfileid: "50665786"
 
 ### <a name="arguments"></a>引數
 
-*數字*<br/>
+*number*<br/>
 對齊值，以位元組為單位。
 
 ## <a name="remarks"></a>備註
@@ -35,13 +35,13 @@ ms.locfileid: "50665786"
 
 除非您正在撰寫的應用程式，例如裝置驅動程式，您應該不需要修改對齊方式。
 
-您可修改與對齊參數，以特定區段的對齊[/section](../../build/reference/section-specify-section-attributes.md)選項。
+您可修改與對齊參數，以特定區段的對齊[/section](section-specify-section-attributes.md)選項。
 
 您指定的對齊值不得小於最大的區段記憶體對齊。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選擇**組態屬性** > **連結器** > **命令列**屬性頁。
 
@@ -53,5 +53,5 @@ ms.locfileid: "50665786"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], frequently asked questions
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
-ms.openlocfilehash: 17acde51d3fa9a7fabf14de748fd60b126b8b8f3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 33a0c9dd1abbfb9375ce1aef53fd152a521ac97d
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418837"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57821933"
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL 常見問題集
 
@@ -59,9 +59,9 @@ MFC 的標準 Dll 必須`CWinApp`-衍生類別，該應用程式類別的單一�
 
 如果您的 DLL 是以靜態方式連結至 MFC，將它變更為一般的標準 MFC DLL 動態連結至 MFC 的 MFC DLL 會減少檔案大小。
 
-如果 DLL 有大量匯出的函式，使用.def 檔匯出的函式 (而不是使用 **__declspec （dllexport)**)，並使用.def 檔[NONAME 屬性](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)上每個匯出的函式。 NONAME 屬性會導致只有序數的值而不是儲存在 DLL 的匯出表中，以減少檔案大小的函式名稱。
+如果 DLL 有大量匯出的函式，使用.def 檔匯出的函式 (而不是使用 **__declspec （dllexport)**)，並使用.def 檔[NONAME 屬性](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)上每個匯出的函式。 NONAME 屬性會導致只有序數的值而不是儲存在 DLL 的匯出表中，以減少檔案大小的函式名稱。
 
-應用程式載入時，會載入以隱含方式連結至應用程式的 Dll。 若要改善效能，載入時，嘗試將 DLL 分割成不同的 Dll。 將一個 DLL 載入之後，立即呼叫的應用程式所需的所有函式，而且有呼叫會隱含地連結到該 DLL 的應用程式。 將其他函式呼叫的應用程式不需要立即放入另一個 DLL 並讓應用程式明確地連結到該 DLL。 如需詳細資訊，請參閱 <<c0> [ 決定要使用哪一個連結方法](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)。
+應用程式載入時，會載入以隱含方式連結至應用程式的 Dll。 若要改善效能，載入時，嘗試將 DLL 分割成不同的 Dll。 將一個 DLL 載入之後，立即呼叫的應用程式所需的所有函式，而且有呼叫會隱含地連結到該 DLL 的應用程式。 將其他函式呼叫的應用程式不需要立即放入另一個 DLL 並讓應用程式明確地連結到該 DLL。 如需詳細資訊，請參閱 <<c0> [ 連結至 DLL 的可執行檔](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)。
 
 ## <a name="memory_leak"></a> 那里&#39;s 記憶體流失，在我的標準 MFC DLL，但我的程式碼看起來沒問題。 如何尋找記憶體流失的問題？
 
@@ -69,4 +69,4 @@ MFC 的標準 Dll 必須`CWinApp`-衍生類別，該應用程式類別的單一�
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)
+[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)

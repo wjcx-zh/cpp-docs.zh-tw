@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4075
 ms.assetid: f39ad3f9-c263-4cf0-9d70-259fc56ac96d
-ms.openlocfilehash: bba0fa85a3f2590c84cbb6f78fac7e49386d35a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf22e7c78dce6949c357d7ad4a0c76209c88eef3
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548248"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809895"
 ---
 # <a name="linker-tools-warning-lnk4075"></a>連結器工具警告 LNK4075
 
@@ -21,7 +21,7 @@ ms.locfileid: "50548248"
 
 會指定互斥的連結器選項。  檢查您的連結器選項。  連結器選項指定的位置取決於您如何建置您的專案。
 
-- 如果您要建置開發環境中，尋找您的專案，連結器屬性頁中，並查看 其中這兩個連結器選項所指定。  請參閱[使用專案屬性](../../ide/working-with-project-properties.md)如需詳細資訊。
+- 如果您要建置開發環境中，尋找您的專案，連結器屬性頁中，並查看 其中這兩個連結器選項所指定。  請參閱[設定編譯器和組建屬性](../../build/working-with-project-properties.md)如需詳細資訊。
 
 - 如果您在命令列建置時，查看那里指定的連結器選項。
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
-ms.openlocfilehash: 87fdceea4ac71fe4bf0a53d7ae8e473bc97a01d7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: dc6380903af0be2e6696ca3589813c249f71dd05
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416744"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812274"
 ---
 # <a name="base-base-address"></a>/BASE (基底位址)
 
@@ -38,9 +38,9 @@ ms.locfileid: "57416744"
 ## <a name="remarks"></a>備註
 
 > [!NOTE]
-> 基於安全性理由，Microsoft 建議您使用[/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)選項，而不要指定可執行檔基底位址。 這會產生可執行映像可以隨機重定基底在載入時使用 Windows 的位址空間配置隨機載入 (ASLR) 功能。 /DYNAMICBASE 選項預設為開啟。
+> 基於安全性理由，Microsoft 建議您使用[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)選項，而不要指定可執行檔基底位址。 這會產生可執行映像可以隨機重定基底在載入時使用 Windows 的位址空間配置隨機載入 (ASLR) 功能。 /DYNAMICBASE 選項預設為開啟。
 
-/ 基底的選項會設定程式，覆寫.exe 或 DLL 檔案的預設位置的基底位址。 .Exe 檔案的預設基底位址是 32 位元映像的 0x400000 或 0x140000000 64 位元映像。 為 dll，請的預設基底位址是 0x10000000 32 位元映像或 0x180000000 64 位元映像。 在作業系統上不支援位址空間配置隨機載入 (ASLR)，或 /dynamicbase: no 選項已設定時，作業系統會先嘗試載入的方案，其指定或預設的基底位址。 如果有足夠的空間找不到可用，系統重新放置到該程式。 若要防止重新配置，請使用[/fixed](../../build/reference/fixed-fixed-base-address.md)選項。
+/ 基底的選項會設定程式，覆寫.exe 或 DLL 檔案的預設位置的基底位址。 .Exe 檔案的預設基底位址是 32 位元映像的 0x400000 或 0x140000000 64 位元映像。 為 dll，請的預設基底位址是 0x10000000 32 位元映像或 0x180000000 64 位元映像。 在作業系統上不支援位址空間配置隨機載入 (ASLR)，或 /dynamicbase: no 選項已設定時，作業系統會先嘗試載入的方案，其指定或預設的基底位址。 如果有足夠的空間找不到可用，系統重新放置到該程式。 若要防止重新配置，請使用[/fixed](fixed-fixed-base-address.md)選項。
 
 連結器會發出錯誤，如果*地址*不是 64 K 的倍數。 您可以選擇性地指定該程式; 的大小如果程式不能配合您所指定的大小，則連結器會發出警告。
 
@@ -62,11 +62,11 @@ two    0x28100000    0x00300000    ; for DLLTWO.DLL
 link dlltwo.obj /dll /base:@dlls.txt,two
 ```
 
-設定基底地址的另一個方法是使用*基底*中的引數[名稱](../../build/reference/name-c-cpp.md)或是[文件庫](../../build/reference/library.md)陳述式。 /BASE 並[/DLL](../../build/reference/dll-build-a-dll.md)選項一起相當於**程式庫**陳述式。
+設定基底地址的另一個方法是使用*基底*中的引數[名稱](name-c-cpp.md)或是[文件庫](library.md)陳述式。 /BASE 並[/DLL](dll-build-a-dll.md)選項一起相當於**程式庫**陳述式。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **連結器** > **進階**屬性頁。
 
@@ -78,5 +78,5 @@ link dlltwo.obj /dll /base:@dlls.txt,two
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

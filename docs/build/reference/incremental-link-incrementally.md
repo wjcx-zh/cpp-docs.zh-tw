@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LINK tool [C++], options for full linking
 - incremental linking
 ms.assetid: 135656ff-94fa-4ad4-a613-22e1a2a5d16b
-ms.openlocfilehash: 60cec41173afc9955bddf9df0bd6796b5df6285c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 189affe57694a8369e9cf7ac98815cc5888b69aa
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414079"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816135"
 ---
 # <a name="incremental-link-incrementally"></a>/INCREMENTAL (以累加方式連結)
 
@@ -54,7 +54,7 @@ ms.locfileid: "57414079"
 
 - 選取 /ORDER
 
-/ 增量時就會隱含[/ 偵錯](../../build/reference/debug-generate-debug-info.md)指定。
+/ 增量時就會隱含[/ 偵錯](debug-generate-debug-info.md)指定。
 
 此外，如果發生下列任何情況，LINK 也會執行完整連結：
 
@@ -72,7 +72,7 @@ ms.locfileid: "57414079"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **連結器**資料夾。
 
@@ -86,5 +86,5 @@ ms.locfileid: "57414079"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

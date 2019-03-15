@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .pch files, use existing
 - precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
-ms.openlocfilehash: 49cc7a67a8b25e515d352d481b6ede8d521e51e1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c0dcb045450d6e6eca31b8c76a92726e62400656
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424115"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810113"
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu (使用先行編譯標頭檔)
 
@@ -45,7 +45,7 @@ Include 檔案的名稱必須是相同 **/Yc**選項建立先行編譯標頭和�
 
 在命令列中，不允許有空格之間 **/Yu**和`filename`。
 
-當您指定 **/Yu**不含檔案名稱，您的原始程式的選項必須包含[#pragma hdrstop](../../preprocessor/hdrstop.md) pragma 指定先行編譯標頭，.pch 檔的檔案名稱。 在此情況下，編譯器會使用名為先行編譯標頭 （.pch 檔案） [/Fp （名稱。Pch 檔案）](../../build/reference/fp-name-dot-pch-file.md)。 編譯器會跳到該 pragma 的位置，從指定的 pragma，先行編譯標頭檔案還原的已編譯的狀態，然後編譯 只有 pragma 後方的程式碼。 如果 **#pragma hdrstop**未指定檔案名稱，編譯器會尋找名稱，衍生自原始程式檔，副檔名為.pch 的主檔名的檔案。 您也可以使用 **/Fp**選項來指定不同的.pch 檔案。
+當您指定 **/Yu**不含檔案名稱，您的原始程式的選項必須包含[#pragma hdrstop](../../preprocessor/hdrstop.md) pragma 指定先行編譯標頭，.pch 檔的檔案名稱。 在此情況下，編譯器會使用名為先行編譯標頭 （.pch 檔案） [/Fp （名稱。Pch 檔案）](fp-name-dot-pch-file.md)。 編譯器會跳到該 pragma 的位置，從指定的 pragma，先行編譯標頭檔案還原的已編譯的狀態，然後編譯 只有 pragma 後方的程式碼。 如果 **#pragma hdrstop**未指定檔案名稱，編譯器會尋找名稱，衍生自原始程式檔，副檔名為.pch 的主檔名的檔案。 您也可以使用 **/Fp**選項來指定不同的.pch 檔案。
 
 如果您指定 **/Yu**選項不含檔案名稱，並無法指定**hdrstop** pragma，會產生錯誤訊息，並在編譯會失敗。
 
@@ -55,15 +55,15 @@ Include 檔案的名稱必須是相同 **/Yc**選項建立先行編譯標頭和�
 
 如需有關先行編譯標頭的詳細資訊，請參閱：
 
-- [/Y (先行編譯標頭檔)](../../build/reference/y-precompiled-headers.md)
+- [/Y (先行編譯標頭檔)](y-precompiled-headers.md)
 
-- [建立先行編譯標頭檔](../../build/reference/creating-precompiled-header-files.md)
+- [先行編譯標頭檔](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 指定[/Yc （建立先行編譯標頭檔）](../../build/reference/yc-create-precompiled-header-file.md)專案中的.cpp 檔上。
+1. 指定[/Yc （建立先行編譯標頭檔）](yc-create-precompiled-header-file.md)專案中的.cpp 檔上。
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -88,7 +88,7 @@ Include 檔案的名稱必須是相同 **/Yc**選項建立先行編譯標頭和�
 
 使用命令列編譯`CL /YuMYAPP.H PROG.CPP`，編譯器不會處理三個包含陳述式，但使用先行編譯程式碼從 MYAPP.pch，藉此節省前置處理所有的三個檔案 （和它們可能會包含任何檔案） 中所需的時間。
 
-您可以使用[/Fp （名稱。Pch 檔案）](../../build/reference/fp-name-dot-pch-file.md)選項搭配 **/Yu**選項來指定.pch 檔的名稱，如果名稱不同於其中一個檔案名稱引數來 **/Yc**或原始程式檔，如下所示的基底名稱下列：
+您可以使用[/Fp （名稱。Pch 檔案）](fp-name-dot-pch-file.md)選項搭配 **/Yu**選項來指定.pch 檔的名稱，如果名稱不同於其中一個檔案名稱引數來 **/Yc**或原始程式檔，如下所示的基底名稱下列：
 
 ```
 CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP
@@ -98,5 +98,5 @@ CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

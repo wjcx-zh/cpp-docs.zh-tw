@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
-ms.openlocfilehash: a5a01ca56a49791a608c5c836312c7728e9328c3
-ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
+ms.openlocfilehash: 1643727d8f556a905eccbfa9626d1aaa8ea63cbf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978279"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816603"
 ---
 # <a name="sourcelink-include-source-link-file-in-pdb"></a>/ SOURCELINK （包含來源連結 PDB 檔案）
 
@@ -32,7 +32,7 @@ ms.locfileid: "53978279"
 
 ### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>若要在 Visual Studio 中設定 /SOURCELINK 連結器選項
 
-1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **連結器** > **命令列**屬性頁。
 
@@ -44,5 +44,5 @@ ms.locfileid: "53978279"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -RAWDATA dumpbin option
 - /RAWDATA dumpbin option
 ms.assetid: 41cba845-5e1f-415e-9fe4-604a52235983
-ms.openlocfilehash: 4e884ba8bca7b3ccdf900c7da2c43dd741c03d12
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 02af8df04d80c20c5d7629b51abab6295a21f5e5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413364"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816460"
 ---
 # <a name="rawdata"></a>/RAWDATA
 
@@ -35,8 +35,8 @@ ms.locfileid: "57413364"
 |NONE|隱藏未經處理資料。 這個引數是可用來控制輸出的所有 /。|
 |*數字*|顯示的行都會設定為保留的寬度`number`每行的值。|
 
-只有[/HEADERS](../../build/reference/headers.md) DUMPBIN 選項只適用於所產生的檔案上[/GL](../../build/reference/gl-whole-program-optimization.md)編譯器選項。
+只有[/HEADERS](headers.md) DUMPBIN 選項只適用於所產生的檔案上[/GL](gl-whole-program-optimization.md)編譯器選項。
 
 ## <a name="see-also"></a>另請參閱
 
-[DUMPBIN 選項](../../build/reference/dumpbin-options.md)
+[DUMPBIN 選項](dumpbin-options.md)

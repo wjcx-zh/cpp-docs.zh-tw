@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4627
 ms.assetid: 8840f3e6-b496-423a-8635-eb55d5f854a2
-ms.openlocfilehash: e833141020de1aef51a1ea3823dea86b024e077d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef00d6691195fa5fb925448dce9513d1ecb08b6d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542385"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809947"
 ---
 # <a name="compiler-warning-level-1-c4627"></a>編譯器警告 (層級 1) C4627
 
@@ -36,4 +36,4 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[建立先行編譯標頭檔](../../build/reference/creating-precompiled-header-files.md)
+[建立先行編譯標頭檔](../../build/creating-precompiled-header-files.md)

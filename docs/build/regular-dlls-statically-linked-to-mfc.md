@@ -9,12 +9,12 @@ helpviewer_keywords:
 - statically linked DLLs [C++]
 - regular MFC DLLs [C++], statically linked to MFC
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
-ms.openlocfilehash: 074cd6c9fca08261cf2333a968dce3cc83c0c860
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1f05b5e3c268935cf3161fb7184e04b3e3ea1446
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415979"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815797"
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>靜態連結至 MFC 的標準 MFC Dll
 
@@ -66,20 +66,20 @@ MFC DLL 內的所有記憶體配置都應該都留在該 DLL;DLL 不應該傳遞
 
 ## <a name="what-do-you-want-to-do"></a>請您指定選項。
 
-- [初始化 MFC 的標準 Dll](../build/run-time-library-behavior.md#initializing-regular-dlls)
+- [初始化 MFC 的標準 Dll](run-time-library-behavior.md#initializing-regular-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
 - [將 MFC 當成 DLL 的一部分使用](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
-- [在 MFC DLL 中使用資料庫、OLE 和通訊端 MFC 延伸模組 DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [在 MFC DLL 中使用資料庫、OLE 和通訊端 MFC 延伸模組 DLL](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
 - [建立 MFC DLL](../mfc/reference/mfc-dll-wizard.md)
 
-- [動態連結至 MFC 的標準 MFC DLL](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [動態連結至 MFC 的標準 MFC DLL](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [MFC 延伸模組 DLL](../build/extension-dlls-overview.md)
+- [MFC 延伸模組 DLL](extension-dlls-overview.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[DLL 的種類](../build/kinds-of-dlls.md)
+[DLL 的種類](kinds-of-dlls.md)

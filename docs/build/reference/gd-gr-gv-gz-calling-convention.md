@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: 8eba665e34fc3b949283557461e33348106fd532
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c4f7e6edb020f5c8d2abf80f14df33e18a915c5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451501"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817459"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (呼叫慣例)
 
@@ -51,14 +51,14 @@ ms.locfileid: "50451501"
 
 接受可變數目的引數的函式必須標記為`__cdecl`。
 
-**/Gd**， **/Gr**， **/Gv**並 **/Gz**與不相容[/clr: safe](../../build/reference/clr-common-language-runtime-compilation.md)或 **/clr: pure**. **/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
+**/Gd**， **/Gr**， **/Gv**並 **/Gz**與不相容[/clr: safe](clr-common-language-runtime-compilation.md)或 **/clr: pure**. **/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
 
 > [!NOTE]
 > 根據預設，適用於 x86 處理器，c + + 成員函式會使用[__thiscall](../../cpp/thiscall.md)。
 
 適用於所有的處理器，明確地標示為成員函式`__cdecl`， `__fastcall`， `__vectorcall`，或`__stdcall`會使用指定的呼叫慣例，如果它不會忽略在該架構上。 成員函式接受可變數目的引數一律會使用`__cdecl`呼叫慣例。
 
-這些編譯器選項會有任何作用，在 c + + 方法和函式的裝飾名稱。 除非宣告為`extern "C"`，c + + 方法和函式使用不同的名稱裝飾配置。 如需詳細資訊，請參閱 <<c0> [ 裝飾名稱](../../build/reference/decorated-names.md)。
+這些編譯器選項會有任何作用，在 c + + 方法和函式的裝飾名稱。 除非宣告為`extern "C"`，c + + 方法和函式使用不同的名稱裝飾配置。 如需詳細資訊，請參閱 <<c0> [ 裝飾名稱](decorated-names.md)。
 
 如需有關呼叫慣例的詳細資訊，請參閱 <<c0> [ 呼叫慣例](../../cpp/calling-conventions.md)。
 
@@ -66,7 +66,7 @@ ms.locfileid: "50451501"
 
 在 x86 處理器而言，所有函數引數會都傳遞到堆疊上由右至左。 在 ARM 和 x64 架構，部分引數會傳遞由暫存器，其餘部分會由右至左傳遞到堆疊上。 呼叫的常式會取出來自堆疊的引數。
 
-對於 C，`__cdecl`命名慣例是使用函式名稱加上底線 ( `_` ); 會執行任何大小寫轉譯。 除非宣告為`extern "C"`，c + + 函式會使用不同的名稱裝飾配置。 如需詳細資訊，請參閱 <<c0> [ 裝飾名稱](../../build/reference/decorated-names.md)。
+對於 C，`__cdecl`命名慣例是使用函式名稱加上底線 ( `_` ); 會執行任何大小寫轉譯。 除非宣告為`extern "C"`，c + + 函式會使用不同的名稱裝飾配置。 如需詳細資訊，請參閱 <<c0> [ 裝飾名稱](decorated-names.md)。
 
 ## <a name="fastcall-specifics"></a>__fastcall 專屬資訊
 
@@ -99,7 +99,7 @@ A`__vectorcall`函式的整數引數傳遞的值，並使用最多兩個 （在 
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取  **C/c + +** > **進階**屬性頁。
 
@@ -111,5 +111,5 @@ A`__vectorcall`函式的整數引數傳遞的值，並使用最多兩個 （在 
 
 ## <a name="see-also"></a>另請參閱
 
-- [編譯器選項](../../build/reference/compiler-options.md)
-- [設定編譯器選項](../../build/reference/setting-compiler-options.md)
+- [MSVC 編譯器選項](compiler-options.md)
+- [MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

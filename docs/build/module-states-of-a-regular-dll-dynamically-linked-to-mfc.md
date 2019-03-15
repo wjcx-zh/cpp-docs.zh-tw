@@ -8,12 +8,12 @@ helpviewer_keywords:
 - module states [C++], regular MFC DLLs dynamically linked to
 - DLLs [C++], module states
 ms.assetid: b4493e79-d25e-4b7f-a565-60de5b32c723
-ms.openlocfilehash: a47b2a11db9dfc08b84cc9cba07a62a91ac1a805
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3ab51ca8097bd5ec27e8e7cfd8b8f19d76195664
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420176"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822141"
 ---
 # <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>動態連結至 MFC 的標準 MFC DLL 的模組狀態
 
@@ -37,10 +37,10 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 
 - [管理 MFC 模組的狀態資料](../mfc/managing-the-state-data-of-mfc-modules.md)
 
-- [動態連結至 MFC 的標準 MFC Dll](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [動態連結至 MFC 的標準 MFC Dll](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [MFC 延伸模組 DLL](../build/extension-dlls-overview.md)
+- [MFC 延伸模組 DLL](extension-dlls-overview.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)
+[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)

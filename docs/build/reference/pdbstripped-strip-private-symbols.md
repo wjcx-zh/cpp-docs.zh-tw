@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PDB files, stripping private symbols
 - PDBSTRIPPED linker option
 ms.assetid: 9b9e0070-6a13-4142-8180-19c003fbbd55
-ms.openlocfilehash: c0a79eb8d1c00be2b855ec08ffe44f4e7d7a2e05
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3ed36eca727a15a3c70bc51a07cd3c143d7f66da
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412623"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815212"
 ---
 # <a name="pdbstripped-strip-private-symbols"></a>/PDBSTRIPPED (移除專用符號)
 
@@ -31,7 +31,7 @@ ms.locfileid: "57412623"
 
 ## <a name="remarks"></a>備註
 
-當您建置程式映像與任何編譯器或連結器產生的 PDB 檔案的選項時，/PDBSTRIPPED 選項會建立第二個程式資料庫 (PDB) 檔案 ([/debug](../../build/reference/debug-generate-debug-info.md)， [/z7](../../build/reference/z7-zi-zi-debug-information-format.md)，debug、/z7、/zd 或 /Zi)。 第二個 PDB 檔會省略您不想要出貨給客戶的符號。 只會包含第二個 PDB 檔案：
+當您建置程式映像與任何編譯器或連結器產生的 PDB 檔案的選項時，/PDBSTRIPPED 選項會建立第二個程式資料庫 (PDB) 檔案 ([/debug](debug-generate-debug-info.md)， [/z7](z7-zi-zi-debug-information-format.md)，debug、/z7、/zd 或 /Zi)。 第二個 PDB 檔會省略您不想要出貨給客戶的符號。 只會包含第二個 PDB 檔案：
 
 - 公用符號
 
@@ -53,7 +53,7 @@ ms.locfileid: "57412623"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 **連結器**資料夾。
 
@@ -67,5 +67,5 @@ ms.locfileid: "57412623"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

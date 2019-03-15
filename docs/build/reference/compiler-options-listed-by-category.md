@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 128b477a2c4252c841990e2a2462029abe5a3bbb
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: d3ebfbc3661ba648c2fdb73c697db42735faf422
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746965"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816330"
 ---
 # <a name="compiler-options-listed-by-category"></a>依分類排列的編譯器選項
 
@@ -218,5 +218,5 @@ ms.locfileid: "57746965"
 ## <a name="see-also"></a>另請參閱
 
 [C/C++ 建置參考](c-cpp-building-reference.md)<br/>
-[編譯器選項](compiler-options.md)<br/>
-[設定編譯器選項](setting-compiler-options.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>

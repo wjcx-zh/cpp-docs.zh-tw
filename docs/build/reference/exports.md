@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
-ms.openlocfilehash: b12548bafa9a0c580c5976cd7c4c54d8726e5ace
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33b70c680bfc3db24f5326a2027fa9ec4740e3f2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435671"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814133"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -51,9 +51,9 @@ EXPORTS
    func2=other_module.#42
 ```
 
-因為 Visual c + + 編譯器會使用 c + + 函式的名稱裝飾，所以您必須使用裝飾的名稱*internal_name*或使用定義匯出的函式`extern "C"`原始程式碼中。 編譯器也會裝飾使用的 C 函式[__stdcall](../../cpp/stdcall.md)呼叫慣例以底線 (\_) 前置詞和後置詞組成 at 符號 (\@) 後面中的位元組數 （十進位）引數清單。
+因為 MSVC 編譯器的 c + + 函式使用名稱裝飾，所以您必須使用裝飾的名稱*internal_name*或使用定義匯出的函式`extern "C"`原始程式碼中。 編譯器也會裝飾使用的 C 函式[__stdcall](../../cpp/stdcall.md)呼叫慣例以底線 (\_) 前置詞和後置詞組成 at 符號 (\@) 後面中的位元組數 （十進位）引數清單。
 
-若要尋找由編譯器所產生的裝飾的名稱，請使用[DUMPBIN](../../build/reference/dumpbin-reference.md)工具或連結器[/typedefs/ 對應](../../build/reference/map-generate-mapfile.md)選項。 裝飾名稱是編譯器專屬的。 如果您匯出 .DEF 檔案中的裝飾名稱，則連結至 DLl 的可執行檔必須也使用相同版本的編譯器進行建置。 這可確保呼叫端的裝飾名稱符合 .DEF 檔案中的已匯出名稱。
+若要尋找由編譯器所產生的裝飾的名稱，請使用[DUMPBIN](dumpbin-reference.md)工具或連結器[/typedefs/ 對應](map-generate-mapfile.md)選項。 裝飾名稱是編譯器專屬的。 如果您匯出 .DEF 檔案中的裝飾名稱，則連結至 DLl 的可執行檔必須也使用相同版本的編譯器進行建置。 這可確保呼叫端的裝飾名稱符合 .DEF 檔案中的已匯出名稱。
 
 您可以使用\@*序數*指定數字，而不是函式名稱，便會進入 DLL 的匯出表。 許多 Windows DLL 會匯出序數，以支援舊版程式碼。 通常在 16 位元 Windows 程式碼中使用序數，因為它有助於最大程度減小 DLL 的大小。 建議除非您的 DLL 用戶端因舊版支援而需要序數，否則不要依序數匯出函式。 由於 .LIB 檔會包含序數與函式之間的對應，因此您可以像在使用 DLL 的專案中那樣，使用函式名稱。
 
@@ -74,7 +74,7 @@ EXPORTS
 
 1. .DEF 檔中的 `EXPORTS` 陳述式
 
-1. [/匯出](../../build/reference/export-exports-a-function.md)LINK 命令中的規格
+1. [/匯出](export-exports-a-function.md)LINK 命令中的規格
 
 1. A[註解](../../preprocessor/comment-c-cpp.md)指示詞中的原始程式碼，表單的`#pragma comment(linker, "/export: definition ")`。 下列範例示範 #pragma comment 指示詞之前函式宣告，其中`PlainFuncName`是未裝飾的名稱，和`_PlainFuncName@4`是函式的裝飾的名稱：
 
@@ -102,4 +102,4 @@ EXPORTS
 
 ## <a name="see-also"></a>另請參閱
 
-[模組定義陳述式的規則](../../build/reference/rules-for-module-definition-statements.md)
+[模組定義陳述式的規則](rules-for-module-definition-statements.md)

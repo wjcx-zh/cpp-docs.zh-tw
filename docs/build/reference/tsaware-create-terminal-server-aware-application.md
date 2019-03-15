@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: fe31763c5da21a724f0c9242e6eb8429a2379ecd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f6ed6184f8ae4b3a0f9db3c1f962a2918a185138
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421489"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816941"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (建立終端伺服器感知應用程式)
 
@@ -34,15 +34,15 @@ ms.locfileid: "57421489"
 
 如果您使用 /TSAWARE，而且您的應用程式仍會使用的 INI 檔案，檔案會共用系統的所有使用者。 如果是可接受，您仍然可以連結 /TSAWARE; 您的應用程式否則，您必須使用 /tsaware: no。
 
-/TSAWARE 選項會預設啟用 Windows 和主控台應用程式。 請參閱[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)並[/VERSION](../../build/reference/version-version-information.md)的資訊。
+/TSAWARE 選項會預設啟用 Windows 和主控台應用程式。 請參閱[/SUBSYSTEM](subsystem-specify-subsystem.md)並[/VERSION](version-version-information.md)的資訊。
 
 /TSAWARE 不正確的驅動程式、 Vxd 或 Dll。
 
-如果應用程式已連結 /TSAWARE，DUMPBIN [/HEADERS](../../build/reference/headers.md)會顯示所造成影響的資訊。
+如果應用程式已連結 /TSAWARE，DUMPBIN [/HEADERS](headers.md)會顯示所造成影響的資訊。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 **連結器**資料夾。
 
@@ -56,7 +56,7 @@ ms.locfileid: "57421489"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)<br/>
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)<br/>
 [儲存使用者專屬資訊](/windows/desktop/TermServ/storing-user-specific-information)<br/>
 [在終端機服務環境中的舊版應用程式](https://msdn.microsoft.com/library/aa382957.aspx)

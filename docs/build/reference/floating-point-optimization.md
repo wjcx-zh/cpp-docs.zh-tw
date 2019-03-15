@@ -1,13 +1,13 @@
 ---
-title: Microsoft Visual c + + 浮點最佳化
+title: MSVC 浮點最佳化
 ms.date: 03/09/2018
 ms.topic: conceptual
-ms.openlocfilehash: 6e297cebb4982b293e86885815436c4120d903cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78c5c310f2f348b5cfa5a92feb65e265d28560d9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504295"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814367"
 ---
 # <a name="microsoft-visual-c-floating-point-optimization"></a>Microsoft Visual c + + 浮點最佳化
 
@@ -36,11 +36,11 @@ float KahanSum( const float A[], int n )
 
 貝氏 c + + 編譯器可能會假設，浮點算術會遵循相同的代數規則實數算術。 這類編譯器可能會錯誤地推斷，
 
-> C = T-加總-Y = = > （總和 + Y）-加總-Y = = > 0;
+> C = T - sum - Y ==> (sum+Y)-sum-Y ==> 0;
 
 也就是，C 的認知的值一律是常數的零。 如果此常數值，然後會傳播到後續的運算式，則會將迴圈主體減少以簡單的總和。 確切而言，
 
-> Y = [i]-C = = > Y = [i]<br/>T = 總和 + Y = = > T = 總和 + A [i]<br/>sum = T = = > 總計 = 總計 + A [i]
+> Y = [i]-C = = > Y = [i]<br/>T = sum + Y ==> T = sum + A[i]<br/>sum = T ==> sum = sum + A[i]
 
 因此，為了貝氏編譯器的邏輯轉換`KahanSum`函式會是：
 
@@ -952,11 +952,11 @@ Pragma`float_control(push)`和`float_control(pop)`分別 push 和 pop 的浮點�
 ||||||
 |-|-|-|-|-|
 ||float_control(precise)|float_control(except)|fp_contract|fenv_access|
-|/fp: strict|於|於|關閉|於|
-|/fp: strict /fp： 除了-|於|關閉|關閉|於|
-|/fp： 精確|於|關閉|於|關閉|
-|/fp: precise /fp： 除外|於|於|於|關閉|
-|/fp: fast|關閉|關閉|於|關閉|
+|/fp:strict|於|於|關閉|於|
+|/fp:strict /fp:except-|於|關閉|關閉|於|
+|/fp:precise|於|關閉|於|關閉|
+|/fp:precise /fp:except|於|於|於|關閉|
+|/fp:fast|關閉|關閉|於|關閉|
 
 例如，下列明確啟用 /fp: fast 語意。
 
@@ -1088,4 +1088,4 @@ catch(float_exception)
 
 ## <a name="see-also"></a>另請參閱
 
-[最佳化程式碼](optimizing-your-code.md)<br/>
+[最佳化程式碼](../optimizing-your-code.md)<br/>

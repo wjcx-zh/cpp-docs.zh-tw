@@ -6,12 +6,12 @@ ms.date: 12/12/2017
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 5722dcc06f5141818910e44a6160d12bcd4eaecd
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.openlocfilehash: 3bbbd40534e3e429d68dbb6205134c57db40c851
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977754"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817721"
 ---
 # <a name="create-a-c-console-app-project"></a>建立 c + + 主控台應用程式專案
 
@@ -19,7 +19,7 @@ ms.locfileid: "52977754"
 
 ## <a name="prerequisites"></a>必要條件
 
-- 具有 c + + 工作負載中，使用您的電腦上安裝和執行 Visual Studio 中使用的桌面開發。 如果它尚未安裝，請參閱[Visual Studio 2017 中的安裝 c + + 支援](../build/vscpp-step-0-installation.md)。
+- 具有 c + + 工作負載中，使用您的電腦上安裝和執行 Visual Studio 中使用的桌面開發。 如果它尚未安裝，請參閱[Visual Studio 2017 中的安裝 c + + 支援](vscpp-step-0-installation.md)。
 
 ## <a name="create-your-app-project"></a>建立您的應用程式專案
 
@@ -27,11 +27,11 @@ Visual Studio 會使用「專案」來組織應用程式的程式碼，並使用
 
 1. 在 Visual Studio 中開啟**檔案**功能表，然後選擇**新增 > 專案**以開啟**新專案**對話方塊。
 
-   ![開啟 [新增專案] 對話方塊](../build/media/vscpp-file-new-project.gif "開啟 [新增專案] 對話方塊")
+   ![開啟 [新增專案] 對話方塊](media/vscpp-file-new-project.gif "開啟 [新增專案] 對話方塊")
 
 1. 在 **新的專案**對話方塊中，選取**已安裝**， **Visual c + +** 如果它尚未選取，然後選擇**空專案**範本。 在 **名稱**欄位中，輸入*HelloWorld*。 選擇**確定**建立專案。
 
-   ![命名和建立新的專案](../build/media/vscpp-concierge-project-name-callouts.png "名稱，並建立新的專案")
+   ![命名和建立新的專案](media/vscpp-concierge-project-name-callouts.png "名稱，並建立新的專案")
 
 Visual Studio 會建立新的空白專案，可供您針對您想要建立並加入您的原始程式碼檔的應用程式的類型特製化。 您會執行下一步。
 
@@ -43,9 +43,9 @@ Visual Studio 可以為 Windows 和其他平台建立各式各樣的應用程式
 
 1. 在 Visual Studio 中開啟**專案**功能表，然後選擇**屬性**以開啟**HelloWorld 屬性頁**對話方塊。
 
-1. 在**屬性頁** 對話方塊底下**組態屬性**，選取**連結器**，**系統**，然後選擇 編輯 方塊旁**子系統**屬性。 在 顯示下拉式功能表中，選取**主控台 (/ /SUBSYSTEM: CONSOLE)**。 選擇**確定**以儲存變更。
+1. 在**屬性頁** 對話方塊底下**組態屬性**，選取**連結器**，**系統**，然後選擇 編輯 方塊旁**子系統**屬性。 在 顯示下拉式功能表中，選取**主控台 (/ /SUBSYSTEM: CONSOLE)**。 選取 [確定] 儲存您的變更。
 
-   ![開啟 [屬性頁] 對話方塊](../build/media/vscpp-properties-linker-subsystem.gif "開啟 [屬性頁] 對話方塊")
+   ![開啟 [屬性頁] 對話方塊](media/vscpp-properties-linker-subsystem.gif "開啟 [屬性頁] 對話方塊")
 
 Visual Studio 現在知道要建置您的專案，以在主控台視窗中執行。 接下來，您將加入原始程式碼檔，並輸入您的應用程式程式碼。
 
@@ -57,7 +57,7 @@ Visual Studio 現在知道要建置您的專案，以在主控台視窗中執行
 
 1. 在 **加入新項目**對話方塊中，選取**Visual c + +** 之下**已安裝**如果已選取。 在中央窗格中，選取**c + + 檔 (.cpp)**。 變更**名稱**要*HelloWorld.cpp*。 選擇**新增**關閉對話方塊並建立該檔案。
 
-   ![加入原始程式檔 HelloWorld.cpp](../build/media/vscpp-add-new-item.gif "HelloWorld.cpp 加入原始程式檔")
+   ![加入原始程式檔 HelloWorld.cpp](media/vscpp-add-new-item.gif "HelloWorld.cpp 加入原始程式檔")
 
 Visual studio 會建立新的空白原始程式碼檔案，並在編輯器視窗，即可輸入您的程式碼中開啟。
 
@@ -79,7 +79,7 @@ Visual studio 會建立新的空白原始程式碼檔案，並在編輯器視窗
 
    程式碼編輯器 視窗中應該看起來像這樣：
 
-   ![Hello World 程式碼編輯器中的](../build/media/vscpp-hello-world-editor.png "在編輯器中的 Hello World 程式碼")
+   ![Hello World 程式碼編輯器中的](media/vscpp-hello-world-editor.png "在編輯器中的 Hello World 程式碼")
 
 在編輯器中，程式碼看起來像這樣，您就可以繼續下一個步驟，並建置您的應用程式。
 

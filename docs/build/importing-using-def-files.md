@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], DEF files
 - DLLs [C++], DEF files
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
-ms.openlocfilehash: f6e553a85e6c17a3ea914365ad29ad5136e50629
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 13a6a375d6200f73dd9845d057d1954c2b65485c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424770"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815329"
 ---
 # <a name="importing-using-def-files"></a>使用 .DEF 檔匯入
 
@@ -59,8 +59,8 @@ if (ulDataInDll == 0L)   /*sample code fragment*/
 
 使用常數是風險較大，因為如果您忘記使用額外間接取值層，您可能會存取匯入位址表格的指標，此變數，不是變數本身。 因為匯入位址表格目前做唯讀的編譯器和連結器，則這種問題通常可以呈現為存取違規。
 
-如果發現.def 檔案中的常數，帳戶在此情況下，目前的 Visual c + + 連結器會發出警告。 若要使用常數唯一真正的原因是如果您無法重新編譯的標頭檔未列出一些物件檔案 **__declspec （dllimport)** 原型上啟動。
+如果發現.def 檔案中的常數，帳戶在此情況下，目前的 MSVC 連結器會發出警告。 若要使用常數唯一真正的原因是如果您無法重新編譯的標頭檔未列出一些物件檔案 **__declspec （dllimport)** 原型上啟動。
 
 ## <a name="see-also"></a>另請參閱
 
-[匯入至應用程式](../build/importing-into-an-application.md)
+[匯入至應用程式](importing-into-an-application.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - external names
 - -H compiler option [C++]
 ms.assetid: de701dd3-ed04-4c88-8195-960d2520ec2e
-ms.openlocfilehash: bb7821587d6c0bbe06eb6baa02227955582eb76d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bdd3da8d3a5165262c00bc3475122e31f5770726
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420410"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811260"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (限制外部名稱的長度)
 
@@ -68,13 +68,13 @@ void func2(void) {}
 
 您也必須使用時請小心 **/H**預先定義的編譯器識別項的選項。 如果最大的識別項長度太小，某些預先定義的識別碼會無法解析，以及特定的程式庫函式呼叫。 比方說，如果`printf`會使用函式和選項 **/H5**指定在編譯時期，符號 **_prin**將會建立以參考`printf`，，這將會找不到在 程式庫。
 
-利用 **/H**與不相容[/GL （整個程式最佳化）](../../build/reference/gl-whole-program-optimization.md)。
+利用 **/H**與不相容[/GL （整個程式最佳化）](gl-whole-program-optimization.md)。
 
-**/H** Visual Studio 2005 起已被取代選項; 最大長度限制已經增加並 **/H**不再需要。 如需已被取代的編譯器選項的清單，請參閱 <<c0>  **已取代及移除的編譯器選項**中[依分類排列的編譯器選項](../../build/reference/compiler-options-listed-by-category.md)。
+**/H** Visual Studio 2005 起已被取代選項; 最大長度限制已經增加並 **/H**不再需要。 如需已被取代的編譯器選項的清單，請參閱 <<c0>  **已取代及移除的編譯器選項**中[依分類排列的編譯器選項](compiler-options-listed-by-category.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **C/c + +** > **命令列**屬性頁。
 
@@ -86,5 +86,5 @@ void func2(void) {}
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

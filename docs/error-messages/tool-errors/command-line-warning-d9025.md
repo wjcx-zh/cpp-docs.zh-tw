@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - D9025
 ms.assetid: 6edff72c-1508-46c2-99f4-0e4b3c5e60c9
-ms.openlocfilehash: fb9ab3152efe565501e91fbad5ebb279c4396968
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7090dda72868ad7ee4d5f8e4f1ba6a0ad121c98
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652422"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822455"
 ---
 # <a name="command-line-warning-d9025"></a>命令列警告 D9025
 
@@ -23,7 +23,7 @@ ms.locfileid: "50652422"
 
 如果您從開發環境中，編譯時，收到這個警告，並不確定的選項衝突來自何處，請考慮下列各項：
 
-- 在程式碼或專案的專案設定中，則可以指定選項。 如果您查看編譯器[命令列屬性頁](../../ide/command-line-property-pages.md)如果您看到中的選項衝突**所有選項**欄位則選項會設定在專案的屬性頁面中，否則選項在原始程式碼中設定。
+- 在程式碼或專案的專案設定中，則可以指定選項。 如果您查看編譯器[命令列屬性頁](../../build/reference/command-line-property-pages.md)如果您看到中的選項衝突**所有選項**欄位則選項會設定在專案的屬性頁面中，否則選項在原始程式碼中設定。
 
    如果選項設定在專案屬性頁中，尋找編譯器前置處理器 屬性頁面上 （在 方案總管 中選取專案節點）。  如果您看不見的選項那里設定，請檢查並確定每個來源的程式碼檔案 （在 方案總管 中) 的前置處理器 屬性頁面設定它未在該處加入。
 

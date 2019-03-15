@@ -15,12 +15,12 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-ms.openlocfilehash: 084741a3a408fe79e27c3fab81e1f5c4c9f06c4e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ea970f010e86d655963485339c48b8f7d36d6270
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414586"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811435"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Dll 和 Visual c + + 執行階段程式庫行為
 
@@ -32,10 +32,10 @@ ms.locfileid: "57414586"
 
 VCRuntime 程式庫提供進入點函式，呼叫`_DllMainCRTStartup`處理預設初始化及終止作業。 處理序附加，`_DllMainCRTStartup`函式設定緩衝區安全性檢查，初始化 CRT 和其他程式庫、 初始化執行階段類型資訊、 初始化並呼叫建構函式靜態及非區域的資料，初始化執行緒區域儲存區會遞增每個附加，內部靜態計數器，然後呼叫 使用者或程式庫-提供`DllMain`。 處理序中斷連結，函式會執行反向的這些步驟。 它會呼叫`DllMain`遞減內部的計數器，會呼叫解構函式，呼叫 CRT 終止函式，並註冊`atexit`函式，並通知終止的任何其他程式庫。 附件計數器歸零時，此函數會傳回`FALSE`來向 Windows 可以卸載 DLL。 `_DllMainCRTStartup`期間的執行緒也會呼叫函式連結和中斷連結執行緒。 在這些情況下，VCRuntime 程式碼沒有任何額外的初始化或終止，並只會呼叫`DllMain`傳遞的訊息。 如果`DllMain`會傳回`FALSE`從處理序附加時，發出訊號失敗時，`_DllMainCRTStartup`呼叫`DllMain`一次，並傳遞`DLL_PROCESS_DETACH`作為*原因*引數，然後會經歷的其餘部分終止程序。
 
-建置 Visual c + + 中的預設進入點的 Dll 時`_DllMainCRTStartup`所提供的 VCRuntime 就會自動連結中。 您不需要使用的進入點函式指定您的 DLL [/ENTRY （進入點符號）](../build/reference/entry-entry-point-symbol.md)連結器選項。
+建置 Visual c + + 中的預設進入點的 Dll 時`_DllMainCRTStartup`所提供的 VCRuntime 就會自動連結中。 您不需要使用的進入點函式指定您的 DLL [/ENTRY （進入點符號）](reference/entry-entry-point-symbol.md)連結器選項。
 
 > [!NOTE]
-> 雖然您可以使用來指定另一個進入點函式的 dll /ENTRY： 連結器選項，我們不建議您這麼做，因為您的進入點函式都必須重複的所有項目，`_DllMainCRTStartup`的話，會以相同的順序。 VCRuntime 提供可讓您重複其行為的函式。 例如，您可以呼叫[__security_init_cookie](../c-runtime-library/reference/security-init-cookie.md)立即處理序附加到支援[/GS （緩衝區安全性檢查）](../build/reference/gs-buffer-security-check.md)核取選項的緩衝區。 您可以呼叫`_CRT_INIT`函式，將相同的參數傳遞做為進入點函式，來執行 DLL 初始化或終止函式的其餘部分。
+> 雖然您可以使用來指定另一個進入點函式的 dll /ENTRY： 連結器選項，我們不建議您這麼做，因為您的進入點函式都必須重複的所有項目，`_DllMainCRTStartup`的話，會以相同的順序。 VCRuntime 提供可讓您重複其行為的函式。 例如，您可以呼叫[__security_init_cookie](../c-runtime-library/reference/security-init-cookie.md)立即處理序附加到支援[/GS （緩衝區安全性檢查）](reference/gs-buffer-security-check.md)核取選項的緩衝區。 您可以呼叫`_CRT_INIT`函式，將相同的參數傳遞做為進入點函式，來執行 DLL 初始化或終止函式的其餘部分。
 
 <a name="initializing-a-dll"></a>
 
@@ -180,6 +180,6 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)<br/>
+[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)<br/>
 [DllMain 進入點](/windows/desktop/Dlls/dllmain)<br/>
 [動態連結程式庫的最佳作法](/windows/desktop/Dlls/dynamic-link-library-best-practices)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TLBID linker option
 - type libraries, specifying resource ID
 ms.assetid: 434b28a2-4656-4d52-ac82-8b18bf486fb2
-ms.openlocfilehash: b65ef73e2c7802b960b8480fff83c96fbe869293
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c52bfb9e4b6d0e94cecb77c766ac9e82b52f1e66
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426468"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820602"
 ---
 # <a name="tlbid-specify-resource-id-for-typelib"></a>/TLBID (指定 TypeLib 的資源 ID)
 
@@ -38,7 +38,7 @@ ms.locfileid: "57426468"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 **連結器**資料夾。
 
@@ -52,5 +52,5 @@ ms.locfileid: "57426468"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

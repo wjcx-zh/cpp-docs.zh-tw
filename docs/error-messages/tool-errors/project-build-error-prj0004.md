@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0004
 ms.assetid: 1858769f-0be4-40ed-ab70-2cee550488c7
-ms.openlocfilehash: 94752f16b40f3026967eefc836a95b797f48b160
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad11e5b81ec31e1ac8a47a0a0ffa31a443f1a107
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502475"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808192"
 ---
 # <a name="project-build-error-prj0004"></a>專案建置錯誤 PRJ0004
 
@@ -23,4 +23,4 @@ ms.locfileid: "50502475"
 
 - 您的電腦可能位於可用磁碟空間不足。
 
-您可能想要檢閱此工具的設定來看看[命令列屬性頁](../../ide/command-line-property-pages.md)。
+您可能想要檢閱此工具的設定來看看[命令列屬性頁](../../build/reference/command-line-property-pages.md)。

@@ -2,16 +2,16 @@
 title: ARM 例外狀況處理
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: f6df8afd453f7e71d1ecc2ebb188c079a3aad02a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: cbbec3f40df2765fa76399ce667ae30f4533b018
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694344"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814536"
 ---
 # <a name="arm-exception-handling"></a>ARM 例外狀況處理
 
-Windows on ARM 對非同步硬體產生的例外狀況和同步軟體產生的例外狀況，使用相同的結構化例外狀況處理機制。 語言專屬例外狀況處理常式使用語言協助程式函式，以 Windows 結構化例外狀況處理為基礎，進行建置。 本文件說明在 Windows ARM，和 Microsoft ARM 組譯工具和 Visual c + + 編譯器所產生的程式碼所使用的語言協助程式中處理的例外狀況。
+Windows on ARM 對非同步硬體產生的例外狀況和同步軟體產生的例外狀況，使用相同的結構化例外狀況處理機制。 語言專屬例外狀況處理常式使用語言協助程式函式，以 Windows 結構化例外狀況處理為基礎，進行建置。 本文件說明在 Windows ARM，和 Microsoft ARM 組譯工具和 MSVC 編譯器所產生的程式碼所使用的語言協助程式中處理的例外狀況。
 
 ## <a name="arm-exception-handling"></a>ARM 例外狀況處理
 
@@ -104,7 +104,7 @@ ARM 的每一個 .pdata 記錄長度都是 8 個位元組。 記錄的一般格�
 
 |指令|下列情況中會假設 Opcode 存在：|大小|Opcode|回溯程式碼|
 |-----------------|-----------------------------------|----------|------------|------------------|
-|1|*H*= = 1|16|`push {r0-r3}`|04|
+|1|*H*==1|16|`push {r0-r3}`|04|
 |2|*C*= = 1 或*L*= = 1 或*R*= = 0 或 PF==1 = = 1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
 |3a|*C*= = 1 和 (*L*= = 0 並*R*= = 1 且 PF==0 = = 0)|16|`mov r11,sp`|C0-CF/FB|
 |3b|*C*= = 1 和 (*L*= = 1 或*R*= = 0 或 PF==1 = = 1)|32|`add r11,sp,#xx`|FC|
@@ -121,20 +121,20 @@ ARM 的每一個 .pdata 記錄長度都是 8 個位元組。 記錄的一般格�
 
 |C|L|R|PF|推入的整數暫存器|推入的 VFP 暫存器|
 |-------|-------|-------|--------|------------------------------|--------------------------|
-|0|0|0|0|r4-r*N*|無|
-|0|0|0|1|r*S*-r*N*|無|
-|0|0|1|0|無|d8-d*E*|
+|0|0|0|0|r4-r*N*|none|
+|0|0|0|1|r*S*-r*N*|none|
+|0|0|1|0|none|d8-d*E*|
 |0|0|1|1|r*S*-r3|d8-d*E*|
-|0|1|0|0|r4-r*N*，LR|無|
-|0|1|0|1|r*S*-r*N*，LR|無|
+|0|1|0|0|r4-r*N*，LR|none|
+|0|1|0|1|r*S*-r*N*，LR|none|
 |0|1|1|0|LR|d8-d*E*|
 |0|1|1|1|r*S*-r3，LR|d8-d*E*|
-|1|0|0|0|r4-r*N*、 r11|無|
-|1|0|0|1|r*S*-r*N*、 r11|無|
+|1|0|0|0|r4-r*N*、 r11|none|
+|1|0|0|1|r*S*-r*N*、 r11|none|
 |1|0|1|0|r11|d8-d*E*|
 |1|0|1|1|r*S*-r3，r11|d8-d*E*|
-|1|1|0|0|r4-r*N*，r11，LR|無|
-|1|1|0|1|r*S*-r*N*，r11，LR|無|
+|1|1|0|0|r4-r*N*，r11，LR|none|
+|1|1|0|1|r*S*-r*N*，r11，LR|none|
 |1|1|1|0|r11、LR|d8-d*E*|
 |1|1|1|1|r*S*-r3，r11，LR|d8-d*E*|
 
@@ -147,8 +147,8 @@ ARM 的每一個 .pdata 記錄長度都是 8 個位元組。 記錄的一般格�
 |8|*C*= = 1 或 (*L*= = 1 並*H*= = 0) 或*R*= = 0 或*EF*= = 1|16/32|`pop   {registers}`|
 |9a|*H*= = 1， *L*= = 0|16|`add   sp,sp,#0x10`|
 |9b|*H*= = 1， *L*= = 1|32|`ldr   pc,[sp],#0x14`|
-|10a|*Ret*= = 1|16|`bx    reg`|
-|10b|*Ret*= = 2|32|`b     address`|
+|10a|*Ret*==1|16|`bx    reg`|
+|10b|*Ret*==2|32|`b     address`|
 
 如果指定非摺疊調整，則指令 6 為明確堆疊調整。 因為*PF*無關*EF*，就可以將指令 5 而不存在指令 6 或反之亦然。
 
@@ -190,7 +190,7 @@ ARM 的每一個 .pdata 記錄長度都是 8 個位元組。 記錄的一般格�
 
 1. 如果*X*標頭中的欄位為 1，回溯程式碼位元組後面接著例外狀況處理常式資訊。 這包括一個*例外狀況處理常式 RVA*包含例外狀況處理常式，後面緊接跟著 （可變長度） 的資料量的例外狀況處理常式所需的位址。
 
-設計 .xdata 記錄是為了可以擷取前 8 個位元組，並計算記錄的完整大小，不包括後續可變大小例外狀況資料的長度。 此程式碼片段會計算記錄大小：
+設計 .xdata 記錄是為了可以提取前 8 個位元組，並計算記錄的完整大小，不包括後續可變大小例外狀況資料的長度。 此程式碼片段會計算記錄大小：
 
 ```cpp
 ULONG ComputeXdataSize(PULONG *Xdata)
@@ -479,7 +479,7 @@ Epilogue:
 
    - *堆疊調整*= 的 3 （= 0x0C/4）
 
-### <a name="example-3-nested-variadic-function"></a>範例 3：巢狀 Variadic 函式
+### <a name="example-3-nested-variadic-function"></a>範例 3：巢狀的 Variadic 函式
 
 ```asm
 Prologue:
@@ -546,7 +546,7 @@ Epilogues:
 
    - *旗標*= 0，指出存在.xdata 記錄 （必要項，因為多個結尾）
 
-   - *.xdata 位址*-0x00400000
+   - *.xdata address* - 0x00400000
 
 .xdata (變數，6 個字組)：
 
@@ -576,7 +576,7 @@ Epilogues:
 
    - 回溯程式碼 2 = 0xFF：end
 
-### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>範例 5：具有動態堆疊和內部結尾的函式
+### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>範例 5:具有動態堆疊和內部結尾的函式
 
 ```asm
 Prologue:
@@ -606,7 +606,7 @@ Epilogue:
 
    - *旗標*= 0，指出存在.xdata 記錄 （由於多個結尾時需要）
 
-   - *.xdata 位址*-0x00400000
+   - *.xdata address* - 0x00400000
 
 .xdata (變數，3 個字組)：
 
@@ -626,7 +626,7 @@ Epilogue:
 
    - *程式碼字組*= 0x01，指出回溯程式碼的一個 32 位元字組
 
-- 字組 1：位移 0xC6 (= 0x18C/2) 處的結尾範圍，從 0x00 處的回溯程式碼索引開始，且具有條件 0x0E (一律)
+- 字組 1:結尾範圍位移 0xC6 （= 0x18c/2），在 0x00 處，並具有條件 0x0E （一律） 開始回溯程式碼索引
 
 - 回溯程式碼，在字組 2 處開始：(在序言/結尾之間共用)
 
@@ -638,7 +638,7 @@ Epilogue:
 
    - 回溯程式碼 3 = 0xFD：end，對於結尾，計數為 16 位元指令
 
-### <a name="example-6-function-with-exception-handler"></a>範例 6：具有例外狀況處理常式的函式
+### <a name="example-6-function-with-exception-handler"></a>範例 6:與例外狀況處理常式的函式
 
 ```asm
 Prologue:
@@ -664,7 +664,7 @@ Epilogue:
 
    - *旗標*= 0，指出存在.xdata 記錄 （由於多個結尾時需要）
 
-   - *.xdata 位址*-0x00400000
+   - *.xdata address* - 0x00400000
 
 .xdata (變數，5 個字組)：
 
@@ -698,7 +698,7 @@ Epilogue:
 
 - 字組 4 及以上為內嵌例外狀況資料
 
-### <a name="example-7-funclet"></a>範例 7：Funclet
+### <a name="example-7-funclet"></a>範例 7:Funclet
 
 ```asm
 Function:
@@ -739,5 +739,5 @@ Function:
 
 ## <a name="see-also"></a>另請參閱
 
-[ARM ABI 慣例概觀](../build/overview-of-arm-abi-conventions.md)<br/>
-[Visual C++ ARM 移轉時常見的問題](../build/common-visual-cpp-arm-migration-issues.md)
+[ARM ABI 慣例概觀](overview-of-arm-abi-conventions.md)<br/>
+[Visual C++ ARM 移轉時常見的問題](common-visual-cpp-arm-migration-issues.md)

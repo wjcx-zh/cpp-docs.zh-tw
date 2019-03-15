@@ -14,22 +14,22 @@ helpviewer_keywords:
 - defaults [C++], libraries
 - .lib files
 ms.assetid: dc5d2b1c-2487-41fa-aa71-ad1e0647958b
-ms.openlocfilehash: f3b2ae0d82e682cc89243b7b527ee6e0b51d4c3d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 02f719b3101b04ad6b219bf882a50a994061af0c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426767"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822609"
 ---
 # <a name="lib-files-as-linker-input"></a>.Lib 檔做為連結器輸入
 
-連結可讓您接受 COFF 標準程式庫和 COFF 匯入程式庫，這兩者通常會有擴充功能。 lib。 標準程式庫包含的物件，並且會 LIB 工具來建立。 匯入程式庫包含其他程式匯出的相關資訊，而且會建立由 LINK 建置的程式包含匯出時，或 LIB 工具。 如需使用程式庫來建立標準或匯入程式庫的資訊，請參閱[LIB 參考](../../build/reference/lib-reference.md)。 如需使用連結來建立匯入程式庫的詳細資訊，請參閱[/DLL](../../build/reference/dll-build-a-dll.md)選項。
+連結可讓您接受 COFF 標準程式庫和 COFF 匯入程式庫，這兩者通常會有擴充功能。 lib。 標準程式庫包含的物件，並且會 LIB 工具來建立。 匯入程式庫包含其他程式匯出的相關資訊，而且會建立由 LINK 建置的程式包含匯出時，或 LIB 工具。 如需使用程式庫來建立標準或匯入程式庫的資訊，請參閱[LIB 參考](lib-reference.md)。 如需使用連結來建立匯入程式庫的詳細資訊，請參閱[/DLL](dll-build-a-dll.md)選項。
 
-連結至指定的程式庫，為檔名引數或預設程式庫。 連結解析外部參考，藉由在命令列上指定的程式庫中第一次搜尋，則程式庫以指定的預設[/DEFAULTLIB](../../build/reference/defaultlib-specify-default-library.md)選項，然後在預設程式庫為.obj 檔中。 如果程式庫名稱指定路徑，連結會尋找在該目錄中的程式庫。 如果未指定路徑，連結看起來，從執行連結的目錄中，然後在任何 LIB 環境變數中指定的目錄中，第一次。
+連結至指定的程式庫，為檔名引數或預設程式庫。 連結解析外部參考，藉由在命令列上指定的程式庫中第一次搜尋，則程式庫以指定的預設[/DEFAULTLIB](defaultlib-specify-default-library.md)選項，然後在預設程式庫為.obj 檔中。 如果程式庫名稱指定路徑，連結會尋找在該目錄中的程式庫。 如果未指定路徑，連結看起來，從執行連結的目錄中，然後在任何 LIB 環境變數中指定的目錄中，第一次。
 
 ## <a name="to-add-lib-files-as-linker-input-in-the-development-environment"></a>若要加入.lib 檔做為開發環境中的連結器輸入
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選擇**輸入**中的屬性頁面**連結器**資料夾。
 
@@ -69,5 +69,5 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[LINK 輸入檔](../../build/reference/link-input-files.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[LINK 輸入檔](link-input-files.md)<br/>
+[MSVC 連結器選項](linker-options.md)

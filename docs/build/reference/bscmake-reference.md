@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bsc files, building
 - BSCMAKE
 ms.assetid: b97ad994-1355-4809-98db-6abc12c6fb13
-ms.openlocfilehash: 1dd89047b8fa6a415e7e19dd69ca3f499887299f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4303e48e3d02f0f69b177e8a888157a6f90aaa89
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416245"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822349"
 ---
 # <a name="bscmake-reference"></a>BSCMAKE 參考
 
@@ -33,18 +33,18 @@ Microsoft Browse Information Maintenance Utility (BSCMAKE.EXE) 會自編譯期�
 
 本節包括下列主題：
 
-- [建置瀏覽資訊檔：概觀](../../build/reference/building-browse-information-files-overview.md)
+- [建置瀏覽資訊檔：概觀](building-browse-information-files-overview.md)
 
-- [建置.bsc 檔](../../build/reference/building-a-dot-bsc-file.md)
+- [建置.bsc 檔](building-a-dot-bsc-file.md)
 
-- [BSCMAKE 命令列](../../build/reference/bscmake-command-line.md)
+- [BSCMAKE 命令列](bscmake-command-line.md)
 
-- [BSCMAKE 命令檔](../../build/reference/bscmake-command-file-response-file.md)
+- [BSCMAKE 命令檔](bscmake-command-file-response-file.md)
 
-- [BSCMAKE 選項](../../build/reference/bscmake-options.md)
+- [BSCMAKE 選項](bscmake-options.md)
 
-- [BSCMAKE 結束代碼](../../build/reference/bscmake-exit-codes.md)
+- [BSCMAKE 結束代碼](bscmake-exit-codes.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[C/C++ 建置工具](../../build/reference/c-cpp-build-tools.md)
+[其他 MSVC 建置工具](c-cpp-build-tools.md)

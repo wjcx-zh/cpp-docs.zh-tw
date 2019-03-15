@@ -4,7 +4,7 @@
 # [建立新的 Linux 專案](create-a-new-linux-project.md)
 # [連線到遠端 Linux 電腦](connect-to-your-remote-linux-computer.md)
 # [部署、執行及偵錯 Linux 專案](deploy-run-and-debug-your-linux-project.md)
-# [教學課程：在 Visual Studio 中建立 C++ 跨平台專案](../ide/get-started-linux-cmake.md)
+# [教學課程：在 Visual Studio 中建立 C++ 跨平台專案](../build/get-started-linux-cmake.md)
 # [Linux 專案屬性頁參考](prop-pages-linux.md)
 ## [一般屬性 (Linux)](prop-pages/general-linux.md)
 ## [偵錯屬性 (Linux)](prop-pages/debugging-linux.md)

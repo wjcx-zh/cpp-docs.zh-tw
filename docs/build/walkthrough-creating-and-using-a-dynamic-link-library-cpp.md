@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: fb77230d5cc27c1fba1f7df1404150fada36d43a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c1f59c704e96ade82295f4ae88265f549987e981
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416445"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813964"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>逐步解說：建立並使用您自己動態連結程式庫 （c + +）
 
@@ -29,11 +29,11 @@ ms.locfileid: "57416445"
 
 - 執行已完成的應用程式。
 
-像靜態連結程式庫 DLL_匯出_變數、 函數以及依名稱和您的應用程式的資源_匯入_這些名稱，以使用這些變數、 函式和資源。 與靜態連結程式庫中，Windows 會在載入時或在執行階段，而不是在連結階段來連接它們在 DLL 中匯出連接應用程式中的匯入。 Windows 需要不屬於標準的 c + + 編譯模型，讓這些連線的額外資訊。 Visual c + + 編譯器實作 c + + 提供此額外資訊的一些 Microsoft 專有擴充功能。 我們，我們會說明這些擴充功能。
+像靜態連結程式庫 DLL_匯出_變數、 函數以及依名稱和您的應用程式的資源_匯入_這些名稱，以使用這些變數、 函式和資源。 與靜態連結程式庫中，Windows 會在載入時或在執行階段，而不是在連結階段來連接它們在 DLL 中匯出連接應用程式中的匯入。 Windows 需要不屬於標準的 c + + 編譯模型，讓這些連線的額外資訊。 MSVC 編譯器實作 c + + 提供此額外資訊的一些 Microsoft 專有擴充功能。 我們，我們會說明這些擴充功能。
 
 此逐步解說會建立兩個 Visual Studio 方案;建置 DLL，以及建置用戶端應用程式。 DLL 會使用 C 呼叫慣例，因此它可以從 平台及呼叫和連結慣例相符時，使用其他語言，建置的應用程式呼叫。 用戶端應用程式會使用_隱含連結_、 Windows 用來連結於載入時 DLL 應用程式。 此連結可讓應用程式以靜態方式連結的文件庫中呼叫 DLL 提供的函式，就像函式。
 
-本逐步解說並不涵蓋一些常見的情況。 它不會顯示所使用的 c + + Dll 的其他程式設計語言。 它不會顯示如何建立僅含資源的 DLL。 它也不會顯示在執行階段，而不是在載入時，載入 Dll 的明確連結的使用。 接下來請放心，您可以使用 Visual c + + 來執行這些工作。 如需連結 Dll 的詳細資訊，請參閱[Visual c + + Dll](../build/dlls-in-visual-cpp.md)。 如需有關設定連結的隱含和明確連結的詳細資訊，請參閱 <<c0> [ 判斷哪一個連結方法來使用](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)。 如需建立用於程式設計語言使用 C 語言連結慣例的 c + + Dll 的資訊，請參閱[匯出 c + + 函式以用於 C 語言可執行檔](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)。 如需如何建立 Dll 以與.NET 程式設計語言的使用資訊，請參閱[從 Visual Basic 應用程式呼叫 DLL 函式](../build/calling-dll-functions-from-visual-basic-applications.md)。
+本逐步解說並不涵蓋一些常見的情況。 它不會顯示所使用的 c + + Dll 的其他程式設計語言。 它不會顯示如何建立僅含資源的 DLL。 它也不會顯示在執行階段，而不是在載入時，載入 Dll 的明確連結的使用。 接下來請放心，您可以使用 Visual c + + 來執行這些工作。 如需連結 Dll 的詳細資訊，請參閱[Visual c + + Dll](dlls-in-visual-cpp.md)。 如需有關設定連結的隱含和明確連結的詳細資訊，請參閱 <<c0> [ 判斷哪一個連結方法來使用](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)。 如需建立用於程式設計語言使用 C 語言連結慣例的 c + + Dll 的資訊，請參閱[匯出 c + + 函式以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)。 如需如何建立 Dll 以與.NET 程式設計語言的使用資訊，請參閱[從 Visual Basic 應用程式呼叫 DLL 函式](calling-dll-functions-from-visual-basic-applications.md)。
 
 本逐步解說使用 Visual Studio 2017 中，但是程式碼和大部分的指示也適用於舊版。 若要建置新專案的步驟變更啟動 Visual Studio 2017 15.3 版中。 本逐步解說描述如何建立較新和舊版本的專案。 尋找符合您的 Visual Studio 版本的步驟。
 
@@ -400,7 +400,4 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)<br/>
-[部署傳統型應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
-[逐步解說：部署程式 (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
-[從 Visual Basic 應用程式呼叫 DLL 函式](../build/calling-dll-functions-from-visual-basic-applications.md)
+[從 Visual Basic 應用程式呼叫 DLL 函式](calling-dll-functions-from-visual-basic-applications.md)

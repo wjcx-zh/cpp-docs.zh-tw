@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: a0fda47497ffc247dd9678ece7aac76291aed1ff
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ca68ae090c6e4e6e3e10f37ac0d225faee96746a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419149"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809999"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (效能工具分析工具)
 
@@ -28,13 +28,13 @@ ms.locfileid: "57419149"
 
 / 設定檔表示下列連結器選項：
 
-- [/OPT:REF](../../build/reference/opt-optimizations.md)
+- [/OPT:REF](opt-optimizations.md)
 
 - /OPT:NOICF
 
-- [/INCREMENTAL:NO](../../build/reference/incremental-link-incrementally.md)
+- [/INCREMENTAL:NO](incremental-link-incrementally.md)
 
-- [/FIXED:NO](../../build/reference/fixed-fixed-base-address.md)
+- [/FIXED:NO](fixed-fixed-base-address.md)
 
 / 設定檔會使連結器在程式映像產生重新配置區段。  重新配置 區段可讓分析工具來轉換程式映像，以取得設定檔資料。
 
@@ -42,7 +42,7 @@ ms.locfileid: "57419149"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 展開 [組態屬性] 節點。
 
@@ -58,5 +58,5 @@ ms.locfileid: "57419149"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-ms.openlocfilehash: c2d34c54491bb4b85311be3ba1ebdaed87437246
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f01e69138a6ca1744645a1c2fa8525b7088e260d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420683"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814549"
 ---
 # <a name="mutual-imports"></a>交互匯入
 
@@ -41,7 +41,7 @@ ms.locfileid: "57420683"
 
 下圖會顯示兩個相互匯入 Dll、 DLL1 和 DLL2 的解決方案。 /DEF 選項的設定，在 DLL1 執行 LIB，為步驟 1。 步驟 1 產生 DLL1.lib、 匯入程式庫和 DLL1.exp。在步驟 2 中，匯入程式庫來建置 DLL2，接著會產生的匯入程式庫，為 DLL2 的符號。 步驟 3 建立 DLL1，利用 DLL1.exp 和 DLL2.lib 做為輸入。 請注意 DLL2.exp 檔不需要，因為程式庫不用來建置 DLL2 的匯入程式庫。
 
-![使用交互匯入連結的兩個 Dll](../build/media/vc37yj1.gif "使用交互匯入連結的兩個 Dll")<br/>
+![使用交互匯入連結的兩個 Dll](media/vc37yj1.gif "使用交互匯入連結的兩個 Dll")<br/>
 交互匯入與連結的兩個 Dll
 
 ## <a name="limitations-of-afxext"></a>_AFXEXT 的限制
@@ -109,24 +109,24 @@ class CExampleA : public CObject
 
 ### <a name="what-do-you-want-to-do"></a>請您指定選項。
 
-- [從 DLL 匯出](../build/exporting-from-a-dll.md)
+- [從 DLL 匯出](exporting-from-a-dll.md)
 
-- [匯出從 DLL 使用。DEF 檔](../build/exporting-from-a-dll-using-def-files.md)
+- [匯出從 DLL 使用。DEF 檔](exporting-from-a-dll-using-def-files.md)
 
-- [使用 __declspec （dllexport） 從 DLL 匯出](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [使用 __declspec （dllexport） 從 DLL 匯出](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [匯出和匯入使用 AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [匯出和匯入使用 AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [匯出 c + + 函式，以用於 C 語言可執行檔](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [匯出 c + + 函式，以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [判斷要使用哪一個匯出方法](../build/determining-which-exporting-method-to-use.md)
+- [判斷要使用哪一個匯出方法](determining-which-exporting-method-to-use.md)
 
-- [將應用程式使用 __declspec （dllimport） 匯入](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [將應用程式使用 __declspec （dllimport） 匯入](importing-into-an-application-using-declspec-dllimport.md)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
-- [LIB 公共事業和 /DEF 選項](../build/reference/lib-reference.md)
+- [LIB 公共事業和 /DEF 選項](reference/lib-reference.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[匯入和匯出](../build/importing-and-exporting.md)
+[匯入和匯出](importing-and-exporting.md)

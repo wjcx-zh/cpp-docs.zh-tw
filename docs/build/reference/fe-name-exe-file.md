@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /Fe compiler option [C++]
 - Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
-ms.openlocfilehash: cac4dc0908c86574ef5b57c4436f734f94c0bb49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5901ef1997cfea84c97b6d91b30335ff7dbc1d9f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473407"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818046"
 ---
 # <a name="fe-name-exe-file"></a>/Fe (命名 EXE 檔案)
 
@@ -27,7 +27,7 @@ ms.locfileid: "50473407"
 
 ### <a name="arguments"></a>引數
 
-*路徑名稱*<br/>
+*pathname*<br/>
 相對或絕對路徑和基底檔案名稱或目錄或用於產生的可執行檔的基底檔案名稱上的相對或絕對路徑。
 
 ## <a name="remarks"></a>備註
@@ -40,11 +40,11 @@ ms.locfileid: "50473407"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 開啟**組態屬性** > **連結器** > **一般**屬性頁。
 
-1. 修改**輸出檔**屬性。 選擇**確定**以儲存變更。
+1. 修改**輸出檔**屬性。 選取 [確定] 儲存您的變更。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
@@ -68,7 +68,7 @@ CL /FeC:\BIN\ *.C
 
 ## <a name="see-also"></a>另請參閱
 
-[輸出檔 (/F) 選項](../../build/reference/output-file-f-options.md)<br/>
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
-[指定路徑名稱](../../build/reference/specifying-the-pathname.md)<br/>
+[輸出檔 (/F) 選項](output-file-f-options.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[指定路徑名稱](specifying-the-pathname.md)<br/>

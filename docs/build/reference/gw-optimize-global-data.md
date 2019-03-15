@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /Gw compiler option [C++]
 - -Gw compiler option [C++]
 ms.assetid: 6f90f4e9-5eb8-4c47-886e-631278a5a4a9
-ms.openlocfilehash: d2c7d8d9a3b3bb877fcf7f4418f3ed20a90a9a11
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5796f353414a021908147bdd2f296ef8e02f69ad
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420124"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816902"
 ---
 # <a name="gw-optimize-global-data"></a>/Gw (最佳化全域資料)
 
@@ -26,17 +26,17 @@ ms.locfileid: "57420124"
 
 ## <a name="remarks"></a>備註
 
-**/Gw**選項可讓編譯器將全域資料封裝在個別的 COMDAT 區段中。 根據預設， **/Gw**已關閉，而且您必須明確啟用。 若要明確停用，請使用 **/Gw-**。 當兩者 **/Gw**並[/GL](../../build/reference/gl-whole-program-optimization.md)會啟用，連結器會使用整個程式最佳化多個目的檔比較 COMDAT 區段，以排除未參考的全域資料，或合併相同唯讀全域資料。 這可以大幅減小產生的二進位可執行檔之大小。
+**/Gw**選項可讓編譯器將全域資料封裝在個別的 COMDAT 區段中。 根據預設， **/Gw**已關閉，而且您必須明確啟用。 若要明確停用，請使用 **/Gw-**。 當兩者 **/Gw**並[/GL](gl-whole-program-optimization.md)會啟用，連結器會使用整個程式最佳化多個目的檔比較 COMDAT 區段，以排除未參考的全域資料，或合併相同唯讀全域資料。 這可以大幅減小產生的二進位可執行檔之大小。
 
-當您編譯和連結分別時，您可以使用[/opt: ref](../../build/reference/opt-optimizations.md)排除未參考的全域資料，在物件檔編譯可執行檔的連結器選項 **/Gw**選項。
+當您編譯和連結分別時，您可以使用[/opt: ref](opt-optimizations.md)排除未參考的全域資料，在物件檔編譯可執行檔的連結器選項 **/Gw**選項。
 
-您也可以使用[/opt: icf](../../build/reference/opt-optimizations.md)並[/LTCG](../../build/reference/ltcg-link-time-code-generation.md)在一起，以合併多個目的檔任何相同唯讀全域資料編譯可執行檔中的連結器選項 **/Gw**選項。
+您也可以使用[/opt: icf](opt-optimizations.md)並[/LTCG](ltcg-link-time-code-generation.md)在一起，以合併多個目的檔任何相同唯讀全域資料編譯可執行檔中的連結器選項 **/Gw**選項。
 
 如需詳細資訊，請參閱 <<c0> [ 簡介 /Gw 編譯器參數](http://blogs.msdn.com/b/vcblog/archive/2013/09/11/introducing-gw-compiler-switch.aspx)Visual c + + 小組部落格上。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取  **C/c + +** 資料夾。
 
@@ -50,5 +50,5 @@ ms.locfileid: "57420124"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

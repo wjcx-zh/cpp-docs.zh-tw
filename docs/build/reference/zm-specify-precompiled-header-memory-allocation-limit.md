@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory allocation, Memory Allocation Limit compiler option
 - -Zm compiler option [C++]
 ms.assetid: 94c77d5e-6672-46a7-92e0-3f69e277727d
-ms.openlocfilehash: 3c1362479b2068ee8fb527a4ecaac6e203e83cb0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 09df8e1ee9a97289e29e1191e8c1585580435b79
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751982"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807893"
 ---
 # <a name="zm-specify-precompiled-header-memory-allocation-limit"></a>/Zm (指定先行編譯標頭檔的記憶體配置上限)
 
@@ -60,7 +60,7 @@ ms.locfileid: "57751982"
 
 ### <a name="to-set-the-zm-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定 /Zm 編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 在 [導覽] 窗格中，選取**組態屬性** > **C/c + +** > **命令列**。
 
@@ -72,5 +72,5 @@ ms.locfileid: "57751982"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

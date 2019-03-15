@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-ms.openlocfilehash: 0b6a8a841cefcd519cbeeae9f3355d72e1bbf286
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ecda3443d0422af4d5ceec9282d86590c53af2f5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417004"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821257"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (指定子系統)
 
@@ -42,7 +42,7 @@ Win32 字元模式應用程式。 作業系統會提供主控台的主控台應�
 可延伸韌體介面子系統中。 如需詳細資訊的 EFI 規格，請參閱。 如需範例，請參閱 Intel 網站。 最小值及預設的版本為 1.0。
 
 **NATIVE**<br/>
-針對 Windows NT 核心模式驅動程式。 此選項通常保留給 Windows 系統元件。 如果[/driver: wdm](../../build/reference/driver-windows-nt-kernel-mode-driver.md)指定，則原生是預設值。
+針對 Windows NT 核心模式驅動程式。 此選項通常保留給 Windows 系統元件。 如果[/driver: wdm](driver-windows-nt-kernel-mode-driver.md)指定，則原生是預設值。
 
 **POSIX**<br/>
 使用 Windows NT 中的 POSIX 子系統中執行的應用程式。
@@ -73,7 +73,7 @@ Win32 字元模式應用程式。 作業系統會提供主控台的主控台應�
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 [連結器] 資料夾。
 
@@ -87,5 +87,5 @@ Win32 字元模式應用程式。 作業系統會提供主控台的主控台應�
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

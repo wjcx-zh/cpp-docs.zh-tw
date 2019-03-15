@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - EDITBIN program, command line
 ms.assetid: 28ff7f92-6c4e-4e7f-86d8-80d5b2f91662
-ms.openlocfilehash: 0397372d630dcb23059ce9c20416f72d81cf1645
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4065cf2175b69e6aa87b70f7e00c4170f5b0d924
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426663"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807932"
 ---
 # <a name="editbin-command-line"></a>EDITBIN 命令列
 
@@ -27,5 +27,5 @@ EDITBIN [options] files...
 
 ## <a name="see-also"></a>另請參閱
 
-[C/C++ 建置工具](../../build/reference/c-cpp-build-tools.md)<br/>
-[EDITBIN 參考](../../build/reference/editbin-reference.md)
+[其他 MSVC 建置工具](c-cpp-build-tools.md)<br/>
+[EDITBIN 參考](editbin-reference.md)

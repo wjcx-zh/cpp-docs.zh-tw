@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -diagnostics compiler diagnostic options [C++]
 - diagnostics compiler diagnostic options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: c8e9f2b6bc36d8a1dfdada00bca1c7a4dcf65256
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6b7d043e00204fa191530f03bbed069d71a25fc5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423257"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822298"
 ---
 # <a name="diagnostics-compiler-diagnostic-options"></a>/diagnostics （編譯器診斷選項）
 
@@ -52,5 +52,5 @@ ms.locfileid: "57423257"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

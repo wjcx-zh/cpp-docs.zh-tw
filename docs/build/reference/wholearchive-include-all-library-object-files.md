@@ -2,12 +2,12 @@
 title: /WHOLEARCHIVE （包括所有的程式庫目的檔）
 ms.date: 11/04/2016
 ms.assetid: ee92d12f-18af-4602-9683-d6223be62ac9
-ms.openlocfilehash: cc260f139a9312bbac7fed34471481401db770d4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: db99816b18110b424647603196040997044e7fbd
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412909"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808647"
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/WHOLEARCHIVE （包括所有的程式庫目的檔）
 
@@ -27,7 +27,7 @@ Force 連結器在連結的可執行檔中的靜態程式庫中包含物件的�
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>在 Visual Studio 中設定這個連結器選項
 
-1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **命令列**下方的 屬性頁**組態屬性**，**連結器**。
 
@@ -35,5 +35,5 @@ Force 連結器在連結的可執行檔中的靜態程式庫中包含物件的�
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

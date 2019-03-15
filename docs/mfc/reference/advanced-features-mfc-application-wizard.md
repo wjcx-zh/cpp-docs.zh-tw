@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: 5643e1e9f4f558163c1c2a3b65070f90afdc7dba
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 44d85e7614f6a82af2e58f03a6d65d5d7740ab9b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278219"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816434"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>MFC 應用程式精靈、進階功能
 
@@ -21,7 +21,7 @@ ms.locfileid: "57278219"
 
    會產生一組即時線上說明，請使用 F1 和說明 功能表中，或按一下可用的說明檔案**協助**對話方塊上的按鈕。 必須有說明編譯器才能支援 [說明]。 如果沒有說明編譯器，可重新執行安裝程式進行安裝。
 
-   請參閱[HTML 說明：您的程式的即時線上說明](../../mfc/html-help-context-sensitive-help-for-your-programs.md)並[說明 」 檔案 （HTML 說明）](../../ide/help-files-html-help.md)如需詳細資訊。
+   請參閱[HTML 說明：您的程式的即時線上說明](../../mfc/html-help-context-sensitive-help-for-your-programs.md)並[說明 」 檔案 （HTML 說明）](../../build/reference/help-files-html-help.md)如需詳細資訊。
 
 - **列印和預覽列印**
 

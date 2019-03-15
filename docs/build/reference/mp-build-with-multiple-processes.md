@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MP compiler option (C++)
 - MP compiler option (C++)
 - cl.exe compiler, multi-process build
-ms.openlocfilehash: d0a3e50ca75535d505e46c0e454a8e0902b1ffb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a66f6f6f1f4ce77e33df992b915be9ca5dcce70
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562080"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808452"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (使用多處理序建置)
 
@@ -50,10 +50,10 @@ ms.locfileid: "50562080"
 |選項或語言功能|描述|
 |--------------------------------|-----------------|
 |[#import](../../preprocessor/hash-import-directive-cpp.md) 前置處理器指示詞|將類型程式庫中的類型轉換成 C++ 類別，然後將這些類別寫入標頭檔。|
-|[/E](../../build/reference/e-preprocess-to-stdout.md)、 [/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)|將前置處理器輸出複製到標準輸出 (**stdout**)。|
-|[/Gm](../../build/reference/gm-enable-minimal-rebuild.md)|允許累加式重建。|
-|[/showIncludes](../../build/reference/showincludes-list-include-files.md)|將 Include 檔案的清單寫入標準錯誤 (**stderr**)。|
-|[/Yc](../../build/reference/yc-create-precompiled-header-file.md)|寫入先行編譯的標頭檔。|
+|[/E](e-preprocess-to-stdout.md)、 [/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|將前置處理器輸出複製到標準輸出 (**stdout**)。|
+|[/Gm](gm-enable-minimal-rebuild.md)|允許累加式重建。|
+|[/showIncludes](showincludes-list-include-files.md)|將 Include 檔案的清單寫入標準錯誤 (**stderr**)。|
+|[/Yc](yc-create-precompiled-header-file.md)|寫入先行編譯的標頭檔。|
 
 ## <a name="diagnostic-messages"></a>診斷訊息
 
@@ -61,7 +61,7 @@ ms.locfileid: "50562080"
 
 |診斷訊息|描述|編譯器行為|
 |------------------------|-----------------|-----------------------|
-|**C2813**|**#Import** 指示詞與 **/MP** 選項不相容。|除非另外指定 [編譯器警告層級](../../build/reference/compiler-option-warning-level.md) 選項，否則編譯就會結束。|
+|**C2813**|**#Import** 指示詞與 **/MP** 選項不相容。|除非另外指定 [編譯器警告層級](compiler-option-warning-level.md) 選項，否則編譯就會結束。|
 |**D9014**|指定無效的值*processMax*引數。|編譯器會忽略無效值，並假設值為 1。|
 |**D9030**|指定的選項與 **/MP**不相容。|編譯器會忽略 **/MP** 選項。|
 
@@ -99,7 +99,7 @@ ms.locfileid: "50562080"
 
 當處理序可用來編譯時，就會編譯原始程式檔。 如果檔案比處理序還多，可用的處理序就會編譯第一組檔案。 當處理序處理完上一個檔案，還可以接著處理剩下的其中一個檔案時，就會處理剩下的檔案。
 
-請不要在命令列上多次指定相同的原始程式檔。 例如，當工具自動建立以專案相依性資訊為依據的 [makefile](../../build/contents-of-a-makefile.md) 時，就可能會發生這種情況。 如果您不指定 **/MP** 選項，則編譯器會依序處理檔案清單，並重新編譯檔案。 但是，如果您指定 **/MP** 選項，則不同的編譯器可能會同時編譯相同的檔案。 如此一來，不同的編譯器會同時嘗試寫入同一個輸出檔。 其中一個編譯器會取得輸出檔的獨佔寫入權限並成功完成作業，而另一個編譯器則會失敗並發生檔案存取錯誤。
+請不要在命令列上多次指定相同的原始程式檔。 例如，當工具自動建立以專案相依性資訊為依據的 [makefile](contents-of-a-makefile.md) 時，就可能會發生這種情況。 如果您不指定 **/MP** 選項，則編譯器會依序處理檔案清單，並重新編譯檔案。 但是，如果您指定 **/MP** 選項，則不同的編譯器可能會同時編譯相同的檔案。 如此一來，不同的編譯器會同時嘗試寫入同一個輸出檔。 其中一個編譯器會取得輸出檔的獨佔寫入權限並成功完成作業，而另一個編譯器則會失敗並發生檔案存取錯誤。
 
 ### <a name="using-type-libraries-import"></a>使用類型程式庫 (#import)
 

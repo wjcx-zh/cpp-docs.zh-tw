@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ERROR_SEVERITY_ERROR exception
 - ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-ms.openlocfilehash: 9c86d99b365994870b991967b6cab6e6ee5c5088
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f80b99943b103dcf90c05d59df3169e0e05d79f4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422984"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811663"
 ---
 # <a name="exceptions-cc"></a>例外狀況 (C/C++)
 
@@ -41,8 +41,8 @@ ms.locfileid: "57422984"
 
 此外，如果設定不正確的位元 grAttrs 欄位中，ERROR_INVALID_PARAMETER 會擲回例外狀況。 這個例外狀況是，針對所有與目的嚴重威脅。
 
-請參閱[結構和常數定義](../../build/reference/structure-and-constant-definitions.md)如需詳細資訊。
+請參閱[結構和常數定義](structure-and-constant-definitions.md)如需詳細資訊。
 
 ## <a name="see-also"></a>另請參閱
 
-[錯誤處理和通知](../../build/reference/error-handling-and-notification.md)
+[錯誤處理和通知](error-handling-and-notification.md)

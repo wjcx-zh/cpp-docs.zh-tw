@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-ms.openlocfilehash: e8707ac716a010ea1d3dc0fa51740e76a5822462
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 9f5eed60ecb51abc1d8fbd3c38773bbf782b23a5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329296"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808254"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (例外狀況處理模型)
 
@@ -25,7 +25,7 @@ ms.locfileid: "51329296"
 
 ## <a name="syntax"></a>語法
 
-> **/EH**{**s**|} [**c**] [**r**] [**-**]
+> **/EH**{**s**|**a**}[**c**][**r**][**-**]
 
 ## <a name="arguments"></a>引數
 
@@ -43,7 +43,7 @@ ms.locfileid: "51329296"
 
 ## <a name="remarks"></a>備註
 
-**/EHa** 編譯器選項可搭配原生 C++ `catch(...)` 子句，用來支援非同步結構化例外狀況處理 (SEH)。 若要實作 SEH 而不指定 **/EHa**，您可以使用 **__try**， **__except**，以及 **__finally**語法。 雖然 Windows 和 Visual C++ 支援 SEH，但強烈建議您使用 ISO 標準 C++ 例外狀況處理 (**/EHs** 或 **/EHsc**)，因為它可提升程式碼的可攜性和彈性。 不過，在現有的程式碼中，或針對特定類型的程式 — 例如，在編譯為支援 common language runtime 的程式碼 ([/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md))，您仍然必須使用 SEH。 如需詳細資訊，請參閱 [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)。
+ **/EHa** 編譯器選項可搭配原生 C++ `catch(...)` 子句，用來支援非同步結構化例外狀況處理 (SEH)。 若要實作 SEH 而不指定 **/EHa**，您可以使用 **__try**， **__except**，以及 **__finally**語法。 雖然 Windows 和 Visual C++ 支援 SEH，但強烈建議您使用 ISO 標準 C++ 例外狀況處理 (**/EHs** 或 **/EHsc**)，因為它可提升程式碼的可攜性和彈性。 不過，在現有的程式碼中，或針對特定類型的程式 — 例如，在編譯為支援 common language runtime 的程式碼 ([/clr （Common Language Runtime 編譯）](clr-common-language-runtime-compilation.md))，您仍然必須使用 SEH。 如需詳細資訊，請參閱 [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)。
 
 使用 **/EHa** 指定 `catch(...)` 並嘗試處理所有例外狀況可能並不安全。 在大部分情況下，非同步例外狀況無法復原，因此應視為嚴重。 攔截這些例外狀況並繼續執行可能造成處理序損毀，因而導致難以找出並修正的 Bug。
 
@@ -94,11 +94,11 @@ int main() {
 
 **/EHr**編譯器選項會強制在所有具有函式的執行階段終止檢查**noexcept**屬性。 根據預設，如果編譯器後端判斷函式只會呼叫 *「非擲回」* (Non-throwing) 函式，則可能會繼續最佳化執行階段檢查。 非擲回函式是具有指定不會擲回任何例外狀況之屬性的任何函式。 這包括函式標示**noexcept**， `throw()`， `__declspec(nothrow)`，以及 **/EHc**指定，則**extern"C"** 函式。 非擲回函式也包含編譯器判定檢查不會擲回任何例外狀況的任何函式。 您可以使用 **/EHr-** 明確地設定預設值。
 
-不過，非擲回屬性並不保證函式不會擲回任何例外狀況。 與行為的不同**noexcept**函式，Visual c + + 編譯器會考慮使用宣告的函式所擲回例外狀況`throw()`， `__declspec(nothrow)`，或**extern"C"** 為未定義行為。 使用這三種宣告屬性的函式，不會對例外狀況強制執行執行階段終止檢查。 您可以使用 **/EHr**選項來協助您識別這個未定義的行為，方法是強制編譯器產生執行階段檢查，未處理的例外狀況逸出**noexcept**函式。
+不過，非擲回屬性並不保證函式不會擲回任何例外狀況。 與行為的不同**noexcept**函式，MSVC 編譯器會考慮使用宣告的函式所擲回例外狀況`throw()`， `__declspec(nothrow)`，或**extern"C"** 未定義的行為。 使用這三種宣告屬性的函式，不會對例外狀況強制執行執行階段終止檢查。 您可以使用 **/EHr**選項來協助您識別這個未定義的行為，方法是強制編譯器產生執行階段檢查，未處理的例外狀況逸出**noexcept**函式。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **C/c + +** > **程式碼產生**。
 
@@ -112,8 +112,8 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
 [錯誤和例外狀況處理](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [例外狀況規格 (throw)](../../cpp/exception-specifications-throw-cpp.md)<br/>
 [結構化例外狀況處理 (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)

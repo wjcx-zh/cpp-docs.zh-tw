@@ -1,5 +1,5 @@
 ---
-title: 逐步解說： 編譯 C 程式中，在命令列上
+title: 逐步解說：編譯 C 程式中，在命令列上
 ms.custom: conceptual
 ms.date: 09/24/2018
 helpviewer_keywords:
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: 756e0fa820806142f05ba45a52735692298f80d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54f5810e60cdaada6a99651a732570c88ea883ce
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656868"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822219"
 ---
-# <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>逐步解說： 編譯 C 程式中，在命令列上
+# <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>逐步解說：編譯 C 程式中，在命令列上
 
 Visual c + + 包含 C 編譯器，您可以使用它來建立所有項目從基本的主控台程式到完整 Windows 桌面應用程式、 行動應用程式，和更多功能。
 
-本逐步解說示範如何建立基本"Hello，World"-樣式 C 程式中使用文字編輯器 中，並在命令列上進行編譯。 如果您而是會在 c + + 中工作，在命令列上，請參閱[逐步解說： 編譯命令列上的原生 c + + 程式](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)。 如果您想要試用 Visual Studio IDE，而不是使用命令列，請參閱 <<c0> [ 逐步解說： 使用專案和方案 （c + +）](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)或是[使用 Visual Studio IDE 進行 c + + 桌面程式開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。
+本逐步解說示範如何建立基本"Hello，World"-樣式 C 程式中使用文字編輯器 中，並在命令列上進行編譯。 如果您而是會在 c + + 中工作，在命令列上，請參閱[逐步解說：編譯命令列上的原生 c + + 程式](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)。 如果您想要試用 Visual Studio IDE，而不是使用命令列，請參閱[逐步解說：使用專案和方案 （c + +）](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)或是[適用於 Desktop c + + 開發使用 Visual Studio IDE](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -32,7 +32,7 @@ Build Tools for Visual Studio 版本的 Visual Studio 只會安裝命令列工�
 您可以在命令列上建置的 C 或 c + + 程式之前，您必須確認，則會安裝工具，以及您可以從命令列存取它們。 Visual c + + 有複雜需求來尋找工具、 標頭和程式庫，它會使用命令列環境。 **您無法使用 Visual c + + 中的純文字的命令提示字元視窗**而不需要一些準備工作。 您需要*開發人員命令提示字元*視窗中，也就是已設定的所有必要的環境變數的規則的命令提示字元視窗。 幸運的是，Visual c + + 會安裝為您啟動已設定的命令列組建環境的開發人員命令提示字元捷徑。 不幸的是，開發人員命令提示字元捷徑和它們所在的名稱是幾乎每個版本的 Visual c + + 和不同版本的 Windows 中的。 您的第一個逐步解說工作是尋找要使用正確的快顯。
 
 > [!NOTE]
-> 開發人員命令提示字元 捷徑會自動設定編譯器和工具，以及任何必要的標頭和程式庫的正確路徑。 其中有些值是每個組建組態不同。 您必須設定這些環境值自行如果您未使用其中一個捷徑。 如需詳細資訊，請參閱 <<c0> [ 設定的路徑和環境變數的命令列建置](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)。 因為在建置環境很複雜，強烈建議您改用建置您自己的開發人員命令提示字元捷徑。
+> 開發人員命令提示字元 捷徑會自動設定編譯器和工具，以及任何必要的標頭和程式庫的正確路徑。 其中有些值是每個組建組態不同。 您必須設定這些環境值自行如果您未使用其中一個捷徑。 如需詳細資訊，請參閱 <<c0> [ 設定的路徑和環境變數的命令列建置](setting-the-path-and-environment-variables-for-command-line-builds.md)。 因為在建置環境很複雜，強烈建議您改用建置您自己的開發人員命令提示字元捷徑。
 
 ## <a name="open-a-developer-command-prompt"></a>開啟開發人員命令提示字元
 
@@ -57,7 +57,7 @@ Build Tools for Visual Studio 版本的 Visual Studio 只會安裝命令列工�
    > [!NOTE]
    > 如果您收到錯誤，例如 「 'cl' 無法辨識為內部或外部命令、 可執行程式或批次檔 」 錯誤、 錯誤 C1034 或錯誤 LNK1104，當您執行**cl**命令，則可能您不使用開發人員命令提示字元，或有問題的 Visual c + + 的安裝。 您可以繼續之前，您必須修正此問題。
 
-   如果您找不到開發人員命令提示字元 捷徑，或如果您收到錯誤訊息，當您輸入`cl`，則您的 Visual c + + 安裝可能會有問題。 如果您使用 Visual Studio 2017，請嘗試重新安裝**使用 c + + 的桌面開發**Visual Studio 安裝程式中的工作負載。 如需詳細資訊，請參閱 < [Visual Studio 中的安裝 c + + 支援](../build/vscpp-step-0-installation.md)。 或者，您也可以重新安裝[Build Tools for Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721)。 不要繼續進行下一節直到其運作方式。 如需有關安裝和疑難排解 Visual Studio 的詳細資訊，請參閱 <<c0> [ 安裝 Visual Studio](/visualstudio/install/install-visual-studio)。
+   如果您找不到開發人員命令提示字元 捷徑，或如果您收到錯誤訊息，當您輸入`cl`，則您的 Visual c + + 安裝可能會有問題。 如果您使用 Visual Studio 2017，請嘗試重新安裝**使用 c + + 的桌面開發**Visual Studio 安裝程式中的工作負載。 如需詳細資訊，請參閱 < [Visual Studio 中的安裝 c + + 支援](vscpp-step-0-installation.md)。 或者，您也可以重新安裝[Build Tools for Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721)。 不要繼續進行下一節直到其運作方式。 如需有關安裝和疑難排解 Visual Studio 的詳細資訊，請參閱 <<c0> [ 安裝 Visual Studio](/visualstudio/install/install-visual-studio)。
 
    > [!NOTE]
    > 根據電腦和系統安全性設定上的 Windows 版本，您可能必須按一下滑鼠右鍵以開啟 開發人員命令提示字元捷徑的捷徑功能表，然後選擇**系統管理員身分執行**至已成功建置並執行您依照本逐步解說中建立的程式。
@@ -142,25 +142,25 @@ Build Tools for Visual Studio 版本的 Visual Studio 只會安裝命令列工�
 
 `cl file1.c file2.c file3.c`
 
-編譯器輸出 file1.exe 程式。 若要將名稱變更為 program1.exe，新增[/out](../build/reference/out-output-file-name.md)連結器選項：
+編譯器輸出 file1.exe 程式。 若要將名稱變更為 program1.exe，新增[/out](reference/out-output-file-name.md)連結器選項：
 
 `cl file1.c file2.c file3.c /link /out:program1.exe`
 
-自動攔截更多的程式設計錯誤，我們建議您編譯使用其中一種[/w3](../build/reference/compiler-option-warning-level.md)或是[/w4](../build/reference/compiler-option-warning-level.md)警告層級的選項：
+自動攔截更多的程式設計錯誤，我們建議您編譯使用其中一種[/w3](reference/compiler-option-warning-level.md)或是[/w4](reference/compiler-option-warning-level.md)警告層級的選項：
 
 `cl /W4 file1.c file2.c file3.c /link /out:program1.exe`
 
-編譯器、 cl.exe，有許多更多選項，您可以套用於建置、 最佳化、 偵錯和分析您的程式碼。 如需快速的清單中，輸入`cl /?`在開發人員命令提示字元。 您也可以編譯和連結個別，套用在更複雜的建置案例的連結器選項。 如需有關編譯器和連結器選項，以及使用方式的詳細資訊，請參閱 < [C/c + + 建置參考](../build/reference/c-cpp-building-reference.md)。
+編譯器、 cl.exe，有許多更多選項，您可以套用於建置、 最佳化、 偵錯和分析您的程式碼。 如需快速的清單中，輸入`cl /?`在開發人員命令提示字元。 您也可以編譯和連結個別，套用在更複雜的建置案例的連結器選項。 如需有關編譯器和連結器選項，以及使用方式的詳細資訊，請參閱 < [C/c + + 建置參考](reference/c-cpp-building-reference.md)。
 
-若要設定及命令列上建置更複雜的專案，您可以使用 NMAKE 和 makefile 或 MSBuild 和專案檔。 如需有關如何使用這些工具的詳細資訊，請參閱 < [NMAKE 參考](../build/nmake-reference.md)並[MSBuild](../build/msbuild-visual-cpp.md)。
+若要設定及命令列上建置更複雜的專案，您可以使用 NMAKE 和 makefile 或 MSBuild 和專案檔。 如需有關如何使用這些工具的詳細資訊，請參閱 < [NMAKE 參考](reference/nmake-reference.md)並[MSBuild](msbuild-visual-cpp.md)。
 
-C 和 c + + 語言很類似，但不是相同。 Visual c + + 編譯器會使用簡單的規則來決定要編譯您的程式碼時所使用的語言。 根據預設，Visual C++ 編譯器會將以 .c 結尾的所有檔案都視為 C 原始程式碼，並會將以 .cpp 結尾的所有檔案都視為 C++ 原始程式碼。 若要強制編譯器將視為 C 非相依檔案副檔名的所有檔案，請使用[/Tc](../build/reference/tc-tp-tc-tp-specify-source-file-type.md)編譯器選項。
+C 和 c + + 語言很類似，但不是相同。 MSVC 編譯器會使用簡單的規則來決定要編譯您的程式碼時所使用的語言。 根據預設，MSVC 編譯器會將以 c# 原始程式碼，.c 結尾的所有檔案以做為 c + + 原始程式碼的.cpp 結尾的所有檔案。 若要強制編譯器將視為 C 非相依檔案副檔名的所有檔案，請使用[/Tc](reference/tc-tp-tc-tp-specify-source-file-type.md)編譯器選項。
 
-Visual c + + C 編譯器是相容於 ISO C99 標準，但不是會完全遵循網路標準。 在大部分情況下，可移植的 C 程式碼會編譯，並如預期般執行。 Visual c + + 不支援 ISO C11 中的大部分的變更。 Visual c + + 編譯器已被取代特定的程式庫函式和 POSIX 函式名稱。 支援的函式，但是慣用的名稱已變更。 如需詳細資訊，請參閱 < [CRT 中的安全性功能](../c-runtime-library/security-features-in-the-crt.md)並[編譯器警告 （層級 3） C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。
+Visual c + + C 編譯器是相容於 ISO C99 標準，但不是會完全遵循網路標準。 在大部分情況下，可移植的 C 程式碼會編譯，並如預期般執行。 Visual c + + 不支援 ISO C11 中的大部分的變更。 MSVC 編譯器已被取代特定的程式庫函式和 POSIX 函式名稱。 支援的函式，但是慣用的名稱已變更。 如需詳細資訊，請參閱 < [CRT 中的安全性功能](../c-runtime-library/security-features-in-the-crt.md)並[編譯器警告 （層級 3） C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [逐步解說：建立標準 C++ 程式 (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
 [C 語言參考](../c-language/c-language-reference.md)<br/>
-[建置 C/C++ 程式](../build/building-c-cpp-programs.md)<br/>
+[專案和組建系統](projects-and-build-systems-cpp.md)<br/>
 [相容性](../c-runtime-library/compatibility.md)

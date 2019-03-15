@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 - /Zc:inline
 ms.assetid: a4c94224-1d73-4bea-a9d5-4fa73dc924df
-ms.openlocfilehash: 6855773c6ec807a7488fa5604ddee7fd43983135
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06bdb3300aae88c6c4c8f7e66af658f47548ac5a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441232"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820516"
 ---
 # <a name="zcinline-remove-unreferenced-comdat"></a>/Zc:inline (移除未參考的 COMDAT)
 
@@ -27,7 +27,7 @@ ms.locfileid: "50441232"
 
 ## <a name="remarks"></a>備註
 
-當 **/zc: inline**指定，則編譯器不會發出符號資訊未參考的 COMDAT 函式或資料，或函式或僅具有內部連結的資料。 此最佳化，可簡化某些發行組建中連結器所執行的工作或連結器選項[/opt: ref](../../build/reference/opt-optimizations.md)指定。 當編譯器執行此最佳化作業時，可以大幅減小 .obj 檔案的大小，並提高連結器速度。 這個編譯器選項未啟用時，會停用最佳化 ([/Od](../../build/reference/od-disable-debug.md)) 或當[/GL （整個程式最佳化）](../../build/reference/gl-whole-program-optimization.md)指定。
+當 **/zc: inline**指定，則編譯器不會發出符號資訊未參考的 COMDAT 函式或資料，或函式或僅具有內部連結的資料。 此最佳化，可簡化某些發行組建中連結器所執行的工作或連結器選項[/opt: ref](opt-optimizations.md)指定。 當編譯器執行此最佳化作業時，可以大幅減小 .obj 檔案的大小，並提高連結器速度。 這個編譯器選項未啟用時，會停用最佳化 ([/Od](od-disable-debug.md)) 或當[/GL （整個程式最佳化）](gl-whole-program-optimization.md)指定。
 
 根據預設，此選項為關閉 (**/Zc:inline-**)。 [/Permissive--](permissive-standards-conformance.md)選項不會啟用 **/zc: inline**。
 
@@ -123,7 +123,7 @@ void main() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **C/c + +** > **語言**屬性頁。
 
@@ -131,4 +131,4 @@ void main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[/Zc (一致性)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (一致性)](zc-conformance.md)<br/>

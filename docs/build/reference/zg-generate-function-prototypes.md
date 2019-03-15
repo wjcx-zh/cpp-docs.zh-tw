@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -Zg compiler option [C++]
 - generate function prototypes compiler option
 ms.assetid: c8df1b46-24ff-46f2-8356-e0a144b21dd2
-ms.openlocfilehash: 1b2dd1ca4768cef8eed93436c959a7d02bcbfd82
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 684174cf46e644c22e072e3fa60f75f9434c7e54
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415691"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816161"
 ---
 # <a name="zg-generate-function-prototypes"></a>/Zg (產生函式原型)
 
@@ -44,11 +44,11 @@ typedef struct MyStruct { int i; } T2;
 void f2(T2 * t) {}
 ```
 
-**/Zg**選項已被取代 Visual Studio 2005 和 Visual Studio 2015 中已移除。 Visual c + + 編譯器已移除舊版的 C 樣式的程式碼的支援。 如需已被取代的編譯器選項的清單，請參閱 <<c0>  **已取代及移除的編譯器選項**中[依分類排列的編譯器選項](../../build/reference/compiler-options-listed-by-category.md)。
+**/Zg**選項已被取代 Visual Studio 2005 和 Visual Studio 2015 中已移除。 MSVC 編譯器已移除舊版的 C 樣式的程式碼的支援。 如需已被取代的編譯器選項的清單，請參閱 <<c0>  **已取代及移除的編譯器選項**中[依分類排列的編譯器選項](compiler-options-listed-by-category.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -62,5 +62,5 @@ void f2(T2 * t) {}
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

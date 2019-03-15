@@ -11,12 +11,12 @@ helpviewer_keywords:
 - XML documentation, comments in source files
 - -doc compiler option [C++]
 ms.assetid: b54f7e2c-f28f-4f46-9ed6-0db09be2cc63
-ms.openlocfilehash: 94d10718ac47c984f8254d2c7b7f32fc6189fee3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 90f63a972245114424b64d4131420dcb4e1e925a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415392"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809791"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (處理文件註解) (C/C++)
 
@@ -33,15 +33,15 @@ ms.locfileid: "57415392"
 
 ## <a name="remarks"></a>備註
 
-.Xdc 檔都會處理到 xdcmake.exe 的.xml 檔案。 如需詳細資訊，請參閱 < [XDCMake 參考](../../ide/xdcmake-reference.md)。
+.Xdc 檔都會處理到 xdcmake.exe 的.xml 檔案。 如需詳細資訊，請參閱 < [XDCMake 參考](xdcmake-reference.md)。
 
-您可以將文件註解新增至您的原始程式碼檔。 如需詳細資訊，請參閱 [建議使用的文件註解標籤](../../ide/recommended-tags-for-documentation-comments-visual-cpp.md)。
+您可以將文件註解新增至您的原始程式碼檔。 如需詳細資訊，請參閱 [建議使用的文件註解標籤](recommended-tags-for-documentation-comments-visual-cpp.md)。
 
 若要使用 IntelliSense 產生的.xml 檔案，請與您想要支援將.xml 檔案的組件相同的組件相同的目錄中的.xml 檔案的檔案名稱。 當 Visual Studio 專案中參考組件時，會也會找到.xml 檔案。 如需詳細資訊，請參閱 <<c0> [ 使用 IntelliSense](/visualstudio/ide/using-intellisense)並[提供的 XML 程式碼註解](/visualstudio/ide/supplying-xml-code-comments)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **C/c + +** > **輸出檔**屬性頁。
 
@@ -53,5 +53,5 @@ ms.locfileid: "57415392"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

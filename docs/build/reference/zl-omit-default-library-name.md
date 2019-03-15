@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zl compiler option [C++]
 - default libraries, omitting names
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
-ms.openlocfilehash: 8a5aede89e2b37655b67144a9882f1de9b7a4bf8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: cb8083d874abe17add1d27096ebce143d03a04cf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414794"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809583"
 ---
 # <a name="zl-omit-default-library-name"></a>/Zl (省略預設程式庫名稱)
 
@@ -30,13 +30,13 @@ ms.locfileid: "57414794"
 
 ## <a name="remarks"></a>備註
 
-如需有關預設程式庫的詳細資訊，請參閱[使用執行階段程式庫](../../build/reference/md-mt-ld-use-run-time-library.md)。
+如需有關預設程式庫的詳細資訊，請參閱[使用執行階段程式庫](md-mt-ld-use-run-time-library.md)。
 
 您可以使用 **/Zl**來編譯您打算將放入程式庫.obj 檔案。 雖然省略的程式庫名稱儲存只有少量供單一.obj 檔案，儲存的總空間包含許多物件模組文件庫中是空間的重要。
 
 此選項是進階的選項。 設定此選項會移除您的應用程式，導致連結時期錯誤，如果您的應用程式相依於這項支援可能需要某些 C 執行階段程式庫支援。 如果您使用此選項，您必須提供必要的元件，以其他方式。
 
-使用[/NODEFAULTLIB （忽略程式庫）](../../build/reference/nodefaultlib-ignore-libraries.md)。 若要直接連結器忽略所有.obj 檔案中的程式庫參考。
+使用[/NODEFAULTLIB （忽略程式庫）](nodefaultlib-ignore-libraries.md)。 若要直接連結器忽略所有.obj 檔案中的程式庫參考。
 
 如需詳細資訊，請參閱 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。
 
@@ -56,7 +56,7 @@ void Test() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -70,5 +70,5 @@ void Test() {
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

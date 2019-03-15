@@ -2,16 +2,16 @@
 title: /arch (ARM)
 ms.date: 11/04/2016
 ms.assetid: 4f1406ff-f174-487c-a126-8ab06cf447c1
-ms.openlocfilehash: 7fd396f4ed9c02daff5363342d7c851d022919ac
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b732a74d5fe223fdaf3b161d4ae92093ab5df407
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424986"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807867"
 ---
 # <a name="arch-arm"></a>/arch (ARM)
 
-為 ARM 上的程式碼產生指定架構。 另請參閱[/arch (x86)](../../build/reference/arch-x86.md)並[/(x64)](../../build/reference/arch-x64.md)。
+為 ARM 上的程式碼產生指定架構。 另請參閱[/arch (x86)](arch-x86.md)並[/(x64)](arch-x64.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -31,11 +31,11 @@ ms.locfileid: "57424986"
 
 `_M_ARM_FP` （適用於僅 ARM) 的巨集指示何種，如果有的話 **/arch**編譯器選項使用。 如需詳細資訊，請參閱 [Predefined Macros](../../preprocessor/predefined-macros.md)。
 
-當您使用[/clr](../../build/reference/clr-common-language-runtime-compilation.md)進行編譯， **/arch**不有 managed 函式的程式碼產生任何影響。 **/arch**只會影響程式碼產生原生函式。
+當您使用[/clr](clr-common-language-runtime-compilation.md)進行編譯， **/arch**不有 managed 函式的程式碼產生任何影響。 **/arch**只會影響程式碼產生原生函式。
 
 ### <a name="to-set-the-archarmv7ve-or-archvfpv4-compiler-option-in-visual-studio"></a>若要在 Visual Studio 中設定 /arch:ARMv7VE 或 /arch:VFPv4 編譯器選項
 
-1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取  **C/c + +** 資料夾。
 
@@ -49,6 +49,6 @@ ms.locfileid: "57424986"
 
 ## <a name="see-also"></a>另請參閱
 
-[/arch (最小 CPU 架構)](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[/arch (最小 CPU 架構)](arch-minimum-cpu-architecture.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

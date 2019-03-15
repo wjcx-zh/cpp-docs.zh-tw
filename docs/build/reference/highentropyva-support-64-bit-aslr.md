@@ -2,20 +2,20 @@
 title: /HIGHENTROPYVA (支援 64 位元 ASLR)
 ms.date: 06/12/2018
 ms.assetid: fe35f9f7-d28e-4694-9aeb-a79db06168e0
-ms.openlocfilehash: a8bd1b2231530c0f1632b244edaf36ee14ed65b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ecbbf8bbd8e74f80f2f5b2d7df0d2ef544112fc
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534793"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821998"
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA (支援 64 位元 ASLR)
 
-指定可執行映像是否支援高熵 64 位元位址空間配置隨機載入 (ASLR)。
+指定可執行檔映像是否支援高熵 64 位元位址空間配置隨機載入 (ASLR)。
 
 ## <a name="syntax"></a>語法
 
-> **/ HIGHENTROPYVA**[**: NO**]
+> **/HIGHENTROPYVA**[**:NO**]
 
 ## <a name="remarks"></a>備註
 
@@ -27,7 +27,7 @@ ms.locfileid: "50534793"
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>在 Visual Studio 中設定這個連結器選項
 
-1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **連結器** > **命令列**屬性頁。
 
@@ -35,8 +35,8 @@ ms.locfileid: "50534793"
 
 ## <a name="see-also"></a>另請參閱
 
-- [設定連結器選項](../../build/reference/setting-linker-options.md)
-- [連結器選項](../../build/reference/linker-options.md)
+- [MSVC 連結器參考](linking.md)
+- [MSVC 連結器選項](linker-options.md)
 - [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)
 - [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)
 - [Windows ISV 軟體安全性防禦措施](https://msdn.microsoft.com/library/bb430720.aspx)

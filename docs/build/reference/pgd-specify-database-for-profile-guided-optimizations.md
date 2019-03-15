@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PGD linker option
 - /PGD linker option
 ms.assetid: 9f312498-493b-461f-886f-92652257e443
-ms.openlocfilehash: 68d112c0a40289ba62e3fe5c37ae23f8f55f9209
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1d7c9fcb94a9351ce94b66e04b4bfc523248f4e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601288"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812196"
 ---
 # <a name="pgd-specify-database-for-profile-guided-optimizations"></a>/PGD (指定特性指引最佳化資訊庫)
 
@@ -29,19 +29,19 @@ ms.locfileid: "50601288"
 
 ## <a name="remarks"></a>備註
 
-使用已被取代時[/ltcg: pginstrument](../../build/reference/ltcg-link-time-code-generation.md)選項，請使用 **/PGD**指定非預設名稱或為.pgd 檔的位置。 如果您未指定 **/PGD**，.pgd 檔基準名稱等同於輸出檔 （.exe 或.dll） 基底名稱，並建立的連結已叫用的相同目錄中。
+使用已被取代時[/ltcg: pginstrument](ltcg-link-time-code-generation.md)選項，請使用 **/PGD**指定非預設名稱或為.pgd 檔的位置。 如果您未指定 **/PGD**，.pgd 檔基準名稱等同於輸出檔 （.exe 或.dll） 基底名稱，並建立的連結已叫用的相同目錄中。
 
 使用已被取代時 **/ltcg: pgoptimize**選項，請使用 **/PGD**選項來指定要用來建立最佳化映像的.pgd 檔案名稱。 *檔名*引數應該符合*filename*指定給 **/ltcg: pginstrument**。
 
-如需詳細資訊，請參閱 <<c0> [ 特性指引最佳化](../../build/reference/profile-guided-optimizations.md)。
+如需詳細資訊，請參閱 <<c0> [ 特性指引最佳化](../profile-guided-optimizations.md)。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **連結器** > **最佳化**屬性頁。
 
-1. 修改**特性指引資料庫**屬性。 選擇**確定**以儲存變更。
+1. 修改**特性指引資料庫**屬性。 選取 [確定] 儲存您的變更。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 
@@ -49,5 +49,5 @@ ms.locfileid: "50601288"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)<br/>
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)<br/>

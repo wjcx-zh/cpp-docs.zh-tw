@@ -1,17 +1,17 @@
 ---
-title: 如何：建立可驗證的 C++ 專案 (C++/CLI)
+title: HOW TO：建立可驗證的 c + + 專案 (C + + /cli CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
 - conversions, C++ projects
 - Visual C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-ms.openlocfilehash: acd37469f0702b73cdb1386fcf43091c8d27aebb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de3742717bf55c53ab4007aaed18b6ce687fbede
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630434"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817371"
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>如何： 建立可驗證的 c + + 專案 (C + + /cli CLI)
 
@@ -28,7 +28,7 @@ Visual c + + 應用程式精靈不會建立可驗證的專案。
 
 ### <a name="to-change-the-compiler-and-linker-settings"></a>若要變更的編譯器和連結器設定
 
-1. 顯示專案屬性頁。 如需詳細資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。
+1. 顯示專案屬性頁。 如需詳細資訊，請參閱 <<c0> [ 設定編譯器和組建屬性](../build/working-with-project-properties.md)。
 
 1. 在上**一般**頁面**組態屬性**節點，設定**Common Language Runtime 支援**屬性設**安全 MSIL Common Language執行階段支援 (/: safe)**。
 
@@ -56,7 +56,7 @@ Visual c + + 應用程式精靈不會建立可驗證的專案。
 
 1. 將 _tmain() 變更專案的主要.cpp 檔案中的 main （）。
 
-1. 顯示專案屬性頁。 如需詳細資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。
+1. 顯示專案屬性頁。 如需詳細資訊，請參閱 <<c0> [ 設定編譯器和組建屬性](../build/working-with-project-properties.md)。
 
 1. 在上**進階**頁面**連結器**節點中，輸入`Main`作為**進入點**屬性值。
 

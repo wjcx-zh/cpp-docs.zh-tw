@@ -8,16 +8,16 @@ helpviewer_keywords:
 - -SECTION linker option
 - section attributes
 - /SECTION linker option
-ms.openlocfilehash: d86dca297940da4978fe42270f444acc5f11fd82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fb73043c9c185adee0859bb81098eab022430c2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543688"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816551"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (指定區段屬性)
 
-> **/SECTION:**_名稱_、 [[**！**]{**DEKPRSW**}] [**，ALIGN =**_數目_]
+> **/SECTION:**_name_,[[**!**]{**DEKPRSW**}][**,ALIGN=**_number_]
 
 ## <a name="remarks"></a>備註
 
@@ -45,7 +45,7 @@ A*一節*在可攜式執行檔 (PE) 檔案是包含程式碼或資料的記憶�
 
 - .reloc
 
-- 缺少兩者
+- .rsrc
 
 - .sbss
 
@@ -71,15 +71,15 @@ A*一節*在可攜式執行檔 (PE) 檔案是包含程式碼或資料的記憶�
 |K|可快取|標記為不可快取區段|
 |P|可分頁|標記為不可分頁區段|
 
-K 和 P 是不尋常的區段旗標對應到它們都使用負值的意義。 如果您指定其中一個在.text 區段使用 **/SECTION:.text，K**選項，並無差別區段旗標中執行時[DUMPBIN](../../build/reference/dumpbin-options.md)使用[/HEADERS](../../build/reference/headers.md)選項;已隱含已快取一節。 若要移除預設值，指定 **/SECTION:.text，！K**改。 DUMPBIN 顯示區段特性，包括 「 未快取 」。
+K 和 P 是不尋常的區段旗標對應到它們都使用負值的意義。 如果您指定其中一個在.text 區段使用 **/SECTION:.text，K**選項，並無差別區段旗標中執行時[DUMPBIN](dumpbin-options.md)使用[/HEADERS](headers.md)選項;已隱含已快取一節。 若要移除預設值，指定 **/SECTION:.text，！K**改。 DUMPBIN 顯示區段特性，包括 「 未快取 」。
 
 沒有 E、 R、 設定或 W PE 檔中的區段可能無效。
 
-**ALIGN =**_數目_引數可讓您指定的特定區段的對齊值。 _數字_引數是以位元組為單位，而且必須是 2 的乘冪。 請參閱[/對齊](../../build/reference/align-section-alignment.md)如需詳細資訊。
+**ALIGN =**_數目_引數可讓您指定的特定區段的對齊值。 _數字_引數是以位元組為單位，而且必須是 2 的乘冪。 請參閱[/對齊](align-section-alignment.md)如需詳細資訊。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選擇**組態屬性** > **連結器** > **命令列**屬性頁。
 
@@ -91,5 +91,5 @@ K 和 P 是不尋常的區段旗標對應到它們都使用負值的意義。 �
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

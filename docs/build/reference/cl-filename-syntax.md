@@ -11,12 +11,12 @@ helpviewer_keywords:
 - file names [C++], CL compiler
 - file names [C++]
 ms.assetid: 3ca72586-75be-4477-b323-a1be232e80d4
-ms.openlocfilehash: d2dd51370fd346c4cd7dad7bb97bfa76a9f759d9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b20f88e69c6e0d1774f1cd81b3ee833c4f0ff696
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420722"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811767"
 ---
 # <a name="cl-filename-syntax"></a>CL 檔名語法
 
@@ -26,4 +26,4 @@ CL 可以接受其名稱遵循 FAT、HPFS 或 NTFS 命名慣例的檔案。 任�
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器命令列語法](../../build/reference/compiler-command-line-syntax.md)
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -KEYFILE linker option
 - KEYFILE linker option
 ms.assetid: 9b71f8c0-541c-4fe5-a0c7-9364f42ecb06
-ms.openlocfilehash: 279f83dd66777c0f1bb0aca836808da196886281
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d309390c1ac1a19d9d4a982908dbbbac0bd52714
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414729"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813769"
 ---
 # <a name="keyfile-specify-key-or-key-pair-to-sign-an-assembly"></a>/KEYFILE (指定金鑰或金鑰組以簽署組件)
 
@@ -31,9 +31,9 @@ ms.locfileid: "57414729"
 
 連結器將公開金鑰插入到組件資訊清單，然後使用私密金鑰簽署最終組件。 若要產生金鑰檔，請輸入[sn-k](/dotnet/framework/tools/sn-exe-strong-name-tool) *filename*在命令列。 簽署的組件即具有強式名稱。
 
-如果您使用編譯[/LN](../../build/reference/ln-create-msil-module.md)，金鑰檔的名稱會保留在模組中並併入編譯透過包含的模組，明確參考的組件時所建立的組件[#using](../../preprocessor/hash-using-directive-cpp.md)，或當連結[/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)。
+如果您使用編譯[/LN](ln-create-msil-module.md)，金鑰檔的名稱會保留在模組中並併入編譯透過包含的模組，明確參考的組件時所建立的組件[#using](../../preprocessor/hash-using-directive-cpp.md)，或當連結[/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md)。
 
-您可以也將加密資訊傳遞給使用連結器[/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)。 使用[/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)要部分簽署組件。 請參閱[強式名稱組件 （組件簽署） (C + + /cli CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)如需有關簽署組件。
+您可以也將加密資訊傳遞給使用連結器[/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)。 使用[/DELAYSIGN](delaysign-partially-sign-an-assembly.md)要部分簽署組件。 請參閱[強式名稱組件 （組件簽署） (C + + /cli CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)如需有關簽署組件。
 
 在案例中都 **/KEYFILE**並 **/KEYCONTAINER**指定連結器 （藉由命令列選項或是自訂屬性），會先嘗試使用金鑰容器。 如果這個動作成功，則會使用金鑰容器中的資訊來簽署組件。 如果連結器找不到金鑰容器，它會嘗試使用以 /KEYFILE 指定的檔案。 如果這個動作成功，則會使用金鑰容器中的資訊來簽署組件，並將金鑰資訊安裝在金鑰容器中 (類似於 sn -i)，這樣在下次編譯時，金鑰容器就會是有效的。
 
@@ -43,19 +43,19 @@ ms.locfileid: "57414729"
 
 其他會影響產生組件連結器選項如下：
 
-- [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)
+- [/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)
 
-- [/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)
+- [/ASSEMBLYLINKRESOURCE](assemblylinkresource-link-to-dotnet-framework-resource.md)
 
-- [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)
+- [/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md)
 
-- [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)
+- [/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md)
 
-- [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)
+- [/NOASSEMBLY](noassembly-create-a-msil-module.md)
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 **連結器**資料夾。
 
@@ -69,5 +69,5 @@ ms.locfileid: "57414729"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

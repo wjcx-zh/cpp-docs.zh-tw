@@ -10,12 +10,12 @@ helpviewer_keywords:
 - FU compiler option [C++]
 - /FU compiler option [C++]
 ms.assetid: 698f8603-457f-435a-baff-5ac9243d6ca1
-ms.openlocfilehash: 1a035be2080d9fe407799122f804668e0fc3ce76
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c47a45208ac5b5c7e0000516ed114c008feda7ca
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413156"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807507"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (命名強制的 #using 檔案)
 
@@ -36,11 +36,11 @@ ms.locfileid: "57413156"
 
 如果您使用 C + + /cli CLI 以及參考要使用的中繼資料[Friend 組件](../../dotnet/friend-assemblies-cpp.md)功能，您無法使用 **/FU**。 您必須在程式碼中使用 `#using` (搭配使用 `[as friend]` 屬性) 來參考中繼資料。 Friend 組件不支援在 Visual c + + 元件擴充功能中 C + + /CX。
 
-如需有關如何建立組件或模組的 common language runtime (CLR) 的資訊，請參閱[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)。 如需如何建置在 C + + /CX 中，請參閱[建置應用程式和程式庫](../../cppcx/building-apps-and-libraries-c-cx.md)。
+如需有關如何建立組件或模組的 common language runtime (CLR) 的資訊，請參閱[/clr （Common Language Runtime 編譯）](clr-common-language-runtime-compilation.md)。 如需如何建置在 C + + /CX 中，請參閱[建置應用程式和程式庫](../../cppcx/building-apps-and-libraries-c-cx.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **C/c + +** > **進階**屬性頁。
 
@@ -52,6 +52,6 @@ ms.locfileid: "57413156"
 
 ## <a name="see-also"></a>另請參閱
 
-[輸出檔 (/F) 選項](../../build/reference/output-file-f-options.md)<br/>
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[輸出檔 (/F) 選項](output-file-f-options.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

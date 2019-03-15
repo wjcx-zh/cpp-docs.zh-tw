@@ -14,16 +14,16 @@ helpviewer_keywords:
 - frame window classes [MFC], created by application wizards
 - CMainFrame class [MFC]
 ms.assetid: 9947df73-4470-49a0-ac61-7b6ee401a74e
-ms.openlocfilehash: a0610ae901b817a1c8f7707d9ba87c15d634e134
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 46da8fc0cb98406bdf97285d7c6f824afd61c4bb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298057"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808348"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>應用程式精靈所建立的框架視窗類別
 
-當您使用[應用程式精靈](../ide/creating-desktop-projects-by-using-application-wizards.md)應用程式精靈建立基本架構的應用程式，除了應用程式、 文件和檢視類別，建立您的應用程式主框架視窗的衍生的框架視窗類別。 此類別預設稱為 `CMainFrame`，包含此類別的檔案名稱為 MAINFRM.H 和 MAINFRM.CPP。
+當您建立新的 MFC 專案從**新的專案** 對話方塊中，除了應用程式、 文件和檢視類別，應用程式精靈 會建立您的應用程式主框架視窗的衍生的框架視窗類別。 此類別預設稱為 `CMainFrame`，包含此類別的檔案名稱為 MAINFRM.H 和 MAINFRM.CPP。
 
 如果您的應用程式是 SDI，您`CMainFrame`類別衍生自類別[CFrameWnd](../mfc/reference/cframewnd-class.md)。
 
@@ -36,4 +36,5 @@ ms.locfileid: "57298057"
 ## <a name="see-also"></a>另請參閱
 
 [框架視窗類別](../mfc/frame-window-classes.md)<br/>
-[MFC 程式或控制項原始程式檔和標頭檔](../ide/mfc-program-or-control-source-and-header-files.md)
+[MFC 程式或控制項原始程式檔和標頭檔](../build/reference/mfc-program-or-control-source-and-header-files.md)
+

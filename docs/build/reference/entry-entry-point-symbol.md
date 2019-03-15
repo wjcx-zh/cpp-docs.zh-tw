@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /ENTRY linker option
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
-ms.openlocfilehash: 5ebc18d6d895928b1deec392cbb0bd91f48a96ed
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0f3604ef75ce10928463c088e423615886555eda
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425701"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807854"
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (進入點符號)
 
@@ -42,17 +42,17 @@ ms.locfileid: "57425701"
 |**WinMainCRTStartup** (或**wWinMainCRTStartup**)|應用程式使用 /SUBSYSTEM:**WINDOWS**; 呼叫`WinMain`(或`wWinMain`)，這必須定義為使用 `__stdcall`|
 |**_DllMainCRTStartup**|DLL;呼叫`DllMain`若有的話，它必須定義為使用 `__stdcall`|
 
-如果[/DLL](../../build/reference/dll-build-a-dll.md)或是[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)未指定選項，連結器將會取決於是否子系統和項目點`main`或`WinMain`定義。
+如果[/DLL](dll-build-a-dll.md)或是[/SUBSYSTEM](subsystem-specify-subsystem.md)未指定選項，連結器將會取決於是否子系統和項目點`main`或`WinMain`定義。
 
 函式`main`， `WinMain`，和`DllMain`是三種形式的使用者定義的進入點。
 
 /ENTRY 到指定的函式時建立的受控映像，必須具有的簽章 (LPVOID *var1*，DWORD *var2*，LPVOID *var3*)。
 
-如需如何定義您自己`DllMain`進入點，請參閱 < [Dll 和 Visual c + + 執行階段程式庫行為](../../build/run-time-library-behavior.md)。
+如需如何定義您自己`DllMain`進入點，請參閱 < [Dll 和 Visual c + + 執行階段程式庫行為](../run-time-library-behavior.md)。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 **連結器**資料夾。
 
@@ -66,5 +66,5 @@ ms.locfileid: "57425701"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

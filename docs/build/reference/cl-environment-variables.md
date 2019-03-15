@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-ms.openlocfilehash: 47d6966cdc821cee4bd9ffd61b36c0c79143b6c2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a15bedc0a5aa8215356a98c3635a2edd1f3cfc5f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412454"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807958"
 ---
 # <a name="cl-environment-variables"></a>CL 環境變數
 
@@ -30,13 +30,13 @@ CL 工具使用下列環境變數：
 
 > 設定 CL = [[*選項*]...[*檔案*]...][/ link>*連結-opt* ...]設定\_CL\_= [[*選項*]...[*檔案*]...][/ link>*連結-opt* ...]
 
-如需有關加入 CL 引數及\_CL\_環境變數，請參閱[編譯器命令列語法](../../build/reference/compiler-command-line-syntax.md)。
+如需有關加入 CL 引數及\_CL\_環境變數，請參閱[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)。
 
 您可以使用這些環境變數來定義您最常使用的檔案與選項，並使用命令列來定義用於特定用途的特定檔案和選項。 CL 和\_CL\_環境變數僅限於 1024年個字元 （命令列輸入限制）。
 
 您無法使用 /D 選項來定義使用等號 (=) 的符號。 您可以將等號取代為數字符號 (#)。 如此一來，您可以使用 CL 或\_CL\_環境變數來定義明確的值與前置處理器常數 — 例如`/DDEBUG#1`來定義`DEBUG=1`。
 
-如需相關資訊，請參閱[設定環境變數](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)。
+如需相關資訊，請參閱[設定環境變數](../setting-the-path-and-environment-variables-for-command-line-builds.md)。
 
 ## <a name="examples"></a>範例
 
@@ -58,5 +58,5 @@ CL 工具使用下列環境變數：
 
 ## <a name="see-also"></a>另請參閱
 
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
-[編譯器選項](../../build/reference/compiler-options.md)
+[設定編譯器選項](compiler-command-line-syntax.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)

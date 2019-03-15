@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - input files, LIB
 ms.assetid: e1236f0d-cd90-446b-b900-f311f456085c
-ms.openlocfilehash: fb0095bd9e8699fbc9a1a144833d12d2cf4a1f83
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 648871464dbc99972b8ca40579046347727e81cf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423088"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808127"
 ---
 # <a name="lib-input-files"></a>LIB 輸入檔
 
@@ -28,4 +28,4 @@ LIB 所預期的輸入的檔而定的模式，其中它在使用下, 表所示�
 
 ## <a name="see-also"></a>另請參閱
 
-[LIB 概觀](../../build/reference/overview-of-lib.md)
+[LIB 概觀](overview-of-lib.md)

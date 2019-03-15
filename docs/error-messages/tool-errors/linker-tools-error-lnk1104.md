@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-ms.openlocfilehash: 0c5c0b84ad66fb44dad171710ff8915ca22b8ccf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eadeeb7ac19e3975a37a1364502b33400018cb05
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462786"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818267"
 ---
 # <a name="linker-tools-error-lnk1104"></a>連結器工具錯誤 LNK1104
 
@@ -35,11 +35,11 @@ ms.locfileid: "50462786"
 
 如果您正在建置使用較舊版本的 Visual Studio 所建立的專案，該版本的程式庫與平台工具組可能未安裝。 如果已建立版本的程式庫名稱，例如 msvcr100.lib，就會出現錯誤訊息，則這可能是原因。 若要修正此問題，您有兩個選項： 您可以升級專案以使用您已安裝，目前的平台工具組，或者您可以安裝舊版的工具組，並建置專案保持不變。 如需詳細資訊，請參閱 <<c0> [ 從較早版本的 Visual c + + 升級專案](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md)並[使用原生多目標在 Visual Studio 來建置舊專案](../../porting/use-native-multi-targeting.md)。
 
-如果當您建立新的目標平台或組態時，您會看到此錯誤，可能不會安裝該專案的組態或平台工具組的程式庫。 確認**平台工具組**並**Windows SDK 版本**中指定[一般 屬性頁](../../ide/general-property-page-project.md)安裝為您的專案之後，並確認所需程式庫有**程式庫目錄**中指定[VC + + Directories Property Page](../../ide/vcpp-directories-property-page.md)的組態設定。 有不同的設定，進行偵錯和零售組態，以及 32 位元和 64 位元的組態，因此如果其中一個建置的運作方式，但另一個會產生錯誤，請確定設定正確無誤，而且所需的工具與程式庫會針對安裝每個您所建置的組態。
+如果當您建立新的目標平台或組態時，您會看到此錯誤，可能不會安裝該專案的組態或平台工具組的程式庫。 確認**平台工具組**並**Windows SDK 版本**中指定[一般 屬性頁](../../build/reference/general-property-page-project.md)安裝為您的專案之後，並確認所需程式庫有**程式庫目錄**中指定[VC + + Directories Property Page](../../build/reference/vcpp-directories-property-page.md)的組態設定。 有不同的設定，進行偵錯和零售組態，以及 32 位元和 64 位元的組態，因此如果其中一個建置的運作方式，但另一個會產生錯誤，請確定設定正確無誤，而且所需的工具與程式庫會針對安裝每個您所建置的組態。
 
-如果您使用 Visual Studio IDE 來建置專案時，已從另一部電腦複製，程式庫的安裝位置可能會不同。 請檢查**程式庫目錄**屬性上的[VC + + Directories Property Page](../../ide/vcpp-directories-property-page.md)專案並視需要更新它。 若要查看及編輯目前的程式庫路徑中的 IDE 設定，選擇的下拉式清單控制項**程式庫目錄**屬性，然後選擇**編輯**。 **評估值**一節**程式庫目錄**對話方塊會列出目前搜尋程式庫檔案的路徑。
+如果您使用 Visual Studio IDE 來建置專案時，已從另一部電腦複製，程式庫的安裝位置可能會不同。 請檢查**程式庫目錄**屬性上的[VC + + Directories Property Page](../../build/reference/vcpp-directories-property-page.md)專案並視需要更新它。 若要查看及編輯目前的程式庫路徑中的 IDE 設定，選擇的下拉式清單控制項**程式庫目錄**屬性，然後選擇**編輯**。 **評估值**一節**程式庫目錄**對話方塊會列出目前搜尋程式庫檔案的路徑。
 
-Windows SDK 的路徑已過期時，也會發生此錯誤。 如果您已安裝的版本比您的 Visual Studio 版本的 Windows sdk，請確定在指定的路徑[VC + + Directories Property Page](../../ide/vcpp-directories-property-page.md)更新以符合新的 SDK。 如果您使用開發人員命令提示字元，請確定初始化環境變數的批次檔會更新為新的 SDK 路徑。 若要安裝更新的 Sdk 使用 Visual Studio 安裝程式，可以避免這個問題。
+Windows SDK 的路徑已過期時，也會發生此錯誤。 如果您已安裝的版本比您的 Visual Studio 版本的 Windows sdk，請確定在指定的路徑[VC + + Directories Property Page](../../build/reference/vcpp-directories-property-page.md)更新以符合新的 SDK。 如果您使用開發人員命令提示字元，請確定初始化環境變數的批次檔會更新為新的 SDK 路徑。 若要安裝更新的 Sdk 使用 Visual Studio 安裝程式，可以避免這個問題。
 
 ### <a name="cannot-open-a-third-party-library-file"></a>無法開啟協力廠商程式庫檔案
 
@@ -51,7 +51,7 @@ Windows SDK 的路徑已過期時，也會發生此錯誤。 如果您已安裝�
 
 - 程式庫可能相依於未安裝其他程式庫。
 
-若要修正路徑問題，請確認 LIB 環境變數會設定，且包含使用您建立每個組態之程式庫的所有目錄。 在 IDE 中，LIB 變數會設定**程式庫目錄**屬性上的[VC + + Directories Property Page](../../ide/vcpp-directories-property-page.md)。 請確定包含您所需的程式庫的所有目錄都列在這裡，方便您建置每個組態。
+若要修正路徑問題，請確認 LIB 環境變數會設定，且包含使用您建立每個組態之程式庫的所有目錄。 在 IDE 中，LIB 變數會設定**程式庫目錄**屬性上的[VC + + Directories Property Page](../../build/reference/vcpp-directories-property-page.md)。 請確定包含您所需的程式庫的所有目錄都列在這裡，方便您建置每個組態。
 
 如果您需要提供程式庫目錄，就會覆寫標準程式庫目錄，您可以使用[/LIBPATH](../../build/reference/libpath-additional-libpath.md)選項命令列上，或在 IDE 中，您可以使用**其他程式庫目錄**中的屬性**組態屬性 > 連結器 > 一般**專案屬性頁面。
 
@@ -59,7 +59,7 @@ Windows SDK 的路徑已過期時，也會發生此錯誤。 如果您已安裝�
 
 ### <a name="cannot-open-a-file-built-by-your-project"></a>無法開啟專案建置的檔案
 
-您會看到此錯誤，如果檔案*filename*是您的方案所建置，但尚不存在時，連結器會嘗試存取它。 這種情形時一個專案相依於另一個專案，但並不是專案建置正確的順序。 若要修正此問題，請確定您的專案參考會設定專案中所使用的檔案，因此除非必要，內建遺失的檔案。 如需詳細資訊，請參閱 < [Visual c + + 專案中新增參考](../../ide/adding-references-in-visual-cpp-projects.md)並[管理專案中的參考](/visualstudio/ide/managing-references-in-a-project)。
+您會看到此錯誤，如果檔案*filename*是您的方案所建置，但尚不存在時，連結器會嘗試存取它。 這種情形時一個專案相依於另一個專案，但並不是專案建置正確的順序。 若要修正此問題，請確定您的專案參考會設定專案中所使用的檔案，因此除非必要，內建遺失的檔案。 如需詳細資訊，請參閱 < [Visual c + + 專案中新增參考](../../build/adding-references-in-visual-cpp-projects.md)並[管理專案中的參考](/visualstudio/ide/managing-references-in-a-project)。
 
 ### <a name="cannot-open-file-cprogramobj"></a>無法開啟檔案 ' c:\\Program.obj'
 
@@ -67,7 +67,7 @@ Windows SDK 的路徑已過期時，也會發生此錯誤。 如果您已安裝�
 
 若要修正此問題，命令列建置，請檢查[/LIBPATH](../../build/reference/libpath-additional-libpath.md)選項參數、 LIB 環境變數中指定的路徑和命令列上指定的路徑，並請務必使用雙精度浮點數-用引號括住的任何路徑包含空格。
 
-若要在 IDE 中修正此問題，請檢查**程式庫目錄**屬性上的[組態屬性 > VC + + 目錄](../../ide/vcpp-directories-property-page.md)屬性頁上，**其他程式庫目錄**中的屬性**組態屬性 > 連結器 > 一般**屬性頁上，而**其他相依性**中的屬性**組態屬性 > 連結器 > 輸入**專案屬性頁面。 請確定包含您所需的程式庫的所有目錄路徑會都包裝雙引號括住，如有必要。
+若要在 IDE 中修正此問題，請檢查**程式庫目錄**屬性上的[組態屬性 > VC + + 目錄](../../build/reference/vcpp-directories-property-page.md)屬性頁上，**其他程式庫目錄**中的屬性**組態屬性 > 連結器 > 一般**屬性頁上，而**其他相依性**中的屬性**組態屬性 > 連結器 > 輸入**專案屬性頁面。 請確定包含您所需的程式庫的所有目錄路徑會都包裝雙引號括住，如有必要。
 
 ### <a name="other-common-issues"></a>其他常見的問題
 
@@ -81,7 +81,7 @@ Windows SDK 的路徑已過期時，也會發生此錯誤。 如果您已安裝�
 
 您可能會看到此錯誤時的路徑*filename*展開至超過 260 個字元。 變更名稱，或重新排列您的目錄結構，如果需要縮短所需的檔案的路徑。
 
-因為檔案太大，就會發生此錯誤。 程式庫或物件的檔案超過 1 gb 大小的 32 位元連結器可能會發生問題。 可能的修正此問題是使用 64 位元工具組。 如需有關如何在命令列執行這項操作的詳細資訊，請參閱 <<c0> [ 如何： 啟用在命令列上的 64 位元 Visual c + + 工具組](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)。 如需如何執行這項操作，在 IDE 中的資訊，請參閱[使用的 MSBuild 與 64 位元編譯器和工具](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project)和 Stack Overflow 的本文：[如何讓 Visual Studio 使用 amd64 原生工具鏈](http://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055)。
+因為檔案太大，就會發生此錯誤。 程式庫或物件的檔案超過 1 gb 大小的 32 位元連結器可能會發生問題。 可能的修正此問題是使用 64 位元工具組。 如需有關如何在命令列執行這項操作的詳細資訊，請參閱[How to:啟用在命令列上 64 位元 Visual c + + 工具組](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)。 如需如何執行這項操作，在 IDE 中的資訊，請參閱[使用的 MSBuild 與 64 位元編譯器和工具](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project)和這個 Stack Overflow 文章：[如何讓 Visual Studio 使用 amd64 原生工具鏈](http://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055)。
 
 如果您有足夠的檔案存取權限，會發生此錯誤*filename*。 這種情形，如果您使用的一般使用者帳戶及嘗試存取受保護的系統目錄中的程式庫檔案，或使用擁有其原始的權限的其他使用者從複製的檔案設定。 若要修正此問題，請將檔案移至可寫入的專案目錄。 如果檔案是在可寫入的目錄中，但無法存取的權限，您可以使用系統管理員命令提示字元並執行 takeown.exe 命令來取得檔案的擁有權。
 

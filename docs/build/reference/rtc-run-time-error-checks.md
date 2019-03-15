@@ -25,12 +25,12 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: 3ac70904332f5f05463b317f02a2ab8d3bfc7bb3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a830ff5b8ba4b7fcd95eb462f899f2eadce6de11
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424609"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815888"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (執行階段錯誤檢查)
 
@@ -75,7 +75,7 @@ int main() {
 
 - 為非零值的本機變數的初始化。 這有助於找出不會出現在 偵錯模式中執行時的錯誤。 沒有更高的機率堆疊變數仍然會在偵錯組建，因為編譯器最佳化的發行組建中的堆疊變數相較於發行組建中的零。 一旦程式已使用其堆疊的區域，永遠不會重設為 0 的編譯器。 因此，碰巧使用相同的堆疊區域的後續的、 未初始化堆疊變數會傳回剩餘的先前使用這個堆疊記憶體的值。
 
-- 偵測溢位等情況不足，例如陣列的本機變數。 **/RTC** `s`存取產生的編譯器與邊框距離在結構中的記憶體時，則不會偵測溢位。 填補可能是使用[對齊](../../cpp/align-cpp.md)， [/Zp （結構成員對齊）](../../build/reference/zp-struct-member-alignment.md)，或[pack](../../preprocessor/pack.md)，或如果您需要編譯器加上邊框間距的方式排序結構項目。
+- 偵測溢位等情況不足，例如陣列的本機變數。 **/RTC** `s`存取產生的編譯器與邊框距離在結構中的記憶體時，則不會偵測溢位。 填補可能是使用[對齊](../../cpp/align-cpp.md)， [/Zp （結構成員對齊）](zp-struct-member-alignment.md)，或[pack](../../preprocessor/pack.md)，或如果您需要編譯器加上邊框間距的方式排序結構項目。
 
 - 堆疊指標驗證時，它會偵測堆疊指標損毀。 堆疊指標損毀可能因呼叫慣例不相符。 比方說，使用函式指標，您呼叫函式中做為匯出的 DLL [__stdcall](../../cpp/stdcall.md)但宣告為函式的指標[__cdecl](../../cpp/cdecl.md)。
 
@@ -99,13 +99,13 @@ c = a;  // No run-time error with /RTCu
 
 如果您編譯您的程式，在命令列使用任一 **/RTC**編譯器選項、 任何 pragma[最佳化](../../preprocessor/optimize.md)中您的程式碼指示將會以無訊息模式失敗。 這是因為執行階段錯誤檢查 （最佳化） 的發行組建中無效。
 
-您應該使用 **/RTC**開發組建;**/RTC**不應該用於零售組建。 **/RTC**不能使用的編譯器最佳化 ([/O 選項 （最佳化程式碼）](../../build/reference/o-options-optimize-code.md))。 以建置程式映像 **/RTC**會稍微大一點，比以建置映像稍微慢一點 **/Od** (低於最多 5% **/Od**建置)。
+您應該使用 **/RTC**開發組建;**/RTC**不應該用於零售組建。 **/RTC**不能使用的編譯器最佳化 ([/O 選項 （最佳化程式碼）](o-options-optimize-code.md))。 以建置程式映像 **/RTC**會稍微大一點，比以建置映像稍微慢一點 **/Od** (低於最多 5% **/Od**建置)。
 
-當您使用任何時，將會定義 __MSVC_RUNTIME_CHECKS 前置處理器指示詞 **/RTC**選項或[/GZ](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md)。
+當您使用任何時，將會定義 __MSVC_RUNTIME_CHECKS 前置處理器指示詞 **/RTC**選項或[/GZ](gz-enable-stack-frame-run-time-error-checking.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -119,6 +119,6 @@ c = a;  // No run-time error with /RTCu
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
 [如何：使用原生執行階段檢查](/visualstudio/debugger/how-to-use-native-run-time-checks)

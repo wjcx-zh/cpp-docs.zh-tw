@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-ms.openlocfilehash: 089f34f6daa606ed2869852a04ee76c6bda8fe25
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 18bbdb980c63b3c04b432602afb2402c5e2c42e7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424674"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812079"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (前置處理器定義)
 
@@ -62,7 +62,7 @@ CL /DTEST=%% TEST.C
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 在左窗格中，選取**組態屬性**， **C/c + +**，**前置處理器**。
 
@@ -97,8 +97,8 @@ TEST defined 1
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
-[/U、/u (取消定義符號)](../../build/reference/u-u-undefine-symbols.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[/U、/u (取消定義符號)](u-u-undefine-symbols.md)<br/>
 [#undef 指示詞 (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br/>
 [#define 指示詞 (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)

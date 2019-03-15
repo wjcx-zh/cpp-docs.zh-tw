@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, creating
 - ATL Project Wizard
 ms.assetid: 564d2aaf-5b8e-4c2a-a925-ca40a283ea34
-ms.openlocfilehash: c9d69b6ca8cf1cff45098f0d63b452238db7ddfe
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4059961d70e6486f7417a5eff034b194d9860558
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259759"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807789"
 ---
 # <a name="atl-project-wizard"></a>ATL 專案精靈
 
@@ -44,13 +44,12 @@ Active Template Library (ATL) 是一份樣板架構 c + + 類別，可簡化撰�
 
 - [最佳化編譯器為 ATL 專案](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)
 
-您可以指定專案屬性 (例如[是否以靜態方式連結到 CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) 中[專案屬性](../../ide/general-property-page-project.md)頁面上，而且您可以設定[組建組態](/visualstudio/ide/understanding-build-configurations)的ATL 專案。
+您可以指定專案屬性 (例如[是否以靜態方式連結到 CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) 中[專案屬性](../../build/reference/general-property-page-project.md)頁面上，而且您可以設定[組建組態](/visualstudio/ide/understanding-build-configurations)的ATL 專案。
 
 ## <a name="see-also"></a>另請參閱
 
-[建立和管理 Visual C++ 專案](../../ide/creating-and-managing-visual-cpp-projects.md)<br/>
-[Visual C++ 專案類型](../../ide/visual-cpp-project-types.md)<br/>
-[使用應用程式精靈建立桌面專案](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[建立和管理 Visual C++ 專案](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
+[Visual C++ 專案類型](../../build/reference/visual-cpp-project-types.md)<br/>
 [ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [使用 ATL 和 C 執行階段程式碼進行程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [教學課程](../../atl/active-template-library-atl-tutorial.md)

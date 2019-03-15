@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /Gy compiler option [C++]
 - packaged functions
 ms.assetid: 0d3cf14c-ed7d-4ad3-b4b6-104e56f61046
-ms.openlocfilehash: 368bd469a303222ef4d5177677de4940e402b6de
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9643b8b4b4b26b3f7a8a59ed0085601b1a53094d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413104"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817968"
 ---
 # <a name="gy-enable-function-level-linking"></a>/Gy (啟用函式階層連結)
 
@@ -34,18 +34,18 @@ ms.locfileid: "57413104"
 
 連結器會需要為來排除或排序 DLL 或.exe 檔案中的個別函式的 Comdat 函式個別封裝。
 
-您可以使用連結器選項[/OPT （最佳化）](../../build/reference/opt-optimizations.md)的.exe 檔案中排除未參考的封裝函式。
+您可以使用連結器選項[/OPT （最佳化）](opt-optimizations.md)的.exe 檔案中排除未參考的封裝函式。
 
-您可以使用連結器選項[/ORDER （Put 函式的順序）](../../build/reference/order-put-functions-in-order.md)来包含的封裝函式中指定的順序中的.exe 檔案。
+您可以使用連結器選項[/ORDER （Put 函式的順序）](order-put-functions-in-order.md)来包含的封裝函式中指定的順序中的.exe 檔案。
 
 如果它們具現化呼叫，一律會封裝內嵌函式 (發生，例如，如果內嵌已關閉或需要為函式位址)。 此外，自動封裝在類別宣告中定義的 c + + 成員函式;其他函式則不會，並選取此選項需要將它們編譯為封裝函式。
 
 > [!NOTE]
->  [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)選項，用於編輯後繼續，會自動設定 **/Gy**選項。
+>  [/ZI](z7-zi-zi-debug-information-format.md)選項，用於編輯後繼續，會自動設定 **/Gy**選項。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -59,5 +59,5 @@ ms.locfileid: "57413104"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

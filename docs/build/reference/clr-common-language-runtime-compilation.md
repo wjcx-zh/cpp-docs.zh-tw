@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: 5a908fc49776eaca68d9a79fb679b759155853d9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 124f54f46e71ac8fb8511d12fba43ab77d04c32e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418850"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822456"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Common Language Runtime 編譯)
 
@@ -47,11 +47,11 @@ ms.locfileid: "57418850"
 
 - **noAssembly**
 
-   **已被取代 /clr:noAssembly**。 請改用 [/LN (Create MSIL Module)](../../build/reference/ln-create-msil-module.md) 。
+   **已被取代 /clr:noAssembly**。 請改用 [/LN (Create MSIL Module)](ln-create-msil-module.md) 。
 
    指定不應將組件資訊清單插入輸出檔中。 **noAssembly** 選項預設為非作用中。
 
-   一個在資訊清單中沒有已知為 *模組*的組件中繼資料的 Managed 程式。 **noAssembly** 選項只能用來產生模組。 如果您使用 [/c](../../build/reference/c-compile-without-linking.md) 和 **/clr:noAssembly**進行編譯，請在連結器階段中指定 [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) 選項來建立模組。
+   一個在資訊清單中沒有已知為 *模組*的組件中繼資料的 Managed 程式。 **noAssembly** 選項只能用來產生模組。 如果您使用 [/c](c-compile-without-linking.md) 和 **/clr:noAssembly**進行編譯，請在連結器階段中指定 [/NOASSEMBLY](noassembly-create-a-msil-module.md) 選項來建立模組。
 
    在 Visual C++ 2005 以前， **/clr:noAssembly** 需要 **/LD**。 **/LD** 現在是您指定 **/clr:noAssembly**時意指要使用的項目。
 
@@ -65,27 +65,27 @@ ms.locfileid: "57418850"
 
 ## <a name="remarks"></a>備註
 
-Managed 程式碼是可由 CLR 檢查及管理的程式碼。 Managed 程式碼可以存取 Managed 物件。 如需詳細資訊，請參閱 [/clr Restrictions](../../build/reference/clr-restrictions.md)。
+Managed 程式碼是可由 CLR 檢查及管理的程式碼。 Managed 程式碼可以存取 Managed 物件。 如需詳細資訊，請參閱 [/clr Restrictions](clr-restrictions.md)。
 
 如需如何開發可定義和使用 Managed 類型之應用程式的相關資訊，請參閱 [Component Extensions for Runtime Platforms](../../windows/component-extensions-for-runtime-platforms.md)。
 
 使用 **/clr** 編譯的應用程式不一定包含 Managed 資料。
 
-若要啟用偵錯 managed 應用程式上，請參閱[/ASSEMBLYDEBUG (加入 DebuggableAttribute)](../../build/reference/assemblydebug-add-debuggableattribute.md)。
+若要啟用偵錯 managed 應用程式上，請參閱[/ASSEMBLYDEBUG (加入 DebuggableAttribute)](assemblydebug-add-debuggableattribute.md)。
 
 只有 CLR 類型會在記憶體回收堆積上具現化。 如需詳細資訊，請參閱 <<c0> [ 類別和結構](../../windows/classes-and-structs-cpp-component-extensions.md)。 若要將函式編譯為原生程式碼，請使用 `unmanaged` pragma。 如需詳細資訊，請參閱 < [managed、 unmanaged](../../preprocessor/managed-unmanaged.md)。
 
-**/clr** 預設為非作用中。 當 **/clr** 處於作用中， **/MD** 也會處於作用中。 如需詳細資訊，請參閱 [/MD、/MT、/LD (使用執行階段程式庫)](../../build/reference/md-mt-ld-use-run-time-library.md)。 **/MD** 可確保會從標準標頭檔 (.h) 中選取動態連結、多執行緒版本的執行階段常式。 Managed 程式設計需要進行多執行緒處理，因為 CLR 記憶體回收行程會在輔助執行緒中執行完成項。
+**/clr** 預設為非作用中。 當 **/clr** 處於作用中， **/MD** 也會處於作用中。 如需詳細資訊，請參閱 [/MD、/MT、/LD (使用執行階段程式庫)](md-mt-ld-use-run-time-library.md)。 **/MD** 可確保會從標準標頭檔 (.h) 中選取動態連結、多執行緒版本的執行階段常式。 Managed 程式設計需要進行多執行緒處理，因為 CLR 記憶體回收行程會在輔助執行緒中執行完成項。
 
-如果您使用編譯 **/c**，您可以指定與產生之輸出檔的 CLR 型別[/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)。
+如果您使用編譯 **/c**，您可以指定與產生之輸出檔的 CLR 型別[/CLRIMAGETYPE](clrimagetype-specify-type-of-clr-image.md)。
 
-**/clr** 意指要使用 **/EHa**，且沒有其他 **/EH** 選項受 **/clr**支援。 如需詳細資訊，請參閱 [/EH (例外狀況處理模型)](../../build/reference/eh-exception-handling-model.md)。
+**/clr** 意指要使用 **/EHa**，且沒有其他 **/EH** 選項受 **/clr**支援。 如需詳細資訊，請參閱 [/EH (例外狀況處理模型)](eh-exception-handling-model.md)。
 
-如需如何判斷檔案之 CLR 映像類型的資訊，請參閱 [/CLRHEADER](../../build/reference/clrheader.md)。
+如需如何判斷檔案之 CLR 映像類型的資訊，請參閱 [/CLRHEADER](clrheader.md)。
 
 傳遞至指定連結器之引動過程的所有模組，都必須以相同執行階段程式庫編譯器選項 (**/MD** 或 **/LD**) 進行編譯。
 
-使用 [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) 連結器選項可在組件中內嵌資源。 [/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)、 [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)和 [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) 連結器選項也可讓您自訂組件的建立方式。
+使用 [/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md) 連結器選項可在組件中內嵌資源。 [/DELAYSIGN](delaysign-partially-sign-an-assembly.md)、 [/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)和 [/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) 連結器選項也可讓您自訂組件的建立方式。
 
 使用 **/clr** 時， `_MANAGED` 符號會定義為 1。 如需詳細資訊，請參閱 [Predefined Macros](../../preprocessor/predefined-macros.md)。
 
@@ -105,5 +105,5 @@ class {} x;
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

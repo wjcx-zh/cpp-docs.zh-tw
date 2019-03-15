@@ -3,12 +3,12 @@ title: 依字母順序排列的編譯器選項
 ms.date: 08/20/2018
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 73236485026b82895426a2651b48a83fc35ce8b7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6175d62938534e790fb60b300ff55ad031da5801
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415873"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811936"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>依字母順序排列的編譯器選項
 
@@ -164,6 +164,5 @@ ms.locfileid: "57415873"
 
 ## <a name="see-also"></a>另請參閱
 
-[C/C++ 建置參考](c-cpp-building-reference.md)<br/>
-[編譯器選項](compiler-options.md)<br/>
-[設定編譯器選項](setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

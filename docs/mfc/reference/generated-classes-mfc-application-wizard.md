@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, generated classes
 ms.assetid: 5f33209c-7f01-4f72-8c1c-6f02f507ba9f
-ms.openlocfilehash: 5926911a07edf6e4ce543b728a7b5c3984861948
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ac402591692720c15ec8a118fea04d9b3c444f06
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267416"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810324"
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>MFC 應用程式精靈、產生的類別
 
@@ -42,4 +42,5 @@ ms.locfileid: "57267416"
 ## <a name="see-also"></a>另請參閱
 
 [MFC 應用程式精靈、進階功能](../../mfc/reference/advanced-features-mfc-application-wizard.md)<br/>
-[為 Visual C++ 專案建立的檔案類型](../../ide/file-types-created-for-visual-cpp-projects.md)
+[為 Visual C++ 專案建立的檔案類型](../../build/reference/file-types-created-for-visual-cpp-projects.md)
+

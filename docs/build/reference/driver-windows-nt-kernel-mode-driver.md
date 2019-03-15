@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DRIVER linker option
 - /DRIVER linker option
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
-ms.openlocfilehash: 596566c357dd78d656e5e564a9b0f9097d20637e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ab7253d7e386bf385bcb3a586c5e0e1c1e860694
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423907"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811676"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (Windows NT 核心模式驅動程式)
 
@@ -33,13 +33,13 @@ ms.locfileid: "57423907"
 
 如果 **/DRIVER**指定：
 
-- **/Fixed: no**作用中。 如需詳細資訊，請參閱 [/FIXED (固定基底位址)](../../build/reference/fixed-fixed-base-address.md)。
+- **/Fixed: no**作用中。 如需詳細資訊，請參閱 [/FIXED (固定基底位址)](fixed-fixed-base-address.md)。
 
-- 輸出檔的副檔名設為.sys。 使用 **/out**若要變更的預設檔名和副檔名。 如需詳細資訊，請參閱 [/OUT (輸出檔名稱)](../../build/reference/out-output-file-name.md)。
+- 輸出檔的副檔名設為.sys。 使用 **/out**若要變更的預設檔名和副檔名。 如需詳細資訊，請參閱 [/OUT (輸出檔名稱)](out-output-file-name.md)。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 **連結器**資料夾。
 
@@ -53,5 +53,5 @@ ms.locfileid: "57423907"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

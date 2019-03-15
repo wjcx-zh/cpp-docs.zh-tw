@@ -10,12 +10,12 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-ms.openlocfilehash: 7c0b63d80a8b4b03b55d6e50af6c08a8de0937de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96b8c0ce1116dbb08260573f25f941ca54169127
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596538"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822414"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary 和 AfxLoadLibrary
 
@@ -30,22 +30,22 @@ ms.locfileid: "50596538"
 如果 Windows 無法載入 DLL，處理序可以嘗試從錯誤復原。 比方說，此程序無法通知錯誤的使用者，並要求使用者指定 dll 的另一個路徑。
 
 > [!IMPORTANT]
-> 請確定指定的任何 Dll 的完整路徑。 載入檔案時，會先搜尋目前的目錄。 如果您不限定檔案的路徑，可能會載入並不是預期的檔案。 若要避免這個問題的另一個方法是使用[/DEPENDENTLOADFLAG](../build/reference/dependentloadflag.md)連結器選項。
+> 請確定指定的任何 Dll 的完整路徑。 載入檔案時，會先搜尋目前的目錄。 如果您不限定檔案的路徑，可能會載入並不是預期的檔案。 若要避免這個問題的另一個方法是使用[/DEPENDENTLOADFLAG](reference/dependentloadflag.md)連結器選項。
 
 ## <a name="what-do-you-want-to-do"></a>請您指定選項。
 
-- [如何以隱含方式連結至 DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)
+- [將可執行檔連結至 DLL](linking-an-executable-to-a-dll.md#linking-implicitly)
 
-- [判斷要使用哪一個連結方法](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [將可執行檔連結至 DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
 - [動態連結程式庫搜尋順序](/windows/desktop/Dlls/dynamic-link-library-search-order)
 
-- [FreeLibrary 和 AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)
+- [FreeLibrary 和 AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)
 
-- [GetProcAddress](../build/getprocaddress.md)
+- [GetProcAddress](getprocaddress.md)
 
 ## <a name="see-also"></a>另請參閱
 
-- [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)
+- [Visual C++ 中的 DLL](dlls-in-visual-cpp.md)

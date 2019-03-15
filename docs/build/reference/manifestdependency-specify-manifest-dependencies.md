@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MANIFESTDEPENDENCY linker option
 - -MANIFESTDEPENDENCY linker option
 ms.assetid: e4b68313-33a2-4c3e-908e-ac2b9f7d6a73
-ms.openlocfilehash: debff86b506545862ce4054bf4e210cdb8a29185
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 676059b8d398fd108d8f8fc163c85a3da3c657b4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418395"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812222"
 ---
 # <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY (指定資訊清單相依性)
 
@@ -25,7 +25,7 @@ ms.locfileid: "57418395"
 
 /MANIFESTDEPENDENCY 可讓您指定將放入的屬性\<相依性 > 區段的資訊清單檔案。
 
-請參閱[/MANIFEST （建立-並存組件資訊清單）](../../build/reference/manifest-create-side-by-side-assembly-manifest.md)如需如何建立資訊清單檔案的詳細資訊。
+請參閱[/MANIFEST （建立-並存組件資訊清單）](manifest-create-side-by-side-assembly-manifest.md)如需如何建立資訊清單檔案的詳細資訊。
 
 如需詳細資訊\<相依性 > 區段的資訊清單檔案中，請參閱[發行者組態檔](/windows/desktop/SbsCs/publisher-configuration-files)。
 
@@ -61,7 +61,7 @@ ms.locfileid: "57418395"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **連結器** > **資訊清單檔案**屬性頁。
 
@@ -73,5 +73,5 @@ ms.locfileid: "57418395"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

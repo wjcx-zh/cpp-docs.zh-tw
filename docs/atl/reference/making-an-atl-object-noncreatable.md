@@ -7,12 +7,12 @@ helpviewer_keywords:
 - noncreatable ATL objects
 - ATL projects, noncreatable objects
 ms.assetid: 80d0bca2-dea0-4801-9a85-6243124437f6
-ms.openlocfilehash: da1d5c43d86d95d7eff9b6830b83b61737d3030f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 966c7c1e42cd707726a8ca65bb80914c29ad582e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267065"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814497"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>讓 ATL 物件變成無法建立
 
@@ -37,8 +37,7 @@ ms.locfileid: "57267065"
 ## <a name="see-also"></a>另請參閱
 
 [ATL 專案精靈](../../atl/reference/atl-project-wizard.md)<br/>
-[Visual C++ 專案類型](../../ide/visual-cpp-project-types.md)<br/>
-[使用應用程式精靈建立桌面專案](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Visual C++ 專案類型](../../build/reference/visual-cpp-project-types.md)<br/>
 [使用 ATL 和 C 執行階段程式碼進行程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)

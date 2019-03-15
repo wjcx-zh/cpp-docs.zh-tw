@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GF compiler option [C++]
 - strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-ms.openlocfilehash: c85379cf1a514cafcd2f840673fc9c7b2d415ba4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2f2bec446fcec522857b4c05a34311e6c26c9b75
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425662"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812313"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (消除重複字串)
 
@@ -45,16 +45,16 @@ char *t = "This is a character buffer";
 ```
 
 > [!NOTE]
->  [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)選項，用於編輯後繼續，會自動設定 **/GF**選項。
+>  [/ZI](z7-zi-zi-debug-information-format.md)選項，用於編輯後繼續，會自動設定 **/GF**選項。
 
 > [!NOTE]
->  **/GF**編譯器選項會建立每個唯一字串的可定址區段。 而根據預設，物件檔案可以包含最多 65,536 個可定址的區段。 如果您的程式包含超過 65536 的字串，使用[/bigobj](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md)編譯器選項，來建立更多區段。
+>  **/GF**編譯器選項會建立每個唯一字串的可定址區段。 而根據預設，物件檔案可以包含最多 65,536 個可定址的區段。 如果您的程式包含超過 65536 的字串，使用[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)編譯器選項，來建立更多區段。
 
-**/GF**是何時生效[/o1](../../build/reference/o1-o2-minimize-size-maximize-speed.md)或是 **/o2**用。
+**/GF**是何時生效[/o1](o1-o2-minimize-size-maximize-speed.md)或是 **/o2**用。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -68,5 +68,5 @@ char *t = "This is a character buffer";
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

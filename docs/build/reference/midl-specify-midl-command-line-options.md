@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MIDL linker option
 - MIDL, command line options
 ms.assetid: 22dc259e-b34c-4ed3-a380-4beb734482c1
-ms.openlocfilehash: 1e1025f4ce5bfd7dfff40a53472ad71870c694e6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 584958ac51bdc491ad1bdd16117ecaad6e000ec7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412948"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814185"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (指定 MIDL 命令列引數的選項)
 
@@ -39,7 +39,7 @@ ms.locfileid: "57412948"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **連結器** > **內嵌 IDL**屬性頁。
 
@@ -51,9 +51,9 @@ ms.locfileid: "57412948"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)<br/>
-[/IDLOUT (命名 MIDL 輸出檔)](../../build/reference/idlout-name-midl-output-files.md)<br/>
-[/IGNOREIDL (不要將屬性處理至 MIDL 中)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)<br/>
-[/TLBOUT (命名 .TLB 檔)](../../build/reference/tlbout-name-dot-tlb-file.md)<br/>
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)<br/>
+[/IDLOUT (命名 MIDL 輸出檔)](idlout-name-midl-output-files.md)<br/>
+[/IGNOREIDL (不要將屬性處理至 MIDL 中)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/TLBOUT (命名 .TLB 檔)](tlbout-name-dot-tlb-file.md)<br/>
 [建置屬性化程式](../../windows/building-an-attributed-program.md)

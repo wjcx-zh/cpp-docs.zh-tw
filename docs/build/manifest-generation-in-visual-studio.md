@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-ms.openlocfilehash: 69e1868990358aeb4d790366b3a0bfa8d8999823
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eabd488e581357ec1386b20597c1987e4c8b2c19
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414743"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809726"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>在 Visual Studio 中產生資訊清單
 
@@ -27,11 +27,8 @@ ms.locfileid: "57414743"
 
 1. 如果資訊清單工具所產生的資訊清單相同的二進位檔中內嵌的資訊清單，建置會繼續至下一個建置步驟。
 
-資訊清單內嵌於最終二進位檔為文字資源，就可以檢視為 Visual Studio 中的檔案開啟最終二進位檔。 若要確保資訊清單會指向正確的程式庫，請依照下列所述的步驟[了解 Visual c + + 應用程式的相依性](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)，或依照所述的建議[疑難排解](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)一節。
+資訊清單內嵌於最終二進位檔為文字資源，就可以檢視為 Visual Studio 中的檔案開啟最終二進位檔。 若要確保資訊清單會指向正確的程式庫，請依照下列所述的步驟[了解 Visual c + + 應用程式的相依性](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)，或依照所述的建議[疑難排解](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)一節。
 
 ## <a name="see-also"></a>另請參閱
 
-[如何：在 C/C++ 應用程式中內嵌資訊清單](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md)<br/>
-[關於私用組件](/windows/desktop/SbsCs/about-private-assemblies-)<br/>
-[資訊清單工具](/windows/desktop/SbsCs/mt-exe)<br/>
-[了解 C/C++ 程式的資訊清單產生過程](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+[了解 C/C++ 程式的資訊清單產生過程](understanding-manifest-generation-for-c-cpp-programs.md)

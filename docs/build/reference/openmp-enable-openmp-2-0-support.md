@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /openmp compiler option [C++]
 - -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-ms.openlocfilehash: bea51c7af41df666fd441555daa0d8d8387377ac
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f1edcc6d29a5b84106b3a5fd91d2446c34e0f7b9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414131"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807464"
 ---
 # <a name="openmp-enable-openmp-20-support"></a>/openmp (啟用 OpenMP 2.0 支援)
 
@@ -29,7 +29,7 @@ ms.locfileid: "57414131"
 
 `#pragma omp` 用來指定[指示詞](../../parallel/openmp/reference/openmp-directives.md)並[子句](../../parallel/openmp/reference/openmp-clauses.md)。 如果 **/openmp**中未指定編譯中，編譯器會忽略 OpenMP 子句和指示詞。 [OpenMP 函式](../../parallel/openmp/reference/openmp-functions.md)呼叫會處理編譯器即使 **/openmp**未指定。
 
-應用程式編譯 **/openmp**並 **/clr**只能在單一應用程式網域的程序中執行; 不支援多個應用程式定義域。 也就是執行的模組建構函式 (.cctor) 時，它會偵測處理程序會使用編譯 **/openmp**如果應用程式載入到非預設的執行階段。 如需詳細資訊，請參閱 < [appdomain](../../cpp/appdomain.md)， [/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)，並[初始化混合組件](../../dotnet/initialization-of-mixed-assemblies.md)。
+應用程式編譯 **/openmp**並 **/clr**只能在單一應用程式網域的程序中執行; 不支援多個應用程式定義域。 也就是執行的模組建構函式 (.cctor) 時，它會偵測處理程序會使用編譯 **/openmp**如果應用程式載入到非預設的執行階段。 如需詳細資訊，請參閱 < [appdomain](../../cpp/appdomain.md)， [/clr （Common Language Runtime 編譯）](clr-common-language-runtime-compilation.md)，並[初始化混合組件](../../dotnet/initialization-of-mixed-assemblies.md)。
 
 如果您嘗試載入以編譯應用程式 **/openmp**並 **/clr**非預設應用程式定義域，<xref:System.TypeInitializationException>會擲回例外狀況，偵錯工具之外，偵錯工具中，將會擲回 OpenMPWithMultipleAppdomainsException 例外狀況。
 
@@ -45,7 +45,7 @@ Microsoft 建議，您不會寫入 **/openmp**應用程式，可讓部分信任�
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 展開 [組態屬性] 節點。
 
@@ -113,5 +113,5 @@ int main(int argc, char* argv[]) {
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)

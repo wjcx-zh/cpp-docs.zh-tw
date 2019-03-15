@@ -1,16 +1,16 @@
 ---
 title: ARM64 例外狀況處理
 ms.date: 11/19/2018
-ms.openlocfilehash: a4d4adcc365c1e9caf7faa0e225fabe133d0a6eb
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 921029704e4bf5adabfbe0a82387dadc911b9036
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176675"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816148"
 ---
 # <a name="arm64-exception-handling"></a>ARM64 例外狀況處理
 
-Windows 上 ARM64 會使用相同的結構化例外狀況，以處理非同步硬體產生的例外狀況和同步軟體產生的例外狀況的機制。 語言專屬例外狀況處理常式使用語言協助程式函式，以 Windows 結構化例外狀況處理為基礎，進行建置。 本文件說明在 Windows 上 ARM64 和 Microsoft ARM 組譯工具和 Visual c + + 編譯器所產生的程式碼所使用的語言協助程式中處理的例外狀況。
+Windows 上 ARM64 會使用相同的結構化例外狀況，以處理非同步硬體產生的例外狀況和同步軟體產生的例外狀況的機制。 語言專屬例外狀況處理常式使用語言協助程式函式，以 Windows 結構化例外狀況處理為基礎，進行建置。 本文件說明在 Windows 上 ARM64 和 Microsoft ARM 組譯工具和 MSVC 編譯器所產生的程式碼所使用的語言協助程式中處理的例外狀況。
 
 ## <a name="goals-and-motivation"></a>目標和動機
 
@@ -44,7 +44,7 @@ Windows 上 ARM64 會使用相同的結構化例外狀況，以處理非同步�
 
 1. 終沒有條件式程式碼。
 
-1. 專用框架指標暫存器： sp 儲存在初構中其他暫存器 (r29) 時，如果，註冊會維持不變，在函式，如此原始 sp 可能隨時復原。
+1. 專用的框架指標暫存器：如果預存程序儲存在初構中，註冊其他暫存器 (r29) 維持不變在函式，如此原始 sp 可能隨時復原。
 
 1. 除非 sp 儲存在其他暫存器時，堆疊指標的所有操作都嚴格都發生在初構和終解。
 
@@ -52,7 +52,7 @@ Windows 上 ARM64 會使用相同的結構化例外狀況，以處理非同步�
 
 ## <a name="arm64-stack-frame-layout"></a>ARM64 堆疊框架配置
 
-![堆疊框架配置](../build/media/arm64-exception-handling-stack-frame.png "堆疊框架配置")
+![堆疊框架配置](media/arm64-exception-handling-stack-frame.png "堆疊框架配置")
 
 框架鏈結函式，fp 和 lr 組可以儲存在變數根據最佳化考量的區域中的任何位置。 目標是要最大化單一框架指標 (r29) 或堆疊指標 (sp) 為基礎的單一指令可以觸達的區域變數的數目。 不過針對`alloca`函式一定會鏈結和 r29 必須指向堆疊的底部。 若要允許更好的暫存器配對-位址-模式涵蓋範圍，靜態暫存器 aave 區域都位於區域堆疊的頂端。 以下是範例，說明幾個最有效率的初構序列。 為了清楚起見，較佳的快取位置將被呼叫端儲存的暫存器儲存在所有的標準初構中的順序為"成長設定 」 的順序。 `#framesz` 下面代表 （不含 alloca 區域） 的整個堆疊的大小。 `#localsz` 和`#outsz`指出本機區域大小 (包括儲存區域\<r29，lr > 組) 和分別傳出參數的大小。
 
@@ -187,7 +187,7 @@ Windows 上 ARM64 會使用相同的結構化例外狀況，以處理非同步�
 
 適用於 ARM64 的每一個.pdata 記錄是 8 個位元組的長度。 每個函式的 32 位元 RVA 開始的第一個字，後面接著第二個與中的記錄位置的一般格式包含可變長度.xdata 區塊指標或描述標準函式回溯序列之封裝字組。
 
-![.pdata 記錄版面配置](../build/media/arm64-exception-handling-pdata-record.png ".pdata 記錄版面配置")
+![.pdata 記錄版面配置](media/arm64-exception-handling-pdata-record.png ".pdata 記錄版面配置")
 
 欄位如下所示：
 
@@ -203,7 +203,7 @@ Windows 上 ARM64 會使用相同的結構化例外狀況，以處理非同步�
 
 當封裝回溯格式不足以描述函式的回溯時，必須建立可變長度的 .xdata 記錄。 此記錄的位址儲存在 .pdata 記錄的第二個字組。 .xdata 的格式是可變長度的一組封裝字組：
 
-![.xdata 記錄版面配置](../build/media/arm64-exception-handling-xdata-record.png ".xdata 記錄版面配置")
+![.xdata 記錄版面配置](media/arm64-exception-handling-xdata-record.png ".xdata 記錄版面配置")
 
 這項資料會分成四個區段：
 
@@ -291,14 +291,14 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 |`save_fplr_x`|        10zzzzzz： 儲存\<r29，lr > 配對在 [sp-（#Z + 1） * 8] ！，索引預先位移 > =-512 |
 |`alloc_m`|        11000xxx'xxxxxxxx： 配置大小的大型堆疊\<16k (2 ^11 * 16)。 |
 |`save_regp`|        110010xx'xxzzzzzz： 儲存 r(19+#X) 組，在 [sp + #Z * 8]，位移\<= 504 |
-|`save_regp_x`|        110011xx'xxzzzzzz： 儲存在組 r(19+#X) [預存程序-（#Z + 1） * 8] ！，索引預先位移 > =-512 |
+|`save_regp_x`|        110011xx'xxzzzzzz: save pair r(19+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -512 |
 |`save_reg`|        110100xx'xxzzzzzz： 儲存在登錄 r(19+#X) [預存程序 + #Z * 8]，位移\<= 504 |
-|`save_reg_x`|        1101010 x'xxxzzzzz： 儲存在登錄 r(19+#X) [預存程序-（#Z + 1） * 8] ！，索引預先位移 > =-256 |
+|`save_reg_x`|        1101010x'xxxzzzzz: save reg r(19+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -256 |
 |`save_lrpair`|         1101011 x'xxzzzzzz： 儲存配對\<r19 + 2 *#X，lr > 在 [sp + #Z*8]，位移\<= 504 |
 |`save_fregp`|        1101100 x'xxzzzzzz： 儲存在組 d(8+#X) [預存程序 + #Z * 8]，位移\<= 504 |
-|`save_fregp_x`|        1101101 x'xxzzzzzz： 將組 d(8+#X) 儲存在 [預存程序-（#Z + 1） * 8] ！，索引預先位移 > =-512 |
+|`save_fregp_x`|        1101101x'xxzzzzzz: save pair d(8+#X), at [sp-(#Z+1)*8]!, pre-indexed offset >= -512 |
 |`save_freg`|        1101110 x'xxzzzzzz： 儲存在登錄 d(8+#X) [預存程序 + #Z * 8]，位移\<= 504 |
-|`save_freg_x`|        11011110' xxxzzzzz： 儲存在登錄 d(8+#X) [預存程序-（#Z + 1） * 8] ！，索引預先位移 > =-256 |
+|`save_freg_x`|        11011110'xxxzzzzz: save reg d(8+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -256 |
 |`alloc_l`|         11100000' xxxxxxxx 'xxxxxxxx' xxxxxxxx： 配置大小的大型堆疊\<256m (2 ^24 * 16) |
 |`set_fp`|        11100001： 設定 r29： 與： mov r29 預存程序 |
 |`add_fp`|        11100010' xxxxxxxx： 設定使用 r29： 新增 r29、 sp、 #x * 8 |
@@ -306,16 +306,16 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 |`end`|            11100100： 結尾回溯程式碼。 表示 ret 終解中。 |
 |`end_c`|        11100101： 鏈結是目前範圍中的回溯程式碼的結尾。 |
 |`save_next`|        11100110： 儲存下一個非暫時性 Int 或 FP 暫存器組。 |
-|`arithmetic(add)`|    11100111' 000zxxxx: lr 新增 cookie reg(z) (0 = x28，1 = 預存程序);新增 lr，lr，reg(z) |
-|`arithmetic(sub)`|    11100111' 001zxxxx: sub cookie reg(z) lr 從 (0 = x28，1 = 預存程序);sub lr，lr，reg(z) |
-|`arithmetic(eor)`|    11100111' 010zxxxx: eor lr 與 cookie reg(z) (0 = x28，1 = 預存程序);eor lr，lr，reg(z) |
+|`arithmetic(add)`|    11100111'000zxxxx: add cookie reg(z) to lr (0=x28, 1=sp); add lr, lr, reg(z) |
+|`arithmetic(sub)`|    11100111'001zxxxx: sub cookie reg(z) from lr (0=x28, 1=sp); sub lr, lr, reg(z) |
+|`arithmetic(eor)`|    11100111'010zxxxx: eor lr with cookie reg(z) (0=x28, 1=sp); eor lr, lr, reg(z) |
 |`arithmetic(rol)`|    11100111' 0110xxxx： 模擬選角色的使用 cookie reg (x28); lrxip0 = neg x28;ror lr xip0 |
-|`arithmetic(ror)`|    11100111' 100zxxxx: ror lr 與 cookie reg(z) (0 = x28，1 = 預存程序);ror lr，lr，reg(z) |
-| |            11100111: xxxz---:---保留 |
+|`arithmetic(ror)`|    11100111'100zxxxx: ror lr with cookie reg(z) (0=x28, 1=sp); ror lr, lr, reg(z) |
+| |            11100111: xxxz----: ---- reserved |
 | |              11101xxx： 保留供自訂的堆疊以下案例只產生 asm 常式 |
-| |              11101001: MSFT_OP_TRAP_FRAME 自訂堆疊 |
-| |              11101010: MSFT_OP_MACHINE_FRAME 自訂堆疊 |
-| |              11101011: MSFT_OP_CONTEXT 自訂堆疊 |
+| |              11101001:自訂 MSFT_OP_TRAP_FRAME 堆疊 |
+| |              11101010:自訂 MSFT_OP_MACHINE_FRAME 堆疊 |
+| |              11101011:自訂 MSFT_OP_CONTEXT 堆疊 |
 | |              1111xxxx： 保留 |
 
 具有涵蓋多個位元組的大數值的指示，會先儲存的最大顯著性的位元。 上述的回溯程式碼被設計能使得只要查閱此程式碼的第一個位元組，就可以知道以位元組為單位的回溯程式碼的總大小。 假設每個回溯程式碼完全對應到在初構/終解中的指示，來計算大小的初構和終解中，所有必須完成是引導從序列開頭到結尾，以判斷使用的查閱資料表或類似的裝置時間長度 cor是回應的 opcode。
@@ -334,7 +334,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 封裝的.pdata 記錄格式的回溯資料看起來像這樣：
 
-![.pdata 記錄與封裝回溯資料](../build/media/arm64-exception-handling-packed-unwind-data.png ".pdata 記錄與封裝回溯資料")
+![.pdata 記錄與封裝回溯資料](media/arm64-exception-handling-packed-unwind-data.png ".pdata 記錄與封裝回溯資料")
 
 欄位如下所示：
 
@@ -357,29 +357,29 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 屬於類別 1、 2 （不含連出的 [參數] 區域）、 3 和 4 在上一節中的標準初構可以封裝的回溯格式來表示。  終如標準函式，請遵循類似的表單，除非**H**沒有任何作用，`set_fp`省略指令，而且在終解相反的順序的步驟，以及在每個步驟的指示。 封裝的 xdata 的演算法會遵循下列步驟下, 表所述：
 
-步驟 0： 執行預先計算的每個區域的大小。
+步驟 0:執行預先計算的每個區域的大小。
 
-步驟 1： 儲存 Int 被呼叫端儲存的暫存器。
+步驟 1：儲存 Int 被呼叫端儲存的暫存器。
 
-步驟 2： 此步驟僅適用於類型 4 中最早的章節。 lr 會儲存在 Int 區域結尾處。
+步驟 2：這個步驟是類型 4 最早的章節中的特定項目。 lr 會儲存在 Int 區域結尾處。
 
-步驟 3： 儲存 FP 被呼叫端儲存的暫存器。
+步驟 3：儲存 FP 被呼叫端儲存的暫存器。
 
-步驟 4： 儲存的主要參數區域中的輸入引數。
+步驟 4：將輸入引數儲存在家用參數區域。
 
-步驟 5： 配置剩餘的講座，包括本機區域中， \<r29，lr > 配對和傳出的參數區域。 5a 對應至標準的類型 1。 5b 和 5c 適用於標準的類型 2。 5d 和 5e 適用於這兩個型別為 3，類型 4。
+步驟 5：配置剩餘的講座，包括本機區域中， \<r29，lr > 配對和傳出的參數區域。 5a 對應至標準的類型 1。 5b 和 5c 適用於標準的類型 2。 5d 和 5e 適用於這兩個型別為 3，類型 4。
 
-步驟 #|旗標值|# 個指示|作業碼|回溯程式碼
+步驟 #|旗標值|# 個指示|Opcode|回溯程式碼
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **regI** < = 10|RegI / 2 + **RegI** %2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
-2|**CR**= = 01 *|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
-3|0 < **RegF** < = 7|(RegF + 1）/2 +<br/>(RegF + 1) %2）。|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
+1|0 < **RegI** <= 10|RegI / 2 + **RegI** %2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+2|**CR**==01*|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
+3|0 < **RegF** <=7|(RegF + 1）/2 +<br/>(RegF + 1) %2）。|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
 4|**H** = = 1|4|`stp r0,r1,[sp, #intsz+#fpsz]`<br/>`stp r2,r3,[sp, #intsz+#fpsz+16]`<br/>`stp r4,r5,[sp, #intsz+#fpsz+32]`<br/>`stp r6,r7,[sp, #intsz+#fpsz+48]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**CR** = = 11 & & #locsz<br/> < = 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
-5b|**CR** == 11 &&<br/>512 < #locsz < = 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5c|**CR** = = 11 & & #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5d|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz < = 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
+5a|**CR** == 11 && #locsz<br/> <= 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+5b|**CR** == 11 &&<br/>512 < #locsz <= 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5c|**CR** == 11 && #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5d|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz <= 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
 5e|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
 \* 如果**CR** = = 01 並**RegI**是奇數，步驟 2 和步驟 1 中的最後一個 save_rep 會合併成一個 save_regp。
@@ -531,7 +531,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 ## <a name="examples"></a>範例
 
-### <a name="example-1-frame-chained-compact-form"></a>範例 1： 框架鏈結精簡格式
+### <a name="example-1-frame-chained-compact-form"></a>範例 1：框架鏈結的精簡格式
 
 ```asm
 |Foo|     PROC
@@ -549,7 +549,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
     ;Flags[SingleProEpi] functionLength[492] RegF[0] RegI[1] H[0] frameChainReturn[Chained] frameSize[2080]
 ```
 
-### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>範例 2︰ 框架鏈結完整形式與鏡像初構和終解
+### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>範例 2：框架鏈結完整形式與鏡像初構和終解
 
 ```asm
 |Bar|     PROC
@@ -583,7 +583,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 請注意 EpilogStart 索引 [0]，指向相同的初構回溯程式碼序列。
 
-### <a name="example-3-variadic-unchained-function"></a>範例 3︰ Variadic 會見到函式
+### <a name="example-3-variadic-unchained-function"></a>範例 3：Variadic 會見到函式
 
 ```asm
 |Delegate| PROC
@@ -622,9 +622,9 @@ ULONG ComputeXdataSize(PULONG *Xdata)
     ;end
 ```
 
-注意： EpilogStart 索引 [4] 指向中間的初構回溯程式碼 （部分重複使用回溯陣列）。
+注意:初構回溯程式碼 （部分重複使用回溯陣列） 的中間點 EpilogStart 索引 [4]。
 
 ## <a name="see-also"></a>另請參閱
 
 [ARM64 ABI 慣例概觀](arm64-windows-abi-conventions.md)<br/>
-[ARM 例外狀況處理](../build/arm-exception-handling.md)
+[ARM 例外狀況處理](arm-exception-handling.md)

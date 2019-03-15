@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -JMC compiler option [C++]
 - User code, debugging
 - JMC compiler option [C++]
-ms.openlocfilehash: d1950ff4a973ddbd23ff902ba4afb0d45dacb0e5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c107ad7107d2a65ed19719933aa127c0557916ce
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417758"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808049"
 ---
 # <a name="jmc-just-my-code-debugging"></a>/ JMC （Just My Code 偵錯）
 
@@ -36,7 +36,7 @@ Visual Studio [Just My Code](/visualstudio/debugger/just-my-code)設定可讓您
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **C/c + +** > **一般**屬性頁。
 
@@ -48,5 +48,5 @@ Visual Studio [Just My Code](/visualstudio/debugger/just-my-code)設定可讓您
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)<br/>
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>

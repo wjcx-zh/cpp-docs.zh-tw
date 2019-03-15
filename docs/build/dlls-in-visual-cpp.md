@@ -1,6 +1,6 @@
 ---
-title: Visual C++ 中的 DLL
-ms.date: 11/04/2016
+title: 在 Visual Studio 中建立 C/c + + Dll
+ms.date: 12/10/2018
 helpviewer_keywords:
 - executable files [C++]
 - dynamic linking [C++]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DLLs [C++]
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
-ms.openlocfilehash: be653be42b1905f1edbcf8d50f7aef2b343c2691
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bd30c84ba202c3f772ad4451368efde10285e6c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667190"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815810"
 ---
-# <a name="dlls-in-visual-c"></a>Visual C++ 中的 DLL
+# <a name="create-cc-dlls-in-visual-studio"></a>在 Visual Studio 中建立 C/c + + Dll
 
 在 Windows，動態連結程式庫 (DLL) 會是一種可做為函式和資源的共用程式庫的可執行檔。 動態連結是一項作業系統功能，可讓可執行檔呼叫函式，或使用儲存在個別的檔案中的資源。 這些函式和資源可以與使用它們的可執行檔分開編譯和部署。 DLL 不是獨立的可執行檔;它會呼叫它的應用程式內容中執行。 作業系統可以將 DLL 載入應用程式的記憶體空間在載入應用程式 (*隱含連結*)，或視需要在執行階段 (*明確連結*)。 DLL 也讓您輕鬆地在可執行檔之間共用函式和資源。 多個應用程式可以同時存取記憶體中單一 DLL 複本的內容。
 
@@ -61,61 +61,61 @@ ms.locfileid: "50667190"
 
 下列主題提供有關的詳細的資訊，Visual c + + dll 的程式設計。
 
-[逐步解說：建立和使用動態連結程式庫 (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
+[逐步解說：建立和使用動態連結程式庫 (C++)](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
 描述如何使用 Visual Studio 來建立並使用 DLL。
 
-[DLL 的種類](../build/kinds-of-dlls.md)<br/>
+[DLL 的種類](kinds-of-dlls.md)<br/>
 提供關於各種不同可建置 DLL 的資訊。
 
-[DLL 常見問題集](../build/dll-frequently-asked-questions.md)<br/>
+[DLL 常見問題集](dll-frequently-asked-questions.md)<br/>
 提供 DLL 常見問題的解答。
 
-[將可執行檔連結至 DLL](../build/linking-an-executable-to-a-dll.md)<br/>
+[將可執行檔連結至 DLL](linking-an-executable-to-a-dll.md)<br/>
 說明 DLL 的明確和隱含連結方式。
 
-[初始化 DLL](../build/run-time-library-behavior.md#initializing-a-dll)<br/>
+[初始化 DLL](run-time-library-behavior.md#initializing-a-dll)<br/>
 討論您的 DLL 載入時必須執行的 DLL 初始化程式碼。
 
-[DLL 和 Visual C++ 執行階段程式庫行為](../build/run-time-library-behavior.md)<br/>
+[DLL 和 Visual C++ 執行階段程式庫行為](run-time-library-behavior.md)<br/>
 說明執行階段程式庫如何執行 DLL 啟動程序。
 
-[LoadLibrary 和 AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)<br/>
+[LoadLibrary 和 AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)<br/>
 討論如何使用**LoadLibrary**和`AfxLoadLibrary`明確地連結至 DLL，以在執行階段。
 
-[GetProcAddress](../build/getprocaddress.md)<br/>
+[GetProcAddress](getprocaddress.md)<br/>
 討論如何使用**GetProcAddress**取得 DLL 中匯出的函式的位址。
 
-[FreeLibrary 和 AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)<br/>
+[FreeLibrary 和 AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)<br/>
 討論如何使用**FreeLibrary**和`AfxFreeLibrary`不再需要 DLL 模組時。
 
 [動態連結程式庫搜尋順序](/windows/desktop/Dlls/dynamic-link-library-search-order)<br/>
 說明 Windows 作業系統在系統上找出 DLL 時所用的搜尋路徑。
 
-[動態連結至 MFC 之 MFC DLL 的模組狀態](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>
+[動態連結至 MFC 之 MFC DLL 的模組狀態](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>
 描述的一般 MFC DLL 動態連結至 MFC 的模組狀態。
 
-[MFC 延伸模組 DLL](../build/extension-dlls-overview.md)<br/>
+[MFC 延伸模組 DLL](extension-dlls-overview.md)<br/>
 說明實作衍生自現有 MFC 程式庫類別的重複使用類別的 DLL。
 
-[建立僅含資源的 DLL](../build/creating-a-resource-only-dll.md)<br/>
+[建立僅含資源的 DLL](creating-a-resource-only-dll.md)<br/>
 說明僅含資源 DLL，這種 DLL 只會包含資源，例如，圖示、點陣圖、字串和對話方塊。
 
-[MFC 應用程式中的當地語系化資源：附屬 DLL](../build/localized-resources-in-mfc-applications-satellite-dlls.md)<br/>
+[MFC 應用程式中的當地語系化資源：附屬 DLL](localized-resources-in-mfc-applications-satellite-dlls.md)<br/>
 提供對附屬 DLL 的增強支援，這項功能可協助建立當地語系化成多國語言的應用程式。
 
-[匯入和匯出](../build/importing-and-exporting.md)<br/>
+[匯入和匯出](importing-and-exporting.md)<br/>
 說明將公用 (Public) 符號匯入應用程式，或是從 DLL 匯出函式的方法。
 
-[Active 技術和 DLL](../build/active-technology-and-dlls.md)<br/>
+[Active 技術和 DLL](active-technology-and-dlls.md)<br/>
 讓物件伺服程式可以於 DLL 內實作。
 
-[DLL 中的 Automation](../build/automation-in-a-dll.md)<br/>
+[DLL 中的 Automation](automation-in-a-dll.md)<br/>
 說明 MFC DLL 精靈提供的 Automation 選項。
 
 [MFC DLL 命名慣例](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)<br/>
 討論包含在 MFC 的 DLL 和程式庫如何遵守結構化的命名慣例。
 
-[從 Visual Basic 應用程式呼叫 DLL 函式](../build/calling-dll-functions-from-visual-basic-applications.md)<br/>
+[從 Visual Basic 應用程式呼叫 DLL 函式](calling-dll-functions-from-visual-basic-applications.md)<br/>
 說明從 Visual Basic 應用程式呼叫 DLL 函式的方式。
 
 ## <a name="related-sections"></a>相關章節

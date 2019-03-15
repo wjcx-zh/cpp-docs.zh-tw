@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-ms.openlocfilehash: 1aaf18003f831ca94ecd90dafb472ecb894b8a60
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424791"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815823"
 ---
 # <a name="importing-and-exporting"></a>匯入和匯出
 
@@ -27,7 +27,7 @@ ms.locfileid: "57424791"
 
 模組定義 (.def) 檔案是文字檔，其中包含一或多個模組陳述式，說明 DLL 的各種屬性。 如果您不要使用 **__declspec （dllimport)** 或是 **__declspec （dllexport)** 來匯出 DLL 的函式，則 DLL 就需要.def 檔。
 
-您可以使用.def 檔，來[匯入應用程式](../build/importing-using-def-files.md)上，或者[從 DLL 匯出](../build/exporting-from-a-dll-using-def-files.md)。
+您可以使用.def 檔，來[匯入應用程式](importing-using-def-files.md)上，或者[從 DLL 匯出](exporting-from-a-dll-using-def-files.md)。
 
 ## <a name="using-declspec"></a>使用 __declspec
 
@@ -41,10 +41,10 @@ Win32 可攜式執行檔格式被設計來最小化必須接觸到，若要修�
 
 ## <a name="what-do-you-want-to-do"></a>請您指定選項。
 
-- [匯入至應用程式](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [匯入至應用程式](importing-into-an-application-using-declspec-dllimport.md)
 
-- [從 DLL 匯出](../build/exporting-from-a-dll.md)
+- [從 DLL 匯出](exporting-from-a-dll.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)
+[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)

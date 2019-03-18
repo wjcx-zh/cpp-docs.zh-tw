@@ -5,25 +5,26 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: 48c18ce5af758e1329f149bc49969dad733af88f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e189ead864fe2be6e0ccb3bc76a58f2441740076
+ms.sourcegitcommit: a901c4acbfc80ca10663d37c09921f04c5b6dd17
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651369"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58142558"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>預設為關閉的編譯器警告
-編譯器包含預設關閉的警告，因為大部分的開發人員不想要看到它們。 在某些情況下，它們代表樣式的選擇，或在較舊的程式碼，是常見的習慣用語或利用語言的 Microsoft 擴充功能。 在其他情況下，它們表示程式設計人員通常都會不正確的假設，可能會導致非預期或未定義行為的區域。 有些警告可能非常冗長的程式庫標頭中。 C 執行階段程式庫和 c + + 標準程式庫要不發出任何警告，只能在警告層級[/w4](../build/reference/compiler-option-warning-level.md)。
+
+編譯器支援根據預設，已關閉的警告，因為大部分的開發人員找不到它們很有用。 在某些情況下，它們會警告有關樣式的選擇，或在較舊的程式碼中常見的習慣用語。 其他警告會使用該語言的 Microsoft 擴充功能的相關資訊。 在其他情況下，它們表示程式設計人員通常都會不正確的假設，可能會導致非預期或未定義行為的區域。 如果啟用，有些警告可能會多次出現在 程式庫標頭。 C 執行階段程式庫和 c + + 標準程式庫要不發出任何警告，只能在警告層級[/w4](../build/reference/compiler-option-warning-level.md)。
 
 ## <a name="enable-warnings-that-are-off-by-default"></a>啟用預設為關閉的警告
 
 您可以啟用為正常關閉警告預設使用下列選項之一：
 
-- **#pragma 警告 (預設值：** *warning_number* **)**
+- **#pragma warning(default :** *warning_number* **)**
 
    指定的警告 (*warning_number*) 會在其預設層級啟用。 警告的文件包含警告的預設層級。
 
-- **#pragma 警告 (** *warning_level* **:** *warning_number* **)**
+- **#pragma warning(** *warning_level* **:** *warning_number* **)**
 
    指定的警告 (*warning_number*) 指定的層級啟用 (*warning_level*)。
 
@@ -33,7 +34,7 @@ ms.locfileid: "50651369"
 
 - [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
-   這可讓警告*nnnn*層級*L*。
+   此選項會啟用警告*nnnn*層級*L*。
 
 ## <a name="warnings-that-are-off-by-default"></a>預設為關閉的警告
 
@@ -43,7 +44,8 @@ ms.locfileid: "50651369"
 |-|-|
 |[C4061](../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md) （層級 4）|列舉值 '*識別碼*'參數中的列舉'*列舉*' case 標籤並未明確處理|
 |[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md) （層級 4）|列舉值 '*識別碼*'參數中的列舉'*列舉*' 未處理|
-|C4191 (層級 3)|'*運算子*': 不安全的轉換，從'*type_of_expression*'to'*type_required*'|
+| [C4165](../error-messages/compiler-warnings/compiler-warning-level-1-c4165.md) （層級 1） | 'HRESULT' 轉換為 'bool';確定這是您想要？ |
+| [C4191](../error-messages/compiler-warnings/compiler-warning-level-3-c4191.md) （層級 3）|'*運算子*': 不安全的轉換，從'*type_of_expression*'to'*type_required*'|
 |[C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) （層級 4）|'*識別碼*': 從轉換'*type1*'to'*type2*'，資料可能遺失|
 |[C4254](../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md) （層級 4）|'*運算子*': 從轉換'*type1*'to'*type2*'，資料可能遺失|
 |[C4255](../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md) （層級 4）|'*函式*': 未提供的函式原型： 轉換為 '(void)' 的' （）'|
@@ -51,7 +53,7 @@ ms.locfileid: "50651369"
 |[C4264](../error-messages/compiler-warnings/compiler-warning-level-1-c4264.md) （層級 1）|'*virtual_function*': 沒有可用的基底虛擬成員函式的覆寫'*類別*'; 函式已隱藏|
 |[C4265](../error-messages/compiler-warnings/compiler-warning-level-3-c4265.md) （層級 3）|'*類別*': 類別有虛擬函式，但不是虛擬解構函式|
 |[C4266](../error-messages/compiler-warnings/compiler-warning-level-4-c4266.md) （層級 4）|'*函式*': 沒有可用的基底虛擬成員函式的覆寫'*型別*'; 函式已隱藏|
-|[C4287](../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md) （層級 3）|'*運算子*': unsigned 和負常數不相符|
+|[C4287](../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md) （層級 3）|'*operator*': unsigned/negative constant mismatch|
 |[C4289](../error-messages/compiler-warnings/compiler-warning-level-4-c4289.md) （層級 4）|使用非標準擴充: '*var*': for 迴圈範圍外使用 for-loop 中所宣告的迴圈控制變數|
 |[C4296](../error-messages/compiler-warnings/compiler-warning-level-4-c4296.md) （層級 4）|'*運算子*': 運算式永遠是 false|
 |[C4339](../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md) （層級 4）|'*型別*': 未定義的類型使用中偵測到 CLR 中繼資料-使用這個型別可能會導致執行階段例外狀況|
@@ -64,7 +66,7 @@ ms.locfileid: "50651369"
 |C4388 （層級 4）|帶正負號/不帶正負號不相符|
 |[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) （層級 2）|'*函式*': 函式簽章含有類型'*型別*';C + + 物件是純程式碼之間傳遞的不安全和混合或原生|
 |C4426 （層級 1）|變更包含標頭之後最佳化旗標可能會因為 #pragma optimize （） <sup>14.1</sup>|
-|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) （層級 4）|'*class1*': / vd2 底下的物件配置將因虛擬基底'*class2*'|
+|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) （層級 4）|'*class1*':/ Vd2 底下的物件配置將因虛擬基底 '*class2*'|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) （層級 4）|從虛擬基底 dynamic_cast '*class1*'到'*class2*' 無法在某些內容中|
 |C4444 （層級 3）|此內容未實作最上層的 '__unaligned'|
 |[C4464](../error-messages/compiler-warnings/c4464.md) （層級 4）|相對 include 路徑包含 '..'|
@@ -97,6 +99,7 @@ ms.locfileid: "50651369"
 |[C4626](../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md) （層級 4）|'derived class': 因為無法存取基底類別的指派運算子，所以無法產生指派運算子|
 |[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) （層級 1）|不支援使用 -Ze 的雙拼詞。 字元順序 '*雙拼詞*'沒有解譯為替代語彙基元'*char*'|
 |[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) （層級 3）|'*執行個體*': 區域靜態物件的建構不是安全執行緒|
+| C4643 （層級 4） | 向前宣告 '*識別碼*' c + + 標準不允許 std 命名空間中。 <sup>15.8</sup> |
 |C4647 （層級 3）|行為變更： __is_pod (*型別*) 之前的版本會有不同的值|
 |C4654 （層級 4）|放在之前的程式碼包含先行編譯標頭行都會被忽略。 您可以將程式碼加入先行編譯標頭。 <sup>14.1</sup>|
 |[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) （層級 4）|'*符號*'未定義成前置處理器巨集，以 '0' 取代'*指示詞*'|
@@ -112,7 +115,9 @@ ms.locfileid: "50651369"
 |C4774 （層級 4）|'*字串*': 格式字串引數中必須要有*數目*不是字串常值|
 |C4777 （層級 4）|'*函式*': 格式字串'*字串*'需要類型的引數'*type1*'，但 variadic 引數*數目*具有類型 '*type2*'|
 |C4786 （層級 3）|'*符號*': 物件名稱被截斷成'*數目*' 的偵錯資訊中的字元|
+| [C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) （層級 4） | 隱含的轉換，從 '*型別*' 為 bool。 可能導致資訊遺失<sup>16.0</sup> |
 |[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) （層級 4）|'*位元組*'位元組填補已加建構後'*member_name*'|
+| [C4822](../error-messages/compiler-warnings/compiler-warning-level-1-c4822.md) （層級 1） | '*成員*': 區域類別成員函式沒有主體 |
 |C4826 （層級 2）|從 '*type1*'到'*type2*' 是 sign-extended。 這可能會導致意外發生執行階段行為。|
 |C4837 （層級 4）|偵測到的三併詞: '??*字元*'取代'*字元*'|
 |C4841 （層級 4）|非標準擴充： offsetof 中所使用的複合成員指示項|
@@ -150,6 +155,10 @@ ms.locfileid: "50651369"
 <sup>15.3</sup>這項警告是在 Visual Studio 2017 15.3 版開始提供。<br/>
 <sup>15.5</sup>這項警告是從 Visual Studio 2017 15.5 版中推出。<br/>
 <sup>15.7</sup>這項警告是從 Visual Studio 2017 15.7 版中推出。<br/>
+<sup>15.8</sup>這項警告是在 Visual Studio 2017 版本 15.8 開始提供。<br/>
+::: moniker range=">= vs-2019"
+<sup>16.0</sup>這項警告是可用以啟動 Visual Studio 2019 RTM。<br/>
+::: moniker-end
 <sup>為永久</sup>此警告為關閉，除非[/permissive--](../build/reference/permissive-standards-conformance.md)設定編譯器選項。<br/>
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>在舊版中預設關閉警告
@@ -167,7 +176,7 @@ ms.locfileid: "50651369"
 
 |||
 |-|-|
-|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) （層級 4）|遺漏類型規範 - 假設為 int。 注意: C 已不再支援 default-int|
+|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) （層級 4）|遺漏類型規範 - 假設為 int。 注意:C 不再支援 default-int|
 
 ## <a name="see-also"></a>另請參閱
 

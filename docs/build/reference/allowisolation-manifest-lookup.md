@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -ALLOWISOLATION linker option
 - /ALLOWISOLATION linker option
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
-ms.openlocfilehash: 2309a237ccd7ccb18a11b180c4f91bbf9055d70b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: fe76e0d40a2a19a002136a7e095875ad2903d434
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418330"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818449"
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (資訊清單查閱)
 
@@ -39,7 +39,7 @@ ms.locfileid: "57418330"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **連結器** > **資訊清單檔案**屬性頁。
 
@@ -47,5 +47,5 @@ ms.locfileid: "57418330"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)
+[MSVC 連結器參考](linking.md)<br/>
+[MSVC 連結器選項](linker-options.md)

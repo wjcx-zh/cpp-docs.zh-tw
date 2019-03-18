@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ismbc routines
 - _ismbc routines
 ms.assetid: b8995391-7857-4ac3-9a1e-de946eb4464d
-ms.openlocfilehash: 97094c6773ee6b67655dacc557335ed222fed311
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: dd187be93b5df0160686fe765f65c25e14800b75
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326728"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748680"
 ---
 # <a name="ismbc-routines"></a>_ismbc 常式
 
@@ -41,18 +41,18 @@ ms.locfileid: "51326728"
 
 |常式傳回的值|測試條件|字碼頁 932 範例|
 |-------------|--------------------|---------------------------|
-|[_ismbcalnum、_ismbcalnum_l](../c-runtime-library/reference/ismbcalnum-functions.md)|英數字元|只有在 `c` 是代表 ASCII 英文字母的單一位元組時，才傳回非零：請參閱 `_ismbcdigit` 和 `_ismbcalpha` 的範例。|
-|[_ismbcalpha、_ismbcalpha](../c-runtime-library/reference/ismbcalnum-functions.md)|字母順序|只有在 `c` 是代表 ASCII 英文字母 (請參閱 `_ismbcupper` 和 `_ismbclower` 的範例) 或片假名字母的單一位元組時，才傳回非零：0xA6<=`c`<=0xDF。|
-|[_ismbcdigit、_ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|數字|只有在 `c` 是代表 ASCII 數字的單一位元組時，才傳回非零︰0x30<=`c`<=0x39。|
+|[_ismbcalnum、_ismbcalnum_l](../c-runtime-library/reference/ismbcalnum-functions.md)|英數字元|只有在 `c` 是 ASCII 英文字母的單一位元組表示時，才傳回非零：請參閱 `_ismbcdigit` 和 `_ismbcalpha` 的範例。|
+|[_ismbcalpha、_ismbcalpha](../c-runtime-library/reference/ismbcalnum-functions.md)|字母順序|只有在 `c` 是 ASCII 英文字母的單一位元組表示時，才傳回非零：請參閱 `_ismbcupper` 和 `_ismbclower` 的範例；或是片假名字母：0xA6<=`c`<=0xDF。|
+|[_ismbcdigit、_ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|數字|只有在 `c` 是 ASCII 數字的單一位元組表示時，才傳回非零︰0x30<=`c`<=0x39。|
 |[_ismbcgraph、_ismbcgraph_l](../c-runtime-library/reference/ismbcgraph-functions.md)|圖形|只有在 `c` 代表單一位元組，除了空白字元 ( ) 以外的任何 ASCII 或片假名可列印字元時，才傳回非零。 請參閱 `_ismbcdigit`、`_ismbcalpha` 和 `_ismbcpunct` 的範例。|
 |[_ismbclegal、_ismbclegal_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|有效的多位元組字元|只在 `c` 的第一個位元組介於 0x81 - 0x9F 或 0xE0 - 0xFC 的範圍內，同時第二個位元組介於 0x40 - 0x7E 或 0x80 - FC 的範圍內時，才傳回非零。|
-|[_ismbclower、_ismbclower_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|小寫字母|只有在 `c` 是 ASCII 小寫英文字母的單一位元組表示時，才傳回非零值：0x61<=`c`<=0x7A。|
-|[_ismbcprint、_ismbcprint_l](../c-runtime-library/reference/ismbcgraph-functions.md)|可列印|只有在 `c` 是代表包括空白字元 ( ) 之任何 ASCII 或片假名可列印字元的單一位元組時，才傳回非零：請參閱 `_ismbcspace`、`_ismbcdigit`、`_ismbcalpha` 和 `_ismbcpunct` 的範例。|
+|[_ismbclower、_ismbclower_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|小寫字母|只有在 `c` 是 ASCII 小寫英文字母的單一位元組表示時，才傳回非零：0x61<=`c`<=0x7A.|
+|[_ismbcprint、_ismbcprint_l](../c-runtime-library/reference/ismbcgraph-functions.md)|可列印|只有在 `c` 是任何 ASCII 或片假名可列印字元 (包含空白字元 ( )) 的單一位元組表示時，才傳回非零：請參閱 `_ismbcspace`、`_ismbcdigit`、`_ismbcalpha` 和 `_ismbcpunct` 的範例。|
 |[_ismbcpunct、_ismbcpunct_l](../c-runtime-library/reference/ismbcgraph-functions.md)|標點符號|只有在 `c` 是代表任何 ASCII 或片假名標點符號字元的單一位元組時，才傳回非零。|
 |[_ismbcblank、_ismbcblank_l、](../c-runtime-library/reference/ismbcgraph-functions.md)|空格或水平索引標籤|只有在 `c` 是代表空白字元或水平定位字元的單一位元組時，才會傳回非零︰`c`=0x20 或 `c`=0x09。|
 |[_ismbcspace、_ismbcspace_l](../c-runtime-library/reference/ismbcgraph-functions.md)|Whitespace|只有在 `c` 是空白字元時，才傳回非零︰`c`=0x20 或 0x09<=`c`<=0x0D。|
 |[_ismbcsymbol、_ismbcsymbol_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|多位元組的符號|只在 0x8141<=`c`<=0x81AC 時，才傳回非零。|
-|[_ismbcupper、_ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|大寫字母|只有在 `c` 是 ASCII 大寫英文字母的單一位元組表示時，才傳回非零值：0x41<=`c`<=0x5A。|
+|[_ismbcupper、_ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|大寫字母|只有在 `c` 是 ASCII 大寫英文字母的單一位元組表示時，才傳回非零：0x41<=`c`<=0x5A.|
 
 **字碼頁 932 特定**
 
@@ -60,11 +60,11 @@ ms.locfileid: "51326728"
 
 |常式傳回的值|測試條件 (限字碼頁 932)|
 |-------------|-------------------------------------------|
-|[_ismbchira、_ismbchira_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|雙位元組平假名：0x829F<=`c`<=0x82F1。|
-|[_ismbckata、_ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|雙位元組片假名：0x8340<=`c`<=0x8396。|
-|[_ismbcl0、_ismbcl0_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS 非日文漢字：0x8140<=`c`<=0x889E。|
-|[_ismbcl1、_ismbcl1_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS 層級─1：0x889F<=`c`<=0x9872。|
-|[_ismbcl2、_ismbcl2_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS 層級-2：0x989F<=`c`<=0xEA9E。|
+|[_ismbchira、_ismbchira_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|雙位元組平假名：0x829F<=`c`<=0x82F1.|
+|[_ismbckata、_ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|雙位元組片假名：0x8340<=`c`<=0x8396.|
+|[_ismbcl0、_ismbcl0_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS 非日文漢字：0x8140<=`c`<=0x889E.|
+|[_ismbcl1、_ismbcl1_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS 層級 1：0x889F<=`c`<=0x9872.|
+|[_ismbcl2、_ismbcl2_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS 層級 2：0x989F<=`c`<=0xEA9E.|
 
 `_ismbcl0`、`_ismbcl1` 和 `_ismbcl2` 會檢查指定的值 `c` 是否符合上表中所述的測試條件，但不會檢查 `c` 是否為有效的多位元組字元。 如果較低的位元組介於 0x00 - 0x3F、0x7F 或 0xFD - 0xFF 的範圍內，這些函式會傳回非零值，指出字元符合測試條件。 使用 [_ismbbtrail、_ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md) 來測試是否已定義多位元組字元。
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 95633a9b6b04be7e551934744868e10f60d51fb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ae5e0007105cfda233f808bf52d2d81068524be
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509095"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744868"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>準備測試電腦以執行偵錯可執行檔
 
@@ -20,7 +20,7 @@ ms.locfileid: "50509095"
 
 有三種方法可以一起部署 Visual C++ 程式庫 DLL 的偵錯版本和應用程式的偵錯版本：
 
-- 使用包含應用程式正確的程式庫版本和架構的合併模組之安裝專案，以使用集中部署安裝特定 Visual C++ DLL 的偵錯版本至 %windir%\system32\ 目錄。 合併模組位在 \Common Files\Merge Modules\\ 的 Program Files 或 Program Files (x86) 目錄中。 合併模組的偵錯版本在名稱中有 Debug，例如 Microsoft_VC110_DebugCRT_x86.msm。 此部署的範例位於[逐步解說：使用安裝專案部署 Visual C++ 應用程式](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)。
+- 使用包含應用程式正確的程式庫版本和架構的合併模組之安裝專案，以使用集中部署安裝特定 Visual C++ DLL 的偵錯版本至 %windir%\system32\ 目錄。 合併模組位在 \Common Files\Merge Modules\\ 的 Program Files 或 Program Files (x86) 目錄中。 合併模組的偵錯版本在名稱中有 Debug，例如 Microsoft_VC110_DebugCRT_x86.msm。 您可以在此處找到此部署的範例：[逐步解說：使用安裝專案部署 Visual C++ 應用程式](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)。
 
 - 藉由 \Microsoft Visual Studio \<version\VC\redist\Debug_NonRedist\\ 中的 Program Files 或 Program Files (x86) 目錄所提供的檔案，使用本機部署來將特定 Visual C++ DLL 的偵錯版本安裝在應用程式的安裝目錄中。
 
@@ -31,7 +31,7 @@ ms.locfileid: "50509095"
 
 安裝 Visual C++ DLL 之後，您就可以從網路共用執行遠端偵錯工具。 如需遠端偵錯的詳細資訊，請參閱[遠端偵錯](/visualstudio/debugger/remote-debugging.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Visual C++ 中的部署](../ide/deployment-in-visual-cpp.md)<br>
 [Windows Installer 命令列選項](/windows/desktop/Msi/command-line-options)<br>

@@ -1,17 +1,17 @@
 ---
 title: 在 Visual Studio 中設定 C++ Linux 專案
-ms.date: 09/18/2018
+ms.date: 11/12/2018
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: fd87b3d60e6625fb86ad1b494fd878b9b5ca031b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d0825a3aca8ca03759d7f7b42db90ce9700c10b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622491"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745181"
 ---
 # <a name="configure-a-linux-project"></a>設定 Linux 專案
 
-本主題說明如何在 Visual Stuidio 中設定 C++ Linux 專案。 如需 Visual Studio 中 CMake Linux 專案的相關資訊，請參閱[設定 Linux CMake 專案](cmake-linux-project.md)。
+本主題描述如何在 Visual Stuidio 中設定以 Linux 專案範本為基礎的 C++ Linux 專案。 如需 Visual Studio 中 CMake Linux 專案的相關資訊，請參閱[設定 Linux CMake 專案](cmake-linux-project.md)。
 
 ## <a name="general-settings"></a>一般設定
 
@@ -87,10 +87,10 @@ apt install zip
 
 ![遠端標頭 IntelliSense](media/remote-header-intellisense.png)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [使用專案屬性](../ide/working-with-project-properties.md)<br/>
-[C++ 一般屬性 (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
-[VC++ 目錄 (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
-[複製來源專案屬性 (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
-[建置事件屬性 (Linux C++)](../linux/prop-pages/build-events-linux.md)
+[C++ 一般屬性 (Linux C++)](prop-pages/general-linux.md)<br/>
+[VC++ 目錄 (Linux C++)](prop-pages/directories-linux.md)<br/>
+[複製來源專案屬性 (Linux C++)](prop-pages/copy-sources-project.md)<br/>
+[建置事件屬性 (Linux C++)](prop-pages/build-events-linux.md)

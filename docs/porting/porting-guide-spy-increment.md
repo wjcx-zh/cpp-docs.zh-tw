@@ -2,12 +2,12 @@
 title: 移植指南：Spy++
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 5bd69853b13d58ff79910eafcc601b0507d5a9ad
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: b28de2396ba94578a8d06038a1191be42dce49ea
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177000"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751370"
 ---
 # <a name="porting-guide-spy"></a>移植指南：Spy++
 
@@ -280,7 +280,7 @@ END_MESSAGE_MAP()
 (static_cast< LRESULT (AFX_MSG_CALL CWnd::*)(CPoint) > (&ThisClass :: OnNcHitTest)) },
 ```
 
-問題一定與成員函式類型的指標不符相關。 問題不在於從類別類型 `CHotLinkCtrl` 轉換成類別類型 `CWnd`，因為這是有效的衍生基底轉換。 問題在於傳回類型：UINT 與LRESULT。 LRESULT 會根據目標二進位檔類型，解析成 64 位元指標或 32 位元指標的 LONG_PTR，因此 UINT 不會轉換成這種類型。 這個問題在升級 2005 版以前所撰寫的程式碼時很常見，因為許多訊息對應方法的傳回類型從 UINT 變更為 LRESULT，是到了 Visual Studio 2005 才有的一項 64 位元相容性變更。 我們在下列程式碼中，將傳回類型從 UINT 變更為 LRESULT：
+問題一定與成員函式類型的指標不符相關。 問題不在於從類別類型 `CHotLinkCtrl` 轉換成類別類型 `CWnd`，因為這是有效的衍生基底轉換。 問題在於傳回型別：UINT 與LRESULT。 LRESULT 會根據目標二進位檔類型，解析成 64 位元指標或 32 位元指標的 LONG_PTR，因此 UINT 不會轉換成這種類型。 這個問題在升級 2005 版以前所撰寫的程式碼時很常見，因為許多訊息對應方法的傳回類型從 UINT 變更為 LRESULT，是到了 Visual Studio 2005 才有的一項 64 位元相容性變更。 我們在下列程式碼中，將傳回類型從 UINT 變更為 LRESULT：
 
 ```cpp
 afx_msg UINT OnNcHitTest(CPoint point);
@@ -292,7 +292,7 @@ afx_msg UINT OnNcHitTest(CPoint point);
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-這個函式在衍生自 CWnd 的不同類別中出現約 10 次，因此建議您在編輯器中將游標移到函式上方，然後使用 [移至定義] (快速鍵：**F12**) 和 [移至宣告] (快速鍵：**Ctrl**+**F12**)，透過 [尋找符號] 工具視窗尋找並巡覽至這些符號。 [移至定義] 通常是兩者中較有用的一個。 [移至宣告] 會尋找定義類別宣告以外的宣告，例如 friend 類別宣告或向前參考。
+由於此函式大概在從 CWnd 衍生的所有不同類別中出現十次，使用 [移至定義] (鍵盤：**F12**) 及 [移至宣告] (鍵盤：**Ctrl**+F12)，在游標位於編輯器中的函式上時尋找這些，並從 [尋找符號] 工具視窗巡覽至它們時會非常有用。 [移至定義] 通常是兩者中較有用的一個。 [移至宣告] 會尋找定義類別宣告以外的宣告，例如 friend 類別宣告或向前參考。
 
 ##  <a name="mfc_changes"></a> 步驟 9： MFC 變更
 
@@ -542,7 +542,7 @@ wsprintf(szTmp, "%d.%2.2d.%4.4d", rmj, rmm, rup);
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 ```
 
-\_T 巨集的效果是根據 MBCS 或 UNICODE 的設定，將字串常值編譯為 **char** 字串或 **wchar_t** 字串。 若要在 Visual Studio 中以 \_T 取代所有字串，請先開啟 [快速取代] (快速鍵：**Ctrl**+**F**) 方塊或 [檔案中取代] (快速鍵：**Ctrl**+**Shift**+**H**)，然後選擇 [使用規則運算式] 核取方塊。 輸入 `((\".*?\")|('.+?'))` 做為搜尋文字，以及 `_T($1)` 做為取代文字。 如果某些字串前後已經有 \_T 巨集，這個程序會再新增巨集一次；您也可能發現不需要 \_T 的情況 (例如使用 `#include` 時)，因此最好使用 [取代下一個]，而不是 [全部取代]。
+\_T 巨集的效果是根據 MBCS 或 UNICODE 的設定，將字串常值編譯為 **char** 字串或 **wchar_t** 字串。 若要使用 Visual Studio 中的 \_T 來取代所有字串，請先開啟 [快速取代] (鍵盤：**Ctrl**+**F**) 方塊或 [在檔案中取代] (鍵盤：**Ctrl**+**Shift**+**H**)，然後選擇 [使用規則運算式] 核取方塊。 輸入 `((\".*?\")|('.+?'))` 做為搜尋文字，以及 `_T($1)` 做為取代文字。 如果某些字串前後已經有 \_T 巨集，這個程序會再新增巨集一次；您也可能發現不需要 \_T 的情況 (例如使用 `#include` 時)，因此最好使用 [取代下一個]，而不是 [全部取代]。
 
 這個特定函式 [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa) 實際上是定義於 Windows 標頭中，其文件建議不要使用它，因為可能會發生緩衝區滿溢的情況。 `szTmp` 緩衝區未指定大小，因此該函式無法檢查緩衝區是否可以保留寫入的所有資料。 請參閱下一節有關移植到安全 CRT 的資訊，我們在該節中會修正其他類似問題。 我們最後會以 [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) 來取代它。
 
@@ -671,7 +671,7 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
 
 將 Spy++ 從原始 Visual C++ 6.0 程式碼移植到最新編譯器需要約 20 小時的程式碼撰寫時間，整個過程需要約一週。 我們已透過八個版本的產品直接從 Visual Studio 6.0 升級至 Visual Studio 2015。 這現在是在大型和小型專案上進行所有升級的建議方法。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [移植和升級：範例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [上一個案例研究：COM Spy](../porting/porting-guide-com-spy.md)

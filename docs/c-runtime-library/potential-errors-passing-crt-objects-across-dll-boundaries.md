@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-ms.openlocfilehash: c90303db63724bbcf584340147555814d9a92f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31f9d9aceba167b516c9d37724e240f1bc4586e1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562769"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749892"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>跨 DLL 界限傳遞 CRT 物件時可能發生的錯誤
 
@@ -19,7 +19,7 @@ ms.locfileid: "50562769"
 
 此問題的另一個症狀可能是偵錯期間在輸出視窗中的錯誤，例如︰
 
-HEAP[]: Invalid Address specified to RtlValidateHeap(#,#)
+HEAP[]：指定至 RtlValidateHeap(#,#) 的位址無效
 
 ## <a name="causes"></a>原因
 
@@ -29,7 +29,7 @@ HEAP[]: Invalid Address specified to RtlValidateHeap(#,#)
 
 ## <a name="example"></a>範例
 
-### <a name="description"></a>描述
+### <a name="description"></a>說明
 
 這個範例會跨 DLL 界限傳遞檔案控制代碼。
 
@@ -71,7 +71,7 @@ this is a string
 
 ## <a name="example"></a>範例
 
-### <a name="description"></a>描述
+### <a name="description"></a>說明
 
 這個範例會跨 DLL 界限傳遞環境變數。
 
@@ -122,6 +122,6 @@ MYLIB has not been set.
 New MYLIB variable is: c:\mylib;c:\yourlib
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

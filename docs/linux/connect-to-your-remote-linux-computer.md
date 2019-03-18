@@ -3,12 +3,12 @@ title: 在 Visual Studio 中連線至您的遠端 Linux 電腦
 description: 如何從 Visual Studio C++ 專案內連線至遠端 Linux 電腦。
 ms.date: 07/20/2018
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: ce6a3c02846586dbc46b0c9bc0db0d579878c814
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e20714308448349ee5dac8951a7b5d7bfd2f29ef
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575236"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562844"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>連線到遠端 Linux 電腦
 
@@ -24,7 +24,7 @@ ms.locfileid: "50575236"
 
 1. 輸入下列資訊：
 
-   | 進入 | 描述
+   | 進入 | 說明
    | ----- | ---
    | **主機名稱**           | 目標裝置的名稱或 IP 位址
    | **連接埠**                | 正在執行 SSH 服務的連接埠，一般是 22

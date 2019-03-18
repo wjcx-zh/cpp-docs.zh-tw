@@ -27,18 +27,18 @@ helpviewer_keywords:
 - UNICODE constant
 - _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
-ms.openlocfilehash: b39e8563797ca0b57b54d2c85f851c8c45b29905
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa6827607430bf8f0db37997bac0223833fcd171
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471440"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747926"
 ---
 # <a name="using-generic-text-mappings"></a>使用泛型文字對應
 
 **Microsoft 專屬**
 
-為針對不同的國際市場簡化程式碼開發，Microsoft 執行階段程式庫針對許多資料類型、常式與其他物件提供 Microsoft 的特定「泛型文字」對應。 這些對應定義在 TCHAR.H 中。 您可以使用這些名稱對應來撰寫泛型程式碼，以針對下列三種字元集的任何一種編譯：ASCII (SBCS)、MBCS 或 Unicode，取決於您使用 `#define` 陳述式所定義的資訊清單常數。 泛型文字對應是與 ANSI 不相容的 Microsoft 延伸模組。
+為針對不同的國際市場簡化程式碼開發，Microsoft 執行階段程式庫針對許多資料類型、常式與其他物件提供 Microsoft 的特定「泛型文字」對應。 這些對應定義在 TCHAR.H 中。 您可以使用這些名稱對應來撰寫可以針對三種類型字元集中之任何一種進行編譯的一般程式碼：ASCII (SBCS)、MBCS 或 Unicode，取決於您使用 `#define` 陳述式定義的資訊清單常數。 泛型文字對應是與 ANSI 不相容的 Microsoft 延伸模組。
 
 ### <a name="preprocessor-directives-for-generic-text-mappings"></a>泛型文字對應的前置處理器指示詞
 
@@ -97,7 +97,7 @@ RetVal = strrev(szString);
 
 **結束 Microsoft 專屬**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [泛型文字對應](../c-runtime-library/generic-text-mappings.md)<br/>
 [資料類型對應](../c-runtime-library/data-type-mappings.md)<br/>

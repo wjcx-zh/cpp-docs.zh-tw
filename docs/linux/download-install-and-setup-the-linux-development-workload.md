@@ -1,18 +1,22 @@
 ---
 title: 在 Visual Studio 中安裝 C++ Linux 工作負載
 description: 描述如何在 Visual Studio 中下載、安裝和設定 Linux 工作負載。
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: c01c8ddeeb8439a7610c0f6c7c11b608ab3675d8
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 74155724abb3a0e02cc27dd8a8d144f142ee4b6f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55763879"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747718"
 ---
-# <a name="download-install-and-setup-the-linux-workload"></a>下載、安裝和設定 Linux 工作負載
+# <a name="download-install-and-set-up-the-linux-workload"></a>下載、安裝和設定 Linux 工作負載
 
-您可以在 Windows 中使用 Visual Studio IDE 來建立、編輯 C++ 專案 (執行於 Linux 實體電腦、虛擬機器或[適用於 Linux 的 Windows 子系統](/windows/wsl/about)) 並為其進行偵錯。 針對上述任何一種情況，請先安裝**使用 C++ 進行 Linux 開發**工作負載。
+您可以在 Windows 中使用 Visual Studio 2017 IDE 來建立、編輯 C++ 專案 (執行於 Linux 實體電腦、虛擬機器或[適用於 Linux 的 Windows 子系統](/windows/wsl/about)) 並為其進行偵錯。 
+
+您可以使用採用 CMake 或任何其他組建系統的現有程式碼基底，而不必將它轉換成 Visual Studio 專案。 如果程式碼基底為跨平台，您可以從 Visual Studio 內將 Windows 和 Linux 鎖定為目標。 例如，您可以在 Windows 上使用 Visual Studio 編輯、偵錯並為您的程式碼設定設定檔，然後快速地將目標重設為 Linux 專案以進行進一步測試。 Linux 標頭檔會自動複製到您的本機電腦，Visual Studio 會使用它們來提供完整的 IntelliSense 支援 (陳述式完成、移至定義等)。
+ 
+針對上述任何一種情況，**使用 C++ 進行 Linux 開發**工作負載是必要項目。 
 
 ## <a name="visual-studio-setup"></a>Visual Studio 安裝程式
 
@@ -22,6 +26,8 @@ ms.locfileid: "55763879"
    ![適用於 Linux 開發的 Visual C++ 工作負載](media/linuxworkload.png)
 
 1. 如果您使用 CMake，或您的目標是 IoT 或內嵌平台，請前往右側的 [安裝詳細資料] 窗格，在 [使用 C++ 進行 Linux 開發] 下方展開 [選用元件] 並選擇您需要的元件。
+
+    **Visual Studio 2017 15.4 版和更新版本**<br/>:當您為 Visual Studio 安裝 Linux C++ 工作負載時，預設會選取適用於 Linux 的 CMake 支援。
 
 1. 按一下 [修改] 繼續安裝。
 
@@ -63,3 +69,6 @@ ms.locfileid: "55763879"
 
    這會啟動服務並在背景執行，以準備好接受連線。
 
+## <a name="ensure-you-have-cmake-38-on-the-remote-linux-machine"></a>請確定您在遠端 Linux 電腦上擁有 CMake 3.8
+
+您的 Linux 發行套件可能會有較舊版本的 CMake。 Visual Studio 中的 CMake 支援需要 CMake 3.8 中所引進的伺服器模式支援。 如需 Microsoft 提供的 CMake 種類，請在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 下載最新之預先建置二進位檔案到您的 Linux 電腦。

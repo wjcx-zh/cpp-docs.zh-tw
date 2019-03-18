@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: e930702862149de4dae65aab2f880f35850e0687
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6522461cf1f08eee9187a8f739cb21fe01e755f5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597544"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747004"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>針對 UNIX 使用者的 Visual C++ 簡介
 
@@ -19,7 +19,7 @@ ms.locfileid: "50597544"
 
 您可以透過與使用 UNIX 命令列環境類似的方式，從命令列使用 C++ 編譯器。 您可以從命令提示字元，使用命令列 C 和 C++ 編譯器 (CL.EXE)、連結器 (LINK.EXE) 和其他工具進行編譯，包括 Microsoft 版的 UNIX make 公用程式 NMAKE.EXE。
 
-在 UNIX 中，命令會安裝在通用資料夾中，例如 /usr/bin。 在 Visual Studio 中，命令列工具會安裝在您的 Visual Studio 安裝目錄 (VC\bin 子目錄中) 及其子目錄中。 不同於 UNIX，這些工具無法從一般命令提示字元視窗存取。 若要使用命令列工具，請使用開發人員命令提示字元捷徑，或執行開發人員命令檔案 (例如 vcvarsall.bat)。 這會設定從命令列編譯 C++ 程式所需的路徑和其他環境變數。 如需詳細資訊，請參閱[在命令列上建置 C/C++ 程式碼](../build/building-on-the-command-line.md)和[逐步解說：在命令列上編譯原生 C++ 程式](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)。
+在 UNIX 中，命令會安裝在通用資料夾中，例如 /usr/bin。 在 Visual Studio 中，命令列工具會安裝在您的 Visual Studio 安裝目錄 (VC\bin 子目錄中) 及其子目錄中。 不同於 UNIX，這些工具無法從一般命令提示字元視窗存取。 若要使用命令列工具，請使用開發人員命令提示字元捷徑，或執行開發人員命令檔案 (例如 vcvarsall.bat)。 這會設定從命令列編譯 C++ 程式所需的路徑和其他環境變數。 如需詳細資訊，請參閱[在命令列上建置 C/C++ 程式碼](../build/building-on-the-command-line.md)和[逐步解說：在命令列編譯原生 C++ 程式](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)。
 
 若要開啟開發人員命令提示字元捷徑，請在桌面搜尋控制項中輸入「開發人員命令提示字元」，然後選擇適用於您 Visual Studio 版本的 [開發人員命令提示字元] 結果。 若要選擇針對特定主機和目標架構預先設定的開發人員命令提示字元，請開啟 [開始] 功能表 (桌面角落的 Windows 圖示)，然後捲動至您 Visual Studio 版本的資料夾 (例如 **Visual Studio 2017**)。 開啟資料夾，然後針對您慣用的主機和目標架構選擇命令提示字元捷徑。
 
@@ -37,7 +37,7 @@ ms.locfileid: "50597544"
 
 ## <a name="importing-your-existing-code"></a>匯入現有的程式碼
 
-您可以使用 C++ 編譯器來建置現有的程式碼，並將其設定為以 Makefile 或不以 Makefile 編譯，然後放入 Visual Studio 專案中。 如需詳細資訊，請參閱[如何：從現有程式碼建立 C++ 專案](../ide/how-to-create-a-cpp-project-from-existing-code.md)。
+您可以使用 C++ 編譯器來建置現有的程式碼，並將其設定為以 Makefile 或不以 Makefile 編譯，然後放入 Visual Studio 專案中。 如需詳細資訊，請參閱[如何：從現有的程式碼建立 C++ 專案](../ide/how-to-create-a-cpp-project-from-existing-code.md)。
 
 ## <a name="creating-a-new-project"></a>建立新專案
 
@@ -63,6 +63,6 @@ Microsoft C 和 C++ 編譯器提供對任何 C 或 C++ 程式碼進行先行編�
 
 如需詳細資訊，請參閱[從 UNIX 移植到 Win32](../porting/porting-from-unix-to-win32.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [建置 C/C++ 程式](../build/building-c-cpp-programs.md)

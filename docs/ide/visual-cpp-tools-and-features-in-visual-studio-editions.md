@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 7f40e59ae3e5e883827a212a16d1dd19822dc136
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d3c6e25594eb3bb01ad3fc995a24cdc723d5726
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463748"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751891"
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Visual Studio 版本中的 Visual C++ 工具和功能
 
@@ -106,7 +106,7 @@ ms.locfileid: "50463748"
 |Managed 偵錯||X|X|X|
 |GPU 使用量|X||X|X|
 |記憶體使用量|X||X|X|
-|遠端偵錯|X|X|X|X|
+|Remote Debugging|X|X|X|X|
 |SQL 偵錯|||X|X|
 |靜態程式碼分析|有限|有限|X|X|
 
@@ -119,7 +119,7 @@ ms.locfileid: "50463748"
 |HTML 設計工具/編輯器|X|X|X|X|
 |XML 編輯器|X|X|X|X|
 |原始程式碼編輯器|X|X|X|X|
-|產能功能：重構、IntelliSense、C++ 程式碼格式化|X|X|X|X|
+|生產力功能：重構、IntelliSense、C++ 程式碼格式化|X|X|X|X|
 |Windows Form 設計工具||X|X|X|
 |資料設計工具|||X|X|
 |原生資源編輯器 (.rc 檔)|||X|X|
@@ -172,7 +172,7 @@ ms.locfileid: "50463748"
 |程式碼對應和相依性圖形|||唯讀|X|
 |程式碼對應偵錯||||X|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [安裝 Visual Studio](/visualstudio/install/install-visual-studio)<br/>
 [Visual Studio 的新功能](/visualstudio/ide/whats-new-in-visual-studio)<br/>

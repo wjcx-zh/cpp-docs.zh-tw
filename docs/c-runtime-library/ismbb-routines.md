@@ -17,12 +17,12 @@ helpviewer_keywords:
 - ismbb routines
 - _ismbb routines
 ms.assetid: d63c232e-3fe4-4844-aafd-2133846ece4b
-ms.openlocfilehash: 6e1dd62f45eed4ec1d8e89a746d01ca1984022ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d70604ce71d74bd73a3fea1b99beaf93f052e344
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481402"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750503"
 ---
 # <a name="ismbb-routines"></a>_ismbb 常式
 
@@ -53,7 +53,7 @@ ms.locfileid: "50481402"
 |[_ismbbgraph](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|與 `_ismbbprint`相同，但 `_ismbbgraph` 不包含空格字元 (0x20)。|
 |[_ismbbkalnum](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|標點符號以外的非 ASCII 文字符號。 例如，僅限字碼頁 932， `_ismbbkalnum` 會測試片假名英數字元。|
 |[_ismbbkana](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|片假名 (0xA1 - 0xDF)。 僅限字碼頁 932。|
-|[_ismbbkprint](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|非 ASCII 文字符號或非 ASCII 標點符號。 例如，僅限字碼頁 932，`_ismbbkprint` 會測試片假名英數字元或片假名標點符號 (範圍：0xA1 - 0xDF)。|
+|[_ismbbkprint](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|非 ASCII 文字符號或非 ASCII 標點符號。 例如，僅限字碼頁 932，`_ismbbkprint` 會測試片假名英數字元或片假名標點符號 (範圍：0xA1-0xDF)。|
 |[_ismbbkpunct](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|非 ASCII 標點符號。 例如，只在字碼頁 932 中的片假名標點符號之 `_ismbbkpunct` 測試。|
 |[_ismbblead](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|多位元組字元的第一個位元組 例如，僅限在字碼頁 932 中，有效範圍是 0x81 - 0x9F 和 0xE0 - 0xFC。|
 |[_ismbbprint](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|`isprint` &#124;&#124; `_ismbbkprint`. **ismbbprint** 包含空格字元 (0x20)。|
@@ -76,7 +76,7 @@ ms.locfileid: "50481402"
 
 `_ismbb` 常式可當作函式和巨集來實作。 如需如何選擇實作的詳細資訊，請參閱[在函式和巨集之間選擇的建議](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [位元組分類](../c-runtime-library/byte-classification.md)<br/>
 [is、isw 常式](../c-runtime-library/is-isw-routines.md)<br/>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: 85753e4842ab2377aa64384bb75e0c2dafd3f858
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4cd0f81ccf768938d585c206d5f50b20f6a0ae19
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581944"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741357"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>逐步解說：偵錯專案 (C++)
 
@@ -53,10 +53,10 @@ ms.locfileid: "50581944"
 
 ## <a name="next-steps"></a>後續步驟
 
-**上一個主題：**[逐步解說：測試專案 (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
-**下一個主題：**[逐步解說：部署程式 (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
+**上一步：**[逐步解說：測試專案 (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+**下一步：**[逐步解說：部署程式 (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [建置 C/C++ 程式](../build/building-c-cpp-programs.md)<br/>

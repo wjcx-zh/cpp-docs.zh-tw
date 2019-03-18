@@ -6,12 +6,12 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: c12cd50dd92e728c88945cd83029f7e5e62816da
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1d5dbd8f83f501c3b68bad771089eab8acc6f8aa
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524153"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742494"
 ---
 # <a name="walkthrough-building-a-project-c"></a>逐步解說：建置專案 (C++)
 
@@ -54,10 +54,10 @@ ms.locfileid: "51524153"
 
 ## <a name="next-steps"></a>後續步驟
 
-**上一步：**[逐步解說：使用專案和方案 (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
+**上一步：**[逐步解說：使用專案和解決方案 (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
 **下一步：**[逐步解說：測試專案 (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [建置 C/C++ 程式](../build/building-c-cpp-programs.md)<br/>

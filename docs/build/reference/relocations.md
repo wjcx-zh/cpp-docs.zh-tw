@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /RELOCATIONS dumpbin option
 - -RELOCATIONS dumpbin option
 ms.assetid: 535eba3a-781a-4809-bf33-f67d3060b02c
-ms.openlocfilehash: 2e3e8e81de431dd7f28ed9eafa7c4e259096229f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b8671d61d1157be2d126fc71c46e76d6a4ba94b7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421398"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817983"
 ---
 # <a name="relocations"></a>/RELOCATIONS
 
@@ -25,8 +25,8 @@ ms.locfileid: "57421398"
 
 此選項會顯示任何重新配置中的物件或映像。
 
-只有[/HEADERS](../../build/reference/headers.md) DUMPBIN 選項只適用於所產生的檔案上[/GL](../../build/reference/gl-whole-program-optimization.md)編譯器選項。
+只有[/HEADERS](headers.md) DUMPBIN 選項只適用於所產生的檔案上[/GL](gl-whole-program-optimization.md)編譯器選項。
 
 ## <a name="see-also"></a>另請參閱
 
-[DUMPBIN 選項](../../build/reference/dumpbin-options.md)
+[DUMPBIN 選項](dumpbin-options.md)

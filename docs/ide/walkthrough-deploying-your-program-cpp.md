@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 7170fe3ae058f832e452089021d9f863f1791f14
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: c202d4eae5e9115f847caefce18a8974a4388a04
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657509"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740456"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>逐步解說：部署程式 (C++)
 
@@ -74,7 +74,7 @@ ms.locfileid: "53657509"
 
 **上一步：**[逐步解說：偵錯專案 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [建置 C/C++ 程式](../build/building-c-cpp-programs.md)<br/>

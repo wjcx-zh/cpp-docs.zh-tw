@@ -2,12 +2,12 @@
 title: 移植指南：MFC Scribble
 ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: 353dc8fb42b73ec7e0ee748ef9fefd030c073703
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 436dd27d8c2669e21ddc8a9e453f369cdd14f70c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175648"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741303"
 ---
 # <a name="porting-guide-mfc-scribble"></a>移植指南：MFC Scribble
 
@@ -85,7 +85,7 @@ _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
 
 Scribble 是小型且簡單的 Windows 桌面應用程式，並不難轉換。 許多小型、簡單的應用程式也同樣容易轉換至新版。  至於較複雜的應用程式 (具有更多行程式碼、可能不及最新工程標準的舊版程式碼、多個專案和程式庫、自訂建置步驟)，或複雜的指令碼式自動化組建，則需要更多時間進行升級。 請繼續進行[下一個範例](../porting/porting-guide-com-spy.md)：一個稱為 COM Spy 的 ATL/COM 應用程式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [移植和升級：範例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [下一個範例：COM Spy](../porting/porting-guide-com-spy.md)

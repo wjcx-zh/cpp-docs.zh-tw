@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, redistributing
 - redistributing MFC library
 ms.assetid: 72714ce1-385e-4c1c-afa5-96b03e873866
-ms.openlocfilehash: 891a11e02b60bf5337b02956e9562b2f4b45a6e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e7352306627722ff2921c2a46cb49b6318f10b6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659936"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746952"
 ---
 # <a name="redistributing-the-mfc-library"></a>轉散發 MFC 程式庫
 
@@ -25,7 +25,7 @@ ms.locfileid: "50659936"
 
 如果您以靜態方式將應用程式連結至 MFC (亦即，如果在 [屬性頁] 對話方塊的 [一般] 索引標籤上指定 [在靜態程式庫中使用 MFC])，您不需要轉散發 MFC DLL。 不過，雖然靜態連結可能適用於應用程式的測試和內部部署，但還是建議您不要使用它來轉散發 MFC。 如需部署 Visual C++ 程式庫之建議策略的詳細資訊，請參閱[選擇部署方法](../ide/choosing-a-deployment-method.md)。
 
-如果應用程式會使用實作 WebBrowser 控制項的 MFC 類別 (例如，[類別](../mfc/reference/chtmlview-class.md)或 [CHtmlEditView 類別](../mfc/reference/chtmleditview-class.md))，建議您同時安裝最新版本的 Microsoft Internet Explorer，讓目標電腦具有最新的通用控制項檔案。 (最低需要有 Internet Explorer 4.0。)如需如何安裝 Internet Explorer 元件的資訊，請參閱 Microsoft 支援服務網站上的 "Article 185375: How To Create a Single EXE Install of Internet Explorer" (文章 185375：如何建立 Internet Explorer 的單一 EXE 安裝)。
+如果應用程式會使用實作 WebBrowser 控制項的 MFC 類別 (例如，[類別](../mfc/reference/chtmlview-class.md)或 [CHtmlEditView 類別](../mfc/reference/chtmleditview-class.md))，建議您同時安裝最新版本的 Microsoft Internet Explorer，讓目標電腦具有最新的通用控制項檔案。 (最低需要有 Internet Explorer 4.0。)如何安裝 Internet Explorer 元件的相關資訊可在以下取得：「文章 185375：如何建立 Internet Explorer 的單一 EXE 安裝」(位於 Microsoft 支援服務網站)。
 
 如果應用程式會使用 MFC 資料庫類別 (例如，[CRecordset 類別](../mfc/reference/crecordset-class.md)和 [CRecordView 類別](../mfc/reference/crecordview-class.md))，您必須轉散發 ODBC 和應用程式所使用的任何 ODBC 驅動程式。
 
@@ -45,6 +45,6 @@ ms.locfileid: "50659936"
 
 您可以藉由部署應用程式本機資料夾中的 MFC DLL，來轉散發 MFC 當地語系化 DLL。 如需如何轉散發 Visual C++ 程式庫的詳細資訊，請參閱[轉散發 Visual C++ 檔案](../ide/redistributing-visual-cpp-files.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [轉散發 Visual C++ 檔案](../ide/redistributing-visual-cpp-files.md)

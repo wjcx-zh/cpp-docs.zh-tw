@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b1070a330e40c0bf73f3713783b3f126d0848cbc
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dcae15ade3bd155e16149cc56981f79abb245e16
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525518"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740382"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
 
@@ -141,7 +141,7 @@ ms.locfileid: "51525518"
 
   - 無限大：1.#INF
 
-  - 無訊息的 NaN：1.#QNAN
+  - 無訊息 NaN：1.#QNAN
 
   - 訊號 NaN：1.#SNAN
 
@@ -207,7 +207,7 @@ ms.locfileid: "51525518"
 
 - **指數格式化**
 
-   %e 和 %E 格式規範會將浮點數格式化為十進位的尾數和指數。 在某些情況下，%g 和 %G 格式規範也會將數字格式化為這種形式。 在舊版中，CRT 永遠會產生具有三位數指數的字串。 例如，`printf("%e\n", 1.0)` 會印出 1.000000e+000。 這是不正確的：如果可使用一位數或兩位數表示該指數，則 C 要求只能列印兩位數。
+   %e 和 %E 格式規範會將浮點數格式化為十進位的尾數和指數。 在某些情況下，%g 和 %G 格式規範也會將數字格式化為這種形式。 在舊版中，CRT 永遠會產生具有三位數指數的字串。 例如，`printf("%e\n", 1.0)` 會印出 1.000000e+000。 這不正確：如果可使用一位數或兩位數表示該指數，則 C 要求只能印出兩位數。
 
    Visual Studio 2005 加入了全域合規性參數：[_set_output_format](../c-runtime-library/set-output-format.md)。 程式可以用引數 _TWO_DIGIT_EXPONENT 呼叫這個函式，以啟用符合標準的指數列印。 這項預設行為已變更為符合標準的指數列印模式。
 
@@ -1047,7 +1047,7 @@ ms.locfileid: "51525518"
 
 - **模稜兩可的呼叫多載函式**
 
-   下列程式碼現在會產生 C266：'N::bind': 模稜兩可的呼叫多載函式
+   下列程式碼現在會產生 C266：'N::bind'：模稜兩可地呼叫多載函式
 
     ```cpp
     template<typename R, typename T, typename T1, typename A1>
@@ -1190,7 +1190,7 @@ ms.locfileid: "51525518"
 
 - **無法依值攔截 MFC 例外狀況，因為它們是不可複製的**
 
-   MFC 應用程式中的下列程式碼現在會造成錯誤 C2316︰'D': 無法攔截，因為無法存取或刪除解構函式及/或複製建構函式
+   MFC 應用程式中的下列程式碼現在會造成錯誤 C2316：'D'：無法攔截，因為解構函式和/或複製建構函式無法存取或已遭刪除
 
     ```cpp
     struct B {
@@ -1336,7 +1336,7 @@ ms.locfileid: "51525518"
 
 - **修正非靜態資料成員初始化 (NSDMI) 中無效的複製初始化**
 
-   下列程式碼現在會產生 C2664 錯誤：'S1::S1(S1 &&)': 無法將引數 1 從 'bool' 轉換為 'const S1 &'：
+   下列程式碼現在會產生錯誤 C2664：'S1::S1(S1 &&)'：無法將引數 1 從 'bool' 轉換成 'const S1 &'：
 
     ```cpp
     struct S1 {
@@ -1358,7 +1358,7 @@ ms.locfileid: "51525518"
 
 - **存取 decltype 陳述式內的建構函式**
 
-   下列程式碼現在會產生 C2248：'S::S': 無法存取類別 'S' 中的 Private 成員：
+   下列程式碼現在會產生 C2248：'S::S'：無法存取類別 'S' 中宣告的私人成員：
 
     ```cpp
     class S {
@@ -1480,7 +1480,7 @@ ms.locfileid: "51525518"
 
 - **無法在衍生的 ctor 主體中呼叫受保護的基底 ctor。**
 
-   下列程式碼現在會產生錯誤 C2248：'S1::S1': 無法存取類別 'S1' 中所宣告之受保護的成員
+   下列程式碼現在會產生錯誤 C2248：'S1::S1'：無法存取類別 'S1' 中宣告的受保護成員
 
     ```cpp
     struct S1 {
@@ -2884,7 +2884,7 @@ ms.locfileid: "51525518"
     };
     ```
 
-   若要在程式碼中尋找舊版本嘗試進行最佳化的地方，請搭配 `/W3` 編譯器選項來使用該版本的編譯器並開啟警告 4370。 例如: 
+   若要在程式碼中尋找舊版本嘗試進行最佳化的地方，請搭配 `/W3` 編譯器選項來使用該版本的編譯器並開啟警告 4370。 例如：
 
     ```cpp
     #pragma warning(default:4370)
@@ -2899,7 +2899,7 @@ ms.locfileid: "51525518"
     };
     ```
 
-   在 Visual Studio 2013 前，此程式碼會輸出此訊息：「警告 C4370: 'S2': 因為可提供較佳的封裝，類別配置可能已在舊版本的編譯器中變更」。
+   在 Visual Studio 2013 以前，此程式碼會輸出此訊息：「警告 C4370：'S2'：因為較佳的封裝，類別配置已從舊版的編譯器變更」。
 
    在所有版本的編譯器中，x86 編譯器都具有相同的配置不佳問題。 例如，如果這個程式碼是為 x86 而編譯：
 
@@ -2911,7 +2911,8 @@ ms.locfileid: "51525518"
     };
     ```
 
-   `sizeof(S)` 的結果會是 24。 不過，如果您使用剛才提到的 x64 解決方法，則此結果可以減少為 16：
+   
+  `sizeof(S)` 的結果會是 24。 不過，如果您使用剛才提到的 x64 解決方法，則此結果可以減少為 16：
 
     ```cpp
     struct dummy {
@@ -2963,7 +2964,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 ### <a name="mfc-and-atl"></a>MFC 和 ATL
 
-- **僅限 Visual Studio 2013**：因為 Unicode 現在已相當普遍，MBCS 的使用率大幅降低，所以 Visual Studio 未隨附 MFC MBCS 程式庫。 這項變更也讓 MFC 與 Windows SDK 本身更為相符，因為許多新的控制項和訊息都限用 Unicode。 不過，如果您必須繼續使用 MBCS MFC 程式庫，您可以從 MSDN 下載中心下載 [Multibyte MFC Library for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770)。 Visual C++ 可轉散發套件仍然包含這個程式庫。  (注意：在 Visual Studio 2015 和較新版中，MBCS DLL 會隨附於 C++ 安裝程式元件)。
+- **僅限 Visual Studio 2013**：因為 Unicode 現在已相當普遍且 MBCS 的使用率大幅降低，所以Visual Studio 不會隨附 MFC MBCS 程式庫。 這項變更也讓 MFC 與 Windows SDK 本身更為相符，因為許多新的控制項和訊息都限用 Unicode。 不過，如果您必須繼續使用 MBCS MFC 程式庫，您可以從 MSDN 下載中心下載 [Multibyte MFC Library for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770)。 Visual C++ 可轉散發套件仍然包含這個程式庫。  (注意：在 Visual Studio 2015 和更新版本中，MBCS DLL 會隨附在 C++ 安裝程式元件內)。
 
 - MFC 功能區的協助工具已有變更。  一改過去的單層架構，現在改為階層式架構。 您仍然可以藉由呼叫 `CRibbonBar::EnableSingleLevelAccessibilityMode()` 使用舊有行為。
 
@@ -3043,7 +3044,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - 以下為 C++98/03 和 C++11 標準之間的中斷性變更︰在 Visual Studio 2012 中的 Visual C++ 內使用明確範本引數呼叫 `make_pair()` (即 `make_pair<int, int>(x, y)`) 通常無法編譯。 解決方案是只呼叫 `make_pair() `，而不要指定明確範本引數 (例如 `make_pair(x, y)`)。 提供明確的範本引數會導致函式失效。 若您需要精確控制產生的類型，請改為使用 `pair` 而非 `make_pair`，如同 `pair<short, short>(int1, int2)`。
 
-- C++98/03 與 C++11 標準之間的另一項中斷性變更︰當 A 可隱含轉換成 B，B 可隱含轉換成 C，但 A 不可隱含轉換成 C 時，C++98/03 與 Visual C++ 2010 允許 `pair<A, X>` 轉換 (隱含或明確) 成 `pair<C, X>`。 (另一個類型 X 不是此處的重點，而不是 pair 中第一種類型的專用類型)。因為 C++11 與 Visual Studio 2012 中的 C++ 編譯器偵測到 A 並未隱含表示可轉換成 C，所以會從多載解析中移除 pair 轉換。 這對許多狀況而言是好的改變。 例如，多載 `func(const pair<int, int>&)` 和 `func(const pair<string, string>&)`，以及使用 `pair<const char *, const char *>` 呼叫 `func()` 時，便會使用這項變更進行編譯。 但此變更會破壞需要積極執行 pair 轉換的程式碼。 一般可以藉由明確執行轉換的其中一部分來修正這類程式碼，例如將 `make_pair(static_cast<B>(a), x)` 傳遞給需要 `pair<C, X>` 的函式。
+- C++98/03 和 C++11 標準之間的另一項中斷性變更為：當 A 可以隱含轉換成 B，且 B 可以隱含轉換成 C，但 A 卻無法隱含轉換成 C 時，C++98/03 和 Visual C++ 2010 允許將 `pair<A, X>` 轉換 (隱含或明確) 成 `pair<C, X>`。 (另一個類型 X 不是此處的重點，而不是 pair 中第一種類型的專用類型)。因為 C++11 與 Visual Studio 2012 中的 C++ 編譯器偵測到 A 並未隱含表示可轉換成 C，所以會從多載解析中移除 pair 轉換。 這對許多狀況而言是好的改變。 例如，多載 `func(const pair<int, int>&)` 和 `func(const pair<string, string>&)`，以及使用 `pair<const char *, const char *>` 呼叫 `func()` 時，便會使用這項變更進行編譯。 但此變更會破壞需要積極執行 pair 轉換的程式碼。 一般可以藉由明確執行轉換的其中一部分來修正這類程式碼，例如將 `make_pair(static_cast<B>(a), x)` 傳遞給需要 `pair<C, X>` 的函式。
 
 - Visual C++ 2010 可模擬 variadic 範本 (例如 `make_shared<T>(arg1, arg2, argN)`) 高達 10 個引數之多，方法是停止前置處理器機器的多載與特製化。 在 Visual Studio 2012 中，此限制縮減為 5 個引數，以改善大多數使用者的編譯時間及編譯器的記憶體耗用量。 但您可以藉由將 _VARIADIC_MAX 明確定義為 10 來將整個專案設定成先前的限制。
 
@@ -3091,7 +3092,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - 已將參數新增至 `CFolderPickerDialog` 建構函式。 (這是預設參數，所以沒有來源中斷的問題)。
 
-- `CFileStatus` 結構的大小已變更：`m_attribute` 成員已從 BYTE 變更為 DWORD (以符合 `GetFileAttributes` 傳回的值)。
+- `CFileStatus` 結構大小變更︰`m_attribute` 成員已從 BYTE 變更為 DWORD (以符合從 `GetFileAttributes` 傳回的值)。
 
 - `CRichEditCtrl` 和 `CRichEditView` 會在 Unicode 組建中使用 MSFTEDIT_CLASS (RichEdit 4.1 控制) 而非 RICHEDIT_CLASS (RichEdit 3.0 控制)。
 
@@ -3405,21 +3406,21 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 ### <a name="mfc"></a>MFC
 
-- `CTime` 類別︰`CTime` 類別現在接受自公元 1/1/1900 起的日期。 而不是西元 1/1/1970。
+- `CTime` 類別：`CTime` 類別現在接受自公元 1900 年 1 月 1 日起的日期 而不是西元 1/1/1970。
 
-- MFC 對話方塊中控制項的索引標籤︰當在索引標籤順序中插入 MFC ActiveX 控制項時，會影響 MFC 對話方塊中多個控制項的正確索引標籤順序。 此變更修正了這個問題。
+- MFC 對話方塊中控制項的定位順序：當在定位順序中插入 MFC ActiveX 控制項時，會影響 MFC 對話方塊中多個控制項的正確定位順序。 此變更修正了這個問題。
 
    例如建立具有 ActiveX 控制項與幾個編輯控制項的 MFC 對話方塊應用程式。 將 ActiveX 控制項置於編輯控制項的索引標籤定位中間。 啟動應用程式中，再按一下索引標籤順序位於 ActiveX 控制項之後的編輯控制項，然後按一下索引標籤。在此變更之前，焦點會從 ActiveX 控制項轉往該編輯控制項，而不會轉往索引標籤順序中的下一個編輯控制項。
 
-- `CFileDialog` 類別︰`CFileDialog` 類別的自訂範本無法自動移植到 Windows Vista。 這些範本仍可使用，但沒有額外的功能，也沒有 Windows Vista [樣式] 對話方塊的外觀。
+- `CFileDialog` 類別：`CFileDialog` 類別的自訂範本無法自動移植到 Windows Vista。 這些範本仍可使用，但沒有額外的功能，也沒有 Windows Vista [樣式] 對話方塊的外觀。
 
-- `CWnd` 類別和 `CFrameWnd` 類別：已移除 `CWnd::GetMenuBarInfo` 方法。
+- `CWnd` 類別和 `CFrameWnd` 類別：`CWnd::GetMenuBarInfo` 方法已移除。
 
    `CFrameWnd::GetMenuBarInfo` 方法現在為非虛擬方法。 如需詳細資訊，請參閱 Windows SDK 中的＜GetMenuBarInfo 函式＞。
 
-- MFC ISAPI 支援︰MFC 已不再支援透過網際網路伺服器應用程式開發介面 (ISAPI) 建置應用程式。 若要建置 ISAPI 應用程式，請直接呼叫 ISAPI 延伸模組。
+- MFC ISAPI 支援：MFC 已不再支援透過網際網路伺服器應用程式開發介面 (ISAPI) 建置應用程式。 若要建置 ISAPI 應用程式，請直接呼叫 ISAPI 延伸模組。
 
-- 已淘汱的 ANSI API：有幾個 MFC 方法的 ANSI 版本為已淘汱。 在您後續的應用程式中，須改用這些方法的 Unicode 版本。 如需詳細資訊，請參閱＜Windows Vista 通用控制項的建置需求＞。
+- 已淘汰的 ANSI API：有幾個 MFC 方法的 ANSI 版本已淘汰。 在您後續的應用程式中，須改用這些方法的 Unicode 版本。 如需詳細資訊，請參閱＜Windows Vista 通用控制項的建置需求＞。
 
 ## <a name="visual-c-2005-breaking-changes"></a>Visual C++ 2005 的重大變更
 
@@ -3471,7 +3472,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - 當呼叫 `valarray::resize()` 時，`valarray` 的內容會遺失並會由預設值取代。 `resize()` 方法主要用於重新初始化 `valarray`，而不是像 vector 一樣動態增加。
 
-- 偵錯迭代器︰使用偵錯版本之 C 執行階段程式庫建置的應用程式若是不正確地使用迭代器，可能會在執行階段看到判斷提示。 若要停用這些判斷提示，必須將 _HAS_ITERATOR_DEBUGGING (Visual Studio 2010 之後由 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 取代) 定義為 0。 如需詳細資訊，請參閱[偵錯迭代器支援](../standard-library/debug-iterator-support.md)。
+- 偵錯迭代器：使用偵錯版本 C 執行階段程式庫建置的應用程式若是不正確地使用迭代器，可能會在執行階段看到判斷提示。 若要停用這些判斷提示，必須將 _HAS_ITERATOR_DEBUGGING (Visual Studio 2010 之後由 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 取代) 定義為 0。 如需詳細資訊，請參閱[偵錯迭代器支援](../standard-library/debug-iterator-support.md)。
 
 ## <a name="visual-c-net-2003-breaking-changes"></a>Visual c + +.NET 2003 的重大變更
 

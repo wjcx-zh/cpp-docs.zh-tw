@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: e4608d46664dad3e04d37a82368cc6e7173106f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1431002a7e7d0054ac20c05c76b05cabc96177c5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445158"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743257"
 ---
 # <a name="scanf-width-specification"></a>scanf 寬度規格
 
@@ -79,7 +79,7 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
 
 ## <a name="reading-undelimited-strings"></a>讀取未分隔字串
 
-若要讀取未以空白字元分隔的字串，則一組以方括弧 (**[ ]**) 括住的字元可以使用 **s** (字串) 類型字元來替代。 方括號中的的字元集稱為控制項字串。 對應的輸入欄位會讀取至控制項字串中並未出現的第一個字元。 如果集合中的第一個字元是插入號 (**^**)，則會產生相反效果，即輸入欄位會讀取至剩餘字元集中出現的第一個字元。
+若要讀取未以空白字元分隔的字串，則一組以方括弧 (**[ ]**) 括住的字元可以使用 **s** (字串) 類型字元來替代。 方括號中的的字元集稱為控制項字串。 對應的輸入欄位會讀取至控制項字串中並未出現的第一個字元。 若字元集中的第一個字元是插入號 (**^**)，其效果會相反：輸入欄位會讀取到第一個確實出現在字元集剩餘部分中的字元。
 
 請注意，**%[a-z]** 和 **%[z-a]** 解譯為相當於 **%[abcde...z]**。 這是一般 `scanf` 函式延伸模組，但請注意 ANSI 標準不需要它。
 
@@ -101,7 +101,7 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
 
 無論基於任何原因，當 `scanf` 函式停止讀取輸入欄位時，下一個輸入欄位會視為以未讀取的第一個字元開始。 如果有衝突字元，則會視為未讀取，且是下一個輸入欄位的第一個字元，或輸入資料流上後續讀取作業的第一個字元。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [scanf、_scanf_l、wscanf、_wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

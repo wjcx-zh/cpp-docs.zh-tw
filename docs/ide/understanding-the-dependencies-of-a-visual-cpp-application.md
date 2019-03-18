@@ -11,12 +11,12 @@ helpviewer_keywords:
 - depends.exe
 - libraries [C++], application deployment issues
 ms.assetid: 62a44c95-c389-4c5f-82fd-07d7ef09dbf9
-ms.openlocfilehash: 8ed340bed62d3b2cfcf32e0b98f032c9146b6bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed510e0d289349b1d7a0129a1c586b0bf1715b7e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629264"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751475"
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>了解 Visual C++ 應用程式的相依性
 
@@ -32,6 +32,6 @@ ms.locfileid: "50629264"
 
 當您知道應用程式所相依的 DLL，您可以判斷當部署到另一部電腦時，必須要與應用程式一起轉散發的 DLL。 在大多數情況下，您不需要轉散發系統 DLL，但是可能必須轉散發 Visual C++ 程式庫的 DLL。 如需詳細資訊，請參閱[判斷要轉散發的 DLL](../ide/determining-which-dlls-to-redistribute.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [部署傳統型應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)

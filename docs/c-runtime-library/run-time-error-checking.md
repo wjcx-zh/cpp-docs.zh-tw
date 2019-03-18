@@ -7,12 +7,12 @@ helpviewer_keywords:
 - run-time error checking
 - run-time errors, checking
 ms.assetid: c965dd01-57ad-4a3c-b1d6-5aa04f920501
-ms.openlocfilehash: 348698faa1f91e4d98acc762538fc1cbdb798e0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec07b9b0c6aa52187c3c24bff4cc51712dbf9fc8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435643"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746457"
 ---
 # <a name="run-time-error-checking"></a>執行階段錯誤檢查
 
@@ -29,7 +29,7 @@ C 執行階段程式庫包含支援執行階段錯誤檢查 (RTC) 的函式。 �
 |[_RTC_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md)|指定函式做為報告執行階段錯誤檢查的處理常式。|
 |[_RTC_SetErrorType](../c-runtime-library/reference/rtc-seterrortype.md)|將執行階段錯誤檢查所偵測到的錯誤與類型建立關聯。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [/RTC (執行階段錯誤檢查)](../build/reference/rtc-run-time-error-checks.md)<br/>

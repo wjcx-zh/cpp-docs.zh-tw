@@ -2,12 +2,12 @@
 title: 移植指南：COM Spy
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: 67dbcc815404c26535763239eddb176fcecf03f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca81b240a102195109c0ad6ef05bfaed10306704
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441779"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751683"
 ---
 # <a name="porting-guide-com-spy"></a>移植指南：COM Spy
 
@@ -164,8 +164,8 @@ private void button1_Click(object sender, EventArgs e)
 
 其執行沒有問題，並因為 COM Spy 已啟動並執行，而且設定為監視 `Dog` 元件，因此會出現許多顯示活動的資料。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [移植和升級：範例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [下一個範例：Spy++](../porting/porting-guide-spy-increment.md)<br/>
-[上一個範例︰MFC Scribble](../porting/porting-guide-mfc-scribble.md)
+[前一個範例：MFC Scribble](../porting/porting-guide-mfc-scribble.md)

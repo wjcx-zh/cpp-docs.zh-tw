@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: a604d8ef0b44db04d9a6da8fdc959d08384f1bf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e93236f9bd08741bb757e43309cd59281f828da1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437306"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744599"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>逐步解說：測試專案 (C++)
 
@@ -51,16 +51,16 @@ ms.locfileid: "50437306"
 
 1. 開啟 `return 0;` 陳述式的捷徑功能表，然後選擇 [執行至游標處]。 程式碼左邊的黃色箭號會指向要執行的下一個陳述式。
 
-1. 當 `Cardgame` 結束時，`Cardgame::totalParticipants` 數目應該會減少。 此時，`Cardgame::totalParticipants` 應該等於 0，因為已刪除所有 `Cardgame` 執行個體，但 [監看式 1] 視窗卻顯示 `Cardgame::totalparticipants` 等於 **18**。 這個差異表示程式碼中出現 Bug，您可以完成下一個逐步解說來進行偵測及修正：[逐步解說：偵錯專案 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)。
+1. 當 `Cardgame` 結束時，`Cardgame::totalParticipants` 數目應該會減少。 此時，`Cardgame::totalParticipants` 應該等於 0，因為已刪除所有 `Cardgame` 執行個體，但 [監看式 1] 視窗卻顯示 `Cardgame::totalparticipants` 等於 **18**。 這個差異表示程式碼中出現 Bug，您可以藉由完成[逐步解說：偵錯專案 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)中的下一個逐步解說來偵測及修正 Bug。
 
 1. 若要停止程式，請在功能表列上，選擇 [偵錯] > [停止偵錯]，或選擇 **Shift**+**F5** 鍵盤快速鍵。
 
 ## <a name="next-steps"></a>後續步驟
 
-**上一個主題：**[逐步解說：建置專案 (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
-**下一個主題：**[逐步解說：偵錯專案 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+**上一步：**[逐步解說：建置專案 (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
+**下一步：**[逐步解說：偵錯專案 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [建置 C/C++ 程式](../build/building-c-cpp-programs.md)<br/>

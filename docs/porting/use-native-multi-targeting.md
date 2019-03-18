@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: a4bb059b13f2001c6691e8d051106aa5e11eccbd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57f7450537f7609cbc66f8adf0bc868631e15f3a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429130"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740826"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>在 Visual Studio 中使用原生多目標來建置舊專案
 
@@ -52,7 +52,7 @@ Visual Studio 2008 有自己適用於 C++ 的專屬建置系統，稱為 **VCBui
 
 升級完成時，如果記錄檔報表具有任何專案的錯誤或警告，則請仔細進行檢閱。 從 **VCBuild** 轉換成 **MSBuild** 可能會造成問題。 請確定您了解並實作報表中所列出的任何動作項目。 如需詳細資訊，以了解升級記錄報表以及將 **VCBuild** 轉換為 **MSBuild** 時可能發生的問題，請參閱這篇 [C++ Native Multi-Targeting](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) (C++ 原生多目標) 部落格文章。
 
-如果完成專案升級，並且您已更正記錄檔中的任何問題，則方案會實際將目標設為最新工具組。 在最後一個步驟，將方案中每個專案的屬性都變更成使用 Visual Studio 2008 工具組。 在 Visual Studio 的目前版本中載入方案之後，針對方案中的每個專案，開啟 [專案屬性頁] 對話方塊：以滑鼠右鍵按一下方案總管中的專案，然後選取 [屬性]。 在 [屬性頁] 對話方塊中，將 [組態] 下拉式值變更為 [所有組態]。 在 [組態屬性] 中，選取 [一般]，然後將 [平台工具組] 變更為 [Visual Studio 2008 (v90)]。
+如果完成專案升級，並且您已更正記錄檔中的任何問題，則方案會實際將目標設為最新工具組。 在最後一個步驟，將方案中每個專案的屬性都變更成使用 Visual Studio 2008 工具組。 在 Visual Studio 的目前版本中載入方案之後，針對方案中的每個專案，開啟專案的 [屬性頁] 對話方塊：以滑鼠右鍵按一下 [方案總管] 中的專案，然後選取 [屬性]。 在 [屬性頁] 對話方塊中，將 [組態] 下拉式值變更為 [所有組態]。 在 [組態屬性] 中，選取 [一般]，然後將 [平台工具組] 變更為 [Visual Studio 2008 (v90)]。
 
 在這項變更之後，當您在目前 Visual Studio 版本中建置方案時，會使用 Visual Studio 2008 編譯器和程式庫來產生專案二進位檔。
 
@@ -64,7 +64,7 @@ Visual Studio 2008 有自己適用於 C++ 的專屬建置系統，稱為 **VCBui
 
 安裝這些產品之後，[屬性頁] 對話方塊的 [平台工具組] 屬性下拉式清單會自動更新，以顯示可用的工具組。 您現在可以使用最新版的 Visual Studio 來建置適用於這些舊版工具組的專案，而不需要轉換或升級這些專案。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visual Studio 2017 中的 C++ 一致性改善](../cpp-conformance-improvements-2017.md)

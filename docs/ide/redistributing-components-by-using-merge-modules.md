@@ -5,12 +5,12 @@ helpviewer_keywords:
 - merge modules, using
 - redistributing applications, using merge modules
 ms.assetid: 93b84211-bf9b-4a78-9f22-474ac2ef7840
-ms.openlocfilehash: 8fa717f376017560c4bd2e9012bd25c5190da563
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b98bcad0d8df26796cb6e2a2c29d90a7a20aadd1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676456"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741420"
 ---
 # <a name="redistributing-components-by-using-merge-modules"></a>使用合併模組來轉散發元件
 
@@ -20,6 +20,6 @@ Visual Studio 包含授權用於與應用程式轉散發的各個 Visual C++ 元
 
 除非您不需要維護您的應用程式，而且未對於多個 DLL 版本具有相依性，否則建議您不要使用合併模組。 一個安裝程式中不可含有相同 DLL 的不同版本合併模組，而且合併模組會使得在應用程式之外獨立維護 DLL 變得困難。 相反地，我們建議您安裝 Visual C++ 可轉散發套件。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [轉散發 Visual C++ 檔案](../ide/redistributing-visual-cpp-files.md)

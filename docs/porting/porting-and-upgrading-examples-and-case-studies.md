@@ -2,12 +2,12 @@
 title: 移植和升級：範例和案例研究
 ms.date: 11/04/2016
 ms.assetid: d48bbff9-1ea7-467f-8c8b-758601f01573
-ms.openlocfilehash: 1f49b72b8d390d5631687f67640f4ddd38bec3b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50e22c9eac39927c4456eeff1ed05c46a239bd30
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568204"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747186"
 ---
 # <a name="porting-and-upgrading-examples-and-case-studies"></a>移植和升級：範例和案例研究
 
@@ -23,6 +23,6 @@ ms.locfileid: "50568204"
 
 - [Spy++](../porting/porting-guide-spy-increment.md) 是會檢查執行中應用程式並提供其中 UI 項目相關資訊的應用程式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Visual C++ 移植和升級指南](../porting/visual-cpp-porting-and-upgrading-guide.md)

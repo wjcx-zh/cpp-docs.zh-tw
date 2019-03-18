@@ -4,14 +4,14 @@ ms.date: 09/17/2018
 helpviewer_keywords:
 - walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
-ms.openlocfilehash: 6de94ac300c5d50be67ede24cfcc3d03bc966fed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccf6b74096894c2e48258e6e0a60b807c7c6c5b4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436424"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743790"
 ---
-# <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>逐步解說：使用 Visual C++ 可轉散發套件部署 Visual C++ 應用程式
+# <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>逐步解說：使用 Visual C++ 可轉散發套件來部署 Visual C++ 應用程式
 
 本文將逐步描述如何使用 Visual C++ 可轉散發套件來部署 Visual C++ 應用程式。
 
@@ -25,7 +25,7 @@ ms.locfileid: "50436424"
 
 ### <a name="to-use-the-visual-c-redistributable-package-to-deploy-an-application"></a>使用 Visual C++ 可轉散發套件部署應用程式
 
-1.  遵循[逐步解說：使用安裝專案部署 Visual C++ 應用程式](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)中的步驟，建立及建置 MFC 應用程式。
+1.  藉由遵循[逐步解說：使用安裝專案部署 Visual C++ 應用程式](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)中的步驟來建立及建置 MFC 應用程式：。
 
 1. 建立檔案並將它命名為 setup.bat，然後將下列命令新增至該檔案。 將 `MyMFCApplication` 變更為您專案的名稱。
 
@@ -85,6 +85,6 @@ ms.locfileid: "50436424"
       > [!IMPORTANT]
       > 為了判斷所安裝的執行階段版本，安裝程式會檢查登錄機碼 \HKLM\SOFTWARE\Microsoft\VisualStudio\\\<version>\VC\Runtimes\\<platform>。 如果目前安裝的版本比安裝程式嘗試安裝的版本還要新，則安裝程式會傳回成功而不安裝較舊版本，並在 [控制台] 的已安裝程式頁面上保留另一個項目。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [部署範例](deployment-examples.md)<br/>

@@ -3,16 +3,16 @@ title: 在 Visual Studio 中部署及執行您的 C++ Linux 專案以及針對�
 description: 描述如何在 Visual Studio 中，從 Linux C++ 專案中在遠端目標上進行程式碼編譯、執行和偵錯。
 ms.date: 09/12/2018
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 413f0b089b3b1398093073bcd6f49358143121c8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: cdafb064f8a6269c5ccae938e280b5f47bff3b00
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328392"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562883"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>部署、執行和偵錯 Linux 專案
 
-在 Visual Studio 中建立 Linux C++ 專案並使用 [Linux 連線管理員](../linux/connect-to-your-remote-linux-computer.md)連線至專案後，即可執行與偵錯專案。 您可以在遠端目標上編譯、執行及偵錯程式碼。
+在 Visual Studio 中建立 Linux C++ 專案並使用 [Linux 連線管理員](connect-to-your-remote-linux-computer.md)連線至專案後，即可執行與偵錯專案。 您可以在遠端目標上編譯、執行及偵錯程式碼。
 
 有數種方式可以與 Linux 專案互動，並對其進行偵錯。
 
@@ -24,16 +24,16 @@ ms.locfileid: "51328392"
 
 1. 在 [偵錯] 屬性頁面中選取偵錯模式。
 
-   GDB 用來偵錯在 Linux 上執行的應用程式。  不過，這可以透過兩種不同的模式執行，而您可以從專案 [偵錯] 屬性頁的 [偵錯模式] 選項中進行選取：
+   GDB 用來偵錯在 Linux 上執行的應用程式。 GDB 可以透過兩種不同的模式執行，而您可以從專案 [偵錯] 屬性頁的 [偵錯模式] 選項中進行選取：
 
    ![GDB 選項](media/settings_debugger.png)
 
-   - 在 **gdbserver** 模式中，GDB 會在本機執行，以連線到在遠端系統上執行的 gdbserver。  請注意，這是 Linux 主控台視窗唯一支援的模式。
+   - 在 **gdbserver** 模式中，GDB 會在本機執行，以連線到在遠端系統上的 gdbserver。  請注意，這是 Linux 主控台視窗唯一支援的模式。
 
-   - 在 **gdb** 模式中，Visual Studio 偵錯工具會在遠端系統上驅動 GDB，這在本機與目標電腦上所安裝 GDB 的版本不同時較為相容。 |
+   - 在 **gdb** 模式中，Visual Studio 偵錯工具會在遠端系統上驅動 GDB。 若本機版本的 GDB 和目標電腦上安裝的版本不相容，此為較佳的選項。 |
 
    > [!NOTE]
-   > 若無法在 gdbserver 偵錯模式中叫用中斷電，請嘗試 gdb 模式。 必須先在遠端目標上[安裝](../linux/download-install-and-setup-the-linux-development-workload.md) gdb。
+   > 若無法在 gdbserver 偵錯模式中叫用中斷電，請嘗試 gdb 模式。 必須先在遠端目標上[安裝](download-install-and-setup-the-linux-development-workload.md) gdb。
 
 1. 在 Visual Studio 中使用標準 [偵錯] 工具列選取遠端目標。
 
@@ -41,7 +41,7 @@ ms.locfileid: "51328392"
 
    ![遠端目標](media/remote_target.png)
 
-   若尚未連線至遠端目標，您會看到使用 [Linux 連線管理員](../linux/connect-to-your-remote-linux-computer.md) 以連線到遠端目標的指示。
+   若尚未連線至遠端目標，您會看到使用 [Linux 連線管理員](connect-to-your-remote-linux-computer.md) 以連線到遠端目標的指示。
 
    ![遠端架構](media/architecture.png)
 
@@ -57,7 +57,7 @@ ms.locfileid: "51328392"
 
    ![叫用中斷點](media/hit_breakpoint.png)
 
-   您現在可以和目前狀態下的應用程式互動、檢視變數，以及按下 **F10** 或 **F11** 等命令鍵逐步完成程式碼。
+   您現在可以和目前狀態下的應用程式互動、檢視變數，以及按 **F10** 或 **F11** 等命令鍵逐步完成程式碼。
 
 1. 若想使用 Linux 主控台與應用程式互動，請選取 [偵錯] > [Linux 主控台]。
 
@@ -79,10 +79,10 @@ ms.locfileid: "51328392"
 
 ## <a name="next-steps"></a>後續步驟
 
-- 若要在 Linux 上偵錯 ARM 裝置，請參閱此部落格文章：[Debugging an embedded ARM device in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/) (在 Visual Studio 中對內嵌 ARM 裝置進行偵錯)。
+- 若要偵錯 Linux 上的 ARM 裝置，請參閱此部落格文章：[在 Visual Studio 中偵錯內嵌 ARM 裝置](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/)。
 
-- 若要使用 **Attach to Process**命令進行偵錯，請參閱此部落格文章：[Linux C++ Workload improvements to the Project System, Linux Console Window, rsync and Attach to Process](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/) (專案系統、Linux 主控台視窗、rsync 及附加至處理序的 Linux C++ 工作負載改善)。
+- 若要使用 [附加至處理序] 命令進行偵錯，請參閱此部落格文章：[Linux C++ Workload improvements to the Project System, Linux Console Window, rsync and Attach to Process](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/) (專案系統、Linux 主控台視窗、rsync 及附加至處理序的 Linux C++ 工作負載改善)。
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 偵錯屬性 (Linux C++)](../linux/prop-pages/debugging-linux.md)
+[C++ 偵錯屬性 (Linux C++)](prop-pages/debugging-linux.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: 1d5dbd8f83f501c3b68bad771089eab8acc6f8aa
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8aadb6983cc096ff75785c6bab7ace6bd5f0c632
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742494"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57809000"
 ---
 # <a name="walkthrough-building-a-project-c"></a>逐步解說：建置專案 (C++)
 
@@ -60,4 +60,4 @@ ms.locfileid: "57742494"
 ## <a name="see-also"></a>另請參閱
 
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
-[建置 C/C++ 程式](../build/building-c-cpp-programs.md)<br/>
+[專案和建置系統](../build/projects-and-build-systems-cpp.md)<br/>

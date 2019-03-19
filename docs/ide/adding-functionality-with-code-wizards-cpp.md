@@ -10,12 +10,12 @@ helpviewer_keywords:
 - projects [C++], adding functionality
 - class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 028434d7404cc02121e9fd961d6566c28f458a0c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 87c46be17c20bf9d592dd2b5c537897fa629e9c2
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739811"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57822570"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>使用程式碼精靈新增功能 (C++)
 
@@ -73,6 +73,5 @@ ms.locfileid: "57739811"
 
 [覆寫虛擬函式](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
 [巡覽類別結構](../ide/navigating-the-class-structure-visual-cpp.md)<br>
-[使用應用程式精靈建立桌面專案](../ide/creating-desktop-projects-by-using-application-wizards.md)<br>
-[Visual C++ 專案類型](../ide/visual-cpp-project-types.md)<br>
-[為 Visual C++ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)
+[Visual C++ 專案類型](../build/reference/visual-cpp-project-types.md)<br>
+[為 Visual C++ 專案建立的檔案類型](../build/reference/file-types-created-for-visual-cpp-projects.md)

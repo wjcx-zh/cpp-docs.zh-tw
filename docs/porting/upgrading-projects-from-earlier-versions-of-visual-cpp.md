@@ -5,12 +5,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: dcbec57c75b4dc6fb72a3b35040e12cab0e7111e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8848dca10a75bec6f5ff6251a3af5be8e9a7b6e6
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740871"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57816369"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>從舊版的 Visual C++ 升級專案
 
@@ -33,9 +33,18 @@ ms.locfileid: "57740871"
 
 如需如何更新目標 Windows 版本的資訊，請參閱[修改 WINVER 和 _WIN32_WINNT](../porting/modifying-winver-and-win32-winnt.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="in-this-section"></a>本節內容
 
-[建置系統變更](../build/build-system-changes.md)<br/>
+[將程式碼升級至通用 CRT](upgrade-your-code-to-the-universal-crt.md)<br/>
+[修改 WINVER 和 _WIN32_WINNT](modifying-winver-and-win32-winnt.md)<br/>
+[修正程式庫內部項目上的相依性](fix-your-dependencies-on-library-internals.md)<br/>
+[浮點數的移轉問題](floating-point-migration-issues.md)<br/>
+[在 Visual Studio 中使用原生多目標來建置舊專案](use-native-multi-targeting.md)<br/>
+[Visual C++ 功能在 Visual Studio 2019 預覽版中已淘汰](features-deprecated-in-visual-studio.md)<br/>
+[建置系統變更](build-system-changes.md)<br/>
+
+## <a name="see-also"></a>請參閱
+
 [Visual Studio 2017 中 Visual C++ 的新功能](../what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Visual C++ 變更歷程記錄 2003 - 2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [非標準行為](../cpp/nonstandard-behavior.md)

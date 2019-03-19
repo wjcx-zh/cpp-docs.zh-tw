@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: 1cf5660d1ad2f0fdde02837eeffb642c4a74e5ea
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 325cdb86f61f658776c69057022c005c389492d3
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744497"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57813899"
 ---
 # <a name="porting-from-unix-to-win32"></a>從 UNIX 移植到 Win32
 
@@ -81,4 +81,4 @@ UNIX 程式設計人員還會考慮的另一個做法是使用 Windows POSIX 子
 
 [Visual C++ 移植和升級指南](visual-cpp-change-history-2003-2015.md)<br/>
 [UNIX](../c-runtime-library/unix.md)<br/>
-[推斷規則](../build/inference-rules.md)
+[推斷規則](../build/reference/inference-rules.md)

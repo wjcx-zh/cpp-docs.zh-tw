@@ -4,12 +4,12 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 4b64f79ea5a9566d2ad28216fbc5e736b622fe00
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 50b1005c7734b62941cbda087161d5ec41a0d026
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740241"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57808036"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>如何回報 Visual C++ 工具組或文件的問題
 
@@ -43,7 +43,7 @@ ms.locfileid: "57740241"
 
 #### <a name="to-report-the-full-version-of-the-compiler-youre-using"></a>回報所使用編譯器的完整版本
 
-1. 開啟**開發人員命令提示字元**，以符合用來建置專案的 Visual Studio 版本和組態架構。 例如，如果您是針對 x64 目標使用 Visual Studio 2017 on x64 進行建置，則請選擇 [x64 Native Tools Command Prompt for VS 2017] (適用於 VS 2017 的 x64 Native Tools 命令提示字元)。 如需詳細資訊，請參閱[開發人員命令提示字元捷徑](build/building-on-the-command-line.md#developer-command-prompt-shortcuts)。
+1. 開啟**開發人員命令提示字元**，以符合用來建置專案的 Visual Studio 版本和組態架構。 例如，如果您是針對 x64 目標使用 Visual Studio 2017 on x64 進行建置，則請選擇 [x64 Native Tools Command Prompt for VS 2017] (適用於 VS 2017 的 x64 Native Tools 命令提示字元)。 如需詳細資訊，請參閱[開發人員命令提示字元捷徑](build/building-on-the-command-line.md#developer_command_prompt_shortcuts)。
 
 1. 在開發人員命令提示字元主控台視窗中，輸入 **cl /Bv** 命令。
 

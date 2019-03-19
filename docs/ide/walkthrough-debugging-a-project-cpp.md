@@ -6,12 +6,12 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: 4cd0f81ccf768938d585c206d5f50b20f6a0ae19
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0a1ceddca3234ead7d10cc839d41a6d644ec1866
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741357"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57812027"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>逐步解說：偵錯專案 (C++)
 
@@ -59,4 +59,4 @@ ms.locfileid: "57741357"
 ## <a name="see-also"></a>另請參閱
 
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
-[建置 C/C++ 程式](../build/building-c-cpp-programs.md)<br/>
+[專案和建置系統](../build/projects-and-build-systems-cpp.md)<br/>

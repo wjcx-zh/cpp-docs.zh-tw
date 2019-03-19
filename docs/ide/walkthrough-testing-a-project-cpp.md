@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: e93236f9bd08741bb757e43309cd59281f828da1
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: aa1af9cd355265214827527b986b8602a25e93f3
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744599"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57808270"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>逐步解說：測試專案 (C++)
 
@@ -63,4 +63,4 @@ ms.locfileid: "57744599"
 ## <a name="see-also"></a>另請參閱
 
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
-[建置 C/C++ 程式](../build/building-c-cpp-programs.md)<br/>
+[專案和建置系統](../build/projects-and-build-systems-cpp.md)<br/>

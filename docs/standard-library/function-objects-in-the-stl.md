@@ -1,18 +1,18 @@
 ---
 title: C++ 標準程式庫的函式物件
-ms.date: 11/04/2016
+ms.date: 03/15/2019
 helpviewer_keywords:
 - functors
 - C++ Standard Library, functors
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-ms.openlocfilehash: 7af56f52b59b03dfed9e1233473239274a0dcbd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 310d846285612ad94ec9d66672fcb996557b07e2
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437111"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58172955"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>C++ 標準程式庫的函式物件
 
@@ -33,9 +33,17 @@ public:
         return a < b;
     }
 };
+
+int main()
+{
+    Functor f;
+    int a = 5;
+    int b = 7;
+    int ans = f(a, b);
+}
 ```
 
-`main` 函式的最後一行示範如何呼叫函式物件。 這個呼叫看起來像是呼叫函式，但實際上是呼叫函子類型的 operator()。 呼叫函式物件與函式之間的這點相似性，導致產生了函式物件一詞。
+`main` 函式的最後一行示範如何呼叫函式物件。 這個呼叫看起來像是呼叫函式，但它的實際呼叫的 operator （） 函式型別。 呼叫函式物件與函式之間的這點相似性，導致產生了函式物件一詞。
 
 ## <a name="function-objects-and-containers"></a>函式物件和容器
 
@@ -48,7 +56,7 @@ template <class Key,
 class set
 ```
 
-第二個樣板引數是函式物件 `less`。 這個函式物件會傳回 **，則為 true**的第一個參數傳遞至其是否小於第二個參數傳遞。 由於某些容器會排序其項目，因此容器需要用於比較兩個項目的方式，透過函式物件可以達成這個目的。 您可以建立一個函式物件，並在容器的樣板清單中指定這個物件，來為容器定義自己的排序準則。
+第二個樣板引數是函式物件 `less`。 這個函式物件會傳回 **，則為 true**的第一個參數是否小於第二個參數。 由於某些容器會排序其項目，則容器會需要的方式來比較兩個項目。 比較使用函式物件來完成。 您可以建立一個函式物件，並在容器的樣板清單中指定這個物件，來為容器定義自己的排序準則。
 
 ## <a name="function-objects-and-algorithms"></a>函式物件和演算法
 

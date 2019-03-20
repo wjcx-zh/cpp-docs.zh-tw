@@ -1,6 +1,6 @@
 ---
 title: '&lt;system_error&gt; 函式'
-ms.date: 11/04/2016
+ms.date: 03/15/2019
 f1_keywords:
 - system_error/std::generic_category
 - system_error/std::make_error_code
@@ -12,26 +12,26 @@ helpviewer_keywords:
 - std::make_error_code
 - std::make_error_condition
 - std::system_category
-ms.openlocfilehash: 24890830456e3c1026b02960aa650a43da3b6067
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78be83af678b553babbf1cde3d96c1507940b611
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554370"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58172903"
 ---
 # <a name="ltsystemerrorgt-functions"></a>&lt;system_error&gt; 函式
 
 ||||
 |-|-|-|
 |[generic_category](#generic_category)|[make_error_code](#make_error_code)|[make_error_condition](#make_error_condition)|
-|[system_category](#system_category)|
+|[system_category](#system_category)|||
 
-## <a name="generic_category"></a>  generic_category
+## <a name="generic_category"></a> generic_category
 
 代表泛型錯誤的分類。
 
 ```cpp
-extern const error_category& generic_category();
+const error_category& generic_category() noexcept;
 ```
 
 ### <a name="remarks"></a>備註
@@ -43,14 +43,13 @@ extern const error_category& generic_category();
 建立錯誤碼物件。
 
 ```cpp
-error_code make_error_code(generic_errno _Errno);
+error_code make_error_code(std::errc error) noexcept;
 ```
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|---------------|-----------------|
-|*_Errno*|要儲存於錯誤碼物件中的列舉值。|
+*error*\
+`std::errc`存放於錯誤的程式碼物件中的列舉值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -63,14 +62,13 @@ error_code make_error_code(generic_errno _Errno);
 建立錯誤條件物件。
 
 ```cpp
-error_condition make_error_condition(generic_errno _Errno);
+error_condition make_error_condition(std::errc error) noexcept;
 ```
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|---------------|-----------------|
-|*_Errno*|要儲存於錯誤條件物件中的列舉值。|
+*error*\
+`std::errc`存放於錯誤的程式碼物件中的列舉值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -83,7 +81,7 @@ error_condition make_error_condition(generic_errno _Errno);
 代表低階系統溢位所造成的錯誤分類。
 
 ```cpp
-extern const error_category& system_category();
+const error_category& system_category() noexcept;
 ```
 
 ### <a name="remarks"></a>備註
@@ -92,4 +90,4 @@ extern const error_category& system_category();
 
 ## <a name="see-also"></a>另請參閱
 
-[<system_error>](../standard-library/system-error.md)<br/>
+[\<system_error>](../standard-library/system-error.md)<br/>

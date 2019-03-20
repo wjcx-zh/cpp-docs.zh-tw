@@ -405,7 +405,6 @@
 #### [<system_error> 函式](system-error-functions.md)
 #### [<system_error> 運算子](system-error-operators.md)
 #### [<system_error> 列舉](system-error-enums.md)
-#### [<system_error> typedefs](system-error-typedefs.md)
 #### [error_category 類別](error-category-class.md)
 #### [error_code 類別](error-code-class.md)
 #### [error_condition 類別](error-condition-class.md)

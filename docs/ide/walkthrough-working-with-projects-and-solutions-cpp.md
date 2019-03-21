@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：使用專案和方案 (C++)
+title: 逐步解說：使用專案和解決方案 (C++)
 ms.date: 09/14/2018
 helpviewer_keywords:
 - solutions [C++]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 968e4981a28d646b75335ee380635fd8f8e863e3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9408938b670d8130305f2e1c1258fc6fcb9875bb
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519227"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57820061"
 ---
-# <a name="walkthrough-working-with-projects-and-solutions-c"></a>逐步解說：使用專案和方案 (C++)
+# <a name="walkthrough-working-with-projects-and-solutions-c"></a>逐步解說：使用專案和解決方案 (C++)
 
 以下說明如何在 Visual Studio 中建立 C++ 專案，加入程式碼，然後建置並執行專案。 本逐步解說中的專案是追蹤有多少玩家正在進行不同的撲克牌遊戲的程式。
 
@@ -22,7 +22,7 @@ ms.locfileid: "51519227"
 
 ## <a name="before-you-start"></a>開始之前
 
-若要完成這個逐步解說，您需要 Visual Studio 2017 15.3 版或更新版本。 如果您需要複本，以下是簡短指南：[在 Visual Studio 中安裝 C++ 支援](../build/vscpp-step-0-installation.md)。 如果尚未完成，請在安裝後透過 "Hello, World" 教學課程執行下列步驟，確定 Visual C++ 已正確安裝且運作正常。
+若要完成這個逐步解說，您需要 Visual Studio 2017 15.3 版或更新版本。 如果您需要複本，以下提供簡短的指南：[Install C++ support in Visual Studio](../build/vscpp-step-0-installation.md) (在 Visual Studio 中安裝 C++ 支援)。 如果尚未完成，請在安裝後透過 "Hello, World" 教學課程執行下列步驟，確定 Visual C++ 已正確安裝且運作正常。
 
 如果您了解 C++ 語言的基本概念，並知道編譯器、連結器和偵錯工具的用途，會很有幫助。 本教學課程也會假設您已熟悉 Windows，以及如何使用功能表和對話方塊。
 
@@ -83,11 +83,13 @@ ms.locfileid: "51519227"
 
       修改建構函式，使其接受一個類型為 `int`、名稱為 *players* 的參數。
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]--> `Cardgame(int players);`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]-->
+      `Cardgame(int players);`
 
    - 在預設解構函式之後，新增 `static int` 成員函式 (名為 *GetParticipants*) 的內嵌宣告，這個函式不接受參數，且會傳回 `totalParticipants` 值。
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]--> `static int GetParticipants() { return totalParticipants; }`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]-->
+      `static int GetParticipants() { return totalParticipants; }`
 
    在您變更之後，Cardgame.h 檔案應類似以下程式碼：
 
@@ -215,10 +217,10 @@ ms.locfileid: "51519227"
 
 ## <a name="next-steps"></a>後續步驟
 
-**上一個主題：**[使用 Visual Studio IDE 進行 C++ 桌面程式開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
-**下一個主題：**[逐步解說：建置專案 (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
+**上一步：**[使用 Visual Studio IDE 進行 C++ 桌面程式開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
+**下一步：**[逐步解說：建置專案 (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>另請參閱
 
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
-[建置 C/C++ 程式](../build/building-c-cpp-programs.md)<br/>
+[專案和建置系統](../build/projects-and-build-systems-cpp.md)<br/>

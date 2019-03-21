@@ -3,15 +3,15 @@ title: vcpkg-- 適用於 Windows、Linux 與 MacOS 的 C++ 套件管理員
 description: vcpkg 是命令列套件管理員，大幅簡化在 Windows 上取得和安裝開放原始碼 C++ 程式庫的流程。
 author: mikeblome
 ms.author: mblome
-ms.date: 02/22/2019
+ms.date: 03/18/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: dc07086f271c9789629b335b58758b88e8e3d4e8
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 2ca1b88f492d96f8a08d296cab7f35f3b72409c9
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809707"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58172877"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：A C++ package manager for Windows, Linux and MacOS (適用於 Windows、Linux 與 MacOS 的 C++ 套件管理員)
 
@@ -19,7 +19,7 @@ vcpkg 是命令列套件管理員，可大幅簡化在 Windows、Linux 和 MacOS
 
 ## <a name="simple-yet-flexible"></a>簡單卻有彈性
 
-您可使用單一命令下載來源並建置程式庫。 vcpkg 本身是開放原始碼專案，可於 GitHub 取得。 您可以隨意自訂私人複製品。 例如，您可指定與公用目錄中所找到之程式庫不同的程式庫或不同版程式庫。 一部電腦上可以有多個 vcpkg 複製品，每個複製品產生自訂程式庫集及 (或) 編譯參數等等。每個複製品都是完全獨立且可無限複製的環境，並具有只在自己階層執行的專屬 vcpkg.exe 複本。 vcpkg 未新增至任何環境變數，和 Windows 登錄或 Visual Studio 沒有相依性。
+您可使用單一命令下載來源並建置程式庫。 vcpkg 本身是開放原始碼專案，可於 GitHub 取得。 您可以隨意自訂私人複製品。 例如，您可指定與公用目錄中所找到之程式庫不同的程式庫或不同版程式庫。 一部電腦上可以有多個 vcpkg 複製品，每個複製品產生自訂程式庫集及 (或) 編譯參數等等。每個複製品都是完全獨立的環境，並具有只會在其本身階層執行的專屬 vcpkg.exe 複本。 vcpkg 未新增至任何環境變數，和 Windows 登錄或 Visual Studio 沒有相依性。
 
 ## <a name="sources-not-binaries"></a>不是二進位檔的來源
 

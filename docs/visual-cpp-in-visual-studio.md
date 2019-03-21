@@ -1,5 +1,5 @@
 ---
-title: Visual Studio 中的 Visual C++
+title: Visual Studio 中的 C++
 description: Visual C++ 是 Visual Studio IDE 中 Microsoft C++ 編譯器、程式碼編輯器和相關工具的名稱。 您可以使用 Visual C++ 來開發 Windows、Linux、Android 和 iOS 的程式。
 ms.date: 09/26/2018
 ms.technology: cpp-ide
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 0dd7cc2aebb9ff0f95d11c839a104b94b3d37db6
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 475f9394d9a12d05c95bc73ec451fbfe6fc4b052
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809644"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57814406"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio 中的 Visual C++
 
@@ -71,11 +71,14 @@ MSVC C++ 編譯器中依功能分類的一致性狀態清單。
 
 ## <a name="c-development-tools"></a>C++ 開發工具
 
-[IDE 與開發工具](ide/ide-and-tools-for-visual-cpp-development.md)<br/>
+[在 Visual Studio 中進行 C++ 開發的概觀](overview-of-cpp-development.md)<br/>
 如何使用 Visual Studio IDE 來建立專案、編輯程式碼、連結至程式庫、編譯、偵錯、建立單元測試、執行靜態分析、部署等等。
 
-[編譯器和建置工具](build/building-c-cpp-programs.md)<br/>
-Microsoft C++ 編譯器與連結器選項、錯誤訊息、命令列範例、不同平台的設定，以及組建參考主題。
+[專案和建置系統](build/projects-and-build-systems-cpp.md)<br/>
+如何使用 MSVC 編譯器和連結器選項，來建立及設定 Visual Studio C++ 專案、CMake 專案及其他種類的專案。
+
+[撰寫及重構 C++ 程式碼](ide/writing-and-refactoring-code-cpp.md)<br/>
+如何使用 C++ 編輯器中的生產力功能，重構、巡覽及撰寫程式碼。
 
 [偵錯機器碼](/visualstudio/debugger/debugging-native-code)<br/>
 了解如何針對 C++ 專案使用 Visual Studio 偵錯工具。

@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中設定 C++ Linux 專案
 ms.date: 11/12/2018
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 0d0825a3aca8ca03759d7f7b42db90ce9700c10b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 84b9242ad5af79ed48d716fb5a35db56428e9a98
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745181"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57808361"
 ---
 # <a name="configure-a-linux-project"></a>設定 Linux 專案
 
@@ -89,8 +89,8 @@ apt install zip
 
 ## <a name="see-also"></a>另請參閱
 
-[使用專案屬性](../ide/working-with-project-properties.md)<br/>
-[C++ 一般屬性 (Linux C++)](prop-pages/general-linux.md)<br/>
-[VC++ 目錄 (Linux C++)](prop-pages/directories-linux.md)<br/>
-[複製來源專案屬性 (Linux C++)](prop-pages/copy-sources-project.md)<br/>
-[建置事件屬性 (Linux C++)](prop-pages/build-events-linux.md)
+[Set compiler and build properties](../build/working-with-project-properties.md) (設定編譯器及組建屬性)<br/>
+[C++ 一般屬性 (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
+[VC++ 目錄 (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
+[複製來源專案屬性 (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
+[建置事件屬性 (Linux C++)](../linux/prop-pages/build-events-linux.md)

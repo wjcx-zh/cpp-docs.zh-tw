@@ -5,12 +5,12 @@ ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 062052faf85b342629506a41c39b99a1b59502b9
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: b75a1903b3e0767f8aa009134a2b37a7d1a8e0d0
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809785"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57810467"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Visual Studio 2017 中 Visual C++ 的新功能
 
@@ -315,7 +315,7 @@ C++ 現在支援以 Ctrl+按一下 [移至定義]，如此可輕鬆使用滑鼠�
 
 ## <a name="non-msbuild-projects-with-open-folder"></a>使用開啟資料夾的非 MSBuild 專案
 
-Visual Studio 2017 推出了 [開啟資料夾] 功能，讓您可在包含原始程式碼的資料夾中撰寫程式碼、建置和偵錯，而不需建立任何解決方案或專案。 如果您的專案不是 MSBuild 專案，則這可讓開始使用 Visual Studio 更為簡單。 透過 [開啟資料夾]，您就能使用 Visual Studio 已為 MSBuild 專案提供的強大程式碼理解、編輯、建置和偵錯功能。 如需詳細資訊，請參閱 [Visual C++ 中的「開啟資料夾」專案](ide/non-msbuild-projects.md)。
+Visual Studio 2017 推出了 [開啟資料夾] 功能，讓您可在包含原始程式碼的資料夾中撰寫程式碼、建置和偵錯，而不需建立任何解決方案或專案。 如果您的專案不是 MSBuild 專案，則這可讓開始使用 Visual Studio 更為簡單。 透過 [開啟資料夾]，您就能使用 Visual Studio 已為 MSBuild 專案提供的強大程式碼理解、編輯、建置和偵錯功能。 如需詳細資訊，請參閱 [Open Folder projects for C++](build/open-folder-projects-cpp.md) (適用於 C++ 的開啟資料夾專案)。
 
 - [開啟資料夾] 體驗的改良。 您可以透過這些 .json 檔案自訂體驗：
   - CppProperties.json，用以自訂 IntelliSense 及瀏覽體驗。
@@ -330,7 +330,7 @@ Visual Studio 2017 推出了 [開啟資料夾] 功能，讓您可在包含原始
 
 ## <a name="cmake-support-via-open-folder"></a>透過開啟資料夾的 CMake 支援
 
-Visual Studio 2017 支援使用 CMake 專案，而不需要轉換為 MSBuild 專案檔 (.vcxproj)。 如需詳細資訊，請參閱 [Visual C++ 中的 CMake 專案](ide/cmake-tools-for-visual-cpp.md)。 使用 [開啟資料夾] 開啟 CMake 專案會自動為 C++ 編輯、建置和偵錯設定環境。
+Visual Studio 2017 支援使用 CMake 專案，而不需要轉換為 MSBuild 專案檔 (.vcxproj)。 如需詳細資訊，請參閱 [Visual C++ 中的 CMake 專案](build/cmake-projects-in-visual-studio.md)。 使用 [開啟資料夾] 開啟 CMake 專案會自動為 C++ 編輯、建置和偵錯設定環境。
 
 - 無須在根資料夾中建立 CppProperties.json 檔案，C++ IntelliSense 即可運作。 此外，我們新增了下拉式清單，可讓使用者輕易地切換 CMake 和 CppProperties.json 檔案所提供的設定。
 
@@ -342,7 +342,7 @@ Visual Studio 2017 支援使用 CMake 專案，而不需要轉換為 MSBuild 專
 
 **Visual Studio 2017 15.5 版**：為匯入現有 CMake 快取新增了支援。
 
-**Visual Studio 2017 15.7 版**：新增對 CMake 3.11、CMake 專案中程式碼分析、方案總管中的目標檢視、用於產生快取的選項以及單一檔案編譯的支援。 如需詳細資訊，請參閱 [CMake Support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) (Visual Studio 中的 CMake 支援) 和 [Visual C++ 中的 CMake 專案](ide/cmake-tools-for-visual-cpp.md)。
+**Visual Studio 2017 15.7 版**：新增對 CMake 3.11、CMake 專案中程式碼分析、方案總管中的目標檢視、用於產生快取的選項以及單一檔案編譯的支援。 如需詳細資訊，請參閱 [CMake Support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) (Visual Studio 中的 CMake 支援) 和 [Visual C++ 中的 CMake 專案](build/cmake-projects-in-visual-studio.md)。
 
 ## <a name="windows-desktop-development-with-c"></a>使用 C++ 進行 Windows 桌面開發
 

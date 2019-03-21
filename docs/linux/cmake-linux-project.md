@@ -3,12 +3,12 @@ title: 在 Visual Studio 中設定 Linux CMake 專案
 description: 如何在 Visual Studio 中設定 Linux CMake 專案
 ms.date: 11/01/2018
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: f2186c14fbe2eb1273fceb4a378b359564eae327
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 22de2f7a7b5374f781a032f5152610d7a97feb16
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750594"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57815862"
 ---
 # <a name="configure-a-linux-cmake-project"></a>設定 Linux CMake 專案
 
@@ -22,7 +22,7 @@ Visual Studio 不會修改 CMakeLists.txt 檔案或原始 CMake 快取，因此�
 
 Visual Studio 中的 CMake 支援需要 CMake 3.8 中所引進的伺服器模式支援。 如需 Microsoft 提供的 CMake 種類，請在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 下載最新的預先建置二進位檔案。
 
-本主題假設您已閱讀[適用於 Visual Studio 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)。 
+本主題假設您已閱讀[適用於 Visual Studio 的 CMake 工具](../build/cmake-projects-in-visual-studio.md)。 
 
 > [!NOTE]
 > Visual Studio 中的 CMake 支援需要 CMake 3.8 中所引進的伺服器模式支援。 針對 Microsoft 所提供的 CMake 變數，請在下列網頁下載最新的預先建置二進位檔：[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases)。 在 Visual Studio 2019 中，預先建置的二進位檔案可自動部署 (請參閱[下載預先建置的 CMake 二進位檔案](#download-prebuilt-cmake-binaries))。
@@ -67,11 +67,11 @@ add_executable(hello-cmake hello.cpp)
 
 若要在遠端系統上偵錯您的程式碼，請設定中斷點、在專案設定旁的工具列功能表中選取 CMake 目標作為啟動項目，然後選擇工具列上的 [&#x23f5; 開始] 或按 F5。
 
-若要自訂您程式的命令列引數，請在 [方案總管] 中以滑鼠右鍵按一下該可執行檔，然後選取 [偵錯並啟動設定]。 這會開啟或建立包含您應用程式資訊的 launch.vs.json 設定檔。 若要指定其他引數，請新增在 `args` JSON 陣列中。 如需詳細資訊，請參閱[在 Visual C++ 中開啟資料夾專案](../ide/non-msbuild-projects.md)及[設定 CMake 偵錯工作階段](../ide/configure-cmake-debugging-sessions.md)。
+若要自訂您程式的命令列引數，請在 [方案總管] 中以滑鼠右鍵按一下該可執行檔，然後選取 [偵錯並啟動設定]。 這會開啟或建立包含您應用程式資訊的 launch.vs.json 設定檔。 若要指定其他引數，請新增在 `args` JSON 陣列中。 如需詳細資訊，請參閱 [Open Folder projects for C++](../build/open-folder-projects-cpp.md) (適用於 C++ 的開啟資料夾專案) 及 [Configure CMake debugging sessions](../build/configure-cmake-debugging-sessions.md) (設定 CMake 偵錯工作階段)。
 
 ## <a name="configure-cmake-settings-for-linux"></a>設定適用於 Linux 的 CMake 設定
 
-CMake Linux 專案中的 CMakeSettings.json 檔案可指定所有在[自訂 CMake 設定](../ide/customize-cmake-settings.md)中所列出的屬性，加上控制遠端 Linux 電腦上建置設定的額外屬性。 若要變更預設 CMake 設定，請從主功能表選擇 [CMake] | [變更 CMake 設定] | [CMakeLists.txt]，或在**方案總管**中以滑鼠右鍵按一下 CMakeSettings.txt，然後選擇 [變更 CMake 設定]。 Visual Studio 接著會在您的根專案資料夾中建立新 `CMakeSettings.json` 檔案。 您可以使用 **CMake 設定**編輯器來開啟檔案，或直接修改檔案。 
+CMake Linux 專案中的 CMakeSettings.json 檔案可指定所有在[自訂 CMake 設定](../build/customize-cmake-settings.md)中所列出的屬性，加上控制遠端 Linux 電腦上建置設定的額外屬性。 若要變更預設 CMake 設定，請從主功能表選擇 [CMake] | [變更 CMake 設定] | [CMakeLists.txt]，或在**方案總管**中以滑鼠右鍵按一下 CMakeSettings.txt，然後選擇 [變更 CMake 設定]。 Visual Studio 接著會在您的根專案資料夾中建立新 `CMakeSettings.json` 檔案。 您可以使用 **CMake 設定**編輯器來開啟檔案，或直接修改檔案。 
 
 下列範例顯示根據上一個程式碼範例之 Linux-Debug 的預設組態：
 
@@ -138,10 +138,10 @@ CMake Linux 專案中的 CMakeSettings.json 檔案可指定所有在[自訂 CMak
 
 ## <a name="see-also"></a>另請參閱
 
-[使用專案屬性](../ide/working-with-project-properties.md)<br/>
-[Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)<br/>
+[使用專案屬性](../build/working-with-project-properties.md)<br/>
+[CMake Projects in Visual Studio](../build/cmake-projects-in-visual-studio.md) (Visual Studio 中的 CMake 專案)<br/>
 [連線到遠端 Linux 電腦](connect-to-your-remote-linux-computer.md)<br/>
-[自訂 CMake 設定](../ide/customize-cmake-settings.md)<br/>
-[設定 CMake 偵錯工作階段](../ide/configure-cmake-debugging-sessions.md)<br/>
+[自訂 CMake 設定](../build/customize-cmake-settings.md)<br/>
+[設定 CMake 偵錯工作階段](../build/configure-cmake-debugging-sessions.md)<br/>
 [部署、執行及偵錯 Linux 專案](deploy-run-and-debug-your-linux-project.md)<br/>
-[CMake 預先定義組態參考](../ide/cmake-predefined-configuration-reference.md)<br/>
+[CMake 預先定義組態參考](../build/cmake-predefined-configuration-reference.md)<br/>

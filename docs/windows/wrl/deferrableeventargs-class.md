@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::DeferrableEventArgs::GetDeferral method
 - Microsoft::WRL::DeferrableEventArgs::InvokeAllFinished method
 ms.assetid: ece89267-7b72-40e1-8185-550c865b070a
-ms.openlocfilehash: 509686556bd06a6ec9d059593be46d0fc6a3876d
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: 4a3786e65873d6837389ad4fa5e7d06a14d66460
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54336046"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278355"
 ---
 # <a name="deferrableeventargs-class"></a>DeferrableEventArgs 類別
 
-範本類別，用於延期的事件引數類型。
+樣板類別，用於延遲的事件引數類型。
 
 ## <a name="syntax"></a>語法
 
@@ -43,14 +43,14 @@ class DeferrableEventArgs : public TEventArgsInterface;
 
 名稱                                                         | 描述
 ------------------------------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------
-[DeferrableEventArgs::GetDeferral](#getdeferral)             | 取得參考[延遲](http://go.microsoft.com/fwlink/p/?linkid=526520)代表延期的事件的物件。
+[DeferrableEventArgs::GetDeferral](#getdeferral)             | 取得參考[延遲](/uwp/api/windows.foundation.deferral)代表延期的事件的物件。
 [DeferrableEventArgs::InvokeAllFinished](#invokeallfinished) | 呼叫此方法，表示已完成延期事件的所有處理。
 
 ## <a name="remarks"></a>備註
 
 這個類別的執行個體會傳遞至延期事件的事件處理常式。 範本參數代表定義延期事件特定類型之事件引數詳細資料的介面，以及實作該介面的類別。
 
-此類別會顯示為延期事件之事件處理常式的第一個引數。 您可以呼叫[GetDeferral](#getdeferral)方法來取得[延遲](http://go.microsoft.com/fwlink/p/?linkid=526520)從中中，您可以取得有關延期事件的所有資訊的物件。 完成事件處理之後，您應該在延期物件上呼叫 Complete。 您應該都會接著呼叫[InvokeAllFinished](#invokeallfinished)結尾的事件處理常式方法，以確保所有延期事件的完成都正確通訊。
+此類別會顯示為延期事件之事件處理常式的第一個引數。 您可以呼叫[GetDeferral](#getdeferral)方法來取得[延遲](/uwp/api/windows.foundation.deferral)從中中，您可以取得有關延期事件的所有資訊的物件。 完成事件處理之後，您應該在延期物件上呼叫 Complete。 您應該都會接著呼叫[InvokeAllFinished](#invokeallfinished)結尾的事件處理常式方法，以確保所有延期事件的完成都正確通訊。
 
 ## <a name="requirements"></a>需求
 
@@ -60,7 +60,7 @@ class DeferrableEventArgs : public TEventArgsInterface;
 
 ## <a name="getdeferral"></a>DeferrableEventArgs::GetDeferral
 
-取得參考[延遲](http://go.microsoft.com/fwlink/p/?linkid=526520)代表延期的事件的物件。
+取得參考[延遲](/uwp/api/windows.foundation.deferral)代表延期的事件的物件。
 
 ```cpp
 HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
@@ -69,7 +69,7 @@ HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
 ### <a name="parameters"></a>參數
 
 *result*<br/>
-將參考的指標[延遲](http://go.microsoft.com/fwlink/p/?linkid=526520)物件呼叫完成時。
+將參考的指標[延遲](/uwp/api/windows.foundation.deferral)物件呼叫完成時。
 
 ### <a name="return-value"></a>傳回值
 

@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: a729c8d32c851c4401a0af7dd7323912a476530f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f14b21c97e5a36d5107e7db526e4153446ae2a01
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293442"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278526"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager 類別
 
@@ -617,7 +617,7 @@ static COLORREF __stdcall HLStoRGB_ONE(
 
 ### <a name="remarks"></a>備註
 
-色彩可以表示為 HSV （色調、 飽和度和值）、 （色調、 飽和度和亮度） 的 HSL 或 RGB （紅色、 綠色和藍色）。 如需不同的色彩表示方式的詳細資訊，請參閱[色彩](http://go.microsoft.com/fwlink/p/?linkid=119126)。
+色彩可以表示為 HSV （色調、 飽和度和值）、 （色調、 飽和度和亮度） 的 HSL 或 RGB （紅色、 綠色和藍色）。 如需不同的色彩表示方式的詳細資訊，請參閱[色彩](/windows/desktop/uxguide/vis-color)。
 
 這個方法和`CDrawingManager::HLStoRGB_TWO`方法執行相同的作業，但需要不同的值，如*H*參數。 在此方法中， *H*是圓形的百分比。 在 `CDrawingManager::HLStoRGB_TWO`方法中， *H*是程度，值介於 0 到 360 度，表示這兩個紅色。 比方說，使用`HLStoRGB_ONE`，值 0.25，如*H*相當於值與 90 `HLStoRGB_TWO`。
 
@@ -649,7 +649,7 @@ static COLORREF __stdcall HLStoRGB_TWO(
 
 ### <a name="remarks"></a>備註
 
-色彩可以表示為 HSV （色調、 飽和度和值）、 （色調、 飽和度和亮度） 的 HSL 或 RGB （紅色、 綠色和藍色）。 如需不同的色彩表示方式的詳細資訊，請參閱[色彩](http://go.microsoft.com/fwlink/p/?linkid=119126)。
+色彩可以表示為 HSV （色調、 飽和度和值）、 （色調、 飽和度和亮度） 的 HSL 或 RGB （紅色、 綠色和藍色）。 如需不同的色彩表示方式的詳細資訊，請參閱[色彩](/windows/desktop/uxguide/vis-color)。
 
 這個方法和[CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)方法執行相同的作業，但需要不同的值，如*H*參數。 在此方法中， *H*是程度，值介於 0 到 360 度，表示這兩個紅色。 在  [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)方法， *H*是圓形的百分比。 比方說，使用`HLStoRGB_ONE`，值 0.25，如*H*相當於值與 90 `HLStoRGB_TWO`。
 
@@ -679,7 +679,7 @@ static COLORREF __stdcall HSVtoRGB(
 
 ### <a name="remarks"></a>備註
 
-色彩可以表示為 HSV （色調、 飽和度和值）、 （色調、 飽和度和亮度） 的 HSL 或 RGB （紅色、 綠色和藍色）。 如需不同的色彩表示方式的詳細資訊，請參閱[色彩](http://go.microsoft.com/fwlink/p/?linkid=119126)。
+色彩可以表示為 HSV （色調、 飽和度和值）、 （色調、 飽和度和亮度） 的 HSL 或 RGB （紅色、 綠色和藍色）。 如需不同的色彩表示方式的詳細資訊，請參閱[色彩](/windows/desktop/uxguide/vis-color)。
 
 ##  <a name="huetorgb"></a>  CDrawingManager::HuetoRGB
 
@@ -864,7 +864,7 @@ static void __stdcall RGBtoHSL(
 
 ### <a name="remarks"></a>備註
 
-色彩可以表示為 HSV （色調、 飽和度和值）、 （色調、 飽和度和亮度） 的 HSL 或 RGB （紅色、 綠色和藍色）。 如需不同的色彩表示方式的詳細資訊，請參閱[色彩](http://go.microsoft.com/fwlink/p/?linkid=119126)。
+色彩可以表示為 HSV （色調、 飽和度和值）、 （色調、 飽和度和亮度） 的 HSL 或 RGB （紅色、 綠色和藍色）。 如需不同的色彩表示方式的詳細資訊，請參閱[色彩](/windows/desktop/uxguide/vis-color)。
 
 傳回的值*H*以介於 0 和 1 0 和 1 代表紅色的一小部分。 傳回的值*S*並*L*是介於 0 和 1 之間的數字。
 
@@ -896,7 +896,7 @@ static void __stdcall RGBtoHSV(
 
 ### <a name="remarks"></a>備註
 
-色彩可以表示為 HSV （色調、 飽和度和值）、 （色調、 飽和度和亮度） 的 HSL 或 RGB （紅色、 綠色和藍色）。 如需不同的色彩表示方式的詳細資訊，請參閱[色彩](http://go.microsoft.com/fwlink/p/?linkid=119126)。
+色彩可以表示為 HSV （色調、 飽和度和值）、 （色調、 飽和度和亮度） 的 HSL 或 RGB （紅色、 綠色和藍色）。 如需不同的色彩表示方式的詳細資訊，請參閱[色彩](/windows/desktop/uxguide/vis-color)。
 
 傳回的值*H*是 0 和 360 之間的數字 0 到 360 度指出紅色。 傳回值*S*並*V*是介於 0 和 1 之間的數字。
 

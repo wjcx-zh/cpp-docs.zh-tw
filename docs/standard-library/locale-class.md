@@ -1,6 +1,6 @@
 ---
 title: locale 類別
-ms.date: 11/04/2016
+ms.date: 03/19/2019
 f1_keywords:
 - xlocale/std::locale
 - xlocale/std::locale::category
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 888aeff3e8661338d1a017c06325108a4240ace3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1f5ace58af427645a0ad4eb8706506cc52ab08c
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677912"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278511"
 ---
 # <a name="locale-class"></a>locale 類別
 
@@ -291,7 +291,7 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>參數
 
-*當地語系化*<br/>
+*Loc*<br/>
 包含要插入到目標地區設定中之 facet 的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -360,7 +360,7 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>參數
 
-*當地語系化*<br/>
+*Loc*<br/>
 程式要用來作為預設地區設定的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -403,8 +403,14 @@ The previous locale was: C
 
 此成員類別提供唯一 facet 項目識別，做為用於地區設定中查詢 facet 的索引鍵。
 
-class id { protected:    id(); private:    id(const id&) // not defined void operator=(const id&)  // not defined    };
-
+```cpp
+class id 
+{
+   protected:    id();
+   private:      id(const id&)
+   void operator=(const id&)  // not defined    
+};
+```
 ### <a name="remarks"></a>備註
 
 此成員類別描述每個唯一的地區設定 facet 所需的靜態成員物件。 請注意，您無法複製或指派類別的物件`id`。
@@ -431,7 +437,7 @@ locale(const locale& Loc, const Facet* Fac);
 *Locname*<br/>
 地區設定的名稱。
 
-*當地語系化*<br/>
+*Loc*<br/>
 在建構新地區設定時所要複製的地區設定。
 
 *其他*<br/>

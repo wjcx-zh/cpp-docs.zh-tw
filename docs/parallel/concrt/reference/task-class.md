@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: c1dc146f03b4ed5c0d9d82736959df3097f41199
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 99676ac0fff9584cd8453562f8918f6cadd66666
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289295"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278527"
 ---
 # <a name="task-class-concurrency-runtime"></a>task 類別 (並行執行階段)
 
@@ -112,7 +112,7 @@ void get() const;
 如果工作已取消，呼叫`get`將會擲回[task_canceled](task-canceled-class.md)例外狀況。 如果工作發生不同的例外狀況，或例外狀況從前項工作傳播至它，則呼叫 `get` 將會擲回該例外狀況。
 
 > [!IMPORTANT]
->  在通用 Windows 平台 (UWP) 應用程式中，請勿呼叫[concurrency::task::wait](#wait)或是`get`(`wait`呼叫`get`) 會在 STA 執行的程式碼中 否則，執行階段會擲回[concurrency:: invalid_operation](invalid-operation-class.md)因為這些方法會封鎖目前的執行緒，而且可能會導致應用程式變成沒有回應。 不過，您可以呼叫`get`接收中以工作為基礎的接續的前項工作的結果，因為會立即提供結果的方法。
+>  在通用 Windows 平台 (UWP) 應用程式中，請勿呼叫[concurrency::task::wait](#wait)或是`get`(`wait`呼叫`get`) 中的使用者介面執行緒執行的程式碼。 否則，執行階段會擲回[concurrency:: invalid_operation](invalid-operation-class.md)因為這些方法會封鎖目前的執行緒，而且可能會導致應用程式變成沒有回應。 不過，您可以呼叫`get`接收中以工作為基礎的接續的前項工作的結果，因為會立即提供結果的方法。
 
 ##  <a name="is_apartment_aware"></a> is_apartment_aware
 
@@ -344,7 +344,7 @@ task_status wait() const;
 ### <a name="remarks"></a>備註
 
 > [!IMPORTANT]
->  在通用 Windows 平台 (UWP) 應用程式中，請勿呼叫`wait`在 STA 上執行之程式碼 否則，因為這個方法會封鎖目前的執行緒，而且可能會導致應用程式沒有回應，所以執行階段會擲回 [concurrency::invalid_operation](invalid-operation-class.md) 。 不過，您可以呼叫 [concurrency::task::get](#get) 方法來以工作為基礎連續的形式接收前項工作的結果。
+>  在通用 Windows 平台 (UWP) 應用程式中，請勿呼叫`wait`的使用者介面執行緒執行的程式碼中。 否則，因為這個方法會封鎖目前的執行緒，而且可能會導致應用程式沒有回應，所以執行階段會擲回 [concurrency::invalid_operation](invalid-operation-class.md) 。 不過，您可以呼叫 [concurrency::task::get](#get) 方法來以工作為基礎連續的形式接收前項工作的結果。
 
 ## <a name="see-also"></a>另請參閱
 

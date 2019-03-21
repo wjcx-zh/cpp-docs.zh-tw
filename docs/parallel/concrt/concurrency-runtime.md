@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: 245984d9702c997f16601bf5e2a9bd049ae5fed9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6f7b70dcbee639bdd44a195709bddde9e06dee21
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258329"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278550"
 ---
 # <a name="concurrency-runtime"></a>並行執行階段
 
@@ -99,7 +99,6 @@ C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的�
 |||
 |-|-|
 |[Hilo 的非同步程式設計模式和祕訣 (使用 C++ 和 XAML 的 Windows 市集應用程式)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我們如何使用並行執行階段來實作非同步作業，使用 c + + 和 XAML 的 Windows 執行階段應用程式。|
-|[Visual Studio 2010 中的並行執行階段和平行模式程式庫程式碼範例](http://go.microsoft.com/fwlink/p/?linkid=183875)|提供示範並行執行階段的範例應用程式和公用程式。|
 |[機器碼平行程式設計部落格](http://go.microsoft.com/fwlink/p/?linkid=183873)|提供有關在並行執行階段中之平行程式設計的其他深入部落格文章。|
 |[C++ 和機器碼平行程式設計論壇](http://go.microsoft.com/fwlink/p/?linkid=183874)|讓您參與有關並行執行階段的社群討論。|
 |[平行程式設計](/dotnet/standard/parallel-programming/index)|將教導您有關使用.NET Framework 中平行程式設計模型。|

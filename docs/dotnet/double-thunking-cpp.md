@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: 984a20d701b159820a94483fe9d3743f015b71f6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f34af20ed3dd2c48659bdbf7794c443920dbb4e9
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741957"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278394"
 ---
 # <a name="double-thunking-c"></a>Double Thunking (C++)
 
@@ -27,7 +27,7 @@ Double thunking 指的是效能的您可能會遇到 Visual c + + managed 函式
 
 同樣地，如果您匯出 ([dllexport、 dllimport](../cpp/dllexport-dllimport.md)) 的受管理的函式，會產生原生進入點和任何匯入，並呼叫該函式的函式會呼叫透過原生進入點。 若要避免 double thunking，在此情況下，不使用原生的匯出/匯入語意;只要參考的中繼資料，透過`#using`(請參閱 < [#using 指示詞](../preprocessor/hash-using-directive-cpp.md))。
 
-編譯器已更新為減少不必要的 double thunking。 比方說，managed 類型 （包括傳回型別） 的簽章中具有的任何函式會隱含地標示為`__clrcall`。 如需雙 thunk 排除的詳細資訊，請參閱[ https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx ](https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx)。
+編譯器已更新為減少不必要的 double thunking。 比方說，managed 類型 （包括傳回型別） 的簽章中具有的任何函式會隱含地標示為`__clrcall`。
 
 ## <a name="example"></a>範例
 

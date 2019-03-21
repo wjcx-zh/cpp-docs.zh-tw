@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /FI compiler option [C++]
 - preprocess header file compiler option [C++]
 ms.assetid: 07e79577-8152-4df9-a64c-aae08c603397
-ms.openlocfilehash: 2e85706a0266696b83fe1a1a6cdc45ba3399fc21
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e047ecc5266a898f2c6dc24be3c204f8ddf94386
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809219"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278365"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (命名強制的包含檔)
 
@@ -41,7 +41,7 @@ ms.locfileid: "57809219"
 
 1. 按一下 **進階**屬性頁。
 
-1. 修改**強制包含**屬性。
+1. 修改**強制的 Include 檔**屬性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
@@ -51,5 +51,5 @@ ms.locfileid: "57809219"
 
 [輸出檔 (/F) 選項](output-file-f-options.md)<br/>
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)<br/>
 [指定路徑名稱](specifying-the-pathname.md)

@@ -1,25 +1,25 @@
 ---
 title: CppProperties.json 結構描述參考
-ms.date: 03/05/2019
+ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake in Visual C++
-ms.openlocfilehash: fd655de3313dd95eb3fcefaeba21e703d32e860a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 43ffa0e92649fe233c6a743d4b64a2749cb28f5a
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824895"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356097"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>CppProperties.json 結構描述參考
 
-開啟資料夾 」 專案，請勿使用 CMake 可以儲存在專案組態設定`CppProperties.json`檔案。 (CMake 專案使用[CMakeSettings.json](customize-cmake-settings.md)檔案。)Visual Studio IDE 使用`CppProperties.json`進行 IntelliSense 和程式碼瀏覽。 設定名稱/值組所組成，並定義 #include 路徑、 編譯器參數，與其他參數。 
+開啟不使用 CMake 的資料夾專案可將專案組態設定儲存在 `CppProperties.json` 檔案中。 (CMake 專案會使用 [CMakeSettings.json](customize-cmake-settings.md) 檔案。)Visual Studio IDE 會針對 IntelliSense 及程式碼導覽使用 `CppProperties.json`。 組態由成對的名稱和數值組成，並定義 #include 路徑、編譯器參數及其他參數。 
 
 
 ## <a name="default-configurations"></a>預設組態
 
-Visual Studio 會提供預先定義的組態的 x86 和 x64 偵錯和發行。 根據預設，您的專案會有 x86 偵錯組態`CppProperties.json`。 若要加入新的組態，以滑鼠右鍵按一下`CppProperties.json`檔案中**方案總管 中**，然後選擇**加入組態**:
+Visual Studio 提供 x86 及 x64 偵錯及版本的預先定義組態。 根據預設，您的專案會在 `CppProperties.json` 中擁有 x86-Debug 組態。 若要新增新的組態，請以滑鼠右鍵按一下 [方案總管] 中的 `CppProperties.json` 檔案，然後選擇 [新增組態]：
 
-![開啟資料夾加入組態](media/open-folder-add-config.png "開啟資料夾新增新的組態")
+![開啟資料夾並新增組態](media/open-folder-add-config.png "開啟資料夾並新增組態")
 
 預設組態如下所示：
 
@@ -97,9 +97,9 @@ Visual Studio 會提供預先定義的組態的 x86 和 x64 偵錯和發行。 �
   ]
 }
 ```
-有一組允許的值的屬性，程式碼編輯器會顯示可用的選項，當您開始輸入：
+針對擁有一組可允許值的屬性，程式碼編輯器會在您開始鍵入時顯示可用選項：
 
-![開啟資料夾 IntelliSense](media/open-folder-intellisense-mode.png "開啟資料夾的 IntelliSense")
+![開啟資料夾 IntelliSense](media/open-folder-intellisense-mode.png "開啟資料夾 IntelliSense")
 
 
 
@@ -109,18 +109,20 @@ Visual Studio 會提供預先定義的組態的 x86 和 x64 偵錯和發行。 �
 
 |||
 |-|-|
-|`name`|會出現在 c + + 組態下拉式清單中的組態名稱|
-|`includePath`|應指定 include 路徑 （適用於大多數的編譯器有對應至 /I） 中的資料夾清單|
-|`defines`|應該定義 （對應至 /D 適用於大多數的編譯器） 的巨集清單|
-|`compilerSwitches`|一或多個可能影響 IntelliSense 行為的其他參數|
-|`forcedInclude`|若要自動包含在每個編譯單位的標頭 （對應到 /FI MSVC 或-包含 clang）|
-|`undefines`|為未定義 （對應至 /U 代表 MSVC） 的巨集清單|
-|`intelliSenseMode`|若要使用 IntelliSense 引擎。 您可以指定適用於 MSVC、gcc 或 Clang 的架構特定變化：<br/><br/>- msvc-x86 (預設值)<br/>- msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
+|`name`|出現在 C++ 組態下拉式清單中的組態名稱|
+|`includePath`|應在 Include 路徑中指定的資料夾清單 (對應到大多數編譯器的 /I)|
+|`defines`|應定義的巨集清單 (對應到大多數編譯器的 /D)|
+|`compilerSwitches`|可能會影響 IntelliSense 行為的一或多個其他參數|
+|`forcedInclude`|要自動包含在每個編譯單位中的標頭 (MSVC 會對應至 /FI，clang 會對應至 -include)|
+|`undefines`|要使其成為未定義的巨集清單 (MSVC 會對應至 /U)|
+|`intelliSenseMode`|要使用的 IntelliSense 引擎。 您可以指定適用於 MSVC、gcc 或 Clang 的架構特定變化：<br/><br/>- windows-msvc-x86 (default)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
 
-## <a name="custom-configurations"></a>自訂設定
+注意:值`msvc-x86`和`msvc-x64`因舊版因素而只支援。 請使用`windows-msvc*`變體。
+
+## <a name="custom-configurations"></a>自訂組態
 
 
-您可以自訂任何在預設 configuations `CppProperties.json`，或建立新的組態。 每個組態都會出現在組態下拉式清單中：
+您可以在 `CppProperties.json` 中自訂任何預設組態，或是建立新的組態。 每個組態都會出現在組態下拉式清單中：
 
 ```json
 {
@@ -139,7 +141,7 @@ Visual Studio 會提供預先定義的組態的 x86 和 x64 偵錯和發行。 �
 
 ## <a name="system-environment-variables"></a>系統環境變數 
 
- `CppProperties.json` 支援系統環境變數擴充的包含路徑和其他屬性值。 語法是 `${env.FOODIR}`，可擴充環境變數 `%FOODIR%`。 此外，也支援下列系統定義的變數：
+ `CppProperties.json` 支援系統環境變數擴充，包含路徑及其他屬性值。 語法是 `${env.FOODIR}`，可擴充環境變數 `%FOODIR%`。 此外，也支援下列系統定義的變數：
 
 |變數名稱|描述|
 |-----------|-----------------|
@@ -162,7 +164,7 @@ Visual Studio 會提供預先定義的組態的 x86 和 x64 偵錯和發行。 �
 
 ## <a name="custom-environment-variables"></a>自訂環境變數
 
-您可以定義自訂的環境變數中`CppProperties.json`是全域或每個組態。 下列範例示範如何宣告及使用預設和自訂環境變數。 全域 **environments** 屬性會宣告名為 **INCLUDE** 的變數，可供任何組態使用：
+您可以在 `CppProperties.json` 中，全域或根據組態定義自訂環境變數。 下列範例示範如何宣告及使用預設和自訂環境變數。 全域 **environments** 屬性會宣告名為 **INCLUDE** 的變數，可供任何組態使用：
 
 ```json
 {
@@ -186,7 +188,7 @@ Visual Studio 會提供預先定義的組態的 x86 和 x64 偵錯和發行。 �
         "${env.INCLUDE}"
       ],
       "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "msvc-x86"
+      "intelliSenseMode": "windows-msvc-x86"
     },
     {
       "inheritEnvironments": [
@@ -199,7 +201,7 @@ Visual Studio 會提供預先定義的組態的 x86 和 x64 偵錯和發行。 �
         "${env.INCLUDE}"
       ],
       "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "msvc-x64"
+      "intelliSenseMode": "windows-msvc-x64"
     }
   ]
 }
@@ -227,7 +229,7 @@ Visual Studio 會提供預先定義的組態的 x86 和 x64 偵錯和發行。 �
         "${env.INCLUDE}"
       ],
       "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "msvc-x86"
+      "intelliSenseMode": "windows-msvc-x86"
     },
     {
       "environments": [
@@ -246,25 +248,25 @@ Visual Studio 會提供預先定義的組態的 x86 和 x64 偵錯和發行。 �
         "${env.INCLUDE}"
       ],
       "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "msvc-x64"
+      "intelliSenseMode": "windows-msvc-x64"
     }
   ]
 }
 ```
 
-所有自訂和預設的環境變數中也會有`tasks.vs.json`和`launch.vs.json`。
+所有自訂和預設環境變數也都能在 `tasks.vs.json` 和 `launch.vs.json` 中取得。
 
 #### <a name="build-in-macros"></a>內建巨集
 
-您可以存取下列的內建巨集內`CppProperties.json`:
+您可以存取下列位於 `CppProperties.json` 內部的內建巨集：
 
 |||
 |-|-|
 |`${workspaceRoot}`| 工作區資料夾的完整路徑|
-|`${projectRoot}`| 資料夾的完整路徑位置`CppProperties.json`放置|
+|`${projectRoot}`| 指向放置 `CppProperties.json` 資料夾的完整路徑|
 |`${vsInstallDir}`| 執行中 VS 2017 執行個體安裝所在資料夾的完整路徑|
 
-例如，如果您的專案已加入資料夾，而且也包含 windows.h 和其他常見的標頭，從 Windows SDK，您可能想要更新您`CppProperties.json`這些組態檔包含：
+例如，如果您的專案具有 Include 資料夾，也包含 windows.h 及 Windows SDK 中的其他常見標頭，您可能需要使用下列 Include 檔更新您的 `CppProperties.json` 組態檔：
 
 ```json
 {

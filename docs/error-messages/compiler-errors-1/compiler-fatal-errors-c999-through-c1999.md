@@ -52,12 +52,12 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 6809ef1640c324e247bd20c83d4622fe27987ae6
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 17c456f6ab248964cbd19cd9695da290254ccf1b
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328242"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356214"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>編譯器嚴重錯誤 C999 至 C1999
 
@@ -70,7 +70,7 @@ ms.locfileid: "58328242"
 |錯誤|訊息|
 |-----------|-------------|
 |[嚴重錯誤 C999](../../error-messages/compiler-errors-1/fatal-error-c999.md)|不明訊息 - 請選擇 Visual C++ [說明] 功能表上的 [技術支援] 命令或開啟技術支援說明檔以取得詳細資訊|
-|[嚴重錯誤 C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|編譯器中發生內部錯誤。<br /><br /> (編譯器檔案 '*file*'，第 *number*行)<br /><br /> 若要解決這個問題，請嘗試簡化或變更上面所列位置附近的程式。 請選擇 Visual C++ [說明] 功能表上的 [技術支援] 命令或開啟技術支援說明檔以取得詳細資訊|
+|[嚴重錯誤 C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|編譯器中發生內部錯誤。<br /> (編譯器檔案 '*file*'，第 *number*行)<br /> 若要解決這個問題，請嘗試簡化或變更上面所列位置附近的程式。 請選擇 Visual C++ [說明] 功能表上的 [技術支援] 命令或開啟技術支援說明檔以取得詳細資訊|
 |[嚴重錯誤 C1002](../../error-messages/compiler-errors-1/fatal-error-c1002.md)|編譯器於第二編譯階段堆積空間不足|
 |[嚴重錯誤 C1003](../../error-messages/compiler-errors-1/fatal-error-c1003.md)|錯誤計數超過 *number*；停止編譯|
 |[嚴重錯誤 C1004](../../error-messages/compiler-errors-1/fatal-error-c1004.md)|找到未預期的檔案結尾|
@@ -78,7 +78,7 @@ ms.locfileid: "58328242"
 |[嚴重錯誤 C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|無法辨認 '*option*' 中的旗標 '*string*'|
 |[嚴重錯誤 C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|沒有指定輸入檔案|
 |[嚴重錯誤 C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|編譯器限制: 巨集巢狀結構太深，請簡化|
-|[嚴重錯誤 C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|尋找先行編譯的標頭時出現非預期的檔案結尾。 您是否忘記新增 ' #include <*檔案*>' 到您的來源？|
+|[嚴重錯誤 C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|尋找先行編譯的標頭時出現非預期的檔案結尾。 您是否忘記新增 ' #include \<*檔案*>' 到您的來源？|
 |[嚴重錯誤 C1012](fatal-error-c1012.md)|無對應的括號: 遺漏 '*character*"|
 |[嚴重錯誤 C1013](fatal-error-c1013.md)|編譯器限制: 左括號太多，請簡化運算式或分為數個陳述式|
 |[嚴重錯誤 C1014](fatal-error-c1014.md)|Include 檔太多: 深度 = *number*|

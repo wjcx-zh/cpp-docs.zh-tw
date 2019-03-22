@@ -1,12 +1,12 @@
 ---
 title: ARM64 ABI 慣例概觀
-ms.date: 07/11/2018
-ms.openlocfilehash: 537f8cf5bb8db61854bea7f4624e3dd3176c6a59
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.date: 03/22/2019
+ms.openlocfilehash: 5dddc26285606b771a3939be19dff5b9ad53f3c7
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816538"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356188"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>ARM64 ABI 慣例概觀
 
@@ -191,7 +191,7 @@ X0 會傳回整數值。 S0/d0/v0 視中，會傳回浮點值。
 
 詳述加 ARM ABI，下列堆疊必須保持 16 位元組對齊在所有的時間。 AArch64 包含會產生錯誤時進行預存程序相對負載或存放區和預存程序不是 16-位元組對齊的堆疊對齊的硬體功能。 Windows 會執行隨時啟用這項功能。
 
-配置 4k 以上值得堆疊的函式必須確定之前的最後一頁的每個頁面都會被接觸到的順序，以確保沒有任何程式碼可以 「 跳過 」 Windows 用於擴充堆疊的防護頁面。 通常這是藉由`__chkstk`協助程式，有自訂的呼叫慣例傳遞堆疊配置總量除以 16 x8。
+配置 4k 以上值得堆疊的函式必須確定之前的最後一頁的每個頁面都會被接觸到的順序，以確保沒有任何程式碼可以 「 跳過 」 Windows 用於擴充堆疊的防護頁面。 通常這是藉由`__chkstk`協助程式，有自訂的呼叫慣例傳遞堆疊配置總量除以 16 x15。
 
 ## <a name="red-zone"></a>紅色區域
 

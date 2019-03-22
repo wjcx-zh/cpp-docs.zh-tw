@@ -17,12 +17,12 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: c61f3fdd434a1b746c024b1a98d1d71f04df7e5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b91918d526d83d4cf47436d02b7c67038576bafb
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746913"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356175"
 ---
 # <a name="managed-types-ccli"></a>Managed 類型 (C++/CLI)
 
@@ -46,19 +46,21 @@ int main(int, char*[], char*[]) {}
 
 |Visual c + + 類型|.NET Framework 類型|
 |-----------------------|-------------------------|
-|**bool**|**System.Boolean**|
-|**char&lt;3** (請參閱 < [/J](../build/reference/j-default-char-type-is-unsigned.md)如需詳細資訊)|**System.SByte**|
-|**unsigned char**|**System.Byte**|
-|**wchar_t**|**System.Char**|
-|**雙精度浮點**和**長雙精度**|**System.Double**|
-|**float**|**System.Single**|
-|**int**，**帶正負號 int**， **long**，和**帶正負號長時間**|**System.Int32**|
-|**不帶正負號的 int**和**不帶正負號長時間**|**System.UInt32**|
-|**__int64**和**帶正負號的 __int64**|**System.Int64**|
-|**unsigned __int64**|**System.UInt64**|
-|**簡短**和**帶正負號短**|**System.Int16**|
-|**unsigned short**|**System.UInt16**|
-|**void**|**System.Void**|
+|**void**|<xref:System.Void?displayProperty=nameWithType>|
+|**bool**|<xref:System.Boolean?displayProperty=nameWithType>|
+|**帶正負號的 char** |<xref:System.SByte?displayProperty=nameWithType>|
+|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|
+|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|
+|**簡短**和**帶正負號短**|<xref:System.Int16?displayProperty=nameWithType>|
+|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|
+|**int**，**帶正負號 int**， **long**，和**帶正負號長時間**|<xref:System.Int32?displayProperty=nameWithType>|
+|**不帶正負號的 int**和**不帶正負號長時間**|<xref:System.UInt32?displayProperty=nameWithType>|
+|**__int64**和**帶正負號的 __int64**|<xref:System.Int64?displayProperty=nameWithType>|
+|**unsigned __int64**|<xref:System.UInt64?displayProperty=nameWithType>|
+|**float**|<xref:System.Single?displayProperty=nameWithType>|
+|**雙精度浮點**和**長雙精度**|<xref:System.Double?displayProperty=nameWithType>|
+
+如需有關預設為帶正負號或不帶正負號的編譯器選項**char**，請參閱[/J （預設 char 類型為不帶正負號）](../build/reference/j-default-char-type-is-unsigned.md)。
 
 ## <a name="version_issues"></a> 在原生類型中巢狀的實值型別的版本問題
 

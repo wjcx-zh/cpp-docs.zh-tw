@@ -48,12 +48,12 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 545bbeec545b37324ff9c15512b27073f5ffc1c7
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 840a7e63bb9b98cfb46ea36e30b3439168688c87
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627291"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328308"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>_InterlockedCompareExchange 內建函式
 
@@ -204,11 +204,12 @@ __int64 _InterlockedCompareExchange64_rel(
 
 `_InterlockedCompareExchange` 會執行不可部分完成的 `Destination` 值與 `Comparand` 值的比較。 如果 `Destination` 值等於 `Comparand` 值，則 `Exchange` 值會儲存在 `Destination` 所指定的位址。 否則，不會執行任何作業。
 
-`_InterlockedCompareExchange` 提供 Win32 Windows SDK 的編譯器內建支援[3&gt;interlockedcompareexchange&lt;3}](/windows/desktop/api/winbase/nf-winbase-interlockedcompareexchange)函式。
+`_InterlockedCompareExchange` 提供 Win32 Windows SDK 的編譯器內建支援[3&gt;interlockedcompareexchange&lt;3}](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange)函式。
 
 在 `_InterlockedCompareExchange` 上有數個變化，會因所涉及的資料類型，以及是否使用處理器專用的取得或釋放語意，而有所不同。
 
-`_InterlockedCompareExchange` 函式在長整數值上運算；`_InterlockedCompareExchange8` 在 8 位元整數值上運算；`_InterlockedCompareExchange16` 在短整數值上運算；`_InterlockedCompareExchange64` 在 64 位元整數值上運算。
+
+  `_InterlockedCompareExchange` 函式在長整數值上運算；`_InterlockedCompareExchange8` 在 8 位元整數值上運算；`_InterlockedCompareExchange16` 在短整數值上運算；`_InterlockedCompareExchange64` 在 64 位元整數值上運算。
 
 在 ARM 平台上，搭配取得和釋放語意的 `_acq` 和 `_rel` 字尾使用內建函式，例如在重要區段的開頭和結尾處。 搭配 `_nf` (「無範圍」) 字尾的 ARM 內建函式不會當做記憶體屏障。
 

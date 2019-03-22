@@ -2,12 +2,12 @@
 title: Visual C++ 語言參考 (C++/CX)
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: 319374447ba08dbf18fba91e4c24c0874d3b6ce2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ce0272499b653b9077a891e39e9b29797e7e051d
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422958"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328411"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Visual C++ 語言參考 (C++/CX)
 
@@ -24,7 +24,7 @@ C + + /CX 是一組可讓 Windows 應用程式和 Windows 執行階段元件，�
 
 - 可供 JavaScript 型 Windows 應用程式的 c + + Windows 執行階段元件。 如需詳細資訊，請參閱 [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
 
-- Windows DirectX 遊戲與細膩圖像處理應用程式。 如需詳細資訊，請參閱 <<c0> [ 建立簡單的 UWP 遊戲搭配 DirectX](/windows/uwp/gaming/tutorial--create-your-first-metro-style-directx-game)。
+- Windows DirectX 遊戲與細膩圖像處理應用程式。 如需詳細資訊，請參閱 <<c0> [ 建立簡單的 UWP 遊戲搭配 DirectX](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game)。
 
 ## <a name="related-articles"></a>相關文章
 
@@ -32,7 +32,7 @@ C + + /CX 是一組可讓 Windows 應用程式和 Windows 執行階段元件，�
 |-|-|
 |[快速參考](../cppcx/quick-reference-c-cx.md)|資料表的關鍵字和運算子的 C + + /CX。|
 |[類型系統](../cppcx/type-system-c-cx.md)|描述基本的 C + + /CX 類型和程式設計建構，以及如何利用 C + + /CX，以取用，並建立 Windows 執行階段類型。|
-|[建置應用程式和程式庫](../cppcx/building-apps-and-libraries-c-cx.md)|討論如何使用 IDE 建置應用程式以及連結至靜態程式庫與 DLL。|
+|[建置應用程式和程式庫](../cppcx/building-apps-and-libraries-c-cx.md)|討論如何使用 IDE 來建置應用程式，並連結至靜態程式庫和 Dll。|
 |[與其他語言交互操作](../cppcx/interoperating-with-other-languages-c-cx.md)|討論如何元件的寫法是使用 C + + /CX 可用以 JavaScript 撰寫的元件，任何 managed 語言或 Windows 執行階段 c + + 樣板程式庫。|
 |[執行緒和封送處理](../cppcx/threading-and-marshaling-c-cx.md)|討論如何為您建立的元件指定執行緒與封送處理行為。|
 |[命名空間參考](../cppcx/namespaces-reference-c-cx.md)|預設命名空間、Platform 命名空間、Platform::Collections 及相關命名空間的參考文件。|

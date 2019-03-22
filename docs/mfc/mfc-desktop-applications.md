@@ -9,12 +9,12 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: 364f29406b2c00d26ecc4cc69060ed8ec21b743b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 60c50eb25132a38c72be762ab96d8ee262f5b349
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291274"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328827"
 ---
 # <a name="mfc-desktop-applications"></a>MFC 桌面應用程式
 
@@ -85,7 +85,7 @@ Visual Studio 中用於建立 MFC 應用程式之功能的指南。
 [Visual C++ 程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>
 提供 Visual C++ 隨附之各種程式庫的連結，這些程式庫包括 ATL、MFC、OLE DB 樣板、C 執行階段程式庫和 C++ 標準程式庫。
 
-[Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio.md)<br/>
+[Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 提供使用 Visual Studio 偵錯工具來更正應用程式或預存程序 (Stored Procedure) 中邏輯錯誤的連結。
 
 ## <a name="see-also"></a>另請參閱

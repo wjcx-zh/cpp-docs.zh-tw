@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: 31f9ba4e16fa1216db4fb66c7b7faeca333f2c43
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e50e5da5ea24d59131f123bb0c772897f9a30218
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520302"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329022"
 ---
 # <a name="storage-classes-c"></a>儲存類別 (C++)
 
@@ -24,7 +24,7 @@ A*儲存類別*內容中的 c + + 變數宣告為類型規範，可控管物件�
 
 1. [可變](../cpp/mutable-data-members-cpp.md)關鍵字可視為儲存類別規範。 不過，它只能在類別定義的成員清單中使用。
 
-1. **Visual c + + 2010年及更新版本：** **自動**關鍵字不再是 c + + 儲存類別規範，而**註冊**關鍵字已被取代。 **Visual Studio 2017 15.7 版及更新版本：** (適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**註冊**關鍵字從 c + + 語言中移除。
+1. **Visual c + + 2010年及更新版本：****自動**關鍵字不再是 c + + 儲存類別規範，而**註冊**關鍵字已被取代。 **Visual Studio 2017 15.7 版及更新版本：** (適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**註冊**關鍵字從 c + + 語言中移除。
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -36,7 +36,7 @@ A*儲存類別*內容中的 c + + 變數宣告為類型規範，可控管物件�
 - [extern](#extern)
 - [thread_local](#thread_local)
 
-## <a name="static"></a> 靜態
+## <a name="static"></a> static
 
 **靜態**關鍵字可以用來宣告變數和函式，在全域範圍、 命名空間範圍和類別範圍。 靜態變數也可以在區域範圍內進行宣告。
 
@@ -167,7 +167,7 @@ var == value
 
 Deklarace **const**變數**extern**儲存類別會強制該變數具有外部連結。 初始**extern const**允許定義轉譯單位中的變數。 若在定義轉譯單位以外的轉譯單位中初始化，會產生未定義的結果。 如需詳細資訊，請參閱[使用 extern 指定連結](../cpp/using-extern-to-specify-linkage.md)
 
-[/Zc: externconstexpr](../build/reference/zc-externconstexpr.md)編譯器選項可讓編譯器套用[外部連結]()變數宣告可透過`extern constexpr`。 在舊版的 Visual Studio，並依預設或如果 **/Zc:externConstexpr-** 指定時，Visual Studio 會套用到的內部連結**constexpr**變數，即使**extern**使用關鍵字。 **/Zc: externconstexpr**選項是從 Visual Studio 2017 Update 15.6 中推出。 和預設為關閉。 /Permissive-option 不會啟用 /zc: externconstexpr。
+[/Zc: externconstexpr](../build/reference/zc-externconstexpr.md)編譯器選項可讓編譯器套用[外部連結](../c-language/external-linkage.md)變數宣告可透過`extern constexpr`。 在舊版的 Visual Studio，並依預設或如果 **/Zc:externConstexpr-** 指定時，Visual Studio 會套用到的內部連結**constexpr**變數，即使**extern**使用關鍵字。 **/Zc: externconstexpr**選項是從 Visual Studio 2017 Update 15.6 中推出。 和預設為關閉。 /Permissive-option 不會啟用 /zc: externconstexpr。
 
 下列程式碼示範兩個**extern**宣告`DefinedElsewhere`（這是指不同的轉譯單位中定義的名稱） 和`DefinedHere`（參考封閉範圍中定義的名稱）：
 
@@ -219,7 +219,7 @@ void DoSomething()
 
 在 Windows 中，`thread_local`相當於[__declspec （thread)](../cpp/thread.md)不同之處在於 **__declspec （thread)** 可以套用至類型定義，並在 C 程式碼中有效。 只要可能，都請使用 `thread_local`，因為它是 C++ 標準的一部分，因此更具可攜性。
 
-##  <a name="register"></a>  註冊
+##  <a name="register"></a>  register
 
 **Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**註冊**關鍵字不再是支援的存放裝置類別。 關鍵字是仍保留供日後使用標準的。
 

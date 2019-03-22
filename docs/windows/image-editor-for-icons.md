@@ -42,12 +42,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 73fd4a8996bcfbaaf6fdd4018e524b66913d11cd
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 22fe458a72d970bb09687a53232f94b171e14a45
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563078"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328424"
 ---
 # <a name="image-editor-for-icons-c"></a>（c + +） 圖示影像編輯器
 
@@ -60,7 +60,7 @@ ms.locfileid: "57563078"
 
 您也可以使用**影像編輯器**並[二進位編輯器](binary-editor.md)來處理 managed 專案中的資源檔。 您想要編輯的任何 Managed 資源皆必須為連結的資源。 Visual Studio 資源編輯器不支援編輯內嵌的資源。
 
-除了建立新的圖形化資源，您可以[匯入現有的映像](/windows/how-to-copy-resources#import-and-export-resources)進行編輯，然後將它們新增至您的專案。 您也可以開啟和編輯映像，並不屬於專案，以供[獨立的影像編輯](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)。
+除了建立新的圖形化資源，您可以[匯入現有的映像](../windows/how-to-copy-resources.md#import-and-export-resources)進行編輯，然後將它們新增至您的專案。 您也可以開啟和編輯映像，並不屬於專案，以供[獨立的影像編輯](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)。
 
 如需**影像編輯器**，請參閱如何[建立圖示或其他影像](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)，[編輯映像](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)，[使用繪圖工具](../windows/using-a-drawing-tool-image-editor-for-icons.md)， [使用色彩](../windows/working-with-color-image-editor-for-icons.md)，並[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)。
 
@@ -151,7 +151,7 @@ ms.locfileid: "57563078"
 
 以下是文字的如何將文字新增至 Windows 應用程式中的圖示和操作您字型的範例。
 
-1. 建立 c + + Windows Forms 應用程式。 如需詳細資訊，請參閱 <<c0> [ 建立 Windows 應用程式專案](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5)。 *App.ico*檔案預設會新增至您的專案。
+1. 建立 c + + Windows Forms 應用程式。 如需詳細資訊，請參閱[如何：建立 Windows Form 應用程式](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90))。 *App.ico*檔案預設會新增至您的專案。
 
 1. 在 **方案總管**，按兩下檔案*app.ico*。 **影像編輯器**隨即開啟。
 
@@ -215,7 +215,7 @@ ms.locfileid: "57563078"
 
 ## <a name="requirements"></a>需求
 
-無
+None
 
 ## <a name="see-also"></a>另請參閱
 

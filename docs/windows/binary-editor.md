@@ -21,12 +21,12 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: df693e87bc9a370409eb43155d3f976a9f00cdac
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 0adcefe2af9d17a1c42f64f25636e220f53706fc
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562857"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328749"
 ---
 # <a name="binary-editor-c"></a>二進位編輯器 （c + +）
 
@@ -53,7 +53,7 @@ ms.locfileid: "57562857"
 
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>開啟 Windows 桌面資源進行二進位編輯
 
-1. 在 [[資源檢視]](/windows/how-to-create-a-resource-script-file#create-resources)中，選取您要編輯的特定資源檔。
+1. 在 [[資源檢視]](how-to-create-a-resource-script-file.md#create-resources)中，選取您要編輯的特定資源檔。
 
 1. 以滑鼠右鍵按一下資源，然後選取**開啟二進位資料**。
 
@@ -123,7 +123,7 @@ ms.locfileid: "57562857"
 
 ## <a name="requirements"></a>需求
 
-無
+None
 
 ## <a name="see-also"></a>另請參閱
 

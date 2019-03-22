@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-ms.openlocfilehash: e8a5195d4d2a3662d79d515c28dc66d1b0a27b24
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 755b89635eedd7808f900dc63cd3039845db1dd3
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295015"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328528"
 ---
 # <a name="cdbexception-class"></a>CDBException 類別
 
@@ -132,7 +132,7 @@ ODBC 所定義的 SQL 前置碼。 AFX 前面的程式碼會定義在 AFXDB。H�
 
 字串為形式 」 狀態: %s，原生: %ld，來源: %s"，其中的格式化程式碼，依序會取代的值，描述：
 
-- 在傳回的 SQLSTATE、 null 結束的字串，包含五個字元的錯誤碼*szSqlState*參數的 ODBC 函數`SQLError`。 SQLSTATE 值會列在附錄 A [ODBC 錯誤碼](/previous-versions/windows/desktop/ms714687)，請在*ODBC 程式設計人員參考*。 範例：「 S0022"。
+- 在傳回的 SQLSTATE、 null 結束的字串，包含五個字元的錯誤碼*szSqlState*參數的 ODBC 函數`SQLError`。 SQLSTATE 值會列在附錄 A [ODBC 錯誤碼](/previous-versions/windows/desktop/ms714687(v=vs.85))，請在*ODBC 程式設計人員參考*。 範例：「 S0022"。
 
 - 中的原生錯誤特有的程式碼，資料來源，傳回*pfNativeError*參數`SQLError`函式。 範例：207.
 
@@ -140,13 +140,13 @@ ODBC 所定義的 SQL 前置碼。 AFX 前面的程式碼會定義在 AFXDB。H�
 
 架構會將錯誤字串解譯，並將其元件`m_strStateNativeOrigin`; 如果`m_strStateNativeOrigin`包含資訊的多個錯誤，錯誤會以換行符號分隔。 架構對英數字元的錯誤文字`m_strError`。
 
-如需用來構成這個字串的程式碼的詳細資訊，請參閱[SQLError](/previous-versions/windows/desktop/ms716312)函式中*ODBC 程式設計人員參考*。
+如需用來構成這個字串的程式碼的詳細資訊，請參閱[SQLError](/previous-versions/windows/desktop/ms716312(v=vs.85))函式中*ODBC 程式設計人員參考*。
 
 ### <a name="example"></a>範例
 
-  從 ODBC:"State:S0022,Native:207,Origin:[Microsoft][ODBC SQL Server Driver][SQL Server] Invalid column name 'ColName'"
+  從 ODBC:"State:S0022,Native:207,Origin:\[Microsoft]\[ODBC SQL Server Driver]\[SQL Server] Invalid column name 'ColName'"
 
-在 `m_strStateNativeOrigin`中："State:S0022,Native:207,Origin:[Microsoft][ODBC SQL Server Driver][SQL Server]"
+在 `m_strStateNativeOrigin`中："State:S0022,Native:207,Origin:\[Microsoft]\[ODBC SQL Server Driver]\[SQL Server]"
 
 在 `m_strError`中：「 無效的資料行名稱 'ColName' 」
 

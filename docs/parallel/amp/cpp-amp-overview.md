@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: da77e2ba93554cb65d4cc92353d05d54467b50d4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a4bd8546ba551ee37b9c03b5965a4079a3bd9f98
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269639"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328879"
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概觀
 
@@ -21,11 +21,15 @@ C + + Accelerated Massive Parallelism (c + + AMP) 會利用在獨立圖形顯示
 
 ## <a name="system-requirements"></a>系統需求
 
-- Windows 7、 Windows 8、windows Server 2008 R2 或 Windows Server 2012
+- Windows 7 或更新版本
+
+- Windows Server 2008 R2 或更新版本
 
 - DirectX 11 功能層級 11.0 或更新版本的硬體
 
 - 在軟體模擬器上偵錯，Windows 8 或 Windows Server 2012 是必要的。 如需在硬體上偵錯，您必須安裝圖形卡的驅動程式。 如需詳細資訊，請參閱 <<c0> [ 偵錯 GPU 程式碼](/visualstudio/debugger/debugging-gpu-code)。
+
+- 注意:ARM64 上目前不支援 P。
 
 ## <a name="introduction"></a>簡介
 

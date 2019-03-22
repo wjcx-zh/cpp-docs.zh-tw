@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 251a1f9f6773363955ac374aa8714bc616137a31
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 07f942e6582eb9fabe6001c4823ec9e2b1a83bf6
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424999"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328970"
 ---
 # <a name="chtmlview-class"></a>CHtmlView 類別
 
@@ -1376,7 +1376,7 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
 ### <a name="parameters"></a>參數
 
 *pInfo*<br/>
-位址[DOCHOSTUIINFO](/previous-versions/aa770044\(v=vs.85\))接收主機的 UI 功能的結構。
+位址[DOCHOSTUIINFO](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa770044\(v=vs.85\))接收主機的 UI 功能的結構。
 
 ### <a name="return-value"></a>傳回值
 

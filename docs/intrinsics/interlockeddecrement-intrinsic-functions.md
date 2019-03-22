@@ -44,18 +44,18 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: d180ed8d416483d1be5e2bbd52f1a8752996f3f9
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: e2816d99991fcd051c5bbfbe6f4be6a43db2ef2e
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627427"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328554"
 ---
 # <a name="interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement 內建函式
 
 **Microsoft 專屬**
 
-提供 Win32 Windows SDK 的編譯器內建支援[InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement)函式。
+提供 Win32 Windows SDK 的編譯器內建支援[InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement)函式。
 
 ## <a name="syntax"></a>語法
 
@@ -120,11 +120,13 @@ __int64 _InterlockedDecrement64_nf(
 
 在 `_InterlockedDecrement` 上有數個變化，會因所涉及的資料類型，以及是否使用處理器專用的取得或釋放語意，而有所不同。
 
-`_InterlockedDecrement` 函式在 32 位元整數值上操作，而 `_InterlockedDecrement16` 是在 16 位元整數值上操作，`_InterlockedDecrement64` 在 64 位元整數值上操作。
+
+  `_InterlockedDecrement` 函式在 32 位元整數值上操作，而 `_InterlockedDecrement16` 是在 16 位元整數值上操作，`_InterlockedDecrement64` 在 64 位元整數值上操作。
 
 在 ARM 平台上，如果您需要取得並發行語意 (例如在關鍵區段的開頭和結尾)，請使用具有 `_acq` 和 `_rel` 後置字元的內建函式。 搭配 `_nf` (「無範圍」) 字尾的內建函式，不會當做記憶體屏障。
 
-`lpAddend` 參數所指向的變數必須對齊 32 位元界限；否則，這個函式會在多處理器 x86 系統與任何非 x86 系統上失敗。 如需詳細資訊，請參閱 <<c0> [ 對齊](../cpp/align-cpp.md)。
+
+  `lpAddend` 參數所指向的變數必須對齊 32 位元界限；否則，這個函式會在多處理器 x86 系統與任何非 x86 系統上失敗。 如需詳細資訊，請參閱 <<c0> [ 對齊](../cpp/align-cpp.md)。
 
 這些常式僅以內建函式的形式供您使用。
 

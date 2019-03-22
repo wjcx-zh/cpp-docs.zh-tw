@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: f57c09d549a4ceb92db21c06499b4f6e71fc6a52
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 4ed283b9be2afdacfbc93c647c7633fb7802e7fd
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562935"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328398"
 ---
 # <a name="accelerator-editor-c"></a>快速鍵編輯器 （c + +）
 
@@ -116,7 +116,7 @@ ms.locfileid: "57562935"
 
 ### <a name="to-edit-in-an-accelerator-table"></a>在快速鍵對應表中編輯
 
-1. 開啟快速鍵對應表，其在圖示上按兩下[資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)。
+1. 開啟快速鍵對應表，其在圖示上按兩下[資源檢視](how-to-create-a-resource-script-file.md#create-resources)。
 
 1. 選取資料表中的項目，並選取即可啟動就地編輯。
 
@@ -132,7 +132,7 @@ ms.locfileid: "57562935"
 
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>在開啟的快速鍵對應表中尋找項目
 
-1. 開啟快速鍵對應表，其在圖示上按兩下[資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)。
+1. 開啟快速鍵對應表，其在圖示上按兩下[資源檢視](how-to-create-a-resource-script-file.md#create-resources)。
 
 1. 選取的資料行行首，以依字母順序排序的資料行的內容。 例如，選取**識別碼**依字母順序顯示快速鍵對應表中的所有識別碼。
 
@@ -140,7 +140,7 @@ ms.locfileid: "57562935"
 
 ### <a name="to-add-an-entry-to-an-accelerator-table"></a>在快速鍵對應表中加入項目
 
-1. 開啟快速鍵對應表，其在圖示上按兩下[資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)。
+1. 開啟快速鍵對應表，其在圖示上按兩下[資源檢視](how-to-create-a-resource-script-file.md#create-resources)。
 
 1. 快速鍵對應表內按一下滑鼠右鍵，然後選擇 **新的 Accelerator**，或選取之資料表底部的空白資料列項目。
 
@@ -155,7 +155,7 @@ ms.locfileid: "57562935"
 
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>刪除快速鍵對應表中的項目
 
-1. 開啟快速鍵對應表，其在圖示上按兩下[資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)。
+1. 開啟快速鍵對應表，其在圖示上按兩下[資源檢視](how-to-create-a-resource-script-file.md#create-resources)。
 
 1. 選取您想要刪除，或按住項的目**Ctrl**或是**Shift**鍵同時選取來選擇多個項目。
 
@@ -177,7 +177,7 @@ ms.locfileid: "57562935"
 
 ### <a name="to-change-the-properties-of-multiple-accelerator-keys"></a>若要變更多個快速鍵屬性
 
-1. 開啟快速鍵對應表，其在圖示上按兩下[資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)。
+1. 開啟快速鍵對應表，其在圖示上按兩下[資源檢視](how-to-create-a-resource-script-file.md#create-resources)。
 
 1. 選取您想要變更按住的快速鍵**Ctrl**當您選取每個索引鍵。
 

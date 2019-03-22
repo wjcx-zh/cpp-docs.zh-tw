@@ -3,12 +3,12 @@ title: HOW TO：使用 winmdidl.exe 和 midlrt.exe windows 中繼資料建立.h 
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: b81f6901e60f27ada27f14d7dbc7c10fa3faec34
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: b9016f05b82e3eb04474d370bd069e8008de5278
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54335713"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328710"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>HOW TO：使用 winmdidl.exe 和 midlrt.exe windows 中繼資料建立.h 檔案
 
@@ -18,7 +18,7 @@ Winmdidl.exe 和 midlrt.exe 啟用原生 C++ 程式碼與 Windows 執行階段�
 
 - 建立自訂的 IDL 和標頭檔，讓使用 Windows 執行階段範本程式庫 (WRL) 所撰寫的 C++ 應用程式可以使用自訂的 Windows 執行階段元件。
 
-- 為 Windows 執行階段元件中的使用者定義的事件類型，產生 Proxy 和虛設常式檔案。 如需詳細資訊，請參閱 <<c0> [ 自訂事件和事件存取子，在 Windows 執行階段元件](/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components)。
+- 為 Windows 執行階段元件中的使用者定義的事件類型，產生 Proxy 和虛設常式檔案。 如需詳細資訊，請參閱 <<c0> [ 自訂事件和事件存取子，在 Windows 執行階段元件](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components)。
 
 這些工具僅適用於剖析自訂的 .winmd 檔案。 已為您產生 Windows 作業系統元件的 .idl 和 .h 檔案。 根據預設，在 Windows 8.1，它們位於 \Program 檔案 (x86) \Windows Kits\8.1\Include\winrt\\。
 
@@ -75,4 +75,4 @@ Winmdidl.exe [/nologo] [/suppressversioncheck] [/time] [/outdir:dir] [/banner:fi
 
 winmdidl 作業的輸出檔案與輸入檔案具有相同的名稱，但具有 .idl 副檔名。
 
-如果您正在開發將從 WRL 存取的 Windows 執行階段元件，您可以指定 winmdidl.exe 和 midlrt.exe 做為建置後步驟執行，以便在每個建置中產生 .idl 和 .h 檔案。 如需範例，請參閱[在 Windows 執行階段元件中引發事件](/uwp/winrt-components/raising-events-in-windows-runtime-components)。
+如果您正在開發將從 WRL 存取的 Windows 執行階段元件，您可以指定 winmdidl.exe 和 midlrt.exe 做為建置後步驟執行，以便在每個建置中產生 .idl 和 .h 檔案。 如需範例，請參閱[在 Windows 執行階段元件中引發事件](/windows/uwp/winrt-components/raising-events-in-windows-runtime-components)。

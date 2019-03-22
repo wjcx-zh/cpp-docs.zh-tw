@@ -14,18 +14,18 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: c05dd9da5dd17b0e06ace750d34f2c5abcf94380
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 7ef8127b829b60d84af72874292c33ae1c7c4636
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825837"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58327577"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>為 Visual Studio c + + 專案建立的檔案類型
 
 本主題描述所有類型的傳統桌面應用程式的 Visual Studio 專案相關聯的檔案。 您的專案中包含的實際檔案取決於專案類型以及您使用精靈時選取的選項。
 
-- [專案和方案檔]()
+- [專案和方案檔](project-and-solution-files.md)
 
 - [CLR 專案](files-created-for-clr-projects.md)
 
@@ -54,7 +54,7 @@ ms.locfileid: "57825837"
 |.atp|專案|應用程式範本專案檔。|
 |.bmp、.dib、.gif、.jpg、.jpe、.png|資源|一般影像檔。|
 |.bsc|編譯|瀏覽器程式碼檔。|
-|.cpp；.c|原始程式檔|您的應用程式的主要原始程式碼檔。|
+|.cpp.c|原始程式檔|您的應用程式的主要原始程式碼檔。|
 |.cur|資源|資料指標點陣圖形檔。|
 |.dbp|專案|資料庫專案檔。|
 |.disco|原始程式檔|動態探索文件檔。 處理 XML Web 服務探索。|
@@ -78,8 +78,8 @@ ms.locfileid: "57825837"
 |.vap|專案|Visual Studio Analyzer 專案檔。|
 |.vbg|方案|相容專案群組檔。|
 |.vbp、.vip、.vbproj|專案|Visual Basic 專案檔。|
-|.vcxitems|專案|用於在多個 C++ 專案之間共用程式碼檔的共用項目專案。 如需詳細資訊，請參閱 [專案檔和 Makefile]() 。|
-|.vcxproj|專案|Visual Studio 專案檔中。 如需詳細資訊，請參閱 [專案檔和 Makefile]() 。|
+|.vcxitems|專案|用於在多個 C++ 專案之間共用程式碼檔的共用項目專案。 請參閱[專案和方案檔](project-and-solution-files.md)如需詳細資訊。|
+|.vcxproj|專案|Visual Studio 專案檔中。 請參閱[專案和方案檔](project-and-solution-files.md)如需詳細資訊。|
 |.vcxproj.filters|專案|使用方案總管將檔案加入專案時，篩選檔會根據檔案的副檔名，定義要在方案總管樹狀檢視中的哪個位置加入檔案。|
 |.vdproj|專案|Visual Studio 部署專案檔。|
 |.vmx|專案|巨集專案檔。|

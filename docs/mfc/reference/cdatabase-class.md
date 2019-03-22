@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: 0e523b2a145254cd9b7adf2b066605a679349f6c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ebc36d82af9bfe12ab30a86214e58610b5eaab95
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273440"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328996"
 ---
 # <a name="cdatabase-class"></a>CDatabase 類別
 
@@ -192,7 +192,7 @@ void Cancel();
 
 ### <a name="remarks"></a>備註
 
-請注意，MFC ODBC 類別不會再使用非同步處理;若要執行的非同步作業，您必須直接呼叫 ODBC API 函式[SQLSetConnectOption](/previous-versions/windows/desktop/ms713564)。 如需詳細資訊，請參閱 <<c0> [ 非同步執行](/previous-versions/windows/desktop/ms713563)Windows SDK 中。
+請注意，MFC ODBC 類別不會再使用非同步處理;若要執行非同步作業，您必須直接呼叫 ODBC API 函式[SQLSetConnectOption](/sql/odbc/reference/syntax/sqlsetconnectoption-function)。 如需詳細資訊，請參閱 <<c0> [ 非同步執行](/sql/odbc/reference/develop-app/asynchronous-execution)。
 
 ##  <a name="cantransact"></a>  CDatabase::CanTransact
 

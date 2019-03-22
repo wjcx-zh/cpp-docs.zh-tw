@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: 75d62eb5ce3d24322d7af5030fb8d723ffa8fedb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b6009a1e6b6100eabaa2ed05404217c0d2906be0
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259928"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328645"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>MFC ODBC 消費者精靈
 
@@ -25,13 +25,13 @@ ms.locfileid: "57259928"
 
 - **資料來源**
 
-  **資料來源**按鈕可讓您設定指定的資料來源，使用指定的 ODBC 驅動程式。 如需有關資料來源檔案 (DSN) 的詳細資訊，請參閱[檔案資料來源](/previous-versions/windows/desktop/ms715401)ODBC SDK 中。
+  **資料來源**按鈕可讓您設定指定的資料來源，使用指定的 ODBC 驅動程式。 如需有關資料來源檔案 (DSN) 的詳細資訊，請參閱[檔案資料來源](/sql/odbc/reference/file-data-sources)ODBC SDK 中。
 
   **選取資料來源**對話方塊有兩個索引標籤：
 
   - **檔案資料來源** 索引標籤：
 
-     **查看** 方塊中指定要在其中選取要用作資料來源檔案的目錄。 預設為 \Program Files\Common Files\ODBC\Data 來源。 現有的檔案資料來源 （.dsn 檔案） 會出現在 [主要] 清單方塊中。 您可以設定註冊前階段使用的資料來源**檔案 DSN**索引標籤上[ODBC 資料來源管理員](/previous-versions/windows/desktop/ms714024)，或建立新的使用此對話方塊。
+     **查看** 方塊中指定要在其中選取要用作資料來源檔案的目錄。 預設為 \Program Files\Common Files\ODBC\Data 來源。 現有的檔案資料來源 （.dsn 檔案） 會出現在 [主要] 清單方塊中。 您可以設定註冊前階段使用的資料來源**檔案 DSN**索引標籤上[ODBC 資料來源管理員](/sql/odbc/admin/odbc-data-source-administrator)，或建立新的使用此對話方塊。
 
      若要建立新的檔案資料來源從這個對話方塊中，按一下`New`指定的 DSN 名稱;**建立新的資料來源** 對話方塊隨即出現。 在 **建立新的資料來源**對話方塊，選取適當的驅動程式，然後按一下`Next`; 按一下**瀏覽**，，然後選取要用作資料來源 （您必須選取 所有檔案 的檔案名稱檢視非 DSN 檔案，例如.xls 檔案）;按一下  `Next`，然後按一下**完成**。 （如果您選取的非 DSN 檔案時，您會取得驅動程式專屬對話方塊中，例如"ODBC Microsoft Excel Setup"這會將檔案轉換成資料來源名稱）。
 
@@ -40,13 +40,13 @@ ms.locfileid: "57259928"
 
      **DSN 名稱**方塊可讓您指定的檔案資料來源的名稱。 您必須確定 DSN 名稱結尾適當副檔名，例如 Excel 檔案的.xls 或.mdb 檔案的存取。
 
-     如需有關名稱 （dsn） 的詳細資訊，請參閱[檔案資料來源](/previous-versions/windows/desktop/ms715401)ODBC SDK 中。
+     如需有關名稱 （dsn） 的詳細資訊，請參閱[檔案資料來源](/sql/odbc/reference/file-data-sources)ODBC SDK 中。
 
   - **資料來源的機器** 索引標籤：
 
-     此索引標籤會列出系統和使用者資料來源。 使用者資料來源專屬於此機器上的使用者。 系統資料來源可供所有使用者在這部電腦上或全系統服務。 請參閱[機器資料來源](/previous-versions/windows/desktop/ms710952)ODBC SDK 中
+     此索引標籤會列出系統和使用者資料來源。 使用者資料來源專屬於此機器上的使用者。 系統資料來源可供所有使用者在這部電腦上或全系統服務。 請參閱[機器資料來源](/sql/odbc/reference/machine-data-sources)ODBC SDK 中
 
-     如需有關 ODBC 資料來源的詳細資訊，請參閱 < [Zdroje dat](/previous-versions/windows/desktop/ms711688) ODBC SDK 中。
+     如需有關 ODBC 資料來源的詳細資訊，請參閱 < [Zdroje dat](/sql/odbc/reference/data-sources) ODBC SDK 中。
 
   按一下 **確定**才能完成。 **選取資料庫物件** 對話方塊隨即出現。 從這個對話方塊中，選取資料表或檢視，將會使用取用者。 請注意，您可以按住 control 鍵同時按一下的項目上選取多個檢視和資料表。 按一下 **確定**才能完成。
 

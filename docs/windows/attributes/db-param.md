@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-ms.openlocfilehash: 58d6fa5026395b4be6663ab253cf9ffdfea01788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2de051b099da5f179a7634cddfb359d85f4b1f83
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505036"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328788"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -25,7 +25,7 @@ ms.locfileid: "50505036"
 
 ### <a name="parameters"></a>參數
 
-*序數*<br/>
+*ordinal*<br/>
 中要將資料繫結至資料列集的欄位對應的資料行號碼 （DBCOLUMNINFO 序數）。
 
 *paramtype*<br/>
@@ -38,16 +38,16 @@ ms.locfileid: "50505036"
 - DBPARAMIO_NOTPARAM 存取子沒有任何參數。 設定`eParamIO`為此值在資料列存取子會提醒使用者參數被忽略。
 
 *dbtype*<br/>
-（選擇性）OLE DB[型別指示器](/previous-versions/windows/desktop/ms711251)的資料行項目。
+（選擇性）OLE DB[型別指示器](/previous-versions/windows/desktop/ms711251(v=vs.85))的資料行項目。
 
 *precision*<br/>
-（選擇性）要用於資料行項目有效位數。 如需詳細資訊，請參閱說明`bPrecision`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845)
+（選擇性）要用於資料行項目有效位數。 如需詳細資訊，請參閱說明`bPrecision`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*小數位數*<br/>
-（選擇性）要用於資料行項目小數位數。 如需詳細資訊，請參閱說明`bScale`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845)
+*scale*<br/>
+（選擇性）要用於資料行項目小數位數。 如需詳細資訊，請參閱說明`bScale`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *status*<br/>
-（選擇性）成員變數，用來保存此資料行的狀態。 狀態會指出資料行的值是資料值或其他值，例如 NULL。 如需可能的值，請參閱[狀態](/previous-versions/windows/desktop/ms722617)中*OLE DB 程式設計人員參考*。
+（選擇性）成員變數，用來保存此資料行的狀態。 狀態會指出資料行的值是資料值或其他值，例如 NULL。 如需可能的值，請參閱[狀態](/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 *length*<br/>
 （選擇性）成員變數，用來保存資料行的大小，以位元組為單位。
@@ -56,7 +56,7 @@ ms.locfileid: "50505036"
 
 **db_param**定義的參數，您在命令中使用，因此使用它來搭配`db_command`。 例如，您可以使用**db_param**繫結中的 SQL 查詢或預存程序的參數。 由問號 （？），表示參數的預存程序中，您應該將資料成員繫結參數會出現的順序。
 
-**db_param**分隔可以參與 OLE DB 中的成員資料`ICommandWithParameters`為基礎的繫結。 它會設定參數類型 （輸入或輸出）、 OLE DB 類型、 有效位數、 小數位數、 狀態和長度為指定的參數。 此屬性會插入的 OLE DB 取用者巨集 BEGIN_PARAM_MAP...END_PARAM_MAP。 您將標記與每個成員**db_param**屬性會佔用 COLUMN_ENTRY 形式對應中的一個項目。
+**db_param**分隔可以參與 OLE DB 中的成員資料`ICommandWithParameters`為基礎的繫結。 它會設定參數類型 （輸入或輸出）、 OLE DB 類型、 有效位數、 小數位數、 狀態和長度為指定的參數。 此屬性會插入的 OLE DB 取用者巨集 BEGIN_PARAM_MAP...END_PARAM_MAP. 您將標記與每個成員**db_param**屬性會佔用 COLUMN_ENTRY 形式對應中的一個項目。
 
 **db_param**搭配使用[db_table](db-table.md)或是[db_command](db-command.md)屬性。
 
@@ -110,8 +110,8 @@ struct CSalesbyYear {
 |-|-|
 |**適用於**|**類別**， **struct**、 member、 method、 local|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

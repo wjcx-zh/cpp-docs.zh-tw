@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: bea53c33ef723cf8c98d0c542d24389e730c092a
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 6c855986d98f265f876f2acdd085eea46e057c93
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563299"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328892"
 ---
 # <a name="string-editor-c"></a>字串編輯器 （c + +）
 
@@ -56,7 +56,7 @@ ms.locfileid: "57563299"
 
 ### <a name="to-find-a-string-resource-in-the-string-table"></a>若要在字串中尋找的字串資源
 
-1. 開啟字串資料表，其在圖示上按兩下[資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)。
+1. 開啟字串資料表，其在圖示上按兩下[資源檢視](how-to-create-a-resource-script-file.md#create-resources)。
 
 1. 移至功能表**編輯** > **尋找和取代**，然後選擇**尋找**。
 
@@ -79,7 +79,7 @@ ms.locfileid: "57563299"
 
 #### <a name="to-add-a-string-table-entry"></a>若要加入的字串資料表項目
 
-1. 開啟字串資料表，其在圖示上按兩下[資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)。
+1. 開啟字串資料表，其在圖示上按兩下[資源檢視](how-to-create-a-resource-script-file.md#create-resources)。
 
 1. 字串資料表中按一下滑鼠右鍵，然後選擇 **新的字串**。
 
@@ -124,7 +124,7 @@ ms.locfileid: "57563299"
 
 #### <a name="to-change-a-string-or-its-identifier"></a>若要變更字串或其識別碼
 
-1. 開啟字串資料表，其在圖示上按兩下[資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)。
+1. 開啟字串資料表，其在圖示上按兩下[資源檢視](how-to-create-a-resource-script-file.md#create-resources)。
 
 1. 選取您想要編輯，然後按兩下的字串**識別碼**，**值**，或**標題**資料行，則您可以：
 
@@ -136,7 +136,7 @@ ms.locfileid: "57563299"
 
 #### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>若要變更多個字串資源的標題屬性
 
-1. 開啟字串資料表，其在圖示上按兩下[資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)。
+1. 開啟字串資料表，其在圖示上按兩下[資源檢視](how-to-create-a-resource-script-file.md#create-resources)。
 
 1. 選取您想要變更按住的字串**Ctrl**當您選取每個索引鍵。
 
@@ -146,7 +146,7 @@ ms.locfileid: "57563299"
 
 ### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>若要加入的字串資源的格式或特殊字元
 
-1. 開啟字串資料表，其在圖示上按兩下[資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)。
+1. 開啟字串資料表，其在圖示上按兩下[資源檢視](how-to-create-a-resource-script-file.md#create-resources)。
 
 1. 選取您想要修改的字串。
 

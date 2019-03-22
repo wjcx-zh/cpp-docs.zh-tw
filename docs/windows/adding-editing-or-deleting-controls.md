@@ -43,12 +43,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: f27e325a8d766fbaf95037db669e0829671cb104
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 217bde10ea1b7f6457d141c3006c8c8fb2efaadf
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562909"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328502"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>如何：加入、 編輯或刪除控制項 （c + +）
 
@@ -153,7 +153,7 @@ ms.locfileid: "57562909"
 
 1. 建立 Win32 專案中，修改應用程式設定，讓您建立 Windows 應用程式 （而不將主控台應用程式）。
 
-1. 在 [資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)，按兩下 *.rc*檔案。
+1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)，按兩下 *.rc*檔案。
 
 1. 在 對話方塊 選項中，按兩下**關於** 方塊中。
 

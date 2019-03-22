@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 46a12e6204113b00c209696bbdfd1093232d7521
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93eff646fb582e25ad70549afc714c5321e56079
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559665"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328580"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>將專案從混合模式轉換為純中繼語言
 
@@ -80,7 +80,7 @@ ms.locfileid: "50559665"
    |[布林值](/dotnet/api/system.boolean)|表示布林值。|
    |[Byte](/dotnet/api/system.byte)|代表 8 位元不帶正負號的整數。|
    |[Char](/dotnet/api/system.char)|代表 Unicode 字元。|
-   |[DateTime](/dotnet/api/system.datetime.datetime.aspx)|表示時間的瞬間，通常以一天的日期和時間表示。|
+   |[DateTime](/dotnet/api/system.datetime)|表示時間的瞬間，通常以一天的日期和時間表示。|
    |[Decimal](/dotnet/api/system.decimal)|代表十進位數值。|
    |[Double](/dotnet/api/system.double)|表示雙精度浮點數。|
    |[Guid](/dotnet/api/system.guid)|表示全域唯一識別項 (GUID)。|
@@ -88,8 +88,8 @@ ms.locfileid: "50559665"
    |[Int32](/dotnet/api/system.int32)|表示 32 位元帶正負號的整數。|
    |[Int64](/dotnet/api/system.int64)|表示 64 位元帶正負號的整數。|
    |[IntPtr](/dotnet/api/system.intptr)|平台專用的類型，用以代表指標或控點。|
-   |[SByte](/dotnet/api/system.byte.aspx)|代表 8 位元帶正負號的整數。|
-   |[Single](/dotnet/api/system.single.aspx)|表示單精確度浮點數。|
+   |[SByte](/dotnet/api/system.byte)|代表 8 位元帶正負號的整數。|
+   |[Single](/dotnet/api/system.single)|表示單精確度浮點數。|
    |[TimeSpan](/dotnet/api/system.timespan)|表示時間間隔。|
    |[UInt16](/dotnet/api/system.uint16)|表示 16 位元不帶正負號的整數 (Unsigned Integer)。|
    |[UInt32](/dotnet/api/system.uint32)|表示 32 位元不帶正負號的整數 (Unsigned Integer)。|

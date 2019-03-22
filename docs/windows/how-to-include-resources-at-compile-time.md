@@ -23,12 +23,12 @@ helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: 74c70db5c04a6b56ec7bb2630c8d829151ec4225
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: cd2f05b4944e26d8a96b3f96e4e39fda0ad8ee48
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562831"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328385"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>HOW TO：包含資源在編譯時期 （c + +）
 
@@ -48,7 +48,7 @@ ms.locfileid: "57562831"
 
 您可以將資源從其他檔案加入您的專案在編譯時期藉由列出在**編譯時間指示詞**方塊中**Resource Includes**  對話方塊。 使用**Resource Includes**對話方塊來修改專案.rc 檔，以及所有儲存的所有資源的專案環境的一般工作安排[符號](../windows/symbols-resource-identifiers.md)在`Resource.h`。
 
-若要開始，開啟**Resource Includes**對話方塊中，以滑鼠右鍵按一下.rc 檔中的[資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)，選取**Resource Includes**並記下下列屬性：
+若要開始，開啟**Resource Includes**對話方塊中，以滑鼠右鍵按一下.rc 檔中的[資源檢視](how-to-create-a-resource-script-file.md#create-resources)，選取**Resource Includes**並記下下列屬性：
 
 | 屬性 | 描述 |
 |---|---|
@@ -65,7 +65,7 @@ ms.locfileid: "57562831"
 
 1. 將資源放在包含唯一檔案名稱的資源指令碼檔案。 不用*projectname.rc*，因為這是用於主要資源指令碼檔案的檔案名稱。
 
-1. 以滑鼠右鍵按一下 *.rc*中的檔案[資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)，然後選取**Resource Includes**。
+1. 以滑鼠右鍵按一下 *.rc*中的檔案[資源檢視](how-to-create-a-resource-script-file.md#create-resources)，然後選取**Resource Includes**。
 
 1. 在 **編譯時間指示詞**方塊中，加入[#include](../preprocessor/hash-include-directive-c-cpp.md)編譯器指示詞，以在開發環境中的主要資源檔中納入新的資源檔。
 

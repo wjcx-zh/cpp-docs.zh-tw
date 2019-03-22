@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: a138eb5aa40429696ca2efa4a67e1a1c5490f4fa
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 83402159d19f07cf94a0d00ccd79d68549b124e9
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563247"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328853"
 ---
 # <a name="toolbar-editor-c"></a>工具列編輯器 （c + +）
 
@@ -128,7 +128,7 @@ ms.locfileid: "57563247"
 
 #### <a name="to-create-a-new-toolbar-button"></a>若要建立新的工具列按鈕
 
-1. 在 [資源檢視](../windows/resource-view-window.md)展開 [資源] 資料夾 (例如*Project1.rc*)。
+1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)展開 [資源] 資料夾 (例如*Project1.rc*)。
 
 1. 依序展開**工具列**資料夾，然後選取工具列來編輯，然後執行下列其中之一：
 
@@ -138,7 +138,7 @@ ms.locfileid: "57563247"
 
 #### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>若要將影像加入為按鈕的工具列
 
-1. 在 [資源檢視](../windows/resource-view-window.md)，按兩下 [開啟] 工具列。
+1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)，按兩下 [開啟] 工具列。
 
 1. 接下來，開啟您想要新增至您的工具列影像。
 

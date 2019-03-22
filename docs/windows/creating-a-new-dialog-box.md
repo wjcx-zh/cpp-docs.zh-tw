@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: 51ff52aefb5586b4e301831dbdebeb783ec3c4c5
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 7e7cfcc206ce58ab401bcdb9c9ac6103c50e997f
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563198"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328632"
 ---
 # <a name="how-to-create-a-dialog-box-c"></a>HOW TO：建立對話方塊 （c + +）
 
@@ -34,7 +34,7 @@ ms.locfileid: "57563198"
 
 ### <a name="to-create-a-new-dialog-box"></a>若要建立新的對話方塊
 
-1. 在 [資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)，以滑鼠右鍵按一下您 *.rc*檔案，然後選取**加入資源**。
+1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)，以滑鼠右鍵按一下您 *.rc*檔案，然後選取**加入資源**。
 
 1. 在 **加入資源**對話方塊中，選取**對話方塊**中**資源類型**清單，然後選擇**新增**。
 

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: 8382371acfd423f8c6864e816b0357e3ef11718e
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 7cfb2b5426a65298c01c61541020a0f30b673f9c
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210974"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328814"
 ---
 # <a name="version-information-editor-c"></a>版本資訊編輯器 （c + +）
 
@@ -60,7 +60,7 @@ ms.locfileid: "57210974"
 
 ### <a name="to-add-version-information-for-another-language-new-version-info-block"></a>若要加入另一種語言 （新的版本資訊區塊） 的版本資訊
 
-1. 按兩下版本資訊資源，在 [資源檢視](../windows/resource-view-window.md)中開啟它。
+1. 按兩下版本資訊資源，在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)中開啟它。
 
 1. 在版本資訊表內按一下滑鼠右鍵，然後選擇 **新的版本資訊區塊**。
 
@@ -70,7 +70,7 @@ ms.locfileid: "57210974"
 
 ### <a name="to-delete-a-version-information-block"></a>刪除版本資訊區塊
 
-1. 按兩下版本資訊資源圖示，在 [資源檢視](../windows/resource-view-window.md)中開啟它。
+1. 按兩下版本資訊資源圖示，在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)中開啟它。
 
 1. 以滑鼠右鍵按一下您想要刪除選取的區塊標頭**刪除版本資訊區塊**。
 

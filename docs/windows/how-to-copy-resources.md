@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 28127ea89fdba1b70988ced1d6004c0f914c66e2
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 9867fdf260750d47421e699cdd0d7a58b02ce947
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563039"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328619"
 ---
 # <a name="how-to-manage-resources-c"></a>HOW TO：管理資源 （c + +）
 
@@ -52,7 +52,7 @@ ms.locfileid: "57563039"
 
 ### <a name="to-copy-resources"></a>若要複製資源
 
-1. 開啟這兩個獨立的資源檔案 (請參閱如何[以開啟資源指令碼檔](/how-to-create-a-resource-script-file#use-resource-script-files))。 例如，開啟*Source1.rc*並*Source2.rc*。
+1. 開啟兩個獨立資源檔案。 (請參閱[使用資源指令碼檔](how-to-create-a-resource-script-file.md#use-resource-script-files))。 例如，開啟*Source1.rc*並*Source2.rc*。
 
 1. 在第一個.rc 檔，可能是：
 
@@ -88,7 +88,7 @@ IDD_AboutBox (Finnish - XX33)
 
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>複製現有的資源並變更其語言或條件
 
-在  *.rc*檔案或在[資源檢視](../windows/resource-view-window.md)視窗中，以滑鼠右鍵按一下您想要複製，然後選擇 的資源**插入複本**。 然後設定下列項目：
+在  *.rc*檔案或在[資源檢視](how-to-create-a-resource-script-file.md#create-resources)視窗中，以滑鼠右鍵按一下您想要複製，然後選擇 的資源**插入複本**。 然後設定下列項目：
 
 - 針對**語言**清單方塊中，選取的語言。
 
@@ -107,7 +107,7 @@ IDD_AboutBox (Finnish - XX33)
 
 ### <a name="to-import-a-resource-into-the-resource-script-file"></a>將資源匯入資源指令碼檔
 
-1. 在 [資源檢視](../windows/resource-view-window.md)以滑鼠右鍵按一下您想要加入資源，然後選取資源指令碼 (.rc) 檔的節點**匯入**。
+1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)以滑鼠右鍵按一下您想要加入資源，然後選取資源指令碼 (.rc) 檔的節點**匯入**。
 
 1. 找出並選擇點陣圖 (.bmp)、 圖示 (.ico)、 游標 (.cur)、 html 檔案 (.htm) 或要匯入其他檔案的檔案名稱。
 
@@ -118,7 +118,7 @@ IDD_AboutBox (Finnish - XX33)
 
 ### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>若要匯出使用 Visual c + + 以外的資源
 
-1. 在 [資源檢視](../windows/resource-view-window.md)，以滑鼠右鍵按一下您想要匯出，然後選取的資源**匯出**。 您可以接受目前的檔案名稱，或輸入新密碼。
+1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)，以滑鼠右鍵按一下您想要匯出，然後選取的資源**匯出**。 您可以接受目前的檔案名稱，或輸入新密碼。
 
 1. 瀏覽至您想要用來儲存檔案，並選取資料夾**匯出**。
 

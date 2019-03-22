@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB consumer templates [C++]
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
-ms.openlocfilehash: f3b247660e65975630b9434685d0a12caf0fc257
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a93b0a48bc5996cbb96194762b9c03ea143556e2
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419164"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328719"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB 消費者樣板 (C++)
 
@@ -24,7 +24,7 @@ OLE DB 消費者樣板可以支援 OLE DB 2.6 版規格 （OLE DB 消費者樣�
 
 - OLE DB 程式設計的原生 C/C++ 資料型別。
 
-若要使用此 OLE DB 樣板，必須熟悉 C++ 樣板、COM 和 OLE DB 介面。 如果您不熟悉如何使用 OLE DB，請參閱[OLE DB 程式設計人員參考](/previous-versions/windows/desktop/ms718124(v=vs.85))。
+若要使用此 OLE DB 樣板，必須熟悉 C++ 樣板、COM 和 OLE DB 介面。 如果您不熟悉如何使用 OLE DB，請參閱[Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)。
 
 OLE DB 樣板會支援現有的 OLE DB 物件模型而不是加入新的物件模型。 OLE DB 消費者樣板裡的上層類別相當於 OLE DB 規格中所定義的元件。 OLE DB 消費者樣板的設計包括一些進階功能，例如，用於資料列集的多重存取子。 使用樣板和多重繼承會使程式庫更小且具備彈性。
 
@@ -61,4 +61,4 @@ OLE DB 消費者可以繫結資料庫的資料表資料行和區域變數；它�
 [OLE DB 程式設計](../../data/oledb/ole-db-programming.md)<br/>
 [資料存取](../data-access-in-cpp.md)<br/>
 [OLE DB SDK 文件](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
-[OLE DB 設計人員參考](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)
+[Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)

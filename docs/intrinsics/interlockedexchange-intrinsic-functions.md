@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: ecf69b1e910dab9824131f26d8db1eb5615d6e18
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: bccf9f46a886a622c493485818601044afff232d
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627172"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328515"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>_InterlockedExchange 內建函式
 
@@ -164,11 +164,12 @@ __int64 _InterlockedExchange64_rel(
 
 ## <a name="remarks"></a>備註
 
-`_InterlockedExchange` 提供 Win32 Windows SDK 的編譯器內建支援[InterlockedExchange](/windows/desktop/api/winbase/nf-winbase-interlockedexchange)函式。
+`_InterlockedExchange` 提供 Win32 Windows SDK 的編譯器內建支援[InterlockedExchange](/windows/desktop/api/winnt/nf-winnt-interlockedexchange)函式。
 
 在 `_InterlockedExchange` 上有數個變化，會因所涉及的資料類型，以及是否使用處理器專用的取得或釋放語意，而有所不同。
 
-`_InterlockedExchange` 函式在 32 位元整數值上運算；`_InterlockedExchange8` 在 8 位元整數值上運算；`_InterlockedExchange16` 在 16 位元整數值上運算；`_InterlockedExchange64` 在 64 位元整數值上運算。
+
+  `_InterlockedExchange` 函式在 32 位元整數值上運算；`_InterlockedExchange8` 在 8 位元整數值上運算；`_InterlockedExchange16` 在 16 位元整數值上運算；`_InterlockedExchange64` 在 64 位元整數值上運算。
 
 在 ARM 平台上，搭配取得和釋放語意的 `_acq` 和 `_rel` 字尾使用內建函式，例如在重要區段的開頭和結尾處。 搭配 `_nf` (「無範圍」) 字尾的內建函式，不會當做記憶體屏障。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: c9c060bda4198c199ea86f0e2a33adc3275b353b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ceb0b93f37133ccbbf89ed659f74b632e45bcb1
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555047"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328931"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -25,8 +25,8 @@ ms.locfileid: "50555047"
 
 #### <a name="parameters"></a>參數
 
-*序數*<br/>
-序數資料行編號 (`DBCOLUMNINFO`序數) 或要將資料繫結至資料列集中的欄位相對應的資料行名稱 （ANSI 或 Unicode 字串）。 如果您使用數字時，您可以略過連續的序數 (例如： 1、 2、 3、 5)。 如果您使用的 OLE DB 提供者支援它的名稱包含空格。 例如，您可以使用下列格式之一：
+*ordinal*<br/>
+序數資料行編號 (`DBCOLUMNINFO`序數) 或要將資料繫結至資料列集中的欄位相對應的資料行名稱 （ANSI 或 Unicode 字串）。 如果您使用數字時，您可以略過連續的序數 (例如：1, 2, 3, 5). 如果您使用的 OLE DB 提供者支援它的名稱包含空格。 例如，您可以使用下列格式之一：
 
 ```cpp
 [db_column("2")] TCHAR szCity[30];
@@ -34,23 +34,23 @@ ms.locfileid: "50555047"
 ```
 
 *dbtype*<br/>
-（選擇性）OLE DB[型別指示器](/previous-versions/windows/desktop/ms711251)的資料行項目。
+（選擇性）OLE DB[型別指示器](/previous-versions/windows/desktop/ms711251(v=vs.85))的資料行項目。
 
 *precision*<br/>
-（選擇性）要用於資料行項目有效位數。 如需詳細資訊，請參閱說明`bPrecision`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845)
+（選擇性）要用於資料行項目有效位數。 如需詳細資訊，請參閱說明`bPrecision`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*小數位數*<br/>
-（選擇性）要用於資料行項目小數位數。 如需詳細資訊，請參閱說明`bScale`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845)
+*scale*<br/>
+（選擇性）要用於資料行項目小數位數。 如需詳細資訊，請參閱說明`bScale`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *status*<br/>
-（選擇性）成員變數，用來保存此資料行的狀態。 狀態會指出資料行的值是資料值或其他值，例如 NULL。 如需可能的值，請參閱[狀態](/previous-versions/windows/desktop/ms722617)中*OLE DB 程式設計人員參考*。
+（選擇性）成員變數，用來保存此資料行的狀態。 狀態會指出資料行的值是資料值或其他值，例如 NULL。 如需可能的值，請參閱[狀態](/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程式設計人員參考*。
 
 *length*<br/>
 （選擇性）成員變數，用來保存資料行的大小，以位元組為單位。
 
 ## <a name="remarks"></a>備註
 
-**db_column**將指定的資料表資料行繫結至資料列中的變數。 它會分隔可以參與 OLE DB 中的成員資料`IAccessor`為基礎的繫結。 這個屬性會設定通常使用的 OLE DB 取用者巨集來定義資料行對應[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)， [END_COLUMN_MAP](../../data/oledb/end-column-map.md)，並[COLUMN_ENTRY](../../data/oledb/column-entry.md)。 這些操作 OLE DB [DBBINDING 結構](/previous-versions/windows/desktop/ms716845)繫結指定的資料行。 您將標記與每個成員**db_column**屬性會佔用的資料行項目表單中的資料行對應中的一個項目。 因此，您呼叫這個屬性會放置資料行對應，也就是命令或資料表類別中。
+**db_column**將指定的資料表資料行繫結至資料列中的變數。 它會分隔可以參與 OLE DB 中的成員資料`IAccessor`為基礎的繫結。 這個屬性會設定通常使用的 OLE DB 取用者巨集來定義資料行對應[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)， [END_COLUMN_MAP](../../data/oledb/end-column-map.md)，並[COLUMN_ENTRY](../../data/oledb/column-entry.md)。 這些操作 OLE DB [DBBINDING 結構](/previous-versions/windows/desktop/ms716845(v=vs.85))繫結指定的資料行。 您將標記與每個成員**db_column**屬性會佔用的資料行項目表單中的資料行對應中的一個項目。 因此，您呼叫這個屬性會放置資料行對應，也就是命令或資料表類別中。
 
 使用**db_column**是搭配[db_table](db-table.md)或是[db_command](db-command.md)屬性。
 
@@ -106,8 +106,8 @@ class CProducts {
 |-|-|
 |**適用於**|**類別**， **struct**、 成員、 方法|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

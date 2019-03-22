@@ -1,6 +1,6 @@
 ---
-title: 建置命令和屬性的一般巨集
-ms.date: 05/29/2018
+title: MSBuild 命令和屬性的一般巨集
+ms.date: 03/20/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
 - VC.Project.VCCLCompilerTool.XMLDocumentationFileName
@@ -90,26 +90,29 @@ helpviewer_keywords:
 - builds [C++], macros
 - $(FrameworkDir) macro
 - $(PlatformName) macro
+- $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 669114691bc89c1e8136e07a949be57cda3d71b9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 46fdd5e356ded96388a154ff459ef4cc3c02267f
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824780"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58327674"
 ---
-# <a name="common-macros-for-build-commands-and-properties"></a>建置命令和屬性的一般巨集
+# <a name="common-macros-for-msbuild-commands-and-properties"></a>MSBuild 命令和屬性的一般巨集
 
-根據您的安裝選項，Visual Studio 可以提供數百個巨集給您。 這些巨集會對應至 .props 或 .targets 檔案或是您專案設定中預設設定的 MSBuild 屬性。 您可以在接受字串的專案 [屬性頁]  對話方塊的任何位置使用這些巨集。 這些巨集不區分大小寫。
+根據您的安裝選項，Visual Studio 可以將數百個巨集提供給您在 Visual Studio 專案中 （以 MSBuild 為基礎）。 這些巨集會對應至 .props 或 .targets 檔案或是您專案設定中預設設定的 MSBuild 屬性。 您可以在接受字串的專案 [屬性頁]  對話方塊的任何位置使用這些巨集。 這些巨集不區分大小寫。
 
 ## <a name="view-the-current-properties-and-macros"></a>檢視目前的屬性和巨集
 
-若要顯示目前可用的巨集，請在 [屬性頁] 對話方塊的任何屬性頁上，選擇屬性資料列結尾的下拉式箭頭。 如果 [編輯] 可用，請選擇它，然後選擇 [編輯] 對話方塊中的 [巨集] 按鈕。 會列出 Visual Studio 目前可見料集的屬性和巨集，以及其每一個的目前值。 如需詳細資訊，請參閱 < **Specifying User-Defined 值**一節[c + + 專案屬性頁參考](property-pages-visual-cpp.md)。
+若要顯示所有目前可用的巨集，**屬性頁**] 對話方塊底下**VC + + 目錄**，選擇 [屬性資料列結尾的下拉箭號。 按一下 [**編輯**，然後在 [編輯] 對話方塊中，選擇**巨集**] 按鈕。 會列出 Visual Studio 目前可見料集的屬性和巨集，以及其每一個的目前值。 如需詳細資訊，請參閱 < **Specifying User-Defined 值**一節[c + + 專案屬性頁參考](property-pages-visual-cpp.md)。
+
+![VC + + 巨集 按鈕](../media/vcppdir_libdir_macros.png "巨集功能表")
 
 ## <a name="list-of-common-macros"></a>常見巨集的清單
 
-下表描述常用的可用巨集子集。 此清單並不完整。 如需如何建立 MSBuild 屬性定義並作為 .props、.targets 和 .vcxproj 檔案中巨集的詳細資訊，請參閱 [MSBuild 屬性](/visualstudio/msbuild/msbuild-properties)。
+下表描述可用的巨集; 常用的子集還有許多更未列於此處。 移至**巨集**對話方塊，即可查看所有屬性和其目前的值，在您的專案。 如需如何建立 MSBuild 屬性定義並作為 .props、.targets 和 .vcxproj 檔案中巨集的詳細資訊，請參閱 [MSBuild 屬性](/visualstudio/msbuild/msbuild-properties)。
 
 |巨集|描述|
 |-----------|-----------------|
@@ -122,6 +125,7 @@ ms.locfileid: "57824780"
 |**$(IntDir)**|為中繼檔案指定的目錄路徑。 如果這是相對路徑，前往這個路徑的中繼檔案會附加在專案目錄的後面。 這個路徑應該有尾端斜線。 這可以解析 **Intermediate Directory** 屬性的值。 請勿使用 **$(OutDir)** 定義這個屬性。|
 |**$(OutDir)**|輸出檔案目錄的路徑。 如果這是相對路徑，前往這個路徑的輸出檔案會附加在專案目錄的後面。 這個路徑應該有尾端斜線。 這可以解析 **Output Directory** 屬性的值。 請勿使用 **$(IntDir)** 定義這個屬性。|
 |**$(Platform)**|目前的專案平台名稱，例如 "Win32"。|
+|**$(PlatformShortName)**|目前的架構，例如，"x86"或"x64"簡短名稱。|
 |**$(ProjectDir)**|專案的目錄 (定義為磁碟機 + 路徑)，尾端有反斜線 '\\'。|
 |**$(ProjectExt)**|專案的副檔名。 副檔名前面有 '.'。|
 |**$(ProjectFileName)**|專案的檔案名稱 (定義為名稱 + 副檔名)。|
@@ -162,6 +166,6 @@ ms.locfileid: "57824780"
 
 ## <a name="see-also"></a>另請參閱
 
-- [Visual Studio Projects - C++](../creating-and-managing-visual-cpp-projects.md)
+- [Visual Studio 專案 - C++](../creating-and-managing-visual-cpp-projects.md)
 - [Visual C++ 移植和升級指南](../../porting/visual-cpp-porting-and-upgrading-guide.md)
 - [潛在升級問題概觀](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md)

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringA
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
-ms.openlocfilehash: 41ea20bcddc53142773d474af41021e9c71af1aa
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 48a2e08d056e3bfef8a06b80ae6607947923cbcb
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289854"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328944"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant 類別
 
@@ -216,7 +216,7 @@ void Clear();
 
 `m_pdate`資料成員所屬的等位。 才能存取`m_pdate`，先檢查的值[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`設為 DBVT_DATE，則`m_pdate`包含有效的指標; 否則存取`m_pdate`會產生不可靠的結果。
 
-如需 TIMESTAMP_STRUCT 資料類型的詳細資訊，請參閱主題[C 資料類型](/previous-versions/windows/desktop/ms714556)的附錄 D 中*ODBC 程式設計人員參考*Windows SDK 中。
+如需 TIMESTAMP_STRUCT 資料類型的詳細資訊，請參閱主題[C 資料類型](/sql/odbc/reference/appendixes/c-data-types)的附錄 D 中*ODBC 程式設計人員參考*Windows SDK 中。
 
 ##  <a name="m_pstring"></a>  CDBVariant::m_pstring
 

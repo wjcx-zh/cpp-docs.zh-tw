@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 0de53b102cf06d8b4541f54f961f84408664caed
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: f2edafb0b60cfafcf7ad53b8402ffc39a6fc2f7c
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562792"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328840"
 ---
 # <a name="how-to-manage-symbols"></a>HOW TO：管理符號
 
@@ -85,7 +85,7 @@ ms.locfileid: "57562792"
 
 ### <a name="to-change-a-symbol-name-id"></a>若要變更符號名稱 (ID)
 
-1. 在 [資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)，選取的資源。
+1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)，選取的資源。
 
 1. 在 **屬性** 視窗中，輸入新的符號名稱，或從現有的符號清單中選取**識別碼** 方塊中。
 
@@ -129,7 +129,7 @@ ms.locfileid: "57562792"
 
 ### <a name="to-change-a-symbol-value"></a>若要變更符號值
 
-1. 在 [資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)，選取的資源。
+1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)，選取的資源。
 
 1. 在 **屬性**視窗中，輸入符號名稱，後面接著等號和整數**識別碼**方塊中，例如：
 
@@ -185,7 +185,7 @@ ms.locfileid: "57562792"
 
 ### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>在資源檔中包含共用 (唯讀) 符號
 
-1. 在 [資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)，以滑鼠右鍵按一下您 *.rc*檔案，然後選取[Resource Includes](../windows/resource-includes-dialog-box.md)。
+1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)，以滑鼠右鍵按一下您 *.rc*檔案，然後選取[Resource Includes](../windows/resource-includes-dialog-box.md)。
 
 1. 在 **唯讀符號指示詞**方塊中，使用`#include`編譯器指示詞來指定您想要保存唯讀符號的檔案。
 
@@ -204,7 +204,7 @@ ms.locfileid: "57562792"
 
 ### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>變更資源符號標頭檔名稱
 
-1. 在 [資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)，以滑鼠右鍵按一下您 *.rc*檔案，然後選擇[Resource Includes](../windows/resource-includes-dialog-box.md)。
+1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)，以滑鼠右鍵按一下您 *.rc*檔案，然後選擇[Resource Includes](../windows/resource-includes-dialog-box.md)。
 
 1. 在 **符號標頭檔**方塊中，輸入 include 檔案的新名稱。
 

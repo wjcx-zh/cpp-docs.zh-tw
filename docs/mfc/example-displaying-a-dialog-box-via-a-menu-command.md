@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 8c60469747c24b4c295348a14cb569c4118c76d9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1e730125e47609f0bf87814b32962336cb752b04
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260474"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328255"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>範例：顯示對話方塊，透過功能表命令
 
@@ -50,11 +50,16 @@ ms.locfileid: "57260474"
 
 1. 新增下列 include 陳述式來 CDisplayDialogDoc.cpp （或 CDisplayDialogApp.cpp） 現有 include 陳述式之後：
 
-   [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]
+   ```cpp
+   #include "TestDialog.h"
+   ```
 
 1. 將下列程式碼加入`OnViewTest`實作函式：
 
-   [!code-cpp[NVC_MFCControlLadenDialog#43](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_2.cpp)]
+   ```cpp
+   CTestDialog testdlg;
+   testdlg.DoModal();  
+   ```
 
 ### <a name="to-display-a-modeless-dialog-box"></a>若要顯示非強制回應對話方塊
 
@@ -64,29 +69,46 @@ ms.locfileid: "57260474"
 
    - 宣告對話方塊類別宣告之前的第一個類別：
 
-         [!code-cpp[NVC_MFCControlLadenDialog#44](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_3.h)]
+   ```cpp
+   class CTestDialog;
+   ```
 
    - 宣告屬性公開的一節之後的對話方塊中的指標：
 
-         [!code-cpp[NVC_MFCControlLadenDialog#45](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_4.h)]
+   ```cpp
+   CTestDialog* m_pTestDlg;
+   ```
 
 1. 編輯 DisplayDialogView.cpp:
 
    - 新增下列 include 陳述式，將現有 include 陳述式之後：
 
-         [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]
+   ```cpp
+   #include "TestDialog.h"
+   ```
 
    - 下列程式碼加入建構函式：
 
-         [!code-cpp[NVC_MFCControlLadenDialog#46](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_5.cpp)]
+   ```cpp
+   m_pTestDlg = NULL;
+   ```
 
    - 解構函式中加入下列程式碼：
 
-         [!code-cpp[NVC_MFCControlLadenDialog#47](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_6.cpp)]
+   ```cpp
+   delete m_pTestDlg;
+   ```
 
    - 將下列程式碼加入`OnViewTest`實作函式：
 
-         [!code-cpp[NVC_MFCControlLadenDialog#48](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_7.cpp)]
+   ```cpp
+   if (NULL == m_pTestDlg)
+   {
+      m_pTestDlg = new CTestDialog(this);
+      m_pTestDlg->Create(CTestDialog::IDD, this);
+   }
+   m_pTestDlg->ShowWindow(SW_SHOW); 
+   ```
 
 ## <a name="see-also"></a>另請參閱
 

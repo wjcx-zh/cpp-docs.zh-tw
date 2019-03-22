@@ -238,12 +238,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: cb79bfe7cf0a30e0ff4ed2a4a6860bc3042983ee
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4a24dada2f1211138449e65a8865810a46230970
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416536"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329009"
 ---
 # <a name="crowset-class"></a>CRowset 類別
 
@@ -275,7 +275,7 @@ class CRowset
 |[關閉](#close)|釋放資料列和目前`IRowset`介面。|
 |[Compare](#compare)|比較兩個設定為書籤使用[IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85))。|
 |[CRowset](#crowset)|建立新`CRowset`物件，並 （選擇性） 將它與`IRowset`當做參數提供的介面。|
-|[刪除](#delete)|刪除的資料列集使用資料列[IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85))。|
+|[刪除](#delete)|刪除的資料列集使用資料列[IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85))。|
 |[FindNextRow](#findnextrow)|尋找在指定的書籤之後的下一個相符的資料列。|
 |[GetApproximatePosition](#getapproximateposition)|傳回對應至書籤的資料列約略位置。|
 |[GetData](#getdata)|資料擷取的資料列的資料列集的副本。|
@@ -386,7 +386,7 @@ CRowset(IRowset* pRowset);
 
 ## <a name="delete"></a> CRowset::Delete
 
-呼叫[irowsetchange:: Deleterows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85))從資料列集刪除目前的資料列。
+呼叫[irowsetchange:: Deleterows](/previous-versions/windows/desktop/ms724362(v=vs.85))從資料列集刪除目前的資料列。
 
 ### <a name="syntax"></a>語法
 

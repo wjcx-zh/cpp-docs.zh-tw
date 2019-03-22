@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
-ms.openlocfilehash: 2bb15597be5ac4e1bb5f37fb2f12b74631e5a354
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a171e6a7eea5e10b47bf680545bc14618893b155
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592694"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328983"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -26,7 +26,7 @@ ms.locfileid: "50592694"
 ### <a name="parameters"></a>參數
 
 *db_source*<br/>
-用來連接到資料來源連接字串。 如需連接字串的格式，請參閱[連接字串和資料連結](/previous-versions/windows/desktop/ms718376)在 Microsoft Data Access Components (MDAC) SDK。
+用來連接到資料來源連接字串。 如需連接字串的格式，請參閱[連接字串和資料連結](/previous-versions/windows/desktop/ms718376(v=vs.85))在 Microsoft Data Access Components (MDAC) SDK。
 
 *name*<br/>
 （選擇性）當您使用**db_source**類別中上,*名稱*是具有資料來源物件的執行個體**db_source**套用屬性 （請參閱範例 1）。 當您使用**db_source**在方法實作中，內嵌*名稱*是一個變數 （本機方法），可用來存取資料來源 （請參閱範例 2）。 您傳遞這*名稱*要*source_name*參數`db_command`命令相關聯的資料來源。
@@ -74,8 +74,8 @@ class CMyCommand {};
 |-|-|
 |**適用於**|**類別**， **struct**、 member、 method、 local|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

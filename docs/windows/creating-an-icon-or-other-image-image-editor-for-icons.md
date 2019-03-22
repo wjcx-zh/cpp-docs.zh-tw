@@ -87,12 +87,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 92eac69e6802a824c4b6e107d2ff3393e931a542
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 4191b1bd495a8908610b6e49c3dff676de2304dc
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563052"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328489"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>如何：建立圖示或其他影像
 
@@ -167,7 +167,7 @@ ms.locfileid: "57563052"
 
 #### <a name="to-create-a-new-icon-or-cursor"></a>若要建立新的圖示或游標
 
-1. 在 [資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)，以滑鼠右鍵按一下您 *.rc*檔案，然後選擇**插入資源**。 如果您已經有現有的映像資源您 *.rc*檔案，例如資料指標中，您可以以滑鼠右鍵按一下**游標**資料夾，然後選取**插入游標**。
+1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)，以滑鼠右鍵按一下您 *.rc*檔案，然後選擇**插入資源**。 如果您已經有現有的映像資源您 *.rc*檔案，例如資料指標中，您可以以滑鼠右鍵按一下**游標**資料夾，然後選取**插入游標**。
 
 1. 在 [插入資源對話方塊](../windows/add-resource-dialog-box.md)，選取**圖示**或**游標**，然後選擇 **新增**。 圖示，此動作會建立具有 32 × 32、 16 色圖示的圖示資源。 資料指標，32 × 32，會建立單色 （2-色彩） 映像。
 
@@ -228,7 +228,7 @@ ms.locfileid: "57563052"
 
 #### <a name="to-create-a-256-color-icon-or-cursor"></a>若要建立 256 色圖示或游標
 
-1. 在 [資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)，以滑鼠右鍵按一下您 *.rc*檔案，然後選擇**插入資源**。 如果您已經有現有的映像資源您 *.rc*檔案，例如資料指標中，您可以以滑鼠右鍵按一下**游標**資料夾，然後選取**插入游標**。
+1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)，以滑鼠右鍵按一下您 *.rc*檔案，然後選擇**插入資源**。 如果您已經有現有的映像資源您 *.rc*檔案，例如資料指標中，您可以以滑鼠右鍵按一下**游標**資料夾，然後選取**插入游標**。
 
 1. 在 [插入資源對話方塊](../windows/add-resource-dialog-box.md)，選取**圖示**或**游標**，然後選擇 **新增**。
 
@@ -295,7 +295,7 @@ ms.locfileid: "57563052"
 
 ### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>若要將新的映像資源新增至未受管理的 c + + 專案
 
-1. 在 [資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)，以滑鼠右鍵按一下您 *.rc*檔案，然後選擇**插入資源**。 如果您已經有現有的映像資源您 *.rc*檔案，例如資料指標，您可以直接以滑鼠右鍵按一下**游標**資料夾，然後選取**插入游標**。
+1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)，以滑鼠右鍵按一下您 *.rc*檔案，然後選擇**插入資源**。 如果您已經有現有的映像資源您 *.rc*檔案，例如資料指標，您可以直接以滑鼠右鍵按一下**游標**資料夾，然後選取**插入游標**。
 
 1. 在 [插入資源對話方塊](../windows/add-resource-dialog-box.md)，選取您想要建立的映像資源的類型 (**點陣圖**，例如) 然後選擇**新增**。
 
@@ -315,7 +315,7 @@ ms.locfileid: "57563052"
 
 ## <a name="requirements"></a>需求
 
-無
+None
 
 ## <a name="see-also"></a>另請參閱
 

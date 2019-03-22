@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: caec1ae10db273b6ed604af29b20a1908b1313cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 185c2de5dc21dd305a2792d4ee8e6baf69c35b28
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614639"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328905"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>右值參考宣告子： &amp;&amp;
 
@@ -148,7 +148,8 @@ int main()
 
 **您可以多載函式以接受左值參考和右值參考。**
 
-藉由多載函式接受**const**左值參考或右值參考，您可以撰寫程式碼，以區別不可修改的物件 （左值），並可修改的暫存值 （右值）。 您可以將物件傳遞至接受右值參考，除非物件標示為函式**const**。 下列範例說明多載之後可接受左值參考和右值參考的 `f` 函式。 `main` 函式會使用左值和右值呼叫 `f`。
+藉由多載函式接受**const**左值參考或右值參考，您可以撰寫程式碼，以區別不可修改的物件 （左值），並可修改的暫存值 （右值）。 您可以將物件傳遞至接受右值參考，除非物件標示為函式**const**。 下列範例說明多載之後可接受左值參考和右值參考的 `f` 函式。 
+  `main` 函式會使用左值和右值呼叫 `f`。
 
 ```cpp
 // reference-overload.cpp
@@ -193,7 +194,8 @@ In f(MemoryBlock&&). This version can modify the parameter.
 
 當您撰寫接受右值參考做為其參數的函式時，該參數會被視為函式主體中的左值。 由於程式的多個部分都可以參考具名物件，編譯器會將具名右值參考視為左值；因此，允許程式的多個部分從該物件修改或移除資源是相當危險的。 例如，如果程式中有多個部分嘗試從相同物件傳輸資源，則只有第一個部分會成功傳輸資源。
 
-下列範例說明多載之後可接受左值參考和右值參考的 `g` 函式。 `f` 函式接受右值參考做為其參數 (具名右值參考)，並傳回右值參考 (未具名右值參考)。 從 `g` 對 `f` 的呼叫中，多載解析會選取採用左值參考的 `g` 版本，因為 `f` 主體會將其參數視為左值。 從 `g` 對 `main` 的呼叫中，多載解析會選取採用右值參考的 `g` 版本，因為 `f` 會傳回右值參考。
+下列範例說明多載之後可接受左值參考和右值參考的 `g` 函式。 
+  `f` 函式接受右值參考做為其參數 (具名右值參考)，並傳回右值參考 (未具名右值參考)。 從 `g` 對 `f` 的呼叫中，多載解析會選取採用左值參考的 `g` 版本，因為 `f` 主體會將其參數視為左值。 從 `g` 對 `main` 的呼叫中，多載解析會選取採用右值參考的 `g` 版本，因為 `f` 會傳回右值參考。
 
 ```cpp
 // named-reference.cpp
@@ -220,7 +222,7 @@ void g(MemoryBlock&&)
 MemoryBlock&& f(MemoryBlock&& block)
 {
    g(block);
-   return block;
+   return move(block);
 }
 
 int main()
@@ -236,7 +238,8 @@ In g(const MemoryBlock&).
 In g(MemoryBlock&&).
 ```
 
-在這個範例中，`main` 函式將右值傳遞給 `f`。 `f` 主體會將其具名參數視為左值。 從 `f` 對 `g` 的呼叫會將參數繫結至左值參考 (`g` 的第一個多載版本)。
+在這個範例中，`main` 函式將右值傳遞給 `f`。 
+  `f` 主體會將其具名參數視為左值。 從 `f` 對 `g` 的呼叫會將參數繫結至左值參考 (`g` 的第一個多載版本)。
 
 - **您可以轉型為右值參考的左值。**
 
@@ -285,7 +288,9 @@ In g(MemoryBlock&&).
 
 如果函式引數為右值，編譯器會推算引數為右值參考。 例如，如果您將 `X` 類型物件的右值參考傳遞至採用 `T&&` 類型做為其參數的樣板函式，則樣板引數推算會將 `T` 推算為 `X`。 因此，該參數會具有 `X&&` 類型。 如果函式引數是左值或**const**左值，編譯器會推算其類型為左值參考或**const**該類型的左值參考。
 
-下列範例宣告某個結構樣板，然後針對各種參考類型特製化此樣板。 `print_type_and_value` 函式接受右值參考做為其參數，並將其轉送給 `S::print` 方法的適當特製化版本。 `main` 函式示範各種呼叫 `S::print` 方法的方式。
+下列範例宣告某個結構樣板，然後針對各種參考類型特製化此樣板。 
+  `print_type_and_value` 函式接受右值參考做為其參數，並將其轉送給 `S::print` 方法的適當特製化版本。 
+  `main` 函式示範各種呼叫 `S::print` 方法的方式。
 
 ```cpp
 // template-type-deduction.cpp
@@ -387,7 +392,8 @@ print_type_and_value<string&>(string& && t)
 print_type_and_value<string&>(string& t)
 ```
 
-`print_type_and_value` 函式的這個版本接著會將其參數轉送給 `S::print` 方法的正確特製化版本。
+
+  `print_type_and_value` 函式的這個版本接著會將其參數轉送給 `S::print` 方法的正確特製化版本。
 
 下表摘要說明樣板引數類型推算的參考摺疊規則：
 

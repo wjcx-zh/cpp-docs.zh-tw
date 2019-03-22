@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 461322076e2de4e2cd89c6d39592989aecc75361
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: a0b5e3905daf72307702dbe4f05c2871cf768ac0
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563013"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328801"
 ---
 # <a name="resource-editors-c"></a>資源編輯器 （c + +）
 
@@ -63,13 +63,13 @@ ms.locfileid: "57563013"
 > [!NOTE]
 > 可以使用修改資源的屬性**屬性**視窗。
 
-- 若要編輯的資源時，屬性中[資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)，以滑鼠右鍵按一下您想要編輯，然後選擇的資源**屬性**。  然後，在[屬性 視窗](/visualstudio/ide/reference/properties-window)，變更您的資源的屬性。
+- 若要編輯的資源時，屬性中[資源檢視](how-to-create-a-resource-script-file.md#create-resources)，以滑鼠右鍵按一下您想要編輯，然後選擇的資源**屬性**。  然後，在[屬性 視窗](/visualstudio/ide/reference/properties-window)，變更您的資源的屬性。
 
 - 若要復原對資源的屬性所做的變更，請確定您的資源的焦點**資源檢視**，然後選擇**復原**從**編輯**功能表。
 
 ### <a name="win32-resources"></a>Win32 資源
 
-您可以存取中的 Win32 資源[資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)窗格。
+您可以存取中的 Win32 資源[資源檢視](how-to-create-a-resource-script-file.md#create-resources)窗格。
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>若要在資源編輯器中檢視的 Win32 資源
 
@@ -113,7 +113,7 @@ ms.locfileid: "57563013"
 
 ### <a name="to-preview-resources"></a>若要預覽資源
 
-1. 在 [資源檢視](/windows/how-to-create-a-resource-script-file#create-resources)或 [文件] 視窗中，選取您的資源，例如**IDD_ABOUTBOX**。
+1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)或 [文件] 視窗中，選取您的資源，例如**IDD_ABOUTBOX**。
 
 1. 在 [[屬性 視窗](/visualstudio/ide/reference/properties-window)，選取**屬性頁**] 按鈕。
 
@@ -124,7 +124,7 @@ ms.locfileid: "57563013"
 
 ## <a name="requirements"></a>需求
 
-無
+None
 
 ## <a name="see-also"></a>另請參閱
 

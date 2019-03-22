@@ -44,18 +44,18 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: 3054a9eab21f6f7ec149f7f1c23c3c40fca3b9e1
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 91e9c6dac1b6f13997bb7e4f2727a743a9177083
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626928"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328606"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement 內建函式
 
 **Microsoft 專屬**
 
-提供 Win32 Windows SDK 的編譯器內建支援[InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement)函式。
+提供 Win32 Windows SDK 的編譯器內建支援[InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement)函式。
 
 ## <a name="syntax"></a>語法
 
@@ -109,7 +109,7 @@ __int64 _InterlockedIncrement64_nf(
 
 ## <a name="requirements"></a>需求
 
-|內建|架構|頁首|
+|內建|架構|標頭|
 |---------------|------------------|------------|
 |`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86、 x64、 ARM|\<intrin.h>|
 |`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h>|
@@ -118,11 +118,13 @@ __int64 _InterlockedIncrement64_nf(
 
 在 `_InterlockedIncrement` 上有數個變化，會因所涉及的資料類型，以及是否使用處理器專用的取得或釋放語意，而有所不同。
 
-`_InterlockedIncrement` 函式在 32 位元整數值上操作，而 `_InterlockedIncrement16` 是在 16 位元整數值上操作，`_InterlockedIncrement64` 在 64 位元整數值上操作。
+
+  `_InterlockedIncrement` 函式在 32 位元整數值上操作，而 `_InterlockedIncrement16` 是在 16 位元整數值上操作，`_InterlockedIncrement64` 在 64 位元整數值上操作。
 
 在 ARM 平台上，如果您需要取得並發行語意 (例如在關鍵區段的開頭和結尾)，請使用具有 `_acq` 和 `_rel` 後置字元的內建函式。 具有 `_nf` (「沒有圍牆」) 後置字元的內建函式不做為記憶體屏障。
 
-`lpAddend` 參數所指向的變數必須對齊 32 位元界限；否則，這個函式會在多處理器 x86 系統與任何非 x86 系統上失敗。 如需詳細資訊，請參閱 <<c0> [ 對齊](../cpp/align-cpp.md)。
+
+  `lpAddend` 參數所指向的變數必須對齊 32 位元界限；否則，這個函式會在多處理器 x86 系統與任何非 x86 系統上失敗。 如需詳細資訊，請參閱 <<c0> [ 對齊](../cpp/align-cpp.md)。
 
 Win32 函式在 `Wdm.h` 或 `Ntddk.h` 中宣告。
 

@@ -3,7 +3,6 @@ title: 編譯器警告 s C4200 到 C4399
 ms.date: 11/17/2017
 f1_keywords:
 - C4203
-- C4274
 - C4277
 - C4279
 - C4298
@@ -12,7 +11,6 @@ f1_keywords:
 - C4303
 - C4314
 - C4315
-- C4316
 - C4317
 - C4318
 - C4321
@@ -22,22 +20,20 @@ f1_keywords:
 - C4328
 - C4330
 - C4338
-- C4343
 - C4352
 - C4362
 - C4367
 - C4370
-- C4373
 - C4380
 - C4387
 - C4388
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-ms.openlocfilehash: 9cca32973ead1d7d88e37c4745491c8d5f181e0b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d79c9c12664f9920f03490b8cb53ec671d3d78a3
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810506"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328261"
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>編譯器警告 s C4200 到 C4399
 
@@ -103,7 +99,7 @@ ms.locfileid: "57810506"
 |[編譯器警告 (層級 1) C4269](../../error-messages/compiler-warnings/compiler-warning-level-1-c4269.md)|'*識別碼*': 'const' 編譯器產生預設建構函式初始化的自動資料會產生不可靠的結果|
 |[編譯器警告 (層級 1) C4272](../../error-messages/compiler-warnings/compiler-warning-level-1-c4272.md)|'*函式*': __declspec （dllimport） 標示為; 匯入函式時，必須指定原生呼叫慣例。|
 |[編譯器警告 (層級 1) C4273](../../error-messages/compiler-warnings/compiler-warning-level-1-c4273.md)|'*函式*': 不一致的 dll 連結|
-|編譯器警告 （層級 1） C4274|#ident ignored; see documentation for #pragma comment(exestr, 'string')|
+|[編譯器警告 （層級 1） C4274](compiler-warning-level-1-c4274.md)|#ident ignored; see documentation for #pragma comment(exestr, 'string')|
 |[編譯器警告 (層級 2) C4275](../../error-messages/compiler-warnings/compiler-warning-level-2-c4275.md)|沒有 dll 介面 '*classkey*' '*identifier1*'做為基底 dll 介面'*classkey*' '*identifier2*'|
 |[編譯器警告 (層級 1) C4276](../../error-messages/compiler-warnings/compiler-warning-level-1-c4276.md)|'*函式*': 未提供原型; 假設沒有參數|
 |編譯器警告 （層級 1） C4277|匯入的項目 '*classname*::*成員*' 存在做為資料成員和函式成員; 已忽略資料成員|
@@ -140,7 +136,7 @@ ms.locfileid: "57810506"
 |[編譯器警告 (層級 1) C4313](../../error-messages/compiler-warnings/compiler-warning-level-1-c4313.md)|'*函式*':'*format_specifier*'格式的字串與衝突引數'*argument_number*'的類型'*類型*'|
 |編譯器警告 C4314|pragma 參數必須是 '32' 或 '64'|
 |編譯器警告 （層級 4） C4315|'*classname*': 'this' 指標成員'*成員*'無法用於對齊'*對齊*' 以預期的方式建構函式|
-|編譯器警告 （層級 3） C4316|'*識別碼*': 在堆積上配置的物件可能未對齊'*對齊*'|
+|[編譯器警告 （層級 3） C4316](compiler-warning-level-3-c4316.md)|'*識別碼*': 在堆積上配置的物件可能未對齊'*對齊*'|
 |編譯器警告 （層級 1） C4317|'*printf_family*': 沒有足夠的引數傳遞給格式字串|
 |編譯器警告 C4318|將常數零當做長度傳遞至 memset|
 |[編譯器警告 (層級 1) C4319](../../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md)|'*運算子*': 零擴充'*type1*'to'*type2*' 更大的|
@@ -163,7 +159,7 @@ ms.locfileid: "57810506"
 |[編譯器警告 (層級 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|'*型別*': 未定義的類型中偵測到使用' WinRT&#124;CLR' 中繼資料-使用這個型別可能造成執行階段例外狀況|
 |[編譯器警告 (層級 1) C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|'*值*': 值從正值包裝成負值|
 |[編譯器警告 (層級 1) C4342](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|行為變更: '*函式*' 呼叫，但在舊版中呼叫成員運算子|
-|編譯器警告 （層級 4） C4343|#pragma optimize("g",off) 覆寫了 /Og 選項|
+|[編譯器警告 （層級 4） C4343](compiler-warning-level-4-c4343.md)|#pragma optimize("g",off) 覆寫了 /Og 選項|
 |[編譯器警告 (層級 1) C4344](../../error-messages/compiler-warnings/compiler-warning-level-1-c4344.md)|行為變更： 使用明確樣板引數會導致呼叫 '*函式*'|
 |[編譯器警告 (層級 1) C4346](../../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)|'*名稱*': 相依名稱不是類型|
 |[編譯器警告 (層級 1) C4348](../../error-messages/compiler-warnings/compiler-warning-level-1-c4348.md)|'*型別*': 重複定義的預設參數： 參數'*parameter_number*'|
@@ -184,7 +180,7 @@ ms.locfileid: "57810506"
 |[編譯器警告 (層級 1) C4369](../../error-messages/compiler-warnings/compiler-warning-level-1-c4369.md)|'*列舉值*': 列舉值'*值*'無法表示為'*型別*'，值為'*new_value*'|
 |編譯器警告 C4370|'*classname*': 類別配置已從舊版的編譯器，因為較佳的封裝|
 |[編譯器警告 （層級 3） C4371](../../error-messages/compiler-warnings/c4371.md)|'*classname*': 從舊版的編譯器，因為較佳的成員的封裝，類別配置可能已變更'*成員*'|
-|編譯器警告 （層級 3） C4373|'*derived_class*::*函式*': 虛擬函式覆寫*base_class*::*函式*'，舊版編譯器不會覆寫當參數差異只不同時 const/volatile 限定詞|
+|[編譯器警告 （層級 3） C4373](compiler-warning-level-3-c4373.md)|'*derived_class*::*函式*': 虛擬函式覆寫*base_class*::*函式*'，舊版編譯器不會覆寫當參數差異只不同時 const/volatile 限定詞|
 |[編譯器警告 (層級 1) C4374](../../error-messages/compiler-warnings/compiler-warning-level-1-c4374.md)|'*function1*': 非虛擬方法不會實作介面方法'*function2*'|
 |[編譯器警告 (層級 1) C4375](../../error-messages/compiler-warnings/compiler-warning-level-1-c4375.md)|非公用方法 '*method2*'不覆寫'*method2*'|
 |[編譯器警告 (層級 1) C4376](../../error-messages/compiler-warnings/compiler-warning-level-1-c4376.md)|存取規範 '*old_specifier*:' 已不受支援： 請使用'*new_specifier*:' 改為|
@@ -205,7 +201,7 @@ ms.locfileid: "57810506"
 |[編譯器警告 (層級 1) C4393](../../error-messages/compiler-warnings/compiler-warning-level-1-c4393.md)|'*變數*': const 並不會影響'*常值*' 的資料成員; 已忽略|
 |[編譯器警告 C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|'*函式*': per-appdomain 符號不應該標示 __declspec('dllexport')|
 |[編譯器警告 (層級 1) C4395](../../error-messages/compiler-warnings/compiler-warning-level-1-c4395.md)|'*函式*': initonly 資料成員的複本將會叫用成員函式'*成員*'|
-|編譯器警告 （層級 2） C4396|'*函式*': friend 宣告參考函式樣板的特製化時，就無法使用內嵌規範|
+|[編譯器警告 （層級 2） C4396](compiler-warning-level-2-c4396.md)|'*函式*': friend 宣告參考函式樣板的特製化時，就無法使用內嵌規範|
 |[編譯器警告 (層級 1) C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)|已忽略 DefaultCharSetAttribute|
 |[編譯器警告 (層級 3) C4398](../../error-messages/compiler-warnings/compiler-warning-level-3-c4398.md)|'*變數*': 處理序專屬全域物件可能無法使用多個 appdomain 正確運作，請考慮使用 __declspec(appdomain)|
 |[編譯器警告 (層級 1) C4399](../../error-messages/compiler-warnings/compiler-warning-level-1-c4399.md)|'*符號*': 處理序專屬符號不應該標示時使用 /clr 所編譯的 __declspec('dllimport'): pure|

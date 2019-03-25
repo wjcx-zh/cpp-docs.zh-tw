@@ -1,18 +1,18 @@
 ---
 title: __declspec
-ms.date: 10/09/2018
+ms.date: 03/21/2019
 f1_keywords:
 - __declspec_cpp
 - __declspec
 - _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-ms.openlocfilehash: 3ee83203cc992ba8c5d05b7bb6974d3576baf59c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e924f3e4a038f900e084dbf84d85430d815c8e8f
+ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645090"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58416945"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -32,6 +32,7 @@ ms.locfileid: "50645090"
 *extended-decl-modifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**align(** *#* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**allocate("** *segname* **")**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**allocator**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**appdomain**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**deprecated**<br/>
@@ -55,7 +56,7 @@ ms.locfileid: "50645090"
 
 空白字元會分隔宣告修飾詞序列。 範例會在後面的章節中顯示。
 
-擴充的屬性文法支援這些 Microsoft 專有儲存類別屬性：[對齊](../cpp/align-cpp.md)，[配置](../cpp/allocate.md)， [appdomain](../cpp/appdomain.md)， [code_seg](../cpp/code-seg-declspec.md)，[過時](../cpp/deprecated-cpp.md)， [dllexport](../cpp/dllexport-dllimport.md)， [dllimport](../cpp/dllexport-dllimport.md)， [jitintrinsic](../cpp/jitintrinsic.md)， [naked](../cpp/naked-cpp.md)， [noalias](../cpp/noalias.md)， [noinline](../cpp/noinline.md)， [noreturn](../cpp/noreturn.md)， [nothrow](../cpp/nothrow-cpp.md)， [novtable](../cpp/novtable.md)[程序](../cpp/process.md)，[限制](../cpp/restrict.md)， [safebuffers](../cpp/safebuffers.md)， [selectany](../cpp/selectany.md)， [spectre](../cpp/spectre.md)，及[執行緒](../cpp/thread.md)。 它也支援這些 COM 物件的屬性：[屬性](../cpp/property-cpp.md)並[uuid](../cpp/uuid-cpp.md)。
+擴充的屬性文法支援這些 Microsoft 專有儲存類別屬性：[對齊](../cpp/align-cpp.md)，[配置](../cpp/allocate.md)，[配置器](../cpp/allocator.md)， [appdomain](../cpp/appdomain.md)， [code_seg](../cpp/code-seg-declspec.md)，[取代](../cpp/deprecated-cpp.md)， [dllexport](../cpp/dllexport-dllimport.md)， [dllimport](../cpp/dllexport-dllimport.md)， [jitintrinsic](../cpp/jitintrinsic.md)， [naked](../cpp/naked-cpp.md)， [noalias](../cpp/noalias.md)， [noinline](../cpp/noinline.md)， [noreturn](../cpp/noreturn.md)， [nothrow](../cpp/nothrow-cpp.md)，[novtable](../cpp/novtable.md)，[程序](../cpp/process.md)，[限制](../cpp/restrict.md)， [safebuffers](../cpp/safebuffers.md)， [selectany](../cpp/selectany.md)， [spectre](../cpp/spectre.md)，並[執行緒](../cpp/thread.md)。 它也支援這些 COM 物件的屬性：[屬性](../cpp/property-cpp.md)並[uuid](../cpp/uuid-cpp.md)。
 
 **Code_seg**， **dllexport**， **dllimport**， **naked**， **noalias**， **nothrow**，**屬性**，**限制**， **selectany**，**執行緒**，以及**uuid**儲存類別屬性是只宣告物件或函式套用至屬性。 **執行緒**屬性會影響資料，而且只有物件。 **Naked**並**spectre**屬性會影響僅函式。 **Dllimport**並**dllexport**屬性會影響函式、 資料和物件。 **屬性**， **selectany**，並**uuid**屬性會影響 COM 物件。
 
@@ -79,7 +80,7 @@ class __declspec(dllimport) X {};
 
 一般使用方針 **__declspec**簡單宣告的屬性如下所示：
 
-*decl-modifier-規範-seq* *init 宣告子清單*;
+*decl-specifier-seq* *init-declarator-list*;
 
 *Decl-modifier-規範-seq*應該包含在其他方面，基底型別 (例如**int**， **float**，則**typedef**，或類別名稱)，儲存類別 (例如**靜態**， **extern**)，或有 **__declspec**延伸模組。 *Init 宣告子清單*應該包含在其他方面，宣告的指標部分。 例如: 
 

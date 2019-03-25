@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 6af054ea27233de2cc3b551bbec69c0ab3b4be9e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e1ca69382591dc7d3afe9b5871dfdebd64aedce4
+ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289958"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58416997"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -570,11 +570,11 @@ UINT GetLimitText() const;
 
 ### <a name="return-value"></a>傳回值
 
-目前文字的限制，以位元組為單位，此`CEdit`物件。
+目前文字中的限制，TCHARs，這個`CEdit`物件。
 
 ### <a name="remarks"></a>備註
 
-文字限制為文字，以位元組為單位，編輯控制項可接受的最大數量。
+文字限制為文字，請在 TCHARs，編輯控制項可接受的最大數量。
 
 > [!NOTE]
 >  此成員函式是從 Windows 95 和 Windows NT 4.0。
@@ -606,14 +606,14 @@ int GetLine(
 指定的行號，來擷取多行編輯控制項。 行號是以零為起始;值為 0 指定的第一行。 單行編輯控制項，會忽略這個參數。
 
 *lpszBuffer*<br/>
-指向接收一份列的緩衝區。 緩衝區的第一個字組必須指定最大可以複製到緩衝區的字元數。
+指向接收一份列的緩衝區。 緩衝區的第一個字組必須指定可以複製到緩衝區的 TCHARs 的最大數目。
 
 *nMaxLength*<br/>
-指定最大可以複製到緩衝區的位元組數。 `GetLine` 將此值放在第一個文字*lpszBuffer*進行呼叫 Windows 之前。
+指定 TCHAR 可以複製到緩衝區的字元的數目上限。 `GetLine` 將此值放在第一個文字*lpszBuffer*進行呼叫 Windows 之前。
 
 ### <a name="return-value"></a>傳回值
 
-實際複製的位元組數目。 傳回值為 0，如果所指定的行號*nIndex*大於編輯控制項中的行數。
+實際複製的字元數。 傳回值為 0，如果所指定的行號*nIndex*大於編輯控制項中的行數。
 
 ### <a name="remarks"></a>備註
 
@@ -800,7 +800,7 @@ void LimitText(int nChars = 0);
 ### <a name="parameters"></a>參數
 
 *nChars*<br/>
-指定使用者可以輸入文字的長度 （以位元組為單位）。 如果此參數為 0，會將文字長度設 UINT_MAX 位元組。 這是預設行為。
+指定使用者可以輸入之文字的長度 （以 TCHARs)。 如果此參數為 0，會將文字長度設 UINT_MAX 位元組。 這是預設行為。
 
 ### <a name="remarks"></a>備註
 

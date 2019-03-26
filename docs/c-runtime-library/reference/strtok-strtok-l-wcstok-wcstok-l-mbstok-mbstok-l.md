@@ -1,6 +1,6 @@
 ---
 title: strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 apiname:
 - _mbstok_l
 - _mbstok
@@ -45,12 +45,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: bb791c7049379f62b99804fa8f1cf3a57fe0b749
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.openlocfilehash: 22dd01a0b2558c83ca1e25875a2ace7dd4ee15c0
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58416958"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476912"
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
 
@@ -81,11 +81,11 @@ wchar_t *wcstok_l(
    _locale_t locale
 );
 unsigned char *_mbstok(
-   unsigned char*strToken,
+   unsigned char *strToken,
    const unsigned char *strDelimit
 );
 unsigned char *_mbstok_l(
-   unsigned char*strToken,
+   unsigned char *strToken,
    const unsigned char *strDelimit,
    _locale_t locale
 );
@@ -104,7 +104,7 @@ unsigned char *_mbstok_l(
 
 ## <a name="return-value"></a>傳回值
 
-讓指標回到下一個中找到的語彙基元*strToken*。 它們會傳回**NULL**找到沒有 token 時。 每個呼叫都會修改*strToken*以替代傳回 token 之後，就會發生的第一個分隔符號的 null 字元。
+讓指標回到下一個中找到的語彙基元*strToken*。 函式會傳回**NULL**找到沒有 token 時。 每個呼叫都會修改*strToken*以替代傳回 token 之後，就會發生的第一個分隔符號的 null 字元。
 
 ## <a name="remarks"></a>備註
 
@@ -115,7 +115,9 @@ unsigned char *_mbstok_l(
 
 在第一次呼叫**strtok**，函式會略過前導分隔符號，並讓指標回到中的第一個語彙基元*strToken*，終止具有 null 字元的 token。 多個 token 可以中斷超出的其餘部分*strToken*一連串的呼叫所**strtok**。 每次呼叫**strtok**修改*strToken*插入一個 null 字元之後, **k**該呼叫所傳回。 若要讀取下一個 token *strToken*，呼叫**strtok**具有**NULL**值*strToken*引數。 **NULL** *strToken*引數會**strtok**搜尋下一個語彙基元，在修改後*strToken*。 *StrDelimit*引數可採用到下一個呼叫的任何值，如此分隔符號集可能會有所不同。
 
-輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值的設定會影響**LC_CTYPE**地區設定分類設定。 如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。
+
+這些功能，但不包含新版 **_l**尾碼針對此與地區設定相關行為使用目前的地區設定。 使用版本 **_l**尾碼都相同，只不過它們改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 > [!NOTE]
 > 每個函式都會使用執行緒區域靜態變數將字串剖析為 Token。 因此，多個執行緒可以同時呼叫這些函式，卻不會有意外作用。 但在單一執行緒內，交錯呼叫這些函式的其中之一，非常有可能產生資料損毀或不正確的結果。 剖析不同的字串時，請先完成一個字串的剖析再開始剖析下一個。 亦請注意，從呼叫另一個函式的迴圈內呼叫這些函式的其中之一時，會有潛在的危險。 如果其他函式在使用這些函式的其中之一時結束，就會導致交錯的呼叫順序，觸發資料損毀。

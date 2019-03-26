@@ -1,17 +1,17 @@
 ---
 title: 編譯器警告 (層級 1) C4789
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 f1_keywords:
 - C4789
 helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-ms.openlocfilehash: f489915f07eefd0909cbcd806a590f93f674c258
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36a5032098c5caabb1b050833e487fd58679a782
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677392"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476847"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>編譯器警告 (層級 1) C4789
 
@@ -19,9 +19,11 @@ ms.locfileid: "50677392"
 
 ## <a name="remarks"></a>備註
 
-使用特定的 C 執行階段 (CRT) 函式、參數傳遞，及執行指派時，如此在編譯時期會知道資料大小時，會警告緩衝區溢位。 這項警告是針對可能逃避一般的資料大小不符偵測的情況。
+**C4789**時使用特定的 C 執行階段 (CRT) 函式會警告緩衝區溢位。 傳遞的參數，或進行指派時，它也會報告大小不符。 如果在編譯時期已知的資料大小可以警告。 這項警告是針對可能逃避一般的資料大小不符偵測的情況。
 
-複製資料 (其長度在編譯時間已知)，並置於編譯時期已知其大小的資料區塊時，如果區塊太小無法容納資料，則會出現警告。 必須使用下列其中一個 CRT 函式的內建形式來完成複製：
+**C4789**警告時資料複製到得太小，在編譯時期已知的資料區塊。
+
+如果該複本會使用其中一個 CRT 函式的內建形式，就會發生警告：
 
 - [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)
 
@@ -29,18 +31,18 @@ ms.locfileid: "50677392"
 
 - [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)， [wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)
 
-使用轉型，然後嘗試從 lvalue 參考複製指派時，如果參數資料類型不符，也會出現警告。
+當您轉換為較大的資料類型的參數，然後再進行從 lvalue 參考複製指派時，也會出現警告。
 
-Visual C++ 可能會為永遠不會執行的程式碼路徑產生這個警告。 您可以使用 `#pragma` (如這個範例所示) 以暫時停用警告：
+Visual c + + 可能會產生這個警告，永遠不會執行的程式碼路徑。 您可以使用 `#pragma` (如這個範例所示) 以暫時停用警告：
 
 ```cpp
-#pragma(push)
-#pragma warning ( disable : 4789 )
+#pragma warning( push )
+#pragma warning( disable : 4789 )
 // unused code that generates compiler warning C4789`
-#pragma(pop)
+#pragma warning( pop )
 ```
 
-這可避免 Visual C++ 產生該特定程式碼區塊的警告。 `#pragma(push)` 會先保留現有的狀態，直到 `#pragma warning(disable: 4789)` 變更它。 `#pragma(pop)` 還原推入的狀態，並移除 `#pragma warning(disable:4789)` 的效果。 如需 c + + 前置處理器指示詞`#pragma`，請參閱 <<c2> [ 警告](../../preprocessor/warning.md)並[Pragma 指示詞和 __Pragma 關鍵字](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)。
+這個慣用語可避免 Visual c + + 產生該特定程式碼區段的警告。 `#pragma warning(push)` 會先保留現有的狀態，直到 `#pragma warning(disable: 4789)` 變更它。 `#pragma warning(pop)` 還原推入的狀態，並移除 `#pragma warning(disable:4789)` 的效果。 如需 c + + 前置處理器指示詞`#pragma`，請參閱 <<c2> [ 警告](../../preprocessor/warning.md)並[Pragma 指示詞和 __Pragma 關鍵字](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)。
 
 ## <a name="example"></a>範例
 

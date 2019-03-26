@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: c1f59c704e96ade82295f4ae88265f549987e981
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 44a2f1da6a02444c79247178c34281e39731f0f3
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813964"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476925"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>逐步解說：建立並使用您自己動態連結程式庫 （c + +）
 
@@ -296,9 +296,11 @@ ms.locfileid: "57813964"
 
 1. 在上方窗格中按兩下**其他 Include 目錄**對話方塊，讓編輯控制項。
 
-1. 在編輯控制項中，指定的位置路徑**MathLibrary.h**標頭檔。 在此情況下，您可以使用相對路徑：
+1. 在編輯控制項中，指定的位置路徑**MathLibrary.h**標頭檔。 在此情況下，您可以使用相對路徑，從包含您在用戶端專案來包含在 DLL 專案中的.h 檔案的資料夾中的.cpp 檔的資料夾。 如果用戶端專案，在不同的方案相同的資料夾，做為 DLL 的方案中的相對路徑應該看起來像這樣：
 
    `..\..\MathLibrary\MathLibrary`
+
+   如果您的 DLL 和用戶端專案位於相同方案中，或解決的辦法是在不同的資料夾，然後您必須的相對路徑跟著調整。
 
    ![加入 [其他 Include 目錄] 屬性中的標頭位置](media/mathclient-additional-include-directories.png "將標頭位置新增至 [其他 Include 目錄] 屬性")
 

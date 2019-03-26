@@ -3,12 +3,12 @@ title: C++ 類型系統 (現代 C++)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: ea4d8da9af10df2fb930daaad8374d70b6704d28
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220669"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476899"
 ---
 # <a name="c-type-system-modern-c"></a>C++ 類型系統 (現代 C++)
 
@@ -102,9 +102,7 @@ A **const**型別會區別其非 const 版本; 比方說， **const int**是不�
 
 - 編譯器沒有使用者定義類型的內建知識。 第一次遇到編譯程序期間定義時，它可類型的學習。
 
-- 您會藉由定義 (透過多載) 適當的運算子做為類別成員或非成員函式，指定對類型執行哪些作業，以及如何轉換為其他類型。 如需詳細資訊，請參閱 <<c0> [ 函式多載](function-overloading.md)。
-
-- 它們不一定要是靜態類型 (物件類型永不變更的規則)。 透過的機制*繼承*並*多型*，宣告為類別 （稱為類別的物件執行個體） 的使用者定義類型的變數可能會在執行階段在有不同的類型編譯時間。 如需詳細資訊，請參閱[繼承](../cpp/inheritance-cpp.md)。
+- 您會藉由定義 (透過多載) 適當的運算子做為類別成員或非成員函式，指定對類型執行哪些作業，以及如何轉換為其他類型。 如需詳細資訊，請參閱[函式多載](function-overloading.md)
 
 ## <a name="pointer-types"></a>指標類型
 

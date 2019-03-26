@@ -1,6 +1,6 @@
 ---
 title: strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s、_mbstok_s_l
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 apiname:
 - _wcstok_s_l
 - _mbstok_s_l
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-ms.openlocfilehash: 0020d4944ffb379584a044023bc34169b4a5c983
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.openlocfilehash: e2c237927aa133d33085be40b88789c1024d6b34
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58416971"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476886"
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s、_mbstok_s_l
 
@@ -137,13 +137,15 @@ unsigned char* _mbstok_s_l(
 
 **Strtok_s**系列的函式會尋找下一個語彙基元*str*。 中的字元集*分隔符號*指定要在中找到的權杖可能的分隔符號*str*上目前的呼叫。 **wcstok_s**並 **_mbstok_s**是寬字元和多位元組字元版本的**strtok_s**。 引數和傳回值**wcstok_s**並 **_wcstok_s_l**是寬字元字串; **_mbstok_s**並 **_mbstok_s_l**是多位元組字元字串。 除此之外，這些函式的行為相同。
 
-這個函式會驗證它的參數。 如果發生錯誤條件表中的錯誤，會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**要**EINVAL** ，並傳回**NULL**。
+這個函式會驗證它的參數。 當錯誤狀況發生時，如同錯誤條件表中，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**要**EINVAL** ，並傳回**NULL**。
 
-在第一次呼叫**strtok_s**函式會略過前導分隔符號，並讓指標回到中的第一個語彙基元*str*，終止具有 null 字元的 token。 多個 token 可以中斷超出的其餘部分*str*一連串的呼叫所**strtok_s**。 每次呼叫**strtok_s**修改*str*由該呼叫所傳回的 token 後面插入一個 null 字元。 *內容*正在讀取的字串，其中在字串中的下一個 token 是讀取，會持續追蹤的指標。 若要讀取下一個 token *str*，呼叫**strtok_s**具有**NULL**值*str*引數，並傳遞相同*內容*參數。 **NULL** *str*引數會**strtok_s**搜尋下一個語彙基元，在修改後*str*。 *分隔符號*引數可採用到下一個呼叫的任何值，如此分隔符號集可能會有所不同。
+在第一次呼叫**strtok_s**，函式會略過前導分隔符號，並讓指標回到中的第一個語彙基元*str*，終止具有 null 字元的 token。 多個 token 可以中斷超出的其餘部分*str*一連串的呼叫所**strtok_s**。 每次呼叫**strtok_s**修改*str*由該呼叫所傳回的 token 後面插入一個 null 字元。 *內容*正在讀取的字串，其中在字串中的下一個 token 是讀取，會持續追蹤的指標。 若要讀取下一個 token *str*，呼叫**strtok_s**具有**NULL**值*str*引數，並傳遞相同*內容*參數。 **NULL** *str*引數會**strtok_s**搜尋下一個語彙基元，在修改後*str*。 *分隔符號*引數可採用到下一個呼叫的任何值，如此分隔符號集可能會有所不同。
 
 由於*內容*參數會取代使用中的靜態緩衝區**strtok**並 **_strtok_l**，就可以剖析兩個字串，同時在相同的執行緒。
 
-輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些功能，但不包含新版 **_l**尾碼針對此與地區設定相關行為使用目前執行緒的地區設定。 使用版本 **_l**後置詞都相同，只不過它們改用*地區設定*參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值的設定會影響**LC_CTYPE**地區設定分類設定。 如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。
+
+這些功能，但不包含新版 **_l**尾碼針對此與地區設定相關行為使用目前執行緒的地區設定。 使用版本 **_l**後置詞都相同，只不過它們改用所指定的地區設定*地區設定*參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 

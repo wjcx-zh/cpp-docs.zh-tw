@@ -12,16 +12,16 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: 2a519c0606a7df6e0ce55997a055d78865afafbf
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 0f10b4867b443f0db69743d7ff23bb059290b0a5
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694409"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328957"
 ---
 # <a name="add-a-member-variable"></a>新增成員變數
 
-您可以使用 [類別檢視] 將成員變數新增至類別。 成員變數可以是用於[資料交換和資料驗證](../mfc/dialog-data-exchange-and-validation.md)，也可以是泛型。 資料成員變數精靈專用於取得相關資訊，並將該資訊用來在來源檔案的適當位置插入元素。 您可以透過 [[資源檢視]](../windows/resource-view-window.md) 中的 [[對話方塊編輯器]](../windows/dialog-editor.md)，或透過 [[類別檢視]](/visualstudio/ide/viewing-the-structure-of-code) 新增成員變數。
+您可以使用 [類別檢視] 將成員變數新增至類別。 成員變數可以是用於[資料交換和資料驗證](../mfc/dialog-data-exchange-and-validation.md)，也可以是泛型。 資料成員變數精靈專用於取得相關資訊，並將該資訊用來在來源檔案的適當位置插入元素。 您可以透過 [[資源檢視]](../windows/how-to-create-a-resource-script-file.md#create-resources) 中的 [[對話方塊編輯器]](../windows/dialog-editor.md)，或透過 [[類別檢視]](/visualstudio/ide/viewing-the-structure-of-code) 新增成員變數。
 
 > [!NOTE]
 > 當您設計和實作對話方塊時，也許會發現使用 [對話方塊編輯器] 新增對話方塊控制項，然後實作控制項成員變數的做法更有效率。
@@ -39,7 +39,7 @@ ms.locfileid: "51694409"
    > [!NOTE]
    > [控制項識別碼] 中已提供預設值。
 
-1. 在適當的精靈方塊中提供資訊。 如需詳細資訊，請參閱[對話方塊控制項和變數類型](#dialog-box-controls-and-variable-types)。
+1. 在適當的精靈方塊中提供資訊。 如需詳細資訊，請參閱[對話方塊控制項與變數類型](#dialog-box-controls-and-variable-types)。
 
 1. 選取 [完成]，將定義和實作程式碼新增至專案，然後關閉精靈。
 
@@ -104,7 +104,7 @@ ms.locfileid: "51694409"
 
   設定您要新增的控制項變數識別碼。 從您要新增成員變數的控制項類型識別碼清單中選取。 此清單只有在選取 [控制變數] 方塊時才能使用，而且僅限於已新增至對話方塊的控制項識別碼。 例如，標準 [確定] 按鈕的控制項識別碼為 **IDOK**。
 
-  |選項|描述|
+  |選項|說明|
   |------------|-----------------|
   |**控制項**|控制項類型預設會設定此選項。 它會管理控制項本身，而不是控制項的狀態或內容 (原因是您可能會想要為清單方塊、下拉式方塊或編輯方塊管理這兩項)。|
   |**值**|此選項適用於可包含值或顯示狀態的控制項類型，像是編輯方塊或核取方塊。 同時也適用於您可能會管理範圍、內容或狀態的控制項類型。 如需詳細資訊，請參閱[對話方塊控制項與變數類型](#dialog-box-controls-and-variable-types)。|

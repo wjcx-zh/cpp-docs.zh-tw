@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MSBuild, properties
 - event handler wizard [C++]
 ms.assetid: 050bebf0-a9e0-474b-905c-796fe5ac8fc3
-ms.openlocfilehash: 8e6b2511b00b7f949718e5b0d9fd793ac53d0d8b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 96e5b8777bb8b0c976277a06e8ad49b3334921fb
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694513"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328567"
 ---
 # <a name="add-an-event-handler"></a>新增事件處理常式
 
@@ -25,7 +25,7 @@ ms.locfileid: "51694513"
 
 **將事件處理常式新增至對話方塊控制項：**
 
-1. 在[資源檢視](../windows/resource-view-window.md)中按兩下對話方塊資源，在[對話方塊編輯器](../windows/dialog-editor.md)中開啟包含控制項的對話方塊資源。
+1. 在[資源檢視](../windows/how-to-create-a-resource-script-file.md#create-resources)中按兩下對話方塊資源，在[對話方塊編輯器](../windows/dialog-editor.md)中開啟包含控制項的對話方塊資源。
 
 1. 以滑鼠右鍵按一下您想要處理通知事件的控制項。
 

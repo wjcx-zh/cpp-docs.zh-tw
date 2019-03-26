@@ -5,12 +5,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 604057753e67d08c12204f9d3b09bce0e1212966
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 17a830238e21a5ef231285b5be9bfa6ae39183f4
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809759"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356266"
 ---
 # <a name="visual-c-language-conformance"></a>Visual C++ 語言一致性
 
@@ -79,18 +79,17 @@ ms.locfileid: "56809759"
 |&nbsp;&nbsp;[P0017R1 擴充的彙總初始化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)|VS 2017 15.7  <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0091R3 類別範本的範本引數推斷](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r3.html)<br />&nbsp;&nbsp;[P0512R0 類別樣板引數推斷問題](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0512r0.pdf) \(英文\)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0127R2 使用 auto 宣告非類型範本參數](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r2.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0135R1 保證的複製省略](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0135r1.html)|VS 2017 15.6<sup>[H](#note_H)</sup>|
+|&nbsp;&nbsp;[P0135R1 保證的複製省略](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0135r1.html)|VS 2017 15.6|
 |&nbsp;&nbsp;[P0136R1 改寫繼承建構函式](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0136r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0137R1 std::launder](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0137r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0145R3 調整運算式評估順序](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf)<br />&nbsp;&nbsp;[P0400R0 函式引數的評估順序](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0400r0.html) \(英文\)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0195R2 using-declaration 的套件延伸模組](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0195r2.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0283R2 略過無法辨認的屬性](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0702R1 修正初始設定式清單 ctor 的類別樣板引數推斷](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html) \(英文\)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 
 |功能範圍| |
 |----|---|
 |__C++17 核心語言功能 (缺失報表)__|__支援__|
-|&nbsp;&nbsp;[P0702R1 修正初始設定式清單 ctor 的類別樣板引數推斷](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html) \(英文\)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0702R1 修正初始設定式清單 ctor 的類別樣板引數推斷](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html) \(英文\)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0588R1 簡化隱含的 Lambda 擷取](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|否|
 |&nbsp;&nbsp;[CWG 1581：何時會定義 constexpr 成員函式？](https://wg21.cmeerw.net/cwg/issue1581)|否|
 |&nbsp;&nbsp;[P0962R1 放寬結構化繫結的自訂點尋找規則](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html)|否|
@@ -100,7 +99,7 @@ ms.locfileid: "56809759"
 |功能範圍| |
 |----|---|
 |__C++20 核心語言功能__|__支援__|
-|&nbsp;&nbsp;[P0306R4 新增 &#95;&#95;VA_OPT&#95;&#95; 以進行逗號省略和逗號刪除](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0306r4.pdf)|否|
+|&nbsp;&nbsp;[P0306R4 新增 &#95;&#95;VA_OPT&#95;&#95; 以進行逗號省略和逗號刪除](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0306r4.html)|否|
 |&nbsp;&nbsp;[P0329R4 指定的初始化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf) \(英文\)|否|
 |&nbsp;&nbsp;[P0409R2 允許 Lambda 擷取 [=, this]](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html) \(英文\)|否|
 |&nbsp;&nbsp;[P0428R2 針對泛型 Lambda 的熟悉範本語法](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf) \(英文\)|否|
@@ -145,7 +144,7 @@ ms.locfileid: "56809759"
 |&nbsp;&nbsp;[N4562 程式庫基本概念︰\<memory_resource>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#memory.resource.synop)<br />&nbsp;&nbsp;[P0337R0 刪除 polymorphic_allocator 指派](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0337r0.html)|VS 2017 15.6|
 |&nbsp;&nbsp;[P0024R2 平行演算法](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0024r2.html)<br />&nbsp;&nbsp;[P0336R1 重新命名平行執行原則](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0336r1.pdf)<br />&nbsp;&nbsp;[P0394R4 針對例外狀況，平行演算法應使用 terminate()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0394r4.html)<br />&nbsp;&nbsp;[P0452R1 統一 \<numeric> 平行演算法](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0452r1.html) \(英文\)|VS 2017 15.7|
 |&nbsp;&nbsp;[P0226R1 數學特殊函式](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0226r1.pdf)|VS 2017 15.7|
-|&nbsp;&nbsp;[P0218R1 \<filesystem>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0218r1.html)<br />&nbsp;&nbsp;[P0219R1 適用於 Filesystem 的相對路徑](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0219r1.html)<br />&nbsp;&nbsp;[P0317R1 針對檔案系統的目錄項目快取](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p03179r1.html) \(英文\)<br />&nbsp;&nbsp;[P0392R0 支援 Filesystem 路徑的 string_view](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0392r0.pdf)<br />&nbsp;&nbsp;[P0430R2 支援非 POSIX 檔案系統](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0430r2.pdf) \(英文\)<br />&nbsp;&nbsp;[P0492R2 解決檔案系統的 NB 註解](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0492r2.html) \(英文\)|VS 2017 15.7 <sup>[K](#note_K)</sup>|
+|&nbsp;&nbsp;[P0218R1 \<filesystem>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0218r1.html)<br />&nbsp;&nbsp;[P0219R1 適用於 Filesystem 的相對路徑](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0219r1.html)<br />&nbsp;&nbsp;[P0317R1 針對檔案系統的目錄項目快取](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0317r1.html) \(英文\)<br />&nbsp;&nbsp;[P0392R0 支援 Filesystem 路徑的 string_view](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0392r0.pdf)<br />&nbsp;&nbsp;[P0430R2 支援非 POSIX 檔案系統](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0430r2.pdf) \(英文\)<br />&nbsp;&nbsp;[P0492R2 解決檔案系統的 NB 註解](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0492r2.html) \(英文\)|VS 2017 15.7 <sup>[K](#note_K)</sup>|
 |&nbsp;&nbsp;[P0003R5 移除動態例外狀況規格](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0005R4 not_fn()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html)<br />&nbsp;&nbsp;[P0358R1 not_fn() 的修正](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0033R1 改寫 enable_shared_from_this](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html)|VS 2017 15.5 <sup>[14](#note_14)</sup>|
@@ -162,7 +161,7 @@ ms.locfileid: "56809759"
 |&nbsp;&nbsp;[P0084R2 Emplace 傳回型別](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0084r2.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0152R1 atomic::is_always_lock_free](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0152r1.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0154R1 hardware_destructive_interference_size 等等](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0154r1.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0156R2 將 Variadic lock\_guard 重新命名為 scoped\_lock](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0156r2.html) \(英文\)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0156R2 將 Variadic lock\_guard 重新命名為 scoped\_lock](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0156r2.html) \(英文\)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0258R2 has_unique_object_representations](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0258r2.html)|VS 2017 15.3 <sup>[L](#note_L)</sup>|
 |&nbsp;&nbsp;[P0295R0 gcd()、lcm()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0295r0.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0298R3 std::byte](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0298r3.pdf) \(英文\)|VS 2017 15.3 <sup>[17](#note_17)、[byte](#note_byte)</sup>|

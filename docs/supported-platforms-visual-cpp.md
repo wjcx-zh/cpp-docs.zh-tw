@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0d893056-4008-411a-b3d1-5f57fd7da95c
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: c8bd090acf94876ee7939b5d1d80613f688b89d7
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 373ac11ac26ddc1f9dbf1e1e16ae25dcf0e47f9f
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809629"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328697"
 ---
 # <a name="supported-platforms-visual-c"></a>支援的平台 (Visual C++)
 
@@ -45,4 +45,4 @@ ms.locfileid: "56809629"
 ## <a name="see-also"></a>另請參閱
 
 - [Visual Studio 版本中的 Visual C++ 工具和功能](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)
-- [快速入門](/visualstudio/ide/getting-started-with-visual-cpp-in-visual-studio)
+- [快速入門](/visualstudio/ide/getting-started-with-cpp-in-visual-studio)

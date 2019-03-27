@@ -1,6 +1,6 @@
 ---
 title: vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l
-ms.date: 11/04/2016
+ms.date: 03/26/2019
 apiname:
 - _vswprintf_s_l
 - vsprintf_s
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - _vswprintf_s_l function
 ms.assetid: 60e90518-57f0-4f1b-b732-f62a69702833
-ms.openlocfilehash: 055b2279be923712528463cb23ab3fd6b52897d7
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 469a823d0f033a2f140d78a65cb0e69a3ef16d5c
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211026"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508786"
 ---
 # <a name="vsprintfs-vsprintfsl-vswprintfs-vswprintfsl"></a>vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l
 
@@ -109,7 +109,7 @@ int vswprintf_s(
 
 ## <a name="return-value"></a>傳回值
 
-**vsprintf_s**並**vswprintf_s**傳回寫入的字元數，如果發生輸出錯誤，不包括結束的 null 字元或為負值。 如果*緩衝區*或是*格式*計數為零，如果是 null 指標，或如果格式字串包含無效格式化字元，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1，並設定**errno**要**EINVAL**。
+**vsprintf_s**並**vswprintf_s**傳回寫入的字元數，如果發生輸出錯誤，不包括結束的 null 字元或為負值。 如果*緩衝區*或是*格式*是 null 指標，如果*numberOfElements*為零，或如果格式字串包含無效格式化字元，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1，並設定**errno**要**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

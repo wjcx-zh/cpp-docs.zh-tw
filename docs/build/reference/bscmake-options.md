@@ -29,14 +29,17 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-ms.openlocfilehash: bf4c3648079dff16481dbdd56b9a70093fd22d8d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b1d62e8d122cb4f08feef60d6936359b3e246749
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812053"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508776"
 ---
 # <a name="bscmake-options"></a>BSCMAKE 選項
+
+> [!WARNING]
+> 雖然 BSCMAKE 仍隨著 Visual Studio 安裝，IDE 已不再使用它。 從 Visual Studio 2008 起，瀏覽和符號資訊會自動儲存在方案資料夾的 SQL Server .sdf 檔案中。
 
 本節說明可用來控制 BSCMAKE 選項。 數個選項可控制瀏覽資訊檔的內容所排除或包含特定資訊。 排除選項可讓執行速度更快的 BSCMAKE，可能會導致較小的.bsc 檔案。 選項名稱會區分大小寫 (除了 **/help**並 **/NOLOGO**)。
 

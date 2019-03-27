@@ -13,12 +13,12 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-ms.openlocfilehash: a75a9d143012dee7946591d708921d6734b2acda
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 73642baba77a62cac531ae7b2842ec9953b338ec
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811871"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508698"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR、/Fr (建立 .Sbr 檔案)
 
@@ -32,6 +32,9 @@ ms.locfileid: "57811871"
 ```
 
 ## <a name="remarks"></a>備註
+
+> [!WARNING]
+> 雖然 BSCMAKE 仍隨著 Visual Studio 安裝，IDE 已不再使用它。 從 Visual Studio 2008 起，瀏覽和符號資訊會自動儲存在方案資料夾的 SQL Server .sdf 檔案中。
 
 在建置流程中，Microsoft 瀏覽資訊檔維護公用程式 (BSCMAKE) 會使用這些檔案建立 .BSC 檔案，用以顯示瀏覽資訊。
 
@@ -62,5 +65,5 @@ ms.locfileid: "57811871"
 
 [輸出檔 (/F) 選項](output-file-f-options.md)<br/>
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)<br/>
 [指定路徑名稱](specifying-the-pathname.md)

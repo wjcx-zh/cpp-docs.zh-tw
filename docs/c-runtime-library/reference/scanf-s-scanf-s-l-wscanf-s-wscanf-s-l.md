@@ -1,6 +1,6 @@
 ---
 title: scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l
-ms.date: 11/04/2016
+ms.date: 03/26/2019
 apiname:
 - wscanf_s
 - _wscanf_s_l
@@ -42,12 +42,12 @@ helpviewer_keywords:
 - wscanf_s_l function
 - buffers [C++], avoiding overruns
 ms.assetid: 42cafcf7-52d6-404a-80e4-b056a7faf2e5
-ms.openlocfilehash: 0fcf2a9f3ac8585e71caa9f2cc990c7e303a2f5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28697cac20181c3dda0581c7486ebb673aec1241
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528605"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508797"
 ---
 # <a name="scanfs-scanfsl-wscanfs-wscanfsl"></a>scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l
 
@@ -81,7 +81,7 @@ int _wscanf_s_l(
 *格式*<br/>
 格式控制字串。
 
-*引數*<br/>
+*argument*<br/>
 選擇性引數。
 
 *locale*<br/>
@@ -89,51 +89,51 @@ int _wscanf_s_l(
 
 ## <a name="return-value"></a>傳回值
 
-這會在成功轉換並指派時傳回欄位數；傳回值不包含已讀取但尚未指派的欄位。 傳回值 0 表示未指派任何欄位。 傳回值是**EOF**錯誤，或如果在第一次嘗試讀取字元遇到檔案結尾字元或字串結尾字元。 如果*格式*是**NULL**指標，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**scanf_s**並**wscanf_s**傳回**EOF** ，並設定**errno**到**EINVAL**.
+傳回成功轉換並指派的欄位數目。 傳回的值不包含已讀取但未指派的欄位。 傳回值 0 表示未指派任何欄位。 傳回值是**EOF**錯誤，或如果檔案結尾字元或字串結尾字元位於第一次嘗試讀取字元。 如果*格式*是**NULL**指標，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**scanf_s**並**wscanf_s**傳回**EOF** ，並設定**errno**到**EINVAL**.
 
 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Scanf_s**函式會從標準輸入資料流讀取資料**stdin**並將資料寫入至所指定的位置*引數*。 每個*引數*必須是對應至中的類型指定名稱的型別變數指標*格式*。 如果在重疊的字串之間進行複製，則行為是未定義的。
+**Scanf_s**函式會從標準輸入資料流讀取資料**stdin**，並將它寫入至*引數*。 每個*引數*必須是變數的型別對應至型別規範中的指標*格式*。 如果在重疊的字串之間進行複製，則行為是未定義的。
 
 **wscanf_s**是寬字元版本的**scanf_s**;*格式*引數**wscanf_s**是寬字元字串。 **wscanf_s**並**scanf_s**運作方式完全相同，如果資料流以 ANSI 模式開啟。 **scanf_s**目前不支援來自 UNICODE 資料流輸入。
 
-有這些函式的版本 **_l**尾碼都相同，不同之處在於它們使用傳入的地區設定參數，而不是目前執行緒的地區設定。
+有這些函式的版本 **_l**後置詞都相同，只不過它們會使用*地區設定*而不是目前執行緒的地區設定的參數。
 
-不同於**scanf**並**wscanf**， **scanf_s**並**wscanf_s**要求到指定的型別所有輸入參數的緩衝區大小**c**， **C**， **s**， **S**，或會括住的字串控制項集合 **[]**。 以字元為單位的緩衝區大小會作為緊接指標的額外參數傳遞至緩衝區或變數。 例如，如果您正在讀取字串，則該字串的緩衝區大小將以下列方式傳遞：
+不同於**scanf**並**wscanf**， **scanf_s**並**wscanf_s**要求您指定一些參數的緩衝區大小。 所有指定的大小**c**， **C**， **s**， **S**，或字串控制集 **[]** 參數。 以字元為單位的緩衝區大小被傳遞做為額外的參數。 緊接在它後面指標至緩衝區或變數。 例如，如果您正在閱讀的字串，該字串的緩衝區大小傳遞，如下所示：
 
 ```C
 char s[10];
 scanf_s("%9s", s, (unsigned)_countof(s)); // buffer size is 10, width specification is 9
 ```
 
-緩衝區大小包含結束的 null。 您可以使用寬度規格欄位，以確保在讀取的語彙基元可納入緩衝區。 如果沒有使用寬度規格欄位，則讀取的語彙基元太大而無法納入緩衝區中，並且不會寫入該緩衝區。
+緩衝區大小包含終端機的 null。 您可以使用寬度規格欄位，以確保能夠整合到緩衝區中讀取的語彙基元。 語彙基元太大時，不會寫入至緩衝區除非寬度規格。
 
 > [!NOTE]
 > 大小參數的類型是**不帶正負號**，而非**size_t**。 使用靜態轉型來轉換**size_t**值**不帶正負號**適用於 64 位元組建組態。
 
-下列範例顯示緩衝區大小參數會描述字元數目上限，而非位元組。 在呼叫**wscanf_s**，緩衝區型別所表示的字元寬度不符合所指示的格式規範字元寬度。
+緩衝區大小參數描述不是位元組的字元的數目上限。 在此範例中，緩衝區類型的寬度不符合格式規範的寬度。
 
 ```C
 wchar_t ws[10];
 wscanf_s(L"%9S", ws, (unsigned)_countof(ws));
 ```
 
-**S**格式規範表示使用字元寬度是 「 相對於 」 函式所支援的預設寬度。 字元寬度是單一位元組，但函式支援雙位元組字元。 此範例會以最多 9 個單一位元組寬度字元的字串方式讀取，並將它們放在雙位元組寬度字元的緩衝區。 字元會視為單一位元組值；前兩個字元會儲存在 `ws[0]` 中，而後兩個會儲存在 `ws[1]` 中，依此類推。
+**S**格式規範表示使用的是 「 相對於 」 的預設寬度函數所支援的字元寬度。 字元寬度是單一位元組，但函式支援雙位元組字元。 此範例的最多 9 個單一位元組寬度字元的字串方式讀取，並將它們放在雙位元組寬度字元的緩衝區。 字元會視為單一位元組值；前兩個字元會儲存在 `ws[0]` 中，而後兩個會儲存在 `ws[1]` 中，依此類推。
 
-如果是字元，則單一字元可能會以下列方式讀取：
+這個範例會讀取單一字元：
 
 ```C
 char c;
 scanf_s("%c", &c, 1);
 ```
 
-讀取非 null 終止字串的多個字元時，整數會用於寬度規格和緩衝區大小。
+讀取非 null 終止字串的多個字元，整數會用於寬度規格和緩衝區大小。
 
 ```C
 char c[4];
-scanf_s("%4c", &c, (unsigned)_countof(c)); // not null terminated
+scanf_s("%4c", c, (unsigned)_countof(c)); // not null terminated
 ```
 
 如需詳細資訊，請參閱 [scanf 寬度規格](../../c-runtime-library/scanf-width-specification.md)。
@@ -154,7 +154,7 @@ scanf_s("%4c", &c, (unsigned)_countof(c)); // not null terminated
 |**scanf_s**， **_scanf_s_l**|\<stdio.h>|
 |**wscanf_s**， **_wscanf_s_l**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台中，相關聯的標準資料流控制代碼**stdin**， **stdout**，並**stderr**，必須重新導向，C 執行階段函式才能使用它們在 UWP 應用程式. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+主控台不支援通用 Windows 平台 (UWP) 應用程式中。 標準資料流控制代碼**stdin**， **stdout**，並**stderr**必須重新導向之後 C 執行階段函式可以在 UWP 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

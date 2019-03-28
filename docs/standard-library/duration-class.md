@@ -1,6 +1,6 @@
 ---
 title: duration 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2016
 f1_keywords:
 - chrono/std::chrono::duration
 - chrono/std::chrono::duration::duration
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 helpviewer_keywords:
 - std::chrono [C++], duration
-ms.openlocfilehash: 2b710de6275933b5dc05814664caef92cf251da4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49c68b1650ced36ebcf949ae2594508480e15136
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568882"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565567"
 ---
 # <a name="duration-class"></a>duration 類別
 
@@ -50,7 +50,7 @@ class duration <duration<Rep, Period1>, Period2>;
 
 |名稱|描述|
 |----------|-----------------|
-|[持續時間](#duration)|建構 `duration` 物件。|
+|[duration](#duration)|建構 `duration` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -59,7 +59,7 @@ class duration <duration<Rep, Period1>, Period2>;
 |[count](#count)|傳回時間間隔內的時鐘刻度數目。|
 |[max](#max)|靜態。 傳回範本參數 `Ref` 容許的最大值。|
 |[min](#min)|靜態。 傳回範本參數 `Ref` 容許的最小值。|
-|[零](#zero)|靜態。 實際上，系統會傳回 `Rep`(0)。|
+|[zero](#zero)|靜態。 實際上，系統會傳回 `Rep`(0)。|
 
 ### <a name="public-operators"></a>公用運算子
 
@@ -118,7 +118,7 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 *R*<br/>
 預設期間的滴答數。
 
-*持續時間*<br/>
+*Dur*<br/>
 所指定的期間的滴答數字*Period2*。
 
 ### <a name="remarks"></a>備註
@@ -159,7 +159,7 @@ static constexpr duration min();
 
 實際上，系統會傳回 `duration(duration_values<rep>::min())`。
 
-## <a name="duration__operator-"></a>  duration::operator-
+## <a name="operator-"></a>  duration::operator-
 
 傳回 `duration` 物件的複本與已變換正負號的滴答計數。
 
@@ -167,7 +167,7 @@ static constexpr duration min();
 constexpr duration operator-() const;
 ```
 
-## <a name="duration__operator--"></a>  duration::operator--
+## <a name="operator--"></a>  duration::operator--
 
 遞減預存的滴答計數。
 
@@ -270,14 +270,14 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>參數
 
-*持續時間*<br/>
+*Dur*<br/>
 `duration` 物件。
 
 ### <a name="return-value"></a>傳回值
 
 執行加法之後的 `duration` 物件。
 
-## <a name="duration__operator-_eq"></a>  duration::operator-=
+## <a name="operator-_eq"></a>  duration::operator-=
 
 將預存的滴答計數減去指定 `duration` 物件的滴答計數。
 
@@ -287,7 +287,7 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>參數
 
-*持續時間*<br/>
+*Dur*<br/>
 `duration` 物件。
 
 ### <a name="return-value"></a>傳回值

@@ -1,6 +1,6 @@
 ---
 title: CMFCVisualManagerWindows7 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CMFCVisualManagerWindows7
 - AFXVISUALMANAGERWINDOWS7/CMFCVisualManagerWindows7
@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerWindows7 Class [MFC]
 ms.assetid: e8d87df1-0c09-4b58-8ade-4e911f796e42
-ms.openlocfilehash: 296ccc0accdf2937406d9965118c1807aeb2604c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e729201f1a6b6fd41286cc6af2b8c08fc7ee697c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269392"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565515"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 類別
 
@@ -34,7 +34,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |名稱|描述|
 |----------|-----------------|
 |[CMFCVisualManagerWindows7::CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7)|預設建構函式。|
-|[CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7__~cmfcvisualmanagerwindows7)|預設解構函式。|
+|[CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7](#_dtorcmfcvisualmanagerwindows7)|預設解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -42,7 +42,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |----------|-----------------|
 |`CMFCVisualManagerWindows7::CleanStyle`|清除目前的視覺化樣式，並會重設預設視覺化樣式。|
 |`CMFCVisualManagerWindows7::CleanUp`|清除所有的使用者介面中的物件，並會重設功能表。|
-|`CMFCVisualManagerWindows7::DrawNcBtn`|在框架上，在非工作區中繪製的按鈕。 這個方法，以繪製降到最低，架構會使用最大化、 關閉並還原中的視窗框架的右上角的按鈕。 程式會使用非 Aero 佈景主題時，不會呼叫這個方法。|
+|`CMFCVisualManagerWindows7::DrawNcBtn`|在框架上，在非工作區中繪製的按鈕。 這個方法，以繪製降到最低，架構會使用最大化、 關閉並還原中的視窗框架的右上角的按鈕。 程式會使用時，才會呼叫這個方法`Aero`佈景主題。|
 |`CMFCVisualManagerWindows7::DrawNcText`|在框架上，在非工作區中繪製文字。 架構會使用這個方法，來繪製應用程式標題的框架視窗頂端的標題列中。|
 |`CMFCVisualManagerWindows7::DrawSeparator`|上繪製分隔符號[CMFCToolBar 類別](../../mfc/reference/cmfctoolbar-class.md)。|
 |`CMFCVisualManagerWindows7::GetRibbonBar`|擷取[CMFCRibbonBar 類別](../../mfc/reference/cmfcribbonbar-class.md)使用者介面相關聯。|
@@ -173,7 +173,7 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 virtual void OnFillMenuImageRect(
     CDC* pDC,
     CMFCToolBarButton* pButton,
-    CRect rect,
+    CRect rectangle,
     CMFCVisualManager::AFX_BUTTON_STATE state);
 ```
 
@@ -185,7 +185,7 @@ virtual void OnFillMenuImageRect(
 *pButton*<br/>
 [in]指標`CMFCToolBarButton`。 此架構會填滿此按鈕的背景。
 
-*rect*<br/>
+*rectangle*<br/>
 [in]指定的功能表按鈕的影像區域界限的矩形。
 
 *state*<br/>

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: fadb430d570e516d915d520f06e4c247b131c3db
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 6e87d77eec526cbfcfe5c1e6e78b0287226f0613
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739433"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565692"
 ---
 # <a name="crect-class"></a>CRect 類別
 
@@ -950,7 +950,7 @@ A[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或[CSize](csize-c
 
 參數的*x*並*y* (或`cx`並`cy`) 值新增至`CRect`。
 
-第三個多載會擴大`CRect`單位指定，在每個成員的參數數目。
+第三個多載會擴大`CRect`參數的每個成員中指定的單位數目。
 
 ### <a name="example"></a>範例
 
@@ -988,7 +988,7 @@ A[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或[CSize](csize-c
 
 參數的*x*並*y* (或`cx`並`cy`) 的值減去`CRect`。
 
-第三個多載 「 洩氣 」`CRect`單位指定，在每個成員的參數數目。 請注意，這個多載函式，例如[DeflateRect](#deflaterect)。
+第三個多載 「 洩氣 」`CRect`的每個成員的參數中指定的單位數。 請注意，這個多載函式，例如[DeflateRect](#deflaterect)。
 
 ### <a name="example"></a>範例
 
@@ -1085,7 +1085,7 @@ A[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或[CSize](csize-c
 
 參數的*x*並*y* (或`cx`並`cy`) 參數會加入至`CRect`的位置。
 
-第三個多載會傳回新`CRect`等於`CRect`擴大單位指定，在每個成員的參數數目。
+第三個多載會傳回新`CRect`等於`CRect`擴大的每個成員的參數中指定的單位數。
 
 ### <a name="example"></a>範例
 
@@ -1128,7 +1128,7 @@ A[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或`CSize`物件�
 
 參數的*x*並*y* (或`cx`並`cy`) 參數減去`CRect`的位置。
 
-第三個多載會傳回新`CRect`等於`CRect`縮小單位指定，在每個成員的參數數目。 請注意，這個多載函式，例如[DeflateRect](#deflaterect)，而非[SubtractRect](#subtractrect)。
+第三個多載會傳回新`CRect`等於`CRect`縮小的每個成員的參數中指定的單位數。 請注意，這個多載函式，例如[DeflateRect](#deflaterect)，而非[SubtractRect](#subtractrect)。
 
 ### <a name="example"></a>範例
 

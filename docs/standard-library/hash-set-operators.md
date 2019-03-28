@@ -1,16 +1,16 @@
 ---
 title: '&lt;hash_set&gt; 運算子'
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 3cb0b743eefa52b178a89be1c2cc766352bf4849
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 901070731d372904ae297a5360ec0da78d179468
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564836"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565580"
 ---
 # <a name="lthashsetgt-operators"></a>&lt;hash_set&gt; 運算子
 
@@ -22,7 +22,7 @@ ms.locfileid: "50564836"
 ## <a name="op_neq"></a> operator!=
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 測試運算子左邊的 hash_set 物件是否不等於右邊的 hash_set 物件。
 
@@ -90,7 +90,7 @@ The hash_sets hs1 and hs3 are equal.
 ## <a name="op_eq_eq"></a> operator==
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 測試運算子左邊的 hash_set 物件是否等於右邊的 hash_set 物件。
 
@@ -153,10 +153,10 @@ The hash_sets s1 and s2 are not equal.
 The hash_sets s1 and s3 are equal.
 ```
 
-## <a name="neq_hash_multiset"></a>  operator!= (hash_multiset)
+## <a name="op_neq_hash_multiset"></a>  operator!= (hash_multiset)
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 測試運算子左邊的 hash_multiset 物件是否不等於右邊的 hash_multiset 物件。
 
@@ -219,10 +219,10 @@ The hash_multisets hs1 and hs2 are not equal.
 The hash_multisets hs1 and hs3 are equal.
 ```
 
-## <a name="eq_eq_hash_multiset"></a>  operator== (hash_multiset)
+## <a name="op_eq_eq_hash_multiset"></a>  operator== (hash_multiset)
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 測試運算子左邊的 hash_multiset 物件是否等於右邊的 hash_multiset 物件。
 

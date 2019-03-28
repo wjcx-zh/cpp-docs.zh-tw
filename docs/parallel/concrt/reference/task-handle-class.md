@@ -1,6 +1,6 @@
 ---
 title: task_handle 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - task_handle
 - PPL/concurrency::task_handle
@@ -8,17 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-ms.openlocfilehash: 4193c2d1e08c1b5a43dc728edd24efd19be87268
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8528bc212603484be9325ed967e9475e4faa1348
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298083"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565096"
 ---
 # <a name="taskhandle-class"></a>task_handle 類別
 
-
-  `task_handle` 類別代表個別的平行工作項目。 它會封裝執行工作所需的指示和資料。
+`task_handle` 類別代表個別的平行工作項目。 它會封裝執行工作所需的指示和資料。
 
 ## <a name="syntax"></a>語法
 
@@ -40,7 +39,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 
 |名稱|描述|
 |----------|-----------------|
-|[task_handle](#ctor)|建構新`task_handle`物件。 工作的工作是由叫用做為建構函式的參數所指定的函式執行。|
+|[task_handle](#task_handle)|建構新`task_handle`物件。 工作的工作是由叫用做為建構函式的參數所指定的函式執行。|
 |[~ task_handle 解構函式](#dtor)|終結`task_handle`物件。|
 
 ### <a name="public-operators"></a>公用運算子
@@ -77,7 +76,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 void operator()() const;
 ```
 
-##  <a name="task_handle__ctor"></a> task_handle
+## <a name="taskhandle"></a>task_handle
 
 建構新`task_handle`物件。 工作的工作是由叫用做為建構函式的參數所指定的函式執行。
 

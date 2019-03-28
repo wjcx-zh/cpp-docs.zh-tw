@@ -1,6 +1,6 @@
 ---
 title: checked_array_iterator 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - iterator/checked_array_iterator
 - iterator/stdext::checked_array_iterator::difference_type
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stdext::checked_array_iterator [C++], reference
 - stdext::checked_array_iterator [C++], base
 ms.assetid: 7f07185e-d588-4ae3-9c4f-84ec4aa25a28
-ms.openlocfilehash: 2d7788a33321f794af6b395de3188bc51f662ad0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 688b93902da5b4492812b4715a248db9561ec258
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476592"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565710"
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator 類別
 
@@ -495,7 +495,7 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
 
-## <a name="lt_eq"></a>  checked_array_iterator::operator&lt;=
+## <a name="op_lt_eq"></a>  checked_array_iterator::operator&lt;=
 
 測試運算子左邊的 `checked_array_iterator` 是否小於或等於右邊的 `checked_array_iterator`。
 
@@ -514,7 +514,7 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
 
-## <a name="gt_eq"></a>  checked_array_iterator::operator&gt;=
+## <a name="op_gt_eq"></a>  checked_array_iterator::operator&gt;=
 
 測試運算子左邊的 `checked_array_iterator` 是否大於或等於右邊的 `checked_array_iterator`。
 
@@ -697,7 +697,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator--"></a>  checked_array_iterator::operator--
+## <a name="operator--"></a>  checked_array_iterator::operator--
 
 遞減 `checked_array_iterator` 至上一個項目。
 
@@ -841,7 +841,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator-_eq"></a>  checked_array_iterator::operator-=
+## <a name="operator-_eq"></a>  checked_array_iterator::operator-=
 
 從 `checked_array_iterator` 減去指定的位移。
 
@@ -890,7 +890,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator-"></a>  checked_array_iterator::operator-
+## <a name="operator-"></a>  checked_array_iterator::operator-
 
 從迭代器中遞減位移，並傳回新的 `checked_array_iterator`，其將插入的項目定址在新的位移位置中。
 
@@ -910,8 +910,6 @@ difference_type operator-(const checked_array_iterator& right) const;
 為位移項目定址的 `checked_array_iterator`。
 
 ### <a name="remarks"></a>備註
-
-如需程式碼範例，請參閱 [checked_array_iterator::operator-](#operator-)。
 
 如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
 

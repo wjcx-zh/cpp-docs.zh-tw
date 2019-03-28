@@ -1,6 +1,6 @@
 ---
 title: CFolderPickerDialog 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CFolderPickerDialog
 - AFXDLGS/CFolderPickerDialog
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CFolderPickerDialog [MFC], CFolderPickerDialog
 ms.assetid: 8db01684-dd1d-4e9c-989e-07a2318a8156
-ms.openlocfilehash: f1718919a4fe9019ef591d83473c118eba966900
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 435c91082fa901f0bc9726316f0358fc5a669b29
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276178"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565005"
 ---
 # <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog 類別
 
@@ -31,7 +31,7 @@ class CFolderPickerDialog : public CFileDialog;
 
 |名稱|描述|
 |----------|-----------------|
-|[CFolderPickerDialog::~CFolderPickerDialog](#cfolderpickerdialog__~cfolderpickerdialog)|解構函式。|
+|[CFolderPickerDialog::~CFolderPickerDialog](#_dtorcfolderpickerdialog)|解構函式。|
 |[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|建構函式。|
 
 ## <a name="remarks"></a>備註

@@ -1,6 +1,6 @@
 ---
 title: runtime_exception 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - runtime_exception
 - AMPRT/runtime_exception
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-ms.openlocfilehash: 5260d2f1d2e5a6a6498d501599037a90bc7bc9a0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 024ede0f05dfd646bcebe7acd2cfb86b5c54f6d1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289659"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565489"
 ---
 # <a name="runtimeexception-class"></a>runtime_exception 類別
 
@@ -39,7 +39,7 @@ class runtime_exception : public std::exception;
 
 |名稱|描述|
 |----------|-----------------|
-|[get_error_code](#runtime_exception__get_error_code)|傳回造成例外狀況的錯誤碼。|
+|[get_error_code](#get_error_code)|傳回造成例外狀況的錯誤碼。|
 
 ### <a name="public-operators"></a>公用運算子
 
@@ -59,7 +59,7 @@ class runtime_exception : public std::exception;
 
 **命名空間：** 並行
 
-## <a name="runtime_exception__ctor"></a>  runtime_exception 建構函式
+## <a name="ctor"></a>  runtime_exception 建構函式
 
 初始化類別的新執行個體。
 
@@ -102,7 +102,7 @@ runtime_exception(
 virtual ~runtime_exception() throw();
 ```
 
-## <a name="runtime_exception__get_error_code"></a>  get_error_code
+## <a name="geterrorcode"></a>get_error_code
 
 傳回造成例外狀況的錯誤碼。
 
@@ -116,7 +116,7 @@ HRESULT get_error_code() const throw();
 
 造成例外狀況的錯誤的 HRESULT。
 
-## <a name="runtime_exception__operator_eq"></a>  operator=
+## <a name="operator_eq"></a>  operator=
   將指定的內容複製`runtime_exception`到這個物件。
 
 ### <a name="syntax"></a>語法

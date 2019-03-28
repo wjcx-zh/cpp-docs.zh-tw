@@ -1,15 +1,15 @@
 ---
 title: Visual Studio 中的 CMake 專案
-ms.date: 03/05/2019
+ms.date: 03/27/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 84511c0712fffcacc1f90d4bde808620e0a0ab0f
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 479179d94a0534f5f0c790fea18e281053b686e2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356137"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565291"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Visual Studio 中的 CMake 專案
 
@@ -58,7 +58,7 @@ Visual Studio 會使用名為的檔案**CMakeSettings.json**來儲存環境變�
 
 ## <a name="import-an-existing-cache"></a>匯入現有的快取
 
-當您匯入現有的 CMakeCache.txt 檔案時，Visual Studio 會自動擷取自訂的變數，並建立預先填入[ **CMakeSettings.json** ](#cmake_settings)檔案基礎。 原始快取不會有任何修改，而且仍可從命令列或是透過用於產生的任何工具或 IDE 來使用。 新**CMakeSettings.json**檔案放置在一起的專案根 CMakeLists.txt。 Visual Studio 會根據設定檔產生新的快取。 您可以覆寫 [工具] | [選項] | [CMake] | [一般] 對話方塊中的自動快取產生。
+當您匯入現有的 CMakeCache.txt 檔案時，Visual Studio 會自動擷取自訂變數，並根據這些變數建立預先填入的 **CMakeSettings.json** 檔案。 原始快取不會有任何修改，而且仍可從命令列或是透過用於產生的任何工具或 IDE 來使用。 新**CMakeSettings.json**檔案放置在一起的專案根 CMakeLists.txt。 Visual Studio 會根據設定檔產生新的快取。 您可以覆寫 [工具] | [選項] | [CMake] | [一般] 對話方塊中的自動快取產生。
 
 快取中的所有項目不會全部匯入。  產生器和編譯器位置等屬性會取代成已知適用於 IDE 的預設值。
 
@@ -132,7 +132,7 @@ Visual Studio 會使用名為的檔案**CMakeSettings.json**來儲存環境變�
 
 如果您需要 CMake 快取狀態的詳細資訊以診斷問題，請開啟 [CMake] 主功能表，或在 [方案總管] 中開啟 [CMakeLists.txt] 操作功能表，執行下列其中一個命令：
 
-- [檢視快取] 會在編輯器中從組建根資料夾開啟 CMakeCache.txt 檔案。 (如果您清除快取，您在此對 CMakeCache.txt 所做的任何編輯都會遭到抹除。 若要在清除快取之後保存所做的變更，請參閱本文稍早的 [CMake 設定和自訂組態](#cmake_settings)。)
+- [檢視快取] 會在編輯器中從組建根資料夾開啟 CMakeCache.txt 檔案。 (如果您清除快取，您在此對 CMakeCache.txt 所做的任何編輯都會遭到抹除。 若要保存已清除的快取之後的變更，請參閱[來自訂 CMake 設定](customize-cmake-settings.md)。)
 
 - [開啟快取資料夾] 會將檔案總管視窗開啟至組建根資料夾。
 

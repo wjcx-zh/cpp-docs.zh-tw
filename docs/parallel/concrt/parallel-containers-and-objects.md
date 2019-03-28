@@ -1,17 +1,17 @@
 ---
 title: 平行容器和物件
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 helpviewer_keywords:
 - parallel objects
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: b406bc194735a2796f03f1e9d6cf0cf2ae2e6f86
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: bcf3ead9fe945ecb2246fdb28b7f67cd51b1238b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333282"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565944"
 ---
 # <a name="parallel-containers-and-objects"></a>平行容器和物件
 
@@ -27,13 +27,13 @@ A*並行物件*會同時共用元件。 計算的平行的並行物件狀態的�
 
 並行容器：
 
-- [concurrent_vector 類別](#ctor)
+- [concurrent_vector 類別](#vector)
 
-   - [之間的差異 concurrent_vector 和向量](#ctor)
+   - [之間的差異 concurrent_vector 和向量](#vector-differences)
 
-   - [並行安全作業](#ctor)
+   - [並行安全作業](#vector-safety)
 
-   - [例外狀況安全](#ctor)
+   - [例外狀況安全](#vector-exceptions)
 
 - [concurrent_queue 類別](#queue)
 
@@ -189,7 +189,7 @@ A`concurrent_queue`迭代器周遊僅會以正向方向的項目。 下表將顯
 
 [!code-cpp[concrt-unordered-map-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_2.cpp)]
 
-如需使用的範例`concurrent_unordered_map`若要執行對應和縮減作業以平行方式，請參閱[如何： 執行對應和縮減作業，以平行方式](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)。
+如需使用的範例`concurrent_unordered_map`若要執行對應和縮減作業以平行方式，請參閱[How to:執行對應和縮減作業以平行方式](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)。
 
 ###  <a name="map-differences"></a> Concurrent_unordered_map 之間的差異和 unordered_map
 
@@ -291,9 +291,9 @@ A`concurrent_queue`迭代器周遊僅會以正向方向的項目。 下表將顯
 
 如需如何使用範例`combinable`類別，請參閱下列主題：
 
-- [如何：使用 combinable 改善效能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)
+- [如何：使用 combinable 提升效能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)
 
-- [如何：使用 combinable 結合集合](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)
+- [如何：使用 combinable 合併集合](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)
 
 [[靠上](#top)]
 
@@ -302,10 +302,10 @@ A`concurrent_queue`迭代器周遊僅會以正向方向的項目。 下表將顯
 [如何：使用平行容器提高效率](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)<br/>
 示範如何使用平行容器來有效率地儲存及存取資料，以平行方式。
 
-[如何：使用 combinable 改善效能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
+[如何：使用 combinable 提升效能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
 示範如何使用`combinable`類別以消除共用的狀態，進而改善效能。
 
-[如何：使用 combinable 結合集合](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)<br/>
+[如何：使用 combinable 合併集合](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)<br/>
 示範如何使用`combine`函式來合併資料的執行緒區域集合。
 
 [平行模式程式庫 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>

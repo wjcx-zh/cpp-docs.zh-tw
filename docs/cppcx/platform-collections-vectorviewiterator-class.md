@@ -1,18 +1,18 @@
 ---
 title: Platform::Collections::VectorViewIterator 類別
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorViewIterator::VectorViewIterator
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-ms.openlocfilehash: 4d4a591c6febdf6e34757251c4de5d01a9e2fa87
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0de4ffb8e72c21490f07ae164aa23ffcd524c2b8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743749"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565658"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator 類別
 
@@ -61,7 +61,7 @@ VectorViewIterator 樣板類別的 typename。
 |[VectorViewIterator::operator\[\]](#operator-at)|擷取從目前 VectorViewIterator 開始指定位移之項目的參考。|
 |[VectorViewIterator::operator+ 運算子](#operator-plus)|傳回 VectorViewIterator ，參考從指定的 VectorViewIterator 開始指定位移的項目。|
 |[VectorViewIterator::operator++ 運算子](#operator-increment)|遞增目前 VectorViewIterator。|
-|[VectorViewIterator::operator+= 運算子](#operator-plus-assign)|依指定的位移遞增目前 VectorViewIterator。|
+|[VectorViewIterator::operator+= 運算子](#operator-plus-equals)|依指定的位移遞增目前 VectorViewIterator。|
 |[VectorViewIterator::operator< 運算子](#operator-less-than)|指出目前 VectorViewIterator 是否小於指定的 VectorViewIterator。|
 |[Vectorviewiterator:: Operator\<= 運算子](#operator-less-than-or-equals)|指出目前 VectorViewIterator 是否小於或等於指定的 VectorViewIterator。|
 |[VectorViewIterator::operator-= 運算子](#operator-minus-assign)|依指定的位移值遞減目前 VectorViewIterator。|

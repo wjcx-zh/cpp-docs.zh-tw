@@ -1,6 +1,6 @@
 ---
 title: CBaseTransition 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CBaseTransition
 - AFXANIMATIONCONTROLLER/CBaseTransition
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: 1f9bc3708974511506741a35c11676df2b0be592
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 37bf536403d0edfc16b098929a4758a6c6958cf1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258368"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565905"
 ---
 # <a name="cbasetransition-class"></a>CBaseTransition 類別
 
@@ -74,7 +74,7 @@ class CBaseTransition : public CObject;
 |名稱|描述|
 |----------|-----------------|
 |[CBaseTransition::CBaseTransition](#cbasetransition)|建構的基底的轉換物件。|
-|[CBaseTransition:: ~ CBaseTransition](#cbasetransition__~cbasetransition)|解構函式。 當轉換物件正在被終結時呼叫。|
+|[CBaseTransition:: ~ CBaseTransition](#_dtorcbasetransition)|解構函式。 當轉換物件正在被終結時呼叫。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -228,7 +228,7 @@ CBaseKeyFrame* GetEndKeyframe();
 
 ### <a name="remarks"></a>備註
 
-這個方法可用來存取 SetKeyframes 先前所設定的主要畫面格物件。 轉換加入至分鏡腳本時，它是由上方的層級程式碼進行呼叫。
+這個方法可用來存取 SetKeyframes 先前所設定的主要畫面格物件。 轉換加入至分鏡腳本時，它是由最上層程式碼進行呼叫。
 
 ##  <a name="getrelatedvariable"></a>  CBaseTransition::GetRelatedVariable
 
@@ -260,7 +260,7 @@ CBaseKeyFrame* GetStartKeyframe();
 
 ### <a name="remarks"></a>備註
 
-這個方法可用來存取 SetKeyframes 先前所設定的主要畫面格物件。 轉換加入至分鏡腳本時，它是由上方的層級程式碼進行呼叫。
+這個方法可用來存取 SetKeyframes 先前所設定的主要畫面格物件。 轉換加入至分鏡腳本時，它是由最上層程式碼進行呼叫。
 
 ##  <a name="gettransition"></a>  CBaseTransition::GetTransition
 
@@ -320,7 +320,7 @@ BOOL IsAdded();
 
 ### <a name="remarks"></a>備註
 
-最上層程式碼加入至分鏡腳本的轉換時，會在內部設定此旗標。
+最上層的程式碼會將分鏡腳本的轉換時，會在內部設定此旗標。
 
 ##  <a name="m_badded"></a>  CBaseTransition::m_bAdded
 

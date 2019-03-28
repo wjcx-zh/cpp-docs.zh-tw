@@ -1,25 +1,27 @@
 ---
 title: CDocObjectServerItem 類別
-ms.date: 09/12/2018
+ms.date: 03/27/2019
 f1_keywords:
 - CDocObjectServerItem
 - AFXDOCOB/CDocObjectServerItem
 - AFXDOCOB/CDocObjectServerItem::CDocObjectServerItem
 - AFXDOCOB/CDocObjectServerItem::GetDocument
+- AFXDOCOB/CDocObjectServerItem::OnDoVerb
 - AFXDOCOB/CDocObjectServerItem::OnHide
 - AFXDOCOB/CDocObjectServerItem::OnShow
 helpviewer_keywords:
 - CDocObjectServerItem [MFC], CDocObjectServerItem
 - CDocObjectServerItem [MFC], GetDocument
+- CDocObjectServerItem [MFC], OnDoVerb
 - CDocObjectServerItem [MFC], OnHide
 - CDocObjectServerItem [MFC], OnShow
 ms.assetid: 530f7156-50c8-4806-9328-602c9133f622
-ms.openlocfilehash: f11c202e85453897f6ebf04d8dc165d2b733a406
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 66ff2326cd3d08b3f6c8399d7e948d6aab5074c3
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275258"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565619"
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem 類別
 
@@ -49,7 +51,7 @@ class CDocObjectServerItem : public COleServerItem
 
 |名稱|描述|
 |----------|-----------------|
-|[CDocObjectServerItem::OnDoVerb](#ondoverb)|如果架構嘗試隱藏 DocObject 項目，則會擲回例外狀況。|
+|[CDocObjectServerItem::OnDoVerb](#ondoverb)|呼叫以執行動詞命令。|
 |[CDocObjectServerItem::OnHide](#onhide)|如果架構嘗試隱藏 DocObject 項目，則會擲回例外狀況。|
 |[CDocObjectServerItem::OnShow](#onshow)|由架構呼叫以讓 DocObject 項目就地使用中。 如果項目不是 DocObject，呼叫[COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow)。|
 
@@ -108,6 +110,23 @@ COleServerDoc* GetDocument() const;
 ### <a name="remarks"></a>備註
 
 這可讓您傳遞的引數為伺服器文件存取權[CDocObjectServerItem](#cdocobjectserveritem)建構函式。
+
+##  <a name="ondoverb"></a>  CDocObjectServerItem::OnDoVerb
+
+由架構呼叫以執行指定的動詞命令。
+
+```
+virtual void OnDoVerb(LONG iVerb);
+```
+
+### <a name="parameters"></a>參數
+
+*iVerb*<br/>
+指定要執行的動詞命令。 如需可能的值，請參閱[IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK 中。
+
+### <a name="remarks"></a>備註
+
+預設實作會呼叫[OnShow](#onshow)如果項目是 DocObject 而且 OLEIVERB_INPLACEACTIVATE 或 OLEIVERB_SHOW 指定的成員函式。 如果項目不 DocObject 或指定不同的動詞的預設實作會呼叫[COleServerItem::OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb)。
 
 ##  <a name="onhide"></a>  CDocObjectServerItem::OnHide
 

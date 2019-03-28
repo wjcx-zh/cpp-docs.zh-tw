@@ -1,18 +1,18 @@
 ---
 title: Platform::Collections::InputIterator 類別
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::InputIterator::InputIterator
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: f5cd6afa591ba2a03fbfe492e566b0fc938ae396
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 49b131b01fe3d9cad5f8366fd4cc0c110b5d060c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745797"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565135"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator 類別
 
@@ -53,7 +53,7 @@ InputIterator 樣板類別的 typename。
 |名稱|描述|
 |----------|-----------------|
 |[InputIterator::operator!= 運算子](#operator-inequality)|指出目前 InputIterator 是否不等於指定的 InputIterator。|
-|[InputIterator::operator* 運算子](#operator-decrement)|擷取目前 InputIterator 指定之項目的參考。|
+|[InputIterator::operator* 運算子](#operator-dereference)|擷取目前 InputIterator 指定之項目的參考。|
 |[InputIterator::operator++ 運算子](#operator-increment)|遞增目前 InputIterator。|
 |[InputIterator::operator== 運算子](#operator-equality)|指出目前 InputIterator 是否等於指定的 InputIterator。|
 |[InputIterator::operator-> 運算子](#operator-arrow)|擷取目前 InputIterator 參考的項目位址。|
@@ -76,12 +76,12 @@ InputIterator 樣板類別的 typename。
 
 ```
 InputIterator();
-explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
+explicit InputIterator(Windows::Foundation::Collections<X>^ iterator);
 ```
 
 ### <a name="parameters"></a>參數
 
-*iter*<br/>
+*iterator*<br/>
 迭代器物件。
 
 ## <a name="operator-arrow"></a>  Inputiterator:: Operator-&gt;運算子

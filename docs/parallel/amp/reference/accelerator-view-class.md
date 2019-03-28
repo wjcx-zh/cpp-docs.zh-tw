@@ -1,32 +1,32 @@
 ---
 title: accelerator_view 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - accelerator_view
 - AMPRT/accelerator_view
-- AMPRT/Concurrency::accelerator_view:accelerator_view
-- AMPRT/Concurrency::accelerator_view:create_marker
-- AMPRT/Concurrency::accelerator_view:flush
-- AMPRT/Concurrency::accelerator_view:get_accelerator
-- AMPRT/Concurrency::accelerator_view:get_is_auto_selection
-- AMPRT/Concurrency::accelerator_view:get_is_debug
-- AMPRT/Concurrency::accelerator_view:get_queuing_mode
-- AMPRT/Concurrency::accelerator_view:get_version
-- AMPRT/Concurrency::accelerator_view:wait
-- AMPRT/Concurrency::accelerator_view:accelerator
-- AMPRT/Concurrency::accelerator_view:is_auto_selection
-- AMPRT/Concurrency::accelerator_view:is_debug
-- AMPRT/Concurrency::accelerator_view:queuing_mode
-- AMPRT/Concurrency::accelerator_view:version
+- AMPRT/Concurrency::accelerator_view::accelerator_view
+- AMPRT/Concurrency::accelerator_view::create_marker
+- AMPRT/Concurrency::accelerator_view::flush
+- AMPRT/Concurrency::accelerator_view::get_accelerator
+- AMPRT/Concurrency::accelerator_view::get_is_auto_selection
+- AMPRT/Concurrency::accelerator_view::get_is_debug
+- AMPRT/Concurrency::accelerator_view::get_queuing_mode
+- AMPRT/Concurrency::accelerator_view::get_version
+- AMPRT/Concurrency::accelerator_view::wait
+- AMPRT/Concurrency::accelerator_view::accelerator
+- AMPRT/Concurrency::accelerator_view::is_auto_selection
+- AMPRT/Concurrency::accelerator_view::is_debug
+- AMPRT/Concurrency::accelerator_view::queuing_mode
+- AMPRT/Concurrency::accelerator_view::version
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-ms.openlocfilehash: 6f95efb17b95dc55cb6f6977439760fa7ea1afe9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4075051ec07fc1331d815534a715c0411160fe14
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264843"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566022"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view 類別
 
@@ -113,15 +113,15 @@ __declspec(property(get= get_accelerator)) Concurrency::accelerator accelerator;
 ### <a name="syntax"></a>語法
 
 ```
-accelerator_view( const accelerator_view & _Other );
+accelerator_view( const accelerator_view & other );
 ```
 
 ### <a name="parameters"></a>參數
 
-*_Other*<br/>
+*other*<br/>
 `accelerator_view`来複製的物件。
 
-## <a name="accelerator_view__create_marker"></a> create_marker
+## <a name="createmarker"></a>create_marker
 
 傳回追蹤的所有目前提交至此的命令完成的未來`accelerator_view`物件。
 
@@ -135,7 +135,7 @@ concurrency::completion_future create_marker();
 
 若要追蹤的所有目前提交至此的命令完成的未來`accelerator_view`物件。
 
-## <a name="flush"></a> flush
+## <a name="flush"></a>flush
 
 送出至加速器以執行 accelerator_view 物件的所有暫止命令排入佇列。
 
@@ -149,7 +149,7 @@ void flush();
 
 傳回 `void`。
 
-## <a name="accelerator_view__get_accelerator"></a> get_accelerator
+## <a name="getaccelerator"></a>get_accelerator
 
 傳回 accelerator_view 物件的快速鍵對應物件。
 ### <a name="syntax"></a>語法
@@ -162,7 +162,7 @@ accelerator get_accelerator() const;
 
 Accelerator_view 物件加速器物件。
 
-## <a name="accelerator_view__get_is_auto_selection"></a> get_is_auto_selection
+## <a name="getisautoselection"></a>get_is_auto_selection
 
 傳回布林值，指出是否執行階段會自動選取適當的加速器時在 accelerator_view 傳遞至[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)。
 
@@ -176,7 +176,7 @@ bool get_is_auto_selection() const;
 
 **真**如果執行階段會自動選取適當的加速器;，否則為**false**。
 
-## <a name="accelerator_view__get_is_debug"></a> get_is_debug
+## <a name="getisdebug"></a>get_is_debug
 
 傳回布林值，指出 accelerator_view 物件是否有在擴充錯誤報告啟用偵錯層級。
 
@@ -190,7 +190,7 @@ bool get_is_debug() const;
 
 布林值，指出是否`accelerator_view`物件具有擴充錯誤報告啟用偵錯層級。
 
-## <a name="accelerator_view__get_queuing_mode"></a> get_queuing_mode
+## <a name="getqueuingmode"></a>get_queuing_mode
 
 傳回 accelerator_view 物件的佇列模式。
 
@@ -204,7 +204,7 @@ queuing_mode get_queuing_mode() const;
 
 佇列模式`accelerator_view`物件。
 
-## <a name="accelerator_view__get_version"></a> get_version
+## <a name="getversion"></a>get_version
 
 傳回 accelerator_view 的版本。
 
@@ -218,7 +218,7 @@ unsigned int get_version() const;
 
 新版`accelerator_view`。
 
-## <a name="accelerator_view__is_auto_selection"></a> is_auto_selection
+## <a name="isautoselection"></a>is_auto_selection
 
 取得布林值，指出是否執行階段會自動選取適當的加速器時在 accelerator_view 傳遞至[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)。
 
@@ -228,7 +228,7 @@ unsigned int get_version() const;
 __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;
 ```
 
-## <a name="accelerator_view__is_debug"></a> is_debug
+## <a name="isdebug"></a>is_debug
 
 取得布林值，指出 accelerator_view 物件是否有在擴充錯誤報告啟用偵錯層級。
 
@@ -238,64 +238,64 @@ __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;
 __declspec(property(get= get_is_debug)) bool is_debug;
 ```
 
-## <a name="accelerator_view__operator_neq"></a> 運算子 ！ =
+## <a name="operator_neq"></a> 運算子 ！ =
 
 比較這個 accelerator_view 物件與另一個，並傳回**假**相同; 否則會傳回 **，則為 true**。
 
 ### <a name="syntax"></a>語法
 
 ```
-bool operator!= (    const accelerator_view & _Other ) const;
+bool operator!= ( const accelerator_view & other ) const;
 ```
 
 ### <a name="parameters"></a>參數
 
-*_Other*<br/>
+*other*<br/>
 `accelerator_view`要與這個比較的物件。
 
 ### <a name="return-value"></a>傳回值
 
 **false**兩個物件是否相同，否則 **，則為 true**。
 
-## <a name="accelerator_view__operator_eq"></a> 運算子 =
+## <a name="operator_eq"></a> 運算子 =
 
 將指定的 accelerator_view 物件的內容複製到這一個。
 
 ### <a name="syntax"></a>語法
 
 ```
-accelerator_view & operator= (    const accelerator_view & _Other );
+accelerator_view & operator= ( const accelerator_view & other );
 ```
 
 ### <a name="parameters"></a>參數
 
-*_Other*<br/>
+*other*<br/>
 `accelerator_view`從複製的物件。
 
 ### <a name="return-value"></a>傳回值
 
 已修改的參考`accelerator_view`物件。
 
-## <a name="accelerator_view__operator_eq_eq"></a> 運算子 = =
+## <a name="operator_eq_eq"></a> 運算子 = =
 
 比較這個 accelerator_view 物件與另一個，並傳回**真**相同; 否則會傳回**false**。
 
 ### <a name="syntax"></a>語法
 
 ```
-bool operator= = (    const accelerator_view & _Other ) const;
+bool operator== ( const accelerator_view & other ) const;
 ```
 
 ### <a name="parameters"></a>參數
 
-*_Other*<br/>
+*other*<br/>
 `accelerator_view`要與這個比較的物件。
 
 ### <a name="return-value"></a>傳回值
 
 **true**兩個物件是否相同，否則**false**。
 
-## <a name="accelerator_view__queuing_mode"></a> queuing_mode
+## <a name="queuingmode"></a>queuing_mode
 
 取得 accelerator_view 物件的佇列模式。
 
@@ -305,7 +305,7 @@ bool operator= = (    const accelerator_view & _Other ) const;
 __declspec(property(get= get_queuing_mode)) Concurrency::queuing_mode queuing_mode;
 ```
 
-## <a name="accelerator_view__version"></a> 版本
+## <a name="version"></a>版本
 
 取得 accelerator_view 的版本。
 
@@ -315,7 +315,7 @@ __declspec(property(get= get_queuing_mode)) Concurrency::queuing_mode queuing_mo
 __declspec(property(get= get_version)) unsigned int version;
 ```
 
-## <a name="accelerator_view__wait"></a> 等候
+## <a name="wait"></a>等候
 
 等候所有命令送出至 accelerator_view 物件來完成。
 
@@ -325,11 +325,11 @@ __declspec(property(get= get_version)) unsigned int version;
 void wait();
 ```
 
-#### <a name="return-value"></a>傳回值
+### <a name="return-value"></a>傳回值
 
 傳回 `void`。
 
-#### <a name="remarks"></a>備註
+### <a name="remarks"></a>備註
 
 如果[queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode)是`immediate`，這個方法會立即傳回而不會封鎖。
 
@@ -337,13 +337,11 @@ void wait();
 
 終結 accelerator_view 物件。
 
-#### <a name="syntax"></a>語法
+### <a name="syntax"></a>語法
 
 ```
 ~accelerator_view();
 ```
-
-### <a name="return-value"></a>傳回值
 
 ## <a name="see-also"></a>另請參閱
 

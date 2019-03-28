@@ -1,6 +1,6 @@
 ---
 title: 登錄和 TypeLib 全域函式
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - atlbase/ATL::AtlGetPerUserRegistration
 - afxpriv/ATL::AfxRegCreateKey
@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-ms.openlocfilehash: f94dd1770ff194e47e2e38cc3a9b5cf0cbaebe58
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c5fdaceb47b6cd09dd9d66f26af1337a8dc6bbae
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301827"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566009"
 ---
 # <a name="registry-and-typelib-global-functions"></a>登錄和 TypeLib 全域函式
 
@@ -33,8 +33,8 @@ ms.locfileid: "57301827"
 
 |||
 |-|-|
-|[AfxRegCreateKey](#afxrefcreatekey)|建立指定的登錄機碼。|
-|[AfxRegDeleteKey](#afxrefdeletekey)|刪除指定的登錄機碼。|
+|[AfxRegCreateKey](#afxregcreatekey)|建立指定的登錄機碼。|
+|[AfxRegDeleteKey](#afxregdeletekey)|刪除指定的登錄機碼。|
 |[AfxRegisterPreviewHandler](#afxregisterpreviewhandler)|註冊預覽處理常式的協助程式。|
 |[AfxUnregisterPreviewHandler](#afxunregisterpreviewhandler)| 用來取消註冊預覽處理常式的協助程式。 |
 |[AtlRegisterTypeLib](#atlregistertypelib)|呼叫此函式可註冊類型程式庫。|
@@ -343,7 +343,7 @@ ATLAPI AtlUnRegisterTypeLib(
 
 ### <a name="remarks"></a>備註
 
-此協助程式函式會利用[CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib)並[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)。
+此協助程式函式會利用[CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib)並[AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)。
 
 ### <a name="requirements"></a>需求
 

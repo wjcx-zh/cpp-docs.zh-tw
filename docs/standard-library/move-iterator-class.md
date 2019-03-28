@@ -1,6 +1,6 @@
 ---
 title: move_iterator 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - iterator/std::move_iterator
 - iterator/std::move_iterator::iterator_type
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::move_iterator [C++], reference
 - std::move_iterator [C++], base
 ms.assetid: a5e5cdd8-a264-4c6b-9f9c-68b0e8edaab7
-ms.openlocfilehash: c9ff9385d43ac1c53f91a548ea01c04c1c67dc18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e2e62946325c082e761b6997ae584419175f8fe
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656120"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565040"
 ---
 # <a name="moveiterator-class"></a>move_iterator 類別
 
@@ -175,7 +175,7 @@ move_iterator& operator+=(difference_type _Off);
 
 此運算子會將 *_Off*預存迭代器。 接著傳回 `*this`。
 
-## <a name="move_iterator__operator-_eq"></a>  move_iterator::operator-=
+## <a name="operator-_eq"></a>  move_iterator::operator-=
 
 在指定數目的先前項目之間移動。 這個運算子會從預存迭代器減去位移。
 
@@ -234,7 +234,7 @@ reference operator[](difference_type _Off) const;
 
 第一個運算子會傳回 `(reference)*(*this + _Off)`。
 
-## <a name="move_iterator__operator--"></a>  move_iterator::operator--
+## <a name="operator--"></a>  move_iterator::operator--
 
 前置遞減和後置遞減成員運算子會在預存迭代器上執行遞減。
 
@@ -251,7 +251,7 @@ move_iterator operator--();
 
 第二個 (後置遞減) 運算子會複製 `*this`，並評估 `--*this`。 接著傳回複本。
 
-## <a name="move_iterator__operator-"></a>  move_iterator::operator-
+## <a name="operator-"></a>  move_iterator::operator-
 
 將預存迭代器遞減並傳回指定的值。
 

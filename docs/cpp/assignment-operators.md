@@ -1,6 +1,6 @@
 ---
 title: 指派運算子
-ms.date: 03/05/2018
+ms.date: 03/27/2019
 f1_keywords:
 - =
 - '*='
@@ -31,20 +31,20 @@ helpviewer_keywords:
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-ms.openlocfilehash: 44211e43a0449c8a50ff03cac31eeed1fcc49a28
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 758c82f02d2b113f6c750f7f0ede662c97b646b0
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328470"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565476"
 ---
 # <a name="assignment-operators"></a>指派運算子
 
 ## <a name="syntax"></a>語法
 
-*運算式**指派運算子**運算式*
+*expression* *assignment-operator* *expression*
 
-*指派運算子*： 其中一個<br/>
+*assignment-operator* : one of<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>=&nbsp;&nbsp;&nbsp;*=&nbsp;&nbsp;&nbsp;/=&nbsp;&nbsp;&nbsp;%=&nbsp;&nbsp;&nbsp;+=&nbsp;&nbsp;&nbsp;-=&nbsp;&nbsp;&nbsp;\<\<=&nbsp;&nbsp;&nbsp;>>=&nbsp;&nbsp;&nbsp;&=&nbsp;&nbsp;&nbsp;^=&nbsp;&nbsp;&nbsp;\|=</strong>
 
 ## <a name="remarks"></a>備註
@@ -57,7 +57,7 @@ ms.locfileid: "51328470"
 
 下表中除了 = 運算子以外的所有指派運算子都是複合指派運算子。
 
-### <a name="assignment-operators"></a>指派運算子
+### <a name="assignment-operators-table"></a>指派運算子表
 
 |運算子|意義|
 |--------------|-------------|
@@ -73,7 +73,7 @@ ms.locfileid: "51328470"
 |**^=**|取得第一和第二個運算元的位元排除 OR；將結果儲存在第一個運算元所指定的物件。|
 |**\|=**|取得第一和第二個運算元的位元包含 OR；將結果儲存在第一個運算元所指定的物件。|
 
-**運算子關鍵字**
+### <a name="operator-keywords"></a>運算子關鍵字
 
 三個複合指派運算子有文字對等用法。 包括：
 
@@ -180,7 +180,7 @@ B = A;
 
 ## <a name="compound-assignment"></a>複合指派
 
-複合指派運算子，表中所示[指派運算子](#assignment-operators)，在表單中指定*e1* *op*= *e2*，其中*e1*是可修改左值不是**const**型別和*e2*是下列其中之一：
+中顯示的複合指派運算子[指派運算子表](#assignment-operators-table)，在表單中指定*e1* *op*= *e2*，其中*e1*可修改左值不是**const**型別和*e2*是下列其中之一：
 
 - 算術類型
 

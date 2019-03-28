@@ -1,6 +1,6 @@
 ---
 title: '&lt;filesystem&gt; 函式'
-ms.date: 09/10/2018
+ms.date: 03/27/2019
 f1_keywords:
 - FILESYSTEM/std::experimental::filesystem::absolute
 - FILESYSTEM/std::experimental::filesystem::canonical
@@ -84,12 +84,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::system_complete
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
-ms.openlocfilehash: 49a5b59234d92d2587abceff80382e477f66e762
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 11a1857052dd7c242993e8a19afe26aae3c97c06
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333302"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565685"
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt; 函式
 
@@ -236,7 +236,7 @@ bool copy_file(const path& from, const path& to, copy_options opts, error_code& 
 
 函式會傳回**真**如果複製嘗試和成功，否則為**false**。
 
-## <a name="copy_symlink "></a>  copy_symlink
+## <a name="copy_symlink"></a>  copy_symlink
 
 ```cpp
 void copy_symlink(const path& from, const path& to);
@@ -266,7 +266,7 @@ bool create_directory(const path& pval, const path& attr, error_code& ec) noexce
 
 此函式會建立目錄*pval*視。 它只會傳回 true 確實建立目錄*pval*，在此情況下它會將複製的權限從現有的檔案*attr*，或使用`perms::all`沒有多載*attr*參數。
 
-## <a name="create_directory_symlink "></a>  create_directory_symlink
+## <a name="create_directory_symlink"></a>  create_directory_symlink
 
 ```cpp
 void create_directory_symlink(const path& to, const path& link);
@@ -284,7 +284,7 @@ void create_hard_link(const path& to, const path& link, error_code& ec) noexcept
 
 函式會建立為目錄或檔案的硬式連結的連結*至*。
 
-## <a name="create_symlink "></a>  create_symlink
+## <a name="create_symlink"></a>  create_symlink
 
 ```cpp
 void create_symlink(const path& to,  const path& link);
@@ -379,7 +379,7 @@ bool is_character_file(const path& pval, error_code& ec) noexcept;
 
 第一個函式會傳回 `stat.type() == file_type::character`。 其餘函式會傳回`is_character_file(status(pval))`。
 
-## <a name="is_directory "></a>  is_directory
+## <a name="is_directory"></a>  is_directory
 
 ```cpp
 bool is_directory(file_status stat) noexcept;
@@ -419,7 +419,7 @@ bool is_other(const path& pval, error_code& ec) noexcept;
 
 第一個函式會傳回 `stat.type() == file_type::other`。 其餘函式會傳回`is_other(status(pval))`。
 
-## <a name="s_regular_file"></a>  is_regular_file
+## <a name="is_regular_file"></a>  is_regular_file
 
 ```cpp
 bool is_regular_file(file_status stat) noexcept;

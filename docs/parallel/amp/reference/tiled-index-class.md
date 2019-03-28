@@ -1,6 +1,6 @@
 ---
 title: tiled_index 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - tiled_index
 - AMP/tiled_index
@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: cea1ac1d500a9cf3bcbdc1f5dde33a0002cbd363
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: dd8b6d7a0e174c88ad229da2d08a9ec8a11fb0aa
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257900"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565213"
 ---
 # <a name="tiledindex-class"></a>tiled_index 類別
 
@@ -110,7 +110,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 
 **命名空間：** 並行
 
-## <a name="tiled_index__ctor"></a>  tiled_index 建構函式
+## <a name="ctor"></a>  tiled_index 建構函式
 
 初始化 `tiled_index` 類別的新執行個體。
 

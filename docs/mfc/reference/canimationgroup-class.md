@@ -1,6 +1,6 @@
 ---
 title: CAnimationGroup 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationGroup
 - AFXANIMATIONCONTROLLER/CAnimationGroup
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-ms.openlocfilehash: 9be0a5b76f91ddf4dc3d1c4ff2816b7ffd5a1986
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 32b2adfee2a36139a11caa12fa98bd240b0732dd
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304375"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565983"
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup 類別
 
@@ -70,7 +70,7 @@ class CAnimationGroup;
 |名稱|描述|
 |----------|-----------------|
 |[CAnimationGroup::CAnimationGroup](#canimationgroup)|建構的動畫群組。|
-|[CAnimationGroup::~CAnimationGroup](#canimationgroup__~canimationgroup)|解構函式。 當動畫群組正在被終結時呼叫。|
+|[CAnimationGroup::~CAnimationGroup](#_dtorcanimationgroup)|解構函式。 當動畫群組正在被終結時呼叫。|
 
 ### <a name="public-methods"></a>公用方法
 

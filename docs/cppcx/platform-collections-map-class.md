@@ -1,6 +1,6 @@
 ---
 title: Platform::Collections::Map 類別
-ms.date: 01/18/2018
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: cbe0b5e422c05cee46bff85e816ecc726c667749
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: ce50290217c7c06e26f26fc50564d3e37c873157
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745172"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565278"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 類別
 
@@ -47,7 +47,7 @@ ref class Map sealed;
 *C*<br/>
 一個型別，提供函式物件，可以根據排序鍵比較兩個項目值，判斷它們在 Map 中的相對順序。 根據預設， [std:: less<>\<K >](../standard-library/less-struct.md)。
 
-*__is_valid_winrt_type()* 驗證的類型產生的編譯器函式*K*並*V*如果該類型無法儲存在對應中會提供易懂的錯誤訊息。
+*__is_valid_winrt_type()* 編譯器所產生的函式可驗證的型別*K*並*V*如果該類型無法儲存在對應中會提供易懂的錯誤訊息。
 
 ### <a name="remarks"></a>備註
 
@@ -93,7 +93,7 @@ Map 基本上是 [std::map](../standard-library/map-class.md)的包裝函式。 
 |||
 |-|-|
 |名稱|描述|
-|[Map::MapChanged](#mapchanged-event.md) `event`|發生於 Map 變更時。|
+|[Map:: mapchanged](#mapchanged)事件|發生於 Map 變更時。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -238,7 +238,7 @@ Map(
 一個型別，提供函式物件，可以根據排序鍵比較兩個項目值，判斷它們在 Map 中的相對順序。
 
 *m*<br/>
-參考或[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)到`map Class`用來初始化目前 Map。
+參考或[rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)到`map Class`用來初始化目前 Map。
 
 *first*<br/>
 用來初始化目前 Map 的項目範圍中，第一個項目的輸入迭代器。

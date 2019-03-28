@@ -1,15 +1,15 @@
 ---
 title: 巨集和管理 Dll 函式
-ms.date: 04/03/2017
+ms.date: 03/27/2019
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 863350067c39fbc9cdb3d9d3a6c4448348d977de
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: b27f8763b60dc7ce3ee074cad1365e7e1de3a7e6
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328762"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565421"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>巨集和管理 Dll 函式
 
@@ -20,10 +20,10 @@ ms.locfileid: "58328762"
 |[AfxOleInitModule](#afxoleinitmodule)|提供 OLE 支援從動態連結至 MFC 之標準 MFC DLL。|
 |[AfxNetInitModule](#afxnetinitmodule)|提供從動態連結至 MFC 之標準 MFC DLL 的 MFC 通訊端支援。|
 |[AfxGetAmbientActCtx](#afxgetambientactctx)|取得每個模組狀態旗標的目前狀態。|
-|[AfxGetStaticModuleState](#afxgetstaticmodulestate)|設定初始化之前及 （或） 之後清除還原先前的模組狀態的模組狀態。|
+|[AfxGetStaticModuleState](#afxgetstaticmodulestate)|設定初始化之前，及/或清除還原之後的前一個模組狀態的模組狀態。|
 |[AfxInitExtensionModule](#afxinitextensionmodule)|初始化 DLL。|
 |[AfxSetAmbientActCtx](#afxsetambientactctx)|設定每個模組狀態旗標，會影響 MFC 的 WinSxS 行為。|
-|[AfxTermExtensionModule](#afxtermextensionmodule)|可讓 MFC 清理 MFC 擴充 DLL 時每個處理序中斷連結的 DLL。|
+|[AfxTermExtensionModule](#afxtermextensionmodule)|可讓每個處理序中斷連結的 DLL 時清除 MFC 擴充 DLL 的 MFC。|
 
 ## <a name="afx_ext_class"></a>  AFX_EXT_CLASS
 
@@ -79,7 +79,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
 如需有關電子郵件地址 和 MFC 模組狀態的詳細資訊，請參閱 「 管理資料的 MFC 模組狀態 」 中[建立新的文件中，Windows，並檢視](../creating-new-documents-windows-and-views.md)並[技術提示 58](../tn058-mfc-module-state-implementation.md)。
 
 > [!NOTE]
->  當 MFC 啟用內容建立組件時，它會使用[AfxWinInit](#afxwininit)來建立內容和`AFX_MANAGE_STATE`啟用和停用它。 也請注意，`AFX_MANAGE_STATE`可供靜態 MFC 程式庫，以及 MFC Dll，才能讓 MFC 使用者 dll 選取適當啟用內容中執行的程式碼。 如需詳細資訊，請參閱 < [MFC 模組狀態的啟用內容支援](../support-for-activation-contexts-in-the-mfc-module-state.md)。
+>  當 MFC 啟用內容建立組件時，它會使用[AfxWinInit](application-information-and-management.md#afxwininit)來建立內容和`AFX_MANAGE_STATE`啟用和停用它。 也請注意，`AFX_MANAGE_STATE`可供靜態 MFC 程式庫，以及 MFC Dll，才能讓 MFC 使用者 dll 選取適當啟用內容中執行的程式碼。 如需詳細資訊，請參閱 < [MFC 模組狀態的啟用內容支援](../support-for-activation-contexts-in-the-mfc-module-state.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -151,7 +151,7 @@ BOOL AFXAPI AfxGetAmbientActCtx();
 
 ## <a name="afxgetstaticmodulestate"></a> AfxGetStaticModuleState
 
-呼叫此函式來設定初始設定之前將模組狀態和 （或） 之後清除還原先前的模組狀態。
+呼叫此函式來設定初始設定之前將模組狀態，和/或清除還原之後的前一個模組狀態。
 
 ### <a name="syntax"></a>語法
 
@@ -181,7 +181,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
 
 **標頭：** afxstat_.h
 
-## <a name="afxinitextensionmodule"></a> AfxInitExtensionModule
+## <a name="afxinitextensionmodule"></a>AfxInitExtensionModule
 
 呼叫此函式中的 MFC 擴充 DLL 的`DllMain`初始化的 DLL。
 
@@ -228,7 +228,7 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 `AfxInitExtensionModule` 會建立一份 DLL 的 HMODULE，並擷取 DLL 的執行階段類別 (`CRuntimeClass`結構) 以及其物件處理站 (`COleObjectFactory`物件) 使用更新版本時`CDynLinkLibrary`建立物件。
 MFC 擴充 Dll 需要做兩件事，在其`DllMain`函式：
 
-- 呼叫[AfxInitExtensionModule](#_mfc_afxinitextensionmodule)並檢查傳回的值。
+- 呼叫[AfxInitExtensionModule](#afxinitextensionmodule)並檢查傳回的值。
 
 - 建立`CDynLinkLibrary`物件如果將匯出的 DLL [CRuntimeClass 結構](cruntimeclass-structure.md)物件，或有它自己的自訂資源。
 
@@ -275,7 +275,7 @@ BOOL CMFCListViewApp::InitInstance()
 
 ## <a name="afxtermextensionmodule"></a>  AfxTermExtensionModule
 
-呼叫此函式時，允許 MFC 清理 MFC 擴充 DLL 從 DLL 卸離的每個處理序 (或的卸載 DLL 時的處理序結束時，恰好`AfxFreeLibrary`呼叫)。
+呼叫此函式，可允許每個處理序中斷連結的 DLL 時清除 MFC 擴充 DLL 的 MFC (恰好當處理序結束，或卸載 DLL 的`AfxFreeLibrary`呼叫)。
 
 ### <a name="syntax"></a>語法
 

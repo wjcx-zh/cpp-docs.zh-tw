@@ -1,6 +1,6 @@
 ---
 title: CDataConnection 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ATL::CDataConnection
 - ATL.CDataConnection
@@ -65,12 +65,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 8a419a19c04b579c72df9938151f9ada657178f2
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 769dfc99f431cb5ba803075e28176713f9bd7092
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326533"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565502"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection 類別
 
@@ -104,7 +104,7 @@ class CDataConnection
 |[運算子 BOOL](#op_bool)|判斷目前的工作階段是否為開啟。|
 |[operator bool](#op_bool_ole)|判斷目前的工作階段是否為開啟。|
 |[CDataSource 運算子 （& s)](#op_cdata_amp)|傳回包含之的參考`CDataSource`物件。|
-|[運算子 CDataSource *](#op_cdata_star)|將指標傳回至包含的 `CDataSource` 物件。|
+|[operator CDataSource*](#op_cdata_star)|將指標傳回至包含的 `CDataSource` 物件。|
 |[運算子 Csession& （& s)](#op_csession_amp)|傳回包含之的參考`CSession`物件。|
 |[運算子 CSession *](#op_csession_star)|將指標傳回至包含的 `CSession` 物件。|
 
@@ -119,7 +119,7 @@ class CDataConnection
 > [!NOTE]
 >  如果您要建立的資料庫應用程式需要處理多個工作階段，您必須使用[OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md)。
 
-## <a name="#cdataconnection"></a> Cdataconnection:: Cdataconnection
+## <a name="cdataconnection"></a> Cdataconnection:: Cdataconnection
 
 具現化並初始化`CDataConnection`物件。
 
@@ -141,7 +141,7 @@ CDataConnection(const CDataConnection &ds);
 
 建立新的第二個覆寫`CDataConnection`設定相當於您所指定的資料連線物件的物件。
 
-## <a name="#copy"></a> Cdataconnection:: Copy
+## <a name="copy"></a> CDataConnection::Copy
 
 建立一份現有的資料連接。
 
@@ -156,7 +156,7 @@ CDataConnection& Copy(const CDataConnection & ds) throw();
 *ds*<br/>
 [in]若要複製現有的資料連接的參考。
 
-## <a name="#open"></a> Cdataconnection:: Open
+## <a name="open"></a> Cdataconnection:: Open
 
 開啟使用初始化字串的資料來源的連接。
 
@@ -175,7 +175,7 @@ HRESULT Open(LPCOLESTR szInitString) throw();
 
 標準的 HRESULT。
 
-## <a name="#opennewsession"></a> Cdataconnection:: Opennewsession
+## <a name="opennewsession"></a> CDataConnection::OpenNewSession
 
 開啟新的工作階段會使用目前的連接物件的資料來源。
 
@@ -187,7 +187,7 @@ HRESULT OpenNewSession(CSession & session) throw();
 
 #### <a name="parameters"></a>參數
 
-*工作階段*<br/>
+*session*<br/>
 [輸入/輸出]新的工作階段物件的參考。
 
 ### <a name="remarks"></a>備註
@@ -286,7 +286,7 @@ operator const CSession&();
 
 [!code-cpp[NVC_OLEDB_Consumer#6](../../data/oledb/codesnippet/cpp/cdataconnection-operator-csession-amp_2.cpp)]
 
-## <a name="op_csession_star"></a> Cdataconnection:: Operator CSession *
+## <a name="op_csession_star"></a> CDataConnection::operator CSession*
 
 將指標傳回至包含的 `CSession` 物件。
 

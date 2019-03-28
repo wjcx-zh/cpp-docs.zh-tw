@@ -1,18 +1,18 @@
 ---
 title: Platform::Collections::BackInsertIterator 類別
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: 7478555b19bbe5c984fcbe531d2d8be1a0b865a9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 02aee3101156b28dbd59ccd51c071e6774ca1e7a
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739535"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564719"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator 類別
 
@@ -81,8 +81,7 @@ IVector\<T > 物件。
 
 ### <a name="remarks"></a>備註
 
-
-  `BackInsertIterator` 在參數 `v` 所指定的物件的最後一個元素之後插入元素。
+`BackInsertIterator` 在參數 `v` 所指定的物件的最後一個元素之後插入元素。
 
 ## <a name="operator-assign"></a>  Backinsertiterator:: Operator = 運算子
 
@@ -142,7 +141,7 @@ BackInsertIterator operator++(int);
 
 根據設計，第一個語法範例會對目前 BackInsertIterator 前置遞增，而第二個語法則是對目前 BackInsertIterator 後置遞增。 第二個語法中的 `int` 類型代表後置遞增作業，而不是實際的整數運算元。
 
-不過，這個運算子不會實際修改 BackInsertIterator。 而是傳回未修改之目前迭代器的參考。 這是相同的行為[運算子 *](#dereference-operator)。
+不過，這個運算子不會實際修改 BackInsertIterator。 而是傳回未修改之目前迭代器的參考。 這是相同的行為[運算子 *](#operator-dereference)。
 
 ## <a name="see-also"></a>另請參閱
 

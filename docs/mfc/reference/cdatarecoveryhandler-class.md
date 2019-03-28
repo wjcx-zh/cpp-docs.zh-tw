@@ -1,6 +1,6 @@
 ---
 title: CDataRecoveryHandler 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CDataRecoveryHandler
 - AFXDATARECOVERY/CDataRecoveryHandler
@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: 88cc4a433c774dc7767efaaa62edc71ce8b904d9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5c5836a11dbf9e05db5b56e0bc5c062dd1617b2f
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273032"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565853"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler 類別
 
@@ -168,7 +168,7 @@ virtual BOOL AutosaveAllDocumentInfo();
 
 如果不有任何必須儲存的文件，這個方法會傳回 TRUE。 它也會傳回 TRUE 而不儲存任何文件，如果擷取`CWinApp`或`CDocManager`應用程式會產生錯誤。
 
-若要使用這個方法，AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART 或 AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL 必須設定`m_dwRestartManagerSupportFlags`。 請參閱[m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)如需詳細資訊。
+若要使用這個方法，AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART 或 AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL 必須設定`m_dwRestartManagerSupportFlags`。 如需詳細資訊，請參閱[如何：新增重新啟動管理員支援](../../mfc/how-to-add-restart-manager-support.md)。
 
 ##  <a name="autosavedocumentinfo"></a>  CDataRecoveryHandler::AutosaveDocumentInfo
 

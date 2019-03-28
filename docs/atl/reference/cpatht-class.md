@@ -1,6 +1,6 @@
 ---
 title: CPathT 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CPathT
 - ATLPATH/ATL::CPathT
@@ -49,19 +49,19 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 36d8710bd7bb055d8629dec57ec4d8c3602c8f79
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 109f9baefd0e6775db05eeba8cb78542bf60a9ac
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273019"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565784"
 ---
 # <a name="cpatht-class"></a>CPathT 類別
 
 此類別代表的路徑。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+> 此類別和其成員不能在 Windows 執行階段中執行的應用程式。
 
 ## <a name="syntax"></a>語法
 
@@ -139,7 +139,7 @@ ATL/MFC 字串類別使用的路徑 (請參閱[CStringT](../../atl-mfc-shared/re
 |----------|-----------------|
 |[CPathT::operator const StringType （& s)](#operator_const_stringtype_amp)|此運算子可讓被視為字串的物件。|
 |[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|此運算子可讓被視為字串的物件。|
-|[CPathT::operator StringType （& s)](#operator_stringtype)|此運算子可讓被視為字串的物件。|
+|[CPathT::operator StringType （& s)](#operator_stringtype_amp)|此運算子可讓被視為字串的物件。|
 |[CPathT::operator +=](#operator_add_eq)|這個運算子會將字串附加至路徑。|
 
 ### <a name="public-data-members"></a>公用資料成員
@@ -653,7 +653,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 此運算子可讓被視為字串的物件。
 
 ```
-operatorconst StringType&() const throw();
+operator const StringType&() const throw();
 ```
 
 ### <a name="return-value"></a>傳回值
@@ -665,19 +665,19 @@ operatorconst StringType&() const throw();
 此運算子可讓被視為字串的物件。
 
 ```
-operatorPCXSTR() const throw();
+operator PCXSTR() const throw();
 ```
 
 ### <a name="return-value"></a>傳回值
 
 傳回字串，表示目前由這個物件的路徑。
 
-##  <a name="operator_stringtype__amp"></a>  CPathT::operator StringType &amp;
+##  <a name="operator_stringtype_amp"></a>  CPathT::operator StringType &amp;
 
 此運算子可讓被視為字串的物件。
 
 ```
-operatorStringType&() throw();
+operator StringType&() throw();
 ```
 
 ### <a name="return-value"></a>傳回值

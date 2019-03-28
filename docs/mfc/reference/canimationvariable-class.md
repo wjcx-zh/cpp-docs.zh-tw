@@ -1,6 +1,6 @@
 ---
 title: CAnimationVariable 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationVariable
 - AFXANIMATIONCONTROLLER/CAnimationVariable
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 335d29e1e2e8e5b54ec1434a4c072ff3909b3823
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 42fd3ddc504e85ba3f69588bee54c6540b628129
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269028"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565753"
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable 類別
 
@@ -68,7 +68,7 @@ class CAnimationVariable;
 |名稱|描述|
 |----------|-----------------|
 |[CAnimationVariable::CAnimationVariable](#canimationvariable)|建構的動畫變數的物件。|
-|[CAnimationVariable::~CAnimationVariable](#canimationvariable__~canimationvariable)|解構函式。 CAnimationVariable 物件正在被終結時呼叫。|
+|[CAnimationVariable::~CAnimationVariable](#_dtorcanimationvariable)|解構函式。 CAnimationVariable 物件正在被終結時呼叫。|
 
 ### <a name="public-methods"></a>公用方法
 

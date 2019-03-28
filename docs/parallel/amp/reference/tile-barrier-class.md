@@ -1,6 +1,6 @@
 ---
 title: tile_barrier 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - tile_barrier
 - AMP/tile_barrier
@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-ms.openlocfilehash: 4336a4cc317344c881f60e5ed4c5bdf8328a34b8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f0e742a0cc1a0809fc08b3862cadb7e3deb36fa8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301164"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564979"
 ---
 # <a name="tilebarrier-class"></a>tile_barrier 類別
 
@@ -56,7 +56,7 @@ class tile_barrier;
 
 **命名空間：** 並行
 
-## <a name="tile_barrier__ctor"></a>  tile_barrier 建構函式
+## <a name="ctor"></a>  tile_barrier 建構函式
 
 藉由複製現有初始化類別的新執行個體。
 
@@ -72,7 +72,7 @@ tile_barrier(
 *_Other*<br/>
 `tile_barrier`来複製的物件。
 
-## <a name="wait"></a>  wait
+## <a name="wait"></a>等候
 
 指示來停止執行，直到磚中的所有執行緒均已都完成等待執行緒群組 (tile) 中的所有執行緒。
 
@@ -82,7 +82,7 @@ tile_barrier(
 void wait() const restrict(amp);
 ```
 
-## <a name="wait_with_all_memory_fence"></a>  wait_with_all_memory_fence
+## <a name="waitwithallmemoryfence"></a>wait_with_all_memory_fence
 
 封鎖執行的所有執行緒，直到 tile 中的所有執行緒都到達這個呼叫為止。 這可確保所有記憶體存取對執行緒 tile 中，在其他執行緒可見，而且依照程式順序執行。
 
@@ -92,7 +92,7 @@ void wait() const restrict(amp);
 void wait_with_all_memory_fence() const restrict(amp);
 ```
 
-## <a name="wait_with_global_memory_fence"></a>  wait_with_global_memory_fence
+## <a name="waitwithglobalmemoryfence"></a>wait_with_global_memory_fence
 
 封鎖執行的所有執行緒，直到 tile 中的所有執行緒都到達這個呼叫為止。 這可確保所有全域記憶體存取對執行緒 tile 中，在其他執行緒可見，並已依照程式順序執行。
 
@@ -102,7 +102,7 @@ void wait_with_all_memory_fence() const restrict(amp);
 void wait_with_global_memory_fence() const  restrict(amp);
 ```
 
-## <a name="wait_with_tile_static_memory_fence"></a>  wait_with_tile_static_memory_fence
+## <a name="waitwithtilestaticmemoryfence"></a>wait_with_tile_static_memory_fence
 
 封鎖執行的所有執行緒，直到 tile 中的所有執行緒都到達這個呼叫為止。 這可確保`tile_static`記憶體存取對執行緒 tile 中，在其他執行緒可見，而且已依照程式順序執行。
 

@@ -1,17 +1,17 @@
 ---
 title: basic_regex 類別
-ms.date: 09/10/2018
+ms.date: 03/27/2019
 f1_keywords:
 - regex/std::basic_regex
 helpviewer_keywords:
 - basic_regex class
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
-ms.openlocfilehash: 0799bbcbfb7cdbc1ee1755cf387de2aee46db027
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3a38dc186a52c8431442d58bb10e56837396b07
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633395"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565447"
 ---
 # <a name="basicregex-class"></a>basic_regex 類別
 
@@ -58,14 +58,14 @@ class basic_regex
 |-|-|
 |公用的靜態 const flag_type icase|regex_constants::icase|
 |公用的靜態 const flag_type nosubs|regex_constants::nosubs|
-|公用的靜態 const flag_type 最佳化|regex_constants::optimize|
-|公用的靜態 const flag_type 定序|regex_constants::collate|
+|public static const flag_type optimize|regex_constants::optimize|
+|public static const flag_type collate|regex_constants::collate|
 |公用靜態 const flag_type ECMAScript|regex_constants::ECMAScript|
-|公用靜態 const flag_type 基本|regex_constants::basic|
-|擴充的公用靜態的 const flag_type|regex_constants::extended|
-|公用的靜態 const flag_type awk|regex_constants::awk|
-|公用的靜態 const flag_type grep|regex_constants::grep|
-|公用的靜態 const flag_type egrep|regex_constants::egrep|
+|public static const flag_type basic|regex_constants::basic|
+|public static const flag_type extended|regex_constants::extended|
+|public static const flag_type awk|regex_constants::awk|
+|public static const flag_type grep|regex_constants::grep|
+|public static const flag_type egrep|regex_constants::egrep|
 |私用 RXtraits 特性||
 
 ### <a name="constructors"></a>建構函式
@@ -88,7 +88,7 @@ class basic_regex
 |-|-|
 |[assign](#assign)|將值指派給規則運算式物件。|
 |[flags](#flags)|傳回語法選項旗標。|
-|[get_loc](#get_loc)|傳回儲存的地區設定物件。|
+|[getloc](#getloc)|傳回儲存的地區設定物件。|
 |[imbue](#imbue)|修改儲存的地區設定物件。|
 |[mark_count](#mark_count)|傳回符合的子運算式數目。|
 |[swap](#swap)|交換兩個規則運算式物件。|
@@ -248,7 +248,7 @@ basic_regex& assign(
 *flags*<br/>
 要在複製時加入的語法選項旗標。
 
-*len/t d >*<br/>
+*len/TD>*<br/>
 要複製之序列的長度。
 
 *str*<br/>
@@ -257,7 +257,7 @@ basic_regex& assign(
 *first*<br/>
 要複製之序列的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 要複製之序列的結尾。
 
 *IList*<br/>
@@ -322,7 +322,7 @@ explicit basic_regex(
 *flags*<br/>
 要在複製時加入的語法選項旗標。
 
-*len/t d >*<br/>
+*len/TD>*<br/>
 要複製之序列的長度。
 
 *str*<br/>
@@ -331,7 +331,7 @@ explicit basic_regex(
 *first*<br/>
 要複製之序列的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 要複製之序列的結尾。
 
 *IList*<br/>
@@ -391,7 +391,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>參數
 
-*當地語系化*<br/>
+*loc*<br/>
 要儲存的地區設定物件。
 
 ### <a name="remarks"></a>備註

@@ -1,6 +1,6 @@
 ---
 title: uint_4 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::ywx
 - amp_short_vectors/Concurrency::graphics::uint_4::get_yxw
@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-ms.openlocfilehash: e5c0482854a08973593e9c67f2f51d5706304831
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 413edb5c83dba465aff804658afc6931c7181e73
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266805"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565840"
 ---
 # <a name="uint4-class"></a>uint_4 類別
 
@@ -606,7 +606,7 @@ class uint_4;
 
 預設建構函式，初始化具有 0 的所有項目。
 
-## <a name="syntax"></a>語法
+### <a name="syntax"></a>語法
 
 ```
 uint_4() restrict(amp,cpu);
@@ -659,9 +659,9 @@ explicit inline uint_4(
 *_Other*<br/>
 用來初始化的物件。
 
-## <a name=""></a> 大小
+## <a name="size"></a>大小
 
-## <a name="syntax"></a>語法
+### <a name="syntax"></a>語法
 
 ```
 static const int size = 4;

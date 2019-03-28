@@ -1,6 +1,6 @@
 ---
 title: '&lt;shared_mutex&gt;'
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - <shared_mutex>
 - shared_mutex/std::swap
@@ -45,12 +45,12 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: 9823b01048eece557a4d29904f223841b626bc9a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 97d77399357030feaa90228a1b0cdeb80d48034c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751813"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565382"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
@@ -60,13 +60,13 @@ ms.locfileid: "57751813"
 
 |類別|描述|
 |-------------|-----------------|
-|[shared_mutex 類別](../standard-library/shared-mutex.md#class_shared_mutex)|共用的 mutex 類型，可由一個代理程式以獨佔方式鎖定，或者由多個代理程式以非獨佔方式共用。|
-|[shared_timed_mutex 類別](../standard-library/shared-mutex.md#class_shared_timed_mutex)|共用的計時 mutex 類型，可由一個代理程式以獨佔方式鎖定，或者由多個代理程式以非獨佔方式共用。|
-|[shared_lock 類別](../standard-library/shared-mutex.md#class_shared_lock)|樣板類別，會包裝共用的 mutex 包裝以支援計時鎖定作業，並以非獨佔方式供多個執行緒共用。|
+|[shared_mutex 類別](#class_shared_mutex)|共用的 mutex 類型，可由一個代理程式以獨佔方式鎖定，或者由多個代理程式以非獨佔方式共用。|
+|[shared_timed_mutex 類別](#class_shared_timed_mutex)|共用的計時 mutex 類型，可由一個代理程式以獨佔方式鎖定，或者由多個代理程式以非獨佔方式共用。|
+|[shared_lock 類別](#class_shared_lock)|樣板類別，會包裝共用的 mutex 包裝以支援計時鎖定作業，並以非獨佔方式供多個執行緒共用。|
 
 |函式|描述|
 |---------------|-----------------|
-|[swap](../standard-library/shared-mutex.md#function_swap)|交換函式參數所參考的共用 mutex 物件內容。|
+|[swap](#function_swap)|交換函式參數所參考的共用 mutex 物件內容。|
 
 ## <a name="syntax"></a>語法
 
@@ -167,7 +167,7 @@ public:
    };
 ```
 
-###  <a name="&lt;shared"></a> shared_lock 類別
+###  <a name="class_shared_lock"></a> shared_lock 類別
 
 樣板類別 `shared_lock` 會控制某個範圍內共用 mutex 物件的共用擁有權。 樣板參數必須是共用的 mutex 類型。
 

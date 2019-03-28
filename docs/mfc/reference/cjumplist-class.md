@@ -1,6 +1,6 @@
 ---
 title: CJumpList 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CJumpList
 - AFXADV/CJumpList
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - CJumpList [MFC], InitializeList
 - CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
-ms.openlocfilehash: b72ea6f3715be1e4a11d457dbdeaba7a622ef8b6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9296912c97b1efb5f7cbd1ed9f769d0222d5f85c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259070"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565304"
 ---
 # <a name="cjumplist-class"></a>CJumpList 類別
 
-A`CJumpList`是當您以滑鼠右鍵按一下工作列中的圖示時所顯示的捷徑清單。
+A`CJumpList`是當您以滑鼠右鍵按一下工作列中的圖示所顯示的捷徑清單。
 
 ## <a name="syntax"></a>語法
 
@@ -60,7 +60,7 @@ class CJumpList;
 |名稱|描述|
 |----------|-----------------|
 |[CJumpList::CJumpList](#cjumplist)|建構 `CJumpList` 物件。|
-|[CJumpList:: ~ CJumpList](#cjumplist__~cjumplist)|終結 `CJumpList` 物件。|
+|[CJumpList:: ~ CJumpList](#_dtorcjumplist)|終結 `CJumpList` 物件。|
 
 |名稱|描述|
 |----------|-----------------|
@@ -188,7 +188,7 @@ BOOL AddTask(IShellLink* pShellLink);
 指定的目標工作路徑。
 
 *strCommandLineArgs*<br/>
-指定 strTargetExecutablePath 所指定的可執行檔的命令列引數。
+指定所指定的可執行檔的命令列引數*strTargetExecutablePath*。
 
 *strTitle*<br/>
 將會顯示在 [目的地] 清單中的工作名稱。

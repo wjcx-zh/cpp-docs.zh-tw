@@ -1,6 +1,6 @@
 ---
 title: CD2DTextFormat 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DTextFormat
 - AFXRENDERTARGET/CD2DTextFormat
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DTextFormat [MFC], ReCreate
 - CD2DTextFormat [MFC], m_pTextFormat
 ms.assetid: db194cec-9dae-4644-ab84-7c43b7164117
-ms.openlocfilehash: 9d796ac39ba29e6d286926f4975f8f6d2054e7ac
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fa2f3b663cb5258c64ec0405abacf2e4eedeb987
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297888"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565317"
 ---
 # <a name="cd2dtextformat-class"></a>CD2DTextFormat 類別
 
@@ -48,7 +48,7 @@ class CD2DTextFormat : public CD2DResource;
 |名稱|描述|
 |----------|-----------------|
 |[CD2DTextFormat::CD2DTextFormat](#cd2dtextformat)|建構 CD2DTextFormat 物件。|
-|[CD2DTextFormat::~CD2DTextFormat](#cd2dtextformat__~cd2dtextformat)|解構函式。 D2D 文字格式物件正在被終結時呼叫。|
+|[CD2DTextFormat::~CD2DTextFormat](#_dtorcd2dtextformat)|解構函式。 D2D 文字格式物件正在被終結時呼叫。|
 
 ### <a name="public-methods"></a>公用方法
 

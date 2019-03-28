@@ -1,6 +1,6 @@
 ---
 title: '#匯入指示詞 （c + +）'
-ms.date: 10/18/2018
+ms.date: 03/27/2019
 f1_keywords:
 - '#import'
 helpviewer_keywords:
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: a7dc30d3e5869e9b0f534a4769d4517a0514c144
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 72fd1d025ab19b7db9521e08655d00936b77581e
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822622"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564949"
 ---
 # <a name="import-directive-c"></a>#import 指示詞 (C++)
 
@@ -160,7 +160,7 @@ using namespace MyLib;
 
 之後立即 **#import**原始程式碼中的陳述式。
 
-命名空間可以使用隱藏[no_namespace](#_predir_no_namespace)屬性 **#import**指示詞。 不過，隱藏命名空間可能導致名稱衝突。 命名空間也可以藉由重新命名[rename_namespace](#_predir_rename_namespace)屬性。
+命名空間可以使用隱藏[no_namespace](no-namespace.md)) 屬性 **#import**指示詞。 不過，隱藏命名空間可能導致名稱衝突。 命名空間也可以藉由重新命名[rename_namespace](rename-namespace.md)屬性。
 
 編譯器會提供其目前處理中類型程式庫所需之任何類型程式庫相依性的完整路徑。 路徑會以註解的形式寫入類型程式庫標頭 (.TLH)，編譯器為每個處理過的類型程式庫產生此標頭。
 

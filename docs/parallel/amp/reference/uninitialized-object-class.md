@@ -1,6 +1,6 @@
 ---
 title: uninitialized_object 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - uninitialized_object
 - AMPRT/uninitialized_object
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
-ms.openlocfilehash: 1c431364aee0f1d1e75059abdb023ae52cf92155
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 05c24672531d50fa9bc31587e6c6733fdff21f29
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279325"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565531"
 ---
 # <a name="uninitializedobject-class"></a>uninitialized_object 類別
 
@@ -31,7 +31,7 @@ class uninitialized_object : public runtime_exception;
 
 |名稱|描述|
 |----------|-----------------|
-|[uninitialized_object 建構函式](#ctor)|初始化 `uninitialized_object` 類別的新執行個體。|
+|[uninitialized_object 建構函式](#uninitialized_object)|初始化 `uninitialized_object` 類別的新執行個體。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -46,17 +46,18 @@ class uninitialized_object : public runtime_exception;
 **標頭：** amprt.h
 
 **命名空間：** 並行
-## <a name="uninitialized_object__ctor"></a> unsupported_feature
 
-建構 unsupported_feature 例外狀況的新執行個體。
+## <a name="uninitializedobject"></a>uninitialized_object
+
+建構的新執行個體`uninitialized_object`例外狀況。
 
 ### <a name="syntax"></a>語法
 
 ```
-explicit unsupported_feature(
+explicit uninitialized_object(
     const char * _Message ) throw();
 
-unsupported_feature() throw();
+uninitialized_object() throw();
 ```
 
 ### <a name="parameters"></a>參數
@@ -66,7 +67,7 @@ unsupported_feature() throw();
 
 ### <a name="return-value"></a>傳回值
 
-`unsupported_feature` 物件。
+`uninitialized_object`例外狀況物件。
 
 ## <a name="see-also"></a>另請參閱
 

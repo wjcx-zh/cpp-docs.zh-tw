@@ -1,6 +1,6 @@
 ---
 title: CFixedStringT 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CFixedStringT
 - CSTRINGT/ATL::CFixedStringT
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - CFixedStringT class
 - shared classes, CFixedStringT
 ms.assetid: 6d4171ba-3104-493a-a6cc-d515f4ba9a4b
-ms.openlocfilehash: a84afc50fb17c5e2ee21d136cd4697dec8fb97de
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 6c7649b7131e3b1620112acf89867d0731d7265d
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739755"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564862"
 ---
 # <a name="cfixedstringt-class"></a>CFixedStringT 類別
 
@@ -47,17 +47,17 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 
 |名稱|描述|
 |----------|-----------------|
-|[CFixedStringT::operator =](#eq)|指派新值到`CFixedStringT`物件。|
+|[CFixedStringT::operator =](#operator_eq)|指派新值到`CFixedStringT`物件。|
 
 ## <a name="remarks"></a>備註
 
-此類別為基礎的自訂字串類別的範例`CStringT`。 雖然很相似，但這兩個類別有不同的實作。 之間的主要差異`CFixedStringT`和`CStringT`是：
+此類別為基礎的自訂字串類別的範例`CStringT`。 雖然相似，但這兩個類別有不同的實作。 之間的主要差異`CFixedStringT`和`CStringT`是：
 
 - 初始字元的緩衝區配置物件的一部分，而且大小*t_nChars*。 這可讓`CFixedString`佔用連續記憶體區塊，基於效能用途的物件。 不過，如果內容`CFixedStringT`超過下列大小時物件*t_nChars*，緩衝區會以動態方式配置。
 
 - 字元緩衝區`CFixedStringT`物件永遠都是相同的長度 ( *t_nChars*)。 上的緩衝區大小沒有限制`CStringT`物件。
 
-- Memory manager`CFixedStringT`使共用的自訂[CStringData](../../atl-mfc-shared/reference/cstringdata-class.md)之間兩個或多個物件`CFixedStringT`objectsis 不允許。 `CStringT` 物件不需要這項限制。
+- Memory manager`CFixedStringT`使共用的自訂[CStringData](../../atl-mfc-shared/reference/cstringdata-class.md)之間兩個或多個物件`CFixedStringT`不允許的物件。 `CStringT` 物件不需要這項限制。
 
 如需有關自訂`CFixedStringT`和字串物件的記憶體管理一般情況下，請參閱 <<c2> [ 記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
@@ -82,19 +82,19 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 ```
 CFixedStringT() throw();
 explicit CFixedStringT(IAtlStringMgr* pStringMgr) throw();
-CFixedStringT(const CFixedStringT<StringType, t_nChars>& str);
-CFixedStringT(const StringType& str);
-CFixedStringT(const StringType::XCHAR* psz);
-explicit CFixedStringT(const StringType::YCHAR* psz);
-explicit CFixedStringT(const unsigned char* psz);
+CFixedStringT(const CFixedStringT<StringType, t_nChars>& strSrc);
+CFixedStringT(const StringType& strSrc);
+CFixedStringT(const StringType::XCHAR* pszSrc);
+explicit CFixedStringT(const StringType::YCHAR* pszSrc);
+explicit CFixedStringT(const unsigned char* pszSrc);
 ```
 
 ### <a name="parameters"></a>參數
 
-*psz*<br/>
+*pszSrc*<br/>
 要複製到這個 null 結尾字串`CFixedStringT`物件。
 
-*str*<br/>
+*strSrc*<br/>
 將現有`CFixedStringT`要複製到這個物件`CFixedStringT`物件。
 
 *pStringMgr*<br/>
@@ -102,27 +102,27 @@ explicit CFixedStringT(const unsigned char* psz);
 
 ### <a name="remarks"></a>備註
 
-因為建構函式會將輸入的資料複製到新配置的儲存體，您應該注意可能會造成例外狀況，該記憶體。 請注意，部分這些建構函式做為轉換函式。
+因為建構函式會將輸入的資料複製到新配置的儲存體，您應該注意可能會造成例外狀況，該記憶體。 部分這些建構函式做為轉換函式。
 
-##  <a name="operator__eq"></a>  CFixedStringT::operator =
+##  <a name="operator_eq"></a>  CFixedStringT::operator =
 
 重新初始化現有`CFixedStringT`物件的新資料。
 
 ```
 CFixedStringT<StringType, t_nChars>& operator=(
-    const CFixedStringT<StringType, t_nChars>& str);
-CFixedStringT<StringType, t_nChars>& operator=(const char* psz);
-CFixedStringT<StringType, t_nChars>& operator=(const wchar_t* psz);
-CFixedStringT<StringType, t_nChars>& operator=(const unsigned char* psz);
-CFixedStringT<StringType, t_nChars>& operator=(const StringType& str);
+    const CFixedStringT<StringType, t_nChars>& strSrc);
+CFixedStringT<StringType, t_nChars>& operator=(const char* pszSrc);
+CFixedStringT<StringType, t_nChars>& operator=(const wchar_t* pszSrc);
+CFixedStringT<StringType, t_nChars>& operator=(const unsigned char* pszSrc);
+CFixedStringT<StringType, t_nChars>& operator=(const StringType& strSrc);
 ```
 
 ### <a name="parameters"></a>參數
 
-*str*<br/>
+*pszSrc*<br/>
 要複製到這個 null 結尾字串`CFixedStringT`物件。
 
-*psz*<br/>
+*strSrc*<br/>
 將現有`CFixedStringT`複製到這個`CFixedStringT`物件。
 
 ### <a name="remarks"></a>備註

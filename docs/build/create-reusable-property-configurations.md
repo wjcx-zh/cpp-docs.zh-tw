@@ -1,16 +1,16 @@
 ---
-title: 共用或 resuse Visual Studio 專案設定為 c + +
-ms.date: 11/28/2018
+title: 共用或重複使用 Visual Studio 專案設定 c + +
+ms.date: 03/27/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: 50e3795a4708a3c15ed25ee7ff6565470ef6989a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b49c125e0341a2de68bbcd992dd8f9afaa99233d
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826088"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565122"
 ---
-# <a name="share-or-resuse-visual-studio-project-settings"></a>共用或 resuse Visual Studio 專案設定
+# <a name="share-or-reuse-visual-studio-project-settings"></a>共用或重複使用 Visual Studio 專案設定
 
 若要在多個專案中建立自訂群組，您可以與其他人共用，或重複使用的設定，請使用**屬性管理員**來建立*內容工作表頁*（.props 檔案） 來儲存每個設定的您想要能夠重複使用或與他人共用的專案。 使用屬性工作表具有最少出錯比其他方式建立 「 全域 」 設定。 
 

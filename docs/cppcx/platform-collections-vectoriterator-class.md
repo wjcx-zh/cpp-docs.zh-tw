@@ -1,18 +1,18 @@
 ---
 title: Platform::Collections::VectorIterator 類別
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorIterator::VectorIterator
 helpviewer_keywords:
 - VectorIterator Class
 ms.assetid: d531cb42-27e0-48a6-bf5e-c265891a18ff
-ms.openlocfilehash: 448ce9e9c6c937d5f95640dca8fa2d2ed20bb4b8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 55f4e7f1d9367779d131796fdf29e6098eb6aa0f
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743218"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565764"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections::VectorIterator 類別
 
@@ -64,11 +64,11 @@ VectorIterator 樣板類別的 typename。
 |[VectorIterator::operator+= 運算子](#operator-plus-assign)|依指定的位移值遞增目前 VectorIterator。|
 |[VectorIterator::operator< 運算子](#operator-less-than)|指出目前 VectorIterator 是否小於指定的 VectorIterator。|
 |[Vectoriterator:: Operator\<= 運算子](#operator-less-than-or-equals)|指出目前 VectorIterator 是否小於或等於指定的 VectorIterator。|
-|[VectorIterator::operator-= 運算子](#operator-subtract-assign)|依指定的位移遞減目前 VectorIterator。|
+|[VectorIterator::operator-= 運算子](#operator-minus-equals)|依指定的位移遞減目前 VectorIterator。|
 |[VectorIterator::operator== 運算子](#operator-equality)|指出目前 VectorIterator 是否等於指定的 VectorIterator。|
 |[VectorIterator::operator> 運算子](#operator-greater-than)|指出目前 VectorIterator 是否大於指定的 VectorIterator。|
 |[VectorIterator::operator-> 運算子](#operator-arrow)|擷取目前 VectorIterator 參考的元素的位址。|
-|[VectorIterator::operator>= 運算子](#operator-greater-than-or-equal)|指出目前 VectorIterator 是否大於或等於指定的 VectorIterator。|
+|[VectorIterator::operator>= 運算子](#operator-greater-than-or-equals)|指出目前 VectorIterator 是否大於或等於指定的 VectorIterator。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

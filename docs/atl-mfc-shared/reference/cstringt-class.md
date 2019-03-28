@@ -1,6 +1,6 @@
 ---
 title: CStringT 類別
-ms.date: 10/18/2018
+ms.date: 03/27/2019
 f1_keywords:
 - CStringT
 - ATLSTR/ATL::CStringT
@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 9566830de4d3af8f34e8efa5e5ef468acae1fba5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 327ffc40a9b7e41004bc5aac7ecc320076de537f
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750867"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565814"
 ---
 # <a name="cstringt-class"></a>CStringT 類別
 
@@ -182,7 +182,7 @@ class CStringT :
 
 |||
 |-|-|
-|[operator =](#operator_eq)|指派新值到`CStringT`物件。|
+|[CStringT::operator =](#operator_eq)|指派新值到`CStringT`物件。|
 |[CStringT::operator +](#operator_add)|串連兩個字串或字元和字串。|
 |[CStringT::operator +=](#operator_add_eq)|串連至現有的字串結尾的新字串。|
 |[CStringT::operator ==](#operator_eq_eq)|判斷兩個字串是否以邏輯方式相等。|
@@ -882,8 +882,7 @@ CStringT Left(int nCount) const;
 
 ### <a name="return-value"></a>傳回值
 
-
-  `CStringT` 物件，該物件中包含所指定字元範圍的複本。 傳回的 `CStringT` 物件可以是空的。
+`CStringT` 物件，該物件中包含所指定字元範圍的複本。 傳回的 `CStringT` 物件可以是空的。
 
 ### <a name="remarks"></a>備註
 
@@ -997,8 +996,7 @@ CStringT Mid(int iFirst) const;
 
 ### <a name="return-value"></a>傳回值
 
-
-  `CStringT` 物件，該物件中包含所指定字元範圍的複本。 請注意，傳回`CStringT`可能是空的物件。
+`CStringT` 物件，該物件中包含所指定字元範圍的複本。 請注意，傳回`CStringT`可能是空的物件。
 
 ### <a name="remarks"></a>備註
 
@@ -1025,6 +1023,56 @@ void OemToAnsi();
 ### <a name="example"></a>範例
 
 範例，請參閱[CStringT::AnsiToOem](#ansitooem)。
+
+##  <a name="operator_eq"></a>  CStringT::operator =
+
+指派新值的字串。
+
+```
+CStringT& operator=(const CStringT& strSrc);
+
+template<bool bMFCDLL>
+CStringT& operator=(const CSimpleStringT<BaseType, bMFCDLL>& str);
+
+CStringT& operator=(PCXSTR pszSrc);
+CStringT& operator=(PCYSTR pszSrc);
+CStringT& operator=(const unsigned char* pszSrc);
+CStringT& operator=(XCHAR ch);
+CStringT& operator=(YCHAR ch);
+CStringT& operator=(const VARIANT& var);
+```
+
+### <a name="parameters"></a>參數
+
+*strSrc*<br/>
+A`CStringT`来指派給此字串。
+
+*str*<br/>
+對 `CThisSimpleString` 物件的參考。
+
+*bMFCDLL*<br/>
+布林值，指定專案是否 MFC DLL。
+
+*BaseType*<br/>
+字串的基底類型。
+
+*var*<br/>
+若要指派給這個字串的 variant 物件。
+
+*ch*<br/>
+若要指派給字串為 ANSI 或 Unicode 字元。
+
+*pszSrc*<br/>
+正在指派原始字串的指標。
+
+### <a name="remarks"></a>備註
+
+指派運算子接受另一個`CStringT`物件、 字元指標或單一字元。 您應該注意可能會發生例外狀況，每當您使用這個運算子，因為新的儲存體可配置的記憶體。
+
+如需`CThisSimpleString`，請參閱 < 備註 > 一節[CStringT::CStringT](#cstringt)。
+
+> [!NOTE]
+> 雖然您可以建立`CStringT`執行個體包含內嵌 null 字元時，我們建議您不要它。 在呼叫方法和運算子`CStringT`含有內嵌的 null 字元的物件可能會產生非預期的結果。
 
 ##  <a name="operator_add"></a>  CStringT::operator +
 
@@ -1476,8 +1524,7 @@ CStringT Right(int nCount) const;
 
 ### <a name="return-value"></a>傳回值
 
-
-  `CStringT` 物件，該物件中包含所指定字元範圍的複本。 請注意，傳回`CStringT`物件可以是空白。
+`CStringT` 物件，該物件中包含所指定字元範圍的複本。 請注意，傳回`CStringT`物件可以是空白。
 
 ### <a name="remarks"></a>備註
 

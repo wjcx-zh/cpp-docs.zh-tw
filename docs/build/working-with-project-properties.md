@@ -1,19 +1,19 @@
 ---
 title: 設定 c + + 編譯器和建置在 Visual Studio 中的屬性
 description: 若要變更 c + + 編譯器和連結器選項和其他組建設定中使用 Visual Studio IDE。
-ms.date: 12/10/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - project properties [C++], modifying
 - properties [C++]
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 55adb6dc91919bda9c2827a89e5de536667085c1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826053"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564905"
 ---
 # <a name="set-compiler-and-build-properties"></a>設定編譯器和組建屬性
 
@@ -65,7 +65,7 @@ MSBuild 支援稱為 「 巨集 」，針對特定的字串值包含目錄和路
 
 ![專案屬性頁](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 
-您可以使用屬性編輯器來檢視所有可用巨集的值。 (本文稍後的[屬性頁巨集](#bkmkPropertiesVersusMacros)一節會討論巨集。)
+您可以使用屬性編輯器來檢視所有可用巨集的值。
 
 ### <a name="predefined-macros"></a>預先定義巨集
 
@@ -79,7 +79,7 @@ MSBuild 支援稱為 「 巨集 」，針對特定的字串值包含目錄和路
 
 您可以建立「使用者定義巨集」，在專案組建中當作變數使用。 例如，您可以建立使用者定義巨集，提供自訂建置步驟或自訂建置工具的值。 使用者定義巨集是名稱/值組。 在專案檔中，使用 **$(**<em>name</em>**)** 標記法來存取值。
 
-使用者定義巨集會儲存在屬性工作表中。 如果您的專案尚未包含的屬性工作表，您可以建立一個所下的步驟[共用或 resuse Visual Studio c + + 專案設定](#bkmkPropertySheets)。
+使用者定義巨集會儲存在屬性工作表中。 如果您的專案尚未包含的屬性工作表，您可以建立一個所下的步驟[共用或重複使用 Visual Studio 專案設定](create-reusable-property-configurations.md)。
 
 #### <a name="to-create-a-user-defined-macro"></a>建立使用者定義巨集
 
@@ -128,17 +128,17 @@ MSVC 編譯器 (cl.exe) 會辨識某些環境變數，特別是 LIB、 LIBPATH�
 
 ## <a name="in-this-section"></a>本節內容
 
-[共用或 resuse Visual Studio 專案設定](create-reusable-property-configurations.md)<br/>
+[共用或重複使用 Visual Studio 專案設定](create-reusable-property-configurations.md)<br/>
 如何建立可共用的自訂建置設定] 或 [resused.props 檔案。
 
 [專案屬性繼承](project-property-inheritance.md)<br/>
 描述.props、.targets、.vcxproj 檔案和建置程序中的環境變數的評估順序。
 
-[修改屬性和目標，而不需要變更專案檔](modify-project-properties-without-changing-project-file.md)<br/>
+[修改屬性和目標而不變更專案檔](modify-project-properties-without-changing-project-file.md)<br/>
 如何建立暫存的組建設定，而不需要修改專案檔。 
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual Studio Projects - C++](creating-and-managing-visual-cpp-projects.md)<br/>
+[Visual Studio 專案 - C++](creating-and-managing-visual-cpp-projects.md)<br/>
 [.vcxproj 和.props 檔案結構](reference/vcxproj-file-structure.md)<br/>
 [屬性頁面 XML 檔案](reference/property-page-xml-files.md)<br/>

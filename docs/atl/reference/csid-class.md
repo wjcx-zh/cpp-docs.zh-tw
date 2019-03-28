@@ -1,6 +1,6 @@
 ---
 title: CSid 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CSid
 - ATLSECURITY/ATL::CSid
@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 02b7cbb9e66e1e8297699503fc510247efed1629
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4c8d05fd193254f2431bbec7692ff25420c1bf05
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301892"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565866"
 ---
 # <a name="csid-class"></a>CSid 類別
 
@@ -86,8 +86,8 @@ class CSid
 |-|-|
 |[operator ==](#operator_eq_eq)|測試相等的兩個安全性描述元物件|
 |[operator !=](#operator_neq)|測試兩個安全性描述元物件不相等|
-|[運算子 \<](#operator_lt_)|比較兩個安全性描述元物件的相對值。|
-|[operator >](#operator_gt_)|比較兩個安全性描述元物件的相對值。|
+|[運算子 \<](#operator_lt)|比較兩個安全性描述元物件的相對值。|
+|[operator >](#operator_gt)|比較兩個安全性描述元物件的相對值。|
 |[operator \<=](#operator_lt__eq)|比較兩個安全性描述元物件的相對值。|
 |[operator >=](#operator_gt__eq)|比較兩個安全性描述元物件的相對值。|
 
@@ -119,7 +119,7 @@ LPCTSTR AccountName() const throw(...);
 
 這個方法會嘗試尋找指定的名稱`SID`（安全性識別碼）。 完整的詳細資訊，請參閱[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)。
 
-如果沒有帳戶名稱`SID`可以找到`AccountName`傳回空字串。 如果網路逾時可防止此方法尋找名稱，也可能會發生。 這也會發生與任何對應的帳戶名稱，例如登入的安全性識別碼`SID`可識別登入工作階段。
+如果沒有帳戶名稱`SID`可以找到`AccountName`傳回空字串。 如果網路逾時可防止此方法尋找名稱，也可能會發生。 它也會發生的安全性識別元，但沒有對應的帳戶名稱，例如`SID`可識別登入工作階段。
 
 ##  <a name="csid"></a>  CSid::CSid
 
@@ -210,7 +210,7 @@ LPCTSTR Domain() const throw(...);
 
 這個方法會嘗試尋找指定的名稱`SID`（安全性識別碼）。 完整的詳細資訊，請參閱[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)。
 
-如果沒有帳戶名稱`SID`可以找到`Domain`傳回的網域為空字串。 如果網路逾時可防止此方法尋找名稱，也可能會發生。 這也會發生與任何對應的帳戶名稱，例如登入的安全性識別碼`SID`可識別登入工作階段。
+如果沒有帳戶名稱`SID`可以找到`Domain`傳回的網域為空字串。 如果網路逾時可防止此方法尋找名稱，也可能會發生。 它也會發生的安全性識別元，但沒有對應的帳戶名稱，例如`SID`可識別登入工作階段。
 
 ##  <a name="equalprefix"></a>  CSid::EqualPrefix
 

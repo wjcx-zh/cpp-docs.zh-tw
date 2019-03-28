@@ -1,6 +1,6 @@
 ---
 title: valarray 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - valarray/std::valarray
 - valarray/std::valarray::value_type
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-ms.openlocfilehash: f38d431248c524a65b4a7a7126ba73b767a64173
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: efb186753de0e04bd01f9cc6e81c487084b88ac2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525303"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565736"
 ---
 # <a name="valarray-class"></a>valarray 類別
 
@@ -88,7 +88,7 @@ ms.locfileid: "51525303"
 |-|-|
 |[operator!](#op_not)|可取得 `valarray` 中每個項目邏輯 `NOT` 值的一元運算子。|
 |[operator%=](#op_mod_eq)|取得陣列項目除以指定的 `valarray` 或除以此項目類型之值的餘數。|
-|[operator&=](#op_amp_eq)|取得陣列中項目的位元 `AND` 與指定的 `valarray` 中對應之項目或項目類型的值。|
+|[operator&=](#op_and_eq)|取得陣列中項目的位元 `AND` 與指定的 `valarray` 中對應之項目或項目類型的值。|
 |[operator>>=](#op_gt_gt_eq)|依位置的指定數目或依第二個 `valarray` 指定的項目數量，將 `valarray` 運算元的每個項目之位元右移。|
 |[operator<<=](#op_lt_lt_eq)|依位置的指定數目或依第二個 `valarray` 指定的項目數量，將 `valarray` 運算元的每個項目之位元左移。|
 |[operator*=](#op_star_eq)|將指定之 `valarray` 的項目或此項目類型的值和運算元 `valarray` 相乘。|
@@ -508,7 +508,7 @@ valarray: ( 0 -3 4 -7 1 -3 ).
 */
 ```
 
-## <a name="and_eq"></a>  valarray::operator&amp;=
+## <a name="op_and_eq"></a>  valarray::operator&amp;=
 
 取得陣列中項目的位元 **AND** 與指定的 valarray 中對應之項目或項目型別的值。
 
@@ -906,7 +906,7 @@ valarray: ( 2 0 4 2 6 4 8 6 ).
 */
 ```
 
-## <a name="valarray__operator-"></a>  valarray::operator-
+## <a name="operator-"></a>  valarray::operator-
 
 對 valarray 中每個項目套用減號的一元運算子。
 
@@ -958,7 +958,7 @@ valarray: ( 0 0 2 -2 4 -4 6 -6 8 -8 ).
 */
 ```
 
-## <a name="valarray__operator-_eq"></a>  valarray::operator-=
+## <a name="operator-_eq"></a>  valarray::operator-=
 
 從運算元 valarray 減去指定之 valarray 的項目或此項目型別的值。
 
@@ -1276,7 +1276,7 @@ Valarray，其項目是項目的互斥邏輯**XOR**運算元 valarray 並*右*�
 
 ### <a name="remarks"></a>備註
 
-互斥邏輯 (或稱為 **XOR**) 具有下列語意：假設項目 *e*1 和 *e*2，如果其中只有一個項目為 true，則 *e*1 **XOR** *e*2 為 **true**；如果這兩個項目均為 false 或 true，則為 **false**。
+專用的邏輯或，稱為**XOR**，具有下列語意：提供項目*電子*1 和*電子*2*電子*1 **XOR** *電子*2 是**true**如果只有其中一個項目為 true;**false**如果這兩個項目均為 false，或如果這兩個項目，則為 true。
 
 ### <a name="example"></a>範例
 
@@ -1849,10 +1849,10 @@ valarray(
 *計數*<br/>
 要放在 valarray 中的項目數目。
 
-*val*<br/>
+*Val*<br/>
 用來初始化 valarray 中之項目的值。
 
-*ptr*<br/>
+*Ptr*<br/>
 值指標，這些值要用來初始化 valarray 中之項目。
 
 *右邊*<br/>

@@ -1,6 +1,6 @@
 ---
 title: ICommandSource 介面
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ICommandSource
 - AFXWINFORMS/ICommandSource
@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-ms.openlocfilehash: 21c4f4544a6ccf2342580bc5859739fc1f50d0c2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: eed7abbbb40c532ad596f683b6ed2c98a0cadf9b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296016"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565606"
 ---
 # <a name="icommandsource-interface"></a>ICommandSource 介面
 
@@ -179,7 +179,7 @@ void RemoveCommandHandler(unsigned int cmdID);
 
 這個方法會移除對應至 cmdID 命令來源物件的命令處理常式。
 
-## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler
+## <a name="removecommandrangehandler"></a> ICommandSource::RemoveCommandRangeHandler
 
 移除的命令來源物件中的一群命令處理常式。
 ```
@@ -196,7 +196,7 @@ void RemoveCommandRangeUIHandler(
 命令 ID 範圍的結束索引。
 ### <a name="remarks"></a>備註
 
-這個方法會移除的訊息處理常式，由 cmdIDMin 和 cmdIDMax，對應到命令識別碼指定的命令來源物件中的群組。
+這個方法會移除一群訊息處理常式，對應至 cmdIDMin 和 cmdIDMax、 命令來源物件中的所指定的命令識別碼。
 
 ## <a name="removecommandrangeuihandler"></a> ICommandSource::RemoveCommandRangeUIHandler
 
@@ -215,7 +215,7 @@ void RemoveCommandRangeUIHandler(
 命令 ID 範圍的結束索引。
 ### <a name="remarks"></a>備註
 
-這個方法會移除的使用者介面命令訊息處理常式，由 cmdIDMin 和 cmdIDMax，對應到命令識別碼指定的命令來源物件中的群組。
+這個方法會移除一群使用者介面命令訊息處理常式，對應至 cmdIDMin 和 cmdIDMax、 命令來源物件中的所指定的命令識別碼。
 
 ## <a name="removecommanduihandler"></a> ICommandSource::RemoveCommandUIHandler
 

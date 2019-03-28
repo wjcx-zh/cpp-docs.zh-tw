@@ -1,6 +1,6 @@
 ---
 title: CRenderTarget 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CRenderTarget
 - AFXRENDERTARGET/CRenderTarget
@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 112bd4422a1fa6b9b97239228dc586a0555ddc96
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a14a1fba25c8c38c4bcf441dda566f14dc790f76
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259876"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565752"
 ---
 # <a name="crendertarget-class"></a>CRenderTarget 類別
 
@@ -138,7 +138,7 @@ class CRenderTarget : public CObject;
 |名稱|描述|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|建構 CRenderTarget 物件。|
-|[CRenderTarget::~CRenderTarget](#crendertarget__~crendertarget)|解構函式。 呈現目標物件正在被終結時呼叫。|
+|[CRenderTarget::~CRenderTarget](#_dtorcrendertarget)|解構函式。 呈現目標物件正在被終結時呼叫。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -502,7 +502,7 @@ void DrawLine(
 
 ```
 void DrawRectangle(
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pBrush,
     FLOAT fStrokeWidth = 1.0,
     ID2D1StrokeStyle* strokeStyle = NULL);
@@ -510,7 +510,7 @@ void DrawRectangle(
 
 ### <a name="parameters"></a>參數
 
-*rect*<br/>
+*rectangle*<br/>
 若要繪製，在與裝置無關的像素矩形的維度
 
 *pBrush*<br/>
@@ -555,7 +555,7 @@ void DrawRoundedRectangle(
 ```
 void DrawText(
     const CString& strText,
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pForegroundBrush,
     CD2DTextFormat* textFormat = NULL,
     D2D1_DRAW_TEXT_OPTIONS options = D2D1_DRAW_TEXT_OPTIONS_NONE,
@@ -567,7 +567,7 @@ void DrawText(
 *strText*<br/>
 要繪製的 Unicode 字元陣列指標。
 
-*rect*<br/>
+*rectangle*<br/>
 在其中繪製文字的區域位置及大小。
 
 *pForegroundBrush*<br/>
@@ -714,13 +714,13 @@ void FillOpacityMask(
 
 ```
 void FillRectangle(
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pBrush);
 ```
 
 ### <a name="parameters"></a>參數
 
-*rect*<br/>
+*rectangle*<br/>
 若要繪製，在與裝置無關的像素矩形的維度。
 
 *pBrush*<br/>
@@ -999,7 +999,7 @@ void PushAxisAlignedClip(
 大小和位置的裁剪區域中，以與裝置無關的像素為單位。
 
 *mode*<br/>
-用來繪製有子像素界限的裁剪矩形邊緣，以及 blend 的場景內容裁剪反鋸齒功能模式。 之後當 PopAxisAlignedClip 方法呼叫，並不會套用至圖層內的每個基本型別，則會執行混合。
+用來繪製有子像素界限的裁剪矩形的邊緣，以及 blend 的場景內容裁剪反鋸齒功能模式。 之後當 PopAxisAlignedClip 方法呼叫，並不會套用至圖層內的每個基本型別，則會執行混合。
 
 ##  <a name="pushlayer"></a>  CRenderTarget::PushLayer
 

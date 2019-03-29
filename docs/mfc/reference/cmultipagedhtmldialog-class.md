@@ -1,6 +1,6 @@
 ---
 title: CMultiPageDHtmlDialog 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CMultiPageDHtmlDialog
 - AFXDHTML/CMultiPageDHtmlDialog
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
-ms.openlocfilehash: 66ab996a810c7409d689d600758828130d4237f1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 404b1b8bb1c96c2b244a6cfaee7f2f2c77800f31
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283744"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565996"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog 類別
 
@@ -32,7 +32,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 |名稱|描述|
 |----------|-----------------|
 |[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|建構多頁的 （精靈式） DHTML 對話方塊物件。|
-|[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|終結多頁 DHTML 對話方塊物件。|
+|[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](#_dtorcmultipagedhtmldialog)|終結多頁 DHTML 對話方塊物件。|
 
 ## <a name="remarks"></a>備註
 

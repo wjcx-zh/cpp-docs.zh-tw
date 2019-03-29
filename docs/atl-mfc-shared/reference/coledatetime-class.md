@@ -1,6 +1,6 @@
 ---
 title: COleDateTime 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - COleDateTime
 - ATLCOMTIME/ATL::COleDateTime
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 6644e4e10916068a91e48611338d79bbb9d0d75b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 46b5f15a2f6048745a12b8c3a8c8a63404f71aa2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740525"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565931"
 ---
 # <a name="coledatetime-class"></a>COleDateTime 類別
 
@@ -117,7 +117,7 @@ class COleDateTime
 |1900 年 1 月 1日日，上午 6 點|2.25|
 
 > [!CAUTION]
-> 請注意，在上表中，雖然日期值變成負數 1899 年 12 月 30 日午夜以前的日期時間值不會。 例如，上午 6:00 一律被以分數值 0.25 而不論是否代表日期的整數 （之後 1899 年 12 月 30 日) 正數或負數 （之前 1899 年 12 月 30 日)。 這表示簡單的浮動點比較會錯誤地排序`COleDateTime`表示 12/29/1899 為上午 6:00**稍後**1 代表上午 7:00 在同一天。
+> 在上述資料表中，雖然 1899 年 12 月 30 日的午夜之前，日期值變成負值日期時間值則否。 例如，上午 6:00 一律被以分數值 0.25 而不論是否代表日期的整數 （之後 1899 年 12 月 30 日) 正數或負數 （之前 1899 年 12 月 30 日)。 這表示簡單的浮動點比較會錯誤地排序`COleDateTime`表示 12/29/1899 為上午 6:00**稍後**1 代表上午 7:00 在同一天。
 
 `COleDateTime`類別會處理從 100 年 1 月 1 日到 12 月 31 日的日期到 9999。 `COleDateTime`類別會使用西曆; 它不支援凱撒曆日期。 `COleDateTime` 會忽略日光節約時間。 (請參閱[日期和時間：自動化支援](../../atl-mfc-shared/date-and-time-automation-support.md)。)
 
@@ -195,7 +195,7 @@ COleDateTime(int nYear,
 
 COleDateTime(WORD wDosDate,
     WORD wDosTime) throw();
-COleDateTime(const DBTIMESTAMP& dbts) throw();
+COleDateTime(const DBTIMESTAMP& timeStamp) throw();
 ```
 
 ### <a name="parameters"></a>參數
@@ -216,7 +216,7 @@ A`time_t`或是`__time64_t`值轉換成日期/時間值，並複製到新`COleDa
 A`SYSTEMTIME`結構轉換成日期/時間值，並複製到新`COleDateTime`物件。
 
 *filetimeSrc*<br/>
-A`FILETIME`結構轉換成日期/時間值，並複製到新`COleDateTime`物件。 請注意，`FILETIME`使用 Universal Coordinated Time (UTC)，因此如果您傳遞結構中的當地時間，結果將會不正確。 請參閱[檔案的時間](/windows/desktop/SysInfo/file-times)Windows sdk for 的詳細資訊。
+A`FILETIME`結構轉換成日期/時間值，並複製到新`COleDateTime`物件。 A`FILETIME`使用 Universal Coordinated Time (UTC)，因此如果您傳遞結構中的當地時間，結果將會不正確。 請參閱[檔案的時間](/windows/desktop/SysInfo/file-times)Windows sdk for 的詳細資訊。
 
 *nYear*， *nMonth*， *n*，*當天的時數*， *nMin*， *nSec*<br/>
 表示要複製到新的日期和時間值`COleDateTime`物件。
@@ -224,7 +224,7 @@ A`FILETIME`結構轉換成日期/時間值，並複製到新`COleDateTime`物件
 *wDosDate*， *wDosTime*<br/>
 MS-DOS 日期和時間值轉換成日期/時間值，並複製到新`COleDateTime`物件。
 
-*dbts*<br/>
+*timeStamp*<br/>
 參考[DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype)結構，包含目前的當地時間。
 
 ### <a name="remarks"></a>備註
@@ -256,7 +256,7 @@ MS-DOS 日期和時間值轉換成日期/時間值，並複製到新`COleDateTim
 
 - `COleDateTime(` *systimeSrc* **)** 建構`COleDateTime`物件`SYSTEMTIME`值。
 
-- `COleDateTime(` `filetimeSrc` **)** 建構`COleDateTime`物件從`FILETIME`值。 。 請注意，`FILETIME`使用 Universal Coordinated Time (UTC)，因此如果您傳遞結構中的當地時間，結果將會不正確。 請參閱[檔案的時間](/windows/desktop/SysInfo/file-times)Windows sdk for 的詳細資訊。
+- `COleDateTime(` `filetimeSrc` **)** 建構`COleDateTime`物件從`FILETIME`值。 。 A`FILETIME`使用 Universal Coordinated Time (UTC)，因此如果您傳遞結構中的當地時間，結果將會不正確。 如需詳細資訊，請參閱 <<c0> [ 檔案的時間](/windows/desktop/SysInfo/file-times)Windows SDK 中。
 
 - `COleDateTime(` `nYear``nMonth`， `nDay`， `nHour`， `nMin`， `nSec` **)** 建構`COleDateTime`物件從指定的數值。
 
@@ -300,7 +300,7 @@ CString Format(UINT nFormatID) const;
 表示要用於轉換的地區設定識別碼。 如需有關語言識別碼的詳細資訊，請參閱 <<c0> [ 語言識別碼](/windows/desktop/Intl/language-identifiers)。
 
 *lpszFormat*<br/>
-格式化字串類似於`printf`格式化字串。 每個格式化程式碼，加上百分比 ( `%`) 登入，會取代對應`COleDateTime`元件。 格式化字串中的其他字元會複製到傳回的字串不變。 請參閱執行階段函式[strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)如需詳細資訊。 值和格式化的程式碼的意義`Format`是：
+格式化字串類似於`printf`格式化字串。 每個格式化程式碼，加上百分比 ( `%`) 登入，會取代對應`COleDateTime`元件。 格式化字串中的其他字元會複製到傳回的字串不變。 如需詳細資訊，請參閱執行階段函式[strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。 值和格式化的程式碼的意義`Format`是：
 
 - `%H` 目前日期的小時
 
@@ -341,12 +341,12 @@ A `CString` ，其中包含已格式化的日期/時間值。
 呼叫這個方法來取得時間`COleDateTime`物件做為`DBTIMESTAMP`資料結構。
 
 ```
-bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
+bool GetAsDBTIMESTAMP(DBTIMESTAMP& timeStamp) const throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*dbts*<br/>
+*timeStamp*<br/>
 參考[DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype)結構。
 
 ### <a name="return-value"></a>傳回值
@@ -355,7 +355,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="remarks"></a>備註
 
-將產生的時間儲存在參考*dbts*結構。 `DBTIMESTAMP`由此函式初始化的資料結構會有其`fraction`成員設定為零。
+將產生的時間儲存在參考*時間戳記*結構。 `DBTIMESTAMP`由此函式初始化的資料結構會有其`fraction`成員設定為零。
 
 ### <a name="example"></a>範例
 
@@ -382,19 +382,19 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 
 `GetAsSystemTime` 將產生的時間儲存在參考*sysTime*物件。 `SYSTEMTIME`由此函式初始化的資料結構會有其`wMilliseconds`成員設定為零。
 
-請參閱[GetStatus](#getstatus)的更多有關的狀態資訊保留在`COleDateTime`物件。
+如需資訊的狀態資訊保留在`COleDateTime`物件，請參閱 < [GetStatus](#getstatus)。
 
 ##  <a name="getasudate"></a>  COleDateTime::GetAsUDATE
 
 呼叫這個方法來取得時間`COleDateTime`物件做為`UDATE`資料結構。
 
 ```
-bool GetAsUDATE(UDATE& udate) const throw();
+bool GetAsUDATE(UDATE& uDate) const throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*udate*<br/>
+*uDate*<br/>
 參考`UDATE`結構，以接收已轉換的日期/時間值從`COleDateTime`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -684,7 +684,7 @@ DateTimeStatus GetStatus() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回這個狀態`COleDateTime`值。 如果您呼叫`GetStatus`上`COleDateTime`含有預設建構物件，它會傳回有效。 如果您呼叫`GetStatus`上`COleDateTime`物件的建構函式設定為 null，初始化`GetStatus`會傳回 null。 請參閱**備註**如需詳細資訊。
+傳回這個狀態`COleDateTime`值。 如果您呼叫`GetStatus`上`COleDateTime`含有預設建構物件，它會傳回有效。 如果您呼叫`GetStatus`上`COleDateTime`物件的建構函式設定為 null，初始化`GetStatus`會傳回 null。
 
 ### <a name="remarks"></a>備註
 
@@ -803,7 +803,7 @@ DateTimeStatus m_status;
 
 ### <a name="remarks"></a>備註
 
-此資料成員的類型是列舉型別`DateTimeStatus`，其定義內`COleDateTime`類別。 請參閱[COleDateTime::GetStatus](#getstatus)如需詳細資訊。
+此資料成員的類型是列舉型別`DateTimeStatus`，其定義內`COleDateTime`類別。 如需詳細資訊，請參閱 < [COleDateTime::GetStatus](#getstatus)。
 
 > [!CAUTION]
 >  此資料成員是針對進階程式設計的情況。 您應該使用的內嵌成員函式[GetStatus](#getstatus)並[SetStatus](#setstatus)。 請參閱`SetStatus`的進一步注意事項，關於明確設定此資料成員。
@@ -819,7 +819,7 @@ COleDateTime& operator=(const time_t& timeSrc) throw();
 COleDateTime& operator=(const __time64_t& timeSrc) throw();
 COleDateTime& operator=(const SYSTEMTIME& systimeSrc) throw();
 COleDateTime& operator=(const FILETIME& filetimeSrc) throw();
-COleDateTime& operator=(const UDATE& udate) throw();
+COleDateTime& operator=(const UDATE& uDate) throw();
 ```
 
 ### <a name="remarks"></a>備註
@@ -836,9 +836,9 @@ COleDateTime& operator=(const UDATE& udate) throw();
 
 - **運算子 = (** *systimeSrc* **)** [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)值會轉換並複製到這個`COleDateTime`物件。 如果轉換成功，這個物件的狀態設定為有效的;如果不成功，它會設定為無效。
 
-- **運算子 = (** `udate` **)** `UDATE`值會轉換並複製到這個`COleDateTime`物件。 如果轉換成功，這個物件的狀態設定為有效的;如果不成功，它會設定為無效。 A`UDATE`結構代表 「 解壓縮 」 日期。 請參閱函數[VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate)如需詳細資訊。
+- **運算子 = (** `uDate` **)** `UDATE`值會轉換並複製到這個`COleDateTime`物件。 如果轉換成功，這個物件的狀態設定為有效的;如果不成功，它會設定為無效。 A`UDATE`結構代表 「 解壓縮 」 日期。 如需詳細資訊，請參閱函式[VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate)。
 
-- **運算子 = (** `filetimeSrc` **)** [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)值會轉換並複製到這個`COleDateTime`物件。 如果轉換成功，這個物件的狀態設定為有效的;否則，會設定為無效。 `FILETIME` 使用全球定位時間 (UTC)，因此為 UTC 時間結構中，您的結果會從 UTC 時間轉換為當地時間，而且將會儲存為 variant 的時間。 此行為是與 Visual c + + 6.0 和 Visual c + +.NET 2003 SP2 相同。 請參閱[檔案的時間](/windows/desktop/SysInfo/file-times)Windows sdk for 的詳細資訊。
+- **運算子 = (** `filetimeSrc` **)** [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)值會轉換並複製到這個`COleDateTime`物件。 如果轉換成功，這個物件的狀態設定為有效的;否則，會設定為無效。 `FILETIME` 使用全球定位時間 (UTC)，因此為 UTC 時間結構中，您的結果會從 UTC 時間轉換為當地時間，而且將會儲存為 variant 的時間。 此行為是與 Visual c + + 6.0 和 Visual c + +.NET 2003 SP2 相同。 如需詳細資訊，請參閱 <<c0> [ 檔案的時間](/windows/desktop/SysInfo/file-times)Windows SDK 中。
 
 如需詳細資訊，請參閱 < [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Windows SDK 中的項目。
 
@@ -968,7 +968,7 @@ bool ParseDateTime(
 
 `"1/25/1996 8:30:00"  // always specify the full year, even in a 'short date' format`
 
-請注意，地區設定識別碼也會影響是否可接受的轉換成日期/時間值的字串格式。
+地區設定識別碼也會影響是否可接受的轉換成日期/時間值的字串格式。
 
 如果 VAR_DATEVALUEONLY，時間值設定為 0 或午夜的時間。 如果 VAR_TIMEVALUEONLY，日期值設定為日期 0，這表示 30 年 12 月 1899年。
 
@@ -1149,7 +1149,7 @@ void SetStatus(DateTimeStatus status) throw();
 *狀態*參數值由定義`DateTimeStatus`列舉型別，其定義內`COleDateTime`類別。 請參閱[COleDateTime::GetStatus](#getstatus)如需詳細資訊。
 
 > [!CAUTION]
->  此函式是進階程式設計的情況。 此函式不會更改此物件中的資料。 它將最常使用的狀態設為**null**或是**無效**。 請注意，指派運算子 ([運算子 =](#eq)) 和[SetDateTime](#setdatetime)沒有設定的基礎來源值的物件狀態。
+>  此函式是進階程式設計的情況。 此函式不會更改此物件中的資料。 它將最常使用的狀態設為**null**或是**無效**。 指派運算子 ([運算子 =](#operator_eq)) 和[SetDateTime](#setdatetime)沒有設定的基礎來源值的物件狀態。
 
 ### <a name="example"></a>範例
 

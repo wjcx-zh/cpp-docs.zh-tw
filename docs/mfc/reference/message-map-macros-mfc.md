@@ -1,6 +1,6 @@
 ---
 title: 訊息對應巨集 (MFC)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - AFXWIN/DECLARE_MESSAGE_MAP
 - AFXWIN/BEGIN_MESSAGE_MAP
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 09c023f6dcbf1fd33a0caac17af75f449d80c509
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: b1cc721ed994ae1c6704011199ac635ee462ded8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850268"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565530"
 ---
 # <a name="message-map-macros-mfc"></a>訊息對應巨集 (MFC)
 
@@ -45,7 +45,7 @@ ms.locfileid: "55850268"
 |-|-|
 |[DECLARE_MESSAGE_MAP](#declare_message_map)|宣告的訊息對應會使用類別將訊息與函式對應 (必須在類別宣告中使用)。|
 |[BEGIN_MESSAGE_MAP](#begin_message_map)|開始進行訊息對應的定義 (必須在類別實作中使用)。|
-|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|開始定義數量包含單一樣板引數的類別類型上的訊息對應。 |
+|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_message_map)|開始定義數量包含單一樣板引數的類別類型上的訊息對應。 |
 |[END_MESSAGE_MAP](#end_message_map)|結束訊息對應的定義 (必須在類別實作中使用)。|
 
 ### <a name="message-mapping-macros"></a>訊息對應巨集
@@ -67,7 +67,7 @@ ms.locfileid: "55850268"
 |||
 |-|-|
 |[ON_COMMAND_RANGE](#on_command_range)|指出哪些函式會處理巨集的前兩個參數中指定之命令 ID 的範圍。|
-|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|指出哪些更新處理常式會處理前兩個 pa 中指定的命令識別碼範圍] rameters 巨集。|
+|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|指出哪些更新處理常式會處理在巨集前兩個參數中指定之命令 ID 的範圍。|
 |[ON_CONTROL_RANGE](#on_control_range)|指出哪些函式會處理來自在巨集的第二和第三個參數中指定之控制項 ID 範圍的通知。 控制項通知訊息，例如 BN_CLICKED 為第一個參數。|
 
 如需有關訊息對應、 訊息對應宣告和分界巨集和訊息對應巨集的詳細資訊，請參閱[訊息對應](../../mfc/reference/message-maps-mfc.md)並[訊息處理和對應的主題](../../mfc/message-handling-and-mapping.md)。 如需訊息對應範圍的詳細資訊，請參閱[訊息對應範圍的處理常式](../../mfc/handlers-for-message-map-ranges.md)。
@@ -108,7 +108,7 @@ END_MESSAGE_MAP()
 
 **標題:** afxwin.h
 
-##  <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
+## <a name="begintemplatemessagemap"></a>BEGIN_TEMPLATE_MESSAGE_MAP
 
 開始定義數量包含單一樣板引數的類別類型上的訊息對應。
 
@@ -199,12 +199,12 @@ END_MESSAGE_MAP( )
 ### <a name="syntax"></a>語法
 
 ```
-ON_COMMAND( id, memberFxn )
+ON_COMMAND( commandId, memberFxn )
 ```
 
 ### <a name="parameters"></a>參數
 
-*id*<br/>
+*commandId*<br/>
 命令 ID。
 
 *memberFxn*<br/>
@@ -216,7 +216,7 @@ ON_COMMAND( id, memberFxn )
 
 ON_COMMAND 當命令目標物件接收 Windows WM_COMMAND 訊息具有指定識別碼時，會呼叫此成員函式`memberFxn`以處理訊息。
 
-您可以使用 ON_COMMAND，成員函式對應單一命令。 使用[ON_COMMAND_RANGE](#on_command_range)來將一組命令 id 對應至一個成員函式。 只有一個訊息對應項目可以比對指定的命令識別碼。也就是說，您無法將命令對應至一個以上的處理常式。 如需詳細資訊和範例，請參閱 <<c0> [ 訊息處理和對應的主題](../../mfc/message-handling-and-mapping.md)。
+您可以使用 ON_COMMAND，成員函式對應單一命令。 使用[ON_COMMAND_RANGE](#on_command_range)來將一組命令 Id 對應至一個成員函式。 只有一個訊息對應項目可比對指定的命令識別碼。 也就是說，您無法將命令對應至一個以上的處理常式。 如需詳細資訊和範例，請參閱 <<c0> [ 訊息處理和對應的主題](../../mfc/message-handling-and-mapping.md)。
 
 ### <a name="example"></a>範例
 
@@ -237,12 +237,12 @@ END_MESSAGE_MAP()
 ### <a name="syntax"></a>語法
 
 ```
-ON_COMMAND_EX(id, memberFxn);
+ON_COMMAND_EX(commandId, memberFxn);
 ```
 
 ### <a name="parameters"></a>參數
 
-*id*<br/>
+*commandId*<br/>
 命令 ID。
 
 *memberFxn*<br/>
@@ -265,7 +265,7 @@ ON_COMMAND_EX(id, memberFxn);
 ### <a name="syntax"></a>語法
 
 ```
-ON_CONTROL( wNotifyCode, id, memberFxn )
+ON_CONTROL( wNotifyCode, commandId, memberFxn )
 ```
 
 ### <a name="parameters"></a>參數
@@ -273,7 +273,7 @@ ON_CONTROL( wNotifyCode, id, memberFxn )
 *wNotifyCode*<br/>
 控制項通知碼。
 
-*id*<br/>
+*commandId*<br/>
 命令 ID。
 
 *memberFxn*<br/>
@@ -356,7 +356,7 @@ LRESULT CMyWnd2::OnMyMessage(WPARAM wParam, LPARAM lParam)
 ### <a name="syntax"></a>語法
 
 ```
-ON_OLECMD( pguid, olecmdid, id )
+ON_OLECMD( pguid, olecmdid, commandId )
 ```
 
 ### <a name="parameters"></a>參數
@@ -367,7 +367,7 @@ ON_OLECMD( pguid, olecmdid, id )
 *olecmdid*<br/>
 OLE 命令識別碼。
 
-*id*<br/>
+*commandId*<br/>
 功能表識別碼、 工具列 ID、 按鈕 ID 或其他資源或物件發出命令的識別碼。
 
 ### <a name="remarks"></a>備註
@@ -575,12 +575,12 @@ ON_THREAD_MESSAGE 必須使用而不是 ON_MESSAGE，當您有`CWinThread`類別
 ### <a name="syntax"></a>語法
 
 ```
-ON_UPDATE_COMMAND_UI( id, memberFxn )
+ON_UPDATE_COMMAND_UI( messageId, memberFxn )
 ```
 
 ### <a name="parameters"></a>參數
 
-*id*<br/>
+*messageId*<br/>
 訊息 ID。
 
 *memberFxn*<br/>

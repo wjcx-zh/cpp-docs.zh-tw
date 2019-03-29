@@ -1,6 +1,6 @@
 ---
 title: basic_ostream 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ostream/std::basic_ostream
 - ostream/std::basic_ostream::flush
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::basic_ostream [C++], tellp
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
-ms.openlocfilehash: dce4911bd4b7abe6c73551d6a0b178d9b2700dbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64a32513e9dc151e64fccdb0ef678a75588f0a41
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543633"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565723"
 ---
 # <a name="basicostream-class"></a>basic_ostream 類別
 
@@ -48,7 +48,7 @@ class basic_ostream : virtual public basic_ios<Elem, Tr>
 
 ## <a name="remarks"></a>備註
 
-大部分多載 [operator<<](#op_lt_lt) 的成員函式為格式化的輸出函式。 它們遵循下列模式：
+大部分多載 [operator<<](#basic_ostream_operator_lt_lt) 的成員函式為格式化的輸出函式。 它們遵循下列模式：
 
 ```cpp
 iostate state = goodbit;
@@ -122,7 +122,7 @@ basic_istream\< **Elem**, **Tr**> 類別的物件只會儲存 [basic_ios](../sta
 |[put](#put)|將字元置入資料流中。|
 |[seekp](#seekp)|重設輸出資料流中的位置。|
 |[sentry](#sentry)|此巢狀的類別會描述物件，該物件的宣告會將格式化輸出函式和未格式化輸出函式結構化。|
-|[swap](#op_eq)|用所提供的 `basic_ostream` 物件的值交換這個 `basic_ostream` 物件中的值。|
+|[swap](#swap)|用所提供的 `basic_ostream` 物件的值交換這個 `basic_ostream` 物件中的值。|
 |[tellp](#tellp)|報告輸出資料流中的位置。|
 |[write](#write)|將字元置入資料流中。|
 
@@ -130,7 +130,7 @@ basic_istream\< **Elem**, **Tr**> 類別的物件只會儲存 [basic_ios](../sta
 
 |運算子|描述|
 |-|-|
-|[operator=](#basic_ostream_operator_eq)|將提供的 `basic_ostream` 物件參數值指派為這個物件。|
+|[operator=](#op_eq)|將提供的 `basic_ostream` 物件參數值指派為這個物件。|
 |[operator<<](#basic_ostream_operator_lt_lt)|寫入資料流。|
 
 ## <a name="requirements"></a>需求
@@ -237,7 +237,7 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="parameters"></a>參數
 
-*pfn*<br/>
+*Pfn*<br/>
 函式指標。
 
 *strbuf*<br/>

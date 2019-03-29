@@ -2,12 +2,12 @@
 title: 移植到通用 Windows 平台 (C++)
 ms.date: 11/04/2016
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 06543ce27fe4fed839a6f6b885259e8cc1b180c6
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6bda600abfea04e1158f6ff993e04e5076e4c24b
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518537"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278459"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>移植到通用 Windows 平台 (C++)
 
@@ -21,7 +21,7 @@ Windows 開發人員中心文件包含如何將 Windows 8.1 應用程式移植�
 
 - [將 Windows 8.1 執行階段元件移植到 UWP](#BK_81Component)
 
-若您有傳統桌面的 Win32 DLL，並想要從 UWP 應用程式加以呼叫，您也可以執行此作業。 使用這類程序可以為現有的傳統 Windows 桌面的 C++ 應用程式或跨平台標準 C++ 程式碼建立 UWP 使用者介面層。 請參閱[做法：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md)。
+若您有傳統桌面的 Win32 DLL，並想要從 UWP 應用程式加以呼叫，您也可以執行此作業。 使用這類程序可以為現有的傳統 Windows 桌面的 C++ 應用程式或跨平台標準 C++ 程式碼建立 UWP 使用者介面層。 請參閱[如何：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md)。
 
 ## <a name="BK_81StoreApp"></a> 將 Windows 8.1 市集應用程式移植到 UWP
 
@@ -74,7 +74,7 @@ Windows 開發人員中心文件包含如何將 Windows 8.1 應用程式移植�
 
 ### <a name="to-port-a-windows-81-runtime-component-to-the-uwp"></a>將 Windows 8.1 執行階段元件移植到 UWP
 
-1. 在 Visual Studio 2017 的 [新專案] 對話方塊中，找出 [Windows 通用] 節點。 如果沒有看到這個節點，請先安裝 [適用於 Windows 10 的工具](http://go.microsoft.com/fwlink/p/?LinkID=617903) 。 選擇 [Windows 執行階段元件]  範本，再為元件命名，然後選擇 [確定]  按鈕。 此元件名稱會用為命名空間的名稱，因此您可能會想要使用舊專案的命名空間名稱。 這需要您從舊專案將專案建立在與不同的資料夾中。 若選擇不同的名稱，可以在產生的程式碼檔案中，更新命名空間的名稱。
+1. 在 Visual Studio 2017 的 [新專案] 對話方塊中，找出 [Windows 通用] 節點。 如果沒有看到這個節點，請先安裝 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)。 選擇 [Windows 執行階段元件]  範本，再為元件命名，然後選擇 [確定]  按鈕。 此元件名稱會用為命名空間的名稱，因此您可能會想要使用舊專案的命名空間名稱。 這需要您從舊專案將專案建立在與不同的資料夾中。 若選擇不同的名稱，可以在產生的程式碼檔案中，更新命名空間的名稱。
 
 1. 關閉專案。
 

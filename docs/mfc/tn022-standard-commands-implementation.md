@@ -59,12 +59,12 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-ms.openlocfilehash: 4c066521ba2b5be9ac24a8abaece42e57b8ad85f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8d568760cc75a4c1f2ddb6dd88108cc830783194
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279345"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775827"
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022:標準命令實作
 
@@ -221,7 +221,7 @@ MFC 的標準命令落在範圍內以 0xEFFF 0xE000。 請不要依賴這些識�
 
    目前沒有任何標準的實作，此命令。 您必須針對每個實作此`CView`-衍生的類別。
 
-   如果您選擇實作這個命令，我們建議使用這個命令識別碼。 請參閱 MFC 教學課程範例[SCRIBBLE](../visual-cpp-samples.md)如需範例實作。
+   如果您選擇實作這個命令，我們建議使用這個命令識別碼。 請參閱 MFC 教學課程範例[SCRIBBLE](../overview/visual-cpp-samples.md)如需範例實作。
 
 - ID_EDIT_COPY 會將目前的選取範圍複製到剪貼簿。
 
@@ -438,7 +438,7 @@ MFC 的標準命令落在範圍內以 0xEFFF 0xE000。 請不要依賴這些識�
 
    所有的 OLE 用戶端應用程式應該實作這個命令。 AppWizard，使用 [OLE] 選項中，將會建立基本架構實作`OnInsertObject`您您必須完成的檢視類別中。
 
-   請參閱 MFC OLE 範例[OCLIENT](../visual-cpp-samples.md)此命令的完整實作的範例。
+   請參閱 MFC OLE 範例[OCLIENT](../overview/visual-cpp-samples.md)此命令的完整實作的範例。
 
 - ID_OLE_EDIT_LINKS 編輯 OLE 連結
 

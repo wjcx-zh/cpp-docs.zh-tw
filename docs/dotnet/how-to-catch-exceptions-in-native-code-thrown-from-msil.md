@@ -6,12 +6,12 @@ helpviewer_keywords:
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: acb3ba1ab6d10decba10b899861007abfff03359
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 95ce7a2afabc34ea78376b12da61f419dab4af34
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748719"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776553"
 ---
 # <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>HOW TO：從 MSIL 擲回的原生程式碼中攔截例外狀況
 
@@ -79,4 +79,4 @@ caught an exception
 
 ## <a name="see-also"></a>另請參閱
 
-[例外狀況處理](../windows/exception-handling-cpp-component-extensions.md)
+[例外狀況處理](../extensions/exception-handling-cpp-component-extensions.md)

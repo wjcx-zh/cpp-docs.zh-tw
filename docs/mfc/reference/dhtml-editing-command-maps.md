@@ -2,16 +2,16 @@
 title: DHTML 編輯命令對應
 ms.date: 11/04/2016
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-ms.openlocfilehash: 1f84a56876f1108e9b02d44f6ef0dec50f065c57
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7f420619983283c225ca8fca23c5ea349def1d1b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278258"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776150"
 ---
 # <a name="dhtml-editing-command-maps"></a>DHTML 編輯命令對應
 
-下列巨集可以用來對應 DHTML 編輯命令[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-衍生的類別。 如需其用法的範例，請參閱 < [HTMLEdit 範例](../../visual-cpp-samples.md)。
+下列巨集可以用來對應 DHTML 編輯命令[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-衍生的類別。 如需其用法的範例，請參閱 < [HTMLEdit 範例](../../overview/visual-cpp-samples.md)。
 
 ### <a name="dhtml-editing-command-map-macros"></a>DHTML 編輯命令對應巨集
 
@@ -46,7 +46,7 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 
 ### <a name="example"></a>範例
 
-請參閱[HTMLEdit 範例](../../visual-cpp-samples.md)。
+請參閱[HTMLEdit 範例](../../overview/visual-cpp-samples.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -89,7 +89,7 @@ END_DHTMLEDITING_CMDMAP()
 
 ### <a name="example"></a>範例
 
-請參閱[HTMLEdit 範例](../../visual-cpp-samples.md)。
+請參閱[HTMLEdit 範例](../../overview/visual-cpp-samples.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -113,7 +113,7 @@ HTML 編輯命令*cmdID*對應 （例如 2&gt;idm_copy&lt;2)。
 
 ### <a name="example"></a>範例
 
-請參閱[HTMLEdit 範例](../../visual-cpp-samples.md)。
+請參閱[HTMLEdit 範例](../../overview/visual-cpp-samples.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -140,7 +140,7 @@ HTML 編輯命令*cmdID*對應 （例如 2&gt;idm_copy&lt;2)。
 
 ### <a name="example"></a>範例
 
-請參閱[HTMLEdit 範例](../../visual-cpp-samples.md)。
+請參閱[HTMLEdit 範例](../../overview/visual-cpp-samples.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -167,7 +167,7 @@ HTML 編輯命令*cmdID*對應 （例如 2&gt;idm_copy&lt;2)。
 
 ### <a name="example"></a>範例
 
-請參閱[HTMLEdit 範例](../../visual-cpp-samples.md)。
+請參閱[HTMLEdit 範例](../../overview/visual-cpp-samples.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -197,7 +197,7 @@ HTML 編輯命令*cmdID*對應 （例如 2&gt;idm_copy&lt;2)。
 
 ### <a name="example"></a>範例
 
-請參閱[HTMLEdit 範例](../../visual-cpp-samples.md)。
+請參閱[HTMLEdit 範例](../../overview/visual-cpp-samples.md)。
 
 ### <a name="requirements"></a>需求
 

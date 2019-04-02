@@ -6,12 +6,12 @@ helpviewer_keywords:
 - static constructors, interface
 - interface static constructor
 ms.assetid: 1f031cb2-e94f-43dc-819b-44cf2faaaa49
-ms.openlocfilehash: dc1ef81bdefa5ed5d6418325bb250b7954d87268
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 326b315e1e6c4defbef3ab6e487c78635e0aa50f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748603"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772640"
 ---
 # <a name="how-to-define-an-interface-static-constructor-ccli"></a>HOW TO：定義介面靜態建構函式 (C + + /cli CLI)
 
@@ -56,4 +56,4 @@ in MyInterface static constructor
 
 ## <a name="see-also"></a>另請參閱
 
-[介面類別](../windows/interface-class-cpp-component-extensions.md)
+[介面類別](../extensions/interface-class-cpp-component-extensions.md)

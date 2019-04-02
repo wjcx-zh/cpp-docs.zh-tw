@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-ms.openlocfilehash: 8909f91e31279f1fc1395610aea4708b79731113
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.openlocfilehash: 342c222b837e179e2e13dbbd27c88efc18b12332
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805964"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774166"
 ---
 # <a name="comptr-class"></a>com::ptr 類別
 
@@ -43,7 +43,7 @@ COM 介面。
 
 `com::ptr` 也可以當做本機函式變數使用，以簡化各種 COM 工作並且將存留期管理自動化。
 
-A`com::ptr`無法直接做為函式參數使用; 請使用[追蹤參考運算子](../windows/tracking-reference-operator-cpp-component-extensions.md)或是[物件控制代碼運算子 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)改。
+A`com::ptr`無法直接做為函式參數使用; 請使用[追蹤參考運算子](../extensions/tracking-reference-operator-cpp-component-extensions.md)或是[物件控制代碼運算子 (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)改。
 
 A`com::ptr`無法從函式直接傳回; 請改用控制代碼。
 

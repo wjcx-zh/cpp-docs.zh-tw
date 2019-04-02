@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 2c43234ca05c661d8f3d920b1129256a7550a5e2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751826"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774915"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>HOW TO：定義和使用類別和結構 (C + + /cli CLI)
 
@@ -97,7 +97,7 @@ int main() {
 
 *隱含抽象類別*無法具現化。 如果類別的基底型別是一種介面和類別未實作所有介面的成員函式，是隱含抽象類別。
 
-如果您無法建構衍生自介面類別的物件，原因可能是隱含抽象類別。 如需抽象類別的詳細資訊，請參閱[抽象](../windows/abstract-cpp-component-extensions.md)。
+如果您無法建構衍生自介面類別的物件，原因可能是隱含抽象類別。 如需抽象類別的詳細資訊，請參閱[抽象](../extensions/abstract-cpp-component-extensions.md)。
 
 下列程式碼範例示範`MyClass`無法執行個體化類別，因為函式`MyClass::func2`未實作。 若要啟用來編譯範例，請取消註解`MyClass::func2`。
 
@@ -229,7 +229,7 @@ in Public_Class
 |public|成員可存取內部和外部組件。  請參閱[公開](../cpp/public-cpp.md)如需詳細資訊。|
 |private|無法存取，內部和外部組件都不成員。  請參閱[私人](../cpp/private-cpp.md)如需詳細資訊。|
 |protected|存取內部和外部組件，而只是衍生型別成員。  請參閱[保護](../cpp/protected-cpp.md)如需詳細資訊。|
-|internal|成員是公用組件內的但組件外部的私用。  `internal` 是即時線上關鍵字。  如需詳細資訊，請參閱 <<c0> [ 即時線上關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。|
+|internal|成員是公用組件內的但組件外部的私用。  `internal` 是即時線上關鍵字。  如需詳細資訊，請參閱 <<c0> [ 即時線上關鍵字](../extensions/context-sensitive-keywords-cpp-component-extensions.md)。|
 |公用的受保護受保護-或-公用|成員是公用的組件內部的但組件外部的受保護。|
 |私用受保護或受保護的私用|成員是受保護的組件內，但組件外部的私用。|
 
@@ -499,9 +499,9 @@ in static constructor
 
 如需詳細資訊，請參閱
 
-- [物件控制代碼運算子 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)
+- [物件控制代碼運算子 (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
 
-- [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)
+- [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)
 
 ```cpp
 // compile with: /clr
@@ -797,7 +797,7 @@ ref struct A {
 
 - 此物件為的物件的解構函式正在執行中的成員。
 
-- 您呼叫[刪除](../cpp/delete-operator-cpp.md)控制代碼運算子 ([物件控制代碼運算子 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md))。
+- 您呼叫[刪除](../cpp/delete-operator-cpp.md)控制代碼運算子 ([物件控制代碼運算子 (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md))。
 
 - 您明確地呼叫解構函式。
 
@@ -844,7 +844,7 @@ int main() {
 
 如果完成項刪除原生指標的 managed 類型中，您必須確定，或是透過原生指標的參考不會提前結束收集;而不是使用 managed 類型上呼叫解構函式<xref:System.GC.KeepAlive%2A>。
 
-在編譯時期，您可以偵測到的型別是否具有完成項或解構函式。 如需詳細資訊，請參閱 <<c0> [ 類型特性的編譯器支援](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。
+在編譯時期，您可以偵測到的型別是否具有完成項或解構函式。 如需詳細資訊，請參閱 <<c0> [ 類型特性的編譯器支援](../extensions/compiler-support-for-type-traits-cpp-component-extensions.md)。
 
 下一個範例示範兩種類型的 unmanaged 的資源，一個具有 managed 決定性地釋放資源。
 
@@ -914,5 +914,5 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)<br/>
-[類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)
+[類別和結構](../extensions/classes-and-structs-cpp-component-extensions.md)<br/>
+[類別和結構](../extensions/classes-and-structs-cpp-component-extensions.md)

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: ea95de2bceab290f94bb7c0e7bbc94a90048ee13
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d60082092bd42fbe220eee08953ad5fda0ff0a85
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259252"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774149"
 ---
 # <a name="cscrollview-class"></a>CScrollView 類別
 
@@ -82,7 +82,7 @@ class CScrollView : public CView
 
 您可以處理您自己藉由覆寫訊息對應中捲動滑鼠滾輪[OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel)並[OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel)成員函式。 因為它們是針對`CScrollView`，這些成員函式支援建議的行為[WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel)，滾輪旋轉訊息。
 
-若要利用自動捲動，衍生您的檢視類別，從`CScrollView`而不是從`CView`。 檢視第一次建立時，如果您想要計算的文件中，呼叫大小為基礎的可捲動檢視的大小`SetScrollSizes`成員函式的覆寫[cview:: Oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate)或[CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate)。 （您必須撰寫自己的程式碼來查詢文件大小。 如需範例，請參閱[Scribble 範例](../../visual-cpp-samples.md)。)
+若要利用自動捲動，衍生您的檢視類別，從`CScrollView`而不是從`CView`。 檢視第一次建立時，如果您想要計算的文件中，呼叫大小為基礎的可捲動檢視的大小`SetScrollSizes`成員函式的覆寫[cview:: Oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate)或[CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate)。 （您必須撰寫自己的程式碼來查詢文件大小。 如需範例，請參閱[Scribble 範例](../../overview/visual-cpp-samples.md)。)
 
 若要呼叫`SetScrollSizes`成員函式設定檢視的對應模式中，捲動檢視] 和 [水平與垂直捲動的數量總計的維度。 所有大小都都以邏輯單位表示。 檢視的邏輯大小通常會計算從儲存在文件中的資料，但在某些情況下您可能想要指定固定的大小。 如需這兩種方法的範例，請參閱 < [CScrollView::SetScrollSizes](#setscrollsizes)。
 
@@ -376,7 +376,7 @@ void SetScrollSizes(
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 DIBLOOK](../../visual-cpp-samples.md)<br/>
+[MFC 範例 DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
 [CView 類別](../../mfc/reference/cview-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CView 類別](../../mfc/reference/cview-class.md)<br/>

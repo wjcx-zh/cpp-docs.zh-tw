@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 03f9e5e0cac9cc71080bfe97d6a3115fd3cc99b5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0e5194a356684f2ff86d74a0ed1f37f332bcffeb
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418993"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781649"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet 類別
 
@@ -830,9 +830,9 @@ void SetWizardMode();
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 CMNCTRL1](../../visual-cpp-samples.md)<br/>
-[MFC 範例 CMNCTRL2](../../visual-cpp-samples.md)<br/>
-[MFC 範例 PROPDLG](../../visual-cpp-samples.md)<br/>
-[MFC 範例 SNAPVW](../../visual-cpp-samples.md)<br/>
+[MFC 範例 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
+[MFC 範例 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
+[MFC 範例 PROPDLG](../../overview/visual-cpp-samples.md)<br/>
+[MFC 範例 SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)

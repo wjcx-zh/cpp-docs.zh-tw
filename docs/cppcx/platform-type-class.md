@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-ms.openlocfilehash: 73338e5b4c723c7f66dbecaea5add3b197f3493d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 456dbff652c8f1b800308ff757930b425616a83f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744037"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781740"
 ---
 # <a name="platformtype-class"></a>Platform::Type 類別
 
-包含與類型 (特別是此項)、字串名稱和 typecode 相關的執行階段資訊。 藉由呼叫取得[object:: gettype](../cppcx/platform-object-class.md#gettype)上的任何物件或使用[typeid](../windows/typeid-cpp-component-extensions.md)運算子，在類別或結構的名稱。
+包含與類型 (特別是此項)、字串名稱和 typecode 相關的執行階段資訊。 藉由呼叫取得[object:: gettype](../cppcx/platform-object-class.md#gettype)上的任何物件或使用[typeid](../extensions/typeid-cpp-component-extensions.md)運算子，在類別或結構的名稱。
 
 ## <a name="syntax"></a>語法
 
@@ -57,7 +57,7 @@ public ref class Platform::Type :
 
 **最低支援伺服器：** Windows Server 2012
 
-**命名空間：** Platform
+**命名空間：** 平台
 
 **中繼資料：** platform.winmd
 
@@ -122,4 +122,4 @@ Platform::String^ ToString();
 
 ## <a name="see-also"></a>另請參閱
 
-[Platform 命名空間](../cppcx/platform-namespace-c-cx.md)
+[平台命名空間](../cppcx/platform-namespace-c-cx.md)

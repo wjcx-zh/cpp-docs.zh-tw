@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: 09d4c4f1fde563d82fa007a96723f078eb31dc1b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a3c90f4b75b79dc51091c87a5a84b5c59a70646f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423231"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772575"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase 類別
 
@@ -2565,4 +2565,4 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
 ## <a name="see-also"></a>另請參閱
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
-[HTMLEdit 範例](../../visual-cpp-samples.md)
+[HTMLEdit 範例](../../overview/visual-cpp-samples.md)

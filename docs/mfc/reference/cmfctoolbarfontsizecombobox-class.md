@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-ms.openlocfilehash: a1dd85ed7bf80f5307bf0bd07ef5ef74875c8562
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 43832f6c9b02c43fbe4a05cbea3add8783150113
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258940"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767661"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>CMFCToolBarFontSizeComboBox 類別
 
@@ -57,7 +57,7 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用中的各種方法`CMFCToolBarFontSizeComboBox`類別，以設定`CMFCToolBarFontSizeComboBox`物件。 此範例說明如何擷取的字型大小，以 twip 為單位，從文字方塊中填入所有的有效大小的指定之字型的字型的大小下拉式方塊，以 twip 為單位指定的字型大小。 此程式碼片段是 [WordPad 範例](../../visual-cpp-samples.md)的一部分。
+下列範例示範如何使用中的各種方法`CMFCToolBarFontSizeComboBox`類別，以設定`CMFCToolBarFontSizeComboBox`物件。 此範例說明如何擷取的字型大小，以 twip 為單位，從文字方塊中填入所有的有效大小的指定之字型的字型的大小下拉式方塊，以 twip 為單位指定的字型大小。 此程式碼片段是 [WordPad 範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_WordPad#8](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontsizecombobox-class_1.cpp)]
 

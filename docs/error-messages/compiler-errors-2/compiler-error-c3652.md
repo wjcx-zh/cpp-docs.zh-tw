@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3652
 ms.assetid: 15d68737-177e-41f1-80e0-7c3e2afdf0fc
-ms.openlocfilehash: acdb8f7687639e2b35e36ea9ebf514292f4631fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 350edcf409cf2a890a8f83147ce0ae13e9992694
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470326"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767947"
 ---
 # <a name="compiler-error-c3652"></a>編譯器錯誤 C3652
 
 'override': 明確覆寫的函式必須為虛擬
 
-未明確覆寫的函式必須是虛擬的。 如需詳細資訊，請參閱 <<c0> [ 明確覆寫](../../windows/explicit-overrides-cpp-component-extensions.md)。
+未明確覆寫的函式必須是虛擬的。 如需詳細資訊，請參閱 <<c0> [ 明確覆寫](../../extensions/explicit-overrides-cpp-component-extensions.md)。
 
 下列範例會產生 C3652:
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], CRichEditCntrItem
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
-ms.openlocfilehash: 0f71607147b353c5071830bdce481f1e5e5d4717
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 674937df9b4ecef0d159a47a45a716d1175ad5d9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268482"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773836"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem 類別
 
@@ -49,7 +49,7 @@ class CRichEditCntrItem : public COleClientItem
 
 這個 Windows 通用控制項 (因而[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)和相關類別) 僅適用於 Windows 95/98 和 Windows NT 的版本 3.51 下執行的程式和更新版本。
 
-如需範例 MFC 應用程式中使用豐富的編輯容器項目，請參閱[WORDPAD](../../visual-cpp-samples.md)範例應用程式。
+如需範例 MFC 應用程式中使用豐富的編輯容器項目，請參閱[WORDPAD](../../overview/visual-cpp-samples.md)範例應用程式。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -110,7 +110,7 @@ void SyncToRichEditObject(REOBJECT& reo);
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 WORDPAD](../../visual-cpp-samples.md)<br/>
+[MFC 範例 WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [COleClientItem 類別](../../mfc/reference/coleclientitem-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CRichEditDoc 類別](../../mfc/reference/cricheditdoc-class.md)<br/>

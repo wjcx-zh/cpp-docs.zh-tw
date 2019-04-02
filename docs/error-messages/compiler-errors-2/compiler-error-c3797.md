@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3797
 ms.assetid: ab27ff34-8c1d-4297-b004-9e39bd3a4f25
-ms.openlocfilehash: 2c8570edf16b9c002f9506b1b179a2ab36f7f26e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76206cdffce3f551ff472cbd83df486eb41ae80b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557526"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774824"
 ---
 # <a name="compiler-error-c3797"></a>編譯器錯誤 C3797
 
@@ -19,7 +19,7 @@ ms.locfileid: "50557526"
 
 您無法覆寫 trivial 事件 （不需要明確定義的存取子方法的事件） 與另一個 trivial 事件。 覆寫的事件必須定義其存取子函式的行為。
 
-如需詳細資訊，請參閱 <<c0> [ 事件](../../windows/event-cpp-component-extensions.md)。
+如需詳細資訊，請參閱 <<c0> [ 事件](../../extensions/event-cpp-component-extensions.md)。
 
 ## <a name="example"></a>範例
 

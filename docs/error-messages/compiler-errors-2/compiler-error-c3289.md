@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3289
 ms.assetid: 3c1c623b-7fcf-43ab-a89a-8722532a8d29
-ms.openlocfilehash: 0ebb56023694b1713bfe88379d07fc621da4d43f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d234ad4b7c48a66352e52d3517dfd675f27b002c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622647"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781558"
 ---
 # <a name="compiler-error-c3289"></a>編譯器錯誤 C3289
 
 'property' : trivial 屬性不可索引
 
-屬性宣告不正確。 必須定義索引屬性的存取子。 如需詳細資訊，請參閱 [property](../../windows/property-cpp-component-extensions.md) 。
+屬性宣告不正確。 必須定義索引屬性的存取子。 如需詳細資訊，請參閱 [property](../../extensions/property-cpp-component-extensions.md) 。
 
 ## <a name="example"></a>範例
 

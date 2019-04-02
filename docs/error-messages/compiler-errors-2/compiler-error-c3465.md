@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3465
 ms.assetid: aeb815e5-b3fc-4525-afe2-d738e9321df1
-ms.openlocfilehash: 8a6cbbc1e75d345d0ebdcfc9e1db32f660c13b01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 117c9b9918950fd2e95e206c5aea457dee183b0a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653406"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781571"
 ---
 # <a name="compiler-error-c3465"></a>編譯器錯誤 C3465
 
@@ -19,7 +19,7 @@ ms.locfileid: "50653406"
 
 在您重新編譯用戶端之前，類型轉送都適用於用戶端應用程式。 當您重新編譯時，您會需要每一個包含用戶端應用程式所用之類型定義之組件的參考。
 
-如需詳細資訊，請參閱 <<c0> [ 型別轉送 (C + + /cli CLI)](../../windows/type-forwarding-cpp-cli.md)。
+如需詳細資訊，請參閱 <<c0> [ 型別轉送 (C + + /cli CLI)](../../extensions/type-forwarding-cpp-cli.md)。
 
 ## <a name="example"></a>範例
 

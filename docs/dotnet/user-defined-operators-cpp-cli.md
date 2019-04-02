@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-ms.openlocfilehash: 462d0d2819d4c65b0e37d39f24566a7152a44cf3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: cf80eb4c440c1308e8ea06a563c18569e4e4ddf2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739992"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774564"
 ---
 # <a name="user-defined-operators-ccli"></a>使用者定義的運算子 (C++/CLI)
 
@@ -19,7 +19,7 @@ Managed 類型的使用者定義運算子允許為靜態成員或是執行個體
 
 - 封入類型的執行個體之控制代碼 (`type` ^)。
 
-- 對封入類型之執行個體的控制代碼進行參考類型的間接取值 (`type`^& 或 type^%)。
+- 參考類型進行間接取值 (`type`^ & 或型別 ^ %)封入類型的執行個體的控制代碼。
 
 在實值類型中，其中一個靜態使用者定義運算子的參數必須是下列其中一個：
 
@@ -27,9 +27,9 @@ Managed 類型的使用者定義運算子允許為靜態成員或是執行個體
 
 - 對封入類型的指標類型進行間接取值 (`type`^)。
 
-- 對封入類型的參考類型進行間接取值 (`type`% 或 `type`&)。
+- 參考類型進行間接取值 (`type`%或`type`（& s)) 至封入類型。
 
-- 對控制代碼的參考類型進行間接取值 (`type`^% 或 `type`^&)。
+- 參考類型進行間接取值 (`type`^ %或`type`^ &) 的控制代碼。
 
 您可以定義下列運算子：
 
@@ -165,4 +165,4 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)
+[類別和結構](../extensions/classes-and-structs-cpp-component-extensions.md)

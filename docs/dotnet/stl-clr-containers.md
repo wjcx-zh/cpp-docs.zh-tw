@@ -6,12 +6,12 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: 511ea14d02b77e237ae9768776c4ff3eb97982ed
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: dc2e5ce3263c61839a1ba434ab0d2a39e6a9078f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744359"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774538"
 ---
 # <a name="stlclr-containers"></a>STL/CLR 容器
 
@@ -37,7 +37,7 @@ STL/CLR 容器可保留兩種類型之一的項目：
 
 ### <a name="handles-to-reference-types"></a>參考類型的控制代碼
 
-您可以將參考類型的控制代碼插入至 STL/CLR 容器。 C++ 中以 CLR 為目標的控制代碼與原生 C++ 的指標類似。 如需詳細資訊，請參閱 <<c0> [ 物件控制代碼運算子 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)。
+您可以將參考類型的控制代碼插入至 STL/CLR 容器。 C++ 中以 CLR 為目標的控制代碼與原生 C++ 的指標類似。 如需詳細資訊，請參閱 <<c0> [ 物件控制代碼運算子 (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)。
 
 #### <a name="example"></a>範例
 
@@ -229,7 +229,7 @@ int main()
 
 您也可以將 Unboxed 實值類型插入至 STL/CLR 容器。 Unboxed 實的值型別是實值型別尚未*boxed*成參考型別。
 
-實值類型項目可以是其中一個標準實值類型 (例如 `int`)，也可以是使用者定義的實值類型 (例如 `value class`)。 如需詳細資訊，請參閱[類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)
+實值類型項目可以是其中一個標準實值類型 (例如 `int`)，也可以是使用者定義的實值類型 (例如 `value class`)。 如需詳細資訊，請參閱[類別和結構](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 #### <a name="example"></a>範例
 

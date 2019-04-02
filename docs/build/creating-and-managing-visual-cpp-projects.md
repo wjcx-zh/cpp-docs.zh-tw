@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: b5fb9ac87547578f101676d4cf424c7065155842
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: a3ddafab143224b6e20a3e01d1d643c42bbe19e0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824868"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775318"
 ---
 # <a name="visual-studio-projects---c"></a>Visual Studio 專案-c + +
 
@@ -26,7 +26,7 @@ A *Visual Studio 專案*是專案為基礎的 MSBuild 建置系統。 MSBuild �
 
 您可以選擇，以建立 c + + 專案**檔案&#124;新增&#124;專案**，然後在左窗格中選擇 Visual c + +。 在中間窗格中，您會看到一份專案範本： 
 
-   ![專案範本](../media/vs2017-new-project.png "Visual Studio 2017 [新增專案] 對話方塊")
+   ![專案範本](../overview/media/vs2017-new-project.png "Visual Studio 2017 [新增專案] 對話方塊")
 
 如需包含在 Visual Studio 中的所有預設專案範本的詳細資訊，請參閱[Visual Studio 中的 c + + 專案範本](reference/visual-cpp-project-types.md)。 您可以建立您自己的專案範本。 如需詳細資訊，請參閱[如何：建立專案範本](/visualstudio/ide/how-to-create-project-templates)。
 
@@ -42,7 +42,7 @@ A *Visual Studio 專案*是專案為基礎的 MSBuild 建置系統。 MSBuild �
 
 ## <a name="add-third-party-libraries"></a>新增協力廠商程式庫
 
-若要新增協力廠商程式庫，請使用[vcpkg](../vcpkg.md)封裝管理員。 執行 Visual Studio 整合的步驟來設定該程式庫的路徑，當您從任何 Visual Studio 專案參考它。 
+若要新增協力廠商程式庫，請使用[vcpkg](vcpkg.md)封裝管理員。 執行 Visual Studio 整合的步驟來設定該程式庫的路徑，當您從任何 Visual Studio 專案參考它。 
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>設定編譯器選項和其他組建屬性
 
@@ -54,16 +54,16 @@ A *Visual Studio 專案*是專案為基礎的 MSBuild 建置系統。 MSBuild �
 
 新的專案編譯無誤。 當加入您自己的程式碼，可能偶爾會導入錯誤，或觸發警告。 錯誤會導致組建無法完成;警告則否。 所有錯誤和警告會都出現在 [輸出] 視窗和錯誤清單中建置專案時。 
 
-   ![輸出視窗和錯誤清單](../media/vs2017-output-error-list.png)
+   ![輸出視窗和錯誤清單](../overview/media/vs2017-output-error-list.png)
 
 在 錯誤清單中，您可以按下**F1**上醒目標示的錯誤，以移至其文件主題。
 
 ## <a name="in-this-section"></a>本節內容
 
-[設定 c + + 編譯器和建置在 Visual Studio 中的屬性](working-with-project-properties.md)<br/>
+[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](working-with-project-properties.md)<br/>
 如何使用屬性頁和屬性工作表來指定專案設定。
 
-[參考程式庫和建置階段的元件](adding-references-in-visual-cpp-projects.md)<br/>
+[在建置階段參考程式庫和元件](adding-references-in-visual-cpp-projects.md)<br/>
 如何在專案中包含程式庫、 Dll、 COM 和.NET 元件。
  
 [組織專案輸出檔案](how-to-organize-project-output-files-for-builds.md)<br/>
@@ -77,4 +77,4 @@ A *Visual Studio 專案*是專案為基礎的 MSBuild 建置系統。 MSBuild �
 
 ## <a name="see-also"></a>另請參閱
 
-[專案和組建系統](projects-and-build-systems-cpp.md)<br>
+[專案和建置系統](projects-and-build-systems-cpp.md)<br>

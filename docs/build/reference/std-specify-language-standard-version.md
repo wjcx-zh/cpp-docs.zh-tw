@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: d66a9ed445e28de2341aa2a07f249c10cba83da4
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 32c63240f578b6170ae351cdf0cd1628167464b6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812001"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779738"
 ---
 # <a name="std-specify-language-standard-version"></a>/std （指定語言標準版本）
 
@@ -37,11 +37,11 @@ ms.locfileid: "57812001"
 
 - [u8 字元常值](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4267.html)
 
-如需詳細資訊的 C + + 14 和 C + + 17 功能啟用時 **/std: c + + 14**會指定，請參閱[Visual c + + 語言一致性](../../visual-cpp-language-conformance.md)。
+如需詳細資訊的 C + + 14 和 C + + 17 功能啟用時 **/std: c + + 14**會指定，請參閱[Visual c + + 語言一致性](../../overview/visual-cpp-language-conformance.md)。
 
 **/Std: c + + 17**選項會啟用整組 c++17 功能由 MSVC 編譯器實作。 此選項會對 C++ 標準中，在 C++17 之後推出但屬於進行中草稿及瑕疵更新版本的變更或新增功能，停用編譯器及標準程式庫支援。
 
-**/Std: c + + 最新**選項可讓 post-c++17 語言和程式庫中的編譯器和程式庫目前實作的功能。 這些可能包括從 C + + 20 草稿及瑕疵更新 c + + 標準的 C + + 17，以及實驗的提案草稿標準未包含的功能。 如需支援的語言和程式庫功能的清單，請參閱 < [What's New for Visual c + +](../../what-s-new-for-visual-cpp-in-visual-studio.md)。 **/Std: c + + 最新**選項不會啟用保護功能 **/ experimental**參數，但可能必須啟用它們。
+**/Std: c + + 最新**選項可讓 post-c++17 語言和程式庫中的編譯器和程式庫目前實作的功能。 這些可能包括從 C + + 20 草稿及瑕疵更新 c + + 標準的 C + + 17，以及實驗的提案草稿標準未包含的功能。 如需支援的語言和程式庫功能的清單，請參閱 < [What's New for Visual c + +](../../overview/what-s-new-for-visual-cpp-in-visual-studio.md)。 **/Std: c + + 最新**選項不會啟用保護功能 **/ experimental**參數，但可能必須啟用它們。
 
 > [!IMPORTANT]
 > 啟用的編譯器和程式庫功能 **/std: c + + 最新**會作為-是並不支援。 會受限於重大變更或移除，恕不另行通知。 作為預覽可能會出現在標準，下一版的語言功能，但標準是進行中的工作。 使用  **/std: c + + 17**最新的 ISO c + + 標準中使用的功能。
@@ -51,7 +51,7 @@ ms.locfileid: "57812001"
 **/Std: c + + 14**並 **/std: c + + 最新**選項會在 Visual c + + 2015 Update 3 開始提供。 **/Std: c + + 17**選項是在 Visual c + + 2017 15.3 版開始提供。 如先前所述，某些 C + + 17 標準會啟用行為 **/std: c + + 14**選項，但所有其他 c++17 功能會啟用 **/std: c + + 17**。
 
 > [!NOTE]
-> MSVC 編譯器的版本或更新層級，根據特定 C + + 14 或 C + + 17 功能可能未完全實作或完全符合標準時您所指定 **/std: c + + 14**或是 **/std: c + + 17**選項。 例如，Visual c + + 2017 RTM 編譯器不完全支援 C + + 14 符合標準`constexpr`，運算式 SFINAE 或 2 階段名稱查閱。 如需 Visual c + + 中的發行版本的 c + + 語言一致性的概觀，請參閱 < [Visual c + + 語言一致性](../../visual-cpp-language-conformance.md)。
+> MSVC 編譯器的版本或更新層級，根據特定 C + + 14 或 C + + 17 功能可能未完全實作或完全符合標準時您所指定 **/std: c + + 14**或是 **/std: c + + 17**選項。 例如，Visual c + + 2017 RTM 編譯器不完全支援 C + + 14 符合標準`constexpr`，運算式 SFINAE 或 2 階段名稱查閱。 如需 Visual c + + 中的發行版本的 c + + 語言一致性的概觀，請參閱 < [Visual c + + 語言一致性](../../overview/visual-cpp-language-conformance.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
@@ -64,4 +64,4 @@ ms.locfileid: "57812001"
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 0c27545c6f425eda952e87c80ed1d37de9e1093a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6c2f619d9cd619ca598c66ca657faa1b9dccaaa2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294989"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781727"
 ---
 # <a name="tn029-splitter-windows"></a>TN029:分隔視窗
 
@@ -46,7 +46,7 @@ A`CSplitterWnd`支援分割 windows 的兩個不同的樣式。
 
 ## <a name="splitter-examples"></a>分隔器範例
 
-直接或間接，許多 MFC 範例程式會使用分隔視窗。 MFC 一般範例[VIEWEX](../visual-cpp-samples.md)說明幾種靜態分隔器，包括如何將分隔器放在分隔器的使用。
+直接或間接，許多 MFC 範例程式會使用分隔視窗。 MFC 一般範例[VIEWEX](../overview/visual-cpp-samples.md)說明幾種靜態分隔器，包括如何將分隔器放在分隔器的使用。
 
 您也可以使用類別精靈來建立新的多個文件介面 (MDI) 子框架視窗類別，其中包含分隔器視窗。 如需有關分隔視窗的詳細資訊，請參閱[多個文件類型、 檢視和框架 Windows](../mfc/multiple-document-types-views-and-frame-windows.md)。
 

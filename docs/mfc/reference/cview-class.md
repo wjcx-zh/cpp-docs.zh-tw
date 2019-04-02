@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: fe9b282fd248f8dd03a6a7f078c03866d1b14b2d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 06c6d4dff28399f3d8e6ac7f46d9ed751850036f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305012"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775305"
 ---
 # <a name="cview-class"></a>CView 類別
 
@@ -351,7 +351,7 @@ DROPEFFECT 值的列舉型別，這表示如果使用者在這個位置卸除該
 
 - 如 MK_ALT DROPEFFECT_MOVE 會建立一份已卸除的物件和刪除原始的物件。 這通常是預設的拖放效果，檢視可接受這個資料物件。
 
-如需詳細資訊，請參閱 MFC 進階概念範例[OCLIENT](../../visual-cpp-samples.md)。
+如需詳細資訊，請參閱 MFC 進階概念範例[OCLIENT](../../overview/visual-cpp-samples.md)。
 
 ### <a name="remarks"></a>備註
 
@@ -405,7 +405,7 @@ DROPEFFECT 值的列舉型別，這表示如果使用者在這個位置卸除該
 
 - 如 MK_ALT DROPEFFECT_MOVE 會建立一份已卸除的物件和刪除原始的物件。 這通常是預設的拖放效果，檢視可接受的資料物件。
 
-如需詳細資訊，請參閱 MFC 進階概念範例[OCLIENT](../../visual-cpp-samples.md)。
+如需詳細資訊，請參閱 MFC 進階概念範例[OCLIENT](../../overview/visual-cpp-samples.md)。
 
 ### <a name="remarks"></a>備註
 
@@ -445,7 +445,7 @@ DROPEFFECT 值的列舉型別，這表示如果使用者在這個位置卸除該
 
 - DROPEFFECT_SCROLL 表示拖曳捲軸作業會發生，或作業在目標檢視。
 
-如需詳細資訊，請參閱 MFC 進階概念範例[OCLIENT](../../visual-cpp-samples.md)。
+如需詳細資訊，請參閱 MFC 進階概念範例[OCLIENT](../../overview/visual-cpp-samples.md)。
 
 ### <a name="remarks"></a>備註
 
@@ -871,7 +871,7 @@ virtual void OnUpdate(
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 MDIDOCVW](../../visual-cpp-samples.md)<br/>
+[MFC 範例 MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>

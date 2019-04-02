@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3062
 ms.assetid: 78632e6d-255f-42c3-b124-31a9194ff86d
-ms.openlocfilehash: ac45847c94e7d2dc731eba71b0a38105eb915e53
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f4157db4a2a1b1864446a082deddc73df2e2fe9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590407"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776365"
 ---
 # <a name="compiler-error-c3062"></a>編譯器錯誤 C3062
 
@@ -19,7 +19,7 @@ ms.locfileid: "50590407"
 
 您可以指定列舉的基礎型別。 不過，某些類型需要您將值指派給每個列舉值。
 
-如需有關列舉的詳細資訊，請參閱[列舉類別](../../windows/enum-class-cpp-component-extensions.md)。
+如需有關列舉的詳細資訊，請參閱[列舉類別](../../extensions/enum-class-cpp-component-extensions.md)。
 
 下列範例會產生 C3062:
 

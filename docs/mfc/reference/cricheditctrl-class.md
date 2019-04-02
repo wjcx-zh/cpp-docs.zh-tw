@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 634aa4adbe4e7084266be43ef932074373835c10
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5517efca66744c43eeccd3fb91b97a6fedc8180e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414287"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779270"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl 類別
 
@@ -269,7 +269,7 @@ class CRichEditCtrl : public CWnd
 
 - [使用 CRichEditCtrl](../../mfc/using-cricheditctrl.md)
 
-使用 rich edit 控制項的 MFC 應用程式中的範例，請參閱[WORDPAD](../../visual-cpp-samples.md)範例應用程式。
+使用 rich edit 控制項的 MFC 應用程式中的範例，請參閱[WORDPAD](../../overview/visual-cpp-samples.md)範例應用程式。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -2198,7 +2198,7 @@ BOOL Undo();
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 WORDPAD](../../visual-cpp-samples.md)<br/>
+[MFC 範例 WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CEdit 類別](../../mfc/reference/cedit-class.md)<br/>

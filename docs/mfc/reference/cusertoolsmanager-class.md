@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CUserToolsManager [MFC], SetDefExt
 - CUserToolsManager [MFC], SetFilter
 ms.assetid: bdfa37ae-efca-4616-abb5-9d0dcd2d335b
-ms.openlocfilehash: 7fa2f0bc5717c7481b4ed415e89fbb0cc8df0ffc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 857e86184e1b7ea399787520e9c4701547185133
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289360"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777086"
 ---
 # <a name="cusertoolsmanager-class"></a>CUserToolsManager 類別
 
@@ -108,7 +108,7 @@ class CUserToolsManager : public CObject
 
 ## <a name="example"></a>範例
 
-下列範例示範如何擷取參考`CUserToolsManager`物件，以及如何建立新的使用者工具。 此程式碼片段是一部分[Visual Studio 示範範例](../../visual-cpp-samples.md)。
+下列範例示範如何擷取參考`CUserToolsManager`物件，以及如何建立新的使用者工具。 此程式碼片段是一部分[Visual Studio 示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#38](../../mfc/codesnippet/cpp/cusertoolsmanager-class_1.cpp)]
 

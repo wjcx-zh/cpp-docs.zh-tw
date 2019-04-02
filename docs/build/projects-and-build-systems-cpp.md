@@ -12,12 +12,12 @@ helpviewer_keywords:
 - builds [C++], options
 - Visual C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: 0c4a74ce69f5c52eb6fc107ea477e5715e86ecd2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6a4048d741cf291d8d6173c1444b6933523c6851
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824767"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775422"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>C/c + + 專案和 Visual Studio 中的建置系統
 
@@ -74,10 +74,12 @@ cl /EHsc hello.cpp
 
 [發行組建](release-builds.md)如何建立與疑難排解最佳化的發行組建部署至使用者。
 
-[使用 MSVC 工具組，從命令列](building-on-the-command-line.md)<br/>
+[從命令列使用 MSVC 工具組](building-on-the-command-line.md)<br/>
 討論如何使用 C/c + + 編譯器和建置工具，直接從命令列，而不是使用 Visual Studio IDE。
 
 [建置在 Visual Studio 中的 Dll](dlls-in-visual-cpp.md)如何建立、 偵錯及部署 Visual Studio 中的 C/c + + Dll （共用程式庫）。
+
+[逐步解說：建立和使用靜態程式庫](walkthrough-creating-and-using-a-static-library-cpp.md)如何建立.lib 二進位檔案。
 
 [建置 C/c + + 隔離應用程式和並排顯示組件](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)描述 Windows 桌面應用程式，隔離的應用程式和並排顯示組件的概念為基礎的部署模型。
 

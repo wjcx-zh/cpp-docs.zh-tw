@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3189
 ms.assetid: b254de79-931e-4a59-a9f4-1c690d90ca5e
-ms.openlocfilehash: fe9dc38748fd667734c5d80f1284348184fed450
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2de290178657ae427b5ad7999c511ae7ff9f1eb
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456975"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781883"
 ---
 # <a name="compiler-error-c3189"></a>編譯器錯誤 C3189
 
 ' typeid\<抽象宣告子的類型 >': 已不再支援此語法，請使用:: typeid 改為
 
-過時形式[typeid](../../windows/typeid-cpp-component-extensions.md)已使用，使用新的表單。
+過時形式[typeid](../../extensions/typeid-cpp-component-extensions.md)已使用，使用新的表單。
 
 下列範例會產生 C3189:
 

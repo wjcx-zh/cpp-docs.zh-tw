@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6018
 ms.assetid: f6dd40d1-a119-4d8b-b39e-97350ea23349
-ms.openlocfilehash: e0d229b4fd8c1a4f8e067c0e59a278344fd4e113
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b36e2184e5be131645fb4dd58a361fdb9a31da63
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531909"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774968"
 ---
 # <a name="c-runtime-error-r6018"></a>C 執行階段錯誤 R6018
 
@@ -32,4 +32,4 @@ ms.locfileid: "50531909"
 
 如果程式不小心變更執行階段堆積資料，通常就會發生此錯誤。 不過，它也會造成執行階段或作業系統的程式碼中發生內部錯誤。
 
-若要修正此問題，請檢查程式碼中的堆積損毀錯誤。 如需詳細資訊和範例，請參閱 < [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 接下來，請檢查您的應用程式部署會使用最新的可轉散發套件。 如需資訊，請參閱[Visual c + + 中的部署](../../ide/deployment-in-visual-cpp.md)。
+若要修正此問題，請檢查程式碼中的堆積損毀錯誤。 如需詳細資訊和範例，請參閱 < [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 接下來，請檢查您的應用程式部署會使用最新的可轉散發套件。 如需資訊，請參閱[Visual c + + 中的部署](../../windows/deployment-in-visual-cpp.md)。

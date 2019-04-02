@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6017
 ms.assetid: df3ec5f5-6771-4648-ba06-0e26c6a1cc6a
-ms.openlocfilehash: 75e2512196937b483d6bc1a9817f6957bb468418
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 45f3b07f540cb72a955b19420130a5a806b750d7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653913"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774694"
 ---
 # <a name="c-runtime-error-r6017"></a>C 執行階段錯誤 R6017
 
@@ -30,4 +30,4 @@ ms.locfileid: "50653913"
 
 程序嘗試存取系統資源上的 C 執行階段執行緒鎖定時，收到未預期的錯誤。 如果不小心改變程序的執行階段堆積資料，通常會發生此錯誤。 不過，它也會造成執行階段程式庫或作業系統的程式碼中發生內部錯誤。
 
-若要修正此問題，請檢查程式碼中的堆積損毀錯誤。 如需詳細資訊和範例，請參閱 < [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 接下來，請檢查您的應用程式部署會使用最新的可轉散發套件。 如需資訊，請參閱[Visual c + + 中的部署](../../ide/deployment-in-visual-cpp.md)。
+若要修正此問題，請檢查程式碼中的堆積損毀錯誤。 如需詳細資訊和範例，請參閱 < [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 接下來，請檢查您的應用程式部署會使用最新的可轉散發套件。 如需資訊，請參閱[Visual c + + 中的部署](../../windows/deployment-in-visual-cpp.md)。

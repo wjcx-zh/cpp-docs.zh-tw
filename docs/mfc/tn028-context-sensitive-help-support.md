@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-ms.openlocfilehash: e3ac2742f2c57c01c645c72c933234a96ece773a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5689e314c2ba94068619a066e5f458e06819b2b7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288281"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773472"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028:即時線上說明支援
 
@@ -148,7 +148,7 @@ HID_MY_COMMAND    0x10096
 
 這種格式與說明編譯器的功能相容，可內容 ID (右邊的數字) 與主題名稱 (左邊的符號)。
 
-MAKEHM 的原始程式碼位於 MFC 程式設計的公用程式範例[MAKEHM](../visual-cpp-samples.md)。
+MAKEHM 的原始程式碼位於 MFC 程式設計的公用程式範例[MAKEHM](../overview/visual-cpp-samples.md)。
 
 ## <a name="adding-help-support-after-running-the-mfc-application-wizard"></a>執行 MFC 應用程式精靈後加入說明支援
 
@@ -158,8 +158,7 @@ MAKEHM 的原始程式碼位於 MFC 程式設計的公用程式範例[MAKEHM](..
 
 訊息方塊的說明 (有時稱為警示) 可透過 `AfxMessageBox` 函式 (`MessageBox` Windows API 的包裝函式) 來提供相關支援。
 
-
-  `AfxMessageBox` 有兩種版本，一種與字串 ID 搭配使用，另一種則與字串指標 (`LPCSTR`) 搭配使用：
+`AfxMessageBox` 有兩種版本，一種與字串 ID 搭配使用，另一種則與字串指標 (`LPCSTR`) 搭配使用：
 
 ```
 int AFXAPI AfxMessageBox(LPCSTR lpszText,

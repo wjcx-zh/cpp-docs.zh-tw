@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3699
 ms.assetid: 47c29afc-ab8b-4238-adfe-788dd6e00b3b
-ms.openlocfilehash: e413e4a08ce22ef109179ff0f98baf32ebba41c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93058d34ca9a17ab175a55a7bc7b953d369e65c5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525821"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776735"
 ---
 # <a name="compiler-error-c3699"></a>編譯器錯誤 C3699
 
@@ -36,7 +36,7 @@ int main() {
 
 ## <a name="example"></a>範例
 
-Trivial 屬性不能有參考類型。 如需詳細資訊，請參閱 [property](../../windows/property-cpp-component-extensions.md) 。 下列範例會產生 C3699。
+Trivial 屬性不能有參考類型。 如需詳細資訊，請參閱 [property](../../extensions/property-cpp-component-extensions.md) 。 下列範例會產生 C3699。
 
 ```
 // C3699_b.cpp

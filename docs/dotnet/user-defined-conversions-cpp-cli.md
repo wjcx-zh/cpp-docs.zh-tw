@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
-ms.openlocfilehash: cd3b27e0667b5ab9707db4b2cce2d7eef4611219
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8f168582e56e77f1ec848928b7ffd36879ba341a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743179"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772419"
 ---
 # <a name="user-defined-conversions-ccli"></a>使用者定義轉換 (C++/CLI)
 
@@ -21,7 +21,7 @@ ms.locfileid: "57743179"
 
 原生類別的建構函式可用來參考或實值類型轉換為原生類別。
 
-如需有關轉換的詳細資訊，請參閱 < [Boxing](../windows/boxing-cpp-component-extensions.md)並[標準轉換](../cpp/standard-conversions.md)。
+如需有關轉換的詳細資訊，請參閱 < [Boxing](../extensions/boxing-cpp-component-extensions.md)並[標準轉換](../cpp/standard-conversions.md)。
 
 ```
 // mcpp_User_Defined_Conversions.cpp
@@ -321,4 +321,4 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)
+[類別和結構](../extensions/classes-and-structs-cpp-component-extensions.md)

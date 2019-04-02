@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: d4241a77184458f5253b6d8987c310604310683c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c8be781bad699edb8cb0be844d79802269c3e0c5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295184"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781519"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>HOW TO：建立類型安全集合
 
@@ -27,7 +27,7 @@ ms.locfileid: "57295184"
 
 - [使用非範本集合類別](#_core_using_nontemplate_collection_classes)
 
-MFC 程式庫提供以 C++ 範本為基礎的預先定義類型安全集合。 因為它們是範本，所以這些類別可在針對此目的使用非範本類別時，無需轉換類型以及額外的工作，提供類型安全和易用性。 MFC 範例[收集](../visual-cpp-samples.md)示範如何使用 MFC 應用程式中的範本型集合類別。 一般而言，撰寫新的集合程式碼時都可使用這些類別。
+MFC 程式庫提供以 C++ 範本為基礎的預先定義類型安全集合。 因為它們是範本，所以這些類別可在針對此目的使用非範本類別時，無需轉換類型以及額外的工作，提供類型安全和易用性。 MFC 範例[收集](../overview/visual-cpp-samples.md)示範如何使用 MFC 應用程式中的範本型集合類別。 一般而言，撰寫新的集合程式碼時都可使用這些類別。
 
 ##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a> 使用類型安全的範本型類別
 
@@ -51,11 +51,9 @@ MFC 程式庫提供以 C++ 範本為基礎的預先定義類型安全集合。 �
 
 ###  <a name="_core_serializing_elements"></a> 序列化項目
 
+`CArray`、`CList` 和 `CMap` 類別會呼叫 `SerializeElements` 將集合項目儲存至封存或從封存讀取集合項目。
 
-  `CArray`、`CList` 和 `CMap` 類別會呼叫 `SerializeElements` 將集合項目儲存至封存或從封存讀取集合項目。
-
-
-  `SerializeElements` helper 函式的預設實作，會根據是將物件儲存至封存還是從封存擷取物件，進行物件到封存的位元寫入，或從封存到物件的位元讀取。 如果此動作不適合，則覆寫 `SerializeElements`。
+`SerializeElements` helper 函式的預設實作，會根據是將物件儲存至封存還是從封存擷取物件，進行物件到封存的位元寫入，或從封存到物件的位元讀取。 如果此動作不適合，則覆寫 `SerializeElements`。
 
 如果您的集合會儲存衍生自 `CObject` 的物件，而且您在實作集合項目類別時使用 `IMPLEMENT_SERIAL` 巨集，您可以利用內建於 `CArchive` 和 `CObject` 的序列化功能：
 

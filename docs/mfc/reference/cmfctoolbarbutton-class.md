@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: 94d7ba14e01b2965a0fe788162726d1019e847de
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0a3af2b13eeb2775671ee89019b1562010acc059
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275229"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776384"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton 類別
 
@@ -287,7 +287,7 @@ A`CMFCToolbarButton`物件是位於工具列的控制項。 其行為類似於�
 
 ## <a name="example"></a>範例
 
-下列範例示範如何設定`CMFCToolBarButton`使用中的各種方法的物件`CMFCToolBarButton`類別。 此範例說明如何啟用滑鼠和鍵盤輸入，設定按鈕的影像索引、 設定的週框的按鈕，並顯示按鈕。 此程式碼片段是一部分[ 索引標籤控制項範例](../../visual-cpp-samples.md)。
+下列範例示範如何設定`CMFCToolBarButton`使用中的各種方法的物件`CMFCToolBarButton`類別。 此範例說明如何啟用滑鼠和鍵盤輸入，設定按鈕的影像索引、 設定的週框的按鈕，並顯示按鈕。 此程式碼片段是一部分[ 索引標籤控制項範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_TabControl#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_TabControl#2](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_2.cpp)]

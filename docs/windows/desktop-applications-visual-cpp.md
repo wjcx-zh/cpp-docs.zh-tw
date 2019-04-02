@@ -2,12 +2,12 @@
 title: 桌面應用程式 （Visual c + +）
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: 80b85afc52819a742c85512e8e6031b9b2e26e9a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 090180062139642d8a686e9f1bf063f3e65aee88
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694565"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771915"
 ---
 # <a name="desktop-applications-visual-c"></a>桌面應用程式 （Visual c + +）
 
@@ -43,7 +43,7 @@ C 執行階段 (CRT) 和標準程式庫的類別和函式、 COM 物件與公用
 |[將檔案新增至空的 Win32 應用程式](adding-files-to-an-empty-win32-applications.md)|如何將檔案加入空的專案。|
 |[使用資源檔](working-with-resource-files.md)|如何將影像、 圖示、 字串資料表和其他資源新增到桌面應用程式。|
 |[使用 DirectX （c + +） 建立遊戲的資源](resources-for-creating-a-game-using-directx.md)|C + + 中建立遊戲的內容連結。|
-|[逐步解說： 建立和使用靜態程式庫](walkthrough-creating-and-using-a-static-library-cpp.md)|如何建立.lib 二進位檔案。|
+|[逐步解說：建立和使用靜態程式庫](walkthrough-creating-and-using-a-static-library-cpp.md)|如何建立.lib 二進位檔案。|
 |[如何：在 Windows 傳統型應用程式中使用 Windows 10 SDK](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|包含將您的專案設定為使用 Windows 10 SDK 建置的步驟。|
 
 ## <a name="related-articles"></a>相關文章
@@ -51,9 +51,9 @@ C 執行階段 (CRT) 和標準程式庫的類別和函式、 COM 物件與公用
 |標題|描述|
 |-----------|-----------------|
 |[Windows 程式開發](/windows/desktop/index)|包含 Windows 應用程式開發介面和 COM 的相關資訊 (部分 Windows 應用程式開發介面和協力廠商 DLL 會實作為 COM 物件)。|
-|[Hilo：開發適用於 Windows 7 的 C++ 應用程式](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|說明如何建立豐富型用戶端 Windows 傳統型應用程式，這個應用程式會使用 Windows 動畫和 Direct2D 建立浮動切換式 (Carousel-based) 使用者介面。  本教學課程尚未更新 Windows 7 之後，但仍會提供 Win32 程式設計的完整介紹。|
+|[Hilo:開發 Windows 7 的 c + + 應用程式](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|說明如何建立豐富型用戶端 Windows 傳統型應用程式，這個應用程式會使用 Windows 動畫和 Direct2D 建立浮動切換式 (Carousel-based) 使用者介面。  本教學課程尚未更新 Windows 7 之後，但仍會提供 Win32 程式設計的完整介紹。|
 |[使用 C++ 進行 Windows 程式設計的概觀](overview-of-windows-programming-in-cpp.md)|描述 Windows 桌面 c + + 程式設計重要的功能。|
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual C++](../visual-cpp-in-visual-studio.md)
+[Visual C++](../overview/visual-cpp-in-visual-studio.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3669
 ms.assetid: be9c7ae4-e96f-47ab-922a-39a3537d5ca6
-ms.openlocfilehash: c2e92fec7c3faeda80bf7f0be3caa33e5d78295b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b0ad3aa7395f5f423c8c36f547d4a0e2ad792c1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550276"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777099"
 ---
 # <a name="compiler-error-c3669"></a>編譯器錯誤 C3669
 
 'member': 覆寫的規範 'override' 不允許靜態成員函式或建構函式
 
-覆寫指定不正確。 如需詳細資訊，請參閱 <<c0> [ 明確覆寫](../../windows/explicit-overrides-cpp-component-extensions.md)。
+覆寫指定不正確。 如需詳細資訊，請參閱 <<c0> [ 明確覆寫](../../extensions/explicit-overrides-cpp-component-extensions.md)。
 
 ## <a name="example"></a>範例
 

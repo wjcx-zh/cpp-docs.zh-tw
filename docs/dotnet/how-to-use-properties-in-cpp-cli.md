@@ -5,12 +5,12 @@ helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: f29bf419ca19ce1bbe45e36adb08d7f4e5629f5a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: cd0748993b6ac92bbf9f66fa868ac6e814e21bb5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739289"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781623"
 ---
 # <a name="how-to-use-properties-in-ccli"></a>HOW TO：使用屬性在 C + + /cli CLI
 
@@ -259,7 +259,7 @@ int main() {
 
 ## <a name="abstract-and-sealed-properties"></a>抽象和密封屬性
 
-雖然[抽象](../windows/abstract-cpp-component-extensions.md)並[密封](../windows/sealed-cpp-component-extensions.md)關鍵字會指定為有效的 ECMA C + + /cli CLI 規格，對於 Visual c + + 編譯器中，您不能指定它們在一般的屬性，也不在屬性上非 trivial 屬性的宣告。
+雖然[抽象](../extensions/abstract-cpp-component-extensions.md)並[密封](../extensions/sealed-cpp-component-extensions.md)關鍵字會指定為有效的 ECMA C + + /cli CLI 規格，對於 Visual c + + 編譯器中，您不能指定它們在一般的屬性，也不在屬性上非 trivial 屬性的宣告。
 
 若要宣告的密封或抽象屬性，您必須定義非 trivial 屬性，然後指定`abstract`或`sealed`關鍵字上取得和設定存取子函式。
 
@@ -409,4 +409,4 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[屬性](../windows/property-cpp-component-extensions.md)
+[屬性](../extensions/property-cpp-component-extensions.md)

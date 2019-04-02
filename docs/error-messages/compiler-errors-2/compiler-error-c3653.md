@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3653
 ms.assetid: 316549d7-f7ef-4578-a2ba-57adc8aac527
-ms.openlocfilehash: d7936303dab4fbb273a01f98def5b9af99f89dac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75e2c061190b24019491db7a625ecafb5ac82b6b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477619"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776644"
 ---
 # <a name="compiler-error-c3653"></a>編譯器錯誤 C3653
 
 'function': 不能當做具名覆寫： 覆寫未找到; 函式您是否忘記指明此函式明確地使用:: 運算子？
 
-明確覆寫指定找不到任何介面中的函式。 如需詳細資訊，請參閱 <<c0> [ 明確覆寫](../../windows/explicit-overrides-cpp-component-extensions.md)。
+明確覆寫指定找不到任何介面中的函式。 如需詳細資訊，請參閱 <<c0> [ 明確覆寫](../../extensions/explicit-overrides-cpp-component-extensions.md)。
 
 下列範例會產生 C3653:
 

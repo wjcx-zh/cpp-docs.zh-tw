@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: f4d17069ed4e06a85b80d2027433ff87be6d1521
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3d77a17d490f8d7680f095367c309ce0e4f366b7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518563"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776332"
 ---
 # <a name="auto-c"></a>自動 （c + +）
 
@@ -34,13 +34,13 @@ auto declarator initializer;
 
 我們建議您改用**自動**關鍵字用於大部分的情況 — 除非您確實要進行轉換，因為它提供下列優點：
 
-- **穩固性：** 如果運算式的類型變更，這包括函式的傳回類型變更時，它就會運作。
+- **強固性：** 如果運算式的類型變更，這包括函式的傳回類型變更時，它就會運作。
 
-- **效能：** 可以保證會有任何轉換。
+- **效能：** 您可以保證會有任何轉換。
 
 - **可用性：** 您不必擔心類型名稱拼字困難和錯字。
 
-- **效率：** 您撰寫程式碼可能會更有效率。
+- **效率：** 您的程式碼可能更有效率。
 
 轉換情況下，您可能不想要使用**自動**:
 
@@ -52,7 +52,7 @@ auto declarator initializer;
 
 初始化運算式可以是指派 （等號語法），直接初始化 （函式樣式語法）， [new 運算子](new-operator-cpp.md)運算式或初始化運算式可以是*範圍宣告*中的參數[範圍架構 for 陳述式 （c + +）](../cpp/range-based-for-statement-cpp.md)陳述式。 如需詳細資訊，請參閱 <<c0> [ 初始設定式](../cpp/initializers.md)和本文件稍後的程式碼範例。
 
-**自動**關鍵字是類型的預留位置，但它本身不是型別。 因此，**自動**關鍵字不能在轉換或運算子這類[sizeof](../cpp/sizeof-operator.md)並[typeid](../windows/typeid-cpp-component-extensions.md)。
+**自動**關鍵字是類型的預留位置，但它本身不是型別。 因此，**自動**關鍵字不能在轉換或運算子這類[sizeof](../cpp/sizeof-operator.md)以及 (C + /cli CLI) [typeid](../extensions/typeid-cpp-component-extensions.md)。
 
 ## <a name="usefulness"></a>實用性
 
@@ -127,13 +127,13 @@ int main()
 |------------------|-----------------|
 |[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|**自動**關鍵字無法與任何其他類型規範結合。|
 |[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|以宣告的符號**自動**關鍵字必須有初始設定式。|
-|[C3532](../error-messages/compiler-errors-2/compiler-error-c3532.md)|您誤用**自動**關鍵字來宣告類型。 例如，您已宣告方法傳回型別或陣列。|
+|[C3532](../error-messages/compiler-errors-2/compiler-error-c3532.md)|您誤用**自動**關鍵字來宣告類型。 例如，您已宣告方法傳回類型或陣列。|
 |[C3533](../error-messages/compiler-errors-2/compiler-error-c3533.md)， [C3539](../error-messages/compiler-errors-2/compiler-error-c3539.md)|參數或樣板引數不能以宣告**自動**關鍵字。|
 |[C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|方法或樣板參數不能以宣告**自動**關鍵字。|
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|符號無法在初始化之前使用。 實際上，這表示不能使用變數來初始化它自己。|
 |[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|您無法轉換成使用宣告型別**自動**關鍵字。|
 |[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|以宣告的宣告子清單中的所有符號**自動**關鍵字必須解析為相同的型別。 如需詳細資訊，請參閱 <<c0> [ 宣告和定義](declarations-and-definitions-cpp.md)。|
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)並[typeid](../windows/typeid-cpp-component-extensions.md)運算子不能套用至使用宣告的符號**自動**關鍵字。|
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)並[typeid](../extensions/typeid-cpp-component-extensions.md)運算子不能套用至使用宣告的符號**自動**關鍵字。|
 
 ## <a name="examples"></a>範例
 
@@ -225,7 +225,7 @@ int main()
 [關鍵字](../cpp/keywords-cpp.md)<br/>
 [/Zc:auto (推算變數類型)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
 [sizeof 運算子](../cpp/sizeof-operator.md)<br/>
-[typeid](../windows/typeid-cpp-component-extensions.md)<br/>
+[typeid](../extensions/typeid-cpp-component-extensions.md)<br/>
 [operator new](new-operator-cpp.md)<br/>
 [宣告和定義](declarations-and-definitions-cpp.md)<br/>
 [Lambda 運算式的範例](../cpp/examples-of-lambda-expressions.md)<br/>

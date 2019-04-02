@@ -22,12 +22,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: b587064625178c520338e4253e812e8f84275257
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d2bc961486d9bc686e1ca0d5feb0fe01d65f9512
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266363"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773992"
 ---
 # <a name="handlers-for-message-map-ranges"></a>訊息對應範圍的處理常式
 
@@ -95,7 +95,7 @@ ms.locfileid: "57266363"
 
 ##  <a name="_core_example_for_a_range_of_command_ids"></a> 命令 Id 範圍的範例
 
-當可能會使用其中一個範例是在處理命令，例如 MFC 範例中的 [縮放] 命令的範圍[HIERSVR](../visual-cpp-samples.md)。 此命令就會縮放檢視中，調整 25%到 300%的正常大小之間。 HIERSVR 的檢視類別會使用範圍來處理 [縮放] 命令，使用類似這樣的訊息對應項目：
+當可能會使用其中一個範例是在處理命令，例如 MFC 範例中的 [縮放] 命令的範圍[HIERSVR](../overview/visual-cpp-samples.md)。 此命令就會縮放檢視中，調整 25%到 300%的正常大小之間。 HIERSVR 的檢視類別會使用範圍來處理 [縮放] 命令，使用類似這樣的訊息對應項目：
 
 [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]
 

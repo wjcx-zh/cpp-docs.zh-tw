@@ -10,12 +10,12 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-ms.openlocfilehash: 4e9ef9a2f79bda5d41c01984f063622b3b73fb51
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 13c8ff545763017b01685e012ab2d497eaf7084a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268209"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767544"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC ActiveX 控制項：當地語系化 ActiveX 控制項
 
@@ -28,7 +28,7 @@ ms.locfileid: "57268209"
 
 一般而言，ActiveX 控制項應該永遠根據使用者的環境 LocaleID 屬性來設定其地區設定。 執行這項作業的方法有三種：
 
-- 根據環境 LocaleID 屬性的目前值載入資源 (一定在需要時)。 MFC ActiveX 控制項範例[LOCALIZE](../visual-cpp-samples.md)會使用此策略。
+- 根據環境 LocaleID 屬性的目前值載入資源 (一定在需要時)。 MFC ActiveX 控制項範例[LOCALIZE](../overview/visual-cpp-samples.md)會使用此策略。
 
 - 當第一個控制項是根據環境 LocaleID 屬性所建立的執行個體時就載入資源，並針對其他執行個體使用這些資源。 本文示範這個策略。
 
@@ -40,7 +40,7 @@ ms.locfileid: "57268209"
     > [!NOTE]
     >  這種方法可在控制項中運作，不過，當環境 LocaleID 屬性變更時，執行階段 DLL 不會動態更新其資源。 此外，ActiveX 控制項的執行階段 DLL 會使用執行緒地區設定來決定其資源的地區設定。
 
-本文的其他部分將說明兩種當地語系化的策略。 第一項策略[當地語系化控制項的可程式性介面](#_core_localizing_your_control.92.s_programmability_interface)（的屬性、 方法和事件的名稱）。 第二個策略[當地語系化控制項的使用者介面](#_core_localizing_the_control.92.s_user_interface)，使用容器的環境 LocaleID 屬性。 如需控制項當地語系化的示範，請參閱 MFC ActiveX 控制項範例[LOCALIZE](../visual-cpp-samples.md)。
+本文的其他部分將說明兩種當地語系化的策略。 第一項策略[當地語系化控制項的可程式性介面](#_core_localizing_your_control.92.s_programmability_interface)（的屬性、 方法和事件的名稱）。 第二個策略[當地語系化控制項的使用者介面](#_core_localizing_the_control.92.s_user_interface)，使用容器的環境 LocaleID 屬性。 如需控制項當地語系化的示範，請參閱 MFC ActiveX 控制項範例[LOCALIZE](../overview/visual-cpp-samples.md)。
 
 ##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a> 當地語系化控制項的可程式性介面
 
@@ -88,7 +88,7 @@ ms.locfileid: "57268209"
 
 [!code-cpp[NVC_MFC_AxLoc#3](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_3.cpp)]
 
-請注意次語言 ID 可以 switch 陳述式中的每一種情況下檢查，以提供特製化程度較高的當地語系化。 如需示範此函式，請參閱`GetResourceHandle`函式，在 MFC ActiveX 控制項範例[LOCALIZE](../visual-cpp-samples.md)。
+請注意次語言 ID 可以 switch 陳述式中的每一種情況下檢查，以提供特製化程度較高的當地語系化。 如需示範此函式，請參閱`GetResourceHandle`函式，在 MFC ActiveX 控制項範例[LOCALIZE](../overview/visual-cpp-samples.md)。
 
 當控制項第一次將自己載入容器時，它可以呼叫[colecontrol:: Ambientlocaleid](../mfc/reference/colecontrol-class.md#ambientlocaleid)擷取地區設定識別碼。 控制項接著會將所傳回的地區設定 ID 值傳遞到 `GetLocalizedResourceHandle` 函式，以便載入適當的資源程式庫。 如果有的話，控制項應該傳遞產生的控制代碼，來[AfxSetResourceHandle](../mfc/reference/application-information-and-management.md#afxsetresourcehandle):
 

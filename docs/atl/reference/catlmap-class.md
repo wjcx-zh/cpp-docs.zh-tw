@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 80975047b300f270c0ac58c8b8abfc59ff2b17ef
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1821532a4d5a3078202f180273b02945b8d8e4ba
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293780"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774551"
 ---
 # <a name="catlmap-class"></a>CAtlMap 類別
 
@@ -782,6 +782,6 @@ V  m_value;
 
 ## <a name="see-also"></a>另請參閱
 
-[跑馬燈範例](../../visual-cpp-samples.md)<br/>
+[跑馬燈範例](../../overview/visual-cpp-samples.md)<br/>
 [UpdatePV 範例](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

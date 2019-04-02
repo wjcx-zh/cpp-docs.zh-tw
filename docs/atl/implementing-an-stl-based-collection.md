@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ICollectionOnSTLImpl interface
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
-ms.openlocfilehash: 90583f34c9e9fb500bb48fdbd3c1a17d343d865f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 609ec2547cf7a8ab93ef757f7a8e460542c9de28
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292916"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779244"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>實作與 c + + 標準程式庫為基礎的集合
 
 ATL 提供`ICollectionOnSTLImpl`介面，可讓您快速實作您的物件上的 c + + 標準程式庫為基礎的集合介面。 若要了解這個類別的運作方式，您也可以簡單範例 （如下所示），使用這個類別來實作唯讀集合，旨在自動化用戶端。
 
-範例程式碼取自[ATLCollections 範例](../visual-cpp-samples.md)。
+範例程式碼取自[ATLCollections 範例](../overview/visual-cpp-samples.md)。
 
 若要完成此程序，您將會：
 
@@ -75,7 +75,7 @@ ATL 提供`ICollectionOnSTLImpl`介面，可讓您快速實作您的物件上的
 
 [!code-cpp[NVC_ATL_COM#26](../atl/codesnippet/cpp/implementing-an-stl-based-collection_3.h)]
 
-在此範例中，您可以使用自訂`GenericCopy`VCUE_Copy.h 和從 VCUE_CopyString.h 中定義的類別[ATLCollections](../visual-cpp-samples.md)範例。 您可以使用這個類別中其他程式碼，但您可能需要進一步定義的特製化`GenericCopy`以支援您自己的集合中所使用的資料類型。 如需詳細資訊，請參閱 < [ATL 複製原則類別](../atl/atl-copy-policy-classes.md)。
+在此範例中，您可以使用自訂`GenericCopy`VCUE_Copy.h 和從 VCUE_CopyString.h 中定義的類別[ATLCollections](../overview/visual-cpp-samples.md)範例。 您可以使用這個類別中其他程式碼，但您可能需要進一步定義的特製化`GenericCopy`以支援您自己的集合中所使用的資料類型。 如需詳細資訊，請參閱 < [ATL 複製原則類別](../atl/atl-copy-policy-classes.md)。
 
 ##  <a name="vcconenumeration_and_collection"></a> 列舉型別與集合建立 Typedef
 
@@ -102,5 +102,5 @@ ATL 提供`ICollectionOnSTLImpl`介面，可讓您快速實作您的物件上的
 ## <a name="see-also"></a>另請參閱
 
 [集合和列舉程式](../atl/atl-collections-and-enumerators.md)<br/>
-[ATLCollections 範例](../visual-cpp-samples.md)<br/>
+[ATLCollections 範例](../overview/visual-cpp-samples.md)<br/>
 [ATL 複製原則類別](../atl/atl-copy-policy-classes.md)

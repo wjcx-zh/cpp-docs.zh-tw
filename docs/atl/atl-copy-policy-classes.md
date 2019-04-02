@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-ms.openlocfilehash: 24d81506f1518f980576899a4a104bbfdc0a1438
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 73bec31b4ae140797c85a06ee7c5023c9e0c4446
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296341"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776956"
 ---
 # <a name="atl-copy-policy-classes"></a>ATL 複製原則類別
 
@@ -62,7 +62,7 @@ ATL 提供兩個複製原則類別的形式`_Copy`和`_CopyInterface`範本類�
 
 ## <a name="custom-implementations"></a>自訂實作
 
-一般而言，您必須定義您自己的複製原則類別，針對異質的複製 （也就是資料類型之間的轉換）。 如需自訂複製原則類別的一些範例，查看 VCUE_Copy.h 和 VCUE_CopyString.h 中的檔案[ATLCollections](../visual-cpp-samples.md)範例。 這些檔案包含兩個範本複製原則類別，`GenericCopy`並`MapCopy`，再加上幾個的特製化的`GenericCopy`不同資料類型。
+一般而言，您必須定義您自己的複製原則類別，針對異質的複製 （也就是資料類型之間的轉換）。 如需自訂複製原則類別的一些範例，查看 VCUE_Copy.h 和 VCUE_CopyString.h 中的檔案[ATLCollections](../overview/visual-cpp-samples.md)範例。 這些檔案包含兩個範本複製原則類別，`GenericCopy`並`MapCopy`，再加上幾個的特製化的`GenericCopy`不同資料類型。
 
 ### <a name="genericcopy"></a>GenericCopy
 
@@ -81,4 +81,4 @@ VCUE_Copy.h 也包含此類別的下列特製化： `GenericCopy<BSTR>`， `Gene
 ## <a name="see-also"></a>另請參閱
 
 [實作 C++ 標準程式庫架構集合](../atl/implementing-an-stl-based-collection.md)<br/>
-[ATLCollections 範例](../visual-cpp-samples.md)
+[ATLCollections 範例](../overview/visual-cpp-samples.md)

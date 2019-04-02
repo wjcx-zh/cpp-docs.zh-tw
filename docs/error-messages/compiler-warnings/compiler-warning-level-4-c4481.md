@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4481
 ms.assetid: 7bfd4e0c-b452-4e6c-b7c4-ac5cc93fe4ea
-ms.openlocfilehash: f88a61a40a789c31e80875d785b95136ac69253c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe96ff50f4081e3c9dbe3c7eb68da156a69c96ab
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466933"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776358"
 ---
 # <a name="compiler-warning-level-4-c4481"></a>編譯器警告 (層級 4) C4481
 
@@ -21,7 +21,7 @@ ms.locfileid: "50466933"
 
 - [/clr (通用語言執行平台編譯)](../../build/reference/clr-common-language-runtime-compilation.md)
 
-- [覆寫規範](../../windows/override-specifiers-cpp-component-extensions.md)
+- [覆寫指定名稱](../../extensions/override-specifiers-cpp-component-extensions.md)
 
 ## <a name="example"></a>範例
 

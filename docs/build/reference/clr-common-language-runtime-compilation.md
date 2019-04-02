@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: 124f54f46e71ac8fb8511d12fba43ab77d04c32e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 1946fdabe66934e64cf95d3c3f12e16bc98ba664
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822456"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779348"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Common Language Runtime 編譯)
 
@@ -67,13 +67,13 @@ ms.locfileid: "57822456"
 
 Managed 程式碼是可由 CLR 檢查及管理的程式碼。 Managed 程式碼可以存取 Managed 物件。 如需詳細資訊，請參閱 [/clr Restrictions](clr-restrictions.md)。
 
-如需如何開發可定義和使用 Managed 類型之應用程式的相關資訊，請參閱 [Component Extensions for Runtime Platforms](../../windows/component-extensions-for-runtime-platforms.md)。
+如需如何開發可定義和使用 Managed 類型之應用程式的相關資訊，請參閱 [Component Extensions for Runtime Platforms](../../extensions/component-extensions-for-runtime-platforms.md)。
 
 使用 **/clr** 編譯的應用程式不一定包含 Managed 資料。
 
 若要啟用偵錯 managed 應用程式上，請參閱[/ASSEMBLYDEBUG (加入 DebuggableAttribute)](assemblydebug-add-debuggableattribute.md)。
 
-只有 CLR 類型會在記憶體回收堆積上具現化。 如需詳細資訊，請參閱 <<c0> [ 類別和結構](../../windows/classes-and-structs-cpp-component-extensions.md)。 若要將函式編譯為原生程式碼，請使用 `unmanaged` pragma。 如需詳細資訊，請參閱 < [managed、 unmanaged](../../preprocessor/managed-unmanaged.md)。
+只有 CLR 類型會在記憶體回收堆積上具現化。 如需詳細資訊，請參閱 <<c0> [ 類別和結構](../../extensions/classes-and-structs-cpp-component-extensions.md)。 若要將函式編譯為原生程式碼，請使用 `unmanaged` pragma。 如需詳細資訊，請參閱 < [managed、 unmanaged](../../preprocessor/managed-unmanaged.md)。
 
 **/clr** 預設為非作用中。 當 **/clr** 處於作用中， **/MD** 也會處於作用中。 如需詳細資訊，請參閱 [/MD、/MT、/LD (使用執行階段程式庫)](md-mt-ld-use-run-time-library.md)。 **/MD** 可確保會從標準標頭檔 (.h) 中選取動態連結、多執行緒版本的執行階段常式。 Managed 程式設計需要進行多執行緒處理，因為 CLR 記憶體回收行程會在輔助執行緒中執行完成項。
 
@@ -106,4 +106,4 @@ class {} x;
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

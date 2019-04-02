@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3101
 ms.assetid: 4f673766-d4f7-4632-94a5-d36a83f7f4b5
-ms.openlocfilehash: 8db1ba622a0c83a7f2a6421d79ff5853cbc4d9a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d39afc548010df95bdf31b2c7708bc4fa0310bcd
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555554"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779231"
 ---
 # <a name="compiler-error-c3101"></a>編譯器錯誤 C3101
 
@@ -19,7 +19,7 @@ ms.locfileid: "50555554"
 
 當初始化具名的屬性引數，則值必須是編譯時間常數。
 
-如需有關屬性的詳細資訊，請參閱 < [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)。
+如需有關屬性的詳細資訊，請參閱 < [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
 
 ## <a name="example"></a>範例
 

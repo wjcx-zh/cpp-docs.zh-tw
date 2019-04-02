@@ -10,19 +10,19 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: 3ed135c0fc32f9218783c964ed4ce79a9b3ec067
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332409"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772561"
 ---
 # <a name="enumerations-c"></a>列舉 (C++)
 
 列舉是使用者定義類型，其中包含一組具名的整數常數，稱為列舉值。
 
 > [!NOTE]
->  本文章涵蓋的 ISO 標準 c + + 語言**enum**型別和範圍 （或強型別）**列舉類別**C + + 11 中導入的類型。 如需**公用列舉類別**或**私用列舉類別**類型，在 C + + /cli 和 C + + /CX 中，請參閱[列舉類別](../windows/enum-class-cpp-component-extensions.md)。
+>  本文章涵蓋的 ISO 標準 c + + 語言**enum**型別和範圍 （或強型別）**列舉類別**C + + 11 中導入的類型。 如需**公用列舉類別**或**私用列舉類別**類型，在 C + + /cli 和 C + + /CX 中，請參閱[列舉類別](../extensions/enum-class-cpp-component-extensions.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -52,7 +52,7 @@ enum class C : short;  // ... may have any integral underlying type
 *type*<br/>
 列舉值的基礎類型，所有列舉值都有相同的基礎類型。 可以是任何整數類資料類型。
 
-*列舉清單*<br/>
+*enum-list*<br/>
 在列舉中，列舉值的逗號分隔清單。 範圍內的每個列舉值或變數名稱都必須是唯一的。 不過，值可以重複。 在不限範圍列舉中，範圍是周圍範圍;在限定範圍列舉，範圍是*列舉清單*本身。  在限定範圍列舉中，清單可能是空的作用中定義新的整數類資料類型。
 
 *class*<br/>
@@ -145,7 +145,7 @@ namespace ScopedEnumConversions
 
 ## <a name="no_enumerators"></a> 使用沒有列舉值的列舉
 
-**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):，您可以藉由定義明確的基礎類型與任何列舉值的列舉 （一般或限域），實際上引進新的整數類資料類型有沒有隱含轉換成任何其他類型。 使用這個型別，而不是它內建的基礎類型，您可以避免因意外的隱含轉換的細微錯誤的可能性。
+**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):藉由定義明確的基礎類型與任何列舉值的列舉 （一般或限域），您實際上可以引入新的整數類資料類型沒有隱含轉換成任何其他類型。 使用這個型別，而不是它內建的基礎類型，您可以避免因意外的隱含轉換的細微錯誤的可能性。
 
 ```cpp
 enum class byte : unsigned char { };

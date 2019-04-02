@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3391
 ms.assetid: c32532b9-7db4-4ccd-84b9-479e5a1a19d1
-ms.openlocfilehash: cac397e4588c493fb8c47932feb97a5f12cf2583
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32ba1ca63a3a6fafa3290946a976e6845385126f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578213"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772588"
 ---
 # <a name="compiler-error-c3391"></a>編譯器錯誤 C3391
 
-'type_arg': 對泛型參數 'param' 屬於泛型 'generic_type'，不正確的型別引數必須是不可為 null 的實值型別
+'type_arg' : invalid type argument for generic parameter 'param' of generic 'generic_type', must be a non-nullable value type
 
-泛型類型未正確地具現化。 請檢查類型定義。 如需詳細資訊，請參閱 <<c0> <xref:System.Nullable> 並[泛型](../../windows/generics-cpp-component-extensions.md)。
+泛型類型未正確地具現化。 請檢查類型定義。 如需詳細資訊，請參閱 <<c0> <xref:System.Nullable> 並[泛型](../../extensions/generics-cpp-component-extensions.md)。
 
 ## <a name="example"></a>範例
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3671
 ms.assetid: d684e4ae-87e2-4424-80bb-6f346652c831
-ms.openlocfilehash: 4b99578ed40b4ff70f3606840198b7062083ca83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4534b11f3aedf638f69337fb6a7af778e086bb4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667036"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778984"
 ---
 # <a name="compiler-error-c3671"></a>編譯器錯誤 C3671
 
 'function_1': 函式不覆寫 'function_2'
 
-使用明確覆寫語法時，編譯器會產生錯誤，如果函式未覆寫。  請參閱[明確覆寫](../../windows/explicit-overrides-cpp-component-extensions.md)如需詳細資訊。
+使用明確覆寫語法時，編譯器會產生錯誤，如果函式未覆寫。  請參閱[明確覆寫](../../extensions/explicit-overrides-cpp-component-extensions.md)如需詳細資訊。
 
 ## <a name="example"></a>範例
 

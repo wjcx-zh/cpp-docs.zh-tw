@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: c954955ad52197316da0952dc6dd415a91782444
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 14a4691e0c1f25a8f9e8b2b652c6e582f51c954a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739445"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775942"
 ---
 # <a name="cimage-class"></a>CImage 類別
 
@@ -1658,8 +1658,8 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 
 ## <a name="see-also"></a>另請參閱
 
-[MMXSwarm 範例](../../visual-cpp-samples.md)<br/>
-[SimpleImage 範例](../../visual-cpp-samples.md)<br/>
+[MMXSwarm 範例](../../overview/visual-cpp-samples.md)<br/>
+[SimpleImage 範例](../../overview/visual-cpp-samples.md)<br/>
 [裝置獨立點陣圖](/windows/desktop/gdi/device-independent-bitmaps)<br/>
 [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)<br/>
 [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)<br/>

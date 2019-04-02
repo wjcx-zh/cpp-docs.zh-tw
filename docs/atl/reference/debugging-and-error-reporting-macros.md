@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 24ab589ae19bd2027e2527ebefbf48dbf24e399d
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 0d5010f913521848675987b145a1277c7b00decf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565031"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775038"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>偵錯和錯誤報告巨集
 
@@ -220,7 +220,7 @@ ATLTRACE2(
 
 ### <a name="remarks"></a>備註
 
-ATLTRACE2 的簡短形式會將字串寫入至偵錯工具的 [輸出] 視窗。 ATLTRACE2 第二個表單也將輸出寫入至偵錯工具的 [輸出] 視窗，但受限於 ATL/MFC 追蹤工具的設定 (請參閱[ATLTraceTool 範例](../../visual-cpp-samples.md))。 例如，如果您設定*層級*4 以及層級 0 的 ATL/MFC 追蹤工具，您不會看到訊息。 *層級*可以是 0、 1、 2、 3 或 4。 預設值，0，會報告最嚴重的問題。
+ATLTRACE2 的簡短形式會將字串寫入至偵錯工具的 [輸出] 視窗。 ATLTRACE2 第二個表單也將輸出寫入至偵錯工具的 [輸出] 視窗，但受限於 ATL/MFC 追蹤工具的設定 (請參閱[ATLTraceTool 範例](../../overview/visual-cpp-samples.md))。 例如，如果您設定*層級*4 以及層級 0 的 ATL/MFC 追蹤工具，您不會看到訊息。 *層級*可以是 0、 1、 2、 3 或 4。 預設值，0，會報告最嚴重的問題。
 
 *分類*參數會列出要設定追蹤旗標。 這些旗標會對應至您想要報告的方法的型別。 下表列出您可以使用有效的追蹤旗標*分類*參數。
 

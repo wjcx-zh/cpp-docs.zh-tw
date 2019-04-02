@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: 22ba71bc0abaefd20cb68d82d4fefe06ab7fa929
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c0c1fd14105bae3b5413f92b547339ccabf3bb91
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274569"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774772"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 類別
 
@@ -408,7 +408,7 @@ void AFX_CDECL SetProperty(
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 CALCDRIV](../../visual-cpp-samples.md)<br/>
-[MFC 範例 ACDUAL](../../visual-cpp-samples.md)<br/>
+[MFC 範例 CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
+[MFC 範例 ACDUAL](../../overview/visual-cpp-samples.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)

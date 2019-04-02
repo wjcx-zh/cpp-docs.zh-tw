@@ -12,12 +12,12 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: ec933d29474695c1b94b72e712d68a9b3a08bd4e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d1b1f80f44fdc66a3174ea75c15e139f98a4520b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326576"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775539"
 ---
 # <a name="documentview-architecture"></a>文件/檢視架構
 
@@ -80,7 +80,7 @@ MFC 架構給使用者和程式設計人員，最明顯的部分是文件和檢�
 
 - [使用不具文件和檢視的資料庫類別](../data/mfc-using-database-classes-without-documents-and-views.md)
 
-- [範例](../visual-cpp-samples.md)
+- [範例](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>另請參閱
 

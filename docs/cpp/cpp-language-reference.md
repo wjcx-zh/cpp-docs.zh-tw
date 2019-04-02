@@ -8,12 +8,12 @@ helpviewer_keywords:
 - language reference, Visual C++
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 4d184e70e6a7284d07e706ce8b8c247c96442750
-ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
+ms.openlocfilehash: 8da5a4f7113bbb4256e45e7ec3c91a9c6677643c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031261"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774031"
 ---
 # <a name="c-language-reference"></a>C++ 語言參考
 
@@ -97,8 +97,8 @@ Microsoft C++ 擴充功能。
 
 ## <a name="related-sections"></a>相關章節
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)<br/>
-有關使用 Visual C++ 將通用語言執行平台設定為目標的參考資料。
+[執行階段平台的元件延伸模組](../extensions/component-extensions-for-runtime-platforms.md)<br/>
+有關使用以.NET 為目標的 Visual c + + 參考資料。
 
 [C/C++ 建置參考](../build/reference/c-cpp-building-reference.md)<br/>
 編譯器選項、連結器選項和其他建置工具。

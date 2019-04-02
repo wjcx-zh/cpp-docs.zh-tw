@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 07178597e66975a006a0ea5293192ee7ea099e42
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 39309408c6d1fc6cbb4223eda22c511865f14498
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286461"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772510"
 ---
 # <a name="tn031-control-bars"></a>TN031:控制列
 
@@ -136,7 +136,7 @@ ON_UPDATE_COMMAND_UI 處理常式可以呼叫：
 
 每個按鈕的大小必須相同。 預設為標準 24x22 像素。 每個圖像/字符的大小必須相同，而且必須並排顯示於點陣圖中。 預設圖像/字符大小為 16x15 像素。 因此，若是具有 10 個按鈕的工具列 (使用標準大小)，您需要寬 160 像素、高 15 像素的點陣圖。
 
-每個按鈕只能有一個圖像/字符。 該唯一的圖像/字符會利用演算法產生不同的按鈕狀態和樣式 (例如按下、向上、向下、停用、停用向下、不定)。 理論上可以使用任何色彩的點陣圖或 DIB。 用於產生不同按鈕狀態的演算法在原始圖像是灰階時的成效最佳。 如需範例，請參閱 MFC 一般範例 [美工圖案](../visual-cpp-samples.md) 中所提供的標準工具列按鈕和工具列按鈕美工圖案。
+每個按鈕只能有一個圖像/字符。 該唯一的圖像/字符會利用演算法產生不同的按鈕狀態和樣式 (例如按下、向上、向下、停用、停用向下、不定)。 理論上可以使用任何色彩的點陣圖或 DIB。 用於產生不同按鈕狀態的演算法在原始圖像是灰階時的成效最佳。 如需範例，請參閱 MFC 一般範例 [美工圖案](../overview/visual-cpp-samples.md) 中所提供的標準工具列按鈕和工具列按鈕美工圖案。
 
 工具列中使用的色彩也會與《Windows 介面應用程式設計指南》的建議一致。 這些色彩未經過硬式編碼，而且會動態變更以便回應使用者在 [控制台] 中的自訂。
 

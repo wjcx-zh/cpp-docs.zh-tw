@@ -3,12 +3,12 @@ title: 歡迎回到 C++ (現代 C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 08563f6a67ec7105da688d566d71d8ea15cb8cec
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: 5b2868d20c047eef7762256ff8c9bf43de7a0de0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334621"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771782"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>歡迎回到 C++ (現代 C++)
 
@@ -93,13 +93,13 @@ void f()
 
 在現代 C++ 中，因為可以改用智慧型指標，就不需要使用 new/delete 或明確例外狀況處理。 當您使用**自動**類型推斷並[lambda 函式](../cpp/lambda-expressions-in-cpp.md)，您可以撰寫程式碼速度較快，強化且更容易了解。 與範圍架構**for**迴圈是更簡潔、 更容易使用，且較不容易發生非預期的錯誤比 C 樣式**如**迴圈。 您可以使用未定案程式碼搭配最少的程式行來撰寫應用程式。 您可以使該程式碼成為記憶體安全和例外狀況安全，而且沒有要處理的配置/解除配置或錯誤碼。
 
-現代 C++ 結合了兩種多型：編譯時期 (透過樣板) 和執行階段 (透過繼承和虛擬化)。 您可以混合使用這兩種多型來產生良好效果。 C + + 標準程式庫範本`shared_ptr`使用內部虛擬方法來完成其顯然毫不費力的類型清除。 但是當範本是較佳選擇時，請勿對多型過度使用虛擬。 樣板有可觀的強大功能。
+現代 C++ 結合了兩種多型：編譯時間 (透過樣板) 和執行階段 (透過繼承和虛擬化)。 您可以混合使用這兩種多型來產生良好效果。 C + + 標準程式庫範本`shared_ptr`使用內部虛擬方法來完成其顯然毫不費力的類型清除。 但是當範本是較佳選擇時，請勿對多型過度使用虛擬。 樣板有可觀的強大功能。
 
 如果您是從其他語言改換過來使用 C++，特別是從類型多半為參考類型、少有實值類型的 Managed 語言過來，請記得 C++ 類別預設是實值類型。 但是您可以將這些類別指定為參考類型，啟用支援物件導向程式設計的多型行為。 有用的觀點：實值類型與記憶體及配置控制較有關聯，參考類型則多偏向支援多型的基底類別及虛擬函式。 根據預設，實值類型是可複製的，每個類型都具有複製建構函式和複製指派運算子。 當您指定參考類型時，請將類別設定為不可複製 (停用複製建構函式和複製指派運算子)，並使用支援多型的虛擬解構函式。 實值類型也是與內容有關，當您複製這些內容時，會取得兩個可分別修改的獨立值。 但是參考類型則與識別有關 (屬於哪種物件)，因此有時稱為多型類型。
 
 C++ 正在復活，因為功能強大再度成為王道。 當程式設計人員產能很重要時，像 Java 和 C# 這樣的語言很適用，但是當功能與效能變得至關重要時，這些語言就顯得有所局限。 就高效率和功能而論，尤其是在硬體資源有限的裝置上，所有語言都比不上現代 C++。
 
-不僅語言現代，連開發工具也是。 Visual Studio 會在開發週期的所有組件，強固且有效率。 這包含應用程式生命週期管理 (ALM) 工具、IDE 增強功能 (例如 IntelliSense)、工具易用的機制 (例如 XAML) 以及建置、偵錯等許多其他工具。
+不僅語言現代，連開發工具也是。 Visual Studio 會在開發週期的所有組件，強固且有效率。 這包含 Application Lifecycle Management (ALM) 工具、IDE 增強功能 (例如 IntelliSense)、工具易用的機制 (例如 XAML) 以及建置、偵錯等許多其他工具。
 
 本文件中的這篇文章針對撰寫現代 C++ 程式所需的最重要功能及技術，提供了高階方針和最佳作法。
 
@@ -132,4 +132,4 @@ C++ 正在復活，因為功能強大再度成為王道。 當程式設計人員
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)<br/>
 [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)<br/>
-[Visual C++ 語言一致性](../visual-cpp-language-conformance.md)
+[Visual C++ 語言一致性](../overview/visual-cpp-language-conformance.md)

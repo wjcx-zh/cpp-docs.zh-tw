@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: 11da1dd7d72951d421d2600e3825e7cafe189240
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 70ca283468a51b4214273698a532ce2a85d52b44
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272096"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774972"
 ---
 # <a name="atl-collection-classes"></a>ATL 集合類別
 
@@ -116,13 +116,13 @@ CTraits 類別是類似，但比 MFC 集合類別 helper 函式; 更有彈性請
 
 下列範例會示範集合類別：
 
-- [MMXSwarm 範例](../visual-cpp-samples.md)
+- [MMXSwarm 範例](../overview/visual-cpp-samples.md)
 
-- [DynamicConsumer 範例](../visual-cpp-samples.md)
+- [DynamicConsumer 範例](../overview/visual-cpp-samples.md)
 
 - [UpdatePV 範例](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)
 
-- [跑馬燈範例](../visual-cpp-samples.md)
+- [跑馬燈範例](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>另請參閱
 

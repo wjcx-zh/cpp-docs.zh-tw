@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], SetImages
 - CMFCRibbonButtonsGroup [MFC], SetParentCategory
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
-ms.openlocfilehash: 3a0806d5c45f429f975b7b8ef0085252fe2b2528
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 39979d48eb7b0f7aba9dbe7bd42c2f91845af968
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295886"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781987"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup 類別
 
@@ -77,7 +77,7 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
 
 ## <a name="example"></a>範例
 
-下例示範如何在 `CMFCRibbonButtonsGroup` 類別中使用各種方法。 此範例示範如何建構`CMFCRibbonButtonsGroup`物件、 將映像指派給功能區按鈕群組，並將按鈕加入的功能區按鈕的群組。 這段程式碼片段是 [Draw 用戶端範例](../../visual-cpp-samples.md)的一部分。
+下例示範如何在 `CMFCRibbonButtonsGroup` 類別中使用各種方法。 此範例示範如何建構`CMFCRibbonButtonsGroup`物件、 將映像指派給功能區按鈕群組，並將按鈕加入的功能區按鈕的群組。 這段程式碼片段是 [Draw 用戶端範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_DrawClient#2](../../mfc/reference/codesnippet/cpp/cmfcribbonbuttonsgroup-class_1.cpp)]
 

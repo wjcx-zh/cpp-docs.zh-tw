@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: ca4b0f4c8ffc3382984660caec7ae04107c8797a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6a0b83f722d1b616e9c10713646d337f9cb090a4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301843"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775695"
 ---
 # <a name="catlarray-class"></a>CAtlArray 類別
 
@@ -62,7 +62,7 @@ class CAtlArray
 |[AssertValid](#assertvalid)|呼叫這個方法來確認陣列物件有效。|
 |[CAtlArray](#catlarray)|建構函式。|
 |[~CAtlArray](#dtor)|解構函式。|
-|[複製](#copy)|呼叫這個方法來複製到另一個陣列的項目。|
+|[[複製]](#copy)|呼叫這個方法來複製到另一個陣列的項目。|
 |[FreeExtra](#freeextra)|呼叫這個方法，以從陣列中移除任何空的項目。|
 |[GetAt](#getat)|呼叫這個方法來擷取陣列物件中的單一項目。|
 |[GetCount](#getcount)|呼叫這個方法來傳回儲存在陣列中的項目數目。|
@@ -549,9 +549,9 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ## <a name="see-also"></a>另請參閱
 
-[MMXSwarm 範例](../../visual-cpp-samples.md)<br/>
-[DynamicConsumer 範例](../../visual-cpp-samples.md)<br/>
-[UpdatePV 範例](../../visual-cpp-samples.md)<br/>
-[跑馬燈範例](../../visual-cpp-samples.md)<br/>
+[MMXSwarm 範例](../../overview/visual-cpp-samples.md)<br/>
+[DynamicConsumer 範例](../../overview/visual-cpp-samples.md)<br/>
+[UpdatePV 範例](../../overview/visual-cpp-samples.md)<br/>
+[跑馬燈範例](../../overview/visual-cpp-samples.md)<br/>
 [CArray 類別](../../mfc/reference/carray-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

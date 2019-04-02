@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], SetSortColumn
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
-ms.openlocfilehash: c2434671ecdca4e68f3a83c21f1916b42928ffcd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4cd1bb7787f8797984bdce5f9a5b3080d69ea5f2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294224"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767934"
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl 類別
 
@@ -69,7 +69,7 @@ class CMFCListCtrl : public CListCtrl
 
 ## <a name="example"></a>範例
 
-下例示範如何在 `CMFCListCtrl` 類別中使用各種方法。 此範例示範如何建立清單控制項、 插入資料行中，插入項目、 設定的文字項目的內容，以及設定清單控制項的字型。 此程式碼片段是一部分[Visual Studio 示範範例](../../visual-cpp-samples.md)。
+下例示範如何在 `CMFCListCtrl` 類別中使用各種方法。 此範例示範如何建立清單控制項、 插入資料行中，插入項目、 設定的文字項目的內容，以及設定清單控制項的字型。 此程式碼片段是一部分[Visual Studio 示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#25](../../mfc/codesnippet/cpp/cmfclistctrl-class_1.h)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#26](../../mfc/codesnippet/cpp/cmfclistctrl-class_2.cpp)]

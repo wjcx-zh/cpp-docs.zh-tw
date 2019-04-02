@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: 55f4b7304d0b50004585b55142804e0bb4234c16
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8253b2c2fa6b93ec51c7ede983ef710eed039970
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271251"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776982"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage 類別
 
@@ -385,8 +385,8 @@ void SetPageName(LPCTSTR lpszPageName);
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 CIRC3](../../visual-cpp-samples.md)<br/>
-[MFC 範例 TESTHELP](../../visual-cpp-samples.md)<br/>
+[MFC 範例 CIRC3](../../overview/visual-cpp-samples.md)<br/>
+[MFC 範例 TESTHELP](../../overview/visual-cpp-samples.md)<br/>
 [CDialog 類別](../../mfc/reference/cdialog-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CDialog 類別](../../mfc/reference/cdialog-class.md)

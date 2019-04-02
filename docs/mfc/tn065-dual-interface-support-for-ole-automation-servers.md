@@ -1,5 +1,5 @@
 ---
-title: TN065：OLE Automation 伺服程式的雙重介面支援
+title: TN065:Automation 伺服程式的雙重介面支援
 ms.date: 06/28/2018
 f1_keywords:
 - vc.ole
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-ms.openlocfilehash: 5a04c2712182fe9c9ed3fd9e5fe4548404f96a5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33828f3979fb938ae6e88fa3cb0d6ee24daa958c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575210"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776670"
 ---
-# <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065：OLE Automation 伺服程式的雙重介面支援
+# <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065:Automation 伺服程式的雙重介面支援
 
 > [!NOTE]
 > 下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
 
-本附註討論如何將雙重介面支援加入至 MFC 基礎 OLE Automation 伺服器應用程式。 [ACDUAL](../visual-cpp-samples.md)範例說明雙重介面支援，並在此附註的範例程式碼取自 ACDUAL。 DECLARE_DUAL_ERRORINFO、 DUAL_ERRORINFO_PART，等 IMPLEMENT_DUAL_ERRORINFO，這個提示中所述的巨集是 ACDUAL 範例的一部分，而且可以 MFCDUAL 中找到。H.
+本附註討論如何將雙重介面支援加入至 MFC 基礎 OLE Automation 伺服器應用程式。 [ACDUAL](../overview/visual-cpp-samples.md)範例說明雙重介面支援，並在此附註的範例程式碼取自 ACDUAL。 DECLARE_DUAL_ERRORINFO、 DUAL_ERRORINFO_PART，等 IMPLEMENT_DUAL_ERRORINFO，這個提示中所述的巨集是 ACDUAL 範例的一部分，而且可以 MFCDUAL 中找到。H.
 
 ## <a name="dual-interfaces"></a>雙重介面
 
@@ -43,7 +43,7 @@ ms.locfileid: "50575210"
 
 首先，修改您的伺服器，以定義您物件的雙重介面的 ODL 檔案。 若要定義雙重介面，您必須使用介面陳述式，而不是`DISPINTERFACE`Visual c + + 精靈產生的陳述式。 而不是移除現有`DISPINTERFACE`陳述式中，加入新的介面陳述式。 藉由保留`DISPINTERFACE`表單中，您可以繼續使用 ClassWizard 將屬性和方法新增至您的物件，但您必須將的對等的屬性和方法新增至您的介面陳述式。
 
-雙重介面的介面陳述式必須有*OLEAUTOMATION*並*雙重*屬性和介面必須衍生自`IDispatch`。 您可以使用[GUIDGEN](../visual-cpp-samples.md)範例，以建立**IID**雙重介面：
+雙重介面的介面陳述式必須有*OLEAUTOMATION*並*雙重*屬性和介面必須衍生自`IDispatch`。 您可以使用[GUIDGEN](../overview/visual-cpp-samples.md)範例，以建立**IID**雙重介面：
 
 ```IDL
 [ uuid(0BDD0E81-0DD7-11cf-BBA8-444553540000), // IID_IDualAClick
@@ -310,7 +310,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 }
 ```
 
-`CATCH_ALL_DUAL` 會負責傳回正確的錯誤程式碼時發生例外狀況。 `CATCH_ALL_DUAL` 將 MFC 例外狀況轉換成 OLE Automation 錯誤處理資訊使用`ICreateErrorInfo`介面。 (範例`CATCH_ALL_DUAL`巨集是 MFCDUAL 檔案中。在 H [ACDUAL](../visual-cpp-samples.md)範例。 若要處理的例外狀況，呼叫函式`DualHandleException`，MFCDUAL 檔案中。CPP。)`CATCH_ALL_DUAL`決定傳回根據發生的例外狀況類型的錯誤程式碼：
+`CATCH_ALL_DUAL` 會負責傳回正確的錯誤程式碼時發生例外狀況。 `CATCH_ALL_DUAL` 將 MFC 例外狀況轉換成 OLE Automation 錯誤處理資訊使用`ICreateErrorInfo`介面。 (範例`CATCH_ALL_DUAL`巨集是 MFCDUAL 檔案中。在 H [ACDUAL](../overview/visual-cpp-samples.md)範例。 若要處理的例外狀況，呼叫函式`DualHandleException`，MFCDUAL 檔案中。CPP。)`CATCH_ALL_DUAL`決定傳回根據發生的例外狀況類型的錯誤程式碼：
 
 - [COleDispatchException](../mfc/reference/coledispatchexception-class.md) -在此情況下，`HRESULT`建構是使用下列程式碼：
 
@@ -332,7 +332,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 
 最後，實作類別定義，以支援`ISupportErrorInfo`。
 
-( [ACDUAL](../visual-cpp-samples.md)範例包含三個巨集，以執行下列三個步驟，幫助`DECLARE_DUAL_ERRORINFO`， `DUAL_ERRORINFO_PART`，和`IMPLEMENT_DUAL_ERRORINFO`MFCDUAL 中全部包含。H.)
+( [ACDUAL](../overview/visual-cpp-samples.md)範例包含三個巨集，以執行下列三個步驟，幫助`DECLARE_DUAL_ERRORINFO`， `DUAL_ERRORINFO_PART`，和`IMPLEMENT_DUAL_ERRORINFO`MFCDUAL 中全部包含。H.)
 
 下列範例會實作類別定義，以支援`ISupportErrorInfo`。 `CAutoClickDoc` 是您的自動化類別的名稱和`IID_IDualAClick`已**IID**的介面，是透過 OLE Automation 錯誤物件所報告的錯誤來源：
 

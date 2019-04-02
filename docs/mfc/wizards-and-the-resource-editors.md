@@ -12,12 +12,12 @@ helpviewer_keywords:
 - MFC, wizards
 - Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
-ms.openlocfilehash: 5316899b7eb8828847af6d7db95edf3d8ba3822a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 41cbb86b4245bd78baecd222b5573ba5e877243a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265518"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773823"
 ---
 # <a name="wizards-and-the-resource-editors"></a>精靈和資源編輯器
 
@@ -46,7 +46,7 @@ Visual c + + 包含數個精靈，用於在 MFC 程式設計中，以及許多�
 
 使用 Visual c + +[資源編輯器](../windows/resource-editors.md)來建立和編輯功能表、 對話方塊、 自訂控制項、 快速鍵、 點陣圖、 圖示、 游標、 字串和版本資源。 截至 Visual c + + 4.0 版，工具列編輯器可建立工具列更容易。
 
-為了協助您更多，Microsoft Foundation Class Library 會提供一個稱為一般檔案。RES，其中包含您可以從一般複製的 「 美工圖案 」 資源。RES 並貼到您自己的資源檔。 常見的。RES 包含工具列按鈕、 常見的資料指標、 圖示等。 您可以使用、 修改和重新發佈您的應用程式中的這些資源。 如需常見的詳細資訊。RES，請參閱[美工圖案範例](../visual-cpp-samples.md)。
+為了協助您更多，Microsoft Foundation Class Library 會提供一個稱為一般檔案。RES，其中包含您可以從一般複製的 「 美工圖案 」 資源。RES 並貼到您自己的資源檔。 常見的。RES 包含工具列按鈕、 常見的資料指標、 圖示等。 您可以使用、 修改和重新發佈您的應用程式中的這些資源。 如需常見的詳細資訊。RES，請參閱[美工圖案範例](../overview/visual-cpp-samples.md)。
 
 MFC 應用程式精靈、 Visual c + + 精靈、 資源編輯器和 MFC 架構為您執行許多工作，以管理您的程式碼更容易。 大部分的應用程式特定的程式碼是在文件和檢視類別中。
 

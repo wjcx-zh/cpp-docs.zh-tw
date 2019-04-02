@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-ms.openlocfilehash: 8e39fe7eb0fb9b77a82b305fa2f8186ad4e855a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dca6d5297379e6ddc1c70dba80f35f2f55672e49
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601704"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776917"
 ---
 # <a name="staticcast-operator"></a>static_cast 運算子
 
@@ -103,7 +103,7 @@ void f() {
 
 **Static_cast**運算子不能**const**， **volatile**，或 **__unaligned**屬性。 請參閱[const_cast 運算子](../cpp/const-cast-operator.md)如需移除這些屬性的詳細資訊。
 
-因為執行未檢查的轉換，在重新配置的記憶體回收行程，使用的最上層的危險**static_cast**只在效能關鍵程式碼時應該確定它能正常運作。 如果您必須使用**static_cast**在發行模式中，使用替代與[safe_cast](../windows/safe-cast-cpp-component-extensions.md)在您的偵錯組建，以確保成功。
+**C + + /CLI CLI:** 因為執行未檢查的轉換，在重新配置的記憶體回收行程，使用的最上層的危險**static_cast**只在效能關鍵程式碼時應該確定它能正常運作。 如果您必須使用**static_cast**在發行模式中，使用替代與[safe_cast](../extensions/safe-cast-cpp-component-extensions.md)在您的偵錯組建，以確保成功。
 
 ## <a name="see-also"></a>另請參閱
 

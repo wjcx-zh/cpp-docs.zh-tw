@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-ms.openlocfilehash: 80302d59d081b7cdf6f29960c3d8f4859b4ecbf4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8bca3e1d45d0a85d1d4ceac4ffdf7b11091020f6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280442"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769312"
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges 類別
 
@@ -185,8 +185,7 @@ void GetDisplayNames(CNames* pDisplayNames) const throw(...);
 ### <a name="parameters"></a>參數
 
 *pDisplayNames*<br/>
-
-  `CString` 物件陣列的指標。 `CNames` 定義的 typedef: `CTokenPrivileges::CAtlArray<CString>`。
+`CString` 物件陣列的指標。 `CNames` 定義的 typedef: `CTokenPrivileges::CAtlArray<CString>`。
 
 ### <a name="remarks"></a>備註
 
@@ -333,7 +332,7 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 
 ## <a name="see-also"></a>另請參閱
 
-[安全性範例](../../visual-cpp-samples.md)<br/>
+[安全性範例](../../overview/visual-cpp-samples.md)<br/>
 [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)<br/>
 [LUID](/windows/desktop/api/winnt/ns-winnt-_luid)<br/>
 [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)<br/>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndButton [MFC], IsCaptionButton
 - CMFCDesktopAlertWndButton [MFC], IsCloseButton
 ms.assetid: df39a0c8-0c39-4ab0-8c64-78c5b2c4ecaf
-ms.openlocfilehash: 2a9ade332c87f293719872e426fb459b011d2d35
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 639342e0a09a6e970478fce1b5aac629f03c2015
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270252"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776943"
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>CMFCDesktopAlertWndButton 類別
 
@@ -61,7 +61,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用`SetImage`方法中的`CMFCDesktopAlertWndButton`類別。 此程式碼片段是一部分[桌面警示示範範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用`SetImage`方法中的`CMFCDesktopAlertWndButton`類別。 此程式碼片段是一部分[桌面警示示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#4](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_1.h)]
 [!code-cpp[NVC_MFC_DesktopAlertDemo#5](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_2.cpp)]

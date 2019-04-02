@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: 6ba17a56c5274295c44cdc5aa651380d1e6c83d3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 69771de120dc413496a3b7b0613e51a13d208e22
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740932"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772601"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>參考類型的 C++ 堆疊語意
 
-Visual C++ 2005 之前只能使用 `new` 運算子建立參考類型的執行個體，這麼做會在記憶體回收堆積上建立物件。 不過，您現在可以使用與您用來在堆疊上建立原生類型之執行個體相同的語法建立參考類型的執行個體。 因此，您不需要使用[ref new 和 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)建立參考類型的物件。 然後，當物件超出範圍時，編譯器會呼叫物件的解構函式。
+Visual C++ 2005 之前只能使用 `new` 運算子建立參考類型的執行個體，這麼做會在記憶體回收堆積上建立物件。 不過，您現在可以使用與您用來在堆疊上建立原生類型之執行個體相同的語法建立參考類型的執行個體。 因此，您不需要使用[ref new 和 gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)建立參考類型的物件。 然後，當物件超出範圍時，編譯器會呼叫物件的解構函式。
 
 ## <a name="remarks"></a>備註
 
@@ -41,9 +41,9 @@ Visual C++ 2005 之前只能使用 `new` 運算子建立參考類型的執行個
 
 下列參考類型不能與堆疊語意搭配使用：
 
-- [delegate (C++ 元件延伸模組)](../windows/delegate-cpp-component-extensions.md)
+- [delegate (C++ 元件延伸模組)](../extensions/delegate-cpp-component-extensions.md)
 
-- [陣列](../windows/arrays-cpp-component-extensions.md)
+- [陣列](../extensions/arrays-cpp-component-extensions.md)
 
 - <xref:System.String>
 
@@ -101,7 +101,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 98
@@ -113,4 +113,4 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)
+[類別和結構](../extensions/classes-and-structs-cpp-component-extensions.md)

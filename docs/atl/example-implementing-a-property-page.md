@@ -4,18 +4,18 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: a86393954cdebec59bd2c6a50cd5e547ef06acb7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9aaf75916196f33904a51289d0a49725e042aa9e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267234"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777034"
 ---
 # <a name="example-implementing-a-property-page"></a>範例：實作屬性頁
 
 此範例示範如何建置會顯示 （並可讓您變更） 的屬性的屬性頁[文件類別](../mfc/document-classes.md)介面。
 
-範例根據[ATLPages 範例](../visual-cpp-samples.md)。
+範例根據[ATLPages 範例](../overview/visual-cpp-samples.md)。
 
 若要完成此範例中，您將會：
 
@@ -164,4 +164,4 @@ End Module
 ## <a name="see-also"></a>另請參閱
 
 [屬性頁](../atl/atl-com-property-pages.md)<br/>
-[ATLPages 範例](../visual-cpp-samples.md)
+[ATLPages 範例](../overview/visual-cpp-samples.md)

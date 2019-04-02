@@ -9,12 +9,12 @@ helpviewer_keywords:
 - side-by-side applications [C++]
 - builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-ms.openlocfilehash: e3c39595008d92b390b03a56bdcf5fc8990b2103
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b962796c3bf32bc312d3047535ae90a40a37094d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807552"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772458"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>建置 C/C++ 隔離應用程式和並存組件
 
@@ -22,7 +22,7 @@ Visual C++ 基於 [隔離的應用程式](/windows/desktop/SbsCs/isolated-applic
 
 將 C/C++ 程式建置為隔離應用程式會帶來很多好處。 例如，當其他 C/C++ 應用程式安裝或解除安裝 Visual C++ 程式庫時，不會影響到隔離應用程式。 隔離的應用程式所使用的 Visual C++ 程式庫可能仍會在應用程式的本機資料夾轉散發，或者由安裝轉散發至原生組件快取 (WinSxS) 中；不過，使用 [發行者組態檔](/windows/desktop/SbsCs/publisher-configuration)可簡化提供已部署應用程式的 Visual C++ 程式庫。 隔離應用程式部署模型可更輕鬆地確保在特定電腦上執行的 C/C++ 應用程式，使用最新版本的 Visual C++ 程式庫，同時仍保留系統管理員和應用程式作者可控制將應用程式的版本，明確繫結至其相依 DLL 的可能性。
 
-本節討論您可以如何將 C/C++ 應用程式建置為隔離應用程式，並確保其使用資訊清單，繫結至 Visual C++ 程式庫。 本節中的資訊主要適用於原生或 Unmanaged Visual C++ 應用程式。 如需部署使用 Visual C++ 建置之原生應用程式的資訊，請參閱 [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md)。
+本節討論您可以如何將 C/C++ 應用程式建置為隔離應用程式，並確保其使用資訊清單，繫結至 Visual C++ 程式庫。 本節中的資訊主要適用於原生或 Unmanaged Visual C++ 應用程式。 如需部署使用 Visual C++ 建置之原生應用程式的資訊，請參閱 [Redistributing Visual C++ Files](../windows/redistributing-visual-cpp-files.md)。
 
 ## <a name="in-this-section"></a>本節內容
 
@@ -44,4 +44,4 @@ Visual C++ 基於 [隔離的應用程式](/windows/desktop/SbsCs/isolated-applic
 
 [隔離應用程式和並存組件](/windows/desktop/SbsCs/isolated-applications-and-side-by-side-assemblies-portal)
 
-[部署傳統型應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)
+[部署傳統型應用程式](../windows/deploying-native-desktop-applications-visual-cpp.md)

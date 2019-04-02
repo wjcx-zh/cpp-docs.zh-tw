@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-ms.openlocfilehash: d58293b94eeaf499c48f750972b15256e9c19794
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f92a72e36fecbb39e57cbdf9583047aca0c1ebd5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293182"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773732"
 ---
 # <a name="cmousemanager-class"></a>CMouseManager 類別
 
@@ -117,7 +117,7 @@ BOOL AddView(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何擷取變數的指標，`CMouseManager`使用的物件`CWinAppEx::GetMouseManager`方法並`AddView`方法中的`CMouseManager`類別。 此程式碼片段是一部分[狀態集合範例](../../visual-cpp-samples.md)。
+下列範例示範如何擷取變數的指標，`CMouseManager`使用的物件`CWinAppEx::GetMouseManager`方法並`AddView`方法中的`CMouseManager`類別。 此程式碼片段是一部分[狀態集合範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_StateCollection#4](../../mfc/reference/codesnippet/cpp/cmousemanager-class_1.cpp)]
 

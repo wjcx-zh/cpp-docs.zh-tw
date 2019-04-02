@@ -8,12 +8,12 @@ helpviewer_keywords:
 - active document containers [MFC], about active document containers
 - MFC COM, active document containment
 ms.assetid: b8dfa74b-75ce-47df-b75e-fc87b7f7d687
-ms.openlocfilehash: 1811febdb26091785f8b709e90f8cdd7a7f8afdd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: dc13384454c4732d3efbf99def5d05dd4f2d44aa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258290"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776566"
 ---
 # <a name="active-document-containment"></a>主動式文件內含項目
 
@@ -35,7 +35,7 @@ ms.locfileid: "57258290"
 
 ## <a name="sample-programs"></a>範例程式
 
-- [MFCBIND](../visual-cpp-samples.md)範例說明使用中文件容器應用程式的實作。
+- [MFCBIND](../overview/visual-cpp-samples.md)範例說明使用中文件容器應用程式的實作。
 
 ## <a name="see-also"></a>另請參閱
 

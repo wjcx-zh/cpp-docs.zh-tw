@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-ms.openlocfilehash: 3cf1c773c96a2bf1bc6c67420d72052e68ee2a53
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 33c5b48c88a6fc7a4ed18a93e874d318a16a20dd
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297589"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775435"
 ---
 # <a name="caxwindow-class"></a>CAxWindow 類別
 
@@ -367,7 +367,7 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 
 ## <a name="see-also"></a>另請參閱
 
-[ATLCON 範例](../../visual-cpp-samples.md)<br/>
+[ATLCON 範例](../../overview/visual-cpp-samples.md)<br/>
 [CWindow 類別](../../atl/reference/cwindow-class.md)<br/>
 [複合控制項基本概念](../../atl/atl-composite-control-fundamentals.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)<br/>

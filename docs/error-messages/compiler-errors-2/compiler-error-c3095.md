@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3095
 ms.assetid: cde725be-0936-40f6-9e57-e1d7d0710f83
-ms.openlocfilehash: b8b6a7bfd5b44e0ddd1e8dfba1a054d9645a4693
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0cf35e7964925623be39c0177d77fc5a6231ad2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438749"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774109"
 ---
 # <a name="compiler-error-c3095"></a>編譯器錯誤 C3095
 
@@ -19,7 +19,7 @@ ms.locfileid: "50438749"
 
 宣告部分屬性，讓屬性的多個項目不能套用至目標。
 
-如需詳細資訊，請參閱 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)。
+如需詳細資訊，請參閱 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
 
 ## <a name="example"></a>範例
 

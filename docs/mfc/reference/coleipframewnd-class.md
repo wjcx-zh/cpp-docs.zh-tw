@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleIPFrameWnd [MFC], OnCreateControlBars
 - COleIPFrameWnd [MFC], RepositionFrame
 ms.assetid: 24abb2cb-826c-4dda-a287-d8a8900a5763
-ms.openlocfilehash: 307bf991853264fcf03dfc5b22eed8e91a3e7aa8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 34388e635ba89d732ae3993074a2c8268e2289a3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301398"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779608"
 ---
 # <a name="coleipframewnd-class"></a>COleIPFrameWnd 類別
 
@@ -132,7 +132,7 @@ virtual void RepositionFrame(
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 HIERSVR](../../visual-cpp-samples.md)<br/>
+[MFC 範例 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [CFrameWnd 類別](../../mfc/reference/cframewnd-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CFrameWnd 類別](../../mfc/reference/cframewnd-class.md)

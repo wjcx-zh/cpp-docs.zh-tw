@@ -11,12 +11,12 @@ helpviewer_keywords:
 - paint messages in view class [MFC]
 - device contexts, screen drawings
 ms.assetid: e3761db6-0f19-4482-a4cd-ac38ef7c4d3a
-ms.openlocfilehash: 77844ebd31f624229870d27c72b08a987b7533bd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bc461347b56379976cdf62014507e3a15529f081
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280767"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772549"
 ---
 # <a name="drawing-in-a-view"></a>在檢視中繪圖
 
@@ -42,7 +42,7 @@ A[裝置內容](../mfc/device-contexts.md)是 Windows 資料結構，其中包�
 
 這個範例會列印任何字串，它會從 文件中，在檢視置中取得。 如果`OnDraw`呼叫是針對螢幕繪圖`CDC`傳入的物件*pDC*會`CPaintDC`的建構函式已呼叫`BeginPaint`。 繪圖函式的呼叫都會經過的裝置內容指標。 裝置內容和繪製呼叫的相關資訊，請參閱類別[CDC](../mfc/reference/cdc-class.md)中*MFC 參考 》* 並[使用視窗物件](../mfc/working-with-window-objects.md)。
 
-如需如何撰寫的範例`OnDraw`，請參閱 < [MFC 範例](../visual-cpp-samples.md)。
+如需如何撰寫的範例`OnDraw`，請參閱 < [MFC 範例](../overview/visual-cpp-samples.md)。
 
 ## <a name="see-also"></a>另請參閱
 

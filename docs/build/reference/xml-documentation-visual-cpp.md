@@ -7,12 +7,12 @@ helpviewer_keywords:
 - comments, C++ source code files
 - /// delimiter for C++ documentation
 ms.assetid: a1aec1c5-b2d1-4c74-83ae-1dbbbb76b506
-ms.openlocfilehash: d111d601d966ec5f863d62d9788654101a2ab56d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: c46cb77dd2efe41a41c7108115d6d22808782f01
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824852"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773524"
 ---
 # <a name="xml-documentation-visual-c"></a>XML 文件 (Visual C++)
 
@@ -31,7 +31,7 @@ ms.locfileid: "57824852"
 
 如需建立具有文件註解 .xml 檔案的詳細資料，請參閱下列主題。
 
-|如需以下相關資訊|請參閱|
+|如需詳細資訊|請參閱|
 |---------------------------|---------|
 |要使用的編譯器選項|[/doc](doc-process-documentation-comments-c-cpp.md)|
 |您可以用來在文件中提供常用功能的標記|[建議使用的文件註解標籤](recommended-tags-for-documentation-comments-visual-cpp.md)|
@@ -44,4 +44,4 @@ ms.locfileid: "57824852"
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../../windows/component-extensions-for-runtime-platforms.md)
+[執行階段平台的元件延伸模組](../../extensions/component-extensions-for-runtime-platforms.md)

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-ms.openlocfilehash: 127245385ebd89e51a1cc77d1efaa16729d73fe7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9a1633ed48c763b986f3421c33589a05f8bba126
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300114"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781636"
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget 類別
 
@@ -386,8 +386,8 @@ virtual void Revoke();
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 HIERSVR](../../visual-cpp-samples.md)<br/>
-[MFC 範例 OCLIENT](../../visual-cpp-samples.md)<br/>
+[MFC 範例 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[MFC 範例 OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [COleDropSource 類別](../../mfc/reference/coledropsource-class.md)

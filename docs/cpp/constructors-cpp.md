@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: e2027d967aebe68618e44e454ec268770b53ee4b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: cad88af9e81a60857fbbd6c90cf81cdcafbd7a12
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694058"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781467"
 ---
 # <a name="constructors-c"></a>建構函式 (C++)
 
@@ -636,9 +636,9 @@ Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
 ```
 
-**Visual Studio 2017 15.7 版及更新版本**:**使用**中的陳述式 **/std: c + + 17**模式帶入範圍中所有的建構函式，除了具有相同的簽章的基底類別在衍生類別中的建構函式。 一般而言，衍生類別未宣告新的資料成員或建構函式時，最好使用繼承建構函式。 另請參閱[改良 Visual Studio 2017 15.7 版中的](../cpp-conformance-improvements-2017.md#improvements_157)。
+**Visual Studio 2017 15.7 版和更新版本**：**使用**中的陳述式 **/std: c + + 17**模式帶入範圍中所有的建構函式，從衍生類別中具有相同簽章的建構函式以外的基底類別。 一般而言，衍生類別未宣告新的資料成員或建構函式時，最好使用繼承建構函式。 另請參閱[改良 Visual Studio 2017 15.7 版中的](../overview/cpp-conformance-improvements-2017.md#improvements_157)。
 
-如果型別引數指定基底類別，則類別樣板可以繼承該類型的所有建構函式：
+如果類型引數指定基底類別，則類別樣板可以繼承該類型的所有建構函式：
 
 ```cpp
 template< typename T >

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4803
 ms.assetid: 2552f3a6-c418-49f4-98a2-a929857be658
-ms.openlocfilehash: 3915307ac2bcc6a923c93382cfefa618ce01fe52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb8f5fe9d55a44193325a2fcfe9ef7675a2b3b89
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563211"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774876"
 ---
 # <a name="compiler-warning-level-1-c4803"></a>編譯器警告 (層級 1) C4803
 
@@ -19,7 +19,7 @@ ms.locfileid: "50563211"
 
 事件方法必須具有相同的儲存體類別，為事件宣告。 編譯器會調整事件的方法，使儲存體類別都相同。
 
-如果您有一個類別，實作事件介面中的，可能會發生這個警告。 編譯器不會以隱含方式產生事件的引發方法，以在介面中。 當您在類別中實作該介面時，編譯器會以隱含方式產生引發方法及該方法不是虛擬的因此這項警告。 如需有關事件的詳細資訊，請參閱 <<c0> [ 事件](../../windows/event-cpp-component-extensions.md)。
+如果您有一個類別，實作事件介面中的，可能會發生這個警告。 編譯器不會以隱含方式產生事件的引發方法，以在介面中。 當您在類別中實作該介面時，編譯器會以隱含方式產生引發方法及該方法不是虛擬的因此這項警告。 如需有關事件的詳細資訊，請參閱 <<c0> [ 事件](../../extensions/event-cpp-component-extensions.md)。
 
 請參閱[警告](../../preprocessor/warning.md)pragma，如需有關如何關閉警告資訊。
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - typeid operator
 ms.assetid: 8871cee6-d6b9-4301-a5cb-bf3dc9798d61
-ms.openlocfilehash: dfbf5275391e2820c94d2827c9b2c3eb252365c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1185f48df4a941eb2a5d81bfa67d07cdf4387d0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571921"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780882"
 ---
 # <a name="typeid-operator"></a>typeid 運算子
 
@@ -26,7 +26,7 @@ typeid(expression)
 
 結果**typeid**是`const type_info&`。 值是參考`type_info`物件，表示*型別 id*或型別*運算式*，視哪種**typeid**用。 請參閱[type_info 類別](../cpp/type-info-class.md)如需詳細資訊。
 
-**Typeid**運算子無法搭配 managed 類型 （抽象宣告子或執行個體），請參閱[typeid](../windows/typeid-cpp-component-extensions.md)如需取得資訊<xref:System.Type>指定的型別。
+**Typeid**運算子無法搭配 managed 類型 （抽象宣告子或執行個體），請參閱[typeid](../extensions/typeid-cpp-component-extensions.md)如需取得資訊<xref:System.Type>指定的型別。
 
 **Typeid**運算子會執行階段檢查套用至多型類別類型的左值時，無法判斷真正的物件類型所提供的靜態資訊。 這類案例包括：
 

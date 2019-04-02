@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-ms.openlocfilehash: d94c223ed1e0b236ae8565d13a9f2c9652b6eb84
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1b9f57e46d5ac74dd52f7ddb7ebd90f8888891e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270294"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772747"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog 類別
 
@@ -100,7 +100,7 @@ class CMFCColorDialog : public CDialogEx
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用中的各種方法來設定色彩對話方塊`CMFCColorDialog`類別。 此範例示範如何設定目前的和新的色彩的對話方塊中，以及如何在兩個屬性頁的 [色彩] 對話方塊上設定所選取之色彩的紅色、 綠色和藍色元件。 此範例中是屬於[新的控制項範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用中的各種方法來設定色彩對話方塊`CMFCColorDialog`類別。 此範例示範如何設定目前的和新的色彩的對話方塊中，以及如何在兩個屬性頁的 [色彩] 對話方塊上設定所選取之色彩的紅色、 綠色和藍色元件。 此範例中是屬於[新的控制項範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]
 

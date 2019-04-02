@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: c5ee72e557c62e3db2eeb5dac4811133719183f6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b1dfe3a32f88c0e9456e3d73c31c533911f8d3ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746300"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770687"
 ---
 # <a name="for-each-in"></a>for each, in
 
@@ -35,7 +35,7 @@ ms.locfileid: "57746300"
 `identifier` 的類型。
 
 *identifier*<br/>
-表示集合項目的反覆項目變數。  當`identifier`已[追蹤參考運算子](../windows/tracking-reference-operator-cpp-component-extensions.md)，您可以修改項目。
+表示集合項目的反覆項目變數。  當`identifier`已[追蹤參考運算子](../extensions/tracking-reference-operator-cpp-component-extensions.md)，您可以修改項目。
 
 *expression*<br/>
 陣列運算式或集合。 集合項目必須如此，編譯器才能將其轉換為 `identifier` 類型。
@@ -45,12 +45,11 @@ ms.locfileid: "57746300"
 
 ### <a name="remarks"></a>備註
 
-
-  `for each` 陳述式可用來逐一查看集合。 您可以修改集合中的項目，不過，您無法加入或刪除項目。
+`for each` 陳述式可用來逐一查看集合。 您可以修改集合中的項目，不過，您無法加入或刪除項目。
 
 *陳述式*會針對陣列或集合中的每個項目執行。 在完成集合中所有項目的反覆項目之後，程式控制權會轉移到 `for each` 區塊之後的下一個陳述式。
 
-`for each` 並`in`都[內容相關性關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。
+`for each` 並`in`都[內容相關性關鍵字](../extensions/context-sensitive-keywords-cpp-component-extensions.md)。
 
 如需詳細資訊：
 
@@ -160,4 +159,4 @@ Testing
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+[執行階段平台的元件延伸模組](../extensions/component-extensions-for-runtime-platforms.md)

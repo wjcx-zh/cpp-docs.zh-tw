@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 81a15f7a34ebe6c4c101932074c63cb1c7f7fd26
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: bc449d0bbf222391868dc7586e0245fd6e8cd2ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742464"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769858"
 ---
 # <a name="security-best-practices-for-c"></a>C++ 的安全性最佳作法
 
@@ -46,14 +46,13 @@ C 執行階段程式庫 (CRT) 已增強，以包括造成安全性風險之函�
 
 ## <a name="safeint-library"></a>SafeInt 程式庫
 
-[SafeInt 程式庫](../windows/safeint-library.md)協助防止整數溢位和其他可利用來攻擊的錯誤，應用程式執行數學運算時，可能會發生。 `SafeInt`程式庫包含[SafeInt 類別](../windows/safeint-class.md)，則[SafeIntException 類別](../windows/safeintexception-class.md)，和數個[SafeInt 函式](../windows/safeint-functions.md)。
+[SafeInt 程式庫](../safeint/safeint-library.md)協助防止整數溢位和其他可利用來攻擊的錯誤，應用程式執行數學運算時，可能會發生。 `SafeInt`程式庫包含[SafeInt 類別](../safeint/safeint-class.md)，則[SafeIntException 類別](../safeint/safeintexception-class.md)，和數個[SafeInt 函式](../safeint/safeint-functions.md)。
 
-
-  `SafeInt` 類別可防止整數溢位和除以零惡意探索。 您可以使用它來處理不同類型之值間的比較。 它提供兩種錯誤處理原則。 預設原則可供 `SafeInt` 類別擲回 `SafeIntException` 類別例外狀況，以報告無法完成數學運算的原因。 第二個原則可供 `SafeInt` 類別停止程式執行。 您也可以定義自訂原則。
+`SafeInt` 類別可防止整數溢位和除以零惡意探索。 您可以使用它來處理不同類型之值間的比較。 它提供兩種錯誤處理原則。 預設原則可供 `SafeInt` 類別擲回 `SafeIntException` 類別例外狀況，以報告無法完成數學運算的原因。 第二個原則可供 `SafeInt` 類別停止程式執行。 您也可以定義自訂原則。
 
 每個 `SafeInt` 函式都會防止一個數學運算發生可利用的錯誤。 您可以使用兩種不同的參數，而且不需要將它們轉換成相同類型。 若要保護多個數學運算，請使用 `SafeInt` 類別。
 
-## <a name="checked-iterators"></a>已檢查的迭代器
+## <a name="checked-iterators"></a>Checked Iterators
 
 已檢查的迭代器會強制執行容器界限。 根據預設，已檢查的迭代器超出範圍時，會產生例外狀況並結束程式執行。 已檢查的迭代器會提供其他層級的回應取決於指派給前置處理器的值，定義這類 **\_SECURE\_SCL\_就會擲回**和 **\_迭代器\_偵錯\_層級**。 例如，在**\_迭代器\_偵錯\_LEVEL = 2**，已檢查的迭代器會提供完整正確性檢查偵錯模式，可使用判斷提示。 如需詳細資訊，請參閱 < [Checked Iterators](../standard-library/checked-iterators.md)並[\_迭代器\_偵錯\_層級](../standard-library/iterator-debug-level.md)。
 

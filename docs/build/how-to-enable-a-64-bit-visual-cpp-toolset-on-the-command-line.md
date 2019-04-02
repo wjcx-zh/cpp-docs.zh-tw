@@ -12,19 +12,19 @@ helpviewer_keywords:
 - IPF, command-line compiler
 - x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
-ms.openlocfilehash: b30b831522016ce61f138f7e0521c42ff44e04d9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 8436254a3d8c5c1dae018c2309ceaad7bd5b2408
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809765"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769273"
 ---
 # <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>HOW TO：啟用 64 位元、 x64 裝載 MSVC 工具組，在命令列上
 
 Visual Studio 包含 c + + 編譯器、 連結器及其他工具，可用來建立您可以在 32 位元、 64 位元或 ARM 為基礎的 Windows 作業系統執行的應用程式的平台特定版本。 其他選擇性的 Visual Studio 工作負載可讓您使用 c + + 工具來鎖定，請在其他平台，例如 iOS、 Android 及 Linux。 預設組建架構會使用 32 位元、 x86 裝載的工具來建置 32 位元、 x86 原生 Windows 程式碼。 不過，您可能必須在 64 位元電腦。 您可以善用處理器和記憶體的可用空間 64 位元程式碼使用 64 位元、 x64 裝載工具組，當您建置適用於 x86、 x64 或 ARM 處理器的程式碼。
 
 > [!NOTE]
-> 每個 Visual Studio 版本隨附的特定工具的相關資訊，請參閱[Visual c + + 工具和 Visual Studio 版本中的功能](../ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)。
+> 每個 Visual Studio 版本隨附的特定工具的相關資訊，請參閱[Visual c + + 工具和 Visual Studio 版本中的功能](../overview/visual-cpp-tools-and-features-in-visual-studio-editions.md)。
 >
 > 如需有關如何使用 Visual Studio IDE 建立 64 位元應用程式的資訊，請參閱[How to:將 Visual C++ 專案設定為以 64 位元 x64 平台為目標](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)。
 

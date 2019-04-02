@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 7f36557a4a993e8abd3004dc59372cc5a089e044
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d1922c2f2d804c2a93d30dc0708b2d3ae037414d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259746"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768701"
 ---
 # <a name="coledocument-class"></a>COleDocument 類別
 
@@ -544,7 +544,7 @@ virtual void UpdateModifiedFlag();
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例容器](../../visual-cpp-samples.md)<br/>
-[MFC 範例 MFCBIND](../../visual-cpp-samples.md)<br/>
+[MFC 範例容器](../../overview/visual-cpp-samples.md)<br/>
+[MFC 範例 MFCBIND](../../overview/visual-cpp-samples.md)<br/>
 [CDocument 類別](../../mfc/reference/cdocument-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)

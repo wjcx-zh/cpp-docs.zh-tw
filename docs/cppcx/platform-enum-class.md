@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Enum Struct
 ms.assetid: cf82f0eb-7a37-4e4e-bbe7-e4aebbc9ec0a
-ms.openlocfilehash: d91974cb1c98561ba61927b84d06ad45cffc1291
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 67870a0fcc685c420c7d24510e90c6f4ef9b72a9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745142"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780271"
 ---
 # <a name="platformenum-class"></a>Platform::Enum 類別
 
@@ -30,7 +30,7 @@ Enum 類別繼承 [Platform::Object Class](../cppcx/platform-object-class.md)的
 
 ### <a name="remarks"></a>備註
 
-使用 [public enum class](../windows/enum-class-cpp-component-extensions.md) 關鍵字建立列舉。 請勿明確使用 Platform::Enum 型別。 如需詳細資訊，請參閱 [列舉](../cppcx/enums-c-cx.md)中定義的介面的私用 C++ 專屬實作。
+使用 [public enum class](../extensions/enum-class-cpp-component-extensions.md) 關鍵字建立列舉。 請勿明確使用 Platform::Enum 型別。 如需詳細資訊，請參閱 [列舉](../cppcx/enums-c-cx.md)中定義的介面的私用 C++ 專屬實作。
 
 ### <a name="requirements"></a>需求
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-ms.openlocfilehash: 82036017188acc3f882e9751096af8ab268fd9db
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 203f2b97547c7ff8b1d68e3640e62d531b2600e9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525167"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780349"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>編譯器警告 (層級 4) C4754
 
@@ -19,7 +19,7 @@ ms.locfileid: "51525167"
 
 因為比較結果永遠相同，所以發出 C4754 警告。 這表示一個條件分支從未執行，很可能是因為關聯的整數運算式不正確。 這個程式碼缺失常發生於 64 位元架構的錯誤整數溢位檢查。
 
-整數轉換規則很複雜，而且有許多微妙的陷阱。 修正每個 C4754 警告的替代方案，您可以更新程式碼以使用[SafeInt 程式庫](../../windows/safeint-library.md)。
+整數轉換規則很複雜，而且有許多微妙的陷阱。 修正每個 C4754 警告的替代方案，您可以更新程式碼以使用[SafeInt 程式庫](../../safeint/safeint-library.md)。
 
 ## <a name="example"></a>範例
 

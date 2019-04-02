@@ -21,12 +21,12 @@ helpviewer_keywords:
 - CMainFrame class [MFC]
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
-ms.openlocfilehash: c8a3a5d9b8b007887dfb31f7459c0269377b38fd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0a002badf9c20ca7b2d1a129eca069e586893f3c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294157"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767232"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>變更 MFC 所建立之視窗的樣式
 
@@ -50,7 +50,7 @@ ms.locfileid: "57294157"
 
 [!code-cpp[NVC_MFCDocView#15](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]
 
-[CTRLBARS](../visual-cpp-samples.md)範例應用程式會示範這項技術改變視窗的屬性。 根據您的應用程式中變更`PreCreateWindow`，可能需要呼叫此函式的基底類別實作。
+[CTRLBARS](../overview/visual-cpp-samples.md)範例應用程式會示範這項技術改變視窗的屬性。 根據您的應用程式中變更`PreCreateWindow`，可能需要呼叫此函式的基底類別實作。
 
 下列討論內容涵蓋 SDI 案例並[MDI 案例](#_core_the_mdi_case)。
 

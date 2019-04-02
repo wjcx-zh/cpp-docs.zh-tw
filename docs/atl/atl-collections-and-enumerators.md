@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enumerators, ATL classes
 - collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-ms.openlocfilehash: 690fc023b72b2606efc190aceb7c266a35a4ebb4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ebf7be8b2c80a714a27567ce0334475519a69454
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283044"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768012"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL 集合和列舉程式
 
@@ -40,7 +40,7 @@ A`collection`是 COM 物件，提供的介面，可讓您存取一組資料的�
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 提供有關如何使用 Active Template Library 進行程式設計的概念性主題連結。
 
-[ATLCollections 範例](../visual-cpp-samples.md)<br/>
+[ATLCollections 範例](../overview/visual-cpp-samples.md)<br/>
 示範如何使用範例`ICollectionOnSTLImpl`和`CComEnumOnSTL`，以及自訂複製原則類別的實作。
 
 ## <a name="see-also"></a>另請參閱

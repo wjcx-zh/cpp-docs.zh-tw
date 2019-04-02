@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 8e2304ca2c4a6e974262fdb1b449a64b5871a474
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 77313f8c4dcc87fa9de852afe2d60e614f8fc3a3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749876"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781012"
 ---
 # <a name="platformobject-class"></a>Platform::Object 類別
 
@@ -118,7 +118,7 @@ A [platform:: type](../cppcx/platform-type-class.md)描述物件的執行階段�
 
 [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename)類別用來與語言無關的方式的 Windows 元件和應用程式之間傳遞類型資訊的 Windows Api。 T[platform:: type 類別](../cppcx/platform-type-class.md)有之間進行轉換的運算子`Type`和`TypeName`。
 
-使用[typeid](../windows/typeid-cpp-component-extensions.md)運算子傳回`Platform::Type`類別名稱，例如 XAML 頁面之間巡覽時的物件：
+使用[typeid](../extensions/typeid-cpp-component-extensions.md)運算子傳回`Platform::Type`類別名稱，例如 XAML 頁面之間巡覽時的物件：
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);

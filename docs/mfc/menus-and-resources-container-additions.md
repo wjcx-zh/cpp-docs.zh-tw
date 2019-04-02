@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-ms.openlocfilehash: ad3431f78d3637bcdfdb0266c8abdb43047ca28d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b1a74fef743592d3d052226dac926fc7ddc58578
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279330"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770339"
 ---
 # <a name="menus-and-resources-container-additions"></a>功能表和資源：容器新增
 
@@ -29,7 +29,7 @@ ms.locfileid: "57279330"
 
 容器應用程式，在兩種類型的變更需要成為： 修改現有的資源，以支援 OLE 視覺化編輯和新增新的資源用於就地啟用。 如果您使用應用程式精靈 來建立容器應用程式時，會為您完成這些步驟，但它們可能需要一些自訂。
 
-如果您不使用應用程式精靈，您可能想要查看 OCLIENT。RC，OCLIENT 範例應用程式，以查看如何實作這些變更的資源指令碼。 請參閱 MFC OLE 範例[OCLIENT](../visual-cpp-samples.md)。
+如果您不使用應用程式精靈，您可能想要查看 OCLIENT。RC，OCLIENT 範例應用程式，以查看如何實作這些變更的資源指令碼。 請參閱 MFC OLE 範例[OCLIENT](../overview/visual-cpp-samples.md)。
 
 本文章涵蓋的主題包括：
 
@@ -62,7 +62,7 @@ ms.locfileid: "57279330"
 |--------|---------|----------|
 |ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|
 
-第二項變更，就是建立新的快速鍵對應表對應至新的功能表資源建立就地啟用。 這個資料表有除了以上的 VK_ESCAPE 項目之外的 [檔案和視窗] 功能表項目。 下列範例會建立就地啟用 MFC 範例中的快速鍵對應表[容器](../visual-cpp-samples.md):
+第二項變更，就是建立新的快速鍵對應表對應至新的功能表資源建立就地啟用。 這個資料表有除了以上的 VK_ESCAPE 項目之外的 [檔案和視窗] 功能表項目。 下列範例會建立就地啟用 MFC 範例中的快速鍵對應表[容器](../overview/visual-cpp-samples.md):
 
 |識別碼|Key|類型|
 |--------|---------|----------|

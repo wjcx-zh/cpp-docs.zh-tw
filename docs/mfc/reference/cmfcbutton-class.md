@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: 804c3219356d36f6a0a733937c5e354822a4be83
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0659e5335e1ebc495280a4e0cb5c0167f3b45e1d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269808"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768208"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton 類別
 
@@ -180,7 +180,7 @@ class CMFCButton : public CButton
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用中的各種方法來設定按鈕的內容`CMFCButton`類別。 範例是一部分[新的控制項範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用中的各種方法來設定按鈕的內容`CMFCButton`類別。 範例是一部分[新的控制項範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]
@@ -542,7 +542,7 @@ FlatStyle  m_nFlatStyle;
 
 ### <a name="example"></a>範例
 
-下列範例示範如何設定的值`m_nFlatStyle`中的成員變數`CMFCButton`類別。 此範例中是屬於[新的控制項範例](../../visual-cpp-samples.md)。
+下列範例示範如何設定的值`m_nFlatStyle`中的成員變數`CMFCButton`類別。 此範例中是屬於[新的控制項範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#29](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_5.cpp)]
@@ -867,7 +867,7 @@ void SetImage(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用各種版本`SetImage`方法中的`CMFCButton`類別。 範例是一部分[新的控制項範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用各種版本`SetImage`方法中的`CMFCButton`類別。 範例是一部分[新的控制項範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]
@@ -891,7 +891,7 @@ void SetMouseCursor(HCURSOR hcursor);
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用`SetMouseCursor`方法中的`CMFCButton`類別。 此範例是中的程式碼的一部分[新的控制項範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用`SetMouseCursor`方法中的`CMFCButton`類別。 此範例是中的程式碼的一部分[新的控制項範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#30](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_6.cpp)]

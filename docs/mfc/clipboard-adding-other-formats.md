@@ -9,12 +9,12 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-ms.openlocfilehash: 16e949973ff621b1e4e36475d95763ac47b4a00d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 182abe71ccc9552c113ebb114b4351178e48b096
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280214"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766843"
 ---
 # <a name="clipboard-adding-other-formats"></a>剪貼簿：加入其他格式
 
@@ -36,7 +36,7 @@ ms.locfileid: "57280214"
 
 1. 加入標準的格式，藉由呼叫`COleDataSource::CacheGlobalData`每一個您想要支援的標準格式。
 
-在 MFC OLE 範例程式會使用這項技術[HIERSVR](../visual-cpp-samples.md) (檢查`OnGetClipboardData`成員函式**CServerItem**類別)。 在此範例中唯一的差別在於並未實作該步驟三，因為 HIERSVR 不支援任何其他標準的格式。
+在 MFC OLE 範例程式會使用這項技術[HIERSVR](../overview/visual-cpp-samples.md) (檢查`OnGetClipboardData`成員函式**CServerItem**類別)。 在此範例中唯一的差別在於並未實作該步驟三，因為 HIERSVR 不支援任何其他標準的格式。
 
 ### <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
 

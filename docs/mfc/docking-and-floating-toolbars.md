@@ -21,12 +21,12 @@ helpviewer_keywords:
 - toolbars [MFC], wrapping
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
-ms.openlocfilehash: 93d1e067777b1c6f4430fe9cc44ae531559b6962
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 01450dca56ad662c8db0a35f89749c4a288109b3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294667"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768130"
 ---
 # <a name="docking-and-floating-toolbars"></a>停駐和浮動工具列
 
@@ -50,7 +50,7 @@ Microsoft Foundation 類別程式庫支援可停駐工具列。 可停駐工具�
 
 - [已修正樣式工具列的設定自動換行位置](#_core_setting_wrap_positions_for_a_fixed_style_toolbar)
 
-請參閱 MFC 一般範例[DOCKTOOL](../visual-cpp-samples.md)的範例。
+請參閱 MFC 一般範例[DOCKTOOL](../overview/visual-cpp-samples.md)的範例。
 
 ##  <a name="_core_enabling_docking_in_a_frame_window"></a> 啟用 停駐在框架視窗
 
@@ -104,7 +104,7 @@ Microsoft Foundation 類別程式庫支援可停駐工具列。 可停駐工具�
 
 [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/cpp/docking-and-floating-toolbars_1.cpp)]
 
-MFC 一般範例[DOCKTOOL](../visual-cpp-samples.md)示範如何使用類別的成員函式[CControlBar](../mfc/reference/ccontrolbar-class.md)並[CToolBar](../mfc/reference/ctoolbar-class.md)管理動態配置的工具列。 請參閱檔案 EDITBAR。在 DOCKTOOL CPP。
+MFC 一般範例[DOCKTOOL](../overview/visual-cpp-samples.md)示範如何使用類別的成員函式[CControlBar](../mfc/reference/ccontrolbar-class.md)並[CToolBar](../mfc/reference/ctoolbar-class.md)管理動態配置的工具列。 請參閱檔案 EDITBAR。在 DOCKTOOL CPP。
 
 ### <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
 

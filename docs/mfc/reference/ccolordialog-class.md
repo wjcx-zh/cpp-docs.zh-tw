@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CColorDialog [MFC], OnColorOK
 - CColorDialog [MFC], m_cc
 ms.assetid: d013dc25-9290-4b5d-a97e-95ad7208e13b
-ms.openlocfilehash: 39868ed27a0dfb8756b4829ea7c378c798bd2ff3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bc9bc76b328359d4c8ec7796de7dfaa7d3a9cf2c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304206"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772829"
 ---
 # <a name="ccolordialog-class"></a>CColorDialog 類別
 
@@ -268,7 +268,7 @@ RGB 色彩值。
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 MDI](../../visual-cpp-samples.md)<br/>
-[MFC 範例 DRAWCLI](../../visual-cpp-samples.md)<br/>
+[MFC 範例 MDI](../../overview/visual-cpp-samples.md)<br/>
+[MFC 範例 DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [CCommonDialog 類別](../../mfc/reference/ccommondialog-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)

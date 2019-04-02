@@ -5,12 +5,12 @@ helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-ms.openlocfilehash: e7c91e0f369a4e6fe24e656f1b9e8504d7cb434a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: ae745cfb96f4efe1ede7e3fc762842f9e4d63323
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750425"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772734"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>在 /CLR 之下例外狀況處理行為的差異
 
@@ -88,7 +88,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 Caught a nested exception
@@ -141,7 +141,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 caught an SEH Exception
@@ -182,7 +182,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 Counter=-3
@@ -267,7 +267,7 @@ int main( int argc, char ** argv ) {
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 This is invoked since _set_se_translator is not supported when /clr is used
@@ -277,6 +277,6 @@ Caught an SEH exception with exception code: e0000101
 
 ## <a name="see-also"></a>另請參閱
 
-[例外狀況處理](../windows/exception-handling-cpp-component-extensions.md)<br/>
-[safe_cast](../windows/safe-cast-cpp-component-extensions.md)<br/>
+[例外狀況處理](../extensions/exception-handling-cpp-component-extensions.md)<br/>
+[safe_cast](../extensions/safe-cast-cpp-component-extensions.md)<br/>
 [例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)

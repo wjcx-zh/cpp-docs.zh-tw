@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-ms.openlocfilehash: 83800f823ffd14fd61a9735b09b12d2f07f6d0a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcb7784e59966510970bd9b3ae0157ae982e462d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477983"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768064"
 ---
 # <a name="new-operator-c"></a>new 運算子 (C++)
 
 物件或物件的陣列配置記憶體*型別名稱*從可用存放區，並傳回適當類型、 非零的指標物件。
 
 > [!NOTE]
->  Microsoft c + + 元件擴充功能可讓您**新**關鍵字加入 vtable 位置項目。 如需詳細資訊，請參閱[新 (新 vtable 中的位置）](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)
+>  Microsoft c + + 元件擴充功能可讓您**新**關鍵字加入 vtable 位置項目。 如需詳細資訊，請參閱[新 (新 vtable 中的位置）](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
 ## <a name="syntax"></a>語法
 
@@ -29,7 +29,7 @@ ms.locfileid: "50477983"
 
 如果不成功，**新**會傳回零或擲回例外狀況，請參閱[新和 delete 運算子](../cpp/new-and-delete-operators.md)如需詳細資訊。 您可以變更此預設行為，方法是撰寫自訂的例外狀況處理常式，並呼叫[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)以您的函式名稱，作為其引數的執行階段程式庫函式。
 
-如需如何在 managed 堆積上建立物件的資訊，請參閱[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)。
+如需如何在 managed 堆積上建立物件的資訊，請參閱[gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)。
 
 當**新**是用來配置記憶體給 c + + 類別物件，物件的建構函式呼叫之後的記憶體配置。
 
@@ -61,7 +61,7 @@ delete *p;
 
 下列清單描述的文法項目**新**:
 
-*放置*<br/>
+*placement*<br/>
 提供一個方式來傳遞其他引數，如果您多載**新**。
 
 *type-name*<br/>

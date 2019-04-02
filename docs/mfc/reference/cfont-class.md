@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-ms.openlocfilehash: 60a717136f69b29df48dd8f449ddaffe5c15ccbf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 04136b3550675f0e50f905047fee551e27da7069
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271862"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768104"
 ---
 # <a name="cfont-class"></a>CFont 類別
 
@@ -359,6 +359,6 @@ Windows GDI 字型物件的控制代碼附加至`CFont`如果成功，否則為 
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 HIERSVR](../../visual-cpp-samples.md)<br/>
+[MFC 範例 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [CGdiObject 類別](../../mfc/reference/cgdiobject-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)

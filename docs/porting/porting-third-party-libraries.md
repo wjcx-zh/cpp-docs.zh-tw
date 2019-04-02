@@ -5,12 +5,12 @@ helpviewer_keywords:
 - 3rd-party libraries
 - vspkg
 ms.assetid: b055ed20-8a9e-45b2-ac2a-e3d94271c009
-ms.openlocfilehash: 51c1634aade159e095b5957a15783e40ec0284d0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: e1aefc82eb23a8479035dd3372fa9ec24ab8feb1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750958"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774200"
 ---
 # <a name="porting-third-party-libraries"></a>移植協力廠商程式庫
 
@@ -18,7 +18,7 @@ ms.locfileid: "57750958"
 
 ## <a name="introducing-vcpkg"></a>vcpkg 簡介
 
-過去，尋找和升級協力廠商程式庫有時是非 trivial 工作。 為了更輕鬆地取得和重建 C++ 協力廠商的開放原始碼程式庫，Visual C++ 小組已建立稱為 **VC++ 封裝工具**或 **vcpkg** 的命令列工具。 Vcpkg 具有許多常見 C++ 開放原始碼程式庫的可搜尋目錄。 您可以直接從 vcpkg 命令列於目錄中安裝任何程式庫。 安裝程式庫時，vcpkg 會在電腦上建立目錄樹狀結構，並在此資料夾中新增 .h、.lib 和二進位檔。 您可以在編譯命令列中使用此資料夾，或使用 vcpkg 整合安裝命令將它整合到 Visual Studio 2015 或以上版本。 整合程式庫位置之後，Visual Studio 可以找到它，並將它新增至您建立的任何新專案。 若要使用程式庫，只要對其使用 `#include`，Visual Studio 就會自動將 .lib 路徑新增到專案設定，並將 dll 複製到解決方案資料夾。 如需詳細資訊，請參閱 [vcpkg：適用於 C++ 的套件管理員](../vcpkg.md)。
+過去，尋找和升級協力廠商程式庫有時是非 trivial 工作。 為了更輕鬆地取得和重建 C++ 協力廠商的開放原始碼程式庫，Visual C++ 小組已建立稱為 **VC++ 封裝工具**或 **vcpkg** 的命令列工具。 Vcpkg 具有許多常見 C++ 開放原始碼程式庫的可搜尋目錄。 您可以直接從 vcpkg 命令列於目錄中安裝任何程式庫。 安裝程式庫時，vcpkg 會在電腦上建立目錄樹狀結構，並在此資料夾中新增 .h、.lib 和二進位檔。 您可以在編譯命令列中使用此資料夾，或使用 vcpkg 整合安裝命令將它整合到 Visual Studio 2015 或以上版本。 整合程式庫位置之後，Visual Studio 可以找到它，並將它新增至您建立的任何新專案。 若要使用程式庫，只要對其使用 `#include`，Visual Studio 就會自動將 .lib 路徑新增到專案設定，並將 dll 複製到解決方案資料夾。 如需詳細資訊，請參閱 [vcpkg：適用於 C++ 的套件管理員](../build/vcpkg.md)。
 
 ## <a name="reporting-issues"></a>回報問題
 

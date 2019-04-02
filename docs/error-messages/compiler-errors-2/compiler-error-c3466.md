@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3466
 ms.assetid: 69a877d9-a749-474b-bfc3-8d3fd53ba8fd
-ms.openlocfilehash: d24980760ee86551946876e8af5c370af2753276
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6eae1c44d8dae9118258c83c5919947803f49215
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527370"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771249"
 ---
 # <a name="compiler-error-c3466"></a>編譯器錯誤 C3466
 
@@ -19,7 +19,7 @@ ms.locfileid: "50527370"
 
 您無法使用類型轉送泛型類別的特製化上。
 
-如需詳細資訊，請參閱 <<c0> [ 型別轉送 (C + + /cli CLI)](../../windows/type-forwarding-cpp-cli.md)。
+如需詳細資訊，請參閱 <<c0> [ 型別轉送 (C + + /cli CLI)](../../extensions/type-forwarding-cpp-cli.md)。
 
 ## <a name="example"></a>範例
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ambient properties
 - controls [ATL], properties
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
-ms.openlocfilehash: 29eeb31c0823a0614fa1404cf7efc1c281bab3a4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ffbec7c1a83c0dd829878f4c73340528d32fb852
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261579"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771548"
 ---
 # <a name="ccomcontrol-class"></a>CComControl 類別
 
@@ -73,7 +73,7 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 
 如需建立控制項的詳細資訊，請參閱[ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)。 如需 ATL 專案精靈 的詳細資訊，請參閱文章[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)。
 
-如需示範`CComControl`方法和資料成員，請參閱[CIRC](../../visual-cpp-samples.md)範例。
+如需示範`CComControl`方法和資料成員，請參閱[CIRC](../../overview/visual-cpp-samples.md)範例。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

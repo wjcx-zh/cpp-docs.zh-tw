@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CDialogBar [MFC], CDialogBar
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
-ms.openlocfilehash: 2ae7c941b527a7cbaa01bf43ef4d41c9a4975dac
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: af84c5239a9cb3cbddb1ab4f0230e5b1a3373573
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302399"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768298"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar 類別
 
@@ -143,7 +143,7 @@ virtual BOOL Create(
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 CTRLBARS](../../visual-cpp-samples.md)<br/>
+[MFC 範例 CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar 類別](../../mfc/reference/ccontrolbar-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CFormView 類別](../../mfc/reference/cformview-class.md)<br/>

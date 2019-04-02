@@ -29,12 +29,12 @@ helpviewer_keywords:
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-ms.openlocfilehash: e8c8d3f170803a792ca2ea8c7a37a18fd2cebd48
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6e5e55a23ee678bbedf76f608bc4fdf562cc1822
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259200"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773121"
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback 類別
 
@@ -101,7 +101,7 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx <T ::_ThreadMo
 
 `CBindStatusCallback` 類別會實作 `IBindStatusCallback` 介面。 `IBindStatusCallback` 必須實作您的應用程式讓它可以從非同步資料傳輸接收的通知。 使用系統提供的非同步 moniker`IBindStatusCallback`方法來傳送和接收非同步資料的相關資訊傳送至並從您的物件。
 
-一般而言，`CBindStatusCallback`物件與特定的繫結作業有關聯。 例如，在[非同步](../../visual-cpp-samples.md)範例中，當您設定 [URL] 屬性中，它會建立`CBindStatusCallback`呼叫中的物件`Download`:
+一般而言，`CBindStatusCallback`物件與特定的繫結作業有關聯。 例如，在[非同步](../../overview/visual-cpp-samples.md)範例中，當您設定 [URL] 屬性中，它會建立`CBindStatusCallback`呼叫中的物件`Download`:
 
 [!code-cpp[NVC_ATL_Windowing#86](../../atl/codesnippet/cpp/cbindstatuscallback-class_1.h)]
 
@@ -528,7 +528,7 @@ void Function_Name(
     DWORD dwSize);
 ```
 
-在下列範例 (取自[非同步](../../visual-cpp-samples.md)範例)，此函式`OnData`將接收的資料寫入至文字方塊。
+在下列範例 (取自[非同步](../../overview/visual-cpp-samples.md)範例)，此函式`OnData`將接收的資料寫入至文字方塊。
 
 ### <a name="example"></a>範例
 

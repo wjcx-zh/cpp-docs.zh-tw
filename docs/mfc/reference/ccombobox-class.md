@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 847927a36bac8540dd95307ae3c0259d0adba12a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a76be4be87471f26970a5b517d9993ae324b56c5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304466"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778516"
 ---
 # <a name="ccombobox-class"></a>CComboBox 類別
 
@@ -1557,7 +1557,7 @@ void ShowDropDown(BOOL bShowIt = TRUE);
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 CTRLBARS](../../visual-cpp-samples.md)<br/>
+[MFC 範例 CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>

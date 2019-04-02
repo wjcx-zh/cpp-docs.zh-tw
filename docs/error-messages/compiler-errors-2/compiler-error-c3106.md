@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3106
 ms.assetid: 39d97a32-0905-4702-87d3-7f8ce473fb93
-ms.openlocfilehash: 072c87c0264afd585326e5207a494dfb45961b24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5ed544549aecd9811279e065d7c252fe085e545
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434498"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769845"
 ---
 # <a name="compiler-error-c3106"></a>編譯器錯誤 C3106
 
@@ -19,7 +19,7 @@ ms.locfileid: "50434498"
 
 未具名引數必須傳遞至具名引數之前的屬性。
 
-如需詳細資訊，請參閱 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)。
+如需詳細資訊，請參閱 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
 
 ## <a name="example"></a>範例
 

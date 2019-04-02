@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCRibbonColorButton [MFC], SetPalette
 - CMFCRibbonColorButton [MFC], UpdateColor
 ms.assetid: 6b4b4ee3-8cc0-41b4-a4eb-93e8847008e1
-ms.openlocfilehash: a7901619110652423a2ab00d8088d6b9213fe202
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ceb686a9aca4ac126c4d61dd45975c65a9376ce9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266272"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769962"
 ---
 # <a name="cmfcribboncolorbutton-class"></a>CMFCRibbonColorButton 類別
 
@@ -92,7 +92,7 @@ class CMFCRibbonColorButton : public CMFCRibbonGallery
 
 ## <a name="example"></a>範例
 
-下例示範如何在 `CMFCRibbonColorButton` 類別中使用各種方法。 此範例示範如何建構 `CMFCRibbonColorButton` 物件、設定大型影像、啟用 [自動]  按鈕、啟用 [其他]  按鈕、設定資料行數目、設定色軸顯示的所有色彩項目大小、將色彩群組加入標準色彩區域中，以及指定文件色彩區域顯示的 RGB 值清單。 這段程式碼片段是 [Draw 用戶端範例](../../visual-cpp-samples.md)的一部分。
+下例示範如何在 `CMFCRibbonColorButton` 類別中使用各種方法。 此範例示範如何建構 `CMFCRibbonColorButton` 物件、設定大型影像、啟用 [自動]  按鈕、啟用 [其他]  按鈕、設定資料行數目、設定色軸顯示的所有色彩項目大小、將色彩群組加入標準色彩區域中，以及指定文件色彩區域顯示的 RGB 值清單。 這段程式碼片段是 [Draw 用戶端範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_DrawClient#3](../../mfc/reference/codesnippet/cpp/cmfcribboncolorbutton-class_1.cpp)]
 

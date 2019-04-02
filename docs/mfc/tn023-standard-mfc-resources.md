@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-ms.openlocfilehash: b4edc00f77152b8d677f3113e0ed6386569b0988
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d29f0ab2254a52e01f2016f64a37ddfce47955bb
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277673"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780310"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023:標準 MFC 資源
 
@@ -23,7 +23,7 @@ ms.locfileid: "57277673"
 
 MFC 提供兩種預先定義的資源類別，可讓您在應用程式中使用：美工圖案資源和標準架構資源。
 
-美工圖案資源是與架構無關的額外資源，但您有可能會想要將它加入至您應用程式的使用者介面中。 下列美工圖案資源包含在 MFC 一般範例[美工圖案](../visual-cpp-samples.md):
+美工圖案資源是與架構無關的額外資源，但您有可能會想要將它加入至您應用程式的使用者介面中。 下列美工圖案資源包含在 MFC 一般範例[美工圖案](../overview/visual-cpp-samples.md):
 
 - Common.rc:單一檔案的資源，其中包含：
 

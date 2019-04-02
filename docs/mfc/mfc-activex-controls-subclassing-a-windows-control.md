@@ -16,16 +16,16 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-ms.openlocfilehash: 08cdb90537dd50855a5bf223fbe54d58dfd6c365
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7042df6e7b7dc2c9a608470ba7cfc5a9e9f6127a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277049"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773251"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC ActiveX 控制項：子類別化 Windows 控制項
 
-本文說明子類別化通用 Windows 控制項以建立 ActiveX 控制項的流程。 子類別化現有的 Windows 控制項是一種可快速開發 ActiveX 控制項的方式。 新的控制項將會具有已子類別化之 Windows 控制項的能力，例如繪製和回應滑鼠點選動作。 MFC ActiveX 控制項範例[ 按鈕](../visual-cpp-samples.md)舉例說明子類別化 Windows 控制項。
+本文說明子類別化通用 Windows 控制項以建立 ActiveX 控制項的流程。 子類別化現有的 Windows 控制項是一種可快速開發 ActiveX 控制項的方式。 新的控制項將會具有已子類別化之 Windows 控制項的能力，例如繪製和回應滑鼠點選動作。 MFC ActiveX 控制項範例[ 按鈕](../overview/visual-cpp-samples.md)舉例說明子類別化 Windows 控制項。
 
 >[!IMPORTANT]
 > ActiveX 是舊版的技術，不應用於新的開發。 如需有關取代 ActiveX 的現代技術的詳細資訊，請參閱[ActiveX 控制項](activex-controls.md)。
@@ -65,8 +65,7 @@ ms.locfileid: "57277049"
 
 [!code-cpp[NVC_MFC_AxSub#4](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_4.cpp)]
 
-
-  `DoSuperclassPaint` 成員函式 (由 `COleControl` 所實作) 會在指定的裝置內容中使用 Windows 控制項的視窗程序將控制項繪製在周框矩形之內。 如此可讓控制項即使並未處於作用中也會成為可見狀態。
+`DoSuperclassPaint` 成員函式 (由 `COleControl` 所實作) 會在指定的裝置內容中使用 Windows 控制項的視窗程序將控制項繪製在周框矩形之內。 如此可讓控制項即使並未處於作用中也會成為可見狀態。
 
 > [!NOTE]
 >  `DoSuperclassPaint`成員函式只會使用允許將裝置內容以傳遞做為這些控制項型別*wParam*的 WM_PAINT 訊息。 這包括一些標準的 Windows 控制項，例如捲軸 和  按鈕，以及所有通用控制項。 對於不支援這個行為的控制項，您必須提供自己的程式碼以便正確顯示非現用控制項。
@@ -94,7 +93,7 @@ ActiveX 控制項容器可能會設計為自行執行訊息反映，如此便不
 
 - 此外，在。CPP 檔案中，實作`OnOcmCommand`成員函式以處理反映的訊息。 *WParam*並*lParam*參數都是一樣的原始視窗訊息。
 
-如需如何的範例處理反映訊息，請參閱 MFC ActiveX 控制項範例[ 按鈕](../visual-cpp-samples.md)。 它會示範`OnOcmCommand`處理常式，以偵測 BN_CLICKED 通知程式碼，並會透過引發 （傳送） 回應`Click`事件。
+如需如何的範例處理反映訊息，請參閱 MFC ActiveX 控制項範例[ 按鈕](../overview/visual-cpp-samples.md)。 它會示範`OnOcmCommand`處理常式，以偵測 BN_CLICKED 通知程式碼，並會透過引發 （傳送） 回應`Click`事件。
 
 ## <a name="see-also"></a>另請參閱
 

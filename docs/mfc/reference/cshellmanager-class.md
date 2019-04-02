@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 3f58492c6adbb6c183d6498e4a58f3ce639d7d18
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ec2abf243e7f3865609f81fa4f3bf81e1b4c3d92
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269379"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769969"
 ---
 # <a name="cshellmanager-class"></a>CShellManager 類別
 
@@ -128,7 +128,7 @@ BOOL BrowseForFolder(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何擷取的參照`CShellManager`使用的物件`CWinAppEx::GetShellManager`方法，以及如何使用`BrowseForFolder`方法。 此程式碼片段是一部分[總管範例](../../visual-cpp-samples.md)。
+下列範例示範如何擷取的參照`CShellManager`使用的物件`CWinAppEx::GetShellManager`方法，以及如何使用`BrowseForFolder`方法。 此程式碼片段是一部分[總管範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_Explorer#6](../../mfc/reference/codesnippet/cpp/cshellmanager-class_1.cpp)]
 

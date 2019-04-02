@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __raise keyword [C++]
 ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
-ms.openlocfilehash: 865524fe91b7d137e3a943973dcca6d833bd16df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5703c87945667f4ac65647019a72b304363bee2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471431"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780622"
 ---
 # <a name="raise"></a>__raise
 
@@ -26,7 +26,7 @@ __raise method-declarator;
 
 ## <a name="remarks"></a>備註
 
-在 Managed 程式碼中，只能從已定義的類別內引發事件。 請參閱[事件](../windows/event-cpp-component-extensions.md)如需詳細資訊。
+在 Managed 程式碼中，只能從已定義的類別內引發事件。 請參閱[事件](../extensions/event-cpp-component-extensions.md)如需詳細資訊。
 
 關鍵字 **__raise**會導致當您呼叫與事件，就會發出錯誤。
 
@@ -63,4 +63,4 @@ int main() {
 
 [關鍵字](../cpp/keywords-cpp.md)<br/>
 [事件處理](../cpp/event-handling.md)<br/>
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+[執行階段平台的元件延伸模組](../extensions/component-extensions-for-runtime-platforms.md)

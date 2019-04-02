@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3185
 ms.assetid: 5bf96279-043c-4981-9d02-b4550071b192
-ms.openlocfilehash: db448b462cd3a3f325c529e730e5c8f65e2b8f51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 45afe70b454f72dd8c9b8ce9771ce1f5aef6a10e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598805"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773186"
 ---
 # <a name="compiler-error-c3185"></a>編譯器錯誤 C3185
 
 Managed 或 WinRT 類型 'type' 上使用 'typeid'，請改用 'operator'
 
-您不能套用[typeid](../../cpp/typeid-operator.md)運算子，managed 或 WinRT 類型; 請改用[typeid](../../windows/typeid-cpp-component-extensions.md)改。
+您不能套用[typeid](../../cpp/typeid-operator.md)運算子，managed 或 WinRT 類型; 請改用[typeid](../../extensions/typeid-cpp-component-extensions.md)改。
 
 下列範例會產生 C3185，並示範如何修正此問題：
 

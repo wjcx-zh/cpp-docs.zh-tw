@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: 89194dabb4b124aa7cbd4d1d34a74de491fba66f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: c6d622060aaf700b6ea1a3bfe797ab3190eee797
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738480"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780232"
 ---
 # <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>HOW TO：內嵌的指標使用 c + + Interop 封送處理
 
@@ -23,7 +23,7 @@ ms.locfileid: "57738480"
 
 ## <a name="example"></a>範例
 
-下列範例會示範如何呼叫會採用結構，包含指標的 unmanaged 函式，從 managed 函式。 Managed 函式會建立結構的執行個體，並使用新的關鍵字將內嵌的指標初始化 (而非[ref new 和 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)關鍵字)。 這會配置原生堆積上的記憶體，因為沒有需要 pin 要隱藏記憶體回收的陣列。 不過，您必須明確地以避免記憶體流失刪除記憶體。
+下列範例會示範如何呼叫會採用結構，包含指標的 unmanaged 函式，從 managed 函式。 Managed 函式會建立結構的執行個體，並使用新的關鍵字將內嵌的指標初始化 (而非[ref new 和 gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)關鍵字)。 這會配置原生堆積上的記憶體，因為沒有需要 pin 要隱藏記憶體回收的陣列。 不過，您必須明確地以避免記憶體流失刪除記憶體。
 
 ```
 // marshal_embedded_pointer.cpp

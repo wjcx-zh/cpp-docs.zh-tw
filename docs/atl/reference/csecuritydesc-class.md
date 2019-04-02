@@ -34,12 +34,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: 3673b7ae8630a344e640df70a23698247b0ff8ec
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: aadaa64a936aee867766dfc0f7a6e190c9691ca6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262632"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778022"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc 類別
 
@@ -703,7 +703,7 @@ bool ToString(
 
 ## <a name="see-also"></a>另請參閱
 
-[安全性範例](../../visual-cpp-samples.md)<br/>
+[安全性範例](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
 [類別概觀](../../atl/atl-class-overview.md)<br/>
 [安全性全域函式](../../atl/reference/security-global-functions.md)

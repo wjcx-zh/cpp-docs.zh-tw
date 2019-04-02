@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: 63e97c3b9260465259d76cf6996d1d389f65ee41
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7e9fda44e2af4ec32bae6299fbcc0eda17984f9b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326448"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769728"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011:將 MFC 當成 DLL 的一部分來使用
 
@@ -57,7 +57,7 @@ MFC 的標準 Dll 中有幾項優點：
 
 應用程式和 DLL 之間的介面 (API) 必須明確地匯出。 建議您定義介面為低頻寬，並且可以的話只使用 C 介面。 直接 C 介面比較複雜的 C++ 類別容易維護。
 
-將 API 放在 C 和 C++ 檔案都可包含的個別標頭中。 請參閱 MFC 進階概念範例中的標頭 ScreenCap.h [DLLScreenCap](../visual-cpp-samples.md)的範例。 若要匯出函式，請在您的模組定義檔 (.DEF) 的 `EXPORTS` 區段中輸入那些函式，或者在您的函式定義包括 `__declspec(dllexport)`。 使用 `__declspec(dllimport)` 將這些函式匯入用戶端可執行檔。
+將 API 放在 C 和 C++ 檔案都可包含的個別標頭中。 請參閱 MFC 進階概念範例中的標頭 ScreenCap.h [DLLScreenCap](../overview/visual-cpp-samples.md)的範例。 若要匯出函式，請在您的模組定義檔 (.DEF) 的 `EXPORTS` 區段中輸入那些函式，或者在您的函式定義包括 `__declspec(dllexport)`。 使用 `__declspec(dllimport)` 將這些函式匯入用戶端可執行檔。
 
 您必須新增 AFX_MANAGE_STATE 巨集的動態連結至 MFC 的標準 MFC Dll 中匯出的函式的開頭。 這個巨集會將目前的模組狀態設定為 DLL 的狀態。 若要使用這個巨集，請將以下程式碼行加入至從 DLL 匯出的函式開頭：
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: a65ccdb4d2f031a70ba03719b58fb439407cdfc8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d0a006c6928bf42c3e6f4adfbc3d1fdde7ff7c87
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824952"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773043"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>逐步解說：編譯 C + + /cli CLR 為目標的 Visual Studio 中的 CLI 程式
 
@@ -51,13 +51,13 @@ ms.locfileid: "57824952"
 
 1. 按一下 Visual Studio 中新建立的索引標籤，然後鍵入有效的 Visual C++ 程式，或複製並貼上其中一個範例程式。
 
-   例如，您可以使用[How to:寫入文字檔 (C + + /cli CLI)](how-to-write-a-text-file-cpp-cli.md)範例程式 (在**檔案處理和 I/O**程式設計指南 》 的節點)。
+   例如，您可以使用[如何：撰寫文字檔 (C++/CLI)](how-to-write-a-text-file-cpp-cli.md) 範例程式 (位於《程式設計指南》的**檔案處理和 I/O** 節點中)。
 
    如果您使用範例程式，注意您會在建立 .NET 物件時使用 `gcnew` 關鍵字而不是 `new`，而且 `gcnew` 會傳回控制代碼 (`^`) 而不是指標 (`*`)：
 
    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-   如需新 Visual C++ 語法的詳細資訊，請參閱[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)。
+   如需新 Visual C++ 語法的詳細資訊，請參閱[執行階段平台的元件延伸模組](../extensions/component-extensions-for-runtime-platforms.md)。
 
 1. 在 [ **建置** ] 功能表上，按一下 [ **建置方案**]。
 
@@ -77,4 +77,4 @@ ms.locfileid: "57824952"
 ## <a name="see-also"></a>另請參閱
 
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
-[專案和組建系統](../build/projects-and-build-systems-cpp.md)<br/>
+[專案和建置系統](../build/projects-and-build-systems-cpp.md)<br/>

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: 769ba87f64a8096ac8c7f14cc091119345177b3b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a17910e0288b81723aa837ba9204bb40713d5d49
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426442"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770787"
 ---
 # <a name="reflection-ccli"></a>反映 (C++/CLI)
 
@@ -79,7 +79,7 @@ type of i = 'System.Int32'
 
 ## <a name="example-typeid"></a>範例： typeid
 
-如同`GetType`方法中， [typeid](../windows/typeid-cpp-component-extensions.md)運算子會傳回的指標**類型**物件，因此這個代碼表示的型別名稱**System.Int32**。 顯示型別名稱是反映的最基本功能，但可能更有用的技巧是要檢查或探索有效的列舉型別值。 做法是使用靜態**enum:: getnames**函式，它會傳回字串陣列，每一個都包含文字格式的列舉值。  下列範例會擷取描述的值列舉值的字串陣列**選項**(CLR) 列舉，並在迴圈中顯示它們。
+如同`GetType`方法中， [typeid](../extensions/typeid-cpp-component-extensions.md)運算子會傳回的指標**類型**物件，因此這個代碼表示的型別名稱**System.Int32**。 顯示型別名稱是反映的最基本功能，但可能更有用的技巧是要檢查或探索有效的列舉型別值。 做法是使用靜態**enum:: getnames**函式，它會傳回字串陣列，每一個都包含文字格式的列舉值。  下列範例會擷取描述的值列舉值的字串陣列**選項**(CLR) 列舉，並在迴圈中顯示它們。
 
 如果是第四個選項新增至**選項**列舉型別，此程式碼會報告新的選項，而不必重新編譯，即使在不同的組件中已定義列舉。
 

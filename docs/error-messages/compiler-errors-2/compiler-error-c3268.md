@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3268
 ms.assetid: d74a630c-daea-4e29-9759-83efef7fb184
-ms.openlocfilehash: c766488b29273f321feffa8e38a97e54454db7b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9954c12fb1065a4aa5e7afbdecd1f96758acaf9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480531"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778004"
 ---
 # <a name="compiler-error-c3268"></a>編譯器錯誤 C3268
 
@@ -21,7 +21,7 @@ ms.locfileid: "50480531"
 
 **/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
 
-請參閱[泛型](../../windows/generics-cpp-component-extensions.md)如需詳細資訊。
+請參閱[泛型](../../extensions/generics-cpp-component-extensions.md)如需詳細資訊。
 
 ## <a name="example"></a>範例
 

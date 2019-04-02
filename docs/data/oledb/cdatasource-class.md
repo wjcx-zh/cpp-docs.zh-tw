@@ -57,12 +57,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: ed2c0b11dfdc6882352c87166b74b2fab327fcd3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: cb92c19dd839fc09ed803e170a2762e4ac7cd494
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418603"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770788"
 ---
 # <a name="cdatasource-class"></a>CDataSource 類別
 
@@ -98,7 +98,7 @@ class CDataSource
 
 可為單一連線建立一個或多個資料庫工作階段。 這些工作階段是以 `CSession` 表示。 您必須呼叫[cdatasource:: Open](../../data/oledb/cdatasource-open.md)若要開啟的連接，再建立的工作階段`CSession::Open`。
 
-如需如何使用的範例`CDataSource`，請參閱 < [CatDB](../../visual-cpp-samples.md)範例。
+如需如何使用的範例`CDataSource`，請參閱 < [CatDB](../../overview/visual-cpp-samples.md)範例。
 
 ## <a name="close"></a> CDataSource::Close
 

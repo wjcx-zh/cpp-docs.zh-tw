@@ -5,12 +5,12 @@ helpviewer_keywords:
 - connection points [C++], adding to ATL objects
 - Implement Connection Point ATL wizard
 ms.assetid: 843531be-4a36-4db0-9d54-e029b1a72a8b
-ms.openlocfilehash: 39943c1bb071efba4fc3f2b42b227a4516e3856c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7341e69852ed804122e0196b51d305f5af0c35b9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299908"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772940"
 ---
 # <a name="adding-connection-points-to-an-object"></a>將連接點加入物件
 
@@ -36,7 +36,7 @@ ms.locfileid: "57299908"
 
    [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]
 
-   請參閱中的.idl 檔案[Circ](../visual-cpp-samples.md) ATL 範例的範例。
+   請參閱中的.idl 檔案[Circ](../overview/visual-cpp-samples.md) ATL 範例的範例。
 
 3. 使用 類別檢視，將方法和屬性新增至事件介面。 以滑鼠右鍵按一下 類別檢視中的類別，指向**新增**捷徑功能表，然後按一下 **加入連接點**。
 

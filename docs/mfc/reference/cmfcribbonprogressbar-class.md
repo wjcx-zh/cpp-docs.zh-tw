@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetPos
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
-ms.openlocfilehash: 626666a8f03a8312bd26fceca745f82ad1ab89b1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7c16217378cb8825ca4605687770de177e720c1d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285915"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778165"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar 類別
 
@@ -71,7 +71,7 @@ A`CMFCRibbonProgressBar`可以在兩個模式下操作： 一般和無限。 在
 
 ## <a name="example"></a>範例
 
-下例示範如何在 `CMFCRibbonProgressBar` 類別中使用各種方法。 設定進度列的最小和最大值，並設定進度列的目前位置，範例會示範如何設定要使用無限的模式 （其中一項作業的完成時間是未知） 中，進度列。 此程式碼片段是一部分[MS Office 2007 示範範例](../../visual-cpp-samples.md)。
+下例示範如何在 `CMFCRibbonProgressBar` 類別中使用各種方法。 設定進度列的最小和最大值，並設定進度列的目前位置，範例會示範如何設定要使用無限的模式 （其中一項作業的完成時間是未知） 中，進度列。 此程式碼片段是一部分[MS Office 2007 示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]
 

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-ms.openlocfilehash: b665f090fc680221be70f170452d756dd5f68dc5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 593c59c73b58b4364c9d652ce8eb415c17af496c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284277"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767583"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>將多個檢視加入至單一文件
 
 使用 Microsoft Foundation Class (MFC) 程式庫建立單一文件介面 (SDI) 應用程式中，每個文件類型是與單一的檢視類型相關聯。 在某些情況下，最好能夠切換文件的新檢視目前的檢視。
 
 > [!TIP]
->  如需實作單一文件的多個檢視的其他程序，請參閱 < [CDocument::AddView](../mfc/reference/cdocument-class.md#addview)並[收集](../visual-cpp-samples.md)MFC 範例。
+>  如需實作單一文件的多個檢視的其他程序，請參閱 < [CDocument::AddView](../mfc/reference/cdocument-class.md#addview)並[收集](../overview/visual-cpp-samples.md)MFC 範例。
 
 您可以實作這項功能加入新`CView`-衍生的類別和其他程式碼以動態方式將檢視切換至現有的 MFC 應用程式。
 

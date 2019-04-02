@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1001
 ms.assetid: 5736cdb3-22c8-4fad-aa85-d5e0d2b232f4
-ms.openlocfilehash: a7130ed0568de387c99b8296dc4e10d92baec337
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: beb382b9c6ccf80d01f5a0262832e7fb7e1ea0a4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821361"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770924"
 ---
 # <a name="fatal-error-c1001"></a>嚴重錯誤 C1001
 
@@ -23,4 +23,4 @@ ms.locfileid: "57821361"
 
 如果未對錯誤負責的最佳化，請嘗試重新撰寫的行，其中會報告錯誤或幾行程式碼周圍的那一行。 若要查看程式碼編譯器所看到的是它在前置處理之後的方式，您可以使用[/P （前置處理至檔案）](../../build/reference/p-preprocess-to-a-file.md)選項。
 
-如需有關如何找出錯誤的來源以及如何向 Microsoft 報告編譯器內部錯誤的詳細資訊，請參閱 <<c0> [ 如何回報 Visual c + + 工具組問題](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md)。
+如需有關如何找出錯誤的來源以及如何向 Microsoft 報告編譯器內部錯誤的詳細資訊，請參閱 <<c0> [ 如何回報 Visual c + + 工具組問題](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md)。

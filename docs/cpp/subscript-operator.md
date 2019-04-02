@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-ms.openlocfilehash: 5921b89c7637f1a4d1171c8835bb1b5300b718fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d55c18d2c9faa1a704bea129f2551937e76133c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572909"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767921"
 ---
 # <a name="subscript-operator-"></a>註標運算子]
 
@@ -28,7 +28,7 @@ postfix-expression [ expression ]
 
 （這也是主要運算式） 後面接著註標運算子中後, 置運算式 **[]**，指定陣列索引。
 
-如需 managed 陣列的詳細資訊，請參閱 <<c0> [ 陣列](../windows/arrays-cpp-component-extensions.md)。
+如需 managed 陣列在 C + + /cli CLI，請參閱[陣列](../extensions/arrays-cpp-component-extensions.md)。
 
 通常所代表的值*後置運算式*是指標值，例如陣列識別項，並*運算式*是整數值 （包括列舉型別）。 不過，在語法上需要的是其中一個指標類型的運算式，另一個則是整數類型。 因此，整數值可以在*後置運算式*位置，而指標值可以在括號括住*運算式*或註標位置。 請考慮下列程式碼片段：
 

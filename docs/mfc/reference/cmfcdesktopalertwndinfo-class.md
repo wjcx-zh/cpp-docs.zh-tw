@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndInfo [MFC], m_strText
 - CMFCDesktopAlertWndInfo [MFC], m_strURL
 ms.assetid: 5c9bb84e-6c96-4748-8e74-6951b6ae8e84
-ms.openlocfilehash: 3c40424a1aba81a7048ba89781fe6c4324f86ccd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a4b3d8769b3d267c0bd3f81269dd3b8ab3cf3184
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301632"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768285"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>CMFCDesktopAlertWndInfo 類別
 
@@ -68,7 +68,7 @@ class CMFCDesktopAlertWndInfo
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用中的各種成員`CMFCDesktopAlertWndInfo`類別。 範例會示範如何將控制代碼設定為顯示圖示，會顯示在桌面警示視窗，顯示在桌面警示視窗中，連結和桌面警示視窗上的連結相關聯的命令 ID 的文字。 此範例中是屬於[桌面警示示範範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用中的各種成員`CMFCDesktopAlertWndInfo`類別。 範例會示範如何將控制代碼設定為顯示圖示，會顯示在桌面警示視窗，顯示在桌面警示視窗中，連結和桌面警示視窗上的連結相關聯的命令 ID 的文字。 此範例中是屬於[桌面警示示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#3](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndinfo-class_1.cpp)]
 

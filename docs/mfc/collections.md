@@ -17,12 +17,12 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-ms.openlocfilehash: 5b74ee8a779ad2fffa801749d9818f985bc8c352
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f3dea68deaae73313fe389be49e8bbed7da3c93a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273305"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767177"
 ---
 # <a name="collections"></a>集合
 
@@ -55,7 +55,7 @@ MFC 程式庫提供集合類別管理物件群組。 這些類別有兩種類型
 
 ##  <a name="_core_the_template_based_collection_classes"></a> 樣板型集合類別
 
-實作包含任何類型物件的類型安全集合的最簡單方法，是使用其中一個 MFC 樣板型類別。 如需這些類別的範例，請參閱 MFC 範例[收集](../visual-cpp-samples.md)。
+實作包含任何類型物件的類型安全集合的最簡單方法，是使用其中一個 MFC 樣板型類別。 如需這些類別的範例，請參閱 MFC 範例[收集](../overview/visual-cpp-samples.md)。
 
 下表列出的是 MFC 樣板型集合類別。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2061
 ms.assetid: b0e61c0c-a205-4820-b9aa-301d6c6fe6eb
-ms.openlocfilehash: 0bd1e770e38fcb85164bfa205470ac55a12e1c87
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85357d94c7bc2d709e852daa60caf269949ad1b8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466192"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771457"
 ---
 # <a name="compiler-error-c2061"></a>編譯器錯誤 C2061
 
@@ -34,7 +34,7 @@ template < A a >   // C2061
 class c{};
 ```
 
-如果您傳遞至執行個體名稱，就會發生 C2061 [typeid](../../windows/typeid-cpp-component-extensions.md):
+如果您傳遞至執行個體名稱，就會發生 C2061 [typeid](../../extensions/typeid-cpp-component-extensions.md):
 
 ```
 // C2061b.cpp

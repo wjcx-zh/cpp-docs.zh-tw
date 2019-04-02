@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-ms.openlocfilehash: 87beb468fb8fe61358a03e2cd287903a268a18ba
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 5e19ab9b9339f3e6f61abf7731a40ed3832b50c9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740502"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767358"
 ---
 # <a name="csize-class"></a>CSize 類別
 
@@ -226,7 +226,7 @@ CSize operator-() const throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 MDI](../../visual-cpp-samples.md)<br/>
+[MFC 範例 MDI](../../overview/visual-cpp-samples.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CRect 類別](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CPoint 類別](../../atl-mfc-shared/reference/cpoint-class.md)

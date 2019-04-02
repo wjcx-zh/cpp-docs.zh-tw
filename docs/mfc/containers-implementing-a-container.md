@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: 0ab91316c9ee07296fbc46f9f17b3c46c71ee96f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b0d737a2025ed0006db00425d42c02ebf0bdeda8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271420"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767882"
 ---
 # <a name="containers-implementing-a-container"></a>容器：實作容器
 
@@ -36,7 +36,7 @@ ms.locfileid: "57271420"
 
 1. 實作 `OnSize` 訊息處理常式以通知 OLE 內嵌項目，需要變更其矩形以反映它的包含檢視的大小變更。
 
-由於這些功能的實作在應用程式之間大幅不同，應用程式精靈只提供基本實作。 您可能必須自訂這些函式，才能讓您的應用程式正常運作。 這個範例，請參閱[容器](../visual-cpp-samples.md)範例。
+由於這些功能的實作在應用程式之間大幅不同，應用程式精靈只提供基本實作。 您可能必須自訂這些函式，才能讓您的應用程式正常運作。 這個範例，請參閱[容器](../overview/visual-cpp-samples.md)範例。
 
 #### <a name="to-handle-embedded-and-linked-items"></a>若要處理內嵌和連結項目
 
@@ -44,7 +44,7 @@ ms.locfileid: "57271420"
 
 1. 覆寫`OnChange`， `OnChangeItemPosition`，和`OnGetItemPosition`。 這些函式處理調整大小、定位和修改內嵌和連結項目。
 
-應用程式精靈 將衍生類別，但您可能需要覆寫`OnChange`和其他函式在之前程序中的步驟 2 一起列出。 因為這些函式的實作每個應用程式都不同，需要對大部分的應用程式自訂基本架構實作。 這個範例，請參閱 MFC 範例[DRAWCLI](../visual-cpp-samples.md)並[容器](../visual-cpp-samples.md)。
+應用程式精靈 將衍生類別，但您可能需要覆寫`OnChange`和其他函式在之前程序中的步驟 2 一起列出。 因為這些函式的實作每個應用程式都不同，需要對大部分的應用程式自訂基本架構實作。 這個範例，請參閱 MFC 範例[DRAWCLI](../overview/visual-cpp-samples.md)並[容器](../overview/visual-cpp-samples.md)。
 
 您必須將多個項目加入至容器應用程式的功能表結構以支援 OLE。 如需這些的詳細資訊，請參閱[功能表和資源：容器新增](../mfc/menus-and-resources-container-additions.md)。
 

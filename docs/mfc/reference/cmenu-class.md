@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: bdc5f2ebf20949f63b3892ee8e8c6eedf05e2838
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 464b59f7e598ea1901cf88c47c5887cbbf308607
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293858"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770846"
 ---
 # <a name="cmenu-class"></a>CMenu 類別
 
@@ -561,7 +561,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 ### <a name="example"></a>範例
 
-下列程式碼是從 MFC [CTRLTEST](../../visual-cpp-samples.md)範例：
+下列程式碼是從 MFC [CTRLTEST](../../overview/visual-cpp-samples.md)範例：
 
 [!code-cpp[NVC_MFCWindowing#24](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]
 
@@ -1094,7 +1094,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 
 ### <a name="example"></a>範例
 
-下列程式碼是從 MFC [CTRLTEST](../../visual-cpp-samples.md)範例：
+下列程式碼是從 MFC [CTRLTEST](../../overview/visual-cpp-samples.md)範例：
 
 [!code-cpp[NVC_MFCWindowing#31](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]
 
@@ -1484,8 +1484,8 @@ BOOL TrackPopupMenuEx(
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 CTRLTEST](../../visual-cpp-samples.md)<br/>
-[MFC 範例 DYNAMENU](../../visual-cpp-samples.md)<br/>
+[MFC 範例 CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
+[MFC 範例 DYNAMENU](../../overview/visual-cpp-samples.md)<br/>
 [CObject 類別](../../mfc/reference/cobject-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CObject 類別](../../mfc/reference/cobject-class.md)

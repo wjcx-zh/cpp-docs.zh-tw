@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: 0c09e0c29aacbf655652446caf90ab21d92103e8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: e469556a773ffcdbf50e53d94022c0b6b7abf869
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748201"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781038"
 ---
 # <a name="friend-assemblies-c"></a>Friend 組件 (C++)
 
@@ -186,4 +186,4 @@ Class1::Test_Public
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+[執行階段平台的元件延伸模組](../extensions/component-extensions-for-runtime-platforms.md)

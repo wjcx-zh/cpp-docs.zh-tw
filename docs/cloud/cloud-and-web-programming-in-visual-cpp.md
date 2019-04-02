@@ -2,12 +2,12 @@
 title: 以 Visual C++ 進行雲端和 Web 程式設計
 ms.date: 11/04/2016
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: ec5999a90701c427a3b7166803ee79a4a5cd19b2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 33431a8f8660af683ed2e39e10811c22fe2f4fcc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414482"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773082"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>以 Visual C++ 進行雲端和 Web 程式設計
 
@@ -58,5 +58,5 @@ ms.locfileid: "57414482"
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual C++](../visual-cpp-in-visual-studio.md) <br/>
+[Visual C++](../overview/visual-cpp-in-visual-studio.md) <br/>
 [網路和 web 服務](/windows/uwp/networking/)

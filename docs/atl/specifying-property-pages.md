@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ISpecifyPropertyPages method
 - property pages, specifying
 ms.assetid: ee8678cf-c708-49ab-b0ad-fc2db31f1ac3
-ms.openlocfilehash: 3e1dd623ef6dc49e0d48e7ff91b18041e1c46916
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 47ee0c7d6d2ed464318ab80385ac71cff426a002
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811754"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770976"
 ---
 # <a name="specifying-property-pages"></a>指定屬性頁
 
@@ -38,4 +38,4 @@ ms.locfileid: "57811754"
 ## <a name="see-also"></a>另請參閱
 
 [屬性頁](../atl/atl-com-property-pages.md)<br/>
-[ATLPages 範例](../visual-cpp-samples.md)
+[ATLPages 範例](../overview/visual-cpp-samples.md)

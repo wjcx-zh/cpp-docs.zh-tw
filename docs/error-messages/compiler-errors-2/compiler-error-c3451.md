@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3451
 ms.assetid: a4897a69-e3e7-40bb-bb1c-598644904012
-ms.openlocfilehash: 041c0c22b7ae842073bfd6656d9cbb3b2a20af9c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ef4352101541391a7cda88471fbaa6aeae4ffb4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430052"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770365"
 ---
 # <a name="compiler-error-c3451"></a>編譯器錯誤 C3451
 
 'attribute': 無法套用到 'type' 的非受控的屬性
 
-C + + 屬性無法套用至 CLR 型別。 請參閱[c + + 屬性參考](../../windows/cpp-attributes-reference.md)如需詳細資訊。
+C + + 屬性無法套用至 CLR 型別。 請參閱[c + + 屬性參考](../../windows/attributes/attributes-alphabetical-reference.md)如需詳細資訊。
 
-如需詳細資訊，請參閱 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)。
+如需詳細資訊，請參閱 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
 
 針對 Visual c + + 2005年所進行的編譯器一致性工作可能會導致此錯誤： [uuid](../../windows/uuid-cpp-attributes.md)屬性不再允許使用者定義的屬性，使用 CLR 程式設計上。 請改用 <xref:System.Runtime.InteropServices.GuidAttribute>。
 

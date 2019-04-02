@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
-ms.openlocfilehash: f84c0da7530a774ebe2b33aea0bddc5b0bf0fe17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 795b20cba41eeca8cc1a32e312edf065b718f364
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326344"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768482"
 ---
 # <a name="ccreatecontext-structure"></a>CCreateContext 結構
 
@@ -56,7 +56,7 @@ A`CCreateContext`結構包含文件、 框架視窗、 檢視和文件範本的�
 
 一般情況下，如果您使用 framework 預設值時，您可以忽略`CCreateContext`。 如果您嘗試使用更進階的修改、 Microsoft Foundation 類別程式庫原始碼或範例程式，例如 VIEWEX，將引導您。 如果您不要忘記必要的參數，framework 判斷提示會告訴您您忘了。
 
-如需詳細資訊`CCreateContext`，請參閱 MFC 範例[VIEWEX](../../visual-cpp-samples.md)。
+如需詳細資訊`CCreateContext`，請參閱 MFC 範例[VIEWEX](../../overview/visual-cpp-samples.md)。
 
 ## <a name="requirements"></a>需求
 

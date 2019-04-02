@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCToolBarComboBoxEdit [MFC], CMFCToolBarComboBoxEdit
 ms.assetid: 4789c34a-ce58-48ba-a26f-38748b601352
-ms.openlocfilehash: fcf89623fcde2067f2def83f1e491db015375e02
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 55a2cfef69ee215d63a859b0b7fbf3886bbf60b6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280533"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771028"
 ---
 # <a name="cmfctoolbarcomboboxedit-class"></a>CMFCToolBarComboBoxEdit 類別
 
@@ -75,7 +75,7 @@ CMFCToolBarComboBoxEdit(CMFCToolBarComboBoxButton& combo);
 
 ### <a name="example"></a>範例
 
-下列範例示範如何建構的物件`CMFCToolBarComboBoxEdit`類別。 此程式碼片段是一部分[IE 示範範例](../../visual-cpp-samples.md)。
+下列範例示範如何建構的物件`CMFCToolBarComboBoxEdit`類別。 此程式碼片段是一部分[IE 示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_IEDemo#5](../../mfc/reference/codesnippet/cpp/cmfctoolbarcomboboxedit-class_1.cpp)]
 

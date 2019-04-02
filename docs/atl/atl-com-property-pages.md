@@ -9,12 +9,12 @@ helpviewer_keywords:
 - COM objects, ATL
 - ATL property pages
 ms.assetid: 663c7caa-2e5e-4b5c-b8ea-fd434ceb1654
-ms.openlocfilehash: 90dafc411f3262dc458c5158df049740a9d7a683
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d374569c6c3e9bb63b6b026d2b0f86226d158f36
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266896"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768405"
 ---
 # <a name="atl-com-property-pages"></a>ATL COM 屬性頁
 
@@ -36,7 +36,7 @@ COM 屬性頁來設定屬性中提供的使用者介面 （或呼叫的方法）
 
 ## <a name="related-sections"></a>相關章節
 
-[ATLPages 範例](../visual-cpp-samples.md)<br/>
+[ATLPages 範例](../overview/visual-cpp-samples.md)<br/>
 ATLPages 範例中，實作屬性頁，使用的範例摘要`IPropertyPageImpl`。
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>

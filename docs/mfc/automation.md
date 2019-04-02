@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: b26a08bbe9ef9b9151910871201abe05a44d2f6c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7818aa708a762f2a284be029a6c3f3facd971d9a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265558"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767726"
 ---
 # <a name="automation"></a>Automation
 
@@ -55,17 +55,17 @@ Automation 伺服器和用戶端使用的 COM 介面一定是衍生自 `IDispatc
 
 ## <a name="automation-samples"></a>Automation 範例
 
-- [AUTOCLIK](../visual-cpp-samples.md) ：使用此範例來了解 Automation 技術，可做為學習遠端 Automation 的基礎。
+- [AUTOCLIK](../overview/visual-cpp-samples.md) ：使用此範例來了解 Automation 技術，可做為學習遠端 Automation 的基礎。
 
-- [ACDUAL](../visual-cpp-samples.md) ：將雙重介面加入至 Automation 伺服應用程式。
+- [ACDUAL](../overview/visual-cpp-samples.md) ：將雙重介面加入至 Automation 伺服應用程式。
 
-- [CALCDRIV](../visual-cpp-samples.md) ：驅動 MFCCALC 的 Automation 用戶端應用程式。
+- [CALCDRIV](../overview/visual-cpp-samples.md) ：驅動 MFCCALC 的 Automation 用戶端應用程式。
 
-- [INPROC](../visual-cpp-samples.md) ：示範同處理序 Automation 伺服應用程式。
+- [INPROC](../overview/visual-cpp-samples.md) ：示範同處理序 Automation 伺服應用程式。
 
-- [IPDRIVE](../visual-cpp-samples.md) ：驅動 INPROC 的 Automation 用戶端應用程式。
+- [IPDRIVE](../overview/visual-cpp-samples.md) ：驅動 INPROC 的 Automation 用戶端應用程式。
 
-- [MFCCALC](../visual-cpp-samples.md) ：示範 Automation 用戶端應用程式。
+- [MFCCALC](../overview/visual-cpp-samples.md) ：示範 Automation 用戶端應用程式。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
 

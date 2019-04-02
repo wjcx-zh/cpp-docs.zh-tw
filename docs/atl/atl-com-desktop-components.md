@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ATL, reference
 - ATL, about ATL
 ms.assetid: 291f38d1-d2de-4687-86a9-99b4fd35706c
-ms.openlocfilehash: 65b8631560ec1b768521d917256c32c75c531fab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1ee9364cfcd382c8699014fd2ef4a807b63bb0f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644180"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780427"
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM 桌面元件
 
@@ -47,7 +47,7 @@ ATL 參考文件 Active Template Library (ATL)，一組樣板架構 c + + 類別
 [ATL 教學課程](../atl/active-template-library-atl-tutorial.md)<br/>
 將引導您完成建立控制項，並示範一些程序中的 ATL 基本概念。
 
-[ATL 範例](../visual-cpp-samples.md)<br/>
+[ATL 範例](../overview/visual-cpp-samples.md)<br/>
 示範如何使用 ATL 撰寫 COM 物件的範例程式碼。
 
 [OLE DB 範本](../data/oledb/ole-db-templates.md)<br/>

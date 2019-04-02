@@ -2,16 +2,16 @@
 title: 逐步解說：編譯 C + + /CX 程式，在命令列上
 ms.date: 09/24/2018
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: ad718a2eb876430d7721d0cd20cfd5b952750f8b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 099bef402d22abc12a31f105f63e5405c65a1d82
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809505"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766053"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>逐步解說：編譯 C + + /CX 程式，在命令列上
 
-您可以建立以 Windows 執行階段為目標的 Visual C++ 程式，並在命令列上建置它們。 Visual C++ 支援 Visual C++ 元件擴充功能 (C++/CX)，其具有以 WinRT 執行階段程式設計模型為目標的其他類型及運算子。 您可以使用 C + + /CX 來建置適用於通用 Windows 平台 (UWP)、 Windows Phone 8.1 和 Windows 桌面應用程式。 如需詳細資訊，請參閱 <<c0> [ 教學課程的 c + + /CX](https://msdn.microsoft.com/magazine/dn166929.aspx)並[執行階段平台的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)。
+您可以建立以 Windows 執行階段為目標的 Visual C++ 程式，並在命令列上建置它們。 Visual C++ 支援 Visual C++ 元件擴充功能 (C++/CX)，其具有以 WinRT 執行階段程式設計模型為目標的其他類型及運算子。 您可以使用 C + + /CX 來建置適用於通用 Windows 平台 (UWP)、 Windows Phone 8.1 和 Windows 桌面應用程式。 如需詳細資訊，請參閱 <<c0> [ 教學課程的 c + + /CX](https://msdn.microsoft.com/magazine/dn166929.aspx)並[執行階段平台的元件擴充功能](../extensions/component-extensions-for-runtime-platforms.md)。
 
 在此逐步解說中，您可以使用文字編輯器來建立基本的 C++/CX 程式，然後在命令列上進行編譯。 (您可以使用自己的 C++/CX 程式，而不是輸入所顯示的程式，或者您可以使用其他說明文章中的 C++/CX 程式碼範例。 這項技術可用於建置和測試沒有任何 UI 元素的小模組。）
 
@@ -63,5 +63,5 @@ ms.locfileid: "57809505"
 
 ## <a name="see-also"></a>另請參閱
 
-[專案和組建系統](projects-and-build-systems-cpp.md)<br/>
+[專案和建置系統](projects-and-build-systems-cpp.md)<br/>
 [MSVC 編譯器選項](reference/compiler-options.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3821
 ms.assetid: 2b327c7a-5faf-443c-ae82-944fae25b4df
-ms.openlocfilehash: 1cfc762cc7151eb2d55f8bd681bec935aea2acd4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 248431afb25aa4b9480818f76388f6ad56d8e006
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625962"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778243"
 ---
 # <a name="compiler-error-c3821"></a>編譯器錯誤 C3821
 
@@ -19,7 +19,7 @@ ms.locfileid: "50625962"
 
 具有內嵌組譯碼的函式或[setjmp](../../c-runtime-library/reference/setjmp.md)不能包含實值型別或 managed 的類別。 若要修正這個錯誤，請移除內嵌組譯碼和`setjmp`或移除受管理的物件。
 
-如果您嘗試使用 vararg 函式中的自動儲存體，也會發生 C3821。  如需詳細資訊，請參閱[變數引數清單 （...）(C + + /CLI CLI)](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)並[參考類型的 c + + 堆疊語意](../../dotnet/cpp-stack-semantics-for-reference-types.md)。
+如果您嘗試使用 vararg 函式中的自動儲存體，也會發生 C3821。  如需詳細資訊，請參閱[變數引數清單 （...）(C + + /CLI CLI)](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md)並[參考類型的 c + + 堆疊語意](../../dotnet/cpp-stack-semantics-for-reference-types.md)。
 
 ## <a name="example"></a>範例
 

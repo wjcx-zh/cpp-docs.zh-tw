@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCTabToolTipInfo struct
 ms.assetid: 9c3b3fb9-1497-4d59-932b-0da9348dd5e2
-ms.openlocfilehash: 1e10e74729a1a4bde90ca22abdcc1a75b41c95db
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87c8820bc33f3a344933faa797a9fc60d2422b13
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260812"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773160"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>CMFCTabToolTipInfo 結構
 
@@ -39,7 +39,7 @@ struct CMFCTabToolTipInfo
 
 ## <a name="example"></a>範例
 
-下列範例示範如何`CMFCTabToolTipInfo`用於[MDITabsDemo 範例：MFC 索引標籤式 MDI 應用程式](../../visual-cpp-samples.md)。
+下列範例示範如何`CMFCTabToolTipInfo`用於[MDITabsDemo 範例：MFC 索引標籤式 MDI 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -65,7 +65,7 @@ int m_nTabIndex;
 
 ### <a name="example"></a>範例
 
-下列範例示範如何`m_nTabIndex`用於[MDITabsDemo 範例：MFC 索引標籤式 MDI 應用程式](../../visual-cpp-samples.md)。
+下列範例示範如何`m_nTabIndex`用於[MDITabsDemo 範例：MFC 索引標籤式 MDI 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -79,7 +79,7 @@ CMFCBaseTabCtrl* m_pTabWnd;
 
 ### <a name="example"></a>範例
 
-下列範例示範如何`m_pTabWnd`用於[MDITabsDemo 範例：MFC 索引標籤式 MDI 應用程式](../../visual-cpp-samples.md)。
+下列範例示範如何`m_pTabWnd`用於[MDITabsDemo 範例：MFC 索引標籤式 MDI 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -97,7 +97,7 @@ CString m_strText;
 
 ### <a name="example"></a>範例
 
-下列範例示範如何`m_strText`用於[MDITabsDemo 範例：MFC 索引標籤式 MDI 應用程式](../../visual-cpp-samples.md)。
+下列範例示範如何`m_strText`用於[MDITabsDemo 範例：MFC 索引標籤式 MDI 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 

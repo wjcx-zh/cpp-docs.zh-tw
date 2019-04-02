@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3887
 ms.assetid: a7e82426-ef99-437b-9562-2822004e18fe
-ms.openlocfilehash: e41ea1dbe1f2bd47f9b557d502ec95bcecb1e2a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85434cb8daba0db82843c09e2d1bb09d98960272
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428259"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777437"
 ---
 # <a name="compiler-error-c3887"></a>編譯器錯誤 C3887
 
 'var': 常值資料成員初始設定式必須是常數運算式
 
-A[常值](../../windows/literal-cpp-component-extensions.md)資料成員只能使用常數運算式初始化。
+A[常值](../../extensions/literal-cpp-component-extensions.md)資料成員只能使用常數運算式初始化。
 
 下列範例會產生 C3887:
 

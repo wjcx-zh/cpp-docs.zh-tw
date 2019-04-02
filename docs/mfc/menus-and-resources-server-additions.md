@@ -17,18 +17,18 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-ms.openlocfilehash: 0cf5b495ca1e3f6e7b0ae434c09e014a29eadb00
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 85c7b6059a868e93c6c6a7ebbd7b08dac3233612
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281944"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767195"
 ---
 # <a name="menus-and-resources-server-additions"></a>功能表和資源：伺服器新增項目
 
 這篇文章會說明所需對功能表和視覺化編輯伺服器 （元件） 應用程式中的其他資源所做的變更。 伺服器應用程式需要許多新增項目功能表結構及其他資源，因為它可以啟動三個模式之一： 獨立、 內嵌，或在地方。 中所述[功能表和資源 (OLE)](../mfc/menus-and-resources-ole.md)文章，有四組功能表的最大值。 所有的四個用於 MDI 全伺服應用程式，而只有三個適用於迷你伺服程式。 應用程式精靈 會建立功能表配置所需的您想要的伺服器類型。 您可能需要一些自訂。
 
-如果您不使用應用程式精靈，您可能想要查看 HIERSVR。MFC 範例應用程式的資源指令碼，RC [HIERSVR](../visual-cpp-samples.md)，以查看如何實作這些變更。
+如果您不使用應用程式精靈，您可能想要查看 HIERSVR。MFC 範例應用程式的資源指令碼，RC [HIERSVR](../overview/visual-cpp-samples.md)，以查看如何實作這些變更。
 
 本文章涵蓋的主題包括：
 
@@ -56,7 +56,7 @@ ms.locfileid: "57281944"
 
 第二個資料表是幾乎完全相同複本的檢視表的快速鍵對應表。 任何差異中所述完全開啟的功能表中所做的變更[Server 功能表新增](#_core_server_menu_additions)。
 
-如需這些快速鍵對應表變更的範例，比較使用 HIERSVR 中 IDR_MAINFRAME IDR_HIERSVRTYPE_SRVR_IP 和 IDR_HIERSVRTYPE_SRVR_EMB 快速鍵對應表。RC 檔包含在 MFC OLE 範例[HIERSVR](../visual-cpp-samples.md)。 檔案和視窗加速器會就地資料表中遺失，並位於內嵌的資料表中的完整複本。
+如需這些快速鍵對應表變更的範例，比較使用 HIERSVR 中 IDR_MAINFRAME IDR_HIERSVRTYPE_SRVR_IP 和 IDR_HIERSVRTYPE_SRVR_EMB 快速鍵對應表。RC 檔包含在 MFC OLE 範例[HIERSVR](../overview/visual-cpp-samples.md)。 檔案和視窗加速器會就地資料表中遺失，並位於內嵌的資料表中的完整複本。
 
 ##  <a name="_core_string_table_additions_for_server_applications"></a> 字串資料表加入伺服器應用程式
 

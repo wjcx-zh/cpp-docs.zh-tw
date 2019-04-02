@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 81b52d6876b0691c09db0e9dcf7fa7d491f999ca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 58f9efb19988be8487ec87ce0c63d90ee1a97911
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305168"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769832"
 ---
 # <a name="cmap-class"></a>CMap 類別
 
@@ -538,6 +538,6 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例收集](../../visual-cpp-samples.md)<br/>
+[MFC 範例收集](../../overview/visual-cpp-samples.md)<br/>
 [CObject 類別](../../mfc/reference/cobject-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-ms.openlocfilehash: baf3a2e6720cd2f72606cf5089e0409df602fee6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: e86cf0b3e57eda9a0f4fa5fe2337d0c42de5669f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751510"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780869"
 ---
 # <a name="how-to-marshal-com-strings-using-c-interop"></a>HOW TO：使用 c + + Interop 封送處理 COM 字串
 
@@ -28,7 +28,7 @@ ms.locfileid: "57751510"
 
 ## <a name="example"></a>範例
 
-下列範例示範如何將傳遞 BSTR （COM 程式設計中使用的字串格式） 從 managed 到 unmanaged 的函式。 呼叫 managed 函式會使用<xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A>取得內容的.NET System.String BSTR 表示法的位址。 此指標會使用釘選[pin_ptr (C + + /cli CLI)](../windows/pin-ptr-cpp-cli.md)以確保，其實體的位址不會變更記憶體回收週期期間 unmanaged 函式執行時。 記憶體回收行程禁止移動記憶體中的，直到[pin_ptr (C + + /cli CLI)](../windows/pin-ptr-cpp-cli.md)超出範圍。
+下列範例示範如何將傳遞 BSTR （COM 程式設計中使用的字串格式） 從 managed 到 unmanaged 的函式。 呼叫 managed 函式會使用<xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A>取得內容的.NET System.String BSTR 表示法的位址。 此指標會使用釘選[pin_ptr (C + + /cli CLI)](../extensions/pin-ptr-cpp-cli.md)以確保，其實體的位址不會變更記憶體回收週期期間 unmanaged 函式執行時。 記憶體回收行程禁止移動記憶體中的，直到[pin_ptr (C + + /cli CLI)](../extensions/pin-ptr-cpp-cli.md)超出範圍。
 
 ```
 // MarshalBSTR1.cpp

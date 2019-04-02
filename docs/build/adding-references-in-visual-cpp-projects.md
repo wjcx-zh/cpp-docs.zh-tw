@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: 8daba00432d7f14c8517da3ed4dc506cfd80865a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: eb4d970527ba919af10eadab7c907f5108767b9b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824983"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780466"
 ---
 # <a name="consuming-libraries-and-components"></a>使用程式庫和元件
 
@@ -20,7 +20,7 @@ C + + 專案，通常需要呼叫函式，或存取資料的靜態程式庫 （.
 
 ## <a name="consuming-libraries-downloaded-via-vcpkg"></a>Vcpkg 透過使用文件庫下載
 
-若要使用您已下載所使用的程式庫**vcpkg**套件管理員 中，您可以忽略下列指示。 請參閱 [vcpkg：適用於 Windows、 Linux 和 MacOS 的 c + + 套件管理員](../vcpkg.md#integrate-with-visual-studio-windows)如需詳細資訊。
+若要使用您已下載所使用的程式庫**vcpkg**套件管理員 中，您可以忽略下列指示。 請參閱 [vcpkg：適用於 Windows、 Linux 和 MacOS 的 c + + 套件管理員](vcpkg.md#integrate-with-visual-studio-windows)如需詳細資訊。
 
 ## <a name="consuming-static-libraries"></a>取用的靜態程式庫
 
@@ -167,4 +167,4 @@ ActiveX 參考屬性僅適用於 COM 元件的參考。 這些屬性僅在 [參�
 ## <a name="see-also"></a>另請參閱
 
 [C + + 專案屬性頁參考](reference/property-pages-visual-cpp.md)<br>
-[設定 c + + 編譯器和建置在 Visual Studio 中的屬性](working-with-project-properties.md)
+[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](working-with-project-properties.md)

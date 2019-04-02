@@ -1,5 +1,5 @@
 ---
-title: TN033：MFC 的 DLL 版本
+title: TN033:MFC 的 DLL 版本
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.dll
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DLL version of MFC [MFC]
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
-ms.openlocfilehash: 17ffc8b46060e742449c9612424b1cd06dd8a9d3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4bfc60e20a073dd34945b91dd48ba82cdf4ab9f3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523958"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767778"
 ---
-# <a name="tn033-dll-version-of-mfc"></a>TN033：MFC 的 DLL 版本
+# <a name="tn033-dll-version-of-mfc"></a>TN033:MFC 的 DLL 版本
 
 此提示會說明如何使用 MFCxx.DLL 和 MFCxxD.DLL （其中 x 是 MFC 版本號碼） 共用動態連結程式庫與 MFC 應用程式和 MFC 擴充 Dll。 如需有關 MFC 的標準 Dll 的詳細資訊，請參閱[將 MFC 當成 DLL 的一部分](../mfc/tn011-using-mfc-as-part-of-a-dll.md)。
 
@@ -31,44 +31,44 @@ ms.locfileid: "51523958"
 
 如果您有興趣建置使用可搭配非 MFC 應用程式 （這稱為 MFC DLL） 的 MFC 的 DLL，請參閱[技術的附註 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md)。
 
-## <a name="overview-of-mfcxxdll-support-terminology-and-files"></a>MFCxx.DLL 支援的概觀： 術語和檔案
+## <a name="overview-of-mfcxxdll-support-terminology-and-files"></a>MFCxx.DLL 支援的概觀：術語和檔案
 
-**MFC DLL**： 建立使用 MFC 類別的一些獨立 DLL 的情況下，您在使用 MFC DLL。 跨應用程式/DLL 界限的介面"C"的介面，而且是一個 MFC 應用程式並沒有用戶端應用程式。
+**MFC DLL**:您可以使用標準的 MFC DLL 來建立使用 MFC 類別的一些獨立 DLL。 跨應用程式/DLL 界限的介面"C"的介面，而且是一個 MFC 應用程式並沒有用戶端應用程式。
 
-這是支援在 MFC 1.0 中的 DLL 支援的版本。 所述[技術提示 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md)和 MFC 進階概念範例[DLLScreenCap](../visual-cpp-samples.md)。
+這是支援在 MFC 1.0 中的 DLL 支援的版本。 所述[技術提示 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md)和 MFC 進階概念範例[DLLScreenCap](../overview/visual-cpp-samples.md)。
 
 > [!NOTE]
 > 截至 Visual c + + 4.0 版，詞彙**USRDLL**已經過時，已取代靜態連結至 MFC 之標準 MFC DLL。 您可能也會建立一般動態連結至 MFC 的 MFC DLL。
 
 MFC 3.0 （和更新版本） 支援 MFC 的標準 Dll 包括 OLE 和資料庫類別的新功能。
 
-**AFXDLL**： 這也稱為共用版本的 MFC 程式庫。 這是 MFC 2.0 中加入新的 DLL 支援。 MFC 程式庫本身是數 （如下所述） 的 Dll 和用戶端應用程式或 DLL 動態連結它所需的 Dll。 跨應用程式/DLL 界限的介面是 C + + MFC 類別介面。 用戶端應用程式必須是 MFC 應用程式。 這可支援所有的 MFC 3.0 功能 (例外狀況： 資料庫類別不支援 UNICODE)。
+**AFXDLL**:這也稱為共用版本的 MFC 程式庫。 這是 MFC 2.0 中加入新的 DLL 支援。 MFC 程式庫本身是數 （如下所述） 的 Dll 和用戶端應用程式或 DLL 動態連結它所需的 Dll。 跨應用程式/DLL 界限的介面是 C + + MFC 類別介面。 用戶端應用程式必須是 MFC 應用程式。 這可支援所有的 MFC 3.0 功能 (例外狀況：UNICODE 不是支援資料庫類別）。
 
 > [!NOTE]
 > 截至 Visual c + + 4.0 版，這種類型的 DLL 被指 「 延伸模組 DLL。 」
 
 本附註會使用 MFCxx.DLL 參考整個 MFC DLL 集合，其中包括：
 
-- 偵錯： MFCxxD.DLL （結合） 和 MFCSxxD.LIB （靜態）。
+- 偵錯：MFCxxD.DLL （結合） 和 MFCSxxD.LIB （靜態）。
 
-- 版本: （合併） MFCxx.DLL 和 MFCSxx.LIB （靜態）。
+- 版本：（合併） MFCxx.DLL 和 MFCSxx.LIB （靜態）。
 
-- Unicode 偵錯： MFCxxUD.DLL （結合） 和 MFCSxxD.LIB （靜態）。
+- Unicode 偵錯：MFCxxUD.DLL （結合） 和 MFCSxxD.LIB （靜態）。
 
-- Unicode 版本： MFCxxU.DLL （結合） 和 MFCSxxU.LIB （靜態）。
+- Unicode 版本：MFCxxU.DLL （結合） 和 MFCSxxU.LIB （靜態）。
 
 > [!NOTE]
 > MFCSxx [U] [D]。LIB 程式庫會在與 MFC 一起共用的 Dll。 這些程式庫包含必須以靜態方式連結至 DLL 的應用程式的程式碼。
 
 應用程式會連結至對應的匯入程式庫：
 
-- 偵錯： MFCxxD.LIB
+- 偵錯：MFCxxD.LIB
 
-- 發行： MFCxx.LIB
+- 版本：MFCxx.LIB
 
-- Unicode 偵錯： MFCxxUD.LIB
+- Unicode 偵錯：MFCxxUD.LIB
 
-- Unicode 版本： MFCxxU.LIB
+- Unicode 版本：MFCxxU.LIB
 
 「 MFC 擴充 DLL 」 是建置在 MFCxx.DLL DLL （和/或其他 MFC 的共用 Dll）。 這裡的 MFC 元件架構就會執行。 如果您從 MFC 類別，衍生的有用類別，或建立另一個類似 MFC 的工具組，您可以將它放在 DLL 中。 DLL 使用 MFCxx.DLL，，做為執行 ultimate 的用戶端應用程式。 如此可重複使用的分葉類別、 可重複使用的基底類別，以及可重複使用的檢視/文件類別。
 
@@ -98,7 +98,7 @@ MFC 擴充 DLL 是包含類別和函式寫入美化它們的 MFC 類別功能的
 
 - MFC 擴充 DLL 通常會提供初始化常式，以建立`CDynLinkLibrary`如果 MFC 擴充 DLL 想要匯出`CRuntimeClass`es 或應用程式的資源。 在衍生的類別的`CDynLinkLibrary`如果由 MFC 擴充 DLL 必須維護每個應用程式資料可以使用。
 
-在下面詳細說明這些考量。 您也應該參閱 MFC 進階概念範例[DLLHUSK](../visual-cpp-samples.md)因為它也說明了：
+在下面詳細說明這些考量。 您也應該參閱 MFC 進階概念範例[DLLHUSK](../overview/visual-cpp-samples.md)因為它也說明了：
 
 - 建立使用共用的程式庫的應用程式。 (DLLHUSK。EXE 是動態連結至 MFC 程式庫，以及其他 Dll 的 MFC 應用程式。）
 
@@ -324,7 +324,7 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID)
 
 如果您想要使用您的 MFC 擴充 DLL 中的類別，用戶端應用程式`DECLARE_SERIAL`，則您必須匯出您的類別會顯示用戶端應用程式。 這也是藉由查核`CDynLinkLibrary`清單。
 
-在 MFC 進階概念範例的情況下[DLLHUSK](../visual-cpp-samples.md)，清單看起來像：
+在 MFC 進階概念範例的情況下[DLLHUSK](../overview/visual-cpp-samples.md)，清單看起來像：
 
 ```Example
 head ->   DLLHUSK.EXE   - or - DLLHUSK.EXE
@@ -339,7 +339,7 @@ head ->   DLLHUSK.EXE   - or - DLLHUSK.EXE
 
 MFCxx.DLL 是根據資源和類別清單，通常是最後一個項目。 MFCxx.DLL 包含所有的標準 MFC 資源，包括所有標準命令 id 的提示字串。 Dll 和用戶端應用程式本身不需要將它放在清單結尾可讓他們自己的標準 MFC 資源，但若要依賴 MFCxx.DLL 中的共用資源而的複本。
 
-將資源和所有 dll 的類別名稱合併到用戶端應用程式的命名空間有的缺點是，您必須小心什麼識別碼或您選擇的名稱。 您可以不用說停用這項功能不會匯出您的資源或`CDynLinkLibrary`用戶端應用程式的物件。 [DLLHUSK](../visual-cpp-samples.md)範例使用多個標頭檔來管理共用的資源命名空間。 請參閱[技術的附註 35](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)如需有關使用共用的資源檔的秘訣。
+將資源和所有 dll 的類別名稱合併到用戶端應用程式的命名空間有的缺點是，您必須小心什麼識別碼或您選擇的名稱。 您可以不用說停用這項功能不會匯出您的資源或`CDynLinkLibrary`用戶端應用程式的物件。 [DLLHUSK](../overview/visual-cpp-samples.md)範例使用多個標頭檔來管理共用的資源命名空間。 請參閱[技術的附註 35](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)如需有關使用共用的資源檔的秘訣。
 
 ### <a name="initializing-the-dll"></a>初始化 DLL
 
@@ -411,7 +411,7 @@ MFC 擴充 DLL 並沒有`CWinApp`-衍生自己的物件; 而是它必須能與`C
 
 必要的編譯器旗標：
 
-- **/ D_AFXDLL /MD**
+- **/D_AFXDLL /MD**
    **/D_AFXDLL**
 
 標準的 MFC 標頭需要這個符號定義：
@@ -432,7 +432,7 @@ MFC 擴充 DLL 並沒有`CWinApp`-衍生自己的物件; 而是它必須能與`C
 
 若要轉換的這些範例，以使用 MFCxx.DLL 任何，您可以載入。MAK 到 Visual c + + 檔案，並設定專案選項，如上面所述。 如果您使用 NMAKE 組建，您可以指定"AFXDLL = 1"上 NMAKE 命令列，並且會建立使用共用的 MFC 程式庫範例。
 
-MFC 進階概念範例[DLLHUSK](../visual-cpp-samples.md)使用 MFC 的 DLL 版本所建置。 此範例不只說明如何建置使用 MFCxx.DLL，連結的應用程式，但它也會說明 MFC DLL 的封裝選項，例如 MFC 擴充 Dll，這個技術提示稍後所述的其他功能。
+MFC 進階概念範例[DLLHUSK](../overview/visual-cpp-samples.md)使用 MFC 的 DLL 版本所建置。 此範例不只說明如何建置使用 MFCxx.DLL，連結的應用程式，但它也會說明 MFC DLL 的封裝選項，例如 MFC 擴充 Dll，這個技術提示稍後所述的其他功能。
 
 ### <a name="packaging-notes"></a>封裝資訊
 

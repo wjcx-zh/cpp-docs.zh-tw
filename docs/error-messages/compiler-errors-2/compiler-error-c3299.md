@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3299
 ms.assetid: 7cabdf01-bceb-404f-9401-cdd9c7fc1641
-ms.openlocfilehash: 4ad48ea0bc09e098a41cb9aa969a08e9ead48f73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 314b75a9d0ab8cde2886a7466fa0f95b5bbdd8f1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484818"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778048"
 ---
 # <a name="compiler-error-c3299"></a>編譯器錯誤 C3299
 
@@ -21,7 +21,7 @@ ms.locfileid: "50484818"
 
 將會繼承您正在覆寫的泛型函式上的條件約束子句。
 
-如需詳細資訊，請參閱 <<c0> [ 泛型類型參數的條件約束 (C + + /cli CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)。
+如需詳細資訊，請參閱 <<c0> [ 泛型類型參數的條件約束 (C + + /cli CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)。
 
 ## <a name="example"></a>範例
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3912
 ms.assetid: 674e050c-11fb-4db1-8bdf-a3e95b41161d
-ms.openlocfilehash: c6eb207342f44655d54e49d4cf0cd2410f7095da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd66196c35715304577b8f6785261be8bdcdafec
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562028"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773394"
 ---
 # <a name="compiler-error-c3912"></a>編譯器錯誤 C3912
 
@@ -19,7 +19,7 @@ ms.locfileid: "50562028"
 
 事件已宣告，但不是適當的型別。
 
-如需詳細資訊，請參閱 <<c0> [ 事件](../../windows/event-cpp-component-extensions.md)。
+如需詳細資訊，請參閱 <<c0> [ 事件](../../extensions/event-cpp-component-extensions.md)。
 
 下列範例會產生 C3912:
 

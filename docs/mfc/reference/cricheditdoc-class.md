@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-ms.openlocfilehash: 4c2021128dcc06a76cf3b68c0ec49b72a5860046
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4cc3af7649d30a153b67cd8269e595c11018833f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295132"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769782"
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc 類別
 
@@ -55,7 +55,7 @@ class CRichEditDoc : public COleServerDoc
 
 這個 Windows 通用控制項 (因而[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)和相關類別) 僅適用於 Windows 95/98 和 Windows NT 的版本 3.51 下執行的程式和更新版本。
 
-在 MFC 應用程式中使用豐富的編輯文件的範例，請參閱[WORDPAD](../../visual-cpp-samples.md)範例應用程式。
+在 MFC 應用程式中使用豐富的編輯文件的範例，請參閱[WORDPAD](../../overview/visual-cpp-samples.md)範例應用程式。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -146,7 +146,7 @@ BOOL m_bRTF;
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 WORDPAD](../../visual-cpp-samples.md)<br/>
+[MFC 範例 WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [COleServerDoc 類別](../../mfc/reference/coleserverdoc-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CRichEditView 類別](../../mfc/reference/cricheditview-class.md)<br/>

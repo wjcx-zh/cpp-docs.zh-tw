@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 0cffdc2be00b4af9badbbbc80bcfef48b3f76e19
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: 2b0736bca9cc0b67f9ea8ac83dc18fadaeefdb3c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57818371"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780817"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>針對 UNIX 使用者的 Visual C++ 簡介
 
@@ -51,7 +51,7 @@ ms.locfileid: "57818371"
 
 Microsoft Visual C++ 編譯器實作標準 C++ 程式設計語言的數個延伸模組，以支援 Windows 作業系統的程式設計。 這些擴充功能可用來指定儲存類別屬性、函式呼叫慣例和基底定址等。 如需所有支援之 C++ 延伸模組的完整清單，請參閱 [Microsoft 專用的修飾詞](../cpp/microsoft-specific-modifiers.md)。
 
-您可以使用 `/Za` 編譯器選項，來停用 C++ 的所有 Microsoft 特定擴充功能。 如果您想要撰寫程式碼以在多個平台上執行，建議使用這個選項。 如需 `/Za` 編譯器選項的詳細資訊，請參閱 [/Za、/Ze (停用語言延伸模組)](../build/reference/za-ze-disable-language-extensions.md)。 如需有關 C++ 編譯器一致性的詳細資訊，請參閱 [Visual C++ 語言一致性](../visual-cpp-language-conformance.md)與[非標準行為](../cpp/nonstandard-behavior.md)。
+您可以使用 `/Za` 編譯器選項，來停用 C++ 的所有 Microsoft 特定擴充功能。 如果您想要撰寫程式碼以在多個平台上執行，建議使用這個選項。 如需 `/Za` 編譯器選項的詳細資訊，請參閱 [/Za、/Ze (停用語言延伸模組)](../build/reference/za-ze-disable-language-extensions.md)。 如需有關 C++ 編譯器一致性的詳細資訊，請參閱 [Visual C++ 語言一致性](../overview/visual-cpp-language-conformance.md)與[非標準行為](../cpp/nonstandard-behavior.md)。
 
 ## <a name="precompiled-headers"></a>先行編譯標頭檔
 

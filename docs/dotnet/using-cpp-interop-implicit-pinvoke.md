@@ -20,12 +20,12 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-ms.openlocfilehash: ffe4aaeecc3e0f65851a87840cd21f81c4806fb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaa07373b7dd22807290ceefa9197b4013c61fe5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464577"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778230"
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>使用 C++ Interop (隱含 PInvoke)
 
@@ -59,7 +59,7 @@ Visual c + + 提供兩種方法讓交互操作的 managed 和 unmanaged 函式�
 
 ## <a name="blittable-types"></a>Blittable 類型
 
-使用簡單、 內建類型的 unmanaged api (請參閱[Blittable 和非 Blittable 類型](/dotnet/framework/interop/blittable-and-non-blittable-types))，因為這些資料類型都有相同表示法在記憶體中，但更複雜的資料類型需要任何特殊的程式碼是必要明確封送處理的資料。 如需範例，請參閱[如何： 從 Managed 程式碼使用 PInvoke 呼叫原生 Dll](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)。
+使用簡單、 內建類型的 unmanaged api (請參閱[Blittable 和非 Blittable 類型](/dotnet/framework/interop/blittable-and-non-blittable-types))，因為這些資料類型都有相同表示法在記憶體中，但更複雜的資料類型需要任何特殊的程式碼是必要明確封送處理的資料。 如需範例，請參閱[如何：從使用 PInvoke 的 Managed 程式碼呼叫原生 Dll](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)。
 
 ## <a name="example"></a>範例
 
@@ -111,7 +111,7 @@ Done
 
 - [如何：將 char * 字串轉換為 System::Byte 陣列](../dotnet/how-to-convert-char-star-string-to-system-byte-array.md)
 
-- [如何： 將 system:: string 轉換為 wchar_t * 或 char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)
+- [如何：將 system:: string 轉換為 wchar_t * 或 char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)
 
 - [如何：將 System::String 轉換為標準字串](../dotnet/how-to-convert-system-string-to-standard-string.md)
 
@@ -119,31 +119,31 @@ Done
 
 - [如何：取得位元組陣列的指標](../dotnet/how-to-obtain-a-pointer-to-byte-array.md)
 
-- [如何：將 Unmanaged 資源載入至位元組陣列](../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md)
+- [如何：將非受控資源載入至位元組陣列](../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md)
 
 - [如何：修改原生函式中的參考類別](../dotnet/how-to-modify-reference-class-in-a-native-function.md)
 
-- [如何：判斷影像是否為原生或 CLR](../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)
+- [如何：判斷影像為原生或 CLR](../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)
 
 - [如何：將原生 DLL 新增至全域組件快取](../dotnet/how-to-add-native-dll-to-global-assembly-cache.md)
 
 - [如何：以原生類型存放實值型別的參考](../dotnet/how-to-hold-reference-to-value-type-in-native-type.md)
 
-- [如何：在 Unmanaged 記憶體中存放物件參考](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)
+- [如何：在非受控記憶體中存放物件參考](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)
 
-- [如何： 偵測 /clr 編譯](../dotnet/how-to-detect-clr-compilation.md)
+- [如何：偵測 /clr 編譯](../dotnet/how-to-detect-clr-compilation.md)
 
 - [如何：在 System::Guid 和 _GUID 之間轉換](../dotnet/how-to-convert-between-system-guid-and-guid.md)
 
 - [如何：指定 out 參數](../dotnet/how-to-specify-an-out-parameter.md)
 
-- [如何： 在 /clr 編譯中使用原生類型](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)
+- [如何：在 /clr 編譯中使用原生類型](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)
 
 - [如何：以原生類型宣告控制代碼](../dotnet/how-to-declare-handles-in-native-types.md)
 
 - [如何：包裝原生類別以便讓 C# 使用](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-如需在 interop 的案例中使用委派的資訊，請參閱[委派 （c + + 元件延伸模組）](../windows/delegate-cpp-component-extensions.md)。
+如需在 interop 的案例中使用委派的資訊，請參閱[委派 （c + + 元件延伸模組）](../extensions/delegate-cpp-component-extensions.md)。
 
 ## <a name="see-also"></a>另請參閱
 

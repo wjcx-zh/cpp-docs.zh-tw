@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3379
 ms.assetid: a66c2c4e-091c-4426-9cde-7c4cfb2ffce1
-ms.openlocfilehash: 2d6b2cb15cfaa0b72b946c0edb3b451737b51772
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bf4e2e42b4534d47a2a7d3c9a838c404a99ba68
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553500"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769973"
 ---
 # <a name="compiler-error-c3379"></a>編譯器錯誤 C3379
 
@@ -19,7 +19,7 @@ ms.locfileid: "50553500"
 
 套用至受管理的類型，例如類別或結構時[公用](../../cpp/public-cpp.md)並[私人](../../cpp/private-cpp.md)關鍵字會指出是否將透過組件中繼資料中公開的類別。 `public` 或`private`無法套用至巢狀類別，將會繼承在封入類別的組件存取權。
 
-搭配使用時[/clr](../../build/reference/clr-common-language-runtime-compilation.md)，則`ref`並`value`關鍵字會指出類別 managed (請參閱[類別和結構](../../windows/classes-and-structs-cpp-component-extensions.md))。
+搭配使用時[/clr](../../build/reference/clr-common-language-runtime-compilation.md)，則`ref`並`value`關鍵字會指出類別 managed (請參閱[類別和結構](../../extensions/classes-and-structs-cpp-component-extensions.md))。
 
 下列範例會產生 C3379:
 

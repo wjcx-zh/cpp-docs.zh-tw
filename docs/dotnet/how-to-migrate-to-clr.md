@@ -10,12 +10,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 8c4827891799d2c76a344e4c6da8f3d96333826e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6ac470b85a14bfe32c7f3fe47168180687669ec6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816026"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781311"
 ---
 # <a name="how-to-migrate-to-clr"></a>HOW TO：移轉至 /clr
 
@@ -152,7 +152,7 @@ Common language runtime 預設情況下，為 MTA 啟動 COM使用  [/CLRTHREADA
 
 ## <a name="using-new-visual-c-features"></a>使用 Visual c + + 的新功能
 
-之後您的應用程式編譯、 連結及執行，您可以開始在任何使用編譯的模組中使用.NET 功能 **/clr**。 如需詳細資訊，請參閱[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)。
+之後您的應用程式編譯、 連結及執行，您可以開始在任何使用編譯的模組中使用.NET 功能 **/clr**。 如需詳細資訊，請參閱[執行階段平台的元件延伸模組](../extensions/component-extensions-for-runtime-platforms.md)。
 
 如果您使用 Managed Extensions for c + + 時，您可以轉換程式碼以使用新的語法。 如需轉換 Managed Extensions for c + + 的詳細資訊，請參閱[C + + /cli 移轉入門](../dotnet/cpp-cli-migration-primer.md)。
 
@@ -162,7 +162,7 @@ Common language runtime 預設情況下，為 MTA 啟動 COM使用  [/CLRTHREADA
 
 - [原生和 .NET 互通性](../dotnet/native-and-dotnet-interoperability.md)
 
-- [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+- [執行階段平台的元件延伸模組](../extensions/component-extensions-for-runtime-platforms.md)
 
 ## <a name="see-also"></a>另請參閱
 

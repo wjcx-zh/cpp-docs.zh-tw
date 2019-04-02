@@ -8,18 +8,18 @@ helpviewer_keywords:
 - scroll bars [MFC], messages
 - scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
-ms.openlocfilehash: 2baa89f233eb6df93cde3adbde35ba1e6d35c093
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7d26bc656dec3fdcbb8fc5ea4918ec7d59bc5afc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283705"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777573"
 ---
 # <a name="scrolling-and-scaling-views"></a>捲動和縮放檢視
 
 MFC 支援檢視捲動和檢視表的自動調整，以顯示它們的框架視窗的大小。 類別`CScrollView`支援這兩種檢視。
 
-如需有關捲動和縮放的詳細資訊，請參閱類別[CScrollView](../mfc/reference/cscrollview-class.md)中*MFC 參考 》*。 如需捲動的範例，請參閱 < [Scribble 範例](../visual-cpp-samples.md)。
+如需有關捲動和縮放的詳細資訊，請參閱類別[CScrollView](../mfc/reference/cscrollview-class.md)中*MFC 參考 》*。 如需捲動的範例，請參閱 < [Scribble 範例](../overview/visual-cpp-samples.md)。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
 

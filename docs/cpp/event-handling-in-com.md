@@ -16,16 +16,16 @@ helpviewer_keywords:
 - declaring events, in COM
 - declaring events, event handling in COM
 ms.assetid: 6b4617d4-a58e-440c-a8a6-1ad1c715b2bb
-ms.openlocfilehash: a66c429626938f1bf10d715c1fecac341a3ba000
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da255da9fb9ff7a652fa1af796568a8e50759dc4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446042"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777691"
 ---
 # <a name="event-handling-in-com"></a>COM 中的事件處理
 
-在 COM 事件處理中，您將設定使用事件來源和事件接收器[event_source](../windows/event-source.md)並[event_receiver](../windows/event-receiver.md)分別屬性，指定`type` = `com`. 這些屬性會從自訂、分派和雙重介面插入適當的程式碼，以允許它們所套用的類別透過 COM 連接點引發事件和處理事件。
+在 COM 事件處理中，您將設定使用事件來源和事件接收器[event_source](../windows/attributes/event-source.md)並[event_receiver](../windows/attributes/event-receiver.md)分別屬性，指定`type` = `com`. 這些屬性會從自訂、分派和雙重介面插入適當的程式碼，以允許它們所套用的類別透過 COM 連接點引發事件和處理事件。
 
 ## <a name="declaring-events"></a>宣告事件
 
@@ -33,7 +33,7 @@ ms.locfileid: "50446042"
 
 ## <a name="defining-event-handlers"></a>定義事件處理常式
 
-在事件接收器類別中，您會定義事件處理常式，其為具有簽章 (傳回型別、呼叫慣例和引數)，符合將處理之事件的方法。 COM 事件的呼叫慣例不需要相符;請參閱[版面配置相依的 COM 事件](#vcconeventhandlingincomanchorlayoutdependentcomevents)如下如需詳細資訊。
+在事件接收器類別中，您會定義事件處理常式，其為具有簽章 (傳回類型、呼叫慣例和引數)，符合將處理之事件的方法。 COM 事件的呼叫慣例不需要相符;請參閱[版面配置相依的 COM 事件](#vcconeventhandlingincomanchorlayoutdependentcomevents)如下如需詳細資訊。
 
 ## <a name="hooking-event-handlers-to-events"></a>攔截事件的事件處理常式
 
@@ -150,7 +150,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 MyHandler1 was called with value 123.
@@ -159,7 +159,7 @@ MyHandler2 was called with value 123.
 
 ##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a> 配置相依的 COM 事件
 
-配置相依性是只有 COM 程式設計才有的問題。 在原生與 Managed 事件處理中，處理常式的簽章 (傳回型別、呼叫慣例和引數) 必須與其事件相符，不過，處理常式的名稱不必與其事件相符。
+配置相依性是只有 COM 程式設計才有的問題。 在原生與 Managed 事件處理中，處理常式的簽章 (傳回類型、呼叫慣例和引數) 必須與其事件相符，不過，處理常式的名稱不必與其事件相符。
 
 不過，在 COM 事件處理，當您設定*event_receiver*的參數`event_receiver`要 **，則為 true**，名稱和簽章比對會強制執行。 這表示事件接收器中處理常式的名稱和簽章必須與所要攔截之事件的名稱和簽章完全相符。
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3054
 ms.assetid: 6f4b7ac5-0d12-474b-b611-76ff26ee41ac
-ms.openlocfilehash: c45a59f136b989190a46fd9fbe00fdd0e4b89527
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1dd6450d661700d9b2f7f94e625abd9ecc64ed08
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470123"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772991"
 ---
 # <a name="compiler-error-c3054"></a>編譯器錯誤 C3054
 
 目前在泛型類別或函式中不支援 '#pragma omp parallel'
 
-如需詳細資訊，請參閱 <<c0> [ 泛型](../../windows/generics-cpp-component-extensions.md)並[OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md)。
+如需詳細資訊，請參閱 <<c0> [ 泛型](../../extensions/generics-cpp-component-extensions.md)並[OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md)。
 
 ## <a name="example"></a>範例
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-ms.openlocfilehash: 76acbfa9625fe6cb9a575244b0ed6954eeaaf3f2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4fd68f57db082ab0b0da0e8248e0be239c63c99a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301684"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773212"
 ---
 # <a name="using-property-sheets-in-your-application"></a>在應用程式中使用屬性工作表
 
@@ -58,7 +58,7 @@ ms.locfileid: "57301684"
 
 1. 在屬性頁和屬性工作表的擁有者之間交換資料。 這是一文中所述[交換資料](../mfc/exchanging-data.md)。
 
-如需如何使用屬性工作表的範例，請參閱 MFC 一般範例[PROPDLG](../visual-cpp-samples.md)。
+如需如何使用屬性工作表的範例，請參閱 MFC 一般範例[PROPDLG](../overview/visual-cpp-samples.md)。
 
 ## <a name="see-also"></a>另請參閱
 

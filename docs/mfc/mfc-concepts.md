@@ -3,12 +3,12 @@ title: MFC 概念
 ms.date: 1/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: 58ab83fc195e199a63c53586983d26103950569b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d021350125acda52bb4ecf3919282cb7bbe52b1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633369"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766504"
 ---
 # <a name="mfc-concepts"></a>MFC 概念
 
@@ -66,5 +66,5 @@ ms.locfileid: "50633369"
 [MFC 參考](../mfc/mfc-desktop-applications.md)<br/>
 提供 MFC 程式庫的參考資料，包含一組構成應用程式架構的類別，這是為 Windows API 撰寫的應用程式架構。
 
-[MFC 範例](../visual-cpp-samples.md)<br/>
+[MFC 範例](../overview/visual-cpp-samples.md)<br/>
 提供範例，示範如何使用 MFC 桌面應用程式、 Dll、 資料庫應用程式、 控制項、 Web 應用程式，及其他連結。

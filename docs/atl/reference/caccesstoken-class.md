@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: eb49ee135dce4ee0d5e37acd2382a34e1d99b083
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0b98df740b751d019c9b2852d682f61a51384818
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265479"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772185"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 類別
 
@@ -1181,6 +1181,6 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
 
 ## <a name="see-also"></a>另請參閱
 
-[ATLSecurity 範例](../../visual-cpp-samples.md)<br/>
+[ATLSecurity 範例](../../overview/visual-cpp-samples.md)<br/>
 [存取權杖](/windows/desktop/SecAuthZ/access-tokens)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

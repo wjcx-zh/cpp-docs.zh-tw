@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 8dc8c51cc1847d29b76e2017db4c1368b35b9a9f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281677"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778451"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -243,7 +243,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用中的各種方法`CMFCTabCtrl`類別，以設定`CMFCTabCtrl`物件。 此範例說明如何加入索引標籤、 [作用中] 索引標籤上顯示 [關閉] 按鈕、 啟用可編輯的索引標籤，並顯示索引標籤式的視窗標籤的快顯功能表。 此範例中是屬於[狀態集合範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用中的各種方法`CMFCTabCtrl`類別，以設定`CMFCTabCtrl`物件。 此範例說明如何加入索引標籤、 [作用中] 索引標籤上顯示 [關閉] 按鈕、 啟用可編輯的索引標籤，並顯示索引標籤式的視窗標籤的快顯功能表。 此範例中是屬於[狀態集合範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]
 [!code-cpp[NVC_MFC_StateCollection#3](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_2.cpp)]
@@ -355,7 +355,7 @@ BOOL Create(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用`Create`方法中的`CMFCTabCtrl`類別。 此範例中是屬於[狀態集合範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用`Create`方法中的`CMFCTabCtrl`類別。 此範例中是屬於[狀態集合範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]
 [!code-cpp[NVC_MFC_StateCollection#2](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_3.cpp)]

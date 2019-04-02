@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __event keyword [C++]
 - events [C++], __event
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
-ms.openlocfilehash: bd5f53e5d2b80b22c3a38f413c4fa79b27fa7026
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a837e30d3cd66f7caa9b44971f432e00b0917ae
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606475"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778256"
 ---
 # <a name="event"></a>__event
 
@@ -62,7 +62,7 @@ __event HRESULT OnClick(int* b, char* s);
 
 COM 事件是介面。 在 事件來源介面方法的參數應該是*中*參數 （但這不會嚴格強制執行），因為*出*參數不是多點傳送時很有用。 如果您使用，就會發出層級 1 警告*出*參數。
 
-傳回的型別通常是 HRESULT 或**void**，但可以是任何整數類型，包括**enum**。 當事件使用整數傳回型別且事件處理常式傳回非零值時，會是錯誤條件，在此情況下，所引發的事件會中止呼叫其他委派。 請注意，編譯器會自動將標示為事件來源介面[來源](../windows/source-cpp.md)所產生的 IDL 中。
+傳回的型別通常是 HRESULT 或**void**，但可以是任何整數類型，包括**enum**。 當事件使用整數傳回類型且事件處理常式傳回非零值時，會是錯誤條件，在此情況下，所引發的事件會中止呼叫其他委派。 請注意，編譯器會自動將標示為事件來源介面[來源](../windows/attributes/source-cpp.md)所產生的 IDL 中。
 
 [__Interface](../cpp/interface.md)關鍵字之後至少須 **__event** COM 事件來源。
 
@@ -75,9 +75,9 @@ __event __interface IEvent1;
 
 ## <a name="managed-events"></a>Managed 事件
 
-如需新語法中編碼事件的詳細資訊，請參閱[事件](../windows/event-cpp-component-extensions.md)。
+如需新語法中編碼事件的詳細資訊，請參閱[事件](../extensions/event-cpp-component-extensions.md)。
 
-Managed 事件是資料成員或方法。 委派的傳回型別事件搭配使用時，必須遵守[Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components)。 事件處理常式的傳回型別必須符合委派的傳回型別。 如需有關委派的詳細資訊，請參閱 <<c0> [ 委派和事件](../dotnet/delegates-and-events.md)。 如果 Managed 事件是資料成員，其類型必須是委派的指標。
+Managed 事件是資料成員或方法。 委派的傳回型別事件搭配使用時，必須遵守[Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components)。 事件處理常式的傳回類型必須符合委派的傳回類型。 如需有關委派的詳細資訊，請參閱 <<c0> [ 委派和事件](../dotnet/delegates-and-events.md)。 如果 Managed 事件是資料成員，其類型必須是委派的指標。
 
 在 .NET Framework 中，您可以將資料成員視同方法本身 (也就是，其對應委派的 `Invoke` 方法)。 您必須預先定義用來宣告 Managed 事件資料成員的委派類型。 相反地，Managed 事件方法會隱含定義對應的 Managed 委派 (如果尚未定義的話)。 例如，您可以將事件的值 (例如 `OnClick`) 宣告為事件，如下所示：
 
@@ -131,8 +131,8 @@ public:
 
 [關鍵字](../cpp/keywords-cpp.md)<br/>
 [事件處理](../cpp/event-handling.md)<br/>
-[event_source](../windows/event-source.md)<br/>
-[event_receiver](../windows/event-receiver.md)<br/>
+[event_source](../windows/attributes/event-source.md)<br/>
+[event_receiver](../windows/attributes/event-receiver.md)<br/>
 [__hook](../cpp/hook.md)<br/>
 [__unhook](../cpp/unhook.md)<br/>
 [__raise](../cpp/raise.md)

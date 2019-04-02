@@ -6,16 +6,16 @@ helpviewer_keywords:
 - boxing, implicit
 - value types, creating
 ms.assetid: ceb48841-d6bd-47be-a167-57f44c961603
-ms.openlocfilehash: 4b7d0560d8a80d0c09e7f8d0fce83748ec1f2f28
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: c67f8e0b9511f4ed1610e72e4a7df41c949b1d27
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739276"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770790"
 ---
 # <a name="how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing"></a>HOW TO：使用 gcnew 建立實值型別及使用隱含 Boxing
 
-使用[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)值型別會建立的 boxed 實的值類型，則可以放在受管理、 記憶體回收堆積。
+使用[gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)值型別會建立的 boxed 實的值類型，則可以放在受管理、 記憶體回收堆積。
 
 ## <a name="example"></a>範例
 
@@ -46,4 +46,4 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[Boxing](../windows/boxing-cpp-component-extensions.md)
+[Boxing](../extensions/boxing-cpp-component-extensions.md)

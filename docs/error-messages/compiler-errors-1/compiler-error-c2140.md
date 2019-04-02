@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2140
 ms.assetid: d44a0500-002c-4632-9e5e-c71c3a473ec4
-ms.openlocfilehash: e04a44007161fcfae5bab948584809590edbc095
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35b6e38290acddb41bdf53d9663a058259300ee8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668698"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771886"
 ---
 # <a name="compiler-error-c2140"></a>編譯器錯誤 C2140
 
@@ -19,7 +19,7 @@ ms.locfileid: "50668698"
 
 無效的類型規範已傳遞給類型特性。
 
-如需詳細資訊，請參閱 <<c0> [ 類型特性的編譯器支援](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。
+如需詳細資訊，請參閱 <<c0> [ 類型特性的編譯器支援](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md)。
 
 ## <a name="example"></a>範例
 

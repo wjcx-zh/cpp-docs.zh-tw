@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 44a2f1da6a02444c79247178c34281e39731f0f3
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
+ms.openlocfilehash: 248b423659d026774d4945ee6330a39dc4c6e16e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476925"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770144"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>逐步解說：建立並使用您自己動態連結程式庫 （c + +）
 
@@ -398,7 +398,7 @@ int main()
 
 既然您已建立的 DLL 和用戶端應用程式，您可以實驗。 請嘗試在用戶端應用程式的程式碼中設定中斷點和偵錯工具中執行應用程式。 請參閱 < 當您逐步執行程式庫呼叫，會發生什麼事。 將其他函式新增至程式庫，或撰寫您的 DLL 會使用的另一個用戶端應用程式。
 
-當您部署您的應用程式時，您也必須部署它所使用的 Dll。 最簡單的方式，可讓您建置或您所包含的 Dll 協力廠商使用您的應用程式是將它們置於您的應用程式相同的目錄也稱為*應用程式本機部署*。 如需部署的詳細資訊，請參閱 [Deployment in Visual C++](../ide/deployment-in-visual-cpp.md)。
+當您部署您的應用程式時，您也必須部署它所使用的 Dll。 最簡單的方式，可讓您建置或您所包含的 Dll 協力廠商使用您的應用程式是將它們置於您的應用程式相同的目錄也稱為*應用程式本機部署*。 如需部署的詳細資訊，請參閱 [Deployment in Visual C++](../windows/deployment-in-visual-cpp.md)。
 
 ## <a name="see-also"></a>另請參閱
 

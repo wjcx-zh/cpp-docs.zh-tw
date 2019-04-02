@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: af6d866298309f5ddb8eb21a5caeb3d1526b166a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 382960b4dc4dcfa61c836a87044dd14585756174
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276282"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769637"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem 類別
 
@@ -305,7 +305,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 MFCBIND](../../visual-cpp-samples.md)<br/>
+[MFC 範例 MFCBIND](../../overview/visual-cpp-samples.md)<br/>
 [COleClientItem 類別](../../mfc/reference/coleclientitem-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [COleClientItem 類別](../../mfc/reference/coleclientitem-class.md)<br/>

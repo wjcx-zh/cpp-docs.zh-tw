@@ -92,12 +92,12 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: 775d977fa1c995c42cc85660b1c9d13aea40a01e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7733969a0218dacf481ac82c764911c61ecabbbf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281517"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769143"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton 類別
 
@@ -183,7 +183,7 @@ A`CMFCToolBarMenuButton`可以顯示為功能表、 功能表項目具有子功�
 
 ## <a name="example"></a>範例
 
-下列範例示範如何設定`CMFCToolBarMenuButton`物件。 程式碼說明如何指定調色盤 模式中，為下拉式選單，並指定當使用者拖曳功能表列上的 功能表 按鈕建立 tear-off 列的識別碼。 此程式碼片段是 [WordPad 範例](../../visual-cpp-samples.md)的一部分。
+下列範例示範如何設定`CMFCToolBarMenuButton`物件。 程式碼說明如何指定調色盤 模式中，為下拉式選單，並指定當使用者拖曳功能表列上的 功能表 按鈕建立 tear-off 列的識別碼。 此程式碼片段是 [WordPad 範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_WordPad#10](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_1.cpp)]
 
@@ -241,7 +241,7 @@ CMFCToolBarMenuButton(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何建構的物件`CMFCToolBarMenuButton`類別。 此程式碼片段是 [WordPad 範例](../../visual-cpp-samples.md)的一部分。
+下列範例示範如何建構的物件`CMFCToolBarMenuButton`類別。 此程式碼片段是 [WordPad 範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_WordPad#9](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_2.cpp)]
 

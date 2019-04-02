@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __uuidof keyword [C++]
 - __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
-ms.openlocfilehash: 6e593d023c486aa504f0b5eee8578fa8c307bcc8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a14ef9043ec2196ff930a37d0eff95e90024d3d5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432704"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769195"
 ---
 # <a name="uuidof-operator"></a>__uuidof 運算子
 
@@ -39,7 +39,7 @@ __uuidof (expression)
 
 - 物件的[uuid](../cpp/uuid-cpp.md)擴充的屬性。
 
-- 使用建立程式庫區塊[模組](../windows/module-cpp.md)屬性。
+- 使用建立程式庫區塊[模組](../windows/attributes/module-cpp.md)屬性。
 
 > [!NOTE]
 > 在偵錯組建中， **__uuidof**一律會初始化物件以動態方式 （在執行階段）。 在發行組建，而 **__uuidof**可以靜態 （在編譯時期） 初始化物件。

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
-ms.openlocfilehash: cb2bbdb36a102c7ef8974a9ac210473f2306f5d6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f7db4320cf901412e3a9e3de682d0cfbcc9f23bc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746769"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771509"
 ---
 # <a name="finally"></a>finally
 
@@ -19,7 +19,7 @@ ms.locfileid: "57746769"
 
 目的`finally`區塊是清理之後發生的例外狀況留下任何資源。 請注意，`finally`區塊永遠會執行，即使擲回任何例外狀況。 `catch`擲回 managed 例外狀況時，才會執行區塊內相關聯`try`區塊。
 
-`finally` 是內容相關性的關鍵字;請參閱[即時線上關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)如需詳細資訊。
+`finally` 是內容相關性的關鍵字;請參閱[即時線上關鍵字](../extensions/context-sensitive-keywords-cpp-component-extensions.md)如需詳細資訊。
 
 ## <a name="example"></a>範例
 
@@ -58,4 +58,4 @@ in finally
 
 ## <a name="see-also"></a>另請參閱
 
-[例外狀況處理](../windows/exception-handling-cpp-component-extensions.md)
+[例外狀況處理](../extensions/exception-handling-cpp-component-extensions.md)

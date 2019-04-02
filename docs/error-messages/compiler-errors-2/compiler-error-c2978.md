@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2978
 ms.assetid: 5e7bee82-e266-4ccd-ad2e-ee89606ec5bf
-ms.openlocfilehash: 25798e793bec7d09ea1f307ec1e2d9a63b9dbe27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf682bf14246754cca74a43dffc39761ff6125c1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428102"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780297"
 ---
 # <a name="compiler-error-c2978"></a>編譯器錯誤 C2978
 
 語法錯誤: 必須是 'keyword1' 或 'keyword２'，但找到的是類型 'keyword3'; 泛型中不支援非類型參數
 
-泛型類別宣告不正確。 請參閱[泛型](../../windows/generics-cpp-component-extensions.md)如需詳細資訊。
+泛型類別宣告不正確。 請參閱[泛型](../../extensions/generics-cpp-component-extensions.md)如需詳細資訊。
 
 ## <a name="example"></a>範例
 

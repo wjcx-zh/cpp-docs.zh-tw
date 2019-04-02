@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: cab7aef6fab025174dedb0bf75ee43c49ead0d88
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 85e469e1f52a22917580ce8616aaba5ff57d08ed
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740398"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768025"
 ---
 # <a name="cpoint-class"></a>CPoint 類別
 
@@ -342,7 +342,7 @@ A`CSize`也就是兩個點之間的差異`CPoint`的大小，負位移`CRect`位
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 MDI](../../visual-cpp-samples.md)<br/>
+[MFC 範例 MDI](../../overview/visual-cpp-samples.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [POINT 結構](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
 [CRect 類別](../../atl-mfc-shared/reference/crect-class.md)<br/>

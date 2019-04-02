@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: f1f7610fc315da65145798058fdcf9752e7873d0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4eee24eb93be446f6b4f2631b70736c13a02f45c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283250"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771403"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar 類別
 
@@ -202,7 +202,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用中的各種方法來設定色軸`CMFCColorBar`類別。 方法會設定水平和垂直邊界、 啟用 其他 按鈕，建立色軸控制 視窗中，和設定目前選取的色彩。 此範例中是屬於[新的控制項範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用中的各種方法來設定色軸`CMFCColorBar`類別。 方法會設定水平和垂直邊界、 啟用 其他 按鈕，建立色軸控制 視窗中，和設定目前選取的色彩。 此範例中是屬於[新的控制項範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#1](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#2](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_2.cpp)]

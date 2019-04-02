@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComHeap class
 ms.assetid: c74183ce-98ae-46fb-b186-93ea4cf0222b
-ms.openlocfilehash: 7f8966c215ed53279f1391ce00adfc783f34f2d1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1a8618bd5146f2906f18cfbaa33894d34598776a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276155"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770742"
 ---
 # <a name="ccomheap-class"></a>CComHeap 類別
 
@@ -149,7 +149,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[DynamicConsumer 範例](../../visual-cpp-samples.md)<br/>
+[DynamicConsumer 範例](../../overview/visual-cpp-samples.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)<br/>
 [CWin32Heap 類別](../../atl/reference/cwin32heap-class.md)<br/>
 [CLocalHeap 類別](../../atl/reference/clocalheap-class.md)<br/>

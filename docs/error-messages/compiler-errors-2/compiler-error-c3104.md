@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: 71a5943f65f4bd490ecb02824fef7a96741709f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b2737bd67798fd467649be175d581ca551e1331
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540319"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770625"
 ---
 # <a name="compiler-error-c3104"></a>編譯器錯誤 C3104
 
@@ -19,7 +19,7 @@ ms.locfileid: "50540319"
 
 您已指定無效的引數的屬性。
 
-請參閱[屬性參數類型](../../windows/attribute-parameter-types-cpp-component-extensions.md)如需詳細資訊。
+請參閱[屬性參數類型](../../extensions/attribute-parameter-types-cpp-component-extensions.md)如需詳細資訊。
 
 針對 Visual c + + 2005年所進行的編譯器一致性工作可能會導致此錯誤： 當受管理的陣列傳遞至自訂屬性，陣列的類型不會再推算自彙總初始設定清單。 編譯器現在會要求您指定的陣列，以及初始設定式清單的型別。
 

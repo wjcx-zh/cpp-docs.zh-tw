@@ -232,12 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: 4fe7c84981d116d5915013cb466c3e91119f20e1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6daa5b6249c7ff18a8bc01c2309ffb94d3fb88ce
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289971"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773069"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement 類別
 
@@ -394,7 +394,7 @@ class CMFCRibbonBaseElement : public CObject
 
 ## <a name="example"></a>範例
 
-下例示範如何在 `CMFCRibbonBaseElement` 類別中使用各種方法。 此範例示範如何取得`CMFCRibbonBaseElement`物件從`CMFCRibbonStatusBar`類別、 設定功能區項目的描述、 設定的文字、 設定 keytip，並設定功能區項目的工具提示文字。 這段程式碼片段是 [Draw 用戶端範例](../../visual-cpp-samples.md)的一部分。
+下例示範如何在 `CMFCRibbonBaseElement` 類別中使用各種方法。 此範例示範如何取得`CMFCRibbonBaseElement`物件從`CMFCRibbonStatusBar`類別、 設定功能區項目的描述、 設定的文字、 設定 keytip，並設定功能區項目的工具提示文字。 這段程式碼片段是 [Draw 用戶端範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_DrawClient#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]
 [!code-cpp[NVC_MFC_DrawClient#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]

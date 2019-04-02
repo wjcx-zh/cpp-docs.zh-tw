@@ -15,12 +15,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
-ms.openlocfilehash: a33273c46562e8beba12910702d9ddc1a092575d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d10aad92088a02a1cab0977ea174abdf919a05e9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262606"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769208"
 ---
 # <a name="mfc-activex-controls"></a>MFC ActiveX 控制項
 
@@ -116,7 +116,7 @@ Windows 中的訊息處理視窗型 ActiveX 控制項 （當使用中時）
 
    包含開發 ActiveX 控制項與 MFC 所需的程式庫
 
-另外還有範例 MFC ActiveX 控制項。 如需有關這些範例的詳細資訊，請參閱[控制項範例：以 MFC 為基礎的 ActiveX 控制項](../visual-cpp-samples.md)
+另外還有範例 MFC ActiveX 控制項。 如需有關這些範例的詳細資訊，請參閱[控制項範例：以 MFC 為基礎的 ActiveX 控制項](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>另請參閱
 

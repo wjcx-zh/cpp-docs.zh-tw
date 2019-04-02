@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-ms.openlocfilehash: eb438351d273c872def8c98a67b7010cec0b4d76
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 30ee549a334a684deeb4a845f2fc49ee8bbe11db
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279441"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770833"
 ---
 # <a name="handling-the-apply-button"></a>處理套用按鈕
 
@@ -30,7 +30,7 @@ ms.locfileid: "57279441"
 
 若要實作 [套用] 按鈕的功用，屬性工作表必須呼叫其擁有者，或者應用程式的其他外部物件，如此就可套用目前屬性頁中的設定。 在此同時，屬性工作表應該停用 [套用] 按鈕呼叫`CPropertyPage::SetModified( FALSE )`修改內容套用到外部物件的所有頁面。
 
-如需此程序的範例，請參閱 MFC 一般範例[PROPDLG](../visual-cpp-samples.md)。
+如需此程序的範例，請參閱 MFC 一般範例[PROPDLG](../overview/visual-cpp-samples.md)。
 
 ## <a name="see-also"></a>另請參閱
 

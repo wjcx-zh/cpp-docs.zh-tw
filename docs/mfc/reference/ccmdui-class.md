@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pOther
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
-ms.openlocfilehash: 12d9ead736a84d89b04f7b68ed76da8ccea22d0c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c1d44638779f9b5caf052106ac172110d309b69f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302867"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770885"
 ---
 # <a name="ccmdui-class"></a>CCmdUI 類別
 
@@ -231,6 +231,6 @@ virtual void SetText(LPCTSTR lpszText);
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 MDI](../../visual-cpp-samples.md)<br/>
+[MFC 範例 MDI](../../overview/visual-cpp-samples.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)

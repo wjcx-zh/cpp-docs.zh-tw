@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 4c8d05fd193254f2431bbec7692ff25420c1bf05
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 87f889a079b1c55d82f547230a1917540de276af
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565866"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770486"
 ---
 # <a name="csid-class"></a>CSid 類別
 
@@ -574,7 +574,7 @@ SID_NAME_USE SidNameUse() const throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[安全性範例](../../visual-cpp-samples.md)<br/>
+[安全性範例](../../overview/visual-cpp-samples.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)<br/>
 [安全性全域函式](../../atl/reference/security-global-functions.md)<br/>
 [運算子](../../atl/reference/atl-operators.md)

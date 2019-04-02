@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-ms.openlocfilehash: f6e5031cb77729ede053b275c90fa93bf251fcb6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8f42c35024995c026ae10fc7f0ab3db77d1e5dc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486771"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769520"
 ---
 # <a name="unhook"></a>__unhook
 
@@ -41,14 +41,14 @@ long  __unhook(
 
 **&** *SourceClass* `::` *EventMethod*從中解除連結事件處理常式方法的事件方法指標：
 
-- 原生 c + + 事件： *SourceClass*是事件來源類別與*EventMethod*是事件。
+- 原生 c + + 事件：*SourceClass*是事件來源類別以及*EventMethod*是事件。
 
-- COM 事件： *SourceClass*是事件來源介面和*EventMethod*是其中一個方法。
+- COM 事件：*SourceClass*是事件來源介面和*EventMethod*是其中一個方法。
 
-- Managed 事件： *SourceClass*是事件來源類別與*EventMethod*是事件。
+- Managed 的事件：*SourceClass*是事件來源類別以及*EventMethod*是事件。
 
 *interface*<br/>
-從解除連結的介面名稱*接收者*，只會針對在其中的 COM 事件接收器*layout_dependent*參數[event_receiver](../windows/event-receiver.md)屬性是 **，則為 true**。
+從解除連結的介面名稱*接收者*，只會針對在其中的 COM 事件接收器*layout_dependent*參數[event_receiver](../windows/attributes/event-receiver.md)屬性是 **，則為 true**。
 
 *source*<br/>
 事件來源執行個體的指標。 根據程式碼`type`中指定`event_receiver`，*來源*可以是下列其中之一：
@@ -61,11 +61,11 @@ long  __unhook(
 
 **&** *ReceiverClass* `::` `HandlerMethod`瑢髍廒事件之事件處理常式方法的指標。 做為類別或參考相同的方法指定的處理常式如果您未指定類別名稱， **__unhook**假設要在其中已呼叫該方法的類別。
 
-- 原生 c + + 事件： *ReceiverClass*是事件接收器類別和`HandlerMethod`是處理常式。
+- 原生 c + + 事件：*ReceiverClass*是事件接收器類別和`HandlerMethod`是處理常式。
 
-- COM 事件： *ReceiverClass*是事件接收器介面和`HandlerMethod`是其中一個處理常式。
+- COM 事件：*ReceiverClass*是事件接收器介面和`HandlerMethod`是其中一個處理常式。
 
-- Managed 事件： *ReceiverClass*是事件接收器類別和`HandlerMethod`是處理常式。
+- Managed 的事件：*ReceiverClass*是事件接收器類別和`HandlerMethod`是處理常式。
 
 *接收者*（選擇性） 的事件接收器類別執行個體的指標。 如果您未指定接收器，預設值是接收器類別或結構所在 **__unhook**呼叫。
 
@@ -89,7 +89,7 @@ long  __unhook(
 
 使用替代 **__unhook**是使用-= 運算子。
 
-如需新語法中編碼 managed 的事件資訊，請參閱[事件](../windows/event-cpp-component-extensions.md)。
+如需新語法中編碼 managed 的事件資訊，請參閱[事件](../extensions/event-cpp-component-extensions.md)。
 
 > [!NOTE]
 >  樣板類別或結構不能包含事件。
@@ -101,8 +101,8 @@ long  __unhook(
 ## <a name="see-also"></a>另請參閱
 
 [關鍵字](../cpp/keywords-cpp.md)<br/>
-[event_source](../windows/event-source.md)<br/>
-[event_receiver](../windows/event-receiver.md)<br/>
+[event_source](../windows/attributes/event-source.md)<br/>
+[event_receiver](../windows/attributes/event-receiver.md)<br/>
 [__event](../cpp/event.md)<br/>
 [__hook](../cpp/hook.md)<br/>
 [__raise](../cpp/raise.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CMFCFontInfo [MFC], m_strName
 - CMFCFontInfo [MFC], m_strScript
 ms.assetid: f88329b2-d74e-4921-9441-a3bb6536a049
-ms.openlocfilehash: 2377b7f6afdf78a0e8b7c8ac97a36a4920c06bb8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 930aceb4514195f0e844c35d326b52d9cd8d31fa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281183"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781324"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo 類別
 
@@ -65,7 +65,7 @@ class CMFCFontInfo : public CObject
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用各類成員`CMFCFontInfo`類別。 此範例示範如何取得`CMFCFontInfo`物件從`CMFCRibbonFontComboBox`，以及如何存取其本機變數。 此範例中是屬於[MSOffice 2007 示範範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用各類成員`CMFCFontInfo`類別。 此範例示範如何取得`CMFCFontInfo`物件從`CMFCRibbonFontComboBox`，以及如何存取其本機變數。 此範例中是屬於[MSOffice 2007 示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#6](../../mfc/reference/codesnippet/cpp/cmfcfontinfo-class_1.cpp)]
 

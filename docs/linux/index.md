@@ -59,7 +59,7 @@ description: 建立在 Linux 上執行的應用程式及對其執行偵錯。
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3><a href="/cpp/visual-cpp-in-visual-studio">Visual C++</a></h3>
+                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">Visual C++</a></h3>
                         <p><a href="/cpp/overview-of-cpp-development">適用於 Visual C++ 開發的 IDE 及工具</a></p>
                     </div>
                 </div>

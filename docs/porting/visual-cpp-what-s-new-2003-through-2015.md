@@ -2,19 +2,19 @@
 title: 從 2003 到 2015 的 Visual C++ 新功能
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: fdd1d2c2183d06defe413340b8aef05c5bd61750
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: e2a785871d85ce742bee7b78586756cced38986e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749148"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768675"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>從 2003 到 2015 的 Visual C++ 新功能
 
 此頁面會收集從 Visual Studio 2015 往回到 2003 之所有 Visual C++ 版本的所有「新功能」頁面。 這項資訊的提供是為了方便起見，這在從舊版 Visual C++ 升級時可能十分有用。
 
 > [!NOTE]
-> 如需 Visual Studio 2017 的資訊，請參閱 [Visual Studio 2017 中 Visual C++ 的新功能](../what-s-new-for-visual-cpp-in-visual-studio.md)及[Visual Studio 2017 中 Visual C++ 的合規性改進](../cpp-conformance-improvements-2017.md)。
+> 如需 Visual Studio 2017 的資訊，請參閱 [Visual Studio 2017 中 Visual C++ 的新功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)及[Visual Studio 2017 中 Visual C++ 的合規性改進](../overview/cpp-conformance-improvements-2017.md)。
 
 ## <a name="whats-new-for-c-in-visual-studio-2015"></a>Visual Studio 2015 中 C++ 的新功能
 
@@ -1570,8 +1570,7 @@ Microsoft Visual C++ 編譯器支援下列 ISO C++11 語言功能：
 - 自動向量化工具現在可以辨識並最佳化更多 C++ 模式，讓程式碼更快速地執行。
 - ARM 平台和 Atom 微架構程式碼品質改善。
 - 已新增 __vectorcall 呼叫慣例。 使用 __vectorcall 呼叫慣例傳遞向量類型引數，以使用向量暫存器。
-- 新的連結器選項。 
-  `/Gw` (編譯器) 和 `/Gy` (組譯工具) 參數會啟用連結器最佳化以產生更精簡的二進位檔。
+- 新的連結器選項。 `/Gw` (編譯器) 和 `/Gy` (組譯工具) 參數會啟用連結器最佳化以產生更精簡的二進位檔。
 - C++ AMP 共用記憶體支援，可降低或排除 CPU 與 GPU 之間的資料複製。
 
 ### <a name="profile-guided-optimization-pgo-enhancements"></a>特性指引最佳化 (PGO) 加強功能

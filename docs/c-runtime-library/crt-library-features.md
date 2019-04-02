@@ -18,12 +18,12 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-ms.openlocfilehash: 08d85cd6993a2f3558ddb501dacac671c0d5d797
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9a2691d492a277ffe0018b6e86b00cd245840ed
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540266"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767687"
 ---
 # <a name="crt-library-features"></a>CRT 程式庫功能
 
@@ -33,7 +33,7 @@ ms.locfileid: "50540266"
 
 C 執行階段程式庫 (CRT) 是納入 ISO C99 標準程式庫之 C++ 標準程式庫的一部分。 實作 CRT 的 Visual C++ 程式庫支援機器碼開發，以及混合的機器碼與受控碼。 CRT 的所有版本都支援多執行緒開發。 大部分程式庫都支援靜態連結和動態連結，靜態連結可將程式庫直接連結到您的程式碼，而動態連結則可讓您的程式碼使用通用 DLL 檔案。
 
-自 Visual Studio 2015 起，CRT 已重構為新的二進位檔。 通用 CRT (UCRT) 包含標準 C99 CRT 程式庫所匯出的函式和全域變數。 UCRT 現在是 Windows 元件，而且隨附於 Windows 10。 靜態程式庫、DLL 匯入程式庫和 UCRT 的標頭檔現在都位於 Windows 10 SDK 中。 當您安裝 Visual C++ 時，Visual Studio 安裝程式會安裝使用 UCRT 所需的一部分 Windows 10 SDK。 您可以在 Visual Studio 2015 及以上版本支援的任何 Windows 版本上使用 UCRT。 您可以針對 Windows 10 以外的 Windows 支援版本，使用 vcredist 來轉散發。 如需詳細資訊，請參閱 [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md)。
+自 Visual Studio 2015 起，CRT 已重構為新的二進位檔。 通用 CRT (UCRT) 包含標準 C99 CRT 程式庫所匯出的函式和全域變數。 UCRT 現在是 Windows 元件，而且隨附於 Windows 10。 靜態程式庫、DLL 匯入程式庫和 UCRT 的標頭檔現在都位於 Windows 10 SDK 中。 當您安裝 Visual C++ 時，Visual Studio 安裝程式會安裝使用 UCRT 所需的一部分 Windows 10 SDK。 您可以在 Visual Studio 2015 及以上版本支援的任何 Windows 版本上使用 UCRT。 您可以針對 Windows 10 以外的 Windows 支援版本，使用 vcredist 來轉散發。 如需詳細資訊，請參閱 [Redistributing Visual C++ Files](../windows/redistributing-visual-cpp-files.md)。
 
 下表列出實作 UCRT 的程式庫。
 
@@ -96,7 +96,7 @@ C 執行階段程式庫 (CRT) 是納入 ISO C99 標準程式庫之 C++ 標準程
 |libcpmtd.lib|多執行緒、靜態連結|**/MTd**|_DEBUG、_MT|
 |msvcprtd.lib|多執行緒的動態連結 (MSVCP*版本*D.DLL 的匯入程式庫)|**/MDd**|_DEBUG、_MT、_DLL|
 
-當您建置專案的發行版本時，預設會依據您選擇的編譯器選項 (多執行緒、DLL、/clr)，連結其中一個基本的 C 執行階段程式庫 (libcmt.lib、msvcmrt.lib、msvcrt.lib)。 如果您在程式碼中包含其中一個 [C++ 標準程式庫標頭檔](../standard-library/cpp-standard-library-header-files.md)，Visual C++ 就會在編譯時間自動連入 C++ 標準程式庫。 例如: 
+當您建置專案的發行版本時，預設會依據您選擇的編譯器選項 (多執行緒、DLL、/clr)，連結其中一個基本的 C 執行階段程式庫 (libcmt.lib、msvcmrt.lib、msvcrt.lib)。 如果您在程式碼中包含其中一個 [C++ 標準程式庫標頭檔](../standard-library/cpp-standard-library-header-files.md)，Visual C++ 就會在編譯時間自動連入 C++ 標準程式庫。 例如：
 
 ```cpp
 #include <ios>

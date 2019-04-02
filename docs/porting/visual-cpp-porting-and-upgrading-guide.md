@@ -2,12 +2,12 @@
 title: Visual C++ 移植和升級指南
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 1b3f7142b5240d8b4a94040d5cda7d033e50e39d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: d1ee00ab1e869e37a5bf19809df964f1e4085819
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752424"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767674"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 移植和升級指南
 
@@ -76,8 +76,8 @@ Visual Studio 中的建置系統和專案檔格式，已從 Visual Studio 2008 �
 |標題|說明|
 |-----------|-----------------|
 |[從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|討論如何使用在舊版 Visual C++ 中建立的專案。|
-|[Visual Studio 2017 RC 中 C++ 編譯器的新功能](../what-s-new-for-visual-cpp-in-visual-studio.md)|從 Visual Studio 2015 到 Visual Studio 2017 的 IDE 和工具變更|
-|[Visual Studio 2017 中的 C++ 一致性改善](../cpp-conformance-improvements-2017.md)|從 Visual Studio 2015 到 Visual Studio 2017 的標準一致性改善|
+|[Visual Studio 2017 RC 中 C++ 編譯器的新功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|從 Visual Studio 2015 到 Visual Studio 2017 的 IDE 和工具變更|
+|[Visual Studio 2017 中的 C++ 一致性改善](../overview/cpp-conformance-improvements-2017.md)|從 Visual Studio 2015 到 Visual Studio 2017 的標準一致性改善|
 |[Visual C++ 變更歷程記錄 2003 - 2015](visual-cpp-change-history-2003-2015.md)|從 Visual Studio 2003 到 2015 之 Visual C++ 程式庫和建置工具的所有變更清單，可能需要在程式碼中進行變更。|
 |[從 2003 到 2015 的 Visual C++ 新功能](visual-cpp-what-s-new-2003-through-2015.md)|從 Visual Studio 2003 到 Visual Studio 2015 之 Visual C++ 的所有「新功能」資訊。|
 |[移植協力廠商程式庫](porting-third-party-libraries.md)|如何使用 **vcpkg** 命令列工具，將舊版開放原始碼程式庫移植至使用較新 Visual C++ 工具組所編譯的版本。|
@@ -88,4 +88,4 @@ Visual Studio 中的建置系統和專案檔格式，已從 Visual Studio 2008 �
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual C++](../visual-cpp-in-visual-studio.md)
+[Visual C++](../overview/visual-cpp-in-visual-studio.md)

@@ -1,6 +1,6 @@
 ---
 title: memchr、wmemchr
-ms.date: 11/04/2016
+ms.date: 03/31/2019
 apiname:
 - wmemchr
 - memchr
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: cbd8b80ed42a6532fb7161fab7217a772a2cb777
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 00a1f0d12047cc388b56074a657ffd739e986827
+ms.sourcegitcommit: 489c0b998f2360317701f7a4a97b2b8ad96052d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57209895"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58866912"
 ---
 # <a name="memchr-wmemchr"></a>memchr、wmemchr
 
@@ -75,7 +75,7 @@ const wchar_t *wmemchr(
 *buffer*<br/>
 緩衝區的指標。
 
-*C*<br/>
+*c*<br/>
 要尋找的字元。
 
 *count*<br/>
@@ -87,9 +87,9 @@ const wchar_t *wmemchr(
 
 ## <a name="remarks"></a>備註
 
-`memchr` 並`wmemchr`尋找第一個出現*c*在第一個*計數*位元組*緩衝區*。 它會停止時發現*c*或當其已簽入第一個*計數*位元組。
+`memchr` 並`wmemchr`尋找第一個出現*c*第一次*計數*字元*緩衝區*。 它會停止時發現*c*或當其已簽入第一個*計數*字元。
 
-在 C 中，這些函式接受**const**第一個引數的指標。 在 C++ 中，可使用兩個多載。 取得指標的多載**const**傳回的指標**const**; 版本，採用的指標，非**const**將指標傳回至非**const**. 如果兩個使用者定義巨集 _CRT_CONST_CORRECT_OVERLOADS **const**和非位**const**這些函式的版本可供使用。 如果您需要非**const**這兩個 c + + 中 c + + 行為定義符號 _CONST_RETURN。
+在 C 中，這些函式接受**const**第一個引數的指標。 在 C++ 中，可使用兩個多載。 取得指標的多載**const**傳回的指標**const**; 版本，採用的指標，非**const**將指標傳回至非**const**. 巨集會\_CRT\_CONST\_更正\_多載會定義如果兩個**const**和非-**const**這些函式的版本可供使用。 如果您需要非**const**這兩個 c + + 中的 c + + 多載的行為定義符號\_CONST\_傳回。
 
 ## <a name="requirements"></a>需求
 
@@ -135,7 +135,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 String to be searched:

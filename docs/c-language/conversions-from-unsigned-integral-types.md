@@ -1,6 +1,6 @@
 ---
 title: 從不帶正負號整數類型的轉換
-ms.date: 01/29/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - integers, converting
 - type casts, involving integers
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: d7653c545601d10b159f10a8a3c8f60f9128f944
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f6136a721f84332451184baa648ebc7c909d5d7
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579682"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565018"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>從不帶正負號整數類型的轉換
 
-不帶正負號的整數會藉由截斷高序位位元，轉換為較短的不帶正負號或帶正負號的整數，或是藉由零擴充轉換為較長的不帶正負號或帶正負號的整數 (請參閱[從不帶正負號整數類型的轉換](#_clang_table_4..3)表格)。
+不帶正負號的整數會透過截斷高序位位元，轉換為較短的不帶正負號或帶正負號的整數，或是透過零延伸轉換為較長的不帶正負號或帶正負號的整數。 如需詳細資訊，請參閱[從不帶正負號整數類型的轉換表](#conversions-from-unsigned-integral-types-table)。
 
 當值使用的是降級至大小較小的帶正負號整數，或者不帶正負號整數時，會將其轉換為對應的帶正負號整數，如果可以由新的類型表示，其值是不變的。 不過，如果設定了正負號位元，則其值會改變，如下列範例所述。
 
@@ -35,9 +35,9 @@ printf_s( "%hd\n", j );   // Prints -3
 
 下表摘要說明從不帶正負號整數類資料類型進行轉換。
 
-## <a name="conversions-from-unsigned-integral-types"></a>從不帶正負號整數型別的轉換
+## <a name="conversions-from-unsigned-integral-types-table"></a>從不帶正負號整數型別的轉換表
 
-|從|以|方法|
+|從|到|方法|
 |----------|--------|------------|
 |**unsigned char**|**char**|保留位元模式，高序位位元會變成正負號位元|
 |**unsigned char**|**short**|零擴充|

@@ -9,24 +9,24 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 051ef3aa8c691a2191d25183ef96f17b557a47c1
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: aa0e1cd6ec7c27b8d3ccc1e327f3cb8da526d4f7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57820204"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769260"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>逐步解說：部署程式 (C++)
 
-現在您已藉由完成先前列於[使用 Visual Studio IDE 進行 C++ 桌面程式開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)中的相關逐步解說來建立應用程式，最後一個步驟要建立安裝程式，讓其他使用者可以將程式安裝在電腦上。 針對安裝程式，您需要將新的專案新增至現有方案中。 這個新專案的輸出是 setup.exe 檔案，這個檔案會將您的應用程式安裝在另一部電腦上。
+現在您已經透過完成先前的相關逐步解說建立您的應用程式，最後一個步驟要建立安裝程式，讓其他使用者可以將程式安裝在電腦上。 針對安裝程式，您需要將新的專案新增至現有方案中。 這個新專案的輸出是 setup.exe 檔案，這個檔案會將您的應用程式安裝在另一部電腦上。
 
-本逐步解說示範如何使用 Windows Installer 部署您的應用程式。 您也可以使用 ClickOnce 部署應用程式。 如需詳細資訊，請參閱 [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md)。 如需部署的一般詳細資訊，請參閱[部署應用程式、服務和元件](/visualstudio/deployment/deploying-applications-services-and-components)。
+本逐步解說示範如何使用 Windows Installer 部署您的應用程式。 您也可以使用 ClickOnce 部署應用程式。 如需詳細資訊，請參閱 [ClickOnce Deployment for Visual C++ Applications](../windows/clickonce-deployment-for-visual-cpp-applications.md)。 如需部署的一般詳細資訊，請參閱[部署應用程式、服務和元件](/visualstudio/deployment/deploying-applications-services-and-components)。
 
 ## <a name="prerequisites"></a>必要條件
 
 - 本逐步解說假設您已了解 C++ 語言的基本概念。
 
-- 同時假設，您已完成先前列於[使用 Visual Studio IDE 進行 C++ 桌面程式開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)中的相關逐步解說。
+- 同時假設，您已完成先前列於[使用 Visual Studio IDE 進行 C++ 桌面程式開發](using-the-visual-studio-ide-for-cpp-desktop-development.md)中的相關逐步解說。
 
 - 這個逐步解說無法在 Visual Studio Express Edition 中完成。
 
@@ -72,10 +72,10 @@ ms.locfileid: "57820204"
 
 ## <a name="next-steps"></a>後續步驟
 
-**上一步：**[逐步解說：偵錯專案 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+**上一步：**[逐步解說：偵錯專案 (C++)](walkthrough-debugging-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>另請參閱
 
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [專案和建置系統](../build/projects-and-build-systems-cpp.md)<br/>
-[部署傳統型應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
+[部署傳統型應用程式](../windows/deploying-native-desktop-applications-visual-cpp.md)<br/>

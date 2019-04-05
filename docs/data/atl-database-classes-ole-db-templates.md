@@ -6,12 +6,12 @@ helpviewer_keywords:
 - database classes [C++], OLE DB
 - database classes [C++], ATL
 ms.assetid: 219766aa-e18a-405f-9e36-d7a0fdb31b2b
-ms.openlocfilehash: 4304c350ce6a9303a7542809fa85fb0cd2560031
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2ecde060f10a7c2a056869525f58d0bb4da67963
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522064"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023434"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>ATL 資料庫類別 (OLE DB 樣板)
 
@@ -35,6 +35,6 @@ OLE DB 範本是 ATL 中的 c + + 範本，讓您更輕鬆地提供實作許多�
 
 [建立 OLE DB 消費者](../data/oledb/creating-an-ole-db-consumer.md)<br/>
 [建立 OLE DB 提供者](../data/oledb/creating-an-ole-db-provider.md)<br/>
-[OLE DB 消費者範本參考](../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[OLE DB 提供者範本參考](../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[OLE DB 消費者樣板參考](../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB 提供者樣板參考](../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [OLE DB 範本範例](https://github.com/Microsoft/VCSamples)

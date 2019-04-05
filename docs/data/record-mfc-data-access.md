@@ -6,12 +6,12 @@ helpviewer_keywords:
 - records [C++]
 - records [C++], database
 ms.assetid: d9888635-8121-452c-8cb9-a1c5bf268010
-ms.openlocfilehash: 53da1766bdf717e7c8eae890dd646ef24d4a9f96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b308f98a597a080048377b345c27cb5862e5f12
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495975"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033265"
 ---
 # <a name="record-mfc-data-access"></a>記錄 (MFC 資料存取)
 
@@ -19,4 +19,4 @@ ms.locfileid: "50495975"
 
 ## <a name="see-also"></a>另請參閱
 
-[資料存取程式設計 (MFC/ATL)](../data/data-access-programming-mfc-atl.md)
+[Data Access Programming (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

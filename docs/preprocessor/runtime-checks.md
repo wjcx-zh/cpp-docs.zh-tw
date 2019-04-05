@@ -8,12 +8,12 @@ helpviewer_keywords:
 - runtime_checks pragma
 - pragmas, runtime_checks
 ms.assetid: ae50b43f-f88d-47ad-a2db-3389e9e7df5b
-ms.openlocfilehash: 38df7ccc384830bb547c11e1a3d5458a1298574c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44c26fb90a2d2f9ba78ec7dba7cceed65a4b4ed7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547364"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027077"
 ---
 # <a name="runtimechecks"></a>runtime_checks
 停用或還原 [/RTC](../build/reference/rtc-run-time-error-checks.md) 設定。
@@ -40,7 +40,7 @@ ms.locfileid: "50547364"
 |*C*|將值指派給會造成資料損失的較小資料類型時回報。|
 |*u*|變數在定義之前即使用時回報。|
 
-這些是與所用的相同字母`/RTC`編譯器選項。 例如: 
+這些是與所用的相同字母`/RTC`編譯器選項。 例如：
 
 ```
 #pragma runtime_checks( "sc", restore )

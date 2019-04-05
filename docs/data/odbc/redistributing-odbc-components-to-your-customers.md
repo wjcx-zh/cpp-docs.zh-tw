@@ -9,12 +9,12 @@ helpviewer_keywords:
 - components [C++]
 - components [C++], redistributing
 ms.assetid: 17b065b4-a307-4b89-99ac-d05831cfab87
-ms.openlocfilehash: cfbe6b2c440f84a4c470255bc964adf6c5145cf1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a6ec6f5fdd3c32080d357ca58d31ccea271b7a4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676781"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040081"
 ---
 # <a name="redistributing-odbc-components-to-your-customers"></a>轉散發 ODBC 元件給您的客戶
 
@@ -22,17 +22,17 @@ ms.locfileid: "50676781"
 
 任何想要寄送的 ODBC 驅動程式，請參閱文件。 您必須判斷哪些 Dll 和其他檔案發行。 您也應該閱讀[轉散發 ODBC 元件給您的客戶](../../data/odbc/redistributing-odbc-components-to-your-customers.md)，其中說明如何轉散發 ODBC 元件。
 
-此外，您需要在大部分情況下包含一個其他檔案。 Odbccr32.dll 是 ODBC 資料指標程式庫。 這個程式庫提供層級 1 的驅動程式的向前及向後捲動功能。 它也提供支援快照集的功能。 如需有關 ODBC 資料指標程式庫的詳細資訊，請參閱 < [ODBC: ODBC 資料指標程式庫](../../data/odbc/odbc-the-odbc-cursor-library.md)。
+此外，您需要在大部分情況下包含一個其他檔案。 Odbccr32.dll 是 ODBC 資料指標程式庫。 這個程式庫提供層級 1 的驅動程式的向前及向後捲動功能。 它也提供支援快照集的功能。 如需有關 ODBC 資料指標程式庫的詳細資訊，請參閱[ODBC:ODBC 資料指標程式庫](../../data/odbc/odbc-the-odbc-cursor-library.md)。
 
 下列主題提供使用 ODBC 資料庫類別的詳細資訊：
 
-- [ODBC：ODBC 資料指標程式庫](../../data/odbc/odbc-the-odbc-cursor-library.md)
+- [ODBC:ODBC 資料指標程式庫](../../data/odbc/odbc-the-odbc-cursor-library.md)
 
-- [ODBC：設定 ODBC 資料來源](../../data/odbc/odbc-configuring-an-odbc-data-source.md)
+- [ODBC:設定 ODBC 資料來源](../../data/odbc/odbc-configuring-an-odbc-data-source.md)
 
-- [ODBC：直接呼叫 ODBC API 函式](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)
+- [ODBC:直接呼叫 ODBC API 函式](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[ODBC 基本概念](../../data/odbc/odbc-basics.md)<br/>
+[ODBC 的基本概念](../../data/odbc/odbc-basics.md)<br/>
 [ODBC 管理員](../../data/odbc/odbc-administrator.md)

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - pragmas, vtordisp
 - vtordisp pragma
 ms.assetid: 05b7d73c-43fa-4b62-8c8a-170a9e427391
-ms.openlocfilehash: 075f00ad8a4071af57014638707503847b58756d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67c6c329bcee75012f6075334760925eca945501
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557179"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034374"
 ---
 # <a name="vtordisp"></a>vtordisp
 
-**C + + 特定**
+**C++ 專有的**
 
 加入隱藏 vtordisp 建構函式/解構函式替代成員的控制項。
 
@@ -41,7 +41,7 @@ ms.locfileid: "50557179"
 *n*<br/>
 為 vtordisp 設定指定新的值。 可能的值為 0、 1 或 2，對應到`/vd0`， `/vd1`，和`/vd2`編譯器選項。 如需詳細資訊，請參閱 < [/vd （停用建構替代）](../build/reference/vd-disable-construction-displacements.md)。
 
-*on*<br/>
+*於*<br/>
 相當於 `#pragma vtordisp(1)`。
 
 *關閉*<br/>
@@ -57,7 +57,7 @@ ms.locfileid: "50557179"
 
 指定 2 啟用隱藏**vtordisp**具有虛擬函式的所有虛擬基底的成員。  `vtordisp(2)` 可能需要以確保正確的效能**dynamic_cast**在部分建構的物件。 如需詳細資訊，請參閱 <<c0> [ 編譯器警告 （層級 1） C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)。
 
-`#pragma vtordisp()` (不含引數)，將 vtordisp 設定還原為其初始設定值。
+`#pragma vtordisp()`與任何引數，將 vtordisp 設定還原至其初始設定值。
 
 ```cpp
 #pragma vtordisp(push, 2)
@@ -65,7 +65,7 @@ class GetReal : virtual public VBase { ... };
 #pragma vtordisp(pop)
 ```
 
-**END c + + 特定的**
+**END C++ 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

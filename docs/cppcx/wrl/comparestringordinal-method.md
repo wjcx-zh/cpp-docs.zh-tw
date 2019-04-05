@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Details::CompareStringOrdinal
 ms.assetid: ffa997fd-8cd7-40a5-b9e7-f55d40b072f4
-ms.openlocfilehash: c9dbbe8926036ea18210fb30928fafc40093092e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: a1ac0576bdd374daa5cbd445af480e7652b61e45
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58784492"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027699"
 ---
 # <a name="comparestringordinal-method"></a>CompareStringOrdinal 方法
 

@@ -4,12 +4,12 @@ ms.date: 10/29/2018
 helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
-ms.openlocfilehash: 5659078641439744c1f68cbb399c19b9b58bd0bb
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: c0452ca74509b65de3787af93bff41b3cb399c99
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265135"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033863"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>將介面加入至提供者
 
@@ -24,7 +24,7 @@ class CCustomRowset :
     public IRowsetIndexImpl< ... >
 ```
 
-加入 COM_MAP 的介面中使用 COM_INTERFACE_ENTRY 巨集的物件。 如果沒有任何對應，請建立一個。 例如: 
+加入 COM_MAP 的介面中使用 COM_INTERFACE_ENTRY 巨集的物件。 如果沒有任何對應，請建立一個。 例如：
 
 ```cpp
 BEGIN_COM_MAP(CCustomRowset)
@@ -43,4 +43,4 @@ END_COM_MAP()
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 OLE DB 提供者範本](../../data/oledb/working-with-ole-db-provider-templates.md)
+[使用 OLE DB 提供者樣板](../../data/oledb/working-with-ole-db-provider-templates.md)

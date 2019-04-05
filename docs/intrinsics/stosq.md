@@ -8,16 +8,16 @@ helpviewer_keywords:
 - stosq instruction
 - __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
-ms.openlocfilehash: f395a8b0fc7194f36bb3388d631628a829f33aca
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: eacb12f7c02b82607d980281f8d4a0bc1e1d7c14
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331304"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032429"
 ---
 # <a name="stosq"></a>__stosq
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 產生的存放區的字串指示 (`rep stosq`)。
 
@@ -36,7 +36,7 @@ void __stosb(
 *目的地*<br/>
 [out]作業的目的地。
 
-*Data*<br/>
+*資料*<br/>
 [in]要儲存的資料。
 
 *計數*<br/>
@@ -76,13 +76,13 @@ int main()
 }
 ```
 
-## <a name="output"></a>輸出
+## <a name="output"></a>Output
 
 ```
 0 ffffffffffff ffffffffffff 0
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

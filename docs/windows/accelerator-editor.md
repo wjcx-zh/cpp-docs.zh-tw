@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: 4ed283b9be2afdacfbc93c647c7633fb7802e7fd
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: f5ae9880719a3a8b799ea8deb751b6f0a85542bd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328398"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041120"
 ---
 # <a name="accelerator-editor-c"></a>快速鍵編輯器 （c + +）
 
@@ -71,7 +71,7 @@ ms.locfileid: "58328398"
 
    |值|描述|
    |-----------|-----------------|
-   |**無**|只有使用者按下**金鑰**值。<br/><br/>使用此值是最有效地以 ASCII/ANSI 值 001 026，透過它被解譯為 ^ A 到 ^ Z (**Ctrl + A**透過**Ctrl + Z**)。|
+   |**None**|只有使用者按下**金鑰**值。<br/><br/>使用此值是最有效地以 ASCII/ANSI 值 001 026，透過它被解譯為 ^ A 到 ^ Z (**Ctrl + A**透過**Ctrl + Z**)。|
    |**Alt**|使用者必須按下**Alt**之前**金鑰**值。|
    |**Ctrl**|使用者必須按下**Ctrl**之前**金鑰**，不正確的值與 ASCII 類型。|
    |**Shift**|使用者必須按下**Shift**之前**金鑰**值。|

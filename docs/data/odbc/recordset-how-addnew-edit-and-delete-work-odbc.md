@@ -1,5 +1,5 @@
 ---
-title: 資料錄集：AddNew、Edit 和 Delete 的運作方式 (ODBC)
+title: 資料錄集：AddNew，如何編輯和刪除工作 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records [C++], updating
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-ms.openlocfilehash: 84d4c2f1128f7b73189f69b056eee96619c31ef5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e5fc6ad2a1fe00367cd8a0b1c53ac914b95018ab
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331967"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033200"
 ---
-# <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>資料錄集：AddNew、Edit 和 Delete 的運作方式 (ODBC)
+# <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>資料錄集：AddNew，如何編輯和刪除工作 (ODBC)
 
 本主題適用於 MFC ODBC 類別。
 
@@ -39,9 +39,9 @@ ms.locfileid: "51331967"
 - [刪除資料錄的方式運作](#_core_deleting_a_record)
 
 > [!NOTE]
->  本主題適用於物件衍生自`CRecordset`的大量資料列中擷取尚未實作。 如果您使用大量資料列擷取，請參閱[資料錄集： 擷取記錄中大量資料庫連接 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主題適用於物件衍生自`CRecordset`的大量資料列中擷取尚未實作。 如果您使用大量資料列擷取，請參閱[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
-項目，您可能想要閱讀[資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)，其中描述 RFX 更新作業中的對應角色。
+項目，您可能想要閱讀[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)，其中描述 RFX 更新作業中的對應角色。
 
 ##  <a name="_core_adding_a_record"></a> 新增記錄
 
@@ -118,7 +118,7 @@ ms.locfileid: "51331967"
 
    1. 如果有變更，`Update`建構 SQL**更新**陳述式。 列出的資料行**更新**陳述式會根據已變更的欄位資料成員。
 
-   1. `Update` 認可的變更 — 執行**更新**陳述式，並記錄變更資料來源，但未認可的交易如果正在進行中 (請參閱[交易： 執行異動中的資料錄集 (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)如需有關交易如何影響更新資訊)。 ODBC 會保留一份記錄，也會變更。
+   1. `Update` 認可的變更 — 執行**更新**陳述式，並記錄變更資料來源，但未認可的交易如果正在進行中 (請參閱[交易：資料錄集 (ODBC) 中執行異動](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)異動如何影響更新的相關資訊)。 ODBC 會保留一份記錄，也會變更。
 
    1. 不同的程序`AddNew`，則`Edit`程序不會還原儲存的記錄。 已編輯的記錄會保留在位置中，為目前的記錄。
 
@@ -160,5 +160,5 @@ ms.locfileid: "51331967"
 ## <a name="see-also"></a>另請參閱
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[資料錄集：更多更新的詳細資訊 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
+[資料錄集：深入了解更新 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
 [資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)

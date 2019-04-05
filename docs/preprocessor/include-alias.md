@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-ms.openlocfilehash: 9d32cad2533b6044348651797d0278bcbebcafd6
-ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
+ms.openlocfilehash: 187fa94f7c2a5457df655081b87a7f49d38adfa2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53587872"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024097"
 ---
 # <a name="includealias"></a>include_alias
 
@@ -21,12 +21,12 @@ ms.locfileid: "53587872"
 
 ## <a name="syntax"></a>語法
 
-> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias (「*alias_filename*"，"*actual_filename*")
-> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias (\<*alias_filename*>， \< *actual_filename*>)
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias("*alias_filename*", "*actual_filename*")
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias(\<*alias_filename*>, \<*actual_filename*>)
 
 ## <a name="remarks"></a>備註
 
-**Include_alias** pragma 指示詞可讓您取代具有不同的名稱或路徑，包含原始程式檔的檔案名稱的檔案。 比方說，有些檔案系統允許較長的標頭檔名稱超過 8.3 FAT 檔案系統限制。 由於較長標頭檔名稱的前八個字元不一定是唯一的，因此編譯器無法依照 8.3 的限制直接截斷較長的名稱。 只要編譯器遇到*alias_filename*字串，它會替代*actual_filename*，並尋找標頭檔*actual_filename*改。 這個 pragma 必須出現在對應的 `#include` 指示詞前面。 例如: 
+**Include_alias** pragma 指示詞可讓您取代具有不同的名稱或路徑，包含原始程式檔的檔案名稱的檔案。 比方說，有些檔案系統允許較長的標頭檔名稱超過 8.3 FAT 檔案系統限制。 由於較長標頭檔名稱的前八個字元不一定是唯一的，因此編譯器無法依照 8.3 的限制直接截斷較長的名稱。 只要編譯器遇到*alias_filename*字串，它會替代*actual_filename*，並尋找標頭檔*actual_filename*改。 這個 pragma 必須出現在對應的 `#include` 指示詞前面。 例如：
 
 ```cpp
 // First eight characters of these two files not unique.

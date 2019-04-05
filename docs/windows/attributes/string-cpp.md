@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: 8bf708067341ecde4fb18d565b7d72866312decd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1b528fb922a15655de403c6099ee1d36e2fb3de
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603186"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023928"
 ---
 # <a name="string-c"></a>string (C++)
 
@@ -52,8 +52,8 @@ __interface IFireTabCtrl
 |-|-|
 |**適用於**|陣列或指標的陣列、 介面參數、 介面方法|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
@@ -61,4 +61,4 @@ __interface IFireTabCtrl
 
 [IDL 屬性](idl-attributes.md)<br/>
 [陣列屬性](array-attributes.md)<br/>
-[export](export.md)
+[匯出](export.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: ff2a139c16b6678bedf38c64a16dce28fa53c5fe
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: fab1ba2e496f4945eb56c0a67b833f6bf063404e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425194"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038763"
 ---
 # <a name="ctable-class"></a>CTable 類別
 
@@ -82,7 +82,7 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>參數
 
-*session*<br/>
+*工作階段*<br/>
 [in]開啟該表格中的工作階段。
 
 *wszTableName*<br/>
@@ -111,4 +111,4 @@ HRESULT Open(const CSession& session,
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)

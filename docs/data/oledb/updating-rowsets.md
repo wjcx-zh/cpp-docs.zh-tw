@@ -7,12 +7,12 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: fb915a2f61c2adfedc41630e637f6b5beee30768
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7151d897469993b2f9be3575eb11a08844af3c69
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424358"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028356"
 ---
 # <a name="updating-rowsets"></a>更新資料列集
 
@@ -205,6 +205,6 @@ product.Update();                 // Update row 101 now
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 OLE DB 消費者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
+[使用 OLE DB 消費者樣板](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [CRowset 類別](../../data/oledb/crowset-class.md)<br/>
 [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))<br/>

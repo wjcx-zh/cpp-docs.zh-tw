@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - _writecr8 intrinsic
 ms.assetid: 6f8bd632-dddb-4335-971e-1acee24aa2b9
-ms.openlocfilehash: 1a7b31ed7e370c4dd3fee9e5a205be6e34ba560b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 44b009e68f3dd7825bc064e5f9f4ee8d03d7fb4a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325780"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024760"
 ---
 # <a name="writecr8"></a>__writecr8
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 將值寫入`Data`CR8 註冊。
 
@@ -29,7 +29,7 @@ void writecr8(
 
 #### <a name="parameters"></a>參數
 
-*Data*<br/>
+*資料*<br/>
 [in]要寫入的 CR8 暫存器的值。
 
 ## <a name="requirements"></a>需求
@@ -44,7 +44,7 @@ void writecr8(
 
 此內建只適用於核心模式，且此常式僅可作為內建常式使用。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

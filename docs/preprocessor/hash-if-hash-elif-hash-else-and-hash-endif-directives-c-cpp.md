@@ -21,12 +21,12 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-ms.openlocfilehash: 76b8be265145896105490a82946c50bc576e6f9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90fbab45c6408c30198c2a52a42545718002cc11
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520415"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028087"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if、#elif、#else 和 #endif 指示詞 (C/C++)
 
@@ -37,20 +37,20 @@ ms.locfileid: "50520415"
 *條件式*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*if 部分 elif 部分*<sub>opt</sub> *else 部分*<sub>選擇</sub> *endif 列*
 
-*if 部分*:<br/>
+*if-part* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*如果行文字*
 
 *if 程式行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if***常數運算式*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef***識別碼*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef***識別碼*
+&nbsp;&nbsp;&nbsp;&nbsp;**#if**  *constant-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef**  *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef**  *identifier*
 
 *elif 部分*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*elif 行文字*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*elif 部分 elif 單行文字*
 
 *elif 列*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif***常數運算式*
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif**  *constant-expression*
 
 *else 部分*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*else-line 文字*
@@ -65,7 +65,7 @@ ms.locfileid: "50520415"
 
 **#If**， **#elif**， **#else**，以及 **#endif**指示詞可以巢狀在其他的文字部分 **#if**指示詞。 每個巢狀 **#else**， **#elif**，或 **#endif**指示詞都屬於前一個最接近 **#if**指示詞。
 
-所有的條件式編譯指示詞，例如 **#if**並 **#ifdef**，結尾必須符合 **#endif**在檔案結尾; 之前的指示詞，否則為錯誤會產生訊息。 當 Include 檔包含條件式編譯指示詞時，這些指示詞必須滿足相同的條件：include 檔結尾不可以有不相符的條件式編譯指示詞。
+所有的條件式編譯指示詞，例如 **#if**並 **#ifdef**，結尾必須符合 **#endif**在檔案結尾; 之前的指示詞，否則為錯誤會產生訊息。 當條件式編譯指示詞內包含的檔案，它們必須滿足相同的條件：必須要有任何不相符的條件式編譯指示詞結尾的 include 檔。
 
 巨集取代會在命令列後面的部分 **#elif**命令，因此可以使用巨集呼叫*常數運算式*。
 
@@ -97,7 +97,7 @@ ms.locfileid: "50520415"
 
 defined( `identifier` )
 
-defined `identifier`
+已定義的 `identifier`
 
 這個常數運算式視為 true （非零），是否*識別碼*目前定義; 否則條件為 false (0)。 定義成空白文字的識別項會被視為已定義。 **定義**指示詞可用於 **#if**並 **#elif**指示詞，但沒地方可繼續。
 
@@ -174,7 +174,7 @@ class Example
 
 ## <a name="hasinclude"></a>__has_include
 
-**Visual Studio 2017 版本 15.3 和更新版本**： 判斷是否可以加入程式庫標頭：
+**Visual Studio 2017 15.3 版和更新版本**：判斷是否可以加入程式庫標頭：
 
 ```cpp
 #ifdef __has_include

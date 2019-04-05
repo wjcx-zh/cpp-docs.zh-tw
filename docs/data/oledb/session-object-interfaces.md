@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interfaces, session object
 - interfaces, list of
 ms.assetid: ac01a958-6dde-4bd7-8b63-94459e488335
-ms.openlocfilehash: 7e8a9cd204a07afc2b14c6a1e31e7c970c27cfc2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2fb91365fec0709e1bb2a26afa519e6565862681
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423374"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031442"
 ---
 # <a name="session-object-interfaces"></a>工作階段物件介面
 
@@ -46,4 +46,4 @@ ms.locfileid: "57423374"
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - record views [C++]
 - forms [C++], data access tasks
 ms.assetid: 562122d9-01d8-4284-acf6-ea109ab0408d
-ms.openlocfilehash: 155a7e4de6272f13d12ab2a64cba190a184f62cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 199f51f20dd42ee9105b4e09f579c1f48948745f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588483"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040195"
 ---
 # <a name="record-views--mfc-data-access"></a>記錄檢視 (MFC 資料存取)
 
@@ -41,7 +41,7 @@ ms.locfileid: "50588483"
 
 - [資料錄檢視的資料交換](../data/data-exchange-for-record-views-mfc-data-access.md)
 
-- [您的角色中使用資料錄檢視](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
+- [您在使用資料錄檢視上的角色](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
 
 - [設計和建立資料錄檢視](../data/designing-and-creating-a-record-view-mfc-data-access.md)
 
@@ -49,5 +49,5 @@ ms.locfileid: "50588483"
 
 ## <a name="see-also"></a>另請參閱
 
-[資料存取程式設計 (MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
+[Data Access Programming (MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
 [ODBC 驅動程式清單](../data/odbc/odbc-driver-list.md)

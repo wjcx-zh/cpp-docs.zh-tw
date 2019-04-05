@@ -19,12 +19,12 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: c2e2f67a6547b05fca198a54b13776a1d3fafecf
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 8bb73c1a9e8d253492a7068c444dd7ddea8417da
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328918"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026353"
 ---
 # <a name="how-to-create-symbols-c"></a>HOW TO：建立符號 （c + +）
 
@@ -37,13 +37,13 @@ ms.locfileid: "58328918"
 
 對話方塊包含下列屬性：
 
-|屬性|描述|
+|屬性|說明|
 |--------------------------|------------------------------------------|
 |**名稱**|顯示的符號名稱。<br/><br/>如需詳細資訊，請參閱 <<c0> [ 符號名稱限制](../windows/symbol-name-restrictions.md)。|
 |**值**|顯示符號的數值。<br/><br/>如需詳細資訊，請參閱 <<c0> [ 符號值限制](../windows/symbol-value-restrictions.md)。|
 |**使用中**|選取時，指定符號正由一或多個資源使用。<br/><br/>資源所述**供** 方塊中。|
 |**顯示唯讀符號**|選取時，顯示唯讀資源。<br/><br/>根據預設，**資源符號**對話方塊會顯示可修改的資源在資源指令碼檔案中，但選取這個選項，可修改的資源會以粗體文字以及唯讀資源會以純文字。|
-|**使用**|使用在符號清單中選取的符號來顯示一或多個資源。<br/><br/>若要移到編輯器中指定的資源，請選取中的資源**供**方塊，然後選擇**檢視使用**。|
+|**使用對象**|使用在符號清單中選取的符號來顯示一或多個資源。<br/><br/>若要移到編輯器中指定的資源，請選取中的資源**供**方塊，然後選擇**檢視使用**。|
 |**新增**|開啟**新符號**，可讓您定義名稱 對話方塊中，如有必要，新的符號資源識別項的值。|
 |**變更**|會開啟**變更符號**對話方塊中，可讓您變更名稱或符號的值。<br/><br/>如果符號用於使用中的控制項或資源，只可以從對應的資源編輯器變更符號。 如需詳細資訊，請參閱 <<c0> [ 管理符號](../windows/changing-unassigned-symbols.md)。|
 |**檢視使用**|開啟在對應資源編輯器中含有符號的資源。|
@@ -88,6 +88,6 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[資源識別項 (符號)](../windows/symbols-resource-identifiers.md)<br/>
-[如何：管理符號](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
-[預先定義的符號識別碼](../windows/predefined-symbol-ids.md)<br/>
+[資源識別項 （符號）](../windows/symbols-resource-identifiers.md)<br/>
+[HOW TO：管理符號](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
+[預先定義的符號 ID](../windows/predefined-symbol-ids.md)<br/>

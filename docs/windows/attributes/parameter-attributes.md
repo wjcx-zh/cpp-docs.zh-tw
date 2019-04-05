@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], parameter attributes
 - parameter attributes
 ms.assetid: 024c2dd5-49d7-4ced-a17a-c56c1bc485b6
-ms.openlocfilehash: 56c168975c9b8a6fcf7462c26eefd07b4499d149
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e89542027c2187a77c18637432a5b60f47377c10
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619622"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029547"
 ---
 # <a name="parameter-attributes"></a>參數屬性
 
@@ -18,17 +18,17 @@ ms.locfileid: "50619622"
 
 |屬性|描述|
 |---------------|-----------------|
-|[custom](custom-cpp.md)|可讓您定義您自己的屬性。|
+|[自訂](custom-cpp.md)|可讓您定義您自己的屬性。|
 |[defaultvalue](defaultvalue.md)|允許指定的具類型的選擇性參數的預設值。|
 |[first_is](first-is.md)|指定要傳送的第一個陣列元素的索引。|
 |[iid_is](iid-is.md)|指定要傳送的第一個陣列元素的索引。|
 |[immediatebind](immediatebind.md)|表示資料庫將會立即被告知資料繫結物件的屬性的所有變更。|
-|[in](in-cpp.md)|指出參數是要呼叫的程序從傳遞至呼叫的程序。|
+|[中的](in-cpp.md)|指出參數是要呼叫的程序從傳遞至呼叫的程序。|
 |[last_is](last-is.md)|指定要傳送的最後一個陣列元素的索引。|
 |[lcid](lcid.md)|可讓您將地區設定識別碼傳遞給函式。|
 |[length_is](length-is.md)|指定要傳送的陣列元素數目。|
 |[max_is](max-is.md)|指定有效的陣列索引的最大值。|
-|[optional](optional-cpp.md)|指定的成員函式的選擇性參數。|
+|[選擇性](optional-cpp.md)|指定的成員函式的選擇性參數。|
 |[out](out-cpp.md)|識別從被呼叫程序傳回至呼叫程序的指標參數 (從伺服器至用戶端)。|
 |[range](range-cpp.md)|指定引數或在執行階段設定其值的欄位的允許值的範圍。|
 |[ref](ref-cpp.md)|識別參考指標。|

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-ms.openlocfilehash: b8e7de569a8310fdad0273ae70449d2da544f6e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7edc1c04da617f96165b25a47ce169b266ae0003
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482731"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024591"
 ---
 # <a name="recordset-requerying-a-recordset-odbc"></a>資料錄集：重新查詢資料錄集 (ODBC)
 
@@ -29,7 +29,7 @@ ms.locfileid: "50482731"
 
 ##  <a name="_core_bringing_the_recordset_up_to_date"></a> 資料錄集向上帶入日期
 
-通常，您會想要重新查詢您的資料錄集物件，使其最新狀態。 在多使用者的資料庫環境中，其他使用者可以變更資料的資料錄集生命期限內。 如需有關資料錄集反映其他使用者所做的變更時，與其他使用者的資料錄集時反映您的變更的詳細資訊，請參閱[資料錄集： 資料錄集更新資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)和[動態集](../../data/odbc/dynaset.md).
+通常，您會想要重新查詢您的資料錄集物件，使其最新狀態。 在多使用者的資料庫環境中，其他使用者可以變更資料的資料錄集生命期限內。 如需有關資料錄集反映其他使用者所做的變更時，與其他使用者的資料錄集時反映您的變更的詳細資訊，請參閱[資料錄集：資料錄集更新資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)並[動態集](../../data/odbc/dynaset.md)。
 
 ##  <a name="_core_requerying_based_on_new_parameters"></a> 重新查詢根據新的參數
 
@@ -48,7 +48,7 @@ ms.locfileid: "50482731"
 
 或者，您可以關閉並重新開啟原始的資料錄集。 在任一情況下，新的資料錄集代表資料來源的目前狀態。
 
-如需範例，請參閱[資料錄檢視： 填入清單方塊從第二個資料錄集](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)。
+如需範例，請參閱[資料錄檢視：填入清單方塊從第二個資料錄集](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)。
 
 > [!TIP]
 >  若要最佳化`Requery`效能，避免變更資料錄集的[篩選](../../data/odbc/recordset-filtering-records-odbc.md)或是[排序](../../data/odbc/recordset-sorting-records-odbc.md)。 只能變更參數值然後再呼叫`Requery`。
@@ -58,5 +58,5 @@ ms.locfileid: "50482731"
 ## <a name="see-also"></a>另請參閱
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[資料錄集：動態地繫結資料行 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
+[資料錄集：動態繫結資料行 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
 [資料錄集：建立和關閉資料錄集 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)

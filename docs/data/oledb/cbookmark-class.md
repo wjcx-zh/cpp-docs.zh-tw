@@ -67,12 +67,12 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: b59d4de6751dd2a7f90c5de766b5f95cb7e7b330
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fb2e3ec99471405f9c6521e0b70672c1da1b755c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525180"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030137"
 ---
 # <a name="cbookmark-class"></a>CBookmark 類別
 
@@ -112,7 +112,7 @@ class CBookmark< 0 > : public CBookmarkBase
 
 |||
 |-|-|
-|[operator =](#operator)|會指派一個`CBookmark`到另一個類別。|
+|[運算子 =](#operator)|會指派一個`CBookmark`到另一個類別。|
 
 ## <a name="remarks"></a>備註
 
@@ -169,7 +169,7 @@ virtual DBLENGTH GetSize() const throw();
 
 以位元組為單位的緩衝區大小。
 
-## <a name="setbookmark"></a> Cbookmark:: Setbookmark
+## <a name="setbookmark"></a> CBookmark::SetBookmark
 
 將所參考的書籤值複製*pBuffer*要`CBookmark`緩衝區，並將緩衝區大小設定為*nSize*。
 
@@ -212,4 +212,4 @@ CBookmark& operator =(const CBookmark& bookmark) throw();
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)

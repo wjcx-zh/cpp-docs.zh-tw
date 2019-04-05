@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - '#import directive, attributes'
 ms.assetid: 2a5085e3-82ee-4f83-892b-0aa6cc13863b
-ms.openlocfilehash: 3cd1b259270ff8c76ac80ec66000f3c8177140fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 954dfec50db75c0e3d11f0924b0ee398cd211fe1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624402"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036136"
 ---
 # <a name="import-attributes-c"></a>#import 屬性 (C++)
 提供搭配使用的屬性連結`#import`指示詞。
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 下列屬性可供`#import`指示詞。
 
@@ -23,7 +23,7 @@ ms.locfileid: "50624402"
 |[auto_rename](../preprocessor/auto-rename.md)|藉由對變數名稱附加兩個底線 (__) 來重新命名 C++ 保留字，以解決可能發生的名稱衝突。|
 |[auto_search](../preprocessor/auto-search.md)|指定時，當類型程式庫是使用 #import 加以參考，而且其本身參考又另一個類型程式庫，則編譯器可以對另一個類型程式庫執行隱含的 #import。|
 |[embedded_idl](../preprocessor/embedded-idl.md)|指定類型程式庫將寫入 .tlh 檔，並保留屬性產生的程式碼。|
-|[排除](../preprocessor/exclude-hash-import.md)|排除從類型程式庫標頭檔產生的項目。|
+|[exclude](../preprocessor/exclude-hash-import.md)|排除從類型程式庫標頭檔產生的項目。|
 |[high_method_prefix](../preprocessor/high-method-prefix.md)|指定用來命名高階屬性和方法的前置詞。|
 |[high_property_prefixes](../preprocessor/high-property-prefixes.md)|為三個屬性方法指定替代的前置詞。|
 |[implementation_only](../preprocessor/implementation-only.md)|不產生 .tlh 標頭檔 (主要標頭檔)。|
@@ -47,7 +47,7 @@ ms.locfileid: "50624402"
 |[rename_search_namespace](../preprocessor/rename-search-namespace.md)|具有相同的功能[rename_namespace](../preprocessor/rename-namespace.md)屬性，但可使用的 #import 指示詞中的型別程式庫[auto_search](../preprocessor/auto-search.md)屬性。|
 |[tlbid](../preprocessor/tlbid.md)|允許載入主要類型程式庫以外的程式庫。|
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

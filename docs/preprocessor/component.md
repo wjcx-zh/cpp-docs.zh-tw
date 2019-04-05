@@ -8,12 +8,12 @@ helpviewer_keywords:
 - component pragma
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
-ms.openlocfilehash: af0e4d7267fab92c867431ab70f4d8a0240a79d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cfb9d2bb9d6ddd2d430c2c031f3c8a51946391b1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666111"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032962"
 ---
 # <a name="component"></a>元件
 從原始程式檔內部收集瀏覽資訊或相依性資訊的控制項。
@@ -32,7 +32,7 @@ ms.locfileid: "50666111"
 
 您可以開啟或關閉收集功能，而且可以指定要在收集的資訊中忽略的特定名稱。
 
-使用開啟或關閉來控制收集 pragma 前方的瀏覽資訊。 例如: 
+使用開啟或關閉來控制收集 pragma 前方的瀏覽資訊。 例如：
 
 ```
 #pragma component(browser, off)
@@ -43,7 +43,7 @@ ms.locfileid: "50666111"
 > [!NOTE]
 > 若要開啟的瀏覽資訊，請使用這個 pragma，收集[瀏覽資訊必須先啟用](../build/reference/building-browse-information-files-overview.md)。
 
-`references`可以使用選項，包含或不含*名稱*引數。 使用`references`而不需要*名稱*開啟或關閉參考的收集 （其他瀏覽資訊仍繼續收集，不過）。 例如: 
+`references`可以使用選項，包含或不含*名稱*引數。 使用`references`而不需要*名稱*開啟或關閉參考的收集 （其他瀏覽資訊仍繼續收集，不過）。 例如：
 
 ```
 #pragma component(browser, off, references)
@@ -51,7 +51,7 @@ ms.locfileid: "50666111"
 
 讓編譯器停止收集參考資訊。
 
-使用`references`具有*名稱*並`off`防止參考*名稱*不會出現在瀏覽資訊視窗。 使用這個語法會忽略您沒有興趣的名稱和類型，並可減少瀏覽資訊檔的大小。 例如: 
+使用`references`具有*名稱*並`off`防止參考*名稱*不會出現在瀏覽資訊視窗。 使用這個語法會忽略您沒有興趣的名稱和類型，並可減少瀏覽資訊檔的大小。 例如：
 
 ```
 #pragma component(browser, off, references, DWORD)

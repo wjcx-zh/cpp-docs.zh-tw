@@ -8,16 +8,16 @@ helpviewer_keywords:
 - invlpg instruction
 - __invlpg intrinsic
 ms.assetid: 3fb3633f-d9b7-4ec0-9e7f-a7f2fa8ed794
-ms.openlocfilehash: 0ff46aa15fbb8728ce02255209a32f01a168609b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4f941baae9f03ed288a99d59e2b06262962e339
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629381"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023307"
 ---
 # <a name="invlpg"></a>__invlpg
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 會產生 x86`invlpg`失效轉譯對應緩衝區 (TLB) 頁面所指向的記憶體與相關聯的指令`Address`。
 
@@ -48,7 +48,7 @@ void __invlpg(
 
 此常式僅可作為內建常式使用。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

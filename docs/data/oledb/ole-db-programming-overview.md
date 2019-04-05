@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Universal Data Access
 - OLE DB, about OLE DB
 ms.assetid: a5a69730-2793-4277-a67d-6f3c8edab6df
-ms.openlocfilehash: d19e98d7c5743207dba224214b0d9a0e9f308e81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68ada06514defe0f7f5332288ad8e91a7d8d9351
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608896"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035526"
 ---
 # <a name="ole-db-programming-overview"></a>OLE DB 程式設計概觀
 
@@ -29,4 +29,4 @@ OLE DB 可讓您開發應用程式以存取不同資料來源，不論它們是 
 [OLE DB 程式設計](../../data/oledb/ole-db-programming.md)<br/>
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 範本](../../data/oledb/ole-db-templates.md)
+[OLE DB 樣板](../../data/oledb/ole-db-templates.md)

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: c4f6cc19897b66bfe26c6d53ccb87c35dbed82c9
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: b34a6300473db94621360f1d04fd73ddd7e8bd69
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58777645"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041454"
 ---
 # <a name="csession-class"></a>CSession 類別
 
@@ -69,7 +69,7 @@ class CSession
 |-|-|
 |[Abort](#abort)|取消 （終止） 交易。|
 |[關閉](#close)|關閉工作階段。|
-|[Commit](#commit)|認可的交易。|
+|[認可](#commit)|認可的交易。|
 |[GetTransactionInfo](#gettransactioninfo)|傳回交易的相關資訊。|
 |[開啟](#open)|開啟資料來源物件的新工作階段。|
 |[StartTransaction](#starttransaction)|開始新的交易，此工作階段。|
@@ -218,4 +218,4 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 [CatDB](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)

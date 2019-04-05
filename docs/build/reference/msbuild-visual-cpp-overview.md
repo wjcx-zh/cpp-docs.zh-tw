@@ -4,12 +4,12 @@ ms.date: 12/08/2018
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: e8d5e5379a60128ace9502712a1d240f947ddcd5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6c8e891f6bf6ed6b3bb3d1c84dbc13b64ab7b868
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824744"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021900"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>C + + 專案的 MSBuild 內部項目
 
@@ -70,7 +70,7 @@ ms.locfileid: "57824744"
 
 下表列出數個實用的使用者導向目標。
 
-|目標|描述|
+|Target|描述|
 |------------|-----------------|
 |BscMake|執行 Microsoft Browse Information Maintenance Utility 工具 bscmake.exe。|
 |組建|建置專案。<br /><br /> 這是專案的預設目標。|
@@ -83,7 +83,7 @@ ms.locfileid: "57824744"
 |重建|清除，並建立您的專案。|
 |ResourceCompile|執行 Microsoft Windows 資源編譯器工具 rc.exe。|
 |XdcMake|執行 XML 文件工具 xdcmake.exe。|
-|Xsd|執行 XML 結構描述定義工具 xsd.exe。 請參閱下列注意事項。|
+|Xsd|執行 XML 結構描述定義工具 xsd.exe。 *請參閱下列注意事項。*|
 
 > [!NOTE]
 > 在 Visual Studio 2017 中，c + + 專案的支援**xsd**檔案已被取代。 您仍然可以使用**Microsoft.VisualC.CppCodeProvider**加上**CppCodeProvider.dll**手動加入 GAC。

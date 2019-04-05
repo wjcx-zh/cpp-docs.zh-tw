@@ -20,12 +20,12 @@ helpviewer_keywords:
 - GetXMLColumnData method
 - GetXMLRowData method
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-ms.openlocfilehash: 1d57251e48f2496b07a4eb4f94976c7a44b165f9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 85fddb9b77cfc089b2236f2ff82944fec6ef9632
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328509"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036097"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor 類別
 
@@ -62,7 +62,7 @@ class CXMLAccessor : public CDynamicStringAccessorW
 
 [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]
 
-## <a name="getxmlcolumndata"></a> Cxmlaccessor:: Getxmlcolumndata
+## <a name="getxmlcolumndata"></a> CXMLAccessor::GetXMLColumnData
 
 依資料行中擷取為 XML 格式的字串資料，資料表的資料行型別資訊。
 
@@ -91,7 +91,7 @@ HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();
 
 `</columninfo>`
 
-## <a name="getxmlrowdata"></a> Cxmlaccessor:: Getxmlrowdata
+## <a name="getxmlrowdata"></a> CXMLAccessor::GetXMLRowData
 
 擷取為 XML 格式的字串資料的資料表的整個內容，依資料列。
 
@@ -127,7 +127,7 @@ HRESULT GetXMLRowData(CSimpleStringW& strOutput,
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor 類別](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicAccessor 類別](../../data/oledb/cdynamicaccessor-class.md)<br/>
 [CDynamicParameterAccessor 類別](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>

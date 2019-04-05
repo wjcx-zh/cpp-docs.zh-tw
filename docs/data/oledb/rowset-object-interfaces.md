@@ -8,12 +8,12 @@ helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 - interfaces, list of
 ms.assetid: 0d7a5d48-2fe4-434f-a84b-157c1fdc3494
-ms.openlocfilehash: f3d52568b6b32a757be3d248289876fd504a74c3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1f3e6066af4b6870c5fa90f7bde373bb7be476ce
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418499"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032949"
 ---
 # <a name="rowset-object-interfaces"></a>資料列集物件介面
 
@@ -50,4 +50,4 @@ ms.locfileid: "57418499"
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

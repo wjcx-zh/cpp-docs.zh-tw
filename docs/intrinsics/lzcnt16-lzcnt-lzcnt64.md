@@ -14,16 +14,16 @@ helpviewer_keywords:
 - lzcnt64 intrinsic
 - __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-ms.openlocfilehash: 7b1e499eff8c8c7de59dc6f96cb1060ce845e27d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 333d9f2b23fb90388af8395945256956c9222ab9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523451"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041334"
 ---
 # <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16，__lzcnt，__lzcnt64
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 計數有前置字元數目的前置零的 16、 32 或 64 位元整數。
 
@@ -43,7 +43,7 @@ unsigned __int64 __lzcnt64(
 
 #### <a name="parameters"></a>參數
 
-*值*<br/>
+*value*<br/>
 [in]16-、 32 或 64 位元不帶正負號的整數掃描前置零。
 
 ## <a name="return-value"></a>傳回值
@@ -54,9 +54,9 @@ unsigned __int64 __lzcnt64(
 
 |內建|架構|
 |---------------|------------------|
-|`__lzcnt16`|AMD： 進階的位元操作 (ABM)<br /><br /> Intel: Haswell|
-|`__lzcnt`|AMD： 進階的位元操作 (ABM)<br /><br /> Intel: Haswell|
-|`__lzcnt64`|AMD： 進階 64 位元模式中的位元操作 (ABM)。<br /><br /> Intel: Haswell|
+|`__lzcnt16`|AMD:進階的位元操作 (ABM)<br /><br /> Intel:Haswell|
+|`__lzcnt`|AMD:進階的位元操作 (ABM)<br /><br /> Intel:Haswell|
+|`__lzcnt64`|AMD:進階位元操作 (ABM) 在 64 位元模式。<br /><br /> Intel:Haswell|
 
 **標頭檔** \<intrin.h >
 
@@ -105,7 +105,7 @@ __lzcnt(0xffff) = 16
 __lzcnt(0xffffffff) = 0
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 本文部分內容是由進階 Micro 裝置，Inc.Copyright 2007著作權所有，並保留一切權利。 進階 Micro 裝置，inc.的權限重製
 

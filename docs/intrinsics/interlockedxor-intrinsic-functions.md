@@ -34,16 +34,16 @@ helpviewer_keywords:
 - InterlockedXor64 intrinsic
 - _InterlockedXor intrinsic
 ms.assetid: faef1796-cb5a-4430-b1e2-9d5eaf9b4a91
-ms.openlocfilehash: 8410420564ae641ff5e624cc5a1ddb0f260672e6
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: c86a743df84df37ffe3234d82d79abd987a4dcda
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627373"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023126"
 ---
 # <a name="interlockedxor-intrinsic-functions"></a>_InterlockedXor 內建函式
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 在多個執行緒共用的變數上，執行不可部分完成的位元專有或 (XOR) 運算。
 
@@ -164,10 +164,10 @@ __int64 _InterlockedXor64_rel(
 
 |內建|架構|標頭|
 |---------------|------------------|------------|
-|`_InterlockedXor`, `_InterlockedXor8`, `_InterlockedXor16`, `_InterlockedXor64`|x86、 x64、 ARM|\<intrin.h>|
+|`_InterlockedXor`、 `_InterlockedXor8`、 `_InterlockedXor16`、 `_InterlockedXor64`|x86、 x64、 ARM|\<intrin.h>|
 |`_InterlockedXor_acq`, `_InterlockedXor_nf`, `_InterlockedXor_rel`, `_InterlockedXor8_acq`, `_InterlockedXor8_nf`, `_InterlockedXor8_rel`, `_InterlockedXor16_acq`, `_InterlockedXor16_nf`, `_InterlockedXor16_rel`, `_InterlockedXor64_acq`, `_InterlockedXor64_nf`, `_InterlockedXor64_rel`,|ARM|\<intrin.h>|
-|`_InterlockedXor_np`, `_InterlockedXor8_np`, `_InterlockedXor16_np`, `_InterlockedXor64_np`|X64|\<intrin.h>|
-|`_InterlockedXor_HLEAcquire`, `_InterlockedXor_HLERelease`, `_InterlockedXor64_HLEAcquire`, `_InterlockedXor64_HLERelease`|x86、x64|\<immintrin.h>|
+|`_InterlockedXor_np`、 `_InterlockedXor8_np`、 `_InterlockedXor16_np`、 `_InterlockedXor64_np`|X64|\<intrin.h>|
+|`_InterlockedXor_HLEAcquire`、 `_InterlockedXor_HLERelease`、 `_InterlockedXor64_HLEAcquire`、 `_InterlockedXor64_HLERelease`|x86、x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>備註
 
@@ -202,7 +202,7 @@ int main()
 0xffff0000 0xffff00 0xff00ff00
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

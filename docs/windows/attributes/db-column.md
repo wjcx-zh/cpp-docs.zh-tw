@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 7ceb0b93f37133ccbbf89ed659f74b632e45bcb1
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: e0e2c873452884275e97663ae2d9d6df2f790ffd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328931"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024838"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -36,16 +36,16 @@ ms.locfileid: "58328931"
 *dbtype*<br/>
 （選擇性）OLE DB[型別指示器](/previous-versions/windows/desktop/ms711251(v=vs.85))的資料行項目。
 
-*precision*<br/>
+*精確度*<br/>
 （選擇性）要用於資料行項目有效位數。 如需詳細資訊，請參閱說明`bPrecision`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*scale*<br/>
+*小數點位數*<br/>
 （選擇性）要用於資料行項目小數位數。 如需詳細資訊，請參閱說明`bScale`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *status*<br/>
 （選擇性）成員變數，用來保存此資料行的狀態。 狀態會指出資料行的值是資料值或其他值，例如 NULL。 如需可能的值，請參閱[狀態](/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程式設計人員參考*。
 
-*length*<br/>
+*長度*<br/>
 （選擇性）成員變數，用來保存資料行的大小，以位元組為單位。
 
 ## <a name="remarks"></a>備註

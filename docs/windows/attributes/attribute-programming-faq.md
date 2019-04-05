@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: 89c37b2fe81a414bdd02d73e3c3dfd5205a03831
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: fd4c24e3933738d128dffd41018466c33b419de8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815875"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025094"
 ---
 # <a name="attribute-programming-faq"></a>屬性程式設計常見問題集
 
@@ -89,7 +89,7 @@ class CMyClass
 |[include](include-cpp.md)|[includelib](includelib-cpp.md)|[last_is](last-is.md)|
 |[length_is](length-is.md)|[max_is](max-is.md)|[no_injected_text](no-injected-text.md)|
 |[pointer_default](pointer-default.md)|[pragma](pragma.md)|[restricted](restricted.md)|
-|[size_is](size-is.md)|[source](source-cpp.md)|[switch_is](switch-is.md)|
+|[size_is](size-is.md)|[來源](source-cpp.md)|[switch_is](switch-is.md)|
 |[switch_type](switch-type.md)|[transmit_as](transmit-as.md)|[wire_marshal](wire-marshal.md)|
 
 ##  <a name="vcconattributeprogrammmingfaqanchor3"></a> 可以在屬性區塊中使用註解嗎？
@@ -244,4 +244,4 @@ int main() {}
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於 COM 與 .NET 的 C++ 屬性](cpp-attributes-com-net.md)
+[適用於 COM 和.NET 的 c + + 屬性](cpp-attributes-com-net.md)

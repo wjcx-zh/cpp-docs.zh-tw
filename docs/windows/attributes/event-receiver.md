@@ -12,12 +12,12 @@ helpviewer_keywords:
 - event sinks, creating
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
-ms.openlocfilehash: e483ece1019d4a8203215eddbc4d3b9d545328a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81a3ec88c336ddeb550f133e657854b3b6f89d96
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663180"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023291"
 ---
 # <a name="eventreceiver"></a>event_receiver
 
@@ -32,12 +32,12 @@ ms.locfileid: "50663180"
 
 ### <a name="parameters"></a>參數
 
-*type*<br/>
+*類型*<br/>
 下列其中一個值的列舉：
 
 - `native` unmanaged C/c + + 程式碼 （原生類別的預設值）。
 
-- COM 程式碼的`com` 。 此值需要您包含下列標頭檔︰
+- `com` 。 此值需要您包含下列標頭檔︰
 
     ```cpp
     #define _ATL_ATTRIBUTES
@@ -72,7 +72,7 @@ ms.locfileid: "50663180"
 |**適用於**|**類別**，**結構**|
 |**可重複**|否|
 |**必要屬性**|`coclass` 當*event_receiver*=**，則為 true**|
-|**無效屬性**|無|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

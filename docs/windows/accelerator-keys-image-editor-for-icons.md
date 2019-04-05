@@ -8,12 +8,12 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 0b29f435ab91b10e010e956d26fb8d2d116edc6e
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 45afdf4b3b557b560d7597b1bb4330c36a1fc84d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563117"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025081"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>快速鍵 （c + + 圖示影像編輯器）
 
@@ -40,7 +40,7 @@ ms.locfileid: "57563117"
 |Image.LineTool|**Ctrl** + **L**|以選取的形狀、大小和色彩繪製一條直線。|
 |Image.MagnificationTool|**Ctrl** + **M**|啟動**Magnify**工具，可讓您放大您的映像的特定區段。|
 |Image.Magnify|**Ctrl** + **Shift** + **M**|在目前的縮放比例與 1:1 縮放比例之間切換。|
-|Image.NewImageType|**插入**|會啟動[的新\<裝置 > 影像類型對話方塊](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)與您可以建立不同的映像類型的影像。|
+|Image.NewImageType|**Insert**|會啟動[的新\<裝置 > 影像類型對話方塊](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)與您可以建立不同的映像類型的影像。|
 |Image.NextColor|**Ctrl** + **]**<br /><br /> -或-<br /><br /> **Ctrl** + **向右箭頭**|將繪圖前景色彩變更成下一個調色盤色彩。|
 |Image.NextRightColor|**Ctrl** + **Shift** + **]**<br /><br /> -或-<br /><br /> **Shift** + **Ctrl** + **向右箭頭**|將繪圖背景色彩變更成下一個調色盤色彩。|
 |Image.OutlinedEllipseTool|**Shift** + **Alt** + **P**|繪製出帶外框的實心橢圓形。|
@@ -64,12 +64,12 @@ ms.locfileid: "57563117"
 
 ## <a name="requirements"></a>需求
 
-無
+None
 
 ## <a name="see-also"></a>另請參閱
 
 [圖示影像編輯器](../windows/image-editor-for-icons.md)<br/>
-[如何：建立圖示或其他影像](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[如何：複製影像](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[如何：使用繪圖工具](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
-[如何：使用色彩](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[HOW TO：建立圖示或其他影像](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[HOW TO：編輯映像](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[HOW TO：使用繪圖工具](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[HOW TO：使用色彩](../windows/working-with-color-image-editor-for-icons.md)<br/>

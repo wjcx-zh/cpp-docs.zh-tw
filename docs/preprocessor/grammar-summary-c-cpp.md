@@ -5,12 +5,12 @@ helpviewer_keywords:
 - grammar
 - preprocessor, grammar
 ms.assetid: 0acb6e9b-364c-4ef8-ace4-7be980521121
-ms.openlocfilehash: f61aaaf041ca566f52a2e3e95cb12d17e4cb2230
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3f1674d8d72639413f092ca3f67324d4688618a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461278"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038430"
 ---
 # <a name="grammar-summary-cc"></a>文法摘要 (C/C++)
 本節描述前置處理器的正式文法。 涵蓋內容前置處理器指示詞的語法和運算子所述[前置處理器](../preprocessor/preprocessor.md)然後在[Pragma 指示詞](../preprocessor/pragma-directives-and-the-pragma-keyword.md)。

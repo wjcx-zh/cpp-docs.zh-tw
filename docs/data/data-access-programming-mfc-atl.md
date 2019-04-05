@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: def97b2c-b5a6-445f-afeb-308050fd4852
-ms.openlocfilehash: 5417918ee3cf966183e1910fdbc12bd7b8cc046e
-ms.sourcegitcommit: 984fb4814a2dd9bcea5ec88c9528707f17a7cffa
+ms.openlocfilehash: b4f5fb6ed21fb23195af340c8de3ee7c654f7fee
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51949488"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037827"
 ---
 # <a name="data-access-programming-mfcatl"></a>Data Access Programming (MFC/ATL)
 
@@ -23,17 +23,17 @@ OLE DB 是以 COM 規格為基礎的低階高效 API，只有 Windows 提供支�
 
 ## <a name="porting-data-applications"></a>移植資料應用程式
 
-如果舊版應用程式使用 OLE DB 或更高階的 ADO 介面連接到 SQL Server，而您存取的不是連結的伺服器，您應該考慮於近期移轉到 ODBC。 如果您不需要跨平台可攜性或最新的 SQL Server 功能，您可能可以使用 Microsoft OLE DB Provider for ODBC (MSDASQL)。  MSDASQL 讓建置在 OLE DB 和 ADO (在內部使用 OLEDB) 上的應用程式透過 ODBC 驅動程式存取資料來源。 如同所有的轉譯層，MSDASQL 會影響資料庫效能。 您應該測試以判斷是否影響大量應用程式。 MSDASQL 隨附於 Windows 作業系統，而 Windows Server 2008 和 Windows Vista SP1 是第一批包含此技術 64 位元版本的 Windows 版本。
+如果舊版應用程式使用 OLE DB 或更高階的 ADO 介面連接到 SQL Server，而您存取的不是連結的伺服器，您應該考慮於近期移轉到 ODBC。 如果您不需要跨平台可攜性或最新的 SQL Server 功能，您可能可以使用 Microsoft OLE DB Provider for ODBC (MSDASQL)。  MSDASQL 讓建置在 OLE DB 和 ADO (在內部使用 OLEDB) 上的應用程式透過 ODBC 驅動程式存取資料來源。 和所有的轉譯層一樣，MSDASQL 會影響資料庫效能。 您應該測試以判斷此影響對您的應用程式是否過大。 MSDASQL 隨附於 Windows 作業系統，而 Windows Server 2008 和 Windows Vista SP1 是第一批包含此技術 64 位元版本的 Windows 版本。
 
 將 OLE DB 和 ODBC 驅動程式封裝在單一 DLL 的 SQL Native Client 元件 (SNAC)，已被 ODBC 應用程式取代。 SNAC 的 SQL Server 2012 版本 (SQLNCLI11.DLL) 隨附於 SQL Server 2016，因為其他的 SQL Server 元件都依存於它。 但是，透過 ODBC 連接到 SQL Server 或 Azure SQL Database 的新 C++ 應用程式，都應該使用[最新版的 ODBC 驅動程式](/sql/connect/odbc/download-odbc-driver-for-sql-server)。 如需詳細資訊，請參閱 [SQL Server Native Client Programming](/sql/relational-databases/native-client/sql-server-native-client-programming) (SQL Server Native Client 程式設計)
 
 如果您使用 C++/CLI，就可以繼續像平常一樣使用 ADO.NET。 如需詳細資訊，請參閱[使用 ADO.NET 存取資料 (C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md) 和[存取 Visual Studio 中的資料](/visualstudio/data-tools/accessing-data-in-visual-studio)。
 
-- 除了 ODBC 包裝函式類別，MFC 也提供資料存取物件 (DAO) 包裝函式類別連接到 Access 資料庫。  不過，DAO 已淘汰。 所有以 CDaoDatabase 或 CDaoRecordset 為基礎的程式碼都應該升級。
+- 除了 ODBC 包裝函式類別，MFC 也提供資料存取物件 (DAO) 包裝函式類別以連接到 Access 資料庫。  不過，DAO 已淘汰。 所有以 CDaoDatabase 或 CDaoRecordset 為基礎的程式碼都應該升級。
 
 如需 Microsoft Windows 資料存取技術記錄的相關資訊，請參閱 [Microsoft Data Access Components (Wikipedia)](https://en.wikipedia.org/wiki/Microsoft_Data_Access_Components) (Microsoft 資料存取元件 (維基百科))。
 
 ## <a name="see-also"></a>另請參閱
 
 [資料存取](data-access-in-cpp.md)<br/>
-[Microsoft Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) (Microsoft 開放式資料庫連接 (ODBC))<br/>
+[Microsoft 開放式資料庫連接 (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc)<br/>

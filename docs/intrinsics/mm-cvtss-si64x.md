@@ -7,16 +7,16 @@ helpviewer_keywords:
 - cvtss2si intrinsic
 - _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
-ms.openlocfilehash: 7948348e0bbc0ea5c0eb1536d79d9eaad08b1087
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: a3b7ece325d975045046e865e6b090f3f6729558
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330693"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036821"
 ---
 # <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 會產生擴充的 x64 版本的轉換純量單一精確度浮點數為 64 位元整數 (`cvtss2si`) 指令。
 
@@ -30,7 +30,7 @@ __int64 _mm_cvtss_si64x(
 
 #### <a name="parameters"></a>參數
 
-*值*<br/>
+*value*<br/>
 [in]`__m128`包含浮動點值的結構。
 
 ## <a name="return-value"></a>傳回值
@@ -85,7 +85,7 @@ int main()
 101
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

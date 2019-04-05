@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - auto_rename attribute
 ms.assetid: 1075f3ab-f6fc-4e04-8e22-ebe02695a567
-ms.openlocfilehash: 20b971e838488d3e974b393a5e280ca765dac893
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba07b8532ba64c99f835e59d7c71aac8e3f2b03d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446575"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035107"
 ---
 # <a name="autorename"></a>auto_rename
 
-**C + + 特定**
+**C++ 專有的**
 
 藉由對變數名稱附加兩個底線 (__) 來重新命名 C++ 保留字，以解決可能發生的名稱衝突。
 
@@ -29,7 +29,7 @@ auto_rename
 
 當匯入使用一個或多個 C++ 保留字 (關鍵字或巨集) 做為變數名稱的類型程式庫時，會使用這個屬性。
 
-**END c + + 特定的**
+**END C++ 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

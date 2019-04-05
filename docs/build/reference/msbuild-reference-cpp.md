@@ -3,12 +3,12 @@ title: 在 Visual Studio 中的 c + + 專案的 MSBuild 參考
 ms.date: 12/08/2018
 helpviewer_keywords:
 - MSBuild reference [C++]
-ms.openlocfilehash: 854dc0554c327f191b4b4b9694548cdb9983c5f8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b6ec6b5d276cb7104cf61c229476596d2a2a7684
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824860"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024695"
 ---
 # <a name="msbuild-reference-for-c-projects"></a>C + + 專案的 MSBuild 參考
 

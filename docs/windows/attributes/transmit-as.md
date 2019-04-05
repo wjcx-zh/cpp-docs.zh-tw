@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: 546b4c4b32837b46c48eafbe12e991bb6c1630ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573247"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032094"
 ---
 # <a name="transmitas"></a>transmit_as
 
@@ -25,7 +25,7 @@ ms.locfileid: "50573247"
 
 ### <a name="parameters"></a>參數
 
-*type*<br/>
+*類型*<br/>
 指定用戶端與伺服器之間傳輸的資料類型。
 
 ## <a name="remarks"></a>備註
@@ -72,8 +72,8 @@ struct _TREE_NODE_TYPE * right;
 |-|-|
 |**適用於**|**typedef**|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
@@ -81,4 +81,4 @@ struct _TREE_NODE_TYPE * right;
 
 [IDL 屬性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)<br/>
-[export](export.md)
+[匯出](export.md)

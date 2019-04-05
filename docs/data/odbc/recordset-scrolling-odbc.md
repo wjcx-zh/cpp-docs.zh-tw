@@ -11,12 +11,12 @@ helpviewer_keywords:
 - scrolling [C++], recordsets
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-ms.openlocfilehash: e41b526b86922bafd1d923fa5848a5ef8ed4825e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5df8151664bd7e726087cb5323c1e4622264ad23
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579584"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040052"
 ---
 # <a name="recordset-scrolling-odbc"></a>資料錄集：捲動 (ODBC)
 
@@ -32,7 +32,7 @@ ms.locfileid: "50579584"
 
 ##  <a name="_core_scrolling_from_one_record_to_another"></a> 從一個資料錄捲動到另一個
 
-類別`CRecordset`提供`Move`捲動資料錄集內的成員函式。 這些函式會移動目前的資料錄的資料列集。 如果您已實作大量資料列擷取`Move`作業重新置放的資料列集大小的資料錄集。 如果您未實作大量資料列擷取，呼叫`Move`函式重新定位資料錄集的一筆記錄的每一次。 如需有關大量資料列擷取的詳細資訊，請參閱[資料錄集： 擷取記錄中大量資料庫連接 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+類別`CRecordset`提供`Move`捲動資料錄集內的成員函式。 這些函式會移動目前的資料錄的資料列集。 如果您已實作大量資料列擷取`Move`作業重新置放的資料列集大小的資料錄集。 如果您未實作大量資料列擷取，呼叫`Move`函式重新定位資料錄集的一筆記錄的每一次。 如需有關大量資料列擷取的詳細資訊，請參閱[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 > [!NOTE]
 >  當您移動的資料錄集，可能不會略過已刪除的記錄。 如需詳細資訊，請參閱 < [IsDeleted](../../mfc/reference/crecordset-class.md#isdeleted)成員函式。
@@ -89,11 +89,11 @@ rsCustSet.MoveFirst( );
 
 `IsEOF` 如果資料錄集位於過去的最後一筆記錄，則傳回非零值。 `IsBOF` 如果資料錄集位於第一筆記錄 （在之前的所有記錄） 之前，會傳回非零值。 在任一情況下，沒有要處理的目前記錄。 如果您呼叫`MovePrev`時`IsBOF`已經 TRUE，或呼叫`MoveNext`當`IsEOF`已經是 TRUE，架構就會擲回`CDBException`。 您也可以使用`IsBOF`和`IsEOF`檢查空的資料錄集。
 
-如需有關資料錄集瀏覽的詳細資訊，請參閱[資料錄集： 書籤和絕對位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。
+如需有關資料錄集瀏覽的詳細資訊，請參閱[資料錄集：書籤和絕對位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。
 
 ##  <a name="_core_when_scrolling_is_supported"></a> 當支援捲動
 
-為原始設計，SQL 提供只會順向捲動，但 ODBC 擴充了捲動功能。 可捲動的支援層級取決於您的應用程式的運作方式與您的驅動程式的 ODBC API 一致性層級，ODBC 驅動程式和 ODBC 資料指標程式庫會載入至記憶體。 如需詳細資訊，請參閱 < [ODBC](../../data/odbc/odbc-basics.md)並[ODBC: ODBC 資料指標程式庫](../../data/odbc/odbc-the-odbc-cursor-library.md)。
+為原始設計，SQL 提供只會順向捲動，但 ODBC 擴充了捲動功能。 可捲動的支援層級取決於您的應用程式的運作方式與您的驅動程式的 ODBC API 一致性層級，ODBC 驅動程式和 ODBC 資料指標程式庫會載入至記憶體。 如需詳細資訊，請參閱 < [ODBC](../../data/odbc/odbc-basics.md)和[ODBC:ODBC 資料指標程式庫](../../data/odbc/odbc-the-odbc-cursor-library.md)。
 
 > [!TIP]
 >  您可以控制是否要使用資料指標程式庫。 請參閱*bUseCursorLib*並*dwOptions*參數[Openex](../../mfc/reference/cdatabase-class.md#open)。

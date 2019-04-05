@@ -9,16 +9,16 @@ helpviewer_keywords:
 - _mm_insert_si64 intrinsic
 - _mm_inserti_si64 intrinsic
 ms.assetid: 897a4b36-8b08-4b00-a18f-7850f5732d7d
-ms.openlocfilehash: 062e7e56de16d8e8a18101dec0a8e9766e02967f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8c8f2f9b33588513e25b2290772aac464f46808
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631014"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033014"
 ---
 # <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64、_mm_inserti_si64
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 會產生`insertq`指令，以便從其第二個運算元中插入第一個運算元的位元。
 
@@ -45,10 +45,10 @@ __m128i _mm_inserti_si64(
 *Source2*<br/>
 [in]要插入其低的位元的資料與 128 位元欄位。  針對`_mm_insert_si64`，也會包含在其高的位元欄位描述元。
 
-*長度*<br/>
+*Length*<br/>
 [in]整數常數，指定要插入之欄位的長度。
 
-*Tuple*<br/>
+*索引*<br/>
 [in]整數常數，指定將插入資料之欄位的最小顯著性位元的索引。
 
 ## <a name="return-value"></a>傳回值
@@ -118,11 +118,11 @@ result2 = 0xfffffffff3210fff
 result3 = 0xfffffffff3210fff
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 進階 Micro 裝置，inc.copyright 2007著作權所有，並保留一切權利。 進階 Micro 裝置，inc.的權限重製
 
 ## <a name="see-also"></a>另請參閱
 
-[_mm_extract_si64、_mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)<br/>
+[_mm_extract_si64，_mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)<br/>
 [編譯器內建](../intrinsics/compiler-intrinsics.md)

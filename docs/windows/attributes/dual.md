@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 30d334f58f0eb91c9ca44ba5a5b6b8edf3970510
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f02f6b69b31f10b41d5c920cfc2ad62dfa1cef2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509950"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023954"
 ---
 # <a name="dual"></a>dual
 
@@ -61,7 +61,7 @@ __interface IStatic : IDispatch
 |-|-|
 |**適用於**|**interface**|
 |**可重複**|否|
-|**必要屬性**|無|
+|**必要屬性**|None|
 |**無效屬性**|`dispinterface`|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
@@ -70,7 +70,7 @@ __interface IStatic : IDispatch
 
 [IDL 屬性](idl-attributes.md)<br/>
 [依使用方式分類的屬性](attributes-by-usage.md)<br/>
-[custom](custom-cpp.md)<br/>
+[自訂](custom-cpp.md)<br/>
 [dispinterface](dispinterface.md)<br/>
 [object](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

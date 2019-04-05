@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, multithreaded
 - threading [C++], providers
 ms.assetid: a91270dc-cdf9-4855-88e7-88a54be7cbe8
-ms.openlocfilehash: 14acaa6ad96f74b2a3f88ca366a43caa9199a1d8
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: a2afb7354dd0447375ee6205b7c5d9a4755aa4b8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265031"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025334"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>在提供者內支援無限制執行緒
 
@@ -37,10 +37,10 @@ HRESULT MyObject::MyMethod(void)
 }
 ```
 
-如需有關如何保護與關鍵區段`Lock`並`Unlock`，請參閱[多執行緒： 如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
+如需有關如何保護與關鍵區段`Lock`並`Unlock`，請參閱[多執行緒：如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
 
 確認任何方法您覆寫 (例如`Execute`) 是安全執行緒。
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 OLE DB 提供者範本](../../data/oledb/working-with-ole-db-provider-templates.md)
+[使用 OLE DB 提供者樣板](../../data/oledb/working-with-ole-db-provider-templates.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ifndef directive (#ifndef)
 - '#ifndef directive'
 ms.assetid: 2b0be69d-9e72-45d8-8e24-e4130fb2455b
-ms.openlocfilehash: 418b19e844d56fa2f33cf91a1b072e9add771eb2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7a6a1604df03f0607f33e42880270cbdcd62e8b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643790"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027226"
 ---
 # <a name="ifdef-and-ifndef-directives-cc"></a>#ifdef 和 #ifndef 指示詞 (C/C++)
 **#Ifdef**並 **#ifndef**指示詞會執行相同的工作`#if`指示詞搭配使用時**定義**(*識別碼* ).
@@ -40,11 +40,11 @@ ms.locfileid: "50643790"
 
 **#Ifndef**指示詞會檢查所檢查的條件相反 **#ifdef**。 如果尚未定義識別項 (或是已使用 `#undef` 移除其定義)，則條件為 true (非零)。 否則，條件為 false (0)。
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 *識別碼*可以從命令列使用傳遞`/D`選項。 您可以使用指定最多 30 個巨集`/D`。
 
-這個選項在檢查定義是否存在時很實用，因為可以從命令列傳遞定義。 例如: 
+這個選項在檢查定義是否存在時很實用，因為可以從命令列傳遞定義。 例如：
 
 ```cpp
 // ifdef_ifndef.CPP
@@ -54,7 +54,7 @@ ms.locfileid: "50643790"
 #endif
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

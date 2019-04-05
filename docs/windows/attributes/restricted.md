@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: 1aa18255f7d7a0740494050a149d436fb167fe8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86f40fa49daf88668e37bef07f0db33d01cf1942
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521022"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029498"
 ---
 # <a name="restricted"></a>restricted
 
@@ -27,7 +27,7 @@ ms.locfileid: "50521022"
 
 ### <a name="parameters"></a>參數
 
-*interfaces*<br/>
+*介面*<br/>
 Metodu nelze volat 任意 COM 物件的一或多個介面。 此參數才有效時套用至類別。
 
 ## <a name="remarks"></a>備註
@@ -70,7 +70,7 @@ class c : public a, public b
 |**適用於**|介面方法，**介面**，**類別**，**結構**|
 |**可重複**|否|
 |**必要屬性**|**coclass** (當套用至**類別**或是**結構**)|
-|**無效屬性**|無|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

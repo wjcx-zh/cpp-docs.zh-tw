@@ -11,16 +11,16 @@ helpviewer_keywords:
 - _bittestandreset intrinsic
 - _bittestandreset64 intrinsic
 ms.assetid: 8dad63bb-a051-4cd7-a793-3357537dfeaf
-ms.openlocfilehash: d8c4675e7efe9e1de8ce6f133d1c361481f1b544
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 53a9921b856a3bc489d1d8e1cd78a4cfa7493320
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557660"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040393"
 ---
 # <a name="bittestandreset-bittestandreset64"></a>_bittestandreset, _bittestandreset64
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 產生的指令會檢查位址 `b` 的位元 `a`、傳回其目前值，並將位元重設為 0。
 
@@ -39,7 +39,7 @@ unsigned char _bittestandreset64(
 
 #### <a name="parameters"></a>參數
 
-*a*<br/>
+*一個*<br/>
 [in、 out]要檢查的記憶體指標。
 
 *b*<br/>
@@ -99,7 +99,7 @@ int main()
 The number was negative.
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

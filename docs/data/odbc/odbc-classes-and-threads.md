@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ODBC, multithreaded applications
 - threading [MFC], ODBC support
 ms.assetid: 16543926-7331-41a6-ba50-72288f2a61b7
-ms.openlocfilehash: 1d470e79ba5a6a73a30743a21da0462a6b89e7da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d11cdab632e916f548011462f9738bc267fc730
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608165"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023526"
 ---
 # <a name="odbc-classes-and-threads"></a>ODBC 類別和執行緒
 
@@ -29,4 +29,4 @@ ODBC 類別的多執行緒支援有一些限制。 這些類別會包裝 ODBC AP
 ## <a name="see-also"></a>另請參閱
 
 [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
-[資料存取程式設計 (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+[Data Access Programming (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

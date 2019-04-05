@@ -1,5 +1,5 @@
 ---
-title: 異動：異動如何影響更新 (ODBC)
+title: 交易：異動如何影響更新 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - transactions, updating recordsets
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - CommitTrans method
 - Rollback method, ODBC transactions
 ms.assetid: 9e00bbf4-e9fb-4332-87fc-ec8ac61b3f68
-ms.openlocfilehash: 68ff6970243b36b56ab206b16bb2c3608cef71e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 996b8410366661cb91cf82cfff823f17d3aad8b4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437852"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033098"
 ---
-# <a name="transaction-how-transactions-affect-updates-odbc"></a>異動：異動如何影響更新 (ODBC)
+# <a name="transaction-how-transactions-affect-updates-odbc"></a>交易：異動如何影響更新 (ODBC)
 
-若要更新[資料來源](../../data/odbc/data-source-odbc.md)透過編輯緩衝區 （交易外使用的相同方法） 使用的交易期間所管理。 資料錄集的欄位資料成員以下合稱做為編輯緩衝區，其中包含目前的記錄，以將資料錄集備份期間暫時`AddNew`或`Edit`。 期間`Delete`作業，目前的記錄不會備份在交易內。 如需有關編輯緩衝區和更新的目前記錄的儲存方式的詳細資訊，請參閱[資料錄集： 資料錄集更新資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。
+若要更新[資料來源](../../data/odbc/data-source-odbc.md)透過編輯緩衝區 （交易外使用的相同方法） 使用的交易期間所管理。 資料錄集的欄位資料成員以下合稱做為編輯緩衝區，其中包含目前的記錄，以將資料錄集備份期間暫時`AddNew`或`Edit`。 期間`Delete`作業，目前的記錄不會備份在交易內。 如需有關編輯緩衝區和更新的目前記錄的儲存方式的詳細資訊，請參閱[資料錄集：資料錄集更新資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。
 
 > [!NOTE]
->  如果您已實作大量資料列擷取，您不能呼叫`AddNew`， `Edit`，或`Delete`。 您必須改為撰寫您自己的函式來執行資料來源的更新。 如需有關大量資料列擷取的詳細資訊，請參閱[資料錄集： 擷取記錄中大量資料庫連接 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  如果您已實作大量資料列擷取，您不能呼叫`AddNew`， `Edit`，或`Delete`。 您必須改為撰寫您自己的函式來執行資料來源的更新。 如需有關大量資料列擷取的詳細資訊，請參閱[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 在交易期間`AddNew`， `Edit`，和`Delete`可以認可或回復作業。 效果`CommitTrans`和`Rollback`可能會導致不會還原為編輯緩衝區目前的記錄。 若要確定目前的記錄會正確還原，務必了解如何`CommitTrans`並`Rollback`成員函式`CDatabase`搭配使用的更新函式`CRecordset`。
 
@@ -48,7 +48,7 @@ ms.locfileid: "50437852"
 |---------------|------------------------------|-------------------|---------------------------|
 |`AddNew` 和`Update`，然後 `Rollback`|目前的資料錄的內容是暫時儲存，以騰出空間給新的記錄。 編輯緩衝區輸入新的記錄。 之後`Update`呼叫時，目前資料錄會還原至編輯緩衝區。||資料來源所做的加法`Update`會反轉。|
 |`AddNew` (不含`Update`)，然後 `Rollback`|目前的資料錄的內容是暫時儲存，以騰出空間給新的記錄。 編輯緩衝區會包含新的記錄。|呼叫`AddNew`可還原編輯緩衝區到空的新的記錄。 或致電`Move`(0) 還原至編輯緩衝區的舊值。|因為`Update`不會呼叫，沒有任何對資料來源所做的變更。|
-|`Edit` 和`Update`，然後 `Rollback`|目前資料錄的未編輯的版本會暫時儲存。 編輯緩衝區的內容進行編輯。 之後`Update`呼叫時，未編輯的記錄版本仍會暫時儲存。|*動態集*： 捲動關閉目前的記錄，然後再回到編輯緩衝區來還原記錄的未編輯的版本。<br /><br /> *快照集*： 呼叫`Requery`重新整理資料來源的資料錄集。|資料來源所做的變更`Update`會反轉。|
+|`Edit` 和`Update`，然後 `Rollback`|目前資料錄的未編輯的版本會暫時儲存。 編輯緩衝區的內容進行編輯。 之後`Update`呼叫時，未編輯的記錄版本仍會暫時儲存。|*動態集*:登出目前的記錄，然後再回到還原至編輯緩衝區的未編輯的版本記錄的向下捲動。<br /><br /> *快照集*:呼叫`Requery`重新整理資料來源的資料錄集。|資料來源所做的變更`Update`會反轉。|
 |`Edit` (不含`Update`)，然後 `Rollback`|目前資料錄的未編輯的版本會暫時儲存。 編輯緩衝區的內容進行編輯。|呼叫`Edit`可還原至編輯緩衝區的記錄的未編輯的版本。|因為`Update`不會呼叫，沒有任何對資料來源所做的變更。|
 |`Delete` 然後 `Rollback`|刪除目前資料錄的內容。|呼叫`Requery`從資料來源還原目前的資料錄的內容。|刪除資料來源的資料會反轉。|
 
@@ -56,6 +56,6 @@ ms.locfileid: "50437852"
 
 [異動 (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
 [異動 (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
-[異動：在一個資料錄集內執行異動 (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)<br/>
+[交易：執行異動中的資料錄集 (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)<br/>
 [CDatabase 類別](../../mfc/reference/cdatabase-class.md)<br/>
 [CRecordset 類別](../../mfc/reference/crecordset-class.md)

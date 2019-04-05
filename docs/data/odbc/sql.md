@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: c9ea15520f98a86f8af7c278bfc77463689a4606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f93d97530068695359273b523e7d2ae46de01cb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576795"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037853"
 ---
 # <a name="sql"></a>SQL
 
@@ -50,9 +50,9 @@ SQL 陳述式開頭關鍵字動詞命令這類**CREATE**或是**選取**。 SQL 
 |**SELECT**|若要識別哪些資料表和資料來源中的資料行所要使用。|
 |**WHERE**|若要套用篩選，以縮小選取範圍。|
 |**ORDER BY**|若要套用的排序次序在資料錄集。|
-|**插入**|若要新增至資料錄集的記錄。|
-|**刪除**|若要刪除資料錄集的記錄。|
-|**更新**|若要修改記錄的欄位。|
+|**INSERT**|若要新增至資料錄集的記錄。|
+|**DELETE**|若要刪除資料錄集的記錄。|
+|**UPDATE**|若要修改記錄的欄位。|
 
 此外，資料庫類別會辨認 ODBC**呼叫**陳述式，您可以使用某些資料來源上呼叫預先定義的查詢 （或預存程序）。 ODBC 資料庫驅動程式會解譯這些陳述式，並換成適用於每個 DBMS 命令。
 
@@ -61,9 +61,9 @@ SQL 陳述式開頭關鍵字動詞命令這類**CREATE**或是**選取**。 SQL 
 
 如果類別無法辨識的使用者提供陳述式`CRecordset::Open`，它會解譯為資料表名稱。
 
-如需此架構如何建構 SQL 陳述式的說明，請參閱 <<c0> [ 資料錄集： 如何資料錄集選取資料錄 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)並[SQL： 自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。
+如需此架構如何建構 SQL 陳述式的說明，請參閱[資料錄集：資料錄集選取資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)和[SQL:自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。
 
-SQL database 會使用類似於 C 和 c + + 中使用的資料類型。 如需這些相似之處的討論，請參閱 < [SQL: SQL 和 c + + 資料類型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)。
+SQL database 會使用類似於 C 和 c + + 中使用的資料類型。 如需這些相似之處的討論，請參閱[SQL:SQL 和 c + + 資料類型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)。
 
 您可以找到 SQL，包括一份支援的 SQL 陳述式、 資料類型、 SQL 核心文法，以及建議的發行集，SQL，關於讀取清單中的詳細資訊*ODBC SDK* *程式設計人員參考* MSDN Library CD 上。
 
@@ -77,13 +77,13 @@ SQL database 會使用類似於 C 和 c + + 中使用的資料類型。 如需�
 
 下列主題提供有關資料庫類別如何使用 SQL 的詳細資訊：
 
-- [SQL： 自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
+- [SQL:自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
-- [SQL：SQL 和 C++ 資料類型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
+- [SQL:SQL 和 c + + 資料類型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
 
-- [SQL：製作直接的 SQL 呼叫 (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+- [SQL:製作直接的 SQL 呼叫 (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
 
 ## <a name="see-also"></a>另請參閱
 
 [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
-[ODBC 基本概念](../../data/odbc/odbc-basics.md)
+[ODBC 的基本概念](../../data/odbc/odbc-basics.md)

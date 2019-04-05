@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: 1c9c8cd9a6bf0d6ea34db5d62d7767874b4dd4b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6448b00fef50a7654816a2c39af2943db12d314
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560607"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024578"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -102,7 +102,7 @@ int main() {
 |**適用於**|**類別**， **struct**，資料成員|
 |**可重複**|否|
 |**必要屬性**|**coclass** (當套用至**類別**或是**結構**)|
-|**無效屬性**|無|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

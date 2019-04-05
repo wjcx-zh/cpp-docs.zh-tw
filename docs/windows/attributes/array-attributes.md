@@ -4,12 +4,12 @@ ms.date: 10/02/2018
 helpviewer_keywords:
 - arrays [C++], attributes
 ms.assetid: 36f80b76-7f20-41ae-a6bf-460e5379f26b
-ms.openlocfilehash: 9b980ce1f971fb8a00b60ee0b342e5e8bb6e9367
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a6bcaf4c0ae6b199d6c0bb12e7efb5b976295e0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468402"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026392"
 ---
 # <a name="array-attributes"></a>陣列屬性
 
@@ -19,7 +19,7 @@ ms.locfileid: "50468402"
 |---------------|-----------------|
 |[library_block](library-block.md)|會建構的.idl 檔案的程式庫區塊內。|
 |[satype](satype.md)|指定的資料型別`SAFEARRAY`結構。|
-|[string](string-cpp.md)|表示一維**char**， **wchar_t**， `byte` （或同等權限） 做為字串，則必須處理陣列或這類陣列的指標。|
+|[字串](string-cpp.md)|表示一維**char**， **wchar_t**， `byte` （或同等權限） 做為字串，則必須處理陣列或這類陣列的指標。|
 
 ## <a name="see-also"></a>另請參閱
 

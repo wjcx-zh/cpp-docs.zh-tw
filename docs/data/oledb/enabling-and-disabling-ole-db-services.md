@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB services [OLE DB], enabling and disabling
 - service providers [OLE DB]
 ms.assetid: 445f97eb-32a8-41c2-ad26-1169f78a074f
-ms.openlocfilehash: c5eaff8b3b37096eeca8777b6ba8bb91e01d7cd2
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: df17a55950b03d4d63dea2199e3bc19bedb8a7e3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265200"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028950"
 ---
 # <a name="enabling-and-disabling-ole-db-services"></a>啟用和停用 OLE DB 服務
 
@@ -20,4 +20,4 @@ OLE DB 服務元件管理員比較屬性來判斷個別的服務元件是否可�
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 資源共用和服務](../../data/oledb/ole-db-resource-pooling-and-services.md)
+[OLE DB 資源集中化和服務](../../data/oledb/ole-db-resource-pooling-and-services.md)

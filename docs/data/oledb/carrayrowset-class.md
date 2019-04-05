@@ -43,12 +43,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: 0a867f80f3be685b3c45c8645d6441732acf5851
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b257c4e95a99bfbc8042c5935638a70deac0ea7a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330979"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040234"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset 類別
 
@@ -85,7 +85,7 @@ class CArrayRowset :
 
 |||
 |-|-|
-|[Operator&#91;&#93;](#operator)|存取資料列集的項目。|
+|[運算子&#91;&#93;](#operator)|存取資料列集的項目。|
 
 ### <a name="data-members"></a>資料成員
 
@@ -93,7 +93,7 @@ class CArrayRowset :
 |-|-|
 |[CArrayRowset::m_nRowsRead](#nrowsread)|已讀取的資料列數目。|
 
-## <a name="carrayrowset"></a> Carrayrowset:: Carrayrowset
+## <a name="carrayrowset"></a> CArrayRowset::CArrayRowset
 
 建立新的 `CArrayRowset` 物件。
 
@@ -108,7 +108,7 @@ CArrayRowset(int nMax = 100000);
 *nMax*<br/>
 [in] 資料列集的最大資料列數。
 
-## <a name="snapshot"></a> Carrayrowset:: Snapshot
+## <a name="snapshot"></a> CArrayRowset::Snapshot
 
 將整個資料列集讀取至記憶體，建立其影像或快照。
 
@@ -118,7 +118,7 @@ CArrayRowset(int nMax = 100000);
 HRESULT Snapshot() throw();
 ```
 
-## <a name="operator"></a> Carrayrowset:: Operator
+## <a name="operator"></a> CArrayRowset::operator
 
 提供在資料列集中存取資料列，類似陣列的語法。
 
@@ -144,7 +144,7 @@ TAccessor & operator[](int nrow);
 
 如果*nRow*超出資料列集中的資料列數目，會擲回例外狀況。
 
-## <a name="nrowsread"></a> Carrayrowset:: M_nrowsread
+## <a name="nrowsread"></a> CArrayRowset::m_nRowsRead
 
 包含資料列集已讀取的資料列的數目。
 
@@ -157,5 +157,5 @@ ULONG m_nRowsRead;
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CRowset 類別](../../data/oledb/crowset-class.md)

@@ -4,12 +4,12 @@ ms.date: 10/15/2018
 helpviewer_keywords:
 - OLE DB providers, creating
 ms.assetid: 2506ba8f-010d-4231-aac1-387432f7b6b9
-ms.openlocfilehash: 05ab045e104e3035f8ccd2fa1924b6959164b8d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6258b5247e4d9d027e0f03bc133dff1a059665bd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538177"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032345"
 ---
 # <a name="creating-the-provider"></a>建立提供者
 
@@ -25,11 +25,11 @@ ms.locfileid: "50538177"
 
 1. 如有需要請編輯其他名稱方塊。 除了物件和檔案名稱，您可以編輯下列項目：
 
-   - **Coclass**: COM 用來建立提供者的名稱。
+   - **Coclass**:COM 用來建立提供者名稱。
 
-   - **ProgID**： 是可用來代替 GUID 的文字字串的程式設計識別項。
+   - **ProgID**:以程式設計方式識別項，也就是文字字串，可用來取代 GUID。
 
-   - **版本**： 使用 ProgID 和 Coclass 用以產生 版本相依程式設計識別碼。
+   - **版本**:使用 ProgID 和 Coclass 用以產生 版本相依程式設計識別碼。
 
 1. 按一下 [ **完成**]。
 

@@ -1,5 +1,5 @@
 ---
-title: MFC：使用不具文件和檢視的資料庫類別
+title: MFC:使用不具文件和檢視的資料庫類別
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC applications [C++], without views
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - database applications [C++], without documents
 - user interface [C++], drawing information
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
-ms.openlocfilehash: 558917f1a1485f1a886356b3c272842579f6b03e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab9946609fa20c4644873a684a754cbc8a41742f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602211"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024630"
 ---
-# <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC：使用不具文件和檢視的資料庫類別
+# <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC:使用不具文件和檢視的資料庫類別
 
 有時候您可能不想使用架構的文件/檢視架構，在您的資料庫應用程式。 本主題說明：
 
@@ -54,12 +54,12 @@ MFC 應用程式精靈] 有幾個選項**選取 [資料庫支援**下, 表列出
 
 |選項|檢視|文件|
 |------------|----------|--------------|
-|**無**|衍生自 `CView`。|不會提供資料庫支援。 這是預設選項。<br /><br /> 如果您選取**文件/檢視架構支援**選項[應用程式類型、 MFC 應用程式精靈](../mfc/reference/application-type-mfc-application-wizard.md)頁面上，取得完整的文件的支援，包括序列化及**新增**，**開放**，**儲存**，和**另存新檔**上的命令**檔案**功能表。 請參閱[不具文件的應用程式](#_core_applications_with_no_document)。|
+|**None**|衍生自 `CView`。|不會提供資料庫支援。 這是預設選項。<br /><br /> 如果您選取**文件/檢視架構支援**選項[應用程式類型、 MFC 應用程式精靈](../mfc/reference/application-type-mfc-application-wizard.md)頁面上，取得完整的文件的支援，包括序列化及**新增**，**開放**，**儲存**，和**另存新檔**上的命令**檔案**功能表。 請參閱[不具文件的應用程式](#_core_applications_with_no_document)。|
 |**僅限標頭檔**|衍生自 `CView`。|提供您的應用程式的資料庫支援基本的層級。<br /><br /> 包含 Afxdb.h。 新增連結程式庫，但不會建立任何資料庫特有類別。 您可以稍後再建立資料錄集，並使用它們來檢查和更新記錄。|
 |**不附檔案支援的資料庫檢視**|衍生自 `CRecordView`|提供文件支援，但沒有序列化支援。 文件可以儲存的資料錄集，並協調多個檢視;不支援序列化或**新增**，**開放**，**儲存**，以及**另存新檔**命令。 請參閱[應用程式的最小的文件](#_core_applications_with_minimal_documents)。 如果您包含資料庫檢視，您必須指定資料的來源。<br /><br /> 包含資料庫標頭檔、 連結程式庫、 資料錄檢視和資料錄集。 (僅適用於應用程式**文件/檢視架構支援**上所選取的選項[應用程式類型、 MFC 應用程式精靈](../mfc/reference/application-type-mfc-application-wizard.md)頁面。)|
 |**附檔案支援的資料庫檢視**|衍生自 `CRecordView`|提供完整的文件的支援，包括序列化及相關的文件**檔案**功能表命令。 資料庫應用程式通常會對各個記錄而不是每個檔案為基礎，因此不需要序列化。 不過，您可能必須序列化的特殊用途。 請參閱[應用程式的最小的文件](#_core_applications_with_minimal_documents)。 如果您包含資料庫檢視，您必須指定資料的來源。<br /><br /> 包含資料庫標頭檔、 連結程式庫、 資料錄檢視和資料錄集。 (僅適用於應用程式**文件/檢視架構支援**上所選取的選項[應用程式類型、 MFC 應用程式精靈](../mfc/reference/application-type-mfc-application-wizard.md)頁面。)|
 
-如需序列化和序列化的其他用法的替代方案的討論，請參閱[序列化： 序列化 vs。資料庫輸入/輸出](../mfc/serialization-serialization-vs-database-input-output.md)。
+如需序列化和序列化的其他用法的替代方案的討論，請參閱[序列化：序列化與資料庫輸入/輸出](../mfc/serialization-serialization-vs-database-input-output.md)。
 
 ##  <a name="_core_applications_with_minimal_documents"></a> 最小的文件的應用程式
 
@@ -81,7 +81,7 @@ MFC 應用程式精靈可支援以 form 為基礎的資料存取應用程式的�
 
 ###  <a name="_core_a_document_with_file_support"></a> 附檔案支援的文件
 
-選取應用程式精靈 的資料庫選項**資料庫檢視附檔案支援**當您有用於其他方面的文件相關**檔案**功能表命令和文件序列化。 資料存取程式的部分，您可以使用文件中的相同方式中所述[文件不提供檔案支援](#_core_a_document_without_file_support)。 您可用的文件序列化功能，比方說，讀取及寫入使用者的喜好設定或其他有用的資訊會儲存已序列化的使用者設定檔文件。 如需詳細資訊，請參閱[序列化： 序列化 vs。資料庫輸入/輸出](../mfc/serialization-serialization-vs-database-input-output.md)。
+選取應用程式精靈 的資料庫選項**資料庫檢視附檔案支援**當您有用於其他方面的文件相關**檔案**功能表命令和文件序列化。 資料存取程式的部分，您可以使用文件中的相同方式中所述[文件不提供檔案支援](#_core_a_document_without_file_support)。 您可用的文件序列化功能，比方說，讀取及寫入使用者的喜好設定或其他有用的資訊會儲存已序列化的使用者設定檔文件。 如需詳細資訊，請參閱[序列化：序列化與資料庫輸入/輸出](../mfc/serialization-serialization-vs-database-input-output.md)。
 
 應用程式精靈 支援此選項，但您必須撰寫的程式碼，將序列化文件。 將序列化的資訊儲存在文件資料成員。
 

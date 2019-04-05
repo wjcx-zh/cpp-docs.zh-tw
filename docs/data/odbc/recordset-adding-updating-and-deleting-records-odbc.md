@@ -1,5 +1,5 @@
 ---
-title: 資料錄集：加入、更新和刪除資料錄 (ODBC)
+title: 資料錄集：新增、 更新和刪除資料錄 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records [C++], updating
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
-ms.openlocfilehash: a13bffdc79f01c49c290b8b5d4388f06ce777105
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28c885119816c1df662cc0b941e02cb3cf747f3d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512368"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024604"
 ---
-# <a name="recordset-adding-updating-and-deleting-records-odbc"></a>資料錄集：加入、更新和刪除資料錄 (ODBC)
+# <a name="recordset-adding-updating-and-deleting-records-odbc"></a>資料錄集：新增、 更新和刪除資料錄 (ODBC)
 
 本主題適用於 MFC ODBC 類別。
 
 > [!NOTE]
->  您現在可以更有效率地加入大量資料錄。 如需詳細資訊，請參閱 <<c0> [ 資料錄集： 新增錄大量 (ODBC)](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)。
+>  您現在可以更有效率地加入大量資料錄。 如需詳細資訊，請參閱[資料錄集：加入資料錄 (ODBC) 大量](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)。
 
 > [!NOTE]
->  本主題適用於物件衍生自`CRecordset`的大量資料列中擷取尚未實作。 如果您使用大量資料列擷取，請參閱[資料錄集： 擷取記錄中大量資料庫連接 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主題適用於物件衍生自`CRecordset`的大量資料列中擷取尚未實作。 如果您使用大量資料列擷取，請參閱[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 可更新的快照集和動態集可讓您加入、 編輯 (update)，和刪除記錄。 本主題說明：
 
@@ -45,7 +45,7 @@ ms.locfileid: "50512368"
 
 - [如何刪除資料錄](#_core_deleting_a_record_from_a_recordset)。
 
-如需有關如何執行更新 out 以及如何更新您的顯示給其他使用者，請參閱[資料錄集： 資料錄集更新資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。 一般來說，當您新增、 編輯或刪除記錄時，資料錄集的資料來源會立即變更。 您可以群組批次的相關更新成交易。 如果異動正在進行中，更新之前，不會最終認可交易。 這可讓您能取回或回復的變更。 交易的相關資訊，請參閱[異動 (ODBC)](../../data/odbc/transaction-odbc.md)。
+如需有關如何執行更新 out 以及如何更新您的顯示給其他使用者，請參閱[資料錄集：資料錄集更新資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。 一般來說，當您新增、 編輯或刪除記錄時，資料錄集的資料來源會立即變更。 您可以群組批次的相關更新成交易。 如果異動正在進行中，更新之前，不會最終認可交易。 這可讓您能取回或回復的變更。 交易的相關資訊，請參閱[異動 (ODBC)](../../data/odbc/transaction-odbc.md)。
 
 下表摘要說明適用於具有不同的更新特性的資料錄集的選項。
 
@@ -102,9 +102,9 @@ if( !rsStudentSet.CanUpdate( ) )
 
 1. 呼叫資料錄集物件的`Update`成員函式。
 
-   `Update` 完成新增新的記錄寫入的資料來源。 進行資訊後，如果您無法呼叫`Update`，請參閱 <<c2> [ 資料錄集： 資料錄集更新資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。
+   `Update` 完成新增新的記錄寫入的資料來源。 進行資訊後，如果您無法呼叫`Update`，請參閱[資料錄集：資料錄集更新資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。
 
-如需加入資料錄的方式運作，以及新增的記錄時顯示在資料錄集的相關資訊，請參閱 <<c0> [ 資料錄集： 如何 AddNew、 Edit 和刪除工作 (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)。
+如需加入資料錄的方式運作，以及新增的記錄時顯示在資料錄集的相關資訊，請參閱[資料錄集：AddNew，如何編輯和刪除工作 (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)。
 
 下列範例示範如何加入新的記錄：
 
@@ -147,7 +147,7 @@ if( !rsStudent.Update( ) )
 
 1. 呼叫資料錄集物件的`Update`成員函式。
 
-   `Update` 完成編輯已變更的記錄寫入的資料來源。 進行資訊後，如果您無法呼叫`Update`，請參閱 <<c2> [ 資料錄集： 資料錄集更新資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。
+   `Update` 完成編輯已變更的記錄寫入的資料來源。 進行資訊後，如果您無法呼叫`Update`，請參閱[資料錄集：資料錄集更新資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。
 
 編輯一筆記錄之後，請編輯的記錄會保留目前的記錄。
 
@@ -197,7 +197,7 @@ rsStudent.Delete( );
 rsStudent.MoveNext( );
 ```
 
-如需詳細資訊，所帶來的影響`AddNew`， `Edit`，並`Delete`成員函式，請參閱[資料錄集： 資料錄集更新資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。
+如需詳細資訊，所帶來的影響`AddNew`， `Edit`，並`Delete`成員函式，請參閱[資料錄集：資料錄集更新資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。
 
 ## <a name="see-also"></a>另請參閱
 

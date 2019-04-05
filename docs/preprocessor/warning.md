@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: 53f79061ded358c9cb895fd7e8e245c46ed99fd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1341472af22582635207a2bdff93b4367fd59330
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631714"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037746"
 ---
 # <a name="warning-pragma"></a>警告 Pragma
 啟用選擇性修改編譯器警告訊息的行為。
@@ -35,12 +35,12 @@ ms.locfileid: "50631714"
 
 |警告指定名稱|意義|
 |------------------------|-------------|
-|*1、 2、 3、 4*|將指定的層級套用至指定的警告。 這樣也會開啟預設為關閉的指定警告。|
+|*1, 2, 3, 4*|將指定的層級套用至指定的警告。 這樣也會開啟預設為關閉的指定警告。|
 |*default*|將警告行為重設為預設值。 這樣也會開啟預設為關閉的指定警告。 警告會以其記載的預設層級產生。<br /><br /> 如需詳細資訊，請參閱 [Compiler Warnings That Are Off by Default](../preprocessor/compiler-warnings-that-are-off-by-default.md)。|
-|*disable*|不發出指定的警告訊息。|
-|*error*|將指定的警告回報為錯誤。|
+|*停用*|不發出指定的警告訊息。|
+|*個錯誤*|將指定的警告回報為錯誤。|
 |*once*|只顯示指定的訊息一次。|
-|*隱藏*|將 pragma 的目前狀態推送到堆疊上，停用為下一行指定的警告，然後推出警告堆疊以重設 pragma 狀態。|
+|*suppress*|將 pragma 的目前狀態推送到堆疊上，停用為下一行指定的警告，然後推出警告堆疊以重設 pragma 狀態。|
 
 下列程式碼陳述式將說明 `warning-number-list` 參數可以包含多個警告編號，而且可以在相同的 pragma 指示詞中指定多個 `warning-specifier` 參數。
 

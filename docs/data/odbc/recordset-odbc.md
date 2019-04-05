@@ -13,12 +13,12 @@ helpviewer_keywords:
 - snapshots, ODBC recordsets
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
-ms.openlocfilehash: d16087722752b7bbdabd37410908c7ea2ae18ceb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b201e152d83d3812253aa4803eebe715d726219d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435252"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034491"
 ---
 # <a name="recordset-odbc"></a>資料錄集 (ODBC)
 
@@ -69,9 +69,9 @@ A [CRecordset](../../mfc/reference/crecordset-class.md)物件都代表一組從�
 
 ##  <a name="_core_your_recordsets"></a> 資料錄集
 
-針對每個不同的資料表、 檢視或您想要存取的預存程序，您通常定義類別，衍生自`CRecordset`。 （例外狀況是資料庫聯結，其中一個資料錄集代表資料行從兩個或多個資料表）。當您衍生的資料錄集類別時，會啟用資料錄欄位交換 (RFX) 機制或大量資料錄欄位交換 (Bulk RFX) 機制，類似於對話方塊資料交換 (DDX) 機制。 RFX 和 Bulk RFX 簡化從資料來源的資料傳輸到您的資料錄集;RFX 此外從資料錄集，資料傳輸的資料來源。 如需詳細資訊，請參閱 <<c0> [ 資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)並[資料錄集： 擷取記錄中大量資料庫連接 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+針對每個不同的資料表、 檢視或您想要存取的預存程序，您通常定義類別，衍生自`CRecordset`。 （例外狀況是資料庫聯結，其中一個資料錄集代表資料行從兩個或多個資料表）。當您衍生的資料錄集類別時，會啟用資料錄欄位交換 (RFX) 機制或大量資料錄欄位交換 (Bulk RFX) 機制，類似於對話方塊資料交換 (DDX) 機制。 RFX 和 Bulk RFX 簡化從資料來源的資料傳輸到您的資料錄集;RFX 此外從資料錄集，資料傳輸的資料來源。 如需詳細資訊，請參閱 <<c0> [ 資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)和[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
-資料錄集物件可讓您存取所有選取的記錄。 您使用多個選取的記錄之間捲動`CRecordset`成員函式，例如`MoveNext`和`MovePrev`。 在此同時，資料錄集物件，表示只有其中一個選取的記錄，目前的記錄。 您可以藉由宣告類別成員變數對應到資料行的資料表或從資料庫查詢產生之記錄的資料錄集來檢查目前資料錄的欄位。 資料錄集的資料成員的相關資訊，請參閱[資料錄集： 架構 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)。
+資料錄集物件可讓您存取所有選取的記錄。 您使用多個選取的記錄之間捲動`CRecordset`成員函式，例如`MoveNext`和`MovePrev`。 在此同時，資料錄集物件，表示只有其中一個選取的記錄，目前的記錄。 您可以藉由宣告類別成員變數對應到資料行的資料表或從資料庫查詢產生之記錄的資料錄集來檢查目前資料錄的欄位。 資料錄集的資料成員的相關資訊，請參閱[資料錄集：架構 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)。
 
 下列主題說明使用資料錄集物件的詳細資料。 主題所述功能分類並允許循序讀取自然瀏覽順序而定。
 
@@ -79,7 +79,7 @@ A [CRecordset](../../mfc/reference/crecordset-class.md)物件都代表一組從�
 
 - [資料錄集：架構 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
 
-- [資料錄集：宣告資料表的類別 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
+- [資料錄集：宣告的類別 (ODBC) 的資料表](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
 
 - [資料錄集：建立和關閉資料錄集 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
 
@@ -95,7 +95,7 @@ A [CRecordset](../../mfc/reference/crecordset-class.md)物件都代表一組從�
 
 ### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>修改資料錄集機制的相關主題
 
-- [資料錄集：新增、更新和刪除資料錄 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+- [資料錄集：新增、 更新和刪除資料錄 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
 
 - [資料錄集：鎖定資料錄 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
 
@@ -105,21 +105,21 @@ A [CRecordset](../../mfc/reference/crecordset-class.md)物件都代表一組從�
 
 - [資料錄集：執行聯結 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
 
-- [資料錄集：宣告預先定義查詢的類別 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
+- [資料錄集：宣告的類別，預先定義的查詢 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
 
-- [資料錄集：動態地繫結資料行 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
+- [資料錄集：動態繫結資料行 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
 
-- [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
+- [資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
 - [資料錄集：使用大型的資料項目 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
 
-- [資料錄集：取得 SUM 和其他彙總結果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
+- [資料錄集：取得 Sum 和其他彙總的結果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
 
 ### <a name="topics-about-how-recordsets-work"></a>資料錄集的運作方式的相關主題
 
-- [資料錄集：資料錄集選取資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+- [資料錄集：資料錄集選取資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 
-- [資料錄集：資料錄集更新資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
+- [資料錄集：資料錄集更新資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
 
 ## <a name="see-also"></a>另請參閱
 

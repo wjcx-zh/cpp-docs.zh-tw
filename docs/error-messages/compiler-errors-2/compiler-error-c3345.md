@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3345
 ms.assetid: 1dda4c79-73bb-441b-b939-746154c3afba
-ms.openlocfilehash: 196928d7a171aa7ffe2d6b8f38b529d3d3588bc4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb1d15a12bfebbf44f7335a848d68c367c285586
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624775"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027534"
 ---
 # <a name="compiler-error-c3345"></a>編譯器錯誤 C3345
 
@@ -56,4 +56,4 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 
 [__iscsym](../../c-runtime-library/reference/iscsym-functions.md)<br/>
 [字元分類](../../c-runtime-library/character-classification.md)<br/>
-[module](../../windows/module-cpp.md)
+[name](../../windows/module-cpp.md)

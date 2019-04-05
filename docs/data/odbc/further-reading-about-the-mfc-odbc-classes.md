@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
-ms.openlocfilehash: 42f8a066728b1800ce245435584dd5e61f786440
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96286fc7a60a6ab43190dae6262948ac99ca30d6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440335"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035185"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>深入了解 MFC ODBC 類別
 
@@ -17,17 +17,17 @@ ms.locfileid: "50440335"
 
 - [MFC 應用程式精靈、資料庫支援](../../mfc/reference/database-support-mfc-application-wizard.md)
 
-- [新增 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)
+- [加入 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)
 
 - [資料來源 (ODBC)](../../data/odbc/data-source-odbc.md)
 
 - [動態集](../../data/odbc/dynaset.md)
 
-- [例外狀況：資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)
+- [例外狀況: 資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)
 
-- [MFC：使用具有文件和檢視的資料庫類別](../../data/mfc-using-database-classes-with-documents-and-views.md)
+- [MFC:使用具有文件和檢視資料庫類別](../../data/mfc-using-database-classes-with-documents-and-views.md)
 
-- [MFC：使用不具文件和檢視的資料庫類別](../../data/mfc-using-database-classes-without-documents-and-views.md)
+- [MFC:使用不具文件和檢視的資料庫類別](../../data/mfc-using-database-classes-without-documents-and-views.md)
 
 - [ODBC](../../data/odbc/odbc-basics.md)
 
@@ -39,7 +39,7 @@ ms.locfileid: "50440335"
 
 - [資料錄檢視](../../data/record-views-mfc-data-access.md)
 
-- [序列化︰序列化和資料庫輸入/輸出](../../mfc/serialization-serialization-vs-database-input-output.md)
+- [序列化：序列化與資料庫輸入/輸出](../../mfc/serialization-serialization-vs-database-input-output.md)
 
 - [快照集](../../data/odbc/snapshot.md)
 
@@ -54,4 +54,4 @@ ms.locfileid: "50440335"
 ## <a name="see-also"></a>另請參閱
 
 [ODBC 和 MFC](../../data/odbc/odbc-and-mfc.md)<br/>
-[資料存取程式設計 (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+[Data Access Programming (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

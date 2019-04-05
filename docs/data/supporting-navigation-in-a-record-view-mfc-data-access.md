@@ -6,12 +6,12 @@ helpviewer_keywords:
 - record views, navigation
 - navigation [C++], in record view
 ms.assetid: 227f2a6d-87c9-4656-807a-8e246965bcce
-ms.openlocfilehash: 86e98cd8b29b0056966f6f201589ded3347c9779
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88c76d31ae542d35476473888ad6282e3693405f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450653"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029507"
 ---
 # <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>支援記錄檢視的巡覽 (MFC 資料存取)
 
@@ -23,5 +23,5 @@ ms.locfileid: "50450653"
 
 ## <a name="see-also"></a>另請參閱
 
-[資料錄檢視 (MFC 資料存取)](../data/record-views-mfc-data-access.md)<br/>
+[記錄檢視 (MFC 資料存取)](../data/record-views-mfc-data-access.md)<br/>
 [ODBC 驅動程式清單](../data/odbc/odbc-driver-list.md)

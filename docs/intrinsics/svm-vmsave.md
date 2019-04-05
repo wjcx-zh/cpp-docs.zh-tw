@@ -7,16 +7,16 @@ helpviewer_keywords:
 - VMSAVE instruction
 - __svm_vmsave intrinsic
 ms.assetid: 617a60bd-8514-4ba1-8066-bcf4dd481030
-ms.openlocfilehash: 2ffc68b13d09d15d90670fa135a2cac9d9a1d52f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d683a13f636db9683b4a7c8d075ad6c3c88c2aed
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556607"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023408"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 儲存在指定的虛擬機器控制區塊 (VMCB) 的處理器狀態的子集。
 
@@ -36,7 +36,7 @@ void __svm_vmsave(
 
 ## <a name="remarks"></a>備註
 
-`__svm_vmsave` 函式相當於 `VMSAVE` 機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2： 系統程式設計中，「 文件編號 24593、 修訂 3.11 或更新版本，在[AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/)站台。
+`__svm_vmsave` 函式相當於 `VMSAVE` 機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2:系統程式設計，> 文件數目 24593，修訂 3.11 或更新版本，在[AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/)站台。
 
 ## <a name="requirements"></a>需求
 
@@ -46,7 +46,7 @@ void __svm_vmsave(
 
 **標頭檔** \<intrin.h >
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

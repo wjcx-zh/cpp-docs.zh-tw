@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data members [C++], attributes
 - data members [C++]
 ms.assetid: 95b2397d-1daf-4ae4-8cd0-06956d005b13
-ms.openlocfilehash: e188f4d9ad2c553ff142e45ec84bc0a04630b816
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad21ed16eee8cd14e8f798450ff385d5f429a280
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512927"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041146"
 ---
 # <a name="data-member-attributes"></a>資料成員屬性
 
@@ -31,7 +31,7 @@ ms.locfileid: "50512927"
 |[range](range-cpp.md)|指定引數或在執行階段設定其值的欄位的允許值的範圍。|
 |[rdx](rdx.md)|建立登錄機碼或修改現有的登錄機碼。|
 |[readonly](readonly-cpp.md)|禁止指派給資料成員。|
-|[requestedit](requestedit.md)|表示屬性支援`OnRequestEdit`通知。|
+|[requestedit](requestedit.md)|表示屬性支援 `OnRequestEdit` 通知。|
 
 ## <a name="see-also"></a>另請參閱
 

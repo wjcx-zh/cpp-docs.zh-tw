@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - __shiftright128 intrinsic
 ms.assetid: 5419a6c4-0de1-43fb-b314-4faa5b2d051f
-ms.openlocfilehash: 8c35625efa9ddc4cf5de3900c6e3e37047b2aa10
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b721abc9be22709fdc221951e2012300d6b96762
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332149"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030098"
 ---
 # <a name="shiftright128"></a>__shiftright128
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 移位 128 位元數量，表示兩個距離右邊達 `LowPart` 指定之位元數的 64 位元數量 `HighPart` 和 `Shift`，並傳回結果的較低 64 個位元。
 
@@ -60,7 +60,7 @@ unsigned __int64 __shiftright128(
 
 如需範例，請參閱[__shiftleft128](../intrinsics/shiftleft128.md)。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

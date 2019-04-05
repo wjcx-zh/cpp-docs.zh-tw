@@ -7,16 +7,16 @@ helpviewer_keywords:
 - ReadWriteBarrier intrinsic
 - _ReadWriteBarrier intrinsic
 ms.assetid: dd9f58b5-8bb6-494e-bb0f-9fe184f3908d
-ms.openlocfilehash: a279017e57c8bf828b302940463bd0b3504f085d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9da26b685be90bd349d6bfe56c4ad980541d09c0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626157"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026749"
 ---
 # <a name="readwritebarrier"></a>_ReadWriteBarrier
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 限制可跨呼叫點，對記憶體存取進行重新排序的編譯器最佳化作業。
 
@@ -41,7 +41,7 @@ void _ReadWriteBarrier(void);
 
 `_ReadWriteBarrier` 內建物件會限制可跨呼叫點，移除記憶體存取或對其進行重新排序的編譯器最佳化作業。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

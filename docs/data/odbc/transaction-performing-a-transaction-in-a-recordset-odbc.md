@@ -1,17 +1,17 @@
 ---
-title: 異動：在一個資料錄集內執行異動 (ODBC)
+title: 交易：執行異動中的資料錄集 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-ms.openlocfilehash: df7c28ebfbb68f3e0163368247b90ff69058726d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e06d61d3d86233e136b0b3fe78f149a6778649b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659576"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035237"
 ---
-# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>異動：在一個資料錄集內執行異動 (ODBC)
+# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>交易：執行異動中的資料錄集 (ODBC)
 
 本主題說明如何在資料錄集執行交易。
 
@@ -22,7 +22,7 @@ ms.locfileid: "50659576"
 
 1. 呼叫`CDatabase`物件的`BeginTrans`成員函式。
 
-1. 如果您未實作大量資料列擷取，呼叫`AddNew/Update`， `Edit/Update`，和`Delete`的視需要多次相同的資料庫的一或多個資料錄集物件的成員函式。 如需詳細資訊，請參閱 <<c0> [ 資料錄集： 加入、 更新和刪除資料錄 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)。 如果您已實作大量資料列擷取，您必須撰寫您自己的函式來更新資料來源。
+1. 如果您未實作大量資料列擷取，呼叫`AddNew/Update`， `Edit/Update`，和`Delete`的視需要多次相同的資料庫的一或多個資料錄集物件的成員函式。 如需詳細資訊，請參閱[資料錄集：新增、 更新和刪除資料錄 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)。 如果您已實作大量資料列擷取，您必須撰寫您自己的函式來更新資料來源。
 
 1. 最後，呼叫`CDatabase`物件的`CommitTrans`成員函式。 如果其中一種更新就會發生錯誤，或您選擇取消所做的變更，請呼叫其`Rollback`成員函式。
 
@@ -84,6 +84,6 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 ## <a name="see-also"></a>另請參閱
 
 [異動 (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
-[異動：異動如何影響更新 (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)<br/>
+[交易：異動如何影響更新 (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)<br/>
 [CDatabase 類別](../../mfc/reference/cdatabase-class.md)<br/>
 [CRecordset 類別](../../mfc/reference/crecordset-class.md)

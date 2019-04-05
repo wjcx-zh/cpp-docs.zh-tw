@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-ms.openlocfilehash: 4ac6b72095620a3e857f2877d776e91b273e8f33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f5ad86a289f8904278a58636e66809ae0edd55b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566643"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035087"
 ---
 # <a name="retval"></a>retval
 
@@ -42,7 +42,7 @@ ms.locfileid: "50566643"
 |**適用於**|介面參數，介面方法|
 |**可重複**|否|
 |**必要屬性**|**out**|
-|**無效屬性**|**in**|
+|**無效屬性**|**中的**|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

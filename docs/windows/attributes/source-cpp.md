@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 59ed66acbbd6ef876e6052767dc5a5243d4b8dd6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 699ea64de49a4383bc8fb62b2f3b2133d7c496c9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476517"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030241"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "50476517"
 
 ### <a name="parameters"></a>參數
 
-*interfaces*<br/>
+*介面*<br/>
 一或多個介面，指定當您將套用的來源屬性的類別。 未在來源套用至屬性或方法時，會使用此參數。
 
 ## <a name="remarks"></a>備註
@@ -77,7 +77,7 @@ class NN : public b
 |**適用於**|**類別**， **struct**，**介面**|
 |**可重複**|否|
 |**必要屬性**|`coclass` （當套用至類別或結構）|
-|**無效屬性**|無|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - __inwordstring intrinsic
 - rep insw instruction
 ms.assetid: 6de37939-017a-4740-9e3d-7de78a30daba
-ms.openlocfilehash: b56a55da06e808bcccf123ccc9867a1b868834a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 52c36754e1eea56b84eeb494e82e37a5b043246e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608555"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030215"
 ---
 # <a name="inwordstring"></a>__inwordstring
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 使用指定的連接埠時，讀取資料`rep insw`指令。
 
@@ -36,7 +36,7 @@ void __inwordstring(
 *連接埠*<br/>
 [in]要讀取的連接埠。
 
-*Buffer*<br/>
+*緩衝區*<br/>
 [out]從連接埠讀取的資料會寫入此處。
 
 *計數*<br/>
@@ -54,7 +54,7 @@ void __inwordstring(
 
 此常式僅可作為內建常式使用。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

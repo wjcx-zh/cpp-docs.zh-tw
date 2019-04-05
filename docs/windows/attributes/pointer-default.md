@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-ms.openlocfilehash: 8261d789f50c2750cccce48dac675ef478a70420
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37bd2b16fb7a7c1c186f59897898e08cc73fffae
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504386"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59022662"
 ---
 # <a name="pointerdefault"></a>pointer_default
 
@@ -25,7 +25,7 @@ ms.locfileid: "50504386"
 
 ### <a name="parameters"></a>參數
 
-*值*<br/>
+*value*<br/>
 描述此指標類型的值： **ptr**， **ref**，或**唯一**。
 
 ## <a name="remarks"></a>備註
@@ -44,8 +44,8 @@ ms.locfileid: "50504386"
 |-|-|
 |**適用於**|**interface**|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

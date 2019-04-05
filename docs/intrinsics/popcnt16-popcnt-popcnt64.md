@@ -11,16 +11,16 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: a6424f3414d9da17e52c0a9f78290497f5e5e01e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: d6cc9a0ce784ab79f5e4225675a082fc55bd53e7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146888"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037006"
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16、__popcnt、__popcnt64
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 計算的其中一個 16、 32 或 64 位元不帶正負號的整數中的位元 （母體擴展計數）。
 
@@ -99,7 +99,7 @@ __popcnt(0xffff) = 16
 __popcnt(0xffffffff) = 32
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 進階 Micro 裝置，inc.copyright 2007著作權所有，並保留一切權利。 進階 Micro 裝置，inc.的權限重製
 

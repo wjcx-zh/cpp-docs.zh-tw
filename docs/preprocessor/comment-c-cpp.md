@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-ms.openlocfilehash: ec80e8cf177becdc25bdf49d6dfa9ad9c7794b88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb9bfef2ae751529b8424143cde020e78f17ec72
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612819"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025266"
 ---
 # <a name="comment-cc"></a>comment (C/C++)
 
@@ -39,7 +39,7 @@ ms.locfileid: "50612819"
 
 上的芳鄰*commentstring*目的檔中。 在連結階段，這個字串會放入可執行檔中。 字串不會在載入可執行檔時一併載入記憶體中，不過，當程式在檔案中尋找可列印字串時就可以找到這些字串。 這個 comment-record 類型的其中一種用法，是在可執行檔中內嵌版本號碼或類似的資訊。
 
-`exestr` 已被取代，將在未來版本中移除。連結器不會處理註解記錄。
+`exestr` 已被取代，未來版本將移除連結器不會處理註解記錄。
 
 ### <a name="lib"></a>lib
 

@@ -52,12 +52,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: e1f461cc850a2122af7902babfad8f1e14ac3e33
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d890b62e4e4aabb9f8ca7ebb9d3051c53febd91f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424843"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026788"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl 類別
 
@@ -91,7 +91,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 |[取消](#cancel)|取消目前執行的命令。|
 |[CancelExecution](#cancelexecution)|取消目前執行的命令。|
 |[CreateRowset](#createrowset)|建立資料列集物件。|
-|[Execute](#execute)|執行命令。|
+|[執行](#execute)|執行命令。|
 |[GetDBSession](#getdbsession)|傳回建立命令的工作階段的介面指標。|
 |[ICommandImpl](#icommandimpl)|建構函式。|
 
@@ -278,4 +278,4 @@ unsigned m_bIsExecuting:1;
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)

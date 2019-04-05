@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuring ODBC data sources
 - ODBC data sources, represented by CDatabase
 ms.assetid: b246721f-b9e1-49bd-a6c7-f348b8c3d537
-ms.openlocfilehash: df61ca28a1a5c7fb1f2096f2cc22654794f5dbdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b435c65bab565e109d37e1dd24e051993cbb30c8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469789"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038391"
 ---
 # <a name="data-source-odbc"></a>資料來源 (ODBC)
 
@@ -27,7 +27,7 @@ ms.locfileid: "50469789"
 
 - [資料來源：管理連接 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)
 
-- [資料來源：決定資料來源的結構描述 (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)
+- [資料來源：判斷資料來源 (ODBC) 的結構描述](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)
 
 ## <a name="see-also"></a>另請參閱
 

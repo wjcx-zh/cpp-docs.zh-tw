@@ -6,12 +6,12 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-ms.openlocfilehash: 04db02bc8ad4db0c669e07a0bcf1b60ffa22e8ad
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d3f8314e7cd57617e35e50a67a4562d4055cb93a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521397"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024734"
 ---
 # <a name="creating-an-updatable-provider"></a>建立可更新的提供者
 
@@ -109,31 +109,31 @@ Visual c + + 支援可更新的提供者 」 或 「 可更新的提供者 （�
 
    如果您實作`IRowsetChangeImpl`，您必須在您的提供者上設定下列屬性。 這些屬性主要用來要求介面傳遞`ICommandProperties::SetProperties`。
 
-   - `DBPROP_IRowsetChange`： 設定就會自動設定`DBPROP_IRowsetChange`。
+   - `DBPROP_IRowsetChange`:設定自動執行此設定`DBPROP_IRowsetChange`。
 
-   - `DBPROP_UPDATABILITY`： 指定支援的方法位元遮罩`IRowsetChange`: `SetData`， `DeleteRows`，或`InsertRow`。
+   - `DBPROP_UPDATABILITY`:指定支援的方法上的位元遮罩`IRowsetChange`: `SetData`， `DeleteRows`，或`InsertRow`。
 
-   - `DBPROP_CHANGEINSERTEDROWS`： 取用者可以呼叫`IRowsetChange::DeleteRows`或`SetData`新插入的資料列。
+   - `DBPROP_CHANGEINSERTEDROWS`:取用者可以呼叫`IRowsetChange::DeleteRows`或`SetData`新插入的資料列。
 
-   - `DBPROP_IMMOBILEROWS`： 資料列集不會重新排列插入或更新的資料列。
+   - `DBPROP_IMMOBILEROWS`:資料列集不會重新排列插入或更新的資料列。
 
    **如果您實作 IRowsetUpdateImpl**
 
    如果您實作`IRowsetUpdateImpl`，您必須設定下列屬性在您的提供者，另外設定的所有屬性`IRowsetChangeImpl`先前所列：
 
-   - `DBPROP_IRowsetUpdate`.
+   - `DBPROP_IRowsetUpdate`。
 
-   - `DBPROP_OWNINSERT`： 必須是 READ_ONLY 和為 VARIANT_TRUE。
+   - `DBPROP_OWNINSERT`:必須是 READ_ONLY 和為 VARIANT_TRUE。
 
-   - `DBPROP_OWNUPDATEDELETE`： 必須是 READ_ONLY 和為 VARIANT_TRUE。
+   - `DBPROP_OWNUPDATEDELETE`:必須是 READ_ONLY 和為 VARIANT_TRUE。
 
-   - `DBPROP_OTHERINSERT`： 必須是 READ_ONLY 和為 VARIANT_TRUE。
+   - `DBPROP_OTHERINSERT`:必須是 READ_ONLY 和為 VARIANT_TRUE。
 
-   - `DBPROP_OTHERUPDATEDELETE`： 必須是 READ_ONLY 和為 VARIANT_TRUE。
+   - `DBPROP_OTHERUPDATEDELETE`:必須是 READ_ONLY 和為 VARIANT_TRUE。
 
-   - `DBPROP_REMOVEDELETED`： 必須是 READ_ONLY 和為 VARIANT_TRUE。
+   - `DBPROP_REMOVEDELETED`:必須是 READ_ONLY 和為 VARIANT_TRUE。
 
-   - `DBPROP_MAXPENDINGROWS`.
+   - `DBPROP_MAXPENDINGROWS`。
 
    > [!NOTE]
    > 如果您支援通知，您可能還有其他一些屬性以及;請參閱節`IRowsetNotifyCP`如這份清單。
@@ -413,7 +413,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 
 ### <a name="column-flags"></a>資料行旗標
 
-如果您支援您的資料行上的預設值，您需要使用中繼資料中的設定它\<提供者類別\>w 類別。 設定`m_bColumnHasDefault = VARIANT_TRUE`。
+如果您支援您的資料行上的預設值，您需要使用中繼資料中的設定它\<提供者類別\>w 類別。 設定 `m_bColumnHasDefault = VARIANT_TRUE`。
 
 您也必須將設定資料行旗標，指定使用 DBCOLUMNFLAGS 列舉型別。 資料行旗標會描述資料行的特性。
 

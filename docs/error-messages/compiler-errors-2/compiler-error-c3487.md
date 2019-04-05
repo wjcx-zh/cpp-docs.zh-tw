@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3487
 ms.assetid: 39bda474-4418-4a79-98bf-2b22fa92eaaa
-ms.openlocfilehash: a1c4b667e23ff167b28b9f22f93b0930545c915c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01f8a1bd74ed2b7a3150afae5b46128c6f5b0ca2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492585"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028408"
 ---
 # <a name="compiler-error-c3487"></a>編譯器錯誤 C3487
 
@@ -21,7 +21,7 @@ Lambda 必須指定其傳回型別，除非它包含單一 return 陳述式。 �
 
 ### <a name="to-correct-this-error"></a>更正這個錯誤
 
-- 指定 Lambda 的尾端傳回類型。 確認所有從 Lambda 的傳回型別皆相同，或是隱含地轉換為傳回型別。
+- 指定 Lambda 的尾端傳回型別。 確認所有從 Lambda 的傳回類型皆相同，或是隱含地轉換為傳回類型。
 
 ## <a name="example"></a>範例
 

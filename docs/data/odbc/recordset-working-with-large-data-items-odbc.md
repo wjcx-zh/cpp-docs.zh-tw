@@ -8,19 +8,19 @@ helpviewer_keywords:
 - binary large objects
 - CLongBinary class, using in recordsets
 ms.assetid: 3e80b5a8-b6e7-43c6-a816-e54befc513a3
-ms.openlocfilehash: 8ef32621821d731d9137a446bea220564cb7f92f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ba8d4af5b0781c425dd3b1223e2208b279f055e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460368"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033040"
 ---
 # <a name="recordset-working-with-large-data-items-odbc"></a>資料錄集：使用大型的資料項目 (ODBC)
 
 本主題適用於 MFC ODBC 類別和 MFC DAO 類別。
 
 > [!NOTE]
->  如果您使用 MFC DAO 類別時，管理您的大型資料項目，與類別[CByteArray](../../mfc/reference/cbytearray-class.md)而不是類別[CLongBinary](../../mfc/reference/clongbinary-class.md)。 如果您使用 MFC ODBC 類別具有大量資料列擷取，使用`CLongBinary`而非`CByteArray`。 如需有關大量資料列擷取的詳細資訊，請參閱[資料錄集： 擷取記錄中大量資料庫連接 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  如果您使用 MFC DAO 類別時，管理您的大型資料項目，與類別[CByteArray](../../mfc/reference/cbytearray-class.md)而不是類別[CLongBinary](../../mfc/reference/clongbinary-class.md)。 如果您使用 MFC ODBC 類別具有大量資料列擷取，使用`CLongBinary`而非`CByteArray`。 如需有關大量資料列擷取的詳細資訊，請參閱[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 假設您的資料庫可以儲存大量的資料，例如點陣圖 （員工照片、 對應、 圖片的產品、 OLE 物件等）。 這類資料通常稱為二進位大型物件 （或 BLOB） 因為：
 
@@ -62,5 +62,5 @@ A [CLongBinary](../../mfc/reference/clongbinary-class.md)物件是簡單的殼�
 ## <a name="see-also"></a>另請參閱
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[資料錄集：取得 SUM 和其他彙總結果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
+[資料錄集：取得 Sum 和其他彙總的結果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
 [資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)

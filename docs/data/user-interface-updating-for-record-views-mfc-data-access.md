@@ -6,12 +6,12 @@ helpviewer_keywords:
 - menus, updating as context changes
 - record views, user interface
 ms.assetid: 2c7914b6-2dc3-40c3-b2f2-8371da2a4063
-ms.openlocfilehash: 914a262560a10ba4085e0605a0c9f677d7a447fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de94b28e713459edfd63aff832caecc7ea49ca33
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630395"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023356"
 ---
 # <a name="user-interface-updating-for-record-views--mfc-data-access"></a>記錄檢視的使用者介面更新 (MFC 資料存取)
 
@@ -27,5 +27,5 @@ ms.locfileid: "50630395"
 
 ## <a name="see-also"></a>另請參閱
 
-[支援資料錄檢視的瀏覽](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)<br/>
+[支援資料錄檢視的巡覽](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)<br/>
 [使用資料錄檢視](../data/using-a-record-view-mfc-data-access.md)

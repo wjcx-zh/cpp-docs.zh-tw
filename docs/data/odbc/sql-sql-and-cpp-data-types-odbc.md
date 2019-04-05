@@ -1,19 +1,19 @@
 ---
-title: SQL：SQL 和 C++ 資料類型 (ODBC)
+title: SQL:SQL 和 c + + 資料類型 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data types [C++], SQL vs. C++
 - SQL data types [C++]
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
-ms.openlocfilehash: 6767d009ca376d8e8579baf32f2c9af1e282abce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3efa36342b7d16968113acd818a7a1386e4cefcc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649497"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024344"
 ---
-# <a name="sql-sql-and-c-data-types-odbc"></a>SQL：SQL 和 C++ 資料類型 (ODBC)
+# <a name="sql-sql-and-c-data-types-odbc"></a>SQL:SQL 和 c + + 資料類型 (ODBC)
 
 > [!NOTE]
 >  這項資訊適用於 MFC ODBC 類別。 如果您使用 MFC DAO 類別時，請參閱 「 比較 Microsoft Jet 資料庫引擎 SQL 和 ANSI SQL"DAO [說明] 中的主題。
@@ -28,21 +28,21 @@ ms.locfileid: "50649497"
 |**DECIMAL**|`CString` 1|
 |**SMALLINT**|**int**|
 |**REAL**|**float**|
-|**整數**|**long**|
+|**INTEGER**|**long**|
 |**FLOAT**|**double**|
 |**DOUBLE**|**double**|
 |**數值**|`CString` 1|
 |**VARCHAR**|`CString`|
 |**LONGVARCHAR**|`CLongBinary`, `CString` 2|
-|**BIT**|**BOOL**|
+|**位元**|**BOOL**|
 |**TINYINT**|**BYTE**|
 |**BIGINT**|`CString` 1|
-|**二進位**|`CByteArray`|
+|**BINARY**|`CByteArray`|
 |**VARBINARY**|`CByteArray`|
 |**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|
-|**DATE**|`CTime`、 `CString`|
-|**時間**|`CTime`、 `CString`|
-|**時間戳記**|`CTime`、 `CString`|
+|**DATE**|`CTime`, `CString`|
+|**TIME**|`CTime`, `CString`|
+|**TIMESTAMP**|`CTime`, `CString`|
 
 1. ANSI**十進位**並**數值**對應至`CString`因為**SQL_C_CHAR**是預設 ODBC 傳輸類型。
 
@@ -57,4 +57,4 @@ ms.locfileid: "50649497"
 ## <a name="see-also"></a>另請參閱
 
 [SQL](../../data/odbc/sql.md)<br/>
-[SQL：製作直接的 SQL 呼叫 (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+[SQL:製作直接的 SQL 呼叫 (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

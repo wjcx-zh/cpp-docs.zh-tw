@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ODBC, about ODBC
 - ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
-ms.openlocfilehash: 81b1f6d06d909b5b046703b97c4574270efbdd46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e14f5d051b9684cd79a34f5fb50feeb785d2f927
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591720"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033236"
 ---
 # <a name="odbc-basics"></a>ODBC 的基本概念
 
@@ -25,7 +25,7 @@ ms.locfileid: "50591720"
 
 - [您需要使用您的應用程式轉散發 ODBC 元件](../../data/odbc/redistributing-odbc-components-to-your-customers.md)
 
-您也會想要閱讀相關的主題[ODBC: ODBC 資料指標程式庫](../../data/odbc/odbc-the-odbc-cursor-library.md)。
+您也會想要閱讀相關的主題： [ODBC:ODBC 資料指標程式庫](../../data/odbc/odbc-the-odbc-cursor-library.md)。
 
 > [!NOTE]
 > ODBC 資料來源是透過 MFC ODBC 類別，如本主題中所述，或透過 MFC 資料存取物件 (DAO) 類別存取。

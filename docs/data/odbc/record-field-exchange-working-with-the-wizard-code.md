@@ -15,19 +15,19 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-ms.openlocfilehash: c0e1a35e5476c9e2e335c6f2863429d89e4fa28a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82f0d946cac3429150250e2df5d1bfd674ec30ee
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492114"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041285"
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>資料錄欄位交換：精靈程式碼的使用
 
 本主題說明的程式碼，MFC 應用程式精靈和**加入類別**(如中所述[加入 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) 寫入至支援 RFX 和您可能要變更程式碼的方式。
 
 > [!NOTE]
->  本主題適用於衍生自類別`CRecordset`的大量資料列中擷取尚未實作。 如果您使用大量資料列擷取，被實作大量資料錄欄位交換 (Bulk RFX)。 大量 RFX 很類似 RFX。 若要了解這些差異，請參閱[資料錄集： 擷取記錄中大量資料庫連接 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主題適用於衍生自類別`CRecordset`的大量資料列中擷取尚未實作。 如果您使用大量資料列擷取，被實作大量資料錄欄位交換 (Bulk RFX)。 大量 RFX 很類似 RFX。 若要了解這些差異，請參閱[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 當您使用 [MFC 應用程式精靈] 建立資料錄集類別或**加入類別**，根據資料來源資料表，而且您在精靈中進行選取的資料行，精靈會將下列 RFX 相關項目：
 
@@ -99,7 +99,7 @@ void CSections::DoFieldExchange(CFieldExchange* pFX)
 
 - 呼叫`CFieldExchange::SetFieldType`，透過`pFX`指標。 此呼叫會指定所有 RFX 函式都呼叫的結尾`DoFieldExchange`的下一個呼叫或`SetFieldType`輸出資料行。 如需詳細資訊，請參閱 < [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)。
 
-- 數次呼叫`RFX_Text`全域函式，其中每個欄位資料成員 (這是所有`CString`在範例中的變數)。 這些呼叫會指定資料來源上的資料行名稱和欄位資料成員之間的關聯性。 RFX 函式會執行實際的資料傳輸。 類別庫提供之所有常見的資料類型的 RFX 函式。 如需 RFX 函式的詳細資訊，請參閱[資料錄欄位交換： RFX 函式](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)。
+- 數次呼叫`RFX_Text`全域函式，其中每個欄位資料成員 (這是所有`CString`在範例中的變數)。 這些呼叫會指定資料來源上的資料行名稱和欄位資料成員之間的關聯性。 RFX 函式會執行實際的資料傳輸。 類別庫提供之所有常見的資料類型的 RFX 函式。 如需 RFX 函式的詳細資訊，請參閱[資料錄欄位交換：使用 RFX 函式](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)。
 
     > [!NOTE]
     >  在結果集資料行的順序必須符合 RFX 函式呼叫中的順序`DoFieldExchange`。

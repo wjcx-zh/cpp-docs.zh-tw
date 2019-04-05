@@ -33,12 +33,12 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: d51b1bf6862aebda34586518be6501f57f119590
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9e878af3acf4c4d3a6ca785454c4bb072f17cf09
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419951"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59022407"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet 類別
 
@@ -68,7 +68,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 |||
 |-|-|
-|[operator =](#op_equal)|指派的一個屬性 ID 集的內容到另一個。|
+|[運算子 =](#op_equal)|指派的一個屬性 ID 集的內容到另一個。|
 
 ## <a name="remarks"></a>備註
 
@@ -143,4 +143,4 @@ CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)

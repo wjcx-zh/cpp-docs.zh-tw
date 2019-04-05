@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __readeflags intrinsic
 ms.assetid: f9d2f4d8-c428-491f-b8de-04d0566b2b6b
-ms.openlocfilehash: e5294180904d0d7ca3bbd1de75e45e058a33c88f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9913fb4287e673faf79b2c352bb42eda7f590fdd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594260"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026366"
 ---
 # <a name="readeflags"></a>__readeflags
 
@@ -40,7 +40,7 @@ EFLAGS 暫存器的值。 傳回值是 32 位元長時間上的 32 位元平台�
 
 **標頭檔** \<intrin.h >
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

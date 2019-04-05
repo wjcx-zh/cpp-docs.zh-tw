@@ -43,12 +43,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 217bde10ea1b7f6457d141c3006c8c8fb2efaadf
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 2e3e671cd92313ad120d2cd6aae3f7e815e09e65
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328502"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025360"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>如何：加入、 編輯或刪除控制項 （c + +）
 
@@ -232,7 +232,7 @@ Win32
 
 [管理對話方塊控制項](controls-in-dialog-boxes.md)<br/>
 [如何：版面配置控制項](arrangement-of-controls-on-dialog-boxes.md)<br/>
-[如何：定義控制項存取與值](defining-mnemonics-access-keys.md)<br/>
+[HOW TO：定義控制存取和值](defining-mnemonics-access-keys.md)<br/>
 
 <!-- excluded links
 [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)<br/>

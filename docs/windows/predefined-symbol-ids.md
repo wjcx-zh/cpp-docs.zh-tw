@@ -5,12 +5,12 @@ helpviewer_keywords:
 - symbols [C++], predefined IDs
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
-ms.openlocfilehash: 22337e812936a90f8d7c4ead33989e1e0c4d39f0
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 5acaf9d470ce3d1cccad65bc8235cacfd7a56427
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562753"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024539"
 ---
 # <a name="predefined-symbol-ids"></a>預先定義的符號 ID
 
@@ -35,6 +35,6 @@ Win32、MFC 或 ATL
 
 ## <a name="see-also"></a>另請參閱
 
-[資源識別項 (符號)](../windows/symbols-resource-identifiers.md)<br/>
-[如何：建立符號](../windows/creating-new-symbols.md)<br/>
-[如何：管理符號](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
+[資源識別項 （符號）](../windows/symbols-resource-identifiers.md)<br/>
+[HOW TO：建立符號](../windows/creating-new-symbols.md)<br/>
+[HOW TO：管理符號](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>

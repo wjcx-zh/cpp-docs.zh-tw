@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: 10732d5ba3251185dc7027e3449486af3037f763
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dca2a3dc18aa3c3e75bbb682ed0b1b90adcd9236
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627470"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041305"
 ---
 # <a name="maxis"></a>max_is
 
@@ -40,7 +40,7 @@ ms.locfileid: "50627470"
 |-|-|
 |**適用於**|欄位**結構**或是**聯集**，參數的介面，介面方法|
 |**可重複**|否|
-|**必要屬性**|無|
+|**必要屬性**|None|
 |**無效屬性**|**size_is**|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

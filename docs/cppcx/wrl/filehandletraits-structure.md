@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - FileHandleTraits structure
 ms.assetid: e1107c42-2cd6-4253-9c16-8ecb35f05cd9
-ms.openlocfilehash: 28e97a906ee6348cd0d2761304d94d414969d15e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 09b8eb1a45efee4f8d0aaf4dc27774de91ffcff4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58783979"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025016"
 ---
 # <a name="filehandletraits-structure"></a>FileHandleTraits 結構
 
@@ -40,4 +40,4 @@ struct FileHandleTraits : HANDLETraits;
 
 ## <a name="see-also"></a>另請參閱
 
-[Microsoft::WRL::Wrappers::HandleTraits 命名空間](microsoft-wrl-wrappers-handletraits-namespace.md)
+[Microsoft::WRL::Wrappers::HandleTraits Namespace](microsoft-wrl-wrappers-handletraits-namespace.md)

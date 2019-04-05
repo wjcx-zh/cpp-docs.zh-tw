@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-ms.openlocfilehash: c1d8c8d894ed9a54c0dd3af775d6fbfda0385906
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1d87ea057b22984a0e0f8f5518899e36f7d0221
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597609"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038417"
 ---
 # <a name="hidden"></a>隱藏
 
@@ -40,7 +40,7 @@ ms.locfileid: "50597609"
 |**適用於**|**介面**，**類別**，**結構**、 方法、 屬性|
 |**可重複**|否|
 |**必要屬性**|**coclass** (當套用至**類別**或是**結構**)|
-|**無效屬性**|無|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

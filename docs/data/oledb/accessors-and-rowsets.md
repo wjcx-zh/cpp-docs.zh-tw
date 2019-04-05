@@ -17,12 +17,12 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-ms.openlocfilehash: d29c409f2ed410d9f697419e9a98b675eee7a69d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 21043e22b37084fa543bf6b8a0fc176c3b8be788
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175704"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030020"
 ---
 # <a name="accessors-and-rowsets"></a>存取子和資料列集
 
@@ -54,7 +54,7 @@ ms.locfileid: "52175704"
 |`CAccessor`|否|是|使用者|是|
 |`CDynamicAccessor`|是|否|OLE DB 樣板|否|
 |`CDynamicParameterAccessor`|是|是|OLE DB 樣板|否|
-|`CDynamicStringAccessor[A,W]`|是|否|OLE DB 樣板|否|
+|`CDynamicStringAccessor[A,W]`|[是]|否|OLE DB 樣板|否|
 |`CManualAccessor`|是|是|使用者|是|
 
 ## <a name="rowset-types"></a>資料列集的類型

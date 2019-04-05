@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - propget attribute
 ms.assetid: c9d4a97f-36dd-4b61-8eb0-b1a217598f14
-ms.openlocfilehash: 495c6e974bbe226a77d5685c7d1d8adb29e30830
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f60e8e8fc98ba3b75acefe80812069bfac78e6c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645990"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027294"
 ---
 # <a name="propget"></a>propget
 
@@ -39,8 +39,8 @@ ms.locfileid: "50645990"
 |-|-|
 |**適用於**|方法|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|`propput`、 `propputref`|
+|**必要屬性**|None|
+|**無效屬性**|`propput`, `propputref`|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

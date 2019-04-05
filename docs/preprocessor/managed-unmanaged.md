@@ -12,12 +12,12 @@ helpviewer_keywords:
 - pragmas, managed
 - unmanaged pragma
 ms.assetid: f072ddcc-e1ec-408a-8ce1-326ddb60e4a4
-ms.openlocfilehash: 0cc253ad7d0d4529340a13546f931075b0c7dfdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7fa1e3274b85faa9f3f72f4db5bf586ee5d8e274
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473823"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59022342"
 ---
 # <a name="managed-unmanaged"></a>managed、unmanaged
 啟用函式層級控制項，用於編譯 Managed 或 Unmanaged 的函式。

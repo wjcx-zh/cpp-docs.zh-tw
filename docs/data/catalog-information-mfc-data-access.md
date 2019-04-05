@@ -8,19 +8,19 @@ helpviewer_keywords:
 - catalog information database [C++]
 - databases [C++], catalog information database
 ms.assetid: c184e80f-ff17-409f-9df8-05275080bb8d
-ms.openlocfilehash: 460c888363651d1f54e061749101953abfd2174d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5958c530d57672a9574ddd90df8ae6ac0b0b04f6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579136"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027320"
 ---
 # <a name="catalog-information--mfc-data-access"></a>目錄資訊 (MFC 資料存取)
 
 資料來源中的資料表可以納入資料表名稱及這些資料表中的資料行，還有資料表權限、主要與外部索引鍵名稱的相關資訊，以及預先定義的查詢或預存程序的相關資訊，以及資料表上的索引和資料表統計資料的相關資訊。
 
-如需詳細資訊，請參閱 <<c0> [ 資料來源： 決定結構描述的資料來源 (ODBC)](../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)。
+如需詳細資訊，請參閱[資料來源：判斷資料來源 (ODBC) 的結構描述](../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[資料存取程式設計 (MFC/ATL)](../data/data-access-programming-mfc-atl.md)
+[Data Access Programming (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

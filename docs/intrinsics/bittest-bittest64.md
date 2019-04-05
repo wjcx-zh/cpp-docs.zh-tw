@@ -11,16 +11,16 @@ helpviewer_keywords:
 - _bittest64 intrinsic
 - bt instruction
 ms.assetid: 15e62afb-abea-4ee7-a6b1-13efa2034937
-ms.openlocfilehash: 170979b5cf463d72f645599e146d1e8e2a10154d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d29b8bec646bb2da8acfe20479fe0e238db0de5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645391"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035224"
 ---
 # <a name="bittest-bittest64"></a>_bittest, _bittest64
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 產生 `bt` 指令，該指令會檢查位址 `b` 的位置 `a` 中的位元，並傳回該位元的值。
 
@@ -39,7 +39,7 @@ unsigned char _bittest64(
 
 ### <a name="parameters"></a>參數
 
-*a*<br/>
+*一個*<br/>
 [in]要檢查的記憶體指標。
 
 *b*<br/>
@@ -51,7 +51,7 @@ unsigned char _bittest64(
 
 ## <a name="requirements"></a>需求
 
-|內建|架構|頁首|
+|內建|架構|標頭|
 |---------------|------------------|------------|
 |`_bittest`|x86、 x64、 ARM|\<intrin.h>|
 |`_bittest64`|ARM、 x64|\<intrin.h>|
@@ -100,7 +100,7 @@ Binary representation:
 0000000000000010011000010110010
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

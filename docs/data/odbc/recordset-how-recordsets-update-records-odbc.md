@@ -1,5 +1,5 @@
 ---
-title: 資料錄集：資料錄集更新資料錄的方式 (ODBC)
+title: 資料錄集：資料錄集更新資料錄 (ODBC) 的方式
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-ms.openlocfilehash: 3b9bea1cc8fc0a11773d2392f88fff333eb7084f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf71f562714e2dacfe75540e1e532219b3eb307f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510002"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034478"
 ---
-# <a name="recordset-how-recordsets-update-records-odbc"></a>資料錄集：資料錄集更新資料錄的方式 (ODBC)
+# <a name="recordset-how-recordsets-update-records-odbc"></a>資料錄集：資料錄集更新資料錄 (ODBC) 的方式
 
 本主題適用於 MFC ODBC 類別。
 
@@ -25,7 +25,7 @@ ms.locfileid: "50510002"
 >  在其上的 SQL 程式`CRecordset`物件根據可能會影響資料錄集的可更新性。 例如，如果您的 SQL 包含聯結，或是**GROUP BY**子句，MFC 就會將可更新性設定為 FALSE。
 
 > [!NOTE]
->  本主題適用於物件衍生自`CRecordset`的大量資料列中擷取尚未實作。 如果您使用大量資料列擷取，請參閱[資料錄集： 擷取記錄中大量資料庫連接 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主題適用於物件衍生自`CRecordset`的大量資料列中擷取尚未實作。 如果您使用大量資料列擷取，請參閱[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 本主題說明：
 
@@ -33,15 +33,15 @@ ms.locfileid: "50510002"
 
 - [資料錄集為編輯緩衝區](#_core_the_edit_buffer)而[動態集與快照集之間的差異](#_core_dynasets_and_snapshots)。
 
-[資料錄集： 如何 AddNew、 Edit 和刪除工作 (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)描述從資料錄集的觀點來看這些函式的動作。
+[資料錄集：如何 AddNew、 Edit 和刪除工作 (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)描述從資料錄集的觀點來看這些函式的動作。
 
-[資料錄集： 更多有關更新 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)完成該資料錄集更新劇本解釋異動如何影響更新、 如何關閉資料錄集，或捲動會影響正在進行更新，以及如何更新您的互動的其他更新使用者。
+[資料錄集：更多有關更新 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)完成該資料錄集更新劇本解釋異動如何影響更新、 如何關閉資料錄集，或捲動會影響正在進行更新，以及您的更新與其他使用者的更新之間的互動方式。
 
 ##  <a name="_core_your_role_in_recordset_updating"></a> 您在資料錄集更新的角色
 
 下表顯示您的角色中加入、 編輯或刪除記錄，以及架構會為您要使用資料錄集。
 
-### <a name="recordset-updating-you-and-the-framework"></a>正在更新資料錄集： 您與架構
+### <a name="recordset-updating-you-and-the-framework"></a>正在更新資料錄集：您與架構
 
 |您|架構|
 |---------|-------------------|
@@ -73,4 +73,4 @@ ms.locfileid: "50510002"
 ## <a name="see-also"></a>另請參閱
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[資料錄集：AddNew、Edit 和 Delete 的運作方式 (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)
+[資料錄集：AddNew，如何編輯和刪除工作 (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)

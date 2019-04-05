@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 13c41b97190ff13b87361b6e8344b8f17798708a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 807cdf55a5a2fa6e0cc063c22b1685d8156c41a5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413338"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031335"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl 類別
 
@@ -145,4 +145,4 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)

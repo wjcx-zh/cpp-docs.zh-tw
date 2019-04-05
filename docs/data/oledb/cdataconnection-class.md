@@ -65,12 +65,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 769dfc99f431cb5ba803075e28176713f9bd7092
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 94c7025185a24b07d5968157d49c856d4359b33a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565502"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021627"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection 類別
 
@@ -102,11 +102,11 @@ class CDataConnection
 |||
 |-|-|
 |[運算子 BOOL](#op_bool)|判斷目前的工作階段是否為開啟。|
-|[operator bool](#op_bool_ole)|判斷目前的工作階段是否為開啟。|
+|[運算子 bool](#op_bool_ole)|判斷目前的工作階段是否為開啟。|
 |[CDataSource 運算子 （& s)](#op_cdata_amp)|傳回包含之的參考`CDataSource`物件。|
-|[operator CDataSource*](#op_cdata_star)|將指標傳回至包含的 `CDataSource` 物件。|
-|[運算子 Csession& （& s)](#op_csession_amp)|傳回包含之的參考`CSession`物件。|
-|[運算子 CSession *](#op_csession_star)|將指標傳回至包含的 `CSession` 物件。|
+|[運算子 CDataSource *](#op_cdata_star)|將指標傳回至包含的 `CDataSource` 物件。|
+|[operator CSession&](#op_csession_amp)|傳回包含之的參考`CSession`物件。|
+|[operator CSession*](#op_csession_star)|將指標傳回至包含的 `CSession` 物件。|
 
 ## <a name="remarks"></a>備註
 
@@ -187,7 +187,7 @@ HRESULT OpenNewSession(CSession & session) throw();
 
 #### <a name="parameters"></a>參數
 
-*session*<br/>
+*工作階段*<br/>
 [輸入/輸出]新的工作階段物件的參考。
 
 ### <a name="remarks"></a>備註
@@ -307,4 +307,4 @@ operator const CSession*() throw();
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ODBC recordsets, sorting
 - recordsets, sorting
 ms.assetid: b40b152e-0a91-452e-be7b-e5bc27f744c7
-ms.openlocfilehash: 708ba8e851fa81ef2adb4360fe582880acd23c31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 831f21901186ed0ae010b0f332327eefcba94b51
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621269"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024656"
 ---
 # <a name="recordset-sorting-records-odbc"></a>資料錄集：排序資料錄 (ODBC)
 

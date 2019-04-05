@@ -8,16 +8,16 @@ helpviewer_keywords:
 - __outwordstring intrinsic
 - outsw instruction
 ms.assetid: b470c7a0-1de9-4370-886a-b2c3a1f842f4
-ms.openlocfilehash: df7ca6ddbb80c21397beb91b8e671f248f2a1d9c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: d7141dd7f9f1f81e905952959e392a23d141f4e4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326286"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030364"
 ---
 # <a name="outwordstring"></a>__outwordstring
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 會產生`rep outsw`指示，會傳送`Count`開頭的字`Buffer`出所指定的 I/O 連接埠`Port`。
 
@@ -36,7 +36,7 @@ void __outwordstring(
 *連接埠*<br/>
 [in]若要將資料傳送至連接埠。
 
-*Buffer*<br/>
+*緩衝區*<br/>
 [in]指定的連接埠傳送資料的指標。
 
 *計數*<br/>
@@ -54,7 +54,7 @@ void __outwordstring(
 
 此常式僅可作為內建常式使用。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

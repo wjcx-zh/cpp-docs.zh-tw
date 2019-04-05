@@ -1,5 +1,5 @@
 ---
-title: 資料錄集：擷取大量資料錄 (ODBC)
+title: 資料錄集：擷取大量 (ODBC) 資料錄
 ms.date: 11/04/2016
 helpviewer_keywords:
 - bulk row fetching, implementing
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-ms.openlocfilehash: 55a89a66b36d12e6341b85d7dfa655b299638fcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fdcbf18fcb0d97ba7b2a39aa9bbbd79e65a4112
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628198"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027762"
 ---
-# <a name="recordset-fetching-records-in-bulk-odbc"></a>資料錄集：擷取大量資料錄 (ODBC)
+# <a name="recordset-fetching-records-in-bulk-odbc"></a>資料錄集：擷取大量 (ODBC) 資料錄
 
 本主題適用於 MFC ODBC 類別。
 
@@ -137,7 +137,7 @@ void MultiRowSet::DoBulkFieldExchange( CFieldExchange* pFX )
 > [!NOTE]
 >  您必須呼叫`Close`成員函式之前您衍生`CRecordset`類別超出範圍。 這可確保會釋出架構配置的任何記憶體。 它是良好的程式設計做法一律明確地呼叫`Close`，而不論您是否有實作大量資料列擷取。
 
-如需有關資料錄欄位交換 (RFX) 的詳細資訊，請參閱 <<c0> [ 資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。 如需使用參數的詳細資訊，請參閱[CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)並[資料錄集： 參數化資料錄集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
+如需有關資料錄欄位交換 (RFX) 的詳細資訊，請參閱[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。 如需使用參數的詳細資訊，請參閱[CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)和[資料錄集：參數化資料錄集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
 
 ## <a name="see-also"></a>另請參閱
 

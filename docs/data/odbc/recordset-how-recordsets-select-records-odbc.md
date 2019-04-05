@@ -1,5 +1,5 @@
 ---
-title: 資料錄集：資料錄集選取資料錄的方式 (ODBC)
+title: 資料錄集：資料錄集選取資料錄 (ODBC) 的方式
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, selecting records
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 7e7bbaad949b5f4456ce4c8aea60099792deb786
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 310481a6ea6637de817bf29d528cbdfe70ae70db
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329462"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041321"
 ---
-# <a name="recordset-how-recordsets-select-records-odbc"></a>資料錄集：資料錄集選取資料錄的方式 (ODBC)
+# <a name="recordset-how-recordsets-select-records-odbc"></a>資料錄集：資料錄集選取資料錄 (ODBC) 的方式
 
 本主題適用於 MFC ODBC 類別。
 
@@ -40,11 +40,11 @@ ms.locfileid: "51329462"
 |--------------|-------------|
 |使用您的資料錄集類別的宣告**加入類別**精靈|指定要從選取的資料表。<br /><br /> 指定要包含哪些資料行。<br /><br /> 請參閱[加入 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)。|
 |完成您的資料錄集類別實作|覆寫成員函式時，例如`OnSetOptions`（進階） 來設定應用程式特有的選項，或變更預設值。 如果您想要參數化資料錄集，請指定參數的資料成員。|
-|建構資料錄集物件 (在呼叫之前`Open`)|指定搜尋條件 （可能是複合），以用於**其中**篩選資料錄的子句。 請參閱[資料錄集： 篩選資料錄 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。<br /><br /> 指定用於排序次序**ORDER BY**子句來排序記錄。 請參閱[資料錄集： 排序資料錄 (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)。<br /><br /> 指定任何參數加入至類別的參數值。 請參閱[資料錄集： 參數化資料錄集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。|
+|建構資料錄集物件 (在呼叫之前`Open`)|指定搜尋條件 （可能是複合），以用於**其中**篩選資料錄的子句。 請參閱[資料錄集：篩選資料錄 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。<br /><br /> 指定用於排序次序**ORDER BY**子句來排序記錄。 請參閱[資料錄集：排序資料錄 (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)。<br /><br /> 指定任何參數加入至類別的參數值。 請參閱[資料錄集：參數化資料錄集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。|
 
-|執行資料錄集的查詢，藉由呼叫`Open`|指定自訂的 SQL 字串，來取代由精靈所設定的預設 SQL 字串。 請參閱[crecordset:: Open](../../mfc/reference/crecordset-class.md#open)中*類別庫參考*並[SQL： 自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。 |
+|執行資料錄集的查詢，藉由呼叫`Open`|指定自訂的 SQL 字串，來取代由精靈所設定的預設 SQL 字串。 請參閱[crecordset:: Open](../../mfc/reference/crecordset-class.md#open)中*類別庫參考*和[SQL:自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。 |
 
-|呼叫`Requery`重新查詢資料來源上的最新值的資料錄集 |指定新的參數、 篩選或排序。 請參閱[資料錄集： 重新查詢資料錄集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)。 |
+|呼叫`Requery`重新查詢資料來源上的最新值的資料錄集 |指定新的參數、 篩選或排序。 請參閱[資料錄集：重新查詢資料錄集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)。 |
 
 ##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a> 資料錄集如何建構它的 SQL 陳述式
 
@@ -78,19 +78,19 @@ ms.locfileid: "51329462"
 
 - 將自訂的 SQL 字串中傳遞*lpszSQL*當您呼叫[開啟](../../mfc/reference/crecordset-class.md#open)資料錄集。 您所傳遞的任何項目*lpsqSQL*優先於什麼[GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql)成員函式傳回。
 
-   如需詳細資訊，請參閱 < [SQL： 自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)，其中描述類型的 SQL 陳述式 （或部分陳述式） 中，您可以傳遞給`Open`和架構會使用它們。
+   如需詳細資訊，請參閱[SQL:自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)，其中描述類型的 SQL 陳述式 （或部分陳述式） 中，您可以傳遞給`Open`和架構會使用它們。
 
     > [!NOTE]
     >  如果您傳遞的自訂字串開頭不是"SELECT"或"{CALL"，MFC 會假設它包含資料表名稱。 這也適用於下一個項目符號項目。
 
 - Alter 精靈會將您的資料錄集的字串`GetDefaultSQL`成員函式。 編輯變更它所傳回的函式的程式碼。 根據預設，精靈會將`GetDefaultSQL`函式會傳回單一的資料表名稱。
 
-   您可以擁有`GetDefaultSQL`會傳回任何項目，您可以傳入*lpszSQL*參數來`Open`。 如果您沒有傳遞自訂的 SQL 字串中*lpszSQL*，架構會使用字串的`GetDefaultSQL`傳回。 最少`GetDefaultSQL`必須傳回單一資料表名稱。 但您可以將它傳回多個資料表名稱，完整**選取 **陳述式，ODBC**呼叫**陳述式，依此類推。 如需您可以傳遞給*lpszSQL* — 或有`GetDefaultSQL`傳回，請參閱[SQL： 自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。
+   您可以擁有`GetDefaultSQL`會傳回任何項目，您可以傳入*lpszSQL*參數來`Open`。 如果您沒有傳遞自訂的 SQL 字串中*lpszSQL*，架構會使用字串的`GetDefaultSQL`傳回。 最少`GetDefaultSQL`必須傳回單一資料表名稱。 但您可以將它傳回多個資料表名稱，完整**選取 **陳述式，ODBC**呼叫**陳述式，依此類推。 如需您可以傳遞給*lpszSQL* — 或有`GetDefaultSQL`傳回，請參閱[SQL:自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。
 
-   如果您正在執行的兩個或多個資料表聯結，請重寫`GetDefaultSQL`來自訂在 SQL 中使用的資料表清單**FROM**子句。 如需詳細資訊，請參閱 <<c0> [ 資料錄集： 執行聯結 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)。
+   如果您正在執行的兩個或多個資料表聯結，請重寫`GetDefaultSQL`來自訂在 SQL 中使用的資料表清單**FROM**子句。 如需詳細資訊，請參閱[資料錄集：執行聯結 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)。
 
 
-- 手動將額外的欄位資料成員，也許是根據您取得的相關資訊的結構描述資料來源在執行階段繫結。 資料錄集類別中加入欄位資料成員[RFX](../../data/odbc/record-field-exchange-using-rfx.md)或 Bulk RFX 函式會呼叫這些[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)或是[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)成員函式，和類別建構函式中的資料成員初始設定。 如需詳細資訊，請參閱 <<c0> [ 資料錄集： 動態地繫結資料行 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。
+- 手動將額外的欄位資料成員，也許是根據您取得的相關資訊的結構描述資料來源在執行階段繫結。 資料錄集類別中加入欄位資料成員[RFX](../../data/odbc/record-field-exchange-using-rfx.md)或 Bulk RFX 函式會呼叫這些[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)或是[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)成員函式，和類別建構函式中的資料成員初始設定。 如需詳細資訊，請參閱[資料錄集：動態繫結資料行 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。
 
 - 覆寫資料錄集成員函式，例如`OnSetOptions`、 設定應用程式特定選項或覆寫預設值。
 
@@ -99,7 +99,7 @@ ms.locfileid: "51329462"
 ## <a name="see-also"></a>另請參閱
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[資料錄集：資料錄集更新資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
-[ODBC 基本概念](../../data/odbc/odbc-basics.md)<br/>
+[資料錄集：資料錄集更新資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[ODBC 的基本概念](../../data/odbc/odbc-basics.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
 [資料錄集：鎖定資料錄 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

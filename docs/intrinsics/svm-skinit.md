@@ -7,16 +7,16 @@ helpviewer_keywords:
 - SKINIT instruction
 - __svm_skinit intrinsic
 ms.assetid: 787ec781-4cf2-40a2-aa20-5192334b131a
-ms.openlocfilehash: 630d4b9d93802038bd00b65495bb18455b0c61a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 199cba2623f9d8e47c08be642ec485599b87976e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591213"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026132"
 ---
 # <a name="svmskinit"></a>__svm_skinit
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 啟始載入可驗證安全的軟體，例如虛擬機器監視器。
 
@@ -40,7 +40,7 @@ void __svm_skinit(
 
 `SLB`參數指定實體位址的記憶體稱為 64k 區塊*安全載入器區塊*(SLB)。 SLB 會包含呼叫安全載入器，會建立作業環境的電腦，並且後續載入安全性核心的程式。
 
-這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2： 系統程式設計中，「 文件數目 24593，修訂 3.11，位於[AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站台。
+這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2:系統程式設計，> 文件數目 24593，修訂 3.11，位於[AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站台。
 
 ## <a name="requirements"></a>需求
 
@@ -50,7 +50,7 @@ void __svm_skinit(
 
 **標頭檔** \<intrin.h >
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

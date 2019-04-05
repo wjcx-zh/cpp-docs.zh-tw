@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 152113200fd7aa9ee87b749380e370fe4e6ad9ff
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 563cf73299c00413889ada2520b1bf4fcd86f2be
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563351"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023694"
 ---
 # <a name="dialog-box-controls-c"></a>對話方塊控制項 （c + +）
 
@@ -38,7 +38,7 @@ ms.locfileid: "57563351"
 
 |控制項名稱|預設事件|
 |---|---|
-|[按鈕控制項](../mfc/reference/cbutton-class.md)|BN_CLICKED|
+|[Button 控制項](../mfc/reference/cbutton-class.md)|BN_CLICKED|
 |[核取方塊控制項](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
 |[下拉式方塊控制項](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
 |[編輯控制項](../mfc/reference/cedit-class.md)|EN_CHANGE|
@@ -57,12 +57,12 @@ ms.locfileid: "57563351"
 
 |控制項名稱|預設事件|
 |---|---|
-|[滑桿控制項](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
+|[Slider 控制項](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
 |[微調控制項](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
 |[進度控制項](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
 |[熱鍵控制項](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
 |[清單控制項](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
-|[樹狀目錄控制項](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
+|[樹狀控制項](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
 |[索引標籤控制項](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
 |[動畫控制項](../mfc/using-an-animation-control.md)|ACN_START|
 |[日期時間選擇器控制項](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|

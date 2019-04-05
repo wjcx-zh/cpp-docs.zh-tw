@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: 44a1a55114bcf2466aa5b084f2b53c5457f1a0aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f050bbf69edf1ab8327a283299cb5e687ce5380
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487018"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032202"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
@@ -39,8 +39,8 @@ ms.locfileid: "50487018"
 |-|-|
 |**適用於**|**模組**屬性|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

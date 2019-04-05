@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: 16839f5a5040e6b0019005912782ba359178cc47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0051cdca6673800b37d5733c0b849da24010fcb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579886"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023915"
 ---
 # <a name="callas"></a>call_as
 
@@ -25,7 +25,7 @@ ms.locfileid: "50579886"
 
 ### <a name="parameters"></a>參數
 
-*function*<br/>
+*函式*<br/>
 您想要遠端函式會叫用時呼叫區域函式。
 
 ## <a name="remarks"></a>備註
@@ -56,8 +56,8 @@ __interface IMInterface {
 |-|-|
 |**適用於**|介面方法|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
@@ -65,4 +65,4 @@ __interface IMInterface {
 
 [IDL 屬性](idl-attributes.md)<br/>
 [方法屬性](method-attributes.md)<br/>
-[local](local-cpp.md)
+[本機](local-cpp.md)

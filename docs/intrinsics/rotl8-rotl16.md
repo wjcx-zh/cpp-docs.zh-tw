@@ -8,16 +8,16 @@ helpviewer_keywords:
 - _rotl8 intrinsic
 - _rotl16 intrinsic
 ms.assetid: 8c519ab6-aef9-4f07-a387-daee8408368f
-ms.openlocfilehash: 63a4b342db58b37070c9348ac9eff1044a54a28b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 8c87c7a5fa1c2bee475b0e4508b5c1571dc449de
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327950"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028285"
 ---
 # <a name="rotl8-rotl16"></a>_rotl8, _rotl16
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 將輸入值依指定的位置數目，向左旋轉至最高有效位元 (MSB)。
 
@@ -36,10 +36,10 @@ unsigned short _rotl16(
 
 #### <a name="parameters"></a>參數
 
-*值*<br/>
+*value*<br/>
 [in]要旋轉的值。
 
-*shift*<br/>
+*移位*<br/>
 [in]若要旋轉的位元數。
 
 ## <a name="return-value"></a>傳回值
@@ -98,9 +98,9 @@ Rotating 0x41 left by 7 bits gives 0xa0
 Rotating unsigned short 0x12 left by 10 bits gives 0x4800
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 
-[_rotr8、_rotr16](../intrinsics/rotr8-rotr16.md)<br/>
+[_rotr8, _rotr16](../intrinsics/rotr8-rotr16.md)<br/>
 [編譯器內建](../intrinsics/compiler-intrinsics.md)

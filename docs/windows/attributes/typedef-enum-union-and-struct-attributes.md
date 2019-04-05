@@ -5,12 +5,12 @@ helpviewer_keywords:
 - union attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-ms.openlocfilehash: 289935c3651535b5f935624dc33246fbe83a4ceb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b56ada13a0c597866d538991ed1e83078924ac9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631058"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029579"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Typedef、Enum、Union 和 Struct 屬性
 
@@ -21,8 +21,8 @@ ms.locfileid: "50631058"
 |屬性|描述|
 |---------------|-----------------|
 |[case](case-cpp.md)|搭配[switch_type](switch-type.md)屬性中**聯集**。|
-|[custom](custom-cpp.md)|可讓您定義您自己的屬性。|
-|[export](export.md)|會導致資料結構，以放入.idl 檔案。|
+|[自訂](custom-cpp.md)|可讓您定義您自己的屬性。|
+|[匯出](export.md)|會導致資料結構，以放入.idl 檔案。|
 |[first_is](first-is.md)|指定要傳送的第一個陣列元素的索引。|
 |[helpcontext](helpcontext.md)|指定的內容識別碼，可讓使用者檢視說明檔中這個項目相關的資訊。|
 |[helpfile](helpfile.md)|設定型別程式庫的說明檔的名稱。|
@@ -40,8 +40,8 @@ ms.locfileid: "50631058"
 
 |屬性|描述|
 |---------------|-----------------|
-|[custom](custom-cpp.md)|可讓您定義您自己的屬性。|
-|[export](export.md)|會導致資料結構，以放入.idl 檔案。|
+|[自訂](custom-cpp.md)|可讓您定義您自己的屬性。|
+|[匯出](export.md)|會導致資料結構，以放入.idl 檔案。|
 |[uuid](uuid-cpp-attributes.md)|指定類別或介面的唯一識別碼。|
 |[v1_enum](v1-enum.md)|指示指定的列舉型別會傳輸為 32 位元的實體，而不是 16 位元的預設值。|
 
@@ -49,8 +49,8 @@ ms.locfileid: "50631058"
 
 |屬性|描述|
 |---------------|-----------------|
-|[custom](custom-cpp.md)|可讓您定義您自己的屬性。|
-|[export](export.md)|會導致資料結構，以放入.idl 檔案。|
+|[自訂](custom-cpp.md)|可讓您定義您自己的屬性。|
+|[匯出](export.md)|會導致資料結構，以放入.idl 檔案。|
 |[first_is](first-is.md)|指定要傳送的第一個陣列元素的索引。|
 |[last_is](last-is.md)|指定要傳送的最後一個陣列元素的索引。|
 |[length_is](length-is.md)|指定要傳送的陣列元素數目。|
@@ -71,12 +71,12 @@ ms.locfileid: "50631058"
 |屬性|描述|
 |---------------|-----------------|
 |[aggregatable](aggregatable.md)|表示類別，支援彙總。|
-|[aggregates](aggregates.md)|表示控制項彙總的目標類別。|
+|[彙總](aggregates.md)|表示控制項彙總的目標類別。|
 |[appobject](appobject.md)|識別做為應用程式物件，這是完整的.exe 應用程式相關聯，並指出函數和屬性的 coclass 全域使用這個類型程式庫中的 coclass。|
 |[coclass](coclass.md)|建立 ActiveX 控制項。|
 |[com_interface_entry](com-interface-entry-cpp.md)|將 COM 對應中的介面項目。|
-|[control](control.md)|指定使用者定義型別為控制項。|
-|[custom](custom-cpp.md)|可讓您定義您自己的屬性。|
+|[控制項](control.md)|指定使用者定義型別為控制項。|
+|[自訂](custom-cpp.md)|可讓您定義您自己的屬性。|
 |[db_column](db-column.md)|將指定的資料行的資料列集繫結。|
 |[db_command](db-command.md)|建立 OLE DB 命令。|
 |[db_param](db-param.md)|關聯的輸入或輸出參數中指定的成員變數，並分隔的變數。|
@@ -86,20 +86,20 @@ ms.locfileid: "50631058"
 |[defaultvtable](defaultvtable.md)|為控制項的預設 vtable 介面中定義的介面。|
 |[event_receiver](event-receiver.md)|建立事件接收器。|
 |[event_source](event-source.md)|建立事件來源。|
-|[export](export.md)|會導致資料結構，以放入.idl 檔案。|
+|[匯出](export.md)|會導致資料結構，以放入.idl 檔案。|
 |[first_is](first-is.md)|指定要傳送的第一個陣列元素的索引。|
-|[hidden](hidden.md)|表示項目存在，但不是會顯示在使用者導向的瀏覽器中。|
+|[隱藏](hidden.md)|表示項目存在，但不是會顯示在使用者導向的瀏覽器中。|
 |[implements_category](implements-category.md)|指定類別的實作的元件類別。|
 |[last_is](last-is.md)|指定要傳送的最後一個陣列元素的索引。|
 |[length_is](length-is.md)|指定要傳送的陣列元素數目。|
 |[max_is](max-is.md)|指定有效的陣列索引的最大值。|
 |[requires_category](requires-category.md)|指定目標類別的必要的元件類別目錄。|
 |[size_is](size-is.md)|指定記憶體的大小配置大小的指標，且大小來調整大小的指標，以及單一或多維陣列的指標。|
-|[source](source-cpp.md)|在類別上，指定連接點的 COM 物件的來源介面。 在屬性或方法中，表示成員傳回的物件或變數，是事件來源。|
-|[threading](threading-cpp.md)|指定 COM 物件的執行緒模型。|
+|[來源](source-cpp.md)|在類別上，指定連接點的 COM 物件的來源介面。 在屬性或方法中，表示成員傳回的物件或變數，是事件來源。|
+|[執行緒處理](threading-cpp.md)|指定 COM 物件的執行緒模型。|
 |[unique](unique-cpp.md)|指定唯一的指標。|
 |[uuid](uuid-cpp-attributes.md)|指定類別或介面的唯一識別碼。|
-|[version](version-cpp.md)|識別類別的多個版本之間的特定版本。|
+|[版本](version-cpp.md)|識別類別的多個版本之間的特定版本。|
 |[vi_progid](vi-progid.md)|指定與版本無關的 ProgID 表單。|
 
 ## <a name="see-also"></a>另請參閱

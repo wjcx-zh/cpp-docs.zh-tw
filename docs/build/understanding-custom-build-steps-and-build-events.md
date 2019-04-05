@@ -11,12 +11,12 @@ helpviewer_keywords:
 - build steps [C++], build events
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
-ms.openlocfilehash: 5bc402ad8999f1864c7e6b1155da3c68862dda97
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: fc12689148e3bf23c233e4656249625d1156f9a7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825968"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028502"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>了解自訂建置步驟和建置事件
 
@@ -24,11 +24,11 @@ ms.locfileid: "57825968"
 
 - **自訂建置步驟**
 
-   自訂建置步驟是與專案建立關聯的建置規則。 自訂建置步驟可以指定要執行的命令列、任何其他輸入或輸出檔案，以及要顯示的訊息。 如需詳細資訊，請參閱[如何：新增自訂建置步驟至 MSBuild 專案](how-to-add-a-custom-build-step-to-msbuild-projects.md)。
+   自訂建置步驟是與專案建立關聯的建置規則。 自訂建置步驟可以指定要執行的命令列、任何其他輸入或輸出檔案，以及要顯示的訊息。 如需詳細資訊，請參閱[如何：將自訂建置步驟新增至 MSBuild 專案](how-to-add-a-custom-build-step-to-msbuild-projects.md)。
 
 - **自訂建置工具**
 
-   自訂建置工具是與一或多個檔案建立關聯的建置規則。 自訂建置步驟可以將輸入檔案傳遞至自訂建置工具，進而導致產生一或多個輸出檔案。 例如，MFC 應用程式中的說明檔是使用自訂建置工具所建置。 如需詳細資訊，請參閱[如何：新增自訂建置工具至 MSBuild 專案](how-to-add-custom-build-tools-to-msbuild-projects.md)並[指定自訂建置工具](specifying-custom-build-tools.md)。
+   自訂建置工具是與一或多個檔案建立關聯的建置規則。 自訂建置步驟可以將輸入檔案傳遞至自訂建置工具，進而導致產生一或多個輸出檔案。 例如，MFC 應用程式中的說明檔是使用自訂建置工具所建置。 如需詳細資訊，請參閱[如何：將自訂建置工具新增至 MSBuild 專案](how-to-add-custom-build-tools-to-msbuild-projects.md)和[指定自訂建置工具](specifying-custom-build-tools.md)。
 
 - **建置事件**
 
@@ -73,5 +73,5 @@ ms.locfileid: "57825968"
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual Studio Projects - C++](creating-and-managing-visual-cpp-projects.md)<br>
+[Visual Studio 專案-c + +](creating-and-managing-visual-cpp-projects.md)<br>
 [建置命令和屬性的一般巨集](reference/common-macros-for-build-commands-and-properties.md)

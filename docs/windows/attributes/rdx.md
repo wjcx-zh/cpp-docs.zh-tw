@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: 0b21e94ce3c54c0234dd7883aac3ef5cadbbc009
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2790c3de01d21242daee73fc442ad22d88739355
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677873"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023876"
 ---
 # <a name="rdx"></a>rdx
 
@@ -48,8 +48,8 @@ ms.locfileid: "50677873"
 |-|-|
 |**適用於**|**類別**或是**struct**成員|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

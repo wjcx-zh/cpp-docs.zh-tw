@@ -18,16 +18,16 @@ helpviewer_keywords:
 - _interlockedbittestandreset64 intrinsic
 - _interlockedbittestandreset intrinsic
 ms.assetid: 9bbb1442-f2e9-4dc2-b0da-97f3de3493b9
-ms.openlocfilehash: 5b32dc9eb41285afb653817629148b9f666201e8
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 54ea8b1ccac15eab600c91302969b606c188dc59
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627198"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040646"
 ---
 # <a name="interlockedbittestandreset-intrinsic-functions"></a>_interlockedbittestandreset 內建函式
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 產生指令，可將位址 `b` 的位元 `a` 設定為零，並傳回其原始值。
 
@@ -74,7 +74,7 @@ unsigned char _interlockedbittestandreset64_HLERelease(
 
 #### <a name="parameters"></a>參數
 
-*a*<br/>
+*一個*<br/>
 [in]要檢查的記憶體指標。
 
 *b*<br/>
@@ -86,13 +86,13 @@ unsigned char _interlockedbittestandreset64_HLERelease(
 
 ## <a name="requirements"></a>需求
 
-|內建|架構|頁首|
+|內建|架構|標頭|
 |---------------|------------------|------------|
 |`_interlockedbittestandreset`|x86、 x64、 ARM|\<intrin.h>|
-|`_interlockedbittestandreset_acq`, `_interlockedbittestandreset_nf`, `_interlockedbittestandreset_rel`|ARM|\<intrin.h>|
-|`_interlockedbittestandreset_HLEAcquire`、 `_interlockedbittestandreset_HLERelease`|x86、x64|\<immintrin.h>|
+|`_interlockedbittestandreset_acq`中， `_interlockedbittestandreset_nf`中， `_interlockedbittestandreset_rel`|ARM|\<intrin.h>|
+|`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86、x64|\<immintrin.h>|
 |`_interlockedbittestandreset64`|X64|\<intrin.h>|
-|`_interlockedbittestandreset64_HLEAcquire`、 `_interlockedbittestandreset64_HLERelease`|X64|\<immintrin.h>|
+|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|X64|\<immintrin.h>|
 
 ## <a name="remarks"></a>備註
 
@@ -104,7 +104,7 @@ unsigned char _interlockedbittestandreset64_HLERelease(
 
 這些常式僅以內建函式的形式供您使用。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __vmx_vmptrld intrinsic
 - VMPTRLD instruction
 ms.assetid: 95c9ec5b-1a81-41ba-983e-327bd6a65fcb
-ms.openlocfilehash: 4f74a69bf0a4a780834dc9669c1266c82f7038e6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e3d552720d454a4f22af368616b3953452c6db0e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325905"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040419"
 ---
 # <a name="vmxvmptrld"></a>__vmx_vmptrld
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 載入至目前的虛擬機器控制結構 (VMCS) 的指標，從指定的位址。
 
@@ -58,7 +58,7 @@ VMCS 指標是 64 位元的實體位址。
 
 **標頭檔** \<intrin.h >
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

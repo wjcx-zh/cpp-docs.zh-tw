@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-ms.openlocfilehash: 9a0aec5ec2142159feb592419056da0f100914d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 223acf774d1cc90d84aed2d0d0c8cb59fc778fa1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482091"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034708"
 ---
 # <a name="control"></a>控制項
 
@@ -52,8 +52,8 @@ class CTest : public ICustom {};
 |-|-|
 |**適用於**|**類別**，**結構**|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

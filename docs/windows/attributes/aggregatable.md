@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: 74a561b9b70c5aee36781d102835c73dec2c3ac2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d5ceb46a124db8c0082495d48e6ee0e21655422
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582448"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029287"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -25,7 +25,7 @@ ms.locfileid: "50582448"
 
 ### <a name="parameters"></a>參數
 
-*值*<br/>
+*value*<br/>
 （選擇性）表示 COM 物件可以彙總的參數：
 
 - `never` 無法彙總的 COM 物件。
@@ -75,7 +75,7 @@ class CMyClass {};
 |**適用於**|**類別**，**結構**|
 |**可重複**|否|
 |**必要屬性**|一或多個項目： `coclass`， `progid`，或`vi_progid`。|
-|**無效屬性**|無|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

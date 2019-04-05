@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom attributes
 - custom attributes, defining
 ms.assetid: af9998a5-aa12-4b94-9a43-97ce99026e29
-ms.openlocfilehash: bfd09ee0a53b0677bc53bede918b9a4972a3abba
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: fbb1c629f23c5d70a78d62db2a3634cbfc489967
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58777385"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034046"
 ---
 # <a name="custom-attributes-c"></a>自訂屬性 (C++)
 
@@ -18,11 +18,11 @@ ms.locfileid: "58777385"
 
 如需定義新的自訂屬性，請參閱，
 
-- [使用者定義的屬性](../../extensions/user-defined-attributes-cpp-component-extensions.md)
+- [使用者定義屬性](../../extensions/user-defined-attributes-cpp-component-extensions.md)
 
 - [屬性](attribute.md)（已被取代的語法）。
 
 ## <a name="see-also"></a>另請參閱
 
-[attribute](attribute.md)<br/>
+[屬性](attribute.md)<br/>
 [自訂屬性 (C++)](custom-attributes-cpp.md)

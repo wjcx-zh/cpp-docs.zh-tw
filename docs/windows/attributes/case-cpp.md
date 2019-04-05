@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-ms.openlocfilehash: 1ed107b78ea5638d93a773e19de13b4c1fe1036c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3058f2fe6f35e1b11d4790780cb0fcdcaada706
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648405"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038196"
 ---
 # <a name="case-c"></a>case (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "50648405"
 
 #### <a name="parameters"></a>參數
 
-*值*<br/>
+*value*<br/>
 可能的輸入的值，您要提供處理。 型別**值**可以是下列類型之一：
 
 - `int`
@@ -71,8 +71,8 @@ struct SizedValue2 {
 |-|-|
 |**適用於**|成員**類別**或**結構**|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

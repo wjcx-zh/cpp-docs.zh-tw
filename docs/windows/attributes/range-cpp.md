@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: b75915b901f55ce7ef8d295531ab5148c6535c93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ce941fe95f2bbef3895c039984db1e1d2985ae1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644956"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029534"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -25,10 +25,10 @@ ms.locfileid: "50644956"
 
 ### <a name="parameters"></a>參數
 
-*low*<br/>
+*低*<br/>
 下限範圍值。
 
-*high*<br/>
+*高*<br/>
 高範圍的值。
 
 ## <a name="remarks"></a>備註
@@ -59,8 +59,8 @@ __interface ICustom {
 |-|-|
 |**適用於**|介面方法，介面參數|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

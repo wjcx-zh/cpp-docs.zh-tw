@@ -7,18 +7,18 @@ helpviewer_keywords:
 - templates, OLE DB provider
 - OLE DB providers, templates
 ms.assetid: c90b7523-dbff-431c-be06-eed9055710d2
-ms.openlocfilehash: 23a455eef5645aa027a9fdb97baaea948500cd6c
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 79b225fb45c05a0b324f441654e63c6ea9f4918f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265057"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030903"
 ---
 # <a name="working-with-ole-db-provider-templates"></a>使用 OLE DB 提供者樣板
 
 若要了解如何使用 OLE DB 提供者範本，請參閱下列主題：
 
-- [將介面新增至提供者](../../data/oledb/adding-an-interface-to-your-provider.md)
+- [將介面加入至提供者](../../data/oledb/adding-an-interface-to-your-provider.md)
 
 - [在提供者內參考屬性](../../data/oledb/referencing-a-property-in-your-provider.md)
 
@@ -36,5 +36,5 @@ ms.locfileid: "51265057"
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 提供者範本參考](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[OLE DB 提供者樣板參考](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)

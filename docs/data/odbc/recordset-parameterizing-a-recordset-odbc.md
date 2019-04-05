@@ -7,12 +7,12 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: f58a33a0c43cb0d70d98f3f2ae33f766058b1c23
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: df67256c54cae3e2adb054d653d3e58bb91dd631
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331265"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026158"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>資料錄集：參數化資料錄集 (ODBC)
 
@@ -46,7 +46,7 @@ ms.locfileid: "51331265"
 
 - 執行階段引數傳遞給預先定義的查詢。
 
-   若要將參數傳遞給預存程序，您必須指定完整的自訂 ODBC**呼叫**陳述式，使用參數替代符號，當您呼叫`Open`，覆寫資料錄集的預設 SQL 陳述式。 如需詳細資訊，請參閱 < [crecordset:: Open](../../mfc/reference/crecordset-class.md#open)中*類別庫參考*並[SQL： 自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)並[資料錄集： 宣告預先定義的查詢 (ODBC) 的類別](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)。
+   若要將參數傳遞給預存程序，您必須指定完整的自訂 ODBC**呼叫**陳述式，使用參數替代符號，當您呼叫`Open`，覆寫資料錄集的預設 SQL 陳述式。 如需詳細資訊，請參閱 < [crecordset:: Open](../../mfc/reference/crecordset-class.md#open)中*類別庫參考*和[SQL:自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)和[資料錄集：預先定義的查詢 (ODBC) 宣告的類別](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)。
 
 - 有效率地執行不同的參數資訊的許多種需求。
 
@@ -75,19 +75,19 @@ ms.locfileid: "51331265"
                                        // for some drivers
     ```
 
-   如需如何正確使用引號括住，來篩選字串的討論，請參閱[資料錄集： 篩選資料錄 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。
+   如需如何正確使用引號括住，來篩選字串的討論，請參閱[資料錄集：篩選資料錄 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。
 
    參數為不同的值每次您重新資料錄集查詢新的學生識別碼。
 
    > [!TIP]
    > 使用參數是比只是篩選器更有效率。 以參數化資料錄集，資料庫必須處理 SQL**選取**陳述式一次。 已篩選的資料錄集，如果沒有參數，如 **選取** 必須處理陳述式每次您`Requery`使用新的篩選值。
 
-如需有關篩選的詳細資訊，請參閱[資料錄集： 篩選資料錄 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。
+如需有關篩選的詳細資訊，請參閱[資料錄集：篩選資料錄 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。
 
 ##  <a name="_core_parameterizing_your_recordset_class"></a> 參數化資料錄集類別
 
 > [!NOTE]
-> 本節適用於物件衍生自`CRecordset`的大量資料列中擷取尚未實作。 如果您使用大量資料列擷取，實作參數是類似的程序。 如需詳細資訊，請參閱 <<c0> [ 資料錄集： 擷取記錄中大量資料庫連接 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+> 本節適用於物件衍生自`CRecordset`的大量資料列中擷取尚未實作。 如果您使用大量資料列擷取，實作參數是類似的程序。 如需詳細資訊，請參閱[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 建立您的資料錄集類別之前，請決定您需要哪些參數，其資料類型為何，以及資料錄集如何使用它們。
 
@@ -114,7 +114,7 @@ ms.locfileid: "51331265"
 
    在精靈產生的欄位資料成員之後加入參數資料成員。 慣例是將"Param"這個字附加至每個使用者定義的參數名稱。
 
-1. 修改[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)在.cpp 檔案中的成員函式定義。 每個參數的資料成員新增至類別中新增的 RFX 函式呼叫。 如需撰寫 RFX 函式的詳細資訊，請參閱 <<c0> [ 資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。 之前的單一呼叫 RFX 呼叫的參數：
+1. 修改[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)在.cpp 檔案中的成員函式定義。 每個參數的資料成員新增至類別中新增的 RFX 函式呼叫。 如需撰寫 RFX 函式的詳細資訊，請參閱[資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。 之前的單一呼叫 RFX 呼叫的參數：
 
     ```cpp
     pFX->SetFieldType( CFieldExchange::param );
@@ -123,7 +123,7 @@ ms.locfileid: "51331265"
 
 1. 在您的資料錄集類別的建構函式，累加計數的參數， `m_nParams`。
 
-   如需資訊，請參閱[資料錄欄位交換： 精靈程式碼的使用](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)。
+   如需資訊，請參閱[資料錄欄位交換：精靈程式碼的使用](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)。
 
 1. 當您撰寫的程式碼，建立這個類別的資料錄集物件時，將"？"在您的 SQL 陳述式字串中每個位置是要取代之參數 （問號） 符號。
 
@@ -176,5 +176,5 @@ if( !rsStudents.Requery( ) )
 ## <a name="see-also"></a>另請參閱
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[資料錄集：新增、更新和刪除資料錄 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
-[資料錄集：資料錄集選取資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+[資料錄集：新增、 更新和刪除資料錄 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
+[資料錄集：資料錄集選取資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

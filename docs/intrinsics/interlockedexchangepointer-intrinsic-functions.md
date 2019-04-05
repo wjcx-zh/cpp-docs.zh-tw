@@ -20,16 +20,16 @@ helpviewer_keywords:
 - InterlockedExchangePointer_acq intrinsic
 - InterlockedExchangePointer intrinsic
 ms.assetid: 0eaca0b0-d79e-406b-892d-b3b462c50bbb
-ms.openlocfilehash: 021c754436d6abe877e6b7dd372ba235869d8975
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 1f6e66ae4d5524518c3388f5af843cc15f65da50
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627439"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024526"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>_InterlockedExchangePointer 內建函式
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 執行不可部分完成的交換作業，它會將做為第二個引數傳入的位址複製到第一個引數，並傳回第一個引數的原始位址。
 
@@ -76,11 +76,11 @@ void * _InterlockedExchangePointer_HLERelease(
 
 ## <a name="requirements"></a>需求
 
-|內建|架構|頁首|
+|內建|架構|標頭|
 |---------------|------------------|------------|
 |`_InterlockedExchangePointer`|x86、 x64、 ARM|\<intrin.h>|
-|`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<intrin.h>|
-|`_InterlockedExchangePointer_HLEAcquire`、 `_InterlockedExchangePointer_HLERelease`|具有 HLE 支援 x64|\<immintrin.h>|
+|`_InterlockedExchangePointer_acq`中， `_InterlockedExchangePointer_rel`中， `_InterlockedExchangePointer_nf`|ARM|\<intrin.h>|
+|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|具有 HLE 支援 x64|\<immintrin.h>|
 
 在 x86 架構上，`_InterlockedExchangePointer` 是呼叫 `_InterlockedExchange` 的巨集。
 
@@ -94,7 +94,7 @@ void * _InterlockedExchangePointer_HLERelease(
 
 這些常式僅以內建函式的形式供您使用。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

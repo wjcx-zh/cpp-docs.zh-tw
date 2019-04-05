@@ -1,19 +1,19 @@
 ---
-title: ODBC：設定 ODBC 資料來源
+title: ODBC:設定 ODBC 資料來源
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC data sources, configuring
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: 1cd03e6a-8d59-4eca-a8c6-1010582d5e67
-ms.openlocfilehash: 96f4694e8aa321dc5844fc413ae9740bec5a416c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 259f0e2afa61096e4529a50ee2ba7de07b293c46
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643075"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034127"
 ---
-# <a name="odbc-configuring-an-odbc-data-source"></a>ODBC：設定 ODBC 資料來源
+# <a name="odbc-configuring-an-odbc-data-source"></a>ODBC:設定 ODBC 資料來源
 
 若要使用[資料來源](../../data/odbc/data-source-odbc.md)與您在開發的應用程式，您必須使用 ODBC 管理員來設定它。 ODBC 管理員記錄的可用資料來源和其在 Windows 登錄中的連接資訊。 使用 ODBC 管理員來新增、 修改及刪除資料來源中的**Zdroje dat**  對話方塊中，可以新增或刪除 ODBC 驅動程式。
 
@@ -26,5 +26,5 @@ ODBC 管理員會自動安裝的 Microsoft Foundation Classes (MFC) 程式庫資
 
 ## <a name="see-also"></a>另請參閱
 
-[ODBC 基本概念](../../data/odbc/odbc-basics.md)<br/>
-[ODBC：直接呼叫 ODBC API 函式](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)
+[ODBC 的基本概念](../../data/odbc/odbc-basics.md)<br/>
+[ODBC:直接呼叫 ODBC API 函式](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)

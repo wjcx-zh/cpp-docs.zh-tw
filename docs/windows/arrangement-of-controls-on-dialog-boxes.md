@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CListBox class, scroll bar width
 - scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-ms.openlocfilehash: 3d79e48411006156ee4682adc736e83e226743af
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 878b7371dfa77880d68f1001444ed44b84d7240c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562974"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037417"
 ---
 # <a name="how-to-layout-controls-c"></a>如何：版面配置控制項 （c + +）
 
@@ -114,12 +114,12 @@ ms.locfileid: "57562974"
 |屬性|描述|
 |---|---|
 |**版面配置輔助線**|顯示版面配置輔助線設定。|
-|**無**|隱藏配置工具。|
+|**None**|隱藏配置工具。|
 |**尺規和輔助線**|啟用時，請將版面配置工具的尺規，並允許放入尺規的指南。 預設指南是邊界。|
-|**格線**|建立版面配置方格。 新的控制項將自動貼齊格線。|
+|**Grid**|建立版面配置方格。 新的控制項將自動貼齊格線。|
 |**格線間距**|對話方塊單位 (Dlu) 中，會顯示格線間距的設定。|
-|**Width:Dlu**|Dlu 中設定版面配置方格的寬度。 水平 DLU 是除以 4 對話方塊字型的平均寬度。|
-|**Height:Dlu**|Dlu 中設定版面配置方格的高度。 垂直 DLU 是平均除以 8 對話方塊字型的高度。|
+|**寬度:Dlu**|Dlu 中設定版面配置方格的寬度。 水平 DLU 是除以 4 對話方塊字型的平均寬度。|
+|**高度:Dlu**|Dlu 中設定版面配置方格的高度。 垂直 DLU 是平均除以 8 對話方塊字型的高度。|
 
 ### <a name="guides-and-margins"></a>輔助線和邊界
 
@@ -260,8 +260,8 @@ ms.locfileid: "57562974"
 
    |間距|描述|
    |---|---|
-   |**跨**|最左邊和右邊選取的控制項之間的平均空間控制項。|
-   |**向下**|最頂端和底部選取的控制項之間的平均空間控制項。|
+   |**橫向**|最左邊和右邊選取的控制項之間的平均空間控制項。|
+   |**下移**|最頂端和底部選取的控制項之間的平均空間控制項。|
 
 - 若要控制項置中，選取您想要重新排列的控制項。 移至功能表**格式** > **對齊對話方塊中央**，然後選擇下列的排列方式的其中一個：
 
@@ -274,8 +274,8 @@ ms.locfileid: "57562974"
 
    |排列方式|描述|
    |---|---|
-   |**右邊**|對齊按鈕的對話方塊中的右邊緣。|
-   |**下方**|對齊對話方塊中的下邊緣的按鈕。|
+   |**右**|對齊按鈕的對話方塊中的右邊緣。|
+   |**Bottom**|對齊對話方塊中的下邊緣的按鈕。|
 
    如果您選取按鈕以外的控制項，其位置不受影響。
 
@@ -286,5 +286,5 @@ Win32
 ## <a name="see-also"></a>另請參閱
 
 [管理對話方塊控制項](controls-in-dialog-boxes.md)<br/>
-[如何：新增、編輯或刪除控制項](adding-editing-or-deleting-controls.md)<br/>
-[如何：定義控制項存取與值](defining-mnemonics-access-keys.md)<br/>
+[如何：加入、 編輯或刪除控制項](adding-editing-or-deleting-controls.md)<br/>
+[HOW TO：定義控制存取和值](defining-mnemonics-access-keys.md)<br/>

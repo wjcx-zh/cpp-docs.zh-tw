@@ -23,12 +23,12 @@ helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: cd2f05b4944e26d8a96b3f96e4e39fda0ad8ee48
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: ca24a10f905e61feb2b090ba3966c752db3d4444
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328385"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041496"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>HOW TO：包含資源在編譯時期 （c + +）
 
@@ -54,7 +54,7 @@ ms.locfileid: "58328385"
 |---|---|
 | **符號標頭檔** | 可讓您變更儲存您的資源檔的符號定義的標頭檔的名稱。<br/><br/>如需詳細資訊，請參閱 <<c0> [ 變更符號標頭檔的名稱](../windows/changing-the-names-of-symbol-header-files.md)。 |
 | **唯讀符號指示詞** | 可讓您包含標頭檔包含不應該修改的符號。<br/><br/>比方說，符號檔案與其他專案共用。 這也可以包含 mfc.h 檔案。 如需詳細資訊，請參閱 <<c0> [ 包含共用 （唯讀） 或計算符號](../windows/including-shared-read-only-or-calculated-symbols.md)。 |
-| **編譯時間指示詞** | 可讓您包含會個別建立和編輯從您的主要資源檔中的資源的資源檔包含編譯時間指示詞 （例如這些指示詞有條件地包含資源），或包含自訂格式的資源。<br/><br/>您也可以使用**編譯時間指示詞方塊**包含標準 MFC 資源檔。 |
+| **編譯時期指示詞** | 可讓您包含會個別建立和編輯從您的主要資源檔中的資源的資源檔包含編譯時間指示詞 （例如這些指示詞有條件地包含資源），或包含自訂格式的資源。<br/><br/>您也可以使用**編譯時間指示詞方塊**包含標準 MFC 資源檔。 |
 
 > [!NOTE]
 > 這些文字方塊中的項目剢謅.rc 檔餇標示`TEXTINCLUDE 1`， `TEXTINCLUDE 2`，和`TEXTINCLUDE 3`分別。 如需詳細資訊，請參閱[TN035:使用 Visual c + + 中的多個資源檔和標頭檔](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)。
@@ -98,5 +98,5 @@ Win32
 ## <a name="see-also"></a>另請參閱
 
 [資源檔](../windows/resource-files-visual-studio.md)<br/>
-[如何：建立資源](../windows/how-to-create-a-resource-script-file.md)<br/>
-[如何：管理來源](../windows/how-to-copy-resources.md)<br/>
+[HOW TO：建立資源](../windows/how-to-create-a-resource-script-file.md)<br/>
+[HOW TO：管理資源](../windows/how-to-copy-resources.md)<br/>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - OLE DB consumers
 - OLE DB, data model
 ms.assetid: 886cb39d-652b-4557-93f0-4b1b0754d8bc
-ms.openlocfilehash: 65e4cf9dcade897a346e8f9bbc1985f9edede78e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5940ca65e42787c3156a9537cb3f3f6694339c0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443390"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031309"
 ---
 # <a name="ole-db-consumers-and-providers"></a>OLE DB 消費者和提供者
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-ms.openlocfilehash: e7d90cc2d1081b52370bcc189ce7545edf34a425
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d9d55fc2a340165480cab4036ad1e5323e6b625
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631331"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026038"
 ---
 # <a name="uuid-c-attributes"></a>uuid (C++ 屬性)
 
@@ -52,8 +52,8 @@ ms.locfileid: "50631331"
 |-|-|
 |**適用於**|**類別**， **struct**，**介面**，**聯集**，**列舉**|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

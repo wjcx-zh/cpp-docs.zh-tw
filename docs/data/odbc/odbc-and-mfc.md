@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MFC [C++], ODBC and
 - database connections [C++], MFC ODBC classes
 ms.assetid: 98f02fd7-1235-437b-89a9-edfd0fc797f7
-ms.openlocfilehash: 7c7540528bed2499ed9dfb09ed39658914c81e14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b7d04e2eb8bbb1adf96e05282861ef33e20434a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560624"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031176"
 ---
 # <a name="odbc-and-mfc"></a>ODBC 和 MFC
 
@@ -24,7 +24,7 @@ ms.locfileid: "50560624"
 
 本主題介紹 Microsoft Foundation Classes (MFC) 程式庫的 ODBC 為基礎的資料庫類別的主要概念，並提供類別如何一起運作的概觀。 如需有關 ODBC 和 MFC 的詳細資訊，請參閱下列主題：
 
-- [連接至資料來源](connecting-to-a-data-source.md)
+- [連接資料來源](connecting-to-a-data-source.md)
 
 - [選取和操作資料錄](selecting-and-manipulating-records.md)
 

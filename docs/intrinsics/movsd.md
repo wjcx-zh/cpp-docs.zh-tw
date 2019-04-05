@@ -8,16 +8,16 @@ helpviewer_keywords:
 - __movsd intrinsic
 - movsd instruction
 ms.assetid: eb5cccf3-aa76-47f0-b9fc-eeca38fd943f
-ms.openlocfilehash: 89c2e7bf6045821d01b23608552776aaf389b0cf
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 950e83f2cd03e92bb5a9f953affe8e7ff479a408
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331005"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031296"
 ---
 # <a name="movsd"></a>__movsd
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 產生的移動的字串 (`rep movsd`) 指令。
 
@@ -36,7 +36,7 @@ void __movsd(
 *目的地*<br/>
 [out]作業的目的地。
 
-*來源*<br/>
+*原始程式檔*<br/>
 [in]作業的來源。
 
 *計數*<br/>
@@ -83,7 +83,7 @@ int main()
 950 850 750 650 550 450 350 250 150 50
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

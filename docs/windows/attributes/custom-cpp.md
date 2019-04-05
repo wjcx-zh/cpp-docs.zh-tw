@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 7aca125879591f71fe2ba60f34b712918350940f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 227e67696e679452a9c6c0e18c04e3d918f7a93f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565694"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029430"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -31,7 +31,7 @@ ms.locfileid: "50565694"
 *uuid*<br/>
 唯一 ID。
 
-*值*<br/>
+*value*<br/>
 值，這個值可以放入變數。
 
 ## <a name="remarks"></a>備註
@@ -49,7 +49,7 @@ ms.locfileid: "50565694"
 |**適用於**|非 COM**介面**，**類別**， **enum**s`idl_module`方法、 介面成員、 介面參數**typedef**s，**union**s**結構**s|
 |**可重複**|是|
 |**必要屬性**|**coclass** （當使用類別上）|
-|**無效屬性**|無|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

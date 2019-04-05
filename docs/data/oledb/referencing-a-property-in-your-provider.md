@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-ms.openlocfilehash: d8c775af8f887deb7bf49016f9716fa0a76d2439
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c3e620cd760aa04df7d7d2209ef009a606675276
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415938"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028451"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>在提供者內參考屬性
 
@@ -19,7 +19,7 @@ ms.locfileid: "57415938"
 
 下列範例假設您嘗試從資料列集取得的屬性。 使用工作階段或命令的程式碼很類似，但使用不同的介面。
 
-建立[CDBPropSet](../../data/oledb/cdbpropset-class.md)物件做為建構函式的參數使用的屬性群組。 例如: 
+建立[CDBPropSet](../../data/oledb/cdbpropset-class.md)物件做為建構函式的參數使用的屬性群組。 例如：
 
 ```cpp
 CDBPropSet propset(DBPROPSET_ROWSET);
@@ -68,4 +68,4 @@ if (pPropSet)
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 OLE DB 提供者範本](../../data/oledb/working-with-ole-db-provider-templates.md)
+[使用 OLE DB 提供者樣板](../../data/oledb/working-with-ole-db-provider-templates.md)

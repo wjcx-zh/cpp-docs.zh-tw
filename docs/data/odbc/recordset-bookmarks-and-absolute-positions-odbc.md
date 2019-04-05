@@ -21,12 +21,12 @@ helpviewer_keywords:
 - GetBookmark method
 - SetAbsolutePosition method, bookmarks
 ms.assetid: 189788d6-33c1-41c5-9265-97db2a5d43cc
-ms.openlocfilehash: 826c1c0124eb261c97fff8f1e2fa01c8becb073a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4a223f01b25b4c321ccfb4f4c03c3c5241381ec
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500930"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023785"
 ---
 # <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>資料錄集：書籤和絕對位置 (ODBC)
 
@@ -80,7 +80,7 @@ rs.SetBookmark( varRecordToReturnTo );
 > [!NOTE]
 >  一筆記錄的絕對位置是可能不可靠。 如果使用者刪除記錄集的資料錄，任何後續的記錄變更的序數位置。 書籤是移動目前的資料錄的建議的方法。 如需詳細資訊，請參閱 < [MFC ODBC 中的書籤](#_core_bookmarks_in_mfc_odbc)。
 
-如需有關資料錄集瀏覽的詳細資訊，請參閱[資料錄集： 捲動 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)。
+如需有關資料錄集瀏覽的詳細資訊，請參閱[資料錄集：捲動 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-ms.openlocfilehash: d402f2a1292088b52ce921bbc0007ab96554189e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 749469c7ae2acf3a0da92d24a51bbfca9b68971d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58783987"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033517"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL 命名空間
 
@@ -48,7 +48,7 @@ namespace Microsoft::WRL;
 |[ClassFactory 類別](classfactory-class.md)|實作 `IClassFactory` 介面的基本功能。|
 |[ComPtr 類別](comptr-class.md)|建立代表範本參數所指定之介面的 *「智慧型指標」* (Smart Pointer) 類型。 ComPtr 自動維護基礎介面指標的參考計數，並在參考計數歸零時釋放介面。|
 |[DeferrableEventArgs 類別](deferrableeventargs-class.md)|樣板類別，用於延遲的事件引數類型。|
-|[EventSource 類別](eventsource-class.md)|表示事件。 `EventSource` 成員函式會新增、移除及叫用事件處理常式。|
+|[EventSource 類別](eventsource-class.md)|表示事件。 `EventSource` 成員函式會新增、 移除及叫用事件處理常式。|
 |[FtmBase 類別](ftmbase-class.md)|代表無限制執行緒封送處理器物件。|
 |[Module 類別](module-class.md)|表示相關物件的集合。|
 |[RuntimeClass 類別](runtimeclass-class.md)|表示繼承指定數目的介面的具現化類別，並提供指定的 Windows 執行階段、傳統 COM 和弱式參考支援。|

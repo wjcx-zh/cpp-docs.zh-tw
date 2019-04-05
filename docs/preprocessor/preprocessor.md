@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
-ms.openlocfilehash: bd139dcbbbe519cc4c9750a657f8b47c5a5bcd18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1443d88fdba470cb8ed5058c9a9012bfbdc5bc7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530958"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028570"
 ---
 # <a name="preprocessor"></a>前置處理器
 前置處理器是文字處理器，會在轉譯的第一個階段操作原始程式檔的文字。 前置處理器不會剖析原始程式文字，但會將原始程式文字分解為用於尋找巨集呼叫的語彙基元。 雖然編譯器通常在第一次傳遞時叫用前置處理器，但也可以分別叫用前置處理器，在不進行編譯的情況下處理文字。
@@ -24,11 +24,11 @@ ms.locfileid: "50530958"
 
 - [Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 您可以取得您的程式碼使用前置處理後的清單[/E](../build/reference/e-preprocess-to-stdout.md)或是[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)編譯器選項。 兩個選項均會叫用前置處理器，並將產生的文字輸出到標準輸出裝置 (通常是主控台)。 這兩個選項之間的差異是 /E 包括 `#line` 指示詞，而 /EP 則會刪除這些指示詞。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ##  <a name="_predir_special_terminology"></a> 特殊術語
 

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - rep movsq instruction
 - movsq instruction
 ms.assetid: be116a6e-2176-4ca4-93b1-9ccf3e7e7835
-ms.openlocfilehash: 06f42befa24d4024b3ad4b0c0a8d0897cb2aee9b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 4e4908cd5ffc28840b5a48b735048cccb557e97c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326364"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036743"
 ---
 # <a name="movsq"></a>__movsq
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 會產生重複的移動字串 (`rep movsq`) 指令。
 
@@ -36,7 +36,7 @@ void __movsq(
 *目的地*<br/>
 [out]作業的目的地。
 
-*來源*<br/>
+*原始程式檔*<br/>
 [in]作業的來源。
 
 *計數*<br/>
@@ -83,7 +83,7 @@ int main()
 950 850 750 650 550 450 350 250 150 50
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4274
 ms.assetid: 5a948680-7ed1-469f-978d-ae99d154e161
-ms.openlocfilehash: dcdf804ac6e02d2bb161751db054d7f1f62ddbb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f73fa8e09baab127e7755ebe3def69c2fb585744
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564589"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028456"
 ---
 # <a name="compiler-warning-level-1-c4274"></a>編譯器警告 （層級 1） C4274
 
-\#ident 忽略;請參閱 #pragma 註解 （exestr，'string'） 的文件
+\#ident ignored; see documentation for #pragma comment(exestr, 'string')
 
 `#ident`指示詞，將使用者指定的字串插入的物件或可執行檔，已被取代。 因此，編譯器會忽略指示詞。
 

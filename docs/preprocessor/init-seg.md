@@ -9,16 +9,16 @@ helpviewer_keywords:
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-ms.openlocfilehash: f11ec6d3cee7af2ce785555af9b73d8c0eb58638
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 801496739fd9bd2b8a14e699ca4da9fe79f3a28d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532612"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026626"
 ---
 # <a name="initseg"></a>init_seg
 
-**C + + 特定**
+**C++ 專有的**
 
 指定會影響啟始程式碼執行順序的關鍵字或程式碼區段。
 
@@ -36,13 +36,13 @@ ms.locfileid: "50532612"
 
 選項**init_seg** pragma 會：
 
-*compiler*<br/>
+*編譯器*<br/>
 針對 Microsoft C 執行階段程式庫初始化保留。 這個群組中的物件會最先結構。
 
 *lib*<br/>
 可供協力廠商類別程式庫廠商進行初始化。 此群組中的物件建構後標示*編譯器*但在任何其他項目之前。
 
-*user*<br/>
+*使用者*<br/>
 可供任何使用者使用。 這個群組中的物件會最後結構。
 
 *區段名稱*允許明確指定初始化區段。 在使用者指定的物件*區段名稱*不會隱含建構; 不過，將其位址放在名為區段*區段名稱*。

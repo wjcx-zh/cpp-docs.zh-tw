@@ -5,12 +5,12 @@ helpviewer_keywords:
 - rowsets, OLE DB object model
 - OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
-ms.openlocfilehash: 83e94a1075392bdf730b98f8f10a9751662ec976
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 303ad4166f0f1126182956fae9c19f513be7cfb3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486797"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039151"
 ---
 # <a name="ole-db-object-model"></a>OLE DB 物件模型
 
@@ -62,7 +62,7 @@ OLE DB 物件模型是由下列物件或元件所組成。 第四個物件或 �
 
 - 持久性，交易進行永續性的變更
 
-## <a name="enumerators"></a>列舉值
+## <a name="enumerators"></a>列舉程式
 
 列舉程式會搜尋可用的資料來源和其他列舉程式。 針對特定資料來源不自訂的取用者會使用列舉值，搜尋要使用的資料來源。
 

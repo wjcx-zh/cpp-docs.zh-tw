@@ -9,40 +9,40 @@ helpviewer_keywords:
 - forScope conform pragma
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
-ms.openlocfilehash: 6589fe23359eecd654b23380747fbd3213c54dce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35c3b06106779a9056f682ff76c6ed4b4ab1ab41
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432899"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026574"
 ---
 # <a name="conform"></a>conform
-**C + + 特定**
+**C++ 專有的**
 
 指定的執行階段行為[/zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)編譯器選項。
 
 ## <a name="syntax"></a>語法
 
-> **#pragma 符合 (** *名稱*[**，顯示**] [**，** {**上** | **關閉**}][[**，** {**推播** | **pop** }] [**，** *識別碼*]] **)**
+> **#pragma conform(** *name* [**, show** ] [**,** { **on** | **off** } ] [ [**,** { **push** | **pop** } ] [**,** *identifier* ] ] **)**
 
 ### <a name="parameters"></a>參數
 
-*name*<br/>
+*名稱*<br/>
 指定要修改的編譯器選項名稱。 唯一有效*名稱*是`forScope`。
 
 **顯示**<br/>
-（選擇性）導致目前的設定*名稱*（true 或 false），在編譯期間透過警告訊息顯示。 例如，`#pragma conform(forScope, show)`。
+（選擇性）導致目前的設定*名稱*（true 或 false），在編譯期間透過警告訊息顯示。 例如， `#pragma conform(forScope, show)` 。
 
 **在 **，**關閉**<br/>
 （選擇性）設定*名稱*要**上**讓[/zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)編譯器選項。 預設值是**關閉**。
 
 **push**<br/>
-（選擇性）將推入的目前值*名稱*至內部編譯器堆疊。 如果您指定*識別碼*，您可以指定**上**或是**關閉**值*名稱*推送至堆疊。 例如，`#pragma conform(forScope, push, myname, on)`。
+（選擇性）將推入的目前值*名稱*至內部編譯器堆疊。 如果您指定*識別碼*，您可以指定**上**或是**關閉**值*名稱*推送至堆疊。 例如， `#pragma conform(forScope, push, myname, on)` 。
 
 **pop**<br/>
 （選擇性）設定的值*名稱*頂端的內部編譯器堆疊，然後從堆疊中推出的值。 如果指定的識別項，但**pop**，將會推出堆疊，直到它找到的記錄*識別項*，這也會從; 的目前值*名稱*中在堆疊上的下一筆記錄會變成的新值*名稱*。 如果您指定**pop**具有*識別項*不在堆疊上，記錄**pop**會被忽略。
 
-*identifier*<br/>
+*識別項*<br/>
 （選擇性）可以是隨附**推播**或是**pop**命令。 如果*識別碼*使用時，則**上**或是**關閉**規範也可以使用。
 
 ## <a name="example"></a>範例

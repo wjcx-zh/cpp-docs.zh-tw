@@ -20,12 +20,12 @@ helpviewer_keywords:
 - OnRowChange method
 - OnRowsetChange method
 ms.assetid: fbfd0cb2-38ff-4b42-899a-8de902f834b8
-ms.openlocfilehash: 8ad3fe7a79d4847c4583f79229e4cf4aad616fa8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 552fcdcee99f1bfe78a28c6ea41a89557f1682f4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417342"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026064"
 ---
 # <a name="irowsetnotifyimpl-class"></a>IRowsetNotifyImpl 類別
 

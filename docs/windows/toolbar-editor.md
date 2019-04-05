@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 83402159d19f07cf94a0d00ccd79d68549b124e9
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 9d50561c598f17e251425972590c0663efe6e832
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328853"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038148"
 ---
 # <a name="toolbar-editor-c"></a>工具列編輯器 （c + +）
 
@@ -90,9 +90,9 @@ ms.locfileid: "58328853"
 
 |屬性|描述|
 |--------------|-----------------|
-|**ID**|定義按鈕的識別碼。 下拉式清單提供常見**識別碼**名稱。|
-|[寬度]|設定按鈕的寬度。 建議您使用 16 像素為單位。|
-|[高度]|設定按鈕的高度。 一個按鈕的高度變更工具列上的所有按鈕的高度。 建議使用 15 像素為單位。|
+|**識別碼**|定義按鈕的識別碼。 下拉式清單提供常見**識別碼**名稱。|
+|**寬度**|設定按鈕的寬度。 建議您使用 16 像素為單位。|
+|**高度**|設定按鈕的高度。 一個按鈕的高度變更工具列上的所有按鈕的高度。 建議使用 15 像素為單位。|
 |**提示**|定義在狀態列中顯示的訊息。 新增*\n* ，並將名稱加入**工具提示**加入工具列按鈕。 如需詳細資訊，請參閱 <<c0> [ 建立工具提示](../windows/creating-a-tool-tip-for-a-toolbar-button.md)。|
 
 **寬度**並**高度**適用於所有按鈕。 用來建立工具列點陣圖的最大寬度為 2048，因此如果您將按鈕寬度*512*只能有四個按鈕，如果您將寬度設成*513*，只能有三個按鈕。

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - __umulh intrinsic
 ms.assetid: d241b53a-e6f7-4af1-9f6e-84e149158f03
-ms.openlocfilehash: 6a0d427f32e275725177b10f01565e6947760f09
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 3a42de276b483f98e2eaf9d0c8505d7f1d5b5bca
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328531"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026561"
 ---
 # <a name="umulh"></a>__umulh
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 傳回兩個 64 位元不帶正負號整數之乘積的 64 高位元。
 
@@ -30,7 +30,7 @@ unsigned __int64 __umulh(
 
 #### <a name="parameters"></a>參數
 
-*a*<br/>
+*一個*<br/>
 [in]要相乘的第一個數字。
 
 *b*<br/>
@@ -78,7 +78,7 @@ int main()
 0x10 * 0xfedcba9876543210 = 0xfedcba98765432100
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

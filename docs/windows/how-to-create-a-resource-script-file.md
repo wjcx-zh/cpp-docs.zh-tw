@@ -36,12 +36,12 @@ helpviewer_keywords:
 - resources [C++], templates
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: a18c24685ff0d5f65970a094730d1587abffb601
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c22df99240c0fa076124e33224a4f6f4ab9a957e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563026"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028518"
 ---
 # <a name="how-to-create-resources-c"></a>HOW TO：建立資源 （c + +）
 
@@ -119,7 +119,7 @@ ms.locfileid: "57563026"
 |---|---|
 | **資源類型** | 指定您想要建立的資源的類型。<br/><br/>您可以展開資料指標和對話方塊資源類別來顯示額外的資源，都位於 *...\Microsoft visual Studio\<版本\>\VC\VCResourceTemplates\\< LCID\>\mfc.rct*。 如果您需要加入.rct 檔案，請將它們放在這裡，或指定另一個[include 路徑](../windows/how-to-specify-include-directories-for-resources.md)。 在最上層樹狀結構控制項中顯示的資源是 Visual Studio 所提供的預設資源。 .Rct 檔案中的資源會出現在適當分類底下的第二個層級。 沒有任何預先設定的限制，您可以加入的.rct 檔案數目。<br/><br/> |
 | **新增** | 建立資源中選取的類型為基礎**資源類型**方塊，然後在適當的編輯器中開啟資源。<br/><br/>例如，如果您建立對話方塊資源時，就會開啟中的資源[對話方塊編輯器](../windows/dialog-editor.md)。 |
-| **Import** | 開啟**匯入**對話方塊，即可瀏覽至您想要匯入目前專案的資源。<br/><br/>您可以匯入點陣圖、 圖示、 游標、 HTML、 音效 (。WAV)，或自訂資源檔案。 |
+| **匯入** | 開啟**匯入**對話方塊，即可瀏覽至您想要匯入目前專案的資源。<br/><br/>您可以匯入點陣圖、 圖示、 游標、 HTML、 音效 (。WAV)，或自訂資源檔案。 |
 | **自訂** | 開啟**新的自訂資源**對話方塊來建立自訂的資源。<br/><br/>也包含**資源類型**提供一個文字方塊，讓您輸入的自訂資源類型名稱的屬性。 當您結束時，visual c + + 自動將單字的名稱。 自訂資源只會在中編輯[二進位編輯器](../windows/binary-editor.md)。 |
 
 當您建立新的資源時，Visual c + + 會指派一個唯一的名稱，比方說， `IDD_Dialog1`。 您可以藉由編輯資源屬性相關聯的資源編輯器中或在自訂此資源 ID[屬性 視窗](/visualstudio/ide/reference/properties-window)。
@@ -190,5 +190,5 @@ Win32
 ## <a name="see-also"></a>另請參閱
 
 [資源檔](../windows/resource-files-visual-studio.md)<br/>
-[如何：管理來源](../windows/how-to-copy-resources.md)<br/>
-[如何：在編譯時間包含資源](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[HOW TO：管理資源](../windows/how-to-copy-resources.md)<br/>
+[HOW TO：在編譯時期包含資源](../windows/how-to-include-resources-at-compile-time.md)<br/>

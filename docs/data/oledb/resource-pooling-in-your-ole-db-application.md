@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB, resource pooling
 - OLE DB providers, resource pooling
 ms.assetid: 2ead1bcf-bbd4-43ea-a307-bb694b992fc1
-ms.openlocfilehash: 2dc5fbe760b2e62eec8b974bb496e52d1de25f50
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 786c2b31bb93b0691d80885c86377e2afba8c1dc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51264954"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029300"
 ---
 # <a name="resource-pooling-in-your-ole-db-application"></a>OLE DB 應用程式的資源集中化
 
@@ -28,4 +28,4 @@ OLE DB 服務中識別集區連線繪製時的起點，`Initialize`呼叫。 連
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 資源共用和服務](../../data/oledb/ole-db-resource-pooling-and-services.md)
+[OLE DB 資源集中化和服務](../../data/oledb/ole-db-resource-pooling-and-services.md)

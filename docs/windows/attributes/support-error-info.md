@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - support_error_info attribute
 ms.assetid: 20a2b55c-4738-4b35-a71d-e5e9c3a7e3bc
-ms.openlocfilehash: 8aed647677b8c8d26fdca522c10ec9ecee9f87c9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c05b6735c5c29e44f3cc190a150a5efe02025519
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625989"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023759"
 ---
 # <a name="supporterrorinfo"></a>support_error_info
 
@@ -66,8 +66,8 @@ class CMyClass
 |-|-|
 |**適用於**|**Class - 類別**|
 |**可重複**|是|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

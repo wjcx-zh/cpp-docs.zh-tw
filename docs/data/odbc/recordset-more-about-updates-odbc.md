@@ -1,5 +1,5 @@
 ---
-title: 資料錄集：更多更新的詳細資訊 (ODBC)
+title: 資料錄集：深入了解更新 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
-ms.openlocfilehash: b34f6f51c6ff3a0995f4cf6044ddd7949644f42c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c29ff110fc507c4e449b2f3d082d98c159a35107
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665292"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040764"
 ---
-# <a name="recordset-more-about-updates-odbc"></a>資料錄集：更多更新的詳細資訊 (ODBC)
+# <a name="recordset-more-about-updates-odbc"></a>資料錄集：深入了解更新 (ODBC)
 
 本主題適用於 MFC ODBC 類別。
 
@@ -30,7 +30,7 @@ ms.locfileid: "50665292"
 - [深入了解的 Update 和 Delete 的成員函式](#_core_more_about_update_and_delete)。
 
 > [!NOTE]
->  本主題適用於物件衍生自`CRecordset`的大量資料列中擷取尚未實作。 如果您已實作大量資料列擷取，部分資訊不適用。 例如，您不能呼叫`AddNew`， `Edit`， `Delete`，和`Update`成員函式; 不過，您可以在其中執行的交易。 如需有關大量資料列擷取的詳細資訊，請參閱[資料錄集： 擷取記錄中大量資料庫連接 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主題適用於物件衍生自`CRecordset`的大量資料列中擷取尚未實作。 如果您已實作大量資料列擷取，部分資訊不適用。 例如，您不能呼叫`AddNew`， `Edit`， `Delete`，和`Update`成員函式; 不過，您可以在其中執行的交易。 如需有關大量資料列擷取的詳細資訊，請參閱[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ##  <a name="_core_how_other_operations_affect_updates"></a> 其他作業如何影響更新
 
@@ -53,7 +53,7 @@ ms.locfileid: "50665292"
 
 ###  <a name="_core_how_scrolling_affects_updates"></a> 捲動如何影響更新
 
-當您[資料錄集： 捲動 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)集中的資料錄，編輯緩衝區會填入新的目前資料錄 （上一筆記錄不儲存第一次）。 您可以捲動會跳過先前刪除的記錄。 如果您捲動之後`AddNew`或是`Edit`呼叫，而不需呼叫`Update`， `CommitTrans`，或`Rollback`首先，任何變更都會遺失 （與您無警告），新的記錄功能導入編輯緩衝區。 編輯緩衝區會填入捲動到哪一個記錄、 預存的資料錄已釋放，且不會變更資料來源上。 這同時適用於`AddNew`和`Edit`。
+當您[資料錄集：捲動 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)集中的資料錄，編輯緩衝區會填入新的目前資料錄 （上一筆記錄不儲存第一次）。 您可以捲動會跳過先前刪除的記錄。 如果您捲動之後`AddNew`或是`Edit`呼叫，而不需呼叫`Update`， `CommitTrans`，或`Rollback`首先，任何變更都會遺失 （與您無警告），新的記錄功能導入編輯緩衝區。 編輯緩衝區會填入捲動到哪一個記錄、 預存的資料錄已釋放，且不會變更資料來源上。 這同時適用於`AddNew`和`Edit`。
 
 ##  <a name="_core_your_updates_and_the_updates_of_other_users"></a> 您的更新和其他使用者的更新
 
@@ -105,7 +105,7 @@ ms.locfileid: "50665292"
 ## <a name="see-also"></a>另請參閱
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[資料錄集：資料錄集選取資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[資料錄集：資料錄集選取資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
 [資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
-[例外狀況：資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)
+[例外狀況: 資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)

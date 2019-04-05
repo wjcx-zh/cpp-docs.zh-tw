@@ -2,16 +2,16 @@
 title: 編譯器警告 (層級 4) C4435
 ms.date: 11/04/2016
 ms.assetid: a04524af-2b71-4ff9-9729-d9d1d1904ed7
-ms.openlocfilehash: 7db1d483f571289c5b890c223ba1e59ba3d1f41e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43c13c484d6e9accee7c4d2c58b72a4539a75c4c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572324"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041224"
 ---
 # <a name="compiler-warning-level-4-c4435"></a>編譯器警告 (層級 4) C4435
 
-'class1' : /vd2 底下的物件配置將因虛擬基底 'class2' 而變更
+' class1':/ Vd2 底下的物件配置將因虛擬基底 'class2' 而變更
 
 此警告預設為關閉。 如需詳細資訊，請參閱 [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 。
 

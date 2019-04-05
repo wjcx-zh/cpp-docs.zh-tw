@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, code_seg
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
-ms.openlocfilehash: 80edcb709073021ccf024aaf14c9a914bd8d8939
-ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
+ms.openlocfilehash: e566fb01bf70b343b75254a10466bdda2bc7ce1b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597699"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041237"
 ---
 # <a name="codeseg"></a>code_seg
 指定文字區段，其中函式儲存在 .obj 檔案中。
@@ -32,15 +32,15 @@ ms.locfileid: "51597699"
 **pop**<br/>
 （選擇性）從內部編譯器堆疊頂端移除記錄。
 
-*identifier*<br/>
+*識別項*<br/>
 （選擇性）當搭配**推播**，將名稱指派給內部編譯器堆疊上的記錄。 當搭配**pop**，會將記錄推出內部堆疊，直到*識別項*已移除; 如果*識別碼*找不到在內部堆疊上，不會推出。
 
 *識別項*可讓多筆記錄，是只使用一個快顯**pop**命令。
 
-「*區段名稱*"<br/>
+"*segment-name*"<br/>
 （選擇性）區段名稱。 當搭配**pop**，時會推出堆疊並*區段名稱*會變成作用中的文字區段名稱。
 
-「*區段類別*"<br/>
+"*segment-class*"<br/>
 （選擇性）會被忽略，包含與 c + + 的版本早於 2.0 版相容。
 
 ## <a name="remarks"></a>備註

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __svm_vmload intrinsic
 - VMLOAD instruction
 ms.assetid: b46a5592-db76-4ffc-8694-2f3494e28bed
-ms.openlocfilehash: 31f60096b60db7d8b135c686af87464060e0401a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 282f1c005c7eb59b2c590c70b38233c88c664e07
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584765"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031150"
 ---
 # <a name="svmvmload"></a>__svm_vmload
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 從指定的虛擬機器控制區塊 (VMCB) 中載入處理器狀態的子集。
 
@@ -36,7 +36,7 @@ void __svm_vmload(
 
 ## <a name="remarks"></a>備註
 
-`__svm_vmload` 函式相當於 `VMLOAD` 機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2： 系統程式設計中，「 文件數目 24593，修訂 3.11，位於[AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站台。
+`__svm_vmload` 函式相當於 `VMLOAD` 機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2:系統程式設計，> 文件數目 24593，修訂 3.11，位於[AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站台。
 
 ## <a name="requirements"></a>需求
 
@@ -46,7 +46,7 @@ void __svm_vmload(
 
 **標頭檔** \<intrin.h >
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

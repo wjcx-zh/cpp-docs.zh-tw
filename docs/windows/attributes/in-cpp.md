@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - in attribute
 ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
-ms.openlocfilehash: bf23b1c776eccc284e5329b62bd45b0bd678823f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06d78552ef2ebb878ed630eb377e6249ba60cad4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449695"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034533"
 ---
 # <a name="in-c"></a>in (C++)
 
@@ -39,7 +39,7 @@ ms.locfileid: "50449695"
 |-|-|
 |**適用於**|介面參數，介面方法|
 |**可重複**|否|
-|**必要屬性**|無|
+|**必要屬性**|None|
 |**無效屬性**|**retval**|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

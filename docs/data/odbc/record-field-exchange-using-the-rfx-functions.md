@@ -1,5 +1,5 @@
 ---
-title: 資料錄欄位交換：RFX 函式的使用
+title: 資料錄欄位交換：使用 RFX 函式
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC [C++], data types
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], data types
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
-ms.openlocfilehash: 00b995890cf0cced5d06c52c4d702c1c89111dc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc717336a5279e7eda1b7c39b19a7c76f9055cd3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489956"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035980"
 ---
-# <a name="record-field-exchange-using-the-rfx-functions"></a>資料錄欄位交換：RFX 函式的使用
+# <a name="record-field-exchange-using-the-rfx-functions"></a>資料錄欄位交換：使用 RFX 函式
 
 本主題說明如何使用 RFX 函式會呼叫主體所組成您`DoFieldExchange`覆寫。
 
 > [!NOTE]
->  本主題適用於衍生自類別[CRecordset](../../mfc/reference/crecordset-class.md)的大量資料列中擷取尚未實作。 如果您使用大量資料列擷取，被實作大量資料錄欄位交換 (Bulk RFX)。 大量 RFX 很類似 RFX。 若要了解這些差異，請參閱[資料錄集： 擷取記錄中大量資料庫連接 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主題適用於衍生自類別[CRecordset](../../mfc/reference/crecordset-class.md)的大量資料列中擷取尚未實作。 如果您使用大量資料列擷取，被實作大量資料錄欄位交換 (Bulk RFX)。 大量 RFX 很類似 RFX。 若要了解這些差異，請參閱[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 RFX 全域函式會交換資料錄集中的資料來源和欄位資料成員上的資料行之間的資料。 您撰寫 RFX 函式會呼叫您的資料錄集中[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)成員函式。 本主題簡要說明的函式，並顯示哪些 RFX 函式可供使用的資料類型。 [技術提示 43](../../mfc/tn043-rfx-routines.md)說明如何撰寫您自己的 RFX 函式的其他資料類型。
 
@@ -40,7 +40,7 @@ RFX 全域函式會交換資料錄集中的資料來源和欄位資料成員上�
 
 - （選擇性）在 `RFX_Text`函式，您有時會使用第五個參數來指定資料行的資料類型。
 
-如需詳細資訊，請參閱 RFX 函式之下[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)中*類別庫參考*。 如需範例時，您可能會進行特殊使用的參數，請參閱[資料錄集： 取得 Sum 和其他彙總結果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)。
+如需詳細資訊，請參閱 RFX 函式之下[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)中*類別庫參考*。 如需範例時，您可能會進行特殊使用的參數，請參閱[資料錄集：取得 Sum 和其他彙總的結果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)。
 
 ##  <a name="_core_rfx_data_types"></a> RFX 資料類型
 
@@ -60,13 +60,13 @@ RFX 全域函式會交換資料錄集中的資料來源和欄位資料成員上�
 |`RFX_Date`|`CTime`|
 
 
-如需詳細資訊，請參閱下方 RFX 函式文件[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)中*類別庫參考*。 如需 c + + 資料類型如何對應至 SQL 資料類型資訊，請參閱 < ANSI SQL 資料類型對應至 c + + 資料類型的資料表中[SQL: SQL 和 c + + 資料類型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)。
+如需詳細資訊，請參閱下方 RFX 函式文件[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)中*類別庫參考*。 如需 c + + 資料類型如何對應至 SQL 資料類型資訊，請參閱 < ANSI SQL 資料類型對應至 c + + 資料類型的資料表中[SQL:SQL 和 c + + 資料類型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
 [資料錄集：參數化資料錄集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
-[資料錄集：動態地繫結資料行 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
+[資料錄集：動態繫結資料行 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
 [CRecordset 類別](../../mfc/reference/crecordset-class.md)<br/>
 [CFieldExchange 類別](../../mfc/reference/cfieldexchange-class.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: c22d04f7a799ea720fb7d69ffc1aa21ddf9db55c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f051fe577087d81515ddf0b44dfb15ad0fb2c616
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468428"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041373"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -51,8 +51,8 @@ __interface IFireTabCtrl
 |-|-|
 |**適用於**|**typedef**，參數的介面，介面方法|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

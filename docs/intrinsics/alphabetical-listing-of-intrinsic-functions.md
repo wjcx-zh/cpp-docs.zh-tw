@@ -6,36 +6,36 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: 83b254b67cb2a7e09fbf57597996097a7afb5d76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67206e63d163b489c5087e6bc6759cde30a3d6c4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654763"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026190"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>依字母順序列出的內建函式
 
 下列章節將說明在部分或所有架構上可用的 Microsoft 特定內建函式。 其他支援的內建函式會由處理器製造商記錄在標頭檔或他們的網站中。 請參閱[ARM 內建函式](../intrinsics/arm-intrinsics.md)， [x86 內建函式](../intrinsics/x86-intrinsics-list.md)，並[x64 內建函式](../intrinsics/x64-amd64-intrinsics-list.md)各節來取得製造商說明文件的連結。 這裡; 不記錄針對它們實作的內建函式的 C 執行階段程式庫 (CRT) 函式這些函式所述[C 執行階段程式庫參考](../c-runtime-library/c-run-time-library-reference.md)。
 
-[__addfsbyte、 \__addfsword， \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
+[__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
 
-[__addgsbyte、 \__addgsword， \__addgsdword， \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)
+[__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)
 
 [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)
 
 [__assume](../intrinsics/assume.md)
 
-[_BitScanForward、_BitScanForward64](../intrinsics/bitscanforward-bitscanforward64.md)
+[_BitScanForward, _BitScanForward64](../intrinsics/bitscanforward-bitscanforward64.md)
 
-[_BitScanReverse、_BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)
+[_BitScanReverse, _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)
 
-[_bittest、_bittest64](../intrinsics/bittest-bittest64.md)
+[_bittest, _bittest64](../intrinsics/bittest-bittest64.md)
 
-[_bittestandcomplement、_bittestandcomplement64](../intrinsics/bittestandcomplement-bittestandcomplement64.md)
+[_bittestandcomplement, _bittestandcomplement64](../intrinsics/bittestandcomplement-bittestandcomplement64.md)
 
-[_bittestandreset、_bittestandreset64](../intrinsics/bittestandreset-bittestandreset64.md)
+[_bittestandreset, _bittestandreset64](../intrinsics/bittestandreset-bittestandreset64.md)
 
-[_bittestandset、_bittestandset64](../intrinsics/bittestandset-bittestandset64.md)
+[_bittestandset, _bittestandset64](../intrinsics/bittestandset-bittestandset64.md)
 
 [__cpuid、 \__cpuidex](../intrinsics/cpuid-cpuidex.md)
 
@@ -61,7 +61,7 @@ ms.locfileid: "50654763"
 
 [__incfsbyte、 \__incfsword， \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)
 
-[__incgsbyte、 \__incgsword， \__incgsdword， \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)
+[__incgsbyte, \__incgsword, \__incgsdword, \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)
 
 [__indword](../intrinsics/indword.md)
 
@@ -69,7 +69,7 @@ ms.locfileid: "50654763"
 
 [__int2c](../intrinsics/int2c.md)
 
-[_InterlockedAnd 內建函式](../intrinsics/interlockedadd-intrinsic-functions.md)
+[_InterlockedAdd 內建函式](../intrinsics/interlockedadd-intrinsic-functions.md)
 
 [_InterlockedAddLargeStatistic](../intrinsics/interlockedaddlargestatistic.md)
 
@@ -111,7 +111,7 @@ ms.locfileid: "50654763"
 
 [__ll_rshift](../intrinsics/ll-rshift.md)
 
-[__lzcnt16， \__lzcnt， \__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)
+[__lzcnt16, \__lzcnt, \__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)
 
 [_mm_cvtsi64x_ss](../intrinsics/mm-cvtsi64x-ss.md)
 
@@ -119,7 +119,7 @@ ms.locfileid: "50654763"
 
 [_mm_cvttss_si64x](../intrinsics/mm-cvttss-si64x.md)
 
-[_mm_extract_si64、_mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)
+[_mm_extract_si64，_mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)
 
 [_mm_insert_si64、_mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)
 
@@ -191,9 +191,9 @@ ms.locfileid: "50654763"
 
 [_ReturnAddress](../intrinsics/returnaddress.md)
 
-[_rotl8、_rotl16](../intrinsics/rotl8-rotl16.md)
+[_rotl8, _rotl16](../intrinsics/rotl8-rotl16.md)
 
-[_rotr8、_rotr16](../intrinsics/rotr8-rotr16.md)
+[_rotr8, _rotr16](../intrinsics/rotr8-rotr16.md)
 
 [__segmentlimit](../intrinsics/segmentlimit.md)
 

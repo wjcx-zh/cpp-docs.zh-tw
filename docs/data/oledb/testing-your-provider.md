@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing providers
 - OLE DB providers, testing
 ms.assetid: bf824fe4-81af-4ffb-beb3-4fa2928dc450
-ms.openlocfilehash: 9bb42af69a204c88e6068444642275b59ea5bf5c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d7a3adad546834e2bdc80a695f4c3bf2259dc0ba
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518290"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038313"
 ---
 # <a name="testing-your-provider"></a>測試提供者
 
@@ -25,4 +25,4 @@ ms.locfileid: "51518290"
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 OLE DB 提供者範本](../../data/oledb/working-with-ole-db-provider-templates.md)
+[使用 OLE DB 提供者樣板](../../data/oledb/working-with-ole-db-provider-templates.md)

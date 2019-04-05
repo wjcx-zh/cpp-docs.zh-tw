@@ -4,18 +4,18 @@ ms.date: 10/29/2018
 helpviewer_keywords:
 - OLE DB providers, using
 ms.assetid: 002a9731-7e06-49ac-be50-3cc26aa43759
-ms.openlocfilehash: 77869dbde4b177967dd2a75ab5b94506a365219c
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: c7cd75c9ff5fd42bae9883a6b7374cae6419b291
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265005"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034637"
 ---
 # <a name="advanced-provider-techniques"></a>進階的提供者技術
 
 如需進階的提供者技術的詳細資訊，請參閱下列主題：
 
-- [支援通知](../../data/oledb/supporting-notifications.md)
+- [支援告知](../../data/oledb/supporting-notifications.md)
 
 - [支援結構描述資料列集](../../data/oledb/supporting-schema-rowsets.md)
 
@@ -23,9 +23,9 @@ ms.locfileid: "51265005"
 
 - [通過 OLE DB 一致性測試](../../data/oledb/passing-ole-db-conformance-tests.md)
 
-- [OLE DB 資源共用和服務](../../data/oledb/ole-db-resource-pooling-and-services.md)
+- [OLE DB 資源集中化和服務](../../data/oledb/ole-db-resource-pooling-and-services.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 提供者範本參考](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[OLE DB 提供者樣板參考](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)

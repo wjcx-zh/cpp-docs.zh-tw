@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ODBC data sources, creating tables in
 - tables [C++], creating programmatically
 ms.assetid: 9ca68fb5-c3df-424a-a75c-e3fb01cc1b18
-ms.openlocfilehash: 139efb7a34baacb2bb6ad424d13f2d337eb12af6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61d3f3e39362db27d1e3abc00fa3cb9ea82b86e2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661652"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028395"
 ---
 # <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>資料來源：以程式設計方式建立 ODBC 資料來源資料表
 
 本主題說明如何建立資料表的資料來源，使用`ExecuteSQL`類別成員函式`CDatabase`，將函式傳遞字串，包含**CREATE TABLE** SQL 陳述式。
 
-一般 MFC ODBC 資料來源的詳細資訊，請參閱[資料來源 (ODBC)](../../data/odbc/data-source-odbc.md)。 本主題[資料來源： 以程式設計方式設定 ODBC 資料來源](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)描述建立資料來源。
+一般 MFC ODBC 資料來源的詳細資訊，請參閱[資料來源 (ODBC)](../../data/odbc/data-source-odbc.md)。 本主題[資料來源：以程式設計方式設定 ODBC 資料來源](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)描述建立資料來源。
 
 當您建立的資料來源時，您可以輕鬆地建立使用資料表`ExecuteSQL`成員函式與**CREATE TABLE** SQL 陳述式。 例如，如果您有`CDatabase`物件呼叫`myDB`，您可以使用下列的 MFC 程式碼來建立資料表：
 

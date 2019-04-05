@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - emitidl attribute
 ms.assetid: 85b80c56-578e-4392-ac03-8443c74ebb7d
-ms.openlocfilehash: 4270c760c0d9d0ab833ee96dfbbaa9d6205026f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c4055e0f14bced1e5047fc502a4bf274126f804
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437929"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031630"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -25,7 +25,7 @@ ms.locfileid: "50437929"
 
 ### <a name="parameters"></a>參數
 
-*state*<br/>
+*狀態*<br/>
 其中一個可能的值： `true`， `false`， `forced`， `restricted`， `push`，或`pop`。
 
 - 如果`true`，在原始程式碼檔案中遇到的任何 IDL 類別目錄屬性會放在所產生的.idl 檔案。 這是預設設定，如**emitidl**。
@@ -60,8 +60,8 @@ ms.locfileid: "50437929"
 |-|-|
 |**適用於**|任何位置|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

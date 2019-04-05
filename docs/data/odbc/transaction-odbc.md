@@ -10,12 +10,12 @@ helpviewer_keywords:
 - recordsets [C++], transactions
 - ODBC recordsets [C++], transactions
 ms.assetid: a2ec0995-2029-45f2-8092-6efd6f2a77f4
-ms.openlocfilehash: 0deb21a43ff17ca94efe29bdec37db7611331a86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a151ec5ca2b4bdc19bfa7dc626aebda0740a2c9e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615809"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023666"
 ---
 # <a name="transaction-odbc"></a>異動 (ODBC)
 
@@ -29,7 +29,7 @@ ms.locfileid: "50615809"
 呼叫`AddNew`並`Edit`成員函式`CRecordset`物件的資料來源，當您呼叫立即的影響`Update`。 `Delete` 呼叫也會立即生效。 相反地，您可以使用多個呼叫所組成的交易`AddNew`， `Edit`， `Update`，以及`Delete`，這會執行，但尚未認可，直到您呼叫`CommitTrans`明確。 藉由建立交易，您可以執行一系列的這類呼叫，同時保留其復原的能力。 如果重要的資源無法使用，或某些其他條件會阻止完成整個交易，您可以回復而不是認可交易。 在此情況下，屬於交易的變更都不會影響資料來源。
 
 > [!NOTE]
->  目前，類別`CRecordset`不支援更新資料來源，如果您已實作大量資料列擷取。 這表示您不能呼叫`AddNew`， `Edit`， `Delete`，或`Update`。 不過，您可以撰寫自己的函式來執行更新，然後呼叫這些函式中指定的交易。 如需有關大量資料列擷取的詳細資訊，請參閱[資料錄集： 擷取記錄中大量資料庫連接 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  目前，類別`CRecordset`不支援更新資料來源，如果您已實作大量資料列擷取。 這表示您不能呼叫`AddNew`， `Edit`， `Delete`，或`Update`。 不過，您可以撰寫自己的函式來執行更新，然後呼叫這些函式中指定的交易。 如需有關大量資料列擷取的詳細資訊，請參閱[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 > [!NOTE]
 >  除了會影響您的資料錄集，異動會影響 SQL 陳述式直接執行，只要您使用 ODBC **HDBC**聯您`CDatabase`物件或 ODBC **HSTMT**根據可**HDBC**。
@@ -43,9 +43,9 @@ ms.locfileid: "50615809"
 
 下列主題提供如何執行交易的詳細資訊：
 
-- [異動：在一個資料錄集內執行異動 (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
+- [交易：執行異動中的資料錄集 (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
 
-- [異動：異動如何影響更新 (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
+- [交易：異動如何影響更新 (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
 
 ## <a name="see-also"></a>另請參閱
 

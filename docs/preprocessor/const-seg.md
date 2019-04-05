@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, const_seg
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
-ms.openlocfilehash: ce932b068f5751b7cf1ceab969312defd18336f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c58f154f5e1ab6906b45d59f454a7dc2b5c0bfbe
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648340"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029618"
 ---
 # <a name="constseg"></a>const_seg
 指定的區段位置[const](../cpp/const-cpp.md)變數會儲存在.obj 檔案。
@@ -32,15 +32,15 @@ ms.locfileid: "50648340"
 **pop**<br/>
 （選擇性）從內部編譯器堆疊頂端移除記錄。
 
-*identifier*<br/>
+*識別項*<br/>
 （選擇性）當搭配**推播**，將名稱指派給內部編譯器堆疊上的記錄。 當搭配**pop**，會將記錄推出內部堆疊，直到*識別項*已移除; 如果*識別碼*找不到在內部堆疊上，不會推出。
 
 使用*識別碼*可讓一推出多筆記錄**pop**命令。
 
-「*區段名稱*"<br/>
+"*segment-name*"<br/>
 （選擇性）區段名稱。 當搭配**pop**，時會推出堆疊並*區段名稱*會變成作用中區段名稱。
 
-「*區段類別*"<br/>
+"*segment-class*"<br/>
 （選擇性）包含與 c + + 2.0 以前版本的相容性。 會忽略此項。
 
 ## <a name="remarks"></a>備註
@@ -51,7 +51,7 @@ OBJ 檔案可以使用檢視[dumpbin](../build/reference/dumpbin-command-line.md
 
 定義必須在 `const_seg` 中進行動態初始化的物件時，會產生未定義的行為。
 
-未包含參數的 `#pragma const_seg` 會將區段重設為 .rdata。
+`#pragma const_seg` 不含任何參數區段重設為.rdata。
 
 ## <a name="example"></a>範例
 

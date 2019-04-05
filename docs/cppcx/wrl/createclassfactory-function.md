@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CreateClassFactory function
 ms.assetid: 772d5d1b-8872-4745-81ca-521a39564713
-ms.openlocfilehash: e7e213d1b0679f17ce070de85ee9410ff9546716
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 323fce053707d6d00d1e17b641613d15607ab6f8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58784529"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040750"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory 函式
 
@@ -32,7 +32,7 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 
 ### <a name="parameters"></a>參數
 
-*flags*<br/>
+*旗標*<br/>
 一或多個組合[RuntimeClassType](runtimeclasstype-enumeration.md)列舉值。
 
 *entry*<br/>

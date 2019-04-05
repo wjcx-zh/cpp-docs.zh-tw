@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: 519bbe0bdbef786c95ca3f6711b344b7a4f6b641
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 9425f998f0e8fbe5f16e6eb136e00ba3fb7bd5d9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329877"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033679"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -26,10 +26,10 @@ ms.locfileid: "51329877"
 
 ### <a name="parameters"></a>參數
 
-*interfaces*<br/>
+*介面*<br/>
 以逗號分隔清單中會是成員的 IDL coclass 的介面。 指定單一介面的簡略方法是**實作 (** *interface_name* **)**。
 
-*dispinterfaces*<br/>
+*分配介面*<br/>
 以逗號分隔會是成員的 IDL coclass dispinterface 的清單。 速記方法來指定單一 dispinterface**實作 (分配介面 =** *dispinterface_name* **)**。
 
 ## <a name="remarks"></a>備註
@@ -44,8 +44,8 @@ ms.locfileid: "51329877"
 |-|-|
 |**適用於**|**類別**，**結構**|
 |**可重複**|是|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

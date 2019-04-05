@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 594ab4d02065e9b4efe1142c5ced9b76642e5481
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7aff6addffb13d2d45953d190eeaac518fe48d6d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488045"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039290"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -44,8 +44,8 @@ ms.locfileid: "50488045"
 |-|-|
 |**適用於**|**介面**， **typedef**，**類別**，方法中，**屬性**|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

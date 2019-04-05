@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [COM]
 - COM, attributes
 ms.assetid: 52a5dd70-e8be-4bba-afd6-daf90fe689a0
-ms.openlocfilehash: fa7e279f6b7c9c0932d404c336bcfd89bfd553a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb87d3861c6b3066cf482108e2ce2243c8196093
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644089"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038925"
 ---
 # <a name="com-attributes"></a>COM 屬性
 
@@ -20,7 +20,7 @@ COM 屬性插入程式碼，以支援 COM 開發和.NET Framework 通用語言�
 |屬性|描述|
 |---------------|-----------------|
 |[aggregatable](aggregatable.md)|表示控制項，可以彙總的另一個控制項。|
-|[aggregates](aggregates.md)|表示控制項彙總的目標類別。|
+|[彙總](aggregates.md)|表示控制項彙總的目標類別。|
 |[coclass](coclass.md)|建立 COM 物件，可實作 COM 介面。|
 |[com_interface_entry](com-interface-entry-cpp.md)|將 COM 對應中的介面項目。|
 |[implements_category](implements-category.md)|指定類別的實作的元件類別。|
@@ -30,7 +30,7 @@ COM 屬性插入程式碼，以支援 COM 開發和.NET Framework 通用語言�
 |[requires_category](requires-category.md)|指定所需的元件類別的類別。|
 |[support_error_info](support-error-info.md)|支援目標物件的錯誤報告功能。|
 |[synchronize](synchronize.md)|同步處理方法的存取。|
-|[threading](threading-cpp.md)|指定 COM 物件的執行緒模型。|
+|[執行緒處理](threading-cpp.md)|指定 COM 物件的執行緒模型。|
 |[vi_progid](vi-progid.md)|定義控制項與版本無關的 ProgID。|
 
 ## <a name="see-also"></a>另請參閱

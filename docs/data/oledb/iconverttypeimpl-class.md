@@ -14,12 +14,12 @@ helpviewer_keywords:
 - IConvertTypeImpl class
 - CanConvert method
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
-ms.openlocfilehash: e1117cfb8e68cbdc5432355315213faad903ea35
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 546a5a007f9e4c1c2a0e581eff2e7984947bdbb5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424648"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023720"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl 類別
 
@@ -77,4 +77,4 @@ STDMETHOD(CanConvert)(DBTYPE wFromType,
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)

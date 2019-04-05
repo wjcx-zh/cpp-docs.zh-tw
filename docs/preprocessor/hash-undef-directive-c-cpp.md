@@ -8,12 +8,12 @@ helpviewer_keywords:
 - undef directive (#undef)
 - preprocessor, directives
 ms.assetid: 88900e0e-2c19-4a63-b681-f3d3133c24ca
-ms.openlocfilehash: cb3a08165e41f336df0e141f50310f191cd83257
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f4f5ce244be6d7f4e13d7a2abc5d21232c08d9d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537263"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039003"
 ---
 # <a name="undef-directive-cc"></a>#undef 指示詞 (C/C++)
 移除 (取消定義) 先前使用 `#define` 建立的名稱。
@@ -45,11 +45,11 @@ identifier
 #undef ADD
 ```
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 巨集可以是從命令列中使用未定義`/U`選項，後面是未定義的巨集名稱。 發出此命令的效果就相當於一連串`#undef`*巨集名稱*檔案的開頭的陳述式。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - int 2c instruction
 - __int2c intrinsic
 ms.assetid: aa20ff30-adef-42bb-8577-8010f3122f8e
-ms.openlocfilehash: df90e87684a40dcd489c875e2fa49d96ebf94b40
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36ef8acd3d71c08a356d4210f16205828f691fa5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486199"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023486"
 ---
 # <a name="int2c"></a>__int2c
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 會產生`int 2c`觸發程序的指令`2c`插斷。
 
@@ -36,7 +36,7 @@ void __int2c(void);
 
 **標頭檔** \<intrin.h >
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

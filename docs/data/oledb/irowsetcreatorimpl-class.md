@@ -19,12 +19,12 @@ helpviewer_keywords:
 - IRowsetCreatorImpl class
 - SetSite method
 ms.assetid: 92cc950f-7978-4754-8d9a-defa63867d82
-ms.openlocfilehash: 8e3d5b3ff01dd37eec9f00dac2f2ce28013fc258
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3dc5cb06b3eb7f01667e4e1ec09dd60f9befae77
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659666"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026600"
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl 類別
 
@@ -59,7 +59,7 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 
 這個類別繼承自[IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) ，並覆寫[IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)。 當提供者命令或工作階段物件會建立一個資料列集時，它會呼叫`QueryInterface`尋找資料列集物件上`IObjectWithSite`，並呼叫`SetSite`傳遞資料列集物件的`IUnkown`站介面的介面。
 
-## <a name="setsite"></a> Irowsetcreatorimpl:: Setsite
+## <a name="setsite"></a> IRowsetCreatorImpl::SetSite
 
 設定站台，其中包含資料列集物件。 如需詳細資訊，請參閱 < [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)。
 
@@ -85,4 +85,4 @@ STDMETHOD(SetSite )(IUnknown* pCreator);
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)

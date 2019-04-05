@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - requestedit attribute
 ms.assetid: b3c24790-3c4a-4646-8722-03d7b51172ee
-ms.openlocfilehash: 27e6190cbb5908d46150acb758e2b4d5efaff1bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 30b0c5ec807865280c8e538ea701c3d1a5c4ef9c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611585"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033887"
 ---
 # <a name="requestedit"></a>requestedit
 
-表示屬性支援`OnRequestEdit`通知。
+表示屬性支援 `OnRequestEdit` 通知。
 
 ## <a name="syntax"></a>語法
 
@@ -39,8 +39,8 @@ ms.locfileid: "50611585"
 |-|-|
 |**適用於**|介面方法|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

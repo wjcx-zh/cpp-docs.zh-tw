@@ -1,5 +1,5 @@
 ---
-title: ODBC：ODBC 資料指標程式庫
+title: ODBC:ODBC 資料指標程式庫
 ms.date: 11/04/2016
 helpviewer_keywords:
 - cursor library [ODBC]
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - ODBC, timestamp
 - positioning cursors
 ms.assetid: 6608db92-82b1-4164-bb08-78153c227be3
-ms.openlocfilehash: e175a9b27cb19b0c2a67a08751b7a7717226ac55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 862303a0dc66fbd49bfcba83336ab29dfc7145c0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435135"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032228"
 ---
-# <a name="odbc-the-odbc-cursor-library"></a>ODBC：ODBC 資料指標程式庫
+# <a name="odbc-the-odbc-cursor-library"></a>ODBC:ODBC 資料指標程式庫
 
 本主題描述 ODBC 資料指標程式庫，並說明如何使用它。 如需詳細資訊，請參閱:
 
@@ -67,4 +67,4 @@ ODBC 資料指標程式庫提供下列新功能的層級 1 的驅動程式：
 
 ## <a name="see-also"></a>另請參閱
 
-[ODBC 基本概念](../../data/odbc/odbc-basics.md)
+[ODBC 的基本概念](../../data/odbc/odbc-basics.md)

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - rdtsc instruction
 - Read Time Stamp Counter instruction
 ms.assetid: e31d0e51-c9bb-42ca-bbe9-a81ffe662387
-ms.openlocfilehash: 5f058eaf6587b74f5a75044416d23ac6b64fb415
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f30be3340ae1be237bb2f8a008a8cb60c7351f0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582061"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036834"
 ---
 # <a name="rdtsc"></a>__rdtsc
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 會產生`rdtsc`指令，這會傳回處理器時間戳記。 處理器時間戳記記錄自上次重設的時脈週期數。
 
@@ -67,7 +67,7 @@ int main()
 3363423610155519 ticks
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

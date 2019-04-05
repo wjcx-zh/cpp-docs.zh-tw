@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: bafdb65f255ddf33964d22e5ea80a62446c2ad45
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 5c69e0aa9e3444ec9b43470f8feb4d1f870dc9c8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893518"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040576"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "54893518"
 
 ### <a name="parameters"></a>參數
 
-*type*<br/>
+*類型*<br/>
 （選擇性）可以是下列其中一項：
 
 - `dll` 新增函式和類別，可讓產生的 DLL 當成同處理序 COM 伺服器。 這是預設值。
@@ -36,10 +36,10 @@ ms.locfileid: "54893518"
 
 - `unspecified` 停止插入與模組屬性相關的 ATL 程式碼： 插入 「 ATL 模組類別、 全域執行個體 _AtlModule 和輸入點函式。 因為專案中有其他屬性，所以請不要停止插入 ATL 程式碼。
 
-*name*<br/>
+*名稱*<br/>
 （選擇性）程式庫區塊的名稱。
 
-*version*<br/>
+*版本*<br/>
 （選擇性）您想要指派給程式庫區塊的版本號碼。 預設值為 1.0。
 
 *uuid*<br/>
@@ -48,7 +48,7 @@ ms.locfileid: "54893518"
 *lcid*<br/>
 當地語系化參數。 如需詳細資訊，請參閱 [lcid](/windows/desktop/Midl/lcid) 。
 
-*control*<br/>
+*控制項*<br/>
 （選擇性）指定媒體櫃中的所有 coclass 的控制項。
 
 *helpstring*<br/>
@@ -66,13 +66,13 @@ ms.locfileid: "54893518"
 *helpstringcontext*<br/>
 （選擇性）請參閱[helpstringcontext](helpstringcontext.md)如需詳細資訊。
 
-*hidden*<br/>
+*隱藏*<br/>
 （選擇性）避免顯示整個媒體櫃。 此用法是與控制項搭配使用。 主機需要建立新的類型程式庫，以包裝控制項與擴充屬性。 如需詳細資訊，請參閱 [hidden](/windows/desktop/Midl/hidden) MIDL 屬性。
 
 *restricted*<br/>
 （選擇性）程式庫成員不能任意呼叫。 如需詳細資訊，請參閱 [restricted](/windows/desktop/Midl/restricted) MIDL 屬性。
 
-*custom*<br/>
+*自訂*<br/>
 （選擇性）一或多個屬性;這是類似[自訂](custom-cpp.md)屬性。 第一個參數*自訂*是屬性的 GUID。 例如: 
 
 ```
@@ -154,8 +154,8 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 |-|-|
 |**適用於**|任何位置|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
@@ -166,7 +166,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 [獨立屬性](stand-alone-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
-[library](/windows/desktop/Midl/library)<br/>
+[程式庫](/windows/desktop/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
 [helpfile](helpfile.md)<br/>

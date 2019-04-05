@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ODBC recordsets [C++], locking records
 - data [C++], locking
 ms.assetid: 8fe8fcfe-b55a-41a8-9136-94a7cd1e4806
-ms.openlocfilehash: 08d7ca1db474a5735ccaabaa7d7d87b359730bb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1265899e7060527d7e586689eb4c3148eebc4080
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438688"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037285"
 ---
 # <a name="recordset-locking-records-odbc"></a>資料錄集：鎖定資料錄 (ODBC)
 
@@ -30,7 +30,7 @@ ms.locfileid: "50438688"
 當您使用資料錄集更新資料來源上的記錄時，您的應用程式可以鎖定記錄，因此沒有其他使用者可以同時更新記錄。 兩個使用者同時更新一筆記錄的狀態為未定義，除非系統可以保證兩位使用者無法同時更新一筆記錄。
 
 > [!NOTE]
->  本主題適用於物件衍生自`CRecordset`的大量資料列中擷取尚未實作。 如果您已實作大量資料列擷取，部分資訊不適用。 例如，您不能呼叫`Edit`和`Update`成員函式。 如需有關大量資料列擷取的詳細資訊，請參閱[資料錄集： 擷取記錄中大量資料庫連接 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主題適用於物件衍生自`CRecordset`的大量資料列中擷取尚未實作。 如果您已實作大量資料列擷取，部分資訊不適用。 例如，您不能呼叫`Edit`和`Update`成員函式。 如需有關大量資料列擷取的詳細資訊，請參閱[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ##  <a name="_core_record.2d.locking_modes"></a> 記錄鎖定模式
 
@@ -67,4 +67,4 @@ ms.locfileid: "50438688"
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [資料錄集：執行聯結 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)<br/>
-[資料錄集：新增、更新和刪除資料錄 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[資料錄集：新增、 更新和刪除資料錄 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

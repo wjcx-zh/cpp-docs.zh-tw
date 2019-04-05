@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: 0feb258941993ff9776bb9f94f61a556d7d4caec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdebf06a62ebbd1d8648b9777fe200bc7a373261
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449838"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038274"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -38,7 +38,7 @@ ms.locfileid: "50449838"
 
 - `both` （apartment 和無限制執行緒）
 
-預設值是 `apartment`。
+預設值為 `apartment`。
 
 ## <a name="remarks"></a>備註
 
@@ -61,7 +61,7 @@ ms.locfileid: "50449838"
 |**適用於**|**類別**，**結構**|
 |**可重複**|否|
 |**必要屬性**|**coclass**|
-|**無效屬性**|無|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

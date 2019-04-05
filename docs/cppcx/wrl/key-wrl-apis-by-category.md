@@ -3,12 +3,12 @@ title: 依分類區分的重要 WRL 應用程式開發介面
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 7367bacf-6b7c-4ecd-a0ce-a662db46fc66
-ms.openlocfilehash: fd4bebf9c823079c3bdb4c4182bf3f30cdf105a7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: f3065323c567c944dab12fc1ebbcbd6bb57127e9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58784441"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039049"
 ---
 # <a name="key-wrl-apis-by-category"></a>依分類區分的重要 WRL 應用程式開發介面
 
@@ -22,8 +22,8 @@ ms.locfileid: "58784441"
 |[AsyncBase 類別](asyncbase-class.md)|實作 Windows 執行階段非同步狀態機器。|
 |[ClassFactory 類別](classfactory-class.md)|實作 `IClassFactory` 介面的基本功能。|
 |[ComPtr 類別](comptr-class.md)|建立代表範本參數所指定之介面的 *「智慧型指標」* (Smart Pointer) 類型。 ComPtr 自動維護基礎介面指標的參考計數，並在參考計數歸零時釋放介面。|
-|[Event 類別 (Windows 執行階段 C++ 範本庫)](event-class-wrl.md)|表示事件。|
-|[EventSource 類別](eventsource-class.md)|表示事件。 `EventSource` 成員函式會新增、移除及叫用事件處理常式。|
+|[Event 類別 (Windows 執行階段 C++ 樣板程式庫)](event-class-wrl.md)|表示事件。|
+|[EventSource 類別](eventsource-class.md)|表示事件。 `EventSource` 成員函式會新增、 移除及叫用事件處理常式。|
 |[FtmBase 類別](ftmbase-class.md)|代表無限制執行緒封送處理器物件。|
 |[HandleT 類別](handlet-class.md)|物件表示的控制代碼。|
 |[HString 類別](hstring-class.md)|提供對管理 HSTRING 控制代碼支援。|
@@ -68,4 +68,4 @@ ms.locfileid: "58784441"
 
 ## <a name="see-also"></a>另請參閱
 
-[Windows 執行階段 C++ 範本庫 (WRL)](windows-runtime-cpp-template-library-wrl.md)
+[Windows Runtime C++ Template Library (WRL)](windows-runtime-cpp-template-library-wrl.md)

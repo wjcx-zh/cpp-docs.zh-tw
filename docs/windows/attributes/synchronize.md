@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - synchronize attribute
 ms.assetid: 15fc8544-955d-4765-b3d5-0f619c8b3f40
-ms.openlocfilehash: e5afec6257c421c0d3d5c95ba77c29767d0df280
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea5236b887fb0df2a0acdd1e4050c66a4719072b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620892"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037045"
 ---
 # <a name="synchronize"></a>synchronize
 
@@ -69,7 +69,7 @@ class CMyClass {
 |**適用於**|類別方法方法|
 |**可重複**|否|
 |**必要屬性**|一或多個項目： `coclass`， `progid`，或`vi_progid`。|
-|**無效屬性**|無|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

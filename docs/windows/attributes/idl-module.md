@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: c58997928fb3121c1ab8e277790969a93d9066de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80e4909a61b5b53ecde19471f2c838dd4c425874
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608682"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034974"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -26,7 +26,7 @@ function declaration
 
 ### <a name="parameters"></a>參數
 
-*name*<br/>
+*名稱*<br/>
 會在.idl 檔中的程式碼區塊的使用者定義的名稱。
 
 *dllname*<br/>
@@ -44,7 +44,7 @@ function declaration
 *helpcontext*<br/>
 （選擇性）這個類型程式庫說明識別碼。
 
-*hidden*<br/>
+*隱藏*<br/>
 （選擇性）避免程式庫顯示為參數。 如需詳細資訊，請參閱 [hidden](/windows/desktop/Midl/hidden) MIDL 屬性。
 
 *restricted*<br/>
@@ -84,8 +84,8 @@ void FuncName(int i);
 |-|-|
 |**適用於**|任何位置|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

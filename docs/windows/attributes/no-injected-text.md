@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-ms.openlocfilehash: af4bb4b07439c0a5dacfa0d4956db564d2dccefe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 354643020e704a87daa2e56e923b6a0a704bf0b5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618113"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038365"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
 
@@ -25,7 +25,7 @@ ms.locfileid: "50618113"
 
 ### <a name="parameters"></a>參數
 
-*布林值*<br/>
+*boolean*<br/>
 （選擇性）**真**如果您想不要插入此項目，任何程式碼**false**讓插入的程式碼。 **true**是預設值。
 
 ## <a name="remarks"></a>備註
@@ -40,8 +40,8 @@ ms.locfileid: "50618113"
 |-|-|
 |**適用於**|任何位置|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

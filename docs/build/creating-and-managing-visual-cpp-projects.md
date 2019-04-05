@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: a3ddafab143224b6e20a3e01d1d643c42bbe19e0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: b4772b9bd625a542a18039386fefe42840ab65b1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58775318"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038034"
 ---
 # <a name="visual-studio-projects---c"></a>Visual Studio 專案-c + +
 
@@ -60,10 +60,10 @@ A *Visual Studio 專案*是專案為基礎的 MSBuild 建置系統。 MSBuild �
 
 ## <a name="in-this-section"></a>本節內容
 
-[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](working-with-project-properties.md)<br/>
+[設定 c + + 編譯器和建置在 Visual Studio 中的屬性](working-with-project-properties.md)<br/>
 如何使用屬性頁和屬性工作表來指定專案設定。
 
-[在建置階段參考程式庫和元件](adding-references-in-visual-cpp-projects.md)<br/>
+[參考程式庫和建置階段的元件](adding-references-in-visual-cpp-projects.md)<br/>
 如何在專案中包含程式庫、 Dll、 COM 和.NET 元件。
  
 [組織專案輸出檔案](how-to-organize-project-output-files-for-builds.md)<br/>
@@ -77,4 +77,4 @@ A *Visual Studio 專案*是專案為基礎的 MSBuild 建置系統。 MSBuild �
 
 ## <a name="see-also"></a>另請參閱
 
-[專案和建置系統](projects-and-build-systems-cpp.md)<br>
+[專案和組建系統](projects-and-build-systems-cpp.md)<br>

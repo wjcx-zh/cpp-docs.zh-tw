@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - progid attribute
 ms.assetid: afcf559c-e432-481f-aa9a-bd3bb72c02a8
-ms.openlocfilehash: cb4802fbf4d647f11298848e3dac1b1d92300ce8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b0c688ad4d9b607cc1f5fb6b1c6d536a1c7888e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654736"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031125"
 ---
 # <a name="progid"></a>progid
 
@@ -25,7 +25,7 @@ ms.locfileid: "50654736"
 
 ### <a name="parameters"></a>參數
 
-*name*<br/>
+*名稱*<br/>
 代表物件的 ProgID。
 
 Progid 會提供人類看得懂的版本，用來識別的 COM/ActiveX 物件的類別識別項 (CLSID)。
@@ -54,8 +54,8 @@ Progid 會提供人類看得懂的版本，用來識別的 COM/ActiveX 物件的
 |-|-|
 |**適用於**|**類別**，**結構**|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

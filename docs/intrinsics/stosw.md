@@ -8,16 +8,16 @@ helpviewer_keywords:
 - __stosw intrinsic
 - rep stosw instruction
 ms.assetid: 7620fd1d-dba5-40e3-8e07-01aa68895133
-ms.openlocfilehash: 4bfdf2191a4bf88ce6d061e1729e194236564330
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c203973a79c2c3b1094ad8a5351db0999a56bf19
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326416"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035753"
 ---
 # <a name="stosw"></a>__stosw
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 產生的存放區的字串指示 (`rep stosw`)。
 
@@ -36,7 +36,7 @@ void __stosw(
 *目的地*<br/>
 [out]作業的目的地。
 
-*Data*<br/>
+*資料*<br/>
 [in]要儲存的資料。
 
 *計數*<br/>
@@ -80,7 +80,7 @@ int main()
 0 128 128 0
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

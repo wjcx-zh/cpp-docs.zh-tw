@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cl.exe compiler, performance
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-ms.openlocfilehash: f66c6247aba92a1528489dcf689239c9341b7d2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a014e870d731d7e7d443c3bfefd66884aa50d5d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560013"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029274"
 ---
 # <a name="compiler-intrinsics"></a>編譯器內建
 
@@ -40,13 +40,13 @@ ms.locfileid: "50560013"
 
 - [x64 (amd64) 內建清單](../intrinsics/x64-amd64-intrinsics-list.md)
 
-- [所有架構可用的內建](../intrinsics/intrinsics-available-on-all-architectures.md)
+- [可用的所有架構內建](../intrinsics/intrinsics-available-on-all-architectures.md)
 
 - [依字母順序列出的內建函式](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[ARM 組譯工具參考](../assembler/arm/arm-assembler-reference.md)<br/>
-[Microsoft 巨集組譯工具參考](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
+[ARM 組合程式參考](../assembler/arm/arm-assembler-reference.md)<br/>
+[Microsoft 巨集組合程式參考](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)<br/>
 [C 執行階段程式庫參考](../c-runtime-library/c-run-time-library-reference.md)

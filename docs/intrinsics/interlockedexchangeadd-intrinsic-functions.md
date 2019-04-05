@@ -55,16 +55,16 @@ helpviewer_keywords:
 - _InterlockedExchangeAdd16_nf intrinsic
 - _InterlockedExchangeAdd64_rel intrinsic
 ms.assetid: 25809e1f-9c60-4492-9f7c-0fb59c8d13d2
-ms.openlocfilehash: 8cb4c4a5f1b8048995684e3f5c630acecc74000b
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 2cffd5a088c4b3c67441e79bc04bd709be6bf8ef
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627435"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039172"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>_InterlockedExchangeAdd 內建函式
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 提供 Win32 Windows SDK 的編譯器內建支援[_InterlockedExchangeAdd 內建函式](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)函式。
 
@@ -169,9 +169,9 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
 
 |內建|架構|標頭|
 |---------------|------------------|------------|
-|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|x86、 x64、 ARM|\<intrin.h>|
+|`_InterlockedExchangeAdd`、 `_InterlockedExchangeAdd8`、 `_InterlockedExchangeAdd16`、 `_InterlockedExchangeAdd64`|x86、 x64、 ARM|\<intrin.h>|
 |`_InterlockedExchangeAdd_acq`, `_InterlockedExchangeAdd_rel`, `_InterlockedExchangeAdd_nf`, `_InterlockedExchangeAdd8_acq`, `_InterlockedExchangeAdd8_rel`, `_InterlockedExchangeAdd8_nf`,`_InterlockedExchangeAdd16_acq`, `_InterlockedExchangeAdd16_rel`, `_InterlockedExchangeAdd16_nf`, `_InterlockedExchangeAdd64_acq`, `_InterlockedExchangeAdd64_rel`, `_InterlockedExchangeAdd64_nf`|ARM|\<intrin.h>|
-|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86、x64|\<immintrin.h>|
+|`_InterlockedExchangeAdd_HLEAcquire`、 `_InterlockedExchangeAdd_HLERelease`、 `_InterlockedExchangeAdd64_HLEAcquire`、 `_InterlockedExchangeAdd64_HLErelease`|x86、x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>備註
 
@@ -189,7 +189,7 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
 
 如需如何使用的範例`_InterlockedExchangeAdd`，請參閱 < [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

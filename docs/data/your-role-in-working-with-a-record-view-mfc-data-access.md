@@ -5,12 +5,12 @@ helpviewer_keywords:
 - record views, customizing default code
 - MFC, record views
 ms.assetid: 691e89a5-ff21-4ca3-9278-69d4678288bb
-ms.openlocfilehash: 1f1361baafa5bb3dc884adcc464a3571aee04dd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5c35208f654cff90e3cdf87e697e654bdfbe307
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478633"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033001"
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>您在使用記錄檢視上的角色 (MFC 資料存取)
 
@@ -29,9 +29,9 @@ ms.locfileid: "50478633"
 |[選用] 針對任何特殊驗證撰寫程式碼。||
 |[選用] 撰寫程式碼來加入或刪除資料錄。||
 
-表單架構程式設計是唯一一個使用資料庫的方法。 如需使用其他使用者介面或沒有使用者介面的應用程式的資訊，請參閱 < [MFC： 使用具有文件和檢視的資料庫類別](../data/mfc-using-database-classes-with-documents-and-views.md)和[MFC： 使用資料庫類別不具文件和檢視表](../data/mfc-using-database-classes-without-documents-and-views.md). 顯示資料庫記錄的替代方法，請參閱類別[CListView](../mfc/reference/clistview-class.md)並[CTreeView](../mfc/reference/ctreeview-class.md)。
+表單架構程式設計是唯一一個使用資料庫的方法。 如需使用其他使用者介面或沒有使用者介面的應用程式的資訊，請參閱[MFC:使用具有文件和檢視資料庫類別](../data/mfc-using-database-classes-with-documents-and-views.md)和[MFC:使用不具文件和檢視的資料庫類別](../data/mfc-using-database-classes-without-documents-and-views.md)。 顯示資料庫記錄的替代方法，請參閱類別[CListView](../mfc/reference/clistview-class.md)並[CTreeView](../mfc/reference/ctreeview-class.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[資料錄檢視 (MFC 資料存取)](../data/record-views-mfc-data-access.md)<br/>
+[記錄檢視 (MFC 資料存取)](../data/record-views-mfc-data-access.md)<br/>
 [ODBC 驅動程式清單](../data/odbc/odbc-driver-list.md)

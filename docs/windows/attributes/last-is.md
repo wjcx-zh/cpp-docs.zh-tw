@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: ce19d8d727a359054289200b2cdcb6a6427dc706
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39b35b218f3402839d956c4da0a00f290fe5d595
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545713"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033270"
 ---
 # <a name="lastis"></a>last_is
 
@@ -44,8 +44,8 @@ ms.locfileid: "50545713"
 |-|-|
 |**適用於**|欄位**結構**或是**聯集**，參數的介面，介面方法|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

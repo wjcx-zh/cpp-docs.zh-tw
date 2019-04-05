@@ -1,18 +1,18 @@
 ---
-title: 資料錄集：宣告資料表的類別 (ODBC)
+title: 資料錄集：宣告的類別 (ODBC) 的資料表
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC recordsets, declaring class for tables
 - recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
-ms.openlocfilehash: 28de6ed8dcbf34e2ab2c140fdc17a8cd803501de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17adc6e26dcbb39453d9009d82843d213271cc78
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476683"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038238"
 ---
-# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>資料錄集：宣告資料表的類別 (ODBC)
+# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>資料錄集：宣告的類別 (ODBC) 的資料表
 
 本主題適用於 MFC ODBC 類別。
 
@@ -28,5 +28,5 @@ ms.locfileid: "50476683"
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [資料錄集：建立和關閉資料錄集 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>
-[資料錄集：宣告預先定義查詢的類別 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
+[資料錄集：宣告的類別，預先定義的查詢 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
 [資料錄集：執行聯結 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

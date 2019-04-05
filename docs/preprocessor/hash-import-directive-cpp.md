@@ -12,16 +12,16 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: 72fd1d025ab19b7db9521e08655d00936b77581e
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 98a0f9f66fb209bb41215fc1e86a9682a4fed023
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58564949"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031981"
 ---
 # <a name="import-directive-c"></a>#import 指示詞 (C++)
 
-**C + + 特定**
+**C++ 專有的**
 
 用來加入類型程式庫中的資訊。 類型程式庫的內容會轉換成 C++ 類別，多半是在描述 COM 介面。
 
@@ -49,7 +49,7 @@ ms.locfileid: "58564949"
 
    請注意，在 64 位元作業系統上使用跨平台編譯器進行編譯時，編譯器只能讀取 32 位元登錄區。 您可能會想要使用原生 64 位元編譯器，建置並註冊 64 位元類型程式庫。
 
-- 類型程式庫的程式庫 ID。 關鍵字**libid:**，可以在每個程式庫識別碼。 例如: 
+- 類型程式庫的程式庫 ID。 關鍵字**libid:**，可以在每個程式庫識別碼。 例如：
 
     ```cpp
     #import "libid:12341234-1234-1234-1234-123412341234" version("4.0") lcid("9")
@@ -91,7 +91,7 @@ ms.locfileid: "58564949"
 
 ##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a> 指定當地語系化 ID 和版本號碼
 
-當您指定 ProgID 時，也可以指定 ProgID 的當地語系化 ID 和版本號碼。 例如: 
+當您指定 ProgID 時，也可以指定 ProgID 的當地語系化 ID 和版本號碼。 例如：
 
 ```cpp
 #import "progid:my.prog.id" lcid("0") version("4.0)
@@ -148,7 +148,7 @@ ms.locfileid: "58564949"
 
 - 選擇性舊樣式 GUID 定義：包含具名 GUID 常數的初始化。 這些是名稱格式`CLSID_CoClass`和`IID_Interface`，類似於 MIDL 編譯器所產生。
 
-- 次要類型程式庫標頭的 `#include` 陳述式。
+- `#include` 次要類型程式庫標頭的陳述式。
 
 - 頁尾重複使用區段：目前包含`#pragma pack(pop)`。
 
@@ -180,7 +180,7 @@ using namespace MyLib;
 
 ## <a name="_predir_the_23import_directive_import_attributes"></a> #import 屬性
 
-**#import**可以選擇性地包含一個或多個屬性。 這些屬性會指示編譯器修改類型程式庫標頭的內容。 反斜線 (**\\**) 符號可用來包含其他行，在單一 **#import**陳述式。 例如: 
+**#import**可以選擇性地包含一個或多個屬性。 這些屬性會指示編譯器修改類型程式庫標頭的內容。 反斜線 (**\\**) 符號可用來包含其他行，在單一 **#import**陳述式。 例如：
 
 ```cpp
 #import "test.lib" no_namespace \
@@ -189,7 +189,7 @@ using namespace MyLib;
 
 如需詳細資訊，請參閱 < [#import 屬性](../preprocessor/hash-import-attributes-cpp.md)。
 
-**END c + + 特定的**
+**END C++ 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

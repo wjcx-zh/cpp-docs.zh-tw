@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: 9f4dd43f-9909-43d6-91d2-05734643876e
-ms.openlocfilehash: 7452ad3db642e132f4e46c1688d429dbaf78419a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bab7013f2c5fd48ef1a22b990499d79c9c217ca9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532756"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038222"
 ---
 # <a name="attributes-by-group"></a>依群組分類的屬性
 
@@ -24,10 +24,10 @@ C + + 屬性會組織成下列功能群組中。
 |[OLE DB 消費者屬性](ole-db-consumer-attributes.md)|插入程式碼，根據[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-reference.md)— 若要建立的工作 OLE DB 取用者會執行工作，例如開啟資料表，執行命令，以及存取資料。|
 |[編譯器屬性](compiler-attributes.md)|提供由 Microsoft c + + 編譯器。|
 
-如需有關如何定義您的.NET Framework 應用程式的自訂屬性的資訊，請參閱[User-Defined Attributes](../user-defined-attributes-cpp-component-extensions.md)。
+如需有關如何定義您的.NET Framework 應用程式的自訂屬性的資訊，請參閱[User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於 COM 與 .NET 的 C++ 屬性](cpp-attributes-com-net.md)<br/>
+[適用於 COM 和.NET 的 c + + 屬性](cpp-attributes-com-net.md)<br/>
 [依使用方式分類的屬性](attributes-by-usage.md)<br/>
 [依字母順序排列的屬性參考](attributes-alphabetical-reference.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: dff36dfb2b898c6a4df65492e2d9386c748f049b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ba56143beb3411734899839a46ab42992dfa4d8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534611"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035659"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor 類別
 
@@ -55,7 +55,7 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 討論和使用動態存取子類別的範例，請參閱[使用動態存取子](../../data/oledb/using-dynamic-accessors.md)。
 
-## <a name="getstring"></a> Cdynamicstringaccessor:: Getstring
+## <a name="getstring"></a> CDynamicStringAccessor::GetString
 
 擷取指定資料行的資料做為字串。
 
@@ -85,7 +85,7 @@ BaseType* GetString(const WCHAR* pColumnName) const throw();
 
 第二個覆寫表單會採用資料行名稱做為 ANSI 字串。 第三個覆寫表單會採用資料行名稱為 Unicode 字串。
 
-## <a name="setstring"></a> Cdynamicstringaccessor:: Setstring
+## <a name="setstring"></a> CDynamicStringAccessor::SetString
 
 設定指定資料行的資料做為字串。
 
@@ -110,7 +110,7 @@ HRESULT SetString(const WCHAR* pColumnName,
 *pColumnName*<br/>
 [in]包含資料行名稱的字元字串指標。
 
-*data*<br/>
+*資料*<br/>
 [in]要寫入至指定的資料行的字串資料指標。
 
 ### <a name="return-value"></a>傳回值
@@ -126,7 +126,7 @@ HRESULT SetString(const WCHAR* pColumnName,
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor 類別](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicParameterAccessor 類別](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [CManualAccessor 類別](../../data/oledb/cmanualaccessor-class.md)<br/>

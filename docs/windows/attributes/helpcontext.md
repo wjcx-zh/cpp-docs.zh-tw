@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-ms.openlocfilehash: 921e5370303cb62830ec281bcefd7c03331efaeb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22023b4087c67b62d540d021fa06fd3582c7e4e2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552746"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038156"
 ---
 # <a name="helpcontext"></a>helpcontext
 
@@ -26,7 +26,7 @@ ms.locfileid: "50552746"
 ### <a name="parameters"></a>參數
 
 *id*<br/>
-說明主題的內容識別碼。 請參閱[HTML 說明： 程式的即時線上說明](../../mfc/html-help-context-sensitive-help-for-your-programs.md)如需有關內容識別碼。
+說明主題的內容識別碼。 請參閱[HTML 說明：您的程式的即時線上說明](../../mfc/html-help-context-sensitive-help-for-your-programs.md)如需有關內容識別碼。
 
 ## <a name="remarks"></a>備註
 
@@ -44,8 +44,8 @@ ms.locfileid: "50552746"
 |-|-|
 |**適用於**|**介面**， **typedef**，**類別**、 方法、 屬性|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

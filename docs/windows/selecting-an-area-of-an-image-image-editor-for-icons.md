@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 246dee3c7d0c1a5a4f495fddf709833acc2c885e
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 849da0d14987a057d39d5f9531e97545b3d4b8cf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562987"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033283"
 ---
 # <a name="how-to-edit-an-image"></a>HOW TO：編輯映像
 
@@ -208,21 +208,21 @@ ms.locfileid: "57562987"
    |屬性|描述|
    |--------------|-----------------|
    |**色彩**|指定影像的色彩配置。 選取 **單色**， **16**，或**256**，或**True 色彩**。<br/><br/>如果您已繪製具有 16 色調色盤的映像，請選取**單色**映像會造成的黑白色彩的替代項目。 對比永遠不會保留： 例如，相鄰的紅色和綠色的區域都會轉換為黑色。|
-   |**檔案名稱**|指定影像檔的名稱。<br/><br/>根據預設，Visual Studio 指派給基底的檔名，藉由移除前四個字元 ("IDB_") 建立的預設資源識別元 (IDB_BITMAP1)，並新增適當的擴充功能。 在此範例中的映像的檔案名稱會是*BITMAP1.bmp*。 您可以將它重新命名*MYBITMAP1.bmp*。|
-   |[高度]|設定影像的高度 （以像素為單位）。 預設值是 48。<br/><br/>則會裁剪影像，或空格會加入現有的映像的下方。|
-   |**ID**|設定資源的識別碼。<br/><br/>映像，Microsoft Visual Studio 中，根據預設，會指派下一個可用的識別項，在一系列：IDB_BITMAP1、 IDB_BITMAP2，等等。 類似的名稱會用於圖示和游標。|
-   |**Palette**|變更色彩屬性。<br/><br/>按兩下，以選取色彩，並顯示[自訂色彩選取器對話方塊](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)。 在適當的文字方塊中輸入 RGB 或 HSL 值定義的色彩。|
+   |**Filename**|指定影像檔的名稱。<br/><br/>根據預設，Visual Studio 指派給基底的檔名，藉由移除前四個字元 ("IDB_") 建立的預設資源識別元 (IDB_BITMAP1)，並新增適當的擴充功能。 在此範例中的映像的檔案名稱會是*BITMAP1.bmp*。 您可以將它重新命名*MYBITMAP1.bmp*。|
+   |**高度**|設定影像的高度 （以像素為單位）。 預設值是 48。<br/><br/>則會裁剪影像，或空格會加入現有的映像的下方。|
+   |**識別碼**|設定資源的識別碼。<br/><br/>映像，Microsoft Visual Studio 中，根據預設，會指派下一個可用的識別項，在一系列：IDB_BITMAP1、 IDB_BITMAP2，等等。 類似的名稱會用於圖示和游標。|
+   |**調色盤**|變更色彩屬性。<br/><br/>按兩下，以選取色彩，並顯示[自訂色彩選取器對話方塊](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)。 在適當的文字方塊中輸入 RGB 或 HSL 值定義的色彩。|
    |**SaveCompressed**|指出影像是否以壓縮格式。 這個屬性是唯讀的。<br/><br/>Visual Studio 不允許您將影像儲存在壓縮的格式，因此 Visual Studio 中建立任何映像，這個屬性會**False**。 如果您在 Visual Studio 中開啟 （在其他程式中建立） 的壓縮映像，這個屬性會 **，則為 True**。 如果您儲存使用 Visual Studio 的壓縮映像時，它將會是未壓縮和此屬性將會還原回**False**。|
-   |[寬度]|設定影像的寬度 （以像素為單位）。 點陣圖的預設值是 48。<br/><br/>則會裁剪影像，或現有的映像的右邊加入空白。|
+   |**寬度**|設定影像的寬度 （以像素為單位）。 點陣圖的預設值是 48。<br/><br/>則會裁剪影像，或現有的映像的右邊加入空白。|
 
 ## <a name="requirements"></a>需求
 
-無
+None
 
 ## <a name="see-also"></a>另請參閱
 
 [圖示影像編輯器](../windows/image-editor-for-icons.md)<br/>
-[如何：建立圖示或其他影像](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[如何：使用繪圖工具](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
-[如何：使用色彩](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[HOW TO：建立圖示或其他影像](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[HOW TO：使用繪圖工具](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[HOW TO：使用色彩](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

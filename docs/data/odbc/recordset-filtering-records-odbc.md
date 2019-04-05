@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ODBC recordsets [C++], filtering records
 - filters [C++], recordset object
 ms.assetid: 5c075f37-c837-464d-90c1-d028a9d1c175
-ms.openlocfilehash: 47ac2b83df4da5fcfe0cbe5e9546571a50ecdfac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 050524df840be28d661da89d04b685a44238f88c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514747"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041211"
 ---
 # <a name="recordset-filtering-records-odbc"></a>資料錄集：篩選資料錄 (ODBC)
 
@@ -44,7 +44,7 @@ ms.locfileid: "50514747"
     > [!NOTE]
     >  常值字串"MATH101 」 會顯示與上述的單一引號括起來。 在 ODBC SQL 規格中，單引號用來表示字元字串常值。 請檢查您在此情況下 DBMS 引號需求 」 的 ODBC 驅動程式文件。 此語法也會討論進一步接近本主題的結尾。
 
-1. 設定您需要例如排序、 鎖定的模式或參數的其他任何選項。 指定的參數就特別有用。 如需參數化篩選的資訊，請參閱[資料錄集： 參數化資料錄集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
+1. 設定您需要例如排序、 鎖定的模式或參數的其他任何選項。 指定的參數就特別有用。 如需參數化篩選的資訊，請參閱[資料錄集：參數化資料錄集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
 
 1. 呼叫`Open`新的物件 (或`Requery`先前開啟的物件)。
 
@@ -82,15 +82,15 @@ m_strFilter = "StudentID = '100'";   // correct
 m_strFilter = "StudentID = 100";   // incorrect for some drivers
 ```
 
-如上所示的引用符合 ODBC 規格中，但某些 Dbms 可能需要其他的引號字元。 如需詳細資訊，請參閱 < [SQL： 自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。
+如上所示的引用符合 ODBC 規格中，但某些 Dbms 可能需要其他的引號字元。 如需詳細資訊，請參閱[SQL:自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。
 
 > [!NOTE]
->  如果您選擇覆寫資料錄集的預設 SQL 字串，傳遞您自己的 SQL 字串`Open`，您不應將篩選條件，如果您的自訂字串已**其中**子句。 如需有關如何覆寫預設 SQL 的詳細資訊，請參閱[SQL： 自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。
+>  如果您選擇覆寫資料錄集的預設 SQL 字串，傳遞您自己的 SQL 字串`Open`，您不應將篩選條件，如果您的自訂字串已**其中**子句。 如需有關如何覆寫預設 SQL 的詳細資訊，請參閱[SQL:自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [資料錄集：排序資料錄 (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
-[資料錄集：資料錄集選取資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
-[資料錄集：資料錄集更新資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[資料錄集：資料錄集選取資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[資料錄集：資料錄集更新資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
 [資料錄集：鎖定資料錄 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

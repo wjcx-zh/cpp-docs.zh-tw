@@ -7,16 +7,16 @@ helpviewer_keywords:
 - _mm_cvttss_si64x intrinsic
 - cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
-ms.openlocfilehash: 2097ec50eca68cbe5735d30e772644552ab0df3b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: cfdea6ded622cbcbe42bd555edb3029fabad7823
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329016"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023707"
 ---
 # <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 發出擴充的 x64 版本的 64 位元整數的截斷單精確度浮點數數目與 Convert (`cvttss2si`) 指令。
 
@@ -30,7 +30,7 @@ __int64 _mm_cvttss_si64x(
 
 #### <a name="parameters"></a>參數
 
-*值*<br/>
+*value*<br/>
 [in]`__m128`結構，其中包含單精確度浮點值。
 
 ## <a name="return-value"></a>傳回值
@@ -85,7 +85,7 @@ int main()
 101
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,5 +1,5 @@
 ---
-title: 資料錄集：宣告預先定義查詢的類別 (ODBC)
+title: 資料錄集：宣告的類別，預先定義的查詢 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC recordsets, queries
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-ms.openlocfilehash: e83bf2ecb24a9abfd8dc9800a3a10d2d65025336
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4ae9f21c4bd53a8050d6f8c3765bb9823d077ba
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611259"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026523"
 ---
-# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>資料錄集：宣告預先定義查詢的類別 (ODBC)
+# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>資料錄集：宣告的類別，預先定義的查詢 (ODBC)
 
 本主題適用於 MFC ODBC 類別。
 
 本主題說明如何建立預先定義的查詢 （有時稱為預存程序，與 Microsoft SQL Server） 的資料錄集類別。
 
 > [!NOTE]
->  本主題適用於物件衍生自`CRecordset`的大量資料列中擷取尚未實作。 如果實作大量資料列擷取時，程序是非常類似。 若要了解實作與不實作大量資料列擷取的資料錄集之間的差異，請參閱[資料錄集： 擷取記錄中大量資料庫連接 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主題適用於物件衍生自`CRecordset`的大量資料列中擷取尚未實作。 如果實作大量資料列擷取時，程序是非常類似。 若要了解實作與不實作大量資料列擷取的資料錄集之間的差異，請參閱[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 某些資料庫管理系統 (Dbms) 可讓您建立預先定義的查詢，並從您的應用程式函式呼叫它。 查詢的名稱、 可能不接受參數，並可能會傳回記錄。 本主題中的程序描述如何呼叫預先定義的查詢傳回的記錄 （並可能接受參數）。
 
@@ -53,7 +53,7 @@ ms.locfileid: "50611259"
 
 1. 手動加入新的欄位資料成員的初始化資料錄集類別的建構函式中。
 
-   此外，您也必須遞增的初始化值[m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)資料成員。 精靈會將初始設定，但它只會涵蓋它會為您新增的欄位資料成員。 例如: 
+   此外，您也必須遞增的初始化值[m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)資料成員。 精靈會將初始設定，但它只會涵蓋它會為您新增的欄位資料成員。 例如：
 
     ```cpp
     m_nFields += 6;
@@ -63,7 +63,7 @@ ms.locfileid: "50611259"
 
 1. 如果查詢不接受參數，加入每個參數，分別 RFX 函式呼叫和初始化每個參數的資料成員。
 
-1. 您必須遞增`m_nParams`針對每個已加入參數，如同`m_nFields`在此程序的步驟 4 中新增欄位。 如需詳細資訊，請參閱 <<c0> [ 資料錄集： 參數化資料錄集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
+1. 您必須遞增`m_nParams`針對每個已加入參數，如同`m_nFields`在此程序的步驟 4 中新增欄位。 如需詳細資訊，請參閱[資料錄集：參數化資料錄集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
 
 1. 手動撰寫下列形式的 SQL 陳述式字串：
 
@@ -154,5 +154,5 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [資料錄集：重新查詢資料錄集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
-[資料錄集：宣告資料表的類別 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[資料錄集：宣告的類別 (ODBC) 的資料表](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
 [資料錄集：執行聯結 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

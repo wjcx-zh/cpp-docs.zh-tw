@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CNoRowset class
 ms.assetid: 55c6c7a4-9e3a-4775-a2dd-c8b333012fa6
-ms.openlocfilehash: 513e393bbc782d87b37dab108428f2970fbb92e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6193e2d461761c53fb05e5c16b3914c56d545173
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644449"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035672"
 ---
 # <a name="cnorowset-class"></a>CNoRowset 類別
 
@@ -60,4 +60,4 @@ class CNoRowset
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)

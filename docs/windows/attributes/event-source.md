@@ -11,12 +11,12 @@ helpviewer_keywords:
 - event sources
 - event handling, creating event source
 ms.assetid: 0983e36a-6127-4fbb-8a22-8dfec6564c16
-ms.openlocfilehash: e7a58abc617fcfed69020bdace60758a6bf75337
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81eba3c032a3556d1c69ad02652455ebc07ab6be
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510561"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035928"
 ---
 # <a name="eventsource"></a>event_source
 
@@ -30,12 +30,12 @@ ms.locfileid: "50510561"
 
 ### <a name="parameters"></a>參數
 
-*type*<br/>
+*類型*<br/>
 下列其中一個值的列舉：
 
-- Unmanaged C/C++ 程式碼的`native` (Unmanaged 類別的預設值)。
+- `native` (Unmanaged 類別的預設值)。
 
-- COM 程式碼的`com` 。 您必須使用`coclass`時`type` = `com`。 此值需要您包含下列標頭檔︰
+- `com` 。 您必須使用`coclass`時`type` = `com`。 此值需要您包含下列標頭檔︰
 
     ```cpp
     #define _ATL_ATTRIBUTES
@@ -67,7 +67,7 @@ ms.locfileid: "50510561"
 |**適用於**|**類別**，**結構**|
 |**可重複**|否|
 |**必要屬性**|**coclass**時 `type`=`com`|
-|**無效屬性**|無|
+|**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

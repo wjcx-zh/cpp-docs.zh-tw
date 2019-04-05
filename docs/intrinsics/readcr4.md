@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - __readcr4 intrinsic
 ms.assetid: b841a27b-fe0d-4ee9-b76b-f91d3eb061fa
-ms.openlocfilehash: 577c156e0a2a4282646d5624af72c01ef42435ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b67016846768be778881c02b395c8d6f3af1ef3f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474876"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037213"
 ---
 # <a name="readcr4"></a>__readcr4
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 讀取 CR4 暫存器，並傳回其值。
 
@@ -41,7 +41,7 @@ CR4 暫存器中的值。
 
 此內建只適用於核心模式，且此常式僅可作為內建常式使用。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

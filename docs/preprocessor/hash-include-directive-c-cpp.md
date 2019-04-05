@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '#include directive'
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
-ms.openlocfilehash: 67a44574a5a72a7b7addc0ed3d7b51cd3eb5b984
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 7ffccb34d52f8ffa1e6b9cc64a58d3471d02ac92
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821382"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038977"
 ---
 # <a name="include-directive-cc"></a>#include 指示詞 (C/C++)
 
@@ -69,7 +69,7 @@ Include 檔可以 「 巢狀 」;亦即 **#include**指示詞可以出現在另�
 
 Include 檔的巢狀可以擴充到最多 10 層。 當巢狀 **#include**是處理，前置處理器會繼續將封入 include 檔插入原來的原始程式檔。
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 若要尋找可包含原始程式檔，前置處理器會先搜尋所指定的目錄 **/I**編譯器選項。 如果 **/I**選項不存在或失敗，前置處理器會使用 INCLUDE 環境變數來尋找角括弧括住任何包含檔案。 INCLUDE 環境變數和 **/I**編譯器選項可以包含多個路徑，以分號分隔 (**;**)。 如果多個目錄會顯示為一部分 **/I**選項，或在 INCLUDE 環境變數中，前置處理器搜尋它們以其出現的順序。
 
@@ -92,7 +92,7 @@ CL MYPROG.C
 
 Include 檔指定為`#include "path-spec"`，目錄搜尋父檔案的目錄開始，並繼續進行到所有上層檔案的目錄。 也就是搜尋開始包含來源檔案，其中包含目錄的相對 **#include**正在處理的指示詞。 如果沒有上二層檔案，也找不到此檔案，則會繼續搜尋，如同以角括弧括住了檔案名稱一般。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

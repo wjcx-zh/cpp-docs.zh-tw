@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4487
 ms.assetid: 796144cf-cd3c-4edc-b6a4-96192b7eb4f0
-ms.openlocfilehash: 743069c0ed3103a2ed8d459def65083146b971e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 231482547856fc07d43ecfb859b31c2ece49fc5e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497001"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776488"
 ---
 # <a name="compiler-warning-level-4-c4487"></a>編譯器警告 (層級 4) C4487
 
@@ -19,7 +19,7 @@ ms.locfileid: "50497001"
 
 在衍生類別中的函式具有相同的簽章，做為非虛擬基底類別。 C4487 會提醒您在衍生的類別函式不覆寫基底類別函式。 明確標記為衍生的類別函式`new`若要解決這個警告。
 
-如需詳細資訊，請參閱 <<c0> [ 新 (新 vtable 中的位置）](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)。
+如需詳細資訊，請參閱 <<c0> [ 新 (新 vtable 中的位置）](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)。
 
 ## <a name="example"></a>範例
 

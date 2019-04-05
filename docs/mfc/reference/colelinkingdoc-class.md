@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-ms.openlocfilehash: 275119b2343c4d13b6a32f939fc8c3b2b5d5890c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c5076ceef0c6626fac0232fadf6818edd78b4ccf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300399"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773550"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc 類別
 
@@ -57,7 +57,7 @@ class COleLinkingDoc : public COleDocument
 
 ## <a name="remarks"></a>備註
 
-支援內嵌的項目連結的容器應用程式稱為 「 連結容器 」。 [OCLIENT](../../visual-cpp-samples.md)範例應用程式是連結的容器的範例。
+支援內嵌的項目連結的容器應用程式稱為 「 連結容器 」。 [OCLIENT](../../overview/visual-cpp-samples.md)範例應用程式是連結的容器的範例。
 
 連結項目來源時，包含文件必須載入編輯內嵌項目順序中的其他文件中內嵌項目。 基於這個理由，連結的容器必須要能夠啟動另一個容器應用程式，當使用者想要編輯連結的項目來源。 您的應用程式也必須使用[COleTemplateServer](../../mfc/reference/coletemplateserver-class.md)類別，使它可以建立文件時以程式設計方式啟動。
 
@@ -75,7 +75,7 @@ class COleLinkingDoc : public COleDocument
 
 [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]
 
-如需相關範例`CWinApp`-衍生類別定義和`InitInstance`函式中，請參閱 OCLIENT。H 和 OCLIENT。MFC 範例中的 CPP [OCLIENT](../../visual-cpp-samples.md)。
+如需相關範例`CWinApp`-衍生類別定義和`InitInstance`函式中，請參閱 OCLIENT。H 和 OCLIENT。MFC 範例中的 CPP [OCLIENT](../../overview/visual-cpp-samples.md)。
 
 如需有關使用`COleLinkingDoc`，請參閱文章[容器：實作容器](../../mfc/containers-implementing-a-container.md)和[容器：進階功能](../../mfc/containers-advanced-features.md)。
 
@@ -193,7 +193,7 @@ void Revoke();
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 OCLIENT](../../visual-cpp-samples.md)<br/>
+[MFC 範例 OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [COleDocument 類別](../../mfc/reference/coledocument-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CDocTemplate 類別](../../mfc/reference/cdoctemplate-class.md)

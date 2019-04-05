@@ -31,10 +31,10 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
 ms.openlocfilehash: 01a320fbcd9760bab484f3c75553613852ca9aed
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778087"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog 類別

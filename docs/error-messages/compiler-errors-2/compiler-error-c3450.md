@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3450
 ms.assetid: 78892cf7-0b82-4589-90d0-e06666247003
-ms.openlocfilehash: bedf78ef1cea9f17903fd05f9440c6baa69f7333
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5228e0396221c51f5fc7336255656416c1e553b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481233"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780180"
 ---
 # <a name="compiler-error-c3450"></a>編譯器錯誤 C3450
 
@@ -19,7 +19,7 @@ ms.locfileid: "50481233"
 
 使用者定義的 Managed 屬性必須繼承自 <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>。 Windows 執行階段屬性必須定義於 `Windows::Foundation::Metadata` 命名空間。
 
-如需詳細資訊，請參閱 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)。
+如需詳細資訊，請參閱 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
 
 ## <a name="example"></a>範例
 

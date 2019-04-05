@@ -15,12 +15,12 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-ms.openlocfilehash: 74119d7ea33eef68f0cb4a67c8419514cbb73c10
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 68ee5fbfec554df8865ca50c265ca2fa2f226a29
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304428"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58775240"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>資料物件和資料來源：建立和解構
 
@@ -68,13 +68,13 @@ ms.locfileid: "57304428"
 
 1. 如果是這**剪下**作業或`DoDragDrop`會傳回**DROPEFFECT_MOVE**，從文件中刪除選取在步驟 1 中的資料。
 
-此案例中藉由 MFC OLE 範例[OCLIENT](../visual-cpp-samples.md)並[HIERSVR](../visual-cpp-samples.md)。 針對每個應用程式的 `CView` 衍生類別查看除了 `GetClipboardData` 和 `OnGetClipboardData` 函式之外的原始程式碼。 這兩個函式會位於 `COleClientItem` 或 `COleServerItem` 衍生類別的實作中。 這些範例程式為如何實作這些概念提供了良好的範例。
+此案例中藉由 MFC OLE 範例[OCLIENT](../overview/visual-cpp-samples.md)並[HIERSVR](../overview/visual-cpp-samples.md)。 針對每個應用程式的 `CView` 衍生類別查看除了 `GetClipboardData` 和 `OnGetClipboardData` 函式之外的原始程式碼。 這兩個函式會位於 `COleClientItem` 或 `COleServerItem` 衍生類別的實作中。 這些範例程式為如何實作這些概念提供了良好的範例。
 
 如果要修改拖放作業的預設行為，會發生另一種您可能想要建立 `COleDataSource` 物件的情況。 如需詳細資訊，請參閱[將拖放：自訂](../mfc/drag-and-drop-customizing.md)文章。
 
 ##  <a name="_core_destroying_data_sources"></a> 終結資料來源
 
-目前負責它們的應用程式必須終結資料來源。 在其中您將資料來源交給 OLE 的情況下，例如呼叫[coledatasource:: Dodragdrop](../mfc/reference/coledatasource-class.md#dodragdrop)，您必須呼叫`pDataSrc->InternalRelease`。 例如: 
+目前負責它們的應用程式必須終結資料來源。 在其中您將資料來源交給 OLE 的情況下，例如呼叫[coledatasource:: Dodragdrop](../mfc/reference/coledatasource-class.md#dodragdrop)，您必須呼叫`pDataSrc->InternalRelease`。 例如：
 
 [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]
 

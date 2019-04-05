@@ -41,10 +41,10 @@ helpviewer_keywords:
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
 ms.openlocfilehash: 3ab276e83e8642aa5de2fd96305cb6d7b648fc40
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781233"
 ---
 # <a name="ceditview-class"></a>CEditView 類別
@@ -495,7 +495,7 @@ void UnlockBuffer() const;
 [MFC 範例 SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView 類別](../../mfc/reference/cctrlview-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
-[CEdit 類別](../../mfc/reference/cedit-class.md)<br/>
+[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
 [CDocument 類別](../../mfc/reference/cdocument-class.md)<br/>
 [CDocTemplate 類別](../../mfc/reference/cdoctemplate-class.md)<br/>
 [CCtrlView 類別](../../mfc/reference/cctrlview-class.md)<br/>

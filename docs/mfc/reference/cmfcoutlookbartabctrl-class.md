@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: 01effb8cb1142db0bcae6f9c456e4a3b3abd69e8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c791f3988c7257ed7d188917394e74a6dbeca98b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269932"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776800"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 
@@ -109,7 +109,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 
 ## <a name="example"></a>範例
 
-下列範例示範如何初始化`CMFCOutlookBarTabCtrl`物件，並使用中的各種方法`CMFCOutlookBarTabCtrl`類別。 此範例示範如何啟用索引標籤頁面按鈕的 Outlook 功能區上的文字標籤就地編輯、 啟用動畫、 啟用捲軸控點，讓使用者能夠捲動按鈕在 Outlook 功能區窗格上，設定 [Outlook] 索引標籤內容的框線大小選角色，並設定上的 Outlook 功能區索引標籤按鈕的文字標籤的對齊方式。 此程式碼片段是一部分[Outlook 示範範例](../../visual-cpp-samples.md)。
+下列範例示範如何初始化`CMFCOutlookBarTabCtrl`物件，並使用中的各種方法`CMFCOutlookBarTabCtrl`類別。 此範例示範如何啟用索引標籤頁面按鈕的 Outlook 功能區上的文字標籤就地編輯、 啟用動畫、 啟用捲軸控點，讓使用者能夠捲動按鈕在 Outlook 功能區窗格上，設定 [Outlook] 索引標籤內容的框線大小選角色，並設定上的 Outlook 功能區索引標籤按鈕的文字標籤的對齊方式。 此程式碼片段是一部分[Outlook 示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_OutlookDemo#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_1.cpp)]
 [!code-cpp[NVC_MFC_OutlookDemo#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_2.cpp)]
@@ -170,7 +170,7 @@ void AddControl(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用`AddControl`方法中的`CMFCOutlookBarTabCtrl`類別。 此程式碼片段是一部分[Outlook 示範範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用`AddControl`方法中的`CMFCOutlookBarTabCtrl`類別。 此程式碼片段是一部分[Outlook 示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_OutlookDemo#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_3.cpp)]
 
@@ -508,6 +508,6 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [類別](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)<br/>
+[CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)<br/>
 [CMFCOutlookBar 類別](../../mfc/reference/cmfcoutlookbar-class.md)<br/>
 [CMFCOutlookBarPane 類別](../../mfc/reference/cmfcoutlookbarpane-class.md)

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 42913ddea7818636dce8d630ed2d79d13c19ce81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302100"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781441"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd 類別
 
@@ -175,9 +175,9 @@ A`CSplitterWnd`物件通常內嵌在父代[CFrameWnd](../../mfc/reference/cframe
 
 如需有關如何建立動態分隔視窗的詳細資訊，請參閱：
 
-- MFC 範例[Scribble](../../visual-cpp-samples.md)
+- MFC 範例[Scribble](../../overview/visual-cpp-samples.md)
 
-- MFC 範例[VIEWEX](../../visual-cpp-samples.md)。
+- MFC 範例[VIEWEX](../../overview/visual-cpp-samples.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -388,10 +388,10 @@ virtual BOOL CreateView(
 
 ### <a name="parameters"></a>參數
 
-*row*<br/>
+*資料列*<br/>
 指定分隔器視窗資料列，在其中放置新的檢視。
 
-*col*<br/>
+*資料行*<br/>
 指定分隔器視窗資料行，在其中放置新的檢視。
 
 *pViewClass*<br/>
@@ -475,10 +475,10 @@ virtual void DeleteView(
 
 ### <a name="parameters"></a>參數
 
-*row*<br/>
+*資料列*<br/>
 指定要刪除檢視的分隔器視窗的資料列。
 
-*col*<br/>
+*資料行*<br/>
 指定要刪除檢視的分隔器視窗資料行。
 
 ### <a name="remarks"></a>備註
@@ -628,7 +628,7 @@ void GetColumnInfo(
 
 ### <a name="parameters"></a>參數
 
-*col*<br/>
+*資料行*<br/>
 指定資料行。
 
 *cxCur*<br/>
@@ -649,10 +649,10 @@ CWnd* GetPane(
 
 ### <a name="parameters"></a>參數
 
-*row*<br/>
+*資料列*<br/>
 指定資料列。
 
-*col*<br/>
+*資料行*<br/>
 指定資料行。
 
 ### <a name="return-value"></a>傳回值
@@ -684,7 +684,7 @@ void GetRowInfo(
 
 ### <a name="parameters"></a>參數
 
-*row*<br/>
+*資料列*<br/>
 指定資料列。
 
 *cyCur*<br/>
@@ -727,10 +727,10 @@ int IdFromRowCol(
 
 ### <a name="parameters"></a>參數
 
-*row*<br/>
+*資料列*<br/>
 指定分隔器視窗資料列。
 
-*col*<br/>
+*資料行*<br/>
 指定分隔器視窗資料行。
 
 ### <a name="return-value"></a>傳回值
@@ -877,10 +877,10 @@ virtual void SetActivePane(
 
 ### <a name="parameters"></a>參數
 
-*row*<br/>
+*資料列*<br/>
 如果*pWnd*為 NULL 時，會是作用中 窗格中指定的資料列。
 
-*col*<br/>
+*資料行*<br/>
 如果*pWnd*為 NULL 時，會是作用中 窗格中指定的資料行。
 
 *pWnd*<br/>
@@ -905,7 +905,7 @@ void SetColumnInfo(
 
 ### <a name="parameters"></a>參數
 
-*col*<br/>
+*資料行*<br/>
 指定分隔器視窗資料行。
 
 *cxIdeal*<br/>
@@ -937,7 +937,7 @@ void SetRowInfo(
 
 ### <a name="parameters"></a>參數
 
-*row*<br/>
+*資料列*<br/>
 指定分隔器視窗資料列。
 
 *cyIdeal*<br/>
@@ -1036,7 +1036,7 @@ virtual void OnDraw(CDC* pDC);
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 VIEWEX](../../visual-cpp-samples.md)<br/>
+[MFC 範例 VIEWEX](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CView 類別](../../mfc/reference/cview-class.md)<br/>

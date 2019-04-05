@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
 ms.openlocfilehash: 33828f3979fb938ae6e88fa3cb0d6ee24daa958c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776670"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065:Automation 伺服程式的雙重介面支援
@@ -55,7 +55,7 @@ interface IDualAClick : IDispatch
     };
 ```
 
-當您已備妥介面陳述式時，開始加入的方法和屬性的項目。 雙重介面，您需要重新排列參數清單，讓您的方法和雙重介面中的屬性存取子函式會傳回**HRESULT** ，並將其傳回值傳遞做為參數的屬性`[retval,out]`. 請記住，對於屬性，您必須將這兩個讀取 (`propget`) 和寫入 (`propput`) 存取函式具有相同識別碼。例如: 
+當您已備妥介面陳述式時，開始加入的方法和屬性的項目。 雙重介面，您需要重新排列參數清單，讓您的方法和雙重介面中的屬性存取子函式會傳回**HRESULT** ，並將其傳回值傳遞做為參數的屬性`[retval,out]`. 請記住，對於屬性，您必須將這兩個讀取 (`propget`) 和寫入 (`propput`) 存取函式具有相同識別碼。例如：
 
 ```IDL
 [propput, id(1)] HRESULT text([in] BSTR newText);
@@ -75,7 +75,7 @@ coclass Document
 
 ODL 檔案已更新之後，物件類別中定義的雙重介面的實作類別，並在 MFC 的對應項目中使用 MFC 的介面對應機制`QueryInterface`機制。 您需要在一個項目`INTERFACE_PART`區塊 ODL，介面陳述式中的每個項目，再加上分派介面的項目。 與每個 ODL 項目*propput*屬性需要名為函式`put_propertyname`。 與每個項目*propget*屬性需要名為函式`get_propertyname`。
 
-若要定義您的雙重介面的實作類別，新增`DUAL_INTERFACE_PART`物件類別定義的區塊。 例如: 
+若要定義您的雙重介面的實作類別，新增`DUAL_INTERFACE_PART`物件類別定義的區塊。 例如：
 
 ```cpp
 BEGIN_DUAL_INTERFACE_PART(DualAClick, IDualAClick)
@@ -102,7 +102,7 @@ BEGIN_INTERFACE_MAP(CAutoClickDoc, CDocument)
 END_INTERFACE_MAP()
 ```
 
-接下來，您需要填寫介面的實作。 大部分的情況下，您可以在此處委派給現有的 MFC`IDispatch`實作。 例如: 
+接下來，您需要填寫介面的實作。 大部分的情況下，您可以在此處委派給現有的 MFC`IDispatch`實作。 例如：
 
 ```cpp
 STDMETHODIMP_(ULONG) CAutoClickDoc::XDualAClick::AddRef()
@@ -179,7 +179,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::Invoke(
 }
 ```
 
-物件的方法和屬性存取子函式，您需要在實作填入。 您的方法和屬性函式通常可以回到使用 ClassWizard 所產生的方法委派。 不過，如果您直接存取變數設定屬性，您需要撰寫程式碼，以取得/放置值到變數。 例如: 
+物件的方法和屬性存取子函式，您需要在實作填入。 您的方法和屬性函式通常可以回到使用 ClassWizard 所產生的方法委派。 不過，如果您直接存取變數設定屬性，您需要撰寫程式碼，以取得/放置值到變數。 例如：
 
 ```cpp
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
@@ -218,7 +218,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_Position(
 }
 ```
 
-之前將指標傳遞回透過雙重介面方法，您可能需要將它從 MFC`IDispatch`雙重介面指標的指標。 例如: 
+之前將指標傳遞回透過雙重介面方法，您可能需要將它從 MFC`IDispatch`雙重介面指標的指標。 例如：
 
 ```
 STDMETHODIMP CAutoClickDoc::XDualAClick::get_Position(

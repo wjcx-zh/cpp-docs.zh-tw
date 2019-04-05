@@ -163,10 +163,10 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
 ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58782000"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
@@ -398,7 +398,7 @@ CImageList* CreateDragImage(HTREEITEM hItem);
 
 應用程式會使用影像清單函式，來顯示影像，當被拖曳的項目。
 
-`CImageList`物件是永久的而且您必須將它完成時刪除。 例如: 
+`CImageList`物件是永久的而且您必須將它完成時刪除。 例如：
 
 [!code-cpp[NVC_MFC_CTreeCtrl#2](../../mfc/reference/codesnippet/cpp/ctreectrl-class_2.cpp)]
 

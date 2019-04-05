@@ -7,16 +7,16 @@ helpviewer_keywords:
 - movnti instruction
 - _mm_stream_si64x intrinsic
 ms.assetid: 114c2cd0-085f-41aa-846e-87bdd56c9ee7
-ms.openlocfilehash: 11b289deeb2fd4aadf9b5d500a3379d8af26fbb9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: d7f7a75be1602fbb70a230b0dd3a791be99d092a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330433"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039594"
 ---
 # <a name="mmstreamsi64x"></a>_mm_stream_si64x
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 會產生 MOVNTI 指令。 將資料寫入`Source`所指定的記憶體位置`Dest`，而不到處快取。
 
@@ -34,7 +34,7 @@ void _mm_stream_si64x(
 *目的地*<br/>
 [out]要寫入之來源資料的位置指標。
 
-*來源*<br/>
+*原始程式檔*<br/>
 [in]要寫入的資料。
 
 ## <a name="requirements"></a>需求
@@ -75,7 +75,7 @@ int main()
 0 ffffffffffff 0 0
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

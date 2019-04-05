@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C3292
 ms.assetid: ead485cc-5471-4e10-b361-300589ff5b70
 ms.openlocfilehash: a68d3e922532480063fe4c294e40f453885743e8
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780648"
 ---
 # <a name="compiler-error-c3292"></a>編譯器錯誤 C3292

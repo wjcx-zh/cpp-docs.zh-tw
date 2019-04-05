@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
-ms.openlocfilehash: ae7f582de5d6c45df34c42164756356a9c794d31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3daf2cd532cd07225b822c80b46fc28274d4e2a8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482510"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778750"
 ---
 # <a name="compiler-error-c2065"></a>編譯器錯誤 C2065
 
@@ -203,9 +203,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-type-deduction-failure"></a>範例： C + + /cli CLI 型別推斷失敗
+## <a name="example-ccli-type-deduction-failure"></a>範例：C + + /cli CLI 型別推斷失敗
 
-如果預期的類型引數無法推算所使用的參數，當呼叫泛型函式，可以發生此錯誤。 如需詳細資訊，請參閱 <<c0> [ 泛型函式 (C + + /cli CLI)](../../windows/generic-functions-cpp-cli.md)。
+如果預期的類型引數無法推算所使用的參數，當呼叫泛型函式，可以發生此錯誤。 如需詳細資訊，請參閱 <<c0> [ 泛型函式 (C + + /cli CLI)](../../extensions/generic-functions-cpp-cli.md)。
 
 ```cpp
 // C2065_b.cpp
@@ -220,7 +220,7 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-attribute-parameters"></a>範例： C + + /cli CLI 屬性參數
+## <a name="example-ccli-attribute-parameters"></a>範例：C + + /cli CLI 屬性參數
 
 針對 Visual C++ 2005 所進行的編譯器一致性工作，也可能會導致這個錯誤：Visual C++ 屬性的參數檢查。
 

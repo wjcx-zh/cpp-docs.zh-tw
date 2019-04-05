@@ -9,12 +9,12 @@ helpviewer_keywords:
 - message classes [MFC], MFC
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
-ms.openlocfilehash: ffa57be45ca3b5626d78f495ed5ab5f658b62fb9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a5f0be66cdcb5c4a37d16b1e83cbc40cf023df32
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301918"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780193"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>結構、樣式、回呼和訊息對應
 
@@ -28,7 +28,7 @@ ms.locfileid: "57301918"
 [MFC 使用的樣式](../../mfc/reference/styles-used-by-mfc.md)<br/>
 在建立 MFC 物件時，提供樣式的連結。
 
-[MFC 使用的回呼函數](../../mfc/reference/callback-functions-used-by-mfc.md)<br/>
+[MFC 使用的回呼函式](../../mfc/reference/callback-functions-used-by-mfc.md)<br/>
 提供 MFC 程式庫中出現之回呼函式的連結。
 
 [訊息對應](../../mfc/reference/message-maps-mfc.md)<br/>
@@ -39,5 +39,5 @@ ms.locfileid: "57301918"
 [類別庫概觀](../../mfc/class-library-overview.md)<br/>
 依據分類列出 MFC 程式庫中的類別。
 
-[MFC 範例](../../visual-cpp-samples.md)<br/>
+[MFC 範例](../../overview/visual-cpp-samples.md)<br/>
 提供示範如何使用 MFC 之範例的連結。

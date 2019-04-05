@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
-ms.openlocfilehash: 15b82ddca42f9b70ac16538cea19f8aedd799c05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7020bd6cfcf8bcdbfb773908e693c6364a29e343
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574439"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037577"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -39,8 +39,8 @@ ms.locfileid: "50574439"
 |-|-|
 |**適用於**|介面參數|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

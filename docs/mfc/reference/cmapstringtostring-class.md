@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
 ms.openlocfilehash: ed717497866076681e39cdee7803a45eb8e097d3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780362"
 ---
 # <a name="cmapstringtostring-class"></a>CMapStringToString 類別
@@ -110,7 +110,7 @@ class CMapStringToString : public CObject
 
 ## <a name="remarks"></a>備註
 
-`CMapStringToString` 引入 `IMPLEMENT_SERIAL` 巨集，以支援其項目的序列化和傾印。 如果對應儲存至封存，不論是使用多載的插入依次序列化每個項目 ( **<<**) 運算子或`Serialize`成員函式。
+`CMapStringToString` 併入`IMPLEMENT_SERIAL`巨集，支援序列化和傾印其項目。 如果對應儲存至封存，不論是使用多載的插入依次序列化每個項目 ( **<<**) 運算子或`Serialize`成員函式。
 
 如果您需要個別的傾印`CString` -  `CString`項目，您必須將傾印內容的深度大於或等於 1。
 

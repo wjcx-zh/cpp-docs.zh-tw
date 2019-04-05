@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetFlags
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
-ms.openlocfilehash: 3fa829c5333a87d908d36438fe8ffcd253f9fb5a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1fc422c3aca3efe1fb177e7a3567530d70c27119
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279987"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779751"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl 類別
 
@@ -86,7 +86,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 
 ## <a name="example"></a>範例
 
-下列範例示範如何建立 `CMFCShellTreeCtrl` 類別的物件。 此程式碼片段是一部分[總管範例](../../visual-cpp-samples.md)。
+下列範例示範如何建立 `CMFCShellTreeCtrl` 類別的物件。 此程式碼片段是一部分[總管範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_Explorer#4](../../mfc/reference/codesnippet/cpp/cmfcshelltreectrl-class_1.h)]
 [!code-cpp[NVC_MFC_Explorer#5](../../mfc/reference/codesnippet/cpp/cmfcshelltreectrl-class_2.cpp)]
@@ -294,5 +294,5 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [類別](../../mfc/reference/mfc-classes.md)<br/>
-[CTreeCtrl 類別](../../mfc/reference/ctreectrl-class.md)<br/>
+[CTreeCtrl Class](../../mfc/reference/ctreectrl-class.md)<br/>
 [CMFCShellListCtrl 類別](../../mfc/reference/cmfcshelllistctrl-class.md)

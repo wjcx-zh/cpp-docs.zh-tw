@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: a68f3570f0e8c3315e8b0716cddcd37563894e76
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 8c69473ab813c2fa692044fddc406a74a5aeb197
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422490"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779816"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl 類別
 
@@ -599,7 +599,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 CMNCTRL1](../../visual-cpp-samples.md)<br/>
+[MFC 範例 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CMonthCalCtrl 類別](../../mfc/reference/cmonthcalctrl-class.md)

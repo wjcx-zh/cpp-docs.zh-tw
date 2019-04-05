@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: 95a19b20e0acc4ae45a953eee5a1c4d2bfb3e9da
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 24d79c684226d57839161946255781c3bdd5a043
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326721"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779088"
 ---
 # <a name="coledataobject-class"></a>COleDataObject 類別
 
@@ -338,8 +338,8 @@ void Release();
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 HIERSVR](../../visual-cpp-samples.md)<br/>
-[MFC 範例 OCLIENT](../../visual-cpp-samples.md)<br/>
+[MFC 範例 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[MFC 範例 OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [COleDataSource 類別](../../mfc/reference/coledatasource-class.md)<br/>
 [COleClientItem 類別](../../mfc/reference/coleclientitem-class.md)<br/>

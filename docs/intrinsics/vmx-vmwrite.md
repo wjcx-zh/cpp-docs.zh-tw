@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __vmx_vmwrite intrinsic
 - VMWRITE instruction
 ms.assetid: 88139792-fd3f-4210-97ca-9d84f43a0252
-ms.openlocfilehash: e368a1f6be51d37cdfe7ef352fca69e987fed62d
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e52b1f181f00ce013a111d1a5a62abeff544e20a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328561"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037506"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 將指定的值寫入目前的虛擬機器控制結構 (VMCS) 中指定的欄位。
 
@@ -56,7 +56,7 @@ unsigned char __vmx_vmwrite(
 
 **標頭檔** \<intrin.h >
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

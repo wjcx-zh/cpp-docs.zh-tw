@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: 594b78fd36dcb1ff92c63867688c38eac7520eba
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c8a51a33c69b09d0ecd61520b5f1c9ff18c290a0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304325"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779790"
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager 類別
 
@@ -81,7 +81,7 @@ class CContextMenuManager : public CObject
 
 ## <a name="example"></a>範例
 
-下列範例示範如何加入至功能表`CContextMenuManager`物件，以及如何不關閉使用中的快顯功能表時`CContextMenuManager`物件會顯示新的快顯功能表。 此程式碼片段是一部分[自訂頁面範例](../../visual-cpp-samples.md)。
+下列範例示範如何加入至功能表`CContextMenuManager`物件，以及如何不關閉使用中的快顯功能表時`CContextMenuManager`物件會顯示新的快顯功能表。 此程式碼片段是一部分[自訂頁面範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_CustomPages#4](../../mfc/reference/codesnippet/cpp/ccontextmenumanager-class_1.cpp)]
 

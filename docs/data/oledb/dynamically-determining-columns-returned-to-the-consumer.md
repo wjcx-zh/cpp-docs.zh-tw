@@ -5,12 +5,12 @@ helpviewer_keywords:
 - bookmarks [C++], dynamically determining columns
 - dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-ms.openlocfilehash: 7db319aa153cb281c8fd8b4eec16972f5ac0c2c9
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 81353581d22f3d075fd19d783591ec856c21e241
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265174"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037655"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>動態決定傳回給消費者的資料行
 
@@ -104,7 +104,7 @@ ATLCOLUMNINFO* CCustomWindowsFile::GetColumnInfo(void* pThis, ULONG* pcCols)
 }
 ```
 
-此範例會使用靜態陣列以保存的資料行資訊。 如果取用者不想書籤資料行，在陣列中的一個項目未使用。 若要處理的資訊，您會建立兩個陣列巨集： ADD_COLUMN_ENTRY 和 ADD_COLUMN_ENTRY_EX。 ADD_COLUMN_ENTRY_EX 採用額外的參數，*旗標*，也就是如果您指定的書籤資料行所需。
+此範例會使用靜態陣列以保存的資料行資訊。 如果取用者不想書籤資料行，在陣列中的一個項目未使用。 若要處理的資訊，您會建立兩個陣列巨集：ADD_COLUMN_ENTRY 和 ADD_COLUMN_ENTRY_EX。 ADD_COLUMN_ENTRY_EX 採用額外的參數，*旗標*，也就是如果您指定的書籤資料行所需。
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////  

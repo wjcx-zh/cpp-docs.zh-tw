@@ -51,10 +51,10 @@ helpviewer_keywords:
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
 ms.openlocfilehash: 383222e4892bccc653f010ce4939bca23f2adc93
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780947"
 ---
 # <a name="clist-class"></a>CList 類別
@@ -104,7 +104,7 @@ class CList : public CObject
 
 #### <a name="parameters"></a>參數
 
-*型別*<br/>
+*TYPE*<br/>
 儲存在清單中的物件型別。
 
 *ARG_TYPE*<br/>
@@ -288,10 +288,10 @@ const TYPE& GetAt(POSITION position) const;
 
 ### <a name="parameters"></a>參數
 
-*型別*<br/>
+*TYPE*<br/>
 樣板參數清單中指定的物件類型。
 
-*position*<br/>
+*位置*<br/>
 要取得的項目清單中的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -340,7 +340,7 @@ TYPE& GetHead();
 
 ### <a name="parameters"></a>參數
 
-*型別*<br/>
+*TYPE*<br/>
 樣板參數清單中指定的物件類型。
 
 ### <a name="return-value"></a>傳回值
@@ -384,7 +384,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
 
 ### <a name="parameters"></a>參數
 
-*型別*<br/>
+*TYPE*<br/>
 樣板參數清單中指定的項目類型。
 
 *rPosition*<br/>
@@ -419,7 +419,7 @@ const TYPE& GetPrev(POSITION& rPosition) const;
 
 ### <a name="parameters"></a>參數
 
-*型別*<br/>
+*TYPE*<br/>
 樣板參數清單中指定的項目類型。
 
 *rPosition*<br/>
@@ -474,7 +474,7 @@ const TYPE& GetTail() const;
 
 ### <a name="parameters"></a>參數
 
-*型別*<br/>
+*TYPE*<br/>
 樣板參數清單中指定的項目類型。
 
 ### <a name="return-value"></a>傳回值
@@ -515,7 +515,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>參數
 
-*position*<br/>
+*位置*<br/>
 傳回先前的位置值`GetNext`， `GetPrev`，或`Find`成員函式呼叫。
 
 *ARG_TYPE*<br/>
@@ -542,7 +542,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>參數
 
-*position*<br/>
+*位置*<br/>
 傳回先前的位置值`GetNext`， `GetPrev`，或`Find`成員函式呼叫。
 
 *ARG_TYPE*<br/>
@@ -605,7 +605,7 @@ void RemoveAt(POSITION position);
 
 ### <a name="parameters"></a>參數
 
-*position*<br/>
+*位置*<br/>
 要從清單中移除之項目的位置。
 
 ### <a name="remarks"></a>備註
@@ -626,7 +626,7 @@ TYPE RemoveHead();
 
 ### <a name="parameters"></a>參數
 
-*型別*<br/>
+*TYPE*<br/>
 樣板參數清單中指定的項目類型。
 
 ### <a name="return-value"></a>傳回值
@@ -651,7 +651,7 @@ TYPE RemoveTail();
 
 ### <a name="parameters"></a>參數
 
-*型別*<br/>
+*TYPE*<br/>
 樣板參數清單中指定的項目類型。
 
 ### <a name="return-value"></a>傳回值

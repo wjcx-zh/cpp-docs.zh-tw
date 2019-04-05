@@ -9,10 +9,10 @@ helpviewer_keywords:
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
 ms.openlocfilehash: 32a8f8784459338131d4893f25d8798f8031b68b
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778490"
 ---
 # <a name="dialog-boxes"></a>對話方塊
@@ -33,7 +33,7 @@ ms.locfileid: "58778490"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
 
-- [例如：顯示對話方塊，透過功能表命令](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
+- [範例：顯示對話方塊，透過功能表命令](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
 
 - [架構中的對話方塊元件](../mfc/dialog-box-components-in-the-framework.md)
 
@@ -55,7 +55,7 @@ ms.locfileid: "58778490"
 
 - [常被覆寫的成員函式](../mfc/commonly-overridden-member-functions.md)
 
-- [常新增的成員函式](../mfc/commonly-added-member-functions.md)
+- [常加入的成員函式](../mfc/commonly-added-member-functions.md)
 
 - [通用對話方塊類別](../mfc/common-dialog-classes.md)
 

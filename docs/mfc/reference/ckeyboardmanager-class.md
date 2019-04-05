@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: c953958b3e0112997423376d42b62953b936049a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3360a28d50f64546837cc5ef35dcfc761b4fb0f5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303603"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779803"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager 類別
 
@@ -81,7 +81,7 @@ class CKeyboardManager : public CObject
 
 ## <a name="example"></a>範例
 
-下列範例示範如何擷取指標`CKeyboardManager`物件從`CWinAppEx`類別，以及如何顯示所有關聯的快速鍵與功能表命令。 此程式碼片段是一部分[自訂頁面範例](../../visual-cpp-samples.md)。
+下列範例示範如何擷取指標`CKeyboardManager`物件從`CWinAppEx`類別，以及如何顯示所有關聯的快速鍵與功能表命令。 此程式碼片段是一部分[自訂頁面範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_CustomPages#5](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]
 

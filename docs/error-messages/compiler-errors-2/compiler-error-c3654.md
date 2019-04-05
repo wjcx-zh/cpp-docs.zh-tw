@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3654
 ms.assetid: 57d96e3f-6bbb-4eaa-934b-26c23b4ceb2e
-ms.openlocfilehash: eca5081daaaf92a7b95a076a1e93bc06799bd9f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e66f0071a3d086c84a51c8b69e52b06643344c4d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649016"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779491"
 ---
 # <a name="compiler-error-c3654"></a>編譯器錯誤 C3654
 
 'text': 明確覆寫中的語法錯誤
 
-明確覆寫中未預期的字串。 如需詳細資訊，請參閱 <<c0> [ 明確覆寫](../../windows/explicit-overrides-cpp-component-extensions.md)。
+明確覆寫中未預期的字串。 如需詳細資訊，請參閱 <<c0> [ 明確覆寫](../../extensions/explicit-overrides-cpp-component-extensions.md)。
 
 下列範例會產生 C3654:
 

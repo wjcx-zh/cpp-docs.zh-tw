@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], SetWindowText
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
-ms.openlocfilehash: 88a9c49b55dca9d98976924127efff67c479a96a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c1dcf89811fa5225283cb5bec120d3bd2fdfb003
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276960"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773784"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit 類別
 
@@ -88,7 +88,7 @@ class CMFCMaskedEdit : public CEdit
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用設定 （例如電話號碼） 的遮罩`EnableMask`方法，以建立遮罩遮罩編輯控制項，`SetValidChars`方法，以指定有效的字元，使用者可以輸入，並的字串`SetWindowText`方法來顯示提示遮罩編輯控制項。 此範例中是屬於[新的控制項範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用設定 （例如電話號碼） 的遮罩`EnableMask`方法，以建立遮罩遮罩編輯控制項，`SetValidChars`方法，以指定有效的字元，使用者可以輸入，並的字串`SetWindowText`方法來顯示提示遮罩編輯控制項。 此範例中是屬於[新的控制項範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#11](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#12](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_2.cpp)]
@@ -340,4 +340,4 @@ void SetWindowText(LPCTSTR lpszString);
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [類別](../../mfc/reference/mfc-classes.md)<br/>
-[CEdit 類別](../../mfc/reference/cedit-class.md)
+[CEdit Class](../../mfc/reference/cedit-class.md)

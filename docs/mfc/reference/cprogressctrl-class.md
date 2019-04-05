@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: 131bee5f9eae1e6e2be4d48941d148edbde68262
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 15241485278f09d16c86fc7274f2fc1d85a7a2f7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418759"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778945"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl 類別
 
@@ -604,6 +604,6 @@ int StepIt();
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 CMNCTRL2](../../visual-cpp-samples.md)<br/>
+[MFC 範例 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)

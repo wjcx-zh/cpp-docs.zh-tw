@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-ms.openlocfilehash: 38f9c6953999e07f1a72ed6a9c0661184f075ea0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f2a2e385a9f210b3644d7fade00b72c4befa47ef
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303071"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778867"
 ---
 # <a name="cbrush-class"></a>CBrush 類別
 
@@ -435,7 +435,7 @@ operator HBRUSH() const;
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 PROPDLG](../../visual-cpp-samples.md)<br/>
+[MFC 範例 PROPDLG](../../overview/visual-cpp-samples.md)<br/>
 [CGdiObject 類別](../../mfc/reference/cgdiobject-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CBitmap 類別](../../mfc/reference/cbitmap-class.md)<br/>

@@ -81,10 +81,10 @@ helpviewer_keywords:
 - CMultiPaneFrameWnd [MFC], StoreRecentTabRelatedInfo
 ms.assetid: 989a548e-0d70-46b7-a513-8cf740e1be3e
 ms.openlocfilehash: 9c23d76e8f3ea54fe34e7956ad5b4e7dc9780def
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773056"
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd 類別

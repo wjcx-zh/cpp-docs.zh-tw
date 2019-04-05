@@ -105,10 +105,10 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
 ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778451"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
@@ -310,7 +310,7 @@ BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*style*<br/>
+*樣式*<br/>
 [in]索引標籤控制項的樣式。 如需詳細資訊，請參閱＜備註＞。
 
 *rect*<br/>
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [in]索引標籤控制項的 ID。
 
-*location*<br/>
+*位置*<br/>
 [in]索引標籤的位置。 預設值是 LOCATION_BOTTOM。 如需詳細資訊，請參閱＜備註＞。
 
 *bCloseBtn*<br/>
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>參數
 
-*style*<br/>
+*樣式*<br/>
 [in]其中一個列舉值，指定索引標籤控制項的外觀。 如需詳細資訊，請參閱 < 備註 > 中的資料表。
 
 ### <a name="return-value"></a>傳回值
@@ -1139,6 +1139,6 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [類別](../../mfc/reference/mfc-classes.md)<br/>
-[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)<br/>
-[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)<br/>
-[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)
+[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
+[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
+[CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)

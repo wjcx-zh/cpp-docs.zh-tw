@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: aaa05fc3e97fe690e8d6a0cd9eba826c482b410d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f74d883fa0dcdce025345848caf49069736ee0fa
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262099"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779205"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 類別
 
@@ -251,7 +251,7 @@ class CFileDialog : public CCommonDialog
 
 - [CDialog::OnSetFont](../../mfc/reference/cdialog-class.md#onsetfont)
 
-Windows 訊息`CFileDialog`類別視您正在使用哪個作業系統。 比方說，不支援 Windows XP [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel)並[CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok)如`CFileDialog`類別。 不過，Windows Vista 和更新版本的作業系統並支援它們。 如需有關不同所產生的訊息並接收它們的順序的詳細資訊，請參閱[CFileDialog 範例：記錄事件順序](../../visual-cpp-samples.md)。
+Windows 訊息`CFileDialog`類別視您正在使用哪個作業系統。 比方說，不支援 Windows XP [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel)並[CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok)如`CFileDialog`類別。 不過，Windows Vista 和更新版本的作業系統並支援它們。 如需有關不同所產生的訊息並接收它們的順序的詳細資訊，請參閱[CFileDialog 範例：記錄事件順序](../../overview/visual-cpp-samples.md)。
 
 若要使用`CFileDialog`物件，請先建立物件，使用`CFileDialog`建構函式。 在建構對話方塊之後，您可以設定或修改中的任何值[CFileDialog::m_ofn](#m_ofn)結構初始化的值或對話方塊控制項的狀態。 `m_ofn`結構的類型是`OPENFILENAME`。 如需詳細資訊，請參閱 < [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) Windows SDK 中的結構。
 
@@ -572,7 +572,7 @@ explicit CFileDialog(
 
 指定使用預設延伸模組*lpszDefExt*可能不會產生的行為，您預期，因為它是很少可預測哪些延伸模組會對使用者的電腦中的檔案關聯。 如果您需要更充分掌控附加的預設延伸模組，您可以衍生自己的類別，從`CFileDialog`，並覆寫`CFileDialog::OnFileNameOK`方法，以執行您自己的延伸模組處理。
 
-若要讓使用者選取多個檔案，設定才能呼叫的 OFN_ALLOWMULTISELECT 旗標[DoModal](#domodal)。 您必須提供您自己來儲存傳回的多個檔案名稱清單的檔案名稱緩衝區。 執行這項操作來取代`m_ofn.lpstrFile`與緩衝區的指標所配置的之後您建構, [CFileDialog](../../mfc/reference/cfiledialog-class.md)，然後再呼叫，但`DoModal`。 此外，您必須設定`m_ofn.nMaxFile`所指向的緩衝區中的字元數目`m_ofn.lpstrFile`。 如果您設定要選取的檔案數目上限*n*，所需的緩衝區大小是`n`*(_MAX_PATH + 1) + 1。 例如: 
+若要讓使用者選取多個檔案，設定才能呼叫的 OFN_ALLOWMULTISELECT 旗標[DoModal](#domodal)。 您必須提供您自己來儲存傳回的多個檔案名稱清單的檔案名稱緩衝區。 執行這項操作來取代`m_ofn.lpstrFile`與緩衝區的指標所配置的之後您建構, [CFileDialog](../../mfc/reference/cfiledialog-class.md)，然後再呼叫，但`DoModal`。 此外，您必須設定`m_ofn.nMaxFile`所指向的緩衝區中的字元數目`m_ofn.lpstrFile`。 如果您設定要選取的檔案數目上限*n*，所需的緩衝區大小是`n`*(_MAX_PATH + 1) + 1。 例如：
 
 [!code-cpp[NVC_MFCFiles#23](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_1.cpp)]
 

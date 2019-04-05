@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
 ms.openlocfilehash: 41cbb86b4245bd78baecd222b5573ba5e877243a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773823"
 ---
 # <a name="wizards-and-the-resource-editors"></a>精靈和資源編輯器

@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 9cedcfbfb662d7d4d635a02b82ea45828c54b958
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 60eeaa2a37dd824ae418b25e95743c21c65ae7ce
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259512"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773719"
 ---
 # <a name="cricheditview-class"></a>CRichEditView 類別
 
@@ -190,11 +190,11 @@ class CRichEditView : public CCtrlView
 
 「 Rich edit 控制項 」 是一個視窗，讓使用者輸入及編輯文字。 文字字元和段落格式，可指派，而且可以包含內嵌的 OLE 物件。 Rich edit 控制項的格式化文字，提供程式設計介面。 然而，應用程式必須實作所有必要的使用者介面元件，讓使用者能夠執行格式化作業。
 
-`CRichEditView` 會維護文字和文字的格式特性。 `CRichEditDoc` 會維護檢視中的 OLE 用戶端項目清單。 `CRichEditCntrItem` 提供 OLE 用戶端項目的存取權給容器端。
+`CRichEditView` 會維護文字和文字的格式特性。 `CRichEditDoc` 會維護檢視中的 OLE 用戶端項目清單。 `CRichEditCntrItem` 提供 OLE 用戶端項目容器端存取。
 
 這個 Windows 通用控制項 (因而[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)和相關類別) 僅適用於 Windows 95/98 和 Windows NT 的版本 3.51 下執行的程式和更新版本。
 
-在 MFC 應用程式中使用 rich edit 檢視表的範例，請參閱[WORDPAD](../../visual-cpp-samples.md)範例應用程式。
+在 MFC 應用程式中使用 rich edit 檢視表的範例，請參閱[WORDPAD](../../overview/visual-cpp-samples.md)範例應用程式。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -1284,7 +1284,7 @@ virtual void WrapChanged();
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 WORDPAD](../../visual-cpp-samples.md)<br/>
+[MFC 範例 WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView 類別](../../mfc/reference/cctrlview-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CRichEditDoc 類別](../../mfc/reference/cricheditdoc-class.md)<br/>

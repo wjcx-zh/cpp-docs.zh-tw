@@ -3,10 +3,10 @@ title: MFC 和 ATL
 ms.date: 01/24/2018
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
 ms.openlocfilehash: c2cfb77f0e3885e0b315ddfe38bf942ec157375a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780245"
 ---
 # <a name="mfc-and-atl"></a>MFC 和 ATL
@@ -23,7 +23,7 @@ Microsoft Foundation Classes (MFC) 透過 Win32 提供 C++ 物件導向包裝函
 
 |標題|描述|
 |-----------|-----------------|
-|[MFC 傳統型應用程式](../mfc/mfc-desktop-applications.md)|Microsoft Foundation Classes 透過 Win32 提供精簡型物件導向包裝函式，以便在 C++ 中快速開發 GUI 應用程式。|
+|[MFC 桌面應用程式](../mfc/mfc-desktop-applications.md)|Microsoft Foundation Classes 透過 Win32 提供精簡型物件導向包裝函式，以便在 C++ 中快速開發 GUI 應用程式。|
 |[ATL COM 桌面元件](../atl/atl-com-desktop-components.md)|ATL 提供類別樣板及其他用途建構，以簡化 C++ 中的 COM 物件建立作業。|
 |[ATL/MFC 共用類別](../atl-mfc-shared/atl-mfc-shared-classes.md)|由 MFC 和 ATL 共用之 [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md) 和其他類別的參考。|
 |[使用資源檔](../windows/working-with-resource-files.md)|資源編輯器可讓您編輯 UI 資源，例如字串、影像及對話方塊。|

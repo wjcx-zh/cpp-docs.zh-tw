@@ -32,12 +32,12 @@ helpviewer_keywords:
 - Hash method
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-ms.openlocfilehash: c5954aefaff2cdacb1aa1712f8b4bda93c9e434e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e3513084697a60a33b9fa2ab02222a9b332cce79
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420371"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039815"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl 類別
 
@@ -94,10 +94,10 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 
 |||
 |-|-|
-|[Compare](#compare)|比較兩個書籤。|
+|[比較](#compare)|比較兩個書籤。|
 |[GetRowsAt](#getrowsat)|擷取從書籤中位移所指定的資料列開始的資料列。|
 |[GetRowsByBookmark](#getrowsbybookmark)|擷取符合指定的書籤的資料列。|
-|[雜湊](#hash)|傳回雜湊值，指定的書籤。|
+|[Hash](#hash)|傳回雜湊值，指定的書籤。|
 
 ### <a name="data-members"></a>資料成員
 
@@ -236,7 +236,7 @@ CAtlArray<DBROWCOUNT> m_rgBookmarks;
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [IRowsetLocate:IRowset](/previous-versions/windows/desktop/ms721190(v=vs.85))
 [書籤的提供者支援](../../data/oledb/provider-support-for-bookmarks.md)<br/>
 [書籤](/previous-versions/windows/desktop/ms709728(v=vs.85))

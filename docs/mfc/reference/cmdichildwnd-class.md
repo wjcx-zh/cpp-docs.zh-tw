@@ -23,10 +23,10 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
 ms.openlocfilehash: 13f027e68184a4869e88883ff8b8d3b123b94e3e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58774577"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd 類別

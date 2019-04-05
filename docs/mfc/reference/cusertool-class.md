@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strInitialDirectory
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
-ms.openlocfilehash: ca9035ecfcde0c2e82628c5509a16557a487b8cc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5bb0ae073b722c97e8e30158f8f7832fd88b2fbc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290452"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779036"
 ---
 # <a name="cusertool-class"></a>CUserTool 類別
 
@@ -82,7 +82,7 @@ class CUserTool : public CObject
 
 ## <a name="example"></a>範例
 
-下列範例示範如何建立提供的工具`CUserToolsManager`物件，設定`m_strLabel`成員變數，並設定使用者工具執行的應用程式。 此程式碼片段是一部分[Visual Studio 示範範例](../../visual-cpp-samples.md)。
+下列範例示範如何建立提供的工具`CUserToolsManager`物件，設定`m_strLabel`成員變數，並設定使用者工具執行的應用程式。 此程式碼片段是一部分[Visual Studio 示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#35](../../mfc/codesnippet/cpp/cusertool-class_1.cpp)]
 

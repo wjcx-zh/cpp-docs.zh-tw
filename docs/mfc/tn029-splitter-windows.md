@@ -8,10 +8,10 @@ helpviewer_keywords:
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
 ms.openlocfilehash: 6c2f619d9cd619ca598c66ca657faa1b9dccaaa2
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781727"
 ---
 # <a name="tn029-splitter-windows"></a>TN029:分隔視窗
@@ -54,7 +54,7 @@ A`CSplitterWnd`支援分割 windows 的兩個不同的樣式。
 
 以下是專屬於分隔視窗的詞彙的清單：
 
-`CSplitterWnd`：提供窗格分割控制項和所有窗格上的資料列或資料行之間共用的捲軸的視窗。 您可以指定資料列和資料行之以零起始的數字 (第一個窗格是資料列 = 0 且資料行 = 0)。
+`CSplitterWnd`:提供窗格分割控制項和所有窗格上的資料列或資料行之間共用的捲軸的視窗。 您可以指定資料列和資料行之以零起始的數字 (第一個窗格是資料列 = 0 且資料行 = 0)。
 
 窗格中：特定應用程式視窗，`CSplitterWnd`管理。 一個窗格，通常是物件衍生自[CView 類別](../mfc/reference/cview-class.md)，但可以是任何[CWnd](../mfc/reference/cwnd-class.md)物件，具有適當的子視窗識別碼。
 

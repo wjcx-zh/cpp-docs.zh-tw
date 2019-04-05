@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-ms.openlocfilehash: 587aa0730502d5e8f90c4fec57bb87886b79fb3f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a2773333ea1dd89f73e7bdf3c5dc2f36945e0810
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304973"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778503"
 ---
 # <a name="coledropsource-class"></a>COleDropSource 類別
 
@@ -163,7 +163,7 @@ DRAGDROP_S_CANCEL 如果 ESC 鍵或向右按鈕已按下，還是保留按鈕就
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 HIERSVR](../../visual-cpp-samples.md)<br/>
-[MFC 範例 OCLIENT](../../visual-cpp-samples.md)<br/>
+[MFC 範例 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[MFC 範例 OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)

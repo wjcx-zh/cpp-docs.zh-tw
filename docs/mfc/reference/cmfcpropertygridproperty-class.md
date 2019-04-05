@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: 550f238ae66bcaf7d5afc245b709c42c78769949
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305064"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779023"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty 類別
 
@@ -297,7 +297,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ## <a name="example"></a>範例
 
-下列範例示範如何建構`CMFCPropertyGridProperty`物件。 此範例也示範如何使用各種方法在`CMFCPropertyGridProperty`類別，以將選項加入，加入子項目、 啟用屬性，並顯示屬性。 此範例中是屬於[新的控制項範例](../../visual-cpp-samples.md)。
+下列範例示範如何建構`CMFCPropertyGridProperty`物件。 此範例也示範如何使用各種方法在`CMFCPropertyGridProperty`類別，以將選項加入，加入子項目、 啟用屬性，並顯示屬性。 此範例中是屬於[新的控制項範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#27](../../mfc/reference/codesnippet/cpp/cmfcpropertygridproperty-class_1.cpp)]
 

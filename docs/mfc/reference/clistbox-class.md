@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 17ff89fde3ef893c2cfcd8beeb8482722af60358
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280312"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778763"
 ---
 # <a name="clistbox-class"></a>CListBox 類別
 
@@ -1538,12 +1538,12 @@ WM_VKEYTOITEM 訊息所傳送的清單方塊中，當它收到 WM_KEYDOWN 訊息
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 CTRLTEST](../../visual-cpp-samples.md)<br/>
+[MFC 範例 CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>
 [CButton 類別](../../mfc/reference/cbutton-class.md)<br/>
 [CComboBox 類別](../../mfc/reference/ccombobox-class.md)<br/>
-[CEdit 類別](../../mfc/reference/cedit-class.md)<br/>
+[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
 [CScrollBar 類別](../../mfc/reference/cscrollbar-class.md)<br/>
 [CStatic 類別](../../mfc/reference/cstatic-class.md)

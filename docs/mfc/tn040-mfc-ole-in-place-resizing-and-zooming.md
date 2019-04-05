@@ -9,12 +9,12 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-ms.openlocfilehash: e2f6c6acfefaae877790fd2cc0926bc2474c79b8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c2cb25388184ac969bec7c01d8077a458c03a03a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283757"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58775279"
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040:MFC/OLE 就地調整大小和縮放
 
@@ -40,9 +40,9 @@ ms.locfileid: "57283757"
 
 目前的縮放因數可以透過呼叫 `COleServerDoc::GetZoomFactor` 來決定。 當文件不是就地啟用時呼叫此項，總是會產生 100% 縮放因數 (或 1:1 比例)。 當就地啟用作用中呼叫它，則可能傳回 100% 以外的值。
 
-如需正確縮放的範例，請參閱 MFC OLE 範例[HIERSVR](../visual-cpp-samples.md)。 HIERSVR 中的縮放伴隨的事實是其顯示文字，而文字一般並不會線性方式 (提示、印刷樣式慣例、設計寬度和高度都讓問題更複雜) 縮放。 然而，HIERSVR 是正確實作縮放的合理參考，因此，MFC 教學課程[SCRIBBLE](../visual-cpp-samples.md) （步驟 7）。
+如需正確縮放的範例，請參閱 MFC OLE 範例[HIERSVR](../overview/visual-cpp-samples.md)。 HIERSVR 中的縮放伴隨的事實是其顯示文字，而文字一般並不會線性方式 (提示、印刷樣式慣例、設計寬度和高度都讓問題更複雜) 縮放。 然而，HIERSVR 是正確實作縮放的合理參考，因此，MFC 教學課程[SCRIBBLE](../overview/visual-cpp-samples.md) （步驟 7）。
 
-`COleServerDoc::GetZoomFactor` 是根據可從容器或從實作您的 `COleServerItem` 和 `COleServerDoc` 類別取得的幾個不同度量，來決定縮放因數。 簡言之，目前的縮放因數取決於下列公式：
+`COleServerDoc::GetZoomFactor` 根據幾個不同度量可從容器或從實作的縮放因數會決定您`COleServerItem`和`COleServerDoc`類別。 簡言之，目前的縮放因數取決於下列公式：
 
 ```
 Position Rectangle (PR) / Container Extent (CE)
@@ -52,7 +52,7 @@ POSITION RECTANGLE 取決於容器。 當呼叫 `COleClientItem::OnGetItemPositi
 
 CONTAINER EXTENT 的計算稍微比較複雜。 如果容器已呼叫 `COleServerItem::OnSetExtent` (使用呼叫 `COleClientItem::SetExtent`)，則 CONTAINER EXTENT 是轉換為像素 (以每邏輯英吋的像素數為基礎) 的這個值。 如果容器未呼叫 SetExtent (通常是如此)，則 CONTAINER EXTENT 是從 `COleServerItem::OnGetExtent` 傳回的大小。 因此，如果容器未呼叫 SetExtent，架構會假設，如果有容器已經呼叫它和 100%的自然範圍 (從傳回的值`COleServerItem::GetExtent`)。 以另一個方式陳述，架構會假設容器是 100% (不多也不少) 顯示項目。
 
-要注意的是，雖然 `COleServerItem::OnSetExtent` 和 `COleServerItem::OnGetExtent` 具有類似的名稱，但是它們不操作相同屬性的項目。 呼叫 `OnSetExtent` 是為了讓伺服器知道物件有多少部分會顯示在容器 (不論縮放因數) 中，而容器會呼叫 `OnGetExtent` 決定物件的理想大小。
+要注意的是，雖然 `COleServerItem::OnSetExtent` 和 `COleServerItem::OnGetExtent` 具有類似的名稱，但是它們不操作相同屬性的項目。 `OnSetExtent` 呼叫以讓伺服器知道多少物件會顯示在容器 （不論縮放因數） 和`OnGetExtent`呼叫來判斷物件的理想大小的容器。
 
 查看所牽涉的每個 API，您就可以更清楚了解：
 

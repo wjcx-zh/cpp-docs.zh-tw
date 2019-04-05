@@ -8,10 +8,10 @@ helpviewer_keywords:
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
 ms.openlocfilehash: 21006f19f7c811f87f3f75e346983f7a8e7e0bf5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778321"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>HOW TO：各種字串類型之間轉換
@@ -803,11 +803,11 @@ Hello, World! (basic_string)
 ## <a name="see-also"></a>另請參閱
 
 [ATL 和 MFC 字串轉換巨集](../atl/reference/string-conversion-macros.md)<br/>
-[與 C 樣式字串相關的 CString 作業](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
-[如何：將標準字串轉換為 System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
-[如何：將 System::String 轉換為標準字串](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
-[如何：將 system:: string 轉換為 wchar_t * 或 char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
-[使用 ccombstr 進行程式設計](../atl/programming-with-ccombstr-atl.md)<br/>
+[與 C 樣式字串相關的 CString](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
+[HOW TO：將標準字串轉換為 system:: string](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
+[HOW TO：將 system:: string 轉換為標準字串](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
+[HOW TO：將 system:: string 轉換為 wchar_t * 或 char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
+[使用 CComBSTR 進行程式設計](../atl/programming-with-ccombstr-atl.md)<br/>
 [mbstowcs_s、_mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)<br/>
 [wcstombs_s、_wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)<br/>
 [strcpy_s、wcscpy_s、_mbscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)<br/>

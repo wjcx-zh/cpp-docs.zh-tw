@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: bbd2a2d301646b4d3897d9fe4990bdfd1e48325b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 210432b8ec193efccc0bf2338089dbccca310726
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303332"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776410"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages 類別
 
@@ -252,7 +252,7 @@ class CMFCToolBarImages : public CObject
 
 ## <a name="example"></a>範例
 
-下列範例示範如何設定`CMFCToolBarImages`使用中的各種方法的物件`CMFCToolBarImages`類別。 此範例示範如何設定工具列影像的大小、 載入映像，以及設定影像的透明色彩。 此程式碼片段是一部分[Visual Studio 示範範例](../../visual-cpp-samples.md)。
+下列範例示範如何設定`CMFCToolBarImages`使用中的各種方法的物件`CMFCToolBarImages`類別。 此範例示範如何設定工具列影像的大小、 載入映像，以及設定影像的透明色彩。 此程式碼片段是一部分[Visual Studio 示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#32](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_1.h)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#33](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_2.cpp)]

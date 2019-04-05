@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CPaneContainerManager [MFC], SetResizeMode
 - CPaneContainerManager [MFC], StoreRecentDockSiteInfo
 ms.assetid: 3d974c15-a62f-4648-bb5b-cc31ab7950af
-ms.openlocfilehash: 7e0c55981b895540d490e2e38f43eb68abf48e32
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 887b771ee76034256c77aa3d038da96696eca6ed
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294651"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774584"
 ---
 # <a name="cpanecontainermanager-class"></a>CPaneContainerManager 類別
 
@@ -189,7 +189,7 @@ class CPaneContainerManager : public CObject
 
 ## <a name="example"></a>範例
 
-下列範例示範如何取得參考`CPaneContainerManager`物件。 此程式碼片段是一部分[設定窗格大小範例](../../visual-cpp-samples.md)。
+下列範例示範如何取得參考`CPaneContainerManager`物件。 此程式碼片段是一部分[設定窗格大小範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_SetPaneSize#5](../../mfc/reference/codesnippet/cpp/cpanecontainermanager-class_1.cpp)]
 

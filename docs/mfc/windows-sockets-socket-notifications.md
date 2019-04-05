@@ -6,12 +6,12 @@ helpviewer_keywords:
 - notifications [MFC], socket
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
-ms.openlocfilehash: c08305b8aeeca00eaf41e4f1c24b51a46a8c4254
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: df7bfe8a95221682d0f7f4ebb123bd15b79144d5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289906"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774330"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets:通訊端告知
 
@@ -43,7 +43,7 @@ MFC 呼叫通知函式，讓您自訂您的通訊端行為時，會收到通知�
 > [!NOTE]
 >  在  `CSocket`，則`OnConnect`絕不會呼叫通知函式。 在您呼叫的連接， `Connect`，這會傳回時 （成功或錯誤），就可以完成連線。 如何處理連接通知是 MFC 實作細節。
 
-如需每個通知函式的詳細資訊，請參閱函式類別之下`CAsyncSocket`中*MFC 參考 》*。 原始程式碼和 MFC 範例的相關資訊，請參閱[MFC 範例](../visual-cpp-samples.md)。
+如需每個通知函式的詳細資訊，請參閱函式類別之下`CAsyncSocket`中*MFC 參考 》*。 原始程式碼和 MFC 範例的相關資訊，請參閱[MFC 範例](../overview/visual-cpp-samples.md)。
 
 如需詳細資訊，請參閱:
 

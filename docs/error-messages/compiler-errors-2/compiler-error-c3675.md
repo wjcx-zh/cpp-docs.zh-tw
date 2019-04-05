@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3675
 ms.assetid: 87461613-6633-430b-b95d-c7cb1bb63776
-ms.openlocfilehash: c154a0fe1989c92bb5e07c0710d3846883d1a113
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e29e536bf89aef887dc043327e4b4596703d0538
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546304"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58775188"
 ---
 # <a name="compiler-error-c3675"></a>編譯器錯誤 C3675
 
@@ -19,7 +19,7 @@ ms.locfileid: "50546304"
 
 當您宣告簡單的屬性時，則編譯器會產生 get 和 set 存取子方法，以及名稱會出現在您的程式範圍。  編譯器產生的名稱是前面加上 get_ 和 set_ 屬性名稱形成。  因此，您無法宣告具有編譯器產生的存取子的相同名稱的函式。
 
-如需詳細資訊，請參閱 [property](../../windows/property-cpp-component-extensions.md) 。
+如需詳細資訊，請參閱 [property](../../extensions/property-cpp-component-extensions.md) 。
 
 ## <a name="example"></a>範例
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3103
 ms.assetid: 7984bd3e-d51d-43e4-b6f4-08c1e9fb9704
-ms.openlocfilehash: 8dae731e36177dc199554615f74e92ebc5f6f5dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a68e39ac92433eadacd666861f9e00431e4a34a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531936"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780141"
 ---
 # <a name="compiler-error-c3103"></a>編譯器錯誤 C3103
 
@@ -19,7 +19,7 @@ ms.locfileid: "50531936"
 
 屬性不可以重複指定的引數。
 
-如需詳細資訊，請參閱 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)。
+如需詳細資訊，請參閱 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
 
 ## <a name="example"></a>範例
 

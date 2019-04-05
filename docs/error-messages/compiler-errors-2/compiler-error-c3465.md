@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C3465
 ms.assetid: aeb815e5-b3fc-4525-afe2-d738e9321df1
 ms.openlocfilehash: 117c9b9918950fd2e95e206c5aea457dee183b0a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781571"
 ---
 # <a name="compiler-error-c3465"></a>編譯器錯誤 C3465

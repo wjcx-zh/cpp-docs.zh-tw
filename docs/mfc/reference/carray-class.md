@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: 342eea1d5bcf8adfe9a9ff0e8d915c9155b413ca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f82dbf7dce2e14bf760bb76d23d23f667797ee0f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266129"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779842"
 ---
 # <a name="carray-class"></a>CArray 類別
 
@@ -62,7 +62,7 @@ class CArray : public CObject
 
 #### <a name="parameters"></a>參數
 
-*型別*<br/>
+*TYPE*<br/>
 指定儲存在陣列中的物件類型的樣板參數。 *型別*是參數，由`CArray`。
 
 *ARG_TYPE*<br/>
@@ -281,7 +281,7 @@ const TYPE& GetAt(INT_PTR nIndex) const;
 
 ### <a name="parameters"></a>參數
 
-*型別*<br/>
+*TYPE*<br/>
 指定的陣列元素的類型樣板參數。
 
 *nIndex*<br/>
@@ -330,7 +330,7 @@ TYPE* GetData();
 
 ### <a name="parameters"></a>參數
 
-*型別*<br/>
+*TYPE*<br/>
 指定的陣列元素的類型樣板參數。
 
 ### <a name="return-value"></a>傳回值
@@ -451,7 +451,7 @@ const TYPE& operator[](int_ptr nindex) const;
 
 ### <a name="parameters"></a>參數
 
-*型別*<br/>
+*TYPE*<br/>
 此陣列中指定的項目類型的樣板參數。
 
 *nIndex*<br/>
@@ -630,8 +630,8 @@ void SetSize(
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例收集](../../visual-cpp-samples.md)<br/>
+[MFC 範例收集](../../overview/visual-cpp-samples.md)<br/>
 [CObject 類別](../../mfc/reference/cobject-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CObArray 類別](../../mfc/reference/cobarray-class.md)<br/>
-[集合類別協助程式](../../mfc/reference/collection-class-helpers.md)
+[集合類別 Helper](../../mfc/reference/collection-class-helpers.md)

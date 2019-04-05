@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3114
 ms.assetid: b5d2df4f-87d0-4292-9981-25c6a6013c05
-ms.openlocfilehash: 6ce5b9860cd75619f26a3585981af5807c33535a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5a4feae5c8805a27c020b532fd58e0562e46b6b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606670"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773771"
 ---
 # <a name="compiler-error-c3114"></a>編譯器錯誤 C3114
 
@@ -19,7 +19,7 @@ ms.locfileid: "50606670"
 
 為了讓屬性類別資料成員是有效的具名引數，它不能標示`static`， `const`，或`literal`。 如果屬性，屬性不得為`static`和必須有 get 和 set 存取子。
 
-如需詳細資訊，請參閱 <<c0> [ 屬性](../../windows/property-cpp-component-extensions.md)並[User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)。
+如需詳細資訊，請參閱 <<c0> [ 屬性](../../extensions/property-cpp-component-extensions.md)並[User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
 
 ## <a name="example"></a>範例
 

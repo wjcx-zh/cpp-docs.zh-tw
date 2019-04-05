@@ -13,12 +13,12 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-ms.openlocfilehash: fc44f2b4fcae51cef78d6b660f0cc86ee516e5e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5904a69f81dd1fbf22171a46040da5d4f5511588
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651187"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039646"
 ---
 # <a name="recordset-architecture-odbc"></a>資料錄集：架構 (ODBC)
 
@@ -33,7 +33,7 @@ ms.locfileid: "50651187"
 - [使用 m_nFields 和 m_nParams 資料成員](#_core_using_m_nfields_and_m_nparams)
 
 > [!NOTE]
->  本主題適用於物件衍生自`CRecordset`的大量資料列中擷取尚未實作。 如果實作大量資料列擷取時，架構會很類似。 若要了解這些差異，請參閱[資料錄集： 擷取記錄中大量資料庫連接 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主題適用於物件衍生自`CRecordset`的大量資料列中擷取尚未實作。 如果實作大量資料列擷取時，架構會很類似。 若要了解這些差異，請參閱[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ##  <a name="_core_a_sample_class"></a> 範例類別
 
@@ -83,16 +83,16 @@ SELECT CourseID, CourseTitle FROM Course WHERE CourseID = MATH101
 >  MFC 沒有本身使用的參數 — 特別是，不會執行文字替換。 相反地，MFC 會告訴 ODBC 何處取得參數;ODBC 擷取資料，並執行必要的參數化。
 
 > [!NOTE]
->  參數的順序很重要。 如需相關資訊和參數的詳細資訊，請參閱[資料錄集： 參數化資料錄集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
+>  參數的順序很重要。 如需相關資訊和參數的詳細資訊，請參閱[資料錄集：參數化資料錄集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
 
 ##  <a name="_core_using_m_nfields_and_m_nparams"></a> 使用 m_nFields 和 m_nParams
 
 當精靈將寫入您的類別的建構函式時，它也會初始化[m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)資料成員，指定的數目[欄位資料成員](#_core_field_data_members)類別中。 如果您新增任何[參數](#_core_parameter_data_members)至您的類別，您也必須新增個別的初始化[m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)資料成員，指定之參數的資料成員的數目。 架構會使用這些值使用的資料成員。
 
-如需詳細資訊和範例，請參閱 <<c0> [ 資料錄欄位交換： RFX 的使用](../../data/odbc/record-field-exchange-using-rfx.md)。
+如需詳細資訊和範例，請參閱[資料錄欄位交換：使用 RFX](../../data/odbc/record-field-exchange-using-rfx.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[資料錄集：宣告資料表的類別 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[資料錄集：宣告的類別 (ODBC) 的資料表](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
 [資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)

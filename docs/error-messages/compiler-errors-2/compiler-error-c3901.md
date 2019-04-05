@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3901
 ms.assetid: 19af4141-39ad-4c16-a68f-3ae76f648186
-ms.openlocfilehash: 0c5b561f0e650ace69e09d33942f2036b9ee91ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31fbb1e89a0619b4dc8b3f6c86f7f6bc748b80d6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677262"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780115"
 ---
 # <a name="compiler-error-c3901"></a>編譯器錯誤 C3901
 
 'accessor_function': 必須有傳回類型 'type'
 
-至少一個 get 方法的傳回類型必須符合屬性類型。 如需詳細資訊，請參閱 [property](../../windows/property-cpp-component-extensions.md)。
+至少一個 get 方法的傳回類型必須符合屬性類型。 如需詳細資訊，請參閱 [property](../../extensions/property-cpp-component-extensions.md)。
 
 下列範例會產生 C3901:
 

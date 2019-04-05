@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: e1ca69382591dc7d3afe9b5871dfdebd64aedce4
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58416997"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773745"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -854,7 +854,7 @@ int LineIndex(int nLine = -1) const;
 
 ### <a name="parameters"></a>參數
 
-*nLine*<br/>
+*n 行*<br/>
 包含編輯控制項的文字行的索引值，或包含-1。 如果*n 行*為-1，它會指定目前這一行，也就是包含插入號的行。
 
 ### <a name="return-value"></a>傳回值
@@ -883,7 +883,7 @@ int LineLength(int nLine = -1) const;
 
 ### <a name="parameters"></a>參數
 
-*nLine*<br/>
+*n 行*<br/>
 其長度是要擷取的行中的字元以零為起始的索引。 預設值為 -1。
 
 ### <a name="return-value"></a>傳回值
@@ -1449,8 +1449,8 @@ BOOL Undo();
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 CALCDRIV](../../visual-cpp-samples.md)<br/>
-[MFC 範例 CMNCTRL2](../../visual-cpp-samples.md)<br/>
+[MFC 範例 CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
+[MFC 範例 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CWnd 類別](cwnd-class.md)<br/>

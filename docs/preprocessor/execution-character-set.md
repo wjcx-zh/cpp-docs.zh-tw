@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - pragma execution_character_set
 ms.assetid: 32248cbc-7c92-4dca-8442-230c052b53ad
-ms.openlocfilehash: ff6ff550f39dc746bb687d8d3147baa0837a6cff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd31e8e91a1bcbfa6ace9b47fa2b13dd945adb20
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472662"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039922"
 ---
 # <a name="executioncharacterset"></a>execution_character_set
 
@@ -26,7 +26,7 @@ ms.locfileid: "50472662"
 
 ### <a name="parameters"></a>參數
 
-*目標*<br/>
+*target*<br/>
 指定目標執行字元集。 目前僅支援設定的目標執行為"utf-8"。
 
 ## <a name="remarks"></a>備註
@@ -43,4 +43,4 @@ ms.locfileid: "50472662"
 
 [Pragma 指示詞和\_ \_Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 [/execution-charset （設定執行字元集）](../build/reference/execution-charset-set-execution-character-set.md)<br/>
-[/utf-8 (將來源和可執行檔字元集設定為 UTF-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
+[/utf-8 （將來源和可執行檔字元集設定為 utf-8）](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

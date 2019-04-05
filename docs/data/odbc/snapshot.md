@@ -1,5 +1,5 @@
 ---
-title: 快照
+title: 快照集
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC cursor library [ODBC], snapshots
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursor library [ODBC], snapshots
 - snapshots
 ms.assetid: b5293a52-0657-43e9-bd71-fe3785b21c7e
-ms.openlocfilehash: 99e1d76f8d65def326b0514f3219cef43f695220
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5999f89156d895ff0c87c892be892c6a614a0132
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512658"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037642"
 ---
-# <a name="snapshot"></a>快照
+# <a name="snapshot"></a>快照集
 
 快照集是存在於的建立快照集時，會反映資料的靜態檢視表的資料錄集。 當您開啟快照集，並移至 所有記錄時，它所包含的一組記錄，且其值不會變更之前呼叫重建快照集`Requery`。
 
@@ -37,7 +37,7 @@ ms.locfileid: "50512658"
 快照集是已載入 ODBC 資料指標程式庫時，才提供使用`CDatabase`建構的物件，或您使用的 ODBC 驅動程式支援靜態資料指標。
 
 > [!NOTE]
->  對於某些 ODBC 驅動程式中，快照集 （靜態資料指標） 可能不是可更新。 請檢查您的驅動程式文件，以支援資料指標類型和所支援的並行類型。 若要保證可更新的快照集，請確定您將載入資料指標程式庫到記憶體中，當您建立`CDatabase`物件。 如需詳細資訊，請參閱 < [ODBC: ODBC 資料指標程式庫](../../data/odbc/odbc-the-odbc-cursor-library.md)。
+>  對於某些 ODBC 驅動程式中，快照集 （靜態資料指標） 可能不是可更新。 請檢查您的驅動程式文件，以支援資料指標類型和所支援的並行類型。 若要保證可更新的快照集，請確定您將載入資料指標程式庫到記憶體中，當您建立`CDatabase`物件。 如需詳細資訊，請參閱[ODBC:ODBC 資料指標程式庫](../../data/odbc/odbc-the-odbc-cursor-library.md)。
 
 > [!NOTE]
 >  如果您想要使用快照集和動態集，您必須根據兩個不同`CDatabase`物件 （兩個不同的連接）。

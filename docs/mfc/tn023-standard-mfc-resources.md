@@ -9,10 +9,10 @@ helpviewer_keywords:
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
 ms.openlocfilehash: d29f0ab2254a52e01f2016f64a37ddfce47955bb
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780310"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023:標準 MFC 資源
@@ -73,7 +73,7 @@ MFC 提供兩種預先定義的資源類別，可讓您在應用程式中使用�
 
 ### <a name="customizing-standard-framework-resources"></a>自訂標準架構資源
 
-在應用程式的資源檔中使用 #include 命令，通常可將標準架構資源包含到應用程式中。 AppWizard 將會產生一個資源檔。 這個檔案包含適當的標準架構資源，視您選取的 AppWizard 選項而定。 藉由變更編譯時期指示詞，您可以檢閱、加入或移除已包含的資源。 若要這樣做，請開啟**Resource**功能表，然後選取**Set Includes**。 請參閱「編譯時期指示詞」編輯項目。 例如: 
+在應用程式的資源檔中使用 #include 命令，通常可將標準架構資源包含到應用程式中。 AppWizard 將會產生一個資源檔。 這個檔案包含適當的標準架構資源，視您選取的 AppWizard 選項而定。 藉由變更編譯時期指示詞，您可以檢閱、加入或移除已包含的資源。 若要這樣做，請開啟**Resource**功能表，然後選取**Set Includes**。 請參閱「編譯時期指示詞」編輯項目。 例如：
 
 ```
 #include "afxres.rc"

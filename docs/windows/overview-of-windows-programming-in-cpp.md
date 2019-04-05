@@ -3,10 +3,10 @@ title: 使用 C++ 設計 Windows 應用程式概觀
 ms.date: 03/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
 ms.openlocfilehash: 35842ae73e59685946afe31e88729a36a6431768
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58772900"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>使用 C++ 設計 Windows 應用程式概觀
@@ -97,7 +97,7 @@ Visual Studio 含有功能強大的機器碼偵錯工具、靜態分析工具、
 |標題|描述|
 |-----------|-----------------|
 |[逐步解說：建立標準的 c + + 程式](walkthrough-creating-a-standard-cpp-program-cpp.md)| 建立 Windows 主控台應用程式。|
-|[逐步解說：建立 Windows 傳統型應用程式 (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|建立簡單的 Windows 桌面應用程式。|
+|[逐步解說：建立 Windows 傳統型應用程式 （c + +）](walkthrough-creating-windows-desktop-applications-cpp.md)|建立簡單的 Windows 桌面應用程式。|
 |[Windows 傳統式精靈](windows-desktop-wizard.md)|使用精靈來建立新的 Windows 專案。|
 |[Active Template Library (ATL)](../atl/TOC.md)|使用 ATL 程式庫來建立 c + + 中的 COM 元件。|
 |[Microsoft Foundation Classes (MFC)](../mfc/TOC.md)|使用 MFC 來建立使用對話方塊和控制項的大型或小型的 Windows 應用程式|
@@ -105,10 +105,10 @@ Visual Studio 含有功能強大的機器碼偵錯工具、靜態分析工具、
 |[資料存取](../data/data-access-in-cpp.md)| OLE DB 和 ODBC|
 |[文字和字串](../text/text-and-strings-in-visual-cpp.md)|在 Windows 上的各種字串類型。|
 |[用於使用 DirectX 建立遊戲的資源](resources-for-creating-a-game-using-directx.md)
-|[如何：在 Windows 傳統型應用程式中使用 Windows 10 SDK](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows SDK|
+|[HOW TO：使用 Windows 10 SDK，在 Windows 桌面應用程式](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows SDK|
 |[使用資源檔](working-with-resource-files.md)|如何將影像、 圖示、 字串資料表和其他資源新增到桌面應用程式。|
-|[使用 DirectX （c + +） 建立遊戲的資源](resources-for-creating-a-game-using-directx.md)|C + + 中建立遊戲的內容連結。|
-|[如何：在 Windows 傳統型應用程式中使用 Windows 10 SDK](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|包含將您的專案設定為使用 Windows 10 SDK 建置的步驟。|
+|[用於使用 DirectX 建立遊戲的資源 (C++)](resources-for-creating-a-game-using-directx.md)|C + + 中建立遊戲的內容連結。|
+|[HOW TO：使用 Windows 10 SDK，在 Windows 桌面應用程式](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|包含將您的專案設定為使用 Windows 10 SDK 建置的步驟。|
 |[部署原生桌面應用程式](deploying-native-desktop-applications-visual-cpp.md)|部署在 Windows 上的原生應用程式。|
 
 
@@ -117,8 +117,8 @@ Visual Studio 含有功能強大的機器碼偵錯工具、靜態分析工具、
 |標題|描述|
 |-----------|-----------------|
 |[Visual C++](../overview/visual-cpp-in-visual-studio.md)|Visual c + + 開發人員內容的父主題。|
-[使用 C++/CLI 進行 .NET 開發](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|建立原生 c + + 程式庫，讓它與.NET 應用程式和元件通訊的包裝函式。|
-|[適用於.NET 和 UWP 的元件延伸模組](../extensions/component-extensions-for-runtime-platforms.md)|參考的語法項目共用的 C + + /CX 和 C + + /cli CLI。|
+[.NET 開發使用 C + + /cli CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|建立原生 c + + 程式庫，讓它與.NET 應用程式和元件通訊的包裝函式。|
+|[適用於.NET 和 UWP 的元件擴充功能](../extensions/component-extensions-for-runtime-platforms.md)|參考的語法項目共用的 C + + /CX 和 C + + /cli CLI。|
 |[通用 Windows 應用程式 (C++)](universal-windows-apps-cpp.md)|撰寫 UWP 應用程式使用 C + + /CX 或 Windows 執行階段範本庫 (WRL)。|
-|[適用於 COM 與 .NET 的 C++ 屬性](attributes/cpp-attributes-com-net.md)|非標準的屬性，僅限 Windows 的程式設計，使用.NET 或 com。|
+|[適用於 COM 和.NET 的 c + + 屬性](attributes/cpp-attributes-com-net.md)|非標準的屬性，僅限 Windows 的程式設計，使用.NET 或 com。|
 

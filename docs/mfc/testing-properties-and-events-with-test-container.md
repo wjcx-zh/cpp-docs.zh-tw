@@ -11,10 +11,10 @@ helpviewer_keywords:
 - properties [MFC], testing
 ms.assetid: 626867cf-fe53-4c30-8973-55bb93ef3917
 ms.openlocfilehash: 977ef29095e652ab40028a2e8ba7feffabf56418
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781064"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>使用測試容器測試屬性和事件
@@ -57,4 +57,4 @@ ms.locfileid: "58781064"
 ## <a name="see-also"></a>另請參閱
 
 [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)<br/>
-[如何：針對 ActiveX 控制項進行偵錯](/visualstudio/debugger/how-to-debug-an-activex-control)
+[HOW TO：對 ActiveX 控制項進行偵錯](/visualstudio/debugger/how-to-debug-an-activex-control)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4972
 ms.assetid: d18e8e65-b2ef-4d75-a207-fbd0c17c9060
-ms.openlocfilehash: dcf08f26809c7c61e3e00c41c555416c95f4a0e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c58258298fb91d04014e719732135a1f33f13b6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598827"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58777073"
 ---
 # <a name="compiler-warning-c4972"></a>編譯器警告 C4972
 
@@ -19,7 +19,7 @@ ms.locfileid: "50598827"
 
 對實值類型的控制代碼取值 (也稱為 Unboxing)，然後指派給它，這個作業無法驗證。
 
-如需詳細資訊，請參閱 [Boxing](../../windows/boxing-cpp-component-extensions.md)中定義的介面的私用 C++ 專屬實作。
+如需詳細資訊，請參閱 [Boxing](../../extensions/boxing-cpp-component-extensions.md)中定義的介面的私用 C++ 專屬實作。
 
 ## <a name="example"></a>範例
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-ms.openlocfilehash: e64ea6701c5e3ec594c705e8995b5ba605ab0b79
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 154fc67dc35d5e5633c72c27100da9be56c0c68c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301190"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779673"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>多重文件類型、檢視和框架視窗
 
@@ -28,11 +28,11 @@ ms.locfileid: "57301190"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
 
-- [Multiple document types](#_core_multiple_document_types)
+- [多個文件類型](#_core_multiple_document_types)
 
-- [Multiple views](#_core_multiple_views)
+- [多個檢視](#_core_multiple_views)
 
-- [Multiple frame windows](#_core_multiple_frame_windows)
+- [多個框架視窗](#_core_multiple_frame_windows)
 
 - [分隔視窗](#_core_splitter_windows)
 
@@ -67,9 +67,9 @@ MFC 支援相同文件上需要多個檢視的三種常見使用者介面。 這
 ![多個&#45;檢視使用者介面](../mfc/media/vc37a71.gif "多個&#45;檢視使用者介面") <br/>
 多個檢視使用者介面
 
-此架構透過實作 [開新視窗] 命令及提供 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)類別，來提供這些模型 (如 [分隔視窗](#_core_splitter_windows)中所述)。 您可以使用這些模型作為起點，來實作其他模型。 如需說明檢視、框架視窗和分隔器之不同組態的範例程式，請參閱 [MFC 範例](../visual-cpp-samples.md)。
+此架構透過實作 [開新視窗] 命令及提供 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)類別，來提供這些模型 (如 [分隔視窗](#_core_splitter_windows)中所述)。 您可以使用這些模型作為起點，來實作其他模型。 如需說明檢視、框架視窗和分隔器之不同組態的範例程式，請參閱 [MFC 範例](../overview/visual-cpp-samples.md)。
 
-如需 `UpdateAllViews`的詳細資訊，請參閱 *MFC 參考* 中的 [CView 類別](../mfc/reference/cview-class.md) 和 [Scribble 範例](../visual-cpp-samples.md)。
+如需 `UpdateAllViews`的詳細資訊，請參閱 *MFC 參考* 中的 [CView 類別](../mfc/reference/cview-class.md) 和 [Scribble 範例](../overview/visual-cpp-samples.md)。
 
 ##  <a name="_core_multiple_frame_windows"></a> Multiple Frame Windows
 
@@ -79,11 +79,11 @@ MFC 支援相同文件上需要多個檢視的三種常見使用者介面。 這
 
 在分隔視窗中，視窗會 (或可以) 分隔成兩個或多個可捲動的窗格。 捲軸旁之視窗框架中的分隔器控制項 (或「分隔方塊」)，可讓使用者調整窗格的相對大小。 每個窗格是相同文件的檢視。 在 「 動態 」 分隔器中，檢視屬於相同的類別，如圖多個檢視使用者介面的 b 部分所示。 在「靜態」分隔器中，檢視可以屬於不同類別。 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)類別支援這兩種類型的分隔視窗。
 
-動態分隔視窗具有相同類別的檢視，可讓使用者隨意將視窗分隔成多個窗格，然後捲動不同窗格以查看文件的不同部分。 使用者也可以取消分隔視窗，以移除其他檢視。 加入 [Scribble 範例](../visual-cpp-samples.md) 中的分隔視窗即為一例。 該主題描述建立動態分隔視窗的技術。 多個檢視使用者介面圖的 b 部分顯示動態分隔視窗。
+動態分隔視窗具有相同類別的檢視，可讓使用者隨意將視窗分隔成多個窗格，然後捲動不同窗格以查看文件的不同部分。 使用者也可以取消分隔視窗，以移除其他檢視。 加入 [Scribble 範例](../overview/visual-cpp-samples.md) 中的分隔視窗即為一例。 該主題描述建立動態分隔視窗的技術。 多個檢視使用者介面圖的 b 部分顯示動態分隔視窗。
 
 靜態分隔視窗具有不同類別的檢視，視窗一開始就分隔成多個窗格，每個窗格各有不同用途。 例如，在 Visual C++ 點陣圖編輯器中，影像視窗並排顯示兩個窗格。 左窗格顯示實際大小的點陣圖影像。 右窗格顯示縮小或放大的相同點陣圖影像。 這兩個窗格是以「分隔列」隔開，使用者可加以拖曳來變更窗格的相對大小。 圖多個檢視使用者介面的 c 部分顯示靜態分隔視窗。
 
-如需詳細資訊，請參閱 *MFC 參考* 中的 [CSplitterWnd 類別](../mfc/reference/csplitterwnd-class.md) 和 [MFC 範例](../visual-cpp-samples.md)。
+如需詳細資訊，請參閱 *MFC 參考* 中的 [CSplitterWnd 類別](../mfc/reference/csplitterwnd-class.md) 和 [MFC 範例](../overview/visual-cpp-samples.md)。
 
 ## <a name="see-also"></a>另請參閱
 

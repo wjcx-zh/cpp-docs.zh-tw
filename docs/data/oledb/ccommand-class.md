@@ -49,12 +49,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: 7db2d3d71deecda06e39772541658dfada72ae3b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 406a78ff1958d565fcc74781f6a63d4784f48bfc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415262"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039724"
 ---
 # <a name="ccommand-class"></a>CCommand 類別
 
@@ -209,7 +209,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 
 #### <a name="parameters"></a>參數
 
-*session*<br/>
+*工作階段*<br/>
 [in]要在其中執行命令的工作階段。
 
 *wszCommand*<br/>
@@ -276,7 +276,7 @@ HRESULT CCommandBase::Create(const CSession& session,
 
 #### <a name="parameters"></a>參數
 
-*session*<br/>
+*工作階段*<br/>
 [in]要在其中建立命令的工作階段。
 
 *wszCommand*<br/>
@@ -308,7 +308,7 @@ HRESULT CCommandBase::CreateCommand(const CSession& session) throw ();
 
 #### <a name="parameters"></a>參數
 
-*session*<br/>
+*工作階段*<br/>
 [in]A`CSession`要與新的命令相關聯的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -417,4 +417,4 @@ HRESULT CCommandBase::Unprepare() throw();
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)

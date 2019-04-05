@@ -165,10 +165,10 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
 ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773979"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem 類別
@@ -627,7 +627,7 @@ BOOL CreateFromClipboard(
 
 ### <a name="parameters"></a>參數
 
-*render*<br/>
+*轉譯*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -663,7 +663,7 @@ BOOL CreateFromData(
 *pDataObject*<br/>
 指標[COleDataObject](../../mfc/reference/coledataobject-class.md)從中 OLE 項目是要建立的物件。
 
-*render*<br/>
+*轉譯*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -703,7 +703,7 @@ BOOL CreateFromFile(
 *clsid*<br/>
 保留供未來使用。
 
-*render*<br/>
+*轉譯*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -735,7 +735,7 @@ BOOL CreateLinkFromClipboard(
 
 ### <a name="parameters"></a>參數
 
-*render*<br/>
+*轉譯*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -771,7 +771,7 @@ BOOL CreateLinkFromData(
 *pDataObject*<br/>
 指標[COleDataObject](../../mfc/reference/coledataobject-class.md)從中 OLE 項目是要建立的物件。
 
-*render*<br/>
+*轉譯*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -807,7 +807,7 @@ BOOL CreateLinkFromFile(
 *lpszFileName*<br/>
 建立 OLE 項目檔案名稱的指標。
 
-*render*<br/>
+*轉譯*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -843,7 +843,7 @@ BOOL CreateNewItem(
 *clsid*<br/>
 可唯一識別建立的 OLE 項目類型的識別碼。
 
-*render*<br/>
+*轉譯*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -875,7 +875,7 @@ BOOL CreateStaticFromClipboard(
 
 ### <a name="parameters"></a>參數
 
-*render*<br/>
+*轉譯*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -911,7 +911,7 @@ BOOL CreateStaticFromData(
 *pDataObject*<br/>
 指標[COleDataObject](../../mfc/reference/coledataobject-class.md)從中 OLE 項目是要建立的物件。
 
-*render*<br/>
+*轉譯*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -2024,7 +2024,7 @@ void SetExtent(
 
 ### <a name="parameters"></a>參數
 
-*size*<br/>
+*大小*<br/>
 A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，其中包含的大小資訊。
 
 *nDrawAspect*<br/>

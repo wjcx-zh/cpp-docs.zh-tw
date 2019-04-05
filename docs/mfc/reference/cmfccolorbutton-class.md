@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 05a4ad17feea20c67069e65c5c5df43d543e2377
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c0c9ad79342f2013aa071240c684fce168e55c9e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293481"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779998"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton 類別
 
@@ -126,7 +126,7 @@ class CMFCColorButton : public CMFCButton
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用中的各種方法來設定色彩按鈕`CMFCColorButton`類別。 方法會設定色彩的色彩按鈕和資料行，其數目，並啟用自動 和 其他 按鈕。 此範例中是屬於[狀態列示範範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用中的各種方法來設定色彩按鈕`CMFCColorButton`類別。 方法會設定色彩的色彩按鈕和資料行，其數目，並啟用自動 和 其他 按鈕。 此範例中是屬於[狀態列示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_StatusBarDemo#10](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_1.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#11](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_2.cpp)]

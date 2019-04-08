@@ -154,7 +154,7 @@ Build Tools for Visual Studio 版本的 Visual Studio 只會安裝命令列工�
 
 若要設定及命令列上建置更複雜的專案，您可以使用 NMAKE 和 makefile 或 MSBuild 和專案檔。 如需有關如何使用這些工具的詳細資訊，請參閱 < [NMAKE 參考](reference/nmake-reference.md)並[MSBuild](msbuild-visual-cpp.md)。
 
-C 和 c + + 語言很類似，但不是相同。 MSVC 編譯器會使用簡單的規則來決定要編譯您的程式碼時所使用的語言。 根據預設，MSVC 編譯器會將以 c# 原始程式碼，.c 結尾的所有檔案以做為 c + + 原始程式碼的.cpp 結尾的所有檔案。 若要強制編譯器將視為 C 非相依檔案副檔名的所有檔案，請使用[/Tc](reference/tc-tp-tc-tp-specify-source-file-type.md)編譯器選項。
+C 和 c + + 語言很類似，但不是相同。 MSVC 編譯器會使用簡單的規則來決定要編譯您的程式碼時所使用的語言。 根據預設，MSVC 編譯器會將以 C# 原始程式碼，.c 結尾的所有檔案以做為 c + + 原始程式碼的.cpp 結尾的所有檔案。 若要強制編譯器將視為 C 非相依檔案副檔名的所有檔案，請使用[/Tc](reference/tc-tp-tc-tp-specify-source-file-type.md)編譯器選項。
 
 Visual c + + C 編譯器是相容於 ISO C99 標準，但不是會完全遵循網路標準。 在大部分情況下，可移植的 C 程式碼會編譯，並如預期般執行。 Visual c + + 不支援 ISO C11 中的大部分的變更。 MSVC 編譯器已被取代特定的程式庫函式和 POSIX 函式名稱。 支援的函式，但是慣用的名稱已變更。 如需詳細資訊，請參閱 < [CRT 中的安全性功能](../c-runtime-library/security-features-in-the-crt.md)並[編譯器警告 （層級 3） C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。
 

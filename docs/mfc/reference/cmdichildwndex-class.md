@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 625104ecddd9e14ac77aa05ac54cb578c4d62f85
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e12cf9f65e6fd6dd7f68edc4a94103baa5a8df62
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293417"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781753"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 類別
 
@@ -201,7 +201,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 
 ## <a name="example"></a>範例
 
-下列範例衍生的類別`CMDIChildWndEx`。 此程式碼片段來自[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../visual-cpp-samples.md)。
+下列範例衍生的類別`CMDIChildWndEx`。 此程式碼片段來自[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]
 
@@ -431,7 +431,7 @@ virtual LPCTSTR GetDocumentName(CObject** pObj);
 
 ### <a name="example"></a>範例
 
-下列範例示範 `GetDocumentName` 方法的用法。 此程式碼片段來自[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../visual-cpp-samples.md)。
+下列範例示範 `GetDocumentName` 方法的用法。 此程式碼片段來自[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]
 
@@ -602,7 +602,7 @@ virtual BOOL IsReadOnly();
 
 ### <a name="example"></a>範例
 
-下列範例示範如何覆寫`IsReadOnly`方法。 此程式碼片段來自[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../visual-cpp-samples.md)。
+下列範例示範如何覆寫`IsReadOnly`方法。 此程式碼片段來自[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]
 
@@ -648,7 +648,7 @@ virtual void OnSetPreviewMode(
 ### <a name="parameters"></a>參數
 
 *bPreview*<br/>
-[in]如果為 TRUE，進入 預覽列印模式。 如果為 FALSE，結束預覽列印模式。
+[in]如果為 TRUE，進入 [預覽列印模式。 如果為 FALSE，結束預覽列印模式。
 
 *pState*<br/>
 [in]預覽列印狀態結構指標。
@@ -699,7 +699,7 @@ CBasePane* PaneFromPoint(
 [in]如果不是 NULL，則該方法會搜尋窗格指定的型別。
 
 *dwAlignment*<br/>
-[in]如果指定點上找到一個窗格，則此參數會包含已最接近指定點 窗格。 如需詳細資訊，請參閱＜備註＞一節。
+[in]如果指定點上找到一個窗格，則此參數會包含已最接近指定點] 窗格。 如需詳細資訊，請參閱＜備註＞一節。
 
 ### <a name="return-value"></a>傳回值
 

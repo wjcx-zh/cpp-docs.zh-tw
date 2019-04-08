@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-ms.openlocfilehash: 64d61cc9464ef0877baad33a8685cee1482f240d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5fccfbca9fe8c31070f3eb9f208c09cb3722b9b9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301333"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780219"
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton 類別
 
@@ -105,7 +105,7 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
 
 ## <a name="example"></a>範例
 
-下列範例示範如何建立和使用中的各種方法來設定色彩功能表按鈕`CMFCColorMenuButton`類別。 在範例中，`CPalette`物件是第一次建立，然後用來建構的物件`CMFCColorMenuButton`類別。 `CMFCColorMenuButton`藉由啟用其自動和其他按鈕，並設定其色彩和資料行數目，然後設定物件。 此程式碼屬於[Wordpad 範例](../../visual-cpp-samples.md)。
+下列範例示範如何建立和使用中的各種方法來設定色彩功能表按鈕`CMFCColorMenuButton`類別。 在範例中，`CPalette`物件是第一次建立，然後用來建構的物件`CMFCColorMenuButton`類別。 `CMFCColorMenuButton`藉由啟用其自動和其他按鈕，並設定其色彩和資料行數目，然後設定物件。 此程式碼屬於[Wordpad 範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_WordPad#5](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_1.h)]
 [!code-cpp[NVC_MFC_WordPad#6](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_2.cpp)]
@@ -254,7 +254,7 @@ void EnableOtherButton(
 [in]指定按鈕的文字。
 
 *bAltColorDlg*<br/>
-[in]指定 TRUE，即可顯示`CMFCColorDialog` 對話方塊中或 FALSE 表示顯示標準系統的 [色彩] 對話方塊。
+[in]指定 TRUE，即可顯示`CMFCColorDialog`] 對話方塊中或 FALSE 表示顯示標準系統的 [色彩] 對話方塊。
 
 *bEnable*<br/>
 [in]指定 TRUE，以顯示 [其他] 按鈕，否則為 FALSE。 預設值為 TRUE。
@@ -409,7 +409,7 @@ virtual void OnDraw(
 [in]TRUE 會指定，則會顯示按鈕的框線;否則為 FALSE。 預設值為 TRUE。
 
 *bGrayDisabledButtons*<br/>
-[in]TRUE 表示指定 out; 的 停用的按鈕會呈現灰色 (dimmed)否則為 FALSE。 預設值為 TRUE。
+[in]TRUE 表示指定 out; 的 [停用的按鈕會呈現灰色 (dimmed)否則為 FALSE。 預設值為 TRUE。
 
 ### <a name="remarks"></a>備註
 

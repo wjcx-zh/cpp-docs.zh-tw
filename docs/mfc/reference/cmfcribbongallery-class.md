@@ -78,12 +78,12 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], SetPaletteID
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
-ms.openlocfilehash: aa2996cba7d4839387d5801d2bab70b428134db4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 818ce55e44d91520e568308a1a1e8a1fa0c8658d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298629"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780388"
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery 類別
 
@@ -155,7 +155,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用中的各種方法`CMFCRibbonGallery`類別，以設定`CMFCRibbonGallery`物件。 此範例說明如何在資源庫中指定的每個資料列的項目數、 啟用 [功能表] 面板的調整大小、 啟用快顯功能表中，左側邊欄和顯示功能區圖庫做為直接在功能區列上的色板。 這段程式碼片段是 [Draw 用戶端範例](../../visual-cpp-samples.md)的一部分。
+下列範例示範如何使用中的各種方法`CMFCRibbonGallery`類別，以設定`CMFCRibbonGallery`物件。 此範例說明如何在資源庫中指定的每個資料列的項目數、 啟用 [功能表] 面板的調整大小、 啟用快顯功能表中，左側邊欄和顯示功能區圖庫做為直接在功能區列上的色板。 這段程式碼片段是 [Draw 用戶端範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_DrawClient#6](../../mfc/reference/codesnippet/cpp/cmfcribbongallery-class_1.cpp)]
 
@@ -452,7 +452,7 @@ static int GetLastSelectedItem(UINT uiCmdID);
 ### <a name="parameters"></a>參數
 
 *uiCmdID*<br/>
-[in]指定功能表項目，開啟 功能區圖庫的命令識別碼。
+[in]指定功能表項目，開啟 [功能區圖庫的命令識別碼。
 
 ### <a name="return-value"></a>傳回值
 

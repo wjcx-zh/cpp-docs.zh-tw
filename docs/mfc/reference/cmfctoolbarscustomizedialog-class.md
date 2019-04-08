@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: e4aaede3eb2d5c922c196e2bdfbbe533c4e65e47
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e1dd6fff9fa4f03dbf93510da26c78c73e86c6ab
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295028"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780960"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog 類別
 
@@ -96,7 +96,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 ## <a name="example"></a>範例
 
-下例示範如何在 `CMFCToolBarsCustomizeDialog` 類別中使用各種方法。 此範例示範如何將命令的清單方塊中的工具列按鈕上**命令**頁面上，讓您藉由建立新的工具列**自訂** 對話方塊中，並顯示**自訂** 對話方塊。 此程式碼片段是一部分[IE 示範範例](../../visual-cpp-samples.md)。
+下例示範如何在 `CMFCToolBarsCustomizeDialog` 類別中使用各種方法。 此範例示範如何將命令的清單方塊中的工具列按鈕上**命令**頁面上，讓您藉由建立新的工具列**自訂** 對話方塊中，並顯示**自訂** 對話方塊。 此程式碼片段是一部分[IE 示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_IEDemo#4](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_1.cpp)]
 
@@ -158,7 +158,7 @@ void AddButton(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用`AddButton`方法的`CMFCToolBarsCustomizeDialog`類別。 此程式碼片段是一部分[滑桿範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用`AddButton`方法的`CMFCToolBarsCustomizeDialog`類別。 此程式碼片段是一部分[滑桿範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_Slider#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_2.cpp)]
 
@@ -246,7 +246,7 @@ BOOL AddToolBar(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用`AddToolBar`方法中的`CMFCToolBarsCustomizeDialog`類別。 此程式碼片段是 [WordPad 範例](../../visual-cpp-samples.md)的一部分。
+下列範例示範如何使用`AddToolBar`方法中的`CMFCToolBarsCustomizeDialog`類別。 此程式碼片段是 [WordPad 範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_WordPad#11](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_3.cpp)]
 
@@ -327,7 +327,7 @@ CMFCToolBarsCustomizeDialog(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何建構的物件`CMFCToolBarsCustomizeDialog`類別。 此程式碼片段是一部分[自訂頁面範例](../../visual-cpp-samples.md)。
+下列範例示範如何建構的物件`CMFCToolBarsCustomizeDialog`類別。 此程式碼片段是一部分[自訂頁面範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_CustomPages#3](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_4.cpp)]
 
@@ -659,13 +659,13 @@ int RemoveButton(
 ### <a name="parameters"></a>參數
 
 *uiCategoryId*<br/>
-[in]指定要從中移除 按鈕的類別目錄識別碼。
+[in]指定要從中移除] 按鈕的類別目錄識別碼。
 
 *uiCmdId*<br/>
 [in]指定按鈕的命令識別碼。
 
 *lpszCategory*<br/>
-[in]指定要從中移除 按鈕的類別目錄的名稱。
+[in]指定要從中移除] 按鈕的類別目錄的名稱。
 
 ### <a name="return-value"></a>傳回值
 
@@ -725,7 +725,7 @@ void ReplaceButton(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用`ReplaceButton`方法中的`CMFCToolBarsCustomizeDialog`類別。 此程式碼片段是一部分[Visual Studio 示範範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用`ReplaceButton`方法中的`CMFCToolBarsCustomizeDialog`類別。 此程式碼片段是一部分[Visual Studio 示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#34](../../mfc/codesnippet/cpp/cmfctoolbarscustomizedialog-class_5.cpp)]
 

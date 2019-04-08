@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-ms.openlocfilehash: 37197ee20b31564c589099b10e0f8d3f0d1f7e86
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e574f535609ec9401bd76badf11fa7e05cc0c619
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263867"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781857"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog 類別
 
@@ -156,7 +156,7 @@ IDOK 或 IDCANCEL 如果登錄成功。否則為 0。 IDOK 及 IDCANCEL 是常�
 
 ##  <a name="m_gp"></a>  COlePropertiesDialog::m_gp
 
-類型的結構[OLEUIGNRLPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuignrlpropsa)，用來初始化 OLE 物件屬性 對話方塊的 [一般] 頁面。
+類型的結構[OLEUIGNRLPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuignrlpropsa)，用來初始化 OLE 物件屬性] 對話方塊的 [一般] 頁面。
 
 ```
 OLEUIGNRLPROPS m_gp;
@@ -170,7 +170,7 @@ OLEUIGNRLPROPS m_gp;
 
 ##  <a name="m_lp"></a>  COlePropertiesDialog::m_lp
 
-類型的結構[OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa)，用來初始化 OLE 物件屬性 對話方塊的 [連結] 頁面。
+類型的結構[OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa)，用來初始化 OLE 物件屬性] 對話方塊的 [連結] 頁面。
 
 ```
 OLEUILINKPROPS m_lp;
@@ -214,7 +214,7 @@ PROPSHEETHEADER m_psh;
 
 ##  <a name="m_vp"></a>  COlePropertiesDialog::m_vp
 
-類型的結構[OLEUIVIEWPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiviewpropsa)，用來初始化 OLE 物件屬性 對話方塊的 [檢視] 頁面。
+類型的結構[OLEUIVIEWPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiviewpropsa)，用來初始化 OLE 物件屬性] 對話方塊的 [檢視] 頁面。
 
 ```
 OLEUIVIEWPROPS m_vp;
@@ -261,7 +261,7 @@ virtual BOOL OnApplyScale(
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 CIRC](../../visual-cpp-samples.md)<br/>
+[MFC 範例 CIRC](../../overview/visual-cpp-samples.md)<br/>
 [COleDialog 類別](../../mfc/reference/coledialog-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [COleDialog 類別](../../mfc/reference/coledialog-class.md)<br/>

@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: f194879cf4a1388fc156fa4e92f4f9bea5056191
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 93ace0388981f429ac4a422947fbdaae8cdb8f24
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296003"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781974"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl 類別
 
@@ -297,7 +297,7 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ## <a name="example"></a>範例
 
-下列範例示範如何設定使用中的各種方法的屬性方格控制項物件`CMFCPropertyGridCtrl`類別。 此範例示範如何啟用此標題控制項、 啟用 [描述] 區域中，以及設定屬性方格控制項的外觀。 此範例也示範如何設定控制項的排序藉此控制項是英文字母的模式及其屬性的名稱、 所包含的所有屬性以及如何都設定各種屬性方格控制項的項目自訂色彩。 此範例中是屬於[新的控制項範例](../../visual-cpp-samples.md)。
+下列範例示範如何設定使用中的各種方法的屬性方格控制項物件`CMFCPropertyGridCtrl`類別。 此範例示範如何啟用此標題控制項、 啟用 [描述] 區域中，以及設定屬性方格控制項的外觀。 此範例也示範如何設定控制項的排序藉此控制項是英文字母的模式及其屬性的名稱、 所包含的所有屬性以及如何都設定各種屬性方格控制項的項目自訂色彩。 此範例中是屬於[新的控制項範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#14](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#16](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_2.cpp)]
@@ -462,7 +462,7 @@ virtual BOOL Create(
 [in]位元組合 (OR)[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。
 
 *rect*<br/>
-[in]指定的大小和位置 視窗中，在用戶端的周框座標*pParentWnd*。
+[in]指定的大小和位置] 視窗中，在用戶端的周框座標*pParentWnd*。
 
 *pParentWnd*<br/>
 [in]父視窗的指標。 必須不是 NULL。
@@ -480,7 +480,7 @@ virtual BOOL Create(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用`Create`方法中的`CMFCPropertyGridCtrl`類別。 此範例中是屬於[新的控制項範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用`Create`方法中的`CMFCPropertyGridCtrl`類別。 此範例中是屬於[新的控制項範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#15](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_6.cpp)]
 
@@ -1539,7 +1539,7 @@ void SetGroupNameFullWidth(
 [in]顯示完整的寬度，類別目錄名稱，不論屬性名稱資料行的寬度，則為 TRUE。 如果為 false，則類別名稱為寬度的屬性名稱資料行的寬度限制。 預設值為 TRUE。
 
 *bRedraw*<br/>
-[in]True 表示要更新立即; 屬性方格控制項為 FALSE，則下一步 重繪事件時更新控制項就會發生。 預設值為 TRUE。
+[in]True 表示要更新立即; 屬性方格控制項為 FALSE，則下一步] 重繪事件時更新控制項就會發生。 預設值為 TRUE。
 
 ### <a name="remarks"></a>備註
 

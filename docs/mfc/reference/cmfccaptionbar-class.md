@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 1a18e235c9f5875a977f740c26b917a3567a678d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c6385cb6bd3eec3ce5fefe0475d771c774777820
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264985"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781870"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar 類別
 
@@ -148,7 +148,7 @@ class CMFCCaptionBar : public CPane
 
 ## <a name="example"></a>範例
 
-下例示範如何在 `CMFCCaptionBar` 類別中使用各種方法。 此範例示範如何建立標題列控制項、 設定標題列的 3D 框線、 設定像素為單位，項目列標題的邊緣和標題列控制項的邊緣之間的距離，、 設定標題列按鈕設定按鈕的工具提示、 標題列的文字標籤設定、 設定標題列中，點陣圖影像以及設定影像的工具提示的標題列中。 此程式碼片段是一部分[MS Office 2007 示範範例](../../visual-cpp-samples.md)。
+下例示範如何在 `CMFCCaptionBar` 類別中使用各種方法。 此範例示範如何建立標題列控制項、 設定標題列的 3D 框線、 設定像素為單位，項目列標題的邊緣和標題列控制項的邊緣之間的距離，、 設定標題列按鈕設定按鈕的工具提示、 標題列的文字標籤設定、 設定標題列中，點陣圖影像以及設定影像的工具提示的標題列中。 此程式碼片段是一部分[MS Office 2007 示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]
 [!code-cpp[NVC_MFC_MSOffice2007Demo#2](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]
@@ -413,7 +413,7 @@ virtual void OnDrawButton(
 [in]按鈕的文字標籤。
 
 *bEnabled*<br/>
-[in]如果已啟用 按鈕，則為 TRUE。FALSE 否則。
+[in]如果已啟用] 按鈕，則為 TRUE。FALSE 否則。
 
 ### <a name="remarks"></a>備註
 

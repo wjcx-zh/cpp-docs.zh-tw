@@ -8,12 +8,12 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 69e174a000edfea7027a04f9cf97bf5a1aeb585e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6f80bc9d2a2438a6003c93ce7e60de50fd639a16
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518759"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023902"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>向量化工具和平行化工具訊息
 
@@ -231,7 +231,7 @@ void code_504(int *A) {
 |1006|此函式包含**openmp**。 解決此問題，移除任何**openmp**中此函式。|
 |1007|迴圈歸納變數或迴圈繫結不是 32 位元帶正負號的數字 (`int` 或 `long`)。 變更歸納變數的類型可解決此問題。|
 |1008|編譯器偵測到此迴圈沒有執行足夠的工作來確保 auto-parallelization。|
-|1009|編譯器偵測到嘗試平行化 "do-while" 迴圈。 auto-parallelizer 只以 `for` 迴圈為目標。|
+|1009|編譯器偵測到嘗試平行化 "do-while" 迴圈。  auto-parallelizer 只以 `for` 迴圈為目標。|
 |1010|編譯器偵測到迴圈使用「不等於」(! =) 作為條件。|
 
 ```cpp
@@ -984,7 +984,7 @@ void code_1505(int *A, int *B)
 
 [自動平行處理和自訂向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)<br/>
 [以原生程式碼進行平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
-[#pragma loop （)](../../preprocessor/loop.md)<br/>
+[#pragma loop()](../../preprocessor/loop.md)<br/>
 [/Q 選項 (低階運算)](../../build/reference/q-options-low-level-operations.md)<br/>
 [/Qpar-report (自動平行化工具報告層級)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
 [/Qvec-report (自動向量化工具報告層級)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

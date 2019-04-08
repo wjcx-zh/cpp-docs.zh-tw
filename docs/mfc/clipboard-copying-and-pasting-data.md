@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: da589743e98b2ac020e006aedb0ccc0415998f17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cff9094315dc97e2040eb4dbad25d044c7c51a81
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270731"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776098"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>剪貼簿：複製並貼上資料
 
@@ -32,7 +32,7 @@ ms.locfileid: "57270731"
 
 1. 如果使用者選擇剪下的作業，而不是複製作業，請從您的應用程式中刪除選取的資料。
 
-若要查看這個序列的範例，請參閱`OnEditCut`並`OnEditCopy`函式，在 MFC OLE 範例程式[OCLIENT](../visual-cpp-samples.md)並[HIERSVR](../visual-cpp-samples.md)。 請注意這些範例會維護目前選取的資料指標，所以已完成步驟 1。
+若要查看這個序列的範例，請參閱`OnEditCut`並`OnEditCopy`函式，在 MFC OLE 範例程式[OCLIENT](../overview/visual-cpp-samples.md)並[HIERSVR](../overview/visual-cpp-samples.md)。 請注意這些範例會維護目前選取的資料指標，所以已完成步驟 1。
 
 ##  <a name="_core_pasting_data"></a> 貼上資料
 
@@ -50,12 +50,12 @@ ms.locfileid: "57270731"
 
 1. 執行貼上作業的格式。
 
-如需其運作方式的範例，請參閱 < 實作`OnEditPaste`MFC OLE 範例程式中定義的檢視類別的成員函式[OCLIENT](../visual-cpp-samples.md)並[HIERSVR](../visual-cpp-samples.md)。
+如需其運作方式的範例，請參閱 < 實作`OnEditPaste`MFC OLE 範例程式中定義的檢視類別的成員函式[OCLIENT](../overview/visual-cpp-samples.md)並[HIERSVR](../overview/visual-cpp-samples.md)。
 
 > [!TIP]
 >  分隔成自己的函式貼上作業的主要優點是將資料放入您拖放作業期間的應用程式時，可以使用相同的貼上程式碼。 OCLIENT 和 HIERSVR，如同您`OnDrop`函式也可以呼叫`DoPasteItem`，重複使用來實作貼上作業所撰寫的程式碼。
 
-若要處理 [編輯] 功能表上的 選擇性貼上選項，請參閱主題[對話方塊，在 OLE 中](../mfc/dialog-boxes-in-ole.md)。
+若要處理 [編輯] 功能表上的 [選擇性貼上選項，請參閱主題[對話方塊，在 OLE 中](../mfc/dialog-boxes-in-ole.md)。
 
 ### <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
 

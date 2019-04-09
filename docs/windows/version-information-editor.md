@@ -23,12 +23,12 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: 7cfb2b5426a65298c01c61541020a0f30b673f9c
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 7910522578d89657adb09eb7729eb7539e010027
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328814"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027646"
 ---
 # <a name="version-information-editor-c"></a>版本資訊編輯器 （c + +）
 

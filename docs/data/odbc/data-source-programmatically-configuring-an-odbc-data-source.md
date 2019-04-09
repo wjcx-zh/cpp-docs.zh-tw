@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-ms.openlocfilehash: 3d02a19d6c61e79fffd31b67ef1b8f7ea9007fcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33269b65835812a6e1a03e091833831781d97b6d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677366"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037948"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>資料來源：以程式設計方式設定 ODBC 資料來源
 
@@ -41,7 +41,7 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
 
 請注意，資料來源實際上是一個目錄 (C:\EXCELDIR);此目錄必須存在。 Excel 驅動程式會使用目錄作為它的資料來源和檔案做為個別的資料表 （一個資料表，每個.xls 檔案）。
 
-如需建立資料表的詳細資訊，請參閱 <<c0> [ 資料來源： 以程式設計方式建立 ODBC 資料來源中的資料表](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)。
+如需建立資料表的詳細資訊，請參閱[資料來源：以程式設計方式建立 ODBC 資料來源中的 資料表](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)。
 
 下面資訊討論需要傳遞至參數`::SQLConfigDataSource`ODBC API 函式。 若要使用`::SQLConfigDataSource`，您必須包含 Odbcinst.h 標頭檔，並使用 Odbcinst.lib 匯入程式庫。 此外，Odbccp32.dll 必須在執行的階段 （或 16 位元的 Odbcinst.dll） 是在路徑中。
 
@@ -51,7 +51,7 @@ ODBC 管理員 （通常安裝在控制台中） 會將項目放在 Windows 登�
 
 雖然這項資訊可以直接寫入登錄而不需使用`::SQLConfigDataSource`，這麼做的任何應用程式信賴憑證者上的目前的技巧，驅動程式管理員用以維持其資料。 如果不同的方式保留資料來源的 ODBC 驅動程式管理員會實作記錄有較新版本，任何使用這項技術的應用程式將會中斷。 它是一般建議使用 API 函式，如果有提供。 比方說，您的程式碼可以從 16 位元移植至 32 位元如果您使用是`::SQLConfigDataSource`函式，因為函式正確寫入 Odbc.ini 檔案或登錄。
 
-##  <a name="_core_sqlconfigdatasource_parameters"></a> SQLConfigDataSource 參數
+##  <a name="_core_sqlconfigdatasource_parameters"></a> SQLConfigDataSource Parameters
 
 下面將說明的參數`::SQLConfigDataSource`函式。 大部分的資訊取自 ODBC API*程式設計人員參考*提供 Visual c + + 1.5 版及更新版本。
 
@@ -94,7 +94,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
 
    - 32 位元，尋找 金鑰**HKEY_CURRENT_USER\Software\ODBC\ODBC。Zdroje dat INI\ODBC**的左窗格中。
 
-      右窗格會列出格式項目: 「 pub: REG_SZ:*<data source name>*"，其中*<data source name>* 是已設定您想要的驅動程式所需的設定與資料來源若要使用。 選取您想，資料來源，例如 SQL Server。 字串後的項目"pub:"都是，順序、 關鍵名稱和值將用於在您*lpszAttributes*參數。
+      右窗格會列出格式項目: 「 發行：REG_SZ:*<data source name>*"，其中*<data source name>* 是已設定您想要使用的驅動程式所需的設定與資料來源。 選取您想，資料來源，例如 SQL Server。 字串後的項目"pub:"都是，順序、 關鍵名稱和值將用於在您*lpszAttributes*參數。
 
    - 16 位元，找到一節所標記的 Odbc.ini 檔案中 [*\<資料來源名稱 >*]。
 

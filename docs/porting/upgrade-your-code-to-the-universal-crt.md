@@ -2,12 +2,12 @@
 title: 將程式碼升級至通用 CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: 368b61820310135f14cbe4225b9315e62d3686a7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: bdf1615d47361654e9690977520d01c332098438
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58769182"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898761"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>將程式碼升級至通用 CRT
 
@@ -49,4 +49,4 @@ C 和 C++ 編譯器特定執行階段支援程式庫 **vcruntime**包含支援�
 [潛在升級問題概觀 (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visual C++ 變更歷程記錄 2003 - 2015](visual-cpp-change-history-2003-2015.md)<br/>
-[Visual Studio 2017 中的 C++ 一致性改善](../overview/cpp-conformance-improvements-2017.md)
+[Visual Studio 中的 C++ 一致性改善](../overview/cpp-conformance-improvements.md)

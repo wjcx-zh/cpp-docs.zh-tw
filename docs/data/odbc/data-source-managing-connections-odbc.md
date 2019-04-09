@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: c0adbcdd-c000-40c6-b199-09ffdc7b6ef2
-ms.openlocfilehash: 0f10dd1053819cb201385098b0125042ad556a47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b646ca0eb86d3addabaad59ca23f56cfe914114
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568495"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041159"
 ---
 # <a name="data-source-managing-connections-odbc"></a>資料來源：管理連接 (ODBC)
 
@@ -72,7 +72,7 @@ ODBC 管理員來設定您的資料來源。 您也可以在安裝後使用 ODBC
 
 ##  <a name="_core_working_in_a_multiuser_environment"></a> 在多使用者環境中工作
 
-如果多個使用者連接到資料來源，他們就可以變更資料，而您正在操作它在您的資料錄集。 同樣地，您的變更可能會影響其他使用者的資料錄集。 如需詳細資訊，請參閱 <<c0> [ 資料錄集： 資料錄集更新資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)並[異動 (ODBC)](../../data/odbc/transaction-odbc.md)。
+如果多個使用者連接到資料來源，他們就可以變更資料，而您正在操作它在您的資料錄集。 同樣地，您的變更可能會影響其他使用者的資料錄集。 如需詳細資訊，請參閱[資料錄集：資料錄集更新資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)並[異動 (ODBC)](../../data/odbc/transaction-odbc.md)。
 
 ##  <a name="_core_generalizing_the_connection_string"></a> 連接字串一般化
 
@@ -139,5 +139,5 @@ ODBC 管理員來設定您的資料來源。 您也可以在安裝後使用 ODBC
 ## <a name="see-also"></a>另請參閱
 
 [資料來源 (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
-[資料來源：決定資料來源的結構描述 (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)<br/>
+[資料來源：判斷資料來源 (ODBC) 的結構描述](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)<br/>
 [CRecordset 類別](../../mfc/reference/crecordset-class.md)

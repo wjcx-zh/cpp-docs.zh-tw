@@ -3,12 +3,12 @@ title: 在 Visual Studio 中設定 CMake 偵錯工作階段
 ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 712728247c439c38d5e640118fc153cf89647c80
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 9899f99994935ec419fff400670644b7d78a190a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356162"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035344"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>設定 CMake 偵錯工作階段
 
@@ -42,7 +42,7 @@ ms.locfileid: "58356162"
 
 ## <a name="support-for-cmakesettings-variables"></a>CMakeSettings 變數支援
 
- **Launch.vs.json**支援中宣告的變數**CMakeSettings.json** （如下所示） 和適用於目前選取的組態。 它還包含名為 `currentDir` 的索引鍵，可設定啟動應用程式的目前目錄：
+ **Launch.vs.json**支援中宣告的變數**CMakeSettings.json** （如下所示） 和適用於目前選取的組態。 它也具有名為索引鍵`currentDir`，可設定的本機專案的啟動應用程式目前的目錄：
 
 ```json
 {
@@ -59,12 +59,19 @@ ms.locfileid: "58356162"
 ```cmd
 C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 ```
+
+'Cwd' 的索引鍵設定的遠端專案的啟動應用程式目前的目錄。 預設值為 '${debugInfo.defaultWorkingDirectory}' 而它評估成 
+
+```cmd
+/var/tmp/src/bfc6f7f4-4f0f-8b35-80d7-9198fa973fb9/Linux-Debug
+```
+
 ## <a name="see-also"></a>另請參閱
 
-[CMake Projects in Visual Studio](cmake-projects-in-visual-studio.md) (Visual Studio 中的 CMake 專案)<br/>
+[Visual Studio 中的 CMake 專案](cmake-projects-in-visual-studio.md)<br/>
 [設定 Linux CMake 專案](../linux/cmake-linux-project.md)<br/>
 [連線到遠端 Linux 電腦](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [自訂 CMake 建置設定](customize-cmake-settings.md)<br/>
 [設定 CMake 偵錯工作階段](configure-cmake-debugging-sessions.md)<br/>
-[部署、執行及偵錯 Linux 專案](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
+[部署、執行和偵錯 Linux 專案](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [CMake 預先定義組態參考](cmake-predefined-configuration-reference.md)<br/>

@@ -57,12 +57,12 @@ helpviewer_keywords:
 - -w compiler option [C++]
 - /W2 compiler option [C++]
 - /Wv compiler option [C++]
-ms.openlocfilehash: 997a73541ab95a393bda4ebf5412c11f025b03a3
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.openlocfilehash: 7b5c19c95cff3058bb3dcc6640f8ab07cf01edd6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57820685"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040065"
 ---
 # <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>/w、 /W0、 /W1、 /W2、 / w3、 / w4、 /w1、 /w2、 / w3、 / w4、 /Wall、 /wd，/ /wo，我們 （警告層級）
 
@@ -94,7 +94,7 @@ ms.locfileid: "57820685"
 
 |選項|描述|
 ------------|-----------------|
-|**/w**|隱藏所有編譯器警告。|
+|**/W**|隱藏所有編譯器警告。|
 |**/W0**<br /><br /> **/W1**<br /><br /> **/W2**<br /><br /> **/W3**<br /><br /> **/W4**|指定要由編譯器所產生的警告層級。 有效的警告層級的範圍從 0 到 4:<br />**/ W0**隱藏所有警告。 這相當於 **/w**。<br />**/ W1**顯示層級 1 （嚴重） 警告。 **/ W1**是命令列編譯器中的預設設定。<br />**/ W2**顯示層級 1 和 2 （重大） 的警告層級。<br />**/ W3**顯示層級 1、 層級 2 和 3 （實際執行品質） 警告層級。 **/ W3**是在 IDE 中的預設設定。<br />**/ W4**和顯示層級 1，層級 2 和 3 的警告層級 4 （資訊） 的警告不預設關閉的所有層級。 我們建議您使用此選項，來提供類似 lint 的警告。 對於新專案時，可能最好使用 **/w4**在所有編譯; 中，這可確保可能難找到的程式碼缺失數最少。|
 |**/Wall**|顯示所顯示的所有警告 **/w4**以及所有其他警告會 **/w4**不包含 — 比方說，都預設為關閉的警告。 如需詳細資訊，請參閱 <<c0> [ 編譯器警告，是 Off By Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。|
 |**/Wv**\[**:**_version_]|會顯示在編譯器版本中引進的警告*版本*及更早版本。 您可以使用此選項，隱藏在程式碼中的新警告，當您移轉至較新版本的編譯器，和維護您現有的建置程序，而加以修正。 選擇性參數*版本*形式*nn*[。*mm*[。*bbbbb*]] 其中*nn*是主要版本號碼， *mm*是選用的次要版本號碼，以及*bbbbb*是選擇性的組建編號編譯器。 例如，使用 */Wv:17*来顯示在 Visual Studio 2012 （也就是編譯器主要版本編號的 17 的任何版本） 或更早版本，引進的警告，但是隱藏在 Visual Studio 2013 （主要版本中引進的警告18） 及更新版本。 根據預設， **/Wv**會使用目前的編譯器版本號碼和警告會隱藏。 如需依編譯器版本隱藏警告的詳細資訊，請參閱 <<c0> [ 依編譯器版本的編譯器警告](../../error-messages/compiler-warnings/compiler-warnings-by-compiler-version.md)。|
@@ -116,7 +116,7 @@ ms.locfileid: "57820685"
 
 1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 若要設定 **/W0**， **/W1**， **/W2**， **/w3**， **/w4**， **/wall**m **/Wv**， **/WX**或是 **/WX-** 選項中，選取**組態屬性** > **C /C + +** > **一般**屬性頁。
+1. 若要設定 **/W0**， **/W1**， **/W2**， **/w3**， **/w4**， **/wall**，**/Wv**， **/WX**或是 **/WX-** 選項中，選取**組態屬性** > **C /C + +** > **一般**屬性頁。
 
    - 若要設定 **/W0**， **/W1**， **/W2**， **/w3**， **/w4**，或 **/wall**選項，修改**警告層級**屬性。
 

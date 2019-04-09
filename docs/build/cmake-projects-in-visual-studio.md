@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 479179d94a0534f5f0c790fea18e281053b686e2
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 22a8ecc34e6413c32628381241d45d3d76b39ecc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565291"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030429"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Visual Studio 中的 CMake 專案
 
@@ -166,5 +166,5 @@ Visual Studio 會使用名為的檔案**CMakeSettings.json**來儲存環境變�
 [自訂 CMake 建置設定](customize-cmake-settings.md)<br/>
 [CMakeSettings.json 參考](cmakesettings-reference.md)<br/>
 [設定 CMake 偵錯工作階段](configure-cmake-debugging-sessions.md)<br/>
-[部署、執行及偵錯 Linux 專案](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
+[部署、執行和偵錯 Linux 專案](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [CMake 預先定義組態參考](cmake-predefined-configuration-reference.md)<br/>

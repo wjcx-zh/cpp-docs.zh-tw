@@ -87,12 +87,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 4191b1bd495a8908610b6e49c3dff676de2304dc
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: d10593ffbae7aef55adc3334057402b6952d8ba7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328489"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027593"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>如何：建立圖示或其他影像
 
@@ -155,8 +155,8 @@ ms.locfileid: "58328489"
 
 |屬性|描述|
 |---|---|
-|[寬度]|提供空間讓您輸入自訂影像的寬度，單位為像素 （1-512，限制為 2048年）。|
-|[高度]|提供空間讓您輸入高度的像素為單位 （1-512，限制為 2048年） 的自訂映像。|
+|**寬度**|提供空間讓您輸入自訂影像的寬度，單位為像素 （1-512，限制為 2048年）。|
+|**高度**|提供空間讓您輸入高度的像素為單位 （1-512，限制為 2048年） 的自訂映像。|
 |**色彩**|提供空間讓您選擇的自訂映像的色彩數目：2、 16 或 256。|
 
 使用**開啟&lt;裝置&gt;映像**對話方塊中，以開啟 c + + 專案中的 裝置映像。 它會列出目前的資源 （屬於目前的資源的映像） 的現有裝置映像。 是包含下列屬性：
@@ -320,9 +320,9 @@ None
 ## <a name="see-also"></a>另請參閱
 
 [圖示影像編輯器](../windows/image-editor-for-icons.md)<br/>
-[如何：複製影像](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[如何：使用繪圖工具](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
-[如何：使用色彩](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[HOW TO：編輯映像](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[HOW TO：使用繪圖工具](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[HOW TO：使用色彩](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 <!--
 [Converting Bitmaps to Toolbars](../windows/converting-bitmaps-to-toolbars.md)<br/>

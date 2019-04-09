@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Makefile projects, creating
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: bb28d76b0ec459b5fd63f6a00dedff723274e90f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 9c2edfe35233672e8117d336ba40cfea497b1a22
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825873"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035594"
 ---
 # <a name="create-a-c-makefile-project"></a>建立 c + + makefile 專案
 
@@ -21,8 +21,8 @@ ms.locfileid: "57825873"
 如果您有現有的 Makefile 專案，則當您希望在 Visual Studio IDE 中撰寫和/或對其進行偵錯時，可以選擇這些選項：
 
 - 若要設定 Visual Studio 會使用適用於 IntelliSense 的.vcxproj 檔案會使用您現有 makefile 的 Visual Studio 中建立一個 makefile 專案。 (您將無法使用原生 MSBuild 專案取得所有 IDE 功能。)請參閱下方的[建立 Makefile 專案](#create_a_makefile_project)。
-- 使用 [從現有程式碼檔建立新專案精靈]，從您的原始程式碼建立原生 MSBuild 專案。 在此之後，不會使用原始的 makefile。 如需詳細資訊，請參閱[如何：從現有的程式碼建立 c + + 專案](../how-to-create-a-cpp-project-from-existing-code.md)。
-- **Visual Studio 2017 和更新版本**:使用**開啟資料夾**編輯和建置 makefile 專案做為功能-是不需要任何涉入 MSBuild 系統。 如需詳細資訊，請參閱 <<c0> [ 開啟資料夾 」 專案的 c + +](../open-folder-projects-cpp.md)。
+- 使用 [從現有程式碼檔建立新專案精靈]，從您的原始程式碼建立原生 MSBuild 專案。 在此之後，不會使用原始的 makefile。 如需詳細資訊，請參閱[如何：從現有的程式碼建立 C++ 專案](../how-to-create-a-cpp-project-from-existing-code.md)。
+- **Visual Studio 2017 及更新版本**：使用**開啟資料夾**編輯和建置 makefile 專案做為功能-是不需要任何涉入 MSBuild 系統。 如需詳細資訊，請參閱 [Open Folder projects for C++](../open-folder-projects-cpp.md) (適用於 C++ 的開啟資料夾專案)。
 
 ## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Makefile 專案範本建立 makefile 專案
 
@@ -54,7 +54,7 @@ ms.locfileid: "57825873"
 
 - **重建命令列：** 指定當使用者從 建置 功能表中選取 重建時要執行的命令列。 在重建所有的命令列欄位 Nmake 的頁面上顯示專案的屬性頁。
 
-## <a name="how-to-enable-intellisense-for-makefile-projects"></a>HOW TO：Makefile 專案中啟用 IntelliSense
+## <a name="how-to-enable-intellisense-for-makefile-projects"></a>HOW TO：啟用 Makefile 專案的 IntelliSense
 
 某些專案設定] 或 [編譯器選項會設定不正確時，IntelliSense 會無法在 makefile 專案中。 請遵循下列步驟來設定 makefile 專案，讓 IntelliSense 可以正常運作：
 
@@ -86,7 +86,7 @@ ms.locfileid: "57825873"
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 IntelliSense](/visualstudio/ide/using-intellisense)<br>
+[Using IntelliSense](/visualstudio/ide/using-intellisense)<br>
 [NMAKE 參考](nmake-reference.md)<br>
 [如何：從現有的程式碼建立 c + + 專案](../how-to-create-a-cpp-project-from-existing-code.md)
 [Makefile 中的特殊字元](special-characters-in-a-makefile.md)<br/>

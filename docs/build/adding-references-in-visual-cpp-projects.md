@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: eb4d970527ba919af10eadab7c907f5108767b9b
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: dff057977e6b6ff0c36d3a888bc4d5c3aa778576
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58780466"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038758"
 ---
 # <a name="consuming-libraries-and-components"></a>使用程式庫和元件
 
@@ -128,7 +128,7 @@ ActiveX 參考屬性僅適用於 COM 元件的參考。 這些屬性僅在 [參�
 
    顯示參考組件的組件名稱。
 
-- **文化特性**
+- **culture**
 
    顯示選取參考的文化特性。
 
@@ -144,7 +144,7 @@ ActiveX 參考屬性僅適用於 COM 元件的參考。 這些屬性僅在 [參�
 
    針對 .NET Framework 組件，則會顯示完整路徑。 針對 COM 元件，則會顯示 GUID。
 
-- **Label**
+- **標籤**
 
    顯示參考的標籤。
 
@@ -158,7 +158,7 @@ ActiveX 參考屬性僅適用於 COM 元件的參考。 這些屬性僅在 [參�
 
 - **強式名稱**
 
-   如果參考組件具有強式名稱，則為`true` 。 強式命名組件是唯一版本。
+   `true` 。 強式命名組件是唯一版本。
 
 - **版本**
 
@@ -167,4 +167,4 @@ ActiveX 參考屬性僅適用於 COM 元件的參考。 這些屬性僅在 [參�
 ## <a name="see-also"></a>另請參閱
 
 [C + + 專案屬性頁參考](reference/property-pages-visual-cpp.md)<br>
-[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](working-with-project-properties.md)
+[設定 c + + 編譯器和建置在 Visual Studio 中的屬性](working-with-project-properties.md)

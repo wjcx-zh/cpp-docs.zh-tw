@@ -7,12 +7,12 @@ helpviewer_keywords:
 - static libraries [C++]
 ms.assetid: 3cc36411-7d66-4240-851e-dacb9a8fd6ac
 ms.author: corob
-ms.openlocfilehash: 506db5ea8e94887d9971b48c06ce8c0d6156dccb
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 0d527681abb077a01b3d902c092a21de7a052867
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58784428"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031504"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>逐步解說：建立和使用靜態程式庫 （c + +）
 
@@ -57,7 +57,7 @@ ms.locfileid: "58784428"
 
     - Visual Studio 2017，以前的版本
 
-        1. 按一下 [下一步] 。
+        1. 按 [ **下一步**]。
 
         1. 底下**應用程式類型**，選取**靜態程式庫**。 然後取消核取**先行編譯標頭**方塊，然後選擇**完成**。
 
@@ -105,7 +105,7 @@ ms.locfileid: "58784428"
 
     - Visual Studio 2017，以前的版本
 
-        1. 按一下 [下一步] 。
+        1. 按 [ **下一步**]。
 
         1. 請確定**主控台應用程式**已選取。 然後檢查**空專案**方塊，然後選擇**完成**。
 
@@ -146,5 +146,5 @@ ms.locfileid: "58784428"
 
 ## <a name="see-also"></a>另請參閱
 
-[逐步解說：建立和使用動態連結程式庫 (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
-[傳統型應用程式 (Visual C++)](../windows/desktop-applications-visual-cpp.md)<br/>
+[逐步解說：建立和使用動態連結程式庫 （c + +）](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
+[桌面應用程式 （Visual c + +）](../windows/desktop-applications-visual-cpp.md)<br/>

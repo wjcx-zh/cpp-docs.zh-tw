@@ -1,34 +1,34 @@
 ---
-title: 預先定義的 CMake 組態參考
+title: CMake 預先定義組態參考
 ms.description: Visual Studio provides several predefined build configurations for CMake projects on Linux, Windows, ARM, and IoT.
 ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: d1e77db7ddc38fa41771a512a5b863d403bfdc28
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: cecadaec2e409dfba3b1929e406c36df3e498307
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824944"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031441"
 ---
-# <a name="cmake-predefined-build-configurations"></a>CMake 預先定義的組建組態
+# <a name="cmake-predefined-build-configurations"></a>CMake 預先組建組態
 
-在 CMake 專案中，組建組態會儲存在的 CMakeSettings.json 檔案。 當您選擇**管理組態**從在主要工具列組建組態下拉式清單，對話方塊隨即出現，顯示的預設 Visual Studio 中的 CMake 組態： 
+在 CMake 專案中，組建組態會儲存在 CMakeSettings.json 檔案中。 當您從主工具列的 [組建組態] 下拉式清單中選擇 [管理組態] 時，對話方塊隨即會出現，顯示 Visual Studio 中可用的預設 CMake 組態： 
 - x86 偵錯 
-- x86 版本
+- x86 發行
 - x64 偵錯
-- x64 版本
-- Linux 偵錯
+- x64 發行
+- Linux-Debug
 - Linux-Release
 - IoT 偵錯
-- IoT 版本
+- IoT 發行
 - MinGW 偵錯
-- MinGW 版本 
+- MinGW 發行 
 
-當您選擇的設定時，會將它新增至專案的根資料夾中的 CMakeSettings.json 檔案。 您接著可以使用它來建置您的專案。 
+當您選擇一個組態時，它便會新增至專案根資料夾的 CMakeSettings.json 檔案內。 您接著便可以使用它來建置您的專案。 
 
 
-## <a name="linux-predefined-build-configurations"></a>預先定義的 Linux 組建組態：
+## <a name="linux-predefined-build-configurations"></a>Linux 預先定義組建組態：
 
 ```json
 {
@@ -101,9 +101,9 @@ You can use these optional settings for more control:
 }
 ```
 
-這些選項可讓您之前和之後建置和 CMake 產生前，在遠端系統上執行命令。 值可以是任何有效遠端系統的命令。 輸出會經由管道輸出，回到 Visual Studio。
+這些選項可讓您在建置前和建置後，以及在 CMake 產生前於遠端系統上執行命令。 其值可以是遠端系統上任何有效的命令。 輸出會經由管道輸送回 Visual Studio。
 
-## <a name="iot-predefined-build-configurations"></a>IoT 預先定義的組建組態
+## <a name="iot-predefined-build-configurations"></a>IoT 預先組建組態
 
 ```json
 {
@@ -196,7 +196,7 @@ You can use these optional settings for more control:
     }
 ```
 
-## <a name="mingw-predefined-build-configurations"></a>MinGW 預先定義的組建組態
+## <a name="mingw-predefined-build-configurations"></a>MinGW 預先組建組態
 
 ```json
 {
@@ -272,7 +272,7 @@ You can use these optional settings for more control:
     }
 ```
 
-## <a name="x86-64-predefined-build-configurations"></a>x86 64 預先定義的組建組態
+## <a name="x86-64-predefined-build-configurations"></a>x86-64 預先組建組態
 
 ```json
     {
@@ -350,5 +350,5 @@ You can use these optional settings for more control:
 [設定 Linux CMake 專案](../linux/cmake-linux-project.md)<br/>
 [連線到遠端 Linux 電腦](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [設定 CMake 偵錯工作階段](configure-cmake-debugging-sessions.md)<br/>
-[部署、執行及偵錯 Linux 專案](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
-[預先定義的 CMake 組態參考](cmake-predefined-configuration-reference.md)<br/>
+[部署、執行和偵錯 Linux 專案](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
+[CMake 預先定義組態參考](cmake-predefined-configuration-reference.md)<br/>

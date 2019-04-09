@@ -17,12 +17,12 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: 62249bff7a278963ea67b2d2015ff52f22fcfc85
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c9abf46907c473d4cf6d9e945038f70aa75bfc48
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562922"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026275"
 ---
 # <a name="menu-commands-c"></a>功能表命令 （c + +）
 
@@ -36,7 +36,7 @@ ms.locfileid: "57562922"
 |**已啟用**|若為 **False**，則會停用功能表項目。|
 |**呈現灰色**|如果 **，則為 True**，功能表命令是一開始呈現灰色，而且非使用中。 類型：**Bool**。 預設：**False**。|
 |**說明**|將功能表項目對齊右邊。 預設：**False**。<br/><br/>例如，[ **說明** ] 功能表命令一律在所有 Windows 應用程式的右邊。 如果您在功能表項目上設定這個屬性，該項目將出現在功能表的最右邊和最尾端。 適用於最上層項目。|
-|**ID**|定義在標頭中的符號。 類型：**符號**，**整數**，或**加引號的字串**。<br/><br/>您可以使用任何通常可在任何編輯器使用的符號，即使 [屬性視窗](/visualstudio/ide/reference/properties-window) 未提供可讓您從中選取的下拉式清單也一樣。|
+|**識別碼**|定義在標頭中的符號。 類型：**符號**，**整數**，或**加引號的字串**。<br/><br/>您可以使用任何通常可在任何編輯器使用的符號，即使 [屬性視窗](/visualstudio/ide/reference/properties-window) 未提供可讓您從中選取的下拉式清單也一樣。|
 |**快顯**|如果 **，則為 True**，功能表命令是快顯功能表。 類型：**Bool**。 預設：**真**最上層功能表的功能表列，否則為**False**。|
 |**提示**|包含反白顯示此功能表命令時要出現在狀態列的文字。 文字會放在字串表中，其識別碼與功能表命令相同。<br/><br/>這個屬性適用於任何類型的專案，但執行階段功能則專屬於 MFC。|
 |**由右至左對齊**|在執行階段將功能表列上的功能表命令靠右對齊。 類型：**Bool**。 預設：**False**。|

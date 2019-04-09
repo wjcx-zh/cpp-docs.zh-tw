@@ -5,12 +5,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: dae4937661db945fa17f15ea39b0d17a8bf72640
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 41cac1b23d5ab16825891ef654341016958ab826
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58768211"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034909"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>從舊版的 Visual C++ 升級專案
 
@@ -40,10 +40,10 @@ ms.locfileid: "58768211"
 [修正程式庫內部項目上的相依性](fix-your-dependencies-on-library-internals.md)<br/>
 [浮點數的移轉問題](floating-point-migration-issues.md)<br/>
 [在 Visual Studio 中使用原生多目標來建置舊專案](use-native-multi-targeting.md)<br/>
-[Visual C++ 功能在 Visual Studio 2019 預覽版中已淘汰](features-deprecated-in-visual-studio.md)<br/>
+[Visual Studio 2019 預覽中淘汰的 Visual C++ 功能](features-deprecated-in-visual-studio.md)<br/>
 [建置系統變更](build-system-changes.md)<br/>
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Visual Studio 2017 中 Visual C++ 的新功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Visual C++ 變更歷程記錄 2003 - 2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>

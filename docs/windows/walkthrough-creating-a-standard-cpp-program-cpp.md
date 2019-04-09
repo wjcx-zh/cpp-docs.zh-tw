@@ -1,5 +1,5 @@
 ---
-title: 逐步解說： 建立標準的 c + + 程式 （c + +）
+title: 逐步解說：建立標準的 c + + 程式 （c + +）
 ms.custom: get-started-article
 ms.date: 09/18/2018
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-ms.openlocfilehash: 78d19a277f8bedcdbd098a662c69d6fc622a7cff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d58d23e757a97402985ef60badf551523c0a275e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647455"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030617"
 ---
-# <a name="walkthrough-creating-a-standard-c-program-c"></a>逐步解說： 建立標準的 c + + 程式 （c + +）
+# <a name="walkthrough-creating-a-standard-c-program-c"></a>逐步解說：建立標準的 c + + 程式 （c + +）
 
 您可以使用 Visual Studio 整合式的開發環境 (IDE) 中的 Visual c + + 來建立標準 c + + 程式。 依照本逐步解說中的步驟，您可以建立專案、 將新檔案新增至專案、 修改檔案以加入 c + + 程式碼，然後編譯及執行使用 Visual Studio 的程式。
 
@@ -73,8 +73,8 @@ Visual c + + 會遵循 2003 c + + 標準，但有下列主要例外狀況： 兩
 
 ## <a name="next-steps"></a>後續步驟
 
-**上一步：** [主控台 Visual c + + 中的應用程式](../windows/console-applications-in-visual-cpp.md)<br/>
-**下一步：** [逐步解說： 編譯命令列上的原生 c + + 程式](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
+**上一步：**[Visual C++ 中的主控台應用程式](../windows/console-applications-in-visual-cpp.md)<br/>
+**下一步：**[逐步解說：在命令列編譯原生 C++ 程式](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
 
 ## <a name="see-also"></a>另請參閱
 

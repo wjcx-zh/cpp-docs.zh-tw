@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 2dada25ea712b7bb6d48d80525c824a0457b18cf
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 37ebcc646864774b15513c9e1891ba14e0705298
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220542"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237194"
 ---
 # <a name="how-to-design-for-exception-safety"></a>HOW TO：例外狀況安全的設計
 
@@ -17,13 +17,13 @@ ms.locfileid: "54220542"
 
 ## <a name="basic-techniques"></a>基本技術
 
-強大例外狀況處理原則需要仔細考量，且應該納入設計程序的一部分。 一般而言，大部分例外狀況會在軟體模組的較低層被偵測到並擲回，不過，這些圖層通常沒有足夠的內容去處理錯誤，或公開訊息給使用者。 在中介層，當必須檢查例外狀況物件時，函式可以攔截並重新擲回例外狀況，或有其他實用資訊提供給最後攔截例外狀況的最上層。 只要可以完全復原，函式就應該攔截並「忍受」例外狀況。 在大部分情況下，中介層的正確行為是讓例外狀況散佈到呼叫堆疊。 在最高層，如果例外狀況讓程式無法保證正確性，最好讓未處理的例外狀況終止程式。
+強大例外狀況處理原則需要仔細考量，且應該納入設計程序的一部分。 一般而言，大部分例外狀況會在軟體模組的較低層被偵測到並擲回，不過，這些圖層通常沒有足夠的內容去處理錯誤，或公開訊息給終端使用者。 在中介層，當必須檢查例外狀況物件時，函式可以攔截並重新擲回例外狀況，或有其他實用資訊提供給最後攔截例外狀況的最上層。 只要可以完全復原，函式就應該攔截並「忍受」例外狀況。 在大部分情況下，中介層的正確行為是讓例外狀況散佈到呼叫堆疊。 在最高層，如果例外狀況讓程式無法保證正確性，最好讓未處理的例外狀況終止程式。
 
 不論函式如何處理例外狀況，為了確保「例外狀況時仍然安全」，它必須根據下列基本規則設計。
 
 ### <a name="keep-resource-classes-simple"></a>資源類別愈簡單愈好
 
-當您在類別中納入手動資源管理，請使用沒在管理每個資源的類別，否則可能會造成流失。 使用[智慧型指標](../cpp/smart-pointers-modern-cpp.md)可能的話，請在下列範例所示。 當使用 `shared_ptr` 時，這個範例會刻意人工化或簡單化以醒目提示差異之處。
+當您將封裝在類別中的手動資源管理時，請使用 不執行任何動作但管理單一資源的類別。 保持簡單的類別，可以減少資源流失的風險。 使用[智慧型指標](../cpp/smart-pointers-modern-cpp.md)可能的話，請在下列範例所示。 當使用 `shared_ptr` 時，這個範例會刻意人工化或簡單化以醒目提示差異之處。
 
 ```cpp
 // old-style new/delete version
@@ -122,4 +122,4 @@ public:
 ## <a name="see-also"></a>另請參閱
 
 [錯誤和例外狀況處理 (現代 C++)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[如何：例外狀況和非例外狀況代碼之間的介面](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[HOW TO：例外狀況和非例外狀況代碼之間的介面](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)

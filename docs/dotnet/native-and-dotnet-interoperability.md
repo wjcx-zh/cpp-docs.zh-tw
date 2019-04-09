@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Visual C++, interoperability
 - native code [C++], .NET interoperatibility
 ms.assetid: f3ec6c99-c745-4256-b95b-f1d12ba17a5a
-ms.openlocfilehash: ae5a4583d5f074b98e346ba090246f533b80803d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 486796e404ad1aee39fbeb85251d26cc078b1160
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742148"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237142"
 ---
 # <a name="native-and-net-interoperability"></a>原生和 .NET 互通性
 
@@ -30,10 +30,8 @@ Visual c + + 支援互通性功能，可讓 managed 和 unmanaged 結構，以�
 [混合 (原生和 Managed) 組件](../dotnet/mixed-native-and-managed-assemblies.md)<br/>
 描述使用產生的組件[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)編譯器選項，同時包含 managed 和 unmanaged 功能。
 
-[在 MFC 中使用 Windows Forms 使用者控制項](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
+[在 MFC 中使用 Windows Form 使用者控制項](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
 討論如何使用 MFC Windows Form 支援類別來裝載 Windows Forms 控制項，在您的 MFC 應用程式。
 
 [從 Managed 程式碼呼叫原生函式](../dotnet/calling-native-functions-from-managed-code.md)<br/>
 描述如何使用非 CLR Dll，從.NET 應用程式。
-
-## <a name="see-also"></a>另請參閱

@@ -1,25 +1,25 @@
 ---
 title: 編譯器警告 （層級 4） C4061
-ms.date: 11/30/2017
+ms.date: 04/05/2019
 f1_keywords:
 - C4061
 helpviewer_keywords:
 - C4061
 ms.assetid: a99cf88e-7941-4519-8b1b-f6889d914b2f
-ms.openlocfilehash: 8b730d561134b8b7ca4454ee74f99216fbc72cb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 073e3e9cb1cb5bb6b0f66157c986072227960212
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453263"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237116"
 ---
 # <a name="compiler-warning-level-4-c4061"></a>編譯器警告 （層級 4） C4061
 
 > 列舉值 '*識別碼*'參數中的列舉'*列舉*' case 標籤並未明確處理
 
-列舉值有沒有相關聯的處理常式`switch`陳述式。
+指定的列舉值*識別碼*有沒有相關聯的處理常式`switch`具有陳述式`default`案例。 遺失的情況下可能會疏忽，或它可能不是問題。 它可能取決於是否處理列舉程式會由 default case 與否。 未使用的列舉值中的相關警告`switch`沒有任何的陳述式`default`情況下，請參閱[C4062](compiler-warning-level-4-c4062.md)。
 
-此警告預設為關閉。 如需詳細資訊，請參閱 [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 。
+此警告預設為關閉。 如需如何啟用預設為關閉的警告的詳細資訊，請參閱[編譯器警告，預設為關閉的](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。
 
 ## <a name="example"></a>範例
 
@@ -46,3 +46,7 @@ int main()
 {
 }
 ```
+
+## <a name="see-also"></a>另請參閱
+
+[編譯器警告 (層級 4) C4062](compiler-warning-level-4-c4062.md)

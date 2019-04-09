@@ -73,12 +73,12 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-ms.openlocfilehash: e1a8f601c9f5798494ee34d3c3987222c14ecfa7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 80ee43ae32416f9f62df419c4afbd46a0aa63cc8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292184"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780479"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit 類別
 
@@ -140,7 +140,7 @@ class CMFCRibbonEdit : public CMFCRibbonButton
 
 ## <a name="example"></a>範例
 
-下列範例示範如何建構`CMFCRibbonEdit`物件、 顯示編輯控制 旁邊的微調按鈕，並設定文字編輯控制項。 此程式碼片段是一部分[MS Office 2007 示範範例](../../visual-cpp-samples.md)。
+下列範例示範如何建構`CMFCRibbonEdit`物件、 顯示編輯控制 旁邊的微調按鈕，並設定文字編輯控制項。 此程式碼片段是一部分[MS Office 2007 示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#7](../../mfc/reference/codesnippet/cpp/cmfcribbonedit-class_1.cpp)]
 

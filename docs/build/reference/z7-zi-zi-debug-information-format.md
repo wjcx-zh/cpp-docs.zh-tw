@@ -1,6 +1,6 @@
 ---
 title: /Z7、/Zi、/ZI (偵錯資訊格式)
-ms.date: 02/22/2018
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.DebugInformationFormat
 - /ZI
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: 1beab7cb1e8e654d25620eb59a9326f5628ce047
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e809c7af7465cde98db11eac8628b76d04f7e8b5
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816317"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424075"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7、/Zi、/ZI (偵錯資訊格式)
 
@@ -42,7 +42,7 @@ ms.locfileid: "57816317"
 
 當編譯程式碼，並內建的偵錯模式下時，編譯器會產生函式和變數、 型別資訊和列數字的位置以供偵錯工具的符號名稱。 這個符號的偵錯資訊可以包含在由編譯器產生目的檔 （.obj 檔案），或在不同的 PDB 檔案 （.pdb 檔案） 可執行檔。  偵錯資訊格式選項是由下列各節所述。
 
-### <a name="none"></a>無
+### <a name="none"></a>None
 
 根據預設，如果偵錯資訊格式未不指定任何選項，編譯器會產生任何偵錯的資訊，讓編譯快一些。
 
@@ -52,7 +52,7 @@ ms.locfileid: "57816317"
 
 協力廠商程式庫的偵錯版本的散發者，還有沒有 PDB 檔案的優點。 不過，任何先行編譯標頭的物件檔案所需的程式庫連結階段期間，並進行偵錯。 如果只輸入.pch 目的檔中的資訊 （和任何程式碼） 時，您也必須使用[/Yl （插入偵錯程式庫的 PCH 參考）](yl-inject-pch-reference-for-debug-library.md)選項，當您建置程式庫時，根據預設，已啟用。
 
-[/Gm （啟用最少重建）](gm-enable-minimal-rebuild.md)選項時，不提供 **/z7**指定。
+已被取代[/Gm （啟用最少重建）](gm-enable-minimal-rebuild.md)選項時，不提供 **/z7**指定。
 
 ### <a name="zi"></a>/ZI
 
@@ -79,9 +79,9 @@ ms.locfileid: "57816317"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 開啟**組態屬性** > **C/c + +** > **一般**屬性頁。
+1. 開啟**組態屬性** > **C /C++** > **一般**屬性頁。
 
 1. 修改**偵錯資訊格式**屬性。 選取 [確定] 儲存您的變更。
 

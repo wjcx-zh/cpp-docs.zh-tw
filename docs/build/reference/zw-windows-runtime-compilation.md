@@ -1,6 +1,6 @@
 ---
 title: /ZW (Windows 執行階段編譯)
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.CompileAsWinRT
 - /zw
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - -ZW
 - Windows Runtime compiler option
 ms.assetid: 0fe362b0-9526-498b-96e0-00d7a965a248
-ms.openlocfilehash: a16482cf8d21651db9486ab19c347a4ccadf5279
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 73295866004fd506fd5f06ff25c048d14b821016
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809427"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424036"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (Windows 執行階段編譯)
 
-編譯原始程式碼，以支援 Visual c + + 元件擴充功能中 C + + /CX for 建立通用 Windows 平台 (UWP) 應用程式。
+編譯原始程式碼，以支援視覺效果C++元件擴充功能C++的通用 Windows 平台 (UWP) app 建立 /CX。
 
 當您使用 **/ZW**編譯時，一律指定 **/EHsc**以及。
 
@@ -44,9 +44,9 @@ ms.locfileid: "57809427"
 
 - Windows 執行階段物件的參考計數 」 和 「 自動捨棄物件參考計數歸零時自動。
 
-由於 incremental linker 不支援使用包含在.obj 檔案中的 Windows 中繼資料 **/ZW**選項時， [/Gm （啟用最少重建）](gm-enable-minimal-rebuild.md)選項與不相容 **/ZW**.
+由於 incremental linker 不支援使用包含在.obj 檔案中的 Windows 中繼資料 **/ZW**選項，已被取代[/Gm （啟用最少重建）](gm-enable-minimal-rebuild.md)選項與不相容 **/ZW**。
 
-如需詳細資訊，請參閱 < [Visual c + + 語言參考](../../cppcx/visual-c-language-reference-c-cx.md)。
+如需詳細資訊，請參閱 < [VisualC++語言參考](../../cppcx/visual-c-language-reference-c-cx.md)。
 
 ## <a name="requirements"></a>需求
 

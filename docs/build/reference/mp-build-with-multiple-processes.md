@@ -1,6 +1,6 @@
 ---
 title: /MP (使用多處理序建置)
-ms.date: 02/22/2018
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.MultiProcessorCompilation
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MP compiler option (C++)
 - MP compiler option (C++)
 - cl.exe compiler, multi-process build
-ms.openlocfilehash: 8a66f6f6f1f4ce77e33df992b915be9ca5dcce70
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e005b0314e87270e81dbb155dfdaa67be067cd3f
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808452"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424140"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (使用多處理序建置)
 
@@ -51,7 +51,7 @@ ms.locfileid: "57808452"
 |--------------------------------|-----------------|
 |[#import](../../preprocessor/hash-import-directive-cpp.md) 前置處理器指示詞|將類型程式庫中的類型轉換成 C++ 類別，然後將這些類別寫入標頭檔。|
 |[/E](e-preprocess-to-stdout.md)、 [/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|將前置處理器輸出複製到標準輸出 (**stdout**)。|
-|[/Gm](gm-enable-minimal-rebuild.md)|允許累加式重建。|
+|[/Gm](gm-enable-minimal-rebuild.md)|已取代。 允許累加式重建。|
 |[/showIncludes](showincludes-list-include-files.md)|將 Include 檔案的清單寫入標準錯誤 (**stderr**)。|
 |[/Yc](yc-create-precompiled-header-file.md)|寫入先行編譯的標頭檔。|
 
@@ -125,12 +125,8 @@ Visual Studio 會使用[MSBuild.exe](/visualstudio/msbuild/msbuild-reference)工
 
 - 如果專案和每個專案的檔案數目很平均，使用這兩個 MSBuild 和 **/MP**。 一開始，請將 **/maxcpucount** 選項設定為要建置的專案數目，再將 **/MP** 選項設定為電腦上的處理器數目。 測量效能然後調整設定，以產生最佳結果。 重複這個循環，直到您滿意總建置時間為止。
 
-#### <a name="the-gm-compiler-option"></a>/Gm 編譯器選項
-
-根據預設，專案建置會啟用偵錯組建的 **/Gm** 編譯器選項 (累加建置)，而停用發行組件的這個選項。 因此，偵錯組建中的 **/MP** 編譯器選項會自動停用，因為這個選項和預設的 **/Gm** 編譯器選項衝突。
-
 ## <a name="see-also"></a>另請參閱
 
 [#import 指示詞](../../preprocessor/hash-import-directive-cpp.md)<br/>
 [命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
-[/Zf (PDB 產生速度加快)](zf.md)<br/>
+[/Zf （PDB 產生速度加快）](zf.md)<br/>

@@ -1,6 +1,6 @@
 ---
 title: /FD (IDE 最少重建)
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 f1_keywords:
 - /FD
 helpviewer_keywords:
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - -FD compiler option [C++]
 - FD compiler option [C++]
 ms.assetid: 7ef21b8c-a448-4bb4-9585-a2a870028e17
-ms.openlocfilehash: 323a0045ab11f23ab996d5179a135d0eb4184f20
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: ac63b021dc0cb9ee5964af7fa2e168f710653979
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817435"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424049"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD (IDE 最少重建)
 
-**/FD**不會公開給使用者，除了在[命令列](command-line-property-pages.md)c + + 專案的屬性頁**屬性頁**對話方塊中，如果且只有[/Gm (啟用最少重建）](gm-enable-minimal-rebuild.md)也未選取。 **/FD**以外沒有作用，從開發環境。 **/FD**的輸出中未公開**cl /？**。
+**/FD**中的使用者只公開[命令列](command-line-property-pages.md)屬性頁的C++專案的**屬性頁**對話方塊。 可用，才是已被取代並關閉預設[/Gm （啟用最少重建）](gm-enable-minimal-rebuild.md)選項未選取。 **/FD**以外沒有作用，從開發環境。 **/FD**的輸出中未公開`cl /?`。
 
-如果您未啟用 **/Gm**在開發環境中， **/FD**將使用。 **/FD**可確保.idb 檔具有足夠的相依性資訊。 **/FD**僅供開發環境中，而且不應該用於從命令列或組建指令碼。
+如果您未啟用之已被取代 **/Gm**中開發環境中，選項 **/FD**用。 **/FD**可確保.idb 檔有足夠的相依性資訊。 **/FD**僅供開發環境中，而且不應該用於從命令列或組建指令碼。
 
 ## <a name="see-also"></a>另請參閱
 

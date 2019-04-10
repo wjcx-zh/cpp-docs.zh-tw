@@ -1,19 +1,19 @@
 ---
-title: 在 c + + 的 constexpr lambda 運算式
-ms.date: 07/19/2017
+title: 中的 constexpr lambda 運算式C++
+ms.date: 04/08/2019
 helpviewer_keywords:
 - lambda expressions [C++], constexpr
 ms.assetid: b56346cd-fbff-475f-aeaa-ed2010c6d6f7
-ms.openlocfilehash: 937fae7da0f20e81ac5450d597af7a822219d654
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1bc60a6da813e54c857da38b0164f544216be00
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506592"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424179"
 ---
-# <a name="constexpr-lambda-expressions-in-c"></a>在 c + + 的 constexpr lambda 運算式
+# <a name="constexpr-lambda-expressions-in-c"></a>中的 constexpr lambda 運算式C++
 
-**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): lambda 運算式可宣告為**constexpr**或常數運算式中使用時的每個初始設定它會擷取或導入的資料成員是常數運算式內允許的。
+**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):Lambda 運算式可宣告為**constexpr**或常數運算式中允許的它會擷取或導入了每個資料成員初始設定時，常數運算式中使用。
 
 ```cpp
     int y = 32;
@@ -55,5 +55,5 @@ Lambda 會以隱含方式**constexpr**如果結果符合需求**constexpr**函�
 
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [C++ 標準程式庫的函式物件](../standard-library/function-objects-in-the-stl.md)<br/>
-[函式呼叫](../cpp/function-call-cpp.md)<br/>
+[函式呼叫 ](../cpp/function-call-cpp.md)<br/>
 [for_each](../standard-library/algorithm-functions.md#for_each)

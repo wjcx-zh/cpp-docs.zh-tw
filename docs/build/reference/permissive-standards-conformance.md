@@ -1,6 +1,6 @@
 ---
 title: /permissive--（標準一致性）
-ms.date: 06/21/2018
+ms.date: 03/08/2019
 f1_keywords:
 - /permissive
 - VC.Project.VCCLCompilerTool.ConformanceMode
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 5590996c7598016365bb122977084835830f95ab
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 05089ef4f0a516f932d82f13be979da572701ae2
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820789"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424127"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive--（標準一致性）
 
@@ -35,15 +35,15 @@ ms.locfileid: "57820789"
 
 **/Permissive--** 選項適用於幾乎所有的標頭檔，從最新的 Windows 套件，例如軟體開發套件 (SDK) 或 Windows Driver Kit (WDK)，以 Windows Fall Creators SDK (10.0.16299.0) 啟動。 較舊版本的 SDK 可能無法編譯底下 **/permissive--** 各種來源的程式碼合規性原因。 編譯器和 Sdk 的出貨上不同的版本時間軸，因此有一些剩餘問題。 如需特定的標頭檔問題，請參閱[Windows 標頭問題](#windows-header-issues)如下。
 
-**/Permissive--** 選項組[/zc: strictstrings](zc-conformance.md)並[/zc: rvaluecast](zc-conformance.md)合格行為的選項。 它們會預設為不符合標準的行為。 您可以傳遞特定 **/Zc**後選項 **/permissive--** 覆寫這個行為在命令列上。
+**/Permissive--** 選項組[/zc: referencebinding](zc-referencebinding-enforce-reference-binding-rules.md)， [/zc: strictstrings](zc-strictstrings-disable-string-literal-type-conversion.md)，以及[/zc: rvaluecast](zc-rvaluecast-enforce-type-conversion-rules.md)選項，以符合行為。 這些選項預設值，不符合標準的行為。 您可以傳遞特定 **/Zc**後選項 **/permissive--** 覆寫這個行為在命令列上。
 
-在 Visual Studio 2017 15.3 版中，編譯器開始的版本中 **/permissive--** 選項組[/zc: ternary](zc-ternary.md)選項。 編譯器也會實作多個兩階段名稱查閱的需求。 當 **/permissive--** 設定選項，編譯器會剖析函式和類別樣板定義，用來識別相依和非相依名稱用於範本。 在此版本中，會執行名稱相依性分析。
+在 Visual Studio 2017 15.3 版中，編譯器開始的版本中 **/permissive--** 選項組[/zc: ternary](zc-ternary.md)選項。 編譯器也會實作多個兩階段名稱查閱的需求。 當 **/permissive--** 設定選項時，編譯器會剖析函式和類別樣板定義，並會識別用於範本的相依和非相依名稱。 在此版本中，會執行名稱相依性分析。
 
 環境特定擴充功能和標準保留最多實作的語言區域不會受到 **/permissive--**。 例如，Microsoft 專有`__declspec`，呼叫慣例和結構化例外狀況處理關鍵字和特定編譯器的 pragma 指示詞或屬性未標示在編譯器 **/permissive--** 模式。
 
-**/Permissive--** 選項會使用一致性支援目前的編譯器版本以判斷哪些語言建構會不合格。 此選項不會判斷您的程式碼是否符合特定版本的 c + + 標準。 若要啟用之最新草稿標準的所有實作的編譯器支援，請使用[/std:latest](std-specify-language-standard-version.md)選項。 若要限制目前已實作 c++17 標準的編譯器支援，請使用[/std: c + + 17](std-specify-language-standard-version.md)選項。 若要限制為更符合 C + + 14 標準的編譯器支援，請使用[/std: c + + 14](std-specify-language-standard-version.md)選項，這是預設值。
+**/Permissive--** 選項會使用一致性支援目前的編譯器版本以判斷哪些語言建構會不合格。 此選項不會判斷您的程式碼是否符合特定版本的C++標準。 若要啟用之最新草稿標準的所有實作的編譯器支援，請使用[/std:latest](std-specify-language-standard-version.md)選項。 若要限制目前已實作 c++17 標準的編譯器支援，請使用[/std: c + + 17](std-specify-language-standard-version.md)選項。 若要限制為更符合 C + + 14 標準的編譯器支援，請使用[/std: c + + 14](std-specify-language-standard-version.md)選項，這是預設值。
 
-不所有 C + + 11、 C + + 14 或 C + + 17 且符合標準的 Visual Studio 2017 中的 MSVC 編譯器支援程式碼。 根據 Visual Studio 版本而定 **/permissive--** 選項可能無法偵測出關於兩階段名稱查閱的某些層面、 繫結到暫存非 const 的參考、 複製 init 視為直接 init、 允許的問題多個使用者定義轉換在初始化或替代語彙基元中的邏輯運算子，以及其他不受支援的一致性區域。 如需 Visual C++ 中一致性問題的詳細資訊，請參閱 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。 若要取得充分利用 **/permissive--**，更新為最新版本的 Visual Studio。
+不所有 C + + 11、 C + + 14 或 C + + 17 標準符合所有版本的 Visual Studio 2017 中的 MSVC 編譯器支援程式碼。 根據 Visual Studio 版本而定 **/permissive--** 選項可能無法偵測出關於兩階段名稱查閱的某些層面、 繫結到暫存非 const 的參考、 複製 init 視為直接 init、 允許的問題多個使用者定義轉換在初始化或替代語彙基元中的邏輯運算子，以及其他不受支援的一致性區域。 如需 Visual C++ 中一致性問題的詳細資訊，請參閱 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。 若要取得充分利用 **/permissive--**，更新為最新版本的 Visual Studio。
 
 ### <a name="how-to-fix-your-code"></a>如何修正您的程式碼
 
@@ -56,7 +56,7 @@ void func(int default); // Error C2321: 'default' is a keyword, and
                         // cannot be used in this context
 ```
 
-#### <a name="lookup-members-in-dependent-base"></a>相依的基底中的查閱成員
+#### <a name="look-up-members-in-dependent-base"></a>查閱中相依的基底成員
 
 ```cpp
 template <typename T>
@@ -237,7 +237,7 @@ class ATL_NO_VTABLE CFooImpl : public ICustom,
 
 在 Visual Studio 2017 15.3 版之前，編譯器的版本中，編譯器會接受引數的條件運算子 （或三元運算子） `?:` ，會被視為模稜兩可由標準。 在  **/permissive--** 模式中，編譯器現在會發出一或多個診斷的情況下，不進行診斷，在舊版本中編譯。
 
-常見的情況可能會造成這項變更的錯誤包括：
+這項變更可能會造成的常見錯誤包括：
 
 - 錯誤 C2593: 'operator' 嗎？ 模稜兩可
 
@@ -247,7 +247,7 @@ class ATL_NO_VTABLE CFooImpl : public ICustom,
 
 - 錯誤 C2446: ':': 沒有從 'B' 為 'A' 的轉換
 
-某些類別 C 類型 t 提供從另一個類型 T 的非明確建構函式和非明確的轉換運算子時，可能會導致此問題的典型程式碼模式在此情況下，第 2 個引數轉換為第 3 種和第 2 個類型的第 3 個引數轉換是有效的轉換，這是根據標準模稜兩可。
+某些類別 C 類型 t 提供從另一個類型 T 的非明確建構函式和非明確的轉換運算子時，可能會導致此問題的典型程式碼模式在此情況下，第三個引數的型別轉換的第二個引數和第三個引數的第二個引數的型別轉換是有效的轉換。 兩者都是有效的因為它是根據標準模稜兩可。
 
 ```cpp
 // Example 1: class that provides conversion to and initialization from some type T
@@ -313,7 +313,7 @@ const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 
 #### <a name="two-phase-name-look-up"></a>兩階段名稱查閱
 
-當 **/permissive--** 設定選項，編譯器會剖析函式和類別樣板定義，用來識別相依和非相依名稱用於兩階段名稱查閱所需的範本。 在 Visual Studio 2017 15.3 版，被執行名稱的相依性分析。 特別是，未在範本定義的內容中宣告的非相依名稱會導致所需的 ISO c + + 標準的診斷訊息。 在 Visual Studio 2017 15.7 版，也會完成需要的引數相依查閱定義內容中的非相依名稱的繫結。
+當 **/permissive--** 設定選項，編譯器會剖析函式和類別樣板定義，用來識別相依和非相依名稱用於兩階段名稱查閱所需的範本。 在 Visual Studio 2017 15.3 版，被執行名稱的相依性分析。 特別的是，未在範本定義的內容中宣告的非相依名稱會造成診斷訊息所需的 ISOC++標準。 在 Visual Studio 2017 15.7 版，也會完成要求定義內容中的引數相依查閱的非相依名稱的繫結。
 
 ```cpp
 // dependent base
@@ -446,7 +446,7 @@ int main()
 
 1. 開啟您的專案**屬性頁** 對話方塊。
 
-1. 選取 **組態屬性** > **C/c + +** > **語言**屬性頁。
+1. 選取 **組態屬性** > **C /C++** > **語言**屬性頁。
 
 1. 變更**一致性模式**屬性值，以 **[是] (/permissive--)**。 選擇 **[確定]** 或是**套用**以儲存變更。
 
@@ -454,7 +454,7 @@ int main()
 
 1. 開啟您的專案**屬性頁** 對話方塊。
 
-1. 選取 **組態屬性** > **C/c + +** > **命令列**屬性頁。
+1. 選取 **組態屬性** > **C /C++** > **命令列**屬性頁。
 
 1. 請輸入 **/permissive--** 中的編譯器選項**其他選項** 方塊中。 選擇 **[確定]** 或是**套用**以儲存變更。
 

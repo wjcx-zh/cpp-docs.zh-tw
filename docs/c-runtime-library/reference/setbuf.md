@@ -1,6 +1,6 @@
 ---
 title: setbuf
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 apiname:
 - setbuf
 apilocation:
@@ -22,12 +22,12 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: 3b5fbccd304d406131b0c4f7d16a289f80484642
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89f8a4d8eb853c774f4f7299ceaa9b9eb6177b42
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440492"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424166"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -52,9 +52,9 @@ void setbuf(
 
 ## <a name="remarks"></a>備註
 
-**Setbuf**函式會控制緩衝*串流*。 *資料流*引數必須參照尚未讀取或寫入的開啟檔案。 如果*緩衝區*引數是**NULL**，資料流不會緩衝處理。 如果沒有，緩衝區必須指向長度的字元陣列**BUFSIZ**，其中**BUFSIZ**是定義於 STDIO 的緩衝區大小。H. 使用者指定的緩衝區 (而非指定資料流的預設系統配置緩衝區) 用於 I/O 緩衝處理。 **Stderr**資料流不會緩衝處理依預設，但您可以使用**setbuf**將緩衝區指派給**stderr**。
+**Setbuf**函式會控制緩衝*串流*。 *資料流*引數必須參考沒有讀取或寫入的開啟檔案。 如果*緩衝區*引數是**NULL**，資料流已緩衝。 如果沒有，緩衝區必須指向長度的字元陣列**BUFSIZ**，其中**BUFSIZ**是定義於 STDIO 的緩衝區大小。H. 使用者指定的緩衝區 (而非指定資料流的預設系統配置緩衝區) 用於 I/O 緩衝處理。 **Stderr**資料流是未緩衝處理依預設，但您可以使用**setbuf**將緩衝區指派給**stderr**。
 
-**setbuf**已被取代[setvbuf](setvbuf.md)，這是新的程式碼的慣用的常式。 **setbuf**保留與現有的程式碼的相容性。
+**setbuf**已被取代[setvbuf](setvbuf.md)，這是新的程式碼的慣用的常式。 不同於**setvbuf**， **setbuf**無法報告錯誤。 **setvbuf**也可讓您控制的緩衝模式和緩衝區大小。 **setbuf**存在與現有的程式碼的相容性。
 
 ## <a name="requirements"></a>需求
 

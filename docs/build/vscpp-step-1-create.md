@@ -1,29 +1,49 @@
 ---
-title: 建立 c + + 主控台應用程式專案
-description: 在 Visual c + + 中建立的 Hello World 主控台應用程式
+title: 建立 C++ 主控台應用程式專案
+description: 在 Visual C++ 中建立 Hello World 主控台應用程式
 ms.custom: mvc
-ms.date: 12/12/2017
+ms.date: 04/02/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 3bbbd40534e3e429d68dbb6205134c57db40c851
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 739da0b6e5400117c0b09a3d4c3335bd44529a25
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817721"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898774"
 ---
-# <a name="create-a-c-console-app-project"></a>建立 c + + 主控台應用程式專案
+# <a name="create-a-c-console-app-project"></a>建立 C++ 主控台應用程式專案
 
-一般起點 c + + 程式設計師為"Hello，world ！ 」 在命令列執行的應用程式。 這是什麼在您將建立 Visual Studio 在此步驟。
+通常 C++ 程式設計師的起點都是 "Hello, world!" 應用程式 (在命令列上執行)。 這是什麼在您將建立 Visual Studio 在此步驟。
 
 ## <a name="prerequisites"></a>必要條件
 
-- 具有 c + + 工作負載中，使用您的電腦上安裝和執行 Visual Studio 中使用的桌面開發。 如果它尚未安裝，請參閱[Visual Studio 2017 中的安裝 c + + 支援](vscpp-step-0-installation.md)。
+- 安裝 Visual Studio 和使用 C++ 進行桌面開發工作負載，並在您的電腦上執行。 如果它尚未安裝，請參閱[Visual Studio 中的安裝 c + + 支援](vscpp-step-0-installation.md)。
 
 ## <a name="create-your-app-project"></a>建立您的應用程式專案
 
-Visual Studio 會使用「專案」來組織應用程式的程式碼，並使用「解決方案」來組織專案。 此專案包含所有選項、 組態和用來建置您的應用程式的規則，並管理所有專案檔與任何外部檔案之間的關聯性。 若要建立您的應用程式，首先，您會建立新的專案和方案。
+Visual Studio 會使用「專案」來組織應用程式的程式碼，並使用「解決方案」來組織專案。 專案包含所有用來建置您應用程式的選項、組態及規則，並管理專案檔案及任何外部檔案間的關聯。 若要建立您的應用程式，首先，您會建立新的專案及解決方案。
+
+::: moniker range=">=vs-2019"
+
+1. 在 Visual Studio 中開啟**檔案**功能表，然後選擇**新增** > **專案**以開啟**建立新的專案**對話方塊。 選取 [**主控台應用程式**範本，然後選擇**下一步]**。
+
+   ![建立新的專案](media/vs2019-choose-console-app.png "開啟 [建立新的 [專案] 對話方塊")
+
+1. 在 [**設定新專案**] 對話方塊中，輸入*HelloWorld*中**專案名稱**編輯方塊。 選擇**建立**建立專案。
+
+   ![命名和建立新的專案](media/vs2019-configure-new-project-hello-world.png "名稱，並建立新的專案")
+
+   Visual Studio 會建立新的專案，可供您加入和編輯您的原始程式碼。 根據預設，程式碼中的"Hello World"應用程式與填滿的主控台應用程式範本：
+
+   ![在 IDE 中的 hello World 專案](media/vs2019-hello-world-code.png "在 IDE 中的 Hello World 專案")
+
+   在編輯器中，程式碼看起來像這樣，您就可以繼續下一個步驟，並建置您的應用程式。
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
 
 1. 在 Visual Studio 中開啟**檔案**功能表，然後選擇**新增 > 專案**以開啟**新專案**對話方塊。
 
@@ -85,10 +105,14 @@ Visual studio 會建立新的空白原始程式碼檔案，並在編輯器視窗
 
 [我遇到問題。](#add-a-source-code-file-issues)
 
+::: moniker-end
+
 ## <a name="next-steps"></a>後續步驟
 
 > [!div class="nextstepaction"]
 > [建置並執行 c + + 專案](vscpp-step-2-build.md)
+
+::: moniker range="<=vs-2017"
 
 ## <a name="troubleshooting-guide"></a>疑難排解指南
 
@@ -125,5 +149,7 @@ Visual studio 會建立新的空白原始程式碼檔案，並在編輯器視窗
 如果紅色的波浪線會顯示在原始碼程式碼編輯器中的任何項目之下，請檢查您的程式碼符合拼字、 標點符號及案例的範例。 案例中佔有相當大 c + + 程式碼。
 
 [返回](#add-code-to-the-source-file)。
+
+::: moniker-end
 
 <iframe src="" height="0" width="0" frameborder="0" name="frameTarget" />

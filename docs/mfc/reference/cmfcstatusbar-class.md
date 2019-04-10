@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: 94876dcf6549842a5fedbd96a93ef2cc760225ce
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87f75769e2f400a7721a8c9089d6c5596c31a4e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326747"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775955"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar 類別
 
@@ -138,26 +138,26 @@ class CMFCStatusBar : public CPane
 
 ## <a name="remarks"></a>備註
 
-下圖顯示從 [狀態] 列的圖形[狀態列示範範例](../../visual-cpp-samples.md)應用程式。
+下圖顯示從 [狀態] 列的圖形[狀態列示範範例](../../overview/visual-cpp-samples.md)應用程式。
 
 ![Cmfcstatusbar 範例](../../mfc/reference/media/cmfcstatusbar.png "cmfcstatusbar 範例")
 
 ## <a name="example"></a>範例
 
-下列範例示範應用程式使用各種方法呼叫中的本機變數`CMFCStatusBar`類別。 StatusBarDemoView.h 中宣告這些變數。 主框架中稱為 MainFrm.h 宣告、 文件宣告中 StatusBarDemoDoc.h，因此 StatusBarDemoView.h 中宣告檢視。 此程式碼片段是一部分[狀態列示範範例](../../visual-cpp-samples.md)。
+下列範例示範應用程式使用各種方法呼叫中的本機變數`CMFCStatusBar`類別。 StatusBarDemoView.h 中宣告這些變數。 主框架中稱為 MainFrm.h 宣告、 文件宣告中 StatusBarDemoDoc.h，因此 StatusBarDemoView.h 中宣告檢視。 此程式碼片段是一部分[狀態列示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_StatusBarDemo#9](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_1.h)]
 
 ## <a name="example"></a>範例
 
-下列範例示範如何取得的參考`CMFCStatusBar`物件，藉由引進`GetStatusBar`中稱為 MainFrm.h 和呼叫這個方法，從方法`GetStatusBar`StatusBarDemoView.h 中的方法。 此程式碼片段是一部分[狀態列示範範例](../../visual-cpp-samples.md)。
+下列範例示範如何取得的參考`CMFCStatusBar`物件，藉由引進`GetStatusBar`中稱為 MainFrm.h 和呼叫這個方法，從方法`GetStatusBar`StatusBarDemoView.h 中的方法。 此程式碼片段是一部分[狀態列示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_StatusBarDemo#7](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_2.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#8](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_3.h)]
 
 ## <a name="example"></a>範例
 
-下列範例示範如何呼叫各種方法`CMFCStatusBar`StatusBarDemoView.cpp 中的類別。 常數宣告中稱為 MainFrm.h。 此範例示範如何設定圖示、 設定狀態列窗格的工具提示文字、 顯示進度列上指定的窗格，將指定的窗格中的動畫、 設定文字和寬度的狀態列窗格，以及設定程式的目前進度指示器狀態列窗格的 ess 列。 此程式碼片段是一部分[狀態列示範範例](../../visual-cpp-samples.md)。
+下列範例示範如何呼叫各種方法`CMFCStatusBar`StatusBarDemoView.cpp 中的類別。 常數宣告中稱為 MainFrm.h。 此範例示範如何設定圖示、 設定狀態列窗格的工具提示文字、 顯示進度列上指定的窗格，將指定的窗格中的動畫、 設定文字和寬度的狀態列窗格，以及設定程式的目前進度指示器狀態列窗格的 ess 列。 此程式碼片段是一部分[狀態列示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_StatusBarDemo#6](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_4.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#1](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_5.cpp)]
@@ -588,7 +588,7 @@ void SetPaneAnimation(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-[in]指定您要指派給它的動畫 窗格的索引。
+[in]指定您要指派給它的動畫] 窗格的索引。
 
 *hImageList*<br/>
 [in]指定保留動畫畫面格的影像清單的控制代碼。
@@ -597,7 +597,7 @@ void SetPaneAnimation(
 [in]指定以毫秒為單位，動畫的畫面播放速率。
 
 *bUpdate*<br/>
-[in]如果為 TRUE，請立即更新 窗格的內容。 否則，它失效時，會更新窗格內容。
+[in]如果為 TRUE，請立即更新] 窗格的內容。 否則，它失效時，會更新窗格內容。
 
 ### <a name="remarks"></a>備註
 
@@ -617,13 +617,13 @@ void SetPaneBackgroundColor(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-[in]指定要設定新的背景色彩 窗格的索引。
+[in]指定要設定新的背景色彩] 窗格的索引。
 
 *clrBackground*<br/>
 [in]指定新的背景色彩。
 
 *bUpdate*<br/>
-[in]如果為 TRUE，請立即更新 窗格的內容。 否則，不會更新窗格內容直到窗格都無效的另一種方法。
+[in]如果為 TRUE，請立即更新] 窗格的內容。 否則，不會更新窗格內容直到窗格都無效的另一種方法。
 
 ##  <a name="setpaneicon"></a>  CMFCStatusBar::SetPaneIcon
 
@@ -645,13 +645,13 @@ void SetPaneIcon(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-[in]指定要設定的映像 窗格的索引。
+[in]指定要設定的映像] 窗格的索引。
 
 *hIcon*<br/>
 [in]指定要設定成窗格映像的圖示的控制代碼。
 
 *bUpdate*<br/>
-[in]指定是否要立即更新 窗格的內容。
+[in]指定是否要立即更新] 窗格的內容。
 
 *hBmp*<br/>
 [in]指定要設定窗格映像為點陣圖的控制代碼。
@@ -704,7 +704,7 @@ void SetPaneProgress(
 [in]指定進度列指示器的目前值。
 
 *bUpdate*<br/>
-[in]指定是否要立即更新 窗格。
+[in]指定是否要立即更新] 窗格。
 
 ### <a name="remarks"></a>備註
 
@@ -766,7 +766,7 @@ void SetPaneTextColor(
 [in]指定的文字色彩。
 
 *bUpdate*<br/>
-[in]如果為 TRUE，請立即更新 窗格的內容。 否則，不會更新窗格內容直到窗格都無效的另一種方法。
+[in]如果為 TRUE，請立即更新] 窗格的內容。 否則，不會更新窗格內容直到窗格都無效的另一種方法。
 
 ##  <a name="setpanewidth"></a>  CMFCStatusBar::SetPaneWidth
 

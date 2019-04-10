@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: 6b7d72b048d9f44233f96a3af859315ea20e9747
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3ff74f5025d888077b51f8191f043237597dfdbe
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291635"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776969"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 
@@ -120,7 +120,7 @@ class CMFCDesktopAlertWnd : public CWnd
 
 ## <a name="example"></a>範例
 
-下列範例說明如何使用中的各種方法`CMFCDesktopAlertWnd`類別，以設定`CMFCDesktopAlertWnd`物件。 此範例示範如何設定動畫類型、 設定快顯視窗中的透明度，指定 [警示] 視窗會顯示小的標題，以及設定 [警示] 視窗會自動關閉之前經過的時間。 此範例也會示範如何建立和初始化桌面警示視窗。 此程式碼片段是一部分[桌面警示示範範例](../../visual-cpp-samples.md)。
+下列範例說明如何使用中的各種方法`CMFCDesktopAlertWnd`類別，以設定`CMFCDesktopAlertWnd`物件。 此範例示範如何設定動畫類型、 設定快顯視窗中的透明度，指定 [警示] 視窗會顯示小的標題，以及設定 [警示] 視窗會自動關閉之前經過的時間。 此範例也會示範如何建立和初始化桌面警示視窗。 此程式碼片段是一部分[桌面警示示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#1](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwnd-class_1.cpp)]
 
@@ -441,7 +441,7 @@ void SetAutoCloseTime(int nTime);
 ### <a name="parameters"></a>參數
 
 *nTime*<br/>
-[in]時間 （毫秒），經過之前會自動關閉警示 視窗。
+[in]時間 （毫秒），經過之前會自動關閉警示] 視窗。
 
 ### <a name="remarks"></a>備註
 

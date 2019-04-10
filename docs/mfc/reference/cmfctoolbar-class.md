@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: 1f92afa4f40a5a37f32e1bc86418056c8591625f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 523e89859a6726bdff1dd27975077263abe481c4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283133"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775623"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar 類別
 
@@ -525,7 +525,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ## <a name="example"></a>範例
 
-下例示範如何在 `CMFCToolBar` 類別中使用各種方法。 此範例示範如何設定標籤的文字視窗的工具列、 設定的框線、 將窗格 的樣式設定和啟用**新增或移除按鈕**會出現在結尾的工具列的按鈕。 此程式碼片段是一部分[IE 示範範例](../../visual-cpp-samples.md)。
+下例示範如何在 `CMFCToolBar` 類別中使用各種方法。 此範例示範如何設定標籤的文字視窗的工具列、 設定的框線、 將窗格 的樣式設定和啟用**新增或移除按鈕**會出現在結尾的工具列的按鈕。 此程式碼片段是一部分[IE 示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]
@@ -1031,7 +1031,7 @@ virtual BOOL CreateEx(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用`CreateEx`方法的`CMFCToolBar`類別。 此程式碼片段是一部分[IE 示範範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用`CreateEx`方法的`CMFCToolBar`類別。 此程式碼片段是一部分[IE 示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
@@ -1749,7 +1749,7 @@ virtual void GetInvalidateItemRect(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-[in]要擷取工作區 按鈕的索引。
+[in]要擷取工作區] 按鈕的索引。
 
 *lpRect*<br/>
 [out]接收用戶端區域的區域的矩形物件的指標。
@@ -1799,7 +1799,7 @@ virtual void GetItemRect(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用`GetItemRect`方法的`CMFCToolBar`類別。 此程式碼片段是一部分[IE 示範範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用`GetItemRect`方法的`CMFCToolBar`類別。 此程式碼片段是一部分[IE 示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#9](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_4.cpp)]
@@ -2737,7 +2737,7 @@ virtual BOOL LoadToolBar(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用`LoadToolBar`方法中的`CMFCToolBar`類別。 此程式碼片段是一部分[IE 示範範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用`LoadToolBar`方法中的`CMFCToolBar`類別。 此程式碼片段是一部分[IE 示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
@@ -3079,7 +3079,7 @@ int ReplaceButton(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用`ReplaceButton`方法中的`CMFCToolBar`類別。 此程式碼片段是一部分[IE 示範範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用`ReplaceButton`方法中的`CMFCToolBar`類別。 此程式碼片段是一部分[IE 示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#10](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_5.cpp)]
@@ -3231,7 +3231,7 @@ void SetButtonInfo(
 [in]按鈕的樣式。 請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)可用工具列按鈕樣式的清單。
 
 *iImage*<br/>
-[in]（也就是集合中工具列影像的索引） 按鈕之以零為起始的影像索引。
+[in]（也就是集合中工具列影像的索引）] 按鈕之以零為起始的影像索引。
 
 ### <a name="remarks"></a>備註
 

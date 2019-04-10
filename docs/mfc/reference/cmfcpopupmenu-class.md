@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: b45ac09ff87c191e55e403951fdff18cae33256d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bd6629df4274af8a4f450024f0bad6da45ae3683
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292272"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776007"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu 類別
 
@@ -278,7 +278,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
 
 ## <a name="example"></a>範例
 
-下列範例示範如何設定快顯功能表物件。 此範例示範如何設定標誌和快顯功能表的音效、 設定動畫的速度和類型、 繪製功能表陰影主框架外的快顯功能表出現時，設定的最大寬度，並設定快顯功能表的右邊的功能表對齊。 此程式碼片段是一部分[自訂頁面範例](../../visual-cpp-samples.md)。
+下列範例示範如何設定快顯功能表物件。 此範例示範如何設定標誌和快顯功能表的音效、 設定動畫的速度和類型、 繪製功能表陰影主框架外的快顯功能表出現時，設定的最大寬度，並設定快顯功能表的右邊的功能表對齊。 此程式碼片段是一部分[自訂頁面範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_CustomPages#2](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_1.cpp)]
 
@@ -451,7 +451,7 @@ virtual BOOL Create(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用`Create`方法的`CMFCPopuMenu`類別。 此程式碼片段是一部分[自訂頁面範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用`Create`方法的`CMFCPopuMenu`類別。 此程式碼片段是一部分[自訂頁面範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_CustomPages#1](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_2.cpp)]
 
@@ -1331,7 +1331,7 @@ void SetMaxWidth(int iMaxWidth);
 ### <a name="parameters"></a>參數
 
 *iMaxWidth*<br/>
-[in]快顯功能表的 像素為單位最大寬度。
+[in]快顯功能表的 [像素為單位最大寬度。
 
 ### <a name="remarks"></a>備註
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCPropertyGridFontProperty [MFC], GetColor
 - CMFCPropertyGridFontProperty [MFC], GetLogFont
 ms.assetid: 83693f33-bbd3-4fcb-a9ad-fa79fcf2ca24
-ms.openlocfilehash: 2ab4f43b2b12dff88148097e2961f235669aaa62
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b348dc2ac68ced89fb0702073f57a114befaf1cb
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295665"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769351"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty 類別
 
@@ -85,7 +85,7 @@ CMFCPropertyGridFontProperty(
 [in]一種邏輯字型結構指定的字型屬性。
 
 *dwFontDialogFlags*<br/>
-[in]會套用至字型 對話方塊會顯示當您按一下屬性值的下拉式按鈕的樣式。 預設值是 CF_EFFECTS 和 CF_SCREENFONTS 合 (OR)。 如需詳細資訊，請參閱 <<c0>  *旗標*的參數[CHOOSEFONT 結構](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta)。
+[in]會套用至字型] 對話方塊會顯示當您按一下屬性值的下拉式按鈕的樣式。 預設值是 CF_EFFECTS 和 CF_SCREENFONTS 合 (OR)。 如需詳細資訊，請參閱 <<c0>  *旗標*的參數[CHOOSEFONT 結構](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta)。
 
 *lpszDescr*<br/>
 [in][字型] 屬性的描述。 預設值是 NULL。
@@ -102,7 +102,7 @@ A`CMFCPropertyGridFontProperty`物件都代表在屬性方格字型控制項的�
 
 ### <a name="example"></a>範例
 
-下列範例示範如何建構的物件`CMFCPropertyGridFontProperty`類別。 此範例中是屬於[新的控制項範例](../../visual-cpp-samples.md)。
+下列範例示範如何建構的物件`CMFCPropertyGridFontProperty`類別。 此範例中是屬於[新的控制項範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#26](../../mfc/reference/codesnippet/cpp/cmfcpropertygridfontproperty-class_1.cpp)]
 

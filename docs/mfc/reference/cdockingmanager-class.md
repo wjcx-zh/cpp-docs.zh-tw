@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 268a46e1bdecc1ea468c152fd0ed480873c36591
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6d3bbafa15ada97f53710f0faf6a18ea8e892f6c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260383"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771306"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager 類別
 
@@ -292,7 +292,7 @@ class CDockingManager : public CObject
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用中的各種方法`CDockingManager`類別，以設定`CDockingManager`物件。 此範例示範如何顯示額外的按鈕會開啟快顯功能表上的所有停駐窗格的標題，以及如何設定物件的固定模式。 此程式碼片段是一部分[Visual Studio 示範範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用中的各種方法`CDockingManager`類別，以設定`CDockingManager`物件。 此範例示範如何顯示額外的按鈕會開啟快顯功能表上的所有停駐窗格的標題，以及如何設定物件的固定模式。 此程式碼片段是一部分[Visual Studio 示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#24](../../mfc/codesnippet/cpp/cdockingmanager-class_1.cpp)]
 
@@ -339,7 +339,7 @@ void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ### <a name="parameters"></a>參數
 
 *pBar*<br/>
-[in]指標為橫條 窗格
+[in]指標為橫條] 窗格
 
 ##  <a name="addpane"></a>  CDockingManager::AddPane
 
@@ -356,7 +356,7 @@ BOOL AddPane(
 ### <a name="parameters"></a>參數
 
 *pWnd*<br/>
-[in、 out]指定將新增至停駐的管理員 窗格。
+[in、 out]指定將新增至停駐的管理員] 窗格。
 
 *bTail*<br/>
 [in]TRUE 表示停駐的管理員; 中的窗格清單的結尾加入窗格否則為 FALSE。
@@ -504,7 +504,7 @@ void BringBarsToTop(
 ### <a name="parameters"></a>參數
 
 *dwAlignment*<br/>
-[in]就可以享受頂端的 其他視窗停駐列對齊方式。
+[in]就可以享受頂端的 [其他視窗停駐列對齊方式。
 
 *bExcludeDockedBars*<br/>
 [in]若要排除的停駐的列在最上層顯示;，則為 TRUE否則為 FALSE。
@@ -1100,7 +1100,7 @@ BOOL InsertPane(
 [in]指向控制項窗格的指標。
 
 *pTarget*<br/>
-[in]指向的目標 窗格。
+[in]指向的目標] 窗格。
 
 *bAfter*<br/>
 [in]插入窗格的 [目標] 窗格中; 位置之後，則為 TRUEFALSE 否則。
@@ -1507,7 +1507,7 @@ void RemovePaneFromDockManager(
 [in]如果為 TRUE，請立即調整停駐的配置。
 
 *bAutoHide*<br/>
-[in]如果為 TRUE，窗格會從 自動隱藏列清單中移除。 如果為 FALSE，窗格會移除從清單中的 [一般] 窗格中。
+[in]如果為 TRUE，窗格會從 [自動隱藏列清單中移除。 如果為 FALSE，窗格會移除從清單中的 [一般] 窗格中。
 
 *pBarReplacement*<br/>
 [in]指標，會取代 [移除] 窗格的窗格。
@@ -1675,7 +1675,7 @@ void SetPrintPreviewMode(
 ### <a name="parameters"></a>參數
 
 *bPreview*<br/>
-[in]如果已設定 預覽列印模式，則為 TRUEFALSE 否則。
+[in]如果已設定 [預覽列印模式，則為 TRUEFALSE 否則。
 
 *pState*<br/>
 [in]預覽狀態的指標。 不使用這個參數。

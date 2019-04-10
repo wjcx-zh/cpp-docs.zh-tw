@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: 438fc753e91092502c84acfc491ec64c15133023
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1ba7057405da2ebd7fd1bf699a69f97a650fa47c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305051"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773199"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel 類別
 
@@ -207,7 +207,7 @@ class CMFCRibbonPanel : public CObject
 
 ## <a name="example"></a>範例
 
-下列範例示範如何設定`CMFCRibbonPanel`使用中的各種方法的物件`CMFCRibbonPanel`類別。 此範例示範如何設定顯示功能區面板的鍵盤快速鍵、 垂直對齊面板中的元素，依資料行，並啟用資料行對齊方式。 此程式碼片段是一部分[MS Office 2007 示範範例](../../visual-cpp-samples.md)。
+下列範例示範如何設定`CMFCRibbonPanel`使用中的各種方法的物件`CMFCRibbonPanel`類別。 此範例示範如何設定顯示功能區面板的鍵盤快速鍵、 垂直對齊面板中的元素，依資料行，並啟用資料行對齊方式。 此程式碼片段是一部分[MS Office 2007 示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#10](../../mfc/reference/codesnippet/cpp/cmfcribbonpanel-class_1.cpp)]
 
@@ -272,7 +272,7 @@ UINT uiDisabledResID = 0);
 [in]指定工具列的作用中影像的資源識別碼。
 
 *uiDisabledResID*<br/>
-[in]指定工具列的 已停用的映像的資源識別碼。
+[in]指定工具列的 [已停用的映像的資源識別碼。
 
 ### <a name="return-value"></a>傳回值
 

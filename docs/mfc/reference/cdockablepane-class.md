@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: c78634c93bda94940b2834a61d276f63522e4aeb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a9d7c4ea941884435c9ecfac54a1d42649c6dbd5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271902"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769689"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -290,7 +290,7 @@ class CDockablePane : public CPane
 
 ## <a name="example"></a>範例
 
-下列範例示範如何設定`CDockablePane`使用中的各種方法的物件`CDockablePane`類別。 此範例說明如何啟用自動隱藏可停駐窗格的所有功能，都啟用標題 」 或 「 移駐夾，都啟用自動隱藏模式、 顯示窗格中，並以動畫顯示自動隱藏模式中的窗格。 此程式碼片段是一部分[Visual Studio 示範範例](../../visual-cpp-samples.md)。
+下列範例示範如何設定`CDockablePane`使用中的各種方法的物件`CDockablePane`類別。 此範例說明如何啟用自動隱藏可停駐窗格的所有功能，都啟用標題 」 或 「 移駐夾，都啟用自動隱藏模式、 顯示窗格中，並以動畫顯示自動隱藏模式中的窗格。 此程式碼片段是一部分[Visual Studio 示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#27](../../mfc/codesnippet/cpp/cdockablepane-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#28](../../mfc/codesnippet/cpp/cdockablepane-class_2.cpp)]
@@ -596,7 +596,7 @@ virtual BOOL Create(
 [in、 out]指定父視窗。
 
 *rect*<br/>
-[in]在用戶端座標中指定的大小和位置 視窗中， *pParentWnd*。
+[in]在用戶端座標中指定的大小和位置] 視窗中， *pParentWnd*。
 
 *bHasGripper*<br/>
 [in]若要建立窗格使用的標題;，則為 TRUE否則為 FALSE。
@@ -701,7 +701,7 @@ virtual BOOL CreateEx(
 [in、 out]指定父視窗。
 
 *rect*<br/>
-[in]在用戶端座標中指定的大小和位置 視窗中， *pParentWnd*。
+[in]在用戶端座標中指定的大小和位置] 視窗中， *pParentWnd*。
 
 *bHasGripper*<br/>
 [in]若要建立窗格使用的標題;，則為 TRUE否則為 FALSE。

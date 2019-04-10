@@ -6,12 +6,12 @@ helpviewer_keywords:
 - linker [C++], errors and warnings
 - errors [C++], linker
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
-ms.openlocfilehash: 7fc68641feae286c85d6f8ebec00387cdca1a43c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6fe4a37cc3665ac2b7886589018339b77babab2d
+ms.sourcegitcommit: 0ad3f4517e64900a2702dd3d366586f9e2bce2c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521173"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "59477414"
 ---
 # <a name="linker-tools-errors-and-warnings"></a>連結器工具錯誤和警告
 
@@ -258,3 +258,5 @@ ms.locfileid: "50521173"
 [連結器工具警告 LNK4253](../../error-messages/tool-errors/linker-tools-warning-lnk4253.md)
 
 [連結器工具警告 LNK4254](../../error-messages/tool-errors/linker-tools-warning-lnk4254.md)
+
+[連結器工具警告 LNK4286](../../error-messages/tool-errors/linker-tools-warning-lnk4286.md)

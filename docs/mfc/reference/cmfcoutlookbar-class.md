@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-ms.openlocfilehash: be11bcd4cdbcd8448cc54f688d7dab9b61f49a57
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fc1281db0271393ec0538e26c2a2d2af09c99f7a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304076"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58775253"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar 類別
 
@@ -89,7 +89,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ## <a name="remarks"></a>備註
 
-如需 Outlook 功能區的範例，請參閱[OutlookDemo 範例：MFC OutlookDemo 應用程式](../../visual-cpp-samples.md)。
+如需 Outlook 功能區的範例，請參閱[OutlookDemo 範例：MFC OutlookDemo 應用程式](../../overview/visual-cpp-samples.md)。
 
 ## <a name="implementing-the-outlook-bar"></a>實作 Outlook 功能區
 
@@ -294,7 +294,7 @@ virtual BOOL Create(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用`Create`方法的`CMFCOutlookBar`類別。 此程式碼片段是一部分[Outlook 多重檢視範例](../../visual-cpp-samples.md)。
+下列範例示範如何使用`Create`方法的`CMFCOutlookBar`類別。 此程式碼片段是一部分[Outlook 多重檢視範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_OutlookMultiViews#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_1.h)]
 [!code-cpp[NVC_MFC_OutlookMultiViews#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_2.cpp)]
@@ -374,7 +374,7 @@ virtual BOOL FloatTab(
 [in]Float 窗格指標。
 
 *nTabID*<br/>
-[in]Float 索引標籤的以零為起始的索引。
+[in]Float] 索引標籤的以零為起始的索引。
 
 *dockMethod*<br/>
 [in]指定要用來讓窗格浮動方法。  如需詳細資訊，請參閱 < [cbasetabbedpane:: Floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab)。
@@ -511,7 +511,7 @@ BOOL RemoveCustomPage(
 
 ### <a name="parameters"></a>參數
 
-*uiPage*<br/>
+*之 uiPage*<br/>
 [in]父 Outlook 視窗中頁面的以零為起始的索引。
 
 *pTargetWnd*<br/>
@@ -578,5 +578,5 @@ void SetMode2003(BOOL bMode2003=TRUE);
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [類別](../../mfc/reference/mfc-classes.md)<br/>
 [CBaseTabbedPane 類別](../../mfc/reference/cbasetabbedpane-class.md)<br/>
-[CMFCOutlookBarTabCtrl 類別](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
+[CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
 [CMFCOutlookBarPane 類別](../../mfc/reference/cmfcoutlookbarpane-class.md)

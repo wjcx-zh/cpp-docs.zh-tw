@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 81d227c241adf0ce72ccd4a554134d7d858b4a6d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b24afd943f2168657c6b4437fed65b0a45689b52
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275424"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778555"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx 類別
 
@@ -270,7 +270,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 ## <a name="example"></a>範例
 
-下列範例衍生的類別`CMDIFrameWndEx`。 此程式碼片段來自[DrawClient 範例：MFC 功能區為基礎的 OLE 物件的繪圖應用程式](../../visual-cpp-samples.md)。
+下列範例衍生的類別`CMDIFrameWndEx`。 此程式碼片段來自[DrawClient 範例：MFC 功能區為基礎的 OLE 物件的繪圖應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_DrawClient#1](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_1.h)]
 
@@ -449,7 +449,7 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何`CreateDocumentWindow`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../visual-cpp-samples.md)。
+下列範例示範如何`CreateDocumentWindow`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../overview/visual-cpp-samples.md)。
 
 在此範例中，`g_strStartViewName`可能是 「 虛擬文件 」 （例如，「 起始頁 」），實際上不是從磁碟檔案載入的名稱。 因此我們需要特殊處理，來處理這種情況。
 
@@ -505,7 +505,7 @@ void DockPane(
 
 ### <a name="example"></a>範例
 
-下列範例示範 `DockPane` 方法的用法。 此程式碼片段來自[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../visual-cpp-samples.md)。
+下列範例示範 `DockPane` 方法的用法。 此程式碼片段來自[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#4](../../mfc/codesnippet/cpp/cmdiframewndex-class_3.cpp)]
 
@@ -525,7 +525,7 @@ BOOL DockPaneLeftOf(
 [in]若要停駐窗格的指標。
 
 *pLeftOf*<br/>
-[in][窗格]，做為 停駐位置的指標。 。
+[in][窗格]，做為 [停駐位置的指標。 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -537,7 +537,7 @@ BOOL DockPaneLeftOf(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何`DockPaneLeftOf`方法會在[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../visual-cpp-samples.md)。
+下列範例示範如何`DockPaneLeftOf`方法會在[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#5](../../mfc/codesnippet/cpp/cmdiframewndex-class_4.cpp)]
 
@@ -568,7 +568,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 ### <a name="example"></a>範例
 
-下列範例示範如何`EnableAutoHidePanes`方法會在[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../visual-cpp-samples.md)。
+下列範例示範如何`EnableAutoHidePanes`方法會在[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#6](../../mfc/codesnippet/cpp/cmdiframewndex-class_5.cpp)]
 
@@ -595,7 +595,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ### <a name="example"></a>範例
 
-下列範例示範如何`EnableDocking`方法會在[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../visual-cpp-samples.md)。
+下列範例示範如何`EnableDocking`方法會在[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#7](../../mfc/codesnippet/cpp/cmdiframewndex-class_6.cpp)]
 
@@ -686,7 +686,7 @@ void EnableMDITabbedGroups(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何`EnableMDITabbedGroups`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../visual-cpp-samples.md)。
+下列範例示範如何`EnableMDITabbedGroups`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#8](../../mfc/codesnippet/cpp/cmdiframewndex-class_7.cpp)]
 
@@ -719,7 +719,7 @@ void EnableMDITabs(
 *bTabCloseButton*<br/>
 指定是否要顯示索引標籤 [關閉] 按鈕。
 
-*style*<br/>
+*樣式*<br/>
 指定的索引標籤的樣式。 請使用一般索引標籤或 STYLE_3D_ONENOTE STYLE_3D_SCROLLED Microsoft OneNote 索引標籤。
 
 *bTabCustomTooltips*<br/>
@@ -738,7 +738,7 @@ void EnableMDITabs(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何`EnableMDITabs`用於[MDITabsDemo 範例：MFC 索引標籤式 MDI 應用程式](../../visual-cpp-samples.md)。
+下列範例示範如何`EnableMDITabs`用於[MDITabsDemo 範例：MFC 索引標籤式 MDI 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#3](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_8.cpp)]
 
@@ -753,7 +753,7 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ### <a name="parameters"></a>參數
 
 *bLastActiveTab*<br/>
-[in]如果為 TRUE，啟用 啟用的最後一個使用中的索引標籤。如果為 FALSE，停用啟用的最後一個使用中的索引標籤。
+[in]如果為 TRUE，啟用 [啟用的最後一個使用中的索引標籤。如果為 FALSE，停用啟用的最後一個使用中的索引標籤。
 
 ### <a name="remarks"></a>備註
 
@@ -807,7 +807,7 @@ void EnablePaneMenu(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何`EnablePaneMenu`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../visual-cpp-samples.md)。
+下列範例示範如何`EnablePaneMenu`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#9](../../mfc/codesnippet/cpp/cmdiframewndex-class_9.cpp)]
 
@@ -849,7 +849,7 @@ void EnableWindowsDialog(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何`EnableWindowsDialog`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../visual-cpp-samples.md)。
+下列範例示範如何`EnableWindowsDialog`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#10](../../mfc/codesnippet/cpp/cmdiframewndex-class_10.cpp)]
 
@@ -1224,7 +1224,7 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 
 ### <a name="example"></a>範例
 
-下列範例示範如何`LoadMDIState`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../visual-cpp-samples.md)。
+下列範例示範如何`LoadMDIState`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#11](../../mfc/codesnippet/cpp/cmdiframewndex-class_11.cpp)]
 
@@ -1260,7 +1260,7 @@ void MDITabNewGroup(BOOL bVert=TRUE);
 
 ### <a name="example"></a>範例
 
-下列範例示範如何`MDITabNewGroup`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../visual-cpp-samples.md)。
+下列範例示範如何`MDITabNewGroup`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#12](../../mfc/codesnippet/cpp/cmdiframewndex-class_12.cpp)]
 
@@ -1280,7 +1280,7 @@ BOOL m_bCanCovertControlBarToMDIChild;
 
 ### <a name="example"></a>範例
 
-下列範例示範如何`m_bCanCovertControlBarToMDIChild`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../visual-cpp-samples.md)。
+下列範例示範如何`m_bCanCovertControlBarToMDIChild`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]
 
@@ -1542,7 +1542,7 @@ virtual void OnSetPreviewMode(
 ### <a name="parameters"></a>參數
 
 *bPreview*<br/>
-[in]如果為 TRUE，設定 預覽列印模式。 如果為 FALSE，則取消預覽模式。
+[in]如果為 TRUE，設定 [預覽列印模式。 如果為 FALSE，則取消預覽模式。
 
 *pState*<br/>
 [in]指標`CPrintPreviewState`結構。
@@ -1564,10 +1564,10 @@ virtual BOOL OnShowCustomizePane(
 ### <a name="parameters"></a>參數
 
 *pMenuPane*<br/>
-[in]快速自訂 窗格的指標。
+[in]快速自訂] 窗格的指標。
 
 *uiToolbarID*<br/>
-[in]若要自訂 控制項工具列的識別碼。
+[in]若要自訂 [控制項工具列的識別碼。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1609,7 +1609,7 @@ virtual BOOL OnShowMDITabContextMenu(
 - BCGP_MDI_CAN_BE_DOCKED-切換至 停駐狀態 （如索引標籤式文件相關） 的索引標籤式文件。
 
 *bTabDrop*<br/>
-[in]顯示結果 索引標籤拖曳到另一個索引標籤式群組功能表則為 TRUE。 如果為 false，則為目前作用中 索引標籤上的快顯功能表中顯示功能表。
+[in]顯示結果] 索引標籤拖曳到另一個索引標籤式群組功能表則為 TRUE。 如果為 false，則為目前作用中 索引標籤上的快顯功能表中顯示功能表。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1621,7 +1621,7 @@ virtual BOOL OnShowMDITabContextMenu(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何`OnShowMDITabContextMenu`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../visual-cpp-samples.md)。
+下列範例示範如何`OnShowMDITabContextMenu`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#14](../../mfc/codesnippet/cpp/cmdiframewndex-class_13.cpp)]
 
@@ -1810,7 +1810,7 @@ void RemovePaneFromDockManager(
 [in]立即調整停駐的配置，則為 TRUE。 調整 如果為 FALSE，就會發生只重繪事件發生時的其他原因 （使用者調整視窗大小時，拖曳主要畫面格，依此類推）。
 
 *bAutoHide*<br/>
-[in]若要移除的自動隱藏窗格清單 窗格，則為 TRUE。 如果為 false，則移除規則 窗格的清單中的窗格。
+[in]若要移除的自動隱藏窗格清單] 窗格，則為 TRUE。 如果為 false，則移除規則 窗格的清單中的窗格。
 
 *pBarReplacement*<br/>
 [in]指標，會取代 [移除] 窗格的窗格。
@@ -1856,7 +1856,7 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 
 ### <a name="example"></a>範例
 
-下列範例示範如何`SaveMDIState`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../visual-cpp-samples.md)。
+下列範例示範如何`SaveMDIState`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#15](../../mfc/codesnippet/cpp/cmdiframewndex-class_14.cpp)]
 
@@ -1888,7 +1888,7 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>參數
 
-*menu*<br/>
+*功能表*<br/>
 [in]參考[CMenu 類別](../../mfc/reference/cmenu-class.md)要修改的物件。
 
 *uiViewUserToolbarCmdFirst*<br/>
@@ -1939,7 +1939,7 @@ void ShowPane(
 
 ### <a name="example"></a>範例
 
-下列範例示範如何`ShowPane`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../visual-cpp-samples.md)。
+下列範例示範如何`ShowPane`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#16](../../mfc/codesnippet/cpp/cmdiframewndex-class_15.cpp)]
 
@@ -1953,7 +1953,7 @@ void ShowWindowsDialog();
 
 ### <a name="example"></a>範例
 
-下列範例示範如何`ShowWindowsDialog`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../visual-cpp-samples.md)。
+下列範例示範如何`ShowWindowsDialog`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmdiframewndex-class_16.cpp)]
 
@@ -1980,7 +1980,7 @@ virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
 
 ### <a name="example"></a>範例
 
-下列範例示範如何`TabbedDocumentToControlBar`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../visual-cpp-samples.md)。
+下列範例示範如何`TabbedDocumentToControlBar`用於[VisualStudioDemo 範例：MFC Visual Studio 應用程式](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#19](../../mfc/codesnippet/cpp/cmdiframewndex-class_17.cpp)]
 

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - VMXON instruction
 - __vmx_on intrinsic
 ms.assetid: 16804991-6a75-4adf-8ec2-bc95acfa4801
-ms.openlocfilehash: defecf06ffb738b824f3f9b3484a89a4db634ab3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de903eeeb29e3c194a36ccb4cb038ba89b8ea82f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608854"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028100"
 ---
 # <a name="vmxon"></a>__vmx_on
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 啟動處理器中的虛擬機器擴充功能 (VMX) 作業。
 
@@ -31,7 +31,7 @@ unsigned char __vmx_on(
 #### <a name="parameters"></a>參數
 
 *VmsSupportPhysicalAddress*<br/>
-[in]指標，指向 虛擬機器控制結構 (VMCS) 的 64 位元實體位址。
+[in]指標，指向 [虛擬機器控制結構 (VMCS) 的 64 位元實體位址。
 
 ## <a name="return-value"></a>傳回值
 
@@ -53,7 +53,7 @@ unsigned char __vmx_on(
 
 **標頭檔** \<intrin.h >
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>另請參閱
 

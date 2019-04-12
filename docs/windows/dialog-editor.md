@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 7bc5d5763881b862487fa97e02da02d98bcd017d
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: dc5a823951e07af96efceec52d2aa23552c2d002
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562944"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029482"
 ---
 # <a name="dialog-editor-c"></a>對話方塊編輯器 （c + +）
 
@@ -73,7 +73,7 @@ ms.locfileid: "57562944"
 
 在 MFC 應用程式，您可以按兩下對話方塊控制項跳至其處理常式程式碼，或快速地建立處理常式函式 stub。
 
-選取控制項，然後選取 [**控制項事件**] 按鈕或**訊息**按鈕[屬性 視窗](/visualstudio/ide/reference/properties-window)若要檢視 Windows 訊息和事件的完整清單適用於選取的項目。 若要建立或編輯處理常式函式清單中選擇。
+選取控制項，然後選取 [**控制項事件** 按鈕或**訊息**按鈕[屬性 視窗](/visualstudio/ide/reference/properties-window)若要檢視 Windows 訊息和事件的完整清單適用於選取的項目。 若要建立或編輯處理常式函式清單中選擇。
 
 - 若要跳到程式碼，從**對話方塊編輯器**，跳至其最近已實作的訊息處理函式的宣告 對話方塊中的控制項上按兩下。
 
@@ -127,7 +127,7 @@ Win32
 ## <a name="see-also"></a>另請參閱
 
 [資源編輯器](../windows/resource-editors.md)<br/>
-[如何：建立對話方塊](../windows/creating-a-new-dialog-box.md)<br/>
+[HOW TO：建立對話方塊](../windows/creating-a-new-dialog-box.md)<br/>
 [對話方塊控制項](../windows/controls-in-dialog-boxes.md)<br/>
 <!--
 [Controls](../mfc/controls-mfc.md)<br/>

@@ -79,10 +79,10 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
 ms.openlocfilehash: 818ce55e44d91520e568308a1a1e8a1fa0c8658d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780388"
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery 類別
@@ -691,7 +691,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 [in]功能區圖庫視窗的父視窗。
 
-*data*<br/>
+*資料*<br/>
 [out]A`CAccessibilityData`從功能區圖庫接收協助工具資料的物件。
 
 ### <a name="return-value"></a>傳回值

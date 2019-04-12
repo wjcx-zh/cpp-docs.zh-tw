@@ -113,10 +113,10 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
 ms.openlocfilehash: e12cf9f65e6fd6dd7f68edc4a94103baa5a8df62
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781753"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 類別
@@ -941,7 +941,7 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
 *nHitTest*<br/>
 指定點擊測試區域程式碼。 點擊的測試是測試，決定游標的位置。
 
-*message*<br/>
+*訊息*<br/>
 指定滑鼠訊息數目。
 
 ### <a name="remarks"></a>備註

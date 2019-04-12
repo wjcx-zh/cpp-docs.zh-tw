@@ -1,12 +1,12 @@
 ---
 title: ARM64 例外狀況處理
 ms.date: 11/19/2018
-ms.openlocfilehash: ec81374f9a20cf5d23edda7d925705b6a4d5e2e6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.openlocfilehash: 55476119499a3216f6801877dba692b2a0d1d9ee
+ms.sourcegitcommit: 88631cecbe3e3fa752eae3ad05b7f9d9f9437b4d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59031723"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59534119"
 ---
 # <a name="arm64-exception-handling"></a>ARM64 例外狀況處理
 
@@ -44,7 +44,7 @@ Windows 上 ARM64 會使用相同的結構化例外狀況，以處理非同步�
 
 1. 終沒有條件式程式碼。
 
-1. 專用的框架指標暫存器：如果預存程序儲存在初構中，註冊其他暫存器 (r29) 維持不變在函式，如此原始 sp 可能隨時復原。
+1. 專用的框架指標暫存器：如果預存程序儲存在初構中，註冊其他暫存器 (x29) 維持不變在函式，如此原始 sp 可能隨時復原。
 
 1. 除非 sp 儲存在其他暫存器時，堆疊指標的所有操作都嚴格都發生在初構和終解。
 
@@ -54,90 +54,90 @@ Windows 上 ARM64 會使用相同的結構化例外狀況，以處理非同步�
 
 ![堆疊框架配置](media/arm64-exception-handling-stack-frame.png "堆疊框架配置")
 
-框架鏈結函式，fp 和 lr 組可以儲存在變數根據最佳化考量的區域中的任何位置。 目標是要最大化單一框架指標 (r29) 或堆疊指標 (sp) 為基礎的單一指令可以觸達的區域變數的數目。 不過針對`alloca`函式一定會鏈結和 r29 必須指向堆疊的底部。 若要允許更好的暫存器配對-位址-模式涵蓋範圍，靜態暫存器儲存區域都位於區域堆疊的頂端。 以下是範例，說明幾個最有效率的初構序列。 為了清楚起見，較佳的快取位置將被呼叫端儲存的暫存器儲存在所有的標準初構中的順序為"成長設定 」 的順序。 `#framesz` 下面代表 （不含 alloca 區域） 的整個堆疊的大小。 `#localsz` 和`#outsz`指出本機區域大小 (包括儲存區域\<r29，lr > 組) 和分別傳出參數的大小。
+框架鏈結函式，fp 和 lr 組可以儲存在變數根據最佳化考量的區域中的任何位置。 目標是要最大化單一框架指標 (x29) 或堆疊指標 (sp) 為基礎的單一指令可以觸達的區域變數的數目。 不過針對`alloca`函式一定會鏈結和 x29 必須指向堆疊的底部。 若要允許更好的暫存器配對-位址-模式涵蓋範圍，靜態暫存器儲存區域都位於區域堆疊的頂端。 以下是範例，說明幾個最有效率的初構序列。 為了清楚起見，較佳的快取位置將被呼叫端儲存的暫存器儲存在所有的標準初構中的順序為"成長設定 」 的順序。 `#framesz` 下面代表 （不含 alloca 區域） 的整個堆疊的大小。 `#localsz` 和`#outsz`指出本機區域大小 (包括儲存區域\<x29，lr > 組) 和分別傳出參數的大小。
 
 1. 鏈結，#localsz \<= 512
 
     ```asm
-        stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
-        stp    d8,d9,[sp,16]            // save in FP regs (optional)
-        stp    r0,r1,[sp,32]            // home params (optional)
-        stp    r2,r3,[sp, 48]
-        stp    r4,r5,[sp,64]
-        stp    r6,r7,[sp,72]
-        stp    r29, lr, [sp, -#localsz]!    // save <r29,lr> at bottom of local area
-        mov    r29,sp                   // r29 points to bottom of local
-        sub    sp, #outsz               // (optional for #outsz != 0)
+        stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
+        stp    d8,d9,[sp,#16]            // save in FP regs (optional)
+        stp    x0,x1,[sp,#32]            // home params (optional)
+        stp    x2,x3,[sp,#48]
+        stp    x4,x5,[sp,#64]
+        stp    x6,x7,[sp,#72]
+        stp    x29,lr,[sp,#-localsz]!   // save <x29,lr> at bottom of local area
+        mov    x29,sp                   // x29 points to bottom of local
+        sub    sp,sp,#outsz             // (optional for #outsz != 0)
     ```
 
 1. 鏈結，#localsz > 512
 
     ```asm
-        stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
-        stp    d8,d9,[sp,16]            // save in FP regs (optional)
-        stp    r0,r1,[sp,32]            // home params (optional)
-        stp    r2,r3,[sp, 48]
-        stp    r4,r5,[sp,64]
-        stp    r6,r7,[sp,72]
-        sub    sp,#localsz+#outsz       // allocate remaining frame
-        stp    r29, lr, [sp, #outsz]    // save <r29,lr> at bottom of local area
-        add    r29,sp, #outsz           // setup r29 points to bottom of local area
+        stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
+        stp    d8,d9,[sp,#16]            // save in FP regs (optional)
+        stp    x0,x1,[sp,#32]            // home params (optional)
+        stp    x2,x3,[sp,#48]
+        stp    x4,x5,[sp,#64]
+        stp    x6,x7,[sp,#72]
+        sub    sp,sp,#(localsz+outsz)   // allocate remaining frame
+        stp    x29,lr,[sp,#outsz]       // save <x29,lr> at bottom of local area
+        add    x29,sp,#outsz            // setup x29 points to bottom of local area
     ```
 
 1. 會見到，分葉函式 (lr 未儲存)
 
     ```asm
-        stp    r19,r20,[sp, -72]!       // pre-indexed, save in 1st FP/INT reg-pair
-        stp    r21,r22,[sp, 16]
-        str    r23 [sp,32]
-        stp    d8,d9,[sp,40]            // save FP regs (optional)
-        stp    d10,d11,[sp,56]
-        sub    sp,#framesz-72           // allocate the remaining local area
+        stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
+        stp    x21,x22,[sp,#16]
+        str    x23,[sp,#32]
+        stp    d8,d9,[sp,#40]           // save FP regs (optional)
+        stp    d10,d11,[sp,#56]
+        sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   根據 TECHED-SERVICES 存取所有的區域變數 \<r29，lr > 指向上一個畫面格。 畫面格大小\<= 512，"sp，sub...」 如果移到堆疊底部的 regs 儲存區域，則可以繼續最佳化。 缺點，是範圍的不一致，其他版面配置，並儲存的 regs 掌握組 regs 和前置和後置索引位移的定址模式。
+   根據 TECHED-SERVICES 存取所有的區域變數 \<x29，lr > 指向上一個畫面格。 畫面格大小\<= 512，"sp，sub...」 如果移到堆疊底部的 regs 儲存區域，則可以繼續最佳化。 缺點，是範圍的不一致，其他版面配置，並儲存的 regs 掌握組 regs 和前置和後置索引位移的定址模式。
 
 1. 會見到非分葉函式 （lr 儲存區內儲存的 Int）
 
     ```asm
-        stp    r19,r20,[sp,-80]!        // pre-indexed, save in 1st FP/INT reg-pair
-        stp    r21,r22,[sp,16]          // ...
-        stp    r23, lr,[sp, 32]         // save last Int reg and lr
-        stp    d8,d9,[sp, 48]           // save FP reg-pair (optional)
-        stp    d10,d11,[sp,64]          // ...
-        sub    sp,#framesz-80           // allocate the remaining local area
+        stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
+        stp    x21,x22,[sp,#16]         // ...
+        stp    x23,lr,[sp,#32]          // save last Int reg and lr
+        stp    d8,d9,[sp,#48]           // save FP reg-pair (optional)
+        stp    d10,d11,[sp,#64]         // ...
+        sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
    或者，您也可以使用偶數儲存整數暫存器，
 
     ```asm
-        stp    r19,r20,[sp,-72]!        // pre-indexed, save in 1st FP/INT reg-pair
-        stp    r21,r22,[sp,16]          // ...
-        str    lr,[sp, 32]              // save lr
-        stp    d8,d9,[sp, 40]           // save FP reg-pair (optional)
-        stp    d10,d11,[sp,56]          // ...
-        sub    sp,#framesz-72           // allocate the remaining local area
+        stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
+        stp    x21,x22,[sp,#16]         // ...
+        str    lr,[sp,#32]              // save lr
+        stp    d8,d9,[sp,#40]           // save FP reg-pair (optional)
+        stp    d10,d11,[sp,#56]         // ...
+        sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   只有 r19 儲存：
+   只有 x19 儲存：
 
     ```asm
-        sub    sp, sp, #16              // reg save area allocation*
-        stp    r19,lr,[sp,0]            // save r19, lr
-        sub    sp,#framesz-16           // allocate the remaining local area
+        sub    sp,sp,#16                // reg save area allocation*
+        stp    x19,lr,[sp]              // save x19, lr
+        sub    sp,sp,#(framesz-16)      // allocate the remaining local area
     ```
 
    \* 儲存區配置 reg 不會摺成 spanning tree protocol，因為預先索引的 reg lr spanning tree protocol 不可以有回溯程式碼。
 
-   根據 TECHED-SERVICES 存取所有的區域變數 \<r29 > 指向上一個畫面格。
+   根據 TECHED-SERVICES 存取所有的區域變數 \<x29 > 指向上一個畫面格。
 
 1. 鏈結，#framesz \<= 512，#outsz = 0
 
     ```asm
-        stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
-        mov    r29,sp                       // r29 points to bottom of stack
-        stp    r19,r20,[sp, #framesz -32]   // save INT pair
-        stp    d8,d9,[sp, #framesz -16]     // save FP pair
+        stp    x29,lr,[sp,#-framesz]!       // pre-indexed, save <x29,lr>
+        mov    x29,sp                       // x29 points to bottom of stack
+        stp    x19,x20,[sp,#(framesz-32)]   // save INT pair
+        stp    d8,d9,[sp,#(framesz-16)]     // save FP pair
     ```
 
    比較上述 #1 初構，優點，是指示儲存所有暫存器已準備好之後只有一個堆疊配置指示執行。 因此，在預存程序，可防止指令層級平行處理原則沒有任何反的相依性。
@@ -145,38 +145,38 @@ Windows 上 ARM64 會使用相同的結構化例外狀況，以處理非同步�
 1. 鏈結，畫面格大小 > 512 （選擇性沒有 alloca 函式）
 
     ```asm
-        stp    r29, lr, [sp, -80]!          // pre-indexed, save <r29,lr>
-        stp    r19,r20,[sp,16]              // save in INT regs
-        stp    r21,r22,[sp,32]              // ...
-        stp    d8,d9,[sp,48]                // save in FP regs
-        stp    d10,d11,[sp,64]
-        mov    r29,sp                       // r29 points to top of local area
-        sub    sp,#framesz-80               // allocate the remaining local area
+        stp    x29,lr,[sp,#-80]!            // pre-indexed, save <x29,lr>
+        stp    x19,x20,[sp,#16]             // save in INT regs
+        stp    x21,x22,[sp,#32]             // ...
+        stp    d8,d9,[sp,#48]               // save in FP regs
+        stp    d10,d11,[sp,#64]
+        mov    x29,sp                       // x29 points to top of local area
+        sub    sp,sp,#(framesz-80)          // allocate the remaining local area
     ```
 
-   基於最佳化目的，就可以將放 r29 提供較佳的涵蓋範圍 」 reg 組 」，以及前/後-indexed 位移定址模式的區域中的任何位置。 框架指標下方的 [區域變數] 可以根據 TECHED-SERVICES 存取
+   基於最佳化目的，就可以將放 x29 提供較佳的涵蓋範圍 」 reg 組 」，以及前/後-indexed 位移定址模式的區域中的任何位置。 框架指標下方的 [區域變數] 可以根據 TECHED-SERVICES 存取
 
 1. 鏈結，畫面格大小 > 4 K，不論 alloca()，
 
     ```asm
-        stp    r29, lr, [sp, -80]!          // pre-indexed, save <r29,lr>
-        stp    r19,r20,[sp,16]              // save in INT regs
-        stp    r21,r22,[sp,32]              // ...
-        stp    d8,d9,[sp,48]                // save in FP regs
-        stp    d10,d11,[sp,64]
-        mov    r29,sp                       // r29 points to top of local area
-        mov    r8, #framesz/16
-        bl     chkstk
-        sub    sp, r8*16                    // allocate remaining frame
+        stp    x29,lr,[sp,#-80]!            // pre-indexed, save <x29,lr>
+        stp    x19,x20,[sp,#16]             // save in INT regs
+        stp    x21,x22,[sp,#32]             // ...
+        stp    d8,d9,[sp,#48]               // save in FP regs
+        stp    d10,d11,[sp,#64]
+        mov    x29,sp                       // x29 points to top of local area
+        mov    x15,#(framesz/16)
+        bl     __chkstk
+        sub    sp,sp,x15,lsl#4              // allocate remaining frame
                                             // end of prolog
         ...
-        sp = alloca                         // more alloca() in body
+        sub    sp,sp,#alloca                // more alloca() in body
         ...
                                             // beginning of epilog
-        mov    sp,r29                       // sp points to top of local area
-        ldp    d10,d11, [sp,64],
+        mov    sp,x29                       // sp points to top of local area
+        ldp    d10,d11,[sp,#64]
         ...
-        ldp    r29, lr, [sp], -80           // post-indexed, reload <r29,lr>
+        ldp    x29,lr,[sp],#80              // post-indexed, reload <x29,lr>
     ```
 
 ## <a name="arm64-exception-handling-information"></a>ARM64 例外狀況處理資訊
@@ -235,7 +235,7 @@ Windows 上 ARM64 會使用相同的結構化例外狀況，以處理非同步�
 
    c.  **終解開始的索引**為 10 位元 (比 2 更多的位元**擴充程式碼字組**) 欄位，指出第一個位元組索引回溯描述此終解程式碼。
 
-1. 之後的終解範圍清單包含回溯程式碼，在稍後的章節將詳細說明的位元組陣列。 此陣列在最近完整字組界面的結尾處填補。 位元組以 Little-Endian 順序儲存，因此可在 Little-Endian 模式下直接擷取。
+1. 之後的終解範圍清單包含回溯程式碼，在稍後的章節將詳細說明的位元組陣列。 此陣列在最近完整字組界面的結尾處填補。 回溯程式碼會寫入至這個陣列中開始的一個最接近的函式，採用函式的邊緣的主體。 每個回溯程式碼的位元組會儲存在位元組由大到小順序讓它們可以提取，直接從最大顯著性位元組開始，其可識別作業和其餘程式碼的長度。
 
 1. 最後，在回溯程式碼位元組中，如果**X**標頭中的位元已設為 1，出現例外狀況處理常式資訊。 這包含單一**例外狀況處理常式 RVA**提供位址的例外狀況處理常式本身，後面緊接跟著的可變長度資料量所需的例外狀況處理常式。
 
@@ -286,22 +286,22 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 |回溯程式碼|位元和轉譯|
 |-|-|
 |`alloc_s`|000xxxxx： 配置大小的小型堆疊\<512 (2 ^5 * 16)。|
-|`save_r19r20_x`|    001zzzzz： 儲存\<r19，r20 > 對，在 [sp #Z * 8] ！，索引預先位移 > =-248 |
-|`save_fplr`|        01zzzzzz： 儲存\<r29，lr > 配對在 [sp + #Z * 8]，位移\<= 504。 |
-|`save_fplr_x`|        10zzzzzz： 儲存\<r29，lr > 配對在 [sp-（#Z + 1） * 8] ！，索引預先位移 > =-512 |
+|`save_r19r20_x`|    001zzzzz： 儲存\<x19、 x20 > 組，在 [sp #Z * 8] ！，索引預先位移 > =-248 |
+|`save_fplr`|        01zzzzzz： 儲存\<x29，lr > 配對在 [sp + #Z * 8]，位移\<= 504。 |
+|`save_fplr_x`|        10zzzzzz： 儲存\<x29，lr > 配對在 [sp-（#Z + 1） * 8] ！，索引預先位移 > =-512 |
 |`alloc_m`|        11000xxx'xxxxxxxx： 配置大小的大型堆疊\<16k (2 ^11 * 16)。 |
-|`save_regp`|        110010xx'xxzzzzzz： 儲存 r(19+#X) 組，在 [sp + #Z * 8]，位移\<= 504 |
-|`save_regp_x`|        110011xx'xxzzzzzz: save pair r(19+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -512 |
-|`save_reg`|        110100xx'xxzzzzzz： 儲存在登錄 r(19+#X) [預存程序 + #Z * 8]，位移\<= 504 |
-|`save_reg_x`|        1101010x'xxxzzzzz: save reg r(19+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -256 |
-|`save_lrpair`|         1101011 x'xxzzzzzz： 儲存配對\<r19 + 2 *#X，lr > 在 [sp + #Z*8]，位移\<= 504 |
+|`save_regp`|        110010xx'xxzzzzzz： 儲存 x(19+#X) 組，在 [sp + #Z * 8]，位移\<= 504 |
+|`save_regp_x`|        110011xx'xxzzzzzz: save pair x(19+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -512 |
+|`save_reg`|        110100xx'xxzzzzzz： 儲存在登錄 x(19+#X) [預存程序 + #Z * 8]，位移\<= 504 |
+|`save_reg_x`|        1101010x'xxxzzzzz: save reg x(19+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -256 |
+|`save_lrpair`|         1101011x'xxzzzzzz: save pair \<x(19+2 *#X),lr> at [sp+#Z*8], offset \<= 504 |
 |`save_fregp`|        1101100 x'xxzzzzzz： 儲存在組 d(8+#X) [預存程序 + #Z * 8]，位移\<= 504 |
 |`save_fregp_x`|        1101101x'xxzzzzzz: save pair d(8+#X), at [sp-(#Z+1)*8]!, pre-indexed offset >= -512 |
 |`save_freg`|        1101110 x'xxzzzzzz： 儲存在登錄 d(8+#X) [預存程序 + #Z * 8]，位移\<= 504 |
 |`save_freg_x`|        11011110'xxxzzzzz: save reg d(8+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -256 |
 |`alloc_l`|         11100000' xxxxxxxx 'xxxxxxxx' xxxxxxxx： 配置大小的大型堆疊\<256m (2 ^24 * 16) |
-|`set_fp`|        11100001： 設定 r29： 與： mov r29 預存程序 |
-|`add_fp`|        11100010' xxxxxxxx： 設定使用 r29： 新增 r29、 sp、 #x * 8 |
+|`set_fp`|        11100001： 設定 x29： 與： mov x29，預存程序 |
+|`add_fp`|        11100010' xxxxxxxx： 設定使用 x29: sp，新增 x29，#x * 8 |
 |`nop`|            11100011： 沒有回溯會需要作業。 |
 |`end`|            11100100： 結尾回溯程式碼。 表示 ret 終解中。 |
 |`end_c`|        11100101： 鏈結是目前範圍中的回溯程式碼的結尾。 |
@@ -347,12 +347,12 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 - **函式長度**是 11 位元欄位，提供整個函式，以位元組為單位，除以 4 的長度。 如果函式大於 8k，必須改為使用完整.xdata 記錄。
 - **框架大小**是 9 位元欄位，表示配置給這個函式，除以 16 的堆疊的位元組數目。 配置大於 (8k-16) 個位元組的堆疊的函式必須使用完整.xdata 記錄。 這包括本機變數的區域，傳出參數區域、 被呼叫端儲存 Int 和 FP 區域，以及主參數 區域中，但不包括動態配置區域。
 - **CR**是 2 位元旗標，指出函數是否包含額外的指示，以設定框架鏈結，傳回的連結：
-  - 00 = 會見到的函式， \<r29，lr > 組不會儲存在堆疊。
+  - 00 = 會見到的函式， \<x29，lr > 組不會儲存在堆疊。
   - 01 = 會見到的函式， \<lr > 會儲存在堆疊
   - 10 = 保留;
-  - 11 = 鏈結的函式，將存放區/載入組指示會在初構/終解\<r29，lr >
-- **H**是 1 位元旗標，指出是否函式參數寫入堆疊整數參數暫存器 (r0-r7) 將它們儲存在一開始的函式。 (0 = 不將寄存器，1 = 將寄存器)。
-- **RegI**是 4 位元欄位，表示非揮發性 INT 暫存器 (r19 r28) 儲存在標準的堆疊位置數目。
+  - 11 = 鏈結的函式，將存放區/載入組指示會在初構/終解\<x29，lr >
+- **H**是 1 位元旗標，指出是否函式參數寫入堆疊整數參數註冊 (x0 x7)，藉以儲存這些函式的最開頭。 (0 = 不將寄存器，1 = 將寄存器)。
+- **RegI**是 4 位元欄位，表示非揮發性 INT 暫存器 (x19 x28) 儲存在標準的堆疊位置數目。
 - **RegF**是 3 位元欄位，表示非揮發性 FP 暫存器 (d8-d15) 儲存在標準的堆疊位置數目。 (RegF = 0： 沒有 fp 暫存器儲存;RegF > 0:RegF + 1 FP 暫存器會儲存）。 封裝回溯資料無法用於儲存只有一個 fp 暫存器的函式。
 
 屬於類別 1、 2 （不含連出的 [參數] 區域）、 3 和 4 在上一節中的標準初構可以封裝的回溯格式來表示。  終如標準函式，請遵循類似的表單，除非**H**沒有任何作用，`set_fp`省略指令，而且在終解相反的順序的步驟，以及在每個步驟的指示。 封裝的 xdata 的演算法會遵循下列步驟下, 表所述：
@@ -367,26 +367,26 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 步驟 4：將輸入引數儲存在家用參數區域。
 
-步驟 5：配置剩餘的講座，包括本機區域中， \<r29，lr > 配對和傳出的參數區域。 5a 對應至標準的類型 1。 5b 和 5c 適用於標準的類型 2。 5d 和 5e 適用於這兩個型別為 3，類型 4。
+步驟 5：配置剩餘的講座，包括本機區域中， \<x29，lr > 配對和傳出的參數區域。 5a 對應至標準的類型 1。 5b 和 5c 適用於標準的類型 2。 5d 和 5e 適用於這兩個型別為 3，類型 4。
 
 步驟 #|旗標值|# 個指示|Opcode|回溯程式碼
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **RegI** <= 10|RegI / 2 + **RegI** %2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
-2|**CR**==01*|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
-3|0 < **RegF** <=7|(RegF + 1）/2 +<br/>(RegF + 1) %2）。|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
-4|**H** = = 1|4|`stp r0,r1,[sp, #intsz+#fpsz]`<br/>`stp r2,r3,[sp, #intsz+#fpsz+16]`<br/>`stp r4,r5,[sp, #intsz+#fpsz+32]`<br/>`stp r6,r7,[sp, #intsz+#fpsz+48]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**CR** == 11 && #locsz<br/> <= 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
-5b|**CR** == 11 &&<br/>512 < #locsz <= 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5c|**CR** == 11 && #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5d|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz <= 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
-5e|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
+1|0 < **RegI** <= 10|RegI / 2 + **RegI** %2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+2|**CR**==01*|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
+3|0 < **RegF** <=7|(RegF + 1）/2 +<br/>(RegF + 1) %2）。|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
+4|**H** = = 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
+5a|**CR** == 11 && #locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+5b|**CR** == 11 &&<br/>512 < #locsz <= 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5c|**CR** == 11 && #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5d|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
+5e|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
 \* 如果**CR** = = 01 並**RegI**是奇數，步驟 2 和步驟 1 中的最後一個 save_rep 會合併成一個 save_regp。
 
 \*\* 如果**RegI** == **CR** = = 0，並**RegF** ！ = 0，第一個 spanning tree protocol，如浮點前置遞減。
 
-\*\*\* 對應至任何指令`mov r29, sp`位於終解。 封裝回溯資料無法使用，如果函式需要的預存程序從 r29 的還原作業。
+\*\*\* 對應至任何指令`mov x29,sp`位於終解。 封裝回溯資料無法使用，如果函式需要的預存程序從 x29 的還原作業。
 
 ### <a name="unwinding-partial-prologs-and-epilogs"></a>回溯部分的初構和終
 
@@ -397,16 +397,16 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 比方說，採用這個初構和終解序列：
 
 ```asm
-0000:    stp    r29, lr, [sp, -256]!        // save_fplr_x  256 (pre-indexed store)
-0004:    stp    d8,d9,[sp,224]              // save_fregp 0, 224
-0008:    stp    r19,r20,[sp,240]            // save_regp 0, 240
-000c:    mov    r29,sp                      // set_fp
+0000:    stp    x29,lr,[sp,#-256]!          // save_fplr_x  256 (pre-indexed store)
+0004:    stp    d8,d9,[sp,#224]             // save_fregp 0, 224
+0008:    stp    x19,x20,[sp,#240]           // save_regp 0, 240
+000c:    mov    x29,sp                      // set_fp
          ...
-0100:    mov    sp,r29                      // set_fp
-0104:    ldp    r19,r20,[sp,240]            // save_regp 0, 240
+0100:    mov    sp,x29                      // set_fp
+0104:    ldp    x19,x20,[sp,#240]           // save_regp 0, 240
 0108:    ldp    d8,d9,[sp,224]              // save_fregp 0, 224
-010c:    ldp    r29, lr, [sp, -256]!        // save_fplr_x  256 (post-indexed load)
-0110:    ret     lr                         // end
+010c:    ldp    x29,lr,[sp],#256            // save_fplr_x  256 (post-indexed load)
+0110:    ret    lr                          // end
 ```
 
 每一個作業碼旁邊是描述這項作業的適當回溯程式碼。 要注意的第一件事是一系列的初構的回溯程式碼完全相同的鏡像映像的終解 （不計入終解最後一個指示） 的回溯程式碼。 這是常見的情況下，並因此回溯初構程式碼一律假定為以相反順序儲存，從初構的執行順序。
@@ -442,9 +442,9 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 - (區域 1： 開始)
 
     ```asm
-        stp     r29, lr, [sp, -256]!    // save_fplr_x  256 (pre-indexed store)
-        stp     r19,r20,[sp,240]        // save_regp 0, 240
-        mov     r29,sp                  // set_fp
+        stp     x29,lr,[sp,#-256]!      // save_fplr_x  256 (pre-indexed store)
+        stp     x19,x20,[sp,#240]       // save_regp 0, 240
+        mov     x29,sp                  // set_fp
         ...
     ```
 
@@ -460,9 +460,9 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
     ```asm
     ...
-        mov     sp,r29                  // set_fp
-        ldp     r19,r20,[sp,240]        // save_regp 0, 240
-        ldp     r29, lr, [sp, -256]!    // save_fplr_x  256 (post-indexed load)
+        mov     sp,x29                  // set_fp
+        ldp     x19,x20,[sp,#240]       // save_regp 0, 240
+        ldp     x29,lr,[sp],#256        // save_fplr_x  256 (post-indexed load)
         ret     lr                      // end
     ```
 
@@ -489,27 +489,27 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 - (區域 1： 開始)
 
     ```asm
-        stp     r29, lr, [sp, -256]!    // save_fplr_x  256 (pre-indexed store)
-        stp     r19,r20,[sp,240]        // save_regp 0, 240
-        mov     r29,sp                  // set_fp
+        stp     x29,lr,[sp,#-256]!      // save_fplr_x  256 (pre-indexed store)
+        stp     x19,x20,[sp,#240]       // save_regp 0, 240
+        mov     x29,sp                  // set_fp
         ...
     ```
 
 - (區域 2： 開始)
 
     ```asm
-        stp     r21,r22,[sp,224]        // save_regp 2, 224
+        stp     x21,x22,[sp,#224]       // save_regp 2, 224
         ...
-        ldp     r21,r22,[sp,224]        // save_regp 2, 224
+        ldp     x21,x22,[sp,#224]       // save_regp 2, 224
     ```
 
 - (區域 2： 結束)
 
     ```asm
         ...
-        mov     sp,r29                  // set_fp
-        ldp     r19,r20,[sp,240]        // save_regp 0, 240
-        ldp     r29, lr, [sp, -256]!    // save_fplr_x  256 (post-indexed load)
+        mov     sp,x29                  // set_fp
+        ldp     x19,x20,[sp,#240]       // save_regp 0, 240
+        ldp     x29,lr,[sp],#256        // save_fplr_x  256 (post-indexed load)
         ret     lr                      // end
     ```
 

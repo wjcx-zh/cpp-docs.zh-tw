@@ -2,12 +2,12 @@
 title: 潛在升級問題概觀 (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 16918a70d4ce56a7415c3a807485e72c085d1194
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 1dac6ad201656dc83428aa5182a59cb8ff824651
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58775033"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898826"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潛在升級問題概觀 (Visual C++)
 
@@ -111,7 +111,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 您在升級時可能會看到的其中一個常見編譯器錯誤範例，是將非 const 引數傳遞至 const 參數。 舊版編譯器不一定會將其標幟為錯誤。 如需詳細資訊，請參閱[編譯器的更嚴格轉換](porting-guide-spy-increment.md#stricter_conversions)。
 
-如需特定一致性改善的詳細資訊，請參閱 [Visual C++ 變更歷程記錄 2003 - 2015](visual-cpp-change-history-2003-2015.md) 和 [Visual Studio 2017 中的 C++ 一致性改善](../overview/cpp-conformance-improvements-2017.md)。
+如需特定一致性改進的詳細資訊，請參閱 [Visual C++ 2003 - 2015 的變更歷程記錄](visual-cpp-change-history-2003-2015.md)和 [Visual Studio 中的 C++ 一致性改進](../overview/cpp-conformance-improvements.md)。
 
 ## <a name="errors-involving-stdinth-integral-types"></a>涉及 \<stdint.h> 整數類型的錯誤
 
@@ -127,7 +127,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 多年來，已對 C 執行階段進行許多變更。 已新增許多安全版本的函式，並已移除一些函式。 此外，如本文稍早所述，已在 Visual Studio 2015 中將 Microsoft 的 CRT 實作重構為新的二進位檔和相關聯的 .lib 檔案。
 
-如果錯誤涉及 CRT 函式，請搜尋 [Visual C++ 變更歷程記錄 2003 - 2015](visual-cpp-change-history-2003-2015.md) 或 [Visual Studio 2017 中的 C++ 一致性改善](../overview/cpp-conformance-improvements-2017.md)，以查看這些主題是否包含任何其他資訊。 如果錯誤是「LNK2019 無法解析的外部」，請確定尚未移除函式。 否則，如果您確定函式仍然存在，而且呼叫程式碼正確，請確認您的專案是否使用 `/NODEFAULTLIB`。 如果是的話，則您需要更新程式庫清單，讓專案使用新的通用 (UCRT) 程式庫。 如需詳細資訊，請參閱上方有關程式庫和相依性的章節。
+如果錯誤涉及 CRT 函式，請搜尋 [Visual C++ 變更歷程記錄 2003 - 2015](visual-cpp-change-history-2003-2015.md) 或 [Visual Studio 中的 C++ 一致性改進](../overview/cpp-conformance-improvements.md)，以查看這些主題是否包含任何其他資訊。 如果錯誤是「LNK2019 無法解析的外部」，請確定尚未移除函式。 否則，如果您確定函式仍然存在，而且呼叫程式碼正確，請確認您的專案是否使用 `/NODEFAULTLIB`。 如果是的話，則您需要更新程式庫清單，讓專案使用新的通用 (UCRT) 程式庫。 如需詳細資訊，請參閱上方有關程式庫和相依性的章節。
 
 如果錯誤涉及 `printf` 或 `scanf`，請確定您未私自定義兩者其一不含 stdio.h。 若是如此，請移除私人定義或 legacy\_stdio\_definitions.lib 的連結。 您可於 [組態屬性] > [連結器] > [輸入] 下的 [屬性頁] 對話方塊中，於 [其他相依性] 屬性設定此項目。 如果您連結到 Windows SDK 8.1 或較舊版，則請新增 legacy\_stdio\_definitions.lib。
 
@@ -161,7 +161,7 @@ C++ 標準現在指定從不帶正負號到帶正負號整數值的轉換視為�
 
 ## <a name="atl--mfc"></a>ATL/MFC
 
-ATL 和 MFC 是相當穩定的 API，但偶而會進行變更。 如需詳細資訊，請參閱 [Visual C++ 變更歷程記錄 2003 - 2015](visual-cpp-change-history-2003-2015.md) 以及 [Visual Studio 2017 中 Visual C++ 的新功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)和 [Visual Studio 2017 中的 C++ 一致性改善](../overview/cpp-conformance-improvements-2017.md)。
+ATL 和 MFC 是相當穩定的 API，但偶而會進行變更。 如需詳細資訊，請參閱 [Visual C++ 變更歷程記錄 2003 - 2015](visual-cpp-change-history-2003-2015.md) 以及 [Visual Studio 中 Visual C++ 的新功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)和 [Visual Studio 中的 C++ 一致性改進](../overview/cpp-conformance-improvements.md)。
 
 ### <a name="lnk-2005-dllmain12-already-defined-in-msvcrtdlib"></a>LNK 2005 _DllMain@12 已定義於 MSVCRTD.lib 中
 
@@ -182,4 +182,4 @@ MFC 應用程式中可能會發生此錯誤。 這指出 CRT 程式庫與 MFC �
 ## <a name="see-also"></a>另請參閱
 
 [從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Visual Studio 2017 中的 C++ 一致性改善](../overview/cpp-conformance-improvements-2017.md)
+[Visual Studio 中的 C++ 一致性改善](../overview/cpp-conformance-improvements.md)

@@ -4,18 +4,18 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 9be4db9e0f7c50054dc6e6ca498b1c9d49715a8d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: b381a2b7cc9a4ad4749f382838bdec5872a3decf
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58775409"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898878"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
 
 這篇文章說明自 Visual Studio 2015 回溯到 Visual Studio 2003 的所有的重大變更，並會在文章中使用「新行為」或 「目前」表示 Visual Studio 2015 及更新版本。 「舊行為」與「過去」表示 Visual Studio 2013 及更舊版本。
 
-如需 Visual Studio 2017 的資訊，請參閱 [Visual Studio 2017 中 Visual C++ 的新功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)及[Visual Studio 2017 中 Visual C++ 的合規性改進](../overview/cpp-conformance-improvements-2017.md)。
+如需最新 Visual Studio 版本的資訊，請參閱 [Visual Studio 中 Visual C++ 的新功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)及 [Visual Studio 中 Visual C++ 的一致性改善](../overview/cpp-conformance-improvements.md)。
 
 > [!NOTE]
 > Visual Studio 2015 與 Visual Studio 2017 之間沒有二進位檔重大變更。
@@ -32,7 +32,7 @@ ms.locfileid: "58775409"
 
 - [標準 C++ 與 C++ 標準程式庫的重大變更](#BK_STL)
 
-- [MFC 與 ATL 的重大變更](#BK_MFC)
+- [MFC 和 ATL 的重大變更](#BK_MFC)
 
 - [並行執行階段的重大變更](#BK_ConcRT)
 
@@ -66,7 +66,7 @@ ms.locfileid: "58775409"
 
   - `double pow(double, int)`, `float pow(float, float)`, `float pow(float, int)`, `long double pow(long double, long double)`, `long double pow(long double, int)`
 
-  - `float` 和 `long double` 版本的浮動點函式 `acos`、`acosh`、`asin`、`asinh`、`atan`、`atanh`、`atan2`、`cbrt`、`ceil`、`copysign`、`cos`、`cosh`、`erf`、`erfc`、`exp`、`exp2`、`expm1`、`fabs`、`fdim`、`floor`、`fma`、`fmax`、`fmin`、`fmod`、`frexp`、`hypot`、`ilogb`、`ldexp`、`lgamma`、`llrint`、`llround`、`log`、`log10`、`log1p`、`log2`、`lrint`、`lround`、`modf`、`nearbyint`、`nextafter`、`nexttoward`、`remainder`、`remquo`、`rint`、`round`、`scalbln`、`scalbn`、`sin`、`sinh`、`sqrt`、`tan`、`tanh`、`tgamma` 及 `trunc`
+  - `float` 和 `long double` 版本的浮動點函式 `acos``acosh`、`asin`、`asinh`、`atan`、`atanh`、`atan2`、`cbrt`、`ceil`、`copysign`、`cos`、`cosh`、`erf`、`erfc`、`exp`、`exp2`、`expm1`、`fabs`、`fdim`、`floor`、`fma`、`fmax`、`fmin`、`fmod`、`frexp`、`hypot`、`ilogb`、`ldexp`、`lgamma`、`llrint`、`llround`、`log`、`log10`、`log1p`、`log2`、`lrint`、`lround`、`modf`、`nearbyint`、`nextafter`、`nexttoward`、`remainder`、`remquo`、`rint`、`round`、`scalbln`、`scalbn`、`sin`、`sinh`、`sqrt`、`tan`、`tanh`、`tgamma` 及  `trunc`
 
   如果您有使用 `abs` 搭配浮點類型撰寫的程式碼，且該程式碼只包含 \<math.h> 標頭，則此浮點版本將不再可用。 即使使用浮點引數，現在仍會將呼叫解析成 `abs(int)`，這會產生錯誤：
 
@@ -76,7 +76,7 @@ ms.locfileid: "58775409"
 
   若要修正這個警告，可將 `abs` 呼叫取代為 `abs` 的浮點版本；例如 `fabs` (雙精度浮點引數) 或 `fabsf` (浮點引數)，或包含 \<cmath> 標頭，即可繼續使用 `abs`。
 
-- **浮點的一致性**
+- **浮點數的合規性**
 
    針對特殊案例的輸入，例如 NaN 和無限大，為了與 IEEE-754 和 C11 附錄 F 規格更加一致，此數學程式庫已有許多變更。 例如，在舊版的程式庫中通常將無訊息的 NaN 輸入視為錯誤，如今已不再視為錯誤。 請參閱 [IEEE 754 標準](https://standards.ieee.org/standard/754-2008.html) 和 [C11 標準](http://www.iso-9899.info/wiki/The_Standard)的附錄 F。
 
@@ -108,7 +108,7 @@ ms.locfileid: "58775409"
 
 #### <a name="stdioh-and-conioh"></a>\<stdio.h> 與 \<conio.h>
 
-- **printf 與 scanf 系列的函式現在會在函式中定義。**
+- **printf 和 scanf 系列的函式現在已定義為內嵌。**
 
    所有 `printf` 與 `scanf` 函式的定義均已移至 \<stdio.h>、\<conio.h> 及其他 CRT 標頭內。 針對區域宣告這些函式但不包含適當 CRT 標頭的任何程式而言，這個中斷性變更會導致連結器錯誤 (LNK2019，無法解析的外部符號)。 如有可能，您應更新程式碼，將 CRT標頭 (亦即新增 `#include <stdio.h>`) 及內嵌函式包含在其中；若您不想修改程式碼來包含這些標頭檔案，也可以採用替代解決方法，在您的連結器輸入 legacy_stdio_definitions.lib 中新增額外的程式庫。
 
@@ -187,7 +187,7 @@ ms.locfileid: "58775409"
 
    如同以上所述，浮點數剖析演算法現在會剖析十六進位浮點數字串 (例如那些由 %a 和 %A printf 格式指定名稱所產生的浮點數字串) 和所有由此 `printf` 函式產生的無限大和 NaN 字串。
 
-- **%A 和 %a 零填補**
+- **%A 和 %a 零邊框間距**
 
    %a 和 %A 格式規範會將浮點數格式化為十六進位的尾數和二進位的指數。 在先前的版本中，`printf` 函式無法正確對字串進行零填補。 例如，`printf("%07.0a\n", 1.0)` 會印出 00x1p+0，但這應為 0x01p+0。 這項缺陷已獲得修正。
 
@@ -197,7 +197,7 @@ ms.locfileid: "58775409"
 
    在搭配 %A 或 %a 使用格式字串的任何函式輸出中，此為執行階段行為變更。 在舊版的行為中，使用 %A 規範的輸出可能為 "1.1A2B3Cp+111"。 現在對於相同值的輸出是 "1.1A2B3C4D5E6F7p+111"。 若要取得舊的行為，您可以指定精確度，例如 %.6A。 請參閱[精確度規格](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision)。
 
-- **%F 規範**
+- **%F 指定名稱**
 
    現在支援 %F 格式/轉換規範。 它的功能相當於 %f 格式指定名稱，不同之處在於無限大和 NaN 的格式使用大寫字母。
 
@@ -217,9 +217,9 @@ ms.locfileid: "58775409"
 
    在舊版中，`fopen` 系列的函式會以無訊息模式接受某些無效的模式字串 (例如 `r+b+`)。 現在會偵測到無效的模式字串並將其視為無效的參數。
 
-- **_O_U8TEXT mode**
+- **_O_U8TEXT 模式**
 
-   [_setmode](../c-runtime-library/reference/setmode.md) 函式現在已可正確回報 in_O_U8TEXT 模式中開啟的資料流模式。 在此程式庫的舊版中，它會報告這類資料流為在 _O_WTEXT 中所開啟。
+   現在 [_setmode](../c-runtime-library/reference/setmode.md) 函式會正確報告在 in_O_U8TEXT 模式中開啟的資料流之模式。 在此程式庫的舊版中，它會報告這類資料流為在 _O_WTEXT 中所開啟。
 
    如果您的程式碼解譯 _O_WTEXT 模式，其中資料流的編碼是 UTF-8，這就會是一項重大變更。 如果您的應用程式不支援 UTF_8，請考慮將這項日漸普遍之編碼方式的支援加入。
 
@@ -255,7 +255,7 @@ ms.locfileid: "58775409"
 
    已移除 `_heapadd`、`_heapset` 和 `_heapused` 函式。 這些函式已無作用，因為 CRT 已更新為使用 Windows 堆積。
 
-- **小型堆積**
+- **smallheap**
 
    已移除 `smallheap` 連結選項。 請參閱[連結選項](../c-runtime-library/link-options.md)。
 
@@ -315,7 +315,7 @@ ms.locfileid: "58775409"
 
    [steady_clock](../standard-library/steady-clock-struct.md) 的 \<chrono> 實作已變更為符合 C++ 標準的穩定性和單一性需求。 `steady_clock` 目前是以 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) 為基礎，而 `high_resolution_clock` 現在是 `steady_clock` 的 typedef。 因此，在 Visual Studio 中，`steady_clock::time_point` 現在是 `chrono::time_point<steady_clock>` 的 typedef；但是，其他實作的情況不一定也如此。
 
-- **配置器和常數**
+- **allocators 和 const**
 
    我們現在要求配置器的等號/不等比較要在兩邊接受常數引數。 如果您的配置器如下定義這些運算子，
 
@@ -329,7 +329,7 @@ ms.locfileid: "58775409"
     bool operator==(const MyAlloc& other) const
     ```
 
-- **常數元素**
+- **const 元素**
 
    C++ 標準一律禁止常數元素 (例如 vector\<const T> or set\<const T>) 的容器。 Visual Studio 2013 及較舊版接受這類容器。 在目前版本中，這類容器無法編譯。
 
@@ -415,11 +415,11 @@ ms.locfileid: "58775409"
 
 - [Visual Studio 2015 的一致性改善](#VS_RTM)
 
-- [Update 1 的合規性改進](#VS_Update1)
+- [Update 1 的一致性改善](#VS_Update1)
 
-- [Update 2 的合規性改進](#VS_Update2)
+- [Update 2 的一致性改善](#VS_Update2)
 
-- [Update 3 的合規性改進](#VS_Update3)
+- [Update 3 的一致性改善](#VS_Update3)
 
 ###  <a name="VS_RTM"></a> Visual Studio 2015 的一致性改善
 
@@ -470,7 +470,7 @@ ms.locfileid: "58775409"
 
    若要修正此錯誤，請移除冗餘的 **mutable** 關鍵字即可。
 
-- **char_16_t 與 char32_t**
+- **char_16_t 和 char32_t**
 
    您無法繼續使用 `char16_t` 或 `char32_t` 作為 **typedef** 的別名，因為現在會將這些類型視為內建類型。 使用者和程式庫作者通常會分別定義 `char16_t` 和 `char32_t` 作為 `uint16_t` 和 `uint32_t` 的別名。
 
@@ -491,7 +491,7 @@ ms.locfileid: "58775409"
 
    若要更新您的程式碼，請移除此 **typedef** 宣告，並重新命名任何其他與這些名稱衝突的識別項。
 
-- **非類型範本參數**
+- **非類型樣板參數**
 
    在您提供明確的樣板引數之際，和非類型樣板參數有關的特定程式碼之類型相容性檢查即為正確。 例如，下列程式碼可在舊版的 Visual Studio 中正確無誤地編譯。
 
@@ -600,7 +600,7 @@ ms.locfileid: "58775409"
     }
     ```
 
-- **後接巨集的字串常值**
+- **後面接著巨集的字串常值**
 
    該編譯器現在支援使用者定義的常值。 因此，會將後面接著巨集且不含任何中間空白字元的字串常值解譯為使用者定義常值，這可能會產生錯誤或非預期的結果。 例如，在舊版編譯器中，下列程式碼可順利編譯：
 
@@ -639,7 +639,7 @@ ms.locfileid: "58775409"
     char * str = "abc" "def";
     ```
 
-- **placement new 與 delete**
+- **Placement new 和 delete**
 
    為了讓 **delete** 運算子與 C++ 14 標準一致，已對它進行變更。 如需此標準之變更的詳細資訊，請參閱 [C++ 調整大小的解除配置](http://isocpp.org/files/papers/n3778.html)。 變更當中新增了一種全域 **delete** 運算子，該運算子會採用大小參數。 中斷性變更是如果您先前使用具有相同簽章 (藉此對應至 **placement new** 運算子) 的運算子 **delete**，就會發生編譯器錯誤 (C2956，於使用 placement new 處發生，因為在程式碼的該位置上，編譯器會嘗試識別合適且相符的 **delete** 運算子)。
 
@@ -734,7 +734,7 @@ ms.locfileid: "58775409"
     } u;
     ```
 
-- **具匿名結構的等位**
+- **具有匿名結構的等位**
 
    為了符合標準，此執行階段行為為了等位中匿名結構的成員而有所變更。 建立這類等位時，不再隱含呼叫等位中匿名結構成員的建構函式。 此外，當此等位超出範圍時，將不再隱含呼叫等位中的匿名結構成員的解構函式。 請考慮下列程式碼，其中等位 U 包含匿名結構，該結構包含具有解構函式的具名成員結構 S。
 
@@ -849,7 +849,7 @@ ms.locfileid: "58775409"
     }
     ```
 
-- **範本解析**
+- **樣板解析**
 
    已變更樣板的名稱解析。 在 C++ 中，在考慮名稱解析的候選時，也可能產生這種情況：一或多個考慮為可能符合的名稱產生無效的樣板具現化。 這些無效的具現化通常不會造成編譯器錯誤，也就是稱為 SFINAE (替代失敗不是錯誤) 的原則。
 
@@ -1004,7 +1004,7 @@ ms.locfileid: "58775409"
     //other partial specializations here
     ```
 
-- **針對向前宣告強制執行規則(只適用於 C)。**
+- **針對向前宣告強制執行規則 (只適用於 C)。**
 
    下列程式碼現在會產生 C2065：
 
@@ -1235,7 +1235,7 @@ ms.locfileid: "58775409"
 
    當函式傳回想要移動的類型時，其傳回類型不應是 **const**。
 
-- **刪除複製建構函式**
+- **已刪除的複製建構函式**
 
    下列程式碼現在會產生 C2280：'S::S(S &&)': 嘗試參考被刪除的函式：
 
@@ -1261,7 +1261,7 @@ ms.locfileid: "58775409"
     S s2 = {2,3}; //OK
     ```
 
-- **只有在未擷取任何 lambda 時，才會產生函式指標轉換**
+- **只有在未擷取任何 Lambda 時，才會產生函式指標轉換**
 
    下列程式碼會在 Visual Studio 2015 中產生 C2664。
 
@@ -1382,7 +1382,7 @@ ms.locfileid: "58775409"
     };
     ```
 
-- **lambda 預設的 ctor 會被隱含刪除**
+- **Lambda 預設的 ctor 會被隱含刪除**
 
    下列程式碼現在會產生錯誤 C3497︰您無法建構 Lambda 的執行個體：
 
@@ -1588,7 +1588,7 @@ ms.locfileid: "58775409"
 
    在 Visual Studio 2015 中，與 `__declspec(dllimport)` 結合使用時，在具有虛擬基底類別的抽象類別中，由編譯器所產生內嵌建構函式來公開 `__declspec(novtable)` 不當使用方式的可能性會提高。
 
-- **auto 必須要在 direct-list-initialization 中使用單一運算式**
+- **auto 在 direct-list-initialization 中必須使用單一運算式**
 
    下列程式碼現在會產生錯誤 C3518：’testPositions’：在 direct-list-initialization 內容中，’auto’ 的類型僅能從單一初始設定式運算式推斷
 
@@ -1699,7 +1699,7 @@ ms.locfileid: "58775409"
 
 ###  <a name="VS_Update1"></a> Update 1 的合規性改進
 
-- **私用的虛擬基底類別與間接繼承**
+- **私用的虛擬基底類別和間接繼承**
 
    舊版編譯器允許衍生類別呼叫其間接衍生之 `private virtual` 基底類別的成員函式。 這個舊的行為不正確且不符合 C++ 標準。 編譯器不再接受以這種方式撰寫的程式碼，且會發出編譯器錯誤 C2280。
 
@@ -1753,7 +1753,7 @@ ms.locfileid: "58775409"
     }
     ```
 
-- **多載的運算子 new 與運算子 delete**
+- **多載的運算子 new 和運算子 delete**
 
    編譯器先前版本允許非成員 **operator new** 和非成員 **operator delete** 宣告為 static，以及在全域命名空間以外的命名空間中宣告。  這種舊行為造成的風險是，程式不會呼叫程式設計人員所預期的 **new** 或 **delete** 運算子實作，導致無訊息的錯誤執行階段行為。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C2323。
 
@@ -1805,7 +1805,7 @@ ms.locfileid: "58775409"
     }
     ```
 
-- **詳細類型指定名稱中有重複的類型名稱**
+- **複雜的類型規範中有重複的類型名稱**
 
    編譯器先前版本允許複雜的類型指定名稱中有 **typename**，但以這種方式撰寫的程式碼語意並不正確。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C3406。
 
@@ -1827,7 +1827,7 @@ ms.locfileid: "58775409"
     class container;
     ```
 
-- **從初始設定式清單推斷陣列類型**
+- **初始設定式清單的陣列類型推斷**
 
    舊版編譯器不支援初始設定式清單的陣列類型推斷。 編譯器現在支援這種形式的類型推斷，而這樣一來，使用初始設定式清單呼叫函式範本現在可能會模稜兩可，也可能和舊版編譯器選擇不同的多載。 若要解決這些問題，程式現在必須明確指定程式設計人員所要的多載。
 
@@ -1913,7 +1913,7 @@ ms.locfileid: "58775409"
     }
     ```
 
-- **還原 switch 陳述式警告**
+- **還原 Switch 陳述式警告**
 
    舊版編譯器中移除了某些與 **switch** 陳述式相關的警告；現在則已還原這些警告。 編譯器現在會發出還原的警告，而與特定情況相關的警告 (包括預設的情況) 都會在包含違規情況的程式行發出，而不是在 switch 陳述式的最後一行發出。 現在，在和過去不一樣的程式行中發出警告的結果是，以前使用 `#pragma warning(disable:####)` 隱藏的警告，可能不會如預期隱藏起來。 若想要如預期隱藏這些警告，就必須將 `#pragma warning(disable:####)` 指示詞移至第一個違規情況的上一行。 下列為還原的警告：
 
@@ -2159,13 +2159,13 @@ ms.locfileid: "58775409"
     // C5032.cpp ends -- the translation unit is completed without unmatched #pragma warning(push)
     ```
 
-- **改進之後的 #pragma 警告狀態追蹤也可能會發出其他警告**
+- **因為追蹤改進的 #pragma 警告狀態，可能會發出其他警告**
 
    舊版編譯器過去追蹤 #pragma 警告狀態變更的能力不佳，無法發出所有預期出現的警告。 這種行為造成的風險是，某些有效隱藏警告的情況，不是程式設計人員所預想的情況。 編譯器現在追蹤 `#pragma warning` 狀態的能力更強大，特別是關於範本內部的 `#pragma warning` 狀態變更，可以選擇性發出新的警告 C5031 和 C5032，其目的是協助程式設計人員找出非預期使用的 `#pragma warning(push)` 和 `#pragma warning(pop)`。
 
    在 `#pragma warning` 狀態變更追蹤經過改良之後，以往不當隱藏的警告或先前與誤判問題有關的警告，現在都能夠發出。
 
-- **不可能執行到之程式碼的識別改善**
+- **不可能執行到之程式碼的改進識別**
 
    C++ 標準程式庫的變更，以及比舊版編譯器強大的內嵌函式呼叫能力，可能會讓編譯器證明不可能執行到某些程式碼。 這種新行為可能會導致新的警告 C4720 的執行個體，且更頻繁地發出這個警告。
 
@@ -2292,7 +2292,7 @@ ms.locfileid: "58775409"
     };
     ```
 
-- `volatile`  **成員變數會禁止隱含定義的建構函式與指派運算子**
+- `volatile` **成員變數會禁止隱含定義的建構函式與指派運算子**
 
    編譯器先前版本允許具有 **volatile** 成員變數類別自動產生預設的複製/移動建構函式，以及預設的複製/移動指派運算子。 這個舊的行為不正確且不符合 C++ 標準。 編譯器現在會考慮讓具有 **volatile** 成員變數的類別擁有非一般建構和指派運算子，其可防止自動產生這些運算子的預設實作。 當此類別是等位 (或類別內的匿名等位) 的成員時，就會將等位 (或包含匿名等位的類別) 的複製/移動建構函式和複製/移動指派運算子隱含定義為已刪除。 在未明確定義的情況下，嘗試建構或複製等位 (或包含匿名等位的類別) 將會發生錯誤，導致編譯器發出編譯器錯誤 C2280。
 
@@ -2348,7 +2348,7 @@ ms.locfileid: "58775409"
     B b2(b1);  // error C2280
     ```
 
-- **靜態成員函式不支援 cv 限定詞**
+- **靜態成員函式不支援 cv 限定詞。**
 
    舊版 Visual Studio 2015 允許靜態成員函式擁有 cv 限定詞。 此行為起因於 Visual Studio 2015 與 Visual Studio 2015 Update 1 的迴歸；Visual Studio 2013 與舊版編譯器拒絕以此方式撰寫的程式碼。 Visual Studio 2015 與 Visual Studio 2015 Update 1 的行為不正確且不符合 C++ 標準。  Visual Studio 2015 Update 2 拒絕以此方式撰寫的程式碼，並會發出編譯器錯誤 C2511。
 
@@ -2493,7 +2493,7 @@ ms.locfileid: "58775409"
 
    在編譯器先前版本中，因為 `std::is_convertable<>::value` 不正確地設定為 **true**，致使此範例底部的靜態判斷提示能夠通過。 `std::is_convertable<>::value` 現在會正確地設定為 **false**，讓靜態判斷提示失敗。
 
-- **預設或已刪除的 trivial 複製及移動建構函式會採用存取指定名稱**
+- **預設或已刪除的簡單 copy 及 move 建構函式會採用存取指定名稱**
 
    舊版編譯器不會檢查預設或已刪除之 trivial 複製及移動建構函式的存取指定名稱，就允許其接受呼叫。 這個舊的行為不正確且不符合 C++ 標準。 在某些情況下，這項舊行為的風險是會產生無訊息的錯誤程式碼，導致無法預期的執行階段行為。 編譯器現在會檢查預設或已刪除之 trivial 複製及移動建構函式的存取指定名稱，據此決定其是否可以接受呼叫；若無法呼叫，即發出編譯器警告 C2248。
 
@@ -2934,7 +2934,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - 若您現有的程式碼使用舊版的模擬範圍列舉 (包裝在命名空間中傳統不限範圍的列舉)，必須加以變更。 例如，如果您原本參考 `std::future_status::future_status` 類型，則現在必須改為 `std::future_status`。 不過，大部分的程式碼不會受影響，例如 `std::future_status::ready` 仍會編譯。
 
-- `explicit operator bool()` 會比運算子 unspecified-bool-type() 更為嚴格。 `explicit operator bool()` 允許明確轉換為 bool (例如，假設有一個 `shared_ptr<X> sp`，則 `static_cast<bool>(sp)` 和 `bool b(sp)` 都有效)，以及可轉換為 bool 之可進行布林值測試的「內容轉換」(例如 `if (sp)`、`!sp`、`sp &&`)。 不過，`explicit operator bool()` 會禁止隱含轉換成 bool，因此您不能使用 `bool b = sp;`，且假設傳回類型為 bool，則您不能使用 `return sp`。
+- `explicit operator bool()` 會比運算子 unspecified-bool-type() 更為嚴格。 `explicit operator bool()` 允許透過明確轉換 (例如，假設為 `shared_ptr<X> sp`，則 `static_cast<bool>(sp)` 和 `bool b(sp)` 都有效)，以及可測試布林值的「內容相關轉換」，轉換為 bool (例如 `if (sp)`、`!sp`、`sp &&`)。 不過，`explicit operator bool()` 會禁止隱含轉換成 bool，因此您不能使用 `bool b = sp;`，且假設傳回類型為 bool，則您不能使用 `return sp`。
 
 - 因為現在是實作真正的 variadic 範本，所以 _VARIADIC_MAX 與相關的巨集不會有任何作用。 如果您仍然正在定義 _VARIADIC_MAX，則會將它忽略。 如果您認可我們的巨集機制主要在於以任何其他方式支援模擬的 variadic 樣板，那麼您必須變更程式碼。
 
@@ -2986,7 +2986,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
    - `CMFCMaskedEdit::OnPaste` 已變更為不使用任何參數，而不再是 (WPARAM, LPARAM)，所以可以在訊息對應中使用新的 ON_WM_PASTE 巨集。
 
-- MFC 標頭中的 `#ifdef` 指示詞已移除。 已移除 MFC 標頭檔中許多與不支援之 Windows 版本相關的 `#ifdef` (WINVER &lt; 0x0501)。
+- `#ifdef` 指示詞 (MFC 標頭檔中) 已移除。 已移除 MFC 標頭檔中許多與不支援之 Windows 版本相關的 `#ifdef` (WINVER &lt; 0x0501)。
 
 - ATL DLL (atl120.dll) 已移除。 現在提供的 ATL 為標頭和靜態程式庫 (atls.lib)。
 
@@ -3052,7 +3052,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - 除了偵測 _ITERATOR_DEBUG_LEVEL 不符的情況 (實作於 Visual Studio C++ 2010) 之外，Visual Studio 2012 的 C++ 編譯器還會偵測執行階段程式庫不符的錯誤。 當編譯器選項 `/MT` (靜態發行)、`/MTd` (靜態偵錯)、`/MD` (動態發行) 和 `/MDd` (動態偵錯) 混合時，就會發生這些不相符的情況。
 
-- 針對 `std::unordered_map` 和 `stdext::hash_map` 容器系列，先前可以使用 `operator<()`、`operator>()`、`operator<=()` 和 `operator>=()`，雖然其實作並不是很有用。 因此 Visual Studio 2012 的 Visual C++ 移除了這些非標準運算子。 此外，`std::unordered_map` 系列的 `operator==()` 和 `operator!=()` 實作已延伸至涵蓋 `stdext::hash_map` 系列。 (建議您避免在新的程式碼中使用 `stdext::hash_map` 系列。)
+- `operator<()`、`operator>()`、`operator<=()` 和 `operator>=()`，先前可針對 `std::unordered_map` 和 `stdext::hash_map` 容器系列使用，雖然它們的實作並不是很有用。 因此 Visual Studio 2012 的 Visual C++ 移除了這些非標準運算子。 此外，`std::unordered_map` 系列的 `operator==()` 和 `operator!=()` 實作已延伸至涵蓋 `stdext::hash_map` 系列。 (建議您避免在新的程式碼中使用 `stdext::hash_map` 系列。)
 
 - C++11 22.4.1.4 [locale.codecvt] 指定 `codecvt::length()` 和 `codecvt::do_length()` 應接受可修改的 `stateT&` 參數，但 Visual Studio 2010 接受的參數為 `const stateT&`。 而 Visual Studio 2012 的 C++ 編譯器則因為遵循標準而接受 `stateT&`。 對於想要覆寫虛擬函式 `do_length()` 的使用者而言，此差異相當重大。
 
@@ -3092,7 +3092,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - `CFileStatus` 結構大小變更︰`m_attribute` 成員已從 BYTE 變更為 DWORD (以符合從 `GetFileAttributes` 傳回的值)。
 
-- `CRichEditCtrl` 和 `CRichEditView` 會在 Unicode 組建中使用 MSFTEDIT_CLASS (RichEdit 4.1 控制) 而非 RICHEDIT_CLASS (RichEdit 3.0 控制)。
+- `CRichEditCtrl` 和 `CRichEditView` 會在 Unicode 組建中使用 MSFTEDIT_CLASS (RichEdit 4.1 控制項) 而非 RICHEDIT_CLASS (RichEdit 3.0 控制項)。
 
 - 已移除 `AFX_GLOBAL_DATA::IsWindowsThemingDrawParentBackground`，因為它在 Windows Vista、Windows 7 和 Windows 8 上一律為 TRUE。
 
@@ -3436,11 +3436,11 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - 有鑑於 %n 格式指定名稱本身就不安全，所以所有 printf 系列函式預設都不再提供此支援。 如果出現 %n，預設行為是叫用無效參數處理常式。 若要啟用 %n 支援，請使用 `_set_printf_count_output` (另請參閱 `_get_printf_count_output`)。
 
-- 對於帶正負號的零，`sprintf` 現在會列印負號。
+- `sprintf` 現在會將帶正負號之零的負號列印出來。
 
 - `swprintf` 已變更為符合標準，所以現在會需要大小參數。 已淘汱沒有大小參數的 `swprintf` 形式。
 
-- 已移除 `_set_security_error_handler`。 移除任何對該函式的呼叫。預設處理常式在處安全性錯誤上安全性更高。
+- `_set_security_error_handler` 已移除。 移除任何對該函式的呼叫。預設處理常式在處安全性錯誤上安全性更高。
 
 - `time_t` 現在是 64 位元值 (除非定義 _USE_32BIT_TIME_T)。
 
@@ -3466,7 +3466,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 ### <a name="standard-library-2005"></a>標準程式庫 (2005)
 
-- 例外狀況類別 (位於 \<exception> 標頭中) 已移至 `std` 命名空間。 在舊版中，此類別位於全域命名空間。 若要解決指出找不到例外狀況類別的任何錯誤，請在您的程式碼中新增下列 using 陳述式︰`using namespace std;`
+- 例外狀況類別 (位於 \<exception> 標頭中) 已移至 `std` 命名空間。 在舊版中，此類別位於全域命名空間。 若要解決指出找不到例外狀況類別的任何錯誤，請在您的程式碼中新增下列 using 陳述式︰ `using namespace std;`
 
 - 當呼叫 `valarray::resize()` 時，`valarray` 的內容會遺失並會由預設值取代。 `resize()` 方法主要用於重新初始化 `valarray`，而不是像 vector 一樣動態增加。
 
@@ -3524,4 +3524,4 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual Studio 之 Visual C++ 的新功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)
+[Visual Studio 中 Visual C++ 的新功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)

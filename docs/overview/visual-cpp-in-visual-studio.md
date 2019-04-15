@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 7ef43491c35ec4f57f7a691851e584e6aad58ef3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 6430d57ddc8718c419076d2da1008e21efdb9b13
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58782155"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898709"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio 中的 C++
 
@@ -26,14 +26,14 @@ Microsoft Visual C++ 通常簡稱為 Visual C++ 或 MSVC，是 C++、C 及組合
 
 ## <a name="whats-new-and-conformance-history"></a>新功能與合規性歷程記錄
 
-[Visual Studio 2017 中 C++ 的新功能](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-了解 Visual Studio 2017 的新功能。
+[Visual Studio 中 C++ 的新功能](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+了解 Visual Studio 中的新功能。
 
 [Visual Studio 2003 到 2015 中 C++ 的新功能](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 了解從 2003 到 2015，每版 Visual Studio 中 C++ 的新功能。
 
-[Visual Studio 2017 中的 C++ 一致性改善](cpp-conformance-improvements-2017.md)<br/>
-了解 Visual Studio 2017 中的 C++ 一致性改善。
+[Visual Studio 中的 C++ 一致性改善](cpp-conformance-improvements.md)<br/>
+了解 Visual Studio 中的 C++ 一致性改進。
 
 [Visual C++ 語言一致性](visual-cpp-language-conformance.md)<br/>
 MSVC C++ 編譯器中依功能分類的一致性狀態清單。
@@ -74,7 +74,7 @@ MSVC C++ 編譯器中依功能分類的一致性狀態清單。
 [在 Visual Studio 中進行 C++ 開發的概觀](overview-of-cpp-development.md)<br/>
 如何使用 Visual Studio IDE 來建立專案、編輯程式碼、連結至程式庫、編譯、偵錯、建立單元測試、執行靜態分析、部署等等。
 
-[專案和建置系統](../build/projects-and-build-systems-cpp.md)<br/>
+[專案與建置系統](../build/projects-and-build-systems-cpp.md)<br/>
 如何使用 MSVC 編譯器和連結器選項，來建立及設定 Visual Studio C++ 專案、CMake 專案及其他種類的專案。
 
 [撰寫及重構 C++ 程式碼](../ide/writing-and-refactoring-code-cpp.md)<br/>
@@ -91,7 +91,7 @@ MSVC C++ 編譯器中依功能分類的一致性狀態清單。
 
 ## <a name="write-applications-in-c"></a>使用 C++ 撰寫應用程式
 
-[通用 Windows 應用程式](../windows/universal-windows-apps-cpp.md)<br/>
+[通用 Windows App](../windows/universal-windows-apps-cpp.md)<br/>
 尋找 Windows 開發人員中心網站上的指南和參考內容。 如需開發 UWP 應用程式的相關資訊，請參閱[通用 Windows 平台簡介](/windows/uwp/get-started/universal-application-platform-guide)和[使用 C++ 建立您的第一個 UWP 應用程式](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)。
 
 [傳統型應用程式 (C++)](../windows/desktop-applications-visual-cpp.md)<br/>
@@ -109,7 +109,7 @@ MSVC C++ 編譯器中依功能分類的一致性狀態清單。
 [平行程式設計](../parallel/parallel-programming-in-visual-cpp.md)<br/>
 學習如何使用平行模式程式庫 (PPL)、C++ AMP、OpenMP 以及和 Windows 多執行緒相關的其他功能。
 
-[安全性最佳做法](../security/security-best-practices-for-cpp.md)<br/>
+[安全性最佳作法](../security/security-best-practices-for-cpp.md)<br/>
 學習如何保護應用程式以防止惡意程式碼並免於未經授權的使用。
 
 [雲端和 Web 程式設計](../cloud/cloud-and-web-programming-in-visual-cpp.md)<br/>

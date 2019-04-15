@@ -5,18 +5,18 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 151ffecc0a9497d84b23a631477827ed2e86711a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 69591186550a915edb49889617740e454817f154
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58782135"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898800"
 ---
 # <a name="visual-c-language-conformance"></a>Visual C++ 語言一致性
 
 本主題摘要說明 Visual Studio 2017 及較舊版 C++ 編譯器功能和標準程式庫功能之 ISO C++03、C++11、C++14、C++17 和 C++20 草案的語言標準一致性。 每個編譯器和標準程式庫功能的名稱皆可連結至說明該項功能的 ISO C++ 標準提案計畫書 (若在發行時有提供該計畫書)。 支援的資料行會列出最先出現該功能支援的 Visual Studio 版本。
 
-如需 Visual Studio 2017 一致性改善及其他變更的詳細資料，請參閱 [Visual Studio 2017 中的 C++ 編譯器一致性改善](cpp-conformance-improvements-2017.md)及 [Visual Studio 2017 中 Visual C++ 的新功能](what-s-new-for-visual-cpp-in-visual-studio.md)。 如需舊版的一致性變更，請參閱 [Visual C++ 變更歷程記錄](../porting/visual-cpp-change-history-2003-2015.md)和[從 2003 到 2015 的 Visual C++ 新功能](../porting/visual-cpp-what-s-new-2003-through-2015.md)。 如需 C++ 小組發出的最新消息，請瀏覽 [Visual C++ Team Blog](https://blogs.msdn.microsoft.com/vcblog/) (Visual C++ 小組部落格)。
+如需 Visual Studio 2017 一致性改善及其他變更的詳細資料，請參閱 [Visual Studio 2017 中的 C++ 編譯器一致性改善](cpp-conformance-improvements.md)及 [Visual Studio 2017 中 Visual C++ 的新功能](what-s-new-for-visual-cpp-in-visual-studio.md)。 如需舊版的一致性變更，請參閱 [Visual C++ 變更歷程記錄](../porting/visual-cpp-change-history-2003-2015.md)和[從 2003 到 2015 的 Visual C++ 新功能](../porting/visual-cpp-what-s-new-2003-through-2015.md)。 如需 C++ 小組發出的最新消息，請瀏覽 [Visual C++ Team Blog](https://blogs.msdn.microsoft.com/vcblog/) (Visual C++ 小組部落格)。
 
 > [!NOTE]
 > Visual Studio 2015 與 Visual Studio 2017 之間沒有二進位檔重大變更。
@@ -315,8 +315,8 @@ __VS 2017 15.7__ 表示 Visual Studio 2017 15.7 版所支援的功能。<br/>
 
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)<br/>
-[Visual Studio 2017 中的 C++ 一致性改善](cpp-conformance-improvements-2017.md)<br/>
-[Visual Studio 2017 中 Visual C++ 的新功能](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Visual Studio 中的 C++ 一致性改善](cpp-conformance-improvements.md)<br/>
+[Visual Studio 中 Visual C++ 的新功能](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [從 2003 到 2015 的 Visual C++ 變更歷程記錄](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [從 2003 到 2015 的 Visual C++ 新功能](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
-[Visual C++ Team Blog](https://blogs.msdn.microsoft.com/vcblog/) (Visual C++ 小組部落格)
+[Visual C++ 的小組部落格](https://blogs.msdn.microsoft.com/vcblog/)

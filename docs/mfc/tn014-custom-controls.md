@@ -7,18 +7,18 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: d529b235daa1c6aa889b69e8d6bb2f02a58436bb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c68b60f065e69213b3ab32c887bc7af129a70fef
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297485"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772120"
 ---
 # <a name="tn014-custom-controls"></a>TN014:自訂控制項
 
 本附註將描述自訂和自繪控制項的 MFC 支援。 它也描述動態子類別化，並描述之間的關係[CWnd](../mfc/reference/cwnd-class.md)物件和`HWND`s。
 
-MFC 範例應用程式 CTRLTEST 將說明如何使用多種自訂控制項。 請參閱 MFC 一般範例的原始程式碼[CTRLTEST](../visual-cpp-samples.md)和線上說明。
+MFC 範例應用程式 CTRLTEST 將說明如何使用多種自訂控制項。 請參閱 MFC 一般範例的原始程式碼[CTRLTEST](../overview/visual-cpp-samples.md)和線上說明。
 
 ## <a name="owner-draw-controlsmenus"></a>主控描繪控制項/功能表
 
@@ -98,13 +98,13 @@ MFC 提供的預設實作 (在`CWnd`並[CMenu](../mfc/reference/cmenu-class.md)�
 
 切換至 OWNERDRAWVARIABLE 樣式會強制系統以 NOINTEGRALHEIGHT 樣式套用至控制項。 因為控制項無法計算使用可變大小的項目之整數高度，則會忽略 INTEGRALHEIGHT 的預設樣式和控制項永遠是 NOINTEGRALHEIGHT。 如果您的項目高度固定，就可以藉由將控制項大小指定為項目大小的整數倍數防止繪製部分項目。
 
-若是自繪清單方塊和下拉式方塊和 LBS_SORT 或 CBS_SORT 樣式，您必須覆寫`OnCompareItem`方法。
+若是自繪清單方塊和下拉式方塊和 [LBS_SORT] 或 [CBS_SORT 樣式，您必須覆寫`OnCompareItem`方法。
 
 對於自繪清單方塊和下拉式方塊，通常不會覆寫 `OnDeleteItem`。 如果您要執行任何特殊處理，可以覆寫 `OnDeleteItem`。 適用的情況是，每個清單方塊或下拉式方塊項目都儲存了額外的記憶體或其他資源。
 
 ## <a name="examples-of-self-drawing-controls-and-menus"></a>自繪控制項和功能表的範例
 
-MFC 一般範例[CTRLTEST](../visual-cpp-samples.md)提供了自繪功能表和自繪清單方塊的範例。
+MFC 一般範例[CTRLTEST](../overview/visual-cpp-samples.md)提供了自繪功能表和自繪清單方塊的範例。
 
 最常見的自繪按鈕範例是點陣圖按鈕。 點陣圖按鈕是指顯示一個、兩個或三個點陣圖影像代表不同狀態的按鈕。 這個範例 MFC 類別中提供[CBitmapButton](../mfc/reference/cbitmapbutton-class.md)。
 
@@ -114,10 +114,9 @@ MFC 一般範例[CTRLTEST](../visual-cpp-samples.md)提供了自繪功能表和�
 
 子類別化是 Windows 詞彙，來取代<xref:System.Windows.Forms.Control.WndProc%2A>自訂視窗的`WndProc`並呼叫舊`WndProc`提供預設功能。
 
-子類別化不應與 C++ 類別衍生混淆。 進一步釐清，c + + 詞彙*基底類別*並*衍生類別*類似*超級類別*和*子類別*在 Windows 中物件模型。 使用 MFC 的 C++ 衍生和 Windows 子類別化在功能上很類似，但 C++ 不支援動態子類別化。
+子類別化不應與 C++ 類別衍生混淆。 進一步釐清，C++條款*基底類別*並*衍生的類別*類似*超級類別*並*子類別*中Windows 物件模型。 使用 MFC 的 C++ 衍生和 Windows 子類別化在功能上很類似，但 C++ 不支援動態子類別化。
 
-
-  `CWnd` 類別提供了 C++ 物件 (衍生自 `CWnd`) 與 Windows 視窗物件 (稱為 `HWND`) 之間的連接。
+`CWnd` 類別提供了 C++ 物件 (衍生自 `CWnd`) 與 Windows 視窗物件 (稱為 `HWND`) 之間的連接。
 
 有三種在這些物件之間產生關聯的常見方式：
 
@@ -131,7 +130,7 @@ MFC 一般範例[CTRLTEST](../visual-cpp-samples.md)提供了自繪功能表和�
 
 這兩種常式都會將 `CWnd` 物件附加至現有的 `HWND`。 `SubclassWindow` 是直接採用 `HWND`。 `SubclassDlgItem` 是採用控制項 ID 和父視窗的 Helper 函式。 `SubclassDlgItem` 的設計是將 C++ 物件附加至從對話方塊範本建立的對話方塊控制項。
 
-請參閱[CTRLTEST](../visual-cpp-samples.md)何時應使用的數個範例的範例`SubclassWindow`和`SubclassDlgItem`。
+請參閱[CTRLTEST](../overview/visual-cpp-samples.md)何時應使用的數個範例的範例`SubclassWindow`和`SubclassDlgItem`。
 
 ## <a name="see-also"></a>另請參閱
 

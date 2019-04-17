@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTabView [MFC], IsScrollBar
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
-ms.openlocfilehash: 5ac62d04c38dbddda90d2f33a9c14c9c131fcd9c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 56640edbd0d2e74a1cc00dad5441350ad3d35725
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326591"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772084"
 ---
 # <a name="ctabview-class"></a>CTabView 類別
 
@@ -61,11 +61,11 @@ class CTabbedView : public CView
 
 ## <a name="remarks"></a>備註
 
-這個類別可讓您輕鬆放入文件/檢視應用程式的 索引標籤式的檢視。 `CTabView` 已`CView`-衍生類別，其中包含內嵌`CMFCTabCtrl`物件。 `CTabView` 處理支援所需的所有訊息`CMFCTabCtrl`物件。 只需要衍生的類別`CTabView`並將之插入您的應用程式，然後新增`CView`-使用衍生類別`AddView`方法。 索引標籤控制項顯示這些檢視表與索引標籤。
+這個類別可讓您輕鬆放入文件/檢視應用程式的 [索引標籤式的檢視。 `CTabView` 已`CView`-衍生類別，其中包含內嵌`CMFCTabCtrl`物件。 `CTabView` 處理支援所需的所有訊息`CMFCTabCtrl`物件。 只需要衍生的類別`CTabView`並將之插入您的應用程式，然後新增`CView`-使用衍生類別`AddView`方法。 索引標籤控制項顯示這些檢視表與索引標籤。
 
 例如，您可能可以用不同的方式表示的文件： 為試算表、 圖表、 可編輯的表單等等。 您可以建立繪圖的資料，視需要的個別檢視、 插入到您`CTabView`-衍生的物件，並讓它們而不需要任何額外的程式碼索引標籤。
 
-[TabbedView 範例：MFC 索引標籤式檢視應用程式](../../visual-cpp-samples.md)說明的使用方式`CTabView`。
+[TabbedView 範例：MFC 索引標籤式檢視應用程式](../../overview/visual-cpp-samples.md)說明的使用方式`CTabView`。
 
 ## <a name="example"></a>範例
 

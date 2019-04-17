@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-ms.openlocfilehash: b221abf772df06541ecde247a9db9401c0ed3c3a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7776bf504d502feee8ef51949b8adc8e44f94c8e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278011"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772289"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar 類別
 
@@ -71,7 +71,7 @@ Rebar 物件的操作方式類似工具列物件。 Rebar 控制項可以包含�
 
 ## <a name="example"></a>範例
 
-下例示範如何在 `CMFCReBar` 類別中使用各種方法。 此範例示範如何建立 rebar 控制項並加入它的頻外。 此群組列做為內部的工具列。 此程式碼片段是一部分[Rebar 測試範例](../../visual-cpp-samples.md)。
+下例示範如何在 `CMFCReBar` 類別中使用各種方法。 此範例示範如何建立 rebar 控制項並加入它的頻外。 此群組列做為內部的工具列。 此程式碼片段是一部分[Rebar 測試範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_RebarTest#1](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_1.h)]
 [!code-cpp[NVC_MFC_RebarTest#2](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_2.cpp)]

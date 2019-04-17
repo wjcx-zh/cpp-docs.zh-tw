@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMFCShellListCtrl [MFC], Refresh
 - CMFCShellListCtrl [MFC], SetItemTypes
 ms.assetid: ad472958-5586-4c50-aadf-1844c30bf6e7
-ms.openlocfilehash: a08cfff3996d3dce617cf80293a96675083a39d1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a513a5e85ae5cf00f7ea874967a709245e016b34
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302542"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772107"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl 類別
 
@@ -92,7 +92,7 @@ A [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)可以與�
 
 ## <a name="example"></a>範例
 
-下列範例示範如何建立的物件`CMFCShellListCtrl`類別以及如何顯示目前所顯示資料夾的上層資料夾。 此程式碼片段是一部分[總管範例](../../visual-cpp-samples.md)。
+下列範例示範如何建立的物件`CMFCShellListCtrl`類別以及如何顯示目前所顯示資料夾的上層資料夾。 此程式碼片段是一部分[總管範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_Explorer#1](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_1.h)]
 [!code-cpp[NVC_MFC_Explorer#2](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_2.cpp)]

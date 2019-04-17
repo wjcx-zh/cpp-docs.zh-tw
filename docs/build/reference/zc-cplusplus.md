@@ -23,7 +23,7 @@ ms.locfileid: "57810090"
 
 ## <a name="remarks"></a>備註
 
- **\_ \_Cplusplus**前置處理器巨集通常用來報告支援特定版本的 c + + 標準。 因為許多現有的程式碼看起來比對"199711 L"這個巨集的值而定，編譯器不會變更巨集的值，除非明確地在您選擇使用 **/zc: __cplusplus**編譯器選項。 **/Zc: __cplusplus**選項可用以啟動 Visual Studio 2017 15.7 版中，並預設為關閉。 在舊版的 Visual Studio，並根據預設，或如果 **/Zc:__cplusplus-** 指定時，Visual Studio 會傳回"199711 L"的值為 **\_ \_cplusplus**前置處理器巨集。 [/Permissive--](permissive-standards-conformance.md)選項不會啟用 **/zc: __cplusplus**。
+**\_\_Cplusplus** 前置處理器巨集通常用來報告支援特定版本的 c + + 標準。 因為許多現有的程式碼看起來比對"199711 L"這個巨集的值而定，編譯器不會變更巨集的值，除非明確地在您選擇使用 **/zc: __cplusplus**編譯器選項。 **/Zc: __cplusplus**選項可用以啟動 Visual Studio 2017 15.7 版中，並預設為關閉。 在舊版的 Visual Studio，並根據預設，或如果 **/Zc:__cplusplus-** 指定時，Visual Studio 會傳回"199711 L"的值為 **\_ \_cplusplus**前置處理器巨集。 [/Permissive--](permissive-standards-conformance.md)選項不會啟用 **/zc: __cplusplus**。
 
 當 **/zc: __cplusplus**啟用選項時，所報告的值 **\_ \_cplusplus**巨集取決於[/std](std-specify-language-standard-version.md)切換版本設定。 下表顯示可能的值為巨集：
 

@@ -6,12 +6,12 @@ ms.date: 03/25/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: b558b2e0c381b8521fe0ba5f18647a933175ce07
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.openlocfilehash: f1e6b06c3212ae3ff192fdf402c0167575161656
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58867093"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59430756"
 ---
 # <a name="create-a-c-console-app-project"></a>建立 C++ 主控台應用程式專案
 
@@ -34,6 +34,9 @@ Visual Studio 會使用「專案」來組織應用程式的程式碼，並使用
 1. 在專案範本清單中，選擇 [主控台應用程式]，然後選擇 [下一步]。
 
    ![選擇 [主控台應用程式] 範本](./media/calc-vs2019-choose-console-app.png "選擇 [主控台應用程式] 範本")
+
+   > [!Important]
+   > 請務必選擇 C++ 版本的**主控台應用程式**範本。 它有 **C++**、**Windows** 和 **Console** 標籤，角落有 "++" 圖示。
 
 1. 在 [設定新專案] 對話方塊中，選取 [專案名稱] 編輯方塊中，將您的新專案命名為 *CalculatorTutorial*，然後選擇 [建立].
 

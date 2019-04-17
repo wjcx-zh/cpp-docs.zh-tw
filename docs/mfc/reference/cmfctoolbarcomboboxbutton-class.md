@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: fae70e44657023b7a7b93f72599bef4ba6faf307
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e3c124103aa95d9db5095e438a6b21d46c7cb35d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303166"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772068"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton 類別
 
@@ -136,7 +136,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 
 ## <a name="example"></a>範例
 
-下例示範如何在 `CMFCToolBarComboBoxButton` 類別中使用各種方法。 此範例示範如何啟用編輯] 和 [下拉式方塊中，應用程式中設定的垂直位置下拉式方塊按鈕、 清單方塊的高度時設定拉下時，應用程式中設定的下拉式方塊按鈕的平面樣式外觀並設定在編輯方塊中的下拉式方塊按鈕的文字。 此程式碼片段是一部分[Visual Studio 示範範例](../../visual-cpp-samples.md)。
+下例示範如何在 `CMFCToolBarComboBoxButton` 類別中使用各種方法。 此範例示範如何啟用編輯] 和 [下拉式方塊中，應用程式中設定的垂直位置下拉式方塊按鈕、 清單方塊的高度時設定拉下時，應用程式中設定的下拉式方塊按鈕的平面樣式外觀並設定在編輯方塊中的下拉式方塊按鈕的文字。 此程式碼片段是一部分[Visual Studio 示範範例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#37](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]
@@ -358,7 +358,7 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，新的指標 編輯方塊否則為 NULL。
+如果方法成功，新的指標] 編輯方塊否則為 NULL。
 
 ### <a name="remarks"></a>備註
 
@@ -557,7 +557,7 @@ int GetCurSel() const;
 
 ##  <a name="getcurselall"></a>  CMFCToolBarComboBoxButton::GetCurSelAll
 
-傳回目前選取項目的索引中的下拉式清單方塊 按鈕具有指定的命令 id。
+傳回目前選取項目的索引中的下拉式清單方塊] 按鈕具有指定的命令 id。
 
 ```
 static int GetCurSelAll(UINT uiCmd);
@@ -879,7 +879,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 
 ##  <a name="onaddtocustomizepage"></a>  CMFCToolBarComboBoxButton::OnAddToCustomizePage
 
-加入按鈕時由架構呼叫**自訂** 對話方塊。
+加入按鈕時由架構呼叫**自訂**] 對話方塊。
 
 ```
 virtual void OnAddToCustomizePage();
@@ -1016,7 +1016,7 @@ virtual void OnDraw(
 
 ##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarComboBoxButton::OnDrawOnCustomizeList
 
-由架構呼叫以繪製下拉式方塊按鈕**命令**窗格**自訂** 對話方塊。
+由架構呼叫以繪製下拉式方塊按鈕**命令**窗格**自訂**] 對話方塊。
 
 ```
 virtual int OnDrawOnCustomizeList(
@@ -1210,7 +1210,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="remarks"></a>備註
 
-在 設定`CArchive`物件決定這個方法會讀取或寫入封存。
+在 [設定`CArchive`物件決定這個方法會讀取或寫入封存。
 
 ##  <a name="setaccdata"></a>  CMFCToolBarComboBoxButton::SetACCData
 

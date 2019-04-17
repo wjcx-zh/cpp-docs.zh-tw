@@ -39,7 +39,7 @@ Microsoft 將 `wchar_t` 實作為二位元的不帶正負號值。 它會對應�
 
 如果您要撰寫新程式碼必須與仍使用舊版程式碼交互操作`typedef`新版`wchar_t`，您可以提供多載兩個`unsigned short`並`__wchar_t`的變化`wchar_t`，如此一來，您的程式碼可以連結使用程式碼編譯 **/zc: wchar_t**或沒有它所編譯的程式碼。 否則，您必須提供兩個不同組建的程式庫，一個使用，不含 **/zc: wchar_t**啟用。 縱使在這種情況，我們仍然建議您以編譯新程式碼所使用的相同編譯器建置較舊的程式碼。 切勿混合不同編譯器所編譯的二進位檔。
 
-當 **/zc: wchar_t**指定，則 **\_WCHAR\_T\_定義**並**\_原生\_WCHAR\_T\_定義**符號定義。 如需詳細資訊，請參閱 [Predefined Macros](../../preprocessor/predefined-macros.md)。
+當 **/zc: wchar_t**指定，則 **\_WCHAR\_T\_定義** 並 **\_原生\_WCHAR\_T\_定義** 符號定義。 如需詳細資訊，請參閱 [Predefined Macros](../../preprocessor/predefined-macros.md)。
 
 如果您的程式碼會使用編譯器 COM 全域函式，因為 **/zc: wchar_t**現在在預設情況下，我們建議您變更 comsupp.lib 的明確參考 (從[註解 pragma](../../preprocessor/comment-c-cpp.md)或命令列） 為 comsuppw.lib 或 comsuppwd.lib。 (如果您必須以編譯 **/zc: wchar_t-**，使用 comsupp.lib。)如果您包含 comdef.h 標頭檔，則會為您指定正確的程式庫。 編譯器 COM 支援的相關資訊，請參閱[編譯器 COM 支援](../../cpp/compiler-com-support.md)。
 

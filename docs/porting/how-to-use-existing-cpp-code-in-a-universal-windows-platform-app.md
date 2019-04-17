@@ -1,19 +1,19 @@
 ---
-title: HOW TO：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼
-ms.date: 08/21/2018
+title: 作法：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼
+ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 1a4633b74591e16f22def44ff5875557f2909043
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 3aeef205effe072a25fc0b3dabb9145245461d45
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745519"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424192"
 ---
-# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>HOW TO：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼
+# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>作法：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼
 
-在 UWP 環境中執行傳統型程式的最簡單方式，可能是使用傳統型橋接器技術。 其中包括 Desktop App Converter，這會將現有應用程式封裝為 UWP 應用程式，而不需要變更程式碼。 如需詳細資訊，請參閱[傳統型橋接器](/windows/uwp/porting/desktop-to-uwp-root)。
+在通用 Windows 平台 (UWP) 環境中執行傳統型程式的最簡單方式，可能是使用傳統型橋接器技術。 其中包括 Desktop App Converter，這會將現有應用程式封裝為 UWP 應用程式，而不需要變更程式碼。 如需詳細資訊，請參閱[傳統型橋接器](/windows/uwp/porting/desktop-to-uwp-root)。
 
-本主題的其餘部分討論如何將 C++ 程式庫 (DLL 和靜態程式庫) 移植到通用 Windows 平台 (UWP)。 您可能想要執行這項作業，讓您的核心 C++ 邏輯可以與多個 UWP 應用程式搭配使用。
+本主題的其餘部分討論如何將 C++ 程式庫 (DLL 和靜態程式庫) 移植到通用 Windows 平台。 您可能想要執行這項作業，讓您的核心 C++ 邏輯可以與多個 UWP 應用程式搭配使用。
 
 UWP 應用程式會在受保護的環境中執行，因此不允許執行許多可能會危害平台安全性的 Win32、COM 及 CRT API 呼叫。 如果使用 `/ZW` 選項，編譯器能夠偵測這類呼叫及產生錯誤。 您可以在應用程式上使用應用程式認證套件，來偵測呼叫禁止使用之 API 的程式碼。 如需詳細資訊，請參閱 [Windows 應用程式認證套件](/windows/uwp/debug-test-perf/windows-app-certification-kit)。
 
@@ -44,7 +44,7 @@ UWP 應用程式會在受保護的環境中執行，因此不允許執行許多�
 
 本主題包含下列程序：
 
-- [在 UWP 應用程式中使用 Win32 DLL ](#BK_Win32DLL)
+- [在 UWP 應用程式中使用 Win32 DLL](#BK_Win32DLL)
 
 - [在 UWP 應用程式中使用原生 C++ 靜態程式庫](#BK_StaticLib)
 
@@ -54,11 +54,11 @@ UWP 應用程式會在受保護的環境中執行，因此不允許執行許多�
 
 為使安全性和可靠性更佳，通用 Windows 應用程式會在受限制的執行階段環境中執行，因此您不能像在傳統 Windows 桌面應用程式那樣使用任何的原生 DLL。 如果您有 DLL 的原始程式碼，就可以移植程式碼，使其在 UWP 上執行。 首先可變更幾個專案設定和專案檔案中繼資料，將該專案識別為 UWP 專案。 您需要使用可啟用 C++/CX 的 `/ZW` 選項來編譯程式庫的程式碼。 由於與該環境相關聯的控制項更加嚴格，因此 UWP 應用程式中不允許特定 API 呼叫。 請參閱[適用於 Win32 和 COM API 的 UWP 應用程式](/uwp/win32-and-com/win32-and-com-for-uwp-apps)。
 
-下列程序適用於您具有使用 **__declspec(dllexport)** 公開函式的原生 DLL 案例。
+下列程序適用於您具有使用 `__declspec(dllexport)` 公開函式的原生 DLL 案例。
 
 ### <a name="to-port-a-native-dll-to-the-uwp-without-creating-a-new-project"></a>移植原生 DLL 到 UWP 而不需建立新專案
 
-1. 如果您有使用 **__declspec(dllexport)** 來匯出函式的原生 DLL，您可以將 DLL 重新編譯為 UWP 專案，以從 UWP 應用程式中呼叫這些函式。 例如，假設我們有會匯出幾個類別和方法的 DLL，且其具有類似下列標頭檔的程式碼：
+1. 如果您有使用 `__declspec(dllexport)` 來匯出函式的原生 DLL，您可以將 DLL 重新編譯為 UWP 專案，以從 UWP 應用程式中呼叫這些函式。 例如，假設我們有會匯出幾個類別和方法的 DLL，且其具有類似下列標頭檔的程式碼：
 
     ```cpp
     // giraffe.h
@@ -131,7 +131,7 @@ UWP 應用程式會在受保護的環境中執行，因此不允許執行許多�
 
    此專案 (stdafx.h、dllmain.cpp) 中所有其他項目都屬於標準 Win32 專案範本。 如果您想要跟著做，但進行這些步驟時還不想要使用您自己的 DLL，則請嘗試建立 Win32 專案，在 [專案精靈] 中選取 DLL，然後加入標頭檔 giraffe.h 和程式碼檔案 giraffe.cpp，並將這個步驟中的程式碼內容複製到適當的檔案中。
 
-   定義 `_DLL` 時 (亦即，將專案建立為 DLL 時)，程式碼定義的巨集 `GIRAFFE_API` 會解析成 **__declspec(dllexport)**。
+   當定義 `_DLL` 時 (亦即，將專案建立為 DLL 時)，程式碼會定義解析成 `__declspec(dllexport)` 的巨集 `GIRAFFE_API`。
 
 2. 請開啟此 DLL 專案的 [專案屬性]，並將**組態**設定為 [所有組態]。
 
@@ -157,7 +157,7 @@ UWP 應用程式會在受保護的環境中執行，因此不允許執行許多�
 
    問題在於通用 Windows 專案針對先行編譯標頭檔使用不同的命名慣例。
 
-6. 建置專案。 您可能會收到一些有關命令列選項不相容的錯誤。 例如，較常使用的選項 [啟用最少重建 (/Gm)] 在許多 C++ 專案中是預設設定，但和 `/ZW` 不相容。
+6. 建置專案。 您可能會收到一些有關命令列選項不相容的錯誤。 例如，現已淘汰但曾頻繁使用的選項 [啟用最少重建 (/Gm)] 在許多舊版 C++ 專案中是預設設定，但和 `/ZW` 不相容。
 
    如果您針對通用 Windows 平台編譯，便無法使用某些函式。 您會看到任何相關問題的編譯器錯誤。 請解決這些問題，直到組建沒有錯誤為止。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrintInfo structure [MFC]
 ms.assetid: 0b3de849-d050-4386-9a14-f4c1a25684f7
-ms.openlocfilehash: e08885fc9893d175e819c0acbf571d96d425a2c4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 96b6204fe46cb624d22506b2d3e5c1d7621b1865
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273357"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772211"
 ---
 # <a name="cprintinfo-structure"></a>CPrintInfo 結構
 
@@ -59,7 +59,7 @@ struct CPrintInfo
 
 `CPrintInfo` 是一種結構，而且沒有基底類別。
 
-此架構會建立的物件`CPrintInfo`每次列印或預覽列印 命令和選擇的命令完成時將其終結。
+此架構會建立的物件`CPrintInfo`每次列印或預覽列印] 命令和選擇的命令完成時將其終結。
 
 `CPrintInfo` 包含列印工作，整體而言，例如為要列印的頁面範圍和列印工作，例如目前正在列印的頁面的目前狀態的相關資訊。 有些資訊會儲存在相關聯[CPrintDialog](../../mfc/reference/cprintdialog-class.md)物件; 此物件包含使用者在 [列印] 對話方塊中輸入的值。
 
@@ -317,7 +317,7 @@ void SetMinPage(UINT nMinPage);
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 DIBLOOK](../../visual-cpp-samples.md)<br/>
+[MFC 範例 DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting)<br/>
 [CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting)<br/>

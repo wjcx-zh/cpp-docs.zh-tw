@@ -10,10 +10,10 @@ helpviewer_keywords:
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
 ms.openlocfilehash: 310481a6ea6637de817bf29d528cbdfe70ae70db
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041321"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>資料錄集：資料錄集選取資料錄 (ODBC) 的方式
@@ -100,6 +100,6 @@ ms.locfileid: "59041321"
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [資料錄集：資料錄集更新資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
-[ODBC 的基本概念](../../data/odbc/odbc-basics.md)<br/>
+[ODBC 基本概念](../../data/odbc/odbc-basics.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
 [資料錄集：鎖定資料錄 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

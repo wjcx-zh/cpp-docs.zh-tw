@@ -22,10 +22,10 @@ helpviewer_keywords:
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
 ms.openlocfilehash: 0a002badf9c20ca7b2d1a129eca069e586893f3c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767232"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>變更 MFC 所建立之視窗的樣式
@@ -34,7 +34,7 @@ ms.locfileid: "58767232"
 
 ##  <a name="_core_changing_styles_in_a_new_mfc_application"></a> 變更在新的 MFC 應用程式中的樣式
 
-如果您使用 Visual c + + 2.0 或更新版本，您可以變更應用程式精靈中的預設視窗樣式，當您建立您的應用程式。 在應用程式精靈的使用者介面功能頁面上，您可以變更您的主框架視窗和 MDI 子視窗的樣式。 視窗類型，您可以指定框架粗細 （thick 或精簡型） 和下列任一項：
+如果您使用 Visual C++ 2.0 或更新版本，您就可以變更應用程式精靈中的預設視窗樣式，當您建立您的應用程式。 在應用程式精靈的使用者介面功能頁面上，您可以變更您的主框架視窗和 MDI 子視窗的樣式。 視窗類型，您可以指定框架粗細 （thick 或精簡型） 和下列任一項：
 
 - 視窗是否有最小化或最大化的控制項。
 
@@ -56,7 +56,7 @@ ms.locfileid: "58767232"
 
 ##  <a name="_core_the_sdi_case"></a> SDI 案例
 
-在單一文件介面 (SDI) 應用程式中，framework 中的預設視窗樣式會組成**WS_OVERLAPPEDWINDOW**並**FWS_ADDTOTITLE**樣式。 **FWS_ADDTOTITLE**是指示架構以新增該視窗的標題的文件標題的 MFC 特定樣式。 若要變更在 SDI 應用程式視窗的屬性，覆寫`PreCreateWindow`函式，在您的類別衍生自`CFrameWnd`(其中的應用程式精靈名稱`CMainFrame`)。 例如: 
+在單一文件介面 (SDI) 應用程式中，framework 中的預設視窗樣式會組成**WS_OVERLAPPEDWINDOW**並**FWS_ADDTOTITLE**樣式。 **FWS_ADDTOTITLE**是指示架構以新增該視窗的標題的文件標題的 MFC 特定樣式。 若要變更在 SDI 應用程式視窗的屬性，覆寫`PreCreateWindow`函式，在您的類別衍生自`CFrameWnd`(其中的應用程式精靈名稱`CMainFrame`)。 例如：
 
 [!code-cpp[NVC_MFCDocViewSDI#11](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_2.cpp)]
 

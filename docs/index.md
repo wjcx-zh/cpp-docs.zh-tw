@@ -5,10 +5,10 @@ description: 了解如何使用 C++ 來開發平台和裝置的應用程式、�
 author: mikeblome
 ms.author: mblome
 ms.openlocfilehash: f402087b101487a444996e7e27b186382c4874fd
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898670"
 ---
 <div id="main" class="v2">
@@ -341,10 +341,10 @@ ms.locfileid: "58898670"
                 </ul>
             </li>
             <li>
-                <a href="#langlib">語言與程式庫</a>
+                <a href="#langlib">語言和程式庫</a>
                 <ul id="langlib">
                     <li>
-                        <a href="#langlib1">語言與程式庫</a>
+                        <a href="#langlib1">語言和程式庫</a>
                         <ul id="langlib1" class="cardsC">
                             <li>
                                 <a href="/cpp/cpp/c-cpp-language-and-standard-libraries">

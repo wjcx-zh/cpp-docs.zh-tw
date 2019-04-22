@@ -27,10 +27,10 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
 ms.openlocfilehash: 9233e83a08fde87c15be5cc1c42a2f1dd3b56511
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767986"
 ---
 # <a name="ctypedptrlist-class"></a>CTypedPtrList 類別
@@ -71,7 +71,7 @@ class CTypedPtrList : public BASE_CLASS
 
 ## <a name="remarks"></a>備註
 
-當您使用`CTypedPtrList`而非`CObList`或`CPtrList`，c + + 型別檢查功能，有助於排除不相符的指標類型所造成的錯誤。
+當您使用`CTypedPtrList`而非`CObList`或是`CPtrList`、C++型別檢查功能，有助於排除不相符的指標類型所造成的錯誤。
 
 颾魤 ㄛ`CTypedPtrList`包裝函式會執行大部分的轉型，如果您將需要`CObList`或`CPtrList`。
 

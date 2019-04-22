@@ -9,10 +9,10 @@ helpviewer_keywords:
 - MP compiler option (C++)
 - cl.exe compiler, multi-process build
 ms.openlocfilehash: e005b0314e87270e81dbb155dfdaa67be067cd3f
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424140"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (使用多處理序建置)
@@ -129,4 +129,4 @@ Visual Studio 會使用[MSBuild.exe](/visualstudio/msbuild/msbuild-reference)工
 
 [#import 指示詞](../../preprocessor/hash-import-directive-cpp.md)<br/>
 [命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
-[/Zf （PDB 產生速度加快）](zf.md)<br/>
+[/Zf (PDB 產生速度加快)](zf.md)<br/>

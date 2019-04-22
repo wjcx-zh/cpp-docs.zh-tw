@@ -4,23 +4,23 @@ ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 5779dae8-8634-4c77-aa8b-9a348692a2bb
 ms.openlocfilehash: 602e70a013b0f92eee174a218ba0fb04396ecd5a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58784521"
 ---
 # <a name="wrl-reference"></a>WRL 參考
 
-本節包含的 Windows 執行階段 c + + 範本庫 (WRL) 的參考資訊。
+本節包含 Windows 執行階段的參考資訊C++範本庫 (WRL)。
 
 > [!NOTE]
-> Windows 執行階段 c + + 樣板程式庫會定義支援的 Windows 執行階段 c + + 樣板程式庫基礎結構，而且不是直接從您的程式碼使用的功能。 這份文件中註明這類功能。
+> Windows 執行階段C++樣板程式庫定義支援 Windows 執行階段的功能C++範本程式庫的基礎結構，不適合直接從您的程式碼使用。 這份文件中註明這類功能。
 
 ## <a name="in-this-section"></a>本節內容
 
 [Microsoft::WRL 命名空間](microsoft-wrl-namespace.md)<br/>
-定義 Windows 執行階段 c + + 樣板程式庫所組成的基本類型。
+Windows 執行階段所組成的基本類型會定義C++樣板程式庫。
 
 [Microsoft::WRL::Wrappers 命名空間](microsoft-wrl-wrappers-namespace.md)<br/>
 定義資源擷取為初始設定 (RAII) 包裝函式類型，可簡化物件、 字串和控制代碼的存留期管理。
@@ -34,4 +34,4 @@ ms.locfileid: "58784521"
 ## <a name="related-sections"></a>相關章節
 
 [Windows 執行階段 C++ 範本庫 (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
-導入了 Windows 執行階段 c + + 樣板程式庫會提供低階方式撰寫和使用 Windows 執行階段元件的 COM 為基礎的範本程式庫。
+Windows 執行階段導入了C++樣板程式庫會提供低階方式撰寫和使用 Windows 執行階段元件的 COM 為基礎的範本程式庫。

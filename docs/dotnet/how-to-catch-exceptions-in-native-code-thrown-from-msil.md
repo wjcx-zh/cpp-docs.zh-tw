@@ -7,17 +7,17 @@ helpviewer_keywords:
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
 ms.openlocfilehash: 95ce7a2afabc34ea78376b12da61f419dab4af34
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776553"
 ---
 # <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>HOW TO：從 MSIL 擲回的原生程式碼中攔截例外狀況
 
-原生程式碼，您可以攔截從 MSIL 的原生 c + + 例外狀況。  您可以攔截與 CLR 例外狀況`__try`和`__except`。
+在原生程式碼，您可以攔截原生C++從 MSIL 的例外狀況。  您可以攔截與 CLR 例外狀況`__try`和`__except`。
 
-如需詳細資訊，請參閱 < [Structured Exception Handling （C/c + +）](../cpp/structured-exception-handling-c-cpp.md)並[c + + 例外狀況處理](../cpp/cpp-exception-handling.md)。
+如需詳細資訊，請參閱 < [Structured Exception Handling (C /C++)](../cpp/structured-exception-handling-c-cpp.md)並[C++例外狀況處理](../cpp/cpp-exception-handling.md)。
 
 ## <a name="example"></a>範例
 

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
 ms.openlocfilehash: c68b60f065e69213b3ab32c887bc7af129a70fef
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772120"
 ---
 # <a name="tn014-custom-controls"></a>TN014:自訂控制項
@@ -98,7 +98,7 @@ MFC 提供的預設實作 (在`CWnd`並[CMenu](../mfc/reference/cmenu-class.md)�
 
 切換至 OWNERDRAWVARIABLE 樣式會強制系統以 NOINTEGRALHEIGHT 樣式套用至控制項。 因為控制項無法計算使用可變大小的項目之整數高度，則會忽略 INTEGRALHEIGHT 的預設樣式和控制項永遠是 NOINTEGRALHEIGHT。 如果您的項目高度固定，就可以藉由將控制項大小指定為項目大小的整數倍數防止繪製部分項目。
 
-若是自繪清單方塊和下拉式方塊和 [LBS_SORT] 或 [CBS_SORT 樣式，您必須覆寫`OnCompareItem`方法。
+若是自繪清單方塊和下拉式方塊和 LBS_SORT 或 CBS_SORT 樣式，您必須覆寫`OnCompareItem`方法。
 
 對於自繪清單方塊和下拉式方塊，通常不會覆寫 `OnDeleteItem`。 如果您要執行任何特殊處理，可以覆寫 `OnDeleteItem`。 適用的情況是，每個清單方塊或下拉式方塊項目都儲存了額外的記憶體或其他資源。
 

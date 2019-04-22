@@ -7,10 +7,10 @@ helpviewer_keywords:
 - decorated names, calling conventions
 ms.assetid: 8327a27b-bb4f-49f2-8218-b851b9d2a463
 ms.openlocfilehash: b916a73e0b8f86755384914fa85ef8a901e4a64c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041519"
 ---
 # <a name="name-decoration"></a>名稱裝飾
@@ -30,7 +30,7 @@ void CALLTYPE test(void)
 |標準呼叫命名慣例 (`__stdcall`)|`_test@0`|`?test@@YGXXZ`|
 |Vectorcall 命名慣例 (`__vectorcall`)|`test@@0`|`?test@@YQXXZ`|
 
-使用 extern "C" 從 C++ 呼叫 C 函式。 Extern "C" 會針對非類別的 C++ 函式強制使用 C 命名慣例。 注意編譯器參數 **/Tc**或是 **/Tp**，這會告訴編譯器忽略副檔名，並分別將檔案編譯為 C 或 c + +。 這些選項可能會導致非預期的名稱。
+使用 extern "C" 從 C++ 呼叫 C 函式。 Extern "C" 會針對非類別的 C++ 函式強制使用 C 命名慣例。 注意編譯器參數 **/Tc**或是 **/Tp**，這會告訴編譯器忽略副檔名，並將檔案編譯為 C 或C++，分別。 這些選項可能會導致非預期的名稱。
 
 參數不相符的函式原型也可能導致這個錯誤。 名稱裝飾會將函式的參數納入最終的裝飾函式名稱。 使用與函式宣告中的參數類型不符合的參數類型來呼叫函式，也可能造成 LNK2001。
 

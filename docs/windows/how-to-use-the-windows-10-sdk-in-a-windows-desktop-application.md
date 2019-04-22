@@ -4,15 +4,15 @@ ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
 ms.openlocfilehash: f3f6897dfa0f180f629a2ca169ff74c5e5588365
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021524"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>HOW TO：使用 Windows 10 SDK，在 Windows 桌面應用程式
 
-當您在 Visual Studio 2017 中建立傳統 Windows 桌面專案時，它會設定預設為使用已安裝 c + + 桌面工作負載，或上次更新時所安裝的 Windows 10 sdk 版本來建置。 這個版本的 Windows SDK 是相容的 Windows 7 和更新版本。 請參閱[使用 Windows 標頭](/windows/desktop/WinProg/using-the-windows-headers)的目標設為特定的 Windows 版本的詳細資訊。
+當您在 Visual Studio 2017 中建立傳統 Windows 桌面專案時，它預設設定來使用的是 Windows 10 SDK 版本建置時一併安裝C++安裝或最近更新桌面工作負載。 這個版本的 Windows SDK 是相容的 Windows 7 和更新版本。 請參閱[使用 Windows 標頭](/windows/desktop/WinProg/using-the-windows-headers)的目標設為特定的 Windows 版本的詳細資訊。
 
 如果您想要的目標是舊版的 SDK，您可以開啟**專案 |屬性**，然後選擇 從可用的 Windows SDK 版本下拉式清單中的其他 SDK 版本。
 
@@ -20,7 +20,7 @@ ms.locfileid: "59021524"
 
 ### <a name="to-target-the-windows-10-sdk"></a>以 Windows 10 SDK 為目標
 
-1. 確定已安裝 Windows 10 SDK。 Windows 10 SDK 已安裝的一部分**使用 c + + 的桌面開發**工作負載。 獨立版本[下載和工具適用於 Windows 10](https://developer.microsoft.com/windows/downloads)。
+1. 確定已安裝 Windows 10 SDK。 Windows 10 SDK 已安裝的一部分**使用的桌面開發C++** 工作負載。 獨立版本[下載和工具適用於 Windows 10](https://developer.microsoft.com/windows/downloads)。
 
 2. 開啟專案節點的捷徑功能表，然後選擇 [重定 SDK 版本目標] 。
 
@@ -42,7 +42,7 @@ ms.locfileid: "59021524"
 
    ![平台版本為目標](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")
 
-   這個動作會變更專案巨集的值，包括標頭檔和程式庫檔案的路徑。 若要查看變更的內容，在**Visual c + + 目錄**一節**專案屬性**對話方塊中，選擇其中一個屬性，例如**Include 目錄**，選擇開啟下拉式清單中，然後選擇 \<編輯 >。 [Include 目錄]  對話方塊隨即出現。
+   這個動作會變更專案巨集的值，包括標頭檔和程式庫檔案的路徑。 若要查看變更的內容，在**VisualC++目錄**一節**專案屬性**對話方塊中，選擇其中一個屬性，例如**Include 目錄**，若要開啟下拉式清單中，然後選擇 選擇\<編輯 >。 [Include 目錄]  對話方塊隨即出現。
 
    ![包含目錄對話方塊](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")
 
@@ -60,4 +60,4 @@ ms.locfileid: "59021524"
 
 ## <a name="see-also"></a>另請參閱
 
-[Windows 傳統型應用程式 (Visual C++)](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)
+[Windows 桌面應用程式 (Visual C++)](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
 ms.openlocfilehash: 12c3de79626411b76a402a7f5407f40a7b054318
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025999"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>使用結構描述資料列集取得中繼資料
@@ -42,7 +42,7 @@ ANSI SQL 會定義資料存放區的目錄/結構描述模型。OLE DB 會使用
 SELECT * FROM authors WHERE l_name = 'pivo'
 ```
 
-`l_name` 是一項限制。 這是一個簡單的範例，只有一個限制;結構描述資料列集類別支援數個限制。
+`l_name` 是限制。 這是一個簡單的範例，只有一個限制;結構描述資料列集類別支援數個限制。
 
 [結構描述資料列集 typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)封裝所有 OLE DB 結構描述資料列，以便您可以存取的結構描述資料列，就像任何其他資料列集具現化，並將它開啟。 例如，typedef 類別[CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md)定義為：
 

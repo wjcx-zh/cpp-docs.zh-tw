@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
 ms.openlocfilehash: 4870860650a39d27639ad18100ba37ba14aa15c0
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424062"
 ---
 # <a name="component"></a>元件
@@ -31,7 +31,7 @@ ms.locfileid: "59424062"
 
 您可以開啟或關閉收集功能，而且可以指定要在收集的資訊中忽略的特定名稱。
 
-使用開啟或關閉來控制收集 pragma 前方的瀏覽資訊。 例如: 
+使用開啟或關閉來控制收集 pragma 前方的瀏覽資訊。 例如：
 
 ```cpp
 #pragma component(browser, off)
@@ -42,7 +42,7 @@ ms.locfileid: "59424062"
 > [!NOTE]
 > 若要開啟的瀏覽資訊，請使用這個 pragma，收集[瀏覽資訊必須先啟用](../build/reference/building-browse-information-files-overview.md)。
 
-`references`可以使用選項，包含或不含*名稱*引數。 使用`references`而不需要*名稱*開啟或關閉參考的收集 （其他瀏覽資訊仍繼續收集，不過）。 例如：
+`references`可以使用選項，包含或不含*名稱*引數。 使用`references`而不需要*名稱*開啟或關閉參考的收集 （其他瀏覽資訊仍繼續收集，不過）。 例如: 
 
 ```cpp
 #pragma component(browser, off, references)

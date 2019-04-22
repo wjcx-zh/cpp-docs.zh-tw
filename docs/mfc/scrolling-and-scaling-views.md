@@ -9,10 +9,10 @@ helpviewer_keywords:
 - scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
 ms.openlocfilehash: 7d26bc656dec3fdcbb8fc5ea4918ec7d59bc5afc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777573"
 ---
 # <a name="scrolling-and-scaling-views"></a>捲動和縮放檢視
@@ -35,7 +35,7 @@ MFC 支援檢視捲動和檢視表的自動調整，以顯示它們的框架視�
 
 任何檢視中可處理中的捲軸訊息及其`OnHScroll`和`OnVScroll`成員函式。 您可以在這些函式，其中一個實作捲軸訊息處理，自行執行所有的工作，或者您可以使用`CScrollView`類別來處理您捲動功能。
 
-`CScrollView` 執行下列作業：
+`CScrollView` 會執行下列動作：
 
 - 管理視窗和檢視區大小和對應模式
 

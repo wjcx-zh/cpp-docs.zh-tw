@@ -13,19 +13,19 @@ helpviewer_keywords:
 - Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
 ms.openlocfilehash: 41cbb86b4245bd78baecd222b5573ba5e877243a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773823"
 ---
 # <a name="wizards-and-the-resource-editors"></a>精靈和資源編輯器
 
-Visual c + + 包含數個精靈，用於在 MFC 程式設計中，以及許多的整合式的資源編輯器。 ActiveX 控制項的程式設計中，針對[ActiveX 控制項精靈](../mfc/reference/mfc-activex-control-wizard.md)用途很像，MFC 應用程式精靈。 雖然您可以撰寫 MFC 應用程式，而不需要大部分的這些工具，工具將可大幅簡化和加速您的工作。
+視覺化C++包含數個精靈，用於在 MFC 程式設計中，以及許多的整合式的資源編輯器。 ActiveX 控制項的程式設計中，針對[ActiveX 控制項精靈](../mfc/reference/mfc-activex-control-wizard.md)用途很像，MFC 應用程式精靈。 雖然您可以撰寫 MFC 應用程式，而不需要大部分的這些工具，工具將可大幅簡化和加速您的工作。
 
 ##  <a name="_core_use_appwizard_to_create_an_mfc_application"></a> 使用 MFC 應用程式精靈 建立 MFC 應用程式
 
-使用[MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)建立 Visual c + + 中，可以包括 OLE 和資料庫支援的 MFC 專案。 在專案檔包含您的應用程式、 文件、 檢視和框架視窗類別;標準的資源，包括功能表和選擇性的工具列，其他所需的 Windows 檔案;和選擇性.rtf 檔案包含標準 Windows 說明主題，您可以修改和建立您的程式說明檔的引數。
+使用[MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)來建立視覺效果中的 MFC 專案C++，其中可以包括 OLE 和資料庫支援。 在專案檔包含您的應用程式、 文件、 檢視和框架視窗類別;標準的資源，包括功能表和選擇性的工具列，其他所需的 Windows 檔案;和選擇性.rtf 檔案包含標準 Windows 說明主題，您可以修改和建立您的程式說明檔的引數。
 
 ##  <a name="_core_use_classwizard_to_manage_classes_and_windows_messages"></a> 使用 管理類別與 Windows 訊息的 類別檢視
 
@@ -44,11 +44,11 @@ Visual c + + 包含數個精靈，用於在 MFC 程式設計中，以及許多�
 
 ##  <a name="_core_use_the_resource_editors_to_create_and_edit_resources"></a> 若要建立和編輯資源使用資源編輯器
 
-使用 Visual c + +[資源編輯器](../windows/resource-editors.md)來建立和編輯功能表、 對話方塊、 自訂控制項、 快速鍵、 點陣圖、 圖示、 游標、 字串和版本資源。 截至 Visual c + + 4.0 版，工具列編輯器可建立工具列更容易。
+使用視覺效果C++[資源編輯器](../windows/resource-editors.md)建立和編輯功能表、 對話方塊、 自訂控制項、 快速鍵、 點陣圖、 圖示、 游標、 字串和版本資源。 截至 Visual C++ 4.0 版，工具列編輯器可建立更簡單的工具列。
 
 為了協助您更多，Microsoft Foundation Class Library 會提供一個稱為一般檔案。RES，其中包含您可以從一般複製的 「 美工圖案 」 資源。RES 並貼到您自己的資源檔。 常見的。RES 包含工具列按鈕、 常見的資料指標、 圖示等。 您可以使用、 修改和重新發佈您的應用程式中的這些資源。 如需常見的詳細資訊。RES，請參閱[美工圖案範例](../overview/visual-cpp-samples.md)。
 
-MFC 應用程式精靈、 Visual c + + 精靈、 資源編輯器和 MFC 架構為您執行許多工作，以管理您的程式碼更容易。 大部分的應用程式特定的程式碼是在文件和檢視類別中。
+MFC 應用程式精靈]、 [視覺效果C++精靈中，資源編輯器和 MFC 架構為您執行許多工作和管理您的程式碼更容易。 大部分的應用程式特定的程式碼是在文件和檢視類別中。
 
 ## <a name="see-also"></a>另請參閱
 

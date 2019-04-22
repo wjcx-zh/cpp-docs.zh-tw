@@ -10,10 +10,10 @@ helpviewer_keywords:
 - control modules [MFC]
 ms.assetid: 0721724d-d4af-4eda-ad34-5a2b27810dd4
 ms.openlocfilehash: f6d486c7bacb897d70d85414ac3d0bd0d13e447b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780284"
 ---
 # <a name="colecontrolmodule-class"></a>COleControlModule 類別
@@ -28,7 +28,7 @@ class COleControlModule : public CWinApp
 
 ## <a name="remarks"></a>備註
 
-這個類別提供成員函式初始化控制項模組。 使用 Microsoft Foundation classes 的每個 OLE 控制項模組只能包含一個物件衍生自`COleControlModule`。 其他 c + + 的全域物件建構時，會建構此物件。 宣告您的衍生`COleControlModule`全域層級的物件。
+這個類別提供成員函式初始化控制項模組。 使用 Microsoft Foundation classes 的每個 OLE 控制項模組只能包含一個物件衍生自`COleControlModule`。 此物件建構時其他C++建構全域物件。 宣告您的衍生`COleControlModule`全域層級的物件。
 
 如需有關使用`COleControlModule`類別，請參閱[CWinApp](../../mfc/reference/cwinapp-class.md)類別與發行項[ActiveX 控制項](../../mfc/mfc-activex-controls.md)。
 

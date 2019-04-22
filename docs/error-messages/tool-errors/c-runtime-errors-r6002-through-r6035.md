@@ -5,19 +5,19 @@ f1_keywords:
 - c.errors
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
 ms.openlocfilehash: b1a4aa5114965451791f44d88eb9e5ca61ff9c57
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58766881"
 ---
 # <a name="c-runtime-errors-r6002-through-r6035"></a>C 執行階段錯誤 R6002 到 R6035
 
-此章節是錯誤的參考，該錯誤是於您的應用程式載入或執行時產生自 C 執行階段程式庫 (CRT)。 即使訊息指的是 Microsoft Visual c + + 執行階段，這些錯誤會指出您的應用程式的程式碼中的 bug，或是無法處理的執行階段程式庫，例如記憶體不足的情況。 如果不需要您的應用程式，以避免造成，條件的程式碼或撰寫程式碼來擷取這些錯誤，並呈現給使用者的好記的訊息，您的應用程式的終端使用者可能會看到這些錯誤。
+此章節是錯誤的參考，該錯誤是於您的應用程式載入或執行時產生自 C 執行階段程式庫 (CRT)。 即使訊息是指 Microsoft 視覺效果C++執行階段，這些錯誤會指出您的應用程式的程式碼中的 bug，或是無法處理的執行階段程式庫，例如記憶體不足的情況。 如果不需要您的應用程式，以避免造成，條件的程式碼或撰寫程式碼來擷取這些錯誤，並呈現給使用者的好記的訊息，您的應用程式的終端使用者可能會看到這些錯誤。
 
-您會發現錯誤和警告的其他協助，Microsoft 的公用論壇中。 您可以搜尋錯誤或警告編號[開發人員社群](https://developercommunity.visualstudio.com)站台。 [Visual c + + 一般](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vcgeneral)論壇適合有關 Visual c + + 不會討論其他論壇中的問題。 您可以搜尋錯誤和警告，並提問[Stack Overflow](http://stackoverflow.com/)尋找解決方案。
+您會發現錯誤和警告的其他協助，Microsoft 的公用論壇中。 您可以搜尋錯誤或警告編號[開發人員社群](https://developercommunity.visualstudio.com)站台。 [VisualC++一般](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vcgeneral)論壇是針對視覺效果的相關問題C++，將不會討論其他論壇中。 您可以搜尋錯誤和警告，並提問[Stack Overflow](http://stackoverflow.com/)尋找解決方案。
 
-如需其他說明和社群資源的連結，請參閱[Visual c + + 說明和社群](../../overview/visual-cpp-help-and-community.md)。
+如需其他說明和社群資源的連結，請參閱[VisualC++說明和社群](../../overview/visual-cpp-help-and-community.md)。
 
 ## <a name="c-runtime-errors"></a>C 執行階段錯誤
 

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::FactoryCache::factory data member
 ms.assetid: 624544e6-0989-47f6-a3e9-edb60e1ee6d4
 ms.openlocfilehash: 7196363567dffa43844bbbd1de76934a317302d1
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58784609"
 ---
 # <a name="factorycache-structure"></a>FactoryCache 結構
 
-支援的 Windows 執行階段 c + + 樣板程式庫基礎結構，並不是直接從您的程式碼使用。
+支援 Windows 執行階段C++樣板程式庫的基礎結構，不適合直接從您的程式碼使用。
 
 ## <a name="syntax"></a>語法
 
@@ -53,7 +53,7 @@ struct FactoryCache;
 
 ## <a name="cookie"></a>FactoryCache::cookie
 
-支援的 Windows 執行階段 c + + 樣板程式庫基礎結構，並不是直接從您的程式碼使用。
+支援 Windows 執行階段C++樣板程式庫的基礎結構，不適合直接從您的程式碼使用。
 
 ```cpp
 union {
@@ -68,7 +68,7 @@ union {
 
 ## <a name="factory"></a>FactoryCache::factory
 
-支援的 Windows 執行階段 c + + 樣板程式庫基礎結構，並不是直接從您的程式碼使用。
+支援 Windows 執行階段C++樣板程式庫的基礎結構，不適合直接從您的程式碼使用。
 
 ```cpp
 IUnknown* factory;

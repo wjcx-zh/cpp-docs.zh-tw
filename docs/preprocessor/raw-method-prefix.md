@@ -7,15 +7,15 @@ helpviewer_keywords:
 - raw_method_prefix attribute
 ms.assetid: 71490313-af78-4bb2-b28a-eee67950d30b
 ms.openlocfilehash: 963e04752dcb797343550d9b89f778bfe0e8a593
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021407"
 ---
 # <a name="rawmethodprefix"></a>raw_method_prefix
 
-**C++ 專有的**
+**C++特定**
 
 指定不同的前置詞，避免發生名稱衝突。
 
@@ -37,7 +37,7 @@ raw_method_prefix("Prefix")
 > [!NOTE]
 > 效果**raw_method_prefix**屬性將不會變更的存在[raw_interfaces_only](raw-interfaces-only.md)屬性。 **Raw_method_prefix**一定會優先於`raw_interfaces_only`中指定前置詞。 如果這兩個屬性會在相同`#import`陳述式，然後藉由指定的前置詞**raw_method_prefix**屬性使用。
 
-**END C++ 特定的**
+**結束C++特定**
 
 ## <a name="see-also"></a>另請參閱
 

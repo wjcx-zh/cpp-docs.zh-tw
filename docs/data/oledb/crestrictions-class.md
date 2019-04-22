@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
 ms.openlocfilehash: 309bb7e707d649cf78528f3d0df6cf8e43201823
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040615"
 ---
 # <a name="crestrictions-class"></a>CRestrictions 類別
@@ -75,7 +75,7 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>參數
 
-*工作階段*<br/>
+*session*<br/>
 [in]指定用來連接到資料來源的現有工作階段物件。
 
 *lpszParam*<br/>
@@ -97,5 +97,5 @@ HRESULT Open(const CSession& session,
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

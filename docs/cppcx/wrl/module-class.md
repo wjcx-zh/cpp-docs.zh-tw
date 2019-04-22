@@ -44,10 +44,10 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::UnregisterWinRTObject method
 ms.assetid: dd67e3b8-c2e1-4f53-8c0f-565a140ba649
 ms.openlocfilehash: db3eb123382ac70f6198d094c5eb3fe44d3bbcd9
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58784580"
 ---
 # <a name="module-class"></a>Module 類別
@@ -345,7 +345,7 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 *cookies*<br/>
 作業完成後，物件的陣列的指標識別類別的值，已註冊。 稍後會使用這些值，撤銷。
 
-*計數*<br/>
+*count*<br/>
 若要註冊的 Clsid 數目。
 
 ### <a name="return-value"></a>傳回值
@@ -402,7 +402,7 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
 *cookie*<br/>
 識別已註冊的類別物件的值。 此值稍後用來撤銷註冊。
 
-*計數*<br/>
+*count*<br/>
 若要註冊的物件數目。
 
 ### <a name="return-value"></a>傳回值
@@ -448,7 +448,7 @@ virtual HRESULT UnregisterCOMObject(
 *cookies*<br/>
 識別要取消註冊的類別物件的值的指標陣列。 建立陣列[RegisterCOMObject](#registercomobject)方法。
 
-*計數*<br/>
+*count*<br/>
 若要取消註冊的類別數目。
 
 ### <a name="return-value"></a>傳回值

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
 ms.openlocfilehash: e9ffd30dd0017e912fd7c196e2d3f0e987fb0810
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780856"
 ---
 # <a name="struct-c"></a>struct (C++)
@@ -54,13 +54,13 @@ ms.locfileid: "58780856"
 
 結構類型是使用者定義的複合類型。 它是由具有不同類型的欄位或成員所組成。
 
-C + + 結構是與類別相同之處在於其成員**公開**預設。
+在C++，結構是與類別相同，不同之處在於其成員**公用**預設。
 
-如需 managed 的類別和結構在 C + + /cli CLI，請參閱[類別和結構](../extensions/classes-and-structs-cpp-component-extensions.md)。
+如需 managed 的類別和結構中的C++/CLI，請參閱[類別和結構](../extensions/classes-and-structs-cpp-component-extensions.md)。
 
 ## <a name="using-a-structure"></a>使用結構
 
-在 C 中，您必須明確地使用**結構**關鍵字來宣告結構。 在 c + +，您不需要使用**結構**關鍵字之後已定義的類型。
+在 C 中，您必須明確地使用**結構**關鍵字來宣告結構。 在C++，您不需要使用**struct**關鍵字之後已定義的類型。
 
 您可以選擇在定義結構類型時宣告變數，方法是將一個或多個逗號分隔的變數名稱放在右大括號和分號之間。
 

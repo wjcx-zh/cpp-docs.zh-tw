@@ -4,10 +4,10 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
 ms.openlocfilehash: 5b2868d20c047eef7762256ff8c9bf43de7a0de0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771782"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>歡迎回到 C++ (現代 C++)
@@ -26,17 +26,17 @@ C++ 的其中一個原始需求是與 C 語言的回溯相容性。 從那時起
 
 - `std::string` 並`std::wstring`類型 (請參閱 < [\<字串 >](../standard-library/string.md)) 而非原始`char[]`陣列。
 
-- [C + + 標準程式庫](../standard-library/cpp-standard-library-header-files.md)容器喜歡`vector`， `list`，和`map`而不是原始陣列或自訂容器。 請參閱[\<向量 >](../standard-library/vector.md)， [\<清單 >](../standard-library/list.md)，以及[\<對應 >](../standard-library/map.md)。
+- [C++標準程式庫](../standard-library/cpp-standard-library-header-files.md)容器喜歡`vector`， `list`，和`map`而不是原始陣列或自訂容器。 請參閱[\<向量 >](../standard-library/vector.md)， [\<清單 >](../standard-library/list.md)，以及[\<對應 >](../standard-library/map.md)。
 
-- C + + 標準程式庫[演算法](../standard-library/algorithm.md)而不是手動編碼的。
+- C++標準程式庫[演算法](../standard-library/algorithm.md)而不是手動編碼的。
 
 - 例外狀況，用來報告和處理錯誤狀況。
 
-- 「 無鎖定執行緒間通訊使用 c + + 標準程式庫`std::atomic<>`(請參閱 < [\<不可部分完成 >](../standard-library/atomic.md)) 而不是其他執行緒間通訊機制。
+- 執行緒間鎖通訊使用C++標準程式庫`std::atomic<>`(請參閱[\<不可部分完成 >](../standard-library/atomic.md)) 而不是其他執行緒間通訊機制。
 
 - 內嵌[lambda 函式](../cpp/lambda-expressions-in-cpp.md)而不是個別實作的小型函式。
 
-- 範圍架構的 for 迴圈，用來撰寫更穩固的迴圈處理陣列、 c + + 標準程式庫容器和 Windows 執行階段在表單中的集合， `for ( for-range-declaration : expression )`。 這是核心語言支援的一部分。 如需詳細資訊，請參閱 <<c0> [ 範圍架構 for 陳述式 （c + +）](../cpp/range-based-for-statement-cpp.md)。
+- 範圍架構的 for 迴圈，用來撰寫更穩固的迴圈，搭配使用陣列，C++標準程式庫容器和 Windows 執行階段集合的形式`for ( for-range-declaration : expression )`。 這是核心語言支援的一部分。 如需詳細資訊，請參閱 <<c0> [ 範圍架構 for 陳述式 (C++)](../cpp/range-based-for-statement-cpp.md)。</c0>
 
 C++ 語言本身也有所演變。 比較下列程式碼片段。 這是顯示 C++ 過去一般狀況的程式碼片段：
 
@@ -93,7 +93,7 @@ void f()
 
 在現代 C++ 中，因為可以改用智慧型指標，就不需要使用 new/delete 或明確例外狀況處理。 當您使用**自動**類型推斷並[lambda 函式](../cpp/lambda-expressions-in-cpp.md)，您可以撰寫程式碼速度較快，強化且更容易了解。 與範圍架構**for**迴圈是更簡潔、 更容易使用，且較不容易發生非預期的錯誤比 C 樣式**如**迴圈。 您可以使用未定案程式碼搭配最少的程式行來撰寫應用程式。 您可以使該程式碼成為記憶體安全和例外狀況安全，而且沒有要處理的配置/解除配置或錯誤碼。
 
-現代 C++ 結合了兩種多型：編譯時間 (透過樣板) 和執行階段 (透過繼承和虛擬化)。 您可以混合使用這兩種多型來產生良好效果。 C + + 標準程式庫範本`shared_ptr`使用內部虛擬方法來完成其顯然毫不費力的類型清除。 但是當範本是較佳選擇時，請勿對多型過度使用虛擬。 樣板有可觀的強大功能。
+現代 C++ 結合了兩種多型：編譯時間 (透過樣板) 和執行階段 (透過繼承和虛擬化)。 您可以混合使用這兩種多型來產生良好效果。 C++標準程式庫範本`shared_ptr`使用內部虛擬方法來完成其顯然毫不費力的類型清除。 但是當範本是較佳選擇時，請勿對多型過度使用虛擬。 樣板有可觀的強大功能。
 
 如果您是從其他語言改換過來使用 C++，特別是從類型多半為參考類型、少有實值類型的 Managed 語言過來，請記得 C++ 類別預設是實值類型。 但是您可以將這些類別指定為參考類型，啟用支援物件導向程式設計的多型行為。 有用的觀點：實值類型與記憶體及配置控制較有關聯，參考類型則多偏向支援多型的基底類別及虛擬函式。 根據預設，實值類型是可複製的，每個類型都具有複製建構函式和複製指派運算子。 當您指定參考類型時，請將類別設定為不可複製 (停用複製建構函式和複製指派運算子)，並使用支援多型的虛擬解構函式。 實值類型也是與內容有關，當您複製這些內容時，會取得兩個可分別修改的獨立值。 但是參考類型則與識別有關 (屬於哪種物件)，因此有時稱為多型類型。
 
@@ -103,7 +103,7 @@ C++ 正在復活，因為功能強大再度成為王道。 當程式設計人員
 
 本文件中的這篇文章針對撰寫現代 C++ 程式所需的最重要功能及技術，提供了高階方針和最佳作法。
 
-- [C + + 類型系統](../cpp/cpp-type-system-modern-cpp.md)
+- [C++型別系統](../cpp/cpp-type-system-modern-cpp.md)
 
 - [統一初始設定和委派建構函式](../cpp/uniform-initialization-and-delegating-constructors.md)
 
@@ -119,13 +119,13 @@ C++ 正在復活，因為功能強大再度成為王道。 當程式設計人員
 
 - [演算法](../cpp/algorithms-modern-cpp.md)
 
-- [字串和 I/O 格式化 （現代 c + +）](../cpp/string-and-i-o-formatting-modern-cpp.md)
+- [字串和 I/O 格式化 (現代C++)](../cpp/string-and-i-o-formatting-modern-cpp.md)
 
 - [錯誤和例外狀況處理](../cpp/errors-and-exception-handling-modern-cpp.md)
 
 - [ABI 界限上的可攜性](../cpp/portability-at-abi-boundaries-modern-cpp.md)
 
-如需詳細資訊，請參閱 Stack Overflow 文章[在 c++11 中已被取代的 c + + 慣用語](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11)。
+如需詳細資訊，請參閱 Stack Overflow 文章[的C++在 c++11 中已被取代的習慣用語](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11)。
 
 ## <a name="see-also"></a>另請參閱
 

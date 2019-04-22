@@ -1,5 +1,5 @@
 ---
-title: odl （c + + COM 屬性）
+title: odl (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.odl
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - odl attribute
 ms.assetid: 75dcb314-b50f-4a63-9180-507ac1bc78f3
 ms.openlocfilehash: 90f9f1df23542138b2fac0dcfe0e122f1993d805
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025022"
 ---
 # <a name="odl"></a>odl
@@ -25,7 +25,7 @@ ms.locfileid: "59025022"
 
 ## <a name="remarks"></a>備註
 
-**Odl** c + + 屬性具有相同的功能[odl](/windows/desktop/Midl/odl) MIDL 屬性。
+**Odl** C++屬性具有相同的功能[odl](/windows/desktop/Midl/odl) MIDL 屬性。
 
 ## <a name="example"></a>範例
 

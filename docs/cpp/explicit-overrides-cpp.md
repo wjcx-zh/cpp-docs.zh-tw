@@ -9,10 +9,10 @@ helpviewer_keywords:
 - explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
 ms.openlocfilehash: dbaf8b0d78093df522cfbc63bf20dd0acb6c477c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774252"
 ---
 # <a name="explicit-overrides-c"></a>明確覆寫 (C++)
@@ -21,7 +21,7 @@ ms.locfileid: "58774252"
 
 如果要將相同的虛擬函式宣告中兩個或以上[介面](../cpp/interface.md)如果類別衍生自這些介面，您可以明確覆寫每個虛擬函式。
 
-如需明確覆寫在 managed 程式碼使用 C + + /cli CLI，請參閱[明確覆寫](../extensions/explicit-overrides-cpp-component-extensions.md)。
+如需在 managed 程式碼中使用明確覆寫C++/CLI，請參閱[明確覆寫](../extensions/explicit-overrides-cpp-component-extensions.md)。
 
 **結束 Microsoft 專屬**
 

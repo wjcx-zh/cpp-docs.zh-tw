@@ -11,10 +11,10 @@ helpviewer_keywords:
 - recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
 ms.openlocfilehash: c29ff110fc507c4e449b2f3d082d98c159a35107
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040764"
 ---
 # <a name="recordset-more-about-updates-odbc"></a>資料錄集：深入了解更新 (ODBC)
@@ -108,4 +108,4 @@ ms.locfileid: "59040764"
 [資料錄集：資料錄集選取資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
 [資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
-[例外狀況: 資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)
+[例外狀況：資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)

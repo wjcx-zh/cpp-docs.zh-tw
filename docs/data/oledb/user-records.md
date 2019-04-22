@@ -16,15 +16,15 @@ helpviewer_keywords:
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
 ms.openlocfilehash: 5dd7be3eccd59dc1a5a0dc1cd6932ca1310627c0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041003"
 ---
 # <a name="user-records"></a>使用者資料錄
 
-若要使用的靜態存取子 (也就是存取子，衍生自`CAccessor`)，取用者必須有使用者記錄。 使用者資料錄是 c + + 類別，其中包含要處理輸入或輸出的資料元素。 **ATL OLE DB 消費者精靈**為取用者產生使用者記錄。 您可以將方法加入選擇性的工作，例如處理命令的使用者記錄。
+若要使用的靜態存取子 (也就是存取子，衍生自`CAccessor`)，取用者必須有使用者記錄。 使用者資料錄是C++類別，其中包含要處理輸入或輸出的資料元素。 **ATL OLE DB 消費者精靈**為取用者產生使用者記錄。 您可以將方法加入選擇性的工作，例如處理命令的使用者記錄。
 
 下列程式碼顯示範例記錄處理命令。 在使用者記錄中，BEGIN_COLUMN_MAP 表示傳遞給取用者從提供者的資料列集。 BEGIN_PARAM_MAP 代表一組命令參數。 這個範例會使用[CCommand](../../data/oledb/ccommand-class.md)類別來處理命令參數。 對應項目中的資料成員代表一個連續的每個類別執行個體的記憶體區塊位移。 COLUMN_ENTRY 巨集對應至提供者端的 PROVIDER_COLUMN_ENTRY 巨集。
 

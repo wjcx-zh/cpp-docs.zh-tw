@@ -73,10 +73,10 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
 ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781441"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd 類別
@@ -388,10 +388,10 @@ virtual BOOL CreateView(
 
 ### <a name="parameters"></a>參數
 
-*資料列*<br/>
+*row*<br/>
 指定分隔器視窗資料列，在其中放置新的檢視。
 
-*資料行*<br/>
+*col*<br/>
 指定分隔器視窗資料行，在其中放置新的檢視。
 
 *pViewClass*<br/>
@@ -475,10 +475,10 @@ virtual void DeleteView(
 
 ### <a name="parameters"></a>參數
 
-*資料列*<br/>
+*row*<br/>
 指定要刪除檢視的分隔器視窗的資料列。
 
-*資料行*<br/>
+*col*<br/>
 指定要刪除檢視的分隔器視窗資料行。
 
 ### <a name="remarks"></a>備註
@@ -628,7 +628,7 @@ void GetColumnInfo(
 
 ### <a name="parameters"></a>參數
 
-*資料行*<br/>
+*col*<br/>
 指定資料行。
 
 *cxCur*<br/>
@@ -649,10 +649,10 @@ CWnd* GetPane(
 
 ### <a name="parameters"></a>參數
 
-*資料列*<br/>
+*row*<br/>
 指定資料列。
 
-*資料行*<br/>
+*col*<br/>
 指定資料行。
 
 ### <a name="return-value"></a>傳回值
@@ -684,7 +684,7 @@ void GetRowInfo(
 
 ### <a name="parameters"></a>參數
 
-*資料列*<br/>
+*row*<br/>
 指定資料列。
 
 *cyCur*<br/>
@@ -727,10 +727,10 @@ int IdFromRowCol(
 
 ### <a name="parameters"></a>參數
 
-*資料列*<br/>
+*row*<br/>
 指定分隔器視窗資料列。
 
-*資料行*<br/>
+*col*<br/>
 指定分隔器視窗資料行。
 
 ### <a name="return-value"></a>傳回值
@@ -773,7 +773,7 @@ BOOL IsChildPane(
 
 ### <a name="remarks"></a>備註
 
-在 Visual c + + 6.0 之前的版本，此函式定義為
+在視覺效果C++6.0 之前的版本，此函式定義為
 
 `BOOL IsChildPane(CWnd* pWnd, int& row, int& col);`
 
@@ -877,10 +877,10 @@ virtual void SetActivePane(
 
 ### <a name="parameters"></a>參數
 
-*資料列*<br/>
+*row*<br/>
 如果*pWnd*為 NULL 時，會是作用中 窗格中指定的資料列。
 
-*資料行*<br/>
+*col*<br/>
 如果*pWnd*為 NULL 時，會是作用中 窗格中指定的資料行。
 
 *pWnd*<br/>
@@ -905,7 +905,7 @@ void SetColumnInfo(
 
 ### <a name="parameters"></a>參數
 
-*資料行*<br/>
+*col*<br/>
 指定分隔器視窗資料行。
 
 *cxIdeal*<br/>
@@ -937,7 +937,7 @@ void SetRowInfo(
 
 ### <a name="parameters"></a>參數
 
-*資料列*<br/>
+*row*<br/>
 指定分隔器視窗資料列。
 
 *cyIdeal*<br/>

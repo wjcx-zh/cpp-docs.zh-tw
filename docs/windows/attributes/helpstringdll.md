@@ -1,5 +1,5 @@
 ---
-title: helpstringdll （c + + COM 屬性）
+title: helpstringdll (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringdll
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
 ms.openlocfilehash: 72f5926018e3ac7ec4770f83d7a2c3438b67d861
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025201"
 ---
 # <a name="helpstringdll"></a>helpstringdll
@@ -25,12 +25,12 @@ ms.locfileid: "59025201"
 
 ### <a name="parameters"></a>參數
 
-*字串*<br/>
+*string*<br/>
 用來執行文件字串查閱 DLL。
 
 ## <a name="remarks"></a>備註
 
-**Helpstringdll** c + + 屬性具有相同的功能[helpstringdll](/windows/desktop/Midl/helpstringdll) MIDL 屬性。
+**Helpstringdll** C++屬性具有相同的功能[helpstringdll](/windows/desktop/Midl/helpstringdll) MIDL 屬性。
 
 ## <a name="example"></a>範例
 

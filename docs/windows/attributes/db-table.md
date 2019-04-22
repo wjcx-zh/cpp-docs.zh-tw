@@ -1,5 +1,5 @@
 ---
-title: db_table （c + + COM 屬性）
+title: db_table (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_table
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
 ms.openlocfilehash: 3ab548261d6ebcb9d3d7f7e352c8afe3b33db06f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023863"
 ---
 # <a name="dbtable"></a>db_table
@@ -28,7 +28,7 @@ ms.locfileid: "59023863"
 *db_table*<br/>
 字串，指定資料庫資料表 （例如 「 產品 」） 的名稱。
 
-*名稱*<br/>
+*name*<br/>
 （選擇性）您用來處理與資料表的控制代碼的名稱。 如果您想要傳回一個以上的資料列的結果，您必須指定此參數。 **db_table**會產生具有指定的變數*名稱*，可用來周遊資料列集或執行多個動作查詢。
 
 *source_name*<br/>

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
 ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772561"
 ---
 # <a name="enumerations-c"></a>列舉 (C++)
@@ -22,7 +22,7 @@ ms.locfileid: "58772561"
 列舉是使用者定義類型，其中包含一組具名的整數常數，稱為列舉值。
 
 > [!NOTE]
->  本文章涵蓋的 ISO 標準 c + + 語言**enum**型別和範圍 （或強型別）**列舉類別**C + + 11 中導入的類型。 如需**公用列舉類別**或**私用列舉類別**類型，在 C + + /cli 和 C + + /CX 中，請參閱[列舉類別](../extensions/enum-class-cpp-component-extensions.md)。
+>  本文章涵蓋 ISO 標準C++語言**列舉**型別和範圍 （或強型別）**列舉類別**C + + 11 中導入的類型。 如需**公用列舉類別**或是**私用列舉類別**中的型別C++/CLI 和C++/CX，請參閱[列舉類別](../extensions/enum-class-cpp-component-extensions.md)。
 
 ## <a name="syntax"></a>語法
 

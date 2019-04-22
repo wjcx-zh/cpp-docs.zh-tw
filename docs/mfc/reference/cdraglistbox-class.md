@@ -21,10 +21,10 @@ helpviewer_keywords:
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
 ms.openlocfilehash: d8afc5b14f5f52ca7a4d28a3d3c3c5440b7c819f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781584"
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox 類別

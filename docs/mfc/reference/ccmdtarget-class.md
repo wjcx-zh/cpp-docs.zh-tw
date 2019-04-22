@@ -47,10 +47,10 @@ helpviewer_keywords:
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
 ms.openlocfilehash: 9314717fab53b1a89b87d657ec617a4c6bd45b8b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776189"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 類別

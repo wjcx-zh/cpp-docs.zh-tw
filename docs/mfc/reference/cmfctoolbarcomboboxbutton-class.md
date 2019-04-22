@@ -65,10 +65,10 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
 ms.openlocfilehash: e3c124103aa95d9db5095e438a6b21d46c7cb35d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772068"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton 類別
@@ -358,7 +358,7 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，新的指標] 編輯方塊否則為 NULL。
+如果方法成功，新的指標 編輯方塊否則為 NULL。
 
 ### <a name="remarks"></a>備註
 
@@ -557,7 +557,7 @@ int GetCurSel() const;
 
 ##  <a name="getcurselall"></a>  CMFCToolBarComboBoxButton::GetCurSelAll
 
-傳回目前選取項目的索引中的下拉式清單方塊] 按鈕具有指定的命令 id。
+傳回目前選取項目的索引中的下拉式清單方塊 按鈕具有指定的命令 id。
 
 ```
 static int GetCurSelAll(UINT uiCmd);
@@ -879,7 +879,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 
 ##  <a name="onaddtocustomizepage"></a>  CMFCToolBarComboBoxButton::OnAddToCustomizePage
 
-加入按鈕時由架構呼叫**自訂**] 對話方塊。
+加入按鈕時由架構呼叫**自訂** 對話方塊。
 
 ```
 virtual void OnAddToCustomizePage();
@@ -1016,7 +1016,7 @@ virtual void OnDraw(
 
 ##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarComboBoxButton::OnDrawOnCustomizeList
 
-由架構呼叫以繪製下拉式方塊按鈕**命令**窗格**自訂**] 對話方塊。
+由架構呼叫以繪製下拉式方塊按鈕**命令**窗格**自訂** 對話方塊。
 
 ```
 virtual int OnDrawOnCustomizeList(
@@ -1210,7 +1210,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="remarks"></a>備註
 
-在 [設定`CArchive`物件決定這個方法會讀取或寫入封存。
+在 設定`CArchive`物件決定這個方法會讀取或寫入封存。
 
 ##  <a name="setaccdata"></a>  CMFCToolBarComboBoxButton::SetACCData
 

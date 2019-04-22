@@ -5,10 +5,10 @@ helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
 ms.openlocfilehash: bcb7784e59966510970bd9b3ae0157ae982e462d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768064"
 ---
 # <a name="new-operator-c"></a>new 運算子 (C++)
@@ -16,7 +16,7 @@ ms.locfileid: "58768064"
 物件或物件的陣列配置記憶體*型別名稱*從可用存放區，並傳回適當類型、 非零的指標物件。
 
 > [!NOTE]
->  Microsoft c + + 元件擴充功能可讓您**新**關鍵字加入 vtable 位置項目。 如需詳細資訊，請參閱[新 (新 vtable 中的位置）](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
+>  MicrosoftC++元件擴充功能可讓您**新**關鍵字來加入 vtable 位置項目。 如需詳細資訊，請參閱[新 (新 vtable 中的位置）](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
 ## <a name="syntax"></a>語法
 
@@ -31,7 +31,7 @@ ms.locfileid: "58768064"
 
 如需如何在 managed 堆積上建立物件的資訊，請參閱[gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)。
 
-當**新**是用來配置記憶體給 c + + 類別物件，物件的建構函式呼叫之後的記憶體配置。
+當**新**用來配置記憶體給C++類別的物件，配置記憶體之後，系統會呼叫物件的建構函式。
 
 使用[刪除](../cpp/delete-operator-cpp.md)運算子，取消配置所配置之記憶體**新**運算子。
 
@@ -117,7 +117,7 @@ int main() {
 
 ## <a name="example"></a>範例
 
-如果您使用的放置新的表單**新**運算子，除了大小的引數的形式的配置，編譯器不支援的位置形式**刪除**運算子如果建構函式會擲回例外狀況。 例如: 
+如果您使用的放置新的表單**新**運算子，除了大小的引數的形式的配置，編譯器不支援的位置形式**刪除**運算子如果建構函式會擲回例外狀況。 例如：
 
 ```cpp
 // expre_new_Operator2.cpp

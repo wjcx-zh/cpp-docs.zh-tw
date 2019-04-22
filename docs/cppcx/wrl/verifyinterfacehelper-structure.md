@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::VerifyInterfaceHelper::Verify method
 ms.assetid: ea95b641-199a-4fdf-964b-186b40cb3ba7
 ms.openlocfilehash: cdd0272953b2399cd71efe207eb1c56e5de154e6
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58784393"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper 結構
 
-支援的 Windows 執行階段 c + + 樣板程式庫基礎結構，並不是直接從您的程式碼使用。
+支援 Windows 執行階段C++樣板程式庫的基礎結構，不適合直接從您的程式碼使用。
 
 ## <a name="syntax"></a>語法
 

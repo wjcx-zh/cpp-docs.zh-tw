@@ -13,15 +13,15 @@ helpviewer_keywords:
 - __writegsdword intrinsic
 ms.assetid: 7746cf6d-2259-4139-9aab-c07dd75c8037
 ms.openlocfilehash: dbd3fff75107ae61f7680dee84b72ff3153bfa8e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041428"
 ---
 # <a name="writegsbyte-writegsdword-writegsqword-writegsword"></a>__writegsbyte、__writegsdword、__writegsqword、__writegsword
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 寫入記憶體相對於 GS 區段開頭的位移所指定的位置。
 
@@ -48,10 +48,10 @@ void __writegsqword(
 
 #### <a name="parameters"></a>參數
 
-*位移*<br/>
+*Offset*<br/>
 [in]從要寫入的 GS 開頭的位移。
 
-*資料*<br/>
+*Data*<br/>
 [in]要寫入的值。
 
 ## <a name="requirements"></a>需求
@@ -69,7 +69,7 @@ void __writegsqword(
 
 這些常式僅可作為內建。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

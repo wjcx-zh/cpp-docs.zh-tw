@@ -1,26 +1,26 @@
 ---
-title: 逐步解說：編譯 C + + /CX 程式，在命令列上
+title: 逐步解說：編譯C++命令列上的 /CX 程式
 ms.date: 09/24/2018
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
 ms.openlocfilehash: 099bef402d22abc12a31f105f63e5405c65a1d82
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58766053"
 ---
-# <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>逐步解說：編譯 C + + /CX 程式，在命令列上
+# <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>逐步解說：編譯C++命令列上的 /CX 程式
 
-您可以建立以 Windows 執行階段為目標的 Visual C++ 程式，並在命令列上建置它們。 Visual C++ 支援 Visual C++ 元件擴充功能 (C++/CX)，其具有以 WinRT 執行階段程式設計模型為目標的其他類型及運算子。 您可以使用 C + + /CX 來建置適用於通用 Windows 平台 (UWP)、 Windows Phone 8.1 和 Windows 桌面應用程式。 如需詳細資訊，請參閱 <<c0> [ 教學課程的 c + + /CX](https://msdn.microsoft.com/magazine/dn166929.aspx)並[執行階段平台的元件擴充功能](../extensions/component-extensions-for-runtime-platforms.md)。
+您可以建立以 Windows 執行階段為目標的 Visual C++ 程式，並在命令列上建置它們。 Visual C++ 支援 Visual C++ 元件擴充功能 (C++/CX)，其具有以 WinRT 執行階段程式設計模型為目標的其他類型及運算子。 您可以使用C++/CX 來建置適用於通用 Windows 平台 (UWP)、 Windows Phone 8.1 和 Windows 桌面應用程式。 如需詳細資訊，請參閱 <<c0> [ 的教學課程C++/CX](https://msdn.microsoft.com/magazine/dn166929.aspx)並[執行階段平台的元件擴充功能](../extensions/component-extensions-for-runtime-platforms.md)。</c0>
 
 在此逐步解說中，您可以使用文字編輯器來建立基本的 C++/CX 程式，然後在命令列上進行編譯。 (您可以使用自己的 C++/CX 程式，而不是輸入所顯示的程式，或者您可以使用其他說明文章中的 C++/CX 程式碼範例。 這項技術可用於建置和測試沒有任何 UI 元素的小模組。）
 
 > [!NOTE]
-> 您還可以使用 Visual Studio IDE，來編譯 C++/CX 程式。 因為這個 IDE 包括設計、 偵錯、 模擬，以及部署支援，但無法使用命令列上，我們建議您使用 IDE 建置通用 Windows 平台 (UWP) 應用程式。 如需詳細資訊，請參閱 < [c + + 建立 UWP 應用程式](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)。
+> 您還可以使用 Visual Studio IDE，來編譯 C++/CX 程式。 因為這個 IDE 包括設計、 偵錯、 模擬，以及部署支援，但無法使用命令列上，我們建議您使用 IDE 建置通用 Windows 平台 (UWP) 應用程式。 如需詳細資訊，請參閱 <<c0> [ 建立 UWP 應用程式中的C++ ](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)。</c0>
 
 ## <a name="prerequisites"></a>必要條件
 
-您了解 c + + 語言的基本概念。
+了解基本概念C++語言。
 
 ## <a name="compiling-a-ccx-program"></a>編譯 C++/CX 程式
 
@@ -49,9 +49,9 @@ ms.locfileid: "58766053"
 
 1. 在功能表列上選擇 **檔案** > **儲存**。
 
-   您已建立 Visual c + + 原始程式檔使用 Windows 執行階段[Platform 命名空間](../cppcx/platform-namespace-c-cx.md)命名空間。
+   您已建立視覺效果C++使用 Windows 執行階段的原始程式檔[Platform 命名空間](../cppcx/platform-namespace-c-cx.md)命名空間。
 
-1. 在命令提示字元中，輸入**cl /EHsc /ZW basiccx.cpp /link /subsystem: console**。 cl.exe 編譯器會將原始程式碼編譯為 .obj 檔案，然後執行連結器，以產生名為 basiccx.exe 的可執行程式  ( [/EHsc](reference/eh-exception-handling-model.md)編譯器選項指定 c + + 例外狀況處理模型，而[/link>](reference/link-pass-options-to-linker.md)旗標會指定主控台應用程式。)
+1. 在命令提示字元中，輸入**cl /EHsc /ZW basiccx.cpp /link /subsystem: console**。 cl.exe 編譯器會將原始程式碼編譯為 .obj 檔案，然後執行連結器，以產生名為 basiccx.exe 的可執行程式  ( [/EHsc](reference/eh-exception-handling-model.md)編譯器選項會指定C++例外狀況處理模型，而[/link>](reference/link-pass-options-to-linker.md)旗標會指定主控台應用程式。)
 
 1. 若要執行 basiccx.exe 程式，在命令提示字元中，輸入**basiccx**。
 

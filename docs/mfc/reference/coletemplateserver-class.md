@@ -15,10 +15,10 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
 ms.openlocfilehash: 3abdf1dc2da5ef9a111371b501d5cd8ce208825d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781207"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer 類別
@@ -51,7 +51,7 @@ class COleTemplateServer : public COleObjectFactory
 
 這個類別衍生自類別[COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); 通常，您可以使用`COleTemplateServer`直接而不是衍生您自己的類別。 `COleTemplateServer` 會使用[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)物件來管理伺服器文件。 使用`COleTemplateServer`實作完整的伺服器，也就是可以當作獨立的應用程式執行的伺服器時。 完整的伺服器通常是多個文件介面 (MDI) 應用程式，雖然支援單一文件介面 (SDI) 應用程式。 一`COleTemplateServer`所需應用程式支援的伺服器文件的每個類型的物件; 也就是說，如果您的伺服器應用程式支援的工作表和圖表，您必須有兩個`COleTemplateServer`物件。
 
-`COleTemplateServer` 覆寫`OnCreateInstance`所定義的成員函式`COleObjectFactory`。 此成員函式是由建立適當類型的 c + + 物件架構呼叫。
+`COleTemplateServer` 覆寫`OnCreateInstance`所定義的成員函式`COleObjectFactory`。 此成員函式會呼叫 framework 來建立C++物件的適當的型別。
 
 如需有關伺服器的詳細資訊，請參閱[伺服器：實作伺服器](../../mfc/servers-implementing-a-server.md)。
 

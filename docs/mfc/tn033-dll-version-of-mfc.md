@@ -11,10 +11,10 @@ helpviewer_keywords:
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
 ms.openlocfilehash: 4bfc60e20a073dd34945b91dd48ba82cdf4ab9f3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767778"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033:MFC 的 DLL 版本
@@ -38,14 +38,14 @@ ms.locfileid: "58767778"
 這是支援在 MFC 1.0 中的 DLL 支援的版本。 所述[技術提示 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md)和 MFC 進階概念範例[DLLScreenCap](../overview/visual-cpp-samples.md)。
 
 > [!NOTE]
-> 截至 Visual c + + 4.0 版，詞彙**USRDLL**已經過時，已取代靜態連結至 MFC 之標準 MFC DLL。 您可能也會建立一般動態連結至 MFC 的 MFC DLL。
+> 截至 VisualC++版本 4.0、 詞彙**USRDLL**已經過時，已取代靜態連結至 MFC 之標準 MFC DLL。 您可能也會建立一般動態連結至 MFC 的 MFC DLL。
 
 MFC 3.0 （和更新版本） 支援 MFC 的標準 Dll 包括 OLE 和資料庫類別的新功能。
 
-**AFXDLL**:這也稱為共用版本的 MFC 程式庫。 這是 MFC 2.0 中加入新的 DLL 支援。 MFC 程式庫本身是數 （如下所述） 的 Dll 和用戶端應用程式或 DLL 動態連結它所需的 Dll。 跨應用程式/DLL 界限的介面是 C + + MFC 類別介面。 用戶端應用程式必須是 MFC 應用程式。 這可支援所有的 MFC 3.0 功能 (例外狀況：UNICODE 不是支援資料庫類別）。
+**AFXDLL**:這也稱為共用版本的 MFC 程式庫。 這是 MFC 2.0 中加入新的 DLL 支援。 MFC 程式庫本身是數 （如下所述） 的 Dll 和用戶端應用程式或 DLL 動態連結它所需的 Dll。 跨應用程式/DLL 界限的介面是C++/MFC 類別介面。 用戶端應用程式必須是 MFC 應用程式。 這可支援所有的 MFC 3.0 功能 (例外狀況：UNICODE 不是支援資料庫類別）。
 
 > [!NOTE]
-> 截至 Visual c + + 4.0 版，這種類型的 DLL 被指 「 延伸模組 DLL。 」
+> 截至 Visual C++ 4.0 版，這種類型的 DLL 會稱為 「 延伸模組 DLL。 」
 
 本附註會使用 MFCxx.DLL 參考整個 MFC DLL 集合，其中包括：
 
@@ -109,7 +109,7 @@ MFC 擴充 DLL 是包含類別和函式寫入美化它們的 MFC 類別功能的
 用戶端應用程式和任何 MFC 擴充 Dll 必須使用 MFCxx.DLL 相同版本。 您應該遵循的慣例 MFC DLL，並提供這兩個偵錯和零售 (/release) MFC 延伸模組 DLL 的版本。 這可讓用戶端程式，來建置應用程式的偵錯和零售版本，並將它們連結與適當的偵錯或零售版本的所有 Dll。
 
 > [!NOTE]
->  因為 c + + 命名修飾，並匯出問題從 MFC 擴充 DLL 的 [匯出] 清單可能相同 DLL 的偵錯和零售版本和 Dll 之間的不同平台不同。 零售 MFCxx.DLL 有大約 2000年匯出的進入點，偵錯 MFCxxD.DLL 大約 3000 已匯出進入點。
+>  因為C++名稱的損害以及匯出問題，從 MFC 擴充 DLL 的 [匯出] 清單可能會不同相同 DLL 的偵錯和零售版本和 Dll 之間的不同平台。 零售 MFCxx.DLL 有大約 2000年匯出的進入點，偵錯 MFCxxD.DLL 大約 3000 已匯出進入點。
 
 ### <a name="quick-note-on-memory-management"></a>記憶體管理上的快速提示
 
@@ -127,9 +127,9 @@ MFCxx.DLL 和所有 MFC 擴充 Dll 載入到用戶端應用程式的位址空間
 
 如果您要將現有的專案轉換成 MFC 擴充 DLL，開始建置應用程式使用共用的版本的 MFC 的標準規則，然後執行下列動作：
 
-- 新增 **/D_AFXEXT**編譯器旗標。 在 [專案屬性] 對話方塊中，選取 [C/c + +] 節點。 然後選取前置處理器的類別。 新增`_AFXEXT`到定義的巨集 欄位中，每個項目以分號分隔。
+- 新增 **/D_AFXEXT**編譯器旗標。 在 專案屬性 對話方塊中，選取 C /C++節點。 然後選取前置處理器的類別。 新增`_AFXEXT`到定義的巨集 欄位中，每個項目以分號分隔。
 
-- 移除 **/Gy**編譯器參數。 在 [專案屬性] 對話方塊中，選取 [C/c + +] 節點。 然後選取程式碼產生類別。 請確定未啟用 「 啟用函式階層連結 」 的選項。 這會讓您更輕鬆地匯出類別，因為連結器將不會移除未參考的函式。 如果原始的專案用來建置一般 MFC DLL 以靜態方式連結至 MFC，變更 **[d] /MT**編譯器選項，來 **/MD [d]**。
+- 移除 **/Gy**編譯器參數。 在 專案屬性 對話方塊中，選取 C /C++節點。 然後選取程式碼產生類別。 請確定未啟用 「 啟用函式階層連結 」 的選項。 這會讓您更輕鬆地匯出類別，因為連結器將不會移除未參考的函式。 如果原始的專案用來建置一般 MFC DLL 以靜態方式連結至 MFC，變更 **[d] /MT**編譯器選項，來 **/MD [d]**。
 
 - 建置使用匯出程式庫 **/DLL**連結選項。 這會設定當您建立新的目標指定為目標類型的 Win32 動態連結程式庫。
 
@@ -249,7 +249,7 @@ class CLASS_DECL_B CExampleB : public CExampleA
 
 同樣地，您必須採取特別注意，當您不想要匯出整個類別。 您必須確定建立的 MFC 巨集的必要資料項目都正確匯出。 這可以藉由重新定義`AFX_DATA`特定類別的巨集。 這應該不會匯出整個類別的任何時間。
 
-例如: 
+例如：
 
 ```cpp
 // A.H
@@ -316,11 +316,11 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID)
 
 ### <a name="sharing-resources-and-classes"></a>共用資源和類別
 
-簡單的 MFC 擴充 Dll 需要只將少數低頻寬函式匯出至用戶端應用程式而不需要其他。 更多的使用者介面需要大量的 Dll 可能會想要匯出用戶端應用程式的資源和 c + + 類別。
+簡單的 MFC 擴充 Dll 需要只將少數低頻寬函式匯出至用戶端應用程式而不需要其他。 大量的 Dll 可能會想要匯出的資源更多使用者介面和C++用戶端應用程式的類別。
 
 匯出資源是透過資源的清單。 每個應用程式是單向連結的清單`CDynLinkLibrary`物件。 大部分的標準的 MFC 實作載入資源時尋找資源，尋找第一個在目前的資源模組 (`AfxGetResourceHandle`)，如果找不到查核行程的清單`CDynLinkLibrary`嘗試載入所要求的資源的物件。
 
-動態建立 c + + 類別名稱的 c + + 物件很類似。 MFC 物件還原序列化機制必須將所有`CRuntimeClass`物件註冊，讓它可以藉由以動態方式建立所需的型別，根據儲存的內容稍早的 c + + 物件建構。
+動態建立C++物件指定C++類別名稱是類似。 MFC 物件還原序列化機制必須將所有`CRuntimeClass`物件註冊，讓它可以重新建構所動態建立C++已儲存的內容稍早根據所需型別物件。
 
 如果您想要使用您的 MFC 擴充 DLL 中的類別，用戶端應用程式`DECLARE_SERIAL`，則您必須匯出您的類別會顯示用戶端應用程式。 這也是藉由查核`CDynLinkLibrary`清單。
 
@@ -365,9 +365,9 @@ extern "C" extern void WINAPI InitXxxDLL()
 
 若要匯出您的類別的簡單方式是使用`__declspec(dllimport)`和`__declspec(dllexport)`的每個類別和您想要匯出的全域函式。 這可讓您更輕鬆，但效率比命名 （如下所述） 的每個進入點，因為您可以控制哪些函式會匯出較少，而且您無法依序數匯出的函式。 TESTDLL1 和 TESTDLL2 使用這個方法將其項目。
 
-更有效率的方法 （和 MFCxx.DLL 所使用的方法） 是藉由命名每個項目中的以手動方式匯出每個項目。DEF 檔案。 因為我們要從我們 （也就是並非所有功能） 的 DLL 匯出選擇性的匯出，我們必須決定我們想要匯出哪一個特定介面。 這是很困難，因為您必須指定至連結器損害的名稱中的項目表單中。DEF 檔案。 未匯出任何 c + + 類別，除非您真的需要對此符號連結。
+更有效率的方法 （和 MFCxx.DLL 所使用的方法） 是藉由命名每個項目中的以手動方式匯出每個項目。DEF 檔案。 因為我們要從我們 （也就是並非所有功能） 的 DLL 匯出選擇性的匯出，我們必須決定我們想要匯出哪一個特定介面。 這是很困難，因為您必須指定至連結器損害的名稱中的項目表單中。DEF 檔案。 不會匯出任何C++類別，除非您真的需要對此符號連結。
 
-如果您嘗試匯出 c + + 類別使用。DEF 檔案之前，您可能想要開發的工具，以自動產生這份清單。 這可以使用兩階段連結程序。 連結您一次使用沒有匯出的 DLL，並讓連結器產生。對應檔。 。對應檔案可以用來產生一份應匯出的函式，因此與一些重新排列，它可以用來產生您的匯出項目，如您。DEF 檔案。 （雖然它不是完全自動的而且需要某些手動微調每隔一段時間），MFCxx.DLL 和 OLE 及數千在數目、 資料庫 MFC 擴充 Dll 的 [匯出] 清單所產生的程序。
+如果您嘗試匯出C++類別使用。DEF 檔案之前，您可能想要開發的工具，以自動產生這份清單。 這可以使用兩階段連結程序。 連結您一次使用沒有匯出的 DLL，並讓連結器產生。對應檔。 。對應檔案可以用來產生一份應匯出的函式，因此與一些重新排列，它可以用來產生您的匯出項目，如您。DEF 檔案。 （雖然它不是完全自動的而且需要某些手動微調每隔一段時間），MFCxx.DLL 和 OLE 及數千在數目、 資料庫 MFC 擴充 Dll 的 [匯出] 清單所產生的程序。
 
 ### <a name="cwinapp-vs-cdynlinklibrary"></a>CWinApp vs。CDynLinkLibrary
 
@@ -401,13 +401,13 @@ MFC 擴充 DLL 並沒有`CWinApp`-衍生自己的物件; 而是它必須能與`C
 
 如果您使用標準的預設值的最內部的 makefile，您可以輕鬆地將專案變更為建置的 DLL 版本。
 
-下列步驟假設您有與 NAFXCWD 連結正常運作的 MFC 應用程式。LIB （適用於偵錯） 和 NAFXCW。LIB （適用於零售版），而且您想要將它轉換成使用共用的版本的 MFC 程式庫。 您執行 Visual c + + 環境，並讓內部的專案檔。
+下列步驟假設您有與 NAFXCWD 連結正常運作的 MFC 應用程式。LIB （適用於偵錯） 和 NAFXCW。LIB （適用於零售版），而且您想要將它轉換成使用共用的版本的 MFC 程式庫。 您正在執行視覺效果C++環境，而且有內部的專案檔。
 
 1. 在 **專案**功能表上，按一下**屬性**。 在 **一般**頁面**專案預設值**，設定為 Microsoft Foundation Classes**使用 MFC 的共用 dll** (MFCxx(d).dll)。
 
 ### <a name="building-with-nmake"></a>使用 NMAKE 來建置
 
-如果您正在使用外部 makefile 功能的 Visual c + + 中，或直接使用 NMAKE，您必須編輯您的 makefile，來支援編譯器和連結器選項
+如果您使用外部 makefile 功能的視覺效果C++，或使用 NMAKE 直接，您必須編輯您的 makefile，來支援編譯器和連結器選項
 
 必要的編譯器旗標：
 
@@ -428,9 +428,9 @@ MFC 擴充 DLL 並沒有`CWinApp`-衍生自己的物件; 而是它必須能與`C
 
 ### <a name="building-the-samples"></a>建置範例
 
-您可以建立大部分的 MFC 範例程式，從 Visual c + + 或共用的 NMAKE 相容 MAKEFILE，從命令列。
+大部分的 MFC 範例程式可以從 視覺效果來建立C++或從共用的 NMAKE 相容 MAKEFILE，從命令列。
 
-若要轉換的這些範例，以使用 MFCxx.DLL 任何，您可以載入。MAK 到 Visual c + + 檔案，並設定專案選項，如上面所述。 如果您使用 NMAKE 組建，您可以指定"AFXDLL = 1"上 NMAKE 命令列，並且會建立使用共用的 MFC 程式庫範例。
+若要轉換的這些範例，以使用 MFCxx.DLL 任何，您可以載入。MAK 檔案到視覺效果C++，並設定專案選項，如上面所述。 如果您使用 NMAKE 組建，您可以指定"AFXDLL = 1"上 NMAKE 命令列，並且會建立使用共用的 MFC 程式庫範例。
 
 MFC 進階概念範例[DLLHUSK](../overview/visual-cpp-samples.md)使用 MFC 的 DLL 版本所建置。 此範例不只說明如何建置使用 MFCxx.DLL，連結的應用程式，但它也會說明 MFC DLL 的封裝選項，例如 MFC 擴充 Dll，這個技術提示稍後所述的其他功能。
 
@@ -438,7 +438,7 @@ MFC 進階概念範例[DLLHUSK](../overview/visual-cpp-samples.md)使用 MFC 的
 
 零售版本的 Dll (MFCxx [U]。DLL) 都可以自由轉散發。 不能自由轉散發 Dll 的偵錯版本，並應該僅在您的應用程式開發期間使用。
 
-提供偵錯 Dll 的偵錯資訊。 藉由使用 Visual c + + 偵錯工具，您可以追蹤您的應用程式，以及 DLL 執行。 版本的 Dll (MFCxx [U]。DLL) 並包含偵錯資訊。
+提供偵錯 Dll 的偵錯資訊。 藉由使用視覺效果C++偵錯工具，您可以追蹤您的應用程式，以及 DLL 執行。 版本的 Dll (MFCxx [U]。DLL) 並包含偵錯資訊。
 
 如果您自訂或重建 Dll 時，您應呼叫它們的項目"MFCxx 「 MFC SRC 檔 MFCDLL 以外。MAK 描述組建選項，並包含重新命名 DLL 的邏輯。 重新命名這些檔案是必要的因為這些 Dll 有可能共用許多的 MFC 應用程式。 讓您自訂的 MFC Dll 取代版本安裝在系統上可能會中斷另一個使用共用的 MFC Dll 的 MFC 應用程式。
 
@@ -472,11 +472,11 @@ MFC SRC 的 MFC 程式庫的一般來源具有一些額外的條件式程式碼�
 
 ### <a name="memory-management"></a>記憶體管理
 
-使用 MFCxx.DLL 的應用程式會使用常見的記憶體配置器 MSVCRTxx.DLL，共用的 C 執行階段 DLL 所提供。 應用程式、 任何 MFC 擴充 Dll 和 MFC Dll 本身以及使用此共用的記憶體配置器。 藉由使用共用的 DLL 進行記憶體配置，MFC Dll 可以配置應用程式，反之亦然，稍後會釋放的記憶體。 因為應用程式和 DLL 必須使用相同的配置器，您不應該覆寫通用的 c + + **new 運算子**或是**運算子 delete**。 相同的規則會套用到其餘的 C 執行階段記憶體配置常式 (例如**malloc**， **realloc**，**免費**，等等)。
+使用 MFCxx.DLL 的應用程式會使用常見的記憶體配置器 MSVCRTxx.DLL，共用的 C 執行階段 DLL 所提供。 應用程式、 任何 MFC 擴充 Dll 和 MFC Dll 本身以及使用此共用的記憶體配置器。 藉由使用共用的 DLL 進行記憶體配置，MFC Dll 可以配置應用程式，反之亦然，稍後會釋放的記憶體。 因為應用程式和 DLL 必須使用相同的配置器，您不應該覆寫C++全域**new 運算子**或是**運算子 delete**。 相同的規則會套用到其餘的 C 執行階段記憶體配置常式 (例如**malloc**， **realloc**，**免費**，等等)。
 
 ### <a name="ordinals-and-class-declspecdllexport-and-dll-naming"></a>序數和類別 __declspec （dllexport） 和 DLL 命名
 
-我們不會使用`class` **__declspec （dllexport)** c + + 編譯器的功能。 相反地，匯出清單會包含的類別程式庫來源 （MFCxx.DEF 和 MFCxxD.DEF）。 會匯出這些選取集合的進入點 （函式和資料）。 其他符號，例如 MFC 私用實作函式或類別，不會匯出所有匯出都由序數沒有常駐 」 或 「 非常駐名稱表格中的字串名稱。
+我們不會使用`class` **__declspec （dllexport)** 功能C++編譯器。 相反地，匯出清單會包含的類別程式庫來源 （MFCxx.DEF 和 MFCxxD.DEF）。 會匯出這些選取集合的進入點 （函式和資料）。 其他符號，例如 MFC 私用實作函式或類別，不會匯出所有匯出都由序數沒有常駐 」 或 「 非常駐名稱表格中的字串名稱。
 
 使用`class` **__declspec （dllexport)** 可能可行的替代方案建置較小的 Dll，但若為大型的 DLL，例如 MFC 中，預設值匯出機制具有效率和容量限制。
 

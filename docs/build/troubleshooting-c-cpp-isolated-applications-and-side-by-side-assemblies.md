@@ -7,10 +7,10 @@ helpviewer_keywords:
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
 ms.openlocfilehash: 32896939ddc7fd0b841e1b6904124b06c9bc51c9
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58766051"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>疑難排解 C/C++ 隔離應用程式和並存組件
@@ -31,7 +31,7 @@ ms.locfileid: "58766051"
 
 如果將應用程式部署到沒有 Visual Studio 的電腦，且其損毀並顯示先前的類似錯誤訊息，請檢查這些情況：
 
-1. 請依照下列所述的步驟[了解 Visual c + + 應用程式的相依性](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md)。 相依性查核器可以顯示應用程式或 DLL 的大部分相依性。 如果您觀察到某些 Dll 會遺失，請在嘗試執行應用程式的電腦上安裝它們。
+1. 請依照下列所述的步驟[了解的相依性視覺效果C++應用程式](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md)。 相依性查核器可以顯示應用程式或 DLL 的大部分相依性。 如果您觀察到某些 Dll 會遺失，請在嘗試執行應用程式的電腦上安裝它們。
 
 1. 作業系統載入器會使用應用程式資訊清單來載入應用程式所相依的組件。 資訊清單可以內嵌於二進位檔做為資源，或安裝為應用程式資料夾中的個別檔案。 若要檢查資訊清單是否內嵌於二進位檔，在 Visual Studio 中開啟二進位檔，並在其資源清單中尋找 RT_MANIFEST。 如果找不到內嵌的資訊清單，尋找名為 < binary_name > 類似檔案的應用程式資料夾中。\<擴充功能 >.manifest。
 
@@ -48,7 +48,7 @@ ms.locfileid: "58766051"
 
 ## <a name="example"></a>範例
 
-假設我們有 appl.exe 使用 Visual c + + 建置的應用程式。 應用程式資訊清單可能會內嵌在 appl.exe 做為二進位資源 RT_MANIFEST (具有等於 1 的識別碼)，或儲存為個別檔案 appl.exe.manifest。 此資訊清單的內容看起來像這樣：
+假設我們有應用程式 appl.exe，建置使用視覺效果C++。 應用程式資訊清單可能會內嵌在 appl.exe 做為二進位資源 RT_MANIFEST (具有等於 1 的識別碼)，或儲存為個別檔案 appl.exe.manifest。 此資訊清單的內容看起來像這樣：
 
 ```
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">

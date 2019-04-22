@@ -9,10 +9,10 @@ helpviewer_keywords:
 - user-defined types, C++ classes
 ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
 ms.openlocfilehash: c28f83e7853ffb09bba7721ec71ab43c85aedb0c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779387"
 ---
 # <a name="classes-and-structs-c"></a>類別和結構 (C++)
@@ -51,7 +51,7 @@ ms.locfileid: "58779387"
 
 三個類別類型是結構、類別和等位。 它們使用宣告[結構](../cpp/struct-cpp.md)，[類別](../cpp/class-cpp.md)，並[union](../cpp/unions.md)關鍵字。 下表顯示這三個類別類型的差異。
 
-如需有關等位的詳細資訊，請參閱[等位](../cpp/unions.md)。 如需類別和結構在 C + + /cli 和 C + + /CX 中，請參閱[類別和結構](../extensions/classes-and-structs-cpp-component-extensions.md)。
+如需有關等位的詳細資訊，請參閱[等位](../cpp/unions.md)。 如需類別和結構中的資訊C++/CLI 和C++/CX，請參閱 <<c2> [ 類別和結構](../extensions/classes-and-structs-cpp-component-extensions.md)。</c2>
 
 ### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>結構、類別和等位的存取控制和條件約束
 

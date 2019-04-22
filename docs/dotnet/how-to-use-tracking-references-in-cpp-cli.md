@@ -1,19 +1,19 @@
 ---
-title: HOW TO：使用追蹤參考的 C + + /cli CLI
+title: HOW TO：使用追蹤參考的C++/CLI
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
 ms.openlocfilehash: 8be575bd39bc3b2e6512ba1bcb40d9206731f83a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777047"
 ---
-# <a name="how-to-use-tracking-references-in-ccli"></a>HOW TO：使用追蹤參考的 C + + /cli CLI
+# <a name="how-to-use-tracking-references-in-ccli"></a>HOW TO：使用追蹤參考的C++/CLI
 
-這篇文章示範如何使用追蹤參考 （%）在 C + + /cli CLI 以傳址方式傳遞 common language runtime (CLR) 型別。
+這篇文章示範如何使用追蹤參考 （%）在C++/CLI 以傳址方式傳遞 common language runtime (CLR) 型別。
 
 ## <a name="to-pass-clr-types-by-reference"></a>依參考傳遞 CLR 類型
 
@@ -70,7 +70,7 @@ int main() {
 zip == 20100
 ```
 
-下一個範例會顯示該採取的追蹤參考的位址傳回[interior_ptr (C + + /cli CLI)](../extensions/interior-ptr-cpp-cli.md)，並示範如何修改，並透過追蹤參考來存取資料。
+下一個範例會顯示該採取的追蹤參考的位址傳回[interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)，並示範如何修改，並透過追蹤參考來存取資料。
 
 ```cpp
 // tracking_reference_data.cpp

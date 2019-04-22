@@ -6,15 +6,15 @@ helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: 291f38d1-d2de-4687-86a9-99b4fd35706c
 ms.openlocfilehash: e1ee9364cfcd382c8699014fd2ef4a807b63bb0f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780427"
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM 桌面元件
 
-ATL 參考文件 Active Template Library (ATL)，一組樣板架構 c + + 類別，可簡化元件物件模型 (COM) 物件的程式設計。 COM 是二進位規格來建立及使用 Windows 上的軟體元件。 若要完全利用 ATL，強烈建議 COM 工作熟悉。 如需有關 COM 的詳細資訊，請參閱[元件物件模型 (COM)](/windows/desktop/com/component-object-model--com--portal)。
+ATL 參考文件 Active Template Library (ATL)，一組範本為基礎的C++類別，可簡化元件物件模型 (COM) 物件的程式設計。 COM 是二進位規格來建立及使用 Windows 上的軟體元件。 若要完全利用 ATL，強烈建議 COM 工作熟悉。 如需有關 COM 的詳細資訊，請參閱[元件物件模型 (COM)](/windows/desktop/com/component-object-model--com--portal)。
 
 ## <a name="in-this-section"></a>本節內容
 

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
 ms.openlocfilehash: e8f42c35024995c026ae10fc7f0ab3db77d1e5dc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769520"
 ---
 # <a name="unhook"></a>__unhook
@@ -41,7 +41,7 @@ long  __unhook(
 
 **&** *SourceClass* `::` *EventMethod*從中解除連結事件處理常式方法的事件方法指標：
 
-- 原生 c + + 事件：*SourceClass*是事件來源類別以及*EventMethod*是事件。
+- 原生C++事件：*SourceClass*是事件來源類別以及*EventMethod*是事件。
 
 - COM 事件：*SourceClass*是事件來源介面和*EventMethod*是其中一個方法。
 
@@ -61,7 +61,7 @@ long  __unhook(
 
 **&** *ReceiverClass* `::` `HandlerMethod`瑢髍廒事件之事件處理常式方法的指標。 做為類別或參考相同的方法指定的處理常式如果您未指定類別名稱， **__unhook**假設要在其中已呼叫該方法的類別。
 
-- 原生 c + + 事件：*ReceiverClass*是事件接收器類別和`HandlerMethod`是處理常式。
+- 原生C++事件：*ReceiverClass*是事件接收器類別和`HandlerMethod`是處理常式。
 
 - COM 事件：*ReceiverClass*是事件接收器介面和`HandlerMethod`是其中一個處理常式。
 
@@ -96,7 +96,7 @@ long  __unhook(
 
 ## <a name="example"></a>範例
 
-請參閱[原生 c + + 中的事件處理](../cpp/event-handling-in-native-cpp.md)並[COM 中的事件處理](../cpp/event-handling-in-com.md)範例。
+請參閱[原生中的事件處理C++](../cpp/event-handling-in-native-cpp.md)並[COM 中的事件處理](../cpp/event-handling-in-com.md)範例。
 
 ## <a name="see-also"></a>另請參閱
 

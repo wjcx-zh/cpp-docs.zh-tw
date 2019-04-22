@@ -7,15 +7,15 @@ helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
 ms.openlocfilehash: 9f0f917de7eeb2ace6800368d10958cec7d36e6a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770378"
 ---
 # <a name="ole-db-templates"></a>OLE DB 樣板
 
-OLE DB 範本可讓 OLE DB 資料存取更為容易。 Visual c + + 提供實作許多常用的 OLE DB 介面的範本類別。 您可以使用 Visual c + + 取用者範本撰寫 OLE DB 用戶端 （消費者） 應用程式和提供者範本撰寫伺服器 （提供者） 應用程式。
+OLE DB 範本可讓 OLE DB 資料存取更為容易。 視覺化C++提供實作許多常用的 OLE DB 介面的範本類別。 您可以使用視覺效果C++撰寫的 OLE DB 用戶端 （消費者） 應用程式和提供者範本撰寫伺服器 （提供者） 應用程式的取用者範本。
 
 ## <a name="in-this-section"></a>本節內容
 

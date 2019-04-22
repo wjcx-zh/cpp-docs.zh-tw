@@ -4,10 +4,10 @@ ms.date: 04/08/2019
 helpviewer_keywords:
 - compiler options, C++
 ms.openlocfilehash: d8ab1cbac7ad8eb44f16c7829ccac20a6d3e73ff
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424114"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>依字母順序排列的編譯器選項
@@ -39,17 +39,17 @@ ms.locfileid: "59424114"
 |[/F](f-set-stack-size.md)|設定堆疊大小。|
 |[/favor](favor-optimize-for-architecture-specifics.md)|產生程式碼，適用於特定的 x64 架構或為 AMD64 和延伸記憶體 64 技術 (EM64T) 架構中微-架構。|
 |[/FA](fa-fa-listing-file.md)|建立清單檔。|
-|[/FA](fa-fa-listing-file.md)|設定清單檔名稱。|
+|[/Fa](fa-fa-listing-file.md)|設定清單檔名稱。|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|顯示在診斷測試中傳遞給 cl.exe 的原始程式檔完整路徑。|
 |[/Fd](fd-program-database-file-name.md)|重新命名程式資料庫檔案。|
 |[/Fe](fe-name-exe-file.md)|重新命名可執行檔。|
 |[/FI](fi-name-forced-include-file.md)|前置處理指定的包含檔。|
-|[/FI](fi-preprocess-output-file-name.md)|設定前置處理過的輸出檔名稱。|
+|[/Fi](fi-preprocess-output-file-name.md)|設定前置處理過的輸出檔名稱。|
 |[/Fm](fm-name-mapfile.md)|建立對應檔案。|
 |[/Fo](fo-object-file-name.md)|建立目的檔。|
 |[/fp](fp-specify-floating-point-behavior.md)|指定浮點行為。|
-|[/fp](fp-name-dot-pch-file.md)|指定先行編譯標頭檔的名稱。|
-|[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/FR](fr-fr-create-dot-sbr-file.md)|產生瀏覽器檔案。 **/Fr** 已取代。|
+|[/Fp](fp-name-dot-pch-file.md)|指定先行編譯標頭檔的名稱。|
+|[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/Fr](fr-fr-create-dot-sbr-file.md)|產生瀏覽器檔案。 **/Fr** 已取代。|
 |[/FS](fs-force-synchronous-pdb-writes.md)|強制寫入要透過 MSPDBSRV.EXE 序列化的程式資料庫 (PDB) 檔案。|
 |[/FU](fu-name-forced-hash-using-file.md)|強制使用某一檔名，就如同它已傳遞給 [#using](../../preprocessor/hash-using-directive-cpp.md) 指示詞一樣。|
 |[/Fx](fx-merge-injected-code.md)|將插入的程式碼與原始程式檔合併。|
@@ -58,13 +58,13 @@ ms.locfileid: "59424114"
 |[/Ge](ge-enable-stack-probes.md)|已取代。 啟動堆疊探查。|
 |[/GF](gf-eliminate-duplicate-strings.md)|啟用字串共用。|
 |[/GH](gh-enable-pexit-hook-function.md)|呼叫攔截函式 `_pexit`。|
-|[/GH](gh-enable-penter-hook-function.md)|呼叫攔截函式 `_penter`。|
+|[/Gh](gh-enable-penter-hook-function.md)|呼叫攔截函式 `_penter`。|
 |[/GL](gl-whole-program-optimization.md)|啟用整個程式最佳化。|
 |[/Gm](gm-enable-minimal-rebuild.md)|已取代。 啟用最少重建。|
 |[/GR](gr-enable-run-time-type-information.md)|啟用執行階段類型資訊 (RTTI)。|
-|[/GR](gd-gr-gv-gz-calling-convention.md)|使用 `__fastcall` 呼叫慣例 (僅適用於 x86)。|
+|[/Gr](gd-gr-gv-gz-calling-convention.md)|使用 `__fastcall` 呼叫慣例 (僅適用於 x86)。|
 |[/GS](gs-buffer-security-check.md)|緩衝處理安全性檢查。|
-|[/GS](gs-control-stack-checking-calls.md)|控制堆疊探查。|
+|[/Gs](gs-control-stack-checking-calls.md)|控制堆疊探查。|
 |[/GT](gt-support-fiber-safe-thread-local-storage.md)|對使用靜態執行緒區域儲存區配置的資料支援 Fiber 安全性。|
 |[/guard:cf](guard-enable-control-flow-guard.md)|加入控制流程防護安全性檢查。|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|使用 `__vectorcall` 呼叫慣例。 (僅限 x86 和 x64)|
@@ -72,7 +72,7 @@ ms.locfileid: "59424114"
 |[/GX](gx-enable-exception-handling.md)|已取代。 啟用同步例外狀況處理。 改用 [/EH](eh-exception-handling-model.md) 。|
 |[/Gy](gy-enable-function-level-linking.md)|啟用函式階層連結。|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已取代。 與 [/RTC1](rtc-run-time-error-checks.md)相同。|
-|[/GZ](gd-gr-gv-gz-calling-convention.md)|使用 `__stdcall` 呼叫慣例 (僅適用於 x86)。|
+|[/Gz](gd-gr-gv-gz-calling-convention.md)|使用 `__stdcall` 呼叫慣例 (僅適用於 x86)。|
 |[/H](h-restrict-length-of-external-names.md)|已取代。 限制外部 (公用) 名稱的長度。|
 |[/HELP](help-compiler-command-line-help.md)|列出編譯器選項。|
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|在函式進入時，強制暫存器中所傳遞的參數寫入至堆疊上的位置。 這個編譯器選項是僅適用於 x64 編譯器 （原生和跨編譯）。|
@@ -116,11 +116,11 @@ ms.locfileid: "59424114"
 |[/source-charset](source-charset-set-source-character-set.md)|設定來源字元集。|
 |[/std](std-specify-language-standard-version.md)|C++標準版本相容性的選取器。|
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|指定 C 原始程式檔。|
-|[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|指定所有原始程式檔都是 c。|
+|[/TC](tc-tp-tc-tp-specify-source-file-type.md)|指定所有原始程式檔都是 c。|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|指定 C++ 原始程式檔。|
-|[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|指定所有原始程式檔都是C++。|
+|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定所有原始程式檔都是C++。|
 |[/U](u-u-undefine-symbols.md)|移除某個預先定義巨集。|
-|[/U](u-u-undefine-symbols.md)|移除所有預先定義巨集。|
+|[/u](u-u-undefine-symbols.md)|移除所有預先定義巨集。|
 |[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|設定來源和執行字元集為 utf-8。|
 |[/V](v-version-number.md)|已取代。 設定 obj 檔案版本字串。|
 |[/validate-charset](validate-charset-validate-for-compatible-characters.md)|驗證只有相容字元的 utf-8 檔案。|
@@ -131,7 +131,7 @@ ms.locfileid: "59424114"
 |[/vms](vmm-vms-vmv-general-purpose-representation.md)|宣告單一繼承。|
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|宣告虛擬繼承。|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|選取 volatile 關鍵字的解譯方式。|
-|[/W](compiler-option-warning-level.md)|停用所有警告。|
+|[/w](compiler-option-warning-level.md)|停用所有警告。|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|設定要輸出的警告層級。|
 |[/w1, /w2, /w3, /w4](compiler-option-warning-level.md)|為指定的警告設定警告層級。|
 |[/Wall](compiler-option-warning-level.md)|啟用所有警告，包括預設停用的警告。|
@@ -154,7 +154,7 @@ ms.locfileid: "59424114"
 |[/Ze](za-ze-disable-language-extensions.md)|已取代。 啟用語言擴充功能。|
 |[/Zf](zf.md)|在平行建置中產生時間改善 PDB。|
 |[/Zg](zg-generate-function-prototypes.md)|已從 Visual C++ 2015 移除。 產生函式原型。|
-|[/Zi](z7-zi-zi-debug-information-format.md)|將偵錯資訊包括在與「編輯後繼續」相容的程式資料庫中。|
+|[/ZI](z7-zi-zi-debug-information-format.md)|將偵錯資訊包括在與「編輯後繼續」相容的程式資料庫中。|
 |[/Zi](z7-zi-zi-debug-information-format.md)|產生完整偵錯資訊。|
 |[/Zl](zl-omit-default-library-name.md)|從 .obj 檔案移除預設程式庫名稱 (僅適用於 x86)。|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|指定先行編譯標頭的記憶體配置上限。|
@@ -165,4 +165,4 @@ ms.locfileid: "59424114"
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

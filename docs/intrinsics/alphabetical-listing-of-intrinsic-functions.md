@@ -7,10 +7,10 @@ helpviewer_keywords:
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
 ms.openlocfilehash: 67206e63d163b489c5087e6bc6759cde30a3d6c4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026190"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>依字母順序列出的內建函式
@@ -25,19 +25,19 @@ ms.locfileid: "59026190"
 
 [__assume](../intrinsics/assume.md)
 
-[_BitScanForward, _BitScanForward64](../intrinsics/bitscanforward-bitscanforward64.md)
+[_BitScanForward、_BitScanForward64](../intrinsics/bitscanforward-bitscanforward64.md)
 
-[_BitScanReverse, _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)
+[_BitScanReverse、_BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)
 
-[_bittest, _bittest64](../intrinsics/bittest-bittest64.md)
+[_bittest、_bittest64](../intrinsics/bittest-bittest64.md)
 
-[_bittestandcomplement, _bittestandcomplement64](../intrinsics/bittestandcomplement-bittestandcomplement64.md)
+[_bittestandcomplement、_bittestandcomplement64](../intrinsics/bittestandcomplement-bittestandcomplement64.md)
 
-[_bittestandreset, _bittestandreset64](../intrinsics/bittestandreset-bittestandreset64.md)
+[_bittestandreset、_bittestandreset64](../intrinsics/bittestandreset-bittestandreset64.md)
 
-[_bittestandset, _bittestandset64](../intrinsics/bittestandset-bittestandset64.md)
+[_bittestandset、_bittestandset64](../intrinsics/bittestandset-bittestandset64.md)
 
-[__cpuid、 \__cpuidex](../intrinsics/cpuid-cpuidex.md)
+[__cpuid, \__cpuidex](../intrinsics/cpuid-cpuidex.md)
 
 [__debugbreak](../intrinsics/debugbreak.md)
 
@@ -61,7 +61,7 @@ ms.locfileid: "59026190"
 
 [__incfsbyte、 \__incfsword， \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)
 
-[__incgsbyte, \__incgsword, \__incgsdword, \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)
+[__incgsbyte、 \__incgsword， \__incgsdword， \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)
 
 [__indword](../intrinsics/indword.md)
 
@@ -69,7 +69,7 @@ ms.locfileid: "59026190"
 
 [__int2c](../intrinsics/int2c.md)
 
-[_InterlockedAdd 內建函式](../intrinsics/interlockedadd-intrinsic-functions.md)
+[_InterlockedAnd 內建函式](../intrinsics/interlockedadd-intrinsic-functions.md)
 
 [_InterlockedAddLargeStatistic](../intrinsics/interlockedaddlargestatistic.md)
 
@@ -119,7 +119,7 @@ ms.locfileid: "59026190"
 
 [_mm_cvttss_si64x](../intrinsics/mm-cvttss-si64x.md)
 
-[_mm_extract_si64，_mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)
+[_mm_extract_si64、_mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)
 
 [_mm_insert_si64、_mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)
 
@@ -191,9 +191,9 @@ ms.locfileid: "59026190"
 
 [_ReturnAddress](../intrinsics/returnaddress.md)
 
-[_rotl8, _rotl16](../intrinsics/rotl8-rotl16.md)
+[_rotl8、_rotl16](../intrinsics/rotl8-rotl16.md)
 
-[_rotr8, _rotr16](../intrinsics/rotr8-rotr16.md)
+[_rotr8、_rotr16](../intrinsics/rotr8-rotr16.md)
 
 [__segmentlimit](../intrinsics/segmentlimit.md)
 

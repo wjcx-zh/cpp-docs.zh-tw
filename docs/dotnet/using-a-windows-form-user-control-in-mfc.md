@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
 ms.openlocfilehash: 38c5c37712b430b137934d441056e60f2c130f78
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773095"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>在 MFC 中使用 Windows Form 使用者控制項
@@ -32,7 +32,7 @@ ms.locfileid: "58773095"
 > MFC Windows Form 整合只適用於以動態方式連結 MFC 的專案 (專案所在`_AFXDLL`定義)。
 
 > [!NOTE]
-> 當您建置您的應用程式使用的 DLL （mfcmifc80.dll 的參考） 的 MFC Windows Form 介面的私用 （已修改） 複本時，它將無法安裝在 GAC 中，除非您使用您自己的廠商金鑰來取代 Microsoft 金鑰。 如需有關簽署的組件的詳細資訊，請參閱[組件使用程式設計](/dotnet/framework/app-domains/programming-with-assemblies)並[強式名稱組件 （組件簽署） (C + + /cli CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。
+> 當您建置您的應用程式使用的 DLL （mfcmifc80.dll 的參考） 的 MFC Windows Form 介面的私用 （已修改） 複本時，它將無法安裝在 GAC 中，除非您使用您自己的廠商金鑰來取代 Microsoft 金鑰。 如需有關簽署的組件的詳細資訊，請參閱[組件使用程式設計](/dotnet/framework/app-domains/programming-with-assemblies)並[強式名稱組件 （組件簽署） (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。
 
 如果您的 MFC 應用程式使用 Windows Forms，您需要重新發佈您的應用程式 mfcmifc80.dll 的參考。 如需詳細資訊，請參閱 <<c0> [ 轉散發 MFC 程式庫](../windows/redistributing-the-mfc-library.md)。
 

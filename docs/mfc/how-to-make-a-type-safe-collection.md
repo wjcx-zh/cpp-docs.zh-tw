@@ -11,10 +11,10 @@ helpviewer_keywords:
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
 ms.openlocfilehash: c8be781bad699edb8cb0be844d79802269c3e0c5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781519"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>HOW TO：建立類型安全集合
@@ -33,11 +33,11 @@ MFC 程式庫提供以 C++ 範本為基礎的預先定義類型安全集合。 �
 
 #### <a name="to-use-template-based-classes"></a>使用範本型類別
 
-1. 宣告集合類別類型的變數。 例如：
+1. 宣告集合類別類型的變數。 例如: 
 
    [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]
 
-1. 呼叫集合物件的成員函式。 例如：
+1. 呼叫集合物件的成員函式。 例如: 
 
    [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]
 

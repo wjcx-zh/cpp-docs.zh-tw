@@ -8,15 +8,15 @@ helpviewer_keywords:
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
 ms.openlocfilehash: 21006f19f7c811f87f3f75e346983f7a8e7e0bf5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778321"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>HOW TO：各種字串類型之間轉換
 
-本主題示範如何將各種 Visual c + + 字串類型轉換成其他字串。 涵蓋的字串類型包括`char *`， `wchar_t*`， [_bstr_t](../cpp/bstr-t-class.md)， [CComBSTR](../atl/reference/ccombstr-class.md)， [CString](../atl-mfc-shared/using-cstring.md)， [basic_string](../standard-library/basic-string-class.md)，和<xref:System.String?displayProperty=fullName>。 在所有情況下，轉換為新的型別時，都會產生字串的複本。 新的字串所做的變更不會影響原始的字串，反之亦然。
+本主題示範如何將轉換各種視覺效果C++成其他字串的字串類型。 涵蓋的字串類型包括`char *`， `wchar_t*`， [_bstr_t](../cpp/bstr-t-class.md)， [CComBSTR](../atl/reference/ccombstr-class.md)， [CString](../atl-mfc-shared/using-cstring.md)， [basic_string](../standard-library/basic-string-class.md)，和<xref:System.String?displayProperty=fullName>。 在所有情況下，轉換為新的型別時，都會產生字串的複本。 新的字串所做的變更不會影響原始的字串，反之亦然。
 
 ## <a name="converting-from-char-"></a>從 char 轉換 \*
 
@@ -803,11 +803,11 @@ Hello, World! (basic_string)
 ## <a name="see-also"></a>另請參閱
 
 [ATL 和 MFC 字串轉換巨集](../atl/reference/string-conversion-macros.md)<br/>
-[與 C 樣式字串相關的 CString](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
-[HOW TO：將標準字串轉換為 system:: string](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
-[HOW TO：將 system:: string 轉換為標準字串](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
-[HOW TO：將 system:: string 轉換為 wchar_t * 或 char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
-[使用 CComBSTR 進行程式設計](../atl/programming-with-ccombstr-atl.md)<br/>
+[與 C 樣式字串相關的 CString 作業](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
+[如何：將標準字串轉換為 System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
+[如何：將 System::String 轉換為標準字串](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
+[如何：將 system:: string 轉換為 wchar_t * 或 char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
+[使用 ccombstr 進行程式設計](../atl/programming-with-ccombstr-atl.md)<br/>
 [mbstowcs_s、_mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)<br/>
 [wcstombs_s、_wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)<br/>
 [strcpy_s、wcscpy_s、_mbscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)<br/>

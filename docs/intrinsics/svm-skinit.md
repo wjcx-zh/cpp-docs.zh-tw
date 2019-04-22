@@ -8,15 +8,15 @@ helpviewer_keywords:
 - __svm_skinit intrinsic
 ms.assetid: 787ec781-4cf2-40a2-aa20-5192334b131a
 ms.openlocfilehash: 199cba2623f9d8e47c08be642ec485599b87976e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026132"
 ---
 # <a name="svmskinit"></a>__svm_skinit
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 啟始載入可驗證安全的軟體，例如虛擬機器監視器。
 
@@ -50,7 +50,7 @@ void __svm_skinit(
 
 **標頭檔** \<intrin.h >
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

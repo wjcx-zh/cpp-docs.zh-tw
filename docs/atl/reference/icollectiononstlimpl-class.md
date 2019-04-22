@@ -12,10 +12,10 @@ helpviewer_keywords:
 - ICollectionOnSTLImpl class
 ms.assetid: 683c88b0-0d97-4779-a762-e493334ba7f9
 ms.openlocfilehash: 6842f1c75ebbc9c3dfdd93f30d52fd2cb2936c03
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779218"
 ---
 # <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl 類別
@@ -35,7 +35,7 @@ class ICollectionOnSTLImpl : public T
 COM 集合介面。
 
 *CollType*<br/>
-C + + 標準程式庫容器類別。
+C++標準程式庫容器類別。
 
 *ItemType*<br/>
 容器介面所公開的項目類型。

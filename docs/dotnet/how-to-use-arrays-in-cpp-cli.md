@@ -1,19 +1,19 @@
 ---
-title: HOW TO：使用陣列，在 C + + /cli CLI
+title: HOW TO：使用中的陣列C++/CLI
 ms.date: 11/04/2016
 helpviewer_keywords:
 - arrays [C++], single-dimension
 ms.assetid: 301cfb3e-199f-42c8-8151-629dce9e87f3
 ms.openlocfilehash: 65d384cbac7691d000ae6e895c9cf63e71726689
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780921"
 ---
-# <a name="how-to-use-arrays-in-ccli"></a>HOW TO：使用陣列，在 C + + /cli CLI
+# <a name="how-to-use-arrays-in-ccli"></a>HOW TO：使用中的陣列C++/CLI
 
-本文說明如何使用陣列，在 C + + /cli CLI。
+這篇文章說明如何使用中的陣列C++/CLI。
 
 ## <a name="single-dimension-arrays"></a>一維陣列
 
@@ -501,7 +501,7 @@ int main() {
 
 ## <a name="sorting-arrays"></a>排序陣列
 
-不同於標準 c + + 陣列，managed 的陣列隱含衍生自其繼承的通用行為陣列基底類別。 例如，`Sort`方法，可用來排序任何陣列中的項目。
+不同於標準C++陣列，managed 陣列隱含衍生自其繼承的通用行為陣列基底類別。 例如，`Sort`方法，可用來排序任何陣列中的項目。
 
 對於包含基本的內建類型的陣列，您可以呼叫`Sort`方法。 您可以覆寫的排序準則，這動作需要時您想要排序陣列的複雜型別。 在此情況下，陣列項目類型必須實作<xref:System.IComparable.CompareTo%2A>方法。
 

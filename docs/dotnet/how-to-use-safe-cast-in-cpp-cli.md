@@ -1,19 +1,19 @@
 ---
-title: HOW TO：使用 safe_cast 在 C + + /cli CLI
+title: HOW TO：使用中的 safe_cast C++/CLI
 ms.date: 11/04/2016
 helpviewer_keywords:
 - safe_cast keyword [C++], upcasting
 ms.assetid: 0fbc87d8-ecdf-4cd5-81f4-0d8cc18e2aff
 ms.openlocfilehash: 66faadba9530bc7f3c12513277582e405e1b1b34
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781831"
 ---
-# <a name="how-to-use-safecast-in-ccli"></a>HOW TO：使用 safe_cast 在 C + + /cli CLI
+# <a name="how-to-use-safecast-in-ccli"></a>HOW TO：使用中的 safe_cast C++/CLI
 
-本文說明如何使用 safe_cast 在 C + + /cli 應用程式。 如需 safe_cast 在 C + + /CX 中，請參閱[safe_cast](../extensions/safe-cast-cpp-component-extensions.md)。
+這篇文章示範如何使用 safe_cast 中的C++/CLI 應用程式。 如需在 safe_cast C++/CX，請參閱[safe_cast](../extensions/safe-cast-cpp-component-extensions.md)。
 
 ## <a name="upcasting"></a>向上轉型
 

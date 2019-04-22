@@ -9,10 +9,10 @@ helpviewer_keywords:
 - FD compiler option [C++]
 ms.assetid: 7ef21b8c-a448-4bb4-9585-a2a870028e17
 ms.openlocfilehash: ac63b021dc0cb9ee5964af7fa2e168f710653979
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424049"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD (IDE 最少重建)
@@ -25,4 +25,4 @@ ms.locfileid: "59424049"
 
 [輸出檔 (/F) 選項](output-file-f-options.md)<br/>
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

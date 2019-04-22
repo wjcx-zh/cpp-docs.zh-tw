@@ -22,10 +22,10 @@ helpviewer_keywords:
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
 ms.openlocfilehash: 01450dca56ad662c8db0a35f89749c4a288109b3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768130"
 ---
 # <a name="docking-and-floating-toolbars"></a>停駐和浮動工具列
@@ -78,7 +78,7 @@ Microsoft Foundation 類別程式庫支援可停駐工具列。 可停駐工具�
 
 ##  <a name="_core_dynamically_resizing_the_toolbar"></a> 動態調整大小的工具列
 
-截至 Visual c + + 4.0 版，您可以讓您的應用程式動態調整大小浮動工具列上的使用者。 一般而言，工具列上有很長的線性的圖形，水平方式顯示。 但是，您可以變更工具列的方向和形狀。 比方說，當使用者在框架視窗垂直側邊的其中一個將工具列停駐，圖形會變更為垂直配置。 它也可調整成的矩形的按鈕的多個資料列的 工具列。
+截至 Visual C++ 4.0 版中，您可以讓您的應用程式動態調整大小浮動工具列上的使用者。 一般而言，工具列上有很長的線性的圖形，水平方式顯示。 但是，您可以變更工具列的方向和形狀。 比方說，當使用者在框架視窗垂直側邊的其中一個將工具列停駐，圖形會變更為垂直配置。 它也可調整成的矩形的按鈕的多個資料列的 工具列。
 
 您可以：
 

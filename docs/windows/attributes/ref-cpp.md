@@ -1,5 +1,5 @@
 ---
-title: ref （c + + COM 屬性）
+title: ref (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ref
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
 ms.openlocfilehash: f051fe577087d81515ddf0b44dfb15ad0fb2c616
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041373"
 ---
 # <a name="ref-c"></a>ref (C++)
@@ -25,7 +25,7 @@ ms.locfileid: "59041373"
 
 ## <a name="remarks"></a>備註
 
-**Ref** c + + 屬性具有相同的功能[ref](/windows/desktop/Midl/ref) MIDL 屬性。
+**Ref** C++屬性具有相同的功能[ref](/windows/desktop/Midl/ref) MIDL 屬性。
 
 ## <a name="example"></a>範例
 

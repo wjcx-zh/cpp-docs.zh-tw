@@ -15,10 +15,10 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
 ms.openlocfilehash: bc164125f867cf3e2f27b74e69b826cbed31ff1d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781792"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap 類別
@@ -62,7 +62,7 @@ class CTypedPtrMap : public BASE_CLASS
 
 ## <a name="remarks"></a>備註
 
-當您使用`CTypedPtrMap`，c + + 型別檢查功能，有助於排除不相符的指標類型所造成的錯誤。
+當您使用`CTypedPtrMap`、C++的型別檢查功能，有助於排除不相符的指標類型所造成的錯誤。
 
 因為所有`CTypedPtrMap`函式會以內嵌方式，使用此範本不會不會大幅影響的大小或您的程式碼的速度。
 

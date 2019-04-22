@@ -11,10 +11,10 @@ helpviewer_keywords:
 - dynasets
 ms.assetid: 2867e6be-208e-4fe7-8bbe-b8697cb1045c
 ms.openlocfilehash: 21c47546d14d9a121bdd0698fe96eb133dbc44a0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040406"
 ---
 # <a name="dynaset"></a>動態集
@@ -69,7 +69,7 @@ MFC 資料庫類別支援動態集，如果符合下列需求：
 
 與快照集，使用 ODBC 資料指標程式庫中繼存放區維護，不同的是動態集擷取記錄直接從資料來源只要捲動到它。 這會保留原本選取由資料來源同步處理的動態集的記錄。
 
-如需包含在這個版本的 Visual c + + 中的 ODBC 驅動程式的清單，以及取得額外的驅動程式的相關資訊，請參閱[ODBC 驅動程式清單](../../data/odbc/odbc-driver-list.md)。
+如需包含於視覺效果的此版本的 ODBC 驅動程式的清單C++並取得其他驅動程式的相關資訊，請參閱[ODBC 驅動程式清單](../../data/odbc/odbc-driver-list.md)。
 
 ## <a name="see-also"></a>另請參閱
 

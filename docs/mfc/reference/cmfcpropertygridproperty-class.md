@@ -167,10 +167,10 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
 ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779023"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty 類別
@@ -902,7 +902,7 @@ CMFCPropertyGridProperty* HitTest(
 
 下表列出的值，可以回到*pnArea*參數。
 
-|區域圖|描述|
+|區域|描述|
 |----------|-----------------|
 |`ClickArea::ClickExpandBox`|展開方塊控制項，指定將以加號 （+）。|
 |`ClickArea::ClickName`|屬性名稱。|

@@ -1,5 +1,5 @@
 ---
-title: event_receiver （c + + COM 屬性）
+title: event_receiver (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.event_receiver
@@ -13,10 +13,10 @@ helpviewer_keywords:
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
 ms.openlocfilehash: 81a3ec88c336ddeb550f133e657854b3b6f89d96
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023291"
 ---
 # <a name="eventreceiver"></a>event_receiver
@@ -32,12 +32,12 @@ ms.locfileid: "59023291"
 
 ### <a name="parameters"></a>參數
 
-*類型*<br/>
+*type*<br/>
 下列其中一個值的列舉：
 
-- `native` unmanaged C/c + + 程式碼 （原生類別的預設值）。
+- `native` 適用於 unmanaged C /C++程式碼 （原生類別的預設值）。
 
-- `com` 。 此值需要您包含下列標頭檔︰
+- COM 程式碼的`com` 。 此值需要您包含下列標頭檔︰
 
     ```cpp
     #define _ATL_ATTRIBUTES
@@ -54,7 +54,7 @@ ms.locfileid: "59023291"
 
 ## <a name="remarks"></a>備註
 
-**Event_receiver** c + + 屬性指定的類別或結構會套用它將是事件接收器，使用 Visual c + + 一致的事件模型。
+**Event_receiver** C++屬性指定的類別或結構會套用它將是事件接收器，使用視覺效果C++統一的事件模型。
 
 **event_receiver**搭配[event_source](event-source.md)屬性並[__hook](../../cpp/hook.md)並[__unhook](../../cpp/unhook.md)關鍵字。 使用`event_source`建立事件來源。 使用 **__hook**事件接收器的方法產生關聯的事件來源的事件 （「 攔截 」） 事件接收者方法內。 使用 **__unhook**中斷與它們的關聯。
 

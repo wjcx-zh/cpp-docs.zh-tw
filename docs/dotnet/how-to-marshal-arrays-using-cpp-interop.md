@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 c + + Interop 封送處理陣列
+title: HOW TO：封送處理陣列使用C++Interop
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
 ms.openlocfilehash: 91fd86a547a0241f0cfcca7cfc36c204429d80ac
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776891"
 ---
-# <a name="how-to-marshal-arrays-using-c-interop"></a>HOW TO：使用 c + + Interop 封送處理陣列
+# <a name="how-to-marshal-arrays-using-c-interop"></a>HOW TO：封送處理陣列使用C++Interop
 
-本主題會示範一個 facet 的 Visual c + + 的互通性。 如需詳細資訊，請參閱 <<c0> [ 使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。
+本主題將示範一個 facet 視覺效果的C++互通性。 如需詳細資訊，請參閱 <<c0> [ 使用C++Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。</c0>
 
 下列程式碼範例使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) #pragma 指示詞來實作 managed 和 unmanaged 函式在相同的檔案，但如果在不同的檔案中定義這些函式交互操作方式相同。 包含 unmanaged 的函式的檔案不需要進行編譯[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何將 managed 的陣列傳遞至 unmanaged 函式。 受管理的函式會使用[pin_ptr (C + + /cli CLI)](../extensions/pin-ptr-cpp-cli.md)隱藏記憶體回收陣列呼叫 unmanaged 函式之前。 藉由提供使用 pin 指標的 unmanaged 函式，GC 堆積，您可以避免建立陣列的複本的額外負荷。 若要示範 unmanaged 函式會存取 GC 堆積記憶體，它會修改陣列的內容與所做的變更會反映當 managed 函式會繼續控制。
+下列範例示範如何將 managed 的陣列傳遞至 unmanaged 函式。 受管理的函式會使用[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)來抑制回收陣列呼叫 unmanaged 函式之前。 藉由提供使用 pin 指標的 unmanaged 函式，GC 堆積，您可以避免建立陣列的複本的額外負荷。 若要示範 unmanaged 函式會存取 GC 堆積記憶體，它會修改陣列的內容與所做的變更會反映當 managed 函式會繼續控制。
 
 ```
 // PassArray1.cpp

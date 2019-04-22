@@ -11,15 +11,15 @@ helpviewer_keywords:
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
 ms.openlocfilehash: 6ac470b85a14bfe32c7f3fe47168180687669ec6
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781311"
 ---
 # <a name="how-to-migrate-to-clr"></a>HOW TO：移轉至 /clr
 
-本主題討論編譯原生程式碼時所發生的問題 **/clr** (請參閱[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)如需詳細資訊)。 **/clr**允許原生 c + + 程式碼來叫用，並從.NET 組件，除了其他原生 c + + 程式碼叫用。 請參閱[混合 （原生和 Managed） 組件](../dotnet/mixed-native-and-managed-assemblies.md)並[原生和.NET 互通性](../dotnet/native-and-dotnet-interoperability.md)的優點與編譯的詳細資訊 **/clr**。
+本主題討論編譯原生程式碼時所發生的問題 **/clr** (請參閱[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)如需詳細資訊)。 **/clr**可讓原生C++程式碼來叫用，並從.NET 組件，除了其他原生叫用C++程式碼。 請參閱[混合 （原生和 Managed） 組件](../dotnet/mixed-native-and-managed-assemblies.md)並[原生和.NET 互通性](../dotnet/native-and-dotnet-interoperability.md)的優點與編譯的詳細資訊 **/clr**。
 
 ## <a name="known-issues-compiling-library-projects-with-clr"></a>已知的問題編譯程式庫專案以 /clr
 
@@ -35,36 +35,36 @@ ms.locfileid: "58781311"
     }
     ```
 
-## <a name="compile-with-visual-c"></a>Visual c + + 編譯
+## <a name="compile-with-visual-c"></a>編譯具有視覺效果C++
 
 使用之前 **/clr**任何模組在您的專案中，第一次編譯及連結您與 Visual Studio 2010 的原生專案。
 
 下列步驟中，依照順序排列，提供最簡易途徑 **/clr**編譯。 請務必編譯並執行您的專案之後每個步驟。
 
-### <a name="versions-prior-to-visual-c-2003"></a>Visual c + + 2003年之前的版本
+### <a name="versions-prior-to-visual-c-2003"></a>在 視覺效果之前的版本C++2003年
 
-如果您要從 Visual c + + 2003年之前的版本升級到 Visual Studio 2010，您可能會看到與在 Visual c + + 2003年中增強的 c + + 標準一致性編譯器錯誤
+如果您要從 視覺效果之前的版本升級到 Visual Studio 2010 C++ 2003，您可能會看到相關的增強型編譯器錯誤C++視覺效果中的標準一致性C++2003年
 
-### <a name="upgrading-from-visual-c-2003"></a>從 Visual c + + 2003年升級
+### <a name="upgrading-from-visual-c-2003"></a>從 視覺效果升級C++2003年
 
-搭配 Visual c + + 2003年所建置的專案之前應該也會先編譯而不需要 **/clr**如 Visual Studio 現在增加了 ANSI/ISO 相容性和一些重大變更。 這是可能需要最多注意的變更[CRT 中的安全性功能](../c-runtime-library/security-features-in-the-crt.md)。 使用 CRT 程式碼是很有可能產生取代警告。 這些警告可能會隱藏，但移轉至新[安全性增強 CRT 函式的版本](../c-runtime-library/security-enhanced-versions-of-crt-functions.md)是慣用的因為它們提供更佳的安全性，並且可能會顯示您的程式碼中的安全性問題。
+視覺效果所建置的專案上一個C++2003年應該也會先編譯而不需要 **/clr**因為 Visual Studio 現在增加了 ANSI/ISO 相容性和一些重大變更。 這是可能需要最多注意的變更[CRT 中的安全性功能](../c-runtime-library/security-features-in-the-crt.md)。 使用 CRT 程式碼是很有可能產生取代警告。 這些警告可能會隱藏，但移轉至新[安全性增強 CRT 函式的版本](../c-runtime-library/security-enhanced-versions-of-crt-functions.md)是慣用的因為它們提供更佳的安全性，並且可能會顯示您的程式碼中的安全性問題。
 
-### <a name="upgrading-from-managed-extensions-for-c"></a>從 Managed Extensions for c + + 升級
+### <a name="upgrading-from-managed-extensions-for-c"></a>從 Managed Extensions for 升級C++
 
-從 Visual Studio 2005 中，Managed Extensions for c + + 撰寫的程式碼無法編譯底下 **/clr**。
+開始在 Visual Studio 2005 中，使用 Managed Extensions for 撰寫程式碼C++不會在編譯 **/clr**。
 
-## <a name="convert-c-code-to-c"></a>將 C 程式碼轉換成 c + +
+## <a name="convert-c-code-to-c"></a>將 C 程式碼來轉換C++
 
-雖然 Visual Studio 會編譯 C 檔案，就必須將它們轉換成 c + + for **/clr**編譯。 實際的檔案名稱沒有變更;您可以使用 **/Tp** (請參閱[/Tc、 /Tp、 /TC、 /TP （指定原始程式檔類型）](../build/reference/tc-tp-tc-tp-specify-source-file-type.md)。)請注意，雖然 c + + 原始程式碼檔所需 **/clr**，不需要重構程式碼以使用物件導向的架構。
+雖然 Visual Studio 會編譯 C 檔案，就必須將它們轉換成C++針對 **/clr**編譯。 實際的檔案名稱沒有變更;您可以使用 **/Tp** (請參閱[/Tc、 /Tp、 /TC、 /TP （指定原始程式檔類型）](../build/reference/tc-tp-tc-tp-specify-source-file-type.md)。)請注意，雖然C++原始程式碼檔所需 **/clr**，不需要重構程式碼以使用物件導向的架構。
 
-C 程式碼是很可能需要變更編譯為 c + + 檔案時。 C + + 型別安全規則很嚴格的因此必須明確轉換 （cast） 進行類型轉換。 比方說，malloc 會傳回 void 的指標，但可以指派給在 C 中轉換的任何類型的指標：
+C 程式碼是很可能需要變更當編譯為C++檔案。 C++型別安全規則很嚴格，因此必須明確轉換 （cast） 進行類型轉換。 比方說，malloc 會傳回 void 的指標，但可以指派給在 C 中轉換的任何類型的指標：
 
 ```
 int* a = malloc(sizeof(int));   // C code
 int* b = (int*)malloc(sizeof(int));   // C++ equivalent
 ```
 
-函式指標是也嚴格類型安全的 c + +，因此下列的 C 程式碼需要修改。 在 c + + 最好是建立`typedef`，定義函式指標類型，然後使用該類型轉換函式指標：
+函式指標也是完全安全類型在C++，因此下列的 C 程式碼需要修改。 在C++建議您最好建立`typedef`定義函式指標類型，然後使用該類型轉換函式指標：
 
 ```
 NewFunc1 = GetProcAddress( hLib, "Func1" );   // C code
@@ -72,9 +72,9 @@ typedef int(*MYPROC)(int);   // C++ equivalent
 NewFunc2 = (MYPROC)GetProcAddress( hLib, "Func2" );
 ```
 
-C + + 也需要函式必須是原型或是完整定義才可參考或叫用。
+C++也需要 函式必須是原型或是完整定義才可參考或叫用。
 
-C 程式碼中所使用的識別碼，剛好是 c + + 中的關鍵字 (例如**虛擬**，**新**，**刪除**， **bool**， **，則為 true**， **false**等等) 必須重新命名。 這通常可以使用簡單的搜尋和取代操作完成。
+C 程式碼中所使用的識別碼，剛好是中的關鍵字C++(例如**虛擬**，**新**，**刪除**， **bool**， **真**， **false**等等) 必須重新命名。 這通常可以使用簡單的搜尋和取代操作完成。
 
 ```
 COMObj1->lpVtbl->Method(COMObj, args);  // C code
@@ -98,7 +98,7 @@ COMObj2->Method(args);  // C++ equivalent
 **/clr**可以選取在開發環境中的指示[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。 如先前所述，此步驟會自動停用衝突的專案設定。
 
 > [!NOTE]
->  從 Visual c + + 2003 中，升級的 managed 程式庫或 web 服務專案時 **/Zl**編譯器選項將會加入至**命令列**屬性頁。 這會造成 LNK2001。 移除 **/Zl**從**命令列**屬性頁面，即可解決。 請參閱[/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md)並[設定編譯器和組建屬性](../build/working-with-project-properties.md)如需詳細資訊。 或者，您也可以將 msvcrt.lib 和 msvcmrt.lib 新增至連結器**其他相依性**屬性。
+>  從 [視覺效果升級受管理的文件庫或 web 服務專案時C++2003 年 **/Zl**編譯器選項將會新增至**命令列**] 屬性頁。 這會造成 LNK2001。 移除 **/Zl**從**命令列**屬性頁面，即可解決。 請參閱[/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md)並[設定編譯器和組建屬性](../build/working-with-project-properties.md)如需詳細資訊。 或者，您也可以將 msvcrt.lib 和 msvcmrt.lib 新增至連結器**其他相依性**屬性。
 
 對於使用 makefile 建置專案，不相容的編譯器選項必須停用手動方式一次 **/clr**加入。 請參閱 /[/clr 限制](../build/reference/clr-restrictions.md)如需與不相容的編譯器選項的詳細資訊 **/clr**。
 
@@ -106,7 +106,7 @@ COMObj2->Method(args);  // C++ equivalent
 
 先行編譯標頭受 **/clr**。 不過，如果您只編譯您 CPP 檔案的一些 **/clr** （編譯為原生 rest） 的某些變更會需要因為先行編譯標頭產生含有 **/clr**與那些不相容不需要產生 **/clr**。 此不相容情況是因為， **/clr**會產生，並需要中繼資料。 編譯模組 **/clr**因此，可以不使用先行編譯標頭不包含中繼資料，和非 **/clr**模組無法使用先行編譯標頭檔包含中繼資料。
 
-最簡單的方式來編譯的專案，其中某些模組會編譯 **/clr**是完全停用先行編譯標頭。 （在 [專案屬性頁] 對話方塊中，開啟 [C/c + +] 節點，然後選取先行編譯標頭。 然後建立/使用先行編譯標頭屬性變更為 [不使用先行編譯標頭]。）
+最簡單的方式來編譯的專案，其中某些模組會編譯 **/clr**是完全停用先行編譯標頭。 (在 專案屬性頁 對話方塊中，開啟 C /C++節點，然後選取先行編譯標頭。 然後建立/使用先行編譯標頭屬性變更為 [不使用先行編譯標頭]。）
 
 不過，特別是針對大型專案，先行編譯標頭提供更好的編譯速度，因此停用此功能並不理想。 在此情況下最好是設定 **/clr**和非 **/clr**使用個別的先行編譯標頭的檔案。 這可以在一個步驟中所選取多個要編譯的模組 **/clr**使用**方案總管 中**、 以滑鼠右鍵按一下群組，並選取內容。 然後變更建立/使用 PCH 透過檔案和先行編譯標頭檔的屬性，以便分別使用不同的標頭檔名稱和 PCH 檔案。
 
@@ -142,7 +142,7 @@ Common language runtime 預設情況下，為 MTA 啟動 COM使用  [/CLRTHREADA
 
 ### <a name="performance-issues"></a>效能問題
 
-產生 MSIL 的原生 c + + 方法間接呼叫時，您可能會看到效能降低 （虛擬函式呼叫或使用函式指標）。 若要深入了解，請參閱[Double Thunking](../dotnet/double-thunking-cpp.md)。
+您可能會看到效能降低時原生C++會間接呼叫產生 MSIL 的方法 （虛擬函式呼叫或使用函式指標）。 若要深入了解，請參閱[Double Thunking](../dotnet/double-thunking-cpp.md)。
 
 從 MSIL 的原生移動時，您會發現您的工作集大小的增加。 這是因為 common language runtime 提供許多功能，可確保程式正確執行。 如果您 **/clr**應用程式未正確執行，您可能想要啟用 C4793 （預設為關閉），請參閱[編譯器警告 （層級 1 和 3） C4793](../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md)如需詳細資訊。
 
@@ -150,13 +150,13 @@ Common language runtime 預設情況下，為 MTA 啟動 COM使用  [/CLRTHREADA
 
 在某些情況下，CLR 可以在關機之前，您受管理的程式碼完成執行。 使用`std::set_terminate`和`SIGTERM`可能會導致此。 請參閱[signal 常數](../c-runtime-library/signal-constants.md)並[set_terminate](../c-runtime-library/abnormal-termination.md)如需詳細資訊。
 
-## <a name="using-new-visual-c-features"></a>使用 Visual c + + 的新功能
+## <a name="using-new-visual-c-features"></a>使用新的視覺效果C++功能
 
 之後您的應用程式編譯、 連結及執行，您可以開始在任何使用編譯的模組中使用.NET 功能 **/clr**。 如需詳細資訊，請參閱[執行階段平台的元件延伸模組](../extensions/component-extensions-for-runtime-platforms.md)。
 
-如果您使用 Managed Extensions for c + + 時，您可以轉換程式碼以使用新的語法。 如需轉換 Managed Extensions for c + + 的詳細資訊，請參閱[C + + /cli 移轉入門](../dotnet/cpp-cli-migration-primer.md)。
+如果您使用 Managed Extensions for C++，您可以將轉換程式碼以使用新的語法。 如需有關轉換 Managed Extensions for C++，請參閱[ C++CLI 移轉入門](../dotnet/cpp-cli-migration-primer.md)。
 
-如需.NET Visual c + + 程式設計，請參閱：
+在 視覺效果中的.NET 程式設計上的資訊C++請參閱：
 
 - [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 

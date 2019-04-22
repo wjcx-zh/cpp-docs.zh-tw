@@ -8,10 +8,10 @@ helpviewer_keywords:
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
 ms.openlocfilehash: 6c2f619d9cd619ca598c66ca657faa1b9dccaaa2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781727"
 ---
 # <a name="tn029-splitter-windows"></a>TN029:分隔視窗
@@ -22,7 +22,7 @@ ms.locfileid: "58781727"
 
 A`CSplitterWnd`支援分割 windows 的兩個不同的樣式。
 
-在 「 靜態分隔器中，「 分隔器視窗會在建立時建立窗格。 永遠不會變更的順序和的窗格數目。 分隔器列用來調整大小的不同窗格。 您可以使用這個樣式，在每個窗格中顯示不同的檢視類別。 Visual c + + 圖形編輯器和 Windows 檔案管理員會使用這個分隔器樣式的程式的範例。 這種分隔器視窗樣式不會使用分隔器方塊。
+在 「 靜態分隔器中，「 分隔器視窗會在建立時建立窗格。 永遠不會變更的順序和的窗格數目。 分隔器列用來調整大小的不同窗格。 您可以使用這個樣式，在每個窗格中顯示不同的檢視類別。 視覺效果C++圖形編輯器和 Windows 檔案管理員會使用這個分隔器樣式的程式的範例。 這種分隔器視窗樣式不會使用分隔器方塊。
 
 在 「 動態分隔器，「 其他窗格建立，並終結做為使用者分割和取消分割新檢視上。 此分隔器開始的單一檢視，並提供使用者起始分割的分隔器方塊。 分隔器視窗會以單一方向分割檢視時，動態建立新的檢視物件。 這個新的檢視物件表示新的窗格。 如果兩個方向分割檢視所使用的鍵盤介面，分隔器視窗就會建立三個新檢視物件的三個新的窗格。 分割作用中時，Windows 會顯示在窗格之間的分隔器列分隔器方塊。 當使用者移除分割，但在原始檢視仍在分隔器視窗本身之前被終結時，Windows 就會終結其他檢視物件。 Microsoft Excel 和 Microsoft Word 所使用的動態分隔器樣式的應用程式的範例。
 
@@ -54,7 +54,7 @@ A`CSplitterWnd`支援分割 windows 的兩個不同的樣式。
 
 以下是專屬於分隔視窗的詞彙的清單：
 
-`CSplitterWnd`:提供窗格分割控制項和所有窗格上的資料列或資料行之間共用的捲軸的視窗。 您可以指定資料列和資料行之以零起始的數字 (第一個窗格是資料列 = 0 且資料行 = 0)。
+`CSplitterWnd`：提供窗格分割控制項和所有窗格上的資料列或資料行之間共用的捲軸的視窗。 您可以指定資料列和資料行之以零起始的數字 (第一個窗格是資料列 = 0 且資料行 = 0)。
 
 窗格中：特定應用程式視窗，`CSplitterWnd`管理。 一個窗格，通常是物件衍生自[CView 類別](../mfc/reference/cview-class.md)，但可以是任何[CWnd](../mfc/reference/cwnd-class.md)物件，具有適當的子視窗識別碼。
 

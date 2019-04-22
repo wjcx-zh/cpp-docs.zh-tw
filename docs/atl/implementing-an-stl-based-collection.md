@@ -1,19 +1,19 @@
 ---
-title: 實作與 c + + 標準程式庫為基礎的集合
+title: 實作C++標準程式庫為基礎的集合
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ICollectionOnSTLImpl interface
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
 ms.openlocfilehash: 609ec2547cf7a8ab93ef757f7a8e460542c9de28
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779244"
 ---
-# <a name="implementing-a-c-standard-library-based-collection"></a>實作與 c + + 標準程式庫為基礎的集合
+# <a name="implementing-a-c-standard-library-based-collection"></a>實作C++標準程式庫為基礎的集合
 
-ATL 提供`ICollectionOnSTLImpl`介面，可讓您快速實作您的物件上的 c + + 標準程式庫為基礎的集合介面。 若要了解這個類別的運作方式，您也可以簡單範例 （如下所示），使用這個類別來實作唯讀集合，旨在自動化用戶端。
+ATL 提供`ICollectionOnSTLImpl`介面，可讓您快速實作C++物件的標準程式庫為基礎的集合介面。 若要了解這個類別的運作方式，您也可以簡單範例 （如下所示），使用這個類別來實作唯讀集合，旨在自動化用戶端。
 
 範例程式碼取自[ATLCollections 範例](../overview/visual-cpp-samples.md)。
 
@@ -29,7 +29,7 @@ ATL 提供`ICollectionOnSTLImpl`介面，可讓您快速實作您的物件上的
 
 - [建立列舉值和集合實作的 typedef](#vcconenumeration_and_collection)。
 
-- [編輯精靈產生 c + + 程式碼以使用集合 typedef](#vcconedit_the_generated_code)。
+- [編輯精靈所產生C++程式碼以使用集合 typedef](#vcconedit_the_generated_code)。
 
 - [新增要填入集合的程式碼](#vcconpopulate_the_collection)。
 
@@ -65,7 +65,7 @@ ATL 提供`ICollectionOnSTLImpl`介面，可讓您快速實作您的物件上的
 
 [!code-cpp[NVC_ATL_COM#25](../atl/codesnippet/cpp/implementing-an-stl-based-collection_2.h)]
 
-在此情況下，您會將資料儲存為**std:: vector**的**std:: string**s。 **std:: vector**是行為類似 managed 陣列的 c + + 標準程式庫容器類別。 **std:: string**是 c + + 標準程式庫的字串類別。 這些類別，讓您輕鬆地使用字串的集合。
+在此情況下，您會將資料儲存為**std:: vector**的**std:: string**s。 **std:: vector**是C++標準程式庫容器類別，其行為就像 managed 陣列。 **std:: string**是C++標準程式庫的字串類別。 這些類別，讓您輕鬆地使用字串的集合。
 
 由於 Visual Basic 支援這個介面是否成功很重要時，所傳回的列舉值`_NewEnum`屬性必須支援`IEnumVARIANT`介面。 這是 Visual Basic 所了解的唯一列舉值介面。
 

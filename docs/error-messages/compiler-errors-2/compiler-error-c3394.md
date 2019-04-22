@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3394
 ms.assetid: 4e025d79-27ba-43c8-b0d9-839ecef98126
 ms.openlocfilehash: 826084d375c69ca289a858a29a12ae16874c1fbd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58781454"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59775424"
 ---
 # <a name="compiler-error-c3394"></a>編譯器錯誤 C3394
 
 條件約束子句中語法錯誤：找到 'identifier'，但必須是類型
 
-條件約束的格式錯誤。  如需詳細資訊，請參閱 <<c0> [ 泛型類型參數的條件約束 (C + + /cli CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)。
+條件約束的格式錯誤。  如需詳細資訊，請參閱 <<c0> [ 泛型類型參數的條件約束 (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)。</c0>
 
 ## <a name="example"></a>範例
 

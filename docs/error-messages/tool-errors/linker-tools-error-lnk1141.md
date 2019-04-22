@@ -7,10 +7,10 @@ helpviewer_keywords:
 - LNK1141
 ms.assetid: 83b78606-6dd3-43a7-88e2-152f5359cbd8
 ms.openlocfilehash: e2e3ae2462919a8261e450460370a46f0022bb1c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021588"
 ---
 # <a name="linker-tools-error-lnk1141"></a>連結器工具錯誤 LNK1141
@@ -25,4 +25,4 @@ ms.locfileid: "59021588"
 
 ## <a name="see-also"></a>另請參閱
 
-[.Exp 檔做為連結器輸入](../../build/reference/dot-exp-files-as-linker-input.md)
+[.Exp 檔作為連結器輸入](../../build/reference/dot-exp-files-as-linker-input.md)

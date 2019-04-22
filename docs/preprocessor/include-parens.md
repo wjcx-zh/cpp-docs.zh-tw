@@ -7,15 +7,15 @@ helpviewer_keywords:
 - include() attribute
 ms.assetid: 86c9dcb2-d9e0-4fd5-97d7-0bb3e23d6ecc
 ms.openlocfilehash: 1208f14a9f6b3724dd5353df57213baa3910d07f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040923"
 ---
 # <a name="include"></a>include()
 
-**C++ 專有的**
+**C++特定**
 
 停用自動排除。
 
@@ -35,9 +35,9 @@ include("Name1"[,"Name2", ...])
 
 ## <a name="remarks"></a>備註
 
-類型程式庫可能包含在系統標頭或其他類型程式庫中定義的項目。 `#import` 嘗試將會自動排除這類項目避免多個定義錯誤。 如果，也已被排除項目，如所示[編譯器警告 （層級 3） C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md)，而且它們不能有過，這個屬性可以用來停用自動排除。 這個屬性可以接受任意數目的引數，每個引數都會是要包含的類型程式庫項目名稱。
+類型程式庫可能包含在系統標頭或其他類型程式庫中定義的項目。 `#import` 會自動排除這類項目以嘗試避開多個定義錯誤。 如果，也已被排除項目，如所示[編譯器警告 （層級 3） C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md)，而且它們不能有過，這個屬性可以用來停用自動排除。 這個屬性可以接受任意數目的引數，每個引數都會是要包含的類型程式庫項目名稱。
 
-**END C++ 特定的**
+**結束C++特定**
 
 ## <a name="see-also"></a>另請參閱
 

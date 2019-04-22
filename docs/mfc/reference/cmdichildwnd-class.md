@@ -23,10 +23,10 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
 ms.openlocfilehash: 13f027e68184a4869e88883ff8b8d3b123b94e3e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774577"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd 類別
@@ -73,7 +73,7 @@ MDI 子視窗看起來很像一般的框架視窗中，不同之處在於 MDI �
 
 - 間接透過文件範本來建構它。
 
-在呼叫之前`Create`或是`LoadFrame`，您必須建構使用 c + + 堆積上的框架視窗物件**新**運算子。 然後再呼叫`Create`您也可以註冊視窗類別[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全域函式，可將框架的圖示和類別樣式。
+在呼叫之前`Create`或是`LoadFrame`，您必須建構堆積上的框架視窗物件C++**新**運算子。 然後再呼叫`Create`您也可以註冊視窗類別[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全域函式，可將框架的圖示和類別樣式。
 
 使用`Create`傳遞畫面格的建立參數為立即的引數的成員函式。
 
@@ -89,7 +89,7 @@ MDI 子視窗看起來很像一般的框架視窗中，不同之處在於 MDI �
 
 - 目前現用 MDI 子視窗的功能表完全取代 MDI 框架視窗的功能表和目前現用的 MDI 子視窗的標題會加入至 MDI 框架視窗的標題。 進一步實作搭配 MDI 框架視窗的 MDI 子視窗函數的範例，請參閱`CMDIFrameWnd`類別描述。
 
-不使用 c + +**刪除**終結框架視窗的運算子。 請改用 `CWnd::DestroyWindow`。 `CFrameWnd`實作`PostNcDestroy`終結視窗時，將會刪除 c + + 物件。 當使用者關閉框架視窗時，預設值`OnClose`處理常式會呼叫`DestroyWindow`。
+請勿使用C++**刪除**終結框架視窗的運算子。 請改用 `CWnd::DestroyWindow`。 `CFrameWnd`實作`PostNcDestroy`將會刪除C++物件時終結視窗。 當使用者關閉框架視窗時，預設值`OnClose`處理常式會呼叫`DestroyWindow`。
 
 如需詳細資訊`CMDIChildWnd`，請參閱 <<c2> [ 框架 Windows](../../mfc/frame-windows.md)。
 

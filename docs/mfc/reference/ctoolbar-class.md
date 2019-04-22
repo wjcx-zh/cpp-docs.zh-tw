@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
 ms.openlocfilehash: aa49ebed2d48d9818c2d39ae4894d8caf1fbbf81
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773134"
 ---
 # <a name="ctoolbar-class"></a>CToolBar 類別
@@ -98,7 +98,7 @@ class CToolBar : public CControlBar
 
 [CToolBar::GetToolBarCtrl](#gettoolbarctrl)，成員函式新增到 MFC 4.0 可讓您善加利用工具列自訂和其他功能的 Windows 通用控制項的支援。 `CToolBar` 成員函式可讓您大部分的 Windows 通用控制項; 的功能不過，當您呼叫`GetToolBarCtrl`，您可以提供給您工具列更多 Windows 95/98 工具列的特性。 當您呼叫`GetToolBarCtrl`，它會傳回參考`CToolBarCtrl`物件。 請參閱[CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)如需有關設計使用 Windows 通用控制項的工具列。 更多一般通用控制項的詳細資訊，請參閱[通用控制項](/windows/desktop/Controls/common-controls-intro)Windows SDK 中。
 
-Visual c + + 為您提供兩種方法可以建立工具列。 若要建立工具列資源使用資源編輯器，請遵循下列步驟：
+視覺化C++提供兩種方法可以建立工具列。 若要建立工具列資源使用資源編輯器，請遵循下列步驟：
 
 1. 建立工具列資源。
 

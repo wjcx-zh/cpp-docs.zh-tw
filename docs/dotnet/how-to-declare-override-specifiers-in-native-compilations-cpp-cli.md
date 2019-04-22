@@ -1,17 +1,17 @@
 ---
-title: HOW TO：宣告覆寫規範 (C + + /cli CLI)
+title: HOW TO：宣告覆寫規範 (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
 ms.openlocfilehash: db74ef226242ec8f4f70f2769fbc8ba102a808c8
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777177"
 ---
-# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>HOW TO：宣告在原生編譯中的覆寫規範 (C + + /cli CLI)
+# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>HOW TO：宣告在原生編譯中的覆寫規範 (C++/CLI)
 
 [密封](../extensions/sealed-cpp-component-extensions.md)，[抽象](../extensions/abstract-cpp-component-extensions.md)，和[覆寫](../extensions/override-cpp-component-extensions.md)可用在不使用的編譯中 **/ZW**或是[/clr](../build/reference/clr-common-language-runtime-compilation.md)。
 

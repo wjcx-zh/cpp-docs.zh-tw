@@ -1,5 +1,5 @@
 ---
-title: db_source （c + + COM 屬性）
+title: db_source (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_source
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
 ms.openlocfilehash: 884cab78d64c20bef00958f0cc0319281fd69921
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026327"
 ---
 # <a name="dbsource"></a>db_source
@@ -28,7 +28,7 @@ ms.locfileid: "59026327"
 *db_source*<br/>
 用來連接到資料來源連接字串。 如需連接字串的格式，請參閱[連接字串和資料連結](/previous-versions/windows/desktop/ms718376(v=vs.85))在 Microsoft Data Access Components (MDAC) SDK。
 
-*名稱*<br/>
+*name*<br/>
 （選擇性）當您使用**db_source**類別中上,*名稱*是具有資料來源物件的執行個體**db_source**套用屬性 （請參閱範例 1）。 當您使用**db_source**在方法實作中，內嵌*名稱*是一個變數 （本機方法），可用來存取資料來源 （請參閱範例 2）。 您傳遞這*名稱*要*source_name*參數`db_command`命令相關聯的資料來源。
 
 *hresult*<br/>

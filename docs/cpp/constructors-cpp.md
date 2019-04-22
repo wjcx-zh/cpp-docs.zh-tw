@@ -7,11 +7,11 @@ helpviewer_keywords:
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
 ms.openlocfilehash: a45cee1abd9351a8fef56769706fe8944a7965b8
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58898735"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779098"
 ---
 # <a name="constructors-c"></a>建構函式 (C++)
 
@@ -283,7 +283,7 @@ int main()
 
 隱含宣告的移動建構函式定義為刪除，如果是類別類型的任何成員沒有解構函式或編譯器無法判斷要用於移動作業的建構函式。
 
-如需如何撰寫非 trivial 移動建構函式的詳細資訊，請參閱[移動建構函式和移動指派運算子 （c + +）](../cpp/move-constructors-and-move-assignment-operators-cpp.md)。
+如需如何撰寫非 trivial 移動建構函式的詳細資訊，請參閱[移動建構函式和移動指派運算子 (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)。
 
 ## <a name="explicitly_defaulted_and_deleted_constructors"></a> 明確預設和已刪除的建構函式
 

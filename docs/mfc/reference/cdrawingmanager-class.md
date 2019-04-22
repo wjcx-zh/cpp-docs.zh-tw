@@ -57,10 +57,10 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
 ms.openlocfilehash: 506ab7a06653942ecff05043a7e7efabd535115f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781688"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager 類別
@@ -157,9 +157,9 @@ static HBITMAP __stdcall CreateBitmap_32(
 |||
 |-|-|
 |參數|描述|
-|*大小*|[in]A [CSize](../../atl-mfc-shared/reference/csize-class.md)參數，表示點陣圖的大小。|
+|*size*|[in]A [CSize](../../atl-mfc-shared/reference/csize-class.md)參數，表示點陣圖的大小。|
 |*pBits*|[out]指向資料指標所收到的 DIB 位置的位元值。|
-|*點陣圖*|原始點陣圖控制代碼|
+|*bitmap*|原始點陣圖控制代碼|
 |*clrTransparent*|指定的原始點陣圖的透明色彩的 RGB 值。|
 
 ### <a name="return-value"></a>傳回值
@@ -702,7 +702,7 @@ static BYTE __stdcall HueToRGB(
 *m1*<br/>
 [in]請參閱 < 備註 >。
 
-*M2*<br/>
+*m2*<br/>
 [in]請參閱 < 備註 >。
 
 *h*<br/>

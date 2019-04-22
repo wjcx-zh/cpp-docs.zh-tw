@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
 ms.openlocfilehash: 8da5a4f7113bbb4256e45e7ec3c91a9c6677643c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774031"
 ---
 # <a name="c-language-reference"></a>C++ 語言參考
 
-本参考将介绍在 Microsoft Visual C++ 中实现的 C++ 编程语言。 組織會根據[*註解 c + + 參考手冊*](http://www.stroustrup.com/arm.html) ，作者 Margaret Ellis 和 Bjarne Stroustrup 與 ANSI/ISO c + + International Standard (ISO/IEC FDIS 14882)。 本文涵盖了 C++ 语言功能的 Microsoft 专用实现。 
+本参考将介绍在 Microsoft Visual C++ 中实现的 C++ 编程语言。 組織會根據[*註解C++參考手冊*](http://www.stroustrup.com/arm.html) ，作者 Margaret Ellis 和 Bjarne Stroustrup 與 ANSI/ISOC++國際標準 (ISO/IEC FDIS 14882) 編成。 本文涵盖了 C++ 语言功能的 Microsoft 专用实现。 
 
 有关现代 C++ 编程做法的概述，请参阅[欢迎回到 C++](welcome-back-to-cpp-modern-cpp.md)。
 
@@ -81,7 +81,7 @@ C++ 例外狀況處理、結構化例外狀況處理 (SEH)、用於撰寫例外�
 Microsoft C++ 專有的修飾詞。 記憶體定址、 呼叫慣例**naked**函數，擴充儲存類別屬性 (**__declspec**)， **__w64**。
 
 [內嵌組合語言](../assembler/inline/inline-assembler.md)<br/>
-使用組件的語言和 c + + **__asm**區塊。
+使用組件語言和C++中 **__asm**區塊。
 
 [編譯器 COM 支援](../cpp/compiler-com-support.md)<br/>
 Microsoft 專有類別和全域函式的參考，可用來支援 COM 類型。
@@ -93,12 +93,12 @@ Microsoft C++ 擴充功能。
 有關 Visual C++ 編譯器非標準行為的資訊。
 
 [歡迎回到 C++](welcome-back-to-cpp-modern-cpp.md)<br/>
-撰寫安全、 正確且有效率的程式，做法現代 c + + 程式設計的概觀。
+現代化的概觀C++程式設計做法撰寫安全、 正確且有效率的程式。
 
 ## <a name="related-sections"></a>相關章節
 
 [執行階段平台的元件延伸模組](../extensions/component-extensions-for-runtime-platforms.md)<br/>
-有關使用以.NET 為目標的 Visual c + + 參考資料。
+參考資料上使用視覺效果C++來以.NET 為目標。
 
 [C/C++ 建置參考](../build/reference/c-cpp-building-reference.md)<br/>
 編譯器選項、連結器選項和其他建置工具。

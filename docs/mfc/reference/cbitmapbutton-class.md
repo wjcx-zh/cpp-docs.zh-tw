@@ -15,10 +15,10 @@ helpviewer_keywords:
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
 ms.openlocfilehash: 45e0214cafb80c3e00a7e888a3170040f46113f1
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770274"
 ---
 # <a name="cbitmapbutton-class"></a>CBitmapButton 類別
@@ -152,7 +152,7 @@ CBitmapButton();
 
 ### <a name="remarks"></a>備註
 
-建立 c + + 之後`CBitmapButton`物件，請呼叫[CButton::Create](../../mfc/reference/cbutton-class.md#create)來建立 Windows 按鈕控制項，並將其附加至`CBitmapButton`物件。
+在建立之後C++`CBitmapButton`物件，請呼叫[CButton::Create](../../mfc/reference/cbutton-class.md#create)若要建立 Windows 按鈕控制項，並將其附加至`CBitmapButton`物件。
 
 ### <a name="example"></a>範例
 

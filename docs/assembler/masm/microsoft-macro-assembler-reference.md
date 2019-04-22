@@ -8,10 +8,10 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), documentation overview
 ms.assetid: 1446d55f-e2e7-4fd1-a9b8-b15cf7d4e47c
 ms.openlocfilehash: 5b74eef1799dd5f9fae8f2a6aceeb79a115ce837
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777866"
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Microsoft 巨集組合程式參考
@@ -44,7 +44,7 @@ Microsoft Macro Assembler (MASM) 提供內嵌組譯碼的幾項優點。 MASM �
 ## <a name="related-sections"></a>相關章節
 
 [Visual C++](../../overview/visual-cpp-in-visual-studio.md)<br/>
-提供的 Visual Studio 和 Visual c + + 文件的不同區域的連結。
+提供的 Visual Studio 和視覺效果的不同區域的連結C++文件。
 
 ## <a name="see-also"></a>另請參閱
 

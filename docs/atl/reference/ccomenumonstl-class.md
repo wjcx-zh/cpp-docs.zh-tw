@@ -8,15 +8,15 @@ helpviewer_keywords:
 - CComEnumOnSTL class
 ms.assetid: befe1a44-7a00-4f28-9a2e-cc0fa526643c
 ms.openlocfilehash: f9bf9c227984b2fdbf460f970357f395934b238c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779855"
 ---
 # <a name="ccomenumonstl-class"></a>CComEnumOnSTL 類別
 
-這個類別會定義 c + + 標準程式庫集合為基礎的 COM 列舉值物件。
+這個類別會定義為基礎的 COM 列舉值物件C++標準程式庫集合。
 
 ## <a name="syntax"></a>語法
 
@@ -45,11 +45,11 @@ COM 列舉值。 請參閱[IEnumString](/windows/desktop/api/objidl/nn-objidl-ie
 A[複製原則](../../atl/atl-copy-policy-classes.md)類別。
 
 *CollType*<br/>
-C + + 標準程式庫容器類別。
+C++標準程式庫容器類別。
 
 ## <a name="remarks"></a>備註
 
-`CComEnumOnSTL` 定義根據 c + + 標準程式庫集合 COM 列舉值物件。 單獨或搭配使用這個類別[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)。 使用這個類別的一般步驟說明如下。 如需詳細資訊，請參閱 < [ATL 集合和列舉程式](../../atl/atl-collections-and-enumerators.md)。
+`CComEnumOnSTL` 會定義為基礎的 COM 列舉值物件C++標準程式庫集合。 單獨或搭配使用這個類別[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)。 使用這個類別的一般步驟說明如下。 如需詳細資訊，請參閱 < [ATL 集合和列舉程式](../../atl/atl-collections-and-enumerators.md)。
 
 ## <a name="to-use-this-class-with-icollectiononstlimpl"></a>若要使用此類別與 ICollectionOnSTLImpl:
 

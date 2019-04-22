@@ -1,5 +1,5 @@
 ---
-title: importlib （c + + COM 屬性）
+title: importlib (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.importlib
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
 ms.openlocfilehash: 29c7df8fbedbd107a9bb0b05466addc4672fc555
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041441"
 ---
 # <a name="importlib"></a>importlib
@@ -30,7 +30,7 @@ ms.locfileid: "59041441"
 
 ## <a name="remarks"></a>備註
 
-**Importlib** c + + 屬性會導致`importlib`放在產生的.idl 檔的程式庫區塊的陳述式。 **Importlib**屬性有相同的功能[importlib](/windows/desktop/Midl/importlib) MIDL 屬性。
+**Importlib** C++屬性會導致`importlib`放在產生的.idl 檔的程式庫區塊的陳述式。 **Importlib**屬性有相同的功能[importlib](/windows/desktop/Midl/importlib) MIDL 屬性。
 
 ## <a name="example"></a>範例
 

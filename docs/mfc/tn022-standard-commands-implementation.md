@@ -60,10 +60,10 @@ helpviewer_keywords:
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
 ms.openlocfilehash: 8d568760cc75a4c1f2ddb6dd88108cc830783194
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775827"
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022:標準命令實作
@@ -73,7 +73,7 @@ ms.locfileid: "58775827"
 
 此提示描述 MFC 2.0 所提供的標準命令實作。 讀取[技術提示 21](../mfc/tn021-command-and-message-routing.md)第一個因為它會說明用來實作許多標準命令的機制。
 
-此描述會假設的 MFC 架構、 Api 和常見的程式設計做法的知識。 文件，以及未記載之 「 實作僅 」 會描述 Api。 這不是開始學習的功能或如何以 MFC 程式的地方。 如需詳細資訊，並記載的 Api 的詳細資訊，請參閱 Visual c + +。
+此描述會假設的 MFC 架構、 Api 和常見的程式設計做法的知識。 文件，以及未記載之 「 實作僅 」 會描述 Api。 這不是開始學習的功能或如何以 MFC 程式的地方。 視覺效果，請參閱C++如需詳細資訊以及記載的 Api 的詳細資料。
 
 ## <a name="the-problem"></a>問題
 

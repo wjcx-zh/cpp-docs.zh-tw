@@ -9,10 +9,10 @@ helpviewer_keywords:
 - section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
 ms.openlocfilehash: 41479d7d8767438d0e59fbe6beb7e435459dcb1b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023239"
 ---
 # <a name="section"></a>section
@@ -37,10 +37,10 @@ ms.locfileid: "59023239"
 
 |屬性|描述|
 |-|-|
-|**讀取**|允許對於資料進行讀取作業。|
-|**寫入**|允許對於資料進行寫入作業。|
+|**read**|允許對於資料進行讀取作業。|
+|**write**|允許對於資料進行寫入作業。|
 |**execute**|允許執行程式碼。|
-|**共用**|讓所有載入影像的處理序共用區段。|
+|**shared**|讓所有載入影像的處理序共用區段。|
 |**nopage**|將區段標記為不可分頁；適用於 Win32 裝置驅動程式。|
 |**nocache**|將區段標記為不可快取；適用於 Win32 裝置驅動程式。|
 |**discard**|將區段標記為可捨棄；適用於 Win32 裝置驅動程式。|

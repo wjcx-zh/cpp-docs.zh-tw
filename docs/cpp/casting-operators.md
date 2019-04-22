@@ -7,10 +7,10 @@ helpviewer_keywords:
 - casting operators [C++]
 ms.assetid: 16240348-26bc-4f77-8eab-57253f00ce52
 ms.openlocfilehash: e2ac8e9079b1d30dca077363bbb6cef35960902e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768948"
 ---
 # <a name="casting-operators"></a>轉型運算子
@@ -25,7 +25,7 @@ C++ 語言有幾個特有的轉型運算子。 這些運算子的目的在於移
 
 - [reinterpret_cast](../cpp/reinterpret-cast-operator.md)用於簡單精進的位元。
 
-- [safe_cast](../extensions/safe-cast-cpp-component-extensions.md)用於 C + + /cli 產生可驗證 MSIL 的 CLI。
+- [safe_cast](../extensions/safe-cast-cpp-component-extensions.md)用於C++以產生可驗證的 MSIL /CLI。
 
 使用**const_cast**並**reinterpret_cast**做最後的手段，因為這些運算子存在相同危險與舊類型轉換。 然而，為了完全取代舊類型轉換，這些運算子仍有其必要。
 

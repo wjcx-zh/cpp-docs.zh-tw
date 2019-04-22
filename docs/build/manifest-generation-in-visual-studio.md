@@ -5,10 +5,10 @@ helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
 ms.openlocfilehash: f055e3d16dfc0ea4320883210458ae10daebdc45
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781675"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>在 Visual Studio 中產生資訊清單
@@ -27,7 +27,7 @@ ms.locfileid: "58781675"
 
 1. 如果資訊清單工具所產生的資訊清單相同的二進位檔中內嵌的資訊清單，建置會繼續至下一個建置步驟。
 
-資訊清單內嵌於最終二進位檔為文字資源，就可以檢視為 Visual Studio 中的檔案開啟最終二進位檔。 若要確保資訊清單會指向正確的程式庫，請依照下列所述的步驟[了解 Visual c + + 應用程式的相依性](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md)，或依照所述的建議[疑難排解](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)一節。
+資訊清單內嵌於最終二進位檔為文字資源，就可以檢視為 Visual Studio 中的檔案開啟最終二進位檔。 若要確保資訊清單會指向正確的程式庫，請依照下列所述的步驟[了解的相依性視覺效果C++應用程式](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md)，或依照所述的建議[疑難排解](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)一節。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
 ms.openlocfilehash: 05089ef4f0a516f932d82f13be979da572701ae2
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424127"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive--（標準一致性）
@@ -465,4 +465,4 @@ int main()
 ## <a name="see-also"></a>另請參閱
 
 - [MSVC 編譯器選項](compiler-options.md)
-- [MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+- [MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

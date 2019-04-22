@@ -8,10 +8,10 @@ helpviewer_keywords:
 - CreateActivationFactory function
 ms.assetid: a1a53e04-6757-4faf-a4c8-ecf06e43b959
 ms.openlocfilehash: ca3469128cf3d412138d5d39a1587cbc20150699
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040602"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory 函式
@@ -30,7 +30,7 @@ template<typename Factory>
 
 ### <a name="parameters"></a>參數
 
-*旗標*<br/>
+*flags*<br/>
 一或多個組合[RuntimeClassType](runtimeclasstype-enumeration.md)列舉值。
 
 *entry*<br/>

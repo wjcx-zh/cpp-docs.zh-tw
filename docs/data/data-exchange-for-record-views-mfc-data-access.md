@@ -9,10 +9,10 @@ helpviewer_keywords:
 - RFX (record field exchange)
 ms.assetid: abc52ca7-6997-47a7-98f3-f347f52b1f72
 ms.openlocfilehash: a7c6714218b5891e078e750a974faed274e113c9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023590"
 ---
 # <a name="data-exchange-for-record-views---mfc-data-access"></a>記錄檢視的資料交換 (MFC 資料存取)
@@ -30,5 +30,5 @@ ms.locfileid: "59023590"
 
 ## <a name="see-also"></a>另請參閱
 
-[記錄檢視 (MFC 資料存取)](../data/record-views-mfc-data-access.md)<br/>
+[資料錄檢視 (MFC 資料存取)](../data/record-views-mfc-data-access.md)<br/>
 [ODBC 驅動程式清單](../data/odbc/odbc-driver-list.md)

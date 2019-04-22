@@ -27,10 +27,10 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
 ms.openlocfilehash: c0c1fd14105bae3b5413f92b547339ccabf3bb91
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774772"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 類別
@@ -83,7 +83,7 @@ class COleDispatchDriver
 
 OLE 分派介面提供存取物件的方法和屬性。 成員函式`COleDispatchDriver`附加、 卸離、 建立及發行的分派連接類型`IDispatch`。 其他成員函式會使用變數引數清單來簡化呼叫`IDispatch::Invoke`。
 
-這個類別則可以直接使用，但它通常由只加入類別精靈所建立的類別。 當您匯入類型程式庫來建立新的 c + + 類別時，將新的類別衍生自`COleDispatchDriver`。
+這個類別則可以直接使用，但它通常由只加入類別精靈所建立的類別。 當您建立新的C++匯入類型程式庫的類別，新的類別衍生自`COleDispatchDriver`。
 
 如需有關使用`COleDispatchDriver`，請參閱下列文章：
 

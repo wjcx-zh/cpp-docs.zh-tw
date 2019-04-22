@@ -18,10 +18,10 @@ helpviewer_keywords:
 - toolbars [MFC], implementing MFC toolbars
 ms.assetid: af3319ad-c430-4f90-8361-e6a2c06fd084
 ms.openlocfilehash: 55c43c47b93cd21d86293706fc7c3eb5145c39fd
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773173"
 ---
 # <a name="mfc-toolbar-implementation"></a>MFC 工具列實作
@@ -88,7 +88,7 @@ MFC 工具列也可以設定為要顯示 「 工具提示 」，其中包含工�
 
 ##  <a name="_core_the_toolbar_bitmap"></a> 工具列點陣圖
 
-一旦建構好之後，`CToolBar`物件載入單一點陣圖，其中包含每個按鈕的一個映像建立工具列影像。 應用程式精靈 會建立標準工具列點陣圖，您可以自訂 Visual c + +[工具列編輯器](../windows/toolbar-editor.md)。
+一旦建構好之後，`CToolBar`物件載入單一點陣圖，其中包含每個按鈕的一個映像建立工具列影像。 應用程式精靈 會建立標準工具列點陣圖，您可以自訂視覺效果C++[工具列編輯器](../windows/toolbar-editor.md)。
 
 ### <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
 

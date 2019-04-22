@@ -9,10 +9,10 @@ helpviewer_keywords:
 - stored procedures, OLE DB
 ms.assetid: 90507e4c-eca2-46c9-ad8c-07e10dc1d41b
 ms.openlocfilehash: 7ace43283c56c0c859b193f63e8ca104f6b52a31
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041172"
 ---
 # <a name="using-stored-procedures"></a>使用預存程序
@@ -22,7 +22,7 @@ ms.locfileid: "59041172"
 預存程序可以有任意數目的 （包括零） 輸入或輸出參數，而且可以傳遞傳回值。 特定資料值，或使用參數標記，可以永久的程式碼參數值 (問號 '？ ')。
 
 > [!NOTE]
->  使用 Visual c + + 所建立的預存程序必須使用編譯的 CLR SQL Server`/clr:safe`編譯器選項。
+>  CLR SQL Server 預存程序建立使用視覺效果C++必須以編譯`/clr:safe`編譯器選項。
 
 OLE DB provider for SQL Server (SQLOLEDB) 支援下列預存程序用來傳回資料的機制：
 
@@ -37,4 +37,4 @@ OLE DB provider for SQL Server (SQLOLEDB) 支援下列預存程序用來傳回�
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 OLE DB 消費者樣板](../../data/oledb/working-with-ole-db-consumer-templates.md)
+[使用 OLE DB 消費者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)

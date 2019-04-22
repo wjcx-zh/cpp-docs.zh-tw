@@ -8,10 +8,10 @@ helpviewer_keywords:
 - /// delimiter for C++ documentation
 ms.assetid: a1aec1c5-b2d1-4c74-83ae-1dbbbb76b506
 ms.openlocfilehash: c46cb77dd2efe41a41c7108115d6d22808782f01
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773524"
 ---
 # <a name="xml-documentation-visual-c"></a>XML 文件 (Visual C++)
@@ -31,7 +31,7 @@ ms.locfileid: "58773524"
 
 如需建立具有文件註解 .xml 檔案的詳細資料，請參閱下列主題。
 
-|如需詳細資訊|請參閱|
+|如需以下相關資訊|請參閱|
 |---------------------------|---------|
 |要使用的編譯器選項|[/doc](doc-process-documentation-comments-c-cpp.md)|
 |您可以用來在文件中提供常用功能的標記|[建議使用的文件註解標籤](recommended-tags-for-documentation-comments-visual-cpp.md)|

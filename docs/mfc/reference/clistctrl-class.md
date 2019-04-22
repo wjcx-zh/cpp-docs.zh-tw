@@ -265,10 +265,10 @@ helpviewer_keywords:
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
 ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780609"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 類別
@@ -709,7 +709,7 @@ CImageList* CreateDragImage(
 
 ### <a name="remarks"></a>備註
 
-`CImageList`物件是永久的而且您必須將它完成時刪除。 例如：
+`CImageList`物件是永久的而且您必須將它完成時刪除。 例如: 
 
 ```cpp
         CImageList* pImageList = m_myListCtrl.CreateDragImage(nItem, &point);
@@ -2702,7 +2702,7 @@ LRESULT InsertGroup(
 
 ### <a name="parameters"></a>參數
 
-*索引*<br/>
+*index*<br/>
 群組是要插入之項目的索引。
 
 *pgrp*<br/>
@@ -2875,7 +2875,7 @@ BOOL IsItemVisible(int index) const;
 
 |參數|描述|
 |---------------|-----------------|
-|*索引*|[in]目前的清單檢視控制項中項目的以零為起始的索引。|
+|*index*|[in]目前的清單檢視控制項中項目的以零為起始的索引。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -2923,7 +2923,7 @@ UINT MapIndexToID(UINT index) const;
 
 |參數|描述|
 |---------------|-----------------|
-|*索引*|[in]項目的以零為起始的索引。|
+|*index*|[in]項目的以零為起始的索引。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -3097,7 +3097,7 @@ BOOL Scroll(CSize size);
 
 ### <a name="parameters"></a>參數
 
-*大小*<br/>
+*size*<br/>
 A`CSize`物件，指定水平和垂直捲動，像素為單位的數量。 `y`隸屬*大小*除以高度，單位為像素的清單檢視控制項的列，並捲動所產生的行數。
 
 ### <a name="return-value"></a>傳回值
@@ -3496,7 +3496,7 @@ CSize SetIconSpacing(CSize size);
 *cy*<br/>
 Y 軸 圖示之間距離 （以像素為單位）。
 
-*大小*<br/>
+*size*<br/>
 A`CSize`物件，指定圖示，在 x 軸和 y 軸之間的距離 （以像素為單位）。
 
 ### <a name="return-value"></a>傳回值

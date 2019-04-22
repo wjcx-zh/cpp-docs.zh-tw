@@ -1,20 +1,20 @@
 ---
-title: HOW TO：使用屬性在 C + + /cli CLI
+title: HOW TO：使用中的屬性C++/CLI
 ms.date: 07/21/2017
 helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
 ms.openlocfilehash: cd0748993b6ac92bbf9f66fa868ac6e814e21bb5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781623"
 ---
-# <a name="how-to-use-properties-in-ccli"></a>HOW TO：使用屬性在 C + + /cli CLI
+# <a name="how-to-use-properties-in-ccli"></a>HOW TO：使用中的屬性C++/CLI
 
-本文說明如何使用屬性在 C + + /cli CLI。
+這篇文章示範如何使用中的屬性C++/CLI。
 
 ## <a name="basic-properties"></a>基本內容
 
@@ -88,7 +88,7 @@ int main() {
 
 如果您使用預設索引屬性，您可以存取的資料結構，只是藉由參考類別名稱，但如果您使用使用者定義的索引的屬性，您必須指定要存取的資料結構的屬性名稱。
 
-如需如何使用索引子中撰寫C#，請參閱[如何：使用C#索引子 (C + + /cli CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)。
+如需如何使用索引子中撰寫C#，請參閱[如何：使用C#索引子 (C++/CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)。
 
 此程式碼範例示範如何使用預設和使用者定義索引的屬性：
 
@@ -259,7 +259,7 @@ int main() {
 
 ## <a name="abstract-and-sealed-properties"></a>抽象和密封屬性
 
-雖然[抽象](../extensions/abstract-cpp-component-extensions.md)並[密封](../extensions/sealed-cpp-component-extensions.md)關鍵字會指定為有效的 ECMA C + + /cli CLI 規格，對於 Visual c + + 編譯器中，您不能指定它們在一般的屬性，也不在屬性上非 trivial 屬性的宣告。
+雖然[抽象](../extensions/abstract-cpp-component-extensions.md)並[密封](../extensions/sealed-cpp-component-extensions.md)關鍵字會指定為有效的 ECMA 中C++/CLI 規格，視覺效果的C++編譯器，您不能指定它們在一般的屬性，以及非 trivial 屬性的屬性宣告。
 
 若要宣告的密封或抽象屬性，您必須定義非 trivial 屬性，然後指定`abstract`或`sealed`關鍵字上取得和設定存取子函式。
 

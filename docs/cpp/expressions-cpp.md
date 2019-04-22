@@ -6,10 +6,10 @@ helpviewer_keywords:
 - expressions [C++]
 ms.assetid: aaa1f250-7185-4113-b682-3f5e995943d1
 ms.openlocfilehash: c2dc4f1654b7e76bf9506f82d6d613684258c174
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771366"
 ---
 # <a name="expressions-c"></a>運算式 (C++)
@@ -48,7 +48,7 @@ ms.locfileid: "58771366"
 
 - [多載的運算子](../cpp/operator-overloading.md)
 
-- [typeid](../extensions/typeid-cpp-component-extensions.md) (C + + /cli CLI)
+- [typeid](../extensions/typeid-cpp-component-extensions.md) (C++/CLI)
 
     > [!NOTE]
     >  內建類型的運算子無法多載，其行為已預先定義。

@@ -128,10 +128,10 @@ helpviewer_keywords:
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
 ms.openlocfilehash: 19b8d0c86044e04cc60fd7aab89ec828c46f5fb9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040964"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor 類別
@@ -696,7 +696,7 @@ bool SetValue(
 *pColumnName*<br/>
 [in] 指向包含資料行名稱之字元字串的指標。
 
-*資料*<br/>
+*data*<br/>
 [in]包含資料的記憶體指標。
 
 *nColumn*<br/>
@@ -711,7 +711,7 @@ bool SetValue(
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor 類別](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicParameterAccessor 類別](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [CManualAccessor 類別](../../data/oledb/cmanualaccessor-class.md)

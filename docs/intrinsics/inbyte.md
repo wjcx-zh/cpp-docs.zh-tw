@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __inbyte intrinsic
 ms.assetid: 03b61799-2a08-474d-adc4-2cbf7c81a4d5
 ms.openlocfilehash: 20c583b874c2bdb56affc6a90c8464b82c4824f0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040831"
 ---
 # <a name="inbyte"></a>__inbyte
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 會產生`in`的指示，傳回一個位元組讀取所指定的連接埠`Port`。
 
@@ -46,7 +46,7 @@ unsigned char __inbyte(
 
 **標頭檔** \<intrin.h >
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="remarks"></a>備註
 

@@ -8,10 +8,10 @@ f1_keywords:
 helpviewer_keywords:
 - AgileEventSource class
 ms.openlocfilehash: 095c61dcef208028bf1c0f4b3443ba10110da8ed
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025858"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource 類別
@@ -40,7 +40,7 @@ class AgileEventSource :
 
 ## <a name="remarks"></a>備註
 
-大部分的 Windows 執行階段中的元件是敏捷式軟體開發的元件。 如需詳細資訊，請參閱 <<c0> [ 執行緒和封送處理 (C + + /CX)](../../cppcx/threading-and-marshaling-c-cx.md)。
+大部分的 Windows 執行階段中的元件是敏捷式軟體開發的元件。 如需詳細資訊，請參閱 <<c0> [ 執行緒和封送處理 (C++/CX)](../../cppcx/threading-and-marshaling-c-cx.md)。</c0>
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

@@ -15,10 +15,10 @@ helpviewer_keywords:
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
 ms.openlocfilehash: eee53acbb8b0b8432a7d5819fb773b616f0e8897
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424089"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>檔案類型建立適用於 Visual StudioC++專案
@@ -50,16 +50,16 @@ ms.locfileid: "59424089"
 |副檔名|類型|內容|
 |--------------------|----------|--------------|
 |.asmx|原始程式檔|部署檔案。|
-|.asp|原始程式檔|Active Server Page 檔。|
+|.asp|Source|Active Server Page 檔。|
 |.atp|專案|應用程式範本專案檔。|
 |.bmp、.dib、.gif、.jpg、.jpe、.png|資源|一般影像檔。|
 |.bsc|編譯|瀏覽器程式碼檔。|
-|.cpp.c|原始程式檔|您的應用程式的主要原始程式碼檔。|
+|.cpp.c|Source|您的應用程式的主要原始程式碼檔。|
 |.cur|資源|資料指標點陣圖形檔。|
 |.dbp|專案|資料庫專案檔。|
-|.disco|原始程式檔|動態探索文件檔。 處理 XML Web 服務探索。|
+|.disco|Source|動態探索文件檔。 處理 XML Web 服務探索。|
 |.exe、.dll|專案|可執行檔或動態連結程式庫檔。|
-|.h|原始程式檔|標頭 (Include) 檔。|
+|.h|Source|標頭 (Include) 檔。|
 |.htm、.html、.xsp、.asp、.htc、.hta、.xml|資源|一般 Web 檔案。|
 |.HxC|專案|說明專案檔。|
 |.ico|資源|圖示點陣圖形檔。|

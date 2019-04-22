@@ -21,10 +21,10 @@ helpviewer_keywords:
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
 ms.openlocfilehash: 7818aa708a762f2a284be029a6c3f3facd971d9a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767726"
 ---
 # <a name="automation"></a>Automation
@@ -45,7 +45,7 @@ Automation 伺服器和用戶端使用的 COM 介面一定是衍生自 `IDispatc
 
 更重要的是，其支援提供給使用者和方案提供者的 Automation。 透過通用、明確定義的介面公開應用程式的功能，Automation 可讓單一的一般程式語言 (如 Microsoft Visual Basic) 建立複雜的解決方案，而不需要使用應用程式專屬的巨集語言才能建立。
 
-許多商業應用程式 (例如 Microsoft Excel 和 Microsoft Visual C++) 可讓您自動化其大部分的功能。 比方說，在 Visual c + + 中，您可以撰寫 VBScript 巨集來自動化組建、 程式碼編輯，或偵錯工作的層面。
+許多商業應用程式 (例如 Microsoft Excel 和 Microsoft Visual C++) 可讓您自動化其大部分的功能。 例如，在視覺效果C++，您可以撰寫 VBScript 巨集來自動化組建、 程式碼編輯，或偵錯工作的層面。
 
 ##  <a name="_core_passing_parameters_in_automation"></a> 在 Automation 內傳遞參數
 

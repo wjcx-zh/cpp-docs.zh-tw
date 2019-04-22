@@ -21,10 +21,10 @@ helpviewer_keywords:
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
 ms.openlocfilehash: d2a1c63f686b46aad4e174c86895f6f9fc00d260
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778334"
 ---
 # <a name="try-finally-statement"></a>try-finally 陳述式
@@ -47,12 +47,12 @@ ms.locfileid: "58778334"
 *try-finally-statement*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **\_\_請嘗試** *複合陳述式* **\_\_最後** *複合陳述式*
 
-**Try finally**陳述式是 C 和 c + + 語言的 Microsoft 擴充功能，可讓目標應用程式來執行的程式碼區塊將會中斷時，保證會執行清除程式碼。 清除包含如取消配置記憶體、關閉檔案和釋放檔案控制代碼等工作。 **Try finally**陳述式是特別有用，有幾個地方，其中會進行檢查錯誤的可能會導致過早傳回常式。
+**Try finally**陳述式是 C 的 Microsoft 擴充功能和C++可讓目標應用程式時執行的程式碼區塊將會中斷，保證會執行清除程式碼的語言。 清除包含如取消配置記憶體、關閉檔案和釋放檔案控制代碼等工作。 **Try finally**陳述式是特別有用，有幾個地方，其中會進行檢查錯誤的可能會導致過早傳回常式。
 
-如需相關的資訊和程式碼範例，請參閱[嘗試-try-except 陳述式](../cpp/try-except-statement.md)。 如需有關結構化例外狀況處理的詳細資訊，請參閱[Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md)。 如需有關處理例外狀況，在受管理應用程式中使用 C + + /cli CLI，請參閱[例外狀況處理在 /clr 下](../extensions/exception-handling-cpp-component-extensions.md)。
+如需相關的資訊和程式碼範例，請參閱[嘗試-try-except 陳述式](../cpp/try-except-statement.md)。 如需有關結構化例外狀況處理的詳細資訊，請參閱[Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md)。 如需有關使用受管理的應用程式中處理例外狀況C++/CLI，請參閱[/clr 底下處理時發生例外狀況](../extensions/exception-handling-cpp-component-extensions.md)。
 
 > [!NOTE]
-> 結構化例外狀況處理可搭配 Win32 處理 C 和 C++ 原始程式檔。 不過，它不是專為 C++ 所設計。 使用 C++ 例外狀況處理可確保您的程式碼更具可移植性。 此外，C++ 例外狀況處理更有彈性，因為它可以處理任何類型的例外狀況。 對於 c + + 程式，建議您使用 c + + 例外狀況處理機制 ([try、 catch 和 throw](../cpp/try-throw-and-catch-statements-cpp.md)陳述式)。
+> 結構化例外狀況處理可搭配 Win32 處理 C 和 C++ 原始程式檔。 不過，它不是專為 C++ 所設計。 使用 C++ 例外狀況處理可確保您的程式碼更具可移植性。 此外，C++ 例外狀況處理更有彈性，因為它可以處理任何類型的例外狀況。 針對C++程式，建議您在使用C++例外狀況處理機制 ([try、 catch 和 throw](../cpp/try-throw-and-catch-statements-cpp.md)陳述式)。
 
 後面的複合陳述式 **__try**子句是保護的區段。 後面的複合陳述式 **__finally**子句會終止處理常式。 處理常式會指定一組當保護區段結束時執行的動作，不管保護的區段是因例外狀況 (異常終止) 而結束，或是依標準的執行順序 (正常終止) 而結束。
 

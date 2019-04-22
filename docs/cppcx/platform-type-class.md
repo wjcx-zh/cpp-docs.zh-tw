@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
 ms.openlocfilehash: 456dbff652c8f1b800308ff757930b425616a83f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781740"
 ---
 # <a name="platformtype-class"></a>Platform::Type 類別
@@ -57,7 +57,7 @@ public ref class Platform::Type :
 
 **最低支援伺服器：** Windows Server 2012
 
-**命名空間：** 平台
+**命名空間：** Platform
 
 **中繼資料：** platform.winmd
 

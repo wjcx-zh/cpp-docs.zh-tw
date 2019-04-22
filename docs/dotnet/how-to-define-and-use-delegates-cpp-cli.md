@@ -1,19 +1,19 @@
 ---
-title: HOW TO：定義和使用委派 (C + + /cli CLI)
+title: HOW TO：定義和使用委派 (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
 ms.openlocfilehash: bcbf5bf978da5b6c13dd131e7a19975381bd97a5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771302"
 ---
-# <a name="how-to-define-and-use-delegates-ccli"></a>HOW TO：定義和使用委派 (C + + /cli CLI)
+# <a name="how-to-define-and-use-delegates-ccli"></a>HOW TO：定義和使用委派 (C++/CLI)
 
-這篇文章示範如何定義和使用委派，在 C + + /cli CLI。
+這篇文章示範如何定義和使用中的委派C++/CLI。
 
 雖然.NET Framework 提供數個委派，但有時候您可能必須定義新的委派。
 

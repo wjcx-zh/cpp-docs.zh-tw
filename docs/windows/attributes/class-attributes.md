@@ -1,19 +1,19 @@
 ---
-title: 類別屬性 (c + + COM)
+title: 類別屬性 (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - attributes [C++/CLI], class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
-ms.openlocfilehash: bdc689107eb973b9701e3f1fbe37a10aa6ae8d85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0913d09c51734f5255271c0d06e639810e0cb58
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448863"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59025412"
 ---
 # <a name="class-attributes"></a>類別屬性
 
-下列屬性套用至[類別](../../cpp/class-cpp.md)c + + 關鍵字。
+下列屬性套用至[類別](../../cpp/class-cpp.md)C++關鍵字。
 
 |屬性|描述|
 |---------------|-----------------|
@@ -44,7 +44,7 @@ ms.locfileid: "50448863"
 |[noncreatable](noncreatable.md)|定義本身無法具現化的物件。|
 |[progid](progid.md)|定義控制項 ProgID。|
 |[registration_script](registration-script.md)|執行指定的註冊指令碼。|
-|[requestedit](requestedit.md)|表示屬性支援`OnRequestEdit`通知。|
+|[requestedit](requestedit.md)|表示屬性支援 `OnRequestEdit` 通知。|
 |[source](source-cpp.md)|指定控制項的連接點的來源介面的類別上。 在屬性或方法，`source`屬性會指出成員傳回的物件或`VARIANT`也就是事件來源。|
 |[support_error_info](support-error-info.md)|支援目標物件的錯誤報告功能。|
 |[threading](threading-cpp.md)|指定控制項的執行緒模型。|

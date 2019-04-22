@@ -1,5 +1,5 @@
 ---
-title: 雙重 （c + + COM 屬性）
+title: 雙重 (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dual
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
 ms.openlocfilehash: 8f02f6b69b31f10b41d5c920cfc2ad62dfa1cef2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023954"
 ---
 # <a name="dual"></a>dual
@@ -25,7 +25,7 @@ ms.locfileid: "59023954"
 
 ## <a name="remarks"></a>備註
 
-當**雙重**c + + 屬性在介面前面，它會將介面放置於所產生的.idl 檔案中的程式庫區塊內。
+當**雙重**C++屬性在介面前面，它會將介面放置於所產生的.idl 檔案中的程式庫區塊內。
 
 ## <a name="example"></a>範例
 
@@ -70,7 +70,7 @@ __interface IStatic : IDispatch
 
 [IDL 屬性](idl-attributes.md)<br/>
 [依使用方式分類的屬性](attributes-by-usage.md)<br/>
-[自訂](custom-cpp.md)<br/>
+[custom](custom-cpp.md)<br/>
 [dispinterface](dispinterface.md)<br/>
 [object](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

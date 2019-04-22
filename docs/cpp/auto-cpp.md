@@ -1,5 +1,5 @@
 ---
-title: 自動 （c + +）
+title: 自動 (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - auto_CPP
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
 ms.openlocfilehash: 3d77a17d490f8d7680f095367c309ce0e4f366b7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776332"
 ---
-# <a name="auto-c"></a>自動 （c + +）
+# <a name="auto-c"></a>自動 (C++)
 
 從所宣告變數的初始化運算式，來推斷其類型。
 
@@ -50,7 +50,7 @@ auto declarator initializer;
 
 若要使用**自動**關鍵字，而不是類型可用來宣告一個變數，並指定初始化運算式。 此外，您可以在其中修改**自動**關鍵字，例如使用規範和宣告子**const**， **volatile**，指標 (`*`)，參考 (`&`)，和右值參考 (`&&`)。 編譯器會評估初始化運算式，然後使用該資訊來推斷變數類型。
 
-初始化運算式可以是指派 （等號語法），直接初始化 （函式樣式語法）， [new 運算子](new-operator-cpp.md)運算式或初始化運算式可以是*範圍宣告*中的參數[範圍架構 for 陳述式 （c + +）](../cpp/range-based-for-statement-cpp.md)陳述式。 如需詳細資訊，請參閱 <<c0> [ 初始設定式](../cpp/initializers.md)和本文件稍後的程式碼範例。
+初始化運算式可以是指派 （等號語法），直接初始化 （函式樣式語法）， [new 運算子](new-operator-cpp.md)運算式或初始化運算式可以是*範圍宣告*中的參數[範圍架構 for 陳述式 (C++)](../cpp/range-based-for-statement-cpp.md)陳述式。 如需詳細資訊，請參閱 <<c0> [ 初始設定式](../cpp/initializers.md)和本文件稍後的程式碼範例。
 
 **自動**關鍵字是類型的預留位置，但它本身不是型別。 因此，**自動**關鍵字不能在轉換或運算子這類[sizeof](../cpp/sizeof-operator.md)以及 (C + /cli CLI) [typeid](../extensions/typeid-cpp-component-extensions.md)。
 

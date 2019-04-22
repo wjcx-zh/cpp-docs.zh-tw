@@ -11,10 +11,10 @@ helpviewer_keywords:
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
 ms.openlocfilehash: af84c5239a9cb3cbddb1ab4f0230e5b1a3373573
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768298"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar 類別
@@ -50,7 +50,7 @@ class CDialogBar : public CControlBar
 如需詳細資訊`CDialogBar`，請參閱文章[對話方塊列](../../mfc/dialog-bars.md)並[技術提示 31](../../mfc/tn031-control-bars.md)，控制列。
 
 > [!NOTE]
->  在目前的版本中，`CDialogBar`物件不能在裝載 Windows Form 控制項。 如需 Visual c + + 的 Windows Form 控制項的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
+>  在目前的版本中，`CDialogBar`物件不能在裝載 Windows Form 控制項。 如需有關 Windows Form 控制項，在視覺效果C++，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

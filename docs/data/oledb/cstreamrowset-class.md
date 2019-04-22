@@ -28,10 +28,10 @@ helpviewer_keywords:
 - Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
 ms.openlocfilehash: b566ddab89d2198e3f6b24eb9a20c60747749d1a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59022576"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset 類別
@@ -105,4 +105,4 @@ void Close();
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

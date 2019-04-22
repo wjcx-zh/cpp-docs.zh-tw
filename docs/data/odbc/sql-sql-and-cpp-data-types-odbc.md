@@ -1,5 +1,5 @@
 ---
-title: SQL:SQL 和 c + + 資料類型 (ODBC)
+title: SQL:SQL 和C++資料類型 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data types [C++], SQL vs. C++
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
 ms.openlocfilehash: 3efa36342b7d16968113acd818a7a1386e4cefcc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024344"
 ---
-# <a name="sql-sql-and-c-data-types-odbc"></a>SQL:SQL 和 c + + 資料類型 (ODBC)
+# <a name="sql-sql-and-c-data-types-odbc"></a>SQL:SQL 和C++資料類型 (ODBC)
 
 > [!NOTE]
 >  這項資訊適用於 MFC ODBC 類別。 如果您使用 MFC DAO 類別時，請參閱 「 比較 Microsoft Jet 資料庫引擎 SQL 和 ANSI SQL"DAO [說明] 中的主題。
 
-下表會將 ANSI SQL 資料類型對應至 c + + 資料類型。 這可增強的附錄 D 中提供的 C 語言資訊*ODBC SDK* *程式設計人員參考*MSDN Library CD 上。 精靈會管理為您的大部分資料類型對應。 如果您不使用精靈，您可以使用對應的資訊可協助您以手動方式撰寫欄位交換程式碼。
+下表對應至的 ANSI SQL 資料類型C++資料類型。 這可增強的附錄 D 中提供的 C 語言資訊*ODBC SDK* *程式設計人員參考*MSDN Library CD 上。 精靈會管理為您的大部分資料類型對應。 如果您不使用精靈，您可以使用對應的資訊可協助您以手動方式撰寫欄位交換程式碼。
 
-### <a name="ansi-sql-data-types-mapped-to-c-data-types"></a>ANSI SQL 資料類型對應至 c + + 資料類型
+### <a name="ansi-sql-data-types-mapped-to-c-data-types"></a>ANSI SQL 資料類型對應至C++資料類型
 
 |ANSI SQL 資料類型|C++ 資料型別|
 |------------------------|---------------------|
@@ -31,18 +31,18 @@ ms.locfileid: "59024344"
 |**INTEGER**|**long**|
 |**FLOAT**|**double**|
 |**DOUBLE**|**double**|
-|**數值**|`CString` 1|
+|**NUMERIC**|`CString` 1|
 |**VARCHAR**|`CString`|
 |**LONGVARCHAR**|`CLongBinary`, `CString` 2|
-|**位元**|**BOOL**|
+|**BIT**|**BOOL**|
 |**TINYINT**|**BYTE**|
 |**BIGINT**|`CString` 1|
-|**BINARY**|`CByteArray`|
+|**二進位**|`CByteArray`|
 |**VARBINARY**|`CByteArray`|
 |**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|
-|**DATE**|`CTime`, `CString`|
-|**TIME**|`CTime`, `CString`|
-|**TIMESTAMP**|`CTime`, `CString`|
+|**DATE**|`CTime`、 `CString`|
+|**TIME**|`CTime`、 `CString`|
+|**TIMESTAMP**|`CTime`、 `CString`|
 
 1. ANSI**十進位**並**數值**對應至`CString`因為**SQL_C_CHAR**是預設 ODBC 傳輸類型。
 

@@ -1,5 +1,5 @@
 ---
-title: cpp_quote （c + + COM 屬性）
+title: cpp_quote (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.cpp_quote
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
 ms.openlocfilehash: 378435ced5a541785b7b32bc9d2f408034d5a2d8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024674"
 ---
 # <a name="cppquote"></a>cpp_quote
@@ -30,9 +30,9 @@ C 的指令。
 
 ## <a name="remarks"></a>備註
 
-**Cpp_quote** c + + 屬性才有用，如果您想要將前置處理器指示詞放在.idl 檔中。
+**Cpp_quote** C++屬性才有用，如果您想要將前置處理器指示詞放在.idl 檔中。
 
-您也可以使用**cpp_quote**和的 MIDL 編譯時產生的.h 檔案。 比方說，如果您有使用 c + + IDL 屬性，但某些工作不能使用此檔案的 c + + 標頭檔，然後您可以編譯它來建立 MIDL 產生的.h 檔案，您應該能夠使用。
+您也可以使用**cpp_quote**和的 MIDL 編譯時產生的.h 檔案。 例如，如果您有C++使用的標頭檔C++然後 IDL 屬性，但是不能使用這個檔案針對某些工作，您可以編譯它來建立 MIDL 產生的.h 檔案，您應該能夠使用。
 
 **Cpp_quote**屬性有相同的功能[cpp_quote](/windows/desktop/Midl/cpp-quote) MIDL 屬性。
 

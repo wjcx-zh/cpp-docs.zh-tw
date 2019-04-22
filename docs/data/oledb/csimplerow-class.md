@@ -36,10 +36,10 @@ helpviewer_keywords:
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
 ms.openlocfilehash: 19b90f4454e784907366ef6cf7e3e7e1b9ada799
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023837"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow 類別
@@ -63,7 +63,7 @@ class CSimpleRow
 |||
 |-|-|
 |[AddRefRow](#addrefrow)|將現有的資料列控制代碼的參考計數。|
-|[比較](#compare)|比較兩個資料列，以查看它們是否參考相同的資料列執行個體。|
+|[Compare](#compare)|比較兩個資料列，以查看它們是否參考相同的資料列執行個體。|
 |[CSimpleRow](#csimplerow)|建構函式。|
 |[ReleaseRow](#releaserow)|釋放資料列。|
 
@@ -159,5 +159,5 @@ KeyType m_iRowset;
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [IRowsetImpl 類別](../../data/oledb/irowsetimpl-class.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
 ms.openlocfilehash: 262b23e6e4813a5e22bc3f4e7c9a18efb9988a7c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023306"
 ---
 # <a name="deprecated-cc"></a>deprecated (C/C++)
@@ -20,7 +20,7 @@ ms.locfileid: "59023306"
 **已被取代**pragma 可讓您指定的函式、 類型或任何其他識別項可能不再支援未來版本，或無法再使用。
 
 > [!NOTE]
-> 如需 C + + 14`[[deprecated]]`屬性，且使用的時機的指引屬性與 Microsoft declspec 或 pragma，請參閱 < [c + + 標準屬性](../cpp/attributes.md)屬性。
+> 如需 C + + 14`[[deprecated]]`屬性，且使用的時機的指引屬性與 Microsoft declspec 或 pragma，請參閱 < [ C++標準屬性](../cpp/attributes.md)屬性。
 
 ## <a name="syntax"></a>語法
 

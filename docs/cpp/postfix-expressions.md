@@ -7,10 +7,10 @@ helpviewer_keywords:
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
 ms.openlocfilehash: eb6e6e8914cf260df09581232066caf3f873c04e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779257"
 ---
 # <a name="postfix-expressions"></a>後置運算式
@@ -149,7 +149,7 @@ double& func2( double& d, const char *c ) {
 
 若使用省略符號，則必須是引數清單中最後宣告的項目。 如需有關傳遞引數數目可變的詳細資訊，請參閱討論[va_arg、 va_start 和 va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)中*執行階段程式庫參考*。
 
-如需 CLR 程式設計中預設引數的詳細資訊，請參閱[變數引數清單 （...）(C + + /CLI CLI)](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+如需 CLR 程式設計中預設引數的詳細資訊，請參閱[變數引數清單 （...）(C++/CLI)](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 預設引數可讓您指定函式呼叫中未提供值時，引數應該假設的值。 下列程式碼片段將示範預設引數的運作方式。 如需指定預設引數限制的相關詳細資訊，請參閱[預設引數](../cpp/default-arguments.md)。
 

@@ -9,15 +9,15 @@ f1_keywords:
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
 ms.openlocfilehash: 6f80bc9d2a2438a6003c93ce7e60de50fd639a16
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023902"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>向量化工具和平行化工具訊息
 
-您可以使用 Visual c + + 編譯器選項[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)並[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)設[自動平行處理和自動向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)來輸出原因代碼和它的活動相關的告知性訊息。 本文說明原因代碼和訊息。
+您可以使用視覺效果C++編譯器選項[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)並[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)設[自動平行處理和自動向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)來輸出原因代碼與活動相關的告知性訊息。 本文說明原因代碼和訊息。
 
 - [告知性訊息](#BKMK_InformationalMessages)
 

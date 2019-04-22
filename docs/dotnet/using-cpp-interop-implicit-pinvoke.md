@@ -21,37 +21,37 @@ helpviewer_keywords:
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
 ms.openlocfilehash: aaa07373b7dd22807290ceefa9197b4013c61fe5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778230"
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>使用 C++ Interop (隱含 PInvoke)
 
-不同於其他.NET 語言，Visual c + + 有互通性支援，可讓 managed 和 unmanaged 程式碼存在，在相同的應用程式，並甚至在相同的檔案 (使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) pragma)。 這可讓 Visual c + + 開發人員將.NET 功能整合到現有的 Visual c + + 應用程式中，而不會影響應用程式的其餘部分。
+不同於其他.NET 語言，視覺效果C++具有相同的應用程式和甚至是在相同的檔案，可讓存在於 managed 和 unmanaged 程式碼的互通性支援 (與[managed、 unmanaged](../preprocessor/managed-unmanaged.md) pragma)。 這可讓視覺效果C++開發人員將.NET 功能整合到現有的視覺效果C++應用程式，而不會影響應用程式的其餘部分。
 
 您也可以從受管理的編譯模組，使用呼叫 unmanaged 函式[dllexport、 dllimport](../cpp/dllexport-dllimport.md)。
 
 隱含 PInvoke 時，您不需要指定如何函式參數會封送處理，或任何其他明確呼叫 DllImportAttribute 時，可以指定的詳細資料。
 
-Visual c + + 提供兩種方法讓交互操作的 managed 和 unmanaged 函式：
+視覺化C++提供交互操作的 managed 和 unmanaged 函式的兩種方式：
 
 - [在 C++ 中使用明確的 PInvoke (DllImport 屬性)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
 
-明確的 PInvoke 支援的.NET Framework，並且可在大部分的.NET 語言。 但是，正如其名，c + + Interop 是特定 Visual c + +。
+明確的 PInvoke 支援的.NET Framework，並且可在大部分的.NET 語言。 但正如其名， C++ Interop 是特定視覺效果C++。
 
 ## <a name="c-interop"></a>C++ Interop
 
-因為它提供更好的型別安全實作通常比較不瑣碎，如果未受管理的 API 已經過修改，而使效能增強功能可能即無法在明確是更寬容明確的 PInvoke 建議 c + + InteropPInvoke。 不過，c + + Interop 不可能，如果無法使用未受管理的原始程式碼。
+C++因為它提供更好的型別安全實作通常比較不瑣碎，如果未受管理的 API 已經過修改，而使效能增強功能可能即無法在明確是更寬容明確的 PInvoke 建議 interopPInvoke。 不過， C++ Interop 不可行，如果無法使用未受管理的原始程式碼。
 
 ## <a name="c-com-interop"></a>C++ COM Interop
 
-與 COM 元件交互操作時，支援的 Visual c + + 的互通性功能會提供優於其他.NET 語言的特定優點。 而不受限於.NET Framework 的限制[Tlbimp.exe （型別程式庫匯入工具）](/dotnet/framework/tools/tlbimp-exe-type-library-importer)，限制對資料型別和必要的曝光度的每個 COM 介面的每個成員的詳細資訊，例如 c + + Interop 讓 COM若要在存取元件將而且不需要個別的 interop 組件。 不同於 Visual Basic 和C#，Visual c + + 可以使用直接使用一般的 COM 機制的 COM 物件 (例如**CoCreateInstance**並**QueryInterface**)。 這是可能會因為 c + + Interop 功能，會導致編譯器自動插入的轉換程式碼，以從 managed 到 unmanaged 的函式及移動一次。
+支援的視覺效果的互通性功能C++提供優於其他.NET 語言的特定優點，說到 COM 元件與交互操作。 而不受限於.NET Framework 的限制[Tlbimp.exe （型別程式庫匯入工具）](/dotnet/framework/tools/tlbimp-exe-type-library-importer)，例如資料類型的有限的支援和必要的曝光度的每個 COM 的介面，每個成員的C++Interop可讓 COM 元件存取隨意且不需要個別的 interop 組件。 不同於 Visual Basic 和C#、 VisualC++可以使用直接使用一般的 COM 機制的 COM 物件 (例如**CoCreateInstance**並**QueryInterface**)。 這是由於C++會導致編譯器自動插入移從 managed 至 unmanaged 函式，然後再次轉換程式碼的 Interop 功能。
 
-使用 c + + Interop，COM 元件便能以一般使用，或在 c + + 類別包裝起來。 這些包裝函式的類別稱為自訂執行階段可呼叫包裝函式，或 CRCWs，而且它們有透過直接在應用程式程式碼中使用 COM 的兩個優點：
+使用C++互通性之外，可以使用 COM 元件，因為它們通常會使用或可以包裝在內C++類別。 這些包裝函式的類別稱為自訂執行階段可呼叫包裝函式，或 CRCWs，而且它們有透過直接在應用程式程式碼中使用 COM 的兩個優點：
 
-- 產生的類別可以從 Visual c + + 以外的語言使用。
+- 產生的類別可以從 視覺效果以外的語言使用C++。
 
 - 從受管理的用戶端程式碼，可以隱藏 COM 介面的詳細資料。 .NET 資料型別可以用來取代原生類型，並可以無障礙地執行資料封送處理的詳細資料，CRCW 內。
 
@@ -143,7 +143,7 @@ Done
 
 - [如何：包裝原生類別以便讓 C# 使用](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-如需在 interop 的案例中使用委派的資訊，請參閱[委派 （c + + 元件延伸模組）](../extensions/delegate-cpp-component-extensions.md)。
+如需在 interop 的案例中使用委派的資訊，請參閱[委派 (C++元件擴充功能)](../extensions/delegate-cpp-component-extensions.md)。
 
 ## <a name="see-also"></a>另請參閱
 

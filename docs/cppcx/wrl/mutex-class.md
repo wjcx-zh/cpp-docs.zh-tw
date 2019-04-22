@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Mutex::operator= operator
 ms.assetid: 682a0963-721c-46a2-8871-000e9997505b
 ms.openlocfilehash: 93de43ac7e5314501d0391e2cde862ba32be0b4b
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58784561"
 ---
 # <a name="mutex-class"></a>Mutex 類別
@@ -66,7 +66,7 @@ class Mutex : public HandleT<HandleTraits::MutexTraits>;
 
 **命名空間：** Microsoft::WRL::Wrappers
 
-## <a name="lock"></a>Mutex::Lock
+## <a name="lock"></a>Mutex:: lock
 
 等到目前的物件，或`Mutex`與指定的控制代碼、 mutex 或指定的逾時間隔經過的版本相關聯的物件。
 
@@ -83,7 +83,7 @@ static SyncLock Lock(
 
 ### <a name="parameters"></a>參數
 
-*milliseconds*<br/>
+*（毫秒)*<br/>
 逾時間隔，以毫秒為單位。 預設值為 INFINITE，這個會無限期等待。
 
 *h*<br/>
@@ -91,7 +91,7 @@ static SyncLock Lock(
 
 ### <a name="return-value"></a>傳回值
 
-## <a name="mutex"></a>Mutex::Mutex
+## <a name="mutex"></a>Mutex:: mutex
 
 初始化 `Mutex` 類別的新執行個體。
 

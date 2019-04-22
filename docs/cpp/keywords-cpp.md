@@ -1,5 +1,5 @@
 ---
-title: 關鍵字 （c + +）
+title: 關鍵字 (C++)
 ms.custom: index-page
 ms.date: 10/10/2018
 helpviewer_keywords:
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
 ms.openlocfilehash: f87c2401bcc964229d3c0b3cf7119a09553cc2f2
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774759"
 ---
-# <a name="keywords-c"></a>關鍵字 （c + +）
+# <a name="keywords-c"></a>關鍵字 (C++)
 
-關鍵字是具有特殊意義的預先定義保留識別項。 您不能在程式中將關鍵字當做識別項使用。 下列是 Microsoft C++ 的保留關鍵字。 具有前置底線的名稱和後面的名稱 (C + + /cli CLI) 是 Microsoft 擴充功能。
+關鍵字是具有特殊意義的預先定義保留識別項。 您不能在程式中將關鍵字當做識別項使用。 下列是 Microsoft C++ 的保留關鍵字。 具有前置底線的名稱和後面的名稱 (C++/CLI) 是 Microsoft 擴充功能。
 
 |||||
 |-|-|-|-|
@@ -47,26 +47,26 @@ ms.locfileid: "58774759"
 |[false](false-cpp.md)|[finally](../dotnet/finally.md)|[float](fundamental-types-cpp.md)|[for](for-statement-cpp.md)|
 |[中的 for each](../dotnet/for-each-in.md)|[friend](friend-cpp.md)|[friend_as](../preprocessor/hash-using-directive-cpp.md)|[gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)(C++/CLI)|
 |[generic](../extensions/generics-cpp-component-extensions.md)(C++/CLI)|[goto](goto-statement-cpp.md)|[if](if-else-statement-cpp.md)|[initonly](../dotnet/initonly-cpp-cli.md)|
-|[inline](inline-functions-cpp.md)|[int](fundamental-types-cpp.md)|[介面類別](../extensions/interface-class-cpp-component-extensions.md)(C + + /cli CLI)|[介面結構](../extensions/interface-class-cpp-component-extensions.md)(C + + /cli CLI)|
-|[interior_ptr](../extensions/interior-ptr-cpp-cli.md)(C++/CLI)|[常值](../extensions/literal-cpp-component-extensions.md)(C + + /cli CLI)|[long](fundamental-types-cpp.md)|[mutable](mutable-data-members-cpp.md)|
+|[inline](inline-functions-cpp.md)|[int](fundamental-types-cpp.md)|[介面類別](../extensions/interface-class-cpp-component-extensions.md)(C++/CLI)|[介面結構](../extensions/interface-class-cpp-component-extensions.md)(C++/CLI)|
+|[interior_ptr](../extensions/interior-ptr-cpp-cli.md)(C++/CLI)|[常值](../extensions/literal-cpp-component-extensions.md)(C++/CLI)|[long](fundamental-types-cpp.md)|[mutable](mutable-data-members-cpp.md)|
 |[naked](naked-cpp.md) <sup>1</sup>|[namespace](namespaces-cpp.md)|[new](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)(C++/CLI)|[new](new-operator-cpp.md)|
 |[noexcept](noexcept-cpp.md)|[noinline](noinline.md) <sup>1</sup>|[noreturn](noreturn.md) <sup>1</sup>|[nothrow](nothrow-cpp.md) <sup>1</sup>|
 |[novtable](novtable.md) <sup>1</sup>|[nullptr](nullptr.md)|[operator](operator-overloading.md)|[private](private-cpp.md)|
 |[property](../extensions/property-cpp-component-extensions.md)(C++/CLI)|[property](property-cpp.md) <sup>1</sup>|[protected](protected-cpp.md)|[public](public-cpp.md)|
 |[ref 類別](../extensions/classes-and-structs-cpp-component-extensions.md)|[ref 結構](../extensions/classes-and-structs-cpp-component-extensions.md)|[register](storage-classes-cpp.md#register)|[reinterpret_cast](reinterpret-cast-operator.md)|
-|[return](return-statement-cpp.md)|[safecast](../extensions/safe-cast-cpp-component-extensions.md)|[密封](../extensions/sealed-cpp-component-extensions.md)(C + + /cli CLI)|[selectany](selectany.md) <sup>1</sup>|
+|[return](return-statement-cpp.md)|[safecast](../extensions/safe-cast-cpp-component-extensions.md)|[密封](../extensions/sealed-cpp-component-extensions.md)(C++/CLI)|[selectany](selectany.md) <sup>1</sup>|
 |[short](fundamental-types-cpp.md)|[signed](fundamental-types-cpp.md)|[sizeof](sizeof-operator.md)|[static](storage-classes-cpp.md)|
 |[static_assert](static-assert.md)|[static_cast](static-cast-operator.md)|[struct](struct-cpp.md)|[switch](switch-statement-cpp.md)|
 |[template](templates-cpp.md)|[this](this-pointer.md)|[thread](thread.md) <sup>1</sup>|[throw](try-throw-and-catch-statements-cpp.md)|
 |[true](true-cpp.md)|[try](try-throw-and-catch-statements-cpp.md)|[typedef](aliases-and-typedefs-cpp.md)|[typeid](typeid-operator.md)|
 |[typeid](../extensions/typeid-cpp-component-extensions.md)|[typename](typename.md)|[union](unions.md)|[unsigned](fundamental-types-cpp.md)|
-|[使用](using-declaration.md)宣告|[使用](namespaces-cpp.md#using_directives)指示詞|[uuid](uuid-cpp.md) <sup>1</sup>|[實值類別](../extensions/classes-and-structs-cpp-component-extensions.md)(C + + /cli CLI)|
-|[實值結構](../extensions/classes-and-structs-cpp-component-extensions.md)(C + + /cli CLI)|[virtual](virtual-cpp.md)|[void](void-cpp.md)|[volatile](volatile-cpp.md)|
+|[使用](using-declaration.md)宣告|[使用](namespaces-cpp.md#using_directives)指示詞|[uuid](uuid-cpp.md) <sup>1</sup>|[實值類別](../extensions/classes-and-structs-cpp-component-extensions.md)(C++/CLI)|
+|[實值結構](../extensions/classes-and-structs-cpp-component-extensions.md)(C++/CLI)|[virtual](virtual-cpp.md)|[void](void-cpp.md)|[volatile](volatile-cpp.md)|
 |[while](while-statement-cpp.md)|
 
 <sup>1</sup>擴充屬性 **__declspec**關鍵字。
 
-<sup>2</sup> Managed extensions for c + + 只適用。 這個語法現在不建議使用。 請參閱[執行階段平台的元件擴充功能](../extensions/component-extensions-for-runtime-platforms.md)如需詳細資訊。
+<sup>2</sup>適用於 Managed Extensions forC++只。 這個語法現在不建議使用。 請參閱[執行階段平台的元件擴充功能](../extensions/component-extensions-for-runtime-platforms.md)如需詳細資訊。
 
 <sup>3</sup>用於事件處理的內建函式。
 
@@ -80,7 +80,7 @@ Microsoft 擴充功能預設為啟用。 為了確保您的程式可完整移植
 
 啟用 Microsoft 擴充功能後，您可以在程式中使用 Microsoft 專有的關鍵字。 為符合 ANSI 標準，這些關鍵字前面都加上雙底線。 回溯相容性，支援的許多其他雙底線關鍵字的單底線版本。 颾魤 ㄛ **__cdecl**適用於沒有前置的底線。
 
-**__Asm**關鍵字取代 c + +`asm`語法。 保留 `asm` 以與其他 C++ 實作相容，但沒有實作。 使用 **__asm**。
+**__Asm**關鍵字會取代C++`asm`語法。 保留 `asm` 以與其他 C++ 實作相容，但沒有實作。 使用 **__asm**。
 
 **__based** 關鍵字用於 32 位元和 64 位元目標編譯時有所限制。
 

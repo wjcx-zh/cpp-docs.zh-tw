@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
 ms.openlocfilehash: 35c3b06106779a9056f682ff76c6ed4b4ab1ab41
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026574"
 ---
 # <a name="conform"></a>conform
-**C++ 專有的**
+**C++特定**
 
 指定的執行階段行為[/zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)編譯器選項。
 
@@ -27,10 +27,10 @@ ms.locfileid: "59026574"
 
 ### <a name="parameters"></a>參數
 
-*名稱*<br/>
+*name*<br/>
 指定要修改的編譯器選項名稱。 唯一有效*名稱*是`forScope`。
 
-**顯示**<br/>
+**show**<br/>
 （選擇性）導致目前的設定*名稱*（true 或 false），在編譯期間透過警告訊息顯示。 例如， `#pragma conform(forScope, show)` 。
 
 **在 **，**關閉**<br/>
@@ -42,7 +42,7 @@ ms.locfileid: "59026574"
 **pop**<br/>
 （選擇性）設定的值*名稱*頂端的內部編譯器堆疊，然後從堆疊中推出的值。 如果指定的識別項，但**pop**，將會推出堆疊，直到它找到的記錄*識別項*，這也會從; 的目前值*名稱*中在堆疊上的下一筆記錄會變成的新值*名稱*。 如果您指定**pop**具有*識別項*不在堆疊上，記錄**pop**會被忽略。
 
-*識別項*<br/>
+*identifier*<br/>
 （選擇性）可以是隨附**推播**或是**pop**命令。 如果*識別碼*使用時，則**上**或是**關閉**規範也可以使用。
 
 ## <a name="example"></a>範例

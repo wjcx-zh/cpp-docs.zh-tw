@@ -1,5 +1,5 @@
 ---
-title: registration_script （c + + COM 屬性）
+title: registration_script (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.registration_script
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
 ms.openlocfilehash: 0b2c4d576a699dea7772821b5635944b2663c57c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024370"
 ---
 # <a name="registrationscript"></a>registration_script
@@ -25,12 +25,12 @@ ms.locfileid: "59024370"
 
 ### <a name="parameters"></a>參數
 
-*指令碼*<br/>
+*script*<br/>
 自訂註冊指令碼 (.rgs) 檔案的完整路徑。 值為**無**，例如`script = "none"`，指出 coclass 有沒有註冊需求。
 
 ## <a name="remarks"></a>備註
 
-**Registration_script** c + + 屬性執行所指定的自訂註冊指令碼*指令碼*。 如果未指定此屬性，則會使用標準的.rgs 檔案 （包含註冊元件的資訊）。 如需有關.rgs 檔案的詳細資訊，請參閱[ATL 登錄元件 （登錄器）](../../atl/atl-registry-component-registrar.md)。
+**Registration_script** C++屬性會執行所指定的自訂註冊指令碼*指令碼*。 如果未指定此屬性，則會使用標準的.rgs 檔案 （包含註冊元件的資訊）。 如需有關.rgs 檔案的詳細資訊，請參閱[ATL 登錄元件 （登錄器）](../../atl/atl-registry-component-registrar.md)。
 
 此屬性需要 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。
 

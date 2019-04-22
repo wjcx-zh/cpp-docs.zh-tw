@@ -1,5 +1,5 @@
 ---
-title: helpstringcontext （c + + COM 屬性）
+title: helpstringcontext (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringcontext
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
 ms.openlocfilehash: a6df5b63291fbc54d6c12a116fccd8372e8ced9a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026106"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
@@ -30,7 +30,7 @@ ms.locfileid: "59026106"
 
 ## <a name="remarks"></a>備註
 
-**Helpstringcontext** c + + 屬性具有相同的功能[helpstringcontext](/windows/desktop/Midl/helpstringcontext) ODL 屬性。
+**Helpstringcontext** C++屬性具有相同的功能[helpstringcontext](/windows/desktop/Midl/helpstringcontext) ODL 屬性。
 
 ## <a name="example"></a>範例
 
@@ -67,4 +67,4 @@ __interface IMyI
 [介面屬性](interface-attributes.md)<br/>
 [類別屬性](class-attributes.md)<br/>
 [方法屬性](method-attributes.md)<br/>
-[name](module-cpp.md)
+[module](module-cpp.md)

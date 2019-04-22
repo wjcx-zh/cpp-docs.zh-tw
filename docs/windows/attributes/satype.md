@@ -1,5 +1,5 @@
 ---
-title: satype （c + + COM 屬性）
+title: satype (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.satype
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
 ms.openlocfilehash: 7588e8d855d648309c46d981898cfbbf7888f4c9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025720"
 ---
 # <a name="satype"></a>satype
@@ -41,7 +41,7 @@ ms.locfileid: "59025720"
 
 ## <a name="remarks"></a>備註
 
-**Satype** c + + 屬性指定的資料型別`SAFEARRAY`。
+**Satype** C++屬性指定的資料型別`SAFEARRAY`。
 
 > [!NOTE]
 > 從卸除的間接取值層級`SAFEARRAY`從它在.cpp 檔案中的宣告方式產生的.idl 檔案中的指標。

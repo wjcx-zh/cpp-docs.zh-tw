@@ -9,15 +9,15 @@ helpviewer_keywords:
 - HLT instruction
 ms.assetid: a074f44a-101c-45a5-8a5e-cfd223c34002
 ms.openlocfilehash: dd68c88a13035ca25f89304bcd84267a73978420
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025947"
 ---
 # <a name="halt"></a>__halt
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 啟用插斷、 非遮罩式插斷 （nmi） 傳送或重設發生之前，暫止微處理器。
 
@@ -39,7 +39,7 @@ void __halt( void );
 
 `__halt`函式相當於`HLT`機器指令，且只適用於核心模式。 如需詳細資訊，搜尋文件中，「 Intel 架構軟體開發人員的手動、 磁碟區 2:指令集參考，「 在[Intel Corporation](https://software.intel.com/articles/intel-sdm)站台。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

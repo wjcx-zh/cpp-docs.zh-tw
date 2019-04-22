@@ -16,10 +16,10 @@ helpviewer_keywords:
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
 ms.openlocfilehash: 68ee5fbfec554df8865ca50c265ca2fa2f226a29
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775240"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>資料物件和資料來源：建立和解構
@@ -74,7 +74,7 @@ ms.locfileid: "58775240"
 
 ##  <a name="_core_destroying_data_sources"></a> 終結資料來源
 
-目前負責它們的應用程式必須終結資料來源。 在其中您將資料來源交給 OLE 的情況下，例如呼叫[coledatasource:: Dodragdrop](../mfc/reference/coledatasource-class.md#dodragdrop)，您必須呼叫`pDataSrc->InternalRelease`。 例如：
+目前負責它們的應用程式必須終結資料來源。 在其中您將資料來源交給 OLE 的情況下，例如呼叫[coledatasource:: Dodragdrop](../mfc/reference/coledatasource-class.md#dodragdrop)，您必須呼叫`pDataSrc->InternalRelease`。 例如: 
 
 [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]
 

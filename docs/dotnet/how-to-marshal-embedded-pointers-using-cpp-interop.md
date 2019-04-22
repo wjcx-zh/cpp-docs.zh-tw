@@ -1,5 +1,5 @@
 ---
-title: HOW TO：內嵌的指標使用 c + + Interop 封送處理
+title: HOW TO：封送處理內嵌指標使用C++Interop
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
 ms.openlocfilehash: c6d622060aaf700b6ea1a3bfe797ab3190eee797
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780232"
 ---
-# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>HOW TO：內嵌的指標使用 c + + Interop 封送處理
+# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>HOW TO：封送處理內嵌指標使用C++Interop
 
 下列程式碼範例使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) #pragma 指示詞來實作 managed 和 unmanaged 函式在相同的檔案，但如果在不同的檔案中定義這些函式交互操作方式相同。 包含 unmanaged 的函式的檔案不需要進行編譯[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。
 

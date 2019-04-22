@@ -8,15 +8,15 @@ helpviewer_keywords:
 - cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
 ms.openlocfilehash: cfdea6ded622cbcbe42bd555edb3029fabad7823
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023707"
 ---
 # <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 發出擴充的 x64 版本的 64 位元整數的截斷單精確度浮點數數目與 Convert (`cvttss2si`) 指令。
 
@@ -85,7 +85,7 @@ int main()
 101
 ```
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

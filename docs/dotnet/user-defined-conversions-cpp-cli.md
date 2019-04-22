@@ -5,10 +5,10 @@ helpviewer_keywords:
 - user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
 ms.openlocfilehash: 8f168582e56e77f1ec848928b7ffd36879ba341a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772419"
 ---
 # <a name="user-defined-conversions-ccli"></a>使用者定義轉換 (C++/CLI)
@@ -80,7 +80,7 @@ in N::N
 
 轉換來源運算子會從其他類別的物件建立定義運算子之類別的物件。
 
-標準 c + + 不支援轉換來源運算子;標準 c + + 會使用建構函式，針對此目的。 不過，使用 CLR 類型時，Visual c + + 提供語法支援呼叫轉換來源運算子。
+標準C++不支援轉換來源運算子;標準C++使用建構函式針對此目的。 不過，使用 CLR 型別，視覺效果時C++提供呼叫轉換來源運算子的語法支援。
 
 為了與其他符合 CLS 相容語言交互操作，您可能想將特定類別的每個使用者定義一元 （unary） 建構函式包裝對應的轉換來源運算子。
 

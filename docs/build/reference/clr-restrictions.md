@@ -5,10 +5,10 @@ helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
 ms.openlocfilehash: 21b7ead553871854c73021756eb2086f9e6e7393
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777814"
 ---
 # <a name="clr-restrictions"></a>/clr 限制
@@ -19,7 +19,7 @@ ms.locfileid: "58777814"
 
 - 使用執行階段錯誤檢查不能搭配 **/clr**。 如需詳細資訊，請參閱[如何：使用原生執行階段檢查](/visualstudio/debugger/how-to-use-native-run-time-checks)。
 
-- 當 **/clr**是用來編譯程式，只會使用標準 c + + 語法，下列指導方針適用於使用內嵌組譯碼：
+- 當 **/clr**用來編譯程式，只會使用標準C++語法中，下列指導方針適用於使用內嵌組譯碼：
 
   - 假設您已經在原生堆疊配置的知識的內嵌組譯碼，呼叫目前函式或其他低階電腦的相關資訊之外的慣例可能會失敗如果知識套用至 managed 函式之堆疊框架。 在如同屍體會放置在個別的模組，而不需要編譯成 unmanaged 函式，產生包含內嵌組譯碼的函式 **/clr**。
 
@@ -51,7 +51,7 @@ ms.locfileid: "58777814"
 
   - [/ZI](z7-zi-zi-debug-information-format.md)
 
-- 組合`_STATIC_CPPLIB`前置處理器定義 (`/D_STATIC_CPPLIB`) 和 **/clr**編譯器選項不支援。 這是因為定義會導致您的應用程式連結到靜態多執行緒 c + + 標準程式庫，不受支援。 如需詳細資訊，請參閱 < [/MD、 /MT、 /LD （使用執行階段程式庫）](md-mt-ld-use-run-time-library.md)主題。
+- 組合`_STATIC_CPPLIB`前置處理器定義 (`/D_STATIC_CPPLIB`) 和 **/clr**編譯器選項不支援。 這是因為定義會導致您的應用程式與多執行緒的靜態連結C++不支援的標準程式庫。 如需詳細資訊，請參閱 < [/MD、 /MT、 /LD （使用執行階段程式庫）](md-mt-ld-use-run-time-library.md)主題。
 
 - 使用時 **/Zi**具有 **/clr**，對效能的影響。 如需詳細資訊，請參閱 < [/Zi](z7-zi-zi-debug-information-format.md)。
 
@@ -74,7 +74,7 @@ ms.locfileid: "58777814"
 
 - 您不應該呼叫，從 managed 程式碼，以便取得參數資訊 （函式引數），堆疊查核行程的任何函式P/Invoke 層會導致要在 stack 該資訊。  比方說，不會編譯使用的 proxy/stub **/clr**。
 
-- 函式會編譯為 managed 程式碼，可能的話，但並非所有的 c + + 建構可以轉譯成 managed 程式碼。  做出此判斷函式的函式為基礎。 如果函式的任何部分無法轉換成 managed 程式碼中，整個函式將會轉換至原生程式碼。 下列情況下可防止編譯器產生的 managed 程式碼。
+- 函式會編譯為 managed 程式碼，可能的話，但並非所有C++建構可以轉譯成 managed 程式碼。  做出此判斷函式的函式為基礎。 如果函式的任何部分無法轉換成 managed 程式碼中，整個函式將會轉換至原生程式碼。 下列情況下可防止編譯器產生的 managed 程式碼。
 
   - 編譯器產生的 thunk 或 helper 函式。 透過函式指標，包括虛擬函式呼叫的任何函式呼叫會產生原生的 thunk。
 

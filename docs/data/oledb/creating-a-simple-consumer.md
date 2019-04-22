@@ -5,10 +5,10 @@ helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
 ms.openlocfilehash: 060a39a8436ff73900ebfaea7d1c882b9862ee7e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025126"
 ---
 # <a name="creating-a-simple-consumer"></a>建立簡單消費者
@@ -21,9 +21,9 @@ ms.locfileid: "59025126"
 
    [ **新增專案** ] 對話方塊隨即出現。
 
-1. 在 **專案類型**窗格中，按一下**已安裝** > **Visual c + +** > **Windows 桌面**資料夾，然後按一下**Windows Desktop 精靈**中的圖示**範本**窗格。 在 **名稱**方塊中，輸入您的專案的名稱，例如*MyCons*。
+1. 在 **專案類型**窗格中，按一下**已安裝** > **Visual C++**   >  **Windows Desktop**資料夾，然後再按一下**Windows Desktop 精靈**中的圖示**範本**窗格。 在 **名稱**方塊中，輸入您的專案的名稱，例如*MyCons*。
 
-1. 按一下 [確定 **Deploying Office Solutions**]。
+1. 按一下 [確定] 。
 
    **Windows 桌面專案** 精靈隨即出現。
 
@@ -41,7 +41,7 @@ ms.locfileid: "59025126"
 
    [新增項目] 對話方塊隨即出現。
 
-1. 在 **分類**窗格中，按一下**已安裝** > **Visual c + +** > **ATL**，按一下**ATL OLEDB 消費者**中的圖示**範本**窗格中，然後再按一下**新增**。
+1. 在 **分類**窗格中，按一下**已安裝** > **Visual C++**   >  **ATL**，按一下**ATL OLEDB 消費者**中的圖示**範本**窗格中，然後再按一下**新增**。
 
    **ATL OLEDB 消費者精靈**隨即出現。
 
@@ -70,7 +70,7 @@ ms.locfileid: "59025126"
 
 1. 您可以使用樹狀結構控制項中，選取資料表、 檢視表或預存程序。 此範例中，選取`Products`資料表中`Northwind`資料庫。
 
-1. 按一下 [確定 **Deploying Office Solutions**]。 這時會回到**ATL OLE DB 消費者精靈**。
+1. 按一下 [確定] 。 這時會回到**ATL OLE DB 消費者精靈**。
 
 1. 在精靈完成的名稱`Class`並 **.h 檔案**根據名稱的資料表、 檢視或預存程序，您已選取。 如果您想要您可以編輯這些名稱。
 

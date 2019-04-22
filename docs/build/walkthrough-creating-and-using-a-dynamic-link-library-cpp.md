@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：建立並使用您自己動態連結程式庫 （c + +）
+title: 逐步解說：建立並使用您自己的動態連結程式庫 (C++)
 ms.custom: conceptual
 ms.date: 09/24/2018
 helpviewer_keywords:
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
 ms.openlocfilehash: 248b423659d026774d4945ee6330a39dc4c6e16e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770144"
 ---
-# <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>逐步解說：建立並使用您自己動態連結程式庫 （c + +）
+# <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>逐步解說：建立並使用您自己的動態連結程式庫 (C++)
 
-此逐步解說示範如何使用 Visual Studio IDE 來建立以 c + +，撰寫您自己的動態連結程式庫 (DLL)，並使用它從另一個 c + + 應用程式。 Dll 是其中一個最有用的一種 Windows 元件。 您可以使用它們來共用程式碼和資源，把您的應用程式的大小，並讓服務，並擴充您的應用程式變得更加容易。 在本逐步解說中，您會建立 DLL 實作一些數學函式，，然後再建立使用從 DLL 函式的主控台應用程式。 過程中，您會取得一些程式設計技術和 Windows Dll 中使用慣例的簡介。
+此逐步解說示範如何使用 Visual Studio IDE 來建立以撰寫您自己的動態連結程式庫 (DLL) C++，並將它從另一個C++應用程式。 Dll 是其中一個最有用的一種 Windows 元件。 您可以使用它們來共用程式碼和資源，把您的應用程式的大小，並讓服務，並擴充您的應用程式變得更加容易。 在本逐步解說中，您會建立 DLL 實作一些數學函式，，然後再建立使用從 DLL 函式的主控台應用程式。 過程中，您會取得一些程式設計技術和 Windows Dll 中使用慣例的簡介。
 
 這份逐步解說涵蓋下列工作：
 
@@ -29,11 +29,11 @@ ms.locfileid: "58770144"
 
 - 執行已完成的應用程式。
 
-像靜態連結程式庫 DLL_匯出_變數、 函數以及依名稱和您的應用程式的資源_匯入_這些名稱，以使用這些變數、 函式和資源。 與靜態連結程式庫中，Windows 會在載入時或在執行階段，而不是在連結階段來連接它們在 DLL 中匯出連接應用程式中的匯入。 Windows 需要不屬於標準的 c + + 編譯模型，讓這些連線的額外資訊。 MSVC 編譯器實作 c + + 提供此額外資訊的一些 Microsoft 專有擴充功能。 我們，我們會說明這些擴充功能。
+像靜態連結程式庫 DLL_匯出_變數、 函數以及依名稱和您的應用程式的資源_匯入_這些名稱，以使用這些變數、 函式和資源。 與靜態連結程式庫中，Windows 會在載入時或在執行階段，而不是在連結階段來連接它們在 DLL 中匯出連接應用程式中的匯入。 Windows 需要額外的資訊不屬於標準C++編譯的模型，來建立這些連接。 MSVC 編譯器實作一些 Microsoft 專有擴充功能C++提供此額外的資訊。 我們，我們會說明這些擴充功能。
 
 此逐步解說會建立兩個 Visual Studio 方案;建置 DLL，以及建置用戶端應用程式。 DLL 會使用 C 呼叫慣例，因此它可以從 平台及呼叫和連結慣例相符時，使用其他語言，建置的應用程式呼叫。 用戶端應用程式會使用_隱含連結_、 Windows 用來連結於載入時 DLL 應用程式。 此連結可讓應用程式以靜態方式連結的文件庫中呼叫 DLL 提供的函式，就像函式。
 
-本逐步解說並不涵蓋一些常見的情況。 它不會顯示所使用的 c + + Dll 的其他程式設計語言。 它不會顯示如何建立僅含資源的 DLL。 它也不會顯示在執行階段，而不是在載入時，載入 Dll 的明確連結的使用。 接下來請放心，您可以使用 Visual c + + 來執行這些工作。 如需連結 Dll 的詳細資訊，請參閱[Visual c + + Dll](dlls-in-visual-cpp.md)。 如需有關設定連結的隱含和明確連結的詳細資訊，請參閱 <<c0> [ 判斷哪一個連結方法來使用](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)。 如需建立用於程式設計語言使用 C 語言連結慣例的 c + + Dll 的資訊，請參閱[匯出 c + + 函式以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)。 如需如何建立 Dll 以與.NET 程式設計語言的使用資訊，請參閱[從 Visual Basic 應用程式呼叫 DLL 函式](calling-dll-functions-from-visual-basic-applications.md)。
+本逐步解說並不涵蓋一些常見的情況。 它不會顯示使用C++的其他程式設計語言的 Dll。 它不會顯示如何建立僅含資源的 DLL。 它也不會顯示在執行階段，而不是在載入時，載入 Dll 的明確連結的使用。 儘管放心，您可以使用視覺效果C++若要執行這些工作。 如需連結 Dll 的詳細資訊，請參閱[視覺效果中的 Dll C++ ](dlls-in-visual-cpp.md)。 如需有關設定連結的隱含和明確連結的詳細資訊，請參閱 <<c0> [ 判斷哪一個連結方法來使用](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)。 如需建立C++搭配程式設計語言使用 C 語言連結慣例，請參閱 Dll[匯出C++函式以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)。 如需如何建立 Dll 以與.NET 程式設計語言的使用資訊，請參閱[從 Visual Basic 應用程式呼叫 DLL 函式](calling-dll-functions-from-visual-basic-applications.md)。
 
 本逐步解說使用 Visual Studio 2017 中，但是程式碼和大部分的指示也適用於舊版。 若要建置新專案的步驟變更啟動 Visual Studio 2017 15.3 版中。 本逐步解說描述如何建立較新和舊版本的專案。 尋找符合您的 Visual Studio 版本的步驟。
 
@@ -41,13 +41,13 @@ ms.locfileid: "58770144"
 
 - 執行 Microsoft Windows 7 或更新版本的電腦。 我們建議的最佳開發體驗的 Windows 10。
 
-- Visual Studio 2017 的複本。 如需如何下載並安裝 Visual Studio 的詳細資訊，請參閱[安裝 Visual Studio 2017](/visualstudio/install/install-visual-studio)。 當您執行安裝程式時，請確定**使用 c + + 的桌面開發**會檢查工作負載。 別擔心，如果您在安裝 Visual Studio 時，未安裝此工作負載。 您可以再次執行安裝程式，並立即安裝。
+- Visual Studio 2017 的複本。 如需如何下載並安裝 Visual Studio 的詳細資訊，請參閱[安裝 Visual Studio 2017](/visualstudio/install/install-visual-studio)。 當您執行安裝程式時，請確定**使用的桌面開發C++** 會檢查工作負載。 別擔心，如果您在安裝 Visual Studio 時，未安裝此工作負載。 您可以再次執行安裝程式，並立即安裝。
 
-   ![使用 c + + 的桌面開發](media/desktop-development-with-cpp.png "使用 c + + 的桌面開發")
+   ![使用的桌面開發C++ ](media/desktop-development-with-cpp.png "使用的桌面開發C++")
 
 - 使用 Visual Studio IDE 的基本概念了解。 如果您已使用之前的 Windows 傳統型應用程式，您可能可以保留。 如需簡介，請參閱[Visual Studio IDE 功能導覽](/visualstudio/ide/visual-studio-ide)。
 
-- C + + 語言，若要跟著做的基本概念的了解。 別擔心，我們不會有太過複雜。
+- 足夠的基本概念了解C++若要跟著做的語言。 別擔心，我們不會有太過複雜。
 
 ## <a name="create-the-dll-project"></a>建立 DLL 專案
 
@@ -57,7 +57,7 @@ ms.locfileid: "58770144"
 
 1. 在功能表列上，選擇 [檔案] > [新增] > [專案]，以開啟 [新增專案] 對話方塊。
 
-1. 在左窗格中**新的專案**對話方塊方塊中，展開**已安裝**並**Visual c + +** 如有必要，，然後選擇  **Windows 桌面**. 在中央窗格中，選取**Windows Desktop 精靈**。 請輸入`MathLibrary`中**名稱**方塊，以指定專案的名稱。
+1. 在左窗格中**新的專案**對話方塊方塊中，展開**已安裝**和**Visual C++** 如有必要，，然後選擇  **Windows Desktop**. 在中央窗格中，選取**Windows Desktop 精靈**。 請輸入`MathLibrary`中**名稱**方塊，以指定專案的名稱。
 
    ![將專案命名為 MathLibrary](media/mathlibrary-new-project-name-153.png "MathLibrary 專案的名稱")
 
@@ -76,7 +76,7 @@ ms.locfileid: "58770144"
 >
 >1. 在功能表列上，依序選擇 [專案] > [屬性]。
 >
->1. 在左窗格中**屬性頁**對話方塊中，選取**前置處理器**之下**組態屬性** > **C/c + +**. 請檢查的內容**前置處理器定義**屬性。<br/><br/>![檢查前置處理器定義屬性](media/mathlibrary-153bug-preprocessor-definitions-check.png "檢查前置處理器定義屬性")<br/><br/>如果您看到**MATHLIBRARY&#95;匯出**中**前置處理器定義**清單中，您就不需要變更任何項目。 如果您看到**MathLibrary&#95;匯出**相反的然後繼續進行下列步驟。
+>1. 在左窗格中**屬性頁**對話方塊中，選取**前置處理器**之下**組態屬性** > **C /C++**. 請檢查的內容**前置處理器定義**屬性。<br/><br/>![檢查前置處理器定義屬性](media/mathlibrary-153bug-preprocessor-definitions-check.png "檢查前置處理器定義屬性")<br/><br/>如果您看到**MATHLIBRARY&#95;匯出**中**前置處理器定義**清單中，您就不需要變更任何項目。 如果您看到**MathLibrary&#95;匯出**相反的然後繼續進行下列步驟。
 >
 >1. 在頂端**屬性頁** 對話方塊中，變更**Configuration**下拉式清單可**所有組態**。
 >
@@ -90,7 +90,7 @@ ms.locfileid: "58770144"
 
 1. 在功能表列上，選擇 [檔案] > [新增] > [專案]。
 
-1. 在左窗格中**新的專案**對話方塊方塊中，展開**已安裝** > **範本**，然後選取**Visual c + +**，和然後在中央窗格中，選取**Win32 主控台應用程式**。 請輸入`MathLibrary`中**名稱**編輯方塊，以指定專案的名稱。
+1. 在左窗格中**新的專案**對話方塊方塊中，展開**已安裝** > **範本**，然後選取**Visual C++** ，然後在中央窗格中，選取**Win32 主控台應用程式**。 請輸入`MathLibrary`中**名稱**編輯方塊，以指定專案的名稱。
 
    ![將專案命名為 MathLibrary](media/mathlibrary-project-name.png "MathLibrary 專案的名稱")
 
@@ -114,7 +114,7 @@ ms.locfileid: "58770144"
 
 1. 若要建立您的函式的標頭檔的功能表列上，選擇**專案** > **加入新項目**。
 
-1. 在 **加入新項目**對話方塊的左窗格中，選取**Visual c + +**。 在中間窗格中，選取 [標頭檔 (.h)] 。 指定`MathLibrary.h`做為標頭檔的名稱。
+1. 在 **加入新項目**對話方塊的左窗格中，選取**視覺化C++** 。 在中間窗格中，選取 [標頭檔 (.h)] 。 指定`MathLibrary.h`做為標頭檔的名稱。
 
    ![在加入新項目 對話方塊中新增標頭](media/mathlibrary-add-new-item-header-file.png "新增標頭檔中加入新項目對話方塊")
 
@@ -246,7 +246,7 @@ ms.locfileid: "58770144"
 ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
 ```
 
-恭喜，您已使用 Visual c + + DLL ！ 接下來，您將建立會使用由 DLL 匯出的函式用戶端應用程式。
+恭喜，您已建立的 DLL 使用視覺效果C++！ 接下來，您將建立會使用由 DLL 匯出的函式用戶端應用程式。
 
 ## <a name="create-a-client-app-that-uses-the-dll"></a>建立會使用 DLL 的用戶端應用程式
 
@@ -256,9 +256,9 @@ ms.locfileid: "58770144"
 
 ### <a name="to-create-a-client-app-in-visual-studio-2017-version-153-or-later"></a>若要建立用戶端應用程式 Visual Studio 2017 版本 15.3 或更新版本
 
-1. 若要建立會使用您在功能表列建立，DLL 的 c + + 應用程式選擇**檔案** > **新增** > **專案**。
+1. 若要建立C++會使用您在功能表列建立，DLL 的應用程式選擇**檔案** > **新增** > **專案**。
 
-1. 在左窗格中**新的專案**對話方塊中，選取**Windows 桌面**之下**已安裝** > **Visual c + +**。 在中央窗格中，選取**Windows Desktop 精靈**。 指定專案的名稱`MathClient`，請在**名稱**編輯方塊。
+1. 在左窗格中**新的專案**對話方塊中，選取**Windows 桌面**之下**已安裝** > **Visual C++** 。 在中央窗格中，選取**Windows Desktop 精靈**。 指定專案的名稱`MathClient`，請在**名稱**編輯方塊。
 
    ![將專案命名為用戶端](media/mathclient-new-project-name-153.png "用戶端專案的名稱")
 
@@ -266,9 +266,9 @@ ms.locfileid: "58770144"
 
 ### <a name="to-create-a-client-app-in-older-versions-of-visual-studio-2017"></a>在舊版 Visual Studio 2017 中建立用戶端應用程式
 
-1. 若要建立會使用您在功能表列建立，DLL 的 c + + 應用程式選擇**檔案** > **新增** > **專案**。
+1. 若要建立C++會使用您在功能表列建立，DLL 的應用程式選擇**檔案** > **新增** > **專案**。
 
-1. 在左窗格中**新的專案**對話方塊中，選取**Win32**之下**已安裝** > **範本** > **Visual c + +**。 在中央窗格中，選取 [Win32 主控台應用程式] 。 指定專案的名稱`MathClient`，請在**名稱**編輯方塊。
+1. 在左窗格中**新的專案**對話方塊中，選取**Win32**之下**已安裝** > **範本** > **Visual C++** 。 在中央窗格中，選取 [Win32 主控台應用程式] 。 指定專案的名稱`MathClient`，請在**名稱**編輯方塊。
 
    ![將專案命名為用戶端](media/mathclient-project-name.png "用戶端專案的名稱")
 
@@ -288,7 +288,7 @@ ms.locfileid: "58770144"
 
 1. 在 **組態**下拉式清單方塊中，選取**所有組態**如果已選取。
 
-1. 在左窗格中，選取**一般**下方**組態屬性** > **C/c + +**。
+1. 在左窗格中，選取**一般**下方**組態屬性** > **C /C++**。
 
 1. 在 [屬性] 窗格中，選取下拉式清單控制項旁**其他 Include 目錄**編輯方塊中，然後選擇**編輯**。
 

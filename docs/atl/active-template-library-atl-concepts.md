@@ -5,17 +5,17 @@ helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
 ms.openlocfilehash: 7eb7eb1c369f825fbb689cd476d43be538ae8d9a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774616"
 ---
 # <a name="active-template-library-atl-concepts"></a>Active Template Library (ATL) 概念
 
-Active Template Library (ATL) 是一份樣板架構 c + + 類別，可讓您建立小型、 快速的元件物件模型 (COM) 物件。 它有索引鍵的 COM 功能，包括內建實作、 雙重介面、 標準的 COM 列舉程式介面、 連接點、 tear-off 介面和 ActiveX 控制項的特殊支援。
+Active Template Library (ATL) 是一份範本為基礎C++類別可讓您建立小型、 快速的元件物件模型 (COM) 物件。 它有索引鍵的 COM 功能，包括內建實作、 雙重介面、 標準的 COM 列舉程式介面、 連接點、 tear-off 介面和 ActiveX 控制項的特殊支援。
 
-如果您這麼做了很多 ATL 程式，您會想要深入了解屬性，旨在簡化 COM 程式開發的 Visual c + +.NET 中的新功能。 如需詳細資訊，請參閱 <<c0> [ 屬性化程式設計](../windows/attributed-programming-concepts.md)。
+如果您這麼做了很多 ATL 程式，您會想要進一步了解屬性，在視覺效果中的新功能C++.NET，旨在簡化 COM 程式設計。 如需詳細資訊，請參閱 <<c0> [ 屬性化程式設計](../windows/attributed-programming-concepts.md)。
 
 ## <a name="in-this-section"></a>本節內容
 

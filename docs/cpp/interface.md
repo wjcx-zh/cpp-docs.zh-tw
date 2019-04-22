@@ -7,10 +7,10 @@ helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
 ms.openlocfilehash: 1ec3a1d2cddbf8dbbb248a7366d5d56dd95ad074
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768311"
 ---
 # <a name="interface"></a>__interface
@@ -39,7 +39,7 @@ modifier __interface interface-name {interface-definition};
 
 ## <a name="remarks"></a>備註
 
-C + +[類別](../cpp/class-cpp.md)或是[結構](../cpp/struct-cpp.md)可能會實作這些規則，但 **__interface**強制執行這些。
+C++ [類別](../cpp/class-cpp.md)或[結構](../cpp/struct-cpp.md)可能會實作這些規則，但 **__interface**強制執行它們。
 
 例如，以下是介面定義範例：
 

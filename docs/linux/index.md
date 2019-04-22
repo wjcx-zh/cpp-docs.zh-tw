@@ -2,8 +2,13 @@
 layout: LandingPage
 title: C++ 文件中的 Linux 開發
 description: 建立在 Linux 上執行的應用程式及對其執行偵錯。
+ms.openlocfilehash: 516b57ca976ddd89081581978c6ac5f86c64876e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58779764"
 ---
-
 # <a name="linux-development-with-c-documentation"></a>C++ 文件中的 Linux 開發
 
 使用 Visual Studio 2017 來建立在 Linux 執行的應用程式，並對其偵錯。

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：封送處理回呼和委派使用 c + + Interop
+title: HOW TO：封送處理回呼和委派使用C++Interop
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
 ms.openlocfilehash: f8088bf90162fd2177599c252b0eee6332d61289
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58766933"
 ---
-# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>HOW TO：封送處理回呼和委派使用 c + + Interop
+# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>HOW TO：封送處理回呼和委派使用C++Interop
 
-本主題示範回呼的封送處理，並使用 Visual c + + 中的 managed 和 unmanaged 程式碼之間會委派 （回呼的受管理的版本）。
+本主題示範如何封送處理回呼和 managed 和 unmanaged 程式碼使用視覺效果之間的委派 （回呼的受管理的版本） C++。
 
 下列程式碼範例使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) #pragma 指示詞來實作 managed 和 unmanaged 函式在相同的檔案，但函式也可定義在個別的檔案。 包含 unmanaged 的函式的檔案不需要進行編譯[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。
 
@@ -27,7 +27,7 @@ ms.locfileid: "58766933"
 
 下列範例示範如何設定 unmanaged 的 API，以觸發程序的受管理的委派。 建立受管理的委派和 interop 方法的其中一個<xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>，用來擷取基礎的進入點的委派。 此位址再傳遞至 unmanaged 函式，不需要知道的事實，它會實作為 managed 函式會呼叫它。
 
-請注意，是可行的但並非必要，釘選使用的委派[pin_ptr (C + + /cli CLI)](../extensions/pin-ptr-cpp-cli.md)可防止它們被重新位於或由記憶體回收行程處置。 需要防止不當記憶體回收，但是 pin 會提供比所需的因為它可防止集合也會防止重新配置更多的保護。
+請注意，是可行的但並非必要，釘選使用的委派[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)可防止它們被重新位於或由記憶體回收行程處置。 需要防止不當記憶體回收，但是 pin 會提供比所需的因為它可防止集合也會防止重新配置更多的保護。
 
 如果進行記憶體回收重新位於委派，則它不會影響受管理的 underlaying 回呼中，因此<xref:System.Runtime.InteropServices.GCHandle.Alloc%2A>用來將參考加入委派，讓重新配置的委派，但防止處置。 使用 GCHandle，而不 pin_ptr，可降低 managed 堆積的片段可能性。
 

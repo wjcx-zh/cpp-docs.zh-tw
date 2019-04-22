@@ -5,15 +5,15 @@ helpviewer_keywords:
 - event handling [C++], Visual C++
 ms.assetid: e4b9219a-15d8-42fb-83c8-6d2e4e087c8d
 ms.openlocfilehash: 93bfcc93c680618ea3a51eabd145548a4f47563a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772328"
 ---
 # <a name="event-handling-in-native-c"></a>原生 C++ 中的事件處理
 
-在原生 c + + 事件處理中，您將設定使用事件來源和事件接收器[event_source](../windows/attributes/event-source.md)並[event_receiver](../windows/attributes/event-receiver.md)分別屬性，指定`type` = `native`. 這些屬性可讓套用它們的類別引發事件，以及在原生的非 COM 內容中處理事件。
+以原生C++事件處理中，您設定使用事件來源和事件接收器[event_source](../windows/attributes/event-source.md)並[event_receiver](../windows/attributes/event-receiver.md)分別屬性，指定`type` =`native`. 這些屬性可讓套用它們的類別引發事件，以及在原生的非 COM 內容中處理事件。
 
 ## <a name="declaring-events"></a>宣告事件
 

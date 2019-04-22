@@ -10,10 +10,10 @@ helpviewer_keywords:
 - disable two-phase name lookup
 - /Zc:twoPhase
 ms.openlocfilehash: 5f990181fd1e606cf9d7dd33242752bed33aa456
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898748"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc: twophase-（停用兩階段名稱查閱）
@@ -124,7 +124,7 @@ NS::func(NS::S)
 
 ### <a name="update-your-code-for-two-phase-conformance"></a>更新您的程式碼的兩階段交易一致性
 
-舊版編譯器不需要關鍵字`template`和`typename`everywhere c + + 標準需要它們。 這些關鍵字在某些位置才能釐清如何編譯器時，應該查閱的第一個階段期間剖析相依名稱。 例如: 
+舊版編譯器不需要關鍵字`template`並`typename`everywhereC++標準需要它們。 這些關鍵字在某些位置才能釐清如何編譯器時，應該查閱的第一個階段期間剖析相依名稱。 例如：
 
 `T::Foo<a || b>(c);`
 
@@ -158,13 +158,13 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 
 底下 **/zc: twophase-** ，而在舊版的編譯器中，編譯器只需要`template`第 2 行上的關鍵字。 根據預設，和合規性模式中，編譯器現在也需要`template`關鍵字的行 4 表示`T::X<T>`是範本。 尋找遺漏此關鍵字的程式碼，並提供它，讓您符合標準的程式碼。
 
-如需一致性問題的詳細資訊，請參閱[在 Visual Studio 中的 c + + 一致性改善](../../overview/cpp-conformance-improvements.md)並[非標準行為](../../cpp/nonstandard-behavior.md)。
+如需一致性問題的詳細資訊，請參閱[ C++ Visual Studio 中的一致性改善](../../overview/cpp-conformance-improvements.md)並[非標準行為](../../cpp/nonstandard-behavior.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 選取 **組態屬性** > **C/c + +** > **命令列**屬性頁。
+1. 選取 **組態屬性** > **C /C++** > **命令列**屬性頁。
 
 1. 修改**其他選項**屬性，以包括 **/zc: twophase-** ，然後選擇**確定**。
 

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
 ms.openlocfilehash: 6b9e30a18ab1d2b8463ccccae0b265bc20904020
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775968"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>HOW TO：System:: string 中存取字元
@@ -22,7 +22,7 @@ ms.locfileid: "58775968"
 
 `PtrToStringChars` 會傳回<xref:System.Char>，這是內部指標 (也稱為`byref`)。 因此，所以受限於記憶體回收。 您不需要釘選這個指標，除非您要將它傳遞至原生函式。
 
-請考慮下列程式碼：  釘選不需要因為`ppchar`內部的指標，而且如果記憶體回收行程移動它所指向的字串，它也會更新`ppchar`。 不含[pin_ptr (C + + /cli CLI)](../extensions/pin-ptr-cpp-cli.md)、 程式碼能夠運作，以及不具有可能造成的效能衝擊釘選。
+請考慮下列程式碼：  釘選不需要因為`ppchar`內部的指標，而且如果記憶體回收行程移動它所指向的字串，它也會更新`ppchar`。 不含[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)程式碼能夠運作，不可能的效能衝擊造成釘選。
 
 如果您傳遞`ppchar`原生函式，則必須經過 pin 指標，記憶體回收行程將無法更新任何 unmanaged 的堆疊框架上的指標。
 
@@ -77,7 +77,7 @@ int main() {
 
 ## <a name="example"></a>範例
 
-內部指標具有原生 c + + 指標的所有屬性。 例如，使用連結的資料結構 並執行插入和刪除使用只能有一個指標：
+內部指標具有原生的所有屬性C++指標。 例如，使用連結的資料結構 並執行插入和刪除使用只能有一個指標：
 
 ```
 // PtrToStringChars_3.cpp

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
 ms.openlocfilehash: ae745cfb96f4efe1ede7e3fc762842f9e4d63323
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772734"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>在 /CLR 之下例外狀況處理行為的差異
@@ -18,7 +18,7 @@ ms.locfileid: "58772734"
 
 ##  <a name="vcconjumpingoutofafinallyblock"></a> 跳出 Finally 區塊
 
-原生 C/c + + 程式碼，跳出 __**最後**縱使會產生一則警告允許使用結構化例外狀況處理 (SEH) 的區塊。  底下[/clr](../build/reference/clr-common-language-runtime-compilation.md)，跳出**最後**區塊會產生錯誤：
+在原生 C /C++程式碼，跳出 __**最後**縱使會產生一則警告允許使用結構化例外狀況處理 (SEH) 的區塊。  底下[/clr](../build/reference/clr-common-language-runtime-compilation.md)，跳出**最後**區塊會產生錯誤：
 
 ```cpp
 // clr_exception_handling_4.cpp

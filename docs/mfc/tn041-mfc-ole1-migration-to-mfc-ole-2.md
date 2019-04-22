@@ -14,10 +14,10 @@ helpviewer_keywords:
 - TN041
 ms.assetid: 67f55552-4b04-4ddf-af0b-4d9eaf5da957
 ms.openlocfilehash: b398a1adbf2f47343eed076f32ade5bb2564cd52
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767973"
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041:MFC/OLE1 移轉到 MFC/OLE 2
@@ -60,7 +60,7 @@ OLE 2 類別在 MFC 2.5 （和更新版本） 的設計目標之一是要保留�
 與上述[OCLIENT](../overview/visual-cpp-samples.md) MFC 2.0 中所包含而且實作與 MFC/OLE1 OLE。 如下所述的步驟，供此應用程式一開始已轉換成使用 MFC/OLE 2 類別。 為了更清楚說明 MFC/OLE 類別完成的初始連接埠後，已新增許多功能。 這些功能將不說明如需有關這些進階功能本身的範例，請參閱。
 
 > [!NOTE]
-> 編譯器錯誤和逐步程序是以 Visual c + + 2.0 建立的。 特定的錯誤訊息和位置可能已變更，Visual c + + 4.0，但概念的資訊仍然有效。
+> 編譯器錯誤和逐步程序已建立具有視覺效果C++2.0。 特定的錯誤訊息和位置，可能具有視覺效果中已變更C++4.0 中，但提供的概念性資訊仍然有效。
 
 ## <a name="getting-it-up-and-running"></a>快速安裝和執行
 
@@ -291,7 +291,7 @@ ON_COMMAND(ID_OLE_EDIT_CONVERT, OnEditConvert)
 
 OLE 的最有趣的功能之一是就地啟用 （或 「 視覺化編輯 」）。 這項功能可讓伺服器應用程式，以便透過部分容器的使用者介面來為使用者提供更順暢的編輯介面。 若要實作 OCLIENT 就地啟用，一些特殊的資源需要新增，以及一些額外的程式碼。 這些資源和程式碼通常由 AppWizard 所提供，事實上，大部分的程式碼取自直接透過 「 容器 」 支援的全新 AppWizard 應用程式。
 
-首先，就必須新增功能表資源，也就是就地啟用作用中的項目時使用。 您可以在複製 IDR_OCLITYPE 資源，並移除檔案和視窗快顯視窗以外的所有 Visual c + + 中建立此額外的功能表資源。 表示群組的分隔的檔案和視窗快顯之間插入兩個分隔線 (看起來應該像：檔案&#124;&#124;視窗中)。 如需有關這些分隔符號所代表的意義，以及如何合併伺服器和容器的功能表看到[功能表和資源：功能表合併](../mfc/menus-and-resources-menu-merging.md)。
+首先，就必須新增功能表資源，也就是就地啟用作用中的項目時使用。 您可以在視覺效果中的這項額外的功能表資源C++複製 IDR_OCLITYPE 資源，並移除以外的所有檔案和視窗快顯視窗。 表示群組的分隔的檔案和視窗快顯之間插入兩個分隔線 (看起來應該像：檔案&#124;&#124;視窗中)。 如需有關這些分隔符號所代表的意義，以及如何合併伺服器和容器的功能表看到[功能表和資源：功能表合併](../mfc/menus-and-resources-menu-merging.md)。
 
 建立這些功能表之後，您需要讓架構知道它們。 這是藉由呼叫`CDocTemplate::SetContainerInfo`才能將它加入文件範本清單中您的設定加入 InitInstance 中的文件範本。 新的程式碼，以註冊文件範本看起來像這樣：
 
@@ -307,7 +307,7 @@ pTemplate->SetContainerInfo(IDR_OLECLITYPE_INPLACE);
 AddDocTemplate(pTemplate);
 ```
 
-IDR_OLECLITYPE_INPLACE 資源是在 Visual c + + 中建立的特殊就地資源。
+IDR_OLECLITYPE_INPLACE 資源是建立視覺效果中的特殊就地資源C++。
 
 若要啟用在就地啟用，有幾個步驟，需要在兩者中變更`CView`(CMainView) 衍生的類別，以及`COleClientItem`衍生類別 (CRectItem)。 所有這些覆寫由 AppWizard 提供，其中大部分的實作都是直接來自預設 AppWizard 應用程式。
 
@@ -353,7 +353,7 @@ BOOL CRectItem::OnChangeItemPosition(const CRect& rectPos)
 
 到目前為止，沒有足夠的程式碼，以允許的項目，即可就地啟用，並處理調整大小和移動項目處於作用中狀態，但沒有程式碼可讓使用者編輯的工作階段的結束。 雖然某些伺服器將會提供這項功能自行處理 esc 鍵，它被建議的容器會提供兩種方式可停用項目：（1） 所按一下的項目之外和 （2） 藉由按下 ESC 鍵。
 
-逸出索引鍵，新增將 VK_ESCAPE 鍵對應至命令的 Visual c + + 加速器，ID_CANCEL_EDIT 會新增至資源。 此命令的處理常式如下：
+逸出索引鍵，加入 視覺效果加速器C++命令對應 VK_ESCAPE 鍵，ID_CANCEL_EDIT 會新增至資源。 此命令的處理常式如下：
 
 ```cpp
 // The following command handler provides the standard
@@ -425,7 +425,7 @@ void CMainView::OnSize(UINT nType, int cx, int cy)
 [HIERSVR](../overview/visual-cpp-samples.md)也包含在 MFC 2.0 和實作使用 MFC/OLE1 OLE。 本附註簡要說明的步驟，供此應用程式一開始已轉換成使用 MFC/OLE 2 類別。 為了更清楚說明 MFC/OLE 2 類別完成的初始連接埠後，已新增許多功能。 這些功能將不說明如需有關這些進階功能本身的範例，請參閱。
 
 > [!NOTE]
-> 編譯器錯誤和逐步程序是以 Visual c + + 2.0 建立的。 特定的錯誤訊息和位置可能已變更，Visual c + + 4.0，但概念的資訊仍然有效。
+> 編譯器錯誤和逐步程序已建立具有視覺效果C++2.0。 特定的錯誤訊息和位置，可能具有視覺效果中已變更C++4.0 中，但提供的概念性資訊仍然有效。
 
 ## <a name="getting-it-up-and-running"></a>快速安裝和執行
 
@@ -527,7 +527,7 @@ BOOL COLEServerApp::InitInstance()
 
 您會發現，上述程式碼指的是新的資源 ID、 IDR_HIERSVRTYPE_SRVR_EMB。 這是編輯內嵌在另一個容器中的文件時要使用的功能表資源。 在 MFC/OLE1 編輯內嵌項目特定的功能表項目已修改即時。 編輯內嵌項目，而不是編輯檔案為基礎的文件時，使用完全不同的功能表結構讓您更容易地提供這兩種不同模式的不同的使用者介面。 如稍後所見，編輯內嵌的物件就地時，就會會使用完全不同的功能表資源。
 
-若要建立此資源，載入 Visual c + + 中的資源指令碼，並複製現有的 IDR_HIERSVRTYPE 功能表資源。 將新的資源重新命名的 IDR_HIERSVRTYPE_SRVR_EMB （這是 AppWizard 使用相同的命名慣例）。 接下來將變更 [儲存檔案] [更新檔案];提供識別碼 ID_FILE_UPDATE 命令。 也變更 」 檔案另存新檔 」 到 「 複本存新檔 」;提供識別碼 ID_FILE_SAVE_COPY_AS 命令。 架構會提供這兩種命令的實作。
+若要建立此資源，請載入資源指令碼視覺效果C++並複製現有的 IDR_HIERSVRTYPE 功能表資源。 將新的資源重新命名的 IDR_HIERSVRTYPE_SRVR_EMB （這是 AppWizard 使用相同的命名慣例）。 接下來將變更 [儲存檔案] [更新檔案];提供識別碼 ID_FILE_UPDATE 命令。 也變更 」 檔案另存新檔 」 到 「 複本存新檔 」;提供識別碼 ID_FILE_SAVE_COPY_AS 命令。 架構會提供這兩種命令的實作。
 
 ```Output
 \hiersvr\svritem.h(60) : error C2433: 'OLESTATUS' : 'virtual' not permitted on data declarations
@@ -644,9 +644,9 @@ void CServerView::OnEditCopy()
 
 - 您需要告訴這些特殊的資源和類別的架構。
 
-功能表資源很容易建立。 執行 Visual c + + 中，將 IDR_HIERSVRTYPE 功能表資源複製到名為 IDR_HIERSVRTYPE_SRVR_IP 的功能表資源。 修改 [] 功能表中，以便只編輯和說明功能表快顯視窗會保留。 編輯 和 說明功能表之間的功能表中加入兩個分隔符號 (看起來應該像：編輯&#124;&#124;協助)。 如需有關這些分隔符號所代表的意義，以及如何合併伺服器和容器的功能表的詳細資訊，請參閱[功能表和資源：功能表合併](../mfc/menus-and-resources-menu-merging.md)。
+功能表資源很容易建立。 執行視覺效果C++，將 IDR_HIERSVRTYPE 功能表資源複製到名為 IDR_HIERSVRTYPE_SRVR_IP 的功能表資源。 修改 [] 功能表中，以便只編輯和說明功能表快顯視窗會保留。 編輯 和 說明功能表之間的功能表中加入兩個分隔符號 (看起來應該像：編輯&#124;&#124;協助)。 如需有關這些分隔符號所代表的意義，以及如何合併伺服器和容器的功能表的詳細資訊，請參閱[功能表和資源：功能表合併](../mfc/menus-and-resources-menu-merging.md)。
 
-藉由勾選 [伺服器] 選項複製其中一個全新的 AppWizard 產生應用程式，可以輕鬆建立子集工具列的點陣圖。 此點陣圖可以再匯入到 Visual c + +。 請務必提供點陣圖 IDR_HIERSVRTYPE_SRVR_IP 識別碼。
+藉由勾選 [伺服器] 選項複製其中一個全新的 AppWizard 產生應用程式，可以輕鬆建立子集工具列的點陣圖。 此點陣圖可以再匯入到視覺效果C++。 請務必提供點陣圖 IDR_HIERSVRTYPE_SRVR_IP 識別碼。
 
 類別衍生自`COleIPFrameWnd`可以從 AppWizard 產生應用程式與伺服器的支援，以及複製。 複製這兩個檔案，IPFRAME。CPP 和 IPFRAME。H 並將其新增至專案。 請確定`LoadBitmap`呼叫是指 IDR_HIERSVRTYPE_SRVR_IP，在上一個步驟中建立的點陣圖。
 

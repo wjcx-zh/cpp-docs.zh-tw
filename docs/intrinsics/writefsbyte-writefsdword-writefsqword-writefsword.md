@@ -17,15 +17,15 @@ helpviewer_keywords:
 - writefsword intrinsic
 ms.assetid: 23ac6e8e-bc91-4e90-a4c6-da02993637ad
 ms.openlocfilehash: 6461ef730760298e3159e4ac70dbbdf7bd827092
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025768"
 ---
 # <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte、__writefsdword、__writefsqword、__writefsword
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 寫入記憶體相對於 FS 區段開頭的位移所指定的位置。
 
@@ -52,10 +52,10 @@ void __writefsqword(
 
 #### <a name="parameters"></a>參數
 
-*位移*<br/>
+*Offset*<br/>
 [in]從要寫入的 FS 開頭的位移。
 
-*資料*<br/>
+*Data*<br/>
 [in]要寫入的值。
 
 ## <a name="requirements"></a>需求
@@ -73,7 +73,7 @@ void __writefsqword(
 
 這些常式都僅有內建函式。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

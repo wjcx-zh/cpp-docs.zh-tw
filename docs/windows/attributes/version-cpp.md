@@ -1,5 +1,5 @@
 ---
-title: 版本 （c + + COM 屬性）
+title: 版本 (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.version
@@ -8,10 +8,10 @@ helpviewer_keywords:
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
 ms.openlocfilehash: fe1df9e12b9adbf9ce55978fd3479f7e740ddc96
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025748"
 ---
 # <a name="version-c"></a>version (C++)
@@ -26,12 +26,12 @@ ms.locfileid: "59025748"
 
 ### <a name="parameters"></a>參數
 
-*版本*<br/>
+*version*<br/>
 版本號碼`coclass`。 如果未指定，1.0 會置於.idl 檔案。
 
 ## <a name="remarks"></a>備註
 
-**版本**c + + 屬性具有相同的功能[版本](/windows/desktop/Midl/version)MIDL 屬性且會傳遞至產生的.idl 檔案。
+**版本**C++屬性具有相同的功能[版本](/windows/desktop/Midl/version)MIDL 屬性且會傳遞至產生的.idl 檔案。
 
 ## <a name="example"></a>範例
 

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - movntsd instruction
 ms.assetid: 2b4bea5e-e64e-45fa-9afc-88a2e4b82cfc
 ms.openlocfilehash: 3555b71e15d6f9c618a83f573d6da3cda9e7b705
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023512"
 ---
 # <a name="mmstreamsd"></a>_mm_stream_sd
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 將 64 位元的資料寫入記憶體位置而不到處快取。
 
@@ -34,7 +34,7 @@ void _mm_stream_sd(
 *目的地*<br/>
 [out]將在其中寫入來源資料的位置指標。
 
-*原始程式檔*<br/>
+*來源*<br/>
 [in]128 位元值，包含`double`以寫入下 64 位元的值...
 
 ## <a name="return-value"></a>傳回值
@@ -81,7 +81,7 @@ int main()
 d[0] = -1, d[1] = 1
 ```
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 進階 Micro 裝置，inc.copyright 2007著作權所有，並保留一切權利。 進階 Micro 裝置，inc.的權限重製
 

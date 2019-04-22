@@ -1,20 +1,20 @@
 ---
-title: HOW TO：定義和使用類別和結構 (C + + /cli CLI)
+title: HOW TO：定義和使用類別和結構 (C++/CLI)
 ms.date: 09/12/2018
 helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
 ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774915"
 ---
-# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>HOW TO：定義和使用類別和結構 (C + + /cli CLI)
+# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>HOW TO：定義和使用類別和結構 (C++/CLI)
 
-這篇文章示範如何定義和使用使用者定義的參考型別和實值型別，在 C + + /cli CLI。
+這篇文章示範如何定義和使用使用者定義的參考型別和實值型別，在C++/CLI。
 
 ##  <a name="BKMK_Contents"></a> 內容
 
@@ -127,7 +127,7 @@ int main() {
 
 `public` 表示的型別可以包含任何原始程式檔看到`#using`包含類型的組件指示詞。  `private` 指出類型不會看見包含的原始程式檔`#using`包含類型的組件指示詞。 不過，私用型別是在相同的組件內為可見的。 根據預設，類別的可見性會`private`。
 
-根據預設，Visual c + + 2005年之前，原生類型會有外部組件的公用存取範圍。 啟用[編譯器警告 （層級 1） C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)來協助您了解私用的原生型別會不正確地使用。 使用[make_public](../preprocessor/make-public.md) pragma 提供公用存取範圍，您無法修改原始程式碼檔案中的原生型別。
+在 視覺效果之前的預設C++2005 中，原生類型必須在組件外部的公用存取範圍。 啟用[編譯器警告 （層級 1） C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)來協助您了解私用的原生型別會不正確地使用。 使用[make_public](../preprocessor/make-public.md) pragma 提供公用存取範圍，您無法修改原始程式碼檔案中的原生型別。
 
 如需詳細資訊，請參閱 [#using 指示詞](../preprocessor/hash-using-directive-cpp.md)。
 
@@ -455,7 +455,7 @@ CLR 型別，例如類別或結構，可以有可以用來初始化靜態資料�
 
 定義靜態建構函式為私用成員函式，因為它旨在只能由 CLR 呼叫。
 
-如需靜態建構函式的詳細資訊，請參閱[How to:定義介面靜態建構函式 (C + + /cli CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) 。
+如需靜態建構函式的詳細資訊，請參閱[How to:定義介面靜態建構函式 (C++/CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) 。
 
 ```cpp
 // compile with: /clr
@@ -493,7 +493,7 @@ in static constructor
 
 ##  <a name="BKMK_Semantics_of_the_this_pointer"></a> 語意的 this 指標
 
-當您使用 Visual c + + 定義的型別，`this`在參考類型的指標為型別 「 控制代碼 」。 `this`在實值類型的指標為 「 內部指標 」 類型。
+當您使用 VisualC++定義類型，`this`在參考類型的指標為型別 「 控制代碼 」。 `this`在實值類型的指標為 「 內部指標 」 類型。
 
 這些不同的語意的`this`指標可能會導致非預期的行為，當呼叫時的預設索引子。 下一個範例顯示正確的方式來存取參考型別和實值型別中的預設索引子。
 
@@ -548,7 +548,7 @@ int main() {
 
 ##  <a name="BKMK_Hide_by_signature_functions"></a> 由-簽章隱藏型函式
 
-標準 c + + 中，基底類別中的函式會隱藏在衍生類別中，具有相同名稱的函式，即使衍生的類別函式沒有相同數目或類型的參數。 這指*依名稱隱藏*語意。 在參考類型，基底類別中的函式可以只會隱藏在衍生類別中的函式名稱和參數清單都相同。 這就所謂*簽章隱藏由*語意。
+在標準C++，即使衍生的類別函式沒有相同數目或類型的參數，將會隱藏在衍生類別中，具有相同名稱的函式的基底類別中的函式。 這指*依名稱隱藏*語意。 在參考類型，基底類別中的函式可以只會隱藏在衍生類別中的函式名稱和參數清單都相同。 這就所謂*簽章隱藏由*語意。
 
 類別之所以被視為簽章隱藏的類別，當其所有功能做為中繼資料中標示為`hidebysig`。 根據預設，會建立之下的所有類別 **/clr**有`hidebysig`函式。 當類別必須`hidebysig`函式，編譯器不會隱藏函式，依任何直接的基底類別中的名稱，但如果編譯器發現繼承鏈結中的依名稱隱藏類別時，它會繼續該依名稱隱藏行為。
 
@@ -588,7 +588,7 @@ int main() {
 Base::Test
 ```
 
-下一個範例顯示 Visual c + + 編譯器呼叫的函式，最具衍生性的類別中，即使轉換，才能符合一或多個參數 — 而且更符合函式呼叫的基底類別中呼叫函式。
+下一個範例顯示視覺效果C++編譯器呼叫的函式最多衍生類別中，即使轉換，才能符合一或多個參數 — 而且更符合函式呼叫的基底類別中呼叫函式。
 
 ```cpp
 // compile with: /clr
@@ -656,7 +656,7 @@ Derived::Test4
 
 ##  <a name="BKMK_Copy_constructors"></a> 複製建構函式
 
-C + + 標準所規定的複製建構函式稱為當移動物件時，使得物件會建立並終結在相同的位址。
+C++標準所規定的複製建構函式稱為當移動物件時，使得物件會建立並終結在相同的位址。
 
 不過，當 **/clr**是用來編譯並編譯成原生函式在原生類別的 MSIL 呼叫的函式，或多個 — 以傳值，且其中的原生類別的複製建構函式及/或解構函式，任何複本在呼叫建構函式和物件終結時，在不同於建立所在位址。 如果類別具有其本身，指標，或將程式碼追蹤物件的位址，這可能會造成問題。
 
@@ -721,7 +721,7 @@ S object 0 being destroyed, this=0018F378
 
 ##  <a name="BKMK_Destructors_and_finalizers"></a> 解構函式和完成項
 
-在參考類型的解構函式執行具決定性清除的資源。 完成項將清除 unmanaged 資源，和解構函式或非確定性地記憶體回收行程可以確定的方式呼叫。 標準 c + + 解構函式的相關資訊，請參閱[解構函式](../cpp/destructors-cpp.md)。
+在參考類型的解構函式執行具決定性清除的資源。 完成項將清除 unmanaged 資源，和解構函式或非確定性地記憶體回收行程可以確定的方式呼叫。 如需標準中的解構函式C++，請參閱[解構函式](../cpp/destructors-cpp.md)。
 
 ```cpp
 class classname {
@@ -730,13 +730,13 @@ class classname {
 };
 ```
 
-在 受管理的 Visual c + + 類別的解構函式的行為不同從 Managed Extensions for c + +。 如需有關這項變更的詳細資訊，請參閱 <<c0> [ 解構函式語意的變更](../dotnet/changes-in-destructor-semantics.md)。
+受管理的視覺效果中的解構函式的行為C++類別與 Managed Extensions for C++。 如需有關這項變更的詳細資訊，請參閱 <<c0> [ 解構函式語意的變更](../dotnet/changes-in-destructor-semantics.md)。
 
 CLR 記憶體回收行程刪除未使用的受管理的物件，並已不再需要時釋放其記憶體。 不過，類型可能會使用記憶體回收行程不知道何時来釋放的資源。 這些資源稱為未受管理的資源 （原生檔案控制代碼，例如）。 我們建議您釋放所有的 unmanaged 的資源，在完成項。 記憶體回收行程會被非確定性地釋放 managed 的資源，因為它並不安全，請參閱在 finalizer 中受管理的資源很可能因為記憶體回收行程的該受管理的資源已清除。
 
-Visual c + + 完成項不是相同<xref:System.Object.Finalize%2A>方法。 (CLR 文件會使用完成項和<xref:System.Object.Finalize%2A>方法來表示相同意義)。 <xref:System.Object.Finalize%2A>方法由記憶體回收行程，這會叫用類別的繼承鏈結中每個完成項呼叫。 不同於 Visual c + + 解構函式，衍生類別完成項呼叫不會造成編譯器叫用所有的基底類別中的完成項。
+視覺效果C++完成項不是相同<xref:System.Object.Finalize%2A>方法。 (CLR 文件會使用完成項和<xref:System.Object.Finalize%2A>方法來表示相同意義)。 <xref:System.Object.Finalize%2A>方法由記憶體回收行程，這會叫用類別的繼承鏈結中每個完成項呼叫。 不同於視覺效果C++解構函式，衍生類別完成項呼叫並不會導致編譯器叫用所有的基底類別中的完成項。
 
-由於 Visual c + + 編譯器支援決定性的資源釋放，請勿嘗試實作<xref:System.IDisposable.Dispose%2A>或<xref:System.Object.Finalize%2A>方法。 不過，如果您熟悉這些方法，以下是 Visual c + + 完成項並呼叫完成項的解構函式如何對應至<xref:System.IDisposable.Dispose%2A>模式︰
+因為視覺效果C++編譯器支援決定性的資源釋放，請勿嘗試實作<xref:System.IDisposable.Dispose%2A>或是<xref:System.Object.Finalize%2A>方法。 不過，如果您熟悉這些方法，以下是方式視覺效果C++完成項和解構函式呼叫完成項對應到<xref:System.IDisposable.Dispose%2A>模式：
 
 ```cpp
 // Visual C++ code
@@ -757,7 +757,7 @@ void Dispose(bool disposing) {
 
 Managed 型別也可以使用您想要確定的方式，放開按鈕並不會讓記憶體回收行程在某個時間點之後的物件已不再需要被非確定性地釋放 managed 的資源。 決定性的釋放的資源，可大幅提升效能。
 
-Visual c + + 編譯器可讓您以決定性地清除物件的解構函式的定義。 使用解構函式來釋出您想要以決定性的釋放的所有資源。  如果完成項存在，則會呼叫解構函式，以避免程式碼重複。
+視覺效果C++編譯器還可讓以決定性地清除物件的解構函式的定義。 使用解構函式來釋出您想要以決定性的釋放的所有資源。  如果完成項存在，則會呼叫解構函式，以避免程式碼重複。
 
 ```cpp
 // compile with: /clr /c
@@ -789,9 +789,9 @@ ref struct A {
 
 決定性地清除物件的資源，藉由呼叫解構函式，可以改善相較於讓 CLR 被非確定性地結束該物件的效能。
 
-以 Visual c + + 撰寫並使用編譯的程式碼 **/clr**執行類型的解構函式，如果：
+在視覺效果撰寫的程式碼C++然後使用編譯 **/clr**會執行類型的解構函式：
 
-- 使用堆疊語意建立的物件會超出範圍。 如需詳細資訊，請參閱 <<c0> [ 參考類型的 c + + 堆疊語意](../dotnet/cpp-stack-semantics-for-reference-types.md)。
+- 使用堆疊語意建立的物件會超出範圍。 如需詳細資訊，請參閱 < [ C++的參考型別堆疊語意](../dotnet/cpp-stack-semantics-for-reference-types.md)。
 
 - 在物件的建構期間擲回例外狀況。
 
@@ -828,13 +828,13 @@ int main() {
 }
 ```
 
-如果您的型別具有解構函式，編譯器會產生`Dispose`方法，會實作<xref:System.IDisposable>。 如果以 Visual c + + 撰寫，並已使用另一個語言的解構函式的類型，則呼叫`IDisposable::Dispose`該類型會使要呼叫的解構函式的類型。 型別從 Visual c + + 用戶端取用，當您無法直接呼叫`Dispose`; 相反地，使用呼叫解構函式`delete`運算子。
+如果您的型別具有解構函式，編譯器會產生`Dispose`方法，會實作<xref:System.IDisposable>。 如果以視覺效果類型C++解構函式使用另一個語言，且呼叫`IDisposable::Dispose`該類型會使要呼叫的解構函式的類型。 當型別會使用從視覺效果C++用戶端，您無法直接呼叫`Dispose`; 相反地，使用呼叫解構函式`delete`運算子。
 
 如果您的類型具有完成項，則編譯器會產生`Finalize(void)`方法會覆寫<xref:System.Object.Finalize%2A>。
 
-如果類型具有完成項或解構函式，編譯器會產生`Dispose(bool)`方法，根據設計模式。 (如需資訊，請參閱[Dispose 模式](/dotnet/standard/design-guidelines/dispose-pattern))。 您無法明確地撰寫，或呼叫`Dispose(bool)`Visual c + +。
+如果類型具有完成項或解構函式，編譯器會產生`Dispose(bool)`方法，根據設計模式。 (如需資訊，請參閱[Dispose 模式](/dotnet/standard/design-guidelines/dispose-pattern))。 您無法明確地撰寫，或呼叫`Dispose(bool)`視覺效果中C++。
 
-如果類型具有符合此設計模式的基底類別，衍生類別的解構函式呼叫時，將稱為所有基底類別的解構函式。 （如果您的類型以 Visual c + + 撰寫，編譯器會確保您的型別實作此模式。）參考類別的解構函式鏈結到其基底和成員做為 c + + 標準所指定的亦即，類別的解構函式會執行，則的相反順序中他們所建構，其成員的解構函式的第一個和最後已建構的順序反向其基底類別的解構函式。
+如果類型具有符合此設計模式的基底類別，衍生類別的解構函式呼叫時，將稱為所有基底類別的解構函式。 (如果您的類型以視覺效果撰寫C++，編譯器會確保您的型別實作此模式。)參考類別的解構函式鏈結到其基底和成員所指定的換句話說，C++標準 — 類別的解構函式會執行，則的相反順序中他們所建構，其成員的解構函式的第一個和最後已建構的順序反向其基底類別的解構函式。
 
 實值類型或介面內不允許解構函式和完成項。
 

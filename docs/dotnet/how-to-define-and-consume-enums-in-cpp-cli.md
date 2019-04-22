@@ -1,19 +1,19 @@
 ---
-title: HOW TO：定義和使用列舉，在 C + + /cli CLI
+title: HOW TO：定義和使用列舉在C++/CLI
 ms.date: 11/04/2016
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
 ms.openlocfilehash: 9787b7b96f83b2926c65209254c88eb56fe1a8ab
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774733"
 ---
-# <a name="how-to-define-and-consume-enums-in-ccli"></a>HOW TO：定義和使用列舉，在 C + + /cli CLI
+# <a name="how-to-define-and-consume-enums-in-ccli"></a>HOW TO：定義和使用列舉在C++/CLI
 
-本主題討論列舉在 C + + /cli CLI。
+本主題討論中的列舉C++/CLI。
 
 ## <a name="specifying-the-underlying-type-of-an-enum"></a>指定列舉的基礎類型
 
@@ -77,7 +77,7 @@ a and day2 are the same
 
 ## <a name="operators-and-enums"></a>運算子和列舉
 
-下列的運算子都是有效的列舉，在 C + + /cli CLI:
+下列運算子會在列舉中有效C++/CLI:
 
 |運算子|
 |--------------|
@@ -92,7 +92,7 @@ a and day2 are the same
 編譯器會執行任何靜態或動態檢查結果的列舉作業;作業可能會導致不在列舉的有效列舉值的範圍中的值。
 
 > [!NOTE]
->  C++11 引進列舉類別類型在 unmanaged 程式碼也就是明顯不同於 managed 的列舉類別，在 C + + /cli CLI。 特別是，C + + 11 列舉類別類型不支援做為 managed 的列舉類別類型相同的運算子在 C + + /cli CLI 和 C + + /cli CLI 的原始程式碼必須提供 managed 列舉中的存取範圍規範類別宣告才能加以區別 unmanaged （c + +11） 列舉類別宣告。 如需有關列舉類別，在 C + + /cli CLI，C + + /CX 中，以及 C + + 11，請參閱[列舉類別](../extensions/enum-class-cpp-component-extensions.md)。
+>  C++11 引進列舉類別類型在 unmanaged 程式碼也就是明顯不同於中的 managed 的列舉類別C++/CLI。 特別是，C + + 11 列舉類別類型不支援做為 managed 的列舉類別類型中相同的運算子C++/CLI，以及C++/CLI 的原始程式碼必須提供 managed 列舉中的存取範圍規範類別宣告以區別來自unmanaged (C + + 11) 列舉類別宣告。 如需有關列舉類別，在C++/CLI， C++/CX，以及 C + + 11，請參閱[列舉類別](../extensions/enum-class-cpp-component-extensions.md)。
 
 ```
 // mcppv2_enum_5.cpp

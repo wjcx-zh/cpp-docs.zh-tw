@@ -9,10 +9,10 @@ helpviewer_keywords:
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
 ms.openlocfilehash: 5689e314c2ba94068619a066e5f458e06819b2b7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773472"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028:即時線上說明支援
@@ -132,7 +132,7 @@ HIWORD(lParam) 包含 y 軸座標。
 
 MFC 應用程式精靈可建立必要的檔案來建置說明檔 (.cnt 和 .hpj 檔)。 其也包含由 Microsoft 說明編譯器接受的預先建置 .rtf 檔。 許多主題都已經完成，但有一些需要針對特定應用程式作修改。
 
-MAKEHM 公用程式支援自動建立「說明對應」檔案。 MAKEHM 公用程式可以將應用程式的 RESOURCE.H 檔案轉譯為說明對應檔。 例如: 
+MAKEHM 公用程式支援自動建立「說明對應」檔案。 MAKEHM 公用程式可以將應用程式的 RESOURCE.H 檔案轉譯為說明對應檔。 例如：
 
 ```
 #define IDD_MY_DIALOG   2000

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
 ms.openlocfilehash: 2d55c18d2c9faa1a704bea129f2551937e76133c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767921"
 ---
 # <a name="subscript-operator-"></a>註標運算子]
@@ -28,7 +28,7 @@ postfix-expression [ expression ]
 
 （這也是主要運算式） 後面接著註標運算子中後, 置運算式 **[]**，指定陣列索引。
 
-如需 managed 陣列在 C + + /cli CLI，請參閱[陣列](../extensions/arrays-cpp-component-extensions.md)。
+如需在 managed 陣列的詳細資訊C++/CLI，請參閱[陣列](../extensions/arrays-cpp-component-extensions.md)。
 
 通常所代表的值*後置運算式*是指標值，例如陣列識別項，並*運算式*是整數值 （包括列舉型別）。 不過，在語法上需要的是其中一個指標類型的運算式，另一個則是整數類型。 因此，整數值可以在*後置運算式*位置，而指標值可以在括號括住*運算式*或註標位置。 請考慮下列程式碼片段：
 
@@ -48,7 +48,7 @@ cout << 2[nArray] << endl;            // prints "2"
 double aDbl[2];
 ```
 
-地址`aDb[0]`及`aDb[1]`為 8 個位元組的位置 — 型別的物件的大小**double**。 此調整根據物件類型由 c + + 語言自動完成，而定義在[加法類運算子](../cpp/additive-operators-plus-and.md)討論加法和減法的指標類型的運算元。
+地址`aDb[0]`及`aDb[1]`為 8 個位元組的位置 — 型別的物件的大小**double**。 此調整根據物件類型會自動進行C++語言和定義於[加法類運算子](../cpp/additive-operators-plus-and.md)討論加法和減法的指標類型的運算元。
 
 註標運算式也可以擁有多個註標，如下所示：
 
@@ -77,7 +77,7 @@ int main() {
 
 ## <a name="positive-and-negative-subscripts"></a>正數和負數註標
 
-陣列的第一個元素是元素 0。 C + + 陣列的範圍是從*陣列*[0] 來*陣列*[*大小*-1]。 不過，C++ 支援正註標和負註標。 負註標必須在陣列界限內，如果不在界限內，則無法預測結果。 下列程式碼顯示正的和負的陣列註標：
+陣列的第一個元素是元素 0。 範圍C++陣列是從*陣列*[0] 以*陣列*[*大小*-1]。 不過，C++ 支援正註標和負註標。 負註標必須在陣列界限內，如果不在界限內，則無法預測結果。 下列程式碼顯示正的和負的陣列註標：
 
 ```cpp
 #include <iostream>

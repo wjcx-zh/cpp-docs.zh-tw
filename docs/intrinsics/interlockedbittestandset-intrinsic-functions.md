@@ -19,15 +19,15 @@ helpviewer_keywords:
 - lock_bts instruction
 ms.assetid: b1b7e334-53ea-48cf-ba60-5fa3ef51a1fc
 ms.openlocfilehash: 3da533b3cf2ab8f396e4ba284cc0bf921a5c80b5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023200"
 ---
 # <a name="interlockedbittestandset-intrinsic-functions"></a>_interlockedbittestandset 內建函式
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 會產生檢查位址 `b` 的位元 `a` 的指令，並傳回其目前的值，再將它設定為 1。
 
@@ -74,7 +74,7 @@ unsigned char _interlockedbittestandset64_HLERelease(
 
 #### <a name="parameters"></a>參數
 
-*一個*<br/>
+*a*<br/>
 [in]要檢查的記憶體指標。
 
 *b*<br/>
@@ -89,10 +89,10 @@ unsigned char _interlockedbittestandset64_HLERelease(
 |內建|架構|標頭|
 |---------------|------------------|------------|
 |`_interlockedbittestandset`|x86、 x64、 ARM|\<intrin.h>|
-|`_interlockedbittestandset_acq`中， `_interlockedbittestandset_nf`中， `_interlockedbittestandset_rel`|ARM|\<intrin.h>|
-|`_interlockedbittestandset_HLEAcquire`, `_interlockedbittestandset_HLERelease`|x86、x64|\<immintrin.h>|
+|`_interlockedbittestandset_acq`、`_interlockedbittestandset_nf`、`_interlockedbittestandset_rel`|ARM|\<intrin.h>|
+|`_interlockedbittestandset_HLEAcquire`、 `_interlockedbittestandset_HLERelease`|x86、x64|\<immintrin.h>|
 |`_interlockedbittestandset64`|X64|\<intrin.h>|
-|`_interlockedbittestandset64_HLEAcquire`, `_interlockedbittestandset64_HLERelease`|X64|\<immintrin.h>|
+|`_interlockedbittestandset64_HLEAcquire`、 `_interlockedbittestandset64_HLERelease`|X64|\<immintrin.h>|
 
 ## <a name="remarks"></a>備註
 
@@ -104,7 +104,7 @@ unsigned char _interlockedbittestandset64_HLERelease(
 
 這些常式僅以內建函式的形式供您使用。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

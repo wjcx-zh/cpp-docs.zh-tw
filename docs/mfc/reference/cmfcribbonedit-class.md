@@ -74,10 +74,10 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
 ms.openlocfilehash: 80ee43ae32416f9f62df419c4afbd46a0aa63cc8
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780479"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit 類別
@@ -681,7 +681,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 指標的父視窗`CMFCRibbonEdit`物件。
 
-*資料*<br/>
+*data*<br/>
 協助工具資料`CMFCRibbonEdit`物件。
 
 ### <a name="return-value"></a>傳回值

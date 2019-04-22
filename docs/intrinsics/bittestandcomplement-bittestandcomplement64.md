@@ -12,15 +12,15 @@ helpviewer_keywords:
 - _bittestandcomplement64 intrinsic
 ms.assetid: 53fa12dd-835e-4e5d-baec-a431c8678806
 ms.openlocfilehash: 4c0fc11ca890c64da3ff41c8679a17a733c81d4c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023125"
 ---
 # <a name="bittestandcomplement-bittestandcomplement64"></a>_bittestandcomplement, _bittestandcomplement64
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 產生的指令會檢查位址 `b` 的位元 `a`、傳回其目前值，並將位元設為它的補數。
 
@@ -39,7 +39,7 @@ unsigned char _bittestandcomplement64(
 
 #### <a name="parameters"></a>參數
 
-*一個*<br/>
+*a*<br/>
 [in、 out]要檢查的記憶體指標。
 
 *b*<br/>
@@ -102,7 +102,7 @@ Testing bit 0
 Value changed to 0, Result: 1
 ```
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

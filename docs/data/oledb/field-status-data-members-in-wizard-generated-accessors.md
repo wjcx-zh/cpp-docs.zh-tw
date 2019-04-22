@@ -6,10 +6,10 @@ helpviewer_keywords:
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
 ms.openlocfilehash: dd650b7cafef78e23c23ddfef791c88b6b93727f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025068"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>在精靈產生的存取子中的欄位狀態資料成員
@@ -106,4 +106,4 @@ public:
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 OLE DB 消費者樣板](../../data/oledb/working-with-ole-db-consumer-templates.md)
+[使用 OLE DB 消費者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)

@@ -29,10 +29,10 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
 ms.openlocfilehash: 9c31ed6f82f4280206bf233999fac74981636db3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776904"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog 類別
@@ -131,7 +131,7 @@ void AddFormat(
 *lpszResult*<br/>
 如果選擇此格式在對話方塊中，描述結果的字串。
 
-*旗標*<br/>
+*flags*<br/>
 其他連結和內嵌選項適用於這種格式。 這個旗標的位元組合的其中一個或多個不同的值在 OLEUIPASTEFLAG 列舉型別。
 
 *cf*<br/>
@@ -146,7 +146,7 @@ void AddFormat(
 *bEnableIcon*<br/>
 旗標，決定是否要在清單方塊中選擇這種格式時，啟用以圖示顯示核取方塊。
 
-*閃爍*<br/>
+*bLink*<br/>
 旗標，決定是否要在清單方塊中選擇這種格式時，啟用 [貼上連結] 選項按鈕。
 
 ### <a name="remarks"></a>備註
@@ -195,7 +195,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
 
 - CF_METAFILEPICT
 
-- **「 內嵌的物件 」**
+- **"Embedded Object"**
 
 - （選擇性）**[連結來源]**
 

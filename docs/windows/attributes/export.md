@@ -1,5 +1,5 @@
 ---
-title: 匯出 （c + + COM 屬性）
+title: 匯出 (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.export
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
 ms.openlocfilehash: 5ffa4283b8a2b265809d06b72be96e217cf8bf9f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023603"
 ---
 # <a name="export"></a>匯出
@@ -25,7 +25,7 @@ ms.locfileid: "59023603"
 
 ## <a name="remarks"></a>備註
 
-**匯出**c + + 屬性會導致放入.idl 檔案，然後才能在類型程式庫中的二進位檔相容的格式，使它可以用於任何語言中的 使用的資料結構。
+**匯出**C++屬性會導致放入.idl 檔案，然後才能在類型程式庫中的二進位檔相容的格式，使它可以用於任何語言中的 使用的資料結構。
 
 您不能套用**匯出**屬性的類別，即使類別只有公用成員 (相當於**結構**)。
 

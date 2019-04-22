@@ -10,10 +10,10 @@ helpviewer_keywords:
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
 ms.openlocfilehash: a5f0be66cdcb5c4a37d16b1e83cbc40cf023df32
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780193"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>結構、樣式、回呼和訊息對應
@@ -28,7 +28,7 @@ ms.locfileid: "58780193"
 [MFC 使用的樣式](../../mfc/reference/styles-used-by-mfc.md)<br/>
 在建立 MFC 物件時，提供樣式的連結。
 
-[MFC 使用的回呼函式](../../mfc/reference/callback-functions-used-by-mfc.md)<br/>
+[MFC 使用的回呼函數](../../mfc/reference/callback-functions-used-by-mfc.md)<br/>
 提供 MFC 程式庫中出現之回呼函式的連結。
 
 [訊息對應](../../mfc/reference/message-maps-mfc.md)<br/>

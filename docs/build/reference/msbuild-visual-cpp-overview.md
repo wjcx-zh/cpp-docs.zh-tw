@@ -1,17 +1,17 @@
 ---
-title: C + + 的 sql server 的 MSBuild 內部專案在 Visual Studio 中
+title: MSBuild 的 sql server 的內部C++Visual Studio 中的專案
 ms.date: 12/08/2018
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
 ms.openlocfilehash: 6c8e891f6bf6ed6b3bb3d1c84dbc13b64ab7b868
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021900"
 ---
-# <a name="msbuild-internals-for-c-projects"></a>C + + 專案的 MSBuild 內部項目
+# <a name="msbuild-internals-for-c-projects"></a>MSBuild 的 sql server 的內部C++專案
 
 當您在 IDE 中設定專案屬性，然後儲存專案時，Visual Studio 會將專案設定寫入專案檔中。 專案檔包含您專案中，唯一的設定，但它不包含建置您的專案所需的所有設定。 專案檔內含`Import`項目包含的其他網路*支援檔案。* 支援檔案中包含其餘的屬性、 目標和建置專案所需的設定。
 
@@ -25,7 +25,7 @@ ms.locfileid: "59021900"
 |---------------|-----------------|
 |*drive*:\Program Files *(x86)* \Microsoft Visual Studio\\*year*\\*edition*\Common7\IDE\VC\VCTargets\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp (x86)\v4.0\\*version*\ |包含主要的目標檔案 (.targets) 和屬性檔案 (.props) 所使用的目標。 根據預設，$ （vctargetspath） 巨集，請參考這個目錄。|
 |*drive*:\Program Files *(x86)* \Microsoft Visual Studio\\*year*\\*edition*\Common7\IDE\VC\VCTargets\Platforms\\*platform*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\ |包含目標和其父目錄中的屬性會覆寫的平台特定目標和屬性檔案。 這個目錄也包含定義工作所使用的目標，此目錄中的 DLL。<br /><br /> *平台*預留位置代表 ARM，Win32 或 x64 子目錄。|
-|*drive*:\Program Files *(x86)* \Microsoft Visual Studio\\*year*\\*edition*\Common7\IDE\VC\VCTargets\Platforms\\*platform*\PlatformToolsets\\*toolset*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\PlatformToolsets\\*toolset*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*platform*\PlatformToolsets\\*toolset*\ |包含可讓組件產生 c + + 應用程式，使用指定的目錄*工具組*。<br /><br /> *年份*並*edition* Visual Studio 2017 和更新版本中所使用的預留位置。 *版本*預留位置是 V110 適用於 Visual Studio 2012、 V120 適用於 Visual Studio 2013 或適用於 Visual Studio 2015 的 V140。 *平台*預留位置代表 ARM，Win32 或 x64 子目錄。 *工具組*預留位置代表的 toolset 子目錄，例如，用於建置 Windows 應用程式，使用 Visual Studio 2015 工具組，建置適用於 Windows XP 使用 Visual Studio 2013 的工具組或以 v110_wp80 v120_xp v140使用 Visual Studio 2012 的工具組，以建置 Windows Phone 8.0 的應用程式。<br /><br />包含可讓組件產生 Visual Studio 2008 或 Visual Studio 2010 的應用程式的目錄的路徑不包含*版本*，而*平台*預留位置代表在 Itanium、 Win32、 或 x64 子目錄。 *工具組*預留位置代表 v90 或 v100 的 toolset 子目錄。|
+|*drive*:\Program Files *(x86)* \Microsoft Visual Studio\\*year*\\*edition*\Common7\IDE\VC\VCTargets\Platforms\\*platform*\PlatformToolsets\\*toolset*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\PlatformToolsets\\*toolset*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*platform*\PlatformToolsets\\*toolset*\ |包含啟用產生組建的目錄C++使用指定的應用程式*工具組*。<br /><br /> *年份*並*edition* Visual Studio 2017 和更新版本中所使用的預留位置。 *版本*預留位置是 V110 適用於 Visual Studio 2012、 V120 適用於 Visual Studio 2013 或適用於 Visual Studio 2015 的 V140。 *平台*預留位置代表 ARM，Win32 或 x64 子目錄。 *工具組*預留位置代表的 toolset 子目錄，例如，用於建置 Windows 應用程式，使用 Visual Studio 2015 工具組，建置適用於 Windows XP 使用 Visual Studio 2013 的工具組或以 v110_wp80 v120_xp v140使用 Visual Studio 2012 的工具組，以建置 Windows Phone 8.0 的應用程式。<br /><br />包含可讓組件產生 Visual Studio 2008 或 Visual Studio 2010 的應用程式的目錄的路徑不包含*版本*，而*平台*預留位置代表在 Itanium、 Win32、 或 x64 子目錄。 *工具組*預留位置代表 v90 或 v100 的 toolset 子目錄。|
 
 ## <a name="support-files"></a>支援檔案
 
@@ -83,10 +83,10 @@ ms.locfileid: "59021900"
 |重建|清除，並建立您的專案。|
 |ResourceCompile|執行 Microsoft Windows 資源編譯器工具 rc.exe。|
 |XdcMake|執行 XML 文件工具 xdcmake.exe。|
-|Xsd|執行 XML 結構描述定義工具 xsd.exe。 *請參閱下列注意事項。*|
+|Xsd|執行 XML 結構描述定義工具 xsd.exe。 請參閱下列注意事項。|
 
 > [!NOTE]
-> 在 Visual Studio 2017 中，c + + 專案的支援**xsd**檔案已被取代。 您仍然可以使用**Microsoft.VisualC.CppCodeProvider**加上**CppCodeProvider.dll**手動加入 GAC。
+> 在 Visual Studio 2017 中，C++專案的支援**xsd**檔案已被取代。 您仍然可以使用**Microsoft.VisualC.CppCodeProvider**加上**CppCodeProvider.dll**手動加入 GAC。
 
 ## <a name="see-also"></a>另請參閱
 

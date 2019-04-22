@@ -7,17 +7,17 @@ helpviewer_keywords:
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
 ms.openlocfilehash: dc2e5ce3263c61839a1ba434ab0d2a39e6a9078f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774538"
 ---
 # <a name="stlclr-containers"></a>STL/CLR 容器
 
-STL/CLR 程式庫所組成，類似於可在 c + + 標準程式庫，但它是.NET Framework 的 managed 環境中執行的容器。 它不會保持在最新的實際的 c + + 標準程式庫，並維護舊版支援。
+STL/CLR 程式庫包含的容器，類似於位於C++標準程式庫，但它執行的.NET framework 的 managed 環境中。 它不會保持在最新的實際C++標準程式庫和維護舊版支援。
 
-本文件提供了 STL/CLR 容器的概觀，例如容器項目的需求、您可以插入容器的項目類型，以及容器中項目的擁有權問題。 適用時，所提及的原生 c + + 標準程式庫和 STL/CLR 之間的差異。
+本文件提供了 STL/CLR 容器的概觀，例如容器項目的需求、您可以插入容器的項目類型，以及容器中項目的擁有權問題。 在適當的原生之間的差異C++標準程式庫和 STL/CLR 所述。
 
 ## <a name="requirements-for-container-elements"></a>容器項目的需求
 

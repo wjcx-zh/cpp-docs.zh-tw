@@ -335,10 +335,10 @@ helpviewer_keywords:
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
 ms.openlocfilehash: 30d73d546ee68a25f1e59776020477d038da65e8
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771496"
 ---
 # <a name="colecontrol-class"></a>COleControl 類別
@@ -536,7 +536,7 @@ class COleControl : public CWnd
 
 衍生自`CWnd`，此類別會繼承 Windows 視窗物件的所有功能，加上額外的功能特定至 OLE，例如事件的引發和支援的方法和屬性的能力。
 
-OLE 控制項可插入 OLE 容器應用程式，並使用雙向系統事件的引發和公開方法與屬性，以容器與容器通訊。 請注意，標準的 OLE 容器只支援 OLE 控制項的基本功能。 也就是無法支援 OLE 控制項的擴充的功能。 事件傳送至的容器控制項中發生特定動作的結果時，就會發生事件的引發。 接著，容器控制項與通訊，使用了公開一組方法和屬性類似於成員函式和 c + + 類別的資料成員。 這種方法可讓開發人員控制控制項的外觀，並在發生特定動作時，通知容器。
+OLE 控制項可插入 OLE 容器應用程式，並使用雙向系統事件的引發和公開方法與屬性，以容器與容器通訊。 請注意，標準的 OLE 容器只支援 OLE 控制項的基本功能。 也就是無法支援 OLE 控制項的擴充的功能。 事件傳送至的容器控制項中發生特定動作的結果時，就會發生事件的引發。 控制項與容器通訊藉由使用公開的方法和屬性的成員函式和資料成員類似，C++類別。 這種方法可讓開發人員控制控制項的外觀，並在發生特定動作時，通知容器。
 
 ## <a name="windowless-controls"></a>無視窗控制項
 

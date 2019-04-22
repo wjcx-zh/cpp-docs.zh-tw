@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
 ms.openlocfilehash: e2aed98d9131b3d7b96cdc3e3297823d69d0ad38
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781532"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>使用 Managed 例外狀況中的基本概念
@@ -33,11 +33,11 @@ ms.locfileid: "58781532"
 
 攔截例外狀況衍生自介面的型別不受 **/clr**。 此外，通用語言執行平台不允許您攔截堆疊溢位例外狀況;堆疊溢位例外狀況將會終止處理序。
 
-如需有關在 managed 和 unmanaged 應用程式中的例外狀況處理差異的詳細資訊，請參閱 <<c0> [ 例外狀況處理行為下 Managed Extensions for c + + 中的差異](../dotnet/differences-in-exception-handling-behavior-under-clr.md)。
+如需有關在 managed 和 unmanaged 應用程式中的例外狀況處理差異的詳細資訊，請參閱 <<c0> [ 差異在例外狀況處理行為下 Managed Extensions for C++ ](../dotnet/differences-in-exception-handling-behavior-under-clr.md)。</c0>
 
 ##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a> 擲回例外狀況下 /clr
 
-C + + throw 運算式會擴充到擲回 CLR 型別控制代碼。 下列範例會建立自訂例外狀況類型，然後擲回該類型的執行個體：
+C++會擲回運算式已擴充而擲回 CLR 型別控制代碼。 下列範例會建立自訂例外狀況類型，然後擲回該類型的執行個體：
 
 ```
 // clr_exception_handling.cpp
@@ -126,9 +126,9 @@ In 'catch(MyStruct^ catchException)'
 11
 ```
 
-### <a name="order-of-unwinding-for-c-objects"></a>C + + 物件復原順序
+### <a name="order-of-unwinding-for-c-objects"></a>復原順序C++物件
 
-回溯會具有解構函式可能擲回的函式和處理函式之間，執行階段堆疊上的任何 c + + 物件時發生。 因為 CLR 型別在堆積上配置，所以回溯不適用於它們。
+回溯，就會發生任何C++物件具有解構函式可能擲回的函式和處理函式之間，執行階段堆疊上。 因為 CLR 型別在堆積上配置，所以回溯不適用於它們。
 
 擲回的例外狀況的事件順序如下所示：
 
@@ -142,9 +142,9 @@ In 'catch(MyStruct^ catchException)'
 
 擲回的未受管理的物件型別時，它會包裝的例外狀況型別的<xref:System.Runtime.InteropServices.SEHException>。 當搜尋適當**攔截**子句中，有兩種可能性。
 
-- 如果遇到原生的 c + + 型別時，會解除包裝例外狀況，並將其相較於遇到的型別。 這項比較可讓您以一般方式攔截原生 c + + 型別。
+- 如果原生C++型別時，解開包裝的例外狀況且相較於遇到的型別。 這項比較可讓原生C++會以一般方式攔截到的型別。
 
-- 不過，如果**攔截**型別的子句**SEHException**或任何其基底類別會在第一次檢查時，子句會攔截的例外狀況。 因此，您應該將任何攔截的 CLR 型別子句之前，先攔截原生 c + + 類型的所有 catch 子句。
+- 不過，如果**攔截**型別的子句**SEHException**或任何其基底類別會在第一次檢查時，子句會攔截的例外狀況。 因此，您應該將所有攔截的 catch 子句原生C++任何攔截的 CLR 型別子句之前，請輸入第一次。
 
 請注意：
 

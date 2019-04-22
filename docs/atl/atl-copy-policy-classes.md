@@ -9,10 +9,10 @@ helpviewer_keywords:
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
 ms.openlocfilehash: 73bec31b4ae140797c85a06ee7c5023c9e0c4446
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776956"
 ---
 # <a name="atl-copy-policy-classes"></a>ATL 複製原則類別
@@ -74,7 +74,7 @@ VCUE_Copy.h 也包含此類別的下列特製化： `GenericCopy<BSTR>`， `Gene
 
 ### <a name="mapcopy"></a>MapCopy
 
-`MapCopy` 假設正在複製的資料儲存到 c + + 標準程式庫-style 對應，讓它可讓您指定的對應中的資料儲存和目的地輸入類型。 類別的實作只會使用所提供的 typedef *MapType*類別來判斷來源資料的型別，並呼叫適當`GenericCopy`類別。 此類別的任何特製化所不需。
+`MapCopy` 假設正在複製的資料會儲存到C++標準程式庫 style 對應，因此它可讓您指定的對應中的資料儲存和目的地輸入類型。 類別的實作只會使用所提供的 typedef *MapType*類別來判斷來源資料的型別，並呼叫適當`GenericCopy`類別。 此類別的任何特製化所不需。
 
 [!code-cpp[NVC_ATL_COM#31](../atl/codesnippet/cpp/atl-copy-policy-classes_2.h)]
 

@@ -3,10 +3,10 @@ title: 以 Visual C++ 進行雲端和 Web 程式設計
 ms.date: 11/04/2016
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
 ms.openlocfilehash: 33431a8f8660af683ed2e39e10811c22fe2f4fcc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773082"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>以 Visual C++ 進行雲端和 Web 程式設計
@@ -17,11 +17,11 @@ ms.locfileid: "58773082"
 
 - [Windows Azure 行動服務](http://www.windowsazure.com/develop/mobile/)
 
-  提供您可以使用通用 Windows 平台 (UWP) 應用程式或 Windows 桌面應用程式中，連接到 Windows Azure 行動服務的原生 Api。 雖然網站上的大部分範例是採用 C#，您也可以使用 C++。 如需詳細資訊，請參閱[快速入門：新增行動服務使用 c + +](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx)。
+  提供您可以使用通用 Windows 平台 (UWP) 應用程式或 Windows 桌面應用程式中，連接到 Windows Azure 行動服務的原生 Api。 雖然網站上的大部分範例是採用 C#，您也可以使用 C++。 如需詳細資訊，請參閱[快速入門：新增行動服務，使用C++ ](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx)。
 
-- [C + + 的 Microsoft Azure 儲存體用戶端程式庫](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
+- [適用於 Microsoft Azure 儲存體用戶端程式庫C++](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
 
-  Azure Storage Client Library for c + + 提供完整的 API 使用 Azure 儲存體，包括但不是限於下列能力：
+  Azure Storage Client Library forC++提供完整的 API 使用 Azure 儲存體，包括但不是限於下列能力：
 
   - 建立、 讀取、 刪除及列出 blob 容器、 資料表和佇列。
   - 建立、 讀取、 刪除，加上的清單和複製 blob 的讀取和寫入 blob 範圍。

@@ -18,17 +18,17 @@ helpviewer_keywords:
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
 ms.openlocfilehash: f3dea68deaae73313fe389be49e8bbed7da3c93a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767177"
 ---
 # <a name="collections"></a>集合
 
 MFC 程式庫提供集合類別管理物件群組。 這些類別有兩種類型：
 
-- [從 c + + 範本所建立的集合類別](#_core_the_template_based_collection_classes)
+- [集合類別，建立從C++範本](#_core_the_template_based_collection_classes)
 
 - [無法從範本建立的集合類別](#_core_the_collection_classes_not_based_on_templates)
 

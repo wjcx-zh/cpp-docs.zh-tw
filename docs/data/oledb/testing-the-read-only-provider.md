@@ -8,10 +8,10 @@ helpviewer_keywords:
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
 ms.openlocfilehash: a9601b2afe40133a5cc88589b530b5ed549ac81e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025121"
 ---
 # <a name="testing-the-read-only-provider"></a>測試唯讀提供者
@@ -24,7 +24,7 @@ ms.locfileid: "59025121"
 
 1. 按一下 [ **檔案** ] 功能表上的 [ **新增**]，然後按一下 [ **專案**]。
 
-1. 在 **專案類型**窗格中，選取**已安裝** > **Visual c + +** > **MFC/ATL**資料夾。 在 **範本**窗格中，選取**MFC 應用程式**。
+1. 在 **專案類型**窗格中，選取**已安裝** > **Visual C++**   >  **MFC/ATL**資料夾. 在 **範本**窗格中，選取**MFC 應用程式**。
 
 1. 針對專案名稱，輸入*TestProv*，然後按一下**確定**。
 

@@ -165,10 +165,10 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
 ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773979"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem 類別
@@ -290,7 +290,7 @@ OLE 項目可以內嵌或連結。 如果它內嵌的其資料會儲存為複合
 如需使用容器介面的詳細資訊，請參閱文章[容器：實作容器](../../mfc/containers-implementing-a-container.md)並[啟用](../../mfc/activation-cpp.md)。
 
 > [!NOTE]
->  內嵌和連結的項目，為 「 物件 」 是指 Windows SDK，並將類型的項目稱為 「 類別 」。 此參考會使用"item"的詞彙來區別 OLE 實體從對應的 c + + 物件和詞彙來區別 OLE 類別目錄從 c + + 類別的 「 類型 」。
+>  內嵌和連結的項目，為 「 物件 」 是指 Windows SDK，並將類型的項目稱為 「 類別 」。 這個參考來區別 OLE 實體對應使用詞彙 「 項目 」C++物件和詞彙來區別 OLE 類別的 「 類型 」C++類別。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -516,7 +516,7 @@ void Close(OLECLOSE dwCloseOption = OLECLOSE_SAVEIFDIRTY);
 
 ##  <a name="coleclientitem"></a>  COleClientItem::COleClientItem
 
-建構`COleClientItem`物件，並將它新增至容器文件的文件項目集合，其中建構 c + + 物件，並不會執行任何 OLE 初始化。
+建構`COleClientItem`物件，並將它新增至容器文件的文件項目集合，其中只會建構C++物件，並不會執行任何 OLE 初始化。
 
 ```
 COleClientItem(COleDocument* pContainerDoc = NULL);
@@ -627,7 +627,7 @@ BOOL CreateFromClipboard(
 
 ### <a name="parameters"></a>參數
 
-*轉譯*<br/>
+*render*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -663,7 +663,7 @@ BOOL CreateFromData(
 *pDataObject*<br/>
 指標[COleDataObject](../../mfc/reference/coledataobject-class.md)從中 OLE 項目是要建立的物件。
 
-*轉譯*<br/>
+*render*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -703,7 +703,7 @@ BOOL CreateFromFile(
 *clsid*<br/>
 保留供未來使用。
 
-*轉譯*<br/>
+*render*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -735,7 +735,7 @@ BOOL CreateLinkFromClipboard(
 
 ### <a name="parameters"></a>參數
 
-*轉譯*<br/>
+*render*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -771,7 +771,7 @@ BOOL CreateLinkFromData(
 *pDataObject*<br/>
 指標[COleDataObject](../../mfc/reference/coledataobject-class.md)從中 OLE 項目是要建立的物件。
 
-*轉譯*<br/>
+*render*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -807,7 +807,7 @@ BOOL CreateLinkFromFile(
 *lpszFileName*<br/>
 建立 OLE 項目檔案名稱的指標。
 
-*轉譯*<br/>
+*render*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -843,7 +843,7 @@ BOOL CreateNewItem(
 *clsid*<br/>
 可唯一識別建立的 OLE 項目類型的識別碼。
 
-*轉譯*<br/>
+*render*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -875,7 +875,7 @@ BOOL CreateStaticFromClipboard(
 
 ### <a name="parameters"></a>參數
 
-*轉譯*<br/>
+*render*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -911,7 +911,7 @@ BOOL CreateStaticFromData(
 *pDataObject*<br/>
 指標[COleDataObject](../../mfc/reference/coledataobject-class.md)從中 OLE 項目是要建立的物件。
 
-*轉譯*<br/>
+*render*<br/>
 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。
 
 *cfFormat*<br/>
@@ -979,7 +979,7 @@ void Delete(BOOL bAutoDelete = TRUE);
 
 ### <a name="remarks"></a>備註
 
-此函式會呼叫[發行](#release)成員函式，依次刪除項目，永久地移除 OLE 項目文件的 c + + 物件。 如果內嵌 OLE 項目，會刪除原生資料的項目。 它一律會關閉執行中的伺服器;因此，如果項目是開啟的連結，此函式會關閉它。
+此函式會呼叫[Release](#release)成員函式，依次刪除C++項目，永久 OLE 項目從文件中移除的物件。 如果內嵌 OLE 項目，會刪除原生資料的項目。 它一律會關閉執行中的伺服器;因此，如果項目是開啟的連結，此函式會關閉它。
 
 ##  <a name="dodragdrop"></a>  COleClientItem::DoDragDrop
 
@@ -2024,7 +2024,7 @@ void SetExtent(
 
 ### <a name="parameters"></a>參數
 
-*大小*<br/>
+*size*<br/>
 A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，其中包含的大小資訊。
 
 *nDrawAspect*<br/>

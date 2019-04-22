@@ -1,5 +1,5 @@
 ---
-title: 如何：加入、 編輯或刪除控制項 （c + +）
+title: 如何：加入、 編輯或刪除控制項 (C++)
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.dialog
@@ -44,13 +44,13 @@ helpviewer_keywords:
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
 ms.openlocfilehash: 2e3e671cd92313ad120d2cd6aae3f7e815e09e65
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025360"
 ---
-# <a name="how-to-add-edit-or-delete-controls-c"></a>如何：加入、 編輯或刪除控制項 （c + +）
+# <a name="how-to-add-edit-or-delete-controls-c"></a>如何：加入、 編輯或刪除控制項 (C++)
 
 使用**對話方塊編輯器**、 您可以新增、 調整大小、 編輯和刪除在對話方塊中的控制項。 您也可以編輯的控制項，例如其識別碼、 屬性或它是否一開始出現在執行階段。
 
@@ -232,7 +232,7 @@ Win32
 
 [管理對話方塊控制項](controls-in-dialog-boxes.md)<br/>
 [如何：版面配置控制項](arrangement-of-controls-on-dialog-boxes.md)<br/>
-[HOW TO：定義控制存取和值](defining-mnemonics-access-keys.md)<br/>
+[如何：定義控制項存取與值](defining-mnemonics-access-keys.md)<br/>
 
 <!-- excluded links
 [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)<br/>

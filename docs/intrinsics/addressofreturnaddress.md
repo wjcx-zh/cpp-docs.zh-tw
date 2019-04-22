@@ -9,15 +9,15 @@ helpviewer_keywords:
 - AddressOfReturnAddress intrinsic
 ms.assetid: c7e10b8c-445e-4236-a602-e2d90200f70a
 ms.openlocfilehash: 79d1e4645c60fb4231a53aaefdcf1fe0f3c876c4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024773"
 ---
 # <a name="addressofreturnaddress"></a>_AddressOfReturnAddress
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 提供保存目前的函式的傳回位址的記憶體位置的位址。 此位址不可能用來存取其他記憶體位置 （例如，函式的引數）。
 
@@ -73,7 +73,7 @@ int main() {
 00401058
 ```
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

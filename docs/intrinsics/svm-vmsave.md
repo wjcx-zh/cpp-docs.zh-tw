@@ -8,15 +8,15 @@ helpviewer_keywords:
 - __svm_vmsave intrinsic
 ms.assetid: 617a60bd-8514-4ba1-8066-bcf4dd481030
 ms.openlocfilehash: d683a13f636db9683b4a7c8d075ad6c3c88c2aed
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023408"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 儲存在指定的虛擬機器控制區塊 (VMCB) 的處理器狀態的子集。
 
@@ -46,7 +46,7 @@ void __svm_vmsave(
 
 **標頭檔** \<intrin.h >
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

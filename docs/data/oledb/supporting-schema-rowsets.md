@@ -8,15 +8,15 @@ helpviewer_keywords:
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
 ms.openlocfilehash: b49d53836179d765a72409d28304d7166dcf51d8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024617"
 ---
 # <a name="supporting-schema-rowsets"></a>支援結構描述資料列集
 
-結構描述資料列集可讓取用者取得的資料存放區的相關資訊，而不需要知道其基礎結構描述。 例如，資料存放區可能不有組織成使用者定義階層，所以會有任何方式可以確保在閱讀本文的知道除了結構描述的資料表。 （另舉一例，Visual c + + 精靈使用結構描述資料列集來產生取用者的存取子）。若要讓取用者若要這樣做，提供者的工作階段物件會公開方法上[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))介面。 在 Visual c + + 應用程式，您可以使用[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)類別來實作`IDBSchemaRowset`。
+結構描述資料列集可讓取用者取得的資料存放區的相關資訊，而不需要知道其基礎結構描述。 例如，資料存放區可能不有組織成使用者定義階層，所以會有任何方式可以確保在閱讀本文的知道除了結構描述的資料表。 (另一個範例，視覺效果C++精靈來產生取用者的存取子中使用結構描述資料列。)若要讓取用者若要這樣做，提供者的工作階段物件會公開方法上[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))介面。 在視覺效果C++應用程式，使用[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)類別來實作`IDBSchemaRowset`。
 
 `IDBSchemaRowsetImpl` 支援下列方法：
 

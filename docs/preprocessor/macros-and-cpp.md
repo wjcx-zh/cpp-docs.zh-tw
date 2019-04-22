@@ -6,16 +6,16 @@ helpviewer_keywords:
 - macros
 ms.assetid: 83a344c1-73c9-4ace-8b93-cccfb62c6133
 ms.openlocfilehash: d4915526d5bb84b33f0595678781257d754aaf2d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024912"
 ---
 # <a name="macros-and-c"></a>巨集和 C++
 C++ 提供的新功能，其中取代了一些由 ANSI C 前置處理器提供的功能。 這些新功能可強化此語言的類型安全及可預測性：
 
-- C + + 物件宣告為**const**可用於常數運算式。 這可讓程式宣告具有類型和值資訊的常數，以及可以由偵錯工具以符號形式檢視的列舉。 使用前置處理器 `#define` 指示詞來定義常數會不夠精確。 任何存放裝置配置給**const**物件，除非在程式中找到取得其位址的運算式。
+- 在C++，物件宣告為**const**可用於常數運算式。 這可讓程式宣告具有類型和值資訊的常數，以及可以由偵錯工具以符號形式檢視的列舉。 使用前置處理器 `#define` 指示詞來定義常數會不夠精確。 任何存放裝置配置給**const**物件，除非在程式中找到取得其位址的運算式。
 
 - C++ 內嵌函式功能取代了函式類型的巨集。 在巨集中使用內嵌函式的優點包括：
 

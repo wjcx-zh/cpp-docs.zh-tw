@@ -1,5 +1,5 @@
 ---
-title: TN035:使用 Visual c + + 中的多個資源檔和標頭檔
+title: TN035:使用視覺效果中的多個資源檔和標頭檔C++
 ms.date: 11/04/2016
 f1_keywords:
 - vc.resources
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
 ms.openlocfilehash: 0493dd45caf5eb78da435987a4590442a908a5a3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772760"
 ---
-# <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035:使用 Visual c + + 中的多個資源檔和標頭檔
+# <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035:使用視覺效果中的多個資源檔和標頭檔C++
 
 > [!NOTE]
 >  下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
@@ -33,7 +33,7 @@ ms.locfileid: "58772760"
 
 這份提示是定型解答，針對上述問題回應的內容如下：
 
-- **如何 Visual c + + 會管理資源檔和標頭檔的概觀**概述如何在 Visual c + + 中的 [Resource Set Includes] 命令可讓您使用多個資源檔和標頭檔中相同的專案。
+- **如何視覺化概觀C++管理的資源檔和標頭檔**提供的視覺效果如何 Resource Set Includes 命令概觀C++可讓您使用多個資源檔和標頭檔中相同的專案。
 
 - **AppWizard 建立的分析。RC 和。H 檔案**探討 AppWizard 建立的應用程式都會使用多個資源和標頭檔。 這些檔案可以在您需要將其他資源檔和標頭檔加入至專案時，做為這些檔案的良好典範。
 
@@ -43,33 +43,33 @@ ms.locfileid: "58772760"
 
 - **使用相同專案中的多個資源檔**告訴您，您可能要分解成多個專案。RC 檔案，並提供如何執行這項操作的詳細資料。
 
-- **強制執行非可編輯的 Visual c + + 檔案**將告訴您如何可以確定 Visual c + + 不會編輯和不小心重新格式化自訂的資源。
+- **非可編輯 Visual 強制執行C++檔案**將告訴您如何發揮確定 VisualC++不會編輯和不小心重新格式化自訂的資源。
 
-- **管理多個 Visual c + + 編輯所共用的符號。RC 檔**說明如何跨多個共用相同的符號。RC 檔，以及如何避免指派重複的 ID 數值。
+- **管理符號共用的多個視覺效果C++-編輯。RC 檔**說明如何跨多個共用相同的符號。RC 檔，以及如何避免指派重複的 ID 數值。
 
-- **管理之間的相依性。RC。CPP、 和。H 檔案**描述 Visual c + + 如何避免不必要的重新編譯。相依於資源符號檔的 CPP 檔案。
+- **管理之間的相依性。RC。CPP、 和。H 檔案**說明如何視覺化C++可避免不必要的重新編譯。相依於資源符號檔的 CPP 檔案。
 
-- **如何在 Visual c + + 管理組包含資訊**提供有關如何 Visual c + + 會持續追蹤的多個 （巢狀） 的技術詳細資料。RC 的檔案和多個標頭檔的 # include 所包含。RC 檔。
+- **如何視覺化C++管理 Set Includes 資訊**提供有關如何視覺化的技術詳細資料C++會持續追蹤的多個 （巢狀）。RC 的檔案和多個標頭檔的 # include 所包含。RC 檔。
 
-**如何在 Visual c + + 的概觀管理資源檔和標頭檔**
+**如何視覺化概觀C++管理資源檔和標頭檔**
 
 Visual C++ 將單一 .RC 資源檔和對應的 .H 標頭檔當做緊密結合的一組檔案來管理。 當您編輯和儲存 .RC 檔中的資源時，會間接編輯和儲存對應 .H 檔案中的符號。 雖然您可以同時開啟和編輯多個 .RC 檔 (使用 Visual C++ 的 MDI 使用者介面)，但對任何指定 .RC 檔來說，您間接編輯的就恰好只有一個對應的標頭檔。
 
 **符號標頭檔**
 
-根據預設，不論資源檔的名稱為何 (例如 MYAPP.RC)，Visual C++ 永遠將對應的標頭檔命名為 RESOURCE.H。 使用**Resource Includes**命令**檢視**Visual c + + 中的功能表上，您可以變更這個標頭檔的名稱更新中的符號標頭檔檔案**Set Includes** 對話方塊。
+根據預設，不論資源檔的名稱為何 (例如 MYAPP.RC)，Visual C++ 永遠將對應的標頭檔命名為 RESOURCE.H。 使用**Resource Includes**命令**檢視**視覺效果中的功能表C++，您可以變更這個標頭檔的名稱，藉由更新中的符號標頭檔檔案**Set Includes**  對話方塊。
 
 **唯讀符號指示詞**
 
-雖然 Visual C++ 對於任何指定的 .RC 檔都只會編輯一個標頭檔，但是 Visual C++ 也支援其他唯讀標頭檔中所定義之符號的參考。 使用**Resource Includes**命令**檢視**功能表在 Visual c + + 中，您可以指定任意數目的其他唯讀標頭檔案為唯讀符號指示詞。 「唯讀」限制表示，當您在 .RC 檔中加入新資源時，您可以使用唯讀標頭檔中定義的符號，但若刪除資源，符號在唯讀標頭檔中仍然維持已定義狀態。 您無法變更指派給唯讀符號的數值。
+雖然 Visual C++ 對於任何指定的 .RC 檔都只會編輯一個標頭檔，但是 Visual C++ 也支援其他唯讀標頭檔中所定義之符號的參考。 使用**Resource Includes**命令**檢視**視覺效果中的功能表C++，您可以指定任意數目的其他唯讀標頭檔案為唯讀符號指示詞。 「唯讀」限制表示，當您在 .RC 檔中加入新資源時，您可以使用唯讀標頭檔中定義的符號，但若刪除資源，符號在唯讀標頭檔中仍然維持已定義狀態。 您無法變更指派給唯讀符號的數值。
 
 **編譯時間指示詞**
 
-Visual C++ 也支援巢狀資源檔，也就是藉由 #include 將一個 .RC 檔包含在另一個資源檔中。 使用 Visual C++ 編輯指定的 .RC 檔時，以 #include 所包含之檔案中的任何資源都不是可見的。 但是當您編譯 .RC 檔時，同樣會編譯 #include 所包含的檔案。 使用**Resource Includes**命令**檢視**Visual c + + 中的功能表上，您可以指定任意數目的 # include。RC 為編譯時間指示詞的檔案。
+Visual C++ 也支援巢狀資源檔，也就是藉由 #include 將一個 .RC 檔包含在另一個資源檔中。 使用 Visual C++ 編輯指定的 .RC 檔時，以 #include 所包含之檔案中的任何資源都不是可見的。 但是當您編譯 .RC 檔時，同樣會編譯 #include 所包含的檔案。 使用**Resource Includes**命令**檢視**視覺效果中的功能表C++，您可以指定任意數目的 # include。RC 為編譯時間指示詞的檔案。
 
-請注意會發生什麼事如果您讀到 Visual c + +。RC 檔的 #include 的另一個。RC 檔案*不*指定為編譯時間指示詞。 當您在 Visual C++ 中加入您先前使用文字編輯器手動維護的 .RC 檔時，這種情況就可能出現。 Visual C++ 讀取 #include 包含的 .RC 檔時，會將 #include 的資源合併至父代 .RC 檔中。 當您儲存父代 .RC 檔時，實際上會以 #include 的資源來取代 #include 陳述式。 如果您不想發生這種合併，您應該移除 #include 陳述式，從父代。RC 檔*先前*讀入 Visual c + + 中，然後使用 Visual c + + 中，新增回相同 #include 陳述式，因為編譯時間指示詞。
+請注意會發生什麼事如果您讀到視覺效果C++。RC 檔的 #include 的另一個。RC 檔案*不*指定為編譯時間指示詞。 當您在 Visual C++ 中加入您先前使用文字編輯器手動維護的 .RC 檔時，這種情況就可能出現。 Visual C++ 讀取 #include 包含的 .RC 檔時，會將 #include 的資源合併至父代 .RC 檔中。 當您儲存父代 .RC 檔時，實際上會以 #include 的資源來取代 #include 陳述式。 如果您不想發生這種合併，您應該移除 #include 陳述式，從父代。RC 檔*先前*唸到視覺效果C++，然後使用視覺效果C++，加回相同 #include 陳述式，因為編譯時間指示詞。
 
-Visual c + + 會將儲存在。RC 檔案的上述三種 Set Includes 資訊 （符號標頭檔、 唯讀符號指示詞和編譯時間指示詞） 在 #include 指示詞*和*TEXTINCLUDE 資源中。 TEXTINCLUDE 資源，您通常不需要處理的實作詳細資料會說明[如何 Visual c + + 管理 Set Includes 資訊](#_mfcnotes_tn035_set_includes)。
+視覺化C++將儲存在。RC 檔案的上述三種 Set Includes 資訊 （符號標頭檔、 唯讀符號指示詞和編譯時間指示詞） 在 #include 指示詞*和*TEXTINCLUDE 資源中。 TEXTINCLUDE 資源，您通常不需要處理的實作詳細資料會說明[如何視覺化C++管理 Set Includes 資訊](#_mfcnotes_tn035_set_includes)。
 
 **AppWizard 建立的分析。RC 和。H 檔案**
 
@@ -91,7 +91,7 @@ RESOURCE.H     AFXRES.H
 
 您可以使用 Visual C++ [File/Set Includes] 命令，檢視這些檔案關聯性。
 
-MYAPP。RC 您使用 Visual c + + 編輯的應用程式資源檔案。
+MYAPP。RC 您編輯使用視覺效果之應用程式資源檔案C++。
 
 RESOURCE.H 是應用程式專用的標頭檔。 AppWizard 永遠將其命名為 RESOURCE.H，這與 Visual C++ 的標頭檔預設命名方式一致。 標頭檔的 #include 是資源檔 (MYAPP.RC) 中的第一個陳述式：
 
@@ -101,7 +101,7 @@ RESOURCE.H 是應用程式專用的標頭檔。 AppWizard 永遠將其命名為 
 #include "resource.h"
 ```
 
-RES\MYAPP。RC2 包含的資源將不會編輯 Visual c + +，但會包含在最終編譯。EXE 檔案。 由於 Visual C++ 可以編輯任何標準資源，包括版本資源 (這個版本中的新功能)，因此 AppWizard 預設不會建立此類資源。 AppWizard 會產生空白檔案，以備您想要自行在這個檔案中加入自訂格式的資源。
+RES\MYAPP。RC2 包含資源的視覺效果將不會編輯C++，但會包含在最終編譯。EXE 檔案。 由於 Visual C++ 可以編輯任何標準資源，包括版本資源 (這個版本中的新功能)，因此 AppWizard 預設不會建立此類資源。 AppWizard 會產生空白檔案，以備您想要自行在這個檔案中加入自訂格式的資源。
 
 如果您使用自訂格式的資源，可以使用 Visual C++ 文字編輯器，將這些資源加入至 RES\MYAPP.RC2 並進行編輯。
 
@@ -206,9 +206,9 @@ RESOURCE.H     AFXRES.H
 
 您可以使用編譯時間指示詞，將 Visual C++ 可編輯與不可編輯的資源組織在多個 .RC 檔案，其中「主要」MYAPP.RC 除了藉由 #include 包含其他 .RC 檔外，就什麼事也不做。 如果您要使用 Visual C++ 專案 .MAK 檔案，則必須在專案中包含「主要」.RC 檔，這樣才能讓所有 #include 的資源與您的應用程式一起編譯。
 
-**強制執行設定不可編輯 Visual c + + 檔案**
+**強制設定不可編輯視覺效果的C++檔案**
 
-AppWizard 建立 RES\MYAPP 中。RC2 檔是包含您的資源檔的範例*不*想要視覺化的 c + + 意外讀入，又接著加以寫回而遺失格式設定資訊。 若要避免這種情況，請將下列程式碼行放在 RES\MYAPP.RC2 檔案的開頭：
+AppWizard 建立 RES\MYAPP 中。RC2 檔是包含您的資源檔的範例*未*希望不小心閱讀到視覺效果C++，然後將它寫回而遺失格式設定資訊。 若要避免這種情況，請將下列程式碼行放在 RES\MYAPP.RC2 檔案的開頭：
 
 ```
 #ifdef APSTUDIO_INVOKED
@@ -216,9 +216,9 @@ AppWizard 建立 RES\MYAPP 中。RC2 檔是包含您的資源檔的範例*不*�
 #endif //APSTUDIO_INVOKED
 ```
 
-Visual c + + 編譯時。RC 檔案，它會定義`APSTUDIO_INVOKED`以及`RC_INVOKED`。 如果 AppWizard 建立的檔案結構損毀，而且 Visual C++ 讀取了上述 #error 行，就會報告嚴重錯誤並中止 .RC 檔案讀取。
+當視覺化C++會編譯。RC 檔案，它會定義`APSTUDIO_INVOKED`以及`RC_INVOKED`。 如果 AppWizard 建立的檔案結構損毀，而且 Visual C++ 讀取了上述 #error 行，就會報告嚴重錯誤並中止 .RC 檔案讀取。
 
-**管理多個 Visual c + + 編輯所共用的符號。RC 檔**
+**管理符號共用的多個視覺效果C++-編輯。RC 檔**
 
 當您將資源分割成多個要在 Visual C++ 中個別編輯的 .RC 檔時，會引發兩個問題：
 
@@ -261,7 +261,7 @@ ID_TOOLS_SPELL 符號是保留在共用標頭檔 MYSHARED.H 中。 您可以使�
 
 建立新的 .RC 檔時，Visual C++ 一開始會使用比最低合法值稍微高的值。 AppWizard 也會將這些值初始化為一些較適合 MFC 應用程式的值。 如需 ID 值範圍的詳細資訊，請參閱[技術提示 20](../mfc/tn020-id-naming-and-numbering-conventions.md)。
 
-現在每次您建立新的資源檔，即使在相同的專案時，Visual c + + 定義相同`_APS_NEXT_`值。 這表示，如果您在兩個不同 .RC 檔中加入 (舉例說) 多個對話方塊，很有可能會將相同的 #define 值指派給不同的對話方塊。 例如，第一個 .RC 檔的 IDD_MY_DLG1 和第二個 .RC 檔的 IDD_MY_DLG2 可能都有相同的指派數字 101。
+現在，每當您建立新的資源檔，即使在相同專案中，視覺效果C++定義相同`_APS_NEXT_`值。 這表示，如果您在兩個不同 .RC 檔中加入 (舉例說) 多個對話方塊，很有可能會將相同的 #define 值指派給不同的對話方塊。 例如，第一個 .RC 檔的 IDD_MY_DLG1 和第二個 .RC 檔的 IDD_MY_DLG2 可能都有相同的指派數字 101。
 
 若要避免這種情況，您應該在不同 .RC 檔案中分別為每個 ID 定義域 (總共四個) 各自保留不同的數值範圍。 做法是以手動方式更新`_APS_NEXT`中每個值。RC 檔**之前**您開始新增資源。 例如，如果第一個。RC 檔會使用預設`_APS_NEXT`值，那麼您可能想要指派下列`_APS_NEXT`第二個值。RC 檔：
 
@@ -288,7 +288,7 @@ Visual C++ 會加入下列註解做為 RESOURCE.H 檔案的第一行，以避開
 
 Visual C++ 永遠會在儲存檔案時，將 //{{NO_DEPENDENCIES}} 註解行加入至 .RC 檔。 在某些情況下，避開 RESOURCE.H 的組建相依性可能導致連結時偵測不到執行階段錯誤。 例如，當您使用符號瀏覽器變更指派給資源符號的數值時，如果沒有重新編譯參考資源的 .CPP 檔案，就無法在應用程式執行階段正確找到和載入資源。 在此情況下，您應該明確地重新編譯任何。在 資源符號變更會影響您知道的 CPP 檔案。H 或 select **Rebuild All**。 如果您有需要經常變更的特定資源群組的符號值時，您可能會發現它更方便且更安全地細分成個別的唯讀標頭檔，這些符號上一節中所述[包括其他標頭檔](#_mfcnotes_tn035_including)。
 
-## <a name="_mfcnotes_tn035_set_includes"></a> 如何管理 Visual c + + 集就會包含資訊 * *
+## <a name="_mfcnotes_tn035_set_includes"></a> 如何視覺化C++管理集包含資訊 * *
 
 如前所述，[File] 功能表 [Set Includes] 命令可讓您指定三種類型的資訊：
 
@@ -300,9 +300,9 @@ Visual C++ 永遠會在儲存檔案時，將 //{{NO_DEPENDENCIES}} 註解行加�
 
 以下將說明 Visual C++ 如何在 .RC 檔案中維護這個資訊。 您不需要此項資訊也可以使用 Visual C++，但是這可以增進您的理解，讓自己有更多的把握使用 [Set Includes] 功能。
 
-每個上述三種 Set Includes 資訊儲存在。RC 檔，以兩種形式：（1） 為 #include 或其他指示詞可解譯由資源編譯器，以及 （2） 的特殊 TEXTINCLUDE 資源可解譯只能由 Visual c + +。
+每個上述三種 Set Includes 資訊儲存在。RC 檔，以兩種形式：（1） 為 #include 或其他指示詞可解譯由資源編譯器，以及 （2） 解譯的特殊 TEXTINCLUDE 資源只能由 Visual C++。
 
-TEXTINCLUDE 資源的目的是要安全地儲存在被輕易地呈現 Visual c + + 中的表單中的 [Set Includes 資訊**Set Includes** ] 對話方塊。 TEXTINCLUDE 是*資源類型*Visual c + + 所定義。 Visual C++ 可以辨認資源識別碼為 1、2 和 3 的三個特定 TEXTINCLUDE 資源：
+TEXTINCLUDE 資源的目的是要安全地儲存在被輕易地呈現的表單中的 [Set Includes 資訊在視覺效果C++的**Set Includes** ] 對話方塊。 TEXTINCLUDE 是*資源類型*視覺效果所定義C++。 Visual C++ 可以辨認資源識別碼為 1、2 和 3 的三個特定 TEXTINCLUDE 資源：
 
 |TEXTINCLUDE 資源 ID|Set Includes 資訊的類型|
 |-----------------------------|--------------------------------------|

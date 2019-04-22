@@ -7,10 +7,10 @@ helpviewer_keywords:
 - nullptr keyword [C++]
 ms.assetid: e9d80ea6-2506-4eb5-b47b-2349df085832
 ms.openlocfilehash: 57be8d71f1dac4f347ea6567c02a385719bb7306
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781077"
 ---
 # <a name="nullptr"></a>nullptr
@@ -18,7 +18,7 @@ ms.locfileid: "58781077"
 指定類型為 `std::nullptr_t` 的 Null 指標常數，此指標常數可以轉換成任何原始指標類型。  雖然您可以使用關鍵字**nullptr**不含任何標頭中，如果您的程式碼會使用型別`std::nullptr_t`，則您必須定義它所包含的標頭`<cstddef>`。
 
 > [!NOTE]
->  **Nullptr**關鍵字也會定義在 C + + /cli 適用於 CLI 管理程式碼應用程式，而且不能使用 ISO 標準 c + + 關鍵字互換。 如果您的程式碼可以使用編譯[/clr](../build/reference/clr-common-language-runtime-compilation.md)編譯器選項，以 managed 程式碼為目標，然後使用`__nullptr`任何一行您必須保證編譯器會使用原生 c + + 解譯的程式碼中。 如需詳細資訊，請參閱 < [nullptr](../extensions/nullptr-cpp-component-extensions.md)。
+>  **Nullptr**關鍵字也會定義在C++/適用於 CLI 管理程式碼應用程式，而且不能互換使用 ISO 標準C++關鍵字。 如果您的程式碼可以使用編譯[/clr](../build/reference/clr-common-language-runtime-compilation.md)編譯器選項，以 managed 程式碼為目標，然後使用`__nullptr`中任何一行程式碼，您必須保證編譯器會使用原生C++解譯。 如需詳細資訊，請參閱 < [nullptr](../extensions/nullptr-cpp-component-extensions.md)。
 
 ## <a name="remarks"></a>備註
 

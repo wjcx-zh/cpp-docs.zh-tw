@@ -11,12 +11,12 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CCustomSession class in CustomSess.H
 ms.assetid: d37ad471-cf05-49c5-aa47-cd10824d777f
-ms.openlocfilehash: 75d0c8d871ca736be5e2c33829296b2760092e14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5cb462aba671e79450e9ee7b8447410252f8edc9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568008"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59023460"
 ---
 # <a name="ccustomsession-customsessh"></a>CCustomSession (CustomSess.H)
 
@@ -39,7 +39,7 @@ class ATL_NO_VTABLE CCustomSession :
 
 精靈也會產生工作階段的三個類別： `CCustomSessionColSchema`， `CCustomSessionPTSchema`，和`CCustomSessionTRSchema`。 這些工作階段會使用結構描述資料列。 結構描述資料列讓提供者傳回給取用者的中繼資料，而不需要執行查詢或提取資料的取用者。 擷取中繼資料會比尋找提供者的功能遠更快。
 
-OLE DB 規格所要求的提供者實作`IDBSchemaRowset`介面支援三個結構描述資料列集型別： DBSCHEMA_COLUMNS、 DBSCHEMA_PROVIDER_TYPES 和 DBSCHEMA_TABLES。 精靈會產生每個結構描述資料列集的實作。 每個精靈所產生的類別包含`Execute`方法。 在此`Execute`方法中，您可以傳回資料給提供者所支援相關的資料表、 資料行和資料類型。 這項資料是在編譯時期已知的。
+OLE DB 規格所要求的提供者實作`IDBSchemaRowset`介面支援三個結構描述資料列集類型：DBSCHEMA_COLUMNS、 DBSCHEMA_PROVIDER_TYPES，與 DBSCHEMA_TABLES。 精靈會產生每個結構描述資料列集的實作。 每個精靈所產生的類別包含`Execute`方法。 在此`Execute`方法中，您可以傳回資料給提供者所支援相關的資料表、 資料行和資料類型。 這項資料是在編譯時期已知的。
 
 ## <a name="see-also"></a>另請參閱
 

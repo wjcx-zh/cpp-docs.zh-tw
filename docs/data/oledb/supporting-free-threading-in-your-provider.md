@@ -6,10 +6,10 @@ helpviewer_keywords:
 - threading [C++], providers
 ms.assetid: a91270dc-cdf9-4855-88e7-88a54be7cbe8
 ms.openlocfilehash: a2afb7354dd0447375ee6205b7c5d9a4755aa4b8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025334"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>在提供者內支援無限制執行緒
@@ -43,4 +43,4 @@ HRESULT MyObject::MyMethod(void)
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 OLE DB 提供者樣板](../../data/oledb/working-with-ole-db-provider-templates.md)
+[使用 OLE DB 提供者範本](../../data/oledb/working-with-ole-db-provider-templates.md)

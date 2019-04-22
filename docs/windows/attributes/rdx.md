@@ -1,5 +1,5 @@
 ---
-title: rdx （c + + COM 屬性）
+title: rdx (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.rdx
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
 ms.openlocfilehash: 2790c3de01d21242daee73fc442ad22d88739355
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023876"
 ---
 # <a name="rdx"></a>rdx
@@ -36,7 +36,7 @@ ms.locfileid: "59023876"
 
 ## <a name="remarks"></a>備註
 
-**Rdx** c + + 屬性建立或修改現有的登錄機碼的 COM 元件。 屬性會將 BEGIN_RDX_MAP 巨集將實作的目標成員的物件。 `RegistryDataExchange`插入 BEGIN_RDX_MAP 巨集，因為函式可以用來登錄和資料成員之間傳輸資料
+**Rdx** C++屬性建立或修改現有的登錄機碼的 COM 元件。 屬性會將 BEGIN_RDX_MAP 巨集將實作的目標成員的物件。 `RegistryDataExchange`插入 BEGIN_RDX_MAP 巨集，因為函式可以用來登錄和資料成員之間傳輸資料
 
 這個屬性可以用於搭配[coclass](coclass.md)， [progid](progid.md)，或[vi_progid](vi-progid.md)屬性或其他屬性，表示其中一種。
 

@@ -67,10 +67,10 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
 ms.openlocfilehash: c6385cb6bd3eec3ce5fefe0475d771c774777820
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781870"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar 類別
@@ -246,7 +246,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 
 ### <a name="parameters"></a>參數
 
-*Elem*<br/>
+*elem*<br/>
 [in]要擷取對齊標題列項目。
 
 ### <a name="return-value"></a>傳回值
@@ -413,7 +413,7 @@ virtual void OnDrawButton(
 [in]按鈕的文字標籤。
 
 *bEnabled*<br/>
-[in]如果已啟用] 按鈕，則為 TRUE。FALSE 否則。
+[in]如果已啟用按鈕，則為 TRUE。FALSE 否則。
 
 ### <a name="remarks"></a>備註
 

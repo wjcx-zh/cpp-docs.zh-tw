@@ -25,10 +25,10 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
 ms.openlocfilehash: e1dd6fff9fa4f03dbf93510da26c78c73e86c6ab
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780960"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog 類別
@@ -137,7 +137,7 @@ void AddButton(
 *uiCategoryId*<br/>
 [in]指定要插入的按鈕的類別目錄識別碼。
 
-*按鈕*<br/>
+*button*<br/>
 [in]指定要插入的按鈕。
 
 *iInsertBefore*<br/>
@@ -586,7 +586,7 @@ virtual BOOL OnEditToolbarMenuImage(
 *pWndParent*<br/>
 [in]父視窗的指標。
 
-*點陣圖*<br/>
+*bitmap*<br/>
 [in]若要編輯點陣圖物件的參考。
 
 *nBitsPerPixel*<br/>
@@ -659,13 +659,13 @@ int RemoveButton(
 ### <a name="parameters"></a>參數
 
 *uiCategoryId*<br/>
-[in]指定要從中移除] 按鈕的類別目錄識別碼。
+[in]指定要從中移除按鈕的類別目錄識別碼。
 
 *uiCmdId*<br/>
 [in]指定按鈕的命令識別碼。
 
 *lpszCategory*<br/>
-[in]指定要從中移除] 按鈕的類別目錄的名稱。
+[in]指定要從中移除按鈕的類別目錄的名稱。
 
 ### <a name="return-value"></a>傳回值
 
@@ -716,7 +716,7 @@ void ReplaceButton(
 *uiCmd*<br/>
 [in]指定按鈕的命令，來取代。
 
-*按鈕*<br/>
+*button*<br/>
 [in]A **const**取代舊的按鈕的工具列按鈕物件的參考。
 
 ### <a name="remarks"></a>備註

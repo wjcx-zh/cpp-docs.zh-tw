@@ -312,10 +312,10 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
 ms.openlocfilehash: 523e89859a6726bdff1dd27975077263abe481c4
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775623"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar 類別
@@ -1749,7 +1749,7 @@ virtual void GetInvalidateItemRect(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-[in]要擷取工作區] 按鈕的索引。
+[in]要擷取工作區按鈕的索引。
 
 *lpRect*<br/>
 [out]接收用戶端區域的區域的矩形物件的指標。
@@ -3231,7 +3231,7 @@ void SetButtonInfo(
 [in]按鈕的樣式。 請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)可用工具列按鈕樣式的清單。
 
 *iImage*<br/>
-[in]（也就是集合中工具列影像的索引）] 按鈕之以零為起始的影像索引。
+[in]（也就是集合中工具列影像的索引）按鈕之以零為起始的影像索引。
 
 ### <a name="remarks"></a>備註
 

@@ -113,10 +113,10 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
 ms.openlocfilehash: e12cf9f65e6fd6dd7f68edc4a94103baa5a8df62
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781753"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 類別
@@ -648,7 +648,7 @@ virtual void OnSetPreviewMode(
 ### <a name="parameters"></a>參數
 
 *bPreview*<br/>
-[in]如果為 TRUE，進入 [預覽列印模式。 如果為 FALSE，結束預覽列印模式。
+[in]如果為 TRUE，進入預覽列印模式。 如果為 FALSE，結束預覽列印模式。
 
 *pState*<br/>
 [in]預覽列印狀態結構指標。
@@ -699,7 +699,7 @@ CBasePane* PaneFromPoint(
 [in]如果不是 NULL，則該方法會搜尋窗格指定的型別。
 
 *dwAlignment*<br/>
-[in]如果指定點上找到一個窗格，則此參數會包含已最接近指定點] 窗格。 如需詳細資訊，請參閱＜備註＞一節。
+[in]如果指定點上找到一個窗格，則此參數會包含已最接近指定點窗格。 如需詳細資訊，請參閱＜備註＞一節。
 
 ### <a name="return-value"></a>傳回值
 
@@ -941,7 +941,7 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
 *nHitTest*<br/>
 指定點擊測試區域程式碼。 點擊的測試是測試，決定游標的位置。
 
-*訊息*<br/>
+*message*<br/>
 指定滑鼠訊息數目。
 
 ### <a name="remarks"></a>備註

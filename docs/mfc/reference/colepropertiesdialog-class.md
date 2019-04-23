@@ -23,10 +23,10 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
 ms.openlocfilehash: e574f535609ec9401bd76badf11fa7e05cc0c619
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781857"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog 類別
@@ -156,7 +156,7 @@ IDOK 或 IDCANCEL 如果登錄成功。否則為 0。 IDOK 及 IDCANCEL 是常�
 
 ##  <a name="m_gp"></a>  COlePropertiesDialog::m_gp
 
-類型的結構[OLEUIGNRLPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuignrlpropsa)，用來初始化 OLE 物件屬性] 對話方塊的 [一般] 頁面。
+類型的結構[OLEUIGNRLPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuignrlpropsa)，用來初始化 OLE 物件屬性對話方塊的 [一般] 頁面。
 
 ```
 OLEUIGNRLPROPS m_gp;
@@ -170,7 +170,7 @@ OLEUIGNRLPROPS m_gp;
 
 ##  <a name="m_lp"></a>  COlePropertiesDialog::m_lp
 
-類型的結構[OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa)，用來初始化 OLE 物件屬性] 對話方塊的 [連結] 頁面。
+類型的結構[OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa)，用來初始化 OLE 物件屬性對話方塊的 [連結] 頁面。
 
 ```
 OLEUILINKPROPS m_lp;
@@ -214,7 +214,7 @@ PROPSHEETHEADER m_psh;
 
 ##  <a name="m_vp"></a>  COlePropertiesDialog::m_vp
 
-類型的結構[OLEUIVIEWPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiviewpropsa)，用來初始化 OLE 物件屬性] 對話方塊的 [檢視] 頁面。
+類型的結構[OLEUIVIEWPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiviewpropsa)，用來初始化 OLE 物件屬性對話方塊的 [檢視] 頁面。
 
 ```
 OLEUIVIEWPROPS m_vp;

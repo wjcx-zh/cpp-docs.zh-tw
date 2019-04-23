@@ -73,10 +73,10 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
 ms.openlocfilehash: 87f75769e2f400a7721a8c9089d6c5596c31a4e3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775955"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar 類別
@@ -588,7 +588,7 @@ void SetPaneAnimation(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-[in]指定您要指派給它的動畫] 窗格的索引。
+[in]指定您要指派給它的動畫窗格的索引。
 
 *hImageList*<br/>
 [in]指定保留動畫畫面格的影像清單的控制代碼。
@@ -597,7 +597,7 @@ void SetPaneAnimation(
 [in]指定以毫秒為單位，動畫的畫面播放速率。
 
 *bUpdate*<br/>
-[in]如果為 TRUE，請立即更新] 窗格的內容。 否則，它失效時，會更新窗格內容。
+[in]如果為 TRUE，請立即更新窗格的內容。 否則，它失效時，會更新窗格內容。
 
 ### <a name="remarks"></a>備註
 
@@ -617,13 +617,13 @@ void SetPaneBackgroundColor(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-[in]指定要設定新的背景色彩] 窗格的索引。
+[in]指定要設定新的背景色彩窗格的索引。
 
 *clrBackground*<br/>
 [in]指定新的背景色彩。
 
 *bUpdate*<br/>
-[in]如果為 TRUE，請立即更新] 窗格的內容。 否則，不會更新窗格內容直到窗格都無效的另一種方法。
+[in]如果為 TRUE，請立即更新窗格的內容。 否則，不會更新窗格內容直到窗格都無效的另一種方法。
 
 ##  <a name="setpaneicon"></a>  CMFCStatusBar::SetPaneIcon
 
@@ -645,13 +645,13 @@ void SetPaneIcon(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-[in]指定要設定的映像] 窗格的索引。
+[in]指定要設定的映像窗格的索引。
 
 *hIcon*<br/>
 [in]指定要設定成窗格映像的圖示的控制代碼。
 
 *bUpdate*<br/>
-[in]指定是否要立即更新] 窗格的內容。
+[in]指定是否要立即更新窗格的內容。
 
 *hBmp*<br/>
 [in]指定要設定窗格映像為點陣圖的控制代碼。
@@ -704,7 +704,7 @@ void SetPaneProgress(
 [in]指定進度列指示器的目前值。
 
 *bUpdate*<br/>
-[in]指定是否要立即更新] 窗格。
+[in]指定是否要立即更新窗格。
 
 ### <a name="remarks"></a>備註
 
@@ -766,7 +766,7 @@ void SetPaneTextColor(
 [in]指定的文字色彩。
 
 *bUpdate*<br/>
-[in]如果為 TRUE，請立即更新] 窗格的內容。 否則，不會更新窗格內容直到窗格都無效的另一種方法。
+[in]如果為 TRUE，請立即更新窗格的內容。 否則，不會更新窗格內容直到窗格都無效的另一種方法。
 
 ##  <a name="setpanewidth"></a>  CMFCStatusBar::SetPaneWidth
 

@@ -345,10 +345,10 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
 ms.openlocfilehash: 7b4d6a31e69e75af240e0e58cbfbb7d2d24291aa
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775162"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager 類別
@@ -1252,7 +1252,7 @@ virtual void GetTabFrameColors(
 [out]這個方法儲存的索引標籤視窗框線的色彩 COLORREF 參數的參考。 框線的預設色彩為黑色。
 
 *clrHighlight*<br/>
-[out]這個方法儲存的色彩反白顯示視窗的狀態] 索引標籤的位置 COLORREF 參數的參考。
+[out]這個方法儲存的色彩反白顯示視窗的狀態索引標籤的位置 COLORREF 參數的參考。
 
 *clrFace*<br/>
 [out]這個方法儲存的索引標籤視窗的色彩 COLORREF 參數的參考。
@@ -1754,7 +1754,7 @@ virtual void OnDrawAutoHideButtonBorder(
 [in]裝置內容指標。
 
 *rectBounds*<br/>
-[in]大小和自動隱藏] 按鈕的位置。
+[in]大小和自動隱藏按鈕的位置。
 
 *rectBorderSize*<br/>
 [in]A [CRect](../../atl-mfc-shared/reference/crect-class.md)參數，其中包含的框線大小。
@@ -1991,7 +1991,7 @@ virtual void OnDrawCaptionButton (
 [in]指標`CMFCCaptionButton`物件。 Framework 繪製此標題按鈕。
 
 *bActive*<br/>
-[in]布林值參數，指定是否使用中] 按鈕。
+[in]布林值參數，指定是否使用中按鈕。
 
 *bHorz*<br/>
 [in]布林值參數，指定標題是否水平。
@@ -2199,7 +2199,7 @@ virtual void OnDrawEditBorder(
 [in]指定的界限的矩形`CMFCToolBarEditBoxButton`物件。
 
 *bDisabled*<br/>
-[in]布林值參數，指出是否無法使用] 按鈕。
+[in]布林值參數，指出是否無法使用按鈕。
 
 *bIsHighlighted*<br/>
 [in]布林值參數，指出按鈕會反白顯示。
@@ -2970,7 +2970,7 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 [in]執行個體的指標`CMFCRibbonTab`類別。 Framework 繪製此索引標籤。
 
 *bIsActive*<br/>
-[in]布林值參數，指出是否為作用中] 索引標籤。
+[in]布林值參數，指出是否為作用中索引標籤。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3480,7 +3480,7 @@ virtual void OnDrawRibbonSliderZoomButton(
 [in]布林值參數，指出是否按下按鈕。
 
 *bIsDisabled*<br/>
-[in]布林值參數，指出是否無法使用] 按鈕。
+[in]布林值參數，指出是否無法使用按鈕。
 
 ### <a name="remarks"></a>備註
 
@@ -3847,7 +3847,7 @@ virtual void OnDrawTab(
 [in]Framework 繪製索引標籤的索引。
 
 *bIsActive*<br/>
-[in]布林值參數，指定是否使用中] 索引標籤。
+[in]布林值參數，指定是否使用中索引標籤。
 
 *pTabWnd*<br/>
 [in]指標`CMFCBaseTabCtrl`物件。 Framework 繪製這個索引標籤控制項。
@@ -3922,7 +3922,7 @@ virtual void OnDrawTabContent(
 [in]索引標籤的以零為起始的索引。Framework 繪製此索引標籤的內部。
 
 *bIsActive*<br/>
-[in]布林值參數，指出是否為作用中] 索引標籤。
+[in]布林值參數，指出是否為作用中索引標籤。
 
 *pTabWnd*<br/>
 [in]指標，包含正在繪製索引標籤的索引標籤式控制項。
@@ -3962,7 +3962,7 @@ virtual void OnDrawTabsButtonBorder(
 [in]不帶正負號的整數，指定按鈕的狀態。
 
 *pWndTab*<br/>
-[in]父代] 索引標籤視窗的指標。
+[in]父代索引標籤視窗的指標。
 
 ### <a name="remarks"></a>備註
 
@@ -4228,7 +4228,7 @@ virtual void OnEraseTabsButton(
 [in]指定的索引標籤按鈕界限的矩形。
 
 *pButton*<br/>
-[in]指向的索引標籤] 按鈕。 架構會清除文字和圖示，此按鈕。
+[in]指向的索引標籤按鈕。 架構會清除文字和圖示，此按鈕。
 
 *pWndTab*<br/>
 [in]索引標籤控制項之索引標籤按鈕的指標。
@@ -4416,7 +4416,7 @@ virtual COLORREF OnFillCommandsListBackground(
 [in]指定按鈕的界限的矩形。
 
 *bIsSelected*<br/>
-[in]布林值參數，指出是否已選取] 按鈕。
+[in]布林值參數，指出是否已選取按鈕。
 
 ### <a name="return-value"></a>傳回值
 

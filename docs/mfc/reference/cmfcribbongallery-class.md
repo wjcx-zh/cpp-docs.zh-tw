@@ -79,10 +79,10 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
 ms.openlocfilehash: 818ce55e44d91520e568308a1a1e8a1fa0c8658d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780388"
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery 類別
@@ -452,7 +452,7 @@ static int GetLastSelectedItem(UINT uiCmdID);
 ### <a name="parameters"></a>參數
 
 *uiCmdID*<br/>
-[in]指定功能表項目，開啟 [功能區圖庫的命令識別碼。
+[in]指定功能表項目，開啟功能區圖庫的命令識別碼。
 
 ### <a name="return-value"></a>傳回值
 
@@ -691,7 +691,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 [in]功能區圖庫視窗的父視窗。
 
-*資料*<br/>
+*data*<br/>
 [out]A`CAccessibilityData`從功能區圖庫接收協助工具資料的物件。
 
 ### <a name="return-value"></a>傳回值

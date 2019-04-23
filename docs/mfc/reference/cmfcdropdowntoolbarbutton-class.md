@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
 ms.openlocfilehash: 5027b43e1519d9f8cc2880cc4de005d5137bbb67
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769000"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton 類別
@@ -492,7 +492,7 @@ virtual int OnDrawOnCustomizeList(
 [in]按鈕的週框。
 
 *bSelected*<br/>
-[in]是否已選取] 按鈕。 如果此參數為 TRUE 時，會選取 [] 按鈕。 如果此參數為 FALSE，未選取 按鈕。
+[in]是否已選取按鈕。 如果此參數為 TRUE 時，會選取 [] 按鈕。 如果此參數為 FALSE，未選取 按鈕。
 
 ### <a name="return-value"></a>傳回值
 

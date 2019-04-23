@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
 ms.openlocfilehash: 5fccfbca9fe8c31070f3eb9f208c09cb3722b9b9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780219"
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton 類別
@@ -254,7 +254,7 @@ void EnableOtherButton(
 [in]指定按鈕的文字。
 
 *bAltColorDlg*<br/>
-[in]指定 TRUE，即可顯示`CMFCColorDialog`] 對話方塊中或 FALSE 表示顯示標準系統的 [色彩] 對話方塊。
+[in]指定 TRUE，即可顯示`CMFCColorDialog`對話方塊中或 FALSE 表示顯示標準系統的 [色彩] 對話方塊。
 
 *bEnable*<br/>
 [in]指定 TRUE，以顯示 [其他] 按鈕，否則為 FALSE。 預設值為 TRUE。
@@ -409,7 +409,7 @@ virtual void OnDraw(
 [in]TRUE 會指定，則會顯示按鈕的框線;否則為 FALSE。 預設值為 TRUE。
 
 *bGrayDisabledButtons*<br/>
-[in]TRUE 表示指定 out; 的 [停用的按鈕會呈現灰色 (dimmed)否則為 FALSE。 預設值為 TRUE。
+[in]TRUE 表示指定 out; 的停用的按鈕會呈現灰色 (dimmed)否則為 FALSE。 預設值為 TRUE。
 
 ### <a name="remarks"></a>備註
 

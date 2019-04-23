@@ -21,17 +21,17 @@ helpviewer_keywords:
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
 ms.openlocfilehash: 9c784db2e1a482b313147e6837d6bbbd16d0ecb4
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775487"
 ---
 # <a name="toolbar-fundamentals"></a>工具列基本概念
 
 本文會說明基本的 MFC 實作，可讓您將預設工具列新增至您的應用程式中，應用程式精靈中選取一個選項。 涵蓋的主題包括：
 
-- [應用程式精靈] 的 [工具列] 選項](#_core_the_appwizard_toolbar_option)
+- [應用程式精靈的 [工具列] 選項](#_core_the_appwizard_toolbar_option)
 
 - [在程式碼中的工具列](#_core_the_toolbar_in_code)
 
@@ -68,7 +68,7 @@ ms.locfileid: "58775487"
 
 ##  <a name="_core_editing_the_toolbar_resource"></a> 編輯工具列資源
 
-得到的應用程式精靈 的預設工具列根據**RT_TOOLBAR** MFC 4.0 版中導入的自訂資源。 您可以編輯此資源[工具列編輯器](../windows/toolbar-editor.md)。 編輯器可讓您輕鬆地新增、 刪除和重新排列按鈕。 它包含的圖形化編輯器非常類似於一般圖形編輯器，在 Visual c + + 中的按鈕。 如果您編輯工具列在舊版的 Visual c + + 中，您會發現工作更容易現在。
+得到的應用程式精靈 的預設工具列根據**RT_TOOLBAR** MFC 4.0 版中導入的自訂資源。 您可以編輯此資源[工具列編輯器](../windows/toolbar-editor.md)。 編輯器可讓您輕鬆地新增、 刪除和重新排列按鈕。 它包含的圖形化編輯器非常類似於一般圖形編輯器，在視覺效果的按鈕C++。 如果您編輯工具列在視覺效果的舊版C++，您會發現工作更容易現在。
 
 若要連接的工具列按鈕命令，您為按鈕提供的命令識別碼，例如`ID_MYCOMMAND`。 工具列編輯器中的按鈕的屬性頁中指定的命令 ID。 然後建立命令處理常式函式 (請參閱[將訊息對應至函式](../mfc/reference/mapping-messages-to-functions.md)如需詳細資訊)。
 

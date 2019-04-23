@@ -151,10 +151,10 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
 ms.openlocfilehash: 93ace0388981f429ac4a422947fbdaae8cdb8f24
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781974"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl 類別
@@ -462,7 +462,7 @@ virtual BOOL Create(
 [in]位元組合 (OR)[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。
 
 *rect*<br/>
-[in]指定的大小和位置] 視窗中，在用戶端的周框座標*pParentWnd*。
+[in]指定的大小和位置視窗中，在用戶端的周框座標*pParentWnd*。
 
 *pParentWnd*<br/>
 [in]父視窗的指標。 必須不是 NULL。
@@ -1074,7 +1074,7 @@ CMFCPropertyGridProperty* HitTest(
 
 這個方法會設定變數的值， *pnArea*參數所指向。 下表列出可能的值和對應的區域。
 
-|值|區域圖|
+|值|區域|
 |-----------|----------|
 |`ClickArea::ClickExpandBox`|屬性展開方塊控制項。|
 |`ClickArea::ClickName`|屬性名稱|
@@ -1539,7 +1539,7 @@ void SetGroupNameFullWidth(
 [in]顯示完整的寬度，類別目錄名稱，不論屬性名稱資料行的寬度，則為 TRUE。 如果為 false，則類別名稱為寬度的屬性名稱資料行的寬度限制。 預設值為 TRUE。
 
 *bRedraw*<br/>
-[in]True 表示要更新立即; 屬性方格控制項為 FALSE，則下一步] 重繪事件時更新控制項就會發生。 預設值為 TRUE。
+[in]True 表示要更新立即; 屬性方格控制項為 FALSE，則下一步重繪事件時更新控制項就會發生。 預設值為 TRUE。
 
 ### <a name="remarks"></a>備註
 
@@ -1557,7 +1557,7 @@ void SetListDelimiter(TCHAR c);
 
 ### <a name="parameters"></a>參數
 
-*c*<br/>
+*C*<br/>
 [in]要做為分隔符號的字元。
 
 ### <a name="remarks"></a>備註

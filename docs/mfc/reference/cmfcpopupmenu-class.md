@@ -161,10 +161,10 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
 ms.openlocfilehash: bd6629df4274af8a4f450024f0bad6da45ae3683
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776007"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu 類別
@@ -1331,7 +1331,7 @@ void SetMaxWidth(int iMaxWidth);
 ### <a name="parameters"></a>參數
 
 *iMaxWidth*<br/>
-[in]快顯功能表的 [像素為單位最大寬度。
+[in]快顯功能表的像素為單位最大寬度。
 
 ### <a name="remarks"></a>備註
 

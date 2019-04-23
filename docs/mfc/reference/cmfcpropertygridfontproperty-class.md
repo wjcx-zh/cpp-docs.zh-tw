@@ -13,10 +13,10 @@ helpviewer_keywords:
 - CMFCPropertyGridFontProperty [MFC], GetLogFont
 ms.assetid: 83693f33-bbd3-4fcb-a9ad-fa79fcf2ca24
 ms.openlocfilehash: b348dc2ac68ced89fb0702073f57a114befaf1cb
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769351"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty 類別
@@ -85,7 +85,7 @@ CMFCPropertyGridFontProperty(
 [in]一種邏輯字型結構指定的字型屬性。
 
 *dwFontDialogFlags*<br/>
-[in]會套用至字型] 對話方塊會顯示當您按一下屬性值的下拉式按鈕的樣式。 預設值是 CF_EFFECTS 和 CF_SCREENFONTS 合 (OR)。 如需詳細資訊，請參閱 <<c0>  *旗標*的參數[CHOOSEFONT 結構](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta)。
+[in]會套用至字型對話方塊會顯示當您按一下屬性值的下拉式按鈕的樣式。 預設值是 CF_EFFECTS 和 CF_SCREENFONTS 合 (OR)。 如需詳細資訊，請參閱 <<c0>  *旗標*的參數[CHOOSEFONT 結構](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta)。
 
 *lpszDescr*<br/>
 [in][字型] 屬性的描述。 預設值是 NULL。

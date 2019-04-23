@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3461
 ms.assetid: bd66833a-545d-445a-bdfe-dee771a450a4
 ms.openlocfilehash: a674ce7819c88dd4e26355c0129a6c181da5c276
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58781948"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779017"
 ---
 # <a name="compiler-error-c3461"></a>編譯器錯誤 C3461
 
@@ -19,7 +19,7 @@ ms.locfileid: "58781948"
 
 類型轉送只能在 CLR 類型上執行。  請參閱[類別和結構](../../extensions/classes-and-structs-cpp-component-extensions.md)如需詳細資訊。
 
-如需詳細資訊，請參閱 <<c0> [ 型別轉送 (C + + /cli CLI)](../../extensions/type-forwarding-cpp-cli.md)。
+如需詳細資訊，請參閱 <<c0> [ 型別轉送 (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md)。</c0>
 
 ## <a name="example"></a>範例
 

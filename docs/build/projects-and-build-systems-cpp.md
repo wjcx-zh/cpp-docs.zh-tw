@@ -12,12 +12,12 @@ helpviewer_keywords:
 - builds [C++], options
 - Visual C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: 6a4048d741cf291d8d6173c1444b6933523c6851
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 73797f3817338c48e8ff11eaaadff71263374fd0
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58775422"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124755"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>C /C++專案，並建置在 Visual Studio 中的系統
 
@@ -35,7 +35,7 @@ ms.locfileid: "58775422"
 
 ## <a name="the-msvc-toolset"></a>MSVC 工具組
 
-MicrosoftC++編譯器、 連結器、 標準程式庫和相關的公用程式組成 MSCV 編譯器工具組 （也稱為工具鏈或 「 建置工具 」）。 這些都包含在 Visual Studio。 您也可以下載並從免費使用工具組，作為獨立封裝[Build Tools for Visual Studio 2017 下載位置](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017)。
+MicrosoftC++編譯器、 連結器、 標準程式庫和相關的公用程式組成 MSVC 編譯器工具組 （也稱為工具鏈或 「 建置工具 」）。 這些都包含在 Visual Studio。 您也可以下載並從免費使用工具組，作為獨立封裝[Build Tools for Visual Studio 2017 下載位置](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017)。
 
 您可以藉由叫用 MSVC 編譯器 (cl.exe) 直接從命令列建置簡單的程式。 下列命令會接受單一原始程式碼檔，並叫用來建置呼叫的可執行檔的 cl.exe *hello.exe*: 
 

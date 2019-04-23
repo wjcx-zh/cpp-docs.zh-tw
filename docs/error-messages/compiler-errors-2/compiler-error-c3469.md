@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3469
 ms.assetid: e23b0e5c-c704-4e67-a868-bf02c2055d85
 ms.openlocfilehash: 1e935fb90c93d6f301226f3e9029c04929f179ac
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58773277"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779069"
 ---
 # <a name="compiler-error-c3469"></a>編譯器錯誤 C3469
 
@@ -19,7 +19,7 @@ ms.locfileid: "58773277"
 
 您無法對泛型類別使用類型轉送。
 
-如需詳細資訊，請參閱 <<c0> [ 型別轉送 (C + + /cli CLI)](../../extensions/type-forwarding-cpp-cli.md)。
+如需詳細資訊，請參閱 <<c0> [ 型別轉送 (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md)。</c0>
 
 ## <a name="example"></a>範例
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3352
 ms.assetid: f233bed7-474e-425f-aad2-7801578169d4
 ms.openlocfilehash: 6641f05c8daa5ad505c0bcb8d29a369ad5fd9a9a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58779595"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778328"
 ---
 # <a name="compiler-error-c3352"></a>編譯器錯誤 C3352
 
@@ -19,7 +19,7 @@ ms.locfileid: "58779595"
 
 參數會列出`function`和委派不相符。
 
-如需詳細資訊，請參閱 <<c0> [ 委派 （c + + 元件延伸模組）](../../extensions/delegate-cpp-component-extensions.md)。
+如需詳細資訊，請參閱 <<c0> [ 委派 (C++元件擴充功能)](../../extensions/delegate-cpp-component-extensions.md)。</c0>
 
 下列範例會產生 C3352:
 

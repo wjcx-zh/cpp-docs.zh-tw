@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3400
 ms.assetid: d44169a8-73b6-4766-b406-b3a6c93f2a4d
 ms.openlocfilehash: c4b4cb64da83115ab5b6a5234cda2ea3c7ba3a53
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58768623"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778848"
 ---
 # <a name="compiler-error-c3400"></a>編譯器錯誤 C3400
 
@@ -19,7 +19,7 @@ ms.locfileid: "58768623"
 
 編譯器偵測到循環條件約束。
 
-如需詳細資訊，請參閱 <<c0> [ 泛型類型參數的條件約束 (C + + /cli CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)。
+如需詳細資訊，請參閱 <<c0> [ 泛型類型參數的條件約束 (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)。</c0>
 
 ## <a name="example"></a>範例
 

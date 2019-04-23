@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
 ms.openlocfilehash: 3daf2cd532cd07225b822c80b46fc28274d4e2a8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58778750"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779397"
 ---
 # <a name="compiler-error-c2065"></a>編譯器錯誤 C2065
 
 > '*識別碼*': 未宣告的識別項
 
-編譯器找不到識別項的宣告。 有許多可能的原因造成此錯誤。 C2065 的最常見原因是，沒有已宣告的識別項、 識別項的拼字錯誤、 宣告的識別項的位置標頭不會包含在檔案中，或識別項遺漏範圍限定詞，比方說，`cout`而不是`std::cout`. 如需有關 c + + 中宣告的詳細資訊，請參閱[宣告和定義 （c + +）](../../cpp/declarations-and-definitions-cpp.md)。
+編譯器找不到識別項的宣告。 有許多可能的原因造成此錯誤。 C2065 的最常見原因是，沒有已宣告的識別項、 識別項的拼字錯誤、 宣告的識別項的位置標頭不會包含在檔案中，或識別項遺漏範圍限定詞，比方說，`cout`而不是`std::cout`. 如需有關中宣告C++，請參閱[宣告和定義 (C++)](../../cpp/declarations-and-definitions-cpp.md)。
 
 以下是更詳細的一些常見問題和解決方案。
 
@@ -51,7 +51,7 @@ int main() {
 
 ## <a name="example-use-an-unscoped-identifier"></a>範例： 使用不限範圍的識別項
 
-如果您的識別項的範圍不正確，就會發生此錯誤。 如果您使用時，您會看到 C2065 `cout`，這是原因。 當 c + + 標準程式庫函式和運算子不會完整限定的命名空間，或不帶`std`目前的範圍內使用的命名空間`using`指示詞，編譯器找不到它們。 若要修正此問題，您必須完整限定的識別項名稱，或指定命名空間與`using`指示詞。
+如果您的識別項的範圍不正確，就會發生此錯誤。 如果您使用時，您會看到 C2065 `cout`，這是原因。 當C++標準程式庫函式和運算子不會完整限定的命名空間，或不帶`std`目前的範圍內使用的命名空間`using`指示詞，編譯器找不到它們。 若要修正此問題，您必須完整限定的識別項名稱，或指定命名空間與`using`指示詞。
 
 此範例無法編譯，因為`cout`並`endl`中所定義`std`命名空間：
 
@@ -203,9 +203,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-type-deduction-failure"></a>範例：C + + /cli CLI 型別推斷失敗
+## <a name="example-ccli-type-deduction-failure"></a>範例：C++/ CLI 型別推斷失敗
 
-如果預期的類型引數無法推算所使用的參數，當呼叫泛型函式，可以發生此錯誤。 如需詳細資訊，請參閱 <<c0> [ 泛型函式 (C + + /cli CLI)](../../extensions/generic-functions-cpp-cli.md)。
+如果預期的類型引數無法推算所使用的參數，當呼叫泛型函式，可以發生此錯誤。 如需詳細資訊，請參閱 <<c0> [ 泛型函式 (C++/CLI)](../../extensions/generic-functions-cpp-cli.md)。</c0>
 
 ```cpp
 // C2065_b.cpp
@@ -220,7 +220,7 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-attribute-parameters"></a>範例：C + + /cli CLI 屬性參數
+## <a name="example-ccli-attribute-parameters"></a>範例：C++/ CLI 屬性參數
 
 針對 Visual C++ 2005 所進行的編譯器一致性工作，也可能會導致這個錯誤：Visual C++ 屬性的參數檢查。
 

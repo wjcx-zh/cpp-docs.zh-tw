@@ -1,17 +1,17 @@
 ---
-title: 樣板特製化 （c + +）
+title: 樣板特製化 (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - partial specialization of class templates
 ms.assetid: f3c67c0b-3875-434a-b8d8-bb47e99cf4f0
 ms.openlocfilehash: 96f755b20e1de21eae47c4de0a181aa5d0738bf2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59038964"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779082"
 ---
-# <a name="template-specialization-c"></a>樣板特製化 （c + +）
+# <a name="template-specialization-c"></a>樣板特製化 (C++)
 
 類別樣板可以部分特製化，而產生的類別仍然是樣板。 部分特製化可以視情況針對特定類型部分自訂樣板程式碼，例如：
 

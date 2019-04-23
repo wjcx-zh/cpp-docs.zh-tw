@@ -23,12 +23,12 @@ helpviewer_keywords:
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-ms.openlocfilehash: 9ece21737b1e0b4d157b241286638ac376843fc6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd965271a65fa91b427c7af7bbd4173b129e1d8c
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459055"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124911"
 ---
 # <a name="wcsrtombss"></a>wcsrtombs_s
 
@@ -58,7 +58,7 @@ errno_t wcsrtombs_s(
 ### <a name="parameters"></a>參數
 
 *pReturnValue*<br/>
-已轉換的字元數。
+大小 （位元組） 的已轉換的字串，包括 null 結束字元。
 
 *mbstr*<br/>
 所產生之已轉換的多位元組字串的緩衝區位址。

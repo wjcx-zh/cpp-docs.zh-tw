@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4958
 ms.assetid: e79b9e9c-d572-4a3a-a3b6-60962b70864a
 ms.openlocfilehash: 96b73975f391493340dd01d85ad30a8c888b44c0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58769403"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779345"
 ---
 # <a name="compiler-warning-c4958"></a>編譯器警告 C4958
 
@@ -21,7 +21,7 @@ ms.locfileid: "58769403"
 
 使用指標算術會產生未經驗證的影像。
 
-如需詳細資訊，請參閱 <<c0> [ 純粹的和可驗證程式碼 (C + + /cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。
+如需詳細資訊，請參閱 <<c0> [ 純粹的和可驗證程式碼 (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。</c0>
 
 **/Clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，不支援的 Visual Studio 2017 中。
 

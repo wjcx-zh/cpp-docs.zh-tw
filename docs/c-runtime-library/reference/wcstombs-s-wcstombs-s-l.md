@@ -29,12 +29,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 105f2d33-221a-4f6d-864c-23c1865c42af
-ms.openlocfilehash: c9dc361139f8830b38910333fabedc371d84fcda
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e17fd205d734e94b61d6b80d627a192d9448e29
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579058"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124989"
 ---
 # <a name="wcstombss-wcstombssl"></a>wcstombs_s、_wcstombs_s_l
 
@@ -81,7 +81,7 @@ errno_t _wcstombs_s_l(
 ### <a name="parameters"></a>參數
 
 *pReturnValue*<br/>
-已轉換的字元數。
+大小 （位元組） 的已轉換的字串，包括 null 結束字元。
 
 *mbstr*<br/>
 所產生之已轉換的多位元組字串的緩衝區位址。

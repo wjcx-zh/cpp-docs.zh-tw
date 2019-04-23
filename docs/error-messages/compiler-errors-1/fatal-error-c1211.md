@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C1211
 ms.assetid: df0ca70d-ec6e-4400-926a-b877e2599978
 ms.openlocfilehash: f39ab027d8d81762ae1cf8f38405f3e21524da2e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58781935"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777766"
 ---
 # <a name="fatal-error-c1211"></a>嚴重錯誤 C1211
 
@@ -23,4 +23,4 @@ ms.locfileid: "58781935"
 
 若要解決 C1211，請安裝所使用編譯器隨附的 Common Language Runtime。
 
-如需詳細資訊，請參閱 <<c0> [ 型別轉送 (C + + /cli CLI)](../../extensions/type-forwarding-cpp-cli.md)。
+如需詳細資訊，請參閱 <<c0> [ 型別轉送 (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md)。</c0>

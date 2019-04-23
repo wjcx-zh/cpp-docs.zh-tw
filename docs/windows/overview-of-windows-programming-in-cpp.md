@@ -2,12 +2,12 @@
 title: 使用 C++ 設計 Windows 應用程式概觀
 ms.date: 03/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 35842ae73e59685946afe31e88729a36a6431768
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 48c7f419b6c69955ab25db528c8d3d86a7249391
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58772900"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124937"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>使用 C++ 設計 Windows 應用程式概觀
 
@@ -49,7 +49,7 @@ C++主控台應用程式從命令列主控台視窗中執行，而且可以顯�
 
 在 Windows 10 中，您可以封裝您現有的桌面應用程式或為 UWP 應用程式的 COM 物件和新增 UWP 的功能，例如觸控，或從最新的 Windows API 集呼叫 Api。 您也可以新增至桌面的方案在 Visual Studio 中，並將它們在單一封裝，並使用 Windows Api 來彼此之間通訊的封裝中的 UWP 應用程式。
 
-在 Visual Studio 2017 15.4 版和更新版本，您可以建立 Windows 應用程式封裝專案，大幅簡化封裝現有傳統型應用程式的工作。 有一些限制相對於呼叫哪些登錄或桌面應用程式的 Api 使用，但在許多情況下，您可以建立替代的程式碼路徑，以達到類似的功能，在執行中應用程式套件時。 如需詳細資訊，請參閱[傳統型橋接器](/windows-uwp/porting/desktop-to-uwp-root)。
+在 Visual Studio 2017 15.4 版和更新版本，您可以建立 Windows 應用程式封裝專案，大幅簡化封裝現有傳統型應用程式的工作。 有一些限制相對於呼叫哪些登錄或桌面應用程式的 Api 使用，但在許多情況下，您可以建立替代的程式碼路徑，以達到類似的功能，在執行中應用程式套件時。 如需詳細資訊，請參閱[傳統型橋接器](/windows/uwp/porting/desktop-to-uwp-root)。
 
 ## <a name="games"></a>遊戲
 

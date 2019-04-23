@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3282
 ms.assetid: bac2ac89-c360-4c24-bb81-c20c62ece9ba
 ms.openlocfilehash: 46be1f5250c1ca787909c48646d59180d62bd899
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58780843"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778094"
 ---
 # <a name="compiler-error-c3282"></a>編譯器錯誤 C3282
 

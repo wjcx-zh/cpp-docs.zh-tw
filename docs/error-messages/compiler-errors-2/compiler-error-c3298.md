@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3298
 ms.assetid: 458c2680-95bb-4d5e-895f-ce4115844193
 ms.openlocfilehash: fe6913d402c6ce4df3551c159eb56a12590799cb
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58773892"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779124"
 ---
 # <a name="compiler-error-c3298"></a>編譯器錯誤 C3298
 
@@ -19,7 +19,7 @@ ms.locfileid: "58773892"
 
 您不能指定條件約束的互斥特性。 例如，泛型類型參數不能同時限制為實值類型和參考類型。
 
-如需詳細資訊，請參閱 <<c0> [ 泛型類型參數的條件約束 (C + + /cli CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)。
+如需詳細資訊，請參閱 <<c0> [ 泛型類型參數的條件約束 (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)。</c0>
 
 ## <a name="example"></a>範例
 

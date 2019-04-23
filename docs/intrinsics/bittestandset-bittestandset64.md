@@ -12,15 +12,15 @@ helpviewer_keywords:
 - _bittestandset64 intrinsic
 ms.assetid: 6d6c8670-fea0-4c1c-9aad-2bb842715203
 ms.openlocfilehash: dadeeae23b1808bbee13940727a3bdbace1dad54
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028583"
 ---
 # <a name="bittestandset-bittestandset64"></a>_bittestandset, _bittestandset64
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 產生的指令會檢查位址 `b` 的位元 `a`、傳回其目前值，並將位元設為 1。
 
@@ -39,7 +39,7 @@ unsigned char _bittestandset64(
 
 #### <a name="parameters"></a>參數
 
-*一個*<br/>
+*a*<br/>
 [in、 out]要檢查的記憶體指標。
 
 *b*<br/>
@@ -147,7 +147,7 @@ Flags: 0x4
 Flags: 0x0
 ```
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

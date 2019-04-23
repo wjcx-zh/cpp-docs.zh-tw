@@ -12,10 +12,10 @@ helpviewer_keywords:
 - CCustomSource class in CustomDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
 ms.openlocfilehash: 296e7848b1d756fe0aba6156be2501db45bb092b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028596"
 ---
 # <a name="ccustomsource-customdsh"></a>CCustomSource (CustomDS.h)
@@ -176,7 +176,7 @@ struct UPROPINFO
 
 ## <a name="user-defined-property-sets"></a>使用者定義的屬性集
 
-Visual c + + 支援使用者定義的屬性集。 您不需要覆寫`GetProperties`或`GetPropertyInfo`。 相反地，範本會偵測到任何使用者定義的屬性集，並將它新增至適當的物件。
+視覺化C++支援使用者定義的屬性集。 您不需要覆寫`GetProperties`或`GetPropertyInfo`。 相反地，範本會偵測到任何使用者定義的屬性集，並將它新增至適當的物件。
 
 如果您有必須可在初始化階段的使用者定義的屬性集 (亦即，取用者呼叫之前`IDBInitialize::Initialize`)，您可以指定此使用 UPROPSET_USERINIT 旗標以及 BEGIN_PROPERTY_SET_EX 巨集。 此工作 （如 OLE DB 規格需要） 的資料來源物件必須是屬性集。 例如: 
 

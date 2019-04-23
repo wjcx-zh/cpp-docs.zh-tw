@@ -1,5 +1,5 @@
 ---
-title: 彙總 （c + + COM 屬性）
+title: 彙總 (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.aggregates
@@ -10,10 +10,10 @@ helpviewer_keywords:
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
 ms.openlocfilehash: 12e6af31c2714095cf2ecf51e4f067081789a9e0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028694"
 ---
 # <a name="aggregates"></a>彙總
@@ -96,5 +96,5 @@ struct CObject : IObject
 [類別屬性](class-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)<br/>
 [彙總](/windows/desktop/com/aggregation)<br/>
-[可彙總](/windows/desktop/Midl/aggregatable)<br/>
+[彙總](/windows/desktop/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)

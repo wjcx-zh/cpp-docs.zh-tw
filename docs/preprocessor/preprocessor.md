@@ -5,10 +5,10 @@ helpviewer_keywords:
 - preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
 ms.openlocfilehash: b1443d88fdba470cb8ed5058c9a9012bfbdc5bc7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028570"
 ---
 # <a name="preprocessor"></a>前置處理器
@@ -24,11 +24,11 @@ ms.locfileid: "59028570"
 
 - [Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 您可以取得您的程式碼使用前置處理後的清單[/E](../build/reference/e-preprocess-to-stdout.md)或是[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)編譯器選項。 兩個選項均會叫用前置處理器，並將產生的文字輸出到標準輸出裝置 (通常是主控台)。 這兩個選項之間的差異是 /E 包括 `#line` 指示詞，而 /EP 則會刪除這些指示詞。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ##  <a name="_predir_special_terminology"></a> 特殊術語
 

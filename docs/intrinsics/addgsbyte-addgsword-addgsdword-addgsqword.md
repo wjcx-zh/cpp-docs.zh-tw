@@ -17,15 +17,15 @@ helpviewer_keywords:
 - __addgsbyte intrinsic
 ms.assetid: 4fa03e69-d849-49ed-ba37-1d3aa23c2a21
 ms.openlocfilehash: 61fff704e600296443964ab62a0b58799c87b51b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031218"
 ---
 # <a name="addgsbyte-addgsword-addgsdword-addgsqword"></a>__addgsbyte、__addgsword、__addgsdword、__addgsqword
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 將值新增至相對於開頭的位移所指定的記憶體位置`GS`區段。
 
@@ -52,10 +52,10 @@ void __addgsqword(
 
 #### <a name="parameters"></a>參數
 
-*位移*<br/>
+*Offset*<br/>
 [in]從開頭的位移`GS`。
 
-*資料*<br/>
+*Data*<br/>
 [in]要加入之記憶體位置的值。
 
 ## <a name="requirements"></a>需求
@@ -71,11 +71,11 @@ void __addgsqword(
 
 這些常式僅可作為內建。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 
-[__incgsbyte, \__incgsword, \__incgsdword, \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)<br/>
+[__incgsbyte、 \__incgsword， \__incgsdword， \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)<br/>
 [__readgsbyte、 \__readgsdword， \__readgsqword， \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)<br/>
 [__writegsbyte、 \__writegsdword， \__writegsqword， \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)<br/>
 [編譯器內建](../intrinsics/compiler-intrinsics.md)

@@ -1,5 +1,5 @@
 ---
-title: switch_type （c + + COM 屬性）
+title: switch_type (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_type
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
 ms.openlocfilehash: b461769d3d988efae0be7380e1e0112e3f3cf801
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027853"
 ---
 # <a name="switchtype"></a>switch_type
@@ -27,14 +27,14 @@ type
 
 ### <a name="parameters"></a>參數
 
-*類型*<br/>
+*type*<br/>
 參數型別可以是整數、 字元、 布林值或列舉類型。
 
 ## <a name="remarks"></a>備註
 
-**Switch_type** c + + 屬性具有相同的功能[switch_type](/windows/desktop/Midl/switch-type) MIDL 屬性。
+**Switch_type** C++屬性具有相同的功能[switch_type](/windows/desktop/Midl/switch-type) MIDL 屬性。
 
-不支援 c + + 屬性[封裝等位](/windows/desktop/Midl/encapsulated-unions)。 [Nonencapsulated 等位](/windows/desktop/Midl/nonencapsulated-unions)只支援下列格式：
+C++不支援屬性[封裝等位](/windows/desktop/Midl/encapsulated-unions)。 [Nonencapsulated 等位](/windows/desktop/Midl/nonencapsulated-unions)只支援下列格式：
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp
@@ -74,4 +74,4 @@ struct SizedValue2 {
 
 [IDL 屬性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)<br/>
-[匯出](export.md)
+[export](export.md)

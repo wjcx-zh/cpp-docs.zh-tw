@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：建立標準的 c + + 程式 （c + +）
+title: 逐步解說：建立標準C++程式 (C++)
 ms.custom: get-started-article
 ms.date: 09/18/2018
 f1_keywords:
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
 ms.openlocfilehash: d58d23e757a97402985ef60badf551523c0a275e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030617"
 ---
-# <a name="walkthrough-creating-a-standard-c-program-c"></a>逐步解說：建立標準的 c + + 程式 （c + +）
+# <a name="walkthrough-creating-a-standard-c-program-c"></a>逐步解說：建立標準C++程式 (C++)
 
-您可以使用 Visual Studio 整合式的開發環境 (IDE) 中的 Visual c + + 來建立標準 c + + 程式。 依照本逐步解說中的步驟，您可以建立專案、 將新檔案新增至專案、 修改檔案以加入 c + + 程式碼，然後編譯及執行使用 Visual Studio 的程式。
+您可以使用視覺效果C++Visual Studio 整合式的開發環境 (IDE) 建立標準C++程式。 依照本逐步解說中的步驟，建立專案、 將新檔案新增至專案、 修改檔案以新增C++程式碼，然後編譯及執行使用 Visual Studio 的程式。
 
-您可以輸入自己的 c + + 程式，或使用其中一個範例程式。 在本逐步解說的範例程式是主控台應用程式。 此應用程式使用`set`c + + 標準程式庫中的容器。
+您也可以輸入自己C++程式，或使用其中一個範例程式。 在本逐步解說的範例程式是主控台應用程式。 此應用程式會使用`set`容器中的C++標準程式庫。
 
-Visual c + + 會遵循 2003 c + + 標準，但有下列主要例外狀況： 兩階段名稱查閱、 例外狀況規格和匯出。 此外，Visual c + + 支援數種 c++0x 功能，比方說，lambda、 auto、 static_assert、 rvalue 參考和 extern 範本。
+視覺化C++會遵循 2003年C++標準，而且下列主要例外狀況： 兩階段名稱查閱、 例外狀況規格和匯出。 此外，VisualC++支援數種 c++0x 功能，例如 lambda、 auto、 static_assert、 右值參考和 extern 範本。
 
 > [!NOTE]
 > 如果需要合規性標準，使用`/Za`編譯器選項來停用標準的 Microsoft 擴充功能。 如需詳細資訊，請參閱 < [/Za，/Ze （停用語言擴充功能）](../build/reference/za-ze-disable-language-extensions.md)。
@@ -35,10 +35,10 @@ Visual c + + 會遵循 2003 c + + 標準，但有下列主要例外狀況： 兩
 
 1. 建立專案，指向**的新**上**檔案**功能表，然後按一下**專案**。
 
-1. 在  **Visual c + +** 專案類型 窗格中，按一下  **Windows 桌面**，然後按一下**Windows 主控台應用程式**。
+1. 在  **Visual C++** 專案類型 窗格中，按一下  **Windows 桌面**，然後按一下**Windows 主控台應用程式**。
 
    > [!NOTE]
-   > Visual Studio 2017，以前的版本中**新的專案**對話方塊方塊中，展開**已安裝** > **範本** >  **Visual c + +**，然後選取**Win32**。 在中央窗格中，選取 [Win32 主控台應用程式] 。
+   > Visual Studio 2017，以前的版本中**新的專案**對話方塊方塊中，展開**已安裝** > **範本** >  **視覺化C++** ，然後選取**Win32**。 在中央窗格中，選取 [Win32 主控台應用程式] 。
 
    輸入專案的名稱。
 
@@ -55,11 +55,11 @@ Visual c + + 會遵循 2003 c + + 標準，但有下列主要例外狀況： 兩
 
    1. 中**方案總管**，以滑鼠右鍵按一下**原始程式檔**資料夾，指向**新增**，然後按一下**新項目**。
 
-   1. 在 **程式碼**節點，按一下**c + + 檔 (.cpp)**，輸入檔案的名稱，然後按一下**新增**。
+   1. 在 **程式碼**節點，按一下**C++檔 (.cpp)**，輸入檔案的名稱，然後按一下**新增**。
 
    .Cpp 檔案中會出現在**原始程式檔**中的資料夾**方案總管 中**，和 Visual Studio 編輯器中開啟檔案。
 
-1. 在檔案中在編輯器中，輸入有效的 c + + 程式，使用 c + + 標準程式庫，或複製其中一個範例程式，並將它貼在檔案中。
+1. 在檔案中在編輯器中，輸入有效的C++程式，使用C++標準程式庫或複製其中一個範例程式，並將它貼在檔案中。
 
 1. 儲存檔案。
 

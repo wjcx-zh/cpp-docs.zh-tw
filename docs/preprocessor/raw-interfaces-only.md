@@ -7,14 +7,14 @@ helpviewer_keywords:
 - raw_interfaces_only attribute
 ms.assetid: 87056c6d-3f34-4248-af58-f5775a35bfb7
 ms.openlocfilehash: 48133b85ccb5ddb8de8e6cb614d41cde22dac66b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028256"
 ---
 # <a name="rawinterfacesonly"></a>raw_interfaces_only
-**C++ 專有的**
+**C++特定**
 
 隱藏的錯誤處理的包裝函式產生及[屬性](../cpp/property-cpp.md)使用這些包裝函式的宣告。
 
@@ -30,7 +30,7 @@ raw_interfaces_only
 
 這個屬性只能讓您公開類型程式庫中的低階內容。
 
-**END C++ 特定的**
+**結束C++特定**
 
 ## <a name="see-also"></a>另請參閱
 

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - __emulu intrinsic
 ms.assetid: 79545236-cca2-40b8-a4e1-8abce9b26311
 ms.openlocfilehash: 8657c0fb034ac6bbcfbebb946e059ad08d9e7046
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030046"
 ---
 # <a name="emul-emulu"></a>__emul、__emulu
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 執行乘法運算可以保存的 32 位元整數的溢位。
 
@@ -38,7 +38,7 @@ unsigned __int64 __emulu(
 
 #### <a name="parameters"></a>參數
 
-*一個*<br/>
+*a*<br/>
 [in]第一個整數運算元的乘法運算。
 
 *b*<br/>
@@ -102,7 +102,7 @@ int main()
 4294967295 * 251658240 = 1080863910317260800
 ```
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pragmas, alloc_text
 ms.assetid: 1fd7be18-e4f7-4f70-b079-6326f72b871a
 ms.openlocfilehash: 399e8956a511f289b480e66db7f03cac0a6c7c20
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031356"
 ---
 # <a name="alloctext"></a>alloc_text
@@ -28,7 +28,7 @@ textsection
 
 ## <a name="remarks"></a>備註
 
-**Alloc_text** pragma 不會處理 c + + 成員函式 」 或 「 多載函式。 它是僅適用使用 C 連結宣告的函式 — 也就是宣告的函式與**extern"C"** 連結規格。 如果您嘗試在使用 C++ 連結的函式上使用這個 pragma，則會產生編譯器錯誤。
+**Alloc_text** pragma 不會處理C++成員函式 」 或 「 多載函式。 它是僅適用使用 C 連結宣告的函式 — 也就是宣告的函式與**extern"C"** 連結規格。 如果您嘗試在使用 C++ 連結的函式上使用這個 pragma，則會產生編譯器錯誤。
 
 因為函式定址使用`__based`不支援，指定區段位置需要使用**alloc_text** pragma。 所指定的名稱*textsection*應該用雙引號括住。
 

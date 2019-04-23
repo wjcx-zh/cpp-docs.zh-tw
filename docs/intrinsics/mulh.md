@@ -7,15 +7,15 @@ helpviewer_keywords:
 - __mulh intrinsic
 ms.assetid: cd2ab093-9ef6-404d-ac34-0bee033882f3
 ms.openlocfilehash: 122d7ff28a01c0b95c16c6a0f4cd20e883744d2e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034153"
 ---
 # <a name="mulh"></a>__mulh
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 傳回兩個 64 位元帶正負號整數的乘積的 64 高位。
 
@@ -30,7 +30,7 @@ __int64 __mulh(
 
 #### <a name="parameters"></a>參數
 
-*一個*<br/>
+*a*<br/>
 [in]要相乘的第一個數字。
 
 *b*<br/>
@@ -79,7 +79,7 @@ int main()
 0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000
 ```
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

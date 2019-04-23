@@ -7,10 +7,10 @@ helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
 ms.openlocfilehash: 227e67696e679452a9c6c0e18c04e3d918f7a93f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029430"
 ---
 # <a name="custom-c"></a>custom (C++)
@@ -36,7 +36,7 @@ ms.locfileid: "59029430"
 
 ## <a name="remarks"></a>備註
 
-**自訂**c + + 屬性會放入類型程式庫的資訊。 您必須讀取類型程式庫中的自訂值的工具。
+**自訂**C++屬性會放入類型程式庫的資訊。 您必須讀取類型程式庫中的自訂值的工具。
 
 **自訂**屬性有相同的功能[自訂](/windows/desktop/Midl/custom)MIDL 屬性。
 

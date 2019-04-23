@@ -9,15 +9,15 @@ helpviewer_keywords:
 - InterlockedAddLargeStatistic intrinsic
 ms.assetid: 2802e74b-bcee-46e4-b562-894908d44409
 ms.openlocfilehash: 6f9d599a8d7668c6c8a37846275e8338002589d1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033410"
 ---
 # <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 執行連鎖的相加的第一個運算元的 64 位元值。
 
@@ -56,7 +56,7 @@ long _InterlockedAddLargeStatistic(
 
 此函式的行為為讀寫屏障。 如需詳細資訊，請參閱 < [_ReadWriteBarrier](../intrinsics/readwritebarrier.md)。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

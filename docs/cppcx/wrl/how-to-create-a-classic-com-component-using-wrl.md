@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
 ms.openlocfilehash: bb38f36cdd481e61d049f82159fdc24c3726f646
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031838"
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>HOW TO：建立傳統 COM 元件，使用 WRL
 
-若要建立基本的傳統 COM 元件，用於桌面應用程式，除了使用通用 Windows 平台 (UWP) 應用程式中，您可以使用 Windows 執行階段 c + + 範本庫 (WRL)。 建立 COM 元件時，Windows 執行階段 c + + 樣板程式庫可能需要比 ATL 少的程式碼 Windows 執行階段 c + + 樣板程式庫支援的 COM 子集詳細資訊，請參閱[Windows 執行階段 c + + 範本庫 (WRL)](windows-runtime-cpp-template-library-wrl.md)。
+您可以使用 Windows 執行階段C++範本庫 (WRL) 若要使用的通用 Windows 平台 (UWP) 應用程式另外建立基本的傳統 COM 元件，以用於桌面應用程式。 COM 元件、 Windows 執行階段建立C++樣板程式庫可能需要比 ATL 少的程式碼 如的 COM 子集詳細資訊，Windows 執行階段C++範本程式庫支援，請參閱 < [Windows 執行階段C++範本程式庫 (WRL)](windows-runtime-cpp-template-library-wrl.md)。
 
-本文件說明如何使用 Windows 執行階段 c + + 樣板程式庫來建立基本的 COM 元件。 雖然您可以使用最符合您需求的部署機制，這份文件也顯示註冊和使用桌面應用程式之 COM 元件的基本方法。
+本文件說明如何使用 Windows 執行階段C++來建立基本的 COM 元件的範本庫。 雖然您可以使用最符合您需求的部署機制，這份文件也顯示註冊和使用桌面應用程式之 COM 元件的基本方法。
 
-### <a name="to-use-the-windows-runtime-c-template-library-to-create-a-basic-classic-com-component"></a>若要使用 Windows 執行階段 c + + 樣板程式庫來建立基本的傳統 COM 元件
+### <a name="to-use-the-windows-runtime-c-template-library-to-create-a-basic-classic-com-component"></a>若要使用 Windows 執行階段C++來建立基本的傳統 COM 元件的範本庫
 
 1. 在 Visual Studio 中建立**空白方案**專案。 將專案命名為，比方說， `WRLClassicCOM`。
 
@@ -84,10 +84,10 @@ ms.locfileid: "59031838"
 
 ## <a name="robust-programming"></a>穩固程式設計
 
-這份文件會使用標準的 COM 函式，來示範，您可以使用 Windows 執行階段 c + + 樣板程式庫來撰寫 COM 元件，並使其可用於任何啟用 COM 的技術。 您也可以如使用 Windows 執行階段 c + + 樣板程式庫類型[Microsoft::WRL::ComPtr](comptr-class.md)在傳統型應用程式管理 COM 和其他物件的存留期。 下列程式碼會使用 Windows 執行階段 c + + 樣板程式庫管理的存留期`ICalculatorComponent`指標。 `CoInitializeWrapper` 類別是 RAII 包裝函式，可保證釋放 COM 程式庫，也可保證 COM 程式庫的存留期超過 `ComPtr` 智慧型指標物件的存留期。
+這份文件會使用標準的 COM 函式示範您可以使用 Windows 執行階段C++撰寫 COM 元件，並使其可供任何啟用 COM 的技術的樣板程式庫。 您也可以使用 Windows 執行階段C++樣板程式庫類型，例如[Microsoft::WRL::ComPtr](comptr-class.md)在傳統型應用程式管理 COM 和其他物件的存留期。 下列程式碼會使用 Windows 執行階段C++樣板程式庫來管理存留期`ICalculatorComponent`指標。 `CoInitializeWrapper` 類別是 RAII 包裝函式，可保證釋放 COM 程式庫，也可保證 COM 程式庫的存留期超過 `ComPtr` 智慧型指標物件的存留期。
 
 [!code-cpp[wrl-classic-com-component#7](../codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_7.cpp)]
 
 ## <a name="see-also"></a>另請參閱
 
-[Windows Runtime C++ Template Library (WRL)](windows-runtime-cpp-template-library-wrl.md)
+[Windows 執行階段 C++ 範本庫 (WRL)](windows-runtime-cpp-template-library-wrl.md)

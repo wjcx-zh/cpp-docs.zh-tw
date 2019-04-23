@@ -1932,10 +1932,10 @@ helpviewer_keywords:
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
 ms.openlocfilehash: 47fd2f449568494bafde993e035d3ec37c44f6fe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027622"
 ---
 # <a name="arm-intrinsics"></a>ARM 內建
@@ -1946,7 +1946,7 @@ Visual C++ 編譯器讓 ARM 架構上可使用下列內建函式。 如需有關
 
 ARM NEON 向量指令集擴充功能，提供類似通用於 x86 和 x64 架構處理器的 MMX 和 SSE 向量指令集中的單一指令多重資料 (SIMD) 功能。
 
-支援 NEON 內建函式，並提供於標頭檔 `arm_neon.h` 中。 NEON 內建函式的 Visual c + + 編譯器支援類似 ARM 編譯器，所說明的 < 附錄 G [ARM 編譯器工具鏈版本 4.1 編譯器參考](http://go.microsoft.com/fwlink/p/?LinkId=251083)ARM 資訊中心網站上。
+支援 NEON 內建函式，並提供於標頭檔 `arm_neon.h` 中。 視覺效果C++NEON 內建函式的編譯器支援類似 ARM 編譯器，所說明的 < 附錄 G [ARM 編譯器工具鏈版本 4.1 編譯器參考](http://go.microsoft.com/fwlink/p/?LinkId=251083)ARM 資訊中心網站上。
 
 Visual C++ 編譯器及 ARM 編譯器的主要差異在於，Visual C++ 編譯器加入了 `_ex` 和 `vldX` 向量載入和儲存指令的 `vstX` 變異。 `_ex` 變異採取額外的參數，以指定指標引數的對齊，除此之外，與非 `_ex` 對應項目均相同。
 
@@ -2225,7 +2225,7 @@ int _MoveFromCoprocessor2(
 
 此內建函式的所有五個參數值，必須是在編譯時期已知的常數運算式。
 
-`_MoveFromCoprocessor` 使用 MRC 指令;`_MoveFromCoprocessor2`使用 MRC2。 對應到位元欄位的參數，這些參數會直接編碼到指令文字中。 參數的解譯會因副處理器而異。 如需詳細資訊，請參閱該副處理器的手冊。
+`_MoveFromCoprocessor` 使用 MRC 指令；`_MoveFromCoprocessor2` 使用 MRC2。 對應到位元欄位的參數，這些參數會直接編碼到指令文字中。 參數的解譯會因副處理器而異。 如需詳細資訊，請參閱該副處理器的手冊。
 
 ###  <a name="MoveFromCo64"></a> _MoveFromCoprocessor64
 
@@ -2312,7 +2312,7 @@ void _MoveToCoprocessor2(
 
 此內建函式的 `coproc`、`opcode1`、`crn`、`crm` 及 `opcode2` 參數值，必須是在編譯時期已知的常數運算式。
 
-`_MoveToCoprocessor` 使用 MCR 指令;`_MoveToCoprocessor2`使用 MCR2。 對應到位元欄位的參數，這些參數會直接編碼到指令文字中。 參數的解譯會因副處理器而異。 如需詳細資訊，請參閱該副處理器的手冊。
+`_MoveToCoprocessor` 使用 MCR 指令；`_MoveToCoprocessor2` 使用 MCR2。 對應到位元欄位的參數，這些參數會直接編碼到指令文字中。 參數的解譯會因副處理器而異。 如需詳細資訊，請參閱該副處理器的手冊。
 
 ###  <a name="MoveToCo64"></a> _MoveToCoprocessor64
 
@@ -2578,5 +2578,5 @@ void _MoveFromCoprocessor64(
 ## <a name="see-also"></a>另請參閱
 
 [編譯器內建](../intrinsics/compiler-intrinsics.md)<br/>
-[ARM 組合程式參考](../assembler/arm/arm-assembler-reference.md)<br/>
+[ARM 組譯工具參考](../assembler/arm/arm-assembler-reference.md)<br/>
 [C++ 語言參考](../cpp/cpp-language-reference.md)

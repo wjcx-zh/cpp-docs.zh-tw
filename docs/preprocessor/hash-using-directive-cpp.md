@@ -1,5 +1,5 @@
 ---
-title: '#using 指示詞 (C + + /cli CLI)'
+title: '#using 指示詞 (C++/CLI)'
 ms.date: 10/18/2018
 f1_keywords:
 - friend_as_cpp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
 ms.openlocfilehash: ddae6137e94e10f5701e1e7d0f8f7a7514b18662
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034257"
 ---
-# <a name="using-directive-ccli"></a>#using 指示詞 (C + + /cli CLI)
+# <a name="using-directive-ccli"></a>#using 指示詞 (C++/CLI)
 
 中繼資料匯入程式，以編譯[/clr](../build/reference/clr-common-language-runtime-compilation.md)。
 
@@ -31,13 +31,13 @@ ms.locfileid: "59034257"
 
 ### <a name="parameters"></a>參數
 
-*檔案*<br/>
+*file*<br/>
 MSIL .dll、.exe、.netmodule 或 .obj。例如，套用至物件的
 
 `#using <MyComponent.dll>`
 
 *as_friend*<br/>
-指定中的所有類型*檔案*存取。 如需詳細資訊，請參閱 < [Friend 組件 （c + +）](../dotnet/friend-assemblies-cpp.md)。
+指定中的所有類型*檔案*存取。 如需詳細資訊，請參閱 < [Friend 組件 (C++)](../dotnet/friend-assemblies-cpp.md)。
 
 ## <a name="remarks"></a>備註
 

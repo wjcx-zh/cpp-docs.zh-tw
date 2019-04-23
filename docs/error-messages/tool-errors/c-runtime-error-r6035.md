@@ -7,15 +7,15 @@ helpviewer_keywords:
 - R6035
 ms.assetid: f8fb50b8-18bf-4258-b96a-b0a9de468d16
 ms.openlocfilehash: cbade3ce8686c8c293b8d40a73c546805e42215d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034017"
 ---
 # <a name="c-runtime-error-r6035"></a>C 執行階段錯誤 R6035
 
-Microsoft Visual c + + 執行階段程式庫，錯誤 R6035-此應用程式中的模組正在初始化模組的全域安全性 cookie，依賴該安全性 cookie 的函式作用中時。  呼叫 __security_init_cookie 稍早所示。
+Microsoft VisualC++執行階段程式庫、 錯誤 R6035-此應用程式中的模組正在初始化模組的全域安全性 cookie 依賴該安全性 cookie 的函式作用中時。  呼叫 __security_init_cookie 稍早所示。
 
 [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md)全域安全性 cookie 第一次使用之前必須先呼叫。
 
@@ -66,7 +66,7 @@ void DllEntryHelper() {
 在此情況下，： DllEntryPoint 不會受到保護的緩衝區滿溢 （它有沒有本機字串緩衝區，但未使用結構化例外狀況處理）;因此可以安全地呼叫`__security_init_cookie`。 接著，它會呼叫受保護的 helper 函式。
 
 > [!NOTE]
->  R6035 是錯誤訊息只由 x86 產生偵錯 CRT，並只會針對結構化例外狀況處理，但條件所有平台，而且可用於所有形式的例外狀況的錯誤處理，例如 c + + EH。
+>  R6035 是錯誤訊息只由 x86 產生偵錯 CRT，並只會針對結構化例外狀況處理，但條件所有平台，而且可用於所有形式的例外狀況的錯誤處理，例如C++EH。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,5 +1,5 @@
 ---
-title: emitidl （c + + COM 屬性）
+title: emitidl (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.emitidl
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - emitidl attribute
 ms.assetid: 85b80c56-578e-4392-ac03-8443c74ebb7d
 ms.openlocfilehash: 6c4055e0f14bced1e5047fc502a4bf274126f804
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031630"
 ---
 # <a name="emitidl"></a>emitidl
@@ -25,7 +25,7 @@ ms.locfileid: "59031630"
 
 ### <a name="parameters"></a>參數
 
-*狀態*<br/>
+*state*<br/>
 其中一個可能的值： `true`， `false`， `forced`， `restricted`， `push`，或`pop`。
 
 - 如果`true`，在原始程式碼檔案中遇到的任何 IDL 類別目錄屬性會放在所產生的.idl 檔案。 這是預設設定，如**emitidl**。
@@ -46,7 +46,7 @@ ms.locfileid: "59031630"
 
 ## <a name="remarks"></a>備註
 
-在後**emitidl**原始程式碼檔案中發生 c + + 屬性、 類別目錄的 IDL 屬性會放在所產生的.idl 檔案。 如果沒有任何**emitidl**原始程式碼檔案中的 IDL 屬性的屬性，會輸出到產生的.idl 檔案。
+在後**emitidl** C++原始程式碼檔中遇到的屬性、 類別目錄的 IDL 屬性會放在所產生的.idl 檔案。 如果沒有任何**emitidl**原始程式碼檔案中的 IDL 屬性的屬性，會輸出到產生的.idl 檔案。
 
 很可能有多個**emitidl**原始程式碼檔案中的屬性。 如果`[emitidl(false)];`沒有後續的檔案中遇到`[emitidl(true)];`，則沒有屬性，都會處理到所產生的.idl 檔案。
 

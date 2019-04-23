@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pragmas, hdrstop
 ms.assetid: 5ea8370a-10d1-4538-ade6-4c841185da0e
 ms.openlocfilehash: 1590b5916a8d9c00b6e988bacc7cd857c29d6775
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035211"
 ---
 # <a name="hdrstop"></a>hdrstop
@@ -28,9 +28,9 @@ ms.locfileid: "59035211"
 
 *檔名*是要使用或建立先行編譯標頭檔的名稱 (取決於是否[/Yu](../build/reference/yu-use-precompiled-header-file.md)或是[/Yc](../build/reference/yc-create-precompiled-header-file.md)指定)。 如果*filename*不包含路徑規格，會假設先行編譯標頭檔中的原始程式檔相同的目錄。
 
-如果 C 或 c + + 檔案包含**hdrstop**編譯時的 pragma `/Yc`，編譯器儲存編譯的 pragma 的位置的狀態。 pragma 後方任何程式碼的編譯狀態都不會儲存。
+如果 C 或C++檔案包含**hdrstop**編譯時的 pragma `/Yc`，，編譯器儲存編譯狀態的最多的 pragma 的位置。 pragma 後方任何程式碼的編譯狀態都不會儲存。
 
-使用*filename*在其中儲存編譯的狀態的先行編譯標頭檔命名。 之間的空格**hdrstop**並*filename*是選擇性的。 在指定的檔名**hdrstop** pragma 是字串，因此受限於的任何 C 或 c + + 字串條件約束。 請特別注意，您必須使用引號將其括住，以及使用逸出字元 (反斜線) 來指定目錄名稱。 例如：
+使用*filename*在其中儲存編譯的狀態的先行編譯標頭檔命名。 之間的空格**hdrstop**並*filename*是選擇性的。 在指定的檔名**hdrstop** pragma 是字串，因此受限於條件約束的任何 C 或C++字串。 請特別注意，您必須使用引號將其括住，以及使用逸出字元 (反斜線) 來指定目錄名稱。 例如: 
 
 ```
 #pragma hdrstop( "c:\\projects\\include\\myinc.pch" )

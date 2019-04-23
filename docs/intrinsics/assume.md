@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
 ms.openlocfilehash: 1d84e9306dcd468153f38cc0c3085b43388e1dbd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029417"
 ---
 # <a name="assume"></a>__assume
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 傳遞提示給最佳化程式。
 
@@ -31,7 +31,7 @@ __assume(
 
 #### <a name="parameters"></a>參數
 
-*運算式*<br/>
+*expression*<br/>
 假設評估為 true 的任何運算式。
 
 ## <a name="remarks"></a>備註
@@ -114,7 +114,7 @@ int main(int p)
       NODEFAULT;
 ```
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

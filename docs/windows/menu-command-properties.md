@@ -1,5 +1,5 @@
 ---
-title: 功能表命令 （c + +）
+title: 功能表命令 (C++)
 ms.date: 02/15/2019
 helpviewer_keywords:
 - menu items, properties
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
 ms.openlocfilehash: c9abf46907c473d4cf6d9e945038f70aa75bfc48
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026275"
 ---
-# <a name="menu-commands-c"></a>功能表命令 （c + +）
+# <a name="menu-commands-c"></a>功能表命令 (C++)
 
 下列資訊會根據組織**功能表**屬性中出現[屬性 視窗](/visualstudio/ide/reference/properties-window)當您選取功能表命令。 這些字母順序列出雖然**屬性**視窗也可讓您依類別檢視這些屬性。
 
@@ -36,7 +36,7 @@ ms.locfileid: "59026275"
 |**已啟用**|若為 **False**，則會停用功能表項目。|
 |**呈現灰色**|如果 **，則為 True**，功能表命令是一開始呈現灰色，而且非使用中。 類型：**Bool**。 預設：**False**。|
 |**說明**|將功能表項目對齊右邊。 預設：**False**。<br/><br/>例如，[ **說明** ] 功能表命令一律在所有 Windows 應用程式的右邊。 如果您在功能表項目上設定這個屬性，該項目將出現在功能表的最右邊和最尾端。 適用於最上層項目。|
-|**識別碼**|定義在標頭中的符號。 類型：**符號**，**整數**，或**加引號的字串**。<br/><br/>您可以使用任何通常可在任何編輯器使用的符號，即使 [屬性視窗](/visualstudio/ide/reference/properties-window) 未提供可讓您從中選取的下拉式清單也一樣。|
+|**ID**|定義在標頭中的符號。 類型：**符號**，**整數**，或**加引號的字串**。<br/><br/>您可以使用任何通常可在任何編輯器使用的符號，即使 [屬性視窗](/visualstudio/ide/reference/properties-window) 未提供可讓您從中選取的下拉式清單也一樣。|
 |**快顯**|如果 **，則為 True**，功能表命令是快顯功能表。 類型：**Bool**。 預設：**真**最上層功能表的功能表列，否則為**False**。|
 |**提示**|包含反白顯示此功能表命令時要出現在狀態列的文字。 文字會放在字串表中，其識別碼與功能表命令相同。<br/><br/>這個屬性適用於任何類型的專案，但執行階段功能則專屬於 MFC。|
 |**由右至左對齊**|在執行階段將功能表列上的功能表命令靠右對齊。 類型：**Bool**。 預設：**False**。|
@@ -71,7 +71,7 @@ MFC 應用程式可以針對每個使用者可以選取功能表命令顯示描�
 
 - 若要將功能表命令與狀態列文字字串中，MFC 應用程式，在**功能表編輯器**，選取功能表命令。 在 [屬性視窗](/visualstudio/ide/reference/properties-window)的 [ **提示** ] 方塊中，輸入相關聯的狀態列文字。
 
-在 c + + 專案中，您可以加入您的功能表和功能表命令指派便捷鍵 （助憶鍵，可讓使用者選取 [鍵盤] 功能表）。
+在C++專案中，您可以加入您的功能表和功能表命令指派便捷鍵 （助憶鍵，可讓使用者選取 [鍵盤] 功能表）。
 
 - 若要為功能表命令指派便捷 （捷徑） 鍵，請輸入連字號 (`&`) 內的功能表名稱或命令名稱，即可該字母指定為對應的便捷鍵的字母前面。 
 

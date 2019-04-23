@@ -1,5 +1,5 @@
 ---
-title: '#匯入指示詞 （c + +）'
+title: '#import 指示詞 (C++)'
 ms.date: 03/27/2019
 f1_keywords:
 - '#import'
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
 ms.openlocfilehash: 98a0f9f66fb209bb41215fc1e86a9682a4fed023
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031981"
 ---
 # <a name="import-directive-c"></a>#import 指示詞 (C++)
 
-**C++ 專有的**
+**C++特定**
 
 用來加入類型程式庫中的資訊。 類型程式庫的內容會轉換成 C++ 類別，多半是在描述 COM 介面。
 
@@ -66,7 +66,7 @@ ms.locfileid: "59031981"
 - 可以理解的任何其他檔案格式**LoadTypeLib** API。
 
 *屬性*<br/>
-一或多個[#import 屬性](#_predir_the_23import_directive_import_attributes)。 使用空格或逗號分隔屬性。 例如: 
+一或多個[#import 屬性](#_predir_the_23import_directive_import_attributes)。 使用空格或逗號分隔屬性。 例如：
 
 ```cpp
 #import "..\drawctl\drawctl.tlb" no_namespace, raw_interfaces_only
@@ -91,7 +91,7 @@ ms.locfileid: "59031981"
 
 ##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a> 指定當地語系化 ID 和版本號碼
 
-當您指定 ProgID 時，也可以指定 ProgID 的當地語系化 ID 和版本號碼。 例如：
+當您指定 ProgID 時，也可以指定 ProgID 的當地語系化 ID 和版本號碼。 例如: 
 
 ```cpp
 #import "progid:my.prog.id" lcid("0") version("4.0)
@@ -109,7 +109,7 @@ ms.locfileid: "59031981"
 
 ##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a> 匯入所建立的標頭檔
 
-**#import**會建立兩個標頭檔，以重新建構 c + + 原始程式碼中的型別程式庫內容。 主要標頭檔類似於由 Microsoft 介面定義語言 (MIDL) 編譯器產生的檔案，但是另有編譯器產生的其他程式碼和資料。 [主要標頭檔](#_predir_the_primary_type_library_header_file)為型別程式庫中，具有相同的基底名稱加上。TLH 延伸模組。 次要標頭檔具有和類型程式庫相同的基底名稱，再加上 .TLI 副檔名。 它包含編譯器產生的成員函式的實作，而且已在主要標頭檔中包含 (`#include`)。
+**#import**會建立兩個標頭檔，以重新建構的類型程式庫內容C++原始碼。 主要標頭檔類似於由 Microsoft 介面定義語言 (MIDL) 編譯器產生的檔案，但是另有編譯器產生的其他程式碼和資料。 [主要標頭檔](#_predir_the_primary_type_library_header_file)為型別程式庫中，具有相同的基底名稱加上。TLH 延伸模組。 次要標頭檔具有和類型程式庫相同的基底名稱，再加上 .TLI 副檔名。 它包含編譯器產生的成員函式的實作，而且已在主要標頭檔中包含 (`#include`)。
 
 如果匯入使用 byref 參數的 dispinterface 屬性，#import 將不會產生 __declspec ([屬性](../cpp/property-cpp.md)) 函式的陳述式。
 
@@ -148,7 +148,7 @@ ms.locfileid: "59031981"
 
 - 選擇性舊樣式 GUID 定義：包含具名 GUID 常數的初始化。 這些是名稱格式`CLSID_CoClass`和`IID_Interface`，類似於 MIDL 編譯器所產生。
 
-- `#include` 次要類型程式庫標頭的陳述式。
+- 次要類型程式庫標頭的 `#include` 陳述式。
 
 - 頁尾重複使用區段：目前包含`#pragma pack(pop)`。
 
@@ -180,7 +180,7 @@ using namespace MyLib;
 
 ## <a name="_predir_the_23import_directive_import_attributes"></a> #import 屬性
 
-**#import**可以選擇性地包含一個或多個屬性。 這些屬性會指示編譯器修改類型程式庫標頭的內容。 反斜線 (**\\**) 符號可用來包含其他行，在單一 **#import**陳述式。 例如：
+**#import**可以選擇性地包含一個或多個屬性。 這些屬性會指示編譯器修改類型程式庫標頭的內容。 反斜線 (**\\**) 符號可用來包含其他行，在單一 **#import**陳述式。 例如: 
 
 ```cpp
 #import "test.lib" no_namespace \
@@ -189,7 +189,7 @@ using namespace MyLib;
 
 如需詳細資訊，請參閱 < [#import 屬性](../preprocessor/hash-import-attributes-cpp.md)。
 
-**END C++ 特定的**
+**結束C++特定**
 
 ## <a name="see-also"></a>另請參閱
 

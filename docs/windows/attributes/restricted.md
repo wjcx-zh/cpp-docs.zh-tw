@@ -1,5 +1,5 @@
 ---
-title: 限制 （c + + COM 屬性）
+title: 限制 (C++ COM 屬性)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.restricted
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
 ms.openlocfilehash: 86f40fa49daf88668e37bef07f0db33d01cf1942
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029498"
 ---
 # <a name="restricted"></a>restricted
@@ -27,12 +27,12 @@ ms.locfileid: "59029498"
 
 ### <a name="parameters"></a>參數
 
-*介面*<br/>
+*interfaces*<br/>
 Metodu nelze volat 任意 COM 物件的一或多個介面。 此參數才有效時套用至類別。
 
 ## <a name="remarks"></a>備註
 
-**受限**c + + 屬性具有相同的功能[限制](/windows/desktop/Midl/restricted)MIDL 屬性。
+**受限**C++屬性具有相同的功能[限制](/windows/desktop/Midl/restricted)MIDL 屬性。
 
 ## <a name="example"></a>範例
 

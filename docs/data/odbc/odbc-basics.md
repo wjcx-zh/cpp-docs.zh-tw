@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
 ms.openlocfilehash: e14f5d051b9684cd79a34f5fb50feeb785d2f927
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033236"
 ---
 # <a name="odbc-basics"></a>ODBC 的基本概念
@@ -63,7 +63,7 @@ ODBC 是資料庫部分的 Microsoft Windows 開啟服務架構 (WOSA)，這是�
 
 資料庫類別支援的 ODBC 驅動程式的任何資料來源。 這可能，比方說，包括關聯式資料庫、 編製索引循序存取方法 (ISAM) 資料庫、 Microsoft Excel 試算表或文字檔案。 ODBC 驅動程式管理資料來源連接和 SQL 用來從資料庫選取記錄。
 
-如需包含在這個版本的 Visual c + + 中的 ODBC 驅動程式的清單，以及取得額外的驅動程式的相關資訊，請參閱[ODBC 驅動程式清單](../../data/odbc/odbc-driver-list.md)。
+如需包含於視覺效果的此版本的 ODBC 驅動程式的清單C++並取得其他驅動程式的相關資訊，請參閱[ODBC 驅動程式清單](../../data/odbc/odbc-driver-list.md)。
 
 ## <a name="see-also"></a>另請參閱
 

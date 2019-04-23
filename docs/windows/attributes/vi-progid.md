@@ -1,5 +1,5 @@
 ---
-title: vi_progid （c + + COM 屬性）
+title: vi_progid (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.vi_progid
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - vi_progid attribute
 ms.assetid: a52449be-b93e-4111-b883-44bb8da53261
 ms.openlocfilehash: 7050543c9acf3801a99d3e32e119325900bdb050
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033585"
 ---
 # <a name="viprogid"></a>vi_progid
@@ -25,14 +25,14 @@ ms.locfileid: "59033585"
 
 ### <a name="parameters"></a>參數
 
-*名稱*<br/>
+*name*<br/>
 版本無關的 ProgID，表示的物件。
 
 Progid 會提供人類看得懂的版本，用來識別的 COM/ActiveX 物件的類別識別項 (CLSID)。
 
 ## <a name="remarks"></a>備註
 
-**Vi_progid** c + + 屬性可讓您指定 COM 物件與版本無關的 ProgID。 ProgID 的形式*name1.name2.version*。 沒有與版本無關的 ProgID*版本*。 可同時指定兩者`progid`而**vi_progid**上的屬性`coclass`。 如果您未指定**vi_progid**，則版本無關的 ProgID 是所指定的值[progid](progid.md)屬性。
+**Vi_progid** C++屬性可讓您指定 COM 物件與版本無關的 ProgID。 ProgID 的形式*name1.name2.version*。 沒有與版本無關的 ProgID*版本*。 可同時指定兩者`progid`而**vi_progid**上的屬性`coclass`。 如果您未指定**vi_progid**，則版本無關的 ProgID 是所指定的值[progid](progid.md)屬性。
 
 **vi_progid**意味著`coclass`屬性，也就是如果您指定**vi_progid**，它是與指定的相同項目`coclass`並**vi_progid**屬性。
 

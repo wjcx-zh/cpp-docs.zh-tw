@@ -1,5 +1,5 @@
 ---
-title: 授權 （c + + COM 屬性）
+title: 授權 (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.licensed
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
 ms.openlocfilehash: 90fba74fb97ce49088145888c3b1925b4ee0829c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034987"
 ---
 # <a name="licensed"></a>licensed
@@ -25,7 +25,7 @@ ms.locfileid: "59034987"
 
 ## <a name="remarks"></a>備註
 
-**授權**c + + 屬性具有相同的功能[授權](/windows/desktop/Midl/licensed)MIDL 屬性。
+**授權**C++屬性具有相同的功能[授權](/windows/desktop/Midl/licensed)MIDL 屬性。
 
 ## <a name="example"></a>範例
 

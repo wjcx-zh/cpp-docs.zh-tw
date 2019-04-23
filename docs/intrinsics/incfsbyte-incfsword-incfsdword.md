@@ -14,15 +14,15 @@ helpviewer_keywords:
 - __incfsbyte intrinsic
 ms.assetid: 820457fb-e35e-42d3-bcb6-725da3281c64
 ms.openlocfilehash: 9e1e2630f8c0a66b681be2aa550f9c9255c92173
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026999"
 ---
 # <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte、__incfsword、__incfsdword
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 相對於開頭的位移所指定的記憶體位置中加入一個值`FS`區段。
 
@@ -42,7 +42,7 @@ void __incfsdword(
 
 #### <a name="parameters"></a>參數
 
-*位移*<br/>
+*Offset*<br/>
 [in]從開頭的位移`FS`。
 
 ## <a name="requirements"></a>需求
@@ -57,7 +57,7 @@ void __incfsdword(
 
 這些內建函式僅適用於核心模式，常式僅可作為內建函式。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

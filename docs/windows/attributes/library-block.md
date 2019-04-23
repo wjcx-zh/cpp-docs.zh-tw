@@ -1,5 +1,5 @@
 ---
-title: library_block （c + + COM 屬性）
+title: library_block (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.library_block
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - library_block attribute
 ms.assetid: ae7a7ebe-5e1a-4eda-a058-11bbd058ece8
 ms.openlocfilehash: 219f6a89dd7f80246e0337c2ef3bcad43540b165
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033205"
 ---
 # <a name="libraryblock"></a>library_block

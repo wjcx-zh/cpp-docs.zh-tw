@@ -1,5 +1,5 @@
 ---
-title: idl_module （c + + COM 屬性）
+title: idl_module (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_module
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
 ms.openlocfilehash: 80e4909a61b5b53ecde19471f2c838dd4c425874
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034974"
 ---
 # <a name="idlmodule"></a>idl_module
@@ -26,7 +26,7 @@ function declaration
 
 ### <a name="parameters"></a>參數
 
-*名稱*<br/>
+*name*<br/>
 會在.idl 檔中的程式碼區塊的使用者定義的名稱。
 
 *dllname*<br/>
@@ -44,7 +44,7 @@ function declaration
 *helpcontext*<br/>
 （選擇性）這個類型程式庫說明識別碼。
 
-*隱藏*<br/>
+*hidden*<br/>
 （選擇性）避免程式庫顯示為參數。 如需詳細資訊，請參閱 [hidden](/windows/desktop/Midl/hidden) MIDL 屬性。
 
 *restricted*<br/>
@@ -55,7 +55,7 @@ function declaration
 
 ## <a name="remarks"></a>備註
 
-**Idl_module** c + + 屬性可讓您指定的.dll 檔案，可讓您從.dll 檔案匯入項目點。
+**Idl_module** C++屬性可讓您指定的.dll 檔案，可讓您從.dll 檔案匯入項目點。
 
 **Idl_module**屬性有類似的功能[模組](/windows/desktop/Midl/module)MIDL 屬性。
 

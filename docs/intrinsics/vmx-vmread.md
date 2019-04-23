@@ -8,15 +8,15 @@ helpviewer_keywords:
 - __vmx_vmread intrinsic
 ms.assetid: 08bdd7a0-6435-4ea6-b9a0-f592d870e5aa
 ms.openlocfilehash: 5c7b72ba3bf1bd60324704b774bcedaf5612240f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028382"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 從目前的虛擬機器控制結構 (VMCS) 讀取指定的欄位，並將它放在指定的位置。
 
@@ -56,7 +56,7 @@ unsigned char __vmx_vmread(
 
 **標頭檔** \<intrin.h >
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

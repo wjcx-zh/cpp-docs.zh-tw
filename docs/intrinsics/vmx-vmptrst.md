@@ -8,15 +8,15 @@ helpviewer_keywords:
 - VMPTRST instruction
 ms.assetid: 8dc66e47-03a0-41b0-8e25-c1485f42817a
 ms.openlocfilehash: 5ef02dd4401e0c10a84be008d7cb25841e0359cd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029499"
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 儲存目前的虛擬機器控制結構 (VMCS) 在指定的位址指標。
 
@@ -47,7 +47,7 @@ VMCS 指標是 64 位元的實體位址。
 
 **標頭檔** \<intrin.h >
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

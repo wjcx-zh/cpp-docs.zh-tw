@@ -1,5 +1,5 @@
 ---
-title: last_is （c + + COM 屬性）
+title: last_is (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.last_is
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
 ms.openlocfilehash: 39b35b218f3402839d956c4da0a00f290fe5d595
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033270"
 ---
 # <a name="lastis"></a>last_is
@@ -25,12 +25,12 @@ ms.locfileid: "59033270"
 
 ### <a name="parameters"></a>參數
 
-*運算式*<br/>
+*expression*<br/>
 一或多個 C 語言的運算式。 允許空白的引數位置。
 
 ## <a name="remarks"></a>備註
 
-**Last_is** c + + 屬性具有相同的功能[last_is](/windows/desktop/Midl/last-is) MIDL 屬性。
+**Last_is** C++屬性具有相同的功能[last_is](/windows/desktop/Midl/last-is) MIDL 屬性。
 
 ## <a name="example"></a>範例
 

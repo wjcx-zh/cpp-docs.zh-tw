@@ -7,10 +7,10 @@ helpviewer_keywords:
 - __writeeflags intrinsics
 ms.assetid: a62a522c-d7fa-4f10-a620-a3b32bdf3f17
 ms.openlocfilehash: 6679a3b16def3ed413c5cec2a4bb7d5fe5d732c8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030349"
 ---
 # <a name="writeeflags"></a>__writeeflags
@@ -42,7 +42,7 @@ void __writeeflags(unsigned __int64 Value);
 
 **標頭檔** \<intrin.h >
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,5 +1,5 @@
 ---
-title: 範圍 （c + + COM 屬性）
+title: 範圍 (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.range
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
 ms.openlocfilehash: 9ce941fe95f2bbef3895c039984db1e1d2985ae1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029534"
 ---
 # <a name="range-c"></a>range (C++)
@@ -25,15 +25,15 @@ ms.locfileid: "59029534"
 
 ### <a name="parameters"></a>參數
 
-*低*<br/>
+*low*<br/>
 下限範圍值。
 
-*高*<br/>
+*high*<br/>
 高範圍的值。
 
 ## <a name="remarks"></a>備註
 
-**範圍**c + + 屬性具有相同的功能[範圍](/windows/desktop/Midl/range)MIDL 屬性。
+**範圍**C++屬性具有相同的功能[範圍](/windows/desktop/Midl/range)MIDL 屬性。
 
 ## <a name="example"></a>範例
 

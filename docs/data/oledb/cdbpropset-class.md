@@ -34,10 +34,10 @@ helpviewer_keywords:
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
 ms.openlocfilehash: b58c0262d361ede37bc3db68784177ec4c29f3a4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034230"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet 類別
@@ -68,7 +68,7 @@ class CDBPropSet : public tagDBPROPSET
 
 |||
 |-|-|
-|[運算子 =](#op_equal)|指派設定到另一個屬性的內容。|
+|[operator =](#op_equal)|指派設定到另一個屬性的內容。|
 
 ## <a name="remarks"></a>備註
 
@@ -179,7 +179,7 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CDBPropIDSet 類別](../../data/oledb/cdbpropidset-class.md)<br/>
 [DBPROPSET 結構](/previous-versions/windows/desktop/ms714367(v=vs.85))
 [DBPROP 結構](/previous-versions/windows/desktop/ms717970(v=vs.85))

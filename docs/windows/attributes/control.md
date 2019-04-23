@@ -1,5 +1,5 @@
 ---
-title: 控制項 （c + + COM 屬性）
+title: 控制項 (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.control
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
 ms.openlocfilehash: 223acf774d1cc90d84aed2d0d0c8cb59fc778fa1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034708"
 ---
 # <a name="control"></a>控制項
@@ -25,7 +25,7 @@ ms.locfileid: "59034708"
 
 ## <a name="remarks"></a>備註
 
-**控制**屬性隱含[coclass](coclass.md)屬性。 **控制**c + + 屬性具有相同的功能[控制](/windows/desktop/Midl/control)MIDL 屬性。
+**控制**屬性隱含[coclass](coclass.md)屬性。 **控制**C++屬性具有相同的功能[控制](/windows/desktop/Midl/control)MIDL 屬性。
 
 ## <a name="example"></a>範例
 

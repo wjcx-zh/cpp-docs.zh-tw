@@ -11,10 +11,10 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], binding fields and parameters
 ms.assetid: e647cacd-62b0-4b80-9e20-b392deca5a88
 ms.openlocfilehash: 7da9d480f16dcb6bc5ded0a1dff559b1b1ac4b38
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032673"
 ---
 # <a name="record-field-exchange-how-rfx-works"></a>資料錄欄位交換：RFX 的運作方式
@@ -64,7 +64,7 @@ ms.locfileid: "59032673"
 ||4.繫結參數的資料成員。||
 ||5.將欄位資料成員的繫結至資料行。||
 |||6.ODBC 會移動，並填入資料。|
-||7.C + + 的修復資料。||
+||7.修正資料以供C++。||
 
 資料錄集以供快速查詢相同的 SQL 陳述式使用 ODBC 的備妥的執行。 如需備妥的執行的詳細資訊，請參閱 ODBC SDK*程式設計人員參考*MSDN Library 中。
 
@@ -80,7 +80,7 @@ ms.locfileid: "59032673"
 |--------------------|-------------------------------|-----------------------------|
 |1.呼叫`MoveNext`或其中一個其他移動函式。|||
 |||2.ODBC 會移動，並填入資料。|
-||3.C + + 的修復資料。||
+||3.修正資料以供C++。||
 
 ###  <a name="_mfc_rfx.3a_.adding_new_records_and_editing_existing_records"></a> RFX:加入新資料錄和編輯現有的記錄
 
@@ -90,7 +90,7 @@ ms.locfileid: "59032673"
 
 1. `AddNew` 或`Edit`準備編輯緩衝區中的欄位，如此 RFX 可以偵測已變更的欄位資料成員。
 
-   新的記錄不的任何先前的值比較新的因為`AddNew`PSEUDO_NULL 值來設定每個欄位資料成員的值。 稍後，當您呼叫`Update`，RFX 比較 PSEUDO_NULL 值的每個資料成員的值。 如果沒有差異，已設定的資料成員。 (PSEUDO_NULL 不相同，則為 true 的 Null 值的記錄資料行，也不是其中之一為 NULL 的 c + + 相同。)
+   新的記錄不的任何先前的值比較新的因為`AddNew`PSEUDO_NULL 值來設定每個欄位資料成員的值。 稍後，當您呼叫`Update`，RFX 比較 PSEUDO_NULL 值的每個資料成員的值。 如果沒有差異，已設定的資料成員。 (PSEUDO_NULL 不相同，則為 true 的 Null 值的記錄資料行，也不是其中之一與相同C++為 NULL。)
 
    不同於`Update`呼叫`AddNew`，則`Update`呼叫`Edit`比較更新與先前儲存的值，而不是使用 PSEUDO_NULL 的值。 其差異在於`AddNew`不含先前儲存的值進行比較。
 
@@ -124,6 +124,6 @@ ms.locfileid: "59032673"
 
 [資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
-[巨集、全域函式和全域變數](../../mfc/reference/mfc-macros-and-globals.md)<br/>
+[巨集、 全域函式和全域變數](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [CFieldExchange 類別](../../mfc/reference/cfieldexchange-class.md)<br/>
 [CRecordset::DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)

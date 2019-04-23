@@ -13,15 +13,15 @@ helpviewer_keywords:
 - __readgsbyte intrinsic
 ms.assetid: f822632d-854c-4558-a71b-cdfc3eea2236
 ms.openlocfilehash: a677b96975e0d2adcc7e548992a12bd597bea6a3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031491"
 ---
 # <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte、__readgsdword、__readgsqword、__readgsword
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 讀取記憶體從相對於 GS 區段開頭的位移所指定的位置。
 
@@ -44,7 +44,7 @@ unsigned __int64 __readgsqword(
 
 #### <a name="parameters"></a>參數
 
-*位移*<br/>
+*Offset*<br/>
 [in]從開頭的位移`GS`來讀取。
 
 ## <a name="return-value"></a>傳回值
@@ -66,7 +66,7 @@ unsigned __int64 __readgsqword(
 
 這些常式僅可作為內建。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
 ms.openlocfilehash: fb0b24798b3f2682bbbec7624df34b40a2a9f4cc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032267"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>OLE DB 消費者樣板參考
@@ -86,7 +86,7 @@ OLE DB 消費者樣板包含下列類別。 上的參考資料也包含的主題
 [CNoRowset](../../data/oledb/cnorowset-class.md)<br/>
 可用來當做樣板引數如果命令未傳回資料列集。
 
-[cRestrictions](../../data/oledb/crestrictions-class.md)<br/>
+[CRestrictions](../../data/oledb/crestrictions-class.md)<br/>
 用來指定結構描述資料列的限制。
 
 [CRowset](../../data/oledb/crowset-class.md)<br/>
@@ -142,5 +142,5 @@ OLE DB 樣板為您提供一組對應至 OLE DB 結構描述資料列集的類�
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 提供者樣板參考](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
-[OLE DB 樣板](../../data/oledb/ole-db-templates.md)
+[OLE DB 提供者範本參考](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[OLE DB 範本](../../data/oledb/ole-db-templates.md)

@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Studio 中建立 c + + makefile 專案
+title: 建立C++Visual Studio 中的 makefile 專案
 ms.date: 12/08/2018
 f1_keywords:
 - vc.appwiz.makefile.project
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
 ms.openlocfilehash: 9c2edfe35233672e8117d336ba40cfea497b1a22
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035594"
 ---
-# <a name="create-a-c-makefile-project"></a>建立 c + + makefile 專案
+# <a name="create-a-c-makefile-project"></a>建立C++makefile 專案
 
 *Makefile* 是文字檔，其中包含如何編譯和連結 (或「建置」) 一組 C++ 原始程式碼檔案的指示。 *Make* 程式會讀取 Makefile 並叫用編譯器、連結器和可能的其他程式來產生可執行檔。 Microsoft 的實作*製作*程式稱為 「 [NMAKE](nmake-reference.md);
 
@@ -40,7 +40,7 @@ ms.locfileid: "59035594"
 
 1. 按一下 [完成] 以關閉精靈並在 [方案總管] 中開啟新建立的專案。
 
-您可以在屬性頁檢視和編輯專案的屬性。 請參閱[在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)的顯示屬性頁的相關資訊。
+您可以在屬性頁檢視和編輯專案的屬性。 請參閱[設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)如需有關顯示屬性頁資訊。
 
 ## <a name="makefile-project-wizard"></a>Makefile 專案精靈
 
@@ -58,7 +58,7 @@ ms.locfileid: "59035594"
 
 某些專案設定] 或 [編譯器選項會設定不正確時，IntelliSense 會無法在 makefile 專案中。 請遵循下列步驟來設定 makefile 專案，讓 IntelliSense 可以正常運作：
 
-1. 開啟 [屬性頁] 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟 [屬性頁] 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 展開 [組態屬性] 節點。
 
@@ -86,8 +86,8 @@ ms.locfileid: "59035594"
 
 ## <a name="see-also"></a>另請參閱
 
-[Using IntelliSense](/visualstudio/ide/using-intellisense)<br>
+[使用 IntelliSense](/visualstudio/ide/using-intellisense)<br>
 [NMAKE 參考](nmake-reference.md)<br>
-[如何：從現有的程式碼建立 c + + 專案](../how-to-create-a-cpp-project-from-existing-code.md)
+[如何：建立C++從現有的程式碼專案](../how-to-create-a-cpp-project-from-existing-code.md)
 [Makefile 中的特殊字元](special-characters-in-a-makefile.md)<br/>
 [Makefile 內容](contents-of-a-makefile.md)<br/>

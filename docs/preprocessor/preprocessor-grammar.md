@@ -7,10 +7,10 @@ helpviewer_keywords:
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
 ms.openlocfilehash: 6177cf5fddba549e410842ef3f270edcc13d4782
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032410"
 ---
 # <a name="preprocessor-grammar"></a>前置處理器文法
@@ -84,7 +84,7 @@ ms.locfileid: "59032410"
 &nbsp;&nbsp;&nbsp;&nbsp;文字的任意序列
 
 > [!NOTE]
-> 要展開中的下列非終端[語彙慣例](../cpp/lexical-conventions.md)一節*c + + 語言參考*:*常數*，*常數運算式*，*識別項*，*關鍵字*，*運算子*，並*標點符號*。
+> 要展開中的下列非終端[語彙慣例](../cpp/lexical-conventions.md)一節*C++語言參考*:*常數*， *常數運算式*，*識別項*，*關鍵字*，*運算子*，並*標點符號*。
 
 ## <a name="see-also"></a>另請參閱
 

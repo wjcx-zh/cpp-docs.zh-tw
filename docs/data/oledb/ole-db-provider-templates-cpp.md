@@ -8,10 +8,10 @@ helpviewer_keywords:
 - templates [C++], OLE DB
 ms.assetid: fccff85f-2af8-4500-82bd-6312d28a74b8
 ms.openlocfilehash: 793aa08630ec92f99c33c2a4f3688e78630a6c58
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027466"
 ---
 # <a name="ole-db-provider-templates-c"></a>OLE DB 提供者樣板 (C++)
@@ -26,7 +26,7 @@ OLE DB 提供者是一份服務取用者物件的介面呼叫的 COM 物件，�
 
 提供者可以是簡單或很複雜。 提供者可以藉由實作多個介面支援的最少的功能或成熟的生產品質提供者。 提供者可以傳回資料表，允許用戶端決定該資料表的格式和執行對該資料的作業。
 
-每個提供者會實作一組標準的 COM 物件來處理任何 OLE DB 取用者可以從任何提供者，不論語言 （例如 c + + 和基本） 存取資料的要求從用戶端，使用標準的意義。
+每個提供者會實作一組標準的 COM 物件來處理來自用戶端的要求，也就是說，任何 OLE DB 標準取用者可以存取資料，請在任何提供者，不論語言為何 (例如C++和基本)。
 
 每個 COM 物件都包含數個介面，其中有些是必要，而其中有些是選擇性。 藉由實作必要的介面，提供者可確保任何用戶端應該能夠使用的功能 （稱為合規性） 的最低層級。 提供者可實作選擇性的介面，以提供額外的功能。 [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)這些介面的詳細資料。 用戶端應該一律呼叫`QueryInterface`來判斷提供者是否支援指定的介面。
 
@@ -38,9 +38,9 @@ OLE DB 提供者範本支援 OLE DB 2.7 版規格。 您可以使用 OLE DB 提�
 
 ## <a name="when-do-you-need-to-create-an-ole-db-provider"></a>您需要時建立的 OLE DB 提供者？
 
-您永遠不需要建立自己的提供者;Microsoft 提供數個預先封裝的標準提供者，在**資料連結屬性**Visual c + + 的對話方塊。 若要建立的 OLE DB 提供者的主要原因是運用通用資料存取策略。 這麼做的優點，包括：
+您永遠不需要建立自己的提供者;Microsoft 提供數個預先封裝的標準提供者，在**資料連結屬性**視覺效果中的對話方塊中C++。 若要建立的 OLE DB 提供者的主要原因是運用通用資料存取策略。 這麼做的優點，包括：
 
-- 透過任何語言，例如 c + +、 Basic 和 Visual Basic Scripting Edition 中存取資料。 它可讓您組織中不同程式設計人員可以存取相同的資料相同的方式，不論使用哪種語言。
+- 透過任何語言存取資料，例如C++、 Basic 和 Visual Basic Scripting Edition。 它可讓您組織中不同程式設計人員可以存取相同的資料相同的方式，不論使用哪種語言。
 
 - 開啟您的資料，例如 SQL Server、 Excel 及存取其他資料來源。 這可以是很有用，如果您想要在不同的格式之間的資料傳輸。
 
@@ -56,8 +56,8 @@ OLE DB 提供者範本支援 OLE DB 2.7 版規格。 您可以使用 OLE DB 提�
 
 提供者在複雜度和功能差異極大。 您最好將分類為唯讀狀態提供者和可更新的提供者的提供者：
 
-- Visual c + + 6.0 支援只有唯讀提供者。 [建立 OLE DB 提供者](../../data/oledb/creating-an-ole-db-provider.md)討論如何建立唯讀的提供者。
-- Visual c + + 支援可更新的提供者，可以更新它 （寫入） 資料存放區。 可更新的提供者的相關資訊，請參閱[建立可更新的提供者](../../data/oledb/creating-an-updatable-provider.md); [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)範例是可更新的提供者。
+- 視覺化C++6.0 支援只有唯讀提供者。 [建立 OLE DB 提供者](../../data/oledb/creating-an-ole-db-provider.md)討論如何建立唯讀的提供者。
+- 視覺化C++支援可更新的提供者，可以更新它 （寫入） 資料存放區。 可更新的提供者的相關資訊，請參閱[建立可更新的提供者](../../data/oledb/creating-an-updatable-provider.md); [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)範例是可更新的提供者。
 
 如需詳細資訊，請參閱:
 

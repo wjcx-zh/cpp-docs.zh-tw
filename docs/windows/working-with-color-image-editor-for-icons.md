@@ -63,10 +63,10 @@ helpviewer_keywords:
 - colors [C++], inverting
 ms.assetid: d34ff96f-241d-494f-abdd-13811ada8cd3
 ms.openlocfilehash: c424d2e613c51f901def13c4bf42a066797cc65c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034140"
 ---
 # <a name="how-to-work-with-color"></a>HOW TO：使用色彩
@@ -107,24 +107,24 @@ ms.locfileid: "59034140"
 |--------------------------|--------------------------|
 |**漸層色彩顯示**|變更所選取之色彩的值。<br/><br/>十字形狀放入您想要變更，並向上或向下移動滑桿來變更的亮度或色彩的 RGB 值的色彩。|
 |**亮度列**|設定您在中選取之色彩的亮度**漸層色彩顯示** 方塊中。<br/><br/>選取並拖曳白色箭號，更高的亮度列向上或向下的鍵小於。 **色彩**方塊會顯示您所選取的色彩和您所設定的明暗度的效果。|
-|**色彩**|列出您要定義之色彩的色調 （色彩轉輪值）。 值範圍從 0 到 240，其中 0 是紅色、 60 是黃色，120 是綠色、 180 是青色、 200 表示 「 洋紅、 240 是藍色。|
-|**色調**|列出您要定義之色彩的色調 （色彩轉輪值）。 值範圍從 0 到 240，其中 0 是紅色、 60 是黃色，120 是綠色、 180 是青色、 200 表示 「 洋紅、 240 是藍色。|
-|**六**|指定您要定義之色彩的濃度值。 飽和度是色彩的在指定的色調量。 值範圍從 0 到 240。|
-|**亮度**|列出您要定義之色彩的亮度 （亮度）。 值範圍從 0 到 240。|
+|**Color**|列出您要定義之色彩的色調 （色彩轉輪值）。 值範圍從 0 到 240，其中 0 是紅色、 60 是黃色，120 是綠色、 180 是青色、 200 表示 「 洋紅、 240 是藍色。|
+|**Hue**|列出您要定義之色彩的色調 （色彩轉輪值）。 值範圍從 0 到 240，其中 0 是紅色、 60 是黃色，120 是綠色、 180 是青色、 200 表示 「 洋紅、 240 是藍色。|
+|**Sat**|指定您要定義之色彩的濃度值。 飽和度是色彩的在指定的色調量。 值範圍從 0 到 240。|
+|**Lum**|列出您要定義之色彩的亮度 （亮度）。 值範圍從 0 到 240。|
 |**紅色**|指定您要定義之色彩的紅色值。 值範圍從 0 到 255 之間。|
 |**綠色**|指定您要定義之色彩的綠色值。 值範圍從 0 到 255 之間。|
-|**藍色**|指定您要定義之色彩的藍色值。 值範圍從 0 到 255 之間。|
+|**Blue**|指定您要定義之色彩的藍色值。 值範圍從 0 到 255 之間。|
 
 您可以儲存及載入**色彩**包含自訂的色彩的色板。 根據預設，**色彩**啟動 Visual Studio 時，會自動載入最近使用的調色盤。
 
 > [!TIP]
 > 由於**影像編輯器**沒有任何方法來還原預設**色彩**調色盤，您應該儲存預設**色彩**調色盤的名稱，例如*以 standard.pal*或是*default.pal*以便您可以輕易地還原預設設定。
 
-使用 **載入調色盤色彩**對話方塊中，將特殊的調色盤，以便使用在 c + + 專案中，使用下列屬性：
+使用 [**載入調色盤色彩**載入使用中的特殊色彩調色盤] 對話方塊中您C++專案具有下列屬性：
 
 |屬性|描述|
 |-----------------|-----------------|
-|**查詢**|指定您想要用來尋找檔案或資料夾的位置。<br/><br/>選取箭頭以選擇其他位置，或選取 [移至上一層] 工具列上的資料夾圖示。|
+|**查看**|指定您想要用來尋找檔案或資料夾的位置。<br/><br/>選取箭頭以選擇其他位置，或選取 [移至上一層] 工具列上的資料夾圖示。|
 |**檔案名稱**|提供空間讓您輸入您想要開啟的檔案名稱。<br/><br/>若要快速尋找您先前已開啟的檔案，如果有的話，在下拉式清單中，選取的檔案名稱。<br/><br/>如果您要搜尋的檔案，您可以使用星號 （*） 做為萬用字元。 例如，您可以輸入\*。\*以查看所有檔案的清單。 您也可以例如輸入檔案的完整路徑*C:\My Documents\MyColorPalette.pal*或是 *\\\NetworkServer\MyFolder\MyColorPalette.pal*。|
 |**檔案類型**|列出要顯示檔案的類型。<br/><br/>調色盤 (*.pal) 是預設的檔案類型的色彩調色盤。|
 
@@ -228,7 +228,7 @@ None
 ## <a name="see-also"></a>另請參閱
 
 [圖示影像編輯器](../windows/image-editor-for-icons.md)<br/>
-[HOW TO：建立圖示或其他影像](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[HOW TO：編輯映像](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[HOW TO：使用繪圖工具](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[如何：建立圖示或其他影像](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[如何：複製影像](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[如何：使用繪圖工具](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
 [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

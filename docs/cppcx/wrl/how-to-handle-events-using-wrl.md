@@ -4,15 +4,15 @@ ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 1c77543f-7b0c-4a94-93bf-e3225885ed76
 ms.openlocfilehash: 959a85d6cf6de666ae56d09035acefe9a3828ae8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033173"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>HOW TO：使用 WRL 處理事件
 
-本文件說明如何使用 Windows 執行階段 c + + 範本庫 (WRL) 訂閱，以及處理 Windows 執行階段物件的事件。
+本文件說明如何使用 Windows 執行階段C++範本庫 (WRL) 訂閱，以及處理 Windows 執行階段物件的事件。
 
 如需更基本的範例，會建立該元件的執行個體，並擷取屬性值，請參閱[How to:啟動與使用 Windows 執行階段元件](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)。
 
@@ -21,9 +21,9 @@ ms.locfileid: "59033173"
 下列步驟開始`ABI::Windows::System::Threading::IDeviceWatcher`物件，並使用事件處理常式來監視進度。 `IDeviceWatcher`介面可讓您以非同步的方式，或在背景中，列舉的裝置，並且新增、 移除或變更裝置時收到通知。 [回呼](callback-function-wrl.md)函式是此範例中很重要的一部分，因為它可讓以指定事件處理常式處理背景作業的結果。 完整的範例如下。
 
 > [!WARNING]
-> 雖然您通常會使用 Windows 執行階段 c + + 樣板程式庫，在通用 Windows 平台應用程式中，此範例會使用主控台應用程式的圖。 這類函式`wprintf_s`所沒有的通用 Windows 平台應用程式。 如需類型和您可以使用通用 Windows 平台應用程式中的函式的詳細資訊，請參閱[通用 Windows 平台應用程式不支援的 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)並[Win32 與 UWP 應用程式的 COM](/uwp/win32-and-com/win32-and-com-for-uwp-apps)。
+> 雖然您通常會使用 Windows 執行階段C++的通用 Windows 平台應用程式，此範例中的範本程式庫會用於圖例中的主控台應用程式。 這類函式`wprintf_s`所沒有的通用 Windows 平台應用程式。 如需類型和您可以使用通用 Windows 平台應用程式中的函式的詳細資訊，請參閱[通用 Windows 平台應用程式不支援的 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)並[Win32 與 UWP 應用程式的 COM](/uwp/win32-and-com/win32-and-com-for-uwp-apps)。
 
-1. 包含 (`#include`) 任何所需的 Windows 執行階段、 Windows 執行階段 c + + 樣板程式庫或 c + + 標準程式庫標頭。
+1. 包含 (`#include`) 任何所需的 Windows 執行階段，Windows 執行階段C++範本程式庫，或C++標準程式庫標頭。
 
    [!code-cpp[wrl-consume-event#2](../codesnippet/CPP/how-to-handle-events-using-wrl_1.cpp)]
 
@@ -89,4 +89,4 @@ ms.locfileid: "59033173"
 
 ## <a name="see-also"></a>另請參閱
 
-[Windows Runtime C++ Template Library (WRL)](windows-runtime-cpp-template-library-wrl.md)
+[Windows 執行階段 C++ 範本庫 (WRL)](windows-runtime-cpp-template-library-wrl.md)

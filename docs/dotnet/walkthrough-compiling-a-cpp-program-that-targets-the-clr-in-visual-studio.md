@@ -1,5 +1,5 @@
 ---
-title: 編譯 C + + /cli CLR 為目標的程式
+title: 編譯C++CLR 為目標的 /CLI 程式
 ms.date: 09/17/2018
 helpviewer_keywords:
 - command-line applications [C++], managed code
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
 ms.openlocfilehash: fcac0079185b6ceef981b9acfeb555ef29d464e0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034666"
 ---
-# <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>逐步解說：編譯 C + + /cli CLR 為目標的 Visual Studio 中的 CLI 程式
+# <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>逐步解說：編譯C++Visual Studio 中 Clr 的 /CLI 程式
 
-使用 C + + /cli 語言擴充功能可以建立使用.NET 類別，並使用 Visual Studio 開發環境中將它們編譯的 c + + 程式。
+使用C++您可以建立語言擴充功能/C++程式，使用.NET 類別，並使用 Visual Studio 開發環境來進行編譯。
 
-此程序中，您可以輸入自己的 c + + 程式，或使用其中一個範例程式。 我們在此程序中使用的範例程式會建立名為 textfile.txt 的文字檔，並將它儲存至專案目錄。
+此程序中，您可以輸入自己C++程式，或使用其中一個範例程式。 我們在此程序中使用的範例程式會建立名為 textfile.txt 的文字檔，並將它儲存至專案目錄。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -77,4 +77,4 @@ ms.locfileid: "59034666"
 ## <a name="see-also"></a>另請參閱
 
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
-[專案和組建系統](../build/projects-and-build-systems-cpp.md)<br/>
+[專案和建置系統](../build/projects-and-build-systems-cpp.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: coclass （c + + COM 屬性）
+title: coclass (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.coclass
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
 ms.openlocfilehash: e1f99a2780ab4f451533a3e797e473f60680c6ab
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035198"
 ---
 # <a name="coclass"></a>coclass
@@ -25,7 +25,7 @@ ms.locfileid: "59035198"
 
 ## <a name="remarks"></a>備註
 
-**Coclass** c + + 屬性會置於所產生的.idl 檔案中的 coclass 建構。
+**Coclass** C++屬性會置於所產生的.idl 檔案中的 coclass 建構。
 
 在定義的 coclass 時，您也可以指定[uuid](uuid-cpp-attributes.md)，[版本](version-cpp.md)，[執行緒](threading-cpp.md)， [vi_progid](vi-progid.md)，和[progid](progid.md)屬性。 如果未指定其中任何一個，它將會產生。
 

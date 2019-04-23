@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Visual C++ debugger
 ms.assetid: 90d4e7db-06ea-4de0-a7f4-4f3751d50d93
 ms.openlocfilehash: 21d4cb455413c3f7cbcbed02cdd4c364a469426d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033864"
 ---
 # <a name="debugging-your-provider"></a>偵錯提供者
@@ -20,7 +20,7 @@ ms.locfileid: "59033864"
 
 - 因為提供者會建立程序中，您可以建立一些通常使用的 OLE DB 消費者範本和逐步執行提供者的取用者程式碼。
 
-- 您可以使用隨附於 Visual c + + 的各種公用程式。
+- 您可以使用各種不同的公用程式隨附於 Visual C++。
 
 ## <a name="to-use-debugging"></a>若要使用偵錯
 
@@ -36,4 +36,4 @@ ms.locfileid: "59033864"
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 OLE DB 提供者樣板](../../data/oledb/working-with-ole-db-provider-templates.md)
+[使用 OLE DB 提供者範本](../../data/oledb/working-with-ole-db-provider-templates.md)

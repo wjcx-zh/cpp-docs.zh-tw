@@ -7,10 +7,10 @@ helpviewer_keywords:
 - projects [C++], creating
 ms.assetid: 076a75de-1d4b-486a-bcf8-9c0f6b049fa2
 ms.openlocfilehash: dc085b1f663369033947ed2a5577f334dd79c0aa
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030734"
 ---
 # <a name="creating-a-project-for-the-provider"></a>為提供者建立專案
@@ -21,10 +21,10 @@ ms.locfileid: "59030734"
 
    [ **新增專案** ] 對話方塊隨即出現。
 
-1. 在 **專案類型**窗格中，按一下**已安裝** > **Visual c + +** > **MFC/ATL**資料夾。 在 **範本**窗格中，按一下**ATL 專案**。
+1. 在 **專案類型**窗格中，按一下**已安裝** > **Visual C++**   >  **MFC/ATL**資料夾。 在 **範本**窗格中，按一下**ATL 專案**。
 
     > [!NOTE]
-    > 在舊版的 Visual Studio 中，尋找 專案類型之下**已安裝** > **範本** > **Visual c + +**  > **ATL**。
+    > 在舊版的 Visual Studio 中，尋找 專案類型之下**已安裝** > **範本** > **Visual C++**   >  **ATL**。
 
 1. 在 **名稱**方塊中，輸入專案的名稱，然後按一下**確定**。
 

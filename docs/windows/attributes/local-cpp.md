@@ -1,5 +1,5 @@
 ---
-title: 本機 （c + + COM 屬性）
+title: 本機 (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.local
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
 ms.openlocfilehash: 678968bb7b0f2e7af94124bea5b0967df27e43f7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033064"
 ---
 # <a name="local-c"></a>local (C++)
@@ -25,7 +25,7 @@ ms.locfileid: "59033064"
 
 ## <a name="remarks"></a>備註
 
-**本機**c + + 屬性具有相同的功能[本機](/windows/desktop/Midl/local)MIDL 屬性。
+**本機**C++屬性具有相同的功能[本機](/windows/desktop/Midl/local)MIDL 屬性。
 
 ## <a name="example"></a>範例
 

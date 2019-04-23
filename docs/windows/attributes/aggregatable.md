@@ -1,5 +1,5 @@
 ---
-title: 彙總 （c + + COM 屬性）
+title: 彙總 (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.aggregatable
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
 ms.openlocfilehash: 8d5ceb46a124db8c0082495d48e6ee0e21655422
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029287"
 ---
 # <a name="aggregatable"></a>aggregatable
@@ -36,7 +36,7 @@ ms.locfileid: "59029287"
 
 ## <a name="remarks"></a>備註
 
-**彙總**c + + 屬性具有相同的功能[彙總](/windows/desktop/Midl/aggregatable)MIDL 屬性。 這表示，編譯器會通過**彙總**透過屬性設定為產生的.idl 檔案。
+**彙總**C++屬性具有相同的功能[彙總](/windows/desktop/Midl/aggregatable)MIDL 屬性。 這表示，編譯器會通過**彙總**透過屬性設定為產生的.idl 檔案。
 
 此屬性需要 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果`progid`會套用`vi_progid`和`coclass`也會套用。
 

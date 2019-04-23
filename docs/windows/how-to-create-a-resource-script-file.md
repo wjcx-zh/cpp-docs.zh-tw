@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立資源 （c + +）
+title: HOW TO：建立資源 (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.resource
@@ -37,13 +37,13 @@ helpviewer_keywords:
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
 ms.openlocfilehash: c22df99240c0fa076124e33224a4f6f4ab9a957e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028518"
 ---
-# <a name="how-to-create-resources-c"></a>HOW TO：建立資源 （c + +）
+# <a name="how-to-create-resources-c"></a>HOW TO：建立資源 (C++)
 
 您可以針對專案所建立的資源：
 
@@ -72,7 +72,7 @@ ms.locfileid: "59028518"
 
 1. 在功能表中，移至**專案** > **加入新項目**。
 
-1. 選取  **Visual c + +** 資料夾，然後選擇**資源檔 (.rc)** 右窗格中。
+1. 選取  **Visual C++** 資料夾，然後選擇 **資源檔 (.rc)** 右窗格中。
 
 1. 提供資源指令碼檔案中的名稱**名稱**文字方塊中，然後選取**開啟**。
 
@@ -93,7 +93,7 @@ ms.locfileid: "59028518"
 - 若要開啟多個資源指令碼請遵循上述的每個您要開啟的檔案，比方說，相同的步驟*Source1.rc*並*Source2.rc*。 然後，這兩個.rc 檔案開啟時在個別的文件視窗中，使用** 視窗** 功能表或以滑鼠右鍵按一下其中一個檔案，然後選擇**新增水平索引標籤群組**或**新增垂直索引標籤群組**. Windows 現在會並排顯示，讓您同時檢視。
 
 > [!TIP]
-> 您可以開啟資源指令碼檔案中的.rc 檔上按一下滑鼠右鍵**方案總管**，並選取**以開啟**，然後選擇**原始程式碼 （文字） 編輯器**。
+> 您可以開啟資源指令碼檔案中的.rc 檔上按一下滑鼠右鍵**方案總管**， 並選取 **以開啟**， 然後選擇 **原始程式碼 （文字） 編輯器**。
 
 當您建置 Windows 使用 Microsoft Foundation Class (MFC) 應用程式[MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)，精靈會產生一組基本的檔案，包括資源指令碼 (.rc) 檔)，包含 MFC 的核心功能。 不過，這些特定 MFC 功能無法使用，當編輯.rc 檔不以 MFC 為基礎的 Windows 應用程式。 這包括程式碼精靈、 功能表提示字串、 清單下拉式方塊控制項和 ActiveX 控制項裝載的內容。
 
@@ -113,16 +113,16 @@ ms.locfileid: "59028518"
 
 您也可以使用在上按一下滑鼠右鍵**資源檢視** 視窗來啟動命令的捷徑功能表，或按兩下標題列來停駐和取消停駐視窗。 以滑鼠右鍵按一下標題列命令，以控制視窗的行為。 如需詳細資訊，請參閱 < [Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio)。
 
-**資源檢視**windows 包含**加入資源**對話方塊具有下列屬性將資源新增至 c + + Windows 桌面應用程式專案：
+**資源檢視**windows 包含**加入資源**對話方塊中，使用下列的屬性，以將資源新增到C++Windows 桌面應用程式專案：
 
 | 屬性 | 描述 |
 |---|---|
 | **資源類型** | 指定您想要建立的資源的類型。<br/><br/>您可以展開資料指標和對話方塊資源類別來顯示額外的資源，都位於 *...\Microsoft visual Studio\<版本\>\VC\VCResourceTemplates\\< LCID\>\mfc.rct*。 如果您需要加入.rct 檔案，請將它們放在這裡，或指定另一個[include 路徑](../windows/how-to-specify-include-directories-for-resources.md)。 在最上層樹狀結構控制項中顯示的資源是 Visual Studio 所提供的預設資源。 .Rct 檔案中的資源會出現在適當分類底下的第二個層級。 沒有任何預先設定的限制，您可以加入的.rct 檔案數目。<br/><br/> |
 | **新增** | 建立資源中選取的類型為基礎**資源類型**方塊，然後在適當的編輯器中開啟資源。<br/><br/>例如，如果您建立對話方塊資源時，就會開啟中的資源[對話方塊編輯器](../windows/dialog-editor.md)。 |
-| **匯入** | 開啟**匯入**對話方塊，即可瀏覽至您想要匯入目前專案的資源。<br/><br/>您可以匯入點陣圖、 圖示、 游標、 HTML、 音效 (。WAV)，或自訂資源檔案。 |
-| **自訂** | 開啟**新的自訂資源**對話方塊來建立自訂的資源。<br/><br/>也包含**資源類型**提供一個文字方塊，讓您輸入的自訂資源類型名稱的屬性。 當您結束時，visual c + + 自動將單字的名稱。 自訂資源只會在中編輯[二進位編輯器](../windows/binary-editor.md)。 |
+| **Import** | 開啟**匯入**對話方塊，即可瀏覽至您想要匯入目前專案的資源。<br/><br/>您可以匯入點陣圖、 圖示、 游標、 HTML、 音效 (。WAV)，或自訂資源檔案。 |
+| **自訂** | 開啟**新的自訂資源**對話方塊來建立自訂的資源。<br/><br/>也包含**資源類型**提供一個文字方塊，讓您輸入的自訂資源類型名稱的屬性。 視覺化C++當您結束時，自動將單字的名稱。 自訂資源只會在中編輯[二進位編輯器](../windows/binary-editor.md)。 |
 
-當您建立新的資源時，Visual c + + 會指派一個唯一的名稱，比方說， `IDD_Dialog1`。 您可以藉由編輯資源屬性相關聯的資源編輯器中或在自訂此資源 ID[屬性 視窗](/visualstudio/ide/reference/properties-window)。
+當您建立新的資源時，視覺效果C++，指派唯一的名稱，例如`IDD_Dialog1`。 您可以藉由編輯資源屬性相關聯的資源編輯器中或在自訂此資源 ID[屬性 視窗](/visualstudio/ide/reference/properties-window)。
 
 > [!NOTE]
 > 未指定資源名稱或保留 Visual Studio 的識別碼。 保留的名稱為`DESIGNINFO`， `HWB`，並`TEXTINCLUDE`，而保留的 ID 是`255`。
@@ -190,5 +190,5 @@ Win32
 ## <a name="see-also"></a>另請參閱
 
 [資源檔](../windows/resource-files-visual-studio.md)<br/>
-[HOW TO：管理資源](../windows/how-to-copy-resources.md)<br/>
-[HOW TO：在編譯時期包含資源](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[如何：管理來源](../windows/how-to-copy-resources.md)<br/>
+[如何：在編譯時間包含資源](../windows/how-to-include-resources-at-compile-time.md)<br/>

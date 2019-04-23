@@ -5,10 +5,10 @@ helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
 ms.openlocfilehash: 96286fc7a60a6ab43190dae6262948ac99ca30d6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035185"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>深入了解 MFC ODBC 類別
@@ -17,13 +17,13 @@ ms.locfileid: "59035185"
 
 - [MFC 應用程式精靈、資料庫支援](../../mfc/reference/database-support-mfc-application-wizard.md)
 
-- [加入 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)
+- [新增 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)
 
 - [資料來源 (ODBC)](../../data/odbc/data-source-odbc.md)
 
 - [動態集](../../data/odbc/dynaset.md)
 
-- [例外狀況: 資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)
+- [例外狀況：資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)
 
 - [MFC:使用具有文件和檢視資料庫類別](../../data/mfc-using-database-classes-with-documents-and-views.md)
 
@@ -54,4 +54,4 @@ ms.locfileid: "59035185"
 ## <a name="see-also"></a>另請參閱
 
 [ODBC 和 MFC](../../data/odbc/odbc-and-mfc.md)<br/>
-[Data Access Programming (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+[資料存取程式設計 (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

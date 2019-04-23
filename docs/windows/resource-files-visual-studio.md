@@ -25,10 +25,10 @@ helpviewer_keywords:
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
 ms.openlocfilehash: 45db6d0139cfa3aa8a2eaa8fe6d18158cb6646ce
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029391"
 ---
 # <a name="resource-files-c"></a>資源檔 (C++)
@@ -54,7 +54,7 @@ ms.locfileid: "59029391"
 
 - 使用巢狀和條件限定的資源檔案。
 
-- 更新現有的資源，或將它們轉換成 Visual c + +。
+- 更新現有的資源，或將它們轉換至視覺效果C++。
 
 - 從目前的資源檔匯入或匯出圖形資源。
 
@@ -90,7 +90,7 @@ ms.locfileid: "59029391"
 
 ## <a name="manifest-resources"></a>資訊清單資源
 
-在 c + + 桌面專案中，資訊清單資源是描述應用程式使用的相依性的 XML 檔案。 例如，在 Visual Studio 這個 MFC 精靈產生資訊清單檔案定義應用程式應該使用哪個版本的 Windows 通用控制項 Dll:
+在C++傳統型專案中，資訊清單資源是描述應用程式使用的相依性的 XML 檔案。 例如，在 Visual Studio 這個 MFC 精靈產生資訊清單檔案定義應用程式應該使用哪個版本的 Windows 通用控制項 Dll:
 
 ```xml
 <description>Your app description here</description>
@@ -132,5 +132,5 @@ Win32
 ## <a name="see-also"></a>另請參閱
 
 [使用資源檔](../windows/working-with-resource-files.md)<br/>
-[資源識別項 （符號）](../windows/symbols-resource-identifiers.md)<br/>
+[資源識別項 (符號)](../windows/symbols-resource-identifiers.md)<br/>
 [資源編輯器](../windows/resource-editors.md)<br/>

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
 ms.openlocfilehash: 3c66cf58ce1f8b83b2b3308c8dabba6cf8cdf0ef
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033848"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>在提供者內動態繫結資料行
@@ -88,4 +88,4 @@ ms.locfileid: "59033848"
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 OLE DB 提供者樣板](../../data/oledb/working-with-ole-db-provider-templates.md)
+[使用 OLE DB 提供者範本](../../data/oledb/working-with-ole-db-provider-templates.md)

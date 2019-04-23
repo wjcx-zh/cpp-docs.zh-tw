@@ -1,5 +1,5 @@
 ---
-title: '#如果 #elif、 #else 和 #endif 指示詞 （C/c + +）'
+title: '#如果 #elif、 #else 和 #endif 指示詞 (C /C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - '#else'
@@ -22,10 +22,10 @@ helpviewer_keywords:
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
 ms.openlocfilehash: 90fbab45c6408c30198c2a52a42545718002cc11
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028087"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if、#elif、#else 和 #endif 指示詞 (C/C++)
@@ -97,7 +97,7 @@ ms.locfileid: "59028087"
 
 defined( `identifier` )
 
-已定義的 `identifier`
+defined `identifier`
 
 這個常數運算式視為 true （非零），是否*識別碼*目前定義; 否則條件為 false (0)。 定義成空白文字的識別項會被視為已定義。 **定義**指示詞可用於 **#if**並 **#elif**指示詞，但沒地方可繼續。
 

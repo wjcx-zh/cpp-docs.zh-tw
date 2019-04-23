@@ -7,10 +7,10 @@ helpviewer_keywords:
 - configuring ODBC data sources
 ms.assetid: 1cd03e6a-8d59-4eca-a8c6-1010582d5e67
 ms.openlocfilehash: 259f0e2afa61096e4529a50ee2ba7de07b293c46
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034127"
 ---
 # <a name="odbc-configuring-an-odbc-data-source"></a>ODBC:設定 ODBC 資料來源
@@ -26,5 +26,5 @@ ODBC 管理員會自動安裝的 Microsoft Foundation Classes (MFC) 程式庫資
 
 ## <a name="see-also"></a>另請參閱
 
-[ODBC 的基本概念](../../data/odbc/odbc-basics.md)<br/>
+[ODBC 基本概念](../../data/odbc/odbc-basics.md)<br/>
 [ODBC:直接呼叫 ODBC API 函式](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)

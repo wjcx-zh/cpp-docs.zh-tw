@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - raw_property_prefixes attribute
 ms.assetid: 03a0f48c-c460-4175-a762-9f7f8d84b12f
-ms.openlocfilehash: 1e44b5265e486f0e5b5896bed41b62ebbdaa4fd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23250b524fdaa2181c8e28229ccec680ffdae715
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647131"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59033251"
 ---
 # <a name="rawpropertyprefixes"></a>raw_property_prefixes
 
-**C + + 特定**
+**C++特定**
 
 為三個屬性方法指定替代的前置詞。
 
@@ -40,7 +40,7 @@ raw_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
 
 根據預設，低階`propget`， `propput`，並`propputref`方法會公開由成員函式的名稱前置詞**get_**， **put_**，和**putref_** 分別。 這些前置詞與標頭檔中使用由 MIDL 所產生的名稱相容。
 
-**END c + + 特定的**
+**結束C++特定**
 
 ## <a name="see-also"></a>另請參閱
 

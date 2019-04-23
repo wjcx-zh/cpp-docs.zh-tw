@@ -20,10 +20,10 @@ helpviewer_keywords:
 - SetSite method
 ms.assetid: 92cc950f-7978-4754-8d9a-defa63867d82
 ms.openlocfilehash: 3dc5cb06b3eb7f01667e4e1ec09dd60f9befae77
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026600"
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl 類別
@@ -85,4 +85,4 @@ STDMETHOD(SetSite )(IUnknown* pCreator);
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

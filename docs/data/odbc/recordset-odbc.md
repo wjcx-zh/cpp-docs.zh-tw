@@ -14,10 +14,10 @@ helpviewer_keywords:
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
 ms.openlocfilehash: b201e152d83d3812253aa4803eebe715d726219d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034491"
 ---
 # <a name="recordset-odbc"></a>資料錄集 (ODBC)
@@ -65,7 +65,7 @@ A [CRecordset](../../mfc/reference/crecordset-class.md)物件都代表一組從�
 - 指定`CRecordset::readOnly`中*dwOptions*參數`Open`。
 
     > [!NOTE]
-    >  動態集支援的 ODBC 驅動程式需求的詳細資訊，請參閱[ODBC](../../data/odbc/odbc-basics.md)。 如需包含在這個版本的 Visual c + + 中的 ODBC 驅動程式的清單，以及取得額外的驅動程式的相關資訊，請參閱[ODBC 驅動程式清單](../../data/odbc/odbc-driver-list.md)。
+    >  動態集支援的 ODBC 驅動程式需求的詳細資訊，請參閱[ODBC](../../data/odbc/odbc-basics.md)。 如需包含於視覺效果的此版本的 ODBC 驅動程式的清單C++並取得其他驅動程式的相關資訊，請參閱[ODBC 驅動程式清單](../../data/odbc/odbc-driver-list.md)。
 
 ##  <a name="_core_your_recordsets"></a> 資料錄集
 

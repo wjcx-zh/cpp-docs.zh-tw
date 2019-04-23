@@ -6,10 +6,10 @@ helpviewer_keywords:
 - ODBC, installing
 ms.assetid: 6b473481-1d68-468f-89f6-82b0fd7716fd
 ms.openlocfilehash: 112593aac74a15279f605c75a52fb3eec6750576
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028648"
 ---
 # <a name="installing-and-getting-started-with-odbc"></a>安裝和開始使用 ODBC
@@ -18,7 +18,7 @@ ms.locfileid: "59028648"
 
 ## <a name="in-this-section"></a>本節內容
 
-- [安裝 ODBC 驅動程式隨附 Visual c + +](../../data/odbc/odbc-administrator.md)
+- [安裝 ODBC 驅動程式隨附具有視覺效果C++](../../data/odbc/odbc-administrator.md)
 
 - [轉散發 ODBC 元件給您的客戶](../../data/odbc/odbc-basics.md)
 

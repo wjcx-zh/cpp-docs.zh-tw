@@ -8,15 +8,15 @@ helpviewer_keywords:
 - __ud2 intrinsic
 ms.assetid: 0831cd5a-8b65-402e-bb57-11e1d5d7ffd2
 ms.openlocfilehash: a36ab5c25ac9138b2a4d6810cc2a339e534f1695
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029400"
 ---
 # <a name="ud2"></a>__ud2
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 會產生未定義的指示。
 
@@ -40,7 +40,7 @@ void __ud2();
 
 **標頭檔** \<intrin.h >
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="example"></a>範例
 

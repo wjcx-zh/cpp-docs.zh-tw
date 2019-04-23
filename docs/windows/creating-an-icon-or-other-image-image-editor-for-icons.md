@@ -88,10 +88,10 @@ helpviewer_keywords:
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
 ms.openlocfilehash: d10593ffbae7aef55adc3334057402b6952d8ba7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027593"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>如何：建立圖示或其他影像
@@ -155,11 +155,11 @@ ms.locfileid: "59027593"
 
 |屬性|描述|
 |---|---|
-|**寬度**|提供空間讓您輸入自訂影像的寬度，單位為像素 （1-512，限制為 2048年）。|
-|**高度**|提供空間讓您輸入高度的像素為單位 （1-512，限制為 2048年） 的自訂映像。|
+|[寬度]|提供空間讓您輸入自訂影像的寬度，單位為像素 （1-512，限制為 2048年）。|
+|[高度]|提供空間讓您輸入高度的像素為單位 （1-512，限制為 2048年） 的自訂映像。|
 |**色彩**|提供空間讓您選擇的自訂映像的色彩數目：2、 16 或 256。|
 
-使用**開啟&lt;裝置&gt;映像**對話方塊中，以開啟 c + + 專案中的 裝置映像。 它會列出目前的資源 （屬於目前的資源的映像） 的現有裝置映像。 是包含下列屬性：
+使用**開啟&lt;裝置&gt;映像**對話方塊來開啟裝置影像中的C++專案。 它會列出目前的資源 （屬於目前的資源的映像） 的現有裝置映像。 是包含下列屬性：
 
 |屬性|描述|
 |---|---|
@@ -266,7 +266,7 @@ ms.locfileid: "59027593"
 
 1. 移至功能表**檔案** > **Open**，然後選取**檔案**。
 
-1. 在**新的檔案] 對話方塊中**，選擇**Visual c + +** 資料夾，然後選取**點陣圖檔 (.bmp)** 中**範本**方塊，然後選取 [ **開啟**。
+1. 中**新的檔案] 對話方塊中**，選擇**Visual C++** 資料夾，然後選取**點陣圖檔 (.bmp)** 中**範本**方塊和選取 [**開啟**。
 
    在中開啟點陣圖**影像編輯器**。
 
@@ -293,7 +293,7 @@ ms.locfileid: "59027593"
 
 1. 選取 [儲存]。
 
-### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>若要將新的映像資源新增至未受管理的 c + + 專案
+### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>若要將新的映像資源新增至 unmanagedC++專案
 
 1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)，以滑鼠右鍵按一下您 *.rc*檔案，然後選擇**插入資源**。 如果您已經有現有的映像資源您 *.rc*檔案，例如資料指標，您可以直接以滑鼠右鍵按一下**游標**資料夾，然後選取**插入游標**。
 
@@ -320,9 +320,9 @@ None
 ## <a name="see-also"></a>另請參閱
 
 [圖示影像編輯器](../windows/image-editor-for-icons.md)<br/>
-[HOW TO：編輯映像](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[HOW TO：使用繪圖工具](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
-[HOW TO：使用色彩](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[如何：複製影像](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[如何：使用繪圖工具](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[如何：使用色彩](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 <!--
 [Converting Bitmaps to Toolbars](../windows/converting-bitmaps-to-toolbars.md)<br/>

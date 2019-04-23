@@ -7,15 +7,15 @@ helpviewer_keywords:
 - inject_statement attribute
 ms.assetid: 07d6f0f4-d9fb-4e18-aa62-f235f142ff5e
 ms.openlocfilehash: 237ca796028aad7aff55442eb2806fe400330a29
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034283"
 ---
 # <a name="injectstatement"></a>inject_statement
 
-**C++ 專有的**
+**C++特定**
 
 將其做為來源文字的引數插入至類型程式庫標題。
 
@@ -34,7 +34,7 @@ inject_statement("source_text")
 
 文字會放置在命名空間宣告的開頭位置，該命名空間宣告會在標題檔案中包裝類型程式庫內容。
 
-**END C++ 特定的**
+**結束C++特定**
 
 ## <a name="see-also"></a>另請參閱
 

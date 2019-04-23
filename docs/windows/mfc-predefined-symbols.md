@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
 ms.openlocfilehash: e9e4f9f62a3004e171eea9e3552d8a0f58923075
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031805"
 ---
 # <a name="mfc-predefined-symbols"></a>MFC 預先定義的符號
@@ -282,6 +282,6 @@ MFC
 
 ## <a name="see-also"></a>另請參閱
 
-[預先定義的符號 ID](../windows/predefined-symbol-ids.md)<br/>
+[預先定義的符號識別碼](../windows/predefined-symbol-ids.md)<br/>
 [ATL 預先定義的符號](../windows/atl-predefined-symbols.md)<br/>
 [Win32 預先定義的符號](../windows/win32-predefined-symbols.md)<br/>

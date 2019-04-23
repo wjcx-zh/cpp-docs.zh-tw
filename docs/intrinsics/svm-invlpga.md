@@ -8,15 +8,15 @@ helpviewer_keywords:
 - INVLPGA instruction
 ms.assetid: aa6578ce-8278-464b-8815-a0fc45330915
 ms.openlocfilehash: 5e470fc12ad47aa156c513b293543fa356398d5e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031128"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 失效的電腦轉譯旁觀緩衝區中的位址對應項目。 參數會指定虛擬位址和位址空間識別項的頁面，即可使其失效。
 
@@ -45,7 +45,7 @@ void __svm_invlpga(void *Va, int ASID);
 
 **標頭檔** \<intrin.h >
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

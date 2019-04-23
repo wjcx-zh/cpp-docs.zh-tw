@@ -7,15 +7,15 @@ helpviewer_keywords:
 - high_method_prefix attribute
 ms.assetid: cacebf09-12f5-4919-ad40-939e206e340c
 ms.openlocfilehash: 1575b2e3fee461ee0e3987aaf1e770d0611e31ec
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028982"
 ---
 # <a name="highmethodprefix"></a>high_method_prefix
 
-**C++ 專有的**
+**C++特定**
 
 指定用來命名高階屬性和方法的前置詞。
 
@@ -34,7 +34,7 @@ high_method_prefix("Prefix")
 
 根據預設，高階錯誤處理屬性和方法會由名稱不含前置詞的成員函式公開。 其名稱來自於類型程式庫。
 
-**END C++ 特定的**
+**結束C++特定**
 
 ## <a name="see-also"></a>另請參閱
 

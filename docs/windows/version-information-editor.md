@@ -1,5 +1,5 @@
 ---
-title: 版本資訊編輯器 （c + +）
+title: 版本資訊編輯器 (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.version.F1
@@ -24,13 +24,13 @@ helpviewer_keywords:
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
 ms.openlocfilehash: 7910522578d89657adb09eb7729eb7539e010027
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027646"
 ---
-# <a name="version-information-editor-c"></a>版本資訊編輯器 （c + +）
+# <a name="version-information-editor-c"></a>版本資訊編輯器 (C++)
 
 版本資訊包含公司和產品識別碼、產品版本號碼，以及版權和商標通知。 具有**版本資訊編輯器**，您建立和維護這項資料會儲存在版本資訊資源。 應用程式時，不需要版本資訊資源，但它是有用的地方可以收集並識別應用程式的資訊。 安裝程式 API 也使用版本資訊。
 

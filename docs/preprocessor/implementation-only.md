@@ -7,14 +7,14 @@ helpviewer_keywords:
 - implementation_only attribute
 ms.assetid: d8cabc86-4425-45a0-9587-d57536980088
 ms.openlocfilehash: c1435ca74ac2b5a73c308592b1affe6fca097d1b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026646"
 ---
 # <a name="implementationonly"></a>implementation_only
-**C++ 專有的**
+**C++特定**
 
 不產生 .tlh 標頭檔 (主要標頭檔)。
 
@@ -35,7 +35,7 @@ implementation_only
 > [!NOTE]
 > **Implementation_only**中其中一個屬性`#import`陳述式必須是用來與另一個`#import`陳述式中，相同的型別程式庫，與`no_implementation`屬性。 否則，就會產生編譯器錯誤。 這是因為所產生的包裝函式類別定義`#import`陳述式搭配`no_implementation`屬性，才能編譯所產生的實作**implementation_only**屬性。
 
-**END C++ 特定的**
+**結束C++特定**
 
 ## <a name="see-also"></a>另請參閱
 

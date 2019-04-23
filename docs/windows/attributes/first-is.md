@@ -1,5 +1,5 @@
 ---
-title: first_is （c + + COM 屬性）
+title: first_is (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.first_is
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
 ms.openlocfilehash: 79ddcb3a3ca256af4c7c30536d65c820dcef2afe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033079"
 ---
 # <a name="firstis"></a>first_is
@@ -25,12 +25,12 @@ ms.locfileid: "59033079"
 
 ### <a name="parameters"></a>參數
 
-*運算式*<br/>
+*expression*<br/>
 一或多個 C 語言的運算式。 允許空白的引數位置。
 
 ## <a name="remarks"></a>備註
 
-**First_is** c + + 屬性具有相同的功能[first_is](/windows/desktop/Midl/first-is) MIDL 屬性。
+**First_is** C++屬性具有相同的功能[first_is](/windows/desktop/Midl/first-is) MIDL 屬性。
 
 ## <a name="example"></a>範例
 

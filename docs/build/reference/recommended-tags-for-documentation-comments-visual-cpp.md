@@ -1,12 +1,12 @@
 ---
-title: 建議使用的文件註解 （c + + 文件註解） 標記
+title: 建議的文件註解標記 (C++文件註解)
 ms.date: 11/04/2016
 ms.assetid: 6548e798-5235-4a38-9482-bdc7b88f40a9
 ms.openlocfilehash: 2a6a2c3983c10579a6cd96b69be81aa7df8b8ee7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027892"
 ---
 # <a name="recommended-tags-for-documentation-comments"></a>建議使用的文件註解標籤
@@ -29,7 +29,7 @@ MSVC 編譯器將會處理您的程式碼中的文件註解，並建立.xdc 檔�
 |[\<para>](para-visual-cpp.md)|[\<param>](param-visual-cpp.md)1|[\<paramref>](paramref-visual-cpp.md)1|
 |[\<permission>](permission-visual-cpp.md)1|[\<remarks>](remarks-visual-cpp.md)|[\<returns>](returns-visual-cpp.md)|
 |[\<see>](see-visual-cpp.md)1|[\<seealso>](seealso-visual-cpp.md)1|[\<summary>](summary-visual-cpp.md)|
-|[\<值>](value-visual-cpp.md)|||
+|[\<value>](value-visual-cpp.md)|||
 
 1. 編譯器會驗證語法。
 

@@ -1,5 +1,5 @@
 ---
-title: 來源 （c + + COM 屬性）
+title: 來源 (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.source
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
 ms.openlocfilehash: 699ea64de49a4383bc8fb62b2f3b2133d7c496c9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030241"
 ---
 # <a name="source-c"></a>source (C++)
@@ -25,12 +25,12 @@ ms.locfileid: "59030241"
 
 ### <a name="parameters"></a>參數
 
-*介面*<br/>
+*interfaces*<br/>
 一或多個介面，指定當您將套用的來源屬性的類別。 未在來源套用至屬性或方法時，會使用此參數。
 
 ## <a name="remarks"></a>備註
 
-**來源**c + + 屬性具有相同的功能[來源](/windows/desktop/Midl/source)MIDL 屬性。
+**來源**C++屬性具有相同的功能[來源](/windows/desktop/Midl/source)MIDL 屬性。
 
 您可以使用[預設](default-cpp.md)屬性來指定預設來源介面的物件。
 

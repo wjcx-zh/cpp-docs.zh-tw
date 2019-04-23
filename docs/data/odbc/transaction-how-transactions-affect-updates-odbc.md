@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Rollback method, ODBC transactions
 ms.assetid: 9e00bbf4-e9fb-4332-87fc-ec8ac61b3f68
 ms.openlocfilehash: 996b8410366661cb91cf82cfff823f17d3aad8b4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033098"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>交易：異動如何影響更新 (ODBC)

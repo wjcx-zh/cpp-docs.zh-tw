@@ -1,5 +1,5 @@
 ---
-title: nonextensible （c + + COM 屬性）
+title: nonextensible (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonextensible
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
 ms.openlocfilehash: ed396b3d55e16cf195949c713ab574812b796a1a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032072"
 ---
 # <a name="nonextensible"></a>nonextensible
@@ -25,7 +25,7 @@ ms.locfileid: "59032072"
 
 ## <a name="remarks"></a>備註
 
-**Nonextensible** c + + 屬性具有相同的功能[nonextensible](/windows/desktop/Midl/nonextensible) MIDL 屬性。
+**Nonextensible** C++屬性具有相同的功能[nonextensible](/windows/desktop/Midl/nonextensible) MIDL 屬性。
 
 利用**nonextensible**也需要[oleautomation](oleautomation.md)屬性。
 

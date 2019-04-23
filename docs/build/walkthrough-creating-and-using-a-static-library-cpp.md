@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：建立和使用靜態程式庫 （c + +）
+title: 逐步解說：建立和使用靜態程式庫 (C++)
 ms.custom: get-started-article
 ms.date: 09/18/2018
 helpviewer_keywords:
@@ -8,13 +8,13 @@ helpviewer_keywords:
 ms.assetid: 3cc36411-7d66-4240-851e-dacb9a8fd6ac
 ms.author: corob
 ms.openlocfilehash: 0d527681abb077a01b3d902c092a21de7a052867
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031504"
 ---
-# <a name="walkthrough-creating-and-using-a-static-library-c"></a>逐步解說：建立和使用靜態程式庫 （c + +）
+# <a name="walkthrough-creating-and-using-a-static-library-c"></a>逐步解說：建立和使用靜態程式庫 (C++)
 
 本逐步解說示範如何建立搭配 C++ 應用程式使用的靜態程式庫 (.lib 檔案)。 使用靜態程式庫是重複使用程式碼的好方法。 而不是重新實作相同的常式，在需要的功能，您將它們寫入其中的每個應用程式時間的靜態程式庫，然後參考它從應用程式。 從靜態程式庫連結的程式碼會變成應用程式的一部分，您不必安裝另一個檔案即可使用程式碼。
 
@@ -40,10 +40,10 @@ ms.locfileid: "59031504"
 
 1. 在功能表列上，選擇 [檔案] > [新增] > [專案]。
 
-1. 在左窗格中**新的專案**對話方塊方塊中，展開**已安裝** > **Visual c + +**，然後選取  **Windows Desktop**. 在中央窗格中，選取**Windows Desktop 精靈**。
+1. 在左窗格中**新的專案**對話方塊方塊中，展開**已安裝** > **Visual C++** ，然後選取  **Windows Desktop**. 在中央窗格中，選取**Windows Desktop 精靈**。
 
    > [!NOTE]
-   > Visual Studio 2017，以前的版本中**新的專案**對話方塊方塊中，展開**已安裝** > **範本** >  **Visual c + +**，然後選取**Win32**。 在中央窗格中，選取 [Win32 主控台應用程式] 。
+   > Visual Studio 2017，以前的版本中**新的專案**對話方塊方塊中，展開**已安裝** > **範本** >  **視覺化C++** ，然後選取**Win32**。 在中央窗格中，選取 [Win32 主控台應用程式] 。
 
 1. 在 [名稱] 方塊中指定專案的名稱，例如 **MathFuncsLib** 。 在 [方案名稱] 方塊中指定方案的名稱，例如 **StaticLibrary** 。 選擇 [確定]  按鈕。
 
@@ -88,10 +88,10 @@ ms.locfileid: "59031504"
 
 1. 在功能表列上，選擇 [檔案] > [新增] > [專案]。
 
-1. 在左窗格中**新的專案**對話方塊方塊中，展開**已安裝** > **Visual c + +**，然後選取  **Windows Desktop**. 在中央窗格中，選取**Windows Desktop 精靈**。
+1. 在左窗格中**新的專案**對話方塊方塊中，展開**已安裝** > **Visual C++** ，然後選取  **Windows Desktop**. 在中央窗格中，選取**Windows Desktop 精靈**。
 
    > [!NOTE]
-   > Visual Studio 2017，以前的版本中**新的專案**對話方塊方塊中，展開**已安裝** > **範本** >  **Visual c + +**，然後選取**Win32**。 在中央窗格中，選取 [Win32 主控台應用程式] 。
+   > Visual Studio 2017，以前的版本中**新的專案**對話方塊方塊中，展開**已安裝** > **範本** >  **視覺化C++** ，然後選取**Win32**。 在中央窗格中，選取 [Win32 主控台應用程式] 。
 
 1. 在 [名稱] 方塊中指定專案的名稱，例如 **MyExecRefsLib** 。 在 [方案] 旁邊的下拉式清單中，選取 [加入至方案] 。 此命令會將新的專案加入至包含靜態程式庫的方案。 選擇 [確定]  按鈕。
 
@@ -146,5 +146,5 @@ ms.locfileid: "59031504"
 
 ## <a name="see-also"></a>另請參閱
 
-[逐步解說：建立和使用動態連結程式庫 （c + +）](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
-[桌面應用程式 （Visual c + +）](../windows/desktop-applications-visual-cpp.md)<br/>
+[逐步解說：建立和使用動態連結程式庫 (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
+[傳統型應用程式 (Visual C++)](../windows/desktop-applications-visual-cpp.md)<br/>

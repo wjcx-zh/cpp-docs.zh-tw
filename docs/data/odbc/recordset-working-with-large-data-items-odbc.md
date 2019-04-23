@@ -9,10 +9,10 @@ helpviewer_keywords:
 - CLongBinary class, using in recordsets
 ms.assetid: 3e80b5a8-b6e7-43c6-a816-e54befc513a3
 ms.openlocfilehash: 3ba8d4af5b0781c425dd3b1223e2208b279f055e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033040"
 ---
 # <a name="recordset-working-with-large-data-items-odbc"></a>資料錄集：使用大型的資料項目 (ODBC)
@@ -42,7 +42,7 @@ ms.locfileid: "59033040"
 
 ##  <a name="_core_the_cbytearray_class"></a> CByteArray 類別
 
-`CByteArray` 是其中一個 MFC 集合類別。 A`CByteArray`物件會儲存為動態的位元組陣列，視所能成長的陣列。 類別會提供快速存取，藉由索引使用與內建的 c + + 陣列。 `CByteArray` 物件可以序列化和傾印供診斷之用。 類別提供成員函式取得和設定指定的位元組、 插入和附加位元組，以及移除一個位元組或所有位元組。 這些功能讓剖析更容易的二進位資料。 比方說，如果二進位物件是一個 OLE 物件，您可能要逐步執行一些標頭位元組，連線到實際的物件。
+`CByteArray` 是其中一個 MFC 集合類別。 A`CByteArray`物件會儲存為動態的位元組陣列，視所能成長的陣列。 類別，藉由索引提供快速存取，如同內建C++陣列。 `CByteArray` 物件可以序列化和傾印供診斷之用。 類別提供成員函式取得和設定指定的位元組、 插入和附加位元組，以及移除一個位元組或所有位元組。 這些功能讓剖析更容易的二進位資料。 比方說，如果二進位物件是一個 OLE 物件，您可能要逐步執行一些標頭位元組，連線到實際的物件。
 
 ##  <a name="_core_using_cbytearray_in_recordsets"></a> 資料錄集中使用 CByteArray
 

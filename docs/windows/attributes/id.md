@@ -1,5 +1,5 @@
 ---
-title: 識別碼 （c + + COM 屬性）
+title: 識別碼 (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.id
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
 ms.openlocfilehash: 5faf08418771deda3086a434cff6b1900a37e36e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034692"
 ---
 # <a name="id"></a>id
@@ -30,7 +30,7 @@ ms.locfileid: "59034692"
 
 ## <a name="remarks"></a>備註
 
-**識別碼**c + + 屬性具有相同的功能[識別碼](/windows/desktop/Midl/id)MIDL 屬性。
+**識別碼**C++屬性具有相同的功能[識別碼](/windows/desktop/Midl/id)MIDL 屬性。
 
 ## <a name="example"></a>範例
 
@@ -55,5 +55,5 @@ ms.locfileid: "59034692"
 [方法屬性](method-attributes.md)<br/>
 [資料成員屬性](data-member-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
-[中的](in-cpp.md)<br/>
+[in](in-cpp.md)<br/>
 [out](out-cpp.md)

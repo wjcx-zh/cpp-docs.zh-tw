@@ -6,10 +6,10 @@ helpviewer_keywords:
 - MFC, record views
 ms.assetid: 691e89a5-ff21-4ca3-9278-69d4678288bb
 ms.openlocfilehash: c5c35208f654cff90e3cdf87e697e654bdfbe307
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033001"
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>您在使用記錄檢視上的角色 (MFC 資料存取)
@@ -33,5 +33,5 @@ ms.locfileid: "59033001"
 
 ## <a name="see-also"></a>另請參閱
 
-[記錄檢視 (MFC 資料存取)](../data/record-views-mfc-data-access.md)<br/>
+[資料錄檢視 (MFC 資料存取)](../data/record-views-mfc-data-access.md)<br/>
 [ODBC 驅動程式清單](../data/odbc/odbc-driver-list.md)

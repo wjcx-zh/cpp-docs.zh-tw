@@ -5,10 +5,10 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake redefined configurations
 ms.openlocfilehash: cecadaec2e409dfba3b1929e406c36df3e498307
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031441"
 ---
 # <a name="cmake-predefined-build-configurations"></a>CMake 預先組建組態
@@ -346,9 +346,9 @@ You can use these optional settings for more control:
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual Studio 中的 CMake 專案](cmake-projects-in-visual-studio.md)<br/>
+[CMake Projects in Visual Studio](cmake-projects-in-visual-studio.md) (Visual Studio 中的 CMake 專案)<br/>
 [設定 Linux CMake 專案](../linux/cmake-linux-project.md)<br/>
 [連線到遠端 Linux 電腦](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [設定 CMake 偵錯工作階段](configure-cmake-debugging-sessions.md)<br/>
-[部署、執行和偵錯 Linux 專案](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
+[部署、執行及偵錯 Linux 專案](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [CMake 預先定義組態參考](cmake-predefined-configuration-reference.md)<br/>

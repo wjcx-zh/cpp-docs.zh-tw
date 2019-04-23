@@ -239,10 +239,10 @@ helpviewer_keywords:
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
 ms.openlocfilehash: dc4f619fb0dba924693682c927247e809fe2cfe9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032319"
 ---
 # <a name="crowset-class"></a>CRowset 類別
@@ -273,7 +273,7 @@ class CRowset
 |-|-|
 |[AddRefRows](#addrefrows)|遞增參考計數相關聯的目前資料列。|
 |[關閉](#close)|釋放資料列和目前`IRowset`介面。|
-|[比較](#compare)|比較兩個設定為書籤使用[IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85))。|
+|[Compare](#compare)|比較兩個設定為書籤使用[IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85))。|
 |[CRowset](#crowset)|建立新`CRowset`物件，並 （選擇性） 將它與`IRowset`當做參數提供的介面。|
 |[刪除](#delete)|刪除的資料列集使用資料列[IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85))。|
 |[FindNextRow](#findnextrow)|尋找在指定的書籤之後的下一個相符的資料列。|
@@ -282,7 +282,7 @@ class CRowset
 |[GetDataHere](#getdatahere)|從指定的緩衝區中擷取資料。|
 |[GetOriginalData](#getoriginaldata)|擷取的資料最近從擷取或傳送到資料來源，略過暫止的變更。|
 |[GetRowStatus](#getrowstatus)|傳回所有資料列的狀態。|
-|[Insert](#insert)|建立並將插入新的資料列使用[IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85))。|
+|[插入](#insert)|建立並將插入新的資料列使用[IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85))。|
 |[IsSameRow](#issamerow)|比較指定的資料列與目前資料列。|
 |[MoveFirst](#movefirst)|會的下一個提取位置重新定位至初始位置。|
 |[MoveLast](#movelast)|移至最後一個記錄。|
@@ -741,7 +741,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>參數
 
-*Bookmark - 書籤*<br/>
+*bookmark*<br/>
 [in] 標記您要從中擷取資料之位置的書籤。
 
 *lSkip*<br/>
@@ -941,4 +941,4 @@ HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,
 [MultiRead 的範例](../../overview/visual-cpp-samples.md)<br/>
 [MultiRead 的屬性範例](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: com_interface_entry （c + + COM 屬性）
+title: com_interface_entry (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.com_interface_entry
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
 ms.openlocfilehash: 65d174679f851613e064568b071cfcbdad8f0f06
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030403"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
@@ -31,7 +31,7 @@ ms.locfileid: "59030403"
 
 ## <a name="remarks"></a>備註
 
-**Com_interface_entry** c + + 屬性會插入目標物件的 COM 介面對應中的字元字串的完整的內容。 如果屬性套用至目標物件的一次，則會將項目插入到現有的介面對應的開頭。 屬性重複套用至相同的目標物件，如果他們收到的順序中的介面對應的開頭插入項目。
+**Com_interface_entry** C++屬性會插入目標物件的 COM 介面對應中的字元字串的完整的內容。 如果屬性套用至目標物件的一次，則會將項目插入到現有的介面對應的開頭。 屬性重複套用至相同的目標物件，如果他們收到的順序中的介面對應的開頭插入項目。
 
 此屬性需要 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果`progid`會套用`vi_progid`和`coclass`也會套用。
 

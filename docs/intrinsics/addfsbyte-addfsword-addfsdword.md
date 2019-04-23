@@ -14,15 +14,15 @@ helpviewer_keywords:
 - __addfsbyte intrinsic
 ms.assetid: 706c70df-6b52-4401-9268-2977ed8ad715
 ms.openlocfilehash: 61053d9f8c56d8352b12ed535dfa870c0856f558
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032699"
 ---
 # <a name="addfsbyte-addfsword-addfsdword"></a>__addfsbyte、__addfsword、__addfsdword
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 將值新增至相對於開頭的位移所指定的記憶體位置`FS`區段。
 
@@ -45,10 +45,10 @@ void __addfsdword(
 
 #### <a name="parameters"></a>參數
 
-*位移*<br/>
+*Offset*<br/>
 [in]從開頭的位移`FS`。
 
-*資料*<br/>
+*Data*<br/>
 [in]要加入之記憶體位置的值。
 
 ## <a name="requirements"></a>需求
@@ -63,7 +63,7 @@ void __addfsdword(
 
 這些常式都僅有內建函式。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

@@ -36,10 +36,10 @@ helpviewer_keywords:
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
 ms.openlocfilehash: ebf10ade734d321c5a83644110d3511e4b6c827a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033991"
 ---
 # <a name="how-to-manage-symbols"></a>HOW TO：管理符號
@@ -214,6 +214,6 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[資源識別項 （符號）](../windows/symbols-resource-identifiers.md)<br/>
-[HOW TO：建立符號](../windows/creating-new-symbols.md)<br/>
-[預先定義的符號 ID](../windows/predefined-symbol-ids.md)<br/>
+[資源識別項 (符號)](../windows/symbols-resource-identifiers.md)<br/>
+[如何：建立符號](../windows/creating-new-symbols.md)<br/>
+[預先定義的符號識別碼](../windows/predefined-symbol-ids.md)<br/>

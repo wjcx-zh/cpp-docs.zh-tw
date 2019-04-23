@@ -10,10 +10,10 @@ helpviewer_keywords:
 - interfaces, list of
 ms.assetid: d2ce99ce-6f7a-4ff9-bc6e-acda3633d5c8
 ms.openlocfilehash: 0caecc797a3175d5769f98e181e1d99ef6b1ad16
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034030"
 ---
 # <a name="transaction-object-interfaces"></a>異動物件介面
@@ -30,4 +30,4 @@ ms.locfileid: "59034030"
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

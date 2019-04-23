@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __readmsr intrinsic
 ms.assetid: 7ab1f8e8-72cb-4ce4-817d-3e728a3c9716
 ms.openlocfilehash: 2c866213c452f3b8791bf0fe031a43bb024e91fb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027621"
 ---
 # <a name="readmsr"></a>__readmsr
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 會產生`rdmsr`的指示，它會讀取所指定的模型特定暫存`register`並傳回其值。
 
@@ -31,7 +31,7 @@ __int64 __readmsr(
 
 #### <a name="parameters"></a>參數
 
-*註冊*<br/>
+*register*<br/>
 [in]讀取模型特定暫存器。
 
 ## <a name="return-value"></a>傳回值
@@ -52,7 +52,7 @@ __int64 __readmsr(
 
 如需詳細資訊，請參閱 AMD 文件。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

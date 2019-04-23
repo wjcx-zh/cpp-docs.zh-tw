@@ -7,10 +7,10 @@ helpviewer_keywords:
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
 ms.openlocfilehash: fdaafd5c8243143fd9705d45db2497577820ca0a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030085"
 ---
 # <a name="open-database-connectivity-odbc"></a>開放式資料庫連接 (ODBC)
@@ -78,4 +78,4 @@ Microsoft Foundation Classes (MFC) 程式庫提供可以使用開放式資料庫
 
 ## <a name="see-also"></a>另請參閱
 
-[Data Access Programming (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+[資料存取程式設計 (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

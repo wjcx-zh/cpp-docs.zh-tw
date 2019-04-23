@@ -9,15 +9,15 @@ helpviewer_keywords:
 - rdpmc instruction
 ms.assetid: 14ed45a6-28b6-4635-8437-a597c04b43d4
 ms.openlocfilehash: 848c880e76d6d431ee56a0bb30a33b276837ce76
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029339"
 ---
 # <a name="readpmc"></a>__readpmc
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 會產生`rdpmc`指令，讀取效能監視所指定的計數器`counter`。
 
@@ -31,7 +31,7 @@ unsigned __int64 __readpmc(
 
 #### <a name="parameters"></a>參數
 
-*計數器*<br/>
+*counter*<br/>
 [in]要讀取的效能計數器。
 
 ## <a name="return-value"></a>傳回值
@@ -50,7 +50,7 @@ unsigned __int64 __readpmc(
 
 此內建只適用於核心模式，且此常式僅可作為內建。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

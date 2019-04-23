@@ -17,10 +17,10 @@ helpviewer_keywords:
 - positioning cursors
 ms.assetid: 6608db92-82b1-4164-bb08-78153c227be3
 ms.openlocfilehash: 862303a0dc66fbd49bfcba83336ab29dfc7145c0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032228"
 ---
 # <a name="odbc-the-odbc-cursor-library"></a>ODBC:ODBC 資料指標程式庫
@@ -67,4 +67,4 @@ ODBC 資料指標程式庫提供下列新功能的層級 1 的驅動程式：
 
 ## <a name="see-also"></a>另請參閱
 
-[ODBC 的基本概念](../../data/odbc/odbc-basics.md)
+[ODBC 基本概念](../../data/odbc/odbc-basics.md)

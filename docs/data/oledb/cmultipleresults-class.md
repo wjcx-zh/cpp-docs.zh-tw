@@ -9,10 +9,10 @@ helpviewer_keywords:
 - CMultipleResults class
 ms.assetid: 6ce5bbb9-b551-483c-988a-e6aee9135a19
 ms.openlocfilehash: 5bc1bb9ab1e0b6f5f8b2914e4249361ff37cce08
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028437"
 ---
 # <a name="cmultipleresults-class"></a>CMultipleResults 類別
@@ -36,4 +36,4 @@ class CMultipleResults
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

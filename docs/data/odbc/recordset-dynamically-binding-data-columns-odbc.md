@@ -9,10 +9,10 @@ helpviewer_keywords:
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
 ms.openlocfilehash: c2f2a6a6696f46fb5b8f2777c6c911269c9e7a80
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035114"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>資料錄集：動態繫結資料行 (ODBC)
@@ -93,7 +93,7 @@ ms.locfileid: "59035114"
 |-|-|
 |**Current-Table-Columns**| （圖中的清單 1）在資料來源的資料表中的目前資料行清單。 這份清單可能會比對目前繫結資料錄集中的資料行清單。|
 |**Bound-Recordset-Columns**| （圖中的清單 2）資料錄集繫結的資料行清單。 這些資料行已經有 RFX 陳述式，您`DoFieldExchange`函式。|
-|**資料行來-動態繫結**| （圖中的清單 3）在資料表中，但不是在資料錄集的資料行清單。 這些是您想要動態繫結的資料行。|
+|**Columns-To-Bind-Dynamically**| （圖中的清單 3）在資料表中，但不是在資料錄集的資料行清單。 這些是您想要動態繫結的資料行。|
 |**Dynamic-Column-Values**| （圖中的清單 4）包含值的儲存體的清單擷取自您動態繫結資料行。 此清單的項目對應於資料行來-動態繫結，一對一。|
 
 ###  <a name="_core_building_your_lists"></a> 建置您的清單

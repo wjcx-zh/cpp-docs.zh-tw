@@ -1,5 +1,5 @@
 ---
-title: transmit_as （c + + COM 屬性）
+title: transmit_as (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.transmit_as
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
 ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032094"
 ---
 # <a name="transmitas"></a>transmit_as
@@ -25,12 +25,12 @@ ms.locfileid: "59032094"
 
 ### <a name="parameters"></a>參數
 
-*類型*<br/>
+*type*<br/>
 指定用戶端與伺服器之間傳輸的資料類型。
 
 ## <a name="remarks"></a>備註
 
-**Transmit_as** c + + 屬性具有相同的功能[transmit_as](/windows/desktop/Midl/transmit-as) MIDL 屬性。
+**Transmit_as** C++屬性具有相同的功能[transmit_as](/windows/desktop/Midl/transmit-as) MIDL 屬性。
 
 ## <a name="example"></a>範例
 
@@ -81,4 +81,4 @@ struct _TREE_NODE_TYPE * right;
 
 [IDL 屬性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)<br/>
-[匯出](export.md)
+[export](export.md)

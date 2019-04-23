@@ -7,15 +7,15 @@ helpviewer_keywords:
 - high_property_prefixes attribute
 ms.assetid: 91c6cc2b-19b6-4aba-8831-d9e5cccb58b5
 ms.openlocfilehash: 3f8975ec9737e02bb1216166cc6c241549e95a07
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029365"
 ---
 # <a name="highpropertyprefixes"></a>high_property_prefixes
 
-**C++ 專有的**
+**C++特定**
 
 為三個屬性方法指定替代的前置詞。
 
@@ -40,7 +40,7 @@ high_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
 
 根據預設，高階錯誤處理`propget`， `propput`，並`propputref`方法會公開由成員函式名稱前置詞`Get`， `Put`，和`PutRef`分別。
 
-**END C++ 特定的**
+**結束C++特定**
 
 ## <a name="see-also"></a>另請參閱
 

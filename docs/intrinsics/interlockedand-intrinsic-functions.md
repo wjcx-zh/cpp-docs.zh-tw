@@ -57,15 +57,15 @@ helpviewer_keywords:
 - _InterlockedAnd_HLEAcquire intrinsic
 ms.assetid: ad271dc3-42cd-47d0-9f65-30d5cfeb66fc
 ms.openlocfilehash: b38a181102247ab203c86ccb6310a72135dccc8b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033316"
 ---
 # <a name="interlockedand-intrinsic-functions"></a>_InterlockedAnd 內建函式
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 用來執行多個執行緒所共用的變數上，不可部分完成的位元 AND 運算。
 
@@ -175,7 +175,7 @@ __int64 _InterlockedAnd64_rel(
 *value*<br/>
 [in、 out]要被結果取代的第一個運算元指標。
 
-*遮罩*<br/>
+*mask*<br/>
 [in]第二個運算元。
 
 ## <a name="return-value"></a>傳回值
@@ -186,10 +186,10 @@ __int64 _InterlockedAnd64_rel(
 
 |內建|架構|標頭|
 |---------------|------------------|------------|
-|`_InterlockedAnd`、 `_InterlockedAnd8`、 `_InterlockedAnd16`、 `_InterlockedAnd64`|x86、 x64、 ARM|\<intrin.h>|
+|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|x86、 x64、 ARM|\<intrin.h>|
 |`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM|\<intrin.h>|
-|`_InterlockedAnd_np`、 `_InterlockedAnd8_np`、 `_InterlockedAnd16_np`、 `_InterlockedAnd64_np`|X64|\<intrin.h>|
-|`_InterlockedAnd_HLEAcquire`、 `_InterlockedAnd_HLERelease`、 `_InterlockedAnd64_HLEAcquire`、 `_InterlockedAnd64_HLERelease`|x86、x64|\<immintrin.h>|
+|`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|X64|\<intrin.h>|
+|`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86、x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>備註
 
@@ -225,7 +225,7 @@ int main()
 0xff00 0xffff00 0xff00ff00
 ```
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

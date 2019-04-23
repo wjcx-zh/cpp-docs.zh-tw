@@ -5,12 +5,12 @@ helpviewer_keywords:
 - record views, classes
 - record view classes
 ms.assetid: e7b2820f-09c4-483f-83c0-317e8be42bdf
-ms.openlocfilehash: 2feda8f8f446e02a5056287c656707ea038f5387
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f8de956065571109c988bd2940d21822bba7cfd
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461148"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59029871"
 ---
 # <a name="features-of-record-view-classes--mfc-data-access"></a>記錄檢視類別的功能 (MFC 資料存取)
 
@@ -22,7 +22,7 @@ ms.locfileid: "50461148"
 
 - 如果使用者移到另一筆記錄，更新會變更為目前的記錄。
 
-如需有關瀏覽的詳細資訊，請參閱[資料錄檢視： 支援在資料錄檢視的瀏覽](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)。
+如需有關瀏覽的詳細資訊，請參閱[資料錄檢視：支援資料錄檢視的瀏覽](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)。
 
 ## <a name="see-also"></a>另請參閱
 

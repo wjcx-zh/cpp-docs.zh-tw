@@ -7,14 +7,14 @@ helpviewer_keywords:
 - no_namespace attribute
 ms.assetid: 5d81b741-a558-451b-b493-1f3b18967337
 ms.openlocfilehash: f6bd60de02bf0166d5cf0b0cd1bc1de56ceda5bf
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028713"
 ---
 # <a name="nonamespace"></a>no_namespace
-**C++ 專有的**
+**C++特定**
 
 指定命名空間名稱不是由編譯器產生。
 
@@ -30,7 +30,7 @@ no_namespace
 
 如果您想要使用不同的命名空間的名稱，然後使用[rename_namespace](../preprocessor/rename-namespace.md)改為屬性。
 
-**END C++ 特定的**
+**結束C++特定**
 
 ## <a name="see-also"></a>另請參閱
 

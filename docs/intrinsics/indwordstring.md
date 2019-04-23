@@ -9,15 +9,15 @@ helpviewer_keywords:
 - rep insd instruction
 ms.assetid: 96a1cf33-f691-4916-99e4-fa849b61e3a9
 ms.openlocfilehash: 6f50aed8e6efe3b0b0a6e7eaebef5719475463ea
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027866"
 ---
 # <a name="indwordstring"></a>__indwordstring
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 使用指定的連接埠時，讀取資料`rep insd`指令。
 
@@ -36,7 +36,7 @@ void __indwordstring(
 *連接埠*<br/>
 [in]要讀取的連接埠。
 
-*緩衝區*<br/>
+*Buffer*<br/>
 [out]從連接埠讀取的資料會寫入此處。
 
 *計數*<br/>
@@ -54,7 +54,7 @@ void __indwordstring(
 
 此常式僅可作為內建常式使用。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

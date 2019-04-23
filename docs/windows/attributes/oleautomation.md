@@ -1,5 +1,5 @@
 ---
-title: oleautomation （c + + COM 屬性）
+title: oleautomation (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.oleautomation
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - oleautomation attribute
 ms.assetid: c1086c91-260b-4dc3-b244-662852d09906
 ms.openlocfilehash: 74701742de904b76e7b1152c8ddb3f2f5dd953c2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031708"
 ---
 # <a name="oleautomation"></a>oleautomation
@@ -25,7 +25,7 @@ ms.locfileid: "59031708"
 
 ## <a name="remarks"></a>備註
 
-**Oleautomation** c + + 屬性具有相同的功能[oleautomation](/windows/desktop/Midl/oleautomation) MIDL 屬性。
+**Oleautomation** C++屬性具有相同的功能[oleautomation](/windows/desktop/Midl/oleautomation) MIDL 屬性。
 
 ## <a name="example"></a>範例
 

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
 ms.openlocfilehash: 2cbb334ab15912fdcf6980461016976d869f5a84
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029456"
 ---
 # <a name="setting-properties-in-your-provider"></a>在提供者內設定屬性
@@ -49,4 +49,4 @@ Microsoft OLE DB 提供者會忽略下列的 OLE DB 屬性：
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 OLE DB 提供者樣板](../../data/oledb/working-with-ole-db-provider-templates.md)
+[使用 OLE DB 提供者範本](../../data/oledb/working-with-ole-db-provider-templates.md)

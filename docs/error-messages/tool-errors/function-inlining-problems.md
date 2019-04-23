@@ -10,10 +10,10 @@ helpviewer_keywords:
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
 ms.openlocfilehash: fec3884dff0dda7140f18fa53e493c12996edcf0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031520"
 ---
 # <a name="function-inlining-problems"></a>函式內嵌問題
@@ -56,7 +56,7 @@ int main() {
 
 如果您使用`#pragma inline_depth`編譯器指示詞，請確定您有設定的值為 2 或更新版本。 值為零會關閉內嵌。 也請確定您使用 **/Ob1**或是 **/ob2**編譯器選項。
 
-混用內嵌和非內嵌在不同模組的編譯選項有時會造成問題。 如果函式內嵌開啟建立 c + + 程式庫 ([/Ob1](../../build/reference/ob-inline-function-expansion.md)或是[/ob2](../../build/reference/ob-inline-function-expansion.md))，但對應的標頭檔描述該函式具有內嵌已關閉 （無選項），您會收到錯誤 LNK2001。 函式無法取得內嵌程式碼從標頭檔，但因為它們不在程式庫檔案中沒有任何位址，解析參考。
+混用內嵌和非內嵌在不同模組的編譯選項有時會造成問題。 如果C++函式內嵌開啟與建立程式庫 ([/Ob1](../../build/reference/ob-inline-function-expansion.md)或是[/ob2](../../build/reference/ob-inline-function-expansion.md))，但對應的標頭檔描述該函式具有內嵌已關閉 （無選項），您會收到錯誤LNK2001。 函式無法取得內嵌程式碼從標頭檔，但因為它們不在程式庫檔案中沒有任何位址，解析參考。
 
 同樣地，使用內嵌函式的專案尚未定義函式的.cpp 檔案中而不是在標頭檔也會取得 LNK2019。 標頭檔會包含所有位置被視為適當，但函式只會內嵌時的.cpp 檔通過編譯器;因此，連結器會將函式視為其他模組中使用時，無法解析外部符號。
 

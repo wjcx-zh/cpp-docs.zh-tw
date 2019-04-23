@@ -1,5 +1,5 @@
 ---
-title: size_is （c + + COM 屬性）
+title: size_is (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.size_is
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
 ms.openlocfilehash: a7b990a708bafba78c9dc4153315f8b7b20351ba
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033225"
 ---
 # <a name="sizeis"></a>size_is
@@ -25,12 +25,12 @@ ms.locfileid: "59033225"
 
 ### <a name="parameters"></a>參數
 
-*運算式*<br/>
+*expression*<br/>
 所配置的記憶體大小調整大小的指標。
 
 ## <a name="remarks"></a>備註
 
-**Size_is** c + + 屬性具有相同的功能[size_is](/windows/desktop/Midl/size-is) MIDL 屬性。
+**Size_is** C++屬性具有相同的功能[size_is](/windows/desktop/Midl/size-is) MIDL 屬性。
 
 ## <a name="example"></a>範例
 

@@ -1,5 +1,5 @@
 ---
-title: progid （c + + COM 屬性）
+title: progid (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.progid
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - progid attribute
 ms.assetid: afcf559c-e432-481f-aa9a-bd3bb72c02a8
 ms.openlocfilehash: 5b0c688ad4d9b607cc1f5fb6b1c6d536a1c7888e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031125"
 ---
 # <a name="progid"></a>progid
@@ -25,14 +25,14 @@ ms.locfileid: "59031125"
 
 ### <a name="parameters"></a>參數
 
-*名稱*<br/>
+*name*<br/>
 代表物件的 ProgID。
 
 Progid 會提供人類看得懂的版本，用來識別的 COM/ActiveX 物件的類別識別項 (CLSID)。
 
 ## <a name="remarks"></a>備註
 
-**Progid** c + + 屬性可讓您指定 COM 物件的 ProgID。 ProgID 的形式*name1.name2.version*。 如果您未指定*版本*ProgID 的預設版本是 1。 如果您未指定*name1.name2*，預設名稱是*classname.classname*。 如果您未指定**progid**和您指定`vi_progid`， *name1.name2*取自`vi_progid`（下一個循序號碼） 和附加的版本。
+**Progid** C++屬性可讓您指定 COM 物件的 ProgID。 ProgID 的形式*name1.name2.version*。 如果您未指定*版本*ProgID 的預設版本是 1。 如果您未指定*name1.name2*，預設名稱是*classname.classname*。 如果您未指定**progid**和您指定`vi_progid`， *name1.name2*取自`vi_progid`（下一個循序號碼） 和附加的版本。
 
 如果使用的屬性區塊**progid**也不使用**uuid**，編譯器會檢查登錄，以查看**uuid**存在指定**progid**. 如果**progid**未指定，版本 （和 coclass 的名稱，如果建立在 coclass） 將用來產生**progid**。
 

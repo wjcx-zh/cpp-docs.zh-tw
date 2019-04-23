@@ -12,10 +12,10 @@ helpviewer_keywords:
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
 ms.openlocfilehash: fc12689148e3bf23c233e4656249625d1156f9a7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028502"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>了解自訂建置步驟和建置事件
@@ -68,10 +68,10 @@ ms.locfileid: "59028502"
 
 [指定自訂建置工具](specifying-custom-build-tools.md)<br/>
 [指定建置事件](specifying-build-events.md)<br/>
-[疑難排解組建自訂](troubleshooting-build-customizations.md)<br/>
-[自訂建置步驟或建置事件的輸出格式](formatting-the-output-of-a-custom-build-step-or-build-event.md)<br/>
+[為組建自訂進行疑難排解](troubleshooting-build-customizations.md)<br/>
+[設定自訂建置步驟或建置事件的輸出格式](formatting-the-output-of-a-custom-build-step-or-build-event.md)<br/>
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual Studio 專案-c + +](creating-and-managing-visual-cpp-projects.md)<br>
+[Visual Studio 專案 - C++](creating-and-managing-visual-cpp-projects.md)<br>
 [建置命令和屬性的一般巨集](reference/common-macros-for-build-commands-and-properties.md)

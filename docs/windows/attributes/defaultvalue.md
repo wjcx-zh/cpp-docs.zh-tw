@@ -1,5 +1,5 @@
 ---
-title: 預設值 （c + + COM 屬性）
+title: 預設值 (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvalue
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
 ms.openlocfilehash: ff6924db6f4805bb5f2dbab69076a86020b2a075
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026314"
 ---
 # <a name="defaultvalue"></a>defaultvalue
@@ -30,7 +30,7 @@ ms.locfileid: "59026314"
 
 ## <a name="remarks"></a>備註
 
-**Defaultvalue** c + + 屬性具有相同的功能[defaultvalue](/windows/desktop/Midl/defaultvalue) MIDL 屬性。
+**Defaultvalue** C++屬性具有相同的功能[defaultvalue](/windows/desktop/Midl/defaultvalue) MIDL 屬性。
 
 ## <a name="example"></a>範例
 
@@ -73,6 +73,6 @@ __interface IFireTabCtrl : IDispatch {
 [參數屬性](parameter-attributes.md)<br/>
 [out](out-cpp.md)<br/>
 [retval](retval.md)<br/>
-[中的](in-cpp.md)<br/>
+[in](in-cpp.md)<br/>
 [pointer_default](pointer-default.md)<br/>
 [unique](unique-cpp.md)

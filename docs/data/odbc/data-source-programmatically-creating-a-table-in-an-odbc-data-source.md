@@ -8,10 +8,10 @@ helpviewer_keywords:
 - tables [C++], creating programmatically
 ms.assetid: 9ca68fb5-c3df-424a-a75c-e3fb01cc1b18
 ms.openlocfilehash: 61d3f3e39362db27d1e3abc00fa3cb9ea82b86e2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028395"
 ---
 # <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>資料來源：以程式設計方式建立 ODBC 資料來源資料表
@@ -30,7 +30,7 @@ myDB.ExecuteSQL("CREATE TABLE OFFICES (OfficeID TEXT(4)" ",
 此程式碼範例會建立名為 「 辦公室 」 中所維護的 Microsoft Access 資料來源連接的資料表`myDB`; 資料表包含兩個欄位"OfficeID"和"OfficeName。 」
 
 > [!NOTE]
->  中指定的欄位型別**CREATE TABLE** SQL 陳述式可能會根據您使用的 ODBC 驅動程式而有所不同。 Microsoft 的查詢計畫 （隨附於 Visual c + + 1.5） 是一種方式找出哪些欄位型別可為資料來源。 在查詢中，按一下**檔案**，按一下**Table_Definition**資料來源選取資料表，看看所示的型別**型別**下拉式方塊。 SQL 語法也可用來建立索引。
+>  中指定的欄位型別**CREATE TABLE** SQL 陳述式可能會根據您使用的 ODBC 驅動程式而有所不同。 Microsoft 的查詢計劃 (隨附於 Visual C++ 1.5) 是一種方式，若要探索可用的資料來源的哪些欄位類型。 在查詢中，按一下**檔案**，按一下**Table_Definition**資料來源選取資料表，看看所示的型別**型別**下拉式方塊。 SQL 語法也可用來建立索引。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,5 +1,5 @@
 ---
-title: 實作 （c + + COM 屬性）
+title: 實作 (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.implements
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
 ms.openlocfilehash: 9425f998f0e8fbe5f16e6eb136e00ba3fb7bd5d9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033679"
 ---
 # <a name="implements-c"></a>implements (C++)
@@ -26,10 +26,10 @@ ms.locfileid: "59033679"
 
 ### <a name="parameters"></a>參數
 
-*介面*<br/>
+*interfaces*<br/>
 以逗號分隔清單中會是成員的 IDL coclass 的介面。 指定單一介面的簡略方法是**實作 (** *interface_name* **)**。
 
-*分配介面*<br/>
+*dispinterfaces*<br/>
 以逗號分隔會是成員的 IDL coclass dispinterface 的清單。 速記方法來指定單一 dispinterface**實作 (分配介面 =** *dispinterface_name* **)**。
 
 ## <a name="remarks"></a>備註
@@ -51,7 +51,7 @@ ms.locfileid: "59033679"
 
 ## <a name="example"></a>範例
 
-下列範例會在三個部分：.idl 檔及其相關聯的.h 檔案和 c + + 檔案。
+下列範例會在三個部分： 一個.idl 檔案和其相關聯的.h 檔案和C++檔案。
 
 假設下列的.idl 檔案，將會提供給編譯器。
 

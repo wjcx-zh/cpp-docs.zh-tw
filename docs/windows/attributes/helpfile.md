@@ -1,5 +1,5 @@
 ---
-title: 說明檔案 （c + + COM 屬性）
+title: 說明檔案 (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpfile
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
 ms.openlocfilehash: 7aff6addffb13d2d45953d190eeaac518fe48d6d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039290"
 ---
 # <a name="helpfile"></a>helpfile
@@ -30,7 +30,7 @@ ms.locfileid: "59039290"
 
 ## <a name="remarks"></a>備註
 
-**Helpfile** c + + 屬性具有相同的功能[helpfile](/windows/desktop/Midl/helpfile) MIDL 屬性。
+**Helpfile** C++屬性具有相同的功能[helpfile](/windows/desktop/Midl/helpfile) MIDL 屬性。
 
 ## <a name="example"></a>範例
 

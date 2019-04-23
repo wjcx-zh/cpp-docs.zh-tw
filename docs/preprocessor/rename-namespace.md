@@ -7,15 +7,15 @@ helpviewer_keywords:
 - rename_namespace attribute
 ms.assetid: 45006d2b-36cd-4bec-98b9-3b8ec45299e3
 ms.openlocfilehash: 7b3917a7114ca44d092f10a7831bb35bc64e9387
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039868"
 ---
 # <a name="renamenamespace"></a>rename_namespace
 
-**C++ 專有的**
+**C++特定**
 
 將包含類型程式庫內容的命名空間重新命名。
 
@@ -36,7 +36,7 @@ rename_namespace("NewName")
 
 若要移除的命名空間，請使用[no_namespace](../preprocessor/no-namespace.md)改為屬性。
 
-**END C++ 特定的**
+**結束C++特定**
 
 ## <a name="see-also"></a>另請參閱
 

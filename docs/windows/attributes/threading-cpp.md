@@ -1,5 +1,5 @@
 ---
-title: 執行緒 （c + + COM 屬性）
+title: 執行緒 (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.threading
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
 ms.openlocfilehash: cdebf06a62ebbd1d8648b9777fe200bc7a373261
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038274"
 ---
 # <a name="threading-c"></a>threading (C++)
@@ -42,7 +42,7 @@ ms.locfileid: "59038274"
 
 ## <a name="remarks"></a>備註
 
-**執行緒**c + + 屬性未出現在所產生的.idl 檔案，但將您的 COM 物件的實作中使用。
+**執行緒**C++屬性不會出現在產生的.idl 檔案中，但將您的 COM 物件的實作中使用。
 
 在 ATL 專案中，如果[coclass](coclass.md)屬性也會出現，所指定的執行緒模型*模型*傳遞做為範本參數[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)類別插入`coclass`屬性。
 

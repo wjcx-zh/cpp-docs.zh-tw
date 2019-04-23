@@ -9,15 +9,15 @@ helpviewer_keywords:
 - ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
 ms.openlocfilehash: e39f8fe797467569077dd24baf49670607915107
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041016"
 ---
 # <a name="llrshift"></a>__ll_rshift
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 將第二個參數所指定的位元數右邊的第一個參數所指定的 64 位元值。
 
@@ -89,7 +89,7 @@ fffffffffffffff0
 
 **附註**如果`_ull_rshift`已被使用，向右移位值的 MSB 原本零，因此想要的結果不所取得在負值的情況下。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

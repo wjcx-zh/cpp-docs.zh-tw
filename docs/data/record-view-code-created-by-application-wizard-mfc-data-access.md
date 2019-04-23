@@ -7,15 +7,15 @@ helpviewer_keywords:
 - record views, application wizard code
 ms.assetid: 18fd4703-5939-491d-b759-985f767b951f
 ms.openlocfilehash: e25ca9cad1390dd11ab7328ffefed31badf6fc0b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036071"
 ---
 # <a name="record-view-code-created-by-application-wizard--mfc-data-access"></a>應用程式精靈所建立的記錄檢視程式碼 (MFC 資料存取)
 
-[MFC 應用程式精靈](../mfc/reference/database-support-mfc-application-wizard.md)覆寫檢視`OnInitialUpdate`和`OnGetRecordset`成員函式。 在架構建立框架視窗、文件和檢視之後，它會呼叫 `OnInitialUpdate` 來初始化檢視。 `OnInitialUpdate` 從文件中取得資料錄集的指標。 基底類別呼叫[cview:: Oninitialupdate](../mfc/reference/cview-class.md#oninitialupdate)函式會開啟資料錄集。 下列程式碼示範此程序`CRecordView`:
+[MFC 應用程式精靈](../mfc/reference/database-support-mfc-application-wizard.md)覆寫檢視`OnInitialUpdate`和`OnGetRecordset`成員函式。 在架構建立框架視窗、文件和檢視之後，它會呼叫 `OnInitialUpdate` 來初始化檢視。 `OnInitialUpdate` 從文件中取得指向資料錄集的指標。 基底類別呼叫[cview:: Oninitialupdate](../mfc/reference/cview-class.md#oninitialupdate)函式會開啟資料錄集。 下列程式碼示範此程序`CRecordView`:
 
 ```cpp
 void CSectionForm::OnInitialUpdate()

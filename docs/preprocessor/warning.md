@@ -11,10 +11,10 @@ helpviewer_keywords:
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
 ms.openlocfilehash: 1341472af22582635207a2bdff93b4367fd59330
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037746"
 ---
 # <a name="warning-pragma"></a>警告 Pragma
@@ -37,8 +37,8 @@ ms.locfileid: "59037746"
 |------------------------|-------------|
 |*1, 2, 3, 4*|將指定的層級套用至指定的警告。 這樣也會開啟預設為關閉的指定警告。|
 |*default*|將警告行為重設為預設值。 這樣也會開啟預設為關閉的指定警告。 警告會以其記載的預設層級產生。<br /><br /> 如需詳細資訊，請參閱 [Compiler Warnings That Are Off by Default](../preprocessor/compiler-warnings-that-are-off-by-default.md)。|
-|*停用*|不發出指定的警告訊息。|
-|*個錯誤*|將指定的警告回報為錯誤。|
+|*disable*|不發出指定的警告訊息。|
+|*error*|將指定的警告回報為錯誤。|
 |*once*|只顯示指定的訊息一次。|
 |*suppress*|將 pragma 的目前狀態推送到堆疊上，停用為下一行指定的警告，然後推出警告堆疊以重設 pragma 狀態。|
 

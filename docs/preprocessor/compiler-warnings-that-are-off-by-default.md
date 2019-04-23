@@ -6,15 +6,15 @@ helpviewer_keywords:
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
 ms.openlocfilehash: ee2b6097a62a8f1030dc631354f96ec7a33d2f11
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039393"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>預設為關閉的編譯器警告
 
-編譯器支援根據預設，已關閉的警告，因為大部分的開發人員找不到它們很有用。 在某些情況下，它們會警告有關樣式的選擇，或在較舊的程式碼中常見的習慣用語。 其他警告會使用該語言的 Microsoft 擴充功能的相關資訊。 在其他情況下，它們表示程式設計人員通常都會不正確的假設，可能會導致非預期或未定義行為的區域。 如果啟用，有些警告可能會多次出現在 程式庫標頭。 C 執行階段程式庫和 c + + 標準程式庫要不發出任何警告，只能在警告層級[/w4](../build/reference/compiler-option-warning-level.md)。
+編譯器支援根據預設，已關閉的警告，因為大部分的開發人員找不到它們很有用。 在某些情況下，它們會警告有關樣式的選擇，或在較舊的程式碼中常見的習慣用語。 其他警告會使用該語言的 Microsoft 擴充功能的相關資訊。 在其他情況下，它們表示程式設計人員通常都會不正確的假設，可能會導致非預期或未定義行為的區域。 如果啟用，有些警告可能會多次出現在 程式庫標頭。 C 執行階段程式庫和C++標準程式庫要不發出任何警告，警告層級只[/w4](../build/reference/compiler-option-warning-level.md)。
 
 ## <a name="enable-warnings-that-are-off-by-default"></a>啟用預設為關閉的警告
 
@@ -30,7 +30,7 @@ ms.locfileid: "59039393"
 
 - [/Wall](../build/reference/compiler-option-warning-level.md)
 
-   `/Wall` 啟用所有警告預設為關閉。 如果您使用此選項時，您可以使用將關閉個別警告[/wd](../build/reference/compiler-option-warning-level.md)選項。
+   `/Wall` 會啟用所有預設停用的警告。 如果您使用此選項時，您可以使用將關閉個別警告[/wd](../build/reference/compiler-option-warning-level.md)選項。
 
 - [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
@@ -64,7 +64,7 @@ ms.locfileid: "59039393"
 |C4370 （層級 3）|因為較佳的封裝，類別配置已從舊版的編譯器變更|
 |[C4371](../error-messages/compiler-warnings/c4371.md) （層級 3）|'*classname*': 從舊版的編譯器，因為較佳的成員的封裝，類別配置可能已變更'*成員*'|
 |C4388 （層級 4）|帶正負號/不帶正負號不相符|
-|[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) （層級 2）|'*函式*': 函式簽章含有類型'*型別*';C + + 物件是純程式碼之間傳遞的不安全和混合或原生|
+|[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) （層級 2）|'*函式*': 函式簽章含有類型'*型別*';C++物件都是 unsafe 純程式碼之間傳遞並混合或原生|
 |C4426 （層級 1）|變更包含標頭之後最佳化旗標可能會因為 #pragma optimize （） <sup>14.1</sup>|
 |[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) （層級 4）|'*class1*':/ Vd2 底下的物件配置將因虛擬基底 '*class2*'|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) （層級 4）|從虛擬基底 dynamic_cast '*class1*'到'*class2*' 無法在某些內容中|
@@ -81,7 +81,7 @@ ms.locfileid: "59039393"
 |[C4549](../error-messages/compiler-warnings/compiler-warning-level-1-c4549.md) （層級 1）|'*operator1*': 逗號之前的運算子無效; 您是否想'*operator2*' 嗎？|
 |[C4555](../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md) （層級 1）|運算式無效; 必須是具有副作用的運算式|
 |[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) （層級 3）|'__assume '包含'*效果*'|
-|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) （層級 4）|Visual c + + 7.1; 以來變更的告知性： catch 語意不再攔截結構化例外狀況 (SEH)|
+|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) （層級 4）|告知性： catch 語意變更自 Visual C++ 7.1;不再攔截結構化例外狀況 (SEH)|
 |C4574 （層級 4）|'*識別碼*'已定義為' 0': 您是否想要使用 ' #if*識別項*'？|
 |C4577 （層級 1）|搭配任何例外狀況處理模式指定; 使用 ' noexcept'不保證終止的例外狀況。 指定 /EHsc|
 |C4582 （層級 4）|'*型別*': 未隱含呼叫建構函式|
@@ -99,7 +99,7 @@ ms.locfileid: "59039393"
 |[C4626](../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md) （層級 4）|'derived class': 因為無法存取基底類別的指派運算子，所以無法產生指派運算子|
 |[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) （層級 1）|不支援使用 -Ze 的雙拼詞。 字元順序 '*雙拼詞*'沒有解譯為替代語彙基元'*char*'|
 |[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) （層級 3）|'*執行個體*': 區域靜態物件的建構不是安全執行緒|
-| C4643 （層級 4） | 向前宣告 '*識別碼*' c + + 標準不允許 std 命名空間中。 <sup>15.8</sup> |
+| C4643 （層級 4） | 向前宣告 '*識別碼*' 中不允許 std 命名空間C++標準。 <sup>15.8</sup> |
 |C4647 （層級 3）|行為變更： __is_pod (*型別*) 之前的版本會有不同的值|
 |C4654 （層級 4）|放在之前的程式碼包含先行編譯標頭行都會被忽略。 您可以將程式碼加入先行編譯標頭。 <sup>14.1</sup>|
 |[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) （層級 4）|'*符號*'未定義成前置處理器巨集，以 '0' 取代'*指示詞*'|
@@ -139,7 +139,7 @@ ms.locfileid: "59039393"
 |C5025 （層級 4）|'*型別*': move 指派運算子已隱含定義為已刪除|
 |C5026 （層級 1 和層級 4）|'*型別*': move 建構函式已隱含定義為已刪除|
 |C5027 （層級 1 和層級 4）|'*型別*': move 指派運算子已隱含定義為已刪除|
-|C5029 （層級 4）|使用非標準擴充： c + + 中的對齊屬性套用至變數、 資料成員及標記類型|
+|C5029 （層級 4）|使用非標準擴充： 對齊屬性在C++變數、 資料成員及標記類型只適用於|
 |C5031 （層級 4）|#pragma warning （pop): 可能不相符，彈出的警告狀態推入不同的檔案<sup>14.1</sup>|
 |C5032 （層級 4）|偵測到 #pragma warning (push) 沒有對應的 #pragma warning <sup>14.1</sup>|
 |C5034|使用內建函式 '*內建函式*' 會導致函式*函式*編譯為客體程式碼<sup>15.3</sup>|
@@ -147,7 +147,7 @@ ms.locfileid: "59039393"
 |C5036 （層級 1）|varargs 函式指標轉換時使用/hybrid:x86arm64 編譯 '*type1*'到'*type2*' <sup>15.3</sup>|
 |[C5038](../error-messages/compiler-warnings/c5038.md) （層級 4）|資料成員 '*member1*'將初始化之後資料成員'*member2*' <sup>15.3</sup>|
 |C5039 （層級 4）|'*函式*': 指標或參考可能會擲回傳遞給-EHc 下 extern C 函式。 如果此函式會擲回的例外狀況，可能會發生未定義的行為。 <sup>15.5</sup>|
-|C5042 （層級 3）|'*函式*': 在區塊範圍內的函式宣告不能指定 'inline' standard c + + 中，因此請移除 'inline' 指定名稱<sup>15.5</sup>|
+|C5042 （層級 3）|'*函式*': 在區塊範圍內的函式宣告不能指定 'inline' standard C++; 移除 'inline' 規範<sup>15.5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|如果指定了 /Qspectre 參數，編譯器會插入 Spectre 風險降低為記憶體負載<sup>15.7</sup>|
 
 <sup>14.1</sup>這項警告是使用 Visual Studio 2015 Update 1 開始。<br/>

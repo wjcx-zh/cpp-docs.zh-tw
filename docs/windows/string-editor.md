@@ -1,5 +1,5 @@
 ---
-title: 字串編輯器 （c + +）
+title: 字串編輯器 (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.string.F1
@@ -33,13 +33,13 @@ helpviewer_keywords:
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
 ms.openlocfilehash: 47d5835356863383b32baffc4475e01a652e9856
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037181"
 ---
-# <a name="string-editor-c"></a>字串編輯器 （c + +）
+# <a name="string-editor-c"></a>字串編輯器 (C++)
 
 字串資料表是一種 Windows 資源，包含了識別碼、值與應用程式所有字串標題的清單。 例如，狀態列提示位於字串資料表中。
 

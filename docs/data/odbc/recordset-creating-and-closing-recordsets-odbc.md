@@ -10,10 +10,10 @@ helpviewer_keywords:
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
 ms.openlocfilehash: 5d5dae5bc766c0cfc31b4fb76f7fe104be0dbd74
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041263"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>資料錄集：建立和關閉資料錄集 (ODBC)
@@ -105,7 +105,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 
    如果您在宣告函式的堆疊框架上，物件是在當物件超出範圍時自動終結。 否則，請使用**刪除**運算子。
 
-`Close` 釋放資料錄集的`HSTMT`處理。 它不會終結的 c + + 物件。
+`Close` 釋放資料錄集的`HSTMT`處理。 它不會終結C++物件。
 
 ## <a name="see-also"></a>另請參閱
 

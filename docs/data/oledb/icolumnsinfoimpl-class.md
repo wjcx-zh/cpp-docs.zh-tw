@@ -28,10 +28,10 @@ helpviewer_keywords:
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
 ms.openlocfilehash: d9fbe95f87cfdf51ae9c52c7890e6f6c4075c89a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039789"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl 類別
@@ -104,4 +104,4 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - tlbid attribute
 ms.assetid: 54b06785-191b-4e77-a9a5-485f2b4acb09
 ms.openlocfilehash: ae79ce9245bb1c0425c3e9b92dd27b52fa443dba
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037927"
 ---
 # <a name="tlbid"></a>tlbid
 
-**C++ 專有的**
+**C++特定**
 
 允許載入主要類型程式庫以外的程式庫。
 
@@ -27,14 +27,14 @@ tlbid(number)
 
 ### <a name="parameters"></a>參數
 
-*數字*<br/>
+*number*<br/>
 `filename` 中類型程式庫的號碼。
 
 ## <a name="remarks"></a>備註
 
 如果多個型別程式庫會建置成單一 DLL，您可以使用載入主要類型程式庫以外的程式庫**tlbid**。
 
-例如：
+例如: 
 
 ```cpp
 #import <MyResource.dll> tlbid(2)
@@ -46,7 +46,7 @@ tlbid(number)
 LoadTypeLib("MyResource.dll\\2");
 ```
 
-**END C++ 特定的**
+**結束C++特定**
 
 ## <a name="see-also"></a>另請參閱
 

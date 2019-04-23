@@ -1,5 +1,5 @@
 ---
-title: 匯入 （c + + COM 屬性）
+title: 匯入 (C++ COM 屬性)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.import
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - import attribute
 ms.assetid: ebf07cae-39fb-4047-8b57-54af0a9a83de
 ms.openlocfilehash: d458ce9d938da5f3650eb2478385165de6a140ec
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035779"
 ---
 # <a name="import"></a>import
@@ -32,7 +32,7 @@ ms.locfileid: "59035779"
 
 ## <a name="remarks"></a>備註
 
-**匯入**c + + 屬性會造成`#import`陳述式置於以下`import "docobj.idl"`產生的.idl 檔案中的陳述式。 **匯入**屬性有相同的功能[匯入](/windows/desktop/Midl/import)MIDL 屬性。
+**匯入**C++屬性會導致`#import`陳述式置於以下`import "docobj.idl"`產生的.idl 檔案中的陳述式。 **匯入**屬性有相同的功能[匯入](/windows/desktop/Midl/import)MIDL 屬性。
 
 **匯入**屬性只會將指定的檔案放入您的專案; 將產生的.idl 檔案**匯入**屬性不會讓您指定的檔案中的建構呼叫從來源程式碼在您的專案。  若要從原始碼專案中，在指定的檔案呼叫建構，請使用[#import](../../preprocessor/hash-import-directive-cpp.md)並`embedded_idl`屬性，或者您可以包含的.h 檔案*idl_file*.h 檔案存在，則。
 

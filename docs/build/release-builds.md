@@ -1,5 +1,5 @@
 ---
-title: C + + 發行組建-Visual Studio
+title: C++發行組建-Visual Studio
 ms.date: 12/10/2018
 helpviewer_keywords:
 - debugging [C++], release builds
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - debug builds, converting to release build
 ms.assetid: fa9a78fa-f4b5-4722-baf4-aec655c4ff0f
 ms.openlocfilehash: cf11e63354502be000ba5f7259d9e36dfa774060
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038147"
 ---
 # <a name="release-builds"></a>發行的組建
@@ -22,8 +22,8 @@ ms.locfileid: "59038147"
 [建立發行組建時的常見問題](common-problems-when-creating-a-release-build.md)<br/>
 [解決發行組建的問題](fixing-release-build-problems.md)<br/>
 [使用 VERIFY 取代 ASSERT](using-verify-instead-of-assert.md)<br/>
-[使用偵錯版檢查記憶體覆寫](using-the-debug-build-to-check-for-memory-overwrite.md)<br/>
-[HOW TO：偵錯發行組建](how-to-debug-a-release-build.md)<br/>
+[使用偵錯組建檢查記憶體覆寫](using-the-debug-build-to-check-for-memory-overwrite.md)<br/>
+[如何：偵錯發行組建](how-to-debug-a-release-build.md)<br/>
 [檢查記憶體覆寫](checking-for-memory-overwrites.md)<br/>
 [最佳化程式碼](optimizing-your-code.md)<br/>
 

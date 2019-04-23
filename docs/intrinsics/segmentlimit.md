@@ -8,15 +8,15 @@ helpviewer_keywords:
 - lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
 ms.openlocfilehash: 650a847be3270782dc441d0e68c2c80d910e9d1e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036704"
 ---
 # <a name="segmentlimit"></a>__segmentlimit
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 會產生`lsl`（負載區段上限） 的指示。
 
@@ -30,7 +30,7 @@ unsigned long __segmentlimit(
 
 #### <a name="parameters"></a>參數
 
-*一個*<br/>
+*a*<br/>
 [in]常數，指定的區段選取器。
 
 ## <a name="return-value"></a>傳回值
@@ -105,7 +105,7 @@ Success!
 sl was changed
 ```
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

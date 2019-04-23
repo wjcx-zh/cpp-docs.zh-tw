@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
 ms.openlocfilehash: a75330d26b0924e60f7e46d10d617341709d7e23
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58778282"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776102"
 ---
 # <a name="compiler-error-c2144"></a>編譯器錯誤 C2144
 
@@ -23,7 +23,7 @@ ms.locfileid: "58778282"
 
 當您嘗試從包含空白字元的 CLR 關鍵字建立巨集時，也會發生 C2144。
 
-如果您嘗試進行類型轉送，您也可以參閱 C2144。 請參閱[型別轉送 (C + + /cli CLI)](../../extensions/type-forwarding-cpp-cli.md)如需詳細資訊。
+如果您嘗試進行類型轉送，您也可以參閱 C2144。 請參閱[型別轉送 (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md)如需詳細資訊。
 
 ## <a name="examples"></a>範例
 

@@ -31,10 +31,10 @@ helpviewer_keywords:
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
 ms.openlocfilehash: 3f1af90bcf454a3651dd8de65bbee7cb6b5960ca
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037616"
 ---
 # <a name="cutlprops-class"></a>CUtlProps 類別
@@ -229,4 +229,4 @@ HRESULT SetPropValue(const GUID* pguidPropSet,
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

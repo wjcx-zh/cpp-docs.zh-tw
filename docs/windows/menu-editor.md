@@ -1,5 +1,5 @@
 ---
-title: 功能表編輯器 （c + +）
+title: 功能表編輯器 (C++)
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.menu.F1
@@ -40,13 +40,13 @@ helpviewer_keywords:
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
 ms.openlocfilehash: b5d809fa4e0f608d4c0e6cbdaf8697688c6d3f9c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037272"
 ---
-# <a name="menu-editor-c"></a>功能表編輯器 （c + +）
+# <a name="menu-editor-c"></a>功能表編輯器 (C++)
 
 功能表允許您以有邏輯和容易尋找的方式排列命令。 具有**功能表編輯器**，您可以建立和編輯功能表直接使用功能表列，密切類似於中完成的應用程式。
 

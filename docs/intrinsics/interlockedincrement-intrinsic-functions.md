@@ -45,15 +45,15 @@ helpviewer_keywords:
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
 ms.openlocfilehash: b41ce5c744bde7cd89cabed6c829cfb06da75129
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039354"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement 內建函式
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 提供 Win32 Windows SDK 的編譯器內建支援[InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement)函式。
 
@@ -111,7 +111,7 @@ __int64 _InterlockedIncrement64_nf(
 
 |內建|架構|標頭|
 |---------------|------------------|------------|
-|`_InterlockedIncrement`中， `_InterlockedIncrement16`中， `_InterlockedIncrement64`|x86、 x64、 ARM|\<intrin.h>|
+|`_InterlockedIncrement`、`_InterlockedIncrement16`、`_InterlockedIncrement64`|x86、 x64、 ARM|\<intrin.h>|
 |`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h>|
 
 ## <a name="remarks"></a>備註
@@ -132,7 +132,7 @@ Win32 函式在 `Wdm.h` 或 `Ntddk.h` 中宣告。
 
 如需如何使用的範例`_InterlockedIncrement`，請參閱 < [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

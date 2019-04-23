@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
 ms.openlocfilehash: fab1ba2e496f4945eb56c0a67b833f6bf063404e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038763"
 ---
 # <a name="ctable-class"></a>CTable 類別
@@ -82,7 +82,7 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>參數
 
-*工作階段*<br/>
+*session*<br/>
 [in]開啟該表格中的工作階段。
 
 *wszTableName*<br/>
@@ -111,4 +111,4 @@ HRESULT Open(const CSession& session,
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

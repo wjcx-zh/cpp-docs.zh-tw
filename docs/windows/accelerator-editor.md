@@ -1,5 +1,5 @@
 ---
-title: 快速鍵編輯器 （c + +）
+title: 快速鍵編輯器 (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator.F1
@@ -34,15 +34,15 @@ helpviewer_keywords:
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
 ms.openlocfilehash: f5ae9880719a3a8b799ea8deb751b6f0a85542bd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041120"
 ---
-# <a name="accelerator-editor-c"></a>快速鍵編輯器 （c + +）
+# <a name="accelerator-editor-c"></a>快速鍵編輯器 (C++)
 
-快速鍵對應表是 c + + Windows 資源，其中包含一份稱為快速鍵，以及與它們相關聯的命令識別碼的快速鍵。 程式可有多個快速鍵對應表。
+快速鍵對應表是C++Windows 資源，其中包含一份稱為快速鍵，以及與它們相關聯的命令識別碼的快速鍵。 程式可有多個快速鍵對應表。
 
 一般而言，快速鍵是用作程式命令的鍵盤快速鍵，功能表或工具列也使用這些命令。 不過，您可以使用快速鍵對應表定義和使用者介面物件沒有關聯性的命令鍵組合。
 
@@ -71,7 +71,7 @@ ms.locfileid: "59041120"
 
    |值|描述|
    |-----------|-----------------|
-   |**None**|只有使用者按下**金鑰**值。<br/><br/>使用此值是最有效地以 ASCII/ANSI 值 001 026，透過它被解譯為 ^ A 到 ^ Z (**Ctrl + A**透過**Ctrl + Z**)。|
+   |**無**|只有使用者按下**金鑰**值。<br/><br/>使用此值是最有效地以 ASCII/ANSI 值 001 026，透過它被解譯為 ^ A 到 ^ Z (**Ctrl + A**透過**Ctrl + Z**)。|
    |**Alt**|使用者必須按下**Alt**之前**金鑰**值。|
    |**Ctrl**|使用者必須按下**Ctrl**之前**金鑰**，不正確的值與 ASCII 類型。|
    |**Shift**|使用者必須按下**Shift**之前**金鑰**值。|
@@ -110,7 +110,7 @@ ms.locfileid: "59041120"
 
 ## <a name="accelerator-tables"></a>快速鍵對應表
 
-在 c + + 專案中，您可以直接使用就地編輯中編輯快速鍵對應表**快速鍵編輯器**。
+在C++專案中，您可以直接使用就地編輯中編輯快速鍵對應表**快速鍵編輯器**。
 
 使用標準內容頁，請參閱下列程序，不過，就地編輯和屬性頁方法有相同的結果。 使用屬性頁，或使用就地編輯所做的變更會立即反映在快速鍵對應表中。
 

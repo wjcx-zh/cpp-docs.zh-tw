@@ -1,5 +1,5 @@
 ---
-title: max_is （c + + COM 屬性）
+title: max_is (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.max_is
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
 ms.openlocfilehash: dca2a3dc18aa3c3e75bbb682ed0b1b90adcd9236
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041305"
 ---
 # <a name="maxis"></a>max_is
@@ -25,12 +25,12 @@ ms.locfileid: "59041305"
 
 ### <a name="parameters"></a>參數
 
-*運算式*<br/>
+*expression*<br/>
 一或多個 C 語言的運算式。 允許空白的引數位置。
 
 ## <a name="remarks"></a>備註
 
-**Max_is** c + + 屬性具有相同的功能[max_is](/windows/desktop/Midl/max-is) MIDL 屬性。
+**Max_is** C++屬性具有相同的功能[max_is](/windows/desktop/Midl/max-is) MIDL 屬性。
 
 ## <a name="requirements"></a>需求
 

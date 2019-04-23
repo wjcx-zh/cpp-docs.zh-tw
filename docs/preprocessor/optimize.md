@@ -9,10 +9,10 @@ helpviewer_keywords:
 - optimize pragma
 ms.assetid: cb13c1cc-186a-45bc-bee7-95a8de7381cc
 ms.openlocfilehash: 9f5240fc59f59a71ddb3d18b67fadf3463a0d1ea
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035396"
 ---
 # <a name="optimize"></a>optimize
@@ -35,7 +35,7 @@ ms.locfileid: "59035396"
 
 |參數|最佳化類型|
 |--------------------|--------------------------|
-|*G*|啟用全域最佳化。|
+|*g*|啟用全域最佳化。|
 |*s*或*t*|指定機器碼的短 (short) 序列或快速 (fast) 序列。|
 |*y*|在程式堆疊上產生框架指標。|
 

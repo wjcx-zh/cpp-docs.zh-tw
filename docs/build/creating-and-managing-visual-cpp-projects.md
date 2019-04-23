@@ -1,5 +1,5 @@
 ---
-title: Visual Studio 專案-c + +
+title: Visual Studio 專案-C++
 ms.date: 12/12/2018
 f1_keywords:
 - vcprojects
@@ -12,23 +12,23 @@ helpviewer_keywords:
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
 ms.openlocfilehash: b4772b9bd625a542a18039386fefe42840ab65b1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038034"
 ---
-# <a name="visual-studio-projects---c"></a>Visual Studio 專案-c + +
+# <a name="visual-studio-projects---c"></a>Visual Studio 專案：C++
 
 A *Visual Studio 專案*是專案為基礎的 MSBuild 建置系統。 MSBuild 是 Visual Studio 的原生組建系統，並通常是最佳的建置系統，才能使用 UWP 應用程式，以及使用 MFC 或 ATL 程式庫、 COM 元件，以及其他 Windows 特定程式的桌面應用程式。 MSBuild 會與 Visual Studio 中，以緊密整合，但您也可以使用它從命令列。 
 
 ## <a name="create-a-project"></a>建立專案
 
-您可以選擇，以建立 c + + 專案**檔案&#124;新增&#124;專案**，然後在左窗格中選擇 Visual c + +。 在中間窗格中，您會看到一份專案範本： 
+您可以建立C++專案，選擇**檔案&#124;新增&#124;專案**，然後選擇 視覺效果C++的左窗格中。 在中間窗格中，您會看到一份專案範本： 
 
    ![專案範本](../overview/media/vs2017-new-project.png "Visual Studio 2017 [新增專案] 對話方塊")
 
-如需包含在 Visual Studio 中的所有預設專案範本的詳細資訊，請參閱[Visual Studio 中的 c + + 專案範本](reference/visual-cpp-project-types.md)。 您可以建立您自己的專案範本。 如需詳細資訊，請參閱[如何：建立專案範本](/visualstudio/ide/how-to-create-project-templates)。
+如需包含在 Visual Studio 中的所有預設專案範本的詳細資訊，請參閱[ C++ Visual Studio 中的專案範本](reference/visual-cpp-project-types.md)。 您可以建立您自己的專案範本。 如需詳細資訊，請參閱[如何：建立專案範本](/visualstudio/ide/how-to-create-project-templates)。
 
 您建立專案之後，它會出現在[方案總管 中](/visualstudio/ide/solutions-and-projects-in-visual-studio)視窗：
 
@@ -46,7 +46,7 @@ A *Visual Studio 專案*是專案為基礎的 MSBuild 建置系統。 MSBuild �
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>設定編譯器選項和其他組建屬性
 
-若要設定專案的組建設定，以滑鼠右鍵按一下專案中**方案總管**，然後選擇**屬性**。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](working-with-project-properties.md)。
+若要設定專案的組建設定，以滑鼠右鍵按一下專案中**方案總管**，然後選擇**屬性**。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](working-with-project-properties.md)。</c0>
 
 ## <a name="compile-and-run"></a>編譯並執行
 
@@ -60,10 +60,10 @@ A *Visual Studio 專案*是專案為基礎的 MSBuild 建置系統。 MSBuild �
 
 ## <a name="in-this-section"></a>本節內容
 
-[設定 c + + 編譯器和建置在 Visual Studio 中的屬性](working-with-project-properties.md)<br/>
+[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](working-with-project-properties.md)<br/>
 如何使用屬性頁和屬性工作表來指定專案設定。
 
-[參考程式庫和建置階段的元件](adding-references-in-visual-cpp-projects.md)<br/>
+[在建置階段參考程式庫和元件](adding-references-in-visual-cpp-projects.md)<br/>
 如何在專案中包含程式庫、 Dll、 COM 和.NET 元件。
  
 [組織專案輸出檔案](how-to-organize-project-output-files-for-builds.md)<br/>
@@ -77,4 +77,4 @@ A *Visual Studio 專案*是專案為基礎的 MSBuild 建置系統。 MSBuild �
 
 ## <a name="see-also"></a>另請參閱
 
-[專案和組建系統](projects-and-build-systems-cpp.md)<br>
+[專案和建置系統](projects-and-build-systems-cpp.md)<br>

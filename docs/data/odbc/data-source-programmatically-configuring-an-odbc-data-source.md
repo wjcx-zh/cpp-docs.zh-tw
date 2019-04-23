@@ -10,10 +10,10 @@ helpviewer_keywords:
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
 ms.openlocfilehash: 33269b65835812a6e1a03e091833831781d97b6d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037948"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>資料來源：以程式設計方式設定 ODBC 資料來源
@@ -53,7 +53,7 @@ ODBC 管理員 （通常安裝在控制台中） 會將項目放在 Windows 登�
 
 ##  <a name="_core_sqlconfigdatasource_parameters"></a> SQLConfigDataSource Parameters
 
-下面將說明的參數`::SQLConfigDataSource`函式。 大部分的資訊取自 ODBC API*程式設計人員參考*提供 Visual c + + 1.5 版及更新版本。
+下面將說明的參數`::SQLConfigDataSource`函式。 大部分的資訊取自 ODBC API*程式設計人員參考 》* 提供具有視覺效果C++1.5 版及更新版本。
 
 ###  <a name="_core_function_prototype"></a> 函式原型
 
@@ -110,7 +110,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
 
 1. 選取的驅動程式名稱。
 
-1. 按一下 [確定 **Deploying Office Solutions**]。
+1. 按一下 [確定] 。
 
 當 ODBC 管理員顯示建立新的資料來源，該特定的驅動程式的資訊時，請按一下**協助**。 這會開啟該特定的驅動程式，通常包含了使用驅動程式的重要資訊的說明檔。
 

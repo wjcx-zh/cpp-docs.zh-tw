@@ -21,10 +21,10 @@ helpviewer_keywords:
 - GetXMLRowData method
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
 ms.openlocfilehash: 85fddb9b77cfc089b2236f2ff82944fec6ef9632
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036097"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor 類別
@@ -127,7 +127,7 @@ HRESULT GetXMLRowData(CSimpleStringW& strOutput,
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor 類別](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicAccessor 類別](../../data/oledb/cdynamicaccessor-class.md)<br/>
 [CDynamicParameterAccessor 類別](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>

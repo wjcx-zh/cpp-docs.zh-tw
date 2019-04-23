@@ -8,15 +8,15 @@ helpviewer_keywords:
 - __sidt intrinsic
 ms.assetid: 01e83d14-6e63-4dea-8f64-5a0339d69641
 ms.openlocfilehash: 88dbb4713577fcf224e1c5646bf4c38b2a1dfafe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036756"
 ---
 # <a name="sidt"></a>__sidt
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 會中斷描述項表登錄 (IDTR) 的值儲存在指定的記憶體位置。
 
@@ -44,7 +44,7 @@ void __sidt(void * Destination);
 
 `__sidt` 函式相當於 `SIDT` 機器指令。 如需詳細資訊，搜尋文件中，「 Intel 架構軟體開發人員的手動、 磁碟區 2:指令集參考，「 在[Intel Corporation](https://software.intel.com/articles/intel-sdm)站台。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

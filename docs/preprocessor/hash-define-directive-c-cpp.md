@@ -1,5 +1,5 @@
 ---
-title: '#define 指示詞 （C/c + +）'
+title: '#define 指示詞 (C /C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - '#define'
@@ -11,10 +11,10 @@ helpviewer_keywords:
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
 ms.openlocfilehash: 8a0cc7e7836a0c82c72055fe8d9e7497995485d0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039493"
 ---
 # <a name="define-directive-cc"></a>#define 指示詞 (C/C++)
@@ -62,11 +62,11 @@ A`#define`而不需要*語彙基元字串*移除的項目*識別碼*從原始程
 
 第二個 **#define**巨集具有相同名稱會產生警告，除非第二個語彙基元序列與第一個。
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 如果新定義與原始定義在語法上相同，Microsoft C/C++ 可讓您重新定義巨集。 換句話說，這兩個定義可以有不同的參數名稱。 此行為不同於 ANSI C 中，這需要兩個的定義在語彙上完全相同。
 
-例如，下列兩個巨集除了參數名稱之外完全相同。 ANSI C 不允許這類重新定義，但 Microsoft C/c + + 所編譯的是它不會發生錯誤。
+例如，下列兩個巨集除了參數名稱之外完全相同。 ANSI C 不允許這類重新定義，但 Microsoft C /C++編譯無誤。
 
 ```C
 #define multiply( f1, f2 ) ( f1 * f2 )
@@ -80,7 +80,7 @@ A`#define`而不需要*語彙基元字串*移除的項目*識別碼*從原始程
 #define multiply( a1, a2 ) ( b1 * b2 )
 ```
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 此範例說明 **#define**指示詞：
 
@@ -109,11 +109,11 @@ var = 80 + 10 * 20;
 
 這會評估為 280。
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 定義巨集和常數[/D](../build/reference/d-preprocessor-definitions.md)編譯器選項都有使用相同的效果 **#define**前置處理器指示詞檔案的開頭。 使用 /D 選項最多可以定義 30 個巨集。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

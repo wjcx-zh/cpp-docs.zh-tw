@@ -8,15 +8,15 @@ helpviewer_keywords:
 - __vmx_vmclear intrinsic
 ms.assetid: e3eb98e4-50fc-4c93-9bac-340fd1f0a466
 ms.openlocfilehash: 17e3e5c91a58894b25fc6b2a72f7d0056fa88119
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036533"
 ---
 # <a name="vmxvmclear"></a>__vmx_vmclear
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 初始化指定的虛擬機器控制結構 (VMCS)，並將其啟動狀態設為`Clear`。
 
@@ -56,7 +56,7 @@ unsigned char __vmx_vmclear(
 
 **標頭檔** \<intrin.h >
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,5 +1,5 @@
 ---
-title: 項目 （c + + COM 屬性）
+title: 項目 (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.entry
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
 ms.openlocfilehash: 703a55ee7c56b64a5b168016770508508bab09e0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036298"
 ---
 # <a name="entry"></a>entry
@@ -30,7 +30,7 @@ ms.locfileid: "59036298"
 
 ## <a name="remarks"></a>備註
 
-**項目**c + + 屬性具有相同的功能[項目](/windows/desktop/Midl/entry)MIDL 屬性。
+**項目**C++屬性具有相同的功能[項目](/windows/desktop/Midl/entry)MIDL 屬性。
 
 ## <a name="example"></a>範例
 

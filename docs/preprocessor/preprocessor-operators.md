@@ -6,10 +6,10 @@ helpviewer_keywords:
 - operators [C++], preprocessor
 ms.assetid: 884126d1-0ce2-48b6-9e06-8a2d7c4a9656
 ms.openlocfilehash: 0b105cc2039e2aa50c11b796e5474a97d8c5c702
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035685"
 ---
 # <a name="preprocessor-operators"></a>前置處理器運算子
@@ -17,10 +17,10 @@ ms.locfileid: "59035685"
 
 |運算子|動作|
 |--------------|------------|
-|[字串化運算子 (#)](../preprocessor/stringizing-operator-hash.md)|使對應的實際引數以雙引號括住|
+|[字串化運算子 （#）](../preprocessor/stringizing-operator-hash.md)|使對應的實際引數以雙引號括住|
 |[字元化運算子 (#@)](../preprocessor/charizing-operator-hash-at.md)|使對應的引數以單引號括住並視為字元 (Microsoft 專用)|
-|[語彙基元帶入的運算子 (##)](../preprocessor/token-pasting-operator-hash-hash.md)|允許做為實際引數的語彙基元串連，形成其他語彙基元|
-|[定義運算子](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|簡化某些巨集指示詞中複合運算式的撰寫|
+|[語彙基元帶入的運算子 （# #）](../preprocessor/token-pasting-operator-hash-hash.md)|允許做為實際引數的語彙基元串連，形成其他語彙基元|
+|[已定義的運算子](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|簡化某些巨集指示詞中複合運算式的撰寫|
 
 ## <a name="see-also"></a>另請參閱
 

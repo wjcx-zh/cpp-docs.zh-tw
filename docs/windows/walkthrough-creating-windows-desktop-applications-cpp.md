@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：建立傳統 Windows 桌面應用程式 （c + +）
+title: 逐步解說：建立傳統 Windows 桌面應用程式 (C++)
 ms.custom: get-started-article
 ms.date: 09/18/2018
 helpviewer_keywords:
@@ -7,17 +7,17 @@ helpviewer_keywords:
 - Windows Desktop applications [C++]
 - Windows API [C++]
 ms.openlocfilehash: cb6d09acc00f2e38ee41180c81c1877bc53027c2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037951"
 ---
-# <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>逐步解說：建立傳統 Windows 桌面應用程式 （c + +）
+# <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>逐步解說：建立傳統 Windows 桌面應用程式 (C++)
 
 本逐步解說示範如何在 Visual Studio 中建立傳統 Windows 桌面應用程式。 您將建立範例應用程式使用 Windows API 來顯示"Hello，Windows desktop"！ 視窗中顯示 "Hello, World!" 的基本 Windows 傳統型應用程式。 您可以使用在這個逐步解說中開發的程式碼作為模式，來建立其他 Windows 傳統型應用程式。
 
-Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 API） 是 C 語言為基礎的架構，用於建立 Windows 應用程式。 它已從 1980 年代，並已用來建立 Windows 應用程式數十年。 更進階且更容易程式的架構已建置的 Windows API，例如 MFC、 ATL 和.NET framework 之上。 即使是最新式的程式碼，UWP 和存放區撰寫之應用程式在 C + + /cli WinRT 使用 Windows API 底下。 如需有關 Windows API 的詳細資訊，請參閱 < [Windows API 索引](/windows/desktop/apiindex/windows-api-list)。 有許多方式可建立 Windows 應用程式，但上述程序是第一個。
+Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 API） 是 C 語言為基礎的架構，用於建立 Windows 應用程式。 它已從 1980 年代，並已用來建立 Windows 應用程式數十年。 更進階且更容易程式的架構已建置的 Windows API，例如 MFC、 ATL 和.NET framework 之上。 即使是最新式的程式碼撰寫的 UWP 和市集應用程式的C++/WinRT 使用下方的 Windows API。 如需有關 Windows API 的詳細資訊，請參閱 < [Windows API 索引](/windows/desktop/apiindex/windows-api-list)。 有許多方式可建立 Windows 應用程式，但上述程序是第一個。
 
 > [!IMPORTANT]
 > 為了保持簡潔，省略某些程式碼陳述式文字中。 [建置程式碼](#build-the-code)這份文件結尾的區段會顯示完整的程式碼。
@@ -26,13 +26,13 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
 
 - 執行 Microsoft Windows 7 或更新版本的電腦。 我們建議的最佳開發體驗的 Windows 10。
 
-- Visual Studio 2017 的複本。 如需如何下載並安裝 Visual Studio 的詳細資訊，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。 當您執行安裝程式時，請確定**使用 c + + 的桌面開發**會檢查工作負載。 別擔心，如果您在安裝 Visual Studio 時，未安裝此工作負載。 您可以再次執行安裝程式，並立即安裝。
+- Visual Studio 2017 的複本。 如需如何下載並安裝 Visual Studio 的詳細資訊，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。 當您執行安裝程式時，請確定**使用的桌面開發C++** 會檢查工作負載。 別擔心，如果您在安裝 Visual Studio 時，未安裝此工作負載。 您可以再次執行安裝程式，並立即安裝。
 
-   ![使用 c + + 的桌面開發](../build/media/desktop-development-with-cpp.png "使用 c + + 的桌面開發")
+   ![使用的桌面開發C++ ](../build/media/desktop-development-with-cpp.png "使用的桌面開發C++")
 
 - 使用 Visual Studio IDE 的基本概念了解。 如果您已使用之前的 Windows 傳統型應用程式，您可能可以保留。 如需簡介，請參閱[Visual Studio IDE 功能導覽](/visualstudio/ide/visual-studio-ide)。
 
-- C + + 語言，若要跟著做的基本概念的了解。 別擔心，我們不會有太過複雜。
+- 足夠的基本概念了解C++若要跟著做的語言。 別擔心，我們不會有太過複雜。
 
 ## <a name="create-a-windows-desktop-project"></a>建立 Windows 桌面專案
 
@@ -42,7 +42,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
 
 1. 在 [檔案] 功能表上，選擇 [新增] 然後選擇 [專案]。
 
-1. 在**新的專案**對話方塊中，在左窗格中，展開**已安裝** > **Visual c + +**，然後選取**Windows Desktop**. 在中間窗格中，選取**Windows Desktop 精靈**。
+1. 在**新的專案**對話方塊中，在左窗格中，展開**已安裝** > **Visual C++** ，然後選取**Windows Desktop**. 在中間窗格中，選取**Windows Desktop 精靈**。
 
    在 **名稱**方塊中，輸入專案名稱，例如*DesktopApp*。 選擇 [確定] 。
 
@@ -66,7 +66,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
 
 1. 在 [檔案] 功能表上，選擇 [新增] 然後選擇 [專案]。
 
-1. 在 **新的專案**對話方塊中，在左窗格中，展開**已安裝** > **範本** > **Visual c + +**，然後選取**Win32**。 在中間窗格選取 [Win32 專案] 。
+1. 在 **新的專案**對話方塊中，在左窗格中，展開**已安裝** > **範本** > **Visual C++** ，然後選取**Win32**。 在中間窗格選取 [Win32 專案] 。
 
    在 **名稱**方塊中，輸入專案名稱，例如*DesktopApp*。 選擇 [確定] 。
 
@@ -96,7 +96,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
 
 ### <a name="to-start-a-windows-desktop-application"></a>啟動 Windows 傳統型應用程式
 
-1. 就如同每個 C 應用程式和 c + + 應用程式必須有`main`函式做為起點，每個 Windows 桌面應用程式必須具有`WinMain`函式。 `WinMain` 具有下列語法。
+1. 就如同每個 C 應用程式和C++應用程式必須有`main`函式做為起點，每個 Windows 桌面應用程式必須擁有`WinMain`函式。 `WinMain` 具有下列語法。
 
    ```cpp
    int CALLBACK WinMain(
@@ -110,7 +110,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
    參數和傳回值，這個函式的相關資訊，請參閱[WinMain 進入點](/windows/desktop/api/winbase/nf-winbase-winmain)。
 
    > [!NOTE]
-   > 什麼是所有這些額外字詞，例如`CALLBACK`，或`HINSTANCE`，或`_In_`？ 傳統的 Windows API 所使用的 typedef 和廣泛地抽離前置處理器巨集的一些詳細資料類型和特定平台程式碼，呼叫慣例，例如 **__declspec**宣告和編譯器的 pragma。 在 Visual Studio 中，您可以使用 IntelliSense[快速諮詢](/visualstudio/ide/using-intellisense#quick-info)功能，請參閱什麼這些 typedef 和巨集定義。 停留在感興趣的文字或選取它，然後按**Ctrl**+**K**， **Ctrl**+**我**的包含定義的小型快顯視窗。 如需詳細資訊，請參閱[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 參數和傳回型別通常會使用*SAL 註釋*可協助您捕捉程式設計錯誤。 如需詳細資訊，請參閱 <<c0> [ 使用 SAL 註釋減少 C/c + + 程式碼缺失](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
+   > 什麼是所有這些額外字詞，例如`CALLBACK`，或`HINSTANCE`，或`_In_`？ 傳統的 Windows API 所使用的 typedef 和廣泛地抽離前置處理器巨集的一些詳細資料類型和特定平台程式碼，呼叫慣例，例如 **__declspec**宣告和編譯器的 pragma。 在 Visual Studio 中，您可以使用 IntelliSense[快速諮詢](/visualstudio/ide/using-intellisense#quick-info)功能，請參閱什麼這些 typedef 和巨集定義。 停留在感興趣的文字或選取它，然後按**Ctrl**+**K**， **Ctrl**+**我**的包含定義的小型快顯視窗。 如需詳細資訊，請參閱[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 參數和傳回型別通常會使用*SAL 註釋*可協助您捕捉程式設計錯誤。 如需詳細資訊，請參閱 <<c0> [ 使用 SAL 註釋減少 C /C++程式碼缺失](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。</c0>
 
 1. Windows 桌面程式需要&lt;windows.h >。 &lt;tchar.h > 定義`TCHAR`最終會解析巨集來**wchar_t**如果您的專案中定義的 UNICODE 符號，否則它會解析成**char**。  如果您一律使用來建置啟用 UNICODE，您不需要 TCHAR，並可以是直接使用**wchar_t**直接。
 

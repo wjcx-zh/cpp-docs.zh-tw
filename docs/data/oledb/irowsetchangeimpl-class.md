@@ -33,10 +33,10 @@ helpviewer_keywords:
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
 ms.openlocfilehash: 8b2a92fdefd965d4b87e0a9ed411cc1b5c89b8f9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036795"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl 類別
@@ -60,7 +60,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 *T*<br/>
 類別衍生自`IRowsetChangeImpl`。
 
-*存放裝置*<br/>
+*儲存體*<br/>
 使用者記錄中。
 
 *BaseInterface*<br/>
@@ -185,4 +185,4 @@ HRESULT FlushData(HROW hRowToFlush,
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cvtsi2ss instruction
 - _mm_cvtsi64x_ss intrinsic
 ms.assetid: 01e5d321-c18a-46fd-a6f6-324364514e1f
-ms.openlocfilehash: 4b8d0e1a19441cd671143843ae4ac6e89bfeae50
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 3ba9dc56cbb027e8cf9f31d293b3f96908aff5e4
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328938"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59039776"
 ---
 # <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
 

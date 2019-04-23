@@ -11,10 +11,10 @@ helpviewer_keywords:
 - SQL, opening recordsets
 ms.assetid: 72293a08-cef2-4be2-aa1c-30565fcfbaf9
 ms.openlocfilehash: eabaab019ee94b0c5617573c534d920ec710e9b2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036191"
 ---
 # <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL:自訂資料錄集的 SQL 陳述式 (ODBC)
@@ -67,7 +67,7 @@ SELECT [ALL | DISTINCT] column-list FROM table-list
     [WHERE search-condition][ORDER BY column-list [ASC | DESC]]
 ```
 
-其中一種方式新增**DISTINCT**關鍵字來資料錄集的 SQL 陳述式是內嵌在第一次的 RFX 函式呼叫中的關鍵字`DoFieldExchange`。 例如：
+其中一種方式新增**DISTINCT**關鍵字來資料錄集的 SQL 陳述式是內嵌在第一次的 RFX 函式呼叫中的關鍵字`DoFieldExchange`。 例如: 
 
 ```
 ...
@@ -162,5 +162,5 @@ SELECT CourseID, InstructorID, RoomNo, Schedule, SectionNo
 
 ## <a name="see-also"></a>另請參閱
 
-[SQL:SQL 和 c + + 資料類型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)<br/>
+[SQL:SQL 和C++資料類型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)<br/>
 [SQL:製作直接的 SQL 呼叫 (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

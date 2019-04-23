@@ -57,15 +57,15 @@ helpviewer_keywords:
 - _InterlockedOr_HLEAcquire intrinsic
 ms.assetid: 5f265240-7af8-44b7-b952-19f3a9c56186
 ms.openlocfilehash: 9748099e4224a8c55cd4455a57c8e849531f1c9a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040471"
 ---
 # <a name="interlockedor-intrinsic-functions"></a>_InterlockedOr 內建函式
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 對多個執行緒所共用的變數執行不可部分完成的位元或運算。
 
@@ -186,10 +186,10 @@ __int64 _InterlockedOr64_rel(
 
 |內建|架構|標頭|
 |---------------|------------------|------------|
-|`_InterlockedOr`、 `_InterlockedOr8`、 `_InterlockedOr16`、 `_InterlockedOr64`|x86、 x64、 ARM|\<intrin.h>|
+|`_InterlockedOr`, `_InterlockedOr8`, `_InterlockedOr16`, `_InterlockedOr64`|x86、 x64、 ARM|\<intrin.h>|
 |`_InterlockedOr_acq`, `_InterlockedOr_nf`, `_InterlockedOr_rel`, `_InterlockedOr8_acq`, `_InterlockedOr8_nf`, `_InterlockedOr8_rel`, `_InterlockedOr16_acq`, `_InterlockedOr16_nf`, `_InterlockedOr16_rel`, `_InterlockedOr64_acq`, `_InterlockedOr64_nf`, `_InterlockedOr64_rel`|ARM|\<intrin.h>|
-|`_InterlockedOr_np`、 `_InterlockedOr8_np`、 `_InterlockedOr16_np`、 `_InterlockedOr64_np`|X64|\<intrin.h>|
-|`_InterlockedOr_HLEAcquire`、 `_InterlockedOr_HLERelease`、 `_InterlockedOr64_HLEAcquire`、 `_InterlockedOr64_HLERelease`|x86、x64|\<immintrin.h>|
+|`_InterlockedOr_np`, `_InterlockedOr8_np`, `_InterlockedOr16_np`, `_InterlockedOr64_np`|X64|\<intrin.h>|
+|`_InterlockedOr_HLEAcquire`, `_InterlockedOr_HLERelease`, `_InterlockedOr64_HLEAcquire`, `_InterlockedOr64_HLERelease`|x86、x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>備註
 
@@ -224,7 +224,7 @@ int main()
 0xffffff00 0xffff00 0xff00ff00
 ```
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

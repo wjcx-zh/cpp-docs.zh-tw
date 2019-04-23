@@ -1,5 +1,5 @@
 ---
-title: 資源編輯器 （c + +）
+title: 資源編輯器 (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vs.editors.resource
@@ -22,13 +22,13 @@ helpviewer_keywords:
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
 ms.openlocfilehash: 774575e978a8e7f94868eb1b5dad90c6ac345460
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038650"
 ---
-# <a name="resource-editors-c"></a>資源編輯器 （c + +）
+# <a name="resource-editors-c"></a>資源編輯器 (C++)
 
 資源編輯器是特製化的環境，用於建立或修改 Visual Studio 專案中包含的資源。 Visual Studio 資源編輯器會共用技術和介面，協助您快速輕鬆地建立及修改應用程式資源。 資源編輯器可讓您檢視和編輯適當的編輯器和預覽資源中的資源。
 
@@ -40,9 +40,9 @@ ms.locfileid: "59038650"
 |使用...|編輯...|
 |----------------|----------------|
 |[快速鍵編輯器](../windows/accelerator-editor.md)|Visual C++ 專案中的快速鍵對應表。|
-|[二進位編輯器](binary-editor.md)|Visual C++、Visual Basic 或 Visual C# 專案的二進位資料資訊和自訂資源。|
+|[Binary Editor](binary-editor.md)|Visual C++、Visual Basic 或 Visual C# 專案的二進位資料資訊和自訂資源。|
 |[對話方塊編輯器](../windows/dialog-editor.md)|Visual C++ 專案中的對話方塊。|
-|[影像編輯器](../windows/image-editor-for-icons.md)|Visual C++、Visual Basic 或 Visual C# 專案的點陣圖、圖示、游標和其他影像檔。|
+|[Image Editor](../windows/image-editor-for-icons.md)|Visual C++、Visual Basic 或 Visual C# 專案的點陣圖、圖示、游標和其他影像檔。|
 |[功能表編輯器](../windows/menu-editor.md)|Visual C++ 專案中的功能表資源。|
 |[功能區編輯器](../mfc/ribbon-designer-mfc.md)|MFC 專案中的功能區資源。|
 |[字串編輯器](../windows/string-editor.md)|Visual C++ 專案中的字串資料表。|
@@ -130,4 +130,4 @@ None
 
 [使用資源檔](../windows/working-with-resource-files.md)<br/>
 [資源檔](../windows/resource-files-visual-studio.md)<br/>
-[資源識別項 （符號）](../windows/symbols-resource-identifiers.md)<br/>
+[資源識別項 (符號)](../windows/symbols-resource-identifiers.md)<br/>

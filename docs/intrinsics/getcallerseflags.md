@@ -8,15 +8,15 @@ helpviewer_keywords:
 - _getcallerseflags intrinsic
 ms.assetid: 2386596f-33aa-4cc7-b026-5a834637270a
 ms.openlocfilehash: a2df7087c605882340da16f56dae2e991c5d7dd1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039935"
 ---
 # <a name="getcallerseflags"></a>__getcallerseflags
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 從呼叫端的內容中傳回 EFLAGS 值。
 
@@ -78,7 +78,7 @@ EFLAGS 0x202
 EFLAGS 0x206
 ```
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

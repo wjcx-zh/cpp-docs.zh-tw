@@ -4,10 +4,10 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake build settings
 ms.openlocfilehash: 1bdf4ef3e20b055b6fa3d5449a880ddb7aab44a0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
-ms.translationtype: MT
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037519"
 ---
 # <a name="customize-cmake-build-settings"></a>自訂 CMake 建置設定
@@ -100,16 +100,16 @@ JSON IntelliSense 會協助您編輯 `CMakeSettings.json` 檔案：
 
 ## <a name="environment-variables"></a>環境變數
 
- `CMakeSettings.json` 也支援使用環境變數中的任何先前所述的屬性。 使用的語法是 `${env.FOO}`，可擴充環境變數 %FOO%。
+ `CMakeSettings.json` 也支援在任何上述提及的內容中取用環境變數。 使用的語法是 `${env.FOO}`，可擴充環境變數 %FOO%。
 您也可以存取此檔案的內建巨集：
 
-- `${workspaceRoot}` – 提供工作區資料夾的完整路徑
-- `${workspaceHash}` – 工作區位置; 雜湊適用於建立目前的工作區 （例如，在資料夾路徑中使用） 的唯一識別碼
-- `${projectFile}` -根 CMakeLists.txt 檔案的完整路徑
-- `${projectDir}` -根 CMakeLists.txt 檔案的資料夾的完整路徑
-- `${thisFile}` – 的完整路徑`CMakeSettings.json`檔案
-- `${name}` – 組態的名稱
-- `${generator}` – 此組態中使用 CMake 產生器的名稱
+- `${workspaceRoot}` - 提供工作區資料夾的完整路徑
+- `${workspaceHash}` - 工作區位置的雜湊；適用於建立目前工作區的唯一識別碼 (例如用於資料夾路徑)
+- `${projectFile}` - 根 CMakeLists.txt 檔案的完整路徑
+- `${projectDir}` - 根 CMakeLists.txt 檔案資料夾的完整路徑
+- `${thisFile}` – `CMakeSettings.json` 檔案的完整路徑
+- `${name}` - 組態的名稱
+- `${generator}` - 用於此組態之 CMake 產生器的名稱
 
 ## <a name="ninja-command-line-arguments"></a>Ninja 命令列引數
 
@@ -137,7 +137,7 @@ usage: ninja [options] [targets...]
 
 ## <a name="inherited-environments"></a>繼承環境
 
- `CMakeSettings.json` 支援繼承環境。 此功能可讓您 (1) 繼承預設環境，以及 (2) 建立自訂環境變數，以在執行時傳遞至 CMake.exe。
+ `CMakeSettings.json` 支援繼承的環境。 此功能可讓您 (1) 繼承預設環境，以及 (2) 建立自訂環境變數，以在執行時傳遞至 CMake.exe。
 
 ```json
   "inheritEnvironments": [ "msvc_x64_x64" ]
@@ -236,9 +236,9 @@ usage: ninja [options] [targets...]
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual Studio 中的 CMake 專案](cmake-projects-in-visual-studio.md)<br/>
+[CMake Projects in Visual Studio](cmake-projects-in-visual-studio.md) (Visual Studio 中的 CMake 專案)<br/>
 [設定 Linux CMake 專案](../linux/cmake-linux-project.md)<br/>
 [連線到遠端 Linux 電腦](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [設定 CMake 偵錯工作階段](configure-cmake-debugging-sessions.md)<br/>
-[部署、執行和偵錯 Linux 專案](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
+[部署、執行及偵錯 Linux 專案](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [CMake 預先定義組態參考](cmake-predefined-configuration-reference.md)<br/>

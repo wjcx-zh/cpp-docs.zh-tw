@@ -8,15 +8,15 @@ helpviewer_keywords:
 - wbinvd instruction
 ms.assetid: 628d0981-39e5-49e1-bd43-706d123af121
 ms.openlocfilehash: 99c7a452e063dea328e4aa1362aae8783929deb0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039263"
 ---
 # <a name="wbinvd"></a>__wbinvd
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 產生的回寫和使其失效的快取 (`wbinvd`) 指令。
 
@@ -38,7 +38,7 @@ void __wbinvd(void);
 
 此函式只適用於核心模式特殊權限層級 (CPL) 為 0，且此常式僅可作為內建。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

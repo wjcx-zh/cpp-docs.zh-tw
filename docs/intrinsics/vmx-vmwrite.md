@@ -8,15 +8,15 @@ helpviewer_keywords:
 - VMWRITE instruction
 ms.assetid: 88139792-fd3f-4210-97ca-9d84f43a0252
 ms.openlocfilehash: e52b1f181f00ce013a111d1a5a62abeff544e20a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037506"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 將指定的值寫入目前的虛擬機器控制結構 (VMCS) 中指定的欄位。
 
@@ -56,7 +56,7 @@ unsigned char __vmx_vmwrite(
 
 **標頭檔** \<intrin.h >
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

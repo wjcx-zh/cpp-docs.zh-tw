@@ -1,5 +1,5 @@
 ---
-title: 使用程式庫和 c + + 專案中的元件
+title: 使用程式庫和元件中的C++專案
 ms.date: 12/10/2018
 f1_keywords:
 - VC.Project.References
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
 ms.openlocfilehash: dff057977e6b6ff0c36d3a888bc4d5c3aa778576
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038758"
 ---
 # <a name="consuming-libraries-and-components"></a>使用程式庫和元件
 
-C + + 專案，通常需要呼叫函式，或存取資料的靜態程式庫 （.lib 檔案），例如二進位檔案的 DLL，Windows 執行階段元件、 COM 元件或.NET 組件。 在這些情況下，您必須設定專案，以便它可以在建置階段找到該二進位檔。 特定步驟取決於您的專案的二進位檔類型的類型及是否正在為您專案相同的方案中建置二進位檔。 
+通常，C++專案，就必須呼叫函式，或存取資料的靜態程式庫 （.lib 檔案），例如二進位檔案的 DLL，Windows 執行階段元件、 COM 元件或.NET 組件。 在這些情況下，您必須設定專案，以便它可以在建置階段找到該二進位檔。 特定步驟取決於您的專案的二進位檔類型的類型及是否正在為您專案相同的方案中建置二進位檔。 
 
 ## <a name="consuming-libraries-downloaded-via-vcpkg"></a>Vcpkg 透過使用文件庫下載
 
-若要使用您已下載所使用的程式庫**vcpkg**套件管理員 中，您可以忽略下列指示。 請參閱 [vcpkg：適用於 Windows、 Linux 和 MacOS 的 c + + 套件管理員](vcpkg.md#integrate-with-visual-studio-windows)如需詳細資訊。
+若要使用您已下載所使用的程式庫**vcpkg**套件管理員 中，您可以忽略下列指示。 請參閱 [vcpkg：C++適用於 Windows、 Linux 和 MacOS 套件管理員](vcpkg.md#integrate-with-visual-studio-windows)如需詳細資訊。
 
 ## <a name="consuming-static-libraries"></a>取用的靜態程式庫
 
@@ -46,11 +46,11 @@ C + + 專案，通常需要呼叫函式，或存取資料的靜態程式庫 （.
 
 ## <a name="com-objects"></a>COM 物件
 
-如果原生 c + + 應用程式需要使用 COM 物件，而該物件是*註冊*，那麼您只需要呼叫 CoCreateInstance 並傳入物件的 CLSID。 系統會在 Windows 登錄中找到它，並將其載入。 C + + /cli CLI 專案可以取用 COM 物件，在相同的方式，或將參考加入從**的 加入參考 > COM**清單，並使用它透過其[執行階段可呼叫包裝函式](/dotnet/framework/interop/runtime-callable-wrapper)。 
+如果您的原生C++應用程式需要使用 COM 物件，而該物件是*註冊*，那麼您只需要呼叫 CoCreateInstance 並傳入物件的 CLSID。 系統會在 Windows 登錄中找到它，並將其載入。 C++/CLI 專案可以取用 COM 物件，在相同的方式，或將參考加入從**的 加入參考 > COM**清單，並使用它透過其[執行階段可呼叫包裝函式](/dotnet/framework/interop/runtime-callable-wrapper)。 
 
 ## <a name="net-assemblies-and-windows-runtime-components"></a>.NET 組件和 Windows 執行階段元件
 
-中 UWP 或 C + + 專案，您可以使用.NET 組件或 Windows 執行階段元件加上*參考*組件或元件。 底下**參考**節點中的 UWP 或 C + + 專案中，您會看到常用元件的參考。 以滑鼠右鍵按一下**參考**中的節點**方案總管**以顯示**參考管理員**及瀏覽系統所識別的其他元件。 按一下 **瀏覽**按鈕巡覽至任何自訂元件所在的資料夾。 因為.NET 組件和 Windows 執行階段元件包含內建型別資訊，您可以檢視其方法和類別上按一下滑鼠右鍵，然後選擇**在物件瀏覽器中的檢視**。 
+在 UWP 中或C++/CLI 專案，您可以使用.NET 組件或 Windows 執行階段元件加上*參考*組件或元件。 底下**參考**UWP 中的節點或C++/CLI 專案中，您會看到常用元件的參考。 以滑鼠右鍵按一下**參考**中的節點**方案總管**以顯示**參考管理員**及瀏覽系統所識別的其他元件。 按一下 **瀏覽**按鈕巡覽至任何自訂元件所在的資料夾。 因為.NET 組件和 Windows 執行階段元件包含內建型別資訊，您可以檢視其方法和類別上按一下滑鼠右鍵，然後選擇**在物件瀏覽器中的檢視**。 
 
 ## <a name="reference-properties"></a>參考屬性
 
@@ -80,9 +80,9 @@ ActiveX 參考屬性僅適用於 COM 元件的參考。 這些屬性僅在 [參�
 
    顯示用來從參考 COM 程式庫或 ActiveX 控制項建置 Interop 組件的工具。
 
-### <a name="assembly-reference-properties-ccli"></a>組件參考屬性 (C + + /cli CLI)
+### <a name="assembly-reference-properties-ccli"></a>組件參考屬性 (C++/CLI)
 
-組件參考屬性可只供參考.NET Framework 組件，在 C + + /cli 專案。 這些屬性會顯示在選取的.NET Framework 組件時才**參考**窗格。 屬性不能修改。
+僅適用於.NET Framework 中的組件的參考組件參考屬性，是C++/CLI 專案。 這些屬性會顯示在選取的.NET Framework 組件時才**參考**窗格。 屬性不能修改。
 
 - **相對路徑**
 
@@ -96,7 +96,7 @@ ActiveX 參考屬性僅適用於 COM 元件的參考。 這些屬性僅在 [參�
 
    指定是否要在建置期間，自動將參考組件複製到目標位置。
 
-- **複製本機附屬組件 (C + + /cli CLI)**
+- **複製本機附屬組件 (C++/CLI)**
 
    指定是否要在建置期間，自動將參考組件的附屬組件複製到目標位置。 僅在 [複製到本機] 為 **true** 時才會使用。
 
@@ -128,7 +128,7 @@ ActiveX 參考屬性僅適用於 COM 元件的參考。 這些屬性僅在 [參�
 
    顯示參考組件的組件名稱。
 
-- **culture**
+- **文化特性**
 
    顯示選取參考的文化特性。
 
@@ -144,7 +144,7 @@ ActiveX 參考屬性僅適用於 COM 元件的參考。 這些屬性僅在 [參�
 
    針對 .NET Framework 組件，則會顯示完整路徑。 針對 COM 元件，則會顯示 GUID。
 
-- **標籤**
+- **Label**
 
    顯示參考的標籤。
 
@@ -158,7 +158,7 @@ ActiveX 參考屬性僅適用於 COM 元件的參考。 這些屬性僅在 [參�
 
 - **強式名稱**
 
-   `true` 。 強式命名組件是唯一版本。
+   如果參考組件具有強式名稱，則為`true` 。 強式命名組件是唯一版本。
 
 - **版本**
 
@@ -166,5 +166,5 @@ ActiveX 參考屬性僅適用於 COM 元件的參考。 這些屬性僅在 [參�
 
 ## <a name="see-also"></a>另請參閱
 
-[C + + 專案屬性頁參考](reference/property-pages-visual-cpp.md)<br>
-[設定 c + + 編譯器和建置在 Visual Studio 中的屬性](working-with-project-properties.md)
+[C++專案屬性頁參考](reference/property-pages-visual-cpp.md)<br>
+[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](working-with-project-properties.md)

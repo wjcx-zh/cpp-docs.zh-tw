@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
 ms.openlocfilehash: c85a8284c91037e981f0d1ea82507b49be8121a3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58780674"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777130"
 ---
 # <a name="compiler-error-c2440"></a>編譯器錯誤 C2440
 
@@ -21,7 +21,7 @@ ms.locfileid: "58780674"
 
 ## <a name="example"></a>範例
 
-如果您嘗試將初始化非常數，可能會造成 C2440 `char*` (或`wchar_t*`) 使用字串常值中 c + + 程式碼中，當編譯器一致性選項[/zc: strictstrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md)設定。 在 C 中，字串常值的型別是陣列`char`，但它是在 c + + 中的陣列`const char`。 此範例會產生 C2440:
+如果您嘗試將初始化非常數，可能會造成 C2440 `char*` (或`wchar_t*`) 使用的字串常值C++程式碼，當編譯器一致性選項[/zc: strictstrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md)設定。 在 C 中，字串常值的型別是陣列`char`，但在C++，它是陣列`const char`。 此範例會產生 C2440:
 
 ```cpp
 // C2440s.cpp
@@ -80,9 +80,9 @@ Base * func(Derived * d) {
 
 在下一個範例的 15 和 16 行上的 C2440 錯誤以限定`Incompatible calling conventions for UDT return value`訊息。 A *UDT*是使用者定義的型別，例如類別、 結構或等位。 UDT 呼叫慣例指定向前宣告相衝突的實際的呼叫慣例的 UDT，並涉及函式指標時使用的傳回型別時，會產生這種不相容性錯誤。
 
-在此範例中，第一次有向前宣告了一個結構和函式傳回該結構中;編譯器會假設該結構使用 c + + 呼叫慣例。 接下來結構定義，根據預設，會使用 C 呼叫慣例。 因為編譯器不知道該結構的呼叫慣例，直到它完成讀取整個結構的傳回型別中的結構的呼叫慣例`get_c2`也會假設為 c + +。
+在此範例中，第一次有向前宣告了一個結構和函式傳回該結構中;編譯器會假設該結構使用C++呼叫慣例。 接下來結構定義，根據預設，會使用 C 呼叫慣例。 因為編譯器不知道該結構的呼叫慣例，直到它完成讀取整個結構的傳回型別中的結構的呼叫慣例`get_c2`也會假設為C++。
 
-結構後面接著另一個函式宣告傳回該結構中，但到目前為止，編譯器知道結構的呼叫慣例是 c + +。 同樣地，函式指標，傳回該結構，定義的結構定義之後，讓編譯器知道該結構使用 c + + 呼叫慣例。
+結構後面接著另一個函式宣告傳回該結構中，但到目前為止，編譯器知道結構的呼叫慣例是C++。 同樣地，函式指標，傳回該結構，定義的結構定義之後，讓編譯器知道該結構使用C++呼叫慣例。
 
 若要解決因為呼叫慣例不相容，就會發生的 C2440，宣告傳回 UDT 的 UDT 定義之後的函式。
 
@@ -143,7 +143,7 @@ int main() {
 
 ## <a name="example"></a>範例
 
-使用不正確的使用者定義轉換也可能會發生 C2440。 例如，當轉換運算子已定義為`explicit`，編譯器無法使用中的隱含轉換。 如需有關使用者定義轉換的詳細資訊，請參閱 <<c0> [ 使用者定義的轉換 (C + + /cli CLI)](../../dotnet/user-defined-conversions-cpp-cli.md))。 此範例會產生 C2440:
+使用不正確的使用者定義轉換也可能會發生 C2440。 例如，當轉換運算子已定義為`explicit`，編譯器無法使用中的隱含轉換。 如需有關使用者定義轉換的詳細資訊，請參閱 <<c0> [ 使用者定義的轉換 (C++/CLI)](../../dotnet/user-defined-conversions-cpp-cli.md))。</c0> 此範例會產生 C2440:
 
 ```cpp
 // C2440d.cpp
@@ -167,7 +167,7 @@ int main() {
 
 ## <a name="example"></a>範例
 
-如果您嘗試建立的 Visual c + + 陣列，其型別都是執行個體，也會發生 C2440 <xref:System.Array>。  如需詳細資訊，請參閱 <<c0> [ 陣列](../../extensions/arrays-cpp-component-extensions.md)。  下一個範例會產生 C2440:
+如果您嘗試建立視覺效果的執行個體，也會發生 C2440C++類型的陣列<xref:System.Array>。  如需詳細資訊，請參閱 <<c0> [ 陣列](../../extensions/arrays-cpp-component-extensions.md)。  下一個範例會產生 C2440:
 
 ```cpp
 // C2440e.cpp
@@ -194,7 +194,7 @@ int main() {
 
 ## <a name="example"></a>範例
 
-Visual c + + 編譯器不再允許[const_cast 運算子](../../cpp/const-cast-operator.md)向下轉型時來源使用的程式碼 **/clr**程式設計會編譯。
+視覺效果C++編譯器不再允許[const_cast 運算子](../../cpp/const-cast-operator.md)向下轉型時來源使用的程式碼 **/clr**程式設計會編譯。
 
 若要解決這個 C2440，請使用正確的轉型運算子。 如需詳細資訊，請參閱 <<c0> [ 轉型運算子](../../cpp/casting-operators.md)。
 

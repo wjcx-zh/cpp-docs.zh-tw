@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
 ms.openlocfilehash: bf1ae81184d53dd271f63c26e8f9a52a6410b232
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038443"
 ---
 # <a name="pack"></a>pack
@@ -26,7 +26,7 @@ ms.locfileid: "59038443"
 
 ### <a name="parameters"></a>參數
 
-**顯示**<br/>
+**show**<br/>
 （選擇性）顯示目前的封裝對齊的位元組值。 此值是透過警告訊息顯示。
 
 **push**<br/>
@@ -35,7 +35,7 @@ ms.locfileid: "59038443"
 **pop**<br/>
 （選擇性）從內部編譯器堆疊頂端移除記錄。 如果*n*不利用指定**pop**，然後在堆疊頂端產生的記錄相關聯的封裝值即新的封裝對齊值。 如果*n*指定，例如`#pragma pack(pop, 16)`， *n*會變成新的封裝對齊值。 如果快顯*識別碼*，例如`#pragma pack(pop, r1)`，然後在堆疊上的所有記錄會都彈出的記錄直到*識別碼*找到。 會快顯該記錄，且與堆疊頂端產生的記錄關聯的封裝值即為新的封裝對齊值。 如果快顯*識別碼*，會中找不到任何記錄在堆疊上，則**pop**會被忽略。
 
-*識別項*<br/>
+*identifier*<br/>
 （選擇性）當搭配*推播*，將名稱指派給內部編譯器堆疊上的記錄。 當搭配**pop**，會將記錄推出內部堆疊，直到*識別項*已移除; 如果*識別碼*找不到在內部堆疊上，不會推出。
 
 *n*<br/>
@@ -60,7 +60,7 @@ ms.locfileid: "59038443"
 - [結構對齊範例](../build/x64-software-conventions.md#examples-of-structure-alignment)(x64 專用)
 
    > [!WARNING]
-   > 請注意，在 Visual Studio 2015 和更新版本中，您可以使用標準 alignas 和 alignof 運算子，與可跨編譯器移植的 `__alignof` 和 `declspec( align )` 不同。 C + + 標準無法處理封裝作業，因此您仍然必須使用**組件**（或其他編譯器上對應的延伸模組） 來指定比目標架構的文字大小較小的對齊方式。
+   > 請注意，在 Visual Studio 2015 和更新版本中，您可以使用標準 alignas 和 alignof 運算子，與可跨編譯器移植的 `__alignof` 和 `declspec( align )` 不同。 C++標準無法處理封裝作業，因此您仍然必須使用**pack** （或其他編譯器上對應的延伸模組） 來指定比目標架構的文字大小較小的對齊方式。
 
 ## <a name="examples"></a>範例
 

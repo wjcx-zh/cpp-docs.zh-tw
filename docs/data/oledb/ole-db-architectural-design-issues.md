@@ -5,10 +5,10 @@ helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
 ms.openlocfilehash: 2f0a7a114c671e17d8f95280ab00ed93570e8609
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037668"
 ---
 # <a name="ole-db-architectural-design-issues"></a>OLE DB 架構設計問題
@@ -31,9 +31,9 @@ Microsoft 提供數個程式庫，以完成這項工作： OLE DB 樣板程式�
 
 ## <a name="do-you-have-older-code-using-another-data-access-technology-ado-odbc-or-dao"></a>您有舊版的程式碼使用另一個資料存取技術 （ADO、 ODBC 或 DAO） 嗎？
 
-指定技術 （例如 ADO 元件使用 OLE DB 元件，並將 ODBC 程式碼移轉到 OLE DB） 的可能組合，涵蓋所有情況下是超出範圍的 Visual c + + 文件。 不過，許多文章，內容涵蓋各種案例可在下列 Microsoft 網站上：
+指定技術 （例如 ADO 元件使用 OLE DB 元件，並將 ODBC 程式碼移轉到 OLE DB） 的可能組合，涵蓋所有情況下已超出範圍的視覺效果C++文件。 不過，許多文章，內容涵蓋各種案例可在下列 Microsoft 網站上：
 
-- [Microsoft 說明及支援](https://support.microsoft.com/)
+- [Microsoft 說明和支援](https://support.microsoft.com/)
 
 - [Microsoft 資料存取技術文件概觀](https://msdn.microsoft.com/library/ms810811.aspx)
 

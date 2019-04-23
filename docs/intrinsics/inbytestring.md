@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __inbytestring intrinsic
 ms.assetid: fe549556-e7a3-4af3-8ebf-8a7dc3cb233b
 ms.openlocfilehash: e515c6452d18ca022707fa2f9e36e2045523ccd5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038579"
 ---
 # <a name="inbytestring"></a>__inbytestring
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 使用指定的連接埠時，讀取資料`rep insb`指令。
 
@@ -36,7 +36,7 @@ void __inbytestring(
 *連接埠*<br/>
 [in]要讀取的連接埠。
 
-*緩衝區*<br/>
+*Buffer*<br/>
 [out]從連接埠讀取的資料會寫入此處。
 
 *計數*<br/>
@@ -54,7 +54,7 @@ void __inbytestring(
 
 此常式僅可作為內建常式使用。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

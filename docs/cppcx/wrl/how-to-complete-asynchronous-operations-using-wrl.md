@@ -3,32 +3,32 @@ title: HOW TO：使用 WRL 完成非同步作業
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
-ms.openlocfilehash: 321bb273f661ec16fe85443c449b425ae56b99e3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 09c341e5e3d4f6007d5d5f66b7c06e1f0af5a65c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58784565"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59040221"
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>HOW TO：使用 WRL 完成非同步作業
 
-本文件說明如何使用 Windows 執行階段 c + + 範本庫 (WRL) 來啟動非同步作業，並在作業完成時執行工作。
+本文件說明如何使用 Windows 執行階段C++範本庫 (WRL) 來啟動非同步作業，並在作業完成時執行工作。
 
 本文件說明兩個範例。 第一個範例會啟動非同步的計時器，並等候計時器過期。 在此範例中，您會指定非同步的動作，當您建立計時器物件。 第二個範例會執行背景工作執行緒。 此範例示範如何使用 Windows 執行階段方法會傳回`IAsyncInfo`介面。 [回呼](callback-function-wrl.md)函式是這兩個範例中很重要的一部分，因為它可讓它們指定事件處理常式來處理非同步作業的結果。
 
 如需更基本範例會建立元件的執行個體，並擷取屬性值，請參閱[How to:啟動與使用 Windows 執行階段元件](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)。
 
 > [!TIP]
-> 這些範例會使用 lambda 運算式來定義回呼。 您也可以使用函式物件 (functor)，函式指標，或是[std:: function](../../standard-library/function-class.md)物件。 如需有關 c + + lambda 運算式的詳細資訊，請參閱[Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)。
+> 這些範例會使用 lambda 運算式來定義回呼。 您也可以使用函式物件 (functor)，函式指標，或是[std:: function](../../standard-library/function-class.md)物件。 如需詳細資訊C++lambda 運算式，請參閱[Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)。
 
 ## <a name="example-working-with-a-timer"></a>範例：與計時器工作
 
 下列步驟啟動非同步的計時器，並等候計時器過期。 完整的範例如下。
 
 > [!WARNING]
-> 雖然您通常會使用 Windows 執行階段 c + + 樣板程式庫，在通用 Windows 平台 (UWP) 應用程式中，此範例會使用主控台應用程式的圖。 這類函式`wprintf_s`所沒有的 UWP 應用程式。 如需類型和您可以使用 UWP 應用程式中的函式的詳細資訊，請參閱[通用 Windows 平台應用程式不支援的 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)並[Win32 與 UWP 應用程式的 COM](/uwp/win32-and-com/win32-and-com-for-uwp-apps)。
+> 雖然您通常會使用 Windows 執行階段C++通用 Windows 平台 (UWP) 應用程式，此範例中的範本程式庫會用於圖例中的主控台應用程式。 這類函式`wprintf_s`所沒有的 UWP 應用程式。 如需類型和您可以使用 UWP 應用程式中的函式的詳細資訊，請參閱[通用 Windows 平台應用程式不支援的 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)並[Win32 與 UWP 應用程式的 COM](/uwp/win32-and-com/win32-and-com-for-uwp-apps)。
 
-1. 包含 (`#include`) 任何所需的 Windows 執行階段、 Windows 執行階段 c + + 樣板程式庫或 c + + 標準程式庫標頭。
+1. 包含 (`#include`) 任何所需的 Windows 執行階段，Windows 執行階段C++範本程式庫，或C++標準程式庫標頭。
 
    [!code-cpp[wrl-consume-async#2](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_1.cpp)]
 
@@ -78,7 +78,7 @@ ms.locfileid: "58784565"
 > [!TIP]
 > 此範例示範如何使用`ABI::Windows::Foundation::IAsyncAction`介面。 您可以將此模式套用至任何實作的介面`IAsyncInfo`: `IAsyncAction`， `IAsyncActionWithProgress`， `IAsyncOperation`，和`IAsyncOperationWithProgress`。
 
-1. 包含 (`#include`) 任何所需的 Windows 執行階段、 Windows 執行階段 c + + 樣板程式庫或 c + + 標準程式庫標頭。
+1. 包含 (`#include`) 任何所需的 Windows 執行階段，Windows 執行階段C++範本程式庫，或C++標準程式庫標頭。
 
    [!code-cpp[wrl-consume-asyncOp#2](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_8.cpp)]
 

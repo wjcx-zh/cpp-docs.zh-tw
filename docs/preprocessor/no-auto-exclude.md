@@ -7,14 +7,14 @@ helpviewer_keywords:
 - no_auto_exclude attribute
 ms.assetid: 3241ef9c-758a-4e86-bdc5-37da6072430f
 ms.openlocfilehash: 06bde7535bd181057750ab9dd4c3999321b4990c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038938"
 ---
 # <a name="noautoexclude"></a>no_auto_exclude
-**C++ 專有的**
+**C++特定**
 
 停用自動排除。
 
@@ -26,9 +26,9 @@ no_auto_exclude
 
 ## <a name="remarks"></a>備註
 
-類型程式庫可能包含在系統標頭或其他類型程式庫中定義的項目。 `#import` 嘗試將會自動排除這類項目避免多個定義錯誤。 這麼做，當[編譯器警告 （層級 3） C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md)將發出的每個要排除的項目。 您可以使用這個屬性停用這種自動排除行為。
+類型程式庫可能包含在系統標頭或其他類型程式庫中定義的項目。 `#import` 會自動排除這類項目以嘗試避開多個定義錯誤。 這麼做，當[編譯器警告 （層級 3） C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md)將發出的每個要排除的項目。 您可以使用這個屬性停用這種自動排除行為。
 
-**END C++ 特定的**
+**結束C++特定**
 
 ## <a name="see-also"></a>另請參閱
 

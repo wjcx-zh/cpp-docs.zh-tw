@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3290
 ms.assetid: 0baf684b-1143-4953-ac99-a2fa267d8017
 ms.openlocfilehash: f2a346354d8da7d78c5517b01b4438bfb8af50ad
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58774837"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776332"
 ---
 # <a name="compiler-error-c3290"></a>編譯器錯誤 C3290
 

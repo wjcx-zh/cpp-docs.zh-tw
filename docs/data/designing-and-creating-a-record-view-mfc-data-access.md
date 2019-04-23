@@ -10,10 +10,10 @@ helpviewer_keywords:
 - designing record views
 ms.assetid: 1d6f5439-754f-4b8b-a19d-841a4657827b
 ms.openlocfilehash: 15a8afde8c86d3dae8198e8f42b2b7c3b49f0dfa
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035539"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>設計和建立記錄檢視 (MFC 資料存取)
@@ -34,14 +34,14 @@ ms.locfileid: "59035539"
 
 下列主題將說明使用資料錄檢視的其他詳細資料：
 
-- [資料錄檢視：支援資料錄檢視的巡覽](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
+- [資料錄檢視：支援資料錄檢視的瀏覽](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
 
 - [資料錄檢視：使用資料錄檢視](../data/using-a-record-view-mfc-data-access.md)
 
-- [資料錄檢視：以第二個資料錄集填入清單方塊](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
+- [資料錄檢視：填入清單方塊從第二個資料錄集](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[記錄檢視 (MFC 資料存取)](../data/record-views-mfc-data-access.md)<br/>
+[資料錄檢視 (MFC 資料存取)](../data/record-views-mfc-data-access.md)<br/>
 [資料錄集 (ODBC)](../data/odbc/recordset-odbc.md)<br/>
 [ODBC 驅動程式清單](../data/odbc/odbc-driver-list.md)

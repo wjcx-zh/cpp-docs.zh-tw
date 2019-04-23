@@ -13,10 +13,10 @@ helpviewer_keywords:
 - '# preprocessor operator'
 ms.assetid: 1175dd19-4538-43b3-ad97-a008ab80e7b1
 ms.openlocfilehash: 4f23eea017197ae1f984e097bb3967c1228fef09
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035711"
 ---
 # <a name="stringizing-operator-"></a>字串化運算子 (#)
@@ -30,7 +30,7 @@ ms.locfileid: "59035711"
 
 此外，如果通常包含引數中的字元需要逸出序列用於字串常值時 (例如引號 (**」**) 或反斜線 (**\\**) 字元)，必要的逸出反斜線字元之前，會自動插入。
 
-它搭配包含逸出序列的字串，Visual c + + 字串化運算子不會無法正確運作。 在此情況下，編譯器會產生[編譯器錯誤 C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md)。
+視覺效果C++字串化運算子不正常的行為時搭配包含逸出序列的字串。 在此情況下，編譯器會產生[編譯器錯誤 C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md)。
 
 ## <a name="examples"></a>範例
 

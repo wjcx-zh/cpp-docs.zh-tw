@@ -1,5 +1,5 @@
 ---
-title: async_uuid （c + + COM 屬性）
+title: async_uuid (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.async_uuid
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
 ms.openlocfilehash: 4c2bca9165d8b23f8cfa4f0f5523c882fd2f52bf
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035792"
 ---
 # <a name="asyncuuid"></a>async_uuid
@@ -30,7 +30,7 @@ UUID 可識別介面的版本。
 
 ## <a name="remarks"></a>備註
 
-**Async_uuid** c + + 屬性具有相同的功能[async_uuid](/windows/desktop/Midl/async-uuid) MIDL 屬性。
+**Async_uuid** C++屬性具有相同的功能[async_uuid](/windows/desktop/Midl/async-uuid) MIDL 屬性。
 
 ## <a name="example"></a>範例
 

@@ -44,10 +44,10 @@ helpviewer_keywords:
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
 ms.openlocfilehash: b257c4e95a99bfbc8042c5935638a70deac0ea7a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040234"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset 類別
@@ -85,7 +85,7 @@ class CArrayRowset :
 
 |||
 |-|-|
-|[運算子&#91;&#93;](#operator)|存取資料列集的項目。|
+|[Operator&#91;&#93;](#operator)|存取資料列集的項目。|
 
 ### <a name="data-members"></a>資料成員
 
@@ -157,5 +157,5 @@ ULONG m_nRowsRead;
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CRowset 類別](../../data/oledb/crowset-class.md)

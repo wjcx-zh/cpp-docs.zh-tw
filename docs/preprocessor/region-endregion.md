@@ -13,10 +13,10 @@ helpviewer_keywords:
 - region pragma
 ms.assetid: c697f807-622f-4796-851b-68a42bbecd84
 ms.openlocfilehash: c73a90aa2be83d643b74dde4645081e89da3ff73
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037922"
 ---
 # <a name="region-endregion"></a>region、endregion
@@ -32,10 +32,10 @@ ms.locfileid: "59037922"
 
 ### <a name="parameters"></a>參數
 
-*註解*<br/>
+*comment*<br/>
 （選擇性）將會顯示在程式碼編輯器中的註解。
 
-*名稱*<br/>
+*name*<br/>
 （選擇性）區域的名稱。  此名稱會顯示在程式碼編輯器中。
 
 ## <a name="remarks"></a>備註

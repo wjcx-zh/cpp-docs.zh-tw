@@ -6,10 +6,10 @@ helpviewer_keywords:
 - MFC, database applications
 ms.assetid: 88aabe65-84e3-4122-b636-5d334a5fe570
 ms.openlocfilehash: bf0aa11a020a5d15cd23463c31f2713aba38a037
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039368"
 ---
 # <a name="mfc-database-classes"></a>MFC 資料庫類別
@@ -19,7 +19,7 @@ ms.locfileid: "59039368"
 
 如需詳細資訊，請參閱下列主題：
 
-- [資料存取技術藍圖](https://msdn.microsoft.com/library/ms810810.aspx)
+- [Data Access Technologies Road Map](https://msdn.microsoft.com/library/ms810810.aspx) (資料存取技術藍圖)
 
 - [ODBC Driver 13.1 for SQL Server 發行](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/)Microsoft ODBC Driver 13 for SQL Server 應該用來建立新的應用程式，或者加強需要利用新的 SQL Server 2016 功能的現有應用程式。
 
@@ -31,4 +31,4 @@ ms.locfileid: "59039368"
 
 ## <a name="see-also"></a>另請參閱
 
-[Data Access Programming (MFC/ATL)](../data/data-access-programming-mfc-atl.md)
+[資料存取程式設計 (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

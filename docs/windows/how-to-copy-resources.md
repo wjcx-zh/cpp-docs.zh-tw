@@ -1,5 +1,5 @@
 ---
-title: HOW TO：管理資源 （c + +）
+title: HOW TO：管理資源 (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.resvw.resource.copying
@@ -31,13 +31,13 @@ helpviewer_keywords:
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
 ms.openlocfilehash: 6b9499fbd806c04774d12750c70816d0312a4e3f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036058"
 ---
-# <a name="how-to-manage-resources-c"></a>HOW TO：管理資源 （c + +）
+# <a name="how-to-manage-resources-c"></a>HOW TO：管理資源 (C++)
 
 ## <a name="copy-and-edit-resources"></a>複製和編輯資源
 
@@ -46,7 +46,7 @@ ms.locfileid: "59036058"
 您可以輕鬆地將複製資源從現有的資源或可執行檔目前的資源檔。 若要複製的資源，您開啟這兩個同時包含資源的檔案並將項目從一個檔案拖曳到另一個或複製並貼兩個檔案之間。 這個方法適用於資源指令碼 (.rc) 檔和資源範本 (.rct) 檔，以及為可執行檔 (.exe) 檔案。
 
 > [!NOTE]
-> Visual c + + 包含您可以使用自己的應用程式中的範例資源檔案。 如需詳細資訊，請參閱[美工圖案：通用資源](https://github.com/Microsoft/VCSamples)。
+> 視覺化C++包含您可以使用自己的應用程式中的範例資源檔案。 如需詳細資訊，請參閱[美工圖案：通用資源](https://github.com/Microsoft/VCSamples)。
 
 您無法拖放、 複製、 剪下，或在專案中的資源檔案之間貼上 (**資源檢視**) 和獨立的.rc 檔在文件視窗中開啟。 您可以在舊版的產品來這麼做。 只能使用已開啟專案外部的.rc 檔之間的拖放方法。
 
@@ -72,7 +72,7 @@ ms.locfileid: "59036058"
       1. 以滑鼠右鍵按一下您想要貼上資源所在的資源檔 (例如*Source2.rc*)，然後選擇**貼上**。
 
 > [!NOTE]
-> 若要避免衝突的符號名稱或現有的檔案中的值，Visual c + + 可能會變更已傳送的資源的符號值或符號名稱和值時將它複製到新的檔案。
+> 若要避免衝突的符號名稱或現有的檔案，視覺效果中的值C++可能會變更已傳送的資源的符號值或符號名稱和值時將它複製到新的檔案。
 
 在資源中複製時，您可以變更其語言屬性或條件屬性，或兩者。
 
@@ -116,7 +116,7 @@ IDD_AboutBox (Finnish - XX33)
 > [!NOTE]
 > 匯入程序的運作方式相同的無論何種資源類型，您已選取。 匯入的資源會自動加入至該資源類型的正確節點。
 
-### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>若要匯出使用 Visual c + + 以外的資源
+### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>若要匯出視覺效果之外使用的資源C++
 
 1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)，以滑鼠右鍵按一下您想要匯出，然後選取的資源**匯出**。 您可以接受目前的檔案名稱，或輸入新密碼。
 
@@ -129,5 +129,5 @@ Win32
 ## <a name="see-also"></a>另請參閱
 
 [資源檔](../windows/resource-files-visual-studio.md)<br/>
-[HOW TO：建立資源](../windows/how-to-create-a-resource-script-file.md)<br/>
-[HOW TO：在編譯時期包含資源](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[如何：建立資源](../windows/how-to-create-a-resource-script-file.md)<br/>
+[如何：在編譯時間包含資源](../windows/how-to-include-resources-at-compile-time.md)<br/>

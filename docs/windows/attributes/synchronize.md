@@ -1,5 +1,5 @@
 ---
-title: 同步處理 （c + + COM 屬性）
+title: 同步處理 (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.synchronize
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - synchronize attribute
 ms.assetid: 15fc8544-955d-4765-b3d5-0f619c8b3f40
 ms.openlocfilehash: ea5236b887fb0df2a0acdd1e4050c66a4719072b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037045"
 ---
 # <a name="synchronize"></a>synchronize
@@ -25,7 +25,7 @@ ms.locfileid: "59037045"
 
 ## <a name="remarks"></a>備註
 
-**同步處理**c + + 屬性會實作同步處理物件的目標方法的支援。 同步處理可讓多個物件，以使用常見的資源 （例如類別的方法），藉由控制目標方法的存取權。
+**同步處理**C++屬性會實作同步處理物件的目標方法的支援。 同步處理可讓多個物件，以使用常見的資源 （例如類別的方法），藉由控制目標方法的存取權。
 
 這個屬性所插入的程式碼會呼叫適當`Lock`方法 （由執行緒模型），在目標方法的開頭。 當此方法會結束時，`Unlock`會自動呼叫。 如需有關這些函式的詳細資訊，請參閱[CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock)
 

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
 ms.openlocfilehash: d76cd93c7af4228bff8f73fa3bcbf40fa149b0be
-ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59237160"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (結構成員對齊)
@@ -43,7 +43,7 @@ ms.locfileid: "59237160"
 請勿使用此選項，除非您有特定的對齊需求。
 
 > [!WARNING]
-> Windows SDK 中的 c + + 標頭設定，並假設 **/zp8**內部封裝。 如果，可能會發生損毀的記憶體 **/Zp**設定已變更的 Windows SDK 標頭內。 標頭不會受到任何 **/Zp**您在命令列設定的選項。
+> C++Windows SDK 中的標頭設定，並假設 **/zp8**內部封裝。 如果，可能會發生損毀的記憶體 **/Zp**設定已變更的 Windows SDK 標頭內。 標頭不會受到任何 **/Zp**您在命令列設定的選項。
 
 您也可以使用[組件](../../preprocessor/pack.md)來控制結構的封裝。 如需對齊的詳細資訊，請參閱：
 
@@ -53,13 +53,13 @@ ms.locfileid: "59237160"
 
 - [__unaligned](../../cpp/unaligned.md)
 
-- [/ALIGN (區段對齊)](align-section-alignment.md)
+- [/ALIGN (區段記憶體對齊)](align-section-alignment.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 選取 **組態屬性** > **C/c + +** > **程式碼產生**屬性頁。
+1. 選取 **組態屬性** > **C /C++** > **產生程式碼**屬性頁。
 
 1. 修改**結構成員對齊**屬性。
 
@@ -70,4 +70,4 @@ ms.locfileid: "59237160"
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md) \
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

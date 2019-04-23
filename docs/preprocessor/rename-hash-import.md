@@ -7,15 +7,15 @@ helpviewer_keywords:
 - rename attribute
 ms.assetid: 5c5c6153-1087-4b7b-87fb-fc59b90b9975
 ms.openlocfilehash: 0fbed04f040a47b5b389f40eeb15254da4a7940b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037046"
 ---
 # <a name="rename-import"></a>重新命名 (\#匯入)
 
-**C++ 專有的**
+**C++特定**
 
 解決名稱衝突問題。
 
@@ -56,7 +56,7 @@ rename("GetMyParent","GetMyParentX")
 
 這是因為名稱 `GetMyParent` 只會出現在產生的類型程式庫標頭檔中。
 
-**END C++ 特定的**
+**結束C++特定**
 
 ## <a name="see-also"></a>另請參閱
 

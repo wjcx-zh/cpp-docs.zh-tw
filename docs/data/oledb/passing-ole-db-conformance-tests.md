@@ -9,10 +9,10 @@ helpviewer_keywords:
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
 ms.openlocfilehash: 9f78b16bc30651560137a39286460a8e5ceccd40
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036993"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>通過 OLE DB 一致性測試
@@ -21,7 +21,7 @@ ms.locfileid: "59036993"
 
 ## <a name="running-the-conformance-tests"></a>執行一致性測試
 
-在 Visual c + + 6.0 中，OLE DB 提供者範本會加入可讓您檢查值和屬性的攔截函式數目。 大部分的這些函式已加入一致性測試的回應。
+在視覺效果C++6.0 中，OLE DB 提供者範本新增多個連結可讓您檢查值和屬性的函式。 大部分的這些函式已加入一致性測試的回應。
 
 > [!NOTE]
 > 您要新增您的提供者，將 OLE DB 一致性測試的數個驗證函式。

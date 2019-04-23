@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
 ms.openlocfilehash: 8c0bed825f76fdf0f2c5cc1fa095e54f08bb8a67
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037207"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>HOW TO：啟用和使用 Windows 執行階段元件使用 WRL
 
-本文件說明如何使用 Windows 執行階段 c + + 範本庫 (WRL) 來初始化 Windows 執行階段以及如何啟用和使用 Windows 執行階段元件。
+本文件說明如何使用 Windows 執行階段C++範本庫 (WRL) 來初始化 Windows 執行階段，以及如何啟用和使用 Windows 執行階段元件。
 
 若要使用的元件，您必須取得的型別由元件實作的介面指標。 和 Windows 執行階段的基礎技術是元件物件模型 (COM)，因為您必須遵循 COM 規則，以維護型別的執行個體。 例如，您必須維持*參考次數*，決定何時從記憶體中刪除類型。
 
-為了簡化 Windows 執行階段使用，Windows 執行階段 c + + 樣板程式庫會提供智慧型指標範本中， [ComPtr\<T >](comptr-class.md)，自動執行參考計數。 當您宣告變數時，指定`ComPtr<`*介面名稱*`>` *識別碼*。 若要存取的介面成員，將套用的箭號成員存取運算子 (`->`) 的識別碼。
+若要簡化的 Windows 執行階段，Windows 執行階段使用C++範本程式庫提供智慧型指標範本中， [ComPtr\<T >](comptr-class.md)，，會自動執行參考計數。 當您宣告變數時，指定`ComPtr<`*介面名稱*`>` *識別碼*。 若要存取的介面成員，將套用的箭號成員存取運算子 (`->`) 的識別碼。
 
 > [!IMPORTANT]
 > 當您呼叫介面函式時，一定要測試的 HRESULT 傳回值。
@@ -26,11 +26,11 @@ ms.locfileid: "59037207"
 下列步驟使用`Windows::Foundation::IUriRuntimeClass`介面，以示範如何建立啟用 factory 之 Windows 執行階段元件、 建立該元件的執行個體和擷取屬性值。 此外，它們也會示範如何初始化 Windows 執行階段。 完整的範例如下。
 
 > [!IMPORTANT]
-> 雖然您通常會使用 Windows 執行階段 c + + 樣板程式庫，在通用 Windows 平台 (UWP) 應用程式中，此範例會使用主控台應用程式的圖。 這類函式`wprintf_s`所沒有的 UWP 應用程式。 如需類型和您可以使用 UWP 應用程式中的函式的詳細資訊，請參閱[通用 Windows 平台應用程式不支援的 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)並[Win32 與 UWP 應用程式的 COM](/uwp/win32-and-com/win32-and-com-for-uwp-apps)。
+> 雖然您通常會使用 Windows 執行階段C++通用 Windows 平台 (UWP) 應用程式，此範例中的範本程式庫會用於圖例中的主控台應用程式。 這類函式`wprintf_s`所沒有的 UWP 應用程式。 如需類型和您可以使用 UWP 應用程式中的函式的詳細資訊，請參閱[通用 Windows 平台應用程式不支援的 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)並[Win32 與 UWP 應用程式的 COM](/uwp/win32-and-com/win32-and-com-for-uwp-apps)。
 
 #### <a name="to-activate-and-use-a-windows-runtime-component"></a>若要啟動與使用 Windows 執行階段元件
 
-1. 包含 (`#include`) 任何所需的 Windows 執行階段、 Windows 執行階段 c + + 樣板程式庫或 c + + 標準程式庫標頭。
+1. 包含 (`#include`) 任何所需的 Windows 執行階段，Windows 執行階段C++範本程式庫，或C++標準程式庫標頭。
 
    [!code-cpp[wrl-consume-component#2](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_1.cpp)]
 
@@ -80,4 +80,4 @@ ms.locfileid: "59037207"
 
 ## <a name="see-also"></a>另請參閱
 
-[Windows Runtime C++ Template Library (WRL)](windows-runtime-cpp-template-library-wrl.md)
+[Windows 執行階段 C++ 範本庫 (WRL)](windows-runtime-cpp-template-library-wrl.md)

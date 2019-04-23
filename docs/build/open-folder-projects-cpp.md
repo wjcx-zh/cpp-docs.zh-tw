@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
 ms.openlocfilehash: 380a96bcb1a119b2b6d4104d60936217d1350fbb
-ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59237129"
 ---
 # <a name="open-folder-projects-for-c"></a>C++ 的開啟資料夾專案
@@ -64,7 +64,7 @@ IntelliSense 和瀏覽行為部分取決於使用中組建組態，這會定義 
 
 ![開啟資料夾設定工作](media/open-folder-config-tasks.png)
 
-這會建立 （或開啟） **tasks.vs.json** .vs 資料夾下的 Visual Studio 會建立在專案根資料夾中的檔案。 您可以在此檔案中定義任意工作，然後從 [方案總管] 操作功能表叫用它。 下列範例會顯示定義單一工作的 tasks.vs.json 檔案。 `taskName` 操作功能表中，定義所顯示的名稱。 `appliesTo` 定義可對命令的檔案。 `command` 屬性參考 COMSPEC 環境變數，以識別主控台的路徑 (在 Windows 上為 cmd.exe)。 您也可以參考 CppProperties.json 或 CMakeSettings.json 中宣告的環境變數。 `args` 屬性指定要叫用的命令列。 `${file}` 巨集會在 [方案總管] 中擷取選取的檔案。 下列範例會顯示目前所選 .cpp 檔案的檔名。
+這會建立 （或開啟） **tasks.vs.json** .vs 資料夾下的 Visual Studio 會建立在專案根資料夾中的檔案。 您可以在此檔案中定義任意工作，然後從 [方案總管] 操作功能表叫用它。 下列範例會顯示定義單一工作的 tasks.vs.json 檔案。 `taskName` 定義出現在操作功能表中的名稱。 `appliesTo` 定義可執行該命令的檔案。 `command` 屬性參考 COMSPEC 環境變數，以識別主控台的路徑 (在 Windows 上為 cmd.exe)。 您也可以參考 CppProperties.json 或 CMakeSettings.json 中宣告的環境變數。 `args` 屬性指定要叫用的命令列。 `${file}` 巨集會在 [方案總管] 中擷取選取的檔案。 下列範例會顯示目前所選 .cpp 檔案的檔名。
 
 ```json
 {

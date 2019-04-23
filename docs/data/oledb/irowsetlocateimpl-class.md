@@ -33,10 +33,10 @@ helpviewer_keywords:
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
 ms.openlocfilehash: e3513084697a60a33b9fa2ab02222a9b332cce79
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039815"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl 類別
@@ -94,10 +94,10 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 
 |||
 |-|-|
-|[比較](#compare)|比較兩個書籤。|
+|[Compare](#compare)|比較兩個書籤。|
 |[GetRowsAt](#getrowsat)|擷取從書籤中位移所指定的資料列開始的資料列。|
 |[GetRowsByBookmark](#getrowsbybookmark)|擷取符合指定的書籤的資料列。|
-|[Hash](#hash)|傳回雜湊值，指定的書籤。|
+|[雜湊](#hash)|傳回雜湊值，指定的書籤。|
 
 ### <a name="data-members"></a>資料成員
 
@@ -113,7 +113,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 
 若要支援 OLE DB 的書籤中的資料列集，請繼承自這個類別的資料列集。
 
-如需實作的書籤支援的詳細資訊，請參閱[提供者支援書籤](../../data/oledb/provider-support-for-bookmarks.md)中*Visual c + + 程式設計人員指南*並[書籤](/previous-versions/windows/desktop/ms709728(v=vs.85))中*OLE DB 程式設計人員參考*平台 SDK 中。
+如需實作的書籤支援的詳細資訊，請參閱[提供者支援書籤](../../data/oledb/provider-support-for-bookmarks.md)中*VisualC++程式設計人員指南*並[書籤](/previous-versions/windows/desktop/ms709728(v=vs.85))中*OLE DB 程式設計人員參考*平台 SDK 中。
 
 ## <a name="compare"></a> IRowsetLocateImpl::Compare
 
@@ -236,7 +236,7 @@ CAtlArray<DBROWCOUNT> m_rgBookmarks;
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [IRowsetLocate:IRowset](/previous-versions/windows/desktop/ms721190(v=vs.85))
 [書籤的提供者支援](../../data/oledb/provider-support-for-bookmarks.md)<br/>
 [書籤](/previous-versions/windows/desktop/ms709728(v=vs.85))

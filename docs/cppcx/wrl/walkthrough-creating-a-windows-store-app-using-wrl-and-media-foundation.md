@@ -4,22 +4,22 @@ ms.date: 09/17/2018
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
 ms.openlocfilehash: e0254be8c6fa185f75c46898d4da51742195550a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036032"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>逐步解說：建立 UWP 應用程式使用 WRL 和媒體基礎
 
-了解如何建立通用 Windows 平台 (UWP) 應用程式會使用 Windows 執行階段 c + + 範本庫 (WRL) [Microsoft 媒體基礎](/windows/desktop/medfound/microsoft-media-foundation-sdk)。
+了解如何使用 Windows 執行階段C++範本庫 (WRL) 來建立使用的通用 Windows 平台 (UWP) 應用程式[Microsoft 媒體基礎](/windows/desktop/medfound/microsoft-media-foundation-sdk)。
 
 這個範例會建立自訂的媒體基礎轉換，可將灰階效果套用到從網路攝影機擷取的映像。 應用程式會使用 C++ 定義自訂的轉換，並使用 C# 以使用元件來轉換擷取的映像。
 
 > [!NOTE]
 > 如果不使用 C#，您也可以改用 JavaScript、Visual Basic 或 C++ 使用自訂轉換元件。
 
-在大部分情況下，您可以使用 C + + /CX，以建立 Windows 執行階段。 不過，有時候您必須使用 WRL。 例如，當您建立 Microsoft 媒體基礎的媒體延伸模組，您必須建立實作 COM 和 Windows 執行階段介面的元件。 因為 C + + /CX 只能建立 Windows 執行階段物件，以建立媒體延伸，您必須使用 WRL 因為它可讓 COM 和 Windows 執行階段介面的實作。
+在大部分情況下，您可以使用C++建立 Windows 執行階段 /CX。 不過，有時候您必須使用 WRL。 例如，當您建立 Microsoft 媒體基礎的媒體延伸模組，您必須建立實作 COM 和 Windows 執行階段介面的元件。 因為C++/CX 只能建立 Windows 執行階段物件，若要建立媒體延伸，您必須使用 WRL 因為它可讓 COM 和 Windows 執行階段介面的實作。
 
 > [!NOTE]
 > 雖然這個程式碼範例很長，它會示範建立有用的媒體基礎轉換所需的最小值。 您可以將之做為您自訂轉換的起點。 這個範例是來自[媒體延伸範例](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)、 哪些使用媒體延伸將效果套用到視訊、 解碼視訊，以及建立產生媒體資料流的配置處理常式。
@@ -121,6 +121,6 @@ ms.locfileid: "59036032"
 
 ## <a name="see-also"></a>另請參閱
 
-[Windows Runtime C++ Template Library (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
+[Windows 執行階段 C++ 範本庫 (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
 [Microsoft 媒體基礎](/windows/desktop/medfound/microsoft-media-foundation-sdk)<br/>
 [媒體延伸範例](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

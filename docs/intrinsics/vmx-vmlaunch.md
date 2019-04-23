@@ -8,15 +8,15 @@ helpviewer_keywords:
 - __vmx_vmlaunch intrinsic
 ms.assetid: 708f7c38-b7c1-4ee7-bfc4-0daeb9cc9360
 ms.openlocfilehash: 37f3a39ee7b0d4d24f26fab2347ac9fca020ec47
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037038"
 ---
 # <a name="vmxvmlaunch"></a>__vmx_vmlaunch
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 使用目前的虛擬機器控制結構 (VMCS) 放置在 VMX 非根作業狀態 （輸入 VM） 中呼叫的應用程式。
 
@@ -49,7 +49,7 @@ unsigned char __vmx_vmlaunch(
 
 **標頭檔** \<intrin.h >
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

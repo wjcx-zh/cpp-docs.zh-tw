@@ -10,15 +10,15 @@ helpviewer_keywords:
 - _mm_extract_si64 intrinsic
 ms.assetid: 459fdd72-cc54-4ee5-bbd5-d2c6067a88e7
 ms.openlocfilehash: e77ca5589ed50a4199921603afec1d9888c6cca5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040208"
 ---
 # <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64，_mm_extracti_si64
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 會產生`extrq`指示來擷取指定的 bits，從第一個引數的 64 低位元。
 
@@ -38,16 +38,16 @@ __m128i _mm_extracti_si64(
 
 #### <a name="parameters"></a>參數
 
-*原始程式檔*<br/>
+*來源*<br/>
 [in]128 位元欄位，以在其較低的 64 位元的輸入資料。
 
 *描述元*<br/>
 [in]128 位元欄位，描述元欄位，來擷取。
 
-*Length*<br/>
+*長度*<br/>
 [in]整數，指定要擷取之欄位的長度。
 
-*索引*<br/>
+*Tuple*<br/>
 [in]整數，指定要擷取之欄位的索引
 
 ## <a name="return-value"></a>傳回值
@@ -108,7 +108,7 @@ result2 = 0x30eca86
 result3 = 0x30eca86
 ```
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 進階 Micro 裝置，inc.copyright 2007著作權所有，並保留一切權利。 進階 Micro 裝置，inc.的權限重製
 

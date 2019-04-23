@@ -3,15 +3,15 @@ title: __fastfail
 ms.date: 11/04/2016
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
 ms.openlocfilehash: a9f75cbf3c572401ef26fb16ced221eb24d35534
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041495"
 ---
 # <a name="fastfail"></a>__fastfail
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 立即終止額外負荷最小的呼叫處理序。
 
@@ -51,7 +51,7 @@ void __fastfail(unsigned int code);
 
 從 Windows 8 開始支援原生快速失敗機制。 原本不支援快速失敗指令的 Windows 作業系統通常會將快速失敗要求視為存取違規或 `UNEXPECTED_KERNEL_MODE_TRAP` 檢查錯誤處理。 在這些情況下，此程式仍然會終止，但不一定會快速終止。
 
-`__fastfail` 只有使用作為內建。
+`__fastfail` 僅可作為內建函式使用。
 
 ## <a name="requirements"></a>需求
 
@@ -61,7 +61,7 @@ void __fastfail(unsigned int code);
 
 **標頭檔** \<intrin.h >
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

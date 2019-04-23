@@ -1,5 +1,5 @@
 ---
-title: IDL 屬性 (c + + COM)
+title: IDL 屬性 (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
 ms.openlocfilehash: a699e327eec056bbb36747840990bb9c7ccc259b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039494"
 ---
 # <a name="idl-attributes"></a>IDL 屬性
@@ -23,11 +23,11 @@ ms.locfileid: "59039494"
 
 - 依賴的精靈，可讓您修改的.idl 檔案的某些層面。
 
-現在，您可以修改從.idl 檔中使用 Visual c + + IDL 屬性的原始程式碼檔。 在許多情況下，Visual c + + IDL 屬性會有 MIDL 屬性相同的名稱。 名稱的 Visual c + + IDL 屬性，以及 MIDL 屬性相同時，這表示，置於您的原始程式碼檔中的 Visual c + + 屬性將導致.idl 檔，其中包含其 namesake MIDL 屬性。 不過，Visual c + + IDL 屬性可能不會提供 MIDL 屬性的所有功能。
+現在，您可以修改從.idl 檔中使用視覺效果的原始程式碼檔C++IDL 屬性。 在許多情況下，視覺效果C++IDL 屬性有 MIDL 屬性相同的名稱。 當視覺效果的名稱C++IDL 屬性和 MIDL 屬性相同，它表示該視覺效果C++在您的原始程式碼檔中的屬性會在.idl 檔，其中包含其 namesake MIDL 屬性。 不過，視覺效果C++IDL 屬性可能不會提供 MIDL 屬性的所有功能。
 
 不搭配使用時[COM 屬性](com-attributes.md)，IDL 屬性可讓您定義介面。 當編譯的原始程式碼時，屬性用來定義所產生的.idl 檔案。 ATL 專案中的 COM 屬性搭配使用時，某些 IDL 屬性，例如`coclass`，導致插入至專案的程式碼。
 
-請注意， [idl_quote](idl-quote.md)可讓您使用目前版本的 Visual c + + 中不支援的 MIDL 建構。 這和其他屬性，例如[importlib](importlib.md)並[includelib](includelib-cpp.md)幫助您使用您目前的 Visual c + + 專案中現有的.idl 檔案。
+請注意， [idl_quote](idl-quote.md)可讓您使用不支援在目前版本中的視覺效果的 MIDL 建構C++。 這和其他屬性，例如[importlib](importlib.md)並[includelib](includelib-cpp.md)幫助您使用現有的.idl 檔案，在您目前的視覺效果中C++專案。
 
 |屬性|描述|
 |---------------|-----------------|
@@ -38,7 +38,7 @@ ms.locfileid: "59039494"
 |[call_as](call-as.md)|讓不可遠端處理函式對應至遠端函式。|
 |[case](case-cpp.md)|搭配[switch_type](switch-type.md)等位中的屬性。|
 |[coclass](coclass.md)|位置的類別到.idl 檔為 coclass 的定義。|
-|[控制項](control.md)|指定使用者定義型別為控制項。|
+|[control](control.md)|指定使用者定義型別為控制項。|
 |[cpp_quote](cpp-quote.md)|指定的字串，不能包含單引號字元，發出到產生的標頭檔。|
 |[defaultbind](defaultbind.md)|表示最能代表物件的單一、 可繫結屬性。|
 |[defaultcollelem](defaultcollelem.md)|使用 Visual Basic 程式碼最佳化。|
@@ -55,9 +55,9 @@ ms.locfileid: "59039494"
 |[helpstringcontext](helpstringcontext.md)|指定.hlp 或.chm 檔案中的說明主題的識別碼。|
 |[helpstringdll](helpstringdll.md)|指定要用來執行文件字串查閱 （當地語系化） DLL 的名稱。|
 |[helpstring](helpstring.md)|指定用來描述所套用之項目的字元字串。|
-|[隱藏](hidden.md)|表示項目存在，但不是會顯示在使用者導向的瀏覽器中。|
+|[hidden](hidden.md)|表示項目存在，但不是會顯示在使用者導向的瀏覽器中。|
 |[idl_module](idl-module.md)|指定進入點 DLL 中。|
-|[idl_quote](idl-quote.md)|可讓您使用屬性或 IDL 建構不支援在目前版本的 Visual c + + 中。|
+|[idl_quote](idl-quote.md)|可讓您使用屬性或視覺效果的目前版本中不支援的 IDL 建構C++。|
 |[id](id.md)|指定成員函式 （屬性或方法，在介面或 dispinterface） 的 DISPID。|
 |[iid_is](iid-is.md)|指定的介面指標所指向的 COM 介面的 IID。|
 |[immediatebind](immediatebind.md)|表示資料庫將會立即被告知資料繫結物件的屬性的所有變更。|
@@ -65,14 +65,14 @@ ms.locfileid: "59039494"
 |[import](import.md)|指定另一個.idl、.odl 或標頭檔包含您想要從主要的.idl 檔案中參考的定義。|
 |[include](include-cpp.md)|指定要包含在產生的.idl 檔案中的一或多個標頭檔。|
 |[includelib](includelib-cpp.md)|會導致的.idl 或.h 檔案要包含在產生的.idl 檔案中。|
-|[中的](in-cpp.md)|指出參數是要呼叫的程序從傳遞至呼叫的程序。|
+|[in](in-cpp.md)|指出參數是要呼叫的程序從傳遞至呼叫的程序。|
 |[last_is](last-is.md)|指定要傳送的最後一個陣列元素的索引。|
 |[lcid](lcid.md)|可讓您將地區設定識別碼傳遞給函式。|
 |[length_is](length-is.md)|指定要傳送的陣列元素數目。|
 |[licensed](licensed.md)|表示所套用的 coclass 係授權使用，而且必須具現化使用`IClassFactory2`。|
-|[本機](local-cpp.md)|可讓您使用 MIDL 編譯器為標頭的產生器時用於介面標頭。 中的個別函式使用時，會指定任何虛設常式所產生的本機程序。|
+|[local](local-cpp.md)|可讓您使用 MIDL 編譯器為標頭的產生器時用於介面標頭。 中的個別函式使用時，會指定任何虛設常式所產生的本機程序。|
 |[max_is](max-is.md)|指定有效的陣列索引的最大值。|
-|[name](module-cpp.md)|在 .idl 檔案中定義程式庫區塊。|
+|[module](module-cpp.md)|在 .idl 檔案中定義程式庫區塊。|
 |[ms_union](ms-union.md)|控制 nonencapsulated 等位的網路資料表示法對齊方式。|
 |[no_injected_text](no-injected-text.md)|防止編譯器將程式碼，因為屬性使用。|
 |[nonbrowsable](nonbrowsable.md)|指出介面成員不會顯示在屬性瀏覽器。|
@@ -81,7 +81,7 @@ ms.locfileid: "59039494"
 |[object](object-cpp.md)|識別自訂的介面;自訂屬性的同義詞。|
 |[odl](odl.md)|識別物件描述語言 (ODL) 介面的介面。|
 |[oleautomation](oleautomation.md)|表示與 Automation 相容介面。|
-|[選擇性](optional-cpp.md)|指定的成員函式的選擇性參數。|
+|[optional](optional-cpp.md)|指定的成員函式的選擇性參數。|
 |[out](out-cpp.md)|識別從被呼叫程序傳回至呼叫程序的指標參數 (從伺服器至用戶端)。|
 |[pointer_default](pointer-default.md)|指定的預設指標屬性的最上層出現的指標除外的所有指標的參數清單。|
 |[pragma](pragma.md)|指定的字串，不能包含單引號字元，發出到產生的.idl 檔案。|
@@ -98,8 +98,8 @@ ms.locfileid: "59039494"
 |[restricted](restricted.md)|指定的程式庫或模組、 介面或 dispinterface 的成員不能任意呼叫。|
 |[retval](retval.md)|指定接收成員的傳回值的參數。|
 |[size_is](size-is.md)|指定記憶體的大小配置大小的指標，且大小來調整大小的指標，以及單一或多維陣列的指標。|
-|[來源](source-cpp.md)|表示的類別、 屬性或方法成員是一個事件的來源。|
-|[字串](string-cpp.md)|表示一維**char**， **wchar_t**， `byte`，或對等陣列或這類陣列的指標必須被視為字串。|
+|[source](source-cpp.md)|表示的類別、 屬性或方法成員是一個事件的來源。|
+|[string](string-cpp.md)|表示一維**char**， **wchar_t**， `byte`，或對等陣列或這類陣列的指標必須被視為字串。|
 |[switch_is](switch-is.md)|指定的運算式或做為選取的等位成員的聯集判別的識別項。|
 |[switch_type](switch-type.md)|識別做為等位的判別變數的型別。|
 |[transmit_as](transmit-as.md)|指示編譯器將呈現的型別，用戶端和伺服器應用程式管理，相關聯的傳輸類型。|

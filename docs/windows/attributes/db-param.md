@@ -1,5 +1,5 @@
 ---
-title: db_param （c + + COM 屬性）
+title: db_param (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_param
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
 ms.openlocfilehash: a3cfcf3c7ce3313eaff9a3b35854e1e077fc906f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038092"
 ---
 # <a name="dbparam"></a>db_param
@@ -40,16 +40,16 @@ ms.locfileid: "59038092"
 *dbtype*<br/>
 （選擇性）OLE DB[型別指示器](/previous-versions/windows/desktop/ms711251(v=vs.85))的資料行項目。
 
-*精確度*<br/>
+*precision*<br/>
 （選擇性）要用於資料行項目有效位數。 如需詳細資訊，請參閱說明`bPrecision`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*小數點位數*<br/>
+*scale*<br/>
 （選擇性）要用於資料行項目小數位數。 如需詳細資訊，請參閱說明`bScale`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *status*<br/>
 （選擇性）成員變數，用來保存此資料行的狀態。 狀態會指出資料行的值是資料值或其他值，例如 NULL。 如需可能的值，請參閱[狀態](/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程式設計人員參考*。
 
-*長度*<br/>
+*length*<br/>
 （選擇性）成員變數，用來保存資料行的大小，以位元組為單位。
 
 ## <a name="remarks"></a>備註

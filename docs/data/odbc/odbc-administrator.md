@@ -12,10 +12,10 @@ helpviewer_keywords:
 - drivers [C++], ODBC
 ms.assetid: b8652790-3437-4e7d-bc83-6ea6981f008b
 ms.openlocfilehash: ac893981ff8c697dc090f1e6ad5ac61886a69f99
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035860"
 ---
 # <a name="odbc-administrator"></a>ODBC 管理員
@@ -26,19 +26,19 @@ ODBC 管理員登錄和設定[zdroje dat](../../data/odbc/data-source-odbc.md)�
 
 ODBC 管理員會在安裝期間安裝。 如果您選擇**自訂**安裝，且未選取任何的 ODBC 驅動程式，在**資料庫選項** 對話方塊中，您需要重新執行安裝程式安裝必要的檔案。
 
-在安裝期間，您可以選取您想要安裝的 ODBC 驅動程式。 您稍後可以安裝其他驅動程式隨附於 Visual c + + 使用 Visual c + + 安裝程式。
+在安裝期間，您可以選取您想要安裝的 ODBC 驅動程式。 您稍後可以安裝其他驅動程式隨附的視覺化C++使用視覺效果C++安裝程式。
 
-如果您想要安裝 ODBC 驅動程式不要使用尚未發行的 Visual c + +，您必須執行安裝程式隨附的驅動程式。
+如果您想要安裝 ODBC 驅動程式不要使用尚未發行的視覺效果C++，您必須執行安裝程式隨附的驅動程式。
 
-#### <a name="to-install-odbc-drivers-that-ship-with-visual-c"></a>若要安裝 ODBC 驅動程式隨附 Visual c + +
+#### <a name="to-install-odbc-drivers-that-ship-with-visual-c"></a>若要安裝 ODBC 驅動程式隨附具有視覺效果C++
 
-1. 從您的 Visual c + + 發佈光碟片執行安裝程式。
+1. 執行安裝程式，從您的視覺效果C++發佈 CD。
 
    開啟安裝程式中的對話方塊會隨即出現。
 
 1. 按一下 [**下一步**在每個對話方塊中，直到您到達**安裝選項**] 對話方塊。 選取 [**自訂**，然後按一下**下一步]**。
 
-1. 清除所有核取方塊後**Microsoft Visual c + + 安裝程式**對話方塊中，除了**資料庫選項**核取方塊，然後按一下**詳細資料**顯示**資料庫選項** 對話方塊。
+1. 清除所有核取方塊後**Microsoft VisualC++安裝程式**對話方塊中，除了**資料庫選項**核取方塊，然後按一下**詳細資料**顯示**資料庫選項** 對話方塊。
 
 1. 清除**Microsoft Data Access Objects**核取方塊，選取**Microsoft ODBC 驅動程式**核取方塊，然後按一下**詳細資料**。
 

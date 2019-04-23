@@ -1,5 +1,5 @@
 ---
-title: 資源識別項 （符號） （c + +）
+title: 資源識別項 （符號） (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.identifiers
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
 ms.openlocfilehash: 0b19ff0d1c709616868d47c172ff4cf8c6931b82
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036045"
 ---
-# <a name="resource-identifiers-symbols-c"></a>資源識別項 （符號） （c + +）
+# <a name="resource-identifiers-symbols-c"></a>資源識別項 （符號） (C++)
 
 符號是資源識別碼 (ID)，由兩個部分組成，符號名稱 （字串） 對應至符號值 （整數），例如：
 

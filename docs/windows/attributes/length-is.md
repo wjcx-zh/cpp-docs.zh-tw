@@ -1,5 +1,5 @@
 ---
-title: length_is （c + + COM 屬性）
+title: length_is (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.length_is
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
 ms.openlocfilehash: 1de168606b57c801bc3dc1fb9aee76eb6f3d54c8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039906"
 ---
 # <a name="lengthis"></a>length_is
@@ -25,12 +25,12 @@ ms.locfileid: "59039906"
 
 ### <a name="parameters"></a>參數
 
-*運算式*<br/>
+*expression*<br/>
 一或多個 C 語言的運算式。 允許空白的引數位置。
 
 ## <a name="remarks"></a>備註
 
-**Length_is** c + + 屬性具有相同的功能[length_is](/windows/desktop/Midl/length-is) MIDL 屬性。
+**Length_is** C++屬性具有相同的功能[length_is](/windows/desktop/Midl/length-is) MIDL 屬性。
 
 ## <a name="example"></a>範例
 

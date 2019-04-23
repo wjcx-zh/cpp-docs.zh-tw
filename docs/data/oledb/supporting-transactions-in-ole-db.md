@@ -10,10 +10,10 @@ helpviewer_keywords:
 - distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
 ms.openlocfilehash: 3c71200e39641a69443599e0445f89f469aceeda
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038744"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>支援 OLE DB 中的異動
@@ -36,7 +36,7 @@ OLE DB 支援使用下列三個方法的交易：
 
 當工作階段輸入交易時，完成該工作階段資料存放區的所有工作是該交易的一部分並認可或中止當做單一單位。 （這有時候稱為手動認可模式。）
 
-提供者特定交易支援。 如果您使用的提供者支援交易，支援工作階段物件`ITransaction`和`ITransactionLocal`可以輸入 （非巢狀） 的交易。 OLE DB 範本類別[CSession](../../data/oledb/csession-class.md)支援這些介面，而且是在 Visual c + + 中實作交易支援的建議的方式。
+提供者特定交易支援。 如果您使用的提供者支援交易，支援工作階段物件`ITransaction`和`ITransactionLocal`可以輸入 （非巢狀） 的交易。 OLE DB 範本類別[CSession](../../data/oledb/csession-class.md)支援這些介面，而且是建議的方式實作交易支援，在視覺效果C++。
 
 ## <a name="starting-and-ending-the-transaction"></a>開始和結束交易
 

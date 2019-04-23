@@ -144,15 +144,15 @@ helpviewer_keywords:
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
 ms.openlocfilehash: dedcab9b0addd3696749b50fef92b70081981c03
-ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59237207"
 ---
 # <a name="predefined-macros"></a>預先定義的巨集
 
-Microsoft C/c + + 編譯器 (MSVC) 預先定義特定的前置處理器巨集，視語言 （C 或 c + +）、 編譯目標和所選擇的編譯器選項而定。
+Microsoft C /C++編譯器 (MSVC) 預先定義的特定前置處理器巨集，視語言而定 (C 或C++)，編譯目標，並選擇的編譯器選項。
 
 MSVC 支援 ANSI/ISO C99 標準與 ISO C + + 14 和 C + + 17 標準所需的預先定義前置處理器巨集。 實作也支援數個多個 Microsoft 專有前置處理器巨集。 僅適用於特定的建置環境或編譯器選項定義一些巨集。 不過，若已指定為明，巨集會定義整個轉譯單位 **/D**編譯器選項引數。 定義時，巨集是由前置處理器在編譯之前展開指定的值。 預先定義的巨集不接受引數，並不能重新定義。
 
@@ -172,7 +172,7 @@ MSVC 支援 ANSI/ISO C99 標準與 ISO C + + 14 和 C + + 17 標準所需的預�
 
 編譯器支援下列 ISO C99 和 ISO C + + 17 標準所指定的預先定義巨集。
 
-- **&#95;&#95;cplusplus**時轉譯單位會編譯為 c + + 定義為整數常值。 否則，未定義。
+- **&#95;&#95;cplusplus**定義為整數常值，當轉譯單位編譯為C++。 否則，未定義。
 
 - **&#95;&#95;日期&#95;&#95;** 目前的原始程式檔的編譯日期。 日期是固定長度字串常值形式*Mmm dd yyyy*。 月份*Mmm*產生的 C 執行階段程式庫 (CRT) 的縮寫的月份名稱與相同[asctime](../c-runtime-library/reference/asctime-wasctime.md)函式。 日期的第一個字元*dd*是空格，此值是否小於 10。 一律定義此巨集。
 
@@ -184,7 +184,7 @@ MSVC 支援 ANSI/ISO C99 標準與 ISO C + + 14 和 C + + 17 標準所需的預�
 
 - **&#95;&#95;STDC&#95;HOSTED&#95; &#95;** 定義為 1，如果實作是*裝載實作*，支援整個必要的標準程式庫。 否則，定義為 0。
 
-- **&#95;&#95;STDCPP&#95;執行緒&#95;&#95;** 定義為 1，如果且只有一個程式可以擁有多個執行的執行緒，且編譯為 c + +。 否則，未定義。
+- **&#95;&#95;STDCPP&#95;執行緒&#95;&#95;** 定義為 1，如果且只有一個程式可以擁有多個執行的執行緒，且編譯為C++。 否則，未定義。
 
 - **&#95;&#95;時間&#95;&#95;** 翻譯的前置處理過的轉譯單位的時間。 時間是字元字串常值形式*hh: mm:*，傳回由 CRT 的時間與相同[asctime](../c-runtime-library/reference/asctime-wasctime.md)函式。 一律定義此巨集。
 
@@ -257,7 +257,7 @@ MSVC 支援這些額外的預先定義巨集。
     }
     ```
 
-- **&#95;&#95;cplusplus&#95;cli**定義為整數常值 200406 編譯為 c + + 時， [/clr](../build/reference/clr-common-language-runtime-compilation.md)編譯器選項設定。 否則，未定義。 定義時，  **&#95; &#95;cplusplus&#95;cli**適用於整個轉譯單位。
+- **&#95;&#95;cplusplus&#95;cli**定義為整數常值 200406 當編譯為C++並[/clr](../build/reference/clr-common-language-runtime-compilation.md)編譯器選項設定。 否則，未定義。 定義時，  **&#95; &#95;cplusplus&#95;cli**適用於整個轉譯單位。
 
     ```cpp
     // cplusplus_cli.cpp
@@ -272,7 +272,7 @@ MSVC 支援這些額外的預先定義巨集。
     }
     ```
 
-- **&#95;&#95;cplusplus&#95;winrt**定義為整數常值 201009 編譯為 c + + 時， [/ZW （Windows 執行階段編譯）](../build/reference/zw-windows-runtime-compilation.md)編譯器選項設定。 否則，未定義。
+- **&#95;&#95;cplusplus&#95;winrt**定義為整數常值 201009 當編譯為C++並[/ZW （Windows 執行階段編譯）](../build/reference/zw-windows-runtime-compilation.md)編譯器選項設定。 否則，未定義。
 
 - **&#95;CPPRTTI**定義為 1，否則[/GR （啟用執行階段類型資訊）](../build/reference/gr-enable-run-time-type-information.md)設定編譯器選項。 否則，未定義。
 
@@ -354,13 +354,13 @@ MSVC 支援這些額外的預先定義巨集。
 
 - **&#95;受控**定義為 1 時， [/clr](../build/reference/clr-common-language-runtime-compilation.md)設定編譯器選項。 否則，未定義。
 
-- **&#95;MSC&#95;建置**定義為整數常值，其中包含編譯器的版本號碼的修訂編號項目。 修訂編號是句號分隔版本號碼的第四個項目。 比方說，Microsoft C/c + + 編譯器的版本號碼是 15.00.20706.01，如果 **&#95;MSC&#95;建置**巨集判斷值為 1。 一律定義此巨集。
+- **&#95;MSC&#95;建置**定義為整數常值，其中包含編譯器的版本號碼的修訂編號項目。 修訂編號是句號分隔版本號碼的第四個項目。 例如，如果版本號碼的 Microsoft C /C++編譯器是 15.00.20706.01，  **&#95;MSC&#95;建置**巨集判斷值為 1。 一律定義此巨集。
 
 - **&#95;MSC&#95;延伸模組**定義為 1，否則在預設[/Ze （啟用語言擴充功能）](../build/reference/za-ze-disable-language-extensions.md)編譯器選項設定。 否則，未定義。
 
-- **&#95;MSC&#95;完整&#95;VER**定義為整數常值，可以編碼主要，次要和組建的編譯器版本號碼的數字項目。 主要號碼是句號分隔版本號碼的第一個元素、 次要版本號碼是第二個項目，和組建編號是第三個項目。 比方說，Microsoft C/c + + 編譯器的版本號碼是 15.00.20706.01，如果 **&#95;MSC&#95;FULL&#95;VER**巨集判斷值為 150020706。 輸入`cl /?`在命令列，以檢視編譯器的版本號碼。 一律定義此巨集。
+- **&#95;MSC&#95;完整&#95;VER**定義為整數常值，可以編碼主要，次要和組建的編譯器版本號碼的數字項目。 主要號碼是句號分隔版本號碼的第一個元素、 次要版本號碼是第二個項目，和組建編號是第三個項目。 例如，如果版本號碼的 Microsoft C /C++編譯器是 15.00.20706.01，  **&#95;MSC&#95;完整&#95;VER**巨集判斷值為 150020706。 輸入`cl /?`在命令列，以檢視編譯器的版本號碼。 一律定義此巨集。
 
-- **&#95;MSC&#95;VER**定義為編譯器版本號碼的主要和次要編號項目會將編碼的整數常值。 主要號碼是句號分隔版本號碼的第一個項目和次要版本號碼是第二個項目。 比方說，Microsoft C/c + + 編譯器的版本號碼是 17.00.51106.1，如果 **&#95;MSC&#95;VER**巨集判斷值為 1700年。 輸入`cl /?`在命令列，以檢視編譯器的版本號碼。 一律定義此巨集。
+- **&#95;MSC&#95;VER**定義為編譯器版本號碼的主要和次要編號項目會將編碼的整數常值。 主要號碼是句號分隔版本號碼的第一個項目和次要版本號碼是第二個項目。 例如，如果版本號碼的 Microsoft C /C++編譯器是 17.00.51106.1，  **&#95;MSC&#95;VER**巨集判斷值為 1700年。 輸入`cl /?`在命令列，以檢視編譯器的版本號碼。 一律定義此巨集。
 
    |Visual Studio 版本|**&#95;MSC&#95;VER**|
    |-|-|
@@ -394,9 +394,9 @@ MSVC 支援這些額外的預先定義巨集。
    #endif
    ```
 
-   如需詳細資訊，請參閱 < [Visual c + + 編譯器版本](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/)Microsoft c + + Team 部落格中。
+   如需詳細資訊，請參閱 < [VisualC++編譯器版本](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/)microsoftC++小組部落格。
 
-- **&#95;MSVC&#95;LANG**定義為整數常值，指定編譯器為目標的 c + + 語言標準。 它只有在編譯為 c + + 程式碼設定。 巨集是常值的整數值 201402 L，根據預設，或當[/std: c + + 14](../build/reference/std-specify-language-standard-version.md)編譯器選項指定。 如果巨集設為 201703 L [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)指定編譯器選項。 它設定為更高版本，未指定值時[/std: c + + 最新](../build/reference/std-specify-language-standard-version.md)指定選項。 否則，巨集未定義。  **&#95;MSVC&#95;LANG**巨集並[/std （指定語言標準版本）](../build/reference/std-specify-language-standard-version.md)編譯器選項會在 Visual Studio 2015 Update 3 開始提供。
+- **&#95;MSVC&#95;LANG**定義為整數常值，指定C++設為目標的編譯器語言標準。 它只有在編譯為程式碼設定C++。 巨集是常值的整數值 201402 L，根據預設，或當[/std: c + + 14](../build/reference/std-specify-language-standard-version.md)編譯器選項指定。 如果巨集設為 201703 L [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)指定編譯器選項。 它設定為更高版本，未指定值時[/std: c + + 最新](../build/reference/std-specify-language-standard-version.md)指定選項。 否則，巨集未定義。  **&#95;MSVC&#95;LANG**巨集並[/std （指定語言標準版本）](../build/reference/std-specify-language-standard-version.md)編譯器選項會在 Visual Studio 2015 Update 3 開始提供。
 
 - **&#95;&#95;MSVC&#95;執行階段&#95;會檢查**定義為 1 時的[/RTC](../build/reference/rtc-run-time-error-checks.md)編譯器選項設定。 否則，未定義。
 
@@ -427,7 +427,7 @@ MSVC 支援這些額外的預先定義巨集。
 
 - **&#95;WIN64**定義為 1，當編譯目標為 64 位元 ARM 或 x64。 否則，未定義。
 
-- **&#95;WINRT&#95;DLL**定義為 1 時，編譯為 c + + 和兩者[/ZW （Windows 執行階段編譯）](../build/reference/zw-windows-runtime-compilation.md)並[/LD 或 /LDd](../build/reference/md-mt-ld-use-run-time-library.md)編譯器選項設定。 否則，未定義。
+- **&#95;WINRT&#95;DLL**定義為 1 時，編譯為C++，同時兩者皆[/ZW （Windows 執行階段編譯）](../build/reference/zw-windows-runtime-compilation.md)並[/LD 或 /LDd](../build/reference/md-mt-ld-use-run-time-library.md)編譯器選項設定。 否則，未定義。
 
 識別 ATL 或 MFC 程式庫版本沒有前置處理器巨集是由編譯器預先定義的。 ATL 和 MFC 程式庫標頭會在內部定義這些版本的巨集。 它們是在之前所需的標頭包含前置處理器指示詞中未定義。
 

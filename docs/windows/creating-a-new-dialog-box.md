@@ -1,5 +1,5 @@
 ---
-title: 如何：建立對話方塊 （c + +）
+title: 如何：建立對話方塊 (C++)
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
 ms.openlocfilehash: c5f026683881ba8e608bd00089879e0e2a7b4af2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036324"
 ---
-# <a name="how-to-create-a-dialog-box-c"></a>HOW TO：建立對話方塊 （c + +）
+# <a name="how-to-create-a-dialog-box-c"></a>HOW TO：建立對話方塊 (C++)
 
-與位置的大小 [c + +] 對話方塊中，以及位置和大小的控制項，會以對話方塊單位。 個別控制項和對話方塊中的值會出現在右下角的 Visual Studio 狀態列上選取它們。
+大小與位置C++對話方塊中的位置和中，控制項的大小，會以對話方塊單位。 個別控制項和對話方塊中的值會出現在右下角的 Visual Studio 狀態列上選取它們。
 
 > [!NOTE]
 > 如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。
@@ -105,4 +105,4 @@ Win32
 ## <a name="see-also"></a>另請參閱
 
 [對話方塊編輯器](../windows/dialog-editor.md)<br/>
-[HOW TO：管理對話方塊控制項](../windows/controls-in-dialog-boxes.md)<br/>
+[如何：管理對話方塊控制項](../windows/controls-in-dialog-boxes.md)<br/>

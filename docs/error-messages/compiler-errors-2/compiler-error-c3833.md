@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3833
 ms.assetid: 8152be53-e01e-48cd-9eef-9de38723664c
 ms.openlocfilehash: 99c18e899a46c5e1d7a643ba32546f827c320373
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58768974"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59775658"
 ---
 # <a name="compiler-error-c3833"></a>編譯器錯誤 C3833
 

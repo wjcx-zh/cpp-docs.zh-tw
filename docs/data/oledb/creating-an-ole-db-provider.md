@@ -6,10 +6,10 @@ helpviewer_keywords:
 - OLE DB provider templates, creating providers
 ms.assetid: f73017c3-c89f-41a6-a306-ea992cf6092c
 ms.openlocfilehash: 3e46e87b0d5d538a0f9fd7e231debfef3fa95210
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036110"
 ---
 # <a name="creating-an-ole-db-provider"></a>建立 OLE DB 提供者
@@ -18,7 +18,7 @@ ms.locfileid: "59036110"
 
 基本步驟如下：
 
-1. 使用**ATL 專案精靈**來建立基本專案檔並**ATL OLEDB 提供者精靈**來建立提供者 (選取**ATL OLEDB 提供者**從**已安裝** > **Visual c + +** > **ATL**資料夾中的**加入新項目**)。
+1. 使用**ATL 專案精靈**來建立基本專案檔並**ATL OLEDB 提供者精靈**來建立提供者 (選取**ATL OLEDB 提供者**從**已安裝** > **視覺化C++**   >  **ATL**資料夾**加入新項目**)。
 
    > [!NOTE]
    > 專案必須包含 MFC 支援加入之前**ATL OLEDB 提供者**。

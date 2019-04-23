@@ -1,5 +1,5 @@
 ---
-title: 屬性 （c + + COM 屬性）
+title: 屬性 (C++ COM 屬性)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.attribute
@@ -10,10 +10,10 @@ helpviewer_keywords:
 - attributes [C++/CLI], custom
 ms.assetid: 8cb3489f-65c4-44ea-b0aa-3c3c6b15741d
 ms.openlocfilehash: d865f96d2e116f09a29cb78f410c4c19d6104a82
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038183"
 ---
 # <a name="attribute"></a>屬性

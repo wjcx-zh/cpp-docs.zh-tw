@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3399
 ms.assetid: 306ad199-d150-4f6c-bcf1-24a7948b93be
 ms.openlocfilehash: d05a861a2baedb86482503b6860098f12c41bd78
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58767167"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776453"
 ---
 # <a name="compiler-error-c3399"></a>編譯器錯誤 C3399
 
@@ -19,7 +19,7 @@ ms.locfileid: "58767167"
 
 當您指定 `gcnew()` 條件約束時，即指定了無參數建構函式的條件約束類型。 因此，它是嘗試具現化該類型並傳遞參數的錯誤。
 
-請參閱[泛型類型參數的條件約束 (C + + /cli CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)如需詳細資訊。
+請參閱[泛型類型參數的條件約束 (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)如需詳細資訊。
 
 ## <a name="example"></a>範例
 

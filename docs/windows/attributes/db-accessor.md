@@ -1,5 +1,5 @@
 ---
-title: db_accessor （c + + COM 屬性）
+title: db_accessor (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_accessor
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
 ms.openlocfilehash: bfb287261fce4ebf189801c308f57513f2c9f113
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038300"
 ---
 # <a name="dbaccessor"></a>db_accessor

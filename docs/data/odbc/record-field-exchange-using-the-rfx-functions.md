@@ -11,10 +11,10 @@ helpviewer_keywords:
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
 ms.openlocfilehash: dc717336a5279e7eda1b7c39b19a7c76f9055cd3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035980"
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>資料錄欄位交換：使用 RFX 函式
@@ -60,7 +60,7 @@ RFX 全域函式會交換資料錄集中的資料來源和欄位資料成員上�
 |`RFX_Date`|`CTime`|
 
 
-如需詳細資訊，請參閱下方 RFX 函式文件[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)中*類別庫參考*。 如需 c + + 資料類型如何對應至 SQL 資料類型資訊，請參閱 < ANSI SQL 資料類型對應至 c + + 資料類型的資料表中[SQL:SQL 和 c + + 資料類型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)。
+如需詳細資訊，請參閱下方 RFX 函式文件[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)中*類別庫參考*。 如需C++資料類型對應至 SQL 資料類型，請參閱表格 ANSI SQL 資料類型對應到C++中的資料類型[SQL:SQL 和C++資料類型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)。
 
 ## <a name="see-also"></a>另請參閱
 

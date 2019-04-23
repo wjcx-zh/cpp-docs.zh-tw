@@ -53,10 +53,10 @@ helpviewer_keywords:
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
 ms.openlocfilehash: 6c20698e2219cf7c3e1d840e23b5f8113947ae9f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037707"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl 類別
@@ -87,7 +87,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 *T*<br/>
 類別衍生自`IRowsetUpdateImpl`。
 
-*存放裝置*<br/>
+*儲存體*<br/>
 使用者記錄中。
 
 *UpdateArray*<br/>
@@ -335,5 +335,5 @@ m_mapCachedData;
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [建立可更新的提供者](../../data/oledb/creating-an-updatable-provider.md)

@@ -1,5 +1,5 @@
 ---
-title: idl_quote （c + + COM 屬性）
+title: idl_quote (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_quote
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
 ms.openlocfilehash: fd7455298c9a1b69926d85766b6cd7f96bd374cc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037113"
 ---
 # <a name="idlquote"></a>idl_quote
 
-可讓您使用目前版本的 Visual c + + 中不支援的 IDL 建構，並將它們傳遞至所產生的.idl 檔案。
+可讓您使用視覺效果的目前版本中不支援的 IDL 建構C++並將它們傳遞至所產生的.idl 檔案。
 
 ## <a name="syntax"></a>語法
 
@@ -26,11 +26,11 @@ ms.locfileid: "59037113"
 ### <a name="parameters"></a>參數
 
 *文字*<br/>
-您想要傳遞至所產生的.idl 檔案而不會傳回編譯器錯誤 Visual c + + 編譯器的屬性名稱。
+您想要視覺效果的屬性名稱C++傳遞至所產生的.idl 檔案而不會傳回編譯器錯誤的編譯器。
 
 ## <a name="remarks"></a>備註
 
-如果**idl_quote** c + + 屬性當做獨立屬性 （具有後面的分號右括號），然後*文字*放在合併的.idl 檔案原狀。 如果**idl_quote**符號，適用於*文字*會放置在該符號的屬性區塊。
+如果**idl_quote** C++屬性做為獨立的屬性 （具有後面的分號右括號），然後*文字*放在合併的.idl 檔案原狀。 如果**idl_quote**符號，適用於*文字*會放置在該符號的屬性區塊。
 
 ## <a name="example"></a>範例
 

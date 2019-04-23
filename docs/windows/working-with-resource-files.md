@@ -1,5 +1,5 @@
 ---
-title: 使用資源檔 （c + +）
+title: 使用資源檔 (C++)
 ms.date: 02/14/2019
 helpviewer_keywords:
 - resources [C++], about resources
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
 ms.openlocfilehash: a08c7ecb153b790f06da386ac93d1f05f5981e61
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037726"
 ---
 # <a name="working-with-resource-files"></a>使用資源檔
@@ -18,7 +18,7 @@ ms.locfileid: "59037726"
 > [!WARNING]
 > 本節適用於以 C++ 撰寫的 Windows 桌面應用程式。
 >
-> 在 c + + 撰寫的通用 Windows 平台應用程式中資源的詳細資訊，請參閱[定義應用程式資源](/windows/uwp/app-resources/)，或將資源新增至 C + + /cli （管理） 的 CLI 專案，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中.NET Framework 開發人員指南。
+> 如需有關撰寫的通用 Windows 平台應用程式中的資源資訊C++，請參閱[定義應用程式資源](/windows/uwp/app-resources/)，或將資源新增至C++/CLI (managed) 專案，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index) .NET Framework 開發人員指南中。
 
 資源可以組成各種不同的項目，例如：
 
@@ -41,7 +41,7 @@ ms.locfileid: "59037726"
 [資源檔](../windows/resource-files-visual-studio.md)<br/>
 描述資源檔，以及它們在 Windows 桌面應用程式中的使用方式。 也提供文章會說明如何使用資源檔的連結。
 
-[資源識別項 （符號）](../windows/symbols-resource-identifiers.md)<br/>
+[資源識別項 (符號)](../windows/symbols-resource-identifiers.md)<br/>
 描述符號，並提供如何使用 **資源符號** 對話方塊，來管理專案中符號的相關資訊。
 
 [資源編輯器](../windows/resource-editors.md)<br/>
@@ -52,7 +52,7 @@ ms.locfileid: "59037726"
 [Visual C++](../overview/visual-cpp-in-visual-studio.md)<br/>
 提供 Visual C++ 文件的連結。
 
-[Talk to Us](/visualstudio/ide/talk-to-us)<br/>
+[告訴我們](/visualstudio/ide/talk-to-us)<br/>
 提供如何使用文件集、連絡產品支援，以及採用協助工具功能之資訊的連結。
 
 ## <a name="see-also"></a>另請參閱

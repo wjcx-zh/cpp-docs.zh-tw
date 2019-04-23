@@ -17,10 +17,10 @@ helpviewer_keywords:
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
 ms.openlocfilehash: 7b362749c9a5cb1c7ec77e5cac8625aa7eb260f0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037785"
 ---
 # <a name="how-to-use-a-drawing-tool"></a>HOW TO：使用繪圖工具
@@ -141,7 +141,7 @@ None
 ## <a name="see-also"></a>另請參閱
 
 [圖示影像編輯器](../windows/image-editor-for-icons.md)<br/>
-[HOW TO：建立圖示或其他影像](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[HOW TO：編輯映像](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[HOW TO：使用色彩](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[如何：建立圖示或其他影像](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[如何：複製影像](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[如何：使用色彩](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

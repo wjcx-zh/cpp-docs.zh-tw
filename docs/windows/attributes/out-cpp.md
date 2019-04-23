@@ -1,5 +1,5 @@
 ---
-title: out （c + + COM 屬性）
+title: out (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.out
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
 ms.openlocfilehash: 7020bd6cfcf8bcdbfb773908e693c6364a29e343
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037577"
 ---
 # <a name="out-c"></a>out (C++)

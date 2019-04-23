@@ -9,15 +9,15 @@ helpviewer_keywords:
 - sfence instruction
 ms.assetid: 6c6eb973-3cf0-4306-b3af-cfde9b0210a5
 ms.openlocfilehash: a0c8027f443a475b03521920e2e036e7ed4eaafb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036691"
 ---
 # <a name="faststorefence"></a>__faststorefence
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 保證每個前一項記憶體參考 (包括載入和儲存記憶體參考) 在任何後續記憶體參考之前都為全域可見。
 
@@ -43,7 +43,7 @@ void __faststorefence();
 
 此常式僅可作為內建常式使用。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

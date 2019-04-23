@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3831
 ms.assetid: a125d8dc-b75a-4ea0-b6c7-fe7b119dba25
 ms.openlocfilehash: d9aa703f12fd175d9f7fc00eb76e76097a32e860
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58781662"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777065"
 ---
 # <a name="compiler-error-c3831"></a>編譯器錯誤 C3831
 
 'member': 'class' 不能有固定的資料成員或成員函式會傳回 pin 指標
 
-[pin_ptr (C + + /cli CLI)](../../extensions/pin-ptr-cpp-cli.md)的使用方式錯誤。
+[pin_ptr (C++/CLI)](../../extensions/pin-ptr-cpp-cli.md)的使用方式錯誤。
 
 ## <a name="example"></a>範例
 

@@ -1,5 +1,5 @@
 ---
-title: '#include 指示詞 （C/c + +）'
+title: '#include 指示詞 (C /C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - '#include'
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
 ms.openlocfilehash: 7ffccb34d52f8ffa1e6b9cc64a58d3471d02ac92
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038977"
 ---
 # <a name="include-directive-cc"></a>#include 指示詞 (C/C++)
@@ -32,7 +32,7 @@ ms.locfileid: "59038977"
 
 *路徑規格*可能選擇性地加上目錄規格的檔案名稱。 檔案名稱必須指定現有的檔案名稱。 語法*路徑規格*編譯程式的作業系統而定。
 
-如需有關如何在 c + + 應用程式中使用編譯的組件的參考資訊[/clr](../build/reference/clr-common-language-runtime-compilation.md)，請參閱[#using](../preprocessor/hash-using-directive-cpp.md)。
+如需有關如何在參考組件資訊C++來編譯的應用程式[/clr](../build/reference/clr-common-language-runtime-compilation.md)，請參閱[#using](../preprocessor/hash-using-directive-cpp.md)。
 
 這兩種語法形式都會導致該指示詞由指定之 Include 檔的整個內容所取代。 兩個形式之間的差異在於路徑未完整指定時，前置處理器搜尋標頭檔的順序。 下表顯示這兩種語法形式之間的差異。
 
@@ -69,7 +69,7 @@ Include 檔可以 「 巢狀 」;亦即 **#include**指示詞可以出現在另�
 
 Include 檔的巢狀可以擴充到最多 10 層。 當巢狀 **#include**是處理，前置處理器會繼續將封入 include 檔插入原來的原始程式檔。
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 若要尋找可包含原始程式檔，前置處理器會先搜尋所指定的目錄 **/I**編譯器選項。 如果 **/I**選項不存在或失敗，前置處理器會使用 INCLUDE 環境變數來尋找角括弧括住任何包含檔案。 INCLUDE 環境變數和 **/I**編譯器選項可以包含多個路徑，以分號分隔 (**;**)。 如果多個目錄會顯示為一部分 **/I**選項，或在 INCLUDE 環境變數中，前置處理器搜尋它們以其出現的順序。
 
@@ -92,7 +92,7 @@ CL MYPROG.C
 
 Include 檔指定為`#include "path-spec"`，目錄搜尋父檔案的目錄開始，並繼續進行到所有上層檔案的目錄。 也就是搜尋開始包含來源檔案，其中包含目錄的相對 **#include**正在處理的指示詞。 如果沒有上二層檔案，也找不到此檔案，則會繼續搜尋，如同以角括弧括住了檔案名稱一般。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

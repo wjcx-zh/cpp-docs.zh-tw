@@ -6,11 +6,11 @@ ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 ms.openlocfilehash: e74f8270d241b9725a24ee257fb846a7cc4e079e
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899454"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779484"
 ---
 # <a name="whats-new-for-c-in-visual-studio-2017"></a>Visual Studio 2017 中 C++ 的新功能
 
@@ -114,11 +114,11 @@ Microsoft C++ 編譯器支援 Intel 的 AVX-512，包括將 AVX-512 的新功能
 - 標準程式庫容器現在將其 `max_size()` 包含至 `numeric_limits<difference_type>::max()` 中，而不是包含在 `size_type` 的 `max()` 中。 如此可確保該容器迭代器上 `distance()` 的結果能以 `distance()` 的傳回型別代表。
 - 修正了缺少特舒化 `auto_ptr<void>` 的問題。
 - 若長度引數不是整數型別，`for_each_n()`、`generate_n()` 和 `search_n()` 演算法原本無法編譯，而現在會嘗試將非整數長度轉換為迭代器的 `difference_type`。
-- `normal_distribution<float>` 不會再於標準程式庫內對從雙精確度縮減為浮點數的情況發出警告。
+- `normal_distribution<float>` 不會再於標準程式庫內，對從雙精確度縮減為浮點數的情況發出警告。
 - 修正了部分 `basic_string` 作業，這些作業先前在檢查大小溢位上限時會與 `npos` 而非 `max_size()` 比較。
 - `condition_variable::wait_for(lock, relative_time, predicate)` 先前會在發生假性喚醒前，等候完整的相對時間。 現在則只會等候單一間隔的相對時間。
-- `future::get()` 現在會依據標準的規定，使 `future` 無效。
-- `iterator_traits<void *>` 因之前會嘗試形成 `void&`，而成為硬體錯誤；現在則會完全成為空的結構，以允許在 "is iterator" SFINAE 條件中使用 `iterator_traits`。
+- 依標準的規定，`future::get()` 現在會使 `future` 無效。
+- 因 `iterator_traits<void *>` 之前會嘗試形成 `void&`，而成為硬碟錯誤，現在則會完全成為空的結構，以允許在 "is iterator" SFINAE 條件中使用 `iterator_traits`。
 - Clang **-Wsystem-headers** 回報的部分警告已獲修正。
 - 同時也修正了由 Clang **-Wmicrosoft-exception-spec** 回報的「宣告中的例外狀況規格不符合先前的宣告」這項問題。
 - 同時已修正由 Clang 和 C1XX 所回報的 mem-initializer-list 排序錯誤。
@@ -128,7 +128,7 @@ Microsoft C++ 編譯器支援 Intel 的 AVX-512，包括將 AVX-512 的新功能
 - 標準程式庫現在會強制將配置器 `value_type` (在 C++17 模式中) 與退出安全出口配對。
 - 修正了對 `basic_string` 進行 self-range-insert 會擾亂字串內容的某些條件。 (注意：針對 vectors 進行 self-range-insert 仍受標準所禁止)。
 - `basic_string::shrink_to_fit()` 不再受配置器的 `propagate_on_container_swap` 影響。
-- `std::decay` 現在會處理不受歡迎的函式類型 (也就是 cv 限定和/或 ref 限定的函式類型)。
+- `std::decay` 現在會處理不受歡迎的函式類型 (也就是 cv 限定和 (或) ref 限定的函式類型)。
 - 已變更 include 指示詞以使用適當的區分大小寫和斜線，以改善可攜性​​。
 - 修正了警告 C4061「case 標籤未明確處理列舉 '*enumeration*' 參數中的列舉程式 '*enumerator*'」。 此警告為 off-by-default，並已修正為標準程式庫針對警告之一般原則的例外狀況。 (標準程式庫無 **/W4** 瑕疵，但不會嘗試達到無 **/Wall** 瑕疵。 許多 off-by-default 警告都極為吵雜，且不應該作為一般用途使用)。
 - 改善 `std::list` 偵錯檢查。 List 迭代器現在會檢查 `operator->()`，且 `list::unique()` 現在會將迭代器標示為無效。
@@ -141,9 +141,9 @@ Microsoft C++ 編譯器支援 Intel 的 AVX-512，包括將 AVX-512 的新功能
 - `std::try_lock()` 已從使用遞迴改為使用套件展開。
 - 改善了 `std::lock()` 鎖死迴避演算法，從原本對所有鎖定重複執行 `try_lock()` ，改為使用 `lock()` 作業。
 - 讓 `system_category::message()` 中可進行具名傳回值最佳化。
-- `conjunction` 和 `disjunction` 現在會具現化 N + 1 類型，而非 2N + 2 類型。
+- `conjunction` 和 `disjunction` 現在會的具現化對象為 N + 1 類型，而非 2N + 2 類型。
 - `std::function` 不會再對每個已清除類型的可呼叫項目將配置器支援機制具現化，如此可在會傳遞許多相異 Lambda 到 `std::function` 的程式中，改善輸送量並減少 .obj 大小。
-- `allocator_traits<std::allocator>` 包含手動內嵌的 `std::allocator` 作業，以減少只透過 `allocator_traits` 與 `std::allocator` 互動之程式碼 (亦即大部分程式碼) 中的程式碼大小。
+- `allocator_traits<std::allocator>` 包含手動內嵌的 `std::allocator` 作業，以減少只透過 `allocator_traits` 與 `std::allocator` 互動之程式碼 (也就是大部分程式碼) 中的程式碼大小。
 - C++11 最小配置器介面現已由標準程式庫直接呼叫 `allocator_traits` 來處理，而非將配置器包裝在內部類別 `_Wrap_alloc` 中。 這會減少為支援配置器所產生的程式碼大小、改善最佳化工具在某些情況下對標準程式庫容器進行判斷的能力，並提供更佳的偵錯體驗 (如同您現在會在偵錯工具中看見您的配置器類型，而非 `_Wrap_alloc<your_allocator_type>`)。
 - 移除了自訂 `allocator::reference` 的中繼程式設計，因為實際上並不允許配置器自訂該項目。 (配置器可以使容器使用自訂的指標，但不能使用自訂的參考)。
 - 編譯器前端被教導在範圍架構的 for 迴圈中解除偵錯迭代器的包裝，以改善偵錯組建的效能。
@@ -156,7 +156,7 @@ Microsoft C++ 編譯器支援 Intel 的 AVX-512，包括將 AVX-512 的新功能
 - 以函式為基礎的運算式 SFINAE 已變更為以 `struct` 和 `void_t` 為基礎。
 - 標準程式庫演算法現在會避免會後續累加的迭代器。
 - 已修正在 64 位元系統上使用 32 位元配置器時會出現的截斷警告。
-- `std::vector` 現在可透過重複使用緩衝區 (若情況允許，讓 non-POCMA non-equal-allocator 案例中的移動指派變得更有效率。
+- 透過在情況允許時重複使用緩衝區，`std::vector` 移動指派現在在非 POCMA non-equal-allocator 案例中變得更有效率。
 
 #### <a name="readability-and-other-improvements"></a>可讀性和其他改善
 
@@ -206,18 +206,18 @@ Microsoft C++ 編譯器支援 Intel 的 AVX-512，包括將 AVX-512 的新功能
 - 建構 `std::random_device` 不會再建構並終結 `std::string`。
 - `std::equal` 和 `std::partition` 具有跳躍執行緒最佳化傳遞，可免去迭代器比較。
 - 當 `std::reverse` 是已傳遞至可完整複製之 `T` 的指標時，現在會分派至手寫的向量化實作。
-- `std::fill`、`std::equal` 和 `std::lexicographical_compare` 已獲指示如何針對 `std::byte` 和 `gsl::byte` (及其他 char 這類的列舉和列舉類別) 分派至 `memset` 和 `memcmp`。 請注意，`std::copy` 使用 `is_trivially_copyable` 分派，因此不需任何變更。
+- 已指示 `std::fill`、`std::equal` 和 `std::lexicographical_compare` 如何分派至 `std::byte` 和 `gsl::byte` (及其他 char 一類的列舉和列舉類別) 的 `memset` 和 `memcmp`。 請注意，`std::copy` 使用 `is_trivially_copyable` 分派，因此不需任何變更。
 - 標準程式庫不再包含空的大括弧解構函式，其唯一的行為是使類型成為 non-trivially-destructible。
 
 #### <a name="correctness-fixes-in-visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 版中的正確性修正
 
-- `std::partition` 現在會按照標準的規定呼叫述詞 N 次，而不是 N + 1 次。
+- 按照標準的規定，`std::partition` 現在會呼叫述詞 N 次，而不是 N + 1 次。
 - 在 15.5 版中，已修復 15.3 版中嘗試避免使用魔術靜態這項問題。
 - `std::atomic<T>` 不再要求 `T` 必須預設為可建構的。
 - 採用對數時間的堆積演算法不再執行線性時間判斷提示，因為當啟用迭代器偵錯時，輸入其實就是堆積。
 - `__declspec(allocator)` 現在只會為 C1XX 而防護，以防止 Clang 不了解此 declspec 而發出警告。
 - `basic_string::npos` 現在可作為編譯時間常數。
-- `std::allocator` (C++17 模式中) 現在會正確處理過度對齊類型 (對齊大於 `max_align_t` 的類型) 的配置，除非 **/Zc:alignedNew-** 加以停用。  例如，具有 16 或 32 位元組對齊的物件向量現在會正確對齊 SSE 和 AVX 指令。
+- C++17 模式中的 `std::allocator` 現在會正確處理過度對齊類型 (對齊大於 `max_align_t` 的類型) 的配置，除非 **/Zc:alignedNew-** 加以停用。  例如，具有 16 或 32 位元組對齊的物件向量現在會正確對齊 SSE 和 AVX 指令。
 
 ### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017 15.6 版
 

@@ -3,10 +3,10 @@ title: 潛在升級問題概觀 (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
 ms.openlocfilehash: 1dac6ad201656dc83428aa5182a59cb8ff824651
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898826"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潛在升級問題概觀 (Visual C++)

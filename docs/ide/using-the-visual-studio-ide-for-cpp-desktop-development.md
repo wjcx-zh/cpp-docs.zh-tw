@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Visual Studio IDE [C++]
 ms.assetid: d985c230-8e81-49d6-92be-2db9cac8d023
 ms.openlocfilehash: 7417c46097b1f0c6282e3684a7556880c21be42a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773563"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>使用 Visual Studio IDE 進行 C++ 桌面程式開發

@@ -1,15 +1,15 @@
 ---
-title: 作法：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼
+title: HOW TO：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
 ms.openlocfilehash: 3aeef205effe072a25fc0b3dabb9145245461d45
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424192"
 ---
-# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>作法：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼
+# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>HOW TO：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼
 
 在通用 Windows 平台 (UWP) 環境中執行傳統型程式的最簡單方式，可能是使用傳統型橋接器技術。 其中包括 Desktop App Converter，這會將現有應用程式封裝為 UWP 應用程式，而不需要變更程式碼。 如需詳細資訊，請參閱[傳統型橋接器](/windows/uwp/porting/desktop-to-uwp-root)。
 
@@ -44,7 +44,7 @@ UWP 應用程式會在受保護的環境中執行，因此不允許執行許多�
 
 本主題包含下列程序：
 
-- [在 UWP 應用程式中使用 Win32 DLL](#BK_Win32DLL)
+- [在 UWP 應用程式中使用 Win32 DLL ](#BK_Win32DLL)
 
 - [在 UWP 應用程式中使用原生 C++ 靜態程式庫](#BK_StaticLib)
 

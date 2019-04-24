@@ -1,39 +1,32 @@
-items:
 - name: Visual Studio 中的 C++
   href: index.yml
   items:
-  - name: 總覽
-    items:
-    - name: 程式碼編輯器概觀
-      href: /visualstudio/get-started/tutorial-editor
-    - name: 專案與解決方案概觀
-      href: /visualstudio/get-started/tutorial-projects-solutions
-    - name: 更多 Visual Studio 功能
-      href: /visualstudio/ide/advanced-feature-overview?toc=/cpp/get-started/toc.json&bc=/cpp/get-started/breadcrumb/toc.json
-  - name: 教學課程
-    items:
-    - name: 建立您的第一個 C++ 應用程式
-      href: tutorial-console-cpp.md
-    - name: 建立 UWP 應用程式
-      href: /windows/uwp/cpp-and-winrt-apis/get-started
-    - name: 建立 Windows Desktop 應用程式
-      href: /windows/desktop/learnwin32/learn-to-program-for-windows
-    - name: 建立 DirectX 遊戲
-      href: /windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game
-    expanded: true
-  - name: 了解 Visual Studio
-    items:
-    - name: 撰寫和編輯程式碼
-      href: /visualstudio/get-started/tutorial-editor
-    - name: 編譯和建置
-      href: /visualstudio/ide/compiling-and-building-in-visual-studio
-    - name: 偵錯程式碼
-      href: /visualstudio/debugger/getting-started-with-the-debugger-cpp
-    - name: 部署您的專案
-      href: /visualstudio/deployment/index
-ms.openlocfilehash: fd03cd392d732b7dd5f68846362cfefadb7eb2f7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816239"
+    - name: 總覽
+      items:
+        - name: 程式碼編輯器概觀
+          href: /visualstudio/get-started/tutorial-editor
+        - name: 專案與解決方案概觀
+          href: /visualstudio/get-started/tutorial-projects-solutions
+        - name: 更多 Visual Studio 功能
+          href: /visualstudio/ide/advanced-feature-overview?toc=/cpp/get-started/toc.json&bc=/cpp/get-started/breadcrumb/toc.json
+    - name: 教學課程
+      expanded: true
+      items:
+        - name: 建立您的第一個 C++ 應用程式
+          href: tutorial-console-cpp.md
+        - name: 建立 UWP 應用程式
+          href: /windows/uwp/cpp-and-winrt-apis/get-started
+        - name: 建立 Windows Desktop 應用程式
+          href: /windows/desktop/learnwin32/learn-to-program-for-windows
+        - name: 建立 DirectX 遊戲
+          href: /windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game
+    - name: 了解 Visual Studio
+      items:
+        - name: 撰寫和編輯程式碼
+          href: /visualstudio/get-started/tutorial-editor
+        - name: 編譯和建置
+          href: /visualstudio/ide/compiling-and-building-in-visual-studio
+        - name: 偵錯程式碼
+          href: /visualstudio/debugger/getting-started-with-the-debugger-cpp
+        - name: 部署您的專案
+          href: /visualstudio/deployment/index

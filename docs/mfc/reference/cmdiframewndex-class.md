@@ -157,10 +157,10 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 ms.openlocfilehash: b24afd943f2168657c6b4437fed65b0a45689b52
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
-ms.translationtype: MT
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778555"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx 類別
@@ -525,7 +525,7 @@ BOOL DockPaneLeftOf(
 [in]若要停駐窗格的指標。
 
 *pLeftOf*<br/>
-[in][窗格]，做為 [停駐位置的指標。 。
+[in][窗格]，做為停駐位置的指標。 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -719,7 +719,7 @@ void EnableMDITabs(
 *bTabCloseButton*<br/>
 指定是否要顯示索引標籤 [關閉] 按鈕。
 
-*樣式*<br/>
+*style*<br/>
 指定的索引標籤的樣式。 請使用一般索引標籤或 STYLE_3D_ONENOTE STYLE_3D_SCROLLED Microsoft OneNote 索引標籤。
 
 *bTabCustomTooltips*<br/>
@@ -753,7 +753,7 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ### <a name="parameters"></a>參數
 
 *bLastActiveTab*<br/>
-[in]如果為 TRUE，啟用 [啟用的最後一個使用中的索引標籤。如果為 FALSE，停用啟用的最後一個使用中的索引標籤。
+[in]如果為 TRUE，啟用啟用的最後一個使用中的索引標籤。如果為 FALSE，停用啟用的最後一個使用中的索引標籤。
 
 ### <a name="remarks"></a>備註
 
@@ -1531,7 +1531,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 
 ##  <a name="onsetpreviewmode"></a>  CMDIFrameWndEx::OnSetPreviewMode
 
-設定應用程式的主框架視窗的 預覽列印模式。
+設定應用程式的主框架視窗的預覽列印模式。
 
 ```
 virtual void OnSetPreviewMode(
@@ -1542,7 +1542,7 @@ virtual void OnSetPreviewMode(
 ### <a name="parameters"></a>參數
 
 *bPreview*<br/>
-[in]如果為 TRUE，設定 [預覽列印模式。 如果為 FALSE，則取消預覽模式。
+[in]如果為 TRUE，設定預覽列印模式。 如果為 FALSE，則取消預覽模式。
 
 *pState*<br/>
 [in]指標`CPrintPreviewState`結構。
@@ -1564,7 +1564,7 @@ virtual BOOL OnShowCustomizePane(
 ### <a name="parameters"></a>參數
 
 *pMenuPane*<br/>
-[in]快速自訂] 窗格的指標。
+[in]快速自訂窗格的指標。
 
 *uiToolbarID*<br/>
 [in]若要自訂 [控制項工具列的識別碼。
@@ -1787,7 +1787,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ##  <a name="removepanefromdockmanager"></a>  CMDIFrameWndEx::RemovePaneFromDockManager
 
-取消註冊 窗格，並移除停駐的管理員。
+取消註冊窗格，並移除停駐的管理員。
 
 ```
 void RemovePaneFromDockManager(
@@ -1807,10 +1807,10 @@ void RemovePaneFromDockManager(
 [in]如果為 true，則終結移除的窗格。 不將它終結，則為 FALSE。
 
 *bAdjustLayout*<br/>
-[in]立即調整停駐的配置，則為 TRUE。 調整 如果為 FALSE，就會發生只重繪事件發生時的其他原因 （使用者調整視窗大小時，拖曳主要畫面格，依此類推）。
+[in]立即調整停駐的配置，則為 TRUE。 調整如果為 FALSE，就會發生只重繪事件發生時的其他原因 （使用者調整視窗大小時，拖曳主要畫面格，依此類推）。
 
 *bAutoHide*<br/>
-[in]若要移除的自動隱藏窗格清單] 窗格，則為 TRUE。 如果為 false，則移除規則 窗格的清單中的窗格。
+[in]若要移除的自動隱藏窗格清單窗格，則為 TRUE。 如果為 false，則移除規則窗格的清單中的窗格。
 
 *pBarReplacement*<br/>
 [in]指標，會取代 [移除] 窗格的窗格。
@@ -1888,7 +1888,7 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>參數
 
-*功能表*<br/>
+*menu*<br/>
 [in]參考[CMenu 類別](../../mfc/reference/cmenu-class.md)要修改的物件。
 
 *uiViewUserToolbarCmdFirst*<br/>
